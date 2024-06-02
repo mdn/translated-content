@@ -9,7 +9,7 @@ l10n:
 
 **`<mstyle>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于更改其子元素的样式。
 
-> **备注：** 从历史上看，该元素接受几乎所有的 MathML 属性，并用于覆盖其后代的默认属性值。后来，它被限制为仅包括在现有网页中使用的一些相关的样式属性。如今，这些样式属性是[所有 MathML 元素共有的](/zh-CN/docs/Web/MathML/Global_attributes)，因此 `<mstyle>` 实际上等同于一个 [`<mrow>`](/zh-CN/docs/Web/MathML/Element/mrow) 元素。然而，对于在浏览器之外的 MathML 实现中的兼容性，`<mstyle>` 可能仍然是相关的。
+> **备注：** 从历史上看，该元素接受几乎所有的 MathML 属性，并用于覆盖其后代的默认属性值。后来，它被限制为仅包括在现有网页中使用的一些相关的样式属性。如今，这些样式属性是[所有 MathML 元素共有的](/zh-CN/docs/Web/MathML/Global_attributes)，因此 `<mstyle>` 实际上等同于一个 [`<mrow>`](/zh-CN/docs/Web/MathML/Element/mrow) 元素。然而，`<mstyle>` 可能仍然关系到浏览器之外的 MathML 实现的兼容性。
 
 ## 属性
 
@@ -58,9 +58,9 @@ l10n:
 
 {{EmbedLiveSample('映射到 CSS 的属性')}}
 
-### 旧版 script 属性
+### 旧版附加符号属性
 
-以下示例显示一个公式，其中 [`font-size`](/zh-CN/docs/Web/CSS/font-size) 设置为 `128pt`。它包含了嵌套的上标中放置的数字，以及带有旧属性 `scriptsizemultiplier` 和 `scriptminsize` 的 `<mstyle>` 元素。每当进入上标时，`font-size` 乘以 `0.5`，只要这不会使其小于 `16pt`。
+以下示例显示一个公式，其中 [`font-size`](/zh-CN/docs/Web/CSS/font-size) 设置为 `128pt`。它包含了嵌套的上标中放置的数字，以及带有旧属性 `scriptsizemultiplier` 和 `scriptminsize` 的 `<mstyle>` 元素。每当进入上标时，`font-size` 就会乘以 `0.5`，只要这不会使其小于 `16pt`。
 
 ```html
 <math display="block" style="font-size: 128pt">
