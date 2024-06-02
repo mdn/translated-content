@@ -34,7 +34,7 @@ slug: MDN/Community
 [拉取請求（PR）](/en-US/docs/MDN/Community/Pull_requests)\
 &nbsp; &nbsp; 這個章節說明了提交拉取請求的指南和審查流程。
 
-[用戶角色與團隊](/en-US/docs/MDN/Community/Roles_teams)\
+[用戶角色與團隊](/zh-TW/docs/MDN/Community/Roles_teams)\
 &nbsp; &nbsp; 這個章節說明了在 MDN 網路文件專案中用戶與團隊所扮演的角色以及成為團隊成員的意義。
 
 ## 行為準則
