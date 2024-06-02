@@ -43,9 +43,9 @@ l10n:
 
 ## MVC 在 Web 上的应用
 
-作为一个 Web 开发者，你可能非常熟悉这个模式，即使你以前从未有意识地使用过它。你的数据模型可能包含在某种数据库中（无论是传统的服务器端数据库如 MySQL，还是客户端解决方案如 [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)）。你的应用程序控制代码可能用 HTML/JavaScript 编写，而用户界面可能用 HTML/CSS 或其他你喜欢的东西编写。这听起来非常像 MVC，但 MVC 让这些组件遵循更严格的模式。
+作为一个 Web 开发者，你可能非常熟悉这个模式，即使你以前从未有意识地使用过它。你的数据模型可能包含在某种数据库中（无论是传统的服务器端数据库如 MySQL，还是客户端解决方案如 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)）。你的应用程序控制代码可能用 HTML/JavaScript 编写，而用户界面可能用 HTML/CSS 或其他你喜欢的东西编写。这听起来非常像 MVC，但 MVC 让这些组件遵循更严格的模式。
 
-在 Web 的早期，MVC 架构主要在服务器端实现，客户端通过表单或链接请求更新，并接收更新的视图以在浏览器中显示。然而，如今随着客户端数据存储和 [Fetch API](/en-US/docs/Web/API/Fetch_API) 的出现，可以根据需要进行部分页面更新，更多逻辑被推送到客户端。
+在 Web 的早期，MVC 架构主要在服务器端实现，客户端通过表单或链接请求更新，并接收更新的视图以在浏览器中显示。然而，如今随着客户端数据存储和 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 的出现，可以根据需要进行部分页面更新，更多逻辑被推送到客户端。
 
 Web 框架如 [AngularJS](https://zh.wikipedia.org/wiki/AngularJS) 和 [Ember.js](https://zh.wikipedia.org/wiki/Ember.js) 都实现了 MVC 架构，尽管方式略有不同。
 
