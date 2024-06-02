@@ -15,7 +15,7 @@ l10n:
 默认情况下，`<semantics>` 元素的第一个子元素被呈现，而其他子元素的 [display](/zh-CN/docs/Web/CSS/display) 属性设置为 `none`。
 
 > **备注：** 旧版 MathML 规范允许渲染器根据可用的注释来决定默认呈现方式。以下规则用于确定可见子元素，已实现在某些浏览器中。请参阅 [MathML 4](https://w3c.github.io/mathml/) 以了解表示 MathML 的 Presentation 和 Content 之间的区别。
-
+>
 > - 如果没有其他规则适用：默认情况下只呈现第一个子元素，该元素应该是 Presentation MathML。
 > - 如果第一个子元素是除了 `<annotation>` 或 `<annotation-xml>` 之外的 Presentation MathML 元素，则呈现第一个子元素。
 > - 如果未找到 Presentation MathML，则呈现 `<semantics>` 的第一个 `<annotation>` 或 `<annotation-xml>` 子元素，且不带 `src` 属性。对于 `<annotation-xml>` 元素，encoding 属性必须等于以下值之一：
