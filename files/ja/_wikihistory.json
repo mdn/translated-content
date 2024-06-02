@@ -822,10 +822,6 @@
     "modified": "2019-10-07T15:20:37.310Z",
     "contributors": ["mfuji09", "dskmori", "kadokura"]
   },
-  "Glossary/GZip_compression": {
-    "modified": "2019-12-31T06:00:41.133Z",
-    "contributors": ["Uemmra3", "mfuji09", "dskmori", "araigumaG"]
-  },
   "Glossary/Garbage_collection": {
     "modified": "2019-03-18T20:53:18.903Z",
     "contributors": ["ksugimori", "Wind1808"]
@@ -2098,6 +2094,10 @@
   "Glossary/XSLT": {
     "modified": "2019-03-18T21:25:45.164Z",
     "contributors": ["silverskyvicto"]
+  },
+  "Glossary/gzip_compression": {
+    "modified": "2019-12-31T06:00:41.133Z",
+    "contributors": ["Uemmra3", "mfuji09", "dskmori", "araigumaG"]
   },
   "Glossary/safe": {
     "modified": "2020-04-14T12:21:33.696Z",
