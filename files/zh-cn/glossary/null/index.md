@@ -1,19 +1,26 @@
 ---
 title: "Null"
 slug: Glossary/Null
+l10n:
+  sourceCommit: 8a3cafa914478bb274d649a95325c4b2dacd07cc
 ---
 
 {{GlossarySidebar}}
 
-在计算机学科，**`null`** 值一直是一个被讨论点，通常来说，表示一个不存在或者无效{{glossary("object")}}或者地址引用。语言实现中空引用的含义各不相同。
+在计算机学科，**`null`** 值通常来说表示一个不存在或者无效{{glossary("object")}}或者地址引用。语言实现中空引用的含义各不相同。
 
-在 {{Glossary("JavaScript")}}，null 是{{Glossary("Primitive", "原始值")}}之一
+在 {{Glossary("JavaScript")}}，`null` 是{{Glossary("Primitive", "原始值")}}之一，因其行为类似于一个原始值。但是，当你使用 [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) 操作符时，会返回 `"object"`。
+
+```js
+console.log(typeof null); // "object"
+```
+这被认为是[一个 bug](/en-US/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null)，但是无法修复，因为这会破坏太多脚本。
 
 ## 参见
 
-- [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)
-- JavaScript 全局对象：{{jsxref("null")}}
-- 维基百科[空指针](https://zh.wikipedia.org/wiki/空指针)
+- [JavaScript 数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)
+- JavaScript 全局对象：[`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
+- 维基百科上的[空指针](https://zh.wikipedia.org/wiki/空指针)
 - **[MDN 术语表](/zh-CN/docs/Glossary)**
 
   - {{Glossary("JavaScript")}}
@@ -23,4 +30,4 @@ slug: Glossary/Null
   - {{Glossary("boolean")}}
   - {{Glossary("null")}}
   - {{Glossary("undefined")}}
-  - {{jsxref("Symbol")}}
+  - {{Glossary("symbol")}}
