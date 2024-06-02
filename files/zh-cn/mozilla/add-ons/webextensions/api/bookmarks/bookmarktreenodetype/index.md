@@ -11,11 +11,11 @@ l10n:
 
 ## 类型
 
-`bookmarks.BookmarkTreeNodeType` 是一个 {{jsxref("string")}}，可以具有以下三个值之一：
+`bookmarks.BookmarkTreeNodeType` 是一个{{jsxref("string", "字符串", "", 1)}}，可以是以下三个值之一：
 
-- `"bookmark"`: 节点是一个书签。
-- `"folder"`: 节点是一个文件夹。
-- `"separator"`: 节点是一个分隔符。
+- `"bookmark"`：节点是一个书签。
+- `"folder"`：节点是一个文件夹。
+- `"separator"`：节点是一个分隔符。
 
 ## 浏览器兼容性
 
