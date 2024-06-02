@@ -9,7 +9,7 @@ l10n:
 
 在指定的 `parentId` 的 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} 下创建一个书签或文件夹。要创建文件夹，请省略或留空 {{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}} 参数。
 
-> **警告：** 如果你的扩展尝试在书签树的根节点中创建新书签，则会引发错误：“_书签根无法修改_”，并且不会创建该书签。
+> **警告：** 如果你的扩展尝试在书签树的根节点中创建新书签，则会引发错误：“_The bookmark root cannot be modified_”，并且不会创建该书签。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -30,7 +30,7 @@ let createBookmark = browser.bookmarks.create(
 
 一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} 对象，该对象描述了新创建的书签节点。
 
-> **备注：** 如果你创建多个书签，由于此 API 是异步的，因此创建调用可能以任何顺序处理。因此，每个书签的索引值在 {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} 中返回的值可能会在所有创建调用完成之前发生变化或未知。如果书签的索引对你的扩展很重要，那么在创建多个书签时，扩展应等待每个 bookmarks.create 调用完成后再创建下一个书签。等待确保每个书签的索引不受在原始调用正在进行时并发执行的创建调用的影响。
+> **备注：** 如果你创建多个书签，由于此 API 是异步的，因此创建调用可能以任何顺序处理。因此，在 {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} 中返回的每个书签的索引值可能会在所有创建调用完成之前发生变化或是未知的。如果书签的索引对你的扩展很重要，那么在创建多个书签时，扩展应等待每个 `bookmarks.create` 调用完成后再创建下一个书签。等待可确保每个书签的索引不受在原始调用正在进行时并发执行的创建调用的影响。
 
 ## 示例
 
@@ -42,7 +42,7 @@ function onCreated(node) {
 }
 
 let createBookmark = browser.bookmarks.create({
-  title: "bookmarks.create() on MDN",
+  title: "bookmarks.create() - MDN",
   url: "https://developer.mozilla.org/Add-ons/WebExtensions/API/bookmarks/create",
 });
 
