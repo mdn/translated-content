@@ -1,5 +1,5 @@
 ---
-title: bookmarks：move() 方法
+title: bookmarks.move()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
 l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
