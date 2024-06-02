@@ -1,8 +1,9 @@
 ---
-title: AudioBufferSourceNode.detune
+title: "AudioBufferSourceNode: detune プロパティ"
+short-title: detune
 slug: Web/API/AudioBufferSourceNode/detune
 l10n:
-  sourceCommit: 02e1bfcad5fd0de845fb033d331c3c027afa2d6e
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Web Audio API")}}
