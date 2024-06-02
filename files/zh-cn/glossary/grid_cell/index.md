@@ -1,5 +1,5 @@
 ---
-title: 网络单元格
+title: 网格单元
 slug: Glossary/Grid_Cell
 l10n:
   sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-在[Grid 布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)中，**网络单元格**是 CSS 网格中的最小单元。它是四条{{glossary("grid lines","网格线")}}之间的空间，概念上非常像表格单元格。
+在 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)中，**网格单元**（grid cell）是 CSS 网格中的最小单元。它是四条{{glossary("grid lines","网格线")}}之间的空间，概念上非常像表格单元格。
 
 ![显示一个网格中单独一个单元格的图片](1_grid_cell.png)
 
