@@ -7,11 +7,11 @@ l10n:
 
 {{AddonSidebar}}
 
-此 [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} API 允许一个附加组件和浏览器的书签系统交互和操作。你可以用它给页面加书签，获取已有的书签，以及编辑，移除和管理书签。
+[WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} API 允许扩展与浏览器的书签系统交互并对其进行操作。你可以用它给页面加书签、获取已有的书签，以及编辑、移除和管理书签。
 
-欲使用此 API，一个附件组件必须在它的 [`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件当中请求“bookmarks”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
+欲使用此 API，扩展必须在它的 [`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件当中请求“bookmarks”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
-Extensions 无法在书签树的根节点中创建、修改或删除书签。这样做会导致错误，错误消息为：“_无法修改书签根节点_”。
+扩展无法在书签树的根节点中创建、修改或删除书签。这样做会导致错误，错误消息为：“_The bookmark root cannot be modified_”。
 
 ## 类型
 
