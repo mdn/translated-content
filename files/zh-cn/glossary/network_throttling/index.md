@@ -15,4 +15,4 @@ l10n:
 
 ## 参见
 
-- [人为监控](/en-US/docs/Glossary/Synthetic_monitoring)
+- [人为监控](/zh-CN/docs/Glossary/Synthetic_monitoring)
