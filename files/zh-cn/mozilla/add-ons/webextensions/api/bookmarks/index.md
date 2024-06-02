@@ -52,19 +52,19 @@ l10n:
 ## 事件
 
 - {{WebExtAPIRef("bookmarks.onCreated")}}
-  - : 当书签或文件夹创建时产生。
+  - : 当书签或文件夹被创建时触发。
 - {{WebExtAPIRef("bookmarks.onRemoved")}}
-  - : 当删除书签或文件夹时产生。当删除整个文件夹（包括其中所有内容）时，仅为该文件夹发送通知，不为其中任何内容发送通知。
+  - : 当书签或文件夹被删除时触发。当递归删除文件夹时，只会为文件夹触发一次通知，其内容不会触发通知。
 - {{WebExtAPIRef("bookmarks.onChanged")}}
-  - : 一个书签或文件夹更改时发生。注意：目前只有标题和 URL 更改时会触发这一事件。
+  - : 当书签或文件夹发生更改时触发。目前，只有 `title` 和 `url` 的更改会触发此事件。
 - {{WebExtAPIRef("bookmarks.onMoved")}}
-  - : 当书签或文件夹移动到另一个父文件夹中时产生。
+  - : 当书签或文件夹被移动到不同的父文件夹或在其文件夹中发生偏移时触发。
 - {{WebExtAPIRef("bookmarks.onChildrenReordered")}}
-  - : 文件夹中的子节点在用户界面中调整顺序时产生。调用 move() 不会触发该事件。
+  - : 当用户在浏览器的 UI 中对文件夹的子项进行排序时触发。这不是由 {{WebExtAPIRef("bookmarks.move", "move()")}} 调用的结果。
 - {{WebExtAPIRef("bookmarks.onImportBegan")}}
-  - : 开始导入书签时产生。复杂的事件处理函数在这一事件产生后不应该再处理 onCreated 事件，直到 onImportEnded 事件产生，在此过程中其他事件仍然应该立即处理。
+  - : 当开始书签导入会话时触发。消耗性的观察者应该忽略 {{WebExtAPIRef("bookmarks.onCreated")}} 更新，直到 {{WebExtAPIRef("bookmarks.onImportEnded")}} 被触发。观察者仍应立即处理其他通知。
 - {{WebExtAPIRef("bookmarks.onImportEnded")}}
-  - : 书签导入结束时产生。
+  - : 当书签导入会话结束时触发。
 
 ## 浏览器兼容性
 
