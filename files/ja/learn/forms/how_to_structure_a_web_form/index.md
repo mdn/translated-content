@@ -2,7 +2,7 @@
 title: フォームの構築方法
 slug: Learn/Forms/How_to_structure_a_web_form
 l10n:
-  sourceCommit: 456818a08b697e125ddb765d8f18020bc80c9747
+  sourceCommit: ccec5393a2b1bbddfdfc1c1d71b076c6ddd3942f
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
@@ -14,7 +14,6 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-         基本的なコンピューターリテラシーと、
         <a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
           >HTML の基本的な理解</a
         >.
@@ -134,15 +133,15 @@ l10n:
 <!-- このようにします -->
 <!--div>
   <label for="username">Name:</label>
-  <input id="username" type="text" name="username">
-  <label for="username"><span aria-label="required">*</abbr></label>
+  <input id="username" type="text" name="username" required>
+  <label for="username"><span aria-label="required">*</label>
 </div-->
 
 <!-- より良い例です -->
 <!--div>
   <label for="username">
     <span>Name:</span>
-    <input id="username" type="text" name="username">
+    <input id="username" type="text" name="username" required>
     <span aria-label="required">*</span>
   </label>
 </div-->
@@ -150,7 +149,7 @@ l10n:
 <!-- これが最も良いでしょう -->
 <div>
   <label for="username">Name: <span aria-label="required">*</span></label>
-  <input id="username" type="text" name="username" />
+  <input id="username" type="text" name="username" required />
 </div>
 ```
 
@@ -174,7 +173,7 @@ l10n:
 
 サンプルでわかるように、ラベルとそのウィジェットを {{HTMLElement("ul")}} や {{HTMLElement("ol")}} リストの中の {{HTMLElement("li")}} 要素で包み込むのが一般的な慣習です。HTML リストにあるように、{{HTMLElement("p")}} 要素と {{HTMLElement("div")}} 要素も良く使われます。リストは複数のチェックボックスやラジオボタンを構造化するのに最もよく使われます。
 
-{{HTMLElement("fieldset")}} 要素に加えて、複雑なフォームの構築に HTML の見出し (例{{htmlelement("h1")}}, {{htmlelement("h2")}}) やセクション (例 {{htmlelement("section")}}) を使うことも一般的です。
+{{HTMLElement("fieldset")}} 要素に加えて、複雑なフォームの構築に HTML の見出し (例{{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}) やセクション (例 {{htmlelement("section")}}) を使うことも一般的です。
 
 とりわけ、コーディングスタイルがどうあるのが心地よく、どれがアクセシブルで使いやすいフォームとなるのかを見つけるのはあなた次第です。別の機能セクションは別の {{htmlelement("section")}} 要素と、ラジオボタンを含む {{htmlelement("fieldset")}} にそれぞれ分けておくべきです。
 
@@ -182,31 +181,25 @@ l10n:
 
 これらのアイデアを実践し、もう少し複雑なフォーム構造、つまり支払いフォームを作成しましょう。このフォームはあなたがまだ理解していないかもしれないウィジェットタイプをいくつも含みますが、今はそのことを心配しないでください。次の記事 ([基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)) でそれらがどのように機能するのかがわかります。今のところ、以下の説明に沿って説明を注意深く読み、フォームを構成するためにどのラッパー要素を使用しているか、そしてその理由を理解することから始めてください。
 
-1. あらかじめ、[空のテンプレートファイル](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)と[お支払いフォームの CSS](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) のローカルコピーをコンピューターの新しいディレクトリーに作成します。
-2. まず最初に、HTML {{htmlelement("head")}} 内に次の行を追加して CSS を HTML に適用します。
+1. あらかじめ、[空のテンプレートファイル](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)のローカルコピーをコンピューターの新しいディレクトリーに作成します。
 
-   ```html
-   <link href="payment-form.css" rel="stylesheet" />
+2. 次に、外側の {{htmlelement("form")}} 要素を追加してフォームを作成します:
+
+   ```html-nolint
+   <form>
    ```
 
-3. 次に、外側の {{htmlelement("form")}} 要素を追加してフォームを作成します:
+3. `<form>` タグ内に、必須フィールドにマークを付ける方法をユーザーに通知するための見出しと段落を追加します:
 
-   ```html
-   <form></form>
-   ```
-
-4. `<form>` タグ内に、必須フィールドにマークを付ける方法をユーザーに通知するための見出しと段落を追加します:
-
-   ```html
+   ```html-nolint
    <h1>Payment form</h1>
    <p>
      Required fields are followed by
-     <strong><abbr title="required">*</abbr></strong
-     >.
+     <strong><span aria-label="required">*</span></strong>.
    </p>
    ```
 
-5. 次に、前のエントリーの下に、より大きなコードセクションをフォームに追加します。ここでは、連絡先情報フィールドを個別の {{htmlelement("section")}} 要素内にラップしていることがわかります。さらに、2 つのラジオボタンのセットがあり、それぞれ独自のリスト ({{htmlelement("li")}}) 要素の中に入れています。最後に、2 つの標準テキスト {{htmlelement("input")}} とそれに関連する {{htmlelement("label")}} 要素があり、それぞれ {{htmlelement("p")}} の内側に含まれていて、パスワードを入力するためのパスワード入力があります。フォームにこのコードを追加してください:
+4. 次に、前のエントリーの下に、より大きなコードセクションをフォームに追加します。ここでは、連絡先情報フィールドを個別の {{htmlelement("section")}} 要素内にラップしていることがわかります。さらに、2 つのラジオボタンのセットがあり、それぞれ独自のリスト ({{htmlelement("li")}}) 要素の中に入れています。最後に、2 つの標準テキスト {{htmlelement("input")}} とそれに関連する {{htmlelement("label")}} 要素があり、それぞれ {{htmlelement("p")}} の内側に含まれていて、パスワードを入力するためのパスワード入力があります。フォームにこのコードを追加してください:
 
    ```html
    <section>
@@ -216,20 +209,20 @@ l10n:
        <ul>
          <li>
            <label for="title_1">
-             <input type="radio" id="title_1" name="title" value="K" />
-             King
+             <input type="radio" id="title_1" name="title" value="A" />
+             Ace
            </label>
          </li>
          <li>
            <label for="title_2">
-             <input type="radio" id="title_2" name="title" value="Q" />
-             Queen
+             <input type="radio" id="title_2" name="title" value="K" />
+             King
            </label>
          </li>
          <li>
            <label for="title_3">
-             <input type="radio" id="title_3" name="title" value="J" />
-             Joker
+             <input type="radio" id="title_3" name="title" value="Q" />
+             Queen
            </label>
          </li>
        </ul>
@@ -237,28 +230,33 @@ l10n:
      <p>
        <label for="name">
          <span>Name: </span>
-         <strong><abbr title="required">*</abbr></strong>
+         <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="text" id="name" name="username" />
+       <input type="text" id="name" name="username" required />
      </p>
      <p>
        <label for="mail">
-         <span>E-mail: </span>
-         <strong><abbr title="required">*</abbr></strong>
+         <span>Email: </span>
+         <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="email" id="mail" name="usermail" />
+       <input type="email" id="mail" name="usermail" required />
      </p>
      <p>
        <label for="pwd">
          <span>Password: </span>
-         <strong><abbr title="required">*</abbr></strong>
+         <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="password" id="pwd" name="password" />
+       <input type="password" id="pwd" name="password" required />
      </p>
    </section>
    ```
 
-6. それでは、フォームの 2 番目の `<section>` — 支払い情報に目を向けます。ここには 3 つの異なるウィジェットとそのラベルがあり、それぞれ `<p>` の中に含まれています。1 つ目は、クレジットカードの種類を選択するためのドロップダウンメニュー ({{htmlelement("select")}}) です。2 番目は、クレジットカード番号を入力するための `tel` 型の `<input>` 要素です。`number` 型を使うこともできますが、そのスピナー UI は望ましくありません。最後のものは、カードの有効期限を入力するための `date` 型の `<input>` 要素です。これは、サポートしているブラウザーでは日付選択ウィジェットが表示され、サポートしていないブラウザーでは通常のテキスト入力に戻ります。新しい入力型は [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)で再度紹介します。
+5. それでは、フォームの 2 番目の `<section>` — 支払い情報に目を向けます。
+   ここには 3 つの異なるウィジェットとそのラベルがあり、それぞれ `<p>` の中に含まれています。
+   1 つ目は、クレジットカードの種類を選択するためのドロップダウンメニュー ({{htmlelement("select")}}) です。
+   2 番目は、クレジットカード番号を入力するための `tel` 型の `<input>` 要素です。`number` 型を使うこともできますが、そのスピナー UI は望ましくありません。
+   最後のものは、カードの有効期限を入力するための `date` 型の `<input>` 要素です。これは、サポートしているブラウザーでは日付選択ウィジェットが表示され、サポートしていないブラウザーでは通常のテキスト入力に戻ります。
+   新しい入力型は [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)で再度紹介します。
 
    前のセクションの下に次のように入力してください。
 
@@ -278,32 +276,126 @@ l10n:
      <p>
        <label for="number">
          <span>Card number:</span>
-         <strong><abbr title="required">*</abbr></strong>
+         <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="tel" id="number" name="cardnumber" />
+       <input type="tel" id="number" name="cardnumber" required />
      </p>
      <p>
-       <label for="date">
+       <label for="expiration">
          <span>Expiration date:</span>
-         <strong><abbr title="required">*</abbr></strong>
-         <em>formatted as mm/dd/yyyy</em>
+         <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="date" id="date" name="expiration" />
+       <input
+         type="text"
+         id="expiration"
+         name="expiration"
+         required
+         placeholder="MM/YY"
+         pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
      </p>
    </section>
    ```
 
-7. 最後に追加するセクションはもっと単純で、フォームデータを送信するための `submit` タイプの {{htmlelement("button")}} のみを含みます。これをフォームの一番下に追加してください:
+6. 最後に追加するセクションはもっと単純で、フォームデータを送信するための `submit` タイプの {{htmlelement("button")}} のみを含みます。これをフォームの一番下に追加してください。
 
    ```html
-   <p><button type="submit">Validate the payment</button></p>
+   <section>
+     <p>
+       <button type="submit">Validate the payment</button>
+     </p>
+   </section>
    ```
 
-完成したフォームは以下のように動作しています (GitHub でも確認できます。payment-form.html [ソース](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html)を参照して[ライブ実行](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)してください)。
+7. 最後に、外側の {{htmlelement("form")}} の閉じタグを追加してフォームを完全に閉じます。
 
-{{EmbedLiveSample("A_payment_form","100%",620, "", "Learn/Forms/How_to_structure_a_web_form/Example")}}
+   ```html
+   </form>
+   ```
 
-## あなたのスキルをテストしてみましょう!
+   ```css hidden
+   h1 {
+     margin-top: 0;
+   }
+
+   ul {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+   }
+
+   form {
+     margin: 0 auto;
+     width: 400px;
+     padding: 1em;
+     border: 1px solid #ccc;
+     border-radius: 1em;
+   }
+
+   div + div {
+     margin-top: 1em;
+   }
+
+   label span {
+     display: inline-block;
+     text-align: right;
+   }
+
+   input,
+   textarea {
+     font: 1em sans-serif;
+     width: 250px;
+     box-sizing: border-box;
+     border: 1px solid #999;
+   }
+
+   input[type="checkbox"],
+   input[type="radio"] {
+     width: auto;
+     border: none;
+   }
+
+   input:focus,
+   textarea:focus {
+     border-color: #000;
+   }
+
+   textarea {
+     vertical-align: top;
+     height: 5em;
+     resize: vertical;
+   }
+
+   fieldset {
+     width: 250px;
+     box-sizing: border-box;
+     border: 1px solid #999;
+   }
+
+   button {
+     margin: 20px 0 0 0;
+   }
+
+   label {
+     position: relative;
+     display: inline-block;
+   }
+
+   p label {
+     width: 100%;
+   }
+
+   label em {
+     position: absolute;
+     right: 5px;
+     top: 20px;
+   }
+   ```
+
+下記では完了したフォームに追加 CSS を適用しました。フォームの外観を変更したい場合は、[例](/ja/docs/Learn/Forms/How_to_structure_a_web_form/Example)からスタイルをコピーするか、[ウェブフォームのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)を参照してください。
+
+{{EmbedLiveSample("active_learning_building_a_form_structure","100%",620)}}
+
+## スキルをテスト
 
 この記事はここまでですが、最も重要な情報を覚えていますか？ 先に進む前に、この情報を保持しているかどうかを確認するためのテストがあります — [Test your skills: Form structure](/ja/docs/Learn/Forms/Test_your_skills:_Form_structure) を参照してください。
 
@@ -316,3 +408,9 @@ l10n:
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://alistapart.com/article/sensibleforms/)
 
 {{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+
+### 高度なトピック
+
+- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [フォームウィジェット向けのプロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
