@@ -32,7 +32,7 @@ charCodeAt(index)
 
 문자열의 문자는 왼쪽에서 오른쪽으로 색인됩니다. 첫 번째 문자의 인덱스는 `0`이고 `str`이라 불리는 문자열의 마지막 문자열의 인덱스는 `str.length - 1`입니다.
 
-유니코드 코드 포인트 범위는 `0`에서 `1114111`(`0x10FFFF`)까지입니다. 더 높은 코드 포인트는 16비트 의사 문자의 서로게이트로 표현되기 때문에 `charCodeAt()`은 항상 `65536`보다 작은 값을 반환합니다.따라서 `65535`보다 큰 값을 가진 전체 문자를 얻으려면 `charCodeAt(i)`뿐만 아니라 `charCodeAt(i + 1)`도 검색하거나(두 문자로 된 문자열을 조작하는 것처럼) {{jsxref("String/codePointAt", "codePointAt(i)")}}를 대신 사용해야 합니다. 유니코드에 대해 정보를 더 알고싶으시면 [UTF-16 문자, 유니코드 코드 포인트 그리고 그래프 클러스터](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)를 참고하시기 바랍니다.
+유니코드 코드 포인트 범위는 `0`에서 `1114111`(`0x10FFFF`)까지입니다. 더 높은 코드 포인트는 16비트 의사 문자의 서로게이트로 표현되기 때문에 `charCodeAt()`은 항상 `65536`보다 작은 값을 반환합니다. 따라서 `65535`보다 큰 값을 가진 전체 문자를 얻으려면 `charCodeAt(i)`뿐만 아니라 `charCodeAt(i + 1)`도 검색하거나(두 문자로 된 문자열을 조작하는 것처럼) {{jsxref("String/codePointAt", "codePointAt(i)")}}를 대신 사용해야 합니다. 유니코드에 대해 정보를 더 알고 싶으시면 [UTF-16 문자, 유니코드 코드 포인트 그리고 그래프 클러스터](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)를 참고하시기 바랍니다.
 
 ## 예제
 
