@@ -25,7 +25,7 @@ l10n:
 
 참고로 `unload` 이벤트 역시 문서 트리의 순서를 따라갑니다. 즉 부모 프레임의 `unload`가 자식 프레임의 `unload` **이전에** 발생합니다. (아래 예제를 확인하세요)
 
-## 용법
+## 구문
 
 {{domxref("EventTarget.addEventListener", "addEventListener()")}}와 같은 메서드에서 이벤트 이름을 사용하거나, 이벤트 핸들러를 설정해 사용합니다.
 
