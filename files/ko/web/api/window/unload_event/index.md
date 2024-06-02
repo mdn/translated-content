@@ -38,9 +38,9 @@ onunload = (event) => {};
 
 일반적인 {{domxref("Event")}}.
 
-## 이벤트 핸들러 별칭
+## 이벤트 처리기 별칭
 
-`Window` 인터페이스 외에도, 이벤트 핸들러 속성 `onunload` 는 다음 대상에서도 사용할 수 있습니다.
+`Window` 인터페이스 외에도, 이벤트 처리기 속성 `onunload` 는 다음 대상에서도 사용할 수 있습니다.
 
 - {{domxref("HTMLBodyElement")}}
 - {{domxref("HTMLFrameSetElement")}}
