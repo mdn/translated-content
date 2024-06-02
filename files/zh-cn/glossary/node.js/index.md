@@ -1,6 +1,8 @@
 ---
 title: Node.js
 slug: Glossary/Node.js
+l10n:
+  sourceCommit: 70736395f85541545fc0b384f2d091e35cfeadae
 ---
 
 {{GlossarySidebar}}
