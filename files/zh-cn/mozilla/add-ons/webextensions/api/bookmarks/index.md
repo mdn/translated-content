@@ -18,11 +18,11 @@ Extensions 无法在书签树的根节点中创建、修改或删除书签。这
 - {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}
   - : 表示在书签树中的一个书签或者文件夹。
 - {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}}
-  - : 一个描述在树中的一个节点是否是一个书签，一个文件夹或是一个分割符的 {{jsxref("String")}} 枚举类型。
+  - : 一个描述树中的某个节点是否是书签、文件夹或是分割符的{{jsxref("String", "字符串", "", 1)}}枚举类型。
 - {{WebExtAPIRef("bookmarks.BookmarkTreeNodeUnmodifiable")}}
-  - : 一个说明了为什么一个书签或者文件夹是不可修改的 {{jsxref("String")}} 枚举类型。
+  - : 一个说明了为什么一个书签或者文件夹是不可修改的{{jsxref("String", "字符串", "", 1)}}枚举类型。
 - {{WebExtAPIRef("bookmarks.CreateDetails")}}
-  - : 当创建一个新书签时，包含被传递给这个 {{WebExtAPIRef("bookmarks.create()")}} 函数的信息。
+  - : 当创建一个新书签时，包含被传递给 {{WebExtAPIRef("bookmarks.create()")}} 函数的信息。
 
 ## 方法
 
