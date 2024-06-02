@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-给定 {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} 的 ID 或此类 ID 的数组时，**`bookmarks.get()`** 方法用来检索匹配的节点。
+**`bookmarks.get()`** 方法用于检索与给定 {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} 的 ID 或此类 ID 的数组匹配的节点。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -15,18 +15,18 @@ l10n:
 
 ```js-nolint
 let getBookmarks = browser.bookmarks.get(
-  idOrIdList                // string 或 string 数组
+  idOrIdList                // 字符串或字符串数组
 )
 ```
 
 ### 参数
 
 - `idOrIdList`
-  - : `string`。一个 {{jsxref("string")}} 或字符串 {{jsxref("array")}}，指定一个或多个 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} 对象的 ID 来检索它们。
+  - : 一个{{jsxref("string", "字符串", "", 1)}}或字符串{{jsxref("array", "数组", "", 1)}}，指定一个或多个要检索的 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} 对象的 ID。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 [`BookmarkTreeNode`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) 数组，每个匹配的节点一个。结果中不包括分隔符。如果找不到任何节点，promise 将以错误消息被拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 [`BookmarkTreeNode`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) 数组，表示每个匹配的节点。结果中不包括分隔符。如果找不到任何节点，promise 将以错误消息拒绝。
 
 ## 示例
 
