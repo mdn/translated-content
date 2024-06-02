@@ -24,8 +24,8 @@ slug: Glossary/Navigation_directive
   - {{Glossary("Fetch directive")}}
   - {{Glossary("Navigation directive")}}
   - {{Glossary("Reporting directive")}}
-  - [`block-all-mixed-content`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content)
-  - [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
-  - [`trusted-types`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types)
+  - [`block-all-mixed-content`](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content)
+  - [`upgrade-insecure-requests`](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
+  - [`trusted-types`](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types)
 
 - {{HTTPHeader("Content-Security-Policy")}}
