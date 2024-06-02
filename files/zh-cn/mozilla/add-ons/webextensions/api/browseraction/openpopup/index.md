@@ -9,7 +9,7 @@ l10n:
 
 打开浏览操作的弹出窗口。
 
-在稳定版本的 Firefox 中，你只能在[用户操作](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions)的处理程序内调用此函数。有关详细信息，请参见[浏览器兼容性](#浏览器兼容性)。
+在稳定版本的 Firefox 中，你只能在[用户操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_actions)的处理程序内调用此函数。有关详细信息，请参见[浏览器兼容性](#浏览器兼容性)。
 
 ## 语法
 
