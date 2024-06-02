@@ -11,7 +11,7 @@ l10n:
 
 该组织维护诸如 {{Glossary("OpenGL")}} 和 {{domxref("WebGL API")}} 等标准。
 
-## See also
+## 参见
 
 - 维基百科上的[科纳斯组织](https://zh.wikipedia.org/wiki/科纳斯组织)
 - [科纳斯组织官网](https://www.khronos.org/)
