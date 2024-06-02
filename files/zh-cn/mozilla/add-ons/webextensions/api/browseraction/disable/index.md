@@ -16,9 +16,12 @@ browser.browserAction.disable(
   tabId // 可选整数
 )
 ```
+
 ### 参数
+
 - tabId {{optional_inline}}
-  - : `integer`。您想要禁用浏览器操作的选项卡的ID。
+  - : `integer`。你想要禁用浏览器操作的选项卡的 ID。
+
 ## 浏览器兼容性
 
 {{Compat}}
@@ -44,6 +47,7 @@ browser.browserAction.onClicked.addListener((tab) => {
   browser.browserAction.disable(tab.id);
 });
 ```
+
 {{WebExtExamples}}
 
 > **备注：** 此 API 基于 Chromium 的 [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/reference/browserAction/#method-disable) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
