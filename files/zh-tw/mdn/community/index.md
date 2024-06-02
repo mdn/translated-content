@@ -31,7 +31,7 @@ slug: MDN/Community
 [問題（Issues）](/zh-TW/docs/MDN/Community/Issues)\
 &nbsp; &nbsp; 問題是用於追蹤所有錯誤和工作都有被正確處理的工具，此文章包含了開啟與處理問題的指南、問題分類和[內容與功能建議](/zh-TW/docs/MDN/Community/Issues/Content_suggestions_feature_proposals)
 
-[拉取請求（PR）](/en-US/docs/MDN/Community/Pull_requests)\
+[拉取請求（PR）](/zh-TW/docs/MDN/Community/Pull_requests)\
 &nbsp; &nbsp; 這個章節說明了提交拉取請求的指南和審查流程。
 
 [用戶角色與團隊](/zh-TW/docs/MDN/Community/Roles_teams)\
