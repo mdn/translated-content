@@ -34,17 +34,17 @@ browser.bookmarks.onCreated.hasListener(listener)
 
   - : 事件触发时调用的函数。该函数接收以下参数：
 
-- `id`
-  - : `string`。新书签项的 ID。
-- `bookmark`
-  - : {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}。关于新书签项的信息。
+    - `id`
+      - : `string`。新书签项的 ID。
+    - `bookmark`
+      - : {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}。关于新书签项的信息。
 
 ## 示例
 
 ```js
 function handleCreated(id, bookmarkInfo) {
-  console.log(`新书签 ID: ${id}`);
-  console.log(`新书签 URL: ${bookmarkInfo.url}`);
+  console.log(`新书签 ID：${id}`);
+  console.log(`新书签 URL：${bookmarkInfo.url}`);
 }
 
 browser.bookmarks.onCreated.addListener(handleCreated);
