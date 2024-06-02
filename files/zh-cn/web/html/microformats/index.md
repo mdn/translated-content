@@ -1,6 +1,8 @@
 ---
 title: 微格式
 slug: Web/HTML/microformats
+l10n:
+  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
 {{HTMLSidebar}}
