@@ -22,15 +22,17 @@ browser.alarms.create(
 
 - `name`{{optional_inline}}
 
-  - : 字符串类型。闹钟的名称。默认为空的字符串。闹钟的名称可以在 {{WebExtAPIRef('alarms.get()')}} 方法和 {{WebExtAPIRef('alarms.clear()')}} 方法中引用。同时它也可以通过 {{WebExtAPIRef('alarms.onAlarm')}} 监听方法传入的参数对象 {{WebExtAPIRef('alarms.Alarm')}}的 `name` 属性访问到。
+  - : 字符串类型。闹钟的名称。默认为空的字符串。
 
-    闹钟的名称是唯一的（在单个附件范围内）。如果传入了已经在这个附件存在的名称，原来的同名闹钟会被移除并且没有警告。
+    闹钟的名称可用于 {{WebExtAPIRef('alarms.get()')}} 方法和 {{WebExtAPIRef('alarms.clear()')}} 方法来引用特定闹钟。同时也可以通过 {{WebExtAPIRef('alarms.onAlarm')}} 监听函数传入的 {{WebExtAPIRef('alarms.Alarm')}} 对象的 `name` 属性访问到它。
+
+    闹钟的名称是唯一的（在单个扩展的作用域内）。如果传入了已经在这个扩展中存在的名称，原来的同名闹钟会被移除并使用正在创建的闹钟替换。
 
 - `alarmInfo`{{optional_inline}}
 
-  - : `object`（对象）类型。你可以对过它来指定什么时间闹钟会开始触发，其值可以是一个具体的时间值或者是一个延时（从闹钟设置开始）。为了让闹钟能复现，需要指定 `periodInMinutes`。
+  - : `object`（对象）类型。你可以使用它来指定闹钟开始触发的时间，其值可以是一个绝对值（`when`），或相对于闹钟设置时间的相对值（`delayInMinutes`）。要让闹钟能够重复，需要指定 `periodInMinutes`。
 
-    在 Chrome 浏览器上，除非附件以非打包（unpackaged）方式加载，闹钟的创建每分钟不允许超过一次。如果附件尝试设置 `delayInMinutes` 为小于 1 的值，闹钟只能在到达 1 分钟之后才会触发，并且会变成每分钟触发一次。
+    在 Chrome 浏览器上，除非附件以非打包（unpackaged）方式加载，创建的闹钟的触发频率不能超过每分钟一次。如果扩展尝试将 `delayInMinutes` 设置为小于 1 的值，或 `when` 设置为在未来的 1 分钟之内的值，则闹钟只能在到达 1 分钟之后才会触发。如果扩展尝试将 `periodInMinutes` 设置为小于 1 的之，则闹钟会变成每分钟触发一次。
 
     `alarmInfo` 对象可以设置以下属性：
 
@@ -39,11 +41,11 @@ browser.alarms.create(
     - `delayInMinutes`{{optional_inline}}
       - : `double` 类型。闹钟设置好到第一次触发之间的分钟数。如果你设置了 `delayInMinutes` 属性，请不要设置 `when` 属性。
     - `periodInMinutes`{{optional_inline}}
-      - : `double` 类型。如果设置此属性，闹钟会从第一次触发开始每隔 `periodInMinutes` 分钟再次触发。如果你没有设置 `when` 及 `delayInMinutes` 属性，闹钟会在设置好之后 `periodInMinutes` 分钟第一次触发。如果 `periodInMinutes` 属性没有设置，则闹钟只会触发一次。
+      - : `double` 类型。如果设置此属性，闹钟会从第一次触发开始每隔 `periodInMinutes` 分钟再次触发。如果你没有设置 `when` 及 `delayInMinutes` 属性，闹钟会在其被设置好之后的 `periodInMinutes` 分钟第一次触发。如果没有设置 `periodInMinutes` 属性，则闹钟只会触发一次。
 
 ## 示例
 
-创建一个名称为空的基于延迟的一次性闹钟：
+创建一个名称为 `""` 的基于延迟的一次性闹钟：
 
 ```js
 const delayInMinutes = 5;
