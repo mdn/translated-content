@@ -29,10 +29,10 @@ browser.browserAction.getBadgeTextColor(
 
   - : `object`。
 
-        - `tabId` {{optional_inline}}
-          - : `integer`。指定从中获取徽章文本颜色的标签页。
-        - `windowId` {{optional_inline}}
-          - : `integer`。指定从中获取徽章文本颜色的窗口。
+    - `tabId` {{optional_inline}}
+      - : `integer`。指定从中获取徽章文本颜色的标签页。
+    - `windowId` {{optional_inline}}
+      - : `integer`。指定从中获取徽章文本颜色的窗口。
 
     <!---->
 
