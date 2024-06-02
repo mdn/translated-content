@@ -62,7 +62,7 @@ onunload = (event) => {};
 
 페이지 언로드 이벤트를 감지하고자 한다면, `pagehide` 이벤트를 감지하는 것이 가장 적합합니다.
 
-`unload` 이벤트와 관련된 문제에 대한 자세한 내용은 [페이지 수명 주기 API](https://developer.chrome.com/blog/page-lifecycle-api/#the-unload-event) 가이드를 참조하세요.
+`unload` 이벤트와 관련된 문제에 대한 자세한 내용은 [페이지 수명 주기 API](https://developer.chrome.com/blog/page-lifecycle-api/#the-unload-event) 안내서를 참조하세요.
 
 ## 예제
 
