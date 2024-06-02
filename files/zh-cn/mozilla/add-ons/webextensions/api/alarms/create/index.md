@@ -1,5 +1,5 @@
 ---
-title: alarms：create() 方法
+title: alarms.create()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/create
 l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
