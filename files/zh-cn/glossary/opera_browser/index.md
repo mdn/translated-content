@@ -11,5 +11,5 @@ l10n:
 
 ## 参见
 
-- 维基百科上的 [Opera 浏览器](https://zh.wikipedia.org/wiki/Opera_(瀏覽器))
+- 维基百科上的 [Opera 浏览器](<https://zh.wikipedia.org/wiki/Opera_(瀏覽器)>)
 - [Opera 浏览器官网](https://www.opera.com/)
