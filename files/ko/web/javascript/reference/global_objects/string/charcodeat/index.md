@@ -44,7 +44,7 @@ charCodeAt(index)
 "ABC".charCodeAt(0); // 65 반환
 ```
 
-`charCodeAt()`은 유효한 유니코드 문자가 아닌 론 서로게이트(lone surrogates)를 반환할 수 있습니다..
+`charCodeAt()`은 유효한 유니코드 문자가 아닌 론 서로게이트(lone surrogates)를 반환할 수 있습니다.
 
 ```js
 const str = "𠮷𠮾";
