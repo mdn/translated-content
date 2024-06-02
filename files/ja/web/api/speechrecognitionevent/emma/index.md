@@ -1,5 +1,6 @@
 ---
-title: SpeechRecognitionEvent.emma
+title: "SpeechRecognitionEvent: emma プロパティ"
+short-title: emma
 slug: Web/API/SpeechRecognitionEvent/emma
 l10n:
   sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
