@@ -23,7 +23,7 @@ slug: MDN/Community
 &nbsp; &nbsp; 這個頁面條列了所有MDN團隊和社群使用的討論頻道。
 
 [貢獻](/zh-TW/docs/MDN/Community/Contributing)\
-&nbsp; &nbsp; 這個章節解釋你可以如何貢獻到MDN網路文件和貢獻的規範。此章節包含[開始入門 MDN](/zh-TW/docs/MDN/Community/Contributing/Getting_started)、[儲存庫（repository）](/en-US/docs/MDN/Community/Contributing/Our_repositories)、[翻譯內容](/zh-TW/docs/MDN/Community/Contributing/Translated_content)與[安全漏洞應對](/en-US/docs/MDN/Community/Contributing/Security_vulnerability_response)
+&nbsp; &nbsp; 這個章節解釋你可以如何貢獻到MDN網路文件和貢獻的規範。此章節包含[開始入門 MDN](/zh-TW/docs/MDN/Community/Contributing/Getting_started)、[儲存庫（repository）](/zh-TW/docs/MDN/Community/Contributing/Our_repositories)、[翻譯內容](/zh-TW/docs/MDN/Community/Contributing/Translated_content)與[安全漏洞應對](/zh-TW/docs/MDN/Community/Contributing/Security_vulnerability_response)
 
 [開源禮節](/en-US/docs/MDN/Community/Open_source_etiquette)\
 &nbsp; &nbsp; 此文章說明在貢獻時的行為準則，包含貢獻規則、禮節、和衝突處理方式。
