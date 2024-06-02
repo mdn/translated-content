@@ -43,7 +43,7 @@ slug: MDN/Community
 
 ## 聯繫我們
 
-你可以使用[討論頻道](/en-US/docs/MDN/Community/Communication_channels)與 MDN 網路文件專案團隊以及社群交流。
+你可以使用[討論頻道](/zh-TW/docs/MDN/Community/Communication_channels)與 MDN 網路文件專案團隊以及社群交流。
 
 ### 一般性問題協助
 
