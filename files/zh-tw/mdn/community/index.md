@@ -19,7 +19,7 @@ slug: MDN/Community
 
 ## 社群資源
 
-[討論頻道](/en-US/docs/MDN/Community/Communication_channels)\
+[討論頻道](/zh-TW/docs/MDN/Community/Communication_channels)\
 &nbsp; &nbsp; 這個頁面條列了所有MDN團隊和社群使用的討論頻道。
 
 [貢獻](/zh-TW/docs/MDN/Community/Contributing)\
