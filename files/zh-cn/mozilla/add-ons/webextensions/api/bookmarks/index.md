@@ -29,25 +29,25 @@ Extensions 无法在书签树的根节点中创建、修改或删除书签。这
 - {{WebExtAPIRef("bookmarks.create()")}}
   - : 创建一个书签或文件夹。
 - {{WebExtAPIRef("bookmarks.get()")}}
-  - : 获得一个或者多个{{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}，提供一个书签的编号或者一个书签编号的数组。
+  - : 给定一个书签的编号或者一个书签编号的数组，获取对应的一个或者多个 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}。
 - {{WebExtAPIRef("bookmarks.getChildren()")}}
-  - : 获取指定{{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}节点的所有子节点。
+  - : 获取指定 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} 节点的子节点。
 - {{WebExtAPIRef("bookmarks.getRecent()")}}
   - : 获取最近添加的几个书签。
 - {{WebExtAPIRef("bookmarks.getSubTree()")}}
   - : 获取从指定节点开始的部分书签树。
 - {{WebExtAPIRef("bookmarks.getTree()")}}
-  - : 获取整个书签树。
+  - : 以 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} 对象数组的形式获取整个书签树。
 - {{WebExtAPIRef("bookmarks.move()")}}
-  - : 将指定的书签树节点移到指定位置
+  - : 将指定的 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} 移到书签树中的新位置。
 - {{WebExtAPIRef("bookmarks.remove()")}}
-  - : 删除书签或者空文件夹。
+  - : 给定节点 ID，删除对应的书签或者空书签文件夹。
 - {{WebExtAPIRef("bookmarks.removeTree()")}}
-  - : 删除整个书签文件夹。
+  - : 递归删除书签文件夹，即给定文件夹节点的 ID，删除该节点及其所有子节点。
 - {{WebExtAPIRef("bookmarks.search()")}}
-  - : 搜索书签树节点，找出匹配的结果。如果以对象方式指定查询，得到的 BookmarkTreeNodes 匹配所有指定的属性。
+  - : 搜索匹配一组指定条件的 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}。
 - {{WebExtAPIRef("bookmarks.update()")}}
-  - : 更新书签或文件夹的属性。只需要指定你需要更改的属性，未指定的属性不会更改。注意：目前只支持“title”和“url”属性。
+  - : 给定书签 ID，更新对应的书签的标题和 URL，或书签文件夹的名称。
 
 ## 事件
 
