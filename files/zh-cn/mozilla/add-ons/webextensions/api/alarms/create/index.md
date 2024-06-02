@@ -24,7 +24,7 @@ browser.alarms.create(
 
   - : 字符串类型。闹钟的名称。默认为空的字符串。闹钟的名称可以在 {{WebExtAPIRef('alarms.get()')}} 方法和 {{WebExtAPIRef('alarms.clear()')}} 方法中引用。同时它也可以通过 {{WebExtAPIRef('alarms.onAlarm')}} 监听方法传入的参数对象 {{WebExtAPIRef('alarms.Alarm')}}的 `name` 属性访问到。
 
-  闹钟的名称是唯一的（在单个附件范围内）。如果传入了已经在这个附件存在的名称，原来的同名闹钟会被移除并且没有警告。
+    闹钟的名称是唯一的（在单个附件范围内）。如果传入了已经在这个附件存在的名称，原来的同名闹钟会被移除并且没有警告。
 
 - `alarmInfo`{{optional_inline}}
 
