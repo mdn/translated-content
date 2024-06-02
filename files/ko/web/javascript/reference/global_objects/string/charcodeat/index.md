@@ -26,7 +26,7 @@ charCodeAt(index)
 
 ### 반환 값
 
-명시된 `index`에 있는 문자의 UTF-16 코드 단위 값를 표현하는 `0` 부터 `65535`사이의 정수. 만약 `index`가 `0`부터 `str.length - 1` 사이의 범위를 벗어난다면 `charCodeAt()`은 {{jsxref("NaN")}}을 반환합니다.
+명시된 `index`에 있는 문자의 UTF-16 코드 단위 값를 표현하는 `0` 부터 `65535`사이의 정수입니다. 만약 `index`가 `0`부터 `str.length - 1` 사이의 범위를 벗어난다면 `charCodeAt()`은 {{jsxref("NaN")}}을 반환합니다.
 
 ## 설명
 
