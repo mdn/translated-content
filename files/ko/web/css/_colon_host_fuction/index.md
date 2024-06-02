@@ -75,7 +75,7 @@ The `:host(.footer) { color : red; }` rule styles all instances of the `<context
 
 ## 더 보기
 
-- [Web components](/en-US/docs/Web/API/Web_components)
+- [Web components](/ko/docs/Web/API/Web_components)
 - {{CSSxRef(":host")}}
 - {{CSSxRef(":host-context", ":host-context()")}}
 - {{CSSxRef(":state",":state()")}}
