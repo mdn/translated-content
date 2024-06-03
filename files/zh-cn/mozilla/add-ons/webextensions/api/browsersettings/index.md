@@ -11,7 +11,7 @@ l10n:
 
 由于这些是全局设置，扩展之间可能会产生冲突。有关如何处理冲突的详细信息，请参阅 [`BrowserSetting.set()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set) 的文档。
 
-使用此API需要拥有“browserSettings”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
+使用此 API 需要拥有“browserSettings”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
 ## 属性
 
@@ -55,6 +55,7 @@ l10n:
   - : 控制缩放是应用于整个页面还是仅应用于文本。
 - {{WebExtAPIRef("browserSettings.zoomSiteSpecific")}}
   - : 控制页面缩放是按站点还是按标签页应用。如果 {{WebExtAPIRef("privacy.websites")}} `.resistFingerprinting` 为 true，则此设置无效，缩放按标签页应用。
+
 ## 浏览器兼容性
 
 {{Compat}}
