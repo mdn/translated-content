@@ -38,7 +38,7 @@ l10n:
     aria-owns="animalGroup"
     aria-expanded="true">
     <img role="presentation" tabindex="-1" src="images/treeExpanded.gif" />
-    <span role="treeitem" tabindex="0">Animals</span>
+    <span role="treeitem" tabindex="0">动物</span>
   </div>
   <div id="animalGroup" role="group">
     <div id="birds" role="treeitem">
