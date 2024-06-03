@@ -7,14 +7,14 @@ l10n:
 
 {{AddonSidebar}}
 
-`Cookie` 类型是 {{WebExtAPIRef("cookies")}} API 中表示 HTTP cookie 信息的对象。
+{{WebExtAPIRef("cookies")}} API 的 `Cookie` 类型表示有关 HTTP cookie 的信息。
 
 ## 类型
 
 此类型的值是对象，可以包含以下属性：
 
 - `domain`
-  - : 表示 cookie 所属域的 `string`（例如“www.google.com”、“example.com”）。
+  - : 表示 cookie 所属域的 `string`（例如“www\.google.com”、“example.com”）。
 - `expirationDate` {{optional_inline}}
   - : 表示 cookie 到期日期的 `number`，以 UNIX 纪元以来的秒数表示。会话 cookie 不提供此属性。
 - `firstPartyDomain`
@@ -36,7 +36,7 @@ l10n:
 - `session`
   - : 一个 `boolean`，如果 cookie 是会话 cookie，则为 `true`；如果是具有到期日期的持久 cookie，则为 `false`。
 - `sameSite`
-  - : 一个 {{WebExtAPIRef("cookies.SameSiteStatus")}} 值，指示 cookie 的同站状态。
+  - : 一个 {{WebExtAPIRef("cookies.SameSiteStatus")}} 值，指示 cookie 的同站（SameSite）状态。
 - `storeId`
   - : 表示包含此 cookie 的 cookie 存储的 ID 的 `string`，由 {{WebExtAPIRef("cookies.getAllCookieStores()")}} 提供。
 - `value`
