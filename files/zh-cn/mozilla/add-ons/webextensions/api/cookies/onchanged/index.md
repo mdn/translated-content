@@ -63,17 +63,17 @@ browser.cookies.onChanged.hasListener(listener)
 ```js
 browser.cookies.onChanged.addListener((changeInfo) => {
   console.log(
-    `Cookie changed: \n` +
-      ` * Cookie: ${JSON.stringify(changeInfo.cookie)}\n` +
-      ` * Cause: ${changeInfo.cause}\n` +
-      ` * Removed: ${changeInfo.removed}`,
+    `Cookie 已变化：\n` +
+      ` * Cookie：${JSON.stringify(changeInfo.cookie)}\n` +
+      ` * 原因：${changeInfo.cause}\n` +
+      ` * 是否删除：${changeInfo.removed}`,
   );
 });
 ```
 
 {{WebExtExamples}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#type-Cookie) API。本文档源自 Chromium 代码中的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
+> **备注：** 此 API 基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#event-onChanged) API。本文档源自 Chromium 代码中的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
