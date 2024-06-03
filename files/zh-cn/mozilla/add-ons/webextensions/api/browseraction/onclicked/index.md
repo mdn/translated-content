@@ -26,7 +26,7 @@ browser.browserAction.onClicked.hasListener(listener)
 - `removeListener(listener)`
   - : 停止监听此事件。listener 参数是要移除的监听器。
 - `hasListener(listener)`
-  - : 检查 listener 是否注册了此事件。如果在监听，则返回 true，否则返回 false。
+  - : 检查此事件是否注册了该 `listener`。如果在监听，则返回 `true`，否则返回 `false`。
 
 ## addListener 语法
 
@@ -47,7 +47,7 @@ browser.browserAction.onClicked.hasListener(listener)
         - `modifiers`
           - : 一个 `array`。点击时活动的键盘修饰符，可以是 `Shift`、`Alt`、`Command`、`Ctrl` 或 `MacCtrl` 中的一个或多个。
         - `button`
-          - : 一个 `integer`。表示用于点击页面操作图标的按钮：`0` 表示左键点击或与鼠标无关的点击（例如来自键盘的点击），`1` 表示中键或滚轮点击。注意，右键点击不支持，因为 Firefox 会在触发此事件前显示上下文菜单。
+          - : 一个 `integer`。表示用于点击页面操作图标的按钮：`0` 表示左键点击或与鼠标无关的点击（例如来自键盘的点击），`1` 表示中键或滚轮点击。注意，不支持右键点击，因为 Firefox 会在触发此事件前显示上下文菜单。
 
 ## 浏览器兼容性
 
@@ -55,13 +55,13 @@ browser.browserAction.onClicked.hasListener(listener)
 
 ## 示例
 
-当用户点击图标时，禁用活动标签页，并记录标签页的 URL：
+当用户点击图标时，为当前的活动标签页禁用浏览器操作，并记录标签页的 URL：
 
 ```js
 browser.browserAction.onClicked.addListener((tab) => {
   // 禁用活动标签页
   browser.browserAction.disable(tab.id);
-  // 需要"tabs"或"activeTab"权限，或 URL 的主机权限
+  // 需要“tabs”或“activeTab”权限，或 URL 的主机权限
   console.log(tab.url);
 });
 ```
