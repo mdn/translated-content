@@ -42,7 +42,7 @@ l10n:
   </div>
   <div id="animalGroup" role="group">
     <div id="birds" role="treeitem">
-      <span tabindex="-1">Birds</span>
+      <span tabindex="-1">鸟</span>
     </div>
     <div
       id="cats"
