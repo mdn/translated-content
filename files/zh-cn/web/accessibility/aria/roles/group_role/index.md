@@ -17,7 +17,7 @@ l10n:
 
 当在 [`list`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/list_role) 的上下文中使用时，`group` 的子元素仅限 [`listitem`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/listitem_role) 元素。此时，建议使用多个有序或无序列表（{{HTMLElement('ol')}} 或 {{HTMLElement('ul')}}），并嵌套 {{HTMLElement('li')}} 子元素。
 
-当在 [`listbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role) 的上下文中使用时，唯一允许的子元素是 {{HTMLElement('option')}} 元素。在这种情况下，建议使用 {{HTMLElement('select')}}, {{HTMLElement('option')}} 和 {{HTMLElement('optgroup')}}。
+当在 [`listbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role) 的上下文中使用时，唯一允许的子元素是 {{HTMLElement('option')}} 元素。在这种情况下，建议使用 {{HTMLElement('select')}}、{{HTMLElement('option')}} 和 {{HTMLElement('optgroup')}}。
 
 `group` 元素可以嵌套使用。
 
