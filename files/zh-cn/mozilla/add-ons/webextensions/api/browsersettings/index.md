@@ -16,7 +16,7 @@ l10n:
 ## 属性
 
 - {{WebExtAPIRef("browserSettings.allowPopupsForUserEvents")}}
-  - : 确定在网页中运行的代码是否可以响应用户事件显示弹出窗口。
+  - : 确定在网页中运行的代码是否可以通过显式弹出窗口的方式来响应用户事件。
 - {{WebExtAPIRef("browserSettings.cacheEnabled")}}
   - : 确定浏览器缓存是否启用。
 - {{WebExtAPIRef("browserSettings.closeTabsByDoubleClick")}}
