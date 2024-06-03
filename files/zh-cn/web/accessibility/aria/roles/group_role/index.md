@@ -21,9 +21,9 @@ l10n:
 
 `group` 元素可以嵌套使用。
 
-`group` role 不应用于页面的主要可感知部分。如果某个部分足够重要，如需要包含在页面的目录中，应使用 `region` role 或标准的[landmark role](/zh-CN/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles)。
+`group` 角色不应用于页面的主要可感知部分。如果某个部分足够重要而需要包含在页面的目录中，应使用 `region` 角色或标准的[地标角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles#3._地标角色)。
 
-当 `group` role 添加到某个元素时，浏览器会向具有无障碍访问技术的产品发送一个可访问的 group event，这样便可通知用户。
+当 `group` 角色添加到某个元素时，浏览器会向具有无障碍访问技术的产品发送一个可访问的 group event，这样便可通知用户。
 
 ## 用例
 
