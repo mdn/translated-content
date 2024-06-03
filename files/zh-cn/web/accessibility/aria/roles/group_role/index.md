@@ -51,7 +51,7 @@ l10n:
       aria-owns="catGroup"
       aria-expanded="false">
       <img role="presentation" tabindex="-1" src="images/treeContracted.gif" />
-      <span role="treeitem" tabindex="0">Cats</span>
+      <span role="treeitem" tabindex="0">猫</span>
     </div>
     <div id="catGroup" role="group">
       <div id="siamese" role="treeitem">
