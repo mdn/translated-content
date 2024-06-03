@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("WebRTC")}}
 
-WebRTC 编码转换提供了一种机制，可以将高性能的 [Stream API](/zh-CN/docs/Web/API/Streams_API) 注入到传入和传出的 WebRTC 管道中，用于修改编码的视频和音频帧。这使得第三方代码可以对编码帧进行端到端加密等用例。
+WebRTC 编码转换提供了一种机制，可以将高性能的 [Stream API](/zh-CN/docs/Web/API/Streams_API) 注入到传入和传出的 WebRTC 管道中，用于修改编码的视频和音频帧。使得第三方代码能够实现对编码帧的端到端加密等用例。
 
 该 API 定义了主线程和工作线程的对象。主线程接口是一个 {{domxref("RTCRtpScriptTransform")}} 实例，其在构造时指定了要实现转换器代码的 {{domxref("Worker")}}。在工作线程中运行的转换器通过分别将 `RTCRtpScriptTransform` 添加到 {{domxref("RTCRtpReceiver.transform")}} 或 {{domxref("RTCRtpSender.transform")}} 中，插入到传入或传出的 WebRTC 管道中。
 
@@ -47,29 +47,28 @@ const [track] = stream.getTracks();
 const videoSender = peerConnection.addTrack(track, stream);
 ```
 
-接下来构造一个 `RTCRtpScriptTransform`，需要一个 worker 脚本来定义转换，并且还可以使用一个可选对象来向 worker 传递任意消息（在本例中，我们使用了一个值为 "senderTransform" 的 `name` 属性来告诉 worker，此转换将被添加到传出流中）。
+接下来构造一个 `RTCRtpScriptTransform`，需要一个工作线程脚本来定义转换，并且还可以使用一个可选对象来向工作线程传递任意消息（在本例中，我们使用了一个值为 "senderTransform" 的 `name` 属性来告诉工作线程，此转换将被添加到传出流中）。
 通过将其分配给 {{domxref("RTCRtpSender.transform")}} 属性，我们将转换添加到传出管道中。
 
 ```js
-// 创建一个包含 TransformStream 的 worker
+// 创建一个包含 TransformStream 的工作线程
 const worker = new Worker("worker.js");
 videoSender.transform = new RTCRtpScriptTransform(worker, {
   name: "senderTransform",
 });
 ```
 
-下面的使用[单独的发送器和接收器转换](#单独的发送器和接收器转换)部分显示了在工作器中可能如何使用 `name`。
+下面的使用[单独的发送器和接收器转换](#单独的发送器和接收器转换)部分显示了在工作线程中可能如何使用 `name`。
 
 请注意，你可以在任何时候添加转换，但是通过在调用 `addTrack()` 后立即添加转换，转换将获得发送的第一帧编码帧。
 
 ## 添加用于传入帧的转换
 
-运行在 worker 中的转换通过将相应的 `RTCRtpScriptTransform` 分配给传入轨道的 {{domxref("RTCRtpReceiver.transform")}} 来插入到传入的 WebRTC 管道中。
+运行在工作线程中的转换通过将相应的 `RTCRtpScriptTransform` 分配给传入轨道的 {{domxref("RTCRtpReceiver.transform")}} 来插入到传入的 WebRTC 管道中。
 
 这个例子展示了如何添加一个转换来修改传入流。该代码假定已经连接到远程对等端的名为 `peerConnection` 的 {{domxref("RTCPeerConnection")}}。
 
-首先，我们添加了一个 `RTCPeerConnection` 的 [`track` 事件](/zh-CN/docs/Web/API/RTCPeerConnection/track_event)处理程序，以捕获当对等端开始接收新轨道时的事件。在处理程序内部，我们构造了一个 `RTCRtpScriptTransform` 并将其添加到 `event.receiver.transform`（`event.receiver` 是一个 {{domxref("RTCRtpReceiver")}}）。
-与前一节相同，构造函数采用一个具有 `name` 属性的对象，但是在这里我们使用 `receiverTransform` 作为值，告诉 worker 正在传入帧。
+首先，我们添加了一个 `RTCPeerConnection` 的 [`track` 事件](/zh-CN/docs/Web/API/RTCPeerConnection/track_event)处理程序，以捕获当对等端开始接收新轨道时的事件。在处理程序内部，我们构造了一个 `RTCRtpScriptTransform` 并将其添加到 `event.receiver.transform`（`event.receiver` 是一个 {{domxref("RTCRtpReceiver")}}）。与前一节相同，构造函数采用一个具有 `name` 属性的对象，但是在这里我们使用 `receiverTransform` 作为值，告诉工作线程正在传入帧。
 
 ```js
 peerConnection.ontrack = (event) => {
@@ -83,7 +82,7 @@ peerConnection.ontrack = (event) => {
 
 再次注意，你可以在任何时候添加转换流。但是通过在 `track` 事件处理程序中添加它，可以确保转换流将获得轨道的第一帧编码帧。
 
-## Worker 实现
+## 工作线程实现
 
 工作线程脚本必须实现一个处理 {{domxref("DedicatedWorkerGlobalScope/rtctransform_event", "rtctransform")}} 事件的处理程序，创建一个[链式管道](/zh-CN/docs/Web/API/Streams_API/Concepts#链式管道传输)，将 `event.transformer.readable`（{{DOMxRef("ReadableStream")}}）流通过 {{DOMxRef("TransformStream")}} 传输到 `event.transformer.writable`（{{DOMxRef("WritableStream")}}）流中。
 
@@ -123,28 +122,26 @@ addEventListener("rtctransform", (event) => {
 });
 ```
 
-WebRTC 编码转换的实现类似于“通用” `TransformStream`，但存在一些重要的区别。像通用流一样，它的[构造函数](/zh-CN/docs/Web/API/TransformStream/TransformStream#参数)接受一个定义了可选的 [`start()`](/zh-CN/docs/Web/API/TransformStream/TransformStream#startcontroller) 方法的对象，该方法在构造时调用，[`flush()`](/zh-CN/docs/Web/API/TransformStream/TransformStream#flushcontroller) 方法，在流即将关闭时调用，以及 [`transform()`](/zh-CN/docs/Web/API/TransformStream/TransformStream#transformchunk_controller) 方法，每当有一个块需要处理时都会调用。
+WebRTC 编码转换的实现类似于“通用” `TransformStream`，但存在一些重要的区别。像通用流一样，它的[构造函数](/zh-CN/docs/Web/API/TransformStream/TransformStream#参数)接受一个对象，其定义了在构造时调用的*可选* [`start()`](/zh-CN/docs/Web/API/TransformStream/TransformStream#startcontroller) 方法，在流即将关闭时调用的 [`flush()`](/zh-CN/docs/Web/API/TransformStream/TransformStream#flushcontroller) 方法，以及 [`transform()`](/zh-CN/docs/Web/API/TransformStream/TransformStream#transformchunk_controller) 方法，每当有一个块需要处理时都会调用。与通用构造函数不同，任何在构造函数对象中传递的 `writableStrategy` 或 `readableStrategy` 属性都会被忽略，队列策略完全由用户代理管理。
 
-与通用构造函数不同，任何在构造函数对象中传递的 `writableStrategy` 或 `readableStrategy` 属性都会被忽略，队列策略完全由用户代理管理。
-
-`transform()` 方法也不同，它接收的是 {{DOMxRef("RTCEncodedVideoFrame")}} 或 {{DOMxRef("RTCEncodedAudioFrame")}}，而不是通用的“块”。除了它展示了如何将帧转换为可以修改并在之后排队到流上的形式之外，此处显示的方法并不引人注目。
+`transform()` 方法也不同，它接收的是 {{DOMxRef("RTCEncodedVideoFrame")}} 或 {{DOMxRef("RTCEncodedAudioFrame")}}，而不是通用的“块”。除了它展示了如何将帧转换为可以修改并在之后排队到流上的形式之外，此处显示的方法没有什么特别之处。
 
 ### 使用单独的发送器和接收器转换
 
-之前的例子在发送和接收时使用相同的转换函数时可以工作，但在许多情况下，算法会有所不同。你可以为发送器和接收器使用单独的 worker 脚本，或者在一个 worker 中处理这两种情况，如下所示。
+之前的例子在发送和接收时使用相同的转换函数时可以工作，但在许多情况下，算法会有所不同。你可以为发送器和接收器使用单独的工作线程脚本，或者在一个工作线程中处理这两种情况，如下所示。
 
-如果 worker 用于发送器和接收器，它需要知道当前的编码帧是来自编解码器的传出帧，还是来自封包器的传入帧。可以使用 [`RTCRtpScriptTransform` 构造函数](/zh-CN/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform)的第二个选项来指定此信息。例如，我们可以为发送器和接收器定义一个单独的 `RTCRtpScriptTransform`，传递相同的 worker 和一个 options 对象，其中的 `name` 属性指示转换是用于发送还是接收（如上面的前几节所示）。然后在 worker 中，可以通过 `event.transformer.options` 获取到此信息。
+如果工作线程用于发送器和接收器，它需要知道当前的编码帧是来自编解码器的传出帧，还是来自封包器的传入帧。可以使用 [`RTCRtpScriptTransform` 构造函数](/zh-CN/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform)的第二个选项来指定此信息。例如，我们可以为发送器和接收器定义一个单独的 `RTCRtpScriptTransform`，传递相同的工作线程和一个 options 对象，其中的 `name` 属性指示转换是用于发送还是接收（如上面的前几节所示）。然后在工作线程中，可以通过 `event.transformer.options` 获取到此信息。
 
-在这个例子中，我们在全局专用 worker 范围对象上实现了 `onrtctransform` 事件处理程序。`name` 属性的值用于确定构造哪个 `TransformStream`（实际的构造方法没有显示）。
+在这个例子中，我们在全局专用工作线程范围对象上实现了 `onrtctransform` 事件处理程序。`name` 属性的值用于确定构造哪个 `TransformStream`（实际的构造方法没有显示）。
 
 ```js
 // 实例化变换并将它们附加到发送器/接收器管道的代码
 onrtctransform = (event) => {
   let transform;
   if (event.transformer.options.name == "senderTransform")
-    transform = createSenderTransform(); // returns a TransformStream
+    transform = createSenderTransform(); // 返回一个 TransformStream
   else if (event.transformer.options.name == "receiverTransform")
-    transform = createReceiverTransform(); // returns a TransformStream
+    transform = createReceiverTransform(); // 返回一个 TransformStream
   else return;
   event.transformer.readable
     .pipeThrough(transform)
@@ -156,18 +153,18 @@ onrtctransform = (event) => {
 
 ### 运行时与变换进行通信
 
-[`RTCRtpScriptTransform` 构造函数](/zh-CN/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform) 允许你传递选项和对象到工作线程。在前面的示例中，我们传递了静态信息，但有时你可能希望在运行时修改工作线程中的变换算法，或者从工作线程中获取信息。例如，支持加密的 WebRTC 会议可能需要向变换使用的算法添加一个新的密钥。
+[`RTCRtpScriptTransform` 构造函数](/zh-CN/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform)允许你传递选项和对象到工作线程。在前面的示例中，我们传递了静态信息，但有时你可能希望在运行时修改工作线程中的变换算法，或者从工作线程中获取信息。例如，支持加密的 WebRTC 会议可能需要向变换使用的算法添加一个新的密钥。
 
-虽然可以使用 {{domxref("Worker.postMessage()")}} 在运行变换代码的工作线程和主线程之间共享信息，但通常更容易使用 {{domxref("MessageChannel")}} 作为 [`RTCRtpScriptTransform` 构造函数](/zh-CN/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform)的选项共享频道，因为在处理新的编码帧时，通道上下文直接可在 `event.transformer.options` 中使用。
+虽然可以使用 {{domxref("Worker.postMessage()")}} 在运行变换代码的工作线程和主线程之间共享信息，但通常将 {{domxref("MessageChannel")}} 作为 [`RTCRtpScriptTransform` 构造函数](/zh-CN/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform)的选项更容易，因为在处理新的编码帧时，通道上下文直接可在 `event.transformer.options` 中使用。
 
 以下代码创建了一个 {{domxref("MessageChannel")}} 并将其第二个端口[传输](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)给工作线程。主线程和变换随后可以使用第一个和第二个端口进行通信。
 
 ```js
-// 创建一个包含 TransformStream 的 Worker 脚本
+// 创建一个包含 TransformStream 的工作线程脚本
 const worker = new Worker("worker.js");
 
 // 创建一个 channel
-// 将 channel.port2 作为构造函数选项传递给 transform，并将其传输到 worker。
+// 将 channel.port2 作为构造函数选项传递给 transform，并将其传输到工作线程。
 const channel = new MessageChannel();
 const transform = new RTCRtpScriptTransform(
   worker,
@@ -176,11 +173,11 @@ const transform = new RTCRtpScriptTransform(
 );
 
 // 使用 port1 发送一个字符串。（我们可以发送和传输基本类型/对象）
-channel.port1.postMessage("给 worker 的消息");
+channel.port1.postMessage("给工作线程的消息");
 channel.port1.start();
 ```
 
-在 worker 中，端口可作为 `event.transformer.options.port` 使用。下面的代码显示了如何监听端口的 `message` 事件以从主线程获取消息。你还可以使用该端口将消息发送回主线程。
+在工作线程中，端口可作为 `event.transformer.options.port` 使用。下面的代码显示了如何监听端口的 `message` 事件以从主线程获取消息。你还可以使用该端口将消息发送回主线程。
 
 ```js
 event.transformer.options.port.onmessage = (event) => {
@@ -197,7 +194,7 @@ event.transformer.options.port.onmessage = (event) => {
 
 为了确保在需要时尽早发送新的关键帧，`event.transformer` 中的 {{domxref("RTCRtpScriptTransformer")}} 对象有两种方法：{{domxref("RTCRtpScriptTransformer.generateKeyFrame()")}}，它会导致编解码器生成一个关键帧，和 {{domxref("RTCRtpScriptTransformer.sendKeyFrameRequest()")}}，它会导致接收方可以从发送方请求一个关键帧。
 
-下面的示例显示了主线程如何将加密密钥传递给发送方转换，并触发编解码器生成一个关键帧。请注意，主线程无法直接访问 {{domxref("RTCRtpScriptTransformer")}} 对象，因此它需要将密钥和限制标识符（“rid”是流 ID，指示必须生成关键帧的编码器）传递给 worker。在这里，我们使用了一个 `MessageChannel`，使用了与前一节相同的模式。代码假定已经有一个对等连接，并且 `videoSender` 是一个 {{domxref("RTCRtpSender")}}。
+下面的示例显示了主线程如何将加密密钥传递给发送方转换，并触发编解码器生成一个关键帧。请注意，主线程无法直接访问 {{domxref("RTCRtpScriptTransformer")}} 对象，因此它需要将密钥和限制标识符（“rid”是流 ID，指示必须生成关键帧的编码器）传递给工作线程。在这里，我们使用了一个 `MessageChannel`，使用了与前一节相同的模式。代码假定已经有一个对等连接，并且 `videoSender` 是一个 {{domxref("RTCRtpSender")}}。
 
 ```js
 const worker = new Worker("worker.js");
@@ -217,7 +214,7 @@ channel.port1.postMessage({
 });
 ```
 
-在 worker 中的 {{domxref("DedicatedWorkerGlobalScope/rtctransform_event", "rtctransform")}} 事件处理程序获取端口，并使用它来监听来自主线程的 `message` 事件。如果收到事件，则获取 `rid` 和 `key`，然后调用 `generateKeyFrame()`。
+在工作线程中的 {{domxref("DedicatedWorkerGlobalScope/rtctransform_event", "rtctransform")}} 事件处理程序获取端口，并使用它来监听来自主线程的 `message` 事件。如果收到事件，则获取 `rid` 和 `key`，然后调用 `generateKeyFrame()`。
 
 ```js
 event.transformer.options.port.onmessage = (event) => {
