@@ -70,9 +70,9 @@ l10n:
 ```html
 <div role="menu">
   <ul role="group">
-    <li role="menuitem">Inbox</li>
-    <li role="menuitem">Archive</li>
-    <li role="menuitem">Trash</li>
+    <li role="menuitem">收件箱</li>
+    <li role="menuitem">归档</li>
+    <li role="menuitem">已删除</li>
   </ul>
   <ul role="group">
     <li role="menuitem">Custom Folder 1</li>
