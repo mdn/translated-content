@@ -85,7 +85,7 @@ l10n:
 </div>
 ```
 
-此 menu 也能使用 {{HTMLElement('select')}} 及 {{HTMLElement('option')}} 元素构成，此时 `group` role 类似于 {{HTMLElement('optgroup')}} 元素。
+此菜单也能使用 {{HTMLElement('select')}} 及 {{HTMLElement('option')}} 元素构遭，此时 `group` 角色类似于 {{HTMLElement('optgroup')}} 元素。
 
 ## 规范
 
