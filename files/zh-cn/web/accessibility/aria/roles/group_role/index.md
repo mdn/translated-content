@@ -11,9 +11,9 @@ l10n:
 
 ## 描述
 
-`group` role 最接近于 HTML 的 {{HTMLElement('fieldset')}} 元素，与 [`region`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/region_role) 相比，它用于标识无需包含在页面摘要或目录中的 UI 对象。
+`group` 文档结构角色最接近于 HTML 的 {{HTMLElement('fieldset')}} 元素，与 [`region`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/region_role) 相比，它用于标识无需包含在页面摘要或目录中的 UI 对象。
 
-`group` role 应该用于各项之间能形成具有相关性功能的逻辑集合，例如在 [`tree`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tree_role) 中的子元素，它们之间形成了一种层级关系，或在 [`directory`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/directory_role) 中具有相同容器的一组项目。
+`group` 角色应该用于各项之间能形成具有相关性功能的逻辑集合，例如在 [`tree`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tree_role) 中的子元素，它们之间形成了一种层级关系，或在 [`directory`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/directory_role) 中具有相同容器的一组项目。
 
 当 `group` 在 [`list`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/list_role) 的上下文中使用时，`group` 的子元素限制为 [`listitem`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/listitem_role) 元素。此时，建议使用多个有序或无序列表，{{HTMLElement('ol')}} 或 {{HTMLElement('ul')}}，并嵌套 {{HTMLElement('li')}} 子元素。
 
