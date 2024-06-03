@@ -30,7 +30,7 @@ let gettingText = browser.browserAction.getBadgeText(
     - `windowId` {{optional_inline}}
       - : `integer`。指定从中获取徽章文本的窗口。
 
-    <!---->
+<!---->
 
 - 如果同时提供了 windowId 和 tabId，则函数失败。
 - 如果 windowId 和 tabId 都省略，则返回全局徽章文本。
