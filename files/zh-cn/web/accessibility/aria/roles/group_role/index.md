@@ -91,10 +91,10 @@ l10n:
 
 {{Specifications}}
 
-## 相关文档
+## 参见
 
-- The {{HTMLElement('fieldset')}} Element
-- [ARIA: `section` role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/section_role)
-- [ARIA: `row` role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/row_role)
-- [ARIA: `select` role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/select_role)
-- [ARIA: `toolbar` role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
+- {{HTMLElement('fieldset')}} 元素
+- [ARIA：`section` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/section_role)
+- [ARIA：`row` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/row_role)
+- [ARIA：`select` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/select_role)
+- [ARIA：`toolbar` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
