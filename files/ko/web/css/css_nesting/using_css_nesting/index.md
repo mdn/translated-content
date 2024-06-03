@@ -154,7 +154,7 @@ label {
 
 #### 형제 결합자의 중첩
 
-이 예제에서는, 각 `<h2>` 뒤 첫번째 단락이 CSS 중첩의 [인접 형제 결합자 (`+`)](/ko/docs/Web/CSS/Next-sibling_combinator) 로 타겟팅됩니다. 
+이 예제에서는, 각 `<h2>` 뒤 첫번째 단락이 CSS 중첩의 [인접 형제 결합자 (`+`)](/ko/docs/Web/CSS/Next-sibling_combinator) 로 타겟팅됩니다.
 
 ##### HTML
 
