@@ -27,7 +27,7 @@ browser.browserAction.setTitle(
 
       - : `string` 或 `null`。鼠标悬停时浏览器操作应显示的字符串。
 
-        如果 `title` 是空字符串，则使用扩展名作为标题，但 {{WebExtAPIRef("browserAction.getTitle")} }仍会提供空字符串。
+        如果 `title` 是空字符串，则使用扩展名作为标题，但 {{WebExtAPIRef("browserAction.getTitle")}} 仍会提供空字符串。
 
         如果 `title` 为 `null`：
 
