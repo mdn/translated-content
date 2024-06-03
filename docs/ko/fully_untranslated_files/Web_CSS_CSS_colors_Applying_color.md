@@ -64,7 +64,7 @@ slug: Web/CSS/CSS_colors/Applying_color
 - {{cssxref("border-left-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-top-color")}}, {{cssxref("border-bottom-color")}}
   - : 테두리 색을 방향에 따라 다르게 설정할 수 있습니다.
 - {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end-color")}}
-  - : With these, you can set the color used to draw the borders which are closest to the start and end of the block the border surrounds. In a left-to-right writing mode (such as the way English is written), the block start border is the top edge and the block end is the bottom. This differs from the inline start and end, which are the left and right edges (corresponding to where each line of text in the box begins and ends).
+  - : 이러한 방법을 통해, 경계선 가장자리에 있는 블록의 시작과 끝 부분을 그리는 데 사용되는 색상을 설정할 수 있습니다. 왼쪽에서 오른쪽으로 쓰는 방식(예: 영어)에서 블록의 시작 경계는 상단 가장자리이고, 블록의 끝은 하단 가장자리입니다. 이는 인라인의 경우와 다릅니다. 인라인의 시작과 끝은 왼쪽과 오른쪽 가장자리로, 상자 안의 각 텍스트 줄이 시작되고 끝나는 부분에 해당합니다.
 - {{cssxref("border-inline-start-color")}}, {{cssxref("border-inline-end-color")}}
   - : These let you color the edges of the border closest to to the beginning and the end of the start of lines of text within the box. Which side this is will vary depending on the {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}} properties, which are typically (but not always) used to adjust text directionality based on the language being displayed. For example, if the box's text is being rendered right-to-left, then the `border-inline-start-color` is applied to the right side of the border.
 
