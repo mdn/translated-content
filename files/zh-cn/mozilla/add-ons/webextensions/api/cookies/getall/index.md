@@ -33,7 +33,7 @@ let getting = browser.cookies.getAll(
 
       - : 一个 `string`，表示要检索的 Cookie 所关联的第一方域。
 
-        如果浏览器启用了第一方隔离，则必须提供此属性。但是，在这种情况下，你可以将这个值设为 `null`。如果这样做，那么结果中将包括所有的 `firstPartyDomain`，以及未设置 `firstPartyDomain` 的 Cookie。请参见[第一方隔离](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#第一方隔离)。
+        如果浏览器启用了第一方隔离，则必须提供此属性。但是，在这种情况下，你可以将这个值设为 `null`。如果这样做，那么结果中将包括`firstPartyDomain` 值为任意或为空的 Cookie。请参见[第一方隔离](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#第一方隔离)。
 
     - `name` {{optional_inline}}
 
