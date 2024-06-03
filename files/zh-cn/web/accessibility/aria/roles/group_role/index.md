@@ -58,7 +58,7 @@ l10n:
         <span tabindex="-1">暹罗猫</span>
       </div>
       <div id="tabby" role="treeitem">
-        <span tabindex="-1">Tabby</span>
+        <span tabindex="-1">虎斑猫</span>
       </div>
     </div>
   </div>
