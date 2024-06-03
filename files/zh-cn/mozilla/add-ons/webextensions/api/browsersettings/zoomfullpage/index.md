@@ -26,7 +26,7 @@ l10n:
 
 ```js
 function logResult(result) {
-  console.log(`设置被更改：${result}`);
+  console.log(`设置已修改：${result}`);
 }
 
 browser.browserSettings.zoomFullPage.set({ value: false }).then(logResult);
