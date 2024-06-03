@@ -2,7 +2,7 @@
 title: <mstyle>
 slug: Web/MathML/Element/mstyle
 l10n:
-  sourceCommit: 67cbfbf7a408e7180137b286247025bc40716642
+  sourceCommit: d377045efe5d13531b73f8823301f8cc1dc58f84
 ---
 
 {{MathMLRef}}
@@ -16,15 +16,15 @@ l10n:
 此元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)以及以下已弃用的属性：
 
 - `background` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : 使用 <a href="/zh-CN/docs/Web/CSS/background-color"><code>background-color</code></a> 替代。
+  - : 使用 {{cssxref("background-color")}} 替代。
 - `color` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : 使用 <a href="/zh-CN/docs/Web/CSS/color"><code>color</code></a> 替代。
+  - : 使用 {{cssxref("color")}} 替代。
 - `fontsize` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : 使用 <a href="/zh-CN/docs/Web/CSS/font-size"><code>font-size</code></a> 替代。
+  - : 使用 {{cssxref("font-size")}} 替代。
 - `fontstyle` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : 使用 <a href="/zh-CN/docs/Web/CSS/font-style"><code>font-style</code></a> 替代。
+  - : 使用 {{cssxref("font-style")}} 替代。
 - `fontweight` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : 使用 <a href="/zh-CN/docs/Web/CSS/font-weight"><code>font-weight</code></a> 替代。
+  - : 使用 {{cssxref("font-weight")}} 替代。
 - `scriptminsize` {{deprecated_inline}} {{Non-standard_Inline}}
   - : 由于 `scriptlevel` 的更改，指定允许的最小字体大小。默认值为 `8pt`。
 - `scriptsizemultiplier` {{deprecated_inline}} {{Non-standard_Inline}}
