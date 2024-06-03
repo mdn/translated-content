@@ -75,9 +75,9 @@ l10n:
     <li role="menuitem">已删除</li>
   </ul>
   <ul role="group">
-    <li role="menuitem">Custom Folder 1</li>
-    <li role="menuitem">Custom Folder 2</li>
-    <li role="menuitem">Custom Folder 3</li>
+    <li role="menuitem">自定义文件夹 1</li>
+    <li role="menuitem">自定义文件夹 2</li>
+    <li role="menuitem">自定义文件夹 3</li>
   </ul>
   <ul role="group">
     <li role="menuitem">创建文件夹</li>
