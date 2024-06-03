@@ -34,8 +34,8 @@ browser.alarms.onAlarm.hasListener(listener)
 
   - : 在此事件发生时调用的函数。此函数接收以下参数：
 
-- `alarm`
-  - : {{WebExtAPIRef('alarms.Alarm')}}。触发的闹钟。使用 `Alarm.name` 来确定触发了哪个闹钟。
+    - `alarm`
+      - : {{WebExtAPIRef('alarms.Alarm')}}。触发的闹钟。使用 `Alarm.name` 来确定触发了哪个闹钟。
 
 ## 示例
 
