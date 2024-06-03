@@ -11,13 +11,13 @@ l10n:
 
 如果给定 URL 存在多个具有相同名称的 Cookie，将返回路径最长的那个 Cookie。对于路径长度相同的 Cookie，将返回创建时间最早的那个。如果找不到匹配的 Cookie，则返回 `null`。
 
-这是一个异步函数，返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 
 ```js-nolint
 let getting = browser.cookies.get(
-  details                // object
+  details                // 对象
 )
 ```
 
@@ -25,11 +25,11 @@ let getting = browser.cookies.get(
 
 - `details`
 
-  - : 一个 object，包含用于匹配要检索的 Cookie 的详细信息。它可以包含以下属性：
+  - : 一个 `object`，包含用于匹配要检索的 Cookie 的详细信息。它可以包含以下属性：
 
     - `firstPartyDomain` {{optional_inline}}
 
-      - : 一个 `string`，表示与要检索的 Cookie 关联的第一方域。如果浏览器启用了第一方隔离，则必须提供此属性。请参见 First-party isolation。
+      - : 一个 `string`，表示与要检索的 Cookie 关联的第一方域。如果浏览器启用了第一方隔离，则必须提供此属性。请参见[第一方隔离](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#第一方隔离)。。
 
     - `name`
 
@@ -37,14 +37,14 @@ let getting = browser.cookies.get(
 
     - `partitionKey` {{optional_inline}}
 
-      - : 一个 `object`，表示包含 Cookie 的存储分区。包括此对象和 topLevelSite 以从分区存储中获取 Cookie。否则，从未分区存储中返回 Cookie。此对象包含：
+      - : 一个 `object`，表示包含 Cookie 的[存储分区](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#存储分区)。包括此对象和 `topLevelSite` 以从分区存储中获取 Cookie。否则，从未分区存储中返回 Cookie。此对象包含：
 
         - `topLevelSite` {{optional_inline}}
           - : 一个 `string`，表示包含 Cookie 的顶级站点存储分区的第一方 URL。
 
     - `storeId` {{optional_inline}}
 
-      - : 一个 `string`，表示要查找的{{WebExtAPIRef("cookies.CookieStore", "cookie 存储")}}的 ID（由 {{WebExtAPIRef("cookies.getAllCookieStores()")}} 返回）。默认情况下，将使用当前执行上下文的 Cookie 存储。
+      - : 一个 `string`，表示要查找的 {{WebExtAPIRef("cookies.CookieStore", "cookie 存储")}}的 ID（由 {{WebExtAPIRef("cookies.getAllCookieStores()")}} 返回）。默认情况下，将使用当前执行上下文的 Cookie 存储。
 
     - `url`
 
@@ -52,7 +52,7 @@ let getting = browser.cookies.get(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，该 Promise 将使用包含有关 Cookie 的详细信息的 {{WebExtAPIRef('cookies.Cookie', 'Cookie')}} 对象进行实现，或者如果未找到 Cookie，则返回 `null`。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含有关 Cookie 的详细信息的 {{WebExtAPIRef('cookies.Cookie', 'Cookie')}} 对象，或者如果未找到 Cookie，则返回 `null`。
 
 ## 浏览器兼容性
 
