@@ -24,7 +24,7 @@ shape-outside: ellipse(closest-side farthest-side at 30%);
 
 - `<shape-radius>`
 
-  - : 两个半径，按顺序是 x 和 y。这些可以是 {{cssxref("length")}}、{{cssxref("percentage")}} 或值 `closest-side` 和 `farthest-side`。
+  - : 两个半径，按顺序是 x 和 y。可以是 {{cssxref("length")}}、{{cssxref("percentage")}} 或值 `closest-side` 和 `farthest-side`。
 
     - `closest-side`
       - : 使用形状中心到参考框最近边缘的长度。对于椭圆来说，这是半径维度中最近的边缘。
@@ -33,7 +33,7 @@ shape-outside: ellipse(closest-side farthest-side at 30%);
 
 - `<position>`
 
-  - : 移动椭圆的中心。可以是一个 {{cssxref("length")}}、一个 {{cssxref("percentage")}}，或者值如 `left`。如果省略 `<position>` 值，则默认为中心。
+  - : 移动椭圆的中心。可以是 {{cssxref("length")}}、 {{cssxref("percentage")}}，或者类似于 `left` 这样的值。如果省略 `<position>` 值，则默认为中心。
 
 ## 形式语法
 
@@ -49,7 +49,7 @@ shape-outside: ellipse(closest-side farthest-side at 30%);
 
 ### 使用 closest-side / farthest-side 值
 
-`closest-side` 和 `farthest-side` 的关键字值对于基于浮动元素参考框大小创建快速椭圆形非常有用。
+`closest-side` 和 `farthest-side` 的关键字值对于基于浮动元素参考框大小创建快速椭圆形状非常有用。
 
 {{EmbedGHLiveSample("css-examples/shapes/basic-shape/ellipse-keywords.html", '100%', 800)}}
 
