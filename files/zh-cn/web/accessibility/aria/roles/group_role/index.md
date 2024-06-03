@@ -55,7 +55,7 @@ l10n:
     </div>
     <div id="catGroup" role="group">
       <div id="siamese" role="treeitem">
-        <span tabindex="-1">Siamese</span>
+        <span tabindex="-1">暹罗猫</span>
       </div>
       <div id="tabby" role="treeitem">
         <span tabindex="-1">Tabby</span>
