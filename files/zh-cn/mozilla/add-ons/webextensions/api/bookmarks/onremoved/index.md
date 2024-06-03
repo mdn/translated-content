@@ -46,7 +46,7 @@ browser.bookmarks.onRemoved.hasListener(listener)
 - `parentId`
   - : `string`。项目在树中的父项的 ID。
 - `index`
-  : `integer`。此项目在其父项中的基于零的索引位置。
+  - : `integer`。此项目在其父项中的基于零的索引位置。
 - `node`
   - : {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}。关于被移除项目的详细信息。
 
@@ -57,7 +57,7 @@ function handleRemoved(id, removeInfo) {
   console.log(`项目：${id} 已移除`);
   console.log(`标题：${removeInfo.node.title}`);
   if (removeInfo.node.url) {
-    console.log(`URL: ${removeInfo.node.url}`);
+    console.log(`URL：${removeInfo.node.url}`);
   }
 }
 
