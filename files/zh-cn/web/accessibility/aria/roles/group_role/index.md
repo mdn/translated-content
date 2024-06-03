@@ -80,7 +80,7 @@ l10n:
     <li role="menuitem">Custom Folder 3</li>
   </ul>
   <ul role="group">
-    <li role="menuitem">New Folder</li>
+    <li role="menuitem">创建文件夹</li>
   </ul>
 </div>
 ```
