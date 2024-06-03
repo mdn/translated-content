@@ -65,7 +65,7 @@ l10n:
 </div>
 ```
 
-以下用例在包含了 [`menuitem`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitem_role) 的 drop-down [`menu`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/menu_role) 中使用了 `group` role：
+以下示例在包含了 [`menuitem`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitem_role) 的下拉菜单（[`menu`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/menu_role)）中使用了 `group` 角色：
 
 ```html
 <div role="menu">
