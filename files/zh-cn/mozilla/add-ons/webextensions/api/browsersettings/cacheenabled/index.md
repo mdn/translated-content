@@ -21,8 +21,8 @@ l10n:
 
 ```js
 function logResult(result) {
-  console.log(`当前值: ${result.value}`);
-  console.log(`当前控制级别: ${result.levelOfControl}`);
+  console.log(`当前值：${result.value}`);
+  console.log(`当前控制级别：${result.levelOfControl}`);
 }
 
 browser.browserSettings.cacheEnabled.get({}).then(logResult);
@@ -32,7 +32,7 @@ browser.browserSettings.cacheEnabled.get({}).then(logResult);
 
 ```js
 function logResult(result) {
-  console.log(`设置已修改: ${result}`);
+  console.log(`设置已修改：${result}`);
 }
 
 browser.browserSettings.cacheEnabled.set({ value: false }).then(logResult);
