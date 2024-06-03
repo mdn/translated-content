@@ -25,9 +25,9 @@ l10n:
 
 当 `group` 角色添加到某个元素时，浏览器会向具有无障碍访问技术的产品发送一个可访问的 group event，这样便可通知用户。
 
-## 用例
+## 示例
 
-以下 HTML 代码在 `tree` 视图中使用了 `group` role：
+以下 HTML 代码在 `tree` 视图中使用了 `group` 角色：
 
 ```html
 <div id="tree1" role="tree" tabindex="-1">
