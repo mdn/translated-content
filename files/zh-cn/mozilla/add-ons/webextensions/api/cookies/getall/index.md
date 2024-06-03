@@ -7,16 +7,16 @@ l10n:
 
 {{AddonSidebar}}
 
-**`getAll()`** 方法属于 {{WebExtAPIRef("cookies")}} API，用于从单个 Cookie 存储中检索与给定信息匹配的所有 Cookie。
+{{WebExtAPIRef("cookies")}} API 的 **`getAll()`** 方法用于从单个 cookie 存储中检索与给定信息匹配的所有 cookie。
 
-这是一个异步函数，返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 
-```js
+```js-nolint
 let getting = browser.cookies.getAll(
-  details, // object
-);
+  details                // 对象
+)
 ```
 
 ### 参数
@@ -53,7 +53,7 @@ let getting = browser.cookies.getAll(
 
     - `path` {{optional_inline}}
 
-      - : 一个 `string`，表示路径—— Cookie 的路径必须与此路径相同。
+      - : 一个 `string`，表示路径——Cookie 的路径必须与此路径相同。
 
     - `secure` {{optional_inline}}
 
