@@ -7,17 +7,17 @@ l10n:
 
 {{MathMLRef}}{{Non-standard_header}}
 
-**`<menclose>`** 元素由 [MathML](/zh-CN/docs/Web/MathML) 通过 `notation` 属性指定的封闭符号将其内容呈现在封闭符号内。
+**`<menclose>`** [MathML](/zh-CN/docs/Web/MathML) 元素根据 `notation` 属性指定的符号，在其内部渲染内容。
 
 ## 属性
 
-这个元素的属性包括 [全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)。
+这个元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)。
 
 - `notation` {{Non-standard_Inline}}
 
   - ：以空格分隔的符号列表，用于应用于子元素。这些符号将分别绘制，好像其他符号不存在一样，因此可能会重叠。可能的值有：
 
-    | Value                | Sample Rendering                                            | Rendering in your browser                                                                                                                      | Description                                                                                                         |
+    | 值                | 渲染示例                                          | 在你的浏览器上的渲染效果                                                                                                                      | 描述                                                                                                         |
     | -------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
     | `longdiv` (default)  | ![longdiv](default.png)                                     | <math><menclose notation="longdiv"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>            | long division symbol                                                                                                |
     | `actuarial`          | ![actuarial](actuarial.png)                                 | <math><menclose notation="actuarial"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>          | [actuarial symbol](https://en.wikipedia.org/wiki/Actuarial_notation)                                                |
