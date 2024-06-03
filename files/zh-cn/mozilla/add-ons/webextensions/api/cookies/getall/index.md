@@ -46,7 +46,8 @@ let getting = browser.cookies.getAll(
         - 如果省略，则仅返回未分区存储中的 Cookie。
         - 如果提供但未指定 `topLevelSite`，则返回分区和未分区存储中的所有 Cookie。
         - 如果提供并指定了 topLevelSite，则返回指定分区存储中的 Cookie。
-          此对象包含：
+
+        此对象包含：
 
         - `topLevelSite` {{optional_inline}}
           - : 一个 `string`，表示包含 Cookie 的顶级站点存储分区的第一方 URL。
