@@ -7,7 +7,7 @@ l10n:
 
 {{AccessibilitySidebar}}
 
-`group` role 用于标识无需包含在无障碍访问技术的页面摘要或目录中的 UI 对象。
+`group` 角色用于标识无需被辅助技术所包含的页面摘要或目录中的 UI 对象。
 
 ## 描述
 
