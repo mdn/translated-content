@@ -58,7 +58,7 @@ l10n:
 
 [getUserMedia() による写真の撮影](/ja/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) の記事では、[`getUserMedia()`](/ja/docs/Web/API/MediaDevices/getUserMedia) を使用して、 `getUserMedia()` に対応しているコンピューターや携帯電話のカメラにアクセスし、それで写真を撮る方法を示しています。
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
 {{Compat}}
 
