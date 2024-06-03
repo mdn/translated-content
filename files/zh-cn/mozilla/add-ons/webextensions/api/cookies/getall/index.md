@@ -31,9 +31,9 @@ let getting = browser.cookies.getAll(
 
     - `firstPartyDomain` {{optional_inline}}
 
-      - : 一个 `string`，表示与要检索的 Cookie 关联的第一方域。
+      - : 一个 `string`，表示要检索的 Cookie 所关联的第一方域。
 
-        如果浏览器启用了第一方隔离，则必须提供此属性。然而在这种情况下，你可以传递 null。如果这样做，具有任何 `firstPartyDomain` 值的 Cookie 以及未设置 `firstPartyDomain` 的 Cookie 都将包含在结果中。请参见[第一方隔离](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#第一方隔离)。
+        如果浏览器启用了第一方隔离，则必须提供此属性。但是，在这种情况下，你可以将这个值设为 `null`。如果这样做，那么结果中将包括所有的 `firstPartyDomain`，以及未设置 `firstPartyDomain` 的 Cookie。请参见[第一方隔离](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#第一方隔离)。
 
     - `name` {{optional_inline}}
 
@@ -41,11 +41,11 @@ let getting = browser.cookies.getAll(
 
     - `partitionKey` {{optional_inline}}
 
-      - : 一个 `object`，定义要从中返回 Cookie 的存储分区：
+      - : 一个 `object`，定义要从哪个[存储分区](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#存储分区)返回 Cookie：
 
         - 如果省略，则仅返回未分区存储中的 Cookie。
-        - 如果包含但未指定 topLevelSite，则返回分区和未分区存储中的所有 Cookie。
-        - 如果包含并指定了 topLevelSite，则返回指定分区存储中的 Cookie。
+        - 如果提供但未指定 `topLevelSite`，则返回分区和未分区存储中的所有 Cookie。
+        - 如果提供并指定了 topLevelSite，则返回指定分区存储中的 Cookie。
           此对象包含：
 
         - `topLevelSite` {{optional_inline}}
@@ -73,7 +73,7 @@ let getting = browser.cookies.getAll(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，该 Promise 将使用一个 `{{WebExtAPIRef('cookies.Cookie')}}` 对象数组进行实现，这些对象与 `details` 参数中给定的属性匹配。仅返回未过期的 Cookie。返回的 Cookie 将按路径长度排序，从最长到最短。如果多个 Cookie 的路径长度相同，则创建时间最早的将排在最前面。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 `{{WebExtAPIRef('cookies.Cookie')}}` 对象数组，这些对象与 `details` 参数中给定的属性匹配。仅返回未过期的 Cookie。返回的 Cookie 将按路径长度排序，从最长到最短。如果多个 Cookie 的路径长度相同，则创建时间最早的将排在最前面。
 
 ## 浏览器兼容性
 
