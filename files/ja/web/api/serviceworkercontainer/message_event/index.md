@@ -1,11 +1,12 @@
 ---
 title: "ServiceWorkerContainer: message イベント"
+short-title: message
 slug: Web/API/ServiceWorkerContainer/message_event
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
 **`message`** イベントは、サービスワーカーからメッセージを受信するために、サービスワーカーによって制御されるページで使用します。
 
@@ -38,7 +39,7 @@ _このインターフェイスは親である {{domxref("Event")}} からプロ
 - {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
   - : 文字列で、このイベントの一意の ID を表します。
 - {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : `MessageEventSource` （{{domxref("WindowProxy")}}、{{domxref("MessagePort")}}、{{domxref("ServiceWorker")}} の何れかのオブジェクト）で、メッセージの送信元を表します。
+  - : `MessageEventSource` （{{glossary("WindowProxy")}}、{{domxref("MessagePort")}}、{{domxref("ServiceWorker")}} の何れかのオブジェクト）で、メッセージの送信元を表します。
 - {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
   - : {{domxref("MessagePort")}} オブジェクトの配列で、メッセージが送信されるチャンネルに関連するポートを表します（チャンネルメッセージングや、共有ワーカーにメッセージを送信する場合など、適切な場合）。
 
@@ -91,5 +92,4 @@ navigator.serviceWorker.onmessage = (message) => {
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
 - [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)

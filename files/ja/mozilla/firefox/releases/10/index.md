@@ -5,7 +5,7 @@ slug: Mozilla/Firefox/Releases/10
 
 Gecko 10.0 を搭載した Firefox 10 は米国時間 2012 年 1 月 31 日にリリースされました。このページでは、開発者に影響する Firefox 10 の変更点をまとめています。
 
-> **メモ:** Firefox 10 は、2 桁の数値で表記される最初のリリースです。これにより、一部の UserAgent 検出スクリプトで問題が発生するおそれがあります。そのようなスクリプトや、ページに埋め込まれているサードパーティのソフトウェア (ライブラリなど) で UserAgent 検出を行っているものの確認を行うようにしてください。この点に関する詳細情報は、hack.mozilla.org の記事 [Firefox goes 2-digit article on](http://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/) をご覧ください。
+> **メモ:** Firefox 10 は、2 桁の数値で表記される最初のリリースです。これにより、一部の UserAgent 検出スクリプトで問題が発生するおそれがあります。そのようなスクリプトや、ページに埋め込まれているサードパーティのソフトウェア (ライブラリーなど) で UserAgent 検出を行っているものの確認を行うようにしてください。この点に関する詳細情報は、hack.mozilla.org の記事 [Firefox goes 2-digit article on](http://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/) をご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -115,7 +115,7 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 
 ### Manifests
 
-- インストールマニフェストに [`<em:strictCompatibility>`](/ja/docs/Install_Manifests#strictCompatibility) のサポートが追加されました。これによりアドオンの作者が、拡張機能で最大バージョンのチェックを有効にすることができます。`true` に設定すると、アプリケーションのバージョンが `<em:maxVersion>` を上回っている場合にアドオンが無効になります。Firefox 10 はデフォルトで、指定された最大バージョンに関わらずアドオンは互換性があるものとします。このフラグは、その設定を上書きします。Firefox の更新により動作しなくなる可能性があることをアドオンで行っている場合はこれを設定するべきですが、アドオンにバイナリコンポーネントが含まれている場合は常に厳密なチェックが行われますのでこれを**設定しない**ようにしてください (バイナリコンポーネントは Firefox のメジャーリリースごとに、必ず再コンパイルが必要です)。
+- インストールマニフェストに [`<em:strictCompatibility>`](/ja/docs/Install_Manifests#strictCompatibility) のサポートが追加されました。これによりアドオンの作者が、拡張機能で最大バージョンのチェックを有効にすることができます。`true` に設定すると、アプリケーションのバージョンが `<em:maxVersion>` を上回っている場合にアドオンが無効になります。Firefox 10 はデフォルトで、指定された最大バージョンに関わらずアドオンは互換性があるものとします。このフラグは、その設定を上書きします。Firefox の更新により動作しなくなる可能性があることをアドオンで行っている場合はこれを設定するべきですが、アドオンにバイナリーコンポーネントが含まれている場合は常に厳密なチェックが行われますのでこれを**設定しない**ようにしてください (バイナリーコンポーネントは Firefox のメジャーリリースごとに、必ず再コンパイルが必要です)。
 - 以前の動作、つまりマニフェストの `strictCompatibility` の値に関わらずすべてのアドオンで厳密な互換性チェックを行う方式に戻したい場合は、設定項目 `extensions.strictCompatibility` を `true` にしてください。
 
 ### XUL

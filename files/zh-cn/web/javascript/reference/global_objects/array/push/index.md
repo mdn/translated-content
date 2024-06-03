@@ -53,7 +53,7 @@ console.log(total); // 4
 
 ### 合并两个数组
 
-这个示例使用{{jsxref("Operators/Spread_syntax", "展开语法", "", "1")}}来将第二个数组的所有元素添加到第一个数组中。
+这个示例使用{{jsxref("Operators/Spread_syntax", "展开语法", "", 1)}}来将第二个数组的所有元素添加到第一个数组中。
 
 ```js
 const vegetables = ["parsnip", "potato"];

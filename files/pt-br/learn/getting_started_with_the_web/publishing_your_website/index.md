@@ -48,9 +48,9 @@ Há um número grande de web apps que emulam um ambiente de desenvolvimento de s
 
 Tente codificar com alguns desses exemplos, e veja qual se encaixa melhor para você:
 
-- [JSFiddle](http://jsfiddle.net/)
-- [Thimble](https://thimble.mozilla.org/pt-BR/)
-- [JSBin](http://jsbin.com/)
+- [JSFiddle](https://jsfiddle.net/)
+- [Glitch](https://glitch.com/)
+- [JS Bin](https://jsbin.com/)
 - [CodePen](https://codepen.io/)
 
 ![](jsbin-screen.png)

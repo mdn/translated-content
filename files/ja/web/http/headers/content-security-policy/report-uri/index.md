@@ -2,7 +2,7 @@
 title: "CSP: report-uri"
 slug: Web/HTTP/Headers/Content-Security-Policy/report-uri
 l10n:
-  sourceCommit: c49f6dcd20b14f28218aa26030ebbb2f54143521
+  sourceCommit: 6398e955ff59a75fcea7ebfc38a5472c0628b9b0
 ---
 
 {{HTTPSidebar}}{{deprecated_header}}

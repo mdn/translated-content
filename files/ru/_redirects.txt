@@ -38,7 +38,7 @@
 /ru/docs/Core_JavaScript_1.5_Reference:Global_Objects:Boolean	/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ru/docs/DOM/DOM_Reference	/ru/docs/Web/API/Document_Object_Model
 /ru/docs/DOM/DOM_Reference/Examples	/ru/docs/Web/API/Document_Object_Model/Examples
-/ru/docs/DOM/DOM_Reference/Locating_DOM_elements_using_selectors	/ru/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
+/ru/docs/DOM/DOM_Reference/Locating_DOM_elements_using_selectors	/ru/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 /ru/docs/DOM/DOM_Reference/Введение	/ru/docs/Web/API/Document_Object_Model/Introduction
 /ru/docs/DOM/HTMLTableElement	/ru/docs/Web/API/HTMLTableElement
 /ru/docs/DOM/Node.compareDocumentPosition	/ru/docs/Web/API/Node/compareDocumentPosition
@@ -50,7 +50,7 @@
 /ru/docs/DOM/element.dispatchEvent	/ru/docs/Web/API/EventTarget/dispatchEvent
 /ru/docs/DOM/element.getAttribute	/ru/docs/Web/API/Element/getAttribute
 /ru/docs/DOM/table	/ru/docs/Web/API/HTMLTableElement
-/ru/docs/DOM/window.requestAnimationFrame	/ru/docs/Web/API/window/requestAnimationFrame
+/ru/docs/DOM/window.requestAnimationFrame	/ru/docs/Web/API/Window/requestAnimationFrame
 /ru/docs/DOM:document.createElement	/ru/docs/Web/API/Document/createElement
 /ru/docs/DOM:table	/ru/docs/Web/API/HTMLTableElement
 /ru/docs/Firefox_3.5_для_разработчика	/ru/docs/Mozilla/Firefox/Releases/3.5

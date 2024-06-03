@@ -2371,6 +2371,10 @@
     "modified": "2019-03-18T21:45:25.421Z",
     "contributors": ["laneser"]
   },
+  "Web/API/Window/requestAnimationFrame": {
+    "modified": "2020-10-15T21:24:54.235Z",
+    "contributors": ["t7yang", "Ekanan", "North", "foxbrush"]
+  },
   "Web/API/Window/sessionStorage": {
     "modified": "2020-10-15T21:58:23.409Z",
     "contributors": ["iigmir", "EyiLee", "EricPing"]
@@ -2426,10 +2430,6 @@
   "Web/API/setInterval": {
     "modified": "2020-10-15T22:29:07.467Z",
     "contributors": ["chrischi0922s"]
-  },
-  "Web/API/window/requestAnimationFrame": {
-    "modified": "2020-10-15T21:24:54.235Z",
-    "contributors": ["t7yang", "Ekanan", "North", "foxbrush"]
   },
   "Web/Accessibility": {
     "modified": "2019-09-11T08:39:45.699Z",

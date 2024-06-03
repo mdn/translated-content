@@ -11,7 +11,7 @@ Com o básico de CSS compreendido, o próximo passo para você se concentrar ser
 
 Antes de começar este módulo, você já deverá ter familiaridade básica com HTML, como dissemos no módulos [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML), e estar confortável com os fundamentos de CSS, como discutido em [Introdução ao CSS](/pt-BR/docs/Learn/CSS/Introduction_to_CSS).
 
-> **Nota:** Se você está usando um computador/tablet/outro dispositivo onde não tem a possibilidade de criar seus próprios arquivos, você poderá treinar os códigos-exemplo em um programa de código online como [JSBin](http://jsbin.com/), [CodePen](https://codepen.io/) or [Thimble](https://thimble.mozilla.org/).
+> **Nota:** Se você está usando um computador/tablet/outro dispositivo onde não tem a possibilidade de criar seus próprios arquivos, você poderá treinar os códigos-exemplo em um programa de código online como [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
 ## Guias
 

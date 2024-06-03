@@ -460,7 +460,7 @@
 /zh-CN/docs/DOM/window.postMessage	/zh-CN/docs/Web/API/Window/postMessage
 /zh-CN/docs/DOM/window.print	/zh-CN/docs/Web/API/Window/print
 /zh-CN/docs/DOM/window.prompt	/zh-CN/docs/Web/API/Window/prompt
-/zh-CN/docs/DOM/window.requestAnimationFrame	/zh-CN/docs/Web/API/window/requestAnimationFrame
+/zh-CN/docs/DOM/window.requestAnimationFrame	/zh-CN/docs/Web/API/Window/requestAnimationFrame
 /zh-CN/docs/DOM/window.scrollByPages	/zh-CN/docs/Web/API/Window/scrollByPages
 /zh-CN/docs/DOM/window.setImmediate	/zh-CN/docs/Web/API/Window/setImmediate
 /zh-CN/docs/DOM/window.setInterval	/zh-CN/docs/Web/API/setInterval
@@ -1146,7 +1146,7 @@
 /zh-CN/docs/MDN/Contribute/Howto/Tag	/zh-CN/docs/MDN/Writing_guidelines/Howto
 /zh-CN/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 /zh-CN/docs/MDN/Contribute/Howto/Write_an_API_reference	/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
-/zh-CN/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file	/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
+/zh-CN/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file	/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file
 /zh-CN/docs/MDN/Contribute/Howto/Write_for_SEO	/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide
 /zh-CN/docs/MDN/Contribute/Howto/创建及编辑页面	/zh-CN/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /zh-CN/docs/MDN/Contribute/Howto/如何添加或更新浏览器兼容性数据	https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md
@@ -1421,7 +1421,7 @@
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/fullscreenElement	/zh-CN/docs/Web/API/Document/fullscreenElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/zh-CN/docs/Web/API/Document/pointerLockElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/styleSheets	/zh-CN/docs/Web/API/Document/styleSheets
-/zh-CN/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/zh-CN/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
+/zh-CN/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/zh-CN/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /zh-CN/docs/Web/API/Element.classList	/zh-CN/docs/Web/API/Element/classList
 /zh-CN/docs/Web/API/Element.className	/zh-CN/docs/Web/API/Element/className
 /zh-CN/docs/Web/API/Element.clientLeft	/zh-CN/docs/Web/API/Element/clientLeft
@@ -2027,7 +2027,7 @@
 /zh-CN/docs/Web/API/range.getBoundingClientRect	/zh-CN/docs/Web/API/Range/getBoundingClientRect
 /zh-CN/docs/Web/API/range.startOffset	/zh-CN/docs/Web/API/Range/startOffset
 /zh-CN/docs/Web/API/range.surroundContents	/zh-CN/docs/Web/API/Range/surroundContents
-/zh-CN/docs/Web/API/window.requestAnimationFrame	/zh-CN/docs/Web/API/window/requestAnimationFrame
+/zh-CN/docs/Web/API/window.requestAnimationFrame	/zh-CN/docs/Web/API/Window/requestAnimationFrame
 /zh-CN/docs/Web/API/剪贴板_API	/zh-CN/docs/Web/API/Clipboard_API
 /zh-CN/docs/Web/API/开发式平台	/zh-CN/docs/Web/API/Push_API
 /zh-CN/docs/Web/API/指数	/zh-CN/docs/Web/API

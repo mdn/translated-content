@@ -1,8 +1,6 @@
 ---
 title: セレクターを使用した DOM 要素の特定
-slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
-l10n:
-  sourceCommit: b85bf9fcc2c0062a765d104799d7d45d9e9b13bb
+slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 ---
 
 {{DefaultAPISidebar("DOM")}}

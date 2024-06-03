@@ -30,7 +30,7 @@ l10n:
 
 評価試験を始めるために、次のことを行ってください。
 
-- GitHub からサンプル用の [HTML ファイルを取って](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/assessment-start/index.html)きて自分のコンピュータの新しいディレクトリーに `index.html` という名前で保存します。ここには見た目をきれいにするため、CSS も含まれています。
+- GitHub からサンプル用の [HTML ファイルを取って](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/assessment-start/index.html)きて自分のコンピューターの新しいディレクトリーに `index.html` という名前で保存します。ここには見た目をきれいにするため、CSS も含まれています。
 - [この生テキストを含むページ](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/assessment-start/raw-text.txt)に移動してどこか別のブラウザータブで開いたままにしておきます。後で必要となります。
 
 その代わりに、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) のようなサイトを使って評価試験を実施できます。 HTML、CSS、JavaScript をオンラインエディターに貼り付けてください。使っているオンラインエディターが独立した JavaScript パネルを持っていない場合、 HTML ページ内の `<script>` 要素内に書いても問題ありません。

@@ -433,7 +433,7 @@
 /ko/docs/Web/API/DocumentOrShadowRoot/getSelection	/ko/docs/Web/API/Document/getSelection
 /ko/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ko/docs/Web/API/Document/styleSheets
 /ko/docs/Web/API/Document_Object_Model/Preface	/ko/docs/Web/API/Document_Object_Model
-/ko/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ko/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
+/ko/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ko/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /ko/docs/Web/API/Document_Object_Model/소개	/ko/docs/Web/API/Document_Object_Model/Introduction
 /ko/docs/Web/API/Document_Object_Model/예제	/ko/docs/Web/API/Document_Object_Model/Examples
 /ko/docs/Web/API/Element.clientHeight	/ko/docs/Web/API/Element/clientHeight
