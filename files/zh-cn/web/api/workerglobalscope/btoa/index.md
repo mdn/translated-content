@@ -1,15 +1,15 @@
 ---
-title: Window：btoa() 方法
-slug: Web/API/Window/btoa
+title: WorkerGlobalScope：btoa() 方法
+slug: Web/API/WorkerGlobalScope/btoa
 l10n:
   sourceCommit: dd3048a4eb74a53395c9a2015baefaa46ef77a56
 ---
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("Window")}} 接口的 **`btoa()`** 方法可以将一个*二进制字符串*（例如，将字符串中的每一个字节都视为一个二进制数据字节）编码为 {{glossary("Base64")}} 编码的 ASCII 字符串。
+{{domxref("WorkerGlobalScope")}} 接口的 **`btoa()`** 方法可以将一个*二进制字符串*（例如，将字符串中的每一个字节都视为一个二进制数据字节）编码为 {{glossary("Base64")}} 编码的 ASCII 字符串。
 
-你可以使用这个方法来对可能遇到通信问题的数据进行编码，然后使用 {{domxref("Window.atob()")}} 方法来对数据进行解码。例如，你可以对 ASCII 中的控制字符（值为 0 到 31 的字符）进行编码。
+你可以使用这个方法来对可能遇到通信问题的数据进行编码，然后使用 {{domxref("WorkerGlobalScope.atob()")}} 方法来对数据进行解码。例如，你可以对 ASCII 中的控制字符（值为 0 到 31 的字符）进行编码。
 
 ## 语法
 
@@ -34,8 +34,8 @@ btoa(stringToEncode)
 ## 示例
 
 ```js
-const encodedData = window.btoa("Hello, world"); // 编码字符串
-const decodedData = window.atob(encodedData); // 解码字符串
+const encodedData = self.btoa("Hello, world"); // 编码字符串
+const decodedData = self.atob(encodedData); // 解码字符串
 ```
 
 ## Unicode 字符串
@@ -49,11 +49,11 @@ console.log(ok.codePointAt(0).toString(16)); //   61：占用 < 1 字节
 const notOK = "✓";
 console.log(notOK.codePointAt(0).toString(16)); // 2713：占用 > 1 字节
 
-console.log(window.btoa(ok)); // YQ==
-console.log(window.btoa(notOK)); // 错误
+console.log(self.btoa(ok)); // YQ==
+console.log(self.btoa(notOK)); // 错误
 ```
 
-参见 {{Glossary("Base64")}} 术语条目中的“_Unicode 问题_”，以了解如何在处理任意 Unicode 文本时解决此限制。
+参见 {{Glossary("Base64")}} 术语条目中的“Unicode 问题”，以了解如何在处理任意 Unicode 文本时解决此限制。
 
 ## 规范
 
@@ -67,6 +67,6 @@ console.log(window.btoa(notOK)); // 错误
 
 - [`core-js`](https://github.com/zloirock/core-js) 中有对 [`btoa` 的 polyfill](https://github.com/zloirock/core-js#base64-utility-methods)
 - [`data` URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
-- {{domxref("WorkerGlobalScope.btoa()")}}：相同的，但是是在 worker 作用域内的方法。
-- {{domxref("Window.atob()")}}
+- {{domxref("WorkerGlobalScope.atob()")}}
+- {{domxref("Window.atob()")}}：相同的，但是是在窗口作用域内的方法。
 - {{Glossary("Base64")}}
