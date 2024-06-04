@@ -1,6 +1,7 @@
 ---
 title: atob() 全局函数
-slug: Web/API/atob
+slug: Web/API/Window/atob
+original_slug: Web/API/atob
 ---
 
 {{APIRef("HTML DOM")}}{{AvailableInWorkers}}
