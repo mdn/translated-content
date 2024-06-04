@@ -14,9 +14,9 @@ l10n:
 ## 示例属性
 
 - {{domxref("UserActivation.hasBeenActive")}} {{ReadOnlyInline}}
-  - : 指示当前窗口是否具有粘性用户激活。
+  - : 指示当前窗口是否具有粘性（用户）激活。
 - {{domxref("UserActivation.isActive")}} {{ReadOnlyInline}}
-  - : 指示当前窗口是否具有临时用户激活。
+  - : 指示当前窗口是否具有瞬态（用户）激活。
 
 ## 描述
 
@@ -26,16 +26,16 @@ l10n:
 
 window 用户激活状态有两种：
 
-- {{Glossary("Transient activation")}}（用户当前正在与页面交互）和
-- {{Glossary("Sticky activation")}}（自页面加载以来，用户至少交互过一次）。
+- {{Glossary("Transient activation", "瞬态（用户）激活")}}（用户当前正在与页面交互）和
+- {{Glossary("Sticky activation", "粘性（用户）激活")}}（自页面加载以来，用户至少交互过一次）。
 
-有关更多信息以及需要粘性或临时用户激活的 API 列表，请参见[用户激活的功能](/zh-CN/docs/Web/Security/User_activation) 。
+有关更多信息以及需要粘性或瞬态激活的 API 列表，请参见[用户激活的功能](/zh-CN/docs/Web/Security/User_activation) 。
 
 ## 示例
 
 ### 检查最近是否执行过用户手势
 
-使用 {{domxref("navigator.userActivation")}} 访问 `UserActivation` 对象，然后使用 {{domxref("UserActivation.isActive")}} 检查用户当前是否正在与页面进行交互（{{Glossary("Transient activation")}}）。
+使用 {{domxref("navigator.userActivation")}} 访问 `UserActivation` 对象，然后使用 {{domxref("UserActivation.isActive")}} 检查用户当前是否正在与页面进行交互（{{Glossary("Transient activation", "瞬态（用户）激活")}}）。
 
 ```js
 if (navigator.userActivation.isActive) {
@@ -45,7 +45,7 @@ if (navigator.userActivation.isActive) {
 
 ### 检查是否执行过用户手势
 
-使用 {{domxref("UserActivation.hasBeenActive")}} 检查用户是否曾与页面进行过交互（{{Glossary("Sticky activation")}}）。
+使用 {{domxref("UserActivation.hasBeenActive")}} 检查用户是否曾与页面进行过交互（{{Glossary("Sticky activation", "粘性（用户）激活")}}）。
 
 ```js
 if (navigator.userActivation.hasBeenActive) {
