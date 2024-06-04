@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-`CookieStore` 类型的 {{WebExtAPIRef("cookies")}} API 表示浏览器中的一个 cookie 存储。
+`CookieStore` 是 {{WebExtAPIRef("cookies")}} API 中的一个类型，用于表示浏览器中的一个 cookie 存储区。
 
 不同浏览模式的窗口可能会使用不同的 cookie 存储。例如，隐私浏览/无痕模式窗口使用的 cookie 存储与非无痕/隐私窗口使用的 cookie 存储是分开的。此外，在 Firefox 中使用[容器标签页](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers)时，一个窗口可能会有多个 cookie 存储。
 
