@@ -1,6 +1,7 @@
 ---
 title: btoa() 전역 함수
-slug: Web/API/btoa
+slug: Web/API/Window/btoa
+original_slug: Web/API/btoa
 l10n:
   sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
 ---
