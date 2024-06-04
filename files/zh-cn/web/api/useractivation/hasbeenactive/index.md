@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("UserActivation")}} 接口的只读的 **`hasBeenActive`** 属性表示当前的窗口是否有 {{Glossary("sticky activation","粘性用户激活")}}。
+{{domxref("UserActivation")}} 接口的 **`hasBeenActive`** 只读属性表示当前的窗口是否有{{Glossary("sticky activation","粘性用户激活")}}。
 
 ## 值
 
