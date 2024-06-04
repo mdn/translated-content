@@ -20,7 +20,7 @@ l10n:
 
 - [前端开发人员的无障碍性](https://accessibility.digital.gov/front-end/getting-started/)
   - : 美国总务署技术转型服务提供的简要指南，涵盖了几个无障碍性主题，并提供了与 WCAG 相关的链接。
-- [可访问的网页编写](https://www.ibm.com/able/requirements/requirements/)
+- [无障碍网页编写](https://www.ibm.com/able/requirements/requirements/)
   - : IBM 公开了他们需要满足的无障碍性要求，并提供了交互式的界面。
 
 ## 自动化检查与修复
