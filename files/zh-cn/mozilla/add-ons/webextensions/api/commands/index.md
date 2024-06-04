@@ -36,7 +36,7 @@ l10n:
 
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API.
+> **备注：** 此 API 基于 Chromium 的 [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
