@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，可用于启用或禁用用户使用双击关闭标签页的权限。
+一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，可用于启用或禁用用户使用双击关闭标签页的功能。
 
 其底层值是一个布尔值。
 
