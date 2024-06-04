@@ -57,19 +57,19 @@ Firefox 包含拦截跟踪的特性。这些特性会分隔 cookie，以使跟�
 
 ### 存储分区
 
-在使用[动态分区](/zh-CN/docs/Web/Privacy/State_Partitioning#动态分区)时，Firefox 通过顶级站点分隔 JavaScript API 可访问的存储，同时为了满足常见用例而提供适当的对未分隔存储的访问。此功能正在逐步推出。有关实施详细信息，请参阅 [Firefox 中分区的状态](/zh-CN/docs/Web/Privacy/State_Partitioning#firefox_中分区的状态)。
+在使用[动态分区](/zh-CN/docs/Web/Privacy/State_Partitioning#动态分区)时，Firefox 通过顶级站点分隔 JavaScript API 可访问的存储，同时为了满足常见用例而提供适当的对未分区的存储的访问。此功能正在逐步推出。有关实施详细信息，请参阅 [Firefox 中分区的状态](/zh-CN/docs/Web/Privacy/State_Partitioning#firefox_中分区的状态)。
 
 存储分区的键由顶级{{glossary("Site","网站")}}的 URL 构成，当动态分区处于激活状态时，键值通过 cookies API 中的 `partitionKey.topLevelSite` 属性获得，例如，`partitionKey: {topLevelSite: "http://site"}`。
 
-通常，顶级文档位于未分隔存储中，而第三方 iframe 位于分隔存储中。如果无法确定分区键，则使用默认值（未分隔存储）。例如，虽然所有 HTTP(S) 站点都可以用作分区键，但 `moz-extension:-` URL 不能。因此，Firefox 扩展文档中的 iframe 不使用分隔存储。
+通常，顶级文档位于未分区的存储中，而第三方 iframe 位于分区存储中。如果无法确定分区键，则使用默认值（未分区的存储）。例如，虽然所有 HTTP(S) 站点都可以用作分区键，但 `moz-extension:-` URL 不能。因此，Firefox 扩展文档中的 iframe 不使用分区存储。
 
-默认情况下，{{WebExtAPIRef("cookies.get()")}}、{{WebExtAPIRef("cookies.getAll()")}}、{{WebExtAPIRef("cookies.set()")}} 和 {{WebExtAPIRef("cookies.remove()")}} 用于未分隔存储中的 cookie。要在这些 API 中使用分隔存储中的 cookie，必须设置 `partitionKey` 中的 `topLevelSite`。唯一的例外是 `getAll`，其中设置 `partitionKey` 而不设置 `topLevelSite` 返回分隔存储和未分隔存储中的 cookie。{{WebExtAPIRef("cookies.onChanged")}} 对扩展程序可以访问的任何 cookie 都会触发，包括分隔存储中的 cookie。为确保修改正确的 cookie，扩展应从事件中读取 `cookie.partitionKey` 属性，并将其值传递给 {{WebExtAPIRef("cookies.set()")}} 和 {{WebExtAPIRef("cookies.remove()")}}。
+默认情况下，{{WebExtAPIRef("cookies.get()")}}、{{WebExtAPIRef("cookies.getAll()")}}、{{WebExtAPIRef("cookies.set()")}} 和 {{WebExtAPIRef("cookies.remove()")}} 用于未分区的存储中的 cookie。要在这些 API 中使用分区存储中的 cookie，必须设置 `partitionKey` 中的 `topLevelSite`。唯一的例外是 `getAll`，其中设置 `partitionKey` 而不设置 `topLevelSite` 返回分区存储和未分区的存储中的 cookie。{{WebExtAPIRef("cookies.onChanged")}} 对扩展程序可以访问的任何 cookie 都会触发，包括分区存储中的 cookie。为确保修改正确的 cookie，扩展应从事件中读取 `cookie.partitionKey` 属性，并将其值传递给 {{WebExtAPIRef("cookies.set()")}} 和 {{WebExtAPIRef("cookies.remove()")}}。
 
 ### 第一方隔离
 
 当第一方隔离开启时，cookie 由用户访问的原始页面的域来限定（基本上是用户在 URL 栏中看到的域，也称为”第一方域“）。
 
-用户可以通过调整浏览器的配置来启用第一方隔离，扩展可以使用 {{WebExtAPIRef("privacy.websites","firstPartyIsolate")}} 设置在 {{WebExtAPIRef("privacy")}} API 中。请注意，在 [Tor 浏览器](https://www.torproject.org/) 中，默认情况下启用了第一方隔离。
+用户可以通过调整浏览器的配置来启用第一方隔离，扩展可以使用 {{WebExtAPIRef("privacy")}} API 中的{{WebExtAPIRef("privacy.websites","firstPartyIsolate")}} 这个设置来启用第一方隔离。请注意，在 [Tor 浏览器](https://www.torproject.org/)中，默认情况下启用了第一方隔离。
 
 在 `cookies` API 中，第一方域使用 `firstPartyDomain` 属性表示。在第一方隔离开启时设置的所有 cookie 都将该属性设置为原始页面的域。在上述示例中，一个 cookie 的域为 `a-shopping-site.com`，另一个为 `a-news-site.com`。当第一方隔离关闭时，由网站设置的所有 cookie 都将该属性设置为空字符串。
 
