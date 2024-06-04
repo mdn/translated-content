@@ -22,6 +22,7 @@ let registering = browser.contentScripts.register(
 ```
 
 ### 参数
+
 - `contentScriptOptions`
 
   - : `object`。表示要注册的内容脚本的 `RegisteredContentScriptOptions` 对象。它的语法与 [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) manifest 键数组中的对象类似。不同之处在于：
@@ -53,6 +54,7 @@ let registering = browser.contentScripts.register(
       - : 与 [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 键中的 `run_at` 相同。
 
 ### 返回值
+
 一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 {{WebExtAPIRef("contentScripts.RegisteredContentScript")}} 对象，该对象可以用来取消注册内容脚本。
 
 当前，内容脚本在相关扩展页面（注册内容脚本的页面）卸载时会被取消注册，因此你应该从一个比内容脚本持续时间更久的拓展页面去注册内容页面。
@@ -67,8 +69,7 @@ let registering = browser.contentScripts.register(
 
 ```js
 const defaultHosts = "*://*.org/*";
-const defaultCode =
-  "document.body.innerHTML = '<h1>页面被吃掉了<h1>'";
+const defaultCode = "document.body.innerHTML = '<h1>页面被吃掉了<h1>'";
 
 async function register(hosts, code) {
   return await browser.contentScripts.register({
