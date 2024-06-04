@@ -1,6 +1,7 @@
 ---
 title: btoa()
-slug: Web/API/btoa
+slug: Web/API/Window/btoa
+original_slug: Web/API/btoa
 l10n:
   sourceCommit: 951c9cee9c31ef7c2f2314b87a7c7cc5e330d471
 ---
