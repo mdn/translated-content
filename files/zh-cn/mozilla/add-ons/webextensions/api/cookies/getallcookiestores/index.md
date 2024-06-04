@@ -7,9 +7,9 @@ l10n:
 
 {{AddonSidebar}}
 
-**`getAllCookieStores()`** 方法属于 {{WebExtAPIRef("cookies")}} API，返回所有 cookie 存储的列表。
+{{WebExtAPIRef("cookies")}} API 的 **`getAllCookieStores()`** 方法返回所有 cookie 存储的列表。
 
-这是一个异步函数，返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 
@@ -23,7 +23,7 @@ let gettingStores = browser.cookies.getAllCookieStores()
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将使用表示所有现有 cookie 存储的 {{WebExtAPIRef('cookies.CookieStore')}} 对象数组进行实现。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，会兑现一个表示所有现有 cookie 存储的 {{WebExtAPIRef('cookies.CookieStore')}} 对象的数组。
 
 ## 浏览器兼容性
 
@@ -31,12 +31,12 @@ let gettingStores = browser.cookies.getAllCookieStores()
 
 ## 示例
 
-在下面的代码片段中，`getAllCookieStores()` 方法用于检索浏览器中当前可用的所有 cookie 存储，并打印每个 cookie 存储的 ID，以及当前共享每个 cookie 存储的标签页。
+在下面的代码片段中，`getAllCookieStores()` 方法用于检索浏览器中当前可用的所有 cookie 存储，并打印每个 cookie 存储的 ID，以及当前共享对应的 cookie 存储的标签页。
 
 ```js
 function logStores(cookieStores) {
   for (const store of cookieStores) {
-    console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
+    console.log(`Cookie 存储：${store.id}\n标签页 ID：${store.tabIds}`);
   }
 }
 
