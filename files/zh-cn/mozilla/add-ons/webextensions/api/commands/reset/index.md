@@ -23,8 +23,8 @@ browser.commands.reset(
 
 ### 参数
 
-- name
-  - : string。要重置的命令的名称，如 {{WebExtAPIRef("commands.Command")}} 对象的 name 属性所示。
+- `name`
+  - : `string`。要重置的命令的名称，如 {{WebExtAPIRef("commands.Command")}} 对象的 `name` 属性所示。
 
 ### 返回值
 
