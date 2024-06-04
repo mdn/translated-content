@@ -52,7 +52,7 @@ let removing = browser.cookies.remove(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含有关已删除 cookie 的详细信息的 {{WebExtAPIRef('cookies.Cookie')}} 对象。如果找不到与 `details` 参数匹配的 cookie，则该 Promise 将被履行为 `null`。如果由于任何原因调用失败，则 Promise 将被拒绝，并带有错误消息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含有关已删除 cookie 的详细信息的 {{WebExtAPIRef('cookies.Cookie')}} 对象。如果找不到与 `details` 参数匹配的 cookie，则该 Promise 将兑现 `null`。如果由于任何原因导致调用失败，则 Promise 将被拒绝，并带有错误消息。
 
 ## 浏览器兼容性
 
