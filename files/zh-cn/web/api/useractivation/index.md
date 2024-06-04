@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`UserActivation`** 界面提供有关用户当前是否正在与页面交互，或者自页面加载以来是否已完成交互的信息。
+**`UserActivation`** 接口提供有关用户当前是否正在与页面交互，或者自页面加载以来是否已完成交互的信息。
 
 此 API 仅在 window 上下文中可用，web worker 中不可用。
 
