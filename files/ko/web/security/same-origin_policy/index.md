@@ -23,7 +23,7 @@ l10n:
 | `http://store.company.com/dir/inner/another.html` | 동일 출처 | 경로만 다름                                 |
 | `https://store.company.com/page.html`             | 실패      | 다른 프로토콜                               |
 | `http://store.company.com:81/dir/page.html`       | 실패      | 다른 포트 (`http://` 는 기본적으로 80 포트) |
-| `http://news.company.com/dir/page.html`           | 실패      | 다른 호스트                                 | 
+| `http://news.company.com/dir/page.html`           | 실패      | 다른 호스트                                 |
 
 ### 출처 상속
 
