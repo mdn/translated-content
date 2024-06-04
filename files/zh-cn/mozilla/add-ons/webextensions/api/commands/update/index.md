@@ -26,7 +26,7 @@ browser.commands.update(
   - : `object`。包含以下属性的对象：
 
     - `name`
-      - : `string`。要更新的命令的名称。这必须与现有命令的名称匹配，如 {{WebExtAPIRef("commands.Command")}} 对象的 `name` 属性所示。。
+      - : `string`。要更新的命令的名称。这必须与现有命令的名称匹配，如 {{WebExtAPIRef("commands.Command")}} 对象的 `name` 属性所示。
     - `description` {{optional_inline}}
       - : `string`。要为命令设置的新描述。
     - `shortcut` {{optional_inline}}
@@ -34,11 +34,11 @@ browser.commands.update(
       - : `string`。要为命令设置的新快捷键。可以是：
 
         - 一个空字符串，表示清除快捷键。
-        - 一个与 [`commands` manifest.json key](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) 格式匹配的字符串，以设置新的快捷键。如果字符串不符合此格式，函数将抛出错误。
+        - 一个与 [`commands` manifest.json 键](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)格式匹配的字符串，以设置新的快捷键。如果字符串不符合此格式，函数将抛出错误。
 
 ### 返回值
 
-一个 Promise，当快捷键更新时其会兑现。如果找不到命令，promise 将被拒绝并出现错误。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当快捷键更新时其会兑现。如果找不到命令，promise 将被拒绝并出现错误。
 
 ## 浏览器兼容性
 
