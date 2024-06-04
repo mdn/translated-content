@@ -2,7 +2,7 @@
 title: browserAction.getUserSettings()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getUserSettings
 l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+  sourceCommit: 05808d3600f3a5b856eaaf89359f1fdc3d255c26
 ---
 
 {{AddonSidebar}}
@@ -30,7 +30,7 @@ let userSettings = await browser.browserAction.getUserSettings();
   - : 包含用户为浏览器操作指定的设置的对象，具有以下属性：
 
     - `isOnToolbar` {{optional_inline}}
-      - : boolean。用户是否将操作的图标固定到浏览器 UI。这一设置不表示图标是否可见。图标的可见性取决于浏览器窗口的大小和浏览器 UI 的布局。
+      - : `boolean` 值。用户是否将操作的图标固定到浏览器 UI。这一设置不表示图标是否可见。图标的可见性取决于浏览器窗口的大小和浏览器 UI 的布局。
 
 ## 示例
 
