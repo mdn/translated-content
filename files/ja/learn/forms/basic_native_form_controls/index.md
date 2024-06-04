@@ -393,7 +393,7 @@ http://foo.com?pos.x=123&pos.y=456
 
 ## スキルテスト
 
-この記事の最後に到着しましたが、もっとも大事な情報を覚えていますか？ 次に進む前に、この情報を保持しているか検証するテストがあります — [Test your skills: Basic controls](/ja/docs/Learn/Forms/Test_your_skills:_Basic_controls) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 基本的なコントロール](/ja/docs/Learn/Forms/Test_your_skills:_Basic_controls)を見てください。
 
 ## まとめ
 
