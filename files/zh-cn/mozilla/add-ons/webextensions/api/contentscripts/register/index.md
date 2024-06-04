@@ -1,6 +1,6 @@
 ---
-title: contentScripts
-slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
+title: contentScripts.register()
+slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
 l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
@@ -69,7 +69,7 @@ let registering = browser.contentScripts.register(
 
 ```js
 const defaultHosts = "*://*.org/*";
-const defaultCode = "document.body.innerHTML = '<h1>页面被吃掉了<h1>'";
+const defaultCode = "document.body.innerHTML = '<h1>这个页面被吃掉了<h1>'";
 
 async function register(hosts, code) {
   return await browser.contentScripts.register({
