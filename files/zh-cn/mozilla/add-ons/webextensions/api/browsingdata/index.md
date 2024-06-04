@@ -12,7 +12,7 @@ l10n:
 在 `browsingData` API 中，浏览数据被分为以下类型：
 
 - 浏览器缓存
-- Cookies
+- cookie
 - 下载
 - 历史记录
 - 本地存储
@@ -22,14 +22,14 @@ l10n:
 
 你可以使用 {{WebExtAPIRef("browsingData.remove()")}} 函数来移除这些类型的任何组合。还有专门的函数用于移除每种特定类型的数据，例如 {{WebExtAPIRef("browsingData.removePasswords()", "removePasswords()")}}、{{WebExtAPIRef("browsingData.removeHistory()", "removeHistory()")}} 等等。
 
-所有的 `browsingData.remove[X]()` 函数都接受一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象，你可以使用它来控制数据移除的两个进一步方面：
+所有的 `browsingData.remove[X]()` 函数都接受一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象，你可以使用它来进一步控制数据移除的两个方面：
 
-- 在时间轴上移除数据的范围
-- 是否仅从普通网页中移除数据，还是同时从托管的 Web 应用程序和插件中移除数据。请注意，此选项在 Firefox 中尚不受支持。
+- 删除多久以前的数据
+- 是否仅从普通网页中移除数据，还是同时从托管的 Web 应用程序和插件中移除数据。请注意，Firefox 尚不受支持此选项。
 
-最后，此 API 还提供了一个 {{WebExtAPIRef("browsingData.settings()")}} 函数，用于获取浏览器内置“清除历史记录”功能的当前设置值。
+最后，此 API 还提供了一个 {{WebExtAPIRef("browsingData.settings()")}} 函数，用于获取浏览器内置“清除历史记录”特性的当前设置值。
 
-要使用此 API，你必须具有“browsingData” [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)。
+要使用此 API，你必须具有“browsingData” [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
 
 ## 类型
 
@@ -41,11 +41,11 @@ l10n:
 ## 方法
 
 - {{WebExtAPIRef("browsingData.remove()")}}
-  - : 移除指定数据类型的浏览数据。
+  - : 移除指定数据类型（例如，历史记录、下载、密码，等等）的浏览数据。
 - {{WebExtAPIRef("browsingData.removeCache()")}}
   - : 清除浏览器的缓存。
 - {{WebExtAPIRef("browsingData.removeCookies()")}}
-  - : 移除 Cookies。
+  - : 移除 cookie。
 - {{WebExtAPIRef("browsingData.removeDownloads()")}}
   - : 移除下载文件列表。
 - {{WebExtAPIRef("browsingData.removeFormData()")}}
@@ -59,7 +59,7 @@ l10n:
 - {{WebExtAPIRef("browsingData.removePluginData()")}}
   - : 清除与插件相关的数据。
 - {{WebExtAPIRef("browsingData.settings()")}}
-  -: 获取浏览器“清除历史记录”功能的当前设置值。
+  - : 获取浏览器“清除历史记录”特性的当前设置值。
 
 ## 浏览器兼容性
 
