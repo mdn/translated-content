@@ -28,4 +28,4 @@ WebExtension 的 `clipboard` API（与[标准剪贴板 API](/zh-CN/docs/Web/API/
 
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API.
+> **备注：** 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API。
