@@ -20,7 +20,7 @@ l10n:
     - 读取任何路径下 `www.example.com` 的非安全 cookie。
     - 写入任何路径下 `www.example.com` 的安全或非安全 cookie。
 
-      它*不能*：
+    它*不能*：
 
     - 读取 `www.example.com` 的安全 cookie。
 
@@ -32,6 +32,7 @@ l10n:
     - 读取任何路径下 `.example.com` 的非安全 cookie。
     - 写入任何路径下 `www.example.com` 的安全或非安全 cookie。
     - 写入任何路径下 `.example.com` 的安全或非安全 cookie。
+
     它*不能*：
 
     - 读取或写入 `foo.example.com` 的 cookie。
