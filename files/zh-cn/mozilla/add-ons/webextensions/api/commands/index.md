@@ -7,19 +7,19 @@ l10n:
 
 {{AddonSidebar}}
 
-监听用户执行你已使用 [`commands` manifest.json key](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) 注册的命令。
+监听用户执行你已使用 [`commands` manifest.json 键](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)注册的命令。
 
 ## 类型
 
 - {{WebExtAPIRef("commands.Command")}}
-  - : 表示命令的对象。此对象包含在 [`commands` manifest.json key](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) 中为命令指定的信息。
+  - : 表示命令的对象。此对象包含在 [`commands` manifest.json 键](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)中为命令指定的信息。
 
 ## 函数
 
 - {{WebExtAPIRef("commands.getAll")}}
   - : 获取此扩展程序的所有已注册命令。
 - {{WebExtAPIRef("commands.reset")}}
-  - : 重置给定命令的描述和快捷键为 manifest key 中给定的值。
+  - : 重置给定命令的描述和快捷键为清单（manifest）键中给定的值。
 - {{WebExtAPIRef("commands.update")}}
   - : 更改给定命令的描述或快捷键。
 
