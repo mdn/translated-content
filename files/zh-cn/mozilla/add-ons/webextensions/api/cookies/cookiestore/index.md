@@ -9,9 +9,9 @@ l10n:
 
 `CookieStore` 类型的 {{WebExtAPIRef("cookies")}} API 表示浏览器中的一个 cookie 存储。
 
-不同浏览模式的窗口可能会使用不同的 cookie 存储。例如，隐私浏览/无痕模式窗口使用的 cookie 存储与非无痕/隐私窗口使用的 cookie 存储是分开的。此外，当使用[容器标签](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers)功能时，一个窗口可能会有多个 cookie 存储。
+不同浏览模式的窗口可能会使用不同的 cookie 存储。例如，隐私浏览/无痕模式窗口使用的 cookie 存储与非无痕/隐私窗口使用的 cookie 存储是分开的。此外，在 Firefox 中使用[容器标签页](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers)时，一个窗口可能会有多个 cookie 存储。
 
-有关 cookie 存储的更多信息，请参见[使用 Cookies API](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API#cookie_stores)。
+有关 cookie 存储的更多信息，请参见[使用 Cookies API](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API#cookie_存储)。
 
 ## 类型
 
@@ -22,7 +22,7 @@ l10n:
 - `incognito` {{optional_inline}}
   - : 一个布尔值，指示这是一个无痕 cookie 存储。此属性在 Chrome 或 Safari 中不受支持。不过，由于 Chrome 中无痕 cookie 存储的 `id` 值始终为“1”，你可以借此来识别这一存储。
 - `tabIds`
-  - : 一个 `integers` 数组，标识共享此 cookie 存储的所有浏览器标签页。
+  - : 一个整型数（`integer`）的数组，标识共享此 cookie 存储的所有浏览器标签页。
 
 ## 浏览器兼容性
 
@@ -30,12 +30,12 @@ l10n:
 
 ## 示例
 
-在以下代码片段中，{{WebExtAPIRef("cookies.getAllCookieStores()")}} 方法用于检索浏览器中当前可用的所有 cookie 存储，并打印出每个 cookie 存储的 ID 以及当前共享每个 cookie 存储的标签页。
+在以下代码片段中，{{WebExtAPIRef("cookies.getAllCookieStores()")}} 方法用于检索浏览器中当前可用的所有 cookie 存储，并打印出每个 cookie 存储的 ID 以及当前共享对应的 cookie 存储的标签页。
 
 ```js
 function logStores(cookieStores) {
   for (const store of cookieStores) {
-    console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
+    console.log(`Cookie 存储：${store.id}\n标签页 ID：${store.tabIds}`);
   }
 }
 
@@ -48,7 +48,7 @@ browser.cookies.getAllCookieStores().then(logStores);
 browser.cookies.getAllCookieStores().then((stores) => {
   const incognitoStores = stores.map((store) => store.incognito);
   console.log(
-    `Of ${stores.length} cookie stores, ${incognitoStores.length} are incognito.`,
+    `${stores.length} 个 cookie 存储中有 ${incognitoStores.length} 个是无痕模式的。`,
   );
 });
 ```
