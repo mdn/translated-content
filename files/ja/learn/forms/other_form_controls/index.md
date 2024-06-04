@@ -295,9 +295,9 @@ l10n:
 
 {{HTMLElement("progress")}} 要素内のコンテンツは、この要素に対応していないブラウザーや、スクリーンリーダーが発声するための代替となります。
 
-## スキルをテストしよう!
+## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[Test your skills: Other controls](/ja/docs/Learn/Forms/Test_your_skills:_Other_controls) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: その他のコントロール](/ja/docs/Learn/Forms/Test_your_skills:_Other_controls) を見てください。
 
 ## まとめ
 
