@@ -18,12 +18,12 @@ l10n:
 아래 표는 URL `http://store.company.com/dir/page.html`의 출처를 비교한 예시입니다.
 
 | URL                                               | 결과      | 이유                                        |
-| ------------------------------------------------- | --------- | ------------------------------------------- | --- |
+| ------------------------------------------------- | --------- | ------------------------------------------- |
 | `http://store.company.com/dir2/other.html`        | 동일 출처 | 경로만 다름                                 |
 | `http://store.company.com/dir/inner/another.html` | 동일 출처 | 경로만 다름                                 |
 | `https://store.company.com/page.html`             | 실패      | 다른 프로토콜                               |
 | `http://store.company.com:81/dir/page.html`       | 실패      | 다른 포트 (`http://` 는 기본적으로 80 포트) |
-| `http://news.company.com/dir/page.html`           | 실패      | 다른 호스트                                 |     |
+| `http://news.company.com/dir/page.html`           | 실패      | 다른 호스트                                 | 
 
 ### 출처 상속
 
