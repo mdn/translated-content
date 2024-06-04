@@ -35,7 +35,7 @@ let settingIcon = browser.browserAction.setIcon(
 
       - : `{{WebExtAPIRef('browserAction.ImageDataType')}}` 或 `object`。这可以是单个 `ImageData` 对象或一个字典对象。
 
-        使用字典对象来指定不同尺寸的多个 `ImageData` 对象，这样图标就不需要根据设备的不同像素密度进行缩放。如果 `imageData` 是一个字典，则每个属性的值是一个 `ImageData` 对象，其名称是其尺寸，如下所示：
+        使用字典对象来指定不同尺寸的多个 `ImageData` 对象，这样图标就不需要根据设备的不同像素密度进行缩放。如果 `imageData` 是一个字典，则每个属性的值是一个 `ImageData` 对象，属性名是其尺寸，如下所示：
 
         ```js
         let settingIcon = browser.action.setIcon({
@@ -52,7 +52,7 @@ let settingIcon = browser.browserAction.setIcon(
 
       - : `string` 或 `object`。这可以是到图标文件的相对路径，也可以是一个字典对象。
 
-        使用字典对象来指定不同尺寸的多个图标文件，这样图标就不需要根据设备的不同像素密度进行缩放。如果 `path` 是一个字典，则每个属性的值是一个相对路径，其名称是其尺寸，如下所示：
+        使用字典对象来指定不同尺寸的多个图标文件，这样图标就不需要根据设备的不同像素密度进行缩放。如果 `path` 是一个字典，则每个属性的值是一个相对路径，属性名是其尺寸，如下所示：
 
         ```js
         let settingIcon = browser.action.setIcon({
