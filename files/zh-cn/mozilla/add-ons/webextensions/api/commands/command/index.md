@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-有关命令的信息。这包含在 [`commands` manifest.json 键](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)中指定的命令信息。
+有关命令的信息。这包含在 [`commands` manifest.json 键](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)中指定的命令信息。
 
 调用 {{WebExtAPIRef('commands.getAll()')}} 将返回包含这些对象的数组。
 
@@ -28,4 +28,4 @@ l10n:
 
 {{WebExtExamples}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API.
+> **备注：** 此 API 基于 Chromium 的 [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API。
