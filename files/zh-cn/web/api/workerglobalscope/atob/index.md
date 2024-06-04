@@ -1,13 +1,13 @@
 ---
-title: Window：atob() 方法
-slug: Web/API/Window/atob
+title: WorkerGlobalScope：atob() 方法
+slug: Web/API/WorkerGlobalScope/atob
 l10n:
   sourceCommit: dd3048a4eb74a53395c9a2015baefaa46ef77a56
 ---
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("Window")}} 接口的 **`atob()`** 函数会对经过 {{glossary("Base64")}} 编码的字符串进行解码。你可以使用 {{domxref("Window.btoa()")}} 方法来编码可能会在传输过程中出现问题的数据，并且在接收数据之后，使用 `atob()` 方法再将数据解码。例如：你可以编码、传输和解码控制字符，如 {{Glossary("ASCII")}} 值为 0 到 31 的。
+{{domxref("WorkerGlobalScope")}} 接口的 **`atob()`** 函数会对经过 {{glossary("Base64")}} 编码的字符串进行解码。你可以使用 {{domxref("WorkerGlobalScope.btoa()")}} 方法来编码可能会在传输过程中出现问题的数据，并且在接收数据之后，使用 `atob()` 方法再将数据解码。例如：你可以编码、传输和解码控制字符，如 {{Glossary("ASCII")}} 值为 0 到 31 的。
 
 对于任意 Unicode 字符串的使用，请参阅 {{Glossary("Base64")}} 文中的“_Unicode 问题_”。
 
@@ -34,8 +34,8 @@ atob(encodedData)
 ## 示例
 
 ```js
-const encodedData = window.btoa("Hello, world"); // 编码
-const decodedData = window.atob(encodedData); // 解码
+const encodedData = self.btoa("Hello, world"); // 编码
+const decodedData = self.atob(encodedData); // 解码
 ```
 
 ## 规范
@@ -50,5 +50,5 @@ const decodedData = window.atob(encodedData); // 解码
 
 - [`core-js`](https://github.com/zloirock/core-js) 提供了 [`atob` 的 polyfill](https://github.com/zloirock/core-js#base64-utility-methods)
 - [`data` URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
-- {{domxref("WorkerGlobalScope.atob()")}}：相同的，但是是在 worker 作用域内的方法。
-- {{domxref("Window.btoa()")}}
+- {{domxref("Window.atob()")}}：相同的，但是是在窗口作用域内的方法。
+- {{domxref("WorkerGlobalScope.btoa()")}}
