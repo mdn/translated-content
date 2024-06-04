@@ -11,11 +11,11 @@ l10n:
 
 由于 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 并没有强制要求在协商新对等连接期间使用特定的传输机制来发送信令，因此它具有很高的灵活性。不过，尽管信令消息的传输和通信具有这种灵活性，在可能的情况下，你应遵循一种推荐的设计模式，即完美协商。
 
-在首次部署支持 WebRTC 的浏览器后，我们意识到协商过程的某些部分比典型用例所需的更为复杂。这是由于应用程序接口的一些小问题和一些需要防止的潜在竞赛条件造成的。这些问题后来都得到了解决，进而让我们大大简化了 WebRTC 协商过程。完美的协商模式是 WebRTC 早期改进协商方式的一个例子。
+在首次部署支持 WebRTC 的浏览器后，人们意识到协商过程的某些部分比典型用例所需的更为复杂。这是由于应用程序接口的一些小问题和一些需要预防的潜在竞争条件造成的。这些问题后来都得到了解决，进而让我们大大简化了 WebRTC 协商过程。完美的协商模式是 WebRTC 早期改进协商方式的一个例子。
 
 ## 完美协商的概念
 
-完美协商使协商过程与应用程序其他逻辑无缝且完全的分离成为可能。协商本质上是一种不对称操作：一方需要充当“调用者”，而另一方则是“被调用者”。完美的协商模式通过将这种差异分离到独立的协商逻辑中来消除这种差异，因此你的应用程序无需关心它是连接的哪一端。就应用程序而言，是发出呼叫还是接收呼叫并无区别。
+完美协商可以使协商过程与应用程序其他逻辑无缝且完全的分离。协商本质上是一种不对称操作：一方需要充当“调用者”，而另一方则是“被调用者”。完美的协商模式通过将这种差异分离到独立的协商逻辑中来消除这种差异，因此你的应用程序无需关心它是连接的哪一端。就应用程序而言，是发出呼叫还是接收呼叫并无区别。
 
 完美协商的最大优点是，调用方和被调用方使用相同的代码，因此无需编写重复或其他额外的协商代码。
 
@@ -36,7 +36,7 @@ l10n:
 
 请注意，该代码对参与连接的两个对等点都是相同的。
 
-#### 创建信令和对等连接
+### 创建信令和对等连接
 
 首先，需要打开信令通道并创建 {{domxref("RTCPeerConnection")}} 。这里列出的 {{Glossary("STUN")}} 服务器显然不是真正的服务器；你需要将 `stun.myserver.tld` 替换为真正的 STUN 服务器地址。
 
@@ -74,11 +74,11 @@ async function start() {
 
 想要互相对话的两个端点中的任何一个都可以调用上面显示的 `start()` 函数。谁先调用并不重要，只需进行协商即可。
 
-这与旧版 WebRTC 连接建立代码没有明显区别。用户的摄像头和麦克风可通过调用 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 获得。然后，通过向 {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} 传入 {{domxref("RTCPeerConnection")}}，将得到的媒体轨道添加到 {{domxref("RTCPeerConnection")}} 中。最后，`selfVideo` 常量指示的自视图 {{HTMLElement("video")}} 元素的媒体源被设置为摄像头和麦克风流，这样本地用户就能看到对方看到的内容。
+这与旧的 WebRTC 连接建立代码没有显著区别。通过调用 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 获取用户的摄像头和麦克风。然后，将得到的媒体轨道通过传入 {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} 添加到 {{domxref("RTCPeerConnection")}} 中。最后，将由 `selfVideo` 常量指示的自视图 {{HTMLElement("video")}} 元素的媒体源设置为摄像头和麦克风流，这样本地用户就能看到对方看到的内容。
 
 ### 处理传入的轨道
 
-接下来，我们需要为 {{domxref("RTCPeerConnection.track_event", "track")}} 事件设置一个处理程序，以处理该对等连接协商接收的入站视频和音频轨迹。为此，我们实施了 {{domxref("RTCPeerConnection")}} 的 {{domxref("RTCPeerConnection.track_event", "ontrack")}} 事件处理程序。
+接下来，我们需要为 {{domxref("RTCPeerConnection.track_event", "track")}} 事件设置一个处理程序，以处理该对等连接协商接收的入站视频和音频轨迹。为此，我们实现了 {{domxref("RTCPeerConnection")}} 的 {{domxref("RTCPeerConnection.track_event", "ontrack")}} 事件处理程序。
 
 ```js
 pc.ontrack = ({ track, streams }) => {
@@ -91,11 +91,11 @@ pc.ontrack = ({ track, streams }) => {
 };
 ```
 
-当发生 `track` 事件时，将执行该处理程序。使用 [destructuring](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) 可以提取 {{domxref("RTCTrackEvent")}} 的 {{domxref("RTCTrackEvent.track", "track")}} 和 {{domxref("RTCTrackEvent.streams", "streams")}} 属性。前者是接收到的视频轨或音频轨。后者是{{domxref("MediaStream")}}对象的数组，每个对象代表一个包含该音轨的流（在极少数情况下，一个音轨可能同时属于多个流）。在我们的例子中，这将始终包含一个流，位于 0 号索引，因为我们之前在 `addTrack()` 中传递了一个流。
+当发生 `track` 事件时，将执行该处理程序。使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)可以提取 {{domxref("RTCTrackEvent")}} 的 {{domxref("RTCTrackEvent.track", "track")}} 和 {{domxref("RTCTrackEvent.streams", "streams")}} 属性。前者是接收到的视频轨或音频轨。后者是一个 {{domxref("MediaStream")}} 对象数组，每个对象代表一个包含该音轨的流（在极少数情况下，一个音轨可能同时属于多个流）。在我们的例子中，这将始终包含一个流，位于 0 号索引，因为我们之前在 `addTrack()` 中传递了一个流。
 
 我们为轨道添加一个取消静音事件处理程序，因为轨道一旦开始接收数据包，就会取消静音。我们将接收代码的其余部分放在这里。
 
-如果我们已经有来自远程对等点的视频（如果远程视图的 `<video>` 元素的 {{domxref("HTMLMediaElement.srcObject", "srcObject")}} 属性已经有一个值，我们就可以看到），我们就什么也不做。否则，我们会将 `srcObject` 设置为 `streams` 数组中索引为 0 的流。
+如果我们已经从远程对等方接收到视频（我们可以通过远程视图的 `<video>` 元素的 {{domxref("HTMLMediaElement.srcObject", "srcObject")}} 属性已经有值来判断），我们不做任何操作。否则，我们将 `srcObject` 设置为 `streams` 数组中索引 0 处的流。
 
 ### 完美协商的逻辑
 
@@ -121,15 +121,15 @@ pc.onnegotiationneeded = async () => {
 };
 ```
 
-请注意，不带参数的 `setLocalDescription()` 会根据当前的 {{domxref("RTCPeerConnection.signalingState", "signalingState")}} 自动创建和设置适当的描述。所设置的描述要么是对远程对等方最新邀约的回应，要么是一个新创建的邀约（如果没有正在进行的协商）。在这里，它将始终是一个 `offer`，因为需要协商的事件只在 `stable` 状态下触发。
+请注意，不带参数的 `setLocalDescription()` 会根据当前的 {{domxref("RTCPeerConnection.signalingState", "signalingState")}} 自动创建和设置适当的描述。所设置的描述是对远程对等方最新邀约的回应，*或*是一个新创建的邀约（如果没有正在进行的协商）。在这里，它将始终是一个 `offer`，因为需要协商的事件只在 `stable` 状态下触发。
 
-我们将布尔变量 `makingOffer` 设为 `true`，表示我们正在准备邀约。为了避免竞赛，我们稍后将使用该值而不是信令状态来确定是否正在处理邀约，因为{{domxref("RTCPeerConnection.signalingState", "signalingState")}}的值是异步变化的，会带来显眼的机会。
+我们将布尔变量 `makingOffer` 设为 `true`，表示我们正在准备邀约。为了避免竞态条件，我们稍后将使用该值而不是信令状态来确定是否正在处理邀约，因为 {{domxref("RTCPeerConnection.signalingState", "signalingState")}} 的值是异步变化的，这引入了产生干扰（glare）的机会。
 
-一旦邀约创建、设置和发送完成（或发生错误），`makingOffer` 就会被设回`false`。
+一旦邀约创建、设置和发送完成（或发生错误），`makingOffer` 就会被设回 `false`。
 
 #### 处理传入的 ICE 候选者
 
-接下来，我们需要处理“RTCPeerConnection”事件 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}，这是本地 ICE 层向我们传递候选对象的方式，以便通过信令信道将候选对象传送给远程对等设备。
+接下来，我们需要处理 `RTCPeerConnection` 事件 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}，这是本地 ICE 层如何将候选者传递给我们，以便通过信令通道传递给远程对等方的方式。
 
 ```js
 pc.onicecandidate = ({ candidate }) => signaler.send({ candidate });
@@ -176,13 +176,13 @@ signaler.onmessage = async ({ data: { description, candidate } }) => {
 };
 ```
 
-在通过 `onmessage` 事件处理程序接收到来自 `SignalingChannel` 的传入消息时，会对接收到的 JSON 对象进行重组，以获得其中的 `description` 或 `candidate`。如果传入的消息有 `description`，那么它要么是对方发出的邀约，要么是对方发出的答复。
+在通过 `onmessage` 事件处理程序接收到来自 `SignalingChannel` 的传入消息时，会对接收到的 JSON 对象进行解构，以获得其中的 `description` 或 `candidate`。如果传入的消息有 `description`，那么它要么是对方发出的邀约，要么是对方发出的答复。
 
-另一方面，如果报文有 `candidate`，则它是作为 [trickle ICE](/zh-CN/docs/Web/API/RTCPeerConnection/canTrickleIceCandidates) 的一部分从远程对等设备接收的 ICE 候选。通过将候选对象传入 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}，候选对象将被发送到本地 ICE 层。
+另一方面，如果消息中包含一个 `candidate` 字段，那么它就是作为[渐进式 ICE](/zh-CN/docs/Web/API/RTCPeerConnection/canTrickleIceCandidates) 的一部分，从远程对等方接收到的 ICE 候选信息。这个候选项将通过调用 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 方法传递给本地的 ICE 处理层。
 
-##### 在收到说明时
+##### 在收到描述时
 
-如果我们收到了 `描述`，我们就会准备对收到的邀约或答复做出回应。首先，我们要检查是否处于可以接受邀约的状态。如果连接的信令状态不是“稳定”，或者连接的我们这一端已经开始发出自己的邀约，那么我们就需要注意邀约碰撞。
+如果我们收到了 `description`，我们就会准备对收到的邀约或答复做出回应。首先，我们要检查是否处于可以接受邀约的状态。如果连接的信令状态不是 `stable`，或者连接的我们这一端已经开始发出自己的邀约，那么我们就需要注意邀约冲突。
 
 如果我方是无礼的对等方，并且正在接收一个碰撞邀约，我们将不设置描述而返回，并将 `ignoreOffer` 设置为 `true`，以确保我们也忽略对方可能在属于该邀约的信令信道上发送给我们的所有候选信息。这样做可以避免错误噪声，因为我们从未将此邀约通知我方。
 
