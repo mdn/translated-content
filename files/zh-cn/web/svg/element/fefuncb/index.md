@@ -27,14 +27,14 @@ l10n:
 
 ## 参见
 
-- [SVG 滤镜属性](/zh-CN/docs/Web/SVG/Attribute#滤镜属性)
+- [SVG 滤镜原语属性](/zh-CN/docs/Web/SVG/Attribute#滤镜属性)
 - {{SVGAttr('flood-color')}} 属性
 - {{SVGAttr('flood-opacity')}} 属性
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}
 - {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feFuncA")}}
 - {{SVGElement("feFuncR")}}
-- {{SVGElement("feFuncB")}}
 - {{SVGElement("feFuncG")}}
 - [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorial/Filter_effects)
