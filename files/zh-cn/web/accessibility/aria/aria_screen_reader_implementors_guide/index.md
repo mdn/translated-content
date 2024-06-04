@@ -1,5 +1,5 @@
 ---
-title: ARIA 屏幕阅读器实施指南
+title: ARIA 屏幕阅读器实现指南
 slug: Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
