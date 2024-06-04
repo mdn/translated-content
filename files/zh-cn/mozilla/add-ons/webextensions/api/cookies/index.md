@@ -11,14 +11,14 @@ l10n:
 
 ## 权限
 
-要使用此 API，扩展必须在其 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中指定“cookies” [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)，以及针对希望访问 cookie 的任何站点的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)。扩展可以读取或写入任何可以被与主机权限匹配的 URL 读取或写入的 cookie。例如：
+要使用此 API，扩展必须在其 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中指定“cookies” [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)，以及针对希望访问 cookie 的任何站点的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。扩展可以读取或写入任何可以被与主机权限匹配的 URL 读取或写入的 cookie。例如：
 
 - `http://*.example.com/`
 
   - : 拥有此主机权限的扩展可以：
 
-    - 读取任何路径下 `www.example.com` 的非安全 cookie。
-    - 写入任何路径下 `www.example.com` 的安全或非安全 cookie。
+    - 读取 `www.example.com` 的任何路径下的非安全 cookie。
+    - 在 `www.example.com` 的任何路径下写入安全或非安全 cookie。
 
     它*不能*：
 
@@ -28,10 +28,10 @@ l10n:
 
   - : 拥有此主机权限的扩展可以：
 
-    - 读取任何路径下 `www.example.com` 的非安全 cookie。
-    - 读取任何路径下 `.example.com` 的非安全 cookie。
-    - 写入任何路径下 `www.example.com` 的安全或非安全 cookie。
-    - 写入任何路径下 `.example.com` 的安全或非安全 cookie。
+    - 读取 `www.example.com` 的任何路径下的非安全 cookie。
+    - 读取 `.example.com` 的任何路径下的非安全 cookie。
+    - 在 `www.example.com` 的任何路径下写入安全或非安全 cookie。
+    - 在 `.example.com` 的任何路径下写入安全或非安全 cookie。
 
     它*不能*：
 
@@ -51,15 +51,15 @@ l10n:
 1. 你访问 `a-shopping-site.com`，该网站使用 `ad-tracker.com` 在网络上投放广告。`ad-tracker.com` 设置了一个与 `ad-tracker.com` 域相关联的 Cookie。当你在 `a-shopping-site.com` 上时，`ad-tracker.com` 会接收到你浏览的产品信息。
 2. 现在你访问了 `a-news-site.com`，该网站也使用 `ad-tracker.com` 投放广告。`ad-tracker.com` 读取其 Cookie，并利用从 `a-shopping-site.com` 收集的信息来决定向你显示哪些广告。
 
-Firefox 包含防止跟踪的功能。这些功能分隔 Cookie，以使跟踪器无法将访问的网站进行关联。因此，在上述示例中，当访问 `a-shopping-site.com` 时，`ad-tracker.com` 无法看到在 `a-news-site.com` 上创建的 Cookie。这种保护的首次实现是第一方隔离，现在正在被[动态分区](/zh-CN/docs/Web/Privacy/State_Partitioning#dynamic_partitioning)取代。
+Firefox 包含拦截跟踪的特性。这些特性会分隔 cookie，以使跟踪器无法关联所访问的网站。因此，在上述示例中，当访问 `a-shopping-site.com` 时，`ad-tracker.com` 无法看到在 `a-news-site.com` 上创建的 cookie。这种保护的首次实现是第一方隔离，现在正在被[动态分区](/zh-CN/docs/Web/Privacy/State_Partitioning#动态分区)取代。
 
-> **备注：** 第一方隔离和动态分区不会同时生效。如果用户或扩展程序启用了第一方隔离，它将优先于动态分区。然而，当私密浏览使用动态分区时，普通浏览可能不会分隔 Cookie。有关详细信息，请参阅 [Firefox 中分区的状态](/zh-CN/docs/Web/Privacy/State_Partitioning#status_of_partitioning_in_firefox)。
+> **备注：** 第一方隔离和动态分区不会同时生效。如果用户或扩展程序启用了第一方隔离，它将优先于动态分区。然而，当私密浏览使用动态分区时，普通浏览可能不会分隔 cookie。有关详细信息，请参阅 [Firefox 中分区的状态](/zh-CN/docs/Web/Privacy/State_Partitioning#firefox_中分区的状态)。
 
 ### 存储分区
 
-在使用[动态分区](/zh-CN/docs/Web/Privacy/State_Partitioning#dynamic_partitioning)时，Firefox 通过顶级站点分隔 JavaScript API 可访问的存储，同时为了满足常见用例而提供适当的对未分隔存储的访问。此功能正在逐步推出。有关实施详细信息，请参阅 [Firefox 中分区的状态](/zh-CN/docs/Web/Privacy/State_Partitioning#status_of_partitioning_in_firefox)。
+在使用[动态分区](/zh-CN/docs/Web/Privacy/State_Partitioning#动态分区)时，Firefox 通过顶级站点分隔 JavaScript API 可访问的存储，同时为了满足常见用例而提供适当的对未分隔存储的访问。此功能正在逐步推出。有关实施详细信息，请参阅 [Firefox 中分区的状态](/zh-CN/docs/Web/Privacy/State_Partitioning#firefox_中分区的状态)。
 
-存储分区的键由顶级 {{glossary("Site","网站")}} 的 URL 构成，当动态分区处于活动状态时，键值通过 cookies API 中的 `partitionKey.topLevelSite` 属性获得，例如，`partitionKey: {topLevelSite: "http://site"}`。
+存储分区的键由顶级{{glossary("Site","网站")}}的 URL 构成，当动态分区处于激活状态时，键值通过 cookies API 中的 `partitionKey.topLevelSite` 属性获得，例如，`partitionKey: {topLevelSite: "http://site"}`。
 
 通常，顶级文档位于未分隔存储中，而第三方 iframe 位于分隔存储中。如果无法确定分区键，则使用默认值（未分隔存储）。例如，虽然所有 HTTP(S) 站点都可以用作分区键，但 `moz-extension:-` URL 不能。因此，Firefox 扩展文档中的 iframe 不使用分隔存储。
 
