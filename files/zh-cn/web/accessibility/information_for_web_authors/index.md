@@ -19,7 +19,7 @@ l10n:
 ## 如何操作
 
 - [前端开发人员的无障碍性](https://accessibility.digital.gov/front-end/getting-started/)
-  - : 美国总务署技术转型服务提供的简要指南，涵盖了几个无障碍性主题，并提供了与 WCAG 相关的链接。
+  - : 美国总务署技术转型服务提供的简要指南，涵盖了几个无障碍性主题，并提供了指南视频和相关 WCAG 参考资料的链接。
 - [无障碍网页编写](https://www.ibm.com/able/requirements/requirements/)
   - : IBM 公开了他们需要满足的无障碍性要求，并提供了交互式的界面。
 
@@ -44,4 +44,4 @@ l10n:
 
 - [AccessLint](https://www.accesslint.com/)
 
-尽管最好使用真实用户测试你的 Web 应用程序，但你可以模拟色盲、低视力、低对比度和缩放。你应该始终在没有鼠标和触摸的情况下测试你的网站以测试键盘导航。你还可以尝试使用语音命令访问你的网站。尝试禁用鼠标并使用浏览器扩展，如 [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla)。
+尽管最好使用真实用户测试你的 Web 应用程序，但你可以模拟色盲、低视力、低对比度和缩放。你应该始终在没有鼠标和触摸屏的情况下测试你的网站以测试键盘导航。你还可以尝试使用语音命令访问你的网站。尝试禁用鼠标并使用浏览器扩展，如 [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla)。
