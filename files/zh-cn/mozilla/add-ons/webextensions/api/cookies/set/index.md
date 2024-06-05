@@ -7,17 +7,17 @@ l10n:
 
 {{AddonSidebar}}
 
-{{WebExtAPIRef("cookies")}} API 的 **`set()`** 方法设置包含指定 Cookie 数据的 Cookie。此方法相当于在请求给定 URL 时发出 HTTP `Set-Cookie` 头。
+{{WebExtAPIRef("cookies")}} API 的 **`set()`** 方法设置包含指定 cookie 数据的 cookie。此方法相当于在请求给定 URL 时发出 HTTP `Set-cookie` 头。
 
 只有在你的 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中包含“cookies” [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)以及给定 URL 的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)时，调用才会成功。给定的 URL 也需要必要的权限来创建具有给定参数的 cookie。
 
-这是一个异步函数，返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 
 ```js-nolint
 let setting = browser.cookies.set(
-  details, // object
+  details, // 对象
 );
 ```
 
@@ -25,38 +25,38 @@ let setting = browser.cookies.set(
 
 - `details`
 
-  - : 一个包含你想要设置的 Cookie 详细信息的 `object`。它可以包含以下属性：
+  - : 一个包含你想要设置的 cookie 详细信息的 `object`。它可以包含以下属性：
 
     - `domain` {{optional_inline}}
-      - : 一个表示 Cookie 域的 `string`。如果省略，Cookie 将成为主机专用 Cookie。
+      - : 一个表示 cookie 域的 `string`。如果省略，cookie 将成为主机专用 cookie。
     - `expirationDate` {{optional_inline}}
-      - : 一个表示 Cookie 过期日期的 `number`，以 UNIX 纪元以来的秒数表示。如果省略，Cookie 将成为会话 Cookie。
+      - : 一个表示 cookie 过期日期的 `number`，以 UNIX 纪元以来的秒数表示。如果省略，cookie 将成为会话 cookie。
     - `firstPartyDomain` {{optional_inline}}
-      - : 一个表示 Cookie 将关联的第一方域的 `string`。如果浏览器启用了第一方隔离，则必须提供此属性。参见[第一方隔离](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#第一方隔离)。
+      - : 一个表示 cookie 将关联的第一方域的 `string`。如果浏览器启用了第一方隔离，则必须提供此属性。参见[第一方隔离](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#第一方隔离)。
     - `httpOnly` {{optional_inline}}
-      - : 一个 `boolean`，指定是否应将 Cookie 标记为 HttpOnly（`true`），或不标记（`false`）。如果省略，默认为 false。
+      - : 一个 `boolean`，指定是否应将 cookie 标记为 HttpOnly（`true`），或不标记（`false`）。如果省略，默认为 false。
     - `name` {{optional_inline}}
-      - : 一个表示 Cookie 名称的 `string`。如果省略，默认为空。
+      - : 一个表示 cookie 名称的 `string`。如果省略，默认为空。
     - `partitionKey` {{optional_inline}}
-      - : 一个表示存储分区的 `object`，用于在分区存储中设置 Cookie。包含此对象以在分区存储中设置 Cookie。该对象包含：
+      - : 一个表示存储分区的 `object`，用于在分区存储中设置 cookie。包含此对象以在分区存储中设置 cookie。该对象包含：
         - `topLevelSite` {{optional_inline}}
-          - : 一个表示包含 Cookie 的顶级站点存储分区的第一方 URL 的 `string`。
+          - : 一个表示包含 cookie 的顶级站点存储分区的第一方 URL 的 `string`。
     - `path` {{optional_inline}}
-      - : 一个表示 Cookie 路径的 `string`。如果省略，默认为 URL 参数的路径部分。
+      - : 一个表示 cookie 路径的 `string`。如果省略，默认为 URL 参数的路径部分。
     - `sameSite` {{optional_inline}}
-      - : 一个{{WebExtAPIRef("cookies.SameSiteStatus")}}值，指示 Cookie 的 SameSite 状态。如果省略，默认为 0，即"no_restriction"。
+      - : 一个{{WebExtAPIRef("cookies.SameSiteStatus")}}值，指示 cookie 的 SameSite 状态。如果省略，默认为 0，即"no_restriction"。
     - `secure` {{optional_inline}}
-      - : 一个 `boolean`，指定是否应将 Cookie 标记为安全（`true`），或不标记（`false`）。如果省略，默认为 false。
+      - : 一个 `boolean`，指定是否应将 cookie 标记为安全（`true`），或不标记（`false`）。如果省略，默认为 false。
     - `storeId` {{optional_inline}}
-      - : 一个表示要在其中设置 Cookie 的 Cookie 存储区 ID 的 `string`。如果省略，默认情况下 Cookie 设置在当前执行上下文的 Cookie 存储区中。
+      - : 一个表示要在其中设置 cookie 的 cookie 存储区 ID 的 `string`。如果省略，默认情况下 cookie 设置在当前执行上下文的 cookie 存储区中。
     - `url`
-      - : 一个表示与 Cookie 关联的请求 URI 的 `string`。此值可以影响创建的 Cookie 的默认域和值路径。如果 manifest 文件中未指定此 URL 的主机权限，则方法调用将失败。
+      - : 一个表示与 cookie 关联的请求 URI 的 `string`。此值可以影响创建的 cookie 的默认域和值路径。如果清单（manifest）文件中未指定此 URL 的主机权限，则方法调用将失败。
     - `value` {{optional_inline}}
-      - : 一个表示 Cookie 值的 `string`。如果省略，默认为空。
+      - : 一个表示 cookie 值的 `string`。如果省略，默认为空。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，它将被一个包含已设置 Cookie 详细信息的 {{WebExtAPIRef('cookies.Cookie')}} 对象兑现。如果由于任何原因调用失败，Promise 将会被一个错误消息拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，它将被一个包含已设置 cookie 详细信息的 {{WebExtAPIRef('cookies.Cookie')}} 对象兑现。如果由于任何原因调用失败，Promise 将会被一个错误消息拒绝。
 
 ## 浏览器兼容性
 
@@ -64,7 +64,7 @@ let setting = browser.cookies.set(
 
 ## 示例
 
-此示例为当前活动标签页托管的文档设置一个 Cookie：
+此示例为当前活动标签页托管的文档设置一个 cookie：
 
 ```js
 let getActive = browser.tabs.query({ active: true, currentWindow: true });
