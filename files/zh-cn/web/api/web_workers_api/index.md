@@ -37,17 +37,20 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
 
 所有 worker 和主线程（来自 `WindowOrWorkerGlobalScope`）共有的一些函数（子集）是：
 
-- {{domxref("atob", "atob()")}}
-- {{domxref("btoa", "btoa()")}}
-- {{domxref("clearInterval", "clearInterval()")}}
+- {{domxref("WorkerGlobalScope.atob()", "atob()")}}
+- {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
+- {{domxref("clearInterval()")}}
 - {{domxref("clearTimeout()")}}
-- {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}
+- {{domxref("createImageBitmap()")}}
+- {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
+- {{domxref("fetch()")}}
 - {{domxref("queueMicrotask()")}}
+- {{domxref("reportError()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("setTimeout()")}}
 - {{domxref("structuredClone()")}}
-- {{domxref("window.requestAnimationFrame")}}（仅专用 worker）
-- {{domxref("window.cancelAnimationFrame")}}（仅专用 worker）
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}}（仅专用 worker）
+- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()", "cancelAnimationFrame()")}}（仅专用 worker）
 
 以下函数**仅**对 worker 可用：
 

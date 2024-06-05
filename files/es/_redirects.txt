@@ -1614,8 +1614,8 @@
 /es/docs/Web/API/Coordinates	/es/docs/Web/API/GeolocationCoordinates
 /es/docs/Web/API/Coordinates/latitude	/es/docs/Web/API/GeolocationCoordinates/latitude
 /es/docs/Web/API/DOMString	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
-/es/docs/Web/API/DOMString/Binary	/es/docs/Web/API/btoa
-/es/docs/Web/API/DOMString/Cadenas_binarias	/es/docs/Web/API/btoa
+/es/docs/Web/API/DOMString/Binary	/es/docs/Web/API/Window/btoa
+/es/docs/Web/API/DOMString/Cadenas_binarias	/es/docs/Web/API/Window/btoa
 /es/docs/Web/API/Document/abrir	/es/docs/Web/API/Document/open
 /es/docs/Web/API/Document/async	/es/docs/Web/API/XMLDocument
 /es/docs/Web/API/Document/crearAtributo	/es/docs/Web/API/Document/createAttribute
@@ -1723,14 +1723,14 @@
 /es/docs/Web/API/Window.setTimeout	/es/docs/Web/API/setTimeout
 /es/docs/Web/API/Window/applicationCache	/es/docs/orphaned/Web/API/Window/applicationCache
 /es/docs/Web/API/Window/dialogArguments	/es/docs/orphaned/Web/API/Window/dialogArguments
-/es/docs/Web/API/WindowBase64.atob	/es/docs/Web/API/atob
+/es/docs/Web/API/WindowBase64.atob	/es/docs/Web/API/Window/atob
 /es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando	/es/docs/Glossary/Base64
-/es/docs/Web/API/WindowBase64/atob	/es/docs/Web/API/atob
+/es/docs/Web/API/WindowBase64/atob	/es/docs/Web/API/Window/atob
 /es/docs/Web/API/WindowEventHandlers	/es/docs/Web/API/Window#eventos
 /es/docs/Web/API/WindowEventHandlers/onbeforeunload	/es/docs/Web/API/Window/beforeunload_event
 /es/docs/Web/API/WindowEventHandlers/onhashchange	/es/docs/Web/API/Window/hashchange_event
 /es/docs/Web/API/WindowEventHandlers/onpopstate	/es/docs/Web/API/Window/popstate_event
-/es/docs/Web/API/WindowOrWorkerGlobalScope/atob	/es/docs/Web/API/atob
+/es/docs/Web/API/WindowOrWorkerGlobalScope/atob	/es/docs/Web/API/Window/atob
 /es/docs/Web/API/WindowOrWorkerGlobalScope/caches	/es/docs/Web/API/Window/caches
 /es/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/es/docs/Web/API/clearInterval
 /es/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/es/docs/Web/API/clearTimeout
@@ -1748,6 +1748,8 @@
 /es/docs/Web/API/XMLHttpRequest/FormData	/es/docs/Web/API/FormData
 /es/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /es/docs/Web/API/XMLHttpRequest/onreadystatechange	/es/docs/Web/API/XMLHttpRequest/readystatechange_event
+/es/docs/Web/API/atob	/es/docs/Web/API/Window/atob
+/es/docs/Web/API/btoa	/es/docs/Web/API/Window/btoa
 /es/docs/Web/API/caches	/es/docs/Web/API/Window/caches
 /es/docs/Web/API/console/assert	/es/docs/Web/API/console/assert_static
 /es/docs/Web/API/console/count	/es/docs/Web/API/console/count_static

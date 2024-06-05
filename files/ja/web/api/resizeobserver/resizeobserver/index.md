@@ -3,7 +3,7 @@ title: "ResizeObserver: ResizeObserver() コンストラクター"
 short-title: ResizeObserver()
 slug: Web/API/ResizeObserver/ResizeObserver
 l10n:
-  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Resize Observer API")}}
