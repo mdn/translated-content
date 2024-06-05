@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-获取给定其 cookie store ID 的上下文身份的信息。
+获取给定其 cookie 存储 ID 的上下文身份的信息。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
