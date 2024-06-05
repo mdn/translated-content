@@ -11,7 +11,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">类型</th>
-      <td><code>字符串（String）</code></td>
+      <td>字符串（<code>String</code>）</td>
     </tr>
     <tr>
       <th scope="row">是否必须</th>
@@ -28,7 +28,7 @@ l10n:
   </tbody>
 </table>
 
-扩展的作者，用于显示在浏览器的用户界面中。如果提供了 [developer](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) 键，并包含了“name”属性，则它将会覆盖作者键。无法指定多个作者。
+扩展的作者，用于显示在浏览器的用户界面中。如果提供了 [developer](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) 键，并包含了“name”属性，则它将会覆盖 author 键。无法指定多个作者。
 
 这是一个[可本地化属性](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Internationalization#国际化_manifest.json)。
 
