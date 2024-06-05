@@ -71,7 +71,7 @@ let createContext = browser.contextualIdentities.create(
 
 ## 示例
 
-此示例创建一个新的上下文身份并记录其 cookie store ID：
+此示例创建一个新的上下文身份并记录其 cookie 存储 ID：
 
 ```js
 function onCreated(context) {
