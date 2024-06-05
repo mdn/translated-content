@@ -3,7 +3,7 @@ title: 위치
 slug: Web/SVG/Tutorial/Positions
 ---
 
-{{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
 
 ## 그리드
 

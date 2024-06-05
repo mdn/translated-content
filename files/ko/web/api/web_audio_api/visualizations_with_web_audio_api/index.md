@@ -3,6 +3,8 @@ title: Web Audio API로 시각화하기
 slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 ---
 
+{{DefaultAPISidebar("Web Audio API")}}
+
 Web Audio API의 가장 흥미로운 기능 중 하나는 주파수, 파형, 그리고 다른 데이터들을 오디오 소스로부터 추출할 수 있는 능력인데, 이는 그리고 나서 시각화하는 데 사용될 수 있습니다. 이 글은 어떻게 시각화를 하는지 설명하고, 기초적인 사용 방법을 두 개 제공합니다.
 
 > **참고:** 모든 코드의 작동 예제를 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 데모에서 찾을 수 있습니다.

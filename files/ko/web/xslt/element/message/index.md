@@ -3,7 +3,7 @@ title: message
 slug: Web/XSLT/Element/message
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:message>` 요소는 (NS에서 JavaScript 콘솔에) 메시지를 출력하고 선택에 따라 스타일시트 실행을 끝냅니다. 디버깅에 유용할 수 있습니다.
 

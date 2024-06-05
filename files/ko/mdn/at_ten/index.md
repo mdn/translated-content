@@ -3,6 +3,8 @@ title: MDN at 10
 slug: MDN/At_ten
 ---
 
+{{MDNSidebar}}
+
 당신의 웹을 문서화 하는 것의 10주년을 기념하세요.
 
 ## MDN의 역사

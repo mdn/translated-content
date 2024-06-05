@@ -3,6 +3,8 @@ title: 웹 비디오 코덱 가이드
 slug: Web/Media/Formats/Video_codecs
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
+
 압축되지 않은 비디오 데이터는 그 크기가 엄청나기 때문에, 저장하거나 네트워크를 통해 전송하기 위해서는 아주 작게 압축해야 합니다. 압축되지 않은 비디오를 저장하는 과정을 상상해 봅시다:
 
 - HD(1920x1080) 풀 컬러(픽셀 당 4바이트) 비디오의 한 프레임은 8,294,400 입니다.

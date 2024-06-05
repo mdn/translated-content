@@ -3,6 +3,8 @@ title: 도형 합성
 slug: Web/API/Canvas_API/Tutorial/Compositing
 ---
 
+{{DefaultAPISidebar("Canvas API")}}
+
 이전 페이지들에서 나온 모든 예제에서, 새로 그리는 도형은 언제나 이미 그려진 도형의 위에 그려졌습니다. 대부분의 상황에서는 이렇게 하는 것이 적절하지만, 도형을 합성하기 위한 순서를 제한하게 되는데, `globalCompositeOperation` 속성을 설정함으로써 이러한 상태를 바꿀 수 있습니다.
 
 ## `globalCompositeOperation`

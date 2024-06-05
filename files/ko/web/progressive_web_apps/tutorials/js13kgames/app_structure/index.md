@@ -3,7 +3,7 @@ title: 프로그레시브 웹 앱 구조
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 ---
 
-{{PreviousMenuNext("Web/Apps/Progressive/Introduction", "Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive")}}
+{{PWASidebar}}{{PreviousMenuNext("Web/Apps/Progressive/Introduction", "Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive")}}
 
 이제 우리는 PWA의 원리에 대해 알고 있습니다. 실제 앱의 권장 구조에 대해 살펴봅시다. 우리는 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 어플리케이션을 왜 그렇게 구축하였는지, 그리고 무슨 이점이 있는지 분석하는 것으로 시작할 것입니다.
 

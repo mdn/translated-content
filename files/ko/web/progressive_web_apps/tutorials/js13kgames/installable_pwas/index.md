@@ -3,7 +3,7 @@ title: PWA를 설치가능하게 만드는 방법
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 ---
 
-{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
+{{PWASidebar}}{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
 
 이전 문서에서는 [service worker](/ko/docs/Web/API/Service_Worker_API)의 도움으로 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 을 오프라인에서 동작하는 방법에 대해 알아보았습니다. 그런데 우리는 더 나아가 모바일 브라우저를 지원하는 웹 앱을 네이티브 앱처럼 설치할 수 있게 할수도 있습니다. 이 문서에서는 웹 manifest를 사용해 홈 화면에 추가라고 불리는 기능을 구현하는 방법에 대해 설명합니다.
 
