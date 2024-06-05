@@ -15,7 +15,7 @@ l10n:
 
 - cookieStoreId {{optional_inline}}
 
-  - : `string`。此属性仅适用于 cookie 和 indexedDB 项。删除仅限于属于特定 [cookie store](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore) 的项目，如通过 ID 指定的。有关更多信息，请参见[使用上下文身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
+  - : `string`。此属性仅适用于 cookie 和 indexedDB 项。删除仅限于属于特定 [cookie 存储](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore)的项目，如通过 ID 指定的。有关更多信息，请参见[使用上下文身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 
     > **备注：** 在 Firefox Nightly 中，通过 `cookieStoreId` 删除 localStorage 项目也是支持的。
 
@@ -23,7 +23,7 @@ l10n:
 
   - : `string` 数组。此属性适用于 cookie、indexedDB、本地存储和 service worker 注册项。仅删除与这些主机名关联的 cookie、indexedDB、本地存储和 service worker 注册项。
 
-    这里必须传递一个主机名，而不是协议（例如，“google.com”而不是“https\://google.com”）。你可以使用 [`URL`](/zh-CN/docs/Web/API/URL) 接口来解析原始 URL 并检索主机名。与给定主机名的子域关联的项目不会被删除：你必须显式列出子域。
+    这里必须传递一个主机名，而不是协议（例如，`"google.com"` 而不是 `"https://google.com"`）。你可以使用 [`URL`](/zh-CN/docs/Web/API/URL) 接口来解析原始 URL 并检索主机名。与给定主机名的子域关联的项目不会被删除：你必须显式列出子域。
 
 - `originTypes` {{optional_inline}}
 
