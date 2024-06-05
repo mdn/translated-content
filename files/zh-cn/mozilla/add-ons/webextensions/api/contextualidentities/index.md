@@ -37,7 +37,7 @@ l10n:
 - {{WebExtAPIRef("contextualIdentities.create()")}}
   - : 创建一个新的上下文身份。
 - {{WebExtAPIRef("contextualIdentities.get()")}}
-  - : 根据其 cookie store ID 检索上下文身份。
+  - : 根据其 cookie 存储 ID 检索上下文身份。
 - {{WebExtAPIRef("contextualIdentities.move()")}}
   - : 将一个或多个上下文身份移动到上下文身份列表中。
 - {{WebExtAPIRef("contextualIdentities.query()")}}
