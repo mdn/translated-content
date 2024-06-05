@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`if...else`** 语句会在指定的条件为{{Glossary("truthy", "真")}}时执行一个语句。如果条件为 {{Glossary("falsy", "假")}}，则会执行可选的 `else` 子句中的另一个语句。
+**`if...else`** 语句会在指定的条件为{{Glossary("truthy", "真")}}时执行一个语句。如果条件为{{Glossary("falsy", "假")}}，则会执行可选的 `else` 子句中的另一个语句。
 
 {{EmbedInteractiveExample("pages/js/statement-ifelse.html")}}
 
@@ -17,7 +17,7 @@ l10n:
 if (condition)
   statement1
 
-// With an else clause
+// 带有 else 子句
 if (condition)
   statement1
 else
@@ -32,8 +32,6 @@ else
   - : 如果 `condition` 为{{Glossary("falsy", "假")}}且 `else` 从句存在时执行的语句。可为任意语句，包括块语句和嵌套的 `if` 语句。
 
 ## 描述
-
-多层 `if...else` 语句可使用 `else if` 从句。注意：在 Javascript 中没有 `elseif` （一个单词）关键字。
 
 可以嵌套多个 `if...else` 语句以创建 `else if` 子句。请注意，JavaScript 中没有 `elseif`（单个词）关键字。
 
@@ -63,7 +61,7 @@ else
 // …
 ```
 
-要在一个从句中执行多条语句，可使用语句块（`{ /* ... */ }`）。通常情况下，一直使用语句块是个好习惯，特别是在涉及嵌套`if`语句的代码中：
+要在一个子句中执行多条语句，可使用块语句（`{ /* ... */ }`）来组织这些语句。
 
 ```js-nolint
 if (condition) {
@@ -85,7 +83,7 @@ function checkValue(a, b) {
 }
 ```
 
-这段代码看上去没什么问题，但是，执行 `checkValue(1, 3)` 会输出“a 不是 1”。这是因为在[空悬 else](https://en.wikipedia.org/wiki/Dangling_else) 的情况下，`else` 子句会连接到最近的 `if` 子句。因此，上述代码在缩进适当的情况下看起来会是这样的：
+这段代码看上去没什么问题，但是，执行 `checkValue(1, 3)` 会输出“a 不是 1”。这是因为在[悬空 else](https://en.wikipedia.org/wiki/Dangling_else) 的情况下，`else` 子句会连接到最近的 `if` 子句。因此，上述代码在缩进适当的情况下看起来会是这样的：
 
 ```js-nolint
 function checkValue(a, b) {
@@ -111,7 +109,7 @@ function checkValue(a, b) {
 }
 ```
 
-不要将原始的布尔值 `true` 和 `false` 与 {{jsxref("Boolean")}} 对象的真或假混淆。任何不是 `false`、`undefined`、`null`、`0`、`-0`、`NaN` 或空字符串（`""`）的值，以及任何对象（包括值为 `false` 的布尔对象），在用作条件时都被视为 {{Glossary("truthy", "真")}}。例如：
+不要将原始的布尔值 `true` 和 `false` 与 {{jsxref("Boolean")}} 对象的真或假混淆。任何不是 `false`、`undefined`、`null`、`0`、`-0`、`NaN` 或空字符串（`""`）的值，以及任何对象（包括值为 `false` 的布尔对象），在用作条件时都被视为{{Glossary("truthy", "真")}}。例如：
 
 ```js
 const b = new Boolean(false);
