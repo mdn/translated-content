@@ -3,6 +3,8 @@ title: acronym
 slug: Web/HTML/Element/acronym
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 **acromym** de acromyn=acrónimo

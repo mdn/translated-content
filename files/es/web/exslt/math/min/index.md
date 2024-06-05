@@ -3,7 +3,7 @@ title: min
 slug: Web/EXSLT/math/min
 ---
 
-{{XsltRef}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}{{XsltRef}}
 
 `math:min()` devuelve el valor mínimo de un conjunto de nodos (node-set).
 

@@ -3,7 +3,7 @@ title: difference
 slug: Web/EXSLT/set/difference
 ---
 
-{{XsltRef}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}{{XsltRef}}
 
 `set:difference()` devuelve la diferencia entre dos conjuntos de nodos. En otras palabras, devuelve un cojunto de nodos cuyos nodos están en uno de los conjuntos pero no en el otro.
 

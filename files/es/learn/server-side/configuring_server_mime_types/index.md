@@ -3,6 +3,8 @@ title: Configurar correctamente los tipos MIME del servidor
 slug: Learn/Server-side/Configuring_server_MIME_types
 ---
 
+{{LearnSidebar}}
+
 ### Introduccion
 
 Por omisión, muchos servidores web estan configurados para reportar un tipo MIME de `texto/plano` ó `aplicacion/de fuente de octeto` para tipos de contenidos desconocidos. A medida son desarrollados nuevos tipos de contenidos, los administradores de red pueden equivocarse al añadirlos a la configuración del servidor web, y esta es la principal causa de problemas para usuarios de navegadores basados en Gecko, el cual respeta los tipos MIME tal y como son reportados por los servidores y las aplicaciones web.

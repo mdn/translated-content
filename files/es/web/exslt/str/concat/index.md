@@ -3,7 +3,7 @@ title: concat
 slug: Web/EXSLT/str/concat
 ---
 
-{{XsltRef}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}{{XsltRef}}
 
 `str:concat()` devuelve una cadena que contiene todos los valores cadena de un conjunto de nodos (node-set) concatenados juntos.
 

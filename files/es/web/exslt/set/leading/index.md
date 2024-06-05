@@ -3,7 +3,7 @@ title: leading
 slug: Web/EXSLT/set/leading
 ---
 
-{{XsltRef}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}{{XsltRef}}
 
 `set:leading()` devuelve los nodos de un conjunto de nodos que viene antes del primer nodo del otro conjunto de nodos.
 

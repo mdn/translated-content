@@ -3,6 +3,8 @@ title: Web App Manifest
 slug: Web/Manifest
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+
 El manifiesto de aplicaciones web proporciona información sobre una aplicación (como nombre, autor, icono y descripción) en un documento simplificado. Su principal propósito es crear [progressive web apps](/es/docs/Web/Apps/Progressive): aplicaciones web que se pueden instalar desde la pantalla principal de un dispositivo sin necesidad de hacerlo a traves de una app store (y otras ventajas como disponibilidad offline y enviar notificaciones push cuando cambia el contenido de la aplicación.)
 
 ## Manifiesto de ejemplo

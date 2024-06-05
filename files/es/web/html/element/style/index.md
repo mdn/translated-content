@@ -3,6 +3,8 @@ title: style
 slug: Web/HTML/Element/style
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - **style** - estilo. Es el elemento encargado de indicar la información de estilo.
