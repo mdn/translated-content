@@ -18,7 +18,7 @@ l10n:
       <td>否</td>
     </tr>
     <tr>
-      <th scope="row">清单（manifest）版本</th>
+      <th scope="row">清单版本</th>
       <td>2 或更高</td>
     </tr>
     <tr>
