@@ -23,7 +23,7 @@ _没有从其父 {{domxref("Event")}} 对象继承的具体属性。_
 - {{domxref("BlobEvent.data")}} {{ReadOnlyInline}}
   - : 一个 {{domxref("Blob")}} 表示与事件有关联的数据。由于特定的 {{domxref("Blob")}} 上发生了一些事情，导致 {{domxref("EventTarget")}}上触发了事件。
 - {{domxref("BlobEvent.timecode")}} {{ReadOnlyInline}}
-  - : 一个 {{domxref("DOMHighResTimeStamp")}} 表示数据中的第一块的时间戳与由该记录器产生的第一Blob事件中的第一个块的时间标记之间的差。请注意，第一个生成的Blob事件中的 timecode 不需要为零。
+  - : 一个 {{domxref("DOMHighResTimeStamp")}} 表示数据中的第一块的时间戳与由该记录器产生的第一 Blob 事件中的第一个块的时间标记之间的差。请注意，第一个生成的 Blob 事件中的 timecode 不需要为零。
 
 ## 实例方法
 
