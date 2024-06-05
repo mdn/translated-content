@@ -1,6 +1,6 @@
 ---
-title: declarativeNetRequest.getMatchedRules
-slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getMatchedRules
+title: declarativeNetRequest.getSessionRules
+slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getSessionRules
 l10n:
   sourceCommit: c26709292444632dfbc4862f4b0b5f2adc5fff56
 ---
