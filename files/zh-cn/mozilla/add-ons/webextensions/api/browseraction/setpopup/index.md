@@ -7,13 +7,13 @@ l10n:
 
 {{AddonSidebar}}
 
-用户点击浏览器操作图标时，将会打开作为弹出窗口的 HTML 文档。没有指定特定弹出窗口的标签页将继承全局弹出窗口，该弹出窗口默认为 manifest 文件中指定的 [`default_popup`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)。
+用户点击浏览器操作图标时，将会打开作为弹出窗口的 HTML 文档。没有指定特定弹出窗口的标签页将继承全局弹出窗口，该弹出窗口默认为清单（manifest）文件中指定的 [`default_popup`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)。
 
 ## 语法
 
 ```js-nolint
 browser.browserAction.setPopup(
-  details // object
+  details // 对象
 )
 ```
 
@@ -37,7 +37,7 @@ browser.browserAction.setPopup(
 
         这可以指向扩展程序内打包的文件（例如，使用 {{WebExtAPIRef("extension.getURL")}} 创建的文件），或者是一个远程文档（例如 `https://example.org/`）。
 
-        果这里传递了一个空字符串（`""`），弹出窗口将被禁用，扩展程序将接收到 {{WebExtAPIRef("browserAction.onClicked")}} 事件。
+        如果这里传递了一个空字符串（`""`），弹出窗口将被禁用，扩展程序将接收到 {{WebExtAPIRef("browserAction.onClicked")}} 事件。
 
         如果 popup 为 null：
 
