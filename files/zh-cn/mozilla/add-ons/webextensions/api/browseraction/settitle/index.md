@@ -7,13 +7,13 @@ l10n:
 
 {{AddonSidebar}}
 
-设置浏览器操作的标题。标题会显示在浏览器操作图标的工具提示中。你可以传入一个 `tabId` 或 `windowId` 作为可选参数——如果这样做，则标题仅为指定的标签页或窗口更改。没有特定标题的标签页或窗口将继承全局标题文本，该文本默认为 manifest 文件中指定的 [`default_title`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 或 [`name`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)。
+设置浏览器操作的标题。标题会显示在浏览器操作图标的工具提示中。你可以传入一个 `tabId` 或 `windowId` 作为可选参数——如果这样做，则标题仅为指定的标签页或窗口更改。没有特定标题的标签页或窗口将继承全局标题文本，该文本默认为清单（manifest）中指定的 [`default_title`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 或 [`name`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)。
 
 ## 语法
 
 ```js-nolint
 browser.browserAction.setTitle(
-  details // object
+  details // 对象
 )
 ```
 
@@ -33,7 +33,7 @@ browser.browserAction.setTitle(
 
         - 如果指定了 `tabId`，并且该标签页设置了特定的标签页标题，则该标签页将继承其所属窗口的标题。
         - 如果指定了 `windowId`，并且该窗口设置了特定的窗口标题，则该窗口将继承全局标题。
-        - 否则，全局标题将重置为 manifest 中的标题。
+        - 否则，全局标题将重置为清单中的标题。
 
     - `tabId` {{optional_inline}}
 
