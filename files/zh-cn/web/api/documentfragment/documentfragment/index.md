@@ -1,32 +1,32 @@
 ---
-title: DocumentFragment()
+title: DocumentFragment：DocumentFragment() 构造函数
 slug: Web/API/DocumentFragment/DocumentFragment
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("DOM")}}{{seeCompatTable}}
+{{ApiRef("DOM")}}
 
-**`DocumentFragment()`** 构造函数返回一个新创建的 {{domxref("DocumentFragment")}} 对象。
+**`DocumentFragment()`** 构造函数返回新的空 {{domxref("DocumentFragment")}} 对象。
 
 ## 语法
 
-```plain
-fragment = new DocumentFragment()
+```js-nolint
+new DocumentFragment()
 ```
 
-## 示例
+### 参数
 
-```js
-fragment = new DocumentFragment();
-```
+无。
 
-## 标准
+### 返回值
+
+新的 {{domxref("DocumentFragment")}} 对象。
+
+## 规范
 
 {{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
-
-## 参见
-
-- [DOM 接口索引](/zh-CN/docs/DOM/DOM_Reference)
