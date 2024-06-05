@@ -1,5 +1,5 @@
 ---
-title: Audio Output Devices API
+title: 音频输出设备 API
 slug: Web/API/Audio_Output_Devices_API
 l10n:
   sourceCommit: 5a5f3d3cbbfabf138aa9f0d3e2c8fce4a168f5cc
@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Audio Output Devices API")}}{{securecontext_header}}{{SeeCompatTable}}
 
-**音频输出设备 API** 允许 Web 应用程序提示用户选择用于音频播放的输出设备。
+**音频输出设备 API**（Audio Output Devices API）允许 Web 应用程序提示用户选择用于音频播放的输出设备。
 
 ## 概念和用法
 
@@ -28,41 +28,38 @@ l10n:
 #### MediaDevices
 
 - {{domxref("MediaDevices.selectAudioOutput()")}}
-  - ：此方法提示用户选择特定的音频输出设备，例如扬声器或耳机。选择设备授予用户使用该设备的权限，并返回有关设备的信息，包括其 ID。
+  - : 此方法提示用户选择特定的音频输出设备，例如扬声器或耳机。选择设备授予用户使用该设备的权限，并返回有关设备的信息，包括其 ID。
 
 #### HTMLMediaElement
 
 - {{domxref("HTMLMediaElement.setSinkId()")}}
-  - ：此方法设置要用于输出的音频设备的 ID，如果允许，则将使用该设备。
+  - : 此方法设置要用于输出的音频设备的 ID，如果允许，则将使用该设备。
 - {{domxref("HTMLMediaElement.sinkId")}}
-  - ：此属性返回正在用于输出的音频设备的唯一 ID，如果正在使用默认的用户代理设备，则返回空字符串。
+  - : 此属性返回正在用于输出的音频设备的唯一 ID，如果正在使用默认的用户代理设备，则返回空字符串。
 
 ## 安全要求
 
 对 API 的访问受以下约束：
 
-- 所有方法和属性只能在 [安全环境](/zh-CN/docs/Web/Security/Secure_Contexts) 中调用。
+- 所有方法和属性只能在[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中调用。
 
 - {{domxref("MediaDevices.selectAudioOutput()")}} 授予对所选设备用作音频输出的用户权限：
 
-  - 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy) 的限制。
+  - 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)的限制。
   - 需要[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)。用户必须与页面或 UI 元素交互，才能调用此方法。
 
 - {{domxref("HTMLMediaElement.setSinkId()")}} 将允许的 ID 设置为音频输出：
 
-  - 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy) 的限制。
+  - 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)的限制。
   - 需要用户权限来设置非默认设备 ID。
     - 这可以通过在由 `MediaDevices.selectAudioOutput()` 启动的提示中选择来获得。
     - 如果用户已经授予使用相同组中媒体输入设备的权限，则用户还会隐式授予设置输出设备的权限 {{domxref("MediaDevices.getUserMedia()")}}。
-
-<!-- 下一行是“true”，但这在任何浏览器中都没有实现 -->
-<!-- 可以使用 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 方法 [`navigator.permissions.query()`](/zh-CN/docs/Web/API/Permissions/query) 查询权限状态，传递具有 `speaker-selection` 权限的权限描述符。 -->
 
 ## 示例
 
 以下是使用 `selectAudioOutput()` 的示例，该方法位于通过按钮点击触发的函数内，并将所选设备设置为音频输出。
 
-代码首先检查是否支持 `selectAudioOutput()`，如果支持，则使用它选择输出并返回 [设备 ID](/zh-CN/docs/Web/API/MediaDeviceInfo/deviceId)。然后我们使用默认输出播放一些音频，然后调用 `setSinkId()` 以切换到所选输出设备。
+代码首先检查是否支持 `selectAudioOutput()`，如果支持，则使用它选择输出并返回[设备 ID](/zh-CN/docs/Web/API/MediaDeviceInfo/deviceId)。然后我们使用默认输出播放一些音频，然后调用 `setSinkId()` 以切换到所选输出设备。
 
 ```js
 document.querySelector("#myButton").addEventListener("click", async () => {
