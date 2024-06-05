@@ -28,7 +28,7 @@ let removingTree = browser.bookmarks.removeTree(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当树被删除时其会兑现一个没有参数的对象。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当树被删除时其会兑现，且不带任何参数。
 
 如果无法找到与 `id` 参数对应的节点，则该 Promise 将以错误消息拒绝。
 
