@@ -9,7 +9,7 @@ l10n:
 
 清除浏览器的 Cookie。
 
-你可以使用 `removalOptions` 参数，该参数是一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象，用于：
+你可以使用 `removalOptions` 参数（一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象），用于：
 
 - 仅清除指定时间后创建的 Cookie
 - 控制是否仅清除来自普通网页设置的 Cookie，还是同时清除来自托管应用程序和扩展设置的 Cookie。
