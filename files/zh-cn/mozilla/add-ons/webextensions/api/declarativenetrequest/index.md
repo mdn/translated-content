@@ -2,7 +2,7 @@
 title: declarativeNetRequest
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest
 l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+  sourceCommit: c4360f2607e82c7988e560f38384c1623ba38c35
 ---
 
 {{AddonSidebar}}
