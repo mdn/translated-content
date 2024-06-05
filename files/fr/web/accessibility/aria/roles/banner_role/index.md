@@ -3,6 +3,8 @@ title: Utilisation du rôle banner
 slug: Web/Accessibility/ARIA/Roles/banner_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Description
 
 Cette technique présente l'utilisation du rôle [`banner` (en)](https://www.w3.org/TR/wai-aria/roles#banner).
