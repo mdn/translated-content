@@ -3,6 +3,8 @@ title: <picture>
 slug: Web/HTML/Element/picture
 ---
 
+{{HTMLSidebar}}
+
 O **elemento HTML `<picture>`** é um container usado para especificar múltiplos elementos {{HTMLElement("source")}} para um elemento específico {{HTMLElement("img")}} contido nele. O navegador irá escolher a imagem mais adequada de acordo com o layout atual da página, caracteristicas do dispositivo em que será exibido (p.e. um dispositivo normal ou um hiDPI), e a habilidade do navegador de renderizar um certo tipo de imagem (p.e., envie uma imagem WebP para os navegadores baseados no Chromium ou PNG para navegadores não-Chromium); se não houver correspondência entre os elementos {{HTMLElement("source")}}, o arquivo especificado pelo elemento `<img>` será selecionado. A imagem selecionada é então exibida no espaço ocupado pelo elemento `<img>`.
 
 <table class="properties">

@@ -3,6 +3,8 @@ title: Usando ARIA para rótulos com campos incorporados - Multipart labels
 slug: Web/Accessibility/ARIA/Multipart_labels
 ---
 
+{{AccessibilitySidebar}}
+
 ## O problema
 
 Você tem um formulário onde existe uma pergunta simples e a resposta é mencionada na própria questão. Um exemplo clássico, que todos nós conhecemos das configurações de nossos navegadores, é a colocação "Deletar o histórico após x dias". "Apagar o histórico após" está à esquerda da caixa de texto, x é o número, por exemplo, 21 e a palavra "dias" vem depois dessa caixa, formando uma sentença de fácil compreensão.

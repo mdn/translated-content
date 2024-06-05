@@ -3,6 +3,8 @@ title: "<dd>: elemento Detalhes da Descrição"
 slug: Web/HTML/Element/dd
 ---
 
+{{HTMLSidebar}}
+
 O **elemento HTML \<dd>** fornece detalhes ou uma definição mais completa do termo precedente (definido por {{HTMLElement("dt")}}) numa lista de descrições ({{HTMLElement("dl")}}).
 
 <table class="properties">

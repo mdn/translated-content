@@ -3,6 +3,8 @@ title: Meu primeiro formulário HTML
 slug: Learn/Forms/Your_first_form
 ---
 
+{{LearnSidebar}}
+
 Este é um artigo introdutório para formulários HTML. Através de um simples formulário de contato, nós veremos os requisitos básicos para construir formulários HTML. Esse artigo assume que você não sabe nada sobre formulários HTML, mas presume que você conhece o [básico de HTML](/pt-BR/docs/HTML/Introduction) e [CSS](/pt-BR/docs/Web/CSS/Getting_Started).
 
 ## Antes de começarmos

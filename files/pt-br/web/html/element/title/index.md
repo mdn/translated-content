@@ -3,6 +3,8 @@ title: "<title>: O titulo do documento."
 slug: Web/HTML/Element/title
 ---
 
+{{HTMLSidebar}}
+
 O **elemento HTML** `<title>` (_Elemento HTML Título_) define o título do documento, mostrado na barra de título de um navegador ou na aba da página. Pode conter somente texto e quaisquer marcações contidas no texto não são interpretadas.
 
 - _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Conteúdo de metadados](/pt-BR/docs/Web/Guide/HTML/Content_categories#Metadata_content).

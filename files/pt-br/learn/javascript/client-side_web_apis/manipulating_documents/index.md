@@ -3,6 +3,8 @@ title: JavaScript e CSS
 slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 ---
 
+{{LearnSidebar}}
+
 Esta é a primeira sessão da Parte II do [Tutorial de CSS](/pt-BR/CSS/Getting_Started). A parte II contém alguns exemplos que mostram o escopo do CSS usado com outras tecnologias web e Mozilla.
 
 Cada página da Parte II ilustra como o CSS interage com outras tecnologias. Essas páginas não destinam-se a ensiná-lo como usar outras tecnologias. Para aprender sobre elas com detalhes, vá para os outros tutoriais.

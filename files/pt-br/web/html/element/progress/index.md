@@ -3,6 +3,8 @@ title: progress
 slug: Web/HTML/Element/progress
 ---
 
+{{HTMLSidebar}}
+
 o elemento HTML progress (\<progress>) é usado para visualizar o progresso de uma tarefa. Embora as especifidades de como é mostrado ficam a cargo do desenvolvedor, tipicamente, é mostrado como uma barra de progresso.
 
 ## Contexto de uso

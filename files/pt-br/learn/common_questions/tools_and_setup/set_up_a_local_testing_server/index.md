@@ -3,6 +3,8 @@ title: Como configurar um servidor de testes local
 slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Este artigo explica como configurar um simples servidor de testes local em seu computador e o básico para utiliza-lo.
 
 <table class="learn-box standard-table">

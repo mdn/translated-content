@@ -3,6 +3,8 @@ title: Anatomia de uma WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
 
+{{AddonSidebar}}
+
 Uma extensão consiste de uma coleção de arquivos, empacotados para distribuição e instalação. Nesse artigo vamos falar rapidamente sobre os arquivos que podem estar presentes em uma extensão.
 
 Toda extensão contém um arquivo chamado ["manifest.json"](/pt-BR/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#manifest.json). Ele pode conter ponteiros para quatro outros tipos de arquivos:

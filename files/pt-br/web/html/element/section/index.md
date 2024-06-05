@@ -3,6 +3,8 @@ title: <section>
 slug: Web/HTML/Element/section
 ---
 
+{{HTMLSidebar}}
+
 O **elemento HTML `<section>`** representa uma seção genérica contida em um documento HTML, geralmente com um título, quando não existir um elemento semântico mais específico para representá-lo.
 
 Por exemplo, um menu de navegação deve estar dentro um elemento {{htmlelement ("nav")}}, mas uma lista de resultados de pesquisa ou a exibição de um mapa e seus controles não possuem elementos específicos, e podem ser colocados dentro de uma \<section>.

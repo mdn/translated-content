@@ -3,6 +3,8 @@ title: keydown
 slug: Web/API/Element/keydown_event
 ---
 
+{{APIRef}}
+
 O evento `keydown` é disparado quando uma tecla é pressionada. Diferente do evento [`keypress`](/pt-BR/docs/Web/Events/keypress), o `keydown` é disparado para teclas que produzem e que não produzem um caractere.
 
 ## Informações gerais

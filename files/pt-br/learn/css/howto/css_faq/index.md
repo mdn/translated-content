@@ -3,6 +3,8 @@ title: CSS - Perguntas frequentes
 slug: Learn/CSS/Howto/CSS_FAQ
 ---
 
+{{LearnSidebar}}
+
 ## Por que meu CSS, que é válido, não é renderizado corretamente?
 
 Navegadores usam a declaração de `DOCTYPE` para decidir se devem exibir o documento usando um modo compatível com os padrões da web ou com padrões de navegadores antigos. Usar corretamente a declaração de um `DOCTYPE` moderno no início do seu documento HTML melhorará a forma como o navegador trata os padrões utilizados no documento.

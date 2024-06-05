@@ -3,6 +3,8 @@ title: Modelo de layout
 slug: Web/CSS/Layout_mode
 ---
 
+{{CSSRef}}
+
 O modelo de layout [CSS](/pt-BR/docs/Web/CSS), às vezes abreviado por _layout_, é um algoritimo que determina a posição e tamanho dos boxes baseado em como estes interagem com os boxes filhos e boxe ancestral. Há vários layouts:
 
 - _Block layout_, designed for laying out documents. The block layout contains document-centric features, like the ability to [_float_](/pt-BR/docs/Web/CSS/float) elements or to lay them out over [_multiple columns_](/pt-BR/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts).

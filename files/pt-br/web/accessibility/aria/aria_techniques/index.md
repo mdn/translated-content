@@ -3,6 +3,8 @@ title: ARIA techniques
 slug: Web/Accessibility/ARIA/ARIA_Techniques
 ---
 
+{{AccessibilitySidebar}}
+
 O ARIA define as semânticas que podem ser aplicadas aos elementos, e são divididas em **funções** (definindo um tipo de elemento da interface do usuário) e **estados** e **propriedades** que são suportados por uma função. Os autores devem atribuir uma função ARIA e os estados e propriedades apropriados a um elemento durante seu ciclo de vida, a menos que o elemento já possua semântica ARIA apropriada (através do uso de um elemento HTML apropriado). A adição de semântica ARIA apenas expõe informações extras para a API de acessibilidade de um navegador e não afeta o DOM de uma página.
 
 ## Funções

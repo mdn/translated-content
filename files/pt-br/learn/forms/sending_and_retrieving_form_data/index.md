@@ -3,6 +3,8 @@ title: Sending form data
 slug: Learn/Forms/Sending_and_retrieving_form_data
 ---
 
+{{LearnSidebar}}
+
 Em muitos casos, a finalidade de [HTML Form](/pt-BR/docs/HTML/Forms) Um é enviar dados para um servidor. O servidor processa os dados e envia uma resposta ao usuário. Isso parece simples, mas é importante manter algumas coisas em mente para garantir que os dados não danifiquem o servidor ou causem problemas para seus usuários.
 
 ## Para onde vão os dados?

@@ -3,6 +3,8 @@ title: focusin
 slug: Web/API/Element/focusin_event
 ---
 
+{{APIRef}}
+
 O evento `focusin` é acionado no momento em que o elemento receba o foco. A grande diferença entre esse evento e o evento [`focus`](</pt-BR/docs/Mozilla_event_reference/focus_(event)>), é que apenas o `focusin` delega o seu evento para o elemento pai (conhecido como bubbling ou deletegate).
 
 ## Informações Gerais

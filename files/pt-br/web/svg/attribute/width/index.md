@@ -3,6 +3,8 @@ title: Width
 slug: Web/SVG/Attribute/width
 ---
 
+{{SVGRef}}
+
 « [SVG Attribute reference home](/pt-BR/SVG/Attribute)
 
 Esse atributo indica um compromimento horizontal no sistema de coordenadas do usuário. O efeito exato dessa coordenada, depende de cada elemento. Na maioria das vezes, representa a largura da região retangular do elemento de referência.

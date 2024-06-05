@@ -3,6 +3,8 @@ title: Escrevendo um servidor WebSocket
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
 ---
 
+{{DefaultAPISidebar("WebSockets API")}}
+
 Um servidor de WebSocket é uma aplicação TCP que escuta uma porta de um servidor que segue um protocolo específico, simples assim. A tarefa de criar um servidor personalizado costuma assustar as pessoas; no entanto, pode ser fácil implementar um simples servidor WebSocket na sua plataforma de escolha.
 
 Um servidor WebSocket pode ser escrito em qualquer linguagem de programação server-side que é capaz de utilizar [Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets), tais como C(++) , ou Python, ou mesmo o [PHP](/pt-BR/docs/PHP) e o [server-side JavaScript](/pt-BR/docs/Web/JavaScript/Server-Side_JavaScript). Esse não é um tutorial em uma linguagem de programação específica, mas serve como guia para facilitar a escrita do seu próprio servidor.

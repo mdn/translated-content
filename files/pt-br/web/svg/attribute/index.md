@@ -3,6 +3,8 @@ title: SVG Attribute reference
 slug: Web/SVG/Attribute
 ---
 
+{{SVGRef}}
+
 « [SVG](/pt-BR/SVG) / [SVG Element reference](/pt-BR/SVG/Element) »
 
 ## SVG Attributes

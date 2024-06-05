@@ -3,6 +3,8 @@ title: DOMContentLoaded
 slug: Web/API/Document/DOMContentLoaded_event
 ---
 
+{{APIRef}}
+
 O evento `DOMContentLoaded` é acionado quando todo o HTML foi completamente carregado e analisado, sem aguardar pelo CSS, imagens, e subframes para encerrar o carregamento. Um evento muito diferente - [`load`](/pt-BR/docs/Mozilla_event_reference/load) - deve ser usado apenas para detectar uma página completamente carregada. É um engano comum as pessoas usarem [`load`](/pt-BR/docs/Mozilla_event_reference/load) quando `DOMContentLoaded` seria muito mais apropriado.
 
 > **Nota:** Javascript Síncrono pausa a análise do DOM.

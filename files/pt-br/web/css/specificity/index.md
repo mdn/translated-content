@@ -3,6 +3,8 @@ title: Especificidade
 slug: Web/CSS/Specificity
 ---
 
+{{CSSRef}}
+
 ## O Conceito
 
 A especificação é a maneira de como os navegadores definem quais valores de propriedades são os mais relevantes para o elemento a ser utilizado. A especificação é baseada apenas nas regras impostas na composição de diferentes tipos de [seletores](/pt-BR/CSS/CSS_Reference#Selectors).

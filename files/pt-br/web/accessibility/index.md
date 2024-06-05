@@ -3,6 +3,8 @@ title: Acessibilidade
 slug: Web/Accessibility
 ---
 
+{{AccessibilitySidebar}}
+
 Acessiblidade no desenvolvimento Web significa permitir que o máximo possível de pessoas possa acessar os sites da web mesmo quando suas habilidades são limitadas de alguma forma. Aqui nós fornecemos informações sobre o desenvolvimento de conteúdo acessível.
 
 "A palavra Acessibilidade é, frequentemente, usada para descrever facilidades ou assistências às pessoas com necessidades especiais, como em _acessível para cadeirantes_. Isto pode se estender para o Sistema Braille, rampas para cadeirantes, sinais sonoros em passagens de pedestres, modelos de páginas e assim por diante". [Acessibilidade na Wikipedia](http://pt.wikipedia.org/wiki/Acessibilidade)

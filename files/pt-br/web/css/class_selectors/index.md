@@ -3,6 +3,8 @@ title: Seletores de classe
 slug: Web/CSS/Class_selectors
 ---
 
+{{CSSRef}}
+
 O **seletor de classes** [CSS](/pt-BR/docs/CSS) corresponde aos elementos com base no conteúdo de seus atributos `class.`
 
 ```css

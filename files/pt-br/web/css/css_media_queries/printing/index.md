@@ -3,6 +3,8 @@ title: Printing
 slug: Web/CSS/CSS_media_queries/Printing
 ---
 
+{{CSSRef}}
+
 Pode haver momentos em que seu site ou aplicação queira melhorar a experiência do usuário quando imprime um conteúdo. Existem diversos cenários possíveis:
 
 - Você deseja ajustar o layout para tirar vantagem do tamanho e forma do papel.

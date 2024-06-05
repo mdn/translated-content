@@ -3,6 +3,8 @@ title: Que software eu preciso para construir um site?
 slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Neste artigo nós destacamos quais _softwares_ você precisa para editar, fazer _upload_ ou visualizar um _site_.
 
 | Pré requisitos: | Você deve saber [a diferença entre páginas _web_, _sites web_, servidores*web*, e mecanismos de busca.](/pt-BR/docs/Learn/page_vs_site_vs_server_vs_search_engine) |

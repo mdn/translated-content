@@ -3,6 +3,8 @@ title: Whitespace no DOM
 slug: Web/API/Document_Object_Model/Whitespace
 ---
 
+{{DefaultAPISidebar("DOM")}}
+
 ## O problema
 
 A presença de espaço branco no [DOM](/pt-BR/docs/DOM) pode dificultar a manipulação da árvore de conteúdo de formas imprevisíveis. No Mozilla, todo o espaço branco no conteúdo de texto do documento original é representado no DOM (isso não inclui [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM) entre tags). (Isso é necessário internamente para que o editor possa preservar a formatação de documentos e também que `white-space: pre` irá funcionar em [CSS](/pt-BR/docs/CSS)). Isso significa que:

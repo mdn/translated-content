@@ -3,6 +3,8 @@ title: touchstart
 slug: Web/API/Element/touchstart_event
 ---
 
+{{APIRef}}
+
 `O evento touchstart` é acionado quando o ponteiro de toque _(dedo ou caneta)_ é aplicado sobre à superfície de toque da tela _(toque sobre a tela no elemento alvo)_.
 
 ## Info Geral

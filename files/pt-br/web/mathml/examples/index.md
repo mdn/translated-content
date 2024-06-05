@@ -3,6 +3,8 @@ title: Exemplos
 slug: Web/MathML/Examples
 ---
 
+{{MathMLRef}}
+
 Abaixo você irá encontrar alguns exemplos que irá ajudá-lo a entender como utilizar MathML para apresentar conceitos matemáticos complexos na Web.
 
 - [Teorema de Pitágoras](/pt-BR/docs/Web/MathML/Examples/MathML_Pythagorean_Theorem)

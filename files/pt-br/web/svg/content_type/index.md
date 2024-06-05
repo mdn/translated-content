@@ -3,6 +3,8 @@ title: Content type
 slug: Web/SVG/Content_type
 ---
 
+{{SVGRef}}
+
 ## Angle
 
 - \<angle>

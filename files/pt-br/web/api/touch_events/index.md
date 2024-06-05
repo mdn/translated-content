@@ -3,6 +3,8 @@ title: Eventos do Toque
 slug: Web/API/Touch_events
 ---
 
+{{DefaultAPISidebar("Touch Events")}}
+
 Com a finalidade de fornecer suporte de qualidade para interfaces baseadas em toque (touch), os eventos de touch oferecem a capacidade de interpretar a atividade em telas sensíveis ao toque ou trackpads.
 
 ## Definições

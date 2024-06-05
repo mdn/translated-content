@@ -3,6 +3,8 @@ title: Referência JavaScript
 slug: Web/JavaScript/Reference
 ---
 
+{{jsSidebar}}
+
 ## [Sobre essa Referência](/pt-BR/docs/JavaScript/Reference/About)
 
 {{page("/pt-BR/docs/JavaScript/Reference/About")}}

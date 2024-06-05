@@ -3,6 +3,8 @@ title: Dicas para criar páginas HTML de carregamento rápido
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
+
 Estas dicas são baseadas em conhecimento comum e experimentação.
 
 Uma página web otimizada não apenas provê um site mais responsivo aos visitantes, como também reduz a carga sobre os servidores e a conexão com a Internet. Isso pode ser crucial para sites de grande volume ou sites que tenham um pico de tráfego devido a circunstâncias extraordinárias, como plantões de notícias urgentes.

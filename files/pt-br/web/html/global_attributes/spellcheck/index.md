@@ -3,6 +3,8 @@ title: Controlando a verificação ortográfica em formulários HTML
 slug: Web/HTML/Global_attributes/spellcheck
 ---
 
+{{HTMLSidebar("Global_attributes")}}
+
 Firefox 2 introduz suporte à verificação ortográfica para áreas de texto e campos de texto em formulários web. O usuário pode especificar usando a interface about:config se a verificação ortográfica é ou não habilitada e se checará áreas de texto e campos de texto ou somente áreas de texto.
 
 Por padrão, áreas de texto e documentos [`designMode`](/pt-BR/docs/Web/API/Document/designMode) tem ortografia verificada e caixas de texto de uma única linha não tem. Isto é assim porque os usuários do Firefox podem se distrair ou se incomodar se o Firefox marcar coisas como IDs de usuários ou endereços de e-mail como erros de ortografia.

@@ -3,6 +3,8 @@ title: article (artigo)
 slug: Web/HTML/Element/article
 ---
 
+{{HTMLSidebar}}
+
 ## Resumo
 
 O _Elemento HTML Article_ (\<article>) representa uma composição independente em um documento, página, aplicação, ou site, ou que é destinado a ser distribuido de forma independente ou reutilizável, por exemplo, em sindicação. Este poderia ser o post de um fórum, um artigo de revista ou jornal, um post de um blog, um comentário enviado por um usuário, um gadget ou widget interativos, ou qualquer outra forma de conteúdo independente.

@@ -3,6 +3,8 @@ title: Applying SVG effects to HTML content
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
 
+{{SVGRef}}
+
 Firefox 3.5 introduziu suporte para uso do [SVG](/pt-BR/docs/SVG) como um componente do [CSS](/pt-BR/docs/Web/CSS) em ordem para introduzir efeitos SVG no conteúdo HTML.
 
 Você pode embutir o SVG nos estilos dentro do mesmo documento, ou com um _stylesheet_ externo.
