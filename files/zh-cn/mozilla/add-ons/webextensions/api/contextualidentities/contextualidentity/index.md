@@ -13,13 +13,13 @@ l10n:
 
 这种类型的值是对象。它们包含以下属性：
 
-- cookieStoreId
+- `cookieStoreId`
 
-  - : string。身份的 cookie store ID。由于上下文身份不共享 cookie store，因此这作为一个唯一标识符。
+  - : `string`。身份的 cookie 存储 ID。由于上下文身份不共享 cookie 存储，因此这作为一个唯一标识符。
 
-- color
+- `color`
 
-  - : string。身份的颜色。这将在属于该身份的标签页中显示。以下值是有效的：
+  - : `string`。身份的颜色。这将在属于该身份的标签页中显示。以下值是有效的：
 
     - "blue"
     - "turquoise"
