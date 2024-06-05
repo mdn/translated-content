@@ -31,7 +31,7 @@ l10n:
     - "purple"
     - "toolbar"
 
-    值“toolbar”代表一个依赖主题的颜色。颜色为“toolbar”的身份将显示为与工具栏文本颜色（对应于[主题键](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#colors) `"toolbar_field_text"`）相同的颜色。
+    值“toolbar”代表一个依赖主题的颜色。颜色为“toolbar”的身份将显示为与工具栏文本颜色（对应于[主题键](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#colors) `"toolbar_field_text"`）相同的颜色。
 
 - `colorCode`
 
