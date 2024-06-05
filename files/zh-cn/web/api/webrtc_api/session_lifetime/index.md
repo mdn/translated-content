@@ -3,6 +3,8 @@ title: WebRTC 介绍
 slug: Web/API/WebRTC_API/Session_lifetime
 ---
 
+{{DefaultAPISidebar("WebRTC")}}
+
 > **备注：** 此页面正在建设中，部分内容会移至其他页面，因为 WebRTC 指导资料已经建成。
 >
 > WebRTC 允许你将任意数据，音频或视频（或其任何组合）的点对点通信构建到浏览器应用程序中。在本文中，我们将介绍一个 WebRTC 会话的生命周期，从建立连接到不再需要时关闭连接。
