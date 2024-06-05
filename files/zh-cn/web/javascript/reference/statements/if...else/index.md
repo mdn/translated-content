@@ -2,7 +2,7 @@
 title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
 l10n:
-   sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
 {{jsSidebar("Statements")}}
