@@ -145,13 +145,13 @@ input[type="checkbox"] {
 
 ブラウザーによってチェックボックスとスパンの扱いは異なっており多くは劣悪なものです。
 
-| ブラウザー                          | 描画結果                                                                          |
-| ----------------------------------- | --------------------------------------------------------------------------------- |
-| Firefox 71 (macOS)                  | ![角が丸く 1px の淡灰色の境界線](firefox-mac-checkbox.png)                        |
-| Firefox 57 (Windows 10)             | ![角ばった 1px の中灰色の境界線](firefox-windows-checkbox.png)                    |
-| Chrome 77 (macOS), Safari 13, Opera | ![角が丸く 1px の中灰色の境界線](chrome-mac-checkbox.png)                         |
-| Chrome 63 (Windows 10)              | ![白の代わりにやや灰色がかった背景の角ばった境界線](chrome-windows-checkbox.png)  |
-| Edge 16 (Windows 10)                | ![白の代わりにやや灰色がかった背景の角ばった境界線](edge-checkbox.png)            |
+| ブラウザー                          | 描画結果                                                                         |
+| ----------------------------------- | -------------------------------------------------------------------------------- |
+| Firefox 71 (macOS)                  | ![角が丸く 1px の淡灰色の境界線](firefox-mac-checkbox.png)                       |
+| Firefox 57 (Windows 10)             | ![角ばった 1px の中灰色の境界線](firefox-windows-checkbox.png)                   |
+| Chrome 77 (macOS), Safari 13, Opera | ![角が丸く 1px の中灰色の境界線](chrome-mac-checkbox.png)                        |
+| Chrome 63 (Windows 10)              | ![白の代わりにやや灰色がかった背景の角ばった境界線](chrome-windows-checkbox.png) |
+| Edge 16 (Windows 10)                | ![白の代わりにやや灰色がかった背景の角ばった境界線](edge-checkbox.png)           |
 
 #### ラジオボタン/チェックボックスで appearance: none を使う
 
