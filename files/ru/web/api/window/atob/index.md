@@ -1,6 +1,6 @@
 ---
 title: Глобальная функция atob()
-slug: Web/API/atob
+slug: Web/API/Window/atob
 ---
 
 {{APIRef("HTML DOM")}}

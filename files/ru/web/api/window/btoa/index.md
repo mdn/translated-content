@@ -1,6 +1,6 @@
 ---
 title: WindowBase64.btoa()
-slug: Web/API/btoa
+slug: Web/API/Window/btoa
 ---
 
 {{APIRef("HTML DOM")}}
