@@ -9,7 +9,7 @@ l10n:
 
 **`bookmarks.removeTree()`** 方法递归删除一个书签文件夹及其所有内容。
 
-> **警告：** 如果你的扩展尝试从书签树根节点中删除书签树，则调用将引发错误，并显示消息：“书签根节点不能被修改”，并且书签将不会被删除。
+> **警告：** 如果你的扩展尝试从书签树根节点中删除书签树，则调用将引发错误，并显示消息：“The bookmark root cannot be modified”，并且书签将不会被删除。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -17,20 +17,20 @@ l10n:
 
 ```js-nolint
 let removingTree = browser.bookmarks.removeTree(
-  id                // string
+  id                // 字符串
 )
 ```
 
 ### 参数
 
 - `id`
-  - : 一个 {{jsxref("string")}}，指定要删除的文件夹节点的 ID，以及其后代节点。
+  - : {{jsxref("string", "字符串", "", 1)}}，指定要删除的文件夹（以及其后代节点）的 ID。
 
 ### 返回值
 
 一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当树被删除时其会兑现一个没有参数的对象。
 
-如果与 id 参数对应的节点无法找到，则该 Promise 将被拒绝，并显示错误消息。
+如果无法找到与 `id` 参数对应的节点，则该 Promise 将以错误消息拒绝。
 
 ## 示例
 
