@@ -9,17 +9,17 @@ l10n:
 
 ## 问题
 
-你有一个表单，在其中向用户提出一个问题，但答案已经在问题本身中提及了。我们都知道的一个经典例子是浏览器设置中的设置"在 x 天后删除历史记录"。 "在 x 天后删除历史记录"位于文本框的左侧，x 是数字，例如 21，接着文本框后面是单词"天"，形成了一个易于理解的句子。
+你有一个表单，在其中向用户提出一个问题，但答案已经在问题本身中提及了。我们都知道的一个经典例子是浏览器设置中的“在 x 天后删除历史记录”设置。“在 x 天后删除历史记录”位于文本框的左侧，x 是数字，例如 21，接着文本框后面是单词“天”，形成了一个易于理解的句子。
 
-如果你正在使用屏幕阅读器，你是否注意到，在 Firefox 中进入此设置时，它会告诉你"在 21 天后删除历史记录"？然后它会宣布你在一个文本框中，并且它包含数字 21。这不是很酷吗？你不需要四处导航找到单位。"天"很容易被替换为"月"或"年"，在许多普通的对话框中，除了使用屏幕查看命令四处导航之外，没有其他方法可以找到这个信息。
+如果你正在使用屏幕阅读器，你是否注意到，在 Firefox 中进入此设置时，它会告诉你“在 21 天后删除历史记录”？然后它会宣布你在一个文本框中，并且它包含数字 21。这不是很酷吗？你不需要四处导航找到单位。“天”很容易被替换为“月”或“年”，在许多普通的对话框中，除了使用屏幕查看命令四处导航之外，没有其他方法可以找到这个信息。
 
-解决方案在一个名为 `aria-labelledby` 的 ARIA 属性中。它的参数是一个字符串，由你想要连接成一个可访问名称的 HTML 元素的 ID 组成。
+解决方案在一个名为 `aria-labelledby` 的 ARIA 属性中。它的参数是一个字符串，由你想要连接成一个无障碍名称的 HTML 元素的 ID 组成。
 
-`aria-labelledby `和 `aria-describedby` 都指定在要标记的表单元素上，例如一个 `<input>`。在这两种情况下，可能还存在着标签控件绑定，这些绑定将被 `aria-labelledby` 覆盖。如果在 HTML 页面上提供了 `aria-labelledby`，你还应该提供一个 label for 结构，以支持那些尚未具有 ARIA 支持的旧浏览器。通过 Firefox 3，你的视觉受损的用户将自动从新属性获得更好的可访问性，但是老旧浏览器的用户不会因此而被遗忘。
+`aria-labelledby `和 `aria-describedby` 都需要在添加标签的表单元素（例如 `<input>`）上指定。在这两种情况下，可能还存在着 label for 或标签控件的绑定，这些绑定会被 `aria-labelledby` 覆盖。如果在 HTML 页面上提供了 `aria-labelledby`，你还应该提供一个 label for 结构，以支持那些尚未具有 ARIA 支持的旧浏览器。通过 Firefox 3，你的视觉受损的用户将自动从新属性获得更好的无障碍性，但是老旧浏览器的用户不会因此而被遗忘。
 
 ### 示例
 
-{{ EmbedLiveSample("Example") }}
+{{ EmbedLiveSample("示例") }}
 
 ```css hidden
 body {
@@ -32,15 +32,15 @@ body {
   aria-labelledby="labelShutdown shutdownTime shutdownUnit"
   type="checkbox" />
 
-<span id="labelShutdown">在关机之后</span>
+<span id="labelPrefix">在</span>
 
 <input
-  aria-labelledby="labelShutdown shutdownTime shutdownUnit"
+  aria-labelledby="labelPrefix shutdownTime shutdownUnit labelShutdown"
   id="shutdownTime"
   type="text"
   value="10" />
 
-<span id="shutdownUnit"> 分钟</span>
+<span id="shutdownUnit">分钟</span><span id="labelShutdown">后关机</span>
 ```
 
 ## 对 JAWS 8 用户的说明
