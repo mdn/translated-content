@@ -111,8 +111,6 @@ function checkValue(a, b) {
 }
 ```
 
-不要将原始布尔值的`true`和`false`与[Boolean](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)对象的真或假混淆。任何一个值，只要它不是 `undefined`、`null`、 `0`、`NaN`或空字符串（`""`），那么无论是任何对象，即使是值为假的 Boolean 对象，在条件语句中都为真。例如：
-
 不要将原始的布尔值 `true` 和 `false` 与 {{jsxref("Boolean")}} 对象的真或虚混淆。任何不是 `false`、`undefined`、`null`、`0`、`-0`、`NaN` 或空字符串（`""`）的值，以及任何对象（包括值为 `false` 的布尔对象），在用作条件时都被视为 {{Glossary("truthy", "真")}}。例如：
 
 ```js
