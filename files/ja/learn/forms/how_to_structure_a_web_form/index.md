@@ -397,7 +397,7 @@ l10n:
 
 ## スキルをテスト
 
-この記事はここまでですが、最も重要な情報を覚えていますか？ 先に進む前に、この情報を保持しているかどうかを確認するためのテストがあります — [Test your skills: Form structure](/ja/docs/Learn/Forms/Test_your_skills:_Form_structure) を参照してください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: フォームの構築](/ja/docs/Learn/Forms/Test_your_skills:_Form_structure)を参照してください。
 
 ## まとめ
 
