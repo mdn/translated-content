@@ -18,7 +18,7 @@ new BlobEvent(type, options)
 ### 参数
 
 - `type`
-  - : 表示时间名字的字符串.
+  - : 表示时间名字的字符串。
     它区分大小写，浏览器总是将其设置为 `dataavailable`。
 - `options`
   - : _除了在 {{domxref("Event/Event", "Event()")}} 中定义的属性之外_，一个对象可以具有以下属性：
