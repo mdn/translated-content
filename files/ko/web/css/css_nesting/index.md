@@ -2,7 +2,7 @@
 title: CSS nesting
 slug: Web/CSS/CSS_nesting
 l10n:
-  sourceCommit:13746bf1d5d8e5c7c7bce5e1281e6eeee77b3d44
+  sourceCommit: 13746bf1d5d8e5c7c7bce5e1281e6eeee77b3d44
 ---
 
 {{CSSRef}}
