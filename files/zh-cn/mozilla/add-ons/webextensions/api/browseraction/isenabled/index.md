@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-如果浏览器操作是启用的，返回 `true`。
+如果浏览器操作是启用的，则返回 `true`。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
