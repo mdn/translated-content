@@ -9,9 +9,9 @@ l10n:
 
 移除指定的浏览数据。
 
-要移除的浏览数据在 `dataTypes` 选项中指定，这是一个 {{WebExtAPIRef("browsingData.DataTypeSet")}} 对象。
+要移除的浏览数据在 `dataTypes` 选项（一个 {{WebExtAPIRef("browsingData.DataTypeSet")}} 对象）中指定。
 
-你可以使用 `removalOptions` 选项，这是一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象，来控制移除数据的时间跨度以及是否仅从普通网页中移除数据，还是同时从托管的应用程序和扩展中移除数据。
+你可以使用 `removalOptions` 选项（一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象）来控制移除数据的时间跨度以及是否仅从普通网页中移除数据，还是同时从托管的应用程序和扩展中移除数据。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
