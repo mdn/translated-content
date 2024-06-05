@@ -33,7 +33,7 @@ _继承父接口 {{domxref("EventTarget")}} 的属性。_
 
 ## 方法
 
-_继承父对象{{domxref("EventTarget")}} 的方法，以及实现对象 {{domxref("AbstractWorker")}}的方法。_
+_继承父接口 {{domxref("EventTarget")}} 的方法。_
 
 - {{domxref("Worker.postMessage()")}}
   - : 发送一条消息到最近的外层对象，消息可由任何 JavaScript 对象组成。
