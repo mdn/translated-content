@@ -56,5 +56,5 @@ document.oncopy = (event) => {
 ## 参见
 
 - 相关事件：{{domxref("Document/cut_event", "cut")}}、{{domxref("Document/paste_event", "paste")}}
-- 此事件 {{domxref("Element")}} 上的目标：{{domxref("Element/copy_event", "copy")}}
-- 此事件 {{domxref("Window")}} 上的目标：{{domxref("Window/copy_event", "copy")}}
+- 此 {{domxref("Element")}} 事件上的目标：{{domxref("Element/copy_event", "copy")}}
+- 此 {{domxref("Window")}} 事件上的目标：{{domxref("Window/copy_event", "copy")}}
