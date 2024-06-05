@@ -24,7 +24,7 @@ let moveContainers = browser.contextualIdentities.move(
 
 - `cookieStoreIds`
 
-  - : 字符串或字符串数组。要移动的上下文身份的 cookie store ID 的有序列表。
+  - : 字符串或字符串数组。要移动的上下文身份的 cookie 存储 ID 的有序列表。
 
 - `position`
 
