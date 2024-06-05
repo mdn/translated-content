@@ -12,7 +12,7 @@ l10n:
 미디어 쿼리는 다음과 같은 상황에 사용할 수 있습니다.
 
 - [CSS](/ko/docs/Web/CSS) {{cssxref("@media")}}와 {{cssxref("@import")}} [@규칙](/ko/docs/Web/CSS/At-rule)을 사용해 특정 조건에 따라 스타일을 적용할 때.
-- {{htmlelement("style")}}, {{htmlelement("link")}렉}, {{htmlelement("source")}}, 기타 다른 [HTML](/ko/docs/Web/HTML) 요소에 `media` 특성을 사용해 특정 매체만 가리키게 할 때.
+- {{htmlelement("style")}}, {{htmlelement("link")}}, {{htmlelement("source")}}, 기타 다른 [HTML](/ko/docs/Web/HTML) 요소에 `media` 특성을 사용해 특정 매체만 가리키게 할 때.
 - {{domxref("Window.matchMedia()")}}와 {{domxref("MediaQueryList.addListener()")}} [JavaScript](/ko/docs/Web/JavaScript) 메서드를 사용해 [미디어 상태를 판별하고 관측](/ko/docs/Web/CSS/Media_Queries/Testing_media_queries)할 때.
 
 > **참고:** 이 페이지의 CSS는 시연용으로 `@media`를 사용했지만, 기본적인 구문은 모든 미디어 쿼리가 동일합니다.
