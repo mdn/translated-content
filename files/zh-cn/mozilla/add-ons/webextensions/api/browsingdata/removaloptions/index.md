@@ -2,7 +2,7 @@
 title: browsingData.RemovalOptions
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/RemovalOptions
 l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+  sourceCommit: 61fd66033bcc197a9d511dc95370ca042623ad5e
 ---
 
 {{AddonSidebar}}
@@ -15,7 +15,7 @@ l10n:
 
 - `cookieStoreId` {{optional_inline}}
 
-  - : `string`。此属性仅适用于 cookie 和 indexedDB 项。删除仅限于属于特定 [cookie 存储](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore)的项目，如通过 ID 指定的。有关更多信息，请参见[使用上下文身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
+  - : `string`。此属性只适用于 cookie 和 indexedDB 项。删除仅可以删除指定的 [cookie 存储](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore)的项目，如通过 ID 指定的。有关更多信息，请参见[使用上下文身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 
     > **备注：** Firefox Nightly 还支持通过 `cookieStoreId` 删除 localStorage 项目。
 
