@@ -9,11 +9,11 @@ l10n:
 
 **Canvas API** 提供了一个通过 [JavaScript](/zh-CN/docs/Web/JavaScript) 和 [HTML](/zh-CN/docs/Web/HTML) 的 {{HtmlElement("canvas")}} 元素来绘制图形的方式。它可以用于动画、游戏画面、数据可视化、图片编辑以及实时视频处理等方面。
 
-Canvas API 主要聚焦于 2D 图形。而同样使用 `<canvas>` 元素的 [WebGL API](/zh-CN/docs/Web/WebGL_API) 则用于绘制硬件加速的 2D 和 3D 图形。
+Canvas API 主要聚焦于 2D 图形。而同样使用 `<canvas>` 元素的 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 则用于绘制硬件加速的 2D 和 3D 图形。
 
 ## 基础示例
 
-这个简单的示例在画布上绘制一个绿色的长方形。
+这个简单示例在画布上绘制一个绿色的长方形。
 
 ### HTML
 
@@ -52,7 +52,9 @@ ctx.fillRect(10, 10, 150, 100);
 - {{domxref("Path2D")}} {{experimental_inline}}
 - {{domxref("ImageBitmapRenderingContext")}} {{experimental_inline}}
 
-> **备注：** 与 `WebGLRenderingContext` 有关的接口请参见 [WebGL](/zh-CN/docs/Web/WebGL)。
+> **备注：** [WebGL](/zh-CN/docs/Web/API/WebGL_API) 包含了与 `WebGLRenderingContext` 有关的接口的参考。
+
+> **备注：** {{domxref("OffscreenCanvas")}} 也在 web worker 中可用。
 
 {{domxref("CanvasCaptureMediaStream")}} 也是一个相关的接口。
 
@@ -64,8 +66,8 @@ ctx.fillRect(10, 10, 150, 100);
   - : 一个手把手的、长度与书本相当的 Canvas API 和 WebGL 介绍。
 - [Canvas 手册](https://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html)
   - : Canvas API 的便捷参考。
-- [使用 canvas 操作视频](/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-  - : 结合 {{HTMLElement("video")}} 和 {{HTMLElement("canvas")}} 来实现视频数据的实时操作。
+- [使用 canvas 操控视频](/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
+  - : 结合 {{HTMLElement("video")}} 和 {{HTMLElement("canvas")}} 来实现视频数据的实时操控。
 
 ## 库
 
@@ -82,7 +84,7 @@ Canvas API 是非常强大的，但不总是很容易使用。以下列出的库
 - [Pts.js](https://ptsjs.org)：用于 canvas 和 SVG 的创意编码和可视化的库。
 - [Rekapi](https://github.com/jeremyckahn/rekapi)：用于 Canvas 动画关键帧的 API。
 - [Scrawl-canvas](https://scrawl.rikweb.org.uk/)：用于创建和操控 2D canvas 元素的开源 JavaScript 库。
-- [ZIM](https://zimjs.com)：为在 canvas 上进行创意代码编写提供便利性以及相关组件和控件的框架，包括可用性和数百个色彩缤纷的教程。
+- [ZIM](https://zimjs.com)：为在 canvas 上进行创意代码编写提供便利性以及相关组件和控件的框架，包括无障碍和数百个色彩缤纷的教程。
 - [Sprig](https://github.com/hackclub/sprig)：使用 Canvas 实现的基于图块的游戏的开发库，适合初学者并且开源。
 
 > **备注：** 与 WebGL 有关的 2D 和 3D 的库请参见 [WebGL API](/zh-CN/docs/Web/API/WebGL_API)。
