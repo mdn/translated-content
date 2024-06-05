@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-移除给定 cookie store ID 的上下文身份。
+移除给定 cookie 存储 ID 的上下文身份。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -22,7 +22,7 @@ let removeContext = browser.contextualIdentities.remove(
 ### 参数
 
 - `cookieStoreId`
-  - : `string`。上下文身份的 cookie store 的 ID。由于每个上下文身份都有自己的 cookie store，因此这也作为上下文身份的标识符。
+  - : `string`。上下文身份的 cookie 存储 的 ID。由于每个上下文身份都有自己的 cookie 存储，因此这也作为上下文身份的标识符。
 
 ### 返回值
 
