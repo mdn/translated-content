@@ -3,6 +3,8 @@ title: Прямая и обратная обработка XML
 slug: Web/XML/Parsing_and_serializing_XML
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/XML")}}
+
 Иногда возникает необходимость в обработке {{Glossary("XML")}} и в последующей конвертации в древо {{Glossary("DOM")}}. Или наоборот, необходимо перевести древо DOM в XML. В этой статье рассмотрим объекты платформы web для обработки XML.
 
 - {{domxref("XMLSerializer")}}

@@ -3,7 +3,7 @@ title: Floor
 slug: Web/XPath/Functions/floor
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 Функция `floor` принимает десятичное число и возвращает наибольшее целое, меньшее или равное исходному.
 

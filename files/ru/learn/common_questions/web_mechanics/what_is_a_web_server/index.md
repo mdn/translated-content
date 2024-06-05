@@ -3,6 +3,8 @@ title: Что такое веб-сервер
 slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 В этой статье мы узнаем, что из себя представляют веб-серверы, как они работают, и почему они так важны.
 
 | Необходимые знания: | Вы должны уже знать, [как работает Интернет](/ru/docs/Learn/Common_questions/How_does_the_Internet_work) и [понимать разницу между страницей, сайтом, сервером и поисковой системой.](/ru/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines) |
