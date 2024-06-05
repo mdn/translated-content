@@ -2,7 +2,7 @@
 title: "スキルテスト: フォームの構築"
 slug: Learn/Forms/Test_your_skills:_Form_structure
 l10n:
-  sourceCommit: ccec5393a2b1bbddfdfc1c1d71b076c6ddd3942f
+  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
 ---
 
 {{learnsidebar}}
