@@ -7,14 +7,14 @@ l10n:
 
 {{AddonSidebar}}
 
-确定用户连接的门户状态。门户页面是在用户首次连接到 Wi-Fi 网络时显示的网页。用户在门户页面上提供信息或执行操作以获得更广泛的网络资源访问权限，例如接受条款和条件或进行付款。
+确定用户连接的强制门户状态。强制门户页面是在用户首次连接到 Wi-Fi 网络时显示的网页。用户在强制门户页面上提供信息或执行操作以获得更广泛的网络资源访问权限，例如接受条款和条件或进行付款。
 
 使用此 API 需要具有“captivePortal”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
 ## 属性
 
 - {{WebExtAPIRef("captivePortal.canonicalURL")}}
-  - : 返回门户检测页面的规范 URL。只读。
+  - : 返回强制门户检测页面的规范 URL。只读。
 
 ## 函数
 
@@ -26,9 +26,9 @@ l10n:
 ## 事件
 
 - {{WebExtAPIRef("captivePortal.onConnectivityAvailable")}}
-  - : 当门户服务确定用户可以连接到互联网时触发。
+  - : 当强制门户服务确定用户可以连接到互联网时触发。
 - {{WebExtAPIRef("captivePortal.onStateChanged")}}
-  - : 当门户状态改变时触发。
+  - : 当强制门户状态改变时触发。
 
 ## 浏览器兼容性
 
