@@ -1,5 +1,5 @@
 ---
-title: alarms：onAlarm 事件
+title: alarms.onAlarm
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm
 l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
