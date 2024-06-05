@@ -21,26 +21,26 @@ l10n:
 ## 可视化
 
 - 内容隐藏技术（如零不透明度、z-index 顺序和离屏位置）不得仅用于处理可见性。
-- 当前可见的屏幕之外的内容，**必须**是不可见的。（特别是单一页面应用中包含多个卡片选项）:
+- 当前可见的屏幕之外的内容，必须是不可见的（特别是单一页面应用中包含多个卡片选项）:
 
-  - **使用** `hidden` 特性或 `visibility` 或 `display` 样式属性。
-  - 除非不可避免，**不应该**使用 `aria-hidden` 特性。
+  - 使用 `hidden` 特性或 `visibility` 或 `display` 样式属性。
+  - 除非不可避免，不应该使用 `aria-hidden` 特性。
 
 ## 焦点
 
-- 所有可激活元素**必须**可被聚焦：
+- 所有可激活元素必须可被聚焦：
 
   - 标准控件，如链接、按钮、表单域默认可被聚焦。
-  - 非标准控件**必须**分配给它们一个适当的 [ARIA Role](http://www.w3.org/TR/wai-aria/roles) 如 `button`，`link` 或者 `checkbox`。
+  - 非标准控件必须分配给它们一个适当的 [ARIA 角色](http://www.w3.org/TR/wai-aria/roles) 如 `button`、`link` 或 `checkbox`。
 
 - 焦点应该是有逻辑顺序，且方式一致。
 
 ## 文本等效
 
-- 应用中，每个展示的非文本元素都**必须**提供等效文本。
+- 应用中，每个展示的非文本元素都必须提供等效文本。
 
-  - 恰当的位置使用 _alt_ 和 _title_（请参考 Steve Faulkner 的帖子 - 关于 [Using the HTML title attribute](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/) 。）
-  - 如果上面的特性不适用，使用恰当的[ARIA Properties](http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header)，比如 `aria-label`, `aria-labelledby`, 或 `aria-describedby`.
+  - 恰当的位置使用 _alt_ 和 _title_（请参考 Steve Faulkner 关于[使用 HTML title 特性](https://www.tpgi.com/using-the-html-title-attribute-updated/) 的帖子。）
+  - 如果上面的特性不适用，使用恰当的[ARIA 状态与属性](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def)，比如 `aria-label`、`aria-labelledby` 或 `aria-describedby`。
 
 - 必须避免使用文本图像。
 - 所有带有可见文本（或文本图片）作为标签的用户界面组件必须在组件的编程[名称](https://www.w3.org/TR/WCAG21/#dfn-name)中提供相同的文本。见 [WCAG 2.1：名称中的标签](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)。
@@ -48,7 +48,7 @@ l10n:
 
 ## 状态处理
 
-- 单选按钮和复选框等标准控件是由操作系统处理的，而其他自定义控件的状态改变需要通过 [ARIA 状态](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header)，如 `aria-checked`、`aria-disabled`、`aria-selected`、`aria-expanded` 和 `aria-pressed`。
+- 单选按钮和复选框等标准控件是由操作系统处理的，而其他自定义控件的状态改变需要通过 [ARIA 状态](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def)，如 `aria-checked`、`aria-disabled`、`aria-selected`、`aria-expanded` 和 `aria-pressed`。
 
 ## 方向
 
@@ -58,14 +58,14 @@ l10n:
 
 ## 通用指南
 
-- 应用必须提供标题。【译者注：此处的标题为 title】
-- 标题**不能**破坏层次结构。【译者注：此处的标题为 headings】
+- 应用（title）必须提供标题。
+- 标题（heading）不能破坏层次结构。
 
   ```html
-  <h1>Top level heading</h1>
-  <h2>Secondary heading</h2>
-  <h2>Another secondary heading</h2>
-  <h3>Low level heading</h3>
+  <h1>一级标题</h1>
+  <h2二级标题</h2>
+  <h2>另一个二级标题</h2>
+  <h3>三级标题</h3>
   ```
 
 - 应使用 [ARIA 地标角色](https://www.washington.edu/accessibility/websites/regions/) 描述应用或文档的结构，如 `banner`、`complementary`、`contentinfo`、`main`、`navigation` 和 `search`。
@@ -78,4 +78,4 @@ l10n:
 
 - 触摸目标必须足够大，方便用户交互（参考 [BBC 移动端无障碍指南](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size)关于触摸目标尺寸的指南）
 
-> **备注：** 该文档的[最初版本](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html) 由 [Yura Zenevich](https://yzen.github.io/) 完成。
+> **备注：** 该文档的[最初版本](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)由 [Yura Zenevich](https://yzen.github.io/) 完成。
