@@ -23,7 +23,7 @@ let getContext = browser.contextualIdentities.query(
 
 - `details`
 
-  - : object。一个用于过滤返回的上下文身份的对象。可以包含以下任意属性：
+  - : `object`。一个用于过滤返回的上下文身份的对象。可以包含以下任意属性：
 
     - `name` {{optional_inline}}
       - : `string`。仅返回具有此名称的上下文身份。
