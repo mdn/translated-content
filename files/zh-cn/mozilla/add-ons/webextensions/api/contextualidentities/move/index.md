@@ -70,7 +70,7 @@ let identities = await browser.contextualIdentities.query({});
 // 找到名称为“个人”的容器的索引和 ID。
 let personalIndex = identities.findIndex((ci) => ci.name === "Personal");
 if (personalIndex === -1) {
-  throw new Error("Personal container not found");
+  throw new Error("“个人”容器未找到！");
 }
 let personalId = identities[personalIndex].cookieStoreId;
 
