@@ -58,7 +58,7 @@ l10n:
   - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
   - {{cssxref("@media/width", "width")}}.
 
-  예를 들어, {{cssxref("@media/hover", "hover")}} 기능은 요소 위에서 호버를 했을 때 장치가 이를 지원하는지 확인하는 쿼리를 허용합니다. 
+  예를 들어, {{cssxref("@media/hover", "hover")}} 기능은 요소 위에서 호버를 했을 때 장치가 이를 지원하는지 확인하는 쿼리를 허용합니다.
   미디어 특성 표현식은 선택 사항이며 특성의 존재 여부와 값을 판별합니다. 각각의 미디어 특성 표현식은 괄호로 감싸야 합니다.
 
 - `not`, `and`, `only` 와 같은 [논리 연산자](/ko/docs/Web/CSS/@media#logical_operators) 를 사용해 복잡한 쿼리를 조합할 수 있습니다. 여러 미디어 쿼리를 쉼표로 구분해서 하나의 규칙으로 만들 수도 있습니다.
