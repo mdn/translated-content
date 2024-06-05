@@ -14,13 +14,13 @@ l10n:
 - 颜色对比度**必须**遵循 [WCAG 2.1 AA 等级需求](https://www.w3.org/TR/WCAG/#contrast-minimum)：
 
   - 普通文本的对比率为 4.5:1（小于 18 磅或黑体 14 磅）
-  - 大文本对比率为 3:1（大于等于 18 磅或黑体 14 磅）【译者注：字体单位为 point、PT】
+  - 大文本对比率为 3:1（大于等于 18 磅或黑体 14 磅）
 
-- 颜色传递的信息，**必须**也通过其他方式标明（例如，链接文本中的下划线）
+- 颜色传递的信息，必须也通过其他方式标明（例如，链接文本中的下划线）
 
 ## 可视化
 
-- **不**使用用于隐藏内容的技巧处理视觉效果，例如，不透明度为零，z-index 规则，离屏位置。
+- 内容隐藏技术（如零不透明度、z-index 顺序和离屏位置）不得仅用于处理可见性。
 - 当前可见的屏幕之外的内容，**必须**是不可见的。（特别是单一页面应用中包含多个卡片选项）:
 
   - **使用** `hidden` 特性或 `visibility` 或 `display` 样式属性。
@@ -42,21 +42,21 @@ l10n:
   - 恰当的位置使用 _alt_ 和 _title_（请参考 Steve Faulkner 的帖子 - 关于 [Using the HTML title attribute](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/) 。）
   - 如果上面的特性不适用，使用恰当的[ARIA Properties](http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header)，比如 `aria-label`, `aria-labelledby`, 或 `aria-describedby`.
 
-- **必须**避免文本图像。
-- 所有带有可见文本（或文本图片）作为标签的用户界面组件必须在组件的编程[名称](https://www.w3.org/TR/WCAG21/#dfn-name)中提供相同的文本。见 [WCAG 2.1: 名称中的标签](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)。
-- 所有的表单控件**必须**有标签 ({{ htmlelement("label") }} elements) ，以便于读屏用户的使用。
+- 必须避免使用文本图像。
+- 所有带有可见文本（或文本图片）作为标签的用户界面组件必须在组件的编程[名称](https://www.w3.org/TR/WCAG21/#dfn-name)中提供相同的文本。见 [WCAG 2.1：名称中的标签](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)。
+- 所有的表单控件必须有标签（{{ htmlelement("label") }} 元素），以便于屏幕阅读器用户的使用。
 
 ## 状态处理
 
-- 标准控件，如单选按钮和复选是通过操作系统处理的，而其他自定义控件的状态改变需要通过 [ARIA States](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header) ，如 `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`,和 `aria-pressed`。
+- 单选按钮和复选框等标准控件是由操作系统处理的，而其他自定义控件的状态改变需要通过 [ARIA 状态](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header)，如 `aria-checked`、`aria-disabled`、`aria-selected`、`aria-expanded` 和 `aria-pressed`。
 
 ## 方向
 
 - 内容不应仅限于单一方向，如纵向或横向，除非必要。见 [WCAG 2.1：方向](https://www.w3.org/WAI/WCAG21/Understanding/orientation.html)
 
-  - 方向是必要的例如在钢琴应用程序或银行支票。
+  - 例如，钢琴应用程序和银行支票都需要一定的方向。
 
-## General Guidelines 常规指南
+## 通用指南
 
 - 应用必须提供标题。【译者注：此处的标题为 title】
 - 标题**不能**破坏层次结构。【译者注：此处的标题为 headings】
@@ -68,7 +68,7 @@ l10n:
   <h3>Low level heading</h3>
   ```
 
-- 应使用 [ARIA Landmark Roles](https://www.washington.edu/accessibility/websites/regions/) 描述应用或文档的结构，如 `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.
+- 应使用 [ARIA 地标角色](https://www.washington.edu/accessibility/websites/regions/) 描述应用或文档的结构，如 `banner`、`complementary`、`contentinfo`、`main`、`navigation` 和 `search`。
 - 对于触摸事件，以下至少有一项必须为真（[WCAG 2.1：指针取消](https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html)）：
 
   - 不应使用按下事件来触发任何操作
@@ -76,6 +76,6 @@ l10n:
   - 松开事件将撤消在按下事件上触发的任何操作
   - 在按下事件上触发操作是必要的。例如，玩游戏或钢琴应用程序。
 
-- 触摸目标必须足够大，方便用户交互 (参考 [BBC Mobile Accessibility Guidelines](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size) 关于触摸目标尺寸的指南)
+- 触摸目标必须足够大，方便用户交互（参考 [BBC 移动端无障碍指南](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size)关于触摸目标尺寸的指南）
 
-> **备注：** 该文档的[最初版本](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html) 是由 [Yura Zenevich](https://yzen.github.io/) 完成。
+> **备注：** 该文档的[最初版本](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html) 由 [Yura Zenevich](https://yzen.github.io/) 完成。
