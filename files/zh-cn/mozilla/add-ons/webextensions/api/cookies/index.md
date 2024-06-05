@@ -103,7 +103,7 @@ Firefox 包含拦截跟踪的特性。这些特性会分隔 cookie，以使跟�
 - {{WebExtAPIRef("cookies.getAllCookieStores()")}}
   - : 列出所有现有的 cookie 存储。
 
-## 事件处理程序
+## 事件处理器
 
 - {{WebExtAPIRef("cookies.onChanged")}}
   - : 当设置或移除 cookie 时触发。
