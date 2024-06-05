@@ -9,7 +9,7 @@ l10n:
 
 清除由网站创建的任何[本地存储](/zh-CN/docs/Web/API/Window/localStorage)。
 
-你可以使用 `removalOptions` 参数，该参数是一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象，用于：
+你可以使用 `removalOptions` 参数（一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象），用于：
 
 - 仅清除在特定时间之后创建的本地存储对象
 - 控制是仅清除普通网页创建的本地存储对象，还是同时清除托管应用程序和扩展程序创建的对象。
