@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`<munder>`** 这个 [MathML](/zh-CN/docs/Web/MathML) 元素用于在表达式下方附加重音或限制。它使用以下语法：`<munder> 基础 underscript </munder>`。
+**`<munder>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于在表达式下方附加重音或限制。它使用以下语法：`<munder> 基础 underscript </munder>`。
 
 ## 属性
 
@@ -33,7 +33,7 @@ l10n:
 </math>
 ```
 
-{{ EmbedLiveSample('munder_example', 700, 200, "", "") }}
+{{ EmbedLiveSample('munder 示例', 700, 200, "", "") }}
 
 ## 规范
 
