@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
 
-{{domxref("AbortController")}} 接口的只读属性 **`signal`** 返回一个 {{domxref("AbortSignal")}} 实例对象，该对象可以根据需要与异步操作建立通信或终止通信。
+{{domxref("AbortController")}} 接口的只读属性 **`signal`** 返回一个 {{domxref("AbortSignal")}} 实例对象，该对象可以根据需要与异步操作通信或终止异步操作。
 
 ## 值
 
