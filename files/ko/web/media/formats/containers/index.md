@@ -3,7 +3,7 @@ title: 미디어 컨테이너 포맷 (파일 타입)
 slug: Web/Media/Formats/Containers
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
+{{QuickLinksWithSubpages("/ko/docs/Web/Media")}}
 
 오디오와 비디오 파일 포맷은 두 파트에서 정의할 수 있습니다.(오디오 비디오가 한 파일에 있으면 물론 3 파트지요): 오디오/비디오 코덱와 미디어 컨테이너 포맷(도는 파일 타입)입니다. 이 가이드 문서는 웹에서 널리 쓰이는 컨테이너 포맷에 대해 알아보고 기본적인 스펙와 장단점 그리고 적절한 사용법을 설명하고 있습니다.
 
