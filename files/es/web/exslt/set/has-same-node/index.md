@@ -3,7 +3,7 @@ title: has-same-node
 slug: Web/EXSLT/set/has-same-node
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}{{XsltRef}}
+{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
 
 `set:has-same-node()` determina si dos conjuntos de nodos tienen algún nodo en común.
 

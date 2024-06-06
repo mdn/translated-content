@@ -3,7 +3,7 @@ title: tokenize
 slug: Web/EXSLT/str/tokenize
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}{{XsltRef}}
+{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
 
 `str:tokenize()` divide una cadena usando un conjunto de caracteres como delimitadores que determinan donde deberían ocurrir las divisiones, devolviendo un conjunto de nodos que contiene las cadenas resultantes.
 

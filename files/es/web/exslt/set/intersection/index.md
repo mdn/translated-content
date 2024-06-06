@@ -3,7 +3,7 @@ title: intersection
 slug: Web/EXSLT/set/intersection
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}{{XsltRef}}
+{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
 
 `set:intersection()` devuelve la intersección de dos conjuntos de nodos. En otras palabras, devuelve un conjunto de nodos que contiene todos los nodos de ambos conjuntos de nodos.
 
