@@ -3,6 +3,8 @@ title: caption
 slug: Web/HTML/Element/caption
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - Es el encargado de darle un título descriptivo a las tablas.

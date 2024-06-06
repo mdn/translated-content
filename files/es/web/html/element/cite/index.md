@@ -3,6 +3,8 @@ title: cite
 slug: Web/HTML/Element/cite
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - **cite** -_cita_ . Marca una referencia a una fuente, o el autor de un texto citado.

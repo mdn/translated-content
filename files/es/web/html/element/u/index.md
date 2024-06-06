@@ -3,6 +3,8 @@ title: u
 slug: Web/HTML/Element/u
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - Muestra el texto subrayado.
