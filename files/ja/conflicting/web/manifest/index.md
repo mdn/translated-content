@@ -1,6 +1,7 @@
 ---
 title: manifest
-slug: Web/HTML/Element/html/manifest
+slug: conflicting/Web/Manifest
+original_slug: Web/HTML/Element/html/manifest
 l10n:
   sourceCommit: 4a2b6cafbf9bc5b006eedbdf0e9fdf2c8626d5b6
 ---
