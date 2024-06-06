@@ -3,7 +3,7 @@ title: BeforeInstallPromptEvent.prompt()
 slug: Web/API/BeforeInstallPromptEvent/prompt
 ---
 
-{{APIRef}}
+{{APIRef}}{{SeeCompatTable}}{{Non-standard_header}}
 
 Метод **`prompt()`** интерфейса {{domxref("BeforeInstallPromptEvent")}} позволяет разработчику показывать подсказку об установке в любое время по своему выбору.
 
