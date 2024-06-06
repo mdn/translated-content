@@ -63,11 +63,11 @@ l10n:
 
 - `speculative`
 
-  - : 在预测连接中，浏览器已确定可能会很快发送到 URI 的请求，因此立即开始了 TCP 或 TLS 握手，因此当实际请求资源时，它会更快地准备就绪。请注意，此类连接不提供有效的选项卡信息，因此请求详情（如 `tabId`、`frameId`、`parentFrameId` 等）是不准确的。
+  - : 在预测连接中，浏览器已确定可能会很快发送到 URI 的请求，因此立即开始了 TCP 或 TLS 握手，因此当实际请求资源时，它会更快地准备就绪。请注意，此类连接不提供有效的标签页信息，因此请求详情（如 `tabId`、`frameId`、`parentFrameId` 等）是不准确的。
 
 - `stylesheet`
 
-  - : 用于描述文档表示的 [CSS](/zh-CN/docs/Web/CSS) 样式表。
+  - : 用于描述文档外观的 [CSS](/zh-CN/docs/Web/CSS) 样式表。
 
 - `sub_frame`
 
