@@ -19,8 +19,7 @@ l10n:
           >互联网是怎样工作的</a
         >，并且熟悉<a
           href="/zh-CN/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
-        >
-          网页、网站、网络服务器和搜索引擎间的区别</a
+          >网页、网站、网络服务器和搜索引擎间的区别</a
         >。
       </td>
     </tr>
