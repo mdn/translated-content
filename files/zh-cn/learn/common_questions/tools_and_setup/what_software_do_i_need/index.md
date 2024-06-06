@@ -151,11 +151,11 @@ _现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Community
 
 这里是一个高级文本编辑器的截图：
 
-![Screenshot of Notepad++.](notepadplusplus.png)
+![Notepad++ 的截图](notepadplusplus.png)
 
 这里是一个在线文本编辑器的截图：
 
-![](shiftedit.png)
+![ShiftEdit 的截图](shiftedit.png)
 
 ### 上传文件到网络
 
@@ -163,7 +163,7 @@ _现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Community
 
 > **备注：** FTP 本质上是不安全的。你应确保你的托管服务提供商允许使用安全连接，例如 SFTP 或通过 SSH 的 RSync。
 
-将文件上传到 Web 服务器是创建网站时非常重要的一步，因此我们在一篇单独的文章中详细介绍了这一过程。现在，这里有一些免费的基础 (S)FTP 客户端的简短列表：
+将文件上传到 Web 服务器是创建网站时非常重要的一步，因此我们在一篇单独的文章中详细介绍了这一过程。现在，这里有一些免费的基础（S）FTP 客户端的简短列表：
 
 <table class="standard-table">
   <thead>
@@ -184,7 +184,7 @@ _现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Community
       <td rowspan="3">
         <ul>
           <li>
-            <a href="https://filezilla-project.org/">FileZilla</a> (所有操作系统)
+            <a href="https://filezilla-project.org/">FileZilla</a>（所有操作系统）
           </li>
         </ul>
       </td>
@@ -194,10 +194,10 @@ _现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Community
       <td>
         <ul>
           <li>
-            <a href="https://wiki.gnome.org/action/show/Apps/Files?action=show&#x26;redirect=Apps%2FNautilus" rel="external">Nautilus/Files</a> (Gnome)
+            <a href="https://wiki.gnome.org/action/show/Apps/Files?action=show&#x26;redirect=Apps%2FNautilus" rel="external">Nautilus/Files</a>（Gnome）
           </li>
           <li>
-            <a href="https://dolphin.com/" rel="external">Dolphin</a> (KDE)
+            <a href="https://dolphin.com/" rel="external">Dolphin</a>（KDE）
           </li>
         </ul>
       </td>
@@ -214,7 +214,7 @@ _现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Community
       <td>ChromeOS</td>
       <td>
         <ul>
-          <li><a href="https://shiftedit.net/">ShiftEdit</a> (所有操作系统)</li>
+          <li><a href="https://shiftedit.net/">ShiftEdit</a>（所有操作系统）</li>
         </ul>
       </td>
       <td></td>
@@ -224,7 +224,7 @@ _现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Community
 
 ### 浏览页面
 
-正如你所知，你需要一个网页浏览器去查看网页。这里有一系列的[许多](http://en.wikipedia.org/wiki/List_of_web_browsers)] 可选浏览器供你个人使用，不过当你在开发一个网页时，你应当至少用以下的主流浏览器测试它，以保证你的网站可供大部分人浏览：
+正如你所知，你需要一个网页浏览器去查看网页。这里有一系列的[许多](http://en.wikipedia.org/wiki/List_of_web_browsers)可选浏览器供你个人使用，不过当你在开发一个网页时，你应当至少用以下的主流浏览器测试它，以保证你的网站可供大部分人浏览：
 
 - [Mozilla Firefox](https://www.mozilla.org/zh-CN/firefox/new/)
 - [Google Chrome](https://www.google.cn/chrome/)
