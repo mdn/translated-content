@@ -3,7 +3,7 @@ title: sort
 slug: Web/XSLT/Element/sort
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:sort>` définit les paramètres de tri pour des nœuds sélectionnés par `<xsl:apply-templates>` ou par `<xsl:for-each>`.
 

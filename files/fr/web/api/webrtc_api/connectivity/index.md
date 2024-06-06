@@ -3,6 +3,8 @@ title: Introduction à l'architecture WebRTC
 slug: Web/API/WebRTC_API/Connectivity
 ---
 
+{{DefaultAPISidebar("WebRTC")}}
+
 (AKA "WebRTC et l'océan des acronymes") WebRTC comporte de nombreuses parties distinctes et cela peut être accablant et source de confusion pour les nouveaux venus. Cet article a pour but d'expliquer quelles sont toutes ses parties, et comment elles s'imbriquent.
 
 ## Qu'est-ce que ICE?
