@@ -17,11 +17,10 @@ l10n:
         你该知道
         <a href="/zh-CN/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
           >互联网是怎样工作的</a
+        >，并且熟悉<a
+          href="/zh-CN/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
         >
-        ，并且熟悉<a
-          href="/zh-CN/docs/learn/常见问题/网页，网站，网页服务器和搜索引擎的区别是什么？"
-        >
-          网页，网站，网络服务器和搜索引擎间的区别</a
+          网页、网站、网络服务器和搜索引擎间的区别</a
         >。
       </td>
     </tr>
@@ -85,7 +84,7 @@ l10n:
 - 一个网页所拥有的*传入链接*越多，它在搜索结果中排名越高。
 - *外链*影响源和目标网页的搜索排名，但有多少不明确。
 
-[SEO](https://zh.wikipedia.org/wiki/搜尋引擎最佳化) (search engine optimization) 是如何使网站在搜索结果中排名高的研究。改善网站的链接使用是一种有用的搜索引擎优化技术。
+[SEO](https://zh.wikipedia.org/wiki/搜尋引擎最佳化)（search engine optimization）是如何使网站在搜索结果中排名高的研究。改善网站的链接使用是一种有用的搜索引擎优化技术。
 
 ## 下一步
 
