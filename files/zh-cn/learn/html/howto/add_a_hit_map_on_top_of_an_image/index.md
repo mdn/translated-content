@@ -3,7 +3,7 @@ title: Add a hit map on top of an image
 slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Learn/HTML/Howto")}}
 
 现在我们将学习如何设置图像映射，先讨论他的缺点。
 

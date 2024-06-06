@@ -3,7 +3,7 @@ title: 如何修正含有混合內容的網站
 slug: Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/zh-TW/docs/Web/Security")}}
 
 自 [Firefox 23](/zh-TW/docs/Mozilla/Firefox/Releases/23) 起，Firefox 會預設阻擋[主動型混合內容](/zh-TW/docs/Security/MixedContent#Mixed_active_content)。這項動作是跟在 [IE 9](http://blogs.msdn.com/b/ie/archive/2011/06/23/internet-explorer-9-security-part-4-protecting-consumers-from-malicious-mixed-content.aspx) 和 [Chrome](http://googleonlinesecurity.blogspot.com/2011/06/trying-to-end-mixed-scripting.html) 後實行的。
 

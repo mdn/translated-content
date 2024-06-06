@@ -3,7 +3,7 @@ title: 弱簽章演算法
 slug: Web/Security/Weak_Signature_Algorithm
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/zh-TW/docs/Web/Security")}}
 
 ### 簽章演算法的重要性
 
