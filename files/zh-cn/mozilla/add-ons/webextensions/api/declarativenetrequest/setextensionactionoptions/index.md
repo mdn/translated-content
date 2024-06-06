@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-配置是否将选项卡的操作计数显示为扩展操作的徽章文本，并提供增加操作计数的方法。
+配置是否将标签页的操作计数显示为扩展操作的徽章文本，并提供增加操作计数的方法。
 
 ## 语法
 
@@ -21,20 +21,20 @@ let count = browser.declarativeNetRequest.setExtensionActionOptions(
 
 - `extensionActionOptions`
 
-  - : 包含选项卡操作计数配置详细信息的对象。
+  - : 包含标签页操作计数配置详细信息的对象。
     - `displayActionCountAsBadgeText` {{optional_inline}}
       - : `boolean`。是否自动将页面的操作计数显示为扩展的徽章文本。此首选项在会话之间持久存在。
     - `tabUpdate` {{optional_inline}}
-      - : `object`。选项卡操作计数应如何调整的详细信息。有关更多详细信息，请参见 [tabUpdate](#tabupdate_2) 部分。
+      - : `object`。标签页操作计数应如何调整的详细信息。有关更多详细信息，请参见 [tabUpdate](#tabupdate_2) 部分。
 
 ## 附加对象
 
 ### tabUpdate
 
 - `increment`
-  - : `number`。要增加选项卡的操作计数的数量。负值会减少计数。
+  - : `number`。要增加标签页的操作计数的数量。负值会减少计数。
 - `tabId`
-  - : `number`。要更新操作计数的选项卡。
+  - : `number`。要更新操作计数的标签页。
 
 ### 返回值
 
