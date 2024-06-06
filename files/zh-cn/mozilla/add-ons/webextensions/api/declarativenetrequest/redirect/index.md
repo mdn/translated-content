@@ -12,16 +12,16 @@ l10n:
 > **备注：** 重定向操作不会重定向请求，请求会像往常一样继续进行，当：
 >
 > - 操作不更改请求。
-> - 重定向 URL 无效（例如，{{WebExtAPIRef("declarativeNetRequest.redirect","redirect.regexSubstitution")}} 的值不是有效的 URL）
+> - 重定向 URL 无效（例如，{{WebExtAPIRef("declarativeNetRequest.redirect","redirect.regexSubstitution")}} 的值不是有效的 URL）。
 
 ## 类型
 
 此类型的值为对象，包含以下属性：
 
 - `extensionPath` {{optional_inline}}
-  - : `string`。相对于扩展目录的路径。应以“/”开头。仅当资源在 [`web 无障碍资源`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) 中列出时，请求的发起者才能跟随重定向。
+  - : `string`。相对于扩展目录的路径。应以“/”开头。仅当资源在 [`web_accessible_resources`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) 中列出时，请求的发起者才能跟随重定向。
 - `regexSubstitution` {{optional_inline}}
-  - : `string`。规则指定了 `regexFilter` 的替换模式。URL 中的 `regexFilter` 的第一个匹配项将用此模式替换。在 `regexSubstitution` 中，使用反斜杠转义的数字 (`\1` 到 `\9`) 来插入相应的捕获组。`\0` 引用整个匹配的文本。
+  - : `string`。规则指定了 `regexFilter` 的替换模式。`regexFilter` 在 URL 中的第一个匹配项将用此模式替换。在 `regexSubstitution` 中，使用反斜杠转义的数字（`\1` 到 `\9`）来插入相应的捕获组。`\0` 指整个匹配的文本。
 - `transform` {{optional_inline}}
   - : {{WebExtAPIRef("declarativeNetRequest.URLTransform")}}。要执行的 URL 转换。
 - `url` {{optional_inline}}
