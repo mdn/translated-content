@@ -3,7 +3,7 @@ title: Tips for authoring fast-loading HTML pages
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
+{{QuickLinksWithSubpages("/ru/docs/Learn/HTML/Howto")}}
 
 Эти советы основаны на общих знаниях и экспериментах.
 
