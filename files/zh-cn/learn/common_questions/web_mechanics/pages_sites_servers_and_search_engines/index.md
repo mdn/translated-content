@@ -1,5 +1,5 @@
 ---
-title: 网页，网站，网络服务器和搜索引擎的区别是什么？
+title: 网页、网站、网络服务器和搜索引擎的区别是什么？
 slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
 l10n:
   sourceCommit: c62b98afeca1df0ffdd92bb96b8a006662073a8e
@@ -7,7 +7,7 @@ l10n:
 
 {{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
 
-在本文中我们描述了各种与网络相关的概念：网页，网站，网络服务器，以及搜索引擎。这些概念常被网络新手混淆，或被误用。让我们看看它们到底代指的是什么吧！
+在本文中我们描述了各种与网络相关的概念：网页、网站、网络服务器以及搜索引擎。这些概念常被网络新手混淆，或被误用。让我们看看它们到底代指的是什么吧！
 
 <table class="learn-box standard-table">
   <tbody>
@@ -22,7 +22,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">目标：</th>
-      <td>了解网页，网站，网络服务器和搜索引擎间的区别</td>
+      <td>了解网页、网站、网络服务器和搜索引擎间的区别</td>
     </tr>
   </tbody>
 </table>
@@ -34,9 +34,9 @@ l10n:
 随着进一步地探讨，我们将会涵盖这些概念和技术的方方面面，但以下的这些简单定义可以帮助你快速开始：
 
 - 网页（webpage）
-  - : 一份能够显示在网络浏览器（如 Firefox,，Google Chrome，Opera，Microsoft Edge 或 Apple 的 Safari）上的文档。网页也常被称作"web pages"（网页）或者就叫"pages"（页面）。
+  - : 一份能够显示在网络浏览器（如 Firefox、Google Chrome、Opera、Microsoft Edge 或 Apple 的 Safari）上的文档。网页也常被称作“web pages”（网页）或者就叫“pages”（页面）。
 - 网站（website）
-  - : 一个由许多网页组合在一起，并常常以各种方式相互连接的网页组成的集合。网站常被称作"web site"（网站）或简称"site"（站点）。
+  - : 一个由许多网页组合在一起，并常常以各种方式相互连接的网页组成的集合。网站常被称作“web site”（网站）或简称“site”（站点）。
 - 网络服务器（web server）
   - : 一个在互联网上托管网站的计算机。
 - 搜索引擎（search engine）
@@ -65,25 +65,25 @@ _还没有可用的资料，[请考虑贡献一个](/zh-CN/docs/MDN/Community/Co
 
 ### 网页
 
-一份网页文档是交给{{Glossary("browser", "浏览器")}}显示的简单文档。这种文档是由{{Glossary("HTML", "超文本标记语言")}}来编写的 (在[其他文章](/zh-CN/docs/Web/HTML)可查看更多详细内容)。网页文档可以插入各种各样不同类型的资源，例如：
+一份网页文档是交给{{Glossary("browser", "浏览器")}}显示的简单文档。这种文档是由{{Glossary("HTML", "超文本标记语言")}}来编写的（在[其他文章](/zh-CN/docs/Web/HTML)可查看更多详细内容）。网页文档可以插入各种各样不同类型的资源，例如：
 
-- _样式信息_ — 控制页面的观感
-- _脚本_ — 为页面添加交互性
-- _多媒体_ — 图像，音频，和视频
+- *样式信息*——控制页面的观感
+- *脚本*——为页面添加交互性
+- *多媒体*——图像，音频，和视频
 
 > **备注：** 浏览器也能显示其他文档，例如 {{Glossary("PDF")}} 文件或图像，但网页（webpage）这一概念专指 HTML 文档。其他情况我们则只会使用文档（document）这一概念
 
 网络上所有可用的网页都可以通过一个独一无二的地址访问到。要访问一个页面，只需在你的浏览器地址栏中键入页面的地址。
 
-![Example of a web page address in the browser address bar](web-page.jpg)
+![浏览器地址栏中的网页地址的示例](web-page.jpg)
 
 ### 网站
 
-*网站*是共享唯一域名的相互链接的网页的集合。给定网站的每个网页都提供了明确的链接—一般都是可点击文本的形式—允许用户从一个网页跳转到另一个网页。
+*网站*是共享唯一域名的相互链接的网页的集合。给定网站的每个网页都提供了明确的链接——一般都是可点击文本的形式——允许用户从一个网页跳转到另一个网页。
 
 要访问网站，请在浏览器地址栏中输入域名，浏览器将显示网站的主要网页或*主页*。
 
-![Example of a web site domain name in the browser address bar](web-site.jpg)
+![浏览器地址栏中的网站域名的示例](web-site.jpg)
 
 注意，也有可能有一个*单页面网站*：一个由单个网页组成的网站，在需要时通过动态更新添加新内容。
 
@@ -97,15 +97,15 @@ _还没有可用的资料，[请考虑贡献一个](/zh-CN/docs/MDN/Community/Co
 
 搜索引擎是网络上常见的混乱之源。搜索引擎是一个特定类型的网站，用以帮助用户在*其他*网站中寻找网页。
 
-搜索引擎数不胜数，有 [Google](https://www.google.com/), [Bing](https://www.bing.com/), [Yandex](https://www.yandex.com/), [DuckDuckGo](https://duckduckgo.com/) 等等。其中有的功能宽泛，有的专注于特定的主题。你可按需使用。
+搜索引擎数不胜数，有 [Google](https://www.google.com/)、[Bing](https://www.bing.com/)、[Yandex](https://www.yandex.com/)、[DuckDuckGo](https://duckduckgo.com/) 等等。其中有的功能宽泛，有的专注于特定的主题。你可按需使用。
 
 许多网上的初学者将搜索引擎和浏览器混淆了。让我们明确一下：浏览器是一个接收并显示网页的软件，搜索引擎则是一个帮助用户从其他网站中寻找网页的网站。这种混淆之所以出现是因为当一个人打开一个浏览器的时候，浏览器展现的是一个搜索引擎的主页。这有什么意义呢？很明显，因为你打开浏览器要做的第一件事就是去寻找一个网站。不要把基础设施（浏览器）和服务（搜索引擎）混淆。这种区分会对你很有帮助，但是甚至有些专业人员也还把它们说得很宽泛，所以不用对这种区分太过谨慎。
 
 下图是一个火狐浏览器把谷歌搜索框当作它默认开始页面的实际例子：
 
-![Example of Firefox nightly displaying a custom Google page as default](search-engine.jpg)
+![Firefox Nightly 显示自定义 Google 页面作为默认页面的示例](search-engine.jpg)
 
 ## 下一步
 
-- 继续探索： [网络服务器](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- 继续探索：[网络服务器](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
 - 看网页是如何被链接到网站中的：[理解超链接](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks)
