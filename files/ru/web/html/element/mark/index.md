@@ -3,6 +3,8 @@ title: <mark>
 slug: Web/HTML/Element/mark
 ---
 
+{{HTMLSidebar}}
+
 **HTML элемент `<mark>`** представляет текст, выделенный в справочных целях из-за своей _актуальности_ в определённом контексте. Например, он может быть использован на странице с результатом поиска, в которой выделяется каждый экземпляр искомого слова.
 
 | [Категории содержимого](/ru/docs/HTML/Content_categories) | [Содержимое потока](/ru/docs/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content), ощутимое содержимое. |

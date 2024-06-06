@@ -3,6 +3,8 @@ title: Отправка и получение бинарных данных
 slug: Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data
 ---
 
+{{DefaultAPISidebar("XMLHttpRequest API")}}
+
 ## Получение бинарных данных используя JavaScript arrays
 
 Свойство responseType объекта XMLHttpRequest можно задать для изменения ожидаемого типа ответа с сервера. Возможные значения: пустая строка (по умолчанию), "arraybuffer", "blob", "document", "json" и "text". Свойство response будет содержать тело сущности в соответствии с типом ответа, как ArrayBuffer, Blob, Document, JSON или string. Это значение равно null, если запрос не завершён или не был успешным.
