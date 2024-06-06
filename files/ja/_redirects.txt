@@ -4047,7 +4047,6 @@
 /ja/docs/Web/HTML/Element/h4	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h5	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h6	/ja/docs/Web/HTML/Element/Heading_Elements
-/ja/docs/Web/HTML/Element/html/manifest	/ja/docs/conflicting/Web/Manifest
 /ja/docs/Web/HTML/Element/image	/ja/docs/Web/HTML/Element/img
 /ja/docs/Web/HTML/Element/input/datetime	/ja/docs/Web/HTML/Element/input/datetime-local
 /ja/docs/Web/HTML/Element/video/waiting_event	/ja/docs/Web/API/HTMLMediaElement/waiting_event
