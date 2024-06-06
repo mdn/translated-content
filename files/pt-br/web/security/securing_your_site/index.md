@@ -3,7 +3,7 @@ title: Deixando seu site seguro
 slug: Web/Security/Securing_your_site
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/pt-BR/docs/Web/Security")}}
 
 Há várias coisas que você pode fazer para ajudar na segurança do seu site. Esse artigo oferece uma série de sugestões, bem como links para outros artigos fornecendo informações mais úteis.
 

@@ -3,7 +3,7 @@ title: Dicas para criar páginas HTML de carregamento rápido
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
+{{QuickLinksWithSubpages("/pt-BR/docs/Learn/HTML/Howto")}}
 
 Estas dicas são baseadas em conhecimento comum e experimentação.
 
