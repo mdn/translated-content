@@ -9,25 +9,25 @@ l10n:
 
 通过这篇文章，我们将了解什么是超链接以及超链接的重要性。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>
       <td>
         你该知道
-        <a href="/zh-CN/docs/learn/How_the_Internet_works"
-          >互联网是怎样工作的 </a
-        >，并且熟悉
-        <a
-          href="/zh-CN/docs/learn/常见问题/网页，网站，网页服务器和搜索引擎的区别是什么？"
-          >网页，网站，网络服务器和搜索引擎间的区别</a
+        <a href="/zh-CN/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
+          >互联网是怎样工作的</a
         >
+        ，并且熟悉<a
+          href="/zh-CN/docs/learn/常见问题/网页，网站，网页服务器和搜索引擎的区别是什么？"
+        >
+          网页，网站，网络服务器和搜索引擎间的区别</a
+        >。
       </td>
     </tr>
     <tr>
       <th scope="row">目标：</th>
       <td>了解 Web 上的超链接概念以及超链接的重要性。</td>
-      <td></td>
     </tr>
   </tbody>
 </table>
@@ -48,7 +48,7 @@ l10n:
 
 链接是一段具有下划线的蓝色文本，在视觉上与周围的文字明显不同。用手指触击或用鼠标点击一个链接会激活链接；你如果使用键盘，那么按 Tab 键直到链接处于焦点，然后按 Enter 键或空格键来激活链接。
 
-![Example of a basic display and effect of a link in a web page](link-1.png)
+![网页中链接的基本显示和效果的示例](link-1.png)
 
 链接是一个突破，它使得网络变得非常有用和成功。在本文的其余部分，我们讨论各种类型的链接及链接在现代网页设计中的重要性。
 
@@ -73,7 +73,7 @@ l10n:
 
 大多数链接将两个网页相连。而**锚**将一个网页中的两个段落相连。当你点击指向锚点的链接时，浏览器跳转到当前文档的另一部分，而不是加载新文档。但是，你可以像使用其他链接一样制作和使用锚点。
 
-![Example of a basic display and effect of an anchor in a web page](link-2.png)
+![网页中锚点的基本显示和效果的示例](link-2.png)
 
 ### 链接和搜索引擎
 
@@ -92,4 +92,4 @@ l10n:
 所以现在当然你想要建立一些链接的网页！
 
 - 为了获得更多的理论背景，了解 [URL 以及其结构](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)，因为每个链接都指向一个 URL。
-- 想要一些更实际的东西？我们的 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 模块中的[创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) 解释了如何实现详细的超链接
+- 想要一些更实际的东西？我们的 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 模块中的[创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) 解释了如何实现详细的超链接。
