@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-资源类型是一个请求的类型。可以与 {{WebExtAPIRef('webRequest.ResourceType')}} 进行比较。
+请求的资源类型。与 {{WebExtAPIRef('webRequest.ResourceType')}} 类似。
 
 ## 类型
 
@@ -35,7 +35,7 @@ l10n:
 
 - `main_frame`
 
-  - : 加载到选项卡中的顶级文档。
+  - : 加载到标签页中的顶级文档。
 
 - `media`
 
