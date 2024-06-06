@@ -122,7 +122,7 @@ RGB 是面向硬件的，反映了 CRT 的使用。许多开发人员和设计�
 
 ![带有 HSL 和 RGB 的颜色选择器，以及颜色对比度值。](microcolorsc.jpg)
 
-如前所述，[CSS 颜色模块](/zh-CN/docs/Web/CSS/CSS_colors)包括添加额外的颜色空间，包括 [`lch()`](/zh-CN/docs/Web/CSS/color_value/lch) 和 [`oklch()`](/zh-CN/docs/Web/CSS/color_value/oklch) 函数颜色记法以及 [`lab()`](/zh-CN/docs/Web/CSS/color_value/lab)和[`oklab()`](/zh-CN/docs/Web/CSS/color_value/oklab) 颜色坐标系统，可以指定任何可见颜色。尽管如此，由于其普及性，sRGB 仍然是默认和首选的无障碍性颜色空间。
+如前所述，[CSS 颜色模块](/zh-CN/docs/Web/CSS/CSS_colors)包括添加额外的颜色空间，包括 [`lch()`](/zh-CN/docs/Web/CSS/color_value/lch) 和 [`oklch()`](/zh-CN/docs/Web/CSS/color_value/oklch) 函数颜色记法以及 [`lab()`](/zh-CN/docs/Web/CSS/color_value/lab) 和 [`oklab()`](/zh-CN/docs/Web/CSS/color_value/oklab) 颜色坐标系统，可以指定任何可见颜色。尽管如此，由于其普及性，sRGB 仍然是默认和首选的无障碍性颜色空间。
 
 然而，在涉及到无障碍性的地方，标准和指南目前主要是使用 sRGB 颜色空间，尤其是在涉及颜色对比度比率时。
 
@@ -150,7 +150,7 @@ Protanopia 是一种色觉缺陷，眼睛中没有红色锥；sRGB 仍然可以�
 
 ### 对比度和字体大小
 
-[WCAG 对比度指南](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)将“大”文本定义为正常状态下为 `18pt`（大约为 `24px`）或更大，`加粗`文本为 `14pt`（大约为 `18.7px`）的文本。指出：
+[WCAG 对比度指南](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)将“大”文本定义为正常（`normal`）状态下为 `18pt`（大约为 `24px`）或更大，加粗（`bold`）文本为 `14pt`（大约为 `18.7px`）的文本。指出：
 
 _较大并且笔画较宽的文本在低对比度下更容易阅读。因此，较大文本的对比度要求较低。这允许作者对大文本使用更广泛的颜色选择，这有助于页面的设计，特别是标题部分。_
 
@@ -270,7 +270,7 @@ _较大并且笔画较宽的文本在低对比度下更容易阅读。因此，�
 
 当只看数字和术语时，色彩饱和度是一个难以理解的概念，所以考虑查看下面的图像，以说明颜色饱和度的概念：
 
-![Red Saturation from Wikimedia Commons svg saved as png Attribution: Datumizer [CC0]](320px-red_saturations.svg.png)
+![将来自维基共享资源的红色饱和度 SVG 保存为 PNG，署名：Datumizer [CC0]](320px-red_saturations.svg.png)
 
 同一“颜色”从最不饱和的左侧到最饱和的右侧。
 
