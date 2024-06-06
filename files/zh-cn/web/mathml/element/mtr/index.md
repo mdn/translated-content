@@ -11,12 +11,12 @@ l10n:
 
 ## 属性
 
-该元素的属性包括 [全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)。一些浏览器还可能支持以下属性：
+该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)。一些浏览器还可能支持以下属性：
 
 - `columnalign` {{Non-standard_Inline}}
-  - : 覆盖此行单元格的水平对齐方式，该水平对齐方式由 {{ MathMLElement("mtable") }} 指定。允许使用以空格分隔的多个值，并应用于相应的列（例如 `columnalign="left center right"`）。可能的值为：`left`、`center` 和 `right`。
+  - : 覆盖由 {{ MathMLElement("mtable") }} 对此行单元格指定的水平对齐方式。允许使用以空格分隔的多个值，并应用于相应的列（例如 `columnalign="left center right"`）。可能的值为：`left`、`center` 和 `right`。
 - `rowalign` {{Non-standard_Inline}}
-  - : 覆盖此行单元格的垂直对齐方式，该垂直对齐方式由 {{ MathMLElement("mtable") }} 指定。可能的值为：`axis`、`baseline`、`bottom`、`center` 和 `top`。
+  - : 覆盖由 {{ MathMLElement("mtable") }} 对此行单元格指定的垂直对齐方式。可能的值为：`axis`、`baseline`、`bottom`、`center` 和 `top`。
 
 ## 规范
 
