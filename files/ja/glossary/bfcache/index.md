@@ -6,14 +6,14 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-The **back/forward** cache, or **bfcache**, is a performance-enhancing feature available in modern browsers that enables instant back and forward navigation between previously-visited pages. It does this by storing a complete snapshot of a page as the user navigates away from it; the browser can then quickly restore the snapshot if the user decides to return to it, rather than needing to repeat the network requests required to load the page.
+**バック/フォワード**キャッシュ、または **bfcache** とは、モダンブラウザで利用可能なパフォーマンス向上機能で、以前訪れたページ間の瞬時的な前後ナビゲーションを可能にします。ユーザーがページから移動するときに、そのページの完全なスナップショットを保存しておき、ユーザーがそのページに戻ることを選択した場合、ページを読み込むための通信を繰り返す必要なく、すぐにそのスナップショットを復元できます。
 
-The snapshot contains the entire page in memory, including the JavaScript heap; in-progess code is paused when the user navigates away and resumed when they return to the page. A regular HTTP cache entry on the other hand contains only responses to previous requests. The bfcache therefore provides faster results than the HTTP cache.
+このスナップショットには、メモリー内のページ全体の状態が入っており、その中には JavaScript ヒープも含まれます。実行中のコードはユーザーが移動するとき一時停止され、ページに戻ったときに再開されます。一方、通常の HTTP キャッシュエントリーには、過去のリクエストへのレスポンスのみが含まれています。したがって、bfcache は HTTP キャッシュよりも高速な結果をもたらします。
 
-The downside is that bfcache entries require more resources, and create complexity in terms of how to represent in-progress code. Some code features (for example the [`unload`](/ja/docs/Web/API/Window/unload_event) handler) are not compatible, so their presence on a page blocks it from using the bfcache.
+その一方で、bfcache エントリーはより多くのリソースを必要とし、実行中のコードをどのように再現するのかについて、複雑さが生じます。いくつかのコード機能（例えば [`unload`](/ja/docs/Web/API/Window/unload_event) ハンドラー）は互換性がないため、それらがページに存在する場合は bfcache の使用がブロックされます。
 
-The bfcache is great for performance, so it is in your interests to make sure your pages are not blocked from using it. You can use the [`notRestoredReasons` API](/ja/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons) to monitor whether pages are blocked from using the bfcache, and reasons why.
+bfcache はパフォーマンスに優れているため、ページが bfcache の使用をブロックされていないことを確認することが重要です。[`notRestoredReasons` API](/ja/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons) を使うと、ページが bfcache の使用をブロックされているかどうかと、その理由を監視できます。
 
-## See also
+## 関連情報
 
 - [Back and forward cache](https://web.dev/articles/bfcache) on web.dev (2023)
