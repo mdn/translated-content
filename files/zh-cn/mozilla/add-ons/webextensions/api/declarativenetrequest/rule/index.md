@@ -9,7 +9,7 @@ l10n:
 
 描述匹配请求所采取的操作的对象。这些可以在由 [manifest.json 的键 `declarative_net_request`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) 链接的静态规则资源中指定，或通过 {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules")}} 或 {{WebExtAPIRef("declarativeNetRequest.updateSessionRules")}} 方法更动态地指定。
 
-有关规则的更多信息，请参见 [Rules](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#rules)s API 概述页面。
+有关规则的更多信息，请参见 API 概述页面中的 [Rules](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#rules)。
 
 ## 类型
 
