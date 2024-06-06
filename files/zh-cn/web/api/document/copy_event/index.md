@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-**`copy`** 事件会在用户通过浏览器的用户界面发起复制操作时触发 。
+**`copy`** 事件会在用户通过浏览器的用户界面发起复制操作时触发。
 
 该事件的原始目标是复制操作的预期目标 {{domxref("Element")}}。你可以在 {{domxref("Document")}} 接口上监听该事件，以便在捕获或冒泡阶段处理该事件。有关此事件的详细信息，请参阅 [Element：copy 事件](/zh-CN/docs/Web/API/Element/copy_event)页面。
 
