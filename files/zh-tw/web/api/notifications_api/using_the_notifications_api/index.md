@@ -3,7 +3,7 @@ title: 使用 Web Notifications
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 ---
 
-{{SeeCompatTable}}
+{{DefaultAPISidebar("Web Notifications")}}{{SeeCompatTable}}
 
 ## 摘要
 
