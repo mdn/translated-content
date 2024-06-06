@@ -58,7 +58,7 @@ MathML 使用以下语法，即一个基本表达式，后跟任意数量的后�
 </math>
 ```
 
-{{ EmbedLiveSample('示例', 700, 200) }}
+{{ EmbedLiveSample('使用 `<mprescripts/>`', 700, 200) }}
 
 ### 空附加符号
 
@@ -106,7 +106,7 @@ MathML 使用以下语法，即一个基本表达式，后跟任意数量的后�
 </math>
 ```
 
-{{ EmbedLiveSample('示例', 700, 200) }}
+{{ EmbedLiveSample('附加符号的顺序', 700, 200) }}
 
 ## 规范
 
