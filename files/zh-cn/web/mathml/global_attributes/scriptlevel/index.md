@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`scriptlevel`** [全局属性](/zh-CN/docs/Web/MathML/Global_attributes) 设置 MathML 元素的[数学深度](/zh-CN/docs/Web/CSS/math-depth)。它允许覆盖[用户代理样式表](/zh-CN/docs/Web/CSS/Cascade#user-agent_stylesheets)中定义的在 MathML 公式中自动计算[字体大小](/zh-CN/docs/Web/CSS/font-size)的规则。
+**`scriptlevel`** [全局属性](/zh-CN/docs/Web/MathML/Global_attributes)设置 MathML 元素的[数学深度](/zh-CN/docs/Web/CSS/math-depth)。它允许覆盖[用户代理样式表](/zh-CN/docs/Web/CSS/Cascade#用户代理样式表)中定义的在 MathML 公式中自动计算[字体大小](/zh-CN/docs/Web/CSS/font-size)的规则。
 
 ## 示例
 
@@ -33,7 +33,7 @@ l10n:
 <math scriptlevel="0"> <!-- 重置 math-depth 为 0 -->
 ```
 
-### 可选值
+### 值
 
 如果 `<U>` 是一个无符号[整数](/zh-CN/docs/Web/CSS/integer)（即移除了前缀符号的整数），则接受的值为：
 
@@ -54,7 +54,7 @@ l10n:
 
 ## 参见
 
-- 所有 [全局属性](/zh-CN/docs/Web/MathML/Global_attributes)
+- 所有[全局属性](/zh-CN/docs/Web/MathML/Global_attributes)
 - [displaystyle](/zh-CN/docs/Web/MathML/Global_attributes/displaystyle) 全局属性
 - {{cssxref("font-size")}}
 - {{cssxref("math-depth")}}
