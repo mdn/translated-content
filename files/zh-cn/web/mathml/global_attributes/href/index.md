@@ -13,7 +13,7 @@ l10n:
 
 ```html
 <!-- 将这个数学方程链接到维基百科关于毕达哥拉斯定理的文章。 -->
-<math href="https://en.wikipedia.org/wiki/Pythagorean_theorem">
+<math href="https://zh.wikipedia.org/wiki/勾股定理">
   <mi>c</mi>
   <mo>=</mo>
   <!-- 将这个平方根链接到相应的 SageMath 计算。 -->
@@ -35,7 +35,7 @@ l10n:
 
 ## 规范
 
-href 属性在任何面向浏览器的规范中都没有定义，但你可以在 [MathML 4](https://w3c.github.io/mathml/#interf_link)中找到描述。
+href 属性在任何面向浏览器的规范中都没有定义，但你可以在 [MathML 4](https://w3c.github.io/mathml/#interf_link) 中找到描述。
 
 ## 浏览器兼容性
 
