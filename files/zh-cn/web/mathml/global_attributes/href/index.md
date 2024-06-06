@@ -7,12 +7,12 @@ l10n:
 
 {{MathMLRef}}{{Non-standard_header}}
 
-**`href`** [全局属性](/zh-CN/docs/Web/MathML/Global_attributes) 在 MathML 元素上创建一个指向指定 URL 的超链接。
+**`href`** [全局属性](/zh-CN/docs/Web/MathML/Global_attributes)在 MathML 元素上创建一个指向指定 URL 的超链接。
 
 ## 示例
 
 ```html
-<!-- 将这个数学方程链接到维基百科关于毕达哥拉斯定理的文章。 -->
+<!-- 将这个数学方程链接到维基百科关于勾股定理的文章。 -->
 <math href="https://zh.wikipedia.org/wiki/勾股定理">
   <mi>c</mi>
   <mo>=</mo>
