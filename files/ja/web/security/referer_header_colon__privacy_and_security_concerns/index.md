@@ -3,7 +3,7 @@ title: Referer ヘッダーのプライバシーとセキュリティの考慮�
 slug: Web/Security/Referer_header:_privacy_and_security_concerns
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/ja/docs/Web/Security")}}
 
 [HTTP の Referer ヘッダー](/ja/docs/Web/HTTP/Headers/Referer)にまつわるプライバシーとセキュリティのリスクがあります。この記事ではこれらを説明し、これらのリスクを回避するためのアドバイスを提案します。
 
