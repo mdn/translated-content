@@ -34,10 +34,10 @@ l10n:
 随着进一步地探讨，我们将会涵盖这些概念和技术的方方面面，但以下的这些简单定义可以帮助你快速开始：
 
 - 网页（webpage）
-  - : 一份能够显示在网络浏览器（如 Firefox、Google Chrome、Opera、Microsoft Edge 或 Apple 的 Safari）上的文档。网页也常被称作“web pages”（网页）或者就叫“pages”（页面）。
+  - : 一份能够显示在网络浏览器（如 Firefox、Google Chrome、Opera、Microsoft Edge 或 Apple 的 Safari）上的文档。网页也常被称作“web page”（网页）或者就叫“page”（页面）。
 - 网站（website）
   - : 一个由许多网页组合在一起，并常常以各种方式相互连接的网页组成的集合。网站常被称作“web site”（网站）或简称“site”（站点）。
-- 网络服务器（web server）
+- Web 服务器（web server）
   - : 一个在互联网上托管网站的计算机。
 - 搜索引擎（search engine）
   - : 搜索引擎是帮助你查找其他网页的网络服务，例如 Google、Bing、Yahoo 或 DuckDuckGo。通常通过网络浏览器（例如，你可以直接在 Firefox、Chrome 等浏览器的地址栏中进行搜索引擎搜索）或通过网页（例如 [bing.com](https://www.bing.com/) 或 [duckduckgo.com](https://duckduckgo.com/)）访问搜索引擎。
@@ -89,7 +89,7 @@ _还没有可用的资料，[请考虑贡献一个](/zh-CN/docs/MDN/Community/Co
 
 ### 网络服务器
 
-一个*网络服务器*是一台托管一个或多个网站的计算机。 “托管”意思是所有的网页和它们的支持文件在那台计算机上都可用。网络服务器会根据每位用户的请求，将任意网页从托管的网站中发送到任意用户的浏览器中。
+一个*网络服务器*是一台托管一个或多个网站的计算机。“托管”意思是所有的网页和它们的支持文件在那台计算机上都可用。网络服务器会根据每位用户的请求，将任意网页从托管的网站中发送到任意用户的浏览器中。
 
 别把*网站*和*网络服务器*弄混了。例如，当你听到某人说：“我的网站没有响应”，这实际上指的是*网络服务器*没响应，并因此导致*网站*不可用。更重要的是，自从一个网络服务器能够托管多个网站，“网络服务器”这个术语从来都没被用来指定一个网站，因为这可能导致很大的混乱。在上面的例子中，如果我们说，“我的网络服务器没有响应”，这就指的是在那台网络服务器上的所有网页都不可用。
 
@@ -107,5 +107,5 @@ _还没有可用的资料，[请考虑贡献一个](/zh-CN/docs/MDN/Community/Co
 
 ## 下一步
 
-- 继续探索：[网络服务器](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- 继续探索：[什么是 Web 服务器](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
 - 看网页是如何被链接到网站中的：[理解超链接](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks)
