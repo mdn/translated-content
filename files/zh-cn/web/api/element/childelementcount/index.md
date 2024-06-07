@@ -1,6 +1,5 @@
 ---
 title: Element：childElementCount 属性
-short-title: childElementCount
 slug: Web/API/Element/childElementCount
 l10n:
   sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
