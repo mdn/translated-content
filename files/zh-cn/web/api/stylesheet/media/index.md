@@ -47,7 +47,7 @@ l10n:
           )}`,
         );
       }
-      // 这将输出:
+      // 这将输出：
       // document.styleSheets[0].media: {"0":"screen"}
       // document.styleSheets[0].media: {"0":"screen","1":"handheld"}
       // document.styleSheets[1].media: {"0":"screen","1":"print"}
