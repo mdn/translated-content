@@ -12,4 +12,4 @@ l10n:
 ## 参见
 
 - [RFC 7469](https://datatracker.ietf.org/doc/html/rfc7469)
-- 维基百科上的 [HTTP 公钥固定](https://en.wikipedia.org/wiki/HTTP公钥固定)
+- 维基百科上的 [HTTP 公钥固定](https://zh.wikipedia.org/wiki/HTTP公钥固定)
