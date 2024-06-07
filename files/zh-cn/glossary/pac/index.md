@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-代理自动配置文件（**PAC 文件**）是一个包含 `FindProxyForURL()` 函数的文件，浏览器使用该函数来确定请求（包括 HTTP、HTTPS 和 FTP）是直接到达目的地还是需要通过网络代理服务器转发。
+代理自动配置文件（**PAC 文件**）是一个包含 `FindProxyForURL()` 函数的文件，浏览器使用该函数来确定请求（包括 HTTP、HTTPS 和 FTP）是直接到达目的地还是需要通过 web 代理服务器转发。
 
 ```js
 function FindProxyForURL(url, host) {
