@@ -80,7 +80,7 @@ Canvas API 是非常强大的，但不总是很容易使用。以下列出的库
 - [Konva.js](https://konvajs.org/)：用于桌面端和移动端应用的 2D canvas 库。
 - [p5.js](https://p5js.org/)：包含给艺术家、设计师、教育者、初学者使用的完整的 canvas 绘制功能。
 - [Paper.js](http://paperjs.org/)：运行于 HTML Canvas 上的开源矢量图形脚本框架。
-- [Phaser](https://phaser.io/)：用于基于 Canvas 和 WebGL 的浏览器游戏的快速、自由、有趣的开源框架
+- [Phaser](https://phaser.io/)：用于基于 Canvas 和 WebGL 的浏览器游戏的快速、自由、有趣的开源框架。
 - [Pts.js](https://ptsjs.org)：用于 canvas 和 SVG 的创意编码和可视化的库。
 - [Rekapi](https://github.com/jeremyckahn/rekapi)：用于 Canvas 动画关键帧的 API。
 - [Scrawl-canvas](https://scrawl.rikweb.org.uk/)：用于创建和操控 2D canvas 元素的开源 JavaScript 库。
@@ -89,7 +89,7 @@ Canvas API 是非常强大的，但不总是很容易使用。以下列出的库
 
 > **备注：** 与 WebGL 有关的 2D 和 3D 的库请参见 [WebGL API](/zh-CN/docs/Web/API/WebGL_API)。
 
-## 标准
+## 规范
 
 {{Specifications}}
 
