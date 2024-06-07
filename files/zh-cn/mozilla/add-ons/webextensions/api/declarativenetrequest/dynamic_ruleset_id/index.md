@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-通过使用 {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules","updateDynamicRules")}} 添加到扩展的动态规则集的规则集 ID。
+通过使用 {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules","updateDynamicRules")}} 添加到扩展的动态规则中的规则集 ID。
 
 其值为 `"_dynamic"`。
 
