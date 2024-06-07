@@ -11,5 +11,5 @@ l10n:
 
 ## 参见
 
-- WHATWG 规范中的[节点数](https://dom.spec.whatwg.org/#concept-node)
+- WHATWG 规范中的[节点树](https://dom.spec.whatwg.org/#concept-node)
 - [Node](/zh-CN/docs/Web/API/Node) 对象
