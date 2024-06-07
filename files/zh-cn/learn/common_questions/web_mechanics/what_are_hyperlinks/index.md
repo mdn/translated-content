@@ -33,7 +33,7 @@ l10n:
 
 超链接（Hyperlink），通常简称为链接（link），是网络背后的核心概念。为了解释什么是链接，我们需要回到网络架构的底层。
 
-早在 1989 年，网络发明人蒂姆·伯纳斯·李（Tim Berners-Lee）就提出了 Web 的三大支柱：
+早在 1989 年，网络发明人蒂姆·伯纳斯-李（Tim Berners-Lee）就提出了 Web 的三大支柱：
 
 1. {{Glossary("URL")}}：跟踪 Web 文档的地址系统
 2. {{Glossary("HTTP")}}：通过给定 URL 来查找文档的传输协议
@@ -89,4 +89,4 @@ l10n:
 所以现在当然你想要建立一些链接的网页！
 
 - 为了获得更多的理论背景，了解 [URL 以及其结构](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)，因为每个链接都指向一个 URL。
-- 想要一些更实际的东西？我们的 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 模块中的[创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) 解释了如何实现详细的超链接。
+- 想要一些更实际的东西？我们的 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 模块中的[创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)详细解释了如何实现超链接。
