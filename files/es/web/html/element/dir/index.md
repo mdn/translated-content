@@ -3,6 +3,8 @@ title: dir
 slug: Web/HTML/Element/dir
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - El elemento `dir` (directorio) es un elemento desaprobado. En su origen fue pensado para crear directorios en multicolumna, en la actualidad es inutil.

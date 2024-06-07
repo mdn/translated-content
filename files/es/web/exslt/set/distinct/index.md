@@ -3,7 +3,7 @@ title: distinct
 slug: Web/EXSLT/set/distinct
 ---
 
-{{XsltRef}}
+{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
 
 `set:distinct()` devuelve un subconjunto de los nodos del conjunto de nods especificado, devolviendo sólo los nodos con valores de texto únicos.
 

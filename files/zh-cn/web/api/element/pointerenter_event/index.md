@@ -3,6 +3,8 @@ title: GlobalEventHandlers.onpointerenter
 slug: Web/API/Element/pointerenter_event
 ---
 
+{{APIRef}}
+
 HTML DOMpointerenter 事件的 GlobalEventHandlers（全局事件处理函数）
 
 ```js

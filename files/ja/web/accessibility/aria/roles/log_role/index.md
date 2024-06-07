@@ -3,6 +3,8 @@ title: log ロールの使用
 slug: Web/Accessibility/ARIA/Roles/log_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### 説明
 
 このテクニックは、[`log`](http://www.w3.org/TR/wai-aria/#log) ロールを使用する方法を示し、ブラウザーと支援技術に与える影響について説明します。

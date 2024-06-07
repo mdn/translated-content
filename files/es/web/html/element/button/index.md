@@ -3,6 +3,8 @@ title: button
 slug: Web/HTML/Element/button
 ---
 
+{{HTMLSidebar}}
+
 ## Definición
 
 **button** = botón.

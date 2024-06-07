@@ -3,6 +3,8 @@ title: strike
 slug: Web/HTML/Element/strike
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - Muestra el texto tachado con una linea horizontal.

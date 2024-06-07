@@ -3,6 +3,8 @@ title: 文件系统 API 的基本概念
 slug: Web/API/File_and_Directory_Entries_API/Introduction
 ---
 
+{{DefaultAPISidebar("File and Directory Entries API")}}
+
 本文是对[Basic_Concepts_About_the_Filesystem_API](/zh-CN/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API)一文的译文。
 
 文件系统 API（File System API）模拟网络应用程序可以导航到的本地文件系统。你可以开发应用在一个沙盒的虚拟文件系统中读、写、创建以及索引文件。
