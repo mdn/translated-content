@@ -9,7 +9,7 @@ l10n:
 
 清除浏览器的缓存。
 
-请注意，虽然此函数可以接受一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象，但该对象将被忽略。在使用此函数时，整个缓存总是被清除。
+请注意，虽然此函数可以接受一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象，但该对象将被忽略。在使用此函数时，总是会清除整个缓存。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
