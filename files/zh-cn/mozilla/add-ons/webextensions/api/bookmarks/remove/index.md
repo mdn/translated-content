@@ -24,11 +24,11 @@ var removingBookmark = browser.bookmarks.remove(
 ### 参数
 
 - `id`
-  - : {{jsxref("string")}} 要删除的书签或空书签文件夹的 id 标识
+  - : 一个{{jsxref("string", "字符串", "", 1)}}指定要移除的书签或空文件夹的 ID。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个没有参数的对象。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会被兑现且没有参数返回。
 
 如果与 `id` 参数对应的节点找不到或者是一个非空文件夹，则该 Promise 会以错误消息拒绝。
 
