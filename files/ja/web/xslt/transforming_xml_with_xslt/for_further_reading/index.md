@@ -5,6 +5,8 @@ l10n:
   sourceCommit: e14e4830bcd43de164623aaf787fbd695be31d91
 ---
 
+{{XsltSidebar}}
+
 [« Transforming XML with XSLT](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT)
 
 ## 印刷物

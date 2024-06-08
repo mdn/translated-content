@@ -2,7 +2,7 @@
 title: ウェブフォント
 slug: Learn/CSS/Styling_text/Web_fonts
 l10n:
-  sourceCommit: ffe4e4b49b540a18cc4c0e98d7cbd11795d8a360
+  sourceCommit: fc646c98ea7f77b2f100fc934ccf9f7a73132889
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
@@ -14,7 +14,7 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        基本的なコンピューターリテラシー、HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+        HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 入門</a
         >の学中）、 CSS の基本（<a href="/ja/docs/Learn/CSS/First_steps">CSS 入門</a>の学習）、
         <a href="/ja/docs/Learn/CSS/Styling_text/Fundamentals"
@@ -23,9 +23,9 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">目的:</th>
       <td>
-        サードパーティのサービスを使用するか、独自のコードを作成することによって、ウェブフォントをウェブページに適用する方法を習得する。
+        サードパーティのサービスを使用するか、独自のコードを作成することによって、ウェブフォントをウェブページに適用する方法を習得すること。
       </td>
     </tr>
   </tbody>
@@ -45,7 +45,7 @@ p {
 
 ## ウェブフォント
 
-しかし、これはとてもうまく動作する代替案があります。( IE バージョン 6 のような古いブラウザーでも対応しています。) CSS では、ウェブ上で利用できるフォントファイルを指定して、ウェブサイトにアクセスしたときに一緒にダウンロードさせることができます。つまり、この CSS 機能に対応しているブラウザーであれば、指定したフォントを表示することができるのです。すごいですね。 必要な構文は次のようなものです。
+しかし、これはとてもうまく動作する代替案があります。CSS では、ウェブ上で利用できるフォントファイルを指定して、ウェブサイトにアクセスしたときに一緒にダウンロードさせることができます。つまり、この CSS 機能に対応しているブラウザーであれば、指定したフォントを表示することができるのです。すごいですね。 必要な構文は次のようなものです。
 
 まず最初に、CSS の先頭に {{cssxref("@font-face")}} ブロックがあり、ダウンロードするフォントファイルを指定します。
 
@@ -74,8 +74,6 @@ html {
 4. フォントファイルを掲載されている順番は重要です。ダウンロードする複数のフォントファイルのリストをブラウザーに指定された場合、ブラウザーは使用される可能性のある最初のフォントファイルを選ぶことになります。そのため、最初に掲載する形式は、優先される形式、つまり WOFF2 とし、古い形式はその後に掲載されるようにします。ある形式を理解できないブラウザーは、リストの中の次の形式で対応することになります。
 5. 古いブラウザーで作業する必要がある場合、EOT (Embedded Open Type), TTF (TrueType Font), SVG ウェブフォントをダウンロードできるように指定する必要があります。この記事では、 Fontsquirrel Webfont Generator を使用して、必要なファイルを生成する方法を説明します。
 
-> **メモ:** テクノロジーとしてのウェブフォントは、バージョン 4 以降の Internet Explorer で対応しています。
-
 [Firefox Font Editor](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_fonts/index.html) を使えば、ウェブフォントであろうとなかろうと、ページで使用されているフォントを調べたり操作したりすることができます。この動画は素晴らしいチュートリアルを提供しています。
 
 {{EmbedYouTube("UazfLa1O94M")}}
@@ -84,7 +82,7 @@ html {
 
 この点を考慮して、最初の原則から基本的なウェブフォントの例を作り上げましょう。 埋め込まれたライブの例を使用してこれをデモすることは困難なので、代わりに、以下のセクションで詳述されている手順に従うことでプロセスを理解してください。
 
-コードを追加するための出発点として、[web-font-start.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-start.html) ファイルと [web-font-start.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-start.css) ファイルを使用する必要があります（[ライブの例](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html)を見る）。 ここで、これらのファイルのコピーをコンピュータの新しいディレクトリーに作成します。 `web-font-start.css` ファイルには、この例の基本的なレイアウトと組版を処理するための最小限の CSS がいくつかあります。
+コードを追加するための出発点として、[web-font-start.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-start.html) ファイルと [web-font-start.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-start.css) ファイルを使用する必要があります（[ライブの例](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html)を見る）。 ここで、これらのファイルのコピーをコンピューターの新しいディレクトリーに作成します。 `web-font-start.css` ファイルには、この例の基本的なレイアウトと組版を処理するための最小限の CSS がいくつかあります。
 
 ### フォントを探す
 
@@ -118,7 +116,7 @@ html {
 
 1. [sfnt2woff-zopfli](https://github.com/bramstein/sfnt2woff-zopfli) は ttf を woff へ変換
 2. [fontforge](https://fontforge.org/) は ttf を svg へ変換
-3. [batik ttf2svf](https://people.apache.org/~clay/batik/ttf2svg.html) は ttf を svg へ変換
+3. [batik ttf2svg](https://people.apache.org/~clay/batik/ttf2svg.html) は ttf を svg へ変換
 4. [woff2](https://github.com/google/woff2) は ttf を woff2 へ変換
 
 ### デモでのコードの実装
@@ -193,11 +191,11 @@ Fontsquirrel によって生成された `@font-face` 構文を調べてみま�
 - `src`: これらの行は CSS にインポートされるフォントファイルへのパス（`url` 部分）と各フォントファイルの形式（`format` 部分）を指定します。 どの場合も後者の部分はオプションですが、ブラウザーが使用できるフォントをすばやく見つけることができるため、宣言すると有益です。複数の宣言をカンマで区切ってリストすることができます。ブラウザーはそれらを検索し、最初に理解できるとわかったものを使用します。従って、先に WOFF2 のようなより新しくより良い形式を置き、そして後に TTF のようなより古くあまり良くない形式を置くのが最善です。
 - {{cssxref("font-weight")}}/{{cssxref("font-style")}}: これらの行はフォントの太さ、およびイタリックかどうかを指定します。 同じフォントの複数の太さをインポートする場合は、フォントファミリーのすべての異なるメンバーに異なる名前を付けるのではなく、それらの太さ/スタイルを指定して、異なる値の {{cssxref("font-weight")}}/{{cssxref("font-style")}} を使用することができます。 [@font-face tip: define font-weight and font-style to keep your CSS simple](https://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/)（英語）によって Roger Johansson が何をすべきかをより詳細に示しています。
 
-> **メモ:** ウェブフォントに特定の {{cssxref("font-variant")}} および {{cssxref("font-stretch")}} の値を指定することもできます。 新しいブラウザーでは、[`unicode-range`](/ja/docs/Web/CSS/@font-face/unicode-range) の値でウェブフォントで使用する特定の文字範囲を指定することもできます — サポートしているブラウザーでは、指定された文字のみがダウンロードされ、不要なダウンロードを節約できます。 Drew McLellan による [Creating Custom Font Stacks with Unicode-Range](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/)（英語）は、これをどのように利用するかについていくつかの役に立つアイデアを提供します。
+> **メモ:** ウェブフォントに特定の {{cssxref("font-variant")}} および {{cssxref("font-stretch")}} の値を指定することもできます。 新しいブラウザーでは、{{cssxref("@font-face/unicode-range", "unicode-range")}} の値でウェブフォントで使用する特定の文字範囲を指定することもできます。対応しているブラウザーでは、ページに指定した文字が含まれている場合にのみフォントがダウンロードされるため、不要なダウンロードを省くことができます。Drew McLellan による [Creating Custom Font Stacks with Unicode-Range](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/)（英語）は、これをどのように利用するかについていくつかの役に立つアイデアを提供します。
 
 ## 可変フォント
 
-ブラウザーで利用できる新しいフォント技術に、可変フォントと呼ばれるものがあります。これは、幅、太さ、スタイルごとに別個のフォントファイルを保有するのではなく、ひとつのファイルに書体の異なるさまざまなバリエーションを組み込むことができるフォントです。このコースの初級編ではやや高度な内容になっていますが、もしあなたが背伸びをして可変フォントを調べたいなら、[可変フォントガイド](/ja/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)を読んでみてください。
+ブラウザーで利用できる新しいフォント技術に、可変フォントと呼ばれるものがあります。これは、幅、太さ、スタイルごとに別個のフォントファイルを保有するのではなく、ひとつのファイルに書体の異なるさまざまなバリエーションを組み込むことができるフォントです。このコースの初級編ではやや高度な内容になっていますが、もしあなたが背伸びをして可変フォントを調べたいなら、[可変フォントガイド](/ja/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)を読んでみてください。
 
 ## まとめ
 

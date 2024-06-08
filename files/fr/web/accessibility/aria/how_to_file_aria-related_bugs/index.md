@@ -3,6 +3,8 @@ title: Comment déposer un bug lié à ARIA
 slug: Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
 ---
 
+{{AccessibilitySidebar}}
+
 L'état de la technologie ARIA a toujours dépendu de la communauté. Si vous remarquez un problème d'implémentation, veuillez prendre un instant pour en informer les développeurs. Voici comment déposer les bugs :
 
 > **Note :** Quand vous trouvez un bug, veuillez en aviser les tables de compatibilité liées dans la [page des exemples.](/fr/ARIA/examples)

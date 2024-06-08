@@ -3,7 +3,7 @@ title: local-name
 slug: Web/XPath/Functions/local-name
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `local-name` 関数は、与えられたノード集合内の最初のノードのローカル名 (local name) を表す文字列を返します。
 

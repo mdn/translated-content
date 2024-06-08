@@ -3,6 +3,8 @@ title: Firefox 16 for developers
 slug: Mozilla/Firefox/Releases/16
 ---
 
+{{FirefoxSidebar}}
+
 Firefox 16 は、2012 年 10 月 9 日にリリースされました。この記事では、ウェブ開発者に知らせるだけでなく、Firefox や Gecko 開発者、アドオン開発者にも役立つ主な変更点のリストを掲載しています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -42,7 +44,7 @@ Firefox 16 は、2012 年 10 月 9 日にリリースされました。この記
 - {{ domxref("CSSNamespaceRule") }} に結びつけられている `CSSRule.type` を、`UNKNOWN_RULE` (`0`) から `NAMESPACE_RULE` (`10`) に更新しました。([bug 765590](https://bugzilla.mozilla.org/show_bug.cgi?id=765590))
 - WebSMS API: {{domxref("SmsRequest")}} は、より一般的な {{domxref("DOMRequest")}} に置き換えられました。
 - 非標準の {{domxref("Element.scrollTopMax")}} および {{domxref("Element.scrollLeftMax")}} 読み取り専用プロパティが追加されました ([Firefox バグ 766937](https://bugzil.la/766937))。
-- {{domxref("Blob.blob", "Blob()")}} の第 2 引数に `null` または `undefined` をセットした場合、空ディレクトリとして扱われるようになりました ([Firefox バグ 7691119](https://bugzil.la/7691119))。
+- {{domxref("Blob.blob", "Blob()")}} の第 2 引数に `null` または `undefined` をセットした場合、空ディレクトリーとして扱われるようになりました ([Firefox バグ 7691119](https://bugzil.la/7691119))。
 
 ### JavaScript
 

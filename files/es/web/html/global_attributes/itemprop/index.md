@@ -3,6 +3,8 @@ title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
 ---
 
+{{HTMLSidebar("Global_attributes")}}
+
 Podemos dar más información al motor de búsqueda acerca de imágenes o datos adentro de cualquier tipo de etiquetas , como las propiedades : actores , clasificación ,genero . Para etiquetar las propiedades de un elemento , usa el atributo itemprop . Por ejemplo , para identificar al actor de una película añadir itemprop="director" al elemento que encierra el nombre del director.
 
 Aquí hay un ejemplo .

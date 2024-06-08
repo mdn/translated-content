@@ -1,8 +1,9 @@
 ---
 title: "HTMLCanvasElement: toDataURL() メソッド"
+short-title: toDataURL()
 slug: Web/API/HTMLCanvasElement/toDataURL
 l10n:
-  sourceCommit: b0870830e4c02596ca6c501f8f8b468a917eafc2
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("Canvas API")}}

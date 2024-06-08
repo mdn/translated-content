@@ -3,7 +3,7 @@ title: <xsl:strip-space>
 slug: Web/XSLT/Element/strip-space
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:strip-space>` 要素は空白を削除する必要があるソースドキュメント内の要素を定義します。
 

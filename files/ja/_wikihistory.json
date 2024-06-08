@@ -822,10 +822,6 @@
     "modified": "2019-10-07T15:20:37.310Z",
     "contributors": ["mfuji09", "dskmori", "kadokura"]
   },
-  "Glossary/GZip_compression": {
-    "modified": "2019-12-31T06:00:41.133Z",
-    "contributors": ["Uemmra3", "mfuji09", "dskmori", "araigumaG"]
-  },
   "Glossary/Garbage_collection": {
     "modified": "2019-03-18T20:53:18.903Z",
     "contributors": ["ksugimori", "Wind1808"]
@@ -2098,6 +2094,10 @@
   "Glossary/XSLT": {
     "modified": "2019-03-18T21:25:45.164Z",
     "contributors": ["silverskyvicto"]
+  },
+  "Glossary/gzip_compression": {
+    "modified": "2019-12-31T06:00:41.133Z",
+    "contributors": ["Uemmra3", "mfuji09", "dskmori", "araigumaG"]
   },
   "Glossary/safe": {
     "modified": "2020-04-14T12:21:33.696Z",
@@ -13872,6 +13872,10 @@
     "modified": "2020-10-15T21:49:27.051Z",
     "contributors": ["mfuji09", "wbamberg", "fscholz", "YuichiNukiyama"]
   },
+  "Web/API/Window/atob": {
+    "modified": "2020-10-15T21:16:19.721Z",
+    "contributors": ["mfuji09", "fscholz", "khalid32", "ethertank", "Potappo"]
+  },
   "Web/API/Window/back": {
     "modified": "2019-03-23T23:50:55.327Z",
     "contributors": ["yyss", "fscholz", "khalid32", "ethertank", "Potappo"]
@@ -13898,6 +13902,17 @@
   "Web/API/Window/blur_event": {
     "modified": "2020-10-15T21:36:49.995Z",
     "contributors": ["Marsf", "mfuji09", "Uemmra3", "Kenju"]
+  },
+  "Web/API/Window/btoa": {
+    "modified": "2020-10-15T21:16:19.842Z",
+    "contributors": [
+      "mfuji09",
+      "SphinxKnight",
+      "fscholz",
+      "khalid32",
+      "ethertank",
+      "Potappo"
+    ]
   },
   "Web/API/Window/caches": {
     "modified": "2020-10-15T21:49:48.643Z",
@@ -15062,21 +15077,6 @@
   "Web/API/XSLTProcessor/Introduction": {
     "modified": "2020-04-13T14:03:23.203Z",
     "contributors": ["mfuji09", "Marsf"]
-  },
-  "Web/API/atob": {
-    "modified": "2020-10-15T21:16:19.721Z",
-    "contributors": ["mfuji09", "fscholz", "khalid32", "ethertank", "Potappo"]
-  },
-  "Web/API/btoa": {
-    "modified": "2020-10-15T21:16:19.842Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "fscholz",
-      "khalid32",
-      "ethertank",
-      "Potappo"
-    ]
   },
   "Web/API/clearInterval": {
     "modified": "2019-03-23T23:49:51.484Z",

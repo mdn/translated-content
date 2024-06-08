@@ -3,7 +3,7 @@ title: boolean
 slug: Web/XPath/Functions/boolean
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 la fonction `boolean` évalue une expression et retourne `true` ou `false`.
 

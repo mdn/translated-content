@@ -3,6 +3,8 @@ title: Firefox 4 for developers
 slug: Mozilla/Firefox/Releases/4
 ---
 
+{{FirefoxSidebar}}
+
 Firefox 4 （6 月後半にベータ版リリースが予定されています）では、パフォーマンスが向上し、 HTML 5 やその他の革新的なウェブ技術のさらなるサポートが追加され、さらには、セキュリティも改善しています。 この記事では、この次期リリースについてのとっかかりの情報と、ウェブ開発者、アドオン開発者、そして、Gecko プラットフォーム開発者向けに利用可能になる機能の一覧を提供します。
 
 これらの機能の多くはすでに [Firefox 4 beta](http://www.mozilla.com/en-US/firefox/beta/) リリース、もしくは（冒険心にあふれているなら）[ナイトリー trunk ビルド](http://nightly.mozilla.org/) で試すことできます。
@@ -142,7 +144,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 ### DOM
 
 - [JavaScript 型付き配列](/ja/docs/JavaScript_typed_arrays)
-  - : JavaScript 型付き配列 (typed arrays) のサポートが追加されました。これを用いることで、ネイティブデータ型を用いた生のデータを含むバッファを扱えます。 [File API](/ja/docs/DOM/File)、[WebGL](/ja/docs/WebGL)、および [WebSockets](/ja/docs/WebSockets) を含む、いくつかの API でこれを用いることができます。
+  - : JavaScript 型付き配列 (typed arrays) のサポートが追加されました。これを用いることで、ネイティブデータ型を用いた生のデータを含むバッファーを扱えます。 [File API](/ja/docs/DOM/File)、[WebGL](/ja/docs/WebGL)、および [WebSockets](/ja/docs/WebSockets) を含む、いくつかの API でこれを用いることができます。
 - 範囲の境界領域の保持
   - : [`Range`](/ja/docs/Web/API/Range) オブジェクトに [`range.getClientRects()`](/ja/docs/Web/API/Range/getClientRects) および [`range.getBoundingClientRect()`](/ja/docs/Web/API/Range/getBoundingClientRect) メソッドが追加されました。
 - 任意の要素上でのマウスイベントのキャプチャ
@@ -227,7 +229,7 @@ Firefox 4 向けに既存の拡張を更新する上で役立つ Tips は、[Upd
 - [Services.jsm](/ja/docs/JavaScript_code_modules/Services.jsm)
   - : `Services.jsm` コードモジュールは preferences service や window mediator などのよく用いられているサービスへの参照を簡単に取得できるようにするゲッターを提供します。
 - [JS-ctypes API](/ja/docs/JavaScript_code_modules/ctypes.jsm)
-  - : JS-ctypes API は C 互換外部ライブラリ関数を XPCOM を利用すること無しに呼び出せるようにします。
+  - : JS-ctypes API は C 互換外部ライブラリー関数を XPCOM を利用すること無しに呼び出せるようにします。
 - [Add-ons Manager](/ja/docs/Addons/Add-on_Manager)
   - : 新しい Add-ons Manager はインストールされたアドオンについての情報の提供、それらの管理のためのサポート、および、アドオンのインストールと削除の方法を提供します。
 - [PopupNotifications.jsm](/ja/docs/JavaScript_code_modules/PopupNotifications.jsm)
@@ -235,7 +237,7 @@ Firefox 4 向けに既存の拡張を更新する上で役立つ Tips は、[Upd
 - [chrome: URL からコードモジュールを読み込む](/ja/docs/JavaScript_code_modules/Using#Locating_the_code_module)
   - : **chrome:** URL を用いて JavaScript コードモジュールを読め込むことができるようになりました。JAR ファイルの中でも可能です。
 - DownloadLastDir.jsm
-  - : [`DownloadLastDir.jsm`](/ja/docs/JavaScript_code_modules/DownloadLastDir.jsm) コードモジュールは `gDownloadLastDir` グローバル変数を提供します。この変数には最後のダウンロードが行われたディレクトリのパスを知るために利用可能な文字列が含まれています。このモジュールはプライベートブラウジングに対応しています。
+  - : [`DownloadLastDir.jsm`](/ja/docs/JavaScript_code_modules/DownloadLastDir.jsm) コードモジュールは `gDownloadLastDir` グローバル変数を提供します。この変数には最後のダウンロードが行われたディレクトリーのパスを知るために利用可能な文字列が含まれています。このモジュールはプライベートブラウジングに対応しています。
 - [PerfMeasurement.jsm コードモジュールを用いたパフォーマンスの測定](/ja/docs/Performance/Measuring_performance_using_the_PerfMeasurement.jsm_code_module)
   - : [`PerfMeasurement.jsm`](/ja/docs/JavaScript_code_modules/PerfMeasurement.jsm) コードモジュールは JavaScript コードにおける CPU レベルでのパフォーマンスデータを測定するための API を提供します。
 
@@ -374,8 +376,8 @@ Firefox 4 向けに既存の拡張を更新する上で役立つ Tips は、[Upd
 - Firefox 内に含まれるリソースのほとんどが単一の JAR アーカイブである `omni.jar` にまとめられました。これにより、 I/O が減少し、その結果、起動パフォーマンスが向上しています。詳細は [omni.jar について](/ja/docs/About_omni.jar)を読んでください。
 - `accessibility.disablecache` 設定はサポートされなくなりました。これはデバッグ目的で公開されており、もはや用いられません。
 - バージョンアップによって GUID が変更になるアドオンが正しく更新されるようになりました。
-- プラットフォーム固有のディレクトリを削除した副作用として、各プラットフォーム向けに異なった設定を提供することができなくなりました。
-- デフォルトで、拡張はインストール時に展開されなくなりました。その代わりに XPI ファイルから直接実行されます。拡張は古い挙動を選択するために[インストールマニフェスト](/ja/docs/Install_Manifests)内で [unpack](/ja/docs/Install_Manifests#unpack) プロパティを使用できます。バイナリーコンポーネントや、[js-ctypes](/ja/docs/js-ctypes) を利用して読み込まれる DLL、[検索プラグイン](/ja/docs/Creating_OpenSearch_plugins_for_Firefox)、辞書、ウィンドウアイコンは展開される必要があるように指定しなければなりません。[SQLite データベースを生成する](/ja/docs/XUL/School_tutorial/Local_Storage#SQLite)拡張や、拡張ディレクトリからファイルシステムへ相対的に何かをコピーする拡張も、それらのコードを変更する必要があるかもしれません。
+- プラットフォーム固有のディレクトリーを削除した副作用として、各プラットフォーム向けに異なった設定を提供することができなくなりました。
+- デフォルトで、拡張はインストール時に展開されなくなりました。その代わりに XPI ファイルから直接実行されます。拡張は古い挙動を選択するために[インストールマニフェスト](/ja/docs/Install_Manifests)内で [unpack](/ja/docs/Install_Manifests#unpack) プロパティを使用できます。バイナリーコンポーネントや、[js-ctypes](/ja/docs/js-ctypes) を利用して読み込まれる DLL、[検索プラグイン](/ja/docs/Creating_OpenSearch_plugins_for_Firefox)、辞書、ウィンドウアイコンは展開される必要があるように指定しなければなりません。[SQLite データベースを生成する](/ja/docs/XUL/School_tutorial/Local_Storage#SQLite)拡張や、拡張ディレクトリーからファイルシステムへ相対的に何かをコピーする拡張も、それらのコードを変更する必要があるかもしれません。
 - カスタマイズされた Firefox に[アプリケーションスタートアップ時に自動でインストールされる](/ja/docs/Developer_Guide/Customizing_Firefox#Including_extensions_with_your_distribution_of_Firefox)拡張を含められるようになりました。
 
 ## その他の変更
@@ -389,9 +391,9 @@ Firefox 4 向けに既存の拡張を更新する上で役立つ Tips は、[Upd
 - [ブートストラップ拡張](/ja/docs/Extensions/Bootstrapped_extensions)
   - : ブラウザーを再起動せずにインストール、アンインストール、更新（またはダウングレード）できる拡張を作成できるようになりました。
 - デフォルトプラグイン の削除
-  - : デフォルトプラグインが削除されました。アプリケーションプラグインフォルダもデフォルトで削除されますが、このフォルダ経由でプラグインをインストールするためのサポートはまだ存在します。[bug 533891](https://bugzilla.mozilla.org/show_bug.cgi?id=533891) を参照してください。
+  - : デフォルトプラグインが削除されました。アプリケーションプラグインフォルダーもデフォルトで削除されますが、このフォルダー経由でプラグインをインストールするためのサポートはまだ存在します。[bug 533891](https://bugzilla.mozilla.org/show_bug.cgi?id=533891) を参照してください。
 - Extension Manager の AddonManager への置き換え
-  - : [nsIExtensionManager](/ja/docs/XPCOM_Interface_Reference/nsIExtensionManager) は [AddonManager](/ja/docs/Addons/Add-on_Manager/AddonManager) に置き換えられました。 指定した拡張 ID からインストール場所を取得するための方法は現在のところ存在しないと思われるので、それに最も近い回避策はプロファイルディレクトリを見つけるためにディレクトリサービスを用い、それに "extensions" を追加することです（この手段ではプロファイルディレクトリ外あるいは他の位置にエイリアスされている拡張は取得できません）。
+  - : [nsIExtensionManager](/ja/docs/XPCOM_Interface_Reference/nsIExtensionManager) は [AddonManager](/ja/docs/Addons/Add-on_Manager/AddonManager) に置き換えられました。 指定した拡張 ID からインストール場所を取得するための方法は現在のところ存在しないと思われるので、それに最も近い回避策はプロファイルディレクトリーを見つけるためにディレクトリーサービスを用い、それに "extensions" を追加することです（この手段ではプロファイルディレクトリー外あるいは他の位置にエイリアスされている拡張は取得できません）。
 - 子 HWND はもはや利用されません
   - : Firefox は Windows で内部利用していた 子 HWND を作成しないようになりました。これらの HWND を扱うネィティブコードを用いる拡張を書いていた場合、その拡張は Firefox 4 では動作しないでしょう。HWND を用いることを止めるか、[NPAPI](/ja/docs/NPAPI) プラグインで HWND に依存するコードをラップする必要があります。それは多大な作業であり、HWND を直接用いることを避けられるならば、そうすべきです。
 - ジェスチャの変更

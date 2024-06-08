@@ -3,6 +3,8 @@ title: Convertir código a cadena de texto (serializing) y visceversa (parsing) 
 slug: Web/XML/Parsing_and_serializing_XML
 ---
 
+{{QuickLinksWithSubpages("/es/docs/Web/XML")}}
+
 La plataforma web proveé Los siguientes objetos para hacer parsing (convertir una cadena de texto a código) y serializing (visceversa) a un XML:
 
 - [XMLSerializer](/en/XMLSerializer) para convertir a tipo string el arbol del DOM

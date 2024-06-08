@@ -3,7 +3,7 @@ title: "true"
 slug: Web/XPath/Functions/true
 ---
 
-{{XsltRef}}
+{{XsltSidebar}}{{XsltRef}}
 
 La función `true` devuelve un valor booleano de verdadero.
 

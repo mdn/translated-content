@@ -3,7 +3,7 @@ title: <xsl:copy-of>
 slug: Web/XSLT/Element/copy-of
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:copy-of>` 要素は、select 属性が出力文書に指定するものすべての深いコピー (子孫ノードを含む) を作成します。
 

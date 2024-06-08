@@ -5,6 +5,8 @@ l10n:
   sourceCommit: a3dd560fabb1fe4051f6273f41b337a5b1245a6e
 ---
 
+{{JSRef}}
+
 **`Intl.Segmenter()`** コンストラクターは、ロケールに依存したテキスト分割を可能にする [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトを生成します。
 
 {{EmbedInteractiveExample("pages/js/intl-segmenter.html")}}

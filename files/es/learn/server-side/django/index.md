@@ -3,6 +3,8 @@ title: Framework Web Django (Python)
 slug: Learn/Server-side/Django
 ---
 
+{{LearnSidebar}}
+
 Django es un framework web extremadamente popular y completamente funcional, escrito en Python. El módulo muestra por qué Django es uno de los frameworks de servidores web más populares, cómo configurar un entorno de desarrollo y cómo empezar a usarlo para crear tus propias aplicaciones web.
 
 ## Requisitos Previos

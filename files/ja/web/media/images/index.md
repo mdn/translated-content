@@ -3,6 +3,8 @@ title: HTML での画像の使用
 slug: Web/Media/images
 ---
 
+{{QuickLinksWithSubpages("/ja/docs/Web/Media")}}
+
 {{Glossary("HTML")}} の {{HTMLElement("img")}} 要素で HTML 文書に画像を埋め込むことができ、 {{HTMLElement("picture")}} 要素を使用すると[レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)を使用することができます。このガイドでは、ウェブサイトへの画像の追加を扱うリソースへのリンクを紹介します。
 
 ## リファレンス

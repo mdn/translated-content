@@ -3,6 +3,8 @@ title: Locating DOM elements using selectors
 slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 ---
 
+{{DefaultAPISidebar("DOM")}}
+
 Selectors API предоставляет методы, с помощью которых можно быстро и просто получить доступ к узлам [`Element`](/ru/docs/DOM/element) из DOM путём сопоставления с набором селекторов. Это намного быстрее, чем прошлые техники, где надо было, например, использовать цикл в JS-коде, чтобы найти конкретные элементы.
 
 ## Интерфейс NodeSelector (The NodeSelector interface)

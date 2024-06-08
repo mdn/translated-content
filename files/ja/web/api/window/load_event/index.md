@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 #### 結果
 
-{{ EmbedLiveSample('Live_example', '100%', '160px') }}
+{{ EmbedLiveSample('ライブデモ', '100%', '160px') }}
 
 ## 仕様書
 

@@ -1,6 +1,8 @@
 ---
 title: <fencedframe>：圍欄頁框元素
 slug: Web/HTML/Element/fencedframe
+l10n:
+  sourceCommit: 5618052b7314a29552ff9e4331dd3da13dc19f5e
 ---
 
 {{HTMLSidebar}}{{SeeCompatTable}}
@@ -18,15 +20,15 @@ slug: Web/HTML/Element/fencedframe
 
 該元素包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
-- `allow`
+- `allow` {{experimental_inline}}
 
   - : 為 `<fencedframe>` 指定一個[權限策略](/zh-TW/docs/Web/HTTP/Permissions_Policy)，該策略基於請求的原始位置定義了哪些功能對 `<fencedframe>` 可用。有關可以通過設置在圍欄頁框上的策略來控制哪些功能的更多詳細信息，請參見[可用於圍欄頁框權限策略](#可用於圍欄頁框權限策略)。
 
-- `height`
+- `height` {{experimental_inline}}
 
   - : 一個無單位的整數，表示圍欄頁框的高度，以 CSS 像素為單位。默認值為 `150`。
 
-- `width`
+- `width` {{experimental_inline}}
   - : 一個無單位的整數，表示圍欄頁框的寬度，以 CSS 像素為單位。默認值為 `300`。
 
 ## 可用於圍欄頁框權限策略

@@ -3,6 +3,8 @@ title: attributeType
 slug: Web/SVG/Attribute/attributeType
 ---
 
+{{SVGRef}}
+
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 Этот атрибут задаёт пространство имён, в котором определяются конечный атрибут и связанные с ним значения.
