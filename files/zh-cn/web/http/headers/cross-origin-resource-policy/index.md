@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`Cross-Origin-Resource-Policy`** 响应标头表示期望浏览器阻止对给定资源的非跨源资源共享或跨站点请求。
+HTTP **`Cross-Origin-Resource-Policy`** 响应标头表示期望浏览器阻止对给定资源在 no-cors 模式下的跨源或跨站点请求。
 
 <table class="properties">
   <tbody>
@@ -30,7 +30,7 @@ Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
 
 ## 示例
 
-以下响应标头将导致兼容的用户代理拒绝非跨源资源共享请求：
+以下响应标头将导致兼容的用户代理拒绝 no-cors 模式下的跨源请求：
 
 ```http
 Cross-Origin-Resource-Policy: same-origin
