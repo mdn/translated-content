@@ -10,7 +10,7 @@ l10n:
 <table class="fullwidth-table standard-table">
   <tbody>
     <tr>
-      <th scope="row" style="width: 30%">Type</th>
+      <th scope="row">Type</th>
       <td><code>String</code></td>
     </tr>
     <tr>
