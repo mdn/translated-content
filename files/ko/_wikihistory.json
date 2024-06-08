@@ -2691,11 +2691,11 @@
       "dakeshi"
     ]
   },
-  "Web/API/Document_object_model/Locating_DOM_elements_using_selectors": {
+  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
     "modified": "2019-05-29T17:36:17.250Z",
     "contributors": ["jswisher", "alattalatta"]
   },
-  "Web/API/Document_object_model/Using_the_Document_Object_Model": {
+  "Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
     "modified": "2020-03-10T10:48:51.010Z",
     "contributors": ["kimploo"]
   },
@@ -4541,6 +4541,10 @@
     "modified": "2020-10-15T21:39:32.282Z",
     "contributors": ["alattalatta", "Parcovia", "."]
   },
+  "Web/API/Window/requestAnimationFrame": {
+    "modified": "2020-10-15T22:05:43.676Z",
+    "contributors": ["cs09g", "Snark"]
+  },
   "Web/API/Window/requestIdleCallback": {
     "modified": "2020-10-15T22:01:12.462Z",
     "contributors": ["alattalatta", "jeonnoej"]
@@ -4656,10 +4660,6 @@
   "Web/API/setTimeout": {
     "modified": "2019-03-23T22:22:22.449Z",
     "contributors": ["DevJang", "TroyTae"]
-  },
-  "Web/API/window/requestAnimationFrame": {
-    "modified": "2020-10-15T22:05:43.676Z",
-    "contributors": ["cs09g", "Snark"]
   },
   "Web/Accessibility": {
     "modified": "2019-09-09T14:15:43.285Z",

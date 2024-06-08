@@ -3,6 +3,8 @@ title: Updating extensions for Firefox 3.1
 slug: Mozilla/Firefox/Releases/3.5/Updating_extensions
 ---
 
+{{FirefoxSidebar}}
+
 この記事は、自分の拡張機能を Firefox 3.1 で正しく動作するよう更新しようとしている拡張機能開発者のために役立つ情報を提供します。
 
 ## 更新の基本
@@ -13,7 +15,7 @@ slug: Mozilla/Firefox/Releases/3.5/Updating_extensions
 
 まずはじめに、拡張機能の `install.rdf` ファイルを編集して、(Firefox 3.1 beta 2 でテストを行っている場合は) `maxVersion` を 3.1b2 に更新し、それに合わせて `version` を上げましょう。
 
-Firefox のプロファイルを新規作成し、テストが常用のプロファイルに影響しないようにします。 Firefox が含まれるディレクトリに移動して、以下のコマンドを実行します。
+Firefox のプロファイルを新規作成し、テストが常用のプロファイルに影響しないようにします。 Firefox が含まれるディレクトリーに移動して、以下のコマンドを実行します。
 
 ```
 firefox -createProfile testBeta2

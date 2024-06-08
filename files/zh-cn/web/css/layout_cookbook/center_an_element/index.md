@@ -27,10 +27,6 @@ slug: Web/CSS/Layout_cookbook/Center_an_element
 
 将来我们可能不需要将父容器设置为伸缩容器就可以居中元素，因为此处使用的“盒子对齐”属性也被指定为适用于区块布局。然而，当前在区块布局上对盒子对齐属性的支持仍然是有限的，因此目前使用伸缩盒子来实现居中还是最可靠的方法。
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## MDN 上相关的资源
 
 - [弹性盒中的盒对齐方式（Box Alignment）](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)

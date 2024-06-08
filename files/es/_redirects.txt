@@ -310,7 +310,7 @@
 /es/docs/DOM/window.navigator.registerProtocolHandler	/es/docs/Web/API/Navigator/registerProtocolHandler
 /es/docs/DOM/window.navigator.vibrate	/es/docs/Web/API/Navigator/vibrate
 /es/docs/DOM/window.onload	/es/docs/conflicting/Web/API/Window/load_event
-/es/docs/DOM/window.requestAnimationFrame	/es/docs/Web/API/window/requestAnimationFrame
+/es/docs/DOM/window.requestAnimationFrame	/es/docs/Web/API/Window/requestAnimationFrame
 /es/docs/DOM:Selection:addRange	/es/docs/Web/API/Selection/addRange
 /es/docs/DOM:Selection:anchorNode	/es/docs/Web/API/Selection/anchorNode
 /es/docs/DOM:Selection:anchorOffset	/es/docs/Web/API/Selection/anchorOffset
@@ -857,7 +857,7 @@
 /es/docs/HTML:Elemento:u	/es/docs/Web/HTML/Element/u
 /es/docs/HTML:Elemento:ul	/es/docs/Web/HTML/Element/ul
 /es/docs/HTML:Elemento:var	/es/docs/Web/HTML/Element/var
-/es/docs/How_to_create_a_DOM_tree	/es/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree
+/es/docs/How_to_create_a_DOM_tree	/es/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree
 /es/docs/Html_Validator_(externo)	https://addons.mozilla.org/firefox/249/
 /es/docs/IndexedDB-840092-dup	/es/docs/Web/API/IndexedDB_API
 /es/docs/IndexedDB-840092-dup/Usando_IndexedDB	/es/docs/Web/API/IndexedDB_API/Using_IndexedDB
@@ -1289,7 +1289,7 @@
 /es/docs/Referencia_DOM_de_Gecko/Cómo_espacioenblanco	/es/docs/Web/API/Document_Object_Model/Whitespace
 /es/docs/Referencia_DOM_de_Gecko/Ejemplos	/es/docs/Web/API/Document_Object_Model/Examples
 /es/docs/Referencia_DOM_de_Gecko/Introducción	/es/docs/Web/API/Document_Object_Model/Introduction
-/es/docs/Referencia_DOM_de_Gecko/Localizando_elementos_DOM_usando_selectores	/es/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
+/es/docs/Referencia_DOM_de_Gecko/Localizando_elementos_DOM_usando_selectores	/es/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 /es/docs/Referencia_DOM_de_Gecko:Ejemplos	/es/docs/Web/API/Document_Object_Model/Examples
 /es/docs/Referencia_DOM_de_Gecko:Introducción	/es/docs/Web/API/Document_Object_Model/Introduction
 /es/docs/Referencia_de_JavaScript_1.5	/es/docs/Web/JavaScript/Reference
@@ -1585,7 +1585,7 @@
 /es/docs/Usar_la_Geolocalización	/es/docs/Web/API/Geolocation_API
 /es/docs/Using_files_from_web_applications	/es/docs/Web/API/File_API/Using_files_from_web_applications
 /es/docs/Using_geolocation	/es/docs/Web/API/Geolocation_API
-/es/docs/Using_the_W3C_DOM_Level_1_Core	/es/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
+/es/docs/Using_the_W3C_DOM_Level_1_Core	/es/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /es/docs/Uso_de_URL_como_valor_de_la_propiedad_cursor	/es/docs/conflicting/Web/CSS/cursor
 /es/docs/Web/API/API_de_almacenamiento_web	/es/docs/Web/API/Web_Storage_API
 /es/docs/Web/API/API_de_almacenamiento_web/Usando_la_API_de_almacenamiento_web	/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
@@ -1614,8 +1614,8 @@
 /es/docs/Web/API/Coordinates	/es/docs/Web/API/GeolocationCoordinates
 /es/docs/Web/API/Coordinates/latitude	/es/docs/Web/API/GeolocationCoordinates/latitude
 /es/docs/Web/API/DOMString	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
-/es/docs/Web/API/DOMString/Binary	/es/docs/Web/API/btoa
-/es/docs/Web/API/DOMString/Cadenas_binarias	/es/docs/Web/API/btoa
+/es/docs/Web/API/DOMString/Binary	/es/docs/Web/API/Window/btoa
+/es/docs/Web/API/DOMString/Cadenas_binarias	/es/docs/Web/API/Window/btoa
 /es/docs/Web/API/Document/abrir	/es/docs/Web/API/Document/open
 /es/docs/Web/API/Document/async	/es/docs/Web/API/XMLDocument
 /es/docs/Web/API/Document/crearAtributo	/es/docs/Web/API/Document/createAttribute
@@ -1629,8 +1629,8 @@
 /es/docs/Web/API/DocumentOrShadowRoot/getSelection	/es/docs/Web/API/Document/getSelection
 /es/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/es/docs/Web/API/Document/pointerLockElement
 /es/docs/Web/API/DocumentOrShadowRoot/styleSheets	/es/docs/Web/API/Document/styleSheets
-/es/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core	/es/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
-/es/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example	/es/docs/Web/API/Document_object_model/Using_the_Document_Object_Model/Example
+/es/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core	/es/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
+/es/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example	/es/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example
 /es/docs/Web/API/Element/accessKey	/es/docs/Web/API/HTMLElement/accessKey
 /es/docs/Web/API/Element/ongotpointercapture	/es/docs/Web/API/Element/gotpointercapture_event
 /es/docs/Web/API/Element/onlostpointercapture	/es/docs/Web/API/Element/lostpointercapture_event
@@ -1723,14 +1723,14 @@
 /es/docs/Web/API/Window.setTimeout	/es/docs/Web/API/setTimeout
 /es/docs/Web/API/Window/applicationCache	/es/docs/orphaned/Web/API/Window/applicationCache
 /es/docs/Web/API/Window/dialogArguments	/es/docs/orphaned/Web/API/Window/dialogArguments
-/es/docs/Web/API/WindowBase64.atob	/es/docs/Web/API/atob
+/es/docs/Web/API/WindowBase64.atob	/es/docs/Web/API/Window/atob
 /es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando	/es/docs/Glossary/Base64
-/es/docs/Web/API/WindowBase64/atob	/es/docs/Web/API/atob
+/es/docs/Web/API/WindowBase64/atob	/es/docs/Web/API/Window/atob
 /es/docs/Web/API/WindowEventHandlers	/es/docs/Web/API/Window#eventos
 /es/docs/Web/API/WindowEventHandlers/onbeforeunload	/es/docs/Web/API/Window/beforeunload_event
 /es/docs/Web/API/WindowEventHandlers/onhashchange	/es/docs/Web/API/Window/hashchange_event
 /es/docs/Web/API/WindowEventHandlers/onpopstate	/es/docs/Web/API/Window/popstate_event
-/es/docs/Web/API/WindowOrWorkerGlobalScope/atob	/es/docs/Web/API/atob
+/es/docs/Web/API/WindowOrWorkerGlobalScope/atob	/es/docs/Web/API/Window/atob
 /es/docs/Web/API/WindowOrWorkerGlobalScope/caches	/es/docs/Web/API/Window/caches
 /es/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/es/docs/Web/API/clearInterval
 /es/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/es/docs/Web/API/clearTimeout
@@ -1748,6 +1748,8 @@
 /es/docs/Web/API/XMLHttpRequest/FormData	/es/docs/Web/API/FormData
 /es/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /es/docs/Web/API/XMLHttpRequest/onreadystatechange	/es/docs/Web/API/XMLHttpRequest/readystatechange_event
+/es/docs/Web/API/atob	/es/docs/Web/API/Window/atob
+/es/docs/Web/API/btoa	/es/docs/Web/API/Window/btoa
 /es/docs/Web/API/caches	/es/docs/Web/API/Window/caches
 /es/docs/Web/API/console/assert	/es/docs/Web/API/console/assert_static
 /es/docs/Web/API/console/count	/es/docs/Web/API/console/count_static

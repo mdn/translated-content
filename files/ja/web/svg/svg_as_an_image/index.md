@@ -5,6 +5,8 @@ l10n:
   sourceCommit: f4f8e2f18ccf19a0bee59e1fe78753e276b98232
 ---
 
+{{SVGRef}}
+
 SVG 画像は、様々な場面で画像形式の一つとして使用することができます。多くのブラウザーは SVG 画像を以下の場所で対応しています。
 
 - HTML の {{HTMLElement("img")}} または {{SVGElement("svg")}} 要素

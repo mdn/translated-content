@@ -3,6 +3,8 @@ title: Utiliser l'API Web Storage
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
 
+{{DefaultAPISidebar("Web Storage API")}}
+
 L'API "Web Storage" fournit des mécanismes par lesquels les navigateurs web peuvent stocker des paires de clé-valeur, d'une manière plus intuitive qu'en utilisant des cookies. Cet article décrit pas à pas comment se servir de cette technologie facile d'utilisation.
 
 ## Concepts de base

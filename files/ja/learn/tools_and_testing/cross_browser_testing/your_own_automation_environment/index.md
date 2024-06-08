@@ -880,7 +880,7 @@ Sauce Labs や BrowserStack のようなサービスを使用したくない場�
 
 これでサーバーを実行したので、リモートの selenium サーバーで動作するデモテストを作成してみましょう。
 
-1. `google_test.js` ファイルのコピーを作成し、 `google_test_remote.js` と名付け、自分のプロジェクトディレクトリに置きます。
+1. `google_test.js` ファイルのコピーを作成し、 `google_test_remote.js` と名付け、自分のプロジェクトディレクトリーに置きます。
 2. コードの行（`const driver = …` で始まる行）を次のように更新します。
 
    ```js

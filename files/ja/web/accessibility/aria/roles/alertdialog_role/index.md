@@ -3,6 +3,8 @@ title: alertdialog ロールの使用
 slug: Web/Accessibility/ARIA/Roles/alertdialog_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### 説明
 
 このテクニックは、[`alertdialog`](http://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#alertdialog) ロールの使用方法を示しています。

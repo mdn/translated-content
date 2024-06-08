@@ -3,6 +3,8 @@ title: Aperçu sur le développement des applications Web et des Widgets accessi
 slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 ---
 
+{{AccessibilitySidebar}}
+
 Le Web est en perpétuelle évolution. En effet, les sites à contenu statique sont de plus en plus remplacés par des sites dynamiques à l'utilisation assez proche des applications de bureaux. Les sites Web dynamiques utilisent abondamment JavaScript et AJAX. Les designers créent des widgets et des éléments d'interface grâce aux langages du Web notamment HTML, CSS et Javascript. Ce tournant dans l'histoire du Web permet d'améliorer grandement l'expérience utilisateur et l'utilisation sur mobile (responsive). Mais certains utilisateurs peuvent être exclus par manque d'accessibilité. En effet, JavaScript avait la réputation d'être inaccessible aux technologies d'assistance tel que les interpréteurs d'écran. Or, il existe maintenant des techniques pour rendre le Web accessible à une large palette d'utilisateurs.
 
 ## Problématique

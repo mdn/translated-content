@@ -3,6 +3,8 @@ title: "Publier sur le Web : combien ça coûte ?"
 slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Se lancer sur le Web n'est pas aussi bon marché qu'il y paraît à première vue. Dans cet article, nous verrons les différentes dépenses et leur raison d'être.
 
 <table class="standard-table">

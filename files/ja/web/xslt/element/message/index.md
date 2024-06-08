@@ -3,7 +3,7 @@ title: <xsl:message>
 slug: Web/XSLT/Element/message
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:message>` 要素は (NS の JavaScript コンソールに) メッセージを出力し、オプションでスタイルシートの実行を終了します。これはデバッグに便利です。
 

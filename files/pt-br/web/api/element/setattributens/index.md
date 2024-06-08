@@ -1,33 +1,59 @@
 ---
-title: Element.setAttributeNS()
+title: "Element: método setAttributeNS()"
+short-title: setAttributeNS()
 slug: Web/API/Element/setAttributeNS
+l10n:
+  sourceCommit: 93f6ad26b70067f9fbac190ea6a0351fdf40318e
 ---
 
 {{ APIRef("DOM") }}
 
-`setAttributeNS` adiciona um novo atributo ou modifica o valor de um atributo com um namespace e um nome.
+`setAttributeNS` adiciona um novo atributo ou altera o valor de um atributo com o namespace e nome fornecidos.
 
-Syntax
+Se você estiver trabalhando com documentos HTML e não precisar especificar o atributo solicitado como parte de um namespace específico, use o método {{domxref("Element.setAttribute()", "setAttribute()")}} .
 
+## Sintaxe
+
+```js-nolint
+setAttributeNS(namespace, name, value)
 ```
-element.setAttributeNS(namespace,name,value)
-```
 
-- `namespace` é uma string especificando o namespace do atributo.
-- `name` é uma string identificando o atributo que sera definido.
-- `value` é o novo valor desejado para o atributo.
+### Parâmetros
 
-## Exemplo
+- `namespace` é uma string que especifica o namespace do atributo.
+- `name` é uma string que identifica o atributo pelo seu nome qualificado;
+  isto é, um prefixo de namespace seguido por dois pontos seguido por um nome local.
+- `value` é o valor da string desejada do novo atributo.
 
-```
-var d = document.getElementById("d1");
-d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
+## Valor de retorno
+
+None ({{jsxref("undefined")}}).
+
+## Exemplos
+
+```js
+let d = document.getElementById("d1");
+d.setAttributeNS(
+  "http://www.mozilla.org/ns/specialspace",
+  "spec:align",
+  "center",
+);
 ```
 
 ## Notas
 
-{{ DOMAttributeMethods() }}
+`setAttributeNS` é o único método para atributos com namespace que espera o nome totalmente qualificado, ou seja, `"namespace:localname"`.
 
-## Especificação
+## Especificações
 
-[DOM Level 2 Core: setAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS)
+{{Specifications}}
+
+## Compatibilidade de navegadores
+
+{{Compat}}
+
+## Veja também
+
+- {{domxref("Element.hasAttributeNS()")}}
+- {{domxref("Element.getAttributeNS()")}}
+- {{domxref("Element.removeAttributeNS()")}}

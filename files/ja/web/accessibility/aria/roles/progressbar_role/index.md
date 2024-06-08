@@ -3,6 +3,8 @@ title: progressbar ロールの使用
 slug: Web/Accessibility/ARIA/Roles/progressbar_role
 ---
 
+{{AccessibilitySidebar}}
+
 このテクニックは、[`progressbar`](http://www.w3.org/TR/wai-aria/#progressbar) ロールの使い方を示し、ブラウザーや支援技術への影響について説明します。
 
 `progressbar` ロールは、長い時間がかかったり、いくつかの手順で構成されるタスクの進捗状況を表示する要素に使用するべきです。

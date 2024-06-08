@@ -3,6 +3,8 @@ title: pointerlockchange
 slug: Web/API/Document/pointerlockchange_event
 ---
 
+{{APIRef("Pointer Lock API")}}
+
 El evento `pointerlockchange` es disparado cuando el cursor del navegador es bloqueado o desbloqueado.
 
 ## Información general

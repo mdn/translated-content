@@ -3,6 +3,8 @@ title: go()
 slug: Web/API/History/go
 ---
 
+{{APIRef("History API")}}
+
 `go()`方法从会话历史记录中加载特定页面。你可以使用它在历史记录中前后移动，具体取决于`delta`参数的值。
 
 ## 语法
