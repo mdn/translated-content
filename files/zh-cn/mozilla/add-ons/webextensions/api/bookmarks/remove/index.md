@@ -30,7 +30,7 @@ var removingBookmark = browser.bookmarks.remove(
 
 一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个没有参数的对象。
 
-如果与 `id` 参数对应的节点找不到或者是一个非空文件夹，则该 Promise 会被拒绝，并显示错误消息。
+如果与 `id` 参数对应的节点找不到或者是一个非空文件夹，则该 Promise 会以错误消息拒绝。
 
 ## 示例
 
