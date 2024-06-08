@@ -9,7 +9,7 @@ l10n:
 
 描述匹配请求所采取的操作的对象。这些可以在由 [manifest.json 的键 `declarative_net_request`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) 链接的静态规则资源中指定，或通过 {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules")}} 或 {{WebExtAPIRef("declarativeNetRequest.updateSessionRules")}} 方法更动态地指定。
 
-有关规则的更多信息，请参见 API 概述页面中的 [Rules](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#rules)。
+有关规则的更多信息，请参见 API 概述页面中的[规则](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#规则)。
 
 ## 类型
 
@@ -22,7 +22,7 @@ l10n:
 - `id`
   - : `number`。在规则集中唯一标识规则的 ID。此项为必填项，应大于等于 1。
 - `priority` {{optional_inline}}
-  - : `number`。规则优先级。默认为 1。当指定时，应大于等于 1。有关优先级如何影响应用哪些规则的详细信息，请参阅[匹配先例](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#匹配先例)。
+  - : `number`。规则优先级。默认为 1。当指定时，应大于等于 1。有关优先级如何影响应用哪些规则的详细信息，请参阅[匹配优先级](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#匹配优先级)。
 
 {{WebExtExamples("h2")}}
 
