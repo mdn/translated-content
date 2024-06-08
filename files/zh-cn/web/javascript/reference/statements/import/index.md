@@ -9,7 +9,7 @@ l10n:
 
 静态 **`import`** 声明用于导入由另一个模块导出的只读实时{{Glossary("binding", "绑定")}}。导入的绑定被称为*实时绑定*，因为它们会由导出绑定的模块更新，但导入模块不能重新赋值。
 
-为了在源文件中使用 `import` 声明，该文件必须被运行时解释为一个[模块](/zb-CN/docs/Web/JavaScript/Guide/Modules)。在 HTML 中，这可以通过在 {{HTMLElement("script")}} 标签中添加 `type="module"` 来实现。模块会自动以[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)解释。
+为了在源文件中使用 `import` 声明，该文件必须被运行时解释为一个[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)。在 HTML 中，这可以通过在 {{HTMLElement("script")}} 标签中添加 `type="module"` 来实现。模块会自动以[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)解释。
 
 此外，还有一个类似函数的动态 [`import()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)，它不需要依赖 `type="module"` 的 script 标签。
 
@@ -135,8 +135,6 @@ import * as myModule from "/modules/my-module.js";
 ```js
 myModule.doAllTheAmazingThings();
 ```
-
-`myModule` is a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). The default export available as a key called `default`. For more information, see [module namespace object](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object).
 
 `myModule` 是一个[密封](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed)的对象，其原型为 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)。它提供了一个名为 `default` 的键，用于访问默认导出。有关更多信息，请参考[模块命名空间对象](/zh-CN/docs/Web/JavaScript/Reference/Operators/import#模块命名空间对象)。
 
