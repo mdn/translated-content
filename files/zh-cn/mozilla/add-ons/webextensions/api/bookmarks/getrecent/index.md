@@ -15,7 +15,7 @@ l10n:
 
 ```js
 let gettingRecent = browser.bookmarks.getRecent(
-  numberOfItems, // integer
+  numberOfItems, // 整型数
 );
 ```
 
