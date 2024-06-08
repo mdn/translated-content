@@ -3,7 +3,7 @@ title: <xsl:include>
 slug: Web/XSLT/Element/include
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:include>` 要素はあるスタイルシートの内容を別のスタイルシートにマージします。`<xsl:import>` の場合とは異なり、インクルードされたスタイルシートの内容はインクルードするスタイルシートの内容とまったく同じです。
 

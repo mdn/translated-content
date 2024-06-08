@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
+{{AddonSidebar}}
+
 {{WebExtAPIRef("cookies")}} API 的 `onChanged` 事件在设置或删除扩展程序可以访问的 Cookie 时触发。
 
 > **备注：** 当[存储分区](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#存储分区)处于活动状态时，`cookies.Cookie.partitionKey` 包含 Cookie 的存储分区的描述。在修改 Cookie 时，将此值传递给 {{WebExtAPIRef("cookies.set()")}} 或 {{WebExtAPIRef("cookies.remove()")}} 很重要，以确保扩展程序使用正确的 Cookie。

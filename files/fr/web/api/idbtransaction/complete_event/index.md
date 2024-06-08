@@ -3,6 +3,8 @@ title: complete
 slug: Web/API/IDBTransaction/complete_event
 ---
 
+{{APIRef("IndexedDB")}}
+
 Le gestionnaire **complete** est exécuté lorsqu'une transaction est complétée avec succès.
 
 ## Informations générales

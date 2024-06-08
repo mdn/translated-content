@@ -3,6 +3,8 @@ title: Quelle différence entre une page web, un site web, un serveur web et un 
 slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Dans cet article, nous démystifions plusieurs notions liées au Web : page web, site web, serveur web et moteur de recherche. Ces termes sont souvent une source de confusion ou utilisés incorrectement : voyons leur signification.
 
 <table class="standard-table">

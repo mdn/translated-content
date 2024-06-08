@@ -3,6 +3,8 @@ title: Créer de belles boîtes
 slug: Learn/CSS/Howto/Create_fancy_boxes
 ---
 
+{{LearnSidebar}}
+
 Les boîtes CSS sont des blocs de base pour la construction des pages web. Créer des boîtes agréables à regarder est un défi complexe et intéressant. C'est un défi intéressant parce qu'on peut implémenter une idée de concept, de design, grâce à du code qui fonctionne. C'est un défi complexe car CSS possède à la fois plein de contraintes et de libertés. Dans cet article, nous allons voir de quoi il en retourne en dessinant quelques belles boîtes.
 
 Avant d'attaquer la partie pratique, nous vous recommandons de lire [l'article qui explique le fonctionnement du modèle de boîte CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model). Bien que ce ne soit pas strictement nécessaire, il peut également être judicieux que de lire [les bases de la disposition en CSS](/fr/docs/Learn/CSS/CSS_layout/Introduction).
@@ -103,27 +105,17 @@ Passons à la manipulation :
      sont considérés et manipulés comme des
      images */
   background-image: linear-gradient(175deg, rgba(0, 0, 0, 0) 95%, #8da389 95%),
-    linear-gradient(85deg, rgba(0, 0, 0, 0) 95%, #8da389 95%), linear-gradient(
-      175deg,
-      rgba(0, 0, 0, 0) 90%,
-      #b4b07f 90%
-    ), linear-gradient(85deg, rgba(0, 0, 0, 0) 92%, #b4b07f 92%),
-    linear-gradient(175deg, rgba(0, 0, 0, 0) 85%, #c5a68e 85%), linear-gradient(
-      85deg,
-      rgba(0, 0, 0, 0) 89%,
-      #c5a68e 89%
-    ), linear-gradient(175deg, rgba(0, 0, 0, 0) 80%, #ba9499 80%),
-    linear-gradient(85deg, rgba(0, 0, 0, 0) 86%, #ba9499 86%), linear-gradient(
-      175deg,
-      rgba(0, 0, 0, 0) 75%,
-      #9f8fa4 75%
-    ), linear-gradient(85deg, rgba(0, 0, 0, 0) 83%, #9f8fa4 83%),
-    linear-gradient(175deg, rgba(0, 0, 0, 0) 70%, #74a6ae 70%), linear-gradient(85deg, rgba(
-          0,
-          0,
-          0,
-          0
-        ) 80%, #74a6ae 80%);
+    linear-gradient(85deg, rgba(0, 0, 0, 0) 95%, #8da389 95%),
+    linear-gradient(175deg, rgba(0, 0, 0, 0) 90%, #b4b07f 90%),
+    linear-gradient(85deg, rgba(0, 0, 0, 0) 92%, #b4b07f 92%),
+    linear-gradient(175deg, rgba(0, 0, 0, 0) 85%, #c5a68e 85%),
+    linear-gradient(85deg, rgba(0, 0, 0, 0) 89%, #c5a68e 89%),
+    linear-gradient(175deg, rgba(0, 0, 0, 0) 80%, #ba9499 80%),
+    linear-gradient(85deg, rgba(0, 0, 0, 0) 86%, #ba9499 86%),
+    linear-gradient(175deg, rgba(0, 0, 0, 0) 75%, #9f8fa4 75%),
+    linear-gradient(85deg, rgba(0, 0, 0, 0) 83%, #9f8fa4 83%),
+    linear-gradient(175deg, rgba(0, 0, 0, 0) 70%, #74a6ae 70%),
+    linear-gradient(85deg, rgba(0, 0, 0, 0) 80%, #74a6ae 80%);
 }
 ```
 

@@ -3,6 +3,8 @@ title: Le fonctionnement de l'Internet
 slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Dans cet article, nous expliquons ce qu'est l'Internet et comment il fonctionne.
 
 <table class="standard-table">

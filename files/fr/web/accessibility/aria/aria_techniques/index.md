@@ -3,6 +3,8 @@ title: Techniques ARIA
 slug: Web/Accessibility/ARIA/ARIA_Techniques
 ---
 
+{{AccessibilitySidebar}}
+
 ### Rôles
 
 #### Rôles de composant d'interface

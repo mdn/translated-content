@@ -3,6 +3,8 @@ title: unhandledrejection
 slug: Web/API/Window/unhandledrejection_event
 ---
 
+{{APIRef("HTML DOM")}}
+
 Событие **`unhandledrejection`** происходит, когда {{jsxref("Promise")}} завершён с ошибкой, но на данную ошибку не установлен обработчик.
 
 <table class="properties">

@@ -3,6 +3,8 @@ title: Contraste del color
 slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 ---
 
+{{AccessibilitySidebar}}
+
 El [contraste del color](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) entre el fondo y el contenido del primer plano (que suele ser texto) debe ser lo suficientemente alto como para garantizar la legibilidad.
 
 Al diseñar interfaces legibles para diferentes capacidades de visión, las directrices de la WCAG recomiendan las siguientes relaciones de contraste:

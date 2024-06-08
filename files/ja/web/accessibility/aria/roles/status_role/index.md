@@ -3,6 +3,8 @@ title: status ロールの使用
 slug: Web/Accessibility/ARIA/Roles/status_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### 説明
 
 このテクニックは、[`status`](https://www.w3.org/TR/wai-aria/#status) ロールを使用する方法を示し、ブラウザーと支援技術に及ぼす影響について説明します。

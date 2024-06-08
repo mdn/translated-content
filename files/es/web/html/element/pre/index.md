@@ -3,6 +3,8 @@ title: <pre>
 slug: Web/HTML/Element/pre
 ---
 
+{{HTMLSidebar}}
+
 ## Sumario
 
 El **Elemento** **HTML \<pre>** (o _Texto HTML Preformateado_) representa texto preformateado. El texto en este elemento típicamente se muestra en una fuente fija, no proporcional, exactamente como es mostrado en el archivo. Los espacios dentro de este elemento también son mostrados como están escritos.

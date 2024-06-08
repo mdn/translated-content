@@ -3,6 +3,8 @@ title: Примеры
 slug: Web/MathML/Examples
 ---
 
+{{MathMLRef}}
+
 Ниже вы найдёте некоторые примеры, которые помогут вам понять, как использовать MathML для отображения более сложных математических понятий в веб содержимом.
 
 - [Теорема Пифагора](/ru/docs/Web/MathML/Examples/MathML_Pythagorean_Theorem)

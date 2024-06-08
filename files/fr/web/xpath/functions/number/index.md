@@ -3,7 +3,7 @@ title: number
 slug: Web/XPath/Functions/number
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `number` convertit un objet en un nombre et retourne ce nombre.
 

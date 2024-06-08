@@ -3,6 +3,8 @@ title: Firefox 9 for developers
 slug: Mozilla/Firefox/Releases/9
 ---
 
+{{FirefoxSidebar}}
+
 Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされました。その直後に見つかったクラッシュバグを修正した Mac 版および Linux 版のバージョン 9.0.1 は、2011 年 12 月 21 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
