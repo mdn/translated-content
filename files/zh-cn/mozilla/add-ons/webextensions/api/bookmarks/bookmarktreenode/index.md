@@ -29,7 +29,7 @@ l10n:
 - `title`
   - : 一个{{jsxref("string", "字符串", "", 1)}}，包含在菜单和书签列表中显示的节点文本。
 - `type` {{optional_inline}}
-  - : 一个 {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}} 对象，指示这是一个书签、文件夹还是分隔符。默认情况下，除非省略 `url`，否则默认为 `"bookmark"`，在这种情况下默认为 `"folder"`。
+  - : 一个 {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}} 对象，指示这是一个书签、文件夹还是分隔符。默认为 `"bookmark"`，除非省略 `url`，否则，默认为 `"folder"`。
 - `unmodifiable` {{optional_inline}}
   - : 一个{{jsxref("string", "字符串", "", 1)}}，由 {{WebExtAPIRef('bookmarks.BookmarkTreeNodeUnmodifiable')}} 类型描述。表示节点无法更改的原因。如果节点可以更改，则省略此项。
 - `url` {{optional_inline}}
