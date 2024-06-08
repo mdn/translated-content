@@ -20,3 +20,4 @@ IE 经历了许多版本，并为桌面、手机和 Xbox 控制台提供了版�
 - 维基百科上的 [Internet Explorer](https://zh.wikipedia.org/wiki/Internet_Explorer)
 - 维基百科上的 [Internet Explorer 的历史](https://zh.wikipedia.org/wiki/Internet_Explorer歷史)
 - 维基百科上的 [Internet Explorer 的版本](https://en.wikipedia.org/wiki/Internet_Explorer_version_history)
+- [IE 生命周期终止倒计时](https://death-to-ie11.com/)
