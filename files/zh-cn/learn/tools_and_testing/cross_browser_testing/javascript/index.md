@@ -165,7 +165,7 @@ Response value: [object Promise]
 
 `console.log()` 的输出显示，`fetch()` 的返回值不是 JSON 数据，而是一个 {{jsxref("Promise")}}。`fetch()` 函数是异步的：它返回一个 `Promise`，只有在实际从网络接收到响应时，这个 `Promise` 才会兑现。在我们使用响应之前，我们必须等待 `Promise` 被兑现。
 
-我们可以通过将使用响应的代码放在返回的 `Promise` 的 {{jsxref("Promise.prototype.then()"， "then()")}} 方法中来实现这一点，像这样：
+我们可以通过将使用响应的代码放在返回的 `Promise` 的 {{jsxref("Promise.prototype.then()", "then()")}} 方法中来实现这一点，像这样：
 
 ```js
 const response = fetch(requestURL);
