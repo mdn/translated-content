@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
+{{AddonSidebar}}
+
 触发条件：
 
 - 书签的标题或 URL 发生更改时
@@ -33,12 +35,12 @@ browser.bookmarks.onChanged.hasListener(listener)
 
 - `listener`
 
-  - : 事件触发时调用的函数。该函数接收以下参数：
+  - : 事件发生时调用的函数。该函数接收以下参数：
 
     - `id`
       - : `string`。发生更改的项目的 ID。
     - `hangeInfo`
-      - : [`object`](#changeinfo)。包含两个属性的对象：`title`，包含项目标题的字符串；`url`，包含项目 URL 的字符串。如果项目是文件夹，则省略 `url`。
+      - : [`object`](#changeinfo)。包含两个属性的对象：包含项目标题的字符串 `title` 和包含项目 URL 的字符串 `url`。如果项目是文件夹，则省略 `url`。
 
 > **备注：** 当书签更改时，可能会发生多个事件，且 changeInfo 对象可能只包含已更改的数据，而不是书签的所有数据。换句话说，如果书签的 `url` 发生变化，则 changeInfo 可能只包含新的 `url` 信息。
 
