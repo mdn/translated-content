@@ -36,9 +36,9 @@ l10n:
 
 虽然 HTML 并不要求作者指定 `<html>` 元素的开始和结束标记，但作者必须这样做，因为这将允许他们为网页指定 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang)。根据 {{RFC(5646, "识别语言的标签（也称为 BCP 47）")}}，在 `<html>` 元素上提供一个带有有效语言标记的 `lang` 属性，将有助于屏幕阅读技术确定要宣告的适当语言。标识语言标签应描述页面大部分内容所使用的语言。如果没有它，屏幕阅读器通常会默认使用操作系统设置的语言，这可能会导致发音错误。
 
-在 `<html>` 元素中包含一个有效的 `lang` 声明，还可以确保页面的 {{HTMLElement("head")}} 中包含的重要元数据，如页面的 {{HTMLElement("title")}}，也会被正确地宣告。
+在 `<html>` 元素中包含一个有效的 `lang` 声明，还可以确保页面的 {{HTMLElement("head")}} 中包含的重要元数据（如页面的 {{HTMLElement("title")}}）也会被正确地宣告。
 
-- [MDN | 理解 WCAG，指引 3.1 的解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Understandable#准则_3.1——可读性：使文本内容可读且易于理解)
+- [MDN | 理解 WCAG，准则 3.1 的解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Understandable#准则_3.1——可读性：使文本内容可读，可理解)
 - [理解成功标准 3.1.1 | W3C 理解 WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
 
 ## 技术概要
