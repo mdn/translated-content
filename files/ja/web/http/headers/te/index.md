@@ -9,8 +9,7 @@ l10n:
 
 **`TE`** リクエストヘッダーは、ユーザーエージェントが受け入れる転送エンコーディング方式を指定します。（非公式に `Accept-Transfer-Encoding` と呼ばれることもあり、その方がより直感的でしょう。）
 
-> **メモ:**
-> [HTTP/2](https://httpwg.org/specs/rfc9113.html#ConnectionSpecific) と
+> **メモ:** [HTTP/2](https://httpwg.org/specs/rfc9113.html#ConnectionSpecific) と
 > [HTTP/3](https://httpwg.org/specs/rfc9114.html#header-formatting) では、
 > `TE` ヘッダーフィールドは、`trailer` 値が設定されている場合にのみ受け入れられます。
 
