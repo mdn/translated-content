@@ -13,7 +13,7 @@ l10n:
 
 在 HTML、CSS 和基于 XML 的语言中，命名空间是元素（或属性）所属的显式声明或隐式方言。
 
-## See also
+## 参见
 
 - [命名空间速成课](/zh-CN/docs/Web/SVG/Namespaces_Crash_Course)
 - [CSS 命名空间](/zh-CN/docs/Web/CSS/CSS_namespaces) 模块
