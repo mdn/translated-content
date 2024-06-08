@@ -14,26 +14,26 @@ l10n:
 一个具有以下属性的 {{jsxref("object")}}：
 
 - `children` {{optional_inline}}
-  - : 一个 {{jsxref("array")}}，包含代表节点子节点的 {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} 对象。列表按照子节点在用户界面中出现的顺序排序。如果节点不是文件夹，则省略此字段。
+  - : 一个{{jsxref("array", "数组", "", 1)}}，包含代表节点子节点的 {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} 对象。列表按照子节点在用户界面中出现的顺序排序。如果节点不是文件夹，则省略此字段。
 - `dateAdded` {{optional_inline}}
   - : 一个数字，表示节点创建日期，单位为[自 Unix 纪元以来的毫秒数](https://zh.wikipedia.org/wiki/UNIX时间)。
 - `dateGroupModified` {{optional_inline}}
   - : 一个数字，表示该文件夹的内容上次更改的日期和时间，单位为[自 Unix 纪元以来的毫秒数](https://zh.wikipedia.org/wiki/UNIX时间)。
 - `id`
-  - : 一个 {{jsxref("string")}}，唯一标识节点。每个 ID 在用户的配置文件中是唯一的，在浏览器重新启动时保持不变。
+  - : 一个{{jsxref("string", "字符串", "", 1)}}，唯一标识节点。每个 ID 在用户的配置文件中是唯一的，在浏览器重新启动时保持不变。
 - `index` {{optional_inline}}
   - : 一个数字，表示该节点在其父文件夹中的从零开始的位置，其中零代表第一个条目。
     > **备注：** 如果你创建或移动多个书签，由于 {{WebExtAPIRef("bookmarks.create()")}} 和 {{WebExtAPIRef("bookmarks.move()")}} 方法是异步的，请求可能以任何顺序处理。因此，直到所有请求完成之前，每个书签的索引值可能会改变或是未知的。如果与书签相关的索引对你的扩展很重要，那么在创建或移动多个书签时，扩展应等待每个 `bookmarks.create` 或 `bookmarks.move` 调用完成。等待确保与每个书签关联的索引不会受到在原始调用进行时并发执行的创建或移动调用的影响。
 - `parentId` {{optional_inline}}
-  - : 一个 {{jsxref("string")}}，指定父文件夹的 ID。此属性不存在于根节点。
+  - : 一个{{jsxref("string", "字符串", "", 1)}}，指定父文件夹的 ID。此属性不存在于根节点。
 - `title`
-  - : 一个 {{jsxref("string")}}，包含在菜单和书签列表中显示的节点文本。
+  - : 一个{{jsxref("string", "字符串", "", 1)}}，包含在菜单和书签列表中显示的节点文本。
 - `type` {{optional_inline}}
   - : 一个 {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}} 对象，指示这是一个书签、文件夹还是分隔符。默认情况下，除非省略 `url`，否则默认为 `"bookmark"`，在这种情况下默认为 `"folder"`。
 - `unmodifiable` {{optional_inline}}
-  - : 一个 {{jsxref("string")}}，由 {{WebExtAPIRef('bookmarks.BookmarkTreeNodeUnmodifiable')}} 类型描述。表示节点无法更改的原因。如果节点可以更改，则省略此项。
+  - : 一个{{jsxref("string", "字符串", "", 1)}}，由 {{WebExtAPIRef('bookmarks.BookmarkTreeNodeUnmodifiable')}} 类型描述。表示节点无法更改的原因。如果节点可以更改，则省略此项。
 - `url` {{optional_inline}}
-  - : 一个 {{jsxref("string")}}，表示书签的 URL。如果节点表示文件夹，则省略此属性。
+  - : 一个{{jsxref("string", "字符串", "", 1)}}，表示书签的 URL。如果节点表示文件夹，则省略此属性。
 
 ## 浏览器兼容性
 
