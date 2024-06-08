@@ -7,9 +7,9 @@ l10n:
 
 {{DefaultAPISidebar("WebRTC")}}
 
-为了更全面地支持音频/视频会议，[WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 支持在 {{domxref("RTCPeerConnection")}} 上向远程对等方发送{{Glossary("DTMF", "双音多频")}}。本文简要概述了 WebRTC 上的 DTMF 如何工作，然后提供了一个指南，指导开发人员如何通过 `RTCPeerConnection` 发送 DTMF。DTMF 系统通常被称为“触摸音调”，这是一种旧的商标名称。
+为了更全面地支持音频/视频会议，[WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 支持在 {{domxref("RTCPeerConnection")}} 上向远程对等方发送{{Glossary("DTMF", "双音多频信号")}}（DTMF）。本文简要概述了 WebRTC 上的 DTMF 是如何工作的，然后提供了一个指导开发人员如何通过 `RTCPeerConnection` 发送 DTMF 的指南。DTMF 系统通常被称为“触摸音调”，这是一种旧的商标名称。
 
-WebRTC 不会将 DTMF 代码作为音频数据发送。相反，它们作为 RTP 负载在带外发送。但是，请注意，尽管可以使用 WebRTC _发送_ DTMF，但目前无法检测或接收*传入* DTMF。WebRTC 目前会忽略这些负载；这是因为 WebRTC 的 DTMF 支持主要用于与依赖于 DTMF 音调执行任务的传统电话服务一起使用，例如：
+WebRTC 不会将 DTMF 代码作为音频数据发送。相反，它们作为 RTP 载荷在带外发送。但是，请注意，尽管可以使用 WebRTC _发送_ DTMF，但目前无法检测或接收*传入*的 DTMF。WebRTC 目前会忽略这些载荷；这是因为 WebRTC 的 DTMF 支持主要是为了与依赖 DTMF 音调执行任务的传统电话服务一起使用，例如：
 
 - 电话会议系统
 - 菜单系统
@@ -17,40 +17,40 @@ WebRTC 不会将 DTMF 代码作为音频数据发送。相反，它们作为 RTP
 - 输入信用卡或其他支付信息
 - 密码输入
 
-> **备注：** 虽然 DTMF 不会作为音频发送到远程对等方，但浏览器可能会选择在本地用户听到相应的音调作为用户体验的一部分，因为用户通常习惯于通过听到电话播放音调来操作。
+> **备注：** 虽然 DTMF 不会作为音频发送到远程对等方，但浏览器可能会选择向本地用户播放相应的音调来提升用户体验，因为用户通常习惯于听到电话播放的提示音。
 
 ## 在 RTCPeerConnection 上发送 DTMF
 
-一个给定的 {{domxref("RTCPeerConnection")}} 可以在其上发送或接收多个媒体轨道。当你希望传输 DTMF 信号时，你首先需要决定要将它们发送到哪个轨道，因为 DTMF 被发送为一系列带外载荷，由负责将该轨道数据传输到其他对等方的 {{domxref("RTCRtpSender")}} 负责。
+可以在一个给定的 {{domxref("RTCPeerConnection")}} 上发送或接收多个媒体轨道。当你希望传输 DTMF 信号时，你首先需要决定要将它们发送到哪个轨道，因为 DTMF 是作为 {{domxref("RTCRtpSender")}}——负责将该轨道的数据传输到其他对等方——上的一系列带外载荷发送的。
 
-一旦选择了轨道，你可以从其 `RTCRtpSender` 获取你将用于发送 DTMF 的 {{domxref("RTCDTMFSender")}} 对象。从那里，你可以调用 {{domxref("RTCDTMFSender.insertDTMF()")}} 将 DTMF 信号排队以发送到其他对等方的轨道上。然后，`RTCRtpSender` 将将音调作为数据包与轨道的音频数据一起发送到其他对等方。
+一旦选择了轨道，你可以从其 `RTCRtpSender` 获取你将用于发送 DTMF 的 {{domxref("RTCDTMFSender")}} 对象。在那里，你可以调用 {{domxref("RTCDTMFSender.insertDTMF()")}} 将 DTMF 信号排入队列，以便通过轨道将其发送给其他对等方。然后，`RTCRtpSender` 将音调作为数据包与轨道的音频数据一起发送到其他对等方。
 
-每次发送音调时，`RTCPeerConnection` 都会接收到一个带有 {{domxref("RTCDTMFToneChangeEvent.tone", "tone")}} 属性的 [`tonechange`](/zh-CN/docs/Web/API/RTCDTMFSender/tonechange_event) 事件，该属性指定了播放完成的音调，这是更新界面元素的机会，例如。当音调缓冲区为空时，表示所有音调都已发送完成，连接对象将接收到一个带有其 `tone` 属性设置为""(空字符串) 的 `tonechange` 事件。
+每次发送音调时，`RTCPeerConnection` 都会接收到一个带有 {{domxref("RTCDTMFToneChangeEvent.tone", "tone")}} 属性的 [`tonechange`](/zh-CN/docs/Web/API/RTCDTMFSender/tonechange_event) 事件，该属性指定了播放完成的音调，这是完成诸如更新接口元素等任务的机会。当音调缓冲区为空时，表示所有音调都已发送完成，连接对象将接收到一个带有其 `tone` 属性设置为 `""`（空字符串）的 `tonechange` 事件。
 
-如果你想了解更多关于这是如何工作的信息，请阅读{{RFC(3550, "RTP：实时应用的传输协议")}}和{{RFC(4733, "RTP 负载：用于 DTMF 数字、电话音调和电话信号")}}。关于如何在 RTP 上处理 DTMF 载荷的详细信息超出了本文的范围。相反，我们将重点放在如何在 {{domxref("RTCPeerConnection")}} 上使用 DTMF，通过研究一个示例的工作原理。
+如果你想了解更多关于这是如何工作的信息，请阅读 {{RFC(3550, "RTP：实时应用的传输协议")}}和 {{RFC(4733, "用于 DTMF 数字、电话音和电话信号的 RTP 载荷")}}。关于如何在 RTP 上处理 DTMF 载荷的详细信息超出了本文的范围。相反，我们将通过研究一个示例的工作原理来重点关注如何在 {{domxref("RTCPeerConnection")}} 上下文中使用 DTMF。
 
 ## 简单示例
 
-这个简单的示例构建了两个 {{domxref("RTCPeerConnection")}}，在它们之间建立了连接，然后等待用户点击一个“拨号”按钮。当用户点击按钮时，使用 {{domxref("RTCDTMFSender.insertDTMF()")}} 在连接上发送一个 DTMF 字符串。一旦音调传输完成，连接就会关闭。
+这个简单的示例构建了两个 {{domxref("RTCPeerConnection")}}，在它们之间建立了连接，然后等待用户点击“拨号”按钮。当用户点击按钮时，使用 {{domxref("RTCDTMFSender.insertDTMF()")}} 在连接上发送一个 DTMF 字符串。一旦音调传输完成，连接就会关闭。
 
-> **备注：** 这个示例显然有些牵强，因为通常两个 `RTCPeerConnection` 对象会存在于不同的设备上，并且信令传输通常是通过网络进行的，而不是像这里一样在内联中连接起来的。
+> **备注：** 这个示例显然有些牵强，因为通常两个 `RTCPeerConnection` 对象会存在于不同的设备上，并且信令传输通常是通过网络进行的，而不是像这里一样全部都在内部连接。
 
 ### HTML
 
 这个示例的 HTML 非常基础，只有三个重要的元素：
 
-- 一个 {{HTMLElement("audio")}} 元素用于播放由被“呼叫”的 `RTCPeerConnection` 接收到的音频。
-- 一个 {{HTMLElement("button")}} 元素用于触发创建和连接两个 `RTCPeerConnection` 对象，然后发送 DTMF 音调。
-- 一个 {{HTMLElement("div")}} 用于接收和显示日志文本，以显示状态信息。
+- {{HTMLElement("audio")}} 元素：用于播放由被“呼叫”的 `RTCPeerConnection` 接收到的音频。
+- {{HTMLElement("button")}} 元素：用于触发创建和连接两个 `RTCPeerConnection` 对象，然后发送 DTMF 音调。
+- {{HTMLElement("div")}}：用于接收和显示日志文本，以显示状态信息。
 
 ```html
 <p>
   这个示例演示了在 WebRTC 中使用
-  DTMF。请注意，这个示例是“作弊”的，它通过在一个代码流中生成两个对等端，而不是让每个对等端都是一个真正独立的实体。
+  DTMF。请注意，这个示例是“作弊”的，它在一个代码流中生成两个对等端，而不是让每个对等端都是一个真正独立的实体。
 </p>
 
 <audio id="audio" autoplay controls></audio><br />
-<button name="dial" id="dial">Dial</button>
+<button name="dial" id="dial">拨号</button>
 
 <div class="log"></div>
 ```
@@ -61,7 +61,7 @@ WebRTC 不会将 DTMF 代码作为音频数据发送。相反，它们作为 RTP
 
 #### 全局变量
 
-首先，我们建立全局变量。
+首先，我们创建全局变量。
 
 ```js
 let dialString = "12024561111";
@@ -89,23 +89,23 @@ let logElement = null;
 它们依次是：
 
 - `dialString`
-  - ：当用户点击“拨号”按钮时，呼叫方将发送的 DTMF 字符串。
+  - : 当用户点击“拨号”按钮时，呼叫方将发送的 DTMF 字符串。
 - `callerPC` 和 `receiverPC`
-  - ：分别表示呼叫方和接收方的 {{domxref("RTCPeerConnection")}} 对象。这些对象将在呼叫启动时初始化，在我们的 `connectAndDial()` 函数中，如下[启动连接过程](#启动连接过程)所示。
+  - : 分别表示呼叫方和接收方的 {{domxref("RTCPeerConnection")}} 对象。这些对象将在呼叫启动时在我们的 `connectAndDial()` 函数中初始化，如下面的[启动连接过程](#启动连接过程)所示。
 - `dtmfSender`
-  - ：连接的 {{domxref("RTCDTMFSender")}} 对象。这将在设置连接时获取，在[将音频添加到连接](#将音频添加到连接) 中的 `gotStream()` 函数中进行。
+  - : 连接的 {{domxref("RTCDTMFSender")}} 对象。这将在设置连接时在 `gotStream()` 函数中获取，如[将音频添加到连接](#将音频添加到连接)部分所示。
 - `hasAddTrack`
-  - ：由于一些浏览器尚未实现 {{domxref("RTCPeerConnection.addTrack()")}}，因此需要使用废弃的 {{domxref("RTCPeerConnection.addStream", "addStream()")}} 方法，我们使用此布尔值来确定用户代理是否支持 `addTrack()`；如果不支持，我们将退回到 `addStream()`。这将在 `connectAndDial()` 中确定，如下[启动连接过程](#启动连接过程)所示。
+  - : 由于一些浏览器尚未实现 {{domxref("RTCPeerConnection.addTrack()")}}，因此需要使用已过时的 {{domxref("RTCPeerConnection.addStream", "addStream()")}} 方法，我们使用此布尔值来确定用户代理是否支持 `addTrack()`；如果不支持，我们将退回到 `addStream()`。这将在 `connectAndDial()` 中确定，如下面的[启动连接过程](#启动连接过程)所示。
 - `mediaConstraints`
-  - ：指定启动连接时要使用的约束的对象。我们只想要音频连接，所以 `video` 是 `false`，而 `audio` 是 `true`。
+  - : 指定启动连接时要使用的约束的对象。我们只想要音频连接，所以 `video` 是 `false`，而 `audio` 是 `true`。
 - `offerOptions`
-  - ：提供选项以在调用 {{domxref("RTCPeerConnection.createOffer()")}} 时指定。在这种情况下，我们声明我们想要接收音频但不要视频。
+  - : 用于在调用 {{domxref("RTCPeerConnection.createOffer()")}} 时指定选项的对象。在本例中，我们声明我们想要接收音频但不要视频。
 - `dialButton` 和 `logElement`
-  - ：这些变量将用于存储对拨号按钮和将记录信息写入的 {{HTMLElement("div")}} 的引用。它们将在页面首次加载时设置。请参见下面的[初始化](#初始化)。
+  - : 这些变量将用于存储对拨号按钮和将写入日志信息的 {{HTMLElement("div")}} 的引用。它们将在页面首次加载时设置。参见下面的[初始化](#初始化)。
 
 #### 初始化
 
-页面加载时，我们进行一些基本设置：我们获取对拨号按钮和日志输出框元素的引用，并使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 添加事件监听器到拨号按钮，以便点击它调用 `connectAndDial()` 函数开始连接过程。
+页面加载时，我们进行一些基本设置：我们获取对拨号按钮和日志输出框元素的引用，并使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 为拨号按钮添加事件监听器，以便点击它会调用开始连接过程的 `connectAndDial()` 函数。
 
 ```js
 window.addEventListener("load", () => {
@@ -152,11 +152,11 @@ function connectAndDial() {
 
 接下来，为呼叫方建立了事件处理器。我们稍后将详细介绍这些。
 
-然后创建第二个 `RTCPeerConnection`，代表呼叫的接收端，并存储在 `receiverPC` 中；它的 `onicecandidate` 事件处理器也被设置了。
+然后创建第二个用于代表呼叫的接收端的 `RTCPeerConnection`，并将它存储在 `receiverPC` 中；同时设置它的 `onicecandidate` 事件处理器。
 
 如果支持 `addTrack()`，我们设置接收方的 `ontrack` 事件处理器；否则，我们设置 `onaddstream`。当媒体被添加到连接时，会发送 {{domxref("RTCPeerConnection.track_event", "track")}} 和 {{domxref("RTCPeerConnection/addstream_event", "addstream")}} 事件。
 
-最后，我们调用 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 来获取对呼叫方麦克风的访问权限。如果成功，将调用函数 `gotStream()`，否则我们记录错误，因为调用失败了。
+最后，我们调用 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 来获取对呼叫方麦克风的访问权限。如果成功，将调用函数 `gotStream()`，否则我们记录调用失败的错误。
 
 #### 将音频添加到连接
 
@@ -164,7 +164,7 @@ function connectAndDial() {
 
 ```js
 function gotStream(stream) {
-  log("已获取麦克风访问权限。");
+  log("已获取麦克风的访问权限。");
 
   let audioTracks = stream.getAudioTracks();
 
@@ -174,8 +174,7 @@ function gotStream(stream) {
     }
   } else {
     log(
-      "你的浏览器不支持 RTCPeerConnection.addTrack()。正在退回到 <strong>已弃用</strong>的 addStream() 方法…",
-        "back to the <strong>deprecated</strong> addStream() method…",
+      "你的浏览器不支持 RTCPeerConnection.addTrack()。正在退回到<strong>已弃用</strong>的 addStream() 方法…",
     );
     callerPC.addStream(stream);
   }
@@ -184,9 +183,7 @@ function gotStream(stream) {
     dtmfSender = callerPC.getSenders()[0].dtmf;
   } else {
     log(
-      "你的浏览器不支持 RTCPeerConnection.getSenders()，因此正在退回到使用 <strong>已弃用</strong> 的 createDTMFSender()。"
-        "falling back to use <strong>deprecated</strong> createDTMFSender() " +
-        "instead.",
+      "你的浏览器不支持 RTCPeerConnection.getSenders()，因此正在退回到使用<strong>已弃用</strong>的 createDTMFSender()。",
     );
     dtmfSender = callerPC.createDTMFSender(audioTracks[0]);
   }
@@ -199,15 +196,15 @@ function gotStream(stream) {
 
 接下来，我们查看是否实现了 {{domxref("RTCPeerConnection.getSenders()")}} 方法。如果实现了，我们在 `callerPC` 上调用它，并获取返回的发送器列表中的第一个条目；这是负责传输呼叫的第一个音频轨道数据的 {{domxref("RTCRtpSender")}}（这是我们将发送 DTMF 的轨道）。然后，我们获取 `RTCRtpSender` 的 {{domxref("RTCRtpSender.dtmf", "dtmf")}} 属性，它是一个 {{domxref("RTCDTMFSender")}} 对象，可以在连接中从呼叫方发送到接收方发送 DTMF。
 
-如果 `getSenders()` 不可用，我们将调用 {{domxref("RTCPeerConnection.createDTMFSender()")}} 来获取 `RTCDTMFSender` 对象。尽管这个方法已经过时，但这个示例支持它作为一个备用方法，让旧的浏览器（和尚未更新以支持当前 WebRTC DTMF API 的浏览器）运行这个示例。
+如果 `getSenders()` 不可用，我们将调用 {{domxref("RTCPeerConnection.createDTMFSender()")}} 来获取 `RTCDTMFSender` 对象。尽管这个方法已经过时，但这个示例支持它作为一个备用方法，让旧的浏览器（和尚未更新以支持当前 WebRTC DTMF API 的浏览器）可以运行这个示例。
 
 最后，我们设置 DTMF 发送器的 {{domxref("RTCDTMFSender.tonechange_event", "ontonechange")}} 事件处理器，以便每当一个 DTMF 音调完成播放时都会收到通知。
 
-你可以在文档底部找到日志函数。
+你可以在当前文档的底部找到日志函数。
 
 #### 当音调播放完成
 
-每当一个 DTMF 音调播放完成时，[`tonechange`](/zh-CN/docs/Web/API/RTCDTMFSender/tonechange_event) 事件就会被传递给 `callerPC`。对于这些事件的事件监听器被实现为 `handleToneChangeEvent()` 函数。
+每当一个 DTMF 音调播放完成时，[`tonechange`](/zh-CN/docs/Web/API/RTCDTMFSender/tonechange_event) 事件就会被传递给 `callerPC`。这些事件的事件监听器被实现为 `handleToneChangeEvent()` 函数。
 
 ```js
 function handleToneChangeEvent(event) {
@@ -234,7 +231,7 @@ function handleToneChangeEvent(event) {
 }
 ```
 
-[`tonechange`](/zh-CN/docs/Web/API/RTCDTMFSender/tonechange_event) 事件既用于指示单个音调已播放，也用于指示所有音调已完成播放。事件的 {{domxref("RTCDTMFToneChangeEvent.tone", "tone")}} 属性是一个字符串，指示刚刚完成播放的音调。如果所有音调都已完成播放，`tone`将是一个空字符串；在这种情况下，{{domxref("RTCDTMFSender.toneBuffer")}}为空。
+[`tonechange`](/zh-CN/docs/Web/API/RTCDTMFSender/tonechange_event) 事件既用于指示单个音调已播放，也用于指示所有音调已完成播放。事件的 {{domxref("RTCDTMFToneChangeEvent.tone", "tone")}} 属性是一个指示刚刚完成播放的音调的字符串。如果所有音调都已完成播放，`tone` 将是一个空字符串；在这种情况下，{{domxref("RTCDTMFSender.toneBuffer")}} 为空。
 
 在这个示例中，我们将刚刚完成播放的音调记录到屏幕上。在更高级的应用程序中，你可能会更新用户界面，例如，指示当前正在播放的音符。
 
@@ -244,7 +241,7 @@ function handleToneChangeEvent(event) {
 
 最后，通过调用每个 `RTCPeerConnection` 的 {{domxref("RTCPeerConnection.close", "close()")}} 方法来关闭它。
 
-#### 添加候选者到呼叫方
+#### 将候选者添加到呼叫方
 
 当呼叫方的 `RTCPeerConnection` ICE 层提出一个新的候选者时，它会向 `callerPC` 发出一个 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 事件。`icecandidate` 事件处理器的工作是将候选者传输给接收方。在我们的示例中，我们直接控制呼叫方和接收方，所以我们可以直接通过调用其 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 方法将候选者添加到接收方。这由 `handleCallerIceEvent()` 处理：
 
@@ -268,7 +265,7 @@ function handleCallerIceEvent(event) {
 
 #### 在连接打开后进行拨号
 
-我们的设计要求在连接建立后立即发送 DTMF 字符串。为了实现这一点，我们会监视呼叫方接收到 {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} 事件。当 ICE 连接过程的状态发生变化，包括成功建立连接时，就会发送这个事件。
+我们的设计要求在连接建立后立即发送 DTMF 字符串。为了实现这一点，我们会监视呼叫方接收到的 {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} 事件。当 ICE 连接过程的状态发生变化，包括成功建立连接时，就会发送这个事件。
 
 ```js
 function handleCallerIceConnectionStateChange() {
@@ -282,7 +279,7 @@ function handleCallerIceConnectionStateChange() {
 
 实际上，`iceconnectionstatechange` 事件并没有在其中包含新状态，因此我们从 `callerPC` 的 {{domxref("RTCPeerConnection.iceConnectionState")}} 属性中获取连接过程的当前状态。在记录新状态后，我们查看状态是否为 `"connected"`。如果是，我们记录即将发送 DTMF 的事实，然后调用 {{domxref("RTCDTMFSender.insertDTMF", "dtmf.insertDTMF()")}} 在与我们[之前存储](#将音频添加到连接)在 `dtmfSender` 中的 `RTCDTMFSender` 相同的轨道上发送 DTMF。
 
-我们调用 `insertDTMF()` 不仅指定要发送的 DTMF 的（`dialString`），还指定了每个音调的长度（400 毫秒）和音调之间的时间间隔（50 毫秒）。
+我们调用 `insertDTMF()` 不仅指定要发送的 DTMF（`dialString`），还指定了每个音调的长度（400 毫秒）和音调之间的时间间隔（50 毫秒）。
 
 #### 协商连接
 
@@ -290,7 +287,7 @@ function handleCallerIceConnectionStateChange() {
 
 ```js
 function handleCallerNegotiationNeeded() {
-  log("协商中...");
+  log("协商中……");
   callerPC
     .createOffer(offerOptions)
     .then((offer) => {
@@ -310,7 +307,7 @@ function handleCallerNegotiationNeeded() {
       return receiverPC.setLocalDescription(answer);
     })
     .then(() => {
-      log("设置呼叫方的远程描述以匹配");
+      log("设置要匹配的呼叫方的远程描述");
       return callerPC.setRemoteDescription(receiverPC.localDescription);
     })
     .catch((err) => log(`协商过程中出错：${err.message}`));
@@ -345,7 +342,7 @@ function handleCallerGatheringStateChangeEvent() {
 
 当接收方的 `RTCPeerConnection` ICE 层提出一个新的候选者时，它会向 `receiverPC` 发出一个 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 事件。`icecandidate` 事件处理器的工作是将候选者传输给呼叫方。在我们的示例中，我们直接控制呼叫方和接收方，所以我们可以直接通过调用其 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 方法将候选者添加到呼叫方。这由 `handleReceiverIceEvent()` 处理。
 
-这段代码类似于上面[添加候选者到呼叫方](#添加候选者到呼叫方)中看到的呼叫方的 `icecandidate` 事件处理器。
+这段代码类似于上面[将候选者添加到呼叫方](#将候选者添加到呼叫方)中看到的呼叫方的 `icecandidate` 事件处理器。
 
 ```js
 function handleReceiverIceEvent(event) {
@@ -354,7 +351,7 @@ function handleReceiverIceEvent(event) {
 
     callerPC
       .addIceCandidate(new RTCIceCandidate(event.candidate))
-      .catch((err) => log(`向呼叫方添加候选者时出错：${err}`));
+      .catch((err) => log(`向呼叫方添加候选时出错：${err}`));
   } else {
     log("接收方已经没有更多的候选者。");
   }
@@ -397,7 +394,7 @@ function log(msg) {
 
 你可以在这里尝试此示例。当你点击“拨号”按钮时，你应该会看到一系列的日志消息输出；然后拨号将开始。如果你的浏览器作为其用户体验的一部分以可听的方式播放音调，则在它们被传输时你应该会听到它们。
 
-{{ EmbedLiveSample('简单示例', 600, 500, "", "", "", "microphone") }}
+{{ EmbedLiveSample("简单示例", 600, 500, "", "", "", "microphone") }}
 
 一旦音调传输完成，连接就会关闭。你可以再次点击“拨号”以重新连接并发送音调。
 
