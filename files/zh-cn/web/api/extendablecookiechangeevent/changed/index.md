@@ -2,7 +2,7 @@
 title: ExtendableCookieChangeEvent：changed 属性
 slug: Web/API/ExtendableCookieChangeEvent/changed
 l10n:
-  sourceCommit: 60c3843f55839380e0c0cdc293ea694fe9943158
+  sourceCommit: 08f7d7ef89c04b824fa246e6fd35d47aebef7b51
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("service")}}
@@ -24,7 +24,7 @@ l10n:
 - `expires`
   - : {{glossary("Unix time", "Unix 时间戳")}}（以毫秒为单位表示），记录 cookie 的到期日期。
 - `secure`
-  - : 一个布尔值，表示 cookie 是否仅在安全上下文中使用（HTTPS 还是 HTTP）。
+  - : 一个{{jsxref("boolean", "布尔值", "", 1)}}，表示 cookie 是否仅在安全上下文中使用（HTTPS 还是 HTTP）。
 - `sameSite`
 
   - : 以下 [`SameSite`](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 的值之一：
@@ -41,7 +41,7 @@ l10n:
 
 ## 示例
 
-此示例中，当 cookie 被设置，事件监听器打印 `changed` 属性至控制台。数组的第一个元素代表刚被设置的 cookie 的对象。
+此示例中，在 cookie 被设置时，事件监听器打印 `changed` 属性至控制台。数组的第一个元素代表刚被设置的 cookie 的对象。
 
 ```js
 self.addEventListener("cookiechange", (event) => {
