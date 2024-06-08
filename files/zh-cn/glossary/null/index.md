@@ -7,9 +7,9 @@ l10n:
 
 {{GlossarySidebar}}
 
-在计算机学科，**`null`** 值通常来说表示一个不存在或者无效{{glossary("object")}}或者地址引用。语言实现中空引用的含义各不相同。
+在计算机科学中，**`null`** 值表示一个不存在或无效的{{glossary("object", "对象")}}或者地址引用（通常是有意为之）。空引用的含义因语言实现而异。
 
-在 {{Glossary("JavaScript")}}，`null` 是{{Glossary("Primitive", "原始值")}}之一，因其行为类似于一个原始值。但是，当你使用 [`typeof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof) 操作符时，会返回 `"object"`。
+在 {{Glossary("JavaScript")}}，`null` 是{{Glossary("Primitive", "原始值")}}之一，因其行为类似于一个原始值。但是，当你使用 [`typeof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof) 运算符时，会返回 `"object"`。
 
 ```js
 console.log(typeof null); // "object"
