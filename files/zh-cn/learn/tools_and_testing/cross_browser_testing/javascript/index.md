@@ -73,7 +73,7 @@ if (window.XMLHttpRequest) {
 >
 > 最简单的解决方案是用 `let` 而不是 `var` 来声明迭代变量，这样与函数相关的 `i` 的值对每个迭代都是唯一的。请参阅 [good-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html)（也可以参阅 [源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/good-for-loop.html)）以查看能正常工作的版本。
 
-- 确保在你试图使用[异步操作](/zh-CN/docs/Learn/JavaScript/Asynchronous)返回的值之前，其已经完成。这通常需要了解如何使用 *promises*：适当地使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 或在 promise 的 {{jsxref("Promise.then()", "then()")}} 处理程序中运行代码来处理异步调用的结果。有关此主题的介绍，请参见[如何使用 promises](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)。
+- 确保在你试图使用[异步操作](/zh-CN/docs/Learn/JavaScript/Asynchronous)返回的值之前，其已经完成。这通常需要了解如何使用 _promises_：适当地使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 或在 promise 的 {{jsxref("Promise.then()", "then()")}} 处理程序中运行代码来处理异步调用的结果。有关此主题的介绍，请参见[如何使用 promises](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)。
 
 > **备注：** [JavaScript 代码中的 Bug：JavaScript 开发人员的 10 个最常见错误](https://www.toptal.com/javascript/10-most-common-javascript-mistakes)对这些常见错误及更多内容有很好的讨论。
 
@@ -254,7 +254,7 @@ if ("geolocation" in navigator) {
 }
 ```
 
-你也可以为 CSS 特性编写这样的测试，例如通过测试 _[element.style.property](/en-US/docs/Web/API/HTMLElement/style)_ 的存在（比如 `paragraph.style.transform !== undefined`）。如果你希望在支持某个 CSS 特性的情况下应用样式，可以直接使用 [@supports](/zh-CN/docs/Web/CSS/@supports) 规则（也称为特性查询）。例如，要检查浏览器是否支持 CSS 容器查询，可以这样做：
+你也可以为 CSS 特性编写这样的测试，例如通过测试 _[element.style.property](/zh-CN/docs/Web/API/HTMLElement/style)_ 的存在（比如 `paragraph.style.transform !== undefined`）。如果你希望在支持某个 CSS 特性的情况下应用样式，可以直接使用 [@supports](/zh-CN/docs/Web/CSS/@supports) 规则（也称为特性查询）。例如，要检查浏览器是否支持 CSS 容器查询，可以这样做：
 
 ```css
 @supports (container-type: inline-size) {
