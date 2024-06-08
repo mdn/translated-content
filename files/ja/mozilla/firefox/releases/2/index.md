@@ -3,6 +3,8 @@ title: Firefox 2 for developers
 slug: Mozilla/Firefox/Releases/2
 ---
 
+{{FirefoxSidebar}}
+
 ## 開発者のための Firefox 2 の新機能
 
 Firefox 2 ではたくさんの新機能と能力を導入します。この記事は新機能を取り上げている記事へのリンクを提供します。

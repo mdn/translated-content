@@ -3,6 +3,8 @@ title: モバイルアクセシビリティのチェックリスト
 slug: Web/Accessibility/Mobile_accessibility_checklist
 ---
 
+{{AccessibilitySidebar}}
+
 このドキュメントは、モバイルアプリ開発者向けのアクセシビリティ要件の簡潔なチェックリストを提供します。 それはより多くのパターンが生じるにつれて絶えず進化することを意図しています。
 
 ## 色

@@ -3,6 +3,8 @@ title: grid-row-start
 slug: Web/CSS/grid-row-start
 ---
 
+{{CSSRef}}
+
 Свойство CSS **`grid-row-start`** определяет начальную позицию элемента грид в строке, добавляя линию, span или ничего (автоматически) к его расположению в сетке, тем самым определяя начальный край inline-элемента его {{glossary("grid areas", "grid area")}}.
 
 {{EmbedInteractiveExample("pages/css/grid-row-start.html")}}

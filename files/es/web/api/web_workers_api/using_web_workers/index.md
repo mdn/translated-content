@@ -3,6 +3,8 @@ title: Usando Web Workers
 slug: Web/API/Web_Workers_API/Using_web_workers
 ---
 
+{{DefaultAPISidebar("Web Workers API")}}
+
 Los Web Workers dedicados proveen un medio sencillo para que el contenido web ejecute scripts en hilos en segundo plano. Una vez creado, un worker puede enviar mensajes a la tarea creada mediante envio de mensajes al manejador de eventos especificado por el creador. Sin embargo, **los workers trabajan dentro de un [contexto global](/es/docs/JavaScript/DedicatedWorkerGlobalScope) diferente de la ventana actual** (usar el atajo {{ domxref("window") }} en lugar de {{ domxref("window.self","self") }} con el fin de obtener el scope actual dentro de un {{ domxref("Worker") }} retornaría, de hecho, un error).
 
 El hilo worker puede realizar tareas sin interferir con la interfaz de usuario. Ademas, pueden realizar I/O usando [`XMLHttpRequest`](/en/nsIXMLHttpRequest) (aunque el responseXML y los atributos channel son siempre null).

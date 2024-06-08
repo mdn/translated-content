@@ -3,6 +3,8 @@ title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 ---
 
+{{APIRef("XMLHttpRequest API")}}
+
 `XMLHttpRequest` es un objeto [JavaScript](/en/JavaScript) que fue diseñado por Microsoft y adoptado por Mozilla, Apple y Google. Actualmente es un [estándar de la W3C](http://www.w3.org/TR/XMLHttpRequest/). Proporciona una forma fácil de obtener información de una URL sin tener que recargar la página completa. Una página web puede actualizar sólo una parte de la página sin interrumpir lo que el usuario está haciendo. `XMLHttpRequest` es ampliamente usado en la programación AJAX.
 
 A pesar de su nombre, `XMLHttpRequest` puede ser usado para recibir cualquier tipo de dato, no solo XML, y admite otros formatos además de [HTTP](/en/HTTP) (incluyendo `file` y `ftp`).

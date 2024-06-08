@@ -46,7 +46,8 @@ La propiedad {{cssxref ("background")}} de CSS es una propiedad abreviada de una
         105deg,
         rgba(255, 255, 255, 0.2) 39%,
         rgba(51, 56, 57, 1) 96%
-      ) center center / 400px 200px no-repeat,
+      )
+      center center / 400px 200px no-repeat,
     url(big-star.png) center no-repeat,
     rebeccapurple;
 }

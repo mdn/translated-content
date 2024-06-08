@@ -3,7 +3,7 @@ title: substring
 slug: Web/XPath/Functions/substring
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La función `substring` devuelve una parte de una cadena dada.
 

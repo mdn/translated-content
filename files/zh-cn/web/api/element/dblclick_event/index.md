@@ -3,6 +3,8 @@ title: dblclick
 slug: Web/API/Element/dblclick_event
 ---
 
+{{APIRef}}
+
 在单个元素上单击两次鼠标的指针设备按钮 (通常是小鼠的主按钮) 时，将触发 `dblclick` 事件。
 
 ## 常规信息

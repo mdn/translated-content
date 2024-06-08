@@ -3,7 +3,7 @@ title: concat
 slug: Web/XPath/Functions/concat
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `concat` concatène deux ou plusieurs chaînes et retourne la chaîne résultante.
 

@@ -3,6 +3,8 @@ title: bdo
 slug: Web/HTML/Element/bdo
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 **bdo** Bi-Directional Overriding=Anulación de bidireccionalidad.

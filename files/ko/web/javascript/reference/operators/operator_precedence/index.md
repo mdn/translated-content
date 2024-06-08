@@ -216,7 +216,7 @@ a?.b.c; // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `un
     </tr>
     <tr>
       <td>
-        {{jsxref("Operators/Property_Accessors", "계산된 멤버 접근","#괄호_표기법", "1")}}
+        {{jsxref("Operators/Property_Accessors", "계산된 멤버 접근","#괄호_표기법", 1)}}
       </td>
       <td>좌결합성</td>
       <td><code>… [ … ]</code></td>

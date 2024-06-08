@@ -3,6 +3,8 @@ title: end
 slug: Web/SVG/Attribute/end
 ---
 
+{{SVGRef}}
+
 « [SVG Attribute reference home](/en/SVG/Attribute)
 
 Этот атрибут определяет конечное значение для анимации, которое может ограничить активную длительность.

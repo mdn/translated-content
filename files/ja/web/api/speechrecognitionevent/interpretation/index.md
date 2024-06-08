@@ -1,8 +1,9 @@
 ---
-title: SpeechRecognitionEvent.interpretation
+title: "SpeechRecognitionEvent: interpretation プロパティ"
+short-title: interpretation
 slug: Web/API/SpeechRecognitionEvent/interpretation
 l10n:
-  sourceCommit: 06105598d11001e9f12d80ad05087f1df3c0634b
+  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
 {{APIRef("Web Speech API")}}{{deprecated_header}}{{Non-standard_header}}

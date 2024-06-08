@@ -3,6 +3,8 @@ title: Introduction à XML
 slug: Web/XML/XML_introduction
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/XML")}}
+
 ### Définition
 
 XML, pour _e**X**tensible **M**arkup **L**anguage_ (langage de balisage extensible), est un langage de balisage généraliste [recommandé par le W3C](http://www.w3.org/) comme l'est HTML. XML est un sous-ensemble du langage SGML. Cela signifie que contrairement aux autres langages de balisages, XML n'est pas prédéfini, vous devez définir vos propres balises. Le but principal de ce langage est le partage de données entre différents systèmes, tel qu'Internet.

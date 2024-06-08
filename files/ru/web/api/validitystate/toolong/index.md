@@ -3,6 +3,8 @@ title: validityState.tooLong
 slug: Web/API/ValidityState/tooLong
 ---
 
+{{APIRef("HTML DOM")}}
+
 Доступное только для чтения свойство **`tooLong`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, превышает ли длина значения {{HTMLElement("input")}} или {{HTMLElement("textarea")}}, после редактирования пользователем, заданный в атрибуте [`maxlength`](/ru/docs/Web/HTML/Attributes/maxlength) максимум.
 
 ## Спецификации

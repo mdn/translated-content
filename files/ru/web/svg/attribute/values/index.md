@@ -3,6 +3,8 @@ title: values
 slug: Web/SVG/Attribute/values
 ---
 
+{{SVGRef}}
+
 « [SVG Attribute reference home](/en/SVG/Attribute)
 
 Атрибут `values` имеет два значения в зависимости от используемого контекста.

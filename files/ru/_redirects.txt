@@ -476,7 +476,7 @@
 /ru/docs/Web/API/WebRTC_API/связь	/ru/docs/Web/API/WebRTC_API/Connectivity
 /ru/docs/Web/API/Window/mozAnimationStartTime	/ru/docs/Web/API/Animation/startTime
 /ru/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/ru/docs/Glossary/Base64
-/ru/docs/Web/API/WindowBase64/btoa	/ru/docs/Web/API/btoa
+/ru/docs/Web/API/WindowBase64/btoa	/ru/docs/Web/API/Window/btoa
 /ru/docs/Web/API/WindowEventHandlers/onafterprint	/ru/docs/Web/API/Window/afterprint_event
 /ru/docs/Web/API/WindowEventHandlers/onunload	/ru/docs/Web/API/Window/unload_event
 /ru/docs/Web/API/WindowTimers.setTimeout	/ru/docs/Web/API/setTimeout
@@ -487,6 +487,8 @@
 /ru/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests	/ru/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
 /ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /ru/docs/Web/API/XMLHttpRequest/onreadystatechange	/ru/docs/Web/API/XMLHttpRequest/readystatechange_event
+/ru/docs/Web/API/atob	/ru/docs/Web/API/Window/atob
+/ru/docs/Web/API/btoa	/ru/docs/Web/API/Window/btoa
 /ru/docs/Web/API/caches	/ru/docs/Web/API/Window/caches
 /ru/docs/Web/API/console.timeEnd	/ru/docs/Web/API/console/timeend_static
 /ru/docs/Web/API/console/assert	/ru/docs/Web/API/console/assert_static

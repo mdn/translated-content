@@ -3,6 +3,8 @@ title: Utiliser le rôle log
 slug: Web/Accessibility/ARIA/Roles/log_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Description
 
 Cette technique présente l'utilisation du rôle [`log`](http://www.w3.org/TR/wai-aria/roles#log) et décrit les effets produits sur les navigateurs et les technologies d'assistance.

@@ -3,6 +3,8 @@ title: MathML Pythagorean Theorem
 slug: Web/MathML/Examples/MathML_Pythagorean_Theorem
 ---
 
+{{MathMLRef}}
+
 <math><mrow><msup><mi>a</mi>
 <mn>2</mn>
 </msup><mo>+</mo>
