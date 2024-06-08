@@ -1,7 +1,6 @@
 ---
 title: bfcache
 slug: Glossary/bfcache
-page-type: glossary-definition
 ---
 
 {{GlossarySidebar}}
