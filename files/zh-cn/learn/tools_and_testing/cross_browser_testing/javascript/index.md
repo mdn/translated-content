@@ -221,7 +221,7 @@ fetch(requestURL).then((response) => {
 - 使用 API 时，请确保在不需要时关闭 API 功能；因为某些 API 调用在处理能力方面可能非常耗费资源。例如，在显示视频流时，如果视频不在视线范围内，请确保关闭它。在使用重复调用的地理位置 API 跟踪设备位置时，如果用户不再需要，也应及时关闭。
 - 动画可能会对性能造成重大影响。尽管许多 JavaScript 库提供了由 JavaScript 控制的动画功能，但使用浏览器原生功能（如 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)或新兴的 [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)）执行动画通常更高效。建议阅读 Brian Birtles 的文章[使用 Element.animate 制作不重要的动画](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/)，了解动画成本高昂的原因、提升动画性能的技巧，以及 Web 动画 API 的相关信息。
 
-> **备注：** 阿迪-奥斯曼尼的[编写快速、内存效率高的 JavaScript 代码](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/)包含了大量细节和一些有助于提高 JavaScript 性能的出色建议。
+> **备注：** 阿迪—奥斯曼尼的[编写快速、内存效率高的 JavaScript 代码](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/)包含了大量细节和一些有助于提高 JavaScript 性能的出色建议。
 
 ## 跨浏览器 JavaScript 问题
 
