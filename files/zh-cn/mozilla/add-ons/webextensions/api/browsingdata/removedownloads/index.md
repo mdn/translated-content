@@ -7,7 +7,7 @@ l10n:
 
 清除浏览器的下载历史记录。请注意，这不会删除已下载对象本身，只会清除浏览器历史记录中的下载记录。
 
-你可以使用 `removalOptions` 参数（一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象），用于：
+你可以使用 `removalOptions` 参数（一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象）来：
 
 - 清除在特定时间之后下载的项目的记录
 - 控制是仅清除从普通网页下载的项目的记录，还是同时清除从托管应用程序和扩展程序下载的记录。
