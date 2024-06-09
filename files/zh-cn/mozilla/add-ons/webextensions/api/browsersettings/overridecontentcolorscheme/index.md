@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，其基础值是一个字符串。
+一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，其底层值是字符串。
 
 Firefox 允许用户为浏览器界面选择一个主题。这些主题可以为网页应用浅色或深色主题。通过使用 `layout.css.prefers-color-scheme.content-override` 首选项，用户可以覆盖主题并选择以浅色或深色主题渲染网页，或者跟随设备的主题。此浏览器设置公开了该首选项。
 
@@ -24,7 +24,7 @@ Firefox 允许用户为浏览器界面选择一个主题。这些主题可以为
 
 ## 示例
 
-此示例覆盖设置以使用深色主题为网页：
+此示例覆盖设置以使用网页的深色主题：
 
 ```js
 function logResult(result) {
