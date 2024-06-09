@@ -7,11 +7,11 @@ l10n:
 
 {{AddonSidebar}}
 
-一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，其基础值是一个布尔值。
+一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，其底层值是布尔值。
 
 如果设置为 `true`，当用户在浏览器的搜索框中选择一个项目时，搜索结果会显示在一个新标签页中。如果设置为 `false`（默认值），搜索结果会显示在当前标签页中。
 
-注意，这不会影响从地址栏或智能地址栏中选择项目时的行为，只影响指定的搜索框。
+注意，这不会影响从地址栏或智能地址栏中选择项目时的行为，只影响专用搜索框。
 
 ## 浏览器兼容性
 
@@ -19,7 +19,7 @@ l10n:
 
 ## 示例
 
-将设置为 `true`：
+将设置指定为 `true`：
 
 ```js
 function logResult(result) {
