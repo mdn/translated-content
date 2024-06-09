@@ -25,7 +25,7 @@ browser.browserAction.setPopup(
 
     - `tabId` {{optional_inline}}
 
-      - `integer`。仅为特定标签页设置弹出窗口。当用户将此标签页导航到新页面时，弹出窗口会重置。
+      - : `integer`。仅为特定标签页设置弹出窗口。当用户将此标签页导航到新页面时，弹出窗口会重置。
 
     - `windowId` {{optional_inline}}
 
