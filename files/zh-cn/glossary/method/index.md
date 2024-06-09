@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**方法**是一个{{glossary("function","函数")}}。它是一个{{glossary("object","对象")}}的{{glossary("property","属性")}}。方法有两种类型：*实例方法*是由对象实例执行的内置任务，而 _{{Glossary("static method", "静态方法")}}_ 是直接在对象构造函数上调用的任务。
+**方法**是一种作为{{glossary("object","对象")}}的{{glossary("property","属性")}}的{{glossary("function","函数")}}。方法有两种类型：*实例方法*是由对象实例执行的内置任务，而[_静态方法_](/zh-CN/docs/Glossary/Static_method)是直接在对象构造函数上调用的任务。
 
 > **备注：** 在 JavaScript 中，函数本身也是对象，因此，在这个上下文中，方法实际上是对函数的{{glossary("object reference","对象引用")}}。
 
