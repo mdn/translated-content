@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-用户点击浏览器操作图标时，将会打开作为弹出窗口的 HTML 文档。没有指定特定弹出窗口的标签页将继承全局弹出窗口，该弹出窗口默认为清单（manifest）文件中指定的 [`default_popup`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)。
+设置在用户点击浏览器操作图标时，将会以弹出窗口的形式打开的 HTML 文档。没有指定特定弹出窗口的标签页将继承全局弹出窗口，该弹出窗口默认为清单（manifest）文件中指定的 [`default_popup`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)。
 
 ## 语法
 
@@ -39,7 +39,7 @@ browser.browserAction.setPopup(
 
         如果这里传递了一个空字符串（`""`），弹出窗口将被禁用，扩展程序将接收到 {{WebExtAPIRef("browserAction.onClicked")}} 事件。
 
-        如果 popup 为 null：
+        如果 `popup` 为 `null`：
 
         - 如果指定了 `tabId`，则移除特定标签页的弹出窗口，使该标签页继承全局弹出窗口。
         - 如果指定了 `windowId`，则移除特定窗口的弹出窗口，使该窗口继承全局弹出窗口。
@@ -56,7 +56,7 @@ browser.browserAction.setPopup(
 
 ## 示例
 
-以下代码添加了一对上下文菜单项，用于在两个弹出窗口之间切换。请注意，你需要在扩展的 manifest 中设置“contextMenus”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)才能创建上下文菜单项。
+以下代码添加了一对上下文菜单项，用于在两个弹出窗口之间切换。请注意，你需要在扩展的清单中设置“contextMenus”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)才能创建上下文菜单项。
 
 ```js
 function onCreated() {
