@@ -28,7 +28,7 @@ let result = await browser.declarativeNetRequest.testMatchOutcome(
     - `method` {{optional_inline}}
       - : `string`。假设请求的标准 HTTP 方法（小写）。默认为 HTTP 请求的 `"get"`，对于非 HTTP 请求，则忽略此项。
     - `tabId` {{optional_inline}}
-      - : `number`。假设请求发生在的选项卡的 ID。不需要对应实际选项卡 ID。默认为 `-1`，表示请求与选项卡无关。
+      - : `number`。发生假设请求的标签页的 ID。不需要对应实际标签页的 ID。默认为 `-1`，表示请求与标签页无关。
     - `type`
       - : {{WebExtAPIRef("declarativeNetRequest.ResourceType")}}。假设请求的资源类型。
     - `url`
@@ -38,11 +38,11 @@ let result = await browser.declarativeNetRequest.testMatchOutcome(
 
   - : 请求选项的详细信息。
     - `includeOtherExtensions` {{optional_inline}}
-      - : `boolean`。表示是否在 `matchedRules` 中包含其他扩展的匹配规则。当其他扩展的规则匹配时，生成的 `matchedRule` 将具有一个 `extensionId` 属性。默认为 `false`。
+      - : `boolean`。表示是否在 `matchedRules` 中包含其他扩展的匹配规则。当其他扩展的规则匹配时，生成的 `matchedRule` 将具有 `extensionId` 属性。默认为 `false`。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个对象，具有以下属性：
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个具有以下属性的对象：
 
 - `matchedRules`
   - : {{WebExtAPIRef("declarativeNetRequest.MatchedRule")}}。与假设请求匹配的规则的详细信息（如果有）。
