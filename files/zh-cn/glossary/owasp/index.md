@@ -9,6 +9,6 @@ l10n:
 
 **OWASP**（开放 Web 应用安全项目）是一个非营利组织和全球网络，致力于自由软件（尤其是 Web 上的软件）安全事业。
 
-## See also
+## 参见
 
-- [Official website](https://owasp.org/)
+- [官方网站](https://owasp.org/)
