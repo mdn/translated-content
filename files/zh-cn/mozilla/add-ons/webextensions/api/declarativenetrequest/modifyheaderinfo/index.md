@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-要修改请求的请求头或响应的响应头，在 `rule.action.requestHeaders` 数组或 `rule.action.responseHeaders` 数组中声明，用于 {{WebExtAPIRef("declarativeNetRequest.RuleAction", "rule.action")}}`.type` 为"modifyHeaders"这个规则。
+要修改的请求的请求标头或响应标头，在 `rule.action.requestHeaders` 数组或 `rule.action.responseHeaders` 数组中声明，用于 {{WebExtAPIRef("declarativeNetRequest.RuleAction", "rule.action")}}`.type` 为"modifyHeaders"这个规则。
 
 每个对象描述了一个标头修改。要修改多个标头，可以在这些数组中指定多个对象，或者跨多个规则。
 
@@ -15,7 +15,7 @@ l10n:
 
 如果多个 `modifyHeaders` 规则指定了相同的标头，则标头的最终修改结果将根据每个规则的优先级和指定的操作确定：
 
-- 如果一个规则已被附加到一个标头，则较低优先级的规则只能附加到该标头。不允许进行 `set` 和 `remove` 操作。
+- 如果一个规则为标头附加条目，则较低优先级的规则只能对标头附加条目。不允许进行 `set` 和 `remove` 操作。
 - 如果一个规则设置了一个标头，那么低优先级规则除了来自相同扩展的 `append` 规则外，不能修改该标头。
 - 如果一个规则已经删除了一个标头，那么低优先级规则不能修改该标头。
 
@@ -28,7 +28,7 @@ l10n:
 - `operation`
   - : `string`。要在标头上执行的操作。可能的值为 `"append"`、`"set"` 和 `"remove"`。
 - `value` {{optional_inline}}
-  - : `string`。标头的新值。必须为 append 和 set 操作指定。不允许用于 "remove" 操作。
+  - : `string`。标头的新值。必须为 append 和 set 操作指定。不允许用于“remove”操作。
 
 ## 标头限制
 
@@ -55,7 +55,7 @@ l10n:
 - `Want-Digest`
 - `X-Forwarded-For`
 
-在 Firefox 中，扩展需要对 `Host` 标头的新值具有主机权限。
+在 Firefox 中，扩展需要具有主机权限才能对 `Host` 标头设置新值。
 
 {{WebExtExamples("h2")}}
 
