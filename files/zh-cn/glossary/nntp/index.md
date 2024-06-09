@@ -7,9 +7,9 @@ l10n:
 
 {{GlossarySidebar}}
 
-**NNTP**（网络新闻传输协议）是一个用于在客户端和服务器之间或在服务器之间传输 {{Glossary("Usenet")}} 消息{{Glossary("protocol", "协议")}}。
+**NNTP**（网络新闻传输协议）是一个用于在客户端和服务器之间或在服务器之间传输 {{Glossary("Usenet")}} 消息的{{Glossary("protocol", "协议")}}。
 
-## See also
+## 参见
 
 - 维基百科上的 [NNTP](https://zh.wikipedia.org/wiki/網路新聞傳輸協定)
 - IETF 上的 [RFC 3977 关于 NNTP](https://datatracker.ietf.org/doc/html/rfc3977)（2006）
