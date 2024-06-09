@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-使用[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)在显式网格中定义{{glossary("Grid tracks", "轨道")}}的同时会创建**网格线**。
+**网格线**会在使用[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)时被创建。
 
 ## 示例
 
