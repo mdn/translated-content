@@ -9,7 +9,7 @@ l10n:
 
 一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，可用于获取表示当前设置为浏览器主页的 URL 的字符串。
 
-请注意，这是一个只读设置。要更改主页，请参阅 [Chrome 设置覆盖](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides)。
+请注意，这是一个只读设置。要更改主页，请参阅 [chrome_settings_overrides](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides)。
 
 ## 浏览器兼容性
 
