@@ -63,22 +63,22 @@ switch (NaN) {
 
 宽松相等是*对称的*：对于任何 `A` 和 `B` 的值，`A == B` 总是与 `B == A` 具有相同的语义（除了转换应用的顺序）。使用 `==` 执行宽松相等的行为如下：
 
-1. 如果操作数具有相同的类型，则按以下方式进行比较：
-   - Object：仅当两个操作数引用相同的对象时，才返回 `true`。
-   - String：仅当两个操作数具有相同的字符并且顺序相同，才返回 `true`。
-   - Number：仅当两个操作数具有相同的值时，才返回 `true`。`+0` 和 `-0` 被视为相同的值。如果任一操作数为 `NaN`，则返回 `false`；因此 `NaN` 永远不等于 `NaN`。
-   - Boolean：仅当操作数都是 `true` 或 `false` 时，才返回 `true`。
-   - BigInt：仅当两个操作数具有相同的值时，才返回 `true`。
-   - Symbol：仅当两个操作数引用相同的 symbol 时，才返回 `true`。
-2. 如果操作数之一为 `null` 或 `undefined`，则另一个操作数必须为 `null` 或 `undefined` 才返回 `true`。否则返回 `false`。
-3. 如果操作数之一是对象，而另一个是原始值，[则将对象转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。
-4. 在这一步骤中，两个操作数都被转换为原始值（String、Number、Boolean、Symbol 和 BigInt 之一）。剩余的转换将分情况完成。
-   - 如果它们是相同类型的，则使用步骤 1 进行比较。
-   - 如果操作数中有一个是 Symbol，但另一个不是，则返回 `false`。
-   - 如果操作数之一是 Boolean，而另一个不是，[则将 Boolean 转换为 Number](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)：`true` 转换为 1，`false` 转换为 0。然后再次对两个操作数进行宽松比较。
-   - Number 转 String：[将 String 转换为 Number](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)。转换失败会得到 `NaN`，这将确保相等性为 `false`。
-   - Number 转 BigInt：按照其数值进行比较。如果 Number 是 `±Infinity` 或 `NaN`，返回 `false`。
-   - String 转 BigInt: 使用与 [`BigInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) 构造函数相同的算法将字符串转换为 BigInt。如果转换失败，则返回 `false`。
+1. 如果操作数具有相同的类型，则按如下方式进行比较：
+   - 对象（Object）：仅当两个操作数引用同一个对象时返回 `true`。
+   - 字符串（String）：仅当两个操作数具有相同的字符且顺序相同时返回 `true`。
+   - 数字（Number）：如果两个操作数的值相同，则返回 `true`。`+0` 和 `-0` 被视为相同的值。如果任何一个操作数是 `NaN`，返回 `false`；所以，`NaN` 永远不等于 `NaN`。
+   - 布尔值（Boolean）：仅当操作数都为 `true` 或都为 `false` 时返回 `true`。
+   - 大整型（BigInt）：仅当两个操作数的值相同时返回 `true`。
+   - 符号（Symbol）：仅当两个操作数引用相同的符号时返回 `true`。
+2. 如果其中一个操作数为 `null` 或 `undefined`，另一个操作数也必须为 `null` 或 `undefined` 以返回 `true`。否则返回 `false`。
+3. 如果其中一个操作数是对象，另一个是原始值，则[将对象转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#原始值强制转换)。
+4. 在这一步，两个操作数都被转换为原始值（字符串、数字、布尔值、符号和大整型中的一个）。剩余的转换将分情况完成。
+   - 如果是相同的类型，使用步骤 1 进行比较。
+   - 如果其中一个操作数是符号而另一个不是，返回 `false`。
+   - 如果其中一个操作数是布尔值而另一个不是，则[将布尔值转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)：`true` 转换为 1，`false` 转换为 0。然后再次对两个操作数进行宽松比较。
+   - 数字与字符串：[`Number()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) 构造函数相同的算法将字符串转换为数字。转换失败将导致 `NaN`，这将保证相等比较为 `false`。
+   - 数字与大整型：按数值进行比较。如果数值为 ±∞ 或 `NaN`，返回 `false`。
+   - 字符串与大整型：使用与 [`BigInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) 构造函数相同的算法将字符串转换为大整型数。如果转换失败，返回 `false`。
 
 一般而言，根据 ECMAScript 规范，所有原始类型和对象都不与 `undefined` 和 `null` 宽松相等。但是大部分浏览器允许非常有限的一类对象（即，所有页面中的 `document.all` 对象）在某些情况下表现出*模拟* `undefined` 值特性。宽松相等就是这些情况之一：当且仅当 A 是一个*模拟* `undefined` 的对象时，`null == A` 和 `undefined == A` 将会计算得到 `true`。在其他所有情况下，一个对象都不会与 `undefined` 或 `null` 宽松相等。
 
