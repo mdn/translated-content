@@ -9,11 +9,11 @@ l10n:
 
 在 CSS 中，元素的*固有尺寸*是指基于其内容的尺寸，不考虑它所在的上下文影响。例如，CSS [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)属性应用的尺寸。元素的固有尺寸由其 {{cssxref("min-content")}} 和 {{cssxref("max-content")}} 尺寸表示。
 
-行内元素的尺寸是固有的：[尺寸](/zh-CN/docs/Web/CSS/CSS_box_sizing)和[盒](/zh-CN/docs/Web/CSS/CSS_box_model)属性，包括 {{cssxref("height")}}、{{cssxref("width")}}、{{cssxref("block-size")}}、{{cssxref("inline-size")}}、{{cssxref("padding-block")}} 和 {{cssxref("margin-block")}} 都对其没有影响（尽管 {{cssxref("margin-inline")}} 和 {{cssxref("padding-inline")}} 有影响）。
+行级元素的尺寸是固有的：[尺寸](/zh-CN/docs/Web/CSS/CSS_box_sizing)和[盒](/zh-CN/docs/Web/CSS/CSS_box_model)属性，包括 {{cssxref("height")}}、{{cssxref("width")}}、{{cssxref("block-size")}}、{{cssxref("inline-size")}}、{{cssxref("padding-block")}} 和 {{cssxref("margin-block")}} 都对其没有影响（尽管 {{cssxref("margin-inline")}} 和 {{cssxref("padding-inline")}} 有影响）。
 
-例如，行内 {{htmlelement("span")}} 元素的最小固有尺寸是在不应用其他 CSS 盒属性的情况下，它在一个行内尺寸为 `0px` 的容器内浮动时的最小尺寸。最大的固有尺寸则相反，是指其容器的行内尺寸为无限时的大小。
+例如，行级元素 {{htmlelement("span")}} 的最小固有尺寸是在不应用其他 CSS 盒属性的情况下，它在一个行向尺寸为 `0px` 的容器内浮动时的最小尺寸。最大的固有尺寸则相反，是指其容器的行向尺寸为无限时的大小。
 
-对于图像，固有尺寸与文本的含义相同——如果不应用任何 CSS 来改变渲染，图像显示的尺寸。
+对于图像，固有尺寸与文本的含义相同——在不应用任何 CSS 来改变渲染的情况下，图像显示的尺寸。
 
 像素密度和分辨率影响固有尺寸。默认情况下，假定图像具有“1x”像素密度（1 设备像素=1 CSS 像素），此时固有尺寸只是像素高度和宽度。图像的固有尺寸和分辨率可以在其 {{Glossary("EXIF")}} 数据中明确指定。图像的像素密度也可以使用 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 属性设置。请注意，如果同时使用两种机制，则 `srcset` 值覆盖 EXIF 值。
 
@@ -38,7 +38,7 @@ p {
 
 ## 最大固有尺寸
 
-最大固有尺寸则相反。如果容器的行内尺寸是无限的，元素的尺寸是多大？文本内容将尽可能显示宽，不进行软换行，即使溢出容器。关键字值{{cssxref("max-content")}}设置了这种行为。
+最大固有尺寸则相反。如果容器的行内尺寸是无限的，元素的尺寸是多大？文本内容将尽可能显示宽，不进行软换行，即使溢出容器。关键字值 {{cssxref("max-content")}} 设置了这种行为。
 
 ```html hidden
 <p>因为文本不换行，元素会伸长。</p>
@@ -59,7 +59,7 @@ p {
 
 ## 非固有尺寸
 
-*非固有尺寸*与*固有尺寸*相反，是基于元素的上下文，而不考虑其内容的尺寸。非固有尺寸由盒模型属性值决定。在非固有尺寸中，百分比指定了盒子相对于其包含块的大小。
+**非固有尺寸**（extrinsic size）与*固有尺寸*相反，是基于元素的上下文，而不考虑其内容的尺寸。非固有尺寸由盒模型属性值决定。在非固有尺寸中，百分比指定了盒子相对于其包含块的大小。
 
 ## 参见
 
