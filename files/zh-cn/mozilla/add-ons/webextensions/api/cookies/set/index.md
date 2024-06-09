@@ -7,9 +7,9 @@ l10n:
 
 {{AddonSidebar}}
 
-{{WebExtAPIRef("cookies")}} API 的 **`set()`** 方法设置包含指定 cookie 数据的 cookie。此方法相当于在请求给定 URL 时发出 HTTP `Set-cookie` 头。
+{{WebExtAPIRef("cookies")}} API 的 **`set()`** 方法设置包含指定 cookie 数据的 cookie。此方法相当于在请求给定 URL 时发出 HTTP `Set-cookie` 标头。
 
-只有在你的 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中包含“cookies” [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)以及给定 URL 的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)时，调用才会成功。给定的 URL 也需要必要的权限来创建具有给定参数的 cookie。
+只有在你的 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中包含“cookies” [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)以及给定 URL 的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)时，调用才会成功。给定的 URL 也需要必要的权限来创建具有给定参数的 cookie。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -28,7 +28,7 @@ let setting = browser.cookies.set(
   - : 一个包含你想要设置的 cookie 详细信息的 `object`。它可以包含以下属性：
 
     - `domain` {{optional_inline}}
-      - : 一个表示 cookie 域的 `string`。如果省略，cookie 将成为主机专用 cookie。
+      - : 一个表示 cookie 域的 `string`。如果省略，cookie 将成为仅限主机（host-only）的 cookie。
     - `expirationDate` {{optional_inline}}
       - : 一个表示 cookie 过期日期的 `number`，以 UNIX 纪元以来的秒数表示。如果省略，cookie 将成为会话 cookie。
     - `firstPartyDomain` {{optional_inline}}
@@ -44,7 +44,7 @@ let setting = browser.cookies.set(
     - `path` {{optional_inline}}
       - : 一个表示 cookie 路径的 `string`。如果省略，默认为 URL 参数的路径部分。
     - `sameSite` {{optional_inline}}
-      - : 一个{{WebExtAPIRef("cookies.SameSiteStatus")}}值，指示 cookie 的 SameSite 状态。如果省略，默认为 0，即"no_restriction"。
+      - : 一个 {{WebExtAPIRef("cookies.SameSiteStatus")}} 值，指示 cookie 的 SameSite 状态。如果省略，默认为 0，即“no_restriction”。
     - `secure` {{optional_inline}}
       - : 一个 `boolean`，指定是否应将 cookie 标记为安全（`true`），或不标记（`false`）。如果省略，默认为 false。
     - `storeId` {{optional_inline}}
@@ -56,7 +56,7 @@ let setting = browser.cookies.set(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，它将被一个包含已设置 cookie 详细信息的 {{WebExtAPIRef('cookies.Cookie')}} 对象兑现。如果由于任何原因调用失败，Promise 将会被一个错误消息拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，它会兑现一个包含已设置 cookie 详细信息的 {{WebExtAPIRef('cookies.Cookie')}} 对象。如果由于任何原因调用失败，Promise 会以错误消息拒绝。
 
 ## 浏览器兼容性
 
