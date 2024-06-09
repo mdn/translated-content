@@ -3,7 +3,7 @@ title: "WorkerGlobalScope: caches プロパティ"
 short-title: caches
 slug: Web/API/WorkerGlobalScope/caches
 l10n:
-  sourceCommit: dd3048a4eb74a53395c9a2015baefaa46ef77a56
+  sourceCommit: 2e327846966abb10de0b1c9bedc584caab71ec97
 ---
 
 {{APIRef("Service Workers API")}}{{securecontext_header}}
