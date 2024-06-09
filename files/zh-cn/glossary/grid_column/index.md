@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**网格列**是[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)中的垂直轨道，即两个垂直网格线之间的空间。它通过属性 {{cssxref("grid-template-columns")}} 或者简写属性 {{cssxref("grid")}}，{{cssxref("grid-template")}} 定义。
+**网格列**是[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)中的垂直轨道，即两个垂直网格线之间的空间。它通过属性 {{cssxref("grid-template-columns")}} 或者简写属性 {{cssxref("grid")}}、{{cssxref("grid-template")}} 定义。
 
 此外，当项目被放置在*显式网格*创建的列之外时，可能会在*隐式网格*中创建列。这些列默认情况下会自动调整大小，或者可以使用 {{cssxref("grid-auto-columns")}} 属性指定大小。
 
