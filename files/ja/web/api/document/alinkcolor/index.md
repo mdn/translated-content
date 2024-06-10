@@ -22,7 +22,7 @@ Mozilla Firefox では、このプロパティの既定値は赤 (16 進で `#ee
 
 他の代替手段として `document.body.alink` がありますが、上記の CSS による代替手段が設置されたため [HTML 4.01 で非推奨](https://www.w3.org/TR/html401/struct/global.html#adef-alink)となっています。
 
-Firefox は `alinkColor`/`:active` および {{Cssxref(":focus")}} の両方に対応しています。 
+Firefox は `alinkColor`/`:active` および {{Cssxref(":focus")}} の両方に対応しています。
 
 ## 仕様書
 
