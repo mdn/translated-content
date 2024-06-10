@@ -3,6 +3,8 @@ title: Firefox 7 for developers
 slug: Mozilla/Firefox/Releases/7
 ---
 
+{{FirefoxSidebar}}
+
 Firefox 7 は 2011 年 9 月 27 日にリリースされました。このページは Firefox 7 のリリースにあたり、開発者に関係する変更についてまとめたものです。
 
 ## ウェブ開発者向けの変更点一覧

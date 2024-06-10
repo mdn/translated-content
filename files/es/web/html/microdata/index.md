@@ -3,6 +3,8 @@ title: Microdatos
 slug: Web/HTML/Microdata
 ---
 
+{{HTMLSidebar}}
+
 ## Resumen
 
 Los microdatos son una especificación HTML de [WHATWG](/es/docs/Glossary/WHATWG) que se emplea para anidar metadatos en el contenido existente de las páginas web.\[1] Buscadores, arañas web y navegadores pueden extraer y procesar los microdatos a partir de una página y utilizarlos para proveer una experiencia más enriquecida para los usuarios. Los buscadores se benefician considerablemente del acceso directo a estos datos estructurados, ya que les permite entender la información contenida en las páginas y ofrecer mejores resultados a sus usuarios. Los microdatos utilizan un vocabulario de apoyo para describir tanto los elementos como conjuntos de nombre y valor y así asignar valores a sus propiedades. Los microdatos representan un intento de brindar una manera más sencilla de anotar elementos HTML con etiquetas legibles por máquinas que los métodos similares consistentes en usar RDFa y microformatos.

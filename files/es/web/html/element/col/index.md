@@ -3,6 +3,8 @@ title: col
 slug: Web/HTML/Element/col
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - Permite especificar propiedades para una columna o un grupo de ellas.

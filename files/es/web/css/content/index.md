@@ -3,6 +3,8 @@ title: content
 slug: Web/CSS/content
 ---
 
+{{CSSRef}}
+
 << [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)
 
 ### Resumen

@@ -3,6 +3,8 @@ title: tabla
 slug: Web/HTML/Element/table
 ---
 
+{{HTMLSidebar}}
+
 ## Resumen
 
 El _Elemento de Tabla HTML_ (`<table>`) representa datos en dos o mas dimensiones.

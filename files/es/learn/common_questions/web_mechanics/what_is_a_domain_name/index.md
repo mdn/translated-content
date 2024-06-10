@@ -3,6 +3,8 @@ title: ¿Qué es un nombre de dominio?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 En este artículo discutiremos acerca de los nombres de los dominios: qué son, cómo se estructuran y cómo conseguir uno.
 
 <table>

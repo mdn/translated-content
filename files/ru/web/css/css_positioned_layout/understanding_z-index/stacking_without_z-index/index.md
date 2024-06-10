@@ -3,6 +3,8 @@ title: Stacking without z-index
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
 ---
 
+{{CSSRef}}
+
 ### Наложения без Z-индекса
 
 Когда элементы не имеют z-индекса, они накладываются в таком порядке(снизу вверх):

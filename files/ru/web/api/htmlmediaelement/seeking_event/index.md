@@ -3,6 +3,8 @@ title: стримится
 slug: Web/API/HTMLMediaElement/seeking_event
 ---
 
+{{APIRef("HTMLMediaElement")}}
+
 Событие 'seeking' в случае, когда идёт подгрузка видео
 
 ## General info

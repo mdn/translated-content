@@ -3,6 +3,8 @@ title: legend
 slug: Web/HTML/Element/legend
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - El elemento \<legend> (leyenda) crea un título para un grupos los campos ({{ HTMLElement("fieldset") }}) de un formulario.
