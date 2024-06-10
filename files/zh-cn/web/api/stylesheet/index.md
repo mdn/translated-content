@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-表示一个实现`StyleSheet`接口的对象样式表。CSS 样式表将进一步实现更专业的 {{domxref("CSSStyleSheet")}} 接口。
+表示一个实现 `StyleSheet`（表示单个样式表）接口的对象。CSS 样式表将进一步实现更具体的 {{domxref("CSSStyleSheet")}} 接口。
 
 ## 实例属性
 
