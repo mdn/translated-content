@@ -7,9 +7,9 @@ l10n:
 
 {{CSSRef}}
 
-[CSS 중첩](/ko/docs/Web/CSS/CSS_nesting) 모듈은 스타일시트를 더 읽기 쉽게, 모듈화하며, 그리고 더 쉬운 유지 보수성을 갖출 수 있게 합니다. 선택자를 반복하여 작성하지 않아도 되고, 이로 인해 파일 크기도 줄어들 수 있습니다.
+[CSS 중첩](/ko/docs/Web/CSS/CSS_nesting) 모듈은 스타일시트의 가독성을 높이고 모듈화하며 그리고 유지 보수하기 용이하게 만듭니다. 선택자를 반복하여 작성하지 않아도 되고, 이로 인해 파일 크기도 줄어들 수 있습니다.
 
-CSS 중첩은 [Sass](https://sass-lang.com/) 와 같은 CSS 전처리기와는 다릅니다. CSS 전처리기는 사전에 컴파일되지만, CSS 중첩은 브라우저에 의해 파싱됩니다. 또한 CSS 중첩에서는, [`&` 을 이용한 중첩 선택자의 명시도](/ko/docs/Web/CSS/CSS_nesting/Nesting_and_specificity) 이 선택자 목록과 연관되어 있는 높은 명시도를 이용하여 계산하는 {{cssxref(':is',':is()')}} 함수와 유사합니다.
+CSS 중첩은 [Sass](https://sass-lang.com/) 와 같은 CSS 전처리기와는 다릅니다. CSS 전처리기는 사전에 컴파일되지만, CSS 중첩은 브라우저에 의해 파싱됩니다. 또한 CSS 중첩에서는, [`&` 중첩 선택자의 명시도](/ko/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)는 {{cssxref(':is',':is()')}} 함수와 유사하며, 관련 선택자 목록과 연관에서 가장 높은 명시도를 이용하여 계산합니다. 
 
 이 안내서는 CSS 에서 중첩을 사용하는 각기 다른 방법에 대해 설명합니다.
 
@@ -51,7 +51,6 @@ parent child {
 
 ### 예제
 
-In these examples, one without and one with the `&` nesting selector, the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`. This demonstrates the impact of omitting the `&` nesting selector.
 아래 예제들에서는, `&` 중첩 선택자를 사용하는 경우 하나, 그리고 다른 하나는 사용하지 않는 경우로써, `<label>` 과 `<input>` 이 형제 요소일 때와 `<label>` 내부에 `<input>` 이 있는 경우가 어떻게 다르게 스타일되는지 확인할 수 있습니다. 이는 `&` 중첩 선택자를 생략했을 때의 영향을 보여줍니다.
 
 > **참고:** 이 예제는 본래의 명세서를 구현하 브라우저와 현재의 중첩 명세를 구현한 브라우저에서의 다른 결과를 보여줍니다. 2023년 8월 이전에 크롬 혹은 사파리에서 구현된 명세에서는 `&` 중첩 선택자를 필요로 했습니다. 현재의 명세를 지원하는 브라우저라면 두 가지 예제 모두에서 두번째 예제와 동일한 결과를 보여줍니다.
@@ -258,7 +257,7 @@ h2 {
 }
 ```
 
-아래 CSS 코드에서는, 중첩은 `&` 를 사용하거나 사용하지 않는 경우 모두에 결합 선택자를 생성하기 위해 사용되었습니다. 최상위 레벨의 선택자는 `class="notice"` 를 가진 요소에 기본적인 스타일을 정의합니다. `&` 중첩 선택자는 `class="notice warning"` 를 가진 요소 혹은 `class="notice success"` 를 가진 요소들에 결합 선택자를 생성하기 위해 사용되었습니다. 추가적으로, `&` 를 명시적으로 사용하지 않고 중첩을 이용한 결합 선택자를 생성하는 `.notice .notice-heading::before` 선택자도 화인할 수 있습니다.
+아래 CSS 코드에서는, 중첩은 `&` 를 사용하거나 사용하지 않는 경우 모두에 결합 선택자를 생성하기 위해 사용되었습니다. 최상위 레벨의 선택자는 `class="notice"` 를 가진 요소에 기본적인 스타일을 정의합니다. `&` 중첩 선택자는 `class="notice warning"` 를 가진 요소 혹은 `class="notice success"` 를 가진 요소들에 결합 선택자를 생성하기 위해 사용되었습니다. 추가적으로, `&` 를 명시적으로 사용하지 않고 중첩을 이용한 결합 선택자를 생성하는 `.notice .notice-heading::before` 선택자도 확인할 수 있습니다.
 
 ```css
 .notice {
@@ -302,7 +301,7 @@ h2 {
 
 ## 추가된 중첩 선택자
 
-`&` 중첩 선택자는 중첩괸 선택자에 추가될 수 있으며, 이는 맥락을 반대로 하는 효과를 부여합니다.
+`&` 중첩 선택자는 중첩된 선택자에 추가될 수 있으며, 이는 맥락을 반대로 하는 효과를 부여합니다.
 
 이는 부모 요소에 다른 클래스가 부여될 때 자식 요소의 스타일이 변경되는 경우에 유용하게 사용할 수 있습니다.
 
