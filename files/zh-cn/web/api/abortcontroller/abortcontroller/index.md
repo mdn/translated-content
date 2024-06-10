@@ -1,9 +1,11 @@
 ---
-title: AbortController.AbortController()
+title: AbortController：AbortController() 构造函数
 slug: Web/API/AbortController/AbortController
+l10n:
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`AbortController()`** 构造函数创建了一个新的 `AbortController` 实例。
 
