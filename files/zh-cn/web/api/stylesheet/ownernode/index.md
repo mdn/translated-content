@@ -33,7 +33,7 @@ l10n:
 
 ## 备注
 
-对于其他样式表包括的样式表，例如[`@import`](/zh-CN/docs/Web/CSS/@import)，此属性的值是 `null`。
+对于被其他样式表所包含的样式表（例如使用 [`@import`](/zh-CN/docs/Web/CSS/@import) 所包含的），此属性的值是 `null`。
 
 ## 规范
 
