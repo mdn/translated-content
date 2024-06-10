@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("MediaStream Recording")}}
 
-[MediaStream 录制 API](/zh-CN/docs/Web/API/MediaStream_Recording_API)的 **`BlobEvent`** 接口表示与 {{domxref("Blob")}} 关联的事件。这些 blob 通常与媒体内容有相关性，但不是必然的。
+[流媒体录制 API](/zh-CN/docs/Web/API/MediaStream_Recording_API) 的 **`BlobEvent`** 接口表示与 {{domxref("Blob")}} 关联的事件。这些 blob 通常（但不是一定）与媒体内容相关。
 
 {{InheritanceDiagram}}
 
