@@ -24,7 +24,7 @@ l10n:
   </head>
   <body>
     <button onclick="alert(document.styleSheets[0].ownerNode)">
-      Show example.css's ownerNode
+      显示 example.css 的 ownerNode
     </button>
   </body>
 </html>
