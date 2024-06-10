@@ -24,7 +24,7 @@ l10n:
 - {{domxref("StyleSheet.title")}} {{ReadOnlyInline}}
   - : 返回表示当前样式表的咨询标题的字符串。
 - {{domxref("StyleSheet.type")}}{{ReadOnlyInline}}
-  - : 返回 {{domxref("DOMString")}} 表示当前样式表的语言。
+  - : 返回表示当前样式表的样式表语言的字符串。
 
 ## 规范
 
