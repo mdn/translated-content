@@ -64,4 +64,4 @@ if (navigator.userActivation.hasBeenActive) {
 ## 参见
 
 - {{domxref("navigator.userActivation")}}
-- [用户激活的功能](/zh-CN/docs/Web/Security/User_activation)
+- [由用户激活的控制的特性](/zh-CN/docs/Web/Security/User_activation)
