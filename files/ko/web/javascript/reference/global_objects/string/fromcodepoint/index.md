@@ -68,7 +68,7 @@ String.fromCodePoint(NaN); // RangeError
 
 ### fromCharCode()와의 비교
 
-{{jsxref(“String.fromCharCode()”)}}는 코드 포인트를 지정하여 보조 문자(예: 코드 포인트 `0x010000` - `0x10FFFF`)를 반환할 수 없습니다. 대신 보조 문자를 반환하려면 UTF-16 서로게이트 쌍이 필요합니다.
+{{jsxref("String.fromCharCode()")}}는 코드 포인트를 지정하여 보조 문자(예: 코드 포인트 `0x010000` - `0x10FFFF`)를 반환할 수 없습니다. 대신 보조 문자를 반환하려면 UTF-16 서로게이트 쌍이 필요합니다.
 
 ```js
 String.fromCharCode(0xd83c, 0xdf03); // Code Point U+1F303 "Night with
