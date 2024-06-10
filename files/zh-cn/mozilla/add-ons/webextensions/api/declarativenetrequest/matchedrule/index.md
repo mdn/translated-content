@@ -14,12 +14,12 @@ l10n:
 此类型的值为对象，包含以下属性：
 
 - `extensionId`
-  : `string`。如果此规则属于其他扩展，则为该扩展的 ID。仅当与 {{WebExtAPIRef("declarativeNetRequest.testMatchOutcome")}} 一起使用时，且将 `includeOtherExtensions` 选项设置为 `true` 时，才可用此属性。
+  - : `string`。如果此规则属于其他扩展，则为该扩展的 ID。仅当与 {{WebExtAPIRef("declarativeNetRequest.testMatchOutcome")}} 一起使用，且将 `includeOtherExtensions` 选项设置为 `true` 时，才可用此属性。
 - `ruleId`
   - : `number`。匹配规则的 ID。
 - `rulesetId`
   - : `string`。此规则所属的[规则集](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#rulesets)的 ID。返回的值为：
-    - 对于来自静态规则集的规则，是在[清单（manifest）键 `declarative_net_request.rule_resources`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) 中规则集的 "id" 键中指定的值。
+    - 对于来自静态规则集的规则，是在[清单（manifest）键 `declarative_net_request.rule_resources`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) 中规则集的“id”键所指定的值。
     - 对于来自动态规则集的规则，是在 {{WebExtAPIRef("declarativeNetRequest.DYNAMIC_RULESET_ID")}} 中定义的值，即 `"_dynamic"`。
     - 对于来自会话规则集的规则，是在 {{WebExtAPIRef("declarativeNetRequest.SESSION_RULESET_ID")}} 中定义的值，即 `"_session"`。
 
