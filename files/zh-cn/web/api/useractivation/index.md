@@ -11,7 +11,7 @@ l10n:
 
 此 API 仅在 window 上下文中可用，web worker 中不可用。
 
-## 示例属性
+## 实例属性
 
 - {{domxref("UserActivation.hasBeenActive")}} {{ReadOnlyInline}}
   - : 指示当前窗口是否具有粘性（用户）激活。
