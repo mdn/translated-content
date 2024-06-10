@@ -28,7 +28,7 @@ l10n:
     </button>
   </body>
 </html>
-// 显示 "object HTMLLinkElement"。
+// 显示“object HTMLLinkElement”。
 ```
 
 ## 备注
