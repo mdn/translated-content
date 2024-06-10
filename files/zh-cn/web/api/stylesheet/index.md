@@ -22,7 +22,7 @@ l10n:
 - {{domxref("StyleSheet.parentStyleSheet")}} {{ReadOnlyInline}}
   - : 返回 {{domxref("StyleSheet")}} 如果有的话; 返回 `null` 如果没有。
 - {{domxref("StyleSheet.title")}} {{ReadOnlyInline}}
-  - : 返回 {{domxref("DOMString")}} 表示当前样式表的顾问标题。
+  - : 返回表示当前样式表的咨询标题的字符串。
 - {{domxref("StyleSheet.type")}}{{ReadOnlyInline}}
   - : 返回 {{domxref("DOMString")}} 表示当前样式表的语言。
 
