@@ -14,7 +14,7 @@ l10n:
 - {{domxref("StyleSheet.disabled")}}
   - : 返回表示当前样式表是否可用的布尔值。
 - {{domxref("StyleSheet.href")}} {{ReadOnlyInline}}
-  - : 返回 {{domxref("DOMString")}} 表示样式表的位置。
+  - : 返回表示样式表的位置的字符串。
 - {{domxref("StyleSheet.media")}} {{ReadOnlyInline}}
   - : 返回表示样式信息的预期目标媒体的 {{domxref("MediaList")}}。
 - {{domxref("StyleSheet.ownerNode")}} {{ReadOnlyInline}}
