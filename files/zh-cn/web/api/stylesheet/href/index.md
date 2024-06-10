@@ -17,7 +17,7 @@ l10n:
 
 ### 示例
 
-在本地的 Windows 计算器上：
+在本地的 Windows 计算机上：
 
 ```html
 <!doctype html>
