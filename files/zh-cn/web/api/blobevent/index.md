@@ -18,7 +18,7 @@ l10n:
 
 ## 实例属性
 
-_没有从其父 {{domxref("Event")}} 对象继承的具体属性。_
+_从其父接口 {{domxref("Event")}} 继承属性。_
 
 - {{domxref("BlobEvent.data")}} {{ReadOnlyInline}}
   - : 表示与事件关联的数据的 {{domxref("Blob")}}。由于特定的 {{domxref("Blob")}} 上发生了一些事情，导致 {{domxref("EventTarget")}} 上触发了事件。
