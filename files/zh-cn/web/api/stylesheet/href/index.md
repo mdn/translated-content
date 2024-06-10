@@ -34,7 +34,7 @@ l10n:
     </script>
   </head>
   <body>
-    <div class="thunder">Thunder</div>
+    <div class="thunder">雷</div>
     <button onclick="sref()">ss</button>
   </body>
 </html>
