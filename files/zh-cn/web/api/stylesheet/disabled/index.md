@@ -20,7 +20,7 @@ l10n:
 ```js
 // 如果样式表被禁用
 if (stylesheet.disabled) {
-  // 应用样式
+  // 应用内联样式
 }
 ```
 
