@@ -1,9 +1,12 @@
 ---
-title: Window.customElements
+title: "Window: customElements プロパティ"
+short-title: customElements
 slug: Web/API/Window/customElements
+l10n:
+  sourceCommit: ce10da0e9d23d241b175d8d68bf93507734b7c48
 ---
 
-{{APIRef}}
+{{APIRef("Web Components")}}
 
 **`customElements`** は {{domxref("Window")}} インターフェイスの読み取り専用プロパティで、 {{domxref("CustomElementRegistry")}} オブジェクトへのリファレンスを返します。これにより、新しい[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)を登録したり、以前に登録したカスタム要素に関する情報を取得したりすることができます。
 
