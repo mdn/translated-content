@@ -21,7 +21,7 @@ l10n:
 
 ```html
 <!doctype html>
-<html lang="en-US">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
