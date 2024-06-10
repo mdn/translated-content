@@ -1,5 +1,5 @@
 ---
-title: "BlobEvent: timecode property"
+title: BlobEvent：timecode 属性
 slug: Web/API/BlobEvent/timecode
 l10n:
   sourceCommit: 1c9d35561671086a47fa501a34ec7af2cf8182cf
