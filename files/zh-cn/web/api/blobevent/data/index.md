@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("MediaStream Recording")}}
 
-{{domxref("BlobEvent")}} 接口的 **`data`** 只读属性表示一个与这个时间有关联的 {{domxref("Blob")}}。
+{{domxref("BlobEvent")}} 接口的 **`data`** 只读属性表示一个与这个事件关联的 {{domxref("Blob")}}。
 
 ## 值
 
