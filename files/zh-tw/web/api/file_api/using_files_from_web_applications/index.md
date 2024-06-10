@@ -3,6 +3,8 @@ title: 在網頁應用程式中使用本地檔案
 slug: Web/API/File_API/Using_files_from_web_applications
 ---
 
+{{DefaultAPISidebar("File API")}}
+
 現在可以透過新增至 HTML5 DOM 的 File API 讓 web 內容要求使用者選取本地端的檔案後讀取被選取檔案中的內容。檔案的選取動作可以使用 HTML 的 [`input`](/zh-TW/DOM/HTMLInputElement) 元素，或是用拖曳檔案（drag and drop）的方式來完成。
 
 如果你想要使用 DOM 檔案 API 的文件擴展或是其他 Chrome 程式碼，你可以參考[使用 DOM 檔案 API 在 FireFox 外觀代碼中](/zh-TW/Extensions/Using_the_DOM_File_API_in_chrome_code)。
@@ -373,7 +375,7 @@ function FileUpload(img, file) {
   );
   xhr.open(
     "POST",
-    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
+    "https://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
   );
   xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
   reader.onload = function (evt) {

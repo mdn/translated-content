@@ -70,10 +70,6 @@ WebAssembly 被設計來與 JavaScript 協同工作 —— 藉由 WebAssembly �
 
 {{Specifications}}
 
-## 瀏覽器相容性
-
-{{Compat}}
-
 ## 參見
 
 - [WebAssembly on Mozilla Research](https://research.mozilla.org/)

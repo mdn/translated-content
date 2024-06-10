@@ -3,6 +3,8 @@ title: API de Vibration
 slug: Web/API/Vibration_API
 ---
 
+{{DefaultAPISidebar("Vibration API")}}
+
 ## Description des vibrations
 
 La vibration est décrite comme une série de marche-arrêt des impulsions, qui peuvent être de durées différentes. La série peut être soit un entier décrivant le nombre de millisecondes à vibrer ou un tableau d'entiers décrivant une série de pauses et de vibrations. La vibration est contrôlée par une seule méthode: {{domxref("Navigator.vibrate()")}}.

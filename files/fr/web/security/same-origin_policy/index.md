@@ -3,6 +3,8 @@ title: Same-origin policy
 slug: Web/Security/Same-origin_policy
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 La same-origin policy restreint la manière dont un document ou un script chargé depuis une origine peut interagir avec une autre ressource chargée depuis une autre origine.
 
 ## Définition de l'origine

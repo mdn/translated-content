@@ -42,7 +42,7 @@ To drag multiple links, you can also separate each link with a linebreak. A line
 For example:
 
 ```
-http://www.mozilla.org
+https://www.mozilla.org
 #A second link
 http://www.example.com
 ```
@@ -58,7 +58,7 @@ var url = event.dataTransfer.getData("URL");
 You may also see data using the Mozilla specific type `text/x-moz-url`. If it appears, it should be used before the `text/uri-list` type. It holds the URL of the link followed by the title of the link, separated by a linebreak. For example:
 
 ```
-http://www.mozilla.org
+https://www.mozilla.org
 Mozilla
 http://www.example.com
 Example

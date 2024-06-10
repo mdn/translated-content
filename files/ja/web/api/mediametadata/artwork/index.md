@@ -1,18 +1,26 @@
 ---
-title: MediaMetadata.artwork
+title: "MediaMetadata: artwork プロパティ"
+short-title: artwork
 slug: Web/API/MediaMetadata/artwork
 l10n:
-  sourceCommit: bbecba9e7d688493adbdc37fc70e02d87adfe371
+  sourceCommit: bade1b235617771b9f6b6e9bd90bd8baaf11a462
 ---
 
 {{APIRef("Media Session API")}}
 
-**`artwork`** は {{domxref("MediaMetaData")}} インターフェイスのプロパティで、再生するメディアに関連付けられた画像を表す {{domxref("MediaImage")}} オブジェクトの配列を返します。
+**`artwork`** は {{domxref("MediaMetaData")}} インターフェイスのプロパティで、再生するメディアに関連付けられた画像を表すオブジェクトの配列を返します。
 media.
 
 ## 値
 
-{{domxref("MediaImage")}} オブジェクトの配列 ({{jsxref("Array")}}) です。
+オブジェクトの配列 ({{jsxref("Array")}}) で、それぞれに以下のフィールドがあります。
+
+- `src`
+  - : ユーザーエージェントが画像データを取得する URL です。
+- `sizes` {{optional_inline}}
+  - : リソースを複数のサイズで指定し、ユーザーエージェントが単一の画像を変倍しなくても済むようにします。既定では空文字列 (`""`) です。
+- `type` {{optional_inline}}
+  - : ユーザーエージェントが対応していない型の画像を無視するための{{Glossary("MIME type", "MIMEタイプ")}}のヒントです。ただし、ユーザーエージェントは画像をダウンロードした後、MIME タイプスニッフィングを使用してその型を決定することができます。既定では空文字列 (`""`) です。
 
 ## 例
 
@@ -67,7 +75,3 @@ if ("mediaSession" in navigator) {
 ## ブラウザーの互換性
 
 {{Compat}}
-
-## 関連情報
-
-- {{domxref("MediaImage")}}

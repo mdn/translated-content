@@ -3,6 +3,8 @@ title: Использование Объектов FormData
 slug: Web/API/XMLHttpRequest_API/Using_FormData_Objects
 ---
 
+{{DefaultAPISidebar("XMLHttpRequest API")}}
+
 Объект [`FormData`](/ru/docs/Web/API/FormData) позволяет создать набор пар ключ/значение и передать их, используя `XMLHttpRequest.` Объект [`FormData`](/ru/docs/Web/API/FormData) предназначен для передачи данных форм, однако может быть использован для передачи пар ключ/значение независимо от форм. Данные передаются в том же формате, как и данные, передаваемые методом `{{domxref("HTMLFormElement.submit","submit()")}}` формы, с установленной кодировкой `enctype="multipart/form-data"`.
 
 ## Создание объекта FormData

@@ -13,7 +13,7 @@ slug: Web/JavaScript/Guide/Iterators_and_generators
 
 - [Iteration protocols](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/for...of","for...of")}}
-- {{jsxref("Statements/function*","function*")}} と {{jsxref("Generator","ジェネレーター","","true")}}
+- {{jsxref("Statements/function*","function*")}} と {{jsxref("Generator","ジェネレーター","",1)}}
 - {{jsxref("Operators/yield","yield")}} と {{jsxref("Operators/yield*","yield*")}}
 
 ## イテレーター

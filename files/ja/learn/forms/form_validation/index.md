@@ -2,7 +2,7 @@
 title: クライアント側のフォーム検証
 slug: Learn/Forms/Form_validation
 l10n:
-  sourceCommit: af0e71822122feda89495ab9215c131bbe34d65c
+  sourceCommit: bec03e8b1bcf690b86b30bbb23575ecf139bc47d
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
@@ -78,7 +78,7 @@ l10n:
 - [`minlength`](/ja/docs/Web/HTML/Attributes/minlength) と [`maxlength`](/ja/docs/Web/HTML/Attributes/maxlength): テキストデータ（文字列）の最小・最大長を指定します。
 - [`min`](/ja/docs/Web/HTML/Attributes/min) と [`max`](/ja/docs/Web/HTML/Attributes/max): 数値入力型の最小値、最大値を指定します。
 - [`type`](/ja/docs/Web/HTML/Element/input#input_の型): データを数字にするか、メールアドレスにするか、その他のプリセットされた特定の型にするかを指定します。
-- [`pattern`](/ja/docs/Web/HTML/Attributes/pattern): データが指定された[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)に一致するかどうかを指定します。
+- [`pattern`](/ja/docs/Web/HTML/Attributes/pattern): データが指定された[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)に一致するかどうかを指定します。
 
 入力データをこの指定されたルールに基いて検証します。検証にパスすれば妥当で検証にパスしなければ妥当ではないと考えます。
 
@@ -174,7 +174,7 @@ input:valid {
 
 ### 正規表現での検証
 
-もう一つとてもよく使われる機能は [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性で、値として[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)を取ります。
+もう一つとてもよく使われる機能は [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性で、値として[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)を取ります。
 正規表現 (regexp) はテキスト文字列の中の文字の組み合わせに一致させるために使うことができるため、フォームの検証には理想的であり、JavaScript と同様に様々な利用ができます。
 
 正規表現はかなり複雑です。このモジュールでは正規表現のすべてを説明する意図はありません。
@@ -187,7 +187,7 @@ input:valid {
 - `a|b` — 一文字の `a` または `b` に一致する
 - `abc|xyz` — `abc` の並びまたは `xyz` の並びに一致する。これは `abcxyz` や `a` や `y` などには一致しない。
 
-正規表現には多くの組合せがあるので例はここまでとします。完全な一覧や多くの例は、[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)のドキュメントを参照してください。
+正規表現には多くの組合せがあるので例はここまでとします。完全な一覧や多くの例は、[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)のドキュメントを参照してください。
 
 使用例を実装しましょう。HTML を更新して [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性を追加しましょう。
 
@@ -233,7 +233,7 @@ input:valid {
 フィールドが値をもっており、その文字数が [`minlength`](/ja/docs/Web/HTML/Attributes/minlength) の値より少ないか、文字数が [`maxlength`](/ja/docs/Web/HTML/Attributes/maxlength) の値より大きい場合は、フィールドは不正です。
 
 ブラウザーはよくテキストフィールドに期待している以上に入力させないことがあります。単に `maxlength` を使うよりも良いユーザーエクスペリエンスは、入力文字数のフィードバックを提供してサイズ以下でコンテンツを編集できるようにもしておくことです。
-例えば、Twitter の文字入力の制限があります。これは JavaScript と [`maxlength` を使った解決策](https://github.com/mimo84/bootstrap-maxlength)の組み合わせ実現できます。
+この例のひとつが、ソーシャルメディアに投稿する際の文字数制限です。これは JavaScript と [`maxlength` を使った解決策](https://github.com/mimo84/bootstrap-maxlength)の組み合わせ実現できます。
 
 ### 入力欄の値に制約を加える
 
@@ -299,54 +299,73 @@ HTML の内蔵検証機能の使い方を示す例の全体を示します。ま
 
 ```html
 <form>
+  <fieldset>
+    <legend>
+      運転免許を持っていますか？<span aria-label="required">*</span>
+    </legend>
+    <!-- 同じ名前付きグループ内のラジオボタンは同時に 1 つしか選択できず、
+         従って、"required "属性を保有する同じ名前付きグループ内のラジオボタンは、
+         選択を必須にするのに一つで十分です。 -->
+    <input type="radio" required name="driver" id="r1" value="yes" /><label
+      for="r1"
+      >Yes</label
+    >
+    <input type="radio" required name="driver" id="r2" value="no" /><label
+      for="r2"
+      >No</label
+    >
+  </fieldset>
   <p>
-    <fieldset>
-      <legend>Do you have a driver's license?<span aria-label="required">*</span></legend>
-      <!-- While only one radio button in a same-named group can be selected at a time,
-           and therefore only one radio button in a same-named group having the "required"
-           attribute suffices in making a selection a requirement -->
-      <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Yes</label>
-      <input type="radio" required name="driver" id="r2" value="no"><label for="r2">No</label>
-    </fieldset>
-  </p>
-  <p>
-    <label for="n1">How old are you?</label>
+    <label for="n1">何歳ですか？</label>
     <!-- pattern 属性は number 型の入力欄を実装していないものの、pattern
          属性には対応しているブラウザー向けの代替策として動作できます。
          なお、pattern 属性に対応しているブラウザーでは、number 型の入力欄
          で使用すると暗黙に失敗します。
          ここでは代替策としての使い方のみです。-->
-    <input type="number" min="12" max="120" step="1" id="n1" name="age"
-           pattern="\d+">
+    <input
+      type="number"
+      min="12"
+      max="120"
+      step="1"
+      id="n1"
+      name="age"
+      pattern="\d+" />
   </p>
   <p>
-    <label for="t1">What's your favorite fruit?<span aria-label="required">*</span></label>
-    <input type="text" id="t1" name="fruit" list="l1" required
-           pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range">
+    <label for="t1"
+      >好きな果物は何ですか？<span aria-label="required">*</span></label
+    >
+    <input
+      type="text"
+      id="t1"
+      name="fruit"
+      list="l1"
+      required
+      pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range" />
     <datalist id="l1">
-      <option>Banana</option>
-      <option>Cherry</option>
-      <option>Apple</option>
-      <option>Strawberry</option>
-      <option>Lemon</option>
-      <option>Orange</option>
+      <option>バナナ</option>
+      <option>さくらんぼ</option>
+      <option>りんご</option>
+      <option>いちご</option>
+      <option>レモン</option>
+      <option>オレンジ</option>
     </datalist>
   </p>
   <p>
-    <label for="t2">What's your email address?</label>
-    <input type="email" id="t2" name="email">
+    <label for="t2">メールアドレスは何ですか？</label>
+    <input type="email" id="t2" name="email" />
   </p>
   <p>
-    <label for="t3">Leave a short message</label>
+    <label for="t3">短いメッセージをどうぞ。</label>
     <textarea id="t3" name="msg" maxlength="140" rows="5"></textarea>
   </p>
   <p>
-    <button>Submit</button>
+    <button>送信</button>
   </p>
 </form>
 ```
 
-この HTML をスタイル設定する CSS は:
+この HTML をスタイル設定する CSS は次の通りです。
 
 ```css
 form {
@@ -383,7 +402,7 @@ input:focus:invalid {
 
 入力値と、それをサポートする入力型の制約に使える属性の完全なリストは、[検証関連属性](/ja/docs/Web/HTML/Constraint_validation#検証関連属性)を見てください。
 
-> **メモ:** GitHub の [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) でライブサンプルを見ることができます([ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-pattern.html)も見てください)
+> **メモ:** GitHub の [full-example.html](https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html) でライブサンプルを見ることができます([ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/full-example.html)も見てください)
 
 ## JavaScript を使用したフォーム検証
 
@@ -432,9 +451,10 @@ input:focus:invalid {
 - CSS でメッセージの表示方法を変更するための標準的な方法がありません。
 - メッセージはブラウザーのロケールに依存しており、ある言語のページでエラーメッセージが別の言語で表示されることがあります。これは下記の Firefox スクリーンショットで見ることができます。
 
-![Example of an error message with Firefox in French on an English page](error-firefox-win7.png)
+![英語のページにフランス語で表示される Firefox のエラーメッセージの例](error-firefox-win7.png)
 
-これらのメッセージの外見やテキストを変更するには、制約検証 API の最も一般的なユースケースです。この使用法を例で詳しく見てみましょう。
+これらのメッセージの外見やテキストを変更するには、制約検証 API の最も一般的なユースケースです。
+この使用法を例で詳しく見てみましょう。
 
 いくつかの簡単な HTML で開始します (空の HTML ファイルにこれを入力します; もしよければ、[fruit-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html) を基礎としてもいいでしょう):
 
@@ -466,9 +486,9 @@ email.addEventListener("input", (event) => {
 
 `validity.typeMismatch` が `false`の場合、空文字で `setCustomValidity()` メソッドを呼び出します。これは入力が妥当となり、フォームが送信されます。
 
-次のもので試すことができます。
+以下で試すことができます。
 
-{{EmbedGHLiveSample("learning-area/html/forms/form-validation/custom-error-message.html", '100%', 80)}}
+{{EmbedGHLiveSample("learning-area/html/forms/form-validation/custom-error-message.html", '100%', 120)}}
 
 > **メモ:** この例は GitHub の [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) で見ることができます （[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/custom-error-message.html)も見てください）。
 
@@ -495,7 +515,7 @@ email.addEventListener("input", (event) => {
 
 検証する入力は [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email)で、これは `required` (入力必須) で、8 文字の `minlength` があります。これをわれわれのコードで確認して、それぞれカスタムエラーメッセージを表示させてみましょう。
 
-`<span>` 要素の中にエラーメッセージを表示させようとしています。 `<span>`にセットされた [`aria-live`](/ja/docs/Accessibility/ARIA/ARIA_Live_Regions) 属性は、スクリーンリーダーのような支援技術を使用している人々を含む皆に、独自のエラーメッセージを提示するようにします。
+`<span>` 要素の中にエラーメッセージを表示させようとしています。 `<span>`にセットされた [`aria-live`](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) 属性は、スクリーンリーダーのような支援技術を使用している人々を含む皆に、独自のエラーメッセージを提示するようにします。
 
 > **メモ:** ここでの要点は、フォームに `novalidate` 属性をつけると、フォームがエラーメッセージのバブルを表示するのを停止して、その代わり DOM 内にカスタムエラーメッセージを選択した方法で表示させられることです。
 
@@ -782,7 +802,7 @@ form.addEventListener("submit", (event) => {
 
 ## スキルテスト
 
-この記事の最後に到着しましたが、最も大事な情報を覚えていますか？ 次に進む前に、この情報を保持しているか検証するテストがあります — [スキルテスト: フォーム検証](/ja/docs/Learn/Forms/Test_your_skills:_Form_validation) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: フォーム検証](/ja/docs/Learn/Forms/Test_your_skills:_Form_validation) を見てください。
 
 ## まとめ
 

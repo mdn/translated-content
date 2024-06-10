@@ -1,11 +1,13 @@
 ---
-title: Microsoft Edge 浏览器
+title: Microsoft Edge
 slug: Glossary/Microsoft_Edge
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
 
-**Microsoft Edge** 是由微软公司在 2014 年开发的免费{{glossary("World Wide Web", "网络")}}图形{{Glossary("browser","浏览器")}}，捆绑于 Windows 10 操作系统中。Edge 最初被称为 Spartan，它取代了长期存在的 {{glossary("Microsoft Internet Explorer","Internet Explorer")}} 浏览器。
+**Microsoft Edge** 是由微软公司在 2014 年开发的免费 {{glossary("World Wide Web", "Web")}} 图形{{Glossary("browser", "浏览器")}}，捆绑于 Windows 10 操作系统中。Edge 最初被称为 Spartan，取代了长期存在的 {{glossary("Microsoft Internet Explorer", "Internet Explorer")}} 浏览器。
 
 ## 参见
 

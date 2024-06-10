@@ -1099,7 +1099,7 @@ p {
 }
 ```
 
-Você pode brincar um pouco aqui: <http://jsfiddle.net/9h261pzo/291/>
+Você pode brincar um pouco aqui: <https://jsfiddle.net/9h261pzo/291/>
 
 ### Detectando o começo e a completude de uma transição
 

@@ -3,6 +3,8 @@ title: Utiliser les pages GitHub
 slug: Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 [GitHub](https://github.com/) est un site de partage de code, sur lequel on peut publier des projets dont le code est géré avec le système de gestion de version [Git](http://git-scm.com/)**.** Par défaut, le système est _open source_, ce qui signifie que tout le monde peut consulter le code, l'utiliser pour apprendre ou l'améliorer et collaborer aux projets. Vous pouvez donc participer à d'autres projets ou, à l'inverse, des personnes peuvent collaborer à vos projets ! Dans cet article, nous verrons comment publier du contenu sur le web en utilisant les « pages GitHub » (aussi appelées _gh-pages_) qui sont une des fonctionnalités de GitHub.
 
 ## Publier du contenu

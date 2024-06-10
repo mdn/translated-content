@@ -56,7 +56,3 @@ slug: Web/CSS/Layout_cookbook/Media_objects
 - [Using Grid Template Areas](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
 - [fit-content](/zh-CN/docs/Web/CSS/fit-content)
 - [Grid-template-areas](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-
-## 浏览器兼容性
-
-{{Compat}}

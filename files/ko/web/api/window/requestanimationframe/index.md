@@ -1,9 +1,6 @@
 ---
 title: "Window: requestAnimationFrame() method"
-short-title: requestAnimationFrame()
-slug: Web/API/window/requestAnimationFrame
-l10n:
-  sourceCommit: 03b0cce4643c5ebe9cac6c6e4fe64ce8afb076ef
+slug: Web/API/Window/requestAnimationFrame
 ---
 
 {{APIRef}}

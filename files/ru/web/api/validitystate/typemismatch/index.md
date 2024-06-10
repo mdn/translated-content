@@ -3,6 +3,8 @@ title: ValidityState.typeMismatch
 slug: Web/API/ValidityState/typeMismatch
 ---
 
+{{APIRef("HTML DOM")}}
+
 Доступное только для чтения свойство **`typeMismatch`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, соответствует ли изменённое пользователем значение {{HTMLElement("input")}} ограничениям атрибута [`type`](/ru/docs/Web/HTML/Element/input#input_types).
 
 Если атрибут `type` получает типы вроде {{HTMLElement("input/email", "email")}} или {{HTMLElement("input/url", "url")}}, а значение не соответствует ограничениям данного типа, свойство `typeMismatch` будет true.

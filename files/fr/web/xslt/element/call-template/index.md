@@ -3,7 +3,7 @@ title: call-template
 slug: Web/XSLT/Element/call-template
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:call-template>` invoque un modèle nommé.
 

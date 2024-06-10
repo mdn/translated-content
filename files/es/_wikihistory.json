@@ -3720,29 +3720,29 @@
       "Nathymig"
     ]
   },
+  "Web/API/Document_Object_Model/How_to_create_a_DOM_tree": {
+    "modified": "2019-03-23T23:22:26.711Z",
+    "contributors": ["carrillog.luis"]
+  },
   "Web/API/Document_Object_Model/Introduction": {
     "modified": "2019-03-23T23:48:16.078Z",
     "contributors": ["LuisSevillano", "IsaacAaron", "Sheppy", "Uri", "Nathymig"]
+  },
+  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
+    "modified": "2020-06-14T19:56:35.416Z",
+    "contributors": ["snickArg"]
   },
   "Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces": {
     "modified": "2019-03-23T23:20:26.633Z",
     "contributors": ["lajaso", "jucazam", "pablo.turati"]
   },
+  "Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example": {
+    "modified": "2019-03-23T22:06:28.946Z",
+    "contributors": ["BrodaNoel"]
+  },
   "Web/API/Document_Object_Model/Whitespace": {
     "modified": "2020-08-24T04:42:05.596Z",
     "contributors": ["Nachec"]
-  },
-  "Web/API/Document_object_model/How_to_create_a_DOM_tree": {
-    "modified": "2019-03-23T23:22:26.711Z",
-    "contributors": ["carrillog.luis"]
-  },
-  "Web/API/Document_object_model/Locating_DOM_elements_using_selectors": {
-    "modified": "2020-06-14T19:56:35.416Z",
-    "contributors": ["snickArg"]
-  },
-  "Web/API/Document_object_model/Using_the_Document_Object_Model/Example": {
-    "modified": "2019-03-23T22:06:28.946Z",
-    "contributors": ["BrodaNoel"]
   },
   "Web/API/DragEvent": {
     "modified": "2020-11-04T23:21:08.729Z",
@@ -5448,6 +5448,10 @@
     "modified": "2019-03-23T22:27:29.008Z",
     "contributors": ["israel-munoz"]
   },
+  "Web/API/Window/atob": {
+    "modified": "2019-03-23T23:03:12.715Z",
+    "contributors": ["fscholz", "sathyasanles"]
+  },
   "Web/API/Window/beforeunload_event": {
     "modified": "2019-04-30T14:05:00.135Z",
     "contributors": ["wbamberg", "ExE-Boss", "anasyusef", "Bant89"]
@@ -5455,6 +5459,10 @@
   "Web/API/Window/blur_event": {
     "modified": "2019-03-23T22:33:17.308Z",
     "contributors": ["Grijander81"]
+  },
+  "Web/API/Window/btoa": {
+    "modified": "2020-08-29T03:33:22.030Z",
+    "contributors": ["Nachec"]
   },
   "Web/API/Window/caches": {
     "modified": "2019-03-23T22:16:45.016Z",
@@ -5596,6 +5604,17 @@
     "modified": "2019-03-23T22:20:58.413Z",
     "contributors": ["israel-munoz"]
   },
+  "Web/API/Window/requestAnimationFrame": {
+    "modified": "2020-07-05T08:38:54.640Z",
+    "contributors": [
+      "AlePerez92",
+      "mauriciabad",
+      "fortil",
+      "andrpueb",
+      "fscholz",
+      "jbalsas"
+    ]
+  },
   "Web/API/Window/requestIdleCallback": {
     "modified": "2020-12-05T00:33:07.625Z",
     "contributors": ["gnunezr", "jsolana"]
@@ -5696,14 +5715,6 @@
       "inma_610"
     ]
   },
-  "Web/API/atob": {
-    "modified": "2019-03-23T23:03:12.715Z",
-    "contributors": ["fscholz", "sathyasanles"]
-  },
-  "Web/API/btoa": {
-    "modified": "2020-08-29T03:33:22.030Z",
-    "contributors": ["Nachec"]
-  },
   "Web/API/clearInterval": {
     "modified": "2019-03-23T22:56:16.485Z",
     "contributors": ["Guitxo"]
@@ -5797,17 +5808,6 @@
       "fscholz",
       "AshfaqHossain",
       "VictorArias"
-    ]
-  },
-  "Web/API/window/requestAnimationFrame": {
-    "modified": "2020-07-05T08:38:54.640Z",
-    "contributors": [
-      "AlePerez92",
-      "mauriciabad",
-      "fortil",
-      "andrpueb",
-      "fscholz",
-      "jbalsas"
     ]
   },
   "Web/Accessibility": {

@@ -3,7 +3,7 @@ title: when
 slug: Web/XSLT/Element/when
 ---
 
-{{XsltRef}}
+{{XsltSidebar}}{{XsltRef}}
 
 El elemento `<xsl:when>` siempre aparece dentro de un elemento `<xsl:choose>`, actuando como una sentencia case.
 

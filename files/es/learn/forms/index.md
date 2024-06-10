@@ -3,6 +3,8 @@ title: Formularios en HTML5
 slug: Learn/Forms
 ---
 
+{{LearnSidebar}}
+
 Los elementos y atributos para formularios en HTML5 proveen un mayor grado de marcado semántico que en HTML4 y eliminan gran parte del tedioso trabajo de programar y diseñar que se necesitaba en HTML4. Las funcionalidades de los formularios en HTML5 brindan una experiencia mejor para los usuarios al permitir que los formularios tengan un comportamiento más consistente entre diferentes sitios web y al darle una devolución inmediata acerca de la información ingresada. También proveen esta experiencia a los usuarios que han deshabilitado javascript en sus navegadores.
 
 Este documento describe los elementos nuevos o que han cambiado que están disponibles en Gecko/Firefox.

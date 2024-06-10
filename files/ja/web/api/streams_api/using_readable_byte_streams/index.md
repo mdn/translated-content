@@ -2,7 +2,7 @@
 title: 読み取り可能なバイトストリームの使用
 slug: Web/API/Streams_API/Using_readable_byte_streams
 l10n:
-  sourceCommit: 381c51574a3e6a07ee09c63493452440f046038d
+  sourceCommit: 0375c6ef43ed08593ce222dc23c8b2d29e6edfa7
 ---
 
 {{DefaultAPISidebar("Streams")}}
@@ -88,16 +88,16 @@ l10n:
 ```js
 class MockHypotheticalSocket {
   constructor() {
-    this.max_data = 800; // total amount of data to stream from "socket"
-    this.max_per_read = 100; // max data per read
-    this.min_per_read = 40; // min data per read
+    this.max_data = 800; // ソケットからストリーミングするデータの総量
+    this.max_per_read = 100; // 一度に読み取るデータ量の最大値
+    this.min_per_read = 40; // 一度に読み取るデータ量の最大値
     this.data_read = 0; // total data read so far (capped is maxdata)
     this.socketdata = null;
   }
 
-  // Method returning promise when this socket is readable.
+  // このソケットが読み取り可能な場合にプロミスを返すメソッド。
   select2() {
-    // Object used to resolve promise
+    // プロミスを解決するために使用するオブジェクト
     const resultobj = {};
     resultobj["bytesRead"] = 0;
 
@@ -108,7 +108,7 @@ class MockHypotheticalSocket {
         return;
       }
 
-      // Emulate slow read of data
+      // データの遅い読み込みをエミュレート
       setTimeout(() => {
         const numberBytesReceived = this.getNumberRandomBytesSocket();
         this.data_read += numberBytesReceived;
@@ -119,14 +119,14 @@ class MockHypotheticalSocket {
     });
   }
 
-  /* Read data into specified buffer offset */
+  /* 指定したバッファーオフセットにデータを読み込む */
   readInto(buffer, offset, length) {
     let length_data = 0;
     if (this.socketdata) {
       length_data = this.socketdata.length;
       const myview = new Uint8Array(buffer, offset, length);
-      // Write the length of data specified into buffer
-      // Code assumes buffer always bigger than incoming data
+      // 指定した長さのデータをバッファーに書き込む
+      // コードは常にバッファーが受信データより大きいことを想定
       for (let i = 0; i < length_data; i++) {
         myview[i] = this.socketdata[i];
       }
@@ -135,7 +135,7 @@ class MockHypotheticalSocket {
     return length_data;
   }
 
-  // Dummy close function
+  // ダミーの close 関数
   close() {
     return;
   }
@@ -161,7 +161,7 @@ class MockHypotheticalSocket {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  // Return random character string
+  // ランダムな文字の文字列を返す
   randomChars(length = 8) {
     let string = "";
     let choices =
@@ -173,7 +173,7 @@ class MockHypotheticalSocket {
     return string;
   }
 
-  /* Return random Uint8Array of bytes */
+  /* ランダムな Uint8Array のバイト列を返す */
   randomByteArray(bytes = 8) {
     const textEncoder = new TextEncoder();
     return textEncoder.encode(this.randomChars(bytes));
@@ -181,7 +181,7 @@ class MockHypotheticalSocket {
 }
 ```
 
-<!-- The following html and js sets up reporting. Hidden because it is not useful for readers -->
+<!-- 以下の HTML と js は報告をセットアップします。読者には有益でないため、非表示にしています。 -->
 
 ```css hidden
 .input {
@@ -211,22 +211,22 @@ button {
 ```
 
 ```js hidden
-// Store reference to lists, paragraph and button
+// リスト、段落、ボタンへの参照を格納
 const list1 = document.querySelector(".input ul");
 const list2 = document.querySelector(".output ul");
 const button = document.querySelector("button");
 
-// Create empty string in which to store final result
+// 最終結果を格納するために空文字列を作成
 let result = "";
 
-// Function to log data from underlying source
+// 基盤からデータをログ出力する関数
 function logSource(result) {
   const listItem = document.createElement("li");
   listItem.textContent = result;
   list1.appendChild(listItem);
 }
 
-// Function to log data from consumer
+// コンシューマーのデータをログ出力する関数
 function logConsumer(result) {
   const listItem = document.createElement("li");
   listItem.textContent = result;
@@ -334,7 +334,7 @@ function readStream(reader) {
       .read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
       .then(async function processText({ done, value }) {
         // Result objects contain two properties:
-        // done - true if the stream has already given all its data.
+        // done  - true if the stream has already given all its data.
         // value - some data. Always undefined when done is true.
 
         if (done) {
@@ -415,23 +415,25 @@ reader.closed
 
 基盤となるプルソースには、以下のクラスを使用して、nodejs の [`FileHandle`](https://nodejs.org/api/fs.html#class-filehandle)、特に [`read()`](https://nodejs.org/api/fs.html#filehandlereadbuffer-offset-length-position) メソッドを（とても表面的に）模倣します。
 このクラスは、ファイルを表すランダムなデータを生成します。
-`read()` メソッドはこのデータを指定された位置から提供されたバッファーに読み込みます。
+`read()` メソッドはランダムなデータの「擬似乱数」の大きさのブロックを、指定された位置から提供されたバッファーに読み込みます。
 `close()` メソッドは何かするわけではありません。ストリームのコンストラクターを定義する際に、ソースを閉じる場所を示すために指定されただけです。
 
-> **メモ:** この同じクラスは、すべての「プルソース」の例に使用しています。
+> **メモ:** 類似しているクラスは、すべての「プルソース」の例に使用しています。
 > ここで表示させているのは、あくまで情報です（模擬であることがわかるように）。
 
 ```js
 class MockUnderlyingFileHandle {
   constructor() {
-    this.maxdata = 1300; // "file size"
+    this.maxdata = 100; // "file size"
+    this.maxReadChunk = 25; // "max read chunk size"
+    this.minReadChunk = 13; // "min read chunk size"
     this.filedata = this.randomByteArray(this.maxdata);
     this.position = 0;
   }
 
   // Read data from "file" at position/length into specified buffer offset
   read(buffer, offset, length, position) {
-    // Object used to resolve promise
+    // プロミスを解決するために使用するオブジェクト
     const resultobj = {};
     resultobj["buffer"] = buffer;
     resultobj["bytesRead"] = 0;
@@ -443,29 +445,37 @@ class MockUnderlyingFileHandle {
         return;
       }
 
-      // Read random data into supplied buffer
-      const myview = new Uint8Array(buffer, offset, length);
-      // Write the length of data specified
-      for (let i = 0; i < length; i++) {
+      // 乱数のバイト列を返すファイル読み込みのシミュレーション
+      // リクエストされた最小バイト数と返すことができるランダムバイト数を読み取る
+      let readLength =
+        Math.floor(
+          Math.random() * (this.maxReadChunk - this.minReadChunk + 1),
+        ) + this.minReadChunk;
+      readLength = length > readLength ? readLength : length;
+
+      // 提供されたバッファーにランダムデータを読み込む
+      const myview = new Uint8Array(buffer, offset, readLength);
+      // 指定した長さのデータを書く
+      for (let i = 0; i < readLength; i++) {
         myview[i] = this.filedata[position + i];
-        resultobj["bytesRead"] = i;
-        if (position + i >= this.maxdata) {
+        resultobj["bytesRead"] = i + 1;
+        if (position + i + 1 >= this.maxdata) {
           break;
         }
       }
-      // Emulate slow read of data
+      // データの遅い読み込みをエミュレート
       setTimeout(() => {
         resolve(resultobj);
       }, 1000);
     });
   }
 
-  // Dummy close function
+  // ダミーの close 関数
   close() {
     return;
   }
 
-  // Return random character string
+  // ランダムな文字の文字列を返す
   randomChars(length = 8) {
     let string = "";
     let choices =
@@ -477,7 +487,7 @@ class MockUnderlyingFileHandle {
     return string;
   }
 
-  // Return random Uint8Array of bytes
+  // ランダムな Uint8Array のバイト列を返す
   randomByteArray(bytes = 8) {
     const textEncoder = new TextEncoder();
     return textEncoder.encode(this.randomChars(bytes));
@@ -485,7 +495,7 @@ class MockUnderlyingFileHandle {
 }
 ```
 
-<!-- The following html and js sets up reporting. Hidden because it is not useful for readers -->
+<!-- 以下の HTML と js は報告をセットアップします。読者には有益でないため、非表示にしています。 -->
 
 ```css hidden
 .input {
@@ -515,22 +525,22 @@ button {
 ```
 
 ```js hidden
-// Store reference to lists, paragraph and button
+// リスト、段落、ボタンへの参照を格納
 const list1 = document.querySelector(".input ul");
 const list2 = document.querySelector(".output ul");
 const button = document.querySelector("button");
 
-// Create empty string in which to store final result
+// 最終結果を格納するために空文字列を作成
 let result = "";
 
-// Function to log data from underlying source
+// 基盤からデータをログ出力する関数
 function logSource(result) {
   const listItem = document.createElement("li");
   listItem.textContent = result;
   list1.appendChild(listItem);
 }
 
-// Function to log data from consumer
+// コンシューマーのデータをログ出力する関数
 function logConsumer(result) {
   const listItem = document.createElement("li");
   listItem.textContent = result;
@@ -574,8 +584,8 @@ function makeReadableByteFileStream(filename) {
       const theView = controller.byobRequest.view;
       const { bytesRead, buffer } = await fileHandle.read(
         theView.buffer,
-        theView.offset,
-        theView.length,
+        theView.byteOffset,
+        theView.byteLength,
         position,
       );
       if (bytesRead === 0) {
@@ -609,40 +619,40 @@ function makeReadableByteFileStream(filename) {
 
 ```js
 const reader = stream.getReader({ mode: "byob" });
-let buffer = new ArrayBuffer(4000);
+let buffer = new ArrayBuffer(200);
 readStream(reader);
 
 function readStream(reader) {
   let bytesReceived = 0;
   let offset = 0;
 
-  while (offset < buffer.byteLength) {
-    // read() returns a promise that resolves when a value has been received
-    reader
-      .read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
-      .then(function processText({ done, value }) {
-        // Result objects contain two properties:
-        // done - true if the stream has already given all its data.
-        // value - some data. Always undefined when done is true.
+  // read() returns a promise that resolves when a value has been received
+  reader
+    .read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
+    .then(function processText({ done, value }) {
+      // Result objects contain two properties:
+      // done  - true if the stream has already given all its data.
+      // value - some data. Always undefined when done is true.
 
-        if (done) {
-          logConsumer(`readStream() complete. Total bytes: ${bytesReceived}`);
-          return;
-        }
+      if (done) {
+        logConsumer(`readStream() complete. Total bytes: ${bytesReceived}`);
+        return;
+      }
 
-        buffer = value.buffer;
-        offset += value.byteLength;
-        bytesReceived += value.byteLength;
+      buffer = value.buffer;
+      offset += value.byteLength;
+      bytesReceived += value.byteLength;
 
-        logConsumer(`Read ${bytesReceived} bytes: ${value}`);
-        result += value;
+      logConsumer(
+        `Read ${value.byteLength} (${bytesReceived}) bytes: ${value}`,
+      );
+      result += value;
 
-        // Read some more, and call this function again
-        return reader
-          .read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
-          .then(processText);
-      });
-  }
+      // Read some more, and call this function again
+      return reader
+        .read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
+        .then(processText);
+    });
 }
 ```
 
@@ -662,7 +672,8 @@ button.addEventListener("click", () => {
 特筆すべきことは次の通りです。
 
 - `start()` 関数には `ReadableByteStreamController` が渡されます。
-- リーダに渡されるバッファーが「ファイル」全体を包含するのに十分な大きさであるため、 1 回の処理でファイル全体が移譲されます。
+- リーダに渡されるバッファーは「ファイル」全体を包含するのに十分な大きさです。
+  基礎となるデータソースは、ランダムサイズのチャンクでデータを供給します。
 
 {{EmbedLiveSample("Underlying pull source","100%","500px")}}
 
@@ -674,46 +685,58 @@ button.addEventListener("click", () => {
 ```js hidden
 class MockUnderlyingFileHandle {
   constructor() {
-    this.maxdata = 1300; // "file size"
+    this.maxdata = 100; // "file size"
+    this.maxReadChunk = 25; // "max read chunk size"
+    this.minReadChunk = 13; // "min read chunk size"
     this.filedata = this.randomByteArray(this.maxdata);
     this.position = 0;
   }
 
-  /* Read data from "file" at position/length into specified buffer offset */
+  // Read data from "file" at position/length into specified buffer offset
   read(buffer, offset, length, position) {
-    // Object used to resolve promise
+    // プロミスを解決するために使用するオブジェクト
     const resultobj = {};
     resultobj["buffer"] = buffer;
     resultobj["bytesRead"] = 0;
 
     return new Promise((resolve /*, reject*/) => {
       if (position >= this.maxdata) {
-        // out of data
+        //out of data
         resolve(resultobj);
         return;
       }
 
-      // Read random data into supplied buffer
-      const myview = new Uint8Array(buffer, offset, length);
-      // Write the length of data specified
-      for (let i = 0; i < length; i++) {
+      // 乱数のバイト列を返すファイル読み込みのシミュレーション
+      // リクエストされた最小バイト数と返すことができるランダムバイト数を読み取る
+      let readLength =
+        Math.floor(
+          Math.random() * (this.maxReadChunk - this.minReadChunk + 1),
+        ) + this.minReadChunk;
+      readLength = length > readLength ? readLength : length;
+
+      // 提供されたバッファーにランダムデータを読み込む
+      const myview = new Uint8Array(buffer, offset, readLength);
+      // 指定した長さのデータを書く
+      for (let i = 0; i < readLength; i++) {
         myview[i] = this.filedata[position + i];
-        resultobj["bytesRead"] = i;
-        if (position + i >= this.maxdata) {
+        resultobj["bytesRead"] = i + 1;
+        if (position + i + 1 >= this.maxdata) {
           break;
         }
       }
-      // Emulate slow read of data
-      setTimeout(() => resolve(resultobj), 1000);
+      // データの遅い読み込みをエミュレート
+      setTimeout(() => {
+        resolve(resultobj);
+      }, 1000);
     });
   }
 
-  // Dummy close function
+  // ダミーの close 関数
   close() {
     return;
   }
 
-  // Return random character string
+  // ランダムな文字の文字列を返す
   randomChars(length = 8) {
     let string = "";
     let choices =
@@ -725,7 +748,7 @@ class MockUnderlyingFileHandle {
     return string;
   }
 
-  // Return random Uint8Array of bytes
+  // ランダムな Uint8Array のバイト列を返す
   randomByteArray(bytes = 8) {
     const textEncoder = new TextEncoder();
     return textEncoder.encode(this.randomChars(bytes));
@@ -733,7 +756,7 @@ class MockUnderlyingFileHandle {
 }
 ```
 
-<!-- The following html and js sets up reporting. Hidden because it is not useful for readers -->
+<!-- 以下の HTML と js は報告をセットアップします。読者には有益でないため、非表示にしています。 -->
 
 ```css hidden
 .input {
@@ -763,22 +786,22 @@ button {
 ```
 
 ```js hidden
-// Store reference to lists, paragraph and button
+// リスト、段落、ボタンへの参照を格納
 const list1 = document.querySelector(".input ul");
 const list2 = document.querySelector(".output ul");
 const button = document.querySelector("button");
 
-// Create empty string in which to store final result
+// 最終結果を格納するために空文字列を作成
 let result = "";
 
-// Function to log data from underlying source
+// 基盤からデータをログ出力する関数
 function logSource(result) {
   const listItem = document.createElement("li");
   listItem.textContent = result;
   list1.appendChild(listItem);
 }
 
-// Function to log data from consumer
+// コンシューマーのデータをログ出力する関数
 function logConsumer(result) {
   const listItem = document.createElement("li");
   listItem.textContent = result;
@@ -788,10 +811,10 @@ function logConsumer(result) {
 
 #### 自動バッファー割り当てによる読み取り可能なファイルバイトストリームの作成
 
-唯一の基盤の違いは、`autoAllocateChunkSize` を指定しなければならないことと、コンシューマーから提供されるサイズではなく、`controller.byobRequest` のビューバッファサイズとして使用することです。
+唯一の基盤の違いは、`autoAllocateChunkSize` を指定しなければならないことと、コンシューマーから提供されるサイズではなく、`controller.byobRequest` のビューバッファーサイズとして使用することです。
 
 ```js
-const DEFAULT_CHUNK_SIZE = 200;
+const DEFAULT_CHUNK_SIZE = 20;
 const stream = makeReadableByteFileStream("dummy file.txt");
 
 function makeReadableByteFileStream(filename) {
@@ -812,8 +835,8 @@ function makeReadableByteFileStream(filename) {
       const theView = controller.byobRequest.view;
       const { bytesRead, buffer } = await fileHandle.read(
         theView.buffer,
-        theView.offset,
-        theView.length,
+        theView.byteOffset,
+        theView.byteLength,
         position,
       );
       if (bytesRead === 0) {
@@ -842,8 +865,8 @@ function makeReadableByteFileStream(filename) {
 
 #### 既定のリーダーでのバイトストリームの利用
 
-以下のコードでは、モードを指定せずに `stream.getReader();` を呼び出してファイルバイトストリーム用の {{domxref("ReadableStreamDefaultReader")}} を作成し、それを使用してデータをバッファに読み込んでいます。
-コードの処理は、バッファがコンシューマではなくストリームから供給されることを除いて、前回の例と同じです。
+以下のコードでは、モードを指定せずに `stream.getReader();` を呼び出してファイルバイトストリーム用の {{domxref("ReadableStreamDefaultReader")}} を作成し、それを使用してデータをバッファーに読み込んでいます。
+コードの処理は、バッファーがコンシューマではなくストリームから供給されることを除いて、前回の例と同じです。
 
 ```js
 const reader = stream.getReader();
@@ -857,7 +880,7 @@ function readStream(reader) {
   // when a value has been received
   reader.read().then(function processText({ done, value }) {
     // Result objects contain two properties:
-    // done - true if the stream has already given you all its data.
+    // done  - true if the stream has already given you all its data.
     // value - some data. Always undefined when done is true.
     if (done) {
       logConsumer(`readStream() complete. Total bytes: ${bytesReceived}`);
@@ -865,7 +888,9 @@ function readStream(reader) {
     }
 
     bytesReceived += value.length;
-    logConsumer(`Read ${bytesReceived} bytes so far. Current bytes = ${value}`);
+    logConsumer(
+      `Read ${value.length} (${bytesReceived}). Current bytes = ${value}`,
+    );
     result += value;
 
     // Read some more, and call this function again
@@ -888,7 +913,7 @@ button.addEventListener("click", () => {
 
 基盤のバイトプルソース（左）とコンシューマ（右）からのログ出力を下記に示します。
 
-なお、チャンクは基盤バイトソースで指定されているように、 200 バイト長になります。
+これでチャンクの幅は最大でも 20 バイトになったことに注意してください。これは、基盤のバイトソース (`autoAllocateChunkSize`) で指定した自動割り当てバッファのサイズだからです。
 これらは、ゼロコピー移譲として行われます。
 
 {{EmbedLiveSample("Underlying pull source with default reader","100%","500px")}}
@@ -900,14 +925,16 @@ button.addEventListener("click", () => {
 ```js hidden
 class MockUnderlyingFileHandle {
   constructor() {
-    this.maxdata = 1300; // "file size"
+    this.maxdata = 100; // "file size"
+    this.maxReadChunk = 25; // "max read chunk size"
+    this.minReadChunk = 13; // "min read chunk size"
     this.filedata = this.randomByteArray(this.maxdata);
     this.position = 0;
   }
 
   // Read data from "file" at position/length into specified buffer offset
   read(buffer, offset, length, position) {
-    // Object used to resolve promise
+    // プロミスを解決するために使用するオブジェクト
     const resultobj = {};
     resultobj["buffer"] = buffer;
     resultobj["bytesRead"] = 0;
@@ -919,29 +946,37 @@ class MockUnderlyingFileHandle {
         return;
       }
 
-      // Read random data into supplied buffer
-      const myview = new Uint8Array(buffer, offset, length);
-      // Write the length of data specified
-      for (let i = 0; i < length; i++) {
+      // 乱数のバイト列を返すファイル読み込みのシミュレーション
+      // リクエストされた最小バイト数と返すことができるランダムバイト数を読み取る
+      let readLength =
+        Math.floor(
+          Math.random() * (this.maxReadChunk - this.minReadChunk + 1),
+        ) + this.minReadChunk;
+      readLength = length > readLength ? readLength : length;
+
+      // 提供されたバッファーにランダムデータを読み込む
+      const myview = new Uint8Array(buffer, offset, readLength);
+      // 指定した長さのデータを書く
+      for (let i = 0; i < readLength; i++) {
         myview[i] = this.filedata[position + i];
-        resultobj["bytesRead"] = i;
-        if (position + i >= this.maxdata) {
+        resultobj["bytesRead"] = i + 1;
+        if (position + i + 1 >= this.maxdata) {
           break;
         }
       }
-      // Emulate slow read of data
+      // データの遅い読み込みをエミュレート
       setTimeout(() => {
         resolve(resultobj);
       }, 1000);
     });
   }
 
-  // Dummy close function
+  // ダミーの close 関数
   close() {
     return;
   }
 
-  // Return random character string
+  // ランダムな文字の文字列を返す
   randomChars(length = 8) {
     let string = "";
     let choices =
@@ -953,7 +988,7 @@ class MockUnderlyingFileHandle {
     return string;
   }
 
-  // Return random Uint8Array of bytes
+  // ランダムな Uint8Array のバイト列を返す
   randomByteArray(bytes = 8) {
     const textEncoder = new TextEncoder();
     return textEncoder.encode(this.randomChars(bytes));
@@ -961,7 +996,7 @@ class MockUnderlyingFileHandle {
 }
 ```
 
-<!-- The following html and js sets up reporting. Hidden because it is not useful for readers -->
+<!-- 以下の HTML と js は報告をセットアップします。読者には有益でないため、非表示にしています。 -->
 
 ```css hidden
 .input {
@@ -991,22 +1026,22 @@ button {
 ```
 
 ```js hidden
-// Store reference to lists, paragraph and button
+// リスト、段落、ボタンへの参照を格納
 const list1 = document.querySelector(".input ul");
 const list2 = document.querySelector(".output ul");
 const button = document.querySelector("button");
 
-// Create empty string in which to store final result
+// 最終結果を格納するために空文字列を作成
 let result = "";
 
-// Function to log data from underlying source
+// 基盤からデータをログ出力する関数
 function logSource(result) {
   const listItem = document.createElement("li");
   listItem.textContent = result;
   list1.appendChild(listItem);
 }
 
-// Function to log data from consumer
+// コンシューマーのデータをログ出力する関数
 function logConsumer(result) {
   const listItem = document.createElement("li");
   listItem.textContent = result;
@@ -1020,7 +1055,7 @@ function logConsumer(result) {
 
 ```js
 const stream = makeReadableByteFileStream("dummy file.txt");
-const DEFAULT_CHUNK_SIZE = 300;
+const DEFAULT_CHUNK_SIZE = 40;
 
 function makeReadableByteFileStream(filename) {
   let fileHandle;
@@ -1041,8 +1076,8 @@ function makeReadableByteFileStream(filename) {
         const theView = controller.byobRequest.view;
         const { bytesRead, buffer } = await fileHandle.read(
           theView.buffer,
-          theView.offset,
-          theView.length,
+          theView.byteOffset,
+          theView.byteLength,
           position,
         );
         if (bytesRead === 0) {
@@ -1063,8 +1098,8 @@ function makeReadableByteFileStream(filename) {
         const mynewBuffer = new Uint8Array(DEFAULT_CHUNK_SIZE);
         const { bytesRead, buffer } = await fileHandle.read(
           mynewBuffer.buffer,
-          mynewBuffer.offset,
-          mynewBuffer.length,
+          mynewBuffer.byteOffset,
+          mynewBuffer.byteLength,
           position,
         );
         if (bytesRead === 0) {
@@ -1104,7 +1139,7 @@ function readStream(reader) {
   // when a value has been received
   reader.read().then(function processText({ done, value }) {
     // Result objects contain two properties:
-    // done - true if the stream has already given you all its data.
+    // done  - true if the stream has already given you all its data.
     // value - some data. Always undefined when done is true.
     if (done) {
       logConsumer(`readStream() complete. Total bytes: ${bytesReceived}`);

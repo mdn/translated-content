@@ -138,7 +138,7 @@ console.log(n * 32); // Registrará 0 en la consola
 
 Cuando declaras una variable fuera de cualquier función, se denomina variable _global_, porque está disponible para cualquier otro código en el documento actual. Cuando declaras una variable dentro de una función, se llama variable _local_, porque solo está disponible dentro de esa función.
 
-JavaScript anterior a ECMAScript 2015 no tiene el ámbito de la {{JSxRef("Guide/Control_de_flujo_y_manejo_de_errores", "declaración de bloque", "#Block_statement", "Checar")}}. Más bien, una variable declarada dentro de un bloque es local a la _función (o ámbito global)_ en el que reside el bloque.
+JavaScript anterior a ECMAScript 2015 no tiene el ámbito de la {{jsxref("Guide/Control_de_flujo_y_manejo_de_errores", "declaración de bloque", "#Block_statement", 1)}}. Más bien, una variable declarada dentro de un bloque es local a la _función (o ámbito global)_ en el que reside el bloque.
 
 Por ejemplo, el siguiente código registrará `5`, porque el ámbito de `x` es el contexto global (o el contexto de la función si el código es parte de una función). El ámbito de `x` no se limita al bloque de instrucciones `if` inmediato.
 

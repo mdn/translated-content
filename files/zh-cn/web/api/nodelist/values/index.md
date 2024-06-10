@@ -3,6 +3,8 @@ title: NodeList.values()
 slug: Web/API/NodeList/values
 ---
 
+{{APIRef("DOM")}}
+
 该方法返回一个 iterator 迭代器，可以利用迭代器遍历所有 value。
 
 ## Syntax

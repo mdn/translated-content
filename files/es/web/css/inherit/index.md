@@ -3,6 +3,8 @@ title: inherit
 slug: Web/CSS/inherit
 ---
 
+{{CSSRef}}
+
 << [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)
 
 ### Resumen
