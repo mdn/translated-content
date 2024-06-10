@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("UserActivation")}} 接口的 **`isActive`** 只读属性表示当前的窗口是否有{{Glossary("transient activation", "瞬态（用户）激活")}}。
+{{domxref("UserActivation")}} 接口的 **`isActive`** 只读属性表示当前的窗口是否有{{Glossary("transient activation", "瞬态用户激活")}}。
 
 ## 值
 
