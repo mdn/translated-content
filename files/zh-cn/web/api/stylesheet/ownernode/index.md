@@ -18,7 +18,7 @@ l10n:
 ## 示例
 
 ```html
-<html lang="en">
+<html lang="zh">
   <head>
     <link rel="stylesheet" href="example.css" />
   </head>
