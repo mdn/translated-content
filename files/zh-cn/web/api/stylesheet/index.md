@@ -12,7 +12,7 @@ l10n:
 ## 实例属性
 
 - {{domxref("StyleSheet.disabled")}}
-  - : 返回 {{domxref("Boolean")}} 表示当前样式表是否可用。
+  - : 返回表示当前样式表是否可用的布尔值。
 - {{domxref("StyleSheet.href")}} {{ReadOnlyInline}}
   - : 返回 {{domxref("DOMString")}} 表示样式表的位置。
 - {{domxref("StyleSheet.media")}} {{ReadOnlyInline}}
