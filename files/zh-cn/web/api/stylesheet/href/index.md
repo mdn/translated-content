@@ -25,7 +25,7 @@ l10n:
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>href example</title>
+    <title>href 示例</title>
     <link rel="styleSheet" href="example.css" />
     <script>
       function sref() {
