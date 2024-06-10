@@ -16,7 +16,7 @@ l10n:
 - {{domxref("StyleSheet.href")}} {{ReadOnlyInline}}
   - : 返回 {{domxref("DOMString")}} 表示样式表的位置。
 - {{domxref("StyleSheet.media")}} {{ReadOnlyInline}}
-  - : 返回 {{domxref("MediaList")}} 表示样式的预期目标媒体。
+  - : 返回表示样式信息的预期目标媒体的 {{domxref("MediaList")}}。
 - {{domxref("StyleSheet.ownerNode")}} {{ReadOnlyInline}}
   - : 返回 {{domxref("Node")}} 将此样式表与当前文档相关联。
 - {{domxref("StyleSheet.parentStyleSheet")}} {{ReadOnlyInline}}
