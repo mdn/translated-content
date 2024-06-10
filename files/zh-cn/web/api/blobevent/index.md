@@ -39,6 +39,6 @@ _没有从其父 {{domxref("Event")}} 对象继承的具体方法。_
 
 ## 参见
 
-- {{domxref("Event")}} 接口。
-- [MediaStream 录制 API](/zh-CN/docs/Web/API/MediaStream_Recording_API): 每次媒体块就绪时发送 `BlobEvent` 对象。
-- [使用 MediaStream 的录制 API](/zh-CN/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- 父接口 {{domxref("Event")}}。
+- [流媒体录制 API](/zh-CN/docs/Web/API/MediaStream_Recording_API)：每次媒体分块就绪时发送 `BlobEvent` 对象。
+- [使用流媒体录制 API](/zh-CN/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
