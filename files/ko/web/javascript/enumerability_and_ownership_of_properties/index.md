@@ -1,6 +1,8 @@
 ---
 title: 열거성과 속성의 소유권
 slug: Web/JavaScript/Enumerability_and_ownership_of_properties
+l10n:
+  sourceCommit: a4b17b78fdca327f05e4a13e2b779d69e70212cd
 ---
 
 {{jsSidebar("More")}}
