@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-{{domxref("StyleSheet")}} 接口的 **`parentStyleSheet`** 属性返回样式表，如果有，其中包含给定的样式表。
+{{domxref("StyleSheet")}} 接口的 **`parentStyleSheet`** 属性返回样式表（如果有），其中包含给定的样式表。
 
 ## 值
 
