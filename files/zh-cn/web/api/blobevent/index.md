@@ -21,7 +21,7 @@ l10n:
 _没有从其父 {{domxref("Event")}} 对象继承的具体属性。_
 
 - {{domxref("BlobEvent.data")}} {{ReadOnlyInline}}
-  - : 一个 {{domxref("Blob")}} 表示与事件有关联的数据。由于特定的 {{domxref("Blob")}} 上发生了一些事情，导致 {{domxref("EventTarget")}}上触发了事件。
+  - : 表示与事件关联的数据的 {{domxref("Blob")}}。由于特定的 {{domxref("Blob")}} 上发生了一些事情，导致 {{domxref("EventTarget")}} 上触发了事件。
 - {{domxref("BlobEvent.timecode")}} {{ReadOnlyInline}}
   - : 一个 {{domxref("DOMHighResTimeStamp")}}，表示数据中的第一个分块的时间戳与由该录制器产生的第一个 Blob 事件中的第一个分块的时间戳之间的差。请注意，第一个生成的 Blob 事件中的 timecode 不需要为零。
 
