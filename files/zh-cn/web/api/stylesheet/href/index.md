@@ -40,7 +40,7 @@ l10n:
 </html>
 ```
 
-弹出 "file:////C:/Windows/Desktop/example.css"。
+返回“file:////C:/Windows/Desktop/example.css”。
 
 ### 备注
 
