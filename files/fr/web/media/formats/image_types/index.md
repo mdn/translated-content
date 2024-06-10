@@ -873,7 +873,7 @@ Le JPEG est en fait un format de données pour les photos compressées, plutôt 
     <tr>
       <th scope="row">Compression</th>
       <td>
-        Sans perte; sur la base de la
+        Avec perte; sur la base de la
         <a
           href="https://fr.wikipedia.org/wiki/Transformée_en_cosinus_discrète"
           >transformée en cosinus discrète</a
