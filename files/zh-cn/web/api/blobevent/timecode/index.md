@@ -7,7 +7,9 @@ l10n:
 
 {{APIRef("MediaStream Recording")}}
 
-{{domxref("BlobEvent")}} 接口的 **`timecode`** 只读属性表示数据中的第一块的时间戳与由该记录器产生的第一个 `BlobEvent` 中的第一个块的时间标记之间的差。请注意，第一个生成的 `BlobEvent` 中的 `timecode` 不需要为零。
+{{domxref("BlobEvent")}} 接口的 **`timecode`** 只读属性表示数据中的第一分块的时间戳与由该录制器产生的第一个 `BlobEvent` 中的第一个分块的时间戳之间的差。
+
+请注意，第一个生成的 `BlobEvent` 中的 `timecode` 不需要为零。
 
 ## 值
 
