@@ -9,7 +9,7 @@ l10n:
 
 [CSS 중첩](/ko/docs/Web/CSS/CSS_nesting) 모듈은 스타일시트의 가독성을 높이고 모듈화하며 그리고 유지 보수하기 용이하게 만듭니다. 선택자를 반복하여 작성하지 않아도 되고, 이로 인해 파일 크기도 줄어들 수 있습니다.
 
-CSS 중첩은 [Sass](https://sass-lang.com/) 와 같은 CSS 전처리기와는 다릅니다. CSS 전처리기는 사전에 컴파일되지만, CSS 중첩은 브라우저에 의해 파싱됩니다. 또한 CSS 중첩에서는, [`&` 중첩 선택자의 명시도](/ko/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)는 {{cssxref(':is',':is()')}} 함수와 유사하며, 관련 선택자 목록과 연관에서 가장 높은 명시도를 이용하여 계산합니다. 
+CSS 중첩은 [Sass](https://sass-lang.com/) 와 같은 CSS 전처리기와는 다릅니다. CSS 전처리기는 사전에 컴파일되지만, CSS 중첩은 브라우저에 의해 파싱됩니다. 또한 CSS 중첩에서는, [`&` 중첩 선택자의 명시도](/ko/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)는 {{cssxref(':is',':is()')}} 함수와 유사하며, 관련 선택자 목록과 연관에서 가장 높은 명시도를 이용하여 계산합니다.
 
 이 안내서는 CSS 에서 중첩을 사용하는 각기 다른 방법에 대해 설명합니다.
 
