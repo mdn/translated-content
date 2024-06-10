@@ -21,7 +21,7 @@ new BlobEvent(type, options)
   - : 表示时间名字的字符串。
     它区分大小写，浏览器总是将其设置为 `dataavailable`。
 - `options`
-  - : _除了在 {{domxref("Event/Event", "Event()")}} 中定义的属性之外_，一个对象可以具有以下属性：
+  - : 一个对象，_除了在 {{domxref("Event/Event", "Event()")}} 中定义的属性之外_，还可以具有以下属性：
     - `data`
       - : 和事件关联的 {{domxref("Blob")}} 数据。
     - `timecode` {{optional_inline}}
