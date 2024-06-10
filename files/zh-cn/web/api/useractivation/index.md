@@ -35,7 +35,7 @@ window 用户激活状态有两种：
 
 ### 检查最近是否执行过用户手势
 
-使用 {{domxref("navigator.userActivation")}} 访问 `UserActivation` 对象，然后使用 {{domxref("UserActivation.isActive")}} 检查用户当前是否正在与页面进行交互（{{Glossary("Transient activation", "瞬态（用户）激活")}}）。
+使用 {{domxref("navigator.userActivation")}} 访问 `UserActivation` 对象，然后使用 {{domxref("UserActivation.isActive")}} 检查用户当前是否正在与页面进行交互（{{Glossary("Transient activation", "瞬态激活")}}）。
 
 ```js
 if (navigator.userActivation.isActive) {
