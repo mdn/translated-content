@@ -25,7 +25,7 @@ new BlobEvent(type, options)
     - `data`
       - : 和事件关联的 {{domxref("Blob")}} 数据。
     - `timecode` {{optional_inline}}
-      - : 一个 {{domxref("DOMHighResTimeStamp")}} 用于初始化 blob 事件。
+      - : 用于初始化 blob 事件的 {{domxref("DOMHighResTimeStamp")}}。
 
 ### 返回值
 
