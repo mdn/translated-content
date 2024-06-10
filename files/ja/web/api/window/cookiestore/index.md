@@ -8,7 +8,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
-**`cookieStore`** は {{domxref("Window")}} インターフェイスの読み取り専用プロパティで、現在の文書コンテキストの {{domxref("CookieStore")}} オブジェクトへの参照を返します。これは、[Cookie ストアー API](/en-US/docs/Web/API/Cookie_Store_API) のエントリーポイントです。
+**`cookieStore`** は {{domxref("Window")}} インターフェイスの読み取り専用プロパティで、現在の文書コンテキストの {{domxref("CookieStore")}} オブジェクトへの参照を返します。これは、[Cookie ストアー API](/ja/docs/Web/API/Cookie_Store_API) のエントリーポイントです。
 
 ## 値
 
