@@ -45,7 +45,7 @@ if (navigator.userActivation.isActive) {
 
 ### 检查是否执行过用户手势
 
-使用 {{domxref("UserActivation.hasBeenActive")}} 检查用户是否曾与页面进行过交互（{{Glossary("Sticky activation", "粘性（用户）激活")}}）。
+使用 {{domxref("UserActivation.hasBeenActive")}} 检查用户是否曾与页面进行过交互（{{Glossary("Sticky activation", "粘性激活")}}）。
 
 ```js
 if (navigator.userActivation.hasBeenActive) {
