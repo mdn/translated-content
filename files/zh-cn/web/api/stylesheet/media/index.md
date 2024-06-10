@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-{{domxref("StyleSheet")}} 接口的 **`media`** 属性指定样式信息的预期目标介质。它是一个只读的、类数组 `MediaList` 对象，可以使用 `deleteMedium()` 删除，也可以使用 `appendMedium()` 添加。
+{{domxref("StyleSheet")}} 接口的 **`media`** 属性指定样式信息的预期目标媒体。它是一个只读的、类数组 `MediaList` 对象，可以使用 `deleteMedium()` 删除，也可以使用 `appendMedium()` 添加。
 
 ## 值
 
