@@ -7,7 +7,9 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-{{domxref("StyleSheet")}} 接口的 **`title`** 属性返回当前样式表的顾问标题。标题通常在 {{domxref("StyleSheet/OwnerNode", "ownerNode")}} 中指定。
+{{domxref("StyleSheet")}} 接口的 **`title`** 属性返回当前样式表的咨询标题。
+
+标题通常在 {{domxref("StyleSheet/OwnerNode", "ownerNode")}} 中指定。
 
 ## 规范
 
