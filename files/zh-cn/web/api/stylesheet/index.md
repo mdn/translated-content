@@ -20,7 +20,7 @@ l10n:
 - {{domxref("StyleSheet.ownerNode")}} {{ReadOnlyInline}}
   - : 返回 {{domxref("Node")}} 将此样式表与当前文档相关联。
 - {{domxref("StyleSheet.parentStyleSheet")}} {{ReadOnlyInline}}
-  - : 返回 {{domxref("StyleSheet")}} 如果有的话; 返回 `null` 如果没有。
+  - : 如果有的话，返回 {{domxref("StyleSheet")}}；如果没有，则返回 `null`。
 - {{domxref("StyleSheet.title")}} {{ReadOnlyInline}}
   - : 返回表示当前样式表的咨询标题的字符串。
 - {{domxref("StyleSheet.type")}}{{ReadOnlyInline}}
