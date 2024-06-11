@@ -21,11 +21,11 @@ text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 
 表明优先级先后顺序：
 
-| Value 值                                | Priority 优先级 |
-| --------------------------------------- | --------------- |
+| Value 值                             | Priority 优先级 |
+| ------------------------------------ | --------------- |
 | `text/html`、`application/xhtml+xml` | `1.0`           |
-| `application/xml`                       | `0.9`           |
-| `*/*`                                   | `0.8`           |
+| `application/xml`                    | `0.9`           |
+| `*/*`                                | `0.8`           |
 
 如果前面这两个值未定义优先级，值的顺序并不重要。然而，取值相同时，值越具体，其优先级越高。
 
