@@ -33,7 +33,7 @@ transfer(newByteLength)
 - {{jsxref("RangeError")}}
   - : 이 `ArrayBuffer`가 크기 조절이 가능하고 `newByteLength`가 이 `ArrayBuffer`의 {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}}보다 크다면 발생합니다.
 - {{jsxref("TypeError")}}
-  - : `ArrayBuffer`가 이미 분리되있을 경우 발생합니다.
+  - : `ArrayBuffer`가 이미 분리된 경우 발생합니다.
 
 ## 설명
 
