@@ -11,6 +11,6 @@ l10n:
 
 {{GlossaryDisambiguation}}
 
-## See also
+## 参见
 
 - 维基百科上的[媒体](https://zh.wikipedia.org/wiki/媒介)
