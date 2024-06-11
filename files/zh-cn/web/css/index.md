@@ -72,6 +72,5 @@ CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www
 
 ## 参见
 
-- [CSS 演示](/zh-CN/docs/Web/Demos#css)：通过探索最新的 CSS 技术的应用实例，获得创造性的提升。
 - CSS 常常应用的 Web 语言：[HTML](/zh-CN/docs/Web/HTML)、[SVG](/zh-CN/docs/Web/SVG)、[MathML](/zh-CN/docs/Web/MathML)、{{Glossary("XHTML")}} 以及 [XML](/zh-CN/docs/Web/XML/XML_introduction)。
 - [StackOverflow 上 CSS 相关的问题](https://stackoverflow.com/questions/tagged/css)

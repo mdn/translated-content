@@ -9,7 +9,7 @@ l10n:
 
 清除用户访问过的网页记录（浏览历史）。
 
-你可以使用 `removalOptions` 参数，该参数是一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象，用于：
+你可以使用 `removalOptions` 参数（一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象），用于：
 
 - 仅清除在特定时间之后访问的网页记录
 - 控制是仅清除普通网页的记录，还是同时清除托管应用程序和扩展程序的记录。
