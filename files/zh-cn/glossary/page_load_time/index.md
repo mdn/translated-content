@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**页面加载时间**是指从[导航开始](/en-US/docs/Web/API/PerformanceTiming/navigationStart)到[加载事件开始](/en-US/docs/Web/API/PerformanceTiming/loadEventStart)的时间。
+**页面加载时间**是指从[导航开始](/zh-CN/docs/Web/API/PerformanceTiming/navigationStart)到[加载事件开始](/zh-CN/docs/Web/API/PerformanceTiming/loadEventStart)的时间。
 
 ```js
 let time = performance.timing;
