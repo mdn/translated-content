@@ -130,7 +130,7 @@ slug: Web/HTML/Element/th
 
 ![](column-row-span.png)
 
-  > **Note:** 这些属性不能用于重叠单元格。
+> **Note:** 这些属性不能用于重叠单元格。
 
 ## 示例
 
