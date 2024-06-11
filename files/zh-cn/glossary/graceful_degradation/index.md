@@ -2,7 +2,7 @@
 title: 优雅降级
 slug: Glossary/Graceful_degradation
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: f84053ea0611a96aa0e230eba1450b34d5c7ac81
 ---
 
 {{GlossarySidebar}}
@@ -18,7 +18,7 @@ l10n:
 - 维基百科的[优雅降级](https://zh.wikipedia.org/wiki/优雅降级)
 - [处理常见的 HTML 和 CSS 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
 - [实现特性检测](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [MDN Web 文档词汇表](/zh-CN/docs/Glossary)
+- [术语](/zh-CN/docs/Glossary)
 
   - {{Glossary("Polyfill")}}
   - {{Glossary("Progressive enhancement", "渐进增强")}}
