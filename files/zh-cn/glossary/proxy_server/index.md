@@ -1,6 +1,8 @@
 ---
 title: 代理服务器
 slug: Glossary/Proxy_server
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
@@ -14,5 +16,5 @@ slug: Glossary/Proxy_server
 
 ## 参见
 
-- [Proxy servers and tunneling](/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling)
-- [Proxy server](https://en.wikipedia.org/wiki/Proxy_server) on Wikipedia
+- [代理服务器和隧道](/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling)
+- 维基百科上的[代理服务器](https://zh.wikipedia.org/wiki/代理服务器)
