@@ -3,6 +3,8 @@ title: 인터넷은 어떻게 동작하는가?
 slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 이 글에서는 인터넷의 개념과 작동 원리에 대해 설명합니다.
 
 <table class="learn-box standard-table">

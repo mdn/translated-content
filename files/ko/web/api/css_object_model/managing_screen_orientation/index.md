@@ -3,7 +3,7 @@ title: Managing screen orientation
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
 ---
 
-{{SeeCompatTable}}
+{{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}
 
 ## Summary
 
