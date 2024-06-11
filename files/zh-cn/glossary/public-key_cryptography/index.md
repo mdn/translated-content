@@ -15,11 +15,11 @@ l10n:
 
 因此，常见的做法是使用对称算法加密消息，然后使用公钥系统加密对称密钥。这种安排可以结合两种系统的优点。
 
-常用的公钥密码系统有RSA（用于签名和加密）、DSA（用于签名）和 Diffie-Hellman（用于密钥协商）。
+常用的公钥密码系统有 RSA（用于签名和加密）、DSA（用于签名）和 Diffie-Hellman（用于密钥协商）。
 
 ## 参见
 
-- [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
-- [MDN Web 文档术语](/en-US/docs/Glossary)
+- [Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API)
+- [MDN Web 文档术语](/zh-CN/docs/Glossary)
 
   - {{Glossary("Symmetric-key cryptography", "对称密钥密码")}}
