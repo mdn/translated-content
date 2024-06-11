@@ -17,14 +17,14 @@ l10n:
 
 ```js-nolint
 let gettingSubTree = browser.bookmarks.getSubTree(
-  id                     // string
+  id                     // 字符串
 )
 ```
 
 ### 参数
 
 - `id`
-  - : 一个 {{jsxref("string")}}，指定要检索的子树根的 ID。
+  - : 一个指定要检索的子树根的 ID 的{{jsxref("string", "字符串", "", 1)}}。
 
 ### 返回值
 
