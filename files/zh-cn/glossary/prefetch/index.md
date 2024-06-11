@@ -11,7 +11,7 @@ l10n:
 
 ### 资源预获取
 
-资源应该根据它们在未来导航中被需要的可能性进行预获取。浏览器可以自动推断某些资源，例如地址栏中的当前URL。
+资源应该根据它们在未来导航中被需要的可能性进行预获取。浏览器可以自动推断某些资源，例如地址栏中的当前 URL。
 
 这可以使用 [`<link rel="prefetch">`](/zh-CN/docs/Web/HTML/Attributes/rel/prefetch)（[推测规则 API](/zh-CN/docs/Web/API/Speculation_Rules_API) 仅处理导航的文档预获取）来完成：
 
@@ -29,7 +29,7 @@ l10n:
 <link rel="prefetch" href="next.html" />
 ```
 
-[推测规则 API](/zh-CN/docs/Web/API/Speculation_Rules_API) 预获取:
+[推测规则 API](/zh-CN/docs/Web/API/Speculation_Rules_API) 预获取：
 
 ```html
 <script type="speculationrules">
