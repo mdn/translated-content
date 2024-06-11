@@ -92,7 +92,6 @@ slug: Web/HTML/Element/th
 
     > **备注：** 不要使用这个属性，它不是标准属性且仅在某些版本的 Microsoft Internet Explorer 支持：{{HTMLElement("th")}} 元素应当用[CSS](/zh-CN/docs/CSS)来样式化。为了创造出同样的效果只需要使用[CSS](/zh-CN/docs/CSS)中的{{cssxref("background-color")}}属性就可以啦。
 
-
 - `char` {{Deprecated_inline}}
 
   - : 列中的内容与 `<th>` 元素中的字母对齐。通常其值包含一个句点（`.`）来排列数字或者货币值。如果 [`align`](/zh-CN/docs/Web/HTML/Element/th#align) 没有被设置为 `char`，这个属性就会被忽略。
