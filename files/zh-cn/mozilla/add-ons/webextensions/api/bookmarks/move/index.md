@@ -25,7 +25,6 @@ let movingBookmark = browser.bookmarks.move(
 ### 参数
 
 - `id`
-
   - : 包含要移动的书签或文件夹的 ID 的{{jsxref("string", "字符串", "", 1)}}。
 - `destination`
 
