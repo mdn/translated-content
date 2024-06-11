@@ -37,7 +37,7 @@ toLocaleTimeString(locales, options)
 
   - : 출력 형식을 조정하는 객체입니다. `Intl.DateTimeFormat()` 생성자의 매개변수 [`options`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options)과 대응됩니다. `dayPeriod`, `hour`, `minute`, `second`, `fractionalSecondDigits`가 모두 정의되지 않았다면 `hour`, `minute`, `second`는 `"numeric"`으로 설정됩니다.
 
-    `Intl.DateTimeFormat`을 지원하지 않는 구현체에서는 이 매개변수를 무시됩니다.
+    `Intl.DateTimeFormat`을 지원하지 않는 구현체에서는 이 매개변수를 무시합니다.
 
 이 매개변수 사용 방법에 대한 자세한 내용은 [`Intl.DateTimeFormat()` 생성자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)를 참조하시기 바랍니다.
 
