@@ -1,6 +1,8 @@
 ---
 title: Python
 slug: Glossary/Python
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
@@ -14,4 +16,14 @@ Python 是根据 OSI 批准的开源许可证开发的，使其免费使用和�
 ## 参见
 
 - 在维基百科上的 [Python](https://zh.wikipedia.org/wiki/Python)
-- [python 的入门教程](https://www.tutorialspoint.com/python/index.htm)
+- [官方 Python 文档教程](https://docs.python.org/3/tutorial/index.html)
+- [Tutorials Point Python 教程](https://www.tutorialspoint.com/python/index.htm)
+- [AlphaCodingSkills Python 教程](https://www.alphacodingskills.com/python/python-tutorial.php)
+- MDN 上的 [Django Web 框架 (Python)](/zh-CN/docs/Learn/Server-side/Django)
+- [术语表](/zh-CN/docs/Glossary)
+
+  - {{Glossary("Java")}}
+  - {{Glossary("JavaScript")}}
+  - {{Glossary("PHP")}}
+  - {{Glossary("Python")}}
+  - {{Glossary("Ruby")}}
