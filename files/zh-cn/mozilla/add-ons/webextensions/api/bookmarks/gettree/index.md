@@ -16,7 +16,7 @@ l10n:
 ## 语法
 
 ```js-nolint
-var gettingTree = browser.bookmarks.getTree();
+let gettingTree = browser.bookmarks.getTree()
 ```
 
 ### 参数
@@ -26,10 +26,6 @@ var gettingTree = browser.bookmarks.getTree();
 ### 返回值
 
 一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含代表根节点的 [`bookmarks.BookmarkTreeNode`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) 对象的数组。
-
-## 浏览器兼容性
-
-{{Compat}}
 
 ## 示例
 
@@ -68,6 +64,10 @@ gettingTree.then(logTree, onRejected);
 ```
 
 {{WebExtExamples}}
+
+## 浏览器兼容性
+
+{{Compat}}
 
 > **备注：** 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-getTree) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
 
