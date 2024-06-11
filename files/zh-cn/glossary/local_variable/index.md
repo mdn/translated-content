@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-一个只在{{Glossary("local scope", "局部作用域")}}中名字与它的{{glossary("value", "值")}}相绑定的{{glossary("variable", "变量")}}是局部变量。
+变量名只在{{Glossary("local scope", "局部作用域")}}中与其{{glossary("value", "值")}}相绑定的{{glossary("variable", "变量")}}是局部变量。
 
 ## 示例
 
