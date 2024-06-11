@@ -42,7 +42,7 @@ svg {
 
 ## `<path>`
 
-Pour un [`<path>`](/fr/docs/Web/SVG/Element/path), `d` est une chaîne de caractère qui contient une série de commandes de tracé qui définissent le tracé à dessiner.
+Pour un [`<path>`](/fr/docs/Web/SVG/Element/path), `d` est une chaîne de caractères qui contient une série de commandes de tracé qui définissent le tracé à dessiner.
 
 <table class="properties">
   <tbody>
@@ -176,6 +176,7 @@ Il est toujours possible de spécifier une valeur négative en argument d'une co
 ### `MoveTo` (déplacement)
 
 Cette instruction peut être vue comme un déplacement du pinceau à une position donnée sans rien tracer. Autrement dit, on déplace _le point courant_ (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>_}) et on ne trace pas de ligne entre _P<sub>o</sub>_ et le nouveau _point courant_ (_P<sub>n</sub>_; {_x<sub>n</sub>_, _y<sub>n</sub>_}).
+
 Une bonne pratique consiste à commencer tous ses chemins par une instruction `MoveTo` car, sans un positionnement initial, les instructions du chemin commenceront à un point quelconque, ce qui peut donner des résultats non désirés.
 
 <table class="no-markdown">
@@ -206,7 +207,7 @@ Une bonne pratique consiste à commencer tous ses chemins par une instruction `M
       </td>
       <td>
         <p>
-          Déplace <em>le point courant</em> en décalant la dernière position connue du tracé de <code><var>dx</var></code> sur l'axe horizontal et de <code><var>dy</var></code> sur l'axe vertical. Les éventuelles paires de coordonnées qui suivent sont interprétées comme des paramètres relatifs fournis à une commande <code>LineTo</code> (<code>l</code>) implicite(voir ci-après).
+          Déplace <em>le point courant</em> en décalant la dernière position connue du tracé de <code><var>dx</var></code> sur l'axe horizontal et de <code><var>dy</var></code> sur l'axe vertical. Les éventuelles paires de coordonnées qui suivent sont interprétées comme des paramètres relatifs fournis à une commande <code>LineTo</code> (<code>l</code>) implicite (voir ci-après).
         </p>
         <p>
           <strong>Formule&nbsp;:</strong> <var>P<sub>n</sub></var> = {<var>x<sub>o</sub></var>+ <code><var>dx</var></code>, <var>y<sub>o</sub></var> + <code><var>dy</var></code>}
@@ -642,7 +643,7 @@ svg {
       fill="none" />
     <circle cx="25" cy="25" r="1.5" />
 
-    <!-- Curve vertex points -->
+    <!-- Sommets de la courbe -->
     <circle cx="10" cy="50" r="1.5" />
     <circle cx="40" cy="50" r="1.5" />
 
