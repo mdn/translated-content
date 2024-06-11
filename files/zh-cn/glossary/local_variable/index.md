@@ -12,10 +12,10 @@ l10n:
 ## 示例
 
 ```js
-let global = 5; // 一个全局变量
+let global = 5; // 全局变量
 
 function fun() {
-  let local = 10; // 一个局部变量
+  let local = 10; // 局部变量
 }
 ```
 
