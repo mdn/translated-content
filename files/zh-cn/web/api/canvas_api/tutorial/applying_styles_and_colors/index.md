@@ -5,7 +5,7 @@ slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
-在[绘制图形](/zh-CN/Canvas_tutorial/Drawing_shapes)的章节里，我只用到默认的线条和填充样式。而在这一章里，我们将会探讨 canvas 全部的可选项，来绘制出更加吸引人的内容。
+在[绘制图形](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)的章节里，我只用到默认的线条和填充样式。而在这一章里，我们将会探讨 canvas 全部的可选项，来绘制出更加吸引人的内容。
 
 ## 色彩
 
