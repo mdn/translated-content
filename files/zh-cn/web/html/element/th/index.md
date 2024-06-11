@@ -126,7 +126,7 @@ slug: Web/HTML/Element/th
 
 - 只能在 {{HTMLElement("tr")}} 元素内使用 {{HTMLElement("th")}} 。
 - 在简单的情境中，在标题单元格（`<th>` 元素）上使用 [`scope`](#scope) 属性是多余的，因为默认会被浏览器推断为 [`scope`](#scope) 。然而，某些辅助技术可能无法正确推断，因此指定标题范围可能会改善用户体验。
-- 当使用 [`colspan`](#colspan) 和 [`rowspan`](#rowspan) 属性跨越多个列和行的标题单元格时，未定义这些属性的单元格（默认为 1 ）会自动适应表结构中的空闲可用空间，跨越 1x1 单元格，如下图所示：
+- 当使用 [`colspan`](#colspan) 和 [`rowspan`](#rowspan) 属性跨越多个列和行的标题单元格时，未定义这些属性的单元格（默认为 1）会自动适应表结构中的空闲可用空间，跨越 1x1 单元格，如下图所示：
 
 ![](column-row-span.png)
 
