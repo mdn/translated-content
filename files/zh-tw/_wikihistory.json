@@ -4119,9 +4119,5 @@
   "WebAssembly": {
     "modified": "2020-10-15T22:04:56.309Z",
     "contributors": ["Aries0d0f"]
-  },
-  "orphaned/Web/Demos": {
-    "modified": "2019-03-23T22:08:13.863Z",
-    "contributors": ["h223449961", "tigercosmos"]
   }
 }
