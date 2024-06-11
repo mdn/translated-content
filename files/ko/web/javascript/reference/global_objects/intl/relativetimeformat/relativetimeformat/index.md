@@ -1,5 +1,5 @@
 ---
-title: Intl.RelativeTimeFormat() constructor
+title: Intl.RelativeTimeFormat() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat
 l10n:
   sourceCommit: 21d44fab158378a975fd89ec37e46ec68a411bf2
@@ -7,8 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`Intl.RelativeTimeFormat()`** 생성자는
-{{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} 객체를 생성합니다.
+**`Intl.RelativeTimeFormat()`** 생성자는 {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} 객체를 생성합니다.
 
 ## 구문
 
@@ -37,12 +36,12 @@ new Intl.RelativeTimeFormat(locales, options)
 
 - `options` {{optional_inline}}
 
-  - : 검색되는 순서대로 다음 속성을 포함하는 객체입니다(모두 선택 사항입니다):
+  - : 검색되는 순서대로 다음 속성을 포함하는 객체입니다(모두 선택 사항입니다).
 
     - `localeMatcher`
       - : 사용할 로케일 일치 알고리즘입니다. 가능한 값은 `"lookup"` 및 `"best fit"`이며, 기본값은 `"best fit"`입니다. 이 옵션에 대해 더 알고 싶으시다면 [로케일 식별 및 협상](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation)을 참고하시기 바랍니다.
     - `numberingSystem`
-      - : 숫자 형식화에 사용할 `"arab"`, `"hans"`, `"mathsans"` 등의 번호 체계입니다. 지원되는 번호 체계 유형 목록은 [`Intl.Locale.prototype.getNumberingSystems()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types)를 참고하시기 바랍니다. 이 옵션은 `nu` 유니코드 확장 키를 통해서도 설정할 수 있으며, 둘 다 제공된 경우 이 `옵션` 속성이 우선합니다.
+      - : 숫자 형식화에 사용할 `"arab"`, `"hans"`, `"mathsans"` 등의 숫자 체계입니다. 지원되는 숫자 체계 유형 목록은 [`Intl.Locale.prototype.getNumberingSystems()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types)를 참고하시기 바랍니다. 이 옵션은 `nu` 유니코드 확장 키를 통해서도 설정할 수 있으며, 둘 다 제공된 경우 이 `옵션` 속성이 우선합니다.
     - `style`
       - : 형식화된 상대 시간의 스타일입니다. 가능한 값은 다음과 같습니다.
         - `"long"` (default)
