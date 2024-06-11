@@ -11,7 +11,7 @@ l10n:
 
 如果用户随后选择导航到该页面，内容显示几乎可以瞬间完成。
 
-预渲染可以用于，例如，获取“下一页”按钮链接的页面资源，或用户悬停的链接弹出窗口，或在地址栏输入的URL可能的页面目标。以下[推测规则](/zh-CN/docs/Web/API/Speculation_Rules_API)可以包含在文档的头部，用于提示浏览器应预渲染 `next.html` 和 `next2.html`，因为这两个页面都可能是下一个导航的合理目标：
+预渲染可以用于，例如，获取“下一页”按钮链接的页面资源，或用户悬停的链接弹出窗口，或在地址栏输入的 URL 可能的页面目标。以下[推测规则](/zh-CN/docs/Web/API/Speculation_Rules_API)可以包含在文档的头部，用于提示浏览器应预渲染 `next.html` 和 `next2.html`，因为这两个页面都可能是下一个导航的合理目标：
 
 ```html
 <script type="speculationrules">
