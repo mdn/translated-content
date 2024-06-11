@@ -2,7 +2,7 @@
 title: 网格间距
 slug: Glossary/Gutters
 l10n:
-  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
+  sourceCommit: c77767934e1a9937a5158026a28fa2157a848b49
 ---
 
 {{GlossarySidebar}}
