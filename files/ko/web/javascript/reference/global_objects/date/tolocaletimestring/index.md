@@ -119,7 +119,7 @@ const options = { timeZone: "UTC", timeZoneName: "short" };
 console.log(date.toLocaleTimeString("en-US", options));
 // "3:00:00 AM GMT"
 
-// 가끔씩은 US도 24시간대기 필요할 수 있씁니다.
+// 가끔씩은 US도 24시간 단위가 필요할 수 있습니다.
 console.log(date.toLocaleTimeString("en-US", { hour12: false }));
 // "19:00:00"
 
