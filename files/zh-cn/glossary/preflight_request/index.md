@@ -9,7 +9,7 @@ l10n:
 
 一个 CORS 预检请求是用于检查服务器是否支持 {{Glossary("CORS")}} 即跨域资源共享。
 
-它一般是用了以下几个 HTTP 请求首部的 {{HTTPMethod("OPTIONS")}} 请求：{{HTTPHeader("Access-Control-Request-Method")}} 和 {{HTTPHeader("Access-Control-Request-Headers")}}，以及一个 {{HTTPHeader("Origin")}} 首部。
+它一般是用了以下几个 HTTP 请求标头的 {{HTTPMethod("OPTIONS")}} 请求：{{HTTPHeader("Access-Control-Request-Method")}} 和 {{HTTPHeader("Access-Control-Request-Headers")}}，以及一个 {{HTTPHeader("Origin")}} 标头。
 
 当有必要的时候，浏览器会自动发出一个预检请求；所以在正常情况下，前端开发者不需要自己去发这样的请求。预检请求会在请求被标记为[“需要预检的请求”](/zh-CN/docs/Web/HTTP/CORS#preflighted_requests)时进行，而对于[简单请求](/zh-CN/docs/Web/HTTP/CORS#simple_requests)则不会进行。
 
