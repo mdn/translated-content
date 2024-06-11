@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("Symbol")}} 值的 **`valueOf()`** 方法会返回此 symbol 值。
+{{jsxref("Symbol")}} 值的 **`valueOf()`** 方法会返回该符号（symbol）的值。
 
 {{EmbedInteractiveExample("pages/js/symbol-prototype-valueof.html")}}
 
