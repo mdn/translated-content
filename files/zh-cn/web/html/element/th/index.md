@@ -43,6 +43,7 @@ slug: Web/HTML/Element/th
 该元素包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 
 - `abbr`
+
   - : 一个简短的描述，作为对标题单元格内容的替代标签，用于在其他上下文中引用该单元格。一些用户代理（如语音阅读器）可能会在内容本身之前呈现此描述。
 
 - `colspan`
