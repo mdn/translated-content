@@ -11,12 +11,11 @@ l10n:
 
 导航指令不将 {{CSP("default-src")}} 指令作为回退机制。
 
-详见[导航指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#navigation_directives)以获得完整列表。
+详见[导航指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#导航指令)以获得完整列表。
 
 ## 参见
 
 - <https://www.w3.org/TR/CSP/#directives-navigation>
-- {{HTTPHeader("Content-Security-Policy")}}
 - 其他类型的指令：
 
   - {{Glossary("Fetch directive", "Fetch 指令")}}
