@@ -42,11 +42,27 @@ slug: Web/HTML/Element/th
 
 该元素包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 
-- `abbr` {{Deprecated_Inline}}
+- `abbr`
+  - : 一个简短的描述，作为对标题单元格内容的替代标签，用于在其他上下文中引用该单元格。一些用户代理（如语音阅读器）可能会在内容本身之前呈现此描述。
 
-  - : 这个属性包含一个关于单元格内容的简单的介绍。一个用户代理（例如，语音阅读器）可能出现在描述之前。
+- `colspan`
+  - : 一个非负整数值，指示标题单元格跨越或扩展多少列。默认值为`1` 。超过 1000 的值被视作 1000。
+- `headers`
+  - : 这个属性包含了一个空间分隔的字符串的列表，每个与其他{{HTMLElement("th")}}元素相关联的`id` 属性一一对应。
+- `rowspan`
+  - : 一个非负整数值，指示标题单元格跨越或扩展多少行。默认值为`1.` 如果该值被设置为 `0`, 这个单元格就被扩展为 ({{HTMLElement("thead")}}，{{HTMLElement("tbody")}} 或{{HTMLElement("tfoot")}}) 中表格部分的最后一个元素。比 65534 大的值被视作 65534。
+- `scope`
+  - : 这个枚举属性定义了表头元素 (在{{HTMLElement("th")}}中定义) 关联的单元格。它可能有以下值：
+    - `row`: 表头关联一行中所有的单元格。
+    - `col`: 表头关联一列中所有的单元格。
+    - `rowgroup`:表头属于一个行组并与其中所有单元格相关联。这些单元格可以被放在表头的左侧或右侧，取决于 {{HTMLElement("table")}} 元素中 [`dir`](/zh-CN/docs/Web/HTML/Global_attributes/dir) 属性的值。
+    - `colgroup`: 表头属于一个列组并与其中所有单元格相关联。
+    - `auto`    
+  - : 如果未指定 scope 属性，或其值不是 row ， col ， rowgroup 或 colgroup ，则浏览器会自动选择标题单元格适用的单元格集。
 
-    > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。相对的，你可以把简短的描述放置于单元格内，把较长的描述内容放到 title 属性内。
+### 已弃用的属性
+
+以下属性已被弃用，不应使用。
 
 - `align` {{Deprecated_Inline}}
 
@@ -69,38 +85,25 @@ slug: Web/HTML/Element/th
 
     > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。应该使用 [`scope`](/zh-CN/docs/Web/HTML/Element/th#scope) 属性代替。
 
-- `bgcolor` {{Non-standard_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
   - : 这个属性定义了每列中每单元格的背景色。它由带有‘#’前缀的 6 位数的十六进制码组成，并在[sRGB](https://www.w3.org/Graphics/Color/sRGB)中被定义。这个属性可能会用到十六个预定义的颜色字符串儿之一。
 
     > **备注：** 不要使用这个属性，它不是标准属性且仅在某些版本的 Microsoft Internet Explorer 支持：{{HTMLElement("th")}} 元素应当用[CSS](/zh-CN/docs/CSS)来样式化。为了创造出同样的效果只需要使用[CSS](/zh-CN/docs/CSS)中的{{cssxref("background-color")}}属性就可以啦。
 
+
 - `char` {{Deprecated_inline}}
 
   - : 列中的内容与 `<th>` 元素中的字母对齐。通常其值包含一个句点（`.`）来排列数字或者货币值。如果 [`align`](/zh-CN/docs/Web/HTML/Element/th#align) 没有被设置为 `char`，这个属性就会被忽略。
+
+
 
 - `charoff` {{Deprecated_inline}}
 
   - : 这个属性用来将列数据移到 **char** 属性指定字母的右边。其值指定了移动的长度。
 
     > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。
-
-- `colspan`
-  - : 这个属性包含一个正整数表示了每单元格中扩展列的数量。默认值为`1` 。超过 1000 的值被视作 1000。
-- `headers`
-  - : 这个属性包含了一个空间分隔的字符串的列表，每个与其他{{HTMLElement("th")}}元素相关联的`id` 属性一一对应。
-- `rowspan`
-  - : 这个属性包含一个正整数表示了每单元格中扩展列的数量。默认值为`1.` 如果该值被设置为 `0`, 这个单元格就被扩展为 ({{HTMLElement("thead")}}，{{HTMLElement("tbody")}} 或{{HTMLElement("tfoot")}}) 中表格部分的最后一个元素。比 65534 大的值被视作 65534。
-- `scope`
-
-  - : 这个枚举属性定义了表头元素 (在{{HTMLElement("th")}}中定义) 关联的单元格。它可能有以下值：
-
-    - `row`: 表头关联一行中所有的单元格。
-    - `col`: 表头关联一列中所有的单元格。
-    - `rowgroup`:表头属于一个行组并与其中所有单元格相关联。这些单元格可以被放在表头的左侧或右侧，取决于 {{HTMLElement("table")}} 元素中 [`dir`](/zh-CN/docs/Web/HTML/Global_attributes/dir) 属性的值。
-    - `colgroup`: 表头属于一个列组并与其中所有单元格相关联。
-    - `auto`
-
+  
 - `valign` {{Deprecated_inline}}
 
   - : 这个属性指定了单元格内文本的垂直对齐方式。这个属性可能有以下值：
@@ -117,6 +120,16 @@ slug: Web/HTML/Element/th
   - : 这个属性用来定义一个期望的单元格宽。额外的空间可以藉由[cellspacing](/zh-CN/docs/Web/API/HTMLTableElement/cellSpacing)和 [cellpadding](/zh-CN/docs/Web/API/HTMLTableElement/cellPadding) 属性来增加，并且{{HTMLElement("col")}}元素的宽也可以创造额外空间。但是，如果一列宽太窄以至于无法恰当显示 某单元格时，它会被自动加宽。
 
     > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。使用 CSS {{cssxref("width")}}属性代替。
+
+## 用法注解
+
+- 只能在 {{HTMLElement("tr")}} 元素内使用 {{HTMLElement("th")}} 。
+- 在简单的情境中，在标题单元格（`<th>` 元素）上使用 [`scope`](#scope) 属性是多余的，因为默认会被浏览器推断为 [`scope`](#scope) 。然而，某些辅助技术可能无法正确推断，因此指定标题范围可能会改善用户体验。
+- 当使用 [`colspan`](#colspan) 和 [`rowspan`](#rowspan) 属性跨越多个列和行的标题单元格时，未定义这些属性的单元格（默认为 1 ）会自动适应表结构中的空闲可用空间，跨越 1x1 单元格，如下图所示：
+
+![](column-row-span.png)
+
+  > **Note:** 这些属性不能用于重叠单元格。
 
 ## 示例
 
