@@ -1,29 +1,25 @@
 ---
-title: 浏览指令
+title: 导航指令
 slug: Glossary/Navigation_directive
 ---
 
 {{GlossarySidebar}}
 
-**{{Glossary("CSP")}} 浏览指令**出现于 {{HTTPHeader("Content-Security-Policy")}} 标头，指示着用户所能浏览的或者提交表单的资源位置。
+**{{Glossary("CSP")}} 导航指令**出现于 {{HTTPHeader("Content-Security-Policy")}} 标头，指示着用户所能浏览的或者提交表单的资源位置。
 
-浏览指令不将 {{CSP("default-src")}} 指令作为回退机制。
+导航指令不将 {{CSP("default-src")}} 指令作为回退机制。
 
-以下 CSP 指令属于浏览指令：
+详见[导航指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#navigation_directives)以获得完整列表。
 
-- {{CSP("form-action")}}
-- {{CSP("frame-ancestors")}}
-- {{CSP("navigation-to")}}
-
-## 更多内容
+## 参见
 
 - <https://www.w3.org/TR/CSP/#directives-navigation>
 - {{HTTPHeader("Content-Security-Policy")}}
 - 其他类型的指令：
 
-  - {{Glossary("Fetch directive")}}
-  - {{Glossary("Navigation directive")}}
-  - {{Glossary("Reporting directive")}}
+  - {{Glossary("Fetch directive", "Fetch 指令")}}
+  - {{Glossary("Document directive", "文档指令")}}
+  - {{Glossary("Reporting directive", "报告指令")}}
   - [`block-all-mixed-content`](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content)
   - [`upgrade-insecure-requests`](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
   - [`trusted-types`](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types)
