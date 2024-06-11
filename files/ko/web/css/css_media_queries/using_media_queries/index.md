@@ -13,7 +13,7 @@ l10n:
 
 - [CSS](/ko/docs/Web/CSS) {{cssxref("@media")}}와 {{cssxref("@import")}} [@규칙](/ko/docs/Web/CSS/At-rule)을 사용해 특정 조건에 따라 스타일을 적용할 때.
 - {{htmlelement("style")}}, {{htmlelement("link")}}, {{htmlelement("source")}}, 기타 다른 [HTML](/ko/docs/Web/HTML) 요소에 `media` 특성을 사용해 특정 매체만 가리키게 할 때.
-- {{domxref("Window.matchMedia()")}}와 {{domxref("MediaQueryList.addListener()")}} [JavaScript](/ko/docs/Web/JavaScript) 메서드를 사용해 [미디어 상태를 판별하고 관측](/ko/docs/Web/CSS/Media_Queries/Testing_media_queries)할 때.
+- {{domxref("Window.matchMedia()")}}와 {{domxref("MediaQueryList.addListener()")}} [JavaScript](/ko/docs/Web/JavaScript) 메서드를 사용해 [미디어 상태를 판별하고 관측](/ko/docs/Web/CSS/CSS_media_queries/Testing_media_queries)할 때.
 
 > **참고:** 이 페이지의 CSS는 시연용으로 `@media`를 사용했지만, 기본적인 구문은 모든 미디어 쿼리가 동일합니다.
 
@@ -289,7 +289,7 @@ The `and` 연산자는 미디어 기능과 미디어 유형 혹은 다른 미디
 
 - [@media](/ko/docs/Web/CSS/@media)
 - [컨테이너 쿼리](/ko/docs/Web/CSS/CSS_containment/Container_queries)
-- [프로그래밍으로 미디어 쿼리 판별하기](/ko/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [프로그래밍으로 미디어 쿼리 판별하기](/ko/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - [CSS 미디어 쿼리와 애니메이션](https://davidwalsh.name/animate-media-queries)
 - [Mozilla 미디어 기능 확장](/ko/docs/Web/CSS/Mozilla_Extensions#Media_features)
 - [WebKit 미디어 기능 확장](/ko/docs/Web/CSS/Webkit_Extensions#Media_features)
