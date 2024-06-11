@@ -15,4 +15,4 @@ l10n:
 
 ## 参见
 
-- 维基百科上的[多态](https://zh.wikipedia.org/wiki/多态_(计算机科学))
+- 维基百科上的[多态](<https://zh.wikipedia.org/wiki/多态_(计算机科学)>)
