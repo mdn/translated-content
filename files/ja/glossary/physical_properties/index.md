@@ -1,20 +1,20 @@
 ---
-title: Physical properties
+title: Physical properties (物理プロパティ)
 slug: Glossary/Physical_properties
 page-type: glossary-definition
 ---
 
 {{GlossarySidebar}}
 
-CSS **physical properties** define positions based on physical directions or element sides. For example:
+CSSの**物理プロパティ**は、物理的な方向もしくは要素の辺に基づいた位置を定義します。例えば：
 
-- The [inset properties](/ja/docs/Glossary/Inset_properties) {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}} refer to the physical dimensions of the viewport.
-- Features such as {{cssxref("margin-top")}}, {{cssxref("border-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("border-bottom-left-radius")}} reference specific sides of an element, and style features by that physical direction.
+- {{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("bottom")}}、{{cssxref("left")}} の [inset プロパティ](/ja/docs/Glossary/Inset_properties) は、ビューポートの物理的な寸法を参照します。
+- {{cssxref("margin-top")}}、{{cssxref("border-right")}}、{{cssxref("padding-bottom")}}、{{cssxref("border-bottom-left-radius")}} などの機能は、要素の特定の辺を参照し、その物理的な方向にスタイルを適用します。
 
-This is opposed to {{glossary("logical properties")}}, which are relative to the content flow and use directional keywords relative to the block and inline axes.
+これは{{glossary("logical properties", "論理プロパティ")}}とは対照的です。論理プロパティはコンテンツフローに相対的で、ブロック軸とインライン軸を基準とした方向キーワードを使用します。
 
-## See also
+## 関連情報
 
-- [CSS positioned layout](/ja/docs/Web/CSS/CSS_positioned_layout) module
-- [CSS box model](/ja/docs/Web/CSS/CSS_box_model) module
-- [CSS box sizing](/ja/docs/Web/CSS/CSS_box_sizing) module
+- [CSS 位置指定レイアウト](/ja/docs/Web/CSS/CSS_positioned_layout)モジュール
+- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール
+- [CSS ボックスサイズ](/ja/docs/Web/CSS/CSS_box_sizing)モジュール
