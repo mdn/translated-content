@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSS Counter Styles")}}
 
-{{domxref("CSSCounterStyleRule")}} 인터페이스의 **`symbols`** 속성은 {{cssxref("@counter-style/symbols","symbols")}} 설명자의 값을 호출하거나 지정합니다. 만일 설명자에 지정된 값이 없다면, 이 속성은 빈 문자열을 반환합니다.
+{{domxref("CSSCounterStyleRule")}} 인터페이스의 **`symbols`** 속성은 {{cssxref("@counter-style/symbols","symbols")}} 설명자의 값을 가져오거나 설정합니다. 만일 설명자에 지정된 값이 없다면, 이 속성은 빈 문자열을 반환합니다.
 
 ## 값
 
