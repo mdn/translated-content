@@ -62,7 +62,7 @@ l10n:
         <div class="note">
           <p>
             <strong>참고:</strong> <kbd>NumLock</kbd> 키가 잠겨 있을 때,
-             파이어폭스는 숫자 키패드의 키에게
+             Firefox는 숫자 키패드의 키에게
              항상 <code>DOM_KEY_LOCATION_NUMPAD</code> 를 반환합니다.
              반면에, <kbd>NumLock</kbd> 키가 잠겨 있지 않을 때,
              그리고 숫자 키패드가 실제로 있는 경우에도 <code>DOM_KEY_LOCATION_NUMPAD</code> 를 반환합니다.
@@ -78,7 +78,7 @@ l10n:
             <code>DOM_KEY_LOCATION_STANDARD</code> both on Firefox and Internet
             Explorer.
             <strong>참고:</strong> <kbd>NumLock</kbd> 키의
-             키 이벤트는 인터넷 익스플로러와 파이어폭스 모두에서
+             키 이벤트는 Internet Explorer와 Firefox 모두에서
              <code>DOM_KEY_LOCATION_STANDARD</code> 를 나타냅니다.
           </p>
         </div>
