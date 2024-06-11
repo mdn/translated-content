@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-HTTP 消息的**有效负荷体**是发送在HTTP消息体中的*信息*（“有效负载”）部分（如果有），在应用{{HTTPHeader("Transfer-Encoding","传输编码")}}之前。如果未使用传输编码，则*有效负荷体*和*消息体*就是相同的。
+HTTP 消息的**有效负荷体**是发送在 HTTP 消息体中的*信息*（“有效负载”）部分（如果有），在应用{{HTTPHeader("Transfer-Encoding","传输编码")}}之前。如果未使用传输编码，则*有效负荷体*和*消息体*就是相同的。
 
 例如，以下响应中的消息体仅包含有效负荷体：“Mozilla Developer Network”：
 
