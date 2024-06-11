@@ -1,7 +1,8 @@
 ---
 title: 依賴方
 slug: Glossary/Relying_party
-page-type: glossary-definition
+l10n:
+  sourceCommit: e63979cfb7866a20a546623e6cf736ccf9055f03
 ---
 
 {{GlossarySidebar}}
