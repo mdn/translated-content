@@ -61,7 +61,7 @@ l10n:
 
 ## 参见
 
-- [CSS 网格布局](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - 属性参考
 
   - {{cssxref("column-gap")}}
