@@ -35,9 +35,9 @@ text/html;q=0.8,text/*;q=0.8,*/*;q=0.8
 
 | Value 值    | Priority 优先级               |
 | ----------- | ----------------------------- |
-| `text/html` | `0.8` (but totally specified) |
-| `text/*`    | `0.8` (partially specified)   |
-| `*/*`       | `0.8` (not specified)         |
+| `text/html` | `0.8`（但是完全指定了） |
+| `text/*`    | `0.8`（部分指定）|
+| `*/*`       | `0.8`（完全没制定） |
 
 一些语法，例如 {{HTTPHeader("Accept")}}，允许使用额外的指定符号，例如 `text/html;level=1`。这些符号增加了值的特异性。它们的使用非常罕见。
 
