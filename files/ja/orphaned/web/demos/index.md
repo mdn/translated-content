@@ -1,6 +1,7 @@
 ---
 title: オープンウェブ技術のデモ
-slug: Web/Demos
+slug: orphaned/Web/Demos
+original_slug: Web/Demos
 l10n:
   sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
 ---

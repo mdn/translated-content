@@ -3837,6 +3837,7 @@
 /ja/docs/Web/Compatibility_FAQ/Tips_Default_Style_Difference.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Tips_Default_Style_Difference.html
 /ja/docs/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html
 /ja/docs/Web/Compatibility_FAQ/Underline_Color_Diffrence.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Underline_Color_Diffrence.html
+/ja/docs/Web/Demos	/ja/docs/orphaned/Web/Demos
 /ja/docs/Web/Events/Activate	/ja/docs/Web/API/Element/DOMActivate_event
 /ja/docs/Web/Events/DOMContentLoaded	/ja/docs/Web/API/Document/DOMContentLoaded_event
 /ja/docs/Web/Events/Detecting_device_orientation	/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation
