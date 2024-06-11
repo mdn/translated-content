@@ -1,11 +1,13 @@
 ---
-title: Quality values
+title: 质量价值
 slug: Glossary/Quality_values
+l10n:
+  sourceCommit: 5090082ff453369e1b9c44bf2bc975a00614114a
 ---
 
 {{GlossarySidebar}}
 
-**质量价值**（Quality values），也称作 *q 值*、*q 因子*，用于描述逗号分隔列表中值的优先级顺序。它是一种特殊的语法，允许在一些 [HTTP 消息头](/zh-CN/docs/Web/HTTP/Headers) 和 HTML 中使用。
+**质量价值**（Quality values），也称作 _q 值_、_q 因子_，用于描述逗号分隔列表中值的优先级顺序。它是一种特殊的语法，允许在一些 [HTTP 消息头](/zh-CN/docs/Web/HTTP/Headers) 和 HTML 中使用。
 
 值的重要性由后缀 `';q='` 标记，后面紧跟一个介于 `0` 和 `1` 之间的值，包括最多三位小数，最高的值表示最高优先级。当未指定时，默认值为 `1`。
 
