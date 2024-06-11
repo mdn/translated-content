@@ -40,7 +40,7 @@ slug: Web/HTML/Element/th
 
 ## 属性
 
-该元素包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+该元素包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `abbr`
 
