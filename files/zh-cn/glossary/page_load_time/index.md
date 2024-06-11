@@ -21,4 +21,4 @@ let pageloadtime = time.loadEventStart - time.navigationStart;
 
 - [导航与资源计时](/zh-CN/docs/Web/Performance/Navigation_and_resource_timings)
 - {{domxref("PerformanceNavigationTiming")}}
-- {{domxref("PerformanceResourceTiming")}},
+- {{domxref("PerformanceResourceTiming")}}
