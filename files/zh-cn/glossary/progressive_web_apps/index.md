@@ -2,7 +2,7 @@
 title: 渐进式 Web 应用程序
 slug: Glossary/Progressive_web_apps
 l10n:
-    sourceCommit: 835d6632d59993861a0458510402787f8a2c3cb3
+  sourceCommit: 835d6632d59993861a0458510402787f8a2c3cb3
 ---
 
 {{GlossarySidebar}}
