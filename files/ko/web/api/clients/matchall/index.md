@@ -33,12 +33,12 @@ matchAll(options)
         기본 값은 `false`입니다.
     - `type`
       - : 매칭하고자 하는 클라이언트 유형을 설정합니다. 사용 가능한 값은
-        `"window"`, `"worker"`, `"sharedworker"`, `"all"`입니다. 
+        `"window"`, `"worker"`, `"sharedworker"`, `"all"`입니다.
         기본 값은 `"window"`입니다.
 
 ### 반환 값
 
-{{domxref("Client")}} 객체 배열로 이행된(resolve) {{jsxref("Promise")}}.
+{{domxref("Client")}} 객체 배열로 이행된 {{jsxref("Promise")}}.
 Chrome 46/Firefox 54와 이후 버전에서, 이 메서드는 사양에 따라 가장 최근에 포커스된 순서대로 클라이언트를 반환합니다.
 
 ## 예제

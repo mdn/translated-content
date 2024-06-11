@@ -23,7 +23,7 @@ get(id)
 
 ### 반환 값
 
-{{domxref("Client")}} 객체나 `undefined`로 이행된(resolve) {{jsxref("Promise")}}.
+{{domxref("Client")}} 객체나 `undefined`로 이행된 {{jsxref("Promise")}}.
 
 ## 예제
 
