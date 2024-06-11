@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**网格间距**是网格内容轨道之间的间距，可以通过 {{cssxref("column-gap")}}、{{cssxref("row-gap")}} 或 {{cssxref("gap")}} 属性在[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)中创建。
+**网格间距**是网格内容{{glossary("grid_tracks", "轨道")}}之间的间距，可以通过 {{cssxref("column-gap")}}、{{cssxref("row-gap")}} 或 {{cssxref("gap")}} 属性在[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)中创建。
 
 ## 示例
 
@@ -61,13 +61,11 @@ l10n:
 
 ## 参见
 
-### 属性参考
+- [CSS 网格布局](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- 属性参考
 
-- {{cssxref("column-gap")}}
-- {{cssxref("row-gap")}}
-- {{cssxref("gap")}}
+  - {{cssxref("column-gap")}}
+  - {{cssxref("row-gap")}}
+  - {{cssxref("gap")}}
 
-### 扩展阅读
-
-- CSS 网格布局指南：_[网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
 - CSS 网格布局规范中[网格间距的定义](https://drafts.csswg.org/css-grid/#gutters)
