@@ -34,7 +34,7 @@ let getSettings = browser.browsingData.settings()
 - `dataToRemove`
   - : `{{WebExtAPIRef("browsingData.DataTypeSet")}}`。包含可以在浏览器用户界面中切换的每种数据类型的属性。每个属性的值如果选中删除该类型的数据为 `true`，否则为 `false`。
 - `dataRemovalPermitted`
-  - : `{{WebExtAPIRef("browsingData.DataTypeSet")}}`。包含可以在浏览器用户界面中切换的每种数据类型的属性。如果设备的管理员允许用户删除该类型的数据，则每个属性的值为 `true`，否则为 `false`。
+  - : `{{WebExtAPIRef("browsingData.DataTypeSet")}}`。包含可以在浏览器用户界面中切换的每种数据类型的属性。如果设备的管理员允许用户删除该类型的数据，则对应属性的值为 `true`，否则为 `false`。
 
 如果发生任何错误，Promise 将会被拒绝并带有错误消息。
 
