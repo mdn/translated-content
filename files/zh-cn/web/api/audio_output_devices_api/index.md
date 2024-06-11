@@ -15,7 +15,7 @@ l10n:
 
 即使在权限策略允许的情况下，访问特定音频输出设备仍然需要明确的用户权限，因为用户可能处于不适合通过某些输出设备播放音频的位置。
 
-该 API 提供了 {{domxref("MediaDevices.selectAudioOutput()")}} 方法，允许用户从文档的 {{httpheader("Permissions-Policy")}} HTTP 头的 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) 指令允许的音频输出设备中选择所需的音频输出。然后选择的设备会获得用户权限，允许使用 {{domxref("MediaDevices.enumerateDevices()")}} 枚举该设备，并使用 {{domxref("HTMLMediaElement.setSinkId()")}} 将其设置为音频输出设备。
+该 API 提供了 {{domxref("MediaDevices.selectAudioOutput()")}} 方法，允许用户从文档的 {{httpheader("Permissions-Policy")}} HTTP 标头的 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) 指令允许的音频输出设备中选择所需的音频输出。然后选择的设备会获得用户权限，允许使用 {{domxref("MediaDevices.enumerateDevices()")}} 枚举该设备，并使用 {{domxref("HTMLMediaElement.setSinkId()")}} 将其设置为音频输出设备。
 
 音频设备可能会任意连接和断开。希望对此类更改做出反应的应用程序可以侦听 {{domxref("MediaDevices/devicechange_event", "devicechange")}} 事件，并使用 {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} 来确定返回的设备中是否存在 `sinkId`。这可能会触发例如暂停或恢复播放等操作。
 
@@ -23,7 +23,7 @@ l10n:
 
 ### 对接口的拓展
 
-音频输出设备 API 扩展了以下 API，添加了列出的功能：
+音频输出设备 API 扩展了以下 API，添加了列出的特性：
 
 #### MediaDevices
 
@@ -53,7 +53,7 @@ l10n:
   - 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)的限制。
   - 需要用户权限来设置非默认设备 ID。
     - 这可以通过在由 `MediaDevices.selectAudioOutput()` 启动的提示中选择来获得。
-    - 如果用户已经授予使用相同组中媒体输入设备的权限，则用户还会隐式授予设置输出设备的权限 {{domxref("MediaDevices.getUserMedia()")}}。
+    - 如果已经使用 {{domxref("MediaDevices.getUserMedia()")}} 获得了使用相同组中媒体输入设备的权限，则用户还会隐式授予对应输出设备的权限。
 
 ## 示例
 
@@ -64,7 +64,7 @@ l10n:
 ```js
 document.querySelector("#myButton").addEventListener("click", async () => {
   if (!navigator.mediaDevices.selectAudioOutput) {
-    console.log("selectAudioOutput() not supported or not in secure context.");
+    console.log("不支持 selectAudioOutput()，或不在安全上下文中。");
     return;
   }
 
