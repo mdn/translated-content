@@ -20,7 +20,7 @@ transfer(newByteLength)
 
 - `newByteLength` {{optional_inline}}
   - : 새 `ArrayBuffer`의 {{jsxref("ArrayBuffer/byteLength", "byteLength")}}입니다. 기본값은 이 `ArrayBuffer`의 `byteLength`입니다.
-    - `newByteLength`가 이 `ArrayBuffer`의 `byteLength`보다 작으면 해당 버퍼에 담지못해 "넘치는" 바이트는 삭제됩니다.
+    - `newByteLength`가 이 `ArrayBuffer`의 `byteLength`보다 작으면 해당 버퍼에 담지 못해 "넘치는" 바이트는 삭제됩니다.
     - `newByteLength`가 이 `ArrayBuffer`의 `byteLength`보다 크다면 남는 바이트는 0으로 채워집니다.
     - 이 `ArrayBuffer`의 크기를 조정할 수 있는 경우 `newByteLength`는 해당 {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}}보다 크지 않아야 합니다.
 
