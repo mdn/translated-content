@@ -442,6 +442,7 @@
 /zh-TW/docs/Web/CSS/彈頭	/zh-TW/docs/Web/CSS/box-sizing
 /zh-TW/docs/Web/CSS/繼承	/zh-TW/docs/Web/CSS/Inheritance
 /zh-TW/docs/Web/CSS/語法	/zh-TW/docs/Web/CSS/Syntax
+/zh-TW/docs/Web/Demos	/zh-TW/docs/orphaned/Web/Demos
 /zh-TW/docs/Web/Guide/AJAX	/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /zh-TW/docs/Web/Guide/AJAX/Getting_Started	/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /zh-TW/docs/Web/Guide/API/DOM/Manipulating_the_browser_history/Manipulating_the_browser_history	/zh-TW/docs/Web/API/History_API
