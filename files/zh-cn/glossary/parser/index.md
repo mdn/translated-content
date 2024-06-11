@@ -1,11 +1,11 @@
 ---
 title: 语法分析器
 slug: Glossary/Parser
-page-type: glossary-definition
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
-
 
 **语法分析器**是编译器或解释器中{{glossary("parse","解析")}}源代码文件的模块。
 
