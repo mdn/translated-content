@@ -96,8 +96,6 @@ slug: Web/HTML/Element/th
 
   - : 列中的内容与 `<th>` 元素中的字母对齐。通常其值包含一个句点（`.`）来排列数字或者货币值。如果 [`align`](/zh-CN/docs/Web/HTML/Element/th#align) 没有被设置为 `char`，这个属性就会被忽略。
 
-
-
 - `charoff` {{Deprecated_inline}}
 
   - : 这个属性用来将列数据移到 **char** 属性指定字母的右边。其值指定了移动的长度。
