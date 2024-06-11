@@ -35,4 +35,4 @@ Network\r\n
 \r\n
 ```
 
-更多信息，参见 [RFC 7230，3.3 节：消息体](https://datatracker.ietf.org/doc/html/rfc7230#section-3.3)、[RFC 7230，3.3.1 节：传输编码](https://datatracker.ietf.org/doc/html/rfc7230#section-3.3.1).
+更多信息，参见 [RFC 7230，3.3 节：消息体](https://datatracker.ietf.org/doc/html/rfc7230#section-3.3)、[RFC 7230，3.3.1 节：传输编码](https://datatracker.ietf.org/doc/html/rfc7230#section-3.3.1)。
