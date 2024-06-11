@@ -7,8 +7,7 @@ l10n:
 
 {{JSRef}}
 
-명시된 객체에 자체 속성으로 지정된 속성이 있는 경우 **`Object.hasOwn()`** 정적 메서드는 `true`를 반환합니다.
-속성이 상속되었거나 존재하지 않으면 이 메서드는 `false`를 반환합니다.
+명시된 객체에 자체 속성으로 지정된 속성이 있는 경우 **`Object.hasOwn()`** 정적 메서드는 `true`를 반환합니다. 속성이 상속되었거나 존재하지 않으면 이 메서드는 `false`를 반환합니다.
 
 > **참고:** `Object.hasOwn()`은 {{jsxref("Object.prototype.hasOwnProperty()")}}를 대체하기 위한 것입니다.
 
@@ -25,7 +24,7 @@ Object.hasOwn(obj, prop)
 - `obj`
   - : 평가할 JavaScript 객체 인스턴스
 - `prop`
-  - : {{jsxref("String")}} 이름 혹은 평가할 속성의 [Symbol](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol).
+  - : {{jsxref("String")}} 이름 혹은 테스트할 속성의 [Symbol](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol).
 
 ### 반환 값
 
@@ -33,14 +32,9 @@ Object.hasOwn(obj, prop)
 
 ## 설명
 
-명시된 속성이 값이 `null` 혹은 `undefined`일 경우일지라도 객체의 직접적인 속성인 경우 **`Object.hasOwn()`** 메서드는 `true`를 반환합니다.
-속성이 상속되었거나 전혀 선언되지 않은 경우 이 메서드는 `false`를 반환합니다.
-{{jsxref("Operators/in", "in")}} 연산자와는 달리, 이 메서드는 객체의 프로토타입 체인에서 지정된 속성을 확인하지 않습니다.
+명시된 속성이 값이 `null` 혹은 `undefined`일 경우일지라도 객체의 직접적인 속성인 경우 **`Object.hasOwn()`** 메서드는 `true`를 반환합니다. 속성이 상속되었거나 전혀 선언되지 않은 경우 이 메서드는 `false`를 반환합니다. {{jsxref("Operators/in", "in")}} 연산자와는 달리, 이 메서드는 객체의 프로토타입 체인에서 지정된 속성을 확인하지 않습니다.
 
-이 메서드는 [`null` 프로토타입 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) 및 상속된 `hasOwnProperty()` 메서드를
-재정의한 객체에 대해 작동하므로 {{jsxref("Object.prototype.hasOwnProperty()")}}보다 권장됩니다.
-외부 객체에서 `Object.prototype.hasOwnProperty()`를 호출하여 이러한 문제를 해결할 수 있지만,
-`Object.hasOwn()`을 사용하는 것이 더 직관적입니다.
+이 메서드는 [`null` 프로토타입 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) 및 상속된 `hasOwnProperty()` 메서드를 재정의한 객체에 대해 작동하므로 {{jsxref("Object.prototype.hasOwnProperty()")}}보다 권장됩니다. 외부 객체에서 `Object.prototype.hasOwnProperty()`를 호출하여 이러한 문제를 해결할 수 있지만, `Object.hasOwn()`을 사용하는 것이 더 직관적입니다.
 
 ## 예제
 
@@ -115,8 +109,7 @@ Object.hasOwn(fruits, 4); // false - not defined
 
 ### hasOwnProperty의 문제 사례
 
-이 섹션에서는 `hasOwn()`이 `hasOwnProperty`에 영향을 미치는 문제에 영향을 받지 않는다는 것을 보여줍니다.
-첫 번째로, `hasOwnProperty()`를 재구현한 객체와 함께 사용할 수 있습니다.
+이 섹션에서는 `hasOwn()`이 `hasOwnProperty`에 영향을 미치는 문제에 영향을 받지 않는다는 것을 보여줍니다. 첫 번째로, `hasOwnProperty()`를 재구현한 객체와 함께 사용할 수 있습니다.
 
 ```js
 const foo = {
@@ -131,14 +124,13 @@ if (Object.hasOwn(foo, "bar")) {
 }
 ```
 
-또한 [`null`-프로토타입 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)와 함께 사용할 수도 있습니다.
-이는 `Object.prototype`에서 상속되지 않으므로 `hasOwnProperty()`에 접근할 수 없습니다.
+또한 [`null`-프로토타입 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)와 함께 사용할 수도 있습니다. 이는 `Object.prototype`에서 상속되지 않으므로 `hasOwnProperty()`에 접근할 수 없습니다.
 
 ```js
 const foo = Object.create(null);
 foo.prop = "exists";
 if (Object.hasOwn(foo, "prop")) {
-  console.log(foo.prop); // true - works irrespective of how the object is created.
+  console.log(foo.prop); // true - 객체가 어떻게 생성되었든 작동합니다.
 }
 ```
 
