@@ -7,9 +7,9 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-静态 **`import`** 声明用于导入由另一个模块导出的只读实时{{Glossary("binding", "绑定")}}。导入的绑定被称为*实时绑定*，因为它们会由导出绑定的模块更新，但导入模块不能重新赋值。
+静态 **`import`** 声明用于导入由另一个模块导出的只读动态（live）{{Glossary("binding", "绑定")}}。导入的绑定被称为*动态绑定*，因为它们会由导出绑定的模块更新，但导入模块不能重新赋值。
 
-为了在源文件中使用 `import` 声明，该文件必须被运行时解释为一个[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)。在 HTML 中，这可以通过在 {{HTMLElement("script")}} 标签中添加 `type="module"` 来实现。模块会自动以[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)解释。
+要在源文件中使用 `import` 声明，该文件必须被运行时解释为[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)。在 HTML 中，这可以通过在 {{HTMLElement("script")}} 标签中添加 `type="module"` 来实现。模块会自动以[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)解释。
 
 此外，还有一个类似函数的动态 [`import()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)，它不需要依赖 `type="module"` 的 script 标签。
 
@@ -42,7 +42,7 @@ import "module-name";
 
 ## 描述
 
-`import` 声明只能出现在模块中，并且只能在顶级作用域（即不能在块、函数等内部）。如果在非模块上下文中遇到 `import` 声明（例如，没有 `type="module"` 的 `<script>` 标签、`eval`、`new Function`，这些都有"脚本"或"函数体"作为解析目标），则会抛出 `SyntaxError`。要在非模块上下文中加载模块，请改用[动态导入](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)语法。
+`import` 声明只能出现在模块中，并且只能在顶级作用域中（即不能在块、函数等内部）。如果在非模块上下文中遇到 `import` 声明（例如，没有 `type="module"` 的 `<script>` 标签、`eval`、`new Function`，这些都有“脚本”或“函数体”作为解析目标），则会抛出 `SyntaxError`。要在非模块上下文中加载模块，请改用[动态导入](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)语法。
 
 所有导入的绑定不能与任何其他声明在同一个作用域中，包括 {{jsxref("Statements/let", "let")}}、{{jsxref("Statements/const", "const")}}、{{jsxref("Statements/class", "class")}}、{{jsxref("Statements/function", "function")}}、{{jsxref("Statements/var", "var")}}，以及 `import` 声明。
 
@@ -52,10 +52,10 @@ import "module-name";
 
 `import` 声明有四种形式：
 
-- [具名导入](#具名导入): `import { export1, export2 } from "module-name";`
-- [默认导入](#默认导入): `import defaultExport from "module-name";`
-- [命名空间导入](#命名空间导入): `import * as name from "module-name";`
-- [副作用导入](#仅为了其副作用而导入模块): `import "module-name";`
+- [具名导入](#具名导入)：`import { export1, export2 } from "module-name";`
+- [默认导入](#默认导入)：`import defaultExport from "module-name";`
+- [命名空间导入](#命名空间导入)：`import * as name from "module-name";`
+- [副作用导入](#仅为了其副作用而导入模块)：`import "module-name";`
 
 下面是阐明语法的示例。
 
@@ -196,7 +196,7 @@ console.log(getPrimes(10)); // [2, 3, 5, 7]
 
 ### 导入的值只能由导出者修改
 
-被导入的标识符是一个*实时绑定*，因为它可能由导出它的模块重新赋值。但是，导入它的模块不能重新赋值。即使导出了一个对象的模块也可能对其进行修改，并会影响到所有导入该值的模块。
+被导入的标识符是一个*动态绑定*，因为它可能由导出它的模块重新赋值。但是，导入它的模块不能重新赋值。然而，任何拥有导出对象的模块都可修改该对象，并会影响到所有导入该值的模块。
 
 你也可以通过[模块命名空间对象](/zh-CN/docs/Web/JavaScript/Reference/Operators/import#模块命名空间对象)观察到新的值。
 
@@ -219,7 +219,7 @@ setTimeout(() => {
   console.log(myValue); // 2；my-module 更新了它的值
   console.log(myModule.myValue); // 2
   myValue = 3; // TypeError: Assignment to constant variable.
-  // 导入模块只能读取该值但不能重新分配它。
+  // 导入模块只能读取该值但不能重新对它赋值。
 }, 1000);
 ```
 
