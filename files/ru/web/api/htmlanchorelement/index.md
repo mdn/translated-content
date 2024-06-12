@@ -2,7 +2,7 @@
 title: HTMLAnchorElement
 slug: Web/API/HTMLAnchorElement
 l10n:
-  sourceCommit: e794475c46f2dae26b3135ea70cb450259253ddf
+  sourceCommit: ba5f28ab10ef1af48a55f363c8facc04a1f94479
 ---
 
 {{APIRef("HTML DOM")}}
