@@ -23,4 +23,3 @@ l10n:
 - {{domxref("ShadowRoot")}}
 - {{HTMLElement("slot")}}
 - {{Glossary("accessibility_tree", "无障碍树")}}
-  
