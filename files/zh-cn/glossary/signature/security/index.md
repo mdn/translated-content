@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**签名**（*数字签名*）是一种指代消息正确性的{{glossary("protocol","协议")}}。
+**签名**（_数字签名_）是一种指代消息正确性的{{glossary("protocol","协议")}}。
 
 从给定消息的{{glossary("hash", "哈希")}}，**签名过程**首先使用实体的私有{{glossary("key", "密钥")}}生成链接到签名实体的数字签名。
 
