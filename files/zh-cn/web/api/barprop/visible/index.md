@@ -11,9 +11,6 @@ l10n:
 
 ## 值
 
-A {{jsxref("Boolean")}}, which is true if the top-level window is opened by
-{{domxref("window.open")}} with the {{domxref("window.open", "requesting a popup window", "popup_feature", 1)}}.
-
 一个 {{jsxref("Boolean")}}，如果顶层窗口是用 {{domxref("window.open", "弹出窗口", "窗口特征", 1)}} 被 {{domxref("window.open")}} 打开的，则为 `true`。
 
 > **备注：** 历史上，这个接口元素被用来表示是否可见，但由于隐私原因，不再表示每个接口元素实际的可见性。
