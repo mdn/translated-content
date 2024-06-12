@@ -31,7 +31,7 @@ l10n:
 
 ## 示例
 
-下面的示例在控制台输出一个 `BarProp` 对象表示 location bar。
+下面的示例在控制台输出一个表示地址栏的 `BarProp` 对象。
 
 ```js
 console.log(window.locationbar);
