@@ -2,7 +2,7 @@
 title: 处理常见的 JavaScript 问题
 slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: e8d495591fefeb3c0c484b989cc155b84b50bb57
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
