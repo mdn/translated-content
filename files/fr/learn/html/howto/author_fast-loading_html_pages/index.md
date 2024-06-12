@@ -3,7 +3,7 @@ title: Astuces de création de pages HTML à affichage rapide
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
+{{QuickLinksWithSubpages("/fr/docs/Learn/HTML/Howto")}}
 
 C'est connu, les internautes sont de grands impatients, ils veulent des résultats immédiats, avec des gros titres et des réponses courtes et efficaces.
 Une page web optimisé prévoit non seulement un site plus réactif, mais aussi de réduire la charge sur vos serveurs Web et votre connexion Internet. Cela peut être crucial pour les gros sites ou des sites qui ont un pic de trafic dans des circonstances exceptionnelles (telles que les Unes des journaux fracassantes). De plus, Google en tient compte pour son classement.
