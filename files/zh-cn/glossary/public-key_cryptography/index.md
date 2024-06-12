@@ -2,7 +2,7 @@
 title: 非对称密钥密码
 slug: Glossary/Public-key_cryptography
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: aabd56c814d580e577199239fb27e54cc168cf55
 ---
 
 {{GlossarySidebar}}
@@ -15,11 +15,14 @@ l10n:
 
 因此，常见的做法是使用对称算法加密消息，然后使用公钥系统加密对称密钥。这种安排可以结合两种系统的优点。
 
-常用的公钥密码系统有 RSA（用于签名和加密）、DSA（用于签名）和 Diffie-Hellman（用于密钥协商）。
+常用的公钥密码系统有 RSA（用于签名和加密）、DSA（用于签名）和 Diffie-Hellman（用于密钥协商）。流行的椭圆曲线算法包括[椭圆曲线 Diffie-Hellman 密钥交换](https://zh.wikipedia.org/wiki/橢圓曲線迪菲-赫爾曼金鑰交換)（**ECDH**）和[椭圆曲线数字签名算法](https://zh.wikipedia.org/wiki/椭圆曲线数字签名算法)（**ECDSA**）。
 
 ## 参见
 
 - [Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API)
+- [SubtleCrypto 支持的算法](/zh-CN/docs/Web/API/SubtleCrypto#支持的算法)
 - [MDN Web 文档术语](/zh-CN/docs/Glossary)
 
   - {{Glossary("Symmetric-key cryptography", "对称密钥密码")}}
+
+- 维基百科上的[公钥密码学](https://zh.wikipedia.org/wiki/公开密钥加密)
