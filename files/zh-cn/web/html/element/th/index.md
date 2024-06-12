@@ -1,8 +1,6 @@
 ---
 title: <th>
 slug: Web/HTML/Element/th
-l10n:
-  sourceCommit: aa55b6b6768e0250b52703f26d44ea3291f725f3
 ---
 
 {{HTMLSidebar}}
@@ -38,55 +36,22 @@ l10n:
 
 以下属性已被弃用，不应使用。下面记录它们是为了在更新现有代码时提供参考，并供参考历史。
 
-- `align` {{Deprecated_Inline}}
-
-  - : 这个枚举属性指定单元格内容的水平对齐方式。可能的值有：
-
-    - `left`: 单元格内容左对齐
-    - `center`: 单元格内容居中
-    - `right`: 单元格内容右对齐
-    - `justify` (仅文字内容): 内容拉伸以覆盖单元格
-    - `char` (仅文字内容): 内容相对`<th>`标签中的某个字符对齐（默认值是页面语言的小数点字符）。该字符由 [`char`](#char) 和 [`charoff`](#charoff) 属性定义。对齐方式的默认值是 `left`。
-
-    > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。
-    >
-    > - `left`、`center`、`right` 或 `justify` 这些对齐效果，应该使用 CSS 的 {{cssxref("text-align")}} 来实现。
-    > - `char` 的对齐效果使用 CSS 的 {{cssxref("text-align")}} 实现，[`char`](#char) 亦同。
-
-- `axis` {{Deprecated_Inline}}
-
-  - : 这个属性包含了一个空间分隔的字符串的列表。每个字符串是一组单元格的 ID，而该表头适用于这个 ID。
-
-    > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。应该使用 [`scope`](#scope) 属性代替。
-
-- `bgcolor` {{Deprecated_inline}}
-
-  - : 定义表头单元格的背景色。其值为 HTML 颜色；可以是带有“#”前缀的 [6 位十六进制的 RGB 代码](/zh-CN/docs/Web/CSS/hex-color)或[颜色关键字](/zh-CN/docs/Web/CSS/named-color)。不知其其他的 CSS {{cssxref("color_value", "&lt;color&gt")}} 值。该属性已弃用，请使用 CSS {{cssxref("background-color")}} 属性代替。
-
-- `char` {{Deprecated_inline}}
-
-  - : 列中的内容与 `<th>` 元素中的字母对齐。通常其值包含一个句点（`.`）来排列数字或者货币值。如果 [`align`](#align) 没有被设置为 `char`，这个属性就会被忽略。
-
-- `charoff` {{Deprecated_inline}}
-
-  - : 这个属性用来将列数据移到 **char** 属性指定字母的右边。其值指定了移动的长度。
-
-    > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。
-
-- `valign` {{Deprecated_inline}}
-
-  - : 这个属性指定了单元格内文本的垂直对齐方式。这个属性可能有以下值：
-
-    - `baseline`: 将文本置于单元格底部并将其与字母的[baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29)对齐而不是与底部。若字母没有 `baseline` 以下的部分（即为无[降部](https://www.wikiwand.com/zh/%E9%99%8D%E9%83%A8)）那么 `baseline` 值起到的效果便和 `bottom` 相同。
-    - `bottom`: 将文本置于底部。
-    - `middle`: 将文本置于单元格中央。
-    - `top`: 将文本置于单元格顶部。
-
-    > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。使用 CSS {{cssxref("vertical-align")}}特性代替。
-
-- `width` {{Deprecated_inline}}
-
-  - : 定义一个建议的标题单元格宽度。该属性已弃用，请使用 CSS {{cssxref("width")}} 属性代替。
+- `align` {{deprecated_inline}}
+  - : 指定单元格内容的水平对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有：`left`、`center`、`right`、`justify`、`char`。在受支持的情况下，`char` 值可以让文本内容根据 [`char`](#char) 属性中指定的字符以及 [`charoff`](#charoff) 属性指定的偏移量进行对齐。该属性已弃用，请使用 CSS {{cssxref("text-align")}} 属性代替。
+- `axis` {{deprecated_inline}}
+  - : 包含一个空格分隔的字符串列表。每个字符串对应一组该表头适用的单元格的 `id` 属性。该属性以弃用，请使用 [`scope`](#scope) 属性代替。
+- `bgcolor` {{deprecated_inline}}
+  - : 定义表头单元格的背景色。其值为 HTML 颜色；可以是带有“#”前缀的 [6 位十六进制的 RGB 代码](/zh-CN/docs/Web/CSS/hex-color)或[颜色关键字](/zh-CN/docs/Web/CSS/named-color)。不支持其他的 CSS {{cssxref("color_value", "&lt;color&gt")}} 值。该属性已弃用，请使用 CSS {{cssxref("background-color")}} 属性代替。
+- `char` {{deprecated_inline}}
+  - : 无任何行为。它最初用于将内容与表头单元格的指定字符对齐。当尝试对齐数字或货币值时，其值通常包含一个句点（`.`）。如果 [`align`](#align) 属性没有设置为 `char`，则此属性将被忽略。
+- `charoff` {{deprecated_inline}}
+  - : 无任何行为。它最初用于指定表头单元格内容与 [`char`](#char) 属性指定的字符之间的偏移量。
+- `height` {{deprecated_inline}}
+  - : 定义建议的表头单元格高度。该属性已弃用，请使用 CSS {{cssxref("height")}} 属性代替。
+- `valign` {{deprecated_inline}}
+  - : 指定表头单元格内文本的垂直对齐方式。可能的{{Glossary("enumerated", "枚举值")}}有：`baseline`、`bottom`、`middle` 和 d `top`。该属性已弃用，请使用 CSS {{cssxref("vertical-align")}} 属性代替。
+- `width` {{deprecated_inline}}
+  - : 定义建议的表头单元格宽度。该属性已弃用，请使用 CSS {{cssxref("width")}} 属性代替。
 
 ## 使用说明
 
