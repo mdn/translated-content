@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref('Document Object Model', '文档对象模型')}} 的 **`BarProp`** 接口表示 Web 浏览器用户界面向 web 页面公开的脚本，以下每个接口元素都由一个 `BarProp` 对象表示。
+{{domxref('Document Object Model', '文档对象模型', '', 1)}}的 **`BarProp`** 接口表示 Web 浏览器用户界面向 web 页面公开的脚本，以下每个接口元素都由一个 `BarProp` 对象表示。
 
 - {{domxref("Window.locationbar")}}
   - : 浏览器的 location bar。
