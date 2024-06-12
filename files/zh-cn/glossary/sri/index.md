@@ -1,0 +1,14 @@
+---
+title: SRI
+slug: Glossary/SRI
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+---
+
+{{GlossarySidebar}}
+
+**子资源完整性**（Subresource Integrity，SRI）是一项安全功能，使浏览器能够验证它们获取的文件（比如来自 {{Glossary("CDN")}} 的文件）是否未经意外篡改。它通过允许您提供一个获取的文件必须匹配的加密哈希来工作。
+
+## 参见
+
+- [子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)
