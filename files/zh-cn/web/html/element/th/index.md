@@ -56,7 +56,7 @@ slug: Web/HTML/Element/th
   - : 这个枚举属性定义了表头元素 (在{{HTMLElement("th")}}中定义) 关联的单元格。它可能有以下值：
     - `row`: 表头关联一行中所有的单元格。
     - `col`: 表头关联一列中所有的单元格。
-    - `rowgroup`:表头属于一个行组并与其中所有单元格相关联。这些单元格可以被放在表头的左侧或右侧，取决于 {{HTMLElement("table")}} 元素中 [`dir`](/zh-CN/docs/Web/HTML/Global_attributes/dir) 属性的值。
+    - `rowgroup`: 表头属于一个行组并与其中所有单元格相关联。这些单元格可以被放在表头的左侧或右侧，取决于 {{HTMLElement("table")}} 元素中 [`dir`](/zh-CN/docs/Web/HTML/Global_attributes/dir) 属性的值。
     - `colgroup`: 表头属于一个列组并与其中所有单元格相关联。
     - `auto`
   - : 如果未指定 scope 属性，或其值不是 row、col、rowgroup 或 colgroup，则浏览器会自动选择标题单元格适用的单元格集。
