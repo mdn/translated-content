@@ -13,4 +13,4 @@ JavaScript 的正常、非严格模式有时被称为**正常模式**。这不�
 
 ## 参见
 
-- [“严格模式”](http://speakingjs.com/es5/ch07.html#strict_mode)，《Speaking *JavaScript*》 的第七章（“JavaScript 语法”）
+- [“严格模式”](http://speakingjs.com/es5/ch07.html#strict_mode)，《Speaking _JavaScript_》的第七章（“JavaScript 语法”）
