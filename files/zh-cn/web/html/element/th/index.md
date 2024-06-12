@@ -59,7 +59,7 @@ slug: Web/HTML/Element/th
     - `rowgroup`:表头属于一个行组并与其中所有单元格相关联。这些单元格可以被放在表头的左侧或右侧，取决于 {{HTMLElement("table")}} 元素中 [`dir`](/zh-CN/docs/Web/HTML/Global_attributes/dir) 属性的值。
     - `colgroup`: 表头属于一个列组并与其中所有单元格相关联。
     - `auto`
-  - : 如果未指定 scope 属性，或其值不是 row，col，rowgroup 或 colgroup，则浏览器会自动选择标题单元格适用的单元格集。
+  - : 如果未指定 scope 属性，或其值不是 row、col、rowgroup 或 colgroup，则浏览器会自动选择标题单元格适用的单元格集。
 
 ### 已弃用的属性
 
