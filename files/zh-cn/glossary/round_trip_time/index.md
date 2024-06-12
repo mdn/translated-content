@@ -1,7 +1,8 @@
 ---
 title: 来回通信延迟（RTT）
 slug: Glossary/Round_Trip_Time
-page-type: glossary-definition
+l10n:
+  sourceCommit: 6b01400b286e8bdfa7060d56af84757dd4b8de48
 ---
 
 {{GlossarySidebar}}
