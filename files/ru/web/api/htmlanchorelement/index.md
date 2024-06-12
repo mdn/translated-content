@@ -15,6 +15,8 @@ l10n:
 
 _Наследует свойства своего родителя {{domxref("HTMLElement")}}._
 
+- {{domxref("HTMLAnchorElement.attributionSrc")}} {{securecontext_inline}} {{experimental_inline}}
+  - : Позволяет читать и устанавливать HTML-атрибут [`attributionsrc`](/ru/docs/Web/HTML/Element/a#attributionsrc) элемента {{htmlelement("a")}}. Данный атрибут указывает браузеру добавить заголовок {{httpheader("Attribution-Reporting-Eligible")}} при переходе по гиперссылке. На сервере наличие данного заголовка интерпретируется как разрешение на установку заголовка {{httpheader("Attribution-Reporting-Register-Source")}} в ответе и регистрации источника атрибуции.
 - {{domxref("HTMLAnchorElement.download")}}
   - : Строка, указывающая, что связанный ресурс предназначен для загрузки, а не для отображения в браузере. Значение представляет предлагаемое имя файла. Если оно не является допустимым именем файла в используемой ОС, браузер преобразует его.
 - {{domxref("HTMLAnchorElement.hash")}}
