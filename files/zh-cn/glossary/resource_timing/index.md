@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-诊断性能问题需要资源级别的性能数据。[资源计时 API](/zh-cn/docs/Web/API/Performance_API/Resource_timing) 是一个 JavaScript API，能够捕获在加载页面时获取的每个资源的时间信息。
+诊断性能问题需要资源级别的性能数据。[资源计时 API](/zh-CN/docs/Web/API/Performance_API/Resource_timing) 是一个 JavaScript API，能够捕获在加载页面时获取的每个资源的时间信息。
 
 ## 参见
 
