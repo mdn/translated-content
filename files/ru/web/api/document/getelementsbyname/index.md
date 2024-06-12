@@ -45,7 +45,7 @@ The returned {{domxref("NodeList")}} Collection contains _all_ elements with the
 
 > **Предупреждение:** Both IE and Edge return an {{domxref("HTMLCollection")}}, not a {{domxref("NodeList")}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

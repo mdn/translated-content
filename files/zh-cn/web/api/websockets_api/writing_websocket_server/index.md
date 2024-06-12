@@ -3,6 +3,8 @@ title: 用 C＃来编写 WebSocket 服务器
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
 ---
 
+{{DefaultAPISidebar("WebSockets API")}}
+
 ## 介绍
 
 如果你想学习如何使用 WebSocket API，那么有一台服务器将会是非常有用的。在本文中，我将向你展示如何使用 C#来写后端。你可以使用任何可用于后端开发的语言来做这个事，但是，要为了使例子简明易懂，我选择微软的 C#。

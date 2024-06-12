@@ -3,7 +3,7 @@ title: "FontFace: display プロパティ"
 short-title: display
 slug: Web/API/FontFace/display
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("CSS Font Loading API")}}

@@ -3,6 +3,8 @@ title: 使用 Web Speech API
 slug: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 ---
 
+{{DefaultAPISidebar("Web Speech API")}}
+
 Web Speech API 提供了两类不同方向的函数——语音识别和语音合成 (也被称为文本转为语音，英语简写是 tts)——开启了有趣的新可用性和控制机制。这篇文章提供了这两个方向的简单介绍，并且都带有例子。
 
 ## Speech recognition

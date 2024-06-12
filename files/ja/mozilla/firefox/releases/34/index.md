@@ -3,6 +3,8 @@ title: Firefox 34 for developers
 slug: Mozilla/Firefox/Releases/34
 ---
 
+{{FirefoxSidebar}}
+
 Gecko 34 を搭載した Firefox 34 は、米国時間 2014 年 12 月 1 日にリリースされました。このページでは、開発者に影響する Firefox 34 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -58,7 +60,7 @@ _変更なし。_
 - [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)で、ES6 の仕様に応じて[オブジェクトリテラルでの重複したプロパティ名](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#重複したプロパティ名)に対して `SyntaxError` が発生しないようになりました ([Firefox バグ 1041128](https://bugzil.la/1041128))。
 - 正規表現において (`String.replace` を含む)、量指定子が妨げたために捕獲式集合が調査されなかったときのマッチ文字列が、空文字列から `undefined` に変わりました ([Firefox バグ 369778](https://bugzil.la/369778) および[サンプルコード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#firefox_固有の注意事項)を参照)。ウェブ互換性のため、RegExp.$N は引き続き空文字列を返します ([Firefox バグ 1053944](https://bugzil.la/1053944))。
 - [分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)で、ES6 の [Spread Operator](/ja/docs/Web/JavaScript/Reference/Operators/Spread_operator)をサポートしました ([Firefox バグ 933276](https://bugzil.la/933276))。
-- [分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)で、配列のような手順に代わりイテレータの手順を使用するようになりました ([Firefox バグ 933276](https://bugzil.la/933276))。
+- [分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)で、配列のような手順に代わりイテレーターの手順を使用するようになりました ([Firefox バグ 933276](https://bugzil.la/933276))。
 - {{jsxref("Proxy.revocable()")}} を実装しました ([Firefox バグ 978279](https://bugzil.la/978279))。
 
 ### インターフェイス/API/DOM

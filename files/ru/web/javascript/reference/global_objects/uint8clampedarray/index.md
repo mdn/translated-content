@@ -134,7 +134,7 @@ var buffer = new ArrayBuffer(8);
 var z = new Uint8ClampedArray(buffer, 1, 4);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

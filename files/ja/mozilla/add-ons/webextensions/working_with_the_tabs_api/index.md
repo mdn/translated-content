@@ -130,7 +130,7 @@ tabs.html では拡張機能のポップアップのコンテンツを定義し�
 
 #### ポップアップの作成
 
-まず、tabs.html が読み込まれたとき、`listTabs()` を実行するイベントハンドラを追加します。:
+まず、tabs.html が読み込まれたとき、`listTabs()` を実行するイベントハンドラーを追加します。:
 
 ```js
 document.addEventListener("DOMContentLoaded", listTabs);

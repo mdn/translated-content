@@ -1,11 +1,13 @@
 ---
 title: FileSystemDirectoryHandle
 slug: Web/API/FileSystemDirectoryHandle
+l10n:
+  sourceCommit: be3c45cd7a4d5c04139eceae10f7368251cdca64
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
-{{domxref("File System API", "File System API", "", "nocode")}} 的 **`FileSystemDirectoryHandle`** 接口提供指向一个文件系统目录的句柄。
+{{domxref("File System API", "文件系统 API", "", "nocode")}} 的 **`FileSystemDirectoryHandle`** 接口提供指向一个文件系统目录的句柄。
 
 这个接口可以通过 {{domxref('window.showDirectoryPicker()')}}、{{domxref('StorageManager.getDirectory()')}}、{{domxref('DataTransferItem.getAsFileSystemHandle()')}} 和 {{domxref('FileSystemDirectoryHandle.getDirectoryHandle()')}} 这些方法访问。
 
@@ -22,9 +24,9 @@ _从父接口 {{DOMxRef("FileSystemHandle")}} 继承方法。_
 常规方法：
 
 - {{domxref('FileSystemDirectoryHandle.getDirectoryHandle()')}}
-  - : 返回一个 {{jsxref('Promise')}}，会兑现一个调用此方法的目录句柄内指定名称的子目录的 {{domxref('FileSystemDirectoryHandle')}}。
+  - : 返回一个 {{jsxref('Promise')}}，会兑现一个调用此方法的目录句柄内指定名称的子目录的 `FileSystemDirectoryHandle`。
 - {{domxref('FileSystemDirectoryHandle.getFileHandle()')}}
-  - : 返回一个 {{jsxref('Promise')}}，会兑现一个调用此方法的目录句柄内指定名称的文件的 `FileSystemFileHandle`。
+  - : 返回一个 {{jsxref('Promise')}}，会兑现一个调用此方法的目录句柄内指定名称的文件的 {{domxref('FileSystemFileHandle')}}。
 - {{domxref('FileSystemDirectoryHandle.removeEntry()')}}
   - : 如果目录句柄包含一个名为指定名称的文件或目录，则尝试异步将其移除。
 - {{domxref('FileSystemDirectoryHandle.resolve()')}}
@@ -33,13 +35,13 @@ _从父接口 {{DOMxRef("FileSystemHandle")}} 继承方法。_
 [异步迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)方法：
 
 - {{domxref('FileSystemDirectoryHandle.entries()')}}
-  - : 返回一个新的迭代 `FileSystemDirectoryHandle` 对象内每个条目的键值对的异步迭代器。
+  - : 返回给定对象自己的可枚举属性的 `[key, value]` 对的新*异步迭代器*。
 - {{domxref('FileSystemDirectoryHandle.keys()')}}
   - : 返回一个新的迭代 `FileSystemDirectoryHandle` 对象内每个条目的键的异步迭代器。
 - {{domxref('FileSystemDirectoryHandle.values()')}}
   - : 返回一个新的迭代 `FileSystemDirectoryHandle` 对象内每个条目的句柄的异步迭代器。
-- [`FileSystemDirectoryHandle[@@asyncIterator]()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries)
-  - : 默认情况下返回 `entries` 函数。
+- `FileSystemDirectoryHandle[@@asyncIterator]()`
+  - : 返回给定对象自己的可枚举属性的 `[key, value]` 对的新*异步迭代器*。
 
 ## 示例
 
@@ -50,7 +52,7 @@ _从父接口 {{DOMxRef("FileSystemHandle")}} 继承方法。_
 ```js
 const dirName = "directoryToGetName";
 
-// 假设我们有一个目录句柄：'currentDirHandle'
+// 假设我们有一个目录句柄：“currentDirHandle”
 const subDir = currentDirHandle.getDirectoryHandle(dirName, { create: true });
 ```
 
@@ -117,4 +119,4 @@ for await (const fileHandle of getFilesRecursively(directoryHandle)) {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/articles/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

@@ -128,7 +128,7 @@ This gives the following result:
 
 {{EmbedLiveSample("Extra_space_distributed_between_and_around_ruby_element", 180, 40)}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

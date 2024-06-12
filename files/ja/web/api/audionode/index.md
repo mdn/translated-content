@@ -2,7 +2,7 @@
 title: AudioNode
 slug: Web/API/AudioNode
 l10n:
-  sourceCommit: 2dcdd384a37334e159391f5b0c1617fa2e35ed45
+  sourceCommit: 10b342385644e822d123694ad3bc8c2ca9abb2dc
 ---
 
 {{APIRef("Web Audio API")}}
@@ -86,7 +86,7 @@ analyserNode.smoothingTimeConstant = 0.5;
 
 コンストラクターを使うのも、ファクトリーメソッドを使うのも、両方を混ぜて使うのも自由です。ただし、コンストラクターを使うと以下の利点があります。
 
-- すべてのパラメーターを生成時に設定でき、個別に設定する必要がありません。
+- すべての引数を生成時に設定でき、個別に設定する必要がありません。
 - [音声ノードのサブクラスを作成](https://github.com/WebAudio/web-audio-api/issues/251)することができます。実際の処理はブラウザーの内部で行われ、変更できませんが、音声ノードのラッパーを書くことで独自のプロパティやメソッドを提供できます。
 - パフォーマンスが若干良いです。Chrome においても Firefox においても、ファクトリーメソッドは内部でコンストラクターを呼びます。
 
@@ -94,7 +94,7 @@ _歴史の概要_: ウェブオーディオの仕様の最初のバージョン�
 
 ## 例
 
-このシンプルなコード断片は、音声ノードをいくつか生成し、`AudioNode` のプロパティやメソッドの使い方を示しています。このような使用法の例は、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) のランディングページからリンクされている例 (たとえば [Violent Theremin](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin)) のどれでも見ることができます。
+このシンプルなコード断片は、音声ノードをいくつか生成し、`AudioNode` のプロパティやメソッドの使い方を示しています。このような使用法の例は、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) のランディングページからリンクされている例 (たとえば [Violent Theremin](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin)) のどれでも見ることができます。
 
 ```js
 const audioCtx = new AudioContext();
@@ -120,4 +120,4 @@ oscillator.channelCount;
 
 ## 関連情報
 
-- [Web Audio API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

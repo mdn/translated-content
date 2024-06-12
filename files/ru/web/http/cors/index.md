@@ -484,7 +484,7 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 
 Examples of this usage can be [found above](#Preflighted_requests).
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

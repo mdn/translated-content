@@ -32,7 +32,7 @@ Animation.playState = newState;
 
 ## 实例
 
-在[Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)这个例子中，玩家们可以凭[Alice crying into a pool of tears](http://codepen.io/rachelnabors/pen/EPJdJx?editors=0010)结束游戏。出于性能原因，游戏里，眼泪只当可见之时才能运动。因此，这些泪滴必须在下面的情况下刚好暂停运动：
+在[Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)这个例子中，玩家们可以凭[Alice crying into a pool of tears](https://codepen.io/rachelnabors/pen/EPJdJx?editors=0010)结束游戏。出于性能原因，游戏里，眼泪只当可见之时才能运动。因此，这些泪滴必须在下面的情况下刚好暂停运动：
 
 ```js
 // 创建泪珠动画

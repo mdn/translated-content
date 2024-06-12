@@ -211,7 +211,7 @@ Note, however, that this is not standard and will not have an effect on other br
 </form>
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

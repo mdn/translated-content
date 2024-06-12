@@ -57,7 +57,7 @@ Se você conhece uma boa demonstração ou aplicação da tecnologia web aberta,
 ## CSS
 
 - [CSS Zen Garden](http://www.csszengarden.com/)
-- [CSS floating logo "mozilla"](http://codepen.io/SoftwareRVG/pen/OXkOWj/)
+- [CSS floating logo "mozilla"](https://codepen.io/SoftwareRVG/pen/OXkOWj/)
 - [Paperfold](http://felixniklas.com/paperfold/)
 - [CSS Blockout](http://ondras.github.io/blockout/)
 - [Rubik's cube](http://ondras.zarovi.cz/demos/rubik/)

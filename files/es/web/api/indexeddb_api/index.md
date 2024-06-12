@@ -3,7 +3,7 @@ title: IndexedDB
 slug: Web/API/IndexedDB_API
 ---
 
-{{ SeeCompatTable() }}
+{{DefaultAPISidebar("IndexedDB")}}{{ SeeCompatTable() }}
 
 IndexedDB es una API de bajo nivel que ofrece almacenamiento en el cliente de cantidades significativas de datos estructurados, incluyendo archivos y blobs. Para búsquedas de alto rendimiento en esos datos usa índices. Mientras [DOM Storage](/es/docs/DOM/Storage) es útil para el almacenamiento de pequeñas cantidades de datos, no es útil para almacenar grandes cantidades de datos estructurados. IndexedDB proporciona una solución.
 
@@ -55,7 +55,7 @@ Un claro ejemplo para lo que IndexedDB puede ser utilizado en la web, es el ejem
 - [Almacenando imágenes y archivos en IndexedDB](http://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
 - [Una lista simple de PENDIENTES usando HTML5 IndexedDB](http://www.html5rocks.com/tutorials/indexeddb/todo/). Nota("Este tutorial está basado en una antigua versión de la especificación y no funciona en los navegadores actualizados. por ejemplo, todavía usa el método actualmente eliminado `setVersion()`.")
 - [Especificación de la API para Indexed Database](http://www.w3.org/TR/IndexedDB/)
-- [IndexedDB — El alamcén en su navegador](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
+- [IndexedDB — El almacén en su navegador](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
 - [Soporte IndexedDB en navegadores](http://caniuse.com/indexeddb)
 - [Ejemplos IndexedDB](http://nparashuram.com/IndexedDB/trialtool/index.html)
 - [IndexedDB Polyfill](https://github.com/axemclion/IndexedDBShim) para navegadores que sólo soportan WebSQL (p.e. mobile WebKit)

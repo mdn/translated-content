@@ -61,7 +61,7 @@ p {
 }
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

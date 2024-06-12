@@ -2,13 +2,12 @@
 title: console
 slug: Web/API/console
 l10n:
-  sourceCommit: 7d44ce9ab391c7f52bd6b7fbc39576abbe52c2d5
+  sourceCommit: 2ceee44bc3cc48e2a005734761a1abed7abdf57b
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
-**`console`** オブジェクトは、ブラウザーのデバッグコンソール（例えば Firefox の[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)）へのアクセスを提供します。
-このオブジェクトの詳細な動作はブラウザーによって異なりますが、*一般的に共通の*機能セットが提供されています。
+**`console`** オブジェクトは、ブラウザーのデバッグコンソール（例えば Firefox の[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)）へのアクセスを提供します。このオブジェクトの詳細な動作はブラウザーによって異なりますが、一般的に共通の機能セットが提供されています。
 
 `console` オブジェクトには任意のグローバルオブジェクトからアクセスできます。閲覧スコープの {{domxref("Window")}} や、特定の種類のワーカーを表す {{domxref("WorkerGlobalScope")}} の console プロパティを通してアクセスできます。これは {{domxref("Window.console")}} として公開されていますが、単に `console` として参照できます。
 
@@ -18,64 +17,67 @@ console.log("Failed to open the specified link");
 
 このページでは、 `console` オブジェクトで使用できる[メソッド](#メソッド)やいくらかの[使用例](#使用例)を提供します。
 
-{{AvailableInWorkers}}
+> **メモ:** 一部のオンライン IDE やエディターでは、コンソール API の実装がブラウザーと異なる場合があります。その結果、コンソール API の特定の機能（タイマーメソッドなど）がオンライン IDE やエディターのコンソールに出力されないことがあります。このドキュメント内のようにログを表示させるためには、常にブラウザーの開発者ツールコンソールを開いてください。
 
 ## メソッド
 
-- {{domxref("console.assert()")}}
-  - : 第 1 引数が `false` であれば、メッセージとスタックトレースをコンソールに出力します。
-- {{domxref("console.clear()")}}
+- {{domxref("console/assert_static", "console.assert()")}}
+  - : 第 1 引数が `false` であれば、エラーメッセージをコンソールに出力します。
+- {{domxref("console/clear_static", "console.clear()")}}
   - : コンソールをクリアします。
-- {{domxref("console.count()")}}
+- {{domxref("console/count_static", "console.count()")}}
   - : 指定されたラベルでこの行が呼び出された回数をログ出力します。
-- {{domxref("console.countReset()")}}
+- {{domxref("console/countReset_static", "console.countReset()")}}
   - : 指定されたラベルのカウンターの値をリセットします。
-- {{domxref("console.debug()")}}
+- {{domxref("console/debug_static", "console.debug()")}}
   - : ログレベルが `debug` のコンソールへメッセージを出力します。
-- {{domxref("console.dir()")}}
+- {{domxref("console/dir_static", "console.dir()")}}
   - : 指定した JavaScript オブジェクトのプロパティの、対話型リストを表示します。このリスト内の三角印をクリックすると、子オブジェクトの内容を調査して表示させることができます。
-- {{domxref("console.dirxml()")}}
+- {{domxref("console/dirxml_static", "console.dirxml()")}}
   - : 指定したオブジェクトを XML/HTML 要素で表現したものを表示します。表現できない場合は、JavaScript オブジェクトビューを表示します。
-- {{domxref("console.error()")}}
+- {{domxref("console/error_static", "console.error()")}}
   - : エラーメッセージを出力します。このメソッドでは、[文字列置換](#文字列置換の使用)および追加の引数を使用することができます。
 - `console.exception()` {{Non-standard_inline}} {{deprecated_inline}}
-  - : `error()` の別名です。
-- {{domxref("console.group()")}}
-  - : 新たなインライン[グループ](#コンソールでのグループの使用)を作成し、以降のすべての出力を別なレベルに字下げします。レベルを戻すには、`groupEnd()` を呼び出します。
-- {{domxref("console.groupCollapsed()")}}
-  - : 新たなインライン[グループ](#コンソールでのグループの使用)を作成し、以降のすべての出力を別なレベルに字下げします。 `group()` とは異なり、グループが折りたたまれた状態で作られ、それを開くには展開ボタンを操作する必要があります。レベルを戻すには、`groupEnd()` を呼び出します。
-- {{domxref("console.groupEnd()")}}
+  - : `console.error()` の別名です。
+- {{domxref("console/group_static", "console.group()")}}
+  - : 新たなインライン[グループ](#コンソールでのグループの使用)を作成し、以降のすべての出力を別なレベルに字下げします。レベルを戻すには、`console.groupEnd()` を呼び出します。
+- {{domxref("console/groupCollapsed_static", "console.groupCollapsed()")}}
+  - : 新たなインライン[グループ](#コンソールでのグループの使用)を作成し、以降のすべての出力を別なレベルに字下げします。 `console.group()` とは異なり、グループが折りたたまれた状態で作られ、それを開くには展開ボタンを操作する必要があります。レベルを戻すには、`console.groupEnd()` を呼び出します。
+- {{domxref("console/groupEnd_static", "console.groupEnd()")}}
   - : 現在のインライン[グループ](#コンソールでのグループの使用)から抜けます。
-- {{domxref("console.info()")}}
+- {{domxref("console/info_static", "console.info()")}}
   - : メッセージタイプのログ情報を出力します。このメソッドでは、[文字列置換](#文字列置換の使用)および追加の引数を使用することができます。
-- {{domxref("console.log()")}}
+- {{domxref("console/log_static", "console.log()")}}
   - : 一般タイプのログ情報を出力します。このメソッドでは、[文字列置換](#文字列置換の使用)および追加の引数を使用することができます。
-- {{domxref("console.profile()")}} {{Non-standard_inline}}
+- {{domxref("console/profile_static", "console.profile()")}} {{Non-standard_inline}}
   - : ブラウザー内蔵のプロファイラー (例えば [Firefox のパフォーマンスツール](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)) を開始します。プロファイルの名称を指定することができます。
-- {{domxref("console.profileEnd()")}} {{Non-standard_inline}}
+- {{domxref("console/profileEnd_static", "console.profileEnd()")}} {{Non-standard_inline}}
   - : プロファイラーを停止します。結果のプロファイルは、ブラウザーのパフォーマンスツール (例えば [Firefox のパフォーマンスツール](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)) で確認できます。
-- {{domxref("console.table()")}}
+- {{domxref("console/table_static", "console.table()")}}
   - : 表形式のデータを、表を使用して表示します。
-- {{domxref("console.time()")}}
+- {{domxref("console/time_static", "console.time()")}}
   - : 入力引数で指定された名前の[タイマー](#タイマー)を開始します。ページあたり最大 10,000 個のタイマーを同時に動かすことができます。
-- {{domxref("console.timeEnd()")}}
+- {{domxref("console/timeEnd_static", "console.timeEnd()")}}
   - : 指定された[タイマー](#タイマー)を停止して、そのタイマーを開始してからの時間を秒単位でログに出力します。
-- {{domxref("console.timeLog()")}}
+- {{domxref("console/timeLog_static", "console.timeLog()")}}
   - : 指定された[タイマー](#タイマー)の値をコンソールへ出力します。
-- {{domxref("console.timeStamp()")}} {{Non-standard_inline}}
+- {{domxref("console/timeStamp_static", "console.timeStamp()")}} {{Non-standard_inline}}
   - : ブラウザー（[Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) または [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline)）のパフォーマンスツールのタイムラインにマーカーを追加します（。
-- {{domxref("console.trace()")}}
+- {{domxref("console/trace_static", "console.trace()")}}
   - : [スタックトレース](#スタックトレース)を出力します。
-- {{domxref("console.warn()")}}
+- {{domxref("console/warn_static", "console.warn()")}}
   - : 警告メッセージを出力します。このメソッドでは、[文字列置換](#文字列置換の使用)および追加の引数を使用することができます。
 
 ## 例
 
 ### コンソールへのテキストの出力
 
-コンソールでもっとも頻繁に使用される機能は、テキストやその他のデータをログ出力することです。生成することができる出力のカテゴリは 4 つあり、{{domxref("console.log()")}}、{{domxref("console.info()")}}、{{domxref("console.warn()")}}、{{domxref("console.error()")}} の各メソッドを使用します。これらメソッドの出力結果はログ上でそれぞれ異なるスタイルがつけられ、また関心がある種類の出力だけを参照するためにブラウザーが提供するフィルタ機能を使用することもできます。
+コンソールでもっとも頻繁に使用される機能は、テキストやその他のデータをログ出力することです。生成することができる出力のカテゴリーはいくつかあり、{{domxref("console/log_static", "console.log()")}}、{{domxref("console/info_static", "console.info()")}}、{{domxref("console/warn_static", "console.warn()")}}、{{domxref("console/error_static", "console.error()")}}、{{domxref("console/debug_static", "console.debug()")}} の各メソッドを使用します。これらメソッドの出力結果はログ上でそれぞれ異なるスタイルがつけられ、また関心がある種類の出力だけを参照するためにブラウザーが提供するフィルタ機能を使用することもできます。
 
-各出力メソッドを使用する方法は 2 つあります。複数の文字列表現を 1 つの文字列に連結してコンソールに出力する形でオブジェクトのリストを渡す方法と、オブジェクトのリストに続けてそれらを置き換える任意の個数の置換文字列を渡す方法です。
+各出力メソッドを使用する方法は 2 つあります。
+
+- 可変個数の引数を渡すと、その文字列表現が 1 つの文字列に連結され、コンソールに出力されます。
+- 0 個以上の置換文字列を含む文字列と、それに続く可変個数の引数を渡して置換します。
 
 #### 単一のオブジェクトの出力
 
@@ -88,7 +90,7 @@ console.log(someObject);
 
 出力内容は以下のようになります。
 
-```bash
+```plain
 {str:"Some text", id:5}
 ```
 
@@ -104,8 +106,8 @@ console.info("My first car was a", car, ". The object is:", someObject);
 
 出力は以下のようになります。
 
-```bash
-My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
+```plain
+My first car was a Dodge Charger. The object is: {str:"Some text", id:5}
 ```
 
 #### 文字列置換の使用
@@ -133,7 +135,7 @@ for (let i = 0; i < 5; i++) {
 
 出力は以下のようになります。
 
-```
+```plain
 Hello, Bob. You've called me 1 times.
 Hello, Bob. You've called me 2 times.
 Hello, Bob. You've called me 3 times.
@@ -154,7 +156,7 @@ console.log(
 
 ディレクティブの前のテキストは影響を受けませんが、ディレクティブの後ろのテキストは引数の CSS 宣言を使用して装飾されます。
 
-![](css-styling.png)
+![Firefox コンソールでスタイル付けされたテキスト](css-styling.png)
 
 `%c` は複数回使用することができます。
 
@@ -229,16 +231,13 @@ console.timeEnd("answer time");
 
 ユーザーがアラートボックスを解除するのにかかった時間を記録し、その時間をコンソールに記録し、ユーザーが 2 回目のアラートを解除するのを待ってから、終了時間をコンソールに記録します。
 
-![](console-timelog.png)
+![Firefox コンソールの時間ログ](console-timelog.png)
 
 タイマーの名前は、タイマーの開始時と停止時の両方で表示されることに注意してください。
 
-> **メモ:** タイマーをネットワーク通信の時間の計測に用いる場合、タイマーはトランザクション全体の所要時間を報告しますが、ネットワークパネルに表示される時間はヘッダーの処理にかかった時間だけを表すことに注意してください。
-> レスポンス本文の記録を有効にしている場合は、レスポンスヘッダーとレスポンス本文それぞれに表示される所要時間の合計が、コンソールに出力されている時間に一致します。
-
 ### スタックトレース
 
-console オブジェクトはスタックトレースの出力にも対応しています。これは {{domxref("console.trace()")}} を呼び出した場所へ至るための呼び出し経路を表示するものです。以下のコードを見てください。
+console オブジェクトはスタックトレースの出力にも対応しています。これは {{domxref("console/trace_static", "console.trace()")}} を呼び出した場所へ至るための呼び出し経路を表示するものです。以下のコードを見てください。
 
 ```js
 function foo() {
@@ -253,7 +252,7 @@ foo();
 
 コンソールへの出力内容は以下のようになります。
 
-![](api-trace2.png)
+![Firefox コンソールのスタックトレース](api-trace2.png)
 
 ## 仕様書
 
@@ -276,5 +275,5 @@ foo();
 ### その他の実装
 
 - [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/console/api/)
-- [Microsoft Edge DevTools](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/)
+- [Microsoft Edge DevTools](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)
 - [Safari Web Inspector](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)

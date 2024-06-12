@@ -74,7 +74,7 @@ Google поддерживает [HSTS preload service](https://hstspreload.org/)
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

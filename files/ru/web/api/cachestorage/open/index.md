@@ -53,7 +53,7 @@ var cachedResponse = caches
   });
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

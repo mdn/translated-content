@@ -222,7 +222,7 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 Синтаксис для rest оператора выглядит таким же как и для spread оператора, однако он используется для деструктуризации массивов и объектов. Фактически, rest оператор противоположен spread оператору: последний раскладывает массив на элементы, тогда как первый собирает много элементов в один. См. [rest parameters.](/ru/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters)
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

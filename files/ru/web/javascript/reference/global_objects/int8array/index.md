@@ -142,7 +142,7 @@ var int8 = new Int8Array(iterable);
 // Int8Array[1, 2, 3]
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

@@ -106,7 +106,7 @@ _Inherits methods from its parent, {{domxref("Element")}}._
 - {{domxref("HTMLElement.forceSpellCheck()")}} {{experimental_inline}}
   - : Makes the spell checker runs on the element.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

@@ -69,7 +69,7 @@ targetAtTimeMinus.onclick = function () {
 };
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

@@ -40,7 +40,7 @@ _Интерфейс не наследует и не определяет соб�
 - {{domxref("SubtleCrypto.unwrapKey()")}}
   - : Returns a {{jsxref("Promise")}} of a {{domxref("CryptoKey")}} corresponding to the wrapped key given in parameter.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

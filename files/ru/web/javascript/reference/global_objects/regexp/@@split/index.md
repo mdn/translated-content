@@ -71,7 +71,7 @@ var result = str.split(re); // String.prototype.split calls re[@@split].
 console.log(result); // ["(2016)", "(01)", "(02)"]
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

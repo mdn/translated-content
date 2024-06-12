@@ -583,7 +583,7 @@ The type of pseudo class is determined by the selector it is using and working i
 
 Where p and a are the tags which are used in HTML for paragraph and link, respectively and they can be replaced by identifiers which are used for Cues in WebVTT file.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

@@ -27,7 +27,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 
 测验开始之前需要下载并保存 [index.html](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html)、[style.css](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/style.css)、[raw-text.txt](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt)。
 
-> **备注：** 你还可以用类似 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 这些在线编辑器来完成测验。你可以把 HTML、CSS 及 JavaScript 代码复制过去。如果你选的工具没有独立的 JavaScript 版面，可以随时在 HTML 页面中添加 `<script>` 元素。
+> **备注：** 你还可以用类似 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 这些在线编辑器来完成测验。你可以把 HTML、CSS 及 JavaScript 代码复制过去。如果你选的工具没有独立的 JavaScript 版面，可以随时在 HTML 页面中添加 `<script>` 元素。
 
 ## 项目简介
 

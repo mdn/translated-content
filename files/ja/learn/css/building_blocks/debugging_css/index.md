@@ -48,7 +48,7 @@ CSS を書いていると、CSS が期待通りに動作しない、という問
 
 レンダリングされた DOM では、ブラウザーが HTML を正規化することがあり、例えば、間違って書かれた HTML を修正することがあります。例えば、 `<h2>` を開きながら `</h3>` で閉じるなど、要素を誤って閉じた場合、ブラウザーはそれが何を意味していたかを理解し、 DOM の HTML は開くための `<h2>` を正しく `</h2>` で閉じます。DOM は JavaScript で加えられた変更も表示します。
 
-これに対してソースを表示は、サーバに格納されている通りの HTML ソースコードです。開発者ツールの [HTML ツリー](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#html_tree)は、ある時点でブラウザーがレンダリングしているものを正確に表示させるので、実際に使用する際に何かといった具合に知ることができます。
+これに対してソースを表示は、サーバーに格納されている通りの HTML ソースコードです。開発者ツールの [HTML ツリー](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#html_tree)は、ある時点でブラウザーがレンダリングしているものを正確に表示させるので、実際に使用する際に何かといった具合に知ることができます。
 
 ## 適用された CSS の調査
 

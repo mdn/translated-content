@@ -78,7 +78,7 @@ p {
 
 TBD
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

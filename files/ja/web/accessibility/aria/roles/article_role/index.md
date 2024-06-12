@@ -58,8 +58,8 @@ slug: Web/Accessibility/ARIA/Roles/article_role
 
 ### 必要な JavaScript 機能
 
-- イベントハンドラ
-  - : このロールでは、イベントハンドラは必要ありません。
+- イベントハンドラー
+  - : このロールでは、イベントハンドラーは必要ありません。
 - 属性値の変更
   - : フィードを作成するときは、各記事 (`article`) ロールの `aria-posinset` 属性と `aria-setsize` 属性を適切な値に設定します。 `aria-posinset` は、1 ベースであることに注意してください。
 

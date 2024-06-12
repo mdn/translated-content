@@ -90,7 +90,7 @@ p {
 
 {{ EmbedLiveSample('A_mix_of_values_and_lengths', 300, 180) }}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

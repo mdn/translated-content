@@ -3,7 +3,7 @@ title: "AnalyserNode: AnalyserNode() コンストラクター"
 short-title: AnalyserNode()
 slug: Web/API/AnalyserNode/AnalyserNode
 l10n:
-  sourceCommit: 2c9f6f0688db9b4437f998321044fdd22afed546
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
 {{APIRef("'Web Audio API'")}}

@@ -48,7 +48,7 @@ var factorial = function (n) {
 factorial(7);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

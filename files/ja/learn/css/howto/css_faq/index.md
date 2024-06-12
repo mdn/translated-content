@@ -2,7 +2,7 @@
 title: CSS の一般的な質問
 slug: Learn/CSS/Howto/CSS_FAQ
 l10n:
-  sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
+  sourceCommit: e27c77ccf256539861d06095a37a97faed4701d8
 ---
 
 {{LearnSidebar}}
@@ -18,7 +18,7 @@ l10n:
 - 後方互換モード (_Quirks Mode_): 古いウェブページが制作者の意図したとおりにレンダリングされるようにして、古いブラウザーが用いていた非標準のレンダリングルールに従います。 `DOCTYPE` 宣言が不完全、不正確、あるいは存在しない、または 2001 年より前に一般的であった既知の `DOCTYPE` 宣言である文書は、後方互換モードでレンダリングされます。
 - 標準モード (_Standards Mode_): ブラウザーは W3C 標準へ厳密に従おうとします。新しい HTML ページは標準に準拠したブラウザー向けに設計されていると考えられるため、新しい `DOCTYPE` 宣言を持つページは標準でレンダリングされます。
 
-Gecko ベースのブラウザーには、いくつかの小さな調整のみを行う第 3 のモードである _[Almost Standards Mode](/ja/docs/Mozilla/Gecko_Almost_Standards_Mode)_ があります。
+Gecko ベースのブラウザーには、いくつかの小さな調整のみを行う第 3 のモードである [limited quirks mode](https://en.wikipedia.org/wiki/Quirks_mode#Limited_quirks_mode) があります。
 
 標準の `DOCTYPE` 宣言では、標準モードが起動します。
 
@@ -49,7 +49,7 @@ Gecko ベースのブラウザーには、いくつかの小さな調整のみ�
 以下のような可能性があります。
 
 - CSS ファイルへのパスが間違っている。
-- 適用されるためには、 CSS スタイルシートを MIME タイプ `text/css` で提供しなければなりません。ウェブサーバがこのタイプで提供していない場合、スタイルシートは適用されません。
+- 適用されるためには、 CSS スタイルシートを MIME タイプ `text/css` で提供しなければなりません。ウェブサーバーがこのタイプで提供していない場合、スタイルシートは適用されません。
 
 ## `id` と `class` の違いは
 
@@ -267,7 +267,7 @@ text-stroke: 4px navy;
 
 > **メモ:** 接頭辞付きプロパティの処理の詳細については、[クロスブラウザーテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)モジュールの[一般的な HTML および CSS の問題の処理 - CSS 接頭辞の処理](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes)を参照してください。
 
-> **メモ:** ブラウザー接頭辞付き CSS プロパティの一覧は、[Mozilla CSS 拡張](/ja/docs/Web/CSS/Mozilla_Extensions), [Microsoft CSS 拡張](/ja/docs/Web/CSS/Microsoft_Extensions), [WebKit CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions) を参照してください。
+> **メモ:** ブラウザー接頭辞付き CSS プロパティの一覧は、[Mozilla CSS 拡張](/ja/docs/Web/CSS/Mozilla_Extensions), [WebKit CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions) を参照してください。
 
 ## z-index は位置指定へどのように関係するのか?
 

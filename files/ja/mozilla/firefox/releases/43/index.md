@@ -13,7 +13,7 @@ Firefox 43 は、米国時間 2015 年 12 月 15 日にリリースされまし�
 
 ハイライト:
 
-- [ウェブコンソールでサーバ側のログを記録](/ja/docs/Tools/Web_Console/Console_messages#server)
+- [ウェブコンソールでサーバー側のログを記録](/ja/docs/Tools/Web_Console/Console_messages#server)
 - [CSS 宣言をオーバーライドしたルールをすばやく見つける](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#overridden_declarations)
 - [インスペクタのコンテキストメニュー項目 "Use in Console"](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu)
 - [ルールビューで "厳密に" フィルタリング](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#strict_search)
@@ -74,7 +74,7 @@ _変更なし。_
 #### その他
 
 - [Battery Status API](/ja/docs/Web/API/Battery_Status_API) で、最近更新された仕様で指定された {{domxref("Navigator.getBattery()")}} 向けの Promise 構文を使用するようになりました ([Firefox バグ 1050749](https://bugzil.la/1050749))。
-- `User-Agent` ヘッダが {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} のリストから外れましたので、XHR の {{domxref("XMLHttpRequest.setRequestHeader()")}} などで、[Fetch](/ja/docs/Web/API/Fetch_API) {{domxref("Headers")}} オブジェクトを設定できるようになりました ([Firefox バグ 1188932](https://bugzil.la/1188932))。
+- `User-Agent` ヘッダーが {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} のリストから外れましたので、XHR の {{domxref("XMLHttpRequest.setRequestHeader()")}} などで、[Fetch](/ja/docs/Web/API/Fetch_API) {{domxref("Headers")}} オブジェクトを設定できるようになりました ([Firefox バグ 1188932](https://bugzil.la/1188932))。
 - {{domxref("MediaRecorder.MediaRecorder()")}} コンストラクターが options Dictionary を引数としてサポートしました。記録するオーディオ/ビデオのビットレートを設定できます ([Firefox バグ 1161276](https://bugzil.la/1161276))。
 - [Performance Timeline API](/ja/docs/Web/API/Performance_Timeline_API) の {{domxref("PerformanceObserver")}} インターフェイスを実装しました ([Firefox バグ 1165796](https://bugzil.la/1165796))。
 - Frame Timing API を追加しました。{{domxref("PerformanceRenderTiming")}} および {{domxref("PerformanceCompositeTiming")}} インターフェイスを使用できます ([Firefox バグ 1191178](https://bugzil.la/1191178))。

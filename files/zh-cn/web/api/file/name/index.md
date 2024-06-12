@@ -1,11 +1,13 @@
 ---
-title: File.name
+title: File：name 属性
 slug: Web/API/File/name
+l10n:
+  sourceCommit: 8fd2ee72038310e3ecc387df235ffac1cb08775c
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-返回由 {{domxref("File")}} 对象表示的文件的名称。由于安全原因，该属性并不包含文件路径。
+{{domxref("File")}} 接口的 **`name`** 只读属性返回由 {{domxref("File")}} 对象表示的文件的名称。由于安全原因，该属性并不包含文件路径。
 
 ## 值
 
@@ -55,4 +57,4 @@ filepicker.addEventListener("change", (event) => {
 
 ## 参见
 
-- [在 web 应用程序中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)
+- [在 Web 应用程序中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)

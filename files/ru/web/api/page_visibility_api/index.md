@@ -151,7 +151,7 @@ function handleVisibilityChange() {
 document.addEventListener("visibilitychange", handleVisibilityChange, false);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

@@ -38,7 +38,7 @@ foo
 <anonymous>
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

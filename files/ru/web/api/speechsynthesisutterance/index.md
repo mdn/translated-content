@@ -84,7 +84,7 @@ inputForm.onsubmit = function (event) {
 };
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

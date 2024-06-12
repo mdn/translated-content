@@ -69,7 +69,7 @@ var atts = para.attributes;
 </html>
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

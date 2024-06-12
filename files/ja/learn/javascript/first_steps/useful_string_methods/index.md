@@ -86,7 +86,7 @@ if (browserType.includes("zilla")) {
 }
 ```
 
-文字列が特定の部分文字列で始まるか終わるかを知りたいことはよくあります。これはよくあるニーズなので、 2 つの特別なメソッドがあります。 {{jsxref("String.prototype.startsWith()", "startWith()")}} と {{jsxref("String.prototype.endsWith()", "endsWith()")}} です。
+文字列が特定の部分文字列で始まるか終わるかを知りたいことはよくあります。これはよくあるニーズなので、 2 つの特別なメソッドがあります。 {{jsxref("String.prototype.startsWith()", "startsWith()")}} と {{jsxref("String.prototype.endsWith()", "endsWith()")}} です。
 
 ```js
 const browserType = "mozilla";

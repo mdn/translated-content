@@ -56,7 +56,7 @@ ul li::marker {
 
 {{EmbedLiveSample('Examples')}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

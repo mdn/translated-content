@@ -54,10 +54,6 @@ slug: Web/CSS/Layout_cookbook/Card
 
 根据卡片的内容，你可以或应该做一些事情来加强无障碍性。请参阅 Heydon Pickering 撰写的 [Inclusive Components: Card](https://inclusive-components.design/cards/)，那篇文章对这些问题进行了非常详细的解释。
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - {{Cssxref("grid-template-columns")}}、{{Cssxref("grid-template-rows")}}、{{Cssxref("grid-gap")}}

@@ -25,7 +25,7 @@ range.setEnd(endNode, endOffset);
 isCollapsed = range.collapsed;
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

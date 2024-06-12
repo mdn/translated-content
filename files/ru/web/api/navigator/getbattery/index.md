@@ -5,7 +5,7 @@ l10n:
   sourceCommit: cf05364b23bc44af37a350319a1dd47485746a9c
 ---
 
-{{ApiRef("Battery API")}}{{securecontext_header}}
+{{APIRef("Battery API")}} {{SecureContext_Header}}
 
 Метод `getBattery` предоставляет информацию о батарее устройства. Он возвращает промис, результатом обработки которого будет объект {{domxref("BatteryManager")}}, содержащий свойства с информацией о состоянии батареи и события, которые можно обрабатывать для его контроля. Для получения более подробной информации и примеров смотрите {{domxref("Battery Status API")}}.
 

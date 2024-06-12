@@ -115,7 +115,7 @@ const doAjax = async () => {
 doAjax().then(console.log).catch(console.log);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

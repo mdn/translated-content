@@ -71,7 +71,7 @@ Origin: https://developer.mozilla.org
 ```
 
 ```http
-Origin: http://developer.mozilla.org:80
+Origin: https://developer.mozilla.org:80
 ```
 
 ## Spécifications

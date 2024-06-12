@@ -45,7 +45,7 @@ l10n:
 
 - [`id`](/ja/docs/Web/HTML/Element/img#id) を伴う画像が、{{domxref("Window")}} インターフェイスのプロパティのリストに入らないようになりました。`<img id="login">` は `window.login` としてアクセスできません。この動作は Firefox 26 で導入しており、その後変更された仕様書に合致させるために削除しました ([Firefox バグ 959992](https://bugzil.la/959992))。
 - {{domxref('MouseEvent.offsetX')}} および {{domxref('MouseEvent.offsetY')}} を追加しました ([Firefox バグ 69787](https://bugzil.la/69787))。
-- {{domxref("HTMLInputElement")}} インターフェイスを、ディレクトリのアップロードを扱うよう実験的に拡張しました ([Firefox バグ 1164310](https://bugzil.la/1164310))。以下 4 つのメンバーは、設定項目 `dom.input.dirpicker` を `true` に設定すると使用できます。
+- {{domxref("HTMLInputElement")}} インターフェイスを、ディレクトリーのアップロードを扱うよう実験的に拡張しました ([Firefox バグ 1164310](https://bugzil.la/1164310))。以下 4 つのメンバーは、設定項目 `dom.input.dirpicker` を `true` に設定すると使用できます。
 
   - {{domxref("HTMLInputElement.directory")}}
   - {{domxref("HTMLInputElement.isFilesAndDirectoriesSupported")}}
@@ -116,7 +116,7 @@ _変更なし。_
 
 ## HTTP
 
-- Firefox 41 まで、HTTP/2 レスポンスに含まれる未定義または無効な疑似ヘッダフィールドを、誤って受け入れていました。これが修正され、Firefox 42 より受け入れる疑似ヘッダフィールドは仕様書に従い _:status_ のみになります。独自のフィールドを含むレスポンスヘッダは、異常なものであると判断します ([Firefox バグ 1136727](https://bugzil.la/1136727))。
+- Firefox 41 まで、HTTP/2 レスポンスに含まれる未定義または無効な疑似ヘッダーフィールドを、誤って受け入れていました。これが修正され、Firefox 42 より受け入れる疑似ヘッダーフィールドは仕様書に従い _:status_ のみになります。独自のフィールドを含むレスポンスヘッダーは、異常なものであると判断します ([Firefox バグ 1136727](https://bugzil.la/1136727))。
 
 ## ネットワーク
 

@@ -1,6 +1,8 @@
 ---
 title: <time>
 slug: Web/CSS/time
+l10n:
+  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
 {{CSSRef}}
@@ -15,9 +17,9 @@ slug: Web/CSS/time
 
 ### 単位
 
-- **`s`**
+- `s`
   - : 秒単位の時間を表します。例: `0s`, `1.5s`, `-60s`
-- **`ms`**
+- `ms`
   - : ミリ秒単位の時間を表します。例: `0ms`, `150.25ms`, `-60000ms`
 
 > **メモ:** `s` と `ms` の間の変換は、論理的に `1s` = `1000ms` となります。

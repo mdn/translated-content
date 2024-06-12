@@ -92,7 +92,7 @@ TypeError: replaceAll must be called with a global RegExp
 ("aa..cc");
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

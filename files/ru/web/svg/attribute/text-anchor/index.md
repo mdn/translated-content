@@ -3,6 +3,8 @@ title: text-anchor
 slug: Web/SVG/Attribute/text-anchor
 ---
 
+{{SVGRef}}
+
 « [Справочник SVG Атрибутов](/en/SVG/Attribute)
 
 Атрибут `text-anchor` используется для выравнивания

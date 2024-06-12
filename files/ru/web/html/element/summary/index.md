@@ -95,7 +95,7 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 
 {{EmbedLiveSample("HTML_in_summaries", 650, 120)}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

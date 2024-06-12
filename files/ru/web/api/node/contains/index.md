@@ -24,7 +24,7 @@ function isInPage(node) {
 }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

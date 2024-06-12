@@ -94,13 +94,13 @@ HTTP/1.1 消除了大量歧义内容并引入了多项改进：
 一个典型的请求流程，所有请求都通过一个连接实现，看起来就像这样：
 
 ```http
-GET /zh-CN/docs/Glossary/Simple_header HTTP/1.1
+GET /zh-CN/docs/Glossary/CORS-safelisted_request_header HTTP/1.1
 Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
+Accept-Language: zh-CN,zh;q=0.9
 Accept-Encoding: gzip, deflate, br
-Referer: https://developer.mozilla.org/zh-CN/docs/Glossary/Simple_header
+Referer: https://developer.mozilla.org/zh-CN/docs/Glossary/CORS-safelisted_request_header
 
 200 OK
 Connection: Keep-Alive
@@ -121,9 +121,9 @@ GET /static/img/header-background.png HTTP/1.1
 Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
 Accept: */*
-Accept-Language: en-US,en;q=0.5
+Accept-Language: zh-CN,zh;q=0.5
 Accept-Encoding: gzip, deflate, br
-Referer: https://developer.mozilla.org/zh-CN/docs/Glossary/Simple_header
+Referer: https://developer.mozilla.org/zh-CN/docs/Glossary/CORS-safelisted_request_header
 
 200 OK
 Age: 9578461

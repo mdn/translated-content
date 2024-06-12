@@ -47,7 +47,7 @@ formData.append("username", "Кирилл");
 formData.get("username"); // Вернёт "Борис"
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

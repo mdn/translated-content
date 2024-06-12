@@ -38,7 +38,7 @@ An `InvalidState` error is raised if the `requestData()` method is called while 
 ...
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

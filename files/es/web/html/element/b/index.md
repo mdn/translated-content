@@ -3,6 +3,8 @@ title: b
 slug: Web/HTML/Element/b
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 **b** de bold=negrita.

@@ -2,7 +2,7 @@
 title: "<var>: 変数要素"
 slug: Web/HTML/Element/var
 l10n:
-  sourceCommit: 963501cc097343860d8284f911e1b3a303b62d74
+  sourceCommit: 4de810dd8ec0d4a2a62f63991a6897fb5f5ac3e3
 ---
 
 {{HTMLSidebar}}
@@ -57,7 +57,7 @@ var {
 
 ### 既定のスタイルの上書き
 
-CSS を使用して、 `<var>` 要素の既定のスタイルを上書きすることができます。この例では、変数名は太字の Courier フォントがあれば、それを使って表示し、なければ既定の等幅フォントにフォールバックされます。
+CSS を使用して、 `<var>` 要素の既定のスタイルを上書きすることができます。この例では、 Courier フォントがあれば、それを使って太字で表示し、なければ既定の等幅フォントに代替されます。
 
 #### CSS
 
@@ -111,7 +111,7 @@ var {
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>

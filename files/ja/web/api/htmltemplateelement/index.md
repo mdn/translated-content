@@ -2,7 +2,7 @@
 title: HTMLTemplateElement
 slug: Web/API/HTMLTemplateElement
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
 {{APIRef("Web Components")}}

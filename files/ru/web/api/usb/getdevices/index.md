@@ -39,7 +39,7 @@ navigator.usb.getDevices().then((devices) => {
 });
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

@@ -28,7 +28,7 @@ function origin() {
 }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

@@ -2,7 +2,7 @@
 title: 基本的なソフトウェアのインストール
 slug: Learn/Getting_started_with_the_web/Installing_basic_software
 l10n:
-  sourceCommit: 1724e23bc76b136266b75afa6b45bfd708ee69a5
+  sourceCommit: e57192234b56a4d9e1decb6c0dfc07d987e819ca
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
@@ -24,7 +24,7 @@ l10n:
 次に、コードをテストするためのデスクトップウェブブラウザーをいくつかインストールしましょう。以下からオペレーティングシステムを選び、リンクから好きなブラウザーをインストールしてみてください。
 
 - Linux: [Firefox](https://www.mozilla.org/ja/firefox/new/), [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Brave](https://brave.com).
-- Windows: [Firefox](https://www.mozilla.org/ja/firefox/new/), [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Microsoft Edge](https://www.microsoft.com/edge), [Brave](https://brave.com) （Windows 10 には最初から Edge が付属しています。それ以外の場合は、他のブラウザーをインストールしてください。）
+- Windows: [Firefox](https://www.mozilla.org/ja/firefox/new/), [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Microsoft Edge](https://www.microsoft.com/edge), [Brave](https://brave.com) （Windows 10 および 11 には最初から Edge が付属しています。それ以外の場合は、他のブラウザーをインストールしてください。）
 - macOS: [Firefox](https://www.mozilla.org/ja/firefox/new/), [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Safari](https://www.apple.com/safari/), [Brave](https://brave.com) （macOS と iOS には最初から Safari が付属しています。）
 
 次に進む前に、テストに使えるように最低でも 2 つのブラウザーをインストールするようにしてください。
