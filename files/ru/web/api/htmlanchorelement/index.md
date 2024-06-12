@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-Интерфейс **`HTMLAnchorElement`** представляет элементы гиперссылки и предоставляет специальные свойства и методы (помимо обычного объектного интерфейса {{domxref("HTMLElement")}}, который они наследуют) для управления макетом и представлением таких элементов. Этот интерфейс соответствует элементу [`<a>`](/ru/docs/Web/HTML/Element/a) (не путать с [`<link>`](/ru/docs/Web/HTML/Element/link)), который представлен [`HTMLLinkElement`](/ru/docs/Web/API/HTMLLinkElement).
+Интерфейс **`HTMLAnchorElement`** представляет элементы гиперссылок и добавляет дополнительные свойства и методы (помимо общих свойств и методов интерфейса {{domxref("HTMLElement")}}, от которого он наследуется) для управления макетом и представлением таких элементов. Данный интерфейс соответствует элементу [`<a>`](/ru/docs/Web/HTML/Element/a) (не путать с [`<link>`](/ru/docs/Web/HTML/Element/link), который представлен [`HTMLLinkElement`](/ru/docs/Web/API/HTMLLinkElement)).
 
 {{InheritanceDiagram}}
 
