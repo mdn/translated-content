@@ -19,7 +19,7 @@ RGB 值本身没有意义。是颜色模型定义了三个组件如何在{{gloss
 
 有许多方法可以描述颜色的 RGB 组件。在 {{Glossary("CSS")}} 中，它们可以用多种方式表示：使用[十六进制](/zh-CN/docs/Web/CSS/hex-color)表示法作为一个 24 位整数（例如，`#add8e6` 是浅蓝色）或使用 [`rgb()`](/zh-CN/docs/Web/CSS/color_value/rgb) 函数，其中包含三个百分比值或从 `0` 到 `255` 的数字（例如，`rgb(46 139 87)` 是绿色）。CSS 还支持 `srgb`、`srgb-linear`、`a98-rgb` 和 `prophoto-rgb` 色彩空间，用于 [`color()`](/zh-CN/docs/Web/CSS/color_value/color) 函数。
 
-RGB 不是唯一能表示 `sRGB` {{glossary("color space", "色彩空间")}}的颜色模型。像 [`HSL`](/zh-CN/docs/Web/CSS/color_value/hsl)（_色调-饱和度-亮度_）或 [`HWB`](/zh-CN/docs/Web/CSS/color_value/hwb)（_色调-白度-黑度_）颜色模型这样的柱坐标系也用于在 Web 上表示 `sRGB` 颜色。
+RGB 不是唯一能表示 `sRGB` {{glossary("color space", "色彩空间")}}的颜色模型。像 [`HSL`](/zh-CN/docs/Web/CSS/color_value/hsl)（_色调 - 饱和度 - 亮度_）或 [`HWB`](/zh-CN/docs/Web/CSS/color_value/hwb)（_色调 - 白度 - 黑度_）颜色模型这样的柱坐标系也用于在 Web 上表示 `sRGB` 颜色。
 
 ## 参见
 
