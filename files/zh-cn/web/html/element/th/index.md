@@ -51,7 +51,7 @@ slug: Web/HTML/Element/th
 - `headers`
   - : 这个属性包含了一个空间分隔的字符串的列表，每个与其他{{HTMLElement("th")}}元素相关联的`id` 属性一一对应。
 - `rowspan`
-  - : 一个非负整数值，指示标题单元格跨越或扩展多少行。默认值为`1.` 如果该值被设置为 `0`, 这个单元格就被扩展为 ({{HTMLElement("thead")}}，{{HTMLElement("tbody")}} 或{{HTMLElement("tfoot")}}) 中表格部分的最后一个元素。比 65534 大的值被视作 65534。
+  - : 一个非负整数值，指示标题单元格跨越或扩展多少行。默认值为 `1`。如果该值被设置为 `0`, 这个单元格就被扩展为（{{HTMLElement("thead")}}、{{HTMLElement("tbody")}} 或{{HTMLElement("tfoot")}}）中表格部分的最后一个元素。比 65534 大的值被视作 65534。
 - `scope`
   - : 这个枚举属性定义了表头元素（在 {{HTMLElement("th")}} 中定义）关联的单元格。它可能有以下值：
     - `row`: 表头关联一行中所有的单元格。
