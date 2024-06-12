@@ -27,9 +27,9 @@ let searching = browser.bookmarks.search(
 
   - : 描述要执行的查询的 {{jsxref("string")}} 或 {{jsxref("object")}}。
 
-    如果 `query` 是一个**字符串**，它由零个或多个以空格分隔的搜索项组成。如果搜索项是书签的 URL 或标题的子字符串，则匹配。匹配不区分大小写。对于书签与查询匹配，必须匹配所有查询的搜索项。
+    如果 `query` 是一个**字符串**，它由零个或多个以空格分隔的搜索项组成。如果搜索项是书签的 URL 或标题的子字符串，则匹配。匹配不区分大小写。要使书签与查询匹配，必须匹配查询的所有搜索条件。
 
-    如果 `query` 是一个**对象**，它由零个或多个属性组成：`query`、`title` 和 `url`，描述如下。要使书签与查询匹配，必须匹配所有属性的项。
+    如果 `query` 是一个**对象**，它由三个属性中的零个或多个组成：`query`、`title` 和 `url`，描述如下。要使书签与查询匹配，必须匹配所有属性的项。
 
     - query {{optional_inline}}
 
@@ -47,9 +47,9 @@ let searching = browser.bookmarks.search(
 
 ### 返回值
 
-一个 Promise，其会兑现 {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} 对象的数组，每个对象代表一个匹配的书签树节点。结果按节点创建的顺序返回。如果未找到结果，则数组为空。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现 {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} 对象数组，每个对象代表一个匹配的书签树节点。结果按节点创建的顺序返回。如果未找到结果，则数组为空。
 
-即使是 `"folder"` 类型的节点，由`bookmarks.search()` 返回的 [`BookmarkTreeNodes`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) 缺少 `children` 属性。要获取完整的 `BookmarkTreeNode`，请使用 [`bookmarks.getSubTree()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree)。
+即使是 `"folder"` 类型的节点，由 `bookmarks.search()` 返回的 [`BookmarkTreeNodes`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) 缺少 `children` 属性。要获取完整的 `BookmarkTreeNode`，请使用 [`bookmarks.getSubTree()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree)。
 
 ## 示例
 
