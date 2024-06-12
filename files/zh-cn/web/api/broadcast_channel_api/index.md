@@ -9,7 +9,7 @@ l10n:
 
 **Broadcast Channel API** 允许{{glossary("browsing context", "浏览上下文")}}（即 _window_、_tab_、_frame_ 或 _iframe_）与同{{glossary("origin", "源")}}的 worker 之间进行基本通信。
 
-通过创建 {{domxref("BroadcastChannel")}} 对象，您可以接收发布到该对象的任何消息。您不必维护对要与之通信的框架或工作者的引用：他们可以通过构建具有相同名称的 {{domxref("BroadcastChannel")}} 来“订阅”特定频道，并在它们之间进行双向通信。
+通过创建 {{domxref("BroadcastChannel")}} 对象，你可以接收发布到该对象的任何消息。你不必维护对要与之通信的框架或工作者的引用：他们可以通过构建具有相同名称的 {{domxref("BroadcastChannel")}} 来“订阅”特定频道，并在它们之间进行双向通信。
 
 ![Broadcast Channel API 的原理](broadcastchannel.png)
 
@@ -33,7 +33,7 @@ const bc = new BroadcastChannel("test_channel");
 bc.postMessage("这是一条测试消息。");
 ```
 
-发送到通道的数据使用[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)进行序列化。这意味着您可以安全地发送各种各样的数据对象，而无需自己对其进行序列化。
+发送到通道的数据使用[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)进行序列化。这意味着你可以安全地发送各种各样的数据对象，而无需自己对其进行序列化。
 
 API 不会将任何语义与消息关联，因此由代码来决定要接收什么类型的消息以及如何处理它们。
 
