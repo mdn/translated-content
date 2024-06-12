@@ -1,31 +1,31 @@
 ---
-title: Signature (functions)（函数签名）
+title: 签名（函数）
 slug: Glossary/Signature/Function
 ---
 
 {{GlossarySidebar}}
 
-一个**函数签名 (**或*类型*签名，或*方法*签名**)** 定义了 {{Glossary("Function", "函数")}} 或 {{Glossary("Method", "方法")}} 的输入与输出。
+**函数签名**（*类型*签名，或*方法*签名）定义了{{Glossary("Function", "函数")}}或{{Glossary("Method", "方法")}}的输入与输出。
 
 一个签名可以包括：
 
 - {{Glossary("Parameter", "参数")}} 及参数的 {{Glossary("Type", "类型")}}
 - 一个返回值及其类型
 - 可能会抛出或传回的 {{Glossary("Exception", "异常")}}
-- 有关 {{Glossary("OOP", "面向对象")}} 程序中方法可用性的信息 (例如关键字 `public`、`static` 或 `prototype)`。
+- 有关{{Glossary("OOP", "面向对象")}}程序中方法可用性的信息 (例如关键字 `public`、`static` 或 `prototype)`。
 
 ## 深入
 
 ### JavaScript 中的签名
 
-{{Glossary("JavaScript")}} 是一种*松散类型* 或 *动态*语言。这意味着你不必提前声明变量的类型。处理程序时，将自动确定类型。JavaScript 中的签名仍然可以为你提供有关该方法的一些信息：
+{{Glossary("JavaScript")}} 是一种*松散类型*（*动态*）语言。这意味着你不必提前声明变量的类型。处理程序时，将自动确定类型。JavaScript 中的签名仍然可以为你提供有关该方法的一些信息：
 
 ```js
 MyObject.prototype.myFunction(value);
 ```
 
 - 该方法是安装在一个名为 `MyObject` 的 {{Glossary("object", "对象")}}上。
-- 该方法安装在 `MyObject` 的原型上 (因此它是一个{{Glossary("instance method", "实例方法")}})，而不是一个 {{Glossary("static method", "静态方法/类方法")}} 。
+- 该方法安装在 `MyObject` 的原型上（因此它是一个{{Glossary("instance method", "实例方法")}}），而不是一个{{Glossary("static method", "静态方法/类方法")}}。
 - 该方法的名称是 `myFunction`。
 - 该方法接受一个叫 `value` 的参数，且没有进一步定义。
 
