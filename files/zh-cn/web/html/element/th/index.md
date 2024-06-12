@@ -1,11 +1,15 @@
 ---
 title: <th>
 slug: Web/HTML/Element/th
+l10n:
+  sourceCommit: aa55b6b6768e0250b52703f26d44ea3291f725f3
 ---
 
 {{HTMLSidebar}}
 
 **HTML `<th>` 元素**定义表格内的表头单元格。这部分特征是由 [`scope`](#scope) 和 [`headers`](#headers) 属性准确定义的。
+
+{{EmbedInteractiveExample("pages/tabbed/th.html","tabbed-taller")}}
 
 ## 属性
 
