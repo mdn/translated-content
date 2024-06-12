@@ -33,7 +33,7 @@ self.clients.get(id).then((client) => {
 });
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
