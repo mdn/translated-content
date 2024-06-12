@@ -27,7 +27,7 @@ l10n:
 ## 实例属性
 
 - {{domxref("BarProp.visible")}} {{ReadOnlyInline}}
-  - : 一个 {{jsxref("Boolean")}}，如果所使用的界面元素表示的条是可见的，则返回 `true`。
+  - : {{jsxref("Boolean", "布尔值", "", 1)}}，如果所使用的界面元素表示的条是可见的，则返回 `true`。
 
 ## 示例
 
