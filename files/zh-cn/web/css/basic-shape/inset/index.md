@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`inset()`** [CSS](/zh-CN/docs/Web/CSS) 函数定义了一个矩形，其位于参考框的每一边指定的内边距距离处。它是用于定义 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)之一的基本形状函数。
+**`inset()`** [CSS](/zh-CN/docs/Web/CSS) 函数定义了一个矩形，其位于参考框的每一边内侧的指定的距离处。它是用于定义 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)之一的基本形状函数。
 
 {{EmbedInteractiveExample("pages/css/function-inset.html")}}
 
@@ -20,7 +20,7 @@ shape-outside: inset(20px 50px 10px 0 round 50px);
 ### 值
 
 - `<length-percentage>{1,4}`
-  - : 当提供了四个参数时，它们分别表示内边距矩形的上、右、下和左偏移量，这些偏移量定义了内嵌矩形边缘的位置。这些参数遵循边距简写的语法，它允许你使用一个、两个或四个值来设置所有四个内边距。
+  - : 当提供了四个参数时，它们分别表示从参考框的上侧、右侧、下侧和左侧向内的偏移量，这些偏移量定义了内嵌矩形边缘的位置。这些参数遵循边距简写的语法，它允许你定义具有一个、两个或四个值的 inset。
 - `<border-radius>`
   - : 可选的 [`<border-radius>`](/zh-CN/docs/Web/CSS/border-radius) 参数使用边框半径简写语法为内嵌矩形定义圆角。
 
@@ -47,5 +47,5 @@ shape-outside: inset(20px 50px 10px 0 round 50px);
 ## 参见
 
 - 使用该数据类型的属性：{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}
-- [CSS shapes](/zh-CN/docs/Web/CSS/CSS_shapes) 模块
+- [CSS 形状](/zh-CN/docs/Web/CSS/CSS_shapes)模块
 - [基本形状指南](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes)
