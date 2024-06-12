@@ -11,7 +11,7 @@ l10n:
 
 ## 值
 
-一个 {{jsxref("Boolean")}}，如果顶层窗口是用 {{domxref("window.open", "弹出窗口", "窗口特征", 1)}} 被 {{domxref("window.open")}} 打开的，则为 `true`。
+一个 {{jsxref("Boolean")}}，如果顶层窗口是用 {{domxref("window.open", "弹出窗口", "popup", 1)}} 被 {{domxref("window.open")}} 打开的，则为 `true`。
 
 > **备注：** 历史上，这个接口元素被用来表示是否可见，但由于隐私原因，不再表示每个接口元素实际的可见性。
 

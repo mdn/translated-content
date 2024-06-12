@@ -10,17 +10,17 @@ l10n:
 {{domxref('Document Object Model', '文档对象模型', '', 1)}}的 **`BarProp`** 接口表示 Web 浏览器用户界面向 web 页面公开的脚本，以下每个接口元素都由一个 `BarProp` 对象表示。
 
 - {{domxref("Window.locationbar")}}
-  - : 浏览器的 location bar。
+  - : 浏览器的地址栏。
 - {{domxref("Window.menubar")}}
-  - : 浏览器的 menu bar。
+  - : 浏览器的菜单栏。
 - {{domxref("Window.personalbar")}}
-  - : 浏览器的 personal bar。
+  - : 浏览器的个人栏。
 - {{domxref("Window.scrollbars")}}
-  - : 浏览器的 scrollbars。
+  - : 浏览器的滚动条。
 - {{domxref("Window.statusbar")}}
-  - : 浏览器的 status bar。
+  - : 浏览器的状态栏。
 - {{domxref("Window.toolbar")}}
-  - : 浏览器的 toolbar。
+  - : 浏览器的工具栏。
 
 `BarProp` 接口不是直接访问的，而是通过其中一个元素访问的。
 
