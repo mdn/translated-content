@@ -43,30 +43,23 @@ slug: Web/HTML/Element/th
 该元素包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `abbr`
-
   - : 一个简短的描述，作为对标题单元格内容的替代标签，用于在其他上下文中引用该单元格。一些用户代理（如语音阅读器）可能会在内容本身之前呈现此描述。
-
 - `colspan`
-
   - : 一个非负整数值，指示标题单元格跨越或扩展多少列。默认值为`1`。超过 1000 的值被视作 1000。
-
 - `headers`
-
   - : 这个属性包含了一个空间分隔的字符串的列表，每个与其他 {{HTMLElement("th")}} 元素相关联的 `id` 属性一一对应。
-
 - `rowspan`
-
   - : 一个非负整数值，指示标题单元格跨越或扩展多少行。默认值为 `1`。如果该值被设置为 `0`, 这个单元格就被扩展为（{{HTMLElement("thead")}}、{{HTMLElement("tbody")}} 或{{HTMLElement("tfoot")}}）中表格部分的最后一个元素。比 65534 大的值被视作 65534。
-
 - `scope`
 
   - : 这个枚举属性定义了表头元素（在 {{HTMLElement("th")}} 中定义）关联的单元格。它可能有以下值：
+
     - `row`: 表头关联一行中所有的单元格。
     - `col`: 表头关联一列中所有的单元格。
     - `rowgroup`: 表头属于一个行组并与其中所有单元格相关联。这些单元格可以被放在表头的左侧或右侧，取决于 {{HTMLElement("table")}} 元素中 [`dir`](/zh-CN/docs/Web/HTML/Global_attributes/dir) 属性的值。
     - `colgroup`: 表头属于一个列组并与其中所有单元格相关联。
     - `auto`
-  - : 如果未指定 scope 属性，或其值不是 row、col、rowgroup 或 colgroup，则浏览器会自动选择标题单元格适用的单元格集。
+    如果未指定 scope 属性，或其值不是 row、col、rowgroup 或 colgroup，则浏览器会自动选择标题单元格适用的单元格集。
 
 ### 已弃用的属性
 
