@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("BarProp")}} 接口的 **`visible`** 只读属性返回 `true`，如果它所表示的用户界面元素的条是可见的。
+{{domxref("BarProp")}} 接口的 **`visible`** 只读属性在它所表示的用户界面元素的条可见的情况下返回 `true`。
 
 ## 值
 
