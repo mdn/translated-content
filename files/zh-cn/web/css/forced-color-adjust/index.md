@@ -28,13 +28,13 @@ forced-color-adjust: unset;
 ### 值
 
 - `auto`
-  - : 在强制颜色模式下，元素的颜色由 {{Glossary("user agent","用户代理")}} 调整。这是默认值。
+  - : 在强制颜色模式下，元素的颜色由{{Glossary("user agent","用户代理")}}调整。这是默认值。
 - `none`
-  - : 在强制颜色模式下， {{Glossary("user agent","用户代理")}} 不会自动调整元素的颜色。
+  - : 在强制颜色模式下，{{Glossary("user agent","用户代理")}}不会自动调整元素的颜色。
 
 ## 使用说明
 
-此属性应仅用于进行支持用户颜色和对比度需求的更改。例如，如果你发现 {{Glossary("user agent","用户代理")}} 所做的颜色优化在高对比度或暗黑模式下体验不佳，可以使用此属性调整该模式下的结果，以提供更好的体验。**使用此属性时不应忽视用户的选择**。
+此属性应仅用于进行支持用户颜色和对比度需求的更改。例如，如果你发现{{Glossary("user agent","用户代理")}}所做的颜色优化在高对比度或暗黑模式下体验不佳，可以使用此属性调整该模式下的结果，以提供更好的体验。**使用此属性时不应忽视用户的选择**。
 
 ## 形式定义
 
@@ -74,11 +74,11 @@ forced-color-adjust: unset;
 
 ```html
 <div class="box">
-  <p>这个盒子应使用您的颜色偏好。</p>
+  <p>This is a box which should use your color preferences.</p>
 </div>
 
 <div class="box forced">
-  <p>这个盒子应保持网站设置的颜色。</p>
+  <p>This is a box which should stay the colors set by the site.</p>
 </div>
 ```
 
