@@ -18,7 +18,7 @@ l10n:
 - `excludedDomains` {{deprecated_inline}} {{optional_inline}}
   - : `string` 数组。请使用 [`excludedInitiatorDomains`](#excludedinitiatordomains) 代替。规则不匹配源自此域名列表的网络请求。
 - `initiatorDomains` {{optional_inline}}
-  - : `string` 数组。规则仅匹配源自此域名列表的网络请求。如果省略该列表，则规则适用于所有域名的请求。不允许使用空列表。应使用[规范域名](#canonical_domain)。这与请求发起者而不是请求 URL 匹配。
+  - : `string` 数组。规则仅匹配源自此域名列表的网络请求。如果省略该列表，则规则适用于所有域名的请求。不允许使用空列表。应使用[规范域名](#规范域名)。这与请求发起者而不是请求 URL 匹配。
 - `excludedInitiatorDomains` {{optional_inline}}
   - : `string` 数组。规则不匹配源自此域名列表的网络请求。如果列表为空或省略，则不排除任何域名。这优先于 `initiatorDomains`。应使用[规范域名](#规范域名)。这与请求发起者而不是请求 URL 匹配。
 - `isUrlFilterCaseSensitive` {{optional_inline}}
