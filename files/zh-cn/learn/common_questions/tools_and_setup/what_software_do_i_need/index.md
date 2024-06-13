@@ -12,11 +12,11 @@ l10n:
 <table>
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         你应当已经知道<a
-          href="/zh-CN/docs/Learn/page_vs_site_vs_server_vs_search_engine"
-          >网页、网站、网络服务器，以及搜索引擎间的区别</a
+          href="/zh-CN/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
+          >网页、网站、Web 服务器，以及搜索引擎间的区别</a
         >。
       </td>
     </tr>
@@ -29,19 +29,19 @@ l10n:
 
 ## 概要
 
-你可以免费下载大部分网络开发所需要的程序。我们会在此文章中提供一些链接。
+你可以免费下载大部分 Web 开发所需要的程序。我们会在此文章中提供一些链接。
 
 你会需要工具去：
 
 - 创建和编辑网页
-- 上传文件到你的网络服务器
+- 上传文件到你的 Web 服务器
 - 浏览你的网站
 
 几乎所有的操作系统内置了一个文本编辑器和浏览器（用来浏览网站）。所以通常你只需要获得用来传输文件到你的网络服务器的软件。
 
 ## 自主学习
 
-_现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Community/Contributing/Getting_started)_。
+_现在还没有动手练习的内容。[请考虑投稿](/zh-CN/docs/MDN/Community/Contributing/Getting_started)。_
 
 ## 深度探索
 
@@ -49,7 +49,7 @@ _现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Community
 
 要创建和编辑一个网站，你需要一个文本编辑器。文本编辑器创建并修改无格式的文本文件。（其他格式，像是 **{{Glossary("RTF")}}**，允许你去添加格式，像是加粗或者下划线。这些格式并不适用于编写网页。）你应当明智地选择一个文本编辑器，因为当你建立网站时，你会广泛地使用到它。
 
-所有的桌面操作系统内置了一个基本的文本编辑器。这些编辑器是很直白的，但是缺乏了网页编码所需的特殊功能。如果你想要一些更花俏的东西，这里有很多可用的第三方工具。第三方编辑器通常包含了额外的功能，包括句法填色 \[syntax coloring]，代码补全 \[auto-completion]，可折叠区间 \[collapsible sections]，以及代码搜索 \[code search]。这里有一个短的编辑器列表：
+所有的桌面操作系统内置了一个基本的文本编辑器。这些编辑器是很直白的，但是缺乏了网页编码所需的特殊功能。如果你想要一些更花俏的东西，这里有很多可用的第三方工具。第三方编辑器通常包含了额外的功能，包括语法高亮、自动补全、区域折叠，以及代码搜索。这里有一个短的编辑器列表：
 
 <table class="standard-table">
   <thead>
@@ -157,13 +157,13 @@ _现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Community
 
 ![ShiftEdit 的截图](shiftedit.png)
 
-### 上传文件到网络
+### 将文件上传到 Web
 
 当你的网站已经为公众浏览做好准备，你需要将网页上传到你的 Web 服务器。你可以从各种提供商处购买服务器空间（请参阅[在网络上做一些事情要花多少钱？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)）。一旦确定使用哪家提供商，提供商会通过电子邮件向你发送访问信息，通常以 SFTP URL、用户名、密码和其他连接到其服务器所需的信息的形式提供。请注意，（S）FTP 现在有点过时了，其他上传系统开始流行起来，例如 [RSync](https://zh.wikipedia.org/wiki/Rsync) 和 [Git/GitHub](https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site)。
 
-> **备注：** FTP 本质上是不安全的。你应确保你的托管服务提供商允许使用安全连接，例如 SFTP 或通过 SSH 的 RSync。
+> **备注：** FTP 本质上是不安全的。你应确保你的托管服务提供商允许使用安全连接，例如 SFTP 或基于 SSH 的 RSync。
 
-将文件上传到 Web 服务器是创建网站时非常重要的一步，因此我们在一篇单独的文章中详细介绍了这一过程。现在，这里有一些免费的基础（S）FTP 客户端的简短列表：
+将文件上传到 Web 服务器是创建网站时非常重要的一步，因此我们在[一篇单独的文章](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)中详细介绍了这一过程。现在，这里有一些免费的基础（S）FTP 客户端的简短列表：
 
 <table class="standard-table">
   <thead>
@@ -222,7 +222,7 @@ _现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Community
   </tbody>
 </table>
 
-### 浏览页面
+### 浏览网站
 
 正如你所知，你需要一个网页浏览器去查看网页。这里有一系列的[许多](http://en.wikipedia.org/wiki/List_of_web_browsers)可选浏览器供你个人使用，不过当你在开发一个网页时，你应当至少用以下的主流浏览器测试它，以保证你的网站可供大部分人浏览：
 
