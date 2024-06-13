@@ -492,7 +492,7 @@ l10n:
       <td>
         <p>
           与任何性能相关的规范分组为
-          <a href="/en-US/docs/Web/API/Performance_API"
+          <a href="/zh-CN/docs/Web/API/Performance_API"
             >Performance APIs</a
           > 相关的事件。
         </p>
