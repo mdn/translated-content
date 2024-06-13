@@ -2,7 +2,7 @@
 title: devtools
 slug: Mozilla/Add-ons/WebExtensions/API/devtools
 l10n:
-  sourceCommit: d596fa52a398798a9812258064a49faf75a3ef99
+  sourceCommit: 115136308ab1eafe8ceba5b0a100e01e071fa8f4
 ---
 
 {{AddonSidebar}}
