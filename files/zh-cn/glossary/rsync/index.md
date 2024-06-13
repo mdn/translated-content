@@ -27,4 +27,4 @@ rsync [-options] SOURCE user@x.x.x.x:DESTINATION
 rsync [-options] -e "ssh [SSH 相关信息]" SOURCE user@x.x.x.x:DESTINATION
 ```
 
-互联网上还有很多示例，包括 [官方网站](https://rsync.samba.org/examples.html) 和 rsync 的 [维基百科条目](https://en.wikipedia.org/wiki/Rsync#Examples)。
+互联网上还有很多示例，包括[官方网站](https://rsync.samba.org/examples.html) 和 rsync 的[维基百科条目](https://en.wikipedia.org/wiki/Rsync#Examples)。
