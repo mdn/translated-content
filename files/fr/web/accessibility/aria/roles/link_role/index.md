@@ -3,6 +3,8 @@ title: Utiliser le rôle link
 slug: Web/Accessibility/ARIA/Roles/link_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Description
 
 Cette technique présente l'utilisation du rôle [link](http://www.w3.org/TR/wai-aria/roles#link) et décrit les effets produits sur les navigateurs et les technologies d'assistance.

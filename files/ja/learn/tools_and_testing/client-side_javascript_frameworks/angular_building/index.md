@@ -33,15 +33,15 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building
 ## 完成したアプリケーションのビルド
 
 アプリケーションの開発が完了したので、Angular CLI の `build` コマンドを実行できます。
-`todo` ディレクトリで `build` コマンドを実行すると、アプリケーションは `dist/` という名前のディレクトリにコンパイル結果が出力されます。
+`todo` ディレクトリーで `build` コマンドを実行すると、アプリケーションは `dist/` という名前のディレクトリーにコンパイル結果が出力されます。
 
-`todo` ディレクトリで、コマンド ラインで次のコマンドを実行します。
+`todo` ディレクトリーで、コマンド ラインで次のコマンドを実行します。
 
 ```bash
 ng build -c production
 ```
 
-CLI はアプリケーションをコンパイルし、コンパイル結果を新しい `dist` ディレクトリに出力します。
+CLI はアプリケーションをコンパイルし、コンパイル結果を新しい `dist` ディレクトリーに出力します。
 `ng build` の `--configuration production`/`-c production` フラグは、プロダクションに不要なものを取り除きます。
 
 ## アプリケーションのデプロイ

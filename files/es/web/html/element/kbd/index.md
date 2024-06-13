@@ -3,6 +3,8 @@ title: kbd
 slug: Web/HTML/Element/kbd
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - Marca el texto que debe introducir el usuario.

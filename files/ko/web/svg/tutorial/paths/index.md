@@ -3,7 +3,7 @@ title: 패스
 slug: Web/SVG/Tutorial/Paths
 ---
 
-{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
 [`<path>`](/en-US/Web/SVG/Element/path) 엘리먼트는 SVG [기본 도형](/ko/docs/Web/SVG/Tutorial/Basic_Shapes) 라이브러리에서 가장 강력한 엘리먼트이다. 선과 곡선, 호 등 다양한 형태를 그릴 수 있다.
 

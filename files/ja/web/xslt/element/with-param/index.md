@@ -3,7 +3,7 @@ title: <xsl:with-param>
 slug: Web/XSLT/Element/with-param
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:with-param>` 要素はテンプレートに渡すパラメータの値を設定します。
 

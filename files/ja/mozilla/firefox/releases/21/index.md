@@ -3,6 +3,8 @@ title: Firefox 21 for developers
 slug: Mozilla/Firefox/Releases/21
 ---
 
+{{FirefoxSidebar}}
+
 Gecko 21 を搭載した Firefox 21 は米国時間 2013 年 5 月 14 日にリリースされました。このページでは、開発者に影響する Firefox 20 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧

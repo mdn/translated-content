@@ -1,6 +1,8 @@
 ---
 title: WAI-ARIA 角色
 slug: Web/Accessibility/ARIA/Roles
+l10n:
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
 
 {{AccessibilitySidebar}}
@@ -137,7 +139,7 @@ ARIA 角色共分为 6 类：
 
 > **备注：** 不要在你的网站和应用中使用抽象角色。抽象角色是由浏览器使用的，这里列出来仅用于参考。
 
-> **警告：**“抽象角色用于本体。作者**不得**在内容中使用抽象角色。”——<abbr>WAI-ARIA</abbr> 规范
+> **警告：** “抽象角色用于本体。作者**不得**在内容中使用抽象角色。”——<abbr>WAI-ARIA</abbr> 规范
 
 ## MDN 中定义的角色
 
@@ -149,11 +151,3 @@ ARIA 角色共分为 6 类：
 
 - [使用 ARIA：角色、状态和属性](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques)
 - [ARIA 状态和属性](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA 角色**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

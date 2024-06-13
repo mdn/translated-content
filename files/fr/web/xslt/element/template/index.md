@@ -3,7 +3,7 @@ title: template
 slug: Web/XSLT/Element/template
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:template>` définit un modèle produisant une sortie. Au moins l'un des atttributs match et set doit posséder une valeur.
 

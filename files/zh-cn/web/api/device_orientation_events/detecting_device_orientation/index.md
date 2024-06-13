@@ -3,7 +3,7 @@ title: 检测设备方向
 slug: Web/API/Device_orientation_events/Detecting_device_orientation
 ---
 
-{{SeeCompatTable}}
+{{DefaultAPISidebar("Device Orientation Events")}}{{SeeCompatTable}}
 
 有越来越多的基于 web 的设备能够确定它们的方向; 也就是说，它们可以报告数据以指示基于重力方向的方向改变。特别地，手持设备如手机可以利用这些信息以自动旋转屏幕，保持内容直立，当设备旋转至横屏时（宽度大于高度），提供网页内容的横屏视图。
 
