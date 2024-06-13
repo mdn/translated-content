@@ -1,7 +1,6 @@
 ---
 title: Physical properties (物理プロパティ)
 slug: Glossary/Physical_properties
-page-type: glossary-definition
 ---
 
 {{GlossarySidebar}}
