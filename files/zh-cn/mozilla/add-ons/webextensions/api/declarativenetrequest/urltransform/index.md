@@ -7,6 +7,8 @@ l10n:
 
 {{AddonSidebar}}
 
+描述 URL 转换以执行重定向规则的详细信息。此对象可以在 {{WebExtAPIRef("declarativeNetRequest.RuleAction", "rule.action")}}.redirect.transform 中指定。
+
 ## 类型
 
 该类型的值是对象。它们包含以下属性：
