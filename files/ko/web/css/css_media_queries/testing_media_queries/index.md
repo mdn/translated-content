@@ -81,9 +81,9 @@ mediaQueryList.removeEventListener("change", handleOrientationChange);
 
 ## 같이 보기
 
-- [미디어 쿼리](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [CSS 미디어 쿼리](/en-US/docs/Web/CSS/CSS_media_queries) 모듈
-- [CSS 객체 모델](/en-US/docs/Web/API/CSS_Object_Model) 모듈
+- [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [CSS 미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries) 모듈
+- [CSS 객체 모델](/ko/docs/Web/API/CSS_Object_Model) 모듈
 - {{domxref("window.matchMedia()")}}
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListEvent")}}
