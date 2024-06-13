@@ -9,7 +9,7 @@ l10n:
 
 **`bookmarks.update()`** 方法更新书签的标题和 URL，或者更新书签文件夹的名称。
 
-> **警告：** 如果你的扩展尝试更新书签树根节点中的书签，则调用将引发错误，并显示消息：“书签根节点不能被修改”，并且书签将不会被更新。
+> **警告：** 如果你的扩展尝试更新书签树根节点中的书签，则调用将引发错误，并显示消息：“The bookmark root cannot be modified”，并且书签将不会被更新。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -17,8 +17,8 @@ l10n:
 
 ```js-nolint
 let updating = browser.bookmarks.update(
-  id,                    // string
-  changes                // object
+  id,                    // 字符串
+  changes                // 对象
 )
 ```
 
@@ -26,24 +26,24 @@ let updating = browser.bookmarks.update(
 
 - `id`
 
-  - : 一个 {{jsxref("string")}}，指定要更新的书签或书签文件夹的 ID。
+  - : {{jsxref("string", "字符串", "", 1)}}，指定要更新的书签或书签文件夹的 ID。
 
 - `changes`
 
-  - : 一个 {{jsxref("object")}}，指定要应用的更改，其中包含以下某些字段的组合。未指定的任何项目在引用的书签或文件夹中不会被更改：
+  - : {{jsxref("object", "对象", "", 1)}}，指定要应用的更改，其中包含以下某些字段的组合。未指定的任何项目在引用的书签或文件夹中不会被更改：
 
     - `title` {{optional_inline}}
-      - : 一个 {{jsxref("string")}}，包含书签的新标题，如果 `id` 引用文件夹，则包含文件夹的新名称。
+      - : {{jsxref("string", "字符串", "", 1)}}，包含书签的新标题；或者，如果 `id` 引用文件夹，则包含文件夹的新名称。
     - `url` {{optional_inline}}
-      - : 一个 {{jsxref("string")}}，提供书签的新 URL。
+      - : {{jsxref("string", "字符串", "", 1)}}，提供书签的新 URL。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现已更新的书签的单个 [`bookmarks.BookmarkTreeNode`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) 对象。如果与 `id` 参数对应的书签项无法找到，则该 Promise 将被拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现已更新的书签的单个 [`bookmarks.BookmarkTreeNode`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) 对象。如果无法找到与 `id` 参数对应的书签项，则该 Promise 将被拒绝。
 
 ## 示例
 
-此示例将所有名为“MDN”的文件夹重命名为“Mozilla Developer Network (MDN)”。
+此示例将所有名为“MDN”的文件夹重命名为“Mozilla 开发者网络（MDN）”。
 
 ```js
 function onFulfilled(bookmarkItem) {
@@ -56,11 +56,11 @@ function onRejected(error) {
 
 function updateFolders(items) {
   for (const item of items) {
-    // 只有文件夹，所以跳过具有 `url` 的项目
+    // 仅限文件夹，所以跳过具有 `url` 的项目
     if (!item.url) {
       browser.bookmarks
         .update(item.id, {
-          title: "Mozilla Developer Network (MDN)",
+          title: "Mozilla 开发者网络（MDN）",
         })
         .then(onFulfilled, onRejected);
     }
