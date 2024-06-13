@@ -3,7 +3,7 @@ title: Empilement sans z-index
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
 ---
 
-{{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_et_float", "Web/CSS/Comprendre_z-index")}}
+{{CSSRef}}{{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_et_float", "Web/CSS/Comprendre_z-index")}}
 
 ## Empilement sans `z-index`
 

@@ -26,7 +26,7 @@ open(url, target, windowFeatures)
 
   - : 一个不含空格的字符串，用于指定加载资源的浏览上下文的[名称](/zh-CN/docs/Web/API/Window/name)。如果该名称无法识别现有的上下文，则会创建一个新的上下文，并赋予指定的名称。还可以使用特殊的 [`target` 关键字](/zh-CN/docs/Web/HTML/Element/a#target)：`_self`、`_blank`、`_parent` 和 `_top`。
 
-  该名称可用作 [`<a>`](/zh-CN/docs/Web/HTML/Element/a#target) 或 [`<form>`](/zh-CN/docs/Web/HTML/Element/form#target) 元素的 `target` 属性。
+    该名称可用作 [`<a>`](/zh-CN/docs/Web/HTML/Element/a#target) 或 [`<form>`](/zh-CN/docs/Web/HTML/Element/form#target) 元素的 `target` 属性。
 
 - `windowFeatures` {{optional_inline}}
 
@@ -40,7 +40,7 @@ open(url, target, windowFeatures)
 
         > **备注：** 在 `windowFeatures` 参数中指定除 `noopener` 或 `noreferrer` 以外的任何特性，也会产生请求弹出窗口的效果。
 
-        要启用该特性，可以不指定 `popup` 值，或将其设置为 `yes`, `1` 或 `true`。
+        要启用该特性，可以不指定 `popup` 值，或将其设置为 `yes`、`1` 或 `true`。
 
         例如：`popup=yes`、`popup=1`、`popup=true` 和`popup` 的结果完全相同。
 

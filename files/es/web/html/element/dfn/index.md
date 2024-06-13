@@ -3,6 +3,8 @@ title: dfn
 slug: Web/HTML/Element/dfn
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - Sirve para marcar el término que se quiere definir.

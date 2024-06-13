@@ -3,6 +3,8 @@ title: 교차 출처 리소스 공유 (CORS)
 slug: Web/HTTP/CORS
 ---
 
+{{HTTPSidebar}}
+
 **교차 출처 리소스 공유**(Cross-Origin Resource Sharing, {{Glossary("CORS")}})는 추가 {{Glossary("HTTP")}} 헤더를 사용하여, 한 {{glossary("origin", "출처")}}에서 실행 중인 웹 애플리케이션이 다른 출처의 선택한 자원에 접근할 수 있는 권한을 부여하도록 브라우저에 알려주는 체제입니다. 웹 애플리케이션은 리소스가 자신의 출처(도메인, 프로토콜, 포트)와 다를 때 교차 출처 HTTP 요청을 실행합니다.
 
 교차 출처 요청의 예시: `https://domain-a.com`의 프론트 엔드 JavaScript 코드가 {{domxref("XMLHttpRequest")}}를 사용하여 `https://domain-b.com/data.json`을 요청하는 경우.

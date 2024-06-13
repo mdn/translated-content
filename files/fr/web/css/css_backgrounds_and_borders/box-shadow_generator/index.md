@@ -3,6 +3,8 @@ title: Générateur de box-shadow
 slug: Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
 ---
 
+{{CSSRef}}
+
 Cet outil visuel permet de construire des effets d'ombre et de générer du code pour la propriété {{cssxref("box-shadow")}} qui pourra être ajouté à votre feuille de style.
 
 {{EmbedGHLiveSample("css-examples/tools/box-shadow-generator/", '100%', 900)}}

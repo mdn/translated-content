@@ -3,6 +3,8 @@ title: fill-opacity
 slug: Web/SVG/Attribute/fill-opacity
 ---
 
+{{SVGRef}}
+
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 Этот атрибут определяет прозрачность цвета заполнения содержимого элемента.

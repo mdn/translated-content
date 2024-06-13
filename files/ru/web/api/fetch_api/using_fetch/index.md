@@ -3,6 +3,8 @@ title: Использование Fetch
 slug: Web/API/Fetch_API/Using_Fetch
 ---
 
+{{DefaultAPISidebar("Fetch API")}}
+
 [Fetch API](/ru/docs/Web/API/Fetch_API) предоставляет интерфейс JavaScript для работы с запросами и ответами HTTP. Он также предоставляет глобальный метод {{domxref("GlobalFetch.fetch","fetch()")}}, который позволяет легко и логично получать ресурсы по сети асинхронно.
 
 Подобная функциональность ранее достигалась с помощью {{domxref("XMLHttpRequest")}}. Fetch представляет собой лучшую альтернативу, которая может быть легко использована другими технологиями, такими как {{domxref("ServiceWorker_API", "Service Workers")}}. Fetch также обеспечивает единое логическое место для определения других связанных с HTTP понятий, такие как CORS и расширения для HTTP.

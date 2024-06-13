@@ -3,6 +3,8 @@ title: HTML5 の動画へのキャプションと字幕の追加
 slug: Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 ---
 
+{{QuickLinksWithSubPages("/ja/docs/Web/Media")}}
+
 他の記事で、 [ブラウザーに依存しない動画プレイヤーの構築](/ja/Apps/Build/Manipulating_media/cross_browser_video_player)を、 {{ domxref("HTMLMediaElement") }} 及び {{ domxref("Window.fullScreen") }} API を使用して行う方法と、[プレイヤーのスタイル付け](/ja/Apps/Build/Manipulating_media/Video_player_styling_basics)の方法について見てきました。この記事では、同じプレイヤーと使って、 {{ domxref("Web_Video_Text_Tracks_Format","WebVTT 形式") }}及び {{ htmlelement("track") }} 要素を用いてキャプションや字幕を追加する方法を紹介します。
 
 ## キャプション付きの動画の例

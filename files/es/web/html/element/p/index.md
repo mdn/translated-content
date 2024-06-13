@@ -3,6 +3,8 @@ title: p
 slug: Web/HTML/Element/p
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - El elemento [p](/es/HTML/Elemento/p) (párrafo) es el apropiado para distribuir el texto en párrafos.
