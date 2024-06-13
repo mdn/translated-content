@@ -1,5 +1,5 @@
 ---
-title: Error: columnNumber
+title: Error.prototype.columnNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
 l10n:
   sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
