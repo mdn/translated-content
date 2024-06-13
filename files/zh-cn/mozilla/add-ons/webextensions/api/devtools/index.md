@@ -2,14 +2,14 @@
 title: devtools
 slug: Mozilla/Add-ons/WebExtensions/API/devtools
 l10n:
-  sourceCommit: 115136308ab1eafe8ceba5b0a100e01e071fa8f4
+  sourceCommit: 0210ca9c0d036c29acea25295974118ff46338a8
 ---
 
 {{AddonSidebar}}
 
-启用扩展与浏览器的 {{Glossary("Developer Tools")}} 进行交互。你可以使用这个 API 来创建开发者工具页面，操作被检查的窗口，检查页面的网络使用情况。
+允许扩展与浏览器的{{Glossary("Developer Tools", "开发者工具")}}进行交互。你可以使用这个 API 来创建开发者工具页面，操作被检查的窗口，检查页面的网络使用情况。
 
-要使用这个 API，你必须在 [`devtools_page`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) 清单（manifest）中指定相应的键。使用这个清单（manifest）键会触发[安装时的开发者工具权限警告](https://support.mozilla.org/zh-CN/kb/permission-request-messages-firefox-extensions#w_extend-developer-tools-to-access-your-data-in-open-tabs)。为了避免安装时的权限警告，可以将该功能标记为可选，通过在 [`optional_permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) 清单（manifest）键中列出 `"devtools"` 权限。
+要使用这个 API，你必须在清单（manifest）中指定相应的 [`devtools_page`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) 键。使用这个清单键会触发[安装时的开发者工具权限警告](https://support.mozilla.org/zh-CN/kb/permission-request-messages-firefox-extensions#w_extend-developer-tools-to-access-your-data-in-open-tabs)。为了避免安装时的权限警告，可以在 [`optional_permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) 清单键中列出 `"devtools"` 权限，将该特性标记为可选。
 
 > **备注：** `"devtools"` 可选权限仅被 Firefox 支持，Chrome 不支持（[Chromium issue 1143015](https://crbug.com/1143015)）。
 
