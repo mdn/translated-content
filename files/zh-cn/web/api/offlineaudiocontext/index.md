@@ -45,7 +45,6 @@ _从父级 {{domxref("BaseAudioContext")}} 获取方法。_
 
 - [`complete`](/zh-CN/docs/Web/API/OfflineAudioContext/complete_event)
 
-- [`complete`](/en-US/docs/Web/API/OfflineAudioContext/complete_event)
   - : Fired when the rendering of an offline audio context is complete.
 
 - [`complete`](/en-US/docs/Web/API/OfflineAudioContext/complete_event)
