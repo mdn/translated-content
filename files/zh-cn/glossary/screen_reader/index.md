@@ -13,7 +13,7 @@ l10n:
 
 ## VoiceOver
 
-macOS 自带 VoiceOver，这是一个内置的屏幕阅读器。要访问 VoiceOver，请转到“系统偏好设置” > “辅助功能” > “VoiceOver”。你也可以使用 fn+command + F5 来切换 VoiceOver 的开关。VoiceOver 既可以朗读内容，也可以显示内容。朗读的内容会在一个深灰色的框中显示出来。
+macOS 自带 VoiceOver，这是一个内置的屏幕阅读器。要访问 VoiceOver，请转到“系统设置” > “辅助功能” > “朗读内容”。你也可以使用 fn+command + F5 来切换 VoiceOver 的开关。VoiceOver 既可以朗读内容，也可以显示内容。朗读的内容会在一个深灰色的框中显示出来。
 
 桌面/笔记本电脑屏幕阅读器用户使用键盘或其他非指向设备导航网站。模拟使用的最佳方法是使用相同的方式。
 
