@@ -723,23 +723,6 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/html#manifest">manifest</a></code>
-        {{deprecated_inline}}
-      </td>
-      <td>{{ HTMLElement("html") }}</td>
-      <td>
-        指定文档的缓存清单的 URL。
-        <div class="note">
-          <p>
-            <strong>备注：</strong>该属性已过时，请使用
-            <a href="/zh-CN/docs/Web/Manifest"><code>&#x3C;link rel="manifest"></code></a>
-            代替。
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
         <code><a href="/zh-CN/docs/Web/HTML/Attributes/max">max</a></code>
       </td>
       <td>
