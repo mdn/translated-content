@@ -41,7 +41,9 @@ _从父级 {{domxref("BaseAudioContext")}} 获取方法。_
 
 ### 事件
 
-通过使用 [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) 或给这个接口的 `oneventname` 属性指定一个事件监听器来监听这些事件。
+通过使用 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 或给这个接口的 `oneventname` 属性指定一个事件监听器来监听这些事件。
+
+- [`complete`](/zh-CN/docs/Web/API/OfflineAudioContext/complete_event)
 
 - [`complete`](/en-US/docs/Web/API/OfflineAudioContext/complete_event)
   - : Fired when the rendering of an offline audio context is complete.
