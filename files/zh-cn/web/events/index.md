@@ -404,7 +404,7 @@ l10n:
           ><code>VideoTrackList</code></a
         >、<a href="/zh-CN/docs/Web/API/HTMLTrackElement#events"
           ><code>HTMLTrackElement</code></a
-        >、<a href="/zh-CN/docs/Web/API/OfflineAudioContext#events"
+        >、<a href="/zh-CN/docs/Web/API/OfflineAudioContext#事件"
           ><code>OfflineAudioContext</code></a
         >、<a href="/zh-CN/docs/Web/API/TextTrack#events"><code>TextTrack</code></a
         >、<a href="/zh-CN/docs/Web/API/TextTrackList#events"
