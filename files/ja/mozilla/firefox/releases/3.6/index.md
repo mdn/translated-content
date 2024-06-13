@@ -3,6 +3,8 @@ title: Firefox 3.6 for developers
 slug: Mozilla/Firefox/Releases/3.6
 ---
 
+{{FirefoxSidebar}}
+
 Firefox 3.6 では新規あるいは開発中のウェブ標準のサポート、性能の向上、ウェブユーザーと開発者にとってより良い体験が提供されます。このページは Firefox 3.6 で新しく利用出来るようになった機能に関する記事のリンクを提供します。
 
 ## ウェブサイトとアプリケーション開発者向け
@@ -123,7 +125,7 @@ Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/Java
 
 ### その他
 
-- Firefox は components ディレクトリ内にインストールされたサードパーティのコンポーネントをロードしなくなりました。これはバグのあるサードパーティコンポーネントが実行されるのを防止することによる安定性の向上に貢献します。このやり方でコンポーネントをインストールする開発者は標準的なアドオンとしてインストールできるように[それらコンポーネントを XPI パッケージとして再パッケージする必要があります](/ja/docs/Migrating_raw_components_to_add-ons)。
+- Firefox は components ディレクトリー内にインストールされたサードパーティのコンポーネントをロードしなくなりました。これはバグのあるサードパーティコンポーネントが実行されるのを防止することによる安定性の向上に貢献します。このやり方でコンポーネントをインストールする開発者は標準的なアドオンとしてインストールできるように[それらコンポーネントを XPI パッケージとして再パッケージする必要があります](/ja/docs/Migrating_raw_components_to_add-ons)。
 - 拡張において chrome を登録するために用いていた `contents.rdf は利用できなくなりました`。 [`chrome.manifest`](/ja/docs/Install_Manifests) ファイルを代わりに利用しなければなりません。 [バグ 492008](https://bugzilla.mozilla.org/show_bug.cgi?id=492008) を参照してください。
 - メニューバーを自動的に隠すためのサポートが追加されました。[バグ 477256](https://bugzilla.mozilla.org/show_bug.cgi?id=477256) を参照してください。
 - オブジェクトに対して `container-live-role` 属性を持たせるためのサポートが追加されました。[バグ 391829](https://bugzilla.mozilla.org/show_bug.cgi?id=391829) を参照してください。

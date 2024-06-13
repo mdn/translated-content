@@ -3,6 +3,8 @@ title: XSLT
 slug: Web/XSLT
 ---
 
+{{XsltSidebar}}
+
 **[Tutorial XSLT (en)](http://www.w3schools.com/xsl/)**
 Este tutorial enseña como usar XSLT para transformar documentos XML en otros formatos.
 
