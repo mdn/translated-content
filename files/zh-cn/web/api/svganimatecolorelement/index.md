@@ -13,11 +13,11 @@ l10n:
 
 ## 实例属性
 
-_该接口没有属性，但从其父级继承 {{domxref("SVGAnimationElement")}} 属性。_
+_该接口没有属性，但从其父接口 {{domxref("SVGAnimationElement")}} 继承属性。_
 
 ## 实例方法
 
-_该接口没有方法，但从其父级继承 {{domxref("SVGAnimationElement")}} 方法。_
+_该接口没有方法，但从其父接口 {{domxref("SVGAnimationElement")}} 继承方法。_
 
 ## 规范
 
