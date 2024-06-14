@@ -42,7 +42,7 @@ API 不会将任何语义与消息关联，因此由代码来决定要接收什�
 发布消息时，会向连接到此频道的每个 {{domxref("BroadcastChannel")}} 对象发送一个 [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) 事件。可以使用 {{domxref("BroadcastChannel/message_event", "onmessage")}} 事件处理器为此事件运行一个函数：
 
 ```js
-// 仅将事件记录到控制台的处理程序：
+// 仅将事件记录到控制台的处理器：
 bc.onmessage = (event) => {
   console.log(event);
 };
@@ -66,7 +66,7 @@ Broadcast Channel API 的独立接口允许跨上下文通信。它可用于检�
 ## 接口
 
 - {{domxref("BroadcastChannel")}}
-  - : 表示任何给定{{glossary("origin", "源")}}的{{glossary("browsing context", "浏览上下文")}}都可以订阅的命名频道。
+  - : 表示任何给定{{glossary("origin", "源")}}的{{glossary("browsing context", "浏览上下文")}}都可以订阅的具名频道。
 
 ## 规范
 
