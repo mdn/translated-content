@@ -11,7 +11,7 @@ l10n:
 
 这是包含布尔属性 `visible` 的一组 `Window` 属性之一，用于表示 web 浏览器用户界面的特定部分是否可见。
 
-由于隐私和互操作性的原因，如果 `Window` 是弹出窗口，则 visible 属性的值为 `false`，反之为 `true`。
+由于隐私和互操作性的原因，如果 `Window` 是弹出窗口，则 `visible` 属性的值为 `false`，反之为 `true`。
 
 ## 值
 
