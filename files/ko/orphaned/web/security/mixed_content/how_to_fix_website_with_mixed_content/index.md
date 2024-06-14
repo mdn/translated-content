@@ -1,6 +1,7 @@
 ---
 title: 차단된 혼합 콘텐츠가 있는 웹사이트를 고치는 방법
-slug: Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
+slug: orphaned/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
+original_slug: Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
 l10n:
   sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
