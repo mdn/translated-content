@@ -2,14 +2,14 @@
 title: クライアントサイドの JavaScript フレームワークを理解する
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 l10n:
-  sourceCommit: 5fa776ca3c79d0298cdf07c50ed0024d8b185716
+  sourceCommit: 26e2f9883e0e73def04c0e86fec6da3ec42e66b3
 ---
 
 {{LearnSidebar}}
 
 JavaScript フレームワークは、最新のフロントエンドウェブ開発に欠かせないものであり、開発者にスケーラブルでインタラクティブなウェブアプリケーションを構築するための試行錯誤されたツールを提供しています。現代の多くの企業では、フレームワークをツールの標準的な一部として使用しているため、多くのフロントエンド開発の仕事でフレームワークの経験が必要とされています。
 
-フロントエンド開発者を目指していると、フレームワークを学ぶ際にどこから始めればいいのか悩むことがあります。フレームワークは常に新しいものが登場するため、非常に多くの種類の中から選ぶことができます。これらはほとんど同じように動作しますが、いくつかの点において異なっています。そしてフレームワークを利用する上では、具体的に注意しなければならないこともあります。
+フロントエンド開発者を目指していると、フレームワークを学ぶ際にどこから始めればいいのか悩むことがあります。フレームワークは常に新しいものが登場するため、多くの種類の中から選ぶことができます。これらはほとんど同じように動作しますが、いくつかの点において異なっています。そしてフレームワークを利用する上では、具体的に注意しなければならないこともあります。
 
 この記事では、あなたがフレームワークを学び始めるための快適な出発点を提供することを目的としています。私たちは、React/ReactDOM や Vue、その他の特定のフレームワークについて知っておく必要があるすべてのことを網羅的に教えることを目指しているわけではありません。その代わりに、以下のようなより基本的な質問に答えたいと思います。
 
@@ -28,14 +28,6 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 ウェブプラットフォームの基本的な機能を理解すれば、その上で構築されているフレームワークのトラブルも自信を持って解決できるでしょう。そうすれば、あなたの書くコードはより豪華でプロフェッショナルなものになるはずです。
 
-> **注目:**
->
-> #### フロントエンドのウェブ開発者になりたい方へ
->
-> このコースの中には、目標に向かって作業するために必要な、すべての必須情報が記載されています。
->
-> [**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
-
 ## 入門ガイド
 
 - [1. クライアントサイドフレームワークの紹介](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
@@ -45,9 +37,9 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 ## React のチュートリアル
 
-> **メモ:** この React のチュートリアルは React/ReactDOM 16.13.1 と create-react-app 3.4.1 で、2020 年 5 月に動作確認を行いました。
+> **メモ:** この React のチュートリアルは 2023 年 1 月に、React/ReactDOM 18.2.0 と create-react-app 5.0.1 で動作確認を行いました。
 >
-> もし、コードとサンプルのバージョンとを確認する必要があれば、 [todo-react リポジトリー](https://github.com/mdn/todo-react)で最新版を見ることができます。実行中のライブバージョンについては、 <https://mdn.github.io/todo-react-build/> から確認ができます。
+> もし、コードとサンプルのバージョンとを確認する必要があれば、 [todo-react リポジトリー](https://github.com/mdn/todo-react)で最新版を見ることができます。実行中のライブバージョンについては、 <https://mdn.github.io/todo-react/> から確認ができます。
 
 - [1. React を始める](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
   - : この記事では React のはじめかたを説明します。React の背景と使い方について説明し、ローカル環境で基本的な React ツールチェーンを設定します。また、シンプルな基本アプリを作成して、React がどのようなプロセスで機能するのかを学んでいきます。
@@ -66,7 +58,7 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 ## Ember のチュートリアル
 
-> **メモ:** この Ember チュートリアルは Ember/Ember CLI version 3.18.0 で、2020 年 5 月に動作確認を行いました。
+> **メモ:** この Ember チュートリアルは 2020 年 5 月に Ember/Ember CLI version 3.18.0 で動作確認を行いました。
 >
 > もし、コードとサンプルのバージョンとを確認する必要があれば、[ember-todomvc-tutorial リポジトリー](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc) で最新版を見ることができます。実行中のライブバージョンについては <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> から確認ができます（ただしチュートリアルで取り扱っていない機能も含まれています）。
 
@@ -85,9 +77,9 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 ## Vue のチュートリアル
 
-> **メモ:** この Vue チュートリアルは Vue 2.6.11 で、2020 年 5 月に動作確認を行いました。
+> **メモ:** この Vue チュートリアルは 2023 年 1 月に、Vue 3.2.45 で動作確認を行いました。
 >
-> もし、コードとサンプルのバージョンとを確認する必要があれば、 [todo-vue リポジトリー](https://github.com/mdn/todo-vue)で最新版を見ることができます。実行中のライブバージョンについては <https://mdn.github.io/todo-vue/dist/> から確認ができます。
+> もし、コードとサンプルのバージョンとを確認する必要があれば、 [todo-vue リポジトリー](https://github.com/mdn/todo-vue)で最新版を見ることができます。実行中のライブバージョンについては <https://mdn.github.io/todo-vue/> から確認ができます。
 
 - [1. Vue を始める](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
   - : これで、フレームワークの 3 つ目である Vue を紹介することができます。この記事では、 Vue の背景を少し見て、インストールと新しいプロジェクトの作成方法を学び、プロジェクト全体と個々のコンポーネントのハイレベルな構造を勉強し、プロジェクトをローカルで実行する方法を確認し、例の構築を始めるために取得します。
@@ -103,7 +95,7 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
   - : この記事では、 Vue の computed プロパティと呼ばれる機能を使用して、完了した Todo アイテムの数を表示するカウンターを追加します。この著作物はメソッドと似たような作業をしますが、依存関係の 1 つが動作したときだけ再実行されます。
 - [7. Vue の条件付きレンダリング: 既存の TODO の編集](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
   - : これで、まだ欠けている機能の主要な部分の一つである、既存のTodoアイテムを編集する機能を追加する時が来ました。この機能を実現するために、 Vue の条件付きレンダリング機能である `v-if` と `v-else` を利用して、既存の Todo アイテムビューと、 Todo アイテムのラベルを更新できる編集ビューを切り替えられるようにします。また、 Todo アイテムを削除する機能の追加も見ていきます。
-- [8. Vue refs によるフォーカス管理](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+- [8. Vue のフォーカス管理のための refs と lifecycle メソッド](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
   - : Vue の使用はほぼ終了しました。最後に見るべき機能は、フォーカス管理です。別の言い方をすれば、アプリのキーボードアクセシビリティをどのように向上させるか、ということです。この処理に Vue refs を使用することを見ていきます。この機能は、仮想 DOM の下にある基礎 DOM ノードに直接アクセスしたり、あるコンポーネントから子コンポーネントの内部 DOM 構造に直接アクセスしたりすることができる先進的な機能です。
 - [9. Vue のリソース](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
   - : これで、 Vue の学習の締めくくりとして、さらに学習を進めるために使用できるリソースのリストと、他にも有益なヒントを提供します。
@@ -125,7 +117,7 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 - [5. 高度な Svelte: リアクティブ、ライフサイクル、アクセシビリティ](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
   - : この記事では、アプリの最終的な機能を追加し、さらにアプリをコンポーネント化します。オブジェクトや配列の更新に関連するリアクティビティの問題に対処する方法について学びます。よくある落とし穴を避けるために、 Svelte のリアクティブシステムを少し深く掘り下げる必要があります。また、アクセシビリティのフォーカスに関する問題の解決や、その他の問題にも目を向けていきます。
 - [6. Svelte のストアでの作業](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - : この記事では、Svelteで状態管理を処理するもう一つの方法である[ストア](https://svelte.dev/tutorial/writable-stores)を示します。ストアは、値を格納するグローバルなデータリポジトリーです。コンポーネントはストアに格納され、その値が変更されたときに通知を受け取ることができます。
+  - : この記事では、Svelteで状態管理を処理するもう一つの方法である[ストア](https://learn.svelte.dev/tutorial/writable-stores)を示します。ストアは、値を格納するグローバルなデータリポジトリーです。コンポーネントはストアに格納され、その値が変更されたときに通知を受け取ることができます。
 - [7. TypeScript support in Svelte](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
   - : これで、 Svelte アプリケーションで TypeScript を使用する方法を学ぶことができます。まず、 TypeScript とは何か、そして TypeScript が私たちにもたらす好ましいこととは何かを学びます。次に、 TypeScript ファイルを使用して作業するために、プロジェクトをどのように設定するかを見ていきます。最後に、 TypeScript の機能を十分に活かすためにはどのような修正が必要なのか、アプリを確認します。
 - [8. 展開と次の手順](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
@@ -161,4 +153,4 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 前もって言っておきますが、取り上げたフレームワークは私たちがベストだと思うから選んだわけでは**ありません**。また推奨しているわけでもありません。ただ、上記の基準を満たしていると考えただけです。
 
-初期の段階では、もっと多くのフレームワークを取り上げたいと考えていましたが、このコンテンツの公開を遅らせることよりも、後からフレームワークを追加する方が良いと考えました。もし、あなたのお気に入りのフレームワークがこのコンテンツに含まれておらず、それを変える手助けをしたいのであれば、私たちと気軽に意見を交わしましょう！[Matrix](https://wiki.mozilla.org/Matrix) や [Discourse](https://discourse.mozilla.org/c/mdn/236) を通じて私たちと連絡を取るか、[mdn-admins list](mailto:mdn-admins@mozilla.org) にメールを送ってください。
+初期の段階では、もっと多くのフレームワークを取り上げたいと考えていましたが、このコンテンツの公開を遅らせることよりも、後からフレームワークを追加する方が良いと考えました。もし、あなたのお気に入りのフレームワークがこのコンテンツに含まれておらず、それを変える手助けをしたいのであれば、私たちと気軽に[意見を交わしましょう](/ja/docs/MDN/Community/Communication_channels)！

@@ -3224,7 +3224,6 @@
 /ja/docs/Web/API/WindowTimers/setTimeout	/ja/docs/Web/API/setTimeout
 /ja/docs/Web/API/Worker/onerror	/ja/docs/Web/API/Worker/error_event
 /ja/docs/Web/API/Worker/onmessageerror	/ja/docs/Web/API/Worker/messageerror_event
-/ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/WorkerGlobalScope/console	/ja/docs/conflicting/Web/API/console
 /ja/docs/Web/API/XMLDocument/async	/ja/docs/Web/API/XMLDocument
 /ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest	/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest
