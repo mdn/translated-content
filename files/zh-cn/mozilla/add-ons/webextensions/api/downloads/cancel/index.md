@@ -9,7 +9,7 @@ l10n:
 
 **`cancel()`** 函数是 {{WebExtAPIRef("downloads")}} API 的一部分，用于取消一个下载操作。如果下载未处于活动状态（例如，已完成下载），则调用将失败。
 
-这是一个返回 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)。异步函数。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。异步函数。
 
 ## 语法
 
@@ -26,7 +26,7 @@ let canceling = browser.downloads.cancel(
 
 ### 返回值
 
-一个 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)，如果请求成功其会兑现，且不带任何参数。如果请求失败，promise 将被拒绝并带有错误消息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，如果请求成功其会兑现，且不带任何参数。如果请求失败，promise 将被拒绝并带有错误消息。
 
 ## 浏览器兼容性
 
