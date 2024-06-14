@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`polygon()`** [CSS](/zh-CN/docs/Web/CSS) 函数是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)之一。它用于通过提供一个或多个坐标对来绘制[多边形](https://en.wikipedia.org/wiki/Polygon)。
+**`polygon()`** [CSS](/zh-CN/docs/Web/CSS) 函数是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)之一。它用于通过提供一个或多个坐标对（每一个坐标代表形状的一个顶点）来绘制[多边形](https://zh.wikipedia.org/wiki/多边形)。
 
 {{EmbedInteractiveExample("pages/css/function-polygon.html")}}
 
@@ -37,7 +37,7 @@ polygon(evenodd, 0% 0%, 50% 50%, 0% 100%)
 - [`<fill-rule>`](/zh-CN/docs/Web/SVG/Attribute/fill-rule) {{optional_inline}}
   - : 一个可选的值，可以是 `nonzero`（默认值，当省略时）或 `evenodd`，指定填充规则。
 - {{cssxref("length-percentage")}}
-  - : 每个多边形的顶点由一对 `<length-percentage>` 值表示，给出了相对于形状的[参考框][reference box](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes#the_reference_box)的顶点的 x/y 坐标。
+  - : 每个多边形的顶点由一对 `<length-percentage>` 值表示，给出了相对于形状的[参考框](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes#参考框)的顶点的 x/y 坐标。
 
 ### 返回值
 
@@ -95,7 +95,7 @@ clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 
 #### 结果
 
-{{EmbedLiveSample("Create a triangle", '100%', 400)}}
+{{EmbedLiveSample("创建一个三角形", '100%', 400)}}
 
 三角形的坐标是容器的右上角（`100% 0%`）、中心点（`50% 50%`）和右下角（`100% 100%`）。
 
@@ -154,5 +154,5 @@ p {
 
 ## 参见
 
-- 使用此数据类型的属性： {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
+- 使用此数据类型的属性：{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}
 - [基本形状指南](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes)
