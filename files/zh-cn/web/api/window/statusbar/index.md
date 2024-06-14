@@ -18,7 +18,7 @@ l10n:
 包含单个属性的对象：
 
 - `visible` {{ReadOnlyInline}}
-  - : 一个布尔属性，如果 `window` 是弹出窗口，则为 `false`，反之为 `true`。
+  - : 一个布尔属性，如果 `Window` 是弹出窗口，则为 `false`，反之为 `true`。
 
 ## 规范
 
