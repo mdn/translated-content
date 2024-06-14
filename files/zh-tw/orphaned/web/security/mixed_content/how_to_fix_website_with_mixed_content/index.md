@@ -1,6 +1,7 @@
 ---
 title: 如何修正含有混合內容的網站
-slug: Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
+slug: orphaned/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
+original_slug: Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
 ---
 
 {{QuickLinksWithSubpages("/zh-TW/docs/Web/Security")}}
