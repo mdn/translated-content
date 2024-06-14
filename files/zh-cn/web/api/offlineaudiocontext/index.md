@@ -37,7 +37,7 @@ _从父级 {{domxref("BaseAudioContext")}} 获取方法。_
 - {{domxref("OfflineAudioContext.resume()")}}
   - : 恢复一个被暂停的音频的时间进程。
 
-> **备注：** `resume()` 方法仍然是可用的 — 现在它定义在 {{domxref("BaseAudioContext")}} 接口中（参见 {{domxref("AudioContext.resume")}}），通过{{domxref("AudioContext")}} 接口和 {{domxref("OfflineAudioContext")}} 接口都可以被访问。
+> **备注：** `resume()` 方法仍然是可用的——现在它定义在 {{domxref("BaseAudioContext")}} 接口中（参见 {{domxref("AudioContext.resume")}}），通过{{domxref("AudioContext")}} 接口和 {{domxref("OfflineAudioContext")}} 接口都可以被访问。
 
 ### 事件
 
