@@ -13,7 +13,7 @@ l10n:
 
 > **备注：** 如果启用通过 SOCKS 代理的 DNS 解析，DNS 解析将失败并显示 NS_ERROR_UNKNOWN_PROXY_HOST。
 
-## 功能
+## 函数
 
 - {{WebExtAPIRef("dns.resolve()")}}
   - ：将给定的主机名解析为 DNS 记录。
