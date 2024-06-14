@@ -40,11 +40,11 @@ l10n:
 
 如果这些选项都不可用，或者如果默认的无障碍名称不合适，则使用 `aria-label` 属性定义元素的无障碍名称。
 
-> **备注：** 虽然 `aria-label` 可以用于任何可以具有无障碍名称的元素，但在实践中，它仅支持交互元素、[小部件](/zh-CN/docs/Web/Accessibility/ARIA/Roles#2._widget_roles)、[地标](/zh-CN/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles)、图像和 iframe。
+> **备注：** 虽然 `aria-label` 可以用于任何可以具有无障碍名称的元素，但在实践中，它仅支持交互元素、[小部件](/zh-CN/docs/Web/Accessibility/ARIA/Roles#2._小部件角色)、[地标](/zh-CN/docs/Web/Accessibility/ARIA/Roles#3._地标角色)、图像和 iframe。
 
-在使用 `aria-label` 时，还需要考虑 aria-labelledby[`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)：
+在使用 `aria-label` 时，还需要考虑 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)：
 
-- 在可见文本无法标记元素的情况下，可以使用 `aria-label`。如果存在可见文本用于标记元素，请改用 `aria-labelledby`。
+- 在用于标注元素的文本*不*可见的情况下，可以使用 `aria-label`。如果存在可见文本用于标记元素，请改用 `aria-labelledby`。
 - `aria-label` 和 `aria-labelledby` 的目的相同。两者都为元素提供无障碍名称。如果元素没有可见名称可以引用，则使用 `aria-label` 为用户提供可识别的无障碍名称。如果 DOM 中存在标签文本，并且可以引用它以获得良好的用户体验，则最好使用 `aria-labelledby`。不要在同一元素上同时使用 `aria-labelledby` 和 `aria-label`，因为如果两者都应用，则 `aria-labelledby` 会优先于 `aria-label`。
 
 在使用 `aria-label` 时，还需要考虑以下额外的准则：
@@ -55,9 +55,9 @@ l10n:
 
   > **备注：** 由于 `aria-label` 内容在辅助技术之外不显示，请考虑让所有用户看到重要信息。
 
-- 并非所有元素都可以获得无障碍名称。`aria-label` 和 `aria-labelledby` 均不应该与 `code`、`term` 和 `emphasis` 这样的行内结构角色以及未映射到辅助技术 API 的角色（包括 `none`）一起使用。`aria-label` 属性适用于链接、视频、表单控件以及具有[地标角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles)或[小部件角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles#2._widget_roles)的元素；当 DOM 中不存在可见标签时，`aria-label` 提供了无障碍名称。
+- 并非所有元素都可以获得无障碍名称。`aria-label` 和 `aria-labelledby` 均不应该与 `code`、`term` 和 `emphasis` 这样的行内结构角色以及未映射到辅助技术 API 的角色（包括 `none`）一起使用。`aria-label` 属性适用于链接、视频、表单控件以及具有[地标角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles#3._地标角色)或[小部件角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles#2._小部件角色)的元素；当 DOM 中不存在可见标签时，`aria-label` 提供了无障碍名称。
 
-如果为 {{HTMLElement('iframe')}} 分配了 `title`，为 {{HTMLElement('img')}} 定义了 `alt` 属性，或为 {{HTMLElement('input')}} 添加了 {{HTMLElement('label')}}，则不需要 `aria-label`。但是，如果存在 `aria-label` 属性，则它将优先于 iframe 的 `title`，图像的 `alt` 或输入的 `<label>` 文本作为该元素的无障碍名称。
+- 如果为 {{HTMLElement('iframe')}} 分配了 `title`，为 {{HTMLElement('img')}} 定义了 `alt` 属性，或为 {{HTMLElement('input')}} 添加了 {{HTMLElement('label')}}，则不需要 `aria-label`。但是，如果存在 `aria-label` 属性，则它将优先于 iframe 的 `title`，图像的 `alt` 或 input 的 `<label>` 文本作为该元素的无障碍名称。
 
 ## 值
 
@@ -103,4 +103,4 @@ aria-label 属性**不**受支持的角色有：
 - {{HTMLElement('label')}} 元素
 - [`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-description)
 - [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-- [使用 HTML 地标角色来提高无障碍性](/en-US/blog/aria-accessibility-html-landmark-roles/) 在 MDN 博客（2023）
+- MDN 博客中的[使用 HTML 地标角色来提高无障碍性](/en-US/blog/aria-accessibility-html-landmark-roles/)（2023）
