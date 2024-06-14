@@ -9,7 +9,7 @@ l10n:
 
 **Broadcast Channel API** 允许{{glossary("browsing context", "浏览上下文")}}（即 _window_、_tab_、_frame_ 或 _iframe_）与同{{glossary("origin", "源")}}的 worker 之间进行基本通信。
 
-通过创建 {{domxref("BroadcastChannel")}} 对象，你可以接收发布到该对象的任何消息。你不必维护对要与之通信的框架或工作者的引用：他们可以通过构建具有相同名称的 {{domxref("BroadcastChannel")}} 来“订阅”特定频道，并在它们之间进行双向通信。
+通过创建 {{domxref("BroadcastChannel")}} 对象，你可以接收发布到该对象的任何消息。你不必维护对要与之通信的框架或 worker 的引用：他们可以通过构建具有相同名称的 {{domxref("BroadcastChannel")}} 来“订阅”特定频道，并在它们之间进行双向通信。
 
 ![Broadcast Channel API 的原理](broadcastchannel.png)
 
