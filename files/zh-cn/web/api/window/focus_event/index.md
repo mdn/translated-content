@@ -1,45 +1,38 @@
 ---
-title: "Window: focus event"
+title: Window：focus 事件
 slug: Web/API/Window/focus_event
+l10n:
+  sourceCommit: b4dc8c13ae9041844dc45423aa087002bf9a25e9
 ---
 
 {{APIRef}}
 
-当元素获得焦点时， **`focus`** 事件就会触发。
+当元素获得焦点时，**`focus`** 事件就会触发。
 
-与 `focus` 相反的事件是 {{domxref("Window/blur_event", "blur")}}
+与 `focus` 相反的事件是 {{domxref("Window/blur_event", "blur")}}，此事件不可取消，也不会冒泡。
 
-<table class="properties">
-  <tbody>
-    <tr></tr>
-    <tr>
-      <th>Bubbles（支持冒泡）</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Cancelable（可撤销）</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Interface（接口）</th>
-      <td>{{DOMxRef("FocusEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property（事件处理程序属性）</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onfocus", "onfocus")}}
-      </td>
-    </tr>
-    <tr>
-      <th>Sync / Async（同步/异步）</th>
-      <td>Sync</td>
-    </tr>
-    <tr>
-      <th>Composed（可组成）</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
+## 语法
+
+在如 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
+
+```js
+addEventListener("focus", (event) => {});
+
+onfocus = (event) => {};
+```
+
+## 事件类型
+
+一个 {{domxref("FocusEvent")}}。继承自 {{domxref("UIEvent")}} 和 {{domxref("Event")}}。
+
+{{InheritanceDiagram("FocusEvent")}}
+
+## 事件属性
+
+_此接口从它的父级继承了属性 {{domxref("UIEvent")}}，间接来自于 {{domxref("Event")}}。_
+
+- {{domxref("FocusEvent.relatedTarget")}}
+  - : {{domxref("EventTarget")}} 代表此次事件的次要目标。在一些案例中（例如切换浏览器 tab 标签时），出于安全的原因，这个属性可能会被设置为 `null`。
 
 ## 示例
 
