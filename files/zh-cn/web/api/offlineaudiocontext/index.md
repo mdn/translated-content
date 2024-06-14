@@ -54,7 +54,7 @@ _从父级 {{domxref("BaseAudioContext")}} 获取方法。_
 
 ### 使用离线音频上下文播放音频
 
-这个例子中，我们声明了 {{domxref("AudioContext")}} 和 `OfflineAudioContext` 对象。我们使用 `AudioContext` 加载一个音频块 {{domxref("fetch()")}}，然后使用 `OfflineAudioContext` 去渲染音频并得到一个 into an {{domxref("AudioBufferSourceNode")}}，并播放这个音轨。在离线音频处理图建立后，我们使用 {{domxref("OfflineAudioContext.startRendering")}} 来渲染它成为 {{domxref("AudioBuffer")}}。
+这个例子中，我们声明了 {{domxref("AudioContext")}} 和 `OfflineAudioContext` 对象。我们使用 `AudioContext` 加载一个音频块 {{domxref("fetch()")}}，然后使用 `OfflineAudioContext` 去渲染音频并得到一个 {{domxref("AudioBufferSourceNode")}}，并播放这个音轨。在离线音频处理图建立后，我们使用 {{domxref("OfflineAudioContext.startRendering")}} 来渲染它成为 {{domxref("AudioBuffer")}}。
 
 当 `startRendering()` 的 `Promise` 解决后，渲染也完成了，在 `Promise` 内可以获得输出的 `AudioBuffer`。
 
