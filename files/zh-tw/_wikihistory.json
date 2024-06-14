@@ -4082,10 +4082,6 @@
     "modified": "2019-03-23T23:04:08.690Z",
     "contributors": ["jackblackevo", "iigmir", "a780201", "wildsky", "Asheesh"]
   },
-  "Web/Security/Mixed_content/How_to_fix_website_with_mixed_content": {
-    "modified": "2019-03-23T23:04:13.940Z",
-    "contributors": ["jackblackevo", "iigmir", "wildsky"]
-  },
   "Web/Security/Same-origin_policy": {
     "modified": "2020-09-01T23:06:58.364Z",
     "contributors": [
