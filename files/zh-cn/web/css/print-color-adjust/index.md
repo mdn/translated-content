@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-CSS 属性 **`print-color-adjust`** 用于设置{{Glossary("user agent", "用户代理")}}在输出设备上优化元素外观时可以采取的措施。默认情况下，浏览器可根据输出设备的类型和功能，对元素的外观进行必要和谨慎的调整。
+**`print-color-adjust`** CSS 属性用于设置{{Glossary("user agent", "用户代理")}}在输出设备上优化元素外观时可以采取的措施。默认情况下，浏览器可根据输出设备的类型和功能，对元素的外观进行必要和谨慎的调整。
 
 ## 语法
 
@@ -80,7 +80,7 @@ print-color-adjust: unset;
 
 ```html
 <div class="my-box">
-  <p>Need more contrast!</p>
+  <p>需要更多的对比度！</p>
 </div>
 ```
 
@@ -98,5 +98,5 @@ print-color-adjust: unset;
 
 ## 参见
 
-- 其他与颜色相关的属性：{{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
+- 其他与颜色相关的属性：{{cssxref("color")}}、{{cssxref("background-color")}}、{{cssxref("border-color")}}、{{cssxref("outline-color")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-emphasis-color")}}、{{cssxref("text-shadow")}}、{{cssxref("caret-color")}} 和 {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}

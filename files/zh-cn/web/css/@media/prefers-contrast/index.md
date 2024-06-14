@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`prefers-contrast`** [CSS](/zh-CN/docs/CSS) [媒体特性](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#Media_features)用于检测用户是否要求以更低或更高的对比度来呈现网页内容。
+**`prefers-contrast`** [CSS](/zh-CN/docs/CSS) [媒体特性](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#媒体特性)用于检测用户是否要求以更低或更高的对比度来呈现网页内容。
 
 ## 语法
 
