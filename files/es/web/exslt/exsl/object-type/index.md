@@ -3,7 +3,7 @@ title: object-type
 slug: Web/EXSLT/exsl/object-type
 ---
 
-{{ XsltRef() }}
+{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{ XsltRef() }}
 
 `exsl:object-type()` devuelve una cadena que indica el tipo del objeto especificado.
 

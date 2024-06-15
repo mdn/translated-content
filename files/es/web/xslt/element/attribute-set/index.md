@@ -3,7 +3,7 @@ title: attribute-set
 slug: Web/XSLT/Element/attribute-set
 ---
 
-{{XsltRef}}
+{{XsltSidebar}}{{XsltRef}}
 
 El elemento `<xsl:attribute-set>` genera un conjunto con nombre de atributos, el cual puede ser aplicado al documento de salida, de una manera similar a los estilos con nombre dentro de CSS.
 

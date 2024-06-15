@@ -1,30 +1,20 @@
 ---
-title: Document.applets
+title: "Document: applets プロパティ"
+short-title: applets
 slug: Web/API/Document/applets
+l10n:
+  sourceCommit: a468a537c0234a3035951e80af76715e1c36c8f7
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}} {{Deprecated_Header}}
 
-{{domxref("Document")}} インターフェイスの **`applets`** プロパティは、文書内のアプレットのリストを返します。
+**`applets`** は {{domxref("Document")}} のプロパティで、空の {{domxref("HTMLCollection")}} を返します。このプロパティは互換性のためだけに残されています。古いバージョンのブラウザーでは、文書内のアプレットのリストを返していました。
 
-> **メモ:** {{htmlelement("applet")}} 要素は [Gecko 56](https://bugzilla.mozilla.org/show_bug.cgi?id=1279218) および [2015 年後期の Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=470301) から削除されました。それ以来、これらのブラウザーで `document.applets` を呼び出しても空の {{domxref("HTMLCollection")}} しか返しません。 [WebKit](https://bugs.webkit.org/show_bug.cgi?id=157926) および [Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/11946645/) でも削除が検討されています。
-
-## 構文
-
-```
-var nodeList = document.applets;
-```
+> **メモ:** `<applet>` 要素の対応はすべてのブラウザーで除去されました。そのため、`document.applets`を呼び出すと常に空の集合を返します。
 
 ### 値
 
-{{domxref("HTMLCollection")}}
-
-## 例
-
-```js
-// 2番目のアプレットが取得したいアプレットであると分かっている場合
-my_java_app = document.applets[1];
-```
+空の {{domxref("HTMLCollection")}} です。
 
 ## 仕様書
 

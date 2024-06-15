@@ -3,6 +3,8 @@ title: SVG element reference
 slug: Web/SVG/Element
 ---
 
+{{SVGRef}}
+
 « [SVG](/ko/docs/SVG) / [SVG Attribute reference](/ko/docs/SVG/Attribute) »
 
 ## SVG 엘리먼트들

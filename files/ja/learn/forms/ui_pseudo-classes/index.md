@@ -611,7 +611,7 @@ input[type="radio"]:indeterminate {
 
 ## スキルテスト
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト：高度なスタイル設定](/ja/docs/Learn/Forms/Test_your_skills:_Advanced_styling)を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト：高度なスタイル設定](/ja/docs/Learn/Forms/Test_your_skills:_Advanced_styling)を見てください。
 
 ## まとめ
 

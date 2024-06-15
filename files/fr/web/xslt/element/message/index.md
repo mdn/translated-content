@@ -3,7 +3,7 @@ title: message
 slug: Web/XSLT/Element/message
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:message>` écrit un message de sortie (dans la console JavaScript) et, éventuellement, met fin à l'exécution de la feuille de styles. Il peut être utile pour le débogage.
 

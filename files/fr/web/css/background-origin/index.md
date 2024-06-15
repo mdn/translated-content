@@ -100,7 +100,8 @@ Dans cet exemple, la boîte possède une bordure épaisse en pointillés. Le pre
       rgba(131, 58, 180, 1) 0%,
       rgba(253, 29, 29, 0.6) 60%,
       rgba(252, 176, 69, 1) 100%
-    ), radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 28%);
+    ),
+    radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 28%);
   border: 20px dashed black;
   padding: 20px;
   width: 400px;
