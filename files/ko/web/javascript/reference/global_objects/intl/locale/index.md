@@ -22,12 +22,12 @@ l10n:
 | {{jsxref("Intl/Locale/language", "language")}}               | `language` (첫 번째 부분)      |
 | {{jsxref("Intl/Locale/script", "script")}}                   | `script` (두 번째 부분)       |
 | {{jsxref("Intl/Locale/region", "region")}}                   | `region` (두 번째/세번째 부분) |
-| {{jsxref("Intl/Locale/calendar", "calendar")}}               | `ca` (확장)             |
-| {{jsxref("Intl/Locale/caseFirst", "caseFirst")}}             | `kf` (확장)             |
-| {{jsxref("Intl/Locale/collation", "collation")}}             | `co` (확장)             |
-| {{jsxref("Intl/Locale/hourCycle", "hourCycle")}}             | `hc` (확장)             |
-| {{jsxref("Intl/Locale/numberingSystem", "numberingSystem")}} | `nu` (확장)             |
-| {{jsxref("Intl/Locale/numeric", "numeric")}}                 | `kn` (확장)             |
+| {{jsxref("Intl/Locale/calendar", "calendar")}}               | `ca` (확장)                    |
+| {{jsxref("Intl/Locale/caseFirst", "caseFirst")}}             | `kf` (확장)                    |
+| {{jsxref("Intl/Locale/collation", "collation")}}             | `co` (확장)                    |
+| {{jsxref("Intl/Locale/hourCycle", "hourCycle")}}             | `hc` (확장)                    |
+| {{jsxref("Intl/Locale/numberingSystem", "numberingSystem")}} | `nu` (확장)                    |
+| {{jsxref("Intl/Locale/numeric", "numeric")}}                 | `kn` (확장)                    |
 
 위 정보는 외부 데이터베이스를 참조하지 않고 `Locale` 객체가 생성될 때 그대로 제공됩니다. `Intl.Locale` 객체는 사용 가능한 달력, 콜레이션 및 숫자 체계와 같은 로케일의 실제 정보에 대한 정보를 반환하는 몇 가지 메서드를 추가로 제공합니다.
 
