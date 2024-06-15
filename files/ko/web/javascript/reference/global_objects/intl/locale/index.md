@@ -20,7 +20,7 @@ l10n:
 | 하위 태그와                                                  | 대응되는 속성                  |
 | ------------------------------------------------------------ | ------------------------------ |
 | {{jsxref("Intl/Locale/language", "language")}}               | `language` (첫 번째 부분)      |
-| {{jsxref("Intl/Locale/script", "script")}}                   | `script` (두 번째 부분)       |
+| {{jsxref("Intl/Locale/script", "script")}}                   | `script` (두 번째 부분)        |
 | {{jsxref("Intl/Locale/region", "region")}}                   | `region` (두 번째/세번째 부분) |
 | {{jsxref("Intl/Locale/calendar", "calendar")}}               | `ca` (확장)                    |
 | {{jsxref("Intl/Locale/caseFirst", "caseFirst")}}             | `kf` (확장)                    |
