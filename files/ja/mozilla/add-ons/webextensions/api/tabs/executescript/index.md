@@ -68,7 +68,7 @@ var foo = "my result";
 foo;
 ```
 
-この場合、結果配列には、文字列 "`my result`" が含まれます。結果は、[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)が可能でなければなりません。最後の文を [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) にすることもできますが、[webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript) ライブラリではサポートされていません。
+この場合、結果配列には、文字列 "`my result`" が含まれます。結果は、[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)が可能でなければなりません。最後の文を [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) にすることもできますが、[webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript) ライブラリーではサポートされていません。
 
 エラーが発生した場合、Promise はエラーメッセージを使って rejected 状態にされます。
 

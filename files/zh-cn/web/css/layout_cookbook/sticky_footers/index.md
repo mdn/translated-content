@@ -40,10 +40,6 @@ slug: Web/CSS/Layout_cookbook/Sticky_footers
 
 弹性盒子示例与前一个示例相似，但我们在 `.wrapper` 上使用 `display:flex` 而不是 `display:grid`；我们还将 `flex-direction` 设置为 `column`。接着，我们将主要内容设置为 `flex-grow: 1`，将其他两个元素设置为 `flex-shrink: 0`——当内容填充主区域时，这可以防止它们缩小。
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## MDN 上的资源
 
 - [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)

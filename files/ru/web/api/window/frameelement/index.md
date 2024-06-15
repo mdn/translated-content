@@ -3,7 +3,7 @@ title: Window.frameElement
 slug: Web/API/Window/frameElement
 ---
 
-{{ ApiRef() }}
+{{APIRef}}
 
 ## Сводка
 

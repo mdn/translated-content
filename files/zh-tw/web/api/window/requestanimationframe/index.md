@@ -1,6 +1,6 @@
 ---
 title: Window.requestAnimationFrame()
-slug: Web/API/window/requestAnimationFrame
+slug: Web/API/Window/requestAnimationFrame
 ---
 
 {{APIRef}}
@@ -59,7 +59,7 @@ Edge 低於 17 的版本和 Internet Explorer 無法保證在繪製循環前觸�
 
 {{Compat}}
 
-## 其他參考
+## 參見
 
 - {{domxref("Window.mozAnimationStartTime")}}
 - {{domxref("Window.cancelAnimationFrame()")}}

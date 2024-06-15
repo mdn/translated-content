@@ -3,6 +3,8 @@ title: grid-auto-flow
 slug: Web/CSS/grid-auto-flow
 ---
 
+{{CSSRef}}
+
 CSS-свойство управляет поведением автоматически размещаемых элементов, точно указывая, как они попадают в сетку.
 
 {{EmbedInteractiveExample("pages/css/grid-auto-flow.html")}}

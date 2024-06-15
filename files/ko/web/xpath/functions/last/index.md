@@ -3,7 +3,7 @@ title: last
 slug: Web/XPath/Functions/last
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `last` 함수는 식 평가 문맥(expression evaluation context)과 크기가 같은 숫자를 반환합니다.
 

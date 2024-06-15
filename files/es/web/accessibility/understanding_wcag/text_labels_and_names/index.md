@@ -3,6 +3,8 @@ title: Etiquetas de texto y nombres
 slug: Web/Accessibility/Understanding_WCAG/Text_labels_and_names
 ---
 
+{{AccessibilitySidebar}}
+
 Hay muchas situaciones en las cuales un control, dialogo o cualquier otra característica de un sitio web deberían recibir un nombre o etiqueta descriptiva para permitir a los usuarios de técnologías asistivas entender cual es su propósito y ser capaz de entenderlo y operarlo correctamente. Hay un número de diferentes tipos de problemas en esta categoría, dependientes del contexto, y cada uno tiene su propia solución. Los diferentes problemas y soluciones son discutidas en las secciones posteriores.
 
 ## Utilizar el atributo alt para etiquetar elementos que ocupen un área que tiene el atributo href

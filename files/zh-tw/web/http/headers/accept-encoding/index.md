@@ -2,12 +2,12 @@
 title: Accept-Encoding
 slug: Web/HTTP/Headers/Accept-Encoding
 l10n:
-  sourceCommit: ed305252b964ea5a81d804bb8a4a20f65d3b2a9c
+  sourceCommit: 3c29ffa78c551ea6a61bbb795a5f97a66c6868c0
 ---
 
 {{HTTPSidebar}}
 
-**`Accept-Encoding`** 請求的 HTTP 標頭指示用戶端可以理解的內容編碼（通常是壓縮演算法）。伺服器使用[內容協商](/zh-TW/docs/Web/HTTP/Content_negotiation)來選擇其中一個提議，並使用 {{HTTPHeader("Content-Encoding")}} 回應標頭通知用戶端該選擇。
+**`Accept-Encoding`** HTTP 請求標頭指示用戶端可以理解的內容編碼（通常是壓縮演算法）。伺服器使用[內容協商](/zh-TW/docs/Web/HTTP/Content_negotiation)來選擇其中一個提議，並使用 {{HTTPHeader("Content-Encoding")}} 回應標頭通知用戶端該選擇。
 
 即使用戶端和伺服器都支援相同的壓縮演算法，如果 `identity` 值也可接受，伺服器可能選擇不壓縮回應主體。有兩種常見情況會導致這種情況：
 
@@ -18,8 +18,8 @@ l10n:
 
 > **備註：**
 >
-> - IANA 註冊表維護[官方內容編碼的完整列表](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)。
-> - 還有兩種其他內容編碼，分別是 `bzip` 和 `bzip2`，有時會使用。這些非標準編碼實現了這兩個 UNIX 程序使用的演算法。請注意，由於專利許可問題，`bzip` 已停止使用。
+> - IANA 註冊表維護[官方內容編碼列表](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding)。
+> - `bzip` 和 `bzip2` 編碼是非標準的，但在某些情況下可能會使用，包括對舊版的支援。
 
 <table class="properties">
   <tbody>
@@ -93,6 +93,6 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 - HTTP [內容協商](/zh-TW/docs/Web/HTTP/Content_negotiation)
 - 有關內容協商結果的標頭：{{HTTPHeader("Content-Encoding")}}
 - 其他類似的標頭：{{HTTPHeader("TE")}}、{{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}}
-- {{Glossary("Brotli compression")}}
-- {{Glossary("GZip compression")}}
-- {{Glossary("Zstandard compression")}}
+- {{Glossary("Brotli compression", "Brotli 壓縮")}}
+- {{Glossary("GZip compression", "GZip 壓縮")}}
+- {{Glossary("Zstandard compression", "Zstandard 壓縮")}}

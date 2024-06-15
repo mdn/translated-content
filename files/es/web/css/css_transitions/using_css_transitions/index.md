@@ -3,7 +3,7 @@ title: Transiciones de CSS
 slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 ---
 
-{{ SeeCompatTable() }}
+{{CSSRef}}{{ SeeCompatTable() }}
 
 Las transiciones CSS, parte del borrador de la especificación CSS3, proporcionan una forma de animar los cambios de las propiedades CSS, en lugar de que los cambios surtan efecto de manera instantánea. Por ejemplo, si cambias el color de un elemento de blanco a negro, normalmente el cambio es instantáneo. Al habilitar las transiciones CSS, el cambio sucede en un intervalo de tiempo que puedes especificar, siguiendo una curva de aceleración que puedes personalizar.
 

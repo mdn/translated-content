@@ -3,7 +3,7 @@ title: Navigator.oscpu
 slug: Web/API/Navigator/oscpu
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 Возвращает строку, которая идентифицирует текущую операционную систему.
 

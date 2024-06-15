@@ -1,8 +1,9 @@
 ---
-title: OfflineAudioCompletionEvent.renderedBuffer
+title: "OfflineAudioCompletionEvent: renderedBuffer プロパティ"
+short-title: renderedBuffer
 slug: Web/API/OfflineAudioCompletionEvent/renderedBuffer
 l10n:
-  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("Web Audio API")}}

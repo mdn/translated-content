@@ -3,6 +3,8 @@ title: Usando el rol alertdialog
 slug: Web/Accessibility/ARIA/Roles/alertdialog_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Descripción
 
 Esta técnica demuestra como usar el rol [`alertdialog`](http://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#alertdialog).
