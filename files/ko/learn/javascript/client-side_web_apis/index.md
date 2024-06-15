@@ -13,7 +13,7 @@ slug: Learn/JavaScript/Client-side_web_APIs
 
 [HTM](/ko/docs/Learn/HTML)과[CSS](/ko/docs/Learn/CSS)에 관한 기본지식이 있으면 좋습니다!
 
-> **참고:** 코드를 작성 할 수 없는 디바이스에서 작업하는 경우 [JSBin](http://jsbin.com/) 또는 [Thimble](https://thimble.mozilla.org/).과 같은 온라인 코딩 프로그램에서 코드 예제를 시험해 볼 수 있습니다.
+> **참고:** 코드를 작성 할 수 없는 디바이스에서 작업하는 경우 [JSBin](https://jsbin.com/) 또는 [Glitch](https://glitch.com/).과 같은 온라인 코딩 프로그램에서 코드 예제를 시험해 볼 수 있습니다.
 
 ## Guides
 
