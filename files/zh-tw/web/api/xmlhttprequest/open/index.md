@@ -49,7 +49,7 @@ None ({{jsxref("undefined")}})。
 
 ## 參見
 
-- [Using XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - {{domxref("XMLHttpRequest.setRequestHeader","setRequestHeader()")}}
 - {{domxref("XMLHttpRequest.send", "send()")}}
 - {{domxref("XMLHttpRequest.abort", "abort()")}}
