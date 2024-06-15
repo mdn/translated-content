@@ -153,7 +153,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 
 - {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}}
   - : 为 window 上的特定事件类型注册一个事件处理器。
-- {{domxref("atob", "Window.atob()")}}
+- {{domxref("Window.atob()")}}
   - : 解码一个使用 base-64 编码的数据字符串。
 - {{domxref("Window.alert()")}}
   - : 显示一个警告对话框。

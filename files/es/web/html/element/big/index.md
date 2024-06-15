@@ -3,6 +3,8 @@ title: big
 slug: Web/HTML/Element/big
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 **big** de big=grande

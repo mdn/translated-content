@@ -1,6 +1,8 @@
 ---
 title: ANGLE_instanced_arrays
 slug: Web/API/ANGLE_instanced_arrays
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("WebGL")}}
@@ -20,7 +22,7 @@ WebGL 拡張機能は {{domxref("WebGLRenderingContext.getExtension()")}} メソ
 - `ext.VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE`
   - : {{domxref("WebGL_API/Types", "GLint")}} で、 {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} で `pname` 引数として使用されたときにインスタンス化されたレンダリングに用いられる序数を記述したものを返します。
 
-## メソッド
+## インスタンスメソッド
 
 この拡張機能は 3 つの新しいメソッドを公開します。
 
@@ -35,7 +37,7 @@ WebGL 拡張機能は {{domxref("WebGLRenderingContext.getExtension()")}} メソ
 
 次の例は、与えられた図形を 1 回の draw 呼び出しで複数回描画する方法です。
 
-> **警告:** 以下は教育的なものであり、製品レベルのコードではありません。レンダリングループ内や使用直前にデータ/バッファを構築することは、一般的に避けるべきです。
+> **警告:** 以下は教育的なものであり、製品レベルのコードではありません。レンダリングループ内や使用直前にデータ/バッファーを構築することは、一般的に避けるべきです。
 
 ```js
 // 拡張機能を有効化

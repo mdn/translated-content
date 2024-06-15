@@ -2,7 +2,7 @@
 title: フォームデータの送信
 slug: Learn/Forms/Sending_and_retrieving_form_data
 l10n:
-  sourceCommit: 994af9536bab4117b160cf29d61acf2489f27eb0
+  sourceCommit: 9087a17d60546adb8806da3b7c575b6adb8aebd1
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
@@ -14,7 +14,6 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        基本的なコンピューターリテラシー、
         <a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
           >HTML の理解</a
         >、基本的な
@@ -25,7 +24,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">目的:</th>
       <td>
         フォームデータが送信されたら何が起こるかを、データがサーバー上でどのように処理されるかの基本的な考えも含めて理解すること。
       </td>
@@ -37,7 +36,7 @@ l10n:
 
 ## クライアント/サーバー構成
 
-ウェブはごく基本的なクライアント/サーバー構成に基づいており、簡単に言うと次のようになります。クライアント (通常はウェブブラウザー) は、サーバー (ほとんどの場合 [Apache](https://httpd.apache.org/)、[Nginx](https://nginx.org/)、[IIS](https://www.iis.net/)、[Tomcat](https://tomcat.apache.org/) などのウェブサーバー) に [HTTP プロトコル](/ja/docs/Web/HTTP)を使用してリクエストを送ります。サーバーは同じプロトコルを使用して、リクエストに応答します。
+ウェブはごく基本的なクライアント/サーバー構成に基づいており、簡単に言うと次のようになります。クライアント（通常はウェブブラウザー）は、サーバー (ほとんどの場合 [Apache](https://httpd.apache.org/)、[Nginx](https://nginx.org/)、[IIS](https://www.iis.net/)、[Tomcat](https://tomcat.apache.org/) などのウェブサーバー) に [HTTP プロトコル](/ja/docs/Web/HTTP)を使用してリクエストを送ります。サーバーは同じプロトコルを使用して、リクエストに応答します。
 
 ![基本的なクライアント/サーバー構成](client-server.png)
 
@@ -47,28 +46,28 @@ l10n:
 
 ## クライアント側: データ送信方法の定義
 
-{{HTMLElement("form")}} 要素で、データを送信する方法を定義します。その属性すべてが、ユーザーが送信ボタンを押すと送信されるリクエストを調整できるように設計されています。もっとも重要な属性は [`action`](/ja/docs/Web/HTML/Element/form#action) と [`method`](/ja/docs/Web/HTML/Element/form#method) の 2 つです。
+{{HTMLElement("form")}} 要素で、データを送信する方法を定義します。その属性すべてが、ユーザーが{{Glossary("submit button", "送信ボタン")}}を押すと送信されるリクエストを調整できるように設計されています。もっとも重要な属性は [`action`](/ja/docs/Web/HTML/Element/form#action) と [`method`](/ja/docs/Web/HTML/Element/form#method) の 2 つです。
 
 ### action 属性
 
-[`action`](/ja/docs/Web/HTML/Element/form#action) 属性は、どこにデータを送信するかを定義します。値は妥当な相対/絶対 [URL](/ja/docs/Learn/Common_questions/What_is_a_URL) でなければなりません。この属性が与えられなかった場合は、フォームが含まれているページの URL にデータが送信されます。
+[`action`](/ja/docs/Web/HTML/Element/form#action) 属性は、どこにデータを送信するかを定義します。値は妥当な相対/絶対 [URL](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URLL) でなければなりません。この属性が与えられなかった場合は、フォームが含まれているページの URL にデータが送信されます。
 
 この例では、データを絶対 URL の `http://example.com` に送信します。
 
 ```html
-<form action="https://example.com"></form>
+<form action="https://example.com">…</form>
 ```
 
 こちらは、相対 URL を使用しています。データは同一オリジン上の別の URL に送信されます。
 
 ```html
-<form action="/somewhere_else"></form>
+<form action="/somewhere_else">…</form>
 ```
 
 以下のように属性を指定しない場合は、{{HTMLElement("form")}} 要素はフォームが表示されているページ自身に対してデータを送信します。
 
 ```html
-<form></form>
+<form>…</form>
 ```
 
 > **メモ:** HTTPS (secure HTTP) プロトコルを使用して URL を指定することができます。このようにすると、フォーム自体が HTTP でアクセスされる安全ではないページで提供される場合でも、データはリクエストの残りの部分とともに暗号化されます。一方、フォームが安全なページ提供されていても、[`action`](/ja/docs/Web/HTML/Element/form#action) 属性で安全ではない HTTP の URL を指定すると、どのブラウザーでもデータを送信する際にユーザーに対してセキュリティの警告を表示します。これは、データが暗号化されないためです。
@@ -123,6 +122,8 @@ Host: foo.com
 
 > **メモ:** この例は GitHub にあります。— [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) を参照してください （[ライブはこちら](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)）.
 
+> **メモ:** `action` の URL スキームが `file:` などのクエリーを処理しないものであった場合は、データは追加されません。
+
 #### POST メソッド
 
 [`POST` メソッド](/ja/docs/Web/HTTP/Methods/POST)は少し異なります。これは、HTTP リクエストの本文で提供したデータを考慮したレスポンスの要求を、ブラウザーがサーバーに送信するためのメソッドです。"やあサーバー、このデータを見て適切な結果を返してよ。" このメソッドを使用してフォームを送信する場合は、データが HTTP リクエストの本文の後に追加されます。
@@ -159,6 +160,8 @@ say=Hi&to=Mom
 `Content-Length` ヘッダーは本文の長さを、また `Content-Type` ヘッダーはサーバーに送信するリソースの種類を表します。これらのヘッダーについて少し説明しましょう。
 
 > **メモ:** この例は GitHub で見つけることができます。— [post-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/post-method.html) を参照してください ([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html))。
+
+> **メモ:** `action` の URL スキームが `data:` などのリクエスト本体を処理できないものであった場合は、代わりに `GET` メソッドが使用されます。
 
 ### HTTP リクエストの表示
 
@@ -232,17 +235,30 @@ if __name__ == "__main__":
 - [form.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html): 以前に [POST メソッド](#post_メソッド)の節で見たフォームと同じですが、`action` が `\{{ url_for('hello') }}` に設定されています (これは [Jinja](https://jinja.palletsprojects.com) テンプレートで、基本的に HTML ですが、波括弧の中にウェブサーバーで実行されている Python のコードの呼び出しを含めることができます。`url_for('hello')` は基本的に、「フォームが送信されたら `/hello` にリダイレクトしてください」と言っています。)
 - [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html): このテンプレートは、表示時に渡された 2 つの小さいデータを表示する行だけを含みます。`/hello` の URL が呼び出されるときに実行される、前述の `hello()` 関数によって行われます。
 
-> **メモ:** 繰り返しますが、このコードはブラウザーに直接読み込もうとしても動作しません。Python は PHP とは若干異なる動作をします。— ローカルでこのコードを実行するには、[Python/PIP をインストール](/ja/docs/Learn/Server-side/Django/development_environment#installing_python_3)する必要があり、それから `pip3 install flask` を使用して Flask をインストールしてください。この時点で `python3 python-example.py` を実行し、ブラウザーで `localhost:5000` に移動することで実行することができるでしょう。
+> **メモ:** 繰り返しますが、このコードはブラウザーに直接読み込もうとしても動作しません。Python は PHP とは若干異なる動作をします。— ローカルでこのコードを実行するには、[Python/PIP をインストール](/ja/docs/Learn/Server-side/Django/development_environment#python_3_のインストール)する必要があり、それから `pip3 install flask` を使用して Flask をインストールしてください。この時点で `python3 python-example.py` を実行し、ブラウザーで `localhost:5042` に移動することで実行することができるでしょう。
 
 ### その他の言語やフレームワーク
 
 フォームの操作に使用できるサーバー側の技術は、Perl、Java、.Net、Ruby などたくさんあります。もっとも好きなものを選びましょう。しかしそれらの技術を直接使用することは、扱いにくいため一般的ではないことが特筆に値します。以下のような、フォームをより簡単に扱えるようにする多くの高品質フレームワークのひとつを使用する方がより一般的です。
 
-- [Django](/ja/docs/Learn/Server-side/Django) (Python 向け、[Flask](https://flask.palletsprojects.com/) より若干重いものですが、ツールとオプションがより豊富です。)
-- [Express](/ja/docs/Learn/Server-side/Express_Nodejs) (Node.js 向け)
-- [Laravel](https://laravel.com/) (PHP 向け)
-- [Ruby On Rails](http://rubyonrails.org/) (Ruby 向け)
-- [Spring Boot](https://spring.io/guides/gs/handling-form-submission/) (Java 向け)
+- Python
+  - [Django](/ja/docs/Learn/Server-side/Django)
+  - [Flask](https://flask.palletsprojects.com/)
+  - [web2py](https://github.com/web2py/web2py) （始めるのに最も簡単）
+  - [py4web](https://py4web.com/) （web2py と同じ開発者によって書かれ、より Django に近いセットアップがあります）
+- Node.js
+  - [Express](/ja/docs/Learn/Server-side/Express_Nodejs)
+  - [Next.js](https://nextjs.org/) （React アプリ向け）
+  - [Nuxt](https://nuxt.com/) （Vue アプリ向け）
+  - [Remix](https://remix.run/)
+- PHP
+  - [Laravel](https://laravel.com/)
+  - [Laminas](https://getlaminas.org/) （以前の Zend フレームワーク）
+  - [Symfony](https://symfony.com/)
+- Ruby
+  - [Ruby On Rails](https://rubyonrails.org/)
+- Java
+  - [Spring Boot](https://spring.io/guides/gs/handling-form-submission/)
 
 言うまでもなく、これらのフレームワークを使用したとしても、フォームでの作業が必ずしも*簡単に*なるとは限りません。しかし、すべての機能を自分で 1 から書こうとするよりずっと簡単で、また多くの時間を節約できるでしょう。
 
@@ -282,7 +298,7 @@ if __name__ == "__main__":
 
 サーバーにデータを送信するたびに、セキュリティについて考える必要があります。HTML フォームはサーバーに対するもっともよくある攻撃の入口 (攻撃が行われる場所) になります。問題が HTML フォーム自身から発生することはありません — サーバーがどのようにデータを扱うかによります。
 
-[ウェブサイトセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security) の記事が[サーバーサイド](/ja/docs/Learn/Server-side)の学習トピックにあり、一般的な攻撃とその防御を詳細に扱っています。そちらへ行って記事を確認し、何が起こり得るかを理解してください。
+[ウェブサイトセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security) の記事が[サーバーサイド](/ja/docs/Learn/Server-side)の学習トピックにあり、いくつかの一般的な攻撃とその防御を詳細に扱っています。そちらへ行って記事を確認し、何が起こり得るかを理解してください。
 
 ### 疑い深くあれ: ユーザーを信用してはいけません
 
@@ -312,20 +328,7 @@ if __name__ == "__main__":
 
 {{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
 
-## モジュール内の記事
-
-- [初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)
-- [フォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
-- [基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)
-- [その他のフォームコントロール](/ja/docs/Learn/Forms/Other_form_controls)
-- [フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
-- [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
-- [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
-- [クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### 上級トピック
+### 高度なトピック
 
 - [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)

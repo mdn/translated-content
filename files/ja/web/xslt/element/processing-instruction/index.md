@@ -3,7 +3,7 @@ title: <xsl:processing-instruction>
 slug: Web/XSLT/Element/processing-instruction
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:processing-instruction>` 要素は処理命令を出力文書に書き込みます。
 
