@@ -7,7 +7,7 @@ slug: Web/API/XMLHttpRequest/open
 
 {{domxref("XMLHttpRequest")}} 物件中的 **`open()`** 方法用來初始化新建立的請求，或重新初始化現有請求。
 
-> **備註：** 為已啟動（已經呼叫 `open()` ）的請求呼叫此方法，相當於呼叫 {{domxref("XMLHttpRequest.abort", "abort()")}}。
+> **備註：** 為已啟動（已經呼叫 `open()`）的請求呼叫此方法，相當於呼叫 {{domxref("XMLHttpRequest.abort", "abort()")}}。
 
 ## 語法
 
