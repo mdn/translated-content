@@ -12,7 +12,7 @@ l10n:
 ## 函数
 
 - {{WebExtAPIRef("dom.openOrClosedShadowRoot()")}}
-  - ：获取指定元素的开放或封闭的 Shadow DOM。如果 Shadow DOM 未附加到该元素，则返回 `null`。
+  - : 获取指定元素的开放或封闭的影子（shadow）DOM。如果影子 DOM 未附加到该元素，则返回 `null`。
 
 {{WebExtExamples("h2")}}
 
