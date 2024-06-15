@@ -2,8 +2,10 @@
 title: aria-level
 slug: Web/Accessibility/ARIA/Attributes/aria-level
 l10n:
-  sourceCommit: 904cdf09c7e328b7a15a6a4db6bc6bd31f969cce
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
+
+{{AccessibilitySidebar}}
 
 `aria-level` 属性は、構造内の要素の階層レベルを定義します。
 
@@ -61,8 +63,3 @@ DOM の祖先がレベルを正確に表している場合、ユーザーエー�
 ## 関連情報
 
 - [`<h1>` から `<h6>`: HTML 見出し要素](/ja/docs/Web/HTML/Element/Heading_Elements) ({{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}, {{htmlelement("Heading_Elements", "h3")}}, {{htmlelement("Heading_Elements", "h4")}}, {{htmlelement("Heading_Elements", "h5")}}, {{htmlelement("Heading_Elements", "h6")}})
-
-<section id="Quick_links">
-<strong><a href="/ja/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA 状態とプロパティ</a></strong>
-{{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/aria/Attributes")}}
-</section>

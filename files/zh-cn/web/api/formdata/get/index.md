@@ -3,11 +3,9 @@ title: FormData.get()
 slug: Web/API/FormData/get
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
 {{domxref("FormData")}} 的 `get()` 方法用于返回 FormData 对象中和指定的键关联的第一个值，如果你想要返回和指定键关联的全部值，那么可以使用 {{domxref("FormData.getAll()","getAll()")}} 方法。
-
-> **备注：** 该方法在[Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)中有效。
 
 ## 语法
 

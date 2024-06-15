@@ -17,10 +17,10 @@ slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 
 如果服务器在你的控制之下，请将请求站点的源添加到允许访问的域集，方法是将其添加到 `Access-Control-Allow-Origin` 标头的值。
 
-例如，要允许 `https://amazing.site` 上的站点使用 CORS 访问资源，这个标头应该是：
+例如，要允许 `https://example.com` 上的站点使用 CORS 访问资源，这个标头应该是：
 
 ```http
-Access-Control-Allow-Origin: https://amazing.site
+Access-Control-Allow-Origin: https://example.com
 ```
 
 你还可以使用 `*` 通配符配置站点，这样可以允许任何站点访问它。这样的处理应该只用于公共的 API。私有 API 永远不应使用 `*`，而应设置特定的域（可以不止一个）。此外，通配符仅适用于将 [`crossorigin`](/zh-CN/docs/Web/HTML/Attributes/crossorigin) 属性设置为 `anonymous` 的请求，并且它阻止在请求中发送诸如 cookie 之类的凭据。

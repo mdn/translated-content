@@ -1333,7 +1333,7 @@ Further reading for you to find out more information if desired.
 
 - [IndexedDB API Reference](/en/IndexedDB)
 - [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
-- IndexedDB [interface files](https://mxr.mozilla.org/mozilla-central/find?text=&string=dom%2FindexedDB%2F.*%5C.idl&regexp=1) in the Firefox source code
+- IndexedDB [interface files](https://searchfox.org/mozilla-central/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true) in the Firefox source code
 
 ### Tutorials and guides
 

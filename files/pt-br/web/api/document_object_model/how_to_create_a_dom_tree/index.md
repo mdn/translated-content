@@ -1,6 +1,6 @@
 ---
 title: Como criar uma árvore DOM
-slug: Web/API/Document_object_model/How_to_create_a_DOM_tree
+slug: Web/API/Document_Object_Model/How_to_create_a_DOM_tree
 ---
 
 {{DefaultAPISidebar("DOM")}}

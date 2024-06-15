@@ -33,7 +33,7 @@ gl.shaderSource(shader, originalSource);
 var source = gl.getShaderSource(shader);
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

@@ -151,7 +151,7 @@ function handleVisibilityChange() {
 document.addEventListener("visibilitychange", handleVisibilityChange, false);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -159,7 +159,7 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - Description of the [Page Visibility API](http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx) on the IEBlog.
 - Description of the [Page Visibility API](http://code.google.com/chrome/whitepapers/pagevisibility.html) by Google

@@ -42,7 +42,7 @@ ball.draw();
 
 ## 添加速度
 
-現在有了一顆球，準備添加基礎的動畫像我們從[上章節學到的課程](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Basic_animations)。再次使用{{domxref("window.requestAnimationFrame()")}}控制動畫。添加移動的向量速度使球移動到向量點。對於每個幀(frame)，我們使用{{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}}來清除 canvas 舊的移動幀(frame)。
+現在有了一顆球，準備添加基礎的動畫像我們從[上章節學到的課程](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Basic_animations)。再次使用 {{domxref("Window.requestAnimationFrame()")}} 控制動畫。添加移動的向量速度使球移動到向量點。對於每個幀（frame），我們使用 {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} 來清除 canvas 舊的移動幀。
 
 ```js
 var canvas = document.getElementById("canvas");
@@ -371,9 +371,9 @@ ball.draw();
 
 這個小章節只有解釋一些創造高級動畫的技巧。這裡還有更多!如何增加槳,磚塊,到這個 到 [Breakout](http://en.wikipedia.org/wiki/Breakout_%28video_game%29) game demo 去看，有我們更[多遊戲研發](/zh-TW/docs/Games)的文章!
 
-## 延伸閱讀
+## 參見
 
-- {{domxref("window.requestAnimationFrame()")}}
+- {{domxref("Window.requestAnimationFrame()")}}
 - [Efficient animation for web games](/zh-TW/docs/Games/Techniques/Efficient_animation_for_web_games)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}

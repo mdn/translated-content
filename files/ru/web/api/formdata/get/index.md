@@ -3,7 +3,9 @@ title: FormData.get()
 slug: Web/API/FormData/get
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 Метод get() из интерфейса {{domxref("FormData")}} возвращает первое значение, связанное с переданным ключом из объекта FormData. Если вы ожидаете множественные значения и хотите получить их все, используйте метод getAll().
 
@@ -45,7 +47,7 @@ formData.append("username", "Кирилл");
 formData.get("username"); // Вернёт "Борис"
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

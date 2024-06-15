@@ -89,8 +89,6 @@ sayHello()();
 
 我們也可使用雙括號 `()()` 來調用所回傳的函數。
 
-## Learn more
+## 參見
 
-### General knowledge
-
-- [First-class functions](https://zh.wikipedia.org/wiki/First-class_function) on Wikipedia
+- 維基百科上的[一級函式](https://zh.wikipedia.org/wiki/头等函数)

@@ -2,7 +2,7 @@
 title: "HTML: アクセシビリティの良き基本"
 slug: Learn/Accessibility/HTML
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 465c0633dccc141141ca54d1ca3af4f878b38986
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
@@ -250,7 +250,7 @@ HTML の `<button>` は、ある種の適切なスタイルが（おそらくそ
 </footer>
 ```
 
-より現代的な構造の例をスクリーンリーダーで試してみれば、もはやレイアウトマークアップが妨げになることもなく、コンテンツの読み上げを混乱させることもないとわかるでしょう。また、これは、コードサイズの点で、より無駄がなく、より小さくなっています。これが意味することは、コードの保守が容易になるということ、そして、ユーザーがダウンロードするのに帯域幅が小さくて済むということです（特に、接続が遅い人たちにとってはこれが効きます）。
+より現代的な構造の例をスクリーンリーダーで試してみると、レイアウトのマークアップがもはやコンテンツの読み上げを妨げたり、混乱を引き起こしたりしていないことに気づくでしょう。また、コードサイズもはるかにスリムで小さくなっているため、コードのメンテナンスが容易で、ユーザーがダウンロードする帯域幅も少なくて済み、低速接続のユーザーにとって特に有益です。
 
 レイアウトを作る際に考慮すべきもう一つの事柄は、上記の例に見られるように HTML の意味的要素を用いることです（[コンテンツ区分](/ja/docs/Web/HTML/Element#コンテンツ区分)を参照）。入れ子になった {{htmlelement("div")}} 要素だけを使ってレイアウトを作ることもできますが、適切な区分要素を使って、主要なナビゲーション ({{htmlelement("nav")}}) やフッター ({{htmlelement("footer")}}) や繰り返し現れるコンテンツ単位 ({{htmlelement("article")}}) などを囲う方が良いのです。これらの区分け要素は、いまナビゲートしている最中のコンテンツについての追加的な手がかりをユーザーに与えられるように、スクリーンリーダー（および他のツール）に追加的な意味（セマンティクス）を提供してくれます（スクリーンリーダーの対応とはどのようなものなのかについての考え方に関しては、[Screen Reader Support for new HTML5 Section Elements](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/) を参照）。
 

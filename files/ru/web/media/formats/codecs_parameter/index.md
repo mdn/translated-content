@@ -768,7 +768,7 @@ You can use the `codecs` parameter in a few situations. Firstly, you can use it 
 
 You can also use the codecs parameter when specifying a MIME media type to the {{domxref("MediaSource.isTypeSupported()")}} method; this method returns a Boolean which indicates whether or not the media is likely to work on the current device.
 
-## See also
+## Смотрите также
 
 - [Web media technologies](/ru/docs/Web/Media)
 - [Guide to media types and formats on the web](/ru/docs/Web/Media/Formats)

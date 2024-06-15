@@ -3,6 +3,8 @@ title: Perceivable
 slug: Web/Accessibility/Understanding_WCAG/Perceivable
 ---
 
+{{AccessibilitySidebar}}
+
 Este artículo ofrece consejos prácticos sobre cómo hacer que tu sitio web cumpla con los criterios de **Percepción** de WCAG 2.0 y 2.1. Los estados perceptivos que los usuarios deben poder reconocer utilizando alguno de sus sentidos.
 
 > **Nota:** Para leer las definiciones de la W3C sobre Percepción y las guías para cumplir con los criterios dirígete a [Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.](https://www.w3.org/TR/WCAG21/#perceivable)

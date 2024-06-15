@@ -1,7 +1,11 @@
 ---
 title: ARIA：button 角色
 slug: Web/Accessibility/ARIA/Roles/button_role
+l10n:
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
+
+{{AccessibilitySidebar}}
 
 `button` 角色用于可单击的元素，在用户激活时触发响应。添加 `role="button"` 会告诉屏幕阅读器这个元素是个按钮，但是不提供按钮的功能。你应该使用的 {{HTMLElement("button")}} 或者 `type="button"` 的 {{HTMLElement("input")}}。
 
@@ -62,7 +66,7 @@ button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按�
 
 按钮始终应该有无障碍的名称。对于大多数的按钮，名称通常是和按钮内的文本、开启和闭合标签之间的内容一致的。一些情况下，比如以图标形式呈现的按钮，其无障碍名称可能是由 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 或者 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 属性提供的。
 
-## 切换按钮
+### 切换按钮
 
 切换按钮通常有两种状态：按下、没有按下，第三种混合状态可用于控制了其他的元素的切换按钮，例如其他的不共享同一个值的切换按钮或者复选框。还可以使用 `button` 角色（如果元素不是原生的 button 元素）加 [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) 属性来表示元素是否为切换按钮：
 
@@ -255,7 +259,7 @@ function toggleButton(element) {
 }
 ```
 
-### 结果
+#### 结果
 
 {{EmbedLiveSample('切换按钮示例')}}
 
@@ -288,11 +292,3 @@ function toggleButton(element) {
 - [HTML5 中强大的原生语义](https://html.spec.whatwg.org/multipage/dom.html#aria-usage-note)
 - [在 HTML 中使用 ARIA 的注意事项](https://www.w3.org/TR/aria-in-html/)
 - [官方 WAI-ARIA 示例代码](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA 角色**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

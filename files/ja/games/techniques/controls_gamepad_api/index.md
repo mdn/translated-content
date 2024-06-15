@@ -2,7 +2,7 @@
 title: ゲームパッド API を使用したコントロールの実装
 slug: Games/Techniques/Controls_Gamepad_API
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
 {{GamesSidebar}}

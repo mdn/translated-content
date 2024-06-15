@@ -258,11 +258,11 @@ pre#example-7 {
 
 ### ライブサンプル
 
-- 例 1 : [http://jsfiddle.net/Tripad/qnGKj/2/](http://jsfiddle.net/Tripad/qnGKj/2/)
-- 例 2 : [http://jsfiddle.net/Tripad/qnGKj/3/](http://jsfiddle.net/Tripad/qnGKj/3/)
-- 例 3 : [http://jsfiddle.net/Tripad/qnGKj/4/](http://jsfiddle.net/Tripad/qnGKj/4/)
-- 例 4 : [http://jsfiddle.net/Tripad/qnGKj/5/](http://jsfiddle.net/Tripad/qnGKj/5/)
-- 例 5 : [http://jsfiddle.net/Tripad/qnGKj/6/](http://jsfiddle.net/Tripad/qnGKj/6/)
+- 例 1 : [https://jsfiddle.net/Tripad/qnGKj/2/](https://jsfiddle.net/Tripad/qnGKj/2/)
+- 例 2 : [https://jsfiddle.net/Tripad/qnGKj/3/](https://jsfiddle.net/Tripad/qnGKj/3/)
+- 例 3 : [https://jsfiddle.net/Tripad/qnGKj/4/](https://jsfiddle.net/Tripad/qnGKj/4/)
+- 例 4 : [https://jsfiddle.net/Tripad/qnGKj/5/](https://jsfiddle.net/Tripad/qnGKj/5/)
+- 例 5 : [https://jsfiddle.net/Tripad/qnGKj/6/](https://jsfiddle.net/Tripad/qnGKj/6/)
 
 ## 仕様書
 

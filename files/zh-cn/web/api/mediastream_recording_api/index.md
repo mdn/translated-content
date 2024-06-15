@@ -133,6 +133,6 @@ navigator.mediaDevices.enumerateDevices().then(function (devices) {
 - [MediaRecorder polyfill](https://github.com/ai/audio-recorder-polyfill) for Safari and Edge
 - [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): HTML5 video capture/playback/download using getUserMedia and the MediaRecorder API ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))
 - [FingerSpell](https://www.fingerspell.org/): Sign Language Fingerspelling practice using getUserMedia and the MediaRecorder API to create and download recordings, MediaRecorder API supported desktop browsers only [(source on GitHub](https://github.com/chrisjohndigital/CameraCaptureJS))
-- [Simple video recording demo](http://codepen.io/anon/pen/gpmPzm)
+- [Simple video recording demo](https://codepen.io/anon/pen/gpmPzm)
 - [Advanced media stream recorder sample](https://quickblox.github.io/javascript-media-recorder/sample/)
 - [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML5 video language lab web application using MediaDevices and the MediaStream Recording API for video recording ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))

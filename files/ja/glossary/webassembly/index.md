@@ -1,14 +1,16 @@
 ---
 title: WebAssembly
 slug: Glossary/WebAssembly
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
 
-**WebAssembly** (_Wasm_) は、オープン{{Glossary("binary", "バイナリ")}}プログラミング言語です。モダンウェブ{{Glossary("Browser", "ブラウザ")}}で動作します。パフォーマンスを高め、かつ/もしくは、ウェブページのための新しい機能を提供します。
+**WebAssembly** （略して _Wasm_）は、オープンな{{Glossary("binary", "バイナリー")}}プログラミング形式です。最近のウェブ{{Glossary("Browser", "ブラウザー")}}で動作します。パフォーマンスを高めたり、ウェブページのための新しい機能を提供したりします。
 
-1. 詳細
+## 関連情報
 
-   1. [WebAssembly](https://ja.wikipedia.org/wiki/WebAssembly) on Wikipedia
-   2. [Official website](https://webassembly.org/)
-   3. [WebAssembly](/ja/docs/WebAssembly) on MDN
+- [WebAssembly](https://ja.wikipedia.org/wiki/WebAssembly) （ウィキペディア）
+- [Official website](https://webassembly.org/)
+- [WebAssembly](/ja/docs/WebAssembly) (MDN)

@@ -1,8 +1,9 @@
 ---
 title: Using the Mozilla JavaScript interface to XSL Transformations
 slug: Web/API/XSLTProcessor
-original_slug: Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
 ---
+
+{{APIRef("XSLT")}}
 
 이 문서는 Mozilla 1.2의 JavaScript 인터페이스부터 XSLT 처리 엔진(TransforMiiX)까지 설명합니다.
 
@@ -30,11 +31,11 @@ function onload() {
 }
 ```
 
-`importStylesheet`는 DOM 노드인 인수가 하나 필요합니다. 그 노드가 문서 노드면 전체 XSL Transform이나 [literal result element transform](http://www.w3.org/TR/xslt#result-element-stylesheet)에 넘길 수 있습니다, 그렇지 않으면 `xsl:stylesheet`나 `xsl:transform` 요소이어야 합니다.
+`importStylesheet`는 DOM 노드인 인수가 하나 필요합니다. 그 노드가 문서 노드면 전체 XSL Transform이나 [literal result element transform](https://www.w3.org/TR/xslt#result-element-stylesheet)에 넘길 수 있습니다, 그렇지 않으면 `xsl:stylesheet`나 `xsl:transform` 요소이어야 합니다.
 
 ### 문서 변환하기
 
-지정한 XSLT 스타일시트를 써서 문서를 변환하기 위해 [`transformToDocument()`](#transformToDocument)나 [`transformToFragment()`](#transformToFragment) 메소드를 쓸 수 있습니다.
+지정한 XSLT 스타일시트를 써서 문서를 변환하기 위해 [`transformToDocument()`](#transformtodocument)나 [`transformToFragment()`](#transformtofragment) 메소드를 쓸 수 있습니다.
 
 #### transformToDocument
 
@@ -44,7 +45,7 @@ function onload() {
 var newDocument = processor.transformToDocument(domToBeTransformed);
 ```
 
-결과 개체는 스타일시트의 [output 메소드](http://www.w3.org/TR/xslt#output)가 `html`이면 `HTMLDocument`, `xml`이면 `XMLDocument`, `text`이면 자식이 text인 단일 루트 요소 `<transformiix:result>`를 갖는 `XMLDocument`입니다.
+결과 개체는 스타일시트의 [output 메소드](https://www.w3.org/TR/xslt#output)가 `html`이면 `HTMLDocument`, `xml`이면 `XMLDocument`, `text`이면 자식이 text인 단일 루트 요소 `<transformiix:result>`를 갖는 `XMLDocument`입니다.
 
 #### transformToFragment
 
@@ -61,27 +62,22 @@ var newFragment = processor.transformToFragment(domToBeTransformed, ownerDocumen
 
 ### 매개변수 설정
 
-`setParameter`, `getParameter`, `removeParameter` 메소드를 써서 [parameters for the stylesheet](http://www.w3.org/TR/xslt#variables)를 조절할 수 있습니다. 이들은 모두 `setParameter` 메소드는 세 번째도 취하면서 처음 두 매개변수로 이름공간 URI와 지역명을 설정한 매개변수 값을 취합니다.
+`setParameter`, `getParameter`, `removeParameter` 메소드를 써서 [parameters for the stylesheet](https://www.w3.org/TR/xslt#variables)를 조절할 수 있습니다. 이들은 모두 `setParameter` 메소드는 세 번째도 취하면서 처음 두 매개변수로 이름공간 URI와 지역명을 설정한 매개변수 값을 취합니다.
 
 ### 재설정
 
 `XSLTProcessor` 개체는 또한 모든 스타일시트와 매개변수를 제거하고 처리기(processor)를 초기 상태로 되돌리는 데 쓸 수 있는 `reset()` 메소드를 구현합니다. 이 메소드는 [Mozilla](/ko/Gecko) 1.3과 그 뒤에 구현됩니다.
 
-### Resources
+## 명세서
 
-- [nsIXSLTProcessor.idl](https://dxr.mozilla.org/mozilla-central/source/content/xslt/public/nsIXSLTProcessor.idl)는 항상 `XSLTProcessor` 개체의 실제 인터페이스를 반영합니다.
+{{Specifications}}
 
-  - [A XULPlanet reference page](http://xulplanet.com/references/objref/XSLTProcessor.html).
+## 브라우저 호환성
 
-- [The nsIXMLProcessorObsolete IDL file](http://lxr.mozilla.org/seamonkey/source/content/xslt/public/nsIXSLTProcessorObsolete.idl)
+{{Compat}}
 
-  : 1.2판보다 앞서는 Mozilla의 JS 인터페이스.
+## 같이 보기
 
-### 원본 문서 정보
-
-- 저자:
-
-  <a class="link-mailto" href="mailto:mike@theoretic.com">Mike Hearn</a>
-
-- 최종 업데이트: December 21, 2005
-- 저작권 정보: Copyright (C) Mike Hearn
+- [XSLT](/ko/docs/Web/XSLT)
+- [XSLT 튜토리얼](https://www.zvon.org/xxl/XSLTutorial/Books/Book1/index.html)
+- [XPath 튜토리얼](https://www.zvon.org/xxl/XPathTutorial/General/examples.html)

@@ -13,9 +13,9 @@ slug: Learn/JavaScript/First_steps
 
 - [Начало работы с Web](/ru/docs/Learn/Getting_started_with_the_web) (которое включает в себя общее [введение в Javascript](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics))
 - [Введение в HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML)
-- [Введение в CSS](/ru/docs/Learn/CSS/Introduction_to_CSS)
+- [Введение в CSS](/ru/docs/Learn/CSS/First_steps)
 
-> **Примечание:** Если вы работаете на компьютере, планшете или другом устройстве, где нет возможности полноценно работать с файлами, можете использовать такие онлайн сервисы как [JSBin](http://jsbin.com/) или [Thimble](https://thimble.mozilla.org/), для запуска примеров кода.
+> **Примечание:** Если вы работаете на компьютере, планшете или другом устройстве, где нет возможности полноценно работать с файлами, можете использовать такие онлайн сервисы как [JSBin](https://jsbin.com/) или [Glitch](https://glitch.com/).
 
 ## Руководства
 

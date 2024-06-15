@@ -273,7 +273,7 @@ p {
 }
 ```
 
-你可以到 <http://jsfiddle.net/RwtHn/5/> 看範例。
+你可以到 <https://jsfiddle.net/RwtHn/5/> 看範例。
 
 ## 使用 transition events 來替 object 製作動畫
 

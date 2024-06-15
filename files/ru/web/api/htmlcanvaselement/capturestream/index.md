@@ -42,7 +42,7 @@ var stream = canvasElt.captureStream(25); // 25 FPS
 pc.addStream(stream);
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

@@ -3,6 +3,8 @@ title: blockquote
 slug: Web/HTML/Element/blockquote
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - **blockquote** -_cita en bloque_ . Crea citas en bloque, marca las citas a otros autores o documentos.

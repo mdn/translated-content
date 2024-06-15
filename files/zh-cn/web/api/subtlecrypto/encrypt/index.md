@@ -155,7 +155,7 @@ let data = new Uint8Array(12345);
 // 加密函数使用 promise 包裹，因此我们必须使用 await，
 // 并确保包含此代码的函数是一个异步函数
 // 加密函数需要一个 cryptokey 对象
-const key_encoded = await crypto.subtle.importKey(
+const key_encoded = await window.crypto.subtle.importKey(
   "raw",
   key.buffer,
   "AES-CTR",

@@ -2,7 +2,7 @@
 title: XPathResult
 slug: Web/API/XPathResult
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
 
 {{APIRef}}
@@ -16,7 +16,7 @@ XPath 式はさまざまな結果型を発生させる可能性があるため�
 - {{domxref("XPathResult.booleanValue")}} {{ReadOnlyInline}}
   - : 論理値で、 `resultType` が `BOOLEAN_TYPE` の場合に、結果の値を表します。
 - {{domxref("XPathResult.invalidIteratorState")}} {{ReadOnlyInline}}
-  - : イテレータが無効になったことを示します。 `resultType` が `UNORDERED_NODE_ITERATOR_TYPE` または `ORDERED_NODE_ITERATOR_TYPE` で、この結果を返してから文書が変更された場合は `true` となります。
+  - : イテレーターが無効になったことを示します。 `resultType` が `UNORDERED_NODE_ITERATOR_TYPE` または `ORDERED_NODE_ITERATOR_TYPE` で、この結果を返してから文書が変更された場合は `true` となります。
 - {{domxref("XPathResult.numberValue")}} {{ReadOnlyInline}}
   - : 数値で、 `resultType` が `NUMBER_TYPE` の場合に、結果の値を表します。
 - {{domxref("XPathResult.resultType")}} {{ReadOnlyInline}}

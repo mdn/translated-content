@@ -39,7 +39,7 @@ wm.set(obj, "foo").set(window, "bar"); // chainable
 wm.set(obj, "baz");
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

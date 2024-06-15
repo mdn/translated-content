@@ -1,6 +1,8 @@
 ---
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
+l10n:
+  sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
 ---
 
 {{HTTPSidebar}}
@@ -19,7 +21,7 @@ HTTP **`Authorization`** 请求标头用于提供服务器验证用户代理身�
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
-      <td>无</td>
+      <td>否</td>
     </tr>
   </tbody>
 </table>
@@ -57,7 +59,7 @@ Authorization: Digest username=<username>,
 
   - : [身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)定义了凭据如何编码。一些常见的类型是（不区分大小写）：[`Basic`](/zh-CN/docs/Web/HTTP/Authentication#basic_验证方案)、`Digest`、`Negotiate` 和 `AWS4-HMAC-SHA256`。
 
-    > **备注：** 有关更多信息/选项，请参阅 [HTTP 身份验证 > 身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)
+    > **备注：** 有关更多信息或选项，请参阅 [HTTP 身份验证 > 身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)
 
 除 `<auth-scheme>` 外，其余指令特定于每个[身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)。通常，你需要检查这些方案的相关规范（下面列出了一小部分方案的要点）。
 
@@ -90,7 +92,7 @@ Authorization: Digest username=<username>,
     - `"auth"`：身份验证
     - `"auth-int"`：有完整保护的身份验证
 - `cnonce`
-  - : 客户端提供的带引号的 ASCII 字符串值。客户端和服务器都使用它来提供相互身份验证，提供一些消息完整性保护，并避免“选择明文攻击”。有关更多信息，请参阅规范。
+  - : 客户端提供的带引号的 {{Glossary("ASCII")}} 字符串值。客户端和服务器都使用它来提供相互身份验证，提供一些消息完整性保护，并避免“选择明文攻击”。有关更多信息，请参阅规范。
 - `nc`
   - : 随机数。客户端发送当前 `cnonce` 值（包括当前请求）的请求的十六进制计数。服务器可以使用重复的 `nc` 值来识别重放请求。
 - `userhash` {{optional_inline}}

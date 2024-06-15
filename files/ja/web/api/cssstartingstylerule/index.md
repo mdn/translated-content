@@ -2,10 +2,10 @@
 title: CSSStartingStyleRule
 slug: Web/API/CSSStartingStyleRule
 l10n:
-  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
+  sourceCommit: 8b199a6a0272d77f1583d7fdc3faaecfd8234ff8
 ---
 
-{{ APIRef("CSSOM") }}{{SeeCompatTable}}
+{{ APIRef("CSSOM") }}
 
 **`CSSStartingStyleRule`** は [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)のインターフェイスで、 CSS の {{CSSxRef("@starting-style")}} アットルールを表します。
 

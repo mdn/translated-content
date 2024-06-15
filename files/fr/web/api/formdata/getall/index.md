@@ -3,7 +3,9 @@ title: FormData.getAll()
 slug: Web/API/FormData/getAll
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 La méthode **`getAll()`** de l'interface {{domxref("FormData")}} renvoie toutes les valeurs associées à une clé donnée à partir d'un objet `FormData`.
 

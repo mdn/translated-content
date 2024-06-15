@@ -1,6 +1,8 @@
 ---
 title: <dimension>
 slug: Web/CSS/dimension
+l10n:
+  sourceCommit: 66944f622b6b51bc9c24bebbbea242138d910600
 ---
 
 {{CSSRef}}
@@ -17,7 +19,7 @@ CSS は `<dimension>` を使用して、長さ ({{CSSxRef("&lt;length&gt;")}})�
 
 ### 有効な dimension
 
-```css example-good
+```plain example-good
 12px      12 ピクセル
 1rem      1rem
 1.2pt     1.2 ポイント
@@ -29,7 +31,7 @@ CSS は `<dimension>` を使用して、長さ ({{CSSxRef("&lt;length&gt;")}})�
 
 ### 無効な dimension
 
-```css example-bad
+```plain example-bad
 12 px       単位は数値の直後に来る必要がある。
 12"px"      単位は識別子であり、引用符で囲まない。
 3sec        秒の単位は "s" であり "sec" ではない。

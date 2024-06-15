@@ -242,7 +242,7 @@ function dragstart_handler(ev) {
 
 - [Copying and moving elements with the `DataTransfer` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html)
 - [Copying and moving elements with the `DataTransferListItem` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
-- ファイルのドラッグ & ドロップ (Firefox のみ): <http://jsfiddle.net/9C2EF/>
+- ファイルのドラッグ & ドロップ (Firefox のみ): <https://jsfiddle.net/9C2EF/>
 - ファイルのドラッグ & ドロップ (全ブラウザー): [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
 - Drag and Drop API を使った駐車場プロジェクト: <https://park.glitch.me/> ([ここで](https://glitch.com/edit/#!/park)編集できます)
 

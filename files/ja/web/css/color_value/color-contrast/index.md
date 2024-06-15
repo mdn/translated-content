@@ -2,7 +2,7 @@
 title: color-contrast()
 slug: Web/CSS/color_value/color-contrast
 l10n:
-  sourceCommit: 679ce634cab2ae7b2e8328946230393e69d6a6f9
+  sourceCommit: 8a22e494736dbe7cc8ba38127a0d928b9fe8e700
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -39,3 +39,12 @@ color-contrast(#008080 vs olive, var(--myColor), #d2691e)
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{cssxref("color_value", "&lt;color>")}} データ型
+- [CSS 色](/ja/docs/Web/CSS/CSS_colors)モジュール
+- [`prefers-contrast`](/ja/docs/Web/CSS/@media/prefers-contrast) および [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) （{{cssxref("@media")}} 特性）
+- [`contrast()`](/ja/docs/Web/CSS/filter-function/contrast)
+- [WCAG: color contrast](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
+- {{cssxref('--*', 'CSS custom properties')}} および {{cssxref("var")}}

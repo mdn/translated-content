@@ -2,7 +2,7 @@
 title: "::view-transition-group"
 slug: Web/CSS/::view-transition-group
 l10n:
-  sourceCommit: 6d4b6a0f9df94de158c373d6b08c504caafcee5f
+  sourceCommit: c9cc38c3c3c342e2e952c1acd57f55e104c5bb06
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -45,7 +45,7 @@ html::view-transition-group(*) {
 - `*`
   - : 擬似要素が、すべてのビュートランジショングループに一致するようにします。
 - `root`
-  - : 擬似要素が、ページ全体のビュートランジションを含むためにユーザエージェントによって作成された既定の `root` ビュートランジショングループに一致するようにします。すなわち、 {{cssxref("view-transition-name")}} プロパティによって自分自身を固有のビュートランジショングループに割り当てていない要素を意味します）。
+  - : 擬似要素が、ページ全体のビュートランジションを含むためにユーザーエージェントによって作成された既定の `root` ビュートランジショングループに一致するようにします。すなわち、 {{cssxref("view-transition-name")}} プロパティによって自分自身を固有のビュートランジショングループに割り当てていない要素を意味します）。
 - {{cssxref("custom-ident")}}
   - : 擬似要素が、指定された {{cssxref("custom-ident")}} を {{cssxref("view-transition-name")}} プロパティを通して要素に割り当てることによって作成された固有のビュートランジショングループに一致するようにします。
 

@@ -17,17 +17,20 @@ slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 
 一些函数在所有的 worker 和主线程中均可用（来自 `WindowOrWorkerGlobalScope`）：
 
-- {{domxref("atob", "atob()")}}
-- {{domxref("btoa", "btoa()")}}
+- {{domxref("WorkerGlobalScope.atob()", "atob()")}}
+- {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
 - {{domxref("clearInterval()")}}
 - {{domxref("clearTimeout()")}}
-- {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}
+- {{domxref("createImageBitmap()")}}
+- {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
+- {{domxref("fetch()")}}
 - {{domxref("queueMicrotask()")}}
+- {{domxref("reportError()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("setTimeout()")}}
 - {{domxref("structuredClone()")}}
-- {{domxref("window.requestAnimationFrame")}}（仅专用 worker）
-- {{domxref("window.cancelAnimationFrame")}}（仅专用 worker）
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}}（仅专用 worker）
+- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()", "cancelAnimationFrame()")}}（仅专用 worker）
 
 以下函数**仅**在 worker 中可用：
 

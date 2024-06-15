@@ -1,7 +1,6 @@
 ---
 title: indexedDB
 slug: Web/API/Window/indexedDB
-original_slug: Web/API/indexedDB
 ---
 
 {{ APIRef() }}

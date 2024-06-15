@@ -3711,7 +3711,7 @@
 /fr/docs/Web/API/Document/onfullscreenchange	/fr/docs/Web/API/Document/fullscreenchange_event
 /fr/docs/Web/API/Document/onoffline	/fr/docs/Web/API/Window/offline_event
 /fr/docs/Web/API/Document/ononline	/fr/docs/Web/API/Window/online_event
-/fr/docs/Web/API/Document/origin	/fr/docs/Web/API/origin
+/fr/docs/Web/API/Document/origin	/fr/docs/Web/API/Window/origin
 /fr/docs/Web/API/Document/registerElement	/fr/docs/Web/API/CustomElementRegistry/define
 /fr/docs/Web/API/Document/touchend_event	/fr/docs/Web/API/Element/touchend_event
 /fr/docs/Web/API/Document/transitionend_event	/fr/docs/Web/API/Element/transitionend_event
@@ -4082,11 +4082,11 @@
 /fr/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/fr/docs/Web/API/btoa
 /fr/docs/Web/API/WindowOrWorkerGlobalScope/caches	/fr/docs/Web/API/caches
 /fr/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/fr/docs/Web/API/clearInterval
-/fr/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated	/fr/docs/Web/API/crossOriginIsolated
+/fr/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated	/fr/docs/Web/API/Window/crossOriginIsolated
 /fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/fr/docs/Web/API/fetch
 /fr/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/fr/docs/Web/API/Window/indexedDB
-/fr/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/fr/docs/Web/API/isSecureContext
-/fr/docs/Web/API/WindowOrWorkerGlobalScope/origin	/fr/docs/Web/API/origin
+/fr/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/fr/docs/Web/API/Window/isSecureContext
+/fr/docs/Web/API/WindowOrWorkerGlobalScope/origin	/fr/docs/Web/API/Window/origin
 /fr/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask	/fr/docs/Web/API/queueMicrotask
 /fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/fr/docs/Web/API/setTimeout
 /fr/docs/Web/API/WindowTimers/clearInterval	/fr/docs/Web/API/clearInterval
@@ -4135,6 +4135,7 @@
 /fr/docs/Web/API/console/timeStamp	/fr/docs/Web/API/console/timestamp_static
 /fr/docs/Web/API/console/trace	/fr/docs/Web/API/console/trace_static
 /fr/docs/Web/API/console/warn	/fr/docs/Web/API/console/warn_static
+/fr/docs/Web/API/crossOriginIsolated	/fr/docs/Web/API/Window/crossOriginIsolated
 /fr/docs/Web/API/document.applets	/fr/docs/Web/API/Document/applets
 /fr/docs/Web/API/document.compatMode	/fr/docs/Web/API/Document/compatMode
 /fr/docs/Web/API/document.createComment	/fr/docs/Web/API/Document/createComment
@@ -4151,12 +4152,14 @@
 /fr/docs/Web/API/event.defaultPrevented	/fr/docs/Web/API/Event/defaultPrevented
 /fr/docs/Web/API/event.preventDefault	/fr/docs/Web/API/Event/preventDefault
 /fr/docs/Web/API/indexedDB	/fr/docs/Web/API/Window/indexedDB
+/fr/docs/Web/API/isSecureContext	/fr/docs/Web/API/Window/isSecureContext
 /fr/docs/Web/API/navigator.doNotTrack	/fr/docs/Web/API/Navigator/doNotTrack
 /fr/docs/Web/API/notification/Using_Web_Notifications	/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /fr/docs/Web/API/notification/onclick	/fr/docs/Web/API/Notification/click_event
 /fr/docs/Web/API/notification/onclose	/fr/docs/Web/API/Notification/close_event
 /fr/docs/Web/API/notification/onerror	/fr/docs/Web/API/Notification/error_event
 /fr/docs/Web/API/notification/onshow	/fr/docs/Web/API/Notification/show_event
+/fr/docs/Web/API/origin	/fr/docs/Web/API/Window/origin
 /fr/docs/Web/API/window.location	/fr/docs/Web/API/window/location
 /fr/docs/Web/API/window.requestAnimationFrame	/fr/docs/Web/API/window/requestAnimationFrame
 /fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/fr/docs/Web/Accessibility/ARIA/Roles/alert_role
@@ -6606,7 +6609,7 @@
 /fr/docs/conflicting/Web/API/XSLTProcessor_8ba2392fb1adc1009fbd010bf87ed3f6	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/conflicting/Web/API/btoa	/fr/docs/Web/API/btoa
 /fr/docs/conflicting/Web/API/console	/fr/docs/Web/API/console
-/fr/docs/conflicting/Web/API/origin	/fr/docs/Web/API/origin
+/fr/docs/conflicting/Web/API/origin	/fr/docs/Web/API/Window/origin
 /fr/docs/conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3	/fr/docs/Web/API
 /fr/docs/conflicting/Web/Accessibility	/fr/docs/Web/Accessibility
 /fr/docs/conflicting/Web/Accessibility/ARIA	/fr/docs/Web/Accessibility/ARIA

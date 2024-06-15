@@ -34,7 +34,7 @@ wm.get(window); // Возвращает "foo".
 wm.get("baz"); // Возвращает undefined.
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

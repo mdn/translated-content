@@ -60,19 +60,15 @@ _親である {{domxref("HTMLElement")}} からプロパティを継承してい
 
 ### 廃止されたプロパティ
 
-- {{domxref("HTMLAnchorElement.charset")}} {{deprecated_inline}}
+- `HTMLAnchorElement.charset` {{deprecated_inline}}
   - : 文字列で、リンク先リソースの文字エンコードを表します。
-- {{domxref("HTMLAnchorElement.coords")}} {{deprecated_inline}}
+- `HTMLAnchorElement.coords` {{deprecated_inline}}
   - : 文字列で、カンマ区切りの座標リストを表します。
-- {{domxref("HTMLAnchorElement.name")}} {{deprecated_inline}}
+- `HTMLAnchorElement.name` {{deprecated_inline}}
   - : 文字列で、アンカー名を表します。
-- {{domxref("HTMLAnchorElement.rev")}} {{deprecated_inline}}
-
+- `HTMLAnchorElement.rev` {{deprecated_inline}}
   - : 文字列で、リンク先オブジェクトから対象オブジェクトへの関係を指定する HTML の [`rev`](/ja/docs/Web/HTML/Element/a#rev) HTML 属性を表します。
-
-    > **メモ:** 現在、W3C HTML 5.2 仕様では、`rev` が廃止されていないことを示していますが、WHATWG の標準では、`rev` が廃止されています。この不一致が解決されるまで、廃止されていると想定する必要があります。
-
-- {{domxref("HTMLAnchorElement.shape")}} {{deprecated_inline}}
+- `HTMLAnchorElement.shape` {{deprecated_inline}}
   - : 文字列で、アクティブ領域の形状を表します。
 
 ## インスタンスメソッド

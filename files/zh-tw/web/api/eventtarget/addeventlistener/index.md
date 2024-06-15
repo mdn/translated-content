@@ -3,7 +3,7 @@ title: EventListener
 slug: Web/API/EventTarget/addEventListener
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}
 
 **`EventListener`** 介面表示一個可以處理由 {{domxref("EventTarget")}} 物件分派事件的物件。
 

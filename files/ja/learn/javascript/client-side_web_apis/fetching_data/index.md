@@ -2,12 +2,12 @@
 title: サーバーからのデータ取得
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 l10n:
-  sourceCommit: 05d8b0eb3591009b6b7fee274bb7ed1bc5638f18
+  sourceCommit: c215109b90da51435eaa2c94a8f6764909f628e0
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
-現代のウェブサイトやアプリケーションでとても一般的なもう一つのタスクは、新しいページ全体を読み込むことなくウェブページの一部を更新するために、サーバーから個々のデータ項目を取得することです。この一見小さなことが、サイトのパフォーマンスや動作に大きな影響を与えてきました。そこでこの記事では、この概念を説明し、これを可能にする技術、特に [Fetch API](/ja/docs/Web/API/Fetch_API) を見ていきます。
+現代のウェブサイトやアプリケーションでとても一般的なもう一つのタスクは、新しいページ全体を読み込むことなくウェブページの一部を更新するために、サーバーから個々のデータ項目を取得することです。この一見小さなことが、サイトのパフォーマンスや動作に大きな影響を与えてきました。そこでこの記事では、この概念を説明し、これを可能にする技術、特に[フェッチ API](/ja/docs/Web/API/Fetch_API) を見ていきます。
 
 <table>
   <tbody>
@@ -26,7 +26,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">目的:</th>
       <td>
         サーバーからデータを取得し、そのデータを使用してウェブページのコンテンツを更新する方法を習得する。
       </td>
@@ -48,7 +48,7 @@ l10n:
 
 ![フェッチを使用したページ更新](fetch-update.svg)
 
-ここでの主な API は、[Fetch API](/ja/docs/Web/API/Fetch_API) です。これは、ページ内で動作する JavaScript が、サーバーに対して [HTTP](/ja/docs/Web/HTTP) リクエストを行い、特定のリソースを取得できるようにするものです。サーバーがこれを提供すると、 JavaScript はそのデータを使用してページを更新することができます。通常は [DOM 操作 API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents) を使用することになります。リクエストされるデータは、多くの場合 [JSON](/ja/docs/Learn/JavaScript/Objects/JSON)で、これは構造化データの転送に適した形式ですが、 HTML や単なるテキストであっても構いません。
+ここでの主な API は、[フェッチ API](/ja/docs/Web/API/Fetch_API) です。これは、ページ内で動作する JavaScript が、サーバーに対して [HTTP](/ja/docs/Web/HTTP) リクエストを行い、特定のリソースを取得できるようにするものです。サーバーがこれを提供すると、 JavaScript はそのデータを使用してページを更新することができます。通常は [DOM 操作 API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents) を使用することになります。リクエストされるデータは、多くの場合 [JSON](/ja/docs/Learn/JavaScript/Objects/JSON)で、これは構造化データの転送に適した形式ですが、 HTML や単なるテキストであっても構いません。
 
 これは Amazon、YouTube、eBay など、データ駆動型のサイトによく見られるパターンです。このモデルを使うと次のようなことが実現できます。
 
@@ -59,9 +59,9 @@ l10n:
 
 さらに高速化するために、一部のサイトでは、最初にリクエストされたときにユーザーのコンピューターに資産や データを保存しています。つまり、その後の訪問では、ページを最初に読み込むたびに新しいコピーをダウンロードせずに、 ローカルバージョンを使用するのです。コンテンツは、更新されたときだけサーバーから再読み込みされます。
 
-## Fetch API
+## フェッチ API
 
-それでは、 Fetch API の例をいくつか見てみましょう。
+それでは、フェッチ API の例をいくつか見てみましょう。
 
 ### テキストコンテンツの読み取り
 
@@ -85,20 +85,22 @@ verseChoose.addEventListener("change", () => {
 
 `updateDisplay()` 関数を定義しましょう。まずはさっきのコードブロックの下に以下を書き足します。これは関数の空の箱です。
 
-```js
-function updateDisplay(verse) {}
+```js-nolint
+function updateDisplay(verse) {
+
+}
 ```
 
 この関数は、後で必要になるので、読み込むテキストファイルを指し示す関連 URL を構築することから開始します。 {{htmlelement("select")}} 要素の値は、選択されている {{htmlelement("option")}} の中のテキストと常に同じです（value 属性で異なる値を指定しない限り）。対応する連のテキストファイルは "verse1.txt" で、 HTML ファイルと同じディレクトリーにあるので、ファイル名だけで十分です。
 
-ただ、ウェブサーバーはたいてい大文字小文字を区別しますし、今回のファイル名にスペースが含まれていません。 "Verse 1" を "verse1.txt" に変換するためには、 V を小文字にして、スペースを取り除き、 .txt を末尾に追加しなければなりません。これは {{jsxref("String.replace", "replace()")}} と {{jsxref("String.toLowerCase", "toLowerCase()")}}、あと単なる[文字列の結合](/ja/docs/Learn/JavaScript/First_steps/Strings#_を用いた連結)で実現できます。以下のコードを `updateDisplay()` 関数の内側に追加してください。
+ただ、ウェブサーバーはたいてい大文字小文字を区別しますし、今回のファイル名にスペースが含まれていません。 "Verse 1" を "verse1.txt" に変換するためには、 'V' を小文字にして、スペースを取り除き、 .txt を末尾に追加しなければなりません。これは {{jsxref("String.replace", "replace()")}} と {{jsxref("String.toLowerCase", "toLowerCase()")}}、あと単なる[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)で実現できます。以下のコードを `updateDisplay()` 関数の中に追加してください。
 
 ```js
 verse = verse.replace(" ", "").toLowerCase();
 const url = `${verse}.txt`;
 ```
 
-ついに Fetch API を使用する準備ができました。
+ついにフェッチ API を使用する準備ができました。
 
 ```js
 // `fetch()` を呼び出し、 URL を渡します。
@@ -117,17 +119,19 @@ fetch(url)
   })
   // response.text() が成功したら、そのテキストで `then()` ハンドラーが
   // 呼び出され、それを `poemDisplay` ボックスにコピーします。
-  .then((text) => (poemDisplay.textContent = text))
+  .then((text) => {
+    poemDisplay.textContent = text;
+  })
   // 起こりうるエラーをキャッチし、`poemDisplay` ボックスにメッセージを
   // 表示します。
-  .catch(
-    (error) => (poemDisplay.textContent = `Could not fetch verse: ${error}`),
-  );
+  .catch((error) => {
+    poemDisplay.textContent = `Could not fetch verse: ${error}`;
+  });
 ```
 
 ここでは、かなり多くのことを解説します。
 
-まず、 Fetch API のエントリーポイントは {{domxref("fetch", "fetch()")}} というグローバル関数で、URL を引数として呼び出します（カスタム設定のために別のオプションの引数を取りますが、ここでは使用しません）。
+まず、フェッチ API のエントリーポイントは {{domxref("fetch", "fetch()")}} というグローバル関数で、URL を引数として呼び出します（カスタム設定のために別のオプションの引数を取りますが、ここでは使用しません）。
 
 次に、 `fetch()` はプロミス ({{jsxref("Promise")}}) を返す非同期 API で す。もしこれが何かわからない場合は、[非同期 JavaScript](/ja/docs/Learn/JavaScript/Asynchronous)のモジュール、特に[プロミス](/ja/docs/Learn/JavaScript/Asynchronous/Promises)を読んでからこの記事に戻ってきてください。この記事には `fetch()` API についても書かれていることが分かると思います。
 
@@ -144,7 +148,7 @@ updateDisplay("Verse 1");
 verseChoose.value = "Verse 1";
 ```
 
-#### 例はサーバーから提供すること
+#### 例をサーバーから提供する
 
 現代のブラウザーは、ローカルファイルから例を実行しただけでは、 HTTP リクエストを動作させません。これは、セキュリティ上の制約があるためです（ウェブセキュリティについては、[ウェブサイトのセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)をお読みください)。
 
@@ -154,15 +158,15 @@ verseChoose.value = "Verse 1";
 
 この例では、 The Can Store というサンプルサイトを作成しました。これは、缶詰だけを販売する架空のスーパーマーケットです。この例は [GitHub 上でライブ実行](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/)することができ、[ソースコード](https://github.com/mdn/learning-area/tree/main/javascript/apis/fetching-data/can-store)も見ることができます。
 
-![左列に検索オプション、右列に商品検索結果を示した擬似eコマースサイト。](can-store.png)
+![左列に検索オプション、右列に商品検索結果を示した擬似 e コマースサイト。](can-store.png)
 
 既定で、サイトにはすべての製品が表示されますが、左列のフォームコントロールを使用して、カテゴリー、または検索語、またはその両方で製品をフィルタリングすることができます。
 
 カテゴリーや検索キーワードによる商品のフィルタリング、データが UI に正しく表示されるように文字列を操作するなど、かなり多くの複雑なコードが存在します。この記事ではそのすべてについて説明しませんが、コードの中に広範なコメントがあります。（[can-script.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/can-store/can-script.js)を見てください）。
 
-ですが、 Fetch のコードについては説明していきます。
+ですが、フェッチのコードについては説明していきます。
 
-Fetch を使用できる最初のブロックは、 JavaScript で開始されたところにあります。
+フェッチを使用できる最初のブロックは、 JavaScript で開始されたところにあります。
 
 ```js
 fetch("products.json")
@@ -180,12 +184,12 @@ fetch("products.json")
 
 この関数の中では、以下のようなことを行っています。
 
-- サーバがエラー（[`404 Not Found`](/ja/docs/Web/HTTP/Status/404) のような値）を返さなかったかどうか調べます。もしエラーが発生した場合は、そのエラーを報告します。
+- サーバーがエラー（[`404 Not Found`](/ja/docs/Web/HTTP/Status/404) のような値）を返さなかったかどうか調べます。もしエラーが発生した場合は、そのエラーを報告します。
 - レスポンスに対して {{domxref("Response.json", "json()")}} を呼び出します。これにより、データは [JSON オブジェクト](/ja/docs/Learn/JavaScript/Objects/JSON)として取得されます。`response.json()` が返すプロミス値を返します。
 
-次に、返されたプロミスの `then()` メソッドに、関数を渡します。この関数には、レスポンスデータを JSON として含むオブジェクトが渡され、それを `initialize()` 関数に渡します。この関数は、ユーザーインターフェースにすべての製品を表示する処理を開始します。
+次に、返されたプロミスの `then()` メソッドに、関数を渡します。この関数には、レスポンスデータを JSON として含むオブジェクトが渡され、それを `initialize()` 関数に渡します。この関数は、ユーザーインターフェイスにすべての製品を表示する処理を開始します。
 
-エラーを処理するために、連鎖の最後に `.catch()` ブロックを連鎖させています。これは、何らかの理由でプロミスが失敗した場合に実行されます。その中には、引数として渡される関数、 `err` オブジェクトが含まれています。この `err` オブジェクトを使用して、発生したエラーがどういうものかを伝えられます。ここでは単純な `console.log()` を使用して伝えています。
+エラーを処理するために、連鎖の最後に `.catch()` ブロックを連鎖させています。これは、何らかの理由でプロミスが失敗した場合に実行されます。その中には、引数として渡される関数、 `err` オブジェクトが含まれています。この `err` オブジェクトを使用して、発生したエラーがどういうものかを伝えられます。ここでは単純な `console.error()` を使用して伝えています。
 
 しかし、完全なウェブサイトであれば、ユーザーの画面にメッセージを表示したり、状況を改善するためのオプションを提供したりして、より上品にこのエラーを処理しますが、ここでは、単純な `console.error()` 以上のものは必要ありません。
 
@@ -196,7 +200,7 @@ fetch("products.json")
 3. 読み取るファイルのパスを、 'produc.json' のようなものに変更します（誤ったファイル名にして下さい）。
 4. ここでインデックスファイルをブラウザーに読み込んで（`localhost:8000` から）、ブラウザーの開発者コンソールを見ます。 "Fetch problem: HTTP error: 404" のようなメッセージが表示されるはずです。
 
-2 つ目の Fetch ブロックは `fetchBlob()` 関数の中にあります。
+2 つ目のフェッチブロックは `fetchBlob()` 関数の中にあります。
 
 ```js
 fetch(url)
@@ -214,7 +218,7 @@ fetch(url)
 
 Blob を正常に受信したら、それを `showProduct()` 関数に渡して、表示させます。
 
-## The XMLHttpRequest API
+## XMLHttpRequest API
 
 時々、特に古いコードでは、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) (しばしば "XHR" と略されます) という別の API を使って、HTTP リクエストを行っているのを見かけることがあります。これは Fetch よりも前にあり、AJAX を実装するために実際に広く使用された最初の API でした。できれば Fetch を使用することをお勧めします。`XMLHttpRequest` よりもシンプルな API で、より多くの機能を有しています。ここでは、`XMLHttpRequest` を使用する例については紹介しませんが、最初の缶詰屋のリクエストの `XMLHttpRequest` バージョンがどのようになるかを示します。
 
@@ -245,18 +249,17 @@ try {
 
 また、 `open()` や `send()` で発生したエラーを処理するために、全体を [try...catch](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) ブロックで囲む必要があります。
 
-Fetch API がこれより改善されていると思うことを期待します。特に、 2 つの異なる場所でエラーを処理しなければならない点を見てください。
+フェッチ API がこれより改善されていると思うことを期待します。特に、 2 つの異なる場所でエラーを処理しなければならない点を見てください。
 
 ## まとめ
 
-この記事では、 Fetch を使ってサーバーからデータを取得する作業を開始する方法を示しました。
+この記事では、フェッチを使ってサーバーからデータを取得する作業を開始する方法を示しました。
 
 ## 関連情報
 
 この記事では、さまざまなテーマを取り上げましたが、実際に表面をこすったに過ぎません。このようなテーマについては、以下の記事でより詳しく説明しています。
 
-- [Ajax — 始めましょう](/ja/docs/Web/Guide/AJAX/Getting_Started)
-- [Fetch を使う](/ja/docs/Web/API/Fetch_API/Using_Fetch)
+- [フェッチの使用](/ja/docs/Web/API/Fetch_API/Using_Fetch)
 - [プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [JSON データの操作](/ja/docs/Learn/JavaScript/Objects/JSON)
 - [HTTP の概要](/ja/docs/Web/HTTP/Overview)

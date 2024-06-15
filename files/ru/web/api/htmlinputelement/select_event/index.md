@@ -3,7 +3,7 @@ title: GlobalEventHandlers.onselect
 slug: Web/API/HTMLInputElement/select_event
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{APIRef}}
 
 Обработчик события select окна браузера.
 

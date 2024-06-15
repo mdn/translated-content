@@ -1,7 +1,6 @@
 ---
 title: 국제화 (internationalization, I18N)
 slug: Glossary/Internationalization
-original_slug: Glossary/I18N
 ---
 
 {{GlossarySidebar}}

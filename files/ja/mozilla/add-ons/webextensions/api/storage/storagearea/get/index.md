@@ -46,7 +46,7 @@ browser.storage.local.set({
 });
 ```
 
-次に promise で使う成功時と失敗時のハンドラを定義しておきます。
+次に promise で使う成功時と失敗時のハンドラーを定義しておきます。
 
 ```js
 function onGot(item) {

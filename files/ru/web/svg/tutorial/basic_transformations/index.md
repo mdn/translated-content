@@ -3,7 +3,7 @@ title: Базовые трансформации
 slug: Web/SVG/Tutorial/Basic_Transformations
 ---
 
-{{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}
+{{SVGRef}}{{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}
 
 Теперь мы готовы начать изменять наши замечательные изображения. Но сначала давайте ознакомимся с {{SVGElement("g")}} элементом. С его помощью вы можете назначить свойства для любого набора элементов. На самом деле, в этом и состоит его единственная цель.
 

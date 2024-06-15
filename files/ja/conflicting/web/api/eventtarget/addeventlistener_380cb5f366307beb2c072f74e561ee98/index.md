@@ -4,7 +4,7 @@ slug: conflicting/Web/API/EventTarget/addEventListener_380cb5f366307beb2c072f74e
 original_slug: Web/API/EventListener
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}
 
 **`EventListener`** インターフェイスは、{{domxref("EventTarget")}} オブジェクトによってディスパッチされたイベントを処理できるオブジェクトを表します。
 

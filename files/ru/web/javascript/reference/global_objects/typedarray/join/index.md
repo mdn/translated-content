@@ -54,7 +54,7 @@ if (!Uint8Array.prototype.join) {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("TypedArray")}}
 - {{jsxref("Array.prototype.join()")}}
