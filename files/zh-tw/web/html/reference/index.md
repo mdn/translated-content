@@ -16,4 +16,4 @@ slug: Web/HTML/Reference
 - [內容類型](/zh-TW/docs/Web/HTML/Content_categories)
   - : 每個 HTML 元素都是一個或多個內容類別的成員──這些類別會將具有共同特性的元素分組。
 - [HTML 中使用的日期與時間格式](/zh-TW/docs/Web/HTML/Date_and_time_formats)
-  - : 某些 HTML 元素可讓您將日期及時間指定為值或作為屬性之值。其中包括 {{HTMLElement("input")}} 元素以及 {{HTMLElement("ins")}} 和 {{HTMLElement("del")}} 元素的日期和時間變化。
+  - : 某些 HTML 元素可讓你將日期及時間指定為值或作為屬性之值。其中包括 {{HTMLElement("input")}} 元素以及 {{HTMLElement("ins")}} 和 {{HTMLElement("del")}} 元素的日期和時間變化。
