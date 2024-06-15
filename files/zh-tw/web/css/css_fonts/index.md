@@ -65,10 +65,12 @@ CSS 字型模組還支持可變字型。與常規字型不同的是，每種樣�
     - {{cssxref("@font-face/unicode-range", "unicode-range")}}
 
 - @ 規則： {{cssxref("@font-feature-values")}}
+
   - : 描述符：
     - {{cssxref("@font-feature-values/font-display", "font-display")}}
 
 - @ 規則： {{cssxref("@font-palette-values")}}
+
   - : 描述符：
     - {{cssxref("@font-palette-values/base-palette", "base-palette")}}
     - {{cssxref("@font-palette-values/font-family", "font-family")}}
@@ -87,44 +89,44 @@ CSS 字型模組還支持可變字型。與常規字型不同的是，每種樣�
 
 `font-feature-settings`：
 
-- [`<feature-tag-value>`](/en-US/docs/Web/CSS/font-feature-settings#values)
+- [`<feature-tag-value>`](/zh-TW/docs/Web/CSS/font-feature-settings#values)
 
 `font-format`：
 
-- [`<font-format>`](/en-US/docs/Web/CSS/@supports#font-format)
+- [`<font-format>`](/zh-TW/docs/Web/CSS/@supports#font-format)
 
 `font-stretch`：
 
-- [`<font-stretch-css3>`](/en-US/docs/Web/CSS/font-stretch#values)
+- [`<font-stretch-css3>`](/zh-TW/docs/Web/CSS/font-stretch#values)
 
 `font-tech`：
 
-- [`<color-font-tech>`](/en-US/docs/Web/CSS/@supports#font-tech)
-- [`<font-features-tech>`](/en-US/docs/Web/CSS/@supports#font-tech)
-- [`<font-tech>`](/en-US/docs/Web/CSS/@supports#font-tech)
+- [`<color-font-tech>`](/zh-TW/docs/Web/CSS/@supports#font-tech)
+- [`<font-features-tech>`](/zh-TW/docs/Web/CSS/@supports#font-tech)
+- [`<font-tech>`](/zh-TW/docs/Web/CSS/@supports#font-tech)
 
 `font-variant`：
 
-- [`<font-variant-css2>`](/en-US/docs/Web/CSS/font-variant)
-- [`<east-asian-variant-values>`](/en-US/docs/Web/CSS/font-variant#values)
-- [`<east-asian-width-values>`](/en-US/docs/Web/CSS/font-variant#values)
+- [`<font-variant-css2>`](/zh-TW/docs/Web/CSS/font-variant)
+- [`<east-asian-variant-values>`](/zh-TW/docs/Web/CSS/font-variant#values)
+- [`<east-asian-width-values>`](/zh-TW/docs/Web/CSS/font-variant#values)
 
 `font-variant-ligatures`：
 
-- [`<common-lig-values>`](/en-US/docs/Web/CSS/font-variant-ligatures#values)
-- [`<contextual-alt-values>`](/en-US/docs/Web/CSS/font-variant-ligatures#values)
-- [`<discretionary-lig-values>`](/en-US/docs/Web/CSS/font-variant-ligatures#values)
-- [`<historical-lig-values>`](/en-US/docs/Web/CSS/font-variant-ligatures#values)
+- [`<common-lig-values>`](/zh-TW/docs/Web/CSS/font-variant-ligatures#values)
+- [`<contextual-alt-values>`](/zh-TW/docs/Web/CSS/font-variant-ligatures#values)
+- [`<discretionary-lig-values>`](/zh-TW/docs/Web/CSS/font-variant-ligatures#values)
+- [`<historical-lig-values>`](/zh-TW/docs/Web/CSS/font-variant-ligatures#values)
 
 `font-variant-numeric`：
 
-- [`<numeric-figure-values>`](/en-US/docs/Web/CSS/font-variant-numeric#values)
-- [`<numeric-fraction-values>`](/en-US/docs/Web/CSS/font-variant-numeric#values)
-- [`<numeric-spacing-values>`](/en-US/docs/Web/CSS/font-variant-numeric#values)
+- [`<numeric-figure-values>`](/zh-TW/docs/Web/CSS/font-variant-numeric#values)
+- [`<numeric-fraction-values>`](/zh-TW/docs/Web/CSS/font-variant-numeric#values)
+- [`<numeric-spacing-values>`](/zh-TW/docs/Web/CSS/font-variant-numeric#values)
 
 `font-weight`：
 
-- [`<font-weight-absolute>`](/en-US/docs/Web/CSS/font-weight#values)
+- [`<font-weight-absolute>`](/zh-TW/docs/Web/CSS/font-weight#values)
 
 ### 介面
 
