@@ -7,7 +7,7 @@ slug: Web/CSS/@font-face
 
 ## 摘要
 
-The `@font-face` [CSS](/zh-TW/docs/Web/CSS) [at-rule](/zh-TW/docs/CSS/At-rule) allows authors to specify online fonts to display text on their web pages. By allowing authors to provide their own fonts, `@font-face` eliminates the need to depend on the limited number of fonts users have installed on their computers. The `@font-face` at-rule may be used not only at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/zh-TW/docs/CSS/At-rule#Conditional_Group_Rules).
+`@font-face` CSS @ 規則允許指定用於顯示文字之自定義字體，該字體可以從網路或用戶自己電腦上安裝的本地字體載入。透過自定義字體， `@font-face` 消除了對使用者電腦上安裝的有限數量字體的依賴。
 
 {{seeCompatTable}}
 
@@ -15,37 +15,78 @@ The `@font-face` [CSS](/zh-TW/docs/Web/CSS) [at-rule](/zh-TW/docs/CSS/At-rule) a
 
 ```plain
 @font-face {
-  [font-family: <family-name>;]?
-  [src: [ <uri> [format(<string>#)]? | <font-face-name> ]#;]?
-  [unicode-range: <urange>#;]?
-  [font-variant: <font-variant>;]?
-  [font-feature-settings: normal|<feature-tag-value>#;]?
-  [font-stretch: <font-stretch>;]?
-  [font-weight: <weight>];
-  [font-style: <style>];
+  font-family: <family-name>;
+  src: <uri>|<font-face-name>;
+  unicode-range: <urange>;
+  font-variant: <font-variant>;
+  font-feature-settings: normal|<feature-tag-value>;
+  font-stretch: <font-stretch>;
+  font-weight: <weight>;
+  font-style: <style>;
 }
 ```
 
 ### 參數值
 
-- `<family-name>`
-  - : Specifies a font name that will be used as font face value for font properties.
-- `<uri>`
-  - : URL for the remote font file location, or the name of a font on the user's computer in the form `local("Font Name")`.
-- `<font-variant>`
-  - : A {{cssxref("font-variant")}} value.
-- `<font-stretch>`
-  - : A {{cssxref("font-stretch")}} value.
-- `<weight>`
-  - : A [font weight](/zh-TW/docs/CSS/font-weight) value.
-- `<style>`
-  - : A [font style](/zh-TW/docs/CSS/font-style) value.
+- {{cssxref("@font-face/font-family", "font-family")}}
+  - : 所指定的字體名稱將會被用於 font 或 font-family 屬性，例如 `font-family: <family-name>;`。
+- {{cssxref("@font-face/font-stretch", "font-stretch")}}
+  - : {{cssxref("font-stretch")}} 值，接受兩個值來指定字體拉伸程度，例如 `font-stretch: 50% 200%;`。
+- {{cssxref("@font-face/font-style", "font-style")}}
+  - : {{cssxref("font-style")}} 值， 接受兩個值來指定字體傾斜程度，例如 `font-style: oblique 20deg 50deg;`。
+- {{cssxref("@font-face/font-weight", "font-weight")}}
 
-You can specify a font on the user's local computer by name using the `local()` syntax. If that font isn't found, other sources will be tried until one is found.
+  - : {{cssxref("font-weight")}} 值，接受兩個值來指定字體粗細程度，例如 `font-weight: 100 400;`。
+
+    > **備註：** {{cssxref("font-variant")}} 描述符已於 2018 年從規範中刪除。支援 {{cssxref("font-variant")}} 值屬性，但沒有等效的描述符。
+
+- {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
+  - : 允許控制 OpenType 字型中的進階排版功能。
+- {{cssxref("@font-face/src", "src")}}
+  - : 指定對字體資源的引用，包括有關字體格式和技術的提示。 `@font-face` 規則必須有效。
+- {{cssxref("@font-face/unicode-range", "unicode-range")}}
+  - : 字體中要使用的 Unicode 碼位的範圍。
+
+## 描述
+
+在使用 `url()` 和 `local()` 函數時，通常會將兩者一起使用，如此一來，若用戶的裝置上有安裝字體，就會使用本地字體，若沒有則會下載字體資源來使用。
+
+如果提供了 `local()` 函數，並指定了一個字體名稱來尋找用戶裝置上的字體，如果{{Glossary("user agent")}}找到了匹配的字體，就會使用這個本地字體。否則，將會下載並使用 `url()` 函數指定的字體資源。
+
+瀏覽器會按照聲明列表的順序嘗試加載資源，因此通常應該將 `local()` 寫在 `url()` 之前。兩個函數都是選擇性的，所以只包含一個或多個 `local()` 而沒有 `url()` 的規則塊也是可以的。如果需要更具體的字體格式（使用 `format()` 或 `tech()` 值），應該將這些更具體的版本列在沒有這些值的版本之前，因為較不具體的變體會先被嘗試並使用。
+
+透過允許自定義字體，`@font-face` 可以設計內容而不必局限於所謂的「web-safe」字體（即那些非常常用、被認為是普遍可用的字體）。指定本地安裝的字體名稱以尋找和使用，使得可以在不依賴網路連接的情況下自定義字體而非使用基本字體。
+
+> **注意：** 在舊版瀏覽器上加載字體的回退策略描述在 [`src` 描述符頁面](/zh-TW/docs/Web/CSS/@font-face/src#fallbacks_for_older_browsers)。
+
+`@font-face` 不僅可以在 CSS 的頂層使用，還可以在任何 [CSS 條件群組規則](/zh-TW/docs/CSS/At-rule#Conditional_Group_Rules)內使用。
+
+### 字體 MIME 類型
+
+| Format                 | MIME type    |
+| ---------------------- | ------------ |
+| TrueType               | `font/ttf`   |
+| OpenType               | `font/otf`   |
+| Web Open Font Format   | `font/woff`  |
+| Web Open Font Format 2 | `font/woff2` |
+
+> 備註：
+> - Web 字體受到相同網域的限制（字型檔案必須與使用它們的頁面位於相同網域），除非使用[HTTP存取控制](/zh-TW/docs/Web/HTTP/CORS)來放寬此限制。
+> - `@font-face` 不能在 CSS 選擇器中宣告。例如，以下內容將無法運作：
+>   ```css example-bad
+>   .className {
+>     @font-face {
+>       font-family: "MyHelvetica";
+>       src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+>         url("MgOpenModernaBold.ttf");
+>       font-weight: bold;
+>     }
+>   }
+>   ```
 
 ## 範例
 
-這個範例指定一個可供下載的字型，並套用至 document 的整個 body。
+下面這個範例指定一個可供下載的字型，並套用至文件的整個 `<body>`。
 
 ```html
 <!doctype html>
@@ -73,7 +114,7 @@ You can specify a font on the user's local computer by name using the `local()` 
 
 {{EmbedGHLiveSample("css-examples/web-fonts/basic-web-font.html", '100%', '100')}}
 
-這個範例會套用使用者本地的 "Helvetica Neue Bold" 字型，只有當使用者未安裝該字型（兩種名稱都試過了），才會下載 "MgOpenModernaBold.ttf" 字型：
+下面這個範例會套用使用者本地的 "Helvetica Neue Bold" 字型，只有當使用者未安裝該字型（兩種名稱都試過了），才會下載 "MgOpenModernaBold.ttf" 字型：
 
 ```css
 @font-face {
@@ -84,15 +125,7 @@ You can specify a font on the user's local computer by name using the `local()` 
 }
 ```
 
-## 注意事項
-
-- In Gecko, web fonts are subject to the same domain restriction (font files must be on the same domain as the page using them), unless [HTTP access controls](/zh-TW/docs/HTTP_access_control) are used to relax this restriction.
-
-  > **備註：** Because there are no defined MIME types for TrueType, OpenType, and Web Open File Format (WOFF) fonts, the MIME type of the file specified is not considered.
-
-- When Gecko displays a page that uses web fonts, it initially displays text using the best CSS fallback font available on the user's computer while it waits for the web font to finish downloading. As each web font finishes downloading, Gecko updates the text that uses that font. This allows the user to read the text on the page more quickly.
-
-## 規格文件
+## 規範
 
 {{Specifications}}
 
@@ -100,7 +133,7 @@ You can specify a font on the user's local computer by name using the `local()` 
 
 {{Compat}}
 
-## 詳見
+## 參見
 
 - [About WOFF](/zh-TW/docs/WOFF)
 - [FontSquirrel @font-face generator](https://www.fontsquirrel.com/fontface/generator)
