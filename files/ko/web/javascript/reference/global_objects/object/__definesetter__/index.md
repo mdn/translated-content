@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}{{Deprecated_Header}}
 
-> **참고:** 이 기능은 [객체 초기자 구문](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer) 또는 {{jsxref("Object.defineProperty()")}} API를 사용하여 [설정자](/ko/docs/Web/JavaScript/Reference/Functions/set) 정의를 선호하기 때문에 더 이상 사용되지 않습니다. 이 메서드의 동작은 웹 호환성을 위해서만 명시되며 모든 플랫폼에서 구현할 필요는 없습니다. 모든 곳에서 작동하지 않을 수도 있습니다.
+> **참고:** 이 기능은 [객체 초기자 구문](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer) 또는 {{jsxref("Object.defineProperty()")}} API를 사용하여 [설정자](/ko/docs/Web/JavaScript/Reference/Functions/set) 정의하는 것을 권장하기 때문에 이 기능은 더 이상 사용되지 않습니다. 이 메서드의 동작은 웹 호환성을 위해서만 명시되며 모든 플랫폼에서 구현할 필요는 없습니다.모든 환경에서 작동하지 않을 수도 있습니다.
 
 {{jsxref("Object")}} 인스턴스의 **`__defineSetter__()`** 메서드는 해당 속성을 설정하려고 시도할 때 호출될 함수에 객체의 속성을 바인딩합니다.
 
@@ -39,7 +39,7 @@ __defineSetter__(prop, func)
 
 `Object.prototype`에서 상속하는 모든 객체(즉, [`null`-프로토타입 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)를 제외한 모든 객체)는 `__defineSetter__()` 메서드를 상속합니다. 이 메서드를 사용하면 기존 객체에 [설정자](/ko/docs/Web/JavaScript/Reference/Functions/set)를 정의할 수 있습니다. 이는 [`Object.defineProperty(obj, prop, { set: func, configurable: true, enumerable: true })`]와 동일하며, 이는 속성이 열거 가능하고 구성 가능하며 기존 접근자가 있는 경우 보존됨을 의미합니다.
 
-`__defineSetter__()`는 명세서에서 "규범적 선택 사항"으로 정의되어 있으므로 반드시 구현할 필요가 없습니다. 그러나 모든 주요 브라우저에서 구현하고 있으며 계속 사용되고 있기 때문에 제거될 가능성은 낮습니다. 브라우저가 `__defineSetter__()`를 구현했다면, [`__lookupGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__), [`__lookupSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__), [`__defineGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) 구현이 필요합니다.
+`__defineSetter__()`는 명세서에서 "권장 선택 사항"으로 정의되어 있으므로 반드시 구현할 필요가 없습니다. 그러나 모든 주요 브라우저에서 구현하고 있으며 계속 사용되고 있기 때문에 제거될 가능성은 낮습니다. 브라우저가 `__defineSetter__()`를 구현했다면, [`__lookupGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__), [`__lookupSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__), [`__defineGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) 구현이 필요합니다.
 
 ## 예제
 
