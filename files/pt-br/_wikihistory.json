@@ -2786,6 +2786,10 @@
     "modified": "2019-03-23T22:11:58.983Z",
     "contributors": ["virginiarcruz"]
   },
+  "Web/API/Document_Object_Model/How_to_create_a_DOM_tree": {
+    "modified": "2019-03-23T22:11:56.223Z",
+    "contributors": ["virginiarcruz"]
+  },
   "Web/API/Document_Object_Model/Introduction": {
     "modified": "2020-12-03T17:12:30.790Z",
     "contributors": [
@@ -2802,10 +2806,6 @@
   "Web/API/Document_Object_Model/Whitespace": {
     "modified": "2019-03-18T21:38:03.775Z",
     "contributors": ["jpreuss", "coloringa"]
-  },
-  "Web/API/Document_object_model/How_to_create_a_DOM_tree": {
-    "modified": "2019-03-23T22:11:56.223Z",
-    "contributors": ["virginiarcruz"]
   },
   "Web/API/Element": {
     "modified": "2019-03-18T21:08:52.187Z",
@@ -3947,6 +3947,10 @@
     "modified": "2019-03-23T22:53:06.274Z",
     "contributors": ["AlyoshaS", "marcoaraujojunior", "fabreu"]
   },
+  "Web/API/Window/crypto": {
+    "modified": "2019-03-23T22:12:19.817Z",
+    "contributors": ["Hikashii", "AlexandreBarros"]
+  },
   "Web/API/Window/document": {
     "modified": "2019-03-23T22:49:44.918Z",
     "contributors": ["diogobenica", "LucasRamos"]
@@ -4007,6 +4011,14 @@
     "modified": "2019-03-23T23:16:57.470Z",
     "contributors": ["teoli", "eliezerb"]
   },
+  "Web/API/Window/origin": {
+    "modified": "2020-10-15T22:14:43.600Z",
+    "contributors": ["Rondinelly"]
+  },
+  "Web/API/Window/performance": {
+    "modified": "2019-03-23T22:44:28.136Z",
+    "contributors": ["augustoclaro"]
+  },
   "Web/API/Window/popstate_event": {
     "modified": "2019-04-26T08:34:23.645Z",
     "contributors": [
@@ -4024,6 +4036,16 @@
   "Web/API/Window/prompt": {
     "modified": "2019-03-23T22:57:04.834Z",
     "contributors": ["mahenrique", "fnsc.luis"]
+  },
+  "Web/API/Window/requestAnimationFrame": {
+    "modified": "2020-10-15T21:50:51.013Z",
+    "contributors": [
+      "mateusvelleda",
+      "NoiSyBoY",
+      "hiperesp",
+      "sambrmg",
+      "calaca"
+    ]
   },
   "Web/API/Window/requestIdleCallback": {
     "modified": "2020-11-03T11:18:19.041Z",
@@ -4215,35 +4237,13 @@
     "modified": "2019-03-18T21:45:25.881Z",
     "contributors": ["raduq"]
   },
-  "Web/API/crypto_property": {
-    "modified": "2019-03-23T22:12:19.817Z",
-    "contributors": ["Hikashii", "AlexandreBarros"]
-  },
   "Web/API/fetch": {
     "modified": "2019-03-23T22:06:21.567Z",
     "contributors": ["dowgssss"]
   },
-  "Web/API/origin": {
-    "modified": "2020-10-15T22:14:43.600Z",
-    "contributors": ["Rondinelly"]
-  },
-  "Web/API/performance_property": {
-    "modified": "2019-03-23T22:44:28.136Z",
-    "contributors": ["augustoclaro"]
-  },
   "Web/API/setInterval": {
     "modified": "2020-10-15T22:16:56.864Z",
     "contributors": ["luan0ap"]
-  },
-  "Web/API/window/requestAnimationFrame": {
-    "modified": "2020-10-15T21:50:51.013Z",
-    "contributors": [
-      "mateusvelleda",
-      "NoiSyBoY",
-      "hiperesp",
-      "sambrmg",
-      "calaca"
-    ]
   },
   "Web/Accessibility": {
     "modified": "2019-09-09T14:18:55.700Z",

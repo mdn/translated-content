@@ -21,7 +21,7 @@ requestDevice(options)
 - `options` {{optional_inline}}
   - : デバイスの要求に関するオプションを設定するオブジェクトです。以下のオプションが利用可能です。
     - `filters[]`
-      - `BluetoothScanFilters` の配列です。このフィルタは、`BluetoothServiceUUID` の配列、`name` パラメーター、`namePrefix` パラメーターからなります。
+      - `BluetoothScanFilters` の配列です。このフィルタは、`BluetoothServiceUUID` の配列、`name` 引数、`namePrefix` 引数からなります。
     - `optionalServices[]`
       - : `BluetoothServiceUUID` の配列です。
     - `acceptAllDevices`

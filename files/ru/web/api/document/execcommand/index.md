@@ -3,7 +3,7 @@ title: Document.execCommand()
 slug: Web/API/Document/execCommand
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
 ## Обзор
 

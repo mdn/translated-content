@@ -3,7 +3,7 @@ title: Window.scrollByLines()
 slug: Web/API/Window/scrollByLines
 ---
 
-{{ ApiRef() }}
+{{APIRef}} {{Non-standard_header}}
 
 {{Non-standard_header}}
 

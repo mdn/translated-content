@@ -3,7 +3,7 @@ title: Document.evaluate()
 slug: Web/API/Document/evaluate
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
 Возвращает экземпляр объекта типа [`XPathResult`](/ru/docs/Web/API/XPathResult) исходя из данного [XPath](/ru/docs/Web/XPath) и других входных параметров.
 

@@ -46,7 +46,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 例えば、以下のサンプル `text/uri-list` データには、2 つのリンクと 1 つのコメントが含まれています。
 
 ```
-http://www.mozilla.org
+https://www.mozilla.org
 # 2 つ目のリンク
 http://www.example.com
 ```
@@ -62,7 +62,7 @@ const url = event.dataTransfer.getData("URL");
 Mozilla 特有の型として、`text/x-moz-url` 型のデータを見かけることがあるかもしれません。この型が表示される場合は、`text/uri-list` 型の前に表示されるはずです。この型のデータは、リンクの URL に続いてリンクのタイトルが保持されており。例えば、以下のようになります。
 
 ```
-http://www.mozilla.org
+https://www.mozilla.org
 Mozilla
 http://www.example.com
 Example

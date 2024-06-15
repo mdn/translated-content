@@ -3,7 +3,7 @@ title: GlobalEventHandlers.oninput
 slug: Web/API/Element/input_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{APIRef}}
 
 Обработчик события [`input`](/ru/docs/Web/Events/input) в окне. Событие ввода возникает при изменении значения элемента {{HTMLElement ("input")}}.
 

@@ -3,6 +3,8 @@ title: FileReader()
 slug: Web/API/FileReader/FileReader
 ---
 
+{{APIRef("File API")}}
+
 Конструктор **`FileReader()`** создаёт новый FileReader.
 
 Дополнительные сведения об использовании `FileReader`, смотрите в разделе [Использование файлов из веб-приложений](/ru/docs/Web/API/File/Using_files_from_web_applications).

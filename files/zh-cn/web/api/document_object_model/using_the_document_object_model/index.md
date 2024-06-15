@@ -1,6 +1,6 @@
 ---
 title: 使用文档对象模型
-slug: Web/API/Document_object_model/Using_the_Document_Object_Model
+slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model
 ---
 
 {{DefaultAPISidebar("DOM")}}

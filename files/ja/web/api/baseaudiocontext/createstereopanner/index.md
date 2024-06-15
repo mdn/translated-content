@@ -1,6 +1,9 @@
 ---
-title: BaseAudioContext.createStereoPanner()
+title: "BaseAudioContext: createStereoPanner() メソッド"
+short-title: createStereoPanner()
 slug: Web/API/BaseAudioContext/createStereoPanner
+l10n:
+  sourceCommit: 10b342385644e822d123694ad3bc8c2ca9abb2dc
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -12,8 +15,8 @@ slug: Web/API/BaseAudioContext/createStereoPanner
 
 ## 構文
 
-```js
-createStereoPanner();
+```js-nolint
+createStereoPanner()
 ```
 
 ### 引数
@@ -26,30 +29,28 @@ createStereoPanner();
 
 ## 例
 
-[StereoPannerNode の例](https://mdn.github.io/webaudio-examples/stereo-panner-node/)（[ソースコードを参照](https://github.com/mdn/webaudio-examples/tree/master/stereo-panner-node)）の HTML では、単純な {{htmlelement("audio")}} 要素と、パン値を増減するスライダー {{HTMLElement("input")}} を用意しています。 JavaScript では、{{domxref("MediaElementAudioSourceNode")}} と {{domxref("StereoPannerNode")}} を作成し、`connect()` メソッドを用いて両者をつなげます。そして、`oninput` イベントハンドラーを使って {{domxref("StereoPannerNode.pan")}} パラメータの値を変更し、スライダーが動いたときにパン値の表示を更新しています。
+[StereoPannerNode の例](https://mdn.github.io/webaudio-examples/stereo-panner-node/)（[ソースコードを参照](https://github.com/mdn/webaudio-examples/tree/main/stereo-panner-node)）の HTML では、単純な {{htmlelement("audio")}} 要素と、パン値を増減するスライダー {{HTMLElement("input")}} を用意しています。 JavaScript では、{{domxref("MediaElementAudioSourceNode")}} と {{domxref("StereoPannerNode")}} を作成し、`connect()` メソッドを用いて両者をつなげます。そして、`oninput` イベントハンドラーを使って {{domxref("StereoPannerNode.pan")}} 引数の値を変更し、スライダーが動いたときにパン値の表示を更新しています。
 
 音楽再生中にスライダーを左右に動かすと、出力の左右のスピーカーにそれぞれ音楽がパンされます。
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var myAudio = document.querySelector("audio");
+const audioCtx = new AudioContext();
+const myAudio = document.querySelector("audio");
 
-var panControl = document.querySelector(".panning-control");
-var panValue = document.querySelector(".panning-value");
-
-pre.innerHTML = myScript.innerHTML;
+const panControl = document.querySelector(".panning-control");
+const panValue = document.querySelector(".panning-value");
 
 // MediaElementAudioSourceNode を生成し、
 // そこに HTMLMediaElementを 入れる
-var source = audioCtx.createMediaElementSource(myAudio);
+const source = audioCtx.createMediaElementSource(myAudio);
 
 // ステレオパンナーを生成する
-var panNode = audioCtx.createStereoPanner();
+const panNode = audioCtx.createStereoPanner();
 
 // イベントハンドラー関数で、スライダーが動いたとき
 // 左右のパンの値を左右する
 
-panControl.oninput = function () {
+panControl.oninput = () => {
   panNode.pan.setValueAtTime(panControl.value, audioCtx.currentTime);
   panValue.innerHTML = panControl.value;
 };

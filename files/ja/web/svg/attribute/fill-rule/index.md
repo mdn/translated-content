@@ -2,7 +2,7 @@
 title: fill-rule
 slug: Web/SVG/Attribute/fill-rule
 l10n:
-  sourceCommit: 4c45276e195ba339f038ffbfdb3de7ab65424ed5
+  sourceCommit: cd840e78b6027a391fe1f11b745564cf3ebfb8e7
 ---
 
 {{SVGRef}}

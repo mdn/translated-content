@@ -2,7 +2,7 @@
 title: 429 Too Many Requests
 slug: Web/HTTP/Status/429
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: 3c29ffa78c551ea6a61bbb795a5f97a66c6868c0
 ---
 
 {{HTTPSidebar}}
@@ -32,5 +32,4 @@ Retry-After: 3600
 ## 參見
 
 - {{HTTPHeader("Retry-After")}}
-- [HTTP 狀態碼定義](https://httpwg.org/specs/rfc9110.html#status.429)
 - Python 解決方案：[如何避免 HTTP 錯誤 429 python](https://stackoverflow.com/questions/22786068/how-to-avoid-http-error-429-too-many-requests-python)

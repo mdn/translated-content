@@ -3,7 +3,7 @@ title: DOMImplementation.createHTMLDocument()
 slug: Web/API/DOMImplementation/createHTMLDocument
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
 Метод **`DOMImplementation.createHTMLDocument()`** создаёт новый HTML {{ domxref("Document") }}.
 

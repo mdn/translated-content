@@ -106,7 +106,7 @@ _Без изменений._
 ### JavaScript
 
 - Реализована поддержка {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}} ([Firefox bug 1504334](https://bugzil.la/1504334)).
-- Максимально допустимое значение {{jsxref("String/length","length","","1")}} у строк отныне составляет `2^30 - 2` (\~1 ГБ) вместо `2^28 - 1` (\~256 МБ) ([Firefox bug 1509542](https://bugzil.la/1509542)).
+- Максимально допустимое значение {{jsxref("String/length","length","",1)}} у строк отныне составляет `2^30 - 2` (\~1 ГБ) вместо `2^28 - 1` (\~256 МБ) ([Firefox bug 1509542](https://bugzil.la/1509542)).
 - Добавлена поддержка свойства [`globalThis`](https://github.com/tc39/proposal-global) ([Firefox bug 1317422](https://bugzil.la/1317422)).
 
 ### API

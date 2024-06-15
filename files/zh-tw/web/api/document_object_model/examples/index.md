@@ -3,6 +3,8 @@ title: 使用 web 和 XML 開發來使用 DOM
 slug: Web/API/Document_Object_Model/Examples
 ---
 
+{{DefaultAPISidebar("DOM")}}
+
 本章介紹了使用 DOM 進行 Web 以及 XML 開發的一些長範例。只要可能，在例子就會使用通用的 JavaScript Web API 、技巧以及模式來操作文檔對象（the document object）。
 
 ## 範例一：高度和寬度
@@ -49,14 +51,16 @@ slug: Web/API/Document_Object_Model/Examples
   <body onload="init();">
     <p>
       Image 1: no height, width, or style
-      <img id="image1" src="http://www.mozilla.org/images/mozilla-banner.gif" />
+      <img
+        id="image1"
+        src="https://www.mozilla.org/images/mozilla-banner.gif" />
     </p>
 
     <p>
       Image 2: height="50", width="500", but no style
       <img
         id="image2"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         height="50"
         width="500" />
     </p>
@@ -65,7 +69,7 @@ slug: Web/API/Document_Object_Model/Examples
       Image 3: no height, width, but style="height: 50px; width: 500px;"
       <img
         id="image3"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         style="height: 50px; width: 500px;" />
     </p>
 

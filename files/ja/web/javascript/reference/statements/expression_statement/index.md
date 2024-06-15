@@ -2,7 +2,7 @@
 title: 式文
 slug: Web/JavaScript/Reference/Statements/Expression_statement
 l10n:
-  sourceCommit: 0f3738f6b1ed1aa69395ff181207186e1ad9f4d8
+  sourceCommit: 4c26e8a3fb50d06963b06017f51ce19364350564
 ---
 
 {{jsSidebar("Statements")}}
@@ -46,7 +46,7 @@ expression;
 
 従って、以下のものは全て不正です。
 
-```js example-bad
+```js-nolint example-bad
 function foo() {
   console.log("foo");
 }(); // SyntaxError: Unexpected token '('

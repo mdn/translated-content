@@ -24,7 +24,7 @@ l10n:
 - `expires`
   - : {{glossary("Unix time", "Unix 时间戳")}}（以毫秒为单位表示），记录 cookie 的到期日期。
 - `secure`
-  - : 一个{{jsxref("boolean", "布尔值", "", "nocode")}}，指示 cookie 是否来自具有安全上下文（HTTPS 而不是 HTTP）的站点。
+  - : 一个{{jsxref("boolean", "布尔值", "", 1)}}，指示 cookie 是否来自具有安全上下文（HTTPS 而不是 HTTP）的站点。
 - `sameSite`
 
   - : 以下 [`SameSite`](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 的值之一：
