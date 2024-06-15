@@ -20,9 +20,7 @@ l10n:
 
 ```js
 if (document.preferredStyleSheetSet) {
-  console.log(
-    `推奨スタイルシート: ${document.preferredStyleSheetSet}`,
-  );
+  console.log(`推奨スタイルシート: ${document.preferredStyleSheetSet}`);
 } else {
   console.log("推奨スタイルシートがありません。");
 }
