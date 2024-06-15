@@ -1,8 +1,6 @@
 ---
 title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
-page-type: javascript-static-method
-browser-compat: javascript.builtins.Object.entries
 ---
 
 {{JSRef}}
@@ -64,6 +62,7 @@ console.log(Object.entries(myObj)); // [ ['foo', 'bar'] ]
 ### 在 Primitive 上使用 Object.entries()
 
 非物件參數會被[強制轉換為物件](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion)，而 [`undefined`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/undefined) 和 [`null`](/zh-TW/docs/Web/JavaScript/Reference/Operators/null) 不能被強制轉換為物件，且會先被拋出 {{jsxref("TypeError")}}。僅字串可擁有自己的可枚舉屬性，其它所有的 [primitive](/zh-TW/docs/Glossary/Primitive) 都會變成空陣列。
+
 ```js
 // 字串具有作為可枚舉自身屬性的索引
 console.log(Object.entries("foo")); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
