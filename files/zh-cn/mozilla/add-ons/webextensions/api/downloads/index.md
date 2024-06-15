@@ -30,7 +30,7 @@ l10n:
 - {{WebExtAPIRef("downloads.BooleanDelta")}}
   - : 表示两个布尔值之间的差异。
 - {{WebExtAPIRef("downloads.DownloadTime")}}
-  - : 表示下载完成所花费的时间。
+  - : 表示下载完成所需的时间。
 - {{WebExtAPIRef("downloads.DownloadQuery")}}
   - : 定义一组参数，这些参数可用于在下载管理器中搜索特定的下载集合。
 
