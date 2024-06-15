@@ -71,6 +71,7 @@ slug: Web/CSS/@font-face
 | Web Open Font Format 2 | `font/woff2` |
 
 > 備註：
+>
 > - Web 字體受到相同網域的限制（字型檔案必須與使用它們的頁面位於相同網域），除非使用[HTTP存取控制](/zh-TW/docs/Web/HTTP/CORS)來放寬此限制。
 > - `@font-face` 不能在 CSS 選擇器中宣告。例如，以下內容將無法運作：
 >
