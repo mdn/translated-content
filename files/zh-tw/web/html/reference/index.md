@@ -8,10 +8,12 @@ slug: Web/HTML/Reference
 這裡的 HTML 參考描述了所有 HTML 的**元素**（elements）與**屬性**（attributes），包括為所有元素接受的**全域屬性**（global attributes）。
 
 - [HTML 元素指引](/zh-TW/docs/Web/HTML/Element)
-  - : 本頁列出了所有 HTML elements
+  - : 本頁列出使用{{Glossary("Tag", "標籤")}}建立的所有 {{Glossary("HTML")}} {{Glossary("Element","元素")}}。
 - [HTML 屬性指引](/zh-TW/docs/Web/HTML/Attributes)
   - : HTML 中的元素具有屬性 ; 而這些屬性可以藉由各種方式去設定元素或調整它們的行為，以符合使用者的期待。
 - [全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)
-  - : Global attributes may be specified on all HTML elements, even those not specified in the standard. That means that any non-standard elements must still permit these attributes, even though using those elements means that the document is no longer HTML5-compliant. For example, HTML5-compliant browsers hide content marked as \<foo hidden>...\<foo>, even though \<foo> is not a valid HTML element.
-- [連結類型](/docs/Web/HTML/Link_types)
-  - : In HTML, the following link types indicate the relationship between two documents, in which one links to the other using an \<a>, \<area>, or \<link> element.
+  - : 全域屬性是所有 HTML 元素共有的屬性；它們可以用於所有元素，儘管它們可能對於某些元素無效。
+- [內容類型](/zh-TW/docs/Web/HTML/Content_categories)
+  - : 每個 HTML 元素都是一個或多個內容類別的成員──這些類別會將具有共同特性的元素分組。
+- [HTML 中使用的日期與時間格式](/zh-TW/docs/Web/HTML/Date_and_time_formats)
+  - : 某些 HTML 元素可讓您將日期及時間指定為值或作為屬性之值。其中包括 {{HTMLElement("input")}} 元素以及 {{HTMLElement("ins")}} 和 {{HTMLElement("del")}} 元素的日期和時間變化。
