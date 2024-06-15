@@ -38,7 +38,7 @@ l10n:
 
 ## 인스턴스 속성
 
-아래 속성은 `Intl.Locale.prototype`에 정의되어 있으며 모든 `Intl.Locale` 객체가 이를  공유합니다.
+아래 속성은 `Intl.Locale.prototype`에 정의되어 있으며 모든 `Intl.Locale` 객체가 이를 공유합니다.
 
 - {{jsxref("Intl/Locale/baseName", "Intl.Locale.prototype.baseName")}}
   - : 전체 데이터 문자열의 하위 문자열 형태로 'Locale'에 대한 기본 핵심 정보를 반환합니다.
