@@ -1,8 +1,6 @@
 ---
 title: CSS 字體
 slug: Web/CSS/CSS_fonts
-page-type: css-module
-spec-urls: https://drafts.csswg.org/css-fonts/
 ---
 
 {{CSSRef}}
