@@ -48,6 +48,7 @@ CSS 字型模組還支持可變字型。與常規字型不同的是，每種樣�
 ### @ 規則與描述符
 
 - @ 規則： {{cssxref("@font-face")}}
+
   - : 描述符：
     - {{cssxref("@font-face/ascent-override", "ascent-override")}}
     - {{cssxref("@font-face/descent-override", "descent-override")}}
