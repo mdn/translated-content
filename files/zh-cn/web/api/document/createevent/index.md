@@ -9,7 +9,7 @@ l10n:
 
 > **警告：** 与 `createEvent` 一起使用的许多方法（例如 `initCustomEvent`）已被弃用。请使用 [event 构造函数](/zh-CN/docs/Web/API/CustomEvent)代替。
 
-创建指定类型的 [Event](/zh-CN/docs/Web/API/Event)。应首先初始化返回的对象，然后将其传递给 {{domxref("EventTarget.dispatchEvent")}}。
+创建指定类型的[事件](/zh-CN/docs/Web/API/Event)。应首先初始化返回的对象，然后将其传递给 {{domxref("EventTarget.dispatchEvent")}}。
 
 ## 语法
 
