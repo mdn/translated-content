@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-**`acceptDanger()`** 函数是 {{WebExtAPIRef("downloads")}} API 的一部分，用于提示用户接受或取消一个潜在的危险下载。
+{{WebExtAPIRef("downloads")}} API 的 **`acceptDanger()`** 函数用于提示用户接受或取消一个潜在危险的下载。
 
 此函数不能从后台脚本调用，只能在可见窗口中运行的脚本（例如浏览器或页面操作的弹出窗口）中调用。
 
@@ -24,7 +24,7 @@ let prompting = browser.downloads.acceptDanger(
 ### 参数
 
 - `downloadId`
-  - ：一个表示相关 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} 的 `id` 的 `integer`。
+  - : 一个表示相关 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} 的 `id` 的 `integer`。
 
 ### 返回值
 
