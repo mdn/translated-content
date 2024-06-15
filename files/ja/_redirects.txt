@@ -2374,7 +2374,7 @@
 /ja/docs/Security/CSP_(Content_Security_Policy)	/ja/docs/Web/HTTP/CSP
 /ja/docs/Security/HTTP_Strict_Transport_Security	/ja/docs/Web/HTTP/Headers/Strict-Transport-Security
 /ja/docs/Security/混在コンテンツ	/ja/docs/Web/Security/Mixed_content
-/ja/docs/Security/混在コンテンツ/How_to_fix_website_with_mixed_content	/ja/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
+/ja/docs/Security/混在コンテンツ/How_to_fix_website_with_mixed_content	/ja/docs/orphaned/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
 /ja/docs/Server-sent_events	/ja/docs/Web/API/Server-sent_events
 /ja/docs/Server-sent_events/Using_server-sent_events	/ja/docs/Web/API/Server-sent_events/Using_server-sent_events
 /ja/docs/Setting_up_extension_development_environment	/ja/docs/orphaned/Setting_up_extension_development_environment
@@ -4575,6 +4575,7 @@
 /ja/docs/Web/Security/CSP_not_connected/Using_Content_Security_Policy	/ja/docs/Web/HTTP/CSP
 /ja/docs/Web/Security/HTTP_Strict_Transport_Security	/ja/docs/Web/HTTP/Headers/Strict-Transport-Security
 /ja/docs/Web/Security/Information_Security_Basics	/ja/docs/orphaned/Web/Security/Information_Security_Basics
+/ja/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content	/ja/docs/orphaned/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
 /ja/docs/Web/Security/Public_Key_Pinning	/ja/docs/conflicting/Web/Security/Certificate_Transparency
 /ja/docs/Web/WebGL	/ja/docs/Web/API/WebGL_API
 /ja/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/ja/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
