@@ -3,7 +3,7 @@ title: Navigator.oscpu
 slug: Web/API/Navigator/oscpu
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 Возвращает строку, которая идентифицирует текущую операционную систему.
 
@@ -42,6 +42,6 @@ function osInfo() {
 
 Если ваш код не является привилегированным (chrome или по крайней мере имеет привилегию UniversalBrowserRead), он может получить значение general.oscpu.override, а не истинной платформы.
 
-## Спецификация
+## Спецификации
 
 _Не является частью какой-либо спецификации._

@@ -39,7 +39,7 @@ Pour commencer cet exercice, vous pouvez télécharger [l'archive contenant les 
 - le fichier CSS pour styliser la page,
 - les images utilisées dans la page.
 
-Décompressez l'archive sur votre ordinateur, ou bien utilisez un site web comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) pour faire votre évaluation.
+Décompressez l'archive sur votre ordinateur, ou bien utilisez un site web comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour faire votre évaluation.
 
 ## Aperçu du projet
 

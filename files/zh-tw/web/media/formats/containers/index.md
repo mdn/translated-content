@@ -389,7 +389,7 @@ MPEG-1 和 MPEG-2 最主要的差別在於媒體資料格式而非封裝格式�
 
 **[MPEG-4](https://zh.wikipedia.org/wiki/MPEG-4)** (**MP4**) 是最新版 MPEG 檔案格式。這個格式有兩種版本，分別定義於規範中的 part 1 和 part 14。MP4 是現今流行的封裝容器，它支援了大部份常用的編解碼器，同時它也廣泛地被支援。
 
-初版的 MPEG-4 Part 1 檔案格式首見於西元 1999 年；第二版定義於 Part 14 在西元 2003 年時加入。MP4 檔案格式衍生於 [ISO base media file format](https://zh.wikipedia.org/wiki/ISO_base_media_file_format)，而該格式則是衍生於 [Apple](https://www.apple.com/) 開發的 [QuickTime file format](https://zh.wikipedia.org/wiki/QuickTime_file_format)。
+初版的 MPEG-4 Part 1 檔案格式首見於西元 1999 年；第二版定義於 Part 14 在西元 2003 年時加入。MP4 檔案格式衍生於 [ISO 基本媒體文件格式](https://en.wikipedia.org/wiki/ISO_base_media_file_format)，而該格式則是衍生於 [Apple](https://www.apple.com/) 開發的 [QuickTime 文件格式](https://zh.wikipedia.org/wiki/QuickTime文件格式)。
 
 | 音訊        | 視訊        |
 | ----------- | ----------- |

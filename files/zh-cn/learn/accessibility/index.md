@@ -25,7 +25,7 @@ Firefox 浏览器无障碍检查器是一个非常有用的工具，用于检查
 
 为了充分理解这个模块，你至少需要读过 [HTML](/zh-CN/docs/Learn/HTML)、[CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 各个主题的前两个模块，或者有可能的话，在你学习相关联的技术话题时也把无障碍相关的内容学习了，这样会更好。
 
-> **备注：** 如果在你所使用的设备上不能建立自己的文件，你可以使用在线编码平台运行大多数样例代码，比如 [JSBin](http://jsbin.com/) 或者 [Glitch](https://glitch.com/)。
+> **备注：** 如果在你所使用的设备上不能建立自己的文件，你可以使用在线编码平台运行大多数样例代码，比如 [JSBin](https://jsbin.com/) 或者 [Glitch](https://glitch.com/)。
 
 ## 指南
 

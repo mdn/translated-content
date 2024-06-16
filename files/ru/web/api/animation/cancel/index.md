@@ -35,7 +35,7 @@ None.
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Web Animations API](/ru/docs/Web/API/Web_Animations_API)
 - {{domxref("KeyframeEffect")}}

@@ -5,9 +5,7 @@ l10n:
   sourceCommit: acad5b9afc0a9e20144d49fd3fbb7f4fa92c9192
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility", 1)}}
-</section>
+{{AccessibilitySidebar}}
 
 大多数 JavaScript 库提供了客户端微件（widget）库，模拟熟悉的桌面界面的行为。滑块、菜单栏、文件列表视图等可以通过 JavaScript、CSS 和 HTML 的组合来构建。由于 HTML4 规范不提供语义上描述这些微件的内置标签，因此开发人员通常会使用通用元素（如 {{HTMLElement('div')}} 和 {{HTMLElement('span')}}）。虽然这导致了一个看起来像桌面对应的组件，但标记中通常没有足够的辅助技术可用的语义信息。
 

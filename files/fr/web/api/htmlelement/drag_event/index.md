@@ -170,4 +170,4 @@ L'événement drag est déclenché lorsqu'un élément ou une section de texte e
 - [`dragleave`](/fr/docs/Web/API/Document/dragleave_event)
 - [`dragexit`](/fr/docs/Web/API/Document/dragexit_event)
 - [`drop`](/fr/docs/Web/API/Document/drop_event)
-- [Demo](http://jsfiddle.net/zfnj5rv4/)
+- [Demo](https://jsfiddle.net/zfnj5rv4/)

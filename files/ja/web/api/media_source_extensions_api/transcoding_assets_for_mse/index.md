@@ -3,6 +3,8 @@ title: Media Source Extensions のためのアセットのトランスコード
 slug: Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE
 ---
 
+{{DefaultAPISidebar("Media Source Extensions")}}
+
 Media Source Extensions を使用する場合、アセットをストリーミングする前に調整する必要がある可能性があります。 この記事では、要件を説明し、アセットを適切にエンコードするために使用できるツールチェーンを示します。
 
 ## 入門

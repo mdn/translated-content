@@ -2,7 +2,7 @@
 title: 幾何インターフェイス
 slug: Web/API/Geometry_interfaces
 l10n:
-  sourceCommit: a0f6bf6f7d148f368f6965255058df1ed1f43839
+  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
 
 {{DefaultAPISidebar("Geometry Interfaces")}}

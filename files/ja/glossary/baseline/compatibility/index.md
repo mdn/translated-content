@@ -7,7 +7,8 @@ l10n:
 
 {{GlossarySidebar}}
 
-**Baseline** （ベースライン）は、ブラウザー間で動作するウェブプラットフォームの機能を確認します。Baseline は、サイトの訪問者に互換性の問題を引き起こす可能性が低くなった時期を示すことで、その機能を使用するタイミングを決定するのに役立ちます。
+**Baseline** （ベースライン）は、ブラウザー間で動作するウェブプラットフォームの機能を確認します。
+Baseline は、サイトの訪問者に互換性の問題を引き起こす可能性が低くなった時期を示すことで、その機能を使用するタイミングを決定するのに役立ちます。
 
 API、一連の CSS プロパティ、JavaScript 構文などの Baseline 機能は、Chrome、Edge、Firefox、Safari など、デスクトップやモバイルで広く使われている有名なブラウザーで一貫して動作します。
 
@@ -17,11 +18,11 @@ Baseline 機能とは、現在の安定したブラウザーで新たに利用�
 
 ![チェックマークが付いた緑色のウィジェット：Baseline: Widely available. 4 つのブラウザーのロゴ、すべてチェックマーク付き。](high.png)
 
-**Widely available** である Baseline バッジが表示されている場合、その機能は各 Baseline ブラウザーで一貫してサポートされてきた歴史があると信頼できます。_Widely available_ である機能とは、何年も前から複数のブラウザーでサポートされている機能です。まだ最新のブラウザーリリースに対応していないものであっても、多くのブラウザーやデバイスで動作します。
+**Widely available** の Baseline バッジが表示されている場合、その機能は各 Baseline ブラウザーで一貫してサポートされてきた歴史があると信頼できます。_Widely available_ である機能とは、何年も前から複数のブラウザーでサポートされている機能です。まだ最新のブラウザーリリースに対応していないものであっても、多くのブラウザーやデバイスで動作します。
 
 ![チェックマークが付いた青色のウィジェット：Baseline 2022: Newly available. 4 つのブラウザーのロゴ、すべてチェックマーク付き。](limited.png)
 
-**Newly available** である Baseline バッジが表示されている場合、その機能は少なくとも各 Baseline ブラウザーの最新の安定版で動作しており、多くの場合それ以上の動作が確認されています。_Newly available_ である機能は、最新のブラウザーでは動作しますが、古いブラウザーやデバイスでは動作しない可能性があります。_Newly available_ である機能を使用する前に、サイトの利用者をよく検討してください。
+**Newly available** の Baseline バッジが表示されている場合、その機能は少なくとも各 Baseline ブラウザーの最新の安定版で動作しており、多くの場合それ以上の動作が確認されています。_Newly available_ である機能は、最新のブラウザーでは動作しますが、古いブラウザーやデバイスでは動作しない可能性があります。_Newly available_ である機能を使用する前に、サイトの利用者をよく検討してください。
 
 ![バツマークが付いた灰色のウィジェット：Limited availability. 4 つのブラウザーのロゴ、2 つにチェックマーク、2 つにバツマーク。](low.png)
 
@@ -49,7 +50,7 @@ Baseline は W3C WebDX Community Group のコミュニティ活動であり、MD
 
 ## 関連情報
 
-- [クロスブラウザーテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)
+- [ブラウザー横断テスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)
 - [web-platform-dx/web-features repository](https://github.com/web-platform-dx/web-features)
 - [W3C WebDX Community Group](https://www.w3.org/community/webdx/)
 - [mdn/browser-compat-data repository](https://github.com/mdn/browser-compat-data)

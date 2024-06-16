@@ -1,6 +1,6 @@
 ---
 title: W3C DOM Level 1 Core 사용하기
-slug: Web/API/Document_object_model/Using_the_Document_Object_Model
+slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model
 ---
 
 {{DefaultAPISidebar("DOM")}}

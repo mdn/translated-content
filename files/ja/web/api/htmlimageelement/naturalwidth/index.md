@@ -3,7 +3,7 @@ title: "HTMLImageElement: naturalWidth プロパティ"
 short-title: naturalWidth
 slug: Web/API/HTMLImageElement/naturalWidth
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
 {{APIRef("HTML DOM")}}

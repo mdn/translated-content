@@ -1,30 +1,29 @@
 ---
 title: "::placeholder"
 slug: Web/CSS/::placeholder
+l10n:
+  sourceCommit: 59ef5b046557b45a515b654458667e6da6d0f4aa
 ---
 
 {{CSSRef}}
 
-**`::placeholder`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の[プレイスホルダー文字列](/ja/docs/Web/HTML/Element/input#placeholder)を表します。
-
-```css
-::placeholder {
-  color: blue;
-  font-size: 1.5em;
-}
-```
+**`::placeholder`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の[プレイスホルダーテキスト](/ja/docs/Web/HTML/Element/input#placeholder)を表します。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-element-placeholder.html", "tabbed-shorter")}}
 
-セレクターに `::placeholder` を使ったルールを使用できるのは、{{cssxref("::first-line")}} 擬似要素に適用できる CSS プロパティだけです。
+セレクターに `::placeholder` を使ったルールを使用できるのは、 {{cssxref("::first-line")}} 擬似要素が適用できる CSS プロパティだけです。
 
 > **メモ:** 多くのブラウザーでは、プレイスホルダー文字列の外見は既定で半透明または明るい灰色です。
 
 ## 構文
 
-{{csssyntax}}
+```css
+::placeholder {
+  /* ... */
+}
+```
 
-## アクセシビリティの考慮事項
+## アクセシビリティの考慮
 
 ### 色のコントラスト
 
@@ -34,13 +33,13 @@ slug: Web/CSS/::placeholder
 
 プレイスホルダー文字列と入力欄の背景色のコントラスト比が、弱視の人が読むことができるために十分であることと同時に、プレイスホルダー文字列と入力テキストの差が違いが十分であり、プレイスホルダーが入力されたデータと誤認しないようになっていることを確認することが重要です。
 
-色のコントラスト比は、プレイスホルダー文字列と入力欄の背景色の値とを比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (Web Content Accessibility Guidelines, WCAG)](https://www.w3.org/WAI/intro/wcag) によれば、文字列コンテンツで 4.5:1 以上、見出しのような大きめの文字列で 3:1 以上のコントラスト比が求められています。大きめの文字列とは、太字ならば 18.66px 以上、または 24px 以上と定義されています。
+色のコントラスト比は、プレイスホルダー文字列と入力欄の背景色の値とを比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag) によれば、文字列コンテンツで 4.5:1 以上、見出しのような大きめの文字列で 3:1 以上のコントラスト比が求められています。大きめの文字列とは、太字ならば 18.66px 以上、または 24px 以上と定義されています。
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
-#### 使用性
+#### ユーザビリティ
 
 プレイスホルダー文字列のコントラストが十分に高いと、入力された値と誤解される可能性があります。プレイスホルダー文字列は人間が {{htmlelement("input")}} 要素の中にコンテンツを入力すると、消滅するものでもあります。どちらも、特に認知症の人にはフォームの入力を完了させるのに困難を伴う可能性があります。
 
@@ -62,15 +61,12 @@ slug: Web/CSS/::placeholder
 
 ### Windows 高コントラストモード
 
-プレイスホルダー文字列は、 [Windows 高コントラストモード](/ja/docs/Web/CSS/@media/-ms-high-contrast)ではユーザーが入力した文字列と同じスタイルで表示されます。これは人によっては、中身が入力されたものか、それとも中身がプレイスホルダー文字列かを見分けることが難しくなります。
-
-- [Greg Whitworth — How to use -ms-high-contrast](https://www.gwhitworth.com/blog/2017/04/how-to-use-ms-high-contrast)
+プレイスホルダー文字列は、 [Windows 高コントラストモード](https://www.smashingmagazine.com/2022/06/guide-windows-high-contrast-mode/)では、ユーザーが入力した文字列と同じスタイルで表示されます。これは人によっては、中身が入力されたものか、それとも中身がプレイスホルダー文字列かを見分けることが難しくなります。
 
 ### ラベル
 
 プレイスホルダーは {{htmlelement("label")}} 要素の置き換えではありません。 [`for`](/ja/docs/Web/HTML/Element/label#for) および [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性の組み合わせを使用して入力欄とプログラム的に関連付けが行われていないラベルがないと、読み上げソフトのような支援技術が {{htmlelement("input")}} 要素を解釈できなくなります。
 
-- [MDN 基本的なフォームのヒント](/ja/docs/Web/Accessibility/ARIA/forms/Basic_form_hints)
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
 
 ## 例

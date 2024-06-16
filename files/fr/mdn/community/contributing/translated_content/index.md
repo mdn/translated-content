@@ -17,7 +17,7 @@ Nous avons actuellement dégelé les langues suivantes :
 
 ### Chinois (zh-CN, zh-TW)
 
-- Discussions : [Telegram (`Mozilla China`)](https://t.me/mozilla_china), [Telegram (`MozTW L10n`)](https://moztw.org/community/telegram/)
+- Discussions : [Discord (`#zh-cn`)](/discord), [Discord (`#zh-tw`)](/discord), [Telegram (`MozTW L10n`)](https://moztw.org/community/telegram/)
 - Contributeurs actuels : [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999), [jasonren0403](https://github.com/jasonren0403), [JasonLamv-t](https://github.com/JasonLamv-t)
 
 ### Français (fr)

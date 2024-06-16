@@ -50,7 +50,7 @@ navigator.storage.estimate().then(function (estimate) {
 
 {{ EmbedLiveSample('Example', 600, 40) }}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

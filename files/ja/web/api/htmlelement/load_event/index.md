@@ -1,8 +1,9 @@
 ---
 title: "HTMLElement: load イベント"
+short-title: load
 slug: Web/API/HTMLElement/load_event
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: c781603ee230aee6ab7293e2a42df78fc5768c51
 ---
 
 {{APIRef}}

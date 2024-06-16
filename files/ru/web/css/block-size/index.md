@@ -64,7 +64,7 @@ block-size: unset;
 
 {{EmbedLiveSample("Пример")}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

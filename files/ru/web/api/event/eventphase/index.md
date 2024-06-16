@@ -3,7 +3,7 @@ title: Event.eventPhase
 slug: Web/API/Event/eventPhase
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}} {{AvailableInWorkers}}
 
 ### Общая информация
 

@@ -3,6 +3,8 @@ title: grid
 slug: Web/CSS/grid
 ---
 
+{{CSSRef}}
+
 ## Общие сведения
 
 Свойство CSS **`grid`** является сокращённой формой записи, которая устанавливает значения для всех явных свойств сетки (grid) ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, и {{cssxref("grid-template-areas")}}), всех неявных свойств сетки (grid) ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, и {{cssxref("grid-auto-flow")}}), и свойств для промежутков между рядами и столбцами сетки ({{cssxref("grid-column-gap")}} и {{cssxref("grid-row-gap")}}) в одной строчке.
@@ -92,7 +94,7 @@ grid: unset;
 
 {{EmbedLiveSample("Example", "100%", 150)}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

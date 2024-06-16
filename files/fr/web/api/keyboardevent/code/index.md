@@ -3,7 +3,7 @@ title: KeyboardEvent.code
 slug: Web/API/KeyboardEvent/code
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 La propriété **`KeyboardEvent.code`** représente une touche physique du clavier (contrairement au caractère généré par celle-ci). En d'autres termes, cette propriété retourne une valeur qui n'est pas modifiée par la disposition du clavier ou l'état des touches de modification.
 

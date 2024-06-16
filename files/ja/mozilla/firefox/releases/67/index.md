@@ -32,8 +32,8 @@ Firefox 67 は、米国時間 2019 年 5 月 21 日 にリリースされまし�
 - [ネットワークモニター](/ja/docs/Tools/Network_Monitor) の改良:
 
   - ネットワークモニターの [ヘッダー](/ja/docs/Tools/Network_Monitor/request_details#Headers) パネルで、既知のトラッカーに関するリソースの通知を表示するようになりました ([Firefox バグ 1485416](https://bugzil.la/1485416))。
-  - ネットワークモニターの [要求の列](/ja/docs/Tools/Network_Monitor/request_list#Network_request_columns) で、表示する列や列の並べ替えを制御できます。このコンテキストメニューに、リストの並べ替えをリセットするコマンドを追加しました ([Firefox バグ 1454962](https://bugzil.la/1454962))。
-  - ネットワークモニターで、作業しやすいように [列の幅を変更する](/ja/docs/Tools/Network_Monitor/request_list#Network_request_columns) ことが可能になりました ([Firefox バグ 1358414](https://bugzil.la/1358414))。
+  - ネットワークモニターの [要求の列](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-request-columns) で、表示する列や列の並べ替えを制御できます。このコンテキストメニューに、リストの並べ替えをリセットするコマンドを追加しました ([Firefox バグ 1454962](https://bugzil.la/1454962))。
+  - ネットワークモニターで、作業しやすいように [列の幅を変更する](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-request-columns) ことが可能になりました ([Firefox バグ 1358414](https://bugzil.la/1358414))。
 
 #### 廃止
 

@@ -7,13 +7,13 @@ l10n:
 
 {{MDNSidebar}}
 
-自從 2020 年 12 月 14 日起，MDN 便改成在基於 Github 的新平臺 [Yari](https://github.com/mdn/yari) 上運作。這個操作雖然帶給了 MDN 很多好處，但我們也需要改革我們處理在地化的方法：因為在英語以外的語言中，有許多沒有維護與過時的內容，而我們希望在未來更妥善地管理這件事。
+自從 2020 年 12 月 14 日起，MDN 便改成在基於 GitHub 的新平臺 [Yari](https://github.com/mdn/yari) 上運作。這個操作雖然帶給了 MDN 很多好處，但我們也需要改革我們處理在地化的方法：因為在英語以外的語言中，有許多沒有維護與過時的內容，而我們希望在未來更妥善地管理這件事。
 
-我們已經封存了**除了**下列語言以外的在地化內容。也就是說，那些內容在 Github 上唯讀，且在 MDN 上看不到。而活躍的在地化語言，有其專屬的團隊負責維護。
+我們已經封存了**除了**下列語言以外的在地化內容。也就是說，那些內容在 GitHub 上唯讀，且在 MDN 上看不到。而活躍的在地化語言，有其專屬的團隊負責維護。
 
 ## 如何貢獻
 
-如果你想要對以下任一個活躍的在地化語言作出貢獻，請查閱[位在 Github 上的 mdn/translated-content 儲存庫（repository）](https://github.com/mdn/translated-content)。這個儲存庫包含了所有活躍語言的所有已在地化的文件，以及問題（issue）追蹤功能。我們建議先閱讀[翻譯指南](https://github.com/mdn/translated-content/tree/main/docs)。
+如果你想要對以下任一個活躍的在地化語言作出貢獻，請查閱[位在 GitHub 上的 mdn/translated-content 儲存庫（repository）](https://github.com/mdn/translated-content)。這個儲存庫包含了所有活躍語言的所有已在地化的文件，以及問題（issue）追蹤功能。我們建議先閱讀[翻譯指南](https://github.com/mdn/translated-content/tree/main/docs)。
 
 如果你需要幫助，或者有任何疑問，請隨時聯繫下列任一活躍成員或社群，也可以[聯繫我們](/zh-TW/docs/MDN/Community/Communication_channels)。
 
@@ -26,7 +26,7 @@ l10n:
 
 ### 中文（`zh-CN`、`zh-TW`）
 
-- 討論群組：[Telegram（`Mozilla China`）](https://t.me/mozilla_china)、[Telegram（`MozTW L10n`）](https://moztw.org/community/telegram/)
+- 討論群組：[Discord (`#zh-cn`)](/discord)、[Discord (`#zh-tw`)](/discord)、[Telegram（`MozTW L10n`）](https://moztw.org/community/telegram/)
 - 目前的維護者：[Irvin](https://github.com/irvin)、[t7yang](https://github.com/t7yang)、[yin1999](https://github.com/yin1999)、[jasonren0403](https://github.com/jasonren0403)、[JasonLamv-t](https://github.com/JasonLamv-t)
 
 ### 法文（`fr`）

@@ -2,7 +2,7 @@
 title: ゲームパッド API を使用したコントロールの実装
 slug: Games/Techniques/Controls_Gamepad_API
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
 {{GamesSidebar}}
@@ -41,7 +41,7 @@ Hungry Fridge ゲームのフルバージョンが最初に構築され、次に
 
 ## 実装
 
-ゲームパッド API で使用する重要なイベントは、`gamepadconnected` と `gamepaddisconnected` の2つです。最初のイベントは、ブラウザが新しいゲームパッドの接続を検出したときに発行され、 2 つ目はゲームパッドが切断されたときに発行されます（ユーザーによる物理的な切断、または操作不能による切断）。このデモでは、`gamepadAPI` オブジェクトを使用して API に関するすべての情報を格納しています。
+ゲームパッド API で使用する重要なイベントは、`gamepadconnected` と `gamepaddisconnected` の2つです。最初のイベントは、ブラウザーが新しいゲームパッドの接続を検出したときに発行され、 2 つ目はゲームパッドが切断されたときに発行されます（ユーザーによる物理的な切断、または操作不能による切断）。このデモでは、`gamepadAPI` オブジェクトを使用して API に関するすべての情報を格納しています。
 
 ```js
 const gamepadAPI = {
@@ -247,4 +247,4 @@ enum GamepadMappingType {
 
 ## 概要
 
-ゲームパッド API は、とても簡単に開発することができます。プラグインを一切使わずに、ゲーム機のような体験をブラウザで実現することが、これまで以上に簡単にできるようになりました。ブラウザーで直接、 [Hungry Fridge](https://enclavegames.com/games/hungry-fridge/) のフルバージョンをプレイすることができます。 [Gamepad API Content Kit](https://end3r.github.io/Gamepad-API-Content-Kit/) の他のリソースもチェックしてみてください。
+ゲームパッド API は、とても簡単に開発することができます。プラグインを一切使わずに、ゲーム機のような体験をブラウザーで実現することが、これまで以上に簡単にできるようになりました。ブラウザーで直接、 [Hungry Fridge](https://enclavegames.com/games/hungry-fridge/) のフルバージョンをプレイすることができます。 [Gamepad API Content Kit](https://end3r.github.io/Gamepad-API-Content-Kit/) の他のリソースもチェックしてみてください。

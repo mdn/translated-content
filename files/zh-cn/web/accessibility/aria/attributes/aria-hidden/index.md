@@ -1,7 +1,9 @@
 ---
-title: 使用 aria-hidden 属性
+title: aria-hidden
 slug: Web/Accessibility/ARIA/Attributes/aria-hidden
 ---
+
+{{AccessibilitySidebar}}
 
 本文用来说明如何使用 aria-hidden 属性。aria-hidden 属性可以用来控制一系列可访问 API 中的非交互内容的显示或隐藏。
 

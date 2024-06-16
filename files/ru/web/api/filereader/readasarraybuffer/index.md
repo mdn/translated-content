@@ -18,7 +18,7 @@ instanceOfFileReader.readAsArrayBuffer(blob);
 - `blob`
   - : {{domxref("Blob")}} или {{domxref("File")}}, информацию из которого необходимо прочитать.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

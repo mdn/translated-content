@@ -12,7 +12,7 @@ slug: Web/API/WebRTC_API/Signaling_and_video_calling
 
 [WebRTC](/ko/docs/Web/API/WebRTC_API) 는 리얼 타임 음성, 영상, 데이터 교환을 할 수 있는 완전한 p2p 기술이다. [다른 곳에서 논의한 것 처럼](/ko/docs/Web/API/WebRTC_API/Session_lifetime#establishing_a_connection) 서로 다른 네트워크에 있는 2개의 디바이스들을 서로 위치시키기 위해서는, 각 디바이스들의 위치를 발견하는 방법과 미디어 포맷 협의가 필요하다. 이 프로세스를 **시그널링** **signaling** 이라 부르고 각 디바이스들을 상호간에 동의된 서버(socket.io 혹은 websocket을 이용한 서버)에 연결시킨다. 이 서버는 각 디바이스들이 **negotiation**(협의) 메세지들을 교환할 수 있도록 한다.
 
-이 글에서 우리는 더 나아가 유저들간에 양방향으로 화상 통화가 되는 예제인 [WebSocket chat](https://mdn-samples.mozilla.org/s/websocket-chat)(웹소켓 문서를 작성하기 위해 만들어졌으며, 링크는 곧 활성화 될 것이다. 아직은 온라인으로 테스트가 불가능하다.)을 작동이 되도록 만들 예정이다. 이것에 관해 [샘플](https://mdn-samples.mozilla.org/s/webrtc-from-chat) 을 확인해 보거나 Github에서 전체 [프로젝트](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)를 확인해볼 수 있다.
+이 글에서 우리는 더 나아가 유저들간에 양방향으로 화상 통화가 되는 예제인 [WebSocket chat](https://webrtc-from-chat.glitch.me/)(웹소켓 문서를 작성하기 위해 만들어졌으며, 링크는 곧 활성화 될 것이다. 아직은 온라인으로 테스트가 불가능하다.)을 작동이 되도록 만들 예정이다. 이것에 관해 [샘플](https://webrtc-from-chat.glitch.me/) 을 확인해 보거나 Github에서 전체 [프로젝트](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)를 확인해볼 수 있다.
 
 > **참고:** 깃헙에 있는 테스트 서버 코드는 앞으로 공부할 예제 코드보다 최신 버전이다. 이 글은 현재 업데이트 진행 중이며, 곧 완료될 예정이다. 업데이트가 완료된다면 이 글을 사라질 것이다.
 

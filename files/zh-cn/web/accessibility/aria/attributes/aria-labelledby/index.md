@@ -1,7 +1,9 @@
 ---
-title: Using the aria-labelledby attribute
+title: aria-labelledby
 slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
 ---
+
+{{AccessibilitySidebar}}
 
 ### 描述
 

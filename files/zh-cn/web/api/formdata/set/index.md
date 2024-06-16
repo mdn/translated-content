@@ -3,13 +3,11 @@ title: FormData.set()
 slug: Web/API/FormData/set
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
 **`set()`** 方法会对 `FormData` 对象里的某个 `key` 设置一个新的值，如果该 `key` 不存在，则添加。
 
 `set()` 和 {{domxref("FormData.append")}} 不同之处在于：如果某个 key 已经存在，`set()` 会直接覆盖所有该 key 对应的值，而 {{domxref("FormData.append")}} 则是在该 key 的最后位置再追加一个值。
-
-> **备注：** 该方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 可用。
 
 ## 语法
 

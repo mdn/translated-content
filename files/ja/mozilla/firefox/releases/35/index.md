@@ -3,6 +3,8 @@ title: Firefox 35 for developers
 slug: Mozilla/Firefox/Releases/35
 ---
 
+{{FirefoxSidebar}}
+
 Gecko 35 を搭載した Firefox 35 は、米国時間 2015 年 1 月 13 日にリリースされました。このページでは、開発者に影響する Firefox 35 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -86,7 +88,7 @@ _変更なし。_
 ## ネットワークおよびセキュリティ
 
 - AEAD 暗号化方式を使用する場合に限り、HTTP/2 を実装および有効化しました ([バグ 1027720](https://bugzilla.mozilla.org/show_bug.cgi?id=1027720) および [バグ 1047594](https://bugzilla.mozilla.org/show_bug.cgi?id=1047594))。
-- HTTP/2 の `alt-svc` ヘッダをサポートしました ([バグ 1003448](https://bugzilla.mozilla.org/show_bug.cgi?id=1003448))。
+- HTTP/2 の `alt-svc` ヘッダーをサポートしました ([バグ 1003448](https://bugzilla.mozilla.org/show_bug.cgi?id=1003448))。
 - HTTP の [Public Key Pinning](/ja/docs/Web/Security/Public_Key_Pinning) 拡張 (HPKP) を実装しました ([バグ 787133](https://bugzilla.mozilla.org/show_bug.cgi?id=787133))。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点

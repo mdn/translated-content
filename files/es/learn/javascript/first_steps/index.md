@@ -23,7 +23,7 @@ Antes de comenzar este módulo, no necesitas ningún conocimiento previo de Java
 - [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML).
 - [Introducción a CSS](/es/docs/Learn/CSS/Introduction_to_CSS).
 
-> **Nota:** Si estás trabajando en una computadora, tableta u otro dispositivo en el que no puedes crear tus propios archivos, puedes probar (la mayoría de) los ejemplos de código en un programa de codificación en línea como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/).
+> **Nota:** Si estás trabajando en una computadora, tableta u otro dispositivo en el que no puedes crear tus propios archivos, puedes probar (la mayoría de) los ejemplos de código en un programa de codificación en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 

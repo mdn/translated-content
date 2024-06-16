@@ -3,7 +3,7 @@ title: "Touch: radiusY プロパティ"
 short-title: radiusY
 slug: Web/API/Touch/radiusY
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 3d08b9706ce2d43b0494c28a15c8bd7df46b4f48
 ---
 
 {{ APIRef("Touch Events") }}

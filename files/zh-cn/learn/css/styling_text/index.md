@@ -11,7 +11,7 @@ slug: Learn/CSS/Styling_text
 
 在开始这一模块之前，你应当像 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 模块中所探讨的，已经熟悉了基本的 HTML，以及像 [CSS 介绍](/zh-CN/docs/Learn/CSS/Introduction_to_CSS) 中所详述的，对自己的 CSS 基础感觉还满意。
 
-> **备注：** 如果你所使用的是不能创建自己的文件的电脑、平板电脑或其他设备的话，你可以在一个在线编码程序 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 中尝试（大部分的）代码例子。
+> **备注：** 如果你所使用的是不能创建自己的文件的电脑、平板电脑或其他设备的话，你可以在一个在线编码程序 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 中尝试（大部分的）代码例子。
 
 ## 导引
 

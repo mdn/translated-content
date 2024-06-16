@@ -3,6 +3,8 @@ title: document.defaultView
 slug: Web/API/Document/defaultView
 ---
 
+{{ApiRef}}
+
 Dans les navigateurs, cette propriété renvoie l'objet [window](/fr/docs/DOM/window) associé au document ou `null` si non disponible.
 
 ## Syntaxe

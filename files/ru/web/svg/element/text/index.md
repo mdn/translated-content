@@ -181,7 +181,7 @@ svg {
 
 {{EmbedLiveSample('SVG_4', 200, '100%')}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

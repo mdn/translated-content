@@ -3,6 +3,8 @@ title: Utiliser l'API Web Storage
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
 
+{{DefaultAPISidebar("Web Storage API")}}
+
 L'API "Web Storage" fournit des mécanismes par lesquels les navigateurs web peuvent stocker des paires de clé-valeur, d'une manière plus intuitive qu'en utilisant des cookies. Cet article décrit pas à pas comment se servir de cette technologie facile d'utilisation.
 
 ## Concepts de base
@@ -32,7 +34,7 @@ Pour être capable d'utiliser localStorage, nous devons d'abord vérifier qu'il 
 
 ### Test du support et disponibilité
 
-Les navigateurs qui supportent localStorage ont sur l'objet windows une propriété nommée localStorage. Cependant, pour différentes raisons, la vérification seule de l'existnce de cette propriété peut provoquer des erreurs. .Son absence n'est pas non plus une garantie de son indisponibilité, certains navigateurs offrent un paramètre pour désactiver localStorage. Donc un navigateur _peut_ supporter localStorage, mais peut ne pas le rendre _disponible_ aux scripts de la page. Un exemple de cela est Safari, qui en mode de navigation privée fournit un objet localStorage vide dont le quota est nul, le rendant inutilisable. Notre fonction de détection doit prendre en compte ces scénarios.
+Les navigateurs qui supportent localStorage ont sur l'objet windows une propriété nommée localStorage. Cependant, pour différentes raisons, la vérification seule de l'existence de cette propriété peut provoquer des erreurs. Son absence n'est pas non plus une garantie de son indisponibilité, certains navigateurs offrent un paramètre pour désactiver localStorage. Donc un navigateur _peut_ supporter localStorage, mais peut ne pas le rendre _disponible_ aux scripts de la page. Un exemple de cela est Safari, qui en mode de navigation privée fournit un objet localStorage vide dont le quota est nul, le rendant inutilisable. Notre fonction de détection doit prendre en compte ces scénarios.
 
 Voici une fonction qui va détecter que localStorage est supporté mais aussi disponible:
 

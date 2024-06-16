@@ -25,7 +25,7 @@ value = window.devicePixelRatio;
 window.screen.deviceXDPI / window.screen.logicalXDPI
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

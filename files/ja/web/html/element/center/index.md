@@ -2,7 +2,7 @@
 title: "<center>: 中央揃えテキスト要素"
 slug: Web/HTML/Element/center
 l10n:
-  sourceCommit: a46d4d15ea85b4bbb83df145228bc40f658868be
+  sourceCommit: 6f886b9147b7f62bacfa1e740a3ea288168a58aa
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}
@@ -11,9 +11,9 @@ l10n:
 
 このタグは HTML 4（および XHTML 1）で非推奨要素に指定され、[CSS](/ja/docs/Web/CSS) の {{Cssxref("text-align")}} プロパティを {{HTMLElement("div")}} 要素に適用するか、それぞれの {{HTMLElement("p")}} 要素に適用する方式が採用されました。ブロックを中央揃えするには、別な CSS プロパティである {{Cssxref("margin-left")}} および {{Cssxref("margin-right")}} など用いて、値を `auto` に設定してください（または、 {{Cssxref("margin")}} を `0 auto` に設定してください）。
 
-## DOM インタフェース
+## DOM インターフェイス
 
-この要素は {{domxref("HTMLElement")}} インタフェースを実装しています。
+この要素は {{domxref("HTMLElement")}} インターフェイスを実装しています。
 
 ## 例 1
 
@@ -24,6 +24,10 @@ l10n:
 </center>
 ```
 
+### 結果
+
+{{EmbedLiveSample("Example 1")}}
+
 ## 例 2 （CSS での方法）
 
 ```html
@@ -32,6 +36,10 @@ l10n:
   <p>So will this paragraph.</p>
 </div>
 ```
+
+### 結果
+
+{{EmbedLiveSample("Example 2 (CSS alternative)")}}
 
 ## 例 3 （CSS での方法）
 
@@ -42,9 +50,11 @@ l10n:
 </p>
 ```
 
-## メモ
+### 結果
 
-{{Cssxref("text-align")}}`:center` を {{HTMLElement("div")}} または {{HTMLElement("p")}} 要素に適用すると、その*コンテンツ*を中央揃えにしますが、コンテンツの寸法はどれも変更されません。
+{{EmbedLiveSample("Example 3 (CSS alternative)")}}
+
+> **メモ:** {{Cssxref("text-align")}}`:center` を {{HTMLElement("div")}} または {{HTMLElement("p")}} 要素に適用すると、その*コンテンツ*を中央揃えにしますが、コンテンツの寸法はどれも変更されません。
 
 <!-- ## Technical summary -->
 

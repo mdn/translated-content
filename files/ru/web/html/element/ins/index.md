@@ -3,7 +3,11 @@ title: <ins>
 slug: Web/HTML/Element/ins
 ---
 
-**Элемент HTML `<ins>`** представляет собой диапазон текста, который был добавлен в документ
+{{HTMLSidebar}}
+
+HTML-элемент **`<ins>`** представляет диапазон текста, который был добавлен в документ.
+
+{{EmbedInteractiveExample("pages/tabbed/ins.html", "tabbed-standard")}}
 
 | [Содержимое категорий](/ru/docs/HTML/Content_categories) | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content) or [содержимое потока](/ru/docs/HTML/Content_categories#Flow_content). |
 | -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -43,5 +47,3 @@ slug: Web/HTML/Element/ins
 ## Смотрите также
 
 - Элемент {{HTMLElement("del")}} для помещения удаления в документе.
-
-{{HTMLSidebar}}

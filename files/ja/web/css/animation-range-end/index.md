@@ -2,7 +2,7 @@
 title: animation-range-end
 slug: Web/CSS/animation-range-end
 l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+  sourceCommit: c9c9df07f47c9c3a3a9c5d44cebe3f795326af7b
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -145,7 +145,7 @@ p {
   }
 
   to {
-    opacity: 1,
+    opacity: 1;
     transform: scaleX(1);
   }
 }

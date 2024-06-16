@@ -89,7 +89,7 @@ slug: Web/HTML/Element/fieldset
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - Другие связанные элементы:
 

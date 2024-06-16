@@ -1,11 +1,15 @@
 ---
 title: 异步
 slug: Glossary/Asynchronous
+l10n:
+  sourceCommit: 0c79cdfe93f2af272fb058db30c5d6f0a37c3263
 ---
 
 {{GlossarySidebar}}
 
-**异步**（asynchronous）指两个或两个以上的对象或事件**不**同时存在或发生（或多个相关事物的发生无需等待其前一事物的完成）。在计算机技术中，"异步"一词被用于两大语境。
+**异步**（Asynchronous）指的是两个或多个对象或事件不同时存在或发生，也就是说，它们**不是**{{glossary("synchronous", "同步")}}的。当多个相关的，但是并不依赖于前面发生的事情完成的事情发生时，它们就是异步的。
+
+在计算中，“异步”一词在两个主要的上下文中使用，如下所述。
 
 ## 网络与通信
 
@@ -13,7 +17,7 @@ slug: Glossary/Asynchronous
 
 对人类来说，电子邮件就是一种异步通信方式；发送者发送了一封邮件，接着接收者会在方便时读取和回复该邮件，而不是马上这样做。双方可以继续随时发送和接收信息，而无需双方安排何时进行操作。
 
-在异步软件中，发出请求（例如向服务器），并在等待响应时不会阻塞其他进程。该软件可以继续执行其他任务。例如，在[基于 Promise 的 API](/zh-CN/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)中，会为长时间的操作创建 {{JSxRef("Promise")}} 对象。在操作完成后，promise 会被处理。有了 promise，软件不必等待操作的完成。
+在异步软件中，发出请求（例如向服务器），并在等待响应时不会阻塞其他进程。该软件可以继续执行其他任务。例如，在[基于 Promise 的 API](/zh-CN/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API) 中，会为长时间的操作创建 {{JSxRef("Promise")}} 对象。在操作完成后，Promise 会被处理。有了 Promise，软件不必等待操作的完成。
 
 ## 软件设计
 
@@ -23,5 +27,5 @@ slug: Glossary/Asynchronous
 
 ## 参见
 
-- [从服务器获取数据](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)(Learning Area)（学习区）
+- [从服务器获取数据](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)（学习区）
 - {{glossary("Synchronous", "同步")}}

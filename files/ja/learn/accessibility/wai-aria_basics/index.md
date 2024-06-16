@@ -90,7 +90,7 @@ WAI-ARIA 属性の重要な点は、ブラウザーのアクセシビリティ A
 
 この記事では、全ての WAI-ARIA の機能と詳細についてカバーするわけではありません。 代わりに、あなたが知るべき最も重要な WAI-ARIA の機能についてカバーします。 もしサポートの詳細について何も記述してしない場合は、その機能が十分にサポートされていると想定してください。 この例外がある場合は、明確に記述します。
 
-> **メモ:** JavaScript ライブラリには WAI-ARIA をサポートしているものがありますが、それはライブラリが複雑なフォームコントロールのような UI を生成した場合に、アクセシビリティを向上させるための ARIA 属性を追加することを意味します。 迅速な UI 開発のためにサードパーティーの JavaScript ライブラリを探しているのであれば、その決断を下す際、UI のアクセシビリティのサポートを重要な要素として必ず考慮すべきです。 良い例としては、 jQuery UI（[jQuery UI について: ディープアクセシビリティサポート](https://jqueryui.com/about/#deep-accessibility-support)（英語）を見てください）、 [ExtJS](https://www.sencha.com/products/extjs/) 、 [Dojo/Dijit](https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html) があります。
+> **メモ:** JavaScript ライブラリーには WAI-ARIA をサポートしているものがありますが、それはライブラリーが複雑なフォームコントロールのような UI を生成した場合に、アクセシビリティを向上させるための ARIA 属性を追加することを意味します。 迅速な UI 開発のためにサードパーティーの JavaScript ライブラリーを探しているのであれば、その決断を下す際、UI のアクセシビリティのサポートを重要な要素として必ず考慮すべきです。 良い例としては、 jQuery UI（[jQuery UI について: ディープアクセシビリティサポート](https://jqueryui.com/about/#deep-accessibility-support)（英語）を見てください）、 [ExtJS](https://www.sencha.com/products/extjs/) 、 [Dojo/Dijit](https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html) があります。
 
 ### いつ WAI-ARIA を使うべきか
 
@@ -241,7 +241,7 @@ const intervalID = setInterval(showQuote, 10000);
 
 これにより、コンテンツの更新があった際にスクリーンリーダーがその内容を読み上げてくれるようになります。
 
-> **メモ:** ほとんどのブラウザーは、`file://` URL から HTTP リクエストを行おうとすると、セキュリティ例外を発生します。 例えば、ファイルを直接（ダブルクリックなどで）ブラウザーに読み込んだ場合などです。[ローカルテストサーバを設定するには](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)を参照してください。
+> **メモ:** ほとんどのブラウザーは、`file://` URL から HTTP リクエストを行おうとすると、セキュリティ例外を発生します。 例えば、ファイルを直接（ダブルクリックなどで）ブラウザーに読み込んだ場合などです。[ローカルテストサーバーを設定するには](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)を参照してください。
 
 加えて、考慮すべきことがあります。 テキストの更新された部分だけを読み上げるべきかどうかです。 常に見出し全体を読み上げる方が、何を読み上げられているかをユーザーが認識できるという点で望ましいかもしれません。 その対象に [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) プロパティを追加することで、このような動作を得ることができます。 手元の `<section>` の開始タグを再度更新して、次のようにしてください。
 
@@ -450,7 +450,7 @@ ARIA 機能は次のように使われます。
 - [ARIA の状態とプロパティ](/ja/docs/Web/Accessibility/ARIA/Attributes): すべての `aria-*` 属性
 - [WAI-ARIA ロール](/ja/docs/Web/Accessibility/ARIA/Roles): ARIA のロールと MDN で扱うロールの分類
 - [ARIA in HTML](https://www.w3.org/TR/html-aria/) (W3C): HTML の部品の各々について、どのアクセシビリティ（ARIA）の意味論がその部品に対してブラウザーにより暗黙裡に設定されるのか、そして、追加の意味論が必要な場合にはどの WAI-ARIA 機能をその部品に設定しうるのか、ということを定義するものです。
-- [Deque 大学のコードライブラリー](https://dequeuniversity.com/library/) — WAI-ARIA 機能を使ってアクセス可能にしてある複雑な UI コントロールを見せてくれる、実に有用かつ実践的な例からなるライブラリです。（英語）
+- [Deque 大学のコードライブラリー](https://dequeuniversity.com/library/) — WAI-ARIA 機能を使ってアクセス可能にしてある複雑な UI コントロールを見せてくれる、実に有用かつ実践的な例からなるライブラリーです。（英語）
 - [WAI-ARIA のオーサリングプラクティス](https://www.w3.org/WAI/ARIA/apg/) — W3C による非常に詳細なデザインパターンです。異なる種類の複雑な UI コントロールを、WAI-ARIA 機能を用いてアクセス可能にしつつ、実装する方法を説明しています。（英語）
 
 {{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}

@@ -3,6 +3,8 @@ title: Escribir servidores WebSocket
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
 ---
 
+{{DefaultAPISidebar("WebSockets API")}}
+
 ## Introducción
 
 Un servidor WebSocket es simplemente una aplicación TCP que escucha en cualquier puerto de un servidor que sigue un protocolo específico. La tarea de crear un servidor propio personalizado suele asustar a los desarrolladores, sin embargo puede resultar muy fácil implementar un servidor WebSocket en la plataforma que elijas.
