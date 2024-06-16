@@ -1,6 +1,7 @@
 ---
 title: WindowBase64.atob()
-slug: Web/API/atob
+slug: Web/API/Window/atob
+original_slug: Web/API/atob
 ---
 
 {{APIRef("HTML DOM")}}
