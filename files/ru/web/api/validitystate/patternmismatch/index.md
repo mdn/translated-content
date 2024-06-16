@@ -3,6 +3,8 @@ title: ValidityState.patternMismatch
 slug: Web/API/ValidityState/patternMismatch
 ---
 
+{{APIRef("HTML DOM")}}
+
 Доступное только для чтения свойство **`patternMismatch`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, соответствует ли значение {{HTMLElement("input")}} шаблону, указанному в атрибуте [`pattern`](/ru/docs/Web/HTML/Attributes/pattern).
 
 Если поле поддерживает атрибут [`pattern`](/ru/docs/Web/HTML/Attributes/pattern), это значит, что {{HTMLElement("input")}} содержит `type` {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}} или {{HTMLElement("input/search", "search")}} и в значении атрибута задано валидное регулярное выражение. Если значение не соответствует ограничениям, заданным в [`pattern`](/ru/docs/Web/HTML/Attributes/pattern), свойство `patternMismatch` будет `true`.

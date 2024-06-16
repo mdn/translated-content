@@ -3931,6 +3931,10 @@
     "modified": "2020-03-30T12:44:24.443Z",
     "contributors": ["raulnunesodre", "teoli", "alexandrem"]
   },
+  "Web/API/Window/atob": {
+    "modified": "2020-10-15T21:46:04.009Z",
+    "contributors": ["mateusvelleda", "joaoricardo_rm"]
+  },
   "Web/API/Window/beforeunload_event": {
     "modified": "2019-04-30T13:57:03.306Z",
     "contributors": ["wbamberg", "LeoNicolas"]
@@ -4170,10 +4174,6 @@
   "Web/API/XSLTProcessor": {
     "modified": "2019-03-23T23:03:40.500Z",
     "contributors": ["EduardoRedressa"]
-  },
-  "Web/API/atob": {
-    "modified": "2020-10-15T21:46:04.009Z",
-    "contributors": ["mateusvelleda", "joaoricardo_rm"]
   },
   "Web/API/clearTimeout": {
     "modified": "2020-10-15T21:31:54.685Z",
@@ -5408,10 +5408,6 @@
   "Web/CSS/writing-mode": {
     "modified": "2019-03-23T22:01:39.192Z",
     "contributors": ["jessuircleydson"]
-  },
-  "Web/Demos": {
-    "modified": "2020-09-04T06:28:02.627Z",
-    "contributors": ["gustavoSoriano", "angelorubin", "arthur2323"]
   },
   "Web/Guide": {
     "modified": "2020-10-30T13:31:43.101Z",
@@ -11257,6 +11253,10 @@
       "teoli",
       "Erick_Ribeiro"
     ]
+  },
+  "orphaned/Web/Demos": {
+    "modified": "2020-09-04T06:28:02.627Z",
+    "contributors": ["gustavoSoriano", "angelorubin", "arthur2323"]
   },
   "orphaned/Web/Guide/CSS/CSS_media_queries_(consultas_de_mídia_em_CSS)": {
     "modified": "2019-03-23T23:08:21.480Z",

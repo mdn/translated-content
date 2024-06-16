@@ -9,7 +9,7 @@ l10n:
 
 清除已保存的密码。
 
-你可以使用 `removalOptions` 参数，该参数是一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象，用于：
+你可以使用 `removalOptions` 参数（一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象），用于：
 
 - 仅清除在特定时间之后保存的密码
 - 控制是仅清除在普通网页上保存的密码，还是同时清除在托管应用程序和扩展程序上保存的密码。

@@ -3,6 +3,8 @@ title: 製作 WebSocket 客戶端應用程式
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 ---
 
+{{DefaultAPISidebar("WebSockets API")}}
+
 WebSocket 是一種讓瀏覽器與伺服器進行一段互動通訊的技術。使用這項技術的 Webapp 可以直接進行即時通訊而不需要不斷對資料更改進行輪詢（polling）。
 
 > **備註：** 當我們的系統架構可以寄存 WebSocket 範例之後，我們會提供聊天／伺服器系統實例的幾個範例。

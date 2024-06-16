@@ -3,6 +3,8 @@ title: Créer de belles boîtes
 slug: Learn/CSS/Howto/Create_fancy_boxes
 ---
 
+{{LearnSidebar}}
+
 Les boîtes CSS sont des blocs de base pour la construction des pages web. Créer des boîtes agréables à regarder est un défi complexe et intéressant. C'est un défi intéressant parce qu'on peut implémenter une idée de concept, de design, grâce à du code qui fonctionne. C'est un défi complexe car CSS possède à la fois plein de contraintes et de libertés. Dans cet article, nous allons voir de quoi il en retourne en dessinant quelques belles boîtes.
 
 Avant d'attaquer la partie pratique, nous vous recommandons de lire [l'article qui explique le fonctionnement du modèle de boîte CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model). Bien que ce ne soit pas strictement nécessaire, il peut également être judicieux que de lire [les bases de la disposition en CSS](/fr/docs/Learn/CSS/CSS_layout/Introduction).

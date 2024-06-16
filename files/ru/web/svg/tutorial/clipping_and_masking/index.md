@@ -3,7 +3,7 @@ title: Обрезка и маска
 slug: Web/SVG/Tutorial/Clipping_and_masking
 ---
 
-{{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}
 
 На первый взгляд, странно стирать то, что было только что нарисовано. Но когда вы попытаетесь создать полукруг в SVG, то сразу столкнётесь со следующими свойствами.
 

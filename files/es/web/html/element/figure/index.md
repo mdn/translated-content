@@ -3,6 +3,8 @@ title: figure
 slug: Web/HTML/Element/figure
 ---
 
+{{HTMLSidebar}}
+
 El _elemento HTML_ \<figure> representa contenido independiente, a menudo con un título. Si bien se relaciona con el flujo principal, su posición es independiente de éste. Por lo general, se trata de una imagen, una ilustración, un diagrama, un fragmento de código, o un esquema al que se hace referencia en el texto principal, pero que se puede mover a otra página o a un apéndice sin que afecte al flujo principal.
 
 > **Nota:**
