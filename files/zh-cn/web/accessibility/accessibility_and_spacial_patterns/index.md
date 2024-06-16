@@ -77,7 +77,7 @@ WCAG 对于对比度感知的标准不考虑填充效果。例如，蓝色文本
 
 - [上下文中的色彩恒定性：局部适应和参考级别的作用](https://jov.arvojournals.org/article.aspx?articleid=2192799)
 - [γ振荡与光敏性癫痫](https://www.sciencedirect.com/science/article/pii/S0960982217304062?via%3Dihub)
-- [表征诱发癫痫的图案图像并优化预防准则](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1528-1167.2005.01405.x) Arnold Wilkins, John Emmett 与 Graham Harding 著
+- [表征诱发癫痫的图案图像并优化预防准则](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1528-1167.2005.01405.x) Arnold Wilkins、John Emmett 与 Graham Harding 著
 
 #### 贡献者
 
