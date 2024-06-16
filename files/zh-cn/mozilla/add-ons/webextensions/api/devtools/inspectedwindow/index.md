@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-> **备注：** 本页面描述的是在 Firefox 54 中存在的 WebExtensions devtools API。尽管这些 API 基于 [Chrome devtools API](https://developer.chrome.com/docs/extensions/mv3/devtools/)，但 Firefox 中仍有许多功能尚未实现，因此在这里未被记录。要查看哪些功能目前缺失，请参见 [devtools API 的限制](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#devtools_API_的限制)。
+> **备注：** 本页面描述的是在 Firefox 54 中存在的 WebExtensions devtools API。尽管这些 API 基于 [Chrome devtools API](https://developer.chrome.com/docs/extensions/mv3/devtools/)，但 Firefox 中仍有许多特性尚未实现，因此在这里未被记录。要查看目前缺失哪些特性，请参见 [devtools API 的局限性](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#devtools_api_的局限性)。
 
 `devtools.inspectedWindow` API 允许开发者工具扩展与附加到开发者工具的窗口进行交互。
 
@@ -21,7 +21,7 @@ l10n:
 ## 函数
 
 - [`devtools.inspectedWindow.eval()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval)
-  - : 在目标窗口中评估一些 JavaScript 代码。
+  - : 在目标窗口中执行一些 JavaScript 代码。
 - [`devtools.inspectedWindow.reload()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/reload)
   - : 重新加载目标窗口的文档。
 
