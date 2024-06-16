@@ -15,11 +15,11 @@ l10n:
 
 ```js-nolint
 browser.browserAction.setBadgeText(
-  details // object
+  details // 对象
 )
 ```
 
-此 API 也可作为 `chrome.browserAction.setBadgeText()` 使用。
+此 API 也可通过 `chrome.browserAction.setBadgeText()` 来使用。
 
 ### 参数
 
