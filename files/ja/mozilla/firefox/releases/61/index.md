@@ -13,7 +13,7 @@ Firefox 61 は、米国時間 2018 年 6 月 26 日 にリリースされまし�
 
 - [アクセシビリティインスペクター](/ja/docs/Tools/Accessibility_inspector) を実装しました。
 - [ブラウザーコンソール](/ja/docs/Tools/Browser_Console) と [ブラウザーツールボックス](/ja/docs/Tools/Browser_Toolbox) で、新しい意匠のコンソール UI をデフォルトで有効化しました ([Firefox バグ 1362023](https://bugzil.la/1362023)/[Firefox バグ 1347127](https://bugzil.la/1347127))。古い UI は削除しました。
-- [ネットワークモニター](/ja/docs/Tools/Network_Monitor) で `POST` 要求のコンテキストメニューの \[_新しいタブで開く_] をクリックすると、想定どおりの `POST` パラメーターを付加した要求を正しく再送信するようになりました ([Firefox バグ 1407515](https://bugzil.la/1407515))。
+- [ネットワークモニター](/ja/docs/Tools/Network_Monitor) で `POST` リクエストのコンテキストメニューの \[_新しいタブで開く_] をクリックすると、想定どおりの `POST` 引数を付加したリクエストを正しく再送信するようになりました ([Firefox バグ 1407515](https://bugzil.la/1407515))。
 - それぞれの変数にどの色の値が保存されているかを明確にするため、色見本をつけて [CSS 変数のオートコンプリート](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#CSS_variable_autocompletion) を行うようになりました ([Firefox バグ 1451211](https://bugzil.la/1451211))。
 
   - さらに、CSS 変数名にマウスポインターを載せると、変数に保存されている色の値をツールチップで表示します ([Firefox バグ 1431949](https://bugzil.la/1431949))。

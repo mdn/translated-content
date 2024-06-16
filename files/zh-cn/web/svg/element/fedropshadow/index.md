@@ -57,17 +57,6 @@ svg {
 - {{SVGAttr("stdDeviation")}}
   - : 此属性定义了投影的模糊操作的标准差。_值类型_：[**\<number>**](/zh-CN/docs/Web/SVG/Content_type#数字)；_默认值_：`2`；_可用于动画_：**是**
 
-### 全局属性
-
-- [核心属性](/zh-CN/docs/Web/SVG/Attribute/Core)
-  - : 最应注意：{{SVGAttr('id')}}
-- [样式属性](/zh-CN/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}、{{SVGAttr('style')}}
-- [滤镜原始属性](/zh-CN/docs/Web/SVG/Attribute#滤镜属性)
-  - : {{SVGAttr('height')}}、{{SVGAttr('in')}}、{{SVGAttr('result')}}、{{SVGAttr('x')}}、{{SVGAttr('y')}}、{{SVGAttr('width')}}
-- [表现属性](/zh-CN/docs/Web/SVG/Attribute/Presentation)
-  - : 最应注意：{{SVGAttr('flood-color')}}、{{SVGAttr('flood-opacity')}}
-
 ## 用法
 
 {{svginfo}}

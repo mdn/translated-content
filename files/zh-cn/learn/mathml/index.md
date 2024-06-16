@@ -9,14 +9,6 @@ slug: Learn/MathML
 
 > **警告：** 实际上，MathML 内容是由[轻量级标记语言](https://zh.wikipedia.org/wiki/轻量级标记语言)（例如 [LaTeX](https://zh.wikipedia.org/wiki/LaTeX)）或[图形用户界面](https://zh.wikipedia.org/wiki/图形用户界面)生成的。如果你只需要在网页中集成数学公式，可以参考[编写 MathML](/zh-CN/docs/Web/MathML/Authoring) 页面上的提示。
 
-> **标注：**
->
-> #### 想成为前端开发人员吗？
->
-> 我们提供了一门课程，包含了你实现这个目标所需的所有基本信息。
->
-> [**开始学习**](/zh-CN/docs/Learn/Front-end_web_developer)
-
 ## 前提
 
 在尝试学习 MathML 之前，我们假设你已经具备一些基本的 [HTML](/zh-CN/docs/Learn/HTML) 和 [CSS](/zh-CN/docs/Learn/CSS) 知识。因此，强烈建议你首先熟悉这两种技术。请从以下模块开始：

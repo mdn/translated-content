@@ -78,6 +78,53 @@ baselines.forEach((baseline, index) => {
 
 {{ EmbedLiveSample('属性值比较', 700, 550) }}
 
+### 基于同一水平线比较各个属性值
+
+与前面的示例一样，本示例演示了各种 `textBaseline` 属性值，但在本例中，所有属性值都沿同一条线水平排列，以便更容易看到它们之间的差异。
+
+#### HTML
+
+```html
+<canvas id="canvas" width="724" height="160"></canvas>
+```
+
+#### JavaScript
+
+```js
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+const baselines = [
+  "top",
+  "hanging",
+  "middle",
+  "alphabetic",
+  "ideographic",
+  "bottom",
+];
+ctx.font = "20px serif";
+ctx.strokeStyle = "red";
+
+ctx.beginPath();
+ctx.moveTo(0, 100);
+ctx.lineTo(840, 100);
+ctx.moveTo(0, 55);
+ctx.stroke();
+
+baselines.forEach((baseline, index) => {
+  ctx.save();
+  ctx.textBaseline = baseline;
+  let x = index * 120 + 10;
+  ctx.fillText("Abcdefghijk", x, 100);
+  ctx.restore();
+  ctx.fillText(baseline, x + 5, 50);
+});
+```
+
+#### 结果
+
+{{ EmbedLiveSample('基于同一水平线比较属性值的差异', 900, 200) }}
+
 ## 规范
 
 {{Specifications}}

@@ -152,7 +152,7 @@ You'll come across the below concepts at some point in your studies.
 - **Internationalization** means making websites usable by people from different cultures, who speak different languages to your own. There are technical considerations here (such as altering your layout so that it still works OK for right-to-left, or even vertical languages), and human ones (such as using simple, non-slang language so that people who have your language as their second or third language are more likely to understand your text).
 - **Privacy & Security**. These two concepts are related but different. Privacy refers to allowing people to go about their business privately and not spying on them or collecting more of their data than you absolutely need to. Security refers to constructing your website in a secure way so that malicious users cannot steal information contained on it from you or your users.
 
-## See also
+## Смотрите также
 
 - [History of the World Wide Web](https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web)
 - [How does the internet work?](/ru/docs/Learn/Common_questions/How_does_the_Internet_work)

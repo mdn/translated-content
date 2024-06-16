@@ -2,7 +2,7 @@
 title: Mozilla のスプラッシュページ
 slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 l10n:
-  sourceCommit: 0b2ed45bea188abc27cdd92c3faffcb7483d3314
+  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
@@ -32,11 +32,13 @@ l10n:
 
 [originals](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/mdn-splash-page-start/originals) ディレクトリーの別の画像にアクセスし、同じ方法で保存します。 あなたはそれらを使用する準備が整う前に、グラフィックスエディターを使って（それらのいくつかを）操作する必要があるので、今は別のディレクトリーに保存する必要があります。
 
-あるいは、 [Glitch](https://glitch.com/) のようなオンラインツールを使用して、例を作成することもできます。このページの下にある [評価またはさらなる支援](#assessment_or_further_help) セクションを参照してください。
+それ以外に、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターを使用することもできます。
 
 > **メモ:** 例の HTML ファイルには、ページのスタイルを設定するための CSS がかなり多く含まれています。 CSS に触れる必要はなく、 {{htmlelement("body")}} 要素内の HTML を操作するだけです。正しいマークアップを挿入していれば、スタイルは正しく表示されます。
+>
+> もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 
-## プロジェクトの概要
+## プロジェクト概要
 
 今回の評価試験では、ほとんど完成した Mozilla のスプラッシュページを紹介しています。 これは、Mozilla が何を意味しているかについて、何か素敵で興味深いことを言い、さらなるリソースへのリンクを提供することを目的としています。 残念ながら、画像や動画はまだ追加されていません — これがあなたの仕事です。ページの見栄えを良くし、もっと理にかなったものにするために、いくつかのメディアを追加する必要があります。 次の節では、実行する必要があることを詳しく説明します。
 
@@ -91,17 +93,5 @@ l10n:
 ![サンプルのスプラッシュページの広い画面のショット](wide-shot.png)
 
 ![サンプルのスプラッシュページの狭い画面のショット](narrow-shot.png)
-
-## 評価とさらなる支援
-
-自分の作品を評価してほしい、あるいは行き詰まりを感じていて相談したい場合は次のようにしてください。
-
-1. [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/) などのオンライン共有エディターに、自身の作品を入れてください。 Glitch は画像のようなアセットをアップロードできるので、この例では Glitch の方が良いかもしれませんが、他のツールはそうではありません。
-2. [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250) に、評価や助けを依頼する投稿を書きます。投稿には、以下を記載してください。（訳注: やりとりは英語になります。）
-
-   - "Assessment wanted for Mozilla splash page" のような説明的なタイトル。
-   - すでに保有されている内容や、私たちに希望されること。例えば、行き詰って助けが必要な場合や、評価を希望される場合は、その旨を指示してください。
-   - 評価したい、あるいは助けが必要な例へのリンクを、オンライン共有エディターで表示します（上記のステップ 1 で述べたとおり）。コードを見ることができなければ、コーディングの問題で誰かを助けることはとても難しいのです。
-   - 実際のタスクまたは評価ページへのリンク。そうすると私たちがヘルプが必要な質問を探すことができます。
 
 {{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}

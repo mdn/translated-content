@@ -131,7 +131,7 @@ Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされまし�
 - {{cssxref(":dir", ":dir()")}} 疑似クラスの、`-moz` 接頭辞がついた派生形を削除しました ([Firefox バグ 1270406](https://bugzil.la/1270406))。
 - {{cssxref("text-align-last")}} の、`-moz` 接頭辞がついた派生形を削除しました ([Firefox バグ 1276808](https://bugzil.la/1276808))。
 - {{cssxref("calc", "calc()")}} メソッドの、`-moz` 接頭辞がついた派生形を削除しました ([Firefox バグ 1331296](https://bugzil.la/1331296))。
-- 独自仕様である `-moz-samplesize` media fragment (メモリが少ない Firefox OS 端末にダウンサンプリングした画像を提供することを支援するために追加しました。[Firefox バグ 854795](https://bugzil.la/854795) をご覧ください) を削除しました ([Firefox バグ 1311246](https://bugzil.la/1311246))。
+- 独自仕様である `-moz-samplesize` media fragment (メモリーが少ない Firefox OS 端末にダウンサンプリングした画像を提供することを支援するために追加しました。[Firefox バグ 854795](https://bugzil.la/854795) をご覧ください) を削除しました ([Firefox バグ 1311246](https://bugzil.la/1311246))。
 
 ### JavaScript
 

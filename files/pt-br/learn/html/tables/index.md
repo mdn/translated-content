@@ -11,7 +11,7 @@ Uma tarefa muito comum em HTML é estruturar os dados tabulares, e há vários e
 
 Antes de iniciar este módulo, você deverá ter domínio dos básicos de HTML — consulte [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introducao_ao_HTML).
 
-> **Nota:** se está utilizando um computador/tablet/outro dispositivo onde não tem a possibilidade de criar os seus próprios arquivos, pode testar a maioria dos exemplos de código num programa de codificação on-line, tais como [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
+> **Nota:** se está utilizando um computador/tablet/outro dispositivo onde não tem a possibilidade de criar os seus próprios arquivos, pode testar a maioria dos exemplos de código num programa de codificação on-line, tais como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guias
 

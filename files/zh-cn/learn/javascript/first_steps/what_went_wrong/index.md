@@ -83,7 +83,7 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
    lowOrHi.textContent = "你猜高了！";
    ```
 
-5. 该行试图将 `lowOrHi` 变量中的 `textContent` 属性设置为一个字符串，但是失败了，这是因为 `lowOrHi` 并不包含预期的内容。为了一探究竟，你可以在代码中查找一下该变量的的其他实例。`lowOrHi` 最早出现于第 48 行：
+5. 该行试图将 `lowOrHi` 变量中的 `textContent` 属性设置为一个字符串，但是失败了，这是因为 `lowOrHi` 并不包含预期的内容。为了一探究竟，你可以在代码中查找一下该变量的其他实例。`lowOrHi` 最早出现于第 48 行：
 
    ```js
    const lowOrHi = document.querySelector("lowOrHi");

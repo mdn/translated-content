@@ -29,7 +29,7 @@ slug: Web/HTML/Element/picture
 | [Content categories](/zh-TW/docs/Web/HTML/Content_categories) | [Flow content](/zh-TW/docs/Web/HTML/Content_categories#Flow_content), phrasing content, embedded content                                                |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Permitted content                                             | Zero or more {{HTMLElement("source")}} elements, followed by one {{HTMLElement("img")}} element, optionally intermixed with script-supporting elements. |
-| Tag omission                                                  | {{no_tag_omission}}                                                                                                                                     |
+| 標籤省略                                                      | 不允許，開始和結束標籤都是必須的。                                                                                                                      |
 | Permitted parents                                             | Any element that allows embedded content.                                                                                                               |
 | Implicit ARIA role                                            | [No corresponding role](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                     |
 | Permitted ARIA roles                                          | No `role` permitted                                                                                                                                     |

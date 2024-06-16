@@ -52,7 +52,7 @@ slug: Web/CSS/CSS_colors/Applying_color
 ### 境界線
 
 あらゆる要素で、周囲に[境界線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)を描画することができます。基本的な要素の境界線は、要素の内容物の辺を囲むように描かれた線です。
-基本的な要素の境界は、要素の内容の端に描かれている線です。要素とその境界線の関係性については、[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)の[ボックスのプロパティ](/ja/docs/Learn/CSS/Building_blocks/The_box_model#ボックスのプロパティ)を、より詳しい境界線へのスタイルの適用については [CSS での境界線のスタイル付け](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) を参照してください。
+基本的な要素の境界は、要素の内容の端に描かれている線です。要素とその境界線の関係性については、[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)の[ボックスのプロパティ](/ja/docs/Learn/CSS/Building_blocks/The_box_model#境界)を、より詳しい境界線へのスタイルの適用については [CSS での境界線のスタイル付け](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) を参照してください。
 
 {{cssxref("border")}} 一括指定プロパティを使用することもできます。これは、境界線に関する (色以外の[線幅](/ja/docs/Web/CSS/border-width)、[線種](/ja/docs/Web/CSS/border-style) (実線、破線など) などの特性も含んだ) すべての設定をこれ一つで行えます。
 

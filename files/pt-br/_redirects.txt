@@ -23,7 +23,7 @@
 /pt-BR/docs/Aprender/CSS/Styling_boxes	/en-US/docs/Learn/CSS/Building_blocks
 /pt-BR/docs/Aprender/Design_e_acessibilidade	/pt-BR/docs/Learn/Common_questions
 /pt-BR/docs/Aprender/Ferramentas_e_teste	/pt-BR/docs/Learn/Tools_and_testing
-/pt-BR/docs/Aprender/Front-end_web_developer	/pt-BR/docs/Learn/Front-end_web_developer
+/pt-BR/docs/Aprender/Front-end_web_developer	/pt-BR/docs/orphaned/Learn/Front-end_web_developer
 /pt-BR/docs/Aprender/Getting_started_with_the_web	/pt-BR/docs/Learn/Getting_started_with_the_web
 /pt-BR/docs/Aprender/Getting_started_with_the_web/A_web_e_seus_padrões	/pt-BR/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards
 /pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico	/pt-BR/docs/Learn/Getting_started_with_the_web/CSS_basics
@@ -99,7 +99,7 @@
 /pt-BR/docs/DOM/Document.querySelectorAll	/pt-BR/docs/Web/API/Document/querySelectorAll
 /pt-BR/docs/DOM/Referencia_do_DOM	/pt-BR/docs/Web/API/Document_Object_Model
 /pt-BR/docs/DOM/Referencia_do_DOM/Examples	/pt-BR/docs/Web/API/Document_Object_Model/Examples
-/pt-BR/docs/DOM/Referencia_do_DOM/How_to_create_a_DOM_tree	/pt-BR/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree
+/pt-BR/docs/DOM/Referencia_do_DOM/How_to_create_a_DOM_tree	/pt-BR/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree
 /pt-BR/docs/DOM/Referencia_do_DOM/Introdução	/pt-BR/docs/Web/API/Document_Object_Model/Introduction
 /pt-BR/docs/DOM/Referencia_do_DOM/Whitespace_in_the_DOM	/pt-BR/docs/Web/API/Document_Object_Model/Whitespace
 /pt-BR/docs/DOM/XMLHttpRequest	/pt-BR/docs/Web/API/XMLHttpRequest
@@ -396,6 +396,7 @@
 /pt-BR/docs/Learn/Common_questions/ferramentas_de_desenvolvimento_do_navegador	/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 /pt-BR/docs/Learn/Common_questions/o_que_e_um_web_server	/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server
 /pt-BR/docs/Learn/Common_questions/set_up_a_local_testing_server	/pt-BR/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
+/pt-BR/docs/Learn/Front-end_web_developer	/pt-BR/docs/orphaned/Learn/Front-end_web_developer
 /pt-BR/docs/Learn/JavaScript/Asynchronous/Async_await	/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Promises
 /pt-BR/docs/Learn/JavaScript/Asynchronous/Conceitos	/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
 /pt-BR/docs/Learn/JavaScript/Asynchronous/Concepts	/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
@@ -553,7 +554,7 @@
 /pt-BR/docs/Web/API/Document/keydown_event	/pt-BR/docs/Web/API/Element/keydown_event
 /pt-BR/docs/Web/API/Document/keypress_event	/pt-BR/docs/Web/API/Element/keypress_event
 /pt-BR/docs/Web/API/Document/keyup_event	/pt-BR/docs/conflicting/Web/API/Element/keyup_event_c3958d9a752bb3f2d72ac974b4e226ea
-/pt-BR/docs/Web/API/Document/origin	/pt-BR/docs/Web/API/origin
+/pt-BR/docs/Web/API/Document/origin	/pt-BR/docs/Web/API/Window/origin
 /pt-BR/docs/Web/API/Document/registerElement	/pt-BR/docs/conflicting/Web/API/CustomElementRegistry/define
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/activeElement	/pt-BR/docs/Web/API/Document/activeElement
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/pt-BR/docs/Web/API/Document/elementFromPoint
@@ -625,14 +626,12 @@
 /pt-BR/docs/Web/API/Window.openDialog	/pt-BR/docs/conflicting/Web/API/Window
 /pt-BR/docs/Web/API/Window/DOMContentLoaded_event	/pt-BR/docs/Web/API/Document/DOMContentLoaded_event
 /pt-BR/docs/Web/API/Window/Window.localStorage	/pt-BR/docs/Web/API/Window/localStorage
-/pt-BR/docs/Web/API/Window/crypto	/pt-BR/docs/Web/API/crypto_property
 /pt-BR/docs/Web/API/Window/openDialog	/pt-BR/docs/conflicting/Web/API/Window
-/pt-BR/docs/Web/API/Window/performance	/pt-BR/docs/Web/API/performance_property
-/pt-BR/docs/Web/API/WindowBase64/atob	/pt-BR/docs/Web/API/atob
+/pt-BR/docs/Web/API/WindowBase64/atob	/pt-BR/docs/Web/API/Window/atob
 /pt-BR/docs/Web/API/WindowEventHandlers/onhashchange	/pt-BR/docs/Web/API/Window/hashchange_event
 /pt-BR/docs/Web/API/WindowEventHandlers/onpopstate	/pt-BR/docs/conflicting/Web/API/Window/popstate_event
 /pt-BR/docs/Web/API/WindowEventHandlers/onstorage	/pt-BR/docs/Web/API/Window/storage_event
-/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/atob	/pt-BR/docs/Web/API/atob
+/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/atob	/pt-BR/docs/Web/API/Window/atob
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/pt-BR/docs/Web/API/clearTimeout
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/pt-BR/docs/Web/API/fetch
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/pt-BR/docs/Web/API/setInterval
@@ -644,6 +643,7 @@
 /pt-BR/docs/Web/API/XMLHttpRequest/Usando_XMLHttpRequest	/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /pt-BR/docs/Web/API/XMLHttpRequest/onreadystatechange	/pt-BR/docs/Web/API/XMLHttpRequest/readystatechange_event
+/pt-BR/docs/Web/API/atob	/pt-BR/docs/Web/API/Window/atob
 /pt-BR/docs/Web/API/console/assert	/pt-BR/docs/Web/API/console/assert_static
 /pt-BR/docs/Web/API/console/clear	/pt-BR/docs/Web/API/console/clear_static
 /pt-BR/docs/Web/API/console/count	/pt-BR/docs/Web/API/console/count_static
@@ -656,12 +656,15 @@
 /pt-BR/docs/Web/API/console/timeEnd	/pt-BR/docs/Web/API/console/timeend_static
 /pt-BR/docs/Web/API/console/timeStamp	/pt-BR/docs/Web/API/console/timestamp_static
 /pt-BR/docs/Web/API/console/warn	/pt-BR/docs/Web/API/console/warn_static
+/pt-BR/docs/Web/API/crypto_property	/pt-BR/docs/Web/API/Window/crypto
 /pt-BR/docs/Web/API/document.getElementById	/pt-BR/docs/Web/API/Document/getElementById
 /pt-BR/docs/Web/API/document.images	/pt-BR/docs/Web/API/Document/images
 /pt-BR/docs/Web/API/document.scripts	/pt-BR/docs/Web/API/Document/scripts
 /pt-BR/docs/Web/API/document.writeln	/pt-BR/docs/Web/API/Document/writeln
 /pt-BR/docs/Web/API/event.type	/pt-BR/docs/Web/API/Event/type
 /pt-BR/docs/Web/API/notificacoes	/pt-BR/docs/Web/API/Notification
+/pt-BR/docs/Web/API/origin	/pt-BR/docs/Web/API/Window/origin
+/pt-BR/docs/Web/API/performance_property	/pt-BR/docs/Web/API/Window/performance
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/alert_role
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Utilizando_o_alert_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/alert_role
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Test_Cases	/pt-BR/docs/Web/Accessibility/ARIA
@@ -732,7 +735,8 @@
 /pt-BR/docs/Web/CSS/valor_inicial	/pt-BR/docs/Web/CSS/initial_value
 /pt-BR/docs/Web/CSS/var()	/pt-BR/docs/Web/CSS/var
 /pt-BR/docs/Web/CSS/word-wrap	/pt-BR/docs/Web/CSS/overflow-wrap
-/pt-BR/docs/Web/Demos_of_open_web_technologies	/pt-BR/docs/Web/Demos
+/pt-BR/docs/Web/Demos	/pt-BR/docs/orphaned/Web/Demos
+/pt-BR/docs/Web/Demos_of_open_web_technologies	/pt-BR/docs/orphaned/Web/Demos
 /pt-BR/docs/Web/Events/DOMContentLoaded	/pt-BR/docs/Web/API/Document/DOMContentLoaded_event
 /pt-BR/docs/Web/Events/abort	/pt-BR/docs/Web/API/HTMLMediaElement/abort_event
 /pt-BR/docs/Web/Events/beforeunload	/pt-BR/docs/Web/API/Window/beforeunload_event

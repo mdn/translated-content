@@ -139,7 +139,7 @@ gl.texImage3D(
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.createTexture()")}}
 - {{domxref("WebGLRenderingContext.bindTexture()")}}

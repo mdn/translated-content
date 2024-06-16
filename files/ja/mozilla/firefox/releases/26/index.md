@@ -39,16 +39,16 @@ Firefox 26 は米国時間 2013 年 12 月 10 日にリリースされました�
 
 - {{domxref("DOMImplementation.createDocument")}} の最後の引数 (doctype) を省略可能にしました ([Firefox バグ 909859](https://bugzil.la/909859))。
 - 1 回の呼び出しで複数のクラスの追加や削除が可能な、新しい {{domxref("element.classList")}} の仕様を実装しました ([Firefox バグ 814014](https://bugzil.la/814014))。
-- {{domxref("URL.URL", "URL()")}} コンストラクターを {{domxref("URL")}} インタフェースに実装しました ([Firefox バグ 887364](https://bugzil.la/887364))。
+- {{domxref("URL.URL", "URL()")}} コンストラクターを {{domxref("URL")}} インターフェイスに実装しました ([Firefox バグ 887364](https://bugzil.la/887364))。
 - {{domxref("HTMLAnchorElement/origin", "URLUtils.origin")}}, {{domxref("HTMLAnchorElement/password", "URLUtils.password")}}, {{domxref("HTMLAnchorElement/username", "URLUtils.username")}} の各プロパティが {{domxref("URLUtils")}} を実装するすべてのインターフェイス、{{domxref("URL")}}、{{domxref("Location")}}、{{domxref("HTMLAnchorElement")}}、{{domxref("HTMLAreaElement")}} で利用可能になりました。 ([Firefox バグ 887364](https://bugzil.la/887364))。
-- {{domxref("URL")}} インタフェースが、Web Workers からアクセス可能になりました ([Firefox バグ 887364](https://bugzil.la/887364))。
+- {{domxref("URL")}} インターフェイスが、Web Workers からアクセス可能になりました ([Firefox バグ 887364](https://bugzil.la/887364))。
 - IndexedDB が「楽観的」なストレージ領域として使用できるようになりました。プロンプトを必要とせず、データは LRU 立ち退きポリシーでプールに保存され、短い一時的なストレージとなります ([Firefox バグ 785884](https://bugzil.la/785884))。
 - {{domxref("WaveShaperNode.oversample")}} についての対応が追加されました ([Firefox バグ 875277](https://bugzil.la/875277))。
 - 永続的なストレージのパスを `<profile>/indexedDB` から `<profile>/storage/persistent` に変更しました (b2g では `/data/local/indexedDB` から `/data/local/storage/persistent` に変更)。
 - {{domxref("Screen.orientation")}} プロパティおよび {{domxref("Screen.lockOrientation()")}} メソッドで値 `default` をサポートしました。デバイスに応じて `portrait-primary` または `landscape-primary` が対応づけられます ([Firefox バグ 908058](https://bugzil.la/908058))。
-- {{domxref("Event")}} コンストラクタを Web workers で使用できます ([Firefox バグ 910910](https://bugzil.la/910910))。
+- {{domxref("Event")}} コンストラクターを Web workers で使用できます ([Firefox バグ 910910](https://bugzil.la/910910))。
 - {{HTMLElement("iframe")}} に `sandbox` 属性がついている場合、埋め込まれているページで {{domxref("Document.domain")}} プロパティを設定しようとすると、セキュリティエラーが発生するようになりました ([Firefox バグ 907892](https://bugzil.la/907892))。
-- {{domxref("MessageEvent")}} インタフェースを、最新の仕様に準拠するように更新しました。`initMessageEvent` メソッドを削除した一方で、インタフェースがコンストラクタを持つようになりました ([Firefox バグ 848294](https://bugzil.la/848294))。
+- {{domxref("MessageEvent")}} インターフェイスを、最新の仕様に準拠するように更新しました。`initMessageEvent` メソッドを削除した一方で、インターフェイスがコンストラクターを持つようになりました ([Firefox バグ 848294](https://bugzil.la/848294))。
 - 設定 `dom.messageChannel.enabled` のもとで、HTML5 の `MessageChannel` API を実装しました ([Firefox バグ 677638](https://bugzil.la/677638))。
 - すべての WebVTT に関する実装と同様に、設定 `media.webvtt.enabled` のもとで `VTTCue` をサポートしました ([Firefox バグ 868509](https://bugzil.la/868509))。
 - [Web Audio API](/ja/docs/Web/API/Web_Audio_API) が既定で利用できるようになりました ([Firefox バグ 885505](https://bugzil.la/885505))。

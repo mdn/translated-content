@@ -3,7 +3,7 @@ title: KeyboardEvent.code
 slug: Web/API/KeyboardEvent/code
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 `KeyboardEvent.code`属性表示键盘上的物理键（与按键生成的字符相对）。换句话说，此属性返回一个值，该值不会被键盘布局或修饰键的状态改变。
 

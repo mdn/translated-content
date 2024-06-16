@@ -61,7 +61,7 @@ For a full example, see our[Basic dedicated worker example](https://github.com/m
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Using web workers](/En/Using_web_workers)
 - [Functions available to workers](/En/DOM/Worker/Functions_available_to_workers)

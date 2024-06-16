@@ -52,7 +52,7 @@ slug: Web/HTML/Element/rt
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{HTMLElement("ruby")}}
 - {{HTMLElement("rp")}}

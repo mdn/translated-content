@@ -1,17 +1,19 @@
 ---
 title: 504 Gateway Timeout
 slug: Web/HTTP/Status/504
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-**`504 Gateway Timeout`** 錯誤表明伺服器以閘道器或代理訪問時，並沒有上游伺服器即時收到完成請求所需的回應。
+超文本傳輸協定（HTTP）**`504 Gateway Timeout`** 伺服器錯誤回應代碼表示在充當閘道器或代理的伺服器未能及時從上游伺服器獲得所需的回應，以完成請求。
 
-> **備註：** [閘道器](https://zh.wikipedia.org/wiki/閘道器)可能位於網路上的不同地方。502 錯誤通常也不是開發者可以修復的，通常需要在要訪問的的伺服器或代理修復之。
+> **備註：** [閘道器](https://zh.wikipedia.org/wiki/网关)可能位於網路上的不同地方，504 錯誤通常不是開發者可以修復的，而是需要由嘗試訪問的網路伺服器或代理進行修復。
 
 ## 狀態
 
-```plain
+```http
 504 Gateway Timeout
 ```
 
@@ -21,11 +23,9 @@ slug: Web/HTTP/Status/504
 
 ## 瀏覽器相容性
 
-The information shown below has been pulled from MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
-
 {{Compat}}
 
-## See also
+## 參見
 
-- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [HTTP 狀態碼定義](https://httpwg.org/specs/rfc9110.html#status.504)
 - {{HTTPStatus(502)}}

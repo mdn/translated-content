@@ -23,7 +23,7 @@ _HTML 引用（Citation）标签_ (**\<cite>**) 表示一个作品的引用，�
   </tr>
   <tr>
    <th scope="row">标签省略</th>
-   <td>{{no_tag_omission}}</td>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父级元素</th>

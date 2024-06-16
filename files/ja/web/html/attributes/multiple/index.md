@@ -2,7 +2,7 @@
 title: "HTML 属性: multiple"
 slug: Web/HTML/Attributes/multiple
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 85c7c66c835d8bf2f766e408e723db6364fbd0c6
 ---
 
 {{HTMLSidebar}}
@@ -87,7 +87,7 @@ input:invalid {
 
 `multiple` 属性が指定された場合のみ、値はカンマで区切られた適切な形式のメールアドレスのリストになります。リスト内の各アドレスから、末尾の空白と先頭の空白はすべて削除されます。 [`required`](/ja/docs/Web/HTML/Attributes/required) 属性が存在する場合、少なくとも 1 つのメールアドレスが必要です。
 
-ブラウザーによっては、 `multiple` が存在する場合に関連付けられた {{htmlelement('datalist')}} から配下のメール会アドレスのためにオプションの [`list`](/ja/docs/Web/HTML/Attributes/list) を表示することがあります。他のブラウザーは対応していません。
+ブラウザーによっては、 `multiple` が存在する場合には、関連付けられた {{htmlelement('datalist')}} から配下のメールアドレスのために選択肢の [`list`](/ja/docs/Web/HTML/Element/input#list) を表示することがあります。他のブラウザーは対応していません。
 
 {{EmbedLiveSample("email_input", 600, 80) }}
 
@@ -122,11 +122,11 @@ input:invalid {
 
 `multiple` が設定された `file` 入力欄と、設定されていない入力欄との外見の違いに注意してください。
 
-フォームが送信されたとき、 [`method="get"`](/ja/docs/Web/HTML/Element/form) を使用していれば、選択された各ファイルの名前が URL 引数に `?uploads=img1.jpg&uploads=img2.svg` のように追加されていたはずです。しかし、[マルチパート](/ja/docs/Web/API/XMLHttpRequest/multipart)のフォームデータを送信しているので、post を使用しています。詳しくは {{htmlelement('form')}} 要素と[フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data#method_属性)を参照してください。
+フォームが送信されたとき、 [`method="get"`](/ja/docs/Web/HTML/Element/form) を使用していれば、選択された各ファイルの名前が URL 引数に `?uploads=img1.jpg&uploads=img2.svg` のように追加されていたはずです。しかし、マルチパートフォームデータを送信しているので、 post を使用する必要があります。詳しくは {{htmlelement('form')}} 要素と[フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data#method_属性)を参照してください。
 
 ### select
 
-{{HTMLElement("select")}} 要素の `multiple` 属性は、選択肢のリストから 0 個以上の選択肢を選択するための制御を表します。そうでなければ、{{HTMLElement("select")}} 要素は、選択肢のリストから単一の {{HTMLElement("option")}} を選択するための制御を表します。一般的に、このコントロールは複数の属性の存在に基づいて異なる外観を持ち、属性が存在する場合には、ほとんどのブラウザは、一行のドロップダウンではなくスクロールするリストボックスを表示します。
+{{HTMLElement("select")}} 要素の `multiple` 属性は、選択肢のリストから 0 個以上の選択肢を選択するための制御を表します。そうでなければ、{{HTMLElement("select")}} 要素は、選択肢のリストから単一の {{HTMLElement("option")}} を選択するための制御を表します。一般的に、このコントロールは複数の属性の存在に基づいて異なる外観を持ち、属性が存在する場合には、ほとんどのブラウザーは、一行のドロップダウンではなくスクロールするリストボックスを表示します。
 
 ```html
 <form method="get" action="#">
@@ -179,7 +179,7 @@ select[multiple]:active {
 */
 ```
 
-複数の属性を持つ `<select>` 要素の中で複数のオプションを選択する方法がいくつかあります。オペレーティングシステムに応じて、マウスを使用する人は <kbd>Ctrl</kbd>、<kbd>Command</kbd>、または <kbd>Shift</kbd> キーを押したまま、複数のオプションをクリックして、それらを選択／選択解除することができます。キーボードユーザは `<select>` 要素に焦点を当てて、カーソルキーの <kbd>Up</kbd> と <kbd>Down</kbd> を使って選択したい範囲の上部または下部にある項目を選択して、オプションを上下に移動することで、複数の連続した項目を選択することができます。連続していない項目の選択はあまりサポートされていません: <kbd>Space</kbd> キーを押すことで項目の選択と選択解除ができるはずですが、サポートはブラウザによって異なります。
+複数の属性を持つ `<select>` 要素の中で複数のオプションを選択する方法がいくつかあります。オペレーティングシステムに応じて、マウスを使用する人は <kbd>Ctrl</kbd>、<kbd>Command</kbd>、または <kbd>Shift</kbd> キーを押したまま、複数のオプションをクリックして、それらを選択／選択解除することができます。キーボードユーザーは `<select>` 要素に焦点を当てて、カーソルキーの <kbd>Up</kbd> と <kbd>Down</kbd> を使って選択したい範囲の上部または下部にある項目を選択して、オプションを上下に移動することで、複数の連続した項目を選択することができます。連続していない項目の選択はあまりサポートされていません: <kbd>Space</kbd> キーを押すことで項目の選択と選択解除ができるはずですが、サポートはブラウザーによって異なります。
 
 ## 仕様書
 

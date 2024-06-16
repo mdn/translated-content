@@ -2,18 +2,19 @@
 title: マクロの使用
 slug: MDN/Writing_guidelines/Page_structures/Macros
 l10n:
-  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
+  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
 ---
 
 {{MDNSidebar}}
 
-MDN が動作している [Yari](https://github.com/mdn/yari/tree/main/docs/what-yari-does.md) プラットフォームは、幅広い作業の自動化を可能にする強力なマクロシステムである [KumaScript](https://github.com/mdn/yari/tree/main/docs/kumascript) を提供しています。この記事は MDN のマクロを記事中で呼び出す方法について情報を提供します。
+MDN が動作している [Yari](https://github.com/mdn/yari) プラットフォームは、幅広い作業の自動化を可能にする強力なマクロシステムである [KumaScript](https://github.com/mdn/yari/tree/main/docs/kumascript) を提供しています。この記事は MDN のマクロを記事中で呼び出す方法について情報を提供します。
 
 [KumaScript ガイド](https://github.com/mdn/yari/blob/main/docs/kumascript/README.md)では MDN 上でマクロを利用する方法について詳細な情報を提供しているので、この節ではむしろ全体の簡潔なまとめをします。
 
 ## マクロはどのように実装されているか
 
-MDN 上で動作するマクロは、サーバーで実行される [JavaScript](/ja/docs/Web/JavaScript) コードを使用して実装され、 [Node.js](https://nodejs.org/en/) によって解釈されます。さらに、マクロがプラットフォームやそのコンテンツと相互作用するためのサービスや機能を提供する、私たちが実装したいくつかのライブラリーがあります。
+MDN 上で動作するマクロは、サーバーで実行される [JavaScript](/ja/docs/Web/JavaScript) コードを使用して実装され、 [Node.js](https://nodejs.org/en/) によって解釈されます。
+さらに、マクロがプラットフォームやそのコンテンツと相互作用するためのサービスや機能を提供する、私たちが実装したいくつかのライブラリーがあります。
 
 ## コンテンツでのマクロの利用
 
@@ -36,3 +37,10 @@ MDN 上で動作するマクロは、サーバーで実行される [JavaScript]
 マクロは大きなテキストブロックを挿入したり、 MDN の他記事からの内容で置き換えたりするようなシンプルなこともできますし、サイトを走査して目次をまるごと作り上げたり、出力のスタイル付けをしたり、リンクを張ったりといった複雑なこともできます。
 
 最もよく使われるマクロについては、[よく使われるマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros)のページで学習することができます。また、[すべてのマクロの完全なソース](https://github.com/mdn/yari/tree/main/kumascript/macros)もあります。そして多くのマクロには最上部のコメントとして、ソースに説明が組み込まれています。
+
+## 関連情報
+
+- [サイドバーマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
+- [リンクマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Links)
+- [機能状態マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status)
+- [マクロの一覧](https://github.com/mdn/yari/tree/main/kumascript/macros) (GitHub)

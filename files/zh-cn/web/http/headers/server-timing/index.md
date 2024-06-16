@@ -53,6 +53,6 @@ Server-Timing: total;dur=123.4
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{domxref("PerformanceServerTiming")}}

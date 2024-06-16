@@ -1,15 +1,15 @@
 ---
 title: grid-row
 slug: Web/CSS/grid-row
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
 {{CSSRef}}
 
-**`grid-row`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、グリッド行の中におけるグリッドアイテムの寸法と位置を指定し、線、区間、なし (自動) をグリッド配置に適用することで、{{Glossary("grid areas", "グリッド領域")}}の行の先頭と末尾の端を指定します。
+**`grid-row`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、{{glossary("grid row", "グリッド行")}}の中におけるグリッドアイテムの寸法と位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}のインライン方向の先頭と末尾の端を指定します。
 
 {{EmbedInteractiveExample("pages/css/grid-row.html")}}
-
-2 つの `<grid-line>` 値を指定する場合は、個別指定の `grid-row-start` をスラッシュの前に設定し、 `grid-row-end` をスラッシュの後に設定します。
 
 ## 構成要素のプロパティ
 
@@ -45,8 +45,21 @@ grid-row: 5 somegridarea span / 2 span;
 grid-row: inherit;
 grid-row: initial;
 grid-row: revert;
+grid-row: revert-layer;
 grid-row: unset;
 ```
+
+このプロパティは 1 つまたは 2 つの `<grid-line>` の値で指定します。
+
+2 つの `<grid-line>` 値を指定する場合は、個別指定の `grid-row-start` をスラッシュの前に設定し、 `grid-row-end` をスラッシュの後に設定します。
+
+それぞれの `<grid-line>` の値は以下の何れかを指定することができます。
+
+- `auto` キーワード
+- `<custom-ident>` 値
+- `<integer>` 値
+- `<custom-ident>` および `<integer>` を空白で区切ったもの
+- `span` キーワードと `<custom-ident>` または `<integer>` またはその両方。
 
 ### 値
 
@@ -125,7 +138,7 @@ grid-row: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Setting_grid_row_size_and_location", "200px", "200px")}}
+{{EmbedLiveSample("グリッド行の寸法と位置の設定", "200px", "200px")}}
 
 ## 仕様書
 

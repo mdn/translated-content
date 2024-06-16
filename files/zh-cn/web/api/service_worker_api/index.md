@@ -5,7 +5,7 @@ slug: Web/API/Service_Worker_API
 
 {{DefaultAPISidebar("Service Workers API")}}
 
-Service worker 本质上充当 Web 应用程序、浏览器与网络（可用时）之间的代理服务器。这个 API 旨在创建有效的离线体验，它会拦截网络请求并根据网络是否可用来采取适当的动作、更新来自服务器的的资源。它还提供入口以推送通知和访问后台同步 API。
+Service worker 本质上充当 Web 应用程序、浏览器与网络（可用时）之间的代理服务器。这个 API 旨在创建有效的离线体验，它会拦截网络请求并根据网络是否可用来采取适当的动作、更新来自服务器的资源。它还提供入口以推送通知和访问后台同步 API。
 
 ## Service worker 的概念和用法
 
@@ -95,7 +95,7 @@ Service workers 也可以用来做这些事情：
   - : 传递给 {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} 处理函数的参数，`InstallEvent` 接口代表一个在 {{domxref("ServiceWorker")}} 的 {{domxref("ServiceWorkerGlobalScope")}} 中分发的安装动作，作为 {{domxref("ExtendableEvent")}} 的子事件，它保证诸如 {{domxref("FetchEvent")}} 的功能性事件在安装过程中不会被分发。
 - {{DOMxRef("NavigationPreloadManager")}}
   - : 提供与 service worker 一起管理资源预加载的方法。
-- {{domxref("Navigator.serviceWorker") }}
+- {{DOMxRef("Navigator.serviceWorker")}} 和 {{DOMxRef("WorkerNavigator.serviceWorker")}}
   - : 返回一个 {{domxref("ServiceWorkerContainer")}} 对象，该对象提供对[相关 document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window) 的注册、删除、更新以及与 {{domxref("ServiceWorker")}} 对象通信的访问。
 - {{domxref("NotificationEvent") }}
   - : 传递给 {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}} 处理函数的参数，`NotificationEvent` 接口代表在 {{domxref("ServiceWorker")}} 的 {{domxref("ServiceWorkerGlobalScope")}} 中分发的单击事件通知。

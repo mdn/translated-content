@@ -3,10 +3,10 @@ title: "ReadableByteStreamController: close() メソッド"
 short-title: close()
 slug: Web/API/ReadableByteStreamController/close
 l10n:
-  sourceCommit: dcce943de1c2fa0f6a82de3c90bc98285f27ed6f
+  sourceCommit: d8b4431bfde42f1bc195239ea1f378d763f8163e
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 **`close()`** は {{domxref("ReadableByteStreamController")}} インターフェイスのメソッドで、関連するストリームを閉じます。
 

@@ -3,6 +3,8 @@ title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
 ---
 
+{{APIRef("DOM")}}
+
 ## Общая информация
 
 Возвращает статичный (не «живой») список типа [NodeList](/ru/docs/Web/API/NodeList), состоящий из всех элементов, которые являются потомками для элемента, над которым была выполнена функция и удовлетворяющим условию выборки.

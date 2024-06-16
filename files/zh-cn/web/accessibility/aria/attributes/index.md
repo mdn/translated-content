@@ -3,6 +3,8 @@ title: ARIA 状态及属性
 slug: Web/Accessibility/ARIA/Attributes
 ---
 
+{{AccessibilitySidebar}}
+
 这个页面列出了 MDN 上讨论的所有 WAI-ARIA 属性的参考页面。
 
 ARIA 属性用于修改无障碍树中定义的元素的状态和属性。
@@ -112,11 +114,3 @@ ARIA 的状态和属性（合称为“特性”）共有 4 类：
 ## 参见
 
 - [使用 ARIA：角色、状态和属性](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA 属性**](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Attributes")}}
-
-</section>

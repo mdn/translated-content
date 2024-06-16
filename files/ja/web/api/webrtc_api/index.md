@@ -1,6 +1,8 @@
 ---
 title: WebRTC API
 slug: Web/API/WebRTC_API
+l10n:
+  sourceCommit: 9716100b38b40f0f2ee8b3bfa2c692958868c5a6
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
@@ -9,17 +11,9 @@ slug: Web/API/WebRTC_API
 
 WebRTC は、相互に関連したいくつかの API とプロトコルで構成されており、これらが連携してこれを実現しています。ここで紹介するドキュメントでは、WebRTC の基礎知識、データ接続とメディア接続、両方の設定方法と、使用方法などを理解するのに役立ちます。
 
-## 相互運用性
-
-WebRTC の実装はまだ進化しており、ブラウザーごとに[コーデック](/ja/docs/Web/Media/Formats/WebRTC_codecs)や WebRTC 機能の対応レベルが異なるため、コードを書き始める前に Google が提供する [Adapter.js ライブラリー](https://github.com/webrtcHacks/adapter) を利用することを強く検討する必要があります。
-
-Adapter.js はシムやポリフィルを使用して、サポートしている環境によって異なる WebRTC 実装の違いを滑らかにします。また、接頭辞やその他の名前の違いも Adapter.js が処理することで、WebRTC の開発プロセス全体がより簡単になり、より広範な互換性のある結果が得られるようになります。このライブラリーは [NPM パッケージ](https://www.npmjs.com/package/webrtc-adapter)としても提供されています。
-
-Adapter.js の詳細については、[WebRTC adapter.js を使用した互換性の向上](/ja/docs/Web/API/WebRTC_API/adapter.js)を参照してください。
-
 ## WebRTC の概念と使い方
 
-WebRTC は複数の目的に対応しています。[メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API) と一緒に使用することで、音声・ビデオ会議、ファイル交換、画面共有、ID 管理、{{Glossary("DTMF")}} (タッチトーンダイヤル信号) の送信サポートを含む旧来の電話システムとのインターフェイスなど、強力なマルチメディア機能をウェブに提供します。ピアー間の接続は、特別なドライバーやプラグインを必要とせずに行うことができ、多くの場合、中間サーバーを介さずに行うことができます。
+WebRTC は複数の目的に対応しています。[メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API) と一緒に使用することで、音声・ビデオ会議、ファイル交換、画面共有、ID 管理、{{Glossary("DTMF")}} (タッチトーンダイヤル信号) の送信サポートを含む旧来の電話システムとのインターフェイスなど、強力なマルチメディア機能をウェブに提供します。ピアー間の接続は、特別なドライバーやプラグインを必要とせずに行うことができ、多くの場合、中間サーバーを介さずに行うことができます。
 
 2 つのピアー間の接続は {{DOMxRef("RTCPeerConnection")}} インターフェイスで表現されます。接続が確立され、`RTCPeerConnection` を使用して開かれると、メディアストリーム ({{DOMxRef("MediaStream")}}) やデータチャンネル ({{DOMxRef("RTCDataChannel")}}) を接続に追加することができます。
 
@@ -27,7 +21,9 @@ WebRTC は複数の目的に対応しています。[メディアキャプチャ
 
 また、2 つのピアー間の接続を使用して、{{DOMxRef("RTCDataChannel")}} インターフェイスを使用して任意のバイナリーデータを交換することもできます。これは、バックチャンネル情報、メタデータ交換、ゲームステータスパケット、ファイル転送、あるいはデータ転送のためのプライマリーチャンネルとして使用することができます。
 
-**_より多くの詳細と関連するガイドやチュートリアルへのリンクが必要ですね…。_**
+### 相互運用性
+
+WebRTC は現行のブラウザーでは概ね対応していますが、一部非互換性も残っています。 [adapter.js](https://github.com/webrtcHacks/adapter) ライブラリーは、これらの非互換性からアプリを保護するための補助的なものです。
 
 ## WebRTC リファレンス
 
@@ -48,7 +44,7 @@ WebRTC は、様々なタスクを達成するために連携して動作する�
 - {{DOMxRef("RTCSessionDescription")}}
   - : セッションの引数を表します。各 `RTCSessionDescription` は、オファー/アンサーネゴシエーションプロセスの、どの部分を記述するかを示す記述型 ({{DOMxRef("RTCSessionDescription.type", "type")}}) と、セッションの {{Glossary("SDP")}} 記述子で構成されます。
 - {{DOMxRef("RTCStatsReport")}}
-  - : 接続または接続上の個々のトラックの統計情報の詳細を提供します。{{DOMxRef("RTCPeerConnection.getStats()")}} を呼び出すと報告を取得できます。 WebRTC 統計情報の使用に関する詳細は、 [WebRTC 統計 API](/ja/docs/Web/API/WebRTC_Statistics_API) を参照してください。
+  - : 接続または接続上の個々のトラックの統計情報の詳細を提供します。{{DOMxRef("RTCPeerConnection.getStats()")}} を呼び出すと報告を取得できます。
 - {{DOMxRef("RTCIceCandidate")}}
   - : {{DOMxRef("RTCPeerConnection")}} を確立するための {{Glossary("ICE")}}(インタラクティブ接続確立) サーバーの候補を表します。
 - {{DOMxRef("RTCIceTransport")}}
@@ -63,13 +59,6 @@ WebRTC は、様々なタスクを達成するために連携して動作する�
   - : このインターフェイスは {{domxref("RTCPeerConnection.track_event", "track")}} イベントを表すもので、 {{DOMxRef("RTCRtpReceiver")}} オブジェクトが {{DOMxRef("RTCPeerConnection")}} オブジェクトに追加されたことを示すトラックイベントを表現するために使用されるインターフェイスで、新しい着信 (incoming) {{DOMxRef("MediaStreamTrack")}} が生成され、 `RTCPeerConnection` に追加されたことを示します。
 - {{DOMxRef("RTCSctpTransport")}}
   - : Stream Control Transmission Protocol (**{{Glossary("SCTP")}}**) トランスポートを説明する情報を提供し、 {{DOMxRef("RTCPeerConnection")}} のすべての[`RTCPeerConnection`](/ja/docs/Web/API/RTCPeerConnection) のデータチャネルの SCTP パケットが送受信される Datagram Transport Layer Security (**{{Glossary("DTLS")}}**) トランスポートにアクセスする方法も提供します。
-
-#### 辞書
-
-- {{DOMxRef("RTCIceServer")}}
-  - : ({{Glossary("STUN")}} や {{Glossary("TURN")}} サーバーのような) 単一の {{Glossary("ICE")}} サーバーを定義します。
-- {{DOMxRef("RTCRtpContributingSource")}}
-  - : ソース貢献されているパケットが再生された直近の時刻を含む、特定の貢献ソース (contributing source; CSRC) に関する情報が含まれています。
 
 #### イベント
 
@@ -115,6 +104,8 @@ WebRTC は、様々なタスクを達成するために連携して動作する�
   - : `RTCIceTransport` の状態が変化した。
 - {{domxref("RTCSctpTransport.statechange_event", "statechange")}}
   - : `RTCSctpTransport` の状態が変化した。
+- {{DOMxRef("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}}
+  - : エンコードされた動画や音声のフレームは、ワーカーで変換ストリームを使用して処理する準備ができています。
 
 #### 型
 
@@ -136,7 +127,7 @@ WebRTC は、様々なタスクを達成するために連携して動作する�
 
 ### 電話回線
 
-これらのインターフェイスとイベントは、公衆交換電話網 (PTSN) との相互作用に関連するものです。これらは主に、トーンダイヤルの音、またはその音を表すパケットをネットワーク経由でリモートピアーに送信するために使用されます。
+これらのインターフェイスとイベントは、公衆交換電話網 (PSTN) との相互作用に関連するものです。これらは主に、トーンダイヤルの音、またはその音を表すパケットをネットワーク経由でリモートピアーに送信するために使用されます。
 
 #### インターフェイス
 
@@ -149,6 +140,33 @@ WebRTC は、様々なタスクを達成するために連携して動作する�
 
 - {{domxref("RTCDTMFSender.tonechange_event", "tonechange")}}
   - : 新しい {{Glossary("DTMF")}} トーンが接続上で再生され始めたか、 `RTCDTMFSender` の {{domxref("RTCDTMFSender.toneBuffer", "toneBuffer")}} にある最後のトーンが送信されてバッファが空になったか、どちらかです。このイベントの型は {{domxref("RTCDTMFToneChangeEvent")}} です。
+
+### エンコードされた変換
+
+これらのインターフェイスとイベントは、ワーカーで実行する変換ストリームを使用して、入出力されるエンコード方式の動画と音声フレームを処理するために使用します。
+
+#### インターフェイス
+
+- {{DOMxRef("RTCRtpScriptTransform")}}
+  - : ワーカーで実行する変換ストリームを RTC パイプラインに挿入するインターフェイスです。
+- {{DOMxRef("RTCRtpScriptTransformer")}}
+  - : メインスレッドからオプションを渡す `RTCRtpScriptTransform` に対応するワーカーサイドのもので、 {{DOMxRef("TransformStream")}} を通してエンコードされたフレームをパイプするために使用することができる読み取り可能なストリームと書き込み可能なストリームも一緒に渡します。
+- {{DOMxRef("RTCEncodedVideoFrame")}}
+  - : RTC パイプラインで変換されるエンコードされた動画フレームを表します。
+- {{DOMxRef("RTCEncodedAudioFrame")}}
+  - : RTC パイプラインで変換されるエンコードされた音声フレームを表します。
+
+#### プロパティ
+
+- {{DOMxRef("RTCRtpReceiver.transform")}}
+  - : エンコードされた映像および音声フレームが受信パイプラインに変換ストリームを挿入するために使用するプロパティです。
+- {{DOMxRef("RTCRtpSender.transform")}}
+  - : エンコードされた映像および音声フレームの送信パイプラインに変換ストリームを挿入するために使用するプロパティです。
+
+#### イベント
+
+- {{DOMxRef("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}}
+  - : RTC 変換がワーカーで実行する準備ができているか、エンコードされた動画や音声フレームを処理する準備ができています。
 
 ## ガイド
 
@@ -168,15 +186,17 @@ WebRTC は、様々なタスクを達成するために連携して動作する�
   - : このガイドでは、ピアー接続と関連する {{DOMxRef("RTCDataChannel")}} を使用して、2 つのピアー間で任意のデータを交換する方法について説明します。
 - [WebRTC での DTMF の使用](/ja/docs/Web/API/WebRTC_API/Using_DTMF)
   - : {{DOMxRef("RTCDTMFSender")}} インターフェイスを用いた DTMF トーン送信サポートを含む、旧式の電話システムとのゲートウェイとやりとりを行うための WebRTC 対応について、このガイドでは、その方法を説明します。
+- [WebRTC エンコード変換](/ja/docs/Web/API/WebRTC_API/Using_Encoded_Transforms)
+  - : このガイドでは、ワーカーで実行する {{DOMxRef("TransformStream")}} を使用して、ウェブアプリケーションが入出力する WebRTCのエンコードされた映像および音声フレームを変更する方法を示します。
 
 ## チュートリアル
 
-- [Improving compatibility using WebRTC adapter.js](/ja/docs/Web/API/WebRTC_API/adapter.js)
-  - : WebRTC 組織は、異なるブラウザーの WebRTC 実装における互換性の問題を回避するため [adapter.js](https://github.com/webrtc/adapter/) を提供しています。このアダプタは JavaScript のはシム ({{Glossary("Shim")}}) で、あなたのコードを仕様に合わせて記述することで、WebRTC をサポートしているすべてのブラウザーで「ただ動く (just work) 」ようにしてくれます。
-- [WebRTC で静止画を撮る](/ja/docs/Web/API/WebRTC_API/Taking_still_photos)
-  - : この記事では、WebRTC に対応したパソコンや携帯電話でWebRTCを使ってカメラにアクセスして写真を撮る方法を紹介しています。
+- [WebRTC adapter.js を使用した互換性の向上](#相互運用性)
+  - : WebRTC 組織は、異なるブラウザーの WebRTC 実装における互換性の問題を回避するため [adapter.js](https://github.com/webrtc/adapter/) を提供しています。このアダプターは JavaScript のはシム ({{Glossary("Shim")}}) で、あなたのコードを仕様に合わせて記述することで、WebRTC に対応しているすべてのブラウザーで「ただ動く (just work) 」ようにしてくれます。
 - [シンプルな RTCDataChannel のサンプル](/ja/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
-  - : {{DOMxRef("RTCDataChannel")}} インターフェイスは、2つのピアー間で任意のデータを送受信するためのチャネルを開くことができる機能です。このAPIは意図的に [WebSocket API](/ja/docs/Web/API/WebSocket_API) に似せているので、それぞれに同じプログラミングモデルを使用することができます。
+  - : {{DOMxRef("RTCDataChannel")}} インターフェイスは、2つのピアー間で任意のデータを送受信するためのチャネルを開くことができる機能です。このAPIは意図的に [WebSocket API](/ja/docs/Web/API/WebSockets_API) に似せているので、それぞれに同じプログラミングモデルを使用することができます。
+- [Peer.js によるインターネット接続電話の構築](/ja/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs)
+  - : このチュートリアルは、 Peer.js を使用して電話を構築する方法を段階を追ってガイドします。
 
 ## 仕様書
 
@@ -208,9 +228,8 @@ WebRTC は、様々なタスクを達成するために連携して動作する�
 - {{DOMxRef("MediaStreamTrack")}}
 - {{DOMxRef("MessageEvent")}}
 - {{DOMxRef("MediaStream")}}
-- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API)
+- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
 - [Firefox multistream and renegotiation for Jitsi Videobridge](https://hacks.mozilla.org/2015/06/firefox-multistream-and-renegotiation-for-jitsi-videobridge/)
 - [Peering Through the WebRTC Fog with SocketPeer](https://hacks.mozilla.org/2015/04/peering-through-the-webrtc-fog-with-socketpeer/)
 - [Inside the Party Bus: Building a Web App with Multiple Live Video Streams + Interactive Graphics](https://hacks.mozilla.org/2014/04/inside-the-party-bus-building-a-web-app-with-multiple-live-video-streams-interactive-graphics/)
 - [ウェブメディア技術](/ja/docs/Web/Media)
-- [WebRTC 統計 API](/ja/docs/Web/API/WebRTC_Statistics_API)

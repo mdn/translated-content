@@ -16,7 +16,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 
 また Firefox では、"about:config"で"keepUuidOnUninstall"と"keepStorageOnUninstall"の設定を`true`にすることで、アンインストール時にデータが削除されることを防ぐことができます。 この機能は拡張機能開発のテストのために提供されています。拡張機能自身ではこれらの設定を変更できません。
 
-この API は {{domxref("Window.localStorage")}}に似ていますが、拡張機能のコード内で`Window.localStorage`を使用することは推奨されません。これはユーザがプライバシーのために履歴とデータを削除するなど、Firefox は localStorage API を用いて拡張機能が保存したデータを削除することがあるためです。
+この API は {{domxref("Window.localStorage")}}に似ていますが、拡張機能のコード内で`Window.localStorage`を使用することは推奨されません。これはユーザーがプライバシーのために履歴とデータを削除するなど、Firefox は localStorage API を用いて拡張機能が保存したデータを削除することがあるためです。
 
 ## 関数
 
@@ -33,7 +33,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 - {{WebExtAPIRef("storage.StorageArea.clear()")}}
   - : ストレージ領域内の全てのアイテムを削除します。
 
-## ブラウザ互換状況
+## ブラウザーの互換性
 
 {{Compat}}
 

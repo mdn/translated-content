@@ -52,7 +52,7 @@ flexbox는 행과 열 형태로 항목 무리를 배치하는 일차원 레이�
 
 ## flexbox로 레이아웃할 요소 지정
 
-먼저 어떤 요소들을 flexbox로 레이아웃할 요소를 선택해야 합니다. 이를 위해 영향을 주고 싶은 요소의 부모 요소에 특별한 {{cssxref("display")}} 속성값을 지정합니다. 이 경우 우리는 {{htmlelement("article")}} 요소를 레이아웃하길 원하므로 (flex container가 될) {{htmlelement("section")}}에 해당 속성값을 지정합니다:
+먼저 어떤 요소들을 flexbox로 레이아웃할 요소를 선택해야 합니다. 이를 위해 영향을 주고 싶은 요소의 부모 요소에 특별한 {{cssxref("display")}} 속성값을 지정합니다. 이 경우 우리는 {{htmlelement("article")}} 요소를 레이아웃하길 원하므로 (flex container가 될) {{htmlelement("section")}}에 해당 속성값을 지정합니다.
 
 ```css
 section {
@@ -60,7 +60,7 @@ section {
 }
 ```
 
-그 결과는 다음과 같아야 합니다:
+그 결과는 다음과 같아야 합니다.
 
 ![](flexbox-example2.png)
 
@@ -100,7 +100,7 @@ section {
 
 flexbox는 기본 축이 진행되는 방향(자식 flexbox들이 컨테이너 내부에 배치되는 방향)을 지정하는 {{cssxref("flex-direction")}} 속성을 제공합니다. 기본값으로 이것은 `row`로 설정되어 브라우저의 기본 언어가 작동하는 방향(영어 브라우저의 경우 왼쪽에서 오른쪽)을 따라 일렬로 배치됩니다.
 
-다음 선언문을 {{htmlelement("section")}} 규칙에 추가하세요:
+다음 선언문을 {{htmlelement("section")}} 규칙에 추가하세요.
 
 ```css
 flex-direction: column;
@@ -112,23 +112,23 @@ flex-direction: column;
 
 ## 접기
 
-당신의 레이아웃에 너비 또는 높이가 고정 크기를 갖고 있어 생기는 한 가지 문제는 결국 flexbox 자식 요소가 컨테이너에서 대열이탈하면서 레이아웃이 깨진다는 것입니다. 우리가 제시하는 [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html) 예제를 확인하고 난 뒤 [라이브 보기](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html)를 시도하세요(이 예제를 따라해보고 싶다면 이제 이 파일의 사본을 내려받으세요):
+당신의 레이아웃에 너비 또는 높이가 고정 크기를 갖고 있어 생기는 한 가지 문제는 결국 flexbox 자식 요소가 컨테이너에서 대열이탈하면서 레이아웃이 깨진다는 것입니다. 우리가 제시하는 [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html) 예제를 확인하고 난 뒤 [라이브 보기](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html)를 시도하세요(이 예제를 따라해보고 싶다면 이제 이 파일의 사본을 내려받으세요).
 
 ![](flexbox-example3.png)
 
-여기서 우리는 자식들이 정말로 소속 컨테이너에서 이탈하는 모습을 확인할 수 있습니다. 이것을 해소할 수 있는 한 가지 방법은 다음 선언을 {{htmlelement("section")}} 규칙 부분에 추가하면 됩니다:
+여기서 우리는 자식들이 정말로 소속 컨테이너에서 이탈하는 모습을 확인할 수 있습니다. 이것을 해소할 수 있는 한 가지 방법은 다음 선언을 {{htmlelement("section")}} 규칙 부분에 추가하면 됩니다.
 
 ```css
 flex-wrap: wrap;
 ```
 
-또한, 다음 선언문을 {{htmlelement("article")}} 규칙 부분에 추가해보세요:
+또한, 다음 선언문을 {{htmlelement("article")}} 규칙 부분에 추가해보세요.
 
 ```css
 flex: 200px;
 ```
 
-지금 시도해보십시오. 이 규칙이 포함되면 레이아웃이 훨씬 더 나아 보입니다:
+지금 시도해보십시오. 이 규칙이 포함되면 레이아웃이 훨씬 더 나아 보입니다.
 
 ![](flexbox-example4.png)우리는 이제 여러 행을 갖게 되었다. 많은 flexbox 자녀들이 합당하다 싶게 각 행마다 (분배되어) 알맞게 맞춰졌습니다. 대열이탈된 것들은 다음 행으로 넘어갑니다. 아티클 요소에 `flex: 200px` 선언이 지정되었다는 의미는 각 요소에 적어도 200px 너비가 지정되었다는 의미이다. 우리는 나중에 이 속성에 대해 더 자세히 논의할 겁니다. 마지막 행에 있는 마지막 몇몇 자식들의 각 너비가 더 연장되면서 전체 행이 마찬가지로 채워진 것을 볼 수 있습니다.
 
@@ -153,7 +153,7 @@ flex-flow: row wrap;
 
 이제 첫 번째 예제로 복귀해서, 우리가 어떻게 flex item의 비율을 조절할 수 있는지 살펴봅시다. [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html)사본을 브라우저 탭으로 열거나 [flexbox1.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html) 사본을 새로운 출발점으로 삼으세요.([라이브 참조](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)).
 
-첫째, 당신의 CSS 파일 하단에 다음 규칙을 추가하십시오:
+첫째, 당신의 CSS 파일 하단에 다음 규칙을 추가하십시오.
 
 ```css
 article {
@@ -209,7 +209,7 @@ flexbox의 실제 값은 flex성/반응성에 포함되어 있다고 볼 수 있
 
 우선 이 예제의 사본을 취득합니다.
 
-이제 예제의 CSS의 맨 아래에 다음 내용을 추가하세요:
+이제 예제의 CSS의 맨 아래에 다음 내용을 추가하세요.
 
 ```css
 div {
@@ -227,7 +227,7 @@ div {
 - 우리가 위의 코드에서 사용한 `center` 값은 항목 무리가 자기들 고유의 면적를 유지하는 동시에 교차축을 따라 중심에 놓이게 만듭니다. 그런 까닭에 현재 예제 속 버튼이 수직으로 중심에 놓여있습니다.
 - 또한 교차축의 시작과 끝에 맞춰 모든 항목을 정렬하게 해주는 `flex-start`와 `flex-end`와 같은 값도 가질 수 있습니다. 자세한 내용은 {{cssxref("align-items")}}을 참조하십시오.
 
-{{cssxref("align-self")}} 속성을 단추에 적용함으로써 flex item에 속한 개별 항목에 대한 {{cssxref("align-items")}}동작을 재지정할 수 있습니다. 예를 들어 다음을 CSS에 추가해보세요:
+{{cssxref("align-self")}} 속성을 단추에 적용함으로써 flex item에 속한 개별 항목에 대한 {{cssxref("align-items")}}동작을 재지정할 수 있습니다. 예를 들어 다음을 CSS에 추가해보세요.
 
 ```css
 button:first-child {
@@ -251,7 +251,7 @@ button:first-child {
 
 flexbox에는 소스 순서에 영향을 미치지 않고 flex item의 레이아웃 순서를 변경하는 기능도 있습니다. 이는 전통적인 레이아웃 메서드로는 불가능했던 내용입니다.
 
-이를 위한 코드는 간단합니다: 당신의 버튼바 예제 코드에 다음과 같은 CSS를 추가해 보십시오:
+이를 위한 코드는 간단합니다: 당신의 버튼바 예제 코드에 다음과 같은 CSS를 추가해 보십시오.
 
 ```css
 button:first-child {
@@ -259,14 +259,14 @@ button:first-child {
 }
 ```
 
-페이지를 새로 고치면 이제 "Smile" 버튼이 기본 축의 끝으로 이동한 것이 확인될 겁니다. 어떻게 이런 식으로 작동하는지 좀 더 상세히 얘기해 보겠습니다:
+페이지를 새로 고치면 이제 "Smile" 버튼이 기본 축의 끝으로 이동한 것이 확인될 겁니다. 어떻게 이런 식으로 작동하는지 좀 더 상세히 얘기해 보겠습니다.
 
 - 기본값으로 모든 flex item들은 {{cssxref("order")}} 값이 0입니다.
 - 순위값이 높은 flex item들은 디스플레이 순서상 순위값이 낮은 항목들보다 나중에 나타납니다.
 - 순위값이 동일한 항목들은 소스 순서대로 나타납니다. 따라서 4개 항목의 순서값이 각기 2, 1, 1, 0로 설정된 경우 표시 순서는 제4, 제2, 제3, 제1 순이 됩니다.
 - 제 3항목은 동일한 순서값을 가지고 있지만, 소스 순서 상 제 2항목 뒤에 있기 때문에 제 2 항목 뒤에 나타납니다.
 
-당신은 0 지정 항목보다 일찍 항목을 표시하도록 음수 순서 값을 설정할 수 있습니다. 예를 들어, 다음 규칙을 사용하여 "Blush" 버튼을 기본 축의 시작 부분에 표시할 수 있습니다:
+당신은 0 지정 항목보다 일찍 항목을 표시하도록 음수 순서 값을 설정할 수 있습니다. 예를 들어, 다음 규칙을 사용하여 "Blush" 버튼을 기본 축의 시작 부분에 표시할 수 있습니다.
 
 ```css
 button:last-child {
@@ -280,7 +280,7 @@ flexbox를 사용하여 꽤 복잡한 레이아웃을 만들 수 있습니다. f
 
 ![](flexbox-example7.png)
 
-이를 위한 HTML은 상당히 간단합니다. 세 개의 {{htmlelement("article")}}를 포함하는 {{htmlelement("section")}} 요소가 있습니다. 세 번째 {{htmlelement("article")}}은 세 개의 {{htmlelement("div")}}를 포함하고 있습니다. :
+이를 위한 HTML은 상당히 간단합니다. 세 개의 {{htmlelement("article")}}를 포함하는 {{htmlelement("section")}} 요소가 있습니다. 세 번째 {{htmlelement("article")}}은 세 개의 {{htmlelement("div")}}를 포함하고 있습니다.
 
 ```
 section - article

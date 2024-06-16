@@ -1,11 +1,13 @@
 ---
 title: grid-column-end
 slug: Web/CSS/grid-column-end
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
 {{CSSRef}}
 
-**`grid-column-end`** は CSS のプロパティで、グリッドの配置に線または区間を使用したり、使用しなかったりして (自動)、グリッド列内のグリッドアイテムの末尾位置、すなわち{{Glossary("grid areas", "グリッド領域")}}のブロックの末尾側の端を指定します。
+**`grid-column-end`** は CSS のプロパティで、グリッド列内のグリッドアイテムの末尾位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}のブロック方向の末尾側の端を指定します。
 
 {{EmbedInteractiveExample("pages/css/grid-column-end.html")}}
 
@@ -31,6 +33,7 @@ grid-column-end: 5 somegridarea span;
 grid-column-end: inherit;
 grid-column-end: initial;
 grid-column-end: revert;
+grid-column-end: revert-layer;
 grid-column-end: unset;
 ```
 
@@ -40,7 +43,7 @@ grid-column-end: unset;
   - : プロパティをグリッドアイテムの配置に影響させず、自動的に配置し、間隔を自動的に取るか、既定の `1` とするためのキーワードです。
 - `<custom-ident>`
 
-  - : `<custom-ident>-end` という名前の付いた線がある場合、これはそのような線の先頭がグリッドアイテムの配置に関わります。
+  - : '\<custom-ident>-end' という名前の付いた線がある場合、これはそのような線の先頭がグリッドアイテムの配置に関わります。
 
     > **メモ:** 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-column-end: foo;` と指定すると名前付きグリッド領域の末尾側の端を選択します (その前に `foo-end` という名前の線が明示的に存在しない限り)。
 
@@ -140,7 +143,7 @@ grid-column-end: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_column_end_for_a_grid_item', '230', '420') }}
+{{ EmbedLiveSample('グリッドアイテムの列の末尾位置の設定', '230', '420') }}
 
 ## 仕様書
 

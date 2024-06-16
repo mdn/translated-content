@@ -61,7 +61,7 @@ history.go(0);
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("History")}}
 - {{DOMxRef("History.back","back()")}}

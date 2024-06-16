@@ -2,7 +2,7 @@
 title: How-to ガイド
 slug: MDN/Writing_guidelines/Howto
 l10n:
-  sourceCommit: 4f14847593f9de215d3d90bf8e78844e4f2534e0
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
 
 {{MDNSidebar}}

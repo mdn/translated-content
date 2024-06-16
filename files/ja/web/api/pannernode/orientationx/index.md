@@ -1,11 +1,14 @@
 ---
-title: PannerNode.orientationX
+title: "PannerNode: orientationX プロパティ"
+short-title: orientationX
 slug: Web/API/PannerNode/orientationX
+l10n:
+  sourceCommit: 1a91b0b63f0cbaca9125bd48d4e5bc8afed2a7a3
 ---
 
 {{ APIRef("Web Audio API") }}
 
-**`orientationX`** は {{ domxref("PannerNode") }} インターフェイスのプロパティで、音声ソースが向いている方向の X (水平) 成分を 3D 直交座標空間で表示します。
+**`orientationX`** は {{ domxref("PannerNode") }} インターフェイスのプロパティで、音声ソースが向いている方向の X （水平）成分を 3D 直交座標空間で表示します。
 
 完全ベクトルは ({{domxref("PannerNode.positionX", "positionX")}}、{{domxref("PannerNode.positionY", "positionY")}}、{{domxref("PannerNode.positionZ", "positionZ")}}) として与えられた音声ソースの位置と、({{domxref("PannerNode.orientationX", "orientationX")}}、{{domxref("PannerNode.orientationY", "orientationY")}}、{{domxref("PannerNode.orientationZ", "orientationZ")}}) として与えられた音声ソースの向き (つまり、音声ソースが向いている方向) によって定義されます。
 
@@ -23,7 +26,7 @@ slug: Web/API/PannerNode/orientationX
 
 ![This chart visualizes how the PannerNode orientation vectors affect the direction of the sound cone.](pannernode-orientation.png)
 
-まず、方向ベクトルを理解するためのユーティリティ関数を作成することから始めましょう。X 成分と Z 成分は常に互いに 90°であるため、ラジアン単位で同じ量だけオフセットされる正弦関数と余弦関数を使用できます。ただし、これは通常、{{ domxref("PannerNode") }} が 0°回転で聞き手の**左側**を指すことを意味します。`x= cos(0)= 1` および `z = sin(0) = 0` であるためです。角度を -90°オフセットするとより便利です。つまり、{{ domxref("PannerNode") }} は 0°の回転で**聞き手を直接**指します。
+まず、方向ベクトルを理解するためのユーティリティ関数を作成することから始めましょう。X 成分と Z 成分は常に互いに 90°であるため、ラジアン単位で同じ量だけオフセットされる正弦関数と余弦関数を使用できます。ただし、これは通常、{{ domxref("PannerNode") }} が 0°回転で聞き手の**左側**を指すことを意味します。`x= cos(0)= 1` および `z = sin(0) = 0` であるためです。角度を -90°オフセットするとより便利です。つまり、{{domxref("PannerNode")}} は 0°の回転で**聞き手を直接**指します。
 
 ```js
 // このユーティリティは、Y 軸周りの回転量 (つまり「水平面」での回転) を
@@ -41,7 +44,7 @@ const yRotationToVector = (degrees) => {
 };
 ```
 
-これで、{{ domxref("AudioContext") }}、オシレーター、および {{ domxref("PannerNode") }} を作成できます。
+これで、{{ domxref("AudioContext") }}、発振器、および {{ domxref("PannerNode") }} を作成できます。
 
 ```js
 const context = new AudioContext();
@@ -94,7 +97,7 @@ panner.orientationY.setValueAtTime(y2, context.currentTime + 2);
 panner.orientationZ.setValueAtTime(z2, context.currentTime + 2);
 ```
 
-最後に、すべてのノードを接続して、オシレーターを起動しましょう。
+最後に、すべてのノードを接続して、発振器を起動しましょう。
 
 ```js
 osc.connect(panner).connect(context.destination);

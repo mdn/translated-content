@@ -15,7 +15,7 @@ slug: Learn/CSS/CSS_layout
 2. 一定的 CSS 基础，在[Introduction to CSS](/zh-CN/docs/Learn/CSS/Introduction_to_CSS)部分讨论过的。
 3. 了解如何[样式化盒子模型](/zh-CN/docs/Learn/CSS/Building_blocks).
 
-> **备注：** 如果你在一台电脑/平板电脑/其他设备上工作，而你没有能力创建自己的文件，你可以尝试（大部分）在线编码程序中的代码示例，如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 。
+> **备注：** 如果你在一台电脑/平板电脑/其他设备上工作，而你没有能力创建自己的文件，你可以尝试（大部分）在线编码程序中的代码示例，如 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 。
 
 ## 指南
 

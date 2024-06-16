@@ -38,7 +38,7 @@ An `InvalidState` error is raised if the `requestData()` method is called while 
 ...
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -46,7 +46,7 @@ An `InvalidState` error is raised if the `requestData()` method is called while 
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Using the MediaRecorder API](/ru/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API)
 - [Web Dictaphone](http://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)

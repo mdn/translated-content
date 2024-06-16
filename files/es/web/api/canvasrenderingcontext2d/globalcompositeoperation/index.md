@@ -1,7 +1,6 @@
 ---
 title: Ejemplo de composición
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
-original_slug: Web/API/Canvas_API/Tutorial/Compositing/Example
 ---
 
 {{DefaultAPISidebar("Canvas API")}}

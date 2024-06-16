@@ -35,7 +35,7 @@ if (window.matchMedia("(min-width: 400px)").matches) {
 
 {{Compat}}
 
-## Спецификация
+## Спецификации
 
 - [The CSSOM View Module: The MediaQueryList Interface](http://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface)
 

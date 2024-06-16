@@ -40,7 +40,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
     Firefox for Android doesn't support highlighting multiple tabs, and Firefox desktop requires the `browser.tabs.multiselect` preference.
 
 - `id` {{optional_inline}}
-  - : `integer`. タブの ID。 タブの ID はブラウザセッショの中でユニークです。The tab ID may also be set to {{WebExtAPIRef('tabs.TAB_ID_NONE')}} for browser windows that don't host content tabs (for example, devtools windows).
+  - : `integer`. タブの ID。 タブの ID はブラウザーセッショの中でユニークです。The tab ID may also be set to {{WebExtAPIRef('tabs.TAB_ID_NONE')}} for browser windows that don't host content tabs (for example, devtools windows).
 - `incognito`
   - : `boolean`. タブがプライベートブラウジングウィンドウの中にあるかどうか。
 - `index`

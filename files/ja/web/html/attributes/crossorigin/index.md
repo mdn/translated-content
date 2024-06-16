@@ -2,7 +2,7 @@
 title: "HTML 属性: crossorigin"
 slug: Web/HTML/Attributes/crossorigin
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 83f30ecaaeb6227dc0d4551f71eb8be1cacb8e94
 ---
 
 {{HTMLSidebar}}
@@ -14,7 +14,7 @@ l10n:
 これらの属性は[列挙型](/ja/docs/Glossary/Enumerated)で、以下の値を取ることができます。
 
 - `anonymous`
-  - : リクエストは CORS ヘッダーを使用し、資格情報フラグには `'same-origin'` に設定されます。宛先が同一オリジンでない限り、クッキー、クライアントサイド SSL 証明書、HTTP 認証による**ユーザー資格情報**の交換は行われません。
+  - : リクエストは CORS ヘッダーを使用し、資格情報フラグには `'same-origin'` に設定されます。宛先が同一オリジンでない限り、クッキー、クライアントサイド TLS 証明書、HTTP 認証による**ユーザー資格情報**の交換は行われません。
 - `use-credentials`
   - : リクエストは CORS ヘッダーを使用し、資格情報フラグには `'include'` に設定され、**ユーザー資格情報**が常に含まれます。
 - `""`
@@ -51,7 +51,7 @@ l10n:
   </tbody>
 </table>
 
-> **メモ:** Firefox 83 より前では、 `crossorigin` 属性は `rel="icon"` に対応していませんでした。 [Chrome についての未解決の問題](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)もあります。
+> **メモ:** `crossorigin` 属性は、 Chromium ベースのブラウザーでは [`rel="icon"`](/ja/docs/Web/HTML/Attributes/rel#icon) では対応していません。[公開 Chromium issue](https://crbug.com/1121645) を参照してください。
 
 ### 例: `<script>` 要素の `crossorigin`
 

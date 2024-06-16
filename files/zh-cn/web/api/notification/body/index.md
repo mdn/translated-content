@@ -2,14 +2,12 @@
 title: Notification：body 属性
 slug: Web/API/Notification/body
 l10n:
-  sourceCommit: e97f2c3cca98616a37003005ddc149d370c40fd0
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 {{domxref("Notification")}} 接口的 **`body`** 只读属性指示通知的正文字符串，该字符串在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `body` 选项中指定。
-
-{{AvailableInWorkers}}
 
 ## 值
 

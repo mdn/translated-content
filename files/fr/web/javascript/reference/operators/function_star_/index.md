@@ -58,4 +58,4 @@ var x = function* (y) {
 - L'objet {{jsxref("Function")}}
 - L'instruction {{jsxref("Instructions/function", "function")}}
 - L'expression {{jsxref("Opérateurs/L_opérateur_function", "function")}}
-- {{jsxref("Fonctions", "Fonctions et portée des fonctions","","1")}}
+- {{jsxref("Fonctions", "Fonctions et portée des fonctions","",1)}}

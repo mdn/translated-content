@@ -30,22 +30,22 @@ SDK を使用したアドオンの開発方法を実践的に説明したペー�
 
 ---
 
-### ブラウザの操作
+### ブラウザーの操作
 
-- [Web ページを開く](/en-US/Add-ons/SDK/Tutorials/Open_a_Web_Page)
-  - : tabs モジュールを用いて、新しいタブまたはウィンドウで Web ページを開き、そのコンテンツにアクセスします。
+- [ウェブページを開く](/en-US/Add-ons/SDK/Tutorials/Open_a_Web_Page)
+  - : tabs モジュールを用いて、新しいタブまたはウィンドウでウェブページを開き、そのコンテンツにアクセスします。
 - [ページの読み込みを確認する](/en-US/Add-ons/SDK/Tutorials/Listen_for_Page_Load)
-  - : tabs モジュールを用いて、新しい Web ページが読み込まれたときに通知を受け取り、それらの Web ページのコンテンツにアクセスします。
+  - : tabs モジュールを用いて、新しいウェブページが読み込まれたときに通知を受け取り、それらのウェブページのコンテンツにアクセスします。
 
 - [開いているタブの一覧を表示する](/en-US/Add-ons/SDK/Tutorials/List_Open_Tabs)
   - : tabs モジュールを用いて、現在開いているすべてのタブに対して反復処理を行い、それらのコンテンツにアクセスします。
 
-### Web ページの変更
+### ウェブページの変更
 
-- [URL に基づいた Web ページの変更](/en-US/Add-ons/SDK/Tutorials/Modifying_Web_Pages_Based_on_URL)
-  - : URL に基づいて Web ページを検索するフィルタを作成します。フィルタに一致する URL の Web ページを読み込んだときに、フィルタ内の指定したスクリプトを実行します。
-- [アクティブな Web ページの変更](/en-US/Add-ons/SDK/Tutorials/Modifying_the_Page_Hosted_by_a_Tab)
-  - : 現在アクティブな Web ページに、動的にスクリプトを読み込みます。
+- [URL に基づいたウェブページの変更](/en-US/Add-ons/SDK/Tutorials/Modifying_Web_Pages_Based_on_URL)
+  - : URL に基づいてウェブページを検索するフィルタを作成します。フィルタに一致する URL のウェブページを読み込んだときに、フィルタ内の指定したスクリプトを実行します。
+- [アクティブなウェブページの変更](/en-US/Add-ons/SDK/Tutorials/Modifying_the_Page_Hosted_by_a_Tab)
+  - : 現在アクティブなウェブページに、動的にスクリプトを読み込みます。
 
 ---
 

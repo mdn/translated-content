@@ -2,7 +2,7 @@
 title: <input type="password">
 slug: Web/HTML/Element/input/password
 l10n:
-  sourceCommit: 35f56647dea855306800c124d99c4cd0962505dd
+  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
 ---
 
 {{HTMLSidebar}}
@@ -34,19 +34,19 @@ l10n:
 
 ### maxlength
 
-ユーザーがパスワード入力欄に入力することができる（UTF-16 コード単位での）最大文字数です。 0 以上の整数値である必要があります。`maxlength` が指定されていないか、無効な値が指定されていると、パスワード入力欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
+ユーザーがパスワード入力欄に入力することができる（UTF-16 コード単位での）最大文字列長です。 0 以上の整数値である必要があります。`maxlength` が指定されていないか、無効な値が指定されていると、パスワード入力欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
 
 フィールドに入力されたテキストの長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
 
 ### minlength
 
-ユーザーがパスワード入力欄に入力することができる (UTF-16 コード単位での) 最小文字数です。これは非負の整数値で、`maxlength` で指定された値以下である必要があります。`minlength` が指定されていないか、無効な値が指定されていると、パスワード入力欄には最小文字数が設定されません。
+ユーザーがパスワード入力欄に入力することができる (UTF-16 コード単位での) 最小文字列長です。これは非負の整数値で、`maxlength` で指定された値以下である必要があります。`minlength` が指定されていないか、無効な値が指定されていると、パスワード入力欄には最小文字数が設定されません。
 
 入力欄のテキストの長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
 
 ### pattern
 
-`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
+`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは {{Glossary("ASCII")}} ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
@@ -123,7 +123,7 @@ l10n:
 
 ### 入力モードを指定する
 
-推奨する、または必須となるパスワードの構文ルールが、標準キーボードよりも、代替となるテキスト入力インターフェースから恩恵を受ける場合、特定のものを要求するために [`inputmode`](/ja/docs/Web/HTML/Element/input#inputmode) 属性を使用することができます。この最も明快な用途は、 PIN のようにパスワードが数字で構成されていることを必要とする場合です。例えば、仮想キーボードを持つモバイル端末では、パスワードの入力をより簡単にするため、フルキーボードの代わりに、数字のキーパッドレイアウトに切り替えることを選択するかもしれません。 PIN が１回限りの使用であれば、 [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) 属性を `off` または `one-time-code` のどちらかに設定してサジェストが保存されないようにしてください。
+推奨する、または必須となるパスワードの構文ルールが、標準キーボードよりも、代替となるテキスト入力インターフェイスから恩恵を受ける場合、特定のものを要求するために [`inputmode`](/ja/docs/Web/HTML/Element/input#inputmode) 属性を使用することができます。この最も明快な用途は、 PIN のようにパスワードが数字で構成されていることを必要とする場合です。例えば、仮想キーボードを持つモバイル端末では、パスワードの入力をより簡単にするため、フルキーボードの代わりに、数字のキーパッドレイアウトに切り替えることを選択するかもしれません。 PIN が１回限りの使用であれば、 [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) 属性を `off` または `one-time-code` のどちらかに設定してサジェストが保存されないようにしてください。
 
 ```html
 <label for="pin">PIN: </label>
@@ -252,7 +252,7 @@ ssn.oninput = (event) => {
       <td><strong>イベント</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>

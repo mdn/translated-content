@@ -5,6 +5,8 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
+{{LearnSidebar}}
+
 [이전 글](/ko/docs/Learn/Forms/Basic_native_form_controls)에서는 초기 HTML 시대부터 사용 가능한 `type` 속성의 원래 값을 사용하여 {{htmlelement("input")}} 요소를 살펴보았습니다. 이제 HTML5에서 추가된 특정 유형의 데이터 수집을 허용하기 위해 추가된 몇 가지 새로운 입력 유형을 포함하여 더 많은 폼 컨트롤의 기능에 대해 자세히 살펴보겠습니다.
 
 <table>
@@ -49,7 +51,7 @@ l10n:
 <input type="email" id="email" name="email" multiple />
 ```
 
-일부 장치에서 — 특히 동적 키보드가 있는 터치 장치인 스마트폰과 같은 장치에서 — `@` 키를 포함하여 이메일 주소를 입력하기에 더 적합한 다른 가상 키보드가 제공될 수 있습니다. 아래의 Firefox for Android 키보드 스크린샷은 예시입니다:
+일부 장치에서 — 특히 동적 키보드가 있는 터치 장치인 스마트폰과 같은 장치에서 — `@` 키를 포함하여 이메일 주소를 입력하기에 더 적합한 다른 가상 키보드가 제공될 수 있습니다. 아래의 Firefox for Android 키보드 스크린샷은 예시입니다.
 
 ![기본적으로 at 기호가 표시되는 Firefox for Android 이메일 키보드.](fx-android-email-type-keyboard.jpg)
 

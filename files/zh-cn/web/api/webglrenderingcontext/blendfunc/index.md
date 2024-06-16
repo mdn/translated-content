@@ -79,7 +79,7 @@ gl.getParameter(gl.BLEND_SRC_RGB) == gl.SRC_COLOR;
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.blendColor()")}}
 - {{domxref("WebGLRenderingContext.blendEquation()")}}

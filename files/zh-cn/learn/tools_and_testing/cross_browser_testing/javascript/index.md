@@ -384,8 +384,6 @@ function loadScript(src, done) {
 
 你可以在 [fetch-polyfill-only-when-needed.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html) 中看到这段代码的运行情况（也请看[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html)）。我们想说明的是，我们不能为这段代码邀功，它最初是由 Philip Walton 写的。请看他的文章[只在需要时加载 Polyfill](https://philipwalton.com/articles/loading-polyfills-only-when-needed/)，了解原始代码，以及围绕这个更广泛主题的许多有用的解释）。
 
-> **备注：** 有一些第三方选项可以考虑，例如 [Polyfill.io](https://polyfill.io/v3/api/)。这是一个元 polyfill 库，它将查看每个浏览器的功能，并根据需要应用 polyfill，这取决于你在代码中使用的 API 和 JS 特性。
-
 #### 转译 JavaScript
 
 对于现在想使用现代 JavaScript 功能的人来说，另一个选择是将利用 ECMAScript 6/ECMAScript 2015 功能的代码转换为能在旧版浏览器中使用的版本。

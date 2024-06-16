@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
 
-{{ apiref("DOM Events") }}
+{{APIRef("UI Events")}}
 
 **`FocusEvent.relatedTarget`** は読み取り専用プロパティで、イベントの種類に応じた副ターゲットを表します。
 

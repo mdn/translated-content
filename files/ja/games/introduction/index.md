@@ -1,6 +1,8 @@
 ---
 title: ウェブ用のゲーム開発入門
 slug: Games/Introduction
+l10n:
+  sourceCommit: e72890bafe775a38620def9a74beda8cf9c47411
 ---
 
 {{GamesSidebar}}
@@ -71,8 +73,7 @@ slug: Games/Introduction
       <td>
         <a href="/ja/docs/Web/HTML">HTML</a>,
         <a href="/ja/docs/Web/CSS">CSS</a>,
-        <a href="/ja/docs/Web/SVG">SVG</a>,
-        <a href="/ja/docs/Web/API/Social_API">Social API</a> (およびその他多数)
+        <a href="/ja/docs/Web/SVG">SVG</a> (およびその他多数)
       </td>
     </tr>
   </tbody>
@@ -94,6 +95,8 @@ slug: Games/Introduction
 
 テクノ民のみなさん、ウェブがゲーム開発者のテーブルに運んでくる API を掘り下げましょう。こちらがウェブが実現できる味付けの全体リストです。
 
+- [フェッチ API](/ja/docs/Web/API/Fetch_API)
+  - : 新しいゲームのステージやアートワークのダウンロードのほか、ゲームの状態のリアルタイムでないやり取りなど、ウェブサーバーから任意の種類のデータを送受信することができます。
 - [全画面 API](/ja/docs/Web/API/Fullscreen_API)
   - : このシンプルな API では、あなたのゲームが全画面を占めることができます、その結果プレイヤーがアクションに没頭できます。
 - [ゲームパッド API](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
@@ -121,6 +124,4 @@ slug: Games/Introduction
 - [WebSocket](/ja/docs/Web/API/WebSockets_API)
   - : WebSocket API を使用すると、あなたのアプリやサイトをサーバーと接続し、リアルタイムにデータのやり取りを行うことができます。マルチプレイヤーゲームアクションやチャットサービスなどに最適です。
 - [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
-  - : Worker を使用すると、モダンでマルチコアなプロセッサを利用し、独自の JavaScript コードを実行して、バックグラウンドのスレッドを生成することができます。
-- [XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest) と [ファイル API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-  - : XMLHttpRequest とファイル API を組み合わせることで、様々な種類のデータを送受信が可能になります ("XML"という言葉にとらわれないでください！)。これは、新しいゲームレベルやアートワークのダウンロードから、非リアルタイムのゲームステータス情報のやり取りに至るまで、あらゆることをするためのすばらしい方法です。
+  - : Worker を使用すると、モダンでマルチコアなプロセッサーを利用し、独自の JavaScript コードを実行して、バックグラウンドのスレッドを生成することができます。

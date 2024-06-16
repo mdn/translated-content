@@ -2,24 +2,24 @@
 title: <input type="search">
 slug: Web/HTML/Element/input/search
 l10n:
-  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
+  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
 ---
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} 要素の **`search`** 型は、ユーザーが検索クエリを入力するために設計されたテキスト入力欄です。 [`text`](/ja/docs/Web/HTML/Element/input/text) 入力欄と機能的には同じですが、{{Glossary("user agent", "ユーザーエージェント")}}は別なスタイルを適用するかもしれません。
+{{HTMLElement("input")}} 要素の **`search`** 型は、ユーザーが検索クエリーを入力するために設計されたテキスト入力欄です。 [`text`](/ja/docs/Web/HTML/Element/input/text) 入力欄と機能的には同じですが、{{Glossary("user agent", "ユーザーエージェント")}}は別なスタイルを適用するかもしれません。
 
 {{EmbedInteractiveExample("pages/tabbed/input-search.html", "tabbed-standard")}}
 
 ## 値
 
-[`value`](/ja/docs/Web/HTML/Element/input#value) 属性は、テキスト入力欄に入力された現在のテキストの値が入っている文字列です。 JavaScript では {{domxref("HTMLInputElement.value")}} プロパティを使ってこれを受け取ることができます。
+[`value`](/ja/docs/Web/HTML/Element/input#value) 属性は、テキスト入力欄に入力された現在のテキストの値が入っている文字列です。 JavaScript では [`HTMLInputElement.value`](/ja/docs/Web/API/HTMLInputElement#value) プロパティを使ってこれを受け取ることができます。
 
 ```js
 searchTerms = mySearch.value;
 ```
 
-入力欄に検証の制約がない場合（詳しくは[検証](#検証)を参照)、値は任意の文字列又は空文字列 (`""`) になることがあります。
+入力欄に検証の制約がない場合（詳しくは[検証](#検証)を参照）、値は任意の文字列又は空文字列 (`""`) になることがあります。
 
 ## 追加の属性
 
@@ -31,19 +31,19 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### maxlength
 
-ユーザーが検索フィールドに入力することができる（UTF-16 コード単位での) 最大文字数です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、検索フィールドには最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
+ユーザーが検索フィールドに入力することができる（UTF-16 コード単位での）最大文字列長です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、検索フィールドには最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
 
 フィールドに入力されたテキストの長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
 
 ### minlength
 
-ユーザーが検索フィールドに入力することができる（UTF-16 コード単位での) 最小文字数です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、検索フィールドには最小文字数が設定されません。
+ユーザーが検索フィールドに入力することができる（UTF-16 コード単位での）最小文字列長です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、検索フィールドには最小文字数が設定されません。
 
 入力欄のテキスト値の長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その検索フィールドは[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
 
 ### pattern
 
-`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
+`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは {{Glossary("ASCII")}} ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
@@ -107,15 +107,15 @@ Safari 拡張である `autocorrect` 属性は文字列で、ユーザーがこ�
 
 `search` イベントは発生頻度が制限されているため、実装により定義された間隔よりも頻繁に送信されることはありません。
 
-### mozactionhint
+### mozactionhint {{deprecated_inline}}
 
 Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押した場合に行われるアクションの種類のヒントを提供します。
 
-この属性は非推奨です。代わりにグローバル属性 [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes#enterkeyhint) を使用してください。
+**非推奨: 代わりに [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes#enterkeyhint) を使用してください。**
 
 ### results
 
-`results` 属性は、 Safari のみが対応していますが、数値で {{HTMLElement("input")}} 要素が本来持っている過去の検索クエリのドロップダウンメニューに表示される項目の最大数を上書きします。
+`results` 属性は、 Safari のみが対応していますが、数値で {{HTMLElement("input")}} 要素が本来持っている過去の検索クエリーのドロップダウンメニューに表示される項目の最大数を上書きします。
 
 値は非負の10進数でなければなりません。提供されなかった場合、または無効な値が指定された場合、ブラウザー既定の項目の最大数が使用されます。
 
@@ -200,7 +200,7 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 前回の例から見かけ上の違いはありませんが、スクリーンリーダーのユーザーは追加情報を得る方法があります。
 
-> **メモ:** このようなアクセシビリティ機能の詳細ついては、 [Signposts/Landmarks](/ja/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) をご覧ください。
+> **メモ:** このようなアクセシビリティ機能の詳細ついては、 [Signposts/Landmarks](/ja/docs/Learn/Accessibility/WAI-ARIA_basics#道しるべランドマーク_signpostlandmark) をご覧ください。
 
 ### 物理的な入力要素の寸法
 
@@ -410,7 +410,7 @@ input:valid ~ span::after {
       <td><strong>イベント</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>

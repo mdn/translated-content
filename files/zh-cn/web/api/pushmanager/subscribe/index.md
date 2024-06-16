@@ -62,6 +62,6 @@ navigator.serviceWorker.register('serviceworker.js').then(
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [使用 Push API](/zh-CN/docs/Web/API/Push_API/Using_the_Push_API)

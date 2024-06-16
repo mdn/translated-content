@@ -63,7 +63,7 @@ Permissions-Policy: <directive> <allowlist>
 ("https://example.com" "https://*.example.com")
 ```
 
-> **Note:** `"https://*.example.com"` は `"https://example.com"` とは別のオリジンになります。
+> **メモ:** `"https://*.example.com"` は `"https://example.com"` とは別のオリジンになります。
 
 ## ディレクティブ
 

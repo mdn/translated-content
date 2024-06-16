@@ -2,7 +2,7 @@
 title: r
 slug: Web/SVG/Attribute/r
 l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+  sourceCommit: 86d2da199cf9705310c61cada97ed4e9b921fc47
 ---
 
 {{SVGRef}}
@@ -13,6 +13,8 @@ l10n:
 
 - {{SVGElement("circle")}}
 - {{SVGElement("radialGradient")}}
+
+値がパーセント値で設定されている場合、現在の SVG ビューポートの正規化された対角線を参照します。
 
 ## 例
 
@@ -49,7 +51,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Example', '100%', 200)}}
+{{EmbedLiveSample("Example", '100%', 200)}}
 
 ## circle
 
@@ -74,23 +76,23 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">デフォルト値</th>
+      <th scope="row">既定値</th>
       <td><code>0</code></td>
     </tr>
     <tr>
-      <th scope="row">アニメーション可能か</th>
-      <td>Yes</td>
+      <th scope="row">アニメーション</th>
+      <td>可</td>
     </tr>
   </tbody>
 </table>
 
-> **メモ:** SVG2 からは、`r` は _幾何属性 (Geometry Property)_ です。これが意味することは、`r` 属性を `circle` の CSS 属性としても使える、ということです。
+> **メモ:** SVG2 からは、`r` は _幾何プロパティ (Geometry Property)_ です。すなわち、この属性をは円に対して CSS プロパティとしても使うことができます。
 
 ## radialGradient
 
-{{ SVGElement("radialGradient") }} に関しては、`r` は、放射状グラデーションの末端の円の半径を定めています。
+{{ SVGElement("radialGradient") }} において、`r` は、放射グラデーションの末端の円の半径を定めます。
 
-グラデーションの **100%** にあたるピン留め箇所 (stop) が、この末端の円の外周にマッピングされるように、グラデーションが描画されます。ゼロ以下の値を用いると、グラデーションの最後の {{ SVGElement("stop") }} の色と不透明度を使った単一の色で、当該領域を塗りつぶすことになります。
+グラデーションは、 **100%** の色経由点 (stop) が、この末端の円の外周に対応するように描画されます。ゼロ以下の値を用いると、グラデーションの最後の {{ SVGElement("stop") }} の色と不透明度を使った単一の色で、当該領域を塗りつぶすことになります。
 
 <table class="properties">
   <tbody>
@@ -111,16 +113,16 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">デフォルト値</th>
+      <th scope="row">既定値</th>
       <td><code>50%</code></td>
     </tr>
     <tr>
-      <th scope="row">アニメーション可能か</th>
-      <td>Yes</td>
+      <th scope="row">アニメーション</th>
+      <td>可</td>
     </tr>
   </tbody>
 </table>
 
-## 仕様
+## 仕様書
 
 {{Specifications}}

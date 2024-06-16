@@ -27,16 +27,16 @@ async function* name(param0, param1, /* …, */ paramN) {
 }
 ```
 
-> **备注：** 异步生成器函数没有对应的箭头函数。
+> **备注：** 箭头函数不能用来定义异步生成器函数。
 
 > **备注：** `function` 和 `*` 是两个单独的标记，因此它们可以用[空白或换行符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#空白符)分隔。然而，如果 `async` 和 `function` 之间有换行符，则会[自动插入](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全)分号，导致 `async` 成为标识符，而其余内容成为 `function*` 声明。
 
 ### 参数
 
 - `name`
-  - : 函数名。
+  - : 函数名称。
 - `param` {{optional_inline}}
-  - : 函数的形参名称。有关参数的语法，请参阅[函数参数](/zh-CN/docs/Web/JavaScript/Guide/Functions#函数参数)。
+  - : 函数的形参名称。有关参数的语法，请参阅[函数参考](/zh-CN/docs/Web/JavaScript/Guide/Functions#函数参数)。
 - `statements` {{optional_inline}}
   - : 构成函数体的语句。
 

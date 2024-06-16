@@ -1,8 +1,6 @@
 ---
 title: ドキュメントオブジェクトモデルの使用
-slug: Web/API/Document_object_model/Using_the_Document_Object_Model
-l10n:
-  sourceCommit: 76600240fbe75e083e964bc3707cce81e99999c2
+slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model
 ---
 
 {{DefaultAPISidebar("DOM")}}

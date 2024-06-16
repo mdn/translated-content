@@ -34,7 +34,7 @@ l10n:
 - [HTML 예제 파일이 있는 사이트](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html)로 이동하여 파일을 복사하여 자기 컴퓨터에 새 디렉토리를 만들고 파일이름 `index.html` 로 저장합니다. 이 안에는 예제를 위한 CSS가 포함되어 있습니다.
 - 또 다른 [가공 전의 텍스트가 있는 사이트](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt) 로 가서 별도의 브라우저 탭으로 열어 놓으세요. 이것은 나중에 필요합니다.
 
-위 방법 대신에, 여러분은 테스트에 [JSBin](http://jsbin.com/) 또는 [Glitch](https://glitch.com/) 같은 사이트를 이용할 수 있습니다. 이 온라인 에디터들 내부에 HTML, CSS 그리고 JavaScript를 붙여넣을 수 있습니다. 만약 당신이 사용하는 온라인 에디터가 Javascript 패널(또는 탭)을 갖고 있지 않다면, 자유롭게 HTML 페이지 내부에 `<script>` 엘리멘트를 넣을 수 있습니다.
+위 방법 대신에, 여러분은 테스트에 [JSBin](https://jsbin.com/) 또는 [Glitch](https://glitch.com/) 같은 사이트를 이용할 수 있습니다. 이 온라인 에디터들 내부에 HTML, CSS 그리고 JavaScript를 붙여넣을 수 있습니다. 만약 당신이 사용하는 온라인 에디터가 Javascript 패널(또는 탭)을 갖고 있지 않다면, 자유롭게 HTML 페이지 내부에 `<script>` 엘리멘트를 넣을 수 있습니다.
 
 > **참고:** 문제가 해결되지 않으면 이 페이지 하단의 [평가 또는 추가 도움말](#assessment_or_further_help) 섹션을 참조해 도움을 요청하세요.
 

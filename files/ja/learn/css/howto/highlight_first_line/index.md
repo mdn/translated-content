@@ -29,7 +29,7 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/howto/highlight_first_line2.html", '100%', 700)}}
 
-> **Note:** 擬似要素を[複雑セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複雑セレクター)または[複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複合セレクター)で他のセレクターと組み合わせた場合、擬似要素はセレクターの中で、他のすべての要素の後に置かなければなりません。
+> **メモ:** 擬似要素を[複雑セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複雑セレクター)または[複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複合セレクター)で他のセレクターと組み合わせた場合、擬似要素はセレクターの中で、他のすべての要素の後に置かなければなりません。
 
 ## 関連情報
 

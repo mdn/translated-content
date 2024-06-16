@@ -27,7 +27,7 @@ encodeInto(string, uint8Array)
 - `read`
   - : 已经从源字符串中转换为 UTF-8 的，使用 UTF-16 编码的码元数。如果 `uint8Array` 没有足够的空间，则此值可能小于 `string.length`。
 - `written`
-  - : 在目标 `Uint8Array` 中修改的字节数。写入的的字节确保形成完整的 UTF-8 字节序列。
+  - : 在目标 `Uint8Array` 中修改的字节数。写入的字节确保形成完整的 UTF-8 字节序列。
 
 ## 编码到特定的位置
 

@@ -22,12 +22,12 @@ text-indent: 40px;
    包含ブロックの幅に対する割合 */
 text-indent: 15%;
 
-/* Keyword values */
+/* キーワード値 */
 text-indent: 5em each-line;
 text-indent: 5em hanging;
 text-indent: 5em hanging each-line;
 
-/* Global values */
+/* グローバル値 */
 text-indent: inherit;
 text-indent: initial;
 text-indent: revert;

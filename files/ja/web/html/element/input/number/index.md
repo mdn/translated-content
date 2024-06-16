@@ -2,7 +2,7 @@
 title: <input type="number">
 slug: Web/HTML/Element/input/number
 l10n:
-  sourceCommit: 35f56647dea855306800c124d99c4cd0962505dd
+  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
 ---
 
 {{HTMLSidebar}}
@@ -268,7 +268,7 @@ input:valid + span::after {
 
 すでに既定では増分が `1` であるという事実を扱いましたので、 [`step`](/ja/docs/Web/HTML/Element/input#step) 属性を使用して実数を入力できるようにすることができます。もう少し詳しく見てみましょう。
 
-以下の例は、ユーザーの身長を入力するフォームです。既定では慎重をメートル単位で受け付けますが、関連するボタンをクリックすることでフォームがフィートとインチを受け付けるように変更することができます。メートル単位の身長の入力欄は小数第2位まで受け付けます。
+以下の例は、ユーザーの身長を入力するフォームです。既定では慎重をメートル単位で受け付けますが、関連するボタンをクリックすることでフォームがフィートとインチを受け付けるように変更することができます。メートル単位の身長の入力欄は小数第 2 位まで受け付けます。
 
 {{EmbedLiveSample("Examples", 600, 150)}}
 
@@ -387,7 +387,7 @@ switchBtn.addEventListener("click", () => {
 >
 > これを行わないと、フィート/インチ**と**メートルの両方を入力してフォームを送信することができてしまいます。
 
-## アクセシビリティ
+## アクセシビリティの考慮
 
 `<input type="number">` 要素の暗黙の[ロール](/ja/docs/Web/Accessibility/ARIA/Roles)は [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Roles/spinbutton_role) です。もしスピンボタンがフォームコントロールにとって重要な機能でないなら、 `type="number"` を使用しないよう検討してください。代わりに [`inputmode="numeric"`](/ja/docs/Web/HTML/Global_attributes/inputmode) を使用し、 [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性で文字列を数字とそれに付随する文字に限定してください。 `<input type="number">` では、ユーザーが何か他のことをしようとしているときに、誤って数値を増加してしまう危険性があります。さらに、ユーザーが数字でないものを入力しようとした場合、何が間違っているのか明示的なフィードバックがありません。
 
@@ -405,7 +405,7 @@ switchBtn.addEventListener("click", () => {
       <td><strong>イベント</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>

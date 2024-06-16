@@ -17,7 +17,7 @@ slug: Web/SVG/Element/circle
 
 - [条件処理属性](/ja/SVG/Attribute#Conditional_processing_attributes)
 - [コア属性](/ja/SVG/Attribute#Core_attributes)
-- [グラフィカルイベント属性](/ja/SVG/Attribute#Graphical_event_attributes)
+- [グラフィックイベント属性](/ja/SVG/Attribute#Graphical_event_attributes)
 - [プレゼンテーション属性](/ja/SVG/Attribute#Presentation_attributes)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}

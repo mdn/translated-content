@@ -3,9 +3,11 @@ title: Firefox 37 for developers
 slug: Mozilla/Firefox/Releases/37
 ---
 
+{{FirefoxSidebar}}
+
 Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされました。このページでは、開発者に影響する Firefox 37 の変更点をまとめています。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
@@ -27,12 +29,12 @@ Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされまし�
 ### HTML
 
 - リンクを新しいタブで開く場合でも、`<a rel="noreferrer">` が機能するようになりました ([Firefox バグ 1031264](https://bugzil.la/1031264))。
-- `<input accept>` で、`'.'` の後に拡張子を記載する形式を受け入れるようになりました。これを指定するとファイル選択ダイアログをユーザに提示するとき、指定した拡張子でフィルタします ([Firefox バグ 826176](https://bugzil.la/826176))。
+- `<input accept>` で、`'.'` の後に拡張子を記載する形式を受け入れるようになりました。これを指定するとファイル選択ダイアログをユーザーに提示するとき、指定した拡張子でフィルタします ([Firefox バグ 826176](https://bugzil.la/826176))。
 
 ### JavaScript
 
-- {{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}}、{{jsxref("WeakSet")}} コンストラクタは、引数 iterable で値 null を無視するようになりました ([Firefox バグ 1092538](https://bugzil.la/1092538))。
-- {{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}}、{{jsxref("WeakSet")}} コンストラクタで、モンキーパッチを使用した `prototype.set` または `prototype.add` をサポートしました ([Firefox バグ 804279](https://bugzil.la/804279))。
+- {{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}}、{{jsxref("WeakSet")}} コンストラクターは、引数 iterable で値 null を無視するようになりました ([Firefox バグ 1092538](https://bugzil.la/1092538))。
+- {{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}}、{{jsxref("WeakSet")}} コンストラクターで、モンキーパッチを使用した `prototype.set` または `prototype.add` をサポートしました ([Firefox バグ 804279](https://bugzil.la/804279))。
 - 非標準の {{jsxref("String.quote","String.prototype.quote()")}} メソッドを削除しました ([Firefox バグ 1103181](https://bugzil.la/1103181))。
 - {{jsxref("RegExp.prototype.flags")}} プロパティを実装しました ([Firefox バグ 1108467](https://bugzil.la/1108467))。
 - {{jsxref("Array")}} のメソッドのいくつかを、[Typed Array](/ja/docs/Web/JavaScript/Typed_arrays) にも実装しました:
@@ -58,7 +60,7 @@ Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされまし�
 - [Web workers](/ja/docs/Web/API/Web_Workers_API) で [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) を使用できるようになりました ([Firefox バグ 701634](https://bugzil.la/701634))。
 - WebGL 2.0 の実験的な実装を進めています!
 
-  - バッファオブジェクトへのアクセス機能を提供する、{{domxref("WebGL2RenderingContext.getBufferSubData()")}} メソッドを実装しました ([Firefox バグ 1048731](https://bugzil.la/1048731))。
+  - バッファーオブジェクトへのアクセス機能を提供する、{{domxref("WebGL2RenderingContext.getBufferSubData()")}} メソッドを実装しました ([Firefox バグ 1048731](https://bugzil.la/1048731))。
 
 - `KeyboardEvent.key` のキー名の一部を、[最新の DOM Level 3 Events 仕様](https://dvcs.w3.org/hg/dom3events/raw-file/tip/html/DOM3Events-key.html)に準拠するよう変更しました。[MDN で KeyboardEvent.key の値の一覧表](/ja/docs/Web/API/KeyboardEvent.key#Key_values)をご覧ください。緑色のセルが新たな値です。また、紫色の値は変更される可能性があります。これらの値を使用する場合は注意してください (キー名の変更に関するメタバグは [Firefox バグ 900372](https://bugzil.la/900372) です)。
 - {{domxref("Console")}} インターフェイスが {{domxref("ServiceWorker")}} および {{domxref("SharedWorker")}} で動作するようになりました。これらは以前から使用できましたが、動作しない状態でした ([Firefox バグ 1058644](https://bugzil.la/1058644))。
@@ -77,7 +79,7 @@ _変更なし。_
 
 ## ネットワーク
 
-- WebSockets で `permessage` 圧縮法をサポートしました ([Firefox バグ 792831](https://bugzil.la/792831))。サーバが対応していれば使用できます。
+- WebSockets で `permessage` 圧縮法をサポートしました ([Firefox バグ 792831](https://bugzil.la/792831))。サーバーが対応していれば使用できます。
 
 ## セキュリティ
 

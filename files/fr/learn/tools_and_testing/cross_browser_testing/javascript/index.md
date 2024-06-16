@@ -354,8 +354,6 @@ Le fichier `polyfills.js` dont il est question ici correspond à l'assemblage de
 
 Vous pouvez voir [le résultat obtenu](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html) (et [le code source correspondant](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html)). Cet exemple a initialement été écrit par Philip Walton, dont le billet [<i lang="en">Loading Polyfills Only When Needed</i> (en anglais)](https://philipwalton.com/articles/loading-polyfills-only-when-needed/) contient de nombreuses explications à ce propos.
 
-> **Note :** Il existe également d'autres options tierces comme [Polyfill.io](https://polyfill.io/v3/api/), qui agit comme une bibliothèque de <i lang="en">polyfills</i> et les applique en fonction du navigateur courant et des fonctionnalités utilisées dans votre code.
-
 #### Transpilation JavaScript
 
 Une autre option pour utiliser des fonctionnalités JavaScript récentes consiste à convertir le code dans une version qui fonctionnera pour les anciens navigateurs.

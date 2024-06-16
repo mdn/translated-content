@@ -60,7 +60,7 @@ X-ProxyUser-Ip: 203.0.113.19
 
 Не является частью любой текущей спецификации. Стандартизованная версия этого заголовка {{HTTPHeader("Forwarded")}}.
 
-## See also
+## Смотрите также
 
 - {{HTTPHeader("Forwarded")}}
 - {{HTTPHeader("X-Forwarded-Host")}}

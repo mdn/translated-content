@@ -72,7 +72,7 @@ new Uint8Array([12, 5, 8, 130, 44]).filter((elem) => elem >= 10);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("TypedArray.prototype.every()")}}
 - {{jsxref("TypedArray.prototype.some()")}}

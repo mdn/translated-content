@@ -142,7 +142,7 @@ var float64 = new Float64Array(iterable);
 // Float64Array[1, 2, 3]
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -164,7 +164,7 @@ var dv = Float64Array([1, 2, 3]);
 var dv = new Float64Array([1, 2, 3]);
 ```
 
-## See also
+## Смотрите также
 
 - [JavaScript typed arrays](/ru/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}

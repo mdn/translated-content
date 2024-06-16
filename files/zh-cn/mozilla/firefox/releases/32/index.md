@@ -124,6 +124,6 @@ A `getDataDirectory()` method has been added to [`Addon`](/zh-CN/Add-ons/Add-on_
 
 - [Site Compatibility for Firefox 32](/zh-CN/docs/Mozilla/Firefox/Releases/32/Site_Compatibility)
 
-### Older versions
+### 更早期的版本
 
-{{Firefox_for_developers('31')}}
+{{Firefox_for_developers}}

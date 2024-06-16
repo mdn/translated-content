@@ -38,6 +38,6 @@ Server: Apache/2.4.1 (Unix)
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Allow")}}

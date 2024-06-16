@@ -88,7 +88,7 @@ details[open] > summary::before {
 
 {{ EmbedLiveSample('Примеры_стилизации') }}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -96,6 +96,6 @@ details[open] > summary::before {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{HTMLElement("summary")}}

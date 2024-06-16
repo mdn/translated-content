@@ -9,7 +9,7 @@ slug: Web/API/AudioWorkletProcessor
 
 ## 构造函数
 
-> **备注：** `AudioWorkletProcessor` 及其子类不能通过用户提供的的代码直接实例化。它们只能随着与之相联系{{domxref("AudioWorkletNode")}}s 的创建而被其创建再内部。其子类的构造函数将被一个可选对象调用，因此你可以执行自定义的初始化过程——详细信息请参见构造函数页面。
+> **备注：** `AudioWorkletProcessor` 及其子类不能通过用户提供的代码直接实例化。它们只能随着与之相联系的 {{domxref("AudioWorkletNode")}} 的创建而被其创建再内部。其子类的构造函数将被一个可选对象调用，因此你可以执行自定义的初始化过程——详细信息请参见构造函数页面。
 
 - {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}}
   - : 创建一个 `AudioWorkletProcessor` 对象的新实例。

@@ -3,7 +3,7 @@ title: Расположение (позиции)
 slug: Web/SVG/Tutorial/Positions
 ---
 
-{{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
 
 ## Сетка
 

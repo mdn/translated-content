@@ -2,16 +2,16 @@
 title: "スキルテスト: マルチメディアと埋め込み"
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding
 l10n:
-  sourceCommit: c2274293475b0a5b4febf85a49c1f91bf43ebac7
+  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
 ---
 
 {{learnsidebar}}
 
 このスキルテストの目的は、あなたが [HTML への動画および音声コンテンツの埋め込み](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)を行う方法、および [object、iframe およびその他の埋め込み技術](/ja/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)の使い方を理解しているかどうかを評価することです。
 
-> **メモ:** 以下の対話型エディターで解決に挑戦することができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業することが便利な場合もあります。
+> **メモ:** このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
 >
-> 行き詰まったら、助けを求めましょう。このページの最下部の[評価またはさらなるヘルプ](#評価またはさらなるヘルプ)の節をご覧ください。
+> もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 
 ## 課題 1
 
@@ -64,17 +64,3 @@ l10n:
 > **注目:**
 >
 > 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/media-embed/mediaembed3-download.html)しましょう。
-
-## 評価またはさらなるヘルプ
-
-この例は、上記のインタラクティブエディターで練習することができます。
-
-この作品を評価してほしい、行き詰っているので相談に乗ってほしいという方は次のようにしてください。
-
-1. 作品をオンラインの共有可能なエディター、例えば [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) に置いてください。コードは自分で書いても、上の節でリンクされている開始時点のファイルを使用しても構いません。
-2. [MDN Discourse forum 学習カテゴリー](https://discourse.mozilla.org/c/mdn/learn/250)に評価や助けを依頼する記事を書いてください。投稿には以下を記載してください。
-
-   - 「マルチメディアと埋め込み、スキルテスト 1 のための評価希望」のような説明的なタイトル。
-   - すでに持っている内容や、私たちに望むことの詳細。例えば、行き詰まって助けが必要な場合や、評価を希望する場合などを指示してください。
-   - 評価やヘルプが必要な例へのリンクを、オンライン共有エディターで示してください（上記のステップ 1 で述べたとおり）。コードを見ることができなければ、コーディングの問題で誰かを助けることはとても難しいのです。
-   - 実際の課題または評価ページへのリンク。あなたが助けを求めている問題を探すことができます。

@@ -24,6 +24,8 @@ _AbortSignal インターフェイスには、親インターフェイスであ�
 
 - {{domxref("AbortSignal.abort()")}}
   - : 既に中止と設定された **`AbortSignal`** を返します。
+- {{domxref("AbortSignal.any()")}}
+  - : 指定された中止シグナルのいずれかが中止された時中止となる **`AbortSignal`** を返します。
 - {{domxref("AbortSignal.timeout()")}}
   - : 指定された時間の後で自動的に中止となる **`AbortSignal`** インターフェイスを返します。
 

@@ -44,6 +44,6 @@ _No change._
 
 - [Firefox 26 网站兼容性](/zh-CN/docs/Mozilla/Firefox/Releases/26/Site_Compatibility)
 
-### 更早版本
+### 更早期的版本
 
-{{Firefox_for_developers('25')}}
+{{Firefox_for_developers}}

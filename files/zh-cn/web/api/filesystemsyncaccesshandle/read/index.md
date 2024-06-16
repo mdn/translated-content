@@ -1,9 +1,11 @@
 ---
 title: FileSystemSyncAccessHandle：read() 方法
 slug: Web/API/FileSystemSyncAccessHandle/read
+l10n:
+  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers("dedicated")}}
 
 {{domxref("FileSystemSyncAccessHandle")}} 接口的 **`read()`** 方法用于将与句柄相关联文件的内容读取到指定的缓冲区中，可选择在给定的偏移处开始读取。
 
@@ -33,7 +35,7 @@ read(buffer, options)
 - `InvalidStateError` {{domxref("DOMException")}}
   - : 如果相关的访问句柄已经被关闭，抛出此异常。
 - {{jsxref("TypeError")}}
-  - : 如果底层文件系统不支持从指定的偏移处开始读取文件，抛出此错误。
+  - : 如果底层文件系统不支持从指定的偏移处开始读取文件，抛出此异常。
 
 ## 示例
 
@@ -70,7 +72,7 @@ onmessage = async (e) => {
   // 将更改持久化至磁盘
   accessHandle.flush();
 
-  // 用完 FileSystemSyncAccessHandle 后记得把它关闭
+  // 如果完成，请始终关闭 FileSystemSyncAccessHandle
   accessHandle.close();
 };
 ```
@@ -88,4 +90,4 @@ onmessage = async (e) => {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/articles/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

@@ -8,7 +8,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged
 以下の変更に対して発火します。
 
 - ブックマークのタイトルまたは URL
-- フォルダの名前
+- フォルダーの名前
 
 ## 構文
 
@@ -53,7 +53,7 @@ browser.bookmarks.onChanged.hasListener(listener)
 - `title`
   - : 変更された要素のタイトルを表す {{jsxref("string")}}
 - `url`{{optional_inline}}
-  - : 変更された要素の URL を表す {{jsxref("string")}}。要素がフォルダだった場合に値は入りません。
+  - : 変更された要素の URL を表す {{jsxref("string")}}。要素がフォルダーだった場合に値は入りません。
 
 ## ブラウザーの互換性
 

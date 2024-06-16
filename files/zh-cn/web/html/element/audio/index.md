@@ -256,7 +256,7 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
     </tr>
     <tr>
       <th scope="row">标签省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
     </tr>
     <tr>
       <th scope="row">允许的父元素</th>

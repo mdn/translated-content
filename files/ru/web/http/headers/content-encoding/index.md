@@ -55,31 +55,30 @@ Content-Encoding: deflate, gzip
 
 On the client side, you can advertise a list of compression schemes that will be sent along in an HTTP request. The {{HTTPHeader("Accept-Encoding")}} header is used for negotiating content encoding.
 
-```
+```http
 Accept-Encoding: gzip, deflate
 ```
 
 The server responds with the scheme used, indicated by the `Content-Encoding` response header.
 
-```
+```http
 Content-Encoding: gzip
 ```
 
 Note that the server is not obligated to use any compression method. Compression highly depends on server settings and used server modules.
 
-## Specifications
+## Спецификации
 
-| Specification                                    | Title                                                         |
-| ------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7932", "Brotli Compressed Data Format")}} | Brotli Compressed Data Format                                 |
-| {{RFC("7231", "Content-Encoding", "3.1.2.2")}}   | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
-| {{RFC("2616", "Content-Encoding", "14.11")}}     | Content-Encoding                                              |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Transfer-Encoding")}}
+- {{Glossary("Brotli compression")}}
+- {{Glossary("GZip compression")}}
+- {{Glossary("Zstandard compression")}}

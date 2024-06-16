@@ -37,7 +37,7 @@ function processSelectedFiles(fileInput) {
 
 {{ EmbedLiveSample('Пример', 300, 50) }}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

@@ -126,7 +126,7 @@ fetch(request)
   });
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

@@ -39,7 +39,7 @@ Content-Security-Policy: img-src https:
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{CSP("upgrade-insecure-requests")}}

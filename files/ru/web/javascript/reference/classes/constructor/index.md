@@ -181,7 +181,7 @@ constructor(...args) {
 }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

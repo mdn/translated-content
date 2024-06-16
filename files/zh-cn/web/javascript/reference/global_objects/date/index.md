@@ -187,7 +187,7 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 - {{jsxref("Date.prototype.toLocaleString()")}}
   - : 返回一个表述指定 {{jsxref("Date")}} 对象的字符串。该字符串格式因不同语言而不同。
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
-  - : 返回一个表述指定 {{jsxref("Date")}} 对象时间部分的的字符串。该字符串格式因不同语言而不同。
+  - : 返回一个表述指定 {{jsxref("Date")}} 对象时间部分的字符串。该字符串格式因不同语言而不同。
 - {{jsxref("Date.prototype.toString()")}}
   - : 返回一个字符串，表示该 {{jsxref("Date")}} 对象。覆盖了 {{jsxref("Object.prototype.toString()")}} 方法。
 - {{jsxref("Date.prototype.toTimeString()")}}
@@ -264,7 +264,7 @@ function printElapsedTime(fTest) {
 yourFunctionReturn = printElapsedTime(yourFunction);
 ```
 
-> **备注：** 在支持 {{domxref("window.performance", "Web Performance API")}} 的高精细度（high-resolution）时间功能的浏览器中，{{domxref("Performance.now()")}} 提供的所经过的时间比 {{jsxref("Date.now()")}} 更加可靠、精确。
+> **备注：** 在支持 {{domxref("Performance API", "", "", "nocode")}} 的高精度（high-resolution）时间特性的浏览器中，{{domxref("Performance.now()")}} 提供的所经过的时间比 {{jsxref("Date.now()")}} 更加可靠、精确。
 
 ### 获取自 Unix 起始时间以来经过的秒数
 

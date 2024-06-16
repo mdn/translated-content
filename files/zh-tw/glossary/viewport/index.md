@@ -9,11 +9,9 @@ slug: Glossary/Viewport
 
 在視窗/螢幕上能被看見的 viewport 區域被稱為 **visual viewport**（可視視圖）。它有時會比 layout viewport 還來得小，例如在使用者縮放網頁的時候，**layout viewport**（布局視圖）會保持同樣的大小，而 visual viewport 則會變得較小。
 
-## 瞭解更多
+## 參見
 
-### General Knowledge
-
-- [Viewport](https://zh.wikipedia.org/wiki/Viewport) on Wikipedia
+- 維基百科上的[視角](https://zh.wikipedia.org/wiki/视口)
 - [What is viewport in HTML](https://stackoverflow.com/questions/2939693/what-is-viewport-in-html) on Stackoverflow
 - [Get viewport/window size (width and height) with javascript](https://andylangton.co.uk/blog/development/get-viewportwindow-size-width-and-height-javascript)
 - [A tale of two viewports](https://www.quirksmode.org/mobile/viewports.html) (Quirksmode)

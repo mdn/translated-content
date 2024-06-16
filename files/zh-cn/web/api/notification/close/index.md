@@ -2,16 +2,14 @@
 title: Notification：close() 方法
 slug: Web/API/Notification/close
 l10n:
-  sourceCommit: e97f2c3cca98616a37003005ddc149d370c40fd0
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 {{domxref("Notification")}} 接口的 **`close()`** 方法用于关闭或移除一个先前显示的通知。
 
-> **备注：** 此 API 不应仅用于在固定延迟后从屏幕上移除通知，因为此方法还将从任何通知托盘中删除该通知，阻止用户在最初显示后与其交互。此 API 的有效用途是移除不再相关的通知（例如，如果是消息应用程序，则用户已经阅读了网页上的通知；或者音乐应用程序中已经在播放下一首歌曲）。
-
-{{AvailableInWorkers}}
+> **备注：** 不应仅仅为了在固定延迟后从屏幕上移除通知而使用此 API，因为此方法还将从任何通知托盘中删除该通知，防止用户在最初显示后与其交互。此 API 的有效用途是移除不再相关的通知（例如，用户已经阅读了消息应用程序在网页上的通知；或者音乐应用程序中已经在播放下一首歌曲）。
 
 ## 语法
 

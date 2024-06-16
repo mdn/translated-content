@@ -71,7 +71,7 @@ if (!window.screenLeft) {
 }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

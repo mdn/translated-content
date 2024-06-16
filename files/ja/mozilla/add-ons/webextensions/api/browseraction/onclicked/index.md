@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
 
 {{AddonSidebar}}
 
-ブラウザアクションアイコンがクリックされたときに発火します。このイベントはブラウザアクションがポップアップを持っているときは発火しません。
+ブラウザーアクションアイコンがクリックされたときに発火します。このイベントはブラウザーアクションがポップアップを持っているときは発火しません。
 
 右クリックを定義するには、[`contextMenus`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus) API の"browser_action" [context type](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/ContextType)を利用してください。
 
@@ -28,7 +28,7 @@ browser.browserAction.onClicked.hasListener(listener);
 
 ## addListener の書式
 
-### パラメータ
+### パラメーター
 
 - `callback`
 
@@ -43,7 +43,7 @@ browser.browserAction.onClicked.hasListener(listener);
 
 ## 例
 
-ユーザがアイコンをクリックすると、アクティブなタブではアイコンを無効にし、タブの URL をログします:
+ユーザーがアイコンをクリックすると、アクティブなタブではアイコンを無効にし、タブの URL をログします:
 
 ```js
 browser.browserAction.onClicked.addListener((tab) => {

@@ -70,7 +70,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime
 - {{WebExtAPIRef("runtime.getBrowserInfo()")}}
   - : 拡張機能がインストールされたブラウザーの情報を返します。
 - {{WebExtAPIRef("runtime.getPackageDirectoryEntry()")}}
-  - : 拡張機能のディレクトリの [DirectoryEntry](/ja/docs/Web/API/FileSystemDirectoryEntry) オブジェクトを返します。
+  - : 拡張機能のディレクトリーの [DirectoryEntry](/ja/docs/Web/API/FileSystemDirectoryEntry) オブジェクトを返します。
 
 ## イベント
 

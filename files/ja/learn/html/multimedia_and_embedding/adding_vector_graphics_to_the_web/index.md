@@ -2,12 +2,12 @@
 title: ウェブへのベクターグラフィックの追加
 slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 l10n:
-  sourceCommit: 65b9418c7d0e3a331ac50249adf0024f44789923
+  sourceCommit: 2492742db9d7341fa74604a1b4cd97dc3c079cab
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
-ベクターグラフィックは多くの状況でとても便利です。 — ファイルサイズは小さく、スケーラビリティが高いため、ズームインしたり、大きなサイズに拡大したりしてもモザイクになりません。この記事では、ウェブページにそれを組み込む方法を説明します。
+ベクターグラフィックは多くの状況でとても便利です。ファイルサイズは小さく、スケーラビリティが高いため、ズームインしたり、大きなサイズに拡大したりしてもモザイクになりません。この記事では、ウェブページにそれを組み込む方法を説明します。
 
 <table>
   <tbody>
@@ -50,9 +50,9 @@ l10n:
 
 ## SVG とは何か？
 
-[SVG](/ja/docs/Web/SVG) は、ベクター画像を記述するための {{glossary("XML")}} ベースの言語です。これは基本的に HTML のようなマークアップですが、画像に表示するシェイプを定義するためのさまざまな要素と、それらのシェイプに適用する効果があります。 SVG は、コンテンツではなくグラフィックをマークアップするためのものです。最も単純なものとしては、 {{svgelement("circle")}} や {{svgelement("rect")}} のような単純なシェイプを作成するための要素があります。 {{svgelement("feColorMatrix")}} (変換行列を使用して色を変換)、 {{svgelement("animate")}} (ベクターグラフィックの一部をアニメーション化)、 {{svgelement("mask")}} (画像の上にマスクを適用する) など、より高度な SVG の機能もあります。
+[SVG](/ja/docs/Web/SVG) は、ベクター画像を記述するための {{glossary("XML")}} ベースの言語です。これは基本的に HTML のようなマークアップですが、画像に表示するシェイプを定義するためのさまざまな要素と、それらのシェイプに適用する効果があります。 SVG は、コンテンツではなくグラフィックをマークアップするためのものです。SVG は {{svgelement("circle")}} や {{svgelement("rect")}} のような基本図形を作成する要素と、 {{svgelement("path")}} や {{svgelement("polygon")}} のようなより複雑な図形を作成する要素を定義します。 {{svgelement("feColorMatrix")}} (変換行列を使用して色を変換)、 {{svgelement("animate")}} (ベクターグラフィックの一部をアニメーション化)、 {{svgelement("mask")}} (画像の上にマスクを適用する) など、より高度な SVG の機能もあります。
 
-簡単な例として、次のコードは円形と長方形を作成します。
+基本的な例として、次のコードは円形と長方形を作成します。
 
 ```html
 <svg
@@ -328,7 +328,6 @@ textarea.onkeyup = function () {
 ## 関連項目
 
 - MDN の [SVG チュートリアル](/ja/docs/Web/SVG/Tutorial/Getting_Started)
-- [レスポンシブ SVG のちょっとした助言](http://thenewcode.com/744/Making-SVG-Responsive) (英語)
 - [Sara Soueidan のレスポンシブ SVG 画像に関するチュートリアル](http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/) (英語)
 - [SVG のアクセシビリティ上の長所](https://www.w3.org/TR/SVG-access/) (英語)
 - [SVG を縮尺変更する方法](https://css-tricks.com/scale-svg/) (ラスターグラフィックほど簡単ではありません！) (英語)

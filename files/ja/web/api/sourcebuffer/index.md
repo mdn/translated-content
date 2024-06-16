@@ -30,7 +30,7 @@ l10n:
 - {{domxref("SourceBuffer.updating")}} {{ReadOnlyInline}}
   - : 論理値で、`SourceBuffer` が現在更新されているかどうか、つまり {{domxref("SourceBuffer.appendBuffer()")}} または {{domxref("SourceBuffer.remove()")}} の操作が現在進行中かどうかを示します。
 - {{domxref("SourceBuffer.videoTracks")}} {{ReadOnlyInline}}
-  - : `SourceBuffer` 内に現在含まれている動画トラックのリストです。。
+  - : `SourceBuffer` 内に現在含まれている動画トラックのリストです。
 
 ## インスタンスメソッド
 

@@ -3,6 +3,8 @@ title: Application d'effets SVG à du contenu HTML
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
 
+{{SVGRef}}
+
 Les navigateurs modernes supportent le format [SVG](/fr/docs/Web/SVG) utilisant du [CSS](/fr/docs/Web/CSS) pour appliquer des effets graphiques au contenu HTML.
 
 Vous pouvez éditer un SVG avec du CSS, soit directement dans le document, soit dans une feuille de style externe. Il y a 3 propriétés que vous pouvez utiliser : [`mask`](/fr/docs/Web/CSS/mask), [`clip-path`](/fr/docs/Web/CSS/clip-path) et [`filter`](/fr/docs/Web/CSS/filter).

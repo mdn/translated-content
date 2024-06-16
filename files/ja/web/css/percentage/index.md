@@ -1,6 +1,8 @@
 ---
 title: <percentage>
 slug: Web/CSS/percentage
+l10n:
+  sourceCommit: a1596fe065b9c726f9412999d2218b7b6e256e30
 ---
 
 {{CSSRef}}
@@ -15,11 +17,11 @@ slug: Web/CSS/percentage
 
 ## 補間
 
-アニメーションをする時、 `<percentage>` データ型は浮動小数点の実数として補間が行われます。補間の速度は、アニメーションに関連付けられた[タイミング関数](/ja/docs/Web/CSS/easing-function)で定義します。
+アニメーションをする時、 `<percentage>` データ型は浮動小数点の実数として{{Glossary("interpolation", "補間")}}が行われます。補間の速度は、アニメーションに関連付けられた[イージング関数](/ja/docs/Web/CSS/easing-function)で定義します。
 
 ## 例
 
-<h3 id="Width_and_margin-left">幅と左マージン</h3>
+### 幅と左マージン
 
 ```html
 <div style="background-color:navy;">
@@ -36,7 +38,7 @@ slug: Web/CSS/percentage
 
 {{EmbedLiveSample('Width_and_margin-left', '600', 140)}}
 
-<h3 id="Font-size">font-size</h3>
+### font-size
 
 ```html
 <div style="font-size:18px;">

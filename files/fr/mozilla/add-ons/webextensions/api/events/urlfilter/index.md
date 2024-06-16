@@ -70,7 +70,7 @@ Toutefois, notez que ces deux derniers modèles ne correspondent pas au dernier 
 
 - `urlSuffix`{{optional_inline}}
   - : `string`. Correspond si l'URL (sans l'identificateur de fragment) se termine par une chaîne spécifiée. Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut. Notez qu'un slash "/" implicite est ajoutée après l'hôte, donc `"com/"` correspond "https\://example.com", mais pas `"com"`.
-- `schemas`{{optional_inline}}
+- `schemes`{{optional_inline}}
 
   - : `array` of `string`. Correspond si le schéma de l'URL est identique à l'un des schémas spécifiés dans le tableau. Comme les schémas sont toujours convertis en minuscules, ils doivent toujours être en minuscules ou ne correspondent jamais.
 

@@ -1,26 +1,45 @@
 ---
-title: 装飾的なレターヘッド付きの便箋の作成
+title: 美しいレターヘッド付きの便箋の作成
 slug: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
+l10n:
+  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes/A_cool_looking_box", "Learn/CSS/Styling_boxes")}}
+{{LearnSidebar}}
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks/A_cool_looking_box", "Learn/CSS/Building_blocks")}}
 
 好印象を与えたいのなら、素敵なレターヘッドの便箋に手紙を書くのはとても良い考えです。この評価では、そのような見た目のオンラインテンプレートの作成に挑戦します。
 
-| 前提知識: | この評価を試みる前に、このモジュールのすべての記事を読んでおくべきです。         |
-| --------- | -------------------------------------------------------------------------------- |
-| 学習目標: | CSS ボックスモデルの理解と、背景の実装などの他のボックス関連機能をテストします。 |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提知識:</th>
+      <td>
+        この評価を試みる前に、このモジュールのすべての記事を読んでおくべきです。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目的:</th>
+      <td>
+        CSS ボックスモデルの理解と、背景の実装などの他のボックス関連機能をテストすること。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## 出発点
 
 この評価を開始するには、次のことが必要です。
 
-- [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/letterheaded-paper-start/index.html) と [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/letterheaded-paper-start/style.css) のローカルコピーを作成します — それらを `index.html` と `style.css` として新しいディレクトリーに保存します。
+- [HTML](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/letterheaded-paper-start/index.html) と [CSS](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/letterheaded-paper-start/style.css) のローカルコピーを作成します — それらを `index.html` と `style.css` として新しいディレクトリーに保存します。
 - 上部（[top](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/top-image.png)）、下部（[bottom](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/bottom-image.png)）、ロゴ（[logo](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/logo.png)）の画像のローカルコピーを、コードファイルと同じディレクトリーに保存します。
 
-> **メモ:** あるいは、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) などのサイトを使って評価することもできます。 HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力できます。 使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
+また、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターを使用することもできます。
+これらのオンラインエディターのいずれかに HTML を貼り付けて CSS を入力してください。
 
-## プロジェクトの概要
+> **メモ:** もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
+
+## プロジェクト概要
 
 レターヘッド付きの便箋のテンプレートを作成するのに必要なファイルを与えられました。 ファイルをまとめるだけでいいのです。 目的を達するには、次のことが必要です。
 
@@ -39,7 +58,7 @@ slug: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
 
 ### ロゴ
 
-- {{htmlelement("h1")}} にロゴを背景画像として追加します。
+- {{htmlelement("Heading_Elements", "h1")}} にロゴを背景画像として追加します。
 - ロゴにフィルタを追加して、微妙なドロップシャドウを付けます。
 - 今度はフィルタをコメントアウトし、丸い画像の形に沿った（ややクロスブラウザー互換の）別の方法でドロップシャドウを実装します。
 
@@ -52,10 +71,6 @@ slug: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
 
 次のスクリーンショットは、完成したデザインがどのように見えるかの例を示しています。
 
-![](letterhead.png)
+![左上に 2 つの三角図形（最初の図形は緑、 2 つ目は赤）、右上に濃い赤の台形。緑色の三角形の下記には、緑色の星と白い文字で塗りつぶされた赤い円： 素晴らしい会社です。ページ左下、濃い赤の台形、以下 2 つの三角形が続きます。緑色の三角形の上には、郵便物の宛先が黒文字で表示されています。](letterhead.png)
 
-## 評価
-
-組織的コースの一環としてこの評価に従っている場合は、採点のために作品を教師や指導者に渡すことができるはずです。 自己学習をしている場合は、[この演習についてのディスカッションスレッド](https://discourse.mozilla.org/t/creating-fancy-letterheaded-paper-assessment/24684/1)や [Mozilla IRC](https://wiki.mozilla.org/IRC) の [#mdn](irc://irc.mozilla.org/mdn) IRC チャンネルで尋ねることで、かなり簡単に採点の手引きを得ることができます。 まず演習を試してみてください — 不正行為によって得られるものは何もありません！
-
-{{PreviousMenuNext("Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes/A_cool_looking_box", "Learn/CSS/Styling_boxes")}}
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks/A_cool_looking_box", "Learn/CSS/Building_blocks")}}

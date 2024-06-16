@@ -48,7 +48,7 @@ frozenArray.pop(); // TypeError
 delete Math.PI; // TypeError
 ```
 
-## 另见
+## 参见
 
 - [delete operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.defineProperty()")}}

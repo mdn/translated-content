@@ -83,7 +83,7 @@ for (let i = 0; i < 7; i++) {
 }
 ```
 
-{{EmbedLiveSample("叠加透明形状", "180", "180", "canvas_globalalpha.png")}}
+{{EmbedLiveSample("叠加透明形状", "", "180")}}
 
 ## 规范
 

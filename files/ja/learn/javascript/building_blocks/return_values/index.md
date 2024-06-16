@@ -1,62 +1,83 @@
 ---
-title: 関数の戻り値
+title: 関数の返値
 slug: Learn/JavaScript/Building_blocks/Return_values
+l10n:
+  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
-このコースでの関数の学習を終えるために、最後に議論しておくべき関数についての大事なコンセプトがあります。それは戻り値です。関数によっては意味のある値を返さないものもありますが、値を返すものも当然あります。それらの値が何であるか、あなたのコードの中でどのように利用するのか、またどのように関数に意味のある値を返させるのかについて理解することは重要です。これらについてすべてを以下で紹介します。
+最後にもうひとつ、関数に関する重要な概念、返値について説明します。関数の中には重要な値を返さないものもあれば、返すものもあります。返値が何なのか、それをコードでどのように使用するのか、関数を有益な値を返すようにするにはどうすればいいのかを理解することが重要です。下記でこれらすべてに応じた説明をします。
 
-| 前提条件: | 基本的なコンピューターリテラシー、基本的な HTML と CSS の知識、[JavaScript 初級レベルの知識](/ja/docs/Learn/JavaScript/First_steps)、[関数の知識](/ja/docs/Learn/JavaScript/Building_blocks/Functions) |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 目的:     | 関数の戻り値とその使い方を理解すること                                                                                                                                                                 |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提知識:</th>
+      <td>
+        <p>
+          基本的な HTML と CSS、それに
+          <a href="/ja/docs/Learn/JavaScript/First_steps"
+            >JavaScript の第一歩</a
+          >の理解。<a href="/ja/docs/Learn/JavaScript/Building_blocks/Functions"
+            >関数 — 再利用可能なコードブロック</a
+          >。
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目標:</th>
+      <td>
+        関数の返値とその使い方を理解すること。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-## 戻り値とは？
+## 返値とは
 
-**戻り値**は、その名が示すとおり関数の実行が完了した時に返される値です。戻り値についてそこまで意識してこなかったかもしれませんが、これまでに何度も戻り値を見てきているはずです。
+**返値**は、その名が示すとおり関数の実行が完了した時に返される値です。返値についてそこまで意識してこなかったかもしれませんが、これまでに何度か返値を見てきているはずです。
 
-以下の見覚えのある例を見てみましょう (このシリーズの[過去の記事](/ja/docs/Learn/JavaScript/Building_blocks/Functions#Built-in_browser_functions)より) 。
+以下の見覚えのある例を見てみましょう（このシリーズの[過去の記事](/ja/docs/Learn/JavaScript/Building_blocks/Functions#ブラウザー組み込み関数)より）。
 
 ```js
-let myText = "I am a string";
-let newString = myText.replace("string", "sausage");
-console.log(newString);
+const myText = "今日は寒い";
+const newString = myText.replace("寒い", "暖かい");
+console.log(newString); // "今日は暖かい" と出力
 // 文字列の replace() 関数は文字列を受け取り、
 // 一方の部分文字列をもう一方の部分文字列に置き換え、
 // 置き換えられた新しい文字列を返します。
 ```
 
-[`replace()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 関数が `myText` という文字列の上で実行され、2 つの引数が渡されています:
+[`replace()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 関数が `myText` という文字列の上で実行され、2 つの引数が渡されています。
 
-1. 置換される部分文字列 ('string')。
-2. 置換する部分文字列 ('sausage')。
+- 置換される部分文字列 ('寒い')
+- 置換する文字列 ('暖かい')
 
-この関数が完了 (実行が終了) した時に、関数は置換された新しい文字列を値として返します。上記のコードでは、この戻り値を `newString` 変数に代入しています。
+この関数が完了（実行が終了）した時に、関数は置換が行われた新しい文字列を値として返します。上記のコードでは、この返値を変数 `newString` に代入しています。
 
-[`replace()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 関数についての MDN のリファレンスページには、[戻り値](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Return_value) というセクションがあります。関数によって返される値が何か知り把握することはとても大事です。従って、可能な限りこちらも見るようにしてください。
+[`replace()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 関数についての MDN のリファレンスページには、[返値](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace#返値)という節があります。関数によって返される値が何か知り把握することはとても重要です。従って、可能な限りこちらも見るようにしてください。
 
-関数によっては何も値を返しません (この場合、リファレンスページでは戻り値を [`void`](/ja/docs/Web/JavaScript/Reference/Operators/void) または [`undefined`](/ja/docs/Glossary/undefined) として記載しています)。たとえば、前の記事で作った [displayMessage()](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html#L50) 関数では、関数が実行されたときに特定の値は返されていません。ただスクリーンのどこかにボックスの表示を作っているだけです。
+関数によっては何も値を返しません。（この場合、リファレンスページでは返値を [`void`](/ja/docs/Web/JavaScript/Reference/Operators/void) または [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) として記載しています。）たとえば、前の記事で作った [`displayMessage()`](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html#L50) 関数では、関数が呼び出されたときに特定の値を返していません。ただ画面のどこかにボックスの表示を作るだけです。
 
-一般的に、戻り値は関数がある種の計算をしている途中の段階で使用されます。 関数で計算する必要があるいくつかの値を含む最終結果を取得したいとします。関数は値を計算した後、結果を返すことができるため、変数に格納できます。この変数は、計算の次の段階で使用できます。
+一般的に、返値は関数がある種の計算をしている途中の段階で使用されます。 関数で計算する必要があるいくつかの値を含む最終結果を取得したいとします。関数は値を計算した後、結果を返すことができるため、変数に格納できます。この変数は、計算の次の段階で使用できます。
 
-### オリジナル関数での戻り値の使い方
+### 独自の関数における返値の使用
 
-カスタム関数から値を返すために、必要なことは、[return](/ja/docs/Web/JavaScript/Reference/Statements/return) というキーワードを使うことです。直近の [random-canvas-circles.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) の例でこれを見たでしょう。`draw()` 関数は 100 のランダムな円を HTML 内に表示します。
-{{htmlelement("canvas")}}:
+カスタム関数から値を返すために、必要なことは、 [return](/ja/docs/Web/JavaScript/Reference/Statements/return) というキーワードを使うことです。直近の [random-canvas-circles.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html) の例でこれを見たでしょう。`draw()` 関数は 100 のランダムな円を HTML の {{htmlelement("canvas")}} 内に表示します。
 
 ```js
 function draw() {
   ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (let i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = "rgba(255,0,0,0.5)";
+    ctx.fillStyle = "rgb(255 0 0 / 50%)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
 }
 ```
 
-ループの繰り返しの中で、現在の円の _x 座標_、_y 座標_、*半径*それぞれのランダムな値を生成するために `random()` 関数に対して 3 回の呼び出しが行われます。`random()` 関数はひとつの引数 (整数) を受け取り、`0` からその受け取った数値までの乱数を返します。以下のようになります。
+ループの繰り返しの中で、現在の円の _x 座標_、_y 座標_、*半径*それぞれのランダムな値を生成するために `random()` 関数に対して 3 回の呼び出しが行われます。`random()` 関数はひとつの引数（整数）を受け取り、`0` からその受け取った数値までの乱数を返します。以下のようになります。
 
 ```js
 function random(number) {
@@ -75,9 +96,9 @@ function random(number) {
 
 しかし最初のものの方がよりコンパクトで、効率よく書けています。
 
-関数が呼び出されるたびに、`Math.floor(Math.random() * number)` の計算の結果が返されます。この戻り値は、関数が呼び出された場所に現れて、コードが続行されます。
+関数が呼び出されるたびに、 `Math.floor(Math.random() * number)` の計算の結果が返されます。この返値は、関数が呼び出された場所に現れて、コードが続行されます。
 
-したがって、以下を実行すると:
+したがって、次のものを実行した場合、
 
 ```js
 ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
@@ -89,14 +110,15 @@ ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
 ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 ```
 
-コード上の関数の呼び出しがまず行われ、その戻り値が関数の呼び出しの代わりとなり、その後にコードそのものが実行されます。
+コード上の関数の呼び出しがまず行われ、その返値が関数の呼び出しの代わりとなり、その後にコードそのものが実行されます。
 
-## 実践: 戻り値を返す関数を作る
+## アクティブラーニング: 返値を返す関数を作る
 
-戻り値を返すオリジナルな関数を書いてみましょう。
+返値を返すオリジナルな関数を書いてみましょう。
 
-1. まず最初に GitHub から [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) ファイルをローカル環境にコピーします。このファイルはシンプルな HTML のページで、文字列入力用の {{htmlelement("input")}} フィールドとパラグラフ（段落）要素を含んでいます。また、{{htmlelement("script")}} 要素があり、この中でページ内の HTML 要素の参照を 2 つの変数で保持させています。このページに対して、テキストボックスに数値を入力したら、入力した数値と関連のある異なる数値を下のパラグラフ要素に表示させるようにしていきます。
-2. いくつかの関数を `<script>` 要素に追加していきましょう。既に記述されている 2 行の [JavaScript](/ja/docs/Web/JavaScript) のコードの下に、以下の関数定義を追加します。
+1. [function-library.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library.html) ファイルを GitHub からローカル環境にコピーしましょう。これは単純な HTML ページで、テキスト {{htmlelement("input")}} フィールドと段落が格納されています。また、 {{htmlelement("script")}} 要素もあり、 2 つの変数に両方の HTML 要素への参照が格納されています。このページでは、テキストボックスに数値を入力すると、下にそれに関連のある異なる数値が表示されます。
+
+2. いくつかの有益な関数を `<script>` 要素の既存の 2 行の下に追加しましょう。
 
    ```js
    function squared(num) {
@@ -109,7 +131,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
    function factorial(num) {
      if (num < 0) return undefined;
-     if (num == 0) return 1;
+     if (num === 0) return 1;
      let x = num - 1;
      while (x > 1) {
        num *= x;
@@ -119,61 +141,51 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
    }
    ```
 
-   `squared()` 関数と `cubed()` 関数は大変わかりやすいでしょう。引数として渡された値の 2 乗や 3 乗を返しています。`factorial()` 関数は渡された数の[階乗](https://ja.wikipedia.org/wiki/%E9%9A%8E%E4%B9%97)を返しています。
+   `squared()` 関数と `cubed()` 関数は大変わかりやすいでしょう。引数として渡された値の 2 乗や 3 乗を返しています。 `factorial()` 関数は渡された数の[階乗](https://ja.wikipedia.org/wiki/%E9%9A%8E%E4%B9%97)を返します。
 
-3. 次に input に入力された数値を出力する処理を追加していきます。イベントハンドラーを既存の関数の下に記述しましょう。
+3. テキストフィールドに入力された数値を出力する処理を追加していきます。イベントハンドラーを既存の関数の下に記述しましょう。
 
    ```js
-   input.onchange = function () {
-     const num = input.value;
+   input.addEventListener("change", () => {
+     const num = parseFloat(input.value);
      if (isNaN(num)) {
-       para.textContent = "You need to enter a number!";
+       para.textContent = "数値を入力してください。";
      } else {
-       para.textContent =
-         num +
-         " squared is " +
-         squared(num) +
-         ". " +
-         num +
-         " cubed is " +
-         cubed(num) +
-         ". " +
-         num +
-         " factorial is " +
-         factorial(num) +
-         ".";
+       para.textContent = `${num} の二乗は ${squared(num)} です。`;
+       para.textContent += `${num} の三乗は ${cubed(num)} です。`;
+       para.textContent += `${num} の階乗は ${factorial(num)} です。`;
      }
-   };
+   });
    ```
 
-   ここでは `onchange` イベントハンドラーを作っています。これは文字列入力での `change` イベントが発火した時に実行されます。つまり新しい値が `input` に入力され、送信された時です (たとえば値を入力し、<kbd>Tab</kbd> か <kbd>Return</kbd> を押して入力からフォーカスを外す時)。この無名関数が実行されると、`input` に入力された値が `num` 定数に代入されます。
+4. コードを保存して、それをブラウザーで読み込み、試してみましょう。
 
-   次に、条件付きテストを行うようにします。もし入力された値が数値でなければ、パラグラフ要素にエラーメッセージを出力します。テストでは、式 `isNaN(num)` が true を返すかどうか見るようにします。一般的に値が数値でないかをテストする際には [`isNaN()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/isNaN) 関数を使います。この関数では、渡された値が数値でなければ `true` を返し、数値であれば `false` を返します。
+上記のステップ 3 の `addEventListener` 関数について説明します。
 
-   もしテストが `false` を返した場合、`num` の値は数値です。したがって、数値の 2 乗、3 乗、階乗の値を示す文が、パラグラフ要素内に出力されます。その出力する文章内で必要とする値を計算するために `squared()` 関数、`cubed()` 関数、`factorial()` 関数を呼んでいます。
+- `change` イベントにリスナーを追加することで、この関数はテキスト入力欄で `change` イベントが発行されるたびに実行されます。つまり、新しい値が `input` に入力されたときと、確定された時です（値を入力し、 <kbd>Tab</kbd> か <kbd>Return</kbd> を押して入力からフォーカスを外したときなど）。この無名関数が実行されると、 `input` に入力された値が `num` 定数に代入されます。
+- if 文で、数値でないものが入力された場合にエラーメッセージを表示します。この条件は、式 `isNaN(num)` が `true` を返すかどうかチェックします。 [`isNaN()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/isNaN) 関数は `num` が数値でないかどうかを検査します。数値でない場合は `true` を返し、そうであれば `false` を返します。
+- もしこの条件が `false` を返した場合、`num` の値は数値であり、関数が段落要素内に数値の二乗、三乗、階乗の値を示す文を表示します。この文では `squared()`、`cubed()`、`factorial()` の各関数を呼び出し、必要な値を計算します。
 
-4. コードを保存して、それをブラウザーで表示してみましょう。
+> **メモ:** もしサンプルがうまく動作しない場合は、[GitHub 上の完成版](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library-finished.html)と比較などしてみてください（[ライブ実行でも確認](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)できます）。またはお問い合わせください。
 
-> **メモ:** もしサンプルがうまく動作しない場合は、[GitHub 上の完成版](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html)と比較などしてみてください（[実際に動かして確認もできます](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)）。またはお問い合わせください。
+## あなたの番
 
-## あなたの番です!
+この時点で、独自の関数をいくつか書き出してライブラリーに追加してみましょう。ある数値の平方根や立方根を求める関数どうですか？また、特定の半径を持つ円の円周を求める関数はどうでしょうか？
 
-この時点で、独自の関数をいくつか書き出してライブラリに追加してみましょう。数値の平方根や立方根はどうですか？また、特定の半径を持つ円の円周はどうでしょうか？
+関数に関するいくつかのヒントを示します。
 
-関数に関する追加のヒント:
+- エラー処理を関数に書く別の例を見てください。一般に、必要な引数が妥当かどうか、省略可能な引数には何らかの既定値が提供されているかどうかを調べるのはよい考えです。こうすることで、プログラムのエラーが発生しにくくなります。
+- 関数ライブラリーを作成するという考えについて考えてみましょう。プログラミングのキャリアを重ねるにつれて、同じようなことを何度も繰り返すようになるでしょう。このようなことを行うためのユーティリティ関数のライブラリーを自分自身で作成するのはよい考えです。新しいコードにコピーすることもできますし、 HTML ページに適用することもできます。
 
-- 関数の中に*エラーハンドリング*を書く別の例を見てみましょう。一般に、必要な引数が検証されていること、および省略可能な引数に何らかのデフォルト値が渡されていることをチェックすることは良い考え方です。このようにしてプログラムがエラーを投げることを減らせます。
-- *関数のライブラリ*を作るアイデアについて考えてみてください。プログラミングのキャリアを積んでいくと、何度も同じ類のことを繰り返し行うことになるでしょう。このようなことに対処するために、自分独自のユーティリティ関数のライブラリを作成することは良いアイデアです。新しいコードにコピーしたり、必要に応じて HTML ページにそれを適用したりすることができます。
+## スキルテスト
 
-## スキルをテストしよう!
-
-この記事の最後まで到達しましたが、最も大事な情報を覚えていますか？移動する前に、この情報を維持しているか検証するテストを見ることができます— [Test your skills: Functions](/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 関数](/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions)を見てください。
 
 ## まとめ
 
-以上、関数は楽しく、非常に便利で、構文や機能についてまだまだ話すことはたくさんありますが、それらはかなり理解しやすいものです。
+以上、関数は楽しく、とても便利で、構文や機能についてまだまだ話すことはたくさんありますが、それらはかなり理解しやすいものです。
 
-もし何か理解できなかったことがありましたら、何度もこの記事を読み込むか、または[お問い合わせ](/ja/docs/Learn#Contact_us)ください。
+もし何か理解できなかったことがありましたら、何度もこの記事を読み込むか、または[お問い合わせ](/ja/docs/Learn#連絡方法)ください。
 
 ## 関連情報
 

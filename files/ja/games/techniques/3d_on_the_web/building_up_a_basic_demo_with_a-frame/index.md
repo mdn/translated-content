@@ -20,7 +20,7 @@ A-Frame で何かを作るために環境設定を始めましょう。デモを
 - WebGL に十分対応している最新のブラウザー (もし利用可能な VR ハードウェアがある場合は WebVR に対応しているブラウザー)、例えば最新の Firefox や Chrome を使っているか確認してください。 [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/) または Chrome (v54 以降) をダウンロードしてください。
 - (必要に応じて) Oculus Rift や Google Cardboard のような VR 機器をセットアップします。
 - プロジェクトを保存する新しいディレクトリーを作成します。
-- そのディレクトリーに、最新の [A-Frame JavaScript ライブラリーファイル](https://github.com/aframevr/aframe/tree/master/dist) (GitHub 最新の安定開発版リポジトリーを確認してください) のコピーを保存します。
+- そのディレクトリーに、最新の [A-Frame JavaScript ライブラリーファイル](https://github.com/aframevr/aframe/tree/main/dist) (GitHub 最新の安定開発版リポジトリーを確認してください) のコピーを保存します。
 - 別のタブで [A-Frame documentation](https://aframe.io/docs/) を開いておきます — 参照するのに便利なので。
 
 ## HTML の構造
@@ -201,7 +201,7 @@ scene.appendChild(cylinder);
 </a-box>
 ```
 
-他のエンティティでも同様に、アニメーション用のキープロパティを定義できます。ここでは `rotation` 属性を `20 0 0` から `20 360 0` へとアニメーションさせているので、1周回転することになります。アニメーションの方向 (direction) は、alternate に設定されているため、順方向にアニメーションが再生されます。継続時間 (duration) を 4 秒に、そして繰り返し (repeat) がずっと続く (indefinite) ように設定してします。アニメーションの easing は `ease` を使っています。これは内部的に実装されている [tween.js](https://github.com/tweenjs/tween.js/) によって実行されます。
+他のエンティティでも同様に、アニメーション用のキープロパティを定義できます。ここでは `rotation` 属性を `20 0 0` から `20 360 0` へとアニメーションさせているので、1周回転することになります。アニメーションの方向 (direction) は、alternate に設定されているため、順方向にアニメーションが再生されます。再生時間 (duration) を 4 秒に、そして繰り返し (repeat) がずっと続く (indefinite) ように設定してします。アニメーションの easing は `ease` を使っています。これは内部的に実装されている [tween.js](https://github.com/tweenjs/tween.js/) によって実行されます。
 
 ### 拡大縮小
 

@@ -15,7 +15,7 @@ l10n:
       <th scope="row">前提条件:</th>
       <td>
         <a href="/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server"
-          >ウェブサーバとは何か</a
+          >ウェブサーバーとは何か</a
         >と<a href="/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name"
           >ドメイン名の仕組み</a
         >を知っている必要があります。<a href="/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server"

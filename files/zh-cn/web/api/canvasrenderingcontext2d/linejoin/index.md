@@ -86,7 +86,7 @@ ctx.lineWidth = 10;
 });
 ```
 
-{{EmbedLiveSample("相连部分对比", "180", "180", "canvas_linejoin.png")}}
+{{EmbedLiveSample("相连部分对比", "", "180")}}
 
 ## 规范
 

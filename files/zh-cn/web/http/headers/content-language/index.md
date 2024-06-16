@@ -65,7 +65,7 @@ Content-Language: de, en
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Accept-Language")}}
 - [HTTP headers, meta elements and language information](https://www.w3.org/International/questions/qa-http-and-lang.en)

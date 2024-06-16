@@ -3,6 +3,8 @@ title: Использование файлов в веб приложениях
 slug: Web/API/File_API/Using_files_from_web_applications
 ---
 
+{{DefaultAPISidebar("File API")}}
+
 Используя File API, добавленный к DOM в HTML5, в веб-приложениях теперь можно запрашивать пользователя выбрать локальные файлы и затем читать содержимое этих файлов. Выбор файлов может осуществляться с помощью элемента {{ HTMLElement("input") }} или drag and drop.
 
 Если вы хотите использовать DOM File API в расширениях или коде Chrome, используйте. На самом деле, в таком случае вам необходимо ознакомиться с дополнительными нюансами. См. статью [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code) для подробностей.
@@ -441,7 +443,7 @@ function FileUpload(img, file) {
   );
   xhr.open(
     "POST",
-    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
+    "https://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
   );
   xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
   reader.onload = function (evt) {

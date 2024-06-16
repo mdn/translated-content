@@ -30,7 +30,7 @@ l10n:
 
 評価試験を始めるために、次のことを行ってください。
 
-- GitHub からサンプル用の [HTML ファイルを取って](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/assessment-start/index.html)きて自分のコンピュータの新しいディレクトリーに `index.html` という名前で保存します。ここには見た目をきれいにするため、CSS も含まれています。
+- GitHub からサンプル用の [HTML ファイルを取って](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/assessment-start/index.html)きて自分のコンピューターの新しいディレクトリーに `index.html` という名前で保存します。ここには見た目をきれいにするため、CSS も含まれています。
 - [この生テキストを含むページ](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/assessment-start/raw-text.txt)に移動してどこか別のブラウザータブで開いたままにしておきます。後で必要となります。
 
 その代わりに、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) のようなサイトを使って評価試験を実施できます。 HTML、CSS、JavaScript をオンラインエディターに貼り付けてください。使っているオンラインエディターが独立した JavaScript パネルを持っていない場合、 HTML ページ内の `<script>` 要素内に書いても問題ありません。
@@ -90,7 +90,7 @@ HTML および CSS と少しのテキストと JavaScript 関数があります�
    1. ポンドからストーンへ変換する公式、および、華氏から摂氏へ変換する公式を調べます。
    2. `weight` 変数が宣言されている行内の、300 を ポンドからストーンに変換した値で置き換えます。そして `' stone'` (ストーン) を `Math.round()` の結果に対して、その後ろに結合します。
    3. `temperature` 変数が宣言されている行内の、94 を華氏から摂氏に変換した値で置き換えます。こちらには `' centigrade'` (摂氏～度) という文字を `Math.round()` の結果に対して、後ろに結合します。
-   4. 上記 2 つの変数の宣言の直後に、さらにもう 2 つ文字列を置換するコードを書いて、'94 farenheit' を `temperature` 変数の内容に、'300 pounds' を `weight` 変数の内容にそれぞれ置換します。
+   4. 上記 2 つの変数の宣言の直後に、さらにもう 2 つ文字列を置換するコードを書いて、'94 fahrenheit' を `temperature` 変数の内容に、'300 pounds' を `weight` 変数の内容にそれぞれ置換します。
 
 6. 最後に、関数の下から 2 行目にある、`story` 変数の `textContent` プロパティ(段落を参照している) を、`newStory` 変数の内容で置き換えます。
 

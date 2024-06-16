@@ -2,14 +2,12 @@
 title: LockManager：query() 方法
 slug: Web/API/LockManager/query
 l10n:
-  sourceCommit: 5bc1969dd92f2282dee327a8c7ee2f2e31f53ed3
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Locks API")}}{{securecontext_header}}
+{{APIRef("Web Locks API")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 {{domxref("LockManager")}} 接口的 **`query()`** 方法返回一个 {{jsxref('Promise')}}，该对象兑现一个包含持有中的锁和请求中的锁的信息的对象。
-
-{{AvailableInWorkers}}
 
 ## 语法
 

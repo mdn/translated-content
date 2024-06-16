@@ -382,7 +382,7 @@ setTimeout(() => {
 
 ### call, bind, apply 메서드 사용하기
 
-[`call()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [`apply()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), [`bind()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 메서드는 각 메서드의 범위를 설정하므로 기존 함수에서 예상되는 대로 작동합니다:
+[`call()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [`apply()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), [`bind()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 메서드는 각 메서드의 범위를 설정하므로 기존 함수에서 예상되는 대로 작동합니다.
 
 ```js
 const obj = {

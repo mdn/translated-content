@@ -2,7 +2,7 @@
 title: <input type="reset">
 slug: Web/HTML/Element/input/reset
 l10n:
-  sourceCommit: f6d04a43eadf5ab26a3488942dfb318b58234eb5
+  sourceCommit: 56f8b4b735a0c02f958121e29f0ec7adc890e7d1
 ---
 
 {{HTMLSidebar}}
@@ -15,7 +15,7 @@ l10n:
 
 ## 値
 
-`<input type="reset">` 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性は、ボタンのラベルとして表示される文字列を示します。 `reset` などのボタンは他の値を持ちません。
+`<input type="reset">` 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性は、ボタンのラベルとして表示される文字列を示します。 `reset` などのボタンは他の値を持ちません。 `value` はボタンの{{glossary("accessible description", "アクセシブル説明")}}を指定します。
 
 ### value 属性の設定
 
@@ -24,6 +24,8 @@ l10n:
 ```
 
 {{EmbedLiveSample("Setting_the_value_attribute", 650, 30)}}
+
+### value 属性の省略
 
 `value` を指定しなかった場合は、既定のラベルが付いたボタンが表示されます（通常は「リセット」ですが、{{Glossary("user agent", "ユーザーエージェント")}}によって異なります）。
 

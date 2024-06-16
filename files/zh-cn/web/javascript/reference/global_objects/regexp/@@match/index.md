@@ -82,7 +82,7 @@ console.log(result.group(3)); // 02
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}

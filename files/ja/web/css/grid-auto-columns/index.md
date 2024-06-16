@@ -49,7 +49,8 @@ grid-auto-columns: min-content max-content auto;
 grid-auto-columns: 100px 150px 390px;
 grid-auto-columns: 10% 33.3%;
 grid-auto-columns: 0.5fr 3fr 1fr;
-grid-auto-columns: minmax(100px, auto) minmax(max-content, 2fr) minmax(20%, 80vmax);
+grid-auto-columns: minmax(100px, auto) minmax(max-content, 2fr)
+  minmax(20%, 80vmax);
 grid-auto-columns: 100px minmax(100px, auto) 10% 0.5fr fit-content(400px);
 
 /* グローバル値 */
@@ -130,7 +131,7 @@ grid-auto-columns: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Setting_grid_column_size", "410px", "100px")}}
+{{EmbedLiveSample("グリッド列の寸法を設定", "410px", "100px")}}
 
 ## 仕様書
 

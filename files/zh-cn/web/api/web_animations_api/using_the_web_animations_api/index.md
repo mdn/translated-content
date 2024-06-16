@@ -23,9 +23,9 @@ web 动画 API 可以让我们用 JavaScript 写动画并且控制动画。本�
 
 ### The CSS version
 
-这是一个用 CSS 写的滚动动画，显示爱丽丝落下通向仙境的兔子洞 (see the full [code on Codepen](http://codepen.io/rachelnabors/pen/QyOqqW)):
+这是一个用 CSS 写的滚动动画，显示爱丽丝落下通向仙境的兔子洞 (see the full [code on Codepen](https://codepen.io/rachelnabors/pen/QyOqqW)):
 
-[![Alice Tumbling down the rabbit's hole.](tumbling-alice_optimized.gif)](http://codepen.io/rachelnabors/pen/rxpmJL)
+[![Alice Tumbling down the rabbit's hole.](tumbling-alice_optimized.gif)](https://codepen.io/rachelnabors/pen/rxpmJL)
 
 请注意背景的移动，爱丽丝的旋转，以及她的颜色偏移变化。本教程我们将仅仅关注爱丽丝。这是控制爱丽丝动画的简化的 CSS：
 
@@ -101,7 +101,7 @@ var aliceTiming = {
 document.getElementById("alice").animate(aliceTumbling, aliceTiming);
 ```
 
-And boom: the animation starts playing (see the finished [version on Codepen](http://codepen.io/rachelnabors/pen/rxpmJL)).
+And boom: the animation starts playing (see the finished [version on Codepen](https://codepen.io/rachelnabors/pen/rxpmJL)).
 
 可以在可以使用 CSS 动画化的任何 DOM 元素上调用 animate() 方法。它可以用几种方式写成。我们可以直接像这样传递他们的值，而不需要为关键帧和时间属性创建对象：
 
@@ -134,9 +134,9 @@ document.getElementById("alice").animate(
 
 ## 使用 play()，pause()，reverse() 和 playbackRate 控制播放
 
-虽然我们可以使用 Web 动画 API 编写 CSS 动画，其中 API 真正派上用场的是操纵动画的播放。Web 动画 API 提供了一些控制播放的有用方法。让我们来看看在 Growing / Shrinking Alice 游戏中暂停和播放动画（请查看 Codepen 的完整代码 [full code on Codepen](http://codepen.io/rachelnabors/pen/PNYGZQ)）：
+虽然我们可以使用 Web 动画 API 编写 CSS 动画，其中 API 真正派上用场的是操纵动画的播放。Web 动画 API 提供了一些控制播放的有用方法。让我们来看看在 Growing / Shrinking Alice 游戏中暂停和播放动画（请查看 Codepen 的完整代码 [full code on Codepen](https://codepen.io/rachelnabors/pen/PNYGZQ)）：
 
-[![Playing the growing and shrinking game with Alice.](growing-shrinking_article_optimized.gif)](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)
+[![Playing the growing and shrinking game with Alice.](growing-shrinking_article_optimized.gif)](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)
 
 在这个游戏中，爱丽丝有一个动画，使她从小到大，我们通过一个瓶子和一个蛋糕控制。这两个都有自己的动画。
 
@@ -367,6 +367,6 @@ Prefer promises? The Web Animations API also specifies two promises: [`onfinish`
 
 ## See also
 
-- The [full suite of Alice in Wonderland demos](http://codepen.io/collection/bpEza/) on CodePen for you to play with, fork, and share
+- The [full suite of Alice in Wonderland demos](https://codepen.io/collection/bpEza/) on CodePen for you to play with, fork, and share
 - [Animating like you just don’t care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) — a great article to read that explains more on the background of the Web Animations API, and why it is more performant than other web animation methods
 - [web-animations-js](https://github.com/web-animations/web-animations-js) — the Web Animations API polyfill

@@ -47,7 +47,7 @@ new Float64Array([NaN]).includes(NaN); // true;
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("Array.prototype.includes()")}}
 - {{jsxref("String.prototype.includes()")}}

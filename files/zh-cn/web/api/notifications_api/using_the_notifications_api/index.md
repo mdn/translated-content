@@ -2,7 +2,7 @@
 title: 使用 Notifications API
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 l10n:
-  sourceCommit: 6cab93c7fbd381e36065794351e2d7fcc3ce64e8
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
 {{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}}
@@ -76,27 +76,23 @@ Notification.requestPermission((result) => {
 
 ```js
 function askNotificationPermission() {
-  // 实际询问权限的函数
-  function handlePermission(permission) {
-    // 根据用户的回答显示或隐藏按钮
-    notificationBtn.style.display =
-      Notification.permission === "granted" ? "none" : "block";
-  }
-
-  // 让我们检查一下浏览器是否支持通知
+  // 检查浏览器是否支持通知
   if (!("Notification" in window)) {
     console.log("此浏览器不支持通知。");
-  } else {
-    Notification.requestPermission().then((permission) => {
-      handlePermission(permission);
-    });
+    return;
   }
+  Notification.requestPermission().then((permission) => {
+    // 根据用户的回答显示或隐藏按钮
+    notificationBtn.style.display = permission === "granted" ? "none" : "block";
+  });
 }
 ```
 
 首先查看第二个主要块，你会发现我们首先检查是否支持通知。如果支持的话，我们接着运行基于 Promise 的 `Notification.requestPermission()` 版本，否则在控制台输出一条消息。
 
 为了避免重复代码，我们在 `handlePermission()` 函数中存储了一些内部代码，这是该代码段中的第一个主要块。在这里，我们明确设置了 `Notification.permission` 值（某些旧版本的 Chrome 无法自动执行此操作），并根据用户在权限对话框中选择的内容显示或隐藏按钮。如果已经授予许可，我们不想显示它，但如果用户选择拒绝许可，我们希望给他们稍后改变主意的机会。
+
+在传递给 `then` 的 promise 解析处理器中，我们根据用户在权限对话框中选择的内容显示或隐藏按钮。如果已经授予许可，我们不想显示它，但如果用户选择拒绝许可，我们希望给他们稍后改变主意的机会。
 
 ## 创建通知
 

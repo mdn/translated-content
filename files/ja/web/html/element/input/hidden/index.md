@@ -2,14 +2,14 @@
 title: <input type="hidden">
 slug: Web/HTML/Element/input/hidden
 l10n:
-  sourceCommit: fa8a44b8bff24a4032181c4fd155c459c0dc9161
+  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
 ---
 
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`hidden`** 型は、フォームの送信時にユーザーが見たり変更したりすることができないデータをウェブ開発者が含めることができます。例えば、現在注文中又は編集中の ID や、一意のセキュリティトークンなどに利用できます。隠し入力欄はページの表示で完全に非表示になり、ページの中で表示させる方法はありません。
 
-> **メモ:** {{domxref("HTMLElement/input_event", "input")}} および {{domxref("HTMLElement/change_event", "change")}} の各イベントは、この入力型には適用されません。隠し入力欄は JavaScript (`hiddenInput.focus()` など) を使用してもフォーカスを与えることはできません。
+> **メモ:** {{domxref("Element/input_event", "input")}} および {{domxref("HTMLElement/change_event", "change")}} の各イベントは、この入力型には適用されません。隠し入力欄は JavaScript (`hiddenInput.focus()` など) を使用してもフォーカスを与えることはできません。
 
 ## 値
 
