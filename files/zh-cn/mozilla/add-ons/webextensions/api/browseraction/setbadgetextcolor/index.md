@@ -13,7 +13,7 @@ l10n:
 
 ```js-nolint
 browser.browserAction.setBadgeTextColor(
-  details // object
+  details // 对象
 )
 ```
 
