@@ -7,9 +7,9 @@ l10n:
 
 {{AddonSidebar}}
 
-一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，其底层值为布尔型。
+一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，其底层值为布尔值。
 
-此属性设置了[配置设置](https://support.mozilla.org/zh-CN/kb/about-config-editor-firefox)中的 browser.zoom.siteSpecific，该配置控制缩放设置如何应用于站点和标签。
+此属性设置了[配置设置](https://support.mozilla.org/zh-CN/kb/about-config-editor-firefox)中的 `browser.zoom.siteSpecific`，该配置控制缩放设置如何应用于站点和标签页。
 
 如果 `browser.zoom.siteSpecific` 为 `true`，则缩放操作适用于同一站点的所有页面，因此：
 
@@ -19,7 +19,7 @@ l10n:
 如果 `browser.zoom.siteSpecific` 设置为 `false`，则缩放操作仅适用于活动标签页，因此：
 
 - 新标签页打开时，将应用全局默认缩放级别。
-- 当标签页中的缩放级别更改时，它会持续跨页面加载，并且不会影响其他标签页中的缩放级别。
+- 当标签页中的缩放级别更改时，它会保持跨页面的加载，并且不会影响其他标签页中的缩放级别。
 
 当 Firefox 安装时，`browser.zoom.siteSpecific` 为 true。
 
@@ -31,7 +31,7 @@ l10n:
 
 ## 示例
 
-将设置设置为 `false`：
+将设置指定为 `false`：
 
 ```js
 function logResult(result) {
