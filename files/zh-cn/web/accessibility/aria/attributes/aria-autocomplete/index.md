@@ -11,9 +11,9 @@ l10n:
 
 ## 描述
 
-自动完成是一种用户界面功能，当用户在输入时，会提供内联建议。动态出现在输入光标后的字段值的建议文本，如果用户执行导致焦点离开字段的操作（例如按 Tab 键），则建议的值将成为值。
+自动填充是一种用户界面特性，当用户在输入时，会动态地提供内联建议。建议的文本用于完成字段的数值，在输入光标后动态出现在字段中，如果用户执行导致焦点离开该字段的操作（如按 Tab 键），建议的数值将成为字段的值。
 
-`aria-autocomplete` 属性描述了文本框、搜索框或组合框在动态帮助用户完成文本输入时将使用的自动完成交互模型类型。它区分了两种模型：**内联**模型（`aria-autocomplete="inline"`），它呈现单个预测值；**列表**模型（`aria-autocomplete="list"`），它在与文本输入相邻的位置或下方显示可能的值集合，类似于 {{HTMLElement('datalist')}} 。第三个值，`aria-autocomplete="both"` 表示接口将同时呈现列表并包含预测值。默认值是 `none`，表示文本框、搜索框或组合框不提供自动完成值。
+`aria-autocomplete` 属性描述了文本框、搜索框或组合框在动态帮助用户完成文本输入时将使用的自动完成交互模型的类型。它区分了两种模型：**内联**模型（`aria-autocomplete="inline"`），它呈现单个预测值；**列表**模型（`aria-autocomplete="list"`），它在与文本输入相邻的位置或下方显示可能的值的集合，类似于 {{HTMLElement('datalist')}}。第三个值，`aria-autocomplete="both"` 表示接口将同时呈现列表并包含预测值。默认值是 `none`，表示文本框、搜索框或组合框不提供自动完成值。
 
 `aria-autocomplete` 属性仅描述了输入元素的预测行为类型，而不提供功能。实际的自动完成应该使用 HTML 属性或 JavaScript 提供。
 
@@ -58,7 +58,7 @@ l10n:
 - [`combobox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role) 角色
 - [`textbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/textbox_role) 角色
 - [`searchbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/searchbox_role) 角色
-- {{HTMLElement('datalist')}} 元素和 [`<input> list` attribute](/zh-CN/docs/Web/HTML/Element/input#list)
+- {{HTMLElement('datalist')}} 元素和 [`<input> list` 属性](/zh-CN/docs/Web/HTML/Element/input#list)
 - [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-controls) 属性
 - [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) 属性
 - [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 属性
