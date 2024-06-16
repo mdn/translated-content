@@ -9,13 +9,13 @@ l10n:
 
 打开浏览操作的弹出窗口。
 
-在稳定版本的 Firefox 中，你只能在[用户操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_actions)的处理程序内调用此函数。有关详细信息，请参见[浏览器兼容性](#浏览器兼容性)。
+在稳定版本的 Firefox 中，你只能在[用户操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_actions)的处理器内调用此函数。有关详细信息，请参见[浏览器兼容性](#浏览器兼容性)。
 
 ## 语法
 
 ```js-nolint
 browser.browserAction.openPopup(
-  options // optional object
+  options // 可选对象
 )
 ```
 
@@ -30,7 +30,7 @@ browser.browserAction.openPopup(
 
 ### 返回值
 
-一个返回没有参数的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，兑现时不带任何参数。
 
 ## 浏览器兼容性
 
