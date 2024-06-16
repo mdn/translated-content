@@ -26,7 +26,7 @@ browser.commands.update(
   - : `object`。包含以下属性的对象：
 
     - `name`
-      - : `string`。要更新的命令的名称。这必须与现有命令的名称匹配，如 {{WebExtAPIRef("commands.Command")}} 对象的 `name` 属性所示。
+      - : `string`。要更新的命令的名称。这必须与现有命令的名称（例如 {{WebExtAPIRef("commands.Command")}} 对象的 `name` 属性所给出的）匹配。
     - `description` {{optional_inline}}
       - : `string`。要为命令设置的新描述。
     - `shortcut` {{optional_inline}}
