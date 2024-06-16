@@ -76,8 +76,8 @@ switch (NaN) {
    - 如果是相同的类型，使用步骤 1 进行比较。
    - 如果其中一个操作数是符号而另一个不是，返回 `false`。
    - 如果其中一个操作数是布尔值而另一个不是，则[将布尔值转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)：`true` 转换为 1，`false` 转换为 0。然后再次对两个操作数进行宽松比较。
-   - 数字与字符串：[`Number()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) 构造函数相同的算法将字符串转换为数字。转换失败将导致 `NaN`，这将保证相等比较为 `false`。
-   - 数字与大整型：按数值进行比较。如果数值为 ±∞ 或 `NaN`，返回 `false`。
+   - 数字与字符串：[将字符串转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)。转换失败将导致 `NaN`，这将保证相等比较为 `false`。
+   - 数字与大整型：按数值进行比较。如果数字的值为 ±∞ 或 `NaN`，返回 `false`。
    - 字符串与大整型：使用与 [`BigInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) 构造函数相同的算法将字符串转换为大整型数。如果转换失败，返回 `false`。
 
 一般而言，根据 ECMAScript 规范，所有原始类型和对象都不与 `undefined` 和 `null` 宽松相等。但是大部分浏览器允许非常有限的一类对象（即，所有页面中的 `document.all` 对象）在某些情况下表现出*模拟* `undefined` 值特性。宽松相等就是这些情况之一：当且仅当 A 是一个*模拟* `undefined` 的对象时，`null == A` 和 `undefined == A` 将会计算得到 `true`。在其他所有情况下，一个对象都不会与 `undefined` 或 `null` 宽松相等。

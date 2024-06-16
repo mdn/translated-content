@@ -34,8 +34,8 @@ x == y
    - 如果是相同的类型，使用步骤 1 进行比较。
    - 如果其中一个操作数是符号而另一个不是，返回 `false`。
    - 如果其中一个操作数是布尔值而另一个不是，则[将布尔值转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)：`true` 转换为 1，`false` 转换为 0。然后再次对两个操作数进行宽松比较。
-   - 数字与字符串：[`Number()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) 构造函数相同的算法将字符串转换为数字。转换失败将导致 `NaN`，这将保证相等比较为 `false`。
-   - 数字与大整型：按数值进行比较。如果数值为 ±∞ 或 `NaN`，返回 `false`。
+   - 数字与字符串：[将字符串转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)。转换失败将导致 `NaN`，这将保证相等比较为 `false`。
+   - 数字与大整型：按数值进行比较。如果数字的值为 ±∞ 或 `NaN`，返回 `false`。
    - 字符串与大整型：使用与 [`BigInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) 构造函数相同的算法将字符串转换为大整型数。如果转换失败，返回 `false`。
 
 宽松相等是*对称的*：`A == B` 对于 `A` 和 `B` 的任何值总是具有与 `B == A` 相同的语义（应用转换的顺序除外）。
