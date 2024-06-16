@@ -3,6 +3,8 @@ title: Qu'est-ce que l'accessibilité ?
 slug: Learn/Common_questions/Design_and_accessibility/What_is_accessibility
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Cet article aborde les concepts de base qui forment l'accessibilité pour le Web.
 
 <table class="standard-table">

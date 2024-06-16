@@ -7187,6 +7187,10 @@
     "modified": "2020-10-15T21:48:09.472Z",
     "contributors": ["YozhEzhi", "utking", "MrOnlineCoder"]
   },
+  "Web/API/Window/atob": {
+    "modified": "2019-03-23T22:02:40.728Z",
+    "contributors": ["HawkeyePierce89", "hunty"]
+  },
   "Web/API/Window/beforeunload_event": {
     "modified": "2020-10-15T22:33:54.942Z",
     "contributors": ["b0rique"]
@@ -7198,6 +7202,10 @@
   "Web/API/Window/blur_event": {
     "modified": "2020-10-15T22:13:59.597Z",
     "contributors": ["AliaksandrZahorski"]
+  },
+  "Web/API/Window/btoa": {
+    "modified": "2019-09-17T16:11:11.862Z",
+    "contributors": ["SerzN1", "uleming"]
   },
   "Web/API/Window/caches": {
     "modified": "2020-10-29T09:02:45.566Z",
@@ -7666,14 +7674,6 @@
   "Web/API/XMLSerializer": {
     "modified": "2019-03-23T22:17:05.888Z",
     "contributors": ["t1gor"]
-  },
-  "Web/API/atob": {
-    "modified": "2019-03-23T22:02:40.728Z",
-    "contributors": ["HawkeyePierce89", "hunty"]
-  },
-  "Web/API/btoa": {
-    "modified": "2019-09-17T16:11:11.862Z",
-    "contributors": ["SerzN1", "uleming"]
   },
   "Web/API/clearTimeout": {
     "modified": "2020-10-15T22:33:31.469Z",

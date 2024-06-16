@@ -3,6 +3,8 @@ title: Utiliser le rôle group
 slug: Web/Accessibility/ARIA/Roles/group_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Description
 
 Cette technique présente l'utilisation du rôle [group](http://www.w3.org/TR/wai-aria/roles#group) et décrit les effets produits sur les navigateurs et les technologies d'assistance.

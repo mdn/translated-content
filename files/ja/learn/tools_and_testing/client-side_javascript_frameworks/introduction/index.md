@@ -2,7 +2,7 @@
 title: クライアントサイドフレームワークの概要
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 l10n:
-  sourceCommit: 7c7473588e7fb487df574c64307b11a3ecd55cd1
+  sourceCommit: 70da4a8f77d691220aa8ed9d7305b290d52e7337
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -30,7 +30,7 @@ JavaScript とフレームワークの簡単な歴史を見て、フレームワ
 
 ## 簡単な歴史
 
-1996 年に JavaScript が登場すると、それまで静的なドキュメントで構成されていたウェブに、ところどころの操作の可能性と興奮が加わりました。 ウェブは単に _ものを読む_ だけではなく、 _何かをする_ ための場所になりました。 JavaScript の人気は着実に高まりました。 JavaScript を扱う開発者は、直面した問題を解決するためのツールを作成し、**ライブラリー**と呼ばれる再利用可能なパッケージにパッケージ化して、他のユーザーとソリューションを共有できるようにしました。このライブラリーの共有エコシステムは、ウェブの成長を形作るのに役立ちました。
+1996 年に JavaScript が登場すると、それまで静的な文書で構成されていたウェブに、ところどころの操作の可能性と興奮が加わりました。 ウェブは単に _ものを読む_ だけではなく、 _何かをする_ ための場所になりました。 JavaScript の人気は着実に高まりました。 JavaScript を扱う開発者は、直面した問題を解決するためのツールを作成し、**ライブラリー**と呼ばれる再利用可能なパッケージにパッケージ化して、他のユーザーとソリューションを共有できるようにしました。このライブラリーの共有エコシステムは、ウェブの成長を形作るのに役立ちました。
 
 現在、 JavaScript はウェブに不可欠な部分となり、[すべてのウェブサイトの 98% で使用されており](https://w3techs.com/technologies/details/cp-javascript)、ウェブは現代生活に不可欠な部分です。ユーザーは論文を書いたり、予算を管理したり、音楽をストリーミングしたり、映画を鑑賞したり、テキスト、音声、またはビデオチャットを使って遠距離の他のユーザーと瞬時にコミュニケーションしたりできます。ウェブを使用すると、これまでコンピューターにインストールされたネイティブアプリケーションでのみ可能であったことが実行できるようになります。これらの最新の複雑でインタラクティブなウェブサイトは、**ウェブアプリケーション**と呼ばれることがよくあります。
 
@@ -38,9 +38,9 @@ JavaScript とフレームワークの簡単な歴史を見て、フレームワ
 
 JavaScript フレームワークは、あなたが毎日使用するウェブサイトの多くを含む、現代のウェブ上の優れたソフトウェアの多くを強化しています。現在この記事を読んでいる MDN Web Docs は、React/ReactDOM フレームワークを使用してフロントエンドを強化します。
 
-## どのようなフレームワークがあるのでしょうか?
+## どのようなフレームワークがあるのか
 
-さまざまなフレームワークが存在しますが、現在「ビッグ 4 」は次のとおりであると考えられています。
+さまざまなフレームワークが存在しますが、現在「ビッグ 4」は次のとおりであると考えられています。
 
 ### Ember
 
@@ -74,7 +74,7 @@ React は、 [JSX](https://react.dev/learn/writing-markup-with-jsx) として知
 
 [React の学習を開始する](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
 
-## 何故フレームワークが存在するのでしょうか?
+## 何故フレームワークが存在するのか
 
 フレームワークの作成にインスピレーションを与えた環境について説明しましたが、実際には、開発者がフレームワークを作成する必要性を _なぜ_ 感じたのかというと、そうではありません。その理由を探るには、まずソフトウェア開発の課題を検討する必要があります。
 
@@ -103,9 +103,8 @@ const state = [
 function buildTodoItemEl(id, name) {
   const item = document.createElement("li");
   const span = document.createElement("span");
-  const textContent = document.createTextNode(name);
 
-  span.appendChild(textContent);
+  span.textContent = name;
 
   item.id = id;
   item.appendChild(span);
@@ -115,17 +114,15 @@ function buildTodoItemEl(id, name) {
 }
 ```
 
-ここでは、 [`document.createElement()`](/ja/docs/Web/API/Document/createElement) メソッドを使用して `<li>` を作成し、さらに数行のコードで必要なプロパティと子を作成しています。
+ここでは、 [`document.createElement()`](/ja/docs/Web/API/Document/createElement) メソッドを使用して `<li>` を作成し、さらに数行のコードで必要なプロパティと子要素を作成しています。
 
-前のスニペットの 10 行目は、別のビルド関数 `buildDeleteButtonEl()` を参照しています。これは、リスト項目要素を構築するために使用したパターンと同様のパターンに従います。
+前のスニペットでは、別のビルド関数 `buildDeleteButtonEl()` を参照しています。これは、リスト項目要素を構築するために使用したパターンと同様のパターンに従います。
 
 ```js
 function buildDeleteButtonEl(id) {
   const button = document.createElement("button");
-  const textContent = document.createTextNode("Delete");
-
   button.setAttribute("type", "button");
-  button.appendChild(textContent);
+  button.textContent = "Delete";
 
   return button;
 }
@@ -148,7 +145,7 @@ function renderTodoList() {
 }
 ```
 
-これで、UI 専用のコードが 30 行を _はるかに_ 超えています。つまり、 DOM 内で _何かを_ レンダリングするためだけに、後でリスト項目のスタイルを設定するために使用できるクラスを追加する必要はありません。
+これで、UI 専用のコードが 30 行をおよそ超えています。つまり、 DOM 内で _何かを_ レンダリングするためだけに、後でリスト項目のスタイルを設定するために使用できるクラスを追加する必要はありません。
 
 DOM を直接操作して、この例のように要素の作り方、プロパティを変更する方法、要素を互いの内側に配置する方法、ページ上にそれらを表示する方法など DOM の仕組みについて多くのことを理解する必要があります。このコードは実際にユーザー操作を処理したり、タスクの追加や削除に対処したりするものはありません。これらの機能を追加する場合は、適切なタイミングで適切な方法で UI を更新することを忘れないでください。
 
@@ -156,14 +153,15 @@ JavaScript フレームワークは、この種の作業をはるかに簡単に
 
 このセクションのコードサンプルの動作を確認したい場合は、 [CodePen 上のアプリの動作バージョン](https://codepen.io/mxmason/pen/XWbPNmw) をチェックアウトしてください。これにより、ユーザーは次の機能を追加したり、新しいタスクを削除します。
 
-このセクションで使用される JavaScript について詳しくは、以下をご覧ください。
+このセクションで使用される JavaScript 機能について詳しくは、以下をご覧ください。
 
-- [`document.createElement()`](/ja/docs/Web/API/Document/createElement)
-- [`document.createTextNode()`](/ja/docs/Web/API/Document/createTextNode)
-- [`document.createDocumentFragment()`](/ja/docs/Web/API/Document/createDocumentFragment)
-- [`eventTarget.addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener)
-- [`node.appendChild()`](/ja/docs/Web/API/Node/appendChild)
-- [`node.removeChild()`](/ja/docs/Web/API/Node/removeChild)
+- [`Array.forEach()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+- [`Document.createDocumentFragment()`](/ja/docs/Web/API/Document/createDocumentFragment)
+- [`Document.createElement()`](/ja/docs/Web/API/Document/createElement)
+- [`Element.setAttribute()`](/ja/docs/Web/API/Element/setAttribute)
+- [`Node.appendChild()`](/ja/docs/Web/API/Node/appendChild)
+- [`Node.removeChild()`](/ja/docs/Web/API/Node/removeChild)
+- [`Node.textContent`](/ja/docs/Web/API/Node/textContent)
 
 ## UI を構築する別の方法
 
@@ -180,15 +178,15 @@ JavaScript フレームワークは、この種の作業をはるかに簡単に
 </ul>
 ```
 
-これだけです。このスニペットにより、約 32 行のコードが 6 行に減ります。 ここでの中括弧と `v-` 属性に馴染みがなくても大丈夫です。 Vue 固有の構文については、モジュールの後半で学習します。ここで理解すべきことは、このコードはそれが表す UI に似ているのに対し、 Vanilla Javascript コードはそうではないということです。
+これだけです。このスニペットにより、約 32 行のコードが 6 行に減ります。 ここでの中括弧と `v-` 属性に馴染みがなくても大丈夫です。 Vue 固有の構文については、モジュールの後半で学習します。ここで理解すべきことは、このコードはそれが表す UI に似ているのに対し、バニラ Javascript コードはそうではないということです。
 
 Vue のおかげで、 UI を構築するために独自の関数を作成する必要がなくなりました。フレームワークは、最適化された効率的な方法でそれを処理します。ここでの私たちの唯一の役割は、各項目がどのように見えるべきかを Vue に記述することでした。 Vue に精通している開発者は、プロジェクトに参加すると何が起こっているのかをすぐに理解できます。これは Vue だけではありません。フレームワークを使用すると、チームだけでなく個人の効率も向上します。
 
-これと _似たようなこと_ を Vanilla Javascript でも実現できます。[テンプレートリテラル文字列](/ja/docs/Web/JavaScript/Reference/Template_literals)を使用すると、最終的な要素がどのようになるかを表す HTML の文字列を簡単に作成できます。これは、 To Do リストアプリケーションのような単純なものには便利なアイデアかもしれませんが、数千のデータレコードを管理し、ユーザーインターフェイスに同じ数の固有の要素をレンダリングする可能性がある大規模なアプリケーションでは維持できません。
+これと _似たようなこと_ をバニラ Javascript でも実現できます。[テンプレートリテラル文字列](/ja/docs/Web/JavaScript/Reference/Template_literals)を使用すると、最終的な要素がどのようになるかを表す HTML の文字列を簡単に作成できます。これは、 To Do リストアプリケーションのような単純なものには便利なアイデアかもしれませんが、数千のデータレコードを管理し、ユーザーインターフェイスに同じ数の固有の要素をレンダリングする可能性がある大規模なアプリケーションでは維持できません。
 
 ## フレームワークが私たちに与えてくれるその他のこと
 
-フレームワークが提供する他の利点を見てみましょう。前にも述べたように、フレームワークの利点は Vanilla Javascript でも実現可能ですが、フレームワークを使うことで、これらの問題を自分で解決しなければならないという認知的な負荷をすべて取り除くことができます。
+フレームワークが提供する他の利点を見てみましょう。前にも述べたように、フレームワークの利点はバニラ Javascript でも実現可能ですが、フレームワークを使うことで、これらの問題を自分で解決しなければならないという認知的な負荷をすべて取り除くことができます。
 
 ### ツール
 
@@ -198,7 +196,7 @@ Vue のおかげで、 UI を構築するために独自の関数を作成する
 
 ### コンパートメント化
 
-ほとんどの主要なフレームワークは、開発者がユーザーインターフェイスのさまざまな部分を _コンポーネント_ 、つまり相互に通信できる保守可能で再利用可能なコードの塊に抽象化することを推奨しています。特定のコンポーネントに関連するすべてのコードは 1 つのファイル (またはいくつかの特定のファイル)に保存できるため、開発者はそのコンポーネントに変更を加えるためにどこに行けばよいかを正確に知ることができます。 Vanilla Javascript アプリでは、これを効率的かつスケーラブルな方法で実現するには、独自の規則セットを作成する必要があります。多くの JavaScript 開発者は、自分のデバイスに任せると、 UI の一部に関連するすべてのコードが 1 つのファイル全体に、または別のファイル全体に分散されてしまう可能性があります。
+ほとんどの主要なフレームワークは、開発者がユーザーインターフェイスのさまざまな部分を _コンポーネント_ 、つまり相互に通信できる保守可能で再利用可能なコードの塊に抽象化することを推奨しています。特定のコンポーネントに関連するすべてのコードは 1 つのファイル (またはいくつかの特定のファイル)に保存できるため、開発者はそのコンポーネントに変更を加えるためにどこに行けばよいかを正確に知ることができます。バニラ Javascript アプリでは、これを効率的かつスケーラブルな方法で実現するには、独自の規則セットを作成する必要があります。多くの JavaScript 開発者は、自分のデバイスに任せると、 UI の一部に関連するすべてのコードが 1 つのファイル全体に、または別のファイル全体に分散されてしまう可能性があります。
 
 ### ルーティング
 
@@ -216,7 +214,7 @@ JavaScript とブラウザーのネイティブ機能を使用してルーター
 
 ### ツールに精通している
 
-Vanilla Javascript と同様に、フレームワークは学習に時間がかかり、癖があります。プロジェクトにフレームワークを使用することを決定する前に、そのフレームワークが自分にとって不利になるのではなく、自分にとって役立つように、その機能を十分に学習する時間を確保し、チームメイトもそのフレームワークに慣れているかどうかを確認してください。
+バニラ Javascript と同様に、フレームワークは学習に時間がかかり、癖があります。プロジェクトにフレームワークを使用することを決定する前に、そのフレームワークが自分にとって不利になるのではなく、自分にとって役立つように、その機能を十分に学習する時間を確保し、チームメイトもそのフレームワークに慣れているかどうかを確認してください。
 
 ### オーバーエンジニアリング
 
@@ -291,13 +289,13 @@ Vue チームは [Vue を他の一般的なフレームワークと徹底的に�
 
 **コンテンツ管理システム** (**CMS: Content-management systems**) は、ユーザーが自分で直接コードを書かずにウェブ用のコンテンツを作成できるツールのことです。大規模なプロジェクト、特にコーディング能力に乏しいコンテンツ・ライターからのインプットを必要とするプロジェクトや時間を節約したいプログラマーにとっては良いソリューションです。しかし CMS のセットアップにはかなりの時間を要し、 CMS を利用するということは、少なくともウェブサイトの最終的なアウトプットをコントロールする手段を放棄することを意味します。例えば、選択したCMSがデフォルトでアクセシブルなコンテンツを作成しない場合、これを改善するのは難しいことが多いです。
 
-一般的な例としては、 [Wordpress](https://wordpress.com/) 、 [Joomla](https://www.joomla.org/) 、 [Drupal](https://www.drupal.org/) などがあります。
+有名な CMS システムには、 [Wordpress](https://wordpress.com/)、[Joomla](https://www.joomla.org/)、[Drupal](https://www.drupal.org/) などがあります。
 
 ### サーバーサイドレンダリング
 
 **サーバーサイドレンダリング** (**SSR: Server-side rendering**) は、単一ページアプリケーションをレンダリングするのが _サーバー_ の仕事であるアプリケーションアーキテクチャです。これは、JavaScript アプリケーションを構築する最も一般的で最も簡単な方法である _クライアントサイドレンダリング_ の逆です。サーバーサイドレンダリングは、レンダリングされた HTML ファイルをクライアントのデバイスに送信するだけなので、クライアントのデバイスでは簡単ですが、クライアント側でレンダリングされるアプリケーションに比べてセットアップが難しい場合があります。
 
-このモジュールで説明されているフレームワークはすべて、クライアントサイドのレンダリングだけでなくサーバーサイドのレンダリングもサポートしています。 React については [Next.js](https://nextjs.org/) 、Vue については [Nuxt.js](https://nuxtjs.org/)(はい、わかりにくいです、いいえ、これらのプロジェクトは関係ありません!)、 Ember の場合は [FastBoot](https://github.com/ember-fastboot/ember-cli-fastboot)、 Angular の場合は [Angular Universal](https://angular.io/guide/universal) をチェックしてください。
+このモジュールで説明されているフレームワークはすべて、クライアントサイドのレンダリングだけでなくサーバーサイドのレンダリングもサポートしています。 React については [Next.js](https://nextjs.org/) 、Vue については [Nuxt](https://nuxtjs.com/)（はい、わかりにくいです、いいえ、これらのプロジェクトは関係ありません!）、 Ember の場合は [FastBoot](https://github.com/ember-fastboot/ember-cli-fastboot)、 Angular の場合は [Angular Universal](https://angular.io/guide/universal) をチェックしてください。
 
 > **メモ:** SSR ソリューションの中にはコミュニティによって作成および保守されているものもありますが、フレームワークの保守者によって提供される「公式」ソリューションもあります。
 
@@ -307,7 +305,7 @@ Vue チームは [Vue を他の一般的なフレームワークと徹底的に�
 
 静的サイトには、必要な数の固有のページを含めることができます。フレームワークを使用すると、クライアント側の JavaScript アプリケーションを迅速に作成できるようになりますが、静的サイトジェネレーターを使用すると、個別に作成する必要があった HTML ファイルを迅速に作成できます。フレームワークと同様、静的サイトジェネレーターを使用すると、開発者はウェブページの共通部分を定義するコンポーネントを作成し、それらのコンポーネントを組み合わせて最終ページを作成できます。静的サイトジェネレーターのコンテキストでは、これらのコンポーネントは **テンプレート** と呼ばれます。静的サイトジェネレーターによって構築されたウェブページは、フレームワークアプリケーションのホームとなることもあります。たとえば、静的に生成されたウェブサイトの特定のページで、ユーザーがそのページにアクセスしたときに React アプリケーションを起動したい場合は、それが可能です。
 
-静的サイトジェネレーターはかなり昔から存在しており、最近のウェブの歴史の中で少しずつ復活を遂げています。 [Hugo](https://gohugo.io/) 、 [Jekyll](https://jekyllrb.com/) 、[Eleventy](https://www.11ty.dev/) および [Gatsby](https://www.gatsbyjs.com/) などのいくつかの強力なオプションが利用可能になりました。
+静的サイトジェネレーターはかなり古くから存在しており、最近になって新たな関心と革新の波が押し寄せています。[Astro](https://astro.build/)、[Eleventy](https://www.11ty.dev/)、[Hugo](https://gohugo.io/)、[Jekyll](https://jekyllrb.com/)、[Gatsby](https://www.gatsbyjs.com/) などのいくつかの強力な選択肢が利用可能になりました。
 
 静的サイトジェネレーター全体について詳しく知りたい場合は、Tatiana Mac の [Eleventy の初心者ガイド](https://www.tatianamac.com/posts/beginner-eleventy-tutorial-parti/)を参照してください。シリーズの最初の記事では、静的サイトジェネレーターとは何か、そしてそれがウェブコンテンツを公開する他の手段とどのように関連するのかについて説明します。
 

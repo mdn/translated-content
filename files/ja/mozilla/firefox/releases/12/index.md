@@ -3,6 +3,8 @@ title: Firefox 12 for developers
 slug: Mozilla/Firefox/Releases/12
 ---
 
+{{FirefoxSidebar}}
+
 Firefox 12 は 米国時間 2012 年 4 月 24 日にリリースされました。この記事は開発者に影響がある Firefox 12 での変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧

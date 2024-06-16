@@ -158,7 +158,6 @@ slug: Web/JavaScript/Reference
 
 - {{jsxref("Statements/do...while", "do...while")}}
 - {{jsxref("Statements/for", "for")}}
-- {{jsxref("Statements/for_each...in", "for each...in")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Statements/for...of", "for...of")}}
 - {{jsxref("Statements/for-await...of", "for await...of")}}
