@@ -90,14 +90,12 @@ clip-path: shape(
 
     `<curve-command>`：指定为 `curve [by | to] <coordinate-pair> via <coordinate-pair> [<coordinate-pair>]`。此命令将一个[贝塞尔曲线命令](/zh-CN/docs/Web/SVG/Attribute/d#cubic_bézier_curve)添加到形状命令列表中。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对”还是“绝对”。
 
-    - 如果只提供一个 `<coordinate-pair>`，该命令会绘制一个[二次贝塞尔曲线](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d#quadratic_bézier_curve)，它由三个点（起点、控制点和终点）定义。
+    - 如果只提供一个 `<coordinate-pair>`，该命令会绘制一个[二次贝塞尔曲线](/zh-CN/docs/Web/SVG/Attribute/d#quadratic_bézier_curve)，它由三个点（起点、控制点和终点）定义。
     - 如果提供两个 `<coordinate-pair>` 值，该命令会绘制一个三次贝塞尔曲线，它由四个点（起点、两个控制点和终点）定义。
 
     `<smooth-command>`：指定为 `smooth [by | to] <coordinate-pair> [via <coordinate-pair>]`。此命令将一个平滑的[贝塞尔曲线命令](/zh-CN/docs/Web/SVG/Attribute/d#cubic_bézier_curve)添加到形状命令列表中。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对“还是”绝对“。
-   
     - 如果省略 `via <coordinate-pair>`，该命令会绘制一条平滑的二次贝塞尔曲线，该曲线使用前一个控制点和当前终点来定义。
     - 如果包含可选的 `via` 关键字，则通过 `<coordinate-pair>` 指定曲线的控制点，绘制一条平滑的三次贝塞尔曲线，该曲线由前一个控制点、当前控制点和当前终点定义。
-   
     平滑曲线确保形状的连续过渡，而二次曲线则不然。平滑的二次曲线使用单个控制点来保持无缝过渡，而平滑的三次曲线使用两个控制点提供更精细的过渡。
 
     `<arc-command>`：指定为 `arc [by | to] <coordinate-pair> of <length-percentage> [<length-percentage>] [<arc-sweep> | <arc-size> | rotate <angle>]`。此命令将一个[椭圆弧曲线命令](/zh-CN/docs/Web/SVG/Attribute/d#elliptical_arc_curve)添加到形状命令列表中。它在起始点和结束点之间绘制椭圆弧。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对”还是“绝对”。
@@ -135,7 +133,7 @@ clip-path: shape(
 - `shape()` 支持各种 CSS 单位，包括百分比、`rem` 和 `em`。相反，`path()` 将形状定义为单个字符串，并将单位限制为 `px`。
 - `shape()` 还允许使用 CSS 数学函数，例如 {{cssxref("calc")}}、{{cssxref("max")}} 和 {{cssxref("abs")}}，在定义形状时提供了更多的灵活性。
 
-## 正式语法
+## 形式语法
 
 {{csssyntax}}
 
