@@ -17,7 +17,7 @@ l10n:
 
 ```js-nolint
 browser.browserAction.setBadgeBackgroundColor(
-  details // object
+  details // 对象
 )
 ```
 
@@ -56,7 +56,7 @@ Firefox 中的默认颜色为：`[217, 0, 0, 255]`。
 
 ## 示例
 
-徽章背景颜色从红色变为绿色，当浏览器操作被点击时：
+当浏览器操作被点击时，徽章背景颜色从红色变为绿色：
 
 ```js
 browser.browserAction.setBadgeText({ text: "1234" });
