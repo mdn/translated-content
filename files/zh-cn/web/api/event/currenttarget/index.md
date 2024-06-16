@@ -7,15 +7,15 @@ l10n:
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
 
-**`currentTarget`** 是 {{domxref("Event")}} 接口的一个只读属性，用于标识事件处理程序所附加的元素。
+{{domxref("Event")}} 接口的 **`currentTarget`** 只读属性用于标识事件处理器所附加的元素。
 
-这并不总是与触发事件的元素相同，因为事件可能在具有处理程序的元素的后代上触发，然后通过事件[冒泡](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling)到具有处理程序的元素。事件的触发元素由 {{domxref("Event.target")}} 给出。
+这并不总是与触发事件的元素相同，因为事件可能在具有处理器的元素的后代上触发，然后通过事件[冒泡](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件冒泡)到具有处理器的元素。事件的触发元素由 {{domxref("Event.target")}} 给出。
 
-请注意，`currentTarget` 的值仅在事件处理程序中可用。在事件处理程序外部，它将为 `null`。这意味着，例如，如果在事件处理程序内部引用 `Event` 对象然后在事件处理程序外部访问其 `currentTarget` 属性，则其值将为 `null`。
+请注意，`currentTarget` 的值仅在事件处理器中可用。在事件处理器外部，它将为 `null`。这意味着，例如，如果在事件处理器内部获得 `Event` 对象的引用然后在事件处理器外部访问其 `currentTarget` 属性，则其值将为 `null`。
 
 ## 值
 
-一个 {{domxref("EventTarget")}}，表示当前事件处理程序所附加的对象。
+一个 {{domxref("EventTarget")}}，表示当前事件处理器所附加的对象。
 
 ## 示例
 
@@ -25,7 +25,7 @@ l10n:
 
 #### HTML
 
-页面包含一个包含“child” `<div>` 的“parent” {{htmlelement("div")}}。
+页面包含一个包含“子元素” `<div>` 的“父元素” {{htmlelement("div")}}。
 
 ```html
 <div id="parent">
@@ -52,9 +52,9 @@ div {
 
 #### JavaScript
 
-事件处理程序附加到父元素。它记录 `event.currentTarget` 和 `event.target` 的值。
+事件处理器被附加到父元素。它记录 `event.currentTarget` 和 `event.target` 的值。
 
-我们还有一个“Reset”按钮，只需重新加载示例即可。
+我们还有一个用于重新加载示例的“重置”按钮。
 
 ```js
 const output = document.querySelector("#output");
@@ -72,11 +72,11 @@ reset.addEventListener("click", () => document.location.reload());
 
 #### 结果
 
-如果你点击子 `<div>` 中，则 `target` 将标识子元素。如果你点击父 `<div>` 中，则 `target` 将标识父元素。
+如果你在子 `<div>` 中点击，则 `target` 将标识子元素。如果你在父 `<div>` 中点击，则 `target` 将标识父元素。
 
-在这两种情况下，`currentTarget` 都标识父元素，因为那是处理程序附加到的元素。
+在这两种情况下，`currentTarget` 都标识父元素，因为那是处理器附加到的元素。
 
-{{EmbedLiveSample("currentTarget 与 target", 100, 250)}}
+{{EmbedLiveSample("currentTarget 与 target 的区别", 100, 250)}}
 
 ## 规范
 
@@ -89,4 +89,4 @@ reset.addEventListener("click", () => document.location.reload());
 ## 参见
 
 - [事件目标的比较](/zh-CN/docs/Web/API/Event/Comparison_of_Event_Targets)
-- [事件冒泡](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling)
+- [事件冒泡](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件冒泡)
