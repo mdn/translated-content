@@ -13,7 +13,7 @@ slug: Learn/JavaScript/Building_blocks
 
 시작하기 전에, 기본적인 [HTML](/ko/docs/Learn/HTML/Introduction_to_HTML)과 [CSS](/ko/docs/Learn/CSS/First_steps) 지식을 알고 계셔야 하고, 또한 지난 모듈인 [JavaScript 첫걸음](/ko/docs/Learn/JavaScript/First_steps)을 학습하셔야 합니다.
 
-> **참고:** 여기 나온 코드를 작성하고 실행해 볼 수 없는 환경이라면 (태블릿, 스마트폰, 기타 장치), [JSBin](http://jsbin.com/)이나 [Glitch](https://glitch.com)에서 대부분의 예제를 시험해 볼 수 있습니다.
+> **참고:** 여기 나온 코드를 작성하고 실행해 볼 수 없는 환경이라면 (태블릿, 스마트폰, 기타 장치), [JSBin](https://jsbin.com/)이나 [Glitch](https://glitch.com)에서 대부분의 예제를 시험해 볼 수 있습니다.
 
 ## 가이드
 

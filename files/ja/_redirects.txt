@@ -2374,7 +2374,6 @@
 /ja/docs/Security/CSP_(Content_Security_Policy)	/ja/docs/Web/HTTP/CSP
 /ja/docs/Security/HTTP_Strict_Transport_Security	/ja/docs/Web/HTTP/Headers/Strict-Transport-Security
 /ja/docs/Security/混在コンテンツ	/ja/docs/Web/Security/Mixed_content
-/ja/docs/Security/混在コンテンツ/How_to_fix_website_with_mixed_content	/ja/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
 /ja/docs/Server-sent_events	/ja/docs/Web/API/Server-sent_events
 /ja/docs/Server-sent_events/Using_server-sent_events	/ja/docs/Web/API/Server-sent_events/Using_server-sent_events
 /ja/docs/Setting_up_extension_development_environment	/ja/docs/orphaned/Setting_up_extension_development_environment
