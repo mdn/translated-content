@@ -1,6 +1,8 @@
 ---
 title: in
 slug: Web/JavaScript/Reference/Operators/in
+l10n:
+  sourceCommit: 13b2fe46243beed6dc29f5d3defa716abe79c1f9
 ---
 
 {{jsSidebar("Operators")}}
