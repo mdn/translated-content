@@ -7,45 +7,41 @@ l10n:
 
 {{AddonSidebar}}
 
-> **备注：** 尽管这些 API 基于 [Chrome devtools API](https://developer.chrome.com/docs/extensions/mv3/devtools/)，但 Firefox 中仍有许多功能尚未实现，因此这里未记录。要查看当前缺少哪些功能，请参阅 [devtools API 的限制](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#devtools_APIs_的限制)。
+> **备注：** 尽管这些 API 基于 [Chrome devtools API](https://developer.chrome.com/docs/extensions/mv3/devtools/)，但 Firefox 中仍有许多特性尚未实现，因此这里未记录。要查看当前缺少哪些特性，请参阅 [devtools API 的局限性](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#devtools_api_的局限性)。
 
 `devtools.panels` API 允许 devtools 扩展在 devtools 窗口内定义其用户界面。
 
 devtools 窗口托管了多个独立的工具——JavaScript 调试器、网络监视器等。顶部的一排标签让用户可以在不同的工具之间切换。每个工具用户界面的窗口称为“面板”。
 
-使用 `devtools.panels` API，你可以在 devtools 窗口中创建新的面板。
+使用 `devtools.panels` API，你可以在开发者工具窗口中创建新的面板。
 
 像所有 `devtools` API 一样，只有在 [devtools_page](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) manifest.json 键定义的文档中运行的代码，或扩展创建的其他开发者工具文档（如扩展创建的面板托管的文档）才能使用这个 API。有关更多信息，请参见[扩展开发者工具](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)。
 
 ## 类型
 
 - [`devtools.panels.ElementsPanel`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel)
-  - : 表示浏览器 devtools 中的 HTML/CSS 检查器。
+  - : 表示浏览器开发者工具中的 HTML/CSS 检查器。
 - [`devtools.panels.ExtensionPanel`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel)
-  - : 表示由扩展创建的 devtools 面板。
+  - : 表示由扩展创建的开发者工具面板。
 - [`devtools.panels.ExtensionSidebarPane`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane)
-  - : 表示扩展添加到浏览器 devtools 中 HTML/CSS 检查器的窗格。
+  - : 表示扩展添加到浏览器开发者工具中 HTML/CSS 检查器的窗格。
 
 ## 属性
 
 - [`devtools.panels.elements`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/elements)
   - : 对 [`ElementsPanel`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel) 对象的引用。
 - [`devtools.panels.themeName`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/themeName)
-  - : 当前 devtools 主题的名称。
+  - : 当前开发者工具主题的名称。
 
 ## 函数
 
 - [`devtools.panels.create()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/create)
-  - : 创建一个新的 devtools 面板。
+  - : 创建一个新的开发者工具面板。
 
 ## 事件
 
 - [`devtools.panels.onThemeChanged`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/onThemeChanged)
-  - : 当 devtools 主题更改时触发。
-
-## 示例扩展
-
-- [devtools-panels](https://github.com/mdn/webextensions-examples/tree/main/devtools-panels)
+  - : 当开发者工具主题更改时触发。
 
 ## 浏览器兼容性
 
