@@ -323,6 +323,6 @@ body {
 
 - {{cssxref("clip-path")}}
 - {{cssxref("offset-path")}}
-- [CSS shapes](/zh-CN/docs/Web/CSS/CSS_shapes)模块
+- [CSS shapes](/zh-CN/docs/Web/CSS/CSS_shapes) 模块
 - [形状概述](/zh-CN/docs/Web/CSS/CSS_shapes/Overview_of_shapes)指南
 - [基本形状](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes)指南
