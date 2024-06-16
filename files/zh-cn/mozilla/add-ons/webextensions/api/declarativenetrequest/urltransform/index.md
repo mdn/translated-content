@@ -11,7 +11,7 @@ l10n:
 
 ## 类型
 
-该类型的值是对象。它们包含以下属性：
+该类型的值是对象，包含以下属性：
 
 - `fragment` {{optional_inline}}
   - : `string`。请求的新片段。应为空（此情况下现有片段将被清除），或者应以 `#` 开头。
@@ -38,7 +38,7 @@ l10n:
     - `removeParams` {{optional_inline}}
       - : `string` 数组。要删除的查询键列表。
 - `scheme` {{optional_inline}}
-  - : `string`。请求的新协议。允许的值有 `"http"`、`"https"`，以及扩展的协议，例如 Firefox 中的“moz-extension”或 Chrome 中的“chrome-extension”。当使用扩展协议时，必须指定 `host` 以生成有意义的重定向目标。
+  - : `string`。请求的新方案（scheme）。允许的值有 `"http"`、`"https"`，以及扩展的方案，例如 Firefox 中的“moz-extension”或 Chrome 中的“chrome-extension”。当使用扩展的方案时，必须指定 `host` 以生成有意义的重定向目标。
 - `username` {{optional_inline}}
   - : `string`。请求的新用户名。
 
