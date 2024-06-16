@@ -7,15 +7,12 @@ slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeHistory
 
 Limpa o histórico de páginas web que o usuário vistou (histórico de navegação)
 
-
 Você pode usar o parâmetro `removalOptions`, em que é um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}, para:
 
 - limpar apenas os registros de páginas visitadas em determinado período.
 - controlar se limpa os registros apenas de uma página web normal ou se limpa os registros de um app e extensões hospedados.
 
-
 Esta é uma função assíncrona que retorna uma [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-
 
 ## Sintaxe
 
@@ -30,16 +27,13 @@ let removing = browser.browsingData.removeHistory(
 - `removalOptions`
   - : `object`. Um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}, que pode ser usado para limpar apenas os registros de páginas web visitadas após determinado tempo, e limpa os registros apenas de uma página web normal ou limpa os registros de apps e extensões hospedados.
 
-
 ### Valor retornado
 
 Uma [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise) que será realizada sem argumentos quando a remoção for finalizada. Se ocorrer qualquer erro, a promise será rejeitada com uma mensagem de erro.
 
-
 ## Exemplos
 
 Remove registros de páginas visitadas na última semana:
-
 
 ```js
 function onRemoved() {
