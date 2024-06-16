@@ -28,7 +28,7 @@ function potentiallyBuggyCode() {
 
 [![Paused at a debugger statement.](screen_shot_2014-02-07_at_9.14.35_am.png)](screen_shot_2014-02-07_at_9.14.35_am.png)
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

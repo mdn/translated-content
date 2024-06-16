@@ -2,14 +2,16 @@
 title: container-name
 slug: Web/CSS/container-name
 l10n:
-  sourceCommit: bed59f268d5e299beb538e435f08c4f4ce685980
+  sourceCommit: 4b6b77bc36496c88dcbe477ec46da678a85d8e6e
 ---
 
 {{CSSRef}}
 
-**container-name** は [CSS](/ja/docs/Web/CSS) のプロパティで、[コンテナークエリー](/ja/docs/Web/CSS/CSS_container_queries)において [@container](/ja/docs/Web/CSS/@container) アットルールで使用されるクエリーコンテナー名のリストを指定します。
+**container-name** は [CSS](/ja/docs/Web/CSS) のプロパティで、[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)において [@container](/ja/docs/Web/CSS/@container) アットルールで使用されるクエリーコンテナー名のリストを指定します。
 コンテナークエリーでは、格納コンテキストを持つ最も近い祖先のサイズに基づいて要素にスタイルが適用されます。
 コンテナーのコンテキストの名前が指定されたとき、コンテナーのコンテキストのある最も近い祖先の代わりに {{Cssxref("@container")}} アットルールを用いて固有のターゲット仕様にすることができます。
+
+> **メモ:** {{cssxref("container-type")}} プロパティと `container-name` プロパティを使用すると、 {{cssxref("contain")}} プロパティの `style` 値と `layout` 値が自動的に適用されます。
 
 ## 構文
 
@@ -102,7 +104,7 @@ container-name: unset;
 }
 ```
 
-コンテナクエリーの書き方については、[CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_container_queries)のページを参照してください。
+コンテナクエリーの書き方については、[CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)のページを参照してください。
 
 ### 複数のコンテナー名の使用
 
@@ -142,7 +144,8 @@ container-name: unset;
 
 ## 関連情報
 
-- [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_container_queries)
+- [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
+- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
 - {{Cssxref("@container")}} アットルール
 - CSS {{Cssxref("container")}} 一括指定プロパティ
 - CSS {{Cssxref("container-type")}} プロパティ

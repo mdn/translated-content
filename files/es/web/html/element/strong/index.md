@@ -3,6 +3,8 @@ title: strong
 slug: Web/HTML/Element/strong
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - El elemento **strong** es el apropiado para marcar con especial énfasis las partes más importantes de un texto.

@@ -15,7 +15,7 @@ Pour accomplir toutes ces choses, l'API de périphériques WebXR fournit les fon
 
 - Trouver un périphérique de sortie VR ou AR compatible
 - Afficher une scène 3D sur le périphérique à la fréquence d'images appropriée
-- (Optionellement) refléter la sortie sur un affichage 2D
+- (Optionnellement) refléter la sortie sur un affichage 2D
 - Créer des vecteurs représentant les mouvements des commandes d'entrée
 
 Au niveau le plus basique, une scène est présentée en 3D en calculant la perspective à appliquer à la scène dans le but de l'afficher du point de vue de chacun des yeux de l'utilisateur en calculant la position de chaque oeil et en affichant la scène de cette position, regardant dans la même direction que l'utilisateur. Ces deux images sont conçuent à l'intérieur d'une seule mémoire tampon, avec l'image de rendu pour l'oeil gauche dans la partie gauche et l'image de rendu de l'oeil droit dans la partie droite de la mémoire tampon. Une fois que les perspectives des deux yeux sur la scène ont été conçues, la mémoire résultante est délivrée au périphérique WebXR pour être présentée à l'utilisateur via son casque ou tout autre périphérique d'affichage approprié.

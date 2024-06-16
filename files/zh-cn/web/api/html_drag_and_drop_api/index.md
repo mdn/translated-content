@@ -222,7 +222,7 @@ function dragstart_handler(ev) {
 
 - [使用 `DataTransfer` 接口拷贝和移动元素](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html)
 - [使用 `DataTransferListItem` 接口拷贝和移动元素](http://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
-- 拖放文件；仅 Firefox 支持：<http://jsfiddle.net/9C2EF/>
+- 拖放文件；仅 Firefox 支持：<https://jsfiddle.net/9C2EF/>
 - 拖放文件；所有浏览器支持：[https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
 - 使用了拖放 API 的停车小页面：<https://park.glitch.me/> （在 [这里](https://glitch.com/edit/#!/park) 编辑）
 

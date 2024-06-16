@@ -5,13 +5,11 @@ l10n:
   sourceCommit: 6754a50ec57c8c9758a65a42691878e5fd1f910a
 ---
 
-{{DefaultAPISidebar("Device Orientation Events")}} {{securecontext_header}}
-
-{{DefaultAPISidebar("Device Orientation Events")}} {{securecontext_header}}
+{{DefaultAPISidebar("Device Orientation Events")}}{{securecontext_header}}
 
 次第に、ウェブを利用可能な端末は、自身の**方向**を特定できるようになってきました。つまり端末は、重力との関係による自身の向きの変化を示すデータを報告できます。特に携帯電話のようなハンドヘルド端末は、表示内容が直立し続けるよう自動的に回転させるためにこの情報を使用できます。画面の幅が高さより大きくなるように端末を回転させたときは、ウェブコンテンツをワイドスクリーン表示にします。
 
-方向の情報を制御する JavaScript イベントが 2 つあります。ひとつは {{domxref("DeviceOrientationEvent")}} であり、加速度センサーが端末の方向の変化を検出したときに発生します。 orientation イベントが報告するデータを受け取って処理することで、ユーザが端末を動かすことによる方向や高さの変化に対してインタラクティブに応答できるようになります。
+方向の情報を制御する JavaScript イベントが 2 つあります。ひとつは {{domxref("DeviceOrientationEvent")}} であり、加速度センサーが端末の方向の変化を検出したときに発生します。 orientation イベントが報告するデータを受け取って処理することで、ユーザーが端末を動かすことによる方向や高さの変化に対してインタラクティブに応答できるようになります。
 
 もうひとつのイベントは {{domxref("DeviceMotionEvent")}} であり、加速度が変化したときに発生します。こちらは方向ではなく加速度の変化を監視することが、{{domxref("DeviceOrientationEvent")}} との違いです。一般的に {{domxref("DeviceMotionEvent")}} を検出できるセンサーには、可動部があるストレージ装置を保護するためノートパソコンに内蔵するものも含みます。{{domxref("DeviceOrientationEvent")}} は、モバイル端末でとても一般的です。
 

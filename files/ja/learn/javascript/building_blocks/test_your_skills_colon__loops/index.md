@@ -2,7 +2,7 @@
 title: "スキルテスト: ループ"
 slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Loops
 l10n:
-  sourceCommit: b072a7e62002e4765626c52dfdac5159071938e0
+  sourceCommit: e92c9798c78de4c341ba3fbb14eab6516e033fb6
 ---
 
 {{learnsidebar}}

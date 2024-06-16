@@ -40,7 +40,7 @@ var buf1 = new ArrayBuffer(8);
 var buf2 = buf1.slice(0);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -48,6 +48,6 @@ var buf2 = buf1.slice(0);
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("ArrayBuffer")}}

@@ -45,4 +45,4 @@ public static void main(String[] args)
 
 ## 参见
 
-- [Java 内部类型签名](https://zh.wikipedia.org/wiki/Type_signature#Java) 在维基百科上
+- 维基百科上的 [Java 内部类型签名](https://zh.wikipedia.org/wiki/类型签名#Java)

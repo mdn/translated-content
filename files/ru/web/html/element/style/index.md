@@ -3,9 +3,9 @@ title: <style> - элемент для указания стилей
 slug: Web/HTML/Element/style
 ---
 
-## Краткое описание
+{{HTMLSidebar}}
 
-_HTML-элемент **\<style>**_ содержит стилевую информацию для документа или его части. По умолчанию стилевые инструкции внутри этого элемента считаются написанными на [CSS](/ru/docs/Web/CSS).
+HTML-элемент **`<style>`** содержит стилевую информацию для документа или его части. По умолчанию стилевые инструкции внутри этого элемента считаются написанными на [CSS](/ru/docs/Web/CSS).
 
 - _[Категории содержимого](/ru/docs/HTML/Content_categories)_[Metadata content](/ru/docs/Web/HTML/Content_categories#Metadata_content), and if the `scoped` attribute is present: [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content).
 - _Permitted content_ Style information matching the language of the `type` attribute.
@@ -78,5 +78,3 @@ This element includes the [global attributes](/ru/docs/Web/HTML/Global_attribute
 ## Смотрите также
 
 - Элемент {{HTMLElement("link")}}, позволяющий использовать внешние таблицы стилей.
-
-{{HTMLSidebar}}

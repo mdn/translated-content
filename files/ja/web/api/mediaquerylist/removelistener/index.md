@@ -3,7 +3,7 @@ title: "MediaQueryList: removeListener() メソッド"
 short-title: removeListener()
 slug: Web/API/MediaQueryList/removeListener
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
 {{APIRef("CSSOM")}}{{Deprecated_Header}}

@@ -11,4 +11,4 @@ slug: Glossary/Prototype
 
 ## 参见
 
-- [Software Prototyping](https://zh.wikipedia.org/wiki/Software_Prototyping) 维基百科
+- 维基百科上的[软件原型](https://en.wikipedia.org/wiki/Software_prototyping)

@@ -17,7 +17,7 @@ En su corazón, {{glossary("HTML")}} es un lenguaje muy sencillo compuesto de {{
 
 Antes de empezar este módulo, no necesitas conocimientos previos de HTML, pero deberías estar, por lo menos, familiarizado con el uso básico de computadoras, y usar la Web pasivamente (es decir, sólo revisándola y consumiendo el contenido). Debes tener configurado un entorno de trabajo básico (como se detalla en [Instalación de software básico](/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software)), y comprender cómo crear y administrar archivos (como se detalla en [Manejo de archivos](/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files)). Ambos son parte de nuestro módulo completo [Introducción a la web](/es/docs/Learn/Getting_started_with_the_web) para principiantes.
 
-> **Nota:** Si estás trabajando en una computadora, tablet u otro dispositivo en donde no tengas la capacidad de crear tus propios archivos, podrías probar (en su mayoría) el código de los ejemplos en un programa para escribir código en línea como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/).
+> **Nota:** Si estás trabajando en una computadora, tablet u otro dispositivo en donde no tengas la capacidad de crear tus propios archivos, podrías probar (en su mayoría) el código de los ejemplos en un programa para escribir código en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 

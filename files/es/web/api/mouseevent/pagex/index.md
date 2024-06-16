@@ -3,7 +3,7 @@ title: event.pageX
 slug: Web/API/MouseEvent/pageX
 ---
 
-{{ ApiRef() }}
+{{APIRef("UI Events")}}
 
 ### Sumario
 

@@ -2,7 +2,7 @@
 title: <blend-mode>
 slug: Web/CSS/blend-mode
 l10n:
-  sourceCommit: 31a11c2af1ecf81524971f85424b0462334be3c4
+  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
 {{CSSRef}}
@@ -418,9 +418,10 @@ selectElem.addEventListener("change", () => {
 
 ## 関連情報
 
+- [CSS 合成と混合](/ja/docs/Web/CSS/CSS_compositing_and_blending)モジュールで、 `<blend-mode>` の値を定義しています。
 - このデータ型を使用するプロパティ: {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
 
 様々な混合モードの他のウェブサイトにおける解説:
 
-- Wikipedia の[ブレンドモード](https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%AC%E3%83%B3%E3%83%89%E3%83%A2%E3%83%BC%E3%83%89)の記事
+- [ブレンドモード](https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%AC%E3%83%B3%E3%83%89%E3%83%A2%E3%83%BC%E3%83%89)（ウィキペディア）
 - [Adobe Photoshop における描画モード](https://helpx.adobe.com/jp/photoshop/using/blending-modes.html) (Adobe)

@@ -1,9 +1,11 @@
 ---
-title: Blob.stream()
+title: Blob：stream() 方法
 slug: Web/API/Blob/stream
+l10n:
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 {{domxref("Blob")}} 接口的 **`stream()`** 方法返回一个 {{domxref("ReadableStream")}} 对象，读取它将返回包含在 `Blob` 中的数据。
 
@@ -40,5 +42,5 @@ stream()
 
 ## 参见
 
-- {{domxref("Body.body")}}
+- {{domxref("Response.body")}}
 - [Streams API](/zh-CN/docs/Web/API/Streams_API)

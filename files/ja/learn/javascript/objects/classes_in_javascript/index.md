@@ -164,7 +164,7 @@ class Student extends Person {
 }
 ```
 
-このクラス宣言では、`#year` は [プライベートデータプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_class_fields)です。`Student` オブジェクトを作成し、内部で `#year` を使用することができますが、オブジェクトの外のコードが `#year` にアクセスしようとすると、ブラウザはエラーを報告します。
+このクラス宣言では、`#year` は [プライベートデータプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_class_fields)です。`Student` オブジェクトを作成し、内部で `#year` を使用することができますが、オブジェクトの外のコードが `#year` にアクセスしようとすると、ブラウザーはエラーを報告します。
 
 ```js
 const summers = new Student("Summers", 2);

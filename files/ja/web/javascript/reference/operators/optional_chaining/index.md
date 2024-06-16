@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Optional_chaining
 
 **オプショナルチェーン** (optional chaining) 演算子 (**`?.`**) は、接続されたオブジェクトチェーンの深くに位置するプロパティの値を、チェーン内の各参照が正しいかどうかを明示的に確認せずに読み込むことを可能にします。
 
-`?.` 演算子の機能は `.` チェーン演算子と似ていますが、参照が [nullish](/ja/docs/Glossary/Nullish) ({{JSxRef("null")}} または {{JSxRef("undefined")}}) の場合にエラーとなるのではなく、式が短絡され `undefined` が返されるところが異なります。関数呼び出しで使用すると、与えられた関数が存在しない場合、 `undefined` を返します。
+`?.` 演算子の機能は `.` チェーン演算子と似ていますが、参照が [nullish](/ja/docs/Glossary/Nullish) ([`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または {{JSxRef("undefined")}}) の場合にエラーとなるのではなく、式が短絡され `undefined` が返されるところが異なります。関数呼び出しで使用すると、与えられた関数が存在しない場合、 `undefined` を返します。
 
 これは、参照が失われた可能性のある連結されたプロパティにアクセスする時、結果的に短く単純な式になります。また、必要なプロパティの存在が保証されていない場合にオブジェクトのコンテンツを探索するのにも役立ちます。
 

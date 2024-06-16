@@ -1,5 +1,6 @@
 ---
 title: "CanvasRenderingContext2D: getImageData() メソッド"
+short-title: getImageData()
 slug: Web/API/CanvasRenderingContext2D/getImageData
 l10n:
   sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
@@ -7,7 +8,7 @@ l10n:
 
 {{APIRef("Canvas API")}}
 
-Canvas 2D API の {{domxref("CanvasRenderingContext2D")}} メソッド **`getImageData()`** は、キャンバスの指定の部分に対応するピクセルデータを表す {{domxref("ImageData")}} オブジェクトを返します。
+{{domxref("CanvasRenderingContext2D")}} の **`getImageData()`** は Canvas 2D API のメソッドで、キャンバスの指定の部分に対応するピクセルデータを表す {{domxref("ImageData")}} オブジェクトを返します。
 
 このメソッドは、キャンバスの変換行列の影響を受けません。指定された矩形がキャンパスの境界の外にはみ出る場合は、返される `ImageData` オブジェクトのキャンバスの外側の部分は透明な黒になります。
 

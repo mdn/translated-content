@@ -2,7 +2,7 @@
 title: CSS プロパティページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template
 l10n:
-  sourceCommit: bfdfe970004b21218ef4ab6a4274d4fb29c4742b
+  sourceCommit: 90026d3d74fcc3b4dd81d9365b5c26752b76dd56
 ---
 
 {{MDNSidebar}}

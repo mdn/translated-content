@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("UI Events")}}
 
-{{domxref("MouseEvent")}} 의 읽기 전용 속성인 **`offsetX`**는 해당 이벤트와 대상 노드 내 여백 사이의 마우스 포인터의 수평 좌표를 제공합니다.
+{{domxref("MouseEvent")}} 의 읽기 전용 속성인 **`offsetX`** 는 해당 이벤트와 대상 노드 내 여백 사이의 마우스 포인터의 수평 좌표를 제공합니다.
 
 ## 값
 

@@ -2,7 +2,7 @@
 title: 高度なテキスト整形
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 l10n:
-  sourceCommit: 65b9418c7d0e3a331ac50249adf0024f44789923
+  sourceCommit: 960b382072f417a71194bf906261d9a6d1519df1
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
@@ -36,7 +36,7 @@ l10n:
 
 HTML テキストの基礎では、HTML で [基本的なリストをマークアップする](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#リスト)方法を見てきました、しかしたまに出てくる第 3 のリスト — **説明リスト** — については触れていませんでした。このリストの目的は、項目とそれに関連する説明を一緒にマークアップすることで、用語の定義や、質問と回答などに使います。用語の定義の例を見てみましょう。
 
-```
+```plain
 独り言 (soliloquy)
 ドラマで、登場人物が自分自身にしゃべりかけ、内なる考えや感情や、そうなった過程を（他の登場人物ではなく）観客に対して表現するものです。
 独白 (monologue)
@@ -677,15 +677,17 @@ HTML には連絡先の詳細をマークアップするための要素 — {{ht
 
 ## コンピューターのコードを表現する
 
-HTML を使用してコンピュータのコードをマークアップするために利用可能な要素がいくつかあります。
+HTML を使用してコンピューターのコードをマークアップするために利用可能な要素がいくつかあります。
 
-- {{htmlelement("code")}}: コンピュータのコードの一般的な部分をマークアップします。
+- {{htmlelement("code")}}: コンピューターのコードの一般的な部分をマークアップします。
 - {{htmlelement("pre")}}: 空白を保持する場合（一般的にはコードブロック） — テキストの中でインデントや余分な空白を使用すると、ブラウザーはそれを無視するので、レンダリングされたページにはそれが表示されません。しかし、テキストを `<pre></pre>` タグで囲むと、エディターで見たのと同じように空白が表示されるようになります。
 - {{htmlelement("var")}}: 特に変数名をマークアップするためのものです。
 - {{htmlelement("kbd")}}: コンピューターに入力されたキーボード（およびその他の種類の）入力をマークアップするためのものです。
-- {{htmlelement("samp")}}: コンピュータプログラムの出力をマークアップします。
+- {{htmlelement("samp")}}: コンピュータープログラムの出力をマークアップします。
 
-いくつか例を見てみましょう。これら ([other-semantics.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/advanced-text-formatting/other-semantics.html) サンプルファイルのコピーを入手してください) を試してみるべきです：
+この要素の例と、それらがコンピューターコードを表すのにどのように用いられているかを見ていきましょう。
+完全なファイルを見たい場合は、[other-semantics.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/advanced-text-formatting/other-semantics.html)のサンプルファイルを見てください。
+ファイルをダウンロードして、ブラウザーで開くためのコードをご覧ください。ここではその一部をご紹介します。
 
 ```html
 <pre><code>const para = document.querySelector('p');

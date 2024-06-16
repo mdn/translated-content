@@ -2,7 +2,7 @@
 title: "スキルテスト: グリッド"
 slug: Learn/CSS/CSS_layout/Grid_skills
 l10n:
-  sourceCommit: 289d6314f3368aa3e28524e7d090f6e9c704e3b1
+  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
 ---
 
 {{LearnSidebar}}

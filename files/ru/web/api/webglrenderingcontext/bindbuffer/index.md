@@ -62,7 +62,7 @@ gl.getParameter(gl.ARRAY_BUFFER_BINDING);
 gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -70,7 +70,7 @@ gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("WebGLRenderingContext.createBuffer()")}}
 - {{domxref("WebGLRenderingContext.deleteBuffer()")}}

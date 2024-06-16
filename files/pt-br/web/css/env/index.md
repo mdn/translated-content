@@ -9,10 +9,8 @@ A função [CSS](/pt-BR/docs/Web/CSS) **`env()`** pode ser usada para inserir o 
 
 ```css
 body {
-  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px) env(
-      safe-area-inset-bottom,
-      20px
-    ) env(safe-area-inset-left, 20px);
+  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px)
+    env(safe-area-inset-bottom, 20px) env(safe-area-inset-left, 20px);
 }
 ```
 
@@ -66,10 +64,8 @@ O exemplo abaixo faz uso do segundo parâmetro opcional de `env()`, que permite 
 p {
   width: 300px;
   border: 2px solid red;
-  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px) env(
-      safe-area-inset-bottom,
-      50px
-    ) env(SAFE-AREA-INSET-LEFT, 50px);
+  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px)
+    env(safe-area-inset-bottom, 50px) env(SAFE-AREA-INSET-LEFT, 50px);
 }
 ```
 

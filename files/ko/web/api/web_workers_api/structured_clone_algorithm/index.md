@@ -3,6 +3,8 @@ title: The structured clone algorithm
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 ---
 
+{{DefaultAPISidebar("Web Workers API") }}
+
 The structured clone 알고리즘은 복잡한 JavaScript 객체의 직렬화을 위해서 [HTML5 specification](http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data)에 의해서 정의된 새로운 알고리즘 입니다. 이것은 순환그래프를 포함하는 객체의 직렬화를 지원하기 때문에 [JSON](/en/JSON)보다 더 유용합니다. — 객체는 같은 그래프에서 다른객체를 참조하는 객체를 참조할 수 있습니다. 이러한 케이스들에서는 structured clone알고리즘이 아마도 JSON보다 더 효율적일 것입니다.
 
 알고리즘은 본질적으로 원본 객체의 모든 필드를 거치고 각 필드의 값들을 새로운 객체로 복제합니다. 만약 필드가 객체를 가졌다면 모든 필드와 그 서브필드가 새로운 객체로 복제될 때 까지 재귀적으로 동작합니다.
@@ -22,7 +24,7 @@ JSON을 뛰어넘는 structured clone알고리즘의 여러가지 핵심 이득�
 - DOM node들을 클론하려고 시도하는것도 동일하게 `DATA_CLONE_ERR` exception을 던질 것 입니다.
 - 객체들의 몇몇 파라미터들은 보존되지 않습니다:
 
-  - `RegExp객체들의 liastIndex필드는 보존되지 않습니다.`
+  - `RegExp객체들의 lastIndex필드는 보존되지 않습니다.`
   - Property descriptors, setters, 그리고 getters (이것들과 비슷한 메타데이터같은 기능들)은 복제되지 않습니다. 예를들어서 한 객체가 프로퍼티 디스크립터를 사용하여 읽기전용으로 마크되어져 있다면 이것은 읽기-쓰기가 가능하도록 복제 될 것입니다. 이것이 디폴트 조건이기 때문입니다.
   - 프로토타입 체인은 거치지않고 복제되지 않습니다.
 

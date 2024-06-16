@@ -2,7 +2,7 @@
 title: RegExp.prototype[@@match]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
 l10n:
-  sourceCommit: 3c33463072905e81ac620dd9780313369029b498
+  sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
 ---
 
 {{JSRef}}
@@ -63,7 +63,7 @@ for (let i = 0; i < 5; i++) {
 console.log("ab-c".match(/[abc]/gy)); // [ 'a', 'b' ]
 ```
 
-もし正規表現が [Unicode 対応](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)であれば、 Unicode コードポイント 1 つ分進みます。
+もし現在の照合が空文字列であったとしても、 `lastIndex` は進みます。正規表現が [Unicode 対応](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)モードであれば、Unicode のコードポイント 1 つ分進みます。そうでなければ、 UTF-16 コード単位分進みます。
 
 ```js
 console.log("😄".match(/(?:)/g)); // [ '', '', '' ]

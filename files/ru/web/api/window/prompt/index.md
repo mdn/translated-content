@@ -3,7 +3,7 @@ title: Window.prompt()
 slug: Web/API/Window/prompt
 ---
 
-{{ApiRef("Window")}}
+{{APIRef("Window")}}
 
 Метод `Window.prompt()` отображает диалоговое окно с необязательным запросом на ввод текста.
 

@@ -97,7 +97,7 @@ value2
 --boundary--
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

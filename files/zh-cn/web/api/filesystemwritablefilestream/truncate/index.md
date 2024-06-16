@@ -1,9 +1,11 @@
 ---
 title: FileSystemWritableFileStream：truncate() 方法
 slug: Web/API/FileSystemWritableFileStream/truncate
+l10n:
+  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 {{domxref("FileSystemWritableFileStream")}} 接口的 **`truncate()`** 方法用于将与流相关联的文件调整为指定字节大小。
 
@@ -11,7 +13,7 @@ slug: Web/API/FileSystemWritableFileStream/truncate
 
 调用 `truncate()` 方法同时也会更新文件的指针。如果偏移小于大小，指针会保留原位。如果偏移大于大小，偏移会被设为相应的大小。这是为了确保随后的写入操作不会发生错误。
 
-在流被关闭前，更改不会写入到磁盘上实际的文件，而是通常会被先写入到临时文件。
+在流被关闭前，更改不会写入到磁盘上实际的文件。通常更改会被先写入到临时文件。
 
 ## 语法
 
@@ -35,7 +37,7 @@ truncate(size)
 - `QuotaExceededError` {{domxref("DOMException")}}
   - : 如果文件新的大小大于文件原来的大小并且超出了浏览器的[存储配额](/zh-CN/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)，抛出此异常。
 - {{jsxref("TypeError")}}
-  - : 如果 `size` 参数不是一个数字或者未定义，抛出此错误。
+  - : 如果 `size` 参数不是一个数字或者未定义，抛出此异常。
 
 ## 示例
 
@@ -52,18 +54,18 @@ truncate(size)
 ```js
 async function saveFile() {
   try {
-    // 创建一个新句柄。
+    // 创建一个新句柄
     const newHandle = await window.showSaveFilePicker();
 
-    // 创建一个 FileSystemWritableFileStream 用于写入。
+    // 创建一个 FileSystemWritableFileStream 用于写入
     const writableStream = await newHandle.createWritable();
 
-    // 写入我们的文件。
+    // 写入我们的文件
     await writableStream.write("This is my first file content");
     await writableStream.truncate(8);
     await writableStream.write("my second file content");
 
-    // 关闭文件并将内容写入磁盘。
+    // 关闭文件并将内容写入磁盘
     await writableStream.close();
   } catch (err) {
     console.error(err.name, err.message);
@@ -84,4 +86,4 @@ async function saveFile() {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/articles/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

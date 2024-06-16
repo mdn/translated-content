@@ -32,7 +32,7 @@ onclick = (event) => {};
 ```js
 notification.onclick = (event) => {
   event.preventDefault(); // 阻止浏览器聚焦于 Notification 的标签页
-  window.open("http://www.mozilla.org", "_blank");
+  window.open("https://www.mozilla.org", "_blank");
 };
 ```
 

@@ -3,6 +3,8 @@ title: Utilisation du rôle checkbox
 slug: Web/Accessibility/ARIA/Roles/checkbox_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Description
 
 Cette technique présente l'utilisation du rôle [checkbox](http://www.w3.org/TR/wai-aria/roles#checkbox).

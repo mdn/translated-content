@@ -54,7 +54,7 @@ slug: Web/HTTP/Methods/HEAD
 HEAD /index.html
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

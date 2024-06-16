@@ -11,5 +11,5 @@ slug: Glossary/Type
 
 ## 参见
 
-- 维基百科的 [Data type](https://zh.wikipedia.org/wiki/Data_type)
+- 维基百科上的[数据类型](https://zh.wikipedia.org/wiki/資料類型)
 - [JavaScript 的数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)

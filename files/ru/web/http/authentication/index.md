@@ -176,7 +176,7 @@ https://username:password@www.example.com/
 site "www\.example.com" with the username "username", but the website does not require authentication. This may be an
 attempt to trick you.".
 
-## Смотреть также
+## Смотрите также
 
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Authorization")}}

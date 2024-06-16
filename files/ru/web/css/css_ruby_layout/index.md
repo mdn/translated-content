@@ -18,6 +18,6 @@ CSS Ruby Layout - это модуль [CSS](/ru/docs/Web/CSS), который п
 
 _None._
 
-## Specifications
+## Спецификации
 
 {{Specifications}}

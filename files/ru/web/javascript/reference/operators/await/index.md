@@ -84,7 +84,7 @@ var response = await promisedFunction().catch((err) => {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("Statements/async_function", "async function")}}
 - {{jsxref("Operators/async_function", "async function expression")}}

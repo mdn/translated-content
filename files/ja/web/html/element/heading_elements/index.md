@@ -2,59 +2,14 @@
 title: "<h1>–<h6>: HTML の見出し要素"
 slug: Web/HTML/Element/Heading_Elements
 l10n:
-  sourceCommit: 37163d27e0625a83a3f8633fe58b9041867adeaa
+  sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
 {{HTMLSidebar}}
 
-**`<h1>`** ～ **`<h6>`** は [HTML](/ja/docs/Web/HTML) の要素で、セクションの見出しを 6 段階で表します。`<h1>` が最上位で、`<h6>` が最下位です。
+**`<h1>`** ～ **`<h6>`** は [HTML](/ja/docs/Web/HTML) の要素で、セクションの見出しを 6 段階で表します。`<h1>` が最上位で、`<h6>` が最下位です。既定では、すべての見出し要素は[ブロックレベル](/ja/docs/Glossary/Block-level_content)ボックスを作成し、改行して始まり、その包含ブロックの中で利用できる幅いっぱいに広がります。
 
 {{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a></th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, 見出しコンテンツ, 知覚可能コンテンツ
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/heading_role">heading</a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>、<a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>、
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a> の何れか
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLHeadingElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 属性
 
@@ -117,7 +72,7 @@ l10n:
 
 ### ナビゲーション
 
-スクリーンリーダーの利用者のよくあるナビゲーションテクニックとして、ページの内容を手早く特定するために、見出しから見出しへとジャンプすることがあります。このため、見出しレベルを飛ばさないようにすることが重要です。見出しレベルを飛ばしてしまうと、このようにナビゲーションしている人が、見つからない見出しがどこにあるのかわからなくなり混乱してしまいます。
+スクリーンリーダーの利用者にとって一般的なナビゲーション技法として、ページのコンテンツを判断するために、すばやく見出しから見出しへジャンプすることがあります。このため、見出しレベルを飛ばさないようにすることが重要です。見出しレベルを飛ばしてしまうと、このようにナビゲーションしている人が、見つからない見出しがどこにあるのかわからなくなり混乱してしまいます。
 
 **悪い例:**
 
@@ -207,6 +162,64 @@ l10n:
 
 - [aria-labelledby 属性の利用](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
+        >
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >, 見出しコンテンツ, 知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >を受け入れるすべての要素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/heading_role"
+          >heading</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>、<a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>、
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a> の何れか
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLHeadingElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

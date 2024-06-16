@@ -99,7 +99,7 @@ nav {
 
 #### 結果
 
-{{ EmbedLiveSample("Setting_smooth_scroll_behavior", "100%", 250) }}
+{{ EmbedLiveSample("スクロールの動きをスムーズに設定", "100%", 250) }}
 
 ## 仕様書
 

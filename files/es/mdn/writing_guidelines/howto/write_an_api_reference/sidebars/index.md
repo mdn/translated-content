@@ -1,8 +1,6 @@
 ---
 title: Menús de referencia de la API
-slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
-l10n:
-  sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
+slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars
 ---
 
 {{MDNSidebar}}

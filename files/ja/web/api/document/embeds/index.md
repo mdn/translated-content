@@ -1,19 +1,16 @@
 ---
-title: Document.embeds
+title: "Document: embeds プロパティ"
+short-title: embeds
 slug: Web/API/Document/embeds
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{ApiRef}}
 
-{{domxref("Document")}} インターフェイスの **`embeds`** プロパティは読み取り専用で、現在の文書の埋め込み {{htmlelement("object")}} 要素のリストを返します。
+**`embeds`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、現在の文書に埋め込まれた {{htmlelement("embed")}} 要素のリストを返します。
 
-## 構文
-
-```
-nodeList = document.embeds
-```
-
-### 値
+## 値
 
 {{domxref("HTMLCollection")}} です。
 

@@ -3,7 +3,7 @@ title: KeyboardEvent.metaKey
 slug: Web/API/KeyboardEvent/metaKey
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 La propiedad **`KeyboardEvent.metaKey`** es de solo lectura y regresa un valor {{jsxref("Boolean")}} que indica si la tecla <kbd>Meta</kbd> estaba presionada (true) o no (false) cuando el evento ocurrio.
 

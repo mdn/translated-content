@@ -1,8 +1,9 @@
 ---
-title: MediaStreamAudioSourceNode()
+title: "MediaStreamAudioSourceNode: MediaStreamAudioSourceNode() コンストラクター"
+short-title: MediaStreamAudioSourceNode()
 slug: Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode
 l10n:
-  sourceCommit: 2ba2c0efbdf0c34b1da02203e4e84b571c883629
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Web Audio API")}}

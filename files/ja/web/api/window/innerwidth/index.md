@@ -49,8 +49,8 @@ console.log(top.innerWidth);
   <code>resize</code>
   イベントを発行させるためにブラウザーのウィンドウの大きさを変えてください。
 </p>
-<p>ウィンドウの幅: <span id="height"></span></p>
-<p>ウィンドウの高さ: <span id="width"></span></p>
+<p>ウィンドウの幅: <span id="width"></span></p>
+<p>ウィンドウの高さ: <span id="height"></span></p>
 ```
 
 ### JavaScript

@@ -17,10 +17,10 @@ slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 
 서버가 사용자의 제어 하에 있는 경우, 요청 사이트의 오리진을 `Access-Control-Allow-Origin` 헤더 값에 추가하여 액세스가 허용된 도메인 집합에 추가합니다.
 
-예를 들어, `https://amazing.site` 사이트에 CORS를 사용하여 리소스에 액세스하려면 헤더는 다음과 같아야 합니다 :
+예를 들어, `https://example.com` 사이트에 CORS를 사용하여 리소스에 액세스하려면 헤더는 다음과 같아야 합니다 :
 
 ```http
-Access-Control-Allow-Origin: https://amazing.site
+Access-Control-Allow-Origin: https://example.com
 ```
 
 또한 `*` 와일드카드를 사용하여 모든 사이트에서 액세스할 수 있도록 사이트를 구성할 수도 있습니다. 공용 API에만 사용해야 합니다. 개인 API는 절대 `*`를 사용해서는 안 되며 대신 특정 도메인 또는 도메인이 설정되어 있어야 합니다. 또한 이 와일드카드는 [`crossorigin`](/ko/docs/Web/HTML/Global_attributes#crossorigin) 속성이 `anonymous`로 설정된 요청에 대해서만 작동하며 요청에서 쿠키와 같은 자격 증명을 보내는 것을 방지합니다.

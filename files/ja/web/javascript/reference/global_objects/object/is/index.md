@@ -2,7 +2,7 @@
 title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
 ---
 
 {{JSRef}}
@@ -91,4 +91,4 @@ Object.is(NaN, Number.NaN); // true
 ## 関連情報
 
 - [`Object.is` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
-- [等価性の比較と同一性](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness) — 標準搭載されている 3 つの同一性比較支援機能の比較
+- [等価性の比較と同一性](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness)

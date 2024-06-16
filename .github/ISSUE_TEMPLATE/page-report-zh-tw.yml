@@ -1,62 +1,62 @@
-name: "[via MDN pages only // zh-tw]"
-description: Issue filed via "Report a problem with this content on GitHub" link on MDN pages.
+name: "[僅從 MDN 頁面回報問題 // zh-tw]"
+description: 透過 MDN 頁面上的「Report a problem with this content」連結提交問題。
 labels: ["l10n-zh", "needs triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        ### Before you start
+        ### 在提交問題之前
 
-        **Want to change this page yourself?** This content is open source!
-        ↩ Go back and use the _Edit on GitHub_ link on the page.
+        **想要自行修改頁面嗎？** MDN 文件內容是開源的！
+        ↩ 回到上一頁，點擊 _View this page on GitHub_ 連結至 GitHub 頁面進行修改。
 
-        **Is your issue about the browser compatibility table?**
-        ↩ Go back and use the _Report problems with this compatibility data on GitHub_ link on the page.
+        **問題與瀏覽器相容性表格有關？**
+        ↩ 回到上一頁，點擊「瀏覽器相容性」中的 _Report problems with this compatibility data on GitHub_ 連結。
 
-        **Need help with a browser?**
-        🙋 To get help with [Firefox](https://support.mozilla.org/en-US/kb/file-bug-report-or-feature-request-mozilla), [Chrome](https://support.google.com/chrome/answer/95315?hl=en-GB&ref_topic=7439544), [Safari](https://www.apple.com/feedback/safari.html), or another browser, check the browser's support site.
+        **需要關於瀏覽器的幫助？**
+        🙋 請查看瀏覽器的支援網站以獲取有關 [Firefox](https://support.mozilla.org/zh-TW/kb/file-bug-report-or-feature-request-mozilla)、[Chrome](https://support.google.com/chrome/answer/95315?hl=zh-Hant)、[Safari](https://www.apple.com/feedback/safari.html) 或其它瀏覽器的幫助資訊。
 
         ---
   - type: input
     id: mdn-url
     attributes:
       label: MDN URL
-      description: Set automatically. Do not modify.
+      description: 此內容為自動產生，請勿修改。
     validations:
       required: true
   - type: input
     id: section
     attributes:
-      label: What specific section or headline is this issue about?
+      label: 與此問題相關的章節或標題？
   - type: textarea
     id: problem
     attributes:
-      label: What information was incorrect, unhelpful, or incomplete?
+      label: 哪些資訊不正確、不實用或不完整？
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: What did you expect to see?
+      label: 你預期看到什麼？
     validations:
       required: true
   - type: textarea
     id: references
     attributes:
-      label: Do you have any supporting links, references, or citations?
-      description: Link to information that helps us confirm your issue.
+      label: 你有任何支援連結、參考文獻或引文嗎？
+      description: 有助於我們確認你的問題的相關資訊或連結。
   - type: textarea
     id: more-info
     attributes:
-      label: Do you have anything more you want to share?
-      description: For example, steps to reproduce a bug, screenshots, screen recordings, or sample code
+      label: 還有什麼想補充的內容嗎？
+      description: 例如，重現 bug 的步驟、螢幕截圖、螢幕錄製或範例程式碼
   - type: markdown
     attributes:
       value: |
         ---
-        You're finished! The following fields are prefilled. Please click **Submit new issue**.
+        你已完成填寫！以下欄位已預先填寫。請點擊 **Submit new issue** 按鈕。
   - type: textarea
     id: metadata
     attributes:
       label: MDN metadata
-      description: Set automatically. Do not modify.
+      description: 此內容為自動產生，請勿修改。

@@ -70,6 +70,6 @@ var trees = ["redwood", "bay", "cedar", "oak", "maple"];
 "oak" in trees; // false
 ```
 
-## See also
+## Смотрите также
 
 - [`in` operator](/ru/docs/Web/JavaScript/Reference/Operators/in)

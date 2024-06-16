@@ -48,7 +48,7 @@ websocket が ws\:// and wss\:// としてリクエストするものも含め�
 
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
-- 次の API で認証クレデンシャルの提供:
+- 次の API で認証資格情報の提供:
 
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
@@ -112,7 +112,7 @@ TLS ハンドシェイクについて詳しく読むことができますが、�
 - {{WebExtAPIRef("webRequest.onHeadersReceived")}}
   - : リクエストに関連する HTTP レスポンスヘッダーを受け取ったときに発火します。HTTP レスポンスヘッダーを修正するのにこのイベントを使用できます。
 - {{WebExtAPIRef("webRequest.onAuthRequired")}}
-  - : サーバーがクライアントに認証クレデンシャルを要求するときに発火します。このリスナーは何もしないか、リクエストをキャンセルするか、認証クレデンシャルを供給するかのいずれかです。
+  - : サーバーがクライアントに認証資格情報を要求するときに発火します。このリスナーは何もしないか、リクエストをキャンセルするか、認証資格情報を供給するかのいずれかです。
 - {{WebExtAPIRef("webRequest.onResponseStarted")}}
   - : レスポンスボディの最初のバイトを受け取ったときに発火します。HTTP リクエストにとって、これはステータスラインとレスポンスヘッダーが利用可能ということになります。
 - {{WebExtAPIRef("webRequest.onBeforeRedirect")}}

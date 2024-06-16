@@ -32,7 +32,7 @@ The **data-\*** Глобальные атрибуты образуют клас�
 
 Более подробное руководство по использованию атрибутов данных HTML см. В разделе [Using data attributes](/ru/docs/Learn/HTML/Howto/Use_data_attributes).
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -40,7 +40,7 @@ The **data-\*** Глобальные атрибуты образуют клас�
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - All [global attributes](/ru/docs/Web/HTML/Global_attributes).
 - The {{domxref("HTMLElement.dataset")}} property that allows to access and modify these values.

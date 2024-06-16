@@ -15,7 +15,7 @@ Avant d'entamer ce module, vous n'avez besoin d'aucune connaissance préalable e
 - [Introduction au langage HTML](/fr/docs/Web/Guide/HTML/Introduction).
 - [Introduction au langage CSS](/fr/Apprendre/CSS/Introduction_à_CSS).
 
-> **Note :** Si vous travaillez depuis un ordinateur, une tablette ou depuis un autre appareil sur lequel vous ne pouvez pas créer vos propres fichiers, vous pourrez tester la plupart des exemples en ligne grâce à des outils comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
+> **Note :** Si vous travaillez depuis un ordinateur, une tablette ou depuis un autre appareil sur lequel vous ne pouvez pas créer vos propres fichiers, vous pourrez tester la plupart des exemples en ligne grâce à des outils comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guides
 
