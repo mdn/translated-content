@@ -2,7 +2,7 @@
 title: ExtendableCookieChangeEvent：deleted 属性
 slug: Web/API/ExtendableCookieChangeEvent/deleted
 l10n:
-  sourceCommit: 60c3843f55839380e0c0cdc293ea694fe9943158
+  sourceCommit: bdb1584643b54399814ae530bd1735ba918202fd
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("service")}}
