@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，用于查询和设置浏览器的颜色管理功能。
+一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，用于查询和设置浏览器的颜色管理特性。
 
 默认情况下，Firefox 会对已标记的媒体应用颜色管理，并对未标记的媒体默认使用 sRGB。这种行为意味着某些未标记的媒体（例如动画和电影制作中使用的媒体）可能会被进行不必要的颜色校正。使用这些设置可以防止这种情况发生。
 
@@ -16,9 +16,9 @@ l10n:
 - `mode`
   - : 表示颜色管理模式的字符串。有效值为 `off`、`full` 和 `tagged_only`。
 - `useNativeSRGB`
-  - : 表示是否使用内置的 `sRGB` 颜色管理的布尔值。
+  - : 表示是否使用内置的 sRGB 颜色管理的布尔值。
 - `useWebRenderCompositor`
-  - : 表示是否使用 `WebRender` 合成器的布尔值。
+  - : 表示是否使用 WebRender 合成器的布尔值。
 
 ## 浏览器兼容性
 
@@ -38,7 +38,7 @@ browser.browserSettings.colorManagement.mode
   .then(logResult);
 ```
 
-获取本地 sRGB 颜色管理的颜色模式：
+获取原生 sRGB 颜色管理的颜色模式：
 
 ```js
 function logResult(result) {
