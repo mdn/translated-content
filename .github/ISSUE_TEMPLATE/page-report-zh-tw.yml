@@ -1,5 +1,5 @@
 name: "[僅從 MDN 頁面回報問題 // zh-tw]"
-description: 透過 MDN 頁面上的 "Report a problem with this content" 連結提交問題。
+description: 透過 MDN 頁面上的「Report a problem with this content」連結提交問題。
 labels: ["l10n-zh", "needs triage"]
 body:
   - type: markdown
@@ -14,7 +14,7 @@ body:
         ↩ 回到上一頁，點擊「瀏覽器相容性」中的 _Report problems with this compatibility data on GitHub_ 連結。
 
         **需要關於瀏覽器的幫助？**
-        # 🙋 請查看瀏覽器的支援網站以獲取有關 [Firefox](https://support.mozilla.org/en-US/kb/file-bug-report-or-feature-request-mozilla) 、 [Chrome](https://support.google.com/chrome/answer/95315?hl=en-GB&ref_topic=7439544) 、 [Safari](https://www.apple.com/feedback/safari.html) 或其它瀏覽器的幫助資訊。
+        🙋 請查看瀏覽器的支援網站以獲取有關 [Firefox](https://support.mozilla.org/zh-TW/kb/file-bug-report-or-feature-request-mozilla)、[Chrome](https://support.google.com/chrome/answer/95315?hl=zh-Hant)、[Safari](https://www.apple.com/feedback/safari.html) 或其它瀏覽器的幫助資訊。
 
         ---
   - type: input
