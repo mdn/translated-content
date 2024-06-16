@@ -3,7 +3,7 @@ title: IndexedDB
 slug: Web/API/IndexedDB_API
 ---
 
-{{ SeeCompatTable() }}
+{{DefaultAPISidebar("IndexedDB")}}{{ SeeCompatTable() }}
 
 IndexedDB es una API de bajo nivel que ofrece almacenamiento en el cliente de cantidades significativas de datos estructurados, incluyendo archivos y blobs. Para búsquedas de alto rendimiento en esos datos usa índices. Mientras [DOM Storage](/es/docs/DOM/Storage) es útil para el almacenamiento de pequeñas cantidades de datos, no es útil para almacenar grandes cantidades de datos estructurados. IndexedDB proporciona una solución.
 

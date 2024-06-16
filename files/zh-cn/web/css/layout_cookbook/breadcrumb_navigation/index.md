@@ -41,10 +41,6 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 注意通过 `content` 添加的箭头 `→` 也会暴露在屏幕阅读器或盲文显示器中。
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)

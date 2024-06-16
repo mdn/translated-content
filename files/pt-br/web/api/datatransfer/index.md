@@ -82,7 +82,7 @@ Contains a list of all the local files available on the data transfer. If the dr
 
 These examples dump the list of files dragged into the browser window.
 
-- (Firefox only): <http://jsfiddle.net/9C2EF/>
+- (Firefox only): <https://jsfiddle.net/9C2EF/>
 - (All browsers): [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
 
 ### types

@@ -66,10 +66,6 @@ WebAssembly разработан для дополнения JavaScript – ис
 
 {{Specifications}}
 
-## Совместимость с браузерами
-
-{{Compat}}
-
 ## Смотрите также
 
 - [WebAssembly on Mozilla Research](https://research.mozilla.org/webassembly/)

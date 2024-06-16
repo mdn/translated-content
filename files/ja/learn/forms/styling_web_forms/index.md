@@ -2,19 +2,18 @@
 title: ウェブフォームへのスタイル設定
 slug: Learn/Forms/Styling_web_forms
 l10n:
-  sourceCommit: 4ca03cbbfe78d66e4e7efd7ceaf04acb08a18572
+  sourceCommit: fbc9980c0718c3ead40863b20a74fc8535ebcc85
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
-これまでのいくつかの記事では、ウェブフォームを作成し、構成するために必要なすべての HTML について見てきました。この記事では、[CSS](/ja/docs/Web/CSS) を使用してフォームコントロールのスタイルを設定する方法について移動します。これは過去には難しいことでした。フォームコントロールは CSS でカスタマイズしやすいかどうかで大きく異なりますが、古いブラウザーが引退し、現代のブラウザーがより多くの機能を使用するようになるにつれて、簡単になってきています。
+前回までのいくつかの記事では、HTML でウェブフォームを作成する方法を示しました。これで、[CSS](/ja/docs/Web/CSS) でスタイル設定する方法を示します。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピューターリテラシーと、
         <a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML</a> および
         <a href="/ja/docs/Learn/CSS/First_steps">CSS</a> に対する基本的な理解。
       </td>
@@ -28,42 +27,34 @@ l10n:
   </tbody>
 </table>
 
-## なぜフォームウィジェットへのスタイル設定は難しいのか
+## フォームウィジェットのスタイル設定の挑戦
 
-1995 年頃に [HTML 2 仕様書](https://www.ietf.org/rfc/rfc1866.txt)へフォームコントロールが追加されました。 CSS は 1996 年までリリースされず、その後も数年は部hラウザーの対応が充分ではありませんでした。ブラウザーは、フォームコントロールの管理とレンダリングを、オペレーティングシステムに頼っていました。
+### 歴史
 
-CSS が HTML のスタイル設定できるようになってからも、ユーザーは各プラットフォームの視覚的な外見に慣れていましたので、ブラウザーベンダーはフォームコントロールをスタイル付け可能にすることに乗り気ではありませんでした。しかしこれは変わりました。ウェブサイトのオーナーはこれまでよりも、サイト全体に適するスタイルを欲しており、ウェブプラットフォームはこれを実現可能にしました。
+1995 年に [HTML 2 仕様書](https://datatracker.ietf.org/doc/html/rfc1866)へフォームコントロール（別名「フォームウィジェット」または「フォーム要素」）が導入されました。しかし、CSS は 1996 年後期までリリースされず、その後も数年はブラウザーの対応が充分ではありませんでした。ブラウザーは、フォームコントロールの管理とレンダリングを、オペレーティングシステムに頼っていました。
 
-一部のフォームウィジェットは、コントロールをスタイル設定できるように作成し直すのは難しいのですが、ユーザビリティを破綻させないよう気をつける必要はあるものの、 CSS を使って多くのフォーム機能をスタイル設定できます。
+CSS が利用できるようになっても、ユーザーがそれぞれのブラウザーの外見に慣れていたため、ブラウザーベンダーは最初のうちはフォーム要素をスタイル設定することに消極的でした。しかし状況が変わり、フォームウィジェットはいくつかの例外を除き、これでほとんどがスタイル設定できるようになりました。
 
-### CSS を使用する場合、すべてのウィジェットが同じように作成されるわけではない
+### ウィジェットの種類
 
-いまだに、フォームで CSS を使用する際に困ることが存在します。この問題は、3 つのカテゴリーに分けられます。
-
-#### 良好
-
-いくつかの要素はプラットフォーム間の問題があるとしても、ほとんど問題なくスタイルを設定できます。これらは以下の構造的な要素が含まれます。
+#### スタイル設定しやすいもの
 
 1. {{HTMLElement("form")}}
-2. {{HTMLElement("fieldset")}} と {{HTMLElement("legend")}}
+2. {{HTMLElement("fieldset")}} および {{HTMLElement("legend")}}
 3. 単一行のテキストの {{HTMLElement("input")}} （例えば text, url, email 型） [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search) 以外
 4. 複数行の {{HTMLElement("textarea")}}
-5. ボタン（{{HTMLElement("input")}} と {{HTMLElement("button")}}の両方）
+5. ボタン（{{HTMLElement("input")}} と {{HTMLElement("button")}} の両方）
 6. {{HTMLElement("label")}}
 7. {{HTMLElement("output")}}
 
-#### 不良
-
-一部の要素はほとんどスタイル設定ができず、時に CSS の高度な知識やトリックが必要になるかもしれません。
+#### スタイル設定が困難なもの
 
 1. チェックボックスとラジオボタン
 2. [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search)
 
 これら特殊なケースをどのように扱うかについては、[フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)の記事で見ていきます。
 
-#### 劣悪
-
-一部の要素は、CSS でスタイルを設定できません。たとえば次のものです。
+#### 内部が CSS 単独ではスタイル設定できないもの
 
 - [`<input type="color">`](/ja/docs/Web/HTML/Element/input/color)
 - [`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local)のような日時関連コントロール
@@ -72,21 +63,17 @@ CSS が HTML のスタイル設定できるようになってからも、ユー�
 - ドロップダウンウィジェットの作成に含まれる要素、 {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("datalist")}} を含む。
 - {{HTMLElement("progress")}} と {{HTMLElement("meter")}}
 
-これらの要素をスタイル設定するのに関して何ができるかについては、[フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)の記事で見ていきます。
+例えば、日付ピッカーのカレンダーや、クリックするとオプションリストが表示されるボタンなどは、CSS を使用するだけではスタイル設定することができません。
 
-これらすべてのウィジェットの主な問題は、ウィジェットの構造がとても複雑であるという事実と、（コントロールの width や margin の変更といった）基本的なスタイル設定を超えると、現在の CSS では（例えばカレンダー日付ピッカーや、選択肢のリストを表示する \<select> のボタンのような）ウィジェットの細かい部分すべてにスタイルを設定できるほどの表現力がないことによります。
+[フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)および[カスタムウィジェットの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)の記事で、これらのスタイル設定の方法を説明します。
 
-これらのウィジェットを完全にカスタマイズしたい場合は、 HTML, CSS, JavaScript を使って独自のものを作成する必要があります。それはこのコアフォームの記事の範囲を超えますが、高度な記事の[カスタムウィジェットの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)の記事で説明します。
+> **メモ:** フォームコントロールの内部コンポーネントにスタイル設定するプロプライエタリな CSS 擬似要素、例えば {{cssxref('::-moz-range-track')}} がありますが、これはブラウザー同士で整合していないので、これに頼るべきではありません。これについては後程でも触れます。
 
-> **メモ:** フォームコントロールの内部コンポーネントにスタイル設定するプロプライエタリな CSS 擬似要素、例えば {{cssxref('::-moz-range-track')}}がありますが、これはブラウザー同士で整合していないので、これに頼るべきではありません。これについては後程でも触れます。
+## 単純なフォームウィジェットのスタイル設定
 
-## 良好
+前節の「スタイル設定しやすい」ウィジェットは、[初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)および [CSS の構成要素](/ja/docs/Learn/CSS/Building_blocks)の記事で紹介したテクニックを使用してスタイル設定することができます。また、UI の現在の状態に基づいたスタイル設定を可能にする特別なセレクター [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)もあります。
 
-CSS でスタイルを設定するのが簡単なフォームコントロールは、他の HTML 要素とほとんど同じように動作するため、困難はあまりないはずです。[最初のフォーム](/ja/docs/Learn/Forms/Your_first_form)で、いくつかの簡単なフォームのスタイルを既に見ましたし、 [CSS の構成要素](/ja/docs/Learn/CSS/Building_blocks)モジュールにもいくつかの[役立つフォームのスタイル設定の基本](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements#フォーム要素)が含まれています。
-
-CSS での[スタイル設定が容易な要素](#良好)は、振る舞いが他の HTML 要素とほとんど同じであるため、問題に直面することはないでしょう。ただし、ブラウザー間でユーザーエージェントのスタイルシートが若干矛盾するかもしれませんので、より簡単にスタイルを設定できるようにするためのトリックがあります。
-
-この記事の最後で基本的なフォームコントロールのスタイル設定と配置について理解できる実例を詳しく見ていきます。しかしその前に、知っておくと良いフォームスタイル設定の特定の面をいくつか述べておきます。
+この記事の終わりで例を説明しますが、最初の段階で、フォームのスタイル設定について知っておくべきいくつかの特別な側面について説明します。
 
 ### フォントとテキスト
 
@@ -114,9 +101,9 @@ textarea {
 
 ### ボックスモデル
 
-すべてのテキストフィールドは、CSS のボックスモデルに関する全プロパティ ({{cssxref("width")}}、{{cssxref("height")}}、{{cssxref("padding")}}、{{cssxref("margin")}}、および {{cssxref("border")}}) を完全にサポートしています。ただし前述のとおり、ブラウザーがウィジェットを表示する際はシステムのデフォルトスタイルに依存します。コンテンツに対してそれらをどのように混ぜ合わせるかを決めるのは、あなた次第です。ウィジェットでネイティブのルックアンドフィールを維持したいのでしたら、ウィジェットのサイズを調和させたい場合に若干の問題に直面するでしょう。
+すべてのテキストフィールドは、CSS のボックスモデルに関する全プロパティ ({{cssxref("width")}}、{{cssxref("height")}}、{{cssxref("padding")}}、{{cssxref("margin")}}、{{cssxref("border")}}) を完全にサポートしています。ただし前述のとおり、ブラウザーがウィジェットを表示する際はシステムのデフォルトスタイルに依存します。コンテンツに対してそれらをどのように混ぜ合わせるかを決めるのは、あなた次第です。ウィジェットでネイティブのルックアンドフィールを維持したいのでしたら、ウィジェットのサイズを調和させたい場合に若干の問題に直面するでしょう。
 
-**これは各ウィジェットが境界、パディング、マージンについて独自のルールを持っているためです。**このためさまざまなウィジェットを同じサイズにしたい場合に、 {{cssxref("box-sizing")}} プロパティを使用しなければなりません。
+**これは各ウィジェットが境界、パディング、マージンについて独自のルールを持っているためです。** このためさまざまなウィジェットを同じサイズにしたい場合に、{{cssxref("box-sizing")}} プロパティを使用しなければなりません。
 
 ```css
 input,
@@ -130,15 +117,15 @@ button {
 }
 ```
 
-下のスクリーンショットで、左の列は \<input type="radio">, \<input type="checkbox">, \<input type="range">, \<input type="text">, \<input type="date"> input, {{htmlelement('select')}}, {{htmlelement('textarea')}},\<input type="submit">, {{htmlelement('button')}} の既定の描画、右の列は同じ要素に上のルールを使用して作成したものです。各種のウィジェットのプラットフォームのデフォルトルールと比較して、すべての要素が同じ領域を占めるようにすることが可能な点に注目してください。
+下のスクリーンショットで、左の列は `<input type="radio">`、`<input type="checkbox">`、`<input type="range">`、`<input type="text">`、`<input type="date">`、{{htmlelement('select')}}、{{htmlelement('textarea')}}、`<input type="submit">`、{{htmlelement('button')}} の既定の描画、右の列は同じ要素に上のルールを使用して作成したものです。各種のウィジェットのプラットフォームのデフォルトルールと比較して、すべての要素が同じ領域を占めるようにすることが可能な点に注目してください。
 
-![box model properties effect most input types.](boxmodel_formcontrols1.png)
+![ボックスモデルのプロパティは、ほとんどの入力型に効果があります。](boxmodel_formcontrols1.png)
 
 スクリーンショットではわからないかもしれませんが、ラジオやチェックボックスの操作はそのままで、 {{cssxref('width')}} プロパティで提供される 150px の水平空間に中央配置されています。他のブラウザーでは、ウィジェットが中央に配置されないことがありますが、割り当てられた空間は守られます。
 
 ### legend の配置
 
-{{HTMLElement("legend")}} 要素はスタイル設定では問題ありませんが、その配置を操作するのは少し厄介かもしれません。既定では、それは常に親である {{HTMLElement("fieldset")}} の上境界の上、左上隅の近くに配置されます。他の場所、例えばfieldsetの内部や左下隅の近くに配置するには、位置指定に頼る必要があります。
+{{HTMLElement("legend")}} 要素はスタイル設定では問題ありませんが、その配置を操作するのは少し厄介かもしれません。既定では、常に親である {{HTMLElement("fieldset")}} の上境界の上、左上隅の近くに配置されます。他の場所、例えば fieldset の内部や左下隅の近くに配置するには、位置指定を行う必要があります。
 
 下記の例を見てください。
 
@@ -203,15 +190,15 @@ HTML は、[ガイドの最初の記事](/ja/docs/Learn/Forms/Your_first_form)�
 
 ### 資産を揃える
 
-ここからがおもしろいところです! コードを書き始める前に、ここでは 3 つの追加要素が必要です。
+ここからが面白いところです。コードを書き始める前に、ここでは 3 つの追加要素が必要です。
 
-1. はがきの[背景](background.jpg) — この画像をダウンロードして作業している HTML ファイルと同じディレクトリーに保存します。
-2. タイプライター風フォント: [fontsquirrel.com の "Secret Typewriter"](https://www.fontsquirrel.com/fonts/Secret-Typewriter) — TTF ファイルを上記と同じディレクトリーにダウンロードします。
-3. 手書き風フォント: [fontsquirrel.com の "Journal"](https://www.fontsquirrel.com/fonts/Journal) — TTF ファイルを上記と同じディレクトリーにダウンロードします。
+1. [はがきの背景](background.jpg) — この画像をダウンロードして作業している HTML ファイルと同じディレクトリーに保存してください。
+2. タイプライター風フォント: [dafont.com の "Mom's Typewriter" フォント](https://www.dafont.com/moms-typewriter.font?back=theme)、TTF ファイルを上記と同じディレクトリーにダウンロードしてください。
+3. 手書き風フォント: [fontsquirrel.com の "Journal"](https://www.dafont.com/journal.font) — TTF ファイルを上記と同じディレクトリーにダウンロードしてください。
 
 始める前にフォントの処理が必要です。
 
-1. fontsquirrel の [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) に移動します。
+1. fontsquirrel.com の [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) に移動します。
 2. フォームを使って、両方のフォントファイルをアップロードして webfont キットを生成します。キットをコンピューターにダウンロードします。
 3. zip ファイルを展開します。
 4. 展開した中身には 2 つの `.woff` ファイルと 2 つの `.woff2` ファイルがあります。このファイルを、前と同じ fonts というディレクトリーにコピーします。各フォントの 2 つのファイルはブラウザー互換性を最大化するのに使います; より詳しい情報は [Web fonts](/ja/docs/Learn/CSS/Styling_text/Web_fonts) の記事を見てください。
@@ -222,7 +209,7 @@ HTML は、[ガイドの最初の記事](/ja/docs/Learn/Forms/Your_first_form)�
 
 #### 全体レイアウト
 
-まず、 {{cssxref("@font-face")}} ルールと、すべての {{HTMLElement("body")}} と {{HTMLElement("form")}} 要素に設定するスタイルを定義して準備します。 fontsquirrel 出力が上記で述べたものと異なる場合、 `stylesheet.css` ファイル内にダウンロード済みの webfont キットの中から正しい `@font-face` ブロックを見つけることができます（下記の `@font-face` ブロックをそれで置換し、パスをフォントファイルのものに更新する必要があります）。
+まず、 {{cssxref("@font-face")}} ルールと、すべての {{HTMLElement("body")}} と {{HTMLElement("form")}} 要素に設定するスタイルを定義して準備します。 fontsquirrel の出力が上記で述べたものと異なる場合、 `stylesheet.css` ファイル内にダウンロード済みの webfont キットの中から正しい `@font-face` ブロックを見つけることができます（下記の `@font-face` ブロックをそれで置換し、パスをフォントファイルのものに更新する必要があります）。
 
 ```css
 @font-face {
@@ -237,8 +224,8 @@ HTML は、[ガイドの最初の記事](/ja/docs/Learn/Forms/Your_first_form)�
 @font-face {
   font-family: "typewriter";
   src:
-    url("fonts/veteran_typewriter-webfont.woff2") format("woff2"),
-    url("fonts/veteran_typewriter-webfont.woff") format("woff");
+    url("fonts/momot___-webfont.woff2") format("woff2"),
+    url("fonts/momot___-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -267,7 +254,7 @@ form {
 }
 ```
 
-注意として、フォームのレイアウトに [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)と[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout) を使っています。これで、タイトルやフォーム要素といった各要素を配置できます。
+注意として、フォームのレイアウトに [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)と[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout) を使っています。これで、タイトルやフォーム要素といった各要素を配置できます。
 
 ```css
 h1 {
@@ -321,7 +308,7 @@ textarea {
 ```css
 input:focus,
 textarea:focus {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgb(0 0 0 / 10%);
   border-radius: 5px;
 }
 ```
@@ -369,7 +356,6 @@ button:after {
 
 button:hover,
 button:focus {
-  outline: none;
   background: #000;
   color: #fff;
 }
@@ -377,18 +363,24 @@ button:focus {
 
 ### 最終結果
 
-これでよし! フォームは次のようになるでしょう。
+出来上がりです。これでフォームがこのようになっているはずです。
 
 ![上記のようにスタイル設定と微調整を行った後の、フォームの最終的な外観とレイアウト](updated-form-screenshot.jpg)
 
-> **メモ:** 例が期待どおり動かず、私たちのバージョンを確認したい場合は、 GitHub を参照してください。[ライブ版](https://mdn.github.io/learning-area/html/forms/postcard-example/)を見てください ([ソースコード](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)も見てください)。
+> **メモ:** 例が期待どおり動かず、私たちのバージョンを確認したい場合は、 GitHub を参照してください。[ライブ版](https://mdn.github.io/learning-area/html/forms/postcard-example/)を見てください（[ソースコード](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)も見てください）。
 
-## スキルを試しましょう！
+## スキルテスト
 
-この記事の終わりまで到達しました。しかし、肝要な点を思い起こせるでしょうか？次に進む前に、テストによって知識の定着を試すことができます——[スキルテスト：スタイル設定の基本](/ja/docs/Learn/Forms/Test_your_skills:_Styling_basics)をご覧ください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: スタイル設定の基本](/ja/docs/Learn/Forms/Test_your_skills:_Styling_basics)をご覧ください。
 
 ## まとめ
 
 ご覧いただいたとおり、テキストフィールドとボタンだけでフォームを作成する限りでは、CSS を使用したスタイル設定は容易です。[次の記事では](/ja/docs/Learn/Forms/Advanced_form_styling)、「不良」や「劣悪」に分類されているウィジェットの扱い方を見ていきます。
 
 {{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
+
+### 高度なトピック
+
+- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [フォームウィジェット向けのプロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
