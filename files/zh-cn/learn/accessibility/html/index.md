@@ -407,7 +407,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 ## 无障碍数据表格
 
-基本的表格（译者注：“data table”被翻译成“表格”）可以用非常简单的标记来编写，例如：
+基本的数据表格可以用非常简单的标记来编写，例如：
 
 ```html
 <table>
