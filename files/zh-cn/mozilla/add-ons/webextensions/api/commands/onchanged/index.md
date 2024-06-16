@@ -9,7 +9,7 @@ l10n:
 
 在命令的键盘快捷键更改时触发。
 
-监听器将接收到一个包含命令名称、新的活动快捷键和旧的快捷键的对象。
+监听器将接收到一个包含命令名称、新的激活快捷键和旧的快捷键的对象。
 
 ## 语法
 
@@ -38,14 +38,14 @@ browser.commands.onChanged.hasListener(listener)
 
     - `changeInfo`
 
-      - : `object`。包含命令名称、新的活动快捷键和旧的快捷键的对象。
+      - : `object`。包含命令名称、新的激活快捷键和旧的快捷键的对象。
 
         - `name`
-          - : `string`。命令的名称。这与在 [manifest.json entry](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) 中给命令的名称相匹配。
+          - : `string`。命令的名称。这与在 [manifest.json 条目](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)中命令给出的名称相匹配。
         - `newShortcut`
-          - : `string`。命令的新活动快捷键，若无活动快捷键则为空。
+          - : `string`。命令的新激活快捷键，若无激活快捷键则为空。
         - `oldShortcut`
-          - : `string`。命令的旧活动快捷键，若无活动快捷键则为空。
+          - : `string`。命令的旧激活快捷键，若无激活快捷键则为空。
 
 ## 浏览器兼容性
 
@@ -57,7 +57,7 @@ browser.commands.onChanged.hasListener(listener)
 
 ```js
 function handleChanged(changeInfo) {
-  console.log(`快捷键已更改：${changeInfo.name}`);
+  console.log(`${changeInfo.name} 的快捷键已更改`);
   console.log(`从：${changeInfo.oldShortcut}`);
   console.log(`到：${changeInfo.newShortcut}`);
 }
