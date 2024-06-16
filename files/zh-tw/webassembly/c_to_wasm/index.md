@@ -102,7 +102,7 @@ slug: WebAssembly/C_to_Wasm
 
 ## 調用一個定義在 C 中的自訂方法
 
-如果要調用一個在 C 語言自訂的函式，你可以使用 Emscripten 中的 `ccall()` 函式，以及 `EMSCRIPTEN_KEEPALIVE` 宣告，從而將你的函式添加到導出函式列表中（詳見[Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?](https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-webassembly)）。
+如果要調用一個在 C 語言自訂的函式，你可以使用 Emscripten 中的 `ccall()` 函式，以及 `EMSCRIPTEN_KEEPALIVE` 宣告，從而將你的函式添加到導出函式列表中（詳見[為什麼當我要將 C/C++ 編譯成 JavaScript 時，原始碼中的函式會消失，和／或沒有函式可以處理？](https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-webassembly)）。
 
 讓我們看看這是怎麼實現的。
 
