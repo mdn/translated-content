@@ -7,9 +7,11 @@ l10n:
 
 {{AddonSidebar}}
 
+{{WebExtAPIRef("declarativeNetRequest.Rule")}} 的 `condition` 属性，用于决定规则是否匹配请求的条件细节。
+
 ## 类型
 
-该类型的值是对象。它们包含以下属性：
+该类型的值是对象，包含以下属性：
 
 - `domainType` {{optional_inline}}
   - : `string`。指定网络请求是与其源域名的第一方还是第三方关系。如果省略，则接受所有请求。可能的值为 `"firstParty"` 和 `"thirdParty"`。
@@ -53,19 +55,16 @@ l10n:
     - `||` ：域名锚：如果在模式的开头使用，则指定 URL 的（子）域的开头。
     - `^` ：分隔符字符：这匹配字母、数字或 `_`、`-`、`.`、`%` 之外的任何内容。最后的 `^` 还可以匹配 URL 的结尾，而不是分隔符字符。
 
-    `urlFilter` 由以下部分组成：（可选的左/域名锚）+ 模式 +（可选的右锚）。
-    如果省略，则匹配所有 URL。不允许使用空字符串。
-    以 `||*` 开头的模式不允许使用。请使用 `*` 代替。
-    注意：
+    `urlFilter` 由以下部分组成：（可选的左/域名锚）+ 模式 +（可选的右锚）。如果省略，则匹配所有 URL。不允许使用空字符串。以 `||*` 开头的模式不允许使用。请使用 `*` 代替。注意：
 
-    - 只能指定 `urlFilter` 或 [`regexFilter`](#regexfilter) 之一。
+    - 只能指定 `urlFilter` 或 [`regexFilter`](#regexfilter) 其中之一。
     - `urlFilter` 必须仅由 ASCII 字符组成。这与主机编码为[国际化域名编码](https://zh.wikipedia.org/wiki/国际化域名编码)格式的 URL 匹配（在国际化域名的情况下），任何其他非 ASCII 字符都使用 utf-8 进行 URL 编码。例如，当请求 URL 为 `http://abc.рф?q=ф` 时，`urlFilter` 与 URL 为 `http://abc.xn--p1ai/?q=%D1%84` 匹配。
 
 ### 规范域名
 
 在 `initiatorDomains`、`excludedInitiatorDomains`、`requestDomains` 或 `excludedRequestDomains` 中指定的域应遵循以下规则：
 
-- 允许子域名，如 "a.example.com"。
+- 允许子域名，如“a.example.com”。
 - 条目必须仅由*小写* ASCII 字符组成。
 - 对于国际化域名，使用[国际化域名编码](https://zh.wikipedia.org/wiki/国际化域名编码)进行编码。
 - IPv4 地址必须表示为由点分隔的 4 个数字。
