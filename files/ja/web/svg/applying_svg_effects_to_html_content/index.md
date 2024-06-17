@@ -3,6 +3,8 @@ title: SVG 効果の HTML コンテンツへの適用
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
 
+{{SVGRef}}
+
 最近のブラウザーは、 [SVG](/ja/docs/Web/SVG) を [CSS](/ja/docs/Web/CSS) スタイルの中で使用して、 HTML コンテンツに対してグラフィカルな効果を適用することに対応しています。
 
 SVG をスタイルで指定するには、同一文書内または外部のスタイルシートで指定することができます。使用できるプロパティは [`mask`](/ja/docs/Web/CSS/mask), [`clip-path`](/ja/docs/Web/CSS/clip-path), [`filter`](/ja/docs/Web/CSS/filter) の 3 つです。

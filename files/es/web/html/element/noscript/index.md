@@ -3,6 +3,8 @@ title: noscript
 slug: Web/HTML/Element/noscript
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - **noscript** de -_no script_ . Aporta contenidos alternativos al elemento [script](/es/HTML/Elemento/script). las aplicaciones de usuario que no soporten scripts deben mostrar en su lugar el contenido de este elemento.

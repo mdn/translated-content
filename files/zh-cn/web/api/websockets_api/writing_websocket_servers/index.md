@@ -3,6 +3,8 @@ title: 编写 WebSocket 服务器
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
 ---
 
+{{DefaultAPISidebar("WebSockets API")}}
+
 **WebSocket 服务器是一个**TCP 应用程序，监听服务器上任何遵循特定协议的端口，就这么简单。创建自定义服务器的任务往往听起来很吓人，然而，在你选择的平台上实现一个简单的 WebSocket 服务器是很容易的。
 
 WebSocket 服务器可以用任何实现了[Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets)的服务器端编程语言编写，如 C(++) 或 Python 甚至[PHP](/zh-CN/docs/PHP)和[服务器端 JavaScript](/zh-CN/docs/Web/JavaScript/Server-Side_JavaScript)。这不是任何特定语言的教程，而是作为指导，以方便编写自己的服务器。

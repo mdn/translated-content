@@ -3,6 +3,8 @@ title: letter-spacing
 slug: Web/SVG/Attribute/letter-spacing
 ---
 
+{{SVGRef}}
+
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 Атрибут `letter-spacing` контролирует расстояние между текстовыми символами, в дополнении к любому расстоянию атрибута {{ SVGAttr("kerning") }} .

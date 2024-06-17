@@ -3,6 +3,8 @@ title: Opérations de glissement
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 ---
 
+{{DefaultAPISidebar("HTML Drag and Drop API")}}
+
 Ce qui suit décrit les étapes qui se déroulent lors d'un Glisser Déposer.
 
 > **Note :** Les opérations de glisser décrits dans ce document utilisent l'interface {{domxref("DataTransfer")}}. Ce document n'utilise pas l'interface {{domxref("DataTransferItem")}} ni l'interface {{domxref("DataTransferItemList")}}.

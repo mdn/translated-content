@@ -11,10 +11,8 @@ La fonction CSS **`env()`** peut être utilisée afin d'insérer la valeur d'une
 
 ```css
 body {
-  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px) env(
-      safe-area-inset-bottom,
-      20px
-    ) env(safe-area-inset-left, 20px);
+  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px)
+    env(safe-area-inset-bottom, 20px) env(safe-area-inset-left, 20px);
 }
 ```
 
@@ -72,10 +70,8 @@ Dans l'exemple qui suit, on utilise le deuxième paramètre de la notation fonct
 p {
   width: 300px;
   border: 2px solid red;
-  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px) env(
-      safe-area-inset-bottom,
-      50px
-    ) env(SAFE-AREA-INSET-LEFT, 50px);
+  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px)
+    env(safe-area-inset-bottom, 50px) env(SAFE-AREA-INSET-LEFT, 50px);
 }
 ```
 
