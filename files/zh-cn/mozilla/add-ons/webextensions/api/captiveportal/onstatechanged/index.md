@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-当门户状态发生变化时触发。
+当强制门户状态发生变化时触发。
 
 ## 语法
 
@@ -33,15 +33,15 @@ browser.captivePortal.onStateChanged.hasListener(listener)
   - : 当此事件发生时调用的函数。函数被传入此参数：
 
     - `details`
-      - : `string`。门户状态，可能是 `unknown`、`not_captive`、`unlocked_portal` 或 `locked_portal` 之一。
+      - : `string`。强制门户状态，可能是 `unknown`、`not_captive`、`unlocked_portal` 或 `locked_portal` 之一。
 
 ## 示例
 
-处理门户状态变化：
+处理强制门户状态变化：
 
 ```js
 function handlePortalStatus(portalstatusInfo) {
-  console.log(`门户状态现在是：${portalstatusInfo.details}`);
+  console.log(`强制门户状态现在是：${portalstatusInfo.details}`);
 }
 
 browser.captivePortal.onStateChanged.addListener(handlePortalStatus);
