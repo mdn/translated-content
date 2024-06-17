@@ -47,4 +47,4 @@ color-contrast(#008080 vs olive, var(--myColor), #d2691e)
 - [`prefers-contrast`](/zh-CN/docs/Web/CSS/@media/prefers-contrast) 和 [`prefers-color-scheme`](/zh-CN/docs/Web/CSS/@media/prefers-color-scheme) {{cssxref("@media")}} 特性
 - [`contrast()`](/zh-CN/docs/Web/CSS/filter-function/contrast)
 - [WCAG：色彩对比](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
-- {{cssxref('--*', 'CSS 自定义属性')}}和 {{cssxref("var")}}
+- [CSS 自定义属性](/zh-CN/docs/Web/CSS/--*)和 {{cssxref("var")}}
