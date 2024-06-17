@@ -2,7 +2,7 @@
 title: Firefox 125 的开发者说明
 slug: Mozilla/Firefox/Releases/125
 l10n:
-  sourceCommit: c213abeda305e87274d72b61394aa9ef53f7b886
+  sourceCommit: 08ef601955d7fc92a9a4c6d6c047854b5aef723d
 ---
 
 {{FirefoxSidebar}}
@@ -19,6 +19,7 @@ l10n:
 
 - 已更新 {{cssxref("align-content")}} 属性，使其适用于 `display: block;` 布局。这将 `flex` 和 `grid` 中所有的布局定位带到 `block`，使开发人员能够对齐块级元素，而无需将其容器转换为 `flex` 或 `grid` 容器。（[Firefox bug 1882853](https://bugzil.la/1882853)）。
 - CSS 属性 [`transform-box`](/zh-CN/docs/Web/CSS/transform-box) 现已支持 `content-box` 和 `stroke-box` 值。对于参照的盒子，`content-box` 值使用[内容盒子](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#盒模型的各个部分)，而 `stroke-box` 值使用包含 SVG 形状的描边边界框（stroke bounding box）（[Firefox bug 1868374](https://bugzil.la/1868374)）。
+- [`content-visibility`](/zh-CN/docs/Web/CSS/content-visibility) CSS 属性值 `auto` 现已默认启用。其允许在内容不[与用户相关](/zh-CN/docs/Web/CSS/CSS_containment#与用户相关)的情况下跳过对其的渲染。（[Firefox bug 1874874](https://bugzil.la/1874874)）。
 
 ### JavaScript
 
@@ -97,7 +98,7 @@ l10n:
 
   {{cssxref("transition-behavior")}} 属性在 Nightly 版本中默认启用。作者可以使用此属性来控制是否将 CSS 过渡应用于具有[离散动画类型](/zh-CN/docs/Web/CSS/CSS_animated_properties#离散)的属性（[Firefox bug 1882408](https://bugzil.la/1882408)、[Firefox bug 1805727](https://bugzil.la/1805727)）。
 
-- **UA styles for `<h1>` nested into sectioning elements**:`layout.css.h1-in-section-ua-styles.enabled`。
+- **嵌套在分段元素中的 `<h1>` 的用户代理样式**:`layout.css.h1-in-section-ua-styles.enabled`。
 
   现在，当 `<h1>` 标题嵌套在[分段元素](/zh-CN/docs/Web/HTML/Content_categories#分段内容) `<article>`、`<aside>`、`<nav>` 和 `<section>` 中时，其字体大小不再减小。由于大纲算法已从 HTML 规范中[移除](https://github.com/whatwg/html/pull/7829)，嵌套在分段元素中的 `<h1>` 不再与用户代理样式相关联。（[Firefox bug 1883896](https://bugzil.la/1883896)）。
 
