@@ -71,6 +71,6 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 ## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页面。
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
 - [WebAssembly 概念](/zh-CN/docs/WebAssembly/Concepts)
 - [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)
