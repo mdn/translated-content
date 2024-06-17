@@ -49,7 +49,7 @@ resolvedOptions()
 - `numberingSystem`
   - : 유니코드 확장 키 `"nu"`를 사용하는 요청된 값 혹은 기본 값으로 채워진 값입니다.
 
-## 예쩨
+## 예제
 
 ### resolvedOptions() 메서드 사용하기
 
