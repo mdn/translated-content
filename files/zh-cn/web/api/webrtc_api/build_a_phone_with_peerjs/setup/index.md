@@ -15,6 +15,7 @@ l10n:
 2. 接下来，通过运行 `yarn init` 创建一个新的应用程序。按照提示提供项目名称、版本、描述等信息。
 3. 然后，使用以下命令安装所需的依赖项：
 
+
    - [Express](https://expressjs.com/): `yarn add express`
    - [PeerJS](https://peerjs.com/docs/): `yarn add peerjs`
    - [Peer](https://github.com/peers/peerjs-server): `yarn add peer`
