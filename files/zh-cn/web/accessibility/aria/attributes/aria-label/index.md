@@ -64,7 +64,7 @@ l10n:
 - `<string>`
   - : 一个文本字符串，将作为对象的无障碍名称。
 
-## 关联角色
+## 关联接口
 
 - {{domxref("Element.ariaLabel")}}
   - : [`ariaLabel`](/zh-CN/docs/Web/API/Element/ariaLabel) 属性是 {{domxref("Element")}} 接口的一部分，反映了 `aria-label` 属性的值。

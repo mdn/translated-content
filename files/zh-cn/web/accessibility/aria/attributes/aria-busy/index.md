@@ -38,7 +38,7 @@ ariaLiveElement.ariaBusy = "false";
 - true
   - : 元素正在更新。
 
-## 关联角色
+## 关联接口
 
 - {{domxref("Element.ariaBusy")}}
   - : 每个元素接口的 [`ariaBusy`](/zh-CN/docs/Web/API/Element/ariaBusy) 属性反映了 `aria-busy` 属性的值，该属性指示元素是否正在修改。
