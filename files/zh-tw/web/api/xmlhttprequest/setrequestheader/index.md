@@ -1,6 +1,8 @@
 ---
-title: XMLHttpRequest.setRequestHeader()
+title: XMLHttpRequest：setRequestHeader() 方法
 slug: Web/API/XMLHttpRequest/setRequestHeader
+l10n:
+  sourceCommit: 9c78a44b9321fcd3fbe63d6f5b61ed749c2fa261
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -19,8 +21,8 @@ slug: Web/API/XMLHttpRequest/setRequestHeader
 
 ## 語法
 
-```plain
-XMLHttpRequest.setRequestHeader(header, value)
+```js-nolint
+setRequestHeader(header, value)
 ```
 
 ### 參數
@@ -30,7 +32,7 @@ XMLHttpRequest.setRequestHeader(header, value)
 - `value`
   - : 用來設定標頭本身的值。
 
-### 回傳值
+### 傳回值
 
 無（{{jsxref("undefined")}}）。
 
