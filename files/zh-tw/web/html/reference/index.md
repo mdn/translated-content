@@ -1,11 +1,13 @@
 ---
 title: HTML 參考
 slug: Web/HTML/Reference
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar}}
 
-這裡的 HTML 參考描述了所有 HTML 的**元素**（elements）與**屬性**（attributes），包括為所有元素接受的**全域屬性**（global attributes）。
+這裡的 HTML 參考描述了 HTML 所有的**元素**與**屬性**，包括為所有元素接受的**全域屬性**。
 
 - [HTML 元素指引](/zh-TW/docs/Web/HTML/Element)
   - : 本頁列出使用{{Glossary("Tag", "標籤")}}建立的所有 {{Glossary("HTML")}} {{Glossary("Element","元素")}}。
