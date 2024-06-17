@@ -27,7 +27,7 @@
 - [@pje1740](https://github.com/pje1740) 2021.04 ~ 2024.04
 - [@swimjiy](https://github.com/swimjiy) 2023.03 ~ 2024.04
 - [@cos18](https://github.com/cos18) 2021.04 ~ 2024.04
-- [@jho2301](https://github.com/jho2301) 2023.03 ~
+- [@jho2301](https://github.com/jho2301) 2023.03 ~ 2024.05
 
 ### 현재 구성원
 
