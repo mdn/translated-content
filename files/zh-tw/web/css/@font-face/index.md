@@ -63,12 +63,12 @@ slug: Web/CSS/@font-face
 
 ### 字體 MIME 類型
 
-| 格式                   | MIME 類型    |
-| ---------------------- | ------------ |
-| TrueType               | `font/ttf`   |
-| OpenType               | `font/otf`   |
-| Web 開放字型格式        | `font/woff`  |
-| Web 開放字型格式 2.0    | `font/woff2` |
+| 格式                 | MIME 類型    |
+| -------------------- | ------------ |
+| TrueType             | `font/ttf`   |
+| OpenType             | `font/otf`   |
+| Web 開放字型格式     | `font/woff`  |
+| Web 開放字型格式 2.0 | `font/woff2` |
 
 > 備註：
 >
