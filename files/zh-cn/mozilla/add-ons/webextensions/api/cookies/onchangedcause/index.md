@@ -20,7 +20,7 @@ l10n:
 - `explicit`
   - : 通过显式调用 {{WebExtAPIRef("cookies.remove()")}} 插入或移除了一个 Cookie。
 - `expired_overwrite`
-  - : 一个 Cookie 被具有已过期的到期日期的另一个 Cookie 覆盖。
+  - : 一个 Cookie 被另一个已过期的 Cookie 覆盖。
 - `overwrite`
   - : 调用 {{WebExtAPIRef("cookies.set()")}} 用另一个 Cookie 覆盖了这个 Cookie。
 
@@ -30,15 +30,15 @@ l10n:
 
 ## 示例
 
-你可以监听 {{WebExtAPIRef("cookies.onChanged")}} 事件，以便在 Cookie 更改时收到通知。监听器接收一个包含 `cause` 属性的 `changeInfo` 对象，其值为 `OnChangedCause` 字符串：
+你可以监听 {{WebExtAPIRef("cookies.onChanged")}} 事件，以便在 Cookie 更改时收到通知。监听器接收一个包含 `cause` 属性（其值为 `OnChangedCause` 字符串）的 `changeInfo` 对象：
 
 ```js
 browser.cookies.onChanged.addListener((changeInfo) => {
   console.log(
-    `Cookie changed: \n` +
+    `Cookie 发生了变化: \n` +
       ` * Cookie: ${JSON.stringify(changeInfo.cookie)}\n` +
-      ` * Cause: ${changeInfo.cause}\n` +
-      ` * Removed: ${changeInfo.removed}`,
+      ` * 变化原因: ${changeInfo.cause}\n` +
+      ` * 是否移除: ${changeInfo.removed}`,
   );
 });
 ```
