@@ -3,7 +3,7 @@ title: substring-after
 slug: Web/XPath/Functions/substring-after
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `substring-after()` retourne la partie d'une chaîne donnée suivant une sous-chaîne donnée.
 

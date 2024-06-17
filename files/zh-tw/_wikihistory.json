@@ -2675,10 +2675,6 @@
     "modified": "2020-10-15T22:01:32.599Z",
     "contributors": ["yutzuch"]
   },
-  "Web/Demos": {
-    "modified": "2019-03-23T22:08:13.863Z",
-    "contributors": ["h223449961", "tigercosmos"]
-  },
   "Web/Events": {
     "modified": "2019-11-28T04:54:28.795Z",
     "contributors": [
@@ -4085,10 +4081,6 @@
   "Web/Security/Mixed_content": {
     "modified": "2019-03-23T23:04:08.690Z",
     "contributors": ["jackblackevo", "iigmir", "a780201", "wildsky", "Asheesh"]
-  },
-  "Web/Security/Mixed_content/How_to_fix_website_with_mixed_content": {
-    "modified": "2019-03-23T23:04:13.940Z",
-    "contributors": ["jackblackevo", "iigmir", "wildsky"]
   },
   "Web/Security/Same-origin_policy": {
     "modified": "2020-09-01T23:06:58.364Z",

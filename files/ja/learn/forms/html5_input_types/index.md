@@ -2,7 +2,7 @@
 title: HTML5 の入力型
 slug: Learn/Forms/HTML5_input_types
 l10n:
-  sourceCommit: fead53324d271aa05e93b369966a773bb328c64b
+  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
@@ -14,7 +14,7 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        コンピューターリテラシーの基本と、
+        基本的な
         <a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
           >HTML の理解</a
         >。
@@ -29,13 +29,13 @@ l10n:
   </tbody>
 </table>
 
-> **メモ:** この記事のたいていの機能はブラウザー間で広くを対応されています。例外は注記しておきます。ブラウザーサポートについての詳細は、[HTML フォーム要素のリファレンス](/ja/docs/Web/HTML/Element#フォーム)、特に [\<input> 型](/ja/docs/Web/HTML/Element/input)リファレンスを見てください。
+> **メモ:** この記事のたいていの機能はブラウザー間で広く対応されています。例外は注記しておきます。ブラウザーの対応についての詳細は、[HTML フォーム要素のリファレンス](/ja/docs/Web/HTML/Element#フォーム)、特に [\<input> 型](/ja/docs/Web/HTML/Element/input)リファレンスを見てください。
 
 HTML フォームコントロールの見た目はデザイナーの仕様により全く異なるため、ウェブ開発者はときどき独自のフォームコントロールを作成します。これは上級のチュートリアル — [カスタムフォームウィジェットの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls) — で扱います。
 
 ## メールアドレスフィールド
 
-このフィールド型は [`type`](/ja/docs/Web/HTML/Element/input#type)属性の `email` の値でセットされます:
+このフィールド型は [`type`](/ja/docs/Web/HTML/Element/input#type) 属性の `email` の値に設定されます。
 
 ```html
 <input type="email" id="email" name="email" />
@@ -51,11 +51,11 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 <input type="email" id="email" name="email" multiple />
 ```
 
-いくつかの端末 — 特にスマートフォンのような動的キーボードつきのタッチ端末 — では、 `@` キーを含むメールアドレス入力に適した別の仮想キーパッドが現れることもあります。Android 版 Firefox のキーボードの例として下記のスクリーンショットを見てください:
+いくつかの端末 — 特にスマートフォンのような動的キーボードつきのタッチ端末 — では、 `@` キーを含むメールアドレス入力に適した別の仮想キーパッドが現れることもあります。Android 版 Firefox のキーボードの例として下記のスクリーンショットを見てください。
 
-![既定でアット記号が付いている、 Android 版 Firefox のメールアドレス入力キーボード](fx-android-email-type-keyboard.jpg)
+![既定でアットマークが付いている、 Android 版 Firefox のメールアドレス入力キーボード](fx-android-email-type-keyboard.jpg)
 
-> **メモ:** 基本的なテキスト入力型の例は [basic input examples](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) にあります（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html) も見てください）。
+> **メモ:** 基本的なテキスト入力型の例は [basic input の例](https://mdn.github.io/learning-area/html/forms/basic-input-examples/)にあります（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html) も見てください）。
 
 これは新しい入力型を使う良い理由であり、こうした端末のユーザーの使い勝手を向上させます。
 
@@ -65,7 +65,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 しかしこれは完全なセキュリティ対策と*考えるべきではありません*! アプリは送信データのセキュリティ確認をクライアント側と同様に*サーバー側*でも行うべきで、なぜならクライアント側の検証は簡単にオフにできるため悪意のあるユーザーは簡単にサーバーに不正なデータを送信できるためです。起こりうることについては[ウェブサイトセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)を読んで下さい。サーバー側の検証を実装するのはこのモジュールの範囲を超えていますが、記憶しておくべきです。
 
-既定の制約では `a@b` は有効なメールアドレスです。これは既定では `email` 入力型はイントラネットのメールアドレスを許可しているためです。異なる検証動作を実装するには、[`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性を用いたり、エラーメッセージをカスタムできます。この機能の使い方は後の [クライアントサイド検証](/ja/docs/Learn/Forms/Form_validation)の記事で話します。
+既定の制約では `a@b` は有効なメールアドレスです。これは既定では `email` 入力型はイントラネットのメールアドレスを許可しているためです。異なる検証動作を実装するには、[`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性を用いたり、エラーメッセージをカスタムできます。この機能の使い方は後の [クライアント側の検証](/ja/docs/Learn/Forms/Form_validation)の記事で話します。
 
 > **メモ:** 入力データがメールアドレスでない場合、{{cssxref(':invalid')}} 擬似クラスがマッチして、{{domxref('validityState.typeMismatch')}} プロパティは `true` を返します。
 
@@ -101,7 +101,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 世界中にはいろいろな電話番号の書式があるため、このフィールドはユーザーが入力した値に制約を一切つけません（つまり、文字が入っていることもありえます）。
 
-前に触れた通り、 [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性が制約を強化するのに使われます。これは[クライアントサイド検証](/ja/docs/Learn/Forms/Form_validation)で学びます。
+前に触れた通り、 [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性が制約を強化するのに使われます。これは[クライアント側検証](/ja/docs/Learn/Forms/Form_validation)で学びます。
 
 ## URL フィールド
 
@@ -127,7 +127,7 @@ URL を入力するための特殊な型のフィールドは、 `url` の値を
 
 ![Firefox for Android email keyboard, with ampersand displayed by default.](fx-android-number-type-keyboard.jpg)
 
-`number` の入力型では、[`min`](/ja/docs/Web/HTML/Element/input#min) と [`max`](/ja/docs/Web/HTML/Element/input#max) 属性をセットすることで最小値と最大値の制約をつけることができます。
+`number` 入力型では、[`min`](/ja/docs/Web/HTML/Element/input#min) と [`max`](/ja/docs/Web/HTML/Element/input#max) 属性を設定することで最小値と最大値の制約をつけることができます。
 
 スピナーボタンを押すことで増減させる増分を接とするのに `step` 属性を使うこともできます。既定では、 number 入力型は数値が整数値の場合のみ検証します。浮動小数を許可するには、 [`step="any"`](/ja/docs/Web/HTML/Attributes/step) を指定します。省略された場合、`step` 値は既定で `1` となり、つまりすべての数値が有効です。
 
@@ -147,13 +147,13 @@ URL を入力するための特殊な型のフィールドは、 `url` の値を
 
 ## スライダーコントロール
 
-数字を選ぶもう１つの方法は**スライダー**です。家造りのようなサイトで資産の価格をフィルターするのによく見ることでしょう。これを示す例をライブで見てみましょう。
+数字を選ぶもう 1 つの方法は**スライダー**です。家造りのようなサイトで資産の価格をフィルターするのによく見ることでしょう。これを示す例をライブで見てみましょう。
 
 {{EmbedGHLiveSample("learning-area/html/forms/range-example/index.html", '100%', 200)}}
 
 使用からすると、スライダーはテキストフィールドより不正確です。このため、*正確な*値が必ずしも重要でない数値の選択に使われます。
 
-スライダーは {{HTMLElement("input")}} に [`type`](/ja/docs/Web/HTML/Element/input#type) 属性を `range` にセットして作成します。スライダーはマウスやタッチや、キーパッドの矢印で移動できます。
+スライダーは {{HTMLElement("input")}} の [`type`](/ja/docs/Web/HTML/Element/input#type) 属性を `range` にセットして作成します。スライダーはマウスやタッチや、キーパッドの矢印で移動できます。
 
 スライダーを適切に設定するのは重要です。そのためには、それぞれ最小、最大、増分値を設定する [`min`](/ja/docs/Web/HTML/Attributes/min), [`max`](/ja/docs/Web/HTML/Attributes/max), [`step`](/ja/docs/Web/HTML/Attributes/step) 属性を設定するのを強くお奨めします。
 
@@ -264,9 +264,7 @@ HTML の日付コントロールは、カレンダーウィジェットを提供
 <input type="color" name="color" id="color" />
 ```
 
-対応しているいる場合、色コントロールは OS の既定の色選択機能を呼び出して選択できるようにする傾向があります。下記のスクリーンショットは macOS の Firefox の例です。
-
-![macOS 版 Firefox の色選択のスクリーンショットです。](fx-macos-color.jpg)
+通常、色コントロールをクリックすると、選択するためにオペレーティングシステムで既定の色選択機能が表示されます。
 
 次のライブサンプルも試してみてください。
 
@@ -276,10 +274,16 @@ HTML の日付コントロールは、カレンダーウィジェットを提供
 
 ## スキルテスト
 
-この記事の最後に到着しましたが、最も大事な情報を覚えていますか？次に進む前に、この情報を保持しているか検証するテストがあります — [Test your skills: HTML5 controls](/ja/docs/Learn/Forms/Test_your_skills:_HTML5_controls) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: HTML5 のコントロール](/ja/docs/Learn/Forms/Test_your_skills:_HTML5_controls)を見てください。
 
 ## まとめ
 
-ここで HTML5 フォーム入力型の旅が終了です。動作が特殊なため簡単に分類できないその他のコントロール型も少しあって、それを知るのも大事です。次の記事で扱います。
+これで、HTML5 フォーム入力型のツアーは終わりです。他にもいくつかコントロール型があり、その動作がとても特殊なため簡単にまとめることはできませんが、知っておく必要があります。次の記事でそれらに応じて説明します。
 
 {{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
+
+### 高度なトピック
+
+- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [フォームウィジェット向けのプロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
