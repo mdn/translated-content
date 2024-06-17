@@ -20,9 +20,9 @@ l10n:
 - `title` {{optional_inline}}
   - : 一个 {{jsxref("string")}}，指定书签的标题或要创建的文件夹的名称。如果未指定，则标题为 `""`。
 - `type` {{optional_inline}}
-  - : 一个 {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}} 对象，指示这是一个书签、文件夹还是分隔符。默认情况下，除非省略 `url`，否则默认为 `"bookmark"`，在这种情况下默认为 `"folder"`。
+  - : 一个 {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}} 对象，指示这是一个书签、文件夹还是分隔符。默认为 `"bookmark"`，除非省略 `url`，否则，默认为 `"folder"`。
 - `url` {{optional_inline}}
-  - : `string`。一个 {{jsxref("string")}}，指定要书签的页面的 URL。如果省略或为 `null`，则创建一个文件夹而不是书签。
+  - : 一个 {{jsxref("string")}}，指定要创建书签的页面的 URL。如果省略或为 `null`，则创建一个文件夹而不是书签。
 
 ## 浏览器兼容性
 
