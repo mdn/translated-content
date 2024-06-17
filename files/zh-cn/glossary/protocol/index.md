@@ -17,4 +17,4 @@ l10n:
 - 术语
 
   - {{glossary("TCP")}}
-  - {{glossary("Packet")}}
+  - {{glossary("Packet", "数据包")}}
