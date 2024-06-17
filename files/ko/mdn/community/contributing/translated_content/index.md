@@ -10,7 +10,7 @@ slug: MDN/Community/Contributing/Translated_content
 > **참고:** 한국어 이외의 로케일 목록은 [영어 문서](/ko/docs/MDN/Community/Contributing/Translated_content)를 참고하세요.
 
 - 토론: [Discord (#korean 채널)](/discord), [Google Groups (`yari-content-ko`)](https://groups.google.com/g/yari-content-ko)
-- 현재 기여자: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [wisedog](https://github.com/wisedog), [jho2301](https://github.com/jho2301), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
+- 현재 기여자: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [wisedog](https://github.com/wisedog), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
 
 ## 같이 보기
 
