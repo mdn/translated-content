@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-检查正则表达式是否支持作为 {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}`.regexFilter` 规则条件。
+检查是否支持将某个正则表达式作为 {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}`.regexFilter` 规则的条件。
 
 ## 语法
 
