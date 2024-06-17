@@ -1,6 +1,8 @@
 ---
 title: d
 slug: Web/SVG/Attribute/d
+l10n:
+  sourceCommit: 8cd08162e592c1baf5d888f4c5a08a58360344b5
 ---
 
 {{SVGRef}}
@@ -40,7 +42,7 @@ svg {
 
 ## path
 
-对于 {{SVGElement('path')}}，`d` 是一个字符串，其中包含一组路径命令，用于定义要绘制的路径。
+对于 {{SVGElement('path')}}，`d` 是一个包含一组路径命令的字符串，用于定义要绘制的路径。
 
 <table class="properties">
   <tbody>
@@ -65,7 +67,7 @@ svg {
 
 > **警告：** 自 SVG2 起，{{SVGElement('glyph')}} 已被弃用，不应该继续使用。
 
-对于 {{SVGElement('glyph')}}，`d` 是一个字符串，其中包一组路径命令，用于定义字形（glyph）的轮廓形状。
+对于 {{SVGElement('glyph')}}，`d` 是一个包含一组路径命令的字符串，用于定义字形（glyph）的轮廓形状。
 
 <table class="properties">
   <tbody>
@@ -92,7 +94,7 @@ svg {
 
 > **警告：** 自 SVG2 起，{{SVGElement('missing-glyph')}} 已被弃用，不应该继续使用。
 
-对于 {{SVGElement('missing-glyph')}}，`d` 是一个字符串，其中包一组路径命令，用于定义字形（glyph）的轮廓形状。
+对于 {{SVGElement('missing-glyph')}}，`d` 是一个包含一组路径命令的字符串，用于定义字形（glyph）的轮廓形状。
 
 <table class="properties">
   <tbody>
@@ -156,12 +158,12 @@ svg {
 
 SVG 定义了六种路径命令类型，一共 20 条命令：
 
-- 移动到：`M`、`m`
-- 画线至：`L`、`l`、`H`、`h`、`V`、`v`
-- 三次方贝塞尔曲线：`C`、`c`、`S`、`s`
-- 二次方贝塞尔曲线：`Q`、`q`、`T`、`t`
-- 椭圆曲线：`A`、`a`
-- 封闭路径：`Z`、`z`
+- [MoveTo](#MoveTo_路径命令)：`M`、`m`
+- [LineTo](#LineTo_路径命令)：`L`、`l`、`H`、`h`、`V`、`v`
+- [三次贝塞尔曲线](#cubic_bézier_curve)：`C`、`c`、`S`、`s`
+- [二次贝塞尔曲线](#quadratic_bézier_curve)：`Q`、`q`、`T`、`t`
+- [椭圆曲线](#elliptical_arc_curve)：`A`、`a`
+- [ClosePath](#closepath)：`Z`、`z`
 
 > **备注：** 命令是*大小写敏感*的。大写的命令指定绝对坐标，而小写命令指定相对（于当前位置的）坐标。
 
@@ -266,9 +268,6 @@ svg {
 ```
 
 {{EmbedLiveSample('MoveTo 路径命令', '100%', 200)}}
-
-- 位于绝对位置 x=50, y= 100：`<path d="M50,100..." />`
-- 往右移 50，往下移 100：`<path d="m50,100..." />`
 
 ### Lineto 路径命令
 
@@ -448,7 +447,7 @@ svg {
 
 {{EmbedLiveSample('Lineto 路径命令', '100%', 200)}}
 
-## 三次贝塞尔曲线
+### 三次贝塞尔曲线
 
 _三次_[_贝塞尔曲线_](/zh-CN/docs/Glossary/Bezier_curve)是使用四个点定义的平滑曲线：
 
@@ -1004,7 +1003,7 @@ svg {
 
 {{EmbedLiveSample('椭圆曲线', '100%', 200)}}
 
-## ClosePath
+### ClosePath
 
 _ClosePath_ 命令将从*当前位置*绘制一条直线到路径中的第一个点。
 
