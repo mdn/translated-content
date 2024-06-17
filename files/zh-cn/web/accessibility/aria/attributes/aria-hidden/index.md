@@ -75,7 +75,7 @@ l10n:
 - {{domxref("ElementInternals.ariaHidden")}}
   - : [`ariaHidden`](/zh-CN/docs/Web/API/Element/ariaHidden) 属性，属于 {{domxref("ElementInternals")}} 接口，反映了 `aria-hidden` 属性的值。
 
-## 相关角色
+## 关联角色
 
 用于**所有**角色
 
