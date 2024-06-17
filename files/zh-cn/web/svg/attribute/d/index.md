@@ -160,10 +160,10 @@ SVG 定义了六种路径命令类型，一共 20 条命令：
 
 - [MoveTo](#MoveTo_路径命令)：`M`、`m`
 - [LineTo](#LineTo_路径命令)：`L`、`l`、`H`、`h`、`V`、`v`
-- [三次贝塞尔曲线](#cubic_bézier_curve)：`C`、`c`、`S`、`s`
-- [二次贝塞尔曲线](#quadratic_bézier_curve)：`Q`、`q`、`T`、`t`
-- [椭圆曲线](#elliptical_arc_curve)：`A`、`a`
-- [ClosePath](#closepath)：`Z`、`z`
+- [三次贝塞尔曲线](#三次贝塞尔曲线)：`C`、`c`、`S`、`s`
+- [二次贝塞尔曲线](#二次贝塞尔曲线)：`Q`、`q`、`T`、`t`
+- [椭圆曲线](#椭圆曲线)：`A`、`a`
+- [ClosePath](#ClosePath)：`Z`、`z`
 
 > **备注：** 命令是*大小写敏感*的。大写的命令指定绝对坐标，而小写命令指定相对（于当前位置的）坐标。
 
