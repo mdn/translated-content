@@ -11,18 +11,18 @@ l10n:
 
 ## 类型
 
-一个 {{jsxref("object")}}，包含以下一些或全部字段：
+一个{{jsxref("object", "对象", "", 1)}}，包含以下一些或全部字段：
 
 - `index` {{optional_inline}}
   - : 一个整数 {{jsxref("Number")}}，指定新书签在其父级下的位置。值为 0 将把它放在列表顶部。
 - `parentId` {{optional_inline}}
-  - : 一个 {{jsxref("string")}}，表示要将新书签或书签文件夹放入的父文件夹的 ID。在 Chrome 和 Firefox 上，默认值为书签菜单上的“其他书签”文件夹。
+  - : 一个{{jsxref("string", "字符串", "", 1)}}，表示要将新书签或书签文件夹放入的父文件夹的 ID。在 Chrome 和 Firefox 上，默认值为书签菜单上的“其他书签”文件夹。
 - `title` {{optional_inline}}
-  - : 一个 {{jsxref("string")}}，指定书签的标题或要创建的文件夹的名称。如果未指定，则标题为 `""`。
+  - : 一个{{jsxref("string", "字符串", "", 1)}}，指定书签的标题或要创建的文件夹的名称。如果未指定，则标题为 `""`。
 - `type` {{optional_inline}}
   - : 一个 {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}} 对象，指示这是一个书签、文件夹还是分隔符。默认为 `"bookmark"`，除非省略 `url`，否则，默认为 `"folder"`。
 - `url` {{optional_inline}}
-  - : 一个 {{jsxref("string")}}，指定要创建书签的页面的 URL。如果省略或为 `null`，则创建一个文件夹而不是书签。
+  - : 一个{{jsxref("string", "字符串", "", 1)}}，指定要创建书签的页面的 URL。如果省略或为 `null`，则创建一个文件夹而不是书签。
 
 ## 浏览器兼容性
 
