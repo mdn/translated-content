@@ -67,7 +67,7 @@ l10n:
 - `<string>`
   - : 数字 [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) 的可读文本替代
 
-## 关联接口
+## 关联角色
 
 - {{domxref("Element.ariaColIndexText")}}
   - : {{domxref("Element")}} 接口的 [`ariaColIndexText`](/zh-CN/docs/Web/API/Element/ariaColIndexText) 属性，反映了 HTML 属性 `aria-colindextext` 的值。

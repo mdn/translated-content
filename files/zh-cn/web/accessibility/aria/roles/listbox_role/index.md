@@ -21,7 +21,7 @@ slug: Web/Accessibility/ARIA/Roles/listbox_role
 
 ### 相关的 ARIA 角色、状态和属性
 
-#### 相关角色
+#### 关联角色
 
 - [option](/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role)
   - : 需要一个或多个嵌套的 `option`。所有被选择的选项都含有 `aria-selected` 且值为 `true`。所有未选中的选项都含有 `aria-selected` 且值为 `false`。如果某个选项不可选择，`aria-selected` 会被忽略。
