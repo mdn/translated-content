@@ -18,21 +18,21 @@ l10n:
 
 ## 实例属性
 
-_从父级 {{domxref("BaseAudioContext")}} 获取属性。_
+_从其父接口 {{domxref("BaseAudioContext")}} 继承属性。_
 
 - {{domxref('OfflineAudioContext.length')}} {{ReadOnlyInline}}
   - : 代表采样帧缓冲区大小的整数。
 
 ## 实例方法
 
-_从父级 {{domxref("BaseAudioContext")}} 获取方法。_
+_从其父接口 {{domxref("BaseAudioContext")}} 继承方法。_
 
 - {{domxref("OfflineAudioContext.suspend()")}}
-  - : 在指定的时间安排音频暂停时间进程，并且通过 Promise 返回。
+  - : 在指定的时间安排音频暂停时间进程，并返回 Promise 。
 - {{domxref("OfflineAudioContext.startRendering()")}}
   - : 开始渲染音频，考虑当前连接和当前计划的修改。这个页面涵盖基于事件的和基于 Promise 的版本。
 
-### 废弃的方法
+### 已弃用的方法
 
 - {{domxref("OfflineAudioContext.resume()")}}
   - : 恢复一个被暂停的音频的时间进程。
@@ -47,16 +47,13 @@ _从父级 {{domxref("BaseAudioContext")}} 获取方法。_
 
   - : 当离线音频上下文的渲染完成时触发。
 
-- [`complete`](/zh-CN/docs/Web/API/OfflineAudioContext/complete_event)
-  - : 当离线的音频进程完成渲染时触发。
-
 ## 示例
 
 ### 使用离线音频上下文播放音频
 
-这个例子中，我们声明了 {{domxref("AudioContext")}} 和 `OfflineAudioContext` 对象。我们使用 `AudioContext` 加载一个音频块 {{domxref("fetch()")}}，然后使用 `OfflineAudioContext` 去渲染音频并得到一个 {{domxref("AudioBufferSourceNode")}}，并播放这个音轨。在离线音频处理图建立后，我们使用 {{domxref("OfflineAudioContext.startRendering")}} 来渲染它成为 {{domxref("AudioBuffer")}}。
+这个例子中，我们声明了 {{domxref("AudioContext")}} 和 `OfflineAudioContext` 对象。我们使用 `AudioContext` 加载一个音轨的 {{domxref("fetch()")}}，然后使用 `OfflineAudioContext` 去渲染音频并得到一个 {{domxref("AudioBufferSourceNode")}}，并播放这个音轨。在离线音频处理图建立后，我们使用 {{domxref("OfflineAudioContext.startRendering")}} 来将它渲染为 {{domxref("AudioBuffer")}}。
 
-当 `startRendering()` 的 `Promise` 解决后，渲染也完成了，在 `Promise` 内可以获得输出的 `AudioBuffer`。
+当 `startRendering()` 的 promise 兑现后，渲染也完成了，promise 会返回输出的 `AudioBuffer`。
 
 在此刻，我们创建了一个另外的音频上下文，在它里面创建了一个 {{domxref("AudioBufferSourceNode")}}，并且设置它的 buffer 为之前生成的 Promise 中的 `AudioBuffer`，这样它就可以作为简单标准音频图来播放了。
 
