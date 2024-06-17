@@ -1,6 +1,8 @@
 ---
 title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
+l10n:
+  sourceCommit: 4ce6b9526bfa5b44a518e8ecb21a9894973136bd
 ---
 
 {{JSRef}}
@@ -108,7 +110,7 @@ Object.entries(obj).forEach(([key, value]) => {
 
 ## 參見
 
-- [Polyfill of `Object.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [`core-js` 中 `Object.entries` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-object)
 - [屬性的可枚舉性和所有權](/zh-TW/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}
