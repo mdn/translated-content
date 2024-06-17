@@ -22,7 +22,7 @@ l10n:
 
 ### 예제
 
-이 예제는 [접근성 환경 설정](/ko/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely)에서 축소 모션을 활성화시키 않았다면 난잡한 애니메이션이 실행됩니다.
+이 예제는 [접근성 환경 설정](/ko/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely)에서 축소 모션을 활성화시키지 않았다면 난잡한 애니메이션이 실행됩니다.
 
 #### HTML
 
