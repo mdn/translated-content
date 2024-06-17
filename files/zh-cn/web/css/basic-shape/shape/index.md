@@ -125,7 +125,7 @@ clip-path: shape(
 `shape()` 函数允许你定义复杂的形状。它在几个方面类似于 {{cssxref("basic-shape/path","path()")}} 形状函数：
 
 - `shape()` 函数中的 `<fill-rule>` 参数的工作方式与 `path()` 函数中的相同。
-- `shape()` 函数要求指定一个或多个 `<shape-command>`，其中每个命令使用底层的[路径命令](/zh-CN/docs/Web/SVG/Attribute/d#路径命令)，例如 [MoveTo](/zh-CN/docs/Web/SVG/Attribute/d#MoveTo_路径命令)、[LineTo](/zh-CN/docs/Web/SVG/Attribute/d#LineTo_路径命令) 和 [ClosePath](/zh-CN/docs/Web/SVG/Attribute/d#closepath)。
+- `shape()` 函数要求指定一个或多个 `<shape-command>`，其中每个命令使用底层的[路径命令](/zh-CN/docs/Web/SVG/Attribute/d#路径命令)，例如 [MoveTo](/zh-CN/docs/Web/SVG/Attribute/d#moveto_路径命令)、[LineTo](/zh-CN/docs/Web/SVG/Attribute/d#lineto_路径命令) 和 [ClosePath](/zh-CN/docs/Web/SVG/Attribute/d#closepath)。
 
 然而，与使用 `path()` 相比，`shape()` 提供了几个优点：
 
