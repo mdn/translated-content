@@ -86,7 +86,7 @@ clip-path: shape(
 
     `<line-command>`：指定为 `line [by | to] <coordinate-pair>`。此命令将 [LineTo 命令](/zh-CN/docs/Web/SVG/Attribute/d#lineto_path_commands)添加到形状命令列表中。它从命令的起始点直线绘制到其结束点。`by` 或 `to` 关键字指定由 `<coordinate-pair>` 分别指定的结束点是“相对”还是“绝对”。
 
-    `<hv-line-command>`：指定为 `[hline | vline] [by | to] <length-percentage>`。此命令将水平 (`hline`) 或垂直 (`vline`) [LineTo 命令](/zh-CN/docs/Web/SVG/Attribute/d#lineto_path_commands)添加到形状命令列表中。使用 `hline`，从命令的起始点绘制水平线到由 `<length-percentage>` 定义的 `x` 位置的 `to` 或 `by`。使用 `vline`，从命令的起始点绘制垂直线到由 `<length-percentage>` 定义的 `y` 位置的 `to` 或 `by`。`by` 或 `to` 关键字分别确定了“相对”或“绝对”结束点。此命令相当于 `<line-command>`，其中一个坐标值由单个 `<length-percentage>` 设置，另一个坐标值保持从其起始命令开始的不变。
+    `<hv-line-command>`：指定为 `[hline | vline] [by | to] <length-percentage>`。此命令将水平（`hline`）或垂直（`vline`）[LineTo 命令](/zh-CN/docs/Web/SVG/Attribute/d#lineto_path_commands)添加到形状命令列表中。使用 `hline`，从命令的起始点绘制水平线到由 `<length-percentage>` 定义的 `x` 位置的 `to` 或 `by`。使用 `vline`，从命令的起始点绘制垂直线到由 `<length-percentage>` 定义的 `y` 位置的 `to` 或 `by`。`by` 或 `to` 关键字分别确定了“相对”或“绝对”结束点。此命令相当于 `<line-command>`，其中一个坐标值由单个 `<length-percentage>` 设置，另一个坐标值保持从其起始命令开始的不变。
 
     `<curve-command>`：指定为 `curve [by | to] <coordinate-pair> via <coordinate-pair> [<coordinate-pair>]`。此命令将一个[贝塞尔曲线命令](/zh-CN/docs/Web/SVG/Attribute/d#cubic_bézier_curve)添加到形状命令列表中。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对”还是“绝对”。
 
