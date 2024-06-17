@@ -98,7 +98,7 @@ l10n:
 
   {{cssxref("transition-behavior")}} 属性在 Nightly 版本中默认启用。作者可以使用此属性来控制是否将 CSS 过渡应用于具有[离散动画类型](/zh-CN/docs/Web/CSS/CSS_animated_properties#离散)的属性（[Firefox bug 1882408](https://bugzil.la/1882408)、[Firefox bug 1805727](https://bugzil.la/1805727)）。
 
-- **嵌套在分段元素中的 `<h1>` 的用户代理样式**:`layout.css.h1-in-section-ua-styles.enabled`。
+- **嵌套在分段元素中的 `<h1>` 的用户代理样式**：`layout.css.h1-in-section-ua-styles.enabled`。
 
   现在，当 `<h1>` 标题嵌套在[分段元素](/zh-CN/docs/Web/HTML/Content_categories#分段内容) `<article>`、`<aside>`、`<nav>` 和 `<section>` 中时，其字体大小不再减小。由于大纲算法已从 HTML 规范中[移除](https://github.com/whatwg/html/pull/7829)，嵌套在分段元素中的 `<h1>` 不再与用户代理样式相关联。（[Firefox bug 1883896](https://bugzil.la/1883896)）。
 
