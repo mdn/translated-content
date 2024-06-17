@@ -14,7 +14,7 @@ l10n:
 该类型的值是对象，包含以下属性：
 
 - `domainType` {{optional_inline}}
-  - : `string`。指定网络请求是与其源域名的第一方还是第三方关系。如果省略，则接受所有请求。可能的值为 `"firstParty"` 和 `"thirdParty"`。
+  - : `string`。指定网络请求是其源域的第一方还是第三方请求。如果省略，则接受所有请求。可能的值为 `"firstParty"` 和 `"thirdParty"`。
 - `domains` {{deprecated_inline}} {{optional_inline}}
   - : `string` 数组。请使用 [`initiatorDomains`](#initiatordomains) 代替。规则仅匹配源自此域名列表的网络请求。
 - `excludedDomains` {{deprecated_inline}} {{optional_inline}}
@@ -27,7 +27,7 @@ l10n:
   - : `boolean`。[`urlFilter`](#urlfilter) 或 [`regexFilter`](#regexfilter)（指定的任何一个）是否区分大小写。尽管在 [WECG issue 269](https://github.com/w3c/webextensions/issues/269) 中，默认值为 `false` 已在各浏览器中达成共识，但在（较旧的）Chrome 和 Safari 版本中，该值曾为 `true`。详细信息请参见[浏览器兼容性](#browser_compatibility)。
 - `regexFilter` {{optional_inline}}
   - : `string`。用于匹配网络请求 URL 的正则表达式。注意：
-    - 支持的格式不稳定且在各浏览器中有所不同，详情请参见 [WECG issue 344 中的 "DNR API 中的正则表达式 (regexFilter)"](https://github.com/w3c/webextensions/issues/344)。
+    - 支持的格式不稳定且在各浏览器中有所不同，详情请参见 [WECG issue 344 中的“DNR API（regexFilter）中的正则表达式”](https://github.com/w3c/webextensions/issues/344)。
     - 只能指定 [`urlFilter`](#urlfilter) 或 `regexFilter` 之一。
     - `regexFilter` 必须仅由 {{Glossary("ASCII")}} 字符组成。这与主机编码为[国际化域名编码](https://zh.wikipedia.org/wiki/国际化域名编码)格式的 URL 匹配（在国际化域名的情况下），任何其他非 ASCII 字符都使用 utf-8 进行 URL 编码。
 - `requestDomains` {{optional_inline}}
