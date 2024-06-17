@@ -36,14 +36,14 @@ _此接口从它的父类 {{domxref("UIEvent")}} 继承了属性，间接继承�
 
 ## 示例
 
-### 在线示例
+### 实时示例
 
 本示例在失去焦点时更改文档的外观。它使用 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 监听 `focus` 和 {{domxref("Window/blur_event", "blur")}} 事件。
 
 #### HTML
 
 ```html
-<p id="log">Click on this document to give it focus.</p>
+<p id="log">单击文档使其获得焦点。</p>
 ```
 
 #### CSS
@@ -60,13 +60,12 @@ _此接口从它的父类 {{domxref("UIEvent")}} 继承了属性，间接继承�
 ```js
 function pause() {
   document.body.classList.add("paused");
-  log.textContent = "FOCUS LOST!";
+  log.textContent = "失去焦点！";
 }
 
 function play() {
   document.body.classList.remove("paused");
-  log.textContent =
-    "This document has focus. Click outside the document to lose focus.";
+  log.textContent = "文档有焦点，点击文档外部可失去焦点。";
 }
 
 const log = document.getElementById("log");
@@ -77,7 +76,7 @@ window.addEventListener("focus", play);
 
 #### 结果
 
-{{EmbedLiveSample("在线示例")}}
+{{EmbedLiveSample("实时示例")}}
 
 ## 规范
 
@@ -87,7 +86,7 @@ window.addEventListener("focus", play);
 
 {{Compat}}
 
-## 参考
+## 参见
 
-- 相关联事件： {{domxref("Window/blur_event", "blur")}}
+- 相关联事件：{{domxref("Window/blur_event", "blur")}}
 - `Element` 目标上的这个事件：{{domxref("Element/focus_event", "focus")}} 事件
