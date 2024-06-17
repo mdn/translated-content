@@ -28,7 +28,7 @@ _从其父接口 {{domxref("BaseAudioContext")}} 继承属性。_
 _从其父接口 {{domxref("BaseAudioContext")}} 继承方法。_
 
 - {{domxref("OfflineAudioContext.suspend()")}}
-  - : 在指定的时间安排音频暂停时间进程，并返回 Promise 。
+  - : 在指定的时间安排音频暂停时间进程，并返回 Promise。
 - {{domxref("OfflineAudioContext.startRendering()")}}
   - : 开始渲染音频，考虑当前连接和当前计划的修改。这个页面涵盖基于事件的和基于 Promise 的版本。
 
