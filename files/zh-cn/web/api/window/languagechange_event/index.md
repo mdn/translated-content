@@ -22,9 +22,9 @@ onlanguagechange = (event) => {};
 
 一个通用的 {{domxref("Event")}}。
 
-## 事件处理程序别名
+## 事件处理器别名
 
-除了 `Window` 接口以外，事情处理方法属性 `onlanguagechange` 同样可以用于以下目标：
+除了 `Window` 接口以外，事件处理器属性 `onlanguagechange` 同样可以用于以下目标：
 
 - {{domxref("HTMLBodyElement")}}
 - {{domxref("HTMLFrameSetElement")}}
@@ -36,15 +36,15 @@ onlanguagechange = (event) => {};
 
 ```js
 window.addEventListener("languagechange", () => {
-  console.log("检测到语言更改事件！");
+  console.log("检测到 languagechange 事件！");
 });
 ```
 
-或使用 `onlanguagechange` 事件处理程序属性：
+或使用 `onlanguagechange` 事件处理器属性：
 
 ```js
 window.onlanguagechange = (event) => {
-  console.log("检测到语言更改事件！");
+  console.log("检测到 languagechange 事件！");
 };
 ```
 

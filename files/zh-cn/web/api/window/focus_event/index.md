@@ -29,7 +29,7 @@ onfocus = (event) => {};
 
 ## 事件属性
 
-_此接口从它的父级继承了属性 {{domxref("UIEvent")}}，间接来自于 {{domxref("Event")}}。_
+_此接口从它的父类 {{domxref("UIEvent")}} 继承了属性，间接继承于 {{domxref("Event")}}。_
 
 - {{domxref("FocusEvent.relatedTarget")}}
   - : {{domxref("EventTarget")}} 代表此次事件的次要目标。在一些案例中（例如切换浏览器 tab 标签时），出于安全的原因，这个属性可能会被设置为 `null`。
