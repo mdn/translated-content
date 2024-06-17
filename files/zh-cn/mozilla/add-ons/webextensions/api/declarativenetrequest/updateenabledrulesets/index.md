@@ -31,8 +31,6 @@ let updatedRulesets = browser.declarativeNetRequest.updateEnabledRulesets(
 
 一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。如果请求成功，其会被兑现且不带参数。如果请求失败，则 promise 将被拒绝并带有错误消息。
 
-## 示例
-
 {{WebExtExamples}}
 
 ## 浏览器兼容性
