@@ -2,7 +2,7 @@
 title: color-contrast()
 slug: Web/CSS/color_value/color-contrast
 l10n:
-  sourceCommit: 
+  sourceCommit: 8a22e494736dbe7cc8ba38127a0d928b9fe8e700
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
