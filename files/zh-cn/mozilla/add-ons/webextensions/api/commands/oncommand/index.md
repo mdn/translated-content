@@ -9,7 +9,7 @@ l10n:
 
 当使用相关的键盘快捷键执行命令时触发。
 
-监听器会接收到命令的名称。这与在其 [manifest.json entry](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) 中给出的名称相匹配。
+监听器会接收到命令的名称。这与在其 [manifest.json 条目](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)中给出的名称相匹配。
 
 ## 语法
 
@@ -37,7 +37,7 @@ browser.commands.onCommand.hasListener(listener)
   - : 用户输入命令的快捷键时调用的函数。该函数接收以下参数：
 
     - `name`
-      - : `string`。命令的名称。这与在其 [manifest.json entry](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) 中给出的名称相匹配。
+      - : `string`。命令的名称。这与在其 [manifest.json 条目](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)中给出的名称相匹配。
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}。输入命令快捷键时激活的标签页。
 
