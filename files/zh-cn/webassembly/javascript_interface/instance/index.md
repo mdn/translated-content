@@ -7,7 +7,7 @@ l10n:
 
 {{WebAssemblySidebar}}
 
-**`WebAssembly.Instance`** 对象本身是有状态的，是 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/JavaScript_interface/Module) 的一个可执行实例。`Instance` 包含所有的 [WebAssembly 导出函数](/zh-CN/docs/WebAssembly/Exported_functions)，允许从 JavaScript 调用 WebAssembly 代码。
+**`WebAssembly.Instance`** 对象本身是有状态的，是 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/JavaScript_interface/Module) 的一个可执行实例。`Instance` 对象包含所有的 [WebAssembly 导出函数](/zh-CN/docs/WebAssembly/Exported_functions)，允许从 JavaScript 调用 WebAssembly 代码。
 
 ## 构造函数
 
