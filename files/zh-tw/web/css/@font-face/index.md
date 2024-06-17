@@ -57,18 +57,18 @@ slug: Web/CSS/@font-face
 
 透過允許自定義字體，`@font-face` 可以設計內容而不必局限於所謂的「web-safe」字體（即那些非常常用、被認為是普遍可用的字體）。指定本地安裝的字體名稱以尋找和使用，使得可以在不依賴網路連接的情況下自定義字體而非使用基本字體。
 
-> **注意：** 在舊版瀏覽器上加載字體的回退策略描述在 [`src` 描述符頁面](/zh-TW/docs/Web/CSS/@font-face/src#fallbacks_for_older_browsers)。
+> **注意：** 在舊版瀏覽器上加載字體的回退策略描述在 [`src` 描述符頁面](/zh-TW/docs/Web/CSS/@font-face/src#指定舊版瀏覽器的後備方案)。
 
-`@font-face` 不僅可以在 CSS 的頂層使用，還可以在任何 [CSS 條件群組規則](/zh-TW/docs/CSS/At-rule#Conditional_Group_Rules)內使用。
+`@font-face` 不僅可以在 CSS 的頂層使用，還可以在任何 [CSS 條件規則群組](/zh-TW/docs/CSS/At-rule#條件規則群組)內使用。
 
 ### 字體 MIME 類型
 
-| Format                 | MIME type    |
+| 格式                   | MIME 類型    |
 | ---------------------- | ------------ |
 | TrueType               | `font/ttf`   |
 | OpenType               | `font/otf`   |
-| Web Open Font Format   | `font/woff`  |
-| Web Open Font Format 2 | `font/woff2` |
+| Web 開放字型格式        | `font/woff`  |
+| Web 開放字型格式 2.0    | `font/woff2` |
 
 > 備註：
 >
@@ -137,10 +137,9 @@ slug: Web/CSS/@font-face
 
 ## 參見
 
-- [About WOFF](/zh-TW/docs/WOFF)
-- [FontSquirrel @font-face generator](https://www.fontsquirrel.com/fontface/generator)
+- [關於 WOFF](/zh-TW/docs/WOFF)
+- [FontSquirrel @font-face 生成器](https://www.fontsquirrel.com/tools/webfont-generator)
 - [Beautiful fonts with @font-face](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
-- [Open Font Library](https://openfontlibrary.org/)
-- [Microsoft Developer Network (MSDN) @font-face reference](<http://msdn.microsoft.com/en-us/library/ms530757(VS.85).aspx>)
-- [When can I use WOFF?](http://caniuse.com/woff)
-- [When can I use SVG Fonts?](http://caniuse.com/svg-fonts)
+- [Font Library](https://fontlibrary.org/)
+- [WOFF 與瀏覽器相容性](http://caniuse.com/woff)
+- [SVG 字體與瀏覽器相容性](http://caniuse.com/svg-fonts)
