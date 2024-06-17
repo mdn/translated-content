@@ -18,7 +18,7 @@ l10n:
 ### CSS
 
 - 已更新 {{cssxref("align-content")}} 属性，使其适用于 `display: block;` 布局。这将 `flex` 和 `grid` 中所有的布局定位带到 `block`，使开发人员能够对齐块级元素，而无需将其容器转换为 `flex` 或 `grid` 容器。（[Firefox bug 1882853](https://bugzil.la/1882853)）。
-- CSS [`transform-box`](/zh-CN/docs/Web/CSS/transform-box) 现已支持 `content-box` 和 `stroke-box` 值。对于参照的盒子，`content-box` 值使用[内容盒子](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#盒模型的各个部分)，而 `stroke-box` 值使用包含 SVG 形状的描边边界框（stroke bounding box）（[Firefox bug 1868374](https://bugzil.la/1868374)）。
+- CSS 属性 [`transform-box`](/zh-CN/docs/Web/CSS/transform-box) 现已支持 `content-box` 和 `stroke-box` 值。对于参照的盒子，`content-box` 值使用[内容盒子](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#盒模型的各个部分)，而 `stroke-box` 值使用包含 SVG 形状的描边边界框（stroke bounding box）（[Firefox bug 1868374](https://bugzil.la/1868374)）。
 
 ### JavaScript
 
@@ -95,7 +95,7 @@ l10n:
 
 - **CSS `transition-behavior`**：`layout.css.transition-behavior.enabled`。
 
-  {{cssxref("transition-behavior")}} 属性在 Nightly 版本中默认启用。作者可以使用此属性来控制是否将 CSS 过渡应用于具有[离散动画类型](/zh-CN/docs/Web/CSS/CSS_animated_properties#discrete)的属性（[Firefox bug 1882408](https://bugzil.la/1882408)、[Firefox bug 1805727](https://bugzil.la/1805727)）。
+  {{cssxref("transition-behavior")}} 属性在 Nightly 版本中默认启用。作者可以使用此属性来控制是否将 CSS 过渡应用于具有[离散动画类型](/zh-CN/docs/Web/CSS/CSS_animated_properties#离散)的属性（[Firefox bug 1882408](https://bugzil.la/1882408)、[Firefox bug 1805727](https://bugzil.la/1805727)）。
 
 - **UA styles for `<h1>` nested into sectioning elements**:`layout.css.h1-in-section-ua-styles.enabled`。
 
