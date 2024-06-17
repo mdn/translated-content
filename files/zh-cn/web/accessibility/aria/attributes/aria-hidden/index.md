@@ -68,7 +68,7 @@ l10n:
 - `undefined`（默认值）
   - : 用户代理根据元素是否被渲染来确定元素的隐藏状态。
 
-## 相关接口
+## 关联接口
 
 - {{domxref("Element.ariaHidden")}}
   - : [`ariaHidden`](/zh-CN/docs/Web/API/Element/ariaHidden) 属性，属于 {{domxref("Element")}} 接口，反映了 `aria-hidden` 属性的值，指示元素是否暴露给无障碍 API。
