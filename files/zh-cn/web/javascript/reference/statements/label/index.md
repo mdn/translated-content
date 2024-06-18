@@ -19,7 +19,7 @@ label:
 ```
 
 - `label`
-  - : 任何不属于[关键字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#关键字)的 JavaScript [标识符](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)。
+  - : 任何不属于[关键字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#关键字)的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)。
 - `statement`
   - : JavaScript 语句。`break` 可以在任何标记语句中使用，而 `continue` 可以在标记的循环语句中使用。
 
