@@ -8,10 +8,6 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLLabelElement.htmlFor`** property reflects the value
-of the [`for`](/ko/docs/Web/HTML/Element/label#for) content property. That means that this
-script-accessible property is used to set and read the value of the content property
-`for`, which is the ID of the label's associated control element.
 **`HTMLLabelElement.htmlFor`** 속성은
 [`for`](/ko/docs/Web/HTML/Element/label#for) 컨텐츠 속성의 값을 반영하는 속성입니다.
 이는 스크립트에 접근할 수 있는 해당 속성이 컨텐츠 속성 `for` 의 값을 설정하거나 읽을 수 있다는 것을 의미하며,
