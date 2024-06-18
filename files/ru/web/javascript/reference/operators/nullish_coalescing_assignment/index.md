@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
 
 ## Синтаксис
 
-```js
-expr1 ??= expr2;
+```js-nolint
+x ??= y
 ```
 
 ## Описание
@@ -62,7 +62,7 @@ config({}); // { duration: 100, speed: 25 }
 
 ## Смотрите также
 
-- [Оператор нулевого слияния (`??`)](/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Оператор нулевого слияния (`??`)](/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - {{Glossary("Nullish", "Похожее на null значение")}}
 - {{Glossary("Truthy", "Истиноподобное значение")}}
 - {{Glossary("Falsy", "Ложноподобное значение")}}
