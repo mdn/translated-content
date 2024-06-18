@@ -48,13 +48,13 @@ if (window.XMLHttpRequest) {
 }
 ```
 
-这也是像 [jQuery](https://jquery.com/) 这样的库出现的主要原因之一——它们可以抽象掉浏览器实现的差异，这样开发人员就可以使用例如 [`jQuery.ajax()`](https://api.jquery.com/jquery.ajax/) 这样的功能，背后会处理这些差异。
+这也是像 [jQuery](https://jquery.com/) 这样的库出现的主要原因之一——它们可以抽象掉浏览器实现的差异，这样开发人员就可以只使用例如 [`jQuery.ajax()`](https://api.jquery.com/jquery.ajax/) 这样的，背后会处理这些差异的函数。
 
-自那时以来，情况已经大大改善；现代浏览器可以很好地支持“经典 JavaScript 特性”，随着对旧浏览器的支持需求减少，使用这种代码的需求也减少了（尽管请注意它们并没有完全消失）。
+自那时以来，情况已经大大改善；现代浏览器可以很好地支持“经典 JavaScript 特性”，随着对旧浏览器的支持需求减少，使用这种代码的需求也减少了（但请注意它们并没有完全消失）。
 
 如今，大多数跨浏览器 JavaScript 问题出现在：
 
-- 当使用低劣的浏览器嗅探代码、特性检测代码和供应商前缀使用阻止浏览器运行它们本来可以使用的代码时。
+- 当低劣的浏览器嗅探代码、特性检测代码和供应商前缀的使用阻止浏览器运行它们本来可以使用的代码时。
 - 当开发人员在代码中使用新的/新出现的 JavaScript 特性、现代 Web API 等，然而这些特性在旧浏览器中不起作用时。
 
 我们将在下面探讨所有这些问题及更多问题。
@@ -64,8 +64,8 @@ if (window.XMLHttpRequest) {
 正如我们在关于 HTML/CSS 的[前一篇文章](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#首先：解决一般问题)中所说，你应该先确保你的代码能够正常工作，然后再去集中解决跨浏览器问题。如果你还不熟悉[如何查找 JavaScript 代码的错误](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)的基本内容，你应该在继续学习之前学习这篇文章。你要注意一些常见的 JavaScript 问题，比如说：
 
 - 基本的语法和逻辑问题（再次重申，请参阅[如何查找 JavaScript 代码的错误](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)）。
-- 确保变量等定义在正确的范围内，并且你不会遇到在不同地方声明的内容之间的冲突（见[函数作用域和冲突](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#函数作用域和冲突)）。
-- 对 [this](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的困惑，表现在它适用于什么范围，它的值是否是你所期望的。你可以阅读[“this”的含义](/zh-CN/docs/Learn/JavaScript/Objects/Basics#this的含义)，它做了一点浅显的介绍；你还应该研究像[这样](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143)的例子，它显示了一个典型的模式，即把 `this` 作用域保存到一个单独的变量中，然后在嵌套函数中使用这个变量，这样你就可以确定能够把功能应用到正确的 `this` 作用域。
+- 确保变量等定义在正确的作用域中，并且你不会遇到在不同地方声明的内容之间的冲突（见[函数作用域和冲突](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#函数作用域和冲突)）。
+- 对 [this](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的困惑，表现在它适用于什么作用域，它的值是否是你所期望的。你可以阅读[“this”的含义](/zh-CN/docs/Learn/JavaScript/Objects/Basics#“this”的含义)，它做了一点浅显的介绍；你还应该研究像[这样](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143)的例子，它显示了一个典型的模式，即把 `this` 作用域保存到一个单独的变量中，然后在嵌套函数中使用这个变量，这样你就可以确定能够把功能应用到正确的 `this` 作用域。
 - 在使用全局变量进行迭代的循环中不正确地使用函数（更普遍的是“弄错作用域”）。
 
 > **标注：**
@@ -73,7 +73,7 @@ if (window.XMLHttpRequest) {
 >
 > 最简单的解决方案是用 `let` 而不是 `var` 来声明迭代变量，这样与函数相关的 `i` 的值对每个迭代都是唯一的。请参阅 [good-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html)（也可以参阅[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/good-for-loop.html)）以查看能正常工作的版本。
 
-- 确保在你试图使用[异步操作](/zh-CN/docs/Learn/JavaScript/Asynchronous)返回的值之前，其已经完成。这通常需要了解如何使用 _promises_：适当地使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 或在 promise 的 {{jsxref("Promise.then()", "then()")}} 处理程序中运行代码来处理异步调用的结果。有关此主题的介绍，请参见[如何使用 promises](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)。
+- 确保在你试图使用[异步操作](/zh-CN/docs/Learn/JavaScript/Asynchronous)返回的值之前，其已经完成。这通常需要了解如何使用 _promise_：适当地使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 或在 promise 的 {{jsxref("Promise.then()", "then()")}} 处理器中运行代码来处理异步调用的结果。有关此主题的介绍，请参见[如何使用 promise](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)。
 
 > **备注：** [JavaScript 代码中的 Bug：JavaScript 开发人员的 10 个最常见错误](https://www.toptal.com/javascript/10-most-common-javascript-mistakes)对这些常见错误及更多内容有很好的讨论。
 
@@ -113,7 +113,7 @@ npm install -g jshint
 
 浏览器开发工具有许多有用的特性，可以帮助调试 JavaScript。首先，JavaScript 控制台会报告代码中的错误。
 
-下载示例文件 [fetch-broken](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-broken) 到本地（也可以阅读[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-broken)）。
+下载示例 [fetch-broken](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-broken) 到本地（也可以查看[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-broken)）。
 
 如果查看控制台，你会看到一条错误消息。确切的语句会因浏览器而异，但大致会是：“Uncaught TypeError: heroes is not iterable”（未捕获的类型错误：heroes 不可迭代），并且引用的行号是 25。如果我们查看源代码，相关的代码部分如下：
 
@@ -142,7 +142,7 @@ showHeroes(response);
 
 #### Console API
 
-你可能已经知道这段代码有什么问题，但让我们更深入地探讨一下，以了解你该如何调查这个问题。首先，有一个 [Console](/zh-CN/docs/Web/API/console) API，借助它 JavaScript 代码可以与浏览器的 JavaScript 控制台进行交互。它有许多可用的功能，但最常用的是 [`console.log()`](/zh-CN/docs/Web/API/console/log_static)，它可以将自定义消息打印到控制台。
+你可能已经知道这段代码有什么问题，但让我们更深入地探讨一下，以了解你该如何调查这个问题。首先，有一个 [Console](/zh-CN/docs/Web/API/console) API，借助它 JavaScript 代码可以与浏览器的 JavaScript 控制台进行交互。它有许多可用的特性，但最常用的是 [`console.log()`](/zh-CN/docs/Web/API/console/log_static)，它可以将自定义消息打印到控制台。
 
 尝试添加一个 `console.log()` 调用来记录 `fetch()` 的返回值，像这样：
 
@@ -197,9 +197,9 @@ fetch(requestURL).then((response) => {
 
 ![含有断点的 Firefox 调试器](breakpoint.png)
 
-- 在 _Breakpoints_ 下，你会看到你设置的断点的详细信息。
-- 在 _Call Stack_ 下，你会看到几个条目——这基本上是导致当前函数被调用的一系列函数的列表。在顶部，是 `showHeroes()` 函数（我们当前正在查看的函数），第二个是 `onload`，它存储了包含对 `showHeroes()` 的调用的事件处理函数。
-- 在 _Scopes_ 下，你会看到我们正在查看的函数的当前活动作用域。我们只有三个——`showHeroes`、`block` 和 `Window`（全局作用域）。可以展开每个作用域以查看在执行代码被停止时作用域内部变量的值。
+- 在*断点*下，你会看到你设置的断点的详细信息。
+- 在*调用栈*下，你会看到几个条目——这基本上是导致当前函数被调用的一系列函数的列表。在顶部，是 `showHeroes()` 函数（我们当前正在查看的函数），第二个是 `onload`，它存储了包含对 `showHeroes()` 的调用的事件处理函数。
+- 在*作用域*下，你会看到我们正在查看的函数的当前活动作用域。我们只有三个——`showHeroes`、`block` 和 `Window`（全局作用域）。可以展开每个作用域以查看在执行代码被停止时作用域内部变量的值。
 
 这里面有一些非常有用的信息。
 
@@ -210,16 +210,16 @@ fetch(requestURL).then((response) => {
 
 我们希望你自己尝试修复这个问题。作为起点，请查看 {{domxref("Response")}} 对象的文档。如果遇到困难，可以在 <https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-fixed> 找到修复后的源代码。
 
-> **备注：** 调试器选项卡还有许多其他有用的特性，我们没有在这里讨论，比如条件断点和观察表达式。更多信息，请参见[调试器](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)页面。
+> **备注：** 调试器标签页还有许多其他有用的特性，我们没有在这里讨论，比如条件断点和观察表达式。更多信息，请参见[调试器](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)页面。
 
 ### 性能问题
 
 随着应用程序变得越来越复杂，你可能会开始使用更多的 JavaScript。这时，你可能会遇到性能问题（尤其是在较慢的设备上）。性能优化是一个广泛的话题，我们无法在此详尽讨论，但以下是一些快速优化建议：
 
 - 为了避免加载不必要的 JavaScript，建议使用 [Browserify](https://browserify.org/) 等工具将脚本打包成单个文件。总体而言，减少 HTTP 请求的数量可以很好地提升性能。
-- 在将文件部署到生产服务器之前，应通过压缩（minification）减小文件体积。压缩会将所有代码合并成一行，从而显著减少文件大小。虽然压缩后的代码可读性较差，但你不需要直接阅读它！推荐使用 [Uglify](https://github.com/mishoo/UglifyJS) 等工具进行压缩（还有在线版本，请访问 [JSCompress.com](https://jscompress.com/)）。
-- 使用 API 时，请确保在不需要时关闭 API 功能；因为某些 API 调用在处理能力方面可能非常耗费资源。例如，在显示视频流时，如果视频不在视线范围内，请确保关闭它。在使用重复调用的地理位置 API 跟踪设备位置时，如果用户不再需要，也应及时关闭。
-- 动画可能会对性能造成重大影响。尽管许多 JavaScript 库提供了由 JavaScript 控制的动画功能，但使用浏览器原生功能（如 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)或新兴的 [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)）执行动画通常更高效。建议阅读 Brian Birtles 的文章[使用 Element.animate 制作不重要的动画](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/)，了解动画成本高昂的原因、提升动画性能的技巧，以及 Web 动画 API 的相关信息。
+- 在将文件部署到生产服务器之前，应通过极简化（minification）减小文件体积。极简化会将所有代码合并成一行，从而显著减少文件大小。虽然简化后的代码可读性较差，但你不需要直接阅读它！推荐使用 [Uglify](https://github.com/mishoo/UglifyJS) 等极简化工具（还有在线版本，请访问 [JSCompress.com](https://jscompress.com/)）。
+- 使用 API 时，请确保在不需要时关闭 API 特性；因为某些 API 调用在处理能力方面可能非常耗费资源。例如，在显示视频流时，如果视频不在视线范围内，请确保关闭它。在使用重复调用的地理位置 API 跟踪设备位置时，如果用户不再需要，也应及时关闭。
+- 动画可能会对性能造成重大影响。尽管许多 JavaScript 库提供了由 JavaScript 控制的动画功能，但使用浏览器原生特性（如 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)或新兴的 [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)）执行动画通常更高效。建议阅读 Brian Birtles 的文章[使用 Element.animate 制作不重要的动画](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/)，了解动画成本高昂的原因、提升动画性能的技巧，以及 Web 动画 API 的相关信息。
 
 > **备注：** 阿迪—奥斯曼尼的[编写快速、内存效率高的 JavaScript 代码](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/)包含了大量细节和一些有助于提高 JavaScript 性能的出色建议。
 
@@ -242,7 +242,7 @@ fetch(requestURL).then((response) => {
 
 #### 特性检测
 
-特性检测的核心理念在于，通过执行测试来确认当前浏览器是否支持某个 JavaScript 特性，进而有条件地执行代码。这样做可以确保无论浏览器是否支持该特性，都能提供一个可接受的用户体验。以[地理位置 API](/zh-CN/docs/Web/API/Geolocation_API) 为例——该 API 能够访问网络浏览器所在设备的位置数据，它主要通过全局 [Navigator](/zh-CN/docs/Web/API/Navigator) 对象的 `geolocation` 属性来使用。因此，你可以采用如下方法来检测浏览器是否支持地理位置功能：
+特性检测的核心理念在于，通过执行测试来确认当前浏览器是否支持某个 JavaScript 特性，进而有条件地执行代码。这样做可以确保无论浏览器是否支持该特性，都能提供一个可接受的用户体验。以[地理位置 API](/zh-CN/docs/Web/API/Geolocation_API) 为例——该 API 能够访问网络浏览器所在设备的位置数据，它主要通过全局 [Navigator](/zh-CN/docs/Web/API/Navigator) 对象的 `geolocation` 属性来使用。因此，你可以采用如下方法来检测浏览器是否支持地理位置特性：
 
 ```js
 if ("geolocation" in navigator) {
