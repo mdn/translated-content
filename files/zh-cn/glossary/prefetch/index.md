@@ -23,7 +23,7 @@ l10n:
 
 开发人员可以通过几种不同的方式向浏览器提供应预获取导航的提示：
 
-[`<link rel="prefetch">`](/zh-CN/docs/Web/HTML/Attributes/rel/prefetch):
+[`<link rel="prefetch">`](/zh-CN/docs/Web/HTML/Attributes/rel/prefetch)：
 
 ```html
 <link rel="prefetch" href="next.html" />
@@ -44,11 +44,11 @@ l10n:
 </script>
 ```
 
-推测规则 API 更好地处理导航的文档预获取，比 `<link rel="prefetch">` 更好；前者专门为此目的而设计，而后者有许多限制；有关详细信息，请参阅 [`<link rel="prefetch">`](/zh-CN/docs/Web/HTML/Attributes/rel/prefetch)。
+推测规则 API 较 `<link rel="prefetch">` 可以更好地处理导航的文档预获取；前者专门为此目的而设计，而后者有许多限制；有关详细信息，请参阅 [`<link rel="prefetch">`](/zh-CN/docs/Web/HTML/Attributes/rel/prefetch)。
 
 ### DNS 预获取
 
-[DNS 预获取](/zh-CN/docs/Web/HTML/Attributes/rel/dns-prefetch)提前解析域名，通过减少请求时与域名查找相关的时间，加快加载时间。
+[DNS 预获取](/zh-CN/docs/Web/HTML/Attributes/rel/dns-prefetch)提前解析域名，通过减少请求时与域名查找相关的时间，加快载入速度。
 
 ```html
 <link rel="dns-prefetch" href="https://example.com/" />
