@@ -7,9 +7,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-现在，我们将探讨常见的跨浏览器 JavaScript 问题以及如何解决它们。
-
-这包括使用浏览器开发者工具来跟踪和修复问题，使用 Polyfills 和库来解决问题，在较旧的浏览器中使用现代 JavaScript 特性等信息。
+现在，我们将探讨常见的跨浏览器 JavaScript 问题以及如何解决它们。这包括使用浏览器开发者工具来跟踪和修复问题，使用 Polyfills 和库来解决问题，在较旧的浏览器中使用现代 JavaScript 特性等信息。
 
 <table>
   <tbody>
