@@ -115,7 +115,7 @@ c dx1 dy1, dx2 dy2, dx dy
 
 这里的最后一个坐标 (x,y) 表示的是曲线的终点，另外两个坐标是控制点，(x1,y1) 是起点的控制点，(x2,y2) 是终点的控制点。如果你熟悉代数或者微积分的话，会更容易理解控制点，控制点描述的是曲线起始点的斜率，曲线上各个点的斜率，是从起点斜率到终点斜率的渐变过程。（文字描述不好，维基百科上有图示，更直观。）
 
-![Cubic Bézier Curves with grid](cubic_bézier_curves_with_grid.png)
+![Cubic Bézier Curves with grid](cubic_bezier_curves_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -145,7 +145,7 @@ s dx2 dy2, dx dy
 
 S 命令可以用来创建与前面一样的贝塞尔曲线，但是，如果 S 命令跟在一个 C 或 S 命令后面，则它的第一个控制点会被假设成前一个命令曲线的第二个控制点的中心对称点。如果 S 命令单独使用，前面没有 C 或 S 命令，那当前点将作为第一个控制点。下面是 S 命令的语法示例，图中左侧红色标记的点对应的控制点即为蓝色标记点。
 
-![A smooth S-shaped curve is drawn from two Bézier curves. The second curve keeps the same slope of the control points as the first curve, which is reflected to the other side.](shortcut_cubic_bézier_with_grid.png)
+![A smooth S-shaped curve is drawn from two Bézier curves. The second curve keeps the same slope of the control points as the first curve, which is reflected to the other side.](shortcut_cubic_bezier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -161,7 +161,7 @@ Q x1 y1, x y
 q dx1 dy1, dx dy
 ```
 
-![Quadratic Bézier with grid](quadratic_bézier_with_grid.png)
+![Quadratic Bézier with grid](quadratic_bezier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -179,7 +179,7 @@ t dx dy
 
 和之前一样，快捷命令 T 会通过前一个控制点，推断出一个新的控制点。这意味着，在你的第一个控制点后面，可以只定义终点，就创建出一个相当复杂的曲线。需要注意的是，T 命令前面必须是一个 Q 命令，或者是另一个 T 命令，才能达到这种效果。如果 T 单独使用，那么控制点就会被认为和终点是同一个点，所以画出来的将是一条直线。
 
-![Two quadratic curves form one smooth S-shaped curve. The second curve's control points are reflected across the horizontal axis](shortcut_quadratic_bézier_with_grid.png)
+![Two quadratic curves form one smooth S-shaped curve. The second curve's control points are reflected across the horizontal axis](shortcut_quadratic_bezier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
