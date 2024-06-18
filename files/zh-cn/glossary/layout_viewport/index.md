@@ -13,8 +13,8 @@ l10n:
 
 ## 参见
 
-- [虚拟视区 API](/zh-CN/docs/Web/API/Visual_Viewport_API)
-- 维基百科上的[视区](https://zh.wikipedia.org/wiki/视口)
+- [虚拟视口 API](/zh-CN/docs/Web/API/Visual_Viewport_API)
+- 维基百科上的[视口](https://zh.wikipedia.org/wiki/视口)
 - [两个视区的来历](https://www.quirksmode.org/mobile/viewports.html)（兼容模式）
-- {{Glossary("Viewport", "视区")}}
-- {{Glossary("Visual viewport", "视觉视区")}}
+- {{Glossary("Viewport", "视口")}}
+- {{Glossary("Visual viewport", "视觉视口")}}
