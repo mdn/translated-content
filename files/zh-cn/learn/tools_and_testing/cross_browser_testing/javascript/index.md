@@ -30,8 +30,6 @@ l10n:
   </tbody>
 </table>
 
-## JavaScript 存在的问题
-
 ## JavaScript 的问题
 
 历史上，JavaScript 一直困扰于跨浏览器兼容性问题——在 1990 年代，当时主要的浏览器选择（Internet Explorer 和 Netscape）以不同的语言风格实现了脚本编程（Netscape 有 JavaScript，IE 有 JScript，还提供了 VBScript），虽然 JavaScript 和 JScript 在某种程度上是兼容的（都基于 {{glossary("ECMAScript")}} 规范），但它们通常是以互相冲突、不兼容的方式实现的，给开发人员带来了许多噩梦。
