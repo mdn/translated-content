@@ -3,6 +3,8 @@ title: code
 slug: Web/HTML/Element/code
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - Es el apropiado para marcar el código de un programa.

@@ -3,6 +3,8 @@ title: Web audio 空间化基础
 slug: Web/API/Web_Audio_API/Web_audio_spatialization_basics
 ---
 
+{{DefaultAPISidebar("Web Audio API")}}
+
 正如大量的各种声音处理（或者其他）选择是不够的，WebAduioAPI 也包含了一些工具，可以让你模仿听众在声源周围移动时的声音差异，例如当你在 3D 游戏声源中移动时声音的平移。官方名词称为 **空间化**，这篇文章将会介绍如何实现这样一个系统的基础知识。
 
 ## 空间化的基础知识

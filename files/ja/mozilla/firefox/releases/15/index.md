@@ -3,6 +3,8 @@ title: Firefox 15 for developers
 slug: Mozilla/Firefox/Releases/15
 ---
 
+{{FirefoxSidebar}}
+
 Firefox 15 は 2012 年 8 月 28 日にリリースされました。この記事では、ウェブ開発者に知らせるだけでなく、Firefox や Gecko 開発者、アドオン開発者にも役立つ主な変更点のリストを掲載しています。
 
 ## ウェブ開発者向けの変更点
