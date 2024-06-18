@@ -22,11 +22,11 @@ let gettingChildren = browser.bookmarks.getChildren(
 ### 参数
 
 - `id`
-  - : 一个 {{jsxref("string")}}，指定要检索其子节点的文件夹的 ID。
+  - : 一个字符串，指定要检索其子节点的文件夹的 ID。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 BookmarkTreeNode 对象数组。每个条目代表一个子节点。列表的顺序与书签在用户界面中出现的顺序相同。结果中包括分隔符。列表包括子文件夹，但不包括子文件夹中的任何子节点。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 [`BookmarkTreeNode`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) 对象数组。每个条目代表一个子节点。列表的顺序与书签在用户界面中出现的顺序相同。结果中包括分隔符。列表包括子文件夹，但不包括子文件夹中的任何子节点。
 
 如果指定的节点没有子节点，则数组为空。
 
@@ -42,7 +42,7 @@ function onFulfilled(children) {
 }
 
 function onRejected(error) {
-  console.log(`An error: ${error}`);
+  console.log(`发生错误：${error}`);
 }
 
 let gettingChildren = browser.bookmarks.getChildren("unfiled_____");
