@@ -83,7 +83,7 @@ l10n:
   - 键入字符时：焦点移至名称符合键入的字符开头的一项。
   - 快速连续键入多个字符时：焦点移至名称符合键入的字符串开头的一项。
 
-- **多项选择**: 作者可以实现两种交互模型中的任何一种来支持多选：推荐模型，不需要用户在导航列表时按住修饰键，例如
+- **多项选择**：作者可以实现两种交互模型中的任何一种来支持多选：推荐模型，不需要用户在导航列表时按住修饰键，例如
 
   <kbd>Shift</kbd>
 
@@ -91,39 +91,39 @@ l10n:
 
   <kbd>Control</kbd>
 
-  或者需要在导航时按住修饰键以避免丢失选择状态的替代模型。
+  ；或者替代模型，需要在导航时按住修饰键以避免丢失选择状态。
 
   - 推荐的选择模型——不需要按住修饰键：
 
     - <kbd>Space</kbd>
 
-      : 更改焦点选项的选择状态。
+      : 更改已聚焦选项的选择状态。
 
     - <kbd>Shift + Down Arrow</kbd>
 
-      （可选）: 将焦点移动并切换到下一个选项的选定状态。
+      （可选）：将焦点移动并切换到下一个选项的选定状态。
 
     - <kbd>Shift + Up Arrow</kbd>
 
-      （可选）: 将焦点移动并切换到上一个选项的选定状态。
+      （可选）：将焦点移动并切换到上一个选项的选定状态。
 
     - <kbd>Shift + Space</kbd>
 
-      （可选）: 选择从最近选择的项目到焦点项目的连续项目。
+      （可选）：选择从最近选择的项目到焦点项目的连续项目。
 
     - <kbd>Control + Shift + Home</kbd>
 
-      （可选）: 选择焦点选项和直到第一个选项的所有选项。（可选）将焦点移至第一个选项。
+      （可选）：选择焦点选项和直到第一个选项的所有选项。（可选）将焦点移至第一个选项。
 
     - <kbd>Control + Shift + End</kbd>
 
-      （可选）: 选择焦点选项和直到最后一个选项的所有选项。（可选）将焦点移到最后一个选项。
+      （可选）：选择焦点选项和直到最后一个选项的所有选项。（可选）将焦点移到最后一个选项。
 
     - <kbd>Control + A</kbd>
 
-      （可选）: 选择列表中的所有选项。（可选）如果选择了所有选项，它也可以取消选择所有选项。
+      （可选）：选择列表中的所有选项。（可选）如果选择了所有选项，它也可以取消选择所有选项。
 
-### 所需的 JavaScript 功能
+### 所需的 JavaScript 特性
 
 #### 在单选 listbox 中选择一个选项
 
@@ -131,7 +131,7 @@ l10n:
 
 1. 取消选择先前选择的选项，将 [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 设置为 `false`，或完全删除该属性，将新未选择的选项的外观更改为未选择的。
 2. 选择新选择的选项，在该选项上设置 `aria-selected="true"` 并将新选择的选项的外观更改为选中。
-3. 将列表框上的 [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 值更新为新选择的选项的 ID。
+3. 将 listbox 上的 [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 值更新为新选择的选项的 ID。
 4. 可视化处理选项的失焦、聚焦和选定状态。
 
 #### 在多选列表框中切换选项的状态
@@ -140,15 +140,15 @@ l10n:
 
 1. 切换当前聚焦选项的 [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 状态，如果它是 false，则将 `aria-selected` 的状态更改为 true，如果为 true，则将其更改为 false。
 2. 更改选项的外观以反映其选定状态。
-3. 将列表框上的 [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 值更新为用户刚刚与之交互的选项的 ID，即使他们将选项切换为取消选择。
+3. 将 listbox 上的 [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 值更新为用户刚刚与之交互的选项的 ID，即使他们将选项切换为取消选择。
 
 > **备注：** ARIA 使用的第一原则是你可以使用具有内置语义和行为的原生功能，而不是重新利用元素并**添加** ARIA 角色、状态或属性使其具有无障碍性。含有后代 {{HTMLElement("option")}} 元素的 {{HTMLElement("select")}} 元素带有所有需要的交互的原生处理方法。
 
 ## 示例
 
-### 示例 1: 使用 aria-activedescendant 的单个选择列表框
+### 示例 1: 使用 aria-activedescendant 的单选 listbox
 
-下面的代码片段显示了如何使用 [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 将列表框角色直接添加到 HTML 源代码中。
+下面的代码片段显示了如何使用 [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 将 listbox 角色直接添加到 HTML 源代码中。
 
 ```html
 <p id="listbox1label" role="label">选择一种颜色：</p>
@@ -186,11 +186,11 @@ l10n:
 </select>
 ```
 
-#### 更多示例
+### 更多示例
 
-- [可滚动列表框示例](https://w3c.github.io/aria-practices/examples/listbox/listbox-scrollable.html): 单选列表框，可以滚动显示更多选项，类似于带有 `size` 属性大于一的 HTML {{HTMLElement('select')}}。
-- [带有分组选项的列表框示例](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-grouped/): 带有分组选项的单选列表框，类似于 HTML {{HTMLElement('select')}} 中 `size` 属性设置为大于 `"1"`，并且选项使用 `optgroup` 元素分组。
-- [可重新排列选项的列表框示例](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-rearrangeable/): 单选和多选列表框的示例，带有相应的工具栏，可以添加、移动和移除选项。
+- [可滚动 listbox 示例](https://w3c.github.io/aria-practices/examples/listbox/listbox-scrollable.html)：单选列表框，可以滚动显示更多选项，类似于带有 `size` 属性大于一的 HTML {{HTMLElement('select')}}。
+- [带有分组选项的 listbox 示例](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-grouped/)：带有分组选项的单选 listbox，类似于 HTML {{HTMLElement('select')}} 中 `size` 属性设置为大于 `"1"`，并且选项使用 `optgroup` 元素分组。
+- [可重新排列选项的 listbox 示例](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-rearrangeable/)：单选和多选 listbox 的示例，带有相应的工具栏，可以添加、移动和移除选项。
 
 ## 最佳实践
 
@@ -198,7 +198,7 @@ l10n:
 - 建议作者在列表未聚焦时使用不同的样式进行选择，例如非活动选项通常以较浅的背景颜色显示。
 - 如果 listbox 不是另一个组件的一部分，那么它应该具有 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 属性。
 - 如果一个或多个条目不是 listbox 的 DOM 子项，则需要设置额外的 `aria-*` 属性（参见 [ARIA 最佳实践](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/)）。
-- 如果有理由[扩展](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded)列表框，[`combobox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role) 角色可能更合适。
+- 如果有理由[扩展](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded) listbox，[`combobox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role) 角色可能更合适。
 
 ## 规范
 
@@ -206,12 +206,12 @@ l10n:
 
 ## 参见
 
-- {{HTMLElement("select")}} 元素
-- {{HTMLElement("label")}} 元素
-- {{HTMLElement("option")}} 元素
-- [ARIA: `combobox` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role)
-- [ARIA: `option` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role)
-- [ARIA: `list` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role)
-- [ARIA: `listitem` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Listitem_role)
+- HTML {{HTMLElement("select")}} 元素
+- HTML {{HTMLElement("label")}} 元素
+- HTML {{HTMLElement("option")}} 元素
+- [ARIA：`combobox` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role)
+- [ARIA：`option` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role)
+- [ARIA：`list` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role)
+- [ARIA：`listitem` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Listitem_role)
 - [ARIA 最佳实践 – Listbox](https://www.w3.org/TR/wai-aria-practices/#Listbox)
 - [ARIA 角色模型 – Listbox](https://www.w3.org/TR/wai-aria-1.1/#listbox)
