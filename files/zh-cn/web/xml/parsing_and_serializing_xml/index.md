@@ -39,7 +39,7 @@ if (errorNode) {
 
 ### 把 URL 可寻址的资源解析成 DOM 树
 
-#### 使用 XMLHttpRequest
+#### 使用 fetch
 
 下列示例代码读取一个 URL 可寻址的 XML 文件，并将其解析成 DOM 树：
 
