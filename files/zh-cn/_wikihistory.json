@@ -8252,10 +8252,6 @@
     "modified": "2019-03-24T00:15:45.643Z",
     "contributors": ["LianJilu", "Ke.shidong", "Ende93", "khalid32", "ziyunfei"]
   },
-  "Web/API/Document_Object_Model/How_to_create_a_DOM_tree": {
-    "modified": "2019-03-23T22:09:45.087Z",
-    "contributors": ["ArcherGrey"]
-  },
   "Web/API/Document_Object_Model/Introduction": {
     "modified": "2019-07-17T11:05:34.542Z",
     "contributors": [
@@ -32625,5 +32621,9 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
+  },
+  "conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
+    "modified": "2019-03-23T22:09:45.087Z",
+    "contributors": ["ArcherGrey"]
   }
 }
