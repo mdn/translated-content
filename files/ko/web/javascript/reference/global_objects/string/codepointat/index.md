@@ -26,15 +26,15 @@ codePointAt(index)
 
 주어진 `index`에 있는 문자열의 코드 포인트 값을 표현하는 음이 아닌 정수.
 
-- `index`가 `0` – `str.length - 1`의 범위에서 벗어난다면, `codePointAt()`은 {{jsxref("undefined")}}을 반환합니다.
+- `index`가 `0`부터 `str.length - 1`의 범위에서 벗어난다면, `codePointAt()`은 {{jsxref("undefined")}}을 반환합니다.
 - `index`에 있는 요소가 서로게이트로 선행 UTF-16이라면 서로게이트 쌍의 코드 포인트를 반환합니다.
 - `index`에 있는 요소가 서로게이트로 후행 UTF-16이라면 서로게이트 후행 만을 반환합니다.
 
 ## 설명
 
-문자열의 문자는 왼쪽에서 오른쪽으로 인덱싱됩니다. 첫 번째 문자의 인덱스는 `0`이고 `str`이라는 문자열의 마지막 문자의 인덱스는 `str.length - 1`입니다.
+문자열의 문자는 왼쪽에서 오른쪽으로 인덱싱됩니다. 첫 번째 문자의 인덱스는 `0`이고, 문자열 `str`의 마지막 문자의 인덱스는 `str.length - 1`입니다.
 
-유니코드 코드 포인트의 범위는 `0`에서 `1114111`(`0x10FFFF`)까지입니다. UTF-16에서 각 문자열 인덱스는 `0` - `65535` 값을 갖는 코드 단위입니다. 더 큰 코드 포인트 값은 16비트 서로게이트 의사 문자의 한 쌍으로 표현됩니다. 따라서 `codePointAt()`은 두 문자열 인덱스에 걸쳐 있을 수 있는 코드 포인트를 반환합니다. 유니코드에 대한 자세한 내용은 [UTF-16 문자, 유니코드 코드 포인트 및 그래프 클러스터](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)를 참조하세요.
+유니코드 코드 포인트의 범위는 `0`에서 `1114111`(`0x10FFFF`)까지입니다. UTF-16에서 각 문자열 인덱스는 `0` - `65535` 값을 갖는 코드 단위입니다. 더 큰 코드 포인트 값은 16비트 서로게이트 의사 문자의 한 쌍으로 표현됩니다. 따라서 `codePointAt()`은 두 문자열 인덱스에 걸쳐 있을 수 있는 코드 포인트를 반환합니다. 유니코드에 대한 자세한 내용은 [UTF-16 문자, 유니코드 코드 포인트 및 문자소 클러스터](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)를 참조하세요.
 
 ## 예제
 
