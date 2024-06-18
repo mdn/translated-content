@@ -7,7 +7,7 @@ l10n:
 
 {{AccessibilitySidebar}}
 
-在 ARIA 活动区域中，全局 `aria-atomic` 属性指示辅助技术（如屏幕阅读器）是否基于由 [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 属性定义的更改通知，呈现所有或仅部分更改区域。
+在 ARIA 实时区域中，`aria-atomic` 全局属性指示辅助技术（如屏幕阅读器）是否基于由 [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 属性定义的更改通知，呈现所有或仅部分更改区域。
 
 ## 描述
 
