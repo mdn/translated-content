@@ -3,7 +3,7 @@ title: position
 slug: Web/XPath/Functions/position
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `position` 함수는 식 평가 문맥(expression evaluation context)와 위치가 같은 숫자를 반환합니다.
 
