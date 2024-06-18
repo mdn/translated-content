@@ -382,7 +382,7 @@ Aaron Andersen 撰写的[浏览器用户代理字符串的历史](https://webaim
 
 ### 处理 JavaScript 前缀
 
-在上一篇文章中，我们详细讨论了[处理 CSS 前缀](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#处理_CSS_前缀)的内容。新的 JavaScript 实现有时也会使用前缀，但与 CSS 使用{{Glossary("kebab_case", "连字符")}}（kebab-case）不同，JavaScript 采用{{Glossary("camel_case", "驼峰命名")}}（camelCase）。例如，如果一个新的 jshint API 对象名为 `Object`，不同的浏览器厂商会使用以下前缀：
+在上一篇文章中，我们详细讨论了[处理 CSS 前缀](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#处理_css_前缀)的内容。新的 JavaScript 实现有时也会使用前缀，但与 CSS 使用{{Glossary("kebab_case", "连字符")}}（kebab-case）不同，JavaScript 采用{{Glossary("camel_case", "驼峰命名")}}（camelCase）。例如，如果一个新的 jshint API 对象名为 `Object`，不同的浏览器厂商会使用以下前缀：
 
 - Mozilla 会使用 `mozObject`
 - Chrome、Opera、Safari 会使用 `webkitObject`
