@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("String")}} 값의 **`startsWith()`** 메서드는 어떤 문자열의 문자로 시작하는지 확인하여 결과를 `true` 혹은 `false`로 반환합니다.
+**`startsWith()`**는 {{jsxref("String")}} 값의 메서드로, 어떤 문자열의 문자로 시작하는지 확인하여 결과를 적절하게 `true` 혹은 `false`로 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/string-startswith.html")}}
 

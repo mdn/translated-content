@@ -25,9 +25,9 @@ toWellFormed()
 
 ## 설명
 
-JavaScript의 문자열은 UTF-16으로 인코딩됩니다. UTF-16 인코딩에는 서로게이트 쌍이라는 개념이 있으며, 이는 [UTF-16 문자, 유니코드 코드 포인트 및 그래프 문자 클러스터](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters) 섹션에 자세히 소개되어 있습니다.
+JavaScript의 문자열은 UTF-16으로 인코딩됩니다. UTF-16 인코딩에는 서로게이트 쌍이라는 개념이 있으며, 이는 [UTF-16 문자, 유니코드 코드 포인트 및 문자소 클러스터](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters) 섹션에 자세히 소개되어 있습니다.
 
-`toWellFormed()`는 이 문자열의 코드 단위를 반복하고 모든 론 서로게이트를 [유니코드 대체 문자](<https://en.wikipedia.org/wiki/Specials_(Unicode_block)#Replacement_character>) U+FFFD `�`로 대체합니다. 이렇게 하면 반환된 문자열이 올바른 형식의 문자열이 되어 {{jsxref("encodeURI")}}와 같이 올바른 형식의 문자열을 기대하는 함수에서 사용할 수 있습니다. 사용자 정의 구현과 비교할 때 `toWellFormed()`는 엔진이 문자열의 내부 표현에 직접 액세스할 수 있으므로 더 효율적입니다.
+`toWellFormed()`는 이 문자열의 코드 단위를 반복하고 모든 론 서로게이트를 [유니코드 대체 문자](<https://en.wikipedia.org/wiki/Specials_(Unicode_block)#Replacement_character>) U+FFFD `�`로 대체합니다. 이렇게 하면 반환된 문자열이 올바른 형식의 문자열이 되어 {{jsxref("encodeURI")}}와 같이 올바른 형식의 문자열을 기대하는 함수에서 사용할 수 있습니다. 사용자 정의 구현과 비교할 때 `toWellFormed()`는 엔진이 문자열의 내부 표현에 직접 접근할 수 있으므로 더 효율적입니다.
 
 잘못된 형식의 문자열이 {{domxref("TextEncoder")}}와 같은 특정 문맥에서 사용되는 경우 동일한 대체 문자를 사용하여 자동으로 올바른 형식의 문자열로 변환됩니다. 론 서로게이트가 렌더링될 때는 대체 문자(내부에 물음표가 있는 다이아몬드)로도 렌더링됩니다.
 
