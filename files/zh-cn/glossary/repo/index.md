@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-在版本控制系统（如 {{Glossary("Git")}}、{{Glossary("SVN")}}）中，仓库（即“repository”）是一个托管应用程序代码源的地方，还包括各种元数据。
+在版本控制系统（如 {{Glossary("Git")}}、{{Glossary("SVN")}}）中，仓库（即“repository”）是一个托管应用程序源代码以及各种元数据的地方。
 
 ## 参见
 
