@@ -8353,10 +8353,6 @@
     "modified": "2019-03-23T22:35:36.401Z",
     "contributors": ["carloque", "Sebastianz", "pekechis"]
   },
-  "Web/Demos": {
-    "modified": "2019-03-23T22:33:45.097Z",
-    "contributors": ["SoftwareRVG", "elfoxero"]
-  },
   "Web/EXSLT": {
     "modified": "2019-03-18T20:59:19.473Z",
     "contributors": ["SphinxKnight", "ExE-Boss", "Mgjbot", "Talisker"]
@@ -15208,6 +15204,10 @@
   "orphaned/Web/CSS/rtl": {
     "modified": "2019-01-16T15:48:03.556Z",
     "contributors": ["teoli", "HenryGR"]
+  },
+  "orphaned/Web/Demos": {
+    "modified": "2019-03-23T22:33:45.097Z",
+    "contributors": ["SoftwareRVG", "elfoxero"]
   },
   "orphaned/Web/Guide/Events": {
     "modified": "2019-03-23T23:27:18.635Z",

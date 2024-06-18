@@ -3,7 +3,7 @@ title: Introduction à XML
 slug: Web/XML/XML_introduction
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/XML")}}
+{{QuickLinksWithSubpages("/fr/docs/Web/XML")}}
 
 ### Définition
 

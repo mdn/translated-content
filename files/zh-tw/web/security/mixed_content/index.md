@@ -65,4 +65,3 @@ Firefox 網頁主控台會在網站含有混合內容時，於「網路」標籤
 ## 參見
 
 - [Mixed Content - W3C Editor's Draft](https://w3c.github.io/webappsec/specs/mixedcontent/)
-- [如何修正含有混和內容的網站](/zh-TW/docs/Security/MixedContent/How_to_fix_website_with_mixed_content)

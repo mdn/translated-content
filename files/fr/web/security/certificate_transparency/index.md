@@ -3,7 +3,7 @@ title: Public Key Pinning
 slug: Web/Security/Certificate_Transparency
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/fr/docs/Web/Security")}}
 
 L'extention **Public Key Pinning pour HTTP** (HPKP) est une fonctionnalité de sécurité qui dit au client web d'associer une clé publique cryptographique avec un certain serveur web pour éviter les attaques [MITM](https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu) avec des certificats contrefaits.
 
