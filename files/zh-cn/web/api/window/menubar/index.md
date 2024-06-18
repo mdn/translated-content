@@ -2,7 +2,7 @@
 title: Window：menubar 属性
 slug: Web/API/Window/menubar
 l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+  sourceCommit: 62cedc63226017e9e7d0718b6fea3529ca8dbf37
 ---
 
 {{APIRef}}
