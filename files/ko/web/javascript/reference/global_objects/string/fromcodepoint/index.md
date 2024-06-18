@@ -32,13 +32,13 @@ String.fromCodePoint(num1, num2, /* …, */ numN)
 ### 예외
 
 - {{jsxref("RangeError")}}
-  - : `numN`이 정수가 아니거나 `0`보다 작거나 혹은 숫자로 변환ㄴ된 후 `0x10FFFF`보다 크면 발생합니다.
+  - : `numN`이 정수가 아니거나 `0`보다 작거나 혹은 숫자로 변환된 후 `0x10FFFF`보다 크면 발생합니다.
 
 ## 설명
 
 `fromCodePoint()`는 `String`의 정적 메서드이기 때문에, 항상 사용자가 만든 `String` 값의 메서드가 아닌 `String.fromCodePoint()`로 사용합니다.
 
-유니코드 코드 포인트의 범위는 `0`에서 `1114111`(`0x10FFFF`)까지입니다. UTF-16에서 각 문자열 인덱스는 `0` - `65535` 값을 갖는 코드 단위입니다. 더 높은 코드 포인트는 16비트 서로게이트 의사 문자의 쌍으로 표현됩니다. 따라서 `fromCodePoint()`는 전달된 인수 수보다 [`length`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/length)(UTF-16 코드 단위)가 더 큰 문자열을 반환할 수 있습니다. 유니코드에 대한 자세한 내용은 [UTF-16 문자, 유니코드 코드 포인트 및 그래프 클러스터](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)를 참조하세요.
+유니코드 코드 포인트의 범위는 `0`에서 `1114111`(`0x10FFFF`)까지입니다. UTF-16에서 각 문자열 인덱스는 `0` - `65535` 값을 갖는 코드 단위입니다. 더 높은 코드 포인트는 16비트 서로게이트 의사 문자의 쌍으로 표현됩니다. 따라서 `fromCodePoint()`는 전달된 인수 수보다 [`length`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/length)(UTF-16 코드 단위)가 더 큰 문자열을 반환할 수 있습니다. 유니코드에 대한 자세한 내용은 [UTF-16 문자, 유니코드 코드 포인트 및 문자소 클러스터](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)를 참조하세요.
 
 ## 예제
 
