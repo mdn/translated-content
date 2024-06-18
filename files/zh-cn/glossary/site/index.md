@@ -15,7 +15,7 @@ l10n:
 
 根据这个定义，`support.mozilla.org` 和 `developer.mozilla.org` 是同一站点的一部分，因为 `mozilla.org` 是一个可注册域。
 
-在某些情况下，在区分不同的站点时，也会考虑站点的协议（scheme）。这将使 `http://vpl.ca` 和 `https://vpl.ca` 成为不同的站点。包含协议的情况可以防止不安全的（HTTP）站点被视为与安全（HTTPS）站点为相同的站点。考虑协议的定义有时被称为*考虑协议的同站*。这个更严格的定义适用于处理[同站](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) cookie。
+在某些情况下，在区分不同的站点时，也会考虑站点的方案（scheme）。这将使 `http://vpl.ca` 和 `https://vpl.ca` 成为不同的站点。包含方案的情况可以防止不安全的（HTTP）站点被视为与安全（HTTPS）站点为相同的站点。考虑协议的定义有时被称为*考虑协议的同站*。这个更严格的定义适用于处理[同站](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) cookie。
 
 ## 示例
 
@@ -34,7 +34,7 @@ l10n:
 - `https://developer.mozilla.org/zh-CN/docs/`
 - `https://example.com`
 
-如果考虑协议，这些可能是相同的站点或不同的站点：
+如果考虑方案，这些可能是相同的站点或不同的站点：
 
 - `http://example.com`
 - `https://example.com`
