@@ -17,4 +17,4 @@ l10n:
 
 SDK 通常由软件平台的所有者提供，以支持针对该平台的开发人员。例如，Google 为编写 Android 应用程序的开发人员提供了 [Android SDK](https://developer.android.com/studio)。
 
-在许多方面，现代 Web 浏览器内置的 {{Glossary("developer tools", "开发者工具")}} 为 Web 开发人员提供了类似的功能。
+在许多方面，现代 Web 浏览器内置的{{Glossary("developer tools", "开发者工具")}}为 Web 开发人员提供了类似的功能。
