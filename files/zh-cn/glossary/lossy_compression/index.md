@@ -11,6 +11,8 @@ l10n:
 
 有损压缩在诸如 {{glossary("JPEG")}}、{{glossary("WebP")}} 等图像格式以及音频和视频格式（如 [MP3、MP4、H.264 等](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)）中被广泛使用。像 {{glossary("WebP")}} 这样的压缩方法可以根据压缩级别或在编码过程中使用的选项进行[无损和有损压缩](https://developers.google.com/speed/webp/docs/compression)。
 
+![有损压缩的图像](2019-11-18.png)
+
 虽然上述两幅图像的质量之间没有明显的差异，但第二幅图像的大小经过了有损压缩而显著减小。
 
 ## 参见
