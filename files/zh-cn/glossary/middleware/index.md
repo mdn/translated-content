@@ -11,7 +11,7 @@ l10n:
 
 在服务器端 Web 应用框架中，中间件通常更具体地指可以添加到框架的请求/响应处理管道中的预构建软件组件，以处理诸如数据库访问等任务。
 
-## See also
+## 参见
 
 - 维基百科上的[中间件（分布式应用）](<https://en.wikipedia.org/wiki/Middleware_(distributed_applications)>)
-- 维基百科上的[中间件](https://en.wikipedia.org/wiki/中间件)
+- 维基百科上的[中间件](https://zh.wikipedia.org/wiki/中间件)
