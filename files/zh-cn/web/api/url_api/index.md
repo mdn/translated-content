@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("URL API")}} {{AvailableInWorkers}}
 
-URL API 是 URL 标准的一个组件，定义了有效的 {{Glossary("URL")}} 和访问、操作 URL 的 API。URL 标准还定义了像域名、主机和 IP 地址等概念，并尝试以标准的方式去描述用于以键/值对的形式提交 Web 表单内容的遗留 `application/x-www-form-urlencoded` {{Glossary("MIME 类型")}} 。
+URL API 是 URL 标准的一个组件，定义了有效的 {{Glossary("URL")}} 和访问、操作 URL 的 API。URL 标准还定义了像域名、主机和 IP 地址等概念，并尝试以标准的方式去描述用于以键/值对的形式提交 Web 表单内容的遗留 `application/x-www-form-urlencoded` {{Glossary("MIME type", "MIME 类型")}} 。
 
 ## URL 的概念和用法
 
