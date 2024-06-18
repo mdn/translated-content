@@ -65,7 +65,7 @@ slug: Web/HTTP/Conditional_requests
 
 验证器会同资源一起返回，它们出现在首部字段中。在这个例子中， {{HTTPHeader("Last-Modified")}} 与 {{HTTPHeader("ETag")}} 都被返回，不过如果只返回其中的一个也是可以的。这些验证器会同资源一起被缓存起来（与所有的首部一样），并在在缓存失效的时候用来发起条件式请求。
 
-只要缓存未失效，就不会发起任何请求。但是一旦失效——主要是由 {{HTTPHeader("Cache-Control")}} 首部控制——客户端就不会采用缓存值而是发起条件式请求。验证器的值会用作 {{HTTPHeader("If-Modified-Since")}} 和 {{HTTPHeader("If-Match")}} 首部字段的参数。
+只要缓存未失效，就不会发起任何请求。但是一旦失效——主要是由 {{HTTPHeader("Cache-Control")}} 首部控制——客户端就不会采用缓存值而是发起条件式请求。验证器的值会用作 {{HTTPHeader("If-Modified-Since")}} 和 {{HTTPHeader("If-None-Match")}} 首部字段的参数。
 
 假如资源未发生变化，服务器就返回状态码为 {{HTTPStatus("304")}} `Not Modified` 的响应。这样相当于对缓存资源进行了刷新，而客户端则采用被缓存的资源。尽管这里有一次请求/响应往返会消耗一定的资源，但是这样做比将整个资源通过网络再传输一遍更高效。
 
