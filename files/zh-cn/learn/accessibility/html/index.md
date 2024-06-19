@@ -405,9 +405,9 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 > **备注：** 你可以在 [good-form.html](http://mdn.github.io/learning-area/accessibility/html/good-form.html) 和 [bad-form.html](http://mdn.github.io/learning-area/accessibility/html/bad-form.html) 中看到一些好的和不好的表单示例。
 
-## 可访问的表格
+## 无障碍数据表格
 
-基本的表格（译者注：“data table”被翻译成“表格”）可以用非常简单的标记来编写，例如：
+基本的数据表格可以用非常简单的标记来编写，例如：
 
 ```html
 <table>

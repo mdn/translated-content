@@ -2,7 +2,7 @@
 title: Firefox 124 的开发者说明
 slug: Mozilla/Firefox/Releases/124
 l10n:
-  sourceCommit: e21b3d02404cc22bf4fcf933a908a0cc6a77eb23
+  sourceCommit: 08ef601955d7fc92a9a4c6d6c047854b5aef723d
 ---
 
 {{FirefoxSidebar}}
@@ -11,10 +11,17 @@ l10n:
 
 ## 为 Web 开发者带来的变化
 
+### HTML
+
+没有值得注意的变化。
+
 ### CSS
 
-- [`content-visibility`](/zh-CN/docs/Web/CSS/content-visibility) CSS 属性值 `auto` 现已默认启用。其允许在内容不[与用户相关](/zh-CN/docs/Web/CSS/CSS_containment#与用户相关)的情况下跳过对其的渲染。（[Firefox bug 1874874](https://bugzil.la/1874874)）。
 - {{cssxref("text-wrap")}} 属性现已被转换为简写属性，其涵盖了成员属性 {{cssxref("text-wrap-mode")}} 和 {{cssxref("text-wrap-style")}}。（[Firefox bug 1758391](https://bugzil.la/1758391)）。
+
+### JavaScript
+
+没有值得注意的变化。
 
 ### SVG
 

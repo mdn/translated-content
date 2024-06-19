@@ -1,27 +1,26 @@
 ---
-title: HTMLHyperlinkElementUtils.port
+title: "HTMLAnchorElement: свойство port"
 slug: Web/API/HTMLAnchorElement/port
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("URL API")}}
+{{APIRef("HTML DOM")}}
 
-Свойство **`HTMLHyperlinkElementUtils.port`** – это {{domxref("USVString")}}, содержащий номер порта.
+Свойство **`HTMLAnchorElement.port`** — это строка, содержащая номер порта сервера, указанный в URL. Если в URL явно не указан номер порта, то значение этого свойства будет установлено в `''`.
 
-При значении `'' будет использоваться` порт по умолчанию для указанного протокола (не `0`).
+## Значение
 
-## Синтаксис
-
-```
-string = object.port;
-object.port = string;
-```
+Строка.
 
 ## Примеры
 
+### Получение номера порта из ссылки
+
 ```js
-// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/ru/docs/HTMLHyperlinkElementUtils.port">
-var anchor = document.getElementByID("myAnchor");
-var result = anchor.port; // Вернёт: '80'
+// Документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org:443/en-US/docs/HTMLAnchorElement">
+const anchor = document.getElementByID("myAnchor");
+anchor.port; // '443'
 ```
 
 ## Спецификации
@@ -34,4 +33,4 @@ var result = anchor.port; // Вернёт: '80'
 
 ## Смотрите также
 
-- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.
+- Интерфейс {{domxref("HTMLAnchorElement")}}.

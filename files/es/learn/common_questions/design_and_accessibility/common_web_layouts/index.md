@@ -3,6 +3,8 @@ title: ¿Qué contienen los diseños web comunes?
 slug: Learn/Common_questions/Design_and_accessibility/Common_web_layouts
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Cuando diseña páginas para su sitio web es bueno tener una idea de los diseños más comunes.
 
 <table>

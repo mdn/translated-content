@@ -3,6 +3,8 @@ title: FileHandle API
 slug: Web/API/File_and_Directory_Entries_API
 ---
 
+{{DefaultAPISidebar("File and Directory Entries API")}}
+
 FileHandle API 可操作檔案，例如建立檔案、修改檔案內容 (不同於 [File](/zh-TW/docs/DOM/File) API)。而正在編輯中的部分，將使用回合制的鎖定機制，以避免發生競態 (Race) 問題。
 
 ## API

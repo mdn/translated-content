@@ -2,14 +2,14 @@
 title: 无障碍树
 slug: Glossary/Accessibility_tree
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 1f44fd905e4acbe867ca945b26a8b06ddb646328
 ---
 
 {{GlossarySidebar}}
 
 **无障碍树**（Accessibility tree）包含大多数 HTML 元素的与{{Glossary("accessibility", "无障碍")}}相关的信息。
 
-浏览器将标记转换成一种内部表示形式，称为 [_DOM 树_](/zh-CN/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree)。DOM 树包含代表所有标记元素、属性和文本节点的对象。浏览器会根据 DOM 树创建无障碍树，而特定平台的无障碍 API 会使用该树提供辅助技术（如屏幕阅读器）可以理解的表示形式。
+浏览器将标记转换成一种内部表示形式，称为 [_DOM 树_](/zh-CN/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model)。DOM 树包含代表所有标记元素、属性和文本节点的对象。浏览器会根据 DOM 树创建无障碍树，而特定平台的无障碍 API 会使用该树提供辅助技术（如屏幕阅读器）可以理解的表示形式。
 
 无障碍树对象有四个属性：
 
