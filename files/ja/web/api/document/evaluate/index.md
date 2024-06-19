@@ -1,9 +1,9 @@
 ---
 title: "Document: evaluate() メソッド"
+short-title: evaluate()
 slug: Web/API/Document/evaluate
 l10n:
   sourceCommit: 3966c40a3917825e6e467f1592bc7f8d59458e74
-short-title: evaluate()
 ---
 
 {{ ApiRef("DOM") }}
