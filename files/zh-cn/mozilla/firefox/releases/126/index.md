@@ -77,7 +77,7 @@ l10n:
 
 - {{WebExtAPIRef("commands.onCommand")}} 事件现在将 `tab` 参数传递给事件监听器。这使得扩展可以将触发的快捷键应用于发出该事件的页面，而无需调用 `tabs.query()` 方法（[Firefox bug 1843866](https://bugzil.la/1843866)）。
 - {{WebExtAPIRef("runtime.MessageSender")}} 类型现在包含 `origin` 属性。这使得消息或连接请求可以查看打开连接的页面或框架。这对于在 URL 中未明确显示来源的情况下确定来源是否可信非常有用（[Firefox bug 1787379](https://bugzil.la/1787379)）。
-- 现已支持 `"webRequestAuthProvider"` 全线。这为 Manifest V3 中用于 {{WebExtAPIRef("webRequest.onAuthRequired")}} 的请求权限提供了与 Chrome 的兼容性（[Firefox bug 1820569](https://bugzil.la/1820569)）。
+- 现已支持 `"webRequestAuthProvider"` 权限。这为 Manifest V3 中用于 {{WebExtAPIRef("webRequest.onAuthRequired")}} 的请求权限提供了与 Chrome 的兼容性（[Firefox bug 1820569](https://bugzil.la/1820569)）。
 - 现在提供 [`options_page` 清单键](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page)来作为 [`options_ui`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) 键的别名。这是为了使扩展更好地与 Chrome 兼容（[Firefox bug 1816960](https://bugzil.la/1816960)）。
 
 ### 其他
