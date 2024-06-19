@@ -67,6 +67,6 @@ document.body.appendChild(elem);
 
 ## 같이 보기
 
-- [Polyfill of `String.prototype.anchor` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [HTML wrapper methods](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)
+- [`core-js`의 `String.prototype.anchor` 폴리필](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [HTML 래퍼 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)
 - {{HTMLElement("a")}}
