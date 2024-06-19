@@ -22,7 +22,7 @@ let gettingChildren = browser.bookmarks.getChildren(
 ### 参数
 
 - `id`
-  - : 一个字符串，指定要检索其子节点的文件夹的 ID。
+  - : 一个{{jsxref("string", "字符串", "", 1)}}，指定要检索其子节点的文件夹的 ID。
 
 ### 返回值
 
