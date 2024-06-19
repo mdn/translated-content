@@ -2,12 +2,12 @@
 title: Web 性能
 slug: Web/Performance
 l10n:
-  sourceCommit: 3ccda8814c7876ae3ff576942faf02e4adc29977
+  sourceCommit: 035dd5ef748061d1997c1c79f972781dd680dfa4
 ---
 
 {{QuickLinksWithSubPages}}
 
-Web 性能是客观的衡量标准，是用户对加载时间和运行时的直观体验。Web 性能指站点加载到可交互和可响应所消耗的时间，以及页面在交互时的流畅度——滚动是否顺滑？按钮能否点击？弹窗能否快速加载和显示、动画是否平滑？Web 性能既包括客观的度量（如加载时间、每秒帧数和到页面可交互的时间），也包括用户的对页面内容加载时间的主观感觉。
+Web 性能是客观的衡量标准，是用户对加载时间和运行时的直观体验。Web 性能指站点从加载到可交互和可响应所消耗的时间，以及页面在交互时的流畅度——滚动是否顺滑？按钮能否点击？弹窗能否快速加载和显示、动画是否平滑？Web 性能既包括客观的度量（如加载时间、每秒帧数和到页面可交互的时间），也包括用户的对页面内容加载时间的主观感觉。
 
 站点响应时间越长，越多的用户就会放弃该网站。重要的是尽量缩短加载和响应时间，并添加其他特性来降低延迟：尽快提供尽可能可用且可交互的体验，并异步加载长尾体验部分。
 
@@ -28,7 +28,7 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn/Performance)有着涵盖性能要
 - [用户如何看待性能？](/zh-CN/docs/Learn/Performance/Perceived_performance)
   - : 比网站在毫秒内的响应速度更重要的是，用户对网站的感知速度有多快。这些感知受到页面实际加载时间、空闲、用户交互响应以及滚动和其他动画的平滑度的影响。在本文中，我们将随着最佳实践来提升用户感知（而不是实际时间）并讨论各种加载指标、动画和响应性指标。
 - [Web 性能基础](/zh-CN/docs/Learn/Performance/Web_Performance_Basics)
-  - : 除了 HTML、CSS、JavaScript 和媒体文件这些前端模块之外，还有其他导致应用程序变慢，或在主观和客观上使应用程序变快的因素。有许多与 Web 性能相关的 API、开发者工具、最佳实践和不当做法。我们将在基础层面上介绍这些影响因素，并提供进阶优化其中每一项性能的链接。
+  - : 除了 HTML、CSS、JavaScript 和媒体文件这些前端组件之外，还有其他导致应用程序变慢，或在主观和客观上使应用程序变快的因素。有许多与 Web 性能相关的 API、开发者工具、最佳实践和不当做法。我们将在基础层面上介绍这些影响因素，并提供进阶优化其中每一项性能的链接。
 - [HTML 性能特性](/zh-CN/docs/Learn/Performance/HTML)
   - : 标记的某些属性和顺序可能会影响网站性能。通过最大程度地减少 DOM 节点的数量，确保使用最佳顺序和属性（包括样式、脚本、媒体和第三方脚本等内容），可以大大改善用户体验。该文详细介绍了如何使用 HTML 来确保最佳性能。
 - [多媒体：图像与视频](/zh-CN/docs/Learn/Performance/Multimedia)
@@ -80,7 +80,7 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn/Performance)有着涵盖性能要
 - {{glossary('Lossy compression', '有损压缩')}}
 - {{glossary('Main thread', '主线程')}}
 - {{glossary('Minification', '极简化')}}
-- {{glossary('Network throttling', '网络节流')}}
+- {{glossary('Network throttling', '网络限速')}}
 - {{glossary('Packet', '包')}}
 - {{glossary('Page load time', '页面加载时间')}}
 - {{glossary('Page prediction', '页面预测')}}
@@ -154,7 +154,7 @@ API
   - [requestIdleCallback()](/zh-CN/docs/Web/API/Window/requestIdleCallback)
 
 - [信标 API](/zh-CN/docs/Web/API/Beacon_API)
-- 资源提示：[dns-prefetch](/zh-CN/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control)、preconnect、[prefetch](/zh-CN/docs/Glossary/Prefetch) 和 prerender
+- 资源提示：[dns-prefetch](/zh-CN/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control)、[preconnect](/zh-CN/docs/Web/HTML/Attributes/rel/preconnect)、[prefetch](/zh-CN/docs/Glossary/Prefetch) 和 prerender
 - [FetchEvent.preloadResponse](/zh-CN/docs/Web/API/FetchEvent/preloadResponse)
 - [Performance Server Timing API](/zh-CN/docs/Web/API/PerformanceServerTiming)
 
