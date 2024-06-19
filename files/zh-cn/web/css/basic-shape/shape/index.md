@@ -66,7 +66,7 @@ clip-path: shape(
 
 - `from <coordinate-pair>`
 
-  - : 将第一个 `<shape-command>` 的起始点定义为一对坐标，这些坐标是从[参考框](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes#the_reference_box)的左上角测量得到的。这些坐标被指定为用空格分隔的 `<x> <y>` {{cssxref("&lt;length-percentage&gt;")}} 值，分别表示左偏移和上偏移。百分比值相对于元素的参考框的宽度和高度计算。在此参数后添加逗号。
+  - : 将第一个 `<shape-command>` 的起始点定义为一对坐标，这些坐标是从[参考框](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes#参考框)的左上角测量得到的。这些坐标被指定为用空格分隔的 `<x> <y>` {{cssxref("&lt;length-percentage&gt;")}} 值，分别表示左偏移和上偏移。百分比值相对于元素的参考框的宽度和高度计算。在此参数后添加逗号。
 
 - `<shape-command>`
 
@@ -82,11 +82,11 @@ clip-path: shape(
 
     可以指定以下 `<move-command>`、`<line-command>`、`<hv-line-command>`、`<curve-command>`、`<smooth-command>`、`<arc-command>` 和 `close` 作为 `<shape-command>`：
 
-    `<move-command>`：指定为 `move [by | to] <coordinate-pair>`。此命令将 [MoveTo 路径命令](/zh-CN/docs/Web/SVG/Attribute/d#MoveTo_路径命令)添加到形状命令列表中。它不绘制任何内容。相反，它指定了下一个命令的起始位置。`by` 或 `to` 关键字指定 `<coordinate-pair>` 点是“相对”还是“绝对“，分别。如果 `<move-command>` 跟随 `close` 命令，则它标识了下一个形状或子路径的起始点。
+    `<move-command>`：指定为 `move [by | to] <coordinate-pair>`。此命令将 [MoveTo 路径命令](/zh-CN/docs/Web/SVG/Attribute/d#moveto_路径命令)添加到形状命令列表中。它不绘制任何内容。相反，它指定了下一个命令的起始位置。`by` 或 `to` 关键字指定 `<coordinate-pair>` 点是“相对”还是“绝对“，分别。如果 `<move-command>` 跟随 `close` 命令，则它标识了下一个形状或子路径的起始点。
 
-    `<line-command>`：指定为 `line [by | to] <coordinate-pair>`。此命令将 [LineTo 路径命令](/zh-CN/docs/Web/SVG/Attribute/d#LineTo_路径命令)添加到形状命令列表中。它从命令的起始点直线绘制到其结束点。`by` 或 `to` 关键字指定由 `<coordinate-pair>` 分别指定的结束点是“相对”还是“绝对”。
+    `<line-command>`：指定为 `line [by | to] <coordinate-pair>`。此命令将 [LineTo 路径命令](/zh-CN/docs/Web/SVG/Attribute/d#lineto_路径命令)添加到形状命令列表中。它从命令的起始点直线绘制到其结束点。`by` 或 `to` 关键字指定由 `<coordinate-pair>` 分别指定的结束点是“相对”还是“绝对”。
 
-    `<hv-line-command>`：指定为 `[hline | vline] [by | to] <length-percentage>`。此命令将水平（`hline`）或垂直（`vline`）[LineTo 命令](/zh-CN/docs/Web/SVG/Attribute/d#lineto_path_commands)添加到形状命令列表中。使用 `hline`，从命令的起始点绘制水平线到由 `<length-percentage>` 定义的 `x` 位置的 `to` 或 `by`。使用 `vline`，从命令的起始点绘制垂直线到由 `<length-percentage>` 定义的 `y` 位置的 `to` 或 `by`。`by` 或 `to` 关键字分别确定了“相对”或“绝对”结束点。此命令相当于 `<line-command>`，其中一个坐标值由单个 `<length-percentage>` 设置，另一个坐标值保持从其起始命令开始的不变。
+    `<hv-line-command>`：指定为 `[hline | vline] [by | to] <length-percentage>`。此命令将水平（`hline`）或垂直（`vline`）[LineTo 命令](/zh-CN/docs/Web/SVG/Attribute/d#lineto_路径命令)添加到形状命令列表中。使用 `hline`，从命令的起始点绘制水平线到由 `<length-percentage>` 定义的 `x` 位置的 `to` 或 `by`。使用 `vline`，从命令的起始点绘制垂直线到由 `<length-percentage>` 定义的 `y` 位置的 `to` 或 `by`。`by` 或 `to` 关键字分别确定了“相对”或“绝对”结束点。此命令相当于 `<line-command>`，其中一个坐标值由单个 `<length-percentage>` 设置，另一个坐标值保持从其起始命令开始的不变。
 
     `<curve-command>`：指定为 `curve [by | to] <coordinate-pair> via <coordinate-pair> [<coordinate-pair>]`。此命令将一个[贝塞尔曲线命令](/zh-CN/docs/Web/SVG/Attribute/d#三次贝塞尔曲线)添加到形状命令列表中。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对”还是“绝对”。
 
