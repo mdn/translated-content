@@ -24,7 +24,7 @@ prop in object
 
 - `prop`
 
-  - : Строка или symbol, представляющий название свойства (non-symbols будут [конвертированы в строки](/ru/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)). Также может быть [идентификатором приватного свойства](/ru/docs/Web/JavaScript/Reference/Classes/Private_properties).
+  - : Строковое или символьное значение, представляющее название свойства (несимвольные значения будут [преобразованы в строки](/ru/docs/Web/JavaScript/Reference/Global_Objects/String#приведение_к_строке)). Также может быть [именем приватного свойства](/ru/docs/Web/JavaScript/Reference/Classes/Private_properties).
 
 - `object`
   - : Объект, в котором нужно проверить (или в его цепочке прототипов) содержание свойства с заданным именем (`prop`).
