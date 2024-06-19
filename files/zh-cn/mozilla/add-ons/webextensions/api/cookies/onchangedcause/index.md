@@ -7,20 +7,20 @@ l10n:
 
 {{AddonSidebar}}
 
-{{WebExtAPIRef("cookies")}} API 的 `OnChangedCause` 类型表示 Cookie 更改的原因。
+{{WebExtAPIRef("cookies")}} API 的 `OnChangedCause` 类型表示 cookie 更改的原因。
 
 ## 类型
 
 此类型的值是字符串。可能的值有：
 
 - `evicted`
-  - : 由于垃圾回收，Cookie 被自动移除。
+  - : 由于垃圾回收，cookie 被自动移除。
 - `expired`
-  - : 由于过期，Cookie 被自动移除。
+  - : 由于过期，cookie 被自动移除。
 - `explicit`
-  - : 通过显式调用 {{WebExtAPIRef("cookies.remove()")}} 插入或移除了一个 Cookie。
+  - : 插入了一个 cookie，或者通过显式调用 {{WebExtAPIRef("cookies.remove()")}} 将一个 cookie 移除。
 - `expired_overwrite`
-  - : 一个 Cookie 被另一个已过期的 Cookie 覆盖。
+  - : 一个 cookie 被另一个已过期的 cookie 覆盖。
 - `overwrite`
   - : 调用 {{WebExtAPIRef("cookies.set()")}} 用另一个 Cookie 覆盖了这个 Cookie。
 
@@ -30,15 +30,15 @@ l10n:
 
 ## 示例
 
-你可以监听 {{WebExtAPIRef("cookies.onChanged")}} 事件，以便在 Cookie 更改时收到通知。监听器接收一个包含 `cause` 属性（其值为 `OnChangedCause` 字符串）的 `changeInfo` 对象：
+你可以监听 {{WebExtAPIRef("cookies.onChanged")}} 事件，以便在 cookie 更改时收到通知。监听器接收一个包含 `cause` 属性（其值为 `OnChangedCause` 字符串）的 `changeInfo` 对象：
 
 ```js
 browser.cookies.onChanged.addListener((changeInfo) => {
   console.log(
-    `Cookie 发生了变化: \n` +
-      ` * Cookie: ${JSON.stringify(changeInfo.cookie)}\n` +
-      ` * 变化原因: ${changeInfo.cause}\n` +
-      ` * 是否移除: ${changeInfo.removed}`,
+    `cookie 发生了变化：\n` +
+      ` * cookie：${JSON.stringify(changeInfo.cookie)}\n` +
+      ` * 变化原因：${changeInfo.cause}\n` +
+      ` * 是否移除：${changeInfo.removed}`,
   );
 });
 ```
