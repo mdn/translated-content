@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**QUIC** 是一个基于 UDP 实现的多路传输协议。它用于 HTTP/3 中作为传输层，取代了 {{Glossary("TCP")}}。
+**QUIC** 是一个基于 UDP 实现的多路传输协议。它在 HTTP/3 中作为传输层，取代了 {{Glossary("TCP")}}。
 
 QUIC 旨在为 HTTP 连接提供更快的建立和更低的延迟。具体来说：
 
