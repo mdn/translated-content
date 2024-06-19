@@ -30,7 +30,7 @@ let gettingChildren = browser.bookmarks.getChildren(
 
 如果指定的节点没有子节点，则数组为空。
 
-如果找不到由 `id` 标识的节点，则 Promise 会被拒绝并显示错误消息。
+如果找不到由 `id` 标识的节点，则 Promise 会以一条错误消息拒绝。
 
 ## 示例
 
