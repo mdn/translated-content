@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-现在，我们将探讨常见的跨浏览器 JavaScript 问题以及如何解决它们。这包括使用浏览器开发者工具来跟踪和修复问题，使用 Polyfills 和库来解决问题，在较旧的浏览器中使用现代 JavaScript 特性等信息。
+现在，我们将探讨常见的跨浏览器 JavaScript 问题以及如何解决它们。这包括使用浏览器开发者工具来跟踪和修复问题，使用 polyfill 和库来解决问题，在较旧的浏览器中使用现代 JavaScript 特性等信息。
 
 <table>
   <tbody>
@@ -268,7 +268,7 @@ JavaScript 库本质上是一组第三方代码，你可以将其集成到你的
 
 JavaScript 库往往有几个主要的种类（有些库包含其中的一个以上的目的）：
 
-- 实用程序库：提供一堆功能，使平凡的任务更容易管理，不那么枯燥。例如，[jQuery](https://jquery.com/) 提供了自己的全功能选择器和 DOM 操作库，允许在 JavaScript 中进行 CSS 选择器类型的元素选择，并更容易建立 DOM。现在我们有了现代的特性，如 {{domxref("Document.querySelector()")}}、{{domxref("Document.querySelectorAll()")}}、{{domxref("Node")}} 方法，在各浏览器中可用，这就不那么重要了，但在旧的浏览器需要支持时，它仍然有用。
+- 实用程序库：提供一组函数，使日常的任务更容易管理，不那么枯燥。例如，[jQuery](https://jquery.com/) 提供了自己的全功能选择器和 DOM 操作库，允许在 JavaScript 中进行 CSS 选择器类型的元素选择，并更容易建立 DOM。现在我们有了现代的特性，如 {{domxref("Document.querySelector()")}}、{{domxref("Document.querySelectorAll()")}}、{{domxref("Node")}} 方法，在各浏览器中可用，这就不那么重要了，但在旧的浏览器需要支持时，它仍然有用。
 - 方便性库：让困难的事情更容易做。例如，直接使用 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 很复杂且有挑战性，而 [Three.js](https://threejs.org/) 库（和其他类似的库）是建立在 WebGL 之上的，为创建普通 3D 对象、照明、纹理等提供了更容易的 API。[Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API) 的使用也非常复杂，所以代码库已经开始出现，以使常见的 Service Worker 用例更容易实现（参见 [Service Worker 指导书](https://github.com/mdn/serviceworker-cookbook)，以获得一些有用的代码示例）。
 - 效果库：这些库的设计是为了让你能够轻松地在你的网站上添加特殊效果。在“DHTML”是一个流行的流行语的时候，这是很有用的（当时实现一个效果需要很多复杂的 JavaScript），但现在的浏览器有很多内置的 CSS 特性和 API，可以更容易地实现效果。
 - UI 库：提供实现复杂的 UI 特性的方法，没有 UI 库的话，这些特性的实现和跨浏览器的工作会很困难，例如 [Foundation](https://get.foundation/)、[Bootstrap](https://getbootstrap.com/) 和 [Material-UI](https://mui.com/)（后者是一套用于 React 框架的组件）。这些往往被用作整个网站布局的基础；仅仅为了一个 UI 特性而把它们放入其中往往是很困难的。
@@ -282,7 +282,7 @@ JavaScript 库往往有几个主要的种类（有些库包含其中的一个以
 
 #### Polyfill
 
-Polyfill 也由第三方的 JavaScript 文件组成，你可以把它们放到你的项目中，但它们与库不同。库倾向于加强现有的功能，使一些需求可以更容易实现，而 Polyfill 提供的是根本不存在的功能。Polyfill 完全使用 JavaScript 或其他技术来建立对浏览器不支持的功能的支持。例如，你可以使用 [es6-promise](https://github.com/stefanpenner/es6-promise) 这样的 polyfill 来使 promise 在没有原生支持的浏览器中也能工作。
+Polyfill 也由第三方的 JavaScript 文件组成，你可以把它们放到你的项目中，但它们与库不同。库倾向于加强现有的功能，使一些需求可以更容易实现，而 Polyfill 提供的是根本不存在的功能。Polyfill 完全使用 JavaScript 或其他技术来建立对浏览器不支持的特性的支持。例如，你可以使用 [es6-promise](https://github.com/stefanpenner/es6-promise) 这样的 polyfill 来使 promise 在没有原生支持的浏览器中也能工作。
 
 让我们一起来完成一个练习——在这个示例中，我们将使用 Fetch polyfill 和 es6-promise polyfill。虽然现代浏览器已经完全支持 Fetch 和 Promise，但如果我们的目标浏览器不支持 Fetch，那么这种浏览器很可能也不支持 Promise，因为 Fetch 依赖于 Promise。
 
@@ -316,7 +316,7 @@ Polyfill 也由第三方的 JavaScript 文件组成，你可以把它们放到�
 
 > **备注：** 在此重申，polyfill 有许多种方法可以利用——具体请查阅每个 polyfill 单独的文档。
 
-你可能会问：“为什么我们要加载 polyfill 代码，即便在不需要的时候？”这是一个合理的疑问。随着网站变得更加复杂，开始引入更多的库和 polyfills，你可能会加载大量不必要的代码。这会影响网站性能，尤其是在性能较低的设备上。因此，只有在需要时才加载相应的文件是明智的。
+你可能会问：“为什么我们要加载 polyfill 代码，即便在不需要的时候？”这是一个合理的疑问。随着网站变得更加复杂，开始引入更多的库和 polyfill，你可能会加载大量不必要的代码。这会影响网站性能，尤其是在性能较低的设备上。因此，只有在需要时才加载相应的文件是明智的。
 
 要做到这一点，你需要在 JavaScript 代码中进行一些额外的配置。你需要进行特性检测，以确定浏览器是否支持你想要使用的特性：
 
@@ -376,11 +376,11 @@ function loadScript(src, done) {
 
 所有浏览器都有一个**用户代理**字符串，它标识了浏览器的身份（版本、名称、操作系统等）。许多开发人员实现的浏览器嗅探代码非常糟糕，而且没有进行维护。这导致支持的浏览器无法访问网站，即使它们可以轻松渲染网页。这种情况变得极其普遍，以至于浏览器开始在其用户代理字符串中隐藏真实身份（或声称它们都是浏览器），以规避嗅探代码。浏览器还实现了允许用户更改 JavaScript 查询得到的用户代理字符串的功能。这些都使浏览器嗅探变得更加容易出错，最终变得毫无意义。
 
-Aaron Andersen 撰写的[浏览器用户代理字符串的历史](https://webaim.org/blog/user-agent-string-history/)中讲述了这段有用且有趣的浏览器探测历史。使用[特性检测](#特性检测)）以及 CSS @supports 进行 CSS 特性检测）来检测是否支持某个特性要可靠地多。这样，当新的浏览器版本出现时，你就不需要更改代码。
+Aaron Andersen 撰写的[浏览器用户代理字符串的历史](https://webaim.org/blog/user-agent-string-history/)中讲述了这段有用且有趣的浏览器探测历史。使用[特性检测](#特性检测)（以及 CSS @supports 进行 CSS 特性检测）来检测是否支持某个特性要可靠地多。这样，当新的浏览器版本出现时，你就不需要更改代码。
 
 ### 处理 JavaScript 前缀
 
-在上一篇文章中，我们详细讨论了[处理 CSS 前缀](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#处理_css_前缀)的内容。新的 JavaScript 实现有时也会使用前缀，但与 CSS 使用{{Glossary("kebab_case", "连字符")}}（kebab-case）不同，JavaScript 采用{{Glossary("camel_case", "驼峰命名")}}（camelCase）。例如，如果一个新的 jshint API 对象名为 `Object`，不同的浏览器厂商会使用以下前缀：
+在上一篇文章中，我们详细讨论了[处理 CSS 前缀](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#处理_css_前缀)的内容。新的 JavaScript 实现有时也会使用前缀，但与 CSS 使用{{Glossary("kebab_case", "连字符")}}不同，JavaScript 采用{{Glossary("camel_case", "驼峰命名")}}。例如，如果一个新的 jshint API 对象名为 `Object`，不同的浏览器厂商会使用以下前缀：
 
 - Mozilla 会使用 `mozObject`
 - Chrome、Opera、Safari 会使用 `webkitObject`
