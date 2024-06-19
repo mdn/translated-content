@@ -7472,17 +7472,6 @@
       "Mgjbot"
     ]
   },
-  "Web/API/Document_Object_Model/How_to_create_a_DOM_tree": {
-    "modified": "2019-03-24T00:07:13.065Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto",
-      "kmaglione",
-      "ethertank",
-      "Mgjbot",
-      "electrolysis"
-    ]
-  },
   "Web/API/Document_Object_Model/Introduction": {
     "modified": "2020-08-09T14:35:31.436Z",
     "contributors": [
@@ -30301,6 +30290,17 @@
   "conflicting/Web/API/Document": {
     "modified": "2020-10-15T22:12:31.952Z",
     "contributors": ["mfuji09"]
+  },
+  "conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
+    "modified": "2019-03-24T00:07:13.065Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto",
+      "kmaglione",
+      "ethertank",
+      "Mgjbot",
+      "electrolysis"
+    ]
   },
   "conflicting/Web/API/Element/clientHeight": {
     "modified": "2020-10-15T21:21:06.996Z",
