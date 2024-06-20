@@ -14,23 +14,17 @@ l10n:
 这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `alink` {{deprecated_inline}}
-  - : 选中时超链接文本的颜色。
-    **请勿使用此属性！请结合使用 CSS {{cssxref("color")}} 属性和 {{cssxref(":active")}} 伪类来代替。**
+  - : 选中时超链接文本的颜色。**请勿使用此属性！请结合使用 CSS {{cssxref("color")}} 属性和 {{cssxref(":active")}} 伪类来代替。**
 - `background` {{deprecated_inline}}
-  - : 用作背景的图片的 URI。
-    **请勿使用此属性！请在元素上使用 CSS {{cssxref("background")}} 属性来代替。**
+  - : 用作背景的图片的 URI。**请勿使用此属性！请在元素上使用 CSS {{cssxref("background")}} 属性来代替。**
 - `bgcolor` {{deprecated_inline}}
-  - : 文档的背景颜色。
-    **请勿使用此属性！请在元素上使用 CSS {{cssxref("background-color")}} 属性来代替。**
+  - : 文档的背景颜色。**请勿使用此属性！请在元素上使用 CSS {{cssxref("background-color")}} 属性来代替。**
 - `bottommargin` {{deprecated_inline}}
-  - : body 底部的外边距。
-    **请勿使用此属性！请在元素上使用 CSS {{cssxref("margin-bottom")}} 属性来代替。**
+  - : body 底部的外边距。**请勿使用此属性！请在元素上使用 CSS {{cssxref("margin-bottom")}} 属性来代替。**
 - `leftmargin` {{deprecated_inline}}
-  - : body 左侧的外边距。
-    **请勿使用此属性！请在元素上使用 CSS {{cssxref("margin-left")}} 属性来代替。**
+  - : body 左侧的外边距。**请勿使用此属性！请在元素上使用 CSS {{cssxref("margin-left")}} 属性来代替。**
 - `link` {{deprecated_inline}}
-  - : 未访问超文本链接文本的颜色。
-    **请勿使用此属性！请结合使用 CSS {{cssxref("color")}} 属性和 {{cssxref(":link")}} 伪类来代替。**
+  - : 未访问超文本链接文本的颜色。**请勿使用此属性！请结合使用 CSS {{cssxref("color")}} 属性和 {{cssxref(":link")}} 伪类来代替。**
 - `onafterprint`
   - : 当用户打印文档后调用的函数。
 - `onbeforeprint`
@@ -64,14 +58,11 @@ l10n:
 - `onunload`
   - : 当文档即将被卸载时调用的函数。
 - `rightmargin` {{deprecated_inline}}
-  - : body 右侧的外边距。
-    **请勿使用此属性！请在元素上使用 CSS {{cssxref("margin-right")}} 属性来代替。**
+  - : body 右侧的外边距。**请勿使用此属性！请在元素上使用 CSS {{cssxref("margin-right")}} 属性来代替。**
 - `text` {{deprecated_inline}}
-  - : 文字的前景色。
-    **请勿使用此属性！请在元素上使用 CSS {{cssxref("color")}} 属性来代替。**
+  - : 文字的前景色。**请勿使用此属性！请在元素上使用 CSS {{cssxref("color")}} 属性来代替。**
 - `topmargin` {{deprecated_inline}}
-  - : body 顶部的外边距。
-    **请勿使用此属性！在元素上使用 CSS {{cssxref("margin-top")}} 属性来代替。**
+  - : body 顶部的外边距。**请勿使用此属性！在元素上使用 CSS {{cssxref("margin-top")}} 属性来代替。**
 - `vlink` {{deprecated_inline}}
   - : 已访问超文本链接文本的颜色。**请勿使用此属性！请结合使用 CSS {{cssxref("color")}} 属性和 {{cssxref(":visited")}} 伪类来代替。**
 
