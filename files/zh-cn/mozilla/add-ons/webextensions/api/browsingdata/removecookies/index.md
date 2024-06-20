@@ -7,12 +7,12 @@ l10n:
 
 {{AddonSidebar}}
 
-清除浏览器的 Cookie。
+清除浏览器的 cookie。
 
-你可以使用 `removalOptions` 参数（一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象），用于：
+你可以使用 `removalOptions` 参数（一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象），来：
 
-- 仅清除指定时间后创建的 Cookie
-- 控制是否仅清除来自普通网页设置的 Cookie，还是同时清除来自托管应用程序和扩展设置的 Cookie。
+- 仅清除指定时间后创建的 cookie
+- 控制是否仅清除来自普通网页设置的 cookie，还是同时清除来自托管应用程序和扩展设置的 cookie。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -27,15 +27,15 @@ let removing = browser.browsingData.removeCookies(
 ### 参数
 
 - `removalOptions`
-  - : `object`。一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象，用于仅清除指定时间后创建的 Cookie，以及是否仅清除来自普通网页设置的 Cookie，还是同时清除来自托管应用程序和扩展设置的 Cookie。
+  - : `object`。一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象，用于仅清除指定时间后创建的 cookie，以及是否仅清除来自普通网页设置的 cookie，还是同时清除来自托管应用程序和扩展设置的 cookie。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在移除完成时其会兑现且不带任何参数。如果发生任何错误，`Promise` 将被拒绝，并附带一个错误消息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在移除完成时其会兑现且不带任何参数。如果发生任何错误，promise 将被拒绝，并附带一个错误消息。
 
 ## 示例
 
-移除最近一周内创建的 Cookie：
+移除最近一周内创建的 cookie：
 
 ```js
 function onRemoved() {
@@ -57,11 +57,11 @@ browser.browsingData
   .then(onRemoved, onError);
 ```
 
-移除所有 Cookie：
+移除所有 cookie：
 
-> **警告：** 使用 API 清除所有 Cookie 将同时清除所有本地存储对象（包括其他扩展程序的存储对象）。
+> **警告：** 使用 API 清除所有 cookie 将同时清除所有本地存储对象（包括其他扩展程序的存储对象）。
 >
-> 如果要清除所有 Cookie 而不影响本地存储设施，请使用 [browser.cookies](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies) 来循环并清除所有 Cookie 存储的内容。
+> 如果要清除所有 cookie 而不影响本地存储设施，请使用 [browser.cookies](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies) 来循环并清除所有 cookie 存储的内容。
 
 ```js
 function onRemoved() {
