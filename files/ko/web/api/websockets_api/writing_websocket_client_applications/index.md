@@ -3,6 +3,8 @@ title: WebSocket을 이용하여 클라이언트 애플리케이션 작성하기
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 ---
 
+{{DefaultAPISidebar("WebSockets API")}}
+
 WebSocket은 ws 프로토콜을 기반으로 클라이언트와 서버 사이에 지속적인 완전 양방향 연결 스트림을 만들어 주는 기술입니다. 일반적인 웹소켓 클라이언트는 사용자의 브라우저일 것이지만, 그렇다고 해서 이 프로토콜이 플랫폼에 종속적이지는 않습니다.
 
 > **참고:** 우리에게는 작동하는 chat/server 시스템 예제 코드 조각이 있습니다. 이는 우리의 인프라가 WebSocket 예제들을 제대로 호스팅할 수 있는 환경이 되면 공유할 것입니다.

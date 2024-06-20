@@ -3,6 +3,8 @@ title: Firefox 4 for developers
 slug: Mozilla/Firefox/Releases/4
 ---
 
+{{FirefoxSidebar}}
+
 Firefox 4 （6 月後半にベータ版リリースが予定されています）では、パフォーマンスが向上し、 HTML 5 やその他の革新的なウェブ技術のさらなるサポートが追加され、さらには、セキュリティも改善しています。 この記事では、この次期リリースについてのとっかかりの情報と、ウェブ開発者、アドオン開発者、そして、Gecko プラットフォーム開発者向けに利用可能になる機能の一覧を提供します。
 
 これらの機能の多くはすでに [Firefox 4 beta](http://www.mozilla.com/en-US/firefox/beta/) リリース、もしくは（冒険心にあふれているなら）[ナイトリー trunk ビルド](http://nightly.mozilla.org/) で試すことできます。
@@ -142,7 +144,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 ### DOM
 
 - [JavaScript 型付き配列](/ja/docs/JavaScript_typed_arrays)
-  - : JavaScript 型付き配列 (typed arrays) のサポートが追加されました。これを用いることで、ネイティブデータ型を用いた生のデータを含むバッファを扱えます。 [File API](/ja/docs/DOM/File)、[WebGL](/ja/docs/WebGL)、および [WebSockets](/ja/docs/WebSockets) を含む、いくつかの API でこれを用いることができます。
+  - : JavaScript 型付き配列 (typed arrays) のサポートが追加されました。これを用いることで、ネイティブデータ型を用いた生のデータを含むバッファーを扱えます。 [File API](/ja/docs/DOM/File)、[WebGL](/ja/docs/WebGL)、および [WebSockets](/ja/docs/WebSockets) を含む、いくつかの API でこれを用いることができます。
 - 範囲の境界領域の保持
   - : [`Range`](/ja/docs/Web/API/Range) オブジェクトに [`range.getClientRects()`](/ja/docs/Web/API/Range/getClientRects) および [`range.getBoundingClientRect()`](/ja/docs/Web/API/Range/getBoundingClientRect) メソッドが追加されました。
 - 任意の要素上でのマウスイベントのキャプチャ

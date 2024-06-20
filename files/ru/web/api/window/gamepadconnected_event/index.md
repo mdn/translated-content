@@ -3,6 +3,8 @@ title: gamepadconnected
 slug: Web/API/Window/gamepadconnected_event
 ---
 
+{{APIRef}}
+
 Событие `gamepadconnected` вызывается, когда браузер обнаруживает подключение геймпада или первое использование кнопки/стика.
 
 ## Основная информация

@@ -1,17 +1,14 @@
 ---
-title: Window.console
+title: "Window: console プロパティ"
+short-title: console
 slug: Web/API/Window/console
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{ APIRef }}
+{{APIRef}}
 
-読み取り専用プロパティの **`Window.console`** は、ブラウザーのコンソールへ情報を出力するメソッドを提供する{{domxref("Console")}}オブジェクトへの参照を返します。これらのメソッドで出力される情報はデバッグ目的のものであり、ユーザーへ情報を提示するために使われるべきではありません。
-
-## 構文
-
-```js
-var consoleObj = window.console;
-```
+**`Window.console`** プロパティは、ブラウザーのコンソールへ情報を出力するメソッドを提供する {{domxref("console")}} オブジェクトへの参照を返します。これらのメソッドで出力される情報はデバッグ目的のものであり、ユーザーへ情報を提示するために使われるべきではありません。
 
 ## 例
 

@@ -3,6 +3,8 @@ title: document.implementation
 slug: Web/API/Document/implementation
 ---
 
+{{ ApiRef("DOM") }}
+
 ## Résumé
 
 Retourne un objet {{domxref("DOMImplementation")}} associé avec le document courant.
