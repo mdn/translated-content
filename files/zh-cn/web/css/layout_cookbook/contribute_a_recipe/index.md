@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-如果你愿意为布局手册贡献示例文件，那么本页将通过阐释步骤指导你发布示例。
+如果你愿意为布局手册贡献示例，那么本页将通过阐释步骤指导你发布示例。
 
 ## 好的方案是怎样的？
 
@@ -15,28 +15,28 @@ l10n:
 
 一份方案包括以下内容：
 
-- 一个动态的示例，存储在 [CSS 示例 GitHub 存储库](https://github.com/mdn/css-examples) 之上。
-- 这份示例的可供下载版本，同样也存储在 CSS 示例仓库之上。
-- 该网站的某个页面在 [CSS 布局手册](/zh-CN/docs/Web/CSS/Layout_cookbook) 上应详细说明：
+- 一个实时示例，存储在 [CSS 示例 GitHub 存储库](https://github.com/mdn/css-examples)之中。
+- 这份示例的可供下载版本，同样也存储在 CSS 示例仓库之中。
+- 在本站 [CSS 布局手册](/zh-CN/docs/Web/CSS/Layout_cookbook)中的页面应包含以下组成部分：
 
   1. 介绍
   2. 要求
   3. 方案
   4. 做出的选择
-  5. 任何有用的反馈或供选择的方法
-  6. 任何无障碍问题
-  7. 浏览器兼容性
+  5. 任何有用的反馈或供选择的方法（如果相关）
+  6. 无障碍考虑
+  7. 浏览器兼容性（仅对未被全面支持的 CSS 属性）
   8. 其他资源
 
 ## 发布方案的步骤
 
 要创建一个方案并将其添加到 CSS 布局手册中，请按照以下步骤操作：
 
-1. [构建模式](#1-构建模式)
-2. [创建一个实时示例](#2-创建一个实时示例)
-3. [创建可下载版本](#3-创建可下载版本)
-4. [提交拉取请求](#4-提交拉取请求)
-5. [将内容添加到 MDN](#5-创建你的页面)
+1. [构建模式](#1._构建模式)
+2. [创建一个实时示例](#2._创建实时示例)
+3. [创建可下载版本](#3._创建可下载版本)
+4. [提交拉取请求](#4._提交拉取请求)
+5. [将内容添加到 MDN](#5._创建你的页面)
 
 ### 1. 构建模式
 
@@ -44,22 +44,22 @@ l10n:
 
 确保在多个浏览器、视口大小和设备上测试了 HTML 和 CSS。此外，还要确保任何 CSS 样式都遵循无障碍指南。虽然可以使用支持有限的 CSS 属性，但在创建页面时务必包含浏览器支持信息，特别是在浏览器兼容性部分。在某些情况下，创建一个带有回退支持的示例版本会有所帮助。
 
-### 2. 创建一个实时示例
+### 2. 创建实时示例
 
 手册页面上的实时示例，例如[居中元素](/zh-CN/docs/Web/CSS/Layout_cookbook/Center_an_element)的示例，以及 MDN 上的其他示例，允许读者尝试代码并更改相关部分，而不会被所有代码淹没。你的方案将通过一个或多个示例进行演示。
 
-分叉 [CSS 示例仓库](https://github.com/mdn/css-examples)，然后查看 `css-cookbook` 文件夹。有一个 [cookbook-template.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/cookbook-template.html) 文件。复制此文件并以此为起点。将其保存在 css-cookbook 目录中，并为你的模式选择一个有意义的名称。模板包含评论，指导你在适当的地方添加各个部分。
+分叉 [CSS 示例仓库](https://github.com/mdn/css-examples)，然后查看 `css-cookbook` 文件夹。有一个 [cookbook-template.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/cookbook-template.html) 文件。复制此文件并以此为起点。将其保存在 `css-cookbook` 目录中，并为你的模式选择一个有意义的名称。模板包含注释，指导你在适当的地方添加各个部分。
 
 此模板的重要部分如下：
 
-- 有一个样式表用于编辑器面板，包含一些基本的主体样式和一个用于编辑器功能的 JavaScript 文件。保持这些文件原样。
-- `<head>` 包含两个样式块。第一个样式块用于读者无需更改的元素。第二个样式块包含读者可能想要更改的项目。我们通常将所有 CSS 添加到第一个块，然后选择要移动到第二个块的规则。第二个块中的规则应该是模式的基本规则，可能是那些读者可以更改 CSS 值并查看模式更新的规则。
+- 有一个样式表用于编辑器面板，包含一些基本的主体样式和一个用于编辑器功能的 JavaScript 文件。请原样保留这些文件。
+- `<head>` 包含两个样式块。第一个样式块用于读者无需更改即可尝试示例的元素。第二个样式块包含读者可能想要更改的项目。我们通常将所有 CSS 添加到第一个块，然后选择要移动到第二个块的规则。第二个块中的规则应该是模式的基本规则，可能是那些读者可以更改 CSS 值并查看模式更新的规则。
 - 你需要在两个地方添加组件的 HTML：首先是在带有类 `preview` 的部分，然后是在带有类 `playable-html` 的 `<textarea>` 内。
 - 可编辑的 CSS 也必须从第二个 `<head>` 块复制到 `playable-css` 部分。
 
-一个简单的工作示例是 [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html)，它嵌入在[居中元素](/zh-CN/docs/Web/CSS/Layout_cookbook/Center_an_element)页面上。你可以使用它来查看如何正确添加各种部分。
+一个简单的可用示例是 [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html)，它嵌入在[居中元素](/zh-CN/docs/Web/CSS/Layout_cookbook/Center_an_element)页面上。你可以使用它来查看如何正确添加各个部分。
 
-如果你已经分叉了仓库并有我们的 CSS 和 JavaScript 文件与示例一起打开你的实时示例在浏览器中应该显示所有内容，完全如在 MDN 页面上显示的一样。
+如果你已经分叉了仓库并将我们的 CSS 和 JavaScript 文件与示例一起合并，在浏览器中打开你的实时示例应该会显示所有内容，就像在 MDN 页面上显示的那样。
 
 #### 实用提示
 
@@ -69,13 +69,13 @@ l10n:
 
 ### 3. 创建可下载版本
 
-由于示例包含了我们所有的实时示例代码，我们希望为读者提供仅适用于他们示例的代码，省去任何不必要的项目。创建你的实时示例的副本，并在其名称中添加 `--download`。例如，`center.html` 的下载版本是 `center--download.html`。该文件将类似于你的初始示例。它应该是一个作为单个 HTML 页面的基础版本的模式。
+由于示例包含了我们所有的实时示例代码，我们希望为读者提供他们的示例所需的代码，省去任何不必要的项目。创建你的实时示例的副本，并在其名称中添加 `--download`。例如，`center.html` 的下载版本是 `center--download.html`。该文件将类似于你的初始示例。它应该是一个由单个 HTML 页面构成的基础版本的模式。
 
 包含我们的包含样式表中的主体 CSS 规则是很有用的。参考 [`cookbook-template--download.html`](https://github.com/mdn/css-examples/blob/main/css-cookbook/cookbook-template--download.html) 作为指南；这些规则提供了一个起点。
 
 ### 4. 提交拉取请求
 
-在 [CSS 示例仓库](https://github.com/mdn/css-examples/pulls)上提交一个拉取请求（PR）。这样我们可以帮助你进行任何可能需要的示例更改，然后再创建你的页面。此外，示例需要上线才能被包含在内。这就是为什么首先创建代码示例然后创建解释性指南是有意义的。在你的 PR 中，解释模式及其演示内容。请参阅我们的[拉取请求指南](/zh-CN/docs/MDN/Community/Pull_requests#open_a_pull_request)。
+在 [CSS 示例仓库](https://github.com/mdn/css-examples/pulls)上提交一个拉取请求（PR）。这样我们可以帮助你进行任何可能需要的示例更改，然后再创建你的页面。此外，示例需要上线才能被包含在内。这就是为什么首先创建代码示例然后创建解释性指南是有意义的。在你的 PR 中，解释模式及其演示内容。请参阅我们的[创建拉取请求指南](/zh-CN/docs/MDN/Community/Pull_requests#创建拉取请求)。
 
 ### 5. 创建你的页面
 
