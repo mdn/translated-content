@@ -9,7 +9,7 @@ l10n:
 
 清除由网站创建的任何[本地存储](/zh-CN/docs/Web/API/Window/localStorage)。
 
-你可以使用 `removalOptions` 参数（一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象），用于：
+你可以使用 `removalOptions` 参数（一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象），来：
 
 - 仅清除在特定时间之后创建的本地存储对象
 - 控制是仅清除普通网页创建的本地存储对象，还是同时清除托管应用程序和扩展程序创建的对象。
@@ -31,7 +31,7 @@ let removing = browser.browsingData.removeLocalStorage(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在移除完成时其会兑现且不带任何参数。如果发生任何错误，`Promise` 将被拒绝，并附带一个错误消息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在移除完成时其会兑现且不带任何参数。如果发生任何错误，promise 将被拒绝，并附带一个错误消息。
 
 ## 示例
 
