@@ -13,4 +13,4 @@ l10n:
 
 ## 参见
 
-- 维基百科上的[语法分析器](https://en.wikipedia.org/wiki/语法分析)
+- 维基百科上的[语法分析器](https://zh.wikipedia.org/wiki/语法分析)
