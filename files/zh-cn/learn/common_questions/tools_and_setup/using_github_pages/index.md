@@ -64,7 +64,7 @@ GitHub 是一个非常重要和有用的社区，值得参与其中，Git/GitHub
 
 ### 将你的文件上传到 GitHub
 
-1. 在当前页面上，你可能对“_…or push an existing repository from the command line_”（或者从命令行推送一个现有仓库）这部分感兴趣。你应该看到本节中列出的两行代码。复制整个第一行，将其粘贴到命令行中，然后按回车键。命令应该看起来像是这样的：
+1. 在当前页面上，你可能对“_…or push an existing repository from the command line_”（或从命令行推送现有仓库）这部分感兴趣。你应该看到本节中列出的两行代码。复制整个第一行，将其粘贴到命令行中，然后按回车键。命令应该看起来像是这样的：
 
    ```bash
    git remote add origin https://github.com/chrisdavidmills/my-repository.git
