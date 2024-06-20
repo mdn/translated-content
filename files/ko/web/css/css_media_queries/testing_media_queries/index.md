@@ -33,7 +33,7 @@ if (mediaQueryList.matches) {
 
 ## 쿼리 알림 받기
 
-쿼리의 평가 결과의 변경점을 지속적으로 인식해야 할 경우에는, 이를 반복적으로 확인하는 것보다 [수신기](/ko/docs/Web/API/EventTarget/addEventListener) 를 활용하는 것이 더 효율적입니다. 이를 위해 미디어 쿼리의 상태가 변경될 때 (예를 들어, 미디어 쿼리 테스트가 `true` 에서 `false` 변경될 때 등) 호출될 콜백함수를 사용하여 {{domxref("MediaQueryList")}} 객체에 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 메서드를 활용할 수 있습니다.
+쿼리의 평가 결과의 변경점을 지속적으로 확인해야 할 경우에는, 이를 반복적으로 확인하는 것보다 [이벤트 수신기](/ko/docs/Web/API/EventTarget/addEventListener) 를 활용하는 것이 더 효율적입니다. 이를 위해 미디어 쿼리의 상태가 변경될 때 (예를 들어, 미디어 쿼리 테스트가 `true` 에서 `false` 변경될 때 등) 호출될 콜백함수를 사용하여 {{domxref("MediaQueryList")}} 객체에 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 메서드를 활용할 수 있습니다.
 
 ```js
 // 쿼리 목록 생성하기
