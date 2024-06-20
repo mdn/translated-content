@@ -9,7 +9,7 @@ l10n:
 
 清除浏览器为自动填表单而保存的数据。
 
-你可以使用 `removalOptions` 参数（一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象），用于：
+你可以使用 `removalOptions` 参数（一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象），来：
 
 - 仅清除在特定时间之后输入的表单数据
 - 控制是仅清除在普通网页中输入的表单数据，还是同时清除在托管应用程序和扩展程序中输入的数据。
@@ -31,7 +31,7 @@ let removing = browser.browsingData.removeFormData(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在移除完成时其会兑现且不带任何参数。如果发生任何错误，`Promise` 将被拒绝，并附带一个错误消息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在移除完成时其会兑现且不带任何参数。如果发生任何错误，promise 将被拒绝，并附带一个错误消息。
 
 ## 示例
 
