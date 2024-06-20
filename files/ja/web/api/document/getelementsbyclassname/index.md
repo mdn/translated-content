@@ -113,14 +113,14 @@ const testDivs = Array.prototype.filter.call(
 const allOrangeJuiceByClass = document.getElementsByClassName("orange juice");
 let result = "document.getElementsByClassName('orange juice')";
 for (let i = 0; i < allOrangeJuiceByClass.length; i++) {
-  result += `\n  ${allOrangeJuiceByClass[i].textContent}`;
+  result += `\n ${allOrangeJuiceByClass[i].textContent}`;
 }
 
 // querySelector は完全一致するもののみ選択する
 const allOrangeJuiceQuery = document.querySelectorAll(".orange.juice");
 result += "\n\ndocument.querySelectorAll('.orange.juice')";
 for (let i = 0; i < allOrangeJuiceQuery.length; i++) {
-  result += `\n  ${allOrangeJuiceQuery[i].textContent}`;
+  result += `\n ${allOrangeJuiceQuery[i].textContent}`;
 }
 
 document.getElementById("resultArea").value = result;
