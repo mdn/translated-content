@@ -15,7 +15,7 @@ l10n:
 /* <fill-rule> */
 clip-path: shape(nonzero from 0 0, line to 10px 10px);
 
-/* <move-command>, <line-command>, and close */
+/* <move-command>、<line-command> 和 close */
 offset-path: shape(from 10px 10px, move by 10px 5px, line by 20px 40%, close);
 
 /* <hvline-command> */
@@ -58,9 +58,9 @@ clip-path: shape(
 
   - : 指定了如何填充形状的重叠区域。可能的取值包括：
 
-    - `nonzero`：如果从某点绘制的射线穿过的左到右路径段多于右到左路径段，即导致非零计数，则该点被视为形状内部。当省略 `<fill-rule>` 时，这是默认值。
+    - `nonzero`：如果从某点绘制的射线穿过的左到右路径段多于右到左路径段，即导致非零计数，则该点被视为在形状内部。当省略 `<fill-rule>` 时，这是默认值。
 
-    - `evenodd`：如果从某点绘制的射线穿过的路径段数量为奇数，则该点被视为形状内部。这意味着每当射线进入形状时，它都没有相等数量的退出，表明具有不对应的退出的奇数计数。
+    - `evenodd`：如果从某点绘制的射线穿过的路径段数量为奇数，则该点被视为在形状内部。这意味着每当射线进入形状时，它都没有相等数量的退出，表明缺少对应的退出而具有奇数个条目。
 
     > **警告：** `<fill-rule>` 不受 {{cssxref("offset-path")}} 支持，使用它会使该属性无效。
 
@@ -80,18 +80,18 @@ clip-path: shape(
 
     > **备注：** 如果 `<coordinate-pair>` 中的坐标以百分比形式指定，则该值相对于参考框的宽度或高度进行计算。
 
-    可以指定以下 `<move-command>`、`<line-command>`、`<hv-line-command>`、`<curve-command>`、`<smooth-command>`、`<arc-command>` 和 `close` 作为 `<shape-command>`：
+    可以指定 `<move-command>`、`<line-command>`、`<hv-line-command>`、`<curve-command>`、`<smooth-command>`、`<arc-command>` 和 `close` 作为 `<shape-command>`。
 
-    `<move-command>`：指定为 `move [by | to] <coordinate-pair>`。此命令将 [MoveTo 路径命令](/zh-CN/docs/Web/SVG/Attribute/d#moveto_路径命令)添加到形状命令列表中。它不绘制任何内容。相反，它指定了下一个命令的起始位置。`by` 或 `to` 关键字指定 `<coordinate-pair>` 点是“相对”还是“绝对“，分别。如果 `<move-command>` 跟随 `close` 命令，则它标识了下一个形状或子路径的起始点。
+    `<move-command>`：指定为 `move [by | to] <coordinate-pair>`。此命令将 [MoveTo 路径命令](/zh-CN/docs/Web/SVG/Attribute/d#moveto_路径命令)添加到形状命令列表中。它不绘制任何内容。相反，它指定了下一个命令的起始位置。`by` 或 `to` 关键字分别指定 `<coordinate-pair>` 点是“相对”还是“绝对”。如果 `<move-command>` 跟随 `close` 命令，则它标识了下一个形状或子路径的起始点。
 
     `<line-command>`：指定为 `line [by | to] <coordinate-pair>`。此命令将 [LineTo 路径命令](/zh-CN/docs/Web/SVG/Attribute/d#lineto_路径命令)添加到形状命令列表中。它从命令的起始点直线绘制到其结束点。`by` 或 `to` 关键字指定由 `<coordinate-pair>` 分别指定的结束点是“相对”还是“绝对”。
 
-    `<hv-line-command>`：指定为 `[hline | vline] [by | to] <length-percentage>`。此命令将水平（`hline`）或垂直（`vline`）[LineTo 命令](/zh-CN/docs/Web/SVG/Attribute/d#lineto_路径命令)添加到形状命令列表中。使用 `hline`，从命令的起始点绘制水平线到由 `<length-percentage>` 定义的 `x` 位置的 `to` 或 `by`。使用 `vline`，从命令的起始点绘制垂直线到由 `<length-percentage>` 定义的 `y` 位置的 `to` 或 `by`。`by` 或 `to` 关键字分别确定了“相对”或“绝对”结束点。此命令相当于 `<line-command>`，其中一个坐标值由单个 `<length-percentage>` 设置，另一个坐标值保持从其起始命令开始的不变。
+    `<hv-line-command>`：指定为 `[hline | vline] [by | to] <length-percentage>`。此命令将水平（`hline`）或垂直（`vline`）[LineTo 命令](/zh-CN/docs/Web/SVG/Attribute/d#lineto_路径命令)添加到形状命令列表中。使用 `hline`，从命令的起始点绘制水平线到由 `<length-percentage>` 定义的 `x` 位置的 `to` 或 `by`。使用 `vline`，从命令的起始点绘制垂直线到由 `<length-percentage>` 定义的 `y` 位置的 `to` 或 `by`。`by` 或 `to` 关键字分别确定了“相对”或“绝对”结束点。此命令相当于 `<line-command>`，其中一个坐标值由单个 `<length-percentage>` 设置，另一个坐标值与命令开始时的保持一致。
 
-    `<curve-command>`：指定为 `curve [by | to] <coordinate-pair> via <coordinate-pair> [<coordinate-pair>]`。此命令将一个[贝塞尔曲线命令](/zh-CN/docs/Web/SVG/Attribute/d#三次贝塞尔曲线)添加到形状命令列表中。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对”还是“绝对”。
+    `<curve-command>`：指定为 `curve [by | to] <coordinate-pair> via <coordinate-pair> [<coordinate-pair>]`。此命令将一个[贝塞尔曲线命令](/zh-CN/docs/Web/SVG/Attribute/d#三次贝塞尔曲线)添加到形状命令列表中。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对”还是“绝对”。`via` 关键字指定贝塞尔曲线的控制点。
 
-    - 如果只提供一个 `<coordinate-pair>`，该命令会绘制一个[二次贝塞尔曲线](/zh-CN/docs/Web/SVG/Attribute/d#二次贝塞尔曲线)，它由三个点（起点、控制点和终点）定义。
-    - 如果提供两个 `<coordinate-pair>` 值，该命令会绘制一个三次贝塞尔曲线，它由四个点（起点、两个控制点和终点）定义。
+    - 如果只提供一个 `<coordinate-pair>`，该命令会绘制一条[二次贝塞尔曲线](/zh-CN/docs/Web/SVG/Attribute/d#二次贝塞尔曲线)，它由三个点（起点、控制点和终点）定义。
+    - 如果提供两个 `<coordinate-pair>` 值，该命令会绘制一条三次贝塞尔曲线，它由四个点（起点、两个控制点和终点）定义。
 
     `<smooth-command>`：指定为 `smooth [by | to] <coordinate-pair> [via <coordinate-pair>]`。此命令将一个平滑的[贝塞尔曲线命令](/zh-CN/docs/Web/SVG/Attribute/d#三次贝塞尔曲线)添加到形状命令列表中。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对“还是”绝对“。
 
@@ -141,7 +141,7 @@ clip-path: shape(
 
 ### 使用 `shape()` 定义路径
 
-该示例演示了如何在 {{cssxref("offset-path")}} 属性中使用 `shape()` 函数来定义元素可以跟随的路径形状。在这个示例中，我们创建了一个曲线路径。
+该示例演示了如何在 {{cssxref("offset-path")}} 属性中使用 `shape()` 函数来定义元素可以跟随的路径形状。
 
 第一个形状 `shape1` 遵循由 `curve to` 命令定义的三次贝塞尔曲线路径。接下来，`close` 命令从曲线的终点画一条直线回到 `from` 命令中定义的初始点。最后，`shape1` 移动到新位置 `0px 150px`，然后沿着一条水平线继续前进。
 
