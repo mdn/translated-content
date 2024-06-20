@@ -128,7 +128,7 @@ svg {
   height: 100%;
 }
 
-/* This path is displayed on hover*/
+/* 这条路径会在悬停时显示 */
 #svg_css_ex1:hover path {
   d: path(
     "M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 z M5,5 L90,90"
