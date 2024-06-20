@@ -31,7 +31,7 @@ MyObject.prototype.myFunction(value);
 
 ### Java 中的签名
 
-在 {{Glossary("Java")}} 中，签名用于识别虚拟机代码级别的方法和类。你必须在代码中声明变量的类型才能运行 Java 代码。Java 是*严格类型* 的，将在编译时检查所有参数是否正确。
+在 {{Glossary("Java")}} 中，签名用于识别虚拟机代码级别的方法和类。你必须在代码中声明变量的类型才能运行 Java 代码。Java 是*严格类型*的，将在编译时检查所有参数是否正确。
 
 ```java
 public static void main(String[] args)
