@@ -1,8 +1,6 @@
 ---
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
-page-type: javascript-statement
-browser-compat: javascript.statements.try_catch
 ---
 
 {{jsSidebar("Statements")}}
