@@ -84,7 +84,8 @@ l10n:
   </head>
   <body>
     <p>
-      <code>&lt;body&gt;</code> HTML 元素代表 HTML 文档的内容。一个文档中只能有一个 <code>&lt;body&gt;</code> 元素。
+      <code>&lt;body&gt;</code> HTML 元素代表 HTML
+      文档的内容。一个文档中只能有一个 <code>&lt;body&gt;</code> 元素。
     </p>
   </body>
 </html>
