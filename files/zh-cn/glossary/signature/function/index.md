@@ -9,10 +9,10 @@ slug: Glossary/Signature/Function
 
 一个签名可以包括：
 
-- {{Glossary("Parameter", "参数")}} 及参数的 {{Glossary("Type", "类型")}}
+- {{Glossary("Parameter", "参数")}}及参数的{{Glossary("Type", "类型")}}
 - 一个返回值及其类型
-- 可能会抛出或传回的 {{Glossary("Exception", "异常")}}
-- 有关{{Glossary("OOP", "面向对象")}}程序中方法可用性的信息 (例如关键字 `public`、`static` 或 `prototype)`。
+- 可能会抛出或传回的{{Glossary("Exception", "异常")}}
+- 有关{{Glossary("OOP", "面向对象")}}程序中方法可用性的信息（例如关键字 `public`、`static` 或 `prototype`）。
 
 ## 深入
 
@@ -24,8 +24,8 @@ slug: Glossary/Signature/Function
 MyObject.prototype.myFunction(value);
 ```
 
-- 该方法是安装在一个名为 `MyObject` 的 {{Glossary("object", "对象")}}上。
-- 该方法安装在 `MyObject` 的原型上（因此它是一个{{Glossary("instance method", "实例方法")}}），而不是一个{{Glossary("static method", "静态方法/类方法")}}。
+- 该方法安装在一个名为 `MyObject` 的{{Glossary("object", "对象")}}上。
+- 该方法安装在 `MyObject` 的原型（`prototype`）上（因此它是一个{{Glossary("Method", "实例方法")}}，而不是一个{{Glossary("static method", "静态方法")}}）。
 - 该方法的名称是 `myFunction`。
 - 该方法接受一个叫 `value` 的参数，且没有进一步定义。
 
