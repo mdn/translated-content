@@ -15,5 +15,5 @@ l10n:
 
 - 在维基百科上的[正则表达式](https://zh.wikipedia.org/wiki/正则表达式)
 - [互动教程](https://regexone.com/)
-- [虚拟化的正则表达式](https://regexper.com/)
-- [在 JavaScript 中写正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
+- [可视化的正则表达式](https://regexper.com/)
+- [在 JavaScript 中书写正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
