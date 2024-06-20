@@ -2,7 +2,7 @@
 title: browserAction.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
 l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+  sourceCommit: 5e1ef83ea9bd743f814258096abb05bdeb9c5ccf
 ---
 
 {{AddonSidebar}}
@@ -55,11 +55,11 @@ browser.browserAction.onClicked.hasListener(listener)
 
 ## 示例
 
-当用户点击图标时，为当前的活动标签页禁用浏览器操作，并记录标签页的 URL：
+当用户点击浏览器操作图标时，为当前的活动标签页禁用浏览器操作，并记录标签页的 URL：
 
 ```js
 browser.browserAction.onClicked.addListener((tab) => {
-  // 禁用活动标签页
+  // 禁用此标签页的浏览器操作
   browser.browserAction.disable(tab.id);
   // 需要“tabs”或“activeTab”权限，或 URL 的主机权限
   console.log(tab.url);
