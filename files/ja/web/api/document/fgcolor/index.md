@@ -1,22 +1,18 @@
 ---
-title: Document.fgColor
+title: "Document: fgColor プロパティ"
+short-title: fgColor
 slug: Web/API/Document/fgColor
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{ApiRef}}{{Deprecated_header}}
 
 **`fgColor`** は、現在の文書の前景色またはテキストの色を取得または設定します。
 
-## 構文
-
-```
-var color = document.fgColor;
-document.fgColor = color;
-```
-
 ### 引数
 
-- `color` は文字列で、色を表すキーワード ("red" など) または 16 進数の値 (`"#000000"` など) です。
+文字列で、色を表すキーワード ("red" など) または 16 進数の値 (`"#ff0000"` など) です。
 
 ## 例
 

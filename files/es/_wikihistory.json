@@ -3720,10 +3720,6 @@
       "Nathymig"
     ]
   },
-  "Web/API/Document_Object_Model/How_to_create_a_DOM_tree": {
-    "modified": "2019-03-23T23:22:26.711Z",
-    "contributors": ["carrillog.luis"]
-  },
   "Web/API/Document_Object_Model/Introduction": {
     "modified": "2019-03-23T23:48:16.078Z",
     "contributors": ["LuisSevillano", "IsaacAaron", "Sheppy", "Uri", "Nathymig"]
@@ -3735,10 +3731,6 @@
   "Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces": {
     "modified": "2019-03-23T23:20:26.633Z",
     "contributors": ["lajaso", "jucazam", "pablo.turati"]
-  },
-  "Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example": {
-    "modified": "2019-03-23T22:06:28.946Z",
-    "contributors": ["BrodaNoel"]
   },
   "Web/API/Document_Object_Model/Whitespace": {
     "modified": "2020-08-24T04:42:05.596Z",
@@ -14000,6 +13992,14 @@
   "conflicting/Web/API/Document_Object_Model": {
     "modified": "2019-03-24T00:02:47.149Z",
     "contributors": ["fscholz", "Mgjbot", "Nathymig", "Jorolo"]
+  },
+  "conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
+    "modified": "2019-03-23T23:22:26.711Z",
+    "contributors": ["carrillog.luis"]
+  },
+  "conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model_f02ee0854f5dae742561e13875ea3551": {
+    "modified": "2019-03-23T22:06:28.946Z",
+    "contributors": ["BrodaNoel"]
   },
   "conflicting/Web/API/Document_Object_Model_656f0e51418b39c498011268be9b3a10": {
     "modified": "2019-03-23T23:27:17.444Z",
