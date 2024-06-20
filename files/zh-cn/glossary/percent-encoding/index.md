@@ -39,5 +39,5 @@ l10n:
 ## 参见
 
 - 维基百科中[百分号编码](https://zh.wikipedia.org/wiki/百分号编码)的相关定义。
-- {{RFC(3986)}}, 第 2.1 节，其中定义了这种编码方式。
+- {{RFC(3986)}} 第 2.1 节，其中定义了这种编码方式。
 - [`encodeURI()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)、[`encodeURIComponent()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)——用于百分号编码 URL 的函数
