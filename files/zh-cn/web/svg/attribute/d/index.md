@@ -13,7 +13,7 @@ l10n:
 
 你可以将此属性与以下 SVG 元素一起使用：[`<path>`](#path)、[`<glyph>`](#path)、[`<missing-glyph>`](#missing-glyph)。
 
-`d` 是一个[表现属性](/zh-CN/docs/Web/SVG/Attribute/Presentation)，因此可以[用于作为 CSS 属性](#将_d_作为_css_属性)。
+`d` 是一个表现属性，因此可以[用于作为 CSS 属性](#将_d_作为_css_属性)。
 
 ## 示例
 
@@ -117,7 +117,7 @@ svg {
 
 ## 将 d 作为 CSS 属性
 
-`d` 是一个[表现属性](/zh-CN/docs/Web/SVG/Attribute/Presentation)，因此也可以使用 CSS 进行修改。该属性采用 [path()](/zh-CN/docs/Web/CSS/path) 或 `none`。
+`d` 是一个表现属性，因此也可以使用 CSS 进行修改。该属性采用 [path()](/zh-CN/docs/Web/CSS/path) 或 `none`。
 
 下面的示例展示了如何在悬停在元素上时应用新的路径。新的路径与旧的路径现统，但额外增加了一条穿过心形图案的线。
 
