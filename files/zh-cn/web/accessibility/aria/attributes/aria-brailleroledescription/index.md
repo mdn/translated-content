@@ -27,7 +27,7 @@ l10n:
 </article>
 ```
 
-大多数辅助技术，如屏幕阅读器，将以上内容读作 "slide，welcome to my talk。Image，Me。"。盲文辅助技术将在盲文中呈现 "sld welcome to my talk gra me"。语义 {{HTMLElement('article')}} 通过 `aria-roledescription` 属性被赋予 "slide" 角色；"slide" 是规范中未定义的角色，但是是演示文稿中幻灯片的常见角色。在盲文中，角色呈现为 "sld"。"gra" 是 "graphic" 的简称，在盲文中表示 "image" 角色的缩写。
+大多数辅助技术，如屏幕阅读器，将以上内容读作“slide, welcome to my talk. Image, Me.”。盲文辅助技术将在盲文中呈现“sld welcome to my talk gra me”。语义 {{HTMLElement('article')}} 通过 `aria-roledescription` 属性被赋予“slide”角色；“slide”是规范中未定义的角色，但是是演示文稿中幻灯片的常见角色。在盲文中，角色呈现为“sld”。“gra”是“graphic”的简称，在盲文中表示“image”角色的缩写。
 
 `aria-brailleroledescription` 属性应仅用于澄清非交互式容器角色（如 "group" 或 "region"）的目的，或者在盲文环境中提供小部件的更具体描述。
 
