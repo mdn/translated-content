@@ -32,7 +32,7 @@ let discarding = browser.tabs.discard(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在所有指定的标签页被丢弃后其会被兑现且不带参数。如果发生任何错误（例如，标签页 ID 无效），则该 promise 将被拒绝并带有错误消息
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在所有指定的标签页被丢弃后其会被兑现且不带参数。如果发生任何错误（例如，标签页 ID 无效），则该 promise 将被拒绝并带有错误消息。
 
 如果传入的是活动标签页的 ID，它将不会被丢弃，但 promise 仍会被兑现，并且任何其他传入的标签页将被丢弃。
 
