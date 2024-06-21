@@ -47,7 +47,7 @@ src:
 
 - `url()`
 
-  - : 指定由 {{cssxref("&lt;url&gt;")}}} 组成的外部引用，之后是使用 `format()` 和 `tech()` 组件值的可选提示，这些提示指定了 URL 引用资源的格式和字体技术。`format()` 和 `tech()` 组件是以逗号分隔的已知[字体格式](#字体格式)和技术字符串列表。如果用户代理不支持字体技术或格式，就会跳过下载字体资源。如果不提供格式或技术提示，则始终下载字体资源。
+  - : 指定由 {{cssxref("&lt;url&gt;")}} 组成的外部引用，之后是使用 `format()` 和 `tech()` 组件值的可选提示，这些提示指定了 URL 引用资源的格式和字体技术。`format()` 和 `tech()` 组件是以逗号分隔的已知[字体格式](#字体格式)和技术字符串列表。如果用户代理不支持字体技术或格式，就会跳过下载字体资源。如果不提供格式或技术提示，则始终下载字体资源。
 
 - `format()`
   - : 紧跟 `url()` 值的可选声明，为用户代理提供有关字体格式的提示。如果该值不被支持或无效，浏览器可能不会下载该资源，从而可能节省带宽。如果省略，浏览器将下载资源，然后检测格式。如果为了向后兼容而包含了[已定义关键字](#形式语法)列表中没有的字体源，请将格式字符串用引号括起来。下面的[字体格式](#字体格式)部分介绍了可能的值。
@@ -95,10 +95,10 @@ src: url(fonts.svg#WhichFont);
 
 | 关键字              | 字体格式            | 常见扩展名  |
 | ------------------- | ------------------- | ----------- |
-| `collection`        | OpenType Collection | .otc, .ttc  |
+| `collection`        | OpenType Collection | .otc、.ttc  |
 | `embedded-opentype` | Embedded OpenType   | .eot        |
-| `opentype`          | OpenType            | .otf, .ttf  |
-| `svg`               | SVG Font（已弃用）  | .svg, .svgz |
+| `opentype`          | OpenType            | .otf、.ttf  |
+| `svg`               | SVG Font（已弃用）  | .svg、.svgz |
 | `truetype`          | TrueType            | .ttf        |
 | `woff`              | WOFF 1.0            | .woff       |
 | `woff2`             | WOFF 2.0            | .woff2      |
