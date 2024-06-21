@@ -13,6 +13,6 @@ slug: Glossary/Kebab_case
 
 ## 같이 보기
 
-- [카멜 케이스](/en-US/docs/Glossary/Camel_case)
-- [스네이크 케이스](/en-US/docs/Glossary/Snake_case)
+- [카멜 케이스](/ko/docs/Glossary/Camel_case)
+- [스네이크 케이스](/ko/docs/Glossary/Snake_case)
 - [typescript-eslint rule: `이름 지정 규칙`](https://typescript-eslint.io/rules/naming-convention/)
