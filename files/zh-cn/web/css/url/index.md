@@ -78,7 +78,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
       - : 引用 [SVG 形状](/zh-CN/docs/Web/SVG/Tutorial/Basic_Shapes)（`circle`、`ellipse`、`line`、`path`、`polygon`、`polyline` 或 `rect`）的 ID ——使用形状的几何体作为路径。
 
 - `<url-modifier>`
-  - 将来，`url()` 函数可能会支持指定修改器、标识符或函数标记，从而改变 URL 字符串的含义。本规范不支持此特性，也未对其进行全面定义。
+  - 将来，`url()` 函数可能会支持指定修饰符、标识符或函数标记，从而改变 URL 字符串的含义。本规范不支持此特性，也未对其进行全面定义。
 
 ### 形式语法
 
