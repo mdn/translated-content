@@ -42,7 +42,7 @@ l10n:
 
 ### 一个简单的网络
 
-当两台电脑需要通信的时候，你必须要连接他们，无论通过有线方式 (通常是[网线](http://en.wikipedia.org/wiki/Ethernet_crossover_cable)) 还是无线方式（比如 [WiFi](https://zh.wikipedia.org/wiki/Wi-Fi) 或 [蓝牙](https://zh.wikipedia.org/wiki/藍牙) )。所有现代电脑都支持这些连接。
+当两台电脑需要通信的时候，你必须要连接他们，无论通过有线方式（通常是[网线](http://en.wikipedia.org/wiki/Ethernet_crossover_cable)）或是无线方式（比如 [WiFi](https://zh.wikipedia.org/wiki/Wi-Fi) 或[蓝牙](https://zh.wikipedia.org/wiki/藍牙)）。所有现代电脑都支持这些连接。
 
 > **备注：** 接下来的内容，我们将只谈论有线连接，而无线连接的原理与此相同。
 
@@ -82,7 +82,7 @@ l10n:
 
 这对于计算机来说完全没问题，但我们人类很难记住这种地址。为了使事情更简单，我们可以使用一个叫做*域名*的可读名称来替代 IP 地址。例如（在写作时，IP 地址可能会变化），`google.com` 是用于 IP 地址 `142.250.190.78` 的域名。所以使用域名是我们通过互联网访问计算机的最简单方式。
 
-![](dns-ip.png)
+![域名如何别名为 IP 地址](dns-ip.png)
 
 ### 互联网（Internet）和网络（web）
 
