@@ -1,6 +1,6 @@
 ---
-title: tabs.getCurrent()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/getCurrent
+title: tabs.getSelected()
+slug: Mozilla/Add-ons/WebExtensions/API/tabs/getSelected
 l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
