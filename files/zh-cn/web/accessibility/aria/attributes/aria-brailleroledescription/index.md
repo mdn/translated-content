@@ -11,7 +11,7 @@ l10n:
 
 ## 描述
 
-盲文不是字母和数字的一对一转译，而是包括各种缩写、省略和代表单词的字符（称为词符）。
+盲文不是字母和数字的一对一转译，而是包括各种缩写、缩略词和代表单词的字符（称为词符）。
 
 `aria-brailleroledescription` 属性允许提供 [`aria-roledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) 值的缩写版本，这是一个人类可读的、作者本地化的元素角色描述，用于改进盲文界面的用户体验，而不是将长角色描述转换为盲文。
 
@@ -29,7 +29,7 @@ l10n:
 
 大多数辅助技术，如屏幕阅读器，将以上内容读作“slide, welcome to my talk. Image, Me.”。盲文辅助技术将在盲文中呈现“sld welcome to my talk gra me”。语义 {{HTMLElement('article')}} 通过 `aria-roledescription` 属性被赋予“slide”角色；“slide”是规范中未定义的角色，但是是演示文稿中幻灯片的常见角色。在盲文中，角色呈现为“sld”。“gra”是“graphic”的简称，在盲文中表示“image”角色的缩写。
 
-`aria-brailleroledescription` 属性应仅用于澄清非交互式容器角色（如 "group" 或 "region"）的目的，或者在盲文环境中提供小部件的更具体描述。
+`aria-brailleroledescription` 属性应仅用于澄清非交互式容器角色（如“group”或“region”）的目的，或者在盲文环境中提供微件的更具体描述。
 
 由于 `aria-brailleroledescription` 属性覆盖了辅助技术如何在盲文中本地化和表达角色的名称，不合适的值将阻止用户在盲文界面上理解和与元素交互。
 
@@ -48,7 +48,7 @@ l10n:
 
 如果 `aria-brailleroledescription` 的值满足以下情况，将不会向盲文用户显示：
 
-- 值为空，或仅包含空白字符或空的盲文模式：点 -0（U+2800）。
+- 值为空，或仅包含空白字符或空的盲文模式：点 0（U+2800）。
 - 应用了属性的元素具有禁止使用 `aria-brailleroledescription` 的显式或隐式 WAI-ARIA 角色，包括 `generic` 角色。
 - 应用了属性的元素没有有效的 `aria-roledescription`。
 
