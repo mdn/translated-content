@@ -26,7 +26,7 @@ let removing = browser.tabs.remove(
 
 ### 返回值
 
-一个 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当所有指定的标签页已被关闭或其 `beforeunload` 提示已被处理时其会被兑现且不带有参数。如果发生任何错误，promise 将会被拒绝并返回错误信息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当所有指定的标签页已被关闭或其 `beforeunload` 提示已被处理时其会被兑现且不带有参数。如果发生任何错误，promise 将会被拒绝并返回错误信息。
 
 ## 示例
 
