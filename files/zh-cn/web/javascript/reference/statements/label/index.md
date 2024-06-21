@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**标记语句**是任何带有标识符前缀的[语句](/zh-CN/docs/Web/JavaScript/Reference/Statements)。你可以使用嵌套在标记语句中的 {{jsxref("Statements/break", "break")}} 或 {{jsxref("Statements/continue", "continue")}} 语句跳转到这个标记。
+**标记语句**是任何带有标识符前缀的[语句](/zh-CN/docs/Web/JavaScript/Reference/Statements)。你可以使用嵌套在标记语句中的 {{jsxref("Statements/break", "break")}} 或 {{jsxref("Statements/continue", "continue")}} 语句跳转到对应标记。
 
 {{EmbedInteractiveExample("pages/js/statement-label.html")}}
 
@@ -19,7 +19,7 @@ label:
 ```
 
 - `label`
-  - : 任何不属于[关键字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#关键字)的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)。
+  - : 任何不属于[保留字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#保留字)的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)。
 - `statement`
   - : JavaScript 语句。`break` 可以在任何标记语句中使用，而 `continue` 可以在标记的循环语句中使用。
 
@@ -27,11 +27,11 @@ label:
 
 你可以使用标签来标识语句，并在后续使用 `break` 或 `continue` 语句来引用该标签。请注意，JavaScript _没有_ `goto` 语句；你只能将标签与 `break` 或 `continue` 一起使用。
 
-任何引用 `label` 的 `break` 或 `continue` 语句都必须位于标记语句 `label` 所标记的语句的范围内。把 `label` 看作是仅在 `statement` 范围内可用的变量。
+任何引用 `label` 的 `break` 或 `continue` 语句都必须位于标记语句 `label` 所标记的语句的范围内。把 `label` 看作是仅在 `statement` 作用域内可用的变量。
 
-如果在执行 `statement` 时遇到 `break label;` 语句，则 `statement` 执行终止，并继续执行标记语句 `label` 之后的语句。
+如果在执行 `statement` 时遇到 `break label;` 语句，则 `statement` 执行终止，并继续执行标记的语句之后的语句。
 
-`continue label;` 只能在 `statement` 是[循环语句](/zh-CN/docs/Web/JavaScript/Reference/Statements#迭代)时使用。如果在执行 `statement` 时遇到 `continue label;` 语句，则 `statement` 继续执行循环的下一次迭代。`continue;` 语句不带标签只能继续最内层的循环，而 `continue label;` 语句可以继续任何给定的循环，即使该语句嵌套在其他循环中。
+`continue label;` 只能在 `statement` 是[循环语句](/zh-CN/docs/Web/JavaScript/Reference/Statements#迭代)时使用。如果在执行 `statement` 时遇到 `continue label;` 语句，则 `statement` 继续执行循环的下一次迭代。不带标签的 `continue;` 语句只能继续最内层的循环，而 `continue label;` 语句可以继续任何给定的循环，即使该语句嵌套在其他循环中。
 
 一个语句可以有多个标签。在这种情况下，这些标签在功能上都是等价的。
 
