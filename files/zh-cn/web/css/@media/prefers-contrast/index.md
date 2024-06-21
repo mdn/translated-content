@@ -7,12 +7,12 @@ l10n:
 
 {{CSSRef}}
 
-**`prefers-contrast`** [CSS](/zh-CN/docs/CSS) [媒体特性](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#媒体特性)用于检测用户是否要求以更低或更高的对比度来呈现网页内容。
+**`prefers-contrast`** [CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#媒体特性)用于检测用户是否要求以更低或更高的对比度来呈现 Web 内容。
 
 ## 语法
 
 - `no-preference`
-  - : 表示系统未得知用户在这方面的选项。在[布尔值上下文](https://drafts.csswg.org/mediaqueries-5/#boolean-context)中，其执行结果为 `false`。
+  - : 表示系统未得知用户在这方面的选项。在布尔值上下文中，其执行结果为 `false`。
 - `more`
   - : 表示用户已告知系统他们选择使用对比度更高的界面。
 - `less`
@@ -64,4 +64,4 @@ l10n:
 
 ## 参见
 
-- [forced-colors](/zh-CN/docs/Web/CSS/@media/forced-colors) CSS 媒体特性
+- [forced-colors](/zh-CN/docs/Web/CSS/@media/forced-colors) CSS 媒体查询

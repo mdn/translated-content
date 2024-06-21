@@ -2,12 +2,12 @@
 title: print-color-adjust
 slug: Web/CSS/print-color-adjust
 l10n:
-  sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
+  sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
 ---
 
 {{CSSRef}}
 
-**`print-color-adjust`** CSS 属性用于设置{{Glossary("user agent", "用户代理")}}在输出设备上优化元素外观时可以采取的措施。默认情况下，浏览器可根据输出设备的类型和功能，对元素的外观进行必要和谨慎的调整。
+**`print-color-adjust`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置{{Glossary("user agent", "用户代理")}}在输出设备上优化元素外观时可以采取的措施。默认情况下，浏览器可根据输出设备的类型和功能，对元素的外观进行必要和谨慎的调整。
 
 ## 语法
 
@@ -54,7 +54,7 @@ print-color-adjust: unset;
 
 ### 保持低对比度
 
-在这个示例中，一个盒子在黑色背景上使用了 {{cssxref("background-image")}} 和 {{cssxref("gradient/linear-gradient", "linear-gradient()")}} 函数，在中红色文本后面显示了深蓝色渐变。无论出于何种原因，在任何渲染环境中，包括在纸张上，这都是所需的外观，因此我们使用 `print-color-adjust: exact` 来告诉浏览器在渲染时不要对盒子进行颜色或样式调整。
+在这个示例中，一个盒子在黑色背景上使用了 {{cssxref("background-image")}} 和半透明的 {{cssxref("gradient/linear-gradient", "linear-gradient()")}} 函数，在中间的红色文本后面显示了深蓝色渐变。无论出于何种原因，在任何渲染环境中，包括在纸张上，这都是所需的外观，因此我们使用 `print-color-adjust: exact` 来告诉浏览器在渲染时不要对盒子进行颜色或样式的调整。
 
 #### CSS
 
@@ -80,7 +80,7 @@ print-color-adjust: unset;
 
 ```html
 <div class="my-box">
-  <p>需要更多的对比度！</p>
+  <p>需要更高的对比度！</p>
 </div>
 ```
 
