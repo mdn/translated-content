@@ -11,7 +11,7 @@ l10n:
 
 调用此函数后，将在任何属于此扩展并在指定标签中运行的内容脚本中触发 `runtime.onConnect` 事件。事件监听器将会收到另一个 `runtime.Port` 对象。两侧可以使用这些 `Port` 对象来交换消息。
 
-有关详细信息，请参阅[基于连接的消息传递](https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#基于连接的消息传递)。您可以在不创建连接的情况下发送消息。关于如何选择这两种选项，请参阅[选择一次性消息和基于连接的消息传递之间的区别](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#choosing_between_one-off_messages_and_connection-based_messaging)。
+有关详细信息，请参阅[基于连接的消息传递](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#基于连接的消息传递)。你可以在不创建连接的情况下发送消息。关于如何选择这两种选项，请参阅[选择一次性消息和基于连接的消息传递之间的区别](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#choosing_between_one-off_messages_and_connection-based_messaging)。
 
 ```js-nolint
 browser.tabs.connect(
@@ -23,7 +23,7 @@ browser.tabs.connect(
 ### 参数
 
 - `tabId`
-  - : `integer`。要连接到其内容脚本的标签页的ID。
+  - : `integer`。要连接到其内容脚本的标签页的 ID。
 - `connectInfo` {{optional_inline}}
 
   - : 包含以下属性的对象：
@@ -39,7 +39,7 @@ browser.tabs.connect(
 
 ## 示例
 
-在此示例中，后台脚本监听[浏览器操作](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2)的点击事件，然后连接到当前活动的标签页，并通过从 `connect()` 返回的 `Port` 发送消息：
+在此示例中，后台脚本监听[浏览器操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2)的点击事件，然后连接到当前活动的标签页，并通过从 `connect()` 返回的 `Port` 发送消息：
 
 ```js
 function connectToTab(tabs) {
