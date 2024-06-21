@@ -15,10 +15,10 @@ l10n:
 
 ## 避免树构建器的输出丢失
 
-当 `document.write()` 改变了文档树的状态时，树构建器的预构建过程会失败。例如，当所有被 `document.write()` 插入的内容被解析之后 `</script>` 标签后的预处理状态不再持有。然而，只有不寻常地使用 `document.write()` 才会产生问题。这些事情需要避免：
+当 `document.write()` 改变了文档树的状态，以至于当 `document.write()` 插入的所有内容都被解析后，`</script>` 标记后的推测状态不再保持时，推测树生成失败。然而，只有不寻常地使用 `document.write()` 才会产生问题。这些事情需要避免：
 
 - 不要写不对称的文档树。`<script>document.write("<div>");</script>` 很糟糕。`<script>document.write("<div></div>");</script>` 则是可行的。
-- 不要写未完成的标识。 `<script>document.write("<div></div");</script>` 很糟糕。
-- 不要以回车结束内容。 `<script>document.write("Hello World!\r");</script>` 很糟糕。 `<script>document.write("Hello World!\n");</script>` 则是可行的。
+- 不要写未完成的标识。`<script>document.write("<div></div");</script>` 很糟糕。
+- 不要以回车结束内容。`<script>document.write("Hello World!\r");</script>` 很糟糕。`<script>document.write("Hello World!\n");</script>` 则是可行的。
 - 需要注意的是，对称的标签也可能导致文档的不对称。比如：`head` 元素中的 `<script>document.write("<div></div>");</script>` 会被解析成 `<script>document.write("</head><body><div></div>");</script>`，因此文档是不对称的。
 - 不要仅格式化部分表格。`<table><script>document.write("<tr><td>Hello World!</td></tr>");</script></table>` 很糟糕。
