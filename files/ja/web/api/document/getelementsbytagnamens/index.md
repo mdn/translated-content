@@ -42,7 +42,7 @@ getElementsByTagNameNS(namespace, name)
 
 以下の例を使用するには、新しいファイルにそのままコピー＆ペーストして、 .xhtml の拡張子で保存してください。
 
-```html
+```html-nolint
 <html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title>getElementsByTagNameNS の例</title>
