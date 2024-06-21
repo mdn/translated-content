@@ -11,7 +11,7 @@ l10n:
 
 > **备注：** 使用 Manifest V3 或更高版本时，通过 {{WebExtAPIRef("scripting")}} API 提供的方法来执行脚本、插入 CSS 和移除 CSS，这些方法分别是 {{WebExtAPIRef("scripting.executeScript()")}}、{{WebExtAPIRef("scripting.insertCSS()")}} 和 {{WebExtAPIRef("scripting.removeCSS()")}}。
 
-你可以使用该 API 获取一个已打开标签的列表并且使用各种标准过滤标签，并进行 打开，刷新，移动，重载，移除操作。该 API 不能直接访问标签中的主机内容，但是你可以使用 {{WebExtAPIRef("tabs.executeScript()")}} 或者 {{WebExtAPIRef("tabs.insertCSS()")}} APIs，来插入 javascript 和 CSS。
+你可以使用该 API 获取一个已打开标签的列表并且使用各种标准过滤标签，并进行打开、刷新、移动、重载和移除操作。该 API 不能直接访问标签中的主机内容，但是你可以使用 {{WebExtAPIRef("tabs.executeScript()")}} 或者 {{WebExtAPIRef("tabs.insertCSS()")}} API，来插入 Javascript 和 CSS。
 
 你可以在不需要任何特殊权限的情况下使用该 API 的大部分，除了：
 
