@@ -2,7 +2,7 @@
 title: tabs.getAllInWindow()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getAllInWindow
 l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+  sourceCommit: d6856a051d0ba078ec1d24b80908b1ca174917db
 ---
 
 {{AddonSidebar}}
