@@ -71,13 +71,11 @@ l10n:
 
 ```js
 myHTMLElement.ariaChecked = true;
-规范;
-{
-  {
-    Specifications;
-  }
-}
 ```
+
+## 规范
+
+{{Specifications}}
 
 ## 参见
 
