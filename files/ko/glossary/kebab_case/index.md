@@ -1,7 +1,6 @@
 ---
 title: Kebab case
 slug: Glossary/Kebab_case
-page-type: glossary-definition
 ---
 
 {{GlossarySidebar}}
