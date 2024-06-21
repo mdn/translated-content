@@ -7,11 +7,11 @@ l10n:
 
 {{SVGRef}}
 
-`image-rendering` 属性向浏览器提供了一个提示，即在图片处理时，如何进行速度 vs 质量之间的权衡。
+**`image-rendering`** 属性向浏览器提供了一个在图片处理时应如何权衡速度和质量的提示。
 
 即使原始数据和/或目标设备是索引颜色的，也总是在真彩色（例如，24 位）颜色空间中进行重新采样。
 
-> **备注：** 作为一个显示属性，`image-rendering` 可以用作 CSS 属性使用。请参考 {{cssxref("image-rendering", "CSS image-rendering")}} 获取更多的信息。
+> **备注：** 作为一个表现属性，`image-rendering` 可以用作 CSS 属性。请参考 {{cssxref("image-rendering", "CSS image-rendering")}}，以获取更多的信息。
 
 你可以和下面的 SVG 元素一起使用该属性：
 
@@ -33,8 +33,8 @@ l10n:
       <td><code>auto</code></td>
     </tr>
     <tr>
-      <th scope="row">可动画的</th>
-      <td>Yes</td>
+      <th scope="row">动画性</th>
+      <td>是</td>
     </tr>
   </tbody>
 </table>
