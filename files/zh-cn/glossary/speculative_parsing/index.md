@@ -11,7 +11,7 @@ l10n:
 
 这篇文档旨在帮助你避免推测失败和页面加载变慢。
 
-让脚本、层叠样式表和图片推测加载成功，避免使用 {{domxref('document.write')}}。如果你使用 `<base>` 元素重载页面的基 URI，将这个元素放置到文档的非脚本部分。不要通过 `document.write()` 或者 {{domxref('document.createElement')}} 添加。
+要想成功加载链接脚本、样式表和图片，请避免 {{domxref('document.write')}}。如果你使用 `<base>` 元素重载页面的基 URI，将这个元素放置到文档的非脚本部分。不要通过 `document.write()` 或者 {{domxref('document.createElement')}} 添加。
 
 ## 避免树构建器的输出丢失
 
