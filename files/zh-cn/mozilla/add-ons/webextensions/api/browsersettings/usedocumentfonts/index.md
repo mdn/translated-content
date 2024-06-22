@@ -13,8 +13,8 @@ l10n:
 
 其基础值是一个布尔值：
 
-- `true`:使用网页指定的字体。这是默认值。
-- `false`:使用系统字体。
+- `true`：使用网页指定的字体。这是默认值。
+- `false`：使用系统字体。
 
 ## 浏览器兼容性
 
@@ -26,7 +26,7 @@ l10n:
 
 ```js
 function logResult(result) {
-  console.log(`Setting was modified: ${result}`);
+  console.log(`设置已更改：${result}`);
 }
 
 browser.browserSettings.useDocumentFonts.set({ value: false }).then(logResult);
