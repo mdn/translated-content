@@ -21640,10 +21640,6 @@
     "modified": "2020-10-15T22:28:37.603Z",
     "contributors": ["mfuji09", "tamura4278"]
   },
-  "Web/HTTP/Headers/Accept-CH-Lifetime": {
-    "modified": "2020-10-15T22:28:41.631Z",
-    "contributors": ["mfuji09", "Wind1808"]
-  },
   "Web/HTTP/Headers/Accept-Charset": {
     "modified": "2020-10-15T22:09:31.974Z",
     "contributors": ["mfuji09", "silverskyvicto"]
