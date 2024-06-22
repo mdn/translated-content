@@ -15,7 +15,6 @@ slug: Glossary/Camel_case
 
 카멜 케이스는 JavaScript, Java 및 다양한 언어에서 가장 인기 있는 규칙입니다.
 
-
 ## 같이 보기
 
 - {{Glossary("스네이크 케이스")}}
