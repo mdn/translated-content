@@ -9,7 +9,7 @@ l10n:
 
 获取浏览器操作徽章的文本颜色。
 
-从 Firefox 63 开始，除非使用 {{WebExtAPIRef("browserAction.setBadgeTextColor()")}} 显式设置了徽章文本颜色，否则徽章文本颜色将自动设置为黑色或白色，以使其与指定的徽章背景颜色最大对比度。例如，如果你将徽章背景颜色设置为白色，则默认的徽章文本颜色将设置为黑色，反之亦然。
+从 Firefox 63 版本开始，除非使用 {{WebExtAPIRef("browserAction.setBadgeTextColor()")}} 显式设置了徽章文本颜色，否则徽章文本颜色将自动设置为黑色或白色，以使其与指定的徽章背景颜色形成最大对比度。例如，如果你将徽章背景颜色设置为白色，则默认的徽章文本颜色将设置为黑色，反之亦然。
 
 其他浏览器始终使用白色文本颜色。
 
@@ -34,14 +34,14 @@ browser.browserAction.getBadgeTextColor(
     - `windowId` {{optional_inline}}
       - : `integer`。指定从中获取徽章文本颜色的窗口。
 
-    <!---->
+<!---->
 
 - 如果同时提供了 `windowId` 和 `tabId`，则函数失败。
 - 如果 `windowId` 和 `tabId` 都省略，则返回全局徽章文本颜色。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现包含检索到的颜色的{{WebExtAPIRef('browserAction.ColorArray')}}。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现包含检索到的颜色的 {{WebExtAPIRef('browserAction.ColorArray')}}。
 
 ## 浏览器兼容性
 
