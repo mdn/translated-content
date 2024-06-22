@@ -7,11 +7,11 @@ l10n:
 
 {{AddonSidebar}}
 
-**`bookmarks.BookmarkTreeNodeUnmodifiable`** 类型用于指示书签树中的节点（其中每个节点都是书签或书签文件夹）无法更改的原因。这是作为书签节点上 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "bookmarks.BookmarkTreeNode.unmodifiable", "unmodifiable")}} 字段的值使用。
+**`bookmarks.BookmarkTreeNodeUnmodifiable`** 类型用于指示书签树中的节点（其中每个节点都是书签或书签文件夹）无法被更改的原因。其被用于书签节点上 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "bookmarks.BookmarkTreeNode.unmodifiable", "unmodifiable")}} 字段的值。
 
 ## 类型
 
-`bookmarks.BookmarkTreeNodeUnmodifiable` 是一个 {{jsxref("string")}}，目前只能具有一个值：`"managed"`。这表示书签节点是由管理员或受监督用户（例如在家长控制的例子里的家长）配置的。
+`bookmarks.BookmarkTreeNodeUnmodifiable` 是一个{{jsxref("string", "字符串", "", 1)}}，目前只能具有一个值：`"managed"`。这表示书签节点是由管理员或受监督用户的监护人（例如在家长控制的例子里的家长）配置的。
 
 ## 浏览器兼容性
 
