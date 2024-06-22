@@ -30612,10 +30612,6 @@
     "modified": "2020-09-18T02:40:01.125Z",
     "contributors": ["morinokami", "silverskyvicto"]
   },
-  "orphaned/Web/HTTP/Headers/Accept-CH-Lifetime": {
-    "modified": "2020-10-15T22:28:41.631Z",
-    "contributors": ["mfuji09", "Wind1808"]
-  },
   "orphaned/Web/JavaScript/Guide/Objects_and_Properties": {
     "modified": "2019-03-24T00:01:07.858Z",
     "contributors": ["ethertank", "happysadman", "electrolysis", "Mgjbot"]
