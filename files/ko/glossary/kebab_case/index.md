@@ -9,7 +9,7 @@ slug: Glossary/Kebab_case
 
 케밥 케이스(Kebab case)는 변수 이름 지정 규칙으로 자주 사용됩니다. 그러나 많은 언어에서 하이픈은 뺄셈을 나타내므로 케밥 케이스를 사용할 수 없습니다. CSS 속성인 {{cssxref("background-color")}}와 {{cssxref("font-family")}}, HTML 속성인 [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label),[`data-*`](/ko/docs/Web/HTML/Global_attributes/data-*)는 케밥 케이스로 작성된 것입니다.
 
-케밥 케이스로 작성된 단어는 종종 _하이픈으로 연결된 단어_로 간주됩니다.
+케밥 케이스로 작성된 단어는 종종 *하이픈으로 연결된 단어*로 간주됩니다.
 
 ## 같이 보기
 
