@@ -33,8 +33,8 @@ text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 text/html;q=0.8,text/*;q=0.8,*/*;q=0.8
 ```
 
-| Value 值    | Priority 优先级               |
-| ----------- | ----------------------------- |
+| Value 值    | Priority 优先级         |
+| ----------- | ----------------------- |
 | `text/html` | `0.8`（但是完全指定了） |
 | `text/*`    | `0.8`（部分指定）       |
 | `*/*`       | `0.8`（完全没制定）     |
