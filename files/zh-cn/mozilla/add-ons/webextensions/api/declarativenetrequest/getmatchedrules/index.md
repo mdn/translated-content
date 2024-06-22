@@ -36,7 +36,7 @@ let gettingMatchedRules = browser.declarativeNetRequest.getMatchedRules(
 - `tabId`
   - : `number` 请求来源的标签页的 `tabId`，如果标签页仍然活跃。否则为 `-1`。
 - `timeStamp`
-  - : number 匹配规则的时间。时间戳对应于 JavaScript 的时间约定，即自纪元以来的毫秒数。
+  - : `number`。匹配规则的时间。时间戳对应于 JavaScript 的时间约定，即自纪元以来的毫秒数。
 
 如果没有匹配的规则，则对象为空。如果请求失败，promise 将被拒绝并带有错误消息。
 
