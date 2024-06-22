@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，其基础值是一个布尔值。
+一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，其底层是一个布尔值。
 
 当用户聚焦地址栏并开始输入时，浏览器会提供自动完成建议：一个基于用户不完整输入和浏览历史的网页下拉列表。
 
@@ -19,7 +19,7 @@ l10n:
 
 ## 示例
 
-将设置为 `true`：
+将该项配置设置为 `true`：
 
 ```js
 function logResult(result) {
