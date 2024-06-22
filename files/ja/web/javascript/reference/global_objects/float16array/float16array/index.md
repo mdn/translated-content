@@ -1,15 +1,15 @@
 ---
-title: Float16Array() constructor
+title: Float16Array() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Float16Array/Float16Array
-page-type: javascript-constructor
-browser-compat: javascript.builtins.Float16Array.Float16Array
+l10n:
+  sourceCommit: dd339290fa3a42d9a7f079e17a62e1df1206f29d
 ---
 
 {{JSRef}}
 
-The **`Float16Array()`** constructor creates {{jsxref("Float16Array")}} objects. The contents are initialized to `0` unless initialization data is explicitly provided.
+**`Float16Array()`** コンストラクターは {{jsxref("Float16Array")}} オブジェクトを生成します。初期化データが明示的に与えられない限り、中身は `0` に初期化されます。
 
-## Syntax
+## 構文
 
 ```js-nolint
 new Float16Array()
@@ -22,19 +22,19 @@ new Float16Array(buffer, byteOffset)
 new Float16Array(buffer, byteOffset, length)
 ```
 
-> **Note:** `Float16Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> **メモ:** `Float16Array()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) でのみ構築できます。`new` なしで呼び出そうとすると {{jsxref("TypeError")}} がスローされます。
 
-### Parameters
+### 引数
 
-See [`TypedArray`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#parameters).
+[`TypedArray#引数`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#引数) を参照してください。
 
-### Exceptions
+### 例外
 
-See [`TypedArray`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#exceptions).
+[`TypedArray#例外`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#例外) を参照してください。
 
-## Examples
+## 例
 
-### Different ways to create a Float16Array
+### Float16Array を作成する様々な方法
 
 ```js
 // From a length
@@ -66,17 +66,17 @@ console.log(float16FromIterable);
 // Float16Array [1, 2, 3]
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
