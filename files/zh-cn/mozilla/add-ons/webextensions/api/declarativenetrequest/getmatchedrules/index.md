@@ -34,7 +34,7 @@ let gettingMatchedRules = browser.declarativeNetRequest.getMatchedRules(
 - `rule`
   - : {{WebExtAPIRef("declarativeNetRequest.MatchedRule")}}。匹配规则的详细信息。
 - `tabId`
-  - : `number` 请求来源的标签页的 `tabId`，如果标签页仍然活跃。否则为 `-1`。
+  - : `number`。请求来源的标签页的 `tabId`，如果标签页仍然活跃。否则为 `-1`。
 - `timeStamp`
   - : `number`。匹配规则的时间。时间戳对应于 JavaScript 的时间约定，即自纪元以来的毫秒数。
 
