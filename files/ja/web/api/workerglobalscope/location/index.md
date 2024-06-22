@@ -1,8 +1,9 @@
 ---
-title: WorkerGlobalScope.location
+title: "WorkerGlobalScope: location プロパティ"
+short-title: location
 slug: Web/API/WorkerGlobalScope/location
 l10n:
-  sourceCommit: c6dbc4ff96451887b908b46c8e70bcfec1c2c48c
+  sourceCommit: 88241bf466f1025d3c2f4ce2752586dd85d1ae13
 ---
 
 {{APIRef("Web Workers API")}}
@@ -23,7 +24,7 @@ console.log(location);
 
 を呼び出すと（これらは基本的に `self.console.log(self.location);` と同等であり、ワーカーのスコープで呼び出されたとき、 {{domxref("WorkerGlobalScope.self")}} で参照されるもの）、 {{domxref("WorkerLocation")}} オブジェクトが次のようにコンソールに出力されるのが分かるでしょう。
 
-```
+```plain
 WorkerLocation {hash: "", search: "", pathname: "/worker.js", port: "8000", hostname: "localhost"…}
   hash: ""
   host: "localhost:8000"

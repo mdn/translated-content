@@ -627,11 +627,11 @@
 /pt-BR/docs/Web/API/Window/DOMContentLoaded_event	/pt-BR/docs/Web/API/Document/DOMContentLoaded_event
 /pt-BR/docs/Web/API/Window/Window.localStorage	/pt-BR/docs/Web/API/Window/localStorage
 /pt-BR/docs/Web/API/Window/openDialog	/pt-BR/docs/conflicting/Web/API/Window
-/pt-BR/docs/Web/API/WindowBase64/atob	/pt-BR/docs/Web/API/atob
+/pt-BR/docs/Web/API/WindowBase64/atob	/pt-BR/docs/Web/API/Window/atob
 /pt-BR/docs/Web/API/WindowEventHandlers/onhashchange	/pt-BR/docs/Web/API/Window/hashchange_event
 /pt-BR/docs/Web/API/WindowEventHandlers/onpopstate	/pt-BR/docs/conflicting/Web/API/Window/popstate_event
 /pt-BR/docs/Web/API/WindowEventHandlers/onstorage	/pt-BR/docs/Web/API/Window/storage_event
-/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/atob	/pt-BR/docs/Web/API/atob
+/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/atob	/pt-BR/docs/Web/API/Window/atob
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/pt-BR/docs/Web/API/clearTimeout
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/pt-BR/docs/Web/API/fetch
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/pt-BR/docs/Web/API/setInterval
@@ -643,6 +643,7 @@
 /pt-BR/docs/Web/API/XMLHttpRequest/Usando_XMLHttpRequest	/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /pt-BR/docs/Web/API/XMLHttpRequest/onreadystatechange	/pt-BR/docs/Web/API/XMLHttpRequest/readystatechange_event
+/pt-BR/docs/Web/API/atob	/pt-BR/docs/Web/API/Window/atob
 /pt-BR/docs/Web/API/console/assert	/pt-BR/docs/Web/API/console/assert_static
 /pt-BR/docs/Web/API/console/clear	/pt-BR/docs/Web/API/console/clear_static
 /pt-BR/docs/Web/API/console/count	/pt-BR/docs/Web/API/console/count_static
@@ -734,7 +735,8 @@
 /pt-BR/docs/Web/CSS/valor_inicial	/pt-BR/docs/Web/CSS/initial_value
 /pt-BR/docs/Web/CSS/var()	/pt-BR/docs/Web/CSS/var
 /pt-BR/docs/Web/CSS/word-wrap	/pt-BR/docs/Web/CSS/overflow-wrap
-/pt-BR/docs/Web/Demos_of_open_web_technologies	/pt-BR/docs/Web/Demos
+/pt-BR/docs/Web/Demos	/pt-BR/docs/orphaned/Web/Demos
+/pt-BR/docs/Web/Demos_of_open_web_technologies	/pt-BR/docs/orphaned/Web/Demos
 /pt-BR/docs/Web/Events/DOMContentLoaded	/pt-BR/docs/Web/API/Document/DOMContentLoaded_event
 /pt-BR/docs/Web/Events/abort	/pt-BR/docs/Web/API/HTMLMediaElement/abort_event
 /pt-BR/docs/Web/Events/beforeunload	/pt-BR/docs/Web/API/Window/beforeunload_event

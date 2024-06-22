@@ -3,6 +3,8 @@ title: XMLHttpRequest()
 slug: Web/API/XMLHttpRequest/XMLHttpRequest
 ---
 
+{{APIRef("XMLHttpRequest API")}}
+
 #### XMLHttpRequest
 
 Конструктор **`XMLHttpRequest()`** создаёт новый объект {{domxref("XMLHttpRequest")}}.

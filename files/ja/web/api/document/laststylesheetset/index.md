@@ -1,9 +1,12 @@
 ---
-title: Document.lastStyleSheetSet
+title: "Document: lastStyleSheetSet プロパティ"
+short-title: lastStyleSheetSet
 slug: Web/API/Document/lastStyleSheetSet
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 **`Document.lastStyleSheetSet`** プロパティは、最後に有効化されたスタイルシートセットを返します。このプロパティの値は {{domxref("document.selectedStyleSheetSet")}} プロパティが変化するたびに変化します。
 
@@ -21,7 +24,7 @@ let lastSheetSet = document.lastStyleSheetSet;
 if (!lastSheetSet) {
   lastSheetSet = "Style sheet not yet changed";
 } else {
-  console.log("The last style sheet set is: " + lastSheetSet);
+  console.log(`The last style sheet set is: ${lastSheetSet}`);
 }
 ```
 

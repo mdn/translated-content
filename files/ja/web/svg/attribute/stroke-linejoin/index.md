@@ -3,6 +3,8 @@ title: stroke-linejoin
 slug: Web/SVG/Attribute/stroke-linejoin
 ---
 
+{{SVGRef}}
+
 « [SVG 属性リファレンスホーム](/ja/docs/Web/SVG/Attribute)
 
 `stroke-linejoin` 属性は線を引いた時のパスの曲がりまたは基本的な輪郭の形状を指定します。

@@ -7472,17 +7472,6 @@
       "Mgjbot"
     ]
   },
-  "Web/API/Document_Object_Model/How_to_create_a_DOM_tree": {
-    "modified": "2019-03-24T00:07:13.065Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto",
-      "kmaglione",
-      "ethertank",
-      "Mgjbot",
-      "electrolysis"
-    ]
-  },
   "Web/API/Document_Object_Model/Introduction": {
     "modified": "2020-08-09T14:35:31.436Z",
     "contributors": [
@@ -21651,10 +21640,6 @@
     "modified": "2020-10-15T22:28:37.603Z",
     "contributors": ["mfuji09", "tamura4278"]
   },
-  "Web/HTTP/Headers/Accept-CH-Lifetime": {
-    "modified": "2020-10-15T22:28:41.631Z",
-    "contributors": ["mfuji09", "Wind1808"]
-  },
   "Web/HTTP/Headers/Accept-Charset": {
     "modified": "2020-10-15T22:09:31.974Z",
     "contributors": ["mfuji09", "silverskyvicto"]
@@ -29515,10 +29500,6 @@
   "Web/Security/Mixed_content": {
     "modified": "2020-08-31T12:56:43.359Z",
     "contributors": ["mfuji09", "YuichiNukiyama", "hashedhyphen", "clariroid"]
-  },
-  "Web/Security/Mixed_content/How_to_fix_website_with_mixed_content": {
-    "modified": "2020-09-26T07:03:01.189Z",
-    "contributors": ["mfuji09", "hashedhyphen", "tomg25"]
   },
   "Web/Security/Referer_header:_privacy_and_security_concerns": {
     "modified": "2020-10-24T06:28:29.243Z",

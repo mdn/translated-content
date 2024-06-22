@@ -1,46 +1,56 @@
 ---
-title: Document.createNodeIterator()
+title: "Document: createNodeIterator() メソッド"
+short-title: createNodeIterator()
 slug: Web/API/Document/createNodeIterator
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("DOM")}}
 
-新しい {{domxref("NodeIterator")}} オブジェクトを返します。
+**`Document.createNodeIterator()`** メソッドは、新しい [`NodeIterator`](/ja/docs/Web/API/NodeIterator) オブジェクトを返します。
 
 ## 構文
 
-```
-const nodeIterator = document.createNodeIterator(root[, whatToShow[, filter]]);
+```js-nolint
+createNodeIterator(root)
+createNodeIterator(root, whatToShow)
+createNodeIterator(root, whatToShow, filter)
 ```
 
-### 値
+### 引数
 
 - `root`
+
   - : {{ domxref("NodeIterator") }} の探索の開始地点になるルートノードです。
-- `whatToShow` {{ optional_inline() }}
 
-  - : オプションの `unsigned long` 値で、 [`NodeFilter`](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter) の定数プロパティを組み合わせて作られたビットマスクを表します。これは特定の種類のノードを絞り込みするのに便利な方法です。. 既定値は `0xFFFFFFFF` で、 `SHOW_ALL` 定数を表します。
+- `whatToShow` {{optional_inline}}
 
-    | 定数                                                     | 数値                                     | 説明                                                                                                                                                                                                                                                                                                                                          |
-    | -------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `NodeFilter.SHOW_ALL`                                    | `-1` (すなわち `unsigned long` の最大値) | すべてのノードを表します。                                                                                                                                                                                                                                                                                                                    |
-    | `NodeFilter.SHOW_ATTRIBUTE` {{deprecated_inline}}        | `2`                                      | 属性 {{ domxref("Attr") }} ノードを表します。これは、 {{ domxref("Attr") }} ノードをルートとして {{ domxref("NodeIterator") }} を作成した場合にのみ意味を持ちます。この場合、その属性ノードが反復や探索の最初の位置に現れることを意味します。属性は他のノードの子ではないので、文書ツリーを探索しても現れません。                             |
-    | `NodeFilter.SHOW_CDATA_SECTION` {{deprecated_inline}}    | `8`                                      | {{ domxref("CDATASection") }} ノードを表します。                                                                                                                                                                                                                                                                                              |
-    | `NodeFilter.SHOW_COMMENT`                                | `128`                                    | {{ domxref("Comment") }} ノードを表します。                                                                                                                                                                                                                                                                                                   |
-    | `NodeFilter.SHOW_DOCUMENT`                               | `256`                                    | {{ domxref("Document") }} ノードを表します。                                                                                                                                                                                                                                                                                                  |
-    | `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                      | `1024`                                   | {{ domxref("DocumentFragment") }} ノードを表します。                                                                                                                                                                                                                                                                                          |
-    | `NodeFilter.SHOW_DOCUMENT_TYPE`                          | `512`                                    | {{ domxref("DocumentType") }} ノードを表します。                                                                                                                                                                                                                                                                                              |
-    | `NodeFilter.SHOW_ELEMENT`                                | `1`                                      | {{ domxref("Element") }} ノードを表します。                                                                                                                                                                                                                                                                                                   |
-    | `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `32`                                     | {{ domxref("Entity") }} ノードを表示します。これは、 {{ domxref("Entity") }} ノードをルートとして {{ domxref("NodeIterator") }} を作成した場合にのみ意味を持ちます。この場合、 {{ domxref("Entity") }} ノードが探索の最初の位置に現れることを意味します。エンティティは文書ツリーの一部ではないので、文書ツリーを探索しても表されません。     |
-    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | `16`                                     | {{ domxref("EntityReference") }} ノードを表します。                                                                                                                                                                                                                                                                                           |
-    | `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `2048`                                   | {{ domxref("Notation") }} ノードを表示します。これは、 {{ domxref("Notation") }} ノードをルートとして {{ domxref("NodeIterator") }} を作成した場合にのみ意味を持ちます。この場合、 {{ domxref("Notation") }} ノードが探索の最初の位置に現れることを意味します。 Notation は文書ツリーの一部ではないので、文書ツリーを探索しても表されません。 |
-    | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                 | `64`                                     | Shows {{ domxref("ProcessingInstruction") }} nodes.                                                                                                                                                                                                                                                                                           |
-    | `NodeFilter.SHOW_TEXT`                                   | `4`                                      | {{ domxref("Text") }} ノードを表します。                                                                                                                                                                                                                                                                                                      |
+  - : オプションの `unsigned long` 値で、 [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter) の定数プロパティを組み合わせて作られたビットマスクを表します。
+    これは特定の種類のノードを絞り込みするのに便利な方法です。既定値は `0xFFFFFFFF` で、 `SHOW_ALL` 定数を表します。
 
-- `filter` {{ optional_inline() }}
-  - : NodeFilter インターフェースを実装したオブジェクト。その acceptNode() メソッドは、反復可能なノードのリストに含めるかどうかを決定するために、 whatToShow フラグによって含まれていると受け入れられたルートを基準としたサブツリーの各ノードに対して呼び出されます (代わりに単純なコールバック関数を使用することもできます)。このメソッドは `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT`, or `NodeFilter.FILTER_SKIP` のいずれかを返します。[例](#example)を参照してください。
+    | 定数                                                     | 数値                                             | 説明                                                                                                                                                                                                                                                                                                              |
+    | -------------------------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `NodeFilter.SHOW_ALL`                                    | `4294967295` (すなわち `unsigned long` の最大値) | すべてのノードを表します。                                                                                                                                                                                                                                                                                        |
+    | `NodeFilter.SHOW_ATTRIBUTE` {{deprecated_inline}}        | `2`                                              | 属性 {{ domxref("Attr") }} ノードを表します。これは、 {{ domxref("Attr") }} ノードをルートとして {{ domxref("NodeIterator") }} を作成した場合にのみ意味を持ちます。この場合、その属性ノードが反復や探索の最初の位置に現れることを意味します。属性は他のノードの子ではないので、文書ツリーを探索しても現れません。 |
+    | `NodeFilter.SHOW_CDATA_SECTION` {{deprecated_inline}}    | `8`                                              | {{ domxref("CDATASection") }} ノードを表します。                                                                                                                                                                                                                                                                  |
+    | `NodeFilter.SHOW_COMMENT`                                | `128`                                            | {{ domxref("Comment") }} ノードを表します。                                                                                                                                                                                                                                                                       |
+    | `NodeFilter.SHOW_DOCUMENT`                               | `256`                                            | {{ domxref("Document") }} ノードを表します。                                                                                                                                                                                                                                                                      |
+    | `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                      | `1024`                                           | {{ domxref("DocumentFragment") }} ノードを表します。                                                                                                                                                                                                                                                              |
+    | `NodeFilter.SHOW_DOCUMENT_TYPE`                          | `512`                                            | {{ domxref("DocumentType") }} ノードを表します。                                                                                                                                                                                                                                                                  |
+    | `NodeFilter.SHOW_ELEMENT`                                | `1`                                              | {{ domxref("Element") }} ノードを表します。                                                                                                                                                                                                                                                                       |
+    | `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `32`                                             | 古い値で、もう使用できません。                                                                                                                                                                                                                                                                                    |
+    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | `16`                                             | 古い値で、もう使用できません。                                                                                                                                                                                                                                                                                    |
+    | `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `2048`                                           | 古い値で、もう使用できません。                                                                                                                                                                                                                                                                                    |
+    | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                 | `64`                                             | Shows {{ domxref("ProcessingInstruction") }} nodes.                                                                                                                                                                                                                                                               |
+    | `NodeFilter.SHOW_TEXT`                                   | `4`                                              | {{ domxref("Text") }} ノードを表します。                                                                                                                                                                                                                                                                          |
 
-> **メモ:** Gecko 12.0 (Firefox 12.0 / Thunderbird 12.0 / SeaMonkey 2.9) より前の版では、このメソッドは DOM4 仕様の一部ではないオプションの 4 番目の引数 (entityReferenceExpansion) を受け入れていました。この引数は、エンティティ参照ノードの子がイテレーターから見えるかどうかを示していました。このようなノードはブラウザーでは作成されないので、この引数は何の効果もありませんでした。
+- `filter` {{optional_inline}}
+  - : コールバック関数または `acceptNode()` メソッドを持つオブジェクトです。この関数またはメソッドは、この関数またはメソッドは、サブツリー内の各ノードのうち whatToShow フラグで含まれると受け入れられたノードに対して呼び出され、反復可能オブジェクトのリストに記載するかどうかを決定します。このメソッドは `NodeFilter.FILTER_ACCEPT`、`NodeFilter.FILTER_REJECT`、`NodeFilter.FILTER_SKIP` のいずれかを返す必要があります。[例](#例)を参照してください。
+
+### 返値
+
+新しい [`NodeIterator`](/ja/docs/Web/API/NodeIterator) オブジェクトです。
 
 ## 例
 
@@ -48,10 +58,31 @@ const nodeIterator = document.createNodeIterator(root[, whatToShow[, filter]]);
 const nodeIterator = document.createNodeIterator(
   document.body,
   NodeFilter.SHOW_ELEMENT,
-  function (node) {
-    return node.nodeName.toLowerCase() === "p"
+  (node) =>
+    node.nodeName.toLowerCase() === "p"
       ? NodeFilter.FILTER_ACCEPT
-      : NodeFilter.FILTER_REJECT;
+      : NodeFilter.FILTER_REJECT,
+);
+const pars = [];
+let currentNode;
+
+while ((currentNode = nodeIterator.nextNode())) {
+  pars.push(currentNode);
+}
+```
+
+同じ動作ですが、`acceptNode()` メソッドを持つオブジェクトを使用しています。
+
+```js
+const nodeIterator = document.createNodeIterator(
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return node.nodeName.toLowerCase() === "p"
+        ? NodeFilter.FILTER_ACCEPT
+        : NodeFilter.FILTER_REJECT;
+    },
   },
 );
 const pars = [];

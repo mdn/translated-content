@@ -7,7 +7,7 @@ l10n:
 
 {{SVGRef}}{{deprecated_header}}
 
-**`<font-face-src>`** [SVG](/zh-CN/docs/Web/SVG) 元素对应于 CSS {{cssxref("@font-face/src", "src")}} 规则中的 {{cssxref("@font-face")}} 描述符。它是 {{SVGElement("font-face-name")}} 和 {{{SVGElement("font-face-uri")}} 的容器，前者指向本地安装的字体副本，后者则使用远程定义的字体。
+**`<font-face-src>`** [SVG](/zh-CN/docs/Web/SVG) 元素对应于 CSS {{cssxref("@font-face/src", "src")}} 规则中的 {{cssxref("@font-face")}} 描述符。它是 {{SVGElement("font-face-name")}} 和 {{SVGElement("font-face-uri")}} 的容器，前者指向本地安装的字体副本，后者则使用远程定义的字体。
 
 ## 使用上下文
 
