@@ -60,7 +60,7 @@ slug: MDN/Community/Open_source_etiquette
 
 프로젝트에서 어떤 것을 하고 싶은지 생각해 보세요. 예를 들어, 다양한 유형으로 나누어진 [기여자 할 일 보드](https://github.com/orgs/mdn/projects/25/views/1)에 많은 작업 목록이 있습니다.
 
-MDN의 글을 읽는 동안 발견한 문제를 수정하기 위해 [풀 리퀘스트](/en-US/docs/MDN/Community/Pull_requests)로 기여할 수도 있습니다.
+MDN의 글을 읽는 동안 발견한 문제를 수정하기 위해 [풀 리퀘스트](/ko/docs/MDN/Community/Pull_requests)로 기여할 수도 있습니다.
 
 MDN의 많은 작업은 문서 작성과 코드 예제를 중심으로 이루어지지만, 기여할 수 있는 다른 많은 방법들도 있습니다.
 
