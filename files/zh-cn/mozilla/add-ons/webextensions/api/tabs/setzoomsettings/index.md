@@ -13,7 +13,7 @@ l10n:
 
 ## 语法
 
-```js
+```js-nolint
 let settingZoomSettings = browser.tabs.setZoomSettings(
   tabId, // 可选的整型
   zoomSettings, // ZoomSettings
