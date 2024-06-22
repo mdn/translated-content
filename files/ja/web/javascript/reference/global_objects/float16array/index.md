@@ -1,52 +1,52 @@
 ---
 title: Float16Array
 slug: Web/JavaScript/Reference/Global_Objects/Float16Array
-page-type: javascript-class
-browser-compat: javascript.builtins.Float16Array
+l10n:
+  sourceCommit: dd339290fa3a42d9a7f079e17a62e1df1206f29d
 ---
 
 {{JSRef}}
 
-The **`Float16Array`** typed array represents an array of 16-bit floating point numbers in the platform byte order. If control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized to `0` unless initialization data is explicitly provided. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
+**`Float16Array`** 型配列は、プラットフォームのバイトオーダーで 16 ビット浮動小数点数の配列を表します。バイトオーダーの制御が必要な場合は、代わりに {{jsxref("DataView")}} を使用してください。初期化データが明示的に与えられない限り、内容は `0` に初期化されます。一旦初期化されると、オブジェクトのメソッドを使用するか、標準的な配列インデックスの構文（つまりブラケット記法）を使用して配列の要素を参照できます。
 
-`Float16Array` is a subclass of the hidden {{jsxref("TypedArray")}} class.
+`Float16Array` は隠された {{jsxref("TypedArray")}} クラスのサブクラスです。
 
-> **Note:** Float16 support is not universal, both in the JavaScript API and the underlying CPU architecture. Using it may result in slower performance on some platforms. It is intended for interacting with highly optimized and performance-sensitive systems such as [float-backed canvases](https://github.com/w3c/ColorWeb-CG/blob/main/canvas_float.md), WebGPU, WebGL, and deep learning models including [stable diffusion](https://github.com/huggingface/blog/blob/main/stable_diffusion.md).
+> **メモ:** Float16 のサポートは、JavaScript API と CPU アーキテクチャの両方において万能ではありません。これを使用すると、プラットフォームによってはパフォーマンスが低下する可能性があります。これは、[float-backed canvases](https://github.com/w3c/ColorWeb-CG/blob/main/canvas_float.md)、WebGPU、WebGL、[stable diffusion](https://github.com/huggingface/blog/blob/main/stable_diffusion.md) を含む深層学習モデルなど、高度に最適化されパフォーマンスに敏感なシステムとのやり取りを想定しています。
 
-## Constructor
+## コンストラクター
 
 - {{jsxref("Float16Array/Float16Array", "Float16Array()")}}
-  - : Creates a new `Float16Array` object.
+  - : 新しい `Float16Array` オブジェクトを作成します。
 
-## Static properties
+## 静的プロパティ
 
-_Also inherits static properties from its parent {{jsxref("TypedArray")}}_.
+以下に加えて、親である {{jsxref("TypedArray")}} から静的プロパティを継承します。
 
 - {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Float16Array.BYTES_PER_ELEMENT")}}
-  - : Returns a number value of the element size. `2` in the case of `Float16Array`.
+  - : 要素サイズを数値で返します。`Float16Array` の場合は `2` を返します。
 
-## Static methods
+## 静的メソッド
 
-_Inherits static methods from its parent {{jsxref("TypedArray")}}_.
+親である {{jsxref("TypedArray")}} から静的メソッドを継承します。
 
-## Instance properties
+## インスタンスプロパティ
 
-_Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
+以下に加えて、親である {{jsxref("TypedArray")}} からインスタンスプロパティを継承します。
 
-These properties are defined on `Float16Array.prototype` and shared by all `Float16Array` instances.
+これらのプロパティは `Float16Array.prototype` で定義され、すべての `Float16Array` インスタンスで共有されます。
 
 - {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Float16Array.prototype.BYTES_PER_ELEMENT")}}
-  - : Returns a number value of the element size. `2` in the case of a `Float16Array`.
+  - : 要素サイズを数値で返します。`Float16Array` の場合は `2` を返します。
 - {{jsxref("Object/constructor", "Float16Array.prototype.constructor")}}
-  - : The constructor function that created the instance object. For `Float16Array` instances, the initial value is the {{jsxref("Float16Array/Float16Array", "Float16Array")}} constructor.
+  - : インスタンスオブジェクトを生成したコンストラクター関数です。`Float16Array` インスタンスの場合、初期値は {{jsxref("Float16Array/Float16Array", "Float16Array")}} コンストラクターです。
 
-## Instance methods
+## インスタンスメソッド
 
-_Inherits instance methods from its parent {{jsxref("TypedArray")}}_.
+親である {{jsxref("TypedArray")}} からインスタンスメソッドを継承します。
 
-## Examples
+## 例
 
-### Different ways to create a Float16Array
+### Float16Array を作成する様々な方法
 
 ```js
 // From a length
@@ -78,17 +78,17 @@ console.log(float16FromIterable);
 // Float16Array [1, 2, 3]
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
