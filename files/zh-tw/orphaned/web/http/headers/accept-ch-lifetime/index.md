@@ -1,6 +1,7 @@
 ---
 title: Accept-CH-Lifetime
-slug: Web/HTTP/Headers/Accept-CH-Lifetime
+slug: orphaned/Web/HTTP/Headers/Accept-CH-Lifetime
+original_slug: Web/HTTP/Headers/Accept-CH-Lifetime
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---

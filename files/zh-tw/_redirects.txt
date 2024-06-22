@@ -488,6 +488,7 @@
 /zh-TW/docs/Web/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-TW/docs/Web/HTML/區塊級元素	/zh-TW/docs/Glossary/Block-level_content
 /zh-TW/docs/Web/HTTP/Access_control_CORS	/zh-TW/docs/Web/HTTP/CORS
+/zh-TW/docs/Web/HTTP/Headers/Accept-CH-Lifetime	/zh-TW/docs/orphaned/Web/HTTP/Headers/Accept-CH-Lifetime
 /zh-TW/docs/Web/HTTP/Link_prefetching_FAQ	/zh-TW/docs/Glossary/Prefetch
 /zh-TW/docs/Web/HTTP/Response_codes	/zh-TW/docs/Web/HTTP/Status
 /zh-TW/docs/Web/HTTP/Server-Side_Access_Control	/zh-TW/docs/Web/HTTP/CORS
