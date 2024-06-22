@@ -11,7 +11,7 @@ slug: MDN/Community/Contributing/Our_repositories
 
 ### 제 1 등급
 
-이 저장소의 코드는 MDN 웹 문서의 핵심이며 Mozilla 소유의 도메인에서 실행됩니다. 
+이 저장소의 코드는 MDN 웹 문서의 핵심이며 Mozilla 소유의 도메인에서 실행됩니다.
 
 - [mdn/content](https://github.com/mdn/content)
 - [Yari](https://github.com/mdn/yari)
