@@ -3714,7 +3714,7 @@
 /ja/docs/Web/CSS/Using_media_queries_from_code	/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /ja/docs/Web/CSS/Using_multi-column_layouts	/ja/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /ja/docs/Web/CSS/Using_multiple_backgrounds	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
-/ja/docs/Web/CSS/align-tracks	/ja/docs/conflicting/Web/CSS/CSS_grid_layout/Masonry_layout
+/ja/docs/Web/CSS/align-tracks	/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /ja/docs/Web/CSS/attr()	/ja/docs/Web/CSS/attr
 /ja/docs/Web/CSS/aural	/ja/docs/Web/CSS/@media/aural
 /ja/docs/Web/CSS/auto	/ja/docs/Web/CSS/width
@@ -3765,7 +3765,7 @@
 /ja/docs/Web/CSS/image/image()	/ja/docs/Web/CSS/image/image
 /ja/docs/Web/CSS/image/image-set()	/ja/docs/Web/CSS/image/image-set
 /ja/docs/Web/CSS/image/paint()	/ja/docs/Web/CSS/image/paint
-/ja/docs/Web/CSS/justify-tracks	/ja/docs/conflicting/Web/CSS/CSS_grid_layout/Masonry_layout_a8928831513575d277ecfe51dae84640
+/ja/docs/Web/CSS/justify-tracks	/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /ja/docs/Web/CSS/linear-gradient	/ja/docs/Web/CSS/gradient/linear-gradient
 /ja/docs/Web/CSS/linear-gradient()	/ja/docs/Web/CSS/gradient/linear-gradient
 /ja/docs/Web/CSS/margin-new	/ja/docs/Web/CSS/margin
@@ -4149,7 +4149,6 @@
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSPreflightDidNotSucceed	/ja/docs/Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSRequestNotHttp	/ja/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
 /ja/docs/Web/HTTP/HTTP_response_codes	/ja/docs/Web/HTTP/Status
-/ja/docs/Web/HTTP/Headers/Accept-CH-Lifetime	/ja/docs/orphaned/Web/HTTP/Headers/Accept-CH-Lifetime
 /ja/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for	/ja/docs/Web/HTTP/Headers/Content-Security-Policy
 /ja/docs/Web/HTTP/Headers/Feature-Policy	/ja/docs/Web/HTTP/Headers/Permissions-Policy
 /ja/docs/Web/HTTP/Headers/Feature-Policy/accelerometer	/ja/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer
