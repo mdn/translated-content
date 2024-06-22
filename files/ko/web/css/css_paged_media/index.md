@@ -33,3 +33,8 @@ l10n:
 ## 명세서
 
 {{Specifications}}
+
+## 같이 보기
+
+- [Printing](/ko/docs/Web/CSS/CSS_media_queries/Printing) 가이드
+- [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries) 모듈
