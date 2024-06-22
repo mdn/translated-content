@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-`bookmarks.getRecent()` 方法用 {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} 对象数组来检索指定数量的最近添加的书签。
+`bookmarks.getRecent()` 方法检索指定数量的最近添加的书签并返回一个 {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} 对象数组。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -22,11 +22,11 @@ let gettingRecent = browser.bookmarks.getRecent(
 ### 参数
 
 - `numberOfItems`
-  - : 一个表示要返回的最大项目数的数字。返回的列表将包含最多此数量的最近添加的项目。此处允许的最小值是 1。如果传递 0 或更少，函数将抛出错误。
+  - : 一个表示要返回的项目的上限的数字。返回的列表将最多包含此数量的最近添加的项目。此处允许的最小值是 1。如果传递 0 或更少，函数将抛出错误。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 BookmarkTreeNode 对象数组。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 [`BookmarkTreeNode`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) 对象数组。
 
 ## 示例
 
