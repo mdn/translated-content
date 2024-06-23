@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-**警告：** 此方法已被弃用。请使用 {{WebExtAPIRef("tabs.sendMessage()")}} 替代。
+> **警告：** 此方法已被弃用。请使用 {{WebExtAPIRef("tabs.sendMessage()")}} 替代。
 
 向指定标签页中的内容脚本发送单个请求，并可选择性地指定一个回调函数，用于在接收到响应时执行。当前扩展中运行的每个内容脚本都会触发 {{WebExtAPIRef('extension.onRequest')}} 事件。
 
@@ -31,7 +31,7 @@ let sending = browser.tabs.sendRequest(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，内容脚本中处理消息的处理程序发送 JSON 响应对象时其会兑现，如果内容脚本未发送响应，则返回空参数。如果连接到指定标签页时出现错误或其他任何错误，promise 将会被拒绝并返回错误信息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，内容脚本中处理消息的处理器发送 JSON 响应对象时其会兑现，如果内容脚本未发送响应，则不兑现任何内容。如果连接到指定标签页时出现错误或其他任何错误，promise 将以错误信息拒绝。
 
 ## 浏览器兼容性
 
