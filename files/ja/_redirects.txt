@@ -1557,7 +1557,7 @@
 /ja/docs/HTTP/X-Frame-Options	/ja/docs/Web/HTTP/Headers/X-Frame-Options
 /ja/docs/HTTP_Pipelining_FAQ	/ja/docs/Web/HTTP/Connection_management_in_HTTP_1.x
 /ja/docs/HTTP_access_control	/ja/docs/Web/HTTP/CORS
-/ja/docs/How_to_create_a_DOM_tree	/ja/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree
+/ja/docs/How_to_create_a_DOM_tree	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /ja/docs/IndexedDB	/ja/docs/Web/API/IndexedDB_API
 /ja/docs/Installing_Extensions_and_Themes_From_Web_Pages	/ja/docs/orphaned/Installing_Extensions_and_Themes_From_Web_Pages
 /ja/docs/Introducing_Content_Security_Policy	/ja/docs/Web/HTTP/CSP
@@ -2726,6 +2726,7 @@
 /ja/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/ja/docs/Web/API/Document/pointerLockElement
 /ja/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ja/docs/Web/API/Document/styleSheets
 /ja/docs/Web/API/Document_Object_Model/Events	/ja/docs/orphaned/Web/API/Document_Object_Model/Events
+/ja/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /ja/docs/Web/API/Element.contentEditable	/ja/docs/Web/API/HTMLElement/contentEditable
@@ -3713,6 +3714,7 @@
 /ja/docs/Web/CSS/Using_media_queries_from_code	/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /ja/docs/Web/CSS/Using_multi-column_layouts	/ja/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /ja/docs/Web/CSS/Using_multiple_backgrounds	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
+/ja/docs/Web/CSS/align-tracks	/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /ja/docs/Web/CSS/attr()	/ja/docs/Web/CSS/attr
 /ja/docs/Web/CSS/aural	/ja/docs/Web/CSS/@media/aural
 /ja/docs/Web/CSS/auto	/ja/docs/Web/CSS/width
@@ -3763,6 +3765,7 @@
 /ja/docs/Web/CSS/image/image()	/ja/docs/Web/CSS/image/image
 /ja/docs/Web/CSS/image/image-set()	/ja/docs/Web/CSS/image/image-set
 /ja/docs/Web/CSS/image/paint()	/ja/docs/Web/CSS/image/paint
+/ja/docs/Web/CSS/justify-tracks	/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /ja/docs/Web/CSS/linear-gradient	/ja/docs/Web/CSS/gradient/linear-gradient
 /ja/docs/Web/CSS/linear-gradient()	/ja/docs/Web/CSS/gradient/linear-gradient
 /ja/docs/Web/CSS/margin-new	/ja/docs/Web/CSS/margin
