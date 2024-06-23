@@ -1,5 +1,5 @@
 ---
-title: Kebab case
+title: 케밥 케이스(Kebab case)
 slug: Glossary/Kebab_case
 ---
 
