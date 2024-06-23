@@ -22,7 +22,7 @@ let gettingRecent = browser.bookmarks.getRecent(
 ### 参数
 
 - `numberOfItems`
-  - : 一个表示要返回的项目的上限的数字。返回的列表将最多包含此数量的最近添加的项目。此处允许的最小值是 1。如果传递 0 或更少，函数将抛出错误。
+  - : 一个表示要返回的项目的上限的数字。返回的列表将最多包含此数量的最近添加的项目。此处允许的最小值是 1。如果传递 0 或更小的值，函数将抛出错误。
 
 ### 返回值
 
@@ -40,7 +40,7 @@ function onFulfilled(bookmarks) {
 }
 
 function onRejected(error) {
-  console.log(`An error: ${error}`);
+  console.log(`错误：${error}`);
 }
 
 browser.bookmarks.getRecent(1).then(onFulfilled, onRejected);
