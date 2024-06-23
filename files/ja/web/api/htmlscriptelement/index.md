@@ -70,9 +70,9 @@ _独自のイベントはありません。親である {{domxref("HTMLElement")
 
 文書内の新しいスクリプトをインポートする関数を作成しましょう。次のコードをホストする {{HTMLElement("script")}} の直前に {{HTMLElement("script")}} ノードを作成します（{{domxref("document.currentScript")}} を使用）。これらのスクリプトは**非同期**で実行されます。詳細については、 [`defer`](#defer_property) および [`async`](#async_property) プロパティを参照してください。
 
-```js
+```js-nolint
 function loadError(oError) {
-  throw new URIError(`The script ${oError.target.src} didn't load correctly.`);
+  throw new URIError(`スクリプト ${oError.target.src} は正しく読み込まれませんでした。`);
 }
 
 function prefixScript(url, onloadFunction) {
@@ -91,7 +91,7 @@ function prefixScript(url, onloadFunction) {
 
 次の関数は、新しいスクリプトを {{domxref("document.currentScript")}} 要素の直前に追加するのではなく、 {{HTMLElement("head")}} タグの子として追加するものです。
 
-```js
+```js-nolint
 function loadError(oError) {
   throw new URIError(`スクリプト ${oError.target.src} は正しく読み込まれませんでした。`);
 }
