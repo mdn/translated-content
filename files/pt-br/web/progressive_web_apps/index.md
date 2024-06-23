@@ -117,5 +117,5 @@ As APIs a seguir podem ser usadas por um _service worker_ para se executar taref
 ## Veja também
 
 - [Progressive Web Apps](https://web.dev/explore/progressive-web-apps?hl=pt-br) em web.dev
-- [Aprenda sobre PWA <sup>(inglês)</sup>](https://web.dev/learn/pwa/) em web.dev
+- [Aprenda sobre PWA<sup>(inglês)</sup>](https://web.dev/learn/pwa/) em web.dev
 - [Progressive Web Apps](https://learn.microsoft.com/pt-br/microsoft-edge/progressive-web-apps-chromium/) em learn.microsoft.com (2023)
