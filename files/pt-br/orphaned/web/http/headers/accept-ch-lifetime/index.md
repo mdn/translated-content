@@ -1,6 +1,7 @@
 ---
 title: Accept-CH-Lifetime
-slug: Web/HTTP/Headers/Accept-CH-Lifetime
+slug: orphaned/Web/HTTP/Headers/Accept-CH-Lifetime
+original_slug: Web/HTTP/Headers/Accept-CH-Lifetime
 ---
 
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
