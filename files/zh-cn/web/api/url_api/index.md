@@ -7,9 +7,9 @@ l10n:
 
 {{DefaultAPISidebar("URL API")}} {{AvailableInWorkers}}
 
-URL API 是 URL 标准的一个组件，定义了有效的 {{Glossary("URL")}} 和访问、操作 URL 的 API。URL 标准还定义了像域名、主机和 IP 地址等概念，并尝试以标准的方式去描述用于以键/值对的形式提交 Web 表单内容的遗留 `application/x-www-form-urlencoded` {{Glossary("MIME type", "MIME 类型")}} 。
+URL API 是 URL 标准的一个组件，定义了有效 {{Glossary("URL")}} 的构成，以及访问和操作 URL 的 API。URL 标准还定义了像域名、主机和 IP 地址等概念，并尝试以标准的方式去描述用于以键/值对的形式提交 Web 表单内容的遗留 `application/x-www-form-urlencoded` {{Glossary("MIME type", "MIME 类型")}} 。
 
-## URL 的概念和用法
+## 概念和用法
 
 URL 标准的主要内容是由 [URL 的定义](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)及其结构和解析方式决定的。还介绍了与网络上计算机寻址有关的各种术语的定义，并指定了解析 IP 地址和 DOM 地址的算法。大多数开发者更感兴趣于 API 本身。
 
@@ -39,10 +39,10 @@ addr.username = myUsername;
 
 ### 查询
 
-{{domxref("URL.search", "search")}} 属性在 URL 上包含 URL 的查询字符串部分。例如，如果 URL 是 `https://mysite.com/login?user=someguy&page=news`，那么 `search` 属性的值是 `?user=someguy&page=news`。你还可以使用 {{domxref("URLSearchParams")}} 对象的 {{domxref("URLSearchParams.get", "get()")}} 查找单个参数的值：
+`URL` 的 {{domxref("URL.search", "search")}} 属性包含 URL 的查询字符串部分。例如，如果 URL 是 `https://example.com/login?user=someguy&page=news`，那么 `search` 属性的值是 `?user=someguy&page=news`。你还可以使用 {{domxref("URLSearchParams")}} 对象的 {{domxref("URLSearchParams.get", "get()")}} 查找单个参数的值：
 
 ```
-let addr = new URL("https://mysite.com/login?user=someguy&page=news");
+let addr = new URL("https://example.com/login?user=someguy&page=news");
 try {
   loginUser(addr.searchParams.get("user"));
   gotoPage(addr.searchParams.get("page"));
@@ -55,7 +55,7 @@ try {
 
 `URLSearchParams` 中的其他函数允许修改、添加和删除键和值，甚至对参数列表进行排序。
 
-## URL API 接口
+## 接口
 
 URL API 是一个简单的 API，它的名字只有几个接口：
 
@@ -66,7 +66,7 @@ URL API 是一个简单的 API，它的名字只有几个接口：
 
 ## 示例
 
-如果希望处理 URL 中包含的参数，可以手动进行处理，但是创建一个 URL 对象更容易。下面的 `fillTableWithParameters()` 函数接受一个表示 {{HTMLElement("table")}} 的 {{domxref("HTMLTableElement")}} 对象作为输入。将行添加到表中，每个行对应参数中找到的键，第一列包含键，第二列包含值。
+如果希望处理 URL 中包含的参数，可以手动进行处理，但是创建一个 `URL` 对象更容易。下面的 `fillTableWithParameters()` 函数接受一个表示 {{HTMLElement("table")}} 的 {{domxref("HTMLTableElement")}} 对象作为输入。将行添加到表中，一行对应参数中找到的一个键，第一列包含键，第二列包含值。
 
 注意，在生成表之前调用 {{domxref("URLSearchParams.sort()")}} 对参数列表进行排序。
 
