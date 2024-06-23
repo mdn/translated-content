@@ -36,15 +36,15 @@ const sending = browser.tabs.sendMessage(
   - : `object`。
 
     - `frameId` {{optional_inline}}
-      - : `integer`。将消息发送到指定的帧（frame），而不是标签页中的所有帧。内容脚本是否在所有帧中执行取决于 `manifest.json` 的 [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 部分中的 `all_frames` 设置。
+      - : `integer`。将消息发送到指定的框架（frame），而不是标签页中的所有框架。内容脚本是否在所有框架中执行取决于 `manifest.json` 的 [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 部分中的 `all_frames` 设置。
 
 ### 返回值
 
 一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，如果内容脚本未发送响应其会被兑现且不带有参数。
 
-如果在连接到指定标签页时或发生任何其他错误时出现错误，promise 将会被拒绝并返回错误信息。
+如果在连接到指定标签页时或发生任何其他错误时出现错误，promise 将以错误信息拒绝。
 
-如果多个帧响应了消息，promise 会兑现为其中一个响应。
+如果多个框架响应了消息，promise 会兑现为其中一个响应。
 
 ## 示例
 
