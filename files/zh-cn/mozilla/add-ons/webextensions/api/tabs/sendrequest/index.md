@@ -31,7 +31,7 @@ let sending = browser.tabs.sendRequest(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，内容脚本中的消息句柄发送响应对象时其会兑现，如果内容脚本未发送响应，则不兑现任何内容。如果连接到指定标签页时出现错误或其他任何错误，promise 将以错误信息拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，内容脚本中消息的处理器发送响应对象时其会兑现，如果内容脚本未发送响应，则不兑现任何内容。如果连接到指定标签页时出现错误或其他任何错误，promise 将以错误信息拒绝。
 
 ## 浏览器兼容性
 
