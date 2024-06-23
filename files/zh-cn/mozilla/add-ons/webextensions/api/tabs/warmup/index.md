@@ -36,7 +36,7 @@ let warming = browser.tabs.warmup(
 
 ## 示例
 
-这段代码添加了一个监听器到 `browserAction.onClicked` 事件。监听器在当前窗口中检索所有包含 "https\://developer.mozilla.org/" 页面的标签页，并预热第一个找到的标签页。
+这段代码添加了一个监听器到 `browserAction.onClicked` 事件。监听器在当前窗口中检索所有包含 `https://developer.mozilla.org/` 页面的标签页，并预热第一个找到的标签页。
 
 ```js
 function onSuccess() {
