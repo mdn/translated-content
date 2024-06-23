@@ -37,7 +37,7 @@ browser.tabs.onZoomChange.hasListener(listener)
     - `ZoomChangeInfo`
       - : `object`。关于缩放事件的信息。详见 [ZoomChangeInfo](#zoomchangeinfo_2) 部分。
 
-## 其他对象
+## 附加对象
 
 ### ZoomChangeInfo
 
