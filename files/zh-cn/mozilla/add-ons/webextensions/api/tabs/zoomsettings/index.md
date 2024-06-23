@@ -11,14 +11,14 @@ l10n:
 
 ## 类型
 
-该类型的值是对象。它们包含以下属性：
+该类型的值是对象，包含以下属性：
 
 - `defaultZoomFactor` {{optional_inline}}
   - : `number`。当前标签页的默认缩放级别。请注意，这仅在 {{WebExtAPIRef("tabs.getZoomSettings")}} 中使用。
 - `mode` {{optional_inline}}
-  - : {{WebExtAPIRef('tabs.ZoomSettingsMode')}}。定义缩放更改是由浏览器或拓展处理，还是禁用缩放。
+  - : {{WebExtAPIRef('tabs.ZoomSettingsMode')}}。定义缩放更改是由浏览器或扩展处理，还是禁用缩放。
 - `scope` {{optional_inline}}
-  - : {{WebExtAPIRef('tabs.ZoomSettingsScope')}}。定义缩放更改是会在页面的源头中持久化，还是只在此标签页中生效。
+  - : {{WebExtAPIRef('tabs.ZoomSettingsScope')}}。定义缩放更改是对页面的来源持久化，还是只在此标签页中生效。
 
 ## 浏览器兼容性
 
