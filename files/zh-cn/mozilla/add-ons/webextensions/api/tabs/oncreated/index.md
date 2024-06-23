@@ -19,7 +19,7 @@ browser.tabs.onCreated.removeListener(listener)
 browser.tabs.onCreated.hasListener(listener)
 ```
 
-事件具有三个功能：
+事件具有三个函数：
 
 - `addListener(listener)`
   - : 向此事件添加一个监听器。
