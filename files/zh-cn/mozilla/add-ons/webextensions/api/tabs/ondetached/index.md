@@ -54,7 +54,7 @@ browser.tabs.onDetached.hasListener(listener)
 
 ```js
 function handleDetached(tabId, detachInfo) {
-  console.log(`标签页：${tabId} moved`);
+  console.log(`标签页：${tabId} 已移动`);
   console.log(`旧窗口：${detachInfo.oldWindowId}`);
   console.log(`旧索引：${detachInfo.oldPosition}`);
 }
