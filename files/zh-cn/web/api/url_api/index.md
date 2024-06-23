@@ -15,7 +15,7 @@ URL 标准的主要内容是由 [URL 的定义](/zh-CN/docs/Learn/Common_questio
 
 ### 使用 URL 组件
 
-给指定的 URL 创建一个 {{domxref("URL")}} 对象将解析 URL 并通过其属性对其组成部分的快速访问。
+给指定的 URL 创建一个 {{domxref("URL")}} 对象将解析该 URL，并通过其属性提供对其组成部分的快速访问。
 
 ```js
 let addr = new URL("https://developer.mozilla.org/zh-CN/docs/Web/API/URL_API");
@@ -23,7 +23,7 @@ let host = addr.host;
 let path = addr.pathname;
 ```
 
-上面的代码片段为你正在阅读的文章创建一个 `URL` 对象，然后获取 {{domxref("URL.host", "host")}} 和 {{domxref("URL.pathname", "pathname")}} 属性。在本例中，这些字符串的值分别是 `developer.mozilla.org` 和 `/zh-CN/docs/Web/API/URL_API`。
+上面的代码片段为你正在阅读的这篇文章创建一个 `URL` 对象，然后获取 {{domxref("URL.host", "host")}} 和 {{domxref("URL.pathname", "pathname")}} 属性。在本例中，这些字符串的值分别是 `developer.mozilla.org` 和 `/zh-CN/docs/Web/API/URL_API`。
 
 ### 修改 URL
 
@@ -31,11 +31,11 @@ let path = addr.pathname;
 
 ```js
 let myUsername = "someguy";
-let addr = new URL("https://mysite.com/login");
+let addr = new URL("https://example.com/login");
 addr.username = myUsername;
 ```
 
-设置 {{domxref("URL.username", "username")}} 值不仅是设置该属性的值，而且更新整个 URL。执行上面的代码片段后， {{domxref("URL.href", "addr.href")}} 的返回值是`https://someguy@mysite.com/login`。对于任何可写属性都是如此。
+对 {{domxref("URL.username", "username")}} 的值的修改除了对属性值的变更，还更新整个 URL。执行上面的代码片段后，{{domxref("URL.href", "addr.href")}} 的返回值是`https://someguy@example.com/login`。这一点对于任何可修改属性都是如此。
 
 ### 查询
 
