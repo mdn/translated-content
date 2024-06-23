@@ -19,15 +19,15 @@ CSS 中，考虑给一个列表设置样式，`li` 元素代表不同类型的�
 
 ## HTML 中的语义
 
-HTML 中，例如，{{htmlelement("h1")}} 元素是一个语义化元素，赋予了它包裹着的文本“这个页面中最高级别标题功能“的角色 (或含义) 。
+HTML 中，例如，{{htmlelement("h1")}} 元素是一个语义化元素，赋予了它包裹着的文本“这个页面中最高级别标题”的角色（或含义） 。
 
 ```html
 <h1>这是顶级标题</h1>
 ```
 
-默认情况下，绝大多数浏览器的[用户代理样式表](/zh-CN/docs/Web/CSS/Cascade#User-agent_stylesheets)会赋予一个 {{htmlelement("h1")}} 元素很大的字号尺寸从而让它看上去更像是一个标题（虽然你可以把它格式化为任何你想要的样式），但是更重要的是它的语义会被在很多地方以不同的方式被使用到，例如搜索引擎会把它包含的内容作为一个重要的关键词，从而影响这个页面在搜索结果中的排序（参见{{glossary("SEO")}}），而且屏幕阅读器会使用它来帮助视障用户更好的使用这个页面。
+默认情况下，绝大多数浏览器的[用户代理样式表](/zh-CN/docs/Web/CSS/Cascade#用户代理样式表)会赋予 {{htmlelement("h1")}} 元素很大的字号尺寸从而让它看上去更像是一个标题（虽然你可以把它格式化为任何你想要的样式）。
 
-另一方面，你可以通过样式（CSS）来让任何的元素*看上去*像是一个最高级别的标题，就像下面所展示的方法一样：
+另一方面，你可以让任何的元素*看上去*像是最高级别的标题，就像下面所展示的一样：
 
 ```html
 <span style="font-size: 32px; margin: 21px 0;">这不是一个顶级标题！</span>
@@ -49,7 +49,7 @@ HTML 应该编写为表示将要填充的*数据*，而不是基于其默认的�
 
 ## 语义化元素
 
-这里是大约 100 个语义化[元素](/zh-CN/docs/Web/HTML/Element) 中的一些：
+这里是大约 100 个语义化[元素](/zh-CN/docs/Web/HTML/Element)中的一些：
 
 - {{htmlelement("article")}}
 - {{htmlelement("aside")}}
@@ -68,7 +68,7 @@ HTML 应该编写为表示将要填充的*数据*，而不是基于其默认的�
 ## 参见
 
 - MDN 上的 [HTML 元素参考](/zh-CN/docs/Web/HTML/Element#inline_text_semantics)
-- MDN 上的[使用 HTML section 和 outline](/zh-CN/docs/Web/HTML/Element/Heading_Elements#使用要点)
+- MDN 上的[使用 HTML 章节和大纲](/zh-CN/docs/Web/HTML/Element/Heading_Elements#使用要点)
 - 维基百科上的[计算机科学中语义的意义](https://en.wikipedia.org/wiki/Semantics#Computer_science)
 - [术语](/zh-CN/docs/Glossary)
 
