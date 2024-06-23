@@ -25,7 +25,7 @@ l10n:
 
 - [RFC 9110，3.2 节：表示](https://httpwg.org/specs/rfc9110.html#representations)
 - [所有 HTTP 标头列表](/zh-CN/docs/Web/HTTP/Headers)
-- {{Glossary("Payload header", "有效负荷标头")}}
+- {{Glossary("Payload header", "有效负载标头")}}
 - {{glossary("Entity header", "实体标头")}}
 - {{HTTPHeader("Repr-Digest")}}、{{HTTPHeader("Want-Repr-Digest")}}
 - {{HTTPHeader("Content-Digest")}}、{{HTTPHeader("Want-Content-Digest")}}
