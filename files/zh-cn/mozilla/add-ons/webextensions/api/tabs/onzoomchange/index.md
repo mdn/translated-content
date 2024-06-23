@@ -57,8 +57,8 @@ browser.tabs.onZoomChange.hasListener(listener)
 ```js
 function handleZoomed(zoomChangeInfo) {
   console.log(`标签：${zoomChangeInfo.tabId} 被缩放`);
-  console.log(`旧缩放比例：${zoomChangeInfo.oldZoomFactor}`);
-  console.log(`新缩放比例：${zoomChangeInfo.newZoomFactor}`);
+  console.log(`旧缩放因子：${zoomChangeInfo.oldZoomFactor}`);
+  console.log(`新缩放因子：${zoomChangeInfo.newZoomFactor}`);
 }
 
 browser.tabs.onZoomChange.addListener(handleZoomed);
