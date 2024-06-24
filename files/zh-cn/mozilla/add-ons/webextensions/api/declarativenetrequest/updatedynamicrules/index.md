@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-修改扩展的动态规则集。首先删除在 `options.removeRuleIds` 中列出的规则，然后添加 `options.addRules` 中给出的规则。请注意：
+修改扩展的一组动态规则。首先删除在 `options.removeRuleIds` 中列出的规则，然后添加 `options.addRules` 中给出的规则。请注意：
 
 - 此更新作为原子操作进行：要么所有指定的规则都添加和删除，要么返回错误。
 - 这些规则会跨浏览器会话和扩展更新进行持久化。
