@@ -41,7 +41,7 @@ browser.tabs.onSelectionChanged.hasListener(listener)
     - `selectInfo`
       - : `object`。详见 [selectInfo](#selectinfo_2) 部分。
 
-## 其他对象
+## 附加对象
 
 ### selectInfo
 
