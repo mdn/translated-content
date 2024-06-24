@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("File and Directory Entries API")}}
 
-[文件与目录条目 API](/en-US/docs/Web/API/File_and_Directory_Entries_API) 的 `FileSystemDirectoryReader` 接口允许你访问代表目录每个条目的 {{domxref("FileSystemFileEntry")}} 对象（通常是 {{domxref("FileSystemFileEntry")}} 或 {{domxref("FileSystemDirectoryEntry")}}）。
+[文件与目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API) 的 `FileSystemDirectoryReader` 接口允许你访问代表目录每个条目的 {{domxref("FileSystemFileEntry")}} 对象（通常是 {{domxref("FileSystemFileEntry")}} 或 {{domxref("FileSystemDirectoryEntry")}}）。
 
 ## 实例方法
 
