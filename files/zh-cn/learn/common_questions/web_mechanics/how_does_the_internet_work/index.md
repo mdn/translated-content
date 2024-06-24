@@ -84,7 +84,7 @@ l10n:
 
 ### 互联网和 Web
 
-你可能注意到了，当我们通过浏览器上网的时候，我们通常是用域名去到达一个网站。这是否意味着互联网（Internet）和网络（Web）是一样的？事实并非这么简单。正如向我们所见，互联网是一种基础的技术，它允许我们把成千上万的电脑连接在一起。在这些电脑中，有 一些电脑（我们称之为网络服务器（_Web servers_））可以发送一些浏览器可以理解的信息。互联网是基础设施，网络是建立在这种基础设施之上的服务。值得注意的是，一些其他服务运行在互联网之上，比如邮箱和{{Glossary("IRC")}}.
+你可能注意到了，当我们通过浏览器上网的时候，我们通常是用域名去到达一个网站。这是否意味着互联网和 Web 是一样的？事实并非这么简单。正如向我们所见，互联网是一种基础的技术，它允许我们把成千上万的电脑连接在一起。在这些电脑中，有一些电脑（我们称之为网络服务器（_Web servers_））可以发送一些浏览器可以理解的信息。互联网是基础设施，网络是建立在这种基础设施之上的服务。值得注意的是，一些其他服务运行在互联网之上，比如邮箱和{{Glossary("IRC")}}。
 
 ### 内联网和外联网
 
@@ -99,5 +99,5 @@ l10n:
 ## 下一步
 
 - [网络怎样工作](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
-- [理解网页，网站，网络服务器和搜索引擎之间的不同](/zh-CN/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines)
+- [理解网页、网站、网络服务器和搜索引擎之间的不同](/zh-CN/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines)
 - [理解域名](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
