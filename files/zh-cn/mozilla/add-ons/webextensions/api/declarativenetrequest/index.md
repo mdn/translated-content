@@ -235,7 +235,7 @@ l10n:
 
 {{WebExtExamples("h2")}}
 
-浏览器兼容性
+## 浏览器兼容性
 
 {{Compat}}
 
