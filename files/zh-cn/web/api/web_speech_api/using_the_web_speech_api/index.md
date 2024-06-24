@@ -204,10 +204,6 @@ Web Speech API 对此有一个主要控制接口——[`SpeechSynthesis`](/zh-CN
 
 想跑这个例子，你可以 git clone Github 仓库中的部分 (或者[直接下载](https://github.com/mdn/dom-examples/archive/refs/heads/main.zip))，在桌面版支持的浏览器打开 index.html 文件，或者在移动端浏览器直接导向 [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/) ，像 Chrome 和 Firefox OS。
 
-### 浏览器兼容性
-
-[api.SpeechSynthesis](/zh-CN/docs/Web/API/Web_Speech_API#api.speechsynthesis)
-
 ### HTML 和 CSS
 
 HTML 和 CSS 还是无足轻重，只是简单包含一个标题，一段介绍文字，以及一个表格带有一些简单控制功能。{{htmlelement("select")}} 元素初始是空的，之后会通过 JavaScript 使用 {{htmlelement("option")}} 填充。
