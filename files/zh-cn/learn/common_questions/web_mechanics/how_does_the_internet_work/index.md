@@ -15,7 +15,6 @@ l10n:
       <th scope="row">前提：</th>
       <td>
         无，但是鼓励先去阅读<a href="/zh-CN/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding">关于设定项目目标的文章</a>
-        首先
       </td>
     </tr>
     <tr>
@@ -27,7 +26,7 @@ l10n:
 
 ## 概述
 
-**互联网**是网络的支柱，以这种技术为基础使网络成为可能。作为基础，互联网是把电脑互相连接起来的一个巨大网络。
+**互联网**是 Web 的支柱，以这种技术为基础使 Web 成为可能。作为基础，互联网是把电脑互相连接起来的一个巨大网络。
 
 [互联网的历史有些模糊不清](https://zh.wikipedia.org/wiki/互联网#历史)。它始于 1960 年美国军方资助的研究项目。1980 年在许多公共大学和公司的支持下，它演变为一种公共基础设施。随着时间的变化，各种各样的技术支持着互联网的发展，但是它的工作方式却没有改变多少：互联网确保所有的电脑之间的连接，无论发生什么他们依旧保持连接。
 
@@ -84,7 +83,7 @@ l10n:
 
 ### 互联网和 Web
 
-你可能注意到了，当我们通过浏览器上网的时候，我们通常是用域名去到达一个网站。这是否意味着互联网和 Web 是一样的？事实并非这么简单。正如向我们所见，互联网是一种基础的技术，它允许我们把成千上万的电脑连接在一起。在这些电脑中，有一些电脑（我们称之为网络服务器（_Web servers_））可以发送一些浏览器可以理解的信息。互联网是基础设施，网络是建立在这种基础设施之上的服务。值得注意的是，一些其他服务运行在互联网之上，比如邮箱和{{Glossary("IRC")}}。
+你可能注意到了，当我们通过浏览器上网的时候，我们通常是用域名去到达一个网站。这是否意味着互联网和 Web 是一样的？事实并非这么简单。正如向我们所见，互联网是一种基础的技术，它允许我们把成千上万的电脑连接在一起。在这些电脑中，有一些电脑（我们称之为 _Web 服务器_）可以发送一些浏览器可以理解的信息。*互联网*是基础设施，_Web_ 是建立在这种基础设施之上的服务。值得注意的是，一些其他服务也同样运行在互联网之上，比如邮箱和 {{Glossary("IRC")}}。
 
 ### 内联网和外联网
 
@@ -98,6 +97,6 @@ l10n:
 
 ## 下一步
 
-- [网络怎样工作](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
+- [Web 是如何工作的](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
 - [理解网页、网站、网络服务器和搜索引擎之间的不同](/zh-CN/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines)
 - [理解域名](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
