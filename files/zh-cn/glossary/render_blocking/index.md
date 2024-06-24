@@ -2,7 +2,7 @@
 title: 阻塞渲染
 slug: Glossary/Render_blocking
 l10n:
-  sourceCommit: 245307fe1bbb5a62c7e895fae62e0152f200b37b
+  sourceCommit: 6b56cb7daf7092f325f98dc9f53b3d80c700adb6
 ---
 
 {{GlossarySidebar}}
@@ -15,4 +15,3 @@ l10n:
 
 - [CSS 性能优化](/zh-CN/docs/Learn/Performance/CSS)
 - [JavaScript 性能优化](/zh-CN/docs/Learn/Performance/JavaScript)
-- Speckyboy 上的[什么是阻塞渲染的资源以及如何解决阻塞渲染问题](https://speckyboy.com/render-blocking/)（2018）
