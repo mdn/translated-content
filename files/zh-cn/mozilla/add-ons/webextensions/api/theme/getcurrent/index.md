@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-获取当前主题作为 {{WebExtAPIRef("theme.Theme", "Theme")}} 对象。
+获取表示当前主题的 {{WebExtAPIRef("theme.Theme", "Theme")}} 对象。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -22,7 +22,7 @@ let getting = browser.theme.getCurrent(
 ### 参数
 
 - `windowId` {{optional_inline}}
-  - : `integer`。窗口的 ID。如果提供了这个参数，解析的主题是应用到该窗口的主题。如果省略这个参数，解析的主题是应用到最近一个被聚焦的窗口的主题。
+  - : `integer`。窗口的 ID。如果提供了这个参数，兑现的主题是应用到该窗口的主题。如果省略这个参数，兑现的主题是应用到最近一个被聚焦的窗口的主题。
 
 ### 返回值
 
