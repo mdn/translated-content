@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-更新给定 cookie 存储 ID 的上下文身份的属性。
+更新给定 cookie 存储 ID 的场景身份的属性。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -23,7 +23,7 @@ let createContext = browser.contextualIdentities.update(
 ### 参数
 
 - `cookieStoreId`
-  - : `string`。上下文身份的 cookie 存储的 ID。由于每个上下文身份都有自己的 cookie 存储，因此这也作为上下文身份的标识符。
+  - : `string`。场景身份的 cookie 存储的 ID。由于每个场景身份都有自己的 cookie 存储，因此这也作为场景身份的标识符。
 - `details`
 
   - : `object`。包含要更改的属性的新值的对象。可以包含以下任意属性：
