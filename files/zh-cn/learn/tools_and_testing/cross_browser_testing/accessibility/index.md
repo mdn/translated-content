@@ -14,11 +14,11 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        熟悉<a href="/zh-CN/docs/Learn/HTML">HTML</a>，<a
-        href="/zh-CN/docs/Learn/CSS">CSS</a>，和<a
+        熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
+        href="/zh-CN/docs/Learn/CSS">CSS</a> 和<a
           href="/zh-CN/docs/Learn/JavaScript"
           >JavaScript</a
-        >语言；理解<a
+        > 语言；理解<a
           href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
           >跨浏览器测试原理</a
         >
@@ -42,11 +42,11 @@ l10n:
 然而，认为无障碍设计仅与残障人士相关是不准确的。无障碍设计的真正目的是确保你的网站/应用程序能够被尽可能多的人在尽可能多的环境下使用，而不限于那些使用高性能台式电脑的用户。一些具体的例子可能包括：
 
 - 移动端用户
-- 使用其他浏览设备（例如电视，手表等）的用户
-- 使用较旧设备的用户（他们可能没有最新的浏览器）
-- 设备性能不高的用户（他们可能处理器较慢）
+- 使用其他浏览设备（例如电视、手表等）的用户
+- 使用较旧设备（可能没有最新的浏览器）的用户
+- 设备性能不高（可能具有较慢的处理器）的用户
 
-在某种程度上，本模块都是关于无障碍的——跨浏览器测试可确保你的网站可以被尽可能多的人使用。这篇[无障碍是什么？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility) 更全面透彻地定义了什么是无障碍。
+在某种程度上，本模块都是关于无障碍的——跨浏览器测试可确保你的网站可以被尽可能多的人使用。这篇[无障碍是什么？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)更全面透彻地定义了什么是无障碍。
 
 也就是说，本文将涵盖跨浏览器和有关残疾人的测试问题以及他们如何使用 Web。我们在本模块的其他地方已经讨论过别的领域，例如[响应式设计问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#响应式设计问题)和[性能](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#性能问题)。
 
@@ -102,23 +102,23 @@ HTML 语义化的关键在于使用标题和段落结构来组织你的内容；
 作为测试，你可以关闭网站的 CSS，然后看看没有了 CSS 网站是否能被理解。你可以通过从代码中删除 CSS 来手动完成此操作，但是最简单的方法是使用浏览器特性，例如：
 
 - Firefox：选择*查看 > 页面样式 > 无样式*
-- Safari：选择*开发 > 停用样式*（需要开启“开发”菜单，点击*Safari > 偏好设置 > 高级 > 在菜单栏中显示“开发”菜单*）
-- Chrome：安装 Web Developer Toolbar 扩展程序，然后重启浏览器。点击图标，选择*CSS > 停用所有样式*
+- Safari：选择*开发 > 停用样式*（需要开启“开发”菜单，点击 _Safari > 偏好设置 > 高级 > 在菜单栏中显示“开发”菜单_）
+- Chrome：安装 Web Developer Toolbar 扩展程序，然后重启浏览器。点击图标，选择 _CSS > 停用所有样式_
 - Edge：选择*查看 > 样式 > 无样式*
 
 #### 使用键盘原生无障碍性
 
-某些 HTML 特性可以只使用键盘来选择——这是默认的，从早期 web 开始就是这样的。具有此功能的元素是允许用户与网页交互的常见元素，比如 links，{{htmlelement("button")}}s，以及表单元素，比如 {{htmlelement("input")}}。
+某些 HTML 特性可以只使用键盘来选择——这是默认的，从早期 web 开始就是这样的。具有此功能的元素是允许用户与网页交互的常见元素，比如链接、{{htmlelement("button", "按钮")}}，以及表单元素，比如 {{htmlelement("input")}}。
 
 浏览 [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)（查看[源码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)）尝试一下——在新标签页中打开它，然后尝试按 Tab 键；按下几下后，你应该看到标签焦点开始在不同的可聚焦元素之间移动；在每个浏览器中，被聚焦的元素都被赋予突出的默认样式 (不同的浏览器表现略有不同) 以便你能分辨聚焦在哪个元素上。
 
 ![三个按钮的截图，展示了交互式原生元素的默认行为示例。第三个按钮用蓝色边框突出显示，表示其聚焦状态。](button-focused-unfocused.png)
 
-> **备注：** 在 Firefox 中，你还可以启用一个叠加层，显示页面的标签顺序。有关更多信息，请参见：[Accessibility Inspector > Show web page tabbing order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order)。
+> **备注：** 在 Firefox 中，你还可以启用一个叠加层来显示页面的标签顺序。有关更多信息，请参见：[Accessibility Inspector > Show web page tabbing order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order)。
 
 然后你可以按 Enter/Return 键来跟随聚焦的链接或按下按钮（我们已经包含了一些 JavaScript 来使按钮显示一条消息），或开始输入以在文本输入框中输入文本（其他表单元素有不同的控制方式，例如 {{htmlelement("select")}} 元素可以使用向上和向下箭头键显示和循环其选项）。
 
-请注意，不同的浏览器可能有不同的键盘控制选项可用。大多数现代浏览器都遵循上述选项卡模式（你也可以使用 Shift + Tab 向后移动浏览可聚焦元素），但一些浏览器有自己的特点：
+请注意，不同的浏览器可能有不同的键盘控制选项可用。大多数现代浏览器都遵循上述 tab 模式（你也可以使用 Shift + Tab 向后移动浏览可聚焦元素），但一些浏览器有自己的特点：
 
 - Mac 版 Firefox 默认不支持 Tab 键浏览。要启用它，你必须转到*首选项 > 高级 > 常规*，然后取消勾选“始终使用光标键导航页面”。接下来，你必须打开 Mac 的系统偏好设置应用程序，然后转到*键盘 > 快捷键*，然后选择*所有控件*单选按钮。
 - Safari 默认不允许你通过 Tab 键浏览链接；要启用此特性，你需要打开 Safari 的*偏好设置*，转到“高级”选项卡，然后勾选“按 Tab 键高亮显示网页上的每个项目”复选框。
@@ -142,7 +142,7 @@ select:focus {
 }
 ```
 
-> **备注：** 如果你决定使用 CSS 移除默认焦点样式，请确保用其他更适合你的设计的东西替换它——这是一个非常有价值的无障碍性工具，不应该被删除。
+> **备注：** 如果你决定使用 CSS 移除默认焦点样式，请确保用其他更适合你的设计的东西替换它——这是一个非常有价值的无障碍工具，不应该被删除。
 
 #### 构建键盘无障碍性
 
@@ -163,7 +163,7 @@ select:focus {
 
    这里我们给 `document` 对象添加了一个监听器，用于检测何时在键盘上按下按钮。我们通过事件对象的 [`code`](/zh-CN/docs/Web/API/KeyboardEvent/code) 属性检查按下了哪个按钮；如果它是与 Return/Enter 匹配的键码，我们将使用 `document.activeElement.onclick()` 运行存储在按钮的 `onclick` 处理程序中的函数。[`activeElement`](/zh-CN/docs/Web/API/Document/activeElement) 为我们提供了当前页面上获得焦点的元素。
 
-> **备注：** 此技术只有在你通过事件处理程序属性（例如 `onclick`）设置原始事件处理程序的情况下才有效。`addEventListener` 不会起作用。这会给构建功能带来许多额外的困难，并且很可能会引入其他问题。最好的办法是为每个任务使用正确的元素。
+> **备注：** 此技术只有在你通过事件处理器属性（例如 `onclick`）设置原始事件处理器的情况下才有效。`addEventListener` 不会起作用。这会给构建功能带来许多额外的困难，并且很可能会引入其他问题。最好的办法是为每个任务使用正确的元素。
 
 #### 替代文本
 
@@ -179,7 +179,7 @@ select:focus {
 
 在 HTML 中，一些特性和最佳实践被设计来为元素间提供上下文和关系，即便这些元素本身并不具有这些关系。链接、表单标签和数据表格是三个常见的例子。
 
-无障碍链接文本的关键是，使用屏幕阅读器的人通常会调用一个功能，显示页面上所有链接的列表。在这种情况下，链接文本需要在上下文中和上下文之外都具有意义。例如，标记为“点击这里”或“点击我”的链接序列是不合适的。最佳做法是让链接文本在任何上下文中都有意义。
+无障碍链接文本的关键是，使用屏幕阅读器的人通常会调用一个特性——显示页面上所有链接的列表。在这种情况下，链接文本需要在上下文中和上下文之外都具有意义。例如，标记为“点击这里”或“点击我”的链接序列是不合适的。最佳做法是让链接文本在任何上下文中都有意义。
 
 接下来是表单中的 {{htmlelement("label")}} 元素，这是确保表单无障碍的关键特性之一。表单的挑战在于，你需要标签来指明每个表单输入应该输入的数据。每个标签都应该包含在 {{htmlelement("label")}} 中，并且与其对应的表单输入明确关联（每个 `<label>` 的 `for` 属性值需要与表单元素的 `id` 值相匹配），即使源代码的顺序并不完全合理（尽管它应该是合理的）。
 
@@ -203,7 +203,7 @@ CSS 虽然提供的基本无障碍特性不如 HTML 多，但如果使用不当�
 
 #### 颜色和颜色对比度
 
-在为你的网站选择配色方案时，应确保文本（前景）颜色与背景颜色之间有足够的对比度。设计可能看起来很酷，但如果视力障碍者（如色盲）无法阅读内容，那就不理想了。可以使用 WebAIM 的[颜色对比度检查器](http://webaim.org/resources/contrastchecker/)等工具来检查你的配色方案是否具有足够的对比度。
+在为你的网站选择配色方案时，应确保文本（前景）颜色与背景颜色之间有足够的对比度。设计可能看起来很酷，但如果视力障碍者（如色盲）无法阅读内容，那就不理想了。可以使用 WebAIM 的[颜色对比度检查器](https://webaim.org/resources/contrastchecker/)等工具来检查你的配色方案是否具有足够的对比度。
 
 另一个建议是不要仅依赖颜色来传达标记或信息，因为这对于色盲人士来说不太友好。例如，不应仅将必填的表单字段标记为红色，而应同时使用星号和红色来标记它们。
 
@@ -553,7 +553,7 @@ NVDA 拥有众多键盘命令，这里不会全部列举。以下表格中列出
 
 ### 用户测试
 
-如上所述，你不能仅依靠自动化工具来确定网站上的无障碍问题。建议在制定测试计划时，包含一些用户测试无障碍的计划 (有关更多内容，请参阅前面的[用户测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#User_testing)部分)。尝试让一些屏幕阅读器用户，一些全键盘用户，一些有听觉障碍的用户或其他用户参与测试，以满足你的需求。
+如上所述，你不能仅依靠自动化工具来确定网站上的无障碍问题。建议在制定测试计划时，包含一些用户测试无障碍的计划 (有关更多内容，请参阅前面的[用户测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#用户测试)部分)。尝试让一些屏幕阅读器用户，一些全键盘用户，一些有听觉障碍的用户或其他用户参与测试，以满足你的需求。
 
 ## 无障碍测试清单
 
