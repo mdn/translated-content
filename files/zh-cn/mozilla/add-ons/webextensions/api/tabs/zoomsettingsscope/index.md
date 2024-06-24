@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-定义缩放更改是会在页面的来源中持久化，还是仅在此标签页中生效。当 {{WebExtAPIRef("tabs.zoomSettingsMode")}} 为“automatic”时，默认值为 `per-origin`，否则始终为 `per-tab`。
+定义缩放更改是会对页面的来源持久化，还是仅在此标签页中生效。当 {{WebExtAPIRef("tabs.zoomSettingsMode")}} 为“automatic”时，默认值为 `per-origin`，否则始终为 `per-tab`。
 
 ## 类型
 
@@ -18,7 +18,7 @@ l10n:
 - "per-tab"
   - : 缩放更改仅在此标签页中生效，其他标签页中的缩放更改不会影响此标签页的缩放。此外：
     - 在 Firefox 中，缩放级别在标签页的页面加载和导航过程中保持不变。
-    - 在基于 Chrome 的浏览器中，缩放更改在导航时会重置；导航标签页时，页面总是以其源的缩放系数加载。
+    - 在基于 Chrome 的浏览器中，缩放更改在导航时会重置；导航标签页时，页面总是以其来源的缩放系数加载。
 
 ## 浏览器兼容性
 
