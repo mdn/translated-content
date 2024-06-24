@@ -12,7 +12,7 @@ l10n:
 ## 实例方法
 
 - {{domxref("FileSystemDirectoryReader.readEntries", "readEntries()")}}
-  - : 返回一个包含一些目录条目的数组，数组的每一项是一个基于 {{domxref("FileSystemEntry")}} 的对象（{{domxref("FileSystemFileEntry")}} 或 {{domxref("FileSystemDirectoryEntry")}}）。
+  - : 返回一个包含一些目录条目的数组，数组的每一项是一个基于 {{domxref("FileSystemEntry")}} 的对象（通常是 {{domxref("FileSystemFileEntry")}} 或 {{domxref("FileSystemDirectoryEntry")}}）。
 
 ## 规范
 
