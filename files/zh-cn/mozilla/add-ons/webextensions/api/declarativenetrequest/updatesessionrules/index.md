@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-修改扩展的作用域的一组规则。首先移除 `options.removeRuleIds` 中列出的规则的 ID，然后添加 `options.addRules` 中列出的规则。请注意：
+修改扩展的一组作用域规则。首先移除 `options.removeRuleIds` 中列出的规则的 ID，然后添加 `options.addRules` 中列出的规则。请注意：
 
 - 此更新作为原子操作进行：要么所有指定的规则都添加和移除，要么返回错误。
 - 这些规则不会跨浏览器会话保留。
