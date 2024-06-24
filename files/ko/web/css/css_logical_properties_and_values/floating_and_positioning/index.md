@@ -46,7 +46,7 @@ l10n:
 
 CSS 위치 지정은 일반적으로 어떠한 요소를 그것을 포함하는 블록에 상대적으로 배치할 수 있게 합니다. 기본적인 흐름에 기반하여 배치될 위치에 요소를 삽입하게 됩니다. 요소를 뷰포트의 상대적으로 위치시키기 위해서는, 물리적 속성인 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} 그리고 {{cssxref("left")}} 를 사용합니다. 쓰기 모드에서 텍스트의 흐름에 따라 위치를 지정하려면, {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}} 그리고 {{cssxref("inset-inline-end")}} 속성들을 사용합니다.
 
-이러한 속성들은 값으로 길이 혹은 백분률을 취하며, 사용자의 화면 크기와도 관련이 있습니다.
+이러한 속성들은 값으로 길이 혹은 백분율을 취하며, 사용자의 화면 크기와도 관련이 있습니다.
 
 아래 예제에서는, `inset-block-start` 과 `inset-inline-end` 속성들은 `position: relative` 가 설정된 회색 점선 경계가 있는 영역 안쪽의 파란색 박스를 절대 위치로 배치합니다. `writing-mode` 속성을 `vertical-rl` 로 변경하거나, `direction: rtl` 을 추가하여 텍스트의 방향에 따라 어떻게 박스가 상대벅으로 유지되는지 확인해 보세요.
 
