@@ -11,7 +11,7 @@ l10n:
 
 ## 类型
 
-一个 JSON [对象](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)，它具有与 [`"theme"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) 清单键相同的属性。
+一个 JSON [对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)，它具有与 [`"theme"`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) 清单键相同的属性。
 
 {{WebExtExamples}}
 
