@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-获取指定元素的开放或封闭的 Shadow DOM。如果 Shadow DOM 未附加到该元素，则返回 `null`。
+获取指定元素的开放或封闭的影子根。如果影子根未附加到该元素，则返回 `null`。
 
 > **备注：** 在 Firefox 中，等效属性是 `element.openOrClosedShadowRoot`。该只读属性表示元素所承载的 Shadow DOM，无论其 {{DOMxRef("ShadowRoot.mode", "mode")}} 是 `open` 还是 `closed`。
 >
