@@ -12,8 +12,8 @@ l10n:
 | 常量              | 值     | 描述                   |
 | ----------------- | ------ | ---------------------- |
 | `DOM_DELTA_PIXEL` | `0x00` | delta 值以像素为单位。 |
-| `DOM_DELTA_LINE`  | `0x01` | delta 值以行为单位。  |
-| `DOM_DELTA_PAGE`  | `0x02` | delta 值以页为单位。  |
+| `DOM_DELTA_LINE`  | `0x01` | delta 值以行为单位。   |
+| `DOM_DELTA_PAGE`  | `0x02` | delta 值以页为单位。   |
 
 ## 值
 
