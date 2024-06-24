@@ -14,10 +14,8 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        无，但是鼓励先去阅读
-        <a href="/zh-CN/docs/learn/常见问题/Thinking_before_coding"
-          >关于设定项目目标的文章</a
-        >
+        无，但是鼓励先去阅读<a href="/zh-CN/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding">关于设定项目目标的文章</a>
+        首先
       </td>
     </tr>
     <tr>
