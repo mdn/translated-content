@@ -2786,10 +2786,6 @@
     "modified": "2019-03-23T22:11:58.983Z",
     "contributors": ["virginiarcruz"]
   },
-  "Web/API/Document_Object_Model/How_to_create_a_DOM_tree": {
-    "modified": "2019-03-23T22:11:56.223Z",
-    "contributors": ["virginiarcruz"]
-  },
   "Web/API/Document_Object_Model/Introduction": {
     "modified": "2020-12-03T17:12:30.790Z",
     "contributors": [
@@ -2802,6 +2798,10 @@
       "ramonfranklyn",
       "onsistec"
     ]
+  },
+  "Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
+    "modified": "2019-03-23T22:11:56.223Z",
+    "contributors": ["virginiarcruz"]
   },
   "Web/API/Document_Object_Model/Whitespace": {
     "modified": "2019-03-18T21:38:03.775Z",
@@ -6315,10 +6315,6 @@
   },
   "Web/HTTP/Headers/Accept-CH": {
     "modified": "2020-10-15T22:26:08.419Z",
-    "contributors": ["FernandoKGA"]
-  },
-  "Web/HTTP/Headers/Accept-CH-Lifetime": {
-    "modified": "2020-10-15T22:26:09.466Z",
     "contributors": ["FernandoKGA"]
   },
   "Web/HTTP/Headers/Accept-Charset": {
@@ -11344,6 +11340,10 @@
   },
   "orphaned/Web/HTTP/Feature_Policy/Using_Feature_Policy": {
     "modified": "2020-07-20T20:48:22.250Z",
+    "contributors": ["FernandoKGA"]
+  },
+  "orphaned/Web/HTTP/Headers/Accept-CH-Lifetime": {
+    "modified": "2020-10-15T22:26:09.466Z",
     "contributors": ["FernandoKGA"]
   },
   "orphaned/Web/HTTP/Headers/Set-Cookie/SameSite": {
