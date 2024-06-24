@@ -26,7 +26,7 @@ let getting = browser.theme.getCurrent(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个表示应用到给定窗口的主题的 {{WebExtAPIRef("theme.Theme")}} 对象。如果没有扩展提供的主题应用到给定窗口，它将返回一个空对象。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个表示应用到给定窗口的主题的 {{WebExtAPIRef("theme.Theme")}} 对象。如果扩展提供的主题没有应用到给定窗口，它将返回一个空对象。
 
 ## 示例
 
