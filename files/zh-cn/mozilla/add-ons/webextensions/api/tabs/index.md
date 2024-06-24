@@ -2,7 +2,7 @@
 title: tabs
 slug: Mozilla/Add-ons/WebExtensions/API/tabs
 l10n:
-  sourceCommit: d6856a051d0ba078ec1d24b80908b1ca174917db
+  sourceCommit: bb031733da9f5678de3cdc5b561123b111b3b2fc
 ---
 
 {{AddonSidebar}}
