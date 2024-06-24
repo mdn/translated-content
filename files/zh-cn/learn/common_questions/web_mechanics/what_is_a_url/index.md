@@ -7,7 +7,7 @@ l10n:
 
 {{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
 
-本文讨论了统一资源定位符 (URLs)，并解释了它们是什么，以及如何被构建的。
+本文讨论了统一资源定位符 (URL)，并解释了它们是什么，以及如何被构建的。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -34,9 +34,9 @@ l10n:
 
 ## 概述
 
-和 {{Glossary("Hypertext")}} 以及 {{Glossary("HTTP")}} 一样，**URL** 是 Web 中的一个核心概念。它是{{Glossary("Browser","浏览器")}}用来检索 web 上公布的任何资源的机制。
+和 {{Glossary("Hypertext")}} 以及 {{Glossary("HTTP")}} 一样，**URL** 是 Web 中的一个核心概念。它是{{Glossary("Browser","浏览器")}}用来检索 Web 上公布的任何资源的机制。
 
-理论上说，每个有效的 URL 都指向一个唯一的资源。这个资源可以是一个 HTML 页面，一个 CSS 文档，一幅图像，等等。而在实际中，也有一些例外，最常见的情况就是一个 URL 指向了不存在的或是被移动过的资源。由于通过 URL 呈现的资源和 URL 本身由 Web 服务器处理，因此 web 服务器的拥有者需要认真地维护资源以及与它关联的 URL。
+理论上说，每个有效的 URL 都指向一个唯一的资源。这个资源可以是一个 HTML 页面，一个 CSS 文档，一幅图像，等等。而在实际中，也有一些例外，最常见的情况就是一个 URL 指向了不存在的或是被移动过的资源。由于通过 URL 呈现的资源和 URL 本身由 Web 服务器处理，因此 Web 服务器的拥有者需要认真地维护资源以及与它关联的 URL。
 
 ## 基础：剖析 URL
 
@@ -54,7 +54,7 @@ https://developer.mozilla.org/zh-CN/search?q=URL
 
 ![完整的 URL](mdn-url-all.png)
 
-> **备注：** 你可以将 URL 视为普通的邮寄地址：_scheme_ 代表你想要使用的邮政服务，_domain name_ 就像是城市或城镇，_port_ 就像邮政编码；_path_ 表示你的邮件应该送到的建筑物；_parameters_ 表示额外的信息，例如建筑物中公寓的编号；最后，_anchor_ 表示你实际寄信给的人。
+> **备注：** 你可以将 URL 视为普通的邮寄地址：_scheme_ 表示你想要使用的邮政服务，那么 _domain name_ 就像是城市或城镇，_port_ 就像邮政编码；_path_ 表示你的邮件应该送到的建筑物；_parameter_ 表示额外的信息，例如建筑物中公寓的编号；最后，_anchor_ 表示你实际寄信给的人。
 
 > **备注：** 关于 URL 还有[一些额外的部分和一些额外的规则](https://zh.wikipedia.org/wiki/统一资源定位符)，但对于普通用户或 Web 开发人员来说并不相关。不用担心这些，你不需要了解它们来构建和使用完全功能的 URL。
 
@@ -99,11 +99,11 @@ URL 的第一部分是 _scheme_，它表示浏览器必须使用的协议来请�
 
 可以直接在浏览器的地址栏里输入任何 URL，来获得后台的资源。但是这仅仅是冰山一角。
 
-{{Glossary("HTML")}} 语言 — [后续会再来讨论](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) — 对 URLs 有大量的使用：
+[后续会再来讨论](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)在 URL 中有着大量的使用的 {{Glossary("HTML")}} 语言：
 
 - 为在其他文档中新建链接，用 {{HTMLElement("a")}} ;
 - 为将文档与它的相关资源关联，用各种标签如 {{HTMLElement("link")}} 或 {{HTMLElement("script")}}；
-- 为显示多媒体如图片 (用 {{HTMLElement("img")}} )，视频 (用 {{HTMLElement("video")}} )，声音和音乐 (用 {{HTMLElement("audio")}} )，等等；
+- 为显示多媒体如图片（用 {{HTMLElement("img")}} )、视频 (用 {{HTMLElement("video")}} )、声音和音乐 (用 {{HTMLElement("audio")}} ）等；
 - 为显示其他 HTML 文档，用 {{HTMLElement("iframe")}}。
 
 > **备注：** 当在页面中加载资源时指定 URL（例如使用 `<script>`、`<audio>`、`<img>`、`<video>` 等），通常应只使用 HTTP 和 HTTPS URL，除了一些例外情况（一个显著的例外是 `data:`；参见[数据 URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)）。例如，使用 FTP 是不安全的，并且不再受现代浏览器的支持。
@@ -112,7 +112,7 @@ URL 的第一部分是 _scheme_，它表示浏览器必须使用的协议来请�
 
 ## 绝对 URL 和相对 URL
 
-我们上面看到的是一个*绝对 URL*，但也有一个叫做*相对 URL* 的东西。[URL 标准](https://url.spec.whatwg.org/#absolute-url-string)定义了两者——尽管它使用术语[_绝对 URL 字符串_](https://url.spec.whatwg.org/#absolute-url-string)和[_相对 URL 字符串_](https://url.spec.whatwg.org/#relative-url-string)，以将它们与[URL 对象](https://url.spec.whatwg.org/#url)（URL 的内存表示）区分开来。
+我们上面看到的是一个*绝对 URL*，但也有一个叫做*相对 URL* 的东西。[URL 标准](https://url.spec.whatwg.org/#absolute-url-string)定义了两者——尽管它使用术语[_绝对 URL 字符串_](https://url.spec.whatwg.org/#absolute-url-string)和[_相对 URL 字符串_](https://url.spec.whatwg.org/#relative-url-string)，以将它们与 [URL 对象](https://url.spec.whatwg.org/#url)（URL 的内存表示）区分开来。
 
 让我们来看看在 URL 的背景下，*绝对*和*相对*之间的区别是什么。
 
@@ -179,7 +179,7 @@ URL 的必需部分在很大程度上取决于使用 URL 的上下文。在浏�
 
 ## 语义 URL
 
-尽管 URL 具有非常的技术性，但 URL 表示一个可读性的网站入口点。它们可以被记住，并且任何人都可以将它们输入浏览器的地址栏。人是 Web 的核心，因此建立所谓的 _[semantic URLs](http://en.wikipedia.org/wiki/Semantic_URL)_ 被认为是最佳实践。语义 URL 使用具有固有含义的单词，任何人都可以理解，无论他们的技术水平如何。
+尽管 URL 具有非常的技术性，但 URL 表示一个可读性的网站入口点。它们可以被记住，并且任何人都可以将它们输入浏览器的地址栏。人是 Web 的核心，因此建立所谓的 _[semantic URL](http://en.wikipedia.org/wiki/Semantic_URL)_ 被认为是最佳实践。语义 URL 使用具有固有含义的单词，任何人都可以理解，无论他们的技术水平如何。
 
 语言语义当然与电脑无关。你可能经常看到看起来像随机字符混搭的网址。但创建人类可读的 URL 有很多优点：
 
