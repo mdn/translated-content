@@ -15,18 +15,18 @@ l10n:
 
 `"declarativeNetRequest"` 权限允许扩展阻止和升级请求，而无需任何[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。如果扩展希望重定向请求或修改请求的标头，或者使用 `"declarativeNetRequestWithHostAccess"` 权限代替 `"declarativeNetRequest"` 权限，则需要主机权限。对于所有请求，除了导航请求（即资源类型 `main_frame` 和 `sub_frame`），请求的发起者也需要主机权限。请求的发起者通常是触发请求的文档或 worker。
 
-某些请求是受限制的，扩展无法匹配这些请求。这些请求包括特权浏览器请求、对受限域的请求和来自其他扩展的请求。
+某些请求是受限制的，扩展无法匹配这些请求。这些请求包括特权浏览器请求、有关[受限域](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#受限域)的请求和来自其他扩展的请求。
 
-使用 {{WebExtAPIRef("declarativeNetRequest.getMatchedRules","getMatchedRules")}} 和 {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug","onRuleMatchedDebug")}} 时需要 `"declarativeNetRequestFeedback"` 权限，因为它们返回信息是以匹配的声明性规则形式。参见[测试](#测试)获取更多信息。
+使用 {{WebExtAPIRef("declarativeNetRequest.getMatchedRules","getMatchedRules")}} 和 {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug","onRuleMatchedDebug")}} 时需要 `"declarativeNetRequestFeedback"` 权限，因为它们返回与匹配的声明性规则有关的信息。参见[测试](#测试)以获取更多信息。
 
 ## 规则
 
 声明性规则由四个字段定义：
 
-- id——唯一标识规则集内规则的 ID。必填，应>= 1。
-- priority——规则优先级。指定时应>= 1。默认为 1。有关优先级如何影响应用哪些规则的详细信息，请参见匹配优先级。
-- condition——触发此规则的 {{WebExtAPIRef("declarativeNetRequest.RuleCondition","condition")}}。
-- action——规则匹配时采取的 {{WebExtAPIRef("declarativeNetRequest.RuleAction","action")}}。规则可以执行以下操作之一：
+- `id`——唯一标识规则集内规则的 ID。必填，应 >= 1。
+- `priority`——规则优先级。指定时应 >= 1。默认为 1。有关优先级如何影响应用哪些规则的详细信息，请参见[匹配优先级](#匹配优先级)。
+- `condition`——触发此规则的 {{WebExtAPIRef("declarativeNetRequest.RuleCondition","condition")}}。
+- `action`——规则匹配时采取的 {{WebExtAPIRef("declarativeNetRequest.RuleAction","action")}}。规则可以执行以下操作之一：
   - 阻止网络请求。
   - 重定向网络请求。
   - 修改网络请求的标头。
@@ -89,7 +89,7 @@ l10n:
 
 规则被组织成规则集：
 
-- **静态规则集**：使用清单（manifest）键 [`"declarative_net_request"`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) 定义并存储在扩展中的规则集。扩展可以使用 {{WebExtAPIRef("declarativeNetRequest.updateEnabledRulesets","updateEnabledRulesets")}} 启用和禁用静态规则集。启用的静态规则集集会在会话之间持久化，但不会在扩展更新之间持久化。在扩展安装和更新时启用的静态规则集由清单（manifest）键 `"declarative_net_request"` 的内容确定。
+- **静态规则集**：使用清单（manifest）键 [`"declarative_net_request"`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) 定义并存储在扩展中的规则集。扩展可以使用 {{WebExtAPIRef("declarativeNetRequest.updateEnabledRulesets","updateEnabledRulesets")}} 启用和禁用静态规则集。启用的一组静态规则集会在会话之间持久化，但不会在扩展更新之间持久化。在扩展安装和更新时启用的静态规则集由清单（manifest）键 `"declarative_net_request"` 的内容确定。
 - **动态规则集**：使用 {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules","updateDynamicRules")}} 添加或删除的规则。这些规则在会话之间和扩展更新之间持久化。
 - **会话规则集**：使用 {{WebExtAPIRef("declarativeNetRequest.updateSessionRules","updateSessionRules")}} 添加或删除的规则。这些规则不会在浏览器会话之间持久化。
 
@@ -102,8 +102,8 @@ l10n:
 
 一个扩展可以：
 
-- 将静态规则集指定为清单（manifest）键 `"declarative_net_request"` 的一部分，最多达到 {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_STATIC_RULESETS","MAX_NUMBER_OF_STATIC_RULESETS")}} 的值。
-- 启用静态规则集，最多达到 {{WebExtAPIRef("declarativeNetRequest.GUARANTEED_MINIMUM_STATIC_RULES","GUARANTEED_MINIMUM_STATIC_RULES")}} 的值，并且启用的静态规则集数量不得超过 {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS","MAX_NUMBER_OF_ENABLED_STATIC_RULESETS")}} 的值。此外，所有扩展启用的静态规则集中规则的数量不得超过全局限制。扩展不应该依赖于全局限制具有特定的值，而应该使用 {{WebExtAPIRef("declarativeNetRequest.getAvailableStaticRuleCount","getAvailableStaticRuleCount")}} 查找它们可以启用的额外规则数。
+- 将静态规则集指定为清单键 `"declarative_net_request"` 的一部分，最多可达到 {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_STATIC_RULESETS","MAX_NUMBER_OF_STATIC_RULESETS")}} 个。
+- 启用静态规则集，最少可达到 {{WebExtAPIRef("declarativeNetRequest.GUARANTEED_MINIMUM_STATIC_RULES","GUARANTEED_MINIMUM_STATIC_RULES")}} 个，并且启用的静态规则集数量不得超过 {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS","MAX_NUMBER_OF_ENABLED_STATIC_RULESETS")}} 个。此外，所有扩展启用的静态规则集中规则的数量不得超过全局限制。扩展不应该依赖于全局限制具有特定的值，而应该使用 {{WebExtAPIRef("declarativeNetRequest.getAvailableStaticRuleCount","getAvailableStaticRuleCount")}} 查找它们可以启用的额外规则数。
 
 ### 动态和会话规则
 
@@ -113,7 +113,7 @@ l10n:
 
 当浏览器评估如何处理请求时，它会检查每个扩展的规则，这些规则具有与请求匹配的条件，并按以下方式选择要考虑应用的规则：
 
-1. 规则优先级，其中 1 是最低优先级（规则优先级未设置时默认为 1）。<br>如果这没有导致选择一个要应用的规则：
+1. 规则优先级，其中 1 是最低优先级（规则优先级未设置时默认为 1）。<br>如果这没有导致一条规则被应用：
 2. 规则动作，按以下优先级顺序：
    1. “allow”表示任何其他剩余规则都将被忽略。
    2. “allowAllRequests”（仅适用于 main_frame 和 sub_frame resourceTypes）具有与 allow 相同的效果，但也适用于从请求生成的文档中的未来子资源加载（包括后代框架）。
@@ -126,12 +126,11 @@ l10n:
 >
 > - “block”动作不支持附加属性，因此没有歧义：所有匹配的“block”动作都会导致相同的结果。
 > - “redirect”动作将请求重定向到一个目标。当多个“redirect”动作匹配时，除一个之外的所有“redirect”动作都将被忽略。当重定向的请求匹配另一个规则条件时，仍然可能重定向多次。
->   多个“modifyHeaders”动作可以独立应用，当它们触及不同的标头时。当它们触及相同的标头时，结果是不明确的，因为某些组合操作是不允许的（如 {{WebExtAPIRef("declarativeNetRequest.ModifyHeaderInfo")}} 中所述）。因此，“modifyHeaders”动作的评估顺序非常重要。
+> - 当多个“modifyHeaders”动作触及不同的标头时，它们可以被独立应用。当它们触及相同的标头时，结果是不明确的，因为某些组合操作是不允许的（如 {{WebExtAPIRef("declarativeNetRequest.ModifyHeaderInfo")}} 中所述）。因此，“modifyHeaders”动作的执行顺序非常重要。
 >
 > 为了控制应用动作的顺序，请为对优先顺序重要的规则分配不同的 `priority` 值。
 
-> **备注：** 在规则优先级和规则动作之后，Firefox 还考虑规则所属的规则集，按照这个顺序：会话 > 动态 > 会话规则集。
-> 在不同浏览器中，不能依赖这一点，参见 [WECG 问题 #280](https://github.com/w3c/webextensions/issues/280)。
+> **备注：** 在规则优先级和规则动作之后，Firefox 还考虑规则所属的规则集，按照这个顺序：会话 > 动态 > 会话规则集。在不同浏览器中，不能依赖这一点，参见 [WECG 议题 280](https://github.com/w3c/webextensions/issues/280)。
 
 如果只有一个扩展为请求提供规则，则应用该规则。然而，如果有多个扩展具有匹配的规则，浏览器按以下顺序选择要应用的扩展：
 
@@ -146,7 +145,7 @@ l10n:
 {{WebExtAPIRef("declarativeNetRequest.testMatchOutcome","testMatchOutcome")}}、{{WebExtAPIRef("declarativeNetRequest.getMatchedRules","getMatchedRules")}} 和 {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug","onRuleMatchedDebug")}} 可用于辅助测试规则和规则集。这些 API 需要 `"declarativeNetRequestFeedback"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。此外：
 
 - 在 Chrome 中，这些 API 仅对未打包的扩展可用。
-- 在 Firefox 中，这些 API 仅在将 `extensions.dnr.feedback` 首选项设置为 `true` 后可用。可以使用 `about:config` 或 [web-ext CLI 工具的 --pref 标志](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/#pref)设置此首选项。
+- 在 Firefox 中，这些 API 仅在将 `extensions.dnr.feedback` 首选项设置为 `true` 后可用。可以使用 `about:config` 或 [`web-ext` CLI 工具的 `--pref` 标志](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/#pref)设置此首选项。
 
 ## 与 webRequest API 的比较
 
@@ -182,7 +181,7 @@ l10n:
 - {{WebExtAPIRef("declarativeNetRequest.DYNAMIC_RULESET_ID")}}
   - : 扩展添加的动态规则的规则集 ID。
 - {{WebExtAPIRef("declarativeNetRequest.GETMATCHEDRULES_QUOTA_INTERVAL")}}
-  - : 在此时间间隔内可以调用 {{WebExtAPIRef("declarativeNetRequest.MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL")}} {{WebExtAPIRef("declarativeNetRequest.getMatchedRules")}} 调用的次数。
+  - : 在此时间间隔内可以执行 {{WebExtAPIRef("declarativeNetRequest.MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL")}} 次 {{WebExtAPIRef("declarativeNetRequest.getMatchedRules")}} 的调用。
 - {{WebExtAPIRef("declarativeNetRequest.GUARANTEED_MINIMUM_STATIC_RULES")}}
   - : 跨已启用的静态规则集保证给扩展的最小静态规则数。
 - {{WebExtAPIRef("declarativeNetRequest.MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL")}}
@@ -194,39 +193,43 @@ l10n:
 - {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_REGEX_RULES")}}
   - : 扩展可以添加的正则表达式规则的最大数量。
 - {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_STATIC_RULESETS")}}
-  - : 扩展可以作为清单（manifest）键 [`declarative_net_request.rule_resources`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) 所能指定的静态规则集的最大数量。
+  - : 扩展可以作为清单键 [`declarative_net_request.rule_resources`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) 所能指定的静态规则集的最大数量。
 - {{WebExtAPIRef("declarativeNetRequest.SESSION_RULESET_ID")}}
   - : 扩展添加的会话范围规则的规则集 ID。
 
-## 功能
+## 函数
 
 - {{WebExtAPIRef("declarativeNetRequest.getAvailableStaticRuleCount()")}}
   - : 返回扩展可以启用的静态规则数，直到达到全局静态规则限制。
+- {{WebExtAPIRef("declarativeNetRequest.getDisabledRuleIds()")}}
+  - : 返回静态规则集中已禁用的规则的 ID。
 - {{WebExtAPIRef("declarativeNetRequest.getDynamicRules()")}}
-  - : 返回扩展的动态规则集。
+  - : 返回扩展的一组动态规则集。
 - {{WebExtAPIRef("declarativeNetRequest.getEnabledRulesets()")}}
-  - : 返回启用的静态规则集的 ID。
+  - : 返回启用的各组静态规则集的 ID。
 - {{WebExtAPIRef("declarativeNetRequest.getMatchedRules()")}}
   - : 返回扩展匹配的所有规则。
 - {{WebExtAPIRef("declarativeNetRequest.getSessionRules()")}}
   - : 返回扩展的会话范围规则集。
 - {{WebExtAPIRef("declarativeNetRequest.isRegexSupported()")}}
-  - : 检查正则表达式是否支持作为 {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}.regexFilter 规则条件。
+  - : 检查正则表达式是否支持作为 {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}`.regexFilter` 规则条件。
 - {{WebExtAPIRef("declarativeNetRequest.setExtensionActionOptions()")}}
-  - : 配置如何处理标签页的动作计数。
+  - : 配置如何处理标签页的操作计数。
 - {{WebExtAPIRef("declarativeNetRequest.testMatchOutcome()")}}
-  - : 检查扩展的 declarativeNetRequest 规则是否会匹配假设请求。
+  - : 检查扩展的 `declarativeNetRequest` 规则是否会匹配假设请求。
 - {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules()")}}
-  - : 修改扩展的动态规则集。
+  - : 修改扩展的活跃的一组动态规则集。
 - {{WebExtAPIRef("declarativeNetRequest.updateEnabledRulesets()")}}
-  - : 更新扩展的静态规则集。
+  - : 更新扩展的活跃的一组静态规则集。
 - {{WebExtAPIRef("declarativeNetRequest.updateSessionRules()")}}
   - : 修改扩展的会话范围规则集。
+- {{WebExtAPIRef("declarativeNetRequest.updateStaticRules()")}}
+  - : 修改静态规则集中的规则的启用状态。
 
 ## 事件
 
 - {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug")}}
-  - : 当调试扩展并具有“declarativeNetRequestFeedback”权限时，请求匹配规则时触发。
+  - : 当调试具有“declarativeNetRequestFeedback”权限的扩展时，请求匹配规则时触发。
 
 {{WebExtExamples("h2")}}
 
