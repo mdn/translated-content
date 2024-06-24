@@ -97,9 +97,9 @@ browser.tabs.onUpdated.hasListener(listener)
 - `favIconUrl` {{optional_inline}}
   - : `string`。标签页的新图标 URL。当标签页失去图标（从具有图标的页面导航到没有图标的页面）时不包括此属性。请检查 [tab](#tab) 中的 `favIconUrl`。
 - `hidden` {{optional_inline}}
-  - : `boolean`。如果标签页是{{WebExtAPIRef("tabs.hide()", "隐藏的", 1)}}，则为 `true`。
+  - : `boolean`。如果标签页是{{WebExtAPIRef("tabs.hide()", "隐藏的", "", 1)}}，则为 `true`。
 - `isArticle` {{optional_inline}}
-  - : `boolean`。如果标签页是文章，因此可以显示在{{WebExtAPIRef("tabs.toggleReaderMode()", "阅读模式", 1)}}中，则为 `true`。
+  - : `boolean`。如果标签页是文章，因此可以显示在{{WebExtAPIRef("tabs.toggleReaderMode()", "阅读模式", "", 1)}}中，则为 `true`。
 - `mutedInfo` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfo')}}。标签页的新静音状态及更改原因。
 - `pinned` {{optional_inline}}
