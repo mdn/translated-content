@@ -77,7 +77,7 @@ l10n:
   - : 返回一个 [`tabs.Tab`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab)。该对象包含了该脚本当前的宿主标签的信息。
 - {{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}
   - : 获取在指定窗口被选定的标签。
-    **已弃用：请改用 [`tabs.query({active: true})`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)。**
+    **已弃用**：请改用 [`tabs.query({active: true})`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)。
 - {{WebExtAPIRef("tabs.getZoom()")}}
   - : 获取制定标签的缩放系数。
 - {{WebExtAPIRef("tabs.getZoomSettings()")}}
@@ -132,7 +132,7 @@ l10n:
 - {{WebExtAPIRef("tabs.onActivated")}}
   - : 当窗口活动标签改变时触发，注意当该消息触发时，标签地址可能没有被设置。
 - {{WebExtAPIRef("tabs.onActiveChanged")}} {{deprecated_inline}}
-  - : 窗口中选定选项卡更改时触发的事件。**已弃用：** 请使用 {{WebExtAPIRef("tabs.onActivated")}} 代替。
+  - : 窗口中选定选项卡更改时触发的事件。**已弃用** ：请使用 {{WebExtAPIRef("tabs.onActivated")}} 代替。
 - {{WebExtAPIRef("tabs.onAttached")}}
   - : 当一个标签被附加到一个窗口时触发，因为他可能在窗口间移动。
 - {{WebExtAPIRef("tabs.onCreated")}}
@@ -140,7 +140,7 @@ l10n:
 - {{WebExtAPIRef("tabs.onDetached")}}
   - : 当一个标签脱离一个窗口时被触发。
 - {{WebExtAPIRef("tabs.onHighlightChanged")}} {{deprecated_inline}}
-  - : 在窗口中选定的或突出显示的选项卡更改时触发。**已弃用：** 请使用 {{WebExtAPIRef("tabs.onHighlighted")}} 代替。
+  - : 在窗口中选定的或突出显示的选项卡更改时触发。**已弃用**：请使用 {{WebExtAPIRef("tabs.onHighlighted")}} 代替。
 - {{WebExtAPIRef("tabs.onHighlighted")}}
   - : 当一个标签被高亮显示或是被选中时触发。
 - {{WebExtAPIRef("tabs.onMoved")}}
@@ -150,7 +150,7 @@ l10n:
 - {{WebExtAPIRef("tabs.onReplaced")}}
   - : 当一个标签因为预载取代另一个标签时被触发。
 - {{WebExtAPIRef("tabs.onSelectionChanged")}} {{deprecated_inline}}
-  - : 窗口中所选选项卡更改时触发。**已弃用：** 请使用 {{WebExtAPIRef("tabs.onActivated")}} 代替。
+  - : 窗口中所选选项卡更改时触发。**已弃用**：请使用 {{WebExtAPIRef("tabs.onActivated")}} 代替。
 - {{WebExtAPIRef("tabs.onUpdated")}}
   - : 当一个标签被更新时触发。
 - {{WebExtAPIRef("tabs.onZoomChange")}}
