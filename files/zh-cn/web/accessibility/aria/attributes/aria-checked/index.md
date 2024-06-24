@@ -2,7 +2,7 @@
 title: aria-checked
 slug: Web/Accessibility/ARIA/Attributes/aria-checked
 l10n:
-  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
+  sourceCommit: 3810b129d05f1076d271c4498cbecdec30ad1d39
 ---
 
 {{AccessibilitySidebar}}
@@ -26,8 +26,6 @@ l10n:
   aria-labelledby="chk15-label"></span>
 <label id="chk15-label">订阅时事通讯</label>
 ```
-
-> **备注：** 在可能的情况下，请使用带有 `type="checkbox"` 的 HTML {{htmlelement("input")}} 元素，因为该元素具有内置语义，不需要任何 ARIA 属性。
 
 `tabindex` 属性是为了启用焦点。需要 JavaScript 切换 `aria-checked` 状态。如果此复选框是可提交表单的一部分，则需要更多 JavaScript 来设置名称和值。
 
