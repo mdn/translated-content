@@ -1,24 +1,39 @@
 ---
 title: コミュニティスクールのホームページの組版
 slug: Learn/CSS/Styling_text/Typesetting_a_homepage
+l10n:
+  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
 この評価では、コミュニティスクールのホームページ用にテキストを装飾することで、このモジュール全体でカバーしてきたすべてのテキスト装飾テクニックについての理解をテストします。 途中で楽しい時間があるかもしれません。
 
-| 前提知識: | この評価を試みる前に、このモジュールのすべての記事を読んでおくべきです。 |
-| --------- | ------------------------------------------------------------------------ |
-| 学習目標: | CSS テキスト装飾テクニックの理解をテストすること。                       |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提知識:</th>
+      <td>
+        この評価を試みる前に、このモジュールのすべての記事を読んでおくべきです。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目的:</th>
+      <td>CSS テキスト装飾テクニックの理解をテストすること。</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 出発点
 
 この評価を開始するには、次のことが必要です。
 
-- 練習用の [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/index.html) ファイルと [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/style.css) ファイルと、提供されている[外部リンクアイコン](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/external-link-52.png)を入手してください。
-- ローカルコンピュータにそれらのコピーを作成します。
+- 練習用の [HTML](https://github.com/mdn/learning-area/blob/main/css/styling-text/typesetting-a-homepage-start/index.html) ファイルと [CSS](https://github.com/mdn/learning-area/blob/main/css/styling-text/typesetting-a-homepage-start/style.css) ファイルと、提供されている[外部リンクアイコン](https://github.com/mdn/learning-area/blob/main/css/styling-text/typesetting-a-homepage-start/external-link-52.png)を入手してください。
+- ローカルコンピューターにそれらのコピーを作成します。
 
-あるいは、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/) や [Glitch](https://glitch.com/) などのサイトを使って評価することもできます。 HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力し、[この URL](http://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png) を使用して背景画像を指定することができます。 使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
+あるいは、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのサイトを使って評価することもできます。 HTML を貼り付けて CSS をこれらのオンラインエディターのいずれかに入力し、[この URL](https://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png) を使用して背景画像を指定することができます。
+
+> **メモ:** 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## プロジェクトの概要
 
@@ -66,10 +81,6 @@ slug: Learn/CSS/Styling_text/Typesetting_a_homepage
 
 次のスクリーンショットは、完成したデザインの外観の例です。
 
-![](example2.png)
-
-## 評価
-
-組織的コースの一環としてこの評価に従っている場合は、採点のために作品を教師や指導者に渡すことができるはずです。 自己学習をしている場合は、[この演習についてのディスカッションスレッド](https://discourse.mozilla.org/t/typesetting-a-community-school-home-page-assessment/24683)や [Mozilla IRC](https://wiki.mozilla.org/IRC) の [#mdn](irc://irc.mozilla.org/mdn) IRC チャンネルで尋ねることで、かなり簡単に採点の手引きを得ることができます。 まず演習を試してみてください — 不正行為によって得られるものは何もありません！
+![「コミュニティスクールのウェブサイトホームページ」のテキストスタイル設定評価のデザイン完了画面。見出しは「St Huxley's Community College」となっています。バナーヘッダーとコンテンツを区切る赤い行があります。本文は 3 段組みです。最初の一番広い段組みには、学生にとってのカレッジの重要性を示唆するいくつかの段があります。2 つ目の段組みには、カレッジが提供するトップコースの選択肢へのリンクのリストがあります。3 つ目の段組みには、ウェブサイトのさまざまな節へのリンクが長方形の輪郭線で描かれた縦長のナビゲーションバーがあります。](example2.png)
 
 {{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}

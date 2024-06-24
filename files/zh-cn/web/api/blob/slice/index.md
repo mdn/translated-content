@@ -2,10 +2,10 @@
 title: Blob：slice() 方法
 slug: Web/API/Blob/slice
 l10n:
-  sourceCommit: 087562d0b599a23108d596623408680938ed952a
+  sourceCommit: 84a9afd94f497d4173bde131731ef6bdf0b6135d
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 {{domxref("Blob")}} 接口的 **`slice()`** 方法创建并返回一个新的 `Blob` 对象，该对象包含调用它的 blob 的子集中的数据。
 

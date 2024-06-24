@@ -3,6 +3,8 @@ title: Usando Objetos FormData
 slug: Web/API/XMLHttpRequest_API/Using_FormData_Objects
 ---
 
+{{DefaultAPISidebar("XMLHttpRequest API")}}
+
 Los objetos `FormData` le permiten compilar un conjunto de pares clave/valor para enviar mediante `XMLHttpRequest`. Están destinados principalmente para el envío de los datos del formulario, pero se pueden utilizar de forma independiente con el fin de transmitir los datos tecleados. Los datos transmitidos estarán en el mismo formato que usa el método `submit()` del formulario para enviar los datos si el tipo de codificación del formulario se establece en "multipart/form-data".
 
 ## Creación de un objeto FormData desde cero

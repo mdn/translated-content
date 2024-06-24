@@ -1,43 +1,94 @@
 ---
-title: <url>
+title: url()
 slug: Web/CSS/url
+l10n:
+  sourceCommit: 875d97804293021faaf66c16a76e2f31a6df56e1
 ---
 
 {{CSSRef}}
 
-## 概述
+**`url()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions)用于包含文件。参数可以是绝对 URL、相对 URL、blob URL 或数据 URL。**`url()`** 函数可以作为其他 CSS 函数的参数传递，如 {{cssxref("attr")}} 函数。根据属性值的不同，所查找的资源可以是图像、字体或样式表。`url()` 函数标记表示 `<url>` 数据类型的值。
 
-[CSS](/zh-CN/CSS) 数据类型 `<url>` 指向一个资源。它没有独有的表达形式，只能通过 `url()` 函数定义。
+> **备注：** {{Glossary("URI")}} 和 {{Glossary("URL")}} 是不同的。URI 用于标识资源。URL 是 URI 的一种类型，用于描述资源的*位置*。URI 可以是 URL，也可以是资源的名称（{{Glossary("URN")}}）。
+>
+> 在 CSS 第 1 版中，`url()` 函数标记只表示真正的 URL。在 CSS 第 2 版中，`url()` 的定义扩展到可描述任何 URI，无论是 URL 还是 URN。令人困惑的是，这意味着 `url()` 可以用来创建 `<uri>` CSS 数据类型。这种更改不仅笨拙，而且毫无必要，因为 URN 几乎从未在实际 CSS 中使用过。为了减少混淆，CSS 第 3 版又回到了狭义的初始定义。现在，`url()` 只表示真正的 `<url>`。
 
-> **备注：** **URI 和 URL?**
->
-> [URI](https://zh.wikipedia.org/wiki/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E6%A0%87%E5%BF%97%E7%AC%A6)（统一资源标识符）与 [URL](https://zh.wikipedia.org/wiki/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E5%AE%9A%E4%BD%8D%E7%AC%A6)（统一资源定位符）不同。URL 描述资源的位置，而 URI 描述资源的 id。URI 可以是一个资源的 URL（地址）、或 [URN](https://zh.wikipedia.org/wiki/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E5%90%8D%E7%A7%B0)（统一资源名称）。
->
-> 在 CSS Level 1 中，`url()` 函数被引入并用于描述 URL，即地址（虽然没有明确定义，但指一个 CSS 数据类型 `<url>`）
->
-> 在 CSS Level 2 中，`url()` 函数被扩展为可以描述任何一个 URI，即 URL 或 URN。这一定义导致 `url()` 函数被用于创建一个 `<uri>` 数据类型。这一行为使人迷惑，且在 CSS 中几乎从不使用 URN。
->
-> 为了解决这一问题，在 CSS Level 3 中恢复了它的初始定义， `url()` 函数被明确定义为指代 `<url>` CSS 数据类型，且 `<uri>` CSS 数据类型不再存在。
->
-> 注意，这些语义信息并不会影响 Web 开发者的开发和对此数据类型的具体实现。
+```css
+/* 简单用法 */
+url(https://example.com/images/myImg.jpg);
+url(data:image/png;base64,iRxVB0…);
+url(myFont.woff);
+url(#IDofSVGpath);
 
-许多 [CSS 属性](/zh-CN/CSS_Reference) 将 URL 作为属性值，例如 {{ Cssxref("background-image") }}、{{ Cssxref("cursor") }}、{{ Cssxref("@font-face") }}、{{ cssxref("list-style") }} 等。
+/* 相关属性 */
+background-image: url("star.gif");
+list-style-image: url('../images/bullet.jpg');
+content: url("pdficon.jpg");
+cursor: url(mycursor.cur);
+border-image-source: url(/media/diamonds.png);
+src: url('fantasticfont.woff');
+offset-path: url(#path);
+mask-image: url("masks.svg#mask1");
 
-## url() 函数
+/* 带回退的属性 */
+cursor: url(pointer.cur), pointer;
 
-URL 可以使用单引号或双引号包含，也可以直接书写。可以在此函数中使用相对地址。相对地址相对于 CSS 样式表的 URL（而不是网页的 URL）。
+/* 相关的简写属性 */
+background: url('star.gif') bottom right repeat-x blue;
+border-image: url("/media/diamonds.png") 30 fill / 30px / 30px space;
+
+/* 作为另一个 CSS 函数的参数 */
+background-image: cross-fade(20% url(first.png), url(second.png));
+mask-image: image(url(mask.png), skyblue, linear-gradient(rgb(0 0 0 / 100%), transparent));
+
+/* 作为非简写多重数值的一部分 */
+content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
+
+/* at 规则 */
+@document url("https://www.example.com/") { /* … */ }
+@import url("https://www.example.com/style.css");
+@namespace url(http://www.w3.org/1999/xhtml);
+```
+
+如果使用相对 URL，它是相对于样式表的 URL（而不是相对于网页的 URL）。
+
+**`url()`** 函数可以用作 {{cssxref('background')}}、{{cssxref('background-image')}}、{{cssxref('border')}}、{{cssxref('border-image')}}、{{cssxref('border-image-source')}}、{{cssxref('content')}}、{{cssxref('cursor')}}、{{cssxref('filter')}}、{{cssxref('list-style')}}、{{cssxref('list-style-image')}}、{{cssxref('mask')}}、{{cssxref('mask-image')}}、{{cssxref('offset-path')}}、{{cssxref('clip-path')}} 的值，作为 [@font-face](/zh-CN/docs/Web/CSS/@font-face) 块的一部分的 [src](/zh-CN/docs/Web/CSS/@font-face/src)，以及 [@counter-style/symbol](/zh-CN/docs/Web/CSS/@counter-style/symbols)。
 
 ## 语法
 
-```
- <CSS 属性>:  url("http://mysite.example.com/mycursor.png")
+### 值
 
- <CSS 属性>:  url(http://mysite.example.com/mycursor.png)
-```
+- `<string>`
 
-> **备注：** 从 Firefox 15 开始，不再允许在未用引号包含的 url() 中使用大于 0x7e 的控制字符。详情请查看 [Firefox bug 752230](https://bugzil.la/752230)。
+  - : 可以指定一个 URL 或 SVG 形状的 ID 的字符串。
+
+    - \<url>
+
+      - : 为相对地址、绝对地址的 URL，或指向所包含的 web 资源的指针，或数据 URL，可选择使用单引号或双引号。如果 URL 包含括号、空白字符或引号（除非这些字符已转义），或者地址包含高于 0x7e 的控制字符，则需要使用引号。除非经过转义，否则双引号不能出现在双引号内，单引号不能出现在单引号内。以下内容均有效且等效：
+
+        ```css
+        <css_property>: url("https://example.com/image.png")
+        <css_property>: url('https://example.com/image.png')
+        <css_property>: url(https://example.com/image.png)
+        ```
+
+        如果选择不使用引号编写 URL，请在 URL 中的任何括号、空白字符、单引号（`'`）和双引号（`"`）前使用反斜线（`\`）。
+
+    - path
+      - : 引用 [SVG 形状](/zh-CN/docs/Web/SVG/Tutorial/Basic_Shapes)（`circle`、`ellipse`、`line`、`path`、`polygon`、`polyline` 或 `rect`）的 ID ——使用形状的几何体作为路径。
+
+- `<url-modifier>`
+  - 将来，`url()` 函数可能会支持指定修饰符、标识符或函数标记，从而改变 URL 字符串的含义。本规范不支持此特性，也未对其进行全面定义。
+
+### 形式语法
+
+```plain
+url( <string> <url-modifier>* )
+```
 
 ## 示例
+
+### 在 background 属性中使用的 url
 
 ```css
 .topbanner {
@@ -45,9 +96,77 @@ URL 可以使用单引号或双引号包含，也可以直接书写。可以在�
 }
 ```
 
+### 作为列表项目符号加载图像的 url
+
 ```css
 ul {
   list-style: square url(http://www.example.com/redball.png);
+}
+```
+
+### 内容属性中的用法
+
+#### HTML
+
+```html
+<ul>
+  <li>第 1 项</li>
+  <li>第 2 项</li>
+  <li>第 3 项</li>
+</ul>
+```
+
+#### CSS
+
+```css
+li::after {
+  content: " - " url(star.gif);
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample("内容属性中的用法", "100%", 110)}}
+
+### 使用数据 URL
+
+#### HTML
+
+```html
+<div class="background"></div>
+```
+
+#### CSS
+
+```css hidden
+.background {
+  height: 100vh;
+}
+```
+
+```css
+.background {
+  background: yellow;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='45'%3E%3Cpath d='M10 10h60' stroke='%2300F' stroke-width='5'/%3E%3Cpath d='M10 20h60' stroke='%230F0' stroke-width='5'/%3E%3Cpath d='M10 30h60' stroke='red' stroke-width='5'/%3E%3C/svg%3E");
+}
+```
+
+{{EmbedLiveSample("使用数据 URL", "100%", 50)}}
+
+### 在滤镜中的使用
+
+当 URL 被用作滤镜路径时，URL 必须是以下其中之一：
+
+1. SVG 文件的路径，并附加滤镜的 ID。
+2. 如果页面上已经存在 SVG，则为滤镜的 ID。
+
+```css
+.blur {
+  filter: url(my-file.svg#svg-blur); /* 作为滤镜使用的 SVG 文件的 URL */
+}
+
+.inline-blur {
+  filter: url(#svg-blur); /* 嵌入到 HTML 页面中的 SVG 的 ID */
 }
 ```
 
@@ -58,3 +177,11 @@ ul {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{cssxref("&lt;gradient&gt;")}}
+- {{cssxref("element", "element()")}}
+- {{cssxref("image/image", "image()")}}
+- {{cssxref("image/image-set", "image-set()")}}
+- {{cssxref("cross-fade", "cross-fade()")}}

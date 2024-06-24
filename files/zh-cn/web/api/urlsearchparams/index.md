@@ -1,6 +1,8 @@
 ---
 title: URLSearchParams
 slug: Web/API/URLSearchParams
+l10n:
+  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
 {{ApiRef("URL API")}} {{AvailableInWorkers}}

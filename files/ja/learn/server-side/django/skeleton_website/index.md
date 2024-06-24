@@ -17,7 +17,7 @@ slug: Learn/Server-side/Django/skeleton_website
 
 そのプロセスは単純です:
 
-1. `django-admin` ツールを使ってプロジェクトフォルダ、基本的なテンプレートファイル、プロジェクト管理スクリプト(**manage.py**)を作ります .
+1. `django-admin` ツールを使ってプロジェクトフォルダー、基本的なテンプレートファイル、プロジェクト管理スクリプト(**manage.py**)を作ります .
 2. **manage.py** は１つ以上のアプリケーションを作ります。
 
    > **メモ:** ウェブサイトは 1 つ以上のセクションから成ります。例えば、メインサイト、ブログ、ウィキ、ダウンロードエリアなど。Django は、これらのコンポーネントを別々のアプリケーションとして作成することを助けてくれます。それらは、必要なら異なるプロジェクトで再利用できます。
@@ -25,7 +25,7 @@ slug: Learn/Server-side/Django/skeleton_website
 3. プロジェクトにアプリケーションを含めるために登録します。
 4. url/path マッパーはそれらのアプリケーションを結びつけます。
 
-[Local Library website](/ja/docs/Learn/Server-side/Django/Tutorial_local_library_website) のために、ウェブサイトフォルダとプロジェクトフォルダは*locallibrary* という名前をつけます。また、１つのアプリケーションは*catalog*という名前をつけます。 したがって、最上位のフォルダ構成は以下のようになります。:
+[Local Library website](/ja/docs/Learn/Server-side/Django/Tutorial_local_library_website) のために、ウェブサイトフォルダーとプロジェクトフォルダーは*locallibrary* という名前をつけます。また、１つのアプリケーションは*catalog*という名前をつけます。 したがって、最上位のフォルダー構成は以下のようになります。:
 
 ```bash
 locallibrary/         # Website folder
@@ -38,21 +38,21 @@ locallibrary/         # Website folder
 
 ## プロジェクトの作成
 
-始めにコマンドプロンプトまたはターミナルを開いて、（先に自分が仮想環境([virtual environment](/ja/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment))にいることを確認して下さい）、Django アプリを格納したい場所へ移動します（ドキュメントフォルダの中など探しやすい場所にしましょう）。そして、新しいウェブサイトのフォルダ（この場合は _locallibrary_）を作りましょう。そして、cd コマンドでそのフォルダへ移動しましょう。
+始めにコマンドプロンプトまたはターミナルを開いて、（先に自分が仮想環境([virtual environment](/ja/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment))にいることを確認して下さい）、Django アプリを格納したい場所へ移動します（ドキュメントフォルダーの中など探しやすい場所にしましょう）。そして、新しいウェブサイトのフォルダー（この場合は _locallibrary_）を作りましょう。そして、cd コマンドでそのフォルダーへ移動しましょう。
 
 ```bash
 mkdir locallibrary
 cd locallibrary
 ```
 
-以下のように、`django-admin startproject`コマンドで新しいプロジェクトを作り、そのフォルダの中に移動します。
+以下のように、`django-admin startproject`コマンドで新しいプロジェクトを作り、そのフォルダーの中に移動します。
 
 ```bash
 django-admin startproject locallibrary
 cd locallibrary
 ```
 
-`django-admin`ツールは以下のようなフォルダ/ファイル構成を作ります。
+`django-admin`ツールは以下のようなフォルダー/ファイル構成を作ります。
 
 ```bash
 locallibrary/
@@ -69,7 +69,7 @@ locallibrary/
 ../django_projects/locallibrary/
 ```
 
-*locallibrary*プロジェクトのサブフォルダはこのウェブサイトに入口点となります:
+*locallibrary*プロジェクトのサブフォルダーはこのウェブサイトに入口点となります:
 
 - **\_\_init\_\_.py** は空ファイルであり、このディレクトリーを Python パッケージとして扱うように指示します。
 - **settings.py** はすべてのウェブサイトの設定を含んでいます。ここに、我々が作成した全てのアプリケーション、スタティックファイルの場所やデータベースの詳細設定などを登録します。
@@ -80,7 +80,7 @@ locallibrary/
 
 ## catalog アプリケーションの作成
 
-次に、以下のコマンドを実行し、localibrary プロジェクトの中にアプリケーションを作りましょう。（このコマンドはプロジェクト内の manage.py と同じフォルダで実行する必要があります）
+次に、以下のコマンドを実行し、localibrary プロジェクトの中にアプリケーションを作りましょう。（このコマンドはプロジェクト内の manage.py と同じフォルダーで実行する必要があります）
 
 ```bash
 python3 manage.py startapp catalog
@@ -92,7 +92,7 @@ python3 manage.py startapp catalog
 >
 > もし Python 3.7.0 以降を使用しているなら、`py manage.py startapp catalog`で使用できます。
 
-このツールは新しいフォルダを作成し、アプリケーションの様々なパーツとなるファイルをそのフォルダに追加します（以下の太字で表示）。 ほとんどのファイルは目的に応じて便利な名前が付けられており(例えば ビューは**views.py**に、モジュールは **models.py**に、テストは**tests.py**に、管理サイトの設定は **admin.py**に、アプリケーションの登録は**apps.py**に保存する必要がある)、 さらに、関連するオブジェクトを操作するための最低限の定型的なコードを用意している。
+このツールは新しいフォルダーを作成し、アプリケーションの様々なパーツとなるファイルをそのフォルダーに追加します（以下の太字で表示）。 ほとんどのファイルは目的に応じて便利な名前が付けられており(例えば ビューは**views.py**に、モジュールは **models.py**に、テストは**tests.py**に、管理サイトの設定は **admin.py**に、アプリケーションの登録は**apps.py**に保存する必要がある)、 さらに、関連するオブジェクトを操作するための最低限の定型的なコードを用意している。
 
 アップデートされた後のプロジェクトディレクトリーはこのようになる:
 
@@ -113,7 +113,7 @@ locallibrary/
 加えて今持っているものは:
 
 - "マイグレーション"を格納するためのマイグレーションフォルダーモデルを変更した場合に自動的にデータベースの変更をするためのファイル
-- **\_\_init\_\_.py** — Django/Python がこのフォルダを [Python Package](https://docs.python.org/3/tutorial/modules.html#packages) であると認識するためにここに作られた空のファイル。そうすることで、このオブジェクトは他のプロジェクトでも使用できる。
+- **\_\_init\_\_.py** — Django/Python がこのフォルダーを [Python Package](https://docs.python.org/3/tutorial/modules.html#packages) であると認識するためにここに作られた空のファイル。そうすることで、このオブジェクトは他のプロジェクトでも使用できる。
 
 > **メモ:** 上記ファイルリストに何か欠けているものがあることに気づきましたか？ ビューやモデルがある一方で、URL マッピング、テンプレート、静的ファイルの配置場所はありません。それらの作り方も以後説明します。(それらは全てのサイトで必須ではないですが、この例では必要になります。).
 

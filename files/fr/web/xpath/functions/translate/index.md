@@ -3,7 +3,7 @@ title: translate
 slug: Web/XPath/Functions/translate
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `translate` évalue une chaîne et un ensemble de caractères à traduire, et retourne la chaîne traduite.
 

@@ -3,6 +3,8 @@ title: Web Audio API
 slug: Web/API/Web_Audio_API
 ---
 
+{{DefaultAPISidebar("Web Audio API")}}
+
 La Web Audio API propose un système puissant et flexible pour contrôler les données audio sur internet. Elle permet notamment de sélectionner des sources audio (microphone, flux media), d'y ajouter des effets, de créer des visualisations, d'appliquer des effets de spatialisation (comme la balance), etc.
 
 ## Concepts et usages

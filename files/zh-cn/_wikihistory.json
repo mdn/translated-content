@@ -831,10 +831,6 @@
     "modified": "2020-10-09T04:30:17.457Z",
     "contributors": ["benniks", "lizzxc"]
   },
-  "Glossary/GZip_compression": {
-    "modified": "2019-03-18T20:37:26.371Z",
-    "contributors": ["RainSlide"]
-  },
   "Glossary/Garbage_collection": {
     "modified": "2020-08-17T13:28:57.259Z",
     "contributors": ["xgqfrms"]
@@ -1605,6 +1601,10 @@
   "Glossary/XQuery": {
     "modified": "2019-03-18T21:21:58.755Z",
     "contributors": ["Chor"]
+  },
+  "Glossary/gzip_compression": {
+    "modified": "2019-03-18T20:37:26.371Z",
+    "contributors": ["RainSlide"]
   },
   "Learn": {
     "modified": "2020-07-16T22:43:49.854Z",
@@ -8251,10 +8251,6 @@
   "Web/API/Document_Object_Model/Examples": {
     "modified": "2019-03-24T00:15:45.643Z",
     "contributors": ["LianJilu", "Ke.shidong", "Ende93", "khalid32", "ziyunfei"]
-  },
-  "Web/API/Document_Object_Model/How_to_create_a_DOM_tree": {
-    "modified": "2019-03-23T22:09:45.087Z",
-    "contributors": ["ArcherGrey"]
   },
   "Web/API/Document_Object_Model/Introduction": {
     "modified": "2019-07-17T11:05:34.542Z",
@@ -15097,6 +15093,20 @@
     "modified": "2019-03-18T21:40:44.436Z",
     "contributors": ["Aaron_Zhung", "echoArray"]
   },
+  "Web/API/Window/atob": {
+    "modified": "2020-10-15T21:07:00.713Z",
+    "contributors": [
+      "RainSlide",
+      "zhangchen",
+      "nkliyc",
+      "dingyanhe",
+      "xgqfrms-GitHub",
+      "ziyunfei",
+      "happyWang",
+      "teoli",
+      "khalid32"
+    ]
+  },
   "Web/API/Window/back": {
     "modified": "2019-03-23T22:12:59.387Z",
     "contributors": ["xilixinluo"]
@@ -15134,6 +15144,21 @@
   "Web/API/Window/blur_event": {
     "modified": "2020-10-15T22:18:42.062Z",
     "contributors": ["zhangchen", "mozzix"]
+  },
+  "Web/API/Window/btoa": {
+    "modified": "2020-10-15T21:06:58.236Z",
+    "contributors": [
+      "RainSlide",
+      "zhangchen",
+      "RoXoM",
+      "Carrotzpc",
+      "dingyanhe",
+      "xgqfrms-GitHub",
+      "ziyunfei",
+      "teoli",
+      "khalid32",
+      "cuixiping"
+    ]
   },
   "Web/API/Window/caches": {
     "modified": "2019-09-21T03:33:16.440Z",
@@ -16088,35 +16113,6 @@
   "Web/API/XPathEvaluator": {
     "modified": "2020-10-15T22:15:17.137Z",
     "contributors": ["CarmeloXue", "Sebastianz"]
-  },
-  "Web/API/atob": {
-    "modified": "2020-10-15T21:07:00.713Z",
-    "contributors": [
-      "RainSlide",
-      "zhangchen",
-      "nkliyc",
-      "dingyanhe",
-      "xgqfrms-GitHub",
-      "ziyunfei",
-      "happyWang",
-      "teoli",
-      "khalid32"
-    ]
-  },
-  "Web/API/btoa": {
-    "modified": "2020-10-15T21:06:58.236Z",
-    "contributors": [
-      "RainSlide",
-      "zhangchen",
-      "RoXoM",
-      "Carrotzpc",
-      "dingyanhe",
-      "xgqfrms-GitHub",
-      "ziyunfei",
-      "teoli",
-      "khalid32",
-      "cuixiping"
-    ]
   },
   "Web/API/clearInterval": {
     "modified": "2020-10-15T21:21:33.193Z",
@@ -20856,17 +20852,6 @@
       "TimZhao"
     ]
   },
-  "Web/Demos": {
-    "modified": "2019-09-04T03:32:34.828Z",
-    "contributors": [
-      "RainSlide",
-      "yzweb2018",
-      "nanflower",
-      "Vevlins",
-      "wth",
-      "awesomeric"
-    ]
-  },
   "Web/EXSLT/regexp": {
     "modified": "2019-01-16T21:33:33.048Z",
     "contributors": ["Sheppy"]
@@ -22763,10 +22748,6 @@
   "Web/HTTP/Headers/Accept-CH": {
     "modified": "2020-10-15T22:24:12.153Z",
     "contributors": ["xuhui98"]
-  },
-  "Web/HTTP/Headers/Accept-CH-Lifetime": {
-    "modified": "2020-10-15T22:25:10.809Z",
-    "contributors": ["chen3feng"]
   },
   "Web/HTTP/Headers/Accept-Charset": {
     "modified": "2020-10-15T21:50:53.082Z",

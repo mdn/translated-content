@@ -3,6 +3,8 @@ title: AJAX
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 ---
 
+{{LearnSidebar}}
+
 **[Primeros Pasos](/es/docs/Web/Guide/AJAX/Getting_Started)**
 Una introducción a AJAX.
 
