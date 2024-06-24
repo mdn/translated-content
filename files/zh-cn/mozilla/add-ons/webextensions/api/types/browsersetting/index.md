@@ -9,16 +9,16 @@ l10n:
 
 `BrowserSetting` 是一个表示浏览器设置的对象。
 
-它提供了方法来设置和获取设置的基础值，清除扩展程序对其进行的任何更改，并监听其值的变化。
+它提供了方法来设置和获取设置的基础值，清除扩展程序对其进行的任何更改，和监听其值的变化。
 
-请注意，虽然此对象基于 [ChromeSetting](https://developer.chrome.com/docs/extensions/reference/types/#type-ChromeSetting) 类型，但它不区分在普通浏览窗口和私密浏览窗口中设置值。这意味着所有与私密浏览相关的 API 部分（例如 `ChromeSetting.set()` 的 `scope` 选项）未实现。
+请注意，虽然此对象基于 [ChromeSetting](https://developer.chrome.com/docs/extensions/reference/types/#type-ChromeSetting) 类型，但它不区分在普通浏览窗口和私密浏览窗口中设置值。这意味着所有与无痕浏览相关的 API 部分（例如 `ChromeSetting.set()` 的 `scope` 选项）未实现。
 
 ## 方法
 
 - {{WebExtAPIRef("types.BrowserSetting.get()")}}
-  - : 获取设置的当前值，并返回一个枚举表示设置当前的控制状态。
+  - : 获取设置的当前值，并返回一个表示当前设置可以如何控制的枚举值。
 - {{WebExtAPIRef("types.BrowserSetting.set()")}}
-  - : 将设置设置为新值。
+  - : 将设置设定为新值。
 - {{WebExtAPIRef("types.BrowserSetting.clear()")}}
   - : 清除扩展程序对设置所做的任何更改。
 
