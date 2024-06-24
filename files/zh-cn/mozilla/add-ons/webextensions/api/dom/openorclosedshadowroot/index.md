@@ -9,9 +9,9 @@ l10n:
 
 获取指定元素的开放或封闭的影子根。如果影子根未附加到该元素，则返回 `null`。
 
-> **备注：** 在 Firefox 中，等效属性是 `element.openOrClosedShadowRoot`。该只读属性表示元素所承载的 Shadow DOM，无论其 {{DOMxRef("ShadowRoot.mode", "mode")}} 是 `open` 还是 `closed`。
+> **备注：** 在 Firefox 中，等效属性是 `element.openOrClosedShadowRoot`。该只读属性表示元素所承载的影子 DOM，无论其 {{DOMxRef("ShadowRoot.mode", "mode")}} 是 `open` 还是 `closed`。
 >
-> 使用 {{DOMxRef("Element.attachShadow()")}} 将 Shadow DOM 添加到元素中。
+> 使用 {{DOMxRef("Element.attachShadow()")}} 将影子 DOM 添加到元素中。
 
 ## 语法
 
@@ -28,8 +28,7 @@ let shadowRoot = browser.dom.openOrClosedShadowRoot(
 
 ### 返回值
 
-一个 {{DOMxRef("ShadowRoot")}} 对象实例，无论其
-{{DOMxRef("ShadowRoot.mode", "mode")}} 设置为 `open` 还是 `closed`，如果没有 Shadow DOM，则返回 `null`。
+一个 {{DOMxRef("ShadowRoot")}} 对象实例，无论其 {{DOMxRef("ShadowRoot.mode", "mode")}} 设置为 `open` 还是 `closed`，如果没有影子 DOM，则返回 `null`。
 
 ## 浏览器兼容性
 
