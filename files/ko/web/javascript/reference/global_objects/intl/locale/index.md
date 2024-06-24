@@ -29,7 +29,7 @@ l10n:
 | {{jsxref("Intl/Locale/numberingSystem", "numberingSystem")}} | `nu` (확장)                    |
 | {{jsxref("Intl/Locale/numeric", "numeric")}}                 | `kn` (확장)                    |
 
-위 정보는 외부 데이터베이스를 참조하지 않고 `Locale` 객체가 생성될 때 그대로 제공됩니다. `Intl.Locale` 객체는 사용 가능한 달력, 콜레이션 및 숫자 체계와 같은 로케일의 실제 정보에 대한 정보를 반환하는 몇 가지 메서드를 추가로 제공합니다.
+위 정보는 외부 데이터베이스를 참조하지 않고 `Locale` 객체가 생성될 때 그대로 제공됩니다. `Intl.Locale` 객체는 사용 가능한 달력, 정렬 방식(collations) 및 숫자 체계와 같은 로케일의 실제 정보에 대한 정보를 반환하는 몇 가지 메서드를 추가로 제공합니다.
 
 ## 생성자
 
@@ -41,7 +41,7 @@ l10n:
 아래 속성은 `Intl.Locale.prototype`에 정의되어 있으며 모든 `Intl.Locale` 객체가 이를 공유합니다.
 
 - {{jsxref("Intl/Locale/baseName", "Intl.Locale.prototype.baseName")}}
-  - : 전체 데이터 문자열의 하위 문자열 형태로 'Locale'에 대한 기본 핵심 정보를 반환합니다.
+  - : 전체 데이터 문자열의 하위 문자열 형태로 `Locale`에 대한 기본 핵심 정보를 반환합니다.
 - {{jsxref("Intl/Locale/calendar", "Intl.Locale.prototype.calendar")}}
   - : 로케일의 달력 시대를 가리키는 `Locale`의 부분을 반환합니다.
 - {{jsxref("Intl/Locale/caseFirst", "Intl.Locale.prototype.caseFirst")}}
@@ -100,7 +100,7 @@ const us = new Intl.Locale("en-US");
 
 ### options 객체와 함께 Locale 생성자를 사용
 
-또한 생성자는 여러 확장 유형 중 하나를 포함할 수 있는, 선택적인 구성 객체 인수를 받습니다. 예를 들어, 구성 객체의 {{jsxref("Intl/Locale/hourCycle", "hourCycle")}} 속성을 원하는 시간 주기 유형으로 설정한 다음 생성자에 전달합니다.
+생성자는 또한 선택적으로 구성 객체 인수를 받을 수 있으며, 이 객체에는 여러 확장 유형 중의 하나가 포함될 수 있습니다. 예를 들어, 구성 객체의 {{jsxref("Intl/Locale/hourCycle", "hourCycle")}} 속성을 원하는 시간 주기 유형으로 설정한 다음 생성자에 전달합니다.
 
 ```js
 const us12hour = new Intl.Locale("en-US", { hourCycle: "h12" });
