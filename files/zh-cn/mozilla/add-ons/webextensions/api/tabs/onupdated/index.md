@@ -26,7 +26,7 @@ browser.tabs.onUpdated.removeListener(listener)
 browser.tabs.onUpdated.hasListener(listener)
 ```
 
-事件有三个功能：
+事件有三个函数：
 
 - `addListener(callback, filter)`
   - : 向此事件添加一个监听器。
@@ -73,14 +73,14 @@ browser.tabs.onUpdated.hasListener(listener)
         - `"title"`
         - `"url"`
 
-        > **备注：** `"url"` 值自 Firefox 88 起支持。在 Firefox 87 及更早版本中，可以通过过滤 "status" 来观察 `"url"` 的更改。
+        > **备注：** `"url"` 值自 Firefox 88 起支持。在 Firefox 87 及更早版本中，可以通过过滤“status”来观察 `"url"` 的更改。
 
     - `tabId`
-      - : `Integer`。仅当此 ID 标识的标签页触发此事件时才发送事件。
+      - : `Integer`。仅针对此 ID 标识的标签页触发该事件。
     - `windowId`
-      - : `Integer`。仅当此 ID 标识的窗口中的标签页触发此事件时才发送事件。
+      - : `Integer`。仅针对此 ID 标识的窗口中的标签页触发该事件。
 
-## 其他对象
+## 附加对象
 
 ### changeInfo
 
@@ -97,9 +97,9 @@ browser.tabs.onUpdated.hasListener(listener)
 - `favIconUrl` {{optional_inline}}
   - : `string`。标签页的新图标 URL。当标签页失去图标（从具有图标的页面导航到没有图标的页面）时不包括此属性。请检查 [tab](#tab) 中的 `favIconUrl`。
 - `hidden` {{optional_inline}}
-  - : `boolean`。如果标签页是 {{WebExtAPIRef("tabs.hide()", "隐藏的")}}，则为 `true`。
+  - : `boolean`。如果标签页是{{WebExtAPIRef("tabs.hide()", "隐藏的", 1)}}，则为 `true`。
 - `isArticle` {{optional_inline}}
-  - : `boolean`。如果标签页是文章，因此可以显示在 {{WebExtAPIRef("tabs.toggleReaderMode()", "阅读模式")}} 中，则为 `true`。
+  - : `boolean`。如果标签页是文章，因此可以显示在{{WebExtAPIRef("tabs.toggleReaderMode()", "阅读模式", 1)}}中，则为 `true`。
 - `mutedInfo` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfo')}}。标签页的新静音状态及更改原因。
 - `pinned` {{optional_inline}}
