@@ -10,7 +10,7 @@ l10n:
 当作为浏览器扩展提供的主题被应用或移除时触发。具体情况包括：
 
 - 安装[静态主题](https://extensionworkshop.com/documentation/themes/static-themes/)时
-- 安装[动态主题](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/theme)调用 [`theme.update()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/theme/update) 或 [`theme.reset()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/theme/reset) 时
+- [动态主题](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/theme)调用 [`theme.update()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/theme/update) 或 [`theme.reset()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/theme/reset) 时
 - 主题被卸载时
 
 此事件不会因内置主题的更改而触发。
@@ -26,7 +26,7 @@ browser.theme.onUpdated.hasListener(listener)
 事件有三个函数：
 
 - `addListener(listener)`
-  - : 添加一个监听器到此事件。
+  - : 为此事件添加一个监听器。
 - `removeListener(listener)`
   - : 停止监听此事件。`listener` 参数是要移除的监听器。
 - `hasListener(listener)`
