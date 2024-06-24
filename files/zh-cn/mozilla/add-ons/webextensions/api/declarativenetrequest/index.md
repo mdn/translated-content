@@ -225,6 +225,8 @@ l10n:
   - : 修改扩展的会话范围规则集。
 - {{WebExtAPIRef("declarativeNetRequest.updateStaticRules()")}}
   - : 修改静态规则集中的规则的启用状态。
+- {{WebExtAPIRef("declarativeNetRequest.updateStaticRules()")}}
+  - : 修改静态规则集中的规则的启用状态。
 
 ## 事件
 
