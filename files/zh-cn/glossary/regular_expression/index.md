@@ -9,7 +9,7 @@ l10n:
 
 **正则表达式**（_regex_）是决定了在搜索中使用何种字符串序列的规则。
 
-正则表达式在多种语言中都得到了实现，但是最知名的实现，当属 Perl 的实现。该实现引出了名为 PCRE（_Perl Compatible Regular Expression_）的生态系统。在 Web 中，{{glossary("JavaScript")}} 通过 {{jsxref("RegExp")}} 对象，给出了正则表达式的另一种实现。
+正则表达式在多种语言中都得到了实现，但是最知名的实现，当属 Perl 的实现。该实现引出了名为 PCRE（_Perl Compatible Regular Expression_，Perl 兼容的正则表达式）的生态系统。在 Web 中，{{glossary("JavaScript")}} 通过 {{jsxref("RegExp")}} 对象，给出了正则表达式的另一种实现。
 
 ## 参见
 
