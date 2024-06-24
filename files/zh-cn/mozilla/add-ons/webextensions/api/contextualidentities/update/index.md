@@ -66,7 +66,7 @@ let createContext = browser.contextualIdentities.update(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在更新身份完成时其会兑现一个描述已更新身份的 {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} 对象。如果无法找到该身份或未启用上下文身份功能，则 promise 被拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在更新身份完成时其会兑现一个描述已更新身份的 {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} 对象。如果无法找到该身份或未启用场景身份特性，则 promise 被拒绝。
 
 ## 浏览器兼容性
 
