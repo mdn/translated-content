@@ -190,15 +190,15 @@ recognition.onerror = function (event) {
 };
 ```
 
-## Speech synthesis
+## 语音合成
 
-Speech synthesis（语音合成，也被称作是文本转为语音，英语简写是 TTS）包括接收 app 中需要语音合成的文本，再在设备扬声器或音频输出连接中播放出来这两个过程。
+语音合成（也被称作文本转语音或 TTS）包括接收 app 中需要语音合成的文本，再在设备扬声器或音频输出连接中播放出来这两个过程。
 
 Web Speech API 对此有一个主要控制接口——[`SpeechSynthesis`](/zh-CN/docs/Web/API/SpeechSynthesis) ，外加一些处理如何表示要被合成的文本 (也被称为 utterances)，用什么声音来播出 utterances 等工作的相关接口。同样的，许多操作系统都有自己的某种语音合成系统，在这个任务中我们调用可用的 API 来使用语音合成系统。
 
-### Demo
+### 演示
 
-为了展示 Web 语音合成的简单使用，我们提供了一个例子 —— [Speak easy synthesis](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis) 。例子是一套表单控件，包括输入需要被合成的文本，设置音调、语速和说出文本时需要的语音。在输入文本之后，按下 <kbd>Enter</kbd>/<kbd>Return</kbd> 键使它播放。
+为了展示 Web 语音合成的简单使用，我们提供了一个例子——[Speak easy synthesis](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis)。其包含一套用于输入要合成的文本，以及设置朗读文本时使用的音调、语速和声音的表单控件。在输入文本之后，按下 <kbd>Enter</kbd>/<kbd>Return</kbd> 键使它播放。
 
 ![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesised, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](speak-easy-synthesis.png)
 
@@ -244,7 +244,7 @@ HTML 和 CSS 还是无足轻重，只是简单包含一个标题，一段介绍�
 
 #### 设置变量
 
-首先我们获得 UI 中涉及的 DOM 元素的引用，但更有趣的是，我们获得了[`Window.speechSynthesis`](/zh-CN/docs/Web/API/Window/speechSynthesis) 的引用。这是 API 的入口点 —— 它返回了[`SpeechSynthesis`](/zh-CN/docs/Web/API/SpeechSynthesis) 的一个实例，对于 web 语音合成的控制接口。
+首先我们获得 UI 中涉及的 DOM 元素的引用，但更有趣的是，我们获得了 {{domxref("Window.speechSynthesis")}} 的引用。这是 API 的入口点——它返回了 {{domxref("SpeechSynthesis")}} 的一个实例，这是 web 语音合成的控制接口。
 
 ```js
 var synth = window.speechSynthesis;
@@ -263,7 +263,7 @@ var voices = [];
 
 #### 填充 select 元素
 
-为使用设备上可用的不同的语音选项填充 {{htmlelement("select")}} 元素，我们写了一个 `populateVoiceList()` 方法。首先调用 [`SpeechSynthesis.getVoices()`](/zh-CN/docs/Web/API/SpeechSynthesis/getVoices) ，这个函数返回包含所有可用语音 ([`SpeechSynthesisVoice`](/zh-CN/docs/Web/API/SpeechSynthesisVoice)对象) 的列表。接下来循环这个列表，每次创建一个 {{htmlelement("option")}} 元素，设置它的文本内容以显示声音的名称（从 {{domxref("SpeechSynthesisVoice.name")}} 获取），语音的语言（从 {{domxref("SpeechSynthesisVoice.lang")}} 获取），如果某个语音是合成引擎默认的 (检查 {{domxref("SpeechSynthesisVoice.default")}} 为 `true` 的属性) 在文本内容后面添加 `-- DEFAULT`。
+为使用设备上可用的不同的语音选项填充 {{htmlelement("select")}} 元素，我们写了一个 `populateVoiceList()` 函数。首先调用 {{domxref("SpeechSynthesis.getVoices()")}}，这个函数返回包含所有可用语音（由 {{domxref("SpeechSynthesisVoice")}} 对象表示）的列表。接下来循环这个列表，每次创建一个 {{htmlelement("option")}} 元素，设置它的文本内容以显示声音的名称（从 {{domxref("SpeechSynthesisVoice.name")}} 获取）、语音的语言（从 {{domxref("SpeechSynthesisVoice.lang")}} 获取），如果某个语音是合成引擎默认的（检查 {{domxref("SpeechSynthesisVoice.default")}} 为 `true` 的属性）在文本内容后面添加 `-- DEFAULT`。
 
 对于每个 `option` 元素，我们也创建了 `data-` 属性，属性值是语音的名字和语言，这样在之后我们可以轻松获取这个信息。之后把所有的 `option` 元素作为孩子添加到 `select` 元素内。
 
@@ -286,9 +286,7 @@ function populateVoiceList() {
 }
 ```
 
-早期版本的浏览器不支持 {{domxref("SpeechSynthesis.voiceschanged_event", "voiceschanged")}} 事件，只有当 {{domxref("SpeechSynthesis.getVoices()")}} 被触发时才返回语音列表。
-而其他浏览器，比如 Chrome 中，你必须等待 `voiceschanged` 事件触发后才能获得可用语音列表。
-为了兼容这两种情况，我们运行如下代码：
+早期版本的浏览器不支持 {{domxref("SpeechSynthesis.voiceschanged_event", "voiceschanged")}} 事件，只有当 {{domxref("SpeechSynthesis.getVoices()")}} 被触发时才返回语音列表。而其他浏览器，比如 Chrome 中，你必须等待 `voiceschanged` 事件触发后才能获得可用语音列表。为了兼容这两种情况，我们运行如下代码：
 
 ```js
 populateVoiceList();
@@ -299,9 +297,9 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 
 #### 说出输入的文本
 
-接下来我们创建一个事件处理器（event handler），开始说出在文本框中输入的文本。我们把 [onsubmit](/zh-CN/docs/Web/API/HTMLFormElement/submit_event) 处理器挂在表单上，当 <kbd>Enter</kbd>/<kbd>Return</kbd> 被按下，对应行为就会发生。我们首先通过构造函数创建一个新的 {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "SpeechSynthesisUtterance()")}} 实例 —— 把文本输入框中的值作为参数传递。
+接下来我们创建一个事件处理器（event handler），开始说出在文本框中输入的文本。我们把 [onsubmit](/zh-CN/docs/Web/API/HTMLFormElement/submit_event) 处理器挂在表单上，当 <kbd>Enter</kbd>/<kbd>Return</kbd> 被按下，对应行为就会发生。我们首先通过构造函数创建一个新的 {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "SpeechSynthesisUtterance()")}} 实例——把文本输入框中的值作为参数传递。
 
-接下来，我们需要弄清楚使用哪种语音。使用 {{domxref("HTMLSelectElement")}} `selectedOptions` 属性返回当前选中的 [`<option>`](/zh-CN/docs/Web/HTML/Element/option) 元素。然后使用元素的`data-name`属性，找到 [`SpeechSynthesisVoice`](/zh-CN/docs/Web/API/SpeechSynthesisVoice) 对象的`name`匹配`data-name` 的值。把匹配的语音对象设置为[`SpeechSynthesisUtterance.voice`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/voice) 的属性值。
+接下来，我们需要弄清楚使用哪种语音。使用 {{domxref("HTMLSelectElement")}} `selectedOptions` 属性返回当前选中的 [`<option>`](/zh-CN/docs/Web/HTML/Element/option) 元素。然后使用元素的 `data-name` 属性，找到 `name` 匹配该属性值的 {{domxref("SpeechSynthesisVoice")}} 对象。把匹配的语音对象设置为{{domxref("SpeechSynthesisUtterance.voice")}} 的属性值。
 
 最后，我们设置 [`SpeechSynthesisUtterance.pitch`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/pitch) 和[`SpeechSynthesisUtterance.rate`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/rate) 属性值为对应范围表单元素中的值。哈哈所有准备工作就绪，调用 [`SpeechSynthesis.speak()`](/zh-CN/docs/Web/API/SpeechSynthesis/speak) 开始说话。把 [`SpeechSynthesisUtterance`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance) 实例作为参数传递。
 
