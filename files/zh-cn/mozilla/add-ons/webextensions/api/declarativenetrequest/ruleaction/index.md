@@ -7,6 +7,8 @@ l10n:
 
 {{AddonSidebar}}
 
+{{WebExtAPIRef("declarativeNetRequest.Rule")}} 的 `action` 属性表明了在匹配到规则时采取的相应动作的细节。
+
 ## 类型
 
 该类型的值是对象。它们包含以下属性：
