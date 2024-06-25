@@ -117,7 +117,7 @@ const color1 = new String("green");
 "length" in color1; // true
 
 const color2 = "coral";
-// сгенерирует ошибку (color2 is not a String object)
+// сгенерирует ошибку (color2 не является объектом String)
 "length" in color2;
 ```
 
