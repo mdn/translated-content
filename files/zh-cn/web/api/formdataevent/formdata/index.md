@@ -16,7 +16,6 @@ l10n:
 ## 示例
 
 ```js
-
 // 获取对表单的引用。
 const formElem = document.querySelector("form");
 
