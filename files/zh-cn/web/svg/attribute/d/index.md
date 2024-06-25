@@ -827,11 +827,11 @@ svg {
     <polyline points="10,50 25,25 40,50" stroke="rgba(0,0,0,.2)" fill="none" />
     <circle cx="25" cy="25" r="1.5" />
 
-    <!-- Curve vertex points -->
+    <!-- 曲线顶点 -->
     <circle cx="10" cy="50" r="1.5" />
     <circle cx="40" cy="50" r="1.5" />
 
-    <g id="曲线顶点">
+    <g id="SmoothQuadraticDown">
       <polyline
         points="40,50 55,75 70,50"
         stroke="rgba(0,0,0,.2)"
