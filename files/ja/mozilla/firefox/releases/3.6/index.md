@@ -21,8 +21,8 @@ Firefox 3.6 では新規あるいは開発中のウェブ標準のサポート�
   - : [CSS 3 Backgrounds and Borders 草案](http://dev.w3.org/csswg/css3-background/)の `background-size プロパティが` [`-moz-background-size`](/ja/docs/Web/CSS/-moz-background-size) としてサポートされました。
 - [WOFF フォントのサポート](/ja/docs/About_WOFF)
   - : [`@font-face`](/ja/docs/Web/CSS/@font-face) が新しい WOFF ウェブフォントファイルフォーマットをサポートしました。
-- [ポインタイベント](/ja/docs/CSS/pointer-events)
-  - : [`pointer-events`](/ja/docs/Web/CSS/pointer-events) プロパティにより、要素がマウスポインタのイベントのターゲットであるかどうかをコンテンツが指定できるようになります。
+- [ポインターイベント](/ja/docs/CSS/pointer-events)
+  - : [`pointer-events`](/ja/docs/Web/CSS/pointer-events) プロパティにより、要素がマウスポインターのイベントのターゲットであるかどうかをコンテンツが指定できるようになります。
 
 #### その他の CSS の変更
 
