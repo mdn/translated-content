@@ -146,7 +146,7 @@ mycar.make = undefined;
 ```js
 const trees = ["redwood", "bay", "cedar", "oak", "maple"];
 trees[3] = undefined;
-3 in trees; // returns true
+3 in trees; // true
 ```
 
 Оператор `in` вернёт `false` для [пустых слотов в массиве](/ru/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), несмотря на то, что прямой доступ к свойству вернёт `undefined`.
