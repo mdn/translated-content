@@ -97,7 +97,7 @@ const trees = ["redwood", "bay", "cedar", "oak", "maple"];
 0 in trees; // true
 3 in trees; // true
 6 in trees; // false
-"bay" in trees; // false (вы должны указать индекс элемента в массиве, а не значение в этом индексе)
+"bay" in trees; // false (необходимо указать индекс элемента в массиве, а не значение)
 "length" in trees; // true (length является свойством Array)
 Symbol.iterator in trees; // true
 
