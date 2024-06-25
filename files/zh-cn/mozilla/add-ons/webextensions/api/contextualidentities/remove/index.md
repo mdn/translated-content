@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-移除给定 cookie 存储 ID 的上下文身份。
+移除给定 cookie 存储 ID 的场景身份。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -22,11 +22,11 @@ let removeContext = browser.contextualIdentities.remove(
 ### 参数
 
 - `cookieStoreId`
-  - : `string`。上下文身份的 cookie 存储 的 ID。由于每个上下文身份都有自己的 cookie 存储，因此这也作为上下文身份的标识符。
+  - : `string`。场景身份的 cookie 存储 的 ID。由于每个场景身份都有自己的 cookie 存储，因此这也作为场景身份的标识符。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在上下文身份删除完成时其会兑现一个描述已删除身份的 {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} 对象。如果无法找到该身份或未启用上下文身份功能，则 promise 被拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在场景身份删除完成时其会兑现一个描述已删除身份的 {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} 对象。如果无法找到该身份或未启用场景身份功能，则 promise 被拒绝。
 
 ## 浏览器兼容性
 
@@ -34,12 +34,12 @@ let removeContext = browser.contextualIdentities.remove(
 
 ## 示例
 
-此示例尝试移除 ID 为“firefox-container-1”的上下文身份：
+此示例尝试移除 ID 为“firefox-container-1”的场景身份：
 
 ```js
 function onRemoved(context) {
   if (!context) {
-    console.error("上下文未找到");
+    console.error("场景未找到");
   } else {
     console.log(`已删除身份：${context.cookieStoreId}.`);
   }
