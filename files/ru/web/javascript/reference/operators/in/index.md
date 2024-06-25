@@ -114,7 +114,7 @@ const mycar = { make: "Honda", model: "Accord", year: 1998 };
 
 ```js
 const color1 = new String("green");
-"length" in color1; // returns true
+"length" in color1; // true
 
 const color2 = "coral";
 // сгенерирует ошибку (color2 is not a String object)
