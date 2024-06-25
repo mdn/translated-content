@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-当创建新的上下文身份时触发事件。上下文身份可以由扩展使用 `contextualIdentities` API 创建，也可以由用户直接通过浏览器的用户界面创建。
+当创建新的场景身份时触发事件。场景身份可以由扩展使用 `contextualIdentities` API 创建，也可以由用户直接通过浏览器的用户界面创建。
 
 ## 语法
 
