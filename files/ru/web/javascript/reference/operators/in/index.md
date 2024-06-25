@@ -144,7 +144,7 @@ mycar.make = undefined;
 ```
 
 ```js
-const trees = new Array("redwood", "bay", "cedar", "oak", "maple");
+const trees = ["redwood", "bay", "cedar", "oak", "maple"];
 trees[3] = undefined;
 3 in trees; // returns true
 ```
