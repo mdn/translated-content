@@ -407,8 +407,8 @@ l10n:
         >、<a href="/zh-CN/docs/Web/API/TextTrack#events"><code>TextTrack</code></a
         >、<a href="/zh-CN/docs/Web/API/TextTrackList#events"
           ><code>TextTrackList</code></a
-        >、<a href="/zh-CN/docs/Web/HTML/Element/audio#events">Element/audio</a>,
-        <a href="/zh-CN/docs/Web/HTML/Element/video#events">Element/video</a> 上触发的事件。
+        >、<a href="/zh-CN/docs/Web/HTML/Element/audio#事件">Element/audio</a>,
+        <a href="/zh-CN/docs/Web/HTML/Element/video#事件">Element/video</a> 上触发的事件。
       </td>
     </tr>
     <tr>
