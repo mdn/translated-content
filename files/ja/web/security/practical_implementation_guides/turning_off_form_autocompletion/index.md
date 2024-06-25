@@ -1,6 +1,7 @@
 ---
 title: フォームの自動補完を無効にするには
-slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
+slug: Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
+original_slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 ---
 
 この記事では、フォーム入力欄の自動補完をウェブサイト側から無効にする方法を説明します。

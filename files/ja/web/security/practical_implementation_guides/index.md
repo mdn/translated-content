@@ -1,6 +1,7 @@
 ---
 title: サイトの安全化
-slug: Web/Security/Securing_your_site
+slug: Web/Security/Practical_implementation_guides
+original_slug: Web/Security/Securing_your_site
 ---
 
 サイトをより安全にする方法はいくつもあります。この記事では、その方法を紹介するとともに、他のより有益な記事へのリンクを掲載しています。
