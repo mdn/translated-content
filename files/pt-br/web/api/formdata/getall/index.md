@@ -34,7 +34,7 @@ A seguinte linha cria um objeto `FormData` vazio:
 var formData = new FormData();
 ```
 
-Se nos adicionarmos dois valores oara `username` {{domxref("FormData.append")}}:
+Se nós adicionarmos dois valores para `username` {{domxref("FormData.append")}}:
 
 ```js
 formData.append("username", "Chris");
