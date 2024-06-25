@@ -10,7 +10,7 @@ slug: Glossary/Signature/Function
 一个签名可以包括：
 
 - {{Glossary("Parameter", "参数")}}及参数的{{Glossary("Type", "类型")}}
-- 一个返回值及其类型
+- 返回值及其类型
 - 可能会抛出或传回的{{Glossary("Exception", "异常")}}
 - 有关{{Glossary("OOP", "面向对象")}}程序中方法可用性的信息（例如关键字 `public`、`static` 或 `prototype`）。
 
@@ -37,11 +37,11 @@ MyObject.prototype.myFunction(value);
 public static void main(String[] args)
 ```
 
-- `public` 关键字是一个访问修饰符，指示任何对象都可以调用此方法。
-- `static` 关键字指示此方法是一个类方法，而不是一个实例方法。
-- `void` 关键字表指示此方法没有返回值。
+- `public` 关键字是一个访问修饰符，表明任何对象都可以调用此方法。
+- `static` 关键字表明此方法是一个类方法，而不是一个实例方法。
+- `void` 关键字表明此方法没有返回值。
 - 该方法的名称为 `main`。
-- 该方法接受一个类型为 String Array 的参数。它的名是 `args`。
+- 该方法接受一个类型为字符串数组的参数。它的名称为 `args`。
 
 ## 参见
 
