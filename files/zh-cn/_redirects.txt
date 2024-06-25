@@ -2710,7 +2710,9 @@
 /zh-CN/docs/Web/SVG/Element/线性渐变	/zh-CN/docs/Web/SVG/Element/linearGradient
 /zh-CN/docs/Web/SVG/Tutorial/渐变	/zh-CN/docs/Web/SVG/Tutorial/Gradients
 /zh-CN/docs/Web/Security/CSP/Using_Content_Security_Policy	/zh-CN/docs/Web/HTTP/CSP
+/zh-CN/docs/Web/Security/Securing_your_site	/zh-CN/docs/Web/Security/Practical_implementation_guides
 /zh-CN/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types	/zh-CN/docs/Learn/Server-side/Configuring_server_MIME_types
+/zh-CN/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/zh-CN/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /zh-CN/docs/Web/Security/传输层安全协议	/zh-CN/docs/Web/Security/Transport_Layer_Security
 /zh-CN/docs/Web/Security/子资源完整性	/zh-CN/docs/Web/Security/Subresource_Integrity
 /zh-CN/docs/Web/WEB_API_---js	/zh-CN/docs/Web/API
