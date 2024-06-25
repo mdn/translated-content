@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-**`contextualIdentities.ContextualIdentity`** 类型描述了单个上下文身份。
+**`contextualIdentities.ContextualIdentity`** 类型描述了单个场景身份。
 
 ## 类型
 
@@ -15,7 +15,7 @@ l10n:
 
 - `cookieStoreId`
 
-  - : `string`。身份的 cookie 存储 ID。由于上下文身份不共享 cookie 存储，因此这作为一个唯一标识符。
+  - : `string`。身份的 cookie 存储 ID。由于场景身份不共享 cookie 存储，因此这作为一个唯一标识符。
 
 - `color`
 
