@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-获取给定其 cookie 存储 ID 的上下文身份的信息。
+获取给定其 cookie 存储 ID 的场景身份的信息。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -22,11 +22,11 @@ let getContext = browser.contextualIdentities.get(
 ### 参数
 
 - `cookieStoreId`
-  - : `string`。这个上下文身份的 cookie 存储 ID。因为上下文身份都有自己的 cookie 存储，所以这充当上下文身份本身的标识符。
+  - : `string`。这个场景身份的 cookie 存储 ID。因为场景身份都有自己的 cookie 存储，所以这充当场景身份本身的标识符。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个描述该身份的 {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}}。如果找不到身份或上下文身份功能未启用，则该 promise 将被拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个描述该身份的 {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}}。如果找不到身份或场景身份功能未启用，则该 promise 将被拒绝。
 
 ## 浏览器兼容性
 
@@ -34,7 +34,7 @@ let getContext = browser.contextualIdentities.get(
 
 ## 示例
 
-此示例尝试检索 ID 为“firefox-container-1”的上下文身份：
+此示例尝试检索 ID 为“firefox-container-1”的场景身份：
 
 ```js
 function onGot(context) {
