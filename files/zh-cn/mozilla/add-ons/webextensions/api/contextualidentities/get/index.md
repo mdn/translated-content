@@ -26,7 +26,7 @@ let getContext = browser.contextualIdentities.get(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个描述该身份的 {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}}。如果找不到身份或场景身份功能未启用，则该 promise 将被拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个描述该身份的 {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}}。如果找不到身份或场景身份特性未启用，则该 promise 将被拒绝。
 
 ## 浏览器兼容性
 
@@ -39,7 +39,7 @@ let getContext = browser.contextualIdentities.get(
 ```js
 function onGot(context) {
   if (!context) {
-    console.error("上下文未找到");
+    console.error("未找到场景");
   } else {
     console.log(`名字：${context.name}`);
   }
