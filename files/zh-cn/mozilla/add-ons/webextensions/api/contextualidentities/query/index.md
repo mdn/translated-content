@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-获取有关所有上下文身份的信息，或获取与给定过滤参数匹配的上下文身份的信息。
+获取有关所有场景身份的信息，或获取与给定过滤参数匹配的场景身份的信息。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -23,14 +23,14 @@ let getContext = browser.contextualIdentities.query(
 
 - `details`
 
-  - : `object`。一个用于过滤返回的上下文身份的对象。可以包含以下任意属性：
+  - : `object`。一个用于过滤返回的场景身份的对象。可以包含以下任意属性：
 
     - `name` {{optional_inline}}
-      - : `string`。仅返回具有此名称的上下文身份。
+      - : `string`。仅返回具有此名称的场景身份。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在上下文身份查询完成时其会兑现一个 {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} 对象数组，每个对象描述一个身份。如果未启用上下文身份功能，则 promise 被拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在场景身份查询完成时其会兑现一个 {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} 对象数组，每个对象描述一个身份。如果未启用场景身份功能，则 promise 被拒绝。
 
 ## 浏览器兼容性
 
@@ -38,7 +38,7 @@ let getContext = browser.contextualIdentities.query(
 
 ## 示例
 
-检索所有上下文身份，并记录它们的名称：
+检索所有场景身份，并记录它们的名称：
 
 ```js
 function onGot(contexts) {
@@ -54,7 +54,7 @@ function onError(error) {
 browser.contextualIdentities.query({}).then(onGot, onError);
 ```
 
-检索所有名称为“my-thing”的上下文身份，并记录它们的名称：
+检索所有名称为“my-thing”的场景身份，并记录它们的名称：
 
 ```js
 function onGot(contexts) {
