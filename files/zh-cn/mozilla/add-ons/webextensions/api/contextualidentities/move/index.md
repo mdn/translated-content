@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-将一个或多个上下文身份移动到上下文身份列表中的新位置。
+将一个或多个场景身份移动到场景身份列表中的新位置。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -24,15 +24,15 @@ let moveContainers = browser.contextualIdentities.move(
 
 - `cookieStoreIds`
 
-  - : 字符串或字符串数组。要移动的上下文身份的 cookie 存储 ID 的有序列表。
+  - : 字符串或字符串数组。要移动的场景身份的 cookie 存储 ID 的有序列表。
 
 - `position`
 
-  - : `integer`。将 `cookieStoreIds` 移动到上下文身份列表中的位置。使用基于零的索引；`0` 表示第一个位置。`-1` 表示将项目移动到列表末尾。
+  - : `integer`。将 `cookieStoreIds` 移动到场景身份列表中的位置。使用基于零的索引；`0` 表示第一个位置。`-1` 表示将项目移动到列表末尾。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在上下文身份重新排序完成时其会兑现。如果请求无效或未启用上下文身份功能，则 promise 被拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在场景身份重新排序完成时其会兑现。如果请求无效或未启用场景身份功能，则 promise 被拒绝。
 
 ## 示例
 
