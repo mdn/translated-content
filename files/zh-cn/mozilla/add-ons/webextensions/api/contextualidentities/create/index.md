@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-创建一个新的上下文身份。创建后，用户将能够创建属于这个上下文身份的新标签，就像他们使用内置身份一样。
+创建一个新的场景身份。创建后，用户将能够创建属于这个场景身份的新标签，就像他们使用内置身份一样。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -23,7 +23,7 @@ let createContext = browser.contextualIdentities.create(
 
 - `details`
 
-  - : `object`。包含新上下文身份属性的对象。这包含以下属性：
+  - : `object`。包含新场景身份属性的对象。这包含以下属性：
 
     - `name`
 
@@ -63,7 +63,7 @@ let createContext = browser.contextualIdentities.create(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个描述新身份的 {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}}。如果上下文身份功能未启用，则该 promise 将被拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个描述新身份的 {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}}。如果场景身份功能未启用，则该 promise 将被拒绝。
 
 ## 浏览器兼容性
 
@@ -71,7 +71,7 @@ let createContext = browser.contextualIdentities.create(
 
 ## 示例
 
-此示例创建一个新的上下文身份并记录其 cookie 存储 ID：
+此示例创建一个新的场景身份并记录其 cookie 存储 ID：
 
 ```js
 function onCreated(context) {
