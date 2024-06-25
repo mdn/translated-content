@@ -93,7 +93,7 @@ new C().foo(); // SyntaxError: Private field '#x' must be declared in an enclosi
 
 ```js
 // Массивы
-const trees = new Array("redwood", "bay", "cedar", "oak", "maple");
+const trees = ["redwood", "bay", "cedar", "oak", "maple"];
 0 in trees; // true
 3 in trees; // true
 6 in trees; // false
