@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("UI Events")}}
 
-**`WheelEvent.deltaZ`** 只读属性 `double` 表示以 {{domxref("WheelEvent.deltaMode")}} 为单位沿 Z 轴的滚动量。
+**`WheelEvent.deltaZ`** 只读属性是一个表示以 {{domxref("WheelEvent.deltaMode")}} 为单位沿 Z 轴的滚动量的 `double` 值。
 
 ## 值
 
