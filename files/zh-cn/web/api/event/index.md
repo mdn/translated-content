@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
 
-**`Event`** 接口表示在 [`EventTarget`](/zh-CN/docs/Web/API/EventTarget) 中出现的事件。
+**`Event`** 接口表示在 [`EventTarget`](/zh-CN/docs/Web/API/EventTarget) 上出现的事件。
 
 一些事件是由用户触发的，例如鼠标或键盘事件；或者由 API 生成以表示异步任务的进度。事件也可以通过编程方式触发，例如对元素调用 [`HTMLElement.click()`](/zh-CN/docs/Web/API/HTMLElement/click) 方法，或者定义一些自定义事件，再使用 [`EventTarget.dispatchEvent()`](/zh-CN/docs/Web/API/EventTarget/dispatchEvent) 方法将自定义事件派发往指定的目标（target）。
 

@@ -2,7 +2,7 @@
 title: 事件参考
 slug: Web/Events
 l10n:
-  sourceCommit: 19e30e4787fff9074a50f16947dd2f6e9b7691c5
+  sourceCommit: 4ca4fa3d9d1de5601b406b13dc75aff30709c66f
 ---
 
 [事件](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)的触发用于通知“对变化感兴趣”的代码以影响代码的执行。这些事件可能来自用户的交互（例如：使用鼠标或调整窗口大小）、底层环境状态的改变（例如：电池电量不足或操作系统的媒体事件）和其他的情况。
@@ -491,8 +491,8 @@ l10n:
         <p>
           与任何性能相关的规范分组为
           <a href="/zh-CN/docs/Web/API/Performance_API"
-            >Performance APIs</a
-          > 相关的事件。
+            >Performance API</a
+          > 的相关事件。
         </p>
       </td>
       <td>
