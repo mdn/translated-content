@@ -123,7 +123,7 @@ const color2 = "coral";
 
 ### Использование оператора `in` с неопределёнными или с уже удалёнными свойствами
 
-Если вы удалили свойство при помощи оператора [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete), то оператор `in` возвратит `false` для этого свойства.
+Если удалить свойство при помощи оператора [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete), то оператор `in` возвратит `false` для этого свойства.
 
 ```js
 const mycar = { make: "Honda", model: "Accord", year: 1998 };
