@@ -1,6 +1,7 @@
 ---
 title: Asegurando su sitio
-slug: Web/Security/Securing_your_site
+slug: Web/Security/Practical_implementation_guides
+original_slug: Web/Security/Securing_your_site
 l10n:
   sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
