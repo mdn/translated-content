@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-当删除一个上下文身份时触发事件。上下文身份可以由扩展使用 `contextualIdentities` API 删除，也可以由用户直接通过浏览器的用户界面删除。
+当删除一个场景身份时触发事件。场景身份可以由扩展使用 `contextualIdentities` API 删除，也可以由用户直接通过浏览器的用户界面删除。
 
 ## 语法
 
