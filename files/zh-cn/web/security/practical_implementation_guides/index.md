@@ -1,6 +1,6 @@
 ---
 title: 确保你的站点安全
-slug: Web/Security/Securing_your_site
+slug: Web/Security/Practical_implementation_guides
 ---
 
 你可以采取一些措施来确保你的网站安全。本文提供了各种建议，以及提供更多有用信息的其他文章的链接。
