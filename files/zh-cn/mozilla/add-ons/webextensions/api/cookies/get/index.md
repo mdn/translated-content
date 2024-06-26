@@ -29,7 +29,7 @@ let getting = browser.cookies.get(
 
     - `firstPartyDomain` {{optional_inline}}
 
-      - : 一个 `string`，表示与要检索的 cookie 关联的第一方域。如果浏览器启用了第一方隔离，则必须提供此属性。请参见[第一方隔离](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#第一方隔离)。。
+      - : 一个 `string`，表示与要检索的 cookie 关联的第一方域。如果浏览器启用了第一方隔离，则必须提供此属性。请参见[第一方隔离](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#第一方隔离)。
 
     - `name`
 
@@ -44,7 +44,7 @@ let getting = browser.cookies.get(
 
     - `storeId` {{optional_inline}}
 
-      - : 一个 `string`，表示要查找的 {{WebExtAPIRef("cookies.CookieStore", "cookie 存储")}}的 ID（由 {{WebExtAPIRef("cookies.getAllCookieStores()")}} 返回）。默认情况下，将使用当前执行上下文的 cookie 存储。
+      - : 一个 `string`，表示要查找的 {{WebExtAPIRef("cookies.CookieStore", "cookie 存储", "", 1)}}的 ID（由 {{WebExtAPIRef("cookies.getAllCookieStores()")}} 返回）。默认情况下，将使用当前执行上下文的 cookie 存储。
 
     - `url`
 
@@ -52,7 +52,7 @@ let getting = browser.cookies.get(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含有关 cookie 的详细信息的 {{WebExtAPIRef('cookies.Cookie', 'Cookie')}} 对象，或者如果未找到 cookie，则返回 `null`。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含有关 cookie 的详细信息的 {{WebExtAPIRef('cookies.Cookie', 'Cookie')}} 对象，或者如果未找到 cookie，则兑现 `null`。
 
 ## 浏览器兼容性
 
