@@ -5,7 +5,7 @@ l10n:
   sourceCommit: daeff1a2efaae366bcc8b6d911d86985646e665e
 ---
 
-{{APIRef("Canvas")}}{{AvailableInWorkers}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 **`CanvasGradient`** 接口表示描述渐变的[不透明对象](https://en.wikipedia.org/wiki/Opaque_data_type)。通过 {{domxref("CanvasRenderingContext2D.createLinearGradient()")}} 或 {{domxref("CanvasRenderingContext2D.createConicGradient()")}} 或 {{domxref("CanvasRenderingContext2D.createRadialGradient()")}} 的返回值得到。
 
