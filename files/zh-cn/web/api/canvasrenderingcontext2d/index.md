@@ -9,7 +9,7 @@ l10n:
 
 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 的 **`CanvasRenderingContext2D`** 接口用来给 {{HTMLElement("canvas")}} 元素的绘图表面提供 2D 渲染上下文。它用于绘制形状、文本、图像和其他对象。
 
-本页的参考部分对该接口的属性和方法进行了描述。[Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial) 提供了更多解释、示例和资源。
+本页的参考部分对该接口的属性和方法进行了描述。[Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)提供了更多解释、示例和资源。
 
 对于 [`OffscreenCanvas`](/zh-CN/docs/Web/API/OffscreenCanvas)，有一个等效的接口提供渲染上下文。离屏渲染上下文继承了大部分与 `CanvasRenderingContext2D` 相同的属性和方法，在 {{domxref("OffscreenCanvasRenderingContext2D")}} 参考页面中有更详细的描述。
 
