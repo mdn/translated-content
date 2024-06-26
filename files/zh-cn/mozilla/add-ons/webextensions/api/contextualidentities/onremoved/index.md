@@ -33,13 +33,13 @@ browser.contextualIdentities.onRemoved.hasListener(listener)
 - `listener`
   - : 当事件发生时调用的函数。该函数接收以下参数：
     - `changeInfo`
-      - : `object`。包含单个属性 `contextualIdentity` 的对象，它是一个 {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} 对象，表示被删除的身份。
+      - : `object`。包含单个属性 `contextualIdentity` 的对象，它是一个表示被删除的身份的 {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} 对象。
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-示例
+## 示例
 
 ```js
 function handleRemoved(changeInfo) {
