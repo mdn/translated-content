@@ -1,6 +1,7 @@
 ---
 title: Deixando seu site seguro
-slug: Web/Security/Securing_your_site
+slug: Web/Security/Practical_implementation_guides
+original_slug: Web/Security/Securing_your_site
 ---
 
 Há várias coisas que você pode fazer para ajudar na segurança do seu site. Esse artigo oferece uma série de sugestões, bem como links para outros artigos fornecendo informações mais úteis.
