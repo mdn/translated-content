@@ -32,7 +32,7 @@ let moveContainers = browser.contextualIdentities.move(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在场景身份重新排序完成时其会兑现。如果请求无效或未启用场景身份功能，则 promise 被拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在场景身份重新排序完成时其会兑现。如果请求无效或未启用场景身份特性，则 promise 将被拒绝。
 
 ## 示例
 
