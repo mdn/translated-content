@@ -9,7 +9,7 @@ l10n:
 
 Canvas 2D API 的 **`CanvasRenderingContext2D.globalCompositeOperation`** 属性设置要在绘制新形状时应用的合成操作的类型。
 
-在 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial) 中查看[组合 Compositing](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing) 章节。
+在 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)中查看[组合 Compositing](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing) 章节。
 
 ## 值
 
