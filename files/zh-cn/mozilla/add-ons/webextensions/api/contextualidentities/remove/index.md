@@ -26,7 +26,7 @@ let removeContext = browser.contextualIdentities.remove(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在场景身份删除完成时其会兑现一个描述已删除身份的 {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} 对象。如果无法找到该身份或未启用场景身份功能，则 promise 被拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在场景身份删除完成时其会兑现一个描述已删除身份的 {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} 对象。如果无法找到该身份或未启用场景身份特性，则 promise 将被拒绝。
 
 ## 浏览器兼容性
 
