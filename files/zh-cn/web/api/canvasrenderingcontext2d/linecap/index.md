@@ -1,30 +1,26 @@
 ---
 title: CanvasRenderingContext2D.lineCap
 slug: Web/API/CanvasRenderingContext2D/lineCap
+l10n:
+  sourceCommit: c8b447485fd893d5511d88f592f5f3aec29a725b
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.lineCap`** 是 Canvas 2D API 指定如何绘制每一条线段末端的属性。有 3 个可能的值，分别是：`butt`, `round` and `square`。默认值是 `butt`。
+Canvas 2D API 的 **`CanvasRenderingContext2D.lineCap`** 属性用于指定如何绘制每一条线段末端。
 
-参见 [Canvas Tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial) 中的 [Applying styles and color](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) 章节。
+> **备注：** 参见 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)中[应用样式和色彩](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)这一章节。
 
-## 语法
+## 值
 
-```
-ctx.lineCap = "butt";
-ctx.lineCap = "round";
-ctx.lineCap = "square";
-```
+可以是以下之一：
 
-### 选项
-
-- `butt`
-  - : 线段末端以方形结束。
-- `round`
-  - : 线段末端以圆形结束。
-- `square`
-  - : 线段末端以方形结束，但是增加了一个宽度和线段相同，高度是线段厚度一半的矩形区域。
+- `"butt"`
+  - : 线条端点是平直的。这是默认值。
+- `"round"`
+  - : 线条端点是圆形的。
+- `"square"`
+  - : 线条端点是方形的，通过添加一个与线条粗细相同宽度且高度的一半的盒子来形成。
 
 ## 示例
 
@@ -70,7 +66,7 @@ ctx.stroke();
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-// Draw guides
+// 绘制辅助线
 ctx.strokeStyle = "#09f";
 ctx.beginPath();
 ctx.moveTo(10, 10);
@@ -79,7 +75,7 @@ ctx.moveTo(10, 140);
 ctx.lineTo(140, 140);
 ctx.stroke();
 
-// Draw lines
+// 绘制线条
 ctx.strokeStyle = "black";
 ["butt", "round", "square"].forEach((lineCap, i) => {
   ctx.lineWidth = 15;
@@ -101,8 +97,13 @@ ctx.strokeStyle = "black";
 
 {{Compat}}
 
+### WebKit/Blink 特定注意事项
+
+- 在基于 WebKit 和 Blink 的浏览器中，除了这个属性外，还实现了一个非标准且已废弃的方法 `ctx.setLineCap()`。
+
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- 定义此属性的接口：{{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.lineWidth")}}
 - {{domxref("CanvasRenderingContext2D.lineJoin")}}
+- [应用样式和色彩](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)
