@@ -11,7 +11,7 @@ Canvas API 的 `CanvasRenderingContext2D.fontKerning` 属性用于指定如何�
 
 字距调整（Kerning）会调整比例字体中相邻字母的间距，允许它们在视觉上互相接触，如果有空间的话。例如，在良好的字距调整字体中，字符 `AV`、`Ta` 和 `We` 会更紧凑地排列，使得字符间距更加均匀，阅读起来更加愉悦，比没有使用字距调整的文本更好。
 
-这个属性对应于 CSS 中的 [`font-kerning`](/en-US/docs/Web/CSS/font-kerning) 属性。
+这个属性对应于 CSS 中的 [`font-kerning`](/zh-CN/docs/Web/CSS/font-kerning) 属性。
 
 ## 值
 
