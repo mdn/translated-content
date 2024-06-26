@@ -898,6 +898,8 @@
 /pt-BR/docs/Web/SVG/Element/animateColor	/pt-BR/docs/conflicting/Web/SVG/Element/animate
 /pt-BR/docs/Web/SVG/Element/texto	/pt-BR/docs/Web/SVG/Element/text
 /pt-BR/docs/Web/SVG/Intensivo_de_Namespaces	/pt-BR/docs/Web/SVG/Namespaces_Crash_Course
+/pt-BR/docs/Web/Security/Securing_your_site	/pt-BR/docs/Web/Security/Practical_implementation_guides
+/pt-BR/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/pt-BR/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /pt-BR/docs/Web/Tutoriais	/pt-BR/docs/Web/Tutorials
 /pt-BR/docs/Web/WebGL	/pt-BR/docs/Web/API/WebGL_API
 /pt-BR/docs/Web/Web_Components	/pt-BR/docs/Web/API/Web_components
