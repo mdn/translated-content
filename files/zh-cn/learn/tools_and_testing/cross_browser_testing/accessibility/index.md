@@ -15,7 +15,7 @@ l10n:
       <th scope="row">前提：</th>
       <td>
         熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
-        href="/zh-CN/docs/Learn/CSS">CSS</a> 和<a
+        href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a
           href="/zh-CN/docs/Learn/JavaScript"
           >JavaScript</a
         > 语言；理解<a
