@@ -1,6 +1,7 @@
 ---
 title: 양식 자동 완성을 끄는 방법
-slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
+slug: Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
+original_slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 l10n:
   sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
