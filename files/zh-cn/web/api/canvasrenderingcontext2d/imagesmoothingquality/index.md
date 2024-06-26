@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d0d8f446ab0e7330a741fd8cbf1ecb8a2077d3f0
 ---
 
-{{APIRef}} {{SeeCompatTable}}
+{{APIRef}}
 
 Canvas 2D API 的 {{domxref("CanvasRenderingContext2D")}} 接口的 **`imageSmoothingQuality`** 属性，用于设置图像平滑度。
 
