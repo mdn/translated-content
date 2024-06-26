@@ -90,4 +90,3 @@ await browser.contextualIdentities.move(personalId, workIndex);
 ## 浏览器兼容性
 
 {{Compat}}
-
