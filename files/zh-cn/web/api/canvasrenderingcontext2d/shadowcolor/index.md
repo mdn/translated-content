@@ -15,7 +15,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.shadowColor`** 属性用于描述�
 
 ## 值
 
-一个被解析为 [CSS](/en-US/docs/Web/CSS) 值 {{cssxref("&lt;color&gt;")}} 的字符串。默认值是完全透明的黑色。
+一个被解析为 [CSS](/zh-CN/docs/Web/CSS) 值 {{cssxref("&lt;color&gt;")}} 的字符串。默认值是完全透明的黑色。
 
 ## 示例
 
