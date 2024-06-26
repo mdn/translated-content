@@ -68,14 +68,14 @@ await browser.contextualIdentities.move(otherIds, 0);
 let identities = await browser.contextualIdentities.query({});
 
 // 找到名称为“个人”的容器的索引和 ID。
-let personalIndex = identities.findIndex((ci) => ci.name === "Personal");
+let personalIndex = identities.findIndex((ci) => ci.name === "个人");
 if (personalIndex === -1) {
   throw new Error("“个人”容器未找到！");
 }
 let personalId = identities[personalIndex].cookieStoreId;
 
 // 找到名称为“工作”的容器的索引。
-let workIndex = identities.findIndex((identity) => identity.name === "Work");
+let workIndex = identities.findIndex((identity) => identity.name === "工作");
 if (workIndex === -1) {
   throw new Error("“工作”容器未找到！");
 }
