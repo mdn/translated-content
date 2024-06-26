@@ -20,7 +20,7 @@ addColorStop(offset, color)
 - `offset`
   - : 一个在 `0` 到 `1` 之间（包含边界）的数字，表示颜色断点的位置。`0` 表示渐变的起始位置，`1` 表示渐变的结束位置。
 - `color`
-  - : 一个 [CSS](/en-US/docs/Web/CSS) 颜色值 {{cssxref("&lt;color&gt;")}}，表示停靠的颜色。
+  - : 一个 [CSS](/zh-CN/docs/Web/CSS) 颜色值 {{cssxref("&lt;color&gt;")}}，表示停靠的颜色。
 
 ### 返回值
 
