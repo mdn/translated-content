@@ -30,7 +30,7 @@ try {
 - `exceptionVar` {{optional_inline}}
   - : 可选的[标识符或模式](#catch_绑定)，用于保存关联的 `catch` 块所捕获到的异常。如果 `catch` 块不使用异常的值，你可以省略 `exceptionVar` 及其周围的括号。
 - `finallyStatements`
-  - : 在控制流退出 `try...catch...finally` 结构之前执行的语句。这些语句不管无论是否抛出或捕获异常都会执行。
+  - : 在控制流退出 `try...catch...finally` 结构之前执行的语句。这些语句无论是否抛出或捕获异常都会执行。
 
 ## 描述
 
@@ -295,7 +295,7 @@ try {
 
 // 输出：
 // “内层” “哦豁”
-// "finally"
+// “finally”
 ```
 
 外层的“哦豁”不会被抛出，因为 `finally` 块中的 `return` 语句将控制流转移到外部。同样的规则也适用于 `catch` 块中返回的值。
