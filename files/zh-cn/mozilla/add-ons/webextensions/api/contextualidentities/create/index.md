@@ -63,7 +63,7 @@ let createContext = browser.contextualIdentities.create(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个描述新身份的 {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}}。如果场景身份功能未启用，则该 promise 将被拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个描述新身份的 {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}}。如果场景身份特性未启用，则该 promise 将被拒绝。
 
 ## 浏览器兼容性
 
