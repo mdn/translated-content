@@ -30,7 +30,7 @@ let getContext = browser.contextualIdentities.query(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在场景身份查询完成时其会兑现一个 {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} 对象数组，每个对象描述一个身份。如果未启用场景身份功能，则 promise 被拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在场景身份查询完成时其会兑现一个 {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} 对象数组，每个对象描述一个身份。如果未启用场景身份特性，则 promise 将被拒绝。
 
 ## 浏览器兼容性
 
