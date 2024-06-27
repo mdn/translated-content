@@ -9,7 +9,7 @@ l10n:
 
 现代 web 已经高速发展成为一个可行可靠的平台，它不仅能够用来创建高质量的酷炫游戏，同时也能够用来发布和传播这些游戏。
 
-它能够制作的游戏种类可以和桌面端以及原生系统相当。采用现代网页技术和较新的浏览器，完全有可能做出令人印象深刻的顶级页面游戏。我们这里所说的，并不是很久之前就采用 Flash® 制作出的简单卡牌游戏或者多人社交游戏，而是 3D 动作射击游戏、RPG 游戏等等。得益于 [JavaScript](/zh-CN/docs/JavaScript) 实时编译技术性能的大幅提升，以及新开放的 API。在制作运行在浏览器（或者是基于 [HTML5](/zh-CN/docs/HTML/HTML5) 技术支持的设备）上的游戏时，我们不用妥协。
+它能够制作的游戏种类可以和桌面端以及原生系统相当。采用现代网页技术和较新的浏览器，完全有可能做出令人印象深刻的顶级页面游戏。我们这里所说的，并不是很久之前就采用 Flash® 制作出的简单卡牌游戏或者多人社交游戏，而是 3D 动作射击游戏、RPG 游戏等等。得益于 [JavaScript](/zh-CN/docs/Web/JavaScript) 实时编译技术性能的大幅提升，以及新开放的 API。在制作运行在浏览器（或者是基于 [HTML5](/zh-CN/docs/Glossary/HTML5) 技术支持的设备）上的游戏时，我们不用妥协。
 
 ## HTML 游戏平台
 
@@ -18,12 +18,12 @@ l10n:
 | 功能     | 技术                                                                                                                                                                                                                                                                      |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **音频** | [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)                                                                                                                                                                                                                        |
-| **图形** | [WebGL](/zh-CN/docs/WebGL) ([OpenGL ES](https://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                           |
-| **输入** | [Touch events](/zh-CN/docs/DOM/Touch_events)、[Gamepad API](/zh-CN/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)、设备传感器、[WebRTC](/zh-CN/docs/WebRTC)、[Full Screen API](/zh-CN/docs/Web/API/Fullscreen_API)、[Pointer Lock API](/zh-CN/docs/API/Pointer_Lock_API) |
-| **语言** | [JavaScript](/zh-CN/docs/JavaScript) (或是 C/C++ 使用 [Emscripten](https://github.com/kripken/emscripten/wiki) 来编译成 JavaScript)                                                                                                                                       |
-| **网络** | [WebRTC](/zh-CN/docs/WebRTC) 或 [WebSockets](/zh-CN/docs/Web/API/WebSockets_API)                                                                                                                                                                                          |
-| **存储** | [IndexedDB](/zh-CN/docs/IndexedDB) 或“云（存储）”                                                                                                                                                                                                                         |
-| **Web**  | [HTML](/zh-CN/docs/HTML)、[CSS](/zh-CN/docs/CSS)、[SVG](/zh-CN/docs/SVG)、[Social API](/zh-CN/docs/Mozilla/Projects/Social_API) (还有其他很多东西！)                                                                                                                      |
+| **图形** | [WebGL](/zh-CN/docs/Web/API/WebGL_API) ([OpenGL ES](https://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                           |
+| **输入** | [Touch events](/zh-CN/docs/Web/API/Touch_events)、[Gamepad API](/zh-CN/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)、设备传感器、[WebRTC](/zh-CN/docs/Web/API/WebRTC_API)、[Full Screen API](/zh-CN/docs/Web/API/Fullscreen_API)、[Pointer Lock API](/zh-CN/docs/Web/API/Pointer_Lock_API) |
+| **语言** | [JavaScript](/zh-CN/docs/Web/JavaScript) (或是 C/C++ 使用 [Emscripten](https://github.com/kripken/emscripten/wiki) 来编译成 JavaScript)                                                                                                                                       |
+| **网络** | [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 或 [WebSockets](/zh-CN/docs/Web/API/WebSockets_API)                                                                                                                                                                                          |
+| **存储** | [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 或“云（存储）”                                                                                                                                                                                                                         |
+| **Web**  | [HTML](/zh-CN/docs/Web/HTML)、[CSS](/zh-CN/docs/Web/CSS)、[SVG](/zh-CN/docs/Web/SVG)（还有其他很多东西！）                                                                                                                   |
 
 ## 商业案例
 
@@ -47,27 +47,27 @@ l10n:
   - : 这个简单的 API 能够让你的游戏占据整个屏幕，从而使玩家沉浸在动作中
 - [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
   - : 如果你想你的用户能够使用游戏手柄或其他游戏控制器来控制游戏，你需要这个 API
-- [HTML](/zh-CN/docs/HTML) 和 [CSS](/zh-CN/docs/CSS)
+- [HTML](/zh-CN/docs/Web/HTML) 和 [CSS](/zh-CN/docs/Web/CSS)
   - : 二者合璧，可以构建、设计并对你的游戏界面进行布局，HTML 有一个提供 2D 图形的元素，即 {{HTMLElement("canvas")}}。
-- [HTML audio](/zh-CN/docs/HTML/Element/audio)
+- [HTML audio](/zh-CN/docs/Web/HTML/Element/audio)
   - : {{HTMLElement("audio")}} 元素可以用来播放一些简单的音效和音乐。如果你想要更多的参与，可以学习 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 来深入了解音频处理的力量！
-- [IndexedDB](/zh-CN/docs/IndexedDB)
+- [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)
   - : 一个强大的数据存储 API，用来在电脑或者设备上保存用户自己的数据。一个很好的方法用来保存游戏的状态和其他最近的信息，这样在需要的时候不用每次重新下载。也可以用来让你的游戏即使用户没有链接到网络也能继续玩（例如在飞机上的数小时）。
-- [JavaScript](/zh-CN/docs/JavaScript)
+- [JavaScript](/zh-CN/docs/Web/JavaScript)
   - : JavaScript 是 web 所使用的编程语言，在现代浏览器中正在快速发展，而且一直在快速发展。使用它的力量为你的游戏编写代码，或者使用 [Emscripten](https://github.com/kripken/emscripten/wiki) 或 [Asm.js](http://asmjs.org/spec/latest/) 等技术轻松移植你现有的游戏。
 - [Pointer Lock API](/zh-CN/docs/Web/API/Pointer_Lock_API)
   - : 指针锁定 API 允许你在游戏界面中锁定鼠标或其他指针设备，以便你不用绝对定位光标就可以获得坐标变化值，从而准确地判断用户正在做什么，并且还可以防止用户意外地进入另一块屏幕或别的什么地方，从而导致误操作。
-- [SVG](/zh-CN/docs/SVG) (可缩放矢量图形)
+- [SVG](/zh-CN/docs/Web/SVG) (可缩放矢量图形)
   - : 无论用户显示器的大小或分辨率如何，都可以构建平滑缩放的矢量图形。
 - [Typed Arrays](/zh-CN/docs/JavaScript/Typed_arrays)
   - : JavaScript 中的类型数组可以让你访问原始二进制数据；这使你可以操纵 GL 纹理，游戏数据或其他任何东西，即使它不是原生 JavaScript 数据格式。
 - [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)
   - : 这个 API 用于控制 JavaScript 代码中的音频的回放，合成和处理，使你可以创建出色的音效，以及实时播放和操作音乐。
-- [WebGL](/zh-CN/docs/WebGL)
+- [WebGL](/zh-CN/docs/Web/API/WebGL_API)
   - : 允许你从 Web 内容创建高性能，硬件加速的 3D（和 2D）图形。这是一个 web 支持的 [OpenGL ES](https://www.khronos.org/opengles/) 2.0 实现。
-- [WebRTC](/zh-CN/docs/WebRTC)
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)
   - : WebRTC（实时通信）API 使你能够控制音频和视频数据，包括远程会议以及两个用户之间来回传输其他应用程序数据。希望你的玩家能够在殴打怪物的同时互相交流？这正是为你所准备的 API，快使用它吧。
-- [WebSockets](/zh-CN/docs/Web/API/WebSockets_API)
+- [WebSockets](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
   - : WebSocket API 使你可以将你的应用程序或站点连接到服务器，实时传输数据。构建完美的多人游戏动作，聊天服务等必备。
 - [Web Workers](/zh-CN/docs/DOM/Using_web_workers)
   - : Workers API 能够让你生成运行 JavaScript 代码的后台线程，以充分利用现代的多核 CPU。
