@@ -2,7 +2,7 @@
 title: CanvasRenderingContext2D.beginPath()
 slug: Web/API/CanvasRenderingContext2D/beginPath
 l10n:
-  sourceCommit: af1e384356e21dbcc573d1c1cc015ec79c644de1
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
