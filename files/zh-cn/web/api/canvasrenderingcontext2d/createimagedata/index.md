@@ -25,7 +25,7 @@ createImageData(imagedata)
   - : 新 `ImageData` 对象的高度。如果是负值，将围绕水平轴翻转矩形。
 - `settings` {{optional_inline}}
   - : 一个包含以下属性的对象：
-    - `colorSpace`：指定图像数据的颜色空间。可以设置为 `"srgb"` 表示 [sRGB 颜色空间](https://zh.wikipedia.org/wiki/SRGB%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4)，或 `"display-p3"` 表示 [display-p3 颜色空间](https://zh.wikipedia.org/wiki/DCI-P3)。
+    - `colorSpace`：指定图像数据的色彩空间。可以设置为 `"srgb"` 表示 [sRGB 色彩空间](https://zh.wikipedia.org/wiki/SRGB色彩空间)，或 `"display-p3"` 表示 [display-p3 色彩空间](https://zh.wikipedia.org/wiki/DCI-P3)。
 - `imagedata`
   - : 要复制宽度和高度的现有 `ImageData` 对象。**不**会复制图像本身。
 
@@ -36,7 +36,7 @@ createImageData(imagedata)
 ### 错误
 
 - `IndexSizeError`
-  - : 如果 `width` 或者 `height` 变量值为零，会抛出此异常。
+  - : 如果参数 `width` 或者 `height` 为零，会抛出此异常。
 
 ## 示例
 
@@ -61,14 +61,13 @@ console.log(imageData);
 
 ### 填充空的 ImageData 对象
 
-这个例子创建并填充了一个新的 `ImageData` 对象，像素点颜色为紫色。
+这个示例创建了一个新的 `ImageData` 对象，并使用紫色像素填充。
 
 ```html
 <canvas id="canvas"></canvas>
 ```
 
-由于每个像素点由四个值表示，`for` 循环每次迭代增加四个值。
-与每个像素相关联的数组值分别是 R（红色）、G（绿色）、B（蓝色）和 A（透明度），顺序如上。
+由于每个像素点由四个值表示，`for` 循环每次迭代增加四个值。与每个像素相关联的数组值分别是 R（红色）、G（绿色）、B（蓝色）和 A（透明度），顺序如上。
 
 ```js
 const canvas = document.getElementById("canvas");
