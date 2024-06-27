@@ -1,5 +1,5 @@
 ---
-title: WebAssembly 參考指令 
+title: WebAssembly 參考指令
 slug: WebAssembly/Reference
 ---
 
