@@ -99,7 +99,7 @@
 /pt-BR/docs/DOM/Document.querySelectorAll	/pt-BR/docs/Web/API/Document/querySelectorAll
 /pt-BR/docs/DOM/Referencia_do_DOM	/pt-BR/docs/Web/API/Document_Object_Model
 /pt-BR/docs/DOM/Referencia_do_DOM/Examples	/pt-BR/docs/Web/API/Document_Object_Model/Examples
-/pt-BR/docs/DOM/Referencia_do_DOM/How_to_create_a_DOM_tree	/pt-BR/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree
+/pt-BR/docs/DOM/Referencia_do_DOM/How_to_create_a_DOM_tree	/pt-BR/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /pt-BR/docs/DOM/Referencia_do_DOM/Introdução	/pt-BR/docs/Web/API/Document_Object_Model/Introduction
 /pt-BR/docs/DOM/Referencia_do_DOM/Whitespace_in_the_DOM	/pt-BR/docs/Web/API/Document_Object_Model/Whitespace
 /pt-BR/docs/DOM/XMLHttpRequest	/pt-BR/docs/Web/API/XMLHttpRequest
@@ -559,6 +559,7 @@
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/activeElement	/pt-BR/docs/Web/API/Document/activeElement
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/pt-BR/docs/Web/API/Document/elementFromPoint
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/getSelection	/pt-BR/docs/Web/API/Document/getSelection
+/pt-BR/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/pt-BR/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /pt-BR/docs/Web/API/DocumentoXML	/pt-BR/docs/Web/API/XMLDocument
 /pt-BR/docs/Web/API/Element.addEventListener	/pt-BR/docs/Web/API/EventTarget/addEventListener
 /pt-BR/docs/Web/API/Element.getAttribute	/pt-BR/docs/Web/API/Element/getAttribute
@@ -816,6 +817,7 @@
 /pt-BR/docs/Web/HTTP/Controle_Acesso_CORS	/pt-BR/docs/Web/HTTP/CORS
 /pt-BR/docs/Web/HTTP/Gerenciamento_de_Conexão_em_HTTP_1.x	/pt-BR/docs/Web/HTTP/Connection_management_in_HTTP_1.x
 /pt-BR/docs/Web/HTTP/HTTP	/pt-BR/docs/Web/HTTP/Caching
+/pt-BR/docs/Web/HTTP/Headers/Accept-CH-Lifetime	/pt-BR/docs/orphaned/Web/HTTP/Headers/Accept-CH-Lifetime
 /pt-BR/docs/Web/HTTP/Headers/Conexão	/pt-BR/docs/Web/HTTP/Headers/Connection
 /pt-BR/docs/Web/HTTP/Headers/Cookie2	/pt-BR/docs/conflicting/Web/HTTP/Headers/Cookie
 /pt-BR/docs/Web/HTTP/Headers/Expira	/pt-BR/docs/Web/HTTP/Headers/Expires
@@ -896,6 +898,8 @@
 /pt-BR/docs/Web/SVG/Element/animateColor	/pt-BR/docs/conflicting/Web/SVG/Element/animate
 /pt-BR/docs/Web/SVG/Element/texto	/pt-BR/docs/Web/SVG/Element/text
 /pt-BR/docs/Web/SVG/Intensivo_de_Namespaces	/pt-BR/docs/Web/SVG/Namespaces_Crash_Course
+/pt-BR/docs/Web/Security/Securing_your_site	/pt-BR/docs/Web/Security/Practical_implementation_guides
+/pt-BR/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/pt-BR/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /pt-BR/docs/Web/Tutoriais	/pt-BR/docs/Web/Tutorials
 /pt-BR/docs/Web/WebGL	/pt-BR/docs/Web/API/WebGL_API
 /pt-BR/docs/Web/Web_Components	/pt-BR/docs/Web/API/Web_components

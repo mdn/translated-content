@@ -1,11 +1,13 @@
 ---
 title: Event
 slug: Web/API/Event
+l10n:
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-**`Event`** 接口表示在 DOM 中出现的事件。
+**`Event`** 接口表示在 [`EventTarget`](/zh-CN/docs/Web/API/EventTarget) 上出现的事件。
 
 一些事件是由用户触发的，例如鼠标或键盘事件；或者由 API 生成以表示异步任务的进度。事件也可以通过编程方式触发，例如对元素调用 [`HTMLElement.click()`](/zh-CN/docs/Web/API/HTMLElement/click) 方法，或者定义一些自定义事件，再使用 [`EventTarget.dispatchEvent()`](/zh-CN/docs/Web/API/EventTarget/dispatchEvent) 方法将自定义事件派发往指定的目标（target）。
 
@@ -94,7 +96,7 @@ slug: Web/API/Event
 - {{domxref("Event.timeStamp")}} {{ReadOnlyInline}}
   - : 事件创建时的时间戳（精度为毫秒）。按照规范，这个时间戳是 Unix 纪元起经过的毫秒数，但实际上，在不同的浏览器中，对此时间戳的定义也有所不同。另外，规范正在将其修改为 {{domxref("DOMHighResTimeStamp")}}。
 - {{domxref("Event.type")}} {{ReadOnlyInline}}
-  - : 事件的类型，不区分大小写。
+  - : 事件的类型的名称。
 
 ### 遗留属性和非标准属性
 
@@ -133,7 +135,7 @@ slug: Web/API/Event
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - 可用的事件类型：[Event 参考](/zh-CN/docs/Web/Events)
 - [Event 目标的比较](/zh-CN/docs/Web/API/Event/Comparison_of_Event_Targets)（目标 `target` vs 当前目标 `currentTarget` vs 相关目标 `relatedTarget` vs 初始目标 `originalTarget`）
