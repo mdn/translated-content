@@ -28,7 +28,7 @@ let creating = browser.tabs.create(
     - `active` {{optional_inline}}
       - : `boolean`。标签页是否应该成为窗口中的活动标签页。如果为 `false`，则不会影响窗口是否被聚焦（参见 {{WebExtAPIRef('windows.update')}}）。默认为 `true`。
     - `cookieStoreId` {{optional_inline}}
-      - : `string`。使用此选项创建具有特定 cookie 存储 ID (`cookieStoreId`) 的标签页。此选项仅在扩展具有 `"cookies"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 时可用。有关详细信息，请参阅[使用上下文标识](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
+      - : `string`。使用此选项创建具有特定 cookie 存储 ID (`cookieStoreId`) 的标签页。此选项仅在扩展具有 `"cookies"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)时可用。有关详细信息，请参阅[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
     - `discarded` {{optional_inline}}
       - : `boolean`。是否创建并在标签栏中可见的状态下不加载任何内容到内存，即处于弃用状态。当激活标签页时，将加载标签页的内容。
     - `index` {{optional_inline}}
@@ -38,7 +38,7 @@ let creating = browser.tabs.create(
     - `openerTabId` {{optional_inline}}
       - : `integer`。打开此标签页的标签页的 ID。如果指定，打开者标签页必须与新创建的标签页在同一个窗口中。
     - `openInReaderMode` {{optional_inline}}
-      - : `boolean`。如果为 `true`，在 [阅读模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode) 中打开此标签页。默认为 `false`。
+      - : `boolean`。如果为 `true`，在[阅读模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode)中打开此标签页。默认为 `false`。
     - `pinned` {{optional_inline}}
       - : `boolean`。标签页是否应固定。默认为 `false`。
     - `selected` {{optional_inline}}
@@ -51,9 +51,9 @@ let creating = browser.tabs.create(
       - : `string`。标签页的标题。仅当将标签页创建为 `discarded` 设置为 `true` 时才允许使用。
     - `url` {{optional_inline}}
 
-      - : `string`。要导航到的标签页的 URL。默认为新标签页页。
+      - : `string`。要导航到的标签页的 URL。默认为新标签页。
 
-        完整的 URL 必须包含 Scheme（例如，'http\://www\.google.com' 而不是 'www\.google.com'）。
+        完整的 URL 必须包含 scheme（例如，`http\://www\.google.com` 而不是 `www\.google.com`）。
 
         出于安全原因，在 Firefox 中，可能不允许使用特权 URL。因此，传递以下任何 URL 将失败：
 
@@ -84,7 +84,7 @@ function onCreated(tab) {
 }
 
 function onError(error) {
-  console.log(`错误：${error}`);
+  console.log(`发生错误：${error}`);
 }
 
 browser.browserAction.onClicked.addListener(() => {
