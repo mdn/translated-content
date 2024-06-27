@@ -32,7 +32,7 @@ const re = new RegExp(/ab+c/, "i"); // 첫 번째 인수로 정규 표현식 리
 
 리터럴 표기법은 표현식이 평가될 때 정규 표현식이 컴파일됩니다. 반면에 `RegExp` 객체의 생성자 `new RegExp('ab+c')`는 정규 표현식을 런타임에 컴파일합니다.
 
-[동적 입력에서 정규식을 빌드]((#building_a_regular_expression_from_dynamic_inputs))하려면 `RegExp()` 생성자의 첫 번째 인수로 문자열을 사용합니다.
+[동적 입력에서 정규식을 빌드](<(#building_a_regular_expression_from_dynamic_inputs)>)하려면 `RegExp()` 생성자의 첫 번째 인수로 문자열을 사용합니다.
 
 ### 생성자의 플래그
 
