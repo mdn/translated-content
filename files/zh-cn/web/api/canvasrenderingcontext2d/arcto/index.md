@@ -40,7 +40,7 @@ arcTo(x1, y1, x2, y2, radius)
 - 如果 _r_ 是 0，`arcTo()` 方法会表现得好像 <em>P<sub>0</sub></em>、<em>P<sub>1</sub></em> 和 <em>P<sub>2</sub></em> 在一条直线上。
 - 如果所有点都共线，会从 <em>P<sub>0</sub></em> 到 <em>P<sub>1</sub></em> 绘制一条直线，除非点 <em>P<sub>0</sub></em> 和 <em>P<sub>1</sub></em> 是重合的（坐标相同），此时不会绘制任何内容。
 
-可以通过下面的[构建一条 arcTo() 路径](#构建一条_arcTo()_路径)示例创建这些条件，查看结果。
+可以通过下面的[构建一条 arcTo() 路径](#构建一条 arcTo() 路径)示例创建这些条件，查看结果。
 
 ### 返回值
 
