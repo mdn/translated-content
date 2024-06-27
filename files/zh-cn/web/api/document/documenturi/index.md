@@ -1,19 +1,38 @@
 ---
-title: document.documentURI
+title: Document：documentURI 属性
 slug: Web/API/Document/documentURI
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("DOM")}}{{domxref("Document")}} 接口的属性 **`documentURI`** 以字符串的形式返回文档的位置（location）。在最初的 DOM3 定义中，这个属性是可读/写的。在现代的 DOM 标准（DOM4）中，它是只读的。
+{{ApiRef("DOM")}}
 
-## 语法
+{{domxref("Document")}} 接口的 **`documentURI`** 只读属性以字符串形式返回文档位置。
 
-```plain
-var string = document.documentURI;
+## 值
+
+字符串。
+
+## 示例
+
+### JavaScript
+
+```js
+document.getElementById("url").textContent = document.documentURI;
 ```
 
-## 备注
+### HTML
 
-HTML 文档有一个 {{domxref("document.URL")}} 属性返回同样的值。但是不像 `URL`，`documentURI` 适用于所有类型的文档。
+```html
+<p id="urlText">
+  URL：<br />
+  <span id="url">URL 在此处</span>
+</p>
+```
+
+### 结果
+
+{{EmbedLiveSample("示例", "100%", 100)}}
 
 ## 规范
 
@@ -22,3 +41,7 @@ HTML 文档有一个 {{domxref("document.URL")}} 属性返回同样的值。但�
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- 返回相同值的 {{domxref("document.URL")}} 属性。

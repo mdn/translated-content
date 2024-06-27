@@ -58,7 +58,7 @@ svg {
 
 {{svginfo}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

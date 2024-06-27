@@ -1,17 +1,19 @@
 ---
 title: 300 Multiple Choices
 slug: Web/HTTP/Status/300
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`300 Multiple Choices`** 重定向回應碼代表該請求具有超過一種可能的回應。用戶代理或使用者應該從中挑選一個。由於不存在標準化的選擇回應方式，此回應碼非常少被使用。
+HTTP **`300 Multiple Choices`** 重新導向回應碼表示該請求有多個可能的回應。用戶代理或用戶應該從中選擇一個。由於沒有標準化的選擇方式，因此這個回應碼很少被使用。
 
-若是伺服端有偏好的選擇，則應該產生 {{HTTPHeader("Location")}} 標頭。
+如果伺服器有一個偏好選項，它應該生成一個 {{HTTPHeader("Location")}} 標頭。
 
 ## 狀態
 
-```plain
+```http
 300 Multiple Choices
 ```
 
@@ -22,5 +24,5 @@ HTTP **`300 Multiple Choices`** 重定向回應碼代表該請求具有超過一
 ## 參見
 
 - {{HTTPStatus("301")}} `Moved Permanently`
-- {{HTTPStatus("302")}} `Found`, the temporary redirect
+- {{HTTPStatus("302")}} `Found`，臨時重新導向
 - {{HTTPStatus("308")}} `Permanent Redirect`

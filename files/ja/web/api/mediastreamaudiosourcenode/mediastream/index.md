@@ -1,8 +1,9 @@
 ---
-title: MediaStreamAudioSourceNode.mediaStream
+title: "MediaStreamAudioSourceNode: mediaStream プロパティ"
+short-title: mediaStream
 slug: Web/API/MediaStreamAudioSourceNode/mediaStream
 l10n:
-  sourceCommit: 2ba2c0efbdf0c34b1da02203e4e84b571c883629
+  sourceCommit: 1a91b0b63f0cbaca9125bd48d4e5bc8afed2a7a3
 ---
 
 {{APIRef("Web Audio API")}}

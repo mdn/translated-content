@@ -3,7 +3,7 @@ title: KeyboardEvent
 slug: Web/API/KeyboardEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`KeyboardEvent`** objects 用來詳述使用者和網頁之間，經由鍵盤產生的互動。每個事件（`event`）都記錄著一次鍵盤動作。事件類型（`keydown` 、 `keypress` 和 `keyup`）用來表示鍵盤執行哪種動作。
 

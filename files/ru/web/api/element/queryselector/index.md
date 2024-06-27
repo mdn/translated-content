@@ -36,7 +36,7 @@ var el = document.body.querySelector(
 
 Строка аргументов передаваемая `querySelector()` должна удовлетворять синтаксису CSS. Более подробные примеры смотрите в {{domxref("document.querySelector")}}.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

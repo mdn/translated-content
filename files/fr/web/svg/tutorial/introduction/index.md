@@ -3,6 +3,8 @@ title: Introduction
 slug: Web/SVG/Tutorial/Introduction
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("SVG/Tutoriel", "SVG/Tutoriel/Premiers_pas") }}
 
 SVG est un langage [XML](/fr/XML), assez similaire au [XHTML](/fr/XHTML). Ce langage peut être utilisé pour dessiner des choses complexes, comme le petit lion sur la gauche. Je l'ai dit en présentation de ce tutoriel, le SVG est un langage vectoriel. En gros, cela veut dire que l'image peut être transformée, rétrécie, agrandie, bref, manipulée, sans perte de qualité.

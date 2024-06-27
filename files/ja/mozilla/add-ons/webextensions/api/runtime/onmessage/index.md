@@ -82,7 +82,7 @@ browser.runtime.onMessage.hasListener(listener)
 
     リスナー関数は、論理値または {{jsxref("Promise")}} のいずれかを返します。
 
-    > **メモ:** `addListener()` に非同期関数を渡すと、リスナーはメッセージを受け取るたびにプロミスを返すため、他のリスナーが応答できないようになります。
+    > **メモ:** `addListener()` に非同期関数を渡すと、リスナーはメッセージを受け取るたびにプロミスを返すため、他のリスナーが応答できなくなります。
     >
     > ```js example-bad
     > // このようにしないでください
@@ -93,7 +93,7 @@ browser.runtime.onMessage.hasListener(listener)
     > });
     > ```
     >
-    > もし、リスナーが特定の種類のメッセージにのみ応答したい場合は、リスナーを非同期関数として定義し、リスナーが応答する予定のメッセージに対してのみプロミスを返す必要があります - そうでなければ、false または undefined を返してください。
+    > もし、リスナーが特定の種類のメッセージにのみ応答したい場合は、リスナーを `async` ではない関数として定義し、リスナーが応答するメッセージに対してのみプロミスを、それ以外は false または undefined を返してください。
     >
     > ```js example-good
     > browser.runtime.onMessage.addListener((data, sender) => {

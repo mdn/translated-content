@@ -155,7 +155,7 @@ index2.html
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("Worker")}}
 - [Использование веб воркеров](/ru/docs/Web/Guide/Performance/Using_web_workers)

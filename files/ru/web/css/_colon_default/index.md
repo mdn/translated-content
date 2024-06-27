@@ -58,7 +58,7 @@ input:default + label {
 
 {{EmbedLiveSample("Пример")}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

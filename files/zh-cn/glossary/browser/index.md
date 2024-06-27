@@ -1,6 +1,8 @@
 ---
 title: 浏览器
 slug: Glossary/Browser
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
@@ -9,7 +11,7 @@ slug: Glossary/Browser
 
 ## 参见
 
-- 维基百科上的[浏览器](https://zh.wikipedia.org/wiki/浏览器)
+- 维基百科上的[浏览器](https://zh.wikipedia.org/wiki/网页浏览器)
 - {{Glossary("user agent", "用户代理")}}（术语）
 - {{HTTPHeader("User-agent")}}（HTTP 标头）
 - 下载一个浏览器

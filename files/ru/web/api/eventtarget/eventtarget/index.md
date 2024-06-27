@@ -3,7 +3,7 @@ title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}
 
 **`EventTarget()`** конструктор создаёт новый {{domxref("EventTarget")}} экземпляр объекта.
 

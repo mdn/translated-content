@@ -1,11 +1,12 @@
 ---
-title: CSSTransformValue.length
+title: "CSSTransformValue: length プロパティ"
+short-title: length
 slug: Web/API/CSSTransformValue/length
 l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 **`length`** は {{domxref("CSSTransformValue")}} インターフェイスの読み取り専用プロパティで、リスト中の座標変換コンポーネントの数を返します。
 

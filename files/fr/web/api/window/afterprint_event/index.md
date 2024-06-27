@@ -3,6 +3,8 @@ title: afterprint
 slug: Web/API/Window/afterprint_event
 ---
 
+{{APIRef}}
+
 L'événement **afterprint** est déclenché après que le document associé a été imprimé ou que l'aperçu avant impression a été fermé.
 
 ## Informations générales

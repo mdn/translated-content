@@ -2,7 +2,7 @@
 title: NDEFRecord
 slug: Web/API/NDEFRecord
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: bb60fadaa7423d2195ae8727f197fa4361aa09df
 ---
 
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}

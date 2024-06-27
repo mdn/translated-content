@@ -131,7 +131,7 @@ ARIA のロールには 6 つのカテゴリーがあります。
 
 ### 6. 抽象ロール
 
-抽象ロールは、ブラウザが文書を整理し合理化するためだけに使用することを意図しています。HTMLマークアップを記述する開発者が使用すべきではありません。そうすることで、支援技術やユーザーに意味のある情報が伝達されることはありません。
+抽象ロールは、ブラウザーが文書を整理し合理化するためだけに使用することを意図しています。HTMLマークアップを記述する開発者が使用すべきではありません。そうすることで、支援技術やユーザーに意味のある情報が伝達されることはありません。
 
 [command](/ja/docs/Web/Accessibility/ARIA/Roles/command_role), [composite](/ja/docs/Web/Accessibility/ARIA/Roles/composite_role), [input](/ja/docs/Web/Accessibility/ARIA/Roles/input_role), [landmark](/ja/docs/Web/Accessibility/ARIA/Roles/landmark_role), [range](/ja/docs/Web/Accessibility/ARIA/Roles/range_role), [roletype](/ja/docs/Web/Accessibility/ARIA/Roles/roletype_role), [section](/ja/docs/Web/Accessibility/ARIA/Roles/section_role), [sectionhead](/ja/docs/Web/Accessibility/ARIA/Roles/sectionhead_role), [select](/ja/docs/Web/Accessibility/ARIA/Roles/select_role), [structure](/ja/docs/Web/Accessibility/ARIA/Roles/structure_role), [widget](/ja/docs/Web/Accessibility/ARIA/Roles/widget_role), [window](/ja/docs/Web/Accessibility/ARIA/Roles/window_role) は使用しないでください。
 

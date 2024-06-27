@@ -3,6 +3,8 @@ title: Firefox 22 for developers
 slug: Mozilla/Firefox/Releases/22
 ---
 
+{{FirefoxSidebar}}
+
 Gecko 22 を搭載した Firefox 22 は米国時間 2013 年 6 月 25 日にリリースされました。このページでは、開発者に影響する Firefox 22 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -50,7 +52,7 @@ Gecko 22 を搭載した Firefox 22 は米国時間 2013 年 6 月 25 日にリ�
 
 ### Firefox 開発ツール
 
-- [フォントインスペクタ](https://hacks.mozilla.org/2013/04/developer-tools-update-firefox-22/)が、コンピュータ内のどのフォントがページに適用されているかを表示します。
+- [フォントインスペクタ](https://hacks.mozilla.org/2013/04/developer-tools-update-firefox-22/)が、コンピューター内のどのフォントがページに適用されているかを表示します。
 - ハイライト表示によるフィードバックで、ページのどの領域がいつ再描画されたかを示します。
 - 開発ツールをブラウザーの下側だけでなく、右側にもドッキング可能になりました。
 - 開発ツール内の一部ペインを [XUL から HTML](https://bugzilla.mozilla.org/show_bug.cgi?id=875727) に切り替えました。例えば CSS ルールビューアは、`cssruleview.xul` ではなく chrome://browser/content/devtools/cssruleview\.xhtml になりました。load listener を読み込んでこれらの HTML ドキュメントを変更するには、ペインの機能を拡張するために直接オーバーレイを追加するのではなく、外側の XUL ドキュメントにオーバーレイやスクリプトを追加します。

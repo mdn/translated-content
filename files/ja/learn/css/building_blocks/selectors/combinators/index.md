@@ -2,7 +2,7 @@
 title: 結合子
 slug: Learn/CSS/Building_blocks/Selectors/Combinators
 l10n:
-  sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
+  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks")}}
@@ -14,7 +14,7 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピューターリテラシー、<a
+        <a
           href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >基本的なソフトウェアのインストール</a
         >、<a
@@ -63,7 +63,7 @@ article > p
 
 ## 次兄弟結合子
 
-**次兄弟結合子** (next-sibling selector, `+`) は 2 つの CSS セレクターの間に配置されます。2つ目のセレクターに一致する要素のうち、最初のセレクターの次の兄弟要素で あるものだけに一致します。例えば、`<p>` 要素の直後に来るすべての `<img>` 要素を選択するためには、次のようにします。
+**次兄弟結合子** (next-sibling combinator, `+`) は 2 つの CSS セレクターの間に配置されます。2つ目のセレクターに一致する要素のうち、最初のセレクターの次の兄弟要素で あるものだけに一致します。例えば、`<p>` 要素の直後に来るすべての `<img>` 要素を選択するためには、次のようにします。
 
 ```css
 p + img
@@ -79,7 +79,7 @@ p + img
 
 ## 後続兄弟結合子
 
-要素が直接隣接していなくても、その要素の兄弟を選択したい場合は、後続兄弟結合子 (subsequent-sibling combinator, `~`) を使うことができます。 `<p>` 要素の後のどこかに来る `<img>` 要素をすべて選択するには、次のようにします。
+要素が直接隣接していなくても、その要素の兄弟を選択したい場合は、**後続兄弟結合子** (subsequent-sibling combinator, `~`) を使うことができます。 `<p>` 要素の後のどこかに来る `<img>` 要素をすべて選択するには、次のようにします。
 
 ```css
 p ~ img
@@ -105,7 +105,7 @@ p ~ img {
 }
 ```
 
-[`&` ネスティングセレクター](/ja/docs/Web/CSS/Nesting_selector)も、複合セレクターを作成するために使用されることがあります。
+[`&` 入れ子セレクター](/ja/docs/Web/CSS/Nesting_selector)も、複合セレクターを作成するために使用されることがあります。
 
 ```css
 p {
@@ -121,6 +121,8 @@ p img {
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/nesting.html", '100%', 800)}}
 
+> **メモ:** 上の例では、 `&` 入れ子セレクターは必須ではありませんが、これを追加することで、CSSの入れ子が使用されていることを明示的に示すことができます。
+
 ## 結合子の使用
 
 前回学んだセレクターを結合子と組み合わせることで、文書内の一部を選択することができます。例えば、 `<ul>` の直接の子であるクラスが "a" のリストアイテムを選択するには、次の例のようにします。
@@ -134,9 +136,9 @@ ul > li[class="a"] {
 
 単純なクラスを作成し、それを対象の要素に適用する方が多いでしょう。とはいえ、結合子の知識は、文書内の何かをスタイル設定する必要があるときに、おそらく {{Glossary("CMS")}} によって生成された HTML にアクセスすることができない場合に、とても有益なものになるでしょう。
 
-## スキルをテストしましょう
+## スキルテスト
 
-あなたはこの記事の最後までたどり着きましたが、最も重要な情報を覚えていますか？次に進む前に、この情報が記憶されているかどうかを確認するために、さらにいくつかのテストが用意されています。 [Test your skills: Selectors](/ja/docs/Learn/CSS/Building_blocks/Selectors/Selectors_Tasks) を参照してください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Selectors_Tasks)を参照してください。
 
 ## まとめ
 

@@ -32,7 +32,7 @@ slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
 - [段組みコンテナー](/ja/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
 - {{cssxref("column-span")}} が `all` に設定された要素
 
-これは、新しい BFC がメインレイアウトの中でミニレイアウトとなり、一番外側の文書のように動作するので便利です。 BFC はその中にすべてを含み、 {{cssxref("float")}} と {{cssxref("clear")}} は同じ整形コンテキスト内の項目にのみ適用され、マージンは同じ書式設定コンテキスト内の要素間でのみ相殺されます。
+これは、新しい BFC がメインレイアウトの中でミニレイアウトとなり、一番外側の文書のように動作するので便利です。 BFC はその中にすべてを含み、 {{cssxref("float")}} と {{cssxref("clear")}} は同じ整形コンテキスト内の項目にのみ適用され、マージンは同じ整形コンテキスト内の要素間でのみ相殺されます。
 
 ### BFC が生成される例
 

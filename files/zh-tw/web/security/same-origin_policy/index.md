@@ -3,6 +3,8 @@ title: 同源政策 (Same-origin policy)
 slug: Web/Security/Same-origin_policy
 ---
 
+{{QuickLinksWithSubpages("/zh-TW/docs/Web/Security")}}
+
 同源政策限制了程式碼和不同網域資源間的互動。
 
 ## 同源定義

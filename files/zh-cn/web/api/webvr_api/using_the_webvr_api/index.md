@@ -3,6 +3,8 @@ title: Using the WebVR API
 slug: Web/API/WebVR_API/Using_the_WebVR_API
 ---
 
+{{APIRef("WebVR API")}}
+
 The [WebVR API](/zh-CN/docs/Web/API/WebVR_API) is a fantastic addition to the web developer's toolkit, allowing access to virtual reality hardware such as the [Oculus Rift](https://developer.oculus.com/), and converting outputted movement and orientation data into view rendering updates on a web app. But how do you get started in developing VR apps for the Web? This article will guide you through the basics.
 [WebVR API](/zh-CN/docs/Web/API/WebVR_API) 对于 web 开发者来说，是一个令人心动的功能包，允许你连接到类似于[Oculus Rift](https://developer.oculus.com/) 这样的虚拟现实硬件，并且能够在你的 web app 中，将从硬件获取到的位置移动数据和姿态角数据，实时更新你的渲染显示输出。具体要如何在 Web 上开始开发你的 VR app 呢？这篇文章将会提供基础的引导信息。
 

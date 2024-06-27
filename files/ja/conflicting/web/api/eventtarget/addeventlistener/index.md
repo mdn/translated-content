@@ -4,7 +4,7 @@ slug: conflicting/Web/API/EventTarget/addEventListener
 original_slug: Web/API/EventListener/handleEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}
 
 {{domxref("EventListener")}} の **`handleEvent()`** メソッドは、
 監視されている {{domxref("EventTarget")}} 上で発生するイベントを処理するために

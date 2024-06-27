@@ -1,23 +1,42 @@
 ---
 title: かっこいいボックス
 slug: Learn/CSS/Building_blocks/A_cool_looking_box
+l10n:
+  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
+{{LearnSidebar}}
+{{PreviousMenu("Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper", "Learn/CSS/Building_blocks")}}
 
 この評価では、人目を引くボックスを作成しようとすることで、かっこいいボックスを作成する方法をさらに習得できます。
 
-| 前提知識: | この評価を試みる前に、このモジュールのすべての記事を読んでおくべきです。             |
-| --------- | ------------------------------------------------------------------------------------ |
-| 学習目標: | CSS ボックスモデルと、境界線や背景などの他のボックス関連機能の理解をテストすること。 |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提知識:</th>
+      <td>
+        この評価を試みる前に、このモジュールのすべての記事を読んでおくべきです。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目的:</th>
+      <td>
+        CSS ボックスモデルと、境界線や背景などの他のボックス関連機能の理解をテストすること。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## 出発点
 
 この評価を開始するには、次のことが必要です。
 
-- [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/index.html) と [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/style.css) のローカルコピーを作成します — それらを `index.html` と `style.css` として新しいディレクトリーに保存します。
+- [HTML](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/cool-information-box-start/index.html) と [CSS](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/cool-information-box-start/style.css) のローカルコピーを作成します — それらを `index.html` と `style.css` として新しいディレクトリーに保存します。
 
-> **メモ:** あるいは、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) などのサイトを使って評価することもできます。 HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力できます。 使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
+また、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターを使用することもできます。
+これらのオンラインエディターのいずれかに HTML を貼り付けて CSS を入力してください。
+
+> **メモ:** もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 
 ## プロジェクトの概要
 
@@ -29,27 +48,28 @@ slug: Learn/CSS/Building_blocks/A_cool_looking_box
 
 ### ボックスの装飾
 
-提供された {{htmlelement("p")}} に次のように装飾を設定してください。
+提供された {{htmlelement("div")}} に、次のように装飾を設定してください。
 
-- およそ 200 ピクセルくらいの、大きなボタンに適した幅。
-- 過程でテキストを垂直方向に中央揃えする、大きなボタンに適した高さ。
-- 中央揃えのテキスト。
+- およそ 200 ピクセルくらいの、大きなボックスに適した幅。
+- 過程でテキストを垂直方向に中央揃えする、大きなボックスに適した高さ。
+- ボックスを水平方向に中央揃えしてください。
+- ボックス内でテキストを中央揃えしてください。
 - フォントサイズがわずかに増加し、計算したスタイルはおおよそ 17 から 18 ピクセルになりました。 rem を使用してください。 どのように値を導いたかについてのコメントを書いてください。
 - デザインの基本色。 この色を背景色としてボックスに付けます。
-- テキストの色は同じで、黒いテキストの影を使って読みやすくします。
+- テキストにはコントラストのある色を使い、テキストの影は黒にします。
 - かなり微妙な境界線の半径。
 - 基本色に似た色で、やや暗い色合いの 1 ピクセルの実線の境界線。
-- 右下隅に向かう半透明の黒の線形グラデーション。 最初は完全に透明にし、それに沿って 30% ずつ不透明度を約 0.2 に段階的に調整し、最後まで同じ色のままにします。
-- 複数のボックスの影。 ボックスがページから少し浮き上がって見えるようにするには、標準のボックスの影を 1 つ指定します。 他の 2 つは、ボックスの内側の影であるべきです — 左上近くの半透明の白い影と右下近くの半透明の黒い影 — ボックスの素敵な浮いた 3D の外観に追加する。
+- 右下に向かう直線的な半透明の黒のグラデーション。始めるには完全に透明にし、 30% 進むにつれて 0.2 程度の透過率にグラデーションし、最後まで同じ色にしてください。
+- 複数のボックスシャドウ。標準のボックスシャドウを 1 つ付けて、ボックスがページから少し浮き上がって見えるようにします。他にも、左上付近に半透明の白いシャドウ、右下付近に半透明の黒いシャドウの 2 種類を入れ、ボックスの立体感を追加してください。
+
+## ヒントとコツ
+
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) を使って、 CSS の間違いを把握して修正しましょう。
 
 ## 例
 
 次のスクリーンショットは、完成したデザインがどのように見えるかの例を示しています。
 
-![](fancy-box.png)
+![角を丸めた大きな赤い箱。ドロップシャドウ付きの白いテキストには "This is a cool box" と書かれています。](fancy-box2.png)
 
-## 評価
-
-組織的コースの一環としてこの評価に従っている場合は、採点のために作品を教師や指導者に渡すことができるはずです。 自己学習をしている場合は、[この演習についてのディスカッションスレッド](https://discourse.mozilla.org/t/a-cool-looking-box-assessment/24685)や [Mozilla IRC](https://wiki.mozilla.org/IRC) の [#mdn](irc://irc.mozilla.org/mdn) IRC チャンネルで尋ねることで、かなり簡単に採点の手引きを得ることができます。 まず演習を試してみてください — 不正行為によって得られるものは何もありません！
-
-{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
+{{PreviousMenu("Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper", "Learn/CSS/Building_blocks")}}

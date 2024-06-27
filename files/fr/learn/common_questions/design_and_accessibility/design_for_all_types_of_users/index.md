@@ -3,6 +3,8 @@ title: Concevoir un site pour toutes les personnes
 slug: Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Cet article aborde les concepts de bases pour vous aider à construire des sites web accessibles à tous.
 
 <table class="standard-table">

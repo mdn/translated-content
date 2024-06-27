@@ -3,7 +3,7 @@ title: GlobalEventHandlers.onclick
 slug: Web/API/Element/click_event
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
 Свойство **onclick** возвращает обработчик события `click` на текущем элементе.
 

@@ -2,7 +2,7 @@
 title: TypedArray.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/at
 l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: a815a95e4ab4adf391d8a7bc66a3abbce1a686d8
 ---
 
 {{JSRef}}
@@ -20,7 +20,7 @@ at(index)
 ### 引数
 
 - `index`
-  - : 返される配列要素のゼロ基点のインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。負の添字を使用した場合は、配列の末尾から逆に数えた位置です。 `index < 0` であれば、 `index + array.length` がアクセスされます。
+  - : 返される型付き配列要素のゼロ基点のインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。負の添字を使用した場合は、型付き配列の末尾から逆に数えた位置です。 `index < 0` であれば、 `index + array.length` がアクセスされます。
 
 ### 返値
 

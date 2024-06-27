@@ -3,7 +3,7 @@ title: document.createElement
 slug: Web/API/Document/createElement
 ---
 
-{{ ApiRef() }}
+{{APIRef("DOM")}}
 
 ### Общая информация
 
@@ -67,3 +67,12 @@ function addElement() {
 ## Совместимость с браузерами
 
 {{Compat}}
+
+## Смотрите также
+
+- {{domxref("Node.removeChild()")}}
+- {{domxref("Node.replaceChild()")}}
+- {{domxref("Node.appendChild()")}}
+- {{domxref("Node.insertBefore()")}}
+- {{domxref("Node.hasChildNodes()")}}
+- {{domxref("document.createElementNS()")}}

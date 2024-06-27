@@ -90,7 +90,7 @@ CSS 2.0 defined only _computed value_ as the last step in a property's calculati
 - `padding-bottom`, `padding-left`, `padding-right`, `padding-top`
 - `text-indent`
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

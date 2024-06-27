@@ -21,7 +21,7 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 #### デバッガー
 
 - [ソースファイルを "ブラックボックス化"](/ja/docs/Tools/Debugger/How_to/Black_box_a_source) を、ソースファイルを "無視" と呼ぶようになりました ([Firefox バグ 1642811](https://bugzil.la/1642811))。
-- [例外](/ja/docs/Tools/Debugger/How_to/Breaking_on_exceptions) でインラインプレビューが可能になりました ([Firefox バグ 1581708](https://bugzil.la/1581708))。
+- [例外](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/breaking_on_exceptions/index.html) でインラインプレビューが可能になりました ([Firefox バグ 1581708](https://bugzil.la/1581708))。
 - 監視式やスコープのセクションにある項目にマウスポインターを載せると、それらの値を表示するツールチップが現れるようになりました ([Firefox バグ 1631545](https://bugzil.la/1631545))。
 - [コールスタックセクション](/ja/docs/Tools/Debugger/UI_Tour#Call_stack) のコンテキストメニューの項目に、現在のスタックフレームをはじめから実行する **フレームを再実行** を追加しました ([Firefox バグ 1594467](https://bugzil.la/1594467))。
 
@@ -89,7 +89,7 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 #### DOM
 
 - [`FileReader`](/ja/docs/Web/API/FileReader) インターフェイスの [`loadstart` イベント](/ja/docs/Web/API/FileReader/loadstart_event) が、仕様書に従って非同期に発生するようになりました ([Firefox バグ 1502403](https://bugzil.la/1502403))。
-- {{domxref("CanvasPattern.setTransform()")}} が、入力パラメーターとして {{domxref("SVGMatrix")}} オブジェクトと同様に {{domxref("DOMMatrix")}} オブジェクトもサポートしました ([Firefox バグ 1565997](https://bugzil.la/1565997))。
+- {{domxref("CanvasPattern.setTransform()")}} が、入力引数として {{domxref("SVGMatrix")}} オブジェクトと同様に {{domxref("DOMMatrix")}} オブジェクトもサポートしました ([Firefox バグ 1565997](https://bugzil.la/1565997))。
 
 #### Media、WebRTC、Web Audio
 

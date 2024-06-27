@@ -134,7 +134,7 @@ bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 ## 示例
 
-CodePen 中关于 [如何使用](http://codepen.io/netsi1964/full/QbLLGW/) 如何使用的一个例子。
+CodePen 中关于 [如何使用](https://codepen.io/netsi1964/full/QbLLGW/) 如何使用的一个例子。
 
 ## 规范
 

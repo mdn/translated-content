@@ -1,7 +1,6 @@
 ---
 title: Console.log()
 slug: Web/API/console/log_static
-original_slug: Web/API/console/log
 ---
 
 {{APIRef("Console API")}}
@@ -28,7 +27,7 @@ console.log(msg [, subst1, ..., substN]);
 
 Больше подробностей смотрите в разделе [Вывод текста в консоль](/ru/docs/DOM/console#Outputting_text_to_the_console) документации {{domxref("console")}}.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

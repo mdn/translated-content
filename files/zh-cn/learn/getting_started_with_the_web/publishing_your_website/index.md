@@ -48,7 +48,7 @@ slug: Learn/Getting_started_with_the_web/Publishing_your_website
 
 - [JSFiddle](https://jsfiddle.net/)
 - [Glitch](https://glitch.com/)
-- [JSBin](http://jsbin.com/)
+- [JSBin](https://jsbin.com/)
 - [CodePen](https://codepen.io/)
 
 ![](jsbin-screen.png)

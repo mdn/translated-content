@@ -40,7 +40,7 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 {{Compat}}
 
-## Смотреть также
+## Смотрите также
 
 - [CSS Flexible Box Layout](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout)
 - [Создание следа из хлебных крошек](https://www.w3.org/TR/WCAG20-TECHS/G65.html)

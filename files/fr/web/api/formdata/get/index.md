@@ -3,7 +3,9 @@ title: FormData.get()
 slug: Web/API/FormData/get
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 La méthode **`get()`** de l'interface [`FormData`](/fr/docs/Web/API/FormData) renvoie la première valeur associée à une clé donnée dans un objet `FormData`. Si vous souhaitez manipuler plusieurs valeurs et les récupérer intégralement, utilisez plutôt la méthode [`getAll()`](/fr/docs/Web/API/FormData/getAll).
 

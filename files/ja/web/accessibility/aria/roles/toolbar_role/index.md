@@ -3,6 +3,8 @@ title: toolbar ロールの使用
 slug: Web/Accessibility/ARIA/Roles/toolbar_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### 説明
 
 このテクニックは、[`toolbar`](https://www.w3.org/TR/wai-aria-1.1/#toolbar) ロールを使用する方法を示し、ブラウザーと支援技術に与える影響について説明します。

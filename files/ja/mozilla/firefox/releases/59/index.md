@@ -108,7 +108,7 @@ _変更なし。_
 
 ### HTML
 
-- {{htmlelement("script")}} 要素の [`type`](/ja/docs/Web/HTML/Element/script#type) 属性の非標準パラメーターである `version` (例えば `type="application/javascript;version=1.8"`) を削除しました ([Firefox バグ 1428745](https://bugzil.la/1428745))。
+- {{htmlelement("script")}} 要素の [`type`](/ja/docs/Web/HTML/Element/script#type) 属性の非標準引数である `version` (例えば `type="application/javascript;version=1.8"`) を削除しました ([Firefox バグ 1428745](https://bugzil.la/1428745))。
 
 ### CSS
 

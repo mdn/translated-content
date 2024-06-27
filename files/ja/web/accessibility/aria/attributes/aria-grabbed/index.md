@@ -2,8 +2,10 @@
 title: aria-grabbed
 slug: Web/Accessibility/ARIA/Attributes/aria-grabbed
 l10n:
-  sourceCommit: d2a9f2e26a8139d4bb270d7dc3cddd8b848719fe
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
+
+{{AccessibilitySidebar}}
 
 `aria-grabbed` の状態は、ドラッグ＆ドロップ処理で要素が「つかまれた」状態を示します。 {{deprecated_inline}}
 
@@ -47,8 +49,3 @@ l10n:
 - {{domxref('DataTransfer.dropEffect')}}
 - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
 - [Accessible Drag and Drop](https://dev.opera.com/articles/accessible-drag-and-drop/) by Gez Lemon
-
-<section id="Quick_links">
-<strong><a href="/ja/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA 状態とプロパティ</a></strong>
-{{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/aria/Attributes")}}
-</section>

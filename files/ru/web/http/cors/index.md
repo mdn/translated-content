@@ -484,7 +484,7 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 
 Examples of this usage can be [found above](#Preflighted_requests).
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -497,7 +497,7 @@ Examples of this usage can be [found above](#Preflighted_requests).
 - Internet Explorer 8 and 9 expose CORS via the `XDomainRequest` object, but have a full implementation in IE 10.
 - While Firefox 3.5 introduced support for cross-site XMLHttpRequests and Web Fonts, certain requests were limited until later versions. Specifically, Firefox 7 introduced the ability for cross-site HTTP requests for WebGL Textures, and Firefox 9 added support for Images drawn on a canvas using `drawImage`.
 
-## See also
+## Смотрите также
 
 - [Code Samples Showing `XMLHttpRequest` and Cross-Origin Resource Sharing](https://arunranga.com/examples/access-control/)
 - [Cross-Origin Resource Sharing From a Server-Side Perspective (PHP, etc.)](/ru/docs/Web/HTTP/Server-Side_Access_Control)

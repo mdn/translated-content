@@ -218,7 +218,7 @@ gl_Position = vec4(position, 1.0);
 
 显而易见的问题是：“为什么要增加维度？”。事实证明，这种增加允许使用许多不错的技术来处理 3D 数据。这个增加的维度将透视的概念引入坐标系中。将其放置在适当的位置后，我们可以将 3D 坐标映射到 2D 空间中，从而允许两条平行线当它们延伸到远方时相交。 `w` 的值被用作该坐标的其他分量放除数，因此 `x`, `y` 和 `z` 的真实值被计算为 `x/w` , `y/w` 和 `z/w`（然后 `w` 也 `w/w` , 变成 1）。
 
-三维点定义在典型的笛卡尔坐标系中。增加的第四维将这一点变为 [齐次坐标](https://zh.wikipedia.org/wiki/homogeneous_coordinates) 。它仍然代表 3D 空间中的一个点，并且可以通过一对简单的函数轻松地演示如何构造这种类型的坐标。
+三维点定义在典型的笛卡尔坐标系中。增加的第四维将这一点变为[齐次坐标](https://zh.wikipedia.org/wiki/齐次坐标)。它仍然代表 3D 空间中的一个点，并且可以通过一对简单的函数轻松地演示如何构造这种类型的坐标。
 
 ```js
 function cartesianToHomogeneous(point) {
@@ -734,4 +734,4 @@ gl_Position = projection * view * model * vec4(position, 1.0);
 ## 参见
 
 - [WebGL](/zh-CN/docs/Web/API/WebGL_API)
-- [3D projection](https://zh.wikipedia.org/wiki/3D_projection)
+- [三维投影](https://zh.wikipedia.org/wiki/三维投影)

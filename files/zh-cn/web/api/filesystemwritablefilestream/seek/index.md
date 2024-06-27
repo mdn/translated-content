@@ -1,9 +1,11 @@
 ---
 title: FileSystemWritableFileStream：seek() 方法
 slug: Web/API/FileSystemWritableFileStream/seek
+l10n:
+  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 {{domxref("FileSystemWritableFileStream")}} 接口的 **`seek()`** 方法用于更新文件当前指针的偏移到指定的位置（以字节为单位）。
 
@@ -27,7 +29,7 @@ seek(position)
 - `NotAllowedError` {{domxref("DOMException")}}
   - : 如果 {{domxref('PermissionStatus.state')}} 不为 `granted`，抛出此异常。
 - {{jsxref("TypeError")}}
-  - : 如果 `position` 参数不是一个数字或者未定义，抛出此错误。
+  - : 如果 `position` 参数不是一个数字或者未定义，抛出此异常。
 
 ## 示例
 
@@ -44,18 +46,18 @@ seek(position)
 ```js
 async function saveFile() {
   try {
-    // 创建一个新句柄。
+    // 创建一个新句柄
     const newHandle = await window.showSaveFilePicker();
 
-    // 创建一个 FileSystemWritableFileStream 用于写入。
+    // 创建一个 FileSystemWritableFileStream 用于写入
     const writableStream = await newHandle.createWritable();
 
-    // 写入我们的文件。
+    // 写入我们的文件
     await writableStream.write("My first file content");
     await writableStream.seek(0);
     await writableStream.write("My second file content");
 
-    // 关闭文件并将内容写入磁盘。
+    // 关闭文件并将内容写入磁盘
     await writableStream.close();
   } catch (err) {
     console.error(err.name, err.message);
@@ -76,4 +78,4 @@ async function saveFile() {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/articles/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

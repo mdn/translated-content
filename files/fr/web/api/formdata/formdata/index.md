@@ -3,7 +3,9 @@ title: FormData()
 slug: Web/API/FormData/FormData
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 Le constructeur **`FormData()`** crée un nouvel objet {{domxref("FormData")}}.
 

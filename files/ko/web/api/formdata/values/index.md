@@ -3,7 +3,9 @@ title: FormData.values()
 slug: Web/API/FormData/values
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 **`FormData.values()`** 메서드는 이 객체에 포함 된 모든 value를 통과하는 {{jsxref("Iteration_protocols",'iterator')}}를 반환합니다. value는 {{domxref("USVString")}} 또는 {{domxref("Blob")}} 객체입니다.
 

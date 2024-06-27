@@ -862,7 +862,7 @@ Sauce Labs API を使用することで、合格したかどうか、テスト�
 
 ![Sauce Labs Updated Job info](sauce_labs_updated_job_info.png)
 
-### 自身のリモートサーバ
+### 自身のリモートサーバー
 
 Sauce Labs や BrowserStack のようなサービスを使用したくない場合は、常に自分自身でリモートテストサーバーを設定することができます。その方法を見ていきましょう。
 
@@ -880,7 +880,7 @@ Sauce Labs や BrowserStack のようなサービスを使用したくない場�
 
 これでサーバーを実行したので、リモートの selenium サーバーで動作するデモテストを作成してみましょう。
 
-1. `google_test.js` ファイルのコピーを作成し、 `google_test_remote.js` と名付け、自分のプロジェクトディレクトリに置きます。
+1. `google_test.js` ファイルのコピーを作成し、 `google_test_remote.js` と名付け、自分のプロジェクトディレクトリーに置きます。
 2. コードの行（`const driver = …` で始まる行）を次のように更新します。
 
    ```js

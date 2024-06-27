@@ -41,7 +41,7 @@ class ClassWithStatic {
 
 静的メソッドの多くは、インスタンスを作成したり複製したりするなどの、ユーティリティ関数です。パブリック静的フィールドは、作成するすべてのクラスインスタンスではなく、クラスごとに一つだけフィールドを存在させたい場合に有益です。これは、キャッシュや固定の構成値、 あるいはインスタンスをまたがって複製する必要のないデータなどに有益です。
 
-静的フィールド名は[計算](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#計算されたプロパティ名)できます。計算式の `this` 値はクラス定義の周囲の `this` であり、クラス名を参照すると、クラスがまだ初期化されていないため {{jsxref("ReferenceError")}} になります。この式では {{jsxref("Operators/await", "await")}} と {{jsxref("Operators/yield", "yield")}} は期待どおりに動作します。
+静的フィールド名は[計算](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#計算プロパティ名)できます。計算式の `this` 値はクラス定義の周囲の `this` であり、クラス名を参照すると、クラスがまだ初期化されていないため {{jsxref("ReferenceError")}} になります。この式では {{jsxref("Operators/await", "await")}} と {{jsxref("Operators/yield", "yield")}} は期待どおりに動作します。
 
 静的フィールドは初期化子を持つことができます。初期化子を持たない静的フィールドは `undefined` に初期化されます。パブリック静的フィールドはサブクラスでは再初期化されませんが、プロトタイプチェーン経由でアクセスすることができます。
 

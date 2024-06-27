@@ -2,7 +2,7 @@
 title: MDN Web Docs のローカライズ
 slug: MDN/Community/Contributing/Translated_content
 l10n:
-  sourceCommit: c7f070e3ea133365dc9bba78c88dde17aab4f066
+  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
 {{MDNSidebar}}
@@ -26,7 +26,7 @@ l10n:
 
 ### 中国語 (`zh-CN`, `zh-TW`)
 
-- ディスカッション: [Telegram (`Mozilla China`)](https://t.me/mozilla_china), [Telegram (`MozTW L10n`)](https://moztw.org/community/telegram/)
+- ディスカッション: [Discord (`#zh-cn`)](/discord), [Discord (`#zh-tw`)](/discord), [Telegram (`MozTW L10n`)](https://moztw.org/community/telegram/)
 - 現在の貢献者: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999), [jasonren0403](https://github.com/jasonren0403), [JasonLamv-t](https://github.com/JasonLamv-t)
 
 ### フランス語 (`fr`)
@@ -41,8 +41,8 @@ l10n:
 
 ### 韓国語 (`ko`)
 
-- ディスカッション: [Discord (`#korean`)](/discord), [Kakao Talk (`#MDN Korea`)](https://open.kakao.com/o/gdfG288c)
-- 現在の貢献者: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [pje1740](https://github.com/pje1740), [wisedog](https://github.com/wisedog), [swimjiy](https://github.com/swimjiy), [jho2301](https://github.com/jho2301), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
+- ディスカッション: [Discord (`#korean`)](/discord), [Google Groups (`yari-content-ko`)](https://groups.google.com/g/yari-content-ko)
+- 現在の貢献者: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [wisedog](https://github.com/wisedog), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
 
 ### ロシア語 (`ru`)
 
