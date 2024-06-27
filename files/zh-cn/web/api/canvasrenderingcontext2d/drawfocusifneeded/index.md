@@ -1,31 +1,37 @@
 ---
 title: CanvasRenderingContext2D.drawFocusIfNeeded()
 slug: Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.drawFocusIfNeeded()`** 是 Canvas 2D API 用来给当前路径或特定路径绘制焦点的方法，如果给定的元素获取了焦点。
+Canvas 2D API 的 **`CanvasRenderingContext2D.drawFocusIfNeeded()`** 方法用于给定的元素获取了焦点时给当前路径或特定路径绘制焦点。
 
 ## 语法
 
-```
-void ctx.drawFocusIfNeeded(element);
-void ctx.drawFocusIfNeeded(path, element);
+```js-nolint
+drawFocusIfNeeded(element)
+drawFocusIfNeeded(path, element)
 ```
 
 ### 参数
 
-- element
-  - : 是否需要设置焦点的元素。
+- `element`
+  - : 一个确认是否需要设置焦点的元素。
 - `path`
   - : {{domxref("Path2D")}} 路径。
 
+### 返回值
+
+无（{{jsxref("undefined")}}）。
+
 ## 示例
 
-### 控制按钮焦点
+### 管理按钮焦点
 
-这是一段使用 `drawFocusIfNeeded` 方法的简单的代码片段。
+这个例子在画布上绘制了两个按钮。使用 `drawFocusIfNeeded()` 方法在适当的时候绘制焦点环。
 
 #### HTML
 
@@ -56,17 +62,17 @@ function redraw() {
 }
 
 function handleClick(e) {
-  // Calculate click coordinates
+  // 计算点击坐标
   const x = e.clientX - canvas.offsetLeft;
   const y = e.clientY - canvas.offsetTop;
 
-  // Focus button1, if appropriate
+  // 如果合适，聚焦 button1
   drawButton(button1, 20, 20);
   if (ctx.isPointInPath(x, y)) {
     button1.focus();
   }
 
-  // Focus button2, if appropriate
+  // 如果合适，聚焦 button2
   drawButton(button2, 20, 80);
   if (ctx.isPointInPath(x, y)) {
     button2.focus();
@@ -78,29 +84,29 @@ function drawButton(el, x, y) {
   const width = 150;
   const height = 40;
 
-  // Button background
+  // 按钮背景
   ctx.fillStyle = active ? "pink" : "lightgray";
   ctx.fillRect(x, y, width, height);
 
-  // Button text
+  // 按钮文本
   ctx.font = "15px sans-serif";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
   ctx.fillStyle = active ? "blue" : "black";
   ctx.fillText(el.textContent, x + width / 2, y + height / 2);
 
-  // Define clickable area
+  // 定义可点击区域
   ctx.beginPath();
   ctx.rect(x, y, width, height);
 
-  // Draw focus ring, if appropriate
+  // 如果合适，绘制焦点环
   ctx.drawFocusIfNeeded(el);
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('控制按钮焦点', 700, 180)}}
+{{EmbedLiveSample('管理按钮焦点', 700, 180)}}
 
 ## 规范
 
@@ -112,4 +118,4 @@ function drawButton(el, x, y) {
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}.
+- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
