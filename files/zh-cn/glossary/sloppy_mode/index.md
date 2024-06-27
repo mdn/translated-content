@@ -9,7 +9,7 @@ l10n:
 
 {{Glossary("ECMAScript")}} 5 及更高版本允许脚本选择进入新的[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)，其会以多种方式改变 JavaScript 的语义，以提高其弹性，并使在出现问题时更容易理解发生了什么。
 
-JavaScript 的正常、非严格模式有时被称为**正常模式**。这不是一个官方的称呼，但如果你花时间编写严肃的 JavaScript 代码，你可能会遇到这个术语。
+JavaScript 的正常、非严格模式有时被称为**正常模式**（sloppy mode）。这不是一个官方的称呼，但如果你花时间编写严格的 JavaScript 代码，你可能会遇到这个术语。
 
 ## 参见
 
