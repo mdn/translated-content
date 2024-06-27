@@ -1,18 +1,20 @@
 ---
 title: CanvasRenderingContext2D.drawImage()
 slug: Web/API/CanvasRenderingContext2D/drawImage
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
 
-Canvas 2D API 中的 **`CanvasRenderingContext2D.drawImage()`** 方法提供了多种在画布（Canvas）上绘制图像的方式。
+Canvas 2D API 的 **`CanvasRenderingContext2D.drawImage()`** 方法提供了多种在画布（Canvas）上绘制图像的方式。
 
 ## 语法
 
-```js
-drawImage(image, dx, dy);
-drawImage(image, dx, dy, dWidth, dHeight);
-drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+```js-nolint
+drawImage(image, dx, dy)
+drawImage(image, dx, dy, dWidth, dHeight)
+drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
 ```
 
 ![drawImage](canvas_drawimage.jpg)
@@ -101,24 +103,24 @@ image.addEventListener("load", (e) => {
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-const image = new Image(60, 45); // Using optional size for image
-image.onload = drawImageActualSize; // Draw when image has loaded
+const image = new Image(); // 创建一个新的图片对象
+image.width = 60; // 使用可选的图片尺寸
+image.height = 45; // 使用可选的图片尺寸
+image.onload = drawImageActualSize; // 图片加载完成后进行绘制
 
-// Load an image of intrinsic size 300x227 in CSS pixels
+// 加载一个固定尺寸为 300x227 的图片（在 CSS 像素中）
 image.src = "rhino.jpg";
 
 function drawImageActualSize() {
-  // Use the intrinsic size of image in CSS pixels for the canvas element
+  // 在画布上使用图片的实际尺寸（在 CSS 像素中）
   canvas.width = this.naturalWidth;
   canvas.height = this.naturalHeight;
 
-  // Will draw the image as 300x227, ignoring the custom size of 60x45
-  // given in the constructor
+  // 绘制图片，使用它的固定尺寸 300x227，忽略构造函数中给定的自定义尺寸 60x45
   ctx.drawImage(this, 0, 0);
 
-  // To use the custom size we'll have to specify the scale parameters
-  // using the element's width and height properties - lets draw one
-  // on top in the corner:
+  // 若要使用自定义尺寸，必须指定缩放参数
+  // 让我们在画布的左上角绘制一个使用元素宽度和高度属性的图片：
   ctx.drawImage(this, 0, 0, this.width, this.height);
 }
 ```
@@ -137,7 +139,7 @@ function drawImageActualSize() {
 
 ## 备注
 
-- 当 `drawImage()` 需要在 {{domxref("HTMLVideoElement")}} 工作时，仅当 {{domxref("HTMLMediaElement.readyState")}} 大于 1 时 `drawImage()` 才能正常工作。
+- `drawImage()` 在一个 `HTMLVideoElement` 上只有在其 `HTMLMediaElement.readyState` 大于 1（即设置 `currentTime` 属性后触发 **seek** 事件）时才能正确工作。
 - 在绘制，裁剪和/或缩放时，`drawImage()` 将始终使用源元素的固有尺寸（以 CSS 像素为单位）。
 - 在某些旧版本浏览器中，`drawImage()` 将忽略图像中的所有 EXIF 元数据，包括方向。此行为在 iOS 设备上尤其麻烦。你应该自己检测方向并使用 `rotate()` 使其正确。
 
