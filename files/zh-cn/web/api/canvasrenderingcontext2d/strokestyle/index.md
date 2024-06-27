@@ -16,7 +16,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.strokeStyle`** 属性用于描述�
 以下之一：
 
 - `color`
-  - : 作为 [CSS](/en-US/docs/Web/CSS) 值 {{cssxref("&lt;color&gt;")}} 解析的字符串。
+  - : 作为 [CSS](/zh-CN/docs/Web/CSS) 值 {{cssxref("&lt;color&gt;")}} 解析的字符串。
 - `gradient`
   - : 一个 {{domxref("CanvasGradient")}} 对象（线性或径向渐变）。
 - `pattern`
