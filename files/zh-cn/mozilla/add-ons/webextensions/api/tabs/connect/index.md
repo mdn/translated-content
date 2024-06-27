@@ -7,11 +7,11 @@ l10n:
 
 {{AddonSidebar}}
 
-调用此函数来建立扩展的后台脚本（或其他特权脚本，如弹出窗口脚本或选项页脚本）与属于该扩展并正在指定标签中运行的任何内容脚本之间的连接。此函数返回一个 `runtime.Port` 对象。
+调用此函数来建立扩展的后台脚本（或其他特权脚本，如弹出窗口脚本或选项页脚本）与属于该扩展并正在指定标签中运行的任何内容脚本之间的连接。此函数返回一个 {{WebExtAPIRef("runtime.Port")}} 对象。
 
-调用此函数后，将在任何属于此扩展并在指定标签中运行的内容脚本中触发 `runtime.onConnect` 事件。事件监听器将会收到另一个 `runtime.Port` 对象。两侧可以使用这些 `Port` 对象来交换消息。
+调用此函数后，将在任何属于此扩展并在指定标签中运行的内容脚本中触发 {{WebExtAPIRef('runtime.onConnect')}} 事件。事件监听器将会收到另一个 {{WebExtAPIRef("runtime.Port")}} 对象。两侧可以使用这些 `Port` 对象来交换消息。
 
-有关详细信息，请参阅[基于连接的消息传递](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#基于连接的消息传递)。你可以在不创建连接的情况下发送消息。关于如何选择这两种选项，请参阅[选择一次性消息和基于连接的消息传递之间的区别](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#choosing_between_one-off_messages_and_connection-based_messaging)。
+有关详细信息，请参阅[基于连接的消息传递](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#基于连接的消息传递)。你可以在不创建连接的情况下发送消息。关于如何选择这两种选项，请参阅[选择一次性消息和基于连接的消息传递之间的区别](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#选择一次性消息和基于连接的消息传递之间的区别)。
 
 ```js-nolint
 browser.tabs.connect(
@@ -47,12 +47,12 @@ function connectToTab(tabs) {
     let examplePort = browser.tabs.connect(tabs[0].id, {
       name: "tabs-connect-example",
     });
-    examplePort.postMessage({ greeting: "Hi from background script" });
+    examplePort.postMessage({打招呼："Hi from background script" });
   }
 }
 
 function onError(error) {
-  console.log(`错误：${error}`);
+  console.log(`发生错误：${error}`);
 }
 
 browser.browserAction.onClicked.addListener(() => {
