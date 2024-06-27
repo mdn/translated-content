@@ -35,7 +35,7 @@ let registering = browser.contentScripts.register(
     - `allFrames` {{optional_inline}}
       - : 与 [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 键中的 `all_frames` 相同。
     - `cookieStoreId` {{optional_inline}}
-      - : 一个字符串或字符串数组。在属于一个或多个 cookie 存储 ID 的标签页中注册内容脚本。这使得脚本可以为所有默认或非上下文身份标签页、隐私浏览标签页（如果[扩展在隐私浏览中启用](https://support.mozilla.org/zh-CN/kb/extensions-private-browsing)）、[上下文身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)的标签页或这些的组合。有关详细信息，请参见[使用上下文身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
+      - : 一个字符串或字符串数组。在属于一个或多个 cookie 存储 ID 的标签页中注册内容脚本。这使得脚本可以为所有默认或非场景身份标签页、隐私浏览标签页（如果[扩展在隐私浏览中启用](https://support.mozilla.org/zh-CN/kb/extensions-private-browsing)）、[场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)的标签页或这些的组合。有关详细信息，请参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
     - `css` {{optional_inline}}
       - : 对象数组。每个对象有一个名为 `file` 的属性，它是一个从扩展的 manifest.json 开始指向要注册的 CSS 文件的 URL，或一个名为 `code` 的属性，它是要注册的一些 CSS 代码。
     - `excludeGlobs` {{optional_inline}}
