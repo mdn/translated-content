@@ -9,7 +9,7 @@ l10n:
 
 隐藏一个或多个标签页。
 
-隐藏的标签页将不再显示在浏览器的标签栏中。隐藏的标签页不会自动被[丢弃](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/discard)，它们中运行的代码仍然会继续执行。当你隐藏标签页时，你可以显式地丢弃它们，尽管这并不适用于所有情况，但可以帮助减少浏览器使用的资源。
+隐藏的标签页将不再显示在浏览器的标签栏中。隐藏的标签页不会被自动[丢弃](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/discard)，它们中运行的代码仍然会继续执行。当你隐藏标签页时，你可以显式地丢弃它们，尽管这并不适用于所有情况，但可以帮助减少浏览器使用的资源。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
