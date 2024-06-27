@@ -25,7 +25,7 @@ createImageData(imagedata)
   - : 新 `ImageData` 对象的高度。如果是负值，将围绕水平轴翻转矩形。
 - `settings` {{optional_inline}}
   - : 一个包含以下属性的对象：
-    - `colorSpace`: 指定图像数据的颜色空间。可以设置为 `"srgb"` 表示 [sRGB 颜色空间](https://zh.wikipedia.org/wiki/SRGB%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4)，或 `"display-p3"` 表示 [display-p3 颜色空间](https://zh.wikipedia.org/wiki/DCI-P3)。
+    - `colorSpace`：指定图像数据的颜色空间。可以设置为 `"srgb"` 表示 [sRGB 颜色空间](https://zh.wikipedia.org/wiki/SRGB%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4)，或 `"display-p3"` 表示 [display-p3 颜色空间](https://zh.wikipedia.org/wiki/DCI-P3)。
 - `imagedata`
   - : 要复制宽度和高度的现有 `ImageData` 对象。**不**会复制图像本身。
 
@@ -48,8 +48,7 @@ createImageData(imagedata)
 <canvas id="canvas"></canvas>
 ```
 
-生成的对象宽度为 100 像素，高度为 50 像素，总共包含 5,000 个像素点。
-每个像素点在 `ImageData` 对象中由四个数组值表示，因此对象的 {{domxref("ImageData.data", "data")}} 属性的长度为 4 × 5,000，即 20,000。
+生成的对象宽度为 100 像素，高度为 50 像素，总共包含 5,000 个像素点。每个像素点在 `ImageData` 对象中由四个数组值表示，因此对象的 {{domxref("ImageData.data", "data")}} 属性的长度为 4 × 5,000，即 20,000。
 
 ```js
 const canvas = document.getElementById("canvas");
