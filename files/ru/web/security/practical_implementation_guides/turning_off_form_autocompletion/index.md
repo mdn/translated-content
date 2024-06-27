@@ -1,6 +1,7 @@
 ---
 title: How to turn off form autocompletion
-slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
+slug: Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
+original_slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 ---
 
 В этой статье объясняется как можно отключить автозаполнение полей на сайте.
