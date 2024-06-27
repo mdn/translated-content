@@ -1,34 +1,46 @@
 ---
-title: CanvasRenderingContext2D.rect()
+title: CanvasRenderingContext2D：rect() 方法
 slug: Web/API/CanvasRenderingContext2D/rect
+l10n:
+  sourceCommit: 885e89d115a056d16c7e19a44b7e0f4c3617dd0e
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.rect()`** 是 Canvas 2D API 创建矩形路径的方法，矩形的起点位置是 _(x, y)_，尺寸为 _width_ 和 _height_。矩形的 4 个点通过直线连接，子路径做为闭合的标记，所以你可以填充或者描边矩形。
+Canvas 2D API 的 **`CanvasRenderingContext2D.rect()`** 方法用于为当前路径绘制矩形。
+
+与其他修改当前路径的方法一样，这个方法不会直接渲染任何内容。要在画布上绘制矩形，你可以使用 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} 或 {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} 方法。
+
+> **备注：** 要在一个步骤中创建并渲染矩形，可以使用 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 或 {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}} 方法。
 
 ## 语法
 
-```
-void ctx.rect(x, y, width, height);
+```js-nolint
+rect(x, y, width, height)
 ```
 
 ### 参数
 
+`rect()` 方法创建一个矩形路径，其起始点位于 `(x, y)`，大小由 `width` 和 `height` 指定。
+
 - `x`
-  - : 矩形起点的 x 轴坐标。
+  - : 矩形起始点的 x 轴坐标。
 - `y`
-  - : 矩形起点的 y 轴坐标。
+  - : 矩形起始点的 y 轴坐标。
 - `width`
-  - : 矩形的宽度。
+  - : 矩形的宽度。正值向右延伸，负值向左延伸。
 - `height`
-  - : 矩形的高度。
+  - : 矩形的高度。正值向下延伸，负值向上延伸。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
 ### 绘制矩形
 
-这是一段简单的代码片段，使用 `rect` 方法创建一条路径。实际上，在 canvas 中绘制矩形路径，你可以使用 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} 或者 {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} 方法。参见 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 和{{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}} 方法，只需一步即可绘制。
+这个例子使用 `rect()` 方法创建了一个矩形路径，然后使用 `fill()` 方法进行渲染。
 
 #### HTML
 
@@ -38,14 +50,17 @@ void ctx.rect(x, y, width, height);
 
 #### JavaScript
 
+矩形的角落位于 (10, 20)。它的宽度为 150，高度为 100。
+
 ```js
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-ctx.rect(10, 20, 150, 100);
-ctx.fill();
+ctx.beginPath(); // 开始一个新路径
+ctx.rect(10, 20, 150, 100); // 将一个矩形添加到当前路径中
+ctx.fill(); // 渲染路径
 ```
 
-{{ EmbedLiveSample('绘制矩形', 700, 360) }}
+{{ EmbedLiveSample('绘制矩形', 700, 180) }}
 
 ## 规范
 
@@ -57,7 +72,7 @@ ctx.fill();
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.fillRect")}}
 - {{domxref("CanvasRenderingContext2D.strokeRect()")}}
 - {{domxref("CanvasRenderingContext2D.fill()")}}
