@@ -21,7 +21,7 @@ let rulesetIds = await browser.declarativeNetRequest.getEnabledRulesets();
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含静态规则集 ID 的字符串数组。如果没有启用的规则，则数组为空。如果请求失败，promise 将被拒绝并带有错误消息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含静态规则集 ID 的字符串数组。如果没有启用的规则，则数组为空。如果请求失败，promise 将以错误消息拒绝。
 
 ## 示例
 
