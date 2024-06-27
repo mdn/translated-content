@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
-**`CanvasGradient.addColorStop()`** 方法添加一个由**偏移值**和**颜色值**指定的断点到渐变。
+**`CanvasGradient.addColorStop()`** 方法添加一个由**偏移值**和**颜色值**指定的色标到渐变。
 
 ## 语法
 
@@ -18,7 +18,7 @@ addColorStop(offset, color)
 ### 参数
 
 - `offset`
-  - : 一个在 `0` 到 `1` 之间（包含边界）的数字，表示颜色断点的位置。`0` 表示渐变的起始位置，`1` 表示渐变的结束位置。
+  - : 一个在 `0` 到 `1` 之间（包含边界）的数字，表示色标的位置。`0` 表示渐变的起始位置，`1` 表示渐变的结束位置。
 - `color`
   - : 一个 [CSS](/zh-CN/docs/Web/CSS) 颜色值 {{cssxref("&lt;color&gt;")}}，表示停靠的颜色。
 
@@ -35,9 +35,9 @@ addColorStop(offset, color)
 
 ## 示例
 
-### 向渐变中添加断点
+### 向渐变中添加色标
 
-此示例使用 `addColorStop` 方法向线性 {{domxref("CanvasGradient")}} 对象中添加断点。然后使用该渐变填充矩形。
+此示例使用 `addColorStop` 方法向线性 {{domxref("CanvasGradient")}} 对象中添加色标。然后使用该渐变填充矩形。
 
 #### HTML
 
@@ -61,7 +61,7 @@ ctx.fillRect(10, 10, 200, 100);
 
 #### 结果
 
-{{ EmbedLiveSample('向渐变中添加断点', 700, 180) }}
+{{ EmbedLiveSample('向渐变中添加色标', 700, 180) }}
 
 ## 规范
 
