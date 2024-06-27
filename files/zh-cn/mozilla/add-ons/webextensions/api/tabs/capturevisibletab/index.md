@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-创建一个数据 URL，编码给定标签页区域图像。你必须拥有 `<all_urls>` 或 `activeTab` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)才能使用此方法。
+创建一个编码了给定标签页区域图像的数据 URL。你必须拥有 `<all_urls>` 或 `activeTab` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
 > **备注：** 在 Firefox 125 及更早版本中，此方法仅在拥有 `<all_urls>` 权限时可用。
 
@@ -25,17 +25,17 @@ let capturing = browser.tabs.captureVisibleTab(
 ### 参数
 
 - `windowId` {{optional_inline}}
-  - : `integer`。要捕获的标签页的 ID。默认为当前窗口中的活动标签页。
+  - : `integer`。要捕获的窗口。默认为当前窗口。
 - `options` {{optional_inline}}
   - : {{WebExtAPIRef('extensionTypes.ImageDetails')}}。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个编码了捕获图像的数据 URL。可以赋值给 HTML 图片元素的 `'src'` 属性来显示。如果发生任何错误，promise 将被拒绝并带有错误消息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个编码了捕获图像的数据 URL。可以赋值给 HTML 图片元素的 `'src'` 属性来显示。如果发生任何错误，promise 将以错误消息拒绝。
 
 ## 示例
 
-捕获当前窗口中活动标签页的图像，使用默认设置：
+捕获当前窗口中活动标签页的图像，使用默认图像设置：
 
 ```js
 function onCaptured(imageUri) {
