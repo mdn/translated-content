@@ -28,7 +28,7 @@ let creating = browser.tabs.create(
     - `active` {{optional_inline}}
       - : `boolean`。标签页是否应该成为窗口中的活动标签页。如果为 `false`，则不会影响窗口是否被聚焦（参见 {{WebExtAPIRef('windows.update')}}）。默认为 `true`。
     - `cookieStoreId` {{optional_inline}}
-      - : `string`。使用此选项创建具有特定 cookie 存储 ID (`cookieStoreId`) 的标签页。此选项仅在扩展具有 `"cookies"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)时可用。有关详细信息，请参阅[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
+      - : `string`。使用此选项创建具有特定 cookie 存储 ID（`cookieStoreId`）的标签页。此选项仅在扩展具有 `"cookies"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)时可用。有关详细信息，请参阅[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
     - `discarded` {{optional_inline}}
       - : `boolean`。是否创建并在标签栏中可见的状态下不加载任何内容到内存，即处于弃用状态。当激活标签页时，将加载标签页的内容。
     - `index` {{optional_inline}}
@@ -63,14 +63,14 @@ let creating = browser.tabs.create(
         - file：URL（即文件系统上的文件。但是，要使用打包在扩展内部的文件，请参见下文）
         - 特权 about：URL（例如，`about:config`、`about:addons`、`about:debugging`）。非特权 URL（例如 `about:blank`）是允许的。
 
-        要加载扩展打包的页面，请指定从扩展的 manifest.json 文件开始的绝对 URL。例如：'/path/to/my-page.html'。如果省略了前导'/'，则 URL 将被视为相对 URL，不同的浏览器可能构造不同的绝对 URL。
+        要加载扩展打包的页面，请指定从扩展的 manifest.json 文件开始的绝对 URL。例如：`/path/to/my-page.html`。如果省略了前导 `/`，则 URL 将被视为相对 URL，不同的浏览器可能构造不同的绝对 URL。
 
     - `windowId` {{optional_inline}}
       - : `integer`。要创建新标签页的窗口。默认为当前窗口。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含有关已创建标签页详细信息的 {{WebExtAPIRef('tabs.Tab')}} 对象。如果无法创建标签页（例如因为 `url` 使用了特权方案），则该 promise 将被拒绝并带有错误消息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含有关已创建标签页详细信息的 {{WebExtAPIRef('tabs.Tab')}} 对象。如果无法创建标签页（例如因为 `url` 使用了特权方案），则该 promise 将以错误消息返回。
 
 `browser.tabs.create()` 返回的 promise 在标签页创建后立即兑现。标签页可能仍在加载中。要检测标签页何时加载完成，可以监听 {{WebExtAPIRef('tabs.onUpdated')}} 或 {{WebExtAPIRef('webNavigation.onCompleted')}} 事件，然后调用 `tabs.create`。
 
