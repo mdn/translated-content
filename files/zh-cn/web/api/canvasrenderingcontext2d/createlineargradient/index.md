@@ -1,20 +1,24 @@
 ---
 title: CanvasRenderingContext2D.createLinearGradient()
 slug: Web/API/CanvasRenderingContext2D/createLinearGradient
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.createLinearGradient()`** 方法会根据两个给定的坐标值所构成的线段创建一个线性渐变。
+Canvas 2D API 的 **`CanvasRenderingContext2D.createLinearGradient()`** 方法用于根据两个给定的坐标值所构成的线段创建一个线性渐变。
 
-![](mdn-canvas-lineargradient.png)
+![渐变沿着渐变线从点 (x0, y0) 开始到点 (x1, y1) 进行颜色过渡，即使这些点将渐变线延伸到绘制渐变的元素边缘之外。](mdn-canvas-lineargradient.png)
 
-该方法返回一个线性 {{domxref("CanvasGradient")}}对象。想要应用这个渐变，需要把这个返回值赋值给 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 或者 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}。
+该方法返回一个线性 {{domxref("CanvasGradient")}} 对象。想要应用这个渐变，需要把这个返回值赋值给属性 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 或者 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}。
+
+> **备注：** 渐变坐标是全局的，即相对于当前的坐标空间。当应用于形状时，这些坐标并不是相对于形状本身的坐标。
 
 ## 语法
 
-```
-CanvasGradient ctx.createLinearGradient(x0, y0, x1, y1);
+```js-nolint
+createLinearGradient(x0, y0, x1, y1)
 ```
 
 `createLinearGradient()` 方法需要指定四个参数，分别表示渐变线段的开始和结束点。
@@ -35,11 +39,16 @@ CanvasGradient ctx.createLinearGradient(x0, y0, x1, y1);
 - {{domxref("CanvasGradient")}}
   - : 一个根据指定线路初始化的线性 `CanvasGradient` 对象。
 
+### 异常
+
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : 当传递非有限值作为参数时抛出。
+
 ## 示例
 
 ### 使用线性渐变填充一个矩形
 
-这个例子使用`createLinearGradient()` 方法初始化了一个线性渐变。在这个线性渐变中添加了三种色彩。最后，这个渐变被赋值给上下文对应的属性，实现了对矩形的填充。
+这个例子使用 `createLinearGradient()` 方法初始化了一个线性渐变。在这个线性渐变中添加了三种色阶。最后，这个渐变被赋值给上下文对应的属性，实现了对矩形的填充。
 
 #### HTML
 
@@ -53,17 +62,17 @@ CanvasGradient ctx.createLinearGradient(x0, y0, x1, y1);
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-// Create a linear gradient
-// The start gradient point is at x=20, y=0
-// The end gradient point is at x=220, y=0
+// 创建一个线性渐变
+// 渐变起始点在 x=20, y=0
+// 渐变结束点在 x=220, y=0
 const gradient = ctx.createLinearGradient(20, 0, 220, 0);
 
-// Add three color stops
+// 添加三个颜色停止点
 gradient.addColorStop(0, "green");
 gradient.addColorStop(0.5, "cyan");
 gradient.addColorStop(1, "green");
 
-// Set the fill style and draw a rectangle
+// 设置填充样式并绘制矩形
 ctx.fillStyle = gradient;
 ctx.fillRect(20, 20, 200, 100);
 ```
@@ -82,5 +91,6 @@ ctx.fillRect(20, 20, 200, 100);
 
 ## 参见
 
-- 接口定义： {{domxref("CanvasRenderingContext2D")}}
+- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}
+- {{domxref("CanvasRenderingContext2D.createConicGradient()")}}
