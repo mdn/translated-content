@@ -3,7 +3,7 @@ title: "Document: prerenderingchange イベント"
 short-title: prerenderingchange
 slug: Web/API/Document/prerenderingchange_event
 l10n:
-  sourceCommit: c99ff93a1b71e7d664509fdd3e0c168920be967a
+  sourceCommit: 922c2b0f37e2f13887c50efe47e62bc23d94c3aa
 ---
 
 {{ APIRef("Speculation Rules API") }}{{seecompattable}}
