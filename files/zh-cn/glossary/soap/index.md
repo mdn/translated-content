@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**SOAP**（简单对象访问协议）是一种用于以 XML 格式传输数据的{{glossary('protocol')}}。
+**SOAP**（简单对象访问协议）是一种以 XML 格式传输数据的{{glossary('protocol', '协议')}}。
 
 ## 参见
 
