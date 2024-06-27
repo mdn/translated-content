@@ -16,7 +16,7 @@ WebAssembly 控制流相關指令。
 - [`drop`](/zh-TW/docs/WebAssembly/Reference/Control_flow/Drop)
   - : 從記憶堆疊中移除一個值。
 - [`end`](/zh-TW/docs/WebAssembly/Reference/Control_flow/end)
-  - : 結束 `block` 、 `loop` 、 `if` 或是 `else`區塊。
+  - : 結束 `block`、`loop`、`if` 或是 `else` 區塊。
 - [`if...else`](/zh-TW/docs/WebAssembly/Reference/Control_flow/if...else)
   - : 如果記憶體堆疊中的最後一個值為 true (1)，就會執行陳述式裡的程式。
 - [`loop`](/en-US/docs/WebAssembly/Reference/Control_flow/loop)
