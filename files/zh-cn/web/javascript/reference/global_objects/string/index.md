@@ -366,5 +366,5 @@ String(undefinedVar); // "undefined"
 
 ## 参见
 
-- [JavaScript 指南中的文本格式化](/zh-CN/docs/Web/JavaScript/Guide/Text_formatting)
+- [文本格式化](/zh-CN/docs/Web/JavaScript/Guide/Text_formatting)指南
 - {{jsxref("RegExp")}}
