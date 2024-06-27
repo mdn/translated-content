@@ -15,15 +15,69 @@ l10n:
 
 你可以真正地为你的游戏考虑下 web 来作为更好的目标平台。我们总是喜欢说，“web 即是平台（the Web is the platform）。”让我们来浏览下 web 平台的核心部分：
 
-| 功能     | 技术                                                                                                                                                                                                                                                                      |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **音频** | [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)                                                                                                                                                                                                                        |
-| **图形** | [WebGL](/zh-CN/docs/Web/API/WebGL_API) ([OpenGL ES](https://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                           |
-| **输入** | [Touch events](/zh-CN/docs/Web/API/Touch_events)、[Gamepad API](/zh-CN/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)、设备传感器、[WebRTC](/zh-CN/docs/Web/API/WebRTC_API)、[Full Screen API](/zh-CN/docs/Web/API/Fullscreen_API)、[Pointer Lock API](/zh-CN/docs/Web/API/Pointer_Lock_API) |
-| **语言** | [JavaScript](/zh-CN/docs/Web/JavaScript) (或是 C/C++ 使用 [Emscripten](https://github.com/kripken/emscripten/wiki) 来编译成 JavaScript)                                                                                                                                                       |
-| **网络** | [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 或 [WebSockets](/zh-CN/docs/Web/API/WebSockets_API)                                                                                                                                                                                                  |
-| **存储** | [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 或“云（存储）”                                                                                                                                                                                                                                 |
-| **Web**  | [HTML](/zh-CN/docs/Web/HTML)、[CSS](/zh-CN/docs/Web/CSS)、[SVG](/zh-CN/docs/Web/SVG)（还有其他很多东西！）                                                                                                                                                                                    |
+<table class="no-markdown standard-table">
+  <thead>
+    <tr>
+      <th scope="col">功能</th>
+      <th scope="col">技术</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>音频</strong></td>
+      <td><a href="/zh-CN/docs/Web/API/Web_Audio_API">Web Audio API</a></td>
+    </tr>
+    <tr>
+      <td><strong>图形</strong></td>
+      <td>
+        <a href="/zh-CN/docs/Web/API/WebGL_API">WebGL</a> (<a
+          href="https://www.khronos.org/opengles/"
+          >OpenGL ES</a
+        >
+        2.0)
+      </td>
+    </tr>
+    <tr>
+      <td><strong>输入</strong></td>
+      <td>
+        <a href="/zh-CN/docs/Web/API/Touch_events">触摸事件</a>、
+        <a href="/zh-CN/docs/Web/API/Gamepad_API/Using_the_Gamepad_API"
+          >Gamepad API</a
+        >、设备传感器、<a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a>、
+        <a href="/zh-CN/docs/Web/API/Fullscreen_API">全屏 API</a>、
+        <a href="/zh-CN/docs/Web/API/Pointer_Lock_API">指针锁定 API</a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>语言</strong></td>
+      <td>
+        <a href="/zh-CN/docs/Web/JavaScript">JavaScript</a> (或使用
+        <a href="https://github.com/emscripten-core/emscripten/wiki">Emscripten</a> 将 C/C++ 编译为 JavaScript)
+      </td>
+    </tr>
+    <tr>
+      <td><strong>网络</strong></td>
+      <td>
+        <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a> 或
+        <a href="/zh-CN/docs/Web/API/WebSockets_API">WebSockets</a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>存储</strong></td>
+      <td>
+        <a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB</a> 或“云存储”
+      </td>
+    </tr>
+    <tr>
+      <td><strong>web</strong></td>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML">HTML</a>、
+        <a href="/zh-CN/docs/Web/CSS">CSS</a>、
+        <a href="/zh-CN/docs/Web/SVG">SVG</a> (以及更多！)
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## 商业案例
 
