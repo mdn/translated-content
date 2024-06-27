@@ -35,7 +35,7 @@ let duplicating = browser.tabs.duplicate(
 
 ### 返回值
 
-一个[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会在复制标签页后兑现一个 {{WebExtAPIRef('tabs.Tab')}} 对象，描述复制的标签页的详细信息。如果扩展具有 [`"tabs"` 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)或匹配的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)，`Tab` 对象只包含 `url`、`title` 和 `favIconUrl`。如果发生任何错误，则该 promise 将被拒绝并带有错误消息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会在复制标签页后兑现一个 {{WebExtAPIRef('tabs.Tab')}} 对象，描述复制的标签页的详细信息。如果扩展具有 [`"tabs"` 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)或匹配的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)，`Tab` 对象只包含 `url`、`title` 和 `favIconUrl`。如果发生任何错误，则该 promise 将以错误消息拒绝。
 
 > **备注：** 从 Firefox 68 开始，browser.tabs.duplicate() 返回的 promise 在标签页被复制后立即兑现。以前，promise 只有在标签页完全加载后才会兑现。
 
@@ -49,7 +49,7 @@ function onDuplicated(tabInfo) {
 }
 
 function onError(error) {
-  console.log(`发送错误：${error}`);
+  console.log(`发生错误：${error}`);
 }
 
 // 复制数组中的第一个标签页
