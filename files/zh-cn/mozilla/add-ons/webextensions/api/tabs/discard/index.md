@@ -61,7 +61,7 @@ function onDiscarded() {
 }
 
 function onError(error) {
-  console.log(`发送错误：${error}`);
+  console.log(`发生错误：${error}`);
 }
 
 let discarding = browser.tabs.discard([15, 14, 1]);
