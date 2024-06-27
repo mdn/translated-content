@@ -1,17 +1,29 @@
 ---
 title: CanvasRenderingContext2D.beginPath()
 slug: Web/API/CanvasRenderingContext2D/beginPath
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.beginPath()`** 是 Canvas 2D API 通过清空子路径列表开始一个新路径的方法。当你想创建一个新的路径时，调用此方法。
+Canvas 2D API 的 **`CanvasRenderingContext2D.beginPath()`** 方法用于通过清空子路径列表开始一个新路径。当你想创建一个新的路径时，调用此方法。
+
+> **备注：** 要创建一个新的子路径，即与当前画布状态匹配的路径，可以使用 {{domxref("CanvasRenderingContext2D.moveTo()")}}。
 
 ## 语法
 
+```js-nolint
+beginPath()
 ```
-void ctx.beginPath();
-```
+
+### 参数
+
+无。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
@@ -27,18 +39,20 @@ void ctx.beginPath();
 
 #### JavaScript
 
+`beginPath()` 方法在开始每条线之前调用，以便它们可以用不同的颜色绘制。
+
 ```js
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-// First path
+// 第一条路径
 ctx.beginPath();
 ctx.strokeStyle = "blue";
 ctx.moveTo(20, 20);
 ctx.lineTo(200, 20);
 ctx.stroke();
 
-// Second path
+// 第二条路径
 ctx.beginPath();
 ctx.strokeStyle = "green";
 ctx.moveTo(20, 20);
@@ -60,5 +74,5 @@ ctx.stroke();
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.closePath()")}}
