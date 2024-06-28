@@ -15,7 +15,7 @@ l10n:
 
 - `cookieStoreId` {{optional_inline}}
 
-  - : `string`。此属性只适用于 cookie 和 indexedDB 项。删除仅可以删除指定的 [cookie 存储](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore)的项目，如通过 ID 指定的。有关更多信息，请参见[使用上下文身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
+  - : `string`。此属性只适用于 cookie 和 indexedDB 项。删除仅限于通过 ID 指定的 [cookie 存储](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore)的项目。有关更多信息，请参见[使用上下文身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 
     > **备注：** Firefox Nightly 还支持通过 `cookieStoreId` 删除 localStorage 项目。
 
@@ -40,7 +40,7 @@ l10n:
 
 - `since` {{optional_inline}}
 
-  - : `number`。从何时开始删除数据，以[自纪元以来的毫秒数表示](https://zh.wikipedia.org/wiki/UNIX时间)。请注意，在删除浏览器缓存时，将始终删除整个缓存，此选项将被忽略。如果省略 since 属性，则默认为 0，表示“所有时间”。
+  - : `number`。从何时开始删除数据，以[自纪元以来的毫秒数表示](https://zh.wikipedia.org/wiki/UNIX时间)。请注意，在删除浏览器缓存时，将始终删除整个缓存，此选项将被忽略。如果省略 `since` 属性，则默认为 0，表示“所有时间”。
 
 ## 浏览器兼容性
 
