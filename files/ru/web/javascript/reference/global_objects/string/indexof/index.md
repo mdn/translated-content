@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
 ## Синтаксис
 
 ```
-str.indexOf(searchValue, [fromIndex])
+str.indexOf(searchValue[, fromIndex])
 ```
 
 ### Параметры
