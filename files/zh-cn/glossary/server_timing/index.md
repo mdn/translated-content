@@ -1,5 +1,5 @@
 ---
-title: 服务计时
+title: 服务器计时
 slug: Glossary/Server_Timing
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
