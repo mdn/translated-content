@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**单指令流单数据流**（SISD）是一种[计算机架构的分类](https://zh.wikipedia.org/wiki/費林分類法)，其中单个处理器执行单个指令，并在内存中操作单个数据点。
+**单指令流单数据流**（SISD）是一种[计算机架构的分类](https://zh.wikipedia.org/wiki/費林分類法)。在 SISD 架构中，单个处理器执行单个指令，并在内存中操作单个数据点。
 
 参见 {{Glossary("SIMD")}}——允许对多个数据点执行相同操作的并行架构。
 
