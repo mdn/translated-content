@@ -9,7 +9,7 @@ l10n:
 
 使用此函数注册一个或多个内容脚本。
 
-它接受一个参数，该参数是一个对象，其属性类似于 [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts)清单（manifest）键中给出的对象（但请注意，`content_scripts` 是对象数组，而传递给 `register()` 的参数是一个单独的对象）。
+它接受一个参数，该参数是一个对象，其属性类似于 [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 清单（manifest）键中给出的对象（但请注意，`content_scripts` 是对象数组，而传递给 `register()` 的参数是一个单独的对象）。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -25,7 +25,7 @@ let registering = browser.contentScripts.register(
 
 - `contentScriptOptions`
 
-  - : `object`。表示要注册的内容脚本的 `RegisteredContentScriptOptions` 对象。它的语法与 [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts)清单键数组中的对象类似。不同之处在于：
+  - : `object`。表示要注册的内容脚本的 `RegisteredContentScriptOptions` 对象。它的语法与 [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 清单键数组中的对象类似。不同之处在于：
 
     - 属性名称使用{{Glossary("camel_case", "驼峰命名法")}}，而不是{{Glossary("snake_case", "蛇形命名法")}}——例如，使用 `excludeMatches` 而不是 `exclude_matches`。
     - `js` 和 `css` 属性允许你注册字符串和 URL，因此它们的语法必须区分这些类型。
@@ -57,7 +57,7 @@ let registering = browser.contentScripts.register(
 
 一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 {{WebExtAPIRef("contentScripts.RegisteredContentScript")}} 对象，该对象可以用来取消注册内容脚本。
 
-当前，内容脚本在相关扩展页面（注册内容脚本的页面）卸载时会被取消注册，因此你应该从一个比内容脚本持续时间更久的拓展页面去注册内容页面。
+当前，当相关的扩展页面（从中注册了内容脚本）被卸载时，内容脚本会自动取消注册。因此你应该在一个会在你希望让内容脚本保持注册状态的时间内持续存在扩展页面中注册内容脚本。
 
 ## 浏览器兼容性
 
