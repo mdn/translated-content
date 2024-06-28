@@ -47,4 +47,4 @@ var oMiBlob = new Blob(unaParteDeArchivo, { type: "text/html" }); // el blob
 
 ## Vea también
 
-- La interfaz deprecada {{domxref("BlobBuilder")}}, la cual es reemplazada por este constructor.
+- La interfaz obsoleta {{domxref("BlobBuilder")}}, la cual es reemplazada por este constructor.

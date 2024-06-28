@@ -41,8 +41,8 @@ l10n:
 
 ### 韩语（ko）
 
-- 讨论组：[Discord (#korean channel)](/discord)、[Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
-- 目前的志愿者：[hochan222](https://github.com/hochan222)、[yechoi42](https://github.com/yechoi42)、[cos18](https://github.com/cos18)、[pje1740](https://github.com/pje1740)、[wisedog](https://github.com/wisedog)、[swimjiy](https://github.com/swimjiy)、[jho2301](https://github.com/jho2301)、[sunhpark42](https://github.com/sunhpark42)、[1ilsang](https://github.com/1ilsang)
+- 讨论组：[Discord (#korean channel)](/discord)、[Google Groups (`yari-content-ko`)](https://groups.google.com/g/yari-content-ko)
+- 目前的志愿者：[hochan222](https://github.com/hochan222)、[yechoi42](https://github.com/yechoi42)、[wisedog](https://github.com/wisedog)、[sunhpark42](https://github.com/sunhpark42)、[1ilsang](https://github.com/1ilsang)
 
 ### 俄语（ru）
 

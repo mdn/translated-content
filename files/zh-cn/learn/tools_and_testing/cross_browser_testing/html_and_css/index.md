@@ -2,7 +2,7 @@
 title: 处理常见的 HTML 和 CSS 问题
 slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 l10n:
-  sourceCommit: ec80e95431ed46f05946e9b12219fdd2962808e6
+  sourceCommit: 56fc816a9fb8e96a6b69cd19be03f62b582c06ae
 ---
 
 {{LearnSidebar}}
@@ -99,7 +99,7 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 一旦你确定了将要使用但不被普遍支持的技术列表，最好研究一下它们在哪些浏览器中受支持，以及相关的有用技巧。请参阅下面的[寻求帮助](#寻找帮助)。
 
-#### HTML 回退行为
+### HTML 回退行为
 
 某些问题可以通过利用 HTML/CSS 的自然工作方式来解决。
 
@@ -151,7 +151,7 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 如果你查看示例，当你尝试输入数据时，UI 特性会发挥作用。在具有动态键盘的设备上，将显示特定于类型的输入面板（keypad）。在不支持新特性的浏览器上，输入框将默认为普通文本输入框，使得用户仍然可以输入正确的信息。
 
-#### CSS 回退行为
+### CSS 回退行为
 
 CSS 的情况可以说比 HTML 更好一些。如果浏览器遇到一个它不明白的声明或规则，它只会完全跳过它，而不会强行应用它或者抛出错误。如果这样的错误意外地出现在生产环境代码中，这可能会让你和用户感到沮丧，但至少这样的话，整个网站不会因为一个错误而崩溃。如果巧妙地利用它，你甚至可以从中获益。
 
@@ -193,7 +193,7 @@ button:active {
 
 > **备注：** 对于其他 CSS 特性，如[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 和 [`@supports`](/zh-CN/docs/Web/CSS/@supports) 块来说，也是如此——如果不被支持，浏览器就会忽略它们。
 
-#### 选择器支持
+### 选择器支持
 
 当然，如果你没有使用合适的[选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)来选择你想要设置样式的元素，任何 CSS 特性都不会被应用！
 
@@ -213,7 +213,7 @@ form > #date
 
 （因为 `date` 表单输入不是 `<form>` 的直接子元素，你最好使用一个一般的后代选择器而不是子选择器）。
 
-#### 处理 CSS 前缀
+### 处理 CSS 前缀
 
 另一组问题来自 CSS 前缀——这种机制最初用于允许浏览器供应商在实验状态下实施自己版本的 CSS（或 JavaScript）特性，这样他们就可以试用并确保其正常工作，而不会与其他浏览器的实现或最终无前缀的实现发生冲突。
 
@@ -253,7 +253,7 @@ form > #date
 
 如果需要使用现代特性，可以使用 [`@supports`](/zh-CN/docs/Web/CSS/@supports) 进行特性支持检测，并在 `@supports` 块中嵌套使用带有前缀的特性或新特性。
 
-#### 响应式设计问题
+### 响应式设计问题
 
 响应式设计是创建可根据不同设备尺寸（例如不同的屏幕宽度、方向（纵向或横向）或分辨率）而变化的网页布局的做法。例如，桌面布局在移动设备上会看起来很糟糕，所以你需要使用[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)提供合适的移动布局，并确保正确应用[视口](/zh-CN/docs/Web/HTML/Viewport_meta_tag)。你可以在[我们关于响应式设计的指南](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)中找到这些实践的详细描述。
 
