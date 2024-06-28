@@ -2,7 +2,7 @@
 title: devtools.panels
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels
 l10n:
-  sourceCommit: 6b7f22c8cc81515d9a17d988f4bb8006357dcd59
+  sourceCommit: 2e7f2f7b1a817425d451a6633e131dec6b3943bf
 ---
 
 {{AddonSidebar}}
@@ -43,11 +43,11 @@ devtools 窗口托管了多个独立的工具——JavaScript 调试器、网络
 - [`devtools.panels.onThemeChanged`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/onThemeChanged)
   - : 当开发者工具主题更改时触发。
 
+{{WebExtExamples("h2")}}
+
 ## 浏览器兼容性
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > **备注：** 此 API 基于 Chromium 的 [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API。
 
