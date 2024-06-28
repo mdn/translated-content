@@ -1,29 +1,35 @@
 ---
-title: CanvasRenderingContext2D.scrollPathIntoView()
+title: CanvasRenderingContext2D：scrollPathIntoView() 方法
 slug: Web/API/CanvasRenderingContext2D/scrollPathIntoView
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}} {{SeeCompatTable}}
 
-**`CanvasRenderingContext2D.scrollPathIntoView()`** 是 Canvas 2D API 将当前或给定的路径滚动到窗口的方法。类似于 {{domxref("Element.scrollIntoView()")}}。
+Canvas 2D API 的 **`CanvasRenderingContext2D.scrollPathIntoView()`** 方法用于将当前或给定的路径滚动到窗口。类似于 {{domxref("Element.scrollIntoView()")}}。
 
 ## 语法
 
-```
-void ctx.scrollPathIntoView();
-void ctx.scrollPathIntoView(path);
+```js-nolint
+scrollPathIntoView()
+scrollPathIntoView(path)
 ```
 
 ### 参数
 
 - `path`
-  - : 使用的{{domxref("Path2D")}} 路径。
+  - : 使用的 {{domxref("Path2D")}} 路径。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
 ### 使用 scrollPathIntoView 方法
 
-这是一段使用 `scrollPathIntoView` 方法的简单的代码片段。
+这个例子演示了 `scrollPathIntoView()` 方法。
 
 #### HTML
 
@@ -104,5 +110,5 @@ window.addEventListener("load", drawCanvas);
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}.
+- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
 - {{domxref("Element.scrollIntoView()")}}
