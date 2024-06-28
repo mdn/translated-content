@@ -40,7 +40,7 @@ strokeText(text, x, y, maxWidth)
 
 ### 绘制文本轮廓
 
-这个例子使用 `strokeText()` 方法写出了单词 "Hello world" 的文本轮廓。
+这个例子使用 `strokeText()` 方法写出了单词“Hello world”的文本轮廓。
 
 #### HTML
 
