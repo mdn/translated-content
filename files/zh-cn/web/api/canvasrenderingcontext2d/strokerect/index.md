@@ -17,7 +17,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.strokeRect()`** 方法用于在 ca
 strokeRect(x, y, width, height)
 ```
 
-`strokeRect()`方法绘制一个描边矩形，其起点为`(x, y)` ，其大小由 `width` 和`height`指定。
+`strokeRect()` 方法绘制一个描边矩形，其起点为 `(x, y)` ，其大小由 `width` 和 `height` 指定。
 
 ### 参数
 
