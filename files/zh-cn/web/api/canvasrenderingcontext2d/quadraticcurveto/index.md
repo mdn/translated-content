@@ -70,6 +70,8 @@ ctx.fill();
 
 #### 结果
 
+在这个示例中，控制点是红色的，起始点和结束点是蓝色的。
+
 {{ EmbedLiveSample('quadraticCurveTo 如何工作', 315, 165) }}
 
 ### 简单的二次曲线
