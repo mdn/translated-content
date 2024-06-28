@@ -28,7 +28,7 @@ Object.isFrozen(obj)
 
 ## 解説
 
-お武衛ジェクトが凍結状態 (frozen) とは、オブジェクトが[拡張可能](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible)ではなく、すべてのプロパティは構成不可であり、そしてすべてのデータプロパティ（これはゲッターやセッターコンポーネントを持つアクセサープロパティ以外のものを指します）が書き込み不可である場合です。
+オブジェクトが凍結状態 (frozen) とは、オブジェクトが[拡張可能](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible)ではなく、すべてのプロパティは構成不可であり、そしてすべてのデータプロパティ（これはゲッターやセッターコンポーネントを持つアクセサープロパティ以外のものを指します）が書き込み不可である場合です。
 
 ## 例
 

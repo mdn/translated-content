@@ -3,7 +3,7 @@ title: normalize-space
 slug: Web/XPath/Functions/normalize-space
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `normalize-space` 関数は、文字列から前後のホワイトスペースを取り除き、連続するホワイトスペースを 1 つのスペースに置き換え、その結果として得られる文字列を返します。
 

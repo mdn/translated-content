@@ -3,6 +3,8 @@ title: Firefox 27 for developers
 slug: Mozilla/Firefox/Releases/27
 ---
 
+{{FirefoxSidebar}}
+
 Gecko 27 を搭載した Firefox 27 は米国時間 2014 年 2 月 4 日にリリースされました。このページでは、開発者に影響する Firefox 27 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧

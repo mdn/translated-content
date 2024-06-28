@@ -1,8 +1,9 @@
 ---
 title: "WorkerGlobalScope: online イベント"
+short-title: online
 slug: Web/API/WorkerGlobalScope/online_event
 l10n:
-  sourceCommit: 6d697b8a86ea3ce1bf82615c5dc006aeaa22d90b
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef("Web Workers API")}}
