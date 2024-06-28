@@ -40,7 +40,7 @@ WebAssembly 被設計來與 JavaScript 協同工作 —— 藉由 WebAssembly �
 
 - [WebAssembly 參考指令](/zh-TW/docs/WebAssembly/Reference)
   - : WebAssembly 運算子相關的說明文件，內含互動式範例。
-- [WebAssembly JavaScript interface](/en-US/docs/WebAssembly/JavaScript_interface)
+- [WebAssembly JavaScript interface](/zh-TW/docs/WebAssembly/JavaScript_interface)
   - : This object acts as the namespace for all WebAssembly-related functionality.
 - {{jsxref("Global_objects/WebAssembly", "WebAssembly")}}
   - : This object acts as the namespace for all WebAssembly related functionality.
