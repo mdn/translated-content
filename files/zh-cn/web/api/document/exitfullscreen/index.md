@@ -21,7 +21,7 @@ exitFullscreen()
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，在 {{Glossary("user agent")}} 完成退出全屏模式后解决。如果在尝试退出全屏模式时发生错误，promise 的 `catch()` 处理程序将被调用。
+一个 {{jsxref("Promise")}}，在{{Glossary("user agent", "用户代理")}}完成退出全屏模式后被兑现。如果在尝试退出全屏模式时发生错误，promise 的 `catch()` 处理器将被调用。
 
 ## 示例
 
@@ -56,5 +56,5 @@ document.onclick = (event) => {
 - [全屏指南](/zh-CN/docs/Web/API/Fullscreen_API/Guide)
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.fullscreenElement") }}
-- {{ cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}
+- {{ cssxref(":fullscreen") }} 和 {{cssxref("::backdrop")}}
 - {{HTMLElement("iframe")}} [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen) 属性
