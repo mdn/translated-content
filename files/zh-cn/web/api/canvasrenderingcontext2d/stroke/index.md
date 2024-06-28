@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.stroke()`** 方法用于使用非零环绕规则，根据当前的画线样式，绘制当前或已经存在的路径的方法。
+Canvas 2D API 的 **`CanvasRenderingContext2D.stroke()`** 方法用于根据当前的画线样式，绘制当前或指定的路径。
 
 描边沿着路径的中心对齐，也就是说，描边的一半位于路径的内侧，另一半位于外侧。
 
