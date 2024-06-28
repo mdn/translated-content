@@ -15,7 +15,7 @@ l10n:
 
 - `cookieStoreId` {{optional_inline}}
 
-  - : `string`。此属性只适用于 cookie 和 indexedDB 项。删除仅限于通过 ID 指定的 [cookie 存储](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore)的项目。有关更多信息，请参见[使用上下文身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
+  - : `string`。此属性只适用于 cookie 和 indexedDB 项。删除仅限于通过 ID 指定的 [cookie 存储](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore)中的项目。有关更多信息，请参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 
     > **备注：** Firefox Nightly 还支持通过 `cookieStoreId` 删除 localStorage 项目。
 
