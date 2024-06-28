@@ -11,8 +11,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.roundRect()`** 方法用于在当�
 
 角的半径可以像 CSS [`border-radius`](/zh-CN/docs/Web/CSS/border-radius) 属性一样指定。
 
-像其他修改当前路径的方法一样，此方法不会直接渲染任何内容。
-要将圆角矩形绘制到画布上，你可以使用 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} 或 {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} 方法。
+像其他修改当前路径的方法一样，此方法不会直接渲染任何内容。要将圆角矩形绘制到画布上，你可以使用 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} 或 {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} 方法。
 
 ## 语法
 
@@ -57,8 +56,7 @@ roundRect(x, y, width, height, radii)
 
 ### 绘制矩形
 
-此示例使用 `roundRect()` 方法创建多个圆角矩形路径。
-然后使用 `stroke()` 方法渲染这些路径。
+此示例使用 `roundRect()` 方法创建多个圆角矩形路径，然后使用 `stroke()` 方法渲染这些路径。
 
 #### HTML
 
@@ -101,8 +99,7 @@ ctx.roundRect(10, 150, 150, 100, [10, 40]);
 ctx.stroke();
 ```
 
-最后，我们绘制了两个具有四个不同半径值且起点相同的圆角矩形。
-这里的区别在于第二个矩形是用负宽度绘制的。
+最后，我们绘制了两个具有四个不同半径值且起点相同的圆角矩形。这里的区别在于第二个矩形是用负宽度绘制的。
 
 ```js
 // 具有四个不同半径的圆角矩形
