@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-{{glossary("CORS")}} 预检请求是通过使用特定方法与标头检查服务器是否理解、在乎 CORS 协议的请求。
+{{glossary("CORS")}} 预检请求用于检查服务器是否支持 CORS 协议，并且是否允许使用特定的方法和标头。
 
 它一般是用了以下几个 HTTP 请求标头的 {{HTTPMethod("OPTIONS")}} 请求：{{HTTPHeader("Access-Control-Request-Method")}} 和 {{HTTPHeader("Access-Control-Request-Headers")}}，以及可选的 {{HTTPHeader("Origin")}} 标头。
 
