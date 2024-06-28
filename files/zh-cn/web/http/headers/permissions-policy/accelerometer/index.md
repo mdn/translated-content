@@ -1,5 +1,5 @@
 ---
-title: Permissions-Policy：accelerometer
+title: "Permissions-Policy: accelerometer"
 slug: Web/HTTP/Headers/Permissions-Policy/accelerometer
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-HTTP {{HTTPHeader('Permissions-Policy')}} 头部的 `accelerometer` 指令控制当前文档是否被允许通过 {{domxref('Accelerometer')}} 接口收集设备加速度信息。
+HTTP {{HTTPHeader('Permissions-Policy')}} 标头的 `accelerometer` 指令控制当前文档是否被允许通过 {{domxref('Accelerometer')}} 接口收集设备加速度信息。
 
 具体来说，如果定义的策略阻止使用此功能，则 {{domxref("Accelerometer.Accelerometer", "Accelerometer()")}} 构造函数调用将抛出类型为 `SecurityError` 的 {{domxref("DOMException")}}。
 
@@ -34,5 +34,5 @@ Permissions-Policy: accelerometer=<allowlist>;
 
 ## 参见
 
-- {{HTTPHeader('Permissions-Policy')}} 头部
+- {{HTTPHeader('Permissions-Policy')}} 标头
 - [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)
