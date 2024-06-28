@@ -130,8 +130,8 @@ CSS 는 본래 물리적인 좌표만을 위해 고안되었습니다. 논리적
 
 [CSS box model](/ko/docs/Web/CSS/CSS_box_model)
 
-- {{CSSxRef("margin")}} shorthand
-- {{CSSxRef("padding")}} shorthand
+- {{CSSxRef("margin")}} 단축어
+- {{CSSxRef("padding")}} 단축어
 
 [CSS box sizing](/ko/docs/Web/CSS/CSS_box_sizing)
 
@@ -145,7 +145,7 @@ CSS 는 본래 물리적인 좌표만을 위해 고안되었습니다. 논리적
 - {{CSSxRef("border-color")}}
 - {{CSSxRef("border-style")}}
 - {{CSSxRef("border-width")}}
-- {{CSSxRef("border")}} shorthand
+- {{CSSxRef("border")}} 단축어
 - {{CSSxRef("border-radius")}}
 
 [CSS positioned layout](/ko/docs/Web/CSS/CSS_positioned_layout)
