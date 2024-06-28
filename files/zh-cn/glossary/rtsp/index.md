@@ -2,7 +2,7 @@
 title: RTSP：实时流协议
 slug: Glossary/RTSP
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: c64e08ff3cecdecae78748de1b94c845a2d7ae85
 ---
 
 {{GlossarySidebar}}
