@@ -2,7 +2,7 @@
 title: SIMD
 slug: Glossary/SIMD
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: c64e08ff3cecdecae78748de1b94c845a2d7ae85
 ---
 
 {{GlossarySidebar}}
@@ -16,5 +16,4 @@ l10n:
 - 维基百科上的[单指令流多数据流](https://zh.wikipedia.org/wiki/单指令流多数据流)
 - [术语表](/zh-CN/docs/Glossary)
 
-  - {{Glossary("SIMD")}}
   - {{Glossary("SISD")}}
