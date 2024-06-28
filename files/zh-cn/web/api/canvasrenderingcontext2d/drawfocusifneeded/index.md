@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.drawFocusIfNeeded()`** 方法用于给定的元素获取了焦点时给当前路径或特定路径绘制焦点。
+Canvas 2D API 的 **`CanvasRenderingContext2D.drawFocusIfNeeded()`** 方法用于当指定的元素处于焦点状态时在当前或指定路径周围绘制焦点环。
 
 ## 语法
 
@@ -19,7 +19,7 @@ drawFocusIfNeeded(path, element)
 ### 参数
 
 - `element`
-  - : 一个确认是否需要设置焦点的元素。
+  - : 要检查是否处于焦点状态的元素。
 - `path`
   - : {{domxref("Path2D")}} 路径。
 
