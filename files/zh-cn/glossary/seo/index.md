@@ -24,5 +24,5 @@ SEO 方法分为三大类：
 
 ## 参见
 
-- 维基百科上的 [SEO](https://zh.wikipedia.org/wiki/SEO)
+- 维基百科上的 [SEO](https://zh.wikipedia.org/wiki/搜尋引擎最佳化)
 - [Google 搜索中心](https://developers.google.com/search)
