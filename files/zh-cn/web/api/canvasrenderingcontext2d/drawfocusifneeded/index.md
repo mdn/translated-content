@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.drawFocusIfNeeded()
+title: CanvasRenderingContext2D：drawFocusIfNeeded() 方法
 slug: Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
 l10n:
   sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
@@ -37,8 +37,8 @@ drawFocusIfNeeded(path, element)
 
 ```html
 <canvas id="canvas">
-  <button id="button1">Continue</button>
-  <button id="button2">Quit</button>
+  <button id="button1">继续</button>
+  <button id="button2">退出</button>
 </canvas>
 ```
 
