@@ -18,7 +18,7 @@ Permissions-Policy: accelerometer=<allowlist>;
 ```
 
 - `<allowlist>`
-  - : 允许使用该功能的来源列表。请参阅 [`Permissions-Policy` 中的语法](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#syntax)了解更多详细信息。
+  - : 允许使用该功能的来源列表。请参阅 [`Permissions-Policy` 中的语法](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#语法)了解更多详细信息。
 
 ## 默认策略
 
