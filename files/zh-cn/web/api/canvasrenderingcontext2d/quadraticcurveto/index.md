@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.quadraticCurveTo()`** 方法用于新增二次贝塞尔曲线路径。它需要 2 个点。第一个点是控制点，第二个点是终点。起始点是当前路径最新的点，当创建二次贝赛尔曲线之前，可以使用 {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} 方法进行改变。
+Canvas 2D API 的 **`CanvasRenderingContext2D.quadraticCurveTo()`** 方法用于新增二次[贝塞尔曲线](/zh-CN/docs/Glossary/Bezier_curve)路径。它需要 2 个点。第一个点是控制点，第二个点是终点。起始点是当前路径最新的点——在创建二次贝赛尔曲线之前，可以使用 {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} 方法进行改变。
 
 ## 语法
 
