@@ -1,6 +1,7 @@
 ---
 title: 渲染引擎
-slug: Glossary/Rendering_engine
+slug: Glossary/Engine/Rendering
+original_slug: Glossary/Rendering_engine
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
