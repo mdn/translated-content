@@ -1,6 +1,7 @@
 ---
 title: Guard  (ガード)
-slug: Glossary/Guard
+slug: conflicting/Web/API/Fetch_API/Using_Fetch
+original_slug: Glossary/Guard
 ---
 
 {{GlossarySidebar}}
