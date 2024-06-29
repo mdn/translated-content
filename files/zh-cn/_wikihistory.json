@@ -32598,20 +32598,5 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
-  },
-  "conflicting/Web/API/Fetch_API/Using_Fetch": {
-    "modified": "2019-03-18T20:37:40.179Z",
-    "contributors": ["aximario"]
-  },
-  "conflicting/Web/API/Fetch_API/Using_Fetch_c0ca150deec7d78cb1d4462e8542019b": {
-    "modified": "2019-03-23T22:45:38.912Z",
-    "contributors": [
-      "zhuangyin",
-      "jswisher",
-      "xgqfrms-GitHub",
-      "Jeff-Kook",
-      "xcatliu",
-      "ziyunfei"
-    ]
   }
 }
