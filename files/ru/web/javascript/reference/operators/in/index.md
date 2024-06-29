@@ -157,7 +157,7 @@ empties[2]; // undefined
 2 in empties; // false
 ```
 
-Чтобы избежать подобного, убедитесь, что новый массив заполнен непустыми значениями, или не записывайте значения по индексам больше, чем длина массива.
+Чтобы избежать подобного, следует заполнять новый массив непустыми значениями и не записывать значения по индексам, превышающим длину массива.
 
 ```js
 const empties = new Array(3).fill(undefined);
@@ -166,7 +166,7 @@ const empties = new Array(3).fill(undefined);
 
 ### Наследуемые свойства
 
-Оператор `in` возвратит `true` для свойств, которые унаследованы по цепочке прототипов. Это может быть нежелательно, если вы используете объекты для хранения произвольных пар ключ-значение.
+Оператор `in` возвратит `true` для свойств, которые унаследованы по цепочке прототипов. Это может быть нежелательно при использовании объектов для хранения произвольных пар ключ-значение.
 
 ```js example-bad
 const ages = { alice: 18, bob: 27 };
@@ -178,7 +178,7 @@ function hasPerson(name) {
 hasPerson("hasOwnProperty"); // true
 ```
 
-Вы можете использовать {{jsxref("Object.hasOwn()")}}, чтобы проверить, существует ли в объекте данный ключ.
+Можно использовать {{jsxref("Object.hasOwn()")}}, чтобы проверить, существует ли в объекте данный ключ.
 
 ```js
 const ages = { alice: 18, bob: 27 };
@@ -189,9 +189,7 @@ function hasPerson(name) {
 
 hasPerson("hasOwnProperty"); // false
 ```
-
-В качестве альтернативы вам следует использовать [объект с прототипом null](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) или {{jsxref("Map")}}, для хранения `ages`, чтобы избежать других ошибок.
-
+Также можно использовать [объект с прототипом null](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) или {{jsxref("Map")}}, чтобы избежать других ошибок.
 ```js example-good
 const ages = new Map([
   ["alice", 18],
@@ -205,9 +203,9 @@ function hasPerson(name) {
 hasPerson("hasOwnProperty"); // false
 ```
 
-### Использование оператора `in` для реализации _branded checks_
+### Использование оператора `in` для реализации _бренд-чека_
 
-Фрагмент кода ниже демонстрирует статическую функцию, которая проверяет был ли объект создан конструктором `Person`, и следовательно безопасно использовать другие методы.
+Фрагмент кода ниже демонстрирует статическую функцию, которая проверяет, был ли объект создан конструктором класса `Person`, и следовательно безопасно ли использовать методы этого класса.
 
 ```js
 class Person {
@@ -241,9 +239,9 @@ const p2 = {};
 p1.ageDifference(p2); // TypeError: Cannot read private member #age from an object whose class did not declare it
 ```
 
-Без оператора `in` вам пришлось бы использовать блок `try...catch`, чтобы проверить, есть ли в объекте приватное свойство.
+Без оператора `in` пришлось бы использовать блок `try...catch`, чтобы проверить, есть ли в объекте приватное свойство.
 
-Вы также можете использовать _branded check_ в методе класса [`@@hasInstance`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance), и в дальнейшем можете использовать оператор [`instanceof`](/ru/docs/Web/JavaScript/Reference/Operators/instanceof) для выполнения такой же проверки (которая по умолчанию только проверяет наличие `Person.prototype` в цепочке прототипов объекта).
+Также это можно реализовать с помощью метода класса [`@@hasInstance`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance), и в дальнейшем использовать оператор [`instanceof`](/ru/docs/Web/JavaScript/Reference/Operators/instanceof) для выполнения такой же проверки (которая по умолчанию проверяет только наличие `Person.prototype` в цепочке прототипов объекта).
 
 ```js
 class Person {
@@ -269,7 +267,7 @@ if (p1 instanceof Person && p2 instanceof Person) {
 }
 ```
 
-Больше примеров вы можете найти на странице [Приватные свойства](/ru/docs/Web/JavaScript/Reference/Classes/Private_properties) и в [руководстве по классам](/ru/docs/Web/JavaScript/Guide/Using_classes#private_fields).
+Дополнительные примеры есть в разделе «[Приватные свойства](/ru/docs/Web/JavaScript/Reference/Classes/Private_properties)» и в [руководстве по классам](/ru/docs/Web/JavaScript/Guide/Using_classes#private_fields).
 
 ## Спецификации
 
@@ -281,7 +279,9 @@ if (p1 instanceof Person && p2 instanceof Person) {
 
 ## Смотрите также
 
+- [`for...in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in)
 - [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete)
-- {{jsxref("Object.prototype.hasOwnProperty()")}}
+- {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Reflect.has()")}}
-- [Enumerability and ownership of properties](/ru/docs/Enumerability_and_ownership_of_properties)
+- [Перечисляемость и владение свойствами](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+
