@@ -286,4 +286,3 @@ if (p1 instanceof Person && p2 instanceof Person) {
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Reflect.has()")}}
 - [Перечисляемость и владение свойствами](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-
