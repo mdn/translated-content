@@ -2,7 +2,7 @@
 title: Firefox 126 的开发者说明
 slug: Mozilla/Firefox/Releases/126
 l10n:
-  sourceCommit: 8262255fae143b8e5d337bdedbe35a6aaa6cb1ef
+  sourceCommit: e6fcda9d35359bbfec32ddb42086468701f57ee5
 ---
 
 {{FirefoxSidebar}}
@@ -46,7 +46,7 @@ l10n:
 - 现已支持所有的 [`RTCIceCandidate`](/zh-CN/docs/Web/API/RTCIceCandidate) 属性和方法（除了未实现的 `relayProtocol` 和 `url` 属性），并与规范相匹配。已对 `RTCIceCandidate` 的属性进行了以下更改：
 
   - 已将以下属性变为只读：[`candidate`](/zh-CN/docs/Web/API/RTCIceCandidate/candidate)、[`sdpMid`](/zh-CN/docs/Web/API/RTCIceCandidate/sdpMid)、[`sdpMLineIndex`](/zh-CN/docs/Web/API/RTCIceCandidate/sdpMLineIndex) 和 [`usernameFragment`](/zh-CN/docs/Web/API/RTCIceCandidate/usernameFragment)。
-  - 以添加以下属性：[`foundation`](/zh-CN/docs/Web/API/RTCIceCandidate/foundation)、[`component`](/zh-CN/docs/Web/API/RTCIceCandidate/component)、[`priority`](/zh-CN/docs/Web/API/RTCIceCandidate/priority)、[`address`](/zh-CN/docs/Web/API/RTCIceCandidate/address)、[`protocol`](/zh-CN/docs/Web/API/RTCIceCandidate/protocol)、[`port`](/zh-CN/docs/Web/API/RTCIceCandidate/port)、[`type`](/zh-CN/docs/Web/API/RTCIceCandidate/type)、[`tcpType`](/zh-CN/docs/Web/API/RTCIceCandidate/tcpType)、[`relatedAddress`](/zh-CN/docs/Web/API/RTCIceCandidate/relatedAddress)、[`relatedPort`](/zh-CN/docs/Web/API/RTCIceCandidate/relatedPort) 和 [`usernameFragment`](/zh-CN/docs/Web/API/RTCIceCandidate/usernameFragment)。
+  - 已添加以下属性：[`foundation`](/zh-CN/docs/Web/API/RTCIceCandidate/foundation)、[`component`](/zh-CN/docs/Web/API/RTCIceCandidate/component)、[`priority`](/zh-CN/docs/Web/API/RTCIceCandidate/priority)、[`address`](/zh-CN/docs/Web/API/RTCIceCandidate/address)、[`protocol`](/zh-CN/docs/Web/API/RTCIceCandidate/protocol)、[`port`](/zh-CN/docs/Web/API/RTCIceCandidate/port)、[`type`](/zh-CN/docs/Web/API/RTCIceCandidate/type)、[`tcpType`](/zh-CN/docs/Web/API/RTCIceCandidate/tcpType)、[`relatedAddress`](/zh-CN/docs/Web/API/RTCIceCandidate/relatedAddress)、[`relatedPort`](/zh-CN/docs/Web/API/RTCIceCandidate/relatedPort) 和 [`usernameFragment`](/zh-CN/docs/Web/API/RTCIceCandidate/usernameFragment)。
 
   （[Firefox bug 1322186](https://bugzil.la/1322186)）。
 
@@ -79,6 +79,7 @@ l10n:
 - {{WebExtAPIRef("runtime.MessageSender")}} 类型现在包含 `origin` 属性。这使得消息或连接请求可以查看打开连接的页面或框架。这对于在 URL 中未明确显示来源的情况下确定来源是否可信非常有用（[Firefox bug 1787379](https://bugzil.la/1787379)）。
 - 现已支持 `"webRequestAuthProvider"` 权限。这为 Manifest V3 中用于 {{WebExtAPIRef("webRequest.onAuthRequired")}} 的请求权限提供了与 Chrome 的兼容性（[Firefox bug 1820569](https://bugzil.la/1820569)）。
 - 现在提供 [`options_page` 清单键](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page)来作为 [`options_ui`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) 键的别名。这是为了使扩展更好地与 Chrome 兼容（[Firefox bug 1816960](https://bugzil.la/1816960)）。
+- {{WebExtAPIRef("tabs.captureVisibleTab")}} 方法现在也可以通过 `activeTab` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)启用，这提供了与 Chrome 和 Safari 的兼容性（[Firefox bug 1784920](https://bugzil.la/1784920)）。
 
 ### 其他
 
@@ -88,11 +89,11 @@ l10n:
 
 - **可跨越影子 DOM 边界的选择**：`dom.shadowdom.selection_across_boundary.enabled`。
 
-  {{domxref("Selection.getComposedRanges()")}} 方法现在可用于获取影子 DOM 中具有锚点或焦点的节点的选择范围——前提是传递了包含这些节点的 {{domxref("ShadowRoot")}} 对象。`Selection` 的 {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}、{{domxref("Selection.collapse()","collapse()")}} 和 {{domxref("Selection.extend()","extend()")}} 方法也已修改，以接受影子根中的节点。
+  {{domxref("Selection.getComposedRanges()")}} 方法现在可用于获取影子 DOM 中具有锚点或焦点的节点的选择范围——前提是传递了包含这些节点的 {{domxref("ShadowRoot")}} 对象。`Selection` 的 {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}、{{domxref("Selection.collapse()","collapse()")}} 和 {{domxref("Selection.extend()","extend()")}} 方法也已修改，以接受影子根中的节点（[Firefox bug 1867058](https://bugzil.la/1867058)）。
 
 - **CSS `shape()` 函数**：`layout.css.basic-shape-shape.enabled`。
 
-  - 你可以在 {{cssxref("clip-path")}} 和 {{cssxref("offset-path")}} 属性中使用 [`shape()`](/zh-CN/docs/Web/CSS/basic-shape/shape) 函数来定义形状。此函数使你可以更精细地控制可被定义的形状，并提供了比 {{cssxref("path","path()")}} 函数更多的优点（参见 [Firefox bug 1823463](https://bugzil.la/1823463) 以了解 `shape()` 函数在 `clip-path` 中的支持；参见 [Firefox bug 1884424](https://bugzil.la/1884424) 以了解 `shape()` 函数在 `offset-path` 中的支持；参见 [Firefox bug 1884425](https://bugzil.la/1884425) 以了解 `shape()` 的插值支持）。
+  你可以在 {{cssxref("clip-path")}} 和 {{cssxref("offset-path")}} 属性中使用 [`shape()`](/zh-CN/docs/Web/CSS/basic-shape/shape) 函数来定义形状。此函数使你可以更精细地控制可被定义的形状，并提供了比 {{cssxref("path","path()")}} 函数更多的优点（参见 [Firefox bug 1823463](https://bugzil.la/1823463) 以了解 `shape()` 函数在 `clip-path` 中的支持；参见 [Firefox bug 1884424](https://bugzil.la/1884424) 以了解 `shape()` 函数在 `offset-path` 中的支持；参见 [Firefox bug 1884425](https://bugzil.la/1884425) 以了解 `shape()` 的插值支持）。
 
 ## 更早期的版本
 
