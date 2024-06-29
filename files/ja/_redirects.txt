@@ -1338,7 +1338,7 @@
 /ja/docs/Glossary/First_interactive	/ja/docs/Glossary/First_CPU_idle
 /ja/docs/Glossary/Global_attribute	/ja/docs/Web/HTML/Global_attributes
 /ja/docs/Glossary/Grid_Rows	/ja/docs/Glossary/Grid_Row
-/ja/docs/Glossary/Guard	/ja/docs/conflicting/Web/API/Fetch_API/Using_Fetch
+/ja/docs/Glossary/Guard	/ja/docs/Web/API/Fetch_API/Using_Fetch
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
 /ja/docs/Glossary/I18N	/ja/docs/Glossary/Internationalization
 /ja/docs/Glossary/Index	/ja/docs/Glossary
@@ -2759,7 +2759,7 @@
 /ja/docs/Web/API/EventTarget.removeEventListener	/ja/docs/Web/API/EventTarget/removeEventListener
 /ja/docs/Web/API/EventTarget/attachEvent	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/Web/API/FetchEvent_clone	/ja/docs/Web/API/FetchEvent
-/ja/docs/Web/API/Fetch_API/Basic_concepts	/ja/docs/conflicting/Web/API/Fetch_API/Using_Fetch_c0ca150deec7d78cb1d4462e8542019b
+/ja/docs/Web/API/Fetch_API/Basic_concepts	/ja/docs/Web/API/Fetch_API/Using_Fetch
 /ja/docs/Web/API/File.name	/ja/docs/Web/API/File/name
 /ja/docs/Web/API/File.size	/ja/docs/Web/API/Blob/size
 /ja/docs/Web/API/File.type	/ja/docs/Web/API/Blob/type
