@@ -30284,21 +30284,6 @@
     "modified": "2020-02-11T06:17:04.429Z",
     "contributors": ["tyankatsu", "Marsf"]
   },
-  "conflicting/Web/API/Fetch_API/Using_Fetch": {
-    "modified": "2020-01-10T08:49:48.628Z",
-    "contributors": ["Wind1808"]
-  },
-  "conflicting/Web/API/Fetch_API/Using_Fetch_c0ca150deec7d78cb1d4462e8542019b": {
-    "modified": "2020-10-01T22:06:38.159Z",
-    "contributors": [
-      "mpcjazz",
-      "Uemmra3",
-      "dskmori",
-      "hamasaki",
-      "chikoski",
-      "YuichiNukiyama"
-    ]
-  },
   "conflicting/Web/API/FormData": {
     "modified": "2019-04-26T23:54:27.353Z",
     "contributors": ["mfuji09"]
