@@ -1,6 +1,7 @@
 ---
 title: enable-background
-slug: Web/SVG/Attribute/enable-background
+slug: orphaned/Web/SVG/Attribute/enable-background
+original_slug: Web/SVG/Attribute/enable-background
 ---
 
 {{SVGRef}} {{deprecated_header("SVG 2")}}
