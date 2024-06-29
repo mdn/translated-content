@@ -189,6 +189,7 @@ function hasPerson(name) {
 
 hasPerson("hasOwnProperty"); // false
 ```
+
 Также можно использовать [объект с прототипом null](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) или {{jsxref("Map")}}, чтобы избежать других ошибок.
 ```js example-good
 const ages = new Map([
