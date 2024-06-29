@@ -1,6 +1,7 @@
 ---
 title: Rendering engine (レンダリングエンジン)
-slug: Glossary/Rendering_engine
+slug: Glossary/Engine/Rendering
+original_slug: Glossary/Rendering_engine
 ---
 
 {{GlossarySidebar}}

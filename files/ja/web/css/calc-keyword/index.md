@@ -1,6 +1,7 @@
 ---
 title: <calc-constant>
-slug: Web/CSS/calc-constant
+slug: Web/CSS/calc-keyword
+original_slug: Web/CSS/calc-constant
 l10n:
   sourceCommit: fb1c7f8985e4c4142f482f809366e3cba6b96b94
 ---

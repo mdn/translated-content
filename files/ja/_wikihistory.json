@@ -702,6 +702,10 @@
     "modified": "2019-03-23T22:38:34.635Z",
     "contributors": ["mfuji09", "kubota-aoi"]
   },
+  "Glossary/Engine/Rendering": {
+    "modified": "2020-09-28T13:40:38.634Z",
+    "contributors": ["mfuji09", "Uemmra3"]
+  },
   "Glossary/Entity": {
     "modified": "2020-08-26T12:57:35.570Z",
     "contributors": ["mfuji09", "Uemmra3", "dskmori", "asuktakahashi"]
@@ -897,10 +901,6 @@
   "Glossary/Grid_Tracks": {
     "modified": "2020-03-26T14:31:20.417Z",
     "contributors": ["mfuji09", "dynamis"]
-  },
-  "Glossary/Guard": {
-    "modified": "2020-01-10T08:49:48.628Z",
-    "contributors": ["Wind1808"]
   },
   "Glossary/Gutters": {
     "modified": "2019-03-18T20:48:45.475Z",
@@ -1592,10 +1592,6 @@
   "Glossary/Regular_expression": {
     "modified": "2020-05-04T13:19:46.805Z",
     "contributors": ["Uemmra3", "segayuu"]
-  },
-  "Glossary/Rendering_engine": {
-    "modified": "2020-09-28T13:40:38.634Z",
-    "contributors": ["mfuji09", "Uemmra3"]
   },
   "Glossary/Repo": {
     "modified": "2019-03-18T21:21:56.601Z",
@@ -8436,17 +8432,6 @@
       "st1007",
       "mdmss37",
       "chikoski"
-    ]
-  },
-  "Web/API/Fetch_API/Basic_concepts": {
-    "modified": "2020-10-01T22:06:38.159Z",
-    "contributors": [
-      "mpcjazz",
-      "Uemmra3",
-      "dskmori",
-      "hamasaki",
-      "chikoski",
-      "YuichiNukiyama"
     ]
   },
   "Web/API/Fetch_API/Cross-global_fetch_usage": {
@@ -30298,6 +30283,21 @@
   "conflicting/Web/API/EventTarget/addEventListener_380cb5f366307beb2c072f74e561ee98": {
     "modified": "2020-02-11T06:17:04.429Z",
     "contributors": ["tyankatsu", "Marsf"]
+  },
+  "conflicting/Web/API/Fetch_API/Using_Fetch": {
+    "modified": "2020-01-10T08:49:48.628Z",
+    "contributors": ["Wind1808"]
+  },
+  "conflicting/Web/API/Fetch_API/Using_Fetch_c0ca150deec7d78cb1d4462e8542019b": {
+    "modified": "2020-10-01T22:06:38.159Z",
+    "contributors": [
+      "mpcjazz",
+      "Uemmra3",
+      "dskmori",
+      "hamasaki",
+      "chikoski",
+      "YuichiNukiyama"
+    ]
   },
   "conflicting/Web/API/FormData": {
     "modified": "2019-04-26T23:54:27.353Z",
