@@ -1,5 +1,5 @@
 ---
-title: "HTMLLabelElement: htmlFor property"
+title: "HTMLLabelElement: htmlFor 속성"
 short-title: htmlFor
 slug: Web/API/HTMLLabelElement/htmlFor
 l10n:
