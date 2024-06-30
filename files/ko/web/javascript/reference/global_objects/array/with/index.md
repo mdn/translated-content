@@ -73,8 +73,7 @@ console.log(arr.with(0, 2)); // [2, undefined, 3, 4, undefined, 6]
 
 ### 배열이 아닌 객체에서 with() 호출하기
 
-`with()` 메서드는 `this`의 `length` 속성을 읽습니다. 그리고 `this`의 정수 키 속성을 읽어서 새 배열에 쓰고,
-`value`는 주어진 `index`에 씁니다.
+`with()` 메서드는 새로운 배열을 생성하고 반환합니다. 이 메서드는 `this`의 `length` 속성을 읽은 다음 키가 `length`보다 작은, 음수가 아닌 정수인 각 속성에 접근합니다. `this`의 각 속성에 접근하면 속성의 키와 동일한 인덱스를 갖는 배열 요소가 속성의 값으로 설정됩니다. 마지막으로 `index`의 배열 값은 `value`로 설정됩니다.
 
 ```js
 const arrayLike = {
@@ -82,6 +81,7 @@ const arrayLike = {
   unrelated: "foo",
   0: 5,
   2: 4,
+  3: 3, // length가 3이기 때문에 with()메서드는 이를 무시합니다.
 };
 console.log(Array.prototype.with.call(arrayLike, 0, 1));
 // [ 1, undefined, 4 ]
@@ -98,6 +98,7 @@ console.log(Array.prototype.with.call(arrayLike, 0, 1));
 ## 같이 보기
 
 - [Polyfill of `Array.prototype.with` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
+- [인덱스 기반 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections) 가이드
 - {{jsxref("Array.prototype.toReversed()")}}
 - {{jsxref("Array.prototype.toSorted()")}}
 - {{jsxref("Array.prototype.toSpliced()")}}
