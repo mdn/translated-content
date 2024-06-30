@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("String")}} 값의 **`slice()`** 메소드는 이 문자열의 일부를 추출하여 이를 새로운 문자열로 반환합니다. 원본 문자열은 수정하지 않습니다.
+{{jsxref("String")}} 값의 **`slice()`** 메서드는 이 문자열의 일부를 추출하여 이를 새로운 문자열로 반환합니다. 원본 문자열은 수정하지 않습니다.
 
 {{EmbedInteractiveExample("pages/js/string-slice.html", "taller")}}
 

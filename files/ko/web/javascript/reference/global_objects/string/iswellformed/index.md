@@ -25,9 +25,9 @@ isWellFormed()
 
 ## 설명
 
-JavaScript의 문자열은 UTF-16으로 인코딩됩니다. UTF-16 인코딩에는 서로게이트 쌍이라는 개념이 있으며, 이는 [UTF-16 문자, 유니코드 코드 포인트 및 그래프 문자 클러스터](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_graphheme_clusters) 섹션에 자세히 소개되어 있습니다.
+JavaScript의 문자열은 UTF-16으로 인코딩됩니다. UTF-16 인코딩에는 서로게이트 쌍이라는 개념이 있으며, 이는 [UTF-16 문자, 유니코드 코드 포인트 및 문자소 클러스터](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_graphheme_clusters) 섹션에 자세히 소개되어 있습니다.
 
-`isWellFormed()`를 사용하면 문자열이 잘 형성되었는지(즉, 론 서로게이트를 포함하지 않는지) 테스트할 수 있습니다. 사용자 정의 구현과 비교할 때 `isWellFormed()`는 엔진이 문자열의 내부 표현에 직접 액세스할 수 있으므로 더 효율적입니다. 문자열을 잘 형성된 문자열로 변환해야 하는 경우 {{jsxref("String/toWellFormed", "toWellFormed()")}} 메서드를 사용하세요. `isWellFormed()`를 사용하면 에러를 발생시키거나 유효하지 않은 것으로 표시하는 등 잘못된 형식의 문자열을 올바른 형식의 문자열과 다르게 처리할 수 있습니다.
+`isWellFormed()`를 사용하면 문자열이 잘 형성되었는지(즉, 론 서로게이트를 포함하지 않는지) 테스트할 수 있습니다. 사용자 정의 구현과 비교할 때 `isWellFormed()`는 엔진이 문자열의 내부 표현에 직접 접근할 수 있으므로 더 효율적입니다. 문자열을 잘 형성된 문자열로 변환해야 하는 경우 {{jsxref("String/toWellFormed", "toWellFormed()")}} 메서드를 사용하세요. `isWellFormed()`를 사용하면 오류를 발생시키거나 유효하지 않은 것으로 표시하는 등 잘못된 형식의 문자열을 올바른 형식의 문자열과 다르게 처리할 수 있습니다.
 
 ## 예제
 
@@ -58,7 +58,7 @@ for (const str of strings) {
 // true
 ```
 
-### encodeURI()에서 에러 피하기
+### encodeURI()에서 오류 피하기
 
 전달된 문자열이 제대로 형태를 갖추지 못한 경우 {{jsxref("encodeURI")}}는 오류가 발생합니다. 문자열을 `encodeURI()`로 전달하기 전에 `isWellFormed()`를 사용하여 문자열을 테스트하면 이 문제를 피할 수 있습니다.
 
