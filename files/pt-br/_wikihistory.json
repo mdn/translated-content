@@ -3088,10 +3088,6 @@
     "modified": "2020-10-15T21:42:57.080Z",
     "contributors": ["mateusvelleda", "BrunoLucas", "fapbatista", "tcelestino"]
   },
-  "Web/API/Fetch_API/Basic_concepts": {
-    "modified": "2020-02-17T13:24:31.887Z",
-    "contributors": ["diezan", "LincePotiguara"]
-  },
   "Web/API/Fetch_API/Cross-global_fetch_usage": {
     "modified": "2019-03-18T20:48:56.041Z",
     "contributors": ["matluz"]
@@ -10522,6 +10518,10 @@
   "conflicting/Web/API/EventTarget/addEventListener": {
     "modified": "2019-03-23T22:20:33.890Z",
     "contributors": ["cezaraugusto"]
+  },
+  "conflicting/Web/API/Fetch_API/Using_Fetch": {
+    "modified": "2020-02-17T13:24:31.887Z",
+    "contributors": ["diezan", "LincePotiguara"]
   },
   "conflicting/Web/API/Geolocation/getCurrentPosition": {
     "modified": "2019-03-23T22:47:40.708Z",
