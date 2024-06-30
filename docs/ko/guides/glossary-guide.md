@@ -54,6 +54,7 @@
 | Next steps | 다음 단계 | [링크][2D_breakout_game_Phaser] |
 | Polyfill | 폴리필 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
 | Reference | 참고서 | |
+| Return Value | 반환 값 | |
 | See also | 같이 보기 | [링크][target] |
 | Specifications | 명세서 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
 | Summary | 요약 | |
