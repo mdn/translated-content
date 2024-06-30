@@ -17,7 +17,7 @@ l10n:
 
 iOS 和 macOS 自带一个内置的屏幕阅读器——旁白。要在 macOS 上访问 VoiceOver，请转到“系统设置” > “辅助功能” > “旁白实用工具”。你也可以使用 fn+command + F5 来切换 VoiceOver 的开关。旁白既可以朗读内容，也可以显示内容。朗读的内容会在一个深灰色的框中显示出来。
 
-旁白也可以通过快捷键使用。参见 [Mac 上的旁白通用命令](https://support.apple.com/zh-cn/guide/voiceover/cpvokys01/mac))以得到完整列表。
+旁白也可以通过快捷键使用。参见 [Mac 上的旁白通用命令](https://support.apple.com/zh-cn/guide/voiceover/cpvokys01/mac)) 以得到完整列表。
 
 更多详情内容，参见[适用于 Mac 的旁白使用手册](https://support.apple.com/zh-cn/guide/voiceover/welcome/mac)以及[在 iPhone 上的 App 中使用旁白](https://support.apple.com/guide/iphone/use-voiceover-in-apps-iphe4ee74be8/ios)。
 
