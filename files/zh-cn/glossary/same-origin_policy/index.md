@@ -14,7 +14,7 @@ l10n:
 ## 参见
 
 - [同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)
-- [MDN Web Docs 术语表](/zh-CN/docs/Glossary):
+- [MDN Web 文档术语表](/zh-CN/docs/Glossary):
 
   - {{Glossary("CORS")}}
   - {{Glossary("origin", "源")}}
