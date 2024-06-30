@@ -43,7 +43,8 @@ l10n:
 ```html
 <article class="simple">
   <p>
-    <strong>警告</strong>: 宇宙のトランスセンダーのサーモスタットは臨界レベルに達しています。
+    <strong>警告</strong>:
+    宇宙のトランスセンダーのサーモスタットは臨界レベルに達しています。
   </p>
 </article>
 ```
