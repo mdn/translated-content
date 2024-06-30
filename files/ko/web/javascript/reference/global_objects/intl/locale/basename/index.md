@@ -7,13 +7,11 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("Intl.Locale")}} 인스턴스의 **`baseName`** 접근자 속성은 이 로케일의 문자열 표현의 하위 문자열을 반환하며, 언어, 스크립트 및 사용 가능 한 경우 지역 등 이 로케일의 핵심 정보를 포함합니다.
+{{jsxref("Intl.Locale")}} 인스턴스의 **`baseName`** 접근자 속성은 이 로케일의 문자열 표현의 하위 문자열을 반환하며, 언어, 사용 가능한 경우 지역 및 스크립트 등 이 로케일의 핵심 정보를 포함합니다.
 
 ## 설명
 
-`baseName`은 `language ["-" script] ["-" region] *("-" variant)`의 [unicode_language_id 문법](https://www.unicode.org/reports/tr35/#Identifiers) 시퀀스를 반환합니다. 로케일 식별자 문자열 또는 옵션 객체를 통해 생성자에서 명시적으로 지정된 정보만 포함됩니다.
-
-{{jsxref("Intl.Locale")}} 객체는 구문 분석된 로컬과 해당 로케일에 대한 옵션을 나타냅니다. `baseName` 속성은 로케일에 대한 기본 핵심 정보를 전체 데이터 문자열의 부분 문자열 형태로 반환합니다. 특히 이 속성은 언어가 포함된 부분 문자열과 스크립트 및 지역(사용 가능한 경우)을 반환합니다.
+`baseName`은 [unicode_language_id 문법](https://www.unicode.org/reports/tr35/#Identifiers)의 `language ["-" script] ["-" region] *("-" variant)` 하위 시퀀스를 반환합니다. 로케일 식별자 문자열 또는 옵션 객체를 통해 생성자에서 명시적으로 지정된 정보만 포함됩니다.
 
 `baseName`의 설정 접근자는 `undefined`입니다. 이 속성을 직접 변경할 수 없습니다.
 
