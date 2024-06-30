@@ -14,4 +14,4 @@ RTF（富文本格式）是一种基于纯文本的文件格式，支持格式�
 ## 参见
 
 - 维基百科上的[富文本格式](https://zh.wikipedia.org/wiki/RTF)
-- [微软的规范 v1.9.1](https://interoperability.blob.core.windows.net/files/Archive_References/%5bMSFT-RTF%5d.pdf)
+- [微软的规范 v1.9.1](https://web.archive.org/web/20230601123231/https://interoperability.blob.core.windows.net/files/Archive_References/[MSFT-RTF].pdf)
