@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-当一个标签页附加到一个窗口时触发，例如因为它在窗口之间移动。
+当标签页附加到窗口时触发，例如因为它在窗口之间移动。
 
 ## 语法
 
@@ -50,7 +50,7 @@ browser.tabs.onAttached.hasListener(listener)
 
 ## 示例
 
-监听附加事件并记录信息：
+监听 attach 事件并记录信息：
 
 ```js
 function handleAttached(tabId, attachInfo) {
