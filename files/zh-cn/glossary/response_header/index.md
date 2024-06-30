@@ -40,6 +40,4 @@ x-frame-options: DENY
 
   - {{Glossary("Representation header", "表示标头")}}
   - {{Glossary("HTTP header", "HTTP 标头")}}
-  - {{Glossary("Response header", "响应标头")}}
-  - {{Glossary("Fetch metadata response header", "Fetch 元数据响应头")}}
   - {{Glossary("Request header", "请求标头")}}
