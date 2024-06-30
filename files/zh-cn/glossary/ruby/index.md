@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**Ruby** 是一种开源编程语言。在 {{glossary("world wide web","Web")}} 环境中，Ruby 通常与 _Ruby On Rails_（ROR）框架一起用于服务器端，用于生成网站/应用。
+**Ruby** 是一种开源编程语言。在 {{glossary("world wide web","Web")}} 环境中，Ruby 通常与 _Ruby On Rails_（ROR）框架一起用于服务器端，以生成网站/应用。
 
 Ruby 还是一种用于在 HTML 文档中提供发音信息的东亚文本注释方法；请参阅 {{HTMLElement("ruby")}} 元素。
 
