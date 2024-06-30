@@ -2,7 +2,7 @@
 title: Base64
 slug: Glossary/Base64
 l10n:
-  sourceCommit: 76d86face9211c33ba965763996ef09c7ee1fc68
+  sourceCommit: dd3048a4eb74a53395c9a2015baefaa46ef77a56
 ---
 
 {{GlossarySidebar}}
@@ -33,8 +33,8 @@ Base64 编码方案通常用于对二进制数据进行编码，以便在只能�
 
 浏览器原生提供了两个 JavaScript 函数，用于解码和编码 Base64 字符串：
 
-- [`btoa()`](/zh-CN/docs/Web/API/btoa)：从二进制数据字符串创建一个 Base64 编码的 ASCII 字符串（“btoa”应看作“从二进制到 ASCII”）
-- [`atob()`](/zh-CN/docs/Web/API/atob)：解码通过 Base64 编码的字符串数据（“atob”应看作“从 ASCII 到二进制”）
+- {{domxref("Window.btoa()")}}（也在 {{domxref("WorkerGlobalScope.btoa()", "worker 中可用", "", 1)}}）：从二进制数据字符串创建一个 Base64 编码的 ASCII 字符串（“btoa”应看作“从二进制到 ASCII”）
+- {{domxref("Window.atob()")}}（也在 {{domxref("WorkerGlobalScope.atob()", "worker 中可用", "", 1)}}）：解码通过 Base64 编码的字符串数据（“atob”应看作“从 ASCII 到二进制”）
 
 > **备注：** Base64 是一种二进制编码，而不是文本编码，但是在 Web 平台支持二进制数据类型之前，`btoa` 和 `atob` 被添加到了其中。因此，这两个函数使用字符串来表示二进制数据，其中每个字符的{{glossary("code point", "码位")}}表示每个字节的值。这导致了一个普遍的误解，即 `btoa` 可以用来编码任意文本数据，例如创建文本或 HTML 文档的 Base64 `data:` URL。
 >
@@ -94,8 +94,8 @@ await dataUrlToBytes("data:application/octet-stream;base64,AAEC"); // Uint8Array
 ## 参见
 
 - JavaScript API:
-  - [btoa() 全局函数](/zh-CN/docs/Web/API/btoa)
-  - [atob() 全局函数](/zh-CN/docs/Web/API/atob)
+  - {{domxref("Window.btoa()")}}（也在 {{domxref("WorkerGlobalScope.btoa()", "worker 中可用", "", 1)}}）
+  - {{domxref("Window.atob()")}}（也在 {{domxref("WorkerGlobalScope.atob()", "worker 中可用", "", 1)}}）
 - [Data URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
 - 维基百科上的 [Base64](https://zh.wikipedia.org/wiki/Base64)
 - [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648) 中对 Base64 算法的描述

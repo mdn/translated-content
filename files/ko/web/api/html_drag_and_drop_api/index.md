@@ -228,7 +228,7 @@ function dragstart_handler(ev) {
 
 - [Copying and moving elements with the `DataTransfer` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html)
 - [Copying and moving elements with the `DataTransferListItem` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
-- 파일 드래그 앤 드롭; Firefox 전용: <http://jsfiddle.net/9C2EF/>
+- 파일 드래그 앤 드롭; Firefox 전용: <https://jsfiddle.net/9C2EF/>
 - 파일 드래그 앤 드롭; 모든 브라우저: [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
 
 ## 명세서
