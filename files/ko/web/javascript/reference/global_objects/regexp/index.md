@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp
 
 **`RegExp`** 생성자는 패턴을 사용해 텍스트를 판별할 때 사용합니다.
 
-정규 표현식에 대한 소개는 JavaScript 안내서의 [정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_Expressions)을 참고하세요. 정규 표현식 훈법에 대한 더 자세한 정보는 [정규 표현식 참고서](/ko/docs/Web/JavaScript/Reference/Regular_expressions)를 참고하시기 바랍니다.
+정규 표현식에 대한 소개는 JavaScript 안내서의 [정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_Expressions)을 참고하세요. 정규 표현식 구문에 대한 더 자세한 정보는 [정규 표현식 참고서](/ko/docs/Web/JavaScript/Reference/Regular_expressions)를 참고하시기 바랍니다.
 
 ## 설명
 
@@ -22,9 +22,9 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp
 
 ```js
 const re = /ab+c/i; // 리터럴 표기법
-// OR
+// 혹은
 const re = new RegExp("ab+c", "i"); // 첫 번째 인수로 문자열 패턴과 함께 생성자 사용
-// OR
+// 혹은
 const re = new RegExp(/ab+c/, "i"); // 첫 번째 인수로 정규 표현식 리터럴과 함께 생성자 사용
 ```
 
@@ -32,7 +32,7 @@ const re = new RegExp(/ab+c/, "i"); // 첫 번째 인수로 정규 표현식 리
 
 리터럴 표기법은 표현식이 평가될 때 정규 표현식이 컴파일됩니다. 반면에 `RegExp` 객체의 생성자 `new RegExp('ab+c')`는 정규 표현식을 런타임에 컴파일합니다.
 
-[동적 입력에서 정규식을 빌드](<(#building_a_regular_expression_from_dynamic_inputs)>)하려면 `RegExp()` 생성자의 첫 번째 인수로 문자열을 사용합니다.
+[동적 입력에서 정규식을 빌드](#building_a_regular_expression_from_dynamic_inputs)하려면 `RegExp()` 생성자의 첫 번째 인수로 문자열을 사용합니다.
 
 ### 생성자의 플래그
 
