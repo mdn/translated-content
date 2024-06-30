@@ -16,5 +16,5 @@ RTCP 定期向 RTP 会话的所有参与者发送控制包，使用与传输数�
 ## 参见
 
 - [介绍实时传输协议](/zh-CN/docs/Web/API/WebRTC_API/Intro_to_RTP)
-- [RTP 控制协议](https://en.wikipedia.org/wiki/RTP_Control_Protocol)
+- [RTP 控制协议](https://zh.wikipedia.org/wiki/实时传输控制协议)
 - {{RFC(3550, "RFC 3550 第 6 节", 6)}}
