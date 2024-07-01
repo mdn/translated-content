@@ -3,6 +3,8 @@ title: Range.startContainer
 slug: Web/API/Range/startContainer
 ---
 
+{{ApiRef("DOM")}}
+
 Range.startContainer 是只读属性，返回 Range 开始的节点。要更改节点的起始位置，请使用 Range.setStart() 方法。
 
 ## Syntax

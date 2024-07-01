@@ -3,6 +3,8 @@ title: 同步和异步请求
 slug: Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
 ---
 
+{{DefaultAPISidebar("XMLHttpRequest API")}}
+
 `XMLHttpRequest` 支持同步和异步通信。但是，一般来说，出于性能原因，异步请求应优先于同步请求。
 
 同步请求阻止代码的执行，这会导致屏幕上出现“冻结”和无响应的用户体验。
