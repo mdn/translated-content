@@ -1,5 +1,5 @@
 ---
-title: Basic concepts of logical properties and values
+title: 논리적 속성과 값의 기본 개념
 slug: Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values
 l10n:
   sourceCommit: a08c1d8b4022ffbd69d4fd3097d0a30716f5fde7
@@ -29,7 +29,7 @@ CSS 2.1과 이전 버전에서는 화면의 물리적 크기를 따라 요소의
 
 {{EmbedGHLiveSample("css-examples/logical/intro-grid-example.html", '100%', 700)}}
 
-창의적인 이유로 가로 혹은 위에서 아래 방향이 아닌 다른 쓰기 모드를 사용할 때 콘텐츠의 흐름을 연관짓는 것은 매우 중요한 일입니다.
+창의적인 이유로 가로 방향이 아닌 위에서 아래 방향의 쓰기 모드를 사용할 때 콘텐츠의 흐름을 연관지을 수 있다는 것은 매우 중요한 일입니다.
 
 ## 블록과 인라인 차원
 
