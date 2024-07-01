@@ -26,7 +26,7 @@ try {
 - `tryStatements`
   - : 要执行的语句。
 - `catchStatements`
-  - : 如果 `try` 块抛出异常时执行的语句。
+  - : `try` 块抛出异常后执行的语句。
 - `exceptionVar` {{optional_inline}}
   - : 可选的[标识符或模式](#catch_绑定)，用于保存关联的 `catch` 块所捕获到的异常。如果 `catch` 块不使用异常的值，你可以省略 `exceptionVar` 及其周围的括号。
 - `finallyStatements`
@@ -57,7 +57,7 @@ catch (e) console.log(e);
 
 ### catch 绑定
 
-当 `try` 块中抛出异常时，`exceptionVar`（即 `catch (e)`）保存了异常的值。你可以使用这个{{Glossary("binding", "绑定")}}获取有关抛出的异常的信息。这个{{Glossary("binding", "绑定")}}只能在 `catch` 块的{{Glossary("Scope", "范围")}}中使用。
+当 `try` 块中抛出异常时，`exceptionVar`（即 `catch (e)`）保存了异常的值。你可以使用这个{{Glossary("binding", "绑定")}}获取有关抛出的异常的信息。这个{{Glossary("binding", "绑定")}}只能在 `catch` 块的{{Glossary("Scope", "作用域")}}中使用。
 
 它不需要是单个标识符。你可以使用[解构模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)来一次性为多个标识符赋值。
 
@@ -70,7 +70,7 @@ try {
 }
 ```
 
-`catch` 子句创建的绑定与 `catch` 块处于同一范围内，因此 `catch` 块中声明的变量不能与 `catch` 子句创建的绑定具有相同的名称。（[有一个例外](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#语句)，但它是废弃的语法。）
+`catch` 子句创建的绑定与 `catch` 块处于同一作用域内，因此 `catch` 块中声明的变量不能与 `catch` 子句创建的绑定具有相同的名称。（[有一个例外](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#语句)，但它是已弃用的语法。）
 
 ```js-nolint example-bad
 try {
@@ -115,7 +115,7 @@ function isValidJSON(text) {
 - 在 `catch` 块正常执行完成后立即执行；
 - 在 `try` 块或 `catch` 块中将要执行控制流语句（`return`、`throw`、`break`、`continue`）退出块之前立即执行。
 
-如果 `try` 块中抛出异常，即使没有 `catch` 块来处理异常，`finally` 块仍然执行，在这种情况下，异常仍然会在`finally` 块执行完成后立即抛出。
+如果 `try` 块中抛出异常，即使没有 `catch` 块来处理异常，`finally` 块仍然执行，在这种情况下，异常仍然会在 `finally` 块执行完成后立即抛出。
 
 以下示例展示了 `finally` 块的一个用例。这段代码打开一个文件，然后执行使用该文件的语句；`finally` 块确保文件在使用后总是关闭，即使抛出了异常。
 
@@ -156,11 +156,11 @@ try {
   throw "我的异常"; // 产生异常
 } catch (e) {
   // 处理任何异常的语句
-  logMyErrors(e); // 将异常对象传递给错误处理程序
+  logMyErrors(e); // 将异常对象传递给错误处理器
 }
 ```
 
-`catch` 块指定了一个标识符（如上例中的 `e`），它保存了异常的值。这个值只能在 `catch` 块的{{Glossary("Scope", "范围")}}内使用。
+`catch` 块指定了一个标识符（如上例中的 `e`），它保存了异常的值。这个值只能在 `catch` 块的{{Glossary("Scope", "作用域")}}内使用。
 
 ### 条件捕获块
 
@@ -178,7 +178,7 @@ try {
     // 处理 EvalError 异常的语句
   } else {
     // 处理未指定异常的语句
-    logMyErrors(e); // 将异常对象传递给错误处理程序
+    logMyErrors(e); // 将异常对象传递给错误处理器
   }
 }
 ```
@@ -237,7 +237,7 @@ try {
   } catch (ex) {
     console.error("内层", ex.message);
   } finally {
-    console.log("finally");
+    console.log("最终");
   }
 } catch (ex) {
   console.error("外层", ex.message);
@@ -245,7 +245,7 @@ try {
 
 // 输出：
 // “内层” “哦豁”
-// “finally”
+// “最终”
 ```
 
 现在，让我们重新抛出错误。
@@ -258,7 +258,7 @@ try {
     console.error("内层", ex.message);
     throw ex;
   } finally {
-    console.log("finally");
+    console.log("最终");
   }
 } catch (ex) {
   console.error("外层", ex.message);
@@ -266,7 +266,7 @@ try {
 
 // 输出：
 // “内层” “哦豁”
-// “finally”
+// “最终”
 // “外层” “哦豁”
 ```
 
@@ -285,7 +285,7 @@ try {
       console.error("内层", ex.message);
       throw ex;
     } finally {
-      console.log("finally");
+      console.log("最终");
       return;
     }
   } catch (ex) {
@@ -295,7 +295,7 @@ try {
 
 // 输出：
 // “内层” “哦豁”
-// “finally”
+// “最终”
 ```
 
 外层的“哦豁”不会被抛出，因为 `finally` 块中的 `return` 语句将控制流转移到外部。同样的规则也适用于 `catch` 块中返回的值。
