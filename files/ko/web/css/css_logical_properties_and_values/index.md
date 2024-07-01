@@ -1,5 +1,5 @@
 ---
-title: CSS logical properties and values
+title: CSS 논리적 속성과 값
 slug: Web/CSS/CSS_logical_properties_and_values
 l10n:
   sourceCommit: 63249f6b1e89f42e172878c54a2f9674bee50904
@@ -20,11 +20,11 @@ l10n:
 
 논리적 속성과 값은 흐르는 방향을 설명하기 위해 블록과 인라인이라는 추상적인 용어들을 사용합니다. 이러한 용어들의 물리적 의미는 [쓰기 모드](/ko/docs/Web/CSS/CSS_writing_modes)에 의존합니다.
 
-**블록 차원** 은 문장 내의 흐름에 수직적인 차원입니다. 즉, 가로 방향의 쓰기 모드에서는 수직 차원이고, 세로 방향의 쓰기 모드에서는 수평 차원입니다. 표준 영어 텍스트의 경우에는 수직 차원입니다.
+**블록 차원**은 문장 내의 흐름에 수직적인 차원입니다. 즉, 가로 방향의 쓰기 모드에서는 수직 차원이고, 세로 방향의 쓰기 모드에서는 수평 차원입니다. 표준 영어 텍스트의 경우에는 수직 차원입니다.
 
-**인라인 차원** 은 문장 내의 흐름과 평행합니다. 즉, 가로 방향의 쓰기 모드에서는 수평 차원이고, 세로 방향의 쓰기 모드에서는 수직 차원입니다. 표준 영어 텍스트의 경우에는 수평 차원입니다.
+**인라인 차원**은 문장 내의 흐름과 평행합니다. 즉, 가로 방향의 쓰기 모드에서는 수평 차원이고, 세로 방향의 쓰기 모드에서는 수직 차원입니다. 표준 영어 텍스트의 경우에는 수평 차원입니다.
 
-CSS 는 본래 물리적인 좌표만을 위해 고안되었습니다. 논리적 속성과 값 모듈은 많은 [값](/ko/docs/Web/CSS/CSS_Values_and_Units) 과 [속성](/ko/docs/Glossary/Property/CSS)들에 대응하는 흐름 상대성을 정의합니다. 물리적 값 (`top`, `bottom`, `left`, `right`) 만 수용했던 속성들은 이제 흐름 상대적인 논리적 속성 (`block-start`, `block-end`, `inline-start`, `inline-end`) 들도 허용하게 됩니다.
+CSS 는 본래 물리적인 좌표만을 위해 고안되었습니다. 논리적 속성과 값 모듈은 많은 [값](/ko/docs/Web/CSS/CSS_Values_and_Units)과 [속성](/ko/docs/Glossary/Property/CSS)들에 대응하는 흐름 상대성을 정의합니다. 물리적 값 (`top`, `bottom`, `left`, `right`) 만 수용했던 속성들은 이제 흐름 상대적인 논리적 속성 (`block-start`, `block-end`, `inline-start`, `inline-end`) 들도 허용하게 됩니다.
 
 ## 참고서
 
