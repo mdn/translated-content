@@ -857,7 +857,7 @@
 /es/docs/HTML:Elemento:u	/es/docs/Web/HTML/Element/u
 /es/docs/HTML:Elemento:ul	/es/docs/Web/HTML/Element/ul
 /es/docs/HTML:Elemento:var	/es/docs/Web/HTML/Element/var
-/es/docs/How_to_create_a_DOM_tree	/es/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree
+/es/docs/How_to_create_a_DOM_tree	/es/docs/conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /es/docs/Html_Validator_(externo)	https://addons.mozilla.org/firefox/249/
 /es/docs/IndexedDB-840092-dup	/es/docs/Web/API/IndexedDB_API
 /es/docs/IndexedDB-840092-dup/Usando_IndexedDB	/es/docs/Web/API/IndexedDB_API/Using_IndexedDB
@@ -1629,8 +1629,10 @@
 /es/docs/Web/API/DocumentOrShadowRoot/getSelection	/es/docs/Web/API/Document/getSelection
 /es/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/es/docs/Web/API/Document/pointerLockElement
 /es/docs/Web/API/DocumentOrShadowRoot/styleSheets	/es/docs/Web/API/Document/styleSheets
+/es/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/es/docs/conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model
+/es/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example	/es/docs/conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model_f02ee0854f5dae742561e13875ea3551
 /es/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core	/es/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
-/es/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example	/es/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example
+/es/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example	/es/docs/conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model_f02ee0854f5dae742561e13875ea3551
 /es/docs/Web/API/Element/accessKey	/es/docs/Web/API/HTMLElement/accessKey
 /es/docs/Web/API/Element/ongotpointercapture	/es/docs/Web/API/Element/gotpointercapture_event
 /es/docs/Web/API/Element/onlostpointercapture	/es/docs/Web/API/Element/lostpointercapture_event
@@ -2794,7 +2796,9 @@
 /es/docs/Web/SVG/Index	/es/docs/Web/SVG
 /es/docs/Web/SVG/Tutorial/Introducción	/es/docs/Web/SVG/Tutorial/Introduction
 /es/docs/Web/Security/Same-origin_politica	/es/docs/Web/Security/Same-origin_policy
-/es/docs/Web/Security/Securing_your_site/desactivar_autocompletado_formulario	/es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion
+/es/docs/Web/Security/Securing_your_site	/es/docs/Web/Security/Practical_implementation_guides
+/es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/es/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
+/es/docs/Web/Security/Securing_your_site/desactivar_autocompletado_formulario	/es/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /es/docs/Web/Tutoriales	/es/docs/Web/Tutorials
 /es/docs/Web/WebGL	/es/docs/Web/API/WebGL_API
 /es/docs/Web/WebGL/Getting_started_with_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
