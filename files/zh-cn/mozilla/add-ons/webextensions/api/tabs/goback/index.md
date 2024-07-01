@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-返回到标签页历史中的上一页（如果有的话）。
+导航到标签页历史中的上一页（如果有）。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
