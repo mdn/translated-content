@@ -15853,6 +15853,10 @@
       "Sheppy"
     ]
   },
+  "Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion": {
+    "modified": "2019-12-18T06:44:21.121Z",
+    "contributors": ["KolesnikovR"]
+  },
   "Web/Security/Same-origin_policy": {
     "modified": "2020-10-20T11:28:42.439Z",
     "contributors": [
@@ -15863,10 +15867,6 @@
       "vladlipski",
       "ZVanoZ"
     ]
-  },
-  "Web/Security/Securing_your_site/Turning_off_form_autocompletion": {
-    "modified": "2019-12-18T06:44:21.121Z",
-    "contributors": ["KolesnikovR"]
   },
   "Web/Tutorials": {
     "modified": "2019-10-02T16:11:49.043Z",

@@ -2796,7 +2796,9 @@
 /es/docs/Web/SVG/Index	/es/docs/Web/SVG
 /es/docs/Web/SVG/Tutorial/Introducción	/es/docs/Web/SVG/Tutorial/Introduction
 /es/docs/Web/Security/Same-origin_politica	/es/docs/Web/Security/Same-origin_policy
-/es/docs/Web/Security/Securing_your_site/desactivar_autocompletado_formulario	/es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion
+/es/docs/Web/Security/Securing_your_site	/es/docs/Web/Security/Practical_implementation_guides
+/es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/es/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
+/es/docs/Web/Security/Securing_your_site/desactivar_autocompletado_formulario	/es/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /es/docs/Web/Tutoriales	/es/docs/Web/Tutorials
 /es/docs/Web/WebGL	/es/docs/Web/API/WebGL_API
 /es/docs/Web/WebGL/Getting_started_with_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL

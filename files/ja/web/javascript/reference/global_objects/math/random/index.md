@@ -7,23 +7,27 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/random
 
 **`Math.random()`** 関数は、 0 以上 1 未満 (0 は含むが、 1 は含まない) の範囲で浮動小数点の擬似乱数を返します。その範囲ではほぼ均一な分布で、ユーザーは範囲の拡大をすることができます。実装側で乱数生成アルゴリズムの初期シードを選択します。ユーザーが初期シードを選択、またはリセットすることは出来ません。
 
-{{EmbedInteractiveExample("pages/js/math-random.html")}}
-
 > **メモ:** `Math.random()` の提供する乱数は、暗号に使用可能な安全性を備えて*いません*。セキュリティに関連する目的では使用しないでください。代わりに Web Crypto API (より具体的には {{domxref("Crypto.getRandomValues", "window.crypto.getRandomValues()")}} メソッド) を使用してください。
+
+{{EmbedInteractiveExample("pages/js/math-random.html")}}
 
 ## 構文
 
-```
+```js-nolint
 Math.random()
 ```
 
+### 引数
+
+なし
+
 ### 返値
 
-`0` (含む) から 1 (含まない) までの擬似乱数である浮動小数点数です。
+0 (含む) から 1 (含まない) までの擬似乱数である浮動小数点数です。
 
 ## 例
 
-JavaScript における数値は、IEEE 754 浮動小数点での round-to-nearest-even を行うため、以下の関数の値域が ( `Math.random()` 自体の値域が正しくても) 厳密ではないことに注意してください。非常に大きい境界値 (253 以上) のうち*極めて*稀な数値で、通常なら返されないはずの上限値が出力されてしまうことがあり得ます。
+JavaScript における数値は、IEEE 754 浮動小数点での round-to-nearest-even を行うため、以下の関数の値域が ( `Math.random()` 自体の値域が正しくても) 厳密ではないことに注意してください。非常に大きい境界値 (2<sup>53</sup> 以上) のうち*極めて*稀な数値で、通常なら返されないはずの上限値が出力されてしまうことがあり得ます。
 
 ### 0 以上 1 未満の乱数を得る
 
@@ -51,7 +55,7 @@ function getRandomArbitrary(min, max) {
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (max - min) + min); // 上限は除き、下限は含む
 }
 ```
 
@@ -65,7 +69,7 @@ function getRandomInt(min, max) {
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (max - min + 1) + min); // 上限を含み、下限も含む
 }
 ```
 

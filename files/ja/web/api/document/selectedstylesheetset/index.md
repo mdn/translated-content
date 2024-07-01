@@ -1,9 +1,12 @@
 ---
-title: Document.selectedStyleSheetSet
+title: "Document: selectedStyleSheetSet プロパティ"
+short-title: selectedStyleSheetSet
 slug: Web/API/Document/selectedStyleSheetSet
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 **`selectedStyleSheetSet`** プロパティは、現在使用中のスタイルシートセットの名前を示します。
 
@@ -18,7 +21,7 @@ slug: Web/API/Document/selectedStyleSheetSet
 ## 例
 
 ```js
-console.log("Current style sheet set: " + document.selectedStyleSheetSet);
+console.log(`Current style sheet set: ${document.selectedStyleSheetSet}`);
 
 document.selectedStyleSheetSet = "Some other style sheet";
 ```
