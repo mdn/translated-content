@@ -10,8 +10,8 @@ slug: Web/API/FileSystemFileEntry/file
 ## 構文
 
 ```js
-file(successCallback)
-file(successCallback, errorCallback)
+file(successCallback);
+file(successCallback, errorCallback);
 ```
 
 ### 引数
@@ -31,16 +31,16 @@ file(successCallback, errorCallback)
 
 ```js
 function readFile(entry, successCallback, errorCallback) {
-  entry.file(function(file) {
+  entry.file(function (file) {
     let reader = new FileReader();
 
-    reader.onload = function() {
+    reader.onload = function () {
       successCallback(reader.result);
     };
 
-    reader.onerror = function() {
+    reader.onerror = function () {
       errorCallback(reader.error);
-    }
+    };
 
     reader.readAsText(file);
   }, errorCallback);

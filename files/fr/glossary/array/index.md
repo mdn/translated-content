@@ -1,37 +1,29 @@
 ---
 title: Tableau (Array)
-slug: Glossary/array
-tags:
-  - Encodage
-  - Glossaire
-  - JavaScript
-  - Liste
-  - Programmation
-  - Tableau
-translation_of: Glossary/array
-original_slug: Glossaire/array
+slug: Glossary/Array
+l10n:
+  sourceCommit: d842f8c32316dbe36cff9fc5e0e777602e32d958
 ---
 
-En anglais, un **_array_**, parfois appelé en français « tableau » ou « liste », est une collection de données ({{Glossary("Primitive","primitives")}} ou {{Glossary("Object","objets")}} selon le langage). Ils sont utilisés pour stocker plusieurs valeurs dans une seule variable. Ceci est comparé à une variable qui ne peut stocker qu'une seule valeur.
+{{GlossarySidebar}}
 
-Chaque élément d'un _array_ a un numéro qui lui est associé, appelé index numérique, qui permet d'y accéder. En JavaScript, ils commencent à l'index zéro et peuvent être manipulés avec différentes {{Glossary ("Method","méthodes")}}.
+Un tableau (ou liste selon les contextes, <i lang="en">array</i> en anglais) est une collection de données ([primitives](/fr/docs/Glossary/Primitive) ou [objets](/fr/docs/Glossary/Object) selon le langage) ordonnées. Les tableaux permettent de stocker plusieurs valeurs dans une structure affectée à une seule variable, à la différence des variables qui ne stockent qu'une valeur si on leur affecte une valeur primitive.
 
-À quoi ressemble-t-il en JavaScript ?
+Chaque élément d'un tableau est associé à un numéro, l'indice numérique, qui permet d'y accéder. En JavaScript, les tableaux sont numérotés à partir de l'indice zéro et peuvent être manipulés avec différentes [méthodes](/fr/docs/Glossary/Method).
+
+Voici quelques exemples utilisant les tableaux en JavaScript.
 
 ```js
-var myArray = [1, 2, 3, 4];
+//Des tableaux JavaScript peuvent contenir différents types de données.
+const monTableau = [1, 2, 3, 4];
+const tableauNomsChats = ["Jacqueline", "Sophia", "Felix"];
 
-var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
-
-//Des arrays en JavaScript peuvent contenir différents types de données, comme indiqué ci-dessus.
+// Les indices commencent à 0 en JavaScript
+console.log(monTableau[0]); // affiche : 1
+console.log(tableauNomsChats[2]); // affiche : "Felix"
 ```
 
 ## Voir aussi
 
-### Culture générale
-
-- [Tableau (structure de données)](https://fr.wikipedia.org/wiki/Tableau_(structure_de_donn%C3%A9es)) sur Wikipédia
-
-### Informations techniques
-
-- _{{jsxref("Array")}}_ en JavaScript sur MDN
+- [Tableau (structure de données)](<https://fr.wikipedia.org/wiki/Tableau_(structure_de_données)>) sur Wikipédia
+- [La documentation MDN sur `Array` en JavaScript](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)

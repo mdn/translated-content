@@ -1,20 +1,11 @@
 ---
 title: ExtendableMessageEvent.lastEventId
 slug: Web/API/ExtendableMessageEvent/lastEventId
-tags:
-  - API
-  - Experimental
-  - ExtendableMessageEvent
-  - Property
-  - Reference
-  - Service Workers
-  - lastEventID
-translation_of: Web/API/ExtendableMessageEvent/lastEventId
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-La propriété en lecture seule **`lastEventID`** de l'interface {{domxref("ExtendableMessageEvent")}} représente, dans [les évenements envoyés par lle serveur](/fr/docs/Web/API/en-US/docs/Server-sent_events/Using_server-sent_events), le dernier ID de l'évenement source.
+La propriété en lecture seule **`lastEventID`** de l'interface {{domxref("ExtendableMessageEvent")}} représente, dans [les évenements envoyés par lle serveur](/fr/docs/Web/API/Server-sent_events/Using_server-sent_events), le dernier ID de l'évenement source.
 
 ## Syntaxe
 
@@ -33,20 +24,20 @@ Le code suivant est utilisé, dans un service worker, pour répondre à un messa
 ```js
 var port;
 
-self.addEventListener('push', function(e) {
+self.addEventListener("push", function (e) {
   var obj = e.data.json();
 
-  if(obj.action === 'subscribe' || obj.action === 'unsubscribe') {
+  if (obj.action === "subscribe" || obj.action === "unsubscribe") {
     port.postMessage(obj);
-  } else if(obj.action === 'init' || obj.action === 'chatMsg') {
+  } else if (obj.action === "init" || obj.action === "chatMsg") {
     port.postMessage(obj);
   }
 });
 
-self.onmessage = function(e) {
+self.onmessage = function (e) {
   console.log(e.lastEventId);
   port = e.ports[0];
-}
+};
 ```
 
 ## Spécifications

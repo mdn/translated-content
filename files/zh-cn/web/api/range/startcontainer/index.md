@@ -3,6 +3,8 @@ title: Range.startContainer
 slug: Web/API/Range/startContainer
 ---
 
+{{ApiRef("DOM")}}
+
 Range.startContainer 是只读属性，返回 Range 开始的节点。要更改节点的起始位置，请使用 Range.setStart() 方法。
 
 ## Syntax
@@ -15,8 +17,8 @@ startRangeNode = range.startContainer;
 
 ```js
 range = document.createRange();
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 startRangeNode = range.startContainer;
 ```
 

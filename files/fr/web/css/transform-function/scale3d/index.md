@@ -1,9 +1,6 @@
 ---
 title: scale3d()
 slug: Web/CSS/transform-function/scale3d
-translation_of: Web/CSS/transform-function/scale3d()
-original_slug: Web/CSS/transform-function/scale3d()
-browser-compat: css.types.transform-function.scale3d
 ---
 
 {{CSSRef}}
@@ -148,6 +145,6 @@ div {
 
 - [`transform`](/fr/docs/Web/CSS/transform)
 - [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`scaleZ()`](/fr/docs/Web/CSS/transform-function/scaleZ())
-- [`translate3d()`](/fr/docs/Web/CSS/transform-function/translate3d())
-- [`rotate3d()`](/fr/docs/Web/CSS/transform-function/rotate3d())
+- [`scaleZ()`](</fr/docs/Web/CSS/transform-function/scaleZ()>)
+- [`translate3d()`](</fr/docs/Web/CSS/transform-function/translate3d()>)
+- [`rotate3d()`](</fr/docs/Web/CSS/transform-function/rotate3d()>)

@@ -1,7 +1,6 @@
 ---
 title: Passo-a-Passo
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-original_slug: Mozilla/Add-ons/WebExtensions/Passo-a-Passo
 ---
 
 Neste artigo iremos criar uma Extensão para Firefox do início ao fim.
@@ -52,7 +51,6 @@ Agora crie um novo arquivo chamado "manifest.json", e insira o seguinte conteúd
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Beastify",
   "version": "1.0",
@@ -63,10 +61,7 @@ Agora crie um novo arquivo chamado "manifest.json", e insira o seguinte conteúd
     }
   },
 
-  "permissions": [
-    "http://*/*",
-    "https://*/*"
-  ],
+  "permissions": ["http://*/*", "https://*/*"],
 
   "browser_action": {
     "default_icon": "button/beasts.png",
@@ -79,7 +74,6 @@ Agora crie um novo arquivo chamado "manifest.json", e insira o seguinte conteúd
     "beasts/turtle.jpg",
     "beasts/snake.jpg"
   ]
-
 }
 ```
 
@@ -99,7 +93,7 @@ Perceba que todos os caminhos são relativos ao manifest.json.
 
 O botão na barra de ferramentas precisa de um icone, e nosso manifest.json informa que nós teriamos um icone em "button/beasts.png".
 
-Crie o diretório "button" e copie o icone com o nome "beasts.png". Você poderá usar um dos nossos [exemplo,](https://github.com/mdn/webextensions-examples/blob/master/beastify/button/beasts.png) que é retirado do [Aha-Soft’s Free Retina iconset](https://www.iconfinder.com/iconsets/free-retina-icon-set) e usado sob os termos de sua [licença](http://www.iconbeast.com/faq/).
+Crie o diretório "button" e copie o icone com o nome "beasts.png". Você poderá usar um dos nossos [exemplo,](https://github.com/mdn/webextensions-examples/blob/master/beastify/button/beasts.png) que é retirado do [Aha-Soft's Free Retina iconset](https://www.iconfinder.com/iconsets/free-retina-icon-set) e usado sob os termos de sua [licença](http://www.iconbeast.com/faq/).
 
 Se você não fornecer um popup, então um evento de click é lançado para sua extensão quando o usuário clicar no botão. Se você fornecer um popup, o evento de click não envia, mas ao invés disso, o popup é aberto. Nós queremos abrir um popup, então vamos criá-lo na próxima etapa.
 
@@ -118,12 +112,12 @@ Crie um novo diretório chamado "popup" na raiz do projeto. Aqui é onde nós cr
 O arquivo HTML criado é este:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="choose_beast.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="choose_beast.css" />
   </head>
 
   <body>
@@ -133,7 +127,6 @@ O arquivo HTML criado é este:
 
     <script src="choose_beast.js"></script>
   </body>
-
 </html>
 ```
 
@@ -144,7 +137,8 @@ Nós temos um elemento para cada escolha de animal. Perceba que nós incluimos o
 O CSS ajusta o tamanho do popup, garantindo que as três escolhas irão preencher o espaço, e daremos a eles algum estilo básico:
 
 ```css
-html, body {
+html,
+body {
   height: 100px;
   width: 100px;
   margin: 0;
@@ -157,12 +151,12 @@ html, body {
   padding-top: 6%;
   text-align: center;
   font-size: 1.5em;
-  background-color: #E5F2F2;
+  background-color: #e5f2f2;
   cursor: pointer;
 }
 
 .beast:hover {
-  background-color: #CFF2F2;
+  background-color: #cff2f2;
 }
 ```
 
@@ -171,7 +165,7 @@ html, body {
 No JavaScript para o popup, nós iremos "escutar" o evento de click . Se o clique foi em uma das três escolhas de animais, nós iremos injetar um content script na aba ativa. Um vez que o content script é carregado , nós enviaremos uma mensagem com o animal escolhido:
 
 ```js
-document.addEventListener("click", function(e) {
+document.addEventListener("click", function (e) {
   if (!e.target.classList.contains("beast")) {
     return;
   }
@@ -179,13 +173,12 @@ document.addEventListener("click", function(e) {
   var chosenBeast = e.target.textContent;
 
   chrome.tabs.executeScript(null, {
-    file: "/content_scripts/beastify.js"
+    file: "/content_scripts/beastify.js",
   });
 
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    chrome.tabs.sendMessage(tabs[0].id, {beast: chosenBeast});
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    chrome.tabs.sendMessage(tabs[0].id, { beast: chosenBeast });
   });
-
 });
 ```
 

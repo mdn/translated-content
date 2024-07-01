@@ -3,7 +3,7 @@ title: Media container formats (file types)
 slug: Web/Media/Formats/Containers
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
+{{QuickLinksWithSubpages("/zh-TW/docs/Web/Media")}}
 
 視訊與音訊的檔案格式被定義成兩個部分（當然如果一個檔案同時擁有影、音的話，那就有三個）：一個是音訊或/和視訊的編解碼器(codecs，由 compress 和 decompress 所組成的詞語)，另一個是媒體封裝的格式(media container format，即檔案類型)。在本次導覽中，我們將會看到網路上最常見的封裝格式，並介紹它們的基本規格、優點、限制，以及理想的使用情形。
 
@@ -389,7 +389,7 @@ MPEG-1 和 MPEG-2 最主要的差別在於媒體資料格式而非封裝格式�
 
 **[MPEG-4](https://zh.wikipedia.org/wiki/MPEG-4)** (**MP4**) 是最新版 MPEG 檔案格式。這個格式有兩種版本，分別定義於規範中的 part 1 和 part 14。MP4 是現今流行的封裝容器，它支援了大部份常用的編解碼器，同時它也廣泛地被支援。
 
-初版的 MPEG-4 Part 1 檔案格式首見於西元 1999 年；第二版定義於 Part 14 在西元 2003 年時加入。MP4 檔案格式衍生於 [ISO base media file format](https://zh.wikipedia.org/wiki/ISO_base_media_file_format)，而該格式則是衍生於 [Apple](https://www.apple.com/) 開發的 [QuickTime file format](https://zh.wikipedia.org/wiki/QuickTime_file_format)。
+初版的 MPEG-4 Part 1 檔案格式首見於西元 1999 年；第二版定義於 Part 14 在西元 2003 年時加入。MP4 檔案格式衍生於 [ISO 基本媒體文件格式](https://en.wikipedia.org/wiki/ISO_base_media_file_format)，而該格式則是衍生於 [Apple](https://www.apple.com/) 開發的 [QuickTime 文件格式](https://zh.wikipedia.org/wiki/QuickTime文件格式)。
 
 | 音訊        | 視訊        |
 | ----------- | ----------- |
@@ -1016,13 +1016,13 @@ These suggestions make a number of assumptions. You should carefully consider th
 
 To optimize compatibility, it's worth considering providing more than one version of media files, using the {{HTMLElement("source")}} element to specify each source within the {{HTMLElement("audio")}} or {{HTMLElement("video")}} element. For example, you can offer an Ogg or WebM video as the first choice, with a fallback in MP4 format. You could even choose to offer a retro-like QuickTime or AVI fallback for good measure.
 
-To do this, you create a `<video>` (or `<audio>`) element with no {{htmlattrxref("src", "video")}} attribute. Then add child {{HTMLElement("source")}} elements within the `<video>` element, one for each version of the video you offer. This can be used to offer various versions of a video that can be selected depending on bandwidth availability, but in our case, we'll use it to offer format options.
+To do this, you create a `<video>` (or `<audio>`) element with no [`src`](/zh-TW/docs/Web/HTML/Element/video#src) attribute. Then add child {{HTMLElement("source")}} elements within the `<video>` element, one for each version of the video you offer. This can be used to offer various versions of a video that can be selected depending on bandwidth availability, but in our case, we'll use it to offer format options.
 
 In the example shown here, a video is offered to the browser in two formats: WebM and MP4.
 
 {{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
 
-The video is offered first in WebM format (with the {{htmlattrxref("type", "video")}} attribute set to `video/webm`). If the {{Glossary("user agent")}} can't play that, it moves on to the next option, whose `type` is specified as `video/mp4`. If neither of those can be played, the text "This browser does not support the HTML5 video element." is presented.
+The video is offered first in WebM format (with the [`type`](/zh-TW/docs/Web/HTML/Element/video#type) attribute set to `video/webm`). If the {{Glossary("user agent")}} can't play that, it moves on to the next option, whose `type` is specified as `video/mp4`. If neither of those can be played, the text "This browser does not support the HTML5 video element." is presented.
 
 ## Specifications
 
@@ -1035,8 +1035,8 @@ The video is offered first in WebM format (with the {{htmlattrxref("type", "vide
 | [ISO/IEC 13818-1](https://www.iso.org/standard/74427.html) (MPEG-2 Part 1 Systems)                                                                           | Defines the MPEG-2 container format                                                                             |
 | [ISO/IEC 14496-14](https://www.iso.org/standard/75929.html) (MPEG-4 Part 14: MP4 file format)                                                                | Defines the MPEG-4 (MP4) version 2 container format                                                             |
 | [ISO/IEC 14496-1](https://www.iso.org/standard/55688.html) (MPEG-4 Part 1 Systems)                                                                           | Defines the original MPEG-4 (MP4) container format                                                              |
-| {{RFC(3533)}}                                                                                                                                             | Defines the Ogg container format                                                                                |
-| {{RFC(5334)}}                                                                                                                                             | Defines the Ogg media types and file extensions                                                                 |
+| {{RFC(3533)}}                                                                                                                                                | Defines the Ogg container format                                                                                |
+| {{RFC(5334)}}                                                                                                                                                | Defines the Ogg media types and file extensions                                                                 |
 | [QuickTime File Format Specification](https://developer.apple.com/library/archive/documentation/QuickTime/QTFF/QTFFPreface/qtffPreface.html)                 | Defines the QuickTime movie (MOV) format                                                                        |
 | [Multimedia Programming Interface and Data Specifications 1.0](https://web.archive.org/web/20090417165828/http://www.kk.iij4u.or.jp/~kondo/wave/mpidata.txt) | The closest thing to an official WAVE specification                                                             |
 | [Resource Interchange File Format](https://docs.microsoft.com/en-us/windows/desktop/xaudio2/resource-interchange-file-format--riff-) (used by WAV)           | Defines the RIFF format; WAVE files are a form of RIFF                                                          |

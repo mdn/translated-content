@@ -28,7 +28,7 @@ getHours()
 以下の 2 行目の文は、 {{jsxref("Global_Objects/Date", "Date")}} オブジェクトである `xmas95` の値に基づき、23 という値を変数 `hours` に代入します。
 
 ```js
-const xmas95 = new Date('December 25, 1995 23:15:30');
+const xmas95 = new Date("December 25, 1995 23:15:30");
 const hours = xmas95.getHours();
 
 console.log(hours); // 23

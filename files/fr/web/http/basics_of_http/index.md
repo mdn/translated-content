@@ -1,10 +1,6 @@
 ---
 title: L'essentiel de HTTP
 slug: Web/HTTP/Basics_of_HTTP
-tags:
-  - Aperçu
-  - HTTP
-translation_of: Web/HTTP/Basics_of_HTTP
 ---
 
 {{HTTPSidebar}}

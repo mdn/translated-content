@@ -3,6 +3,8 @@ title: Database
 slug: Glossary/Database
 ---
 
+{{GlossarySidebar}}
+
 **データベース** は、データの整理や収集を行い保存をするシステムです。データベースを使うことで検索、構造化、拡張などの作業を簡単に行うことができます。
 
 ウェブ開発で使用されるほとんどのデータベースはリレーショナルデータベース (RDBMS) を使用してデータを整理し、{{Glossary("SQL")}} と呼ばれるプログラミング言語を使用します。ただし、一部のデータベースは NoSQL と呼ばれる非リレーショナルベースを使用しています。このデータベースはデータを整理せず収集のみを行います。
@@ -13,5 +15,5 @@ slug: Glossary/Database
 
 1. [データベース](https://ja.wikipedia.org/wiki/データベース) (Wikipedia)
 
-    1. {{Glossary("IndexedDB")}}
-    2. {{Glossary("SQL")}}
+   1. {{Glossary("IndexedDB")}}
+   2. {{Glossary("SQL")}}

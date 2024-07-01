@@ -5,7 +5,7 @@ slug: Web/SVG/Attribute/stroke
 
 {{SVGRef}}
 
-**`stroke`** 属性はプレゼンテーション属性で、この図形の輪郭を描画するのに使われる色（*またはグラデーションやパターンなどの SVG ペイントサーバー*）を定義します。
+**`stroke`** 属性はプレゼンテーション属性で、この図形の輪郭を描画するのに使われる色（_またはグラデーションやパターンなどの SVG ペイントサーバー_）を定義します。
 
 > **メモ:** プレゼンテーション属性ですので、 `stroke` は CSS プロパティとして使用できます。
 
@@ -27,25 +27,27 @@ slug: Web/SVG/Attribute/stroke
 ## 例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
   <!-- 単純な色の輪郭 -->
-  <circle cx="5" cy="5" r="4" fill="none"
-          stroke="green" />
+  <circle cx="5" cy="5" r="4" fill="none" stroke="green" />
 
   <!-- グラデーションによる円の輪郭 -->
   <defs>
     <linearGradient id="myGradient">
-      <stop offset="0%"   stop-color="green" />
+      <stop offset="0%" stop-color="green" />
       <stop offset="100%" stop-color="white" />
     </linearGradient>
   </defs>
 
-  <circle cx="15" cy="5" r="4" fill="none"
-          stroke="url(#myGradient)" />
+  <circle cx="15" cy="5" r="4" fill="none" stroke="url(#myGradient)" />
 </svg>
 ```
 

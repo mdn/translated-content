@@ -19,11 +19,13 @@ HTML DOM 中的 `HTMLCollection` 是即时更新的（live）；当其所包含�
 ## 方法
 
 - {{domxref("HTMLCollection.item()")}}
+
   - : 根据给定的索引（从 0 开始），返回具体的节点。如果索引超出了范围，则返回 `null`。
 
     访问 `collection[i]`（在索引 `i` 超出范围时会返回 `undefined`）的替代方法。这在非 JavaScript DOM 的实现中非常有用。
 
 - {{domxref("HTMLCollection.namedItem()")}}
+
   - : 根据 ID 返回指定节点，若不存在，则根据字符串所表示的 `name` 属性来匹配。根据 name 匹配只能作为最后的依赖，并且只有当被引用的元素支持 `name` 属性时才能被匹配。如果不存在符合给定 name 的节点，则返回 `null`。
 
     访问 `collection[name]`（在 `name` 不存在时会返回 `undefined`）的替代方法。这在非 JavaScript DOM 的实现中非常有用。

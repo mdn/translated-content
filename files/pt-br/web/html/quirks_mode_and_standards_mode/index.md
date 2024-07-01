@@ -12,14 +12,13 @@ Existem agora três modos usados pelos mecanismos de layout nos navegadores web:
 Para documentos [HTML](/pt-BR/docs/HTML), os navegadores usam um DOCTYPE no início do documento para decidir se os tratarão em _quirks mode_ ou _standards mode_. Para garantir que sua página use o _full standards mode_, certifique-se que sua página tenha um DOCTYPE como deste exemplo:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset=UTF-8>
+    <meta charset="UTF-8" />
     <title>Olá Mundo!</title>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 

@@ -36,9 +36,9 @@ _También hereda los métodos de su padre {{domxref("Event")}}_.
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.AnimationEvent")}}
+{{Compat}}
 
 ## Ver también
 

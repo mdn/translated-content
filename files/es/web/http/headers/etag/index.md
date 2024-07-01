@@ -9,9 +9,9 @@ El encabezado de respuesta de HTTP **`ETag`** es un identificador para una versi
 
 Si el recurso en una URL dada cambia, un valor Etag debe ser generado. De esta forma los Etags son muy similares a las huellas digitales y pueden también usarse para propósitos de rastreo por algunos servidores. Un comparativo de ellos permite rápidamente determinar cuándo dos representaciones de un recurso son las mismas, pero podrían también configurarse para persistir indefinidamente por un servidor en rastreo.
 
-| Tipo de Encabezado                               | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Tipo de Encabezado                    | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## Sintaxis
 
@@ -64,13 +64,11 @@ El servidor compara el `ETag` del cliente (enviado con un `If-None-Match`) con e
 
 ## Especificaciones
 
-| Especificación                           | Título                                                                         |
-| ---------------------------------------- | ------------------------------------------------------------------------------ |
-| {{RFC("7232", "ETag", "2.3")}} | Protocolo de Transferencia por Hipertexto (HTTP/1.1): Peticiones Condicionales |
+{{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.ETag")}}
+{{Compat}}
 
 ## Vea también
 

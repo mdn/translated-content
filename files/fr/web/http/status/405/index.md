@@ -1,7 +1,6 @@
 ---
 title: 405 Method Not Allowed
 slug: Web/HTTP/Status/405
-translation_of: Web/HTTP/Status/405
 ---
 
 {{HTTPSidebar}}
@@ -18,9 +17,11 @@ Le serveur doit générer un en-tête **`Allow`** en cas de réponse 405, conten
 
 ## Spécifications
 
-| Spécification                                                        | Titre                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| [RFC 7231, section 6.5.5: 405 Method Not Allowed](https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.5) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

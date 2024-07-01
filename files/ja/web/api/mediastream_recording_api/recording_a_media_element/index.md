@@ -31,7 +31,7 @@ MediaStream 収録 API の使用の記事では、 {{domxref("MediaRecorder")}} 
 </div>
 ```
 
-2 つの欄で主要なインターフェースを提示します。 左欄には、Start（開始）ボタンと動画プレビューを表示する {{HTMLElement("video")}} 要素があります。 これは、ユーザーのカメラが見ている動画です。 {{htmlattrxref("autoplay", "video")}} 属性は、カメラからストリームが到着したらすぐに表示するために使用し、{{htmlattrxref("muted", "video")}} 属性は、ユーザーのマイクからの音声をスピーカーに出力しないように使用していることに注意してください。 出力すると醜いフィードバックループ（ハウリング）を引き起こします。
+2 つの欄で主要なインターフェースを提示します。 左欄には、Start（開始）ボタンと動画プレビューを表示する {{HTMLElement("video")}} 要素があります。 これは、ユーザーのカメラが見ている動画です。 [`autoplay`](/ja/docs/Web/HTML/Element/video#autoplay) 属性は、カメラからストリームが到着したらすぐに表示するために使用し、[`muted`](/ja/docs/Web/HTML/Element/video#muted) 属性は、ユーザーのマイクからの音声をスピーカーに出力しないように使用していることに注意してください。 出力すると醜いフィードバックループ（ハウリング）を引き起こします。
 
 ```html
 <div class="right">
@@ -42,7 +42,7 @@ MediaStream 収録 API の使用の記事では、 {{domxref("MediaRecorder")}} 
 </div>
 ```
 
-右欄には、Stop（停止）ボタンと収録された動画の再生に使用する `<video>` 要素があります。 再生パネルには `autoplay` を設定せずに（メディアが到着しても再生が開始されない）、{{htmlattrxref("controls", "video")}} を設定して、再生や一時停止などのユーザーコントロールを表示するように指示しています。
+右欄には、Stop（停止）ボタンと収録された動画の再生に使用する `<video>` 要素があります。 再生パネルには `autoplay` を設定せずに（メディアが到着しても再生が開始されない）、[`controls`](/ja/docs/Web/HTML/Element/video#controls) を設定して、再生や一時停止などのユーザーコントロールを表示するように指示しています。
 
 再生要素の下には、収録した動画をダウンロードするためのボタンがあります。
 
@@ -54,7 +54,10 @@ MediaStream 収録 API の使用の記事では、 {{domxref("MediaRecorder")}} 
 
 ```css hidden
 body {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 video {
@@ -157,19 +160,13 @@ function startRecording(stream, lengthInMS) {
     recorder.onerror = (event) => reject(event.name);
   });
 
-  let recorded = wait(lengthInMS).then(
-    () => {
-      if (recorder.state === "recording") {
-        recorder.stop();
-      }
-    },
-  );
+  let recorded = wait(lengthInMS).then(() => {
+    if (recorder.state === "recording") {
+      recorder.stop();
+    }
+  });
 
-  return Promise.all([
-    stopped,
-    recorded
-  ])
-  .then(() => data);
+  return Promise.all([stopped, recorded]).then(() => data);
 }
 ```
 
@@ -207,32 +204,42 @@ function stop(stream) {
 それでは、この例で最も複雑なコードを見てみましょう。 開始ボタンをクリックしたときのイベントハンドラーです。
 
 ```js
-startButton.addEventListener("click", () => {
-  navigator.mediaDevices.getUserMedia({
-    video: true,
-    audio: true
-  }).then((stream) => {
-    preview.srcObject = stream;
-    downloadButton.href = stream;
-    preview.captureStream = preview.captureStream || preview.mozCaptureStream;
-    return new Promise((resolve) => preview.onplaying = resolve);
-  }).then(() => startRecording(preview.captureStream(), recordingTimeMS))
-  .then ((recordedChunks) => {
-    let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
-    recording.src = URL.createObjectURL(recordedBlob);
-    downloadButton.href = recording.src;
-    downloadButton.download = "RecordedVideo.webm";
+startButton.addEventListener(
+  "click",
+  () => {
+    navigator.mediaDevices
+      .getUserMedia({
+        video: true,
+        audio: true,
+      })
+      .then((stream) => {
+        preview.srcObject = stream;
+        downloadButton.href = stream;
+        preview.captureStream =
+          preview.captureStream || preview.mozCaptureStream;
+        return new Promise((resolve) => (preview.onplaying = resolve));
+      })
+      .then(() => startRecording(preview.captureStream(), recordingTimeMS))
+      .then((recordedChunks) => {
+        let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
+        recording.src = URL.createObjectURL(recordedBlob);
+        downloadButton.href = recording.src;
+        downloadButton.download = "RecordedVideo.webm";
 
-    log(`Successfully recorded ${recordedBlob.size} bytes of ${recordedBlob.type} media.`);
-  })
-  .catch((error) => {
-    if (error.name === "NotFoundError") {
-      log("Camera or microphone not found. Can't record.");
-    } else {
-      log(error);
-    }
-  });
-}, false);
+        log(
+          `Successfully recorded ${recordedBlob.size} bytes of ${recordedBlob.type} media.`,
+        );
+      })
+      .catch((error) => {
+        if (error.name === "NotFoundError") {
+          log("Camera or microphone not found. Can't record.");
+        } else {
+          log(error);
+        }
+      });
+  },
+  false,
+);
 ```
 
 {{domxref("Element/click_event", "click")}} イベントが発生すると、次のようになります。
@@ -245,9 +252,9 @@ startButton.addEventListener("click", () => {
   - : プレビュー動画の再生が開始されると、収録するメディアがあることがわかります。 したがって、先ほど作成した [`startRecording()`](#メディア収録の開始) 関数を呼び出し、プレビュー動画ストリーム（収録するソースメディアとして）と、 `recordingTimeMS`（収録するメディアのミリ秒数として）を渡します。 前述のように、`startRecording()` は、収録が完了すると、解決ハンドラーが呼び出される {{jsxref("Promise")}}（収録されたメディアデータのチャンクを含む {{domxref("Blob")}} オブジェクトの配列を入力として受け取る）を返します。
 - 11〜15 行目
 
-  - : 収録プロセスの解決ハンドラーは、ローカルに `recordedChunks` として知られるメディアデータの `Blob` の配列を入力として受け取ります。 最初にすることは、{{domxref("Blob.Blob", "Blob()")}} コンストラクターがオブジェクトの配列を 1 つのオブジェクトに連結するという事実を利用して、チャンクを MIME タイプが `"video/webm"` の単一の {{domxref("Blob")}} にマージすることです。 次に、{{domxref("URL.createObjectURL()")}} を使用して `Blob` を参照する URL を作成します。 これは、ダウンロードされた動画再生要素の {{htmlattrxref("src", "video")}} 属性の値（`Blob` から動画を再生できるようにする）とダウンロードボタンのリンクのターゲットになります。
+  - : 収録プロセスの解決ハンドラーは、ローカルに `recordedChunks` として知られるメディアデータの `Blob` の配列を入力として受け取ります。 最初にすることは、{{domxref("Blob.Blob", "Blob()")}} コンストラクターがオブジェクトの配列を 1 つのオブジェクトに連結するという事実を利用して、チャンクを MIME タイプが `"video/webm"` の単一の {{domxref("Blob")}} にマージすることです。 次に、{{domxref("URL.createObjectURL()")}} を使用して `Blob` を参照する URL を作成します。 これは、ダウンロードされた動画再生要素の [`src`](/ja/docs/Web/HTML/Element/video#src) 属性の値（`Blob` から動画を再生できるようにする）とダウンロードボタンのリンクのターゲットになります。
 
-    その後、ダウンロードボタンの {{htmlattrxref("download", "a")}} 属性が設定されます。 `download` 属性は論理値にすることができますが、ダウンロードするファイルの名前として使用する文字列に設定することもできます。 そのため、ダウンロードリンクの `download` 属性を `"RecordedVideo.webm"` に設定することで、ボタンをクリックすると内容が収録された動画である `"RecordedVideo.webm"` という名前のファイルをダウンロードするようにブラウザーに指示します。
+    その後、ダウンロードボタンの [`download`](/ja/docs/Web/HTML/Element/a#download) 属性が設定されます。 `download` 属性は論理値にすることができますが、ダウンロードするファイルの名前として使用する文字列に設定することもできます。 そのため、ダウンロードリンクの `download` 属性を `"RecordedVideo.webm"` に設定することで、ボタンをクリックすると内容が収録された動画である `"RecordedVideo.webm"` という名前のファイルをダウンロードするようにブラウザーに指示します。
 
 - 17〜18 行目
   - : 記録されたメディアのサイズと種類は、2 つの動画とダウンロードボタンの下のログ領域に出力されます。
@@ -259,9 +266,13 @@ startButton.addEventListener("click", () => {
 最後のコードでは、{{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して停止ボタンの {{domxref("Element/click_event", "click")}} イベントのハンドラーを追加します。
 
 ```js
-stopButton.addEventListener("click", () => {
-  stop(preview.srcObject);
-}, false);
+stopButton.addEventListener(
+  "click",
+  () => {
+    stop(preview.srcObject);
+  },
+  false,
+);
 ```
 
 これは先ほど説明した [`stop()`](#入力ストリームの停止) 関数を呼び出すだけです。
@@ -277,5 +288,5 @@ stopButton.addEventListener("click", () => {
 ## 関連情報
 
 - [MediaStream 収録 API](/ja/docs/Web/API/MediaStream_Recording_API)
-- [Media​Stream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)

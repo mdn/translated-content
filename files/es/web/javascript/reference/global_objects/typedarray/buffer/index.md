@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
-original_slug: Web/JavaScript/Referencia/Objetos_globales/TypedArray/buffer
 ---
 
 {{JSRef}}
@@ -32,9 +31,9 @@ uint16.buffer; // ArrayBuffer { byteLength: 8 }
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.TypedArray.buffer")}}
+{{Compat}}
 
 ## Véase también
 

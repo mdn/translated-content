@@ -1,15 +1,9 @@
 ---
 title: Sérialisation
 slug: Glossary/Serialization
-tags:
-  - CSS
-  - Encodage
-  - Glossaire
-  - JavaScript
-  - Sérialisation
-translation_of: Glossary/Serialization
-original_slug: Glossaire/Sérialisation
 ---
+
+{{GlossarySidebar}}
 
 Le processus par lequel un objet ou une structure de données est traduit dans un format approprié pour un transfert sur un réseau, ou un stockage (par exemple dans un tampon de tableau ou un format de fichier).
 
@@ -21,4 +15,4 @@ Les valeurs de {{Glossary("CSS")}} sont sérialisées par appel de la fonction {
 
 ### Culture générale
 
-- [Sérialisation](https://fr.wikipedia.org/wiki/S%C3%A9rialisation) sur Wikipédia
+- [Sérialisation](https://fr.wikipedia.org/wiki/Sérialisation) sur Wikipédia

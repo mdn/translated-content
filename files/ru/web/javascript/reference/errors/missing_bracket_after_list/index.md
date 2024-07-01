@@ -1,11 +1,6 @@
 ---
-title: 'SyntaxError: missing ] after element list'
+title: "SyntaxError: missing ] after element list"
 slug: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
-tags:
-  - JavaScript
-  - SyntaxError
-  - Ошибки
-translation_of: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
 ---
 
 {{jsSidebar("Errors")}}
@@ -45,13 +40,9 @@ var data = [{foo: 'bar'} {bar: 'foo'}];
 ```js example-good
 var list = [1, 2];
 
-var instruments = [
- 'Укулеле',
- 'Гитара',
- 'Пианино'
-];
+var instruments = ["Укулеле", "Гитара", "Пианино"];
 
-var data = [{foo: 'bar'}, {bar: 'foo'}];
+var data = [{ foo: "bar" }, { bar: "foo" }];
 ```
 
 ## Смотрите также

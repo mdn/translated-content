@@ -1,7 +1,6 @@
 ---
 title: MediaRecorder.requestData()
 slug: Web/API/MediaRecorder/requestData
-translation_of: Web/API/MediaRecorder/requestData
 ---
 
 {{APIRef("MediaStream Recording")}}
@@ -22,7 +21,7 @@ MediaRecorder.requestData()
 
 ### Errors
 
-An `InvalidState` error is raised if the `requestData()` method is called while the `MediaRecorder` object’s {{domxref("MediaRecorder.state")}} is not "recording" — the media cannot be captured if recording is not occurring.
+An `InvalidState` error is raised if the `requestData()` method is called while the `MediaRecorder` object's {{domxref("MediaRecorder.state")}} is not "recording" — the media cannot be captured if recording is not occurring.
 
 ## Example
 
@@ -39,17 +38,15 @@ An `InvalidState` error is raised if the `requestData()` method is called while 
 ...
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                                                    | Status                                       | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName("MediaStream Recording", "#widl-MediaRecorder-requestData-void", "MediaRecorder.requestData()")}} | {{Spec2("MediaStream Recording")}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Using the MediaRecorder API](/ru/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API)
 - [Web Dictaphone](http://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)

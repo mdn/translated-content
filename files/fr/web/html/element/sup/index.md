@@ -1,12 +1,6 @@
 ---
-title: '<sup> : l''élément de mise en exposant'
+title: "<sup> : l'élément de mise en exposant"
 slug: Web/HTML/Element/sup
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/sup
 ---
 
 {{HTMLSidebar}}
@@ -54,15 +48,12 @@ Voici quelques cas d'utilisation (non exhaustifs) pour `<sup>` :
 #### HTML
 
 ```html
-<p>
-  Voici la fonction exponentielle :
-  e<sup>x</sup>.
-</p>
+<p>Voici la fonction exponentielle : e<sup>x</sup>.</p>
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Puissance_mathématique","100%","120")}}
+{{EmbedLiveSample("","100%","120")}}
 
 ### Lettres supérieures
 
@@ -71,14 +62,12 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
 #### HTML
 
 ```html
-<p>
-  Robert a présenté son rapport à M<sup>lle</sup> Bernard.
-</p>
+<p>Robert a présenté son rapport à M<sup>lle</sup> Bernard.</p>
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Lettres_supérieures","650","80")}}
+{{EmbedLiveSample("","650","80")}}
 
 ### Nombres ordinaux
 
@@ -86,8 +75,7 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
 
 ```html
 <p>
-  Voici comment le nombre ordinal cinquième est écrit dans
-  différentes langues
+  Voici comment le nombre ordinal cinquième est écrit dans différentes langues
 </p>
 <ul>
   <li>en français : 5<sup>e</sup></li>
@@ -97,7 +85,7 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
 
 #### Résultat
 
-{{EmbedLiveSample("Nombres_ordinaux", 650, 160)}}
+{{EmbedLiveSample("", 650, 160)}}
 
 ## Résumé technique
 
@@ -116,7 +104,7 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >.
       </td>
@@ -125,7 +113,7 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >Contenu phrasé</a
         >.
       </td>
@@ -139,7 +127,7 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
       <td>
         Tout élément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >.
       </td>

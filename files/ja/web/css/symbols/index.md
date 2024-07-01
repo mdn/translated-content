@@ -1,7 +1,6 @@
 ---
 title: symbols()
 slug: Web/CSS/symbols
-original_slug: Web/CSS/symbols()
 ---
 
 {{CSSRef}}

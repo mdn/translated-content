@@ -1,7 +1,6 @@
 ---
 title: Cache.addAll()
 slug: Web/API/Cache/addAll
-translation_of: Web/API/Cache/addAll
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
@@ -44,31 +43,29 @@ cache.addAll(requests[]).then(function() {
 Этот блок кода ожидает старта события {{domxref("InstallEvent")}}, а затем запускает {{domxref("ExtendableEvent.waitUntil","waitUntil")}} для обработки процесса установки приложения. Этот процесс состоит из вызова {{domxref("CacheStorage.open")}} для создания нового кеша, и вызова `addAll()` для добавления набора ресурсов в этот кеш.
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener("install", function (event) {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
+    caches.open("v1").then(function (cache) {
       return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
+        "/sw-test/",
+        "/sw-test/index.html",
+        "/sw-test/style.css",
+        "/sw-test/app.js",
+        "/sw-test/image-list.js",
+        "/sw-test/star-wars-logo.jpg",
+        "/sw-test/gallery/",
+        "/sw-test/gallery/bountyHunters.jpg",
+        "/sw-test/gallery/myLittleVader.jpg",
+        "/sw-test/gallery/snowTroopers.jpg",
       ]);
-    })
+    }),
   );
 });
 ```
 
-### Спецификации
+## Спецификации
 
-| Спецификация                                                         | Статус                               | Комментарий         |
-| -------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#cache', 'Cache')}} | {{Spec2('Service Workers')}} | Initial definition. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

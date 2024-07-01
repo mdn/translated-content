@@ -1,7 +1,6 @@
 ---
 title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
-original_slug: Web/JavaScript/Referencia/Objetos_Globales/Date
 ---
 
 {{JSRef}}
@@ -150,20 +149,28 @@ Los siguientes ejemplos muestran distintas maneras de crear fechas en JavaScript
 > **Nota:** Transformar las cadenas de fechas con el constructor `Date` (y `Date.parse`, son equivalentes) es escasamente recomendado debido las diferencias e inconsistencias entre navegadores.
 
 ```js
-let today = new Date()
-let birthday = new Date('December 17, 1995 03:24:00')
-let birthday = new Date('1995-12-17T03:24:00')
-let birthday = new Date(1995, 11, 17)            // el mes es indexado como 0
-let birthday = new Date(1995, 11, 17, 3, 24, 0)
-let birthday = new Date(628021800000)            // pasando la marca temporal de la época
+let today = new Date();
+let birthday = new Date("December 17, 1995 03:24:00");
+let birthday = new Date("1995-12-17T03:24:00");
+let birthday = new Date(1995, 11, 17); // el mes es indexado como 0
+let birthday = new Date(1995, 11, 17, 3, 24, 0);
+let birthday = new Date(628021800000); // pasando la marca temporal de la época
 ```
 
 ### Obtener fecha, mes y año u hora
 
 ```js
 const date = new Date();
-const [month, day, year]       = [date.getMonth(), date.getDate(), date.getFullYear()];
-const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()];
+const [month, day, year] = [
+  date.getMonth(),
+  date.getDate(),
+  date.getFullYear(),
+];
+const [hour, minutes, seconds] = [
+  date.getHours(),
+  date.getMinutes(),
+  date.getSeconds(),
+];
 ```
 
 ### Interpretación de los años de dos dígitos
@@ -171,13 +178,15 @@ const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSe
 `new Date()` hereda de forma no deseada, comportamiento inconsistente con años expresados en dos dígitos, cuando una llamada `new Date()` es dada a un año expresado en dos dígitos, ese valor del año no es tratado como un año literal y usado como tal si no que es interpretado como una diferencia desde el año `1900`, pero en otros casos, como una diferencia desde el año `2000`.
 
 ```js
-let date = new Date(98, 1)         // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
-let date = new Date(22, 1)         // Wed Feb 01 1922 00:00:00 GMT+0000 (GMT)
-let date = new Date("2/1/22")      // Tue Feb 01 2022 00:00:00 GMT+0000 (GMT)
+let date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+let date = new Date(22, 1); // Wed Feb 01 1922 00:00:00 GMT+0000 (GMT)
+let date = new Date("2/1/22"); // Tue Feb 01 2022 00:00:00 GMT+0000 (GMT)
 
 // Método heredado; siempre interpreta los años en dos digitos como relativos al 1900
-date.setYear(98); date.toString()  // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
-date.setYear(22); date.toString()  // Wed Feb 01 1922 00:00:00 GMT+0000 (GMT)
+date.setYear(98);
+date.toString(); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+date.setYear(22);
+date.toString(); // Wed Feb 01 1922 00:00:00 GMT+0000 (GMT)
 ```
 
 Por lo tanto, crear y obtener fechas entre los años `0` y `99`, preferiblemente usa los métodos {{jsxref("Date.prototype.setFullYear()", "setFullYear()")}} y {{jsxref("Date.prototype.getFullYear()", "getFullYear()")}}.
@@ -185,8 +194,10 @@ Por lo tanto, crear y obtener fechas entre los años `0` y `99`, preferiblemente
 ```js
 // Método preferido; nunca interpreta ningun valor como una diferencia relativa,
 // pero en su lugar valor del año tal y como está
-date.setFullYear(98); date.getFullYear()  // 98 (no 1998)
-date.setFullYear(22); date.getFullYear()  // 22 (no 1922, no 2022)
+date.setFullYear(98);
+date.getFullYear(); // 98 (no 1998)
+date.setFullYear(22);
+date.getFullYear(); // 22 (no 1922, no 2022)
 ```
 
 ### Calculando el tiempo transcurrido
@@ -197,36 +208,38 @@ Debido a las diferentes duraciones de los días (debido a los cambios horarios p
 
 ```js
 // Usando objetos Date
-let start = Date.now()
+let start = Date.now();
 
 // El tiempo a expresar va aquí:
-doSomethingForALongTime()
-let end = Date.now()
-let elapsed = end - start // tiempo transcurrido en milisegundos
+doSomethingForALongTime();
+let end = Date.now();
+let elapsed = end - start; // tiempo transcurrido en milisegundos
 ```
 
 ```js
 // Usando métodos internos
-let start = new Date()
+let start = new Date();
 
 // El tiempo a expresar va aquí:
-doSomethingForALongTime()
-let end = new Date()
-let elapsed = end.getTime() - start.getTime() // tiempo transcurrido en milisegundos
+doSomethingForALongTime();
+let end = new Date();
+let elapsed = end.getTime() - start.getTime(); // tiempo transcurrido en milisegundos
 ```
 
 ```js
 // Probar una función y regresar su valor
 function printElapsedTime(fTest) {
   let nStartTime = Date.now(),
-      vReturn = fTest(),
-      nEndTime = Date.now()
+    vReturn = fTest(),
+    nEndTime = Date.now();
 
-  console.log(`Tiempo transcurrido: ${ String(nEndTime - nStartTime) } milisegundos`)
-  return vReturn
+  console.log(
+    `Tiempo transcurrido: ${String(nEndTime - nStartTime)} milisegundos`,
+  );
+  return vReturn;
 }
 
-let yourFunctionReturn = printElapsedTime(yourFunction)
+let yourFunctionReturn = printElapsedTime(yourFunction);
 ```
 
 > **Nota:** En los navegadores que soportan la funcionalidad de alta resolución temporal de {{domxref("performance_property", "Web Performance API", "", 1)}}, {{domxref("Performance.now()")}} puede proveer una medida más precisa y confiable del tiempo transcurrido que {{jsxref("Date.now()")}}.
@@ -234,7 +247,7 @@ let yourFunctionReturn = printElapsedTime(yourFunction)
 ### Obtener el número de segundos desde la Época ECMAScript
 
 ```js
-let seconds = Math.floor(Date.now() / 1000)
+let seconds = Math.floor(Date.now() / 1000);
 ```
 
 En este caso, es más importante retornar únicamente un entero que una simple división no hará. Es también importante sólo retornar realmente el tiempo transcurrido. (Esa es la razón por la que este código usa {{jsxref("Math.floor()")}}, y no {{jsxref("Math.round()")}}.)

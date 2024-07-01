@@ -3,7 +3,7 @@ title: last
 slug: Web/XPath/Functions/last
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `last` 関数は、式評価コンテキストのコンテキストサイズに等しい数値を返します。
 

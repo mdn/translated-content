@@ -1,150 +1,104 @@
 ---
 title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
+l10n:
+  sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
 ---
 
 {{JSRef}}
 
-**`copyWithin()`** 메서드는 배열의 일부를 얕게 복사한 뒤, 동일한 배열의 다른 위치에 덮어쓰고 그 배열을 반환합니다. 이 때, 크기(배열의 길이)를 수정하지 않고 반환합니다.
+{{jsxref("Array")}} 인스턴스의 **`copyWithin()`** 메서드는 배열의 일부를 같은 배열의 다른 위치로 얕게 복사하며, 배열의 길이를 수정하지 않고 해당 배열을 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/array-copywithin.html")}}
 
 ## 구문
 
-```js
-    arr.copyWithin(target[, start[, end]])
+```js-nolint
+copyWithin(target, start)
+copyWithin(target, start, end)
 ```
 
 ### 매개변수
 
 - `target`
-
-  - : 복사한 시퀀스(값)를 넣을 위치를 가리키는 0 기반 인덱스. 음수를 지정하면 인덱스를 배열의 끝에서부터 계산합니다.
-
-    `target`이 `arr.length`보다 크거나 같으면 아무것도 복사하지 않습니다. `target`이 `start` 이후라면 복사한 시퀀스를 `arr.length`에 맞춰 자릅니다.
-
-- `start` {{optional_inline}}
-
-  - : 복사를 시작할 위치를 가리키는 0 기반 인덱스. 음수를 지정하면 인덱스를 배열의 끝에서부터 계산합니다.
-
-    기본값은 0으로, `start`를 지정하지 않으면 배열의 처음부터 복사합니다.
-
+  - : 시퀀스를 복사할 0 기반 인덱스로, [정수로 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#정수_변환)됩니다.
+    - 음수 인덱스는 배열의 끝부터 셉니다. `target < 0`이라면, `target + array.length`이 사용됩니다.
+    - `target < -array.length`이면, `0`이 사용됩니다.
+    - `target >= array.length`이면, 아무것도 복사되지 않습니다.
+    - 정수 변환 후 `target`이 `start` 보디 뒤에 위치하면, `array.length`의 끝부분까지만 복사가 수행됩니다(즉, `copyWithin()`은 배열을 확장하지 않습니다).
+- `start`
+  - : 요소 복사를 시작할 0 기반 인덱스로, [정수로 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#정수_변환)됩니다.
+    - 음수 인덱스는 배열의 끝부터 셉니다. `target < 0`이라면, `target + array.length`이 사용됩니다.
+    - `target < -array.length`이면, `0`이 사용됩니다.
+    - `target >= array.length`이면, 아무것도 복사되지 않습니다.
 - `end` {{optional_inline}}
-
-  - : 복사를 끝낼 위치를 가리키는 0 기반 인덱스. `copyWithin`은 `end` 인덱스 이전까지 복사하므로 `end` 인덱스가 가리키는 요소는 제외합니다. 음수를 지정하면 인덱스를 배열의 끝에서부터 계산합니다.
-
-    기본값은 `arr.length`로, `end`를 지정하지 않으면 배열의 끝까지 복사합니다.
+  - : 요소 복사를 끝낼 0 기반 인덱스로, [정수로 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#정수_변환)됩니다. `copyWithin()`은 `end`를 포함하지 않고 `end`전 까지 복사합니다.
+    - 음수 인덱스는 배열의 끝부터 셉니다. `target < 0`이라면, `target + array.length`이 사용됩니다.
+    - `target < -array.length`이면, `0`이 사용됩니다.
+    - `end >= array.length` 이거나 `end`가 생략되면, `array.length`가 사용됩니다. 이는 끝까지 모든 요소를 복사하는 것이 됩니다.
+    - 정수 변환 후 `end`가 `start`뒤에 위치하면, 아무것도 복사되지 않습니다.
 
 ### 반환 값
 
-수정한 배열.
+변경된 배열입니다.
 
 ## 설명
 
-`copyWithin`은 C와 C++의 `memmove`처럼 작동하고, 복사와 대입이 하나의 연산에서 이루어지므로 {{jsxref("Array")}}의 데이터를 이동할 때 사용할 수 있는 고성능 메서드입니다. {{jsxref("TypedArray.prototype.copyWithin()", "TypedArray")}}의 동명 메서드에서 이 특징이 두드러집니다. 붙여넣은 시퀀스의 위치가 복사한 범위와 겹치더라도 최종 결과는 원본 배열에서 복사한 것과 같습니다.
+`copyWithin()` 메서드는 C와 C++의 `memmove`처럼 작동하며, {{jsxref("Array")}}의 데이터를 이동하는 고성능 메서드입니다. 이는 특히 같은 이름의 메서드를 가진 {{jsxref("TypedArray/copyWithin", "TypedArray")}}에서도 적용됩니다. 시퀀스는 하나의 작업으로 복사와 붙여넣기가 이루어집니다. 복사 붙여넣기 영역이 겹치더라도 붙여넣은 시퀀스는 복사된 값을 갖습니다.
 
-`copyWithin` 함수는 제네릭 함수로, `this` 값이 {{jsxref("Array")}} 객체일 필요는 없습니다.
+`undefined`를 정수로 변환하면 `0`이 되므로, `start` 매개변수를 생략하면 `0`을 전달하여 전체 배열을 target 위치로 복사하는 것과 동일한 효과가 있습니다. 이는 오른쪽 경계가 잘리고 왼쪽 경계가 복제되는 오른쪽 시프트와 같습니다. 이 동작은 코드를 읽는 사람에게 혼란을 줄 수 있으므로 명시적으로 `0`을 `start`로 전달하는것이 좋습니다.
 
-`copyWithin` 메서드는 변경자 메서드로, `this`의 길이는 바꾸지 않지만 내용을 바꾸며 필요하다면 새로운 속성을 생성합니다.
+```js
+console.log([1, 2, 3, 4, 5].copyWithin(2));
+// [1, 2, 1, 2, 3]; 모든 요소를 오른쪽으로 2칸 이동합니다.
+```
+
+`copyWithin()` 메서드는 [변경 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#복사_메서드와_변경_메서드)입니다. `this`의 길이를 변경하진 않지만, 필요한 경우 `this`의 내용을 변경하고, 새 속성을 만들거나 기존 속성을 삭제합니다.
+
+`copyWithin()` 메서드는 빈 슬롯을 보존합니다. 복사할 영역이 [희소](/ko/docs/Web/JavaScript/Guide/Indexed_collections#희소_배열)인 경우, 빈 슬롯의 해당 새 인덱스에 있는 항목은 [삭제](/ko/docs/Web/JavaScript/Reference/Operators/delete)되고 빈 슬롯이 됩니다.
+
+`copyWithin()` 메서드는 [범용](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#범용_배열_메서드)입니다. 이 메서드는 `this` 값에 `length` 속성과 정수 키 속성만 있을 것으로 예상합니다. 문자열도 유사 배열이지만, 문자열은 불변이므로 이 메서드를 적용하기에는 적합하지 않습니다.
 
 ## 예제
 
-```js
-[1, 2, 3, 4, 5].copyWithin(-2);
-// [1, 2, 3, 1, 2]
+### copyWithin() 사용하기
 
-[1, 2, 3, 4, 5].copyWithin(0, 3);
+```js
+console.log([1, 2, 3, 4, 5].copyWithin(0, 3));
 // [4, 5, 3, 4, 5]
 
-[1, 2, 3, 4, 5].copyWithin(0, 3, 4);
+console.log([1, 2, 3, 4, 5].copyWithin(0, 3, 4));
 // [4, 2, 3, 4, 5]
 
-[1, 2, 3, 4, 5].copyWithin(-2, -3, -1);
+console.log([1, 2, 3, 4, 5].copyWithin(-2, -3, -1));
 // [1, 2, 3, 3, 4]
-
-[].copyWithin.call({length: 5, 3: 1}, 0, 3);
-// {0: 1, 3: 1, length: 5}
-
-// ES2015 TypedArray는 Array의 하위 클래스
-var i32a = new Int32Array([1, 2, 3, 4, 5]);
-
-i32a.copyWithin(0, 2);
-// Int32Array [3, 4, 5, 4, 5]
-
-// 아직 ES2015를 사용할 수 없는 환경에서
-[].copyWithin.call(new Int32Array([1, 2, 3, 4, 5]), 0, 3, 4);
-// Int32Array [4, 2, 3, 4, 5]
 ```
 
-## 폴리필
+### 희소 배열에서 copyWithin() 사용하기
+
+`copyWithin()`은 빈 슬롯을 전파합니다.
 
 ```js
-    if (!Array.prototype.copyWithin) {
-      Array.prototype.copyWithin = function(target, start/*, end*/) {
-        // Steps 1-2.
-        if (this == null) {
-          throw new TypeError('this is null or not defined');
-        }
-
-        var O = Object(this);
-
-        // Steps 3-5.
-        var len = O.length >>> 0;
-
-        // Steps 6-8.
-        var relativeTarget = target >> 0;
-
-        var to = relativeTarget < 0 ?
-          Math.max(len + relativeTarget, 0) :
-          Math.min(relativeTarget, len);
-
-        // Steps 9-11.
-        var relativeStart = start >> 0;
-
-        var from = relativeStart < 0 ?
-          Math.max(len + relativeStart, 0) :
-          Math.min(relativeStart, len);
-
-        // Steps 12-14.
-        var end = arguments[2];
-        var relativeEnd = end === undefined ? len : end >> 0;
-
-        var final = relativeEnd < 0 ?
-          Math.max(len + relativeEnd, 0) :
-          Math.min(relativeEnd, len);
-
-        // Step 15.
-        var count = Math.min(final - from, len - to);
-
-        // Steps 16-17.
-        var direction = 1;
-
-        if (from < to && to < (from + count)) {
-          direction = -1;
-          from += count - 1;
-          to += count - 1;
-        }
-
-        // Step 18.
-        while (count > 0) {
-          if (from in O) {
-            O[to] = O[from];
-          } else {
-            delete O[to];
-          }
-
-          from += direction;
-          to += direction;
-          count--;
-        }
-
-        // Step 19.
-        return O;
-      };
-    }
+console.log([1, , 3].copyWithin(2, 1, 2)); // [1, empty, empty]
 ```
 
-## 명세
+### copyWithin()을 배열이 아닌 객체에 적용하기
+
+`copyWithin()` 메서드는 `this`의 `length` 속성을 읽은 다음 관련된 정수 인덱스를 변경합니다.
+
+```js
+const arrayLike = {
+  length: 5,
+  3: 1,
+};
+console.log(Array.prototype.copyWithin.call(arrayLike, 0, 3));
+// { '0': 1, '3': 1, length: 5 }
+console.log(Array.prototype.copyWithin.call(arrayLike, 3, 1));
+// { '0': 1, length: 5 }
+// 복사된 소스가 빈 슬롯이므로 '3' 속성이 삭제됩니다.
+```
+
+## 명세서
 
 {{Specifications}}
 
@@ -154,4 +108,7 @@ i32a.copyWithin(0, 2);
 
 ## 같이 보기
 
+- [`core-js`의 `Array.prototype.copyWithin` 폴리필](https://github.com/zloirock/core-js#ecmascript-array)
+- [인덱스된 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
+- {{jsxref("TypedArray.prototype.copyWithin()")}}

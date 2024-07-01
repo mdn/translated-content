@@ -21,24 +21,24 @@ document.write(texto);
 
 ```html
 <html>
+  <head>
+    <title>Ejemplo de write</title>
 
-<head>
-  <title>Ejemplo de write</title>
+    <script>
+      function nuevoContenido() {
+        alert("carga el contenido nuevo");
+        document.open();
+        document.write(
+          "<h1>Quita el contenido viejo - Agrega el contenido nuevo!</h1>",
+        );
+        document.close();
+      }
+    </script>
+  </head>
 
-  <script>
-    function nuevoContenido() {
-      alert("carga el contenido nuevo");
-      document.open();
-      document.write("<h1>Quita el contenido viejo - Agrega el contenido nuevo!</h1>");
-      document.close();
-    }
-  </script>
-</head>
-
-<body onload="nuevoContenido();">
-  <p>Algo de contenido original del documento</p>
-</body>
-
+  <body onload="nuevoContenido();">
+    <p>Algo de contenido original del documento</p>
+  </body>
 </html>
 ```
 
@@ -50,7 +50,7 @@ Si la llamada a document.write() se ejecuta dentro de una etiqueta `<script>` in
 
 ```html
 <script>
-  document.write("<h1>Título Principal</h1>")
+  document.write("<h1>Título Principal</h1>");
 </script>
 ```
 

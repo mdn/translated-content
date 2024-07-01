@@ -47,7 +47,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Access-Control-Request-Headers")}}
+{{Compat}}
 
 ## 関連情報
 

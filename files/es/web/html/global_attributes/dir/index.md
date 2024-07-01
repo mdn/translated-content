@@ -1,7 +1,6 @@
 ---
 title: dir
 slug: Web/HTML/Global_attributes/dir
-original_slug: Web/HTML/Atributos_Globales/dir
 ---
 
 {{HTMLSidebar("Global_attributes")}}

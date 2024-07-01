@@ -33,7 +33,9 @@ self.addEventListener("fetch", (event) => {
 
         return response;
       }
-      console.log("キャッシュにレスポンスが見つかりません。 ネットワークから読み取ります...");
+      console.log(
+        "キャッシュにレスポンスが見つかりません。 ネットワークから読み取ります...",
+      );
 
       return fetch(event.request)
         .then((response) => {
@@ -46,7 +48,7 @@ self.addEventListener("fetch", (event) => {
 
           throw error;
         });
-    })
+    }),
   );
 });
 ```

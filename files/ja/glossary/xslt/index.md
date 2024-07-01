@@ -2,14 +2,16 @@
 title: XSLT
 slug: Glossary/XSLT
 l10n:
-  sourceCommit: ba6c97a742adb97092d5b20804bf9c462f3b84f3
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-_eXtensible Stylesheet Language Transformations_ (**XSLT**) は、{{Glossary("XML")}} 文書を他の XML 文書に変換するために使用される宣言的言語であり、{{Glossary("HTML")}}、{{Glossary("PDF")}}、プレーンテキストなどが含まれます。
+{{GlossarySidebar}}
 
-XSLT には XML 入力、または XQuery および XPath データモデルに変換可能な任意のフォーマットを受け入れる独自のプロセッサーがあります。XSLT プロセッサは XML ドキュメントと XSLT スタイルシートに基づいて新しいドキュメントを作成し、プロセス内の元のファイルに変更を加えません。
+**XSLT** (_eXtensible Stylesheet Language Transformations_) は、{{Glossary("XML")}} 文書を他の XML 文書、{{Glossary("HTML")}}、{{Glossary("PDF")}}、プレーンテキストなどに変換するために使用される宣言的言語です
+
+XSLT には XML 入力、または XQuery および XPath データモデルに変換可能な任意のフォーマットを受け入れる独自のプロセッサーがあります。XSLT プロセッサーは XML ドキュメントと XSLT スタイルシートに基づいて新しい文書を作成し、プロセス内で元のファイルに変更を加えません。
 
 ## 関連情報
 
-- ウィキペディアの「[XSLT](https://ja.wikipedia.org/wiki/XSLT)」
-- [MDN の XSLT のドキュメント](/ja/docs/Web/XSLT)
+- [XSLT](https://ja.wikipedia.org/wiki/XSLT)（ウィキペディア）
+- [XSLT のドキュメント (MDN)](/ja/docs/Web/XSLT)

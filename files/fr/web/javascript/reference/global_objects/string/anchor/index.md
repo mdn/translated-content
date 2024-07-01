@@ -1,15 +1,6 @@
 ---
 title: String.prototype.anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/String/anchor
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/anchor
 ---
 
 {{JSRef}}
@@ -19,7 +10,7 @@ La méthode **`anchor()`** permet de créer une ancre HTML {{HTMLElement("a")}} 
 ## Syntaxe
 
 ```js
-str.anchor(name)
+str.anchor(name);
 ```
 
 ### Paramètres
@@ -56,9 +47,9 @@ produira le code HTML suivant :
 ## Prothèse d'émulation (_polyfill_)
 
 ```js
-if (!String.prototype.anchor){
-  String.prototype.anchor = function(x){
-    return '<a name="' + x + '">' + this + '</a>'
+if (!String.prototype.anchor) {
+  String.prototype.anchor = function (x) {
+    return '<a name="' + x + '">' + this + "</a>";
   };
 }
 ```

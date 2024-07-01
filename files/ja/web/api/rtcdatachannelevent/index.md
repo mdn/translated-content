@@ -18,7 +18,7 @@ l10n:
 
 ## インスタンスプロパティ
 
-_{{domxref("Event")}} のプロパティを継承しています。。_
+_{{domxref("Event")}} のプロパティを継承しています。_
 
 - {{DOMxRef("RTCDataChannelEvent.channel", "channel")}} {{ReadOnlyInline}}
   - : このイベントに関連付けられた {{domxref("RTCDataChannel")}} を返します。
@@ -33,7 +33,7 @@ pc.ondatachannel = (event) => {
   inboundDataChannel.onmessage = handleIncomingMessage;
   inboundDataChannel.onopen = handleChannelOpen;
   inboundDataChannel.onclose = handleChannelClose;
-}
+};
 ```
 
 データチャンネルを使用する、より完全な別の例は、[単純な RTCDataChannel の例](/ja/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)を参照してください。

@@ -1,20 +1,24 @@
 ---
-title: 'ARIA: checkbox ロール'
+title: "ARIA: checkbox ロール"
 slug: Web/Accessibility/ARIA/Roles/checkbox_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role
 ---
 
 チェックボックス ([checkbox](https://www.w3.org/TR/wai-aria-1.1/#checkbox)) ロールは、チェック可能なインタラクティブなコントロールに使用します。 `role="checkbox"` を含む要素には、チェックボックスの状態を支援技術に公開するための `aria-checked` 属性も含める必要があります。
 
 ```html
-<span role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="chk1-label">
-</span> <label id="chk1-label">Remember my preferences</label>
+<span
+  role="checkbox"
+  aria-checked="false"
+  tabindex="0"
+  aria-labelledby="chk1-label">
+</span>
+<label id="chk1-label">Remember my preferences</label>
 ```
 
 ARIA の第一のルールは、ネイティブな HTML の要素や属性に必要としている意味論と振る舞いがある場合、要素を転用して ARIA を追加する代わりにネイティブなものを使用することです。 次のように、代わりに [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) のネイティブな [HTML チェックボックス](/ja/docs/Web/HTML/Element/input/checkbox)を使用してください。 これは、必要なすべての機能をネイティブに提供します。
 
 ```html
-<input type="checkbox" id="chk1-label">
+<input type="checkbox" id="chk1-label" />
 <label for="chk1-label">Remember my preferences</label>
 ```
 
@@ -69,24 +73,32 @@ ARIA の第一のルールは、ネイティブな HTML の要素や属性に必
 #### HTML
 
 ```html
-<span role="checkbox" id="chkPref" aria-checked="false" onclick="changeCheckbox()" onKeyPress="changeCheckbox()"
-   tabindex="0" aria-labelledby="chk1-label"></span>
-<label id="chk1-label" onclick="changeCheckbox()" onKeyPress="changeCheckbox()">Remember my preferences</label>
+<span
+  role="checkbox"
+  id="chkPref"
+  aria-checked="false"
+  onclick="changeCheckbox()"
+  onKeyPress="changeCheckbox()"
+  tabindex="0"
+  aria-labelledby="chk1-label"></span>
+<label id="chk1-label" onclick="changeCheckbox()" onKeyPress="changeCheckbox()"
+  >Remember my preferences</label
+>
 ```
 
 #### CSS
 
 ```css
 [role="checkbox"] {
-    padding:5px;
+  padding: 5px;
 }
 
 [aria-checked="true"]::before {
-    content: "[x]";
+  content: "[x]";
 }
 
 [aria-checked="false"]::before {
-    content: "[ ]";
+  content: "[ ]";
 }
 ```
 
@@ -94,15 +106,15 @@ ARIA の第一のルールは、ネイティブな HTML の要素や属性に必
 
 ```js
 function changeCheckbox(event) {
-    let item = document.getElementById('chkPref');
-    switch(item.getAttribute('aria-checked')) {
-        case "true":
-            item.setAttribute('aria-checked', "false");
-            break;
-        case "false":
-            item.setAttribute('aria-checked', "true");
-            break;
-    }
+  let item = document.getElementById("chkPref");
+  switch (item.getAttribute("aria-checked")) {
+    case "true":
+      item.setAttribute("aria-checked", "false");
+      break;
+    case "false":
+      item.setAttribute("aria-checked", "true");
+      break;
+  }
 }
 ```
 

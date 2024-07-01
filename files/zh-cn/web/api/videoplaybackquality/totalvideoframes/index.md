@@ -3,6 +3,8 @@ title: VideoPlaybackQuality.totalVideoFrames
 slug: Web/API/VideoPlaybackQuality/totalVideoFrames
 ---
 
+{{APIRef("HTML DOM")}}
+
 ```
 videoPlaybackQuality 的totalVideoFrames 属性为一个只读属性，用于表述已经被加载的媒体资源中已经被渲染播放或者被废弃的视频帧总数
 ```
@@ -25,7 +27,11 @@ video 容器**已经被加载的媒体资源中已经被渲染播放或者被废
 var videoElem = document.getElementById("my_vid");
 var quality = videoElem.getVideoPlaybackQuality();
 
-if ((quality.corruptedVideoFrames + quality.droppedVideoFrames)/quality.totalVideoFrames > 0.1) {
+if (
+  (quality.corruptedVideoFrames + quality.droppedVideoFrames) /
+    quality.totalVideoFrames >
+  0.1
+) {
   lostFramesThresholdExceeded();
 }
 ```

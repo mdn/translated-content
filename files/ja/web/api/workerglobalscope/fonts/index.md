@@ -1,8 +1,9 @@
 ---
-title: WorkerGlobalScope.fonts
+title: "WorkerGlobalScope: fonts プロパティ"
+short-title: fonts
 slug: Web/API/WorkerGlobalScope/fonts
 l10n:
-  sourceCommit: 88e92273cd9ab37146d163239e444c194ac14f13
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef("DOM")}}
@@ -14,7 +15,7 @@ l10n:
 ## 値
 
 返される値はこのワーカーの {{domxref("FontFaceSet")}} インターフェイスです。
-`FontFaceSet` インターフェースは、新しいフォントを読み込んだり、以前に読み込んだフォントの状態を調べたりするのに有益なものです。
+`FontFaceSet` インターフェイスは、新しいフォントを読み込んだり、以前に読み込んだフォントの状態を調べたりするのに有益なものです。
 
 ## 例
 

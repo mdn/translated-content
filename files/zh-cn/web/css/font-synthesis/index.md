@@ -40,7 +40,7 @@ slug: Web/CSS/font-synthesis
 
 ```html
 <em class="syn">Synthesize me! 站直。</em>
-<br/>
+<br />
 <em class="no-syn">Don't synthesize me! 站直。</em>
 ```
 

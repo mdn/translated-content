@@ -1,12 +1,8 @@
 ---
 title: CanvasRenderingContext2D.closePath()
 slug: Web/API/CanvasRenderingContext2D/closePath
-tags:
-  - API
-  - Canvas
-  - Method
-translation_of: Web/API/CanvasRenderingContext2D/closePath
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.closePath()`** - метод из Canvas 2D API, добавляет в путь линию от текущей до первоначальной точки под пути и закрывает сам путь (давая возможность инициализировать новый). Если путь пустой или содержит одну точку, этот метод ничего не делает.
@@ -36,14 +32,14 @@ void ctx.closePath();
 Точки треугольника находятся в координатах (20, 150), (120, 20),и (220, 150).
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.moveTo(20, 140);   // Двигает перо к нижнему левому углу
-ctx.lineTo(120, 10);   // Рисует линию к верхнему углу
-ctx.lineTo(220, 140);  // Рисует линию к нижнему правому углу
-ctx.closePath();       // Рисует линию к нижнему левому углу
+ctx.moveTo(20, 140); // Двигает перо к нижнему левому углу
+ctx.lineTo(120, 10); // Рисует линию к верхнему углу
+ctx.lineTo(220, 140); // Рисует линию к нижнему правому углу
+ctx.closePath(); // Рисует линию к нижнему левому углу
 ctx.stroke();
 ```
 
@@ -68,8 +64,8 @@ ctx.stroke();
 Первые две дуги создают глаза, последняя создаёт рот.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.arc(240, 20, 40, 0, Math.PI);

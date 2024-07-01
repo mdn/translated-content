@@ -26,7 +26,7 @@ A {{domxref("RequestCredentials")}} value.
 在以下代码中，我们使用{{domxref("Request.Request()")}}创建了一个新的 request（为了一个与脚本在同一目录下的图片文件），接着将 request credentials 存入一个变量：
 
 ```js
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 var myCred = myRequest.credentials; // returns "same-origin" by default
 ```
 

@@ -1,11 +1,6 @@
 ---
 title: scroll-snap-align
 slug: Web/CSS/scroll-snap-align
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/scroll-snap-align
 ---
 
 {{CSSRef}}

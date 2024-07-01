@@ -2,6 +2,7 @@
 title: 사용자 지정 CSS 속성 사용하기 (변수)
 slug: Web/CSS/Using_CSS_custom_properties
 ---
+
 {{cssref}}
 
 **사용자 지정 속성**(**CSS 변수**, **종속 변수**)은 CSS 저작자가 정의하는 개체로, 문서 전반적으로 재사용할 임의의 값을 담습니다. 사용자 지정 속성은 전용 표기법을 사용해 정의하고, (`--main-color: black;`) {{cssxref("var", "var()")}} 함수를 사용해 접근할 수 있습니다. (`color: var(--main-color);`)
@@ -86,7 +87,7 @@ HTML에 적용해보겠습니다.
 <div>
   <div class="one">1:</div>
   <div class="two">2: Text <span class="five">5 - more text</span></div>
-  <input class="three">
+  <input class="three" />
   <textarea class="four">4: Lorem Ipsum</textarea>
 </div>
 ```
@@ -97,7 +98,7 @@ HTML에 적용해보겠습니다.
 
 반복되는 CSS에 주목해보세요. 배경 색을 여러 곳에서 `brown`으로 지정하고 있습니다. 일부 CSS 선언의 경우 더 상위 단계로 반복되는 항목을 옮겨서 CSS의 상속을 통해 자연스럽게 해결할 수도 있습니다. 그러나 보다 복잡한 프로젝트의 경우 항상 이렇게 할 수 있는 것은 아닙니다. 이 때 {{cssxref(":root")}} 의사 클래스에 사용자 지정 속성을 선언하고, 필요한 곳에서 그 속성을 참조함으로써 반복 코드의 필요를 줄일 수 있습니다.
 
-```html
+```css
 :root {
   --main-bg-color: brown;
 }
@@ -185,11 +186,18 @@ HTML에 적용해보겠습니다.
 }
 
 .three {
-  background-color: var(--my-var, var(--my-background, pink)); /* my-var와 --my-background가 정의되지 않았을 경우 pink로 표시됨 */
+  background-color: var(
+    --my-var,
+    var(--my-background, pink)
+  ); /* my-var와 --my-background가 정의되지 않았을 경우 pink로 표시됨 */
 }
 
 .three {
-  background-color: var(--my-var, --my-background, pink); /* 유효하지 않음: "--my-background, pink" */
+  background-color: var(
+    --my-var,
+    --my-background,
+    pink
+  ); /* 유효하지 않음: "--my-background, pink" */
 }
 ```
 
@@ -216,9 +224,15 @@ _각 속성과 연관된 기본 CSS 개념의 유효성은 사용자 지정 속�
 ### CSS
 
 ```css
-:root { --text-color: 16px; }
-p { color: blue; }
-p { color: var(--text-color); }
+:root {
+  --text-color: 16px;
+}
+p {
+  color: blue;
+}
+p {
+  color: var(--text-color);
+}
 ```
 
 예상대로 브라우저는 `--text-color` 의 값으로 `var(--text-color)` 를 대체했지만 `16px` 는 {{cssxref("color")}}에 유효한 값이 아니다. 대체한 결과, 그 속성은 의미가 통하지 않는다. 브라우저는 이 상황을 두 단계로 처리한다:
@@ -248,10 +262,6 @@ getComputedStyle(element).getPropertyValue("--my-var");
 // 인라인 스타일에 변수 설정하기
 element.style.setProperty("--my-var", jsVar + 4);
 ```
-
-## 브라우저 호환성
-
-{{Compat}}
 
 ## 같이 보기
 

@@ -10,16 +10,27 @@ SVG の **`<animateMotion>`** 要素は、ある要素がモーションパス�
 > **メモ:** 既存のパスを再利用するには、 `<animateMotion>` 要素内の {{SVGElement("mpath")}} 要素を {{SVGAttr("path")}} 属性の代わりに使用する必要があります。
 
 ```css hidden
-html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
+html,
+body,
+svg {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
 ```
 
 ```html
 <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <path fill="none" stroke="lightgrey"
+  <path
+    fill="none"
+    stroke="lightgrey"
     d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
 
   <circle r="5" fill="red">
-    <animateMotion dur="10s" repeatCount="indefinite"
+    <animateMotion
+      dur="10s"
+      repeatCount="indefinite"
       path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
   </circle>
 </svg>
@@ -53,7 +64,7 @@ html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
   - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}
 - [他のアニメーション属性](/ja/docs/Web/SVG/Attribute#Animation_Attributes)
   - : 特に重要なもの: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
-- [アニメーションイベント属性](/ja/docs/Web/SVG/Attribute/Events#Animation_Event_Attributes)
+- [アニメーションイベント属性](/ja/docs/Web/SVG/Attribute/Events#アニメーションイベント属性)
   - : 特に重要なもの: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}
 
 ### グローバル属性
@@ -63,7 +74,7 @@ html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
 - [スタイル付け属性](/ja/docs/Web/SVG/Attribute/Styling)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
 - イベント属性
-  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [文書要素イベント属性](/ja/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes)
+  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#グローバルイベント属性), [文書要素イベント属性](/ja/docs/Web/SVG/Attribute/Events#文書要素イベント属性)
 
 ## 使用上の注意
 
@@ -75,7 +86,7 @@ html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
 
 ## ブラウザーの互換性
 
-{{Compat("svg.elements.animateMotion")}}
+{{Compat}}
 
 ## 関連情報
 

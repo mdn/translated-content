@@ -17,7 +17,7 @@ JavaScript 的核心语言是 ECMAScript，是一门由 ECMA TC39 委员会标�
 
 ### 哪些内容被纳入 ECMAScript 范畴之中？
 
-除却一些其它元素，ECMAScript 定义了：
+除却一些其他元素，ECMAScript 定义了：
 
 - 语法（解析规则、关键词、流程控制、对象初始化，等等）
 - 错误处理机制（{{jsxref("Statements/throw", "throw")}}、{{jsxref("Statements/try...catch", "try...catch")}}，以及创建用户自定义{{jsxref("Error", "错误", "", 1)}}类型的能力）
@@ -68,7 +68,7 @@ ECMAScript 版本由每年的 ECMA 大会批准并作为标准发布。所有的
 
 - [DOM 核心](https://dom.spec.whatwg.org/)中定义了文档结构、树模型，以及 DOM 事件架构，包括：[`Node`](/zh-CN/docs/Web/API/Node)、[`Element`](/zh-CN/docs/Web/API/Element)、[`DocumentFragment`](/zh-CN/docs/Web/API/DocumentFragment)、[`Document`](/zh-CN/docs/Web/API/Document)、[`DOMImplementation`](/zh-CN/docs/Web/API/DOMImplementation)、[`Event`](/zh-CN/docs/Web/API/Event)、[`EventTarget`](/zh-CN/docs/Web/API/EventTarget)，等等
 - [DOM 事件](https://w3c.github.io/uievents/)中包括对于 DOM 事件架构的一个不太严格的定义，以及一些特殊事件。
-- [DOM 元素遍历](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html)以及 [DOM 范围](https://dom.spec.whatwg.org/#ranges)对象等其它内容。
+- [DOM 元素遍历](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html)以及 [DOM 范围](https://dom.spec.whatwg.org/#ranges)对象等其他内容。
 
 从 ECMAScript 的角度来看，DOM 规范中定义的对象被称作“宿主对象”。
 
@@ -78,9 +78,9 @@ ECMAScript 版本由每年的 ECMA 大会批准并作为标准发布。所有的
 
 HTML 规范同时还约束了元素之间的关系，例如无序列表 [`<ul>`](/zh-CN/docs/Web/HTML/Element/ul) 元素中，只能以 [`<li>`](/zh-CN/docs/Web/HTML/Element/li) 元素作为子元素来表达列表项。还有就是禁止使用标准中未定义的元素和属性。
 
-想了解更多关于 [`Document`](/zh-CN/docs/Web/API/Document) 对象、[`Window`](/zh-CN/docs/Web/API/Window) 对象以及其它 DOM 元素的信息？请访问 MDN 的 [DOM 文档](/zh-CN/docs/Web/API/Document_Object_Model)。
+想了解更多关于 [`Document`](/zh-CN/docs/Web/API/Document) 对象、[`Window`](/zh-CN/docs/Web/API/Window) 对象以及其他 DOM 元素的信息？请访问 MDN 的 [DOM 文档](/zh-CN/docs/Web/API/Document_Object_Model)。
 
-## 其它值得关注的 API
+## 其他值得关注的 API
 
 - [`setTimeout`](/zh-CN/docs/Web/API/setTimeout) 和 [`setInterval`](/zh-CN/docs/Web/API/setInterval) 函数最早被定义在 HTML 标准的 [`Window`](/zh-CN/docs/Web/API/Window) 接口下。
 - [XMLHttpRequest](https://xhr.spec.whatwg.org/) 使得发起异步 HTTP 请求成为可能。
@@ -144,7 +144,7 @@ JavaScript shell 允许你快速测试代码片段或 JavaScript 代码，而无
 - [JSFiddle](https://jsfiddle.net/)
   - : 编辑 JavaScript、CSS 和 HTML 并获得实时结果。使用外置资源，并同你的团队在线合作。
 - [Plunker](https://plnkr.co/)
-  - : Plunker 是一个在线社区，用于创建、协作和共享您的 Web 开发创意。编辑您的 JavaScript、CSS 和 HTML 文件并获取实时结果和文件结构。
+  - : Plunker 是一个在线社区，用于创建、协作和共享你的 Web 开发创意。编辑你的 JavaScript、CSS 和 HTML 文件并获取实时结果和文件结构。
 - [JSBin](https://jsbin.com/)
   - : JS Bin 是一个开源的协作式的 web 开发调试工具。
 - [Codepen](https://codepen.io/)

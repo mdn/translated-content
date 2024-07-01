@@ -1,32 +1,43 @@
 ---
 title: Age
 slug: Web/HTTP/Headers/Age
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-**`Age`** 消息头里包含对象在缓存代理中存贮的时长，以秒为单位。.
+**`Age`** 标头包含对象在代理缓存中停留的时间，以秒为单位。
 
-Age 的值通常接近于 0。表示此对象刚刚从原始服务器获取不久；其他的值则是表示代理服务器当前的系统时间与此应答中的通用头 {{HTTPHeader("Date")}} 的值之差。
+`Age` 标头通常接近于 0。如果显示为 `Age: 0`，则表示该内容可能是从源服务器上获取的；否则，它通常是通过代理服务器当前日期与 HTTP 响应中包含的 {{HTTPHeader("Date")}} 通用标头之间的差值来计算得出的。
 
-| 报头类型                                         | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">标头类型</th>
+      <td>{{Glossary("Response header", "响应标头")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
-```plain
+```http
 Age: <delta-seconds>
 ```
 
 ## 指令
 
 - \<delta-seconds>
-  - : 一个非负整数，表示对象在缓存代理服务器中存贮的时长，以秒为单位。
+  - : 一个非负整数，表示对象在代理缓存中停留的时间，以秒为单位。
 
 ## 示例
 
-```plain
+```http
 Age: 24
 ```
 

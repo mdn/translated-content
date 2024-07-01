@@ -1,6 +1,6 @@
 ---
 title: CSS Animations tips and tricks
-slug: Web/CSS/CSS_Animations/Tips
+slug: Web/CSS/CSS_animations/Tips
 ---
 
 Animações CSS tornam possível fazer coisas incríveis com os elementos que compoem seus documentos e aplicativos. No entanto, existem coisas que você pode querer fazer que não são óbvias, ou jeitos espertos de fazer coisas que você pode não ter pensado de imediato. Esse artigo é uma coleção de dicas e truques que descobrimos que podem tornar seu trabalho mais fácil, incluindo como rodar uma animação parada novamente.
@@ -16,8 +16,7 @@ Aqui está um modo de fazer o qual achamos estável e confiável o suficiente pa
 Primeiro, vamos definir o HTML para uma {{HTMLElement("div")}} que gostaríamos de animar e um botão que vai executar (ou reexecutar) a animação.
 
 ```html
-<div class="box">
-</div>
+<div class="box"></div>
 
 <div class="runButton">Clique em mim para rodar a animação</div>
 ```
@@ -38,14 +37,21 @@ Agora vamos definir a animação em sí usando CSS. Algum CSS que não é import
   padding-bottom: 4px;
   color: white;
   background-color: darkgreen;
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 ```
 
 ```css
 @keyframes colorchange {
-  0% { background: yellow }
-  100% { background: blue }
+  0% {
+    background: yellow;
+  }
+  100% {
+    background: blue;
+  }
 }
 
 .box {
@@ -70,8 +76,8 @@ A seguir vamos olhar para o JavaScript que faz o trabalho. O macete dessa técni
 ```js
 function play() {
   document.querySelector(".box").className = "box";
-  window.requestAnimationFrame(function(time) {
-    window.requestAnimationFrame(function(time) {
+  window.requestAnimationFrame(function (time) {
+    window.requestAnimationFrame(function (time) {
       document.querySelector(".box").className = "box changing";
     });
   });

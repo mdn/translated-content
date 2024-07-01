@@ -1,18 +1,6 @@
 ---
 title: PerformanceTiming.responseStart
 slug: Web/API/PerformanceTiming/responseStart
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Propriété
-  - Read-only
-  - legacy
-  - responseStart
-translation_of: Web/API/PerformanceTiming/responseStart
 ---
 
 {{APIRef("Navigation Timing")}}

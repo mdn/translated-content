@@ -1,10 +1,6 @@
 ---
 title: fill
 slug: Web/SVG/Attribute/fill
-tags:
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/fill
 ---
 
 {{SVGRef}}
@@ -18,7 +14,11 @@ Pour les animations, il s'applique à cinq éléments: {{SVGElement('animate')}}
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -29,7 +29,7 @@ html,body,svg { height:100% }
   <!-- Remplir avec un dégradé -->
   <defs>
     <radialGradient id="myGradient">
-      <stop offset="0%"   stop-color="pink" />
+      <stop offset="0%" stop-color="pink" />
       <stop offset="100%" stop-color="black" />
     </radialGradient>
   </defs>
@@ -37,10 +37,13 @@ html,body,svg { height:100% }
 
   <!-- Définit l'état final d'un cercle animé -->
   <circle cx="250" cy="50" r="20">
-    <animate attributeType="XML"
-             attributeName="r"
-             from="0" to="40" dur="5s"
-             fill="freeze" />
+    <animate
+      attributeType="XML"
+      attributeName="r"
+      from="0"
+      to="40"
+      dur="5s"
+      fill="freeze" />
   </circle>
 </svg>
 ```

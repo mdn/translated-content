@@ -9,7 +9,7 @@ slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 
 以缩放画布为例，这个属性对像素为主的游戏很有用。默认的改变大小的算法会造成图片模糊并且破坏图片原有的像素。如果那样的话，设置属性值为 false。参见 CSS {{cssxref("image-rendering")}} 属性。
 
-> **备注：** 您可以使用{{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}}属性来调整平滑质量。
+> **备注：** 你可以使用{{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}}属性来调整平滑质量。
 
 ## 语法
 
@@ -37,26 +37,27 @@ ctx.imageSmoothingEnabled = value;
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById("canvas");
 
-const ctx = canvas.getContext('2d');
-ctx.font = '16px sans-serif';
-ctx.textAlign = 'center';
+const ctx = canvas.getContext("2d");
+ctx.font = "16px sans-serif";
+ctx.textAlign = "center";
 
 const img = new Image();
-img.src = 'https://interactive-examples.mdn.mozilla.net/media/examples/star.png';
+img.src =
+  "https://interactive-examples.mdn.mozilla.net/media/examples/star.png";
 img.onload = () => {
   const w = img.width,
-        h = img.height;
+    h = img.height;
 
-  ctx.fillText('Source', w * .5, 20);
+  ctx.fillText("Source", w * 0.5, 20);
   ctx.drawImage(img, 0, 24, w, h);
 
-  ctx.fillText('Smoothing = TRUE', w * 2.5, 20);
+  ctx.fillText("Smoothing = TRUE", w * 2.5, 20);
   ctx.imageSmoothingEnabled = true;
   ctx.drawImage(img, w, 24, w * 3, h * 3);
 
-  ctx.fillText('Smoothing = FALSE', w * 5.5, 20);
+  ctx.fillText("Smoothing = FALSE", w * 5.5, 20);
   ctx.imageSmoothingEnabled = false;
   ctx.drawImage(img, w * 4, 24, w * 3, h * 3);
 };

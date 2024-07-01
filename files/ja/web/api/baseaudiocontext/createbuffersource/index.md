@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createBufferSource()
 slug: Web/API/BaseAudioContext/createBufferSource
-original_slug: Web/API/AudioContext/createBufferSource
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -13,7 +12,7 @@ original_slug: Web/API/AudioContext/createBufferSource
 ## 構文
 
 ```js
-createBufferSource()
+createBufferSource();
 ```
 
 ### 引数
@@ -32,9 +31,9 @@ createBufferSource()
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var button = document.querySelector('button');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+var button = document.querySelector("button");
+var pre = document.querySelector("pre");
+var myScript = document.querySelector("script");
 
 pre.innerHTML = myScript.innerHTML;
 
@@ -44,19 +43,23 @@ var channels = 2;
 // 空のステレオバッファーを生成する
 var frameCount = audioCtx.sampleRate * 2.0;
 
-var myArrayBuffer = audioCtx.createBuffer(channels, frameCount, audioCtx.sampleRate);
+var myArrayBuffer = audioCtx.createBuffer(
+  channels,
+  frameCount,
+  audioCtx.sampleRate,
+);
 
-button.onclick = function() {
+button.onclick = function () {
   // バッファにホワイトノイズを書き込む
   // -1.0 から 1.0 の間の乱数の値
   for (var channel = 0; channel < channels; channel++) {
-   // 実際のデータの配列を得る
-   var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i < frameCount; i++) {
-     // Math.random() は [0; 1.0] である
-     // 音声は [-1.0; 1.0] である必要がある
-     nowBuffering[i] = Math.random() * 2 - 1;
-   }
+    // 実際のデータの配列を得る
+    var nowBuffering = myArrayBuffer.getChannelData(channel);
+    for (var i = 0; i < frameCount; i++) {
+      // Math.random() は [0; 1.0] である
+      // 音声は [-1.0; 1.0] である必要がある
+      nowBuffering[i] = Math.random() * 2 - 1;
+    }
   }
 
   // AudioBufferSourceNode を得る
@@ -69,7 +72,7 @@ button.onclick = function() {
   source.connect(audioCtx.destination);
   // 音源の再生を始める
   source.start();
-}
+};
 ```
 
 ## 仕様書

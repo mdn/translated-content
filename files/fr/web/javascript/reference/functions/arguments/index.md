@@ -1,14 +1,6 @@
 ---
 title: arguments
 slug: Web/JavaScript/Reference/Functions/arguments
-tags:
-  - Fonctions
-  - Functions
-  - JavaScript
-  - Reference
-  - arguments
-translation_of: Web/JavaScript/Reference/Functions/arguments
-original_slug: Web/JavaScript/Reference/Fonctions/arguments
 ---
 
 {{jsSidebar("Fonctions")}}
@@ -26,25 +18,25 @@ L'objet **`arguments`** est un objet, **semblable** à un tableau, correspondant
 ## Syntaxe
 
 ```js
-arguments
+arguments;
 ```
 
 ## Description
 
-L'objet `arguments` est une variable locale (intrinsèque et inhérente aux fonctions) disponible dans toutes les fonctions (qui ne sont pas [des fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es)).
+L'objet `arguments` est une variable locale (intrinsèque et inhérente aux fonctions) disponible dans toutes les fonctions (qui ne sont pas [des fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées)).
 
 Vous pouvez accéder aux arguments d'une fonction à l'intérieur de celle-ci en utilisant l'objet `arguments`. Cet objet contient une entrée pour chaque argument passé à la fonction, l'indice de la première entrée commençant à 0. Par exemple, si une fonction est appelée avec trois arguments, on accède à ceux-ci comme suit&nbsp;:
 
 ```js
-arguments[0]
-arguments[1]
-arguments[2]
+arguments[0];
+arguments[1];
+arguments[2];
 ```
 
 Les arguments peuvent aussi être modifiés&nbsp;:
 
 ```js
-arguments[1] = 'nouvelle valeur';
+arguments[1] = "nouvelle valeur";
 ```
 
 ### Type de l'objet `arguments` et liens avec `Array`
@@ -61,7 +53,7 @@ var args = Array.from(arguments);
 
 ### Utilisation de la décomposition avec les arguments
 
-On peut utiliser la méthode {{jsxref("Array.from()")}} ou encore [l'opérateur de décomposition](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateur_de_d%C3%A9composition) afin de convertir cet objet en un _vrai_ `Array` :
+On peut utiliser la méthode {{jsxref("Array.from()")}} ou encore [l'opérateur de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateur_de_décomposition) afin de convertir cet objet en un _vrai_ `Array` :
 
 ```js
 var args = Array.from(arguments);
@@ -71,7 +63,8 @@ var args = [...arguments];
 > **Attention :** Il est déconseillé d'utiliser `slice` sur les arguments car cela peut empêcher certaines optimisations des moteurs JavaScript. Pour ce scénario, on peut par exemple construire un nouveau tableau en parcourant l'objet arguments (à ce sujet, voir [cette page](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments) sur les contraintes d'optimisations liées à V8). Pour cet exemple, on pourra utiliser `Array.apply` :
 >
 > ```js
-> var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
+> var args =
+>   arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments);
 > ```
 
 L'objet `arguments` est disponible uniquement dans le corps d'une fonction. Tenter d'accéder à l'objet `arguments` en dehors de la déclaration d'une fonction renvoie une erreur.
@@ -167,14 +160,14 @@ toto(1, 2, 3); // [1, 2, 3]
 Toutefois, pour les fonctions utilisées en mode non-strict, un **objet `arguments`** n'est fourni à l'intérieur de la fonction uniquement si celle-ci n'utilise pas de [paramètres du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/paramètres_du_reste), pas de [paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_défaut_des_arguments) ou de [paramètre décomposé](/fr/docs/Web/JavaScript/Reference/Opérateurs/Affecter_par_décomposition). Par exemple, dans la fonction suivante, qui utilise un paramètre par défaut, ce sera 10 qui sera renvoyé (et non 100) :
 
 ```js
-function truc(a=1) {
+function truc(a = 1) {
   arguments[0] = 100;
   return a;
 }
 truc(10); // 10
 ```
 
-Si l'objet `arguments` est modifié dans la fonction, cela modifiera la valeur du paramètre passé. Dans cet exemple où il n'y a ni [paramètres du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/param%C3%A8tres_du_reste), ni [paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_défaut_des_arguments), ni [décomposition](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateur_de_d%C3%A9composition), le résultat sera 100 :
+Si l'objet `arguments` est modifié dans la fonction, cela modifiera la valeur du paramètre passé. Dans cet exemple où il n'y a ni [paramètres du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/paramètres_du_reste), ni [paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_défaut_des_arguments), ni [décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateur_de_décomposition), le résultat sera 100 :
 
 ```js
 fonction truc(a) {
@@ -190,7 +183,7 @@ En fait, lorsqu'il n'y a aucun paramètre du reste, paramètre par défaut ou au
 function func(a, b) {
   arguments[0] = 99;
   arguments[1] = 99;
-  console.log(a + " " +b);
+  console.log(a + " " + b);
 }
 
 func(1, 2); // 99 99

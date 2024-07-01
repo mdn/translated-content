@@ -24,8 +24,8 @@ Un [`USVString`](/es/docs/Web/API/USVString).
 ## Ejemplos
 
 En nuestra
-[aplicación de lista de tareas pendientes](https://github.com/mdn/to-do-notifications/tree/gh-pages)
-([ver la aplicación ejecutándose en vivo](https://mdn.github.io/to-do-notifications/)),
+[aplicación de lista de tareas pendientes](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)
+([ver la aplicación ejecutándose en vivo](https://mdn.github.io/dom-examples/to-do-notifications/)),
 usamos el constructor
 [`Notification()`](/es/docs/Web/API/Notification/Notification) para disparar una
 notificación, pasandole los argumentos que especifican el cuerpo, ícono y

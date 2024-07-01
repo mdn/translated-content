@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.setTransform()
 slug: Web/API/CanvasRenderingContext2D/setTransform
-translation_of: Web/API/CanvasRenderingContext2D/setTransform
 ---
 
 {{APIRef}}
@@ -48,8 +47,8 @@ Ceci est seulement un fragment de code simple qui utilise la méthode `setTransf
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 ctx.setTransform(1, 1, 0, 1, 0, 0);
 ctx.fillRect(0, 0, 100, 100);
@@ -67,7 +66,8 @@ Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel 
 </div>
 <textarea id="code" class="playable-code">
 ctx.setTransform(1,1,0,1,0,0);
-ctx.fillRect(0,0,100,100);</textarea>
+ctx.fillRect(0,0,100,100);</textarea
+>
 ```
 
 ```js hidden
@@ -83,14 +83,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

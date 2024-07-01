@@ -33,8 +33,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 以下示例演示了一个字符串在另一个字符串之前、之后或与另一个字符串处于同一级别时可能出现的不同结果：
 
 ```js
-console.log(new Intl.Collator().compare("a", "c")); // -1，或一些其它的负值
-console.log(new Intl.Collator().compare("c", "a")); // 1，或一些其它的正值
+console.log(new Intl.Collator().compare("a", "c")); // -1，或一些其他的负值
+console.log(new Intl.Collator().compare("c", "a")); // 1，或一些其他的正值
 console.log(new Intl.Collator().compare("a", "a")); // 0
 ```
 
@@ -47,11 +47,11 @@ console.log(new Intl.Collator().compare("a", "a")); // 0
 ```js
 // 德语中，ä 使用 a 的排序
 console.log(new Intl.Collator("de").compare("ä", "z"));
-// -1，或一些其它的负值
+// -1，或一些其他的负值
 
 // 在瑞典语中，ä 排在 z 之后
 console.log(new Intl.Collator("sv").compare("ä", "z"));
-// 1，或一些其它的正值
+// 1，或一些其他的正值
 ```
 
 ### 使用 options
@@ -65,7 +65,7 @@ console.log(new Intl.Collator("de", { sensitivity: "base" }).compare("ä", "a"))
 
 // 瑞典语中，ä 和 a 是单独的基本字母
 console.log(new Intl.Collator("sv", { sensitivity: "base" }).compare("ä", "a"));
-// 1，或一些其它的正值
+// 1，或一些其他的正值
 ```
 
 ## 规范

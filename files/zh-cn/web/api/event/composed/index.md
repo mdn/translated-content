@@ -28,19 +28,19 @@ var composed = Event.composed;
 第一个定义如下所示：
 
 ```js
-customElements.define('open-shadow',
+customElements.define(
+  "open-shadow",
   class extends HTMLElement {
     constructor() {
       super();
 
-      let pElem = document.createElement('p');
-      pElem.textContent = this.getAttribute('text');
+      let pElem = document.createElement("p");
+      pElem.textContent = this.getAttribute("text");
 
-      let shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(pElem);
-
-  }
-});
+      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(pElem);
+    }
+  },
+);
 ```
 
 我们将他们插入我们的页面当中：
@@ -53,7 +53,7 @@ customElements.define('open-shadow',
 然后在 `html` 标签上监听 click 事件：
 
 ```js
-document.querySelector('html').addEventListener('click',function(e) {
+document.querySelector("html").addEventListener("click", function (e) {
   console.log(e.composed);
   console.log(e.composedPath());
 });

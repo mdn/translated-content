@@ -12,7 +12,7 @@ slug: Web/CSS/orphans
 orphans: 2;
 orphans: 3;
 
-/* Global values */
+/* グローバル値 */
 orphans: inherit;
 orphans: initial;
 orphans: revert;
@@ -42,11 +42,15 @@ orphans: unset;
 
 #### HTML
 
-```html
+```html-nolint
 <div>
   <p>これは幾らかのテキストを含む最初の段落です。</p>
-  <p>これは最初の段落よりも多くのテキストを含む第二の段落です。これは orphans がどの様に動作するのかを示すために用います。</p>
-  <p>これは第三の段落です。これは最初の段落よりも少しだけ長いテキストを含んでいます。</p>
+  <p>
+    これは最初の段落よりも多くのテキストを含む第二の段落です。これは orphans がどの様に動作するのかを示すために用います。
+  </p>
+  <p>
+    これは第三の段落です。これは最初の段落よりも少しだけ長いテキストを含んでいます。
+  </p>
 </div>
 ```
 

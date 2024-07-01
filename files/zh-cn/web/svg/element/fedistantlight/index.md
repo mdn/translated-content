@@ -26,7 +26,7 @@ slug: Web/SVG/Element/feDistantLight
 
 ## DOM 接口
 
-该元素实现了[`SVGFEDistantLightElement`](/zh-CN/DOM/SVGFEDistantLightElement)接口。
+该元素实现了 [`SVGFEDistantLightElement`](/zh-CN/DOM/SVGFEDistantLightElement) 接口。
 
 ## 参见
 

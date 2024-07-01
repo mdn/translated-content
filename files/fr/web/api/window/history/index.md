@@ -1,7 +1,6 @@
 ---
 title: Window.history
 slug: Web/API/Window/history
-translation_of: Web/API/Window/history
 ---
 
 {{APIRef}}
@@ -14,8 +13,8 @@ En particulier, cet article explique les caractéristiques des méthodes `pushSt
 ## Exemple
 
 ```js
-history.back();     // similaire au bouton de retour
-history.go(-1);     // similaire à history.back();
+history.back(); // similaire au bouton de retour
+history.go(-1); // similaire à history.back();
 ```
 
 ## Notes

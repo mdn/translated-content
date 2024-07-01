@@ -1,7 +1,6 @@
 ---
 title: Gestionnaires de protocoles web
 slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
-translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 ---
 
 ### Contexte
@@ -12,7 +11,7 @@ Il est relativement courant de voir des pages web lier des ressources utilisant 
 <a href="mailto:webmaster@example.com">Webmestre</a>
 ```
 
-Les autrices et auteurs web peuvent utiliser un lien `mailto:` pour fournir aux utilisateurs une manière pratique d'envoyer un courrier électronique, directement depuis la page web. Lorsque le lien est activé, le navigateur est supposé lancer l'application par défaut du bureau pour le courrier électronique. On pourrait appeler cela un gestionnaire de protocole *du bureau*.
+Les autrices et auteurs web peuvent utiliser un lien `mailto:` pour fournir aux utilisateurs une manière pratique d'envoyer un courrier électronique, directement depuis la page web. Lorsque le lien est activé, le navigateur est supposé lancer l'application par défaut du bureau pour le courrier électronique. On pourrait appeler cela un gestionnaire de protocole _du bureau_.
 
 Les gestionnaires de protocoles web permettent à des applications web de participer également à ce processus. Leur importance va grandissant au fur et à mesure que différents types d'applications migrent vers le web. De fait, un grand nombre d'applications de courrier déjà basées sur le Web pourraient traiter un lien `mailto`.
 
@@ -21,9 +20,11 @@ Les gestionnaires de protocoles web permettent à des applications web de partic
 La définition d'une application web comme gestionnaire de protocole n'est pas un processus difficile. Dans les grandes lignes, l'application web utilise [`registerProtocolHandler()`](/fr/docs/Web/API/Navigator/registerProtocolHandler) pour s'enregistrer auprès du navigateur comme gestionnaire potentiel pour un protocole donné. Par exemple&nbsp;:
 
 ```js
-navigator.registerProtocolHandler("web+burger",
-                                  "https://www.google.com/?uri=%s",
-                                  "Gestionnaire de burger");
+navigator.registerProtocolHandler(
+  "web+burger",
+  "https://www.google.com/?uri=%s",
+  "Gestionnaire de burger",
+);
 ```
 
 Où les paramètres sont&nbsp;:
@@ -45,15 +46,20 @@ Enregistrer plus d'une fois le même gestionnaire de protocole déclenchera l'ap
 ##### JavaScript
 
 ```js
-navigator.registerProtocolHandler("web+burger",
-                                  "https://www.google.com/?uri=%s",
-                                  "Gestionnaire de burger");
+navigator.registerProtocolHandler(
+  "web+burger",
+  "https://www.google.com/?uri=%s",
+  "Gestionnaire de burger",
+);
 ```
 
 ##### HTML
 
 ```html
-<p>Cette page web installera un gestionnaire de protocole pour le protocole <code>web+burger:</code>.</p>
+<p>
+  Cette page web installera un gestionnaire de protocole pour le protocole
+  <code>web+burger:</code>.
+</p>
 ```
 
 ### Activation

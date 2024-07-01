@@ -1,11 +1,6 @@
 ---
 title: homepage_url
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
 ---
 
 {{AddonSidebar}}
@@ -43,6 +38,6 @@ c'est une [proriété localisable](/fr/Add-ons/WebExtensions/Internationalizatio
 "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify"
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.homepage_url")}}
+{{Compat}}

@@ -1,7 +1,6 @@
 ---
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
-original_slug: Web/JavaScript/Reference/Global_Objects/Set
 ---
 
 {{JSRef}}
@@ -57,9 +56,11 @@ El método [`has`](/es/docs/Web/JavaScript/Reference/Global_Objects/Set/has) de 
 - {{jsxref("Set.prototype.values", " Set.prototype.keys()")}}
   - : Un alias para {{jsxref("Set.prototype.values()")}}.
 - {{jsxref("Set.prototype.entries()")}}
+
   - : Devuelve un nuevo objeto iterador que contiene **un arreglo de `[value, value]`** para cada elemento del objeto `Set`, en orden de inserción.
 
     Esto es similar al objeto {{jsxref("Map")}}, de modo que la _clave_ de cada entrada es la misma que su _valor_ para un `Set`.
+
 - {{jsxref("Set.forEach", "Set.prototype.forEach(<var>callbackFn</var>[, <var>thisArg</var>])")}}
   - : Llama a `callbackFn` una vez por cada valor presente en el objeto `Set`, en orden de inserción. Si se proporciona un parámetro `thisArg`, se utilizará como valor `this` para cada invocación de `callbackFn`.
 
@@ -68,33 +69,33 @@ El método [`has`](/es/docs/Web/JavaScript/Reference/Global_Objects/Set/has) de 
 ### Utilizando el objeto Set
 
 ```js
-const mySet1 = new Set()
+const mySet1 = new Set();
 
-mySet1.add(1)             // Set [ 1 ]
-mySet1.add(5)             // Set [ 1, 5 ]
-mySet1.add(5)             // Set [ 1, 5 ]
-mySet1.add('algún texto') // Set [ 1, 5, 'algún texto' ]
-const o = {a: 1, b: 2}
-mySet1.add(o)
+mySet1.add(1); // Set [ 1 ]
+mySet1.add(5); // Set [ 1, 5 ]
+mySet1.add(5); // Set [ 1, 5 ]
+mySet1.add("algún texto"); // Set [ 1, 5, 'algún texto' ]
+const o = { a: 1, b: 2 };
+mySet1.add(o);
 
-mySet1.add({a: 1, b: 2})   // o está haciendo referencia a un objeto diferente, 
-                           // por lo que está bien
+mySet1.add({ a: 1, b: 2 }); // o está haciendo referencia a un objeto diferente,
+// por lo que está bien
 
-mySet1.has(1)              // true
-mySet1.has(3)              // false, ya que 3 no se ha agregado al conjunto
-mySet1.has(5)              // true
-mySet1.has(Math.sqrt(25))  // true
-mySet1.has('Algún Texto'.toLowerCase()) // true
-mySet1.has(o)       // true
+mySet1.has(1); // true
+mySet1.has(3); // false, ya que 3 no se ha agregado al conjunto
+mySet1.has(5); // true
+mySet1.has(Math.sqrt(25)); // true
+mySet1.has("Algún Texto".toLowerCase()); // true
+mySet1.has(o); // true
 
-mySet1.size         // 5
+mySet1.size; // 5
 
-mySet1.delete(5)    // elimina 5 del conjunto
-mySet1.has(5)       // false, 5 ha sido eliminado
+mySet1.delete(5); // elimina 5 del conjunto
+mySet1.has(5); // false, 5 ha sido eliminado
 
-mySet1.size         // 4, ya que acabamos de eliminar un valor
+mySet1.size; // 4, ya que acabamos de eliminar un valor
 
-console.log(mySet1)
+console.log(mySet1);
 // imprime en consola Set(4) [ 1, "algún texto", {…}, {…} ] en Firefox
 // imprime en consola Set(4) { 1, "algún texto", {…}, {…} } en Chrome
 ```
@@ -107,15 +108,15 @@ console.log(mySet1)
 //   1, "algún texto", {"a": 1, "b": 2}, {"a": 1, "b": 2}
 for (let item of mySet1) console.log(item)
 
-// imprime en consola los elementos en el orden: 
+// imprime en consola los elementos en el orden:
 //   1, "algún texto", {"a": 1, "b": 2}, {"a": 1, "b": 2}
 for (let item of mySet1.keys()) console.log(item)
 
-// imprime en consola los elementos en el orden: 
+// imprime en consola los elementos en el orden:
 //   1, "algún texto", {"a": 1, "b": 2}, {"a": 1, "b": 2}
 for (let item of mySet1.values()) console.log(item)
 
-// imprime en consola los elementos en el orden: 
+// imprime en consola los elementos en el orden:
 //   1, "algún texto", {"a": 1, "b": 2}, {"a": 1, "b": 2}
 // (key y value son los mismos aquí)
 for (let [key, value] of mySet1.entries()) console.log(key)
@@ -155,74 +156,74 @@ mySet2.forEach(function(value) {
 function isSuperset(set, subset) {
   for (let elem of subset) {
     if (!set.has(elem)) {
-      return false
+      return false;
     }
   }
-  return true
+  return true;
 }
 
 function union(setA, setB) {
-  let _union = new Set(setA)
+  let _union = new Set(setA);
   for (let elem of setB) {
-    _union.add(elem)
+    _union.add(elem);
   }
-  return _union
+  return _union;
 }
 
 function intersection(setA, setB) {
-  let _intersection = new Set()
+  let _intersection = new Set();
   for (let elem of setB) {
     if (setA.has(elem)) {
-      _intersection.add(elem)
+      _intersection.add(elem);
     }
   }
-  return _intersection
+  return _intersection;
 }
 
 function symmetricDifference(setA, setB) {
-  let _difference = new Set(setA)
+  let _difference = new Set(setA);
   for (let elem of setB) {
     if (_difference.has(elem)) {
-      _difference.delete(elem)
+      _difference.delete(elem);
     } else {
-      _difference.add(elem)
+      _difference.add(elem);
     }
   }
-  return _difference
+  return _difference;
 }
 
 function difference(setA, setB) {
-  let _difference = new Set(setA)
+  let _difference = new Set(setA);
   for (let elem of setB) {
-    _difference.delete(elem)
+    _difference.delete(elem);
   }
-  return _difference
+  return _difference;
 }
 
 // Ejemplos
-const setA = new Set([1, 2, 3, 4])
-const setB = new Set([2, 3])
-const setC = new Set([3, 4, 5, 6])
+const setA = new Set([1, 2, 3, 4]);
+const setB = new Set([2, 3]);
+const setC = new Set([3, 4, 5, 6]);
 
-isSuperset(setA, setB)          // devuelve true
-union(setA, setC)               // devuelve Set {1, 2, 3, 4, 5, 6}
-intersection(setA, setC)        // devuelve Set {3, 4}
-symmetricDifference(setA, setC) // devuelve Set {1, 2, 5, 6}
-difference(setA, setC)          // devuelve Set {1, 2}
+isSuperset(setA, setB); // devuelve true
+union(setA, setC); // devuelve Set {1, 2, 3, 4, 5, 6}
+intersection(setA, setC); // devuelve Set {3, 4}
+symmetricDifference(setA, setC); // devuelve Set {1, 2, 5, 6}
+difference(setA, setC); // devuelve Set {1, 2}
 ```
 
 ### Relación con objetos Array
 
 ```js
-let myArray = ['value1', 'value2', 'value3']
+let myArray = ["value1", "value2", "value3"];
 
 // Use el constructor Set regular para transformar una matriz en un conjunto
-let mySet = new Set(myArray)
+let mySet = new Set(myArray);
 
-mySet.has('value1')     // devuelve true
+mySet.has("value1"); // devuelve true
 
 // Utilice el operador de dispersión para transformar un conjunto en una matriz.
-console.log([...mySet]) // Le mostrará exactamente el mismo Array que myArray
+console.log([...mySet]); // Le mostrará exactamente el mismo Array que myArray
 ```
 
 ### Eliminar elementos duplicados del Array
@@ -230,9 +231,9 @@ console.log([...mySet]) // Le mostrará exactamente el mismo Array que myArray
 ```js
 // Úselo para eliminar elementos duplicados del Array
 
-const numbers = [2,3,4,4,2,3,3,4,4,5,5,6,6,7,5,32,3,4,5]
+const numbers = [2, 3, 4, 4, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 5, 32, 3, 4, 5];
 
-console.log([...new Set(numbers)])
+console.log([...new Set(numbers)]);
 
 // [2, 3, 4, 5, 6, 7, 32]
 ```
@@ -240,24 +241,22 @@ console.log([...new Set(numbers)])
 ### Relación con Strings
 
 ```js
-let text = 'India'
+let text = "India";
 
-const mySet = new Set(text)  // Set(5) {'I', 'n', 'd', 'i', 'a'}
-mySet.size  // 5
+const mySet = new Set(text); // Set(5) {'I', 'n', 'd', 'i', 'a'}
+mySet.size; // 5
 
 // mayúsculas, minúsculas y omisión duplicada
-new Set("Firefox")  // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
-new Set("firefox")  // Set(6) { "f", "i", "r", "e", "o", "x" }
+new Set("Firefox"); // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
+new Set("firefox"); // Set(6) { "f", "i", "r", "e", "o", "x" }
 ```
 
 ### Use Set para garantizar la unicidad de una lista de valores
 
 ```js
-const array = Array
-  .from(document.querySelectorAll('[id]'))
-  .map(function(e) {
-    return e.id
-  });
+const array = Array.from(document.querySelectorAll("[id]")).map(function (e) {
+  return e.id;
+});
 
 const set = new Set(array);
 console.assert(set.size == array.length);

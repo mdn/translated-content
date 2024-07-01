@@ -16,11 +16,11 @@ Django의 첫번째 문서에서는 "Django가 뭐지?"라는 질문에 답해�
       <td>
         기본적인 컴퓨터 지식.
         <a
-          href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps"
+          href="https://developer.mozilla.org/ko/docs/Learn/Server-side/First_steps"
           >server-side website 프로그래밍</a
         >에 대한 전반적인 이해, 그리고 웹사이트의
         <a
-          href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/ko/docs/Learn/Server-side/First_steps/Client-Server_overview"
           >client-server interactions</a
         >
         의 매커니즘에 대한 특정한 지식.
@@ -61,7 +61,7 @@ Django는 다음과 같은 소프트웨어를 개발하는데 도움을 줍니�
     Django 는 SQL 인젝션, 크로스사이트 스크립팅, 크로스사이트 요청 위조 그리고 클릭 하이젝킹 (이러한 공격 방법에 대한 상세 정보는 [Website security](/ko/docs/Learn/Server-side/First_steps/Website_security)에서 볼 수 있습니다)과 같은 보안 취약점을 보완할 방법 기본적으로 제공합니다.
 
 - Scalable(확장성 있는)
-  - : Django는 컴포넌트 기반의 “[shared-nothing](https://en.wikipedia.org/wiki/Shared_nothing_architecture)” 아키텍쳐(각각의 아키텍쳐가 독립적이어서 필요하다면 교체 및 변경할 수 있는)를 사용합니다. 각 부분이 분명하게 분리되면 어떤 레벨에서든(예를 들면 캐싱 서버, 데이터베이스 서버, 혹은 어플리케이션 서버) 하드웨어를 추가해서 발생하는 늘어난 트래픽에 대응해 크기를 변경할 수 있게 됩니다. 사용자가 가장 많은 몇몇 사이트는 요구사항에 맞춰서 Django의 크기를 성공적으로 변경했습니다. (예를들면 Instagram, Disqus 등)
+  - : Django는 컴포넌트 기반의 "[shared-nothing](https://en.wikipedia.org/wiki/Shared_nothing_architecture)" 아키텍쳐(각각의 아키텍쳐가 독립적이어서 필요하다면 교체 및 변경할 수 있는)를 사용합니다. 각 부분이 분명하게 분리되면 어떤 레벨에서든(예를 들면 캐싱 서버, 데이터베이스 서버, 혹은 어플리케이션 서버) 하드웨어를 추가해서 발생하는 늘어난 트래픽에 대응해 크기를 변경할 수 있게 됩니다. 사용자가 가장 많은 몇몇 사이트는 요구사항에 맞춰서 Django의 크기를 성공적으로 변경했습니다. (예를들면 Instagram, Disqus 등)
 - Maintainable(유지보수가 쉬운)
   - : Django 코드는 유지보수가 쉽고 재사용하기 좋게끔 하는 디자인 원칙들과 패턴들을 이용하여 작성됩니다. 특히 Don't Repeat Yourself (DRY) 원칙을 적용해서 불필요한 중복이 없고 많은 양의 코드를 줄였습니다. 또한 Django는 관련된 기능들을 재사용 가능한 "applications"로 그룹화했고, 더 낮은 레벨에서 관련된 코드들을 모듈로 만들었습니다. ([Model View Controller (MVC)](/en-US/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) 패턴과 유사합니다).
 - Portable(포터블한)

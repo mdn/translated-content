@@ -1,7 +1,6 @@
 ---
 title: Etiqueta básica para projetos open source
 slug: MDN/Community/Open_source_etiquette
-original_slug: MDN/Contribute/Open_source_etiquette
 ---
 
 {{MDNSidebar}}

@@ -84,35 +84,35 @@ writing-mode: unset;
     <td class="example Text1"><span>我家没有电脑。</span></td>
     <td class="example Text1"><span>Example text</span></td>
     <td class="example Text1"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text1"><span>1994年に至っては</span></td>
+    <td class="example Text1"><span>1994 年に至っては</span></td>
   </tr>
   <tr>
     <td>vertical-lr</td>
     <td class="example Text2"><span>我家没有电脑。</span></td>
     <td class="example Text2"><span>Example text</span></td>
     <td class="example Text2"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text2"><span>1994年に至っては</span></td>
+    <td class="example Text2"><span>1994 年に至っては</span></td>
   </tr>
   <tr>
     <td>vertical-rl</td>
     <td class="example Text3"><span>我家没有电脑。</span></td>
     <td class="example Text3"><span>Example text</span></td>
     <td class="example Text3"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text3"><span>1994年に至っては</span></td>
+    <td class="example Text3"><span>1994 年に至っては</span></td>
   </tr>
   <tr>
     <td>sideways-lr</td>
     <td class="example Text4"><span>我家没有电脑。</span></td>
     <td class="example Text4"><span>Example text</span></td>
     <td class="example Text4"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text4"><span>1994年に至っては</span></td>
+    <td class="example Text4"><span>1994 年に至っては</span></td>
   </tr>
   <tr>
     <td>sideways-rl</td>
     <td class="example Text5"><span>我家没有电脑。</span></td>
     <td class="example Text5"><span>Example text</span></td>
     <td class="example Text5"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text5"><span>1994年に至っては</span></td>
+    <td class="example Text5"><span>1994 年に至っては</span></td>
   </tr>
 </table>
 ```
@@ -189,6 +189,6 @@ th {
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}
 - {{Cssxref("text-combine-upright")}}
-- [CSS 逻辑属性](/zh-CN/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS 逻辑属性](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
 - [为竖排文本（中文、日语、韩语和蒙古语）赋予样式](https://www.w3.org/International/articles/vertical-text/)
 - 浏览器支持测试结果：<https://w3c.github.io/i18n-tests/results/writing-mode-vertical>

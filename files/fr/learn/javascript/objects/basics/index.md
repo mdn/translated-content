@@ -1,15 +1,6 @@
 ---
 title: Les bases de JavaScript, orienté objet
 slug: Learn/JavaScript/Objects/Basics
-tags:
-  - API
-  - Apprendre
-  - Débutant
-  - JavaScript
-  - Objet
-  - Syntaxe
-  - this
-translation_of: Learn/JavaScript/Objects/Basics
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
@@ -44,7 +35,7 @@ Dans ce premier article sur les objets JavaScript, nous verrons la syntaxe des o
 
 Un objet est une collection de données apparentées et/ou de fonctionnalités (qui, souvent, se composent de plusieurs variables et fonctions, appelées propriétés et méthodes quand elles sont dans des objets). Prenons un exemple pour voir à quoi cela ressemble.
 
-Pour commencer, faites une copie locale de notre fichier [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Il contient peu de choses : un élément {{HTMLElement("script")}} pour écrire notre code à l'intérieur. Nous utiliserons ces éléments de base pour explorer les bases de la syntaxe objet. Durant cette exemple, vous devriez avoir [la console JavaScript des outils de développement](/fr/docs/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs#La_console_JavaScript) ouverte et prête, pour y saisir des commandes.
+Pour commencer, faites une copie locale de notre fichier [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Il contient peu de choses : un élément {{HTMLElement("script")}} pour écrire notre code à l'intérieur. Nous utiliserons ces éléments de base pour explorer les bases de la syntaxe objet. Durant cette exemple, vous devriez avoir [la console JavaScript des outils de développement](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs#La_console_JavaScript) ouverte et prête, pour y saisir des commandes.
 
 Comme souvent dans JavaScript, pour créer un objet, on commence avec la définition et l'initialisation d'une variable. Essayez de mettre le code ci-dessous sous le code déjà écrit de votre fichier JavaScript, puis sauvegardez et rafraichissez la page :
 
@@ -62,28 +53,39 @@ Félicitations, vous avez créé votre premier objet ! Mais c'est un objet vide,
 
 ```js
 var personne = {
-  nom: ['Jean', 'Martin'],
+  nom: ["Jean", "Martin"],
   age: 32,
-  sexe: 'masculin',
-  interets: ['musique', 'skier'],
-  bio: function() {
-    alert(this.nom[0] + ' ' + this.nom[1] + ' a ' + this.age + ' ans. Il aime ' + this.interets[0] + ' et ' + this.interets[1] + '.');
+  sexe: "masculin",
+  interets: ["musique", "skier"],
+  bio: function () {
+    alert(
+      this.nom[0] +
+        " " +
+        this.nom[1] +
+        " a " +
+        this.age +
+        " ans. Il aime " +
+        this.interets[0] +
+        " et " +
+        this.interets[1] +
+        ".",
+    );
   },
-  salutation: function() {
-    alert('Bonjour ! Je suis ' + this.nom[0] + '.');
-  }
+  salutation: function () {
+    alert("Bonjour ! Je suis " + this.nom[0] + ".");
+  },
 };
 ```
 
 Après avoir sauvegardé et rafraîchit la page, essayez d'entrer les lignes suivantes dans le champ de saisie `input` :
 
 ```js
-personne.nom
-personne.nom[0]
-personne.age
-personne.interets[1]
-personne.bio()
-personne.salutation()
+personne.nom;
+personne.nom[0];
+personne.age;
+personne.interets[1];
+personne.bio();
+personne.salutation();
 ```
 
 Vous avez désormais des données et des fonctionnalités dans votre objet, et vous pouvez y accéder avec une une syntaxe simple et claire !
@@ -98,8 +100,8 @@ Chaque paire de nom/valeur doit être séparée par une virgule, et le nom et la
 var monObjet = {
   nomDuMembre1: valeurDuMembre1,
   nomDuMembre2: valeurDuMembre2,
-  nomDuMembre3: valeurDuMembre3
-}
+  nomDuMembre3: valeurDuMembre3,
+};
 ```
 
 La valeur d'un membre dans un objet peut être n'importe quoi — dans notre objet `personne`, nous avons du texte, un nombre, deux tableaux et deux fonctions. Les quatre premières éléments sont des données appelées **propriétés** de l'objet, et les deux derniers éléments sont des fonctions qui utilisent les données de l'objet pour faire quelque chose, et sont appelées des **méthodes** de l'objet.
@@ -117,9 +119,9 @@ Ci-dessus, on accède aux membres de l'objet en utilisant la **notation avec un 
 Le nom de l'objet (`personne`) agit comme un **espace de noms** (ou _namespace_ en anglais) — il doit être entré en premier pour accéder aux membres **encapsulés** dans l'objet. Ensuite, on écrit un point, puis le membre auquel on veut accéder — que ce soit le nom d'une propriété, un élément d'un tableau, ou un appel à une méthode de l'objet. Par exemple :
 
 ```js
-personne.age
-personne.interets[1]
-personne.bio()
+personne.age;
+personne.interets[1];
+personne.bio();
 ```
 
 ### Sous-espaces de noms
@@ -142,22 +144,22 @@ nom : {
 Ici, nous avons bien créé un **sous-espace de noms**. Ça a l'air compliqué, mais ça ne l'est pas. Pour accéder à ces élements, il suffit de chaîner une étape de plus avec un autre point. Essayez ceci :
 
 ```js
-personne.nom.prenom
-personne.nom.nomFamille
+personne.nom.prenom;
+personne.nom.nomFamille;
 ```
 
 **Important** : à partir de maintenant, vous allez aussi devoir reprendre votre code et modifier toutes les occurrences de :
 
 ```js
-nom[0]
-nom[1]
+nom[0];
+nom[1];
 ```
 
 en
 
 ```js
-nom.prenom
-nom.nomFamille
+nom.prenom;
+nom.nomFamille;
 ```
 
 sinon vos méthodes ne fonctionneront plus.
@@ -167,15 +169,15 @@ sinon vos méthodes ne fonctionneront plus.
 Il y a une autre façon d'accéder aux membres de l'objet : la notation avec les crochets. Plutôt que d'utiliser ceci :
 
 ```js
-personne.age
-personne.nom.prenom
+personne.age;
+personne.nom.prenom;
 ```
 
 Vous pouvez utiliser :
 
 ```js
-personne['age']
-personne['nom']['prenom']
+personne["age"];
+personne["nom"]["prenom"];
 ```
 
 Cela ressemble beaucoup à la façon d'accéder aux éléments d'un tableau et c'est bien la même chose — au lieu d'utiliser un indice numérique pour sélectionner un élément, on utilise le nom associé à chaque valeur d'un membre. Ce n'est pas pour rien que les objets sont parfois appelés tableaux associatifs : ils associent des chaînes de caractères (les noms des membres) à des valeurs, de la même façon que les tableaux associent des nombres à des valeurs.
@@ -185,56 +187,58 @@ Cela ressemble beaucoup à la façon d'accéder aux éléments d'un tableau et c
 Jusqu'ici, nous avons vu comment **accéder** aux membres d'un objet. Vous pouvez aussi **modifier** la valeur d'un membre de l'objet en déclarant simplement le membre que vous souhaitez modifier(en utilisant la notation avec le point ou par crochet), comme ceci :
 
 ```js
-personne.age = 45
-personne['nom']['nomFamille'] = 'Rabuchon'
+personne.age = 45;
+personne["nom"]["nomFamille"] = "Rabuchon";
 ```
 
 Essayez de saisir ces deux lignes précédentes, puis accédez à nouveau aux membres pour voir ce qui a changé :
 
 ```js
-personne.age
-personne['nom']['nomFamille']
+personne.age;
+personne["nom"]["nomFamille"];
 ```
 
 Définir les membres ne s'arrête pas à mettre à jour la valeur de propriétés ou méthodes existantes; **vous pouvez aussi créer de nouveaux membres**. Essayez ceci :
 
 ```js
-personne['yeux'] = 'noisette'
-personne.auRevoir = function() { alert("Bye bye tout le monde !"); }
+personne["yeux"] = "noisette";
+personne.auRevoir = function () {
+  alert("Bye bye tout le monde !");
+};
 ```
 
 Vous pouvez maintenant tester vos nouveaux membres :
 
 ```js
-personne['yeux']
-personne.auRevoir()
+personne["yeux"];
+personne.auRevoir();
 ```
 
 Un des aspects pratiques de la notation par crochet est qu'elle peut être utilisée pour définir dynamiquement les valeurs des membres, mais aussi pour définir les noms. Imaginons que nous voulions que les utilisateurs puissent saisir des types de valeurs personnalisées pour les données des personnes, en entrant le nom du membre et sa valeur dans deux champs `input`. On pourrait avoir ses valeurs comme ceci :
 
 ```js
-var monNomDeDonnee = nomInput.value
-var maValeurDeDonnee = valeurNom.value
+var monNomDeDonnee = nomInput.value;
+var maValeurDeDonnee = valeurNom.value;
 ```
 
 On peut alors ajouter le nom et la valeur du nouveau membre de l'objet `personne` comme ceci :
 
 ```js
-personne[monNomDeDonnee] = maValeurDeDonnee
+personne[monNomDeDonnee] = maValeurDeDonnee;
 ```
 
 Pour le tester, essayez d'ajouter les lignes ci-dessous dans votre code, juste après le crochet fermante de l'objet `personne` :
 
 ```js
-var monNomDeDonnee = 'hauteur'
-var maValeurDeDonnee = '1.75m'
-personne[monNomDeDonnee] = maValeurDeDonnee
+var monNomDeDonnee = "hauteur";
+var maValeurDeDonnee = "1.75m";
+personne[monNomDeDonnee] = maValeurDeDonnee;
 ```
 
 Sauvegardez, rafraîchissez et entrez le texte suivant dans le champ de saisie (l'élément `input`) :
 
 ```js
-personne.hauteur
+personne.hauteur;
 ```
 
 Nous n'aurions pas pu construire ce membre avec la notation avec un point, car celle-ci n'accepte qu'un nom et pas une variable pointant vers un nom.
@@ -255,18 +259,18 @@ Essayons d'illustrer nos propos par une paire d'objet `personne` simplifiée :
 
 ```js
 var personne1 = {
-  nom: 'Christophe',
-  salutation: function() {
-    alert('Bonjour ! Je suis ' + this.nom + '.');
-  }
-}
+  nom: "Christophe",
+  salutation: function () {
+    alert("Bonjour ! Je suis " + this.nom + ".");
+  },
+};
 
 var personne2 = {
-  nom: 'Bruno',
-  salutation: function() {
-    alert('Bonjour ! Je suis ' + this.nom + '.');
-  }
-}
+  nom: "Bruno",
+  salutation: function () {
+    alert("Bonjour ! Je suis " + this.nom + ".");
+  },
+};
 ```
 
 Dans ce cas, `personne1.salutation()` affichera "Bonjour ! Je suis Christophe.", tandis que `personne2.salutation()` affichera "Bonjour ! Je suis Bruno." alors que le code est le même dans les deux cas. Comme expliqué plus tôt, `this` est égal à l'objet dans lequel se situe le code. Ce n'est pas très utile quand on écrit des objets littéraux à la main, mais ça prend tout son sens quand on génère des objets dynamiques (avec des constructeurs par exemple).
@@ -278,7 +282,7 @@ Tout au long de ces exemples, vous vous êtes probablement dit que la notation a
 Ainsi, quand vous utilisez une méthode comme :
 
 ```js
-maChaineDeCaracteres.split(',');
+maChaineDeCaracteres.split(",");
 ```
 
 Vous utilisez une méthode disponible dans une instance du type {{jsxref("String")}}. Dès que vous créez une chaîne de caractères dans votre code, cette chaîne est automatiquement créée comme une instance de `String` et possède donc plusieurs méthodes/propriétés communes.
@@ -286,8 +290,8 @@ Vous utilisez une méthode disponible dans une instance du type {{jsxref("String
 Quand vous accédez au DOM (_Document Object Model_ ou « modèle objet du document ») avec `document` et des lignes telles que :
 
 ```js
-var monDiv = document.createElement('div');
-var maVideo = document.querySelector('video');
+var monDiv = document.createElement("div");
+var maVideo = document.querySelector("video");
 ```
 
 Vous utilisez une méthode disponible dans l'instance de la classe {{domxref("Document")}}. Pour chaque page web chargée, une instance de `Document` est créée, appelée `document` et qui représente la structure entière de la page, son contenu et d'autres caractéristiques telles que son URL. Encore une fois, cela signifie qu'elle possède plusieurs méthodes/propriétés communes.
@@ -297,7 +301,7 @@ C'est également vrai pour beaucoup d'autres objets/API natifs que vous avez uti
 On notera que les objets/API natifs ne créent pas toujours automatiquement des instances d'objet. Par exemple, [l'API Notifications](/fr/docs/Web/API/Notifications_API) — qui permet aux navigateurs modernes de déclencher leurs propres notifications — vous demande d'instancier vous-même une nouvelle instance d'objet en utilisant le constructeur pour chaque notification que vous souhaitez lancer. Essayez d'entrer le code ci-dessous dans la console JavaScript :
 
 ```js
-var maNotification = new Notification('Bonjour !');
+var maNotification = new Notification("Bonjour !");
 ```
 
 Nous verrons les constructeurs dans un prochain article.

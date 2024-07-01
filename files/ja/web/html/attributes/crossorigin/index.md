@@ -1,20 +1,22 @@
 ---
-title: 'HTML 属性: crossorigin'
+title: "HTML 属性: crossorigin"
 slug: Web/HTML/Attributes/crossorigin
+l10n:
+  sourceCommit: 83f30ecaaeb6227dc0d4551f71eb8be1cacb8e94
 ---
 
 {{HTMLSidebar}}
 
-**`crossorigin`** 属性は、 {{ HTMLElement("audio") }}, {{ HTMLElement("img") }}, {{ HTMLElement("link") }}, {{ HTMLElement("script") }}, {{ HTMLElement("video") }} の各要素で有効であり、 [CORS](/ja/docs/Web/HTTP/CORS) への対応を提供し、したがって要素が読み取るデータのために CORS リクエストの構成を有効にします。要素によっては、属性は CORS 設定属性になります。
+**`crossorigin`** 属性は、{{HTMLElement("audio")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("video")}} の各要素で有効です。[CORS](/ja/docs/Web/HTTP/CORS) への対応を提供し、したがって要素が読み取るデータのために CORS リクエストの構成を有効にします。要素によっては、属性は CORS 設定属性になります。
 
 メディア要素の `crossorigin` コンテンツ属性は CORS 設定属性です。
 
-これらの属性は列挙型で、以下の値を取ることができます。
+これらの属性は[列挙型](/ja/docs/Glossary/Enumerated)で、以下の値を取ることができます。
 
 - `anonymous`
-  - : リクエストは CORS ヘッダーを使用し、資格情報フラグには `'same-origin'` に設定されます。宛先が同一オリジンでない限り、クッキー、クライアントサイド SSL 証明書、HTTP 認証による**ユーザー資格情報**の交換は行われません。
+  - : リクエストは CORS ヘッダーを使用し、資格情報フラグには `'same-origin'` に設定されます。宛先が同一オリジンでない限り、クッキー、クライアントサイド TLS 証明書、HTTP 認証による**ユーザー資格情報**の交換は行われません。
 - `use-credentials`
-  - : リクエストは CORS ヘッダーを使用し、資格情報フラグには `'include'` に設定され、**ユーザー資格情報**は常に含まれます。
+  - : リクエストは CORS ヘッダーを使用し、資格情報フラグには `'include'` に設定され、**ユーザー資格情報**が常に含まれます。
 - `""`
   - : `crossorigin` または `crossorigin=""` のように属性に空の値を設定すると、 `anonymous` と同じになります。
 
@@ -37,7 +39,7 @@ slug: Web/HTML/Attributes/crossorigin
     <tr>
       <td><code>script</code></td>
       <td>
-        {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} によるエラーログへのアクセスが制限されます。
+        {{domxref('Window.error_event', 'window.onerror')}} によるエラーログへのアクセスが制限されます。
       </td>
     </tr>
     <tr>
@@ -49,14 +51,16 @@ slug: Web/HTML/Attributes/crossorigin
   </tbody>
 </table>
 
-> **メモ:** Firefox 83 より前では、 `crossorigin` 属性は `rel="icon"` に対応していませんでした。 [Chrome についての未解決の問題](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)もあります。
+> **メモ:** `crossorigin` 属性は、 Chromium ベースのブラウザーでは [`rel="icon"`](/ja/docs/Web/HTML/Attributes/rel#icon) では対応していません。[公開 Chromium issue](https://crbug.com/1121645) を参照してください。
 
 ### 例: `<script>` 要素の `crossorigin`
 
 以下の {{HTMLElement("script")}} 要素を使用すると、ユーザー資格情報を送信せずに `https://example.com/example-framework.js` スクリプトを実行します。
 
 ```html
-<script src="https://example.com/example-framework.js" crossorigin="anonymous"></script>
+<script
+  src="https://example.com/example-framework.js"
+  crossorigin="anonymous"></script>
 ```
 
 ### 例: 資格情報付きのウェブマニフェスト
@@ -64,7 +68,7 @@ slug: Web/HTML/Attributes/crossorigin
 資格情報を必要とするマニフェストを読み取るときは、同じオリジンからのファイル読み取りであっても `use-credentials` の値を使用する必要があります。
 
 ```html
-<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials">
+<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />
 ```
 
 ## 仕様書

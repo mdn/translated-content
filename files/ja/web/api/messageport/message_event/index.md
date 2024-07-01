@@ -1,7 +1,6 @@
 ---
 title: MessagePort.onmessage
 slug: Web/API/MessagePort/message_event
-original_slug: Web/API/MessagePort/onmessage
 ---
 
 {{APIRef("HTML DOM")}}
@@ -22,15 +21,15 @@ channel.onmessage = function() { ... };
 
 ```js
 var channel = new MessageChannel();
-var para = document.querySelector('p');
+var para = document.querySelector("p");
 
-var ifr = document.querySelector('iframe');
+var ifr = document.querySelector("iframe");
 var otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
-  otherWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+  otherWindow.postMessage("Hello from the main page!", "*", [channel.port2]);
 }
 
 channel.port1.onmessage = handleMessage;

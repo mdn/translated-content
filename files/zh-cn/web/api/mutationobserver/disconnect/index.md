@@ -35,8 +35,8 @@ mutationObserver.disconnect()
 var targetNode = document.querySelector("#someElement");
 var observerOptions = {
   childList: true,
-  attributes: true
-}
+  attributes: true,
+};
 
 var observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);

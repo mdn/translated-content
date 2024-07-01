@@ -1,16 +1,6 @@
 ---
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
-tags:
-  - Chaîne
-  - Expression
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - Régulière
-translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/replace
 ---
 
 {{JSRef}}
@@ -24,7 +14,7 @@ La chaîne de caractère originale reste inchangée.
 ## Syntaxe
 
 ```js
-chn.replace(regexp|souschn, nouvSouschn|fonction)
+chn.replace(regexp | souschn, nouvSouschn | fonction);
 ```
 
 ### Paramètres
@@ -152,9 +142,12 @@ L'exemple suivant affectera `'abc - 12345 - #$*%'` à la variable `nouvelleChain
 ```js
 function remplaceur(correspondance, p1, p2, p3, decalage, chaine) {
   // p1 est non numérique, p2 numérique, et p3 non-alphanumérique
-  return [p1, p2, p3].join(' - ');
+  return [p1, p2, p3].join(" - ");
 }
-var nouvelleChaine = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, remplaceur);
+var nouvelleChaine = "abc12345#$*%".replace(
+  /([^\d]*)(\d*)([^\w]*)/,
+  remplaceur,
+);
 console.log(nouvelleChaine); // abc - 12345 - #$*%
 ```
 
@@ -165,14 +158,14 @@ console.log(nouvelleChaine); // abc - 12345 - #$*%
 Dans l'exemple suivant, l'expression régulière est définie dans `replace()` et inclut l'indicateur d'indifférence à la casse.
 
 ```js
-var chn = 'Twas the night before Xmas...';
-var nouvChn = chn.replace(/xmas/i, 'Christmas');
+var chn = "Twas the night before Xmas...";
+var nouvChn = chn.replace(/xmas/i, "Christmas");
 console.log(nouvChn); // Twas the night before Christmas...
 ```
 
 Cela affiche 'Twas the night before Christmas...'.
 
-> **Note :** Voir [ce guide](/fr/docs/Web/JavaScript/Guide/Expressions_r%C3%A9guli%C3%A8res) pour plus d'explications concernant les expressions régulières.
+> **Note :** Voir [ce guide](/fr/docs/Web/JavaScript/Guide/Expressions_régulières) pour plus d'explications concernant les expressions régulières.
 
 ### Utilisation de `global` et `ignore` avec `replace()`
 
@@ -180,8 +173,8 @@ Le remplacement global ne peut être fait qu'avec une expression régulière. Da
 
 ```js
 var re = /pommes/gi;
-var chn = 'Les pommes sont rondes, et les pommes sont juteuses.';
-var nouvChn = chn.replace(re, 'oranges');
+var chn = "Les pommes sont rondes, et les pommes sont juteuses.";
+var nouvChn = chn.replace(re, "oranges");
 console.log(nouvChn); // Les oranges sont rondes, et les oranges sont juteuses.
 ```
 
@@ -193,7 +186,7 @@ Le script suivant intervertit les mots dans la chaîne de caractères. Pour le t
 
 ```js
 var re = /(\w+)\s(\w+)/;
-var chn = 'Jean Martin';
+var chn = "Jean Martin";
 var nouvChn = chn.replace(re, "$2, $1");
 console.log(nouvChn); // Martin, Jean
 ```
@@ -209,7 +202,7 @@ La fonction de remplacement accepte le fragment en correspondance comme paramèt
 ```js
 function styleFormatTiret(nomPropriete) {
   function majusculesEnTiretMinuscules(correspondance, decalage, chaine) {
-    return (decalage > 0 ? '-' : '') + correspondance.toLowerCase();
+    return (decalage > 0 ? "-" : "") + correspondance.toLowerCase();
   }
   return nomPropriete.replace(/[A-Z]/g, majusculesEnTiretMinuscules);
 }
@@ -220,7 +213,7 @@ Avec `styleFormatTiret('borderTop')`, cela renvoie 'border-top'.
 Du fait que nous voulons transformer davantage le résultat de la correspondance avant la substitution finale, nous devons utiliser une fonction. Cela force l'évaluation de la correspondance avant la méthode {{jsxref ("String.prototype.toLowerCase()", "toLowerCase()")}}. Si nous avions essayé de le faire en utilisant la correspondance sans fonction, le {{jsxref ("String.prototype.toLowerCase()", "toLowerCase()")}} n'aurait eu aucun effet.
 
 ```js
-var nouvChn = nomPropriete.replace(/[A-Z]/g, '-' + '$&'.toLowerCase()); // ne fonctionne pas
+var nouvChn = nomPropriete.replace(/[A-Z]/g, "-" + "$&".toLowerCase()); // ne fonctionne pas
 ```
 
 Ceci est dû au fait que `'$&'.toLowerCase()` serait d'abord évalué comme un littéral de chaîne (résultant en le même `'$&'`) avant d'utiliser les caractères comme modèle.
@@ -234,7 +227,7 @@ L'expression régulière `test` vérifie tout nombre se terminant par F. Le nomb
 ```js
 function f2c(x) {
   function convertir(chn, p1, decalage, s) {
-    return ((p1-32) * 5/9) + 'C';
+    return ((p1 - 32) * 5) / 9 + "C";
   }
   var s = String(x);
   var test = /(-?\d+(?:\.\d*)?)F\b/g;
@@ -250,7 +243,7 @@ L'exemple suivant accepte un modèle chaîne et le convertit en un tableau d'obj
 
 Une chaîne de caractères composée des caractères `x`, `-` et `_`
 
-```js
+```plain
 x-x_
 x---x---x---x---
 
@@ -260,7 +253,7 @@ x_x_x___x___x___
 
 **Sortie :**Un tableau d'objets. Un `'x'` dénote un état `'marche'`, un `'-'` symbolise un état '`arret`' et un `'_'` (blanc souligné) symbolise la longueur d'un état `'marche'`.
 
-```json
+```js
 [
   { marche: true, longueur: 1 },
   { marche: false, longueur: 1 },
@@ -272,11 +265,11 @@ x_x_x___x___x___
 **Fragment :**
 
 ```js
-var chn = 'x-x_';
+var chn = "x-x_";
 var tabRet = [];
-chn.replace(/(x_*)|(-)/g, function(correspondance, $1, $2){
-  if($1) tabRet.push({ marche: true, longueur: $1.length });
-  if($2) tabRet.push({ marche: false, longueur: 1 });
+chn.replace(/(x_*)|(-)/g, function (correspondance, $1, $2) {
+  if ($1) tabRet.push({ marche: true, longueur: $1.length });
+  if ($2) tabRet.push({ marche: false, longueur: 1 });
 });
 
 console.log(tabRet);

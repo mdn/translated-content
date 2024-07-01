@@ -1,8 +1,9 @@
 ---
-title: Navigator.geolocation
+title: "Navigator: geolocation プロパティ"
+short-title: geolocation
 slug: Web/API/Navigator/geolocation
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: b0870830e4c02596ca6c501f8f8b468a917eafc2
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}

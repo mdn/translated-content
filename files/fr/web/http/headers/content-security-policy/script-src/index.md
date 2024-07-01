@@ -1,8 +1,6 @@
 ---
-title: 'CSP : script-src'
+title: "CSP : script-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/script-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/script-src
-browser-compat: http.headers.csp.Content-Security-Policy.script-src
 ---
 
 {{HTTPSidebar}}
@@ -62,13 +60,13 @@ Ces scripts seront bloqués et ne seront pas chargés ou exécutés&nbsp;:
 On notera que les gestionnaires d'évènements déclarés dans les attributs sont aussi bloqués&nbsp;:
 
 ```html
-<button id="btn" onclick="faireQuelqueChose()">
+<button id="btn" onclick="faireQuelqueChose()"></button>
 ```
 
 Il faudra les remplacer par des appels à la méthode [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener)&nbsp;:
 
 ```js
-document.getElementById("btn").addEventListener('click', faireQuelqueChose);
+document.getElementById("btn").addEventListener("click", faireQuelqueChose);
 ```
 
 ### Scripts embarqués non fiables
@@ -112,7 +110,9 @@ Content-Security-Policy: script-src 'sha256-B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWt
 Lors de la génération de l'empreinte, vous ne devez pas inclure les balises et tenir compte de la casse et des caractères blancs (espaces, retours à la ligne, etc.).
 
 ```html
-<script>var inline = 1;</script>
+<script>
+  var inline = 1;
+</script>
 ```
 
 ### `unsafe-eval`

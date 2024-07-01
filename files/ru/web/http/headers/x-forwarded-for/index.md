@@ -1,12 +1,6 @@
 ---
 title: X-Forwarded-For
 slug: Web/HTTP/Headers/X-Forwarded-For
-tags:
-  - Заголовок
-  - заголовок запроса
-  - оригинальный адрес
-translation_of: Web/HTTP/Headers/X-Forwarded-For
-original_slug: Web/HTTP/Заголовки/X-Forwarded-For
 ---
 
 {{HTTPSidebar}}
@@ -66,7 +60,7 @@ X-ProxyUser-Ip: 203.0.113.19
 
 Не является частью любой текущей спецификации. Стандартизованная версия этого заголовка {{HTTPHeader("Forwarded")}}.
 
-## See also
+## Смотрите также
 
 - {{HTTPHeader("Forwarded")}}
 - {{HTTPHeader("X-Forwarded-Host")}}

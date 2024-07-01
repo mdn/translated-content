@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
 
 {{JSRef}}
 
-The **`entries()`**返回新的`Array Iterator`对象，包含数组每个下标处的键值对。
+**`entries()`** 返回新的 `Array Iterator` 对象，包含数组每个下标处的键值对。
 
 ## 语法
 
@@ -51,7 +51,7 @@ console.log(eArr.next().value); // [4, 50]
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("TypedArray")}}

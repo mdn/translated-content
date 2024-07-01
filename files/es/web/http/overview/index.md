@@ -146,7 +146,7 @@ Un ejemplo de repuesta:
 
 ![](http_response.png)
 
-Las respuestas están formadas por los siguentes campos:
+Las respuestas están formadas por los siguientes campos:
 
 - La versión del protocolo HTTP que están usando.
 - Un código de estado, indicando si la petición ha sido exitosa, o no, y debido a que.
@@ -156,6 +156,6 @@ Las respuestas están formadas por los siguentes campos:
 
 ## Conclusión
 
-El protocólo HTTP es un protocolo ampliable y fácil de usar. Su estructura cliente-servidor, junto con la capacidad para usar cabeceras, permite a este protocolo evolucionar con las nuevas y futuras aplicaciones en Internet.
+El protocolo HTTP es un protocolo ampliable y fácil de usar. Su estructura cliente-servidor, junto con la capacidad para usar cabeceras, permite a este protocolo evolucionar con las nuevas y futuras aplicaciones en Internet.
 
 Aunque la versión del protocolo HTTP/2 añade algo de complejidad, al utilizar un formato en binario, esto aumenta su rendimiento, y la estructura y semantica de los mensajes es la misma desde la versión HTTP/1.0. El flujo de comunicaciones en una sesión es sencillo y puede ser fácilmente estudiado e investigado con un simple [monitor de mensajes HTTP](/es/docs/Tools/Network_Monitor).

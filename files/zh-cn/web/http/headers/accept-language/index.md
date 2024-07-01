@@ -1,50 +1,70 @@
 ---
 title: Accept-Language
 slug: Web/HTTP/Headers/Accept-Language
+l10n:
+  sourceCommit: 9cf66d1b65a11aff2e158fc090dd62a0862aeec8
 ---
 
 {{HTTPSidebar}}
 
-**`Accept-Language`** 请求头允许客户端声明它可以理解的自然语言，以及优先选择的区域方言。借助[内容协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation)，服务器可以从诸多备选项中选择一项进行应用，并使用 {{HTTPHeader("Content-Language")}} 应答头通知客户端它的选择。浏览器会基于其用户界面语言为这个请求头设置合适的值，即便是用户可以进行修改，但是这种情况极少发生（因为可增加指纹独特性，通常也不被鼓励）（译者注：通常只在测试网站的多语言支持时手动修改它；或为进一步减少指纹独特性，改为最常见的英文）。
+**`Accept-Language`** 请求 HTTP 标头表示客户端所偏好的自然语言和区域设置。服务器利用[内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)机制从这些提议中选出一项，并通过 {{HTTPHeader("Content-Language")}} 响应标头将这一选择告知客户端。浏览器会根据其当前活跃的用户界面语言为该标头设定所需的值。用户很少更改此设置，而且也不建议这样做，因为这可能导致[指纹识别](/zh-CN/docs/Glossary/Fingerprinting)。
 
-当服务器无法通过其他方式来确定应当使用的语言时——例如某一特定的 URL，这是用户明确指定的——这个请求头可以用作提示。建议服务器端永远不要覆盖明确指定的信息。`Accept-Language` 消息头的内容通常不在用户的掌控之中（例如在国外旅行时到提供网络服务的场所上网）；另外用户可能会想要浏览非本地用户界面语言的页面。
+当服务器无法通过其他方式（比如使用依赖于用户明确决定的特定 URL）确定目标内容语言时，这个标头可作为提示使用。服务器绝不应覆盖用户的明确语言选择。`Accept-Language` 的内容常常超出用户的控制范围（例如在旅行时）。用户也可能希望访问使用的语言与用户界面并不相同的页面。
 
 如果服务器不能提供任何可以匹配的语言的版本，那么理论上来说应该返回一个 {{HTTPStatus("406")}}（Not Acceptable，不被接受）的错误码。但是为了更好的用户体验，这种方法很少被采用，取而代之的是将其忽略。
 
-| Header type                                                                          | {{Glossary("Request header")}} |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}}                                     | no                                       |
-| {{Glossary("Simple header", "CORS-safelisted request-header")}} | yes                                      |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">标头类型</th>
+      <td>{{Glossary("Request header", "请求标头")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("CORS-safelisted request header", "列入 CORS 白名单的请求标头")}}
+      </th>
+      <td>
+        是的，但有附加限制，即值只能是 <code>0-9</code>、<code>A-Z</code>、<code>a-z</code>、空格或 <code>*,-.;=</code>。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
-```plain
+```http
 Accept-Language: <language>
 Accept-Language: *
 
-// Multiple types, weighted with the {{glossary("quality values", "quality value")}} syntax:
+// 使用质量价值语法对多个类型进行加权：
 Accept-Language: fr-CH, fr;q=0.9, en;q=0.8, de;q=0.7, *;q=0.5
 ```
 
 ## 指令
 
 - `<language>`
-  - : 用含有两到三个字符的字符串表示的语言码或完整的语言标签。除了语言本身之外，还会包含其他方面的信息，显示在中划线（"-"）后面。最常见的额外信息是国家或地区变种（如"en-US"）或者表示所用的字母系统（如"sr-Lat"）。其他变种诸如拼字法（"de-DE-1996"）等通常不被应用在这种场合。
+  - : 用含有两到三个字符的字符串表示的语言码或完整的语言标签。除了语言本身之外，还会包含其他方面的信息，显示在中划线 `'-'` 后面。最常见的额外信息是国家或地区变种（如 `'en-US'` 或 `'fr-CA'`）或者表示所用的字母系统（如 `'sr-Latn'`）。其他变种诸如拼字法（`'de-DE-1996'`）等通常不被应用在这种场合。
 - `*`
-  - : 任意语言；`"*"` 表示通配符（wildcard）。
-- `;q=` (q-factor weighting)
+  - : 任意语言；`'*'` 表示通配符（wildcard）。
+- `;q=` （q-factor 权重）
   - : 此值代表优先顺序，用相对{{glossary("Quality values", "质量价值")}}表示，又称为*权重*。
 
 ## 示例
 
-```plain
+```http
 Accept-Language: de
+```
 
+```http
 Accept-Language: de-CH
+```
 
-Accept-Language: en-US,en;q=0.5
-
-Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+```http
+Accept-Language: zh-CN,en;q=0.5
 ```
 
 ## 规范
@@ -58,5 +78,5 @@ Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 ## 参见
 
 - HTTP [内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)
-- 表示此 Header 的内容协商结果的消息头：{{HTTPHeader("Content-Language")}}
-- 其他类似的消息头：{{HTTPHeader("TE")}}、{{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept-Charset")}}、{{HTTPHeader("Accept")}}
+- 表示内容协商结果的标头：{{HTTPHeader("Content-Language")}}
+- 其他类似的标头：{{HTTPHeader("TE")}}、{{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept")}}

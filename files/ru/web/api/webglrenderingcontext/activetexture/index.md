@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.activeTexture()
 slug: Web/API/WebGLRenderingContext/activeTexture
-translation_of: Web/API/WebGLRenderingContext/activeTexture
 ---
 
 {{APIRef("WebGL")}}
@@ -49,7 +48,7 @@ gl.getParameter(gl.ACTIVE_TEXTURE);
 // вернёт "33984" (0x84C0, gl.TEXTURE0 enum value)
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

@@ -30,13 +30,11 @@ _O construtor `AnimationEvent()`_ _também herda argumentos do {{domxref("Event.
 
 ## Especificações
 
-| Especificações                                                                                               | Estado                                   | Comentário          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Animations', '#AnimationEvent-interface', 'AnimationEvent()') }} | {{ Spec2('CSS3 Animations')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.AnimationEvent.AnimationEvent")}}
+{{Compat}}
 
 ## Veja também
 

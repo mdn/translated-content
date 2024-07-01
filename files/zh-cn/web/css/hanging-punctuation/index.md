@@ -3,7 +3,7 @@ title: hanging-punctuation
 slug: Web/CSS/hanging-punctuation
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 **`hanging-punctuation`** CSS 属性指定了标点符号应该放在文本句子的开头还是结尾。悬挂标点符号可能被放在线框外。
 
@@ -60,7 +60,7 @@ hanging-punctuation: unset;
 - `force-end`
   - : 显示行结尾处的句号或逗号。
 - `allow-end`
-  - : 如果预先没有其它适合的来适应的，则在行尾显示句号或逗号。
+  - : 如果预先没有其他适合的来适应的，则在行尾显示句号或逗号。
 
 ### 正式语法
 
@@ -71,7 +71,11 @@ hanging-punctuation: unset;
 ### HTML
 
 ```html
-<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor massa, sit amet vulputate nulla pharetra ut.”</p>
+<p>
+  “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim
+  nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor
+  massa, sit amet vulputate nulla pharetra ut.”
+</p>
 ```
 
 ### CSS
@@ -79,7 +83,7 @@ hanging-punctuation: unset;
 ```css
 p {
   hanging-punctuation: first;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 ```
 

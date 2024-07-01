@@ -1,7 +1,6 @@
 ---
-title: 'Window: beforeunload event'
+title: "Window: beforeunload event"
 slug: Web/API/Window/beforeunload_event
-translation_of: Web/API/Window/beforeunload_event
 ---
 
 {{APIRef}}
@@ -53,11 +52,11 @@ translation_of: Web/API/Window/beforeunload_event
 В HTML-спецификации указано, что авторы должны использовать метод {{domxref("Event.preventDefault()")}}, а не {{domxref("Event.returnValue")}}. Однако, это поддерживается не всеми браузерами.
 
 ```js
-window.addEventListener('beforeunload', (event) => {
+window.addEventListener("beforeunload", (event) => {
   // Отмените событие, как указано в стандарте.
   event.preventDefault();
   // Chrome требует установки возвратного значения.
-  event.returnValue = '';
+  event.returnValue = "";
 });
 ```
 

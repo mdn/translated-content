@@ -35,8 +35,8 @@ void ctx.clearRect(x, y, width, height);
 这段代码清除整个画布。这段代码通常在动画的每一帧开始被执行。清除的范围涵覆盖了整个 {{HtmlElement("canvas")}} 元素。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 ```
 
@@ -60,12 +60,12 @@ var ctx = canvas.getContext("2d");
 
 // 绘制黄色背景
 ctx.beginPath();
-ctx.fillStyle = '#ff6';
+ctx.fillStyle = "#ff6";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 // 绘制蓝色三角形
 ctx.beginPath();
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.moveTo(20, 20);
 ctx.lineTo(180, 20);
 ctx.lineTo(130, 130);

@@ -1,12 +1,6 @@
 ---
 title: Document.createEvent()
 slug: Web/API/Document/createEvent
-tags:
-  - API
-  - DOM
-  - Méthode
-  - Reference
-translation_of: Web/API/Document/createEvent
 ---
 
 > **Attention :** De nombreuses méthodes utilisées avec `createEvent`, tels que `initCustomEvent`, sont obsolètes. Utilisez le [constructeur d'évènement](/fr/docs/Web/API/CustomEvent) à la place.
@@ -28,15 +22,19 @@ var event = document.createEvent(type);
 
 ```js
 // Crée l'événement.
-var event = document.createEvent('Event');
+var event = document.createEvent("Event");
 
 // Nomme l'événement 'build'.
-event.initEvent('build', true, true);
+event.initEvent("build", true, true);
 
 //  Écoute l'événement.
-elem.addEventListener('build', function (e) {
-  // e.target correspond à elem
-}, false);
+elem.addEventListener(
+  "build",
+  function (e) {
+    // e.target correspond à elem
+  },
+  false,
+);
 
 // target peut être tout Element ou autre EventTarget.
 elem.dispatchEvent(event);

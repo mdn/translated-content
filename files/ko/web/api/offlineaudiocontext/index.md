@@ -2,6 +2,7 @@
 title: OfflineAudioContext
 slug: Web/API/OfflineAudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 `OfflineAudioContext` 인터페이스는 함께 연결된 {{domxref("AudioNode")}}들로부터 만들어진 오디오 프로세싱 그래프를 나타내는 {{domxref("AudioContext")}} 인터페이스입니다. 표준 {{domxref("AudioContext")}}와는 대조적으로, `OfflineAudioContext`는 오디오를 장치 하드웨어로 렌더링하지 않습니다; 대신, 이것은 가능한 한 빨리 오디오를 생성하고, 그 결과를 {{domxref("AudioBuffer")}}에 출력합니다.
@@ -43,11 +44,11 @@ _또한 부모 인터페이스인 {{domxref("BaseAudioContext")}}로부터 메�
 
 ## 이벤트
 
-[`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener)를 사용하거나 이벤트 수신기를 이 인터페이스의 `oneventname` 속성에 부여함으로써 이 이벤트들을 수신하세요.
+[`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener)를 사용하거나 이벤트 수신기를 이 인터페이스의 `oneventname` 속성에 부여함으로써 이 이벤트들을 수신하세요.
 
-- [`complete`](/en-US/docs/Web/API/OfflineAudioContext/complete_event)
+- [`complete`](/ko/docs/Web/API/OfflineAudioContext/complete_event)
   - : 오프라인 오디오 컨텍스트의 렌더링이 완료되었을 때 발생됩니다.
-    또한 [`oncomplete`](/en-US/docs/Web/API/OfflineAudioContext/oncomplete) 이벤트 처리기 속성을 사용하여 이용 가능합니다.
+    또한 [`oncomplete`](/ko/docs/Web/API/OfflineAudioContext/oncomplete) 이벤트 처리기 속성을 사용하여 이용 가능합니다.
 
 ## 예제
 
@@ -63,7 +64,7 @@ _또한 부모 인터페이스인 {{domxref("BaseAudioContext")}}로부터 메�
 // 온라인과 오프라인 오디오 컨텍스트를 정의합니다
 
 var audioCtx = new AudioContext();
-var offlineCtx = new OfflineAudioContext(2,44100*40,44100);
+var offlineCtx = new OfflineAudioContext(2, 44100 * 40, 44100);
 
 source = offlineCtx.createBufferSource();
 
@@ -73,35 +74,38 @@ source = offlineCtx.createBufferSource();
 function getData() {
   request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
+  request.open("GET", "viper.ogg", true);
 
-  request.responseType = 'arraybuffer';
+  request.responseType = "arraybuffer";
 
-  request.onload = function() {
+  request.onload = function () {
     var audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(audioData, function (buffer) {
       myBuffer = buffer;
       source.buffer = myBuffer;
       source.connect(offlineCtx.destination);
       source.start();
       //source.loop = true;
-      offlineCtx.startRendering().then(function(renderedBuffer) {
-        console.log('Rendering completed successfully');
-        var song = audioCtx.createBufferSource();
-        song.buffer = renderedBuffer;
+      offlineCtx
+        .startRendering()
+        .then(function (renderedBuffer) {
+          console.log("Rendering completed successfully");
+          var song = audioCtx.createBufferSource();
+          song.buffer = renderedBuffer;
 
-        song.connect(audioCtx.destination);
+          song.connect(audioCtx.destination);
 
-        play.onclick = function() {
-          song.start();
-        }
-      }).catch(function(err) {
-          console.log('Rendering failed: ' + err);
+          play.onclick = function () {
+            song.start();
+          };
+        })
+        .catch(function (err) {
+          console.log("Rendering failed: " + err);
           // 참고: 이 프로미스는 OfflineAudioContext에서 startRendering이 두 번째로 호출되었을 때 거부되어야만 합니다
-      });
+        });
     });
-  }
+  };
 
   request.send();
 }

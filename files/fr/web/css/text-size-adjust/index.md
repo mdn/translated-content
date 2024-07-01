@@ -1,12 +1,6 @@
 ---
 title: text-size-adjust
 slug: Web/CSS/text-size-adjust
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-size-adjust
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

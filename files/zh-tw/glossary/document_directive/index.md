@@ -3,6 +3,8 @@ title: Document directive
 slug: Glossary/Document_directive
 ---
 
+{{GlossarySidebar}}
+
 **{{Glossary("CSP")}} 文件指令** 被用在 {{HTTPHeader("Content-Security-Policy")}} 頭部和管理應用策略的文件或[工作者](/zh-TW/docs/Web/API/Web_Workers_API)環境的屬性。
 
 文件指令不會回退到 {{CSP("default-src")}} 指令。

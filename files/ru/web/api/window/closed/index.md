@@ -1,8 +1,8 @@
 ---
 title: Window.closed
 slug: Web/API/Window/closed
-translation_of: Web/API/Window/closed
 ---
+
 {{APIRef}}
 
 ## Общая информация
@@ -31,7 +31,7 @@ isClosed = windowRef.closed;
 ```js
 // проверяет, если window.opener существует и не закрыт
 if (window.opener && !window.opener.closed) {
-  window.opener.location.href = "http://www.mozilla.org";
+  window.opener.location.href = "https://www.mozilla.org";
 }
 ```
 
@@ -50,11 +50,11 @@ function refreshPopupWindow() {
     popupWindow.location.reload(true);
   } else {
     // открывает новое всплывающее окно
-    popupWindow = window.open("popup.html","dataWindow");
+    popupWindow = window.open("popup.html", "dataWindow");
   }
 }
 ```
 
-## Спецификация
+## Спецификации
 
 HTML5

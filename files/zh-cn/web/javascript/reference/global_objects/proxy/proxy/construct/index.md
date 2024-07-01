@@ -1,7 +1,6 @@
 ---
 title: handler.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct
 ---
 
 {{JSRef}}
@@ -14,8 +13,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct
 
 ```js
 var p = new Proxy(target, {
-  construct: function(target, argumentsList, newTarget) {
-  }
+  construct: function (target, argumentsList, newTarget) {},
 });
 ```
 
@@ -56,24 +54,23 @@ var p = new Proxy(target, {
 下面代码演示如何拦截 {{jsxref("Operators/new", "new")}} 操作。
 
 ```js
-var p = new Proxy(function() {}, {
-  construct: function(target, argumentsList, newTarget) {
-    console.log('called: ' + argumentsList.join(', '));
+var p = new Proxy(function () {}, {
+  construct: function (target, argumentsList, newTarget) {
+    console.log("called: " + argumentsList.join(", "));
     return { value: argumentsList[0] * 10 };
-  }
+  },
 });
 
-console.log(new p(1).value); // "called: 1"
-                             // 10
+console.log(new p(1).value); // "called: 1"; outputs 10
 ```
 
 下面的代码违反了约定。
 
 ```js
-var p = new Proxy(function() {}, {
-  construct: function(target, argumentsList, newTarget) {
+var p = new Proxy(function () {}, {
+  construct: function (target, argumentsList, newTarget) {
     return 1;
-  }
+  },
 });
 
 new p(); // TypeError is thrown
@@ -82,11 +79,14 @@ new p(); // TypeError is thrown
 下面的代码未能正确的初始化 Proxy。Proxy 初始化时，传给它的 `target` 必须具有一个有效的 constructor 供 `new` 操作符调用。
 
 ```js
-var p = new Proxy({}, {
-  construct: function(target, argumentsList, newTarget) {
-    return {};
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    construct: function (target, argumentsList, newTarget) {
+      return {};
+    },
+  },
+);
 
 new p(); // TypeError is thrown, "p" is not a constructor
 ```

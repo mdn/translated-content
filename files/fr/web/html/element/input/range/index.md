@@ -1,8 +1,6 @@
 ---
 title: <input type="range">
 slug: Web/HTML/Element/input/range
-browser-compat: html.elements.input.input-range
-translation_of: Web/HTML/Element/input/range
 ---
 
 {{HTMLSidebar}}
@@ -62,8 +60,10 @@ Il n'existe pas de motif de validation. Cependant, voici les formes de validatio
 L'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value) contient une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) qui correspond à la représentation textuelle du nombre sélectionnée. La valeur n'est jamais une chaîne vide (`""`). La valeur par défaut est celle médiane entre le minimum et le maximum (sauf si la valeur maximale indiquée est inférieure à la valeur minimale, auquel cas la valeur par défaut est celle de l'attribut `min`). Voici un fragment de code illustrant cet algorithme pour le choix de la valeur par défaut&nbsp;:
 
 ```js
-defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
-               : rangeElem.min + (rangeElem.max - rangeElem.min)/2;
+defaultValue =
+  rangeElem.max < rangeElem.min
+    ? rangeElem.min
+    : rangeElem.min + (rangeElem.max - rangeElem.min) / 2;
 ```
 
 Si on essaie d'obtenir une valeur inférieure au minimum, alors la valeur sera ramenée au minimum (de même si on essaye de dépasser le maximum).
@@ -130,7 +130,7 @@ Par défaut, le minimum vaut `0` et le maximum vaut `100`. Si ces bornes ne conv
 Par exemple, afin de demander à une utilisatrice ou un utilisateur de choisir une valeur approximative dans l'intervalle `[-10, 10]`, on pourra utiliser&nbsp;:
 
 ```html
-<input type="range" min="-10" max="10">
+<input type="range" min="-10" max="10" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -142,7 +142,7 @@ Par défaut, la granularité vaut `1`, ce qui signifie que la valeur est toujour
 #### Utiliser l'attribut `step`
 
 ```html
-<input type="range" min="5" max="10" step="0.01">
+<input type="range" min="5" max="10" step="0.01" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -152,7 +152,7 @@ Par défaut, la granularité vaut `1`, ce qui signifie que la valeur est toujour
 Si on souhaite prendre en charge n'importe quelle valeur, quel que soit le nombre de décimales, on pourra utiliser la valeur `any` pour l'attribut [`step`](/fr/docs/Web/HTML/Element/Input#attr-step)&nbsp;:
 
 ```html
-<input type="range" min="0" max="3.14" step="any">
+<input type="range" min="0" max="3.14" step="any" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -320,7 +320,7 @@ En attendant, il est possible de créer un contrôle vertical en utilisant les t
 Prenons ce contrôle&nbsp;:
 
 ```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1">
+<input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
 {{EmbedLiveSample("", 200, 200, "orientation_sample1.png")}}
@@ -339,7 +339,7 @@ Selon la spécification, pour afficher un tel contrôle verticalement, il suffit
 ```
 
 ```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1">
+<input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
 {{EmbedLiveSample("", 200, 200, "orientation_sample2.png")}}
@@ -354,7 +354,7 @@ Tout d'abord, on enveloppe l'élément [`<input>`](/fr/docs/Web/HTML/Element/Inp
 
 ```html
 <div class="slider-wrapper">
-  <input type="range" min="0" max="11" value="7" step="1">
+  <input type="range" min="0" max="11" value="7" step="1" />
 </div>
 ```
 
@@ -392,7 +392,7 @@ La propriété [`appearance`](/fr/docs/Web/CSS/appearance) possède une valeur n
 On utilise le même HTML que pour les exemples précédents&nbsp;:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1">
+<input type="range" min="0" max="11" value="7" step="1" />
 ```
 
 Ici, on cible uniquement les contrôles d'intervalles&nbsp;:
@@ -412,7 +412,7 @@ Firefox dispose d'un attribut HTML non-standard&nbsp;: `orient`.
 Le code HTML est semblable à celui utilisé précédemment, on y ajoute l'attribut avec une valeur `vertical`&nbsp;:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical">
+<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
 ```
 
 {{EmbedLiveSample("", 200, 200)}}
@@ -424,7 +424,7 @@ La propriété [`writing-mode`](/fr/docs/Web/CSS/writing-mode) ne devrait pas ê
 Ici, on utilise le même HTML que précédemment&nbsp;:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1">
+<input type="range" min="0" max="11" value="7" step="1" />
 ```
 
 On cible uniquement les contrôles d'intervalle et on change leur mode d'écriture avec la valeur `bt-lr` qui signifie <i lang="en">bottom-to-top and left-to-right</i>, soit du bas vers le haut puis de la gauche vers la droite&nbsp;:
@@ -444,7 +444,7 @@ Comme chacun des exemples précédents fonctionne dans un navigateur différent,
 On garde l'attribut `orient` avec la valeur `vertical` pour Firefox&nbsp;:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical">
+<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
 ```
 
 On cible les contrôles d'intervalle avec un mode d'écriture `bt-lr` pour Internet Explorer et on ajoute `-webkit-appearance: slider-vertical` pour les navigateurs basés sur WebKit&nbsp;:

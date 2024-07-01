@@ -1,7 +1,6 @@
 ---
 title: Permissions API
 slug: Web/API/Permissions_API
-translation_of: Web/API/Permissions_API
 ---
 
 {{DefaultAPISidebar("Permissions API")}}
@@ -48,7 +47,7 @@ Vous pouvez également en lire plus sur le fonctionnement de cet exemple dans l'
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Permissions")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -32,8 +32,8 @@ node.appendChild(kid3);
 var list = node.childNodes;
 
 // Using for..of
-for(var key of list.keys()) {
-   console.log(key);
+for (var key of list.keys()) {
+  console.log(key);
 }
 ```
 
@@ -45,7 +45,7 @@ for(var key of list.keys()) {
 2
 ```
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

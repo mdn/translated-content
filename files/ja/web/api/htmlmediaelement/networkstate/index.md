@@ -1,6 +1,8 @@
 ---
 title: HTMLMediaElement.networkState
 slug: Web/API/HTMLMediaElement/networkState
+l10n:
+  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
 ---
 
 {{APIRef("HTML DOM")}}
@@ -11,12 +13,12 @@ slug: Web/API/HTMLMediaElement/networkState
 
 `unsigned short` 型。 可能な値は次のとおりです。
 
-| 定数            | 値 | 説明                                                                           |
-| ------------------- | ----- | ------------------------------------------------------------------------------------- |
-| `NETWORK_EMPTY`     | 0     | まだデータがありません。 また、`readyState` は `HAVE_NOTHING` です。                           |
-| `NETWORK_IDLE`      | 1     | `HTMLMediaElement` はアクティブで、リソースを選択しましたが、ネットワークを使用していません。 |
-| `NETWORK_LOADING`   | 2     | ブラウザーは `HTMLMediaElement` のデータをダウンロードしています。                                     |
-| `NETWORK_NO_SOURCE` | 3     | `HTMLMediaElement` の `src` が見つかりません。                                                        |
+| 定数                | 値  | 説明                                                                                          |
+| ------------------- | --- | --------------------------------------------------------------------------------------------- |
+| `NETWORK_EMPTY`     | 0   | まだデータがありません。 また、`readyState` は `HAVE_NOTHING` です。                          |
+| `NETWORK_IDLE`      | 1   | `HTMLMediaElement` はアクティブで、リソースを選択しましたが、ネットワークを使用していません。 |
+| `NETWORK_LOADING`   | 2   | ブラウザーは `HTMLMediaElement` のデータをダウンロードしています。                            |
+| `NETWORK_NO_SOURCE` | 3   | `HTMLMediaElement` の `src` が見つかりません。                                                |
 
 ## 例
 
@@ -24,19 +26,17 @@ slug: Web/API/HTMLMediaElement/networkState
 
 ```html
 <audio id="example" preload="auto">
- <source src="sound.ogg" type="audio/ogg" />
+  <source src="sound.ogg" type="audio/ogg" />
 </audio>
 ```
 
 ```js
-var obj = document.getElementById('example');
+const obj = document.getElementById("example");
 
-obj.addEventListener('playing', function() {
-
+obj.addEventListener("playing", () => {
   if (obj.networkState === 2) {
     // 読み込み中...
   }
-
 });
 ```
 

@@ -42,7 +42,11 @@ all: revert;
     - [Author origin](/zh-CN/docs/Web/CSS/Cascade#Author_stylesheets)
       - : 将层叠回滚到用户级别，以便计算指定的值，就好像没有为元素指定作者级规则。出于`revert`的目的，“作者”原点包括“覆盖”和“动画”原点。
 
-### 正式语法
+### 形式定义
+
+{{cssinfo}}
+
+### 形式语法
 
 {{csssyntax}}
 
@@ -62,7 +66,7 @@ Phasellus eget velit sagittis.
 ```css
 body {
   font-size: small;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   color: blue;
 }
 
@@ -74,7 +78,7 @@ blockquote {
 
 ### 结果
 
-#### A、没有 `all` 属性
+#### A. 没有 `all` 属性
 
 ```html hidden
 <blockquote id="quote">
@@ -95,11 +99,11 @@ blockquote {
 }
 ```
 
-{{EmbedLiveSample("A、没有 all 属性", "200", "125")}}
+{{EmbedLiveSample("A. 没有 all 属性", "200", "125")}}
 
 {{HTMLElement("blockquote")}} 使用浏览器默认样式，以及另外的定义的背景色与文字颜色。它是一个 block 元素：它之后的文字位于它的下方。
 
-#### B、`all: initial`
+#### B. `all: initial`
 
 ```html hidden
 <blockquote id="quote">
@@ -121,11 +125,11 @@ blockquote {
 }
 ```
 
-{{EmbedLiveSample("B、all: initial", "200", "125")}}
+{{EmbedLiveSample("B. all: initial", "200", "125")}}
 
-{{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 inline 元素 (初始值)，其 {{cssxref("background-color")}} 为 `transparent` (初始值)，但其 {{cssxref("font-size")}} 仍为 `small` (继承值) ，其 {{cssxref("color")}} 为 `blue` (继承值)。
+{{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 inline 元素（初始值），其 {{cssxref("background-color")}} 为 `transparent`（初始值），但其 {{cssxref("font-size")}} 仍为 `small`（继承值），其 {{cssxref("color")}} 为 `blue`（继承值）。
 
-#### C、`all:initial`
+#### C. `all:initial`
 
 ```html hidden
 <blockquote id="quote">
@@ -147,11 +151,11 @@ blockquote {
 }
 ```
 
-{{EmbedLiveSample("C、all:initial", "200", "125")}}
+{{EmbedLiveSample("C. all:initial", "200", "125")}}
 
-{{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 inline 元素 (初始值)，其 {{cssxref("background-color")}} 为 `transparent` (初始值)，其 {{cssxref("font-size")}} 为 `normal` (初始值)，其 {{cssxref("color")}} 为 `black`(初始值)。
+{{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 inline 元素（初始值），其 {{cssxref("background-color")}} 为 `transparent`（初始值），其 {{cssxref("font-size")}} 为 `normal`（初始值），其 {{cssxref("color")}} 为 `black`（初始值）。
 
-#### D、`all:inherit`
+#### D. `all:inherit`
 
 ```html hidden
 <blockquote id="quote">
@@ -173,15 +177,13 @@ blockquote {
 }
 ```
 
-{{EmbedLiveSample("D、all:inherit", "200", "125")}}
+{{EmbedLiveSample("D. all:inherit", "200", "125")}}
 
-{{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 block 元素（继承自其父元素 {{HTMLElement("body")}}），其 {{cssxref("background-color")}} 为 `transparent` (继承值)，其 {{cssxref("font-size")}} 为 `small` (继承值) ，其 {{cssxref("color")}} 为 `blue` (继承值)。
+{{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 block 元素（继承自其父元素 {{HTMLElement("body")}}），其 {{cssxref("background-color")}} 为 `transparent`（继承值），其 {{cssxref("font-size")}} 为 `small`（继承值），其 {{cssxref("color")}} 为 `blue`（继承值）。
 
 ## 规范
 
 {{Specifications}}
-
-{{cssinfo}}
 
 ## 浏览器兼容性
 
@@ -189,4 +191,4 @@ blockquote {
 
 ## 参见
 
-CSS 通用属性值： {{cssxref("initial")}}, {{cssxref("inherit")}} and {{cssxref("unset")}}.
+CSS 通用属性值： {{cssxref("initial")}}、{{cssxref("inherit")}} 和 {{cssxref("unset")}}。

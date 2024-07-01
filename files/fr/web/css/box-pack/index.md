@@ -1,12 +1,6 @@
 ---
 title: box-pack
 slug: Web/CSS/box-pack
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/box-pack
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -78,8 +72,8 @@ div.exemple {
   -webkit-box-align: center; /* WebKit */
 
   /* On groupe les éléments fils en bas de la boîte */
-  -moz-box-pack: end;      /* Mozilla */
-  -webkit-box-pack: end;   /* WebKit */
+  -moz-box-pack: end; /* Mozilla */
+  -webkit-box-pack: end; /* WebKit */
 }
 
 div.exemple p {
@@ -136,7 +130,7 @@ Cette propriété n'est pas standard mais une propriété semblable est apparue 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.box-pack")}}
+{{Compat}}
 
 ## Voir aussi
 

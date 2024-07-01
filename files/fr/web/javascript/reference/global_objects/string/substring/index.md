@@ -1,14 +1,6 @@
 ---
 title: String.prototype.substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/substring
 ---
 
 {{JSRef}}
@@ -55,20 +47,20 @@ Les exemples suivants utilisent la méthode `substring()` pour extraire et affic
 var uneChaîne = "Mozilla";
 
 // Affiche "Moz"
-console.log(uneChaîne.substring(0,3));
-console.log(uneChaîne.substring(3,0));
+console.log(uneChaîne.substring(0, 3));
+console.log(uneChaîne.substring(3, 0));
 
 // Affiche "lla"
-console.log(uneChaîne.substring(4,7));
+console.log(uneChaîne.substring(4, 7));
 console.log(uneChaîne.substring(4));
-console.log(uneChaîne.substring(7,4));
+console.log(uneChaîne.substring(7, 4));
 
 // Affiche "Mozill"
-console.log(uneChaîne.substring(0,6));
+console.log(uneChaîne.substring(0, 6));
 
 // Affiche "Mozilla"
-console.log(uneChaîne.substring(0,7));
-console.log(uneChaîne.substring(0,10));
+console.log(uneChaîne.substring(0, 7));
+console.log(uneChaîne.substring(0, 10));
 ```
 
 ### Remplacer une sous-chaîne dans une chaîne
@@ -77,10 +69,13 @@ L'exemple suivant remplace une partie d'une chaine. Elle remplace à la fois les
 
 ```js
 function replaceString(oldS, newS, fullS) {
-// On remplace oldS avec newS dans fullS
+  // On remplace oldS avec newS dans fullS
   for (var i = 0; i < fullS.length; i++) {
     if (fullS.substring(i, i + oldS.length) == oldS) {
-     fullS = fullS.substring(0, i) + newS + fullS.substring(i + oldS.length, fullS.length);
+      fullS =
+        fullS.substring(0, i) +
+        newS +
+        fullS.substring(i + oldS.length, fullS.length);
     }
   }
   return fullS;
@@ -89,10 +84,10 @@ function replaceString(oldS, newS, fullS) {
 replaceString("World", "Web", "Brave New World");
 ```
 
-Attention : ceci peut résulter en une boucle infinie si `oldS` est elle-même une sous-chaine de `newS` -- par exemple, si on essaie de remplacer "World" par "OtherWorld". Une meilleure solution serait de remplacer les chaines de cette manière :
+Attention : ceci peut résulter en une boucle infinie si `oldS` est elle-même une sous-chaine de `newS` — par exemple, si on essaie de remplacer "World" par "OtherWorld". Une meilleure solution serait de remplacer les chaines de cette manière :
 
 ```js
-function replaceString(oldS, newS,fullS){
+function replaceString(oldS, newS, fullS) {
   return fullS.split(oldS).join(newS);
 }
 ```
@@ -107,8 +102,8 @@ Les arguments de la méthode `substring()` représentent les indices de début e
 
 ```js
 var texte = "Mozilla";
-console.log(texte.substring(2,5)); // => "zil"
-console.log(texte.substr(2,3)); // => "zil"
+console.log(texte.substring(2, 5)); // => "zil"
+console.log(texte.substr(2, 3)); // => "zil"
 ```
 
 ### Différences entre `substring()` et `slice()`
@@ -118,9 +113,9 @@ Les méthodes `substring()` et {{jsxref("String.slice", "slice()")}} sont très 
 La méthode `substring()` échangera les deux arguments si `indiceA` est supérieur à `indiceB` et renverra donc une chaîne de caractères. La méthode {{jsxref("String.slice", "slice()")}} n'échange pas les arguments et renvoie donc une chaîne vide si le premier est supérieur au second :
 
 ```js
-var text = 'Mozilla';
+var text = "Mozilla";
 console.log(text.substring(5, 2)); // => "zil"
-console.log(text.slice(5, 2));     // => ""
+console.log(text.slice(5, 2)); // => ""
 ```
 
 Si l'un ou l'autre des arguments sont négatifs ou valent `NaN`, la méthode `substring()` les traitera comme s'ils valaient `0`.

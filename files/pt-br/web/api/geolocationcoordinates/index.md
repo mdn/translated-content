@@ -30,15 +30,13 @@ _A interface do `Coordinates` não herda nenhuma propiedade_.
 
 **A interface da `Coordinates` _não implementa, nem herda nenhum método._**
 
-## Specifications
+## Especificações
 
-| Specification                                                                | Status                           | Comment                |
-| ---------------------------------------------------------------------------- | -------------------------------- | ---------------------- |
-| {{SpecName('Geolocation', '#coordinates', 'Coordinates')}} | {{Spec2('Geolocation')}} | Especificação inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.GeolocationCoordinates")}}
+{{Compat}}
 
 ## Veja também
 

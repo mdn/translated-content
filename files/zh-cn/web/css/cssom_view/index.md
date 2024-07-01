@@ -1,9 +1,9 @@
 ---
 title: CSSOM View
-slug: Web/CSS/CSSOM_View
+slug: Web/CSS/CSSOM_view
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 CSSOM 视图是一个模块，允许操作文档的可视化视图，尤其是其滚动行为。
 

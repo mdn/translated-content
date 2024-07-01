@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.toUTCString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toUTCString
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`toUTCString()`** convertit une date en une chaîne de caractères
 ## Syntaxe
 
 ```js
-dateObj.toUTCString()
+dateObj.toUTCString();
 ```
 
 ### Valeur de retour

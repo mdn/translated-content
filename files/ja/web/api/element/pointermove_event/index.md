@@ -1,9 +1,9 @@
 ---
-title: 'Element: pointermove イベント'
+title: "Element: pointermove イベント"
+short-title: pointermove
 slug: Web/API/Element/pointermove_event
-original_slug: Web/API/Document/pointermove_event
 l10n:
-  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
+  sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
 ---
 
 {{APIRef}}
@@ -15,9 +15,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('pointermove', (event) => {});
+addEventListener("pointermove", (event) => {});
 
-onpointermove = (event) => { };
+onpointermove = (event) => {};
 ```
 
 ## イベント型
@@ -60,20 +60,20 @@ _このインターフェイスは {{domxref("MouseEvent")}} および {{domxref
 `addEventListener()` を使用した例です。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('pointermove', (event) => {
-  console.log('Pointer moved');
+para.addEventListener("pointermove", (event) => {
+  console.log("Pointer moved");
 });
 ```
 
 `onpointermove` イベントハンドラープロパティを使用した例です。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onpointermove = (event) => {
-  console.log('Pointer moved');
+  console.log("Pointer moved");
 };
 ```
 
@@ -98,5 +98,3 @@ para.onpointermove = (event) => {
   - [`pointercancel`](/ja/docs/Web/API/Element/pointercancel_event)
   - [`pointerout`](/ja/docs/Web/API/Element/pointerout_event)
   - [`pointerleave`](/ja/docs/Web/API/Element/pointerleave_event)
-
-Internet Explorer は、以前は `MSPointerHover` というイベントにも対応していました。これは、接点（通常はペン）が表面に触れることなく要素の上を移動したときに発行されるイベントです。この専用メソッドは Internet Explorer 固有のもので、Internet Explorer 11 で非推奨となりました。IE11 からは `pointermove` イベントがすべてのペンの動きに対して（ホバリングしているかどうかに関係なく）発行されるようになりました。

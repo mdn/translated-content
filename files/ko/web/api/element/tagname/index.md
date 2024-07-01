@@ -2,6 +2,7 @@
 title: Element.tagName
 slug: Web/API/Element/tagName
 ---
+
 {{ApiRef("DOM")}}
 
 {{domxref("Element")}} 인터페이스의 **`tagName`** 읽기 전용 속성은 요소에 호출된 태그 명을 가져온다. 예를 들면, 만약 {{HTMLElement("img")}} 요소일 경우, 해당 요소의 `tagName` 속성의 내용은 `"IMG"` 가 된다 (이것은 HTML인 경우에 대한 내용이고, XML/XHTML 문서에서는 대소문자가 다르게 나올 수 있다).

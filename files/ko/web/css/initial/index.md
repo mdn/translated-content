@@ -2,6 +2,7 @@
 title: initial
 slug: Web/CSS/initial
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`initial`** 키워드는 속성의 [초깃값(기본값)](/ko/docs/Web/CSS/initial_value)을 요소에 적용합니다. 초깃값은 브라우저가 지정합니다. 모든 속성에서 사용할 수 있으며, {{cssxref("all")}}에 지정할 경우 모든 CSS 속성을 초깃값으로 재설정합니다.

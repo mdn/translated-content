@@ -1,7 +1,6 @@
 ---
 title: VRDisplayCapabilities
 slug: Web/API/VRDisplayCapabilities
-translation_of: Web/API/VRDisplayCapabilities
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
@@ -37,5 +36,4 @@ TBD.
 
 ## Voir aussi
 
-- [Page d'accueil de l'API WebVR](/fr/docs/Web/API/WebVR_API).
-- <https://mixedreality.mozilla.org/> — démos, téléchargements et autres ressources de l'équipe Mozilla VR.
+- [WebVR API](/fr/docs/Web/API/WebVR_API)

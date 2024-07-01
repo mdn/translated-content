@@ -1,17 +1,9 @@
 ---
 title: proxy.ProxyInfo
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/ProxyInfo
-tags:
-  - Add-ons
-  - Extensions
-  - Proxy
-  - ProxyInfo
-  - Type
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/ProxyInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Contient des informations sur un proxy. Cet objet, ou un tableau de ces objets, est renvoyé par le programme d'écoute à {{WebExtAPIRef("proxy.onRequest")}}. Il indique au navigateur si la requête doit être mandatée et, dans l'affirmative, quel proxy utiliser.
 
@@ -53,8 +45,8 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `connectionIsolationKey` {{optional_inline}}
   - : `string.` Une clé optionnelle utilisée pour l'isolation supplémentaire de cette connexion proxy.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.proxy.ProxyInfo")}}
+{{Compat}}
 
 {{WebExtExamples}}

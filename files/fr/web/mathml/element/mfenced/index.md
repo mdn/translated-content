@@ -1,13 +1,6 @@
 ---
 title: mfenced
 slug: Web/MathML/Element/mfenced
-tags:
-  - MathML
-  - MathML:Element
-  - MathML:Format General Schema
-  - MathML:Référence
-  - Obsolete
-translation_of: Web/MathML/Element/mfenced
 ---
 
 {{MathMLRef}}

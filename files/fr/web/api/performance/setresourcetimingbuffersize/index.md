@@ -1,13 +1,6 @@
 ---
 title: performance.setResourceTimingBufferSize()
 slug: Web/API/Performance/setResourceTimingBufferSize
-tags:
-  - API
-  - Method
-  - Méthode
-  - Reference
-  - Performance web
-translation_of: Web/API/Performance/setResourceTimingBufferSize
 ---
 
 {{APIRef("Resource Timing API")}}
@@ -21,7 +14,7 @@ La taille recommandée du tampon de synchronisation des ressources d'un navigate
 ## Syntaxe
 
 ```js
-  performance.setResourceTimingBufferSize(maxSize);
+performance.setResourceTimingBufferSize(maxSize);
 ```
 
 ### Arguments

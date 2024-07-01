@@ -2,6 +2,7 @@
 title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
+
 {{JSRef}}
 
 **`Object.getPrototypeOf()`** 메서드는 지정된 객체의 프로토타입(가령 내부 `[[Prototype]]` 속성값)을 반환합니다.
@@ -9,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ## 구문
 
 ```js
-Object.getPrototypeOf(obj)
+Object.getPrototypeOf(obj);
 ```
 
 ### 매개변수

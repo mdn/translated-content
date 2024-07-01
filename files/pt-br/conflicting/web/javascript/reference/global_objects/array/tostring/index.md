@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
-original_slug: Web/JavaScript/Reference/Global_Objects/Array/toSource
 ---
 
 {{JSRef}} {{non-standard_header}}

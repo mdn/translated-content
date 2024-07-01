@@ -1,18 +1,6 @@
 ---
 title: PerformanceTiming.navigationStart
 slug: Web/API/PerformanceTiming/navigationStart
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Propriété
-  - Read-only
-  - legacy
-  - navigationStart
-translation_of: Web/API/PerformanceTiming/navigationStart
 ---
 
 {{APIRef("Navigation Timing")}}

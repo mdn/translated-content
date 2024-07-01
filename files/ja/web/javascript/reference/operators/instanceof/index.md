@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/instanceof
 ## 構文
 
 ```js
-object instanceof constructor
+object instanceof constructor;
 ```
 
 ### 引数
@@ -31,30 +31,30 @@ object instanceof constructor
 function C() {}
 function D() {}
 
-let o = new C()
+let o = new C();
 
 // true : Object.getPrototypeOf(o) === C.prototype であるため
-o instanceof C
+o instanceof C;
 
 // false : D.prototype は o のプロトタイプチェーンのどこにも存在しないため
-o instanceof D
+o instanceof D;
 
-o instanceof Object           // true : なぜなら...
-C.prototype instanceof Object // true であるため
+o instanceof Object; // true : なぜなら...
+C.prototype instanceof Object; // true であるため
 
-C.prototype = {}
-let o2 = new C()
+C.prototype = {};
+let o2 = new C();
 
-o2 instanceof C  // true
+o2 instanceof C; // true
 
 // false : C.prototype は o のプロトタイプチェーンの
 // どこにも存在しないため
-o instanceof C
+o instanceof C;
 
-D.prototype = new C()  // 継承を使用
-let o3 = new D()
-o3 instanceof D  // true
-o3 instanceof C  // true : o3 のプロトタイプチェーンに C.prototype があるため
+D.prototype = new C(); // 継承を使用
+let o3 = new D();
+o3 instanceof D; // true
+o3 instanceof C; // true : o3 のプロトタイプチェーンに C.prototype があるため
 ```
 
 なお、 `instanceof` の値の検査結果はコンストラクターの `prototype` プロパティが変化すると変わることがあります。また、オブジェクトのプロトタイプを `Object.setPrototypeOf` を用いて変更した場合や、標準外の `__proto__` プロパティを用いた場合も変わることがあります。
@@ -74,16 +74,16 @@ o3 instanceof C  // true : o3 のプロトタイプチェーンに C.prototype �
 以下の例では、 `instanceof` を `String` オブジェクトに使用した場合の動作を示しています。
 
 ```js
-let literalString = 'これは文字列リテラルです';
-let stringObject  = new String('コンストラクターで作成された String です');
+let literalString = "これは文字列リテラルです";
+let stringObject = new String("コンストラクターで作成された String です");
 
-literalString instanceof String;  // false : 文字列リテラルは String ではない
-stringObject  instanceof String;  // true
+literalString instanceof String; // false : 文字列リテラルは String ではない
+stringObject instanceof String; // true
 
-literalString instanceof Object;  // false : 文字列リテラルは Object ではない
-stringObject  instanceof Object;  // true
+literalString instanceof Object; // false : 文字列リテラルは Object ではない
+stringObject instanceof Object; // true
 
-stringObject  instanceof Date;    // false
+stringObject instanceof Date; // false
 ```
 
 ### instanceof を Date に対して使用
@@ -93,9 +93,9 @@ stringObject  instanceof Date;    // false
 ```js
 let myDate = new Date();
 
-myDate instanceof Date;      // true
-myDate instanceof Object;    // true
-myDate instanceof String;    // false
+myDate instanceof Date; // true
+myDate instanceof Object; // true
+myDate instanceof String; // false
 ```
 
 ### Object.create() で生成された Object
@@ -103,8 +103,7 @@ myDate instanceof String;    // false
 以下の例では、 `instanceof` を `Object.create()` で生成したオブジェクトに使用した場合の動作を示しています。
 
 ```js
-function Shape() {
-}
+function Shape() {}
 
 function Rectangle() {
   Shape.call(this); // スーパークラスのコンストラクターを呼び出す。
@@ -116,18 +115,18 @@ Rectangle.prototype.constructor = Rectangle;
 
 let rect = new Rectangle();
 
-rect instanceof Object;    // true
-rect instanceof Shape;     // true
+rect instanceof Object; // true
+rect instanceof Shape; // true
 rect instanceof Rectangle; // true
-rect instanceof String;    // false
+rect instanceof String; // false
 
-let literalObject     = {};
-let nullObject  = Object.create(null);
+let literalObject = {};
+let nullObject = Object.create(null);
 nullObject.name = "My object";
 
-literalObject    instanceof Object;   // true : すべてのオブジェクトリテラルは Object.prototype をプロトタイプとして持つ
-({})             instanceof Object;   // true : 上記と同じ
-nullObject       instanceof Object;   // false : プロトタイプはプロトタイプチェーンの末尾 (null)
+literalObject instanceof Object; // true : すべてのオブジェクトリテラルは Object.prototype をプロトタイプとして持つ
+({}) instanceof Object; // true : 上記と同じ
+nullObject instanceof Object; // false : プロトタイプはプロトタイプチェーンの末尾 (null)
 ```
 
 ### `mycar` が `Car` 型および `Object` 型であることを示す
@@ -140,9 +139,9 @@ function Car(make, model, year) {
   this.model = model;
   this.year = year;
 }
-let mycar = new Car('Honda', 'Accord', 1998)
-let a = mycar instanceof Car     // true を返す
-let b = mycar instanceof Object  // true を返す
+let mycar = new Car("Honda", "Accord", 1998);
+let a = mycar instanceof Car; // true を返す
+let b = mycar instanceof Object; // true を返す
 ```
 
 ### instanceof の否定

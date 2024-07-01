@@ -7,26 +7,34 @@ l10n:
 
 {{JSRef}}
 
-**`at()`** メソッドは整数値を受け取り、その位置にある項目を返します。正の整数値と負の整数値が使用できます。負の整数は、配列の最後の項目から前へ数えます。
-
-これは、角括弧記法を使用することに何らかの問題があることを示唆しているわけではありません。例えば、 `array[0]` は最初の項目を返します。しかし、後方の項目、例えば最後の項目には {{jsxref('Array.prototype.length','array.length')}} を使用する代わりに、 `array.at(-1)` を呼び出すことで取得することができます。[（以下の例を参照してください）](#例)
+**`at()`** は {{jsxref("Array")}} インスタンスのメソッドで、整数値を受け取り、その位置にある項目を返します。正の整数値と負の整数値が使用できます。負の整数は、配列の最後の項目から前へ数えます。
 
 {{EmbedInteractiveExample("pages/js/array-at.html")}}
 
 ## 構文
 
-```js
+```js-nolint
 at(index)
 ```
 
 ### 引数
 
 - `index`
-  - : 返される配列要素の添字（位置）。負の添字を使用した場合は、配列の末尾からの相対位置指定に対応しています。 つまり、負の数を使用した場合は、配列の末尾から数えて返される要素を見つけることになります。
+  - : 返される配列要素のゼロ基点の添字（位置）で、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion)。負の添字を使用した場合は、配列の末尾から逆に数えた位置です。`index < 0` であれば、 `index + array.length` がアクセスされます。
 
 ### 返値
 
-指定された位置に一致する配列の要素。指定された位置が見つからない場合は {{jsxref('undefined')}} を返します。
+配列の中で指定された位置に一致する要素です。`index < -array.length` または `index >= array.length` の場合は、対応するプロパティにアクセスしようとせず、常に {{jsxref("undefined")}} を返します。
+
+## 解説
+
+`at()` メソッドは、`index` が負でない場合、ブラケット記法と等価です。例えば、`array[0]` と `array.at(0)` は、どちらも最初の項目を返します。しかし、配列の末尾から要素を数える場合、PythonやRのように `array[-1]` を使用することはできません。角括弧内の値はすべて文字列プロパティとしてリテラルに扱われるため、結局、配列のインデックスではなく通常の文字列プロパティである `array["-1"]` を読むことになります。
+
+通常、{{jsxref("Array/length", "length")}} にアクセスし、そこからインデックスを計算します。例えば、 `array[array.length - 1]` のようになります。 `at()` メソッドでは相対インデックスが可能なので、これを短縮して `array.at(-1)` とすることができます。
+
+`at()` と {{jsxref("Array/with", "with()")}} を組み合わせることで、負のインデックスを用いた配列の読み取りと書き込みが（それぞれ）できます。
+
+`at()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)です。`this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 
 ## 例
 
@@ -36,7 +44,7 @@ at(index)
 
 ```js
 // 項目付きの配列
-const cart = ['りんご', 'バナナ', 'なし'];
+const cart = ["りんご", "バナナ", "なし"];
 
 // 指定された配列の最後の項目を返す関数
 function returnLast(arr) {
@@ -45,33 +53,48 @@ function returnLast(arr) {
 
 // 配列 'cart' の最後の項⽬を取得する
 const item1 = returnLast(cart);
-console.log(item1); // 出力: 'なし'
+console.log(item1); // 'なし'
 
 // 配列 'cart' に商品を追加
-cart.push('みかん');
+cart.push("みかん");
 const item2 = returnLast(cart);
-console.log(item2); // 出力: 'みかん'
+console.log(item2); // 'みかん'
 ```
 
-### 比較メソッド
+### メソッドの比較
 
-この例では、 {{jsxref('Array')}} の最後から 1 つ目の項目を選択するさまざまな方法を比較しています。以下に示すどの方法も有効ですが、この例では `at()` メソッドの簡潔さと読みやすさを強調しています。
+この例では、 {{jsxref("Array")}} の最後から 1 つ目の項目を選択するさまざまな方法を比較しています。以下に示すどの方法も有効ですが、`at()` メソッドの簡潔さと読みやすさが際立っています。
 
 ```js
 // 項目付きの配列
-const colors = ['red', 'green', 'blue'];
+const colors = ["red", "green", "blue"];
 
 // length プロパティの使用
-const lengthWay = colors[colors.length-2];
-console.log(lengthWay); // 出力: 'green'
+const lengthWay = colors[colors.length - 2];
+console.log(lengthWay); // 'green'
 
 // slice() メソッドを使用。配列を返すことに注意。
 const sliceWay = colors.slice(-2, -1);
-console.log(sliceWay[0]); // 出力: 'green'
+console.log(sliceWay[0]); // 'green'
 
 // at() メソッドを使用
 const atWay = colors.at(-2);
-console.log(atWay); // 出力: 'green'
+console.log(atWay); // 'green'
+```
+
+### 配列以外のオブジェクトでの at() の呼び出し
+
+`at()` メソッドは、`this` の `length` プロパティを読み込んで、アクセスする添字を計算します。
+
+```js
+const arrayLike = {
+  length: 2,
+  0: "a",
+  1: "b",
+  2: "c", // length が 2 なので at() からは無視される
+};
+console.log(Array.prototype.at.call(arrayLike, 0)); // "a"
+console.log(Array.prototype.at.call(arrayLike, 2)); // undefined
 ```
 
 ## 仕様書
@@ -85,7 +108,10 @@ console.log(atWay); // 出力: 'green'
 ## 関連情報
 
 - [`Array.prototype.at` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#relative-indexing-method)
-- [at() メソッドのポリフィル](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
-- {{jsxref("Array.prototype.find()")}} – 指定されたテストに基づく値を返します。
-- {{jsxref("Array.prototype.includes()")}} – 配列に値が存在するかどうかを判定します。
-- {{jsxref("Array.prototype.indexOf()")}} – 指定された要素の添字を返します。
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxref("Array.prototype.with()")}}
+- {{jsxref("TypedArray.prototype.at()")}}
+- {{jsxref("String.prototype.at()")}}

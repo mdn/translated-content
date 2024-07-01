@@ -1,11 +1,6 @@
 ---
 title: empty-cells
 slug: Web/CSS/empty-cells
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/empty-cells
 ---
 
 {{CSSRef}}
@@ -52,24 +47,24 @@ Cette propriété se définit avec l'un des mots-clés suivants.
 
 ```html
 <table class="table_1">
-    <tr>
-        <td>Jean</td>
-        <td>Biche</td>
-    </tr>
-    <tr>
-        <td>Alice</td>
-        <td></td>
-    </tr>
+  <tr>
+    <td>Jean</td>
+    <td>Biche</td>
+  </tr>
+  <tr>
+    <td>Alice</td>
+    <td></td>
+  </tr>
 </table>
 <table class="table_2">
-    <tr>
-        <td>Jean</td>
-        <td>Biche</td>
-    </tr>
-    <tr>
-        <td>Alice</td>
-        <td></td>
-    </tr>
+  <tr>
+    <td>Jean</td>
+    <td>Biche</td>
+  </tr>
+  <tr>
+    <td>Alice</td>
+    <td></td>
+  </tr>
 </table>
 ```
 
@@ -83,7 +78,8 @@ Cette propriété se définit avec l'un des mots-clés suivants.
   empty-cells: hide;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #999;
   padding: 0.5rem;
 }

@@ -1,8 +1,6 @@
 ---
 title: Node.innerText
 slug: Web/API/HTMLElement/innerText
-translation_of: Web/API/HTMLElement/innerText
-original_slug: Web/API/Node/innerText
 ---
 
 {{APIRef("DOM")}}
@@ -17,11 +15,11 @@ original_slug: Web/API/Node/innerText
 - `innerText` умеет считывать стили и не возвращает содержимое скрытых элементов, тогда как `textContent` этого не делает.
 - Метод `innerText` позволяет получить CSS, а `textContent` — нет.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

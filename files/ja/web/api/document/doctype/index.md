@@ -1,31 +1,28 @@
 ---
-title: Document.doctype
+title: "Document: doctype プロパティ"
+short-title: doctype
 slug: Web/API/Document/doctype
+l10n:
+  sourceCommit: cf4cccd4696555c12318d0bd8ea9f34992b4b098
 ---
 
 {{ApiRef("DOM")}}
 
-現在の文書に関連付けられた文書型宣言 (Document Type Declaration) (DTD) を返します。返されるオブジェクトは、 {{domxref("DocumentType")}} インターフェイスを持ちます。 `DocumentType` を生成するには {{domxref("DOMImplementation.createDocumentType()")}} を使用してください。
+**`doctype`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、現在の文書に関連付けられた {{glossary("Doctype", "Document Type Declaration (DTD)")}} を表す {{domxref("DocumentType")}} オブジェクトです。
 
-## 構文
+## 値
 
-```
-doctype = document.doctype;
-```
-
-- `doctype` : 読み取り専用のプロパティです。
+{{domxref("DocumentType")}} オブジェクトです。
 
 ## 例
 
 ```js
-var doctypeObj = document.doctype;
+const doctypeObj = document.doctype;
 
-console.log(
-  "doctypeObj.name: "           + doctypeObj.name            + "\n" +
-  "doctypeObj.internalSubset: " + doctypeObj.internalSubset  + "\n" +
-  "doctypeObj.publicId: "       + doctypeObj.publicId        + "\n" +
-  "doctypeObj.systemId: "       + doctypeObj.systemId
-);
+console.log(`doctypeObj.name: ${doctypeObj.name}`);
+console.log(`doctypeObj.internalSubset: ${doctypeObj.internalSubset}`);
+console.log(`doctypeObj.publicId: ${doctypeObj.publicId}`);
+console.log(`doctypeObj.systemId: ${doctypeObj.systemId}`);
 ```
 
 ## メモ

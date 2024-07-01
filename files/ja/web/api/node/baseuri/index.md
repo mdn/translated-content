@@ -1,6 +1,8 @@
 ---
-title: Node.baseURI
+title: "Node: baseURI プロパティ"
 slug: Web/API/Node/baseURI
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -14,7 +16,7 @@ slug: Web/API/Node/baseURI
 ベース URL は次のように決まります。
 
 1. 既定で、ベース URL は文書の位置（{{domxref("window.location")}} で指定された通り）となります。
-2. これが HTML 文書であり、文書に {{HTMLElement("Base")}} 要素があった場合、*最初の* `Base` 要素の `href` の値があれば、代わりに使用されます。
+2. これが HTML 文書であり、文書に {{HTMLElement("Base")}} 要素があった場合、_最初の_ `Base` 要素の `href` の値があれば、代わりに使用されます。
 
 ## 値
 
@@ -29,25 +31,25 @@ slug: Web/API/Node/baseURI
 ```
 
 ```js
-const output = document.getElementsByTagName("output")[0];
+const output = document.querySelector("output");
 output.value = output.baseURI;
 ```
 
-{{EmbedLiveSample("Without <base>", "100%", 40)}}
+{{EmbedLiveSample("Without_base", "100%", 40)}}
 
 ### \<base> あり
 
 ```html
-<base href="https://developer.mozilla.org/modified_base_uri/">
+<base href="https://developer.mozilla.org/modified_base_uri/" />
 <output>Not calculated</output>
 ```
 
 ```js
-const output = document.getElementsByTagName("output")[0];
+const output = document.querySelector("output");
 output.value = output.baseURI;
 ```
 
-{{EmbedLiveSample("With <base>", "100%", 40)}}
+{{EmbedLiveSample("With_base", "100%", 40)}}
 
 ## 仕様書
 

@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 818941994eb1765f2196c9b588314b12e7b9f66f
 ---
 
+{{GlossarySidebar}}
+
 Un **sélecteur CSS** est la partie de la règle CSS qui désigne les éléments d'un document ciblés par cette règle. Les éléments correspondants se verront appliquer la mise en forme indiquée par la règle.
 
 ## Exemple
@@ -21,11 +23,15 @@ div.avertissement {
   border: 2px solid yellow;
   color: white;
   background-color: darkred;
-  padding:  0.8em 0.8em 0.6em;
+  padding: 0.8em 0.8em 0.6em;
 }
 
 #personnalise {
-  font: 16px Lucida Grande, Arial, Helvetica, sans-serif;
+  font:
+    16px Lucida Grande,
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 ```
 
@@ -70,8 +76,8 @@ Le contenu de la page résultant ressemble à ceci:
 - Les sélecteurs composites
   - [Liste de sélecteurs](/fr/docs/Web/CSS/Selector_list) `A, B`
 - Les combinateurs
-  - [Sélecteurs de voisins directs](/fr/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
-  - [Sélecteurs de voisins généraux](/fr/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+  - [Sélecteurs de voisins directs](/fr/docs/Web/CSS/Next-sibling_combinator) `A + B`
+  - [Sélecteurs de voisins généraux](/fr/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - [Sélecteurs d'enfant direct](/fr/docs/Web/CSS/Child_combinator) `A > B`
   - [Sélecteurs de descendants](/fr/docs/Web/CSS/Descendant_combinator) `A B`
 - Pseudo

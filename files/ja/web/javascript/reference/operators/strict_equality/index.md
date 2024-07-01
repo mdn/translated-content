@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Strict_equality
 ## 構文
 
 ```js
-x === y
+x === y;
 ```
 
 ## 解説
@@ -36,41 +36,41 @@ x === y
 ### オペランドが同じ型である場合の比較
 
 ```js
-console.log("hello" === "hello");   // true
-console.log("hello" === "hola");    // false
+console.log("hello" === "hello"); // true
+console.log("hello" === "hola"); // false
 
-console.log(3 === 3);               // true
-console.log(3 === 4);               // false
+console.log(3 === 3); // true
+console.log(3 === 4); // false
 
-console.log(true === true);         // true
-console.log(true === false);        // false
+console.log(true === true); // true
+console.log(true === false); // false
 
-console.log(null === null);         // true
+console.log(null === null); // true
 ```
 
 ### オペランドが異なる型である場合の比較
 
 ```js
-console.log("3" === 3);           // false
+console.log("3" === 3); // false
 
-console.log(true === 1);          // false
+console.log(true === 1); // false
 
-console.log(null === undefined);  // false
+console.log(null === undefined); // false
 ```
 
 ### オブジェクトの比較
 
 ```js
 const object1 = {
-  name: "hello"
-}
+  name: "hello",
+};
 
 const object2 = {
-  name: "hello"
-}
+  name: "hello",
+};
 
-console.log(object1 === object2);  // false
-console.log(object1 === object1);  // true
+console.log(object1 === object2); // false
+console.log(object1 === object1); // true
 ```
 
 ## 仕様書

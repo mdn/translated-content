@@ -1,16 +1,6 @@
 ---
 title: Git and GitHub
 slug: Learn/Tools_and_testing/GitHub
-tags:
-  - Apprendre
-  - Beginner
-  - Débutant
-  - GitHub
-  - Learn
-  - Web
-  - git
-translation_of: Learn/Tools_and_testing/GitHub
-original_slug: Apprendre/Outils_et_tests/GitHub
 ---
 
 {{LearnSidebar}}

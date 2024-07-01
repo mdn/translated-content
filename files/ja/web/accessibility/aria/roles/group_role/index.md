@@ -1,8 +1,9 @@
 ---
 title: group ロールの使用
 slug: Web/Accessibility/ARIA/Roles/group_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
 ---
+
+{{AccessibilitySidebar}}
 
 ### 説明
 
@@ -10,7 +11,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
 
 `group` ロールは、[`region`](http://www.w3.org/TR/wai-aria/#region) とは対照的に、目次やページの要約に含まれないように意図された一連のユーザーインターフェイスオブジェクトを識別するために使用されます（スクリプトや支援技術によって動的に作成される構造のような）。 グループ（group）はページ上で主要な知覚可能なセクションと見なされるべきではありません。 このロールが要素に追加されると、ブラウザーは、アクセス可能なグループイベントを支援技術製品に送り、支援技術製品はそれをユーザーに通知することができます。
 
-グループは、階層内の兄弟の集合を形成するツリーウィジェット内の子供や、ディレクトリ内に同じコンテナを持つ項目の集合のような、関連する機能を持つ項目の論理的集合を形成するために使用されるべきです。 ただし、グループがリストのコンテキストで使用される場合、作者はその子を [`listitem`](http://www.w3.org/TR/wai-aria/#listitem) 要素に制限する必要があります。 グループ要素はネストすることができます。
+グループは、階層内の兄弟の集合を形成するツリーウィジェット内の子供や、ディレクトリー内に同じコンテナを持つ項目の集合のような、関連する機能を持つ項目の論理的集合を形成するために使用されるべきです。 ただし、グループがリストのコンテキストで使用される場合、作者はその子を [`listitem`](http://www.w3.org/TR/wai-aria/#listitem) 要素に制限する必要があります。 グループ要素はネストすることができます。
 
 支援技術によるグループの適切な取り扱いは、それが提供されるコンテキストによって決まります。
 
@@ -38,7 +39,12 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
 
 ```html
 <div id="tree1" role="tree" tabindex="-1">
-  <div id="animals" class="groupHeader" role="presentation" aria-owns="animalGroup" aria-expanded="true">
+  <div
+    id="animals"
+    class="groupHeader"
+    role="presentation"
+    aria-owns="animalGroup"
+    aria-expanded="true">
     <img role="presentation" tabindex="-1" src="images/treeExpanded.gif" />
     <span role="treeitem" tabindex="0">動物</span>
   </div>
@@ -46,7 +52,12 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
     <div id="birds" role="treeitem">
       <span tabindex="-1">鳥</span>
     </div>
-    <div id="cats" class="groupHeader" role="presentation" aria-owns="catGroup" aria-expanded="false">
+    <div
+      id="cats"
+      class="groupHeader"
+      role="presentation"
+      aria-owns="catGroup"
+      aria-expanded="false">
       <img role="presentation" tabindex="-1" src="images/treeContracted.gif" />
       <span role="treeitem" tabindex="0">猫</span>
     </div>
@@ -74,12 +85,12 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
     <li role="menuitem">ごみ箱</li>
   </ul>
   <ul role="group">
-    <li role="menuitem">カスタムフォルダ 1</li>
-    <li role="menuitem">カスタムフォルダ 2</li>
-    <li role="menuitem">カスタムフォルダ 3</li>
+    <li role="menuitem">カスタムフォルダー 1</li>
+    <li role="menuitem">カスタムフォルダー 2</li>
+    <li role="menuitem">カスタムフォルダー 3</li>
   </ul>
   <ul role="group">
-    <li role="menuitem">新規フォルダ</li>
+    <li role="menuitem">新規フォルダー</li>
   </ul>
 </div>
 ```

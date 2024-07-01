@@ -23,9 +23,9 @@ La siguiente función añade tres elementos de datos en el almacen local para el
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'yellow');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'cats.png');
+  localStorage.setItem("bgcolor", "yellow");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "cats.png");
 
   localStorage.length; // should return 3
 }
@@ -37,9 +37,9 @@ function populateStorage() {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Storage.length")}}
+{{Compat}}
 
 ## Vea también
 

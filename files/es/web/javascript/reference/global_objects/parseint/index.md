@@ -1,7 +1,6 @@
 ---
 title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
-original_slug: Web/JavaScript/Referencia/Objetos_globales/parseInt
 ---
 
 {{jsSidebar("Objects")}}
@@ -19,6 +18,7 @@ parseInt(string, base);
 ### Parámetros
 
 - `cadena`
+
   - : Una cadena que representa el valor que se desea convertir.
 
 - `base`
@@ -65,8 +65,8 @@ Todos los siguientes ejemplos devuelven `NaN`:
 
 ```js
 parseInt("Hello", 8); // No es un número en absoluto
-parseInt("0x7", 10);  // No es de base 10
-parseInt("546", 2);   // Los dígitos no son válidos para representaciones binarias.
+parseInt("0x7", 10); // No es de base 10
+parseInt("546", 2); // Los dígitos no son válidos para representaciones binarias.
 ```
 
 Incluso aunque la base especificada es diferente, todos los siguientes ejemplos devuelven 17 ya que el argumento `cadena` comienza por "`0x`".

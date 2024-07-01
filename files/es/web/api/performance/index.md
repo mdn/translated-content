@@ -63,6 +63,6 @@ Escucha a estos eventos que están usando `addEventListener()` o por asignación
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Performance")}}
+{{Compat}}

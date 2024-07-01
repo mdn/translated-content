@@ -2,6 +2,7 @@
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
 ---
+
 {{jsSidebar("Operators")}}
 
 **`instanceof` 연산자**는 생성자의 `prototype` 속성이 객체의 프로토타입 체인 어딘가 존재하는지 판별합니다.
@@ -11,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/instanceof
 ## 구문
 
 ```js
-    object instanceof constructor
+object instanceof constructor;
 ```
 
 ### 매개변수
@@ -27,8 +28,8 @@ slug: Web/JavaScript/Reference/Operators/instanceof
 
 ```js
 // 생성자 정의
-function C(){}
-function D(){}
+function C() {}
+function D() {}
 
 var o = new C();
 
@@ -39,7 +40,7 @@ o instanceof C;
 o instanceof D;
 
 o instanceof Object; // true, 왜냐하면
-C.prototype instanceof Object // true
+C.prototype instanceof Object; // true
 
 C.prototype = {};
 var o2 = new C();
@@ -74,24 +75,24 @@ o3 instanceof C; // true, 왜냐하면 이제 C.prototype이 o3의 프로토타�
 
 ```js
 var simpleStr = "This is a simple string";
-var myString  = new String();
-var newStr    = new String("String created with constructor");
-var myDate    = new Date();
-var myObj     = {};
+var myString = new String();
+var newStr = new String("String created with constructor");
+var myDate = new Date();
+var myObj = {};
 
 simpleStr instanceof String; // returns false, prototype chain을 확인하고, undefined를 찾는다.
-myString  instanceof String; // returns true
-newStr    instanceof String; // returns true
-myString  instanceof Object; // returns true
+myString instanceof String; // returns true
+newStr instanceof String; // returns true
+myString instanceof Object; // returns true
 
-myObj instanceof Object;    // returns true, undefined prototype 임에도 불구하고 true.
-({})  instanceof Object;    // returns true, 위의 경우와 동일.
+myObj instanceof Object; // returns true, undefined prototype 임에도 불구하고 true.
+({}) instanceof Object; // returns true, 위의 경우와 동일.
 
-myString instanceof Date;   // returns false
+myString instanceof Date; // returns false
 
-myDate instanceof Date;     // returns true
-myDate instanceof Object;   // returns true
-myDate instanceof String;   // returns false
+myDate instanceof Date; // returns true
+myDate instanceof Object; // returns true
+myDate instanceof String; // returns false
 ```
 
 ### `mycar`는 타입 `Car`와 타입 `Object`임을 입증하기
@@ -105,7 +106,7 @@ function Car(make, model, year) {
   this.year = year;
 }
 var mycar = new Car("Honda", "Accord", 1998);
-var a = mycar instanceof Car;    // returns true
+var a = mycar instanceof Car; // returns true
 var b = mycar instanceof Object; // returns true
 ```
 

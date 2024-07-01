@@ -1,7 +1,6 @@
 ---
 title: devtools.panels
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels
 ---
 
 {{AddonSidebar}}
@@ -44,7 +43,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.devtools.panels", 2)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

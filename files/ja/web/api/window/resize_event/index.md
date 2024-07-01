@@ -1,5 +1,5 @@
 ---
-title: 'Window: resize イベント'
+title: "Window: resize イベント"
 slug: Web/API/Window/resize_event
 ---
 
@@ -41,14 +41,16 @@ slug: Web/API/Window/resize_event
 以下の例では、ウィンドウの大きさが変更されるたびに報告を出力します。この例は `<iframe>` 内で実行されているので、効果を見る前に実際に `<iframe>` の大きさを変更する必要があることを覚えておいてください。
 
 ```html
-<p>ブラウザーウィンドウを変更すると <code>resize</code> イベントを発行します。</p>
+<p>
+  ブラウザーウィンドウを変更すると <code>resize</code> イベントを発行します。
+</p>
 <p>ウィンドウの高さ: <span id="height"></span></p>
 <p>ウィンドウの幅: <span id="width"></span></p>
 ```
 
 ```js
-const heightOutput = document.querySelector('#height');
-const widthOutput = document.querySelector('#width');
+const heightOutput = document.querySelector("#height");
+const widthOutput = document.querySelector("#width");
 
 function reportWindowSize() {
   heightOutput.textContent = window.innerHeight;
@@ -65,7 +67,7 @@ window.onresize = reportWindowSize;
 イベントハンドラーを設定するために [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドを使用することもできます。
 
 ```js
-window.addEventListener('resize', reportWindowSize);
+window.addEventListener("resize", reportWindowSize);
 ```
 
 ## 仕様書

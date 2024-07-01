@@ -1,8 +1,9 @@
 ---
-title: UIEvent()
+title: "UIEvent: UIEvent() コンストラクター"
+short-title: UIEvent()
 slug: Web/API/UIEvent/UIEvent
 l10n:
-  sourceCommit: b9bcca1e96839aa9cddea3263196e0cf4656d387
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
 {{APIRef("UI Events")}}
@@ -10,7 +11,7 @@ l10n:
 **`UIEvent()`** コンストラクターは新しい {{domxref("UIEvent")}} を生成します。
 
 > **メモ:** このコンストラクターを使用して合成イベントを作成した場合、セキュリティ上の理由から、そのイベントは信頼されません。
-> ブラウザーで生成された UIEvent オブジェクトのみが信頼され、信頼されたイベントのみが既定のアクションを発生させます。
+> ブラウザーで生成された `UIEvent`` オブジェクトのみが信頼され、信頼されたイベントのみが既定のアクションを発生させます。
 
 ## 構文
 

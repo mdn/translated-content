@@ -27,10 +27,10 @@ if (scripts.length) {
 }
 ```
 
-## Compatibilidade do navegador
-
-{{Compat("api.Document.scripts")}}
-
 ## Especificação
 
-- {{spec("http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-scripts", "DOM: document scripts")}}
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

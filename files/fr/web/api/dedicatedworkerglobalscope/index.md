@@ -1,7 +1,6 @@
 ---
 title: DedicatedWorkerGlobalScope
 slug: Web/API/DedicatedWorkerGlobalScope
-translation_of: Web/API/DedicatedWorkerGlobalScope
 ---
 
 {{APIRef("Web Workers API")}}

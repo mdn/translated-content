@@ -26,28 +26,28 @@ var myReadyState = mediaSource.readyState;
 以下片段是由 Nick Desaulniers 所撰寫的簡單範例（[在此實際觀看](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html)，或者[下載原始碼](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)以更進一步研究）
 
 ```js
-if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
-  var mediaSource = new MediaSource;
+if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
+  var mediaSource = new MediaSource();
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
-  mediaSource.addEventListener('sourceopen', sourceOpen);
+  mediaSource.addEventListener("sourceopen", sourceOpen);
 } else {
-  console.error('Unsupported MIME type or codec: ', mimeCodec);
+  console.error("Unsupported MIME type or codec: ", mimeCodec);
 }
 
-function sourceOpen (_) {
+function sourceOpen(_) {
   //console.log(this.readyState); // open
   var mediaSource = this;
   var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, function (buf) {
-    sourceBuffer.addEventListener('updateend', function (_) {
+    sourceBuffer.addEventListener("updateend", function (_) {
       mediaSource.endOfStream();
       video.play();
       //console.log(mediaSource.readyState); // ended
     });
     sourceBuffer.appendBuffer(buf);
   });
-};
+}
 ```
 
 ## 規格

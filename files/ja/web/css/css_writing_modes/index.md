@@ -1,6 +1,6 @@
 ---
 title: CSS 書字方向
-slug: Web/CSS/CSS_Writing_Modes
+slug: Web/CSS/CSS_writing_modes
 ---
 
 {{CSSRef}}

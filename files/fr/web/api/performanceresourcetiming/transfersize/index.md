@@ -1,15 +1,6 @@
 ---
 title: PerformanceResourceTiming.transferSize
 slug: Web/API/PerformanceResourceTiming/transferSize
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - transferSize
-translation_of: Web/API/PerformanceResourceTiming/transferSize
 ---
 
 {{APIRef("Resource Timing API")}}
@@ -35,23 +26,20 @@ Un `number` représentant la taille (en octets) de la ressource extraite. La tai
 Dans l'exemple suivant, les valeurs des propriétés de taille de tous les [types](/fr/docs/Web/API/PerformanceEntry/entryType) `"resource"` sont enregistrées.
 
 ```js
-function log_sizes(perfEntry){
+function log_sizes(perfEntry) {
   // Vérifie la prise en charge des propriétés PerformanceEntry.*size et imprime leurs valeurs
   // si elles sont prises en charge
   if ("decodedBodySize" in perfEntry)
     console.log("decodedBodySize = " + perfEntry.decodedBodySize);
-  else
-    console.log("decodedBodySize = N'EST PAS pris en charge");
+  else console.log("decodedBodySize = N'EST PAS pris en charge");
 
   if ("encodedBodySize" in perfEntry)
     console.log("encodedBodySize = " + perfEntry.encodedBodySize);
-  else
-    console.log("encodedBodySize = N'EST PAS pris en charge");
+  else console.log("encodedBodySize = N'EST PAS pris en charge");
 
   if ("transferSize" in perfEntry)
     console.log("transferSize = " + perfEntry.transferSize);
-  else
-    console.log("transferSize = N'EST PAS pris en charge");
+  else console.log("transferSize = N'EST PAS pris en charge");
 }
 function check_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"

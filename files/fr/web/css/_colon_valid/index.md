@@ -1,11 +1,6 @@
 ---
-title: ':valid'
+title: ":valid"
 slug: Web/CSS/:valid
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:valid
 ---
 
 {{CSSRef}}
@@ -60,11 +55,11 @@ input:required:valid {
 ```html
 <form>
   <label>Veuillez saisir une URL :</label>
-  <input type="url">
-  <br>
-  <br>
+  <input type="url" />
+  <br />
+  <br />
   <label>Veuillez saisir une adresse électronique :</label>
-  <input type="email" required>
+  <input type="email" required />
 </form>
 ```
 

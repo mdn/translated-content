@@ -1,7 +1,6 @@
 ---
 title: perspective()
 slug: Web/CSS/transform-function/perspective
-original_slug: Web/CSS/transform-function/perspective()
 ---
 
 {{CSSRef}}

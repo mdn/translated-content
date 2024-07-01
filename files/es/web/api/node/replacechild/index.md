@@ -32,7 +32,9 @@ var sp1 = document.createElement("span");
 sp1.setAttribute("id", "newSpan");
 
 // crear algún contenido para el nuevo elemento
-var sp1_content = document.createTextNode("Nuevo elemento span para reemplazo.");
+var sp1_content = document.createTextNode(
+  "Nuevo elemento span para reemplazo.",
+);
 
 // aplicar dicho contenido al nuevo elemento
 sp1.appendChild(sp1_content);

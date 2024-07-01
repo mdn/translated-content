@@ -69,9 +69,9 @@ Mira el artículo _[Using files from web applications](/es/docs/Using_files_from
 
 {{Specifications}}
 
-## Soporte en los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.FileReader")}}
+{{Compat}}
 
 ## See also
 

@@ -28,7 +28,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/idle
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.idle")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

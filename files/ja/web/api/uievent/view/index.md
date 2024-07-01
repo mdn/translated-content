@@ -1,8 +1,9 @@
 ---
-title: UIEvent.view
+title: "UIEvent: view プロパティ"
+short-title: view
 slug: Web/API/UIEvent/view
 l10n:
-  sourceCommit: 70ab349bf0271762d5d8d03b3cdf723fd7d13326
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
 {{APIRef("UI Events")}}

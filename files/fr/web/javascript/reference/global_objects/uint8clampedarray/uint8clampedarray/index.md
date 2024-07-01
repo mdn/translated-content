@@ -1,8 +1,6 @@
 ---
 title: Constructeur Uint8ClampedArray()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray/Uint8ClampedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray/Uint8ClampedArray
-browser-compat: javascript.builtins.Uint8ClampedArray.Uint8ClampedArray
 ---
 
 {{JSRef}}
@@ -48,7 +46,7 @@ console.log(uintc8.length); // 2
 console.log(uintc8.BYTES_PER_ELEMENT); // 1
 
 // À partir d'un tableau
-let arr = new Uint8ClampedArray([21,31]);
+let arr = new Uint8ClampedArray([21, 31]);
 console.log(arr[1]); // 31
 
 // À partir d'un autre tableau typé
@@ -61,7 +59,9 @@ let buffer = new ArrayBuffer(8);
 let z = new Uint8ClampedArray(buffer, 1, 4);
 
 // À partir d'un itérable
-let iterable = function*(){ yield* [1,2,3]; }();
+let iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 let uintc8 = new Uint8ClampedArray(iterable);
 // Uint8ClampedArray[1, 2, 3]
 ```

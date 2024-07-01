@@ -38,22 +38,24 @@ _None._
 ## 示例
 
 ```js
-this.onpush = function(event) {
+this.onpush = function (event) {
   console.log(event.data);
   // 这里我们可以将数据写入 IndexedDB，发送给其他 window 对象，或者显示一个通知
-}
+};
 
-navigator.serviceWorker.register('serviceworker.js').then(
-  function(serviceWorkerRegistration) {
+navigator.serviceWorker
+  .register("serviceworker.js")
+  .then(function (serviceWorkerRegistration) {
     serviceWorkerRegistration.pushManager.subscribe().then(
-      function(pushSubscription) {
+      function (pushSubscription) {
         console.log(pushSubscription.subscriptionId);
         console.log(pushSubscription.endpoint);
         // 现在我们已经获取到了服务器需要的 push 订阅信息，我们可以使用 XHR 将它们发送给服务器
-      }, function(error) {
+      },
+      function (error) {
         // 在开发环境下打印错误是很有帮助的。在生产环境下，将错误上报到服务器也是十分必要的
         console.log(error);
-      }
+      },
     );
   });
 ```

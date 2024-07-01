@@ -2,6 +2,7 @@
 title: TypedArray.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 ---
+
 {{JSRef}}
 
 **`set()`** 메서드는 지정된 배열로부터 입력 값을 읽어 형식화 배열 내에 여러 값을 저장합니다.
@@ -37,7 +38,7 @@ typedarr.set(typedarray[, offset])
 var buffer = new ArrayBuffer(8);
 var uint8 = new Uint8Array(buffer);
 
-uint8.set([1,2,3], 3);
+uint8.set([1, 2, 3], 3);
 
 console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
 ```

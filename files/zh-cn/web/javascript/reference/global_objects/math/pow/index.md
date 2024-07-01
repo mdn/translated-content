@@ -31,8 +31,8 @@ Math.pow(base, exponent)
 ### 使用 `Math.pow`
 
 ```js
-function raisePower(x,y) {
-   return Math.pow(x,y)
+function raisePower(x, y) {
+  return Math.pow(x, y);
 }
 ```
 
@@ -46,10 +46,10 @@ function raisePower(x,y) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Math.cbrt()")}}
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.sqrt()")}}
-- [Exponentiation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation) {{experimental_inline}}
+- [乘方（`**`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)

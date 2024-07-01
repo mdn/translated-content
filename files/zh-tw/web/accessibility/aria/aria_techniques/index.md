@@ -1,126 +1,163 @@
 ---
-title: Using ARIA
+title: 使用 ARIA：角色、狀態和屬性
 slug: Web/Accessibility/ARIA/ARIA_Techniques
 ---
 
-## Roles（角色）
+{{AccessibilitySidebar}}
 
-### [Widget roles （局部組件）](/zh-TW/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_switch_role)
+## 角色
 
-- [Button （按鈕）](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role)
-- [Checkbox （複選核取方塊）](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role)
-- [Dialog （對話）](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role)
-- Gridcell （網格欄）
-- [Link （超連結）](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role)
-- [Log （紀錄）](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role)
-- Marquee
-- Menuitem
-- Menuitemcheckbox
-- Menuitemradio
-- Option
-- [Progressbar （進度條）](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role)
-- [Radio （單選選項鈕）](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role)
-- Scrollbar
-- [Slider （滑軌控制鈕）](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role)
-- Spinbutton
-- [status （狀態）](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role)
-- Tab （頁籤）
-- Tabpanel （頁籤面板）
-- [textbox （頁籤容器）](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_textbox_role)
-- Timer （計時器）
-- Tooltip （提示）
-- Treeitem
-- [switch （開關）](/zh-TW/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_switch_role)
+### 組件角色
 
-### Composite roles
+- [`button`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/button_role)
+- [`checkbox`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
+- [`gridcell`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
+- [`link`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/link_role)
+- [`menuitem`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
+- [`menuitemcheckbox`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
+- [`option`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/option_role)
+- [`progressbar`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
+- [`radio`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/radio_role)
+- [`scrollbar`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
+- [`searchbox`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
+- [`separator`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/separator_role)（可聚焦時）
+- [`slider`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/slider_role)
+- [`spinbutton`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
+- [`switch`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/switch_role)
+- [`tab`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/tab_role)
+- [`tabpanel`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)
+- [`textbox`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/textbox_role)
+- [`treeitem`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
 
-下面的技術，描述了每個複合角色，以及他們的必要和可選的子角色。
+### 複合角色
 
-- Combobox （組合框）
-- Grid （網格）(包含 row （橫列）, gridcell （網格欄）, rowheader （橫列表頭）, columnheader （欄表頭） roles)
-- [Listbox （列表框）](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role) (包含 option role)
-- Menu （選單）
-- Menubar （選單條）
-- [Radiogroup （單選選項群組） (see radio role)](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role)
-- Tablist （頁籤列表） (包含 tab 和 tabpanel roles)
-- Tree
-- Treegrid
+下面的技術，描述了每個複合角色，以及它們的必要和可選的子角色。
 
-### [Document structure roles](https://www.w3.org/TR/wai-aria/roles#document_structure_roles)
+- [`combobox`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/combobox_role)
+- [`grid`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/grid_role)（包含 [`row`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/row_role)、[`gridcell`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/gridcell_role)、[`rowheader`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/rowheader_role)、[`columnheader`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/columnheader_role) 角色）
+- [`listbox`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/listbox_role)（包含 [`option`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/option_role) 角色）
+- [`menu`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/menu_role)
+- [`menubar`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/menubar_role)
+- [`radiogroup`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)（參見 [`radio role`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/radio_role)）
+- [`tablist`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/tablist_role)（包含 [`tab`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/tab_role) 和 [`tabpanel`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) 角色）
+- [`tree`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/tree_role)
+- [`treegrid`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
 
-- [Article](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_article_role)
-- Definition
-- Directory
-- Document
-- [Group](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role)
-- Heading
-- Img
-- List
-- Listitem
-- Math
-- Note
-- [Presentation](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role)
-- Region
-- Separator
-- [Toolbar](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role)
+### Document structure 角色
 
-### [Landmark roles](https://www.w3.org/TR/wai-aria/roles#landmark_roles)
+- [`application`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/application_role)
+- [`article`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/article_role)
+- [`cell`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/cell_role)
+- [`columnheader`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+- [`definition`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/definition_role)
+- [`directory`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/directory_role)
+- [`document`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/document_role)
+- [`feed`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/feed_role)
+- [`figure`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/figure_role)
+- [`group`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/group_role)
+- [`heading`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/heading_role)
+- [`img`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/img_role)
+- [`list`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/list_role)
+- [`listitem`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/listitem_role)
+- [`math`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/math_role)
+- [`none`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role)
+- [`note`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/note_role)
+- [`presentation`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role)
+- [`row`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/row_role)
+- [`rowgroup`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
+- [`rowheader`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
+- [`separator`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/separator_role)
+- [`table`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/table_role)
+- [`term`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/term_role)
+- [`toolbar`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
+- [`tooltip`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/tooltip_role)
 
-- Application
-- [Banner](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_banner_role)
-- Complementary
-- Contentinfo
-- Form
-- Main
-- Navigation
-- Search
+### Landmark 角色
 
-## States and properties
+- [`banner`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/banner_role)
+- [`complementary`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/complementary_role)
+- [`contentinfo`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/contentinfo_role)
+- [`form`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/form_role)
+- [`main`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/main_role)
+- [`navigation`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/navigation_role)
+- [`region`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/region_role)
+- [`search`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/search_role)
 
-### Widget attributes
+### Live Region 角色
 
-- aria-autocomplete
-- aria-checked
-- aria-current
-- aria-disabled
-- aria-expanded
-- aria-haspopup
-- aria-hidden
-- [aria-invalid](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute)
-- [aria-label](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute)
-- aria-level
-- aria-multiline
-- aria-multiselectable
-- [aria-orientation](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute)
-- aria-pressed
-- aria-readonly
-- [aria-required](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute)
-- aria-selected
-- aria-sort
-- [aria-valuemax](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute)
-- [aria-valuemin](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute)
-- [aria-valuenow](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute)
-- [aria-valuetext](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute)
+- [`alert`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/alert_role)
+- [`log`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/log_role)
+- [`marquee`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/marquee_role)
+- [`status`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/status_role)
+- [`timer`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/timer_role)
 
-### Live region attributes
+### Window 角色
 
-- aria-live
-- [aria-relevant](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)
-- aria-atomic
-- aria-busy
+- [`alertdialog`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
+- [`dialog`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 
-### Drag & drop attributes
+## 狀態和屬性
 
-- aria-dropeffect
-- aria-dragged
+### Widget 屬性
 
-### Relationship attributes
+- [`aria-autocomplete`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete)
+- [`aria-checked`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
+- [`aria-current`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-current)
+- [`aria-disabled`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
+- [`aria-errormessage`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
+- [`aria-expanded`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
+- [`aria-haspopup`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
+- [`aria-hidden`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
+- [`aria-invalid`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
+- [`aria-label`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+- [`aria-level`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-level)
+- [`aria-modal`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
+- [`aria-multiline`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-multiline)
+- [`aria-multiselectable`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
+- [`aria-orientation`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
+- [`aria-placeholder`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder)
+- [`aria-pressed`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
+- [`aria-readonly`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
+- [`aria-required`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-required)
+- [`aria-selected`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
+- [`aria-sort`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-sort)
+- [`aria-valuemax`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
+- [`aria-valuemin`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
+- [`aria-valuenow`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
+- [`aria-valuetext`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
 
-- [aria-activedescendant](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute)
-- aria-controls
-- [aria-describedby](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute)
-- aria-flowto
-- [aria-labelledby](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
-- aria-owns
-- aria-posinset
-- aria-setsize
+### Live region 屬性
+
+- [`aria-live`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-live)
+- [`aria-relevant`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
+- [`aria-atomic`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
+- [`aria-busy`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
+
+### Drag &amp; drop 屬性
+
+- [`aria-dropeffect`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect) {{deprecated_inline}}
+- [`aria-grabbed`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed) {{deprecated_inline}}
+
+### Relationship 屬性
+
+- [`aria-activedescendant`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
+- [`aria-colcount`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
+- [`aria-colindex`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
+- [`aria-colspan`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-colspan)
+- [`aria-controls`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
+- [`aria-describedby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+- [`aria-details`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+- [`aria-errormessage`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
+- [`aria-flowto`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-flowto)
+- [`aria-labelledby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [`aria-owns`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
+- [`aria-posinset`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
+- [`aria-rowcount`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount)
+- [`aria-rowindex`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
+- [`aria-rowspan`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan)
+- [`aria-setsize`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
+
+### MicrosoftEdge 專有屬性
+
+- [`x-ms-aria-flowfrom`](/zh-TW/docs/Web/Accessibility/ARIA) {{Non-standard_Inline}}

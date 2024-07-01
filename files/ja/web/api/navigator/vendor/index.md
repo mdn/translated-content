@@ -1,37 +1,23 @@
 ---
-title: Navigator.vendor
+title: "Navigator: vendor プロパティ"
+short-title: vendor
 slug: Web/API/Navigator/vendor
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
-現在のブラウザーのブラウザーベンダーの名前を返します。
+{{DomXref("Navigator")}} の **`vendor`** プロパティの値は常に "`Google Inc.`"、"`Apple Computer, Inc.`"、（Firefox では）空文字列のいずれかです。
 
-## 構文
+## 値
 
-```
-venString = window.navigator.vendor
-```
-
-### 値
-
-- _venString_ は、 {{domxref("DOMString")}} です。
-
-## 例
-
-```
-window.navigator.vendor
-// "Netscape6" などの文字列が返る
-```
-
-## メモ
-
-`vendor` は、ユーザエージェントを表す文字列の内の一部分です。 product と vendor は異なる可能性があります。例えば、Netscape 6.1 の場合、レンダリングに Gecko product を利用しています。 [navigator.product](/ja/docs/DOM/window.navigator.product)、[navigator.userAgent](/ja/docs/DOM/window.navigator.userAgent) も参照してください。
+- "`Google Inc.`"、"`Apple Computer, Inc.`"、（Firefox では）空文字列のいずれかです。
 
 ## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-{{Compat("api.Navigator.vendor")}}
+{{Compat}}

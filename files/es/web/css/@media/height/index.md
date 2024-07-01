@@ -1,7 +1,6 @@
 ---
 title: Altura
 slug: Web/CSS/@media/height
-original_slug: Web/CSS/@media/altura
 ---
 
 {{cssref}}
@@ -55,4 +54,4 @@ La característica `height` es especificada como un valor {{cssxref("&lt;length&
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.media.height")}}
+{{Compat}}

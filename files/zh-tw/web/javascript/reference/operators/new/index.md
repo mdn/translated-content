@@ -1,8 +1,9 @@
 ---
 title: 建構子函數的使用
 slug: Web/JavaScript/Reference/Operators/new
-original_slug: Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/建構子函數的使用
 ---
+
+{{jsSidebar("Operators")}}
 
 還有一個選擇，你可以按照這兩個步驟來建立物件︰
 
@@ -13,9 +14,9 @@ original_slug: Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新�
 
 ```js
 function car(make, model, year) {
-   this.make = make;
-   this.model = model;
-   this.year = year;
+  this.make = make;
+  this.model = model;
+  this.year = year;
 }
 ```
 
@@ -40,9 +41,9 @@ vpgscar = new car("Mazda", "Miata", 1990);
 
 ```js
 function person(name, age, sex) {
-   this.name = name;
-   this.age = age;
-   this.sex = sex;
+  this.name = name;
+  this.age = age;
+  this.sex = sex;
 }
 ```
 
@@ -57,10 +58,10 @@ ken = new person("Ken Jones", 39, "M");
 
 ```js
 function car(make, model, year, owner) {
-   this.make = make;
-   this.model = model;
-   this.year = year;
-   this.owner = owner;
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.owner = owner;
 }
 ```
 
@@ -73,16 +74,14 @@ car2 = new car("Nissan", "300ZX", 1992, ken);
 
 注意，當建立新的物件的時候，傳入的並不是字面表達字串或整數值，上面的語句把 `rand` 和 `ken` 物件當作參數傳給 owners。然後如果你希望找出 car2 的 owner 的名稱，你可以如下存取屬性︰
 
-```js
+```js-nolint
 car2.owner.name
 ```
 
 注意，你永遠可以給之前定義的物件加入屬性。例如，語句
 
 ```js
-car1.color = "black"
+car1.color = "black";
 ```
 
 把 `color` 屬性加入給 car1，並且把 "black" 的值代入給新加入的屬性。然而，這樣並不能影響到其他的任何物件。若要給所有同樣類型的物件加入新的屬性，你必須把新的屬性加入到 car 物件類型的定義。
-
-{{ PreviousNext("Core_JavaScript_1.5_教學:新物件的建立:物件初始化子的使用", "Core_JavaScript_1.5_教學:新物件的建立:物件屬性的索引") }}

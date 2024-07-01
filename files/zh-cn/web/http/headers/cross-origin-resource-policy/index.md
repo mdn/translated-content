@@ -1,31 +1,42 @@
 ---
 title: Cross-Origin-Resource-Policy
 slug: Web/HTTP/Headers/Cross-Origin-Resource-Policy
+l10n:
+  sourceCommit: b54373ab9025ceb6eb404bd2538ebd4c01576c60
 ---
 
 {{HTTPSidebar}}
 
-> **备注：** 由于[Chrome 浏览器中的一个 Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=952834), 设置 Cross-Origin-Resource-Policy（跨域资源策略）会使文件下载失败：当从设置了 CORP 请求头的资源服务器下载资源时，浏览器会阻止用户使用“保存”或“另存为”按钮将文件保存到本地。在决定生产环境中是否使用这一特性（CORP）之前需要慎重考虑。
+HTTP **`Cross-Origin-Resource-Policy`** 响应标头表示期望浏览器阻止对给定资源在 no-cors 模式下的跨源或跨站点请求。
 
-**`Cross-Origin-Resource-Policy`** 响应头会指示浏览器阻止对指定资源的无源跨域/跨站点请求。
-
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">标头类型</th>
+      <td>{{Glossary("Response header", "响应标头")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
-```plain
-Cross-Origin-Resource-Policy: same-site | same-origin
+```http
+Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
 ```
 
-## 案例
+## 示例
 
-下面的响应头会导致兼容该响应头的用户代理禁止跨域访问和跨域资源共享：
+以下响应标头将导致兼容的用户代理拒绝 no-cors 模式下的跨源请求：
 
-```plain
+```http
 Cross-Origin-Resource-Policy: same-origin
 ```
+
+有关更多示例，请参阅 <https://resourcepolicy.fyi/>。
 
 ## 规范
 
@@ -35,6 +46,8 @@ Cross-Origin-Resource-Policy: same-origin
 
 {{Compat}}
 
-## 相关文章
+## 参见
 
-- [Cross-Origin Resource Policy (CORP) explainer](</zh-CN/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>)
+- [跨源资源策略（CORP）说明](/zh-CN/docs/Web/HTTP/Cross-Origin_Resource_Policy)
+- [考虑部署跨源资源策略](https://resourcepolicy.fyi/)
+- {{httpheader("Access-Control-Allow-Origin")}}

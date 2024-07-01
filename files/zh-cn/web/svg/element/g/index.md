@@ -14,8 +14,11 @@ slug: Web/SVG/Element/g
 ## 示例
 
 ```html
-<svg width="100%" height="100%" viewBox="0 0 95 50"
-     xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 95 50"
+  xmlns="http://www.w3.org/2000/svg">
   <g stroke="green" fill="white" stroke-width="5">
     <circle cx="25" cy="25" r="15" />
     <circle cx="40" cy="25" r="15" />

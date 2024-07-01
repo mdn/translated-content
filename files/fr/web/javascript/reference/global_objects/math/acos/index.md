@@ -1,13 +1,6 @@
 ---
 title: Math.acos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acos
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/acos
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/acos
 ---
 
 {{JSRef}}
@@ -21,7 +14,7 @@ La fonction **`Math.acos()`** renvoie l'arc cosinus d'une valeur exprimée en ra
 ## Syntaxe
 
 ```js
-Math.acos(x)
+Math.acos(x);
 ```
 
 ### Paramètres
@@ -44,12 +37,12 @@ La méthode `acos` renvoie une valeur numérique comprise entre 0 et Pi pour x c
 ### Utiliser `Math.acos()`
 
 ```js
-Math.acos(-2);  // NaN
-Math.acos(-1);  // 3.141592653589793
-Math.acos(0);   // 1.5707963267948966
+Math.acos(-2); // NaN
+Math.acos(-1); // 3.141592653589793
+Math.acos(0); // 1.5707963267948966
 Math.acos(0.5); // 1.0471975511965979
-Math.acos(1);   // 0
-Math.acos(2);   // NaN
+Math.acos(1); // 0
+Math.acos(2); // NaN
 ```
 
 Pour les valeurs (strictement) inférieures à -1 ou supérieures à 1, `Math.acos` renvoie `NaN`.

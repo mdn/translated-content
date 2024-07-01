@@ -1,7 +1,6 @@
 ---
 title: AudioNode
 slug: Web/API/AudioNode
-original_slug: Web/API/AudioNode
 ---
 
 {{APIRef("Web Audio API")}}

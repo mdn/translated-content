@@ -1,6 +1,9 @@
 ---
-title: DOMTokenList.toggle()
+title: "DOMTokenList: toggle() メソッド"
+short-title: toggle()
 slug: Web/API/DOMTokenList/toggle
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
@@ -9,9 +12,9 @@ slug: Web/API/DOMTokenList/toggle
 
 ## 構文
 
-```js
-toggle(token);
-toggle(token, force);
+```js-nolint
+toggle(token)
+toggle(token, force)
 ```
 
 ## 引数
@@ -19,7 +22,9 @@ toggle(token, force);
 - `token`
   - : 文字列で、トグル切り替えしたいトークンを表します。
 - `force` {{optional_inline}}
-  - : 存在する場合は、片方の操作のみを行います。 `false` に設定すると、 `token` を削除する*だけ*となり、追加は行いません。 `true` に設定すると、 `token` を追加する*だけ*となり、削除は行いません。
+  - : 存在する場合は、片方の操作のみを行います。
+    `false` に設定すると、 `token` を削除する*だけ*となり、追加は行いません。
+    `true` に設定すると、 `token` を追加する*だけ*となり、削除は行いません。
 
 ### 返値
 
@@ -43,15 +48,12 @@ toggle(token, force);
 const span = document.querySelector("span");
 const classes = span.classList;
 
-span.addEventListener('click', function() {
+span.addEventListener("click", () => {
   const result = classes.toggle("c");
-
-  if (result) {
-    span.textContent = `'c' added; classList is now "${classes}".`;
-  } else {
-    span.textContent = `'c' removed; classList is now "${classes}".`;
-  }
-})
+  span.textContent = `'c' ${
+    result ? "added" : "removed"
+  }; classList is now "${classes}".`;
+});
 ```
 
 出力結果は以下のようになり、テキストをクリックするたびに変化します。

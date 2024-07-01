@@ -13,7 +13,7 @@ JavaScript asíncrono es un tema bastante avanzado, y se recomienda trabajar con
 
 Si no está familiarizado con el concepto de programación asincrónica, definitivamente debe comenzar con el artículo [Conceptos generales de programación asincrónica](/es/docs/Learn/JavaScript/Asynchronous/Concepts) en este módulo. Si es así, probablemente pueda pasar al [módulo Introducción a JavaScript asíncrono](/es/docs/Learn/JavaScript/Asynchronous/Introducing).
 
-> **Nota:** Si está trabajando en una computadora / tableta / otro dispositivo donde no tiene la capacidad de crear sus propios archivos, puede probar (la mayoría de) los ejemplos de código en un programa de codificación en línea como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com)
+> **Nota:** Si está trabajando en una computadora / tableta / otro dispositivo donde no tiene la capacidad de crear sus propios archivos, puede probar (la mayoría de) los ejemplos de código en un programa de codificación en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com)
 
 ## Guias
 
@@ -30,6 +30,6 @@ Si no está familiarizado con el concepto de programación asincrónica, definit
 - [Elegir el enfoque correcto](/es/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)
   - : Para finalizar este módulo, consideraremos las diferentes técnicas y características de codificación que hemos discutido a lo largo de todo, y veremos cuáles deberias usar cuando, con recomendaciones y recordatorios de dificultades comunes, sea lo más apropiado.
 
-## Ver también
+## Véase tambien
 
-- [Asynchronous Programming](https://eloquentjavascript.net/11_async.html) from the fantastic [Eloquent JavaScript](https://eloquentjavascript.net/) online book by Marijn Haverbeke.
+- [Programación asincrónica](https://eloquentjavascript.net/11_async.html) del fantástico libro en línea [Eloquent JavaScript](https://eloquentjavascript.net/) de Marijn Haverbeke.

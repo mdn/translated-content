@@ -46,25 +46,29 @@ Puede también pasar la referencia del objeto del evento como un parámetro pred
 
 ```html
 <html>
-<head>
-<title>Ejemplo de parámetro de objeto de evento</title>
+  <head>
+    <title>Ejemplo de parámetro de objeto de evento</title>
 
-<script type="text/javascript">
+    <script type="text/javascript">
+      function showCoords(event) {
+        alert(
+          "clientX value: " +
+            event.clientX +
+            "\n" +
+            "clientY value: " +
+            event.clientY +
+            "\n",
+        );
+      }
+    </script>
+  </head>
 
-function showCoords(event){
-  alert(
-    "clientX value: " + event.clientX + "\n" +
-    "clientY value: " + event.clientY + "\n"
-  );
-}
-
-</script>
-</head>
-
-<body onmousedown="showCoords(event)">
-<p>Para ver las coordinadas del ratón
-haga clic en cualquier lugar de esta página.</p>
-</body>
+  <body onmousedown="showCoords(event)">
+    <p>
+      Para ver las coordinadas del ratón haga clic en cualquier lugar de esta
+      página.
+    </p>
+  </body>
 </html>
 ```
 
@@ -72,30 +76,38 @@ El parámetro predefinido del objeto `event` permite pasar tantos parámetros de
 
 ```html
 <html>
-<head>
-<title>Ejemplo de objeto con varios parámetros</title>
+  <head>
+    <title>Ejemplo de objeto con varios parámetros</title>
 
-<script type="text/javascript">
+    <script type="text/javascript">
+      var par2 = "hello";
+      var par3 = "world!";
 
-var par2 = 'hello';
-var par3 = 'world!';
+      function muestraCoords(evt, p2, p3) {
+        alert(
+          "clienteX value: " +
+            evt.clientX +
+            "\n" +
+            "clientY value: " +
+            evt.clientY +
+            "\n" +
+            "p2: " +
+            p2 +
+            "\n" +
+            "p3: " +
+            p3 +
+            "\n",
+        );
+      }
+    </script>
+  </head>
 
-function muestraCoords(evt, p2, p3){
-  alert(
-    "clienteX value: " + evt.clientX + "\n"
-    + "clientY value: " + evt.clientY + "\n"
-    + "p2: " + p2 + "\n"
-    + "p3: " + p3 + "\n"
-  );
-}
-
-</script>
-</head>
-
-<body onmousedown="muestraCoords(event, par2, par3)">
-<p>Para ver las coordinadas del ratón
-haga clic en cualquier lugar de esta página.</p>
-</body>
+  <body onmousedown="muestraCoords(event, par2, par3)">
+    <p>
+      Para ver las coordinadas del ratón haga clic en cualquier lugar de esta
+      página.
+    </p>
+  </body>
 </html>
 ```
 

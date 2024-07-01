@@ -50,13 +50,13 @@ Pragma: no-cache
 
 ## Especificações
 
-| Especificação                                | Título                                          |
-| -------------------------------------------- | ----------------------------------------------- |
+| Especificação                    | Título                                          |
+| -------------------------------- | ----------------------------------------------- |
 | {{RFC("7234", "Pragma", "5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Pragma")}}
+{{Compat}}
 
 ## Veja também
 

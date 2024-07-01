@@ -70,7 +70,7 @@ WebGL は右手系座標系を利用します。上記の図のように `x` 軸
 
 ## 断片処理
 
-断片処理はテクスチャと照明に焦点を当てます - これは与えられたパラメータを元に最終的な色を計算します。
+断片処理はテクスチャと照明に焦点を当てます - これは与えられたパラメーターを元に最終的な色を計算します。
 
 ![Fragment processing](mdn-games-3d-fragment-processing.png)
 
@@ -103,7 +103,7 @@ WebGL は右手系座標系を利用します。上記の図のように `x` 軸
 
 - [Three.js でデモを作る](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)
 - [Babylon.js を使った基本的なデモの作成](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js)
-- [Play​Canva を使った基本的なデモの作成](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas)
+- [PlayCanvas を使った基本的なデモの作成](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas)
 - [A-Frame を使った基本的なデモの作成](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame)
 
 さらに進んで、クールな最先端な 3D の試みをあなた自身で作ってください！

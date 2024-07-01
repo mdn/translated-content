@@ -1,15 +1,6 @@
 ---
 title: Worker
 slug: Web/API/Worker
-tags:
-  - API
-  - DOM
-  - JavaScript
-  - Reference
-  - Web Workers
-  - Worker
-  - Workers
-translation_of: Web/API/Worker
 ---
 
 {{APIRef("Web Workers API")}}
@@ -71,12 +62,12 @@ L'extrait de code suivant montre la création d'un objet {{domxref("Worker")}} e
 
 ```js
 var monWorker = new Worker("worker.js");
-var premier = document.querySelector('#numero1');
+var premier = document.querySelector("#numero1");
 
-premier.onchange = function() {
+premier.onchange = function () {
   monWorker.postMessage([premiere.valeur, deuxieme.valeur]);
-  console.log('Message envoyé au worker');
-}
+  console.log("Message envoyé au worker");
+};
 ```
 
 Pour un exemple complet, voir [Exemple basique de worker dédié](https://github.com/mdn/simple-web-worker) ([exécuter le worker dédié](http://mdn.github.io/simple-web-worker/)).

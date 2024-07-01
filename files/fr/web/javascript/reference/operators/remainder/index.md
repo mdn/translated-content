@@ -1,12 +1,6 @@
 ---
 title: Reste (%)
 slug: Web/JavaScript/Reference/Operators/Remainder
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.remainder
 ---
 
 {{jsSidebar("Operators")}}
@@ -20,7 +14,7 @@ Bien que dans la plupart des langages, `%` est un opérateur de reste, pour d'au
 ## Syntaxe
 
 ```js
-Opérateur : var1 % var2
+Opérateur: var1 % var2;
 ```
 
 ## Exemples
@@ -28,33 +22,33 @@ Opérateur : var1 % var2
 ### Reste avec numérateur positif
 
 ```js
-12 % 5  //  2
- 1 % -2 //  1
- 1 % 2  //  1
- 2 % 3  //  2
-5.5 % 2 // 1.5
+12 % 5; //  2
+1 % -2; //  1
+1 % 2; //  1
+2 % 3; //  2
+5.5 % 2; // 1.5
 ```
 
 ### Reste avec numérateur négatif
 
 ```js
--12 % 5 // -2
--1 % 2  // -1
--4 % 2  // -0
+-12 % 5; // -2
+-1 % 2; // -1
+-4 % 2; // -0
 ```
 
 ### Reste avec NaN
 
 ```js
-NaN % 2 // NaN
+NaN % 2; // NaN
 ```
 
 ### Reste avec l'infini
 
 ```js
-Infinity % 2 // NaN
-Infinity % 0 // NaN
-Infinity % Infinity // NaN
+Infinity % 2; // NaN
+Infinity % 0; // NaN
+Infinity % Infinity; // NaN
 ```
 
 ## Spécifications

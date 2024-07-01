@@ -47,8 +47,8 @@ O exemplo desenha um círculo completo com o método `arc()`.
 O arco recebe 100 como uma coordenada x, e 75 como uma coordenada y e um raio de 50. para fazer um círculo completo, o arco inicia no ângulo 0 (0º) em radianos e finaliza em um ângulo de 2π radianos (360**°**).
 
 ```js
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.arc(100, 75, 50, 0, 2 * Math.PI);
@@ -68,19 +68,19 @@ Este exemplo desenha diversas formas para mostrar o que é possível fazer com o
 ```
 
 ```js
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
 // Draw shapes
 for (let i = 0; i <= 3; i++) {
   for (let j = 0; j <= 2; j++) {
     ctx.beginPath();
-    let x             = 25 + j * 50;                 // coordenada x
-    let y             = 25 + i * 50;                 // coordenada y
-    let radius        = 20;                          // raio
-    let startAngle    = 0;                           // angulo inicial
-    let endAngle      = Math.PI + (Math.PI * j) / 2; // angulo final
-    let anticlockwise = i % 2 == 1;                  // sentido anti-horário
+    let x = 25 + j * 50; // coordenada x
+    let y = 25 + i * 50; // coordenada y
+    let radius = 20; // raio
+    let startAngle = 0; // angulo inicial
+    let endAngle = Math.PI + (Math.PI * j) / 2; // angulo final
+    let anticlockwise = i % 2 == 1; // sentido anti-horário
 
     ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
 
@@ -99,13 +99,11 @@ for (let i = 0; i <= 3; i++) {
 
 ## Especificações
 
-| Especificação                                                                                                                    | Status                           | Comentário |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-arc", "CanvasRenderingContext2D.arc")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CanvasRenderingContext2D.arc")}}
+{{Compat}}
 
 ## Veja mais
 

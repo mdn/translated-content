@@ -1,8 +1,8 @@
 ---
 title: Function.prototype.toSource()
 slug: Web/JavaScript/Reference/Global_Objects/Function/toString
-original_slug: Web/JavaScript/Reference/Global_Objects/Function/toSource
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 **`toSource()`** 메소드는 객체의 소스 코드를 나타내는 스트링을 반환합니다.
@@ -34,7 +34,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Function/toSource
   ```js
   // 예시:
   function hello() {
-      console.log("Hello, World!");
+    console.log("Hello, World!");
   }
 
   hello.toSource();
@@ -49,7 +49,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Function/toSource
 
 이 메소드는 보통 JavaScript 에 의해 내부적으로 호출되며 코드에서 명시적으로 사용되지 않습니다. 디버깅할 때 객체의 컨텐츠를 검사하기 위해 `toSource` 를 호출해보실 수 있습니다.
 
-## 명세
+## 명세서
 
 어떠한 표준의 일부도 아닙니다. JavaScript 1.3 에서 구현되었습니다.
 

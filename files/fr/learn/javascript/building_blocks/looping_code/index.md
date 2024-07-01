@@ -1,22 +1,6 @@
 ---
 title: Les boucles dans le code
 slug: Learn/JavaScript/Building_blocks/Looping_code
-tags:
-  - Article
-  - CodingScripting
-  - DO
-  - Débutant
-  - Guide
-  - JavaScript
-  - Learn
-  - Loop
-  - break
-  - continue
-  - for
-  - l10n:priority
-  - while
-translation_of: Learn/JavaScript/Building_blocks/Looping_code
-original_slug: Apprendre/JavaScript/Building_blocks/Looping_code
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
@@ -82,10 +66,10 @@ Regardons maintenant un exemple qui illustre parfaitement en quoi les boucles so
 #### Exemple
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Random canvas circles</title>
     <style>
       html {
@@ -110,40 +94,37 @@ Regardons maintenant un exemple qui illustre parfaitement en quoi les boucles so
     </style>
   </head>
   <body>
+    <button>Update</button>
 
-  <button>Update</button>
-
-  <canvas></canvas>
+    <canvas></canvas>
 
     <script>
-    const bouton = document.querySelector('button');
-    const canvas = document.querySelector('canvas');
-    const ctx = canvas.getContext('2d');
+      const bouton = document.querySelector("button");
+      const canvas = document.querySelector("canvas");
+      const ctx = canvas.getContext("2d");
 
-    let WIDTH = document.documentElement.clientWidth;
-    let HEIGHT = document.documentElement.clientHeight;
+      let WIDTH = document.documentElement.clientWidth;
+      let HEIGHT = document.documentElement.clientHeight;
 
-    canvas.width = WIDTH;
-    canvas.height = HEIGHT;
+      canvas.width = WIDTH;
+      canvas.height = HEIGHT;
 
-    function random(number) {
-      return Math.floor(Math.random() * number);
-    }
-
-    function draw() {
-      ctx.clearRect(0, 0, WIDTH, HEIGHT);
-      for (let i = 0; i < 100; i++) {
-        ctx.beginPath();
-        ctx.fillStyle = 'rgba(255,0,0,0.5)';
-        ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
-        ctx.fill();
+      function random(number) {
+        return Math.floor(Math.random() * number);
       }
-    }
 
-    bouton.addEventListener('click',draw);
+      function draw() {
+        ctx.clearRect(0, 0, WIDTH, HEIGHT);
+        for (let i = 0; i < 100; i++) {
+          ctx.beginPath();
+          ctx.fillStyle = "rgba(255,0,0,0.5)";
+          ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+          ctx.fill();
+        }
+      }
 
+      bouton.addEventListener("click", draw);
     </script>
-
   </body>
 </html>
 ```
@@ -157,7 +138,7 @@ Vous n'avez pas besoin de comprendre entièrement le code pour l'instant, mais r
 ```js
 for (let i = 0; i < 100; i++) {
   ctx.beginPath();
-  ctx.fillStyle = 'rgba(255,0,0,0.5)';
+  ctx.fillStyle = "rgba(255,0,0,0.5)";
   ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
   ctx.fill();
 }
@@ -169,7 +150,7 @@ Si nous n'utilisions pas de boucle ici, nous aurions dû répéter le code suiva
 
 ```js
 ctx.beginPath();
-ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
+ctx.fillStyle = "rgba(255, 0, 0, 0.5)";
 ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
 ctx.fill();
 ```
@@ -191,21 +172,21 @@ Nous avons ici :
 1. Le mot-clé `for`, suivi par des parenthèses.
 2. A l'intérieur des parenthèses, on a trois objets&nbsp;:
 
-    1. Une **initialisation**&nbsp;: il s'agit souvent d'une variable initialisée à une certaine valeur, qui est incrémentée afin de compter le nombre de fois où la boucle s'est exécutée. On peut également la nommer **compteur**.
-    2. Une **condition de sortie**&nbsp;: comme mentionné précédemment, cela définit le moment où la boucle doit arrêter de s'exécuter. C'est généralement une expression contenant un opérateur de comparaison, un test pour voir si la condition de sortie est atteinte.
-    3. Une **expression finale**&nbsp;: elle est toujours évaluée (ou exécutée) chaque fois que la boucle a effectué une itération complète. Cela sert souvent à incrémenter (ou dans certains cas décrémenter) le compteur, pour le rapprocher de la valeur de la condition de sortie.
+   1. Une **initialisation**&nbsp;: il s'agit souvent d'une variable initialisée à une certaine valeur, qui est incrémentée afin de compter le nombre de fois où la boucle s'est exécutée. On peut également la nommer **compteur**.
+   2. Une **condition de sortie**&nbsp;: comme mentionné précédemment, cela définit le moment où la boucle doit arrêter de s'exécuter. C'est généralement une expression contenant un opérateur de comparaison, un test pour voir si la condition de sortie est atteinte.
+   3. Une **expression finale**&nbsp;: elle est toujours évaluée (ou exécutée) chaque fois que la boucle a effectué une itération complète. Cela sert souvent à incrémenter (ou dans certains cas décrémenter) le compteur, pour le rapprocher de la valeur de la condition de sortie.
 
 3. Des accolades contenant un bloc de code&nbsp;: ce code sera exécuté chaque fois que la boucle itère.
 
 Regardons maintenant un vrai exemple, afin de visualiser leurs actions plus clairement.
 
 ```js
-const chats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
+const chats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
 let info = "Mes chats s'appellent ";
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 for (let i = 0; i < chats.length; i++) {
-  info += chats[i] + ', ';
+  info += chats[i] + ", ";
 }
 
 para.textContent = info;
@@ -216,29 +197,26 @@ para.textContent = info;
 Cela nous donne la sortie suivante&nbsp;:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Exemple de boucles</title>
   </head>
   <body>
-
-  <p></p>
+    <p></p>
 
     <script>
-    const chats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
-    let info = "Mes chats s'appellent ";
-    const para = document.querySelector('p');
+      const chats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
+      let info = "Mes chats s'appellent ";
+      const para = document.querySelector("p");
 
-    for (let i = 0; i < chats.length; i++) {
-      info += chats[i] + ', ';
-    }
+      for (let i = 0; i < chats.length; i++) {
+        info += chats[i] + ", ";
+      }
 
-    para.textContent = info;
-
+      para.textContent = info;
     </script>
-
   </body>
 </html>
 ```
@@ -253,9 +231,9 @@ Cela montre une boucle utilisée pour itérer sur les éléments d'un tableau et
 2. On lui a demandé de s'exécuter jusqu'à ce que sa valeur ne soit plus inférieure à la longueur du tableau chats. C'est important — la condition de sortie montre la condition à laquelle la boucle continue de s'exécuter. C'est à dire dans ce cas, tant que `i < chats.length` est vrai, la boucle continuera à s'exécuter.
 3. Au sein de la boucle, on concatène les éléments présents dans cette boucle (`cats[i]` est `cats[quelle que soit la valeur de i lors de l'itération]`) avec une virgule et un espace, à la fin de la variable `info`. Donc&nbsp;:
 
-    1. Pendant le premier lancement, `i = 0`, donc `cats[0] + ', '` sera concaténé à ("Bill, ")
-    2. Au second lancement, `i = 1`, donc `cats[1] + ', '` et sera concaténé à ("Jeff, ")
-    3. Et ainsi de suite. Après chaque tour de boucle, 1 est ajouté à `i` (`i++`), et alors le processus recommence encore.
+   1. Pendant le premier lancement, `i = 0`, donc `cats[0] + ', '` sera concaténé à ("Bill, ")
+   2. Au second lancement, `i = 1`, donc `cats[1] + ', '` et sera concaténé à ("Jeff, ")
+   3. Et ainsi de suite. Après chaque tour de boucle, 1 est ajouté à `i` (`i++`), et alors le processus recommence encore.
 
 4. Quand `i` devient égal à `cats.length`, la boucle s'arrête, et le navigateur va bouger au prochain bout de code après la boucle.
 
@@ -272,9 +250,9 @@ Idéalement, nous voulons changer la concaténation sur l'itération de la boucl
 ```js
 for (let i = 0; i < cats.length; i++) {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    info += "and " + cats[i] + ".";
   } else {
-    info += cats[i] + ', ';
+    info += cats[i] + ", ";
   }
 }
 ```
@@ -293,7 +271,7 @@ Supposons que nous voulions effectuer une recherche parmi une liste de contacts 
 
 ```html
 <label for="search">Search by contact name: </label>
-<input id="search" type="text">
+<input id="search" type="text" />
 <button>Search</button>
 
 <p></p>
@@ -302,22 +280,29 @@ Supposons que nous voulions effectuer une recherche parmi une liste de contacts 
 Maintenant sur le JavaScript&nbsp;:
 
 ```js
-const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
-const para = document.querySelector('p');
-const input = document.querySelector('input');
-const bouton = document.querySelector('button');
+const contacts = [
+  "Chris:2232322",
+  "Sarah:3453456",
+  "Bill:7654322",
+  "Mary:9998769",
+  "Dianne:9384975",
+];
+const para = document.querySelector("p");
+const input = document.querySelector("input");
+const bouton = document.querySelector("button");
 
-bouton.addEventListener('click', function() {
+bouton.addEventListener("click", function () {
   let searchName = input.value;
-  input.value = '';
+  input.value = "";
   input.focus();
   for (let i = 0; i < contacts.length; i++) {
-    let splitContact = contacts[i].split(':');
+    let splitContact = contacts[i].split(":");
     if (splitContact[0] === searchName) {
-      para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
+      para.textContent =
+        splitContact[0] + "'s number is " + splitContact[1] + ".";
       break;
     } else {
-      para.textContent = 'Contact not found.';
+      para.textContent = "Contact not found.";
     }
   }
 });
@@ -326,42 +311,47 @@ bouton.addEventListener('click', function() {
 ### Résultat
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Simple contact search example</title>
   </head>
   <body>
+    <label for="search">Search by contact name: </label>
+    <input id="search" type="text" />
+    <button>Search</button>
 
-  <label for="search">Search by contact name: </label>
-  <input id="search" type="text">
-  <button>Search</button>
-
-  <p></p>
+    <p></p>
 
     <script>
-    const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
-    const para = document.querySelector('p');
-    const input = document.querySelector('input');
-    const bouton = document.querySelector('button');
+      const contacts = [
+        "Chris:2232322",
+        "Sarah:3453456",
+        "Bill:7654322",
+        "Mary:9998769",
+        "Dianne:9384975",
+      ];
+      const para = document.querySelector("p");
+      const input = document.querySelector("input");
+      const bouton = document.querySelector("button");
 
-    bouton.addEventListener('click', function() {
-      let searchName = input.value;
-      input.value = '';
-      input.focus();
-      for (let i = 0; i < contacts.length; i++) {
-        let splitContact = contacts[i].split(':');
-        if (splitContact[0] === searchName) {
-          para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
-          break;
-        } else {
-          para.textContent = 'Contact not found.';
+      bouton.addEventListener("click", function () {
+        let searchName = input.value;
+        input.value = "";
+        input.focus();
+        for (let i = 0; i < contacts.length; i++) {
+          let splitContact = contacts[i].split(":");
+          if (splitContact[0] === searchName) {
+            para.textContent =
+              splitContact[0] + "'s number is " + splitContact[1] + ".";
+            break;
+          } else {
+            para.textContent = "Contact not found.";
+          }
         }
-      }
-    });
+      });
     </script>
-
   </body>
 </html>
 ```
@@ -373,9 +363,9 @@ bouton.addEventListener('click', function() {
 3. Nous stockons la valeur saisie dans l'input dans une variable appelée `searchName`, avant de vider l'input et le recentrer, prêt pour la recherche suivante.
 4. Maintenant sur la partie intéressante, la boucle `for`&nbsp;:
 
-    1. Nous commençons le compteur à `0`, exécutons la boucle jusqu'à ce que le compteur ne soit plus inférieur à `contacts.length`, et incrémentons `i` par 1 après chaque itération de la boucle.
-    2. À l'intérieur de la boucle, nous divisons d'abord le contact actuel (`contacts[i]`) au caractère deux-points et stockons les deux valeurs résultantes dans un tableau appelé `splitContact`.
-    3. Nous utilisons ensuite une instruction conditionnelle pour tester si `splitContact[0]` (le nom du contact) est égal au `searchName` entré. Si c'est le cas, nous introduisons une `string / chaîne de caractère` dans le paragraphe pour indiquer quel est le numéro du contact et utiliser `break` pour terminer la boucle.
+   1. Nous commençons le compteur à `0`, exécutons la boucle jusqu'à ce que le compteur ne soit plus inférieur à `contacts.length`, et incrémentons `i` par 1 après chaque itération de la boucle.
+   2. À l'intérieur de la boucle, nous divisons d'abord le contact actuel (`contacts[i]`) au caractère deux-points et stockons les deux valeurs résultantes dans un tableau appelé `splitContact`.
+   3. Nous utilisons ensuite une instruction conditionnelle pour tester si `splitContact[0]` (le nom du contact) est égal au `searchName` entré. Si c'est le cas, nous introduisons une `string / chaîne de caractère` dans le paragraphe pour indiquer quel est le numéro du contact et utiliser `break` pour terminer la boucle.
 
 5. Si le nom du contact ne correspond pas à la recherche entrée, le texte du paragraphe est défini sur "Contact not found." et la boucle continue son itération.
 
@@ -396,48 +386,46 @@ for (let i = 1; i <= num; i++) {
     continue;
   }
 
-  para.textContent += i + ' ';
+  para.textContent += i + " ";
 }
 ```
 
 Ici la sortie :
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Integer squares generator</title>
   </head>
   <body>
+    <label for="number">Enter number: </label>
+    <input id="number" type="text" />
+    <button>Generate integer squares</button>
 
-  <label for="number">Enter number: </label>
-  <input id="number" type="text">
-  <button>Generate integer squares</button>
-
-  <p>Output: </p>
+    <p>Output:</p>
 
     <script>
-    const para = document.querySelector('p');
-    const input = document.querySelector('input');
-    const bouton = document.querySelector('button');
+      const para = document.querySelector("p");
+      const input = document.querySelector("input");
+      const bouton = document.querySelector("button");
 
-    bouton.addEventListener('click', function() {
-      para.textContent = 'Output: ';
-      let num = input.value;
-      input.value = '';
-      input.focus();
-      for (let i = 1; i <= num; i++) {
-        let sqRoot = Math.sqrt(i);
-        if (Math.floor(sqRoot) !== sqRoot) {
-          continue;
+      bouton.addEventListener("click", function () {
+        para.textContent = "Output: ";
+        let num = input.value;
+        input.value = "";
+        input.focus();
+        for (let i = 1; i <= num; i++) {
+          let sqRoot = Math.sqrt(i);
+          if (Math.floor(sqRoot) !== sqRoot) {
+            continue;
+          }
+
+          para.textContent += i + " ";
         }
-
-        para.textContent += i + ' ';
-      }
-    });
+      });
     </script>
-
   </body>
 </html>
 ```
@@ -458,11 +446,11 @@ Ici la sortie :
 D'abord, regardons la boucle [`while`](/fr/docs/Web/JavaScript/Reference/Instructions/while). La syntaxe de cette boucle ressemble à ceci&nbsp;:
 
 ```js
-initializer
-while (exit-condition) {
+initializer;
+while (exit_condition) {
   // code to run
 
-  final-expression
+  final_expression;
 }
 ```
 
@@ -477,9 +465,9 @@ let i = 0;
 
 while (i < cats.length) {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    info += "and " + cats[i] + ".";
   } else {
-    info += cats[i] + ', ';
+    info += cats[i] + ", ";
   }
 
   i++;
@@ -491,12 +479,12 @@ while (i < cats.length) {
 La boucle [`do…while`](/fr/docs/Web/JavaScript/Reference/Instructions/do...while) est très similaire, mais dénote une variation par rapport à la structure de la boucle while&nbsp;:
 
 ```js
-initializer
+initializer;
 do {
   // code to run
 
-  final-expression
-} while (exit-condition)
+  final_expression;
+} while (exit_condition);
 ```
 
 Dans ce cas, l'initialiseur vient en premier, avant que la boucle ne commence. Le mot-clé `do` précède directement les accolades contenant le code à exécuter et l'expression finale.
@@ -510,9 +498,9 @@ let i = 0;
 
 do {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    info += "and " + cats[i] + ".";
   } else {
-    info += cats[i] + ', ';
+    info += cats[i] + ", ";
   }
 
   i++;
@@ -546,9 +534,7 @@ Si vous faites une erreur, vous pourrez toujours réinitialiser l'exemple avec l
 
 ```html hidden
 <h2>Sortie en direct</h2>
-<div class="output" style="height: 410px;overflow: auto;">
-
-</div>
+<div class="output" style="height: 410px;overflow: auto;"></div>
 <h2>Code modifiable</h2>
 <p class="a11y-label">Appuyer sur Échap pour décibler le code</p>
 <textarea id="code" class="playable-code" style="height: 300px;">
@@ -563,53 +549,54 @@ output.innerHTML = '';
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 const code = textarea.value;
 
 function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-let jsSolution = 'let output = document.querySelector(\'.output\');\noutput.innerHTML = \'\';\n\nlet i = 10;\n\nwhile(i >= 0) {\n let para = document.createElement(\'p\');\n if(i === 10) {\n para.textContent = \'Countdown \' + i;\n } else if(i === 0) {\n para.textContent = \'Blast off!\';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}';
+let jsSolution =
+  "let output = document.querySelector('.output');\noutput.innerHTML = '';\n\nlet i = 10;\n\nwhile(i >= 0) {\n let para = document.createElement('p');\n if(i === 10) {\n para.textContent = 'Countdown ' + i;\n } else if(i === 0) {\n para.textContent = 'Blast off!';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}";
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // empêcher la pression de la touche de tabulation de cibler
 // un autre élément et insère une tabulation dans le textarea
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -621,8 +608,11 @@ function insertAtCaret(text) {
   let scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
 
-  let front = (textarea.value).substring(0, caretPos);
-  let back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  let front = textarea.value.substring(0, caretPos);
+  let back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -633,10 +623,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -658,7 +648,7 @@ Plus précisément, nous attendons de vous&nbsp;:
 - Au cours de chaque itération, vérifiez si l'élément actuel du tableau est "Phil" ou "Lola" en utilisant une déclaration conditionnelle.
 
   - Si tel est le cas, concaténez l'élément à la fin du paragraphe `refused` du `textContent`, suivi d'une virgule et d'un espace.
-  - Dans le cas contraire, concaténez l'élément à la fin du paragraphe `admitted`  du `textContent` suivi d'une virgule et d'un espace.
+  - Dans le cas contraire, concaténez l'élément à la fin du paragraphe `admitted` du `textContent` suivi d'une virgule et d'un espace.
 
 Nous vous avons déjà fourni les éléments suivants&nbsp;:
 
@@ -673,8 +663,8 @@ Si vous faites une erreur, vous pourrez toujours ré-initialiser l'exemple avec 
 ```html hidden
 <h2>Live output</h2>
 <div class="output" style="height: 100px;overflow: auto;">
-  <p class="admitted">Admettre : </p>
-  <p class="refused">Refuser : </p>
+  <p class="admitted">Admettre :</p>
+  <p class="refused">Refuser :</p>
 </div>
 
 <h2>Editable code</h2>
@@ -695,8 +685,8 @@ refused.textContent = 'Refuse: '
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -723,9 +713,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -733,38 +723,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-let jsSolution = 'const people = [\'Chris\', \'Anne\', \'Colin\', \'Terri\', \'Phil\', \'Lola\', \'Sam\', \'Kay\', \'Bruce\'];\n\nconst admitted = document.querySelector(\'.admitted\');\nconst refused = document.querySelector(\'.refused\');\n\nadmitted.textContent = \'Admit: \';\nrefused.textContent = \'Refuse: \'\nlet i = 0;\n\ndo {\n if(people[i] === \'Phil\' || people[i] === \'Lola\') {\n refused.textContent += people[i] + \', \';\n } else {\n admitted.textContent += people[i] + \', \';\n }\n i++;\n} while(i < people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + \'.\';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + \'.\';';
+let jsSolution =
+  "const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];\n\nconst admitted = document.querySelector('.admitted');\nconst refused = document.querySelector('.refused');\n\nadmitted.textContent = 'Admit: ';\nrefused.textContent = 'Refuse: '\nlet i = 0;\n\ndo {\n if(people[i] === 'Phil' || people[i] === 'Lola') {\n refused.textContent += people[i] + ', ';\n } else {\n admitted.textContent += people[i] + ', ';\n }\n i++;\n} while(i < people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + '.';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + '.';";
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -776,8 +767,11 @@ function insertAtCaret(text) {
   let scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
 
-  let front = (textarea.value).substring(0, caretPos);
-  let back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  let front = textarea.value.substring(0, caretPos);
+  let back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -788,11 +782,11 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -840,7 +834,7 @@ do {
 
 Nous recommandons `for`, au moins pour commencer, car elle est probablement la plus facile pour tout se remémorer&nbsp;: l'initialisation, la condition de sortie, l'expression finale, le tout soigneusement placé entre des parenthèses. De cette façon, il est facile de voir où elles se trouvent et de vérifier qu'on ne les a pas oubliées.
 
-> **Note :** Il y a d'autres types de boucles et de particularités, qui sont très utiles pour des situations spéciales et qui ne sont pas décrites dans cet article. Si vous voulez aller plus loin dans l'apprentissage des boucles, lisez le guide [Boucles et itérations](/fr/docs/Web/JavaScript/Guide/Boucles_et_it%C3%A9ration).
+> **Note :** Il y a d'autres types de boucles et de particularités, qui sont très utiles pour des situations spéciales et qui ne sont pas décrites dans cet article. Si vous voulez aller plus loin dans l'apprentissage des boucles, lisez le guide [Boucles et itérations](/fr/docs/Web/JavaScript/Guide/Boucles_et_itération).
 
 ## Conclusion
 
@@ -850,7 +844,7 @@ S'il y a quelque chose que vous n'avez pas compris, n'hésitez pas à relire l'a
 
 ## Voir aussi
 
-- [Boucles et itération](/fr/docs/Web/JavaScript/Guide/Boucles_et_it%C3%A9ration)
+- [Boucles et itération](/fr/docs/Web/JavaScript/Guide/Boucles_et_itération)
 - [L'instruction `for`](/fr/docs/Web/JavaScript/Reference/Instructions/for)
 - [`while`](/fr/docs/Web/JavaScript/Reference/Instructions/while) et [`do…while`](/fr/docs/Web/JavaScript/Reference/Instructions/do...while)
 - [`break`](/fr/docs/Web/JavaScript/Reference/Instructions/break) et [`continue`](/fr/docs/Web/JavaScript/Reference/Instructions/continue)

@@ -15,9 +15,9 @@ slug: Web/CSS/margin-bottom
 
 ```css
 /* <length> 값 */
-margin-bottom: 10px;  /* 절대 길이 */
-margin-bottom: 1em;   /* 글씨 크기에 상대적 */
-margin-bottom: 5%;    /* 가장 가까운 블록 컨테이너의 너비에 상대적 */
+margin-bottom: 10px; /* 절대 길이 */
+margin-bottom: 1em; /* 글씨 크기에 상대적 */
+margin-bottom: 5%; /* 가장 가까운 블록 컨테이너의 너비에 상대적 */
 
 /* 키워드 값 */
 margin-bottom: auto;
@@ -46,10 +46,18 @@ margin-bottom: unset;
 ## 예제
 
 ```css
-.content { margin-bottom:   5%; }
-.sidebox { margin-bottom: 10px; }
-.logo    { margin-bottom: -5px; }
-#footer  { margin-bottom:  1em; }
+.content {
+  margin-bottom: 5%;
+}
+.sidebox {
+  margin-bottom: 10px;
+}
+.logo {
+  margin-bottom: -5px;
+}
+#footer {
+  margin-bottom: 1em;
+}
 ```
 
 ## 명세

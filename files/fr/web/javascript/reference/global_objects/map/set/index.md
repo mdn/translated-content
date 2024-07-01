@@ -1,20 +1,13 @@
 ---
 title: Map.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/set
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/set
+l10n:
+  sourceCommit: 3cfd663738e9963157d90f359789d675a6662ec2
 ---
 
 {{JSRef}}
 
-La méthode **`set()`** ajoute un nouvel élément avec une `clé` et une `valeur` données à un objet `Map`.
+La méthode **`set()`** ajoute ou met à jour un élément avec une `clé` et une `valeur` données à un objet `Map`.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-set.html")}}
 
@@ -40,7 +33,7 @@ L'objet `Map` courant (auquel l'élément a été ajouté).
 ### Utiliser la méthode `set()`
 
 ```js
-var maMap = new Map();
+const maMap = new Map();
 
 // On ajoute de nouveaux éléments à l'objet map
 maMap.set("truc", "toto");
@@ -57,9 +50,7 @@ La méthode `set()` renvoie le même objet `Map` et on peut donc la « chaîner 
 ```js
 // On ajoute de nouveaux éléments
 // en enchaînant les appels à set()
-maMap.set('truc', 'toto')
-     .set(1, 'tototruc')
-     .set(2, 'bidule');
+maMap.set("truc", "toto").set(1, "tototruc").set(2, "bidule");
 ```
 
 ## Spécifications

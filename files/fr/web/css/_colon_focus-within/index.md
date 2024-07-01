@@ -1,11 +1,6 @@
 ---
-title: ':focus-within'
+title: ":focus-within"
 slug: Web/CSS/:focus-within
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:focus-within
 ---
 
 {{CSSRef}}
@@ -50,17 +45,17 @@ input {
 
 ```html
 <p>
-  L'élément div ci-après aura un fond jaune
-  si l'un des deux champs de saisie a le focus.
+  L'élément div ci-après aura un fond jaune si l'un des deux champs de saisie a
+  le focus.
 </p>
 <div class="name-container">
   <label for="prenom">
     Prénom :
-    <input id="prenom" placeholder="Prénom" type="text">
+    <input id="prenom" placeholder="Prénom" type="text" />
   </label>
   <label for="nom">
     Nom :
-    <input id="nom" placeholder="Nom" type="text">
+    <input id="nom" placeholder="Nom" type="text" />
   </label>
 </div>
 ```

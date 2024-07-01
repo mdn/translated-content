@@ -1,28 +1,32 @@
 ---
-title: element.removeAttributeNS
+title: "Element : méthode removeAttributeNS()"
 slug: Web/API/Element/removeAttributeNS
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthodes
-translation_of: Web/API/Element/removeAttributeNS
+l10n:
+  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}
 
-`removeAttributeNS` supprime l'attribut spécifié d'un élément.
+La méthode **`removeAttributeNS()`**, rattachée à l'interface [`Element`](/fr/docs/Web/API/Element), supprime l'attribut avec l'espace de noms et ayant le nom indiqués.
 
-Dans Firefox 3 et postérieurs, cette méthode réinitialise les valeurs DOM à leur valeur par défaut.
+Si vous manipulez des documents HTML et n'avez pas besoin de restreindre à un espace de noms donné, vous pouvez utiliser la méthode [`removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute) à la place.
 
 ## Syntaxe
 
-```js
-element.removeAttributeNS(namespace,attrName);
+```js-nolint
+removeAttributeNS(namespace, attrName)
 ```
 
-- `namespace` est une chaîne qui contient l'espace de noms de l'attribut.
-- `attrName` est une chaîne qui nomme l'attribut à supprimer du noeud en cours.
+### Paramètres
+
+- `namespace`
+  - : Une chaîne de caractères indiquant l'espace de noms auquel appartient l'attribut.
+- `attrName`
+  - : Une chaîne de caractères indiquant le nom de l'attribut qu'on souhaite supprimer du nœud courant.
+
+### Valeur de retour
+
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ## Exemple
 
@@ -31,13 +35,20 @@ element.removeAttributeNS(namespace,attrName);
 //      special:specialAlign="utterleft" width="200px" />
 d = document.getElementById("div1");
 d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
-// l'élément est devenu&nbsp;: <div id="div1" width="200px" />
+// l'élément est devenu : <div id="div1" width="200px" />
 ```
 
-## Notes
+## Spécifications
 
-{{ DOMAttributeMethods() }}
+{{Specifications}}
 
-## Spécification
+## Compatibilité des navigateurs
 
-- [DOM Level 2 Core: removeAttributeNS (en)](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElRemAtNS) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElRemAtNS) (non normative)
+{{Compat}}
+
+## Voir aussi
+
+- [`Element.removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute)
+- [`Element.hasAttributeNS()`](/fr/docs/Web/API/Element/hasAttributeNS)
+- [`Element.getAttributeNS()`](/fr/docs/Web/API/Element/getAttributeNS)
+- [`Element.setAttributeNS()`](/fr/docs/Web/API/Element/setAttributeNS)

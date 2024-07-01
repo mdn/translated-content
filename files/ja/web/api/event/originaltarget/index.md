@@ -1,6 +1,9 @@
 ---
-title: Event.originalTarget
+title: "Event: originalTarget プロパティ"
+short-title: originalTarget
 slug: Web/API/Event/originalTarget
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{ ApiRef("DOM") }} {{Non-standard_header}}

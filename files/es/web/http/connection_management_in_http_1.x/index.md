@@ -1,7 +1,6 @@
 ---
 title: Gestión de la conexión en  HTTP/1.x
 slug: Web/HTTP/Connection_management_in_HTTP_1.x
-original_slug: Web/HTTP/Gestion_de_la_conexion_en_HTTP_1.x
 ---
 
 {{HTTPSidebar}}
@@ -50,7 +49,7 @@ En HTTP/1.1 las conexiones son persistentes por defecto, así que esa cabecera n
 >
 > - HTTP Pipelining es complicado de implementar correctamente: el tamaño del recurso pedido, el correcto [RTT](https://en.wikipedia.org/wiki/Round-trip_delay_time) que será utilizado, así como el ancho de banda efectivo, tienen un impacto directo en la en la mejora de rendimiento de este método. Sin conocer estos valores, puede que mensajes importantes, se vean retrasados, por mensajes que no lo son. El concepto de "importante" incluso cambia según se carga la maquetación (layout) de la página. De ahí que este método solamente presente una mejora marginal en la mayoría de los casos.
 > - HTTP Pipelining presenta un problema conocido como [HOL](https://en.wikipedia.org/wiki/Head-of-line_blocking)
-> Así, debido a estas razones este método ha sido relevado por un algoritmo mejor, la **multiplexación**, que es el que usa HTTP/2.
+>   Así, debido a estas razones este método ha sido relevado por un algoritmo mejor, la **multiplexación**, que es el que usa HTTP/2.
 
 Por defecto, las peticiones HTTP son realizadas de manera sequencial. La siguiente petición es realizada una vez que la respuesta a la petición actual ha sido recibida. Debido a que se ven afectadas por latencias en la red y limitaciones en el ancho de banda, ésto puede llevar a retardos significativos hasta que la siguiente petición es _vista_ por el servidor.
 

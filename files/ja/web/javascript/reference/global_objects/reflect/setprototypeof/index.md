@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
 
 {{JSRef}}
 
-静的な **`Reflect.setPrototypeOf()`** メソッドは、返値を除いて、 {{jsxref("Object.setPrototypeOf()")}} と同じメソッドです。これは指定されたオブジェクトのプロトタイプ (つまり、内部の `[[Prototype]]` プロパティ) にほかのオブジェクト、または {{jsxref("null")}} を設定し、操作が成功したなら `true` を、そうでないなら `false` を返します。
+静的な **`Reflect.setPrototypeOf()`** メソッドは、返値を除いて、 {{jsxref("Object.setPrototypeOf()")}} と同じメソッドです。これは指定されたオブジェクトのプロトタイプ (つまり、内部の `[[Prototype]]` プロパティ) にほかのオブジェクト、または [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を設定し、操作が成功したなら `true` を、そうでないなら `false` を返します。
 
 {{EmbedInteractiveExample("pages/js/reflect-setprototypeof.html")}}
 
@@ -20,7 +20,7 @@ Reflect.setPrototypeOf(target, prototype)
 - `target`
   - : プロトタイプを設定する対象のオブジェクトです。
 - `prototype`
-  - : オブジェクトの新しいプロトタイプ (オブジェクトまたは {{jsxref("null")}}) です。
+  - : オブジェクトの新しいプロトタイプ (オブジェクトまたは [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null)) です。
 
 ### 返値
 
@@ -28,7 +28,7 @@ Reflect.setPrototypeOf(target, prototype)
 
 ### 例外
 
-{{jsxref("TypeError")}}: `target` が {{jsxref("Object")}} ではない場合、または `prototype` がオブジェクトでも {{jsxref("null")}} でもない場合。
+{{jsxref("TypeError")}}: `target` が {{jsxref("Object")}} ではない場合、または `prototype` がオブジェクトでも [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) でもない場合。
 
 ## 解説
 
@@ -39,18 +39,18 @@ Reflect.setPrototypeOf(target, prototype)
 ### Reflect.setPrototypeOf() の使用
 
 ```js
-Reflect.setPrototypeOf({}, Object.prototype)  // true
+Reflect.setPrototypeOf({}, Object.prototype); // true
 
 // オブジェクトの [[Prototype]] は null に変更できる。
-Reflect.setPrototypeOf({}, null)  // true
+Reflect.setPrototypeOf({}, null); // true
 
 // 対象が拡張できない場合、false を返す。
-Reflect.setPrototypeOf(Object.freeze({}), null)  // false
+Reflect.setPrototypeOf(Object.freeze({}), null); // false
 
 // プロトタイプチェーンが循環する場合、false を返す。
-let target = {}
-let proto = Object.create(target)
-Reflect.setPrototypeOf(target, proto)  // false
+let target = {};
+let proto = Object.create(target);
+Reflect.setPrototypeOf(target, proto); // false
 ```
 
 ## 仕様書
@@ -59,7 +59,7 @@ Reflect.setPrototypeOf(target, proto)  // false
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Reflect.setPrototypeOf")}}
+{{Compat}}
 
 ## 関連情報
 

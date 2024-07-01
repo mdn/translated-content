@@ -1,65 +1,42 @@
 ---
 title: 全局对象
 slug: Glossary/Global_object
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-一个全局对象是一个永远存在于 {{glossary("global scope")}} 的 {{glossary("object")}}.
+{{GlossarySidebar}}
 
-在 JavaScript 中，有一个永远被定义的全局对象。在一个 web 浏览器中，当脚本创建全局变量时，他们作为该全局对象的成员被创建。(在 {{Glossary("Node.js")}} 不是这样.) 全局对象的 {{Glossary("interface")}} 取决于脚本在其中运行的执行上下文。例如：
+一个全局对象是一个永远存在于{{glossary("global scope", "全局作用域")}}的{{glossary("object", "对象")}}。
 
-- 在 Web 浏览器中，脚本没有专门作为后台任务启动的任何代码都将{{domxref("Window")}} 作为其全局对象。这是 Web 上绝大多数的 JavaScript 代码。
-- 在 {{domxref("Worker")}} 中运行的代码将{{domxref("WorkerGlobalScope")}} 对象作为其全局对象。
-- 在{{Glossary("Node.js")}} 环境下运行的脚本具有一个称为[`global`](https://nodejs.org/api/globals.html#globals_global) 的对象作为其全局对象。
+在 JavaScript 中，总是会定义一个全局对象。在 Web 浏览器中，当脚本使用 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 关键字定义全局变量时，它们被创建为全局对象的成员（但是，在 {{Glossary("Node.js")}} 中并非如此）。全局对象的{{Glossary("interface", "接口")}}取决于脚本运行的执行上下文。例如：
 
-## 浏览器中的 `window` 对象
+- 在 Web 浏览器中，脚本未明确启动为后台任务的任何代码都将具有一个 {{domxref("Window")}} 作为其全局对象。这是 Web 上绝大多数 JavaScript 代码的情况。
+- 在 {{domxref("Worker")}} 中运行的代码具有一个 {{domxref("WorkerGlobalScope")}} 对象作为其全局对象。
+- 在 {{Glossary("Node.js")}} 下运行的脚本具有一个名为 global 的对象作为其全局对象。
 
-`window` 对象是浏览器中的全局对象。任何全局变量或者全局函数都可以通过 `window` 的属性来访问。
+[`globalThis`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis) 全局属性允许无论当前环境如何都能访问全局对象。
 
-### 访问全局变量
+在 JavaScript 中，使用 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 语句和[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)创建的顶级属性都是全局对象的属性。另一方面，{{jsxref("Statements/let", "let")}} 和 {{jsxref("Statements/const", "const")}} 声明永远不会创建全局对象的属性。
 
-```js
-var foo = "foobar";
-foo === window.foo; // Returns: true
-```
+全局对象的属性会自动添加到{{glossary("global scope", "全局作用域")}}中。
 
-在定义全局变量 `foo` 之后，我们可以通过 `window` 对象的属性来访问它。把变量名 `foo` 作为全局对象的 `window.foo` 的属性名来使用。
-
-#### 解释：
-
-全局变量 `foo` 存储在 `window` 对象中，像这样：
+在 JavaScript 中，全局对象始终保留对自身的引用：
 
 ```js
-foo: "foobar"
-```
-
-### 访问全局函数
-
-```js
-function greeting() {
-   console.log("Hi!");
-}
-
-window.greeting(); // It is the same as the normal invoking: greeting();
-```
-
-上面解释了全局对象如果作为 `window` 对象的属性而存储的。我们创建了全局函数 `greeting` ，然后通过 `window` 对象来调用它。.
-
-#### 解释：
-
-全局函数 `greeting` 存储在 `window` 对象中，像这样：
-
-```js
-greeting: function greeting() {
-   console.log("Hi!");
-}
+console.log(globalThis === globalThis.globalThis); // true（在任何地方）
+console.log(window === window.window); // true（在浏览器中）
+console.log(self === self.self); // true（在浏览器中或在 Web Worker 中）
+console.log(frames === frames.frames); // true (在浏览器中)
+console.log(global === global.global); // true（在 Node.js 中）
 ```
 
 ## 参见
 
-- [MDN Web Docs Glossary](/zh-CN/docs/Glossary)
+- [MDN Web 文档术语](/zh-CN/docs/Glossary)
 
-  - {{glossary("global scope")}}
-  - {{glossary("object")}}
+  - {{glossary("global scope", "全局作用域")}}
+  - {{glossary("object", "对象")}}
 
 - {{domxref("Window")}}
 - {{domxref("WorkerGlobalScope")}}

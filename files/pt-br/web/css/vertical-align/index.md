@@ -153,20 +153,20 @@ img.middle {
 
 ```html
 <p>
-top:         <img style="vertical-align: top" src="star.png"/>
-middle:      <img style="vertical-align: middle" src="star.png"/>
-bottom:      <img style="vertical-align: bottom" src="star.png"/>
-super:       <img style="vertical-align: super" src="star.png"/>
-sub:         <img style="vertical-align: sub" src="star.png"/>
+  top: <img style="vertical-align: top" src="star.png" /><br />
+  middle: <img style="vertical-align: middle" src="star.png" /><br />
+  bottom: <img style="vertical-align: bottom" src="star.png" /><br />
+  super: <img style="vertical-align: super" src="star.png" /><br />
+  sub: <img style="vertical-align: sub" src="star.png" /><br />
 </p>
 
 <p>
-text-top:    <img style="vertical-align: text-top" src="star.png"/>
-text-bottom: <img style="vertical-align: text-bottom" src="star.png"/>
-0.2em:       <img style="vertical-align: 0.2em" src="star.png"/>
--1em:        <img style="vertical-align: -1em" src="star.png"/>
-20%:         <img style="vertical-align: 20%" src="star.png"/>
--100%:       <img style="vertical-align: -100%" src="star.png"/>
+  text-top: <img style="vertical-align: text-top" src="star.png" /><br />
+  text-bottom: <img style="vertical-align: text-bottom" src="star.png" /><br />
+  0.2em: <img style="vertical-align: 0.2em" src="star.png" /><br />
+  -1em: <img style="vertical-align: -1em" src="star.png" /><br />
+  20%: <img style="vertical-align: 20%" src="star.png" /><br />
+  -100%: <img style="vertical-align: -100%" src="star.png" /><br />
 </p>
 ```
 
@@ -207,13 +207,12 @@ p {
     <td style="vertical-align: bottom">bottom</td>
     <td>
       <p>
-        Existe uma teoria que afirma que se alguém descobrir exatamente
-        para que serve o Universo e por que ele está aqui, ele desaparecerá instantaneamente
-        e será substituído por algo ainda mais bizarro e inexplicável.
+        Existe uma teoria que afirma que se alguém descobrir exatamente para que
+        serve o Universo e por que ele está aqui, ele desaparecerá
+        instantaneamente e será substituído por algo ainda mais bizarro e
+        inexplicável.
       </p>
-      <p>
-        Há outra teoria que afirma que isso já aconteceu.
-      </p>
+      <p>Há outra teoria que afirma que isso já aconteceu.</p>
     </td>
   </tr>
 </table>

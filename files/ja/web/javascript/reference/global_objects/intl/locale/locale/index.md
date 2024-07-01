@@ -12,8 +12,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
 ## 構文
 
 ```js
-new Intl.Locale(tag)
-new Intl.Locale(tag, options)
+new Intl.Locale(tag);
+new Intl.Locale(tag, options);
 ```
 
 ### 引数
@@ -30,7 +30,7 @@ new Intl.Locale(tag, options)
 もっとも単純なものでは、{{jsxref("Intl/Locale/Locale", "Intl.Locale")}} コンストラクターはロケール識別子の文字列を引数に取ります。
 
 ```js
-let us = new Intl.Locale('en-US');
+let us = new Intl.Locale("en-US");
 ```
 
 ### Locale コンストラクターに options オブジェクトを渡して使用

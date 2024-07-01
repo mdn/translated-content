@@ -1,14 +1,6 @@
 ---
 title: AnimationEvent.elapsedTime
 slug: Web/API/AnimationEvent/elapsedTime
-tags:
-  - API
-  - AnimationEvent
-  - CSS Animations
-  - Experimental
-  - Property
-  - Reference
-translation_of: Web/API/AnimationEvent/elapsedTime
 ---
 
 {{SeeCompatTable}}{{ apiref("AnimationEvent") }}
@@ -20,7 +12,7 @@ La propriété en lecture seule **`AnimationEvent.elapsedTime`** est un `float` 
 ## Syntaxe
 
 ```js
-temps = AnimationEvent.elapsedTime
+temps = AnimationEvent.elapsedTime;
 ```
 
 ## Spécifications

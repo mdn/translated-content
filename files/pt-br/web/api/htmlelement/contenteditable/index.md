@@ -19,15 +19,13 @@ Você pode usar a propriedade {{domxref( "HTMLElement.isContentEditable")}} para
 editable = element.contentEditable element.contentEditable= "true"
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                                | Status                           | Comentário         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'interaction.html#contenteditable', 'contenteditable')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.HTMLElement.contentEditable")}}
+{{Compat}}
 
 ## Veja também
 

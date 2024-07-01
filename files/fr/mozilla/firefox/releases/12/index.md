@@ -1,11 +1,6 @@
 ---
 title: Firefox 12 pour les développeurs
 slug: Mozilla/Firefox/Releases/12
-tags:
-  - Firefox
-  - Firefox 12
-translation_of: Mozilla/Firefox/Releases/12
-original_slug: Mozilla/Firefox/Versions/12
 ---
 
 {{FirefoxSidebar}}
@@ -39,7 +34,7 @@ Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume
 - {{domxref("DOMError")}} a été implémenté selon la spécification DOM 4.
 - La méthode {{domxref("Document.createNodeIterator()")}} a été mise à jour suivant la spécification DOM4. Cela rend les paramètres `whatToShow` et `filter` facultatifs et supprime le quatrième paramètre non-standard, `entityReferenceExpansion`.
 - La méthode `slice()` de l'interface {{domxref("Blob")}} a été touché par un bug qui l'empêchait d'accepter correctement le début et la fin des valeurs hors de la portée d'un entier de 64 bits signé, cela a été corrigé.
-- La méthode {{domxref("element.getBoundingClientRect()")}} considère désormais l'effet des [transformations CSS](/fr-/docs/CSS/Utilisation_des_transformations_CSS) lors du calcul des délimitations du rectangle de l'élément.
+- La méthode {{domxref("element.getBoundingClientRect()")}} considère désormais l'effet des [transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) lors du calcul des délimitations du rectangle de l'élément.
 - La propriété `crossOrigin` est à présent supportée par {{domxref("HTMLMediaElement")}}.
 
 #### Nouvelles WebAPIs
@@ -51,8 +46,8 @@ Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume
 
 ### SVG
 
-- Firefox implémente désormais l'API DOM {{domxref("SVGTests")}}, voir {{bug(607854)}}
-- L'interface DOM {{domxref("SVGStringList")}} supporte la propriété non-standard `length`, voir {{bug(711958)}}
+- Firefox implémente désormais l'API DOM {{domxref("SVGTests")}}, voir [bug Firefox 607854](https://bugzil.la/607854)
+- L'interface DOM {{domxref("SVGStringList")}} supporte la propriété non-standard `length`, voir [bug Firefox 711958](https://bugzil.la/711958)
 
 ### MathML
 

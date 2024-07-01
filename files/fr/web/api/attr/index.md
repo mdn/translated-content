@@ -1,11 +1,6 @@
 ---
 title: Attr
 slug: Web/API/Attr
-tags:
-  - API
-  - Attribut
-  - DOM
-translation_of: Web/API/Attr
 ---
 
 {{APIRef("DOM")}}
@@ -28,7 +23,7 @@ Ce type représente un attribut d'un élément DOM comme un objet. Dans la plupa
   - : L'élément contenant l'attribut.
 
 > **Note :** DOM Niveau 4 a supprimé cette propriété . L'hypothèse était que puisque nous obtenons un objet Attr d'un {{domxref("Element")}}, nous devrions déjà connaître les éléments associés.
-> Comme cela n'est pas vrai quand les objets `Attr`  sont retournés par {{domxref("Document.evaluate")}}, le DOM Living Standard a réintroduit la propriété.
+> Comme cela n'est pas vrai quand les objets `Attr` sont retournés par {{domxref("Document.evaluate")}}, le DOM Living Standard a réintroduit la propriété.
 >
 > Gecko affiche une note de dépréciation à partir de Gecko 7.0. Cette note a été supprimée dans Gecko 49.0.
 
@@ -96,8 +91,6 @@ Les méthodes suivantes ont été dépréciées:
   - : Cette méthode retourne désormais toujours false.
 - `insertBefore()`
   - : Modifiez à la place la valeur de {{domxref ("Attr.value")}}.
-- `isSupported()`
-  - : Vous n'auriez pas dû l'utiliser en premier lieu, donc cela ne devrait pas vous ennuyer qu'il soit retiré.
 - `isEqualNode()`
   - : Vous n'auriez pas dû l'utiliser en premier lieu, donc cela ne devrait pas vous ennuyer qu'il soit retiré.
 - `normalize()`

@@ -1,12 +1,13 @@
 ---
-title: HTMLAreaElement.href
+title: "HTMLAreaElement: href プロパティ"
 slug: Web/API/HTMLAreaElement/href
-original_slug: Web/API/HTMLHyperlinkElementUtils/href
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{ApiRef("HTML DOM")}}
 
-**`HTMLAreaElement.href`** は{{Glossary("stringifier", "文字列化")}}プロパティで、URL 全体を含む文字列を返し、 href を更新することもできます。
+**`HTMLAreaElement.href`** は{{Glossary("stringifier", "文字列化")}}プロパティで、URL 全体を含む文字列を返し、href を更新することができます。
 
 ## 値
 

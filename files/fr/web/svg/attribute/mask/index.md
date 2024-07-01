@@ -1,7 +1,6 @@
 ---
 title: mask
 slug: Web/SVG/Attribute/mask
-translation_of: Web/SVG/Attribute/mask
 ---
 
 {{SVGRef}}
@@ -13,21 +12,26 @@ L'attribut `mask` est un attribut de présentation principalement utilisé pour 
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
   <mask id="monMask" maskContentUnits="objectBoundingBox">
-    <rect    fill="white" x="0" y="0" width="100%" height="100%" />
-    <polygon fill="black" points="0.5,0.2 0.68,0.74 0.21,0.41 0.79,0.41 0.32,0.74" />
+    <rect fill="white" x="0" y="0" width="100%" height="100%" />
+    <polygon
+      fill="black"
+      points="0.5,0.2 0.68,0.74 0.21,0.41 0.79,0.41 0.32,0.74" />
   </mask>
 
   <!-- Fait un trou de la forme d'une étoile sur le cercle rouge,
   ce qui laisse apparaître le cercle jaune situé dessous. -->
   <circle cx="50" cy="50" r="20" fill="yellow" />
-  <circle cx="50" cy="50" r="45" fill="red"
-          mask="url(#monMask)"/>
+  <circle cx="50" cy="50" r="45" fill="red" mask="url(#monMask)" />
 </svg>
 ```
 

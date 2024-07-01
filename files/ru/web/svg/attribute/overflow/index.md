@@ -1,11 +1,9 @@
 ---
 title: overflow
 slug: Web/SVG/Attribute/overflow
-tags:
-  - SVG
-  - SVG атрибуты
-translation_of: Web/SVG/Attribute/overflow
 ---
+
+{{SVGRef}}
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 

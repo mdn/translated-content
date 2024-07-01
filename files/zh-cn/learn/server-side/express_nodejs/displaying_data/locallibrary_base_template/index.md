@@ -7,7 +7,7 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_templat
 
 开启 **/views/layout.pug** ，并以下列代码置换其内容。
 
-```html
+```pug
 doctype html
 html(lang='en')
   head
@@ -49,7 +49,7 @@ html(lang='en')
           block content
 ```
 
-此模板使用（并包含）来自 [Bootstrap](http://getbootstrap.com/) 的 JavaScript 和 CSS，以改进 HTML 页面的布局和呈现方式。使用 Bootstrap 或其它客户端网页框架，是一种快速的方式，可以创建吸引人的网页，能够良好地适应不同的浏览器尺寸，并且允许我们处理页面的呈现，而不需要纠缠于任何不同尺寸的细节—此处我们只想专注于伺服端代码！
+此模板使用（并包含）来自 [Bootstrap](http://getbootstrap.com/) 的 JavaScript 和 CSS，以改进 HTML 页面的布局和呈现方式。使用 Bootstrap 或其他客户端网页框架，是一种快速的方式，可以创建吸引人的网页，能够良好地适应不同的浏览器尺寸，并且允许我们处理页面的呈现，而不需要纠缠于任何不同尺寸的细节—此处我们只想专注于伺服端代码！
 
 布局的安排应该相当明白，假如你已经阅读了之前的 [模板入门](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data#Template_primer)。注意，使用 `block content` 当做定位符号，放到页面内容将要放置的地方。
 
@@ -57,9 +57,9 @@ html(lang='en')
 
 ```css
 .sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 ```
 

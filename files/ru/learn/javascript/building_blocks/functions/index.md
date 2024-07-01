@@ -1,12 +1,6 @@
 ---
 title: Функции — Переиспользуемые блоки кода
 slug: Learn/JavaScript/Building_blocks/Functions
-tags:
-  - Функции
-  - аргументы
-  - методы
-  - параметры
-translation_of: Learn/JavaScript/Building_blocks/Functions
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
@@ -30,8 +24,8 @@ translation_of: Learn/JavaScript/Building_blocks/Functions
 В этом курсе мы использовали функции, встроенные в браузер. Каждый раз, когда мы манипулировали текстовой строкой, например:
 
 ```js
-var myText = 'Я строка';
-var newString = myText.replace('строка', 'сосиска');
+var myText = "Я строка";
+var newString = myText.replace("строка", "сосиска");
 console.log(newString);
 // Функция строки replace() принимает строку,
 // заменяет одну строку на другую, и возвращает
@@ -41,8 +35,8 @@ console.log(newString);
 Или каждый раз, когда мы манипулировали массивом:
 
 ```js
-var myArray = ['Я', 'люблю', 'шоколадных', 'лягушек'];
-var madeAString = myArray.join(' ');
+var myArray = ["Я", "люблю", "шоколадных", "лягушек"];
+var madeAString = myArray.join(" ");
 console.log(madeAString);
 // Функция join() принимает массив, соединяет
 // все элементы массива вместе в одну строку,
@@ -52,7 +46,7 @@ console.log(madeAString);
 Или каждый раз, когда мы генерировали случайное число:
 
 ```js
-var myNumber = Math.random()
+var myNumber = Math.random();
 // Функция random() генерирует случайное число от 0 до 1,
 // и возвращает это число
 ```
@@ -79,10 +73,10 @@ var myNumber = Math.random()
 
 ```js
 function draw() {
-  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (var i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.fillStyle = "rgba(255,0,0,0.5)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
@@ -99,7 +93,7 @@ draw();
 
 ```js
 function random(number) {
-  return Math.floor(Math.random()*number);
+  return Math.floor(Math.random() * number);
 }
 ```
 
@@ -111,10 +105,10 @@ function random(number) {
 
 ```js
 function myFunction() {
-  alert('привет');
+  alert("привет");
 }
 
-myFunction()
+myFunction();
 // Единовременный вызов функции
 ```
 
@@ -124,7 +118,7 @@ myFunction()
 
 ```js
 function myFunction() {
-  alert('привет');
+  alert("привет");
 }
 ```
 
@@ -139,11 +133,11 @@ function() {
 Такая функция называется **безымянная функция** (или анонимная) — она не имеет имени! Она сама по себе ничего не делает. Обычно такие функции используются вместе с обработчиком событий, например, следующее будет вызывать код внутри функции каждый раз, по нажатию соответствующей кнопки:
 
 ```js
-var myButton = document.querySelector('button');
+var myButton = document.querySelector("button");
 
-myButton.onclick = function() {
-  alert('привет');
-}
+myButton.onclick = function () {
+  alert("привет");
+};
 ```
 
 В приведённом примере требуется, чтобы на странице был элемент {{htmlelement ("button")}} (кнопка), которую нужно нажать. Вы уже видели такую структуру несколько раз на протяжении всего курса, подробнее о ней вы узнаете из следующей статьи.
@@ -151,9 +145,9 @@ myButton.onclick = function() {
 Вы также можете присвоить к переменной анонимную функцию, например:
 
 ```js
-var myGreeting = function() {
-  alert('привет');
-}
+var myGreeting = function () {
+  alert("привет");
+};
 ```
 
 Теперь эту функцию можно вызвать, используя:
@@ -165,9 +159,9 @@ myGreeting();
 Фактически такой способ присваивает переменной имя; вы также можете присвоить функцию значением нескольких переменных, например:
 
 ```js
-var anotherGreeting = function() {
-  alert('привет');
-}
+var anotherGreeting = function () {
+  alert("привет");
+};
 ```
 
 Теперь функцию можно вызвать, используя любую из переменных
@@ -181,18 +175,18 @@ anotherGreeting();
 
 ```js
 function myGreeting() {
-  alert('привет');
+  alert("привет");
 }
 ```
 
 Чаще всего вы будете использовать анонимные функции, чтобы просто запускать код при срабатывания события - например, нажатие кнопки - с помощью обработчика событий. Опять же, это выглядит примерно так:
 
 ```js
-myButton.onclick = function() {
-  alert('привет');
+myButton.onclick = function () {
+  alert("привет");
   // При желании, внутри этой функции
   // можно написать много кода.
-}
+};
 ```
 
 ## Параметры функции
@@ -210,8 +204,8 @@ var myNumber = Math.random();
 Браузерная встроенная функция, работающая со строкой, [replace()](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/replace) ожидает два параметра — это подстрока для поиска в основной строке и строка, на которую происходит замена в основной строке:
 
 ```js
-var myText = 'Я строка';
-var newString = myText.replace('строка', 'сосиска');
+var myText = "Я строка";
+var newString = myText.replace("строка", "сосиска");
 ```
 
 > **Примечание:** Если необходимо указать несколько параметров, их разделяют запятыми.
@@ -219,8 +213,8 @@ var newString = myText.replace('строка', 'сосиска');
 Следует также отметить, что иногда параметры являются необязательными - вам не нужно их указывать. Если вы этого не сделаете, функция, как правило, примет какое-то поведение по умолчанию. В качестве примера параметр функции массива [join()](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/join) необязателен:
 
 ```js
-var myArray = ['Я', 'люблю', 'шоколадных', 'лягушек'];
-var madeAString = myArray.join(' ');
+var myArray = ["Я", "люблю", "шоколадных", "лягушек"];
+var madeAString = myArray.join(" ");
 // Вернёт 'Я люблю шоколадных лягушек'
 var madeAString = myArray.join();
 // Вернёт 'Я,люблю,шоколадных,лягушек'
@@ -249,17 +243,17 @@ JavaScript настроен таким образом по разным прич
 
 ```js
 // first.js
-var name = 'Chris';
+var name = "Chris";
 function greeting() {
-  alert('Hello ' + name + ': welcome to our company.');
+  alert("Hello " + name + ": welcome to our company.");
 }
 ```
 
 ```js
 // second.js
-var name = 'Zaptec';
+var name = "Zaptec";
 function greeting() {
-  alert('Our company is called ' + name + '.');
+  alert("Our company is called " + name + ".");
 }
 ```
 
@@ -283,87 +277,87 @@ function greeting() {
 2. Откройте пример в браузере и в текстовом редакторе.
 3. Откройте консоль JavaScript в инструментах разработчика вашего браузера. В консоли JavaScript введите следующую команду:
 
-    ```js
-    output(x);
-    ```
+   ```js
+   output(x);
+   ```
 
-    вы должны увидеть значение переменной `x` вывод на экране.
+   вы должны увидеть значение переменной `x` вывод на экране.
 
 4. Теперь попробуйте ввести следующее в консоли
 
-    ```js
-    output(y);
-    output(z);
-    ```
+   ```js
+   output(y);
+   output(z);
+   ```
 
-    Оба из них должны возвращать ошибку в строке "[ReferenceError: y is not defined](/ru/docs/Web/JavaScript/Reference/Errors/Not_defined)". Почему это? Из-за функции scope - `y` и `z` блокируются внутри функций `a()` и `b()`, поэтому `output()` не может получить к ним доступ при вызове из глобальной области.
+   Оба из них должны возвращать ошибку в строке "[ReferenceError: y is not defined](/ru/docs/Web/JavaScript/Reference/Errors/Not_defined)". Почему это? Из-за функции scope - `y` и `z` блокируются внутри функций `a()` и `b()`, поэтому `output()` не может получить к ним доступ при вызове из глобальной области.
 
 5. Однако как насчёт того, когда он вызван изнутри другой функции? Попробуйте отредактировать функции `a()` и `b()`, чтобы они выглядели следующим образом:
 
-    ```js
-    function a() {
-      var y = 2;
-      output(y);
-    }
+   ```js
+   function a() {
+     var y = 2;
+     output(y);
+   }
 
-    function b() {
-      var z = 3;
-      output(z);
-    }
-    ```
+   function b() {
+     var z = 3;
+     output(z);
+   }
+   ```
 
-    Сохраните код и перезагрузите его в своём браузере, затем попробуйте вызвать функции `a()` и `b()` из консоли JavaScript:
+   Сохраните код и перезагрузите его в своём браузере, затем попробуйте вызвать функции `a()` и `b()` из консоли JavaScript:
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
-    вы должны увидеть значения y и z, выводимые на странице. Это отлично работает, так как функция `output()` вызывается внутри других функций - в той же области, где переменные, которые она печатает, определяются в каждом случае. `output()` доступен из любого места, поскольку он определён в глобальной области.
+   вы должны увидеть значения y и z, выводимые на странице. Это отлично работает, так как функция `output()` вызывается внутри других функций - в той же области, где переменные, которые она печатает, определяются в каждом случае. `output()` доступен из любого места, поскольку он определён в глобальной области.
 
 6. Теперь попробуйте обновить свой код следующим образом:
 
-    ```js
-    function a() {
-      var y = 2;
-      output(x);
-    }
+   ```js
+   function a() {
+     var y = 2;
+     output(x);
+   }
 
-    function b() {
-      var z = 3;
-      output(x);
-    }
-    ```
+   function b() {
+     var z = 3;
+     output(x);
+   }
+   ```
 
-    Сохраните и перезагрузите снова и повторите попытку в консоли JavaScript:
+   Сохраните и перезагрузите снова и повторите попытку в консоли JavaScript:
 
 7. ```js
-    a();
-    b();
-    ```
+   a();
+   b();
+   ```
 
-    Оба вызова `a()` и `b()` должны выводить значение x - 1. Они работают нормально, потому что, хотя вызовы `output()` не находятся в той же области, где определено `x`, `x` - глобальная переменная, поэтому она доступна внутри всего кода, везде
+   Оба вызова `a()` и `b()` должны выводить значение x - 1. Они работают нормально, потому что, хотя вызовы `output()` не находятся в той же области, где определено `x`, `x` - глобальная переменная, поэтому она доступна внутри всего кода, везде
 
 8. Наконец, попробуйте обновить свой код следующим образом:
 
-    ```js
-    function a() {
-      var y = 2;
-      output(z);
-    }
+   ```js
+   function a() {
+     var y = 2;
+     output(z);
+   }
 
-    function b() {
-      var z = 3;
-      output(y);
-    }
-    ```
+   function b() {
+     var z = 3;
+     output(y);
+   }
+   ```
 
-    Сохраните и перезагрузите снова и повторите попытку в консоли JavaScript:
+   Сохраните и перезагрузите снова и повторите попытку в консоли JavaScript:
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
 На этот раз вызовы `a()` и `b()` возвратят эту раздражающую ошибку "[ReferenceError: z is not defined](/ru/docs/Web/JavaScript/Reference/Errors/Not_defined)" - это потому, что вызовы `output()` и переменные, которые они пытаются распечатать, не определены внутри одних и тех же областей функций - переменные эффективно невидимы для этих вызовов функций.
 

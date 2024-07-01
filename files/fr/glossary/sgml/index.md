@@ -1,13 +1,9 @@
 ---
 title: SGML
 slug: Glossary/SGML
-tags:
-  - Glossaire
-  - Programmation
-  - SGML
-translation_of: Glossary/SGML
-original_slug: SGML
 ---
+
+{{GlossarySidebar}}
 
 **SGML** (_Standard Generalized Markup Language_) est une spécification {{glossary("ISO")}} pour définir des langages de balisage générique pour des documents.
 

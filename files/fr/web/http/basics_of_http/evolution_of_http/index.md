@@ -1,10 +1,6 @@
 ---
 title: L'évolution du protocole HTTP
 slug: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
-tags:
-  - Guide
-  - HTTP
-translation_of: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 ---
 
 {{HTTPSidebar}}
@@ -35,9 +31,9 @@ GET /monfichier.html
 La réponse est aussi extrêmement simple, il s'agit directement du fichier demandé :
 
 ```html
-<HTML>
-Une page HTML très simple
-</HTML>
+<html>
+  Une page HTML très simple
+</html>
 ```
 
 Contrairement aux évolutions suivantes, il n'y avait pas d'en-tête HTTP. Cela signifie que seuls des fichiers HTML pouvaient être transmis, à l'exclusion de tout autre type de documents. Il n'existait pas de code d'erreur ou d'état : en cas de problème, un fichier HTML particulier, contenant la description du problème rencontré, était renvoyé afin d'être lu par l'utilisateur.
@@ -196,4 +192,4 @@ HTTP n'a pas cessé d'évoluer depuis la parution de HTTP/2, de la même manièr
 - L'apparition de {{HTTPHeader("Client-Hints")}} qui permet au navigateur ou client de transmettre directement au serveur des informations relatives à ses contraintes matérielles propres.
 - L'apparition de préfixes liés à la sécurité dans l'en-tête {{HTTPHeader("Cookie")}} permet désormais de s'assurer qu'un cookie sécurisé n'a pas été modifié
 
-Cette évolution de HTTP montre sa modularité ainsi que sa simplicité, permettant la création d'applications et l'adoption du protocole. L'environnement au sein duquel HTTP évolue à l'heure actuelle est sensiblement différent de celui dans lequel il a été créé au début des années 1990. La conception de HTTP s'avère aujourd'hui être un véritable chef-d’œuvre, elle a permis au Web d'évoluer sur un quart de siècle sans créer de scissions. En corrigeant les failles et en continuant à supporter le caractère extensible du protocole, HTTP/2 laisse présager d'un avenir brillant pour ce protocole.
+Cette évolution de HTTP montre sa modularité ainsi que sa simplicité, permettant la création d'applications et l'adoption du protocole. L'environnement au sein duquel HTTP évolue à l'heure actuelle est sensiblement différent de celui dans lequel il a été créé au début des années 1990. La conception de HTTP s'avère aujourd'hui être un véritable chef-d'œuvre, elle a permis au Web d'évoluer sur un quart de siècle sans créer de scissions. En corrigeant les failles et en continuant à supporter le caractère extensible du protocole, HTTP/2 laisse présager d'un avenir brillant pour ce protocole.

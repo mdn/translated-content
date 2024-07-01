@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 ## 구문
 
 ```js
-Reflect.deleteProperty(target, propertyKey)
+Reflect.deleteProperty(target, propertyKey);
 ```
 
 ### 매개변수
@@ -40,18 +40,18 @@ Reflect.deleteProperty(target, propertyKey)
 
 ```js
 var obj = { x: 1, y: 2 };
-Reflect.deleteProperty(obj, 'x'); // true
+Reflect.deleteProperty(obj, "x"); // true
 obj; // { y: 2 }
 
 var arr = [1, 2, 3, 4, 5];
-Reflect.deleteProperty(arr, '3'); // true
+Reflect.deleteProperty(arr, "3"); // true
 arr; // [1, 2, 3, , 5]
 
 // 주어진 속성이 존재하지 않으면 true 반환
-Reflect.deleteProperty({}, 'foo'); // true
+Reflect.deleteProperty({}, "foo"); // true
 
 // 주어진 속성이 설정 불가능하면 false 반환
-Reflect.deleteProperty(Object.freeze({foo: 1}), 'foo'); // false
+Reflect.deleteProperty(Object.freeze({ foo: 1 }), "foo"); // false
 ```
 
 ## 명세

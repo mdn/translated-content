@@ -1,15 +1,9 @@
 ---
 title: WebSockets
 slug: Web/API/WebSockets_API
-tags:
-  - NeedsBrowserCompatibility
-  - NeedsTranslation
-  - References
-  - TopicStub
-  - WebSockets
-translation_of: Web/API/WebSockets_API
-original_slug: WebSockets
 ---
+
+{{DefaultAPISidebar("WebSockets API")}}
 
 **Веб-сокеты** это продвинутая технология, позволяющая открыть постоянное двунаправленное сетевое соединение между браузером пользователя и сервером. С помощью его API вы можете отправить сообщение на сервер и получить ответ без выполнения http запроса, причём этот процесс будет событийно-управляемым.
 
@@ -34,7 +28,7 @@ original_slug: WebSockets
 
 ## Совместимость с браузерами
 
-{{Compat("api.WebSocket")}}
+{{Compat}}
 
 ## Смотрите также
 

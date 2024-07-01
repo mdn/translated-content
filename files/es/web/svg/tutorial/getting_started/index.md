@@ -3,7 +3,7 @@ title: Getting Started
 slug: Web/SVG/Tutorial/Getting_Started
 ---
 
-{{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}
+{{SVGRef}}{{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}
 
 ### Un Ejemplo Simple
 
@@ -24,71 +24,71 @@ Permitanos introducirlo con un sencillo ejemplo. Mire el siguiente codigo :
 </svg>
 ```
 
-Copie el código y guárdelo como demo1.svg. Luego ábralo en Firefox. Lo verá como se ve en la siguiente figura. (usuarios Firefox : click [aqui](/@api/deki/files/4571/=svgdemo1.xml))
+Copie el código y guárdelo como demo1.svg. Luego ábralo en Firefox. Lo verá como se ve en la siguiente figura. (usuarios Firefox : click [aqui](svgdemo1.xml))
 
-![svgdemo1.png](/@api/deki/files/4928/=svgdemo1.png)
+![svgdemo1.png](svgdemo1.png)
 
 El proceso de renderizado incluye lo siguiente :
 
 1. Comenzamos con el elemento raiz del `svg`:
 
-    - La declaracion de tipo de documento (doctype) usual en (X)HTML debería dejarse de lado debido a que la validación DTD based SVG conduce a mas problemas que soluciones.
-    - En cambio, los atributos `version` y `baseProfile` deberian ser usados siempre para identificar la version de SVG para otro tipo de validaciones.
-    - Debido a SVG es una especie de dialecto de XML, SVG debe unir siempre los namespaces correctamente (en el atributo xmlns). Para mayor información, vea [Namespaces Crash Course](/es/docs/Web/SVG/Namespaces_Crash_Course).
+   - La declaracion de tipo de documento (doctype) usual en (X)HTML debería dejarse de lado debido a que la validación DTD based SVG conduce a mas problemas que soluciones.
+   - Antes de SVG 2, para identificar la versión del SVG para otros tipos de validación se debían utilizar siempre los atributos `version` y `baseProfile` en su lugar. Los atributos `version` y `baseProfile` están obsoletos en SVG 2.
+   - Debido a SVG es una especie de dialecto de XML, SVG debe unir siempre los namespaces correctamente (en el atributo xmlns). Para mayor información, vea [Namespaces Crash Course](/es/docs/Web/SVG/Namespaces_Crash_Course).
 
-2. El fondo esta puesto en rojo dibujando un rectangulo [`<rect/>`](/en/SVG/Element/rect) que cubre el area de la imagen.
-3. Un circulo verde [`<circle/>`](/en/SVG/Element/circle) con un radio de 80px y se dibuja en el centro del rectangulo rojo(offset 30+120px inward, and 50+50px upward).
+2. El fondo esta puesto en rojo dibujando un rectangulo `<rect/>` que cubre el area de la imagen.
+3. Un círculo verde `<circle/>` con un radio de 80px se dibuja encima del centro del rectángulo rojo (el centro del círculo es desplazado 150px a la derecha, y 100px hacia abajo desde la esquina superior izquierda).
 4. El texto "SVG" esta dibujado. El interior de cada letra esta relleno con blanco.El texto se coloca mediante el establecimiento de un ancla en donde queremos que el punto medio sea: en este caso, el punto medio debe corresponder al centro del circulo verde. Los ajustes finos se pueden hacer con el tamaño de la fuente y la posición vertical para garantizar que el resultado final sea estéticamente agradable.
 
-### Basic properties of SVG files
+### Propiedades básicas de los archivos SVG
 
-- The first important thing to notice is the order of rendering of elements. The globally valid rule for SVG files is, that _later_ elements are rendered _atop previous_ elements. The further down an element is the more will be visible.
-- SVG files on the web can be displayed directly in the browser or embedded in HTML files via several methods:
+- Lo primero que hay que tener en cuenta es el orden de representación de los elementos. La regla globalmente válida para los archivos SVG es que los elementos posteriores se renderizan encima de los anteriores. Cuanto más abajo esté un elemento, más visible será.
+- En la web, los archivos SVG pueden mostrarse directamente en el navegador o incrustarse en archivos HTML mediante varios métodos:
 
-  - If the HTML is XHTML and is delivered as type `application/xhtml+xml`, the SVG can be directly embedded in the XML source.
-  - If the HTML is HTML5, and the browser is a conforming HTML5 browser, the SVG can be directly embedded, too. However, there may be syntax changes necessary to conform to the HTML5 specification
-  - The SVG file can be referenced with an `object` element:
+  - Si el HTML es XHTML y se entrega como tipo application/xhtml+xml, el SVG puede incrustarse directamente en la fuente XML.
+  - El SVG también puede incrustarse directamente en HTML.
+  - Se puede utilizar con el elemento [`<img>`](/es/docs/Web/HTML/Element/img)
+  - Se puede hacer referencia al archivo SVG con un elemento `object`:
 
     ```html
     <object data="image.svg" type="image/svg+xml" />
     ```
 
-  - Likewise an `iframe` element can be used:
+  - También pueden utilizarse con un elemento `iframe`:
 
     ```html
     <iframe src="image.svg"></iframe>
     ```
 
-  - An `img` element can be used theoretically, too. However this technique doesn't work in Firefox before 4.0.
-  - Finally SVG can be created dynamically with JavaScript and injected into the HTML DOM. This has the advantage, that replacement technologies for browsers, that can't process SVG, can be implemented.
+  - Por último, SVG puede crearse dinámicamente con JavaScript e inyectarse en el DOM de HTML.
 
-  See [this dedicated article](/en/SVG_In_HTML_Introduction) for an in-depth dealing with the topic.
+- El manejo de tamaños y unidades en SVG va a ser explicado en la próxima página
 
-- How SVG handles sizes and units will be explained [on the next page](/en/SVG/Tutorial/Positions).
+### Tipos de archivos SVG
 
-### SVG File Types
+Los archivos SVG son de dos tipos. Los archivos SVG normales, que son simples archivos de texto que contienen marcas SVG y tienen como extensión recomendada ".svg" (todo en minúsculas).
 
-SVG files come in two flavors. Normal SVG files are simple text files containing SVG markup. The recommended filename extension for these files is ".svg" (all lowercase).
+Debido al enorme tamaño que pueden alcanzar los archivos SVG cuando se utilizan para algunas aplicaciones (por ejemplo, aplicaciones geográficas), la especificación SVG también permite archivos SVG comprimidos con gzip. La extensión recomendada para estos archivos es ".svgz" (todo en minúsculas). Desafortunadamente, es muy problemático conseguir que los archivos SVG comprimidos con gzip funcionen de forma fiable en todos los agentes de usuario con capacidad SVG cuando se sirven desde un servidor Microsoft IIS, y Firefox no puede cargar SVG comprimidos con gzip desde el ordenador local. Evite los archivos SVG comprimidos con gzip excepto cuando los publique en un servidor web que sepa que los servirá correctamente (véase más abajo).
 
-Due to the potentially massive size SVG files can reach when used for some applications (e.g., geographical applications), the SVG specification also allows for gzip-compressed SVG files. The recommended filename extension for these files is ".svgz" (all lowercase). Unfortunately it is very problematic to get gzip-compressed SVG files to work reliably across all SVG capable user agents when served from Microsofts IIS server, and Firefox can not load gzip-compressed SVG from the local computer. Avoid gzip-compressed SVG except when you are publishing to a webserver that you know will serve it correctly (see below).
+### Unas palabras sobre los servidores web para archivos .svgz
 
-### A Word on Webservers
+Ahora que ya sabemos cómo crear archivos SVG básicos, lo siguiente es subirlos a un servidor web. Sin embargo, hay algunos problemas en esta etapa. Para los archivos SVG normales, los servidores deben enviar el encabezado HTTP:
 
-Now that you have an idea of how to create basic SVG files, the next stage is to upload them to a Webserver. There are some gotchas at this stage though. For normal SVG files, servers should send the HTTP header:
-
-```
+```http
 Content-Type: image/svg+xml
+Vary: Accept-Encoding
 ```
 
-For gzip-compressed SVG files, servers should send the HTTP headers:
+Para los archivos SVG comprimidos con gzip, los servidores deben enviar las cabeceras HTTP:
 
-```
+```http
 Content-Type: image/svg+xml
 Content-Encoding: gzip
+Vary: Accept-Encoding
 ```
 
-You can check that your server is sending the correct HTTP headers with your SVG files by using a site such as [web-sniffer.net](http://web-sniffer.net/). Submit the URL of one of your SVG files and look at the HTTP response headers. If you find that your server is not sending the headers with the values given above, then you should contact your Web host. If you have problems convincing them to correctly configure their servers for SVG, there may be ways to do it yourself. See the [server configuration page](http://svg-whiz.com/wiki/index.php?title=Server_Configuration) on the SVG wiki for a range of simple solutions.
+Puede comprobar que su servidor envía las cabeceras HTTP correctas con sus archivos SVG utilizando el [panel de monitoreo de red](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#headers) o un sitio como [WebSniffer](https://websniffer.com/). Coloque la URL de uno de sus archivos SVG y observe las cabeceras de la respuesta HTTP. Si comprueba que su servidor no envía las cabeceras con los valores indicados anteriormente, póngase en contacto con su proveedor de alojamiento web. Si tiene problemas para convencerles de que configuren correctamente sus servidores para SVG, puede que haya formas de hacerlo usted mismo. Consulte la [página de configuración del servidor](https://www.w3.org/services/svg-server/) en w3.org para ver una serie de soluciones sencillas.
 
-Server misconfiguration is a very common reason for SVG failing to load, so make sure you check yours. If your server is not configured to send the correct headers with the SVG files it serves, then Firefox will most likely show the markup of the files as text or encoded garbage, or even ask the viewer to choose an application to open them.
+La configuración incorrecta del servidor es una razón muy común para que SVG no se cargue, así que asegúrese de comprobar la suya. Si su servidor no está configurado para enviar las cabeceras correctas con los archivos SVG que esta sirviendo, lo más probable es que Firefox muestre el marcado de los archivos como texto o basura codificada, o incluso que pida al usuario que elija una aplicación para abrirlos.
 
 {{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}

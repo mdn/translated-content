@@ -67,13 +67,17 @@ HTMLは、ドロップゾーンそのものを、ID `"dropzone"` を持つ {{HTM
   vertical-align: middle;
   text-align: center;
   color: black;
-  font: bold 2em "Arial", sans-serif;
+  font:
+    bold 2em "Arial",
+    sans-serif;
   width: 300px;
   height: 100px;
 }
 
 body {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 
@@ -94,7 +98,7 @@ function scanFiles(item, container) {
   elem.textContent = item.name;
   container.appendChild(elem);
 
- if (item.isDirectory) {
+  if (item.isDirectory) {
     let directoryReader = item.createReader();
     let directoryContainer = document.createElement("ul");
     container.appendChild(directoryContainer);
@@ -123,28 +127,36 @@ function scanFiles(item, container) {
 次に、イベントハンドラーが決まります。まず、{{domxref("HTMLElement/dragover_event", "dragover")}} イベントが既定のハンドラーで処理されないようにして、ドロップゾーンがドロップを受け取れるようにします。
 
 ```js
-dropzone.addEventListener("dragover", (event) => {
-  event.preventDefault();
-}, false);
+dropzone.addEventListener(
+  "dragover",
+  (event) => {
+    event.preventDefault();
+  },
+  false,
+);
 ```
 
 このコースのイベントハンドラーは、もちろん {{domxref("HTMLElement/drop_event", "drop")}} イベントに対するハンドラーであり、すべてを開始させます。
 
 ```js
-dropzone.addEventListener("drop", (event) => {
-  let items = event.dataTransfer.items;
+dropzone.addEventListener(
+  "drop",
+  (event) => {
+    let items = event.dataTransfer.items;
 
-  event.preventDefault();
-  listing.textContent = "";
+    event.preventDefault();
+    listing.textContent = "";
 
-  for (let i=0; i<items.length; i++) {
-    let item = items[i].webkitGetAsEntry();
+    for (let i = 0; i < items.length; i++) {
+      let item = items[i].webkitGetAsEntry();
 
-    if (item) {
+      if (item) {
         scanFiles(item, listing);
+      }
     }
-  }
-}, false);
+  },
+  false,
+);
 ```
 
 これは、ドロップされたアイテムを表す {{domxref("DataTransferItem")}} オブジェクトのリストを `event.dataTransfer.items` から取得します。

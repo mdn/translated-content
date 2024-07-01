@@ -1,8 +1,8 @@
 ---
 title: Window.matchMedia()
 slug: Web/API/Window/matchMedia
-translation_of: Web/API/Window/matchMedia
 ---
+
 {{APIRef}}
 
 ## Сводка
@@ -31,11 +31,11 @@ if (window.matchMedia("(min-width: 400px)").matches) {
 
 Смотрите [Использование медиавыражений из кода](/ru/docs/DOM/Using_media_queries_from_code) для дополнительных примеров.
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
-## Спецификация
+## Спецификации
 
 - [The CSSOM View Module: The MediaQueryList Interface](http://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface)
 

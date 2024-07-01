@@ -3,7 +3,7 @@ title: cookies.Cookie
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 {{WebExtAPIRef("cookies")}} API の `Cookie` 型は HTTP cookie の情報を持ちます。
 
@@ -36,11 +36,11 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.cookies.Cookie")}}
+{{Compat}}
 
 ## 例
 
-cookies API のほとんどは入力パラメータまたは戻り値の一部として使用される `Cookie` オブジェクトを含みます。例えば {{WebExtAPIRef("cookies.getAll()")}} は `Cookie` オブジェクトの配列を返します。
+cookies API のほとんどは入力パラメーターまたは戻り値の一部として使用される `Cookie` オブジェクトを含みます。例えば {{WebExtAPIRef("cookies.getAll()")}} は `Cookie` オブジェクトの配列を返します。
 
 以下の例ではすべての cookie を取得し、コンソールログに `Cookie` オブジェクト中のいくつかのプロパティを出力します。
 

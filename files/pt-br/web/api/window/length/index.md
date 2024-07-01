@@ -27,6 +27,8 @@ if (window.length) {
 
 ## Especificações
 
-| Especificação                                                                                | Status                           | Comentário |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG','browsers.html#dom-length','Window.length')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

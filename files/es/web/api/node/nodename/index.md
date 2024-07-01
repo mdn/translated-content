@@ -23,20 +23,20 @@ var str = node.nodeName;
 
 Aquí tenemos el valor devuelto por varios tipos de nodo.
 
-| Interfaz                                              | nodeName                                                                        |
-| ----------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Interfaz                                               | nodeName                                                                         |
+| ------------------------------------------------------ | -------------------------------------------------------------------------------- |
 | [Attr](/es/DOM/Attr)                                   | igual que [`Attr.name`](/es/DOM/Attr.name)                                       |
-| [CDATASection](/es/DOM/CDATASection)                   | "#cdata-section"                                                                |
-| [Comment](/es/DOM/Comment)                             | "#comment"                                                                      |
-| [Document](/es/DOM/document)                           | "#document"                                                                     |
-| [DocumentFragment](/es/DOM/DocumentFragment)           | "#document-fragment"                                                            |
+| [CDATASection](/es/DOM/CDATASection)                   | "#cdata-section"                                                                 |
+| [Comment](/es/DOM/Comment)                             | "#comment"                                                                       |
+| [Document](/es/DOM/document)                           | "#document"                                                                      |
+| [DocumentFragment](/es/DOM/DocumentFragment)           | "#document-fragment"                                                             |
 | [DocumentType](/es/DOM/DocumentType)                   | igual que [`DocumentType.name`](/es/DOM/DocumentType.name)                       |
 | [Element](/es/DOM/element)                             | igual que [`Element.tagName`](/es/DOM/element.tagName)                           |
-| [Entity](/es/DOM/Entity)                               | nombre de entity                                                                |
-| [EntityReference](/es/DOM/EntityReference)             | nombre de la identidad de referencia                                            |
-| [Notation](/es/DOM/Notation)                           | nombre de la notación                                                           |
+| [Entity](/es/DOM/Entity)                               | nombre de entity                                                                 |
+| [EntityReference](/es/DOM/EntityReference)             | nombre de la identidad de referencia                                             |
+| [Notation](/es/DOM/Notation)                           | nombre de la notación                                                            |
 | [ProcessingInstruction](/es/DOM/ProcessingInstruction) | igual que [`ProcessingInstruction.target`](/es/DOM/ProcessingInstruction.target) |
-| Text                                                  | "#text"                                                                         |
+| Text                                                   | "#text"                                                                          |
 
 ### Ejemplo
 

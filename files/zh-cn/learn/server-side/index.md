@@ -5,7 +5,7 @@ slug: Learn/Server-side
 
 {{LearnSidebar}}
 
-***动态网页——服务器端编程***这主题是一系列的模块来演示如何创建动态的网页；可以交付自定义的信息来回应 HTTP 请求的网页。这些模块为服务器端编程提供了一个通用的介绍，以及如何使用 Django (Python) 和 Express (Node.js/JavaScript) 去创建基础应用的具体的入门指导。
+**_动态网页——服务器端编程_**这主题是一系列的模块来演示如何创建动态的网页；可以交付自定义的信息来回应 HTTP 请求的网页。这些模块为服务器端编程提供了一个通用的介绍，以及如何使用 Django (Python) 和 Express (Node.js/JavaScript) 去创建基础应用的具体的入门指导。
 
 大多数的主流网页使用一类服务器端的技术去动态地显示所要求的不同数据。举个例子，想象一下 Amazon 上有多少可购买的产品，以及 FaceBook 上有多少帖子？用完全不同的静态页面去显示所有的这些内容会彻底地低效，所以取而代之的是这些网站展示的是静态的模板（用 [HTML](/zh-CN/docs/Learn/HTML), [CSS](/zh-CN/docs/Learn/CSS), 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 构建），然后在有需要时动态地在这些模板中更新数据展示，比如说当你想要在 Amazon 上浏览一个不同的产品。
 

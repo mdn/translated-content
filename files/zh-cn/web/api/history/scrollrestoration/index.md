@@ -25,9 +25,11 @@ const scrollRestore = history.scrollRestoration
 ### 查看当前页面滚动恢复行为
 
 ```js
-const scrollRestoration = history.scrollRestoration
-if (scrollRestoration === 'manual') {
-  console.log('The location on the page is not restored, user will need to scroll manually.');
+const scrollRestoration = history.scrollRestoration;
+if (scrollRestoration === "manual") {
+  console.log(
+    "The location on the page is not restored, user will need to scroll manually.",
+  );
 }
 ```
 
@@ -35,7 +37,7 @@ if (scrollRestoration === 'manual') {
 
 ```js
 if (history.scrollRestoration) {
-  history.scrollRestoration = 'manual';
+  history.scrollRestoration = "manual";
 }
 ```
 

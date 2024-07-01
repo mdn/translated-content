@@ -1,12 +1,6 @@
 ---
 title: Web Animations API
 slug: Web/API/Web_Animations_API
-tags:
-  - API
-  - Animation
-  - Reference
-  - Web Animations
-translation_of: Web/API/Web_Animations_API
 ---
 
 {{DefaultAPISidebar("Web Animations")}}
@@ -60,4 +54,4 @@ L'API Web Animations ajoute de nouvelles fonctionnalités à {{domxref("document
 - [Démos d'animations web](https://mozdevs.github.io/Animation-examples/)
 - [Polyfill / Prothèse d'implémentation](https://github.com/web-animations/web-animations-js)
 - [Implémentation](https://birtles.github.io/areweanimatedyet/) actuelle de Firefox : [AreWeAnimatedYet](https://birtles.github.io/areweanimatedyet/)
-- [Test de prise en charge du navigateur](http://codepen.io/danwilson/pen/xGBKVq)
+- [Test de prise en charge du navigateur](https://codepen.io/danwilson/pen/xGBKVq)

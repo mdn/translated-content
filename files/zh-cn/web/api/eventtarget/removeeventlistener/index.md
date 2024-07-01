@@ -30,6 +30,7 @@ removeEventListener(type, listener, useCapture);
 - `listener`
   - : 需要从目标事件移除的[事件监听器](/zh-CN/docs/Web/API/EventTarget/addEventListener#事件监听回调)函数。
 - `options` {{optional_inline}}
+
   - : 一个指定事件侦听器特征的可选对象。可选项有：
 
     - `capture`: 一个布尔值，指定需要移除的[事件监听器](/zh-CN/docs/Web/API/EventTarget/addEventListener#事件监听回调)函数是否为捕获监听器。如果未指定此参数，默认值为 `false`。
@@ -56,8 +57,8 @@ element.addEventListener("mousedown", handleMouseDown, true);
 现在思考下下面两个 `removeEventListener()`:
 
 ```js
-element.removeEventListener("mousedown", handleMouseDown, false);     // 失败
-element.removeEventListener("mousedown", handleMouseDown, true);      // 成功
+element.removeEventListener("mousedown", handleMouseDown, false); // 失败
+element.removeEventListener("mousedown", handleMouseDown, true); // 成功
 ```
 
 第一个调用失败是因为 `useCapture` 没有匹配。第二个调用成功，是因为 `useCapture` 匹配相同。
@@ -73,12 +74,12 @@ element.addEventListener("mousedown", handleMouseDown, { passive: true });
 现在我们看下下面的 `removeEventListener()`。当配置 `capture` 或 `useCapture` 为 `true` 时，移除事件失败；其他所有都是成功的。这说明只有 `capture` 配置影响 `removeEventListener()`。
 
 ```js
-element.removeEventListener("mousedown", handleMouseDown, { passive: true });     // 成功
-element.removeEventListener("mousedown", handleMouseDown, { capture: false });    // 成功
-element.removeEventListener("mousedown", handleMouseDown, { capture: true });     // 失败
-element.removeEventListener("mousedown", handleMouseDown, { passive: false });    // 成功
-element.removeEventListener("mousedown", handleMouseDown, false);                 // 成功
-element.removeEventListener("mousedown", handleMouseDown, true);                  // 失败
+element.removeEventListener("mousedown", handleMouseDown, { passive: true }); // 成功
+element.removeEventListener("mousedown", handleMouseDown, { capture: false }); // 成功
+element.removeEventListener("mousedown", handleMouseDown, { capture: true }); // 失败
+element.removeEventListener("mousedown", handleMouseDown, { passive: false }); // 成功
+element.removeEventListener("mousedown", handleMouseDown, false); // 成功
+element.removeEventListener("mousedown", handleMouseDown, true); // 失败
 ```
 
 值得注意的是，一些浏览器版本在这方面会有些不一致。除非你有特别的理由，使用与调用 `addEventListener()` 时配置的参数去调用 `removeEventListener()` 是明智的。
@@ -88,27 +89,21 @@ element.removeEventListener("mousedown", handleMouseDown, true);                
 以下例子展示了添加与删除监听事件：
 
 ```js
-const body = document.querySelector('body')
-const clickTarget = document.getElementById('click-target')
-const mouseOverTarget = document.getElementById('mouse-over-target')
+const body = document.querySelector("body");
+const clickTarget = document.getElementById("click-target");
+const mouseOverTarget = document.getElementById("mouse-over-target");
 
 let toggle = false;
 function makeBackgroundYellow() {
-  body.style.backgroundColor = toggle ? 'white' : 'yellow';
+  body.style.backgroundColor = toggle ? "white" : "yellow";
 
   toggle = !toggle;
 }
 
-clickTarget.addEventListener('click',
-  makeBackgroundYellow,
-  false
-);
+clickTarget.addEventListener("click", makeBackgroundYellow, false);
 
-mouseOverTarget.addEventListener('mouseover', () => {
-  clickTarget.removeEventListener('click',
-    makeBackgroundYellow,
-    false
-  );
+mouseOverTarget.addEventListener("mouseover", () => {
+  clickTarget.removeEventListener("click", makeBackgroundYellow, false);
 });
 ```
 

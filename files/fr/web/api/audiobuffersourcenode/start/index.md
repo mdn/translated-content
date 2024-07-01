@@ -1,7 +1,6 @@
 ---
 title: AudioBufferSourceNode.start()
 slug: Web/API/AudioBufferSourceNode/start
-translation_of: Web/API/AudioBufferSourceNode/start
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -47,7 +46,7 @@ source.start();
 L'exemple suivant, plus complexe, jouera, après une seconde de pause, un tronçon d'une durée de 10 secondes à partir de la 3ème seconde des données en mémoire.
 
 ```js
-source.start(contexteAudio.currentTime + 1,3,10);
+source.start(contexteAudio.currentTime + 1, 3, 10);
 ```
 
 > **Note :** Pour un exemple plus complexe montrant la méthode `start()` en action, consulter l'exemple [`AudioContext.decodeAudioData`](/fr/docs/Web/API/BaseAudioContext/decodeAudioData). Voir aussi l'exemple complet [en direct](https://mdn.github.io/webaudio-examples/decode-audio-data/) et [son code source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).

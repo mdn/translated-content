@@ -3,9 +3,9 @@ title: bookmarks.removeTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/removeTree
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-**`bookmarks.removeTree()`** は、ブックマークフォルダやその要素を再帰的に削除するメソッドです。
+**`bookmarks.removeTree()`** は、ブックマークフォルダーやその要素を再帰的に削除するメソッドです。
 
 ブックマークが見つからなかった場合は {{WebExtAPIRef("runtime.lastError")}} がセットされ、エラーの有無はコールバック内で確認できます。
 
@@ -13,25 +13,25 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/removeTree
 
 ```js
 browser.bookmarks.removeTree(
-  id,      // 文字列
-  callback // 関数（省略可）
-)
+  id, // 文字列
+  callback, // 関数（省略可）
+);
 ```
 
 ### 引数
 
 - `id`
-  - : 子要素とともに削除されるフォルダノードの ID を表す {{jsxref("string")}} です。
+  - : 子要素とともに削除されるフォルダーノードの ID を表す {{jsxref("string")}} です。
 - `callback`{{optional_inline}}
   - : ノードが削除された際に実行される関数です。この関数に渡される引数はありません。
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.removeTree")}}
+{{Compat}}
 
 ## 使用例
 
-以下の例は、"MDN" という名前のフォルダを探し、それ自身とその子要素をすべて削除するものです。
+以下の例は、"MDN" という名前のフォルダーを探し、それ自身とその子要素をすべて削除するものです。
 
 ```js
 function onRemoved() {

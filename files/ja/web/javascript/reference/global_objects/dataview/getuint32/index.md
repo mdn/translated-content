@@ -51,7 +51,7 @@ dataview.getUint32(1); // 0
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.DataView.getUint32")}}
+{{Compat}}
 
 ## 関連情報
 

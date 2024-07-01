@@ -1,24 +1,33 @@
 ---
-title: location.toString()
+title: "location: toString() メソッド"
 slug: Web/API/Location/toString
+l10n:
+  sourceCommit: bb3a02f27256e93ada09f81efb5313eeb8f91542
 ---
 
 {{ApiRef("Location")}}
 
-**`toString()`** は {{domxref("Location")}} インターフェイスの{{Glossary("stringifier", "文字列化")}}メソッドで、 {{domxref("USVString")}} で URL 全体を返します。これは {{domxref("Location.href")}} の読み取り専用版です。
+**`toString()`** は {{domxref("Location")}} インターフェイスの{{Glossary("stringifier", "文字列化")}}メソッドであり、URL 全体を文字列で返します。これは {{domxref("Location.href")}} の読み取り専用版です。
 
 ## 構文
 
-```js
-string = object.toString();
+```js-nolint
+toString()
 ```
+
+### 引数
+
+なし。
+
+### 返値
+
+このオブジェクトの URL を表す文字列です。
 
 ## 例
 
 ```js
-// 文書内に <a id="myAnchor" href="/ja/docs/Location/toString"> 要素があると想像してください
-var anchor = document.getElementById("myAnchor");
-var result = anchor.toString(); // 返値: 'https://developer.mozilla.org/ja/docs/Location/toString'
+// このコードが https://example.com/path?search#hash で実行されていると想像してください
+const result = window.location.toString(); // 返値: 'https://example.com/path?search#hash'
 ```
 
 ## 仕様書

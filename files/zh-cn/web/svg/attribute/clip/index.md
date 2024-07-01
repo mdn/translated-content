@@ -14,20 +14,22 @@ As a presentation attribute, it can be applied to any element but it has effect 
 ## 示例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
   <!-- Auto clipping -->
-  <svg x="0" width="10" height="10"
-       clip="auto">
+  <svg x="0" width="10" height="10" clip="auto">
     <circle cx="5" cy="5" r="4" stroke="green" />
   </svg>
 
   <!-- Rect(top, right, bottom, left) clipping -->
-  <svg x="10" width="10" height="10"
-       clip="rect(1, 9, 8, 2)">
+  <svg x="10" width="10" height="10" clip="rect(1, 9, 8, 2)">
     <circle cx="5" cy="5" r="4" stroke="green" />
   </svg>
 </svg>
@@ -40,9 +42,9 @@ html,body,svg { height:100% }
 **Warning:** This property is deprecated. Use {{cssxref("clip-path")}} instead.
 
 | 可用值     | **auto** \| \<shape> \| inherit |
-| ---------- | ------------------------------ |
-| 默认值     | Yes                            |
-| Animatable | Yes                            |
+| ---------- | ------------------------------- |
+| 默认值     | Yes                             |
+| Animatable | Yes                             |
 
 The value `auto` defines a clipping path along the bounds of the viewport created by the given element.
 

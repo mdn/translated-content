@@ -1,12 +1,6 @@
 ---
-title: ':-moz-loading'
+title: ":-moz-loading"
 slug: Web/CSS/:-moz-loading
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:-moz-loading
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -18,7 +12,8 @@ Cette pseudo-classe est principalement destinée aux développeurs de thèmes.
 ## Syntaxe
 
 ```css
-:-moz-loading
+:-moz-loading {
+}
 ```
 
 ## Exemples

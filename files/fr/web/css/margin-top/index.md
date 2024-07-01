@@ -1,11 +1,6 @@
 ---
 title: margin-top
 slug: Web/CSS/margin-top
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/margin-top
 ---
 
 {{CSSRef}}
@@ -21,10 +16,10 @@ Cette propriété n'a aucun effet sur les éléments non-remplacés en ligne (_i
 ```css
 /* Valeurs de longueur */
 /* Type <length>       */
-margin-top: 10px;  /* Une longueur absolue */
-margin-top: 1em;   /* Une longueur proportionnelle à la taille du texte */
-margin-top: 5%;    /* Une marge relative à la largeur */
-                   /* du bloc englobant le plus proche */
+margin-top: 10px; /* Une longueur absolue */
+margin-top: 1em; /* Une longueur proportionnelle à la taille du texte */
+margin-top: 5%; /* Une marge relative à la largeur */
+/* du bloc englobant le plus proche */
 
 /* Valeur avec un mot-clé */
 margin-top: auto;
@@ -76,12 +71,11 @@ div {
 
 ```html
 <div></div>
-<p class=exemple>
-  C’est ce qui arriva en effet, et bien plus tôt
-  qu’elle ne s’y attendait. Elle n’avait pas bu
-  la moitié de la bouteille, que sa tête touchait
-  au plafond et qu’elle fut forcée de se baisser
-  pour ne pas se casser le cou.</p>
+<p class="exemple">
+  C’est ce qui arriva en effet, et bien plus tôt qu’elle ne s’y attendait. Elle
+  n’avait pas bu la moitié de la bouteille, que sa tête touchait au plafond et
+  qu’elle fut forcée de se baisser pour ne pas se casser le cou.
+</p>
 ```
 
 ### Résultat

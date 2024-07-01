@@ -1,14 +1,6 @@
 ---
 title: Reflect.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
-original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/deleteProperty
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode statique **`Reflect.deleteProperty()`** permet de supprimer des prop
 ## Syntaxe
 
 ```js
-Reflect.deleteProperty(cible, cléPropriété)
+Reflect.deleteProperty(cible, cléPropriété);
 ```
 
 ### Paramètres
@@ -57,7 +49,7 @@ arr; // [1, 2, 3, , 5]
 Reflect.deleteProperty({}, "toto"); // true
 
 // Renvoie false si une propriété n'est pas configurable
-Reflect.deleteProperty(Object.freeze({toto: 1}),"toto"); // false
+Reflect.deleteProperty(Object.freeze({ toto: 1 }), "toto"); // false
 ```
 
 ## Spécifications

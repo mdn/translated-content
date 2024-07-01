@@ -1,24 +1,26 @@
 ---
 title: HTMLBRElement
 slug: Web/API/HTMLBRElement
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLBRElement`** インターフェースは HTML 改行要素 ({{htmlelement("br")}}) を表現します。{{domxref("HTMLElement")}}より継承しています。
+**`HTMLBRElement`** インターフェイスはは HTML 改行要素 ({{htmlelement("br")}}) を表現します。{{domxref("HTMLElement")}} から継承しています。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## 属性
 
-_親である{{domxref("HTMLElement")}}より属性を継承しています。_
+_親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
 - {{domxref("HTMLBRElement.clear")}} {{deprecated_inline}}
-  - : は{domxref("DOMString")}}であり，回り込みオブジェクトの周囲の文章を回り込ませるよう指示します。
+  - : 文字列で、浮動オブジェクトを回り込むテキストの流れを示します。
 
 ## メソッド
 
-_固有のメソッドなし。親である {{domxref("HTMLElement")}}よりメソッドを継承しています。_
+_固有のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
 
 ## 仕様書
 
@@ -26,8 +28,8 @@ _固有のメソッドなし。親である {{domxref("HTMLElement")}}よりメ�
 
 ## ブラウザーの互換性
 
-{{Compat("api.HTMLBRElement")}}
+{{Compat}}
 
 ## 関連情報
 
-- 本インターフェースを実装している HTML 要素: {{HTMLElement("br")}}
+- このインターフェースを実装している HTML 要素: {{HTMLElement("br")}}

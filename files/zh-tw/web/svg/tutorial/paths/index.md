@@ -1,8 +1,9 @@
 ---
 title: 路徑
 slug: Web/SVG/Tutorial/Paths
-original_slug: Web/SVG/Tutorial/路径
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
@@ -218,16 +219,33 @@ For the unrotated ellipse in the image above, there are only two different arcs 
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="320" height="320">
-  <path d="M10 315
+  <path
+    d="M10 315
             L 110 215
             A 36 60 0 0 1 150.71 170.29
             L 172.55 152.45
             A 30 50 -45 0 1 215.1 109.9
-            L 315 10" stroke="black" fill="green" stroke-width="2" fill-opacity="0.5"/>
-  <circle cx="150.71" cy="170.29" r="2" fill="red"/>
-  <circle cx="110" cy="215" r="2" fill="red"/>
-  <ellipse cx="144.931" cy="229.512" rx="36" ry="60" fill="transparent" stroke="blue"/>
-  <ellipse cx="115.779" cy="155.778" rx="36" ry="60" fill="transparent" stroke="blue"/>
+            L 315 10"
+    stroke="black"
+    fill="green"
+    stroke-width="2"
+    fill-opacity="0.5" />
+  <circle cx="150.71" cy="170.29" r="2" fill="red" />
+  <circle cx="110" cy="215" r="2" fill="red" />
+  <ellipse
+    cx="144.931"
+    cy="229.512"
+    rx="36"
+    ry="60"
+    fill="transparent"
+    stroke="blue" />
+  <ellipse
+    cx="115.779"
+    cy="155.778"
+    rx="36"
+    ry="60"
+    fill="transparent"
+    stroke="blue" />
 </svg>
 ```
 
@@ -258,6 +276,6 @@ The four different paths mentioned above are determined by the next two argument
 
 Arcs are an easy way to create pieces of circles or ellipses in your drawings. For instance, a pie chart would require a different arc for each piece.
 
-If you're transitioning to SVG from [Canvas](/zh-TW/HTML/Canvas), arcs can be the hardest thing to learn, but are also much more powerful. Complete circles and ellipses are actually the only shapes that SVG arcs have trouble drawing. Because the start and end points for any path going around a circle are the same point, there are an infinite number of circles that could be chosen, and the actual path is undefined. It's possible to approximate them by making the start and end points of your path slightly askew, and then connecting them with another path segment. For example, you can make a circle with an arc for each semicircle. At that point, it's often easier to use a real circle or ellipse node instead. This interactive demo might help you understand the concepts behind SVG arcs: <http://codepen.io/lingtalfi/pen/yaLWJG> (tested in chrome and firefox only, might not work in your browser)
+If you're transitioning to SVG from [Canvas](/zh-TW/HTML/Canvas), arcs can be the hardest thing to learn, but are also much more powerful. Complete circles and ellipses are actually the only shapes that SVG arcs have trouble drawing. Because the start and end points for any path going around a circle are the same point, there are an infinite number of circles that could be chosen, and the actual path is undefined. It's possible to approximate them by making the start and end points of your path slightly askew, and then connecting them with another path segment. For example, you can make a circle with an arc for each semicircle. At that point, it's often easier to use a real circle or ellipse node instead. This interactive demo might help you understand the concepts behind SVG arcs: <https://codepen.io/lingtalfi/pen/yaLWJG> (tested in chrome and firefox only, might not work in your browser)
 
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}

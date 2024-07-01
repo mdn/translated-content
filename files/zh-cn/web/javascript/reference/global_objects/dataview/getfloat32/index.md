@@ -35,7 +35,7 @@ dataview.getFloat32(byteOffset [, littleEndian])
 
 没有对齐约束; 多字节值可以从任何偏移处获取。
 
-## 例子
+## 示例
 
 ```js
 var buffer = new ArrayBuffer(8);
@@ -51,7 +51,7 @@ dataview.getFloat32(1); // 0
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}

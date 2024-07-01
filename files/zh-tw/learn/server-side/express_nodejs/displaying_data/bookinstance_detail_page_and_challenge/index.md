@@ -1,7 +1,6 @@
 ---
 title: 書本實例詳情頁面與自我挑戰
-slug: >-
-  Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
+slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
 ---
 
 ## 書本實例詳情頁面
@@ -14,21 +13,25 @@ slug: >-
 
 ```js
 // Display detail page for a specific BookInstance.
-exports.bookinstance_detail = function(req, res, next) {
-
-    BookInstance.findById(req.params.id)
-    .populate('book')
+exports.bookinstance_detail = function (req, res, next) {
+  BookInstance.findById(req.params.id)
+    .populate("book")
     .exec(function (err, bookinstance) {
-      if (err) { return next(err); }
-      if (bookinstance==null) { // No results.
-          var err = new Error('Book copy not found');
-          err.status = 404;
-          return next(err);
-        }
+      if (err) {
+        return next(err);
+      }
+      if (bookinstance == null) {
+        // No results.
+        var err = new Error("Book copy not found");
+        err.status = 404;
+        return next(err);
+      }
       // Successful, so render.
-      res.render('bookinstance_detail', { title: 'Book:', bookinstance:  bookinstance});
-    })
-
+      res.render("bookinstance_detail", {
+        title: "Book:",
+        bookinstance: bookinstance,
+      });
+    });
 };
 ```
 
@@ -73,7 +76,7 @@ block content
 
 目前，我們網站上顯示的大多數日期，都使用默認的 JavaScript 格式（例如 _Tue Dec 06 2016 15:49:58 GMT+1100_ （AUS 東部夏令時間））。本文的挑戰，是改善作者`Author`生命週期日期顯示的外觀信息（死亡/誔生日期）和*BookInstance 詳細信息*頁面，使用格式：December 6th, 2016。
 
-> **備註：** 您可以使用與我們用於 _Book Instance List_ 的相同方法（將生命週期的虛擬屬性，添加到`Author`模型，並使用 [moment](https://www.npmjs.com/package/moment) 來設置日期字符串的格式）。
+> **備註：** 你可以使用與我們用於 _Book Instance List_ 的相同方法（將生命週期的虛擬屬性，添加到`Author`模型，並使用 [moment](https://www.npmjs.com/package/moment) 來設置日期字符串的格式）。
 
 這個挑戰的要求：
 

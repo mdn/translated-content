@@ -1,9 +1,6 @@
 ---
 title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
-translation_of: Web/JavaScript/Reference/Global_Objects/undefined
-original_slug: Web/JavaScript/Reference/Objets_globaux/undefined
-browser-compat: javascript.builtins.undefined
 ---
 
 {{jsSidebar("Objects")}}
@@ -17,12 +14,12 @@ La propriété globale **`undefined`** représente la valeur primitive [`undefin
 ## Syntaxe
 
 ```js
-undefined
+undefined;
 ```
 
 ## Description
 
-`undefined` est une propriété de *l'objet global*, c'est-à-dire qu'elle est accessible globalement. La valeur initiale d'`undefined` est la valeur primitive [`undefined`](/fr/docs/Glossary/undefined).
+`undefined` est une propriété de _l'objet global_, c'est-à-dire qu'elle est accessible globalement. La valeur initiale d'`undefined` est la valeur primitive [`undefined`](/fr/docs/Glossary/undefined).
 
 Dans les navigateurs modernes (JavaScript 1.8.5 / Firefox 4+), d'après la spécification ECMAScript 5, `undefined` est une propriété non-configurable et non accessible en écriture. Si, toutefois, elle peut être modifiée dans l'environnement utilisé, il faut éviter de l'écraser.
 
@@ -34,15 +31,15 @@ Une variable pour laquelle aucune valeur n'a été assignée sera de type `undef
 > // À NE PAS FAIRE
 >
 > // affiche "toto string" dans la console
-> (function() {
->    const undefined = 'toto'; 
->    console.log(undefined, typeof undefined); 
+> (function () {
+>   const undefined = "toto";
+>   console.log(undefined, typeof undefined);
 > })();
 >
 > // affiche "toto string" dans la console
-> (function(undefined) {
+> (function (undefined) {
 >   console.log(undefined, typeof undefined);
-> })('toto');
+> })("toto");
 > ```
 
 ## Exemples
@@ -54,14 +51,13 @@ Il est possible d'utiliser `undefined` et les opérateurs stricts pour l'égalit
 ```js
 let x;
 if (x === undefined) {
-   // ces instructions seront exécutées
-}
-else {
-   // ces instructions ne seront pas exécutées
+  // ces instructions seront exécutées
+} else {
+  // ces instructions ne seront pas exécutées
 }
 ```
 
-> **Note :** L'opérateur d'égalité stricte doit être utilisé ici plutôt que l'opérateur *d'égalité simple*. En effet, `x == undefined` vérifie également si `x` vaut `null`, tandis que l'égalité stricte ne le fait pas. `null` n'est pas équivalent à `undefined`.
+> **Note :** L'opérateur d'égalité stricte doit être utilisé ici plutôt que l'opérateur _d'égalité simple_. En effet, `x == undefined` vérifie également si `x` vaut `null`, tandis que l'égalité stricte ne le fait pas. `null` n'est pas équivalent à `undefined`.
 >
 > Voir la page sur les [opérateurs de comparaison](/fr/docs/Web/JavaScript/Reference/Operators) pour plus de détails.
 
@@ -71,8 +67,8 @@ L'opérateur [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof) peut
 
 ```js
 let x;
-if (typeof x === 'undefined') {
-   // ces instructions seront exécutées
+if (typeof x === "undefined") {
+  // ces instructions seront exécutées
 }
 ```
 
@@ -80,21 +76,22 @@ Une des raisons pour utiliser l'opérateur [`typeof`](/fr/docs/Web/JavaScript/Re
 
 ```js
 // x n'a pas encore été défini
-if (typeof x === 'undefined') { // donnera true sans erreur
-   // ces instructions seront exécutées
+if (typeof x === "undefined") {
+  // donnera true sans erreur
+  // ces instructions seront exécutées
 }
 
-if (x === undefined) { // déclenche une ReferenceError
-
+if (x === undefined) {
+  // déclenche une ReferenceError
 }
 ```
 
 Il existe toutefois une autre alternative. Puisque JavaScript utilise la portée statique, on saura qu'une variable a été déclarée si elle est définie dans un contexte englobant.
 
-La portée globale est rattachée à [l'objet global](/fr/docs/Web/JavaScript/Reference/Global_Objects/globalThis), alors on peut vérifier l'existence d'une variable dans le contexte global en examinant la présence d'une propriété sur *l'objet global* via l'opérateur [`in`](/fr/docs/Web/JavaScript/Reference/Operators/in). Par exemple&nbsp;:
+La portée globale est rattachée à [l'objet global](/fr/docs/Web/JavaScript/Reference/Global_Objects/globalThis), alors on peut vérifier l'existence d'une variable dans le contexte global en examinant la présence d'une propriété sur _l'objet global_ via l'opérateur [`in`](/fr/docs/Web/JavaScript/Reference/Operators/in). Par exemple&nbsp;:
 
 ```js
-if ('x' in window) {
+if ("x" in window) {
   // ces instructions seront exécutées uniquement
   // si x est défini dans la portée globale
 }

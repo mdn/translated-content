@@ -1,5 +1,5 @@
 ---
-title: 'CSP: connect-src'
+title: "CSP: connect-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
 ---
 
@@ -7,7 +7,7 @@ slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
 
 HTTP {{HTTPHeader("Content-Security-Policy")}}（内容安全策略，CSP）中的 **`connect-src`** 指令用于限制通过使用脚本接口加载的 URL。其中受限制的 API 如下：
 
-- {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}}
+- {{HTMLElement("a")}} [`ping`](/zh-CN/docs/Web/HTML/Element/a#ping)
 - {{domxref("fetch()")}}
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("WebSocket")}}
@@ -76,7 +76,8 @@ Content-Security-Policy: connect-src https://example.com/
     navigator.sendBeacon("https://not-example.com/", {
       /* … */
     });
-  </script></a>
+  </script></a
+>
 ```
 
 ## 规范
@@ -94,7 +95,7 @@ Content-Security-Policy: connect-src https://example.com/
 ## 参见
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}}
+- {{HTMLElement("a")}} [`ping`](/zh-CN/docs/Web/HTML/Element/a#ping)
 - {{domxref("fetch()")}}
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("WebSocket")}}

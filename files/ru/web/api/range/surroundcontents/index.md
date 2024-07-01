@@ -1,10 +1,9 @@
 ---
 title: Range.surroundContents()
 slug: Web/API/Range/surroundContents
-translation_of: Web/API/Range/surroundContents
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
 Метод **`Range.surroundContents()`** перемещает содержимое {{ domxref("Range") }} в новый элемент, который расположится в начале указанного диапазона.
 
@@ -35,12 +34,9 @@ range.surroundContents(newNode);
 
 ## Спецификации
 
-| Спецификация                                                                                                                                                 | Статус                                       | Комментарий             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ----------------------- |
-| {{SpecName('DOM WHATWG', '#dom-range-surroundcontents', 'Range.surroundContents()')}}                                             | {{Spec2('DOM WHATWG')}}             | Без изменений.          |
-| {{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-surroundContents', 'Range.surroundContents()')}} | {{Spec2('DOM2 Traversal_Range')}} | Начальная спецификация. |
+{{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

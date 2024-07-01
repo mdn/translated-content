@@ -1,37 +1,30 @@
 ---
-title: URL.host
+title: URL：host 属性
 slug: Web/API/URL/host
+l10n:
+  sourceCommit: 1a91b0b63f0cbaca9125bd48d4e5bc8afed2a7a3
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URL")}} 接口的 **`host`** 属性是一个 {{domxref("USVString")}} 值，包含了主机信息，也就是 _主机名（hostname）_，还有，如果 URL 接口不为空，也会包含冒号 `':'` 和 URL 的 _端口（port）_。
+{{domxref("URL")}} 接口的 **`host`** 属性是一个包含主机信息（即{{domxref("URL.hostname", "主机名", "", 1)}}）的字符串，然后，如果 URL 的{{glossary("port", "端口")}}非空，则会出现 `':'`，后跟 URL 的{{domxref("URL.port", "端口", "", 1)}}。
 
-{{AvailableInWorkers}}
+## 值
 
-## 语法
-
-```plain
-string = object.host;
-object.host = string;
-```
-
-### 返回值
-
-{{domxref("USVString")}}.
+字符串。
 
 ## 示例
 
 ```js
-var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/host');
-var result = url.host // "developer.mozilla.org"
+let url = new URL("https://developer.mozilla.org/zh-CN/docs/Web/API/URL/host");
+console.log(url.host); // "developer.mozilla.org"
 
-var url = new URL('https://developer.mozilla.org:443/en-US/docs/Web/API/URL/host');
-var result = url.host // "developer.mozilla.org"
-// The port number is not included because 443 is the scheme's default port
+url = new URL("https://developer.mozilla.org:443/zh-CN/docs/Web/API/URL/host");
+console.log(url.host); // "developer.mozilla.org"
+// 端口号未包含在内，因为 443 是该方案的默认端口。
 
-var url = new URL('https://developer.mozilla.org:4097/en-US/docs/Web/API/URL/host');
-var result = url.host // "developer.mozilla.org:4097"
+url = new URL("https://developer.mozilla.org:4097/zh-CN/docs/Web/API/URL/host");
+console.log(url.host); // "developer.mozilla.org:4097"
 ```
 
 ## 规范
@@ -42,6 +35,6 @@ var result = url.host // "developer.mozilla.org:4097"
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - 所属的 {{domxref("URL")}} 接口。

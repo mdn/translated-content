@@ -1,7 +1,6 @@
 ---
 title: CSS Colors
-slug: Web/CSS/CSS_Colors
-original_slug: Web/CSS/CSS_Color
+slug: Web/CSS/CSS_colors
 ---
 
 {{CSSRef}}
@@ -26,20 +25,6 @@ _Ninguna._
 ## Especificaciones
 
 {{Specifications}}
-
-## Compatibilidad con navegadores
-
-### `color` property
-
-{{Compat("css.properties.color")}}
-
-### `print-color-adjust` property
-
-{{Compat("css.properties.print-color-adjust")}}
-
-### `opacity` property
-
-{{Compat("css.properties.opacity")}}
 
 ## Ver también
 

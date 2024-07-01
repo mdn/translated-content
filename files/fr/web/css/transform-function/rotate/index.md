@@ -1,9 +1,6 @@
 ---
 title: rotate()
 slug: Web/CSS/transform-function/rotate
-translation_of: Web/CSS/transform-function/rotate()
-original_slug: Web/CSS/transform-function/rotate()
-browser-compat: css.types.transform-function.rotate
 ---
 
 {{CSSRef}}

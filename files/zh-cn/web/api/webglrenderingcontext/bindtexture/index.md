@@ -42,8 +42,8 @@ void gl.bindTexture(target, texture);
 ### 绑定纹理
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var texture = gl.createTexture();
 
 gl.bindTexture(gl.TEXTURE_2D, texture);
@@ -65,7 +65,7 @@ gl.getParameter(gl.TEXTURE_BINDING_2D);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.createTexture()")}}
 - {{domxref("WebGLRenderingContext.deleteTexture()")}}

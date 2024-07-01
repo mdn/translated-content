@@ -1,6 +1,8 @@
 ---
 title: text-transform
 slug: Web/CSS/text-transform
+l10n:
+  sourceCommit: abf155210d826c2584d23433eb2eac45a6669d23
 ---
 
 {{CSSRef}}
@@ -20,7 +22,7 @@ slug: Web/CSS/text-transform
 
 言語は HTML の [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性や XML の [`xml:lang`](/ja/docs/Web/SVG/Attribute/xml:lang) 属性で定義します。
 
-> **メモ:** これらの特定のケースはブラウザーにより異なりますので、[ブラウザーの互換性一覧表](#browser_compatibility)を確認してください。
+> **メモ:** これらの特定のケースはブラウザーにより異なりますので、[ブラウザーの互換性](#ブラウザーの互換性)を確認してください。
 
 ## 構文
 
@@ -37,6 +39,7 @@ text-transform: full-size-kana;
 text-transform: inherit;
 text-transform: initial;
 text-transform: revert;
+text-transform: revert-layer;
 text-transform: unset;
 ```
 
@@ -63,7 +66,7 @@ text-transform: unset;
 
 テキストの長い区間に `text-transform` の値を `uppercase` で設定すると、失読症のような認知障碍を持つ人にとって読むのが難しくなることがあります。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## 公式定義
@@ -79,11 +82,17 @@ text-transform: unset;
 ### `none`
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
 </p>
-<p>text-transform: none
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+<p>
+  text-transform: none
+  <strong
+    ><span
+      >Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span
+    ></strong
+  >
 </p>
 ```
 
@@ -91,21 +100,29 @@ text-transform: unset;
 span {
   text-transform: none;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 文字を変換しない例です。
 
-{{ EmbedLiveSample('none', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "none"', '100%', '100px') }}
 
-<h3 id="capitalize_General">capitalize (一般的)</h3>
+### capitalize (一般的)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
 </p>
-<p>text-transform: capitalize
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+<p>
+  text-transform: capitalize
+  <strong
+    ><span
+      >Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span
+    ></strong
+  >
 </p>
 ```
 
@@ -113,21 +130,33 @@ strong { float: right; }
 span {
   text-transform: capitalize;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 頭文字を大文字にする例です。
 
-{{ EmbedLiveSample('capitalize_General', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "capitalize" (general)', '100%', '100px') }}
 
-<h3 id="capitalize_Punctuation">capitalize (句読点)</h3>
+### capitalize (句読点)
 
 ```html
-<p>Initial String
-  <strong>(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</strong>
+<p>
+  Initial String
+  <strong
+    >(this) "is" [a] –short– -test- «for» *the* _css_ ¿capitalize?
+    ?¡transform!</strong
+  >
 </p>
-<p>text-transform: capitalize
-  <strong><span>(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</span></strong>
+<p>
+  text-transform: capitalize
+  <strong
+    ><span
+      >(this) "is" [a] –short– -test- «for» *the* _css_ ¿capitalize?
+      ?¡transform!</span
+    ></strong
+  >
 </p>
 ```
 
@@ -135,20 +164,24 @@ strong { float: right; }
 span {
   text-transform: capitalize;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 単語の前の区切り記号が無視される様子を示す例です。このキーワードは、文字または数字の一般カテゴリに含まれる Unicode 文字である、最初の文字が対象です。
 
-{{ EmbedLiveSample('capitalize_Punctuation', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "capitalize" (punctuation)', '100%', '100px') }}
 
-<h3 id="capitalize_Symbols">capitalize (記号)</h3>
+### capitalize (記号)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl</strong>
 </p>
-<p>text-transform: capitalize
+<p>
+  text-transform: capitalize
   <strong><span>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl</span></strong>
 </p>
 ```
@@ -157,21 +190,29 @@ strong { float: right; }
 span {
   text-transform: capitalize;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 頭文字の記号が無視されるかを示す例です。このキーワードは、文字または数字の一般カテゴリーに含まれる Unicode 文字である、最初の文字が対象です。
 
-{{ EmbedLiveSample('capitalize_Symbols', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "capitalize" (symbols)', '100%', '100px') }}
 
-<h3 id="capitalize_Dutch_ij_digraph">capitalize (オランダ語の二重音字 ij)</h3>
+### capitalize (オランダ語の二重音字 ij)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong lang="nl">The Dutch word: "ijsland" starts with a digraph.</strong>
 </p>
-<p>text-transform: capitalize
-  <strong><span lang="nl">The Dutch word: "ijsland" starts with a digraph.</span></strong>
+<p>
+  text-transform: capitalize
+  <strong
+    ><span lang="nl"
+      >The Dutch word: "ijsland" starts with a digraph.</span
+    ></strong
+  >
 </p>
 ```
 
@@ -179,21 +220,29 @@ strong { float: right; }
 span {
   text-transform: capitalize;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 オランダ語の二重音字 _ij_ を 1 文字として扱わなければならないことを示す例です。
 
-{{ EmbedLiveSample('capitalize_Dutch_ij_digraph', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "capitalize" (Dutch ij digraph)', '100%', '100px') }}
 
-<h3 id="uppercase_General">uppercase (一般的)</h3>
+### uppercase (一般的)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
 </p>
-<p>text-transform: uppercase
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+<p>
+  text-transform: uppercase
+  <strong
+    ><span
+      >Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span
+    ></strong
+  >
 </p>
 ```
 
@@ -201,21 +250,27 @@ strong { float: right; }
 span {
   text-transform: uppercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 テキストを大文字に変換する例です。
 
-{{ EmbedLiveSample('uppercase_General', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "uppercase" (general)', '100%', '100px') }}
 
-<h3 id="uppercase_Greek_Vowels">uppercase (ギリシャ語の母音字)</h3>
+### uppercase (ギリシャ語の母音字)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</strong>
 </p>
-<p>text-transform: uppercase
-  <strong><span lang="el">Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</span></strong>
+<p>
+  text-transform: uppercase
+  <strong
+    ><span lang="el">Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</span></strong
+  >
 </p>
 ```
 
@@ -223,21 +278,29 @@ strong { float: right; }
 span {
   text-transform: uppercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 離接的接続の _eta_ を除くギリシャ語の母音字はアクセント記号を持たないこと、および二重母音の最初の文字のアクセント記号が 2 文字目の母音字のトレマになることを示す例です。
 
-{{ EmbedLiveSample('uppercase_Greek_Vowels', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "uppercase" (Greek vowels)', '100%', '100px') }}
 
-<h3 id="lowercase_General">lowercase (一般的)</h3>
+### lowercase (一般的)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong>
 </p>
-<p>text-transform: lowercase
-  <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong>
+<p>
+  text-transform: lowercase
+  <strong
+    ><span
+      >Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span
+    ></strong
+  >
 </p>
 ```
 
@@ -245,21 +308,29 @@ strong { float: right; }
 span {
   text-transform: lowercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 テキストを小文字に変換する例です。
 
-{{ EmbedLiveSample('lowercase_General', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "lowercase" (general)', '100%', '100px') }}
 
-<h3 id="lowercase_Greek_Σ">lowercase (ギリシャ文字 Σ)</h3>
+### lowercase (ギリシャ文字 Σ)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</strong>
 </p>
-<p>text-transform: lowercase
-  <strong><span>Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</span></strong>
+<p>
+  text-transform: lowercase
+  <strong
+    ><span
+      >Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</span
+    ></strong
+  >
 </p>
 ```
 
@@ -267,20 +338,24 @@ strong { float: right; }
 span {
   text-transform: lowercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 ギリシャ文字のシグマ (`Σ`) が、状況に応じて一般的な小文字のシグマ (`σ`) または単語の末尾での表記 (`ς`) に変換される例です。
 
-{{ EmbedLiveSample('lowercase_Greek_Σ', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "lowercase" (Greek Σ)', '100%', '100px') }}
 
-<h3 id="lowercase_Lithuanian">lowercase (リヒテンシュタイン語)</h3>
+### lowercase (リヒテンシュタイン語)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>Ĩ is a Lithuanian LETTER as is J́</strong>
 </p>
-<p>text-transform: lowercase
+<p>
+  text-transform: lowercase
   <strong><span lang="lt">Ĩ is a Lithuanian LETTER as is J́</span></strong>
 </p>
 ```
@@ -289,21 +364,31 @@ strong { float: right; }
 span {
   text-transform: lowercase;
 }
-strong { float: right; }
+strong {
+  float: right;
+}
 ```
 
 これはリヒテンシュタインの文字 `Ĩ` および `J́` が小文字に変換されるとドットを保持する様子を示します。
 
-{{ EmbedLiveSample('lowercase_Lithuanian', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "lowercase" (Lithuanian)', '100%', '100px') }}
 
-<h3 id="full-width_General">full-width (一般)</h3>
+### full-width (一般)
 
 ```html
-<p>Initial String
-  <strong>0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</strong>
+<p>
+  Initial String
+  <strong
+    >0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</strong
+  >
 </p>
-<p>text-transform: full-width
-  <strong><span>0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</span></strong>
+<p>
+  text-transform: full-width
+  <strong
+    ><span
+      >0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</span
+    ></strong
+  >
 </p>
 ```
 
@@ -311,20 +396,25 @@ strong { float: right; }
 span {
   text-transform: full-width;
 }
-strong { width: 100%; float: right; }
+strong {
+  width: 100%;
+  float: right;
+}
 ```
 
 一部の文字は半角と全角の 2 種類の表現があり、それらは別々の Unicode コードポイントを持ちます。全角文字は、アジア圏の表意文字と自然な形で混在させるために使用します。
 
-{{ EmbedLiveSample('full-width_General', '100%', '175px') }}
+{{ EmbedLiveSample('Example using "full-width" (general)', '100%', '175px') }}
 
-<h3 id="full-width_Japanese_half-width_katakana">full-width (日本語の半角カタカナ)</h3>
+### full-width (日本語の半角カタカナ)
 
 ```html
-<p>Initial String
+<p>
+  Initial String
   <strong>ｳｪﾌﾞﾌﾟﾛｸﾞﾗﾐﾝｸﾞの勉強</strong>
 </p>
-<p>text-transform: full-width
+<p>
+  text-transform: full-width
   <strong><span>ｳｪﾌﾞﾌﾟﾛｸﾞﾗﾐﾝｸﾞの勉強</span></strong>
 </p>
 ```
@@ -333,14 +423,17 @@ strong { width: 100%; float: right; }
 span {
   text-transform: full-width;
 }
-strong { width: 100%; float: right; }
+strong {
+  width: 100%;
+  float: right;
+}
 ```
 
 日本語の半角カタカナは、8 ビットの文字コードでカタカナを表現するために使われていました。通常の (全角の) カタカナ文字とは異なり、濁点の付いた文字は、文字本体と濁点の 2 つのコードポイントで表現されます。 `full-width` は、これらの文字を全角に変換する際に、1 つのコードポイントにまとめます。
 
-{{ EmbedLiveSample('full-width_Japanese_half-width_katakana', '100%', '175px') }}
+{{ EmbedLiveSample('Example using "full-width" (Japanese half-width katakana)', '100%', '175px') }}
 
-<h3 id="full-size-kana">full-size-kana</h3>
+### full-size-kana
 
 ```html
 <p>ァィゥェ ォヵㇰヶ ㇱㇲッㇳ ㇴㇵㇶㇷ ㇸㇹㇺャ ュョㇻㇼ ㇽㇾㇿヮ</p>
@@ -354,7 +447,7 @@ p:nth-of-type(2) {
 }
 ```
 
-{{ EmbedLiveSample('full-size-kana', '100%', '175px') }}
+{{ EmbedLiveSample('Example using "full-size-kana"', '100%', '175px') }}
 
 ## 仕様書
 

@@ -1,8 +1,6 @@
 ---
 title: Введение в протоколы WebRTC
 slug: Web/API/WebRTC_API/Protocols
-translation_of: Web/API/WebRTC_API/Protocols
-original_slug: Web/API/WebRTC_API/протоколы
 ---
 
 {{APIRef("WebRTC")}}

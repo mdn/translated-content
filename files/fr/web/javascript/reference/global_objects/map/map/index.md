@@ -1,8 +1,6 @@
 ---
 title: Constructeur Map()
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/Map
-browser-compat: javascript.builtins.Map.Map
 ---
 
 {{JSRef}}
@@ -12,8 +10,8 @@ Le **constructeur `Map()`** permet de créer des objets [`Map`](/fr/docs/Web/Jav
 ## Syntaxe
 
 ```js
-new Map()
-new Map(iterable)
+new Map();
+new Map(iterable);
 ```
 
 ### Paramètres
@@ -27,9 +25,9 @@ new Map(iterable)
 
 ```js
 let maMap = new Map([
-  [1, 'un'],
-  [2, 'deux'],
-  [3, 'trois'],
+  [1, "un"],
+  [2, "deux"],
+  [3, "trois"],
 ]);
 ```
 

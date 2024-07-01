@@ -10,7 +10,7 @@ slug: Web/API/MediaStreamTrack/readyState
 ## 구문
 
 ```js
-const state = track.readyState
+const state = track.readyState;
 ```
 
 ### 값

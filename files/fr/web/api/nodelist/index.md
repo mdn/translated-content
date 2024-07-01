@@ -1,13 +1,6 @@
 ---
 title: NodeList
 slug: Web/API/NodeList
-tags:
-  - API
-  - DOM
-  - Interface
-  - Liste
-  - Noeuds
-translation_of: Web/API/NodeList
 ---
 
 {{APIRef("DOM")}}
@@ -21,10 +14,10 @@ Les objets **`NodeList`** sont des collections de nœuds comme celles retournée
 Dans certains cas, la `NodeList` est une collection en direct, ce qui signifie que les changements dans le DOM sont reflétés dans la collection. Par exemple, {{domxref("Node.childNodes")}} est en direct :
 
 ```js
-var parent = document.getElementById('parent');
+var parent = document.getElementById("parent");
 var child_nodes = parent.childNodes;
 console.log(child_nodes.length); // supposons "2"
-parent.appendChild(document.createElement('div'));
+parent.appendChild(document.createElement("div"));
 console.log(child_nodes.length); // devrait afficher "3"
 ```
 
@@ -56,7 +49,7 @@ Il est possible de boucler sur les éléments d'une `NodeList` en utilisant&nbsp
 
 ```js
 for (var i = 0; i < myNodeList.length; ++i) {
-  var item = myNodeList[i];  // L'appel de myNodeList.item(i) n'est pas nécessaire en JavaScript
+  var item = myNodeList[i]; // L'appel de myNodeList.item(i) n'est pas nécessaire en JavaScript
 }
 ```
 
@@ -65,7 +58,7 @@ Ne soyez pas tenté d'utiliser [`for… in`](/fr/docs/JavaScript/Reference/Instr
 Les boucles [`for… of`](/fr/docs/JavaScript/Référence_JavaScript/Instructions/for...of) boucleront correctement sur les objets `NodeList` :
 
 ```js
-var list = document.querySelectorAll( 'input[type=checkbox]' );
+var list = document.querySelectorAll("input[type=checkbox]");
 for (var item of list) {
   item.checked = true;
 }
@@ -76,7 +69,7 @@ Les navigateurs récents prennent également en charge les méthodes d'itérateu
 Il y a aussi dans Internet Explorer une façon compatible d'utiliser {{jsxref("Array.forEach()", "Array.prototype.forEach")}} pour l'itération.
 
 ```js
-var list = document.querySelectorAll( 'input[type=checkbox]' );
+var list = document.querySelectorAll("input[type=checkbox]");
 Array.prototype.forEach.call(list, function (item) {
   item.checked = true;
 });

@@ -7,7 +7,7 @@ slug: Web/API/Window/requestFileSystem
 
 这个非标准 {{domxref("Window")}} **`requestFileSystem()`** 方法是谷歌浏览器内核用来让 web 站点或 app 获得通过沙箱访问文件系统 . 它返回 {{domxref("FileSystem")}} 然后就可以和 [file system APIs](/zh-CN/docs/Web/API/File_and_Directory_Entries_API) 一起使用了
 
-> **警告：** 甚至相比较如 File 和 Directory Entries API, `requestFileSystem()` 更不规范; 只有 Chrome 支持它，所有其它浏览器已经决定不支持它了。它甚至已经从规范建议单中移除了。因此*不要使用这个方法*
+> **警告：** 甚至相比较如 File 和 Directory Entries API, `requestFileSystem()` 更不规范; 只有 Chrome 支持它，所有其他浏览器已经决定不支持它了。它甚至已经从规范建议单中移除了。因此*不要使用这个方法*
 
 ## 语法
 

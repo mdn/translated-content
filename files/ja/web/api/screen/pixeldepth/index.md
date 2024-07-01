@@ -16,7 +16,7 @@ slug: Web/API/Screen/pixelDepth
 ```js
 // ビット深度が十分でない場合、
 // より簡単な色を選択します。
-if ( window.screen.pixelDepth > 8 ) {
+if (window.screen.pixelDepth > 8) {
   document.style.color = "#FAEBD7";
 } else {
   document.style.color = "#FFFFFF";

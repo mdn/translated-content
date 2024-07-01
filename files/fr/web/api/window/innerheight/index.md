@@ -1,14 +1,6 @@
 ---
 title: window.innerHeight
 slug: Web/API/Window/innerHeight
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Propriété
-  - Reference
-  - Window
-translation_of: Web/API/Window/innerHeight
 ---
 
 {{ ApiRef() }}
@@ -29,7 +21,7 @@ Renvoie la hauteur de la partie visible de la fenêtre de navigation. La propri�
 
 ## Notes
 
-- La propriété `window.innerHeight` est supportée par tout objet assimilé à une fenêtre _{{domxref("window")}}_, un cadre _frame_ , un ensemble de cadres *frameset*, ou une fenêtre secondaire.
+- La propriété `window.innerHeight` est supportée par tout objet assimilé à une fenêtre _{{domxref("window")}}_, un cadre _frame_ , un ensemble de cadres _frameset_, ou une fenêtre secondaire.
 - Il existe un [algorithme](https://bugzilla.mozilla.org/show_bug.cgi?id=189112#c7) pour calculer la hauteur de la partie visible de la fenêtre en excluant la barre de défilement horizontale si est elle affichée.
 
 ## Exemples

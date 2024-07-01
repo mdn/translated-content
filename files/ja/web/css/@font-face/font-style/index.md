@@ -49,7 +49,7 @@ font-style: oblique 30deg 50deg;
 ```css
 @font-face {
   font-family: garamond;
-  src: url('garamond.ttf');
+  src: url("garamond.ttf");
 }
 ```
 
@@ -64,7 +64,7 @@ font-style: oblique 30deg 50deg;
 ```css
 @font-face {
   font-family: garamond;
-  src: url('garamond-italic.ttf');
+  src: url("garamond-italic.ttf");
   font-style: italic;
 }
 ```

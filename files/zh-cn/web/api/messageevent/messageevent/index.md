@@ -21,7 +21,7 @@ var messageEvent = new MessageEvent(type, init);
 
   - : 可以包含以下属性的 dictionary 对象：
 
-    - `data`: 您希望包含在 MessageEvent 中的数据。这可以是任何数据类型，如果没有指定，则默认为 null。
+    - `data`: 你希望包含在 MessageEvent 中的数据。这可以是任何数据类型，如果没有指定，则默认为 null。
     - `origin`: {{domxref("USVString")}} 表示消息发送源。如果没有指定，则默认为空字符串 ("")。
     - `lastEventId`: {{domxref("DOMString")}} 表示事件的唯一 ID。如果没有指定，则默认为空字符串 ("")。
     - `source`: `MessageEventSource` (可以是 {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, 或 {{domxref("ServiceWorker")}} 对象) 表示消息发送对象。如果没有设置，则默认为 null。
@@ -30,8 +30,8 @@ var messageEvent = new MessageEvent(type, init);
 ## 示例
 
 ```js
-var myMessage = new MessageEvent('worker', {
-  data : 'hello'
+var myMessage = new MessageEvent("worker", {
+  data: "hello",
 });
 ```
 
@@ -43,6 +43,6 @@ var myMessage = new MessageEvent('worker', {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("ExtendableMessageEvent")}} — 类似于此接口，但用于需要为作者提供更多灵活性的接口。

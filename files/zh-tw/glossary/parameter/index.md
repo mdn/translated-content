@@ -3,6 +3,8 @@ title: 參數
 slug: Glossary/Parameter
 ---
 
+{{GlossarySidebar}}
+
 參數 (parameter) 是個會傳進函式 ({{Glossary("function")}}) 的已命名變量，用來把引數 (({{Glossary("argument","arguments")}})) 導入到函式中。
 
 要特別注意參數和引數的差異：

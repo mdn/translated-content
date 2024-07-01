@@ -1,91 +1,56 @@
 ---
 title: 호이스팅
 slug: Glossary/Hoisting
+l10n:
+  sourceCommit: 8fb5853ceee5db8ac6e1c564c6dda4b3f5ec86c5
 ---
-JavaScript에서 **호이스팅**(hoisting)이란, 인터프리터가 변수와 함수의 메모리 공간을 선언 전에 미리 할당하는 것을 의미합니다. `var`로 선언한 변수의 경우 호이스팅 시 `undefined`로 변수를 초기화합니다. 반면 `let`과 `const`로 선언한 변수의 경우 호이스팅 시 변수를 초기화하지 않습니다.
 
-호이스팅을 설명할 땐 주로 "변수의 선언과 초기화를 분리한 후, 선언만 코드의 최상단으로 옮기는" 것으로 말하곤 합니다. 따라서 변수를 정의하는 코드보다 사용하는 코드가 앞서 등장할 수 있습니다. 다만 선언과 초기화를 함께 수행하는 경우, 선언 코드까지 실행해야 변수가 초기화된 상태가 됨을 주의하세요.
+{{GlossarySidebar}}
 
-> **참고:** 호이스팅은 (`let`과 `const`를 포함한) [ECMAScript® 2015 언어 명세](https://www.ecma-international.org/ecma-262/6.0/index.html) 이전의 표준 명세에는 나타나지 않았습니다. 당시에는 호이스팅이 JavaScript에서 실행 맥락, 특히 생성 및 실행 단계의 동작 방식을 설명하는 일반적인 방법이었습니다.
+JavaScript **호이스팅**은 인터프리터가 코드를 실행하기 전에 함수, 변수, 클래스 또는 임포트(import)의 선언문을 해당 범위의 맨 위로 끌어올리는 것처럼 보이는 현상을 뜻합니다.
 
-## 기술 예제
+호이스팅은 ECMAScript 사양에서 규범적으로 정의된 용어가 아닙니다. 사양에서는 선언 그룹을 [_HoistableDeclaration_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-HoistableDeclaration)로 정의되어 있지만, 여기에는 [`function`](/ko/docs/Web/JavaScript/Reference/Statements/function), [`function*`](/ko/docs/Web/JavaScript/Reference/Statements/function*) 만 포함되어 있습니다, [`async 함수`](/ko/docs/Web/JavaScript/Reference/Statements/async_function), [`async 함수`](/ko/docs/Web/JavaScript/Reference/Satements/async_function*) 선언을 사용하세요. 호이스팅은 다른 방식이긴 하지만 종종 [`var`](/ko/docs/Web/JavaScript/Reference/Statements/var) 선언의 기능으로 간주되기도 합니다. 구어체 용어로는 다음과 같은 동작을 호이스팅으로 간주할 수 있습니다.
 
-JavaScript는 함수의 코드를 실행하기 전에 함수 선언에 대한 메모리부터 할당합니다. 덕분에 함수를 호출하는 코드를 함수 선언보다 앞서 배치할 수 있습니다. 예를 들어,
+1. 변수가 선언된 줄 이전에 해당 범위에서 변수 값을 사용할 수 있는 경우 ("값 호이스팅")
+2. 변수가 선언된 줄 이전에 해당 범위의 변수를 참조할 수 있지만 {{jsxref("ReferenceError")}}를 던지지 않고 값이 항상 [`정의되지 않음`](/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined)인 경우입니다. ("선언 호이스팅")
+3. 변수를 선언하면 변수가 선언된 줄 앞의 범위에서 동작이 변경됩니다.
+4. 선언의 부작용은 선언이 포함된 나머지 코드를 평가하기 전에 발생합니다.
+
+위의 네 가지 함수 선언은 유형 1 동작으로 호출되고, `var` 선언은 유형 2 동작으로 호출됩니다. [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let), [`const`](/ko/docs/Web/JavaScript/Reference/Statements/const) 및 [`class`](/ko/docs/Web/JavaScript/Reference/Satements/class) 선언(총칭하여 lexical 선언이라고도 함)은 유형 3 동작으로 올라갑니다. [`import`](/ko/docs/Web/JavaScript/Reference/Statements/import) 선언은 유형 1 및 유형 4 동작으로 호출됩니다.
+
+일부에서는 `let`, `const` 및 `class`를 호이스트되지 않는 것으로 보는 것을 선호하는데, 그 이유는 [temporal dead zone](/ko/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)이 선언 이전의 변수 사용을 엄격하게 금지하고 있기 때문입니다. 호이스팅은 보편적으로 합의된 용어가 아니기 때문에 이러한 반대는 괜찮습니다. 그러나 temporal dead zone은 그 범위에서 관찰 가능한 다른 변화를 일으킬 수 있으며, 이는 어떤 형태의 호이스팅이 있음을 시사합니다.
 
 ```js
-function catName(name) {
-  console.log("제 고양이의 이름은 " + name + "입니다");
+const x = 1;
+{
+  console.log(x); // 참조 에러
+  const x = 2;
 }
-
-catName("호랑이");
-
-/*
-결과: "제 고양이의 이름은 호랑이입니다"
-*/
 ```
 
-위의 코드 조각이 일반적으로 코드를 작성하는 순서라면, 함수를 선언하기 전에 먼저 호출했을 때의 예제도 보겠습니다.
+만약 `const x = 2` 선언이 전혀 호출되지 않는다면(즉, 실행될 때만 효력이 발생한다면), `console.log(x)` 문은 상위 범위에서 `x` 값을 읽을 수 있어야 합니다. 그러나 `const` 선언은 여전히 정의된 전체 범위를 "오염"시키기 때문에 `console.log(x)` 문은 아직 초기화되지 않은 `const x = 2` 선언에서 `x`를 대신 읽어서 {{jsxref("ReferenceError")}}를 던집니다. 하지만 실용적인 관점에서 볼 때 이러한 선언의 호이스팅은 의미 있는 기능을 제공하지 않기 때문에 어휘 선언을 비호이스팅으로 특성화하는 것이 더 유용할 수 있습니다.
+
+다음은 호이스팅의 한 형태가 아니라는 점에 유의하세요.
 
 ```js
-catName("클로이");
-
-function catName(name) {
-  console.log("제 고양이의 이름은 " + name + "입니다");
+{
+  var x = 1;
 }
-
-/*
-결과: "제 고양이의 이름은 클로이입니다"
-*/
+console.log(x); // 1
 ```
 
-함수 호출이 함수 자체보다 앞서 존재하지만, 그럼에도 불구하고 이 코드 역시 동작합니다. 이것이 JavaScript에서 실행 맥락이 동작하는 방식입니다.
+여기에는 "선언 전 접근"이 없는데, 이는 단순히 `var` 선언이 블록으로 범위가 지정되지 않았기 때문입니다.
 
-호이스팅은 다른 자료형과 변수에도 잘 작동합니다. 변수를 선언하기 전에 먼저 초기화하고 사용할 수 있는 것입니다.
+호이스팅에 대한 자세한 내용은 다음을 참조하십시오.
 
-### 선언만 호이스팅 대상
+- `var`/`let`/`const` 호이스팅 - [문법 및 유형 가이드](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#variable_hoisting)
+- `함수` 호이스팅 - [함수 가이드](/ko/docs/Web/JavaScript/Guide/Functions#function_hoisting)
+- `class` 호이스팅 - [클래스 가이드](/ko/docs/Web/JavaScript/Guide/Using_classes#class_declaration_hoisting)
+- `import` 호이스팅 - [JavaScript 모듈](/ko/docs/Web/JavaScript/Guide/Modules#import_declarations_are_hoisted)
 
-JavaScript는 초기화를 제외한 선언만 호이스팅합니다. 변수를 먼저 사용하고 그 후에 선언 및 초기화가 나타나면, 사용하는 시점의 변수는 기본 초기화 상태(`var` 선언 시 `undefined`, 그 외에는 초기화하지 않음)입니다. 예를 들어,
+## 참조
 
-```js
-console.log(num); // 호이스팅한 var 선언으로 인해 undefined 출력
-var num; // 선언
-num = 6; // 초기화
-```
-
-반면, 다음 예제는 선언 없이 초기화만 존재합니다. 따라서 호이스팅도 없고, 변수를 읽으려는 시도에서는 `ReferenceError` 예외가 발생합니다.
-
-```js
-console.log(num); // ReferenceError
-num = 6; // 초기화
-```
-
-다음은 호이스팅을 보이는 더 많은 예제입니다.
-
-```js
-// 예제 1
-// y만 호이스팅 대상
-
-x = 1; // x 초기화. x를 선언하지 않은 경우 선언. 그러나 명령문에 var가 없으므로 호이스팅이 발생하지 않음
-console.log(x + " " + y); // '1 undefined'
-// JavaScript는 선언만 호이스팅하므로, 윗줄의 y는 undefined
-var y = 2; // y를 선언하고 초기화
-
-// 예제 2
-// 호이스팅은 없지만, 변수 초기화는 (아직 하지 않은 경우) 변수 선언까지 병행하므로 변수를 사용할 수 있음
-
-a = '크랜'; // a 초기화
-b = '베리'; // b 초기화
-
-console.log(a + "" + b); // '크랜베리'
-```
-
-### let과 const 호이스팅
-
-`let`과 `const`로 선언한 변수도 호이스팅 대상이지만, `var`와 달리 호이스팅 시 `undefined`로 변수를 초기화하지는 않습니다. 따라서 변수의 초기화를 수행하기 전에 읽는 코드가 먼저 나타나면 예외가 발생합니다.
-
-더 많은 정보는 [`let` 문서의 "시간상 사각지대"](/ko/docs/Web/JavaScript/Reference/Statements/let#시간상_사각지대)를 참고하세요.
-
-### 같이 보기
-
-- [`var` 명령문](/ko/docs/Web/JavaScript/Reference/Statements/var) — MDN
-- [`function` 명령문](/ko/docs/Web/JavaScript/Reference/Statements/function) — MDN
+- [`var` 문](/ko/docs/Web/JavaScript/Reference/Statements/var) - MDN
+- [`let` 문](/ko/docs/Web/JavaScript/Reference/Statements/let) - MDN
+- [`const` 문](/ko/docs/Web/JavaScript/Reference/Statements/const) - MDN
+- [`function` 문](/ko/docs/Web/JavaScript/Reference/Statements/function) - MDN

@@ -3,6 +3,8 @@ title: Polymorphism (多態性)
 slug: Glossary/Polymorphism
 ---
 
+{{GlossarySidebar}}
+
 Polymorphism (多態性)とは複数のデータ型を 1 つのインターフェイスにまとめた表現です。
 
 例えば、整数型、浮動小数点型、倍精度浮動小数点型は暗黙的な多態性を持ちます：データ型の違いにもかからず、その３つは足し算、引き算、掛け算、などができます。

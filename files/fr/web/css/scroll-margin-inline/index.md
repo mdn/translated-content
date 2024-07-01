@@ -1,13 +1,6 @@
 ---
 title: scroll-margin-inline
 slug: Web/CSS/scroll-margin-inline
-tags:
-  - CSS
-  - Propriété
-  - Propriété logique
-  - Propriété raccourcie
-  - Reference
-translation_of: Web/CSS/scroll-margin-inline
 ---
 
 {{CSSRef}}
@@ -22,7 +15,7 @@ Les valeurs des marges de défilement correspondent aux décalages entre la zone
 /* Valeurs de longueur */
 /* Type <length> */
 scroll-margin-inline: 10px;
-scroll-margin-inline: 1em .5em;
+scroll-margin-inline: 1em 0.5em;
 
 /* Valeurs globales */
 scroll-margin-inline: inherit;

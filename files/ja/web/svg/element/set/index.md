@@ -41,7 +41,7 @@ slug: Web/SVG/Element/set
 
 ## ブラウザー互換性
 
-{{Compat("svg.elements.set")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -12,18 +12,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 ### lineNumber 사용하기
 
 ```js
-var e = new Error('Could not parse input');
+var e = new Error("Could not parse input");
 throw e;
-console.log(e.lineNumber) // 2
+console.log(e.lineNumber); // 2
 ```
 
 ### 오류 이벤트를 사용하는 또 다른 예제
 
 ```js
-window.addEventListener('error', function(e) {
+window.addEventListener("error", function (e) {
   console.log(e.lineNumber); // 5
 });
-var e = new Error('Could not parse input');
+var e = new Error("Could not parse input");
 throw e;
 ```
 

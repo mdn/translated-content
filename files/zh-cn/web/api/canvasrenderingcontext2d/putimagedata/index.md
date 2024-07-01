@@ -16,10 +16,8 @@ void ctx.putImageData(imagedata, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight
 
 ### 参数
 
-**imageData**
-
-{{domxref("ImageData")}} ，包含像素值的数组对象。
-
+- `imageData`
+  - : {{domxref("ImageData")}}，包含像素值的数组对象。
 - `dx`
   - : 源图像数据在目标画布中的位置偏移量（x 轴方向的偏移量）。
 - `dy`
@@ -55,25 +53,34 @@ void ctx.putImageData(imagedata, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-function putImageData(ctx, imageData, dx, dy,
-    dirtyX, dirtyY, dirtyWidth, dirtyHeight) {
+function putImageData(
+  ctx,
+  imageData,
+  dx,
+  dy,
+  dirtyX,
+  dirtyY,
+  dirtyWidth,
+  dirtyHeight,
+) {
   const data = imageData.data;
   const height = imageData.height;
   const width = imageData.width;
   dirtyX = dirtyX || 0;
   dirtyY = dirtyY || 0;
-  dirtyWidth = dirtyWidth !== undefined? dirtyWidth: width;
-  dirtyHeight = dirtyHeight !== undefined? dirtyHeight: height;
+  dirtyWidth = dirtyWidth !== undefined ? dirtyWidth : width;
+  dirtyHeight = dirtyHeight !== undefined ? dirtyHeight : height;
   const limitBottom = dirtyY + dirtyHeight;
   const limitRight = dirtyX + dirtyWidth;
   for (let y = dirtyY; y < limitBottom; y++) {
     for (let x = dirtyX; x < limitRight; x++) {
       const pos = y * width + x;
-      ctx.fillStyle =
-        `rgba(${data[pos*4+0]}, ${data[pos*4+1]}, ${data[pos*4+2]}, ${data[pos*4+3]/255})`;
+      ctx.fillStyle = `rgba(${data[pos * 4 + 0]}, ${data[pos * 4 + 1]}, ${
+        data[pos * 4 + 2]
+      }, ${data[pos * 4 + 3] / 255})`;
       ctx.fillRect(x + dx, y + dy, 1, 1);
     }
   }

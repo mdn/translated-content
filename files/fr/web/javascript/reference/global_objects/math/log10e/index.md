@@ -1,13 +1,6 @@
 ---
 title: Math.LOG10E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
-tags:
-  - JavaScript
-  - Math
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/LOG10E
 ---
 
 {{JSRef}}
@@ -30,7 +23,7 @@ La fonction suivante renvoie le logarithme en base 10 de e :
 
 ```js
 function getLog10e() {
-   return Math.LOG10E;
+  return Math.LOG10E;
 }
 
 getLog10e(); // 0.4342944819032518

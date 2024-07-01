@@ -1,8 +1,9 @@
 ---
 title: Descriptor (CSS) (記述子)
 slug: Glossary/CSS_Descriptor
-original_slug: Glossary/Descriptor_(CSS)
 ---
+
+{{GlossarySidebar}}
 
 **CSS 記述子**は、[アットルール](/ja/docs/Web/CSS/At-rule)の性質を定義します。アットルールは 1 つ以上の記述子を持つことができます。それぞれの記述子には、以下のものがあります。
 

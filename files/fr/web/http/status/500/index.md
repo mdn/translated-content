@@ -1,8 +1,6 @@
 ---
 title: 500 Internal Server Error
 slug: Web/HTTP/Status/500
-translation_of: Web/HTTP/Status/500
-browser-compat: http.status.500
 ---
 
 {{HTTPSidebar}}

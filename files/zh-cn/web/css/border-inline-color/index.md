@@ -5,39 +5,48 @@ slug: Web/CSS/border-inline-color
 
 {{CSSRef}}
 
-The **`border-inline-color`** [CSS](/zh-CN/docs/Web/CSS) property defines the color of the logical inline borders of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-color")}} and {{cssxref("border-bottom-color")}}, or {{cssxref("border-right-color")}} and {{cssxref("border-left-color")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-inline-color`** 定义了元素的逻辑行向的边框颜色，并根据元素的书写模式、行内方向和文本朝向对应至实体边框颜色。根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("border-top-color")}} 和 {{CSSXref("border-bottom-color")}}，或者 {{CSSXref("border-right-color")}} 和 {{CSSXref("border-left-color")}} 属性。
+
+{{EmbedInteractiveExample("pages/css/border-inline-color.html")}}
+
+另一方向的边框颜色可用 {{CSSXref("border-block-color")}} 设置，此属性会设置 {{CSSXref("border-block-start-color")}} 和 {{CSSXref("border-block-end-color")}}。
+
+## 语法
 
 ```css
 border-inline-color: yellow;
-border-inline-color: #F5F6F7;
+border-inline-color: #f5f6f7;
+
+/* 全局值 */
+border-inline-color: inherit;
+border-inline-color: initial;
+border-inline-color: revert;
+border-inline-color: revert-layer;
+border-inline-color: unset;
 ```
 
-The border color in the other dimension can be set with {{cssxref("border-block-color")}} which sets {{cssxref("border-block-start-color")}}, and {{cssxref("border-block-end-color")}}.
-
-## Syntax
-
-### Values
+### 取值
 
 - `<'color'>`
-  - : The color of the border. See {{cssxref("color")}}.
+  - : 边框颜色。见 {{CSSXref("color")}}。
 
-## Formal definition
+## 形式定义
 
 {{CSSInfo}}
 
-## Formal syntax
+## 形式语法
 
-{{csssyntax}}
+{{CSSSyntax}}
 
-## Examples
+## 示例
 
-### Border color with vertical text
+### 竖排文本的边框颜色
 
 #### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">示例文本</p>
 </div>
 ```
 
@@ -57,19 +66,20 @@ div {
 }
 ```
 
-#### Results
+#### 结果
 
-{{EmbedLiveSample("Border_color_with_vertical_text", 140, 140)}}
+{{EmbedLiveSample("竖排文本的边框颜色", 140, 140)}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- This property maps to the physical border properties: {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, or {{cssxref("border-left-color")}}.
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}+ bug 1297097
+- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
+- 此属性对应的实体边框属性：{{CSSXref("border-top-color")}}、{{CSSXref("border-right-color")}}、{{CSSXref("border-bottom-color")}} 或 {{CSSXref("border-left-color")}}
+- {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}

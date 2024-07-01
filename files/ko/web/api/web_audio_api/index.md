@@ -2,6 +2,7 @@
 title: Web Audio API
 slug: Web/API/Web_Audio_API
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 Web Audio API는 웹에서 오디오를 제어하기 위한 강력하고 다양한 기능을 제공합니다. Web Audio API를 이용하면 오디오 소스를 선택할 수 있도록 하거나, 오디오에 이펙트를 추가하거나, 오디오를 시각화하거나, 패닝과 같은 공간 이펙트를 적용시키는 등의 작업이 가능합니다.
@@ -46,7 +47,7 @@ Web Audio API는 [futurelibrary.no](https://www.futurelibrary.no/)에서와 같�
 
 만약에 프로그래밍보다는 음악이 친숙하고, 음악 이론에 익숙하며, 악기를 만들고 싶으시다면 바로 상급자용 튜토리얼부터 시작하여 여러가지를 만들기 시작하시면 됩니다. 위의 튜토리얼은 음표를 배치하는 법, 저주파 발진기 등 맞춤형 Oscillator(발진기)와 Envelope를 설계하는 법 등을 설명하고 있으니, 이를 읽으며 사이드바의 자료를 참고하시면 될 것입니다.
 
-프로그래밍에 전혀 익숙하지 않으시다면 자바스크립트 기초 튜토리얼을 먼저 읽고 이 문서를 다시 읽으시는 게 나을 수도 있습니다. 모질라의 [자바스크립트 기초](/ko/docs/Learn/JavaScript)만큼 좋은 자료도 몇 없죠.
+프로그래밍에 전혀 익숙하지 않으시다면 JavaScript 기초 튜토리얼을 먼저 읽고 이 문서를 다시 읽으시는 게 나을 수도 있습니다. Mozilla의 [JavaScript 기초](/ko/docs/Learn/JavaScript)만큼 좋은 자료도 몇 없죠.
 
 ## Web Audio API 인터페이스
 
@@ -163,7 +164,7 @@ Web Audio API에서 사용하기 위한 오디오 소스를 정의하는 인터�
 오디오 worklet이 정의되기 전에, Web Audio API는 JavaScript 기반의 오디오 프로세싱을 위해 `ScriptProcessorNode`를 사용했습니다. 코드가 메인 스레드에서 실행되기 때문에, 나쁜 성능을 가지고 있었습니다. `ScriptProcessorNode`는 역사적인 이유로 보존되나 deprecated되었습니다.
 
 - {{domxref("ScriptProcessorNode")}} {{deprecated_inline}}
-  - : **`ScriptProcessorNode`** 인터페이스는 자바스크립트를 이용한 오디오 생성, 처리, 분석 기능을 제공합니다. 이것은 현재 입력 버퍼와 출력 버퍼, 총 두 개의 버퍼에 연결되는 {{domxref("AudioNode")}} 오디오 프로세싱 모듈입니다. {{domxref("AudioProcessingEvent")}} 인터페이스를 구현하는 이벤트는 입력 버퍼에 새로운 데이터가 들어올 때마다 객체로 전달되고, 출력 버퍼가 데이터로 채워지면 이벤트 핸들러가 종료됩니다.
+  - : **`ScriptProcessorNode`** 인터페이스는 JavaScript를 이용한 오디오 생성, 처리, 분석 기능을 제공합니다. 이것은 현재 입력 버퍼와 출력 버퍼, 총 두 개의 버퍼에 연결되는 {{domxref("AudioNode")}} 오디오 프로세싱 모듈입니다. {{domxref("AudioProcessingEvent")}} 인터페이스를 구현하는 이벤트는 입력 버퍼에 새로운 데이터가 들어올 때마다 객체로 전달되고, 출력 버퍼가 데이터로 채워지면 이벤트 핸들러가 종료됩니다.
 - {{event("audioprocess")}} (event) {{deprecated_inline}}
   - : `audioprocess` 이벤트는 Web Audio API {{domxref("ScriptProcessorNode")}}의 입력 버퍼가 처리될 준비가 되었을 때 발생합니다.
 - {{domxref("AudioProcessingEvent")}} {{deprecated_inline}}
@@ -194,9 +195,7 @@ Web Audio API에서 사용하기 위한 오디오 소스를 정의하는 인터�
 
 ## 브라우저 호환성
 
-### AudioContext
-
-{{Compat("api.AudioContext", 0)}}
+{{Compat}}
 
 ## 같이 보기
 

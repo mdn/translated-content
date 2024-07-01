@@ -1,20 +1,23 @@
 ---
-title: HTMLImageElement.crossOrigin
+title: "HTMLImageElement: crossOrigin プロパティ"
+short-title: crossOrigin
 slug: Web/API/HTMLImageElement/crossOrigin
+l10n:
+  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLImageElement")}} インターフェイスの **`crossOrigin`** 属性は、画像を取得する際に使用する {{Glossary("CORS")}} (Cross-Origin Resource Sharing) 設定を指定するための文字列です。
+{{domxref("HTMLImageElement")}} インターフェイスの **`crossOrigin`** 属性は、画像を取得する際に使用するオリジン間リソース共有 ({{Glossary("CORS")}}) 設定を指定するための文字列です。
 
 ## 値
 
-画像リソースを取得する際に使用する CORS モードを指定するキーワードの文字列です。 `crossOrigin` を指定しない場合、画像は CORS なしで取得されます（`no-cors` フェッチモード）。
+文字列で、画像リソースを取得する際に使用する CORS モードを指定するキーワードです。 `crossOrigin` を指定しない場合、画像は CORS なしで取得されます（`no-cors` フェッチモード）。
 
 許可されている値は次の通りです。
 
 - `anonymous`
-  - : {{HTMLElement("img")}} 要素によるリクエストは、{{domxref("Request.mode", "mode")}} が `cors` に、{{domxref("Request.credentials", "credentials")}} モードが `same-origin` に設定されて行われます。これは、CORS が有効であり、文書が読み込まれたのと同じオリジンから画像が取得された場合に、クレデンシャルが送信されることを意味します。
+  - : {{HTMLElement("img")}} 要素によるリクエストは、{{domxref("Request.mode", "mode")}} が `cors` に、{{domxref("Request.credentials", "credentials")}} モードが `same-origin` に設定されて行われます。これは、CORS が有効であり、文書が読み込まれたのと同じオリジンから画像が取得された場合に、資格情報が送信されることを意味します。
 - `use-credentials`
   - : {{domxref("HTMLImageElement")}} によるリクエストは `cors` モードと `include` 認証モードを使用します。この要素によるすべての画像リクエストは、取得元のドメインに関係なく CORS を使用します。
 
@@ -34,9 +37,7 @@ const container = document.querySelector(".container");
 
 function loadImage(url) {
   const image = new Image(200, 200);
-  image.addEventListener("load",
-    () => container.prepend(image)
-  );
+  image.addEventListener("load", () => container.prepend(image));
 
   image.addEventListener("error", () => {
     const errMsg = document.createElement("output");
@@ -56,7 +57,11 @@ loadImage(imageUrl);
 
 ```html
 <div class="container">
-  <p>ここに 1 つの段落があります。とても面白い段落です あなたはこの段落に魅了されています。この段落を読み続けてください。じゃあ、もうこの段落を読むのはやめていいよ。読んでくれてありがとう。</p>
+  <p>
+    ここに 1 つの段落があります。とても面白い段落です。
+    あなたはこの段落に魅了されています。 この段落を読み続けてください。
+    じゃあ、もうこの段落を読むのはやめていいよ。 読んでくれてありがとう。
+  </p>
 </div>
 ```
 
@@ -64,7 +69,10 @@ loadImage(imageUrl);
 
 ```css
 body {
-  font: 1.125rem/1.5, Helvetica, sans-serif;
+  font:
+    1.125rem/1.5,
+    Helvetica,
+    sans-serif;
 }
 
 .container {
@@ -79,7 +87,7 @@ img {
 }
 
 output {
-  background: rgba(100, 100, 100, 0.1);
+  background: rgb(100 100 100 / 100%);
   font-family: Courier, monospace;
   width: 95%;
 }
@@ -87,7 +95,7 @@ output {
 
 ### 結果
 
-{{EmbedLiveSample("Example", 600, 260)}}
+{{EmbedLiveSample("Examples", 600, 260)}}
 
 ## 仕様書
 
@@ -96,3 +104,9 @@ output {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("HTMLLinkElement.crossOrigin")}}
+- {{domxref("HTMLMediaElement.crossOrigin")}}
+- {{domxref("HTMLScriptElement.crossOrigin")}}

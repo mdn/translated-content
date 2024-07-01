@@ -1,18 +1,6 @@
 ---
 title: Commencer avec le Web
 slug: Learn/Getting_started_with_the_web
-tags:
-  - CSS
-  - Conception
-  - Débutant
-  - Guide
-  - HTML
-  - Index
-  - Theorie
-  - Web
-  - publication
-translation_of: Learn/Getting_started_with_the_web
-original_slug: Apprendre/Commencer_avec_le_web
 ---
 
 {{LearnSidebar}}

@@ -10,7 +10,7 @@ slug: Web/API/HTMLMediaElement/duration
 ## 语法
 
 ```js
-var myDuration = audioOrVideo.duration
+var myDuration = audioOrVideo.duration;
 ```
 
 ### 值
@@ -20,7 +20,7 @@ var myDuration = audioOrVideo.duration
 ## 例子
 
 ```js
-var obj = document.createElement('video');
+var obj = document.createElement("video");
 console.log(obj.duration); // NaN
 ```
 

@@ -2,6 +2,7 @@
 title: MediaStreamTrack.enabled
 slug: Web/API/MediaStreamTrack/enabled
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 {{domxref("MediaStreamTrack")}} 인터페이스의 **`enabled`** 속성은 트랙이 소스 스트림을 렌더링 할 수 있으면 `true`, 아니면 `false`를 반환합니다. `enabled` 속성을 사용해 음소거 기능을 구현할 수 있습니다. 활성화된 경우 트랙의 데이터는 입력에서 목적지로 출력됩니다. 비활성 상태에서는 빈 프레임만 출력합니다.
@@ -15,8 +16,8 @@ slug: Web/API/MediaStreamTrack/enabled
 ## 구문
 
 ```js
-const enabledFlag = track.enabled
-track.enabled = [true | false]
+const enabledFlag = track.enabled;
+track.enabled = [true | false];
 ```
 
 ### 값
@@ -34,12 +35,12 @@ track.enabled = [true | false]
 다음 코드는 [`click`](/ko/docs/Web/API/Element/click_event) 이벤트 처리기를 사용해 일시정지를 구현합니다.
 
 ```js
-pauseButton.onclick = function(evt) {
+pauseButton.onclick = function (evt) {
   const newState = !myAudioTrack.enabled;
 
   pauseButton.innerHTML = newState ? "&#x25B6;&#xFE0F;" : "&#x23F8;&#xFE0F;";
   myAudioTrack.enabled = newState;
-}
+};
 ```
 
 ## 명세

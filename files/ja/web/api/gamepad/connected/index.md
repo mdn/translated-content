@@ -1,15 +1,16 @@
 ---
-title: Gamepad.connected
+title: "Gamepad: connected プロパティ"
+short-title: connected
 slug: Web/API/Gamepad/connected
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("Gamepad API")}}
 
 **`Gamepad.connected`** は {{domxref("Gamepad") }} インターフェイスのプロパティで、ゲームパッドがシステムに接続されているかどうかを示す論理値を返します。
 
-ゲームパッドが接続されている場合の値は `true` 、そうでない場合は `false`となります。
+ゲームパッドが接続されている場合の値は `true`、そうでない場合は `false` となります。
 
 ## 値
 

@@ -1,7 +1,6 @@
 ---
 title: Decremento(--)
 slug: Web/JavaScript/Reference/Operators/Decrement
-original_slug: Web/JavaScript/Referencia/Operadores/Decremento
 ---
 
 {{jsSidebar("Operators")}}
@@ -50,7 +49,7 @@ b = --a;
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.decrement")}}
+{{Compat}}
 
 ## Ver también
 

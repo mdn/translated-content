@@ -1,7 +1,6 @@
 ---
 title: ANGLE_instanced_arrays
 slug: Web/API/ANGLE_instanced_arrays
-translation_of: Web/API/ANGLE_instanced_arrays
 ---
 
 {{APIRef("WebGL")}}
@@ -37,14 +36,14 @@ translation_of: Web/API/ANGLE_instanced_arrays
 Включение расширения:
 
 ```js
-var ext = gl.getExtension('ANGLE_instanced_arrays');
+var ext = gl.getExtension("ANGLE_instanced_arrays");
 ```
 
 ## Спецификации
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

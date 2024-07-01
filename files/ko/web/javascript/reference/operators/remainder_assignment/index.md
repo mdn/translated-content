@@ -2,6 +2,7 @@
 title: 나머지 할당 (%=)
 slug: Web/JavaScript/Reference/Operators/Remainder_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 나머지 할당 연산자(`%=`)는 오른쪽 피연산자의 값으로 변수를 나눴을 때의 나머지를 다시 변수에 할당합니다.
@@ -11,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Remainder_assignment
 ## 구문
 
 ```js
-x %= y // x = x % y
+x %= y; // x = x % y
 ```
 
 ## 예제
@@ -22,9 +23,9 @@ x %= y // x = x % y
 // bar = 5
 // 위와 같은 변수를 가정할 때
 
-bar %= 2     // 1
-bar %= 'foo' // NaN
-bar %= 0     // NaN
+bar %= 2; // 1
+bar %= "foo"; // NaN
+bar %= 0; // NaN
 ```
 
 ## 명세

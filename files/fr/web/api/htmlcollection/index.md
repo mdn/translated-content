@@ -1,11 +1,6 @@
 ---
 title: HTMLCollection
 slug: Web/API/HTMLCollection
-tags:
-  - API
-  - DOM
-  - Reference
-translation_of: Web/API/HTMLCollection
 ---
 
 {{APIRef("HTML DOM")}}
@@ -34,7 +29,7 @@ Une HTMLCollection dans le DOM HTML est automatiquement mise à jour quand le do
 
 Par exemple, en supposant qu'il y ait un élément `<form>` _(formulaire)_ dans le document et que son `id` soit `"myForm"`&nbsp;:
 
-```html
+```js
 var elem1, elem2;
 
 // document.forms est une HTMLCollection

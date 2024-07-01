@@ -20,13 +20,13 @@ slug: Web/HTTP/Headers/Connection
 任何在 HTTP 事務中使用到的點對點標頭都必須在 `Connection` 標頭列出來，
 這樣首先經手請求的代理軟體才知道自己要處理這些標頭。標準的點對點標頭也是一樣的處理方式。
 
-| Header type                                      | {{Glossary("General header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+| Header type                           | {{Glossary("General header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | yes                            |
 
 ## 語法
 
-```html
+```http
 Connection: keep-alive
 Connection: close
 ```

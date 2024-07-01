@@ -1,15 +1,6 @@
 ---
 title: TypedArray.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/reduceRight
 ---
 
 {{JSRef}}
@@ -51,9 +42,11 @@ La méthode `reduceRight` exécute la fonction `callback` une fois pour chaque �
 L'appel à `reduceRight` utilisant la fonction `callback` ressemble à :
 
 ```js
-typedarray.reduceRight(function(valeurPrécédente, valeurCourante, index, typedarray) {
-  // ...
-});
+typedarray.reduceRight(
+  function (valeurPrécédente, valeurCourante, index, typedarray) {
+    // ...
+  },
+);
 ```
 
 Lors du premier appel à la fonction callback, `valeurPrécédente` et `valeurCourante` peuvent être un ou deux valeurs différentes. Si `valeurInitiale` est fournie, `valeurPrécédente` sera alors égale à `valeurInitiale` et `valeurCourante` sera égale à la première valeur du tableau. Si le paramètre `valeurInitiale` n'est pas utilisé, `valeurPrécédente` sera égale au premier élément du tableau typé et `valeurCourante` sera égale au second élément.
@@ -63,7 +56,7 @@ Si le tableau typé est vide et que le paramètre `valeurInitiale` n'a pas été
 ## Exemples
 
 ```js
-var total = new Uint8Array([0, 1, 2, 3]).reduceRight(function(a, b) {
+var total = new Uint8Array([0, 1, 2, 3]).reduceRight(function (a, b) {
   return a + b;
 });
 // total == 6

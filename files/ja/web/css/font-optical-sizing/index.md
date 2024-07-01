@@ -49,18 +49,21 @@ font-optical-sizing: unset;
 ### オプティカルサイズの変更を無効化
 
 ```html
-<p class="optical-sizing">This paragraph is optically sized.
- This is the default across browsers.</p>
+<p class="optical-sizing">
+  This paragraph is optically sized. This is the default across browsers.
+</p>
 
-<p class="no-optical-sizing">This paragraph is not optically sized.
- You should see a difference in supporting browsers.</p>
+<p class="no-optical-sizing">
+  This paragraph is not optically sized. You should see a difference in
+  supporting browsers.
+</p>
 ```
 
 ```css
 @font-face {
-    src: url('AmstelvarAlpha-VF.ttf');
-    font-family:'Amstelvar';
-    font-style: normal;
+  src: url("AmstelvarAlpha-VF.ttf");
+  font-family: "Amstelvar";
+  font-style: normal;
 }
 
 p {
@@ -73,7 +76,7 @@ p {
 }
 ```
 
-> **メモ:** 上記で参照されているフォント — 光学的サイズを含みライセンスフリーであるもの — がテストに適しています。 [GitHub からダウンロード](https://github.com/TypeNetwork/Amstelvar/releases)できます。
+> **メモ:** 上記で参照されているフォント — 光学的サイズを含みライセンスフリーであるもの — がテストに適しています。 [GitHub からダウンロード](https://github.com/googlefonts/amstelvar/releases)できます。
 
 ## 仕様書
 

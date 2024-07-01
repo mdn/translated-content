@@ -1,16 +1,18 @@
 ---
-title: Document.getSelection()
+title: "Document: getSelection() メソッド"
+short-title: getSelection()
 slug: Web/API/Document/getSelection
-original_slug: Web/API/DocumentOrShadowRoot/getSelection
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
 
-**`getSelection()`** は {{DOMxRef("Document")}} インターフェイスのプロパティで、ユーザーが選択したテキストの範囲、またはキャレットの現在位置を表す {{DOMxRef("Selection")}} オブジェクトを返します。
+**`getSelection()`** は {{DOMxRef("Document")}} インターフェイスのメソッドで、ユーザーが選択したテキストの範囲、またはキャレットの現在位置を表す {{DOMxRef("Selection")}} オブジェクトを返します。
 
 ## 構文
 
-```js
+```js-nolint
 getSelection()
 ```
 

@@ -1,15 +1,6 @@
 ---
 title: Worker.terminate()
 slug: Web/API/Worker/terminate
-tags:
-  - API
-  - Reference
-  - Web Workers
-  - Worker
-  - terminate
-  - Ссылка
-  - метод
-translation_of: Web/API/Worker/terminate
 ---
 
 {{APIRef("Web Workers API")}}
@@ -35,7 +26,7 @@ Void.
 В следующем фрагменте кода показано создание потока {{domxref("Worker")}} с помощью конструктора {{domxref("Worker.Worker", "Worker()")}}, который немедленно завершается.
 
 ```js
-var myWorker = new Worker('worker.js');
+var myWorker = new Worker("worker.js");
 
 myWorker.terminate();
 ```

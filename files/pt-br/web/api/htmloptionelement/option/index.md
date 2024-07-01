@@ -29,20 +29,20 @@ var optionElementReference = new Option(text, value, defaultSelected, selected);
 ### Adicionando novas tags options
 
 ```js
- /* assumindo que temos este HTML
+/* assumindo que temos este HTML
 <select id='s'>
 
 </select>
 */
 
-var s = document.getElementById('s');
+var s = document.getElementById("s");
 var options = [Quatro, Cinco, Seis];
 
-options.forEach(function(elemento, chave) {
-    s.appendChild(new Option(elemento, chave));
+options.forEach(function (elemento, chave) {
+  s.appendChild(new Option(elemento, chave));
 });
 
- /* Resultado
+/* Resultado
 <select id='s'>
     <option value="0">Quatro</option>
     <option value="1">Cinco</option>
@@ -61,17 +61,17 @@ options.forEach(function(elemento, chave) {
 </select>
 */
 
-var s = document.getElementById('s');
-var options = [ 'zero', 'um', 'dois' ];
+var s = document.getElementById("s");
+var options = ["zero", "um", "dois"];
 
-options.forEach(function(elemento, chave) {
-  if (elemento == 'zero') {
+options.forEach(function (elemento, chave) {
+  if (elemento == "zero") {
     s[s.options.length] = new Option(elemento, s.options.length, false, false);
   }
-  if (elemento == 'um') {
+  if (elemento == "um") {
     s[s.options.length] = new Option(elemento, s.options.length, true, false); // Adicionando atributo "selected"
   }
-  if (elemento == 'dois') {
+  if (elemento == "dois") {
     s[s.options.length] = new Option(elemento, s.options.length, false, true); // Apenas irá selecionar a opção na visualização
   }
 });
@@ -85,8 +85,10 @@ options.forEach(function(elemento, chave) {
 */
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                                                             | Status      | Comentário |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
-| [HTML5 The definition of 'Option' in that specification.](https://www.w3.org/TR/2012/WD-html5-20121025/the-option-element.html#dom-option) | Recomendado |            |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

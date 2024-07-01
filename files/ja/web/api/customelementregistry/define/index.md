@@ -60,62 +60,60 @@ class PopUpInfo extends HTMLElement {
     super();
 
     // シャドウルートを生成
-    var shadow = this.attachShadow({mode: 'open'});
+    var shadow = this.attachShadow({ mode: "open" });
 
     // span を生成
-    var wrapper = document.createElement('span');
-    wrapper.setAttribute('class','wrapper');
-    var icon = document.createElement('span');
-    icon.setAttribute('class','icon');
-    icon.setAttribute('tabindex', 0);
-    var info = document.createElement('span');
-    info.setAttribute('class','info');
+    var wrapper = document.createElement("span");
+    wrapper.setAttribute("class", "wrapper");
+    var icon = document.createElement("span");
+    icon.setAttribute("class", "icon");
+    icon.setAttribute("tabindex", 0);
+    var info = document.createElement("span");
+    info.setAttribute("class", "info");
 
     // 属性の中身を取り出し、 info の span の中に入れる
-    var text = this.getAttribute('text');
+    var text = this.getAttribute("text");
     info.textContent = text;
 
     // アイコンを挿入
     var imgUrl;
-    if(this.hasAttribute('img')) {
-      imgUrl = this.getAttribute('img');
+    if (this.hasAttribute("img")) {
+      imgUrl = this.getAttribute("img");
     } else {
-      imgUrl = 'img/default.png';
+      imgUrl = "img/default.png";
     }
-    var img = document.createElement('img');
+    var img = document.createElement("img");
     img.src = imgUrl;
     icon.appendChild(img);
 
     // いくらかの CSS を生成してシャドウ DOM に適用
-    var style = document.createElement('style');
+    var style = document.createElement("style");
 
-    style.textContent = '.wrapper {' +
-                           'position: relative;' +
-                        '}' +
-
-                         '.info {' +
-                            'font-size: 0.8rem;' +
-                            'width: 200px;' +
-                            'display: inline-block;' +
-                            'border: 1px solid black;' +
-                            'padding: 10px;' +
-                            'background: white;' +
-                            'border-radius: 10px;' +
-                            'opacity: 0;' +
-                            'transition: 0.6s all;' +
-                            'position: absolute;' +
-                            'bottom: 20px;' +
-                            'left: 10px;' +
-                            'z-index: 3;' +
-                          '}' +
-
-                          'img {' +
-                            'width: 1.2rem' +
-                          '}' +
-
-                          '.icon:hover + .info, .icon:focus + .info {' +
-                            'opacity: 1;' +
-                          '}';
+    style.textContent =
+      ".wrapper {" +
+      "position: relative;" +
+      "}" +
+      ".info {" +
+      "font-size: 0.8rem;" +
+      "width: 200px;" +
+      "display: inline-block;" +
+      "border: 1px solid black;" +
+      "padding: 10px;" +
+      "background: white;" +
+      "border-radius: 10px;" +
+      "opacity: 0;" +
+      "transition: 0.6s all;" +
+      "position: absolute;" +
+      "bottom: 20px;" +
+      "left: 10px;" +
+      "z-index: 3;" +
+      "}" +
+      "img {" +
+      "width: 1.2rem" +
+      "}" +
+      ".icon:hover + .info, .icon:focus + .info {" +
+      "opacity: 1;" +
+      "}";
 
     // 生成された要素をシャドウ DOM に取り付ける
 
@@ -127,13 +125,15 @@ class PopUpInfo extends HTMLElement {
 }
 
 // 新しい要素を定義
-customElements.define('popup-info', PopUpInfo);
+customElements.define("popup-info", PopUpInfo);
 ```
 
 ```html
-<popup-info img="img/alt.png" text="Your card validation code (CVC) is an extra
+<popup-info
+  img="img/alt.png"
+  text="Your card validation code (CVC) is an extra
                                     security feature — it is the last 3 or 4
-                                    numbers on the back of your card.">
+                                    numbers on the back of your card."></popup-info>
 ```
 
 > **メモ:** 自律カスタム要素のコンストラクターは {{domxref("HTMLElement")}} を継承していなければなりません。
@@ -153,34 +153,33 @@ class WordCount extends HTMLParagraphElement {
     // 要素の親要素の語数を数える
     var wcParent = this.parentNode;
 
-    function countWords(node){
-      var text = node.innerText || node.textContent
+    function countWords(node) {
+      var text = node.innerText || node.textContent;
       return text.split(/\s+/g).length;
     }
 
-    var count = '語数: ' + countWords(wcParent);
+    var count = "語数: " + countWords(wcParent);
 
     // シャドウルートを生成
-    var shadow = this.attachShadow({mode: 'open'});
+    var shadow = this.attachShadow({ mode: "open" });
 
     // テキストノードを生成し、語数を追加
-    var text = document.createElement('span');
+    var text = document.createElement("span");
     text.textContent = count;
 
     // シャドウルートに追加
     shadow.appendChild(text);
 
     // 要素の内容が変化した際に語数を更新
-    setInterval(function() {
-      var count = '語数: ' + countWords(wcParent);
+    setInterval(function () {
+      var count = "語数: " + countWords(wcParent);
       text.textContent = count;
-    }, 200)
-
+    }, 200);
   }
 }
 
 // 新しい要素を定義
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 ```html
@@ -193,16 +192,17 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ```js
 class PopUpInfo extends HTMLElement {
-  static get disabledFeatures() { return ['shadow']; }
+  static get disabledFeatures() {
+    return ["shadow"];
+  }
 
   constructor() {
     super();
 
-    var shadow = this.attachShadow({mode: 'open'});
+    var shadow = this.attachShadow({ mode: "open" });
     // これは要素が定義されたときにエラーが発生するようになります。
   }
 }
-
 ```
 
 ## 仕様書

@@ -1,9 +1,6 @@
 ---
 title: opacity()
 slug: Web/CSS/filter-function/opacity
-translation_of: Web/CSS/filter-function/opacity()
-original_slug: Web/CSS/filter-function/opacity()
-browser-compat: css.types.filter-function.opacity
 ---
 
 {{CSSRef}}
@@ -47,12 +44,12 @@ opacity(1);    /* Aucun effet */
 
 - La propriété CSS [`opacity`](/fr/docs/Web/CSS/opacity)
 - [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`blur()`](/fr/docs/Web/CSS/filter-function/blur())
-  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness())
-  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast())
-  - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow())
-  - [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale())
-  - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate())
-  - [`invert()`](/fr/docs/Web/CSS/filter-function/invert())
-  - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate())
-  - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia())
+  - [`blur()`](</fr/docs/Web/CSS/filter-function/blur()>)
+  - [`brightness()`](</fr/docs/Web/CSS/filter-function/brightness()>)
+  - [`contrast()`](</fr/docs/Web/CSS/filter-function/contrast()>)
+  - [`drop-shadow()`](</fr/docs/Web/CSS/filter-function/drop-shadow()>)
+  - [`grayscale()`](</fr/docs/Web/CSS/filter-function/grayscale()>)
+  - [`hue-rotate()`](</fr/docs/Web/CSS/filter-function/hue-rotate()>)
+  - [`invert()`](</fr/docs/Web/CSS/filter-function/invert()>)
+  - [`saturate()`](</fr/docs/Web/CSS/filter-function/saturate()>)
+  - [`sepia()`](</fr/docs/Web/CSS/filter-function/sepia()>)

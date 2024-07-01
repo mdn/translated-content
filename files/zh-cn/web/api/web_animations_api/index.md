@@ -51,7 +51,7 @@ The Web Animations API 向**{{domxref("document")}}**和**{{domxref("element")}}
 - {{domxref("AnimationEffectTimingReadOnly")}}
   - : A dictionary object of timing properties, which are inherited by the mutable {{domxref("AnimationEffectTiming")}} interface associated with {{domxref("KeyframeEffect")}}.
 - {{domxref("AnimationEffectReadOnly")}}
-  - : Defines current and future "Animation Effects" like {{domxref("KeyframeEffect")}}, which can be passed to {{domxref("Animation.Animation")}} objects for playing, and {{domxref("KeyframeEffectReadOnly")}} which is used by {{domxref("KeyframeEffect")}} (inherited by [CSS Animations](/zh-CN/docs/Web/CSS/CSS_Animations) and [Transitions](/zh-CN/docs/Web/CSS/CSS_Transitions)).
+  - : Defines current and future "Animation Effects" like {{domxref("KeyframeEffect")}}, which can be passed to {{domxref("Animation.Animation")}} objects for playing, and {{domxref("KeyframeEffectReadOnly")}} which is used by {{domxref("KeyframeEffect")}} (inherited by [CSS Animations](/zh-CN/docs/Web/CSS/CSS_animations) and [Transitions](/zh-CN/docs/Web/CSS/CSS_transitions)).
 - {{domxref("KeyframeEffectReadOnly")}}
   - : Describes sets of animatable properties and values that can be played using the {{domxref("Animation.Animation()")}} constructor, and which are inherited by {{domxref("KeyframeEffect")}}.
 
@@ -65,4 +65,4 @@ The Web Animations API 向**{{domxref("document")}}**和**{{domxref("element")}}
 - [Web Animations demos](https://mozdevs.github.io/Animation-examples/)
 - [Polyfill](https://github.com/web-animations/web-animations-js)
 - Firefox's current implementation: [AreWeAnimatedYet](https://birtles.github.io/areweanimatedyet/)
-- [Browser support test](http://codepen.io/danwilson/pen/xGBKVq)
+- [Browser support test](https://codepen.io/danwilson/pen/xGBKVq)

@@ -15,9 +15,9 @@ slug: Web/HTTP/Headers/Digest
 - 完全不包含在消息体中中 (例如，在一个 [`HEAD`](/zh-CN/docs/Web/HTTP/Methods/HEAD) 请求的响应中)
 - 部分包含在消息体中 (例如，在一个 [range request](/zh-CN/docs/Web/HTTP/Range_requests) 的响应中)。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 

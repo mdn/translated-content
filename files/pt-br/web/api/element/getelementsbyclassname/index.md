@@ -39,13 +39,13 @@ O oposto disso também acontece; os elementos que não satisfazerem mais as clas
 Para procurarmos elementos que incluem uma classe específica, nós apenas informamos o nome da classe ao chamar `getElementsByClassName()`:
 
 ```js
-element.getElementsByClassName('test');
+element.getElementsByClassName("test");
 ```
 
 Esse exemplo retorna todos os elementos que possuem a classe `test`, e que também são filhos do elemento que possui o `id` com valor `main`:
 
 ```js
-document.getElementById('main').getElementsByClassName('test');
+document.getElementById("main").getElementsByClassName("test");
 ```
 
 ### Usando várias classes
@@ -53,7 +53,7 @@ document.getElementById('main').getElementsByClassName('test');
 Para retornar elementos que incluem as classes `red` and `test`:
 
 ```js
-element.getElementsByClassName('red test');
+element.getElementsByClassName("red test");
 ```
 
 ### Examinando os resultados
@@ -61,22 +61,22 @@ element.getElementsByClassName('red test');
 You can use either the {{domxref("HTMLCollection.item", "item()")}} method on the returned `HTMLCollection` or standard array syntax to examine individual elements in the collection. However **the following code will not work** as one might expect because `"matches"` will change as soon as any `"colorbox"` class is removed.
 
 ```js
-var matches = element.getElementsByClassName('colorbox');
+var matches = element.getElementsByClassName("colorbox");
 
-for (var i=0; i<matches.length; i++) {
-  matches[i].classList.remove('colorbox');
-  matches.item(i).classList.add('hueframe');
+for (var i = 0; i < matches.length; i++) {
+  matches[i].classList.remove("colorbox");
+  matches.item(i).classList.add("hueframe");
 }
 ```
 
 Instead, use another method, such as:
 
 ```js
-var matches = element.getElementsByClassName('colorbox');
+var matches = element.getElementsByClassName("colorbox");
 
 while (matches.length > 0) {
-  matches.item(0).classList.add('hueframe');
-  matches[0].classList.remove('colorbox');
+  matches.item(0).classList.add("hueframe");
+  matches[0].classList.remove("colorbox");
 }
 ```
 
@@ -87,18 +87,19 @@ This code finds descendant elements with the `"colorbox"` class, adds the class 
 We can also use methods of {{jsxref("Array.prototype")}} on any {{ domxref("HTMLCollection") }} by passing the {{domxref("HTMLCollection")}} as the method's `this` value. Here we'll find all {{HTMLElement("div")}} elements that have a class of `test`:
 
 ```js
-var testElements = document.getElementsByClassName('test');
-var testDivs = Array.prototype.filter.call(testElements, function(testElement) {
-  return testElement.nodeName === 'DIV';
-});
+var testElements = document.getElementsByClassName("test");
+var testDivs = Array.prototype.filter.call(
+  testElements,
+  function (testElement) {
+    return testElement.nodeName === "DIV";
+  },
+);
 ```
 
-## Specifications
+## Especificações
 
-| Specification                                                                                                                            | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM WHATWG', '#dom-element-getelementsbyclassname', 'Element.getElementsByClassName()')}} | {{Spec2('DOM WHATWG')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Element.getElementsByClassName")}}
+{{Compat}}

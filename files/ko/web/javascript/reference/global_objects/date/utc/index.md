@@ -2,6 +2,7 @@
 title: Date.UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
 ---
+
 {{JSRef}}
 
 **`Date.UTC()`** 메서드는 {{jsxref("Date")}} 생성자와 비슷한 매개변수를 받지만, 모두 UTC로 취급합니다. 반환 값은 1970년 1월 1일 00:00:00 UTC부터 매개변수가 나타내는 시간의 차이를 밀리초로 나타낸 수입니다.
@@ -80,7 +81,7 @@ var utcDate = new Date(Date.UTC(96, 11, 1, 0, 0, 0));
 
 ### 매개변수를 두 개 미만 제공하는 경우
 
-Date.UTC()가 두 개 미만의 매개변수를 받은 경우, ECMAScript 2017은 {{jsxref("NaN")}}을 반환할 것을 요구합니다. 이를 지원하지 않던 엔진은 업데이트됐습니다. ({{bug(1050755)}}, [ecma-262 #642](https://github.com/tc39/ecma262/pull/642)를 참고하세요)
+Date.UTC()가 두 개 미만의 매개변수를 받은 경우, ECMAScript 2017은 {{jsxref("NaN")}}을 반환할 것을 요구합니다. 이를 지원하지 않던 엔진은 업데이트됐습니다. ([Firefox bug 1050755](https://bugzil.la/1050755), [ecma-262 #642](https://github.com/tc39/ecma262/pull/642)를 참고하세요)
 
 ```js
 Date.UTC();

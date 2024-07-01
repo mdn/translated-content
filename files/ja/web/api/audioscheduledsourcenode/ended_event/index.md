@@ -1,7 +1,6 @@
 ---
 title: "AudioScheduledSourceNode: ended イベント"
 slug: Web/API/AudioScheduledSourceNode/ended_event
-original_slug: Web/API/AudioScheduledSourceNode/onended
 l10n:
   sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
@@ -30,7 +29,7 @@ onended = (event) => { }
 
 ## 例
 
-この単純な例では、 `ended` イベントに対するイベントリスナーを設定し、ノードの再生が停止したときにユーザーインターフェースに［Start］ボタンを表示できるようにしています。
+この単純な例では、 `ended` イベントに対するイベントリスナーを設定し、ノードの再生が停止したときにユーザーインターフェイスに［Start］ボタンを表示できるようにしています。
 
 ```js
 node.addEventListener("ended", () => {

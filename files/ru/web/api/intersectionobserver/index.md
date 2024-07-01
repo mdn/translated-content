@@ -1,15 +1,6 @@
 ---
 title: IntersectionObserver
 slug: Web/API/IntersectionObserver
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Intersection Observer
-  - Intersection Observer API
-  - Reference
-  - observers
-translation_of: Web/API/IntersectionObserver
 ---
 
 {{APIRef("Intersection Observer API")}}
@@ -46,29 +37,27 @@ translation_of: Web/API/IntersectionObserver
 ## Examples
 
 ```js
-var intersectionObserver = new IntersectionObserver(function(entries) {
+var intersectionObserver = new IntersectionObserver(function (entries) {
   // Если intersectionRatio равен 0, цель вне зоны видимости
   // и нам не нужно ничего делать
   if (entries[0].intersectionRatio <= 0) return;
 
   loadItems(10);
-  console.log('Loaded new items');
+  console.log("Loaded new items");
 });
 // начать наблюдение
-intersectionObserver.observe(document.querySelector('.scrollerFooter'));
+intersectionObserver.observe(document.querySelector(".scrollerFooter"));
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                                    | Status                                       | Comment |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------- |
-| {{SpecName("IntersectionObserver", "#intersection-observer-interface", "IntersectionObserver")}} | {{Spec2('IntersectionObserver')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref('MutationObserver')}}
 - {{domxref('PerformanceObserver')}}

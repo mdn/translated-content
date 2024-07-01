@@ -1,8 +1,6 @@
 ---
 title: image-resolution
 slug: Web/CSS/image-resolution
-browser-compat: css.properties.image-resolution
-translation_of: Web/CSS/image-resolution
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

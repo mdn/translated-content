@@ -12,7 +12,7 @@ La propiedad `Element.namespaceURI` unicamente de lectura devuelve la URI namesp
 ## Síntaxis
 
 ```js
-namespace = element.namespaceURI
+namespace = element.namespaceURI;
 ```
 
 ## Ejemplo
@@ -20,8 +20,11 @@ namespace = element.namespaceURI
 En este snippet, un elemento está siendo examinado por su {{domxref("localName")}} y su `namespaceURI`. Si el `namespaceURI` devuelve el XUL namespace y el `localName` devuelve "browser", entonces se entiende que el nodo es XUL `<browser/>`.
 
 ```js
-if (element.localName == "browser" &&
-    element.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
+if (
+  element.localName == "browser" &&
+  element.namespaceURI ==
+    "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+) {
   // this is a XUL browser
 }
 ```

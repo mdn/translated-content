@@ -31,7 +31,7 @@ AudioBuffer 接口表示存在内存里的一段短小的音频资源，利用{{
 
 ## 例子
 
-以下的例子展示了如何构建一个 AudioBuffer 以及随机用白噪音填充。你可以在 [audio-buffer demo](https://github.com/mdn/webaudio-examples/tree/master/audio-buffer)库发现完整的源代码；一个[running live](https://mdn.github.io/webaudio-examples/audio-buffer/) 的版本也可获得。
+以下的例子展示了如何构建一个 AudioBuffer 以及随机用白噪音填充。你可以在 [audio-buffer 演示](https://github.com/mdn/webaudio-examples/tree/main/audio-buffer)库发现完整的源代码；也可以获得一个[实时运行的](https://mdn.github.io/webaudio-examples/audio-buffer/)的版本。
 
 ```js
 // Stereo
@@ -40,9 +40,13 @@ var channels = 2;
 // Create an empty two second stereo buffer at the
 // sample rate of the AudioContext
 var frameCount = audioCtx.sampleRate * 2.0;
-var myArrayBuffer = audioCtx.createBuffer(channels, frameCount, audioCtx.sampleRate);
+var myArrayBuffer = audioCtx.createBuffer(
+  channels,
+  frameCount,
+  audioCtx.sampleRate,
+);
 
-button.onclick = function() {
+button.onclick = function () {
   // Fill the buffer with white noise;
   // just random values between -1.0 and 1.0
   for (var channel = 0; channel < channels; channel++) {
@@ -68,8 +72,7 @@ button.onclick = function() {
 
   // start the source playing
   source.start();
-
-}
+};
 ```
 
 ## 规格参数

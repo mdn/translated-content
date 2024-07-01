@@ -1,16 +1,9 @@
 ---
 title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 Метод **`getTime()`** возвращает числовое значение, соответствующее указанной дате по всемирному координированному времени.
 
@@ -59,7 +52,7 @@ for (let i = 0; i < 1000; i++) {
 }
 end = new Date();
 
-console.log('Операция заняла ' + (end.getTime() - start.getTime()) + ' мсек');
+console.log("Операция заняла " + (end.getTime() - start.getTime()) + " мсек");
 ```
 
 ## Спецификации

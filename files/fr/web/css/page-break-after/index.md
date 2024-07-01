@@ -1,11 +1,6 @@
 ---
 title: page-break-after
 slug: Web/CSS/page-break-after
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/page-break-after
 ---
 
 {{CSSRef}}

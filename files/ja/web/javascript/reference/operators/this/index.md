@@ -27,7 +27,7 @@ strict モードでない場合は、実行コンテキスト (グローバル�
 
 グローバル実行コンテキスト (すべての関数の外側) では、strict モードであるかどうかにかかわらず、`this` はグローバルオブジェクトを参照します。
 
-``` js
+```js
 // ウェブブラウザーでは window オブジェクトもグローバルオブジェクトです。
 console.log(this === window); // true
 
@@ -35,8 +35,8 @@ a = 37;
 console.log(window.a); // 37
 
 this.b = "MDN";
-console.log(window.b)  // "MDN"
-console.log(b)         // "MDN"
+console.log(window.b); // "MDN"
+console.log(b); // "MDN"
 ```
 
 > **メモ:** コードが実行されている現在のコンテキストに関係なく、グローバルの {{jsxref("globalThis")}} プロパティを使用していつでも簡単にグローバルオブジェクトを取得できます。
@@ -63,7 +63,7 @@ f1() === global; // true
 
 ```js
 function f2() {
-  'use strict'; // strict モードにする
+  "use strict"; // strict モードにする
   return this;
 }
 
@@ -86,9 +86,9 @@ class Example {
     const proto = Object.getPrototypeOf(this);
     console.log(Object.getOwnPropertyNames(proto));
   }
-  first(){}
-  second(){}
-  static third(){}
+  first() {}
+  second() {}
+  static third() {}
 }
 
 new Example(); // ['constructor', 'first', 'second']
@@ -113,7 +113,7 @@ class Base {}
 class Good extends Base {}
 class AlsoGood extends Base {
   constructor() {
-    return {a: 5};
+    return { a: 5 };
   }
 }
 class Bad extends Base {
@@ -131,17 +131,17 @@ new Bad(); // 参照エラー
 
 ```js
 // オブジェクトを call や apply の最初の引数として渡すと、this がそれに結び付けられます。
-var obj = {a: 'Custom'};
+var obj = { a: "Custom" };
 
 // 変数を定義すると、その変数がグローバルの window のプロパティとして割り当てられます。
-var a = 'Global';
+var a = "Global";
 
 function whatsThis() {
-  return this.a;  // this の値は関数の呼び出し方によって変わります
+  return this.a; // this の値は関数の呼び出し方によって変わります
 }
 
-whatsThis();          // 'Global' はこの関数では this として設定されていないので、既定でグローバルの window オブジェクトになります
-whatsThis.call(obj);  // 'Custom' が関数内の this として obj に設定されています
+whatsThis(); // 'Global' はこの関数では this として設定されていないので、既定でグローバルの window オブジェクトになります
+whatsThis.call(obj); // 'Custom' が関数内の this として obj に設定されています
 whatsThis.apply(obj); // 'Custom' が関数内の this として obj に設定されています
 ```
 
@@ -152,7 +152,7 @@ function add(c, d) {
   return this.a + this.b + c + d;
 }
 
-var o = {a: 1, b: 3};
+var o = { a: 1, b: 3 };
 
 // 最初の引数は 'this' として使用する
 // オブジェクトで、続く引数は関数呼び出しの
@@ -172,8 +172,8 @@ function bar() {
   console.log(Object.prototype.toString.call(this));
 }
 
-bar.call(7);     // [object Number]
-bar.call('foo'); // [object String]
+bar.call(7); // [object Number]
+bar.call("foo"); // [object String]
 bar.call(undefined); // [object global]
 ```
 
@@ -186,13 +186,13 @@ function f() {
   return this.a;
 }
 
-var g = f.bind({a: 'azerty'});
+var g = f.bind({ a: "azerty" });
 console.log(g()); // azerty
 
-var h = g.bind({a: 'yoo'}); // bind は一度しか機能しない
+var h = g.bind({ a: "yoo" }); // bind は一度しか機能しない
 console.log(h()); // azerty
 
-var o = {a: 37, f: f, g: g, h: h};
+var o = { a: 37, f: f, g: g, h: h };
 console.log(o.a, o.f(), o.g(), o.h()); // 37,37, azerty, azerty
 ```
 
@@ -202,7 +202,7 @@ console.log(o.a, o.f(), o.g(), o.h()); // 37,37, azerty, azerty
 
 ```js
 var globalObject = this;
-var foo = (() => this);
+var foo = () => this;
 console.log(foo() === globalObject); // true
 ```
 
@@ -210,7 +210,7 @@ console.log(foo() === globalObject); // true
 
 ```js
 // オブジェクトのメソッドとして呼び出す。
-var obj = {func: foo};
+var obj = { func: foo };
 console.log(obj.func() === globalObject); // true
 
 // call を使用して this の設定を試みる
@@ -231,10 +231,10 @@ console.log(foo() === globalObject); // true
 // されます。bar の値は呼び出し時に設定でき、
 // 返値の関数の値に順に設定します。
 var obj = {
-  bar: function() {
-    var x = (() => this);
+  bar: function () {
+    var x = () => this;
     return x;
-  }
+  },
 };
 
 // bar を obj のメソッドとして呼び出す際、その this を obj に設定します
@@ -263,9 +263,9 @@ console.log(fn2()() == window); // true
 ```js
 var o = {
   prop: 37,
-  f: function() {
+  f: function () {
     return this.prop;
-  }
+  },
 };
 
 console.log(o.f()); // 37
@@ -274,7 +274,7 @@ console.log(o.f()); // 37
 この動作は、関数定義の方法や場所に全く影響を受けないことに注意してください。前述の例では、`o` の定義中に `f` メンバーとして関数をインラインに定義しています。しかし、関数を最初に定義して、後から `o.f` に付け足すことができます。その結果は同じ動作になります。
 
 ```js
-var o = {prop: 37};
+var o = { prop: 37 };
 
 function independent() {
   return this.prop;
@@ -290,7 +290,7 @@ console.log(o.f()); // 37
 同様に、`this` の関連付けは、最も直近のメンバー参照にのみ影響を受けます。次の例では、関数が呼び出すとき、オブジェクト `o.b` の `g` メソッドとして呼び出しています。実行時に、関数内の `this` は `o.b` を参照します。オブジェクト自体が `o` のメンバーであるという事実は何の意味もありません。最も直近の参照のみが重要なのです。
 
 ```js
-o.b = {g: independent, prop: 42};
+o.b = { g: independent, prop: 42 };
 console.log(o.b.g()); // 42
 ```
 
@@ -299,7 +299,11 @@ console.log(o.b.g()); // 42
 同じ概念が、オブジェクトのプロトタイプチェーンのどこかに定義されたメソッドにも当てはまります。メソッドがオブジェクトのプロトタイプチェーン上にあった場合、メソッドがオブジェクト上にあるかのように、`this` はメソッドを呼び出したオブジェクトを参照します。
 
 ```js
-var o = {f: function() { return this.a + this.b; }};
+var o = {
+  f: function () {
+    return this.a + this.b;
+  },
+};
 var p = Object.create(o);
 p.a = 1;
 p.b = 4;
@@ -324,11 +328,14 @@ var o = {
   c: 3,
   get average() {
     return (this.a + this.b + this.c) / 3;
-  }
+  },
 };
 
-Object.defineProperty(o, 'sum', {
-    get: sum, enumerable: true, configurable: true});
+Object.defineProperty(o, "sum", {
+  get: sum,
+  enumerable: true,
+  configurable: true,
+});
 
 console.log(o.average, o.sum); // 2, 6
 ```
@@ -367,7 +374,7 @@ console.log(o.a); // 37
 
 function C2() {
   this.a = 37;
-  return {a: 38};
+  return { a: 38 };
 }
 
 o = new C2();
@@ -387,16 +394,16 @@ function bluify(e) {
   console.log(this === e.currentTarget);
   // currentTarget と target が同じオブジェクトであれば true
   console.log(this === e.target);
-  this.style.backgroundColor = '#A5D9F3';
+  this.style.backgroundColor = "#A5D9F3";
 }
 
 // 文書内の各要素の一覧を取得
-var elements = document.getElementsByTagName('*');
+var elements = document.getElementsByTagName("*");
 
 // クリックリスナーとして bluify を追加することで、
 // 要素をクリックすると青くなるようになる
 for (var i = 0; i < elements.length; i++) {
-  elements[i].addEventListener('click', bluify, false);
+  elements[i].addEventListener("click", bluify, false);
 }
 ```
 
@@ -405,9 +412,7 @@ for (var i = 0; i < elements.length; i++) {
 コードがインラインの [on-イベントハンドラー](/ja/docs/Web/Events/Event_handlers)から呼び出されたとき、その `this` にはリスナーが配置されている DOM 要素が設定されます。
 
 ```html
-<button onclick="alert(this.tagName.toLowerCase());">
-  Show this
-</button>
+<button onclick="alert(this.tagName.toLowerCase());">Show this</button>
 ```
 
 上記のアラートは `button` と表示します。ただし、外側のコードがこのように設定された `this` を持っているだけだということに注意してください。
@@ -437,13 +442,13 @@ class Car {
     console.log(`Bye from ${this.name}`);
   }
   get name() {
-    return 'Ferrari';
+    return "Ferrari";
   }
 }
 
 class Bird {
   get name() {
-    return 'Tweety';
+    return "Tweety";
   }
 }
 
@@ -457,7 +462,7 @@ bird.sayHi(); // Hello from Tweety
 
 // バインドされたメソッドの場合、'this' は呼び出し元に依存しません
 bird.sayBye = car.sayBye;
-bird.sayBye();  // Bye from Ferrari
+bird.sayBye(); // Bye from Ferrari
 ```
 
 > **メモ:** クラスは常に strict モードのコードです。これを定義せずに `this` でメソッドを呼び出すとエラーが発生します。

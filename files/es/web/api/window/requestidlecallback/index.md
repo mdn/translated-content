@@ -40,9 +40,9 @@ Ver [ejemplo](/es/docs/Web/API/Background_Tasks_API#Example) en el artículo [Pl
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Window.requestIdleCallback")}}
+{{Compat}}
 
 ## Vease también
 

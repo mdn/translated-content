@@ -1,6 +1,8 @@
 ---
 title: background-position-x
 slug: Web/CSS/background-position-x
+l10n:
+  sourceCommit: b90786a572bd01af9063ac5e515850c6bb5ddb89
 ---
 
 {{CSSRef}}
@@ -8,6 +10,8 @@ slug: Web/CSS/background-position-x
 **`background-position-x`** は [CSS](/ja/docs/Web/CSS) のプロパティで、各背景画像における水平の初期位置を設定します。位置は {{cssxref("background-origin")}} によって設定された位置レイヤーに対する相対位置です。
 
 {{EmbedInteractiveExample("pages/css/background-position-x.html")}}
+
+<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 このプロパティの値は、その後で一括指定の {{cssxref("background")}} または {{cssxref("background-position")}} プロパティが定義されると上書きされます。
 
@@ -38,6 +42,7 @@ background-position-x: 0px, center;
 background-position-x: inherit;
 background-position-x: initial;
 background-position-x: revert;
+background-position-x: revert-layer;
 background-position-x: unset;
 ```
 
@@ -66,9 +71,9 @@ background-position-x: unset;
 
 ## 例
 
-<h3 id="Basic_example">基本的な例</h3>
+### 基本的な例
 
-次の例は、シンプルな背景画像の実装で、background-position-x と background-position-y を使って、画像の水平方向と垂直方向の位置を別々に定義しています。
+次の例は、シンプルな背景画像の実装で、 background-position-x と background-position-y を使って、画像の水平方向と垂直方向の位置を別々に定義しています。
 
 #### HTML
 
@@ -83,16 +88,44 @@ div {
   width: 300px;
   height: 300px;
   background-color: skyblue;
-  background-image: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
+  background-image: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
   background-repeat: no-repeat;
   background-position-x: center;
-  background-position-y: bottom 10px;
+  background-position-y: bottom;
 }
 ```
 
 #### 結果
 
 {{EmbedLiveSample('Basic_example', '100%', 300)}}
+
+### 辺からの相対値
+
+次の例は、辺からの相対オフセット構文に対応していることを示すもので、開発者は背景を任意の辺からオフセットすることができます。
+
+#### HTML
+
+```html
+<div></div>
+```
+
+#### CSS
+
+```css
+div {
+  width: 300px;
+  height: 300px;
+  background-color: seagreen;
+  background-image: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
+  background-repeat: no-repeat;
+  background-position-x: right 20px;
+  background-position-y: bottom 10px;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('Side-relative_values', '100%', 300)}}
 
 ## 仕様書
 
@@ -106,6 +139,4 @@ div {
 
 - {{cssxref("background-position")}}
 - {{cssxref("background-position-y")}}
-- {{cssxref("background-position-inline")}}
-- {{cssxref("background-position-block")}}
-- [複数の背景の使用](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [複数の背景の使用](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

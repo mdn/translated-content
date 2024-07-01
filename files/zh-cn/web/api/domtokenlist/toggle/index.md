@@ -43,7 +43,7 @@ toggle(token, force);
 const span = document.querySelector("span");
 const classes = span.classList;
 
-span.addEventListener('click', () => {
+span.addEventListener("click", () => {
   const result = classes.toggle("c");
 
   if (result) {
@@ -51,7 +51,7 @@ span.addEventListener('click', () => {
   } else {
     span.textContent = `'c' removed; classList is now "${classes}".`;
   }
-})
+});
 ```
 
 输出如下所示，并且每次点击文本时都会发生变化：

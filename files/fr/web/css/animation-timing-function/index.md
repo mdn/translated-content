@@ -1,11 +1,6 @@
 ---
 title: animation-timing-function
 slug: Web/CSS/animation-timing-function
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/animation-timing-function
 ---
 
 {{CSSRef}}
@@ -29,7 +24,7 @@ animation-timing-function: step-start;
 animation-timing-function: step-end;
 
 /* Valeurs fonctionnelles */
-animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
 animation-timing-function: steps(4, end);
 
 /* Valeurs avec une fonction en escalier */
@@ -41,7 +36,7 @@ animation-timing-function: steps(6, start);
 animation-timing-function: steps(8, end);
 
 /* Définition de temporisations pour plusieurs animations */
-animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* Valeurs globales */
 animation-timing-function: inherit;
@@ -95,7 +90,7 @@ Une fonction de progression pour une animation qui est définie pour une étape 
     - `step-end`
       - : Synonyme de `steps(1, jump-end)`
 
-> **Note :** Lorsqu'on définit plusieurs valeurs, séparées par des virgules, sur une propriété `animation-*`, elles seront affectées selon leur ordre aux différentes animations listées par {{cssxref("animation-name")}}. Si le nombre de valeurs n'est pas le même que le nombre d'animation, voir [Paramétrer plusieurs valeurs de propriétés pour les animations](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations#utiliser_plusieurs_valeurs_pour_diff%c3%a9rentes_animations).
+> **Note :** Lorsqu'on définit plusieurs valeurs, séparées par des virgules, sur une propriété `animation-*`, elles seront affectées selon leur ordre aux différentes animations listées par {{cssxref("animation-name")}}. Si le nombre de valeurs n'est pas le même que le nombre d'animation, voir [Paramétrer plusieurs valeurs de propriétés pour les animations](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations#utiliser_plusieurs_valeurs_pour_différentes_animations).
 
 ## Définition formelle
 
@@ -122,47 +117,47 @@ Une fonction de progression pour une animation qui est définie pour une étape 
 
 ```css hidden
 .parent > div[class] {
-    animation-name: changeme;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    margin-bottom: 4px;
+  animation-name: changeme;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  margin-bottom: 4px;
 }
 @keyframes changeme {
-   0% {
-      min-width: 12em;
-      width: 12em;
-      background-color: black;
-      border: 1px solid red;
-      color: white;
-   }
-   100% {
-      width: 90vw;
-      min-width: 24em;
-      background-color: magenta;
-      color: yellow;
-      border: 1px solid orange;
-   }
+  0% {
+    min-width: 12em;
+    width: 12em;
+    background-color: black;
+    border: 1px solid red;
+    color: white;
+  }
+  100% {
+    width: 90vw;
+    min-width: 24em;
+    background-color: magenta;
+    color: yellow;
+    border: 1px solid orange;
+  }
 }
 ```
 
 ```css
 .ease {
-   animation-timing-function: ease;
+  animation-timing-function: ease;
 }
 .easein {
-   animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
 }
 .easeout {
-   animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
 }
 .easeinout {
-   animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 .linear {
-   animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 .cb {
-   animation-timing-function: cubic-bezier(0.2,-2,0.8,2);
+  animation-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
 }
 ```
 
@@ -185,53 +180,53 @@ Une fonction de progression pour une animation qui est définie pour une étape 
 
 ```css hidden
 .parent > div[class] {
-    animation-name: changeme;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    margin-bottom: 4px;
+  animation-name: changeme;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  margin-bottom: 4px;
 }
 @keyframes changeme {
-   0% {
-      min-width: 12em;
-      width: 12em;
-      background-color: black;
-      border: 1px solid red;
-      color: white;
-   }
-   100% {
-      width: 90vw;
-      min-width: 24em;
-      background-color: magenta;
-      color: yellow;
-      border: 1px solid orange;
-   }
+  0% {
+    min-width: 12em;
+    width: 12em;
+    background-color: black;
+    border: 1px solid red;
+    color: white;
+  }
+  100% {
+    width: 90vw;
+    min-width: 24em;
+    background-color: magenta;
+    color: yellow;
+    border: 1px solid orange;
+  }
 }
 ```
 
 ```css
 .jump-start {
-   animation-timing-function: steps(5, jump-start);
+  animation-timing-function: steps(5, jump-start);
 }
 .jump-end {
-   animation-timing-function: steps(5, jump-end);
+  animation-timing-function: steps(5, jump-end);
 }
 .jump-none {
-   animation-timing-function: steps(5, jump-none);
+  animation-timing-function: steps(5, jump-none);
 }
 .jump-both {
-   animation-timing-function: steps(5, jump-both);
+  animation-timing-function: steps(5, jump-both);
 }
 .start {
-   animation-timing-function: steps(5, start);
+  animation-timing-function: steps(5, start);
 }
 .end {
-   animation-timing-function: steps(5, end);
+  animation-timing-function: steps(5, end);
 }
 .step-start {
-   animation-timing-function: step-start;
+  animation-timing-function: step-start;
 }
 .step-end {
-   animation-timing-function: step-end;
+  animation-timing-function: step-end;
 }
 ```
 

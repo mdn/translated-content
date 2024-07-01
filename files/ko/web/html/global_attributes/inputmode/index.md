@@ -65,7 +65,7 @@ slug: Web/HTML/Global_attributes/inputmode
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.inputmode")}}
+{{Compat}}
 
 ## 같이 보기
 

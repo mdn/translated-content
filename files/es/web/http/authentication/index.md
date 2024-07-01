@@ -51,7 +51,7 @@ El esquema de autenticaón mas común es "Basic", que es introducido con mas det
 
 - **Basic** (ver {{rfc(7617)}}, credenciales codificadas en base64 . Ver mas abajo para mas información.),
 - **Bearer** (ver {{rfc(6750)}}, bearer tokens de acceso en recursos protegidos mediante OAuth 2.0),
-- **Digest** (ver {{rfc(7616)}}, has MD5 solo soportado en Firefox, ver {{bug(472823)}} para encriptado SHA),
+- **Digest** (ver {{rfc(7616)}}, has MD5 solo soportado en Firefox, ver [Error 472823 en Firefox](https://bugzil.la/472823) para encriptado SHA),
 - **HOBA** (ver {{rfc(7486)}} (borrador), **H**TTP **O**rigin-**B**ound **A**uthentication, basado en firma digital),
 - **Mutual** (ver [draft-ietf-httpauth-mutual](https://tools.ietf.org/html/draft-ietf-httpauth-mutual-11)),
 - **AWS4-HMAC-SHA256** (ver [AWS docs](http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)).

@@ -1,8 +1,6 @@
 ---
 title: <input type="tel">
 slug: Web/HTML/Element/input/tel
-translation_of: Web/HTML/Element/input/tel
-browser-compat: html.elements.input.input-tel
 ---
 
 {{HTMLSidebar}}
@@ -149,7 +147,7 @@ Dans sa forme la plus simple, on peut implémenter un tel contrôle avec ce frag
 
 ```html
 <label for="telNo">Numéro de téléphone :</label>
-<input id="telNo" name="telNo" type="tel">
+<input id="telNo" name="telNo" type="tel" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -163,8 +161,7 @@ Il est parfois utile de fournir une indication quant au format attendu. Or, il e
 Dans l'exemple suivant, on a un contrôle `tel` avec un attribut `placeholder` qui vaut `01 23 45 67 89`. Vous pouvez manipuler le résultat obtenu pour voir comment ce texte est affiché selon qu'une valeur saisie ou que le champ est vide&nbsp;:
 
 ```html
-<input id="telNo" name="telNo" type="tel"
-       placeholder="01 23 45 67 89">
+<input id="telNo" name="telNo" type="tel" placeholder="01 23 45 67 89" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -178,8 +175,7 @@ On peut contrôler la taille physique allouée au contrôle ainsi que les longue
 La taille physique de la boîte de saisie peut être contrôlée avec l'attribut [`size`](/fr/docs/Web/HTML/Element/Input#attr-size). La valeur de cet attribut indique le nombre de caractères que la boîte peut afficher simultanément. Si, par exemple, on souhaite que le contrôle mesure 20 caractères de large, on pourra utiliser le code suivant&nbsp;:
 
 ```html
-<input id="telNo" name="telNo" type="tel"
-       size="20">
+<input id="telNo" name="telNo" type="tel" size="20" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -191,8 +187,13 @@ L'attribut `size` ne contraint pas la taille de la valeur qui peut être saisie 
 Dans l'exemple qui suit, on crée un contrôle qui mesure 20 caractères de large et dont le contenu doit être plus long que 9 caractères et plus court que 14 caractères.
 
 ```html
-<input id="telNo" name="telNo" type="tel"
-       size="20" minlength="9" maxlength="14">
+<input
+  id="telNo"
+  name="telNo"
+  type="tel"
+  size="20"
+  minlength="9"
+  maxlength="14" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -206,8 +207,7 @@ Dans l'exemple qui suit, on crée un contrôle qui mesure 20 caractères de larg
 Il est possible de fournir une valeur par défaut en renseignant au préalable l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value)&nbsp;:
 
 ```html
-<input id="telNo" name="telNo" type="tel"
-       value="01 23 45 67 89">
+<input id="telNo" name="telNo" type="tel" value="01 23 45 67 89" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -217,13 +217,13 @@ Il est possible de fournir une valeur par défaut en renseignant au préalable l
 Si on souhaite aller plus loin, on peut fournir une liste de suggestions parmi lesquelles on pourra choisir (on pourra également saisir la valeur de son choix si celle-ci ne fait pas partie de la liste). Pour cela, on utilisera l'attribut [`list`](/fr/docs/Web/HTML/Element/Input#attr-list) dont la valeur est l'identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) qui contient autant d'éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) que de valeurs suggérées. C'est la valeur de l'attribut `value` de chaque élément `<option>` qui sera utilisée comme suggestion.
 
 ```html
-<input id="telNo" name="telNo" type="tel" list="defaultTels">
+<input id="telNo" name="telNo" type="tel" list="defaultTels" />
 
 <datalist id="defaultTels">
-  <option value="01 23 45 67 89">
-  <option value="02 45 67 89 01">
-  <option value="03 45 67 89 12">
-  <option value="04 56 87 98 32">
+  <option value="01 23 45 67 89"></option>
+  <option value="02 45 67 89 01"></option>
+  <option value="03 45 67 89 12"></option>
+  <option value="04 56 87 98 32"></option>
 </datalist>
 ```
 
@@ -244,8 +244,10 @@ Il est possible de rendre la saisie obligatoire avant de pouvoir envoyer le form
 ```html
 <form>
   <div>
-    <label for="telNo">Veuillez saisir un numéro de téléphone (obligatoire) : </label>
-    <input id="telNo" name="telNo" type="tel" required>
+    <label for="telNo"
+      >Veuillez saisir un numéro de téléphone (obligatoire) :
+    </label>
+    <input id="telNo" name="telNo" type="tel" required />
     <span class="validity"></span>
   </div>
   <div>
@@ -270,15 +272,16 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
-  position: absolute; content: '✖';
+input:invalid + span:after {
+  position: absolute;
+  content: "✖";
   padding-left: 5px;
   color: #8b0000;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
   color: #009000;
 }
@@ -297,9 +300,16 @@ Dans cet exemple, on utilisera la même feuille de style que précédemment mais
 ```html
 <form>
   <div>
-    <label for="telNo">Veuillez saisir un numéro de téléphone (au format xx xx xx xx xx) :</label>
-    <input id="telNo" name="telNo" type="tel" required
-           pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}">
+    <label for="telNo"
+      >Veuillez saisir un numéro de téléphone (au format xx xx xx xx xx)
+      :</label
+    >
+    <input
+      id="telNo"
+      name="telNo"
+      type="tel"
+      required
+      pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" />
     <span class="validity"></span>
   </div>
   <div>
@@ -322,15 +332,16 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
-  position: absolute; content: '✖';
+input:invalid + span:after {
+  position: absolute;
+  content: "✖";
   padding-left: 5px;
   color: #8b0000;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
   color: #009000;
 }
@@ -357,23 +368,38 @@ Chaque boîte de saisie possède un attribut [`placeholder`](/fr/docs/Web/HTML/E
     </select>
   </div>
   <div>
-    <p>Veuillez saisir vos numéros de téléphone : </p>
+    <p>Veuillez saisir vos numéros de téléphone :</p>
     <span class="areaDiv">
-      <input id="areaNo" name="areaNo" type="tel" required
-             placeholder="Code régional" pattern="[0-9]{3}"
-             aria-label="Code régional">
+      <input
+        id="areaNo"
+        name="areaNo"
+        type="tel"
+        required
+        placeholder="Code régional"
+        pattern="[0-9]{3}"
+        aria-label="Code régional" />
       <span class="validity"></span>
     </span>
     <span class="number1Div">
-      <input id="number1" name="number1" type="tel" required
-             placeholder="Premier fragment" pattern="[0-9]{3}"
-             aria-label="Premier fragment du numéro">
+      <input
+        id="number1"
+        name="number1"
+        type="tel"
+        required
+        placeholder="Premier fragment"
+        pattern="[0-9]{3}"
+        aria-label="Premier fragment du numéro" />
       <span class="validity"></span>
     </span>
     <span class="number2Div">
-      <input id="number2" name="number2" type="tel" required
-             placeholder="Second fragment" pattern="[0-9]{4}"
-             aria-label="Second fragment du numéro">
+      <input
+        id="number2"
+        name="number2"
+        type="tel"
+        required
+        placeholder="Second fragment"
+        pattern="[0-9]{4}"
+        aria-label="Second fragment du numéro" />
       <span class="validity"></span>
     </span>
   </div>
@@ -389,12 +415,12 @@ Le code JavaScript associé est relativement simple, il contient un gestionnaire
 let selectElem = document.querySelector("select");
 let inputElems = document.querySelectorAll("input");
 
-selectElem.onchange = function() {
-  for(let i = 0; i < inputElems.length; i++) {
+selectElem.onchange = function () {
+  for (let i = 0; i < inputElems.length; i++) {
     inputElems[i].value = "";
   }
 
-  if(selectElem.value === "États-Unis") {
+  if (selectElem.value === "États-Unis") {
     inputElems[2].parentNode.style.display = "inline";
 
     inputElems[0].placeholder = "Code régional";
@@ -402,12 +428,12 @@ selectElem.onchange = function() {
 
     inputElems[1].placeholder = "Première partie";
     inputElems[1].pattern = "[0-9]{3}";
-    inputElems[1].setAttribute("aria-label","Première partie du numéro");
+    inputElems[1].setAttribute("aria-label", "Première partie du numéro");
 
     inputElems[2].placeholder = "Seconde partie";
     inputElems[2].pattern = "[0-9]{4}";
-    inputElems[2].setAttribute("aria-label","Seconde partie du numéro");
-  } else if(selectElem.value === "Royaume-Uni") {
+    inputElems[2].setAttribute("aria-label", "Seconde partie du numéro");
+  } else if (selectElem.value === "Royaume-Uni") {
     inputElems[2].parentNode.style.display = "none";
 
     inputElems[0].placeholder = "Code régional";
@@ -415,8 +441,8 @@ selectElem.onchange = function() {
 
     inputElems[1].placeholder = "Numéro local";
     inputElems[1].pattern = "[0-9]{4,8}";
-    inputElems[1].setAttribute("aria-label","Numéro local");
-  } else if(selectElem.value === "Allemagne") {
+    inputElems[1].setAttribute("aria-label", "Numéro local");
+  } else if (selectElem.value === "Allemagne") {
     inputElems[2].parentNode.style.display = "inline";
 
     inputElems[0].placeholder = "Code régional";
@@ -424,13 +450,13 @@ selectElem.onchange = function() {
 
     inputElems[1].placeholder = "Première partie";
     inputElems[1].pattern = "[0-9]{2,4}";
-    inputElems[1].setAttribute("aria-label","Première partie du numéro");
+    inputElems[1].setAttribute("aria-label", "Première partie du numéro");
 
     inputElems[2].placeholder = "Seconde partie";
     inputElems[2].pattern = "[0-9]{4}";
-    inputElems[2].setAttribute("aria-label","Seconde partie du numéro");
+    inputElems[2].setAttribute("aria-label", "Seconde partie du numéro");
   }
-}
+};
 ```
 
 Voici le résultat obtenu&nbsp;:
@@ -455,15 +481,16 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
-  position: absolute; content: '✖';
+input:invalid + span:after {
+  position: absolute;
+  content: "✖";
   padding-left: 5px;
   color: #8b0000;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
   color: #009000;
 }

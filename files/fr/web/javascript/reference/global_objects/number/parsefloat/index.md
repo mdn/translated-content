@@ -1,14 +1,6 @@
 ---
 title: Number.parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Number
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/parseFloat
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`Number.parseFloat()`** analyse et convertit une chaîne de caract
 ## Syntaxe
 
 ```js
-Number.parseFloat(chaîne)
+Number.parseFloat(chaîne);
 ```
 
 ### Paramètres
@@ -46,7 +38,7 @@ Cette méthode fait partie d'ECMAScript 2015 et notamment de la modularisation d
 
 ```js
 if (Number.parseFloat === undefined) {
-    Number.parseFloat = parseFloat;
+  Number.parseFloat = parseFloat;
 }
 ```
 

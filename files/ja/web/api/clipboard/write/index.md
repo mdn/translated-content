@@ -14,7 +14,7 @@ slug: Web/API/Clipboard/write
 ## 構文
 
 ```js
-write(data)
+write(data);
 ```
 
 ### 引数
@@ -32,18 +32,18 @@ write(data)
 
 ```js
 function setClipboard(text) {
-    const type = "text/plain";
-    const blob = new Blob([text], { type });
-    const data = [new ClipboardItem({ [type]: blob })];
+  const type = "text/plain";
+  const blob = new Blob([text], { type });
+  const data = [new ClipboardItem({ [type]: blob })];
 
-    navigator.clipboard.write(data).then(
-        () => {
-        /* success */
-        },
-        () => {
-        /* failure */
-        }
-    );
+  navigator.clipboard.write(data).then(
+    () => {
+      /* success */
+    },
+    () => {
+      /* failure */
+    },
+  );
 }
 ```
 
@@ -59,11 +59,14 @@ function copyCanvasContentsToClipboard(canvas, onDone, onError) {
   canvas.toBlob((blob) => {
     let data = [new ClipboardItem({ [blob.type]: blob })];
 
-    navigator.clipboard.write(data).then(() => {
-      onDone();
-    }, (err) => {
-      onError(err);
-    })
+    navigator.clipboard.write(data).then(
+      () => {
+        onDone();
+      },
+      (err) => {
+        onError(err);
+      },
+    );
   });
 }
 ```

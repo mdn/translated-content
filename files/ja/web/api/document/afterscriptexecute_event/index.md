@@ -1,20 +1,28 @@
 ---
-title: Document.onafterscriptexecute
+title: "Document: afterscriptexecute イベント"
+short-title: afterscriptexecute
 slug: Web/API/Document/afterscriptexecute_event
-original_slug: Web/API/Document/onafterscriptexecute
+l10n:
+  sourceCommit: 3966c40a3917825e6e467f1592bc7f8d59458e74
 ---
 
-{{ApiRef("DOM")}}{{non-standard_header}}
+{{APIRef}}{{non-standard_header}}
 
-**`Document.onafterscriptexecute`** プロパティは、静的な {{HTMLElement("script")}} 要素のスクリプトの実行が終了したときに呼び出される関数を参照します。要素が {{domxref("Node.appendChild()", "appendChild()")}} などで動的に追加された場合には呼び出されません。
+`afterscriptexecute` イベントは、静的な {{HTMLElement("script")}} 要素のスクリプトの実行が終了したときに発生します。要素が {{domxref("Node.appendChild()", "appendChild()")}} などで動的に追加された場合には呼び出されません。
 
 ## 構文
 
-```
-document.onafterscriptexecute = funcRef;
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラーのプロパティを設定するかしてください。
+
+```js
+addEventListener("afterscriptexecute", (event) => {});
+
+onafterscriptexecute = (event) => {};
 ```
 
-_funcRef_ は関数の参照で、イベントが発行されると呼び出されます。イベントの `target` 属性が、実行が完了した {{HTMLElement("script")}} 要素に設定されます。
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
@@ -23,14 +31,16 @@ function finished(e) {
   logMessage(`Finished script with ID: ${e.target.id}`);
 }
 
-document.addEventListener('afterscriptexecute', finished, true);
+document.addEventListener("afterscriptexecute", finished, true);
+// または
+document.onafterscriptexecute = finished;
 ```
 
-[ライブ例を表示](/samples/html/currentScript.html)
+[ライブ例を表示](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## 仕様書
 
-- [HTML5](https://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
+どの仕様書にも含まれていません。
 
 ## ブラウザーの互換性
 
@@ -38,5 +48,5 @@ document.addEventListener('afterscriptexecute', finished, true);
 
 ## 関連情報
 
-- {{domxref("Document.onbeforescriptexecute")}}
+- {{domxref("Document.beforescriptexecute_event")}}
 - {{domxref("Document.currentScript")}}

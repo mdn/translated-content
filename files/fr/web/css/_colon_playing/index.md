@@ -1,8 +1,6 @@
 ---
-title: ':playing'
+title: ":playing"
 slug: Web/CSS/:playing
-browser-compat: css.selectors.playing
-translation_of: Web/CSS/:playing
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -13,7 +11,6 @@ Une ressource est lue même si elle se trouve en mémoire tampon ou mise en paus
 
 ```css
 :playing {
-
 }
 ```
 

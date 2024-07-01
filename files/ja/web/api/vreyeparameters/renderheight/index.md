@@ -19,7 +19,7 @@ l10n:
 
 ## 例
 
-コード例については [`VREyeParameters`](/en-US/docs/Web/API/VREyeParameters#例) を参照してください。
+コード例については [`VREyeParameters`](/ja/docs/Web/API/VREyeParameters#例) を参照してください。
 
 ## 仕様書
 
@@ -33,5 +33,4 @@ l10n:
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームが提供するデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

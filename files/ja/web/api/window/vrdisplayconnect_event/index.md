@@ -1,5 +1,5 @@
 ---
-title: 'Window: vrdisplayconnect イベント'
+title: "Window: vrdisplayconnect イベント"
 slug: Web/API/Window/vrdisplayconnect_event
 l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
@@ -18,9 +18,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('vrdisplayconnect', (event) => { });
+addEventListener("vrdisplayconnect", (event) => {});
 
-onvrdisplayconnect = (event) => { };
+onvrdisplayconnect = (event) => {};
 ```
 
 ## イベント型
@@ -43,8 +43,8 @@ _`VRDisplayEvent` は親オブジェクトである {{domxref("Event")}} から�
 `vrdisplayconnect` イベントは [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで使用することができます。
 
 ```js
-window.addEventListener('vrdisplayconnect', () => {
-  info.textContent = 'Display connected.';
+window.addEventListener("vrdisplayconnect", () => {
+  info.textContent = "Display connected.";
   reportDisplays();
 });
 ```
@@ -53,7 +53,7 @@ window.addEventListener('vrdisplayconnect', () => {
 
 ```js
 window.onvrdisplayconnect = () => {
-  info.textContent = 'Display connected.';
+  info.textContent = "Display connected.";
   reportDisplays();
 };
 ```
@@ -70,5 +70,4 @@ window.onvrdisplayconnect = () => {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームが提供するデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

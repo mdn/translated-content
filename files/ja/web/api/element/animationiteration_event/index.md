@@ -1,23 +1,23 @@
 ---
 title: "Element: animationiteration イベント"
+short-title: animationiteration
 slug: Web/API/Element/animationiteration_event
-original_slug: Web/API/Document/animationiteration_event
 l10n:
-  sourceCommit: 77b8cdb3a05999ade4a269d0ef2443618bb7cd66
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef}}
 
-**`animationiteration`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)の反復が 1 回分終了し、次の回が始まったときに発生します。このイベントは {{domxref("Element/animationend_event", "animationend")}} イベントと同時には発生せず、従って `animation-iteration-count` が 1 のアニメーションでは発生しません。
+**`animationiteration`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)の反復が 1 回分終了し、次の回が始まったときに発生します。このイベントは {{domxref("Element/animationend_event", "animationend")}} イベントと同時には発生せず、従って `animation-iteration-count` が 1 のアニメーションでは発生しません。
 
 ## 構文
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('animationiteration', (event) => {});
+addEventListener("animationiteration", (event) => {});
 
-onanimationiteration = (event) => { };
+onanimationiteration = (event) => {};
 ```
 
 ## イベント型
@@ -42,11 +42,11 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 このコードは `animationiteration` を使用して、アニメーションの反復が終了した回数を追跡します。
 
 ```js
-const animated = document.querySelector('.animated');
+const animated = document.querySelector(".animated");
 
 let iterationCount = 0;
 
-animated.addEventListener('animationiteration', () => {
+animated.addEventListener("animationiteration", () => {
   iterationCount++;
   console.log(`アニメーション反復回数: ${iterationCount}`);
 });
@@ -55,7 +55,7 @@ animated.addEventListener('animationiteration', () => {
 同様に、 `onanimationiteration` イベントハンドラープロパティを使用するとこうなります。
 
 ```js
-const animated = document.querySelector('.animated');
+const animated = document.querySelector(".animated");
 
 let iterationCount = 0;
 
@@ -113,36 +113,42 @@ animated.onanimationiteration = () => {
 #### JavaScript
 
 ```js
-const animation = document.querySelector('p.animation');
-const animationEventLog = document.querySelector('.animation-example>.event-log');
-const applyAnimation = document.querySelector('.animation-example>button.activate');
+const animation = document.querySelector("p.animation");
+const animationEventLog = document.querySelector(
+  ".animation-example>.event-log",
+);
+const applyAnimation = document.querySelector(
+  ".animation-example>button.activate",
+);
 let iterationCount = 0;
 
-animation.addEventListener('animationstart', () => {
+animation.addEventListener("animationstart", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation started' `;
 });
 
-animation.addEventListener('animationiteration', () => {
+animation.addEventListener("animationiteration", () => {
   iterationCount++;
   animationEventLog.textContent = `${animationEventLog.textContent}'animation iterations: ${iterationCount}' `;
 });
 
-animation.addEventListener('animationend', () => {
+animation.addEventListener("animationend", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation ended'`;
-  animation.classList.remove('active');
+  animation.classList.remove("active");
   applyAnimation.textContent = "Activate animation";
 });
 
-animation.addEventListener('animationcancel', () => {
+animation.addEventListener("animationcancel", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation canceled'`;
 });
 
-applyAnimation.addEventListener('click', () => {
-  animation.classList.toggle('active');
-  animationEventLog.textContent = '';
+applyAnimation.addEventListener("click", () => {
+  animation.classList.toggle("active");
+  animationEventLog.textContent = "";
   iterationCount = 0;
-  const active = animation.classList.contains('active');
-  applyAnimation.textContent = active ? "Cancel animation" : "Activate animation";
+  const active = animation.classList.contains("active");
+  applyAnimation.textContent = active
+    ? "Cancel animation"
+    : "Activate animation";
 });
 ```
 
@@ -160,8 +166,8 @@ applyAnimation.addEventListener('click', () => {
 
 ## 関連情報
 
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}
 - 関連イベント: {{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationend_event", "animationend")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}
 - {{domxref("Document")}} を対象としたこのイベント: {{domxref("Document/animationiteration_event", "animationiteration")}}

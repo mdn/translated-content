@@ -2,6 +2,7 @@
 title: GeolocationPosition
 slug: Web/API/GeolocationPosition
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`GeolocationPosition`** 인터페이스는 주어진 시간에 장치가 위치한 지점을 나타냅니다. 지점은 {{domxref("Coordinates")}} 객체로 표현하여, 지구를 나타내는 회전타원체 위의 2D 위치와 더불어 높이와 속도 정보를 담습니다.

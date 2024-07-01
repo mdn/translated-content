@@ -35,18 +35,16 @@ Essa função pode ser emulada de algumas maneiras:
 
 Todas essas técnicas são incorporadas em um [setImmediate polyfill](https://github.com/NobleJS/setImmediate).
 
-## Especificações
+## Especificação
 
-Não faz parte de nenhuma especificação e não em uma faixa de padrões.
+Não faz parte de denhuma especificação.
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Window.setImmediate")}}
+{{Compat}}
 
 ## Ver também
 
 {{ domxref("window.clearImmediate") }}
-
-{{ spec("https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html", "Specification: Efficient Script Yielding") }}
 
 [Microsoft setImmediate API Demo](http://ie.microsoft.com/testdrive/Performance/setImmediateSorting/Default.html)

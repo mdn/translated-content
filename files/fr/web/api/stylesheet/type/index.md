@@ -1,7 +1,6 @@
 ---
 title: StyleSheet.type
 slug: Web/API/StyleSheet/type
-translation_of: Web/API/StyleSheet/type
 ---
 
 {{APIRef ("CSSOM")}}
@@ -11,13 +10,13 @@ Type spécifie la langue de la feuille de style pour cette feuille de style.
 ## Syntaxe
 
 ```js
-String = stylesheet.type
+string = stylesheet.type;
 ```
 
 ## Exemple
 
 ```
-Ss.type = "text / css";
+stylesheet.type = "text/css";
 ```
 
 ## Spécification

@@ -2,6 +2,7 @@
 title: Promise.race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 ---
+
 {{JSRef}}
 
 **`Promise.race()`** 메소드는 Promise 객체를 반환합니다. 이 프로미스 객체는 iterable 안에 있는 프로미스 중에 가장 먼저 완료된 것의 결과값으로 그대로 이행하거나 거부합니다.
@@ -47,9 +48,9 @@ var p = Promise.race(resolvedPromisesArray);
 console.log(p);
 
 // 호출 스택을 비운 다음 실행하기 위해 setTimeout을 사용
-setTimeout(function(){
-    console.log('the stack is now empty');
-    console.log(p);
+setTimeout(function () {
+  console.log("the stack is now empty");
+  console.log(p);
 });
 
 // 로그 출력 결과 (순서대로):
@@ -63,9 +64,9 @@ setTimeout(function(){
 ```js
 var foreverPendingPromise = Promise.race([]);
 console.log(foreverPendingPromise);
-setTimeout(function(){
-    console.log('the stack is now empty');
-    console.log(foreverPendingPromise);
+setTimeout(function () {
+  console.log("the stack is now empty");
+  console.log(foreverPendingPromise);
 });
 
 // 로그 출력 결과 (순서대로):
@@ -87,10 +88,10 @@ var p2 = Promise.race(arr2);
 
 console.log(p);
 console.log(p2);
-setTimeout(function(){
-    console.log('the stack is now empty');
-    console.log(p);
-    console.log(p2);
+setTimeout(function () {
+  console.log("the stack is now empty");
+  console.log(p);
+  console.log(p2);
 });
 
 // 로그 출력 결과 (순서대로):
@@ -104,48 +105,51 @@ setTimeout(function(){
 ### `setTimeout`과 함께 `Promise.race` 사용 예
 
 ```js
-var p1 = new Promise(function(resolve, reject) {
-    setTimeout(() => resolve('하나'), 500);
+var p1 = new Promise(function (resolve, reject) {
+  setTimeout(() => resolve("하나"), 500);
 });
-var p2 = new Promise(function(resolve, reject) {
-    setTimeout(() => resolve('둘'), 100);
+var p2 = new Promise(function (resolve, reject) {
+  setTimeout(() => resolve("둘"), 100);
 });
 
-Promise.race([p1, p2])
-.then(function(value) {
+Promise.race([p1, p2]).then(function (value) {
   console.log(value); // "둘"
   // 둘 다 이행하지만 p2가 더 빠르므로
 });
 
-var p3 = new Promise(function(resolve, reject) {
-    setTimeout(() => resolve('셋'), 100);
+var p3 = new Promise(function (resolve, reject) {
+  setTimeout(() => resolve("셋"), 100);
 });
-var p4 = new Promise(function(resolve, reject) {
-    setTimeout(() => reject(new Error('넷')), 500);
-});
-
-Promise.race([p3, p4])
-.then(function(value) {
-  console.log(value); // "셋"
-  // p3이 더 빠르므로 이행함
-}, function(reason) {
-  // 실행되지 않음
+var p4 = new Promise(function (resolve, reject) {
+  setTimeout(() => reject(new Error("넷")), 500);
 });
 
-var p5 = new Promise(function(resolve, reject) {
-    setTimeout(() => resolve('다섯'), 500);
+Promise.race([p3, p4]).then(
+  function (value) {
+    console.log(value); // "셋"
+    // p3이 더 빠르므로 이행함
+  },
+  function (reason) {
+    // 실행되지 않음
+  },
+);
+
+var p5 = new Promise(function (resolve, reject) {
+  setTimeout(() => resolve("다섯"), 500);
 });
-var p6 = new Promise(function(resolve, reject) {
-    setTimeout(() => reject(new Error('여섯')), 100);
+var p6 = new Promise(function (resolve, reject) {
+  setTimeout(() => reject(new Error("여섯")), 100);
 });
 
-Promise.race([p5, p6])
-.then(function(value) {
-  // 실행되지 않음
-}, function(error) {
-  console.log(error.message); // "여섯"
-  // p6이 더 빠르므로 거부함
-});
+Promise.race([p5, p6]).then(
+  function (value) {
+    // 실행되지 않음
+  },
+  function (error) {
+    console.log(error.message); // "여섯"
+    // p6이 더 빠르므로 거부함
+  },
+);
 ```
 
 ## 명세

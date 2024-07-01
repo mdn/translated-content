@@ -1,10 +1,11 @@
 ---
 title: Unix time (UNIX 時間)
 slug: Glossary/Unix_time
-original_slug: Web/API/DOMTimeStamp
 l10n:
   sourceCommit: af32ed24e243178cd060769b7c707afcc271f9f6
 ---
+
+{{GlossarySidebar}}
 
 UNIX 時間はタイムスタンプを表す方法の一つで、通常、 UNIX 元期の開始（1970 年 1 月 1 日午前 0 時 (UTC)）からの秒数で定義されます。うるう秒は無視されます。
 

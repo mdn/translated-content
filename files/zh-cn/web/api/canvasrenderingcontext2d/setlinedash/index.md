@@ -39,8 +39,8 @@ setLineDash(segments);
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Dashed line
 ctx.beginPath();
@@ -70,7 +70,8 @@ ctx.setLineDash([5, 15]);
 ctx.beginPath();
 ctx.moveTo(0,100);
 ctx.lineTo(400, 100);
-ctx.stroke();</textarea>
+ctx.stroke();</textarea
+>
 ```
 
 ```js hidden
@@ -86,14 +87,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -125,8 +126,8 @@ function drawDashedLine(pattern) {
   y += 20;
 }
 
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 let y = 15;
 
 drawDashedLine([]);
@@ -135,7 +136,7 @@ drawDashedLine([10, 10]);
 drawDashedLine([20, 5]);
 drawDashedLine([15, 3, 3, 3]);
 drawDashedLine([20, 3, 3, 3, 3, 3, 3, 3]);
-drawDashedLine([12, 3, 3]);  // Equals [12, 3, 3, 12, 3, 3]
+drawDashedLine([12, 3, 3]); // Equals [12, 3, 3, 12, 3, 3]
 ```
 
 #### Result

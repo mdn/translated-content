@@ -1,12 +1,8 @@
 ---
 title: Firefox
 slug: Mozilla/Firefox
-tags:
-  - Firefox
-  - Landing
-  - Mozilla
-translation_of: Mozilla/Firefox
 ---
+
 {{FirefoxSidebar}}
 
 [Firefox](http://www.mozilla.org/ru/docs/firefox/new/) - это популярный веб-браузер от [Mozilla](https://www.mozilla.org/ru/), доступный на многих платформах, включая Windows, Mac OS X и Linux, а также на мобильных устройствах под управлением Android и iOS. Firefox широко поддерживает самые современные веб-технологии и также имеет [удобные встроенные инструменты](/ru/docs/Tools) для разработки веб-приложений, Firefox - это отличный выбор, как для обыкновенных пользователей, так и для веб-разработчиков.

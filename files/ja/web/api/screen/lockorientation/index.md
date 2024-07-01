@@ -14,7 +14,7 @@ slug: Web/API/Screen/lockOrientation
 ## 構文
 
 ```js
-lockOrientation(orientation)
+lockOrientation(orientation);
 ```
 
 ### 引数
@@ -55,7 +55,10 @@ lockOrientation(orientation)
 ### 文字列引数での使用方法
 
 ```js
-screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+screen.lockOrientationUniversal =
+  screen.lockOrientation ||
+  screen.mozLockOrientation ||
+  screen.msLockOrientation;
 
 if (screen.lockOrientationUniversal("landscape-primary")) {
   // 向きがロックされた
@@ -67,9 +70,14 @@ if (screen.lockOrientationUniversal("landscape-primary")) {
 ### `Array` 引数での使用方法
 
 ```js
-screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+screen.lockOrientationUniversal =
+  screen.lockOrientation ||
+  screen.mozLockOrientation ||
+  screen.msLockOrientation;
 
-if (screen.lockOrientationUniversal(["landscape-primary", "landscape-secondary"])) {
+if (
+  screen.lockOrientationUniversal(["landscape-primary", "landscape-secondary"])
+) {
   // 向きがロックされた
 } else {
   // 向きのロックに失敗した

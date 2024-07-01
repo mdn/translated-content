@@ -1,8 +1,6 @@
 ---
 title: compositionstart
 slug: Web/API/Element/compositionstart_event
-translation_of: Web/API/Element/compositionstart_event
-original_slug: Web/Events/compositionstart
 ---
 
 {{APIRef}}
@@ -37,7 +35,7 @@ Par exemple, cet événement pourrait être déclenché après qu'un utilisateur
 ```js
 const inputElement = document.querySelector('input[type="text"]');
 
-inputElement.addEventListener('compositionstart', (event) => {
+inputElement.addEventListener("compositionstart", (event) => {
   console.log(`generated characters were: ${event.data}`);
 });
 ```
@@ -48,8 +46,11 @@ inputElement.addEventListener('compositionstart', (event) => {
 
 ```html
 <div class="control">
-  <label for="name">Sur macOS, cliquez dans la zone de texte ci-dessous,<br> puis tapez <kbd>option</kbd> + <kbd>`</kbd>, puis <kbd>a</kbd> :</label>
-  <input type="text" id="example" name="example">
+  <label for="name"
+    >Sur macOS, cliquez dans la zone de texte ci-dessous,<br />
+    puis tapez <kbd>option</kbd> + <kbd>`</kbd>, puis <kbd>a</kbd> :</label
+  >
+  <input type="text" id="example" name="example" />
 </div>
 
 <div class="event-log">
@@ -61,7 +62,7 @@ inputElement.addEventListener('compositionstart', (event) => {
 
 ```css hidden
 body {
-  padding: .2rem;
+  padding: 0.2rem;
   display: grid;
   grid-template-areas: "control log";
 }
@@ -78,12 +79,13 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
 input[type="text"] {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 kbd {
@@ -97,20 +99,20 @@ kbd {
 
 ```js
 const inputElement = document.querySelector('input[type="text"]');
-const log = document.querySelector('.event-log-contents');
-const clearLog = document.querySelector('.clear-log');
+const log = document.querySelector(".event-log-contents");
+const clearLog = document.querySelector(".clear-log");
 
-clearLog.addEventListener('click', () => {
-  log.textContent = '';
+clearLog.addEventListener("click", () => {
+  log.textContent = "";
 });
 
 function handleEvent(event) {
   log.textContent = log.textContent + `${event.type}: ${event.data}\n`;
 }
 
-inputElement.addEventListener('compositionstart', handleEvent);
-inputElement.addEventListener('compositionupdate', handleEvent);
-inputElement.addEventListener('compositionend', handleEvent);
+inputElement.addEventListener("compositionstart", handleEvent);
+inputElement.addEventListener("compositionupdate", handleEvent);
+inputElement.addEventListener("compositionend", handleEvent);
 ```
 
 #### Résultat

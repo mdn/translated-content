@@ -5,11 +5,11 @@ slug: Web/JavaScript/Data_structures
 
 {{jsSidebar("More")}}
 
-Todas as linguagens de programação têm estruturas de dados embutidas, mas geralmente diferem de uma linguagem para outra. Este artigo tenta listar as estruturas de dados internas disponíveis em JavaScript e quais propriedades elas possuem. Estes podem ser usados ​​para construir outras estruturas de dados. Sempre que possível, são feitas comparações com outras línguas.
+Todas as linguagens de programação têm estruturas de dados embutidas, mas geralmente diferem de uma linguagem para outra. Este artigo tenta listar as estruturas de dados internas disponíveis em JavaScript e quais propriedades elas possuem. Estes podem ser usados para construir outras estruturas de dados. Sempre que possível, são feitas comparações com outras línguas.
 
 ## Tipagem dinâmica e fraca
 
-JavaScript é uma linguagem [dinâmica](https://en.wikipedia.org/wiki/Dynamic_programming_language) com [tipos dinâmicos](https://en.wikipedia.org/wiki/Type_system#DYNAMIC). As variáveis ​​em JavaScript não estão diretamente associadas a nenhum tipo de valor específico, e qualquer variável pode receber (e reatribuir) valores de todos os tipos:
+JavaScript é uma linguagem [dinâmica](https://en.wikipedia.org/wiki/Dynamic_programming_language) com [tipos dinâmicos](https://en.wikipedia.org/wiki/Type_system#DYNAMIC). As variáveis em JavaScript não estão diretamente associadas a nenhum tipo de valor específico, e qualquer variável pode receber (e reatribuir) valores de todos os tipos:
 
 ```js
 let foo = 42; // foo agora é um número
@@ -31,7 +31,7 @@ Coerções implícitas são muito convenientes, mas podem ser uma arma em potenc
 
 O conjunto de tipos na linguagem JavaScript consiste em [_primitive values_](#primitive_values) e [_objects_](#objects).
 
-- [Valores primitivos](#primitive_values) (dados imutáveis ​​representados diretamente no nível mais baixo do idioma)
+- [Valores primitivos](#primitive_values) (dados imutáveis representados diretamente no nível mais baixo do idioma)
 
   - [tipo Boolean](#boolean_type)
   - [Tipo Null](#null_type)
@@ -45,7 +45,7 @@ O conjunto de tipos na linguagem JavaScript consiste em [_primitive values_](#pr
 
 ## Valores primitivos
 
-Todos os tipos, exceto objetos, definem valores imutáveis ​​(ou seja, valores que não podem ser alterados). Por exemplo, Strings são imutáveis. Referimo-nos a valores desses tipos como "_valores primitivos_".
+Todos os tipos, exceto objetos, definem valores imutáveis (ou seja, valores que não podem ser alterados). Por exemplo, Strings são imutáveis. Referimo-nos a valores desses tipos como "_valores primitivos_".
 
 ### Tipo Boolean
 
@@ -87,7 +87,7 @@ console.log(42 / -0); // -Infinity
 
 Embora um número geralmente represente apenas seu valor, o JavaScript fornece [operadores bitwise](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators).
 
-> **Nota:** embora os operadores bit a bit _podem_ ser usados ​​para representar vários valores booleanos em um único número usando [mascaramento de bits](https://en.wikipedia.org/wiki/Mask_%28computing%29), isso geralmente é considerada uma má prática. JavaScript oferece outros meios para representar um conjunto de booleanos (como uma matriz de booleanos ou um objeto com valores booleanos atribuídos a propriedades nomeadas). O mascaramento de bits também tende a tornar o código mais difícil de ler, entender e manter.
+> **Nota:** embora os operadores bit a bit _podem_ ser usados para representar vários valores booleanos em um único número usando [mascaramento de bits](https://en.wikipedia.org/wiki/Mask_%28computing%29), isso geralmente é considerada uma má prática. JavaScript oferece outros meios para representar um conjunto de booleanos (como uma matriz de booleanos ou um objeto com valores booleanos atribuídos a propriedades nomeadas). O mascaramento de bits também tende a tornar o código mais difícil de ler, entender e manter.
 
 Pode ser necessário usar essas técnicas em ambientes muito restritos, como ao tentar lidar com as limitações do armazenamento local ou em casos extremos (como quando cada bit na rede conta). Esta técnica só deve ser considerada quando for a última medida que pode ser tomada para otimizar o tamanho.
 

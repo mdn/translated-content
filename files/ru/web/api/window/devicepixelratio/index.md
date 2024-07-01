@@ -1,7 +1,6 @@
 ---
 title: Window.devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
-translation_of: Web/API/Window/devicePixelRatio
 ---
 
 {{APIRef}}
@@ -26,10 +25,10 @@ value = window.devicePixelRatio;
 window.screen.deviceXDPI / window.screen.logicalXDPI
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

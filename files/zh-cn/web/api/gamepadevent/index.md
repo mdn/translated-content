@@ -22,19 +22,22 @@ Gamepad API 的 GamepadEvent 接口包含对连接到系统的控制器的引用
 在触发的 {{domxref("Window.gamepadconnected")}} 事件上调用控制器属性。
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
-  console.log("控制器已连接于 %d 位：%s。 %d 个按键，%d 个坐标方向。",
-  e.gamepad.index, e.gamepad.id,
-  e.gamepad.buttons.length, e.gamepad.axes.length);
+window.addEventListener("gamepadconnected", function (e) {
+  console.log(
+    "控制器已连接于 %d 位：%s。 %d 个按键，%d 个坐标方向。",
+    e.gamepad.index,
+    e.gamepad.id,
+    e.gamepad.buttons.length,
+    e.gamepad.axes.length,
+  );
 });
 ```
 
 与 {{domxref("Window.gamepaddisconnected")}} 事件上的。
 
 ```js
-window.addEventListener("gamepaddisconnected", function(e) {
-  console.log("控制器已从 %d 位断开：%s",
-  e.gamepad.index, e.gamepad.id);
+window.addEventListener("gamepaddisconnected", function (e) {
+  console.log("控制器已从 %d 位断开：%s", e.gamepad.index, e.gamepad.id);
 });
 ```
 
@@ -46,6 +49,6 @@ window.addEventListener("gamepaddisconnected", function(e) {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
-[使用 Gamepad API](/zh-CN/docs/Web/Guide/API/Gamepad)
+[使用 Gamepad API](/zh-CN/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

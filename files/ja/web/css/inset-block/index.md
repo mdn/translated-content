@@ -1,11 +1,24 @@
 ---
 title: inset-block
 slug: Web/CSS/inset-block
+l10n:
+  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
 {{CSSRef}}
 
 **`inset-block`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素におけるブロック方向の先頭および末尾からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}} と {{cssxref("bottom")}}、または {{cssxref("right")}} と {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+
+{{EmbedInteractiveExample("pages/css/inset-block.html")}}
+
+## 構成要素のプロパティ
+
+このプロパティは以下の CSS プロパティの一括指定です。
+
+- {{cssxref("inset-block-end")}}
+- {{cssxref("inset-block-start")}}
+
+## 構文
 
 ```css
 /* <length> 値 */
@@ -23,17 +36,9 @@ inset-block: auto;
 inset-block: inherit;
 inset-block: initial;
 inset-block: revert;
+inset-block: revert-layer;
 inset-block: unset;
 ```
-
-## 構成要素のプロパティ
-
-このプロパティは以下の CSS プロパティの一括指定です。
-
-- {{cssxref("inset-block-end")}}
-- {{cssxref("inset-block-start")}}
-
-## 構文
 
 ### 値
 
@@ -49,7 +54,7 @@ inset-block: unset;
 
 ## 例
 
-<h3 id="Setting_block_start_and_end_offsets">ブロック方向の先頭と末尾のオフセットの設定</h3>
+### ブロック方向の先頭と末尾のオフセットの設定
 
 #### HTML
 
@@ -78,7 +83,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_block_start_and_end_offsets", 140, 140)}}
+{{EmbedLiveSample("ブロック方向の先頭と末尾のオフセットの設定", 140, 140)}}
 
 ## 仕様書
 

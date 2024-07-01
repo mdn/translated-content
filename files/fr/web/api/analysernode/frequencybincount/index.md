@@ -1,7 +1,6 @@
 ---
 title: AnalyserNode.frequencyBinCount
 slug: Web/API/AnalyserNode/frequencyBinCount
-translation_of: Web/API/AnalyserNode/frequencyBinCount
 ---
 
 {{ APIRef("Web Audio API") }}

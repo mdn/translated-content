@@ -1,8 +1,6 @@
 ---
 title: Window.fullScreen
 slug: Web/API/Window/fullScreen
-translation_of: Web/API/Window/fullScreen
-browser-compat: api.Window.fullScreen
 ---
 
 {{APIRef}}{{Non-standard_Header}}
@@ -24,8 +22,7 @@ Une valeur booléenne qui indique si la fenêtre est en plein écran.
 ```js
 if (window.fullScreen) {
   // en plein écran !
-}
-else {
+} else {
   // pas en plein écran !
 }
 ```

@@ -1,7 +1,6 @@
 ---
 title: Intl.NumberFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl/NumberFormat
 ---
 
 {{JSRef}}
@@ -57,24 +56,24 @@ Para obtener el formato del idioma usado en la interfaz de usuario de tu aplicac
 var number = 123456.789;
 
 // En el alemán la coma se utiliza como separador decimal y el punto para los millares
-console.log(new Intl.NumberFormat('de-DE').format(number));
+console.log(new Intl.NumberFormat("de-DE").format(number));
 // → 123.456,789
 
 // En la mayoría de los países de lengua arábiga se utilizan también símbolos arábigos
-console.log(new Intl.NumberFormat('ar-EG').format(number));
+console.log(new Intl.NumberFormat("ar-EG").format(number));
 // → ١٢٣٤٥٦٫٧٨٩
 
 // En la India se utilizan separadores millares/lakh/crore
-console.log(new Intl.NumberFormat('en-IN').format(number));
+console.log(new Intl.NumberFormat("en-IN").format(number));
 // → 1,23,456.789
 
 // La clave de extensión nu requiere un sistema de numeración, p.ej. el decimal chino
-console.log(new Intl.NumberFormat('zh-Hans-CN-u-nu-hanidec').format(number));
+console.log(new Intl.NumberFormat("zh-Hans-CN-u-nu-hanidec").format(number));
 // → 一二三,四五六.七八九
 
 // Cuando se requiera un lenguaje que pudiera no ser soportado, como es el caso del Balinés
 // se recomienda incluir un lenguaje alternativo, en éste caso Indonesio
-console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
+console.log(new Intl.NumberFormat(["ban", "id"]).format(number));
 // → 123.456,789
 ```
 
@@ -86,32 +85,48 @@ Los resultados se pueden personalizar usando el argumento `opciones`:
 var number = 123456.789;
 
 // Se establece un formato de divisa
-console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(number));
+console.log(
+  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
+    number,
+  ),
+);
 // → 123.456,79 €
 
 // El yen japonés no tiene ninguna unidad menor
-console.log(new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(number));
+console.log(
+  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
+    number,
+  ),
+);
 // → ￥123,457
 
 // Limitamos a tres los dígitos significativos
-console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number));
+console.log(
+  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
+    number,
+  ),
+);
 // → 1,23,000
 ```
 
 ### Usando estilos y unidades
 
 ```js
-console.log(new Intl.NumberFormat('pt-PT',  {
-    style: 'unit',
-    unit: 'kilometer-per-hour'
-}).format(50));
+console.log(
+  new Intl.NumberFormat("pt-PT", {
+    style: "unit",
+    unit: "kilometer-per-hour",
+  }).format(50),
+);
 // → 50 km/h
 
-console.log((16).toLocaleString('en-GB', {
-    style: 'unit',
-    unit: 'liter',
-    unitDisplay: 'long'
-}));
+console.log(
+  (16).toLocaleString("en-GB", {
+    style: "unit",
+    unit: "liter",
+    unitDisplay: "long",
+  }),
+);
 // → 16 litros
 ```
 

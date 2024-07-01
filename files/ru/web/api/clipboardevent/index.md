@@ -1,14 +1,6 @@
 ---
 title: ClipboardEvent
 slug: Web/API/ClipboardEvent
-tags:
-  - API
-  - Clipboard API
-  - Event
-  - Experimental
-  - Interface
-  - Буфер обмена
-translation_of: Web/API/ClipboardEvent
 ---
 
 {{APIRef("Clipboard API")}} {{SeeCompatTable}}
@@ -35,7 +27,7 @@ _Нет специальных методов; Этот интерфейс на�
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

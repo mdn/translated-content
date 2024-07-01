@@ -1,8 +1,9 @@
 ---
-title: UIEvent.initUIEvent()
+title: "UIEvent: initUIEvent() メソッド"
+short-title: initUIEvent()
 slug: Web/API/UIEvent/initUIEvent
 l10n:
-  sourceCommit: 70ab349bf0271762d5d8d03b3cdf723fd7d13326
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
 {{APIRef("UI Events")}} {{deprecated_header}}
@@ -42,9 +43,9 @@ initUIEvent(type, canBubble, cancelable, view, detail)
 
 ```js
 const e = document.createEvent("UIEvent");
-// creates a click event that bubbles, can be cancelled,
-// and with its view and detail property initialized to window and 1,
-// respectively
+// バブリングし、キャンセル可能で、 view と detail プロパティが
+// それぞれウィンドウと 1 に初期化されたクリックイベントを
+// 作成
 e.initUIEvent("click", true, true, window, 1);
 ```
 

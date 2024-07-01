@@ -1,49 +1,49 @@
 ---
 title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
+l10n:
+  sourceCommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
 ---
 
 {{JSRef}}
 
-**`has()`** メソッドは、特定の値をもつ要素が `Set` オブジェクト内に存在するかどうかを示す論理値を返します。
+**`has()`** は {{jsxref("Set")}} インターフェイスのメソッドで、指定された値をもつ要素がこの集合内に存在するかどうかを示す論理値を返します。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
 
 ## 構文
 
-```js
+```js-nolint
 has(value)
 ```
 
 ### 引数
 
 - `value`
-  - : `Set` オブジェクトに存在するか検査する値です。
+  - : この `Set` オブジェクトに存在するかを検査する値です。
 
 ### 返値
 
-`Set` オブジェクト内に特定の値をもつ要素が存在していたら `true` を返します。さもなければ `false` を返します。
-
-> **メモ:** 技術的に言えば、`has()` は [Same-value-zero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) アルゴリズムを使用して、指定された要素が見つかったかどうかを判断します。
+この `Set` オブジェクト内に指定された値をもつ要素が存在していたら `true` を返します。さもなければ `false` を返します。
 
 ## 例
 
 ### has() メソッドの使用
 
 ```js
-var mySet = new Set();
-mySet.add('foo');
+const mySet = new Set();
+mySet.add("foo");
 
-mySet.has('foo');  // returns true
-mySet.has('bar');  // returns false
+console.log(mySet.has("foo")); // true
+console.log(mySet.has("bar")); // false
 
-var set1 = new Set();
-var obj1 = {'key1': 1};
+const set1 = new Set();
+const obj1 = { key1: 1 };
 set1.add(obj1);
 
-set1.has(obj1);        // returns true
-set1.has({'key1': 1}); // オブジェクト参照が異なるため false を返す
-set1.add({'key1': 1}); // set1 には 2 つの項目が含まれるようになる
+console.log(set1.has(obj1)); // true
+console.log(set1.has({ key1: 1 })); // オブジェクト参照が異なるため false を返す
+console.log(set1.add({ key1: 1 })); // set1 には 2 つの項目が含まれるようになる
 ```
 
 ## 仕様書

@@ -3,7 +3,7 @@ title: RegExp.prototype.global
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
 ---
 
-{{JSRef("Global_Objects", "RegExp")}}
+{{JSRef}}
 
 ## 概述
 
@@ -19,12 +19,12 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
 
 ## 示例
 
-### 例子：使用 `global`
+### 示例：使用 `global`
 
 ```js
-var regex = new RegExp("foo", "g")
+var regex = new RegExp("foo", "g");
 
-console.log(regex.global) // true
+console.log(regex.global); // true
 ```
 
 ## 规范
@@ -35,10 +35,13 @@ console.log(regex.global) // true
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("RegExp.prototype.ignoreCase")}}
 - {{jsxref("RegExp.prototype.lastIndex")}}
+- {{jsxref("RegExp.prototype.dotAll")}}
+- {{jsxref("RegExp.prototype.hasIndices")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
 - {{jsxref("RegExp.prototype.multiline")}}
 - {{jsxref("RegExp.prototype.source")}}
 - {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxref("RegExp.prototype.unicode")}}

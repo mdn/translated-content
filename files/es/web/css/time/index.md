@@ -49,4 +49,4 @@ El tipo de datos `<time>` consta de un {{cssxref("&lt;number&gt;")}} seguido de 
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.types.time")}}
+{{Compat}}

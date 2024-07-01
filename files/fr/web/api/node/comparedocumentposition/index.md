@@ -1,14 +1,6 @@
 ---
 title: Node.compareDocumentPosition()
 slug: Web/API/Node/compareDocumentPosition
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Méthodes
-  - Noeuds
-  - Position
-translation_of: Web/API/Node/compareDocumentPosition
 ---
 
 {{APIRef("DOM")}}
@@ -29,22 +21,24 @@ La valeur retournée est un masque de bits avec les valeurs suivantes :
 ## Syntaxe
 
 ```js
-node.compareDocumentPosition( otherNode )
+node.compareDocumentPosition(otherNode);
 ```
 
 ## Exemple
 
 ```js
-var head = document.getElementsByTagName('head').item(0);
+var head = document.getElementsByTagName("head").item(0);
 
-if (head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWING) {
+if (
+  head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWING
+) {
   console.log("well-formed document");
 } else {
   console.log("<head> is not before <body>");
 }
 ```
 
-> **Note :** Parce que le résultat renvoyé par `compareDocumentPosition` est un masque de bits, des [opérateurs binaires](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_binaires) doivent être utilisés pour des résultats significatifs.
+> **Note :** Parce que le résultat renvoyé par `compareDocumentPosition` est un masque de bits, des [opérateurs binaires](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires) doivent être utilisés pour des résultats significatifs.
 
 > **Note :** La première instruction utilise l' `item(0)` de la méthode [NodeList](/fr/docs/Web/API/NodeList/item) , qui est l'équivalent de `getElementsByTagName('head')[0].`
 

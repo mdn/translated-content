@@ -5,24 +5,16 @@ slug: Web/API/HTMLMediaElement/paused
 
 {{APIRef("HTML DOM")}}
 
-`属性 (只读)HTMLMediaElement.paused` 告诉视频是否正在暂停
+只读属性 `HTMLMediaElement.paused` 指示视频是否正在暂停。
 
-## 语法
+## 返回值
 
-```plain
-var isPaused = audioOrVideo.paused
-```
+布尔值。`true` 表示正在暂停，`false` 表示没有暂停。
 
-### 返回值
-
-类型{{domxref("Boolean")}}。`true` 暂停中 `false` 没有暂停
-
-_仅限暂停状态 因网络原因造成的缓冲状态仍然会告诉你不在暂停状态_
-
-## 例子
+## 示例
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.paused); // true
 ```
 
@@ -34,6 +26,6 @@ console.log(obj.paused); // true
 
 {{Compat}}
 
-## 参考文档
+## 参见
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}：用于定义 `HTMLMediaElement.paused` 属性的接口。

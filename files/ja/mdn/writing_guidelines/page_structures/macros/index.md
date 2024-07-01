@@ -1,20 +1,20 @@
 ---
 title: マクロの使用
 slug: MDN/Writing_guidelines/Page_structures/Macros
-original_slug: MDN/Structures/Macros
 l10n:
-  sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
+  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
 ---
 
 {{MDNSidebar}}
 
-MDN が動作している [Yari](/ja/docs/MDN/Yari) プラットフォームは、幅広い作業の自動化を可能にする強力なマクロシステムである [KumaScript](/ja/docs/MDN/Tools/KumaScript) を提供しています。この記事は MDN のマクロを記事中で呼び出す方法について情報を提供します。
+MDN が動作している [Yari](https://github.com/mdn/yari) プラットフォームは、幅広い作業の自動化を可能にする強力なマクロシステムである [KumaScript](https://github.com/mdn/yari/tree/main/docs/kumascript) を提供しています。この記事は MDN のマクロを記事中で呼び出す方法について情報を提供します。
 
-[KumaScript ガイド](/ja/docs/MDN/Tools/KumaScript)では MDN 上でマクロを利用する方法について詳細な情報を提供しているので、この節ではむしろ全体の簡潔なまとめをします。
+[KumaScript ガイド](https://github.com/mdn/yari/blob/main/docs/kumascript/README.md)では MDN 上でマクロを利用する方法について詳細な情報を提供しているので、この節ではむしろ全体の簡潔なまとめをします。
 
 ## マクロはどのように実装されているか
 
-MDN 上で動作するマクロは、サーバーで実行される [JavaScript](/ja/docs/Web/JavaScript) コードを使用して実装され、 [Node.js](https://nodejs.org/en/) によって解釈されます。さらに、マクロがプラットフォームやそのコンテンツと相互作用するためのサービスや機能を提供する、私たちが実装したいくつかのライブラリーがあります。
+MDN 上で動作するマクロは、サーバーで実行される [JavaScript](/ja/docs/Web/JavaScript) コードを使用して実装され、 [Node.js](https://nodejs.org/en/) によって解釈されます。
+さらに、マクロがプラットフォームやそのコンテンツと相互作用するためのサービスや機能を提供する、私たちが実装したいくつかのライブラリーがあります。
 
 ## コンテンツでのマクロの利用
 
@@ -30,10 +30,17 @@ MDN 上で動作するマクロは、サーバーで実行される [JavaScript]
 - 引数はカンマで区切ります。
 - 引数がなければ括弧は取ってしまって構いません。 `\{{macroname()}}` と `\{{macroname}}` はまったく同じです。
 - 数値の引数は引用符で囲む必要がありませんが、囲んでも構いません (ただし、複数のピリオドを含むバージョン番号を渡す場合などは、引用符で囲む必要があります)。
-- エラーが発生した場合は、コードを丁寧に読み返して下さい。何が問題なのかそれでも特定できなかった場合には、 [KumaScript エラーのトラブルシューティング](/ja/docs/MDN/Tools/KumaScript/Troubleshooting)を参照して下さい。
+- エラーが発生した場合は、コードを丁寧に読み返して下さい。何が問題なのかそれでも特定できなかった場合には、 [KumaScript エラーのトラブルシューティング](https://github.com/mdn/yari/blob/main/docs/kumascript/troubleshooting-errors.md)を参照して下さい。
 
 マクロは高度にキャッシュ化されています。どの入力値についても (引数や、マクロを動作させる URL といった環境変数のいずれでも)、その結果は記憶され再利用されます。つまり、入力が変化した時だけマクロは実行されます。
 
 マクロは大きなテキストブロックを挿入したり、 MDN の他記事からの内容で置き換えたりするようなシンプルなこともできますし、サイトを走査して目次をまるごと作り上げたり、出力のスタイル付けをしたり、リンクを張ったりといった複雑なこともできます。
 
 最もよく使われるマクロについては、[よく使われるマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros)のページで学習することができます。また、[すべてのマクロの完全なソース](https://github.com/mdn/yari/tree/main/kumascript/macros)もあります。そして多くのマクロには最上部のコメントとして、ソースに説明が組み込まれています。
+
+## 関連情報
+
+- [サイドバーマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
+- [リンクマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Links)
+- [機能状態マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status)
+- [マクロの一覧](https://github.com/mdn/yari/tree/main/kumascript/macros) (GitHub)

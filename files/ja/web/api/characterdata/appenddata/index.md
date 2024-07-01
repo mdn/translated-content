@@ -1,6 +1,8 @@
 ---
-title: CharacterData.appendData()
+title: "CharacterData: appendData() メソッド"
 slug: Web/API/CharacterData/appendData
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef("DOM")}}
@@ -9,8 +11,8 @@ slug: Web/API/CharacterData/appendData
 
 ## 構文
 
-```js
-appendData(data);
+```js-nolint
+appendData(data)
 ```
 
 ### 引数
@@ -25,14 +27,14 @@ appendData(data);
 ## 例
 
 ```html
-<span>Result: </span>A text
+<span>結果: </span>テキスト
 ```
 
 ```js
-let span = document.getElementsByTagName("span")[0];
-let textnode = span.nextSibling;
+const span = document.querySelector("span");
+const textnode = span.nextSibling;
 
-textnode.appendData(" - appended text.");
+textnode.appendData(" - 追加テキスト");
 ```
 
 {{EmbedLiveSample("Example", "100%", 50)}}

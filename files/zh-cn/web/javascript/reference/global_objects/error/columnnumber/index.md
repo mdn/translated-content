@@ -1,32 +1,42 @@
 ---
 title: Error.prototype.columnNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
+l10n:
+  sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{JSRef}} {{Non-standard_Header}}
 
-**`columnNumber`**属性包含引发此错误的文件行中的列号。
+{{jsxref("Error")}} 实例的 **`columnNumber`** 数据属性包含引发此错误的文件行中的列号。
 
-## 例子
+## 值
 
-### 使用 `columnNumber`
+正整数。
+
+{{js_property_attributes(1, 0, 1)}}
+
+## 示例
+
+### 使用 columnNumber
 
 ```js
-var e = new Error('Could not parse input');
-throw e;
-console.log(e.columnNumber) // 0
+try {
+  throw new Error("无法解析输入");
+} catch (err) {
+  console.log(err.columnNumber); // 9
+}
 ```
 
 ## 规范
 
-{{Specifications}}
+不属于任何规范。
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+- {{jsxref("Error.prototype.stack")}}
+- {{jsxref("Error.prototype.lineNumber")}}
+- {{jsxref("Error.prototype.fileName")}}

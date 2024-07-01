@@ -1,6 +1,6 @@
 ---
 title: Element.requestFullscreen()
-slug: Web/API/Element/requestFullScreen
+slug: Web/API/Element/requestFullscreen
 ---
 
 {{APIRef("Fullscreen API")}}
@@ -31,6 +31,7 @@ requestFullscreen(options)
 _`requestFullscreen()` 通过拒绝返回的 `Promise`来生成错误条件，而不是抛出一个传统的异常。拒绝控制器接收以下的某一个值：_
 
 - {{jsxref("TypeError")}}
+
   - : 在以下几种情况下，会抛出`TypeError`：
 
     - 文档中包含的元素未完全激活，也就是说不是当前活动的元素。
@@ -58,4 +59,4 @@ _`requestFullscreen()` 通过拒绝返回的 `Promise`来生成错误条件，�
 - {{ domxref("Document.fullscreen") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }}
-- {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen)

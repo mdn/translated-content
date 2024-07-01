@@ -3,7 +3,7 @@ title: transition-property
 slug: Web/CSS/transition-property
 ---
 
-{{CSSRef("CSS Transitions")}}
+{{CSSRef}}
 
 La propiedad CSS **`transition-property`** se usa para definir los nombres de las propiedades CSS en las que el efecto de la transición debe aplicarse.
 
@@ -18,7 +18,10 @@ transition-property: sliding-vertically;
 transition-property: test1;
 transition-property: test1, animation4;
 transition-property: all, height, all;
-transition-property: all, -moz-specific, sliding;
+transition-property:
+  all,
+  -moz-specific,
+  sliding;
 
 /* Global values */
 transition-property: inherit;
@@ -57,7 +60,7 @@ Hay varios ejemplos de transiciones CSS incluídos en el artículo principal [Tr
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.transition-property")}}
+{{Compat}}
 
 ## Véase también
 

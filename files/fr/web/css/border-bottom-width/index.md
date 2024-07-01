@@ -1,11 +1,6 @@
 ---
 title: border-bottom-width
 slug: Web/CSS/border-bottom-width
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-bottom-width
 ---
 
 {{CSSRef}}
@@ -59,13 +54,13 @@ border-bottom-width: unset;
 ### CSS
 
 ```css
-.element1{
+.element1 {
   border-bottom: thick solid red;
 }
-.element2{
+.element2 {
   border-bottom: medium solid orange;
 }
-.element3{
+.element3 {
   border-bottom: thin solid green;
 }
 ```
@@ -73,17 +68,11 @@ border-bottom-width: unset;
 ### HTML
 
 ```html
-<p class="element1">
-  Une bordure épaisse rouge.
-</p>
+<p class="element1">Une bordure épaisse rouge.</p>
 
-<p class="element2">
-  Une bordure moyenne orange.
-</p>
+<p class="element2">Une bordure moyenne orange.</p>
 
-<p class="element3">
-  Et une bordure fine verte.
-</p>
+<p class="element3">Et une bordure fine verte.</p>
 ```
 
 ### Résultat

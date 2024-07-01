@@ -1,32 +1,43 @@
 ---
 title: Allow
 slug: Web/HTTP/Headers/Allow
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-**`Allow`** 首部字段用于枚举资源所支持的 HTTP 方法的集合。
+**`Allow`** 标头列出了资源支持的方法集。
 
-若服务器返回状态码 {{HTTPStatus("405")}} `Method Not Allowed`，则该首部字段亦需要同时返回给客户端。如果 `Allow` 首部字段的值为空，说明资源不接受使用任何 HTTP 方法的请求。这是可能的，比如服务器需要临时禁止对资源的任何访问。
+当服务器响应带有 {{HTTPStatus("405")}} `Method Not Allowed` 状态码时必须发送此标头，以表示可以使用哪些请求方法。`Allow` 空标头表示该资源不允许使用任何请求方法，例如，这种情况可能针对某个特定资源会临时出现。
 
-| Header type                                      | {{Glossary("Entity header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">标头类型</th>
+      <td>{{Glossary("Response header", "响应标头")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
-```plain
+```http
 Allow: <http-methods>
 ```
 
-## 声明
+## 指令
 
 - \<http-methods>
-  - : [HTTP](/zh-CN/docs/Web/HTTP/Methods) 请求方法的集合。
+  - : 以逗号分隔的允许 [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Methods)列表。
 
 ## 示例
 
-```plain
+```http
 Allow: GET, POST, HEAD
 ```
 

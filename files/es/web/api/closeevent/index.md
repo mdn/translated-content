@@ -56,9 +56,13 @@ _Esta interface tambien hereda metodos de su padre, {{domxref("Event")}}._
 - {{domxref("CloseEvent.initCloseEvent()")}} {{Non-standard_inline}} {{deprecated_inline}}
   - : Inicializa el valor de un `CloseEvent` creado. Si el evento ya ha sido enviado, este método no funciona. No use más este método, use el {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} constructor en su lugar.
 
-## Compatibilidad entre Navegadores
+## Especificaciones
 
-{{Compat("api.CloseEvent")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver tambien
 

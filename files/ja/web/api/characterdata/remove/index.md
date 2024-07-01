@@ -1,6 +1,8 @@
 ---
-title: CharacterData.remove()
+title: "CharacterData: remove() メソッド"
 slug: Web/API/CharacterData/remove
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef("DOM")}}
@@ -9,8 +11,8 @@ slug: Web/API/CharacterData/remove
 
 ## 構文
 
-```js
-remove();
+```js-nolint
+remove()
 ```
 
 ### 引数
@@ -22,12 +24,12 @@ remove();
 ### `remove()` の使用
 
 ```html
-<span>Result: </span>A long string.
+<span>結果: </span>A long string.
 ```
 
 ```js
-let span = document.getElementsByTagName("span")[0];
-let textnode = span.nextSibling;
+const span = document.querySelector("span");
+const textnode = span.nextSibling;
 
 textnode.remove(); // Removes the text
 ```

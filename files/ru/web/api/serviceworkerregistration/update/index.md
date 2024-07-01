@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerRegistration.update()
 slug: Web/API/ServiceWorkerRegistration/update
-translation_of: Web/API/ServiceWorkerRegistration/update
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
@@ -29,18 +28,21 @@ ServiceWorkerRegistration.update();
 В следующем простом примере регистрируется service worker, а затем добавляется обработчик события клика по кнопке, так что вы можете явно обновить service worker по необходимости:
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
-    // Регистрация произошла
-    console.log('Registration succeeded.');
-    button.onclick = function() {
-      registration.update();
-    }
-  }).catch(function(error) {
-    // Ошибка при регистрации
-    console.log('Registration failed with ' + error);
-  });
-};
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/sw-test/sw.js", { scope: "sw-test" })
+    .then(function (registration) {
+      // Регистрация произошла
+      console.log("Registration succeeded.");
+      button.onclick = function () {
+        registration.update();
+      };
+    })
+    .catch(function (error) {
+      // Ошибка при регистрации
+      console.log("Registration failed with " + error);
+    });
+}
 ```
 
 ## Спецификации

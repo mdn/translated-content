@@ -1,6 +1,8 @@
 ---
-title: CSSKeyframesRule.appendRule()
+title: "CSSKeyframesRule: appendRule() メソッド"
 slug: Web/API/CSSKeyframesRule/appendRule
+l10n:
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{APIRef("CSSOM") }}
@@ -9,25 +11,25 @@ slug: Web/API/CSSKeyframesRule/appendRule
 
 ## 構文
 
-```js
-CSSKeyframesRule.appendRule(rule);
+```js-nolint
+appendRule(rule)
 ```
 
 ### 引数
 
 - `rule`
-  - : keyframe ルールを含む {{domxref("CSSOMString")}} です。
+  - : keyframe ルールの入った文字列です。
 
 ### 返値
 
-なし。
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
 この CSS には keyframes アットルールがあります。これは `document.styleSheets[0].cssRules` で返される最初の {{domxref("CSSRule")}} になります。
 `myRules[0]` は {{domxref("CSSKeyframesRule")}} オブジェクトを返します。その `cssRules` プロパティは 1 つのルールの入った {{domxref("CSSRuleList")}} を返します。
 
-`appendRule` でもう一つのルールを追加すると、 `cssRules` プロパティは 2 つのルールが入った {{domxref("CSSRuleList")}} を返します。
+`appendRule` でもう 1 つのルールを追加すると、 `cssRules` プロパティは 2 つのルールが入った {{domxref("CSSRuleList")}} を返します。
 
 ```css
 @keyframes slidein {
@@ -40,7 +42,7 @@ CSSKeyframesRule.appendRule(rule);
 ```js
 let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
-keyframes.appendRule('to {transform: translateX(100%);}');
+keyframes.appendRule("to {transform: translateX(100%);}");
 console.log(keyframes.cssRules); // 2 つのルールが入った CSSRuleList オブジェクト
 ```
 

@@ -2,6 +2,7 @@
 title: Web 개발 학습하기
 slug: Learn
 ---
+
 {{LearnSidebar}}
 
 MDN 학습지에 오신 것을 환영합니다! 여기는 웹 개발을 처음 접하는 초보자가 웹 사이트 개발을 시작하기 위해 필요한 모든 것을 제공하는 글을 모아놓은 곳입니다.
@@ -82,36 +83,36 @@ MDN 학습지의 목표는 여러분을 "전문가"로 만드는 것이 아니�
 자동 업데이트도 할 수 있는, 복잡하지만 좀 더 유연한 방법도 있습니다. 다음과 같은 방법으로 저장소를 복사하세요.
 
 1. 컴퓨터에 [Git](http://git-scm.com/downloads)을 설치하세요. Git은 GitHub을 구성하는 버전 컨트롤
-    시스템입니다.
+   시스템입니다.
 2. [명령 프롬프트](https://www.lifewire.com/how-to-open-command-prompt-2618089)(Windows) 또는 터미널([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line))을 여세요.
 3. 명령 프롬프트/터미널이 가리키는 현재 위치에 `learning-area` 저장소를 복사하시려면 다음 명령어를
-    입력하세요.
+   입력하세요.
 
-    ```bash
-    git clone https://github.com/mdn/learning-area
-    ```
+   ```bash
+   git clone https://github.com/mdn/learning-area
+   ```
 
 4. 이제 탐색기/Finder 또는
-    [`cd` 명령어](<https://ko.wikipedia.org/wiki/Cd_(%EB%AA%85%EB%A0%B9%EC%96%B4)>)를 사용해서
-    원하시는 파일을 찾아보세요.
+   [`cd` 명령어](<https://ko.wikipedia.org/wiki/Cd_(%EB%AA%85%EB%A0%B9%EC%96%B4)>)를 사용해서
+   원하시는 파일을 찾아보세요.
 
 GitHub의 마스터 버전에 변경사항이 생겼을 땐 `learning-area` 저장소를 아래의 방법으로 업데이트하실 수
 있습니다.
 
 1. 명령 프롬프트/터미널에서 `cd`명령어를 사용해 `learning-area` 폴더로 이동하세요. 만약 현재
-    위치가 `learning-area` 폴더의 바로 위라면,
+   위치가 `learning-area` 폴더의 바로 위라면,
 
-    ```bash
-    cd learning-area
-    ```
+   ```bash
+   cd learning-area
+   ```
 
-    입력하시면 됩니다.
+   입력하시면 됩니다.
 
 2. 아래의 명령어를 입력해 저장소를 업데이트하세요.
 
-    ```bash
-    git pull
-    ```
+   ```bash
+   git pull
+   ```
 
 ## 연락처
 

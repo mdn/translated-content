@@ -67,7 +67,7 @@ Negative values are allowed.
 
 ```css
 img {
- vertical-align: bottom;
+  vertical-align: bottom;
 }
 ```
 
@@ -75,9 +75,9 @@ img {
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.vertical-align")}}
+{{Compat}}
 
 ## Ver también
 

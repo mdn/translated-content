@@ -1,21 +1,8 @@
 ---
 title: CSS и JavaScript доступность - лучшие практики
 slug: Learn/Accessibility/CSS_and_JavaScript
-tags:
-  - Доступность
-  - Статья
-  - CSS
-  - CodingScripting
-  - Руководство
-  - JavaScript
-  - Обучение
-  - Цвет
-  - Контраст
-  - Скрытие
-  - Ненавязчивость
-translation_of: Learn/Accessibility/CSS_and_JavaScript
-original_slug: Learn/Доступность/CSS_and_JavaScript
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
 
 В CSS и JavaScript есть множество возможностей для создания доступных интерфейсов. Но это обоюдоострый клинок — при неосторожном обращении они могут доступности и значительно навредить. В этой статье мы рассмотрим лучшие практики в CSS и JavaScript, которые позволят даже сложному контенту оставаться доступным настолько, насколько это возможно.
@@ -62,7 +49,8 @@ h1 {
   font-size: 5rem;
 }
 
-p, li {
+p,
+li {
   line-height: 1.5;
   font-size: 1.6rem;
 }
@@ -83,13 +71,17 @@ p, li {
 ```html
 <p>Вода <em>очень горячая</em>.</p>
 
-<p>Собирающиеся на поверхности капельки воды называются <strong>конденсатом</strong>.</p>
+<p>
+  Собирающиеся на поверхности капельки воды называются
+  <strong>конденсатом</strong>.
+</p>
 ```
 
 Возможно, нам понадобится добавить цвета акцентированному тексту:
 
 ```css
-strong, em {
+strong,
+em {
   color: #a60000;
 }
 ```
@@ -101,7 +93,10 @@ strong, em {
 Элемент, который позволяет разметить аббревиатуру или акроним и указать их расшифку:
 
 ```html
-<p>Веб-контент верстается с помощью <abbr title="Hypertext Markup Language">HTML</abbr>.</p>
+<p>
+  Веб-контент верстается с помощью
+  <abbr title="Hypertext Markup Language">HTML</abbr>.
+</p>
 ```
 
 И вновь, возможно, нам понадобится немного стилизовать наши аббревиатуры:
@@ -129,7 +124,9 @@ a {
   color: #ff0000;
 }
 
-a:hover, a:visited, a:focus {
+a:hover,
+a:visited,
+a:focus {
   color: #a60000;
   text-decoration: none;
 }
@@ -155,7 +152,7 @@ a:active {
 ```html
 <div>
   <label for="name">Введите имя</label>
-  <input type="text" id="name" name="name">
+  <input type="text" id="name" name="name" />
 </div>
 ```
 
@@ -246,7 +243,7 @@ a:active {
 
 ```html
 <label for="name">Введите ваше имя:</label>
-<input type="text" name="name" id="name">
+<input type="text" name="name" id="name" />
 ```
 
 Чтобы избежать слишком частого обновления пользовательского интерфейса и возможных проблем для пользователей скринридеров, мы производим валидацию только при попытке отправки формы:
@@ -255,16 +252,16 @@ a:active {
 form.onsubmit = validate;
 
 function validate(e) {
-  errorList.innerHTML = '';
+  errorList.innerHTML = "";
   for (let i = 0; i < formItems.length; i++) {
     const testItem = formItems[i];
-    if (testItem.input.value === '') {
-      errorField.style.left = '360px';
+    if (testItem.input.value === "") {
+      errorField.style.left = "360px";
       createLink(testItem);
     }
   }
 
-  if (errorList.innerHTML !== '') {
+  if (errorList.innerHTML !== "") {
     e.preventDefault();
   }
 }
@@ -274,18 +271,23 @@ function validate(e) {
 
 В реальности валидация формы будет в разы сложнее. Возможно, вы захотите проверить, что введённое имя действительно выглядит как имя, а возраст — как число, да ещё и реалистичное (например, не отрицательное и состоящее не более чем из 3 цифр). Здесь мы реализовали лишь примитивную проверку на наличие хоть какого-то текста в полях ввода (`if (testItem.input.value === '')`).
 
-Когда валидация проходит успешно, форма отправляется на сервер. Если же были обнаружены ошибки (`if (errorList.innerHTML !== '')`), то мы прерываем отправку формы (при помощи [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault)) и отображаем сообщения обо всех найденных ошибках (смотрите далее).
+Когда валидация проходит успешно, форма отправляется на сервер. Если же были обнаружены ошибки (`if (errorList.innerHTML !== '')`), то мы прерываем отправку формы (при помощи [`preventDefault()`](/ru/docs/Web/API/Event/preventDefault)) и отображаем сообщения обо всех найденных ошибках (смотрите далее).
 
 Для каждого пустого на момент отправки формы поля ввода мы создаем элемент списка с ссылкой и добавляем в `errorList`.
 
 ```js
 function createLink(testItem) {
-  const listItem = document.createElement('li');
-  const anchor = document.createElement('a');
+  const listItem = document.createElement("li");
+  const anchor = document.createElement("a");
 
-  anchor.textContent = 'Поле ввода ' + testItem.input.name + ' пусто: введите ' + testItem.input.name + '.';
-  anchor.href = '#' + testItem.input.name;
-  anchor.onclick = function() {
+  anchor.textContent =
+    "Поле ввода " +
+    testItem.input.name +
+    " пусто: введите " +
+    testItem.input.name +
+    ".";
+  anchor.href = "#" + testItem.input.name;
+  anchor.onclick = function () {
     testItem.input.focus();
   };
   listItem.appendChild(anchor);
@@ -295,7 +297,7 @@ function createLink(testItem) {
 
 Каждая ссылка выполняет две задачи — она рассказыает, какая ошибка случилась, а также при клике на неё можно перейти прямо в связанное поле ввода и скорректировать введённое значение.
 
-> **Примечание:** Часть этого примера, связанная с `focus()`, довольно хитрая. Браузеры Chrome и Edge (а также новые версии IE) не нуждаются в коде `onclick`/`focus()` — они сами переведут фокус на элемент после клика по ссылке. Safari лишь выделит нужный элемент, так что этот блок кода нужен для корректной установки фокуса. В Firefox же трюк с выделением элемента при клике по ссылке не работает вообще. Данная ошибка должна быть вскоре исправлена — тогда Firefox придет к паритету с прочими браузерами (смотрите {{bug(277178)}}).
+> **Примечание:** Часть этого примера, связанная с `focus()`, довольно хитрая. Браузеры Chrome и Edge (а также новые версии IE) не нуждаются в коде `onclick`/`focus()` — они сами переведут фокус на элемент после клика по ссылке. Safari лишь выделит нужный элемент, так что этот блок кода нужен для корректной установки фокуса. В Firefox же трюк с выделением элемента при клике по ссылке не работает вообще. Данная ошибка должна быть вскоре исправлена — тогда Firefox придет к паритету с прочими браузерами (смотрите [Firefox bug 277178](https://bugzil.la/277178)).
 
 Дополнительно, то что `errorField` расположено в вёрстке в самом начале (тогда как визуально в интерфейсе расположено иначе при помощи CSS), позволяет пользователям увидеть, что именно не так с заполнением формы, и легко вернуться обратно к нужным полям ввода в начале страницы.
 
@@ -351,13 +353,3 @@ imgThumb.onblur = hideImg;
 Далее WAI-ARIA!
 
 {{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
-
-## В этом модуле
-
-- [Что такое доступность?](/ru/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: Хорошая основа для доступности](/ru/docs/Learn/Accessibility/HTML)
-- [CSS и JavaScript доступность - лучшие практики](/ru/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [Основы WAI-ARIA](/ru/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Доступность мультимедиа](/ru/docs/Learn/Accessibility/Multimedia)
-- [Мобильная доступность](/ru/docs/Learn/Accessibility/Mobile)
-- [Устранение проблем доступности](/ru/docs/Learn/Accessibility/Accessibility_troubleshooting)

@@ -1,11 +1,6 @@
 ---
 title: "ReferenceError: can't access lexical declaration 'X' before initialization"
 slug: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
-tags:
-  - Errors
-  - JavaScript
-  - ReferenceError
-translation_of: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 ---
 
 {{jsSidebar("Errors")}}
@@ -23,7 +18,7 @@ ReferenceError: 'x' is not defined (Chrome)
 
 ## Что случилось?
 
-Попытка доступа к лексической переменной до её инициализации. Это может произойти в любом блоке, если попытаться обратиться к переменной, объявленной с помощью ключевых слов [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) или [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) до того, как им было присвоено значение.
+Попытка доступа к лексической переменной до её инициализации. Это может произойти в любом блоке, если попытаться обратиться к переменной, объявленной с помощью ключевых слов [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let) или [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const) до того, как им было присвоено значение.
 
 ## Примеры
 
@@ -35,7 +30,7 @@ ReferenceError: 'x' is not defined (Chrome)
 function test() {
   let foo = 33;
   if (true) {
-    let foo = (foo + 55);
+    let foo = foo + 55;
     // ReferenceError: can't access lexical
     // declaration `foo' before initialization
   }
@@ -48,11 +43,11 @@ test();
 Чтобы изменить "foo" в теле выражения if, надо убрать ключевое слово `let` и таким образом избавиться от повторного объявления.
 
 ```js example-good
-function test(){
-   let foo = 33;
-   if (true) {
-      foo = (foo + 55);
-   }
+function test() {
+  let foo = 33;
+  if (true) {
+    foo = foo + 55;
+  }
 }
 test();
 ```

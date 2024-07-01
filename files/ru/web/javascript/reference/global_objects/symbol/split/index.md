@@ -1,7 +1,6 @@
 ---
 title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
 ---
 
 {{JSRef}}
@@ -12,18 +11,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
 
 {{EmbedInteractiveExample("pages/js/symbol-split.html")}}{{js_property_attributes(0,0,0)}}
 
-## Specifications
+## Спецификации
 
-| Specification                                                                    | Status                       | Comment             |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-symbol.split', 'Symbol.split')}} | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-symbol.split', 'Symbol.split')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.replace")}}

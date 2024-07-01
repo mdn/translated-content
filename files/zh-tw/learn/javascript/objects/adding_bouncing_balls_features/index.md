@@ -24,7 +24,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 在開始之前，請先複製先前文章所提供的 [index-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html)、[style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css)、[main-finished.js](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) 等檔案，儲存於本端磁碟的新資料夾中。
 
-> **備註：** 你也可透過如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 等網站進行此一實作。你可將 HTML、CSS、JavaScript 貼入相關線上編輯器之一。如果你所用的線上編輯器並未提供獨立的 JavaScript/CSS 面板，則可將之放入 HTML 頁面內的行內 `<script>`/`<style>` 元素中。
+> **備註：** 你也可透過如 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 等網站進行此一實作。你可將 HTML、CSS、JavaScript 貼入相關線上編輯器之一。如果你所用的線上編輯器並未提供獨立的 JavaScript/CSS 面板，則可將之放入 HTML 頁面內的行內 `<script>`/`<style>` 元素中。
 
 ## 專案簡介
 
@@ -93,17 +93,17 @@ This method will add an `onkeydown` event listener to the `window` object so tha
 
 ```js
 var _this = this;
-window.onkeydown = function(e) {
-    if(e.keyCode === 65) {
-      _this.x -= _this.velX;
-    } else if(e.keyCode === 68) {
-      _this.x += _this.velX;
-    } else if(e.keyCode === 87) {
-      _this.y -= _this.velY;
-    } else if(e.keyCode === 83) {
-      _this.y += _this.velY;
-    }
+window.onkeydown = function (e) {
+  if (e.keyCode === 65) {
+    _this.x -= _this.velX;
+  } else if (e.keyCode === 68) {
+    _this.x += _this.velX;
+  } else if (e.keyCode === 87) {
+    _this.y -= _this.velY;
+  } else if (e.keyCode === 83) {
+    _this.y += _this.velY;
   }
+};
 ```
 
 So when a key is pressed, the event object's [keyCode](/zh-TW/docs/Web/API/KeyboardEvent/keyCode) property is consulted to see which key is pressed. If it is one of the four represented by the specified keycodes, then the evil circle will move left/right/up/down.
@@ -133,22 +133,22 @@ To implement the score counter, follow the following steps:
 1. In your HTML file, add a {{HTMLElement("p")}} element just below the {{HTMLElement("h1")}} element containing the text "Ball count: ".
 2. In your CSS file, add the following rule at the bottom:
 
-    ```css
-    p {
-      position: absolute;
-      margin: 0;
-      top: 35px;
-      right: 5px;
-      color: #aaa;
-    }
-    ```
+   ```css
+   p {
+     position: absolute;
+     margin: 0;
+     top: 35px;
+     right: 5px;
+     color: #aaa;
+   }
+   ```
 
 3. In your JavaScript, make the following updates:
 
-    - Create a variable that stores a reference to the paragraph.
-    - Keep a count of the number of balls on screen in some way.
-    - Increment the count and display the updated number of balls each time a ball is added to the scene.
-    - Decrement the count and display the updated number of balls each time the evil circle eats a ball (causes it not to exist).
+   - Create a variable that stores a reference to the paragraph.
+   - Keep a count of the number of balls on screen in some way.
+   - Increment the count and display the updated number of balls each time a ball is added to the scene.
+   - Decrement the count and display the updated number of balls each time the evil circle eats a ball (causes it not to exist).
 
 ## Hints and tips
 
@@ -157,6 +157,6 @@ To implement the score counter, follow the following steps:
 
 ## 交作業
 
-如果你是在某個課堂上操作這份作業，那麼請將成品交給您的老師 / 助教；如果您是自學者，在我們的[專屬討論區](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)或 [Mozilla IRC](https://wiki.mozilla.org/IRC) 上的 [#mdn](irc://irc.mozilla.org/mdn) 頻道都可以很輕鬆地找到人給予指教。記得先認真做一下習題，要怎麼收獲先那麼栽呀！
+如果你是在某個課堂上操作這份作業，那麼請將成品交給你的老師 / 助教；如果你是自學者，在我們的[專屬討論區](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)或 [Mozilla IRC](https://wiki.mozilla.org/IRC) 上的 [#mdn](irc://irc.mozilla.org/mdn) 頻道都可以很輕鬆地找到人給予指教。記得先認真做一下習題，要怎麼收獲先那麼栽呀！
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}

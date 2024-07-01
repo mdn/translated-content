@@ -45,11 +45,11 @@ postMessage(aMessage, transferList)
 
 ```js
 onmessage = (e) => {
-  console.log('Message received from main script');
+  console.log("Message received from main script");
   const workerResult = `Result: ${e.data[0] * e.data[1]}`;
-  console.log('Posting message back to main script');
+  console.log("Posting message back to main script");
   postMessage(workerResult);
-}
+};
 ```
 
 メインスクリプトでは `onmessage` を `Worker` オブジェクトに対して呼び出す必要がありますが、ワーカススクリプトの内部では `onmessage` だけで済みます。ワーカーは事実上グローバルスコープ ({{domxref("DedicatedWorkerGlobalScope")}}) になっているためです。

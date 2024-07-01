@@ -1,6 +1,6 @@
 ---
 title: CSS カウンタースタイル
-slug: Web/CSS/CSS_Counter_Styles
+slug: Web/CSS/CSS_counter_styles
 ---
 
 {{CSSRef}}
@@ -41,12 +41,12 @@ slug: Web/CSS/CSS_Counter_Styles
 
 ### `@counter-style` ルール
 
-{{Compat("css.at-rules.counter-style")}}
+{{Compat}}
 
 ### `counter-increment` プロパティ
 
-{{Compat("css.properties.counter-increment")}}
+{{Compat}}
 
 ### `counter-reset` プロパティ
 
-{{Compat("css.properties.counter-reset")}}
+{{Compat}}

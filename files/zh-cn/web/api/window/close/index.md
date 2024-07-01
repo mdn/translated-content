@@ -9,7 +9,7 @@ slug: Web/API/Window/close
 
 该方法只能由 {{domxref("Window.open()")}} 方法打开的窗口的 `window` 对象来调用。如果一个窗口不是由脚本打开的，那么，在调用该方法时，JavaScript 控制台会出现类似下面的错误：`不能使用脚本关闭一个不是由脚本打开的窗口。` 或 `Scripts may not close windows that were not opened by script.` 。
 
-同时也要注意，对于由 [`HTMLIFrame​Element​.content​Window`](/zh-CN/docs/Web/API/HTMLIFrameElement/contentWindow) 返回的 {{domxref("Window")}} 对象，`close()` 也没有效果。
+同时也要注意，对于由 [`HTMLIFrameElement.contentWindow`](/zh-CN/docs/Web/API/HTMLIFrameElement/contentWindow) 返回的 {{domxref("Window")}} 对象，`close()` 也没有效果。
 
 ## 语法
 
@@ -28,7 +28,7 @@ window.close();
 var openedWindow;
 
 function openWindow() {
-  openedWindow = window.open('moreinfo.htm');
+  openedWindow = window.open("moreinfo.htm");
 }
 
 function closeOpenedWindow() {

@@ -1,8 +1,13 @@
 ---
 title: 추상화
 slug: Glossary/Abstraction
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
-{{Glossary("computer programming", "컴퓨터 프로그래밍")}}에서의 **추상화**란 복잡한 소프트웨어 시스템을 효율적으로 설계하고 구현할 수 있는 방법입니다. 추상화는 뒷편 시스템의 기술적 복잡함을 단순한 {{Glossary("API")}} 뒤에 숨깁니다.
+
+{{GlossarySidebar}}
+
+{{Glossary("computer programming", "컴퓨터 프로그래밍")}}에서의 **추상화**란 복잡한 소프트웨어 시스템을 효율적으로 설계하고 구현할 수 있는 방법입니다. 추상화는 뒷편 시스템의 기술적 복잡함을 단순한 {{Glossary("API", "API들")}} 뒤에 숨깁니다.
 
 ## 데이터 추상화의 장점
 
@@ -14,28 +19,26 @@ slug: Glossary/Abstraction
 ## 예
 
 ```js
-    class ImplementAbstraction {
-      // method to set values of internal members
-      set(x, y) {
-        this.a = x;
-        this.b = y;
-      }
+class ImplementAbstraction {
+  // 내부 멤버 변수의 값을 설정하는 메소드
+  set(x, y) {
+    this.a = x;
+    this.b = y;
+  }
 
-      display() {
-        console.log('a = ' + this.a);
-        console.log('b = ' + this.b);
-      }
-    }
+  display() {
+    console.log(`a = ${this.a}`);
+    console.log(`b = ${this.b}`);
+  }
+}
 
-    const obj = new ImplementAbstraction();
-    obj.set(10, 20);
-    obj.display();
-    // a = 10
-    // b = 20
+const obj = new ImplementAbstraction();
+obj.set(10, 20);
+obj.display();
+// a = 10
+// b = 20
 ```
 
-## 더 알아보기
-
-### 일반적인 지식
+## 같이 보기
 
 - Wikipedia의 [Abstraction](<https://en.wikipedia.org/wiki/Abstraction_(computer_science)>)

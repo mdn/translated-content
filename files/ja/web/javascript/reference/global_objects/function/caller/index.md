@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 
 ## 解説
 
-関数 `f` が最上位のコードで呼び出された場合、 `f.caller` の値は {{jsxref("null")}} に、それ以外の場合の値は `f` を呼び出した関数になります。厳格モード、非同期関数、ジェネレーター関数の呼び出し元についても `null` を返します。
+関数 `f` が最上位のコードで呼び出された場合、 `f.caller` の値は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) に、それ以外の場合の値は `f` を呼び出した関数になります。厳格モード、非同期関数、ジェネレーター関数の呼び出し元についても `null` を返します。
 
 このプロパティは、廃止された {{jsxref("Functions/arguments", "arguments")}} オブジェクトの {{jsxref("Functions/arguments/caller", "arguments.caller")}} プロパティを置き換えます。
 
@@ -20,8 +20,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 再帰呼び出しの場合、このプロパティを用いてコールスタックを再現することはできません。以下について考えてみましょう。
 
 ```js
-function f(n) { g(n - 1); }
-function g(n) { if (n > 0) { f(n); } else { stop(); } }
+function f(n) {
+  g(n - 1);
+}
+function g(n) {
+  if (n > 0) {
+    f(n);
+  } else {
+    stop();
+  }
+}
 f(2);
 ```
 
@@ -34,16 +42,16 @@ f(2) -> g(1) -> f(1) -> g(0) -> stop()
 以下は真になります。
 
 ```js
-stop.caller === g && f.caller === g && g.caller === f
+stop.caller === g && f.caller === g && g.caller === f;
 ```
 
 従って、`stop()` 関数のスタックトレースを以下のようにして取得するとします。
 
 ```js
 var f = stop;
-var stack = 'Stack trace:';
+var stack = "Stack trace:";
 while (f) {
-  stack += '\n' + f.name;
+  stack += "\n" + f.name;
   f = f.caller;
 }
 ```
@@ -59,9 +67,9 @@ while (f) {
 ```js
 function myFunc() {
   if (myFunc.caller == null) {
-    return 'The function was called from the top!';
+    return "The function was called from the top!";
   } else {
-    return 'This function\'s caller was ' + myFunc.caller;
+    return "This function's caller was " + myFunc.caller;
   }
 }
 ```
@@ -72,7 +80,7 @@ function myFunc() {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Function.caller")}}
+{{Compat}}
 
 ## 関連情報
 

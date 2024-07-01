@@ -1,7 +1,8 @@
 ---
-title: HTMLAreaElement.host
+title: "HTMLAreaElement: host プロパティ"
 slug: Web/API/HTMLAreaElement/host
-original_slug: Web/API/HTMLHyperlinkElementUtils/host
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -17,15 +18,15 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/host
 ```js
 const area = document.createElement("area");
 
-area.href = "https://developer.mozilla.org/en-US/HTMLAreaElement"
-area.host == "developer.mozilla.org"
+area.href = "https://developer.mozilla.org/en-US/HTMLAreaElement";
+area.host === "developer.mozilla.org";
 
-area.href = "https://developer.mozilla.org:443/en-US/HTMLAreaElement"
-area.host == "developer.mozilla.org"
+area.href = "https://developer.mozilla.org:443/en-US/HTMLAreaElement";
+area.host === "developer.mozilla.org";
 // ポート番号は、 443 がスキームの既定のポートであるため含まれない
 
-area.href = "https://developer.mozilla.org:4097/en-US/HTMLAreaElement"
-area.host == "developer.mozilla.org:4097"
+area.href = "https://developer.mozilla.org:4097/en-US/HTMLAreaElement";
+area.host === "developer.mozilla.org:4097";
 ```
 
 ## 仕様書

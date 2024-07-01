@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.getUTCDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getUTCDay
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`getUTCDay()`** renvoie le jour de la semaine pour la date renseig
 ## Syntaxe
 
 ```js
-dateObj.getUTCDay()
+dateObj.getUTCDay();
 ```
 
 ### Valeur de retour
@@ -34,8 +26,8 @@ La valeur renvoyée par `getUTCDay()` est un entier correspondant au jour de la 
 L'exemple suivant assigne le jour de la semaine de la date actuelle à la variable `jourSemaine`.
 
 ```js
-var aujourdhui = new Date()
-var jourSemaine = aujourdhui.getUTCDay()
+var aujourdhui = new Date();
+var jourSemaine = aujourdhui.getUTCDay();
 ```
 
 ## Spécifications

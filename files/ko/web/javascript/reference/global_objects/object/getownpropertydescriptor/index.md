@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 ## 구문
 
 ```js
-Object.getOwnPropertyDescriptor(obj, prop)
+Object.getOwnPropertyDescriptor(obj, prop);
 ```
 
 ### 매개변수
@@ -48,17 +48,25 @@ Object.getOwnPropertyDescriptor(obj, prop)
 ```js
 var o, d;
 
-o = { get foo() { return 17; } };
-d = Object.getOwnPropertyDescriptor(o, 'foo');
+o = {
+  get foo() {
+    return 17;
+  },
+};
+d = Object.getOwnPropertyDescriptor(o, "foo");
 // d는 { configurable: true, enumerable: true, get: /* getter 함수 */, set: undefined }
 
 o = { bar: 42 };
-d = Object.getOwnPropertyDescriptor(o, 'bar');
+d = Object.getOwnPropertyDescriptor(o, "bar");
 // d는 { configurable: true, enumerable: true, value: 42, writable: true }
 
 o = {};
-Object.defineProperty(o, 'baz', { value: 8675309, writable: false, enumerable: false });
-d = Object.getOwnPropertyDescriptor(o, 'baz');
+Object.defineProperty(o, "baz", {
+  value: 8675309,
+  writable: false,
+  enumerable: false,
+});
+d = Object.getOwnPropertyDescriptor(o, "baz");
 // d는 { value: 8675309, writable: false, enumerable: false, configurable: false }
 ```
 

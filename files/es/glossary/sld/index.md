@@ -3,6 +3,8 @@ title: SLD
 slug: Glossary/SLD
 ---
 
+{{GlossarySidebar}}
+
 Un dominio de nivel secundario, o SLD (Second Level Domain) es el nombre que se encuentra antes del dominio de nivel primario, o TLD (Top Level Domain).
 
 Por ejemplo, en el dominio `mozilla.org`, `mozilla` es el dominio de nivel secundario del TLD `.org`.

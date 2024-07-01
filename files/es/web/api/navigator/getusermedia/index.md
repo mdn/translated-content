@@ -3,6 +3,8 @@ title: Navigator.getUserMedia
 slug: Web/API/Navigator/getUserMedia
 ---
 
+{{APIRef("Media Capture and Streams")}}
+
 Pide al usuario permiso para usar un dispositivo multimedia como una cámara o micrófono. Si el usuario concede este permiso, el successCallback es invocado en la aplicación llamada con un objeto [LocalMediaStream](/es/docs/WebRTC/MediaStream_API#LocalMediaStream) como argumento.
 
 ## Sintaxis
@@ -11,37 +13,36 @@ Pide al usuario permiso para usar un dispositivo multimedia como una cámara o m
 navigator.getUserMedia ( constraints, successCallback, errorCallback );
 ```
 
-**Ejemplo**
+## Ejemplo
 
 Aquí hay un ejemplo usando getUserMedia() con los prefijos del navegador.
 
 ```js
-navigator.getMedia = ( navigator.getUserMedia ||
-                       navigator.webkitGetUserMedia ||
-                       navigator.mozGetUserMedia);
+navigator.getMedia =
+  navigator.getUserMedia ||
+  navigator.webkitGetUserMedia ||
+  navigator.mozGetUserMedia;
 
-navigator.getMedia (
+navigator.getMedia(
+  // Restricciones (contraints) *Requerido
+  {
+    video: true,
+    audio: true,
+  },
 
-   // Restricciones (contraints) *Requerido
-   {
-      video: true,
-      audio: true
-   },
+  // Funcion de finalizacion (Succes-Callback) *Requerido
+  function (localMediaStream) {
+    var video = document.querySelector("video");
+    video.src = window.URL.createObjectURL(localMediaStream);
+    video.onloadedmetadata = function (e) {
+      // Haz algo con el video aquí.
+    };
+  },
 
-   // Funcion de finalizacion (Succes-Callback) *Requerido
-   function(localMediaStream) {
-      var video = document.querySelector('video');
-      video.src = window.URL.createObjectURL(localMediaStream);
-      video.onloadedmetadata = function(e) {
-         // Haz algo con el video aquí.
-      };
-   },
-
-   // errorCallback *Opcional
-   function(err) {
+  // errorCallback *Opcional
+  function (err) {
     console.log("Ocurrió el siguiente error: " + err);
-   }
-
+  },
 );
 ```
 
@@ -88,9 +89,13 @@ La función `getUserMedia` llama a la función indicada en el errorCallback con 
 | MANDATORY_UNSATISFIED_ERROR | No se encontraron fuentes multimedia del tipo especificado en el constraints.                   |
 | NO_DEVICES_FOUND            | No se encontró ninguna webcam instalada.                                                        |
 
-## Compatibilidad con los navegadores
+## Especificaciones
 
-{{Compat("api.Navigator.getUserMedia")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Vease también
 

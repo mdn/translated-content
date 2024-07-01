@@ -85,10 +85,9 @@ shape-outside: unset;
   <div class="left"></div>
   <div class="right"></div>
   <p>
-    Sometimes a web page's text content appears to be
-    funneling your attention towards a spot on the page
-    to drive you to follow a particular link. Sometimes
-    you don't notice.
+    Sometimes a web page's text content appears to be funneling your attention
+    towards a spot on the page to drive you to follow a particular link.
+    Sometimes you don't notice.
   </p>
 </div>
 ```
@@ -142,11 +141,11 @@ p {
 
 ## 参见
 
-- [CSS Shapes](/zh-CN/docs/Web/CSS/CSS_Shapes)
-- [Overview of CSS Shapes](/zh-CN/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
-- [Shapes from Box Values](/zh-CN/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values)
-- [Basic Shapes](/zh-CN/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
-- [Shapes from Images](/zh-CN/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
+- [CSS Shapes](/zh-CN/docs/Web/CSS/CSS_shapes)
+- [Overview of CSS Shapes](/zh-CN/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [Shapes from Box Values](/zh-CN/docs/Web/CSS/CSS_shapes/Shapes_From_Box_Values)
+- [Basic Shapes](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_Shapes)
+- [Shapes from Images](/zh-CN/docs/Web/CSS/CSS_shapes/Shapes_from_images)
 - {{cssxref("&lt;basic-shape&gt;")}}
 - {{cssxref("shape-margin")}}
 - {{cssxref("shape-image-threshold")}}

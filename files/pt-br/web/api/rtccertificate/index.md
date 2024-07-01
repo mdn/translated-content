@@ -12,12 +12,10 @@ A interface da [WebRTC API](/pt-BR/docs/Web/API/WebRTC_API) fornece um objeto re
 - {{domxref("RTCCertificate.expires")}} {{readonlyinline}}
   - : Retorna a data de expiração do certificado.
 
-## Especificação
+## Especificações
 
-| Especificação                        | Status                           | Comentário         |
-| ------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('WebRTC 1.0')}} | {{Spec2('WebRTC 1.0')}} | definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.RTCCertificate")}}
+{{Compat}}

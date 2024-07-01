@@ -1,25 +1,29 @@
 ---
 title: <ins>
 slug: Web/HTML/Element/ins
-translation_of: Web/HTML/Element/ins
 ---
-**Элемент** **HTML `<ins>` **представляет собой диапазон текста, который был добавлен в документ
 
-| [Содержимое категорий](/ru/docs/HTML/Content_categories) | [Содержимое фраз](/ru/docs/HTML/Content_categories#Phrasing_content) or [содержимое потока](/ru/docs/HTML/Content_categories#Flow_content). |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                    | [Прозрачный](/ru/docs/HTML/Content_categories#Transparent_content_model).                                                                   |
-| Бездействие тега                                         | {{no_tag_omission}}                                                                                                                    |
-| Разрешённые родители                                     | Любой элемент, который принимает [содержимое фраз](/ru/docs/HTML/Content_categories#Phrasing_content).                                      |
-| Разрешённые ARIA роли                                    | Любые                                                                                                                                       |
-| Интерфейс DOM                                            | {{domxref("HTMLModElement")}}                                                                                                    |
+{{HTMLSidebar}}
+
+HTML-элемент **`<ins>`** представляет диапазон текста, который был добавлен в документ.
+
+{{EmbedInteractiveExample("pages/tabbed/ins.html", "tabbed-standard")}}
+
+| [Содержимое категорий](/ru/docs/HTML/Content_categories) | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content) or [содержимое потока](/ru/docs/HTML/Content_categories#Flow_content). |
+| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                    | [Прозрачный](/ru/docs/HTML/Content_categories#Transparent_content_model).                                                                    |
+| Пропуск тегов                                            | {{no_tag_omission}}                                                                                                                          |
+| Допустимые родители                                      | Любой элемент, который принимает [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                      |
+| Допустимые ARIA-роли                                     | Любые                                                                                                                                        |
+| DOM-интерфейс                                            | {{domxref("HTMLModElement")}}                                                                                                                |
 
 ## Атрибуты
 
 Этот элемент включает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : Этот атрибут определяет URI ресурса, который объясняет изменения, такие как ссылка на протоколы заседаний или билет в системном поиске и устранении неисправностей.
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : Этот атрибут указывает время и дату изменения и должна быть действительной датой с дополнительной строкой времени. Если значение не может быть разобрано как дата с опциональной строкой времени, элемент не имеет соответствующего штампа времени.
 
 ## Примеры
@@ -36,12 +40,10 @@ translation_of: Web/HTML/Element/ins
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - Элемент {{HTMLElement("del")}} для помещения удаления в документе.
-
-{{HTMLSidebar}}

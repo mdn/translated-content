@@ -1,72 +1,80 @@
 ---
-title: Vibration API
+title: 振动 API
 slug: Web/API/Vibration_API
+l10n:
+  sourceCommit: 77915a2ad318fb78b1d02a35d6b1de61ea1b1f5f
 ---
 
 {{DefaultAPISidebar("Vibration API")}}
 
-大多数现代移动设备包括振动硬件，其允许软件代码通过使设备摇动来向用户提供物理反馈。Vibration API 为 Web 应用程序提供访问此硬件（如果存在）的功能，如果设备不支持此功能，则不会执行任何操作。
+大多数现代移动设备包括振动硬件，其允许软件代码通过使设备振动来向用户提供物理反馈。**振动 API**（Vibration API）为 Web 应用程序提供访问此硬件的功能（如果存在），如果设备不支持此功能，则不会执行任何操作。
 
-## 振动描述
+## 概念和用法
 
-振动被抽象成【开 - 关】脉冲的模式，且可以具有变化的长度。?参数可以是单个整数，表示持续振动的毫秒数 (ms)；或可由多个整数组成的数组，达到振动和暂停循环的效果。只要单一 [`window.navigator.vibrate()`](/zh-CN/docs/Web/API/window.navigator.vibrate) 函式即可控制振动。
+振动被抽象成开——关脉冲的模式，且可以具有变化的长度。模式可以是单个整数，表示持续振动的毫秒数；或一个整数数组，描述振动和暂停模式。振动由单一方法控制：{{DOMxRef("Navigator.vibrate()")}}。
 
 ### 一个单次振动
 
-你可以通过指定单个值或仅由一个值组成的数组来一次振荡振动硬件：
+你可以通过指定单个值或仅由一个值组成的数组来向振动硬件发出一次脉冲：
 
 ```js
-window.navigator.vibrate(200);
-window.navigator.vibrate([200]);
+navigator.vibrate(200);
+navigator.vibrate([200]);
 ```
 
-以上两个例子都可以使设备振动 200 ms.
+以上两个例子都可以使设备振动 200 ms。
 
-### **振动模式**
+### 振动模式
 
-一组数值描述了设备振动并且不振动的交替时间段。数组中的每个值都将转换成一个整数，然后交替解释为设备应该振动的毫秒数和不振动的毫秒数。例如：
+一组数值描述了设备振动和不振动的交替周期。数组中的每个值都将转换成一个整数，然后交替解析为设备应该振动的毫秒数和不振动的毫秒数。例如：
 
 ```js
-window.navigator.vibrate([200, 100, 200]);
+navigator.vibrate([200, 100, 200]);
 ```
 
 这会使设备振动 200 ms，然后暂停 100 ms，然后再次振动设备 200 ms。
 
-您可以根据需要设定多个振动/暂停对，数组的值可以是偶数或奇数个；值得注意的是，由于振动在每个振动周期结束时自动停止，因此您不必提供最后一个值去暂停，换句话说，数组长度只需要设置奇数个。
+你可以根据需要设定多个振动/暂停对，数组的值可以是偶数或奇数个；值得注意的是，由于振动在每个振动周期结束时自动停止，因此你不必提供最后一个值去暂停。
 
-### 停止振动
+### 取消现有振动
 
-当调用 [`window.navigator.vibrate()`](/zh-CN/docs/Web/API/window.navigator.vibrate) 的参数为「0」、空白？数组，或？数组全为「0」时，即可取消目前？进行中的振动。
+当调用 {{DOMxRef("Navigator.vibrate()")}} 的参数为 `0`、空数组或包含全 0 值的数组时会取消任何正在进行中的振动。
 
 ### 持续振动
 
-一些基于 setInterval 和 clearInterval 操作将允许您创建持续的振动：
+一些基于 `setInterval` 和 `clearInterval` 操作将允许你创建持续的振动：
 
 ```js
-var vibrateInterval;
+let vibrateInterval;
 
-// Starts vibration at passed in level
+// 在通过的级别开始振动
 function startVibrate(duration) {
-    navigator.vibrate(duration);
+  navigator.vibrate(duration);
 }
 
-// Stops vibration
+// 停止振动
 function stopVibrate() {
-    // Clear interval and stop persistent vibrating
-    if(vibrateInterval) clearInterval(vibrateInterval);
-    navigator.vibrate(0);
+  // 清除周期并停止持续振动
+  if (vibrateInterval) clearInterval(vibrateInterval);
+  navigator.vibrate(0);
 }
 
-// Start persistent vibration at given duration and interval
-// Assumes a number value is given
-function startPeristentVibrate(duration, interval) {
-    vibrateInterval = setInterval(function() {
-        startVibrate(duration);
-    }, interval);
+// 以给定的持续时间和周期开始持续振动，假设已给定一个数值
+function startPersistentVibrate(duration, interval) {
+  vibrateInterval = setInterval(() => {
+    startVibrate(duration);
+  }, interval);
 }
 ```
 
-当然上面的代码片段没有考虑到振动参数为数组情况; 基于阵列的持久性振动将需要计算数组项的和，并基于该数量创建周期（可能具有额外的延迟）。
+当然上面的代码片段没有考虑到振动参数为数组的情况；基于阵列的持久性振动将需要计算数组项的和，并基于该数量创建周期（可能具有额外的延迟）。
+
+## 接口
+
+### 其他接口的扩展
+
+- {{domxref("Navigator.vibrate()")}}
+  - : 在支持它的设备上引起振动。如果振动支持不可用，则不执行任何操作。
 
 ## 规范
 
@@ -76,6 +84,6 @@ function startPeristentVibrate(duration, interval) {
 
 {{Compat}}
 
-## 也可以参考
+## 参见
 
 - {{domxref("Navigator.vibrate()")}}

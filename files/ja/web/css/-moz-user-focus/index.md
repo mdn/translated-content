@@ -1,5 +1,5 @@
 ---
-title: '-moz-user-focus'
+title: "-moz-user-focus"
 slug: Web/CSS/-moz-user-focus
 ---
 
@@ -56,7 +56,7 @@ slug: Web/CSS/-moz-user-focus
 ### HTML
 
 ```html
-<input class="ignored" value="The user cannot focus on this element.">
+<input class="ignored" value="The user cannot focus on this element." />
 ```
 
 ### CSS

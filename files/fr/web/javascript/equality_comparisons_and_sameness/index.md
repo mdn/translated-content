@@ -1,12 +1,6 @@
 ---
 title: Utiliser les différents tests d'égalité
 slug: Web/JavaScript/Equality_comparisons_and_sameness
-tags:
-  - Guide
-  - Intermédiaire
-  - JavaScript
-translation_of: Web/JavaScript/Equality_comparisons_and_sameness
-original_slug: Web/JavaScript/Les_différents_tests_d_égalité
 ---
 
 {{jsSidebar("Intermediate")}}
@@ -181,8 +175,12 @@ L'égalité de valeurs répond à un dernier cas d'utilisation : savoir si deux 
 
 ```js
 // Ajouter la propriété immuable NEGATIVE_ZERO au constructor Number.
-Object.defineProperty(Number, "NEGATIVE_ZERO",
-                      { value: -0, writable: false, configurable: false, enumerable: false });
+Object.defineProperty(Number, "NEGATIVE_ZERO", {
+  value: -0,
+  writable: false,
+  configurable: false,
+  enumerable: false,
+});
 
 function attemptMutation(v) {
   Object.defineProperty(Number, "NEGATIVE_ZERO", { value: v });
@@ -248,8 +246,8 @@ Voici une liste (non exhaustive) d'opérateurs et de méthodes natives qui peuve
   - : Si on prend l'opposé de `0`, on aura, bien entendu, `-0`. Cependant, avec les expressions, cela peut faire que la valeur `-0` se glisse dans les variables sans qu'on s'en rende compte. Par exemple :
 
     ```js
-        let forceArrêt = obj.masse * -obj.vitesse
-        ```
+    let forceArrêt = obj.masse * -obj.vitesse;
+    ```
 
     Si `obj.vitesse` vaut `0` (ou est évalué à `0`), un `-0` sera introduit, ce qui fera que `forceArrêt` pourra être négative.
 

@@ -63,7 +63,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.browserAction")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

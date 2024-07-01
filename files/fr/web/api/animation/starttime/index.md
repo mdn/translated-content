@@ -1,15 +1,6 @@
 ---
 title: Window.mozAnimationStartTime
 slug: Web/API/Animation/startTime
-tags:
-  - API
-  - HTML DOM
-  - Obsolete
-  - Propriété
-  - Reference
-  - Window
-translation_of: Web/API/Window/mozAnimationStartTime
-original_slug: Web/API/Window/mozAnimationStartTime
 ---
 
 {{APIRef("Mozilla Extensions")}}{{Non-standard_Header}}

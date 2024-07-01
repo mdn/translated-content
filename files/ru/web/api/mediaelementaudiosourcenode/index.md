@@ -1,8 +1,8 @@
 ---
 title: MediaElementAudioSourceNode
 slug: Web/API/MediaElementAudioSourceNode
-translation_of: Web/API/MediaElementAudioSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 Интерфейс `MediaElementAudioSourceNode` представляет собой аудио узел {{domxref("AudioNode")}}, созданный из HTML5 {{ htmlelement("audio") }} или {{ htmlelement("video") }} элемента. Он является источником звука.
@@ -39,15 +39,11 @@ _Наследует свойства родителя,_ _{{domxref("AudioNode")}
 
 _Наследует методы родителя,_ _{{domxref("AudioNode")}}_.
 
-## Пример
-
-{{page("/ru/docs/Web/API/AudioContext.createMediaElementSource","Example")}}
-
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Поддержка в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

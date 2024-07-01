@@ -1,12 +1,9 @@
 ---
 title: Slug
 slug: Glossary/Slug
-tags:
-  - Glossaire
-  - URL
-translation_of: Glossary/Slug
-original_slug: Glossaire/Slug
 ---
+
+{{GlossarySidebar}}
 
 Un Slug est la partie d'identification unique d'une adresse Web, généralement à la fin de l'URL. Dans le contexte de MDN, c'est la partie de l'URL qui suit "_\<locale>/docs/_".
 

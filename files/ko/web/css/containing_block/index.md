@@ -1,7 +1,6 @@
 ---
 title: 컨테이닝 블록의 모든 것
 slug: Web/CSS/Containing_block
-original_slug: Web/CSS/All_About_The_Containing_Block
 ---
 
 {{cssref}}
@@ -32,12 +31,12 @@ original_slug: Web/CSS/All_About_The_Containing_Block
 1. `position` **속성이 `static`**, **`relative`**, **`sticky`** 중 하나이면, 컨테이닝 블록은 가장 가까운 조상 **블록 컨테이너**(`inline-block`, `block`, `list-item` 등의 요소), 또는 가장 가까우면서 **서식 맥락을 형성하는 조상 요소(`table`, `flex`, `grid`, 아니면 블록 컨테이너 자기 자신)의 콘텐츠 영역 경계를 따라 형성됩니다.**
 2. `position` **속성이 `absolute`**인 경우, 컨테이닝 블록은 `position` 속성 값이 `static`이 아닌(`fixed`, `absolute`, `relative`, `sticky`) 가장 가까운 조상의 내부 여백 영역입니다.
 3. `position` **속성이 `fixed`인** 경우, 컨테이닝 블록은 {{glossary("viewport", "뷰포트")}}나 페이지 영역(페이지로 나뉘는 매체인 경우)입니다.
-4. `position` **속성이 **`absolute`**나 **`fixed`인 경우, 다음 조건 중 하나를 만족하는 가장 가까운 조상의 내부 여백 영역이 컨테이닝 블록이 될 수도 있습니다.
+4. `position` **속성이** `absolute` **나** `fixed` 인 경우, 다음 조건 중 하나를 만족하는 가장 가까운 조상의 내부 여백 영역이 컨테이닝 블록이 될 수도 있습니다.
 
-    1. {{cssxref("transform")}}이나 {{cssxref("perspective")}} 속성이 `none`이 아님.
-    2. {{cssxref("will-change")}} 속성이 `transform`이나 `perspective`임.
-    3. {{cssxref("filter")}} 속성이 `none`임. (Firefox에선 `will-change`가 `filter`일 때도 적용)
-    4. {{cssxref("contain")}} 속성이 `paint`임.
+   1. {{cssxref("transform")}}이나 {{cssxref("perspective")}} 속성이 `none`이 아님.
+   2. {{cssxref("will-change")}} 속성이 `transform`이나 `perspective`임.
+   3. {{cssxref("filter")}} 속성이 `none`임. (Firefox에선 `will-change`가 `filter`일 때도 적용)
+   4. {{cssxref("contain")}} 속성이 `paint`임.
 
 > **참고:** 루트 요소({{HTMLElement("html")}})의 컨테이닝 블록은 **초기 컨테이닝 블록**이라고 불리는 사각형입니다. 초기 컨테이닝 블록은 뷰포트 또는 (페이지로 나뉘는 매체에선) 페이지 영역의 크기와 같습니다.
 
@@ -87,10 +86,10 @@ section {
 }
 
 p {
-  width: 50%;   /* == 400px * .5 = 200px */
-  height: 25%;  /* == 160px * .25 = 40px */
-  margin: 5%;   /* == 400px * .05 = 20px */
-  padding: 5%;  /* == 400px * .05 = 20px */
+  width: 50%; /* == 400px * .5 = 200px */
+  height: 25%; /* == 160px * .25 = 40px */
+  margin: 5%; /* == 400px * .05 = 20px */
+  padding: 5%; /* == 400px * .05 = 20px */
   background: cyan;
 }
 ```
@@ -120,8 +119,8 @@ section {
 }
 
 p {
-  width: 50%;     /* == body 너비의 절반 */
-  height: 200px;  /* 참고: 백분율 값이었으면 0 */
+  width: 50%; /* == body 너비의 절반 */
+  height: 200px; /* 참고: 백분율 값이었으면 0 */
   background: cyan;
 }
 ```
@@ -157,10 +156,10 @@ section {
 
 p {
   position: absolute;
-  width: 50%;   /* == (400px + 20px + 20px) * .5 = 220px */
-  height: 25%;  /* == (160px + 30px + 30px) * .25 = 55px */
-  margin: 5%;   /* == (400px + 20px + 20px) * .05 = 22px */
-  padding: 5%;  /* == (400px + 20px + 20px) * .05 = 22px */
+  width: 50%; /* == (400px + 20px + 20px) * .5 = 220px */
+  height: 25%; /* == (160px + 30px + 30px) * .25 = 55px */
+  margin: 5%; /* == (400px + 20px + 20px) * .05 = 22px */
+  padding: 5%; /* == (400px + 20px + 20px) * .05 = 22px */
   background: cyan;
 }
 ```
@@ -194,10 +193,10 @@ section {
 
 p {
   position: fixed;
-  width: 50%;   /* == (50vw - (세로 스크롤바 너비)) */
-  height: 50%;  /* == (50vh - (가로 스크롤바 높이)) */
-  margin: 5%;   /* == (5vw - (세로 스크롤바 너비)) */
-  padding: 5%;  /* == (5vw - (세로 스크롤바 너비)) */
+  width: 50%; /* == (50vw - (세로 스크롤바 너비)) */
+  height: 50%; /* == (50vh - (가로 스크롤바 높이)) */
+  margin: 5%; /* == (5vw - (세로 스크롤바 너비)) */
+  padding: 5%; /* == (5vw - (세로 스크롤바 너비)) */
   background: cyan;
 }
 ```
@@ -232,10 +231,10 @@ p {
   position: absolute;
   left: 80px;
   top: 30px;
-  width: 50%;   /* == 200px */
-  height: 25%;  /* == 40px */
-  margin: 5%;   /* == 20px */
-  padding: 5%;  /* == 20px */
+  width: 50%; /* == 200px */
+  height: 25%; /* == 40px */
+  margin: 5%; /* == 20px */
+  padding: 5%; /* == 20px */
   background: cyan;
 }
 ```

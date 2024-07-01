@@ -27,17 +27,23 @@ Promise.reject(reason);
 ### 정적 Promise.reject() 메서드 사용
 
 ```js
-Promise.reject("Testing static reject").then(function(reason) {
-  // 호출되지 않음
-}, function(reason) {
-  console.log(reason); // "Testing static reject"
-});
+Promise.reject("Testing static reject").then(
+  function (reason) {
+    // 호출되지 않음
+  },
+  function (reason) {
+    console.log(reason); // "Testing static reject"
+  },
+);
 
-Promise.reject(new Error("fail")).then(function(error) {
-  // 호출되지 않음
-}, function(error) {
-  console.log(error); // Stacktrace
-});
+Promise.reject(new Error("fail")).then(
+  function (error) {
+    // 호출되지 않음
+  },
+  function (error) {
+    console.log(error); // Stacktrace
+  },
+);
 ```
 
 ## 명세서

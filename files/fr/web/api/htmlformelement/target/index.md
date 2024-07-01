@@ -1,7 +1,6 @@
 ---
 title: HTMLFormElement.target
 slug: Web/API/HTMLFormElement/target
-translation_of: Web/API/HTMLFormElement/target
 ---
 
 {{APIRef("HTML DOM")}}
@@ -11,8 +10,8 @@ La propriété **`HTMLFormElement.target`** représente la cible de l'action (i.
 ## Syntaxe
 
 ```js
-string = form.target
-form.target = string
+string = form.target;
+form.target = string;
 ```
 
 ## Exemple

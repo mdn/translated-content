@@ -60,9 +60,9 @@ div {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-block-width")}}
+{{Compat}}
 
 ## Mira también
 

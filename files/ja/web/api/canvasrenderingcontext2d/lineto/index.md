@@ -7,7 +7,7 @@ slug: Web/API/CanvasRenderingContext2D/lineTo
 
 {{domxref("CanvasRenderingContext2D")}} の **`lineTo()`** はキャンバス 2D API のメソッドで、現在のサブパスに対して、その終点から指定された `(x, y)` 座標に向けて直線を追加します。
 
-現在のパスを変更するほかのメソッドと同様に、このメソッドは直悦は何も描画しません。パスをキャンバス上に描くには、 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} または {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} メソッドを使用します。
+現在のパスを変更するほかのメソッドと同様に、このメソッドは直接は何も描画しません。パスをキャンバス上に描くには、 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} または {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} メソッドを使用します。
 
 ## 構文
 
@@ -43,13 +43,13 @@ ctx.lineTo(x, y);
 The line begins at (30, 50) and ends at (150, 100).
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.beginPath();       // 新しいパスを開始
-ctx.moveTo(30, 50);    // ペンを (30, 50) へ移動
-ctx.lineTo(150, 100);  // 直線を (150, 100) へ描く
-ctx.stroke();          // パスを描画
+ctx.beginPath(); // 新しいパスを開始
+ctx.moveTo(30, 50); // ペンを (30, 50) へ移動
+ctx.lineTo(150, 100); // 直線を (150, 100) へ描く
+ctx.stroke(); // パスを描画
 ```
 
 #### 結果
@@ -70,8 +70,8 @@ ctx.stroke();          // パスを描画
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.moveTo(90, 130);
 ctx.lineTo(95, 25);

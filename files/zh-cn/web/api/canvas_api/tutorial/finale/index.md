@@ -3,13 +3,15 @@ title: 终曲
 slug: Web/API/Canvas_API/Tutorial/Finale
 ---
 
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
+
 恭喜你！你已经结束了 Canvas 的教程！这些知识将帮助你在 web 中创建优秀的 2D 图形。
 
 ## 更多的例子以及教程
 
 下面这些网站里有关于 canvas 的各种各样的演示以及更进一步的说明：
 
-- [Codepen.io](http://codepen.io/search?q=canvas)
+- [Codepen.io](https://codepen.io/search?q=canvas)
   - : 前端开发人员操练场和浏览器内的代码编辑器。
 - [Canvasdemos.com](http://www.canvasdemos.com/)(域名已失效)
   - : 关于 HTML5 canvas 元素的应用程序，游戏，工具和教程。
@@ -37,3 +39,5 @@ slug: Web/API/Canvas_API/Tutorial/Finale
   - : 到"canvas"标签来提问
 - [Comments about this tutorial – the MDN documentation community](/zh-CN/docs/MDN)
   - : 如果你对本教程有任何意见，或是想感谢我们，在此畅所欲言吧！
+
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}

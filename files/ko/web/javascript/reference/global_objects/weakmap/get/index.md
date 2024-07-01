@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 ## 구문
 
 ```js
-get(key)
+get(key);
 ```
 
 ### 매개변수
@@ -30,10 +30,10 @@ get(key)
 
 ```js
 const wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.get(window); // "foo" 반환.
-wm.get('baz');  // undefined 반환.
+wm.get("baz"); // undefined 반환.
 ```
 
 ## 명세서

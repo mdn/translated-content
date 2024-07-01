@@ -2,6 +2,7 @@
 title: Window.history
 slug: Web/API/Window/history
 ---
+
 {{APIRef}}
 
 `Window.history` 읽기 전용 속성은 {{domxref("History")}} 객체로의 참조를 반환합니다. History 객체는 브라우저의 세션 기록(현재 페이지를 불러온 탭 혹은 프레임이 방문했던 페이지)을 조작할 때 사용합니다.
@@ -11,8 +12,8 @@ slug: Web/API/Window/history
 ## 예제
 
 ```js
-history.back();     // 뒤로 가기 버튼 클릭과 동일
-history.go(-1);     // history.back()과 동일
+history.back(); // 뒤로 가기 버튼 클릭과 동일
+history.go(-1); // history.back()과 동일
 ```
 
 ## 참고

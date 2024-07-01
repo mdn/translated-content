@@ -2,6 +2,7 @@
 title: Function.arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 > **`function.arguments`** 속성은 함수로 부터 넘겨 받은 arguments에 해당하는 배열과 같은 객체이다. 간단하게 {{jsxref("Functions/arguments", "arguments")}}를 대신 사용하자. 이 속성은 strict mode에서 [꼬리 호출 최적화](http://www.ecma-international.org/ecma-262/6.0/#sec-addrestrictedfunctionproperties) 때문에 금지 된다.
@@ -19,17 +20,21 @@ arguments의 값은 함수 실행 과정에서 특별한 호출이 없다면 일
 ### arguments object를 사용한 예시
 
 ```js
-function f(n) { g(n - 1); }
+function f(n) {
+  g(n - 1);
+}
 
 function g(n) {
-  console.log('before: ' + g.arguments[0]);
-  if (n > 0) { f(n); }
-  console.log('after: ' + g.arguments[0]);
+  console.log("before: " + g.arguments[0]);
+  if (n > 0) {
+    f(n);
+  }
+  console.log("after: " + g.arguments[0]);
 }
 
 f(2);
 
-console.log('returned: ' + g.arguments);
+console.log("returned: " + g.arguments);
 
 // Output
 
@@ -40,15 +45,15 @@ console.log('returned: ' + g.arguments);
 // returned: null
 ```
 
-## Specifications
+## 명세서
 
 `function.arguments`는 표준이 아니다. ECMAScript 3에서 {{jsxref("Functions/arguments", "arguments")}}를 참조하기 때문에 deprecated 되었다.
 
-## Browser 호환성
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - {{jsxref("Functions/arguments", "arguments")}} 객체
 - {{jsxref("Functions", "Functions and function scope", "", 1)}}

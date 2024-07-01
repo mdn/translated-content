@@ -3,6 +3,8 @@ title: URL
 slug: Glossary/URL
 ---
 
+{{GlossarySidebar}}
+
 **Uniform Resource Locator** (**URL**) はインターネット上における(ウェブページや画像や動画といった)リソースの位置を特定するための文字列です。
 
 {{Glossary("HTTP")}} においては、URL は "ウェブアドレス" や "リンク" と呼ばれます。URL は{{glossary("browser", "ブラウザー")}}のアドレスバーに次のように表示されます。 `https://developer.mozilla.org` いくつかのブラウザーでは "//"以降の URL、つまり{{Glossary("Domain name", "ドメイン名")}}だけが表示されます。

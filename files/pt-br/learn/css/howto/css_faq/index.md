@@ -1,7 +1,6 @@
 ---
 title: CSS - Perguntas frequentes
 slug: Learn/CSS/Howto/CSS_FAQ
-original_slug: Learn/CSS/Howto/CSS_Perguntas_Frequentes
 ---
 
 ## Por que meu CSS, que é válido, não é renderizado corretamente?
@@ -69,16 +68,24 @@ Inicialmente CSS não propiciava a diretiva "default" e a única forma de redefi
 
 ```css
 /* A cor padrão do cabeçalho é preta */
-h1 { color: red; }
-h1 { color: black; }
+h1 {
+  color: red;
+}
+h1 {
+  color: black;
+}
 ```
 
 Isso mudou com CSS 2; a diretiva [initial](/es/CSS/initial) agora é um valor válido para uma propriedade CSS. Ela redefine tal propriedade para seu valor padrão, o qual é definido nas especificações CSS para tal propriedade.
 
 ```css
 /* A cor padrão do cabeçalho é preta */
-h1 { color: red; }
-h1 { color: initial; }
+h1 {
+  color: red;
+}
+h1 {
+  color: initial;
+}
 ```
 
 ## Como eu derivo um estilo de outro?
@@ -91,13 +98,16 @@ Elementos HTML podem ter diversas classes designadas a si, com as classes sendo 
 
 ```html
 <style type="text/css">
-  .news { background: black; color: white; }
-  .today { font-weight: bold; }
+  .news {
+    background: black;
+    color: white;
+  }
+  .today {
+    font-weight: bold;
+  }
 </style>
 
-<div class="news today">
-... content of today's news ...
-</div>
+<div class="news today">... content of today's news ...</div>
 ```
 
 Caso a mesma propriedade seja declara em mais de uma regra, o conflito é resolvido primeiro pela ordem de especificidade e depois através da ordem das declarações CSS, com o último valor definido da propriedade sendo considerado. A ordem em que o nome das classes aparece no atributo `class` é irrelevante.
@@ -112,13 +122,19 @@ A forma como estilos CSS são aplicados a elementos HTML depende também da hier
 
 ```html
 <style type="text/css">
-  .news { color: black; }
-  .corpName { font-weight: bold; color: red; }
+  .news {
+    color: black;
+  }
+  .corpName {
+    font-weight: bold;
+    color: red;
+  }
 </style>
 
 <!-- O texto do item news é preto, mas o nome da corporação é vermelho e em negrito -->
 <div class="news">
-   (Reuters) <span class="corpName">General Electric</span> (GE.NYS) announced on Thursday...
+  (Reuters) <span class="corpName">General Electric</span> (GE.NYS) announced on
+  Thursday...
 </div>
 ```
 
@@ -130,18 +146,22 @@ Em folhas de estilo CSS, a ordem **é** importante. Se você definir uma proprie
 
 ```html
 <style>
-  #stockTicker { font-weight: bold; }
-  .stockSymbol { color: red; }
+  #stockTicker {
+    font-weight: bold;
+  }
+  .stockSymbol {
+    color: red;
+  }
   /*  outras regras             */
   /*  outras regras             */
   /*  outras regras             */
-  .stockSymbol { font-weight: normal; }
+  .stockSymbol {
+    font-weight: normal;
+  }
 </style>
 
 <!-- Boa parte do texto está em negrito, exceto "GE", que é vermelho e não está em negrito -->
-<div id="stockTicker">
-   NYS: <span class="stockSymbol">GE</span> +1.0 ...
-</div>
+<div id="stockTicker">NYS: <span class="stockSymbol">GE</span> +1.0 ...</div>
 ```
 
 Para evitar que este tipo de problema, tente definir regras apenas uma vez para um determinado seletor e agrupe as regras para aquele seletor.
@@ -152,21 +172,26 @@ Utilizar propriedades reduzidas para definir regra de estilização é interessa
 
 ```html
 <style>
-   #stockTicker { font-size: 12px; font-family: Verdana; font-weight: bold; }
-   .stockSymbol { font: 14px Arial; color: red; }
+  #stockTicker {
+    font-size: 12px;
+    font-family: Verdana;
+    font-weight: bold;
+  }
+  .stockSymbol {
+    font: 14px Arial;
+    color: red;
+  }
 </style>
 
-<div id="stockTicker">
-   NYS: <span class="stockSymbol">GE</span> +1.0 ...
-</div>
+<div id="stockTicker">NYS: <span class="stockSymbol">GE</span> +1.0 ...</div>
 ```
 
 No exemplo anterior o problema ocorre em regras pertencentes a diferentes elementos. Mas também poderia acontecer para o mesmo elemento, pois a ordem das regras **é** importante.
 
 ```css
 #stockTicker {
-   font-weight: bold;
-   font: 12px Verdana;  /* font-weight agora está definido como "normal" */
+  font-weight: bold;
+  font: 12px Verdana; /* font-weight agora está definido como "normal" */
 }
 ```
 
@@ -176,14 +201,22 @@ O seletor curinga `*` faz referência a qualquer elemento, e deve ser usado com 
 
 ```html
 <style>
-   body * { font-weight: normal; }
-   #stockTicker { font: 12px Verdana; }
-   .corpName { font-weight: bold; }
-   .stockUp { color: red; }
+  body * {
+    font-weight: normal;
+  }
+  #stockTicker {
+    font: 12px Verdana;
+  }
+  .corpName {
+    font-weight: bold;
+  }
+  .stockUp {
+    color: red;
+  }
 </style>
 
 <div id="section">
-   NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0 ...
+  NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0 ...
 </div>
 ```
 
@@ -197,9 +230,15 @@ Quando multiplas regras são aplicadas a um elemento, a regra a ser renderizada 
 
 ```html
 <style>
-   div { color: black; }
-   #orange { color: orange; }
-   .green { color: green; }
+  div {
+    color: black;
+  }
+  #orange {
+    color: orange;
+  }
+  .green {
+    color: green;
+  }
 </style>
 
 <div id="orange" class="green" style="color: red;">Isso é vermelho</div>

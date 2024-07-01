@@ -1,7 +1,6 @@
 ---
 title: Lista Incompleta de tipos MIME
 slug: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
-original_slug: Web/HTTP/Basico_sobre_HTTP/MIME_types/Complete_list_of_MIME_types
 ---
 
 {{HTTPSidebar}}

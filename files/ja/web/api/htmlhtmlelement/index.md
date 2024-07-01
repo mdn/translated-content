@@ -1,11 +1,13 @@
 ---
 title: HTMLHtmlElement
 slug: Web/API/HTMLHtmlElement
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLHtmlElement`** インターフェイスはこの HTML 文書のルートノードとして機能します。このオブジェクトは {{domxref("HTMLElement")}} インターフェイスで記述されたプロパティやメソッドを継承しています。
+**`HTMLHtmlElement`** インターフェイスは、HTML 文書のルートノードとして機能します。このオブジェクトは {{domxref("HTMLElement")}} インターフェイスで記述されたプロパティやメソッドを継承しています。
 
 `HTMLHtmlElement` オブジェクトを文書から受け取るには、 {{domxref("document.documentElement")}} プロパティの値を読み取ります。
 
@@ -20,7 +22,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティもあ
 
 ## メソッド
 
-_独自のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
+_独自のメソッドはありません。親である {{domxref("HTMLElement")}} から継承したメソッドがあります。_
 
 ## 仕様書
 

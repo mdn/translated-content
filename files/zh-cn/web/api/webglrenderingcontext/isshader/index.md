@@ -27,8 +27,8 @@ GLboolean gl.isShader(shader);
 ### 校验一个 Shader
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var shader = gl.createShader(gl.VERTEX_SHADER);
 
 // ...

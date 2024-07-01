@@ -2,6 +2,7 @@
 title: void
 slug: Web/JavaScript/Reference/Operators/void
 ---
+
 {{jsSidebar("Operators")}}
 
 **`void` 연산자**는 주어진 표현식을 평가하고 {{jsxref("undefined")}}를 반환합니다.
@@ -11,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/void
 ## 구문
 
 ```js
-    void expression
+void expression;
 ```
 
 ## 설명
@@ -23,8 +24,8 @@ slug: Web/JavaScript/Reference/Operators/void
 `void` 연산자의 [우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)도 유념해야 합니다. [그룹 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Grouping)(괄호)를 사용하면 `void` 연산자를 사용한 식의 평가 과정을 더 명확하게 보일 수 있습니다.
 
 ```js
-void 2 == '2'; // undefined == '2', false
-void (2 == '2'); // void true, undefined
+void 2 == "2"; // undefined == '2', false
+void (2 == "2"); // void true, undefined
 ```
 
 ## IIFE
@@ -32,18 +33,18 @@ void (2 == '2'); // void true, undefined
 즉시 실행 함수 표현식({{Glossary("IIFE")}})을 사용할 때 `void`를 사용하면 `function` 키워드를 선언문이 아니라 표현식처럼 간주하도록 강제할 수 있습니다.
 
 ```js
-void function iife() {
-    var bar = function () {};
-    var baz = function () {};
-    var foo = function () {
-        bar();
-        baz();
-     };
-    var biz = function () {};
+void (function iife() {
+  var bar = function () {};
+  var baz = function () {};
+  var foo = function () {
+    bar();
+    baz();
+  };
+  var biz = function () {};
 
-    foo();
-    biz();
-}();
+  foo();
+  biz();
+})();
 ```
 
 ## JavaScript URI
@@ -51,9 +52,7 @@ void function iife() {
 `javascript:`로 시작하는 URI를 지원하는 브라우저에서는, URI에 있는 코드의 평가 결과가 {{jsxref("undefined")}}가 아니라면 페이지의 콘텐츠를 반환 값으로 대체합니다. `void` 연산자를 사용하면 `undefined`를 반환할 수 있습니다. 다음 예제를 확인하세요.
 
 ```html
-<a href="javascript:void(0);">
-  클릭해도 아무 일도 없음
-</a>
+<a href="javascript:void(0);">클릭해도 아무 일도 없음</a>
 <a href="javascript:void(document.body.style.backgroundColor='green');">
   클릭하면 배경색이 녹색으로
 </a>

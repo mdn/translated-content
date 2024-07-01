@@ -17,9 +17,9 @@ El motor de físicas hace que todo sea mucho más fácil - solo necesitamos agre
 
 ```js
 function update() {
-    game.physics.arcade.collide(ball, paddle);
-    game.physics.arcade.collide(ball, bricks, ballHitBrick);
-    paddle.x = game.input.x || game.world.width*0.5;
+  game.physics.arcade.collide(ball, paddle);
+  game.physics.arcade.collide(ball, bricks, ballHitBrick);
+  paddle.x = game.input.x || game.world.width * 0.5;
 }
 ```
 
@@ -27,7 +27,7 @@ La posición de la bola se calcula contra las posiciones de todos los ladrillos 
 
 ```js
 function ballHitBrick(ball, brick) {
-    brick.kill();
+  brick.kill();
 }
 ```
 

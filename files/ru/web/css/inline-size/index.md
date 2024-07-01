@@ -1,7 +1,6 @@
 ---
 title: inline-size
 slug: Web/CSS/inline-size
-translation_of: Web/CSS/inline-size
 ---
 
 {{CSSRef}}
@@ -70,17 +69,15 @@ inline-size: unset;
 
 {{EmbedLiveSample("Setting_inline_size_in_pixels")}}
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                            | Status                                           | Comment            |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------ |
-| {{SpecName("CSS Logical Properties", "#propdef-inline-size", "inline-size")}} | {{Spec2("CSS Logical Properties")}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - The mapped physical properties: {{cssxref("width")}} and {{cssxref("height")}}
 - {{cssxref("writing-mode")}}

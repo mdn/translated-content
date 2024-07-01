@@ -83,58 +83,73 @@ slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 - 第一次加载页面，光标放置在表单的 Name 字段。在 Firefox 1.5, 当用户导航回该页面，光标依然在页面导航离开时的位置。在其他浏览器，光标移回到 Name 字段。
 
 ```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
-<HTML>
-<head>
-<title>Order query Firefox 1.5 Example</title>
-<style type="text/css">
-body, p {
-    font-family: Verdana, sans-serif;
-    font-size: 12px;
-}
-</style>
-<script type="text/javascript">
-function onLoad() {
-    loadOnlyFirst();
-    onPageShow();
-}
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>Order query Firefox 1.5 Example</title>
+    <style type="text/css">
+      body,
+      p {
+        font-family: Verdana, sans-serif;
+        font-size: 12px;
+      }
+    </style>
+    <script type="text/javascript">
+      function onLoad() {
+        loadOnlyFirst();
+        onPageShow();
+      }
 
-function onPageShow() {
-//calculate current time
-    var currentTime= new Date();
-    var year=currentTime.getFullYear();
-    var month=currentTime.getMonth()+1;
-    var day=currentTime.getDate();
-    var hour=currentTime.getHours();
-    var min=currentTime.getMinutes();
-    var sec=currentTime.getSeconds();
-    var mil=currentTime.getMilliseconds();
-    var displayTime = (month + "/" + day + "/" + year + " " +
-        hour + ":" + min + ":" + sec + ":" + mil);
-    document.getElementById("timefield").value=displayTime;
-}
+      function onPageShow() {
+        //calculate current time
+        var currentTime = new Date();
+        var year = currentTime.getFullYear();
+        var month = currentTime.getMonth() + 1;
+        var day = currentTime.getDate();
+        var hour = currentTime.getHours();
+        var min = currentTime.getMinutes();
+        var sec = currentTime.getSeconds();
+        var mil = currentTime.getMilliseconds();
+        var displayTime =
+          month +
+          "/" +
+          day +
+          "/" +
+          year +
+          " " +
+          hour +
+          ":" +
+          min +
+          ":" +
+          sec +
+          ":" +
+          mil;
+        document.getElementById("timefield").value = displayTime;
+      }
 
-function loadOnlyFirst() {
-    document.zipForm.name.focus();
-}
-</script>
-</head>
-<body onload="onLoad();" onpageshow="if (event.persisted) onPageShow();">
-<h2>Order query</h2>
+      function loadOnlyFirst() {
+        document.zipForm.name.focus();
+      }
+    </script>
+  </head>
+  <body onload="onLoad();" onpageshow="if (event.persisted) onPageShow();">
+    <h2>Order query</h2>
 
-<form name="zipForm" action="http://www.example.com/formresult.html" method="get">
-<label for="timefield">Date and time:</label>
-<input type="text" id="timefield"><br>
-<label for="name">Name:</label>
-<input type="text" id="name"><br>
-<label for="address">Email address:</label>
-<input type="text" id="address"><br>
-<label for="order">Order number:</label>
-<input type="text" id="order"><br>
-<input type="submit" name="submit" value="Submit Query">
-</form>
-</body>
+    <form
+      name="zipForm"
+      action="http://www.example.com/formresult.html"
+      method="get">
+      <label for="timefield">Date and time:</label>
+      <input type="text" id="timefield" /><br />
+      <label for="name">Name:</label>
+      <input type="text" id="name" /><br />
+      <label for="address">Email address:</label>
+      <input type="text" id="address" /><br />
+      <label for="order">Order number:</label>
+      <input type="text" id="order" /><br />
+      <input type="submit" name="submit" value="Submit Query" />
+    </form>
+  </body>
 </html>
 ```
 

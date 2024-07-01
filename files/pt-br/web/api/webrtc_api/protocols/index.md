@@ -27,7 +27,7 @@ Alguns roteadores terão restrições sobre quem pode se conectar a dispositivos
 
 ## TURN
 
-Alguns roteadores que usam NAT empregam uma restrição chamada ‘Symmetric NAT’ (_NAT simétrico_). Isso significa que o roteador só aceitará conexões de pares aos quais você já se conectou.
+Alguns roteadores que usam NAT empregam uma restrição chamada 'Symmetric NAT' (_NAT simétrico_). Isso significa que o roteador só aceitará conexões de pares aos quais você já se conectou.
 
 [Traversal Using Relays around NAT (TURN)](http://en.wikipedia.org/wiki/TURN) destina-se a contornar a restrição de NAT simétrico abrindo uma conexão com um servidor TURN para que ele re-transmita toda informação. Você criaria uma conexão com um servidor TURN e avisaria a todos os pares (_peers_) para enviar pacotes para este servidor, que lhe encaminharia. Isso obviamente vem com alguma sobrecarga, então só é usado se não houver outras alternativas.
 

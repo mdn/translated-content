@@ -1,12 +1,14 @@
 ---
 title: ul
 slug: Web/HTML/Element/ul
-original_slug: Web/HTML/Elemento/ul
 ---
+
+{{HTMLSidebar}}
 
 ### Definición
 
 - **ul** de "unordered list" -_lista no ordenada_ . crea una lista no ordenada.
+
   - : **Sus etiquetas son**: `<ul> y </ul>` (ambas obligatorias).
 
     **Está definido como**: Elemento [para listas](/es/HTML/Elemento/Tipos_de_elementos#delista).

@@ -1,7 +1,8 @@
 ---
-title: ':visited'
+title: ":visited"
 slug: Web/CSS/:visited
 ---
+
 {{ CSSRef }}
 
 **`:visited`** [CSS](/ko/docs/Web/CSS) [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 사용자가 방문한 적이 있는 링크를 나타냅니다. `:visited`가 바꿀 수 있는 스타일은 개인정보 보호를 위해 매우 제한적입니다.
@@ -37,7 +38,7 @@ a:visited {
 ### HTML
 
 ```html
-<a href="#test-visited-link">링크를 아직 방문하지 않으셨나요?</a><br>
+<a href="#test-visited-link">링크를 아직 방문하지 않으셨나요?</a><br />
 <a href="">이미 방문했습니다.</a>
 ```
 

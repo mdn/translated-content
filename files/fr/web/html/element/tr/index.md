@@ -1,8 +1,6 @@
 ---
-title: '<tr> : l''élément de ligne d''un tableau'
+title: "<tr> : l'élément de ligne d'un tableau"
 slug: Web/HTML/Element/tr
-translation_of: Web/HTML/Element/tr
-browser-compat: html.elements.tr
 ---
 
 {{HTMLSidebar}}
@@ -87,13 +85,16 @@ Voir [la page sur `<table>`](/fr/docs/Web/HTML/Element/table) pour d'autres exem
 ```html
 <table>
   <tr>
-    <th>Prénom</th><th>Nom</th>
+    <th>Prénom</th>
+    <th>Nom</th>
   </tr>
   <tr>
-    <td>Jean</td> <td>Biche</td>
+    <td>Jean</td>
+    <td>Biche</td>
   </tr>
   <tr>
-    <td>Marcel</td> <td>Patulacci</td>
+    <td>Marcel</td>
+    <td>Patulacci</td>
   </tr>
 </table>
 ```
@@ -107,7 +108,8 @@ table {
   border: 1px solid black;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
 }
 ```
@@ -177,7 +179,8 @@ table {
   border: 1px solid black;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
 }
 ```
@@ -235,7 +238,8 @@ table {
   border: 1px solid black;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
 }
 ```
@@ -305,16 +309,21 @@ Là encore, regardons le résultat pour commencer.
 ```css
 table {
   border: 1px solid black;
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
 }
 
 thead > tr {
   background-color: rgb(228, 240, 245);
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
-  padding:4px 6px;
+  padding: 4px 6px;
 }
 ```
 
@@ -385,7 +394,11 @@ Ici, CSS est utilisé de façon plus marquée. Sans que ce soit compliqué, il y
 ```css
 table {
   border: 1px solid black;
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border-spacing: 0;
   border-collapse: collapse;
 }
@@ -394,9 +407,10 @@ table {
 Ici, on ajoute les propriétés [`border-spacing`](/fr/docs/Web/CSS/border-spacing) et [`border-collapse`](/fr/docs/Web/CSS/border-collapse) afin d'éliminer l'espace entre les cellules et afin de fusionner les bordures qui se touchent afin d'obtenir une seule bordure plutôt que des bordures doubles.
 
 ```css
-th, td {
+th,
+td {
   border: 1px solid black;
-  padding:4px 6px;
+  padding: 4px 6px;
 }
 
 th {
@@ -467,7 +481,7 @@ Enfin, lorsqu'on affiche des valeurs monétaires, on les représente alignées �
 
 ```css
 tbody > tr > td:last-of-type {
-  text-align:right;
+  text-align: right;
 }
 ```
 

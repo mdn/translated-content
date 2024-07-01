@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.resetPose()
 slug: Web/API/VRDisplay/resetPose
-original_slug: Web/API/VRDevice/resetPose
 ---
 
 {{APIRef("WebVR API")}}{{deprecated_header}}
@@ -17,7 +16,7 @@ VRDisplay の報告されるロール (roll) とピッチ (pitch) は重力に�
 ## 構文
 
 ```js
-resetPose()
+resetPose();
 ```
 
 ### 引数
@@ -33,9 +32,9 @@ resetPose()
 ```js
 // Assuming vrDisplay already contains a VRDisplay object,
 // and we have a <button> referenced inside btn
-btn.addEventListener('click', function() {
+btn.addEventListener("click", function () {
   vrDisplay.resetPose();
-  console.log('Current pose set as origin/center');
+  console.log("Current pose set as origin/center");
 });
 ```
 
@@ -51,5 +50,4 @@ btn.addEventListener('click', function() {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

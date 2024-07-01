@@ -1,5 +1,5 @@
 ---
-title: 'Express チュートリアル: 地域図書館の Web サイト'
+title: "Express チュートリアル: 地域図書館のウェブサイト"
 slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 ---
 
@@ -32,8 +32,8 @@ _LocalLibrary_ は、この一連のチュートリアルの過程で作成お�
 
 この例は慎重に選択されています。必要なだけ詳細を表示することも、ほとんどすべての Express 機能を見せるために使用することもできるためです。さらに重要なことに、それはどんなウェブサイトでも必要とする機能性への*ガイド付きの*道筋を提供することができます：
 
-- 最初のいくつかのチュートリアル記事では、図書館のメンバーがどの本が利用できるかを調べるために使用できる簡単な*ブラウズ専用*ライブラリを定義します。これにより、ほぼすべての ウェブサイトに共通の操作、つまりデータベースからのコンテンツの読み取りと表示を探ることができます。
-- 先へ進むにつれて、図書館の例は自然に拡張され、より高度な ウェブサイト機能を実演します。たとえば、新しい本を作成できるようにライブラリを拡張し、これを使用してフォームの使用方法を示し、ユーザ認証をサポートすることができます。
+- 最初のいくつかのチュートリアル記事では、図書館のメンバーがどの本が利用できるかを調べるために使用できる簡単な*ブラウズ専用*ライブラリーを定義します。これにより、ほぼすべての ウェブサイトに共通の操作、つまりデータベースからのコンテンツの読み取りと表示を探ることができます。
+- 先へ進むにつれて、図書館の例は自然に拡張され、より高度な ウェブサイト機能を実演します。たとえば、新しい本を作成できるようにライブラリーを拡張し、これを使用してフォームの使用方法を示し、ユーザー認証をサポートすることができます。
 
 これは非常に拡張可能な例ですが、_**Local**Library_ と呼ばれる理由があります。私たちは Express をすぐに使い始めるための最小限の情報を示すことを望んでいます。その結果、私たちは本に関する情報、本のコピー、作者、その他の重要な情報を保存します。ただし、図書館が貸し出す可能性のある他のアイテムに関する情報を保存したり、複数の図書館サイトやその他の "大きな図書館" 機能をサポートするために必要なインフラストラクチャを提供することはしません。
 
@@ -52,15 +52,3 @@ _LocalLibrary_ は、この一連のチュートリアルの過程で作成お�
 _LocalLIbrary_ ウェブサイトと、これから学ぶことについて少し知りました。今度は私たちの例を含む[スケルトンプロジェクト](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website)の作成を開始します。
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
-
-## このモジュールの中
-
-- [Express/Node のイントロダクション](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Node 開発環境の設定](/ja/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express チュートリアル: 地域図書館のウェブサイト](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express チュートリアル Part 2: スケルトンウェブサイトの作成](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express チュートリアル Part 3: データベースを使う (Mongoose を使用)](/ja/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express チュートリアル Part 4: ルートとコントローラ](/ja/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express チュートリアル Part 5: ライブラリデータの表示](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express チュートリアル Part 6: フォームの操作](/ja/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express チュートリアル Part 7: プロダクションへのデプロイ](/ja/docs/Learn/Server-side/Express_Nodejs/deployment)

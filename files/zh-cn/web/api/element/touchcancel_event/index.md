@@ -3,6 +3,8 @@ title: Element：touchcancel 事件
 slug: Web/API/Element/touchcancel_event
 ---
 
+{{APIRef}}
+
 `touchcancel` 事件在触点被中断时触发，中断方式基于特定实现而有所不同（例如，创建了太多的触点）。
 
 ## 语法
@@ -10,9 +12,9 @@ slug: Web/API/Element/touchcancel_event
 在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener('touchcancel', (event) => {});
+addEventListener("touchcancel", (event) => {});
 
-ontouchcancel = (event) => { };
+ontouchcancel = (event) => {};
 ```
 
 ## 事件类型

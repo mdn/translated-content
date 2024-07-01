@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`<mtext>`** は [MathML](/en-US/docs/Web/MathML) の要素で、コメントや注釈などの表記の意味を*もたない*任意のテキストをレンダリングするために使用されます。
+**`<mtext>`** は [MathML](/ja/docs/Web/MathML) の要素で、コメントや注釈などの表記の意味を*もたない*任意のテキストをレンダリングするために使用されます。
 
 表記の意味*で*テキストを表示するには、 {{ MathMLElement("mi") }} や {{ MathMLElement("mo") }} を代わりに使用してください。
 

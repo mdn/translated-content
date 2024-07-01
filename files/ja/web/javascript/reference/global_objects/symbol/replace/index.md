@@ -21,11 +21,11 @@ class CustomReplacer {
     this.value = value;
   }
   [Symbol.replace](string) {
-    return string.replace(this.value, '#!@?');
+    return string.replace(this.value, "#!@?");
   }
 }
 
-console.log('football'.replace(new CustomReplacer('foo')));
+console.log("football".replace(new CustomReplacer("foo")));
 // expected output: "#!@?tball"
 ```
 
@@ -35,7 +35,7 @@ console.log('football'.replace(new CustomReplacer('foo')));
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Symbol.replace")}}
+{{Compat}}
 
 ## 関連情報
 

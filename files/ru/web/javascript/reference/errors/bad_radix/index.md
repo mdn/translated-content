@@ -1,11 +1,6 @@
 ---
-title: 'RangeError: radix must be an integer'
+title: "RangeError: radix must be an integer"
 slug: Web/JavaScript/Reference/Errors/Bad_radix
-tags:
-  - JavaScript
-  - RangeError
-  - Ошибки
-translation_of: Web/JavaScript/Reference/Errors/Bad_radix
 ---
 
 {{jsSidebar("Errors")}}
@@ -44,16 +39,16 @@ RangeError: toString() radix argument must be between 2 and 36 (Chrome)
 (42).toString(37);
 (42).toString(150);
 // Нельзя использовать для форматирования строку данного вида:
-(12071989).toString('MM-dd-yyyy');
+(12071989).toString("MM-dd-yyyy");
 ```
 
 ### Корректное применение
 
 ```js example-good
-(42).toString(2);     // "101010" (двоичная система)
-(13).toString(8);     // "15"     (восьмеричная)
-(0x42).toString(10);  // "66"     (десятичная)
-(100000).toString(16) // "186a0"  (шестнадцатеричная)
+(42).toString(2); // "101010" (двоичная система)
+(13).toString(8); // "15"     (восьмеричная)
+(0x42).toString(10); // "66"     (десятичная)
+(100000).toString(16); // "186a0"  (шестнадцатеричная)
 ```
 
 ## Смотрите также

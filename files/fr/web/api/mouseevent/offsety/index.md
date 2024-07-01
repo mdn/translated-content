@@ -1,17 +1,9 @@
 ---
 title: MouseEvent.offsetY
 slug: Web/API/MouseEvent/offsetY
-tags:
-  - API
-  - Experimental
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
-translation_of: Web/API/MouseEvent/offsetY
 ---
 
-{{APIRef("DOM Events")}}{{SeeCompatTable}}
+{{APIRef("UI Events")}}
 
 La propriété en lecture seule **`offsetY`** de l'interface {{domxref("MouseEvent")}} fournit le décalage sur l'axe Y du pointeur de la souris entre cet évènement et la bordure de la marge intérieure du noeud cible.
 

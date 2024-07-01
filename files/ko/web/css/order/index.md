@@ -48,10 +48,22 @@ order: unset;
 위와 같은 기본적인 HTML에서, 다음 CSS 코드는 콘텐츠 블록을 감싸는, 고전적인 양쪽 사이드바 레이아웃을 만듭니다. Flexible Box Layout 모듈이 자동으로 모든 블록의 높이를 동일하게 하며 가능한 가로축 공간을 모두 분배합니다.
 
 ```css
-main { display: flex;  text-align:center; }
-main > article { flex:1;        order: 2; }
-main > nav     { width: 200px;  order: 1; }
-main > aside   { width: 200px;  order: 3; }
+main {
+  display: flex;
+  text-align: center;
+}
+main > article {
+  flex: 1;
+  order: 2;
+}
+main > nav {
+  width: 200px;
+  order: 1;
+}
+main > aside {
+  width: 200px;
+  order: 3;
+}
 ```
 
 ### 결과

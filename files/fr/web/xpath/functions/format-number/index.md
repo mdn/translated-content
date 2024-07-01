@@ -1,13 +1,9 @@
 ---
 title: format-number
 slug: Web/XPath/Functions/format-number
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/format-number
-original_slug: Web/XPath/Fonctions/format-number
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `format-number` évalue un nombre et retourne une chaîne représentant le nombre dans un format donné.
 

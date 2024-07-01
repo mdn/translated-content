@@ -1,20 +1,28 @@
 ---
-title: Element.getAttributeNode()
+title: "Element: getAttributeNode() メソッド"
+short-title: getAttributeNode()
 slug: Web/API/Element/getAttributeNode
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{ APIRef("DOM") }}
 
-この要素の指定された属性を、 `Attr` ノードとして返します。
+この要素の指定された属性を、`Attr` ノードとして返します。
 
 ## 構文
 
-```js
-var attrNode = element.getAttributeNode(attrName);
+```js-nolint
+getAttributeNode(attrName)
 ```
 
-- `attrNode` は指定の属性に対する `Attr` ノードです。
+### 引数
+
 - `attrName` は属性の名前を表す文字列です。
+
+### 返値
+
+指定の属性の `Attr` ノードです。
 
 ## 例
 
@@ -22,7 +30,7 @@ var attrNode = element.getAttributeNode(attrName);
 // html: <div id="top" />
 let t = document.getElementById("top");
 let idAttr = t.getAttributeNode("id");
-alert(idAttr.value == "top")
+alert(idAttr.value === "top");
 ```
 
 ## メモ

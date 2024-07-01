@@ -2,6 +2,7 @@
 title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 ---
+
 {{JSRef}}
 
 **`Number.isNaN()`** 메서드는 주어진 값이 {{jsxref("NaN")}}인지 판별합니다. 기존부터 존재한 전역 {{jsxref("isNaN", "isNaN()")}} 함수의 더 엄격한 버전입니다.
@@ -11,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 ## 구문
 
 ```js
-    Number.isNaN(value)
+Number.isNaN(value);
 ```
 
 ### 매개변수
@@ -32,15 +33,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 ## 예제
 
 ```js
-Number.isNaN(NaN);        // true
+Number.isNaN(NaN); // true
 Number.isNaN(Number.NaN); // true
-Number.isNaN(0 / 0)       // true
+Number.isNaN(0 / 0); // true
 
 // 예를 들면 이들은 global isNaN()으로는 true가 됐을 것임
-Number.isNaN("NaN");      // false
-Number.isNaN(undefined);  // false
-Number.isNaN({});         // false
-Number.isNaN("blabla");   // false
+Number.isNaN("NaN"); // false
+Number.isNaN(undefined); // false
+Number.isNaN({}); // false
+Number.isNaN("blabla"); // false
 
 // 모두
 Number.isNaN(true);
@@ -55,9 +56,11 @@ Number.isNaN(" ");
 ## 폴리필
 
 ```js
-Number.isNaN = Number.isNaN || function(value) {
+Number.isNaN =
+  Number.isNaN ||
+  function (value) {
     return value !== value;
-}
+  };
 ```
 
 ## 명세

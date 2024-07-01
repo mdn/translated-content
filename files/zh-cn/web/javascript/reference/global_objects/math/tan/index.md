@@ -3,7 +3,7 @@ title: Math.tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## 概述
 
@@ -28,13 +28,13 @@ Math.tan(x)
 
 ## 示例
 
-### 例子：使用 `Math.tan`
+### 示例：使用 `Math.tan`
 
 下面的函数返回变量 `x` 的正切值：
 
 ```js
 function getTan(x) {
-   return Math.tan(x);
+  return Math.tan(x);
 }
 ```
 
@@ -42,8 +42,8 @@ function getTan(x) {
 
 ```js
 function getTanDeg(deg) {
-   var rad = deg * Math.PI/180;
-   return Math.tan(rad);
+  var rad = (deg * Math.PI) / 180;
+  return Math.tan(rad);
 }
 ```
 

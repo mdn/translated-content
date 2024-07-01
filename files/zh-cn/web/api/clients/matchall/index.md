@@ -10,7 +10,7 @@ slug: Web/API/Clients/matchAll
 ## 语法
 
 ```js
-ServiceWorkerClients.matchAll(options).then(function(clients) {
+ServiceWorkerClients.matchAll(options).then(function (clients) {
   // do something with your clients list
 });
 ```
@@ -19,7 +19,7 @@ ServiceWorkerClients.matchAll(options).then(function(clients) {
 
 - `options {{optional_inline}}`
 
-  - : 一个 options 对象，允许您为匹配操作设置选项。可用选项包括：
+  - : 一个 options 对象，允许你为匹配操作设置选项。可用选项包括：
 
     - `includeUncontrolled`: {{domxref("Boolean")}} — 如果设置为`true`, 匹配操作将返回与当前服务工作者共享相同源的所有服务工作者客户端。否则，它仅返回由当前服务工作者控制的服务工作者客户端。默认值为`false`.
     - `type`: 设置想要匹配的 clients 类型。可用值包括 `window`, `worker`, `sharedworker`, 和 `all`. 默认是 `all`.
@@ -31,9 +31,9 @@ resolve 为一个 {{domxref("Client")}} 对象数组的 [`Promise`](/zh-CN/docs/
 ## 示例
 
 ```js
-clients.matchAll(options).then(function(clientList) {
-  for (var i = 0 ; i < clients.length ; i++) {
-    if (clientList[i].url === 'index.html') {
+clients.matchAll(options).then(function (clientList) {
+  for (var i = 0; i < clients.length; i++) {
+    if (clientList[i].url === "index.html") {
       clients.openWindow(clientList[i]);
       // or do something else involving the matching client
     }

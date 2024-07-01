@@ -1,14 +1,9 @@
 ---
 title: ITU
 slug: Glossary/ITU
-tags:
-  - Glossaire
-  - ITU
-  - Standardisation
-  - organisation
-translation_of: Glossary/ITU
-original_slug: Glossaire/ITU
 ---
+
+{{GlossarySidebar}}
 
 L'Union Internationale des Télécommunications (ITU) est l'organisation autorisée par les Nations Unies à établir des normes et des règles pour les télécommunication, y compris le télégraphe, la radio, la téléphonie et Internet. De la définition des règles pour garantir que les transmissions arrivent là où elles doivent aller et de la création du signal d'alerte «SOS» utilisé en code Morse, l'UIT joue depuis longtemps un rôle clé dans la manière dont nous utilisons la technologie pour échanger des informations et des idées.
 

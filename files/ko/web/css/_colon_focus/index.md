@@ -1,5 +1,5 @@
 ---
-title: ':focus'
+title: ":focus"
 slug: Web/CSS/:focus
 ---
 
@@ -25,8 +25,8 @@ input:focus {
 ### HTML
 
 ```html
-<input class="red-input" value="저는 포커스를 받으면 빨갛게 됩니다."><br>
-<input class="blue-input" value="저는 포커스를 받으면 파랗게 됩니다.">
+<input class="red-input" value="저는 포커스를 받으면 빨갛게 됩니다." /><br />
+<input class="blue-input" value="저는 포커스를 받으면 파랗게 됩니다." />
 ```
 
 ### CSS

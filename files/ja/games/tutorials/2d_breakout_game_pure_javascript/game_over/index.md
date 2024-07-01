@@ -1,7 +1,6 @@
 ---
 title: ゲームオーバー
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 ---
 
 {{GamesSidebar}}
@@ -17,11 +16,11 @@ original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 自分のゲームにゲームオーバーを実装してみましょう。第 3 章ではボールを壁で跳ね返るようにしました。以下はその引用です。
 
 ```js
-if (x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
   dx = -dx;
 }
 
-if (y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
+if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
   dy = -dy;
 }
 ```
@@ -45,7 +44,7 @@ const interval = setInterval(draw, 10);
 ```js
 if (y + dy < ballRadius) {
   dy = -dy;
-} else if (y + dy > canvas.height-ballRadius) {
+} else if (y + dy > canvas.height - ballRadius) {
   alert("GAME OVER");
   document.location.reload();
   clearInterval(interval); // Needed for Chrome to end game
@@ -59,7 +58,7 @@ if (y + dy < ballRadius) {
 ```js
 if (y + dy < ballRadius) {
   dy = -dy;
-} else if (y + dy > canvas.height-ballRadius) {
+} else if (y + dy > canvas.height - ballRadius) {
   if (x > paddleX && x < paddleX + paddleWidth) {
     dy = -dy;
   } else {

@@ -49,20 +49,20 @@ Esse é um trecho simples de código que desenha um arco. O ponto de partida é 
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.moveTo(150, 20);
 ctx.arcTo(150, 100, 50, 20, 30);
-ctx.lineTo(50, 20)
+ctx.lineTo(50, 20);
 ctx.stroke();
 
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 // starting point
 ctx.fillRect(150, 20, 10, 10);
 
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 // control point one
 ctx.fillRect(150, 100, 10, 10);
 // control point two
@@ -85,7 +85,8 @@ Altere o código abaixo e veja suas alterações atualizadas na tela:
 ctx.beginPath();
 ctx.moveTo(150, 20);
 ctx.arcTo(150,100,50,100,20);
-ctx.stroke();</textarea>
+ctx.stroke();</textarea
+>
 ```
 
 ```js hidden
@@ -101,14 +102,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -118,13 +119,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Espeficicações
 
-| Specification                                                                                                                        | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-arcto", "CanvasRenderingContext2D.arcTo")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CanvasRenderingContext2D.arcTo")}}
+{{Compat}}
 
 ## Veja também
 

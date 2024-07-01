@@ -2,12 +2,12 @@
 title: 高度なテキスト整形
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 l10n:
-  sourceCommit: 456818a08b697e125ddb765d8f18020bc80c9747
+  sourceCommit: 960b382072f417a71194bf906261d9a6d1519df1
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 
-テキストの書式設定のための HTML には他にも多くの要素がありますが、これは [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) には書かれていません。この記事で説明されている要素はあまり知られていませんが、知っていると役に立ちます。（これはまだいかなる意味でも完全なリストではありません）。ここでは、注釈、説明リスト、コンピューターコードとその他の関連テキスト、下付き文字と上付き文字、連絡先情報などのマークアップについて学習します。
+テキストの整形のための HTML には他にも多くの要素がありますが、これは [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) には書かれていません。この記事で説明されている要素はあまり知られていませんが、知っていると役に立ちます（これはまだいかなる意味でも完全なリストではありません）。ここでは、注釈、説明リスト、コンピューターコードとその他の関連テキスト、下付き文字と上付き文字、連絡先情報などのマークアップについて学習します。
 
 <table>
   <tbody>
@@ -34,9 +34,9 @@ l10n:
 
 ## 説明リスト
 
-HTML テキストの基礎では、HTML で [基本的なリストをマークアップする](/ja/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#リスト)方法を見てきました、しかしたまに出てくる第 3 のリスト — **説明リスト** — については触れていませんでした。このリストの目的は、項目とそれに関連する説明を一緒にマークアップすることで、用語の定義や、質問と回答などに使います。用語の定義の例を見てみましょう。
+HTML テキストの基礎では、HTML で [基本的なリストをマークアップする](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#リスト)方法を見てきました、しかしたまに出てくる第 3 のリスト — **説明リスト** — については触れていませんでした。このリストの目的は、項目とそれに関連する説明を一緒にマークアップすることで、用語の定義や、質問と回答などに使います。用語の定義の例を見てみましょう。
 
-```
+```plain
 独り言 (soliloquy)
 ドラマで、登場人物が自分自身にしゃべりかけ、内なる考えや感情や、そうなった過程を（他の登場人物ではなく）観客に対して表現するものです。
 独白 (monologue)
@@ -54,11 +54,17 @@ HTML テキストの基礎では、HTML で [基本的なリストをマーク�
 ```html
 <dl>
   <dt>独り言 (soliloquy)</dt>
-  <dd>ドラマで、登場人物が自分自身にしゃべりかけ、内なる考えや感情や、そうなった過程を（他の登場人物ではなく）観客に対して表現するものです。</dd>
+  <dd>
+    ドラマで、登場人物が自分自身にしゃべりかけ、内なる考えや感情や、そうなった過程を（他の登場人物ではなく）観客に対して表現するものです。
+  </dd>
   <dt>独白 (monologue)</dt>
-  <dd>ドラマで、登場人物が自分の考えを観客や他の登場人物に伝わるように喋るものです。</dd>
+  <dd>
+    ドラマで、登場人物が自分の考えを観客や他の登場人物に伝わるように喋るものです。
+  </dd>
   <dt>傍白 (aside)</dt>
-  <dd>ドラマで、登場人物が観客のみに対し、ユーモアやドラマチックな効果を狙ってコメントをします。これは通常は感情や、考えや、追加の背景情報です。</dd>
+  <dd>
+    ドラマで、登場人物が観客のみに対し、ユーモアやドラマチックな効果を狙ってコメントをします。これは通常は感情や、考えや、追加の背景情報です。
+  </dd>
 </dl>
 ```
 
@@ -73,8 +79,12 @@ HTML テキストの基礎では、HTML で [基本的なリストをマーク�
 ```html
 <dl>
   <dt>傍白 (aside)</dt>
-  <dd>ドラマでは、登場人物が観客のみに対し、ユーモアやドラマチックな効果を狙ってコメントをします。これは通常は感情や、考えや、追加の背景情報です。</dd>
-  <dd>文章では、現在のトピックに関連するコンテンツの一部ですが、本文の流れに直接合わないため、近くに表示されます（多くの場合、横に並んでいる枠の中に入ります）。</dd>
+  <dd>
+    ドラマでは、登場人物が観客のみに対し、ユーモアやドラマチックな効果を狙ってコメントをします。これは通常は感情や、考えや、追加の背景情報です。
+  </dd>
+  <dd>
+    文章では、現在のトピックに関連するコンテンツの一部ですが、本文の流れに直接合わないため、近くに表示されます（多くの場合、横に並んでいる枠の中に入ります）。
+  </dd>
 </dl>
 ```
 
@@ -82,18 +92,20 @@ HTML テキストの基礎では、HTML で [基本的なリストをマーク�
 
 ### アクティブラーニング: 定義リストのマークアップ
 
-入力欄の生テキストに要素を追加して、出力欄に説明文のリストとして現れるようにしましょう。お望みなら、自身の用語や説明文を使用してみるのもいいでしょう。
+説明リストを作ってみましょう。入力欄の生テキストに要素を追加して、出力欄に説明文のリストとして現れるようにしましょう。お望みなら、自身の用語や説明文を使用してみるのもいいでしょう。
 
 間違えたら、常に _リセット_ ボタンを使用してリセットすることができます。本当に行き詰まったら、_答えを表示_ ボタンを押して、答えを見ることができます。
 
 ```html hidden
 <h2>ライブ出力</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>編集可能なコード</h2>
-<p class="a11y-label">Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。</p>
+<p class="a11y-label">
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
+  はタブ文字を挿入します）。
+</p>
 
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
 Bacon
@@ -102,11 +114,12 @@ Eggs
 The glue that binds the cake together.
 Coffee
 The drink that gets the world running in the morning.
-A light brown color.</textarea>
+A light brown color.
+</textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="リセット">
-  <input id="solution" type="button" value="答えを表示">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="答えを表示" />
 </div>
 ```
 
@@ -133,10 +146,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -144,30 +157,31 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<dl>\n <dt>Bacon</dt>\n <dd>The glue that binds the world together.</dd>\n <dt>Eggs</dt>\n <dd>The glue that binds the cake together.</dd>\n <dt>Coffee</dt>\n <dd>The drink that gets the world running in the morning.</dd>\n <dd>A light brown color.</dd>\n</dl>';
+const htmlSolution =
+  "<dl>\n <dt>Bacon</dt>\n <dd>The glue that binds the world together.</dd>\n <dt>Eggs</dt>\n <dd>The glue that binds the cake together.</dd>\n <dt>Coffee</dt>\n <dd>The drink that gets the world running in the morning.</dd>\n <dd>A light brown color.</dd>\n</dl>";
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '答えを表示';
+  solution.value = "答えを表示";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === '答えを表示') {
+solution.addEventListener("click", () => {
+  if (solution.value === "答えを表示") {
     textarea.value = solutionEntry;
-    solution.value = '答えを隠す';
+    solution.value = "答えを隠す";
   } else {
     textarea.value = userEntry;
-    solution.value = '答えを表示';
+    solution.value = "答えを表示";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -175,7 +189,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -188,7 +202,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -202,7 +219,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === '答えを表示') {
+  if (solution.value === "答えを表示") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -220,20 +237,27 @@ HTML には引用をマークアップするための機能もあります。ど
 
 ### ブロック引用
 
-ブロックレベルの内容（段落、複数の段落、リストなど）の一部が他の場所から引用されている場合、それを示すために {{htmlelement("blockquote")}} 要素で囲み、 {{htmlattrxref("cite", "blockquote")}} 属性の中に引用元を指す URL を記載する必要があります。例えば、以下のマークアップは MDN の `<blockquote>` 要素のページから引用しています。
+ブロックレベルの内容（段落、複数の段落、リストなど）の一部が他の場所から引用されている場合、それを示すために {{htmlelement("blockquote")}} 要素で囲み、 [`cite`](/ja/docs/Web/HTML/Element/blockquote#cite) 属性の中に引用元を指す URL を記載する必要があります。例えば、以下のマークアップは MDN の `<blockquote>` 要素のページから引用しています。
 
 ```html
-<p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
-Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+<p>
+  The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+  <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an
+  extended quotation.
+</p>
 ```
 
 これをブロック引用にするには、次のようにします。
 
 ```html
 <p>こちらが引用です。</p>
-<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
-  <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
-  Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+<blockquote
+  cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/blockquote">
+  <p>
+    The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
+    an extended quotation.
+  </p>
 </blockquote>
 ```
 
@@ -246,8 +270,12 @@ Quotation Element</em>) indicates that the enclosed text is an extended quotatio
 インラインの引用は、{{htmlelement("q")}} 要素を使用することを除いて、まったく同じ方法で機能します。例えば、以下のマークアップには MDN の `<q>` ページからの引用が含まれています。
 
 ```html
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q">intended
-for short quotations that don't require paragraph breaks.</q></p>
+<p>
+  The quote element — <code>&lt;q&gt;</code> — is
+  <q cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q">
+    intended for short quotations that don't require paragraph breaks.
+  </q>
+</p>
 ```
 
 ブラウザーの既定のスタイル設定では、これは引用符で囲まれた通常のテキストとしてレンダリングされ、次のようになります。
@@ -256,23 +284,33 @@ for short quotations that don't require paragraph breaks.</q></p>
 
 ### 引用元
 
-{{htmlattrxref("cite", "blockquote")}} 属性の内容は有用そうに見えますが、残念ながらブラウザーや 画面リーダーなどは、この属性を実際にはあまり使用してくれません。 JavaScript や CSS を使って自身の解決策を書かない限り、ブラウザーに `cite` の内容を表示させる方法はありません。もしページ上で引用元を利用できるようにしたいのであれば、リンクやその他の適切な方法で本文中に利用できるようにする必要があります。
+[`cite`](/ja/docs/Web/HTML/Element/blockquote#cite) 属性の内容は有用そうに見えますが、残念ながらブラウザーや スクリーンリーダーなどは、この属性を実際にはあまり使用してくれません。 JavaScript や CSS を使って自身の解決策を書かない限り、ブラウザーに `cite` の内容を表示させる方法はありません。もしページ上で引用元を利用できるようにしたいのであれば、リンクやその他の適切な方法で本文中に利用できるようにする必要があります。
 
 {{htmlelement("cite")}} 要素がありますが、これは引用されたリソースのタイトル、例えば書籍の名前を格納することを意味しています。しかし、 `<cite>` 内のテキストを何らかの方法で引用元とリンクできない理由はありません。
 
-```html
-<p>According to the <a href="/ja/docs/Web/HTML/Element/blockquote">
-<cite>MDN blockquote page</cite></a>:
+```html-nolint
+<p>
+  According to the
+  <a href="/ja/docs/Web/HTML/Element/blockquote">
+    <cite>MDN blockquote page</cite></a>:
 </p>
 
-<blockquote cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/blockquote">
-  <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
-  Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+<blockquote
+  cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/blockquote">
+  <p>
+    The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
+    an extended quotation.
+  </p>
 </blockquote>
 
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q">intended
-for short quotations that don't require paragraph breaks.</q> — <a href="/ja/docs/Web/HTML/Element/q">
-<cite>MDN q page</cite></a>.</p>
+<p>
+  The quote element — <code>&lt;q&gt;</code> — is
+  <q cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q">
+    intended for short quotations that don't require paragraph breaks.
+  </q>
+  — <a href="/ja/docs/Web/HTML/Element/q"><cite>MDN q page</cite></a>.
+</p>
 ```
 
 引用元は、既定ではイタリック体で表示されます。
@@ -297,11 +335,13 @@ for short quotations that don't require paragraph breaks.</q> — <a href="/ja/d
 ```html hidden
 <h2>ライブ出力</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>編集可能なコード</h2>
-<p class="a11y-label">Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。</p>
+<p class="a11y-label">
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
+  はタブ文字を挿入します）。
+</p>
 
 <textarea id="code" class="input" style="min-height: 150px; width: 95%">
 <p>Hello and welcome to my motivation page. As Confucius' quotes site says:</p>
@@ -310,8 +350,8 @@ for short quotations that don't require paragraph breaks.</q> — <a href="/ja/d
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="リセット">
-  <input id="solution" type="button" value="答えを表示">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="答えを表示" />
 </div>
 ```
 
@@ -338,10 +378,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -349,31 +389,31 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius\' quotes site</cite></a> says:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://example.com/affirmationsforpositivethinking">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
+const htmlSolution =
+  '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius\' quotes site</cite></a> says:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://example.com/affirmationsforpositivethinking">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '答えを表示';
+  solution.value = "答えを表示";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-
-  if (solution.value === '答えを表示') {
+solution.addEventListener("click", () => {
+  if (solution.value === "答えを表示") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "答えを隠す";
   } else {
     textarea.value = userEntry;
-    solution.value = '答えを表示';
+    solution.value = "答えを表示";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -381,7 +421,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -394,7 +434,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -407,7 +450,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === '答えを表示') {
+  if (solution.value === "答えを表示") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -423,19 +466,25 @@ textarea.onkeyup = () => {
 
 ウェブを見て回っているときによく出会うもう一つの要素は {{htmlelement("abbr")}} です。これは略語や頭字語を囲むために使用されます。どちらかを記載する場合、最初の使用では、略語をマークアップする `<abbr>` と共に、プレーンテキストでその用語の完全な展開を提供してください。これは、ユーザーエージェントに内容をどのように告知／表示するかのヒントを提供すると同時に、すべてのユーザーにその略語の意味を知らせます。
 
-略語に加えて展開形を提供することにあまり意味がありません。略語や頭字語がかなり短縮された用語である場合、 {{htmlattrxref("title")}} 属性の値として用語の完全な展開形を提供してください。
+略語に加えて展開形を提供することにあまり意味がありません。略語や頭字語がかなり短縮された用語である場合、 [`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性の値として用語の完全な展開形を提供してください。
 
 ### 略語の例
 
 例をご覧ください。
 
 ```html
-<p>We use <abbr>HTML</abbr>, Hypertext Markup Language, to structure our web documents.</p>
+<p>
+  We use <abbr>HTML</abbr>, Hypertext Markup Language, to structure our web
+  documents.
+</p>
 
-<p>I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with the chainsaw.</p>
+<p>
+  I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with
+  the chainsaw.
+</p>
 ```
 
-これらは次のようなものに見えます (用語が上に置かれると展開はツールチップに表示されます)。
+これらは次のように見えます。
 
 {{EmbedLiveSample('Abbreviation_example', '100%', '150')}}
 
@@ -448,19 +497,21 @@ textarea.onkeyup = () => {
 ```html hidden
 <h2>ライブ出力</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>編集可能なコード</h2>
-<p class="a11y-label">Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。</p>
+<p class="a11y-label">
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
+  はタブ文字を挿入します）。
+</p>
 
 <textarea id="code" class="input" style="min-height: 50px; width: 95%">
 <p>NASA, the National Aeronautics and Space Administration, sure does some exciting work.</p>
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="リセット">
-  <input id="solution" type="button" value="答えを表示">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="答えを表示" />
 </div>
 ```
 
@@ -487,10 +538,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -498,30 +549,31 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<p><abbr>NASA</abbr>, the National Aeronautics and Space Administration, sure does some exciting work.</p>';
+const htmlSolution =
+  "<p><abbr>NASA</abbr>, the National Aeronautics and Space Administration, sure does some exciting work.</p>";
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '答えを表示';
+  solution.value = "答えを表示";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === '答えを表示') {
+solution.addEventListener("click", () => {
+  if (solution.value === "答えを表示") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "答えを隠す";
   } else {
     textarea.value = userEntry;
-    solution.value = '答えを表示';
+    solution.value = "答えを表示";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -529,7 +581,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -542,7 +594,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -555,7 +610,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === '答えを表示') {
+  if (solution.value === "答えを表示") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -572,9 +627,7 @@ textarea.onkeyup = () => {
 HTML には連絡先の詳細をマークアップするための要素 — {{htmlelement("address")}} があります。これは単に連絡先の詳細を囲むだけです。例えば、
 
 ```html
-<address>
-  <p>Chris Mills, Manchester, The Grim North, UK</p>
-</address>
+<address>Chris Mills, Manchester, The Grim North, UK</address>
 ```
 
 また、もっと複雑なマークアップや、他にも例えば連絡先情報などを記載することも可能です。
@@ -582,9 +635,9 @@ HTML には連絡先の詳細をマークアップするための要素 — {{ht
 ```html
 <address>
   <p>
-    Chris Mills<br>
-    Manchester<br>
-    The Grim North<br>
+    Chris Mills<br />
+    Manchester<br />
+    The Grim North<br />
     UK
   </p>
 
@@ -611,7 +664,10 @@ HTML には連絡先の詳細をマークアップするための要素 — {{ht
 
 ```html
 <p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
-<p>Caffeine's chemical formula is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+<p>
+  Caffeine's chemical formula is
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.
+</p>
 <p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
 ```
 
@@ -621,15 +677,17 @@ HTML には連絡先の詳細をマークアップするための要素 — {{ht
 
 ## コンピューターのコードを表現する
 
-HTML を使用してコンピュータのコードをマークアップするために利用可能な要素がいくつかあります。
+HTML を使用してコンピューターのコードをマークアップするために利用可能な要素がいくつかあります。
 
-- {{htmlelement("code")}}: コンピュータのコードの一般的な部分をマークアップします。
+- {{htmlelement("code")}}: コンピューターのコードの一般的な部分をマークアップします。
 - {{htmlelement("pre")}}: 空白を保持する場合（一般的にはコードブロック） — テキストの中でインデントや余分な空白を使用すると、ブラウザーはそれを無視するので、レンダリングされたページにはそれが表示されません。しかし、テキストを `<pre></pre>` タグで囲むと、エディターで見たのと同じように空白が表示されるようになります。
 - {{htmlelement("var")}}: 特に変数名をマークアップするためのものです。
 - {{htmlelement("kbd")}}: コンピューターに入力されたキーボード（およびその他の種類の）入力をマークアップするためのものです。
-- {{htmlelement("samp")}}: コンピュータプログラムの出力をマークアップします。
+- {{htmlelement("samp")}}: コンピュータープログラムの出力をマークアップします。
 
-いくつか例を見てみましょう。これら ([other-semantics.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/advanced-text-formatting/other-semantics.html) サンプルファイルのコピーを入手してください) を試してみるべきです：
+この要素の例と、それらがコンピューターコードを表すのにどのように用いられているかを見ていきましょう。
+完全なファイルを見たい場合は、[other-semantics.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/advanced-text-formatting/other-semantics.html)のサンプルファイルを見てください。
+ファイルをダウンロードして、ブラウザーで開くためのコードをご覧ください。ここではその一部をご紹介します。
 
 ```html
 <pre><code>const para = document.querySelector('p');
@@ -638,9 +696,15 @@ para.onclick = function() {
   alert('Owww, stop poking me!');
 }</code></pre>
 
-<p>You shouldn't use presentational elements like <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>.</p>
+<p>
+  You shouldn't use presentational elements like <code>&lt;font&gt;</code> and
+  <code>&lt;center&gt;</code>.
+</p>
 
-<p>In the above JavaScript example, <var>para</var> represents a paragraph element.</p>
+<p>
+  In the above JavaScript example, <var>para</var> represents a paragraph
+  element.
+</p>
 
 <p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
 
@@ -664,6 +728,7 @@ HTML には、時間と日付を機械可読形式でマークアップするた
 なぜこれが有用なのか？さて、人間が日付を書き表す方法はいろいろあります。上の日付はこう書くことができます。
 
 <!-- markdownlint-disable MD033 -->
+
 - 20 January 2016
 - 20th January 2016
 - Jan 20 2016
@@ -694,7 +759,9 @@ HTML には、時間と日付を機械可読形式でマークアップするた
 <!-- Date and time -->
 <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
 <!-- Date and time with timezone offset -->
-<time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
+<time datetime="2016-01-20T19:30+01:00">
+  7.30pm, 20 January 2016 is 8.30pm in France
+</time>
 <!-- Calling out a specific week number -->
 <time datetime="2016-W04">The fourth week of 2016</time>
 ```
@@ -708,15 +775,3 @@ HTML には、時間と日付を機械可読形式でマークアップするた
 これで HTML のテキストの意味づけに関する学習は終了です。このコースで見てきたものは、 HTML テキスト要素の完全なリストではないことに留意してください。私たちは、基本的なものと、より一般的なものをカバーしようとしました。より多くの HTML 要素を探すには、 [HTML 要素リファレンス](/ja/docs/Web/HTML/Element) を参照してください（[インラインテキスト意味づけ](/ja/docs/Web/HTML/Element#インラインテキスト意味付け)の節はよい出発点となることでしょう）。次の記事では、 HTML 要素を [HTML 文書のさまざまな部分を構造化する](/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)ために使用する方法ついて見ていきます。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
-
-## このモジュール内
-
-- [HTML を始めよう](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [ヘッド部には何が入る? HTML のメタデータ](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [ハイパーリンクの作成](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [高度なテキスト整形](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文書とウェブサイトの構造](/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [HTML のデバッグ](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [手紙のマークアップ](/ja/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [コンテンツのページの構造化](/ja/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

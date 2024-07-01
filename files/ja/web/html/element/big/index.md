@@ -1,11 +1,13 @@
 ---
-title: '<big>: 大きめの文字列要素'
+title: "<big>: 大きめのテキスト要素"
 slug: Web/HTML/Element/big
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
-**`<big>`** は [HTML](/ja/docs/Web/HTML) の非推奨の要素で、内包するテキストを周りの文字列よりも1段階大きいフォントの大きさで描画します（例えば `medium` が `large` になります）。大きさはブラウザーの最大フォントの大きさに制限されます。
+**`<big>`** は [HTML](/ja/docs/Web/HTML) の非推奨の要素で、内包するテキストを周りの文字列よりも 1 段階大きいフォントの大きさで描画します（例えば `medium` が `large` になります）。大きさはブラウザーの最大フォントの大きさに制限されます。
 
 > **警告:** この要素は仕様書から削除され、もう使用するべきではありません。ウェブ開発者は CSS の {{cssxref("font-size")}} プロパティを使用して、フォントの大きさを調整してください。
 
@@ -25,8 +27,8 @@ slug: Web/HTML/Element/big
 
 ```html
 <p>
-  This is the first sentence. <big>This whole
-  sentence is in bigger letters.</big>
+  This is the first sentence.
+  <big>This whole sentence is in bigger letters.</big>
 </p>
 ```
 
@@ -50,8 +52,8 @@ slug: Web/HTML/Element/big
 
 ```html
 <p>
-  This is the first sentence. <span class="bigger">This whole
-  sentence is in bigger letters.</span>
+  This is the first sentence.
+  <span class="bigger">This whole sentence is in bigger letters.</span>
 </p>
 ```
 
@@ -62,6 +64,8 @@ slug: Web/HTML/Element/big
 ## DOM インターフェイス
 
 この要素は {{domxref('HTMLElement')}} インターフェイスを実装しています。
+
+<!-- ## Technical summary -->
 
 ## 仕様書
 
@@ -76,5 +80,3 @@ slug: Web/HTML/Element/big
 - CSS: {{cssxref("font-size")}}, {{cssxref("font")}}
 - HTML: {{htmlelement("small")}}, {{htmlelement("font")}}, {{htmlelement("style")}}
 - HTML 4.01 仕様書: [Font Styles](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)
-
-{{HTMLSidebar}}

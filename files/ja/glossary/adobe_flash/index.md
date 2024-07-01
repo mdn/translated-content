@@ -1,17 +1,19 @@
 ---
 title: Adobe Flash
 slug: Glossary/Adobe_Flash
+l10n:
+  sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
 ---
 
-Flash は Adobe によって開発された廃れつつある技術で、表現力のあるウェブアプリ、マルチメディアコンテンツ、ストリーミングメディアを表示します。 Adobe Flash は対応している{{Glossary("Browser","ウェブブラウザー")}}でプラグインを用いて実行することができます。
+{{GlossarySidebar}}
 
-1. [公式ウェブサイト](https://www.adobe.com/products/flashruntimes.html)
-2. [Shumway: Mozilla によるフリーな実装](https://mozilla.github.io/shumway/)
-3. [Gnash: GNU によるフリーな実装](http://gnashdev.org/)
-4. [用語集](/ja/docs/Glossary)
+[Flash](https://ja.wikipedia.org/wiki/Adobe_Flash) は Adobe によって開発された古い技術で、表現力のあるウェブアプリ、マルチメディアコンテンツ、ストリーミングメディアを表示します。
 
-    1. {{Glossary("Browser", "ブラウザー")}}
+2021 年時点で、 Flash は Adobe によるサポートが行われなくなり、主要なウェブブラウザーはすべて対応がなくなりました。
 
-5. Wikipedia の記事
+## 関連情報
 
-    1. [Adobe_Flash](https://ja.wikipedia.org/wiki/Adobe_Flash)
+- [Adobe Flash end-of-life announcement](https://blog.adobe.com/en/publish/2017/07/25/adobe-flash-update#gs.g8mmgf)
+- [Saying goodbye to Flash in Chrome](https://www.blog.google/products/chrome/saying-goodbye-flash-chrome/)
+- [Firefox Roadmap for Flash End-of-Life](https://blog.mozilla.org/futurereleases/2017/07/25/firefox-roadmap-flash-end-life/)
+- [Microsoft Windows Flash Player removal](https://blogs.windows.com/msedgedev/2020/09/04/update-adobe-flash-end-support/)

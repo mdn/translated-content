@@ -1,13 +1,6 @@
 ---
 title: border-block-end-color
 slug: Web/CSS/border-block-end-color
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/border-block-end-color
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -95,4 +88,4 @@ div {
   - {{cssxref("border-left-color")}}.
 
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
-- {{bug("1297097")}}
+- [bug Firefox 1297097](https://bugzil.la/1297097)

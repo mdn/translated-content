@@ -1,7 +1,6 @@
 ---
 title: Formateo de texto avanzado
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-original_slug: Learn/HTML/Introduccion_a_HTML/Advanced_text_formatting
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
@@ -209,7 +208,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -242,7 +241,7 @@ HTML también dispone de elementos para el marcado de citas; cual elemento utili
 
 ### Cita en bloque independiente (blockquote)
 
-Si una sección de contenido a nivel de bloque (ya sea un párrafo, varios párrafos, una lista, etc.) se cita en otro lugar, debes envolverla dentro de un elemento {{HTMLElement("blockquote")}} para indicarlo, e incluye una URL que apunte a la fuente de la cita dentro de un atributo {{HTMLAttrxRef("cite", "blockquote")}}. Por ejemplo, el siguiente marcado tomado de la página del elemento `<blockquote>` de MDN:
+Si una sección de contenido a nivel de bloque (ya sea un párrafo, varios párrafos, una lista, etc.) se cita en otro lugar, debes envolverla dentro de un elemento {{HTMLElement("blockquote")}} para indicarlo, e incluye una URL que apunte a la fuente de la cita dentro de un atributo [`cite`](/es/docs/Web/HTML/Element/blockquote#cite). Por ejemplo, el siguiente marcado tomado de la página del elemento `<blockquote>` de MDN:
 
 ```html
 <p>
@@ -252,15 +251,12 @@ Si una sección de contenido a nivel de bloque (ya sea un párrafo, varios párr
 </p>
 ```
 
-## Ejemplo
-
 Para convertir esto en una cita en bloque independiente, simplemente harías lo siguiente:
 
 ```html
 <p>A continuación se muestra una cita en bloque independiente...</p>
 <blockquote
-  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote"
->
+  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
   <p>
     El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
     <em>elemento HTML de cita en bloque independiente</em>) indica que el texto
@@ -280,7 +276,7 @@ Las citas en línea funcionan exactamente de la misma manera, excepto que usan e
 ```html
 <p>
   El elemento de cita — <code>&lt;q&gt;</code> — se
-  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+  <q cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/q"
     >utiliza en para citas breves que no requieren saltos de párrafo.</q
   >
 </p>
@@ -292,7 +288,7 @@ El estilo predeterminado del navegador lo representará como texto normal entre 
 
 ### Citas
 
-El contenido del atributo {{HTMLAttrxRef("cite", "blockquote")}} suena útil, pero desafortunadamente los navegadores, lectores de pantalla, etc. no hacen mucho con él. No hay forma de hacer que el navegador muestre el contenido de `cite` sin escribir tu propia solución usando JavaScript o CSS. Si deseas que la fuente de la cita esté disponible en la página, lo debes hacer en el texto a través de un enlace o de alguna otra forma apropiada.
+El contenido del atributo [`cite`](/es/docs/Web/HTML/Element/blockquote#cite) suena útil, pero desafortunadamente los navegadores, lectores de pantalla, etc. no hacen mucho con él. No hay forma de hacer que el navegador muestre el contenido de `cite` sin escribir tu propia solución usando JavaScript o CSS. Si deseas que la fuente de la cita esté disponible en la página, lo debes hacer en el texto a través de un enlace o de alguna otra forma apropiada.
 
 Hay un elemento {{HTMLElement("cite")}}, pero está destinado a contener el título del recurso que se cita, p. ej. el nombre del libro. Sin embargo, no hay razón por la que no puedas vincular el texto dentro de `<cite>` a la fuente de la cita de alguna manera:
 
@@ -305,8 +301,7 @@ Hay un elemento {{HTMLElement("cite")}}, pero está destinado a contener el tít
 </p>
 
 <blockquote
-  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote"
->
+  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
   <p>
     El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
     <em>elemento HTML de cita en bloque independiente</em>) indica que el texto
@@ -316,11 +311,11 @@ Hay un elemento {{HTMLElement("cite")}}, pero está destinado a contener el tít
 
 <p>
   El elemento de cita — <code>&lt;q&gt;</code> — se
-  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+  <q cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/q"
     >utiliza en citas breves que no requieren saltos de párrafo.</q
   >
   --
-  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+  <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/q">
     <cite>página q de MDN</cite></a
   >.
 </p>
@@ -341,7 +336,7 @@ Las citas se escriben en cursiva de forma predeterminada.
 Las fuentes de citación que necesitas son:
 
 - `http://www.brainyquote.com/quotes/authors/c/confucius.html` para la citas de Confucio
-- `http://www.affirmationsforpositivethinking.com` para "La necesidad de eliminar el diálogo interno negativo".
+- `https://example.com/affirmationsforpositivethinking` para "La necesidad de eliminar el diálogo interno negativo".
 
 Si cometes un error, siempre puedes restablecer el código anterior pulsando el botón _Restablecer_. Si te quedas realmente encallado, pulsa el botón _Mostrar solución_ para ver una buena propuesta.
 
@@ -422,7 +417,7 @@ solution.addEventListener("click", function () {
 });
 
 const htmlSolution =
-  '<p>Hola y bienvenido a mi página de motivación. Como dice <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>el sitio de citas de Confucio:</cite></a>:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n<p>No importa qué tan lento vayas siempre que no te detengas.</p>\n</blockquote>\n\n<p>También me encanta el concepto de pensamiento positivo y <q cite="http://www.affirmationsforpositivethinking.com">La necesidad de eliminar el diálogo interno negativo</q> (como se menciona en <a href="http://www.affirmationsforpositivethinking.com"><cite>Afirmaciones para el pensamiento positivo</cite></a>).</p>';
+  '<p>Hola y bienvenido a mi página de motivación. Como dice <a href="https://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>el sitio de citas de Confucio:</cite></a>:</p>\n\n<blockquote cite="https://www.brainyquote.com/quotes/authors/c/confucius.html">\n<p>No importa qué tan lento vayas siempre que no te detengas.</p>\n</blockquote>\n\n<p>También me encanta el concepto de pensamiento positivo y <q cite="https://example.com/affirmationsforpositivethinking">La necesidad de eliminar el diálogo interno negativo</q> (como se menciona en <a href="https://example.com/affirmationsforpositivethinking"><cite>Afirmaciones para el pensamiento positivo</cite></a>).</p>';
 const solutionEntry = htmlSolution;
 
 textarea.addEventListener("input", updateCode);
@@ -449,7 +444,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -478,7 +473,7 @@ textarea.onkeyup = function () {
 
 ## Abreviaturas
 
-Otro elemento bastante común que encontrarás cuando busques en la Web es {{HTMLElement("abbr")}} — se usa para envolver una abreviatura o acrónimo, y proporcionar una expansión completa del término (incluida dentro de un atributo {{HTMLAttrxRef("title")}}. Veamos un par de ejemplos:
+Otro elemento bastante común que encontrarás cuando busques en la Web es {{HTMLElement("abbr")}} — se usa para envolver una abreviatura o acrónimo, y proporcionar una expansión completa del término (incluida dentro de un atributo [`title`](/es/docs/Web/HTML/Global_attributes#title). Veamos un par de ejemplos:
 
 ```html
 <p>
@@ -604,7 +599,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -780,15 +775,3 @@ Has llegado al final de este artículo, pero ¿puedes recordar la información m
 Esto marca el final de nuestro estudio de la semántica del texto HTML. Ten en cuenta que lo que has visto durante este curso no es una lista exhaustiva de elementos de texto HTML — quisimos tratar de cubrir los aspectos esenciales y algunos de los más comunes que verás en la naturaleza, o al menos podrían resultarte interesantes. Para encontrar muchos más elementos HTML, puedes echarle un vistazo a nuestra [referencia de elementos HTML](/es/docs/Web/HTML/Element) (la [La sección Semántica de texto en línea](/es/docs/Web/HTML/Element#Inline_text_semantics) sería un gran lugar para comenzar). En el próximo artículo veremos los elementos HTML que usarás para estructurar las diferentes partes de un documento HTML.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
-
-## En este módulo
-
-- [Empezar con HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [¿Qué hay en el «head»? Metadatos en HTML](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Crear hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formateo de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Estructura web y documentación](/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Depurar HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marcado para una carta](/es/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Estructuración del contenido de una página](/es/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

@@ -16,7 +16,10 @@ slug: Web/CSS/@media/device-height
 この HTML は、800 ピクセルより低い機器に特別のスタイルシートを適用します。
 
 ```html
-<link rel="stylesheet" media="screen and (max-device-height: 799px)" href="http://foo.bar.com/short-styles.css" />
+<link
+  rel="stylesheet"
+  media="screen and (max-device-height: 799px)"
+  href="http://foo.bar.com/short-styles.css" />
 ```
 
 ## 仕様書

@@ -3,7 +3,7 @@ title: browserAction.ColorArray
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 ## 型
 
@@ -18,7 +18,7 @@ RGBA 色を定義する、4 つの 0 から 255 の整数の`配列`です。4 �
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.browserAction.ColorArray")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

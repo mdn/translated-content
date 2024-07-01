@@ -10,8 +10,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Generator/return
 ## 구문
 
 <!-- We don't usually add the "generatorObject" subject for methods. However, it is necessary here, because "return" is a keyword, so otherwise it's invalid syntax. -->
+
 ```js
-generatorObject.return(value)
+generatorObject.return(value);
 ```
 
 ## 매개변수
@@ -49,9 +50,9 @@ function* gen() {
 
 const g = gen();
 
-g.next();        // { value: 1, done: false }
-g.return('foo'); // { value: "foo", done: true }
-g.next();        // { value: undefined, done: true }
+g.next(); // { value: 1, done: false }
+g.return("foo"); // { value: "foo", done: true }
+g.next(); // { value: undefined, done: true }
 ```
 
 제너레이터가 이미 "완료" 상태 일때 `return(value)`가 호출되면 제너레이터는 "완료" 상태를 유지합니다.
@@ -87,7 +88,7 @@ function* gen() {
     yield 2;
     yield 3;
   } finally {
-    yield 'cleanup';
+    yield "cleanup";
   }
 }
 
@@ -95,20 +96,20 @@ const g1 = gen();
 g1.next(); // { value: 1, done: false }
 
 // try...finally 전에 실행이 일시 중단됩니다.
-g1.return('early return'); // { value: 'early return', done: true }
+g1.return("early return"); // { value: 'early return', done: true }
 
 const g2 = gen();
 g2.next(); // { value: 1, done: false }
 g2.next(); // { value: 2, done: false }
 
 // try...finally 내에서 실행이 일시 중단됩니다.
-g2.return('early return'); // { value: 'cleanup', done: false }
+g2.return("early return"); // { value: 'cleanup', done: false }
 
 // 완료 값은 유지됩니다.
 g2.next(); // { value: 'early return', done: true }
 
 // 제너레이터가 완료된 상태입니다.
-g2.return('not so early return'); // { value: 'not so early return', done: true }
+g2.return("not so early return"); // { value: 'not so early return', done: true }
 ```
 
 ## 명세서

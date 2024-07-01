@@ -1,16 +1,6 @@
 ---
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
-tags:
-  - ECMAScript 2015
-  - ECMAScript 5
-  - Function
-  - JavaScript
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
-original_slug: Web/JavaScript/Reference/Objets_globaux/Function/bind
 ---
 
 {{JSRef}}
@@ -65,11 +55,13 @@ Une erreur courante lorsqu'on débute en JavaScript est d'extraire une méthode 
 
 ```js
 this.x = 9; // en dehors de tout contexte,
-            // pour un navigateur, this est
-            // l'objet window
+// pour un navigateur, this est
+// l'objet window
 var module = {
   x: 81,
-  getX: function() { return this.x; }
+  getX: function () {
+    return this.x;
+  },
 };
 
 module.getX(); // 81
@@ -100,8 +92,7 @@ var leadingThirtysevenList = list.bind(null, 37);
 var list2 = leadingThirtysevenList(); // [37]
 var list3 = leadingThirtysevenList(1, 2, 3); // [37, 1, 2, 3]
 
-
-function sommeArguments(arg1, arg2){
+function sommeArguments(arg1, arg2) {
   return arg1 + arg2;
 }
 
@@ -116,17 +107,16 @@ Par défaut à l'intérieur de {{domxref("window.setTimeout()")}}, le mot-clé `
 
 ```js
 function Fleur() {
-  this.nbPétales = Math.floor( Math.random() * 12 ) + 1;
+  this.nbPétales = Math.floor(Math.random() * 12) + 1;
 }
 
 // On déclare floraison après un délai d'une seconde
-Fleur.prototype.floraison = function() {
-  window.setTimeout( this.declare.bind( this ), 1000 );
+Fleur.prototype.floraison = function () {
+  window.setTimeout(this.declare.bind(this), 1000);
 };
 
-Fleur.prototype.declare = function() {
-  console.log('Je suis une fleur avec ' +
-     this.nbPétales + ' pétales !');
+Fleur.prototype.declare = function () {
+  console.log("Je suis une fleur avec " + this.nbPétales + " pétales !");
 };
 
 var fleur = new Fleur();
@@ -146,19 +136,18 @@ function Point(x, y) {
   this.y = y;
 }
 
-Point.prototype.toString = function() {
+Point.prototype.toString = function () {
   return this.x + "," + this.y;
 };
 
 var p = new Point(1, 2);
 p.toString(); // "1,2"
 
-
 var emptyObj = {};
 var YAxisPoint = Point.bind(emptyObj, 0 /* x */);
 // non supporté dans le polyfill ci dessous,
 // fonctionne avec le bind natif :
-var YAxisPoint = Point.bind(null,0 /* x */);
+var YAxisPoint = Point.bind(null, 0 /* x */);
 
 var axisPoint = new YAxisPoint(5);
 axisPoint.toString(); //  "0,5"

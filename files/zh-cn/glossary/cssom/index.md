@@ -1,16 +1,14 @@
 ---
-title: CSS Object Model (CSSOM)
+title: CSS 对象模型（CSSOM）
 slug: Glossary/CSSOM
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-**CSS 对象模型** **(CSSOM)** 是树形形式的所有 CSS 选择器和每个选择器的相关属性的映射，具有树的根节点，同级，后代，子级和其他关系。CSSOM 与 {{glossary('DOM', '文档对象模型 (DOM)')}} 非常相似。两者都是**关键渲染路径**的一部分，也是正确渲染一个网站必须采取的一系列步骤。
+{{GlossarySidebar}}
 
-CSSOM 与 DOM 一起构建**渲染树**，浏览器依次使用渲染树来布局和绘制网页。
+[**CSS 对象模型（CSSOM）**](/zh-CN/docs/Web/API/CSS_Object_Model)是一系列用于读取和修改文档样式相关的（CSS）信息的 API。换句话说，[DOM](/zh-CN/docs/Web/API/Document_Object_Model) 使得 JavaScript 可以读取和修改文档的结构和内容，CSSOM 则使得 JavaScript 可以读取和修改文档样式。
 
-### CSSOM API
+## 参见
 
-[CSS 对象模型](/zh-CN/docs/Web/API/CSS_Object_Model)也是一组 API，允许从 JavaScript 操纵 CSS。它非常类似于 DOM，但应用于 CSS 而不是 HTML。它允许用户动态读取和修改 CSS 样式。
-
-## 查看更多
-
-- [填充页面：浏览器如何工作](/zh-CN/docs/Web/Performance/How_browsers_work)
+- [渲染页面：浏览器的工作原理](/zh-CN/docs/Web/Performance/How_browsers_work)

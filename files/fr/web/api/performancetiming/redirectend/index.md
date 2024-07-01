@@ -1,18 +1,6 @@
 ---
 title: PerformanceTiming.redirectEnd
 slug: Web/API/PerformanceTiming/redirectEnd
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Propriété
-  - Read-only
-  - legacy
-  - redirectEnd
-translation_of: Web/API/PerformanceTiming/redirectEnd
 ---
 
 {{APIRef("Navigation Timing")}}

@@ -24,11 +24,11 @@ mqList = window.matchMedia(mediaQueryString)
 
 ## 使用说明
 
-您可以使用返回的媒体查询来执行即时检查和事件驱动检查，以查看文档是否与媒体查询匹配。
+你可以使用返回的媒体查询来执行即时检查和事件驱动检查，以查看文档是否与媒体查询匹配。
 
 要执行一次瞬时检查以查看文档是否与媒体查询匹配，请查看{{domxref("MediaQueryList.matches", "matches")}}属性的值，当 document 满足媒体查询条件的时候将会返回`true`。
 
-如果您需要始终了解 document 是否与媒体查询匹配，则可以查看将要传递给对象的{{domxref("MediaQueryList.change_event", "change")}} 事件。{{domxref("Window.devicePixelRatio")}}上的文章中有一个很好的例子。
+如果你需要始终了解 document 是否与媒体查询匹配，则可以查看将要传递给对象的{{domxref("MediaQueryList.change_event", "change")}} 事件。{{domxref("Window.devicePixelRatio")}}上的文章中有一个很好的例子。
 
 ## 示例
 
@@ -54,7 +54,9 @@ JavaScript 代码只需将要匹配的媒体查询字符串传递到{{domxref("W
 
 ```css hidden
 .mq-value {
-  font: 18px arial, sans-serif;
+  font:
+    18px arial,
+    sans-serif;
   font-weight: bold;
   color: #88f;
   padding: 0.4em;

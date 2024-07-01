@@ -1,8 +1,6 @@
 ---
 title: column-rule-color
 slug: Web/CSS/column-rule-color
-translation_of: Web/CSS/column-rule-color
-browser-compat: css.properties.column-rule-color
 ---
 
 {{CSSRef}}
@@ -48,16 +46,14 @@ La propriété `column-rule-color` se définit grâce à une valeur de type `<co
 ### HTML
 
 ```html
-<p>« Mais alors, » pensa Alice, « ne serai-je donc
-   jamais plus vieille que je ne le suis maintenant ?
-   D'un côté cela aura ses avantages, ne jamais être
-   une vieille femme. Mais alors avoir toujours des
-   leçons à apprendre ! Oh, je n'aimerais pas cela du
-   tout. »
-   « Oh ! Alice, petite folle, » se répondit-elle.
-   « Comment pourriez-vous apprendre des leçons ici ?
-   Il y a à peine de la place pour vous, et il n'y en
-   a pas du tout pour vos livres de leçons. »</p>
+<p>
+  « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je ne
+  le suis maintenant ? D'un côté cela aura ses avantages, ne jamais être une
+  vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
+  n'aimerais pas cela du tout. » « Oh ! Alice, petite folle, » se répondit-elle.
+  « Comment pourriez-vous apprendre des leçons ici ? Il y a à peine de la place
+  pour vous, et il n'y en a pas du tout pour vos livres de leçons. »
+</p>
 ```
 
 ### CSS

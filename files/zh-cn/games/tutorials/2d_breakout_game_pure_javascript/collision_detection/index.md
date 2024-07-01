@@ -13,18 +13,18 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 
 当然，这是我们的决定如何实现的，但是计算球是否触及矩形是很困难的，因为在画布中没有辅助函数。为了这个教程，我们将尽可能地做到这一点。我们将检查球的中心是否与任何给定的砖块碰撞。这不会每次都给出一个完美的结果，而且有很多更复杂的方法来进行碰撞检测，但是这对指导你的基本概念很有效。
 
-## **撞击侦测函数**
+## 撞击侦测函数
 
 踢掉这一切，我们想创建一个碰撞检测功能，将循环通过所有砖块，并比较每一个砖的位置与球的坐标，因为每个帧绘制。为了更好地理解代码，我们将定义用于在碰撞检测的每个循环中存储砖块对象的 B 变量：
 
 ```js
 function collisionDetection() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            // calculations
-        }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      var b = bricks[c][r];
+      // calculations
     }
+  }
 }
 ```
 
@@ -39,14 +39,14 @@ function collisionDetection() {
 
 ```js
 function collisionDetection() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                dy = -dy;
-            }
-        }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      var b = bricks[c][r];
+      if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
+        dy = -dy;
+      }
     }
+  }
 }
 ```
 
@@ -58,53 +58,58 @@ function collisionDetection() {
 
 ```js
 var bricks = [];
-for(c=0; c<brickColumnCount; c++) {
-    bricks[c] = [];
-    for(r=0; r<brickRowCount; r++) {
-        bricks[c][r] = { x: 0, y: 0, status: 1 };
-    }
+for (c = 0; c < brickColumnCount; c++) {
+  bricks[c] = [];
+  for (r = 0; r < brickRowCount; r++) {
+    bricks[c][r] = { x: 0, y: 0, status: 1 };
+  }
 }
 ```
 
-接下来，我们将在绘制之前在 `drawBricks()` 中检查每个砖块的 `status`属性的值 - 如果 `status`是 `1`，然后画它，但是如果它是 `0`，那么它被球击中，我们不再希望它在屏幕上。更新您的 `drawBricks()` 函数如下：
+接下来，我们将在绘制之前在 `drawBricks()` 中检查每个砖块的 `status`属性的值 - 如果 `status`是 `1`，然后画它，但是如果它是 `0`，那么它被球击中，我们不再希望它在屏幕上。更新你的 `drawBricks()` 函数如下：
 
 ```js
 function drawBricks() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            if(bricks[c][r].status == 1) {
-                var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
-                var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
-                bricks[c][r].x = brickX;
-                bricks[c][r].y = brickY;
-                ctx.beginPath();
-                ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                ctx.fillStyle = "#0095DD";
-                ctx.fill();
-                ctx.closePath();
-            }
-        }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      if (bricks[c][r].status == 1) {
+        var brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+        var brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+        bricks[c][r].x = brickX;
+        bricks[c][r].y = brickY;
+        ctx.beginPath();
+        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+        ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+      }
     }
+  }
 }
 ```
 
 ## 跟踪并更新在撞击侦测函数中的状态
 
-现在我们需要将砖块 `status` 属性包含在 `collisionDetection()`函数中：如果砖块是活动的（它的状态是 `1`），我们将检查碰撞是否发生；如果发生碰撞，我们将给定砖块的状态设置为 `0`，这样它就不会被绘制在屏幕上。更新您的 `collisionDetection()` 函数，如下所示：
+现在我们需要将砖块 `status` 属性包含在 `collisionDetection()`函数中：如果砖块是活动的（它的状态是 `1`），我们将检查碰撞是否发生；如果发生碰撞，我们将给定砖块的状态设置为 `0`，这样它就不会被绘制在屏幕上。更新你的 `collisionDetection()` 函数，如下所示：
 
 ```js
 function collisionDetection() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            if(b.status == 1) {
-                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                    dy = -dy;
-                    b.status = 0;
-                }
-            }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      var b = bricks[c][r];
+      if (b.status == 1) {
+        if (
+          x > b.x &&
+          x < b.x + brickWidth &&
+          y > b.y &&
+          y < b.y + brickHeight
+        ) {
+          dy = -dy;
+          b.status = 0;
         }
+      }
     }
+  }
 }
 ```
 

@@ -5,13 +5,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/prototype
 
 {{JSRef}}
 
-一个 {{jsxref("Function")}} 对象在使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符来作为构造函数时，会用到它的 **`prototype`** 属性。它将成为新对象的原型。
+当 {{jsxref("Function")}} 实例作为构造函数与 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符一起使用时，该实例的 **`prototype`** 数据属性将用作新对象的原型。
 
 > **备注：** 并不是所有的 {{jsxref("Function")}} 对象都拥有 `prototype` 属性——参见[描述](#描述)。
 
+## 值
+
+一个对象。
+
 {{js_property_attributes(1, 0, 0)}}
 
-> **备注：** [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)的 `prototype` 属性是不可编辑的。
+> **备注：** [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)的 `prototype` 属性是不可写的。
 
 ## 描述
 
@@ -25,7 +29,7 @@ console.log(Object.getPrototypeOf(inst) === Ctor.prototype); // true
 
 关于构造函数的 `prototype` 属性与结果对象的原型之间的相互作用，你可以查看[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#构造函数)来了解更多。
 
-一个具有 `prototype` 属性的函数也并不代表其有资格作为构造函数。例如，[function*](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*) 拥有 `prototype` 属性，但它不能通过 `new` 运算符来调用。
+一个具有 `prototype` 属性的函数也并不代表其有资格作为构造函数。例如，[function\*](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*) 拥有 `prototype` 属性，但它不能通过 `new` 运算符来调用。
 
 ```js
 async function* asyncGeneratorFunction() {}

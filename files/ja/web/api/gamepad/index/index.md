@@ -1,13 +1,14 @@
 ---
-title: Gamepad.index
+title: "Gamepad: index プロパティ"
+short-title: index
 slug: Web/API/Gamepad/index
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("Gamepad API")}}
 
-**`Gamepad.index`** は {{domxref("Gamepad") }} インターフェイスのプロパティで、現在システムに接続されているそれぞれの機器の整数の固有番号 (自動更新) の整数を返します。
+**`Gamepad.index`** は {{domxref("Gamepad") }} インターフェイスのプロパティで、現在システムに接続されているそれぞれの機器の整数の固有番号（自動採番）の整数を返します。
 
 これは複数のコントローラーを識別するために使用することができます。接続が解除された後で再接続されたゲームパッドは、同じ番号を保持します。
 

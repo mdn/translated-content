@@ -1,7 +1,6 @@
 ---
 title: Element.clientTop
 slug: Web/API/Element/clientTop
-translation_of: Web/API/Element/clientTop
 ---
 
 {{ APIRef("DOM") }}
@@ -12,7 +11,7 @@ translation_of: Web/API/Element/clientTop
 
 > **Примечание:** Это свойство округляет значение до целого. Если вам нужно дробное значение, используйте {{ domxref("element.getBoundingClientRect()") }}.
 
-Основанные на [Gecko](en/Gecko) приложения поддерживают clientTop начиная с Gecko 1.9 ([Firefox 3](en/Firefox_3), реализовано в {{ Bug(111207) }}). Это свойство не поддерживается в Firefox 2 и более ранних.
+Основанные на [Gecko](en/Gecko) приложения поддерживают clientTop начиная с Gecko 1.9 ([Firefox 3](en/Firefox_3), реализовано в [Firefox bug 111207](https://bugzil.la/111207)). Это свойство не поддерживается в Firefox 2 и более ранних.
 
 ## Синтаксис
 

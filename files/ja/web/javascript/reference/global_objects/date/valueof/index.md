@@ -35,7 +35,7 @@ valueOf()
 
 ```js
 const x = new Date(56, 6, 17);
-const myVar = x.valueOf();      // myVar に -424713600000 を代入
+const myVar = x.valueOf(); // myVar に -424713600000 を代入
 ```
 
 ## 仕様書

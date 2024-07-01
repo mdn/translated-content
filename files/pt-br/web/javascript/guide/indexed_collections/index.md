@@ -54,12 +54,12 @@ var obj = {prop: [elemento0, elemento1, ...., elementoN]}
 Se você deseja inicializar um array com um único elemento, e este elemento é um `Número`, você precisa usar a sintáxe dos colchetes. Quando um único valor de `Número` é passado para o construtor do Array(), ou para uma função, ele é interpretado como um `comprimentoDoArray`, e não como um elemento único.
 
 ```js
-var arr = [42];      // Cria um array com apenas um elemento:
-                     // o número 42.
+var arr = [42]; // Cria um array com apenas um elemento:
+// o número 42.
 
 var arr = Array(42); // Cria um array sem elementos
-                     // e arr.length é definido como 42; isso é
-                     // equivalente a:
+// e arr.length é definido como 42; isso é
+// equivalente a:
 var arr = [];
 arr.length = 42;
 ```
@@ -67,7 +67,7 @@ arr.length = 42;
 Chamar `Array(N)` resulta em um `RangeError`, se `N` é um número não inteiro cuja porção fracionária não é zero. O exemplo a seguir ilustra esse comportamento.
 
 ```js
-var arr = Array(9.3);  // RangeError: Invalid array length
+var arr = Array(9.3); // RangeError: Invalid array length
 ```
 
 Se o seu código precisa criar arrays com elementos singulares de um tipo de dados arbitrário, é mais seguro usar arrays literais. Ou então, crie um array vazio antes de adicionar um elemento singular nele.
@@ -78,25 +78,25 @@ Você pode povoar (inserir elementos) a um array atribuindo valores aos seus ele
 
 ```js
 var emp = [];
-emp[0] = 'Casey Jones';
-emp[1] = 'Phil Lesh';
-emp[2] = 'August West';
+emp[0] = "Casey Jones";
+emp[1] = "Phil Lesh";
+emp[2] = "August West";
 ```
 
 > **Nota:** **Nota :** se você fornece um valor não inteiro ao operador do array, como no código acima, a propriedade será criada no objeto representando o array, ao invés do elemento do array.
 
 ```js
 var arr = [];
-arr[3.4] = 'Oranges';
-console.log(arr.length);                // 0
-console.log(arr.hasOwnProperty(3.4));   // verdadeiro
+arr[3.4] = "Oranges";
+console.log(arr.length); // 0
+console.log(arr.hasOwnProperty(3.4)); // verdadeiro
 ```
 
 Você também pode povoar o array quando o cria:
 
 ```js
-var myArray = new Array('Olá', myVar, 3.14159);
-var myArray = ['Manga', 'Maçã', 'Laranja']
+var myArray = new Array("Olá", myVar, 3.14159);
+var myArray = ["Manga", "Maçã", "Laranja"];
 ```
 
 ### Referenciando os elementos do array
@@ -104,7 +104,7 @@ var myArray = ['Manga', 'Maçã', 'Laranja']
 Você referencia os elementos do array através do uso de elementos numéricos ordinais. Por exemplo, suponha que você definiu o seguinte array:
 
 ```js
-var myArray = ['Vento', 'Chuva', 'Fogo'];
+var myArray = ["Vento", "Chuva", "Fogo"];
 ```
 
 Você então se refere ao primeiro elemento do array como em `myArray[0]` e ao segundo elemento do array como em `myArray[1]`. O índice do elemento começa com zero.
@@ -112,9 +112,9 @@ Você então se refere ao primeiro elemento do array como em `myArray[0]` e ao s
 > **Nota:** **Nota :** o operador do array (colchetes) também é usado para acessar as propriedades do array (arrays também são objetos em JavaScript). Por exemplo,
 
 ```js
-var arr = ['um', 'dois', 'três'];
-arr[2];         // três
-arr['length'];  // 3
+var arr = ["um", "dois", "três"];
+arr[2]; // três
+arr["length"]; // 3
 ```
 
 ### Compreendendo o comprimento
@@ -123,14 +123,14 @@ Sobe o ponto de vista da implementação, arrays JavaScript armazenam na realida
 
 ```js
 var gatos = [];
-gatos[30] = ['Dusty'];
+gatos[30] = ["Dusty"];
 console.log(gatos.length); // 31
 ```
 
 Você também pode atribuir um valor à propriedade `length`. Ao escrever um valor menor que o número de itens armazenados, trunca o array: escrevendo zero limpa-o completamente:
 
 ```js
-var gatos = ['Dusty', 'Misty', 'Twiggy'];
+var gatos = ["Dusty", "Misty", "Twiggy"];
 console.log(gatos.length); // 3
 
 gatos.length = 2;
@@ -148,7 +148,7 @@ console.log(gatos); // [undefined, undefined, undefined]
 Uma operação comum é a de iterar sobre os valores de um array, processando cada elemento de alguma maneira. A maneira mais simples para fazer isso é como segue:
 
 ```js
-var cores = ['vermelho', 'verde', 'azul'];
+var cores = ["vermelho", "verde", "azul"];
 for (var i = 0; i < cores.length; i++) {
   console.log(cores[i]);
 }
@@ -157,8 +157,8 @@ for (var i = 0; i < cores.length; i++) {
 Se você sabe que nenhum dos elemnetos no seu array é avaliado como `false` em um contexto booleano — se o seu array consiste apenas de nodos do [DOM](/pt-BR/docs/DOM/Referencia_do_DOM), como exemplo, você pode usar um idioma mais eficiente:
 
 ```js
-var divs = document.getElementsByTagName('div');
-for (var i = 0, div; div = divs[i]; i++) {
+var divs = document.getElementsByTagName("div");
+for (var i = 0, div; (div = divs[i]); i++) {
   /* Processa div de alguma forma */
 }
 ```
@@ -168,8 +168,8 @@ Isso evita a sobrecarga da checagem do comprimento do array, e garante que a var
 O método {{jsxref("Array.forEach", "forEach()")}} disponibiliza um outro jeito de iterar sobre/em um array:
 
 ```js
-var cores = ['vermelho', 'verde', 'azul'];
-cores.forEach(function(cor) {
+var cores = ["vermelho", "verde", "azul"];
+cores.forEach(function (cor) {
   console.log(cor);
 });
 // vermelho
@@ -180,8 +180,8 @@ cores.forEach(function(cor) {
 Alternativamente, você pode encurtar o código para o parâmetro do `forEach` com Arrow Functions ES6.
 
 ```js
-var cores = ['vermelho', 'verde', 'azul'];
-cores.forEach(cor => console.log(cor));
+var cores = ["vermelho", "verde", "azul"];
+cores.forEach((cor) => console.log(cor));
 // vermelho
 // verde
 // azul
@@ -192,22 +192,22 @@ A função passada para o `forEach` é executada uma vez para cada item no array
 Note que os elementos de um array que foram omitidos quando o array foi definido, não são listados quando iterados pelo `forEach`, mas são listados quando `undefined` foi manualmente atribuído ao elemento:
 
 ```js
-var array = ['primeiro', 'segundo', , 'quarto'];
+var array = ["primeiro", "segundo", , "quarto"];
 
-array.forEach(function(elemento) {
+array.forEach(function (elemento) {
   console.log(elemento);
-})
+});
 // primeiro
 // segundo
 // quarto
 
 if (array[2] === undefined) {
-  console.log('array[2] is undefined'); // verdadeiro
+  console.log("array[2] is undefined"); // verdadeiro
 }
 
-array = ['primeiro', 'segundo', undefined, 'quarto'];
+array = ["primeiro", "segundo", undefined, "quarto"];
 
-array.forEach(function(elemento) {
+array.forEach(function (elemento) {
   console.log(elemento);
 });
 // primeiro
@@ -225,29 +225,29 @@ O objeto {{jsxref("Array")}} possui os seguintes métodos:
 {{jsxref("Array.concat", "concat()")}} une dois arrays e retorna um novo array.
 
 ```js
-var myArray = new Array('1', '2', '3');
-myArray = myArray.concat('a', 'b', 'c');
+var myArray = new Array("1", "2", "3");
+myArray = myArray.concat("a", "b", "c");
 // myArray agora é ["1", "2", "3", "a", "b", "c"]
 ```
 
 {{jsxref("Array.join", "join(deliminator = ',')")}} une todos os elementos de um array dentro de um string.
 
 ```js
-var myArray = new Array('Vento', 'Chuva', 'Fogo');
-var lista = myArray.join(' - '); // lista é "Vento - Chuva - Fogo"
+var myArray = new Array("Vento", "Chuva", "Fogo");
+var lista = myArray.join(" - "); // lista é "Vento - Chuva - Fogo"
 ```
 
 {{jsxref("Array.push", "push()")}} adiciona um ou mais elementos no fim de um array e retorna o comprimento resultante do array.
 
 ```js
-var myArray = new Array('1', '2');
-myArray.push('3'); // myArray é agora ["1", "2", "3"]
+var myArray = new Array("1", "2");
+myArray.push("3"); // myArray é agora ["1", "2", "3"]
 ```
 
 {{jsxref("Array.pop", "pop()")}} remove o último elemento de um array e retorna esse elemento.
 
 ```js
-var myArray = new Array('1', '2', '3');
+var myArray = new Array("1", "2", "3");
 var ultimo = myArray.pop();
 // myArray é agora ["1", "2"], ultimo = "3"
 ```
@@ -255,7 +255,7 @@ var ultimo = myArray.pop();
 {{jsxref("Array.shift", "shift()")}} remove o primeiro elemento de um array e retorna esse elemento.
 
 ```js
-var myArray = new Array('1', '2', '3');
+var myArray = new Array("1", "2", "3");
 var primeiro = myArray.shift();
 // myArray agora é ["2", "3"], primeiro é "1"
 ```
@@ -263,24 +263,24 @@ var primeiro = myArray.shift();
 {{jsxref("Array.unshift", "unshift()")}} adiciona um ou mais elementos ao início do array e retorna o novo comprimento do array.
 
 ```js
-var myArray = new Array('1', '2', '3');
-myArray.unshift('4', '5');
+var myArray = new Array("1", "2", "3");
+myArray.unshift("4", "5");
 // myArray torna-se ["4", "5", "1", "2", "3"]
 ```
 
 {{jsxref("Array.slice", "slice(start_index, upto_index)")}} extrai uma seção de um array e retorna um novo array.
 
 ```js
-var myArray = new Array('a', 'b', 'c', 'd', 'e');
+var myArray = new Array("a", "b", "c", "d", "e");
 myArray = myArray.slice(1, 4); // inicia no índice 1 e extrai todos os elementos
-                               // até o índice 3, retornado [ "b", "c", "d"]
+// até o índice 3, retornado [ "b", "c", "d"]
 ```
 
 {{jsxref("Array.splice", "splice(index, count_to_remove, addElement1, addElement2, ...)")}} remove elementos de um array e (opcionalmente) o substitui, e retorna os itens que foram removidos do array.
 
 ```js
-var myArray = new Array('1', '2', '3', '4', '5');
-myArray.splice(1, 3, 'a', 'b', 'c', 'd');
+var myArray = new Array("1", "2", "3", "4", "5");
+myArray.splice(1, 3, "a", "b", "c", "d");
 // myArray é agora ["1", "a", "b", "c", "d", "5"]
 // Este código iniciou no índice um (ou onde o "2" estava),
 // removeu 3 elementos a partir dali, e então inseriu todos os elementos
@@ -290,7 +290,7 @@ myArray.splice(1, 3, 'a', 'b', 'c', 'd');
 {{jsxref("Array.reverse", "reverse()")}} transpõe (inverte) os elementos de um array, _in situ_: o primeiro elemento do array se torna o último e o último torna-se o primeiro, e retorna uma referência para o array.
 
 ```js
-var myArray = new Array('1', '2', '3');
+var myArray = new Array("1", "2", "3");
 myArray.reverse();
 // transpõe o array de modo que myArray = [ "3", "2", "1" ]
 ```
@@ -298,7 +298,7 @@ myArray.reverse();
 {{jsxref("Array.sort", "sort()")}} ordena os elementos de um array _in situ_, e retorna uma referência para o array.
 
 ```js
-var myArray = new Array('Neve', 'Chuva', 'Fogo');
+var myArray = new Array("Neve", "Chuva", "Fogo");
 myArray.sort();
 // ordena o array de modo que myArray = [ "Chuva", "Fogo", "Neve" ]
 ```
@@ -314,11 +314,11 @@ A função abaixo compara dois valores e retorna um dos tres valores: -1, 0 ou 1
 Por exemplo, o seguinte trecho de código vai ordenar pela última letra da string:
 
 ```js
-var sortFn = function(a, b){
+var sortFn = function (a, b) {
   if (a[a.length - 1] < b[b.length - 1]) return -1;
   if (a[a.length - 1] > b[b.length - 1]) return 1;
   if (a[a.length - 1] == b[b.length - 1]) return 0;
-}
+};
 myArray.sort(sortFn);
 // ordena o array de modo que myArray = ["Chuva","Neve","Fogo"]
 ```
@@ -330,44 +330,50 @@ myArray.sort(sortFn);
 {{jsxref("Array.indexOf", "indexOf(searchElement[, fromIndex])")}} busca `searchElement` no array e retorna o índice da primeira ocorrência.
 
 ```js
-var a = ['a', 'b', 'a', 'b', 'a'];
-console.log(a.indexOf('b'));    // mostra 1
+var a = ["a", "b", "a", "b", "a"];
+console.log(a.indexOf("b")); // mostra 1
 // Agora tente novamente, iniciando após o último resultado de busca
-console.log(a.indexOf('b', 2)); // mostra 3
-console.log(a.indexOf('z'));    // mostra -1, porque 'z' não foi encontrado
+console.log(a.indexOf("b", 2)); // mostra 3
+console.log(a.indexOf("z")); // mostra -1, porque 'z' não foi encontrado
 ```
 
 {{jsxref("Array.lastIndexOf", "lastIndexOf(searchElement[, fromIndex])")}} funciona como `indexOf`, mas começa no fim e busca de trás para a frente.
 
 ```js
-var a = ['a', 'b', 'c', 'd', 'a', 'b'];
-console.log(a.lastIndexOf('b'));    // mostra 5
+var a = ["a", "b", "c", "d", "a", "b"];
+console.log(a.lastIndexOf("b")); // mostra 5
 // Agora tente novamente, iniciando antes do último resultado de busca
-console.log(a.lastIndexOf('b', 4)); // mostra 1
-console.log(a.lastIndexOf('z'));    // mostra -1
+console.log(a.lastIndexOf("b", 4)); // mostra 1
+console.log(a.lastIndexOf("z")); // mostra -1
 ```
 
 {{jsxref("Array.forEach", "forEach(callback[, thisObject])")}} executa um `callback` em cada item do array e retorna undefined.
 
 ```js
-var a = ['a', 'b', 'c'];
-a.forEach(function(element) { console.log(elemento); });
+var a = ["a", "b", "c"];
+a.forEach(function (element) {
+  console.log(elemento);
+});
 // mostra cada item por vez
 ```
 
 {{jsxref("Array.map", "map(callback[, thisObject])")}} retorna um novo array do valor retornado da execução do callback em cada item do array.
 
 ```js
-var a1 = ['a', 'b', 'c'];
-var a2 = a1.map(function(item) { return item.toUpperCase(); });
+var a1 = ["a", "b", "c"];
+var a2 = a1.map(function (item) {
+  return item.toUpperCase();
+});
 console.log(a2); // logs ['A', 'B', 'C']
 ```
 
 {{jsxref("Array.filter", "filter(callback[, thisObject])")}} retorna um novo array contendo os items verdadeiros ao executar o callback.
 
 ```js
-var a1 = ['a', 10, 'b', 20, 'c', 30];
-var a2 = a1.filter(function(item) { return typeof item === 'number'; });
+var a1 = ["a", 10, "b", 20, "c", 30];
+var a2 = a1.filter(function (item) {
+  return typeof item === "number";
+});
 console.log(a2); // mostra [10, 20, 30]
 ```
 
@@ -375,11 +381,11 @@ console.log(a2); // mostra [10, 20, 30]
 
 ```js
 function isNumber(valor) {
-  return typeof valor === 'number';
+  return typeof valor === "number";
 }
 var a1 = [1, 2, 3];
 console.log(a1.every(isNumber)); // mostra true
-var a2 = [1, '2', 3];
+var a2 = [1, "2", 3];
 console.log(a2.every(isNumber)); // mostra false
 ```
 
@@ -387,13 +393,13 @@ console.log(a2.every(isNumber)); // mostra false
 
 ```js
 function isNumber(valor) {
-  return typeof valor === 'number';
+  return typeof valor === "number";
 }
 var a1 = [1, 2, 3];
 console.log(a1.some(isNumber)); // mostra true
-var a2 = [1, '2', 3];
+var a2 = [1, "2", 3];
 console.log(a2.some(isNumber)); // mostra true
-var a3 = ['1', '2', '3'];
+var a3 = ["1", "2", "3"];
 console.log(a3.some(isNumber)); // mostra false
 ```
 
@@ -401,8 +407,10 @@ console.log(a3.some(isNumber)); // mostra false
 
 ```js
 var a = [10, 20, 30];
-var total = a.reduce(function(primeiro, segundo) { return primeiro + segundo; }, 0);
-console.log(total) // mostra 60
+var total = a.reduce(function (primeiro, segundo) {
+  return primeiro + segundo;
+}, 0);
+console.log(total); // mostra 60
 ```
 
 {{jsxref("Array.reduceRight", "reduceRight(callback[, initalvalue])")}} funciona como `reduce()`, mas inicia com o último elemento.
@@ -420,7 +428,7 @@ var a = new Array(4);
 for (i = 0; i < 4; i++) {
   a[i] = new Array(4);
   for (j = 0; j < 4; j++) {
-    a[i][j] = '[' + i + ',' + j + ']';
+    a[i][j] = "[" + i + "," + j + "]";
   }
 }
 ```
@@ -446,7 +454,7 @@ Métodos Array prototype podem ser chamados contra outros objetos array-like. Po
 
 ```js
 function printArguments() {
-  Array.prototype.forEach.call(arguments, function(item) {
+  Array.prototype.forEach.call(arguments, function (item) {
     console.log(item);
   });
 }
@@ -455,7 +463,7 @@ function printArguments() {
 Métodos Array prototype também podem ser usados em strings, desde que eles forneçam acesso sequencial a seus caracteres de maneira similar às arrays:
 
 ```js
-Array.prototype.forEach.call('uma string', function(chr) {
+Array.prototype.forEach.call("uma string", function (chr) {
   console.log(chr);
 });
 ```

@@ -1,9 +1,9 @@
 ---
-title: Document.fullscreenElement
+title: "Document: fullscreenElement プロパティ"
+short-title: fullscreenElement
 slug: Web/API/Document/fullscreenElement
-original_slug: Web/API/DocumentOrShadowRoot/fullscreenElement
 l10n:
-  sourceCommit: 23aea0fbb04893c64890c89a634250283e2beb71
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{ApiRef("Fullscreen API")}}
@@ -22,7 +22,7 @@ l10n:
 
 ```js
 function isVideoInFullscreen() {
-  if (document.fullscreenElement?.nodeName === 'VIDEO') {
+  if (document.fullscreenElement?.nodeName === "VIDEO") {
     return true;
   }
   return false;
@@ -44,4 +44,4 @@ function isVideoInFullscreen() {
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.exitFullscreen()") }}
 - {{ cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}
-- {{HTMLElement("iframe")}} の {{ HTMLAttrXRef("allowfullscreen", "iframe") }} 属性
+- {{HTMLElement("iframe")}} の [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性

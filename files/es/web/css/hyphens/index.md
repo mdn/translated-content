@@ -57,14 +57,18 @@ Este ejemplo usa tres clases, una por cada posible configuración de la propieda
 
 ```html
 <ul>
-  <li><code>none</code>: sin separación; se desbordará si es preciso
+  <li>
+    <code>none</code>: sin separación; se desbordará si es preciso
     <p lang="es" class="none">Una extrema&shy;damente larga palabra</p>
   </li>
-  <li><code>manual</code>: separación sólo en &amp;hyphen; o &amp;shy; (si fuera necesario)
+  <li>
+    <code>manual</code>: separación sólo en &amp;hyphen; o &amp;shy; (si fuera
+    necesario)
     <p lang="es" class="manual">Una extrema&shy;damente larga palabra</p>
   </li>
-  <li><code>auto</code>: separará donde decida el algoritmo (si fuera necesario)
-    <p lang="enes class="auto">Una extrema&shy;damente larga palabra</p>
+  <li>
+    <code>auto</code>: separará donde decida el algoritmo (si fuera necesario)
+    <p lang="es" class="auto">Una extrema&shy;damente larga palabra</p>
   </li>
 </ul>
 ```
@@ -75,7 +79,7 @@ Este ejemplo usa tres clases, una por cada posible configuración de la propieda
 p {
   width: 55px;
   border: 1px solid black;
- }
+}
 p.none {
   -webkit-hyphens: none;
   -ms-hyphens: none;
@@ -101,9 +105,9 @@ p.auto {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.hyphens")}}
+{{Compat}}
 
 ## Ver también
 

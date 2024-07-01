@@ -13,14 +13,14 @@ mantienen más referencias a la misma propiedad, eventualmente se libera automá
 ## Sintaxis
 
 ```js
-delete expresion
+delete expresion;
 ```
 
 Donde `expresion` debe evaluarse como una referencia a la [propiedad](/es/docs/Glossary/property/JavaScript), por ejemplo:
 
 ```js
-delete object.property
-delete object['property']
+delete object.property;
+delete object["property"];
 ```
 
 ### Parámetros
@@ -74,12 +74,12 @@ El siguiente bloque de código muestra un ejemplo simple:
 ```js
 var Employee = {
   age: 28,
-  name: 'abc',
-  designation: 'desarrollador'
-}
+  name: "abc",
+  designation: "desarrollador",
+};
 
-console.log(delete Employee.name);   // retorna true
-console.log(delete Employee.age);    // retorna true
+console.log(delete Employee.name); // retorna true
+console.log(delete Employee.age); // retorna true
 
 // Cuando se trata de eliminar una propiedad
 // que no existe, retorna true
@@ -94,9 +94,9 @@ arrojará un `TypeError`.
 
 ```js
 var Employee = {};
-Object.defineProperty(Employee, 'name', {configurable: false});
+Object.defineProperty(Employee, "name", { configurable: false });
 
-console.log(delete Employee.name);  // retorna false
+console.log(delete Employee.name); // retorna false
 ```
 
 {{jsxref("Statements/var","var")}}, {{jsxref("Statements/let","let")}}, y
@@ -104,10 +104,10 @@ console.log(delete Employee.name);  // retorna false
 que no pueden ser eliminadas con el operador `delete`:
 
 ```js
-var nameOther = 'XYZ';
+var nameOther = "XYZ";
 
 // Podemos acceder a esta propiedad global usando:
-Object.getOwnPropertyDescriptor(window, 'nameOther');
+Object.getOwnPropertyDescriptor(window, "nameOther");
 
 // salida: Object {value: "XYZ",
 //                  writable: true,
@@ -117,7 +117,7 @@ Object.getOwnPropertyDescriptor(window, 'nameOther');
 // Debido a que "nameOther" es añadido usando la palabra
 // reservada var, es marcada como "no configurable"
 
-delete nameOther;   // retorna false
+delete nameOther; // retorna false
 ```
 
 En modo estricto, esto hubiese arrojado una excepción.
@@ -131,8 +131,14 @@ en modo estricto, debe usar el operador `delete` en la forma de
 `delete object.property` o `delete object['property']`.
 
 ```js
-Object.defineProperty(globalThis, 'variable1', { value: 10, configurable: true, });
-Object.defineProperty(globalThis, 'variable2', { value: 10, configurable: false, });
+Object.defineProperty(globalThis, "variable1", {
+  value: 10,
+  configurable: true,
+});
+Object.defineProperty(globalThis, "variable2", {
+  value: 10,
+  configurable: false,
+});
 
 // SyntaxError en modo estricto.
 console.log(delete variable1); // true
@@ -174,7 +180,7 @@ un arreglo de objetos con una única propiedad, etc.
 
 ```js
 // Crea la propiedad adminName en el ámbito global.
-adminName = 'xyz';
+adminName = "xyz";
 
 // Crea la propiedad empCount en el ábmti global.
 // Como se usa var, es marcada como no configurable.
@@ -182,19 +188,19 @@ adminName = 'xyz';
 var empCount = 43;
 
 EmployeeDetails = {
-  name: 'xyz',
+  name: "xyz",
   age: 5,
-  designation: 'Developer'
+  designation: "Developer",
 };
 
 // adminName es una propiedad del ámbito global.
 // Puede ser eliminada debido a que es declarada sin usar var,
 // y por lo tanto es configurable.
-delete adminName;       // retorna true
+delete adminName; // retorna true
 
 // Por el contrario, empCount no es configurable
 // debido a que fue usado var al declararla.
-delete empCount;       // retorna false
+delete empCount; // retorna false
 
 // delete puede ser usado para eliminar propiedades de objetos.
 delete EmployeeDetails.name; // retona true
@@ -207,13 +213,13 @@ delete Math.PI; // retorna false
 
 // EmployeeDetails es una propiedad del ámbito global.
 // Debido a que fue definida sin "var", se marca como configurable.
-delete EmployeeDetails;   // retorna true
+delete EmployeeDetails; // retorna true
 
 function f() {
   var z = 44;
 
   // delete no afecta nombres de variables locales
-  delete z;     // retorna false
+  delete z; // retorna false
 }
 ```
 
@@ -263,10 +269,10 @@ no se encuentra más en el mismo. En el siguiente ejemplo, `trees[3]` es
 eliminado con el uso de `delete`.
 
 ```js
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+var trees = ["redwood", "bay", "cedar", "oak", "maple"];
 delete trees[3];
 if (3 in trees) {
-    // esto no se ejecuta
+  // esto no se ejecuta
 }
 ```
 
@@ -276,10 +282,10 @@ siguiente ejmeplo, `trees[3]` recibe el valor `undefined`, pero el elemento
 del arreglo aún existe:
 
 ```js
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+var trees = ["redwood", "bay", "cedar", "oak", "maple"];
 trees[3] = undefined;
 if (3 in trees) {
-    // esto sí se ejecuta
+  // esto sí se ejecuta
 }
 ```
 
@@ -290,8 +296,8 @@ se elimina completamente `trees[3]` del arreglo usando
 {{jsxref("Array.splice()", "splice()")}}:
 
 ```js
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
-trees.splice(3,1);
+var trees = ["redwood", "bay", "cedar", "oak", "maple"];
+trees.splice(3, 1);
 console.log(trees); // ["redwood", "bay", "cedar", "maple"]
 ```
 

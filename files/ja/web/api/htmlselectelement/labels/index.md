@@ -1,19 +1,16 @@
 ---
-title: HTMLSelectElement.labels
+title: "HTMLSelectElement: labels プロパティ"
+short-title: labels
 slug: Web/API/HTMLSelectElement/labels
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("DOM")}}
+{{ APIRef("HTML DOM") }}
 
-**`HTMLSelectElement.labels`** は読み取り専用のプロパティで、{{HTMLElement("select")}} 要素に関連付けられた {{HTMLElement("label")}} 要素の {{domxref("NodeList")}} を返します。
+**`HTMLSelectElement.labels`** は読み取り専用のプロパティで、この {{HTMLElement("select")}} 要素に関連付けられた {{HTMLElement("label")}} 要素の {{domxref("NodeList")}} を返します。
 
-## 構文
-
-```js
-var labelElements = select.labels;
-```
-
-### 返値
+## 値
 
 {{domxref("NodeList")}} で、`<select>` 要素に関連付けられた `<label>` 要素が入ります。
 
@@ -22,26 +19,28 @@ var labelElements = select.labels;
 ### HTML
 
 ```html
-<label id="label1" for="test">Label 1</label>
+<label id="label1" for="test">ラベル 1</label>
 <select id="test">
-  <option value="1">Option 1</option>
-  <option value="2">Option 2</option>
+  <option value="1">選択肢 1</option>
+  <option value="2">選択肢 2</option>
 </select>
-<label id="label2" for="test">Label 2</label>
+<label id="label2" for="test">ラベル 2</label>
 ```
 
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("test");
-  for(var i = 0; i < select.labels.length; i++) {
-    console.log(select.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of select.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+### 結果
+
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## 仕様書
 

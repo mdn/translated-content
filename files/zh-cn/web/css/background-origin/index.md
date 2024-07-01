@@ -46,30 +46,32 @@ background-origin: inherit
 ## 例子
 
 ```css
- .example {
-   border: 10px double;
-   padding: 10px;
-   background: url('image.jpg');
-   background-position: center left;
-   /* 背景将在内容区 padding 内部填充 */
-   background-origin: content-box;
+.example {
+  border: 10px double;
+  padding: 10px;
+  background: url("image.jpg");
+  background-position: center left;
+  /* 背景将在内容区 padding 内部填充 */
+  background-origin: content-box;
 }
 ```
 
 ```css
 #example2 {
-    border: 4px solid black;
-    padding: 10px;
-    background: url('image.gif');
-    background-repeat: no-repeat;
-    background-origin: border-box;
- }
+  border: 4px solid black;
+  padding: 10px;
+  background: url("image.gif");
+  background-repeat: no-repeat;
+  background-origin: border-box;
+}
 ```
 
 ```css
 div {
-  background-image: url('logo.jpg'), url('mainback.png');
-  background-position: top right, 0px 0px;
+  background-image: url("logo.jpg"), url("mainback.png");
+  background-position:
+    top right,
+    0px 0px;
   background-origin: content-box, padding-box;
 }
 ```

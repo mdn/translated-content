@@ -1,17 +1,6 @@
 ---
 title: BackgroundFetchManager.getIds()
 slug: Web/API/BackgroundFetchManager/getIds
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getIds
-  - BackgroundFetchManager
-  - Experimental
-  - Service Workers
-  - Fetch
-browser-compat: api.BackgroundFetchManager.getIds
 ---
 
 {{DefaultAPISidebar("Background Fetch API")}}

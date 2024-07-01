@@ -1,11 +1,6 @@
 ---
 title: letter-spacing
 slug: Web/CSS/letter-spacing
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/letter-spacing
 ---
 
 {{CSSRef}}
@@ -21,7 +16,7 @@ La propriété **`letter-spacing`** définit [l'interlettre](https://fr.wikipedi
 /* Type <length>       */
 letter-spacing: 0.3em;
 letter-spacing: 3px;
-letter-spacing: .3px;
+letter-spacing: 0.3px;
 
 /* Valeur avec mot-clé */
 letter-spacing: normal;
@@ -52,10 +47,18 @@ letter-spacing: unset;
 ### CSS
 
 ```css
-.premier    { letter-spacing: 0.4em; }
-.deuxieme   { letter-spacing: 1em; }
-.troisieme  { letter-spacing: -0.05em; }
-.quatrieme  { letter-spacing: 6px; }
+.premier {
+  letter-spacing: 0.4em;
+}
+.deuxieme {
+  letter-spacing: 1em;
+}
+.troisieme {
+  letter-spacing: -0.05em;
+}
+.quatrieme {
+  letter-spacing: 6px;
+}
 ```
 
 ### HTML

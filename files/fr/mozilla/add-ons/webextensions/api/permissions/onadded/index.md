@@ -1,27 +1,18 @@
 ---
 title: permissions.onAdded
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/onAdded
-tags:
-  - API
-  - Add-ons
-  - Evènement
-  - Permissions
-  - Reference
-  - WebExtensions
-  - onAdded
-translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/onAdded
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Activé lorsque l'extension a accordé de nouvelles permissions.
 
 ## Syntaxe
 
 ```js
-browser.permissions.onAdded.addListener(listener)
-browser.permissions.onAdded.removeListener(listener)
-browser.permissions.onAdded.hasListener(listener)
+browser.permissions.onAdded.addListener(listener);
+browser.permissions.onAdded.removeListener(listener);
+browser.permissions.onAdded.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -44,9 +35,9 @@ Les événements ont trois fonctions :
     - `permissions`
       - : Objet {{WebExtAPIRef("permissions.Permissions")}} contenant les permissions qui ont été accordées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.permissions.onAdded")}}
+{{Compat}}
 
 ## Exemples
 

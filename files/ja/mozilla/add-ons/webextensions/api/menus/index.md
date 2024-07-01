@@ -9,7 +9,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/menus
 
 この API は、Chrome のエクステンションでコンテキストメニューに項目を追加できる機能である["contextMenus"](https://developer.chrome.com/extensions/contextMenus) API をモデルにしています。この `browser.menus` API は Chrome の API にいくつかの機能を追加しています。
 
-Firefox 55 より前ではこの API は `contextMenus` という名前でした。その名称は一応エイリアスにしています。そのため `contextMenus` という名称を使って Firefox や他のブラウザでも動くコードを書くことできます。
+Firefox 55 より前ではこの API は `contextMenus` という名前でした。その名称は一応エイリアスにしています。そのため `contextMenus` という名称を使って Firefox や他のブラウザーでも動くコードを書くことできます。
 
 この API を使用するためには `menus` [permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 必要です。 `menus` の代わりにエイリアスの `contextMenus` を使用することができますが、もし使用するのであれば`browser.contextMenus` で API にアクセスしなければなりません。.
 
@@ -49,57 +49,75 @@ Here's a context menu containing 4 items: a normal item, two radio items with se
 ![](menus-4.png)You could create a submenu like this using code like:
 
 ```js
-browser.menus.create({
-  id: "remove-me",
-  title: browser.i18n.getMessage("menuItemRemoveMe"),
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "remove-me",
+    title: browser.i18n.getMessage("menuItemRemoveMe"),
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "separator-1",
-  type: "separator",
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "separator-1",
+    type: "separator",
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "greenify",
-  type: "radio",
-  title: browser.i18n.getMessage("menuItemGreenify"),
-  contexts: ["all"],
-  checked: true,
-  icons: {
-    "16": "icons/paint-green-16.png",
-    "32": "icons/paint-green-32.png"
-  }
-}, onCreated);
+browser.menus.create(
+  {
+    id: "greenify",
+    type: "radio",
+    title: browser.i18n.getMessage("menuItemGreenify"),
+    contexts: ["all"],
+    checked: true,
+    icons: {
+      16: "icons/paint-green-16.png",
+      32: "icons/paint-green-32.png",
+    },
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "bluify",
-  type: "radio",
-  title: browser.i18n.getMessage("menuItemBluify"),
-  contexts: ["all"],
-  checked: false,
-  icons: {
-    "16": "icons/paint-blue-16.png",
-    "32": "icons/paint-blue-32.png"
-  }
-}, onCreated);
+browser.menus.create(
+  {
+    id: "bluify",
+    type: "radio",
+    title: browser.i18n.getMessage("menuItemBluify"),
+    contexts: ["all"],
+    checked: false,
+    icons: {
+      16: "icons/paint-blue-16.png",
+      32: "icons/paint-blue-32.png",
+    },
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "separator-2",
-  type: "separator",
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "separator-2",
+    type: "separator",
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
 var checkedState = true;
 
-browser.menus.create({
-  id: "check-uncheck",
-  type: "checkbox",
-  title: browser.i18n.getMessage("menuItemUncheckMe"),
-  contexts: ["all"],
-  checked: checkedState
-}, onCreated);
+browser.menus.create(
+  {
+    id: "check-uncheck",
+    type: "checkbox",
+    title: browser.i18n.getMessage("menuItemUncheckMe"),
+    contexts: ["all"],
+    checked: checkedState,
+  },
+  onCreated,
+);
 ```
 
 ## 型
@@ -132,13 +150,13 @@ browser.menus.create({
 - {{WebExtAPIRef("menus.onClicked")}}
   - : メニューアイテムがクリックされたときに発火。
 - {{WebExtAPIRef("menus.onHidden")}}
-  - : ブラウザがメニューを隠したときに発火。
+  - : ブラウザーがメニューを隠したときに発火。
 - {{WebExtAPIRef("menus.onShown")}}
-  - : ブラウザがメニューを見せたときに発火。
+  - : ブラウザーがメニューを見せたときに発火。
 
 ## ブラウザーの互換性
 
-{{ Compat("webextensions.api.menus", 1, "true") }}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

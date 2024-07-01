@@ -20,7 +20,7 @@ var mediaUrl = audioObject.currentSrc;
 ## 示例
 
 ```js
-var obj = document.createElement('video');
+var obj = document.createElement("video");
 console.log(obj.currentSrc); // ""
 ```
 

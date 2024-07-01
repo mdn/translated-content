@@ -1,6 +1,6 @@
 ---
 title: 段組みレイアウトでのボックス配置
-slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout
+slug: Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout
 ---
 
 {{CSSRef}}

@@ -71,11 +71,11 @@ _Hereda propiedades de su padre, {{domxref("Element")}}, y los implementalo de {
 La mayoria de las propiedades de los eventos, del formulario `onXYZ`, estan definidas en las interfaces {{domxref("GlobalEventHandlers")}} or {{domxref("TouchEventHandlers")}}, implementadas por `HTMLElement`. Otras pocas son especificas de `HTMLElement`.
 
 - {{ domxref("HTMLElement.oncopy") }} {{ non-standard_inline() }}
-  - : Returns the event handling code for the `copy` event ({{bug("280959")}}).
+  - : Returns the event handling code for the `copy` event ([Error 280959 en Firefox](https://bugzil.la/280959)).
 - {{ domxref("HTMLElement.oncut") }} {{ non-standard_inline() }}
-  - : Returns the event handling code for the `cut` event ({{bug("280959")}}).
+  - : Returns the event handling code for the `cut` event ([Error 280959 en Firefox](https://bugzil.la/280959)).
 - {{ domxref("HTMLElement.onpaste") }} {{ non-standard_inline() }}
-  - : Returns the event handling code for the `paste` event ({{bug("280959")}}).
+  - : Returns the event handling code for the `paste` event ([Error 280959 en Firefox](https://bugzil.la/280959)).
 - {{domxref("TouchEventHandlers.ontouchstart")}} {{non-standard_inline}}
   - : Returns the event handling code for the [`touchstart`](/es/docs/Web/Reference/Events/touchstart) event.
 - {{domxref("TouchEventHandlers.ontouchend")}} {{non-standard_inline}}
@@ -106,9 +106,9 @@ _Inherits methods from its parent, {{domxref("Element")}}._
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLElement")}}
+{{Compat}}
 
 ## See also
 

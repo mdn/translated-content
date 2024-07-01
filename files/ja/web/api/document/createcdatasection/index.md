@@ -1,6 +1,9 @@
 ---
-title: Document.createCDATASection()
+title: "Document: createCDATASection() メソッド"
+short-title: createCDATASection()
 slug: Web/API/Document/createCDATASection
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
@@ -9,7 +12,7 @@ slug: Web/API/Document/createCDATASection
 
 ## 構文
 
-```js
+```js-nolint
 createCDATASection(data)
 ```
 
@@ -25,13 +28,10 @@ createCDATASection(data)
 ## 例
 
 ```js
-var docu = new DOMParser().parseFromString('<xml></xml>', 'application/xml')
-
-var cdata = docu.createCDATASection('Some <CDATA> data & then some');
-
-docu.getElementsByTagName('xml')[0].appendChild(cdata);
-
-alert(new XMLSerializer().serializeToString(docu));
+const docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
+const cdata = docu.createCDATASection("Some <CDATA> data & then some");
+docu.querySelector("xml").appendChild(cdata);
+console.log(new XMLSerializer().serializeToString(docu));
 // 表示結果: <xml><![CDATA[Some <CDATA> data & then some]]></xml>
 ```
 

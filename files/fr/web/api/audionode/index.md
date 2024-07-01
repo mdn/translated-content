@@ -1,7 +1,6 @@
 ---
 title: AudioNode
 slug: Web/API/AudioNode
-translation_of: Web/API/AudioNode
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -12,7 +11,7 @@ L'interface **`AudioNode`** est une interface générique pour représenter un m
 
 ![Des objets AudioNode participant à un objet AudioContext pour créer un graphe de routage audio.](webaudiobasics.png)
 
-Un `AudioNode` a des entrées et sorties, chacune avec un certain nombre de _canaux_. Un `AudioNode` avec zero entrée et une ou plusieurs sorties est appelée un *noeud source*. Le traitement exact varie d'un `AudioNode` à l'autre; en général un noeud lit l'entrée, réalise un traitement, et génère de nouvelles valeurs pour la sortie, ou laisse simplement l'entrée traverser (par exemple dans le cas de l'{{domxref("AnalyserNode")}}, où le résultat du traitment du traitement est accessible à part).
+Un `AudioNode` a des entrées et sorties, chacune avec un certain nombre de _canaux_. Un `AudioNode` avec zero entrée et une ou plusieurs sorties est appelée un _noeud source_. Le traitement exact varie d'un `AudioNode` à l'autre; en général un noeud lit l'entrée, réalise un traitement, et génère de nouvelles valeurs pour la sortie, ou laisse simplement l'entrée traverser (par exemple dans le cas de l'{{domxref("AnalyserNode")}}, où le résultat du traitment du traitement est accessible à part).
 
 Plusieurs noeuds peuvent être reliés dans un _graphe de traitement_. Un tel graphe est contenu dans un {{domxref("AudioContext")}}. Chaque `AudioNode` fait partie d'exactement un contexte. Les noeuds de traitement héritent des propriétés et méthodse d'`AudioNode`, mais définissent aussi leurs propres fonctionnalités par dessus. Pour plus de détails, voir les pages individuelles liées sur la page d'accueil [Web Audio API](/fr/docs/Web/API/Web_Audio_API).
 

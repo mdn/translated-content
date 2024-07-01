@@ -1,12 +1,6 @@
 ---
-title: 'SyntaxError: missing : after property id'
+title: "SyntaxError: missing : after property id"
 slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
-original_slug: Web/JavaScript/Reference/Erreurs/Missing_colon_after_property_id
 ---
 
 {{jsSidebar("Errors")}}
@@ -27,7 +21,7 @@ SyntaxError: missing : after property id (Firefox)
 Lorsqu'on crée un objet en utilisant un [initialisateur d'objet](/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet), il faut utiliser un deux-points ( : ) afin de séparer les clés des valeurs pour les propriétés de l'objet.
 
 ```js
-var obj = { cleDeLaPropriete: 'valeur' };
+var obj = { cleDeLaPropriete: "valeur" };
 ```
 
 ## Exemples
@@ -44,12 +38,12 @@ var obj = { cleDeLaPropriete = 'valeur' };
 Pour corriger ce problème, on peut utiliser un deux-points ou bien affecter la nouvelle propriété après avoir créé l'objet :
 
 ```js example-good
-var obj = { cleDeLaPropriete: 'valeur' };
+var obj = { cleDeLaPropriete: "valeur" };
 
 // ou encore :
 
-var obj = { };
-obj['cleDeLaPropriete'] = 'valeur';
+var obj = {};
+obj["cleDeLaPropriete"] = "valeur";
 ```
 
 ### Propriétés vides
@@ -79,7 +73,7 @@ var obj = { 'tr'+'uc': 'toto' };
 Pour corriger l'erreur, il faudra placer l'expression entre crochets :
 
 ```js example-good
-var obj = { ['tr'+'uc']: 'toto' };
+var obj = { ["tr" + "uc"]: "toto" };
 ```
 
 ## Voir aussi

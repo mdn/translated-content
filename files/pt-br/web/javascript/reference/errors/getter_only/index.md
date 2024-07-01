@@ -36,11 +36,11 @@ O exemplo abaixo mostra como definir um getter para uma propriedade. Isso não e
 
 function Arquivo() {
   var temperatura = null;
-  Object.defineProperty(this, 'temperatura', {
-    get: function() {
-      console.log('get!');
+  Object.defineProperty(this, "temperatura", {
+    get: function () {
+      console.log("get!");
       return temperatura;
-    }
+    },
   });
 }
 
@@ -61,18 +61,20 @@ function Arquivo() {
   var temperatura = null;
   var arquivo = [];
 
-  Object.defineProperty(this, 'temperatura', {
-    get: function() {
-      console.log('get!');
+  Object.defineProperty(this, "temperatura", {
+    get: function () {
+      console.log("get!");
       return temperatura;
     },
-    set: function(value) {
+    set: function (value) {
       temperatura = value;
       arquivo.push({ val: temperatura });
-    }
+    },
   });
 
-  this.getArquivo = function() { return arquivo; };
+  this.getArquivo = function () {
+    return arquivo;
+  };
 }
 
 var arq = new Arquivo();

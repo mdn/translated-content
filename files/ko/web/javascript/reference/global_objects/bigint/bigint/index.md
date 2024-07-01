@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 ## 구분
 
 ```js
-    BigInt(value);
+BigInt(value);
 ```
 
 ### 매개변수

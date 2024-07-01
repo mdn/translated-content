@@ -1,6 +1,9 @@
 ---
-title: HTMLImageElement.x
+title: "HTMLImageElement: x プロパティ"
+short-title: x
 slug: Web/API/HTMLImageElement/x
+l10n:
+  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
 {{APIRef("HTML DOM")}}
@@ -42,7 +45,7 @@ slug: Web/API/HTMLImageElement/x
   <tr>
     <td>12345678</td>
     <td>Johnny Rocket</td>
-    <td><img src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"</td>
+    <td><img src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"></td>
   </th>
 </table>
 <pre id="log">
@@ -55,11 +58,11 @@ slug: Web/API/HTMLImageElement/x
 
 ```js
 let logBox = document.querySelector("pre");
-let tbl = document.getElementById("userinfo")
+let tbl = document.getElementById("userinfo");
 
-let log = msg => {
+let log = (msg) => {
   logBox.innerHTML += `${msg}<br>`;
-}
+};
 
 let cell = tbl.rows[1].cells[2];
 let image = cell.querySelector("img");
@@ -85,12 +88,13 @@ log(`Image's global Y: ${image.y}`);
 
 table {
   border-collapse: collapse;
-  border: 2px solid rgb(100, 100, 100);
+  border: 2px solid rgb(100 100 100);
   font-family: sans-serif;
 }
 
-td, th {
-  border: 1px solid rgb(100, 100, 100);
+td,
+th {
+  border: 1px solid rgb(100 100 100);
   padding: 10px 14px;
 }
 

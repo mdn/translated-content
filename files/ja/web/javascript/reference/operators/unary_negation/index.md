@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Unary_negation
 ## 構文
 
 ```js
--x
+-x;
 ```
 
 ## 例

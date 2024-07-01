@@ -1,9 +1,11 @@
 ---
 title: XPath
 slug: Web/XPath
+l10n:
+  sourceCommit: b6f343538eac4a803943b4e99b0c0545b372645a
 ---
 
-{{XSLTRef}}
+{{XsltSidebar}}
 
 XPath は XML Path Language の略称です。非 XML 構文を使って、柔軟な方法で [XML](/ja/docs/Web/XML/XML_introduction) 文書の様々な部分をアドレッシングする（指し示す）ことができます。さらに、文書中で指し示されたノードがパターンに一致するかどうかの判定を行うこともできます。
 
@@ -11,7 +13,7 @@ XPath は主に [XSLT](/ja/docs/Web/XSLT) で使われていますが、 [HTML](
 
 XPath は XML 文書の階層構造を辿るために（URL のような）パス表記を使います。また、URI や XML 属性値の中で使えるように非 XML 構文を採用しています。
 
-> **メモ:** XPath の対応状況は大きく異なります。 Firefox は合理的にうまく対応しています（対応をさらに改善する計画はありません）が、他のブラウザーではそれほど実装されていません。ポリフィルが必要な場合は、[js-xpath](http://nchc.dl.sourceforge.net/project/js-xpath/js-xpath/1.0.0/xpath.js)または [wicked-good-xpath](https://github.com/google/wicked-good-xpath) を検討してください。
+> **メモ:** XPath の対応状況は大きく異なります。 Firefox は合理的にうまく対応しています（対応をさらに改善する計画はありません）が、他のブラウザーではそれほど実装されていません。ポリフィルが必要な場合は、[js-xpath](https://sourceforge.net/projects/js-xpath/files/js-xpath/1.0.0/xpath.js/download) または [wicked-good-xpath](https://github.com/google/wicked-good-xpath) を検討してください。
 
 ## ドキュメント
 
@@ -30,8 +32,6 @@ XPath は XML 文書の階層構造を辿るために（URL のような）パ�
 
 ## ツール
 
-- [XMLQuire (以前は SketchPath と呼ばれていた)](http://qutoric.com/xmlquire/)
-  - : グラフィカルな XPath ビルダー／デバッガー (.NET) です。
 - [XPath tester](https://extendsclass.com/xpath-tester.html)
   - : オンラインの XPath ビルダー／デバッガーです。
 
@@ -39,5 +39,3 @@ XPath は XML 文書の階層構造を辿るために（URL のような）パ�
 
 - [XSLT](/ja/docs/Web/XSLT), [XML](/ja/docs/Web/XML), [DOM](/ja/docs/Web/API/Document_Object_Model)
 - [CSS セレクターと XPath の比較](/ja/docs/Web/XPath/Comparison_with_CSS_selectors)
-
-<section id="Quick_links"><ol><li><strong><a href="/ja/docs/Web/XSLT">XSLT</a></strong></li><li><strong><a href="/ja/docs/Web/EXSLT">EXSLT</a></strong></li><li><strong><a href="/ja/docs/Web/XPath">XPath</a></strong></li><li class="toggle"><details open><summary>Guides</summary><ol><li><a href="/ja/docs/Web/XPath/Comparison_with_CSS_selectors">CSS セレクターと XPath の比較</a></li><li><a href="/ja/docs/Web/XPath/Snippets">XPath スニペット</a></li></ol></details></li><li class="toggle"><details open><summary><a href="/ja/docs/Web/XPath/Axes">XPath 軸</a></summary>{{ListSubpagesForSidebar("/ja/docs/Web/XPath/Axes")}}</details></li><li class="toggle"><details open><summary><a href="/ja/docs/Web/XPath/Functions">XPath 関数</a></summary>{{ListSubpagesForSidebar("/ja/docs/Web/XPath/Functions")}}</details></li></ol></section>

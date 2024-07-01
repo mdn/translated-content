@@ -10,7 +10,7 @@ slug: Web/API/MediaStreamTrack/stop
 ## 구문
 
 ```js
-track.stop()
+track.stop();
 ```
 
 ## 설명
@@ -30,7 +30,7 @@ function stopStreamedVideo(videoElem) {
   const stream = videoElem.srcObject;
   const tracks = stream.getTracks();
 
-  tracks.forEach(function(track) {
+  tracks.forEach(function (track) {
     track.stop();
   });
 

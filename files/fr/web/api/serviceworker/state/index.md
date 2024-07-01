@@ -1,8 +1,6 @@
 ---
 title: ServiceWorker.state
 slug: Web/API/ServiceWorker/state
-translation_of: Web/API/ServiceWorker/state
-browser-compat: api.ServiceWorker.state
 ---
 
 {{APIRef("Service Workers API")}}
@@ -38,19 +36,19 @@ Le fragment de code qui suit est tiré de [l'exemple `registration-events`](http
 let serviceWorker;
 if (registration.installing) {
   serviceWorker = registration.installing;
-  document.querySelector('#kind').textContent = 'installing';
+  document.querySelector("#kind").textContent = "installing";
 } else if (registration.waiting) {
   serviceWorker = registration.waiting;
-  document.querySelector('#kind').textContent = 'waiting';
+  document.querySelector("#kind").textContent = "waiting";
 } else if (registration.active) {
   serviceWorker = registration.active;
-  document.querySelector('#kind').textContent = 'active';
+  document.querySelector("#kind").textContent = "active";
 }
 
 if (serviceWorker) {
   logState(serviceWorker.state);
-  serviceWorker.addEventListener('statechange', function(e) {
-  logState(e.target.state);
+  serviceWorker.addEventListener("statechange", function (e) {
+    logState(e.target.state);
   });
 }
 ```

@@ -43,7 +43,7 @@ omnibox API は、ユーザーが拡張機能で定義されたキーワード�
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.omnibox")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

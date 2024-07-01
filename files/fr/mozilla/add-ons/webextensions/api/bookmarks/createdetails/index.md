@@ -1,20 +1,9 @@
 ---
 title: bookmarks.CreateDetails
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - CreateDetails
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type `CreateDetails` est utilisé pour décrire les propriétés d'un nouveau, d'un signet, d'un dossier de signets ou d'un séparateur lors de l'appel de la méthode {{WebExtAPIRef("bookmarks.create()")}}.
 
@@ -33,9 +22,9 @@ Un {{jsxref("object")}} contenant une combinaison des champs suivants :
 - `url` {{optional_inline}}
   - : `string`. Un {{jsxref("string")}} qui spécifie l'URL de la page à mettre en signet. Si ceci est omis ou est `null`, un dossier est créé à la place d'un signet.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.CreateDetails", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 

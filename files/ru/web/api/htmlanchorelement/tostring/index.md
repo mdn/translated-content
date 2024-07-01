@@ -1,16 +1,6 @@
 ---
 title: HTMLHyperlinkElementUtils.toString()
 slug: Web/API/HTMLAnchorElement/toString
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Location
-  - Method
-  - Stringifier
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/toString
-original_slug: Web/API/HTMLHyperlinkElementUtils/toString
 ---
 
 {{ApiRef("URL API")}}
@@ -26,9 +16,9 @@ string = object.toString();
 ## Примеры
 
 ```js
-// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils/toString">
+// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/ru/docs/HTMLHyperlinkElementUtils/toString">
 var anchor = document.getElementById("myAnchor");
-var result = anchor.toString(); // Вернёт: 'https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils/toString'
+var result = anchor.toString(); // Вернёт: 'https://developer.mozilla.org/ru/docs/HTMLHyperlinkElementUtils/toString'
 ```
 
 ## Спецификации

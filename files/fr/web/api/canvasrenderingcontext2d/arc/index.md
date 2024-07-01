@@ -1,12 +1,11 @@
 ---
 title: CanvasRenderingContext2D.arc()
 slug: Web/API/CanvasRenderingContext2D/arc
-translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
 
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D.arc()`** de l'API Canvas 2D permet d'ajouter un arc de cercle au tracé, en le centrant aux positions _(x, y)* et avec un rayon *r* qui démarre à *angleDépart* et qui finit à *angleFin*, dans la direction de *sensAntiHoraire* (par défaut en sens horaire).
+La méthode **`CanvasRenderingContext2D.arc()`** de l'API Canvas 2D permet d'ajouter un arc de cercle au tracé, en le centrant aux positions _(x, y)_ et avec un rayon _r_ qui démarre à _angleDépart_ et qui finit à _angleFin_, dans la direction de _sensAntiHoraire_ (par défaut en sens horaire).
 
 ## Syntaxe
 
@@ -44,8 +43,8 @@ Voici un code simple permettant de dessiner un cercle .
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.arc(75, 75, 50, 0, 2 * Math.PI);
@@ -65,7 +64,8 @@ Modifiez le code ci-dessous et voyez les changements en direct sur le canvas :
 <textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.arc(50, 50, 50, 0, 2 * Math.PI, false);
-ctx.stroke();</textarea>
+ctx.stroke();</textarea
+>
 ```
 
 ```js
@@ -81,14 +81,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -105,19 +105,19 @@ Dans cet exemple, plusieurs formes différentes sont dessinées, afin de montrer
 ```
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 // Draw shapes
 for (var i = 0; i < 4; i++) {
-  for(var j = 0; j < 3; j++) {
+  for (var j = 0; j < 3; j++) {
     ctx.beginPath();
-    var x              = 25 + j * 50;               // x coordinate
-    var y              = 25 + i * 50;               // y coordinate
-    var radius         = 20;                    // Arc radius
-    var startAngle     = 0;                     // Starting point on circle
-    var endAngle       = Math.PI + (Math.PI * j) /2; // End point on circle
-    var anticlockwise  = i % 2 == 1;                // Draw anticlockwise
+    var x = 25 + j * 50; // x coordinate
+    var y = 25 + i * 50; // y coordinate
+    var radius = 20; // Arc radius
+    var startAngle = 0; // Starting point on circle
+    var endAngle = Math.PI + (Math.PI * j) / 2; // End point on circle
+    var anticlockwise = i % 2 == 1; // Draw anticlockwise
 
     ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
 

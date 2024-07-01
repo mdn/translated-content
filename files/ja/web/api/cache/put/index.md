@@ -1,8 +1,9 @@
 ---
-title: Cache.put()
+title: "Cache: put() メソッド"
+short-title: put()
 slug: Web/API/Cache/put
 l10n:
-  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef("Service Workers API")}}

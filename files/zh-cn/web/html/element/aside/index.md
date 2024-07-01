@@ -19,7 +19,7 @@ slug: Web/HTML/Element/aside
   </tr>
   <tr>
    <th scope="row">标签省略</th>
-   <td>{{no_tag_omission}}</td>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
@@ -49,14 +49,11 @@ slug: Web/HTML/Element/aside
 ```html
 <article>
   <p>
-    迪斯尼电影<cite>海的女儿</cite>（<cite>The Little Mermaid</cite>）于 1989 年首次登上银幕。
+    迪斯尼电影<cite>海的女儿</cite>（<cite>The Little Mermaid</cite>）于 1989
+    年首次登上银幕。
   </p>
-  <aside>
-    在首次发行期间，该片便收获了 8700 万美元的票房。
-  </aside>
-  <p>
-    更多有关该电影的信息…
-  </p>
+  <aside>在首次发行期间，该片便收获了 8700 万美元的票房。</aside>
+  <p>更多有关该电影的信息…</p>
 </article>
 ```
 

@@ -18,7 +18,7 @@ _HTML 纯文本元素_ (`<plaintext>`) 将起始标签后面的任何东西渲�
 
 ## 属性
 
-除了 [全局属性](/zh-CN/docs/Web/HTML/global_attributes) 之外，这个元素没有其它属性。
+除了 [全局属性](/zh-CN/docs/Web/HTML/global_attributes) 之外，这个元素没有其他属性。
 
 ## DOM 接口
 
@@ -26,7 +26,7 @@ _HTML 纯文本元素_ (`<plaintext>`) 将起始标签后面的任何东西渲�
 
 > **备注：** 直到 Gecko 1.9.2（包含），Firefox 为这个元素实现了 {{domxref('HTMLSpanElement')}} 接口。
 
-## 另见
+## 参见
 
 - {{HTMLElement("pre")}} 和 {{HTMLElement("code")}} 元素可以用于替代。
 - {{HTMLElement("listing")}} 和 {{HTMLElement("xmp")}} 元素，类似于 {{HTMLElement("plaintext")}} 但是也过时了。

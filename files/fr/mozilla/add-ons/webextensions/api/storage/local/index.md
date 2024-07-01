@@ -1,20 +1,9 @@
 ---
 title: storage.local
 slug: Mozilla/Add-ons/WebExtensions/API/storage/local
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - Storage
-  - WebExtensions
-  - local
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/local
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Représente la zone de stockage `local`. Les éléments stockés `localement` sont locaux sur la machine sur laquelle l'extension a été installée.
 
@@ -44,9 +33,9 @@ L'objet `local` local implémente les méthodes définies sur le type {{WebExtAP
 - {{WebExtAPIRef("storage.StorageArea.clear()")}}
   - : Supprime tous les éléments de la zone de stockage.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.storage.local")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

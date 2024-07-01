@@ -26,35 +26,44 @@ slug: Web/Manifest
   "display": "standalone",
   "background_color": "#fff",
   "description": "読みやすいハッカーニュースアプリです。",
-  "icons": [{
-    "src": "images/touch/homescreen48.png",
-    "sizes": "48x48",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen72.png",
-    "sizes": "72x72",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen96.png",
-    "sizes": "96x96",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen144.png",
-    "sizes": "144x144",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen168.png",
-    "sizes": "168x168",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen192.png",
-    "sizes": "192x192",
-    "type": "image/png"
-  }],
-  "related_applications": [{
-    "platform": "play",
-    "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
-  }]
+  "icons": [
+    {
+      "src": "images/touch/homescreen48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen168.png",
+      "sizes": "168x168",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/homescreen192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
+    }
+  ]
 }
 ```
 
@@ -63,7 +72,7 @@ slug: Web/Manifest
 ウェブアプリマニフェストは、文書の {{HTMLElement("head")}} 内の {{HTMLElement("link")}} 要素を使用して HTML ページから展開されます。
 
 ```html
-<link rel="manifest" href="manifest.json">
+<link rel="manifest" href="manifest.json" />
 ```
 
 `.webmanifest` の拡張子が仕様書の [Media type registration](https://w3c.github.io/manifest/#media-type-registration) の節で指定されています（マニフェストファイルのレスポンスは `Content-Type: application/manifest+json` を返してください）。ブラウザーは一般に `.json` (`Content-Type: application/json`) のような他の適切な拡張子でもマニフェストに対応します。
@@ -71,7 +80,7 @@ slug: Web/Manifest
 マニフェストへのアクセスに資格情報が必要な場合は、マニフェストファイルが現在のページと同じオリジンにあったとしても、 [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) 属性を `use-credentials` に設定する必要があります。
 
 ```html
-<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials">
+<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />
 ```
 
 ## スプラッシュ画面
@@ -84,7 +93,7 @@ slug: Web/Manifest
 
 ## 仕様書
 
-| 仕様書                                      |
+| 仕様書                                             |
 | -------------------------------------------------- |
 | [Web App Manifest](https://w3c.github.io/manifest) |
 

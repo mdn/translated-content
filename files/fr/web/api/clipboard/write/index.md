@@ -1,7 +1,6 @@
 ---
 title: Clipboard.write()
 slug: Web/API/Clipboard/write
-translation_of: Web/API/Clipboard/write
 ---
 
 {{APIRef("Clipboard API")}}
@@ -36,11 +35,14 @@ function setClipboard(text) {
   let data = new DataTransfer();
 
   data.items.add(text, "text/plain");
-  navigator.clipboard.write(data).then(function() {
-    /* success */
-  }, function() {
-    /* failure */
-  });
+  navigator.clipboard.write(data).then(
+    function () {
+      /* success */
+    },
+    function () {
+      /* failure */
+    },
+  );
 }
 ```
 

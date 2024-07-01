@@ -1,12 +1,13 @@
 ---
-title: HTMLAreaElement.password
+title: "HTMLAreaElement: password プロパティ"
 slug: Web/API/HTMLAreaElement/password
-original_slug: Web/API/HTMLHyperlinkElementUtils/password
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{ApiRef("HTML DOM")}}
 
-**`HTMLAnchorElement.password`** プロパティは、ドメイン名の前で指定されたパスワードが入った文字列です。
+**`HTMLAreaElement.password`** プロパティは、ドメイン名の前で指定されたパスワードが入った文字列です。
 
 先に [`username`](/ja/docs/Web/API/HTMLAreaElement/username) プロパティを設定せずに設定しようとすると、暗黙のうちに失敗します。
 
@@ -17,7 +18,7 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/password
 ## 例
 
 ```js
-// <area id="myArea" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLAreaElement"> 要素が文書にあったとします
+// <area id="myArea" href="https://anonymous:flabada@developer.mozilla.org/ja/docs/HTMLAreaElement"> 要素が文書にあったとします
 const area = document.getElementByID("myArea");
 area.password; // 'flabada' を返す
 ```

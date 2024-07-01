@@ -20,6 +20,6 @@ slug: Web/SVG/Attribute/origin
 
 {{Specifications}}
 
-## 也可以看看
+## 参见
 
 - [`origin`SMIL 动画规范中的定义](https://www.w3.org/TR/smil-animation/#MotionOriginAttribute)

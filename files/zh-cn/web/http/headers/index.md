@@ -1,5 +1,5 @@
 ---
-title: HTTP 标头（header）
+title: HTTP 标头
 slug: Web/HTTP/Headers
 ---
 
@@ -7,7 +7,7 @@ slug: Web/HTTP/Headers
 
 **HTTP 标头**（header）允许客户端和服务器通过 HTTP 请求（request）或者响应（response）传递附加信息。一个 HTTP 标头由它的名称（不区分大小写）后跟随一个冒号（`:`），冒号后跟随它具体的值。该值之前的{{Glossary("Whitespace", "空格")}}会被忽略。
 
-自定义专用的标头之前可以与 `X-` 前缀一起使用，但是这种用法被 IETF 在 2012 年 6 月发布的 [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648) 明确弃用，原因是其会在非标准字段成为标准时造成不便；其它的标头在 [IANA 注册表](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers)中列出，其原始内容在 [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229) 中定义。此外，IANA 还维护着[被提议的新的 HTTP 标头注册表](https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers)。
+自定义专用的标头之前可以与 `X-` 前缀一起使用，但是这种用法被 IETF 在 2012 年 6 月发布的 [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648) 明确弃用，原因是其会在非标准字段成为标准时造成不便；其他的标头在 [IANA 注册表](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers)中列出，其原始内容在 [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229) 中定义。此外，IANA 还维护着[被提议的新的 HTTP 标头注册表](https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers)。
 
 根据不同的消息上下文，标头可以分为：
 
@@ -56,7 +56,7 @@ slug: Web/HTTP/Headers
 - {{HTTPHeader("Expires")}}
   - : 响应被视为过时的日期/时间。
 - {{HTTPHeader("Pragma")}}
-  - : 特定于实现的标头可能会在请求-响应链（request-response chain）的任何地方产生各种影响。用于向后兼容 `Cache-Control` 标头尚不存在的 HTTP/1.0 缓存。
+  - : 特定于实现的标头可能会在请求—响应链（request-response chain）的任何地方产生各种影响。用于向后兼容 `Cache-Control` 标头尚不存在的 HTTP/1.0 缓存。
 - {{HTTPHeader("Warning")}} {{deprecated_inline}}
   - : 关于可能出现的问题的一般警告信息。
 
@@ -67,11 +67,9 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 服务器使用 {{HTTPHeader("Accept-CH")}} 主动向客户端请求它们感兴趣的客户端提示标头。客户端可以选择在后续的请求中包含请求的标头。
 
 - {{HTTPHeader("Accept-CH")}} {{experimental_inline}}
-  - : 服务器可以使用 `Accept-CH` 标头字段或具有 [`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#attr-http-equiv) 属性的等效 HTML `<meta>` 元素来宣告对客户端提示的支持。
-- {{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}} {{deprecated_inline}}
-  - : 服务器可以要求客户端记住服务器在指定时间段内支持的客户端提示集合，以便在后续请求到服务器源站时能够传送客户端提示。
+  - : 服务器可以使用 `Accept-CH` 标头字段或具有 [`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#http-equiv) 属性的等效 HTML `<meta>` 元素来宣告对客户端提示的支持。
 - {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
-  - : 服务器使用 `Critical-CH` 和 {{HttpHeader("Accept-CH")}} 来指定接受的客户端提示，也是[重要的客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#critical_client_hints)。
+  - : 服务器使用 `Critical-CH` 和 {{HttpHeader("Accept-CH")}} 来指定接受的客户端提示，也是[重要的客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#重要客户端提示)。
 
 下面列出了不同类别的客户端提示。
 
@@ -198,7 +196,7 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 - {{HTTPHeader("Origin")}}
   - : 指示获取资源的请求是从什么源发起的。
 - {{HTTPHeader("Timing-Allow-Origin")}}
-  - : 指定特定的源，以允许其访问 [Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API) 功能提供的属性值，否则由于跨源限制，这些值将被报告为零。
+  - : 指定特定的源，以允许其访问 [Resource Timing API](/zh-CN/docs/Web/API/Performance_API/Resource_timing) 功能提供的属性值，否则由于跨源限制，这些值将被报告为零。
 
 ## 下载
 
@@ -280,7 +278,7 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 - {{HTTPHeader("Content-Security-Policy")}}（{{Glossary("CSP")}}）
   - : 控制允许用户代理能够为给定页面加载哪些资源。
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
-  - : 允许 Web 开发人员通过监控而不是强制执行其效果来试验策略。这些由 {{Glossary("JSON")}} 文档组成的违规报告包含通过 HTTP `POST` 请求发送到指定的 URI 。
+  - : 允许 Web 开发人员通过监控而不是强制执行其效果来试验策略。这些由 {{Glossary("JSON")}} 文档组成的违规报告包含通过 HTTP `POST` 请求发送到指定的 URI。
 - {{HTTPHeader("Expect-CT")}}
   - : 允许网站选择报告和/或执行证书透明度要求，这可以让你注意到该网站使用了欺诈性证书。当站点启用 Expect-CT 标头时，他们将请求 Chrome 检查该站点的任何证书是否出现在公共证书透明度日志中。
 - {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
@@ -313,7 +311,7 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 - {{HTTPHeader("Sec-Fetch-Mode")}}
   - : 它是一个请求标头，向服务器指示请求的模式。它是一个结构化标头（Structured Header），其值是一个标记，可能的值有 `cors`、`navigate`、`no-cors`、`same-origin` 和 `websocket`。
 - {{HTTPHeader("Sec-Fetch-User")}}
-  - : 它是一个请求标头，指示导航请求是否由用户激活触发。它是一个结构化标头（Structured Header），其值为布尔值，因此可能的值为 `?0` 表​​示 false，`?1` 表示true。
+  - : 它是一个请求标头，指示导航请求是否由用户激活触发。它是一个结构化标头（Structured Header），其值为布尔值，因此可能的值为 `?0` 表示 false，`?1` 表示 true。
 - {{HTTPHeader("Sec-Fetch-Dest")}}
   - : 它是一个请求标头，指示请求到服务器的目的地。它是一个结构化标头（Structured Header），其值为具有可能值的标记 `audio`、`audioworklet`、`document`、`embed`、`empty`、`font`、`image`、`manifest`、`object`、`paintworklet`、`report`、`script`、`serviceworker`、`sharedworker`、`style`、`track`、`video`、`worker` 和 `xslt`。
 - {{HTTPHeader("Service-Worker-Navigation-Preload")}}
@@ -379,7 +377,7 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 - {{HTTPHeader("Signed-Headers")}} {{experimental_inline}}
   - : [`Signed-Headers`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.5.1.2) 标头字段标识要包含在签名中的响应标头字段的有序列表。
 - {{HTTPHeader("Server-Timing")}}
-  - : 传达给定请求-响应周期的一个或多个指标和描述。
+  - : 传达给定请求—响应周期的一个或多个指标和描述。
 - {{HTTPHeader("Service-Worker-Allowed")}}
   - : 用于通过[在 Service Worker 脚本的响应中](https://w3c.github.io/ServiceWorker/#service-worker-script-response)包含此标头来删除[路径限制](https://w3c.github.io/ServiceWorker/#path-restriction)。
 - {{HTTPHeader("SourceMap")}}

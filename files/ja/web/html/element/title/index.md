@@ -1,11 +1,13 @@
 ---
-title: '<title>: 文書題名要素'
+title: "<title>: 文書題名要素"
 slug: Web/HTML/Element/title
+l10n:
+  sourceCommit: c6894b701b2297a7523d07855b47605c06f29c91
 ---
 
 {{HTMLSidebar}}
 
-**`<title>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{glossary("Browser", "ブラウザー")}}のタイトルバーやページのタブに表示される文書の題名を定義します。テキストのみを含めることができます。要素内のタグはすべて無視されます。
+**`<title>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{glossary("Browser", "ブラウザー")}}の題名バーやページのタブに表示される文書の題名を定義します。テキストのみを含めることができます。要素内のタグはすべて無視されます。
 
 ```html
 <title>Grandma's Heavy Metal Festival Journal</title>
@@ -15,13 +17,13 @@ slug: Web/HTML/Element/title
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
-          >コンテンツカテゴリ</a
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
         >
       </th>
       <td>
         <a
-          href="/ja/docs/Web/Guide/HTML/Content_categories#メタデータコンテンツ"
+          href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
           >メタデータコンテンツ</a
         >
       </td>
@@ -82,7 +84,7 @@ slug: Web/HTML/Element/title
 
 - 1 ～ 2 語の題名は避けましょう。説明的な文言を使用したり、用語集や参照スタイルのページでは用語と定義の組を使用したりしましょう。
 - 検索エンジンは通常、ページの題名は最初のおよそ 55–60 文字を表示します。それを超えるテキストは失われることがあるので、それよりも長くはしないようにしてください。もっと長い題名を使う必要があるのであれば、重要な部分を前にもってくると、題名の中の重要な部分が落とされにくくなります。
-- 「キーワード BLOB」を使用しないでください。タイトルが単なるキーワードの羅列であると、アルゴリズムはそのページの検索結果内の順位を落とすことがあります。
+- 「キーワード BLOB」を使用しないでください。題名が単なるキーワードの羅列であると、アルゴリズムはそのページの検索結果内の順位を落とすことがあります。
 - 題名はできるだけサイト内で固有のものにするようにしてください。複写や複写に近いものは検索結果を不正確にすることがあります。
 
 ## 例
@@ -95,26 +97,28 @@ slug: Web/HTML/Element/title
 
 ## アクセシビリティの考慮
 
-重要なことは、ページの目的を記述した `title` の値を設定することです。
+正確で簡潔な題名を提供し、ページの目的を記述することが重要です。
 
-支援技術を使用するユーザーのためのナビゲーション技術として、ページの題名を読んで、どのようなコンテンツが含まれるかを知るというものが良く使われます。これはコンテンツを特定するためにページ間を移動すると、時間を消費したり手順を間違える可能性があったりするからです。
+支援技術を使用するユーザーのためのナビゲーション技術として、ページの題名を読んで、どのようなコンテンツが含まれるかを推測するというものが良く使われます。これはコンテンツを特定するためにページ間を移動すると、時間を消費したり手順を間違える可能性があったりするからです。題名はウェブサイトのページごとに固有のものであるべきです。ページの主な目的を最初に示し、その後にウェブサイト名が続くのが理想的です。このパターンに従うことで、ページの主な目的が確実にスクリーンリーダーによって最初に告知されるようになります。こうすることで、ユーザーが同じウェブサイト内で移動するすべてのページで、固有のページ題名よりも先にウェブサイトの名前が読み上げられるのを待たなければならないよりも、はるかに優れた使い勝手になります。
 
 ### 例
 
-```
+```html
 <title>Menu - Blue House Chinese Food - FoodYum: Online takeout today!</title>
 ```
 
-ページの状態が大きく変わったことを示すために (フォーム検証の問題など)、ユーザーを支援するために、ページの `title` の値を更新してください。
+フォームの送信にエラーが含まれていて、送信すると現在のページが再表示された場合、題名を使用してユーザーに送信のエラーを認識させることができます。例えば、ページ `title` の値を更新して、重要なページの状態変化（検証状態の問題など）を反映します。
 
-### 例
+```html
+<title>
+  2 errors - Your order - Sea Food Store - Food: Online takeout today!
+</title>
+```
 
-```
-<title>2 errors - Your order - Blue House Chinese Food - FoodYum: Online takeout today!</title>
-```
+> **メモ:** 現在のところ、ページの題名を動的に更新しても、スクリーンリーダーによって自動的にアナウンスされることはありません。ページの状態の大幅な変更を反映するためにページの題名を更新する場合は、[ARIA ライブリージョン](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)を使用する必要があるかもしれません。
 
 - [MDN WCAG を理解する ― ガイドライン 2.4 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- [Understanding Success Criterion 2.4.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
+- [Understanding Success Criterion 2.4.2 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
 
 ## 仕様書
 
@@ -123,3 +127,7 @@ slug: Web/HTML/Element/title
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- SVG の [`<title>`](/ja/docs/Web/SVG/Element/title) 要素

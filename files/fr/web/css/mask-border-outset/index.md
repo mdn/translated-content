@@ -1,12 +1,6 @@
 ---
 title: mask-border-outset
 slug: Web/CSS/mask-border-outset
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/mask-border-outset
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

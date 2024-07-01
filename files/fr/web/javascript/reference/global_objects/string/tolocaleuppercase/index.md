@@ -1,16 +1,6 @@
 ---
 title: String.prototype.toLocaleUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
-tags:
-  - Internationalisation
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-  - i18n
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/toLocaleUpperCase
 ---
 
 {{JSRef}}
@@ -52,8 +42,8 @@ On notera également que la conversion ne repose pas sur une correspondance un �
 ## Exemples
 
 ```js
-"alphabet".toLocaleUpperCase();       // "ALPHABET"
-'Gesäß'.toLocaleUpperCase();          // 'GESÄSS'
+"alphabet".toLocaleUpperCase(); // "ALPHABET"
+"Gesäß".toLocaleUpperCase(); // 'GESÄSS'
 "i\u0307".toLocaleUpperCase("lt-LT"); // "I"
 ```
 

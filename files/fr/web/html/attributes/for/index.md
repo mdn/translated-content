@@ -1,13 +1,6 @@
 ---
-title: 'Attribut HTML : for'
+title: "Attribut HTML : for"
 slug: Web/HTML/Attributes/for
-tags:
-  - Attribute
-  - Attributes
-  - HTML
-  - for
-  - Reference
-translation_of: Web/HTML/Attributes/for
 ---
 
 {{HTMLSidebar}}
@@ -19,15 +12,14 @@ L'attribut **`for`** est un attribut autorisé pour [`<label>`](/fr/docs/Web/HTM
 Lorsqu'il est utilisé comme attribut de `<label>`, l'attribut `for` a une valeur qui est l'`id` de l'élément de formulaire, auquel il se rapporte.
 
 ```html
-<label for="username">Votre nom</label>
-<input type="text" id="username">
+<label for="username">Votre nom</label> <input type="text" id="username" />
 ```
 
 Lorsqu'il est utilisé comme attribut de `<output>`, l'attribut `for` a une valeur qui est une liste séparée, par des espaces, des valeurs `id` des éléments, qui sont utilisés pour créer l'output.
 
 ```html
-<input type="range" id="b" name="b" value="50"> +
-<input type="number" id="a" name="a" value="10"> =
+<input type="range" id="b" name="b" value="50" /> +
+<input type="number" id="a" name="a" value="10" /> =
 <output name="result" for="a b">60</output>
 ```
 

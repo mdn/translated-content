@@ -1,16 +1,6 @@
 ---
-title: '<canvas> : l''élément de canevas graphique'
+title: "<canvas> : l'élément de canevas graphique"
 slug: Web/HTML/Element/canvas
-tags:
-  - Canvas
-  - Element
-  - HTML
-  - HTML scripting
-  - HTML5
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/canvas
-browser-compat: html.elements.canvas
 ---
 
 {{HTMLSidebar}}
@@ -156,9 +146,9 @@ Le fragment de code suivant ajoute un élément `canvas` au document. Un texte a
 On utilise également ce fragment de code JavaScript avec la méthode [`HTMLCanvasElement.getContext()`](/fr/docs/Web/API/HTMLCanvasElement/getContext) afin d'obtenir le contexte de dessin puis on dessine sur le canevas.
 
 ```js
-var canvas = document.querySelector('canvas');
-var ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
+var canvas = document.querySelector("canvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 ```
 

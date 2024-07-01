@@ -1,7 +1,6 @@
 ---
 title: "MediaRecorder: resume イベント"
 slug: Web/API/MediaRecorder/resume_event
-original_slug: Web/API/MediaRecorder/onresume
 l10n:
   sourceCommit: bbecba9e7d688493adbdc37fc70e02d87adfe371
 ---
@@ -12,7 +11,7 @@ l10n:
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用sるうか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
 addEventListener("resume", (event) => {});
@@ -31,21 +30,21 @@ pause.onclick = () => {
   if (MediaRecorder.state === "recording") {
     mediaRecorder.pause();
     // 記録を一時停止
-  } else if(MediaRecorder.state === "paused") {
+  } else if (MediaRecorder.state === "paused") {
     mediaRecorder.resume();
     // 記録を再開
   }
-}
+};
 
 mediaRecorder.onpause = () => {
   // 記録の一時停止に
   // 応答して何かをする
-}
+};
 
 mediaRecorder.onresume = () => {
   // 記録の再開に
   // 応答して何かをする
-}
+};
 ```
 
 ## インスタンスプロパティ

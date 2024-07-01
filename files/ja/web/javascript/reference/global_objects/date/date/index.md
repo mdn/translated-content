@@ -70,6 +70,7 @@ Date()
 同様に、何か引数がアンダーフローする場合は、上位の引数を「桁借り」します。例えば、`new Date(2020, 5, 0)` は、 2020 年 5 月 31 日を返します。
 
 - `year`
+
   - : 年を表す整数値です。
     `0` から `99` までの値は、 `1900` から `1999` までの値にマッピングされます。他の値は実際の年になります。[例](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#2_桁の年の補完)をご覧ください。
 
@@ -99,12 +100,12 @@ Date()
 以下の例で、JavaScript の Date を生成するいくつかの方法を示します。
 
 ```js
-const today = new Date()
-const birthday = new Date('December 17, 1995 03:24:00') // 非推奨: すべてのランタイムで動作するとは限りません
-const birthday = new Date('1995-12-17T03:24:00')   // ISO-8601 互換であり、動作に信頼性があります
-const birthday = new Date(1995, 11, 17)            // 月は 0 から始まります
-const birthday = new Date(1995, 11, 17, 3, 24, 0)
-const birthday = new Date(628021800000)            // 元期のタイムスタンプを渡す
+const today = new Date();
+const birthday = new Date("December 17, 1995 03:24:00"); // 非推奨: すべてのランタイムで動作するとは限りません
+const birthday = new Date("1995-12-17T03:24:00"); // ISO-8601 互換であり、動作に信頼性があります
+const birthday = new Date(1995, 11, 17); // 月は 0 から始まります
+const birthday = new Date(1995, 11, 17, 3, 24, 0);
+const birthday = new Date(628021800000); // 元期のタイムスタンプを渡す
 ```
 
 ### 日付でも文字列でも数値でもない値を渡す

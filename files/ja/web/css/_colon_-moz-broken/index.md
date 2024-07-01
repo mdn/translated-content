@@ -1,5 +1,5 @@
 ---
-title: ':-moz-broken'
+title: ":-moz-broken"
 slug: Web/CSS/:-moz-broken
 ---
 
@@ -12,7 +12,7 @@ slug: Web/CSS/:-moz-broken
 ## 構文
 
 ```css
-:-moz-broken
+:-moz-broken;
 ```
 
 ## 例
@@ -20,7 +20,7 @@ slug: Web/CSS/:-moz-broken
 ### HTML
 
 ```html
-<img src="broken.jpg" alt="This image is broken. :-(">
+<img src="broken.jpg" alt="This image is broken. :-(" />
 ```
 
 ### CSS
@@ -47,4 +47,4 @@ slug: Web/CSS/:-moz-broken
 ## 関連情報
 
 - {{cssxref(":-moz-loading")}}, {{cssxref(":-moz-suppressed")}}, {{cssxref(":-moz-user-disabled")}}
-- {{bug("11011")}}
+- [Firefox バグ 11011](https://bugzil.la/11011)

@@ -1,7 +1,6 @@
 ---
 title: AnalyserNode.getByteTimeDomainData()
 slug: Web/API/AnalyserNode/getByteTimeDomainData
-translation_of: Web/API/AnalyserNode/getByteTimeDomainData
 ---
 
 {{ APIRef("Mountain View APIRef Project") }}

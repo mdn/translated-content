@@ -39,7 +39,7 @@ gl.polygonOffset(2, 3);
 
 ```js
 gl.getParameter(gl.POLYGON_OFFSET_FACTOR); // 2
-gl.getParameter(gl.POLYGON_OFFSET_UNITS);  // 3
+gl.getParameter(gl.POLYGON_OFFSET_UNITS); // 3
 ```
 
 ## 规范

@@ -1,9 +1,6 @@
 ---
 title: Uint8ClampedArray
 slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
-original_slug: Web/JavaScript/Reference/Objets_globaux/Uint8ClampedArray
-browser-compat: javascript.builtins.Uint8ClampedArray
 ---
 
 {{JSRef}}
@@ -45,7 +42,7 @@ Le tableau typé **`Uint8ClampedArray`** permet de représenter un tableau d'ent
 - [`Uint8ClampedArray.prototype.copyWithin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin)
   - : Copie une suite d'éléments d'un tableau dans le tableau. Voir également [`Array.prototype.copyWithin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin).
 - [`Uint8ClampedArray.prototype.entries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/entries)
-  - : Renvoie un nouvel *itérateur de tableau* qui contient les paires clé/valeur pour chaque indice du tableau. Voir également [`Array.prototype.entries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/entries).
+  - : Renvoie un nouvel _itérateur de tableau_ qui contient les paires clé/valeur pour chaque indice du tableau. Voir également [`Array.prototype.entries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/entries).
 - [`Uint8ClampedArray.prototype.every()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/every)
   - : Teste si l'ensemble des éléments du tableau remplissent une certaine condition donnée par une fonction de test. Voir également [`Array.prototype.every()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/every).
 - [`Uint8ClampedArray.prototype.fill()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/fill)
@@ -65,7 +62,7 @@ Le tableau typé **`Uint8ClampedArray`** permet de représenter un tableau d'ent
 - [`Uint8ClampedArray.prototype.join()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/join)
   - : Fusionne l'ensemble des éléments du tableau en une chaîne de caractères. Voir également [`Array.prototype.join()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/join).
 - [`Uint8ClampedArray.prototype.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/keys)
-  - : Renvoie un nouvel *itérateur de tableau* qui contient les clés de chaque indice du tableau. Voir également [`Array.prototype.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/keys).
+  - : Renvoie un nouvel _itérateur de tableau_ qui contient les clés de chaque indice du tableau. Voir également [`Array.prototype.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/keys).
 - [`Uint8ClampedArray.prototype.lastIndexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf)
   - : Renvoie le dernier indice (le plus élevé) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur `-1` sera renvoyée. Voir également [`Array.prototype.lastIndexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf).
 - [`Uint8ClampedArray.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/map)
@@ -87,13 +84,13 @@ Le tableau typé **`Uint8ClampedArray`** permet de représenter un tableau d'ent
 - [`Uint8ClampedArray.prototype.subarray()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/subarray)
   - : Renvoie un nouvel objet `Uint8ClampedArray` qui est le fragment du tableau courant, entre les indices de début et de fin donnés.
 - [`Uint8ClampedArray.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/values)
-  - : Renvoie un nouvel *itérateur de tableau* qui contient les valeurs correspondantes à chaque indice du tableau. Voir également [`Array.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/values).
+  - : Renvoie un nouvel _itérateur de tableau_ qui contient les valeurs correspondantes à chaque indice du tableau. Voir également [`Array.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/values).
 - [`Uint8ClampedArray.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString)
   - : Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Voir également [`Array.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString).
 - [`Uint8ClampedArray.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString)
   - : Renvoie une chaîne de caractères qui représente le tableau et ses éléments. Voir également [`Array.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString).
 - [`Uint8ClampedArray.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
-  - : Renvoie un nouvel *itérateur de tableau* qui contient les valeurs correspondantes à chaque indice du tableau.
+  - : Renvoie un nouvel _itérateur de tableau_ qui contient les valeurs correspondantes à chaque indice du tableau.
 
 ## Exemples
 
@@ -110,7 +107,7 @@ console.log(uintc8.length); // 2
 console.log(uintc8.BYTES_PER_ELEMENT); // 1
 
 // Construction à partir d'un tableau
-let arr = new Uint8ClampedArray([21,31]);
+let arr = new Uint8ClampedArray([21, 31]);
 console.log(arr[1]); // 31
 
 // Construction à partir d'un autre TypedArray
@@ -123,7 +120,9 @@ let buffer = new ArrayBuffer(8);
 let z = new Uint8ClampedArray(buffer, 1, 4);
 
 // Construction à partir d'un itérable
-let iterable = function*(){ yield* [1,2,3]; }();
+let iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 let uintc8 = new Uint8ClampedArray(iterable);
 // Uint8ClampedArray[1, 2, 3]
 ```

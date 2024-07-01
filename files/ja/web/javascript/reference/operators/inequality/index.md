@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Inequality
 ## 構文
 
 ```js
-x != y
+x != y;
 ```
 
 ## 解説
@@ -20,9 +20,9 @@ x != y
 不等価演算子は、そのオペランドが等しくないことを検査します。これは[等価](/ja/docs/Web/JavaScript/Reference/Operators/Equality)演算子の逆に当たるので、以下の 2 行は常に同じ結果になります。
 
 ```js
-x != y
+x != y;
 
-!(x == y)
+!(x == y);
 ```
 
 比較アルゴリズムの詳細については、[等価](/ja/docs/Web/JavaScript/Reference/Operators/Equality)演算子のページを参照して下さい。
@@ -44,39 +44,39 @@ x != y
 ### 型変換がない場合の比較
 
 ```js
-1 != 2;              // true
-"hello" != "hola";   // true
+1 != 2; // true
+"hello" != "hola"; // true
 
-1 != 1;              // false
-"hello" != "hello";  // false
+1 != 1; // false
+"hello" != "hello"; // false
 ```
 
 ### 型変換がある場合の比較
 
 ```js
-"1" !=  1;            // false
-1 != "1";             // false
-0 != false;           // false
-0 != null;            // true
-0 != undefined;       // true
-0 != !!null;          // false (論理 NOT 演算子を参照)
-0 != !!undefined;     // false (論理 NOT 演算子を参照)
-null != undefined;    // false
+"1" != 1; // false
+1 != "1"; // false
+0 != false; // false
+0 != null; // true
+0 != undefined; // true
+0 != !!null; // false (論理 NOT 演算子を参照)
+0 != !!undefined; // false (論理 NOT 演算子を参照)
+null != undefined; // false
 
 const number1 = new Number(3);
 const number2 = new Number(3);
-number1 != 3;         // false
-number1 != number2;   // true
+number1 != 3; // false
+number1 != number2; // true
 ```
 
 ### オブジェクトの比較
 
 ```js
-const object1 = {"key": "value"}
-const object2 = {"key": "value"};
+const object1 = { key: "value" };
+const object2 = { key: "value" };
 
-object1 != object2 // true
-object2 != object2 // false
+object1 != object2; // true
+object2 != object2; // false
 ```
 
 ## 仕様書

@@ -1,6 +1,8 @@
 ---
 title: backface-visibility
 slug: Web/CSS/backface-visibility
+l10n:
+  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
 {{CSSRef}}
@@ -22,6 +24,7 @@ backface-visibility: hidden;
 backface-visibility: inherit;
 backface-visibility: initial;
 backface-visibility: revert;
+backface-visibility: revert-layer;
 backface-visibility: unset;
 ```
 
@@ -44,11 +47,9 @@ backface-visibility: unset;
 
 ## 例
 
-<h3 id="Cube_with_transparent_and_opaque_faces">透明な面と不透明な面を持った立方体</h3>
+### 透明な面と不透明な面を持った立方体
 
 この例は、透明な面と不透明な面を持つ立方体を表示します。
-
-<h4 id="HTML">HTML</h4>
 
 #### HTML
 
@@ -71,8 +72,8 @@ backface-visibility: unset;
         </div>
       </div>
       <p>
-        すべての面が透明であり、
-        裏面 (2, 4, 5) が 表面 (1, 3, 6) を通して表示されます。
+        すべての面が透明であり、裏面 (2, 4, 5) が表面 (1, 3, 6)
+        を通して表示されます。
       </p>
     </td>
     <td>
@@ -86,9 +87,7 @@ backface-visibility: unset;
           <div class="face bottom">6</div>
         </div>
       </div>
-      <p>
-        背後の3面 (2, 4, 5) は非表示です。
-      </p>
+      <p>背後の3面 (2, 4, 5) は非表示です。</p>
     </td>
   </tr>
 </table>
@@ -168,8 +167,10 @@ backface-visibility: unset;
 }
 
 /* テーブルの見栄えをよくする */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   margin: 0px;
   padding: 6px;
   font-family: sans-serif;
@@ -191,4 +192,4 @@ th, p, td {
 
 ## 関連情報
 
-- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

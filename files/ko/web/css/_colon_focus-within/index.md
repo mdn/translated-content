@@ -1,7 +1,8 @@
 ---
-title: ':focus-within'
+title: ":focus-within"
 slug: Web/CSS/:focus-within
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`:focus-within`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 포커스를 받았거나, 포커스를 받은 요소를 포함하는 요소를 나타냅니다. 즉 스스로 {{CSSxRef(":focus")}} 의사 클래스와 일치하거나, 그 자손 중 하나가 `:focus`와 일치하는 요소를 나타냅니다. ([섀도 트리](/ko/docs/Web/Web_Components/Shadow_DOM) 내부도 포함)
@@ -30,10 +31,10 @@ div:focus-within {
 
 <form>
   <label for="given_name">이름:</label>
-  <input id="given_name" type="text">
-  <br>
+  <input id="given_name" type="text" />
+  <br />
   <label for="family_name">성:</label>
-  <input id="family_name" type="text">
+  <input id="family_name" type="text" />
 </form>
 ```
 

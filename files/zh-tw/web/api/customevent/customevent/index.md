@@ -10,8 +10,8 @@ slug: Web/API/CustomEvent/CustomEvent
 ## 語法
 
 ```javascript
-new CustomEvent(type)
-new CustomEvent(type, options)
+new CustomEvent(type);
+new CustomEvent(type, options);
 ```
 
 ### 參數
@@ -32,18 +32,18 @@ new CustomEvent(type, options)
 
 ```javascript
 // create custom events
-const catFound = new CustomEvent('animalfound', {
+const catFound = new CustomEvent("animalfound", {
   detail: {
-    name: 'cat'
-  }
+    name: "cat",
+  },
 });
-const dogFound = new CustomEvent('animalfound', {
+const dogFound = new CustomEvent("animalfound", {
   detail: {
-    name: 'dog'
-  }
+    name: "dog",
+  },
 });
 // add an appropriate event listener
-obj.addEventListener('animalfound', (e) => console.log(e.detail.name));
+obj.addEventListener("animalfound", (e) => console.log(e.detail.name));
 // dispatch the events
 obj.dispatchEvent(catFound);
 obj.dispatchEvent(dogFound);
@@ -69,12 +69,17 @@ obj.dispatchEvent(dogFound);
 
 ```javascript
 (function () {
-  function CustomEvent ( event, params ) {
+  function CustomEvent(event, params) {
     params = params || { bubbles: false, cancelable: false, detail: undefined };
-    var evt = document.createEvent( 'CustomEvent' );
-    evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+    var evt = document.createEvent("CustomEvent");
+    evt.initCustomEvent(
+      event,
+      params.bubbles,
+      params.cancelable,
+      params.detail,
+    );
     return evt;
-   }
+  }
 
   CustomEvent.prototype = window.Event.prototype;
 

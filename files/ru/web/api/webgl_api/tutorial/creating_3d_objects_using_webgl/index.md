@@ -1,14 +1,9 @@
 ---
 title: Создание 3D объектов с помощью WebGL
 slug: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
-tags:
-  - WebGL
-  - Урок
-translation_of: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
-original_slug: Web/API/WebGL_API/Tutorial/Создание_3D_объектов_с_помощью_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
 
 Давайте поместим наш квадрат в трёхмерное пространство, добавив ещё 5 граней, чтобы получить куб. Чтобы сделать это наиболее продуктивно, вместо рисования вершин непосредственным вызовом метода {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} , мы будем использовать массив вершин в виде таблицы и ссылаться на каждую вершину в этой таблице, чтобы определить положение каждой вершины грани, вызывая {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}}.
 
@@ -21,40 +16,22 @@ original_slug: Web/API/WebGL_API/Tutorial/Создание_3D_объектов_�
 ```js
 var vertices = [
   // Передняя грань
-  -1.0, -1.0,  1.0,
-   1.0, -1.0,  1.0,
-   1.0,  1.0,  1.0,
-  -1.0,  1.0,  1.0,
+  -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0, 1.0,
 
   // Задняя грань
-  -1.0, -1.0, -1.0,
-  -1.0,  1.0, -1.0,
-   1.0,  1.0, -1.0,
-   1.0, -1.0, -1.0,
+  -1.0, -1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, -1.0, -1.0,
 
   // Верхняя грань
-  -1.0,  1.0, -1.0,
-  -1.0,  1.0,  1.0,
-   1.0,  1.0,  1.0,
-   1.0,  1.0, -1.0,
+  -1.0, 1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0,
 
   // Нижняя грань
-  -1.0, -1.0, -1.0,
-   1.0, -1.0, -1.0,
-   1.0, -1.0,  1.0,
-  -1.0, -1.0,  1.0,
+  -1.0, -1.0, -1.0, 1.0, -1.0, -1.0, 1.0, -1.0, 1.0, -1.0, -1.0, 1.0,
 
   // Правая грань
-   1.0, -1.0, -1.0,
-   1.0,  1.0, -1.0,
-   1.0,  1.0,  1.0,
-   1.0, -1.0,  1.0,
+  1.0, -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0,
 
   // Левая грань
-  -1.0, -1.0, -1.0,
-  -1.0, -1.0,  1.0,
-  -1.0,  1.0,  1.0,
-  -1.0,  1.0, -1.0
+  -1.0, -1.0, -1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, -1.0,
 ];
 ```
 
@@ -64,27 +41,31 @@ var vertices = [
 
 ```js
 var colors = [
-  [1.0,  1.0,  1.0,  1.0],    // Front face: white
-  [1.0,  0.0,  0.0,  1.0],    // Back face: red
-  [0.0,  1.0,  0.0,  1.0],    // Top face: green
-  [0.0,  0.0,  1.0,  1.0],    // Bottom face: blue
-  [1.0,  1.0,  0.0,  1.0],    // Right face: yellow
-  [1.0,  0.0,  1.0,  1.0]     // Left face: purple
+  [1.0, 1.0, 1.0, 1.0], // Front face: white
+  [1.0, 0.0, 0.0, 1.0], // Back face: red
+  [0.0, 1.0, 0.0, 1.0], // Top face: green
+  [0.0, 0.0, 1.0, 1.0], // Bottom face: blue
+  [1.0, 1.0, 0.0, 1.0], // Right face: yellow
+  [1.0, 0.0, 1.0, 1.0], // Left face: purple
 ];
 
 var generatedColors = [];
 
-for (j=0; j<6; j++) {
+for (j = 0; j < 6; j++) {
   var c = colors[j];
 
-  for (var i=0; i<4; i++) {
+  for (var i = 0; i < 4; i++) {
     generatedColors = generatedColors.concat(c);
   }
 }
 
 cubeVerticesColorBuffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesColorBuffer);
-gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(generatedColors), gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ARRAY_BUFFER,
+  new Float32Array(generatedColors),
+  gl.STATIC_DRAW,
+);
 ```
 
 ## Определение массива элементов
@@ -100,18 +81,51 @@ gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cubeVerticesIndexBuffer);
 // каждого треугольника.
 
 var cubeVertexIndices = [
-  0,  1,  2,      0,  2,  3,    // front
-  4,  5,  6,      4,  6,  7,    // back
-  8,  9,  10,     8,  10, 11,   // top
-  12, 13, 14,     12, 14, 15,   // bottom
-  16, 17, 18,     16, 18, 19,   // right
-  20, 21, 22,     20, 22, 23    // left
+  0,
+  1,
+  2,
+  0,
+  2,
+  3, // front
+  4,
+  5,
+  6,
+  4,
+  6,
+  7, // back
+  8,
+  9,
+  10,
+  8,
+  10,
+  11, // top
+  12,
+  13,
+  14,
+  12,
+  14,
+  15, // bottom
+  16,
+  17,
+  18,
+  16,
+  18,
+  19, // right
+  20,
+  21,
+  22,
+  20,
+  22,
+  23, // left
 ];
 
 // Теперь отправим массив элементов в GL
 
-gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,
-    new Uint16Array(cubeVertexIndices), gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ELEMENT_ARRAY_BUFFER,
+  new Uint16Array(cubeVertexIndices),
+  gl.STATIC_DRAW,
+);
 ```
 
 Массив `cubeVertexIndices` определяет каждую грань как пару треугольников, сопоставляя каждой вершине треугольника индекс в массиве вершин куба. Таким образом куб можно представить как набор из 12 треугольников.
@@ -130,8 +144,8 @@ gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
 
 В данный момент у нас есть анимированный куб с гранями 6 разных цветов, который прыгает и вращается.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample5/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample5/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample5) | [Open this demo on a new page](http://mdn.github.io/webgl-examples/tutorial/sample5/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample5) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample5/)
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}

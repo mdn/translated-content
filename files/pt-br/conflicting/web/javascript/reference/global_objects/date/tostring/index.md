@@ -1,10 +1,9 @@
 ---
 title: Date.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString
-original_slug: Web/JavaScript/Reference/Global_Objects/Date/toSource
 ---
 
-{{JSRef}} {{obsolete_header}}
+{{JSRef}}
 
 O método **`toSource()`** retorna uma cadeia de caracteres (_string_) representando o código fonte do objeto.
 
@@ -37,7 +36,7 @@ Não faz parte de nenhum padrão.
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.toSource")}}
+{{Compat}}
 
 ## Veja também
 

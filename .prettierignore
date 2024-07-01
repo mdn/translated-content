@@ -1,4 +1,47 @@
-build/
+# This .prettierignore file uses .gitignore syntax
+# see https://prettier.io/docs/en/ignore.html#ignoring-files-prettierignore
 
-# Ignore markdown files till full pass is made on each folder
-*.md
+# Generated content
+build/
+/files/**/_wikihistory.json
+/files/**/_githistory.json
+
+# Conflicting/orphaned files
+/files/**/conflicting/**/*.md
+/files/**/orphaned/**/*.md
+
+# XXX Ignored until https://github.com/prettier/prettier/issues/11828 is fixed
+/files/es/learn/css/howto/css_faq/index.md
+/files/fr/glossary/cross_axis/index.md
+/files/fr/glossary/flex/index.md
+/files/fr/glossary/flex_container/index.md
+/files/fr/glossary/flexbox/index.md
+/files/fr/glossary/grid_axis/index.md
+/files/fr/glossary/grid_lines/index.md
+/files/fr/glossary/main_axis/index.md
+/files/fr/learn/server-side/django/forms/index.md
+/files/fr/web/css/align-self/index.md
+/files/fr/web/css/justify-content/index.md
+/files/fr/web/css/place-items/index.md
+/files/fr/web/css/place-self/index.md
+/files/fr/web/javascript/reference/global_objects/array/includes/index.md
+/files/fr/web/javascript/reference/global_objects/intl/displaynames/of/index.md
+/files/ja/web/api/audiobuffer/audiobuffer/index.md
+/files/ja/web/api/history_api/working_with_the_history_api/index.md
+/files/ja/web/javascript/reference/global_objects/intl/displaynames/of/index.md
+/files/ja/web/javascript/reference/regular_expressions/character_class_escape/index.md
+/files/ja/web/svg/content_type/index.md
+/files/ko/web/css/css_flow_layout/block_and_inline_layout_in_normal_flow/index.md
+/files/pt-br/learn/server-side/django/forms/index.md
+/files/pt-br/web/svg/content_type/index.md
+/files/ru/learn/server-side/django/forms/index.md
+/files/ru/learn/server-side/django/introduction/index.md
+/files/ru/learn/html/introduction_to_html/the_head_metadata_in_html/index.md
+/files/ru/web/css/computed_value/index.md
+/files/ru/web/css/justify-content/index.md
+/files/ru/web/css/margin-top/index.md
+/files/ru/web/html/element/abbr/index.md
+/files/ru/web/javascript/guide/expressions_and_operators/index.md
+/files/zh-cn/learn/server-side/django/forms/index.md
+/files/zh-cn/web/javascript/reference/operators/exponentiation/index.md
+/files/zh-cn/web/javascript/reference/operators/exponentiation_assignment/index.md

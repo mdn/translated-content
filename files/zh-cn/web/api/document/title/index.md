@@ -20,21 +20,19 @@ document.title = newTitle;
 ## 示例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <title>Hello World!</title>
-</head>
-<body>
-
-  <script>
-    alert(document.title); // 显示 "Hello World!"
-    document.title = "Goodbye World!";
-    alert(document.title); // 显示 "Goodbye World!"
-  </script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <script>
+      alert(document.title); // 显示 "Hello World!"
+      document.title = "Goodbye World!";
+      alert(document.title); // 显示 "Goodbye World!"
+    </script>
+  </body>
 </html>
 ```
 

@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/all
 
 ## 語法
 
-```plain
+```js
 Promise.all(iterable);
 ```
 
@@ -42,10 +42,10 @@ Promise.all(iterable);
 var p1 = Promise.resolve(3);
 var p2 = 1337;
 var p3 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 100, 'foo');
+  setTimeout(resolve, 100, "foo");
 });
 
-Promise.all([p1, p2, p3]).then(values => {
+Promise.all([p1, p2, p3]).then((values) => {
   console.log(values); // [3, 1337, "foo"]
 });
 ```
@@ -54,17 +54,17 @@ Promise.all([p1, p2, p3]).then(values => {
 
 ```js
 // this will be counted as if the iterable passed is empty, so it gets fulfilled
-var p = Promise.all([1,2,3]);
+var p = Promise.all([1, 2, 3]);
 // this will be counted as if the iterable passed contains only the resolved promise with value "444", so it gets fulfilled
-var p2 = Promise.all([1,2,3, Promise.resolve(444)]);
+var p2 = Promise.all([1, 2, 3, Promise.resolve(444)]);
 // this will be counted as if the iterable passed contains only the rejected promise with value "555", so it gets rejected
-var p3 = Promise.all([1,2,3, Promise.reject(555)]);
+var p3 = Promise.all([1, 2, 3, Promise.reject(555)]);
 
 // using setTimeout we can execute code after the stack is empty
-setTimeout(function(){
-    console.log(p);
-    console.log(p2);
-    console.log(p3);
+setTimeout(function () {
+  console.log(p);
+  console.log(p2);
+  console.log(p3);
 });
 
 // logs
@@ -87,9 +87,9 @@ var p = Promise.all(resolvedPromisesArray);
 console.log(p);
 
 // using setTimeout we can execute code after the stack is empty
-setTimeout(function(){
-    console.log('the stack is now empty');
-    console.log(p);
+setTimeout(function () {
+  console.log("the stack is now empty");
+  console.log(p);
 });
 
 // logs, in order:
@@ -104,9 +104,9 @@ setTimeout(function(){
 var mixedPromisesArray = [Promise.resolve(33), Promise.reject(44)];
 var p = Promise.all(mixedPromisesArray);
 console.log(p);
-setTimeout(function(){
-    console.log('the stack is now empty');
-    console.log(p);
+setTimeout(function () {
+  console.log("the stack is now empty");
+  console.log(p);
 });
 
 // logs
@@ -121,10 +121,10 @@ setTimeout(function(){
 var p = Promise.all([]); // will be immediately resolved
 var p2 = Promise.all([1337, "hi"]); // non-promise values will be ignored, but the evaluation will be done asynchronously
 console.log(p);
-console.log(p2)
-setTimeout(function(){
-    console.log('the stack is now empty');
-    console.log(p2);
+console.log(p2);
+setTimeout(function () {
+  console.log("the stack is now empty");
+  console.log(p2);
 });
 
 // logs
@@ -140,36 +140,41 @@ setTimeout(function(){
 
 ```js
 var p1 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 1000, 'one');
+  setTimeout(resolve, 1000, "one");
 });
 var p2 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 2000, 'two');
+  setTimeout(resolve, 2000, "two");
 });
 var p3 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 3000, 'three');
+  setTimeout(resolve, 3000, "three");
 });
 var p4 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 4000, 'four');
+  setTimeout(resolve, 4000, "four");
 });
 var p5 = new Promise((resolve, reject) => {
-  reject('reject');
+  reject("reject");
 });
 
-Promise.all([p1, p2, p3, p4, p5]).then(values => {
-  console.log(values);
-}, reason => {
-  console.log(reason)
-});
+Promise.all([p1, p2, p3, p4, p5]).then(
+  (values) => {
+    console.log(values);
+  },
+  (reason) => {
+    console.log(reason);
+  },
+);
 
 //From console:
 //"reject"
 
 //You can also use .catch
-Promise.all([p1, p2, p3, p4, p5]).then(values => {
-  console.log(values);
-}).catch(reason => {
-  console.log(reason)
-});
+Promise.all([p1, p2, p3, p4, p5])
+  .then((values) => {
+    console.log(values);
+  })
+  .catch((reason) => {
+    console.log(reason);
+  });
 
 //From console:
 //"reject"

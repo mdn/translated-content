@@ -37,7 +37,7 @@ mvPopMatrix();
 실제로 애니메이션 효과가 나타나도록 하려면 `squareRotation` 값을 시간이 지남에 따라 계속 변경해주는 코드를 추가해야 합니다. `lastSquareUpdateTime`이라는 변수에 마지막으로 다시 그렸던 시각을 저장하고, 다음과 같은 코드를 `drawScene()`에 추가합니다:
 
 ```js
-var currentTime = (new Date).getTime();
+var currentTime = new Date().getTime();
 if (lastSquareUpdateTime) {
   var delta = currentTime - lastSquareUpdateTime;
 
@@ -111,7 +111,7 @@ function mvPushMatrix(m) {
 
 function mvPopMatrix() {
   if (!mvMatrixStack.length) {
-    throw("Can't pop from an empty matrix stack.");
+    throw "Can't pop from an empty matrix stack.";
   }
 
   mvMatrix = mvMatrixStack.pop();
@@ -119,7 +119,7 @@ function mvPopMatrix() {
 }
 
 function mvRotate(angle, v) {
-  var inRadians = angle * Math.PI / 180.0;
+  var inRadians = (angle * Math.PI) / 180.0;
 
   var m = Matrix.Rotation(inRadians, $V([v[0], v[1], v[2]])).ensure4x4();
   multMatrix(m);

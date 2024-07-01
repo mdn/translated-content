@@ -1,9 +1,8 @@
 ---
 title: Firefox 3.5 для разработчика
 slug: Mozilla/Firefox/Releases/3.5
-translation_of: Mozilla/Firefox/Releases/3.5
-original_slug: Firefox_3.5_для_разработчика
 ---
+
 {{FirefoxSidebar}}
 
 [Firefox 3.5](http://www.firefox.com/) вводит ряд новых возможностей, а также дополнительную и улучшенную поддержку для самых различных веб-стандартов. Данная статья представляет собой исчерпывающий перечень нововведений со ссылками на статьи, освещающие основные усовершенствования.
@@ -30,11 +29,11 @@ original_slug: Firefox_3.5_для_разработчика
 - {{ cssxref(":before") }} and {{ cssxref(":after") }} updated to CSS 2.1
   - : The `:before` and `:after` pseudo-elements have been updated to full CSS 2.1 support, adding support for the `position`, `float`, `list-style-*`, and some `display` properties.
 - `ch` units for length
-  - : The` ch `unit can now be used anywhere that accepts a [unit of length](/en/CSS/length#Units).` 1ch `is the width of the "0" (zero) character.
+  - : The `ch` unit can now be used anywhere that accepts a [unit of length](/en/CSS/length#Units). `1ch` is the width of the "0" (zero) character.
 - {{ cssxref("opacity") }}
-  - : The` -moz-opacity `Mozilla extension to CSS has been removed in favor of the standard` opacity `property.
+  - : The `-moz-opacity` Mozilla extension to CSS has been removed in favor of the standard `opacity`property.
 - {{ cssxref("text-shadow") }}
-  - : The` text-shadow `property, which allows web content to specify shadow effects to apply to text and text decorations, is now supported.
+  - : The `text-shadow` property, which allows web content to specify shadow effects to apply to text and text decorations, is now supported.
 - {{ cssxref("word-wrap") }}
   - : This newly-supported property lets content specify whether or not lines may be broken within words in order to prevent overflow when an otherwise unbreakable string is too long to fit on one line.
 - `white-space` property supports the `pre-line` value

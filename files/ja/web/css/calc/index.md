@@ -1,7 +1,6 @@
 ---
 title: calc()
 slug: Web/CSS/calc
-original_slug: Web/CSS/calc()
 ---
 
 {{CSSRef}}
@@ -17,7 +16,7 @@ original_slug: Web/CSS/calc()
 width: calc(100% - 80px);
 ```
 
-`calc()` 関数は1つの式を引数として取り、式の結果が値として使用されます。式は以下の演算子を組み合わせたもので、標準的な[演算子の優先順位の規則](/ja/docs/Learn/JavaScript/First_steps/Math#operator_precedence")を使用します。
+`calc()` 関数は1つの式を引数として取り、式の結果が値として使用されます。式は以下の演算子を組み合わせたもので、標準的な[演算子の優先順位の規則](/ja/docs/Learn/JavaScript/First_steps/Math#演算子の優先順位)を使用します。
 
 - `+`
   - : 加算です。
@@ -54,7 +53,7 @@ h1 {
 
 これによって、ページが拡大縮小されたときにテキストの大きさが変化します。
 
-- [MDN WCAG のを理解する 1.4 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN WCAG のを理解する 1.4 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## 整数での使用
@@ -122,8 +121,8 @@ input {
 ```html
 <form>
   <div id="formbox">
-  <label>何か入力:</label>
-  <input type="text">
+    <label>何か入力:</label>
+    <input type="text" />
   </div>
 </form>
 ```

@@ -12,11 +12,11 @@ slug: Web/JavaScript/Reference/Operators/yield
 ## 構文
 
 ```js
-[rv] = yield [expression]
+[rv] = yield[expression];
 ```
 
 - `expression` {{optional_inline}}
-  - : [反復子プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復子_iterator_プロトコル)経由でジェネレーター関数が返す値を定義します。省略した場合、代わりに `undefined` が返されます。
+  - : [イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)経由でジェネレーター関数が返す値を定義します。省略した場合、代わりに `undefined` が返されます。
 - `rv` {{optional_inline}}
   - : ジェネレーターの実行を再開する `next()` メソッドに渡したオプションの値を受け取ります。
 
@@ -48,45 +48,45 @@ slug: Web/JavaScript/Reference/Operators/yield
 次のコードはジェネレーター関数の定義例です。
 
 ```js
-function* countAppleSales () {
-  let saleList = [3, 7, 5]
+function* countAppleSales() {
+  let saleList = [3, 7, 5];
   for (let i = 0; i < saleList.length; i++) {
-    yield saleList[i]
+    yield saleList[i];
   }
 }
 ```
 
-ジェネレーター関数が定義されると、ご覧のように反復子を構築するために使用されます。
+ジェネレーター関数が定義されると、ご覧のようにイテレーターを構築するために使用されます。
 
 ```js
-let appleStore = countAppleSales()  // Generator { }
-console.log(appleStore.next())      // { value: 3, done: false }
-console.log(appleStore.next())      // { value: 7, done: false }
-console.log(appleStore.next())      // { value: 5, done: false }
-console.log(appleStore.next())      // { value: undefined, done: true }
+let appleStore = countAppleSales(); // Generator { }
+console.log(appleStore.next()); // { value: 3, done: false }
+console.log(appleStore.next()); // { value: 7, done: false }
+console.log(appleStore.next()); // { value: 5, done: false }
+console.log(appleStore.next()); // { value: undefined, done: true }
 ```
 
 next(value) でジェネレーターに値を送ることができます。 'step' はこの \[_rv_] = **yield** \[_expression_] の構文では返値として評価されます。
 
 ```js
 function* counter(value) {
- let step;
+  let step;
 
- while (true) {
-   step = yield ++value;
+  while (true) {
+    step = yield ++value;
 
-   if (step) {
-     value += step;
-   }
- }
+    if (step) {
+      value += step;
+    }
+  }
 }
 
 const generatorFunc = counter(0);
-console.log(generatorFunc.next().value);   // 1
-console.log(generatorFunc.next().value);   // 2
-console.log(generatorFunc.next().value);   // 3
+console.log(generatorFunc.next().value); // 1
+console.log(generatorFunc.next().value); // 2
+console.log(generatorFunc.next().value); // 3
 console.log(generatorFunc.next(10).value); // 14
-console.log(generatorFunc.next().value);   // 15
+console.log(generatorFunc.next().value); // 15
 console.log(generatorFunc.next(10).value); // 26
 ```
 

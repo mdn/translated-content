@@ -1,8 +1,9 @@
 ---
-title: MouseEvent.altKey
+title: "MouseEvent: altKey プロパティ"
+short-title: altKey
 slug: Web/API/MouseEvent/altKey
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("UI Events")}}
@@ -25,15 +26,17 @@ l10n:
 ### HTML
 
 ```html
-<p><code>altKey</code> プロパティを試験するためにどこかをクリックしてください。</p>
+<p>
+  <code>altKey</code> プロパティを試験するためにどこかをクリックしてください。
+</p>
 <p id="log"></p>
 ```
 
 ### JavaScript
 
 ```js
-let log = document.querySelector('#log');
-document.addEventListener('click', logKey);
+let log = document.querySelector("#log");
+document.addEventListener("click", logKey);
 
 function logKey(e) {
   log.textContent = `Alt キーの押下状態: ${e.altKey}`;

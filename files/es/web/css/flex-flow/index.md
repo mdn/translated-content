@@ -59,9 +59,9 @@ element {
 
 {{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.flex-flow")}}
+{{Compat}}
 
 ## Ver también
 

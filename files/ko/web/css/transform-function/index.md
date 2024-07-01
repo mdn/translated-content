@@ -2,6 +2,7 @@
 title: <transform-function>
 slug: Web/CSS/transform-function
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`<transform-function>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 요소의 외형에 영향을 주는 변형을 나타냅니다. 변형 함수는 2D 또는 3D 공간 내에서 요소를 회전하고, 크기를 바꾸고, 왜곡하고, 이동할 수 있습니다. {{cssxref("transform")}} 속성에서 사용합니다.
@@ -44,62 +45,62 @@ The `<transform-function>` data type is specified using one of the transformatio
 
 ### 행렬 변형
 
-- [`matrix()`](/en-US/docs/Web/CSS/transform-function/matrix)
+- [`matrix()`](/ko/docs/Web/CSS/transform-function/matrix)
   - : Describes a homogeneous 2D transformation matrix.
-- [`matrix3d()`](/en-US/docs/Web/CSS/transform-function/matrix3d)
+- [`matrix3d()`](/ko/docs/Web/CSS/transform-function/matrix3d)
   - : Describes a 3D transformation as a 4×4 homogeneous matrix.
 
 ### 원근
 
-- [`perspective()`](/en-US/docs/Web/CSS/transform-function/perspective)
+- [`perspective()`](/ko/docs/Web/CSS/transform-function/perspective)
   - : Sets the distance between the user and the z=0 plane.
 
 ### 회전
 
-- [`rotate()`](/en-US/docs/Web/CSS/transform-function/rotate)
+- [`rotate()`](/ko/docs/Web/CSS/transform-function/rotate)
   - : Rotates an element around a fixed point on the 2D plane.
-- [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d)
+- [`rotate3d()`](/ko/docs/Web/CSS/transform-function/rotate3d)
   - : Rotates an element around a fixed axis in 3D space.
-- [`rotateX()`](/en-US/docs/Web/CSS/transform-function/rotateX)
+- [`rotateX()`](/ko/docs/Web/CSS/transform-function/rotateX)
   - : Rotates an element around the horizontal axis.
-- [`rotateY()`](/en-US/docs/Web/CSS/transform-function/rotateY)
+- [`rotateY()`](/ko/docs/Web/CSS/transform-function/rotateY)
   - : Rotates an element around the vertical axis.
-- [`rotateZ()`](/en-US/docs/Web/CSS/transform-function/rotateZ)
+- [`rotateZ()`](/ko/docs/Web/CSS/transform-function/rotateZ)
   - : Rotates an element around the z-axis.
 
 ### 크기 조절
 
-- [`scale()`](/en-US/docs/Web/CSS/transform-function/scale)
+- [`scale()`](/ko/docs/Web/CSS/transform-function/scale)
   - : Scales an element up or down on the 2D plane.
-- [`scale3d()`](/en-US/docs/Web/CSS/transform-function/scale3d)
+- [`scale3d()`](/ko/docs/Web/CSS/transform-function/scale3d)
   - : Scales an element up or down in 3D space.
-- [`scaleX()`](/en-US/docs/Web/CSS/transform-function/scaleX)
+- [`scaleX()`](/ko/docs/Web/CSS/transform-function/scaleX)
   - : Scales an element up or down horizontally.
-- [`scaleY()`](/en-US/docs/Web/CSS/transform-function/scaleY)
+- [`scaleY()`](/ko/docs/Web/CSS/transform-function/scaleY)
   - : Scales an element up or down vertically.
-- [`scaleZ()`](/en-US/docs/Web/CSS/transform-function/scaleZ)
+- [`scaleZ()`](/ko/docs/Web/CSS/transform-function/scaleZ)
   - : Scales an element up or down along the z-axis.
 
 ### 기울이기 (왜곡)
 
-- [`skew()`](/en-US/docs/Web/CSS/transform-function/skew)
+- [`skew()`](/ko/docs/Web/CSS/transform-function/skew)
   - : Skews an element on the 2D plane.
-- [`skewX()`](/en-US/docs/Web/CSS/transform-function/skewX)
+- [`skewX()`](/ko/docs/Web/CSS/transform-function/skewX)
   - : Skews an element in the horizontal direction.
-- [`skewY()`](/en-US/docs/Web/CSS/transform-function/skewY)
+- [`skewY()`](/ko/docs/Web/CSS/transform-function/skewY)
   - : Skews an element in the vertical direction.
 
 ### 이동
 
-- [`translate()`](/en-US/docs/Web/CSS/transform-function/translate)
+- [`translate()`](/ko/docs/Web/CSS/transform-function/translate)
   - : Translates an element on the 2D plane.
-- [`translate3d()`](/en-US/docs/Web/CSS/transform-function/translate3d)
+- [`translate3d()`](/ko/docs/Web/CSS/transform-function/translate3d)
   - : Translates an element in 3D space.
-- [`translateX()`](/en-US/docs/Web/CSS/transform-function/translateX)
+- [`translateX()`](/ko/docs/Web/CSS/transform-function/translateX)
   - : Translates an element horizontally.
-- [`translateY()`](/en-US/docs/Web/CSS/transform-function/translateY)
+- [`translateY()`](/ko/docs/Web/CSS/transform-function/translateY)
   - : Translates an element vertically.
-- [`translateZ()`](/en-US/docs/Web/CSS/transform-function/translateZ)
+- [`translateZ()`](/ko/docs/Web/CSS/transform-function/translateZ)
   - : Translates an element along the z-axis.
 
 ## 명세

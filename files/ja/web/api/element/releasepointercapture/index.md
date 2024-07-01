@@ -1,8 +1,9 @@
 ---
-title: Element.releasePointerCapture()
+title: "Element: releasePointerCapture() メソッド"
+short-title: releasePointerCapture()
 slug: Web/API/Element/releasePointerCapture
 l10n:
-  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}
@@ -28,8 +29,8 @@ releasePointerCapture(pointerId)
 
 ### 例外
 
-| 例外               | 説明                                                   |
-| ------------------ | ------------------------------------------------------ |
+| 例外               | 説明                                                       |
+| ------------------ | ---------------------------------------------------------- |
 | `InvalidPointerId` | pointerId がどのアクティブなポインターとも一致しない場合。 |
 
 ## 例
@@ -72,7 +73,7 @@ function slide(e) {
   slider.style.transform = `translate(${e.clientX - 70}px)`;
 }
 
-const slider = document.getElementById('slider');
+const slider = document.getElementById("slider");
 
 slider.onpointerdown = beginSliding;
 slider.onpointerup = stopSliding;

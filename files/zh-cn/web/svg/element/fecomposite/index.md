@@ -46,7 +46,7 @@ result = k1*i1*i2 + k2*i1 + k3*i2 + k4
 
 ## DOM 接口
 
-该元素实现了[`SVGFECompositeElement`](/zh-CN/DOM/SVGFECompositeElement)接口。
+该元素实现了 [`SVGFECompositeElement`](/zh-CN/DOM/SVGFECompositeElement) 接口。
 
 ## 参见
 

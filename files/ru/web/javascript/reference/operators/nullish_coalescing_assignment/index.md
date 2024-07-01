@@ -1,27 +1,18 @@
 ---
 title: Логическое нулевое присваивание (??=)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
-original_slug: Web/JavaScript/Reference/Operators/Logical_nullish_assignment
-browser-compat: javascript.operators.logical_nullish_assignment
 ---
 
 {{jsSidebar("Operators")}}
 
 Оператор логического нулевого присваивания (`x ??= y`) присваивает значение переменной `x`, если она содержит {{Glossary("nullish", "похожее на null значение")}} (`null` или `undefined`).
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-nullish-assignment.html")}}
+{{EmbedInteractiveExample("pages/js/expressions-nullish-coalescing-assignment.html")}}
 
 ## Синтаксис
 
-```js
-expr1 ??= expr2
+```js-nolint
+x ??= y
 ```
 
 ## Описание
@@ -65,13 +56,13 @@ config({}); // { duration: 100, speed: 25 }
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Оператор нулевого слияния (`??`)](/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Оператор нулевого слияния (`??`)](/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - {{Glossary("Nullish", "Похожее на null значение")}}
 - {{Glossary("Truthy", "Истиноподобное значение")}}
 - {{Glossary("Falsy", "Ложноподобное значение")}}

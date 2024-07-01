@@ -21,10 +21,10 @@ A propriedade **`event.target`** pode ser usada para implementar a delegação d
 // Assumindo que existe uma variável 'list' contendo uma instância de um elemento ul de HTML.
 function hide(e) {
   // A menos que os itens da lista sejam separados por uma margem, e.target deve ser diferente de e.currentTarget
-  e.target.style.visibility = 'hidden';
+  e.target.style.visibility = "hidden";
 }
 
-list.addEventListener('click', hide, false);
+list.addEventListener("click", hide, false);
 
 // Se algum elemento (elemento <li> ou um link dentro de um elemento <li> por exemplo) for clicado, ele desaparecerá.
 // Só requer um único listener para fazer isso.
@@ -32,15 +32,11 @@ list.addEventListener('click', hide, false);
 
 ## Especificações
 
-| Specification                                                                            | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("DOM WHATWG", "#dom-event-target", "Event.target")}}     | {{Spec2("DOM WHATWG")}} |                    |
-| {{SpecName("DOM4", "#dom-event-target", "Event.target")}}             | {{Spec2("DOM4")}}         |                    |
-| {{SpecName("DOM2 Events", "#Events-Event-target", "Event.target")}} | {{Spec2("DOM2 Events")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Event.target")}}
+{{Compat}}
 
 ## Veja também
 

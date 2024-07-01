@@ -16,7 +16,7 @@ Subclasses de construtores podem sobrescrever isso para mudar o construtor atrib
 
 ### Species em objetos ordinários
 
-A propriedade *species* retorna a função padrão do construtor, que é o construtor `Map` para objetos `Map`.
+A propriedade _species_ retorna a função padrão do construtor, que é o construtor `Map` para objetos `Map`.
 
 ```js
 Map[Symbol.species]; // function Map()
@@ -30,7 +30,9 @@ Porém, você deve querer sobrescrever isso, para retornar o objeto `Map` pai no
 ```js
 class MyMap extends Map {
   // Overwrite MyMap species to the parent Map constructor
-  static get [Symbol.species]() { return Map; }
+  static get [Symbol.species]() {
+    return Map;
+  }
 }
 ```
 

@@ -1,15 +1,6 @@
 ---
-title: 'HTMLDialogElement: close event'
+title: "HTMLDialogElement: close event"
 slug: Web/API/HTMLDialogElement/close_event
-tags:
-  - API
-  - DOM HTML
-  - Evènement
-  - HTMLDialogElement
-  - Reference
-  - close
-  - fermeture
-translation_of: Web/API/HTMLDialogElement/close_event
 ---
 
 {{ APIRef() }}
@@ -56,35 +47,36 @@ L'événement **`close`** est déclenché sur un objet {{domxref ("HTMLDialogEle
 ```
 
 ```css hidden
-button, div {
-  margin: .5rem;
+button,
+div {
+  margin: 0.5rem;
 }
 ```
 
 #### JS
 
 ```js
-const result = document.querySelector('.result')
+const result = document.querySelector(".result");
 
-const dialog = document.querySelector('.example-dialog')
-dialog.addEventListener('close', (event) => {
-  result.textContent = 'dialog was closed'
-})
+const dialog = document.querySelector(".example-dialog");
+dialog.addEventListener("close", (event) => {
+  result.textContent = "dialog was closed";
+});
 
-const openDialog = document.querySelector('.open-dialog')
-openDialog.addEventListener('click', () => {
-  if (typeof dialog.showModal === 'function') {
-    dialog.showModal()
-    result.textContent = ''
+const openDialog = document.querySelector(".open-dialog");
+openDialog.addEventListener("click", () => {
+  if (typeof dialog.showModal === "function") {
+    dialog.showModal();
+    result.textContent = "";
   } else {
-    result.textContent = 'The dialog API is not supported by this browser'
+    result.textContent = "The dialog API is not supported by this browser";
   }
-})
+});
 
-const closeButton = document.querySelector('.close')
-closeButton.addEventListener('click', () => {
-  dialog.close()
-})
+const closeButton = document.querySelector(".close");
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
 ```
 
 #### Résultat

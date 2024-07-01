@@ -1,13 +1,6 @@
 ---
 title: PasswordCredential.iconURL
 slug: Web/API/PasswordCredential/iconURL
-tags:
-  - API
-  - Credential Management API
-  - PasswordCredential
-  - Propriété
-  - Reference
-translation_of: Web/API/PasswordCredential/iconURL
 ---
 
 {{SeeCompatTable}}{{APIRef("")}}
@@ -17,7 +10,7 @@ La propriété **`iconURL`**, rattachée à l'interface {{domxref("PasswordCrede
 ## Syntaxe
 
 ```js
-url = passwordCredential.iconURL
+url = passwordCredential.iconURL;
 ```
 
 ### Valeur

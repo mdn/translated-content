@@ -19,10 +19,8 @@ Um número de ponto flutuante.
 
 ## Especificações
 
-| Especificação                                                                                    | Status                               | Comentário         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('Device Memory','#sec-device-memory-js-api','deviceMemory')}} | {{Spec2('Device Memory')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Navigator.deviceMemory")}}
+{{Compat}}

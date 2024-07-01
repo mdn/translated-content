@@ -66,7 +66,7 @@ _부모인 {{domxref("AudioNode")}}로부터 메서드를 상속받습니다_.
 다음의 예제는 `AnalyserNode`를 생성하기 위한 {{domxref("AudioContext")}}와 그리고 나서 반복적으로 시간 영역의 데이터를 수집하고 현재 오디오 입력의 "오실로스코프 스타일의" 출력을 그리기 위한 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}}과 {{htmlelement("canvas")}}의 기본 사용을 보여줍니다. 더 완벽한 응용 예제/정보를 보려면 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 데모를 확인하세요 (관련된 코드를 보려면 [app.js 라인 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)를 참고하세요).
 
 ```js
-var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // ...
 
@@ -87,7 +87,6 @@ var canvasCtx = canvas.getContext("2d");
 // 현재 오디오 소스의 오실로스코프를 그립니다
 
 function draw() {
-
   requestAnimationFrame(draw);
 
   analyser.getByteTimeDomainData(dataArray);
@@ -100,13 +99,12 @@ function draw() {
 
   canvasCtx.beginPath();
 
-  var sliceWidth = canvas.width * 1.0 / bufferLength;
+  var sliceWidth = (canvas.width * 1.0) / bufferLength;
   var x = 0;
 
   for (var i = 0; i < bufferLength; i++) {
-
     var v = dataArray[i] / 128.0;
-    var y = v * canvas.height / 2;
+    var y = (v * canvas.height) / 2;
 
     if (i === 0) {
       canvasCtx.moveTo(x, y);

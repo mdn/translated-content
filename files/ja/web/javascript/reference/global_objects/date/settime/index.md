@@ -35,7 +35,7 @@ setTime(timeValue)
 ### setTime() の使用
 
 ```js
-const theBigDay = new Date('July 1, 1999');
+const theBigDay = new Date("July 1, 1999");
 const sameAsBigDay = new Date();
 sameAsBigDay.setTime(theBigDay.getTime());
 ```

@@ -1,7 +1,6 @@
 ---
 title: draggable
 slug: Web/HTML/Global_attributes/draggable
-original_slug: Web/HTML/Atributos_Globales/draggable
 ---
 
 {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
@@ -25,6 +24,6 @@ Por default , unicamente el texto , las imagenes y los vínculos pueden ser arra
 
 {{Compat}}
 
-**Ver también**
+## Ver también
 
 - [atributos globales](/es/docs/Web/HTML/Atributos_Globales)

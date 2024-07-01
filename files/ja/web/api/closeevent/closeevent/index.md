@@ -1,32 +1,38 @@
 ---
-title: CloseEvent()
+title: "CloseEvent: CloseEvent() コンストラクター"
 slug: Web/API/CloseEvent/CloseEvent
+l10n:
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{APIRef("Websockets API")}}
 
-**`CloseEvent()`** コンストラクターは新しい {{domxref("CloseEvent")}} オブジェクトを作成します。
+**`CloseEvent()`** コンストラクターは新しい {{domxref("CloseEvent")}} オブジェクトを生成します。
 
 ## 構文
 
-```js
-new CloseEvent(typeArg);
-new CloseEvent(typeArg, closeEventInit);
+```js-nolint
+new CloseEvent(type)
+new CloseEvent(type, options)
 ```
 
 ### 値
 
-- `typeArg`
-  - : {{domxref("DOMString")}} で、このイベントの名前を表します。
-- `closeEventInit` {{optional_inline}}
+- `type`
+  - : このイベントの名前を示す文字列です。
+    大文字小文字を区別し、ブラウザーは常に `close` を設定します。
+- `options` {{optional_inline}}
+  - : オブジェクトで、_{{domxref("Event/Event", "Event()")}} で定義されているものに加え_、次のプロパティを持ちます。
+    - `wasClean` {{optional_inline}}
+      - : 論理値で、接続がきれいに閉じたかどうかを示します。既定値は `false` です。
+    - `code` {{optional_inline}}
+      - : 整数で、サーバーから送られる接続クローズコードを表します。既定値は `0` です。
+    - `reason` {{optional_inline}}
+      - : 文字列で、サーバーが接続を閉じる理由を人間が理解できる形で表したものです。既定値は `''` です。
 
-  - : `CloseEventInit` 辞書で、以下のフィールドがあります。
+## 返値
 
-    - `"wasClean"`: オプションで既定値は `false` です。論理型であり、接続がきれいに閉じたかどうかを示します。
-    - `"code"`: オプションで既定値は `0` です。 `unsigned short` 型で、サーバーから送られる接続クローズコードです。
-    - `"reason"`: オプションで既定値は `''` です。 {{domxref("DOMString")}} 型で、サーバーが接続を閉じる理由を人間が理解できる形で表したものです。
-
-    > **メモ:** `CloseEventInit` 辞書は {{domxref("Event.Event", "EventInit")}} 辞書のフィールドも受け入れます。
+新しい {{domxref("CloseEvent")}} オブジェクトです。
 
 ## 仕様書
 

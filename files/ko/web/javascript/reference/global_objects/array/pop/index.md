@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 ## 구문
 
 ```js
-    arr.pop()
+arr.pop();
 ```
 
 ### 반환 값
@@ -34,13 +34,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 다음 코드는 요소 넷을 포함하는 `myFish` 배열을 생성하고 그 마지막 요소를 제거합니다.
 
 ```js
-    var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+var myFish = ["angel", "clown", "mandarin", "sturgeon"];
 
-    var popped = myFish.pop();
+var popped = myFish.pop();
 
-    console.log(myFish); // ['angel', 'clown', 'mandarin' ]
+console.log(myFish); // ['angel', 'clown', 'mandarin' ]
 
-    console.log(popped); // 'sturgeon'
+console.log(popped); // 'sturgeon'
 ```
 
 ## 명세

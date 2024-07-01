@@ -2,6 +2,7 @@
 title: 텍스트 스타일링
 slug: Learn/CSS/Styling_text
 ---
+
 {{LearnSidebar}}
 
 CSS 기초가 어느 정도 완성되었다면, 여러분이 집중해야 할 다음 CSS 주제는 CSS로 가장 흔하게 할 것 중 하나인 텍스트를 꾸며주는 것입니다. 우리는 글꼴 과 볼드체, 이탤릭체, 줄 띄어쓰기, 단어 띄어쓰기, 그림자 넣기 등과 같은 텍스트 기능을 설정하는 것을 포함한 텍스트 스타일링의 기초를 배웁니다. 여러분의 페이지에 사용자 정의 글꼴을 설정하고 리스트와 링크를 꾸며줌으로써 이 강의를 끝마칩니다.
@@ -10,7 +11,7 @@ CSS 기초가 어느 정도 완성되었다면, 여러분이 집중해야 할 �
 
 이 강의를 시작하기 전에, [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML) 에서 설명한대로 이미 HTML 에 대해 잘 알고 있어야하며, [CSS 소개](/ko/docs/Learn/CSS/Introduction_to_CSS) 에서 설명한대로 CSS 기본 사항에 익숙해야합니다.
 
-> **참고:** 자신의 파일을 만들 수 없는 컴퓨터/태블릿/기타 장치에서 작업하는 경우, [JSBin](http://jsbin.com/), [CodePen](https://codepen.io/) 또는 [Thimble](https://thimble.mozilla.org/) 와 같은 온라인 코딩 프로그램에서 대부분의 코드 예제를 시험해 볼 수 있습니다.
+> **참고:** 자신의 파일을 만들 수 없는 컴퓨터/태블릿/기타 장치에서 작업하는 경우, [JSBin](https://jsbin.com/) 또는 [Glitch](https://glitch.com/) 와 같은 온라인 코딩 프로그램에서 대부분의 코드 예제를 시험해 볼 수 있습니다.
 
 ## 안내
 

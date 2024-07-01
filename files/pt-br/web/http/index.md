@@ -21,7 +21,7 @@ Aprenda como usar HTTP com guias e tutoriais.
   - : **As requisições CORS** são requisições HTTP de recursos de domínios diferentes do domínio que está fazendo a requisição. um exemplo é um site A (SiteA.com) realizando uma requisição de uma imagem por meio de um elemento _img_ para um site B (SiteB.com/img.png). Hoje em dia encontramos o CORS em grande maioria das páginas webs, carregando scripts, imagens, folhas de estilos, etc.
 - [Dicas de cliente HTTP](/pt-BR/docs/Web/HTTP/Client_hints)
   - : **Dicas do cliente** são um conjunto de cabeçalhos de resposta que um servidor pode usar para solicitar proativamente informações de um cliente sobre o dispositivo, a rede, o usuário e as preferências específicas do agente do usuário.
-     O servidor pode então determinar quais recursos enviar, com base nas informações que o cliente escolher fornecer.
+    O servidor pode então determinar quais recursos enviar, com base nas informações que o cliente escolher fornecer.
 - [Evolução do HTTP](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
   - : Uma breve descrição das mudanças que ocorreram no HTTP em versões mais antigas para o moderno HTTP/2 em diante.
 - [Diretrizes de segurança da Web da Mozilla](https://infosec.mozilla.org/guidelines/web_security)

@@ -29,7 +29,7 @@ Lors de la mise en place d'un <i lang="en">service worker</i>, on a généraleme
 2. L'installation se déroule alors. Un évènement `install` est toujours le premier évènement envoyé à un <i lang="en">service worker</i> (et peut être utilisé pour remplir une base de données IndexedDB, et mettre en cache des fichiers). Pendant cette étape, l'application prépare ce qui doit l'être pour fonctionner hors ligne.
 3. Lorsque le gestionnaire d'évènements `oninstall` a terminé, on considère que le <i lang="en">service worker</i> est installé. À cet instant, une version précédente du <i lang="en">service worker</i> peut toujours être active et contrôler les pages ouvertes. Comme on ne veut pas que deux versions différentes du même <i lang="en">service worker</i> s'exécutent au même moment, la nouvelle version n'est pas encore active.
 4. Une fois que toutes les pages contrôlées par l'ancienne version du <i lang="en">service worker</i> sont fermées, on peut alors enlever l'ancienne version. Le nouveau <i lang="en">service worker</i> installé reçoit un évènement `activate`. On utilise principalement `activate` pour nettoyer les ressources utilisées par les versions précédentes d'un <i lang="en">service worker</i>. Le nouveau <i lang="en">service worker</i> peut appeler [`skipWaiting()`](/fr/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting) pour demander l'activation immédiate, sans attendre la fermeture des pages ouvertes. Le nouveau <i lang="en">service worker</i> recevra alors l'évènement `activate` immédiatement, et prendra le contrôle des pages ouvertes concernées.
-5. Le <i lang="en">service worker</i> contrôlera alors les pages qui ont été ouvertes après que la fonction `register()` a fini son exécution. Autrement dit, les documents devront être rechargés afin d'être contrôlé, car l'état de contrôle d'un document avec ou sans <i lang="en">service worker</i> est déterminé à son chargement et reste ainsi pendant sa durée de vie. Pour surcharger ce comportement par défaut et contrôler les pages ouvertes, un <i lang="en">service worker</i> peut appeler [`clients.claim()`](/fr/docs/Web/API/Clients/claim).
+5. Le <i lang="en">service worker</i> contrôlera alors les pages qui ont été ouvertes après que la fonction `register()` a fini son exécution. Autrement dit, les documents devront être rechargés afin d'être contrôlé, car l'état de contrôle d'un document avec ou sans <i lang="en">service worker</i> est déterminé à son chargement et reste ainsi pendant sa durée de vie. Pour modifier ce comportement par défaut et contrôler les pages ouvertes, un <i lang="en">service worker</i> peut appeler [`clients.claim()`](/fr/docs/Web/API/Clients/claim).
 6. À chaque fois qu'une nouvelle version d'un <i lang="en">service worker</i> est récupérée, ce cycle se répète et les données de la version précédente sont nettoyées pendant l'activation de la nouvelle version.
 
 ![Diagramme illustrant le cycle de vie d'un service worker](sw-lifecycle.svg)
@@ -129,7 +129,7 @@ self.addEventListener("install", (event) => {
       "/gallery/bountyHunters.jpg",
       "/gallery/myLittleVader.jpg",
       "/gallery/snowTroopers.jpg",
-    ])
+    ]),
   );
 });
 ```
@@ -151,24 +151,24 @@ Maintenant que les fichiers sont mis en cache, il faut indiquer au <i lang="en">
 
 2. On peut attacher un gestionnaire d'évènement pour `fetch` au <i lang="en">service worker</i>, puis appeler la méthode `respondWith()` sur l'évènement afin d'intercepter les réponses HTTP et les remplacer par le contenu voulu.
 
-    ```js
-    self.addEventListener("fetch", (event) => {
-      event
-        .respondWith
-        // contenu spécifique
-        ();
-    });
-    ```
+   ```js
+   self.addEventListener("fetch", (event) => {
+     event
+       .respondWith
+       // contenu spécifique
+       ();
+   });
+   ```
 
 3. On peut ainsi répondre avec les ressources dont l'URL correspond à la requête interceptée&nbsp;:
 
-    ```js
-    self.addEventListener("fetch", (event) => {
-      event.respondWith(caches.match(event.request));
-    });
-    ```
+   ```js
+   self.addEventListener("fetch", (event) => {
+     event.respondWith(caches.match(event.request));
+   });
+   ```
 
-    `caches.match(event.request)` permet de cibler les ressources demandées sur le réseau avec les ressources équivalentes et qui sont disponibles dans le cache (si une telle ressource est disponible). La correspondance est effectuée avec l'URL et différents en-têtes, comme pour une requête HTTP normale.
+   `caches.match(event.request)` permet de cibler les ressources demandées sur le réseau avec les ressources équivalentes et qui sont disponibles dans le cache (si une telle ressource est disponible). La correspondance est effectuée avec l'URL et différents en-têtes, comme pour une requête HTTP normale.
 
 ![Diagramme illustrant le rôle de l'évènement fetch](sw-fetch.svg)
 
@@ -265,7 +265,7 @@ self.addEventListener("fetch", (event) => {
     cacheFirst({
       request: event.request,
       fallbackUrl: "/gallery/myLittleVader.jpg",
-    })
+    }),
   );
 });
 ```
@@ -366,7 +366,7 @@ self.addEventListener("install", (event) => {
       "/gallery/bountyHunters.jpg",
       "/gallery/myLittleVader.jpg",
       "/gallery/snowTroopers.jpg",
-    ])
+    ]),
   );
 });
 
@@ -376,7 +376,7 @@ self.addEventListener("fetch", (event) => {
       request: event.request,
       preloadResponsePromise: event.preloadResponse,
       fallbackUrl: "/gallery/myLittleVader.jpg",
-    })
+    }),
   );
 });
 ```
@@ -410,7 +410,7 @@ self.addEventListener("install", (event) => {
 
       // inclure les nouvelles ressources associées
       // à la nouvelle version…
-    ])
+    ]),
   );
 });
 ```

@@ -1,8 +1,6 @@
 ---
 title: animation-timeline
 slug: Web/CSS/animation-timeline
-translation_of: Web/CSS/animation-timeline
-browser-compat: css.properties.animation-timeline
 l10n:
   sourceCommit: 9f958fd33582b47bd3e365c64eb2cdd9cee8f527
 ---
@@ -24,7 +22,10 @@ animation-timeline: sliding-vertically;
 
 /* Plusieurs animations */
 animation-timeline: test1, animation4;
-animation-timeline: none, -moz-specific, sliding;
+animation-timeline:
+  none,
+  -moz-specific,
+  sliding;
 
 /* Valeurs globales */
 animation-timeline: inherit;
@@ -74,7 +75,8 @@ Dans cet exemple, on déclare une chronologie de défilement intitulée `squareT
 
 #square {
   background-color: deeppink;
-  width: 100px; height: 100px;
+  width: 100px;
+  height: 100px;
   margin-top: 100px;
   animation-name: rotateAnimation;
   animation-duration: 3s;
@@ -83,9 +85,9 @@ Dans cet exemple, on déclare une chronologie de défilement intitulée `squareT
 }
 
 @scroll-timeline squareTimeline {
-  source: selector('#container');
+  source: selector("#container");
   orientation: "vertical";
-  scroll-offsets:  0px, 300px;
+  scroll-offsets: 0px, 300px;
 }
 
 @keyframes rotateAnimation {

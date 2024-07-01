@@ -10,7 +10,7 @@ slug: Web/API/CSSNumericValue/equals
 ## 構文
 
 ```js
-equals(number)
+equals(number);
 ```
 
 ### 引数

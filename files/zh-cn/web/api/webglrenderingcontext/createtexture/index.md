@@ -1,16 +1,18 @@
 ---
-title: WebGLRenderingContext.createTexture()
+title: WebGLRenderingContext：createTexture() 方法
 slug: Web/API/WebGLRenderingContext/createTexture
+l10n:
+  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API)的**`WebGLRenderingContext.createTexture()`** 方法创建并初始化了一个{{domxref("WebGLTexture")}} 目标。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.createTexture()`** 方法创建并初始化 {{domxref("WebGLTexture")}} 对象。
 
 ## 语法
 
-```plain
-WebGLTexture gl.createTexture();
+```js-nolint
+createTexture()
 ```
 
 ### 参数
@@ -19,18 +21,18 @@ WebGLTexture gl.createTexture();
 
 ### 返回值
 
-一个可以被任何图像绑定的 {{domxref("WebGLTexture")}} 目标
+一个可以被任何图像绑定的 {{domxref("WebGLTexture")}} 对象。
 
 ## 示例
 
-另见 [Using textures in WebGL](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)上的[WebGL tutorial](/zh-CN/docs/Web/API/WebGL_API/Tutorial)
+参见 [WebGL 教程](/zh-CN/docs/Web/API/WebGL_API/Tutorial)：[在 WebGL 中使用纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
 
-### 创建一个纹理
+### 创建纹理
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var texture = gl.createTexture();
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
+const texture = gl.createTexture();
 ```
 
 ## 规范
@@ -41,7 +43,7 @@ var texture = gl.createTexture();
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.bindTexture()")}}
 - {{domxref("WebGLRenderingContext.deleteTexture()")}}

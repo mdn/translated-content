@@ -1,11 +1,6 @@
 ---
 title: categories
 slug: Web/Manifest/categories
-tags:
-  - Manifest
-  - Web
-  - categories
-translation_of: Web/Manifest/categories
 ---
 
 {{QuickLinksWithSubpages("/ru/docs/Web/Manifest")}}
@@ -41,12 +36,10 @@ translation_of: Web/Manifest/categories
 "categories": ["books", "education", "medical"]
 ```
 
-## Specification
+## Спецификации
 
-| Specification                                                                    | Status                       | Comment             | Feedback                                                                         |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName('Manifest', '#categories-member', 'categories')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

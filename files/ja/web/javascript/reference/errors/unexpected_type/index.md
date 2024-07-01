@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Errors/Unexpected_type
 
 {{jsSidebar("Errors")}}
 
-JavaScript の例外 "_x_ is (not) _y_" は、予期しない型があったときに発生します。よくあるのは、予期せず {{jsxref("undefined")}} または {{jsxref("null")}} の値があった場合です。
+JavaScript の例外 "_x_ is (not) _y_" は、予期しない型があったときに発生します。よくあるのは、予期せず {{jsxref("undefined")}} または [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) の値があった場合です。
 
 ## エラーメッセージ
 
@@ -27,7 +27,7 @@ TypeError: "x" is not a symbol
 
 ## エラーの原因
 
-予期しない型がありました。これは {{jsxref("undefined")}} または {{jsxref("null")}} の値でしばしば発生します。
+予期しない型がありました。これは {{jsxref("undefined")}} または [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) の値でしばしば発生します。
 
 また、{{jsxref("Object.create()")}} や {{jsxref("Symbol.keyFor()")}} のようなある種のメソッドは、特定の型を要求し、それを提供する必要があります。
 
@@ -44,10 +44,10 @@ var foo = null;
 foo.substring(1); // TypeError: foo is null
 
 // ある種のメソッドでは、特定の型が求められることがあります。
-var foo = {}
+var foo = {};
 Symbol.keyFor(foo); // TypeError: foo is not a symbol
 
-var foo = 'bar'
+var foo = "bar";
 Object.create(foo); // TypeError: "foo" is not an object or null
 ```
 
@@ -60,7 +60,7 @@ if (foo !== undefined) {
   // これで、 foo が定義されていることがわかるので、実行することができます。
 }
 
-if (typeof foo !== 'undefined') {
+if (typeof foo !== "undefined") {
   // 同じというのは良い考えですが、この実装を使わないでください。 - 本当の
   // undefined の値と未宣言の変数が混同されて問題が発生する可能性があります。
 }
@@ -69,4 +69,4 @@ if (typeof foo !== 'undefined') {
 ## 関連情報
 
 - {{jsxref("undefined")}}
-- {{jsxref("null")}}
+- [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null)

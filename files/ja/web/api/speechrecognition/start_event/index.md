@@ -1,7 +1,6 @@
 ---
-title: 'SpeechRecognition: start イベント'
+title: "SpeechRecognition: start イベント"
 slug: Web/API/SpeechRecognition/start_event
-original_slug: Web/API/SpeechRecognition/onstart
 l10n:
   sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
@@ -15,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('start', (event) => { })
+addEventListener("start", (event) => {});
 
-onstart = (event) => { }
+onstart = (event) => {};
 ```
 
 ## イベント型
@@ -31,8 +30,8 @@ onstart = (event) => { }
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('start', () => {
-  console.log('音声認識サービスが開始しました');
+recognition.addEventListener("start", () => {
+  console.log("音声認識サービスが開始しました");
 });
 ```
 
@@ -40,8 +39,8 @@ recognition.addEventListener('start', () => {
 
 ```js
 recognition.onstart = () => {
-  console.log('音声認識サービスが開始しました');
-}
+  console.log("音声認識サービスが開始しました");
+};
 ```
 
 ## 仕様書

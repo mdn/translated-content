@@ -3,7 +3,7 @@ title: runtime.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 単一のメッセージを、自分や別の拡張機能が持つイベントリスナーに送信します。
 
@@ -21,10 +21,10 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 
 ```js
 var sending = browser.runtime.sendMessage(
-  extensionId,             // optional string
-  message,                 // any
-  options                  // optional object
-)
+  extensionId, // optional string
+  message, // any
+  options, // optional object
+);
 ```
 
 ### 引数
@@ -50,7 +50,7 @@ var sending = browser.runtime.sendMessage(
 
   - 二番目の引数が次のいずれかである場合、引数は `(message, options)` と解釈され、メッセージは内部的に送信されます。
 
-    1. 有効な `options` オブジェクトである (つまり、ブラウザがサポートする `options` のプロパティのみを持つオブジェクト)
+    1. 有効な `options` オブジェクトである (つまり、ブラウザーがサポートする `options` のプロパティのみを持つオブジェクト)
     2. null
     3. undefined
 
@@ -66,7 +66,7 @@ Firefox 55 より前では、引数が二つの場合のルールが異なるこ
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.runtime.sendMessage")}}
+{{Compat}}
 
 ## 使用例
 
@@ -85,7 +85,7 @@ function handleError(error) {
 
 function notifyBackgroundPage(e) {
   var sending = browser.runtime.sendMessage({
-    greeting: "Greeting from the content script"
+    greeting: "Greeting from the content script",
   });
   sending.then(handleResponse, handleError);
 }
@@ -99,9 +99,8 @@ window.addEventListener("click", notifyBackgroundPage);
 // background-script.js
 
 function handleMessage(request, sender, sendResponse) {
-  console.log("Message from the content script: " +
-    request.greeting);
-  sendResponse({response: "Response from background script"});
+  console.log("Message from the content script: " + request.greeting);
+  sendResponse({ response: "Response from background script" });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);

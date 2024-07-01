@@ -1,7 +1,6 @@
 ---
 title: WebSocket.extensions
 slug: Web/API/WebSocket/extensions
-browser-compat: api.WebSocket.extensions
 ---
 
 {{APIRef("Web Sockets API")}}

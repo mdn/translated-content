@@ -1,12 +1,6 @@
 ---
-title: 'SyntaxError: missing ) after condition'
+title: "SyntaxError: missing ) after condition"
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_condition
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_condition
 ---
 
 {{jsSidebar("Errors")}}
@@ -65,7 +59,7 @@ if (done is true) {
 
 ```js example-good
 if (done === true) {
- console.log("мы сделали!");
+  console.log("мы сделали!");
 }
 ```
 

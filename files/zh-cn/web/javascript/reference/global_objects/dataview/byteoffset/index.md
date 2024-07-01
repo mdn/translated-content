@@ -40,7 +40,7 @@ dataview2.byteOffset; // 3 (在构造 DataView 时指定)
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}

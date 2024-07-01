@@ -1,55 +1,57 @@
 ---
 title: onStateChanged
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/onStateChanged
+l10n:
+  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-Fires when the captive portal state changes.
+当强制门户状态发生变化时触发。
 
-## Syntax
+## 语法
 
-```js
-browser.captivePortal.onStateChanged.addListener(callback)
+```js-nolint
+browser.captivePortal.onStateChanged.addListener(listener)
 browser.captivePortal.onStateChanged.removeListener(listener)
 browser.captivePortal.onStateChanged.hasListener(listener)
 ```
 
-Events have three functions:
+事件具有三个函数：
 
-- `addListener(callback)`
-  - : Adds a listener to this event.
+- `addListener(listener)`
+  - : 将监听器添加到此事件。
 - `removeListener(listener)`
-  - : Stop listening to this event. The `listener` argument is the listener to remove.
+  - : 停止监听此事件。`listener` 参数是要移除的监听器。
 - `hasListener(listener)`
-  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
+  - : 检查 `listener` 是否已注册到此事件。如果正在监听，则返回 `true`，否则返回 `false`。
 
-## addListener syntax
+## addListener 语法
 
-### Parameters
+### 参数
 
-- `callback`
+- `listener`
 
-  - : Function that is called when this event occurs. The function is passed the following arguments:
+  - : 当此事件发生时调用的函数。函数被传入此参数：
 
     - `details`
-      - : `string` The captive portal state, being one of `unknown`, `not_captive`, `unlocked_portal`, or `locked_portal`.
+      - : `string`。强制门户状态，为 `unknown`、`not_captive`、`unlocked_portal` 或 `locked_portal` 之一。
 
-## Examples
+## 示例
 
-Handle a change in captive portal status:
+处理强制门户状态变化：
 
 ```js
 function handlePortalStatus(portalstatusInfo) {
-  console.log("The portal status is now: " + portalstatusInfo.details);
+  console.log(`强制门户状态现在是：${portalstatusInfo.details}`);
 }
 
-browser.captivePortal.onStateChanged.addListener(handlePortalStatus)
+browser.captivePortal.onStateChanged.addListener(handlePortalStatus);
 ```
 
 {{WebExtExamples}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 

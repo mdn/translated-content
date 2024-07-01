@@ -1,8 +1,9 @@
 ---
 title: alertdialog ロールの使用
 slug: Web/Accessibility/ARIA/Roles/alertdialog_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
 ---
+
+{{AccessibilitySidebar}}
 
 ### 説明
 
@@ -14,7 +15,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
 - 通常のアラートとは異なり、アラートダイアログには少なくとも 1 つのフォーカス可能なコントロールがあり、アラートダイアログが表示されたらフォーカスをそのコントロールに移動する必要があります。 一般にアラートダイアログには、フォーカスを移動するために使用できる\[確認]、\[閉じる]、または\[キャンセル]ボタンが少なくともあります。 さらに、アラートダイアログには、テキストフィールド、タブ、チェックボックスなどの他のインタラクティブなコントロールを含めることができます。 どの特定のコントロールにフォーカスに移動するべきかは、ダイアログの目的によって異なります。
 - アラートダイアログ内のタブ順序は折り返す必要があります。
 
-通常のダイアログとの違いは、`alertdialog` ロールはアラート、エラー、またはワーニングが発生した場合にのみ使用するべきであることです。 言い換えれば、ダイアログの情報とコントロールがユーザの即時の注意を必要とするとき、`dialog` の代わりに `alertdialog` が使用されるべきです。 この区別をするのは開発者次第です。
+通常のダイアログとの違いは、`alertdialog` ロールはアラート、エラー、またはワーニングが発生した場合にのみ使用するべきであることです。 言い換えれば、ダイアログの情報とコントロールがユーザーの即時の注意を必要とするとき、`dialog` の代わりに `alertdialog` が使用されるべきです。 この区別をするのは開発者次第です。
 
 その緊急性のために、アラートダイアログは常にモーダルでなければなりません。
 
@@ -40,10 +41,17 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
 以下のコードスニペットは、メッセージと\[OK]ボタンだけを提供するアラートダイアログをマークアップする方法を示しています。
 
 ```html
-<div role="alertdialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+<div
+  role="alertdialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
   <div role="document" tabindex="0">
-    <h2 id="dialog1Title">あなたのログインセッションは期限切れになりそうです</h2>
-    <p id="dialog1Desc">セッションを延長するには、[OK]ボタンをクリックしてください。</p>
+    <h2 id="dialog1Title">
+      あなたのログインセッションは期限切れになりそうです
+    </h2>
+    <p id="dialog1Desc">
+      セッションを延長するには、[OK]ボタンをクリックしてください。
+    </p>
     <button>OK</button>
   </div>
 </div>

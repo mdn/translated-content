@@ -24,9 +24,7 @@ new Uint8Array(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8Array.BYTES_PER_ELEMENT")}}
   - : 返回数组中元素的字节数，Uint8Array 中返回 1 字节。
 - Uint8Array.length
-  - : 静态属性 length 一直为 0。想获知其真实长度（元素个数），请参阅 {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Uint8Array.name")}}
-  - : 返回构造名的字符串，对 Uint8Array 类型而言返回“Uint8Array”
+  - : 静态属性 length 一直为 0。想获知其真实长度（元素个数），请参阅 {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}}。
 - {{jsxref("TypedArray.prototype", "Uint8Array.prototype")}}
   - : _TypedArray_ 对象的原型。
 
@@ -84,7 +82,7 @@ new Uint8Array(buffer [, byteOffset [, length]]);
   - : 返回数组中等于特定值的最后一个元素（下标最大），如果没有找到则返回 -1，请参见 {{jsxref("Array.prototype.lastIndexOf()")}}。
 - {{jsxref("TypedArray.map", "Uint8Array.prototype.map()")}}
   - : 使用在该数组的每个元素上调用函数的结果创建新数组，请参见{{jsxref("Array.prototype.map()")}}。
-- {{jsxref("TypedArray.move", "Uint8Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
+- {{jsxref("TypedArray.move", "Uint8Array.prototype.move()")}} {{non-standard_inline}}
   - : {{jsxref("TypedArray.copyWithin", "Uint8Array.prototype.copyWithin()")}}的之前的非标准版本。
 - {{jsxref("TypedArray.reduce", "Uint8Array.prototype.reduce()")}}
   - : 对累加器和数组的每个值应用函数（从左到右），使其归约为单一的值，另见 {{jsxref("Array.prototype.reduce()")}}。
@@ -111,7 +109,7 @@ new Uint8Array(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.@@iterator", "Uint8Array.prototype[@@iterator]()")}}
   - : `返回新的 Array Iterator` 对象，包含数组中每个下标处的值。
 
-## 例子
+## 示例
 
 ```js
 // 来自长度
@@ -122,7 +120,7 @@ console.log(uint8.length); // 2
 console.log(uint8.BYTES_PER_ELEMENT); // 1
 
 // 来自数组
-var arr = new Uint8Array([21,31]);
+var arr = new Uint8Array([21, 31]);
 console.log(arr[1]); // 31
 
 // 来自另一个 TypedArray
@@ -135,7 +133,9 @@ var buffer = new ArrayBuffer(8);
 var z = new Uint8Array(buffer, 1, 4);
 
 // 来自一个迭代器
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var uint8 = new Uint8Array(iterable);
 // Uint8Array[1, 2, 3]
 ```

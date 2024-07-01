@@ -3,7 +3,7 @@ title: border-left-color
 slug: Web/CSS/border-left-color
 ---
 
-{{CSSRef("CSS Borders")}}
+{{CSSRef}}
 
 **`border-left-color`** 属性设置元素的左边框颜色。值得注意的是，在大数情况下使用 {{cssxref("border-color")}} 或 {{cssxref("border-left")}} 更加方便和普遍。
 
@@ -45,9 +45,10 @@ border-left-color: unset;
 
 ```html
 <div class="mybox">
-  <p>This is a box with a border around it.
-     Note which side of the box is
-     <span class="redtext">red</span>.</p>
+  <p>
+    This is a box with a border around it. Note which side of the box is
+    <span class="redtext">red</span>.
+  </p>
 </div>
 ```
 
@@ -55,12 +56,12 @@ border-left-color: unset;
 
 ```css
 .mybox {
-    border: solid 0.3em gold;
-    border-left-color: red;
-    width: auto;
+  border: solid 0.3em gold;
+  border-left-color: red;
+  width: auto;
 }
 .redtext {
-    color: red;
+  color: red;
 }
 ```
 

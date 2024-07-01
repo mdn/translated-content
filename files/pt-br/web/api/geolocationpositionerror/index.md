@@ -15,10 +15,10 @@ _A interface `PositionError` não herda nenhuma propriedade_.
 
   - : Retorna um tipo `unsigned short` representando o código de erro. Os valores possíveis são os seguintes:
 
-    | Valor | Constante associada    | Descrição                                                                                                                                                            |
-    | ----- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `1`   | `PERMISSION_DENIED`    | Não foi possível obter a informação sobre geolocalização por que a página não possuía permissão para fazê-lo.                                                        |
-    | `2`   | `POSITION_UNAVAILABLE` | A obtenção da geolocalização falhou por que pelo menos uma fonte interna de posicionamento retornou um erro interno.                                                 |
+    | Valor | Constante associada    | Descrição                                                                                                                                              |
+    | ----- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+    | `1`   | `PERMISSION_DENIED`    | Não foi possível obter a informação sobre geolocalização por que a página não possuía permissão para fazê-lo.                                          |
+    | `2`   | `POSITION_UNAVAILABLE` | A obtenção da geolocalização falhou por que pelo menos uma fonte interna de posicionamento retornou um erro interno.                                   |
     | `3`   | `TIMEOUT`              | O tempo máximo permitido para obter a geolocalização, definido por {{domxref("PositionOptions.timeout")}} foi atingido antes de se obter a informação. |
 
 - {{domxref("PositionError.message")}} {{readonlyInline}}
@@ -30,13 +30,11 @@ _A interface `PositionError` não herda nenhuma propriedade_.
 
 ## Especificações
 
-| Especificação                                                                        | Status                           | Comentário             |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---------------------- |
-| {{SpecName('Geolocation', '#positionerror', 'PositionError')}} | {{Spec2('Geolocation')}} | Especificação inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.GeolocationPositionError")}}
+{{Compat}}
 
 ## Veja também
 

@@ -11,10 +11,10 @@ Fechas inválidas, como el valor 0, representan una fecha en el pasado, esto sig
 
 Si existe un encabezado {{HTTPHeader("Cache-Control")}} con la directiva "max-age" o "s-max-age" en la respuesta, el encabezado `Expires` será ignorado.
 
-| Encabezado                                                                                       | {{Glossary("Response header")}} |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Nombre de encabezado Prohibido")}}                                     | no                                       |
-| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | si                                       |
+| Encabezado                                                                | {{Glossary("Response header")}} |
+| ------------------------------------------------------------------------- | ------------------------------- |
+| {{Glossary("Nombre de encabezado Prohibido")}}                            | no                              |
+| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | si                              |
 
 ## Sintaxis
 
@@ -35,13 +35,11 @@ Expires: Jue, 21 Oct 2017 07:28:00 GMT
 
 ## Especificaciones
 
-| Especificación                               | Título                                          |
-| -------------------------------------------- | ----------------------------------------------- |
-| {{RFC("7234", "Expires", "5.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
+{{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Expires")}}
+{{Compat}}
 
 ## Ver también
 

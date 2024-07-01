@@ -1,7 +1,6 @@
 ---
 title: ruby-align
 slug: Web/CSS/ruby-align
-translation_of: Web/CSS/ruby-align
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -64,7 +63,7 @@ This HTML will render differently with each value of `ruby-align`:
 
 ```css
 ruby {
-    ruby-align:start;
+  ruby-align: start;
 }
 ```
 
@@ -83,7 +82,7 @@ This gives the following result:
 
 ```css
 ruby {
-    ruby-align:center;
+  ruby-align: center;
 }
 ```
 
@@ -102,7 +101,7 @@ This gives the following result:
 
 ```css
 ruby {
-    ruby-align:space-between;
+  ruby-align: space-between;
 }
 ```
 
@@ -121,7 +120,7 @@ This gives the following result:
 
 ```css
 ruby {
-    ruby-align:space-around;
+  ruby-align: space-around;
 }
 ```
 
@@ -129,17 +128,15 @@ This gives the following result:
 
 {{EmbedLiveSample("Extra_space_distributed_between_and_around_ruby_element", 180, 40)}}
 
-## Specifications
+## Спецификации
 
-| Specification                                                                            | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{ SpecName('CSS3 Ruby', '#ruby-align-property', 'ruby-align') }} | {{ Spec2('CSS3 Ruby') }} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - HTML Ruby elements: {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}}, and {{HTMLElement("rtc")}}.
 - CSS Ruby properties: {{cssxref("ruby-position")}}, {{cssxref("ruby-merge")}}.

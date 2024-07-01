@@ -1,8 +1,9 @@
 ---
 title: toolbar ロールの使用
 slug: Web/Accessibility/ARIA/Roles/toolbar_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role
 ---
+
+{{AccessibilitySidebar}}
 
 ### 説明
 
@@ -14,7 +15,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role
 
 ### 例
 
-#### Example 1:
+#### Example 1
 
 ```html
 Code

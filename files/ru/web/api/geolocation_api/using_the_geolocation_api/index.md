@@ -1,12 +1,6 @@
 ---
 title: Использование Geolocation API
 slug: Web/API/Geolocation_API/Using_the_Geolocation_API
-tags:
-  - Geolocation API
-  - Guide
-  - Tutorial
-translation_of: Web/API/Geolocation_API/Using_the_Geolocation_API
-original_slug: Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
@@ -34,7 +28,7 @@ if ("geolocation" in navigator) {
 > **Примечание:** По умолчанию {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}} пытается вернуть результат так быстро, как это возможно, за счёт чего даёт не очень точный результат. Это может быть полезно, если вам нужно быстро получить ответ, при этом не важна точность. Устройства с GPS, например, могут пытаться скорректировать данные GPS около минуты и даже больше, поэтому в самом начале могут вернуться менее точные данные (местоположение IP или wifi-сети), полученные {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}.
 
 ```js
-navigator.geolocation.getCurrentPosition(function(position) {
+navigator.geolocation.getCurrentPosition(function (position) {
   do_something(position.coords.latitude, position.coords.longitude);
 });
 ```
@@ -48,7 +42,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
 > **Примечание:** вы можете использовать {{domxref("Geolocation.watchPosition()","watchPosition()")}} без вызова {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}.
 
 ```js
-var watchID = navigator.geolocation.watchPosition(function(position) {
+var watchID = navigator.geolocation.watchPosition(function (position) {
   do_something(position.coords.latitude, position.coords.longitude);
 });
 ```
@@ -78,11 +72,15 @@ function geo_error() {
 
 var geo_options = {
   enableHighAccuracy: true,
-  maximumAge        : 30000,
-  timeout           : 27000
+  maximumAge: 30000,
+  timeout: 27000,
 };
 
-var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_options);
+var wpid = navigator.geolocation.watchPosition(
+  geo_success,
+  geo_error,
+  geo_options,
+);
 ```
 
 ## Описание позиции
@@ -95,7 +93,7 @@ var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_optio
 
 ```js
 function success(position) {
-  const latitude  = position.coords.latitude;
+  const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
 
   // Дальше код, который что-то делает с широтой(latitude) и долготой(longitude)
@@ -106,14 +104,14 @@ function success(position) {
 
 ## Обработка ошибок
 
-Callback-функция для ошибок, если она была передана в `getCurrentPosition()` или `watchPosition()`, ожидает экземпляр объекта [`GeolocationPositionError`](/en-US/docs/Web/API/GeolocationPositionError) в качестве первого аргумента. Он будет содержать два свойства, `code`, который укажет на то, какая именно ошибка произошла и понятное для человека `message`, описывающее значение поля code.
+Callback-функция для ошибок, если она была передана в `getCurrentPosition()` или `watchPosition()`, ожидает экземпляр объекта [`GeolocationPositionError`](/ru/docs/Web/API/GeolocationPositionError) в качестве первого аргумента. Он будет содержать два свойства, `code`, который укажет на то, какая именно ошибка произошла и понятное для человека `message`, описывающее значение поля code.
 
 Функция может выглядеть примерно так:
 
 ```js
 function errorCallback(error) {
-  alert('ERROR(' + error.code + '): ' + error.message);
-};
+  alert("ERROR(" + error.code + "): " + error.message);
+}
 ```
 
 ## Примеры
@@ -123,56 +121,54 @@ function errorCallback(error) {
 ```css hidden
 body {
   padding: 20px;
-  background-color:#ffffc9
+  background-color: #ffffc9;
 }
 
 button {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 
 ### HTML
 
 ```html
-<button id = "find-me">Show my location</button><br/>
-<p id = "status"></p>
-<a id = "map-link" target="_blank"></a>
+<button id="find-me">Show my location</button><br />
+<p id="status"></p>
+<a id="map-link" target="_blank"></a>
 ```
 
 ### JavaScript
 
 ```js
 function geoFindMe() {
+  const status = document.querySelector("#status");
+  const mapLink = document.querySelector("#map-link");
 
-  const status = document.querySelector('#status');
-  const mapLink = document.querySelector('#map-link');
-
-  mapLink.href = '';
-  mapLink.textContent = '';
+  mapLink.href = "";
+  mapLink.textContent = "";
 
   function success(position) {
-    const latitude  = position.coords.latitude;
+    const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
 
-    status.textContent = '';
+    status.textContent = "";
     mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
     mapLink.textContent = `Широта: ${latitude} °, Долгота: ${longitude} °`;
   }
 
   function error() {
-    status.textContent = 'Невозможно получить ваше местоположение';
+    status.textContent = "Невозможно получить ваше местоположение";
   }
 
   if (!navigator.geolocation) {
-    status.textContent = 'Geolocation не поддерживается вашим браузером';
+    status.textContent = "Geolocation не поддерживается вашим браузером";
   } else {
-    status.textContent = 'Определение местоположения…';
+    status.textContent = "Определение местоположения…";
     navigator.geolocation.getCurrentPosition(success, error);
   }
-
 }
 
-document.querySelector('#find-me').addEventListener('click', geoFindMe);
+document.querySelector("#find-me").addEventListener("click", geoFindMe);
 ```
 
 ### Демо

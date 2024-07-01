@@ -1,11 +1,6 @@
 ---
 title: Window.clearImmediate()
 slug: Web/API/Window/clearImmediate
-tags:
-  - API
-  - DOM
-  - метод
-translation_of: Web/API/Window/clearImmediate
 ---
 
 {{ Apiref() }}
@@ -34,12 +29,14 @@ document.getElementById("button").addEventListener(function () {
 }, false);
 ```
 
-## Поддержка браузерами
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 {{ domxref("window.setImmediate") }}
-
-{{ spec("https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html", "Specification: Efficient Script Yielding") }}

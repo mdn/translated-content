@@ -1,17 +1,19 @@
 ---
 title: Number.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toString
+l10n:
+  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
 {{JSRef}}
 
-**`toString()`** メソッドは、指定された {{jsxref("Number")}} オブジェクトを表す文字列を返します。
+**`toString()`** メソッドは、指定された数値を表現する文字列を返します。
 
 {{EmbedInteractiveExample("pages/js/number-tostring.html")}}
 
 ## 構文
 
-```js
+```js-nolint
 toString()
 toString(radix)
 ```
@@ -19,11 +21,11 @@ toString(radix)
 ### 引数
 
 - `radix` {{optional_inline}}
-  - : 数値を表すために使われる基数を指定する、 `2` から `36` までの整数です。
+  - : 数値を表現するために使われる基数を指定する、 `2` から `36` までの整数です。既定値は 10 です。
 
 ### 返値
 
-指定された {{jsxref("Number")}} オブジェクトを表す文字列です。
+指定された数値を表現する文字列です。
 
 ## 例外
 
@@ -32,35 +34,59 @@ toString(radix)
 
 ## 解説
 
-{{jsxref("Number")}} オブジェクトは {{jsxref("Object")}} の `toString()` メソッドを上書きします。つまり、 {{jsxref("Object.prototype.toString()")}} を継承しません。 {{jsxref("Number")}} オブジェクトでは、 `toString()` メソッドは指定された基数でオブジェクトを表した文字列を返します。
+{{jsxref("Number")}} オブジェクトは {{jsxref("Object")}} の `toString()` メソッドを上書きします。つまり、 {{jsxref("Object.prototype.toString()")}} を継承していません。`Number` の値では、`toString` メソッドは指定された基数でオブジェクトを表した文字列を返します。
 
-`toString()` メソッドはその最初の引数を解釈し、 `radix` で指定された基数で表した文字列を返します。 `10` より大きい基数では、 9 より大きい数をアルファベットの文字で示します。例えば、16進表記 (基数 16) では、`a` から `f` までが使われます。
+10 より大きい基数では、 9 より大きい数をアルファベットの文字で示します。例えば、16 進表記（基数 16）では、`a` から `f` までが使われます。
 
-`radix` が指定されなかった場合、基数は `10` と見なされます。
+`numObj` が負の場合、符号は保存されます。これは基数が 2 の場合も同様です。返される文字列は、`-` 記号で始まる数値の正の 2 進数表現であり、数値の 2 の補数では**ありません**。
 
-`numObj` が負の場合、符号は保存されます。これは基数が 2 の場合も同様です。返される文字列は、`numObj` の 2 の補数**ではなく**、先頭に `-` 符号がついた `numObj` の正のバイナリー表現です。
+`0` と `-0` はどちらも文字列表現が `"0"` となります。{{jsxref("Infinity")}} は `"Infinity"` を返し、 {{jsxref("NaN")}} は `"NaN"` を返します。
 
-`numObj` が整数でない場合、「ドット」符号は小数点以下を区切るために使われます。
+数値が整数でない場合、小数点 `.` を用いて小数点以下の位置を区切ります。[科学的記数法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#指数)は、基数が10で、数の大きさ（符号は無視）が 10<sup>21</sup> 以上、10<sup>-6</sup> 以下の場合に使用します。この場合、返す文字列は常に指数の符号を明示的に指定します。
+
+```js
+console.log((10 ** 21.5).toString()); // "3.1622776601683794e+21"
+console.log((10 ** 21.5).toString(8)); // "526665530627250154000000"
+```
+
+この `toString()` メソッドは、`this` 値が数値プリミティブまたは `Number` ラッパーオブジェクトである必要があります。他の `this` 値に対しては、数値に変換しようとせずに {{jsxref("TypeError")}} を発生させます。
+
+`Number` には [`[@@toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) メソッドがないので、 `Number` _オブジェクト_ が[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals) などのように文字列を期待するコンテキストで用いられるとき、 JavaScript は `toString()` メソッドを自動的に呼び出します。しかし、数値プリミティブは `toString()` メソッドを参照して [coerced to strings] (/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) するのではなく、初期の `toString()` 実装と同じアルゴリズムを使用して直接変換される。
+
+```js
+Number.prototype.toString = () => "Overridden";
+console.log(`${1}`); // "1"
+console.log(`${new Number(1)}`); // "Overridden"
+```
 
 ## 例
 
 ### toString の使用
 
 ```js
-let count = 10
+const count = 10;
+console.log(count.toString()); // "10"
 
-console.log(count.toString())    // '10' を表示します。
-console.log((17).toString())     // '17' を表示します。
-console.log((17.2).toString())   // '17.2' を表示します。
+console.log((17).toString()); // "17"
+console.log((17.2).toString()); // "17.2"
 
-let x = 6
-
-console.log(x.toString(2))       // '110' を表示します。
-console.log((254).toString(16))  // 'fe' を表示します。
-
-console.log((-10).toString(2))   // '-1010' を表示します。
-console.log((-0xff).toString(2)) // '-11111111' を表示します。
+const x = 6;
+console.log(x.toString(2)); // "110"
+console.log((254).toString(16)); // "fe"
+console.log((-10).toString(2)); // "-1010"
+console.log((-0xff).toString(2)); // "-11111111"
 ```
+
+### 数値文字列の基数変換
+
+10 進数でない基数の数値を表す文字列がある場合、[`parseInt()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/parseInt) と `toString()` を使用して別の基数に変換することが可能です。
+
+```js
+const hex = "CAFEBABE";
+const bin = parseInt(hex, 16).toString(2); // "11001010111111101011101010111110"
+```
+
+精度の低下に注意してください。元となる数値文字列が大きすぎる（例えば [`Number.MAX_SAFE_INTEGER`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) より大きい）場合、代わりに [`BigInt`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) を使用してください。ただし、`BigInt` コンストラクタは、数値リテラルを表す文字列（`0b`, `0o`, `0x` から始まる文字列）にしか対応していません。元の基数が 2 進数、8 進数、10 進数、16 進数のいずれでもない場合は、基数変換を手で書くか、ライブラリーを使用する必要があるかもしれません。
 
 ## 仕様書
 

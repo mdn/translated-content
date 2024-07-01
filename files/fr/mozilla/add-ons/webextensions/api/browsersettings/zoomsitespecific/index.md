@@ -1,18 +1,9 @@
 ---
 title: browserSettings.zoomSiteSpecific
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomSiteSpecific
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - WebExtensions
-  - browserSettings
-  - zoomSiteSpecific
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomSiteSpecific
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jaccente est un booléen.
 
@@ -32,9 +23,9 @@ Lors de l'installation de Firefox, `browser.zoom.siteSpecific` est à vrai.
 
 Si [`privacy.websites`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)`.resistFingerprinting` est à vrai, ce réglage ne peut pas être changé et le niveau de zoom est appliqué sur le schéma par-onglet.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.zoomSiteSpecific")}}
+{{Compat}}
 
 ## Exemples
 
@@ -45,8 +36,7 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.zoomSiteSpecific.set({value: false}).
-  then(logResult);
+browser.browserSettings.zoomSiteSpecific.set({ value: false }).then(logResult);
 ```
 
 {{WebExtExamples}}

@@ -1,7 +1,6 @@
 ---
-title: 'Feature-Policy: screen-wake-lock'
+title: "Feature-Policy: screen-wake-lock"
 slug: Web/HTTP/Headers/Permissions-Policy/screen-wake-lock
-original_slug: Web/HTTP/Headers/Feature-Policy/screen-wake-lock
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}}

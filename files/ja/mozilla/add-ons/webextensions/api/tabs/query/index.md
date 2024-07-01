@@ -3,7 +3,7 @@ title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 指定されたプロパティを持つ全てのタブを取得します。何も指定しない場合、全てのタブを取得します。
 
@@ -13,11 +13,11 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
 
 ```js
 var querying = browser.tabs.query(
-  queryInfo             // object
-)
+  queryInfo, // object
+);
 ```
 
-### パラメータ
+### パラメーター
 
 - `queryInfo`
 
@@ -34,7 +34,7 @@ var querying = browser.tabs.query(
     - `currentWindow`{{optional_inline}}
       - : `boolean`. カレントウインドウの中のタブか。
     - `discarded`{{optional_inline}}
-      - : `boolean`. タブが discard されているか。 discard されたタブはコンテンツがメモリからアンロードされているが、タブの一覧には表示されたままになります。コンテンツはタブが次にアクティブになったときにリロードされます。
+      - : `boolean`. タブが discard されているか。 discard されたタブはコンテンツがメモリーからアンロードされているが、タブの一覧には表示されたままになります。コンテンツはタブが次にアクティブになったときにリロードされます。
     - `highlighted`{{optional_inline}}
       - : `boolean`. ハイライトされているか。
     - `index`{{optional_inline}}
@@ -66,7 +66,7 @@ var querying = browser.tabs.query(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs.query", 10)}}
+{{Compat}}
 
 ## 例
 
@@ -102,7 +102,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({currentWindow: true});
+var querying = browser.tabs.query({ currentWindow: true });
 querying.then(logTabs, onError);
 ```
 
@@ -120,7 +120,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({currentWindow: true, active: true});
+var querying = browser.tabs.query({ currentWindow: true, active: true });
 querying.then(logTabs, onError);
 ```
 
@@ -138,7 +138,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({url: "*://*.mozilla.org/*"});
+var querying = browser.tabs.query({ url: "*://*.mozilla.org/*" });
 querying.then(logTabs, onError);
 ```
 
@@ -157,7 +157,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({url: "moz-extension://*/*"});
+var querying = browser.tabs.query({ url: "moz-extension://*/*" });
 querying.then(logTabs, onError);
 ```
 
@@ -176,7 +176,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({url: browser.extension.getURL("*")});
+var querying = browser.tabs.query({ url: browser.extension.getURL("*") });
 querying.then(logTabs, onError);
 ```
 

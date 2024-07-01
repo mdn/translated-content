@@ -1,8 +1,9 @@
 ---
 title: Cadenas del User Agent de Gecko
 slug: Web/HTTP/Headers/User-Agent/Firefox
-original_slug: Cadenas_del_User_Agent_de_Gecko
 ---
+
+{{HTTPSidebar}}
 
 ### Uso Apropiado
 

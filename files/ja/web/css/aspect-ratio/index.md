@@ -18,6 +18,8 @@ aspect-ratio: revert;
 aspect-ratio: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/aspect-ratio.html")}}
+
 ### 値
 
 - `auto`
@@ -50,7 +52,14 @@ aspect-ratio: 0.5;
 Firefox では、内部のスタイルシートルールはこのようになっています。
 
 ```css
-img, input[type="image"], video, embed, iframe, marquee, object, table {
+img,
+input[type="image"],
+video,
+embed,
+iframe,
+marquee,
+object,
+table {
   aspect-ratio: attr(width) / attr(height);
 }
 ```

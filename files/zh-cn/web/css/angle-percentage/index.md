@@ -1,19 +1,23 @@
 ---
 title: <angle-percentage>
 slug: Web/CSS/angle-percentage
+l10n:
+  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
 {{CSSRef}}
 
-[CSS 数据类型](/zh-CN/docs/Web/CSS) **`<angle-percentage>`** 代表了一种既可以是 {{Cssxref("angle")}} ，也可以是{{Cssxref("percentage")}}的数据类型
+**`<angle-percentage>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示 {{Cssxref("angle")}} 或 {{Cssxref("percentage")}} 的其中一个值。
+
+当指定允许的类型为 `<angle-percentage>` 时，这意味着百分比值会解析为一个角度，因此可以在 {{Cssxref("calc", "calc()")}} 表达式中使用。
 
 ## 语法
 
-有关此类型的详细文档，请参阅 {{Cssxref("angle")}} 和 {{Cssxref("percentage")}}
+请参阅 {{Cssxref("angle")}} 和 {{Cssxref("percentage")}} 的文档，了解该类型允许使用的语法的详细信息。
 
-## 在 calc() 中使用这个类型
+## 形式语法
 
-当 `<angle-percentage>` 被正确定义后，它就代表了一个可以被 {{Cssxref("calc()")}} 表达式解析的角度
+{{csssyntax}}
 
 ## 规范
 
@@ -22,3 +26,9 @@ slug: Web/CSS/angle-percentage
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_Types)
+- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [`conic-gradient()`](/zh-CN/docs/Web/CSS/gradient/conic-gradient) 和 [`repeating-conic-gradient()`](/zh-CN/docs/Web/CSS/gradient/repeating-conic-gradient)

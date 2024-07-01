@@ -1,7 +1,6 @@
 ---
 title: background-size
 slug: Web/CSS/background-size
-translation_of: Web/CSS/background-size
 ---
 
 {{CSSRef}}
@@ -75,9 +74,9 @@ Le calcul des valeurs dépend des dimensions intrinsèques de l'image (sa largeu
 - Une image matricielle (telle qu'une image JPG) possède toujours des dimensions intrinsèques et des proportions intrinsèques.
 - Une image vectorielle (telle qu'une image SVG) ne possède pas nécessairement de dimensions intrinsèques. Si elle possède à la fois une dimension verticale et une dimension horizontale intrinsèques, elle possèdera alors des proportions intrinsèques. Si elle ne possède qu'une ou aucune dimension intrinsèque, elle peut avoir ou ne pas avoir de proportions.
 - Un dégradé CSS (cf. [`<gradient>`](/fr/docs/Web/CSS/gradient)) ne possède ni dimension ni proportion intrinsèque.
-- Les images d'arrière-plan créées avec la fonction [`element()`](/fr/docs/Web/CSS/element()) utiliseront les dimensions et proportions intrinsèques de l'élément générateur.
+- Les images d'arrière-plan créées avec la fonction [`element()`](</fr/docs/Web/CSS/element()>) utiliseront les dimensions et proportions intrinsèques de l'élément générateur.
 
-> **Note :** Pour Gecko, les images d'arrière-plan créées avec la fonction [`element()`](/fr/docs/Web/CSS/element()) sont actuellement traitées comme des images ayant les dimensions de l'élément ou, si la zone de positionnement est un élément SVG, avec les proportions intrinsèques. Ce comportement n'est pas standard.
+> **Note :** Pour Gecko, les images d'arrière-plan créées avec la fonction [`element()`](</fr/docs/Web/CSS/element()>) sont actuellement traitées comme des images ayant les dimensions de l'élément ou, si la zone de positionnement est un élément SVG, avec les proportions intrinsèques. Ce comportement n'est pas standard.
 
 Selon le caractère intrinsèque ou non des dimensions et des proportions, la taille d'affichage de l'image d'arrière-plan est calculée de la façon suivante&nbsp;:
 
@@ -141,8 +140,7 @@ Prenons une image d'une taille qui ne correspond pas forcément à notre documen
 #### HTML
 
 ```html
-<div class="tiledBackground">
-</div>
+<div class="tiledBackground"></div>
 ```
 
 #### CSS

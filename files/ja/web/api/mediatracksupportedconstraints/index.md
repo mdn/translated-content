@@ -32,6 +32,7 @@ WebIDLのインターフェイス定義はこのように動作するため、�
 - {{domxref("MediaTrackSupportedConstraints.resizeMode", "resizeMode")}}
   - : 論理値で、値が `true` ならば、現在の環境で [`resizeMode`](/ja/docs/Web/API/MediaTrackConstraints#resizemode) 制約に対応しています。
 - {{domxref("MediaTrackSupportedConstraints.volume", "volume")}}
+
   - : 論理値で、値が `true` ならば、現在の環境で [`volume`](/ja/docs/Web/API/MediaTrackConstraints#volume) 制約に対応しています。
 
 - {{domxref("MediaTrackSupportedConstraints.sampleRate", "sampleRate")}}

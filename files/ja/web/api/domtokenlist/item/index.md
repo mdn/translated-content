@@ -1,18 +1,21 @@
 ---
-title: DOMTokenList.item()
+title: "DOMTokenList: item() メソッド"
+short-title: item()
 slug: Web/API/DOMTokenList/item
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
 
 **`item()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、リスト内の項目をその位置から取得します。
 
-> **メモ:** このメソッドは `[]` 演算子と等価です。
-> したがって、 `aList.item(i)` は `aList[i]` と同じです。 {{jsxref("Array")}} の [[] 演算子](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#添字による配列の要素へのアクセス)と同様です。
+> **メモ:** このメソッドは[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ブラケット表記法)と等価です。
+> したがって、 `aList.item(i)` は `aList[i]` と同じです。
 
 ## 構文
 
-```js
+```js-nolint
 tokenList.item(index)
 ```
 
@@ -45,7 +48,7 @@ tokenList.item(index)
 ```js
 const span = document.querySelector("span");
 const classes = span.classList;
-const item = classes.item(classes.length-1);
+const item = classes.item(classes.length - 1);
 span.textContent = item;
 ```
 

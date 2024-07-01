@@ -1,14 +1,6 @@
 ---
 title: handler.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/ownKeys
 ---
 
 {{JSRef}}
@@ -21,8 +13,7 @@ La méthode **`handler.ownKeys()`** est une trappe pour {{jsxref("Object.getOwnP
 
 ```js
 var p = new Proxy(cible, {
-  ownKeys: function(cible) {
-  }
+  ownKeys: function (cible) {},
 });
 ```
 
@@ -64,15 +55,18 @@ Si les invariants suivants ne sont pas respectés, le proxy renverra une excepti
 Dans l'exemple suivant, on intercepte l'action de {{jsxref("Object.getOwnPropertyNames()")}}.
 
 ```js
-var p = new Proxy({}, {
-  ownKeys: function(target) {
-    console.log("appelée");
-    return ["a", "b", "c"];
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    ownKeys: function (target) {
+      console.log("appelée");
+      return ["a", "b", "c"];
+    },
+  },
+);
 
 console.log(Object.getOwnPropertyNames(p)); // "appelée"
-                                            // [ "a", "b", "c"]
+// [ "a", "b", "c"]
 ```
 
 L'exemple suivant ne respecte pas l'ensemble des invariants :
@@ -82,13 +76,13 @@ var obj = {};
 Object.defineProperty(obj, "a", {
   configurable: false,
   enumerable: true,
-  value: 10 }
-);
+  value: 10,
+});
 
 var p = new Proxy(obj, {
-  ownKeys: function(cible) {
+  ownKeys: function (cible) {
     return [123, 12.5, true, false, undefined, null, {}, []];
-  }
+  },
 });
 
 console.log(Object.getOwnPropertyNames(p));

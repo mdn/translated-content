@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
 ## 構文
 
 ```js
-Atomics.compareExchange(typedArray, index, expectedValue, replacementValue)
+Atomics.compareExchange(typedArray, index, expectedValue, replacementValue);
 ```
 
 ### 引数

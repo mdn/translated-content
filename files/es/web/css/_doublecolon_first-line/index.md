@@ -1,5 +1,5 @@
 ---
-title: '::first-line (:first-line)'
+title: "::first-line (:first-line)"
 slug: Web/CSS/::first-line
 ---
 
@@ -35,12 +35,15 @@ Sólo unas pocas propiedades de CSS se pueden usar con el pseudoelemento `::firs
 ### HTML
 
 ```html
-<p>Los estilos sólo se aplicarán en la primera línea de este párrafo.
-Posteriormente, todo el texto tendrá el estilo normal.
-¿Ves?</p>
+<p>
+  Los estilos sólo se aplicarán en la primera línea de este párrafo.
+  Posteriormente, todo el texto tendrá el estilo normal. ¿Ves?
+</p>
 
-<span>La primera línea de este elemento no recibe ningún estilo
-especial, porque no es un elemento de bloque.</span>
+<span
+  >La primera línea de este elemento no recibe ningún estilo especial, porque no
+  es un elemento de bloque.</span
+>
 ```
 
 ### CSS
@@ -49,7 +52,6 @@ especial, porque no es un elemento de bloque.</span>
 ::first-line {
   color: blue;
   text-transform: uppercase;
-
 
   /* ADVERTENCIA: NO USES ESTOS*/
   /* Muchas propiedades son inválidas en pseudoelementos ::first-line */

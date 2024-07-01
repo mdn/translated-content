@@ -1,20 +1,9 @@
 ---
 title: Command
 slug: Mozilla/Add-ons/WebExtensions/API/commands/Command
-tags:
-  - API
-  - Add-ons
-  - Command
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - commands
-translation_of: Mozilla/Add-ons/WebExtensions/API/commands/Command
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Information sur une commande. Cela contient les informations spécifiées pour la commande dans la [`commande` clef manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
 
@@ -31,9 +20,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `shortcut`{{optional_inline}}
   - : `string`. clef(s) utilisée pour exécuter cette commande , spécifiée comme une chaîne comme "Ctrl+Shift+Y".
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.commands.Command")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

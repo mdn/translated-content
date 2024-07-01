@@ -35,22 +35,20 @@ Os links criados com o método `link()` tornam-se elementos na array de links do
 O exemplo a seguir exibe a palavra "MDN" como um link que retorna o usuário à Mozilla Developer Network.
 
 ```js
-var hotText = 'MDN';
-var URL = 'https://developer.mozilla.org/';
+var hotText = "MDN";
+var URL = "https://developer.mozilla.org/";
 
-console.log('Clique para retornar à' + hotText.link(URL));
+console.log("Clique para retornar à" + hotText.link(URL));
 // Clique para retornar à <a href="https://developer.mozilla.org/">MDN</a>
 ```
 
 ## Especificações
 
-| Specification                                                                                            |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.link', 'String.prototype.link')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.link")}}
+{{Compat}}
 
 ## Veja também
 

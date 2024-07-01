@@ -67,13 +67,15 @@ slug: Web/API/Response
 在我们的[基础实例](https://github.com/mdn/fetch-examples/tree/master/basic-fetch) ([点击运行](https://mdn.github.io/fetch-examples/basic-fetch/)) 中，我们使用了一个简单的函数调用，调用了 `fetch()` 函数来获取一张图片并将其显示在 HTML 的 IMG 标签中，`fetch()` 函数返回了一个 Promise，它使用与资源获取操作相关联的 Response 对象进行解析。你会注意到，由于我们正在请求一张图片，我们需要运行 {{domxref("Body.blob")}}（{{domxref("Response")}} 实现了），以为响应提供正确的 MIME 类型。
 
 ```js
-const image = document.querySelector('.my-image');
-fetch('flowers.jpg').then(function(response) {
-  return response.blob();
-}).then(function(blob) {
-  const objectURL = URL.createObjectURL(blob);
-  image.src = objectURL;
-});
+const image = document.querySelector(".my-image");
+fetch("flowers.jpg")
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (blob) {
+    const objectURL = URL.createObjectURL(blob);
+    image.src = objectURL;
+  });
 ```
 
 你也可以使用 {{domxref("Response.Response()")}} 这样的构造方法，来创建自定义的 `Response` 对象：
@@ -90,8 +92,8 @@ const response = new Response();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

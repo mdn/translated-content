@@ -24,7 +24,7 @@ var ballRadius = 10;
 现在更新绘制球的 drawBall() 函数：
 
 ```js
-ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
 ```
 
 ### 从顶部和底部弹起
@@ -32,8 +32,8 @@ ctx.arc(x, y, ballRadius, 0, Math.PI*2);
 有四面墙壁可以让它反弹回来，我们先来看上面的那面墙。我们需要判断球运动的每一帧，球体是否与画布的顶部边缘接触。如果有接触，我们将会改变球体的运动方向，使它向相反的方向移动，并保证它在画布的可见范围之内。记住坐标系统的左上角，让我们开始并加以下代码：
 
 ```js
-if(y + dy < 0) {
-    dy = -dy;
+if (y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -42,8 +42,8 @@ if(y + dy < 0) {
 上面的代码将处理球与画布顶部边缘的反射，现在让我们思考一下底部边缘如何处理：
 
 ```js
-if(y + dy > canvas.height) {
-    dy = -dy;
+if (y + dy > canvas.height) {
+  dy = -dy;
 }
 ```
 
@@ -52,8 +52,8 @@ if(y + dy > canvas.height) {
 我们可以将这两句冗长的代码合二为一：
 
 ```js
-if(y + dy > canvas.height || y + dy < 0) {
-    dy = -dy;
+if (y + dy > canvas.height || y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -64,12 +64,12 @@ if(y + dy > canvas.height || y + dy < 0) {
 我们有顶部和底部的边缘，所以我们来考虑一下左边和右边的边缘。实际上非常相似，你所要做的就是颠倒`x`而不是`y`:
 
 ```js
-if(x + dx > canvas.width || x + dx < 0) {
-    dx = -dx;
+if (x + dx > canvas.width || x + dx < 0) {
+  dx = -dx;
 }
 
-if(y + dy > canvas.height || y + dy < 0) {
-    dy = -dy;
+if (y + dy > canvas.height || y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -84,11 +84,11 @@ if(y + dy > canvas.height || y + dy < 0) {
 这是因为我们正在计算墙和球的中心碰撞点，而我们应该围绕它的周长来做。如果碰到墙壁，球应该会弹起来，而不是陷入墙壁一半时，所以让我们来调整一下我们的判断条件。更新你之前添加的代码：
 
 ```js
-if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-    dx = -dx;
+if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+  dx = -dx;
 }
-if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
-    dy = -dy;
+if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+  dy = -dy;
 }
 ```
 

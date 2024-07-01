@@ -1,9 +1,13 @@
 ---
-title: パケット
+title: Packet (パケット)
 slug: Glossary/Packet
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-パケット、またはネットワークパケットはは、ネットワーク上で送られる整形されたデータの塊です。パケットはユーザーデータと制御情報を含みます。ユーザーデータは*ペイロード*として知られています。制御情報はペイロードを送るための制御情報です。この制御情報は、送信元と送信先のネットワークアドレス、順序情報、エラー検知コードで構成されており、通常パケットのヘッダーとフッターで見られます。
+{{GlossarySidebar}}
+
+パケット、またはネットワークパケットは、ネットワーク上で送られる整形されたデータの塊です。パケットはユーザーデータと制御情報を含みます。ユーザーデータは*ペイロード*とも呼ばれます。制御情報はペイロードを送るための情報です。この制御情報は、送信元と送信先のネットワークアドレス、順序情報、エラー検知コードで構成されており、通常パケットのヘッダーとフッターで見られます。
 
 ## パケットに含まれるもの
 
@@ -29,10 +33,10 @@ slug: Glossary/Packet
 
 ### ユーザーデータ - ペイロード
 
-ペイロードとは、アプリケーションに代わって運ばれるデータのことである。ペイロードの長さは通常可変で、ネットワークプロトコルや場合によっては経路上の機器によって設定される最大値までの長さがあります。
+ペイロードとは、アプリケーションに代わって運ばれるデータのことです。ペイロードの長さは通常可変で、ネットワークプロトコルや場合によっては経路上の機器によって設定される最大値までの長さがあります。
 
 ## 使用したリファレンス
 
-- <https://en.wikipedia.org/wiki/Network_packet>
-- <https://en.wikipedia.org/wiki/Hop_(networking)>
-- <https://www.techradar.com/news/computing/how-error-detection-and-correction-works-1080736>
+- [Network packet](https://en.wikipedia.org/wiki/Network_packet)
+- [Hop (networking)](<https://en.wikipedia.org/wiki/Hop_(networking)>)
+- [How error detection and correction works](https://www.techradar.com/news/computing/how-error-detection-and-correction-works-1080736)

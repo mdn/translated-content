@@ -15,9 +15,9 @@ slug: Web/CSS/margin-top
 
 ```css
 /* <length> 값 */
-margin-top: 10px;  /* 절대 길이 */
-margin-top: 1em;   /* 글씨 크기에 상대적 */
-margin-top: 5%;    /* 가장 가까운 블록 컨테이너의 너비에 상대적 */
+margin-top: 10px; /* 절대 길이 */
+margin-top: 1em; /* 글씨 크기에 상대적 */
+margin-top: 5%; /* 가장 가까운 블록 컨테이너의 너비에 상대적 */
 
 /* 키워드 값 */
 margin-top: auto;
@@ -46,10 +46,18 @@ margin-top: unset;
 ## 예제
 
 ```css
-.content { margin-top:   5%; }
-.sidebox { margin-top: 10px; }
-.logo    { margin-top: -5px; }
-#footer  { margin-top:  1em; }
+.content {
+  margin-top: 5%;
+}
+.sidebox {
+  margin-top: 10px;
+}
+.logo {
+  margin-top: -5px;
+}
+#footer {
+  margin-top: 1em;
+}
 ```
 
 ## 명세

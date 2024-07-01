@@ -54,7 +54,7 @@ HEAD /index.html
 
 ## 브라우저 호환성
 
-{{Compat("http.methods.HEAD")}}
+{{Compat}}
 
 ## 같이 보기
 

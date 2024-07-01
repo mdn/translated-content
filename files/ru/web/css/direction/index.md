@@ -1,7 +1,6 @@
 ---
 title: direction
 slug: Web/CSS/direction
-translation_of: Web/CSS/direction
 ---
 
 {{CSSRef}}
@@ -58,18 +57,15 @@ blockquote {
 }
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                    | Status                                   | Comment             |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Writing Modes', '#direction', 'direction')}} | {{Spec2('CSS3 Writing Modes')}} | No change.          |
-| {{SpecName('CSS2.1', 'visuren.html#direction', 'direction')}} | {{Spec2('CSS2.1')}}                 | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("writing-mode")}}

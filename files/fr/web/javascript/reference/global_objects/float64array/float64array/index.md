@@ -1,8 +1,6 @@
 ---
 title: Constructeur Float64Array()
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array
-browser-compat: javascript.builtins.Float64Array.Float64Array
 ---
 
 {{JSRef}}
@@ -46,7 +44,7 @@ console.log(float64.length); // 2
 console.log(float64.BYTES_PER_ELEMENT); // 8
 
 // À partir d'un tableau
-const arr = new Float64Array([21,31]);
+const arr = new Float64Array([21, 31]);
 console.log(arr[1]); // 31
 
 // À partir d'un autre tableau typé
@@ -59,7 +57,9 @@ const buffer = new ArrayBuffer(32);
 const z = new Float64Array(buffer, 0, 4);
 
 // À partir d'un itérable
-const iterable = function*(){ yield* [1,2,3]; }();
+const iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 const float64 = new Float64Array(iterable);
 // Float64Array[1, 2, 3]
 ```

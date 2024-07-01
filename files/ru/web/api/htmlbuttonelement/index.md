@@ -1,7 +1,6 @@
 ---
 title: HTMLButtonElement
 slug: Web/API/HTMLButtonElement
-translation_of: Web/API/HTMLButtonElement
 ---
 
 {{APIRef("HTML DOM")}}
@@ -59,7 +58,7 @@ _Наследует свойства от его родителя, {{domxref("HT
       <td>
         <p>
           URI ресурса, обрабатывающего информацию, отправленную кнопкой. Если
-          задан, то переопределяет {{htmlattrxref("action", "form")}}
+          задан, то переопределяет <a href="/ru/docs/Web/HTML/Element/form#action"><code>action</code></a>
           атрибут {{HTMLElement("form")}} элемента, который является
           его владельцем.
         </p>
@@ -71,7 +70,7 @@ _Наследует свойства от его родителя, {{domxref("HT
       <td>
         Тип содержимого, используемый для отправки формы на сервер. Если указан
         этот атрибут, то он переопределяет
-        {{htmlattrxref("enctype", "form")}} атрибут элемента
+        <a href="/ru/docs/Web/HTML/Element/form#enctype"><code>enctype</code></a> атрибут элемента
         {{HTMLElement("form")}}, который является владельцем этого
         элемента.
       </td>
@@ -82,7 +81,7 @@ _Наследует свойства от его родителя, {{domxref("HT
       <td>
         <p>
           HTTP метод, который браузер использует для отправки формы. Если задан,
-          тогда он переопределяет {{htmlattrxref("method", "form")}}
+          тогда он переопределяет <a href="/ru/docs/Web/HTML/Element/form#method"><code>method</code></a>
           атрибут {{HTMLElement("form")}} своего владельца.
         </p>
       </td>
@@ -94,7 +93,7 @@ _Наследует свойства от его родителя, {{domxref("HT
         <p>
           Показывает что форма не будет проверена при отправке. Если задано,
           тогда переопределяет
-          {{htmlattrxref("novalidate", "form")}} атрибут
+          <a href="/ru/docs/Web/HTML/Element/form#novalidate"><code>novalidate</code></a> атрибут
           {{HTMLElement("form")}} своего владельца.
         </p>
       </td>
@@ -106,7 +105,7 @@ _Наследует свойства от его родителя, {{domxref("HT
         <p>
           Имя или ключевое слово, указывающее, где должен отображаться ответ,
           полученный после отправки формы. Если задано, тогда переопределяет
-          {{htmlattrxref("target", "form")}} атрибут
+          <a href="/ru/docs/Web/HTML/Element/form#target"><code>target</code></a> атрибут
           {{HTMLElement("form")}} своего владельца.
         </p>
       </td>
@@ -133,8 +132,7 @@ _Наследует свойства от его родителя, {{domxref("HT
       <td>
         <p>
           Имя объекта отправляемое с формой.
-          {{HTMLVersionInline(5)}}Если задано, не должно быть пустой
-          строкой.
+          Если задано, не должно быть пустой строкой.
         </p>
       </td>
     </tr>
@@ -160,7 +158,7 @@ _Наследует свойства от его родителя, {{domxref("HT
           <li>
             <code>"submit"</code>: Кнопка отправки формы. Это значение по
             умолчанию, если атрибут не определён,
-            {{HTMLVersionInline(5)}} или если он динамически изменяется
+            или если он динамически изменяется
             на пустое или недопустимое значение.
           </li>
           <li><code>"reset"</code>: Кнопка сброса формы.</li>
@@ -212,26 +210,21 @@ _Наследует свойства от его родителя, {{domxref("HT
 
 _Наследует свойства от его родителя, {{domxref("HTMLElement")}}._
 
-| Name                                    | Return Type                  | Description                        |
-| --------------------------------------- | ---------------------------- | ---------------------------------- |
+| Name                                    | Return Type            | Description                        |
+| --------------------------------------- | ---------------------- | ---------------------------------- |
 | `checkValidity()`                       | {{domxref("Boolean")}} | Not supported for button elements. |
-| `setCustomValidity(in DOMString error)` | `void`                       | Not supported for button elements. |
+| `setCustomValidity(in DOMString error)` | `void`                 | Not supported for button elements. |
 
 WIth Gecko-based browser, use the {{cssxref(":-moz-submit-invalid")}} pseudo-class to style submit buttons based on the validation of a form.
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                            | Status                           | Comment                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "text-level-semantics.html#the-a-element", "HTMLAnchorElement")}} | {{Spec2('HTML WHATWG')}} | The following attribute has been added: `menu`. The `type` attribute can take one more value, `"menu"`.                                                                                                                                                                                                                                                                                                                          |
-| {{SpecName('HTML5 W3C', "text-level-semantics.html#the-a-element", "HTMLAnchorElement")}} | {{Spec2('HTML5 W3C')}}     | The attributes `tabindex` and `accesskey`, are now defined on {{domxref("HTMLElement")}}. The following attributes have been added: `autofocus`, `formAction`, `formEncType`, `formMethod`, `formNoValidate`, `formTarget`, `labels`, `validity`, `validationMessage`, and `willValidate`. The following methods have been added: `checkValidity()`, `setCustomValidity()`. The `type` attribute is no more read-only. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-ID-48250443', 'HTMLAnchorElement')}}                     | {{Spec2('DOM2 HTML')}}     | No change from {{SpecName("DOM1")}}.                                                                                                                                                                                                                                                                                                                                                                                     |
-| {{SpecName('DOM1', 'level-one-html.html#ID-48250443', 'HTMLAnchorElement')}}                     | {{Spec2('DOM1')}}         | Initial definition.                                                                                                                                                                                                                                                                                                                                                                                                              |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - HTML element implementing this interface: {{ HTMLElement("button") }}

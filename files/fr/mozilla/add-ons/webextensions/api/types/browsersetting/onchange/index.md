@@ -1,29 +1,18 @@
 ---
 title: onChange
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange
-tags:
-  - API
-  - Add-ons
-  - BrowserSetting
-  - Event
-  - Extensions
-  - Privacy
-  - Reference
-  - WebExtensions
-  - onchange
-translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'événement `BrowserSetting.onChanged` est déclenché lorsque le paramètre est modifié.
 
 ## Syntaxe
 
 ```js
-BrowserSetting.onChanged.addListener(listener)
-BrowserSetting.onChanged.removeListener(listener)
-BrowserSetting.onChanged.hasListener(listener)
+BrowserSetting.onChanged.addListener(listener);
+BrowserSetting.onChanged.removeListener(listener);
+BrowserSetting.onChanged.hasListener(listener);
 ```
 
 Les événement ont trois fonctions :
@@ -74,9 +63,9 @@ Les événement ont trois fonctions :
               </tbody>
             </table>
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.types.BrowserSetting.onChange")}}
+{{Compat}}
 
 ## Exemples
 

@@ -1,11 +1,6 @@
 ---
 title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
-tags:
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
-original_slug: Web/JavaScript/Reference/Objets_globaux/parseInt
 ---
 
 {{jsSidebar("Objects")}}
@@ -28,7 +23,7 @@ parseInt(string, base);
   - : La valeur qu'on souhaite analyser et convertir. Si l'argument `string` n'est pas une chaîne de caractères, elle sera convertie en une chaîne (grâce à l'opération abstraite [`ToString`](https://www.ecma-international.org/ecma-262/6.0/#sec-tostring)) . Les blancs contenus au début de l'argument sont ignorés.
 - `base`
 
-  - : Un entier compris entre 2 et 36 qui représente la [base](https://fr.wikipedia.org/wiki/Base_%28arithm%C3%A9tique%29) utilisée pour la valeur représentée dans la chaîne. La base communément utilisée est la base décimale et on utilisera donc `10` dans ce cas pour ce paramètre.
+  - : Un entier compris entre 2 et 36 qui représente la [base](https://fr.wikipedia.org/wiki/Base_%28arithmétique%29) utilisée pour la valeur représentée dans la chaîne. La base communément utilisée est la base décimale et on utilisera donc `10` dans ce cas pour ce paramètre.
 
     > **Attention :** La base par défaut n'est pas 10. Ce paramètre doit toujours être utilisé, en effet s'il n'est pas spécifié, le comportement de la fonction n'est pas garanti et peut varier d'une plate-forme à une autre.
 
@@ -82,8 +77,8 @@ Les exemples suivants renvoient **`NaN`** :
 
 ```js
 parseInt("Coucou", 8); // Ce sont des lettres et pas des chiffres
-parseInt("546", 2);    // Ces chiffres ne sont pas valides pour une représentation
-                       // binaire
+parseInt("546", 2); // Ces chiffres ne sont pas valides pour une représentation
+// binaire
 ```
 
 Les exemples suivants renvoient tous **`-15`** :
@@ -92,7 +87,7 @@ Les exemples suivants renvoient tous **`-15`** :
 parseInt("-F", 16);
 parseInt("-0F", 16);
 parseInt("-0XF", 16);
-parseInt(-15.1, 10)
+parseInt(-15.1, 10);
 parseInt("-17", 8);
 parseInt("-15", 10);
 parseInt("-1111", 2);
@@ -125,7 +120,7 @@ Bien que cela soit fortement déconseillé par ECMAScript 3 et que cela soit int
 
 ```js
 parseInt("0e0"); // 0
-parseInt("08");  // 0, '8' n'est pas un chiffre octal.
+parseInt("08"); // 0, '8' n'est pas un chiffre octal.
 ```
 
 ### ECMAScript 5 supprime l'interprétation octale
@@ -144,19 +139,18 @@ Il est parfois utile d'avoir une fonction de conversion plus stricte. Pour cela,
 
 ```js
 filterInt = function (value) {
-  if (/^(-|\+)?(\d+|Infinity)$/.test(value))
-    return Number(value);
+  if (/^(-|\+)?(\d+|Infinity)$/.test(value)) return Number(value);
   return NaN;
-}
+};
 
-console.log(filterInt('421'));               // 421
-console.log(filterInt('-421'));              // -421
-console.log(filterInt('+421'));              // 421
-console.log(filterInt('Infinity'));          // Infinity
-console.log(filterInt('421e+0'));            // NaN
-console.log(filterInt('421hop'));            // NaN
-console.log(filterInt('hop1.61803398875'));  // NaN
-console.log(filterInt('1.61803398875'));     // NaN
+console.log(filterInt("421")); // 421
+console.log(filterInt("-421")); // -421
+console.log(filterInt("+421")); // 421
+console.log(filterInt("Infinity")); // Infinity
+console.log(filterInt("421e+0")); // NaN
+console.log(filterInt("421hop")); // NaN
+console.log(filterInt("hop1.61803398875")); // NaN
+console.log(filterInt("1.61803398875")); // NaN
 ```
 
 ## Spécifications

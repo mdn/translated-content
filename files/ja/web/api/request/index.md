@@ -69,7 +69,7 @@ l10n:
 次のスニペットでは、`Request()` コンストラクターを使用して (スクリプトと同じディレクトリーにある画像ファイルのために) 新しい request を生成し、いくつかリクエストのプロパティ値を返しています。
 
 ```js
-const request = new Request('https://www.mozilla.org/favicon.ico');
+const request = new Request("https://www.mozilla.org/favicon.ico");
 
 const url = request.url;
 const method = request.method;
@@ -89,7 +89,10 @@ fetch(request)
 以下のスニペットでは、 `Request()` コンストラクターにいくつかの初期化データと本体コンテンツを付けて、本体ペイロードを必要とする API リクエストのための新しいリクエストを生成します。
 
 ```js
-const request = new Request('https://example.com', {method: 'POST', body: '{"foo": "bar"}'});
+const request = new Request("https://example.com", {
+  method: "POST",
+  body: '{"foo": "bar"}',
+});
 
 const url = request.url;
 const method = request.method;
@@ -107,13 +110,14 @@ fetch(request)
     if (response.status === 200) {
       return response.json();
     } else {
-      throw new Error('Something went wrong on API server!');
+      throw new Error("Something went wrong on API server!");
     }
   })
   .then((response) => {
     console.debug(response);
     // …
-  }).catch((error) => {
+  })
+  .catch((error) => {
     console.error(error);
   });
 ```

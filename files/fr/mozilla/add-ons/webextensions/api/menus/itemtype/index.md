@@ -1,20 +1,9 @@
 ---
 title: menus.ItemType
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ItemType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - contextMenus
-  - itemtype
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/ItemType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type d'élément de menu.
 
@@ -31,9 +20,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont:
 - separator
   - : Une ligne séparant un groupe d'éléments.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.ItemType", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 

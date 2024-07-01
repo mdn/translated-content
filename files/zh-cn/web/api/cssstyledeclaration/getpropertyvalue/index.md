@@ -27,7 +27,7 @@ var value = style.getPropertyValue(property);
 
 ```js
 var declaration = document.styleSheets[0].cssRules[0].style;
-var value = declaration.getPropertyValue('margin'); // "1px 2px"
+var value = declaration.getPropertyValue("margin"); // "1px 2px"
 ```
 
 ## 规范

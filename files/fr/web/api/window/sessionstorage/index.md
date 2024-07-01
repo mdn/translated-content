@@ -1,9 +1,6 @@
 ---
 title: Window.sessionStorage
 slug: Web/API/Window/sessionStorage
-tags:
-  - API
-translation_of: Web/API/Window/sessionStorage
 ---
 
 {{APIRef}}
@@ -16,13 +13,13 @@ Il est à noter que les données stockées dans sessionStorage ou localStorage s
 
 ```js
 // Enregistrer des données dans sessionStorage
-sessionStorage.setItem('clé', 'valeur');
+sessionStorage.setItem("clé", "valeur");
 
 // Récupérer des données depuis sessionStorage
-var data = sessionStorage.getItem('clé');
+var data = sessionStorage.getItem("clé");
 
 // Supprimer des données de sessionStorage
-sessionStorage.removeItem('clé');
+sessionStorage.removeItem("clé");
 
 // Supprimer toutes les données de sessionStorage
 sessionStorage.clear();
@@ -37,7 +34,7 @@ Un objet {{domxref("Storage")}}.
 L'exemple de code suivant accède à l'objet de stockage de session associé au domaine actuel et y ajoute une donnée à l'aide de {{domxref("Storage.setItem()")}}.
 
 ```js
-sessionStorage.setItem('myCat', 'Tom');
+sessionStorage.setItem("myCat", "Tom");
 ```
 
 L'exemple suivant sauvegarde automatiquement le contenu d'un champ textuel. Si la page est accidentellement rafraîchie, le contenu du champ est restauré de sorte qu'aucune saisie n'est perdue.
@@ -54,7 +51,7 @@ if (sessionStorage.getItem("autosave")) {
 }
 
 // Écoute des changements de valeur du champ
-champ.addEventListener("change", function() {
+champ.addEventListener("change", function () {
   // Enregistrement de la saisie utilisateur dans le stockage de session
   sessionStorage.setItem("autosave", champ.value);
 });

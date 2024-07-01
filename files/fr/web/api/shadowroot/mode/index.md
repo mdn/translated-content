@@ -1,14 +1,6 @@
 ---
 title: ShadowRoot.mode
 slug: Web/API/ShadowRoot/mode
-tags:
-  - API
-  - Propriété
-  - Reference
-  - ShadowRoot
-  - mode
-  - shadow dom
-translation_of: Web/API/ShadowRoot/mode
 ---
 
 {{APIRef("Shadow DOM")}}
@@ -20,7 +12,7 @@ Lorsque le mode d'une racine _shadow_ vaut `closed`, les détails d'implémentat
 ## Syntaxe
 
 ```js
-var mode = shadowRoot.mode
+var mode = shadowRoot.mode;
 ```
 
 ### Valeur
@@ -30,15 +22,15 @@ Une valeur définie via l'énumération [`ShadowRootMode`](https://dom.spec.what
 ## Exemples
 
 ```js
-let customElem = document.querySelector('mon-element-shadow-dom');
+let customElem = document.querySelector("mon-element-shadow-dom");
 let shadow = customElem.shadowRoot;
 
 // Une autre façon de vérifier si la racine est ouverte :
 // on obtiendra null si elle est fermée
-if(shadow) {
+if (shadow) {
   // Si elle est ouverte, on ferme la racine pour
   // cacher ce qu'il y a à l'intérieur.
-  shadow.mode = 'closed';
+  shadow.mode = "closed";
 }
 ```
 

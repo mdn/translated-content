@@ -5,7 +5,7 @@ slug: Learn/Getting_started_with_the_web/CSS_basics
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
 
-**階層樣式表** (Cascading Stylesheets；CSS) 可用以塑造網站的特殊風格。例如這段文字要用一般的黑色，或是改用紅色標明重點？某段重要內容應該置於畫面的何處？想用什麼背景圖片及顏色裝飾你的網站？〈[CSS 基本概念](/zh-TW/Learn/Getting_started_with_the_web/CSS_basics)〉帶你入門。
+**階層樣式表** (Cascading Stylesheets；CSS) 可用以塑造網站的特殊風格。例如這段文字要用一般的黑色，或是改用紅色標明重點？某段重要內容應該置於畫面的何處？想用什麼背景圖片及顏色裝飾你的網站？〈[CSS 基本概念](/zh-TW/docs/Learn/Getting_started_with_the_web/CSS_basics)〉帶你入門。
 
 ## CSS 到底是什麼?
 
@@ -19,13 +19,13 @@ p {
 
 試看看在你的編輯器上建立新的檔案 `style.css` 並貼上這三行 CSS 程式碼，並存到你的`styles` 目錄。
 
-但我們還需要把 CSS 套用在 HTML 文件上。否則 CSS 的樣式效果，不會在瀏覽器的 HTML 檔案顯示。（如果你還未跟上我們的專案，請閱讀 [Dealing with files](/zh-TW/Learn/Getting_started_with_the_web/Dealing_with_files) 和 [HTML basics](/zh-TW/Learn/Getting_started_with_the_web/HTML_basics) 以找出你需要什麼）
+但我們還需要把 CSS 套用在 HTML 文件上。否則 CSS 的樣式效果，不會在瀏覽器的 HTML 檔案顯示。（如果你還未跟上我們的專案，請閱讀 [Dealing with files](/zh-TW/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 和 [HTML basics](/zh-TW/docs/Learn/Getting_started_with_the_web/HTML_basics) 以找出你需要什麼）
 
 1. 打開 `index.html` 文件，然後將下面一行貼到 head，也就是 `<head>` 和 `</head>` 標籤之間。
 
-    ```html
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-    ```
+   ```html
+   <link href="styles/style.css" rel="stylesheet" type="text/css" />
+   ```
 
 2. 存檔 `index.html` 並且在瀏覽器載入。你應該可以看到下面的頁面。
 
@@ -69,7 +69,9 @@ p {
 你可以選擇數種元素（elements）並同時用在同一個 rule set 上。可以用逗號（,）包含數個選擇器，如：
 
 ```css
-p,li,h1 {
+p,
+li,
+h1 {
   color: red;
 }
 ```
@@ -146,40 +148,44 @@ p,li,h1 {
 現在我們已經瀏覽過一些 CCS 的基礎，接下來我們開始增加更多的規則和資訊到我們的 style.css 檔案，讓我們範例中的字型和文字看起來更好.
 
 1. 第一步, 我們回到 [output from Google Fonts](/zh-TW/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like) 找到你存的字體。 加上 `<link ... >` 這個元素在你的 `index.html`文件裡的 head 中（在 `<head>` 跟 `</head>` 任何位置中）。
-    這一段 code 將頁面連結到樣式表，將 Open Sans 字體系列與網頁一起下載，並讓你在 HTML 元素上使用自己的樣式表進行設置。 它看起來會像:
+   這一段 code 將頁面連結到樣式表，將 Open Sans 字體系列與網頁一起下載，並讓你在 HTML 元素上使用自己的樣式表進行設置。 它看起來會像:
 
-    ```html
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    ```
+   ```html
+   <link
+     href="http://fonts.googleapis.com/css?family=Open+Sans"
+     rel="stylesheet"
+     type="text/css" />
+   ```
 
 2. 下一步, 刪除`style.css文件中`其他現有的字體。這是個很好的嘗試, 但紅色字體看起來真的有點醜。
 3. 把下面這行加在這個地方, 取代 placeholder line with the actual `font-family` line you got from Google 字體. (`font-family` 是指你想在文件中使用的字體.)
-    這規則
-    此規則首先為頁面設置整體的基本字體和字型(因 `<html>` 是整個頁面的父元素, 頁面中所有的元素會繼承同樣的字體和字型):
+   這規則
+   此規則首先為頁面設置整體的基本字體和字型(因 `<html>` 是整個頁面的父元素, 頁面中所有的元素會繼承同樣的字體和字型):
 
-    ```css
-    html {
-      font-size: 10px; /* px means 'pixels': the base font size is now 10 pixels high  */
-      font-family: placeholder: this should be the rest of the output you got from Google fonts
-    }
-    ```
+   ```css
+   html {
+     font-size: 10px; /* px means 'pixels': the base font size is now 10 pixels high  */
+     font-family: placeholder: this should be the rest of the output you got from Google fonts
+   }
+   ```
 
-    > **備註：** 我已增加了對於 "px" 的說明在上面. 任何在 CSS document 中 `/*` `*/` 內的文字是 **CSS 說明**, 瀏覽器在編譯時會忽略掉. 這是一個可以用來說明你做了什麼的幫助訊息.
+   > **備註：** 我已增加了對於 "px" 的說明在上面. 任何在 CSS document 中 `/*` `*/` 內的文字是 **CSS 說明**, 瀏覽器在編譯時會忽略掉. 這是一個可以用來說明你做了什麼的幫助訊息.
 
 4. 現在我們將會在 HTML body 中為包含文字的元素設置字體大小，`<h1>`,`<li>`,`<p>`。我們也設置標題居中，並在正文內容上設置一些行高和間距，使其更具可讀性
 
-    ```css
-    h1 {
-      font-size: 60px;
-      text-align: center;
-    }
+   ```css
+   h1 {
+     font-size: 60px;
+     text-align: center;
+   }
 
-    p, li {
-      font-size: 16px;
-      line-height: 2;
-      letter-spacing: 1px;
-    }
-    ```
+   p,
+   li {
+     font-size: 16px;
+     line-height: 2;
+     letter-spacing: 1px;
+   }
+   ```
 
 你可以依自己喜好修改 `px` 的值。你目前的工作成果可能如下圖所示：
 
@@ -213,11 +219,11 @@ CSS 佈局主要基於「box 模型」。在頁面空間的每個 box 都有下�
 
 ```css
 html {
-  background-color: #00539F;
+  background-color: #00539f;
 }
 ```
 
-這條規則將會套用到整個頁面的背景顏色。根據你在[規劃網站時選擇的顏色](/zh-TW/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Theme_color)修改其中的顏色代碼。
+這條規則將會套用到整個頁面的背景顏色。根據你在[規劃網站時選擇的顏色](/zh-TW/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#主題色彩)修改其中的顏色代碼。
 
 ### 設定 body 的風格（styling）
 
@@ -225,7 +231,7 @@ html {
 body {
   width: 600px;
   margin: 0 auto;
-  background-color: #FF9500;
+  background-color: #ff9500;
   padding: 0 20px 20px 20px;
   border: 5px solid black;
 }
@@ -245,7 +251,7 @@ body {
 h1 {
   margin: 0;
   padding: 20px 0;
-  color: #00539F;
+  color: #00539f;
   text-shadow: 3px 3px 1px black;
 }
 ```
@@ -278,12 +284,12 @@ Finally, we'll center the image to make it look better. We could use the `margin
 
 ## 結論
 
-看完了以上的介紹並依照各個步驟實做，你應該能自己寫出這樣的網頁（如下， [view it here](http://mdn.github.io/beginner-html-site-styled/)):
+看完了以上的介紹並依照各個步驟實做，你應該能自己寫出這樣的網頁（如下， [view it here](https://mdn.github.io/beginner-html-site-styled/)):
 
 ![a mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip.](website-screenshot-final.png)
 
 如果哪裡卡關了，你可以隨時造訪 Github 上的 [finished example code](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css) ，看看裡面的 code 和你寫的哪裡不同。
 
-這篇文章觸及的是非常基本的 CSS 介紹，若你有興趣想進一步了解，歡迎參考 [CSS Learning topic](/zh-TW/Learn/CSS)。
+這篇文章觸及的是非常基本的 CSS 介紹，若你有興趣想進一步了解，歡迎參考 [CSS Learning topic](/zh-TW/docs/Learn/CSS)。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}

@@ -70,7 +70,7 @@ l10n:
 以下のスニペットでは、{{domxref("Request.Request", "Request()")}}コンストラクターを使用して新しいリクエストを作成し（スクリプトと同じディレクトリーの画像ファイルに対して）、リクエスト出力先を保存しています。
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const myDestination = myRequest.destination; // returns the empty string by default
 ```
 

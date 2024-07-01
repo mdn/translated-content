@@ -24,7 +24,7 @@ A listaNos é uma variável que armazena a lista de nós de childNodes. O tipo d
 
 if (parg.hasChildNodes()) {
   // Primeiramente verificamos se o objeto não está vazio, se o objeto tem nós filhos
-  var filhos= parg.childNodes;
+  var filhos = parg.childNodes;
 
   for (var i = 0; i < filhos.length; i++) {
     // fazer algo com cada filho em filhos[i]
@@ -40,8 +40,8 @@ if (parg.hasChildNodes()) {
 // box é uma referência de objeto para um elemento com filhos
 
 while (box.firstChild) {
-    // A lista é VIVA, então ela re-indexará a cada chamada
-    box.removeChild(box.firstChild);
+  // A lista é VIVA, então ela re-indexará a cada chamada
+  box.removeChild(box.firstChild);
 }
 ```
 
@@ -51,11 +51,13 @@ Os itens na coleção de nós são objetos, não strings. Para recuperar dados d
 
 O objeto `document` tem 2 filhos: a declaração Doctype declaration e o elemento raiz, tipicamente referido como `documentElement`. (Em documentos (X)HTML este é o elemento `HTML`)
 
-## Especificação
+## Especificações
 
-- [W3C DOM 2 Core: childNodes](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-1451460987)
-- [W3C DOM 3 Core: childNodes](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#ID-1451460987)
-- [W3C DOM 3 NodeList interface](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#ID-536297177)
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ## Veja também
 

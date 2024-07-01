@@ -1,11 +1,6 @@
 ---
 title: Коллекции
 slug: Web/JavaScript/Guide/Keyed_collections
-tags:
-  - коллекции
-  - словари
-  - структура данных
-translation_of: Web/JavaScript/Guide/Keyed_collections
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
@@ -123,7 +118,7 @@ for (let item of mySet) console.log(item);
 Array.from(mySet);
 [...mySet2];
 
-mySet2 = new Set([1,2,3,4]);
+mySet2 = new Set([1, 2, 3, 4]);
 ```
 
 #### `Сравнение Array` и `Set`

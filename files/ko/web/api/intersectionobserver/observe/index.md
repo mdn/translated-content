@@ -30,24 +30,24 @@ IntersectionObserver.observe(targetElement);
 
 ```js
 // IntersectionObserver 등록
-const io = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
     // 주시 대상이 뷰포트 안으로 들어오면 active 클래스 추가
     if (entry.intersectionRatio > 0) {
-      entry.target.classList.add('active');
+      entry.target.classList.add("active");
     }
     // 아니면 active 클래스 제거
     else {
-      entry.target.classList.remove('active');
+      entry.target.classList.remove("active");
     }
-  })
-})
+  });
+});
 
 // 주시 대상 선언, 주시 시작
-const boxElList = document.querySelectorAll('.box');
+const boxElList = document.querySelectorAll(".box");
 boxElList.forEach((el) => {
   io.observe(el);
-})
+});
 ```
 
 ## 명세

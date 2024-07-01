@@ -1,13 +1,6 @@
 ---
 title: L'opérateur function
 slug: Web/JavaScript/Reference/Operators/function
-tags:
-  - Function
-  - JavaScript
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/function
-original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_function
 ---
 
 {{jsSidebar("Operators")}}
@@ -35,7 +28,7 @@ function [nom]([param1[, param2[, …, paramN]]]) {
 - `instructions`
   - : Les instructions constituant le corps de la fonction.
 
-> **Note :** À partir d'ES2015/ES6, on peut également former des expressions de fonction avec [des fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es).
+> **Note :** À partir d'ES2015/ES6, on peut également former des expressions de fonction avec [des fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées).
 
 ## Description
 
@@ -48,9 +41,9 @@ En JavaScript, les expressions de fonction ne sont pas remontées (à la différ
 ```js
 nonRemontée(); // TypeError: nonRemontée is not a function
 
-var nonRemontée = function() {
+var nonRemontée = function () {
   console.log("truc");
-}
+};
 ```
 
 ## Exemples
@@ -58,8 +51,8 @@ var nonRemontée = function() {
 L'exemple qui suit définit une fonction anonyme et l'assigne à une variable `x`. La fonction renvoie le carré de son paramètre :
 
 ```js
-var x = function(y) {
-   return y * y;
+var x = function (y) {
+  return y * y;
 };
 ```
 
@@ -69,25 +62,25 @@ Si on souhaite faire référence à une fonction au sein du corps de la fonction
 
 ```js
 var math = {
-  'factorielle': function factorielle(n) {
+  factorielle: function factorielle(n) {
     if (n <= 1) {
       return 1;
     }
     return n * factorielle(n - 1);
-  }
+  },
 };
 ```
 
-La variable affectée à l'expression de fonction aura une propriété `name`. Ce nom n'est pas modifié si la variable est réaffectée. Si le nom de la fonction est absent, ce sera celui de la variable (nom « implicite »). Cela vaut également pour [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) :
+La variable affectée à l'expression de fonction aura une propriété `name`. Ce nom n'est pas modifié si la variable est réaffectée. Si le nom de la fonction est absent, ce sera celui de la variable (nom « implicite »). Cela vaut également pour [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) :
 
 ```js
-var toto = function() {};
+var toto = function () {};
 console.log(toto.name); // "toto"
 
 var toto2 = toto;
 console.log(toto2.name); // "toto"
 
-var truc = function machin() {}
+var truc = function machin() {};
 console.log(truc.name); // "machin"
 ```
 
@@ -100,7 +93,7 @@ var a = "coucou";
 var b = "monde";
 
 // IIFE
-(function(x, y) {
+(function (x, y) {
   console.log(x + " " + y);
 })(a, b);
 // coucou monde
@@ -122,6 +115,6 @@ var b = "monde";
 - {{jsxref("Instructions/function*", "Instruction function*")}}
 - {{jsxref("Opérateurs/function*", "Expression function*")}}
 - {{jsxref("GeneratorFunction")}}
-- [Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es)
-- [Les expressions de fonctions asynchrones (l'opérateur `async function`)](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/async_function)
+- [Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées)
+- [Les expressions de fonctions asynchrones (l'opérateur `async function`)](/fr/docs/Web/JavaScript/Reference/Opérateurs/async_function)
 - [Les déclarations de fonctions asynchrones (l'instruction `async function`)](/fr/docs/Web/JavaScript/Reference/Instructions/async_function)

@@ -1,14 +1,6 @@
 ---
 title: CanvasRenderingContext2D.fill()
 slug: Web/API/CanvasRenderingContext2D/fill
-tags:
-  - API
-  - Canvas
-  - Method
-  - Reference
-  - Справка
-  - метод
-translation_of: Web/API/CanvasRenderingContext2D/fill
 ---
 
 {{APIRef}}
@@ -52,8 +44,8 @@ void ctx.fill(path[, fillRule]);
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
 ```
@@ -68,7 +60,8 @@ ctx.fill();
 </div>
 <textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.fill();</textarea>
+ctx.fill();</textarea
+>
 ```
 
 ```js hidden
@@ -84,14 +77,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -99,13 +92,11 @@ window.addEventListener("load", drawCanvas);
 
 {{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-## Характеристики
+## Спецификации
 
-| Характеристика                                                                                                                       | Статус                           | Комментарий |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fill", "CanvasRenderingContext2D.fill")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

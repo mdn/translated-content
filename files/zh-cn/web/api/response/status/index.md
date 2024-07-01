@@ -24,13 +24,13 @@ In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/gh-pa
 Note that at the top of the `fetch()` block we log the response `status` value to the console.
 
 ```js
-var myImage = document.querySelector('img');
+var myImage = document.querySelector("img");
 
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 
-fetch(myRequest).then(function(response) {
+fetch(myRequest).then(function (response) {
   console.log(response.status); // returns 200
-  response.blob().then(function(myBlob) {
+  response.blob().then(function (myBlob) {
     var objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });

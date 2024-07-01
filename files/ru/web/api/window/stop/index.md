@@ -1,8 +1,8 @@
 ---
 title: Window.stop()
 slug: Web/API/Window/stop
-translation_of: Web/API/Window/stop
 ---
+
 {{APIRef}}
 
 ## Аннотация
@@ -27,10 +27,8 @@ window.stop();
 
 ## Спецификации
 
-| Specification                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG','browsers.html#dom-window-stop','Window.stop()')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
-Метод stop() не поддерживается в Internet Explorer.
+{{Compat}}

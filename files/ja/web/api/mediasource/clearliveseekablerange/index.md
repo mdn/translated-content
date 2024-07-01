@@ -1,30 +1,33 @@
 ---
-title: MediaSource.clearLiveSeekableRange()
+title: "MediaSource: clearLiveSeekableRange() メソッド"
+short-title: clearLiveSeekableRange()
 slug: Web/API/MediaSource/clearLiveSeekableRange
+l10n:
+  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
-{{domxref("MediaSource")}} インターフェイスの **`clearLiveSeekableRange()`** メソッドは、{{domxref("MediaSource.setLiveSeekableRange()","setLiveSeekableRange()")}} の呼び出しで以前に設定されたシーク可能な範囲をクリアします。
+**`clearLiveSeekableRange()`** は {{domxref("MediaSource")}} インターフェイスのメソッドで、 {{domxref("MediaSource.setLiveSeekableRange()","setLiveSeekableRange()")}} の呼び出しで以前に設定されたシーク可能な範囲をクリアします。
 
 ## 構文
 
-```
-mediaSource.clearLiveSeekableRange()
+```js-nolint
+clearLiveSeekableRange()
 ```
 
-### パラメーター
+### 引数
 
 なし。
 
-### 戻り値
+### 返値
 
-{{jsxref('undefined')}}
+なし ({{jsxref("undefined")}})。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaSource.clearLiveSeekableRange")}}
+{{Compat}}

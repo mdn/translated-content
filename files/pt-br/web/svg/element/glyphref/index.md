@@ -37,7 +37,7 @@ Este elemento implementa a interface do [`SVGGlyphRefElement`](/pt-BR/DOM/SVGGly
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.glyphRef")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,15 +1,6 @@
 ---
 title: ParentNode.childElementCount
 slug: Web/API/Element/childElementCount
-tags:
-  - API
-  - DOM
-  - Noeuds
-  - Propriétés
-  - Reference
-  - parent
-translation_of: Web/API/ParentNode/childElementCount
-original_slug: Web/API/ParentNode/childElementCount
 ---
 
 {{APIRef("DOM") }}
@@ -35,7 +26,7 @@ var count = node.childElementCount;
 ```js
 var foo = document.getElementById("foo");
 if (foo.childElementCount > 0) {
-    // faire quelque chose
+  // faire quelque chose
 }
 ```
 
@@ -44,20 +35,25 @@ if (foo.childElementCount > 0) {
 Cette propriété n'est pas supportée par les versions antérieures à IE9 ni par IE9 ni par Safari. Ainsi, les objets Document, DocumentFragment dans ces navigateurs ne l'ont pas.
 
 ```js
-;(function(constructor) {
-    if (constructor &&
-        constructor.prototype &&
-        constructor.prototype.childElementCount == null) {
-        Object.defineProperty(constructor.prototype, 'childElementCount', {
-            get: function() {
-                var i = 0, count = 0, node, nodes = this.childNodes;
-                while (node = nodes[i++]) {
-                    if (node.nodeType === 1) count++;
-                }
-                return count;
-            }
-        });
-    }
+(function (constructor) {
+  if (
+    constructor &&
+    constructor.prototype &&
+    constructor.prototype.childElementCount == null
+  ) {
+    Object.defineProperty(constructor.prototype, "childElementCount", {
+      get: function () {
+        var i = 0,
+          count = 0,
+          node,
+          nodes = this.childNodes;
+        while ((node = nodes[i++])) {
+          if (node.nodeType === 1) count++;
+        }
+        return count;
+      },
+    });
+  }
 })(window.Node || window.Element);
 ```
 

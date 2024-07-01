@@ -23,7 +23,7 @@ slug: Web/API/Payment_Request_API
 
 你可以在[Using the Payment Request API](/zh-CN/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)中查看完整指南。
 
-> **备注：** 此 API 只有在设置了{{htmlattrxref("allowpaymentrequest","iframe")}}属性时才支持{{htmlelement("iframe")}}元素的跨域使用。
+> **备注：** 此 API 只有在设置了[`allowpaymentrequest`](/zh-CN/docs/Web/HTML/Element/iframe#allowpaymentrequest)属性时才支持{{htmlelement("iframe")}}元素的跨域使用。
 
 ## 接口
 

@@ -3,17 +3,11 @@ title: Element.shadowRoot
 slug: Web/API/Element/shadowRoot
 ---
 
-{{APIRef('Shadow DOM')}}{{SeeCompatTable}}
+{{APIRef('Shadow DOM')}}
 
 `Element.shadowRoot` 是只读属性，表示元素挂载的 shadow root。可以使用 {{domxref('Element.attachShadow')}} 给一个已存在的元素添加 shadow root。
 
-## 语法
-
-```plain
-var shadowroot = element.shadowRoot;
-```
-
-### 值
+## 值
 
 可以是一个{{domxref('ShadowRoot')}}实例对象，但如果一个 shadow root 的 {{domxref("ShadowRoot.mode", "mode")}}被设置为 `closed`那么它的值将会是 `null`。(详情请见 {{domxref("Element.attachShadow")}} ).
 
@@ -42,13 +36,13 @@ function updateStyle(elem) {
   const shadow = elem.shadowRoot;
   const childNodes = Array.from(shadow.childNodes);
 
-  childNodes.forEach(childNode => {
-    if (childNode.nodeName === 'STYLE') {
+  childNodes.forEach((childNode) => {
+    if (childNode.nodeName === "STYLE") {
       childNode.textContent = `
         div {
-          width: ${elem.getAttribute('l')}px;
-          height: ${elem.getAttribute('l')}px;
-          background-color: ${elem.getAttribute('c')};
+          width: ${elem.getAttribute("l")}px;
+          height: ${elem.getAttribute("l")}px;
+          background-color: ${elem.getAttribute("c")};
         }
       `;
     }
@@ -56,7 +50,7 @@ function updateStyle(elem) {
 }
 ```
 
-## 标准
+## 规范
 
 {{Specifications}}
 

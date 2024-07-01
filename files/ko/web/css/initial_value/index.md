@@ -2,6 +2,7 @@
 title: 초깃값
 slug: Web/CSS/initial_value
 ---
+
 {{cssref}}
 
 [CSS](/ko/docs/Web/CSS) 속성의 **초깃값**은 속성의 기본값으로, 속성 정의 표가 명시하고 있습니다. 초깃값의 사용처는 상속 여부에 따라 다릅니다.

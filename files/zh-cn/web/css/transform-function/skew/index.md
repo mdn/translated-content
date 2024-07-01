@@ -1,7 +1,6 @@
 ---
 title: skew()
 slug: Web/CSS/transform-function/skew
-original_slug: Web/CSS/transform-function/skew()
 ---
 
 {{CSSRef}}

@@ -44,7 +44,7 @@ A especificação do SVG permite que objetos gráficos sejam definidos para reus
 
 ### Atributos específicos
 
-_Não existem atributos específicos_
+_Não existem atributos específicos._
 
 ## DOM Interface
 
@@ -52,7 +52,7 @@ Este elemento implementa a interface [`SVGDefsElement`](/pt-BR/DOM/SVGDefsElemen
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.defs")}}
+{{Compat}}
 
 ## Veja também
 

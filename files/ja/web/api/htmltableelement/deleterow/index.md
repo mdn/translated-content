@@ -1,6 +1,9 @@
 ---
-title: HTMLTableElement.deleteRow()
+title: "HTMLTableElement: deleteRow() メソッド"
+short-title: deleteRow()
 slug: Web/API/HTMLTableElement/deleteRow
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,8 +12,8 @@ slug: Web/API/HTMLTableElement/deleteRow
 
 ## 構文
 
-```js
-HTMLTableElement.deleteRow(index)
+```js-nolint
+deleteRow(index)
 ```
 
 ### 引数
@@ -21,11 +24,12 @@ HTMLTableElement.deleteRow(index)
 
 ### 返値
 
-返値なし
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
-引数で指定された削除する行番号が、利用可能な行数以上である場合、あるいは負の数で、表の最終行を表す特別な値 `-1` ではない場合、例外 `INDEX_SIZE_ERR` が発生します。
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : `index` が利用可能な行数以上である場合、あるいは負の数で、表の最終行を表す特別な値 `-1` ではない場合に発生します。
 
 ## 例
 
@@ -35,16 +39,28 @@ HTMLTableElement.deleteRow(index)
 
 ```html
 <table>
-  <tr><td>セル 1.1</td><td>セル 1.2</td><td>セル 1.3</td></tr>
-  <tr><td>セル 2.1</td><td>セル 2.2</td><td>セル 2.3</td></tr>
-  <tr><td>セル 3.1</td><td>セル 3.2</td><td>セル 3.3</td></tr>
+  <tr>
+    <td>セル 1.1</td>
+    <td>セル 1.2</td>
+    <td>セル 1.3</td>
+  </tr>
+  <tr>
+    <td>セル 2.1</td>
+    <td>セル 2.2</td>
+    <td>セル 2.3</td>
+  </tr>
+  <tr>
+    <td>セル 3.1</td>
+    <td>セル 3.2</td>
+    <td>セル 3.3</td>
+  </tr>
 </table>
 ```
 
 ### JavaScript
 
 ```js
-let table = document.querySelector('table');
+let table = document.querySelector("table");
 
 // 2 番目の行を削除
 table.deleteRow(1);
@@ -52,7 +68,7 @@ table.deleteRow(1);
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## 仕様書
 

@@ -1,10 +1,9 @@
 ---
 title: Conclusão
 slug: Web/API/Canvas_API/Tutorial/Finale
-original_slug: Web/Guide/HTML/Canvas_tutorial/Conclusão
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
 
 Parabéns! Você terminou o [Canvas tutorial](/pt-BR/docs/Web/API/Canvas_API/Tutorial)! Este conhecimento ajudará você a fazer ótimos gráficos 2D na web.
 
@@ -12,7 +11,7 @@ Parabéns! Você terminou o [Canvas tutorial](/pt-BR/docs/Web/API/Canvas_API/Tut
 
 Há uma variedade de demonstrações e mais explicações sobre canvas nesses sites:
 
-- [Codepen.io](http://codepen.io/search?q=canvas)
+- [Codepen.io](https://codepen.io/search?q=canvas)
   - : Front End Developer Playground & Code Editor no navegador.
 - [HTML5CanvasTutorials](http://www.html5canvastutorials.com/)
   - : Exemplos para a maioria das APIs canvas.

@@ -3,7 +3,7 @@ title: attributeType
 slug: Web/SVG/Attribute/attributeType
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 该属性指定目标属性和它相对应的值处于哪个命名空间里。
 

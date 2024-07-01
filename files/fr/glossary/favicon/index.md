@@ -1,14 +1,9 @@
 ---
 title: Favicon
 slug: Glossary/Favicon
-tags:
-  - Glossaire
-  - Intro
-  - agent utilisateur
-  - favicon
-translation_of: Glossary/Favicon
-original_slug: Glossaire/Favicon
 ---
+
+{{GlossarySidebar}}
 
 Un favicon (icône de favori) est une petite icône incluse avec un site Web, qui s'affiche à des endroits tels que la barre d'addresse du navigateur, les onglets de page et le menu des signets. Notez cependant que la plupart des navigateurs modernes ont remplacé le favicon de la barre d'adresse par une image indiquant si le site Web utilise ou non {{Glossary("https","HTTPS")}}.
 

@@ -23,7 +23,7 @@ topSites API を使うには "topSites" の [API パーミッション](/ja/Add-
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.topSites")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

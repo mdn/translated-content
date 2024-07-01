@@ -33,12 +33,12 @@ slug: Web/API/BeforeUnloadEvent
 ## 示例
 
 ```js
-window.addEventListener("beforeunload", function( event ) {
-  event.returnValue = "\o/";
+window.addEventListener("beforeunload", function (event) {
+  event.returnValue = "\\o/";
 });
 
 //等同于
-window.addEventListener("beforeunload", function( event ) {
+window.addEventListener("beforeunload", function (event) {
   event.preventDefault();
 });
 ```
@@ -47,10 +47,10 @@ window.addEventListener("beforeunload", function( event ) {
 
 ```js
 window.addEventListener("beforeunload", function (e) {
-  var confirmationMessage = "\o/";
+  var confirmationMessage = "\\o/";
 
-  (e || window.event).returnValue = confirmationMessage;     //Gecko + IE
-  return confirmationMessage;                                //Webkit, Safari, Chrome etc.
+  (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+  return confirmationMessage; //Webkit, Safari, Chrome etc.
 });
 ```
 
@@ -60,7 +60,7 @@ window.addEventListener("beforeunload", function (e) {
 
 ## 参见
 
-- [`DOMContentLoaded`](/zh-CN/docs/Web/API/Window/DOMContentLoaded_event)
+- [`DOMContentLoaded`](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event)
 - [`readystatechange`](/zh-CN/docs/Web/API/Document/readystatechange_event)
 - [`load`](/zh-CN/docs/Web/API/Window/load_event)
 - [`beforeunload`](/zh-CN/docs/Web/API/Window/beforeunload_event)

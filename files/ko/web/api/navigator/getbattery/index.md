@@ -1,8 +1,8 @@
 ---
 title: window.navigator.battery
 slug: Web/API/Navigator/getBattery
-original_slug: Web/API/Navigator/battery
 ---
+
 {{ Apiref() }}
 
 `battery` 객체는 시스템의 배터리 충전 상태에 대한 정보를 제공합니다. 배터리의 충전 상태가 변화할때 발생하는 이벤트에 대한 처리도 가능 합니다. 이 객체는 [Battery Status API](/ko/docs/Web/API/Battery_Status_API) 의 구현입니다. 보다 자세한 내용, API, 샘플 코드 등은 문서를 참고 해 주세요.

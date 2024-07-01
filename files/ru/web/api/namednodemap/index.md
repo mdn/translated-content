@@ -1,7 +1,6 @@
 ---
 title: NamedNodeMap
 slug: Web/API/NamedNodeMap
-translation_of: Web/API/NamedNodeMap
 ---
 
 {{APIRef("DOM")}}
@@ -38,19 +37,14 @@ translation_of: Web/API/NamedNodeMap
 - {{domxref("NamedNodeMap.removeNamedItemNS()")}}
   - : Удаляет {{domxref ("Attr")}}, идентифицированный данным пространством имён и связанным локальным именем.
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                | Status                           | Comment                                                                |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#interface-namednodemap', 'NamedNodeMap')}} | {{Spec2('DOM WHATWG')}} | Имеет дело с {{domxref("Attr")}} вместо {{domxref("Node")}}  |
-| {{SpecName('DOM3 Core', 'core.html#ID-1780488922', 'NamedNodeMap')}} | {{Spec2('DOM3 Core')}}     | No change from {{SpecName('DOM2 Core')}}                        |
-| {{SpecName('DOM2 Core', 'core.html#ID-1780488922', 'NamedNodeMap')}} | {{Spec2('DOM2 Core')}}     | Added `getNamedItemNS()`, `setNamedItemNS()` and `removeNamedItemNS()` |
-| {{SpecName('DOM1', 'core.html#ID-1780488922', 'NamedNodeMap')}}         | {{Spec2('DOM1')}}         | Initial definition                                                     |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("Element.attributes")}}

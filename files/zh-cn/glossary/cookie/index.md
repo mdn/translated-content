@@ -1,16 +1,18 @@
 ---
 title: Cookie
 slug: Glossary/Cookie
+l10n:
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-Cookie 就是访问者在访问网站后留下的一个信息片段。
+{{GlossarySidebar}}
 
-Cookie 用于个性化用户的体验。可能包含用户在访问网站时的参数或输入。用户可以自定义浏览器来接受，拒绝或删除 Cookie。
+**Cookie** 是网站通过 Web 浏览器留在访问者电脑上的一小段信息。
 
-`Cookie 可以在服务器级别设置和修改，使用 Set-Cookie` [HTTP header](/zh-CN/docs/Web/HTTP/Cookies), 或者在 JavaScript 中用 [`document.cookie`](/zh-CN/docs/Web/API/Document/cookie).
+Cookie 用于个性化用户访问网站的体验。它可能包含用户在访问网站时的偏好或输入。用户可以自定义浏览器来接受、拒绝或删除 Cookie。
 
-## 了解更多
+Cookie 可以通过在服务器中使用 `Set-Cookie` [HTTP 标头](/zh-CN/docs/Web/HTTP/Cookies)，或者在 JavaScript 中用 [`document.cookie`](/zh-CN/docs/Web/API/Document/cookie) 进行设置、修改。
 
-### General Knowledge
+## 参见
 
-- [HTTP cookie](https://en.wikipedia.org/wiki/HTTP_cookie) on Wikipedia
+- 维基百科上的 [HTTP cookie](https://zh.wikipedia.org/wiki/Cookie)

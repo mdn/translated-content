@@ -55,7 +55,10 @@ console.log(top.innerHeight);
 ### HTML
 
 ```html
-<p>ブラウザーウィンドウの大きさを変更すると <code>resize</code> イベントが発生します。</p>
+<p>
+  ブラウザーウィンドウの大きさを変更すると
+  <code>resize</code> イベントが発生します。
+</p>
 <p>ウィンドウの高さ: <span id="height"></span></p>
 <p>ウィンドウの幅: <span id="width"></span></p>
 ```

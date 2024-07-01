@@ -7,10 +7,12 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
 
 **`Intl.DateTimeFormat.prototype.formatToParts()`** メソッドは、ロケールを考慮した {{jsxref("Intl.DateTimeFormat")}} フォーマッターが生成する文字列のロケールを考慮した書式化を可能にします。
 
+{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formattoparts.html", "taller")}}
+
 ## 構文
 
 ```js
-formatToParts(date)
+formatToParts(date);
 ```
 
 ### 引数
@@ -28,9 +30,9 @@ formatToParts(date)
 
 ```js
 [
-  { type: 'day', value: '17' },
-  { type: 'weekday', value: 'Monday' }
-]
+  { type: "day", value: "17" },
+  { type: "weekday", value: "Monday" },
+];
 ```
 
 渡される可能性がある type は以下のとおりです。
@@ -66,7 +68,7 @@ formatToParts(date)
 
 ## ポリフィル
 
-この機能のポリフィルは、[提案リポジトリー](https://github.com/zbraniecki/proposal-intl-formatToParts)から利用できます。
+この機能のポリフィルは、[提案リポジトリー](https://github.com/tc39/proposal-intl-formatToParts)から利用できます。
 
 ## 例
 
@@ -75,17 +77,17 @@ formatToParts(date)
 ```js
 var date = Date.UTC(2012, 11, 17, 3, 0, 42);
 
-var formatter = new Intl.DateTimeFormat('en-us', {
-  weekday: 'long',
-  year: 'numeric',
-  month: 'numeric',
-  day: 'numeric',
-  hour: 'numeric',
-  minute: 'numeric',
-  second: 'numeric',
+var formatter = new Intl.DateTimeFormat("en-us", {
+  weekday: "long",
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
   fractionalSecondDigits: 3,
   hour12: true,
-  timeZone: 'UTC'
+  timeZone: "UTC",
 });
 
 formatter.format(date);
@@ -99,34 +101,39 @@ formatter.formatToParts(date);
 
 // return value:
 [
-  { type: 'weekday',   value: 'Monday' },
-  { type: 'literal',   value: ', '     },
-  { type: 'month',     value: '12'     },
-  { type: 'literal',   value: '/'      },
-  { type: 'day',       value: '17'     },
-  { type: 'literal',   value: '/'      },
-  { type: 'year',      value: '2012'   },
-  { type: 'literal',   value: ', '     },
-  { type: 'hour',      value: '3'      },
-  { type: 'literal',   value: ':'      },
-  { type: 'minute',    value: '00'     },
-  { type: 'literal',   value: ':'      },
-  { type: 'second',    value: '42'     },
-  { type: 'fractionalSecond', value: '000' },
-  { type: 'literal',   value: ' '      },
-  { type: 'dayPeriod', value: 'AM'     }
-]
+  { type: "weekday", value: "Monday" },
+  { type: "literal", value: ", " },
+  { type: "month", value: "12" },
+  { type: "literal", value: "/" },
+  { type: "day", value: "17" },
+  { type: "literal", value: "/" },
+  { type: "year", value: "2012" },
+  { type: "literal", value: ", " },
+  { type: "hour", value: "3" },
+  { type: "literal", value: ":" },
+  { type: "minute", value: "00" },
+  { type: "literal", value: ":" },
+  { type: "second", value: "42" },
+  { type: "fractionalSecond", value: "000" },
+  { type: "literal", value: " " },
+  { type: "dayPeriod", value: "AM" },
+];
 ```
 
 これで情報は個別に利用可能になり、カスタマイズされた方法で再び書式化して連結することができます。例えば、{{jsxref("Array.prototype.map()")}}、<a href="/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions">アロー関数</a>、 <a href="/ja/docs/Web/JavaScript/Reference/Statements/switch">switch 文</a>、<a href="/ja/docs/Web/JavaScript/Reference/Template_literals">テンプレートリテラル</a>、 {{jsxref("Array.prototype.join()")}} などを使用しています。
 
 ```js
-var dateString = formatter.formatToParts(date).map(({type, value}) => {
-  switch (type) {
-    case 'dayPeriod': return `<b>${value}</b>`;
-    default : return value;
-  }
-}).join('');
+var dateString = formatter
+  .formatToParts(date)
+  .map(({ type, value }) => {
+    switch (type) {
+      case "dayPeriod":
+        return `<b>${value}</b>`;
+      default:
+        return value;
+    }
+  })
+  .join("");
 ```
 
 これにより、 `formatToParts()` メソッドを使用する際に、日の部分が太字になります。
@@ -150,11 +157,11 @@ df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 
 // return value
 [
-  { type: 'relatedYear', value: '2012' },
-  { type: 'literal', value: '年' },
-  { type: 'month', value: '十一月' },
-  { type: 'day', value: '4' }
-]
+  { type: "relatedYear", value: "2012" },
+  { type: "literal", value: "年" },
+  { type: "month", value: "十一月" },
+  { type: "day", value: "4" },
+];
 ```
 
 `year` オプションがバッグ内で設定されていない場合 (任意の値に設定されている場合)、結果には `relatedYear` のみが含まれます。
@@ -165,11 +172,11 @@ df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 
 // 返値
 [
-   { type: 'relatedYear', value: '2012' },
-   { type: 'literal', value: '年' },
-   { type: 'month', value: '十一月' },
-   { type: 'day', value: '4' }
-]
+  { type: "relatedYear", value: "2012" },
+  { type: "literal", value: "年" },
+  { type: "month", value: "十一月" },
+  { type: "day", value: "4" },
+];
 ```
 
 `year` を出力したい場合は、 `.format()` は一般的にこれらを並べて表示することができます。
@@ -185,30 +192,28 @@ df.format(Date.UTC(2012, 11, 17, 3, 0, 42));
 これにより、ロケールとカレンダーを両方の `format` で混在させることも可能になります。
 
 ```js
-let df = new Intl.DateTimeFormat("en-u-ca-chinese", {year: "numeric"});
+let df = new Intl.DateTimeFormat("en-u-ca-chinese", { year: "numeric" });
 let date = Date.UTC(2012, 11, 17, 3, 0, 42);
 df.format(date);
 
 // 返値
-2012(ren-chen)
+2012(ren - chen);
 ```
 
 および `formatToParts` の場合
 
 ```js
-let opts = {month: 'numeric', day: 'numeric', year: "numeric"};
+let opts = { month: "numeric", day: "numeric", year: "numeric" };
 let df = new Intl.DateTimeFormat("en-u-ca-chinese", opts);
 let date = Date.UTC(2012, 11, 17, 3);
-df.formatToParts(date)
-
-// 返値
-[
-  { type: 'month', value: '11' },
-  { type: 'literal', value: '/' },
-  { type: 'day', value: '4' },
-  { type: 'literal', value: '/' },
-  { type: 'relatedYear', value: '2012' }
-]
+df.formatToParts(date)[
+  // 返値
+  ({ type: "month", value: "11" },
+  { type: "literal", value: "/" },
+  { type: "day", value: "4" },
+  { type: "literal", value: "/" },
+  { type: "relatedYear", value: "2012" })
+];
 ```
 
 ## 仕様書

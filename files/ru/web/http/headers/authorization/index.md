@@ -1,13 +1,6 @@
 ---
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
-tags:
-  - HTTP
-  - HTTP Заголовок
-  - Заголовок
-  - заголовок запроса
-translation_of: Web/HTTP/Headers/Authorization
-original_slug: Web/HTTP/Заголовки/Authorization
 ---
 
 {{HTTPSidebar}}
@@ -63,10 +56,10 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 
 ## Спецификации
 
-| Спецификация                                         | Заголовок                              |
-| ---------------------------------------------------- | -------------------------------------- |
+| Спецификация                            | Заголовок                              |
+| --------------------------------------- | -------------------------------------- |
 | {{RFC("7235", "Authorization", "4.2")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                                 | The 'Basic' HTTP Authentication Scheme |
+| {{RFC("7617")}}                         | The 'Basic' HTTP Authentication Scheme |
 
 ## Смотрите также
 

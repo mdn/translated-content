@@ -1,39 +1,31 @@
 ---
 title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
+l10n:
+  sourceCommit: 6d606174faaedaa5dee7b7ebd87602cd51e5dd7e
 ---
 
 {{JSRef}}
 
-**`split()`** メソッドは、 {{jsxref("String")}} を指定した区切り文字列で分割することにより、文字列の配列に分割します。
+**`split()`** メソッドは、パターンを受け取り、{{jsxref("String")}} をパターン検索によって部分文字列の順序付きリストに分割し、これらの部分文字列を配列に入れ、その配列を返します。
 
 {{EmbedInteractiveExample("pages/js/string-split.html", "taller")}}
 
 ## 構文
 
-```
-str.split([separator[, limit]])
+```js-nolint
+split(separator)
+split(separator, limit)
 ```
 
 ### 引数
 
-- `separator` {{optional_inline}}
-
-  - : 分割を行うところにある文字列です。文字列または{{jsxref("Global_Objects/RegExp", "正規表現", "", 1)}}を指定することができます。
-
-    - `separator` が複数の文字を含んだ文字列である場合、分割にはその文字列の並び全体が見つかることが必要です。
-    - `separator` が省略されたり `str` の中に現れなかったりした場合は、返却される配列には文字列全体から成る要素が 1 つだけ含まれます。
-    - `separator` が文字列の先頭または末尾、またはその両方に現れた場合、配列の先頭、末尾、または先頭と末尾の両方が、それぞれ空文字列になります。
-    - `separator` が空文字列 (`""`) の場合、 `str` は個々の UTF-16 「文字」の配列になります。
-
-    > **警告:** 空文字列 (`""`) を区切り文字列として使用すると、文字列が*ユーザーが知覚可能な文字* ([書記素クラスター](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) に分割されるわけでは**なく**、 Unicode 文字 (コードポイント)、ただし UTF-16 コード単位です。これは[サロゲートペア](http://unicode.org/faq/utf_bom.html#utf16-2)を破壊します。 [StackOverflow の “How do you get a string to a character array in JavaScript?”](https://stackoverflow.com/a/34717402) を参照してください。
-
+- `separator`
+  - : 各分割がどこで行われるかを表すパターンです。`undefined`、文字列、または [`Symbol.split`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) メソッドを持つオブジェクトを指定することができます。典型的な例は{{jsxref("Global_Objects/RegExp", "正規表現", "", 1)}}です。`separator` を省略したり `undefined` を渡したりすると、`split()` は呼び出し元の文字列を 1 つの要素とする配列を返します。`undefined` でない値、または `@@split` メソッドを持つオブジェクトはすべて[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)。
 - `limit` {{optional_inline}}
-
-  - : 非負の整数で、分割する数を制限します。指定された場合、文字列は `separator` が現れるたびに分割されますが、 `limit` の数の項目が配列に配置されると停止します。残りのテキストは配列に入りません。
-
+  - : 配列に含める部分文字列の数の制限を指定する非負の整数。指定した場合は、指定した `separator` が出現するたびに文字列を分割しますが、`limit` 個の項目が配列に格納された時点で分割を終了します。残った文字列は配列に格納されません。
     - 制限数に達する以前に文字列の末尾に達した場合は、配列の要素が `limit` よりも少なくなることがあります。
-    - `limit` が `0` の場合は、分割は行われません。
+    - `limit` が `0` の場合は、`[]` が返されます。
 
 ### 返値
 
@@ -41,52 +33,75 @@ str.split([separator[, limit]])
 
 ## 解説
 
-`separator` は見つかると文字列から削除され、部分文字列が配列に入って返されます。
+`separator` が空でない文字列の場合、対象の文字列は `separator` に一致するすべての文字列で分割され、その結果には `separator` は含まれません。例えば、タブ区切り値 (TSV) を含む文字列は、`myString.split("\t")` のようにタブ文字を区切り文字として渡すことで解析できます。`separator` が複数の文字を含む場合、分割するためにはその文字列をすべて見つける必要があります。`separator` が文字列の先頭（または末尾）にある場合でも分割の効果は変わりません。その結果、返値の配列の最初 (または最後) の位置には空文字列（つまり長さ 0）が含まれます。`separator` が `str` 内に存在しない場合、返値の配列には文字列全体からなる要素が 1 つ含まれます。
 
-`separator` が、キャプチャする括弧を含む正規表現だった場合、 `separator` が一致するごとに、キャプチャする括弧の結果が (未定義の結果であった場合を含め) 出力配列に追加されます。
+`separator` が空文字列 (`""`) の場合、`str` は UTF-16 の「文字」の配列に変換され、両端が空文字列になることはありません。
 
-`separator` が配列であった場合、その配列が String に変換された上で区切り文字列として使用されます。
+> **メモ:** したがって、`"".split("")` は `separator` として文字列を渡されたときに空文字列の配列を生成する唯一の方法です。
+
+> **警告:** 区切り文字として空文字列 (`""`) が用いられた場合、文字列はユーザが認識する文字（[書記素クラスタ](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)）や Unicode 文字（コードポイント）ではなく、UTF-16 コード単位で分割されます。 これは[サロゲートペア](https://unicode.org/faq/utf_bom.html#utf16-2)を破壊します。[StackOverflow の "How do you get a string to a character array in JavaScript?"](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402) を参照してください。
+
+`separator` が空文字列に一致する正規表現である場合、一致する文字列が UTF-16 コード単位で分割されるか、Unicode コード点で分割されるかは、正規表現が [Unicode-aware](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode) かどうかに依存します。
+
+```js
+"😄😄".split(/(?:)/); // [ "\ud83d", "\ude04", "\ud83d", "\ude04" ]
+"😄😄".split(/(?:)/u); // [ "😄", "😄" ]
+```
+
+もし `separator` がキャプチャグループを持つ正規表現であれば、`separator` が一致するたびに、キャプチャされたグループ（`undefined` の結果を含む）が出力配列に分割されます。 この動作は正規表現の [`Symbol.split`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) メソッドで指定します。
+
+区切り文字 `separator` が [`Symbol.split`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) メソッドを持つオブジェクトの場合、そのメソッドは対象の文字列と `limit` を引数として呼び出され、`this` にはそのオブジェクトが設定されます。 その返値が `split` の返値になります。
+
+それ以外の値は、セパレーターとして使われる前に文字列に変換されます。
 
 ## 例
 
-### `split()` の使用
+### split() の使用
 
 文字列が空の場合、 `split()` は空の配列ではなく、1 つの空文字列を含む配列を返します。文字列と区切り文字列が共に空文字列の場合、空の配列が返ります。
 
 ```js
-const myString = ''
-const splits = myString.split()
+const emptyString = "";
 
-console.log(splits)
+// 文字列は空で、セパレーターは空ではない
+console.log(emptyString.split("a"));
+// [""]
 
-// ↪ [""]
+// 文字列とセパレーターがともに空文字列
+console.log(emptyString.split(emptyString));
+// []
 ```
 
-以下の例は、指定された区切りを使って、文字列を文字列の配列に分割する関数を定義します。文字列を分割した後、その関数は元の文字列（分割する前）、使用した区切り、配列中の要素の数、そして、個々の配列要素を示すメッセージを表示します。
+次の例では、文字列を `separator` を用いて文字列の配列に分割する関数を定義します。 文字列を分割した後、この関数は元の文字列（分割前）、用いている区切り文字、配列の要素数、個々の配列要素を示すメッセージをログ出力します。
 
 ```js
 function splitString(stringToSplit, separator) {
-  const arrayOfStrings = stringToSplit.split(separator)
+  const arrayOfStrings = stringToSplit.split(separator);
 
-  console.log('元の文字列: ', stringToSplit)
-  console.log('区切り文字列: ' , separator)
-  console.log('配列の要素数は', arrayOfStrings.length, '件: ', arrayOfStrings.join(' / '))
+  console.log("元の文字列: ", stringToSplit);
+  console.log("区切り文字列: ", separator);
+  console.log(
+    "配列の要素数は",
+    arrayOfStrings.length,
+    "件: ",
+    arrayOfStrings.join(" / "),
+  );
 }
 
-const tempestString = 'Oh brave new world that has such people in it.'
-const monthString = 'Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec'
+const tempestString = "Oh brave new world that has such people in it.";
+const monthString = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec";
 
-const space = ' '
-const comma = ','
+const space = " ";
+const comma = ",";
 
-splitString(tempestString, space)
-splitString(tempestString)
-splitString(monthString, comma)
+splitString(tempestString, space);
+splitString(tempestString);
+splitString(monthString, comma);
 ```
 
-この例は次のような出力結果を生み出します。
+この例は次のような出力結果を生成します。
 
-```
+```plain
 元の文字列: "Oh brave new world that has such people in it."
 区切り: " "
 配列は 10 要素: Oh / brave / new / world / that / has / such / people / in / it.
@@ -105,19 +120,19 @@ splitString(monthString, comma)
 以下の例では、`split()` は、0 回以上の空白とそれに続くセミコロン、それにさらに続く 0 回以上の空白を探し、それらが見つかったとき、文字列から空白を削除します。`nameList` は、`split()` の結果として返された配列です。
 
 ```js
-const names = 'Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand '
+const names = "Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand ";
 
-console.log(names)
+console.log(names);
 
-const re = /\s*(?:;|$)\s*/
-const nameList = names.split(re)
+const re = /\s*(?:;|$)\s*/;
+const nameList = names.split(re);
 
-console.log(nameList)
+console.log(nameList);
 ```
 
 これは 2 つの行を出力します。1 行目は元の文字列を出力し、2 行目は `split` メソッドの実行結果の配列を出力します。
 
-```
+```plain
 Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
 [ "Harry Trump", "Fred Barney", "Helen Rigby", "Bill Abel", "Chris Hand", "" ]
 ```
@@ -127,58 +142,134 @@ Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
 以下の例では、`split()` は 文字列中の 0 回以上の空白を探し、見つかった最初の 3 つの分割結果を返します。
 
 ```js
-const myString = 'Hello World. How are you doing?'
-const splits = myString.split(' ', 3)
+const myString = "Hello World. How are you doing?";
+const splits = myString.split(" ", 3);
 
-console.log(splits)
+console.log(splits); // [ "Hello", "World.", "How" ]
 ```
 
-このスクリプトは以下の例を出力します。
+### `RegExp` を使った分割でセパレーターの一部を結果に含める
 
-```
-["Hello", "World.", "How"]
-```
-
-### `RegExp` で分割して結果に区切り文字列の一部を含める
-
-`separator` がキャプチャの括弧 `(` `)` を含む正規表現である場合、一致した結果が配列に含まれます。
+もし `separator` が括弧 `( )` を含む正規表現であれば、一致した結果が配列に含められます。
 
 ```js
-const myString = 'Hello 1 word. Sentence number 2.'
-const splits = myString.split(/(\d)/)
+const myString = "Hello 1 word. Sentence number 2.";
+const splits = myString.split(/(\d)/);
 
-console.log(splits)
+console.log(splits);
+// [ "Hello ", "1", " word. Sentence number ", "2", "." ]
 ```
 
-このスクリプトは、以下を表示します。
+> **メモ:** `\d` は数字 0 から 9 までの[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)に一致します。
 
+### 独自のスプリッターの使用
+
+`Symbol.split` メソッドを持つオブジェクトは、独自の動作を持つスプリッターとして使用することができます。
+
+次の例は、増加する数値からなる内部状態を使用して文字列を分割します。
+
+```js
+const splitByNumber = {
+  [Symbol.split](str) {
+    let num = 1;
+    let pos = 0;
+    const result = [];
+    while (pos < str.length) {
+      const matchPos = str.indexOf(num, pos);
+      if (matchPos === -1) {
+        result.push(str.substring(pos));
+        break;
+      }
+      result.push(str.substring(pos, matchPos));
+      pos = matchPos + String(num).length;
+      num++;
+    }
+    return result;
+  },
+};
+
+const myString = "a1bc2c5d3e4f";
+console.log(myString.split(splitByNumber)); // [ "a", "bc", "c5d", "e", "f" ]
 ```
-[ "Hello ", "1", " word. Sentence number ", "2", "." ]
+
+次の例では、内部状態を使用して特定の動作を強制し、「有効な」結果が確実に保持されるようにしています。
+
+```js
+const DELIMITER = ";";
+
+// Split the commands, but remove any invalid or unnecessary values.
+const splitCommands = {
+  [Symbol.split](str, lim) {
+    const results = [];
+    const state = {
+      on: false,
+      brightness: {
+        current: 2,
+        min: 1,
+        max: 3,
+      },
+    };
+    let pos = 0;
+    let matchPos = str.indexOf(DELIMITER, pos);
+
+    while (matchPos !== -1) {
+      const subString = str.slice(pos, matchPos).trim();
+
+      switch (subString) {
+        case "light on":
+          // If the `on` state is already true, do nothing.
+          if (!state.on) {
+            state.on = true;
+            results.push(subString);
+          }
+          break;
+
+        case "light off":
+          // If the `on` state is already false, do nothing.
+          if (state.on) {
+            state.on = false;
+            results.push(subString);
+          }
+          break;
+
+        case "brightness up":
+          // Enforce a brightness maximum.
+          if (state.brightness.current < state.brightness.max) {
+            state.brightness.current += 1;
+            results.push(subString);
+          }
+          break;
+
+        case "brightness down":
+          // Enforce a brightness minimum.
+          if (state.brightness.current > state.brightness.min) {
+            state.brightness.current -= 1;
+            results.push(subString);
+          }
+          break;
+      }
+
+      if (results.length === lim) {
+        break;
+      }
+
+      pos = matchPos + DELIMITER.length;
+      matchPos = str.indexOf(DELIMITER, pos);
+    }
+
+    // If we broke early due to reaching the split `lim`, don't add the remaining commands.
+    if (results.length < lim) {
+      results.push(str.slice(pos).trim());
+    }
+
+    return results;
+  },
+};
+
+const commands =
+  "light on; brightness up; brightness up; brightness up; light on; brightness down; brightness down; light off";
+console.log(commands.split(splitCommands, 3)); // ["light on", "brightness up", "brightness down"]
 ```
-
-> **メモ:** `\d` は[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)で、0 から 9 の数字に一致します。
-
-### `split()` を使った文字列を反転
-
-> **警告:** この手法は文字列を正しく反転できるとは限りません。
->
-> ```js
-> const str = 'asdfghjkl'
-> const strReverse = str.split('').reverse().join('')
-> // 'lkjhgfdsa'
->
-> // split() が配列を返し、 reverse() および join() が適用できます
-> ```
->
-> Unicode 対応の分割を使用している場合でも、文字列に書記素クラスターが含まれていると機能しません (代わりに [esrever](https://github.com/mathiasbynens/esrever) などを使ってください)。
->
-> ```js
-> const str = 'résumé'
-> const strReverse = str.split(/(?:)/u).reverse().join('')
-> // => "́emuśer"
-> ```
->
-> **ボーナス:** {{jsxref("Operators/Comparison_Operators", "===", "#Identity_strict_equality_(===)")}} 演算子を使用すると、元の文字列が回文であるかどうかが判定できます。
 
 ## 仕様書
 
@@ -186,12 +277,13 @@ console.log(splits)
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.String.split")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`String.prototype.split` のポリフィル (`core-js`)（`Symbol.split` のような現代の動作の修正と実装に対応）](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.charAt()")}}
 - {{jsxref("String.prototype.indexOf()")}}
 - {{jsxref("String.prototype.lastIndexOf()")}}
 - {{jsxref("Array.prototype.join()")}}
-- [JavaScript での正規表現の使用](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [JavaScript での正規表現の使用](/ja/docs/Web/JavaScript/Guide/Regular_expressions)

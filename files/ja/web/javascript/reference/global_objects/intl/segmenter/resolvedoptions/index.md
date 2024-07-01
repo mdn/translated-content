@@ -14,7 +14,7 @@ l10n:
 ## 構文
 
 ```js
-resolvedOptions()
+resolvedOptions();
 ```
 
 ### 引数
@@ -39,7 +39,7 @@ resolvedOptions()
 ### 基本的な使い方
 
 ```js
-const spanishSegmenter = new Intl.Segmenter("es", {granularity: "sentence"});
+const spanishSegmenter = new Intl.Segmenter("es", { granularity: "sentence" });
 const options = spanishSegmenter.resolvedOptions();
 console.log(options.locale); // "es"
 console.log(options.granularity); // "sentence"
@@ -60,8 +60,8 @@ console.log(options.granularity); // "grapheme"
 const banSegmenter = new Intl.Segmenter("ban");
 const options = banSegmenter.resolvedOptions();
 console.log(options.locale);
-// "fr" on a runtime where the Balinese locale
-// is not supported and French is the default locale
+// Balinese ロケールに対応しておらず、
+// デフォルトのロケールが French であるランタイムでは、"fr"
 console.log(options.granularity); // "grapheme"
 ```
 

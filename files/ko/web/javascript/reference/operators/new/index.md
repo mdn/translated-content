@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Operators/new
 
 ## 구문
 
-```js
-    new constructor[([arguments])]
+```js-nolint
+new constructor[([arguments])];
 ```
 
 ### 매개변수
@@ -39,27 +39,27 @@ slug: Web/JavaScript/Reference/Operators/new
 
 언제든 이전에 정의된 객체에 속성을 추가할 수 있다. 예를 들면, `car1.color = "black"` 구문은 `color` 속성을 `car1`에 추가하고 해당 속성에 "`black`"이란 값을 할당한다. 그러나, 이것이 다른 객체들에게는 영향을 주지 않는다. 동일한 타입의 모든 객체들에게 새로운 속성을 추가하려면, `Car` 객체 타입의 정의에 이 속성을 추가해야한다.
 
-[`Function.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 속성을 사용하여 이전에 정의된 객체 타입에 공유 속성을 추가할 수 있다. 이것은 객체 타입의 인스턴스 하나에만 적용되는 것이 아니라 이 함수로 생성하는 모든 객체와 공유하는 속성을 정의한다.
+[`Function.prototype`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 속성을 사용하여 이전에 정의된 객체 타입에 공유 속성을 추가할 수 있다. 이것은 객체 타입의 인스턴스 하나에만 적용되는 것이 아니라 이 함수로 생성하는 모든 객체와 공유하는 속성을 정의한다.
 
-다음의 코드는 `car` 타입의 모든 객체에 "`original color`" 값을 갖는 color 속성을 추가한다. 그리고 `car1` 객체 인스턴스에서만 이 값을 문자열 "`black`"으로 덮어쓴다. 더 많은 정보는 [prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype)을 참조한다.
+다음의 코드는 `car` 타입의 모든 객체에 "`original color`" 값을 갖는 color 속성을 추가한다. 그리고 `car1` 객체 인스턴스에서만 이 값을 문자열 "`black`"으로 덮어쓴다. 더 많은 정보는 [prototype](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype)을 참조한다.
 
 ```js
 function Car() {}
 car1 = new Car();
 car2 = new Car();
 
-console.log(car1.color);    // undefined
+console.log(car1.color); // undefined
 
 Car.prototype.color = "original color";
-console.log(car1.color);    // original color
+console.log(car1.color); // original color
 
-car1.color = 'black';
-console.log(car1.color);   // black
+car1.color = "black";
+console.log(car1.color); // black
 
-console.log(car1.__proto__.color) //original color
-console.log(car2.__proto__.color) //original color
-console.log(car1.color)  // black
-console.log(car2.color) // original color
+console.log(car1.__proto__.color); //original color
+console.log(car2.__proto__.color); //original color
+console.log(car1.color); // black
+console.log(car2.color); // original color
 ```
 
 ## 예제
@@ -130,7 +130,7 @@ var car2 = new Car("Nissan", "300ZX", 1992, ken);
 새로운 객체를 생성할 때 문자열이나 숫자 값을 넘겨주는 대신에, 위의 구문은 owner를 위한 매개변수로 `rand`와 `ken` 객체를 넘겨준다. `car2`의 owner name을 확인해보기 위해서, 다음의 속성에 접근할 수 있다:
 
 ```js
-car2.owner.name
+car2.owner.name;
 ```
 
 ## 명세서

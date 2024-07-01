@@ -1,9 +1,6 @@
 ---
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
-translation_of: Web/JavaScript/Reference/Global_Objects/Function
-original_slug: Web/JavaScript/Reference/Objets_globaux/Function
-browser-compat: javascript.builtins.Function
 ---
 
 {{JSRef}}
@@ -49,24 +46,24 @@ Les fonctions créées avec le constructeur `Function()` ne créent pas de ferme
 var x = 10;
 
 function creerFonction1() {
-    var x = 20;
-    return new Function('return x;');
-    // ce x fait référence à la variable globale x
+  var x = 20;
+  return new Function("return x;");
+  // ce x fait référence à la variable globale x
 }
 
 function creerFonction2() {
-    var x = 20;
-    function f() {
-        return x; 
-        // ce x fait référence à la variable locale x juste avant
-    }
-    return f;
+  var x = 20;
+  function f() {
+    return x;
+    // ce x fait référence à la variable locale x juste avant
+  }
+  return f;
 }
 
 var f1 = creerFonction1();
-console.log(f1());          // 10
+console.log(f1()); // 10
 var f2 = creerFonction2();
-console.log(f2());          // 20
+console.log(f2()); // 20
 ```
 
 Bien que ce code fonctionne dans les navigateurs web, `f1()` déclenchera une erreur `ReferenceError` avec Node.js, car `x` ne sera pas trouvé. En effet, la portée de plus haut niveau de Node n'est pas la portée globale et `x` sera local au module.

@@ -1,7 +1,6 @@
 ---
 title: SpeechRecognitionError
 slug: Web/API/SpeechRecognitionErrorEvent
-original_slug: Web/API/SpeechRecognitionError
 ---
 
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
@@ -22,10 +21,10 @@ _`SpeechRecognitionError` は、親インターフェイスである {{domxref("
 ```js
 var recognition = new SpeechRecognition();
 
-recognition.onerror = function(event) {
-  console.log('Speech recognition error detected: ' + event.error);
-  console.log('Additional information: ' + event.message);
-}
+recognition.onerror = function (event) {
+  console.log("Speech recognition error detected: " + event.error);
+  console.log("Additional information: " + event.message);
+};
 ```
 
 ## 仕様

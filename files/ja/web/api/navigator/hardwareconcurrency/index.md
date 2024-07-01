@@ -1,18 +1,14 @@
 ---
-title: Navigator.hardwareConcurrency
+title: "Navigator: hardwareConcurrency プロパティ"
+short-title: hardwareConcurrency
 slug: Web/API/Navigator/hardwareConcurrency
-original_slug: Web/API/NavigatorConcurrentHardware/hardwareConcurrency
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("HTML DOM")}}
 
 **`navigator.hardwareConcurrency`** は読み取り専用のプロパティで、ユーザーのコンピューター上でスレッドを実行するために使用可能な論理プロセッサー数を返します。
-
-## 構文
-
-```js
-logicalProcessors = window.navigator.hardwareConcurrency
-```
 
 ## 値
 
@@ -31,8 +27,8 @@ let workerList = [];
 
 for (let i = 0; i < window.navigator.hardwareConcurrency; i++) {
   let newWorker = {
-    worker: new Worker('cpuworker.js'),
-    inUse: false
+    worker: new Worker("cpuworker.js"),
+    inUse: false,
   };
   workerList.push(newWorker);
 }

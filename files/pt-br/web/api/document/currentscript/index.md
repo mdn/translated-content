@@ -33,7 +33,7 @@ Se o código estiver sendo chamado como um callback ou manipulador de eventos, e
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.currentScript")}}
+{{Compat}}
 
 ## Especificações
 

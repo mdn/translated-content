@@ -1,7 +1,6 @@
 ---
 title: Navigator.languages
 slug: Web/API/Navigator/languages
-browser-compat: api.Navigator.languages
 ---
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
@@ -21,8 +20,8 @@ Un tableau de chaînes de caractères.
 ## Exemples
 
 ```js
-navigator.language   // "en-US"
-navigator.languages  // ["en-US", "zh-CN", "ja-JP"]
+navigator.language; // "en-US"
+navigator.languages; // ["en-US", "zh-CN", "ja-JP"]
 ```
 
 ## Spécifications

@@ -35,10 +35,10 @@ l10n:
 
 ```css
 * {
-/* これは、WebKit ベースのブラウザーでネイティブのルックアンドフィールを無効にします */
+  /* これは、WebKit ベースのブラウザーでネイティブのルックアンドフィールを無効にします */
   appearance: none;
 
-/* Internet Explorer 用 */
+  /* Internet Explorer 用 */
   background: none;
 }
 ```

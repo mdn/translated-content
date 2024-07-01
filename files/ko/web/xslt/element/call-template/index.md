@@ -1,10 +1,9 @@
 ---
 title: call-template
 slug: Web/XSLT/Element/call-template
-original_slug: Web/XSLT/call-template
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:call-template>` 요소는 이름 붙인 템플릿을 호출합니다.
 

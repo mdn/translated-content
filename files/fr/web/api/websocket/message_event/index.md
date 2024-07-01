@@ -1,7 +1,6 @@
 ---
-title: 'WebSocket : évènement message'
+title: "WebSocket : évènement message"
 slug: Web/API/WebSocket/message_event
-browser-compat: api.WebSocket.message_event
 ---
 
 {{APIRef}}
@@ -39,11 +38,11 @@ L'évènement `message` est déclenché lorsque des données sont reçues via un
 
 ```js
 // Crée une connexion WebSocket
-const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket("ws://localhost:8080");
 
 // Écoute les différents messages
-socket.addEventListener('message', function (event) {
-    console.log('Message reçu du serveur ', event.data);
+socket.addEventListener("message", function (event) {
+  console.log("Message reçu du serveur ", event.data);
 });
 ```
 

@@ -1,19 +1,9 @@
 ---
 title: menus.onHidden
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onHidden
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - menus
-  - onHidden
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/onHidden
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsque le navigateur cesse d'afficher un menu: par exemple, parce que l'utilisateur a cliqué à l'extérieur ou sélectionné un élément.
 
@@ -26,9 +16,9 @@ Firefox rend cet événement disponible via l'espace de noms `contextMenus` ains
 ## Syntaxe
 
 ```js
-browser.menus.onHidden.addListener(listener)
-browser.menus.onHidden.removeListener(listener)
-browser.menus.onHidden.hasListener(listener)
+browser.menus.onHidden.addListener(listener);
+browser.menus.onHidden.removeListener(listener);
+browser.menus.onHidden.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -36,7 +26,7 @@ Les événements ont trois fonctions :
 - `addListener(listener)`
   - : Ajoute un écouteur à cet événement.
 - `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener`  est l'écouteur à supprimer.
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
 - `hasListener(listener)`
   - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, `false` sinon.
 
@@ -47,9 +37,9 @@ Les événements ont trois fonctions :
 - `callback`
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction sera transmise sans paramètre.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.onHidden", 10)}}
+{{Compat}}
 
 ## Exemples
 

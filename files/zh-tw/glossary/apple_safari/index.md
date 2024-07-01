@@ -3,17 +3,14 @@ title: Apple Safari
 slug: Glossary/Apple_Safari
 ---
 
-[Safari](http://www.apple.com/safari/) 是一個來自蘋果開發的網頁瀏覽器({{Glossary("Browser","Web browser")}})同時被捆綁發行在 Mac OS X 和 IOS 平臺。它是基於開源的 [WebKit](http://www.webkit.org/) 引擎.
+{{GlossarySidebar}}
 
-## 了解更多
+[Safari](https://www.apple.com/safari/) 是由蘋果開發的{{Glossary("Browser","網頁瀏覽器")}}，與 macOS、iPadOS 和 iOS 捆綁發行。它基於開源的 [WebKit](https://www.webkit.org/) 引擎。
 
-### 基礎知識
+## 參見
 
-- 維基百科上的 [Safari](https://zh.wikipedia.org/wiki/Safari_(web_browser))
-- [Safari on apple.com](http://www.apple.com/safari/)
-
-### 技術資訊
-
-- [WebKit 的項目](http://www.webkit.org/)
-- [WebKit 每晚構建](http://nightly.webkit.org/)
+- 維基百科上的 [Safari](https://zh.wikipedia.org/wiki/Safari)
+- [apple.com 上的 Safari](https://www.apple.com/safari/)
+- [WebKit 專案](https://www.webkit.org/)
+- [WebKit 每晚構建](https://webkit.org/build-archives/)
 - [向 Safari 報告 bug](https://bugs.webkit.org/)

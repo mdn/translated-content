@@ -1,15 +1,6 @@
 ---
 title: IntersectionObserver.observe()
 slug: Web/API/IntersectionObserver/observe
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Method
-  - Reference
-  - observe
-translation_of: Web/API/IntersectionObserver/observe
 ---
 
 {{APIRef("Intersection Observer API")}}{{SeeCompatTable}}

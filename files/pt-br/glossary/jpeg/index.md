@@ -1,8 +1,9 @@
 ---
 title: JPEG
-slug: Glossary/jpeg
-original_slug: Glossario/JPEG
+slug: Glossary/JPEG
 ---
+
+{{GlossarySidebar}}
 
 **JPEG** (_Joint Photographic Experts Group_) é um método de compreensão com perda geralmente usado para imagens digitais.
 
@@ -10,4 +11,4 @@ original_slug: Glossario/JPEG
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "JPEG")}} na Wikipedia
+- [JPEG](https://pt.wikipedia.org/wiki/JPEG) na Wikipedia

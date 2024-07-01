@@ -2,7 +2,7 @@
 title: ファイルの扱い
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
 l10n:
-  sourceCommit: 8ea72d18cda0ced287d9955621061e20a99bb003
+  sourceCommit: 2efd5ec19bebfd1d47fd92bc963eee853ae1c431
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
@@ -23,7 +23,7 @@ l10n:
 1. 多くのコンピューター、特にウェブサーバーでは、大文字と小文字が区別されます。例えば、ウェブサイトの `test-site/MyImage.jpg` に画像を置いて、別のファイルから画像を `test-site/myimage.jpg` として呼び出そうとすると、動作しないかもしれません。
 2. ブラウザー間、ウェブサーバー間、プログラミング言語間で、空白の扱いが一貫していません。例えば、ファイル名に空白を使用すると、システムによってはそのファイル名を 2 つのファイル名として扱うことがあります。サーバーによっては、ファイル名の空白を "%20" （URL の空白の文字コード）に置き換えるので、リンクが壊れてしまう結果になります。`my_file.html` のように単語をアンダースコアで区切るよりは、`my-file.html` のようにハイフンで区切った方がよいでしょう。
 
-簡単に言うと、ファイル名にはハイフンを使用した方が良いということです。Googleの検索エンジンはハイフンを単語の区切りとして扱いますが、アンダースコアはそのように見なされません。このような理由から、少なくとも自分が何をしているかを知るまでは、フォルダ名やファイル名を小文字で書き、スペースを入れず、単語をハイフンで区切る習慣をつけるとよいでしょう。そうすれば、後で問題にぶつかることも少なくなるはずです。
+簡単に言うと、ファイル名にはハイフンを使用した方が良いということです。Google の検索エンジンはハイフンを単語の区切りとして扱いますが、アンダースコアはそのように見なされません。このような理由から、少なくとも自分が何をしているかを知るまでは、フォルダー名やファイル名を小文字で書き、スペースを入れず、単語をハイフンで区切る習慣をつけるとよいでしょう。そうすれば、問題にぶつかることも少なくなるはずです。
 
 ## ウェブサイトはどのような構成にするべきか
 
@@ -43,18 +43,19 @@ l10n:
 1. 以前に選択した画像を `images` フォルダーにコピーします。
 2. `index.html` ファイルを開き、次のコードをファイルに挿入します。それが今のところ何を意味するのか気にしないでください。シリーズの後半で構造を詳しく見ていきます。
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="ja">
-      <head>
-        <meta charset="utf-8">
-        <title>テストページ</title>
-      </head>
-      <body>
-        <img src="" alt="テスト画像">
-      </body>
-    </html>
-    ```
+   ```html
+   <!doctype html>
+   <html lang="ja">
+     <head>
+       <meta charset="utf-8" />
+       <meta name="viewport" content="width=device-width" />
+       <title>テストページ</title>
+     </head>
+     <body>
+       <img src="" alt="テスト画像" />
+     </body>
+   </html>
+   ```
 
 3. `<img src="" alt="テスト画像">` という行は、ページに画像を挿入する HTML コードです。画像がどこにあるのかを HTML に伝える必要があります。画像は _images_ ディレクトリー内にあり、`index.html` と同じディレクトリーにあります。ファイル構造の中で `index.html` からその画像に移動するのに必要なファイルパスは `images/your-image-filename` です。例えば、私たちの画像は `firefox-icon.png` と呼ばれており、ファイルパスは `images/firefox-icon.png` になります。
 4. `src=""` コードの二重引用符の間の HTML コードにファイルパスを挿入してください。
@@ -81,14 +82,3 @@ l10n:
 ![macOS X の finder におけるファイル構造。images フォルダーに画像が入っており、scripts と styles フォルダーは空で、あと index.html がある](file-structure.png)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
-
-## このモジュール
-
-- [基本的なソフトウェアのインストール](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [ファイルの扱い](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML の基本](/ja/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS の基本](/ja/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript の基本](/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [ウェブサイトの公開](/ja/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [ウェブのしくみ](/ja/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

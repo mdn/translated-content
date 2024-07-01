@@ -9,7 +9,7 @@ MDN Web 文档是一个开源项目。下面的概述部分描述了有关我们
 
 - [撰写的文档内容](/zh-CN/docs/MDN/Writing_guidelines/What_we_write)
 
-  - : 本节涵盖了我们在 MDN Web 文档中包含的内容和我们不希望包含的内容，以及其它的政策，如：我们何时为新技术撰写文档、内容建议流程和我们是否接受外链。如果你正在考虑为我们撰写或更新内容，这是一个很好的入门内容。本节还包括：
+  - : 本节涵盖了我们在 MDN Web 文档中包含的内容和我们不希望包含的内容，以及其他的政策，如：我们何时为新技术撰写文档、内容建议流程和我们是否接受外链。如果你正在考虑为我们撰写或更新内容，这是一个很好的入门内容。本节还包括：
     - [包含的标准](/zh-CN/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)
       - : 本文提供了要将内容添加到 MDN Web 文档的深入标准、在 MDN Web 文档添加新文档的申请流程，以及申请的期望和指南。
 
@@ -71,7 +71,7 @@ MDN Web 文档是一个开源项目。下面的概述部分描述了有关我们
 
     - [横幅和说明](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)
 
-      - : 有时，在文章中需要添加特殊的说明。如果页面中包含不推荐使用的技术或不应在生产环境中使用的其它内容，则可能会包含这些特殊说明。本文涵盖了最常见的情况，以及应该如何处理它们。
+      - : 有时，在文章中需要添加特殊的说明。如果页面中包含不推荐使用的技术或不应在生产环境中使用的其他内容，则可能会包含这些特殊说明。本文涵盖了最常见的情况，以及应该如何处理它们。
 
     - [规范表格](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Specification_tables)
 
@@ -87,7 +87,7 @@ MDN Web 文档是一个开源项目。下面的概述部分描述了有关我们
 
 - [署名和版权许可协议](/zh-CN/docs/MDN/Writing_guidelines/Attrib_copyright_license)
 
-  - : 描述在其它地方使用 MDN Web 文档内容的政策、如何获得重新发布 MDN 上的内容的许可，以及链接到 MDN 上的内容的相关说明。
+  - : 描述在其他地方使用 MDN Web 文档内容的政策、如何获得重新发布 MDN 上的内容的许可，以及链接到 MDN 上的内容的相关说明。
 
 - [如何标记一项技术](/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)
 

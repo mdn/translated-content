@@ -1,6 +1,9 @@
 ---
-title: WebSocket.protocol
+title: "WebSocket: protocol プロパティ"
+short-title: protocol
 slug: Web/API/WebSocket/protocol
+l10n:
+  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
 {{APIRef("Web Sockets API")}}
@@ -9,7 +12,7 @@ slug: Web/API/WebSocket/protocol
 
 ## 値
 
-[`DOMString`](/ja/docs/Web/API/DOMString) です。
+文字列です。
 
 ## 仕様書
 

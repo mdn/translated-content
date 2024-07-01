@@ -32,32 +32,32 @@ Se você quiser manipular o armazenamento de sessão para um domínio, você cha
 Aqui acessamos um objeto Storage chamando localStorage. Primeiro testamos se o armazenamento local contém itens de dados usando! localStorage.getItem ('bgcolor'). Se isso acontecer, executaremos uma função chamada setStyles () que agarra os itens de dados usando {{domxref("localStorage.getItem()")}} E usa esses valores para atualizar estilos de página. Se não, executamos outra função, populateStorage (), que usa {{domxref("localStorage.setItem()")}} Para definir os valores do item, em seguida, executa setStyles ().
 
 ```js
-if(!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem("bgcolor")) {
   populateStorage();
 } else {
   setStyles();
 }
 
 function populateStorage() {
-  localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
-  localStorage.setItem('font', document.getElementById('font').value);
-  localStorage.setItem('image', document.getElementById('image').value);
+  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
+  localStorage.setItem("font", document.getElementById("font").value);
+  localStorage.setItem("image", document.getElementById("image").value);
 
   setStyles();
 }
 
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  var currentColor = localStorage.getItem("bgcolor");
+  var currentFont = localStorage.getItem("font");
+  var currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = "#" + currentColor;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 
@@ -65,17 +65,11 @@ function setStyles() {
 
 ## Especificações
 
-| Especificação                                                                        | Estado                           | Comentário |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('Web Storage', '#the-storage-interface', 'Storage')}} | {{Spec2('Web Storage')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Storage")}}
-
-\[1] Desde o iOS 5.1, o Safari Mobile armazena os dados localStorage na pasta de cache, que está sujeita a limpeza ocasional a pedido do sistema operacional, normalmente se o espaço for curto.
-
-Todos os navegadores têm diferentes níveis de capacidade para o localStorage e sessionStorage. [Aqui está um resumo detalhado de todas as capacidades de armazenamento para vários navegadores](http://dev-test.nemikor.com/web-storage/support-test/).
+{{Compat}}
 
 ## Veja também
 

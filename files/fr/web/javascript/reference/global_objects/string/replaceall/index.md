@@ -1,8 +1,6 @@
 ---
 title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
-translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/replaceAll
 ---
 
 {{JSRef}}
@@ -113,7 +111,7 @@ Le nombre d'arguments exact dépend du premier argument de `replaceAll()` : si c
 ### Utiliser replaceAll()
 
 ```js
-'aabbcc'.replaceAll('b', '.');
+"aabbcc".replaceAll("b", ".");
 // 'aa..cc'
 ```
 
@@ -129,8 +127,8 @@ TypeError: replaceAll must be called with a global RegExp
 L'exemple suivant, utilisant le marqueur `g`, fonctionnera :
 
 ```js example-good
-'aabbcc'.replaceAll(/b/g, '.');
-"aa..cc"
+"aabbcc".replaceAll(/b/g, ".");
+("aa..cc");
 ```
 
 ## Spécifications

@@ -2,8 +2,10 @@
 title: Void element （空要素）
 slug: Glossary/Void_element
 l10n:
-  sourceCommit:  af32ed24e243178cd060769b7c707afcc271f9f6
+  sourceCommit: af32ed24e243178cd060769b7c707afcc271f9f6
 ---
+
+{{GlossarySidebar}}
 
 **空要素 (void element)** とは HTML における{{Glossary("element", "要素")}}のうち、子ノード（すなわち子要素およびテキストノード）を**持つことができない**ものを指します。空要素には開始タグしかありません。空要素では終了タグを指定することができません。
 
@@ -23,7 +25,6 @@ HTML には以下の空要素が存在します。
 - {{HTMLElement("hr")}}
 - {{HTMLElement("img")}}
 - {{HTMLElement("input")}}
-- {{HTMLElement("keygen")}}(HTML 5.2 の草案で削除されました)
 - {{HTMLElement("link")}}
 - {{HTMLElement("meta")}}
 - {{HTMLElement("param")}}
@@ -33,7 +34,7 @@ HTML には以下の空要素が存在します。
 
 ## 自己完結型タグ
 
-_自己完結型タグ(`<tag />`)は HTML には存在しません。_\
+_自己完結型タグ(`<tag />`)は HTML には存在しません。_
 
 HTML 要素の開始タグの末尾に `/` （スラッシュ）文字がある場合、 HTML パーサーはそのスラッシュ文字を無視します。 {{HTMLElement('script')}} や {{HTMLElement('ul')}} のような要素で終了タグが必要となる場合において、このことを忘れないようにして下さい。このような場合、開始タグの末尾にスラッシュを追加しても、要素は閉じられません。
 

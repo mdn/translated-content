@@ -146,9 +146,9 @@ Resultados en:
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.justify-content")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,14 +1,6 @@
 ---
 title: TypedArray.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/set
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/set
 ---
 
 {{JSRef}}

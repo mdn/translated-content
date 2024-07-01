@@ -5,6 +5,8 @@ l10n:
   sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
 
+{{GlossarySidebar}}
+
 コールバック関数とは、引数として他の関数に渡され、外側の関数の中で呼び出されて、何らかのルーチンやアクションを完了させる関数のことです。
 
 簡単な例を以下に示します。
@@ -28,4 +30,4 @@ processUserInput(greeting);
 
 ## 関連情報
 
-- Wikipedia の[コールバック](https://ja.wikipedia.org/wiki/コールバック_(情報工学))
+- Wikipedia の[コールバック](<https://ja.wikipedia.org/wiki/コールバック_(情報工学)>)

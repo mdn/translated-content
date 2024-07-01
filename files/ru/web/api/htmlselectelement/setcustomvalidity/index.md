@@ -1,7 +1,6 @@
 ---
 title: HTMLSelectElement.setCustomValidity()
 slug: Web/API/HTMLSelectElement/setCustomValidity
-translation_of: Web/API/HTMLSelectElement/setCustomValidity
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -18,11 +17,11 @@ selectElt.setCustomValidity(string);
 
 - _Строка_ {{domxref("DOMString")}} содержащая сообщение об ошибке.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

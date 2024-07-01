@@ -9,9 +9,9 @@ La propiedad de [CSS](/es/docs/Web/CSS) **`padding-inline`** define el relleno e
 
 ```css
 /* <length> values */
-padding-inline: 10px 20px;  /* An absolute length */
-padding-inline: 1em 2em;   /* relative to the text size */
-padding-inline: 5% 2%;    /* relative to the nearest block container's width */
+padding-inline: 10px 20px; /* An absolute length */
+padding-inline: 1em 2em; /* relative to the text size */
+padding-inline: 5% 2%; /* relative to the nearest block container's width */
 padding-inline: 10px; /* sets both start and end values */
 
 /* Keyword values */
@@ -71,9 +71,9 @@ div {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.padding-inline")}}
+{{Compat}}
 
 ## Mira también
 

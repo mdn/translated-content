@@ -3,6 +3,8 @@ title: Basic concepts behind Web Audio API
 slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 ---
 
+{{DefaultAPISidebar("Web Audio API")}}
+
 この記事では、アプリを経由した音声伝達方法の設計をする際に、十分な情報に基づいた決断をする助けとなるよう、 Web Audio API の特徴がいかに働いているか、その背後にある音声理論について説明します。この記事はあなたを熟練のサウンドエンジニアにさせることはできないものの、Web Audio API が動く理由を理解するための十分な背景を提供します。
 
 ## オーディオグラフ
@@ -17,9 +19,7 @@ slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 4. 例えばあなたのシステムのスピーカーなど、音声の最終的な行き先の選択。
 5. 音声効果を（あるのならば）かけた後、最後に選択した行き先へ届いて終了する、音声源からの接続の確立。
 
-**チャンネルの記法**
-
-信号上で利用できるオーディオチャンネルの数字は、2.0 や 5.1 のように、しばしば、数値の形式で表現されます。これは[channel notation](https://en.wikipedia.org/wiki/Surround_sound#Channel_notation)と呼ばれます。最初の数値は、該当の信号が含んでいるオーディオチャンネルの数です。ピリオドの後にある数値は、低音増強用出力として確保されているチャンネルの数を示しています。それらはしばしば**サブウーファー**とも称されます。
+> **メモ:** 信号上で利用できるオーディオチャンネルの数字は、2.0 や 5.1 のように、しばしば、数値の形式で表現されます。これは[channel notation](https://en.wikipedia.org/wiki/Surround_sound#Channel_notation)と呼ばれます。最初の数値は、該当の信号が含んでいるオーディオチャンネルの数です。ピリオドの後にある数値は、低音増強用出力として確保されているチャンネルの数を示しています。それらはしばしば**サブウーファー**とも称されます。
 
 ![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](webaudioAPI_en.svg)
 

@@ -12,6 +12,7 @@ Esta sección del área de aprendizaje está diseñada para proveer respuestas a
 Esta sección cubre los mecanismos de la web -preguntas relativas al conocimiento general del ecosistema de la Web y cómo funciona.
 
 - [¿Cómo funciona la Web?](/es/docs/Learn/Common_questions/How_does_the_Internet_work)
+
   - : **Internet** es la columna vertebral de la Web, la infraestructura técnica que hace la Web posible. Básicamente, Internet es una gran red de ordenadores que se comunican todos entre sí. Este artículo explica cómo funciona, en un nivel básico.
 
 - [¿Cúal es la diferencia entre página web, sitio web, servidor web y motor de búsqueda?](/es/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)

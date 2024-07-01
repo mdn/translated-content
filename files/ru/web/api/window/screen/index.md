@@ -1,8 +1,8 @@
 ---
 title: Window.screen
 slug: Web/API/Window/screen
-translation_of: Web/API/Window/screen
 ---
+
 {{APIRef("CSSOM")}}
 
 Свойство **`screen`** объекта {{DOMxRef("Window")}} возвращает ссылку на экран объекта, который содержит информацию об экране пользователя. Похожий по смыслу, объект `screen`, который имплементирует интерфейс {{DOMxRef("Screen")}} представляет собой совокупность свойств экрана пользователя.

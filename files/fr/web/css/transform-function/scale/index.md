@@ -1,9 +1,6 @@
 ---
 title: scale()
 slug: Web/CSS/transform-function/scale
-translation_of: Web/CSS/transform-function/scale()
-original_slug: Web/CSS/transform-function/scale()
-browser-compat: css.types.transform-function.scale
 ---
 
 {{CSSRef}}
@@ -131,7 +128,7 @@ Vous pouvez également tirer parti de la caractéristique média [`prefers-reduc
 
 Pour en savoir plus :
 
-- [Comprendre les règles WCAG 2.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_%e2%80%94_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [Comprendre les règles WCAG 2.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_—_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
 - [Comprendre les critères de succès WCAG 2.1 / 2.3.3 (W3C)](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
 ## Exemples

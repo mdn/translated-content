@@ -31,7 +31,7 @@ bool.valueOf()
 
 ```js
 x = new Boolean();
-myVar = x.valueOf()      // assigns false to myVar
+myVar = x.valueOf(); // assigns false to myVar
 ```
 
 ## 规范
@@ -42,6 +42,6 @@ myVar = x.valueOf()      // assigns false to myVar
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Object.prototype.valueOf()")}}

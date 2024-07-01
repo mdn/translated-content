@@ -1,8 +1,9 @@
 ---
 title: Начальное значение
 slug: Web/CSS/initial_value
-translation_of: Web/CSS/initial_value
 ---
+
+{{CSSRef}}
 
 ## Описание
 

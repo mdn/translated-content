@@ -1,11 +1,6 @@
 ---
 title: <basic-shape>
 slug: Web/CSS/basic-shape
-tags:
-  - CSS
-  - Reference
-  - Type
-translation_of: Web/CSS/basic-shape
 ---
 
 {{CSSRef}}
@@ -18,7 +13,7 @@ Le type **`<basic-shape>`** permet de définir une forme simple en utilisant des
 
 Lorsque cette syntaxe est utilisée pour définir des formes, la boîte de référence sera indiquée par chaque propriété qui utilise des valeurs `<basic-shape>`. L'origine du repère utilisé se situe dans le coin en haut à gauche de la boîte de référence avec un axe des abscisses allant vers la droite et un axe des ordonnées allant vers le bas. Toutes les longueurs exprimées en pourcentages sont calculées en fonction des dimensions de la boîte de référence.
 
-Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>` sont créées via une notation fonctionnelle (pour analyser la syntaxe, se référer à [cette page explicative](/fr/docs/Web/CSS/Syntaxe_de_d%C3%A9finition_des_valeurs)).
+Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>` sont créées via une notation fonctionnelle (pour analyser la syntaxe, se référer à [cette page explicative](/fr/docs/Web/CSS/Syntaxe_de_définition_des_valeurs)).
 
 - `inset()`
 
@@ -127,7 +122,10 @@ Afin d'obtenir une interpolation entre deux formes simples, il faut que les règ
 #### HTML
 
 ```html
-<img class="clipped" src="https://pixabay.com/static/uploads/photo/2016/01/17/04/29/rain-drops-1144448_960_720.jpg" alt="Rain Drops">
+<img
+  class="clipped"
+  src="https://pixabay.com/static/uploads/photo/2016/01/17/04/29/rain-drops-1144448_960_720.jpg"
+  alt="Rain Drops" />
 ```
 
 #### Résultat

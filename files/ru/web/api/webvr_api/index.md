@@ -1,8 +1,8 @@
 ---
 title: WebVR API
 slug: Web/API/WebVR_API
-translation_of: Web/API/WebVR_API
 ---
+
 {{SeeCompatTable}}{{APIRef("WebVR API")}}
 
 WebVR обеспечивает поддержку для использования устройств виртуальной реальности — например, шлемы виртуальной реальности, таких как Oculus Rift или HTC Vive — для веб-приложений, позволяя разработчикам передавать информацию о местоположении и движения с дисплея в движение вокруг 3D-сцены. Это имеет множество интересных приложений, от виртуальных туров продукта и интерактивных обучающих приложений до захватывающих игр от первого лица.
@@ -107,13 +107,12 @@ WebVR API расширяет следующие API, добавляя переч
 
 ## Совместимость с браузерами
 
-{{Compat("api.Navigator.getVRDisplays")}}
+{{Compat}}
 
 ## Смотрите также
 
 - [vr.mozilla.org](https://vr.mozilla.org) — Основная посадочная площадка Mozilla для WebVR с демонстрационными материалами, утилитами и другой информацией.
 - [A-Frame](https://aframe.io/) — Веб-платформа с открытым исходным кодом для создания опыта VR.
 - [webvr.info](https://webvr.info) — Актуальная информация о WebVR, настройке браузера и сообществе.
-- [MozVr.com](http://mozvr.com/) — Демонстрации, загрузки и другие ресурсы от команды Mozilla VR.
 - [threejs-vr-boilerplate](https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate) — Полезный стартовый шаблон для написания приложений WebVR.
 - [Web VR polyfill](https://github.com/googlevr/webvr-polyfill/) — JavaScript-реализация WebVR.

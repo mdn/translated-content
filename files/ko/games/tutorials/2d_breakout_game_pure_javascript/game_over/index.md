@@ -1,7 +1,6 @@
 ---
 title: 게임 오버
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
-original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Game_over
 ---
 
 {{GamesSidebar}}
@@ -17,23 +16,23 @@ original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽�
 '게임 오버' 기능을 만들어봅시다. 아래에 세 번째 학습에서 작성한, 벽에서 공을 반사시키는 코드의 일부가 있습니다.
 
 ```js
-if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-    dx = -dx;
+if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+  dx = -dx;
 }
 
-if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
-    dy = -dy;
+if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+  dy = -dy;
 }
 ```
 
 사면 모두에서 공을 튕겨내지 말고 왼쪽, 위쪽, 오른쪽, 세 면에만 적용해봅시다. 아래쪽 면에 닿는 순간 게임은 끝납니다. 우리는 공이 밑면에 충돌하는 순간 "게임 오버" 상태로 바뀌게 하기 위해 두 번째 `if` 블록을 수정할 것입니다. 우선 경고 메시지를 보여주고 페이지를 리로딩해서 게임을 다시 시작하게 할 것입니다. 두번째 `if` 블록을 아래와 같이 수정해봅시다.
 
 ```js
-if(y + dy < ballRadius) {
-    dy = -dy;
-} else if(y + dy > canvas.height-ballRadius) {
-    alert("GAME OVER");
-    document.location.reload();
+if (y + dy < ballRadius) {
+  dy = -dy;
+} else if (y + dy > canvas.height - ballRadius) {
+  alert("GAME OVER");
+  document.location.reload();
 }
 ```
 
@@ -42,16 +41,15 @@ if(y + dy < ballRadius) {
 이번 학습에서 할 마지막 일은 공과 패들 사이의 충돌 감지같은, 공을 게임 화면으로 되돌아가게 튕겨내는 기능을 만드는 것입니다. 가장 쉬운 방법은 공의 중심이 패들의 내부에 있는지 확인하는 것이다. 위에서 수정한 코드를 약간 고쳐봅시다.
 
 ```js
-if(y + dy < ballRadius) {
+if (y + dy < ballRadius) {
+  dy = -dy;
+} else if (y + dy > canvas.height - ballRadius) {
+  if (x > paddleX && x < paddleX + paddleWidth) {
     dy = -dy;
-} else if(y + dy > canvas.height-ballRadius) {
-    if(x > paddleX && x < paddleX + paddleWidth) {
-        dy = -dy;
-    }
-    else {
-        alert("GAME OVER");
-        document.location.reload();
-    }
+  } else {
+    alert("GAME OVER");
+    document.location.reload();
+  }
 }
 ```
 

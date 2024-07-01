@@ -1,8 +1,9 @@
 ---
 title: Использование Web Storage API
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
-translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
+
+{{DefaultAPISidebar("Web Storage API")}}
 
 Web Storage API предоставляет механизм, при помощи которого браузер может безопасно хранить пары ключей/значений в намного более интуитивной форме, чем используя cookies. Эта статья предоставляет пошаговое руководство о том, как использовать эту простую технологию.
 
@@ -39,12 +40,11 @@ localStorage.setItem('colorSetting', '#a4509b');
 function storageAvailable(type) {
   try {
     var storage = window[type],
-      x = '__storage_test__';
+      x = "__storage_test__";
     storage.setItem(x, x);
     storage.removeItem(x);
     return true;
-  }
-  catch(e) {
+  } catch (e) {
     return false;
   }
 }
@@ -53,10 +53,9 @@ function storageAvailable(type) {
 Вот как вы бы могли использовать это:
 
 ```js
-if (storageAvailable('localStorage')) {
+if (storageAvailable("localStorage")) {
   // Yippee! We can use localStorage awesomeness
-}
-else {
+} else {
   // Too bad, no localStorage for us
 }
 ```
@@ -80,7 +79,7 @@ else {
 Начнём с main.js, мы проверим был ли уже заполнен объект Storage (т.е страница была ранее доступна)
 
 ```js
-if(!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem("bgcolor")) {
   populateStorage();
 } else {
   setStyles();
@@ -96,17 +95,17 @@ if(!localStorage.getItem('bgcolor')) {
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  var currentColor = localStorage.getItem("bgcolor");
+  var currentFont = localStorage.getItem("font");
+  var currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = "#" + currentColor;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 
@@ -118,9 +117,9 @@ function setStyles() {
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
-  localStorage.setItem('font', document.getElementById('font').value);
-  localStorage.setItem('image', document.getElementById('image').value);
+  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
+  localStorage.setItem("font", document.getElementById("font").value);
+  localStorage.setItem("image", document.getElementById("image").value);
 
   setStyles();
 }
@@ -143,12 +142,12 @@ The {{domxref("StorageEvent")}} is fired whenever a change is made to the {{domx
 On the events page (see [events.js](https://github.com/mdn/web-storage-demo/blob/gh-pages/event.js)) the only JavaScript is as follows:
 
 ```js
-window.addEventListener('storage', function(e) {
-  document.querySelector('.my-key').textContent = e.key;
-  document.querySelector('.my-old').textContent = e.oldValue;
-  document.querySelector('.my-new').textContent = e.newValue;
-  document.querySelector('.my-url').textContent = e.url;
-  document.querySelector('.my-storage').textContent = e.storageArea;
+window.addEventListener("storage", function (e) {
+  document.querySelector(".my-key").textContent = e.key;
+  document.querySelector(".my-old").textContent = e.oldValue;
+  document.querySelector(".my-new").textContent = e.newValue;
+  document.querySelector(".my-url").textContent = e.url;
+  document.querySelector(".my-storage").textContent = e.storageArea;
 });
 ```
 
@@ -161,24 +160,14 @@ Web Storage также предоставляет несколько прост�
 - {{domxref("Storage.removeItem()")}} принимает единственный аргумент - ключ элемента данных, который вы хотите удалить - и удаляет его из объекта хранения для этого домена.
 - {{domxref("Storage.clear()")}} не принимает аргументов, полностью очищает объекта storage для данного домена.
 
-## Specifications
+## Спецификации
 
-| Specification                        | Status                           | Comment |
-| ------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('Web Storage')}} | {{Spec2('Web Storage')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
-### `Window.localStorage`
+{{Compat}}
 
-{{Compat("api.Window.localStorage")}}
-
-### `Window.sessionStorage`
-
-{{Compat("api.Window.sessionStorage")}}
-
-All browsers have varying capacity levels for both localStorage and sessionStorage. Here is a [detailed rundown of all the storage capacities for various browsers](http://dev-test.nemikor.com/web-storage/support-test/).
-
-## See also
+## Смотрите также
 
 - [Web Storage API landing page](/ru/docs/Web/API/Web_Storage_API)

@@ -1,12 +1,15 @@
 ---
 title: inset()
 slug: Web/CSS/basic-shape/inset
-original_slug: Web/CSS/basic-shape/inset()
+l10n:
+  sourceCommit: 9a073e360dac285c502d509830b5f9fad245f5f2
 ---
 
 {{CSSRef}}
 
-**`inset()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Types)の一つです。内部の矩形を定義します。
+**`inset()`** は [CSS](/ja/docs/Web/CSS) の関数は、参照ボックスの各辺から指定された内側への距離に矩形を定義します。これは、 {{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Types)の一つを定義するために使用される基本図形関数です。
+
+{{EmbedInteractiveExample("pages/css/function-inset.html")}}
 
 ## 構文
 
@@ -25,7 +28,7 @@ shape-outside: inset(20px 50px 10px 0 round 50px);
 
 ### 基本的な内側の矩形の例
 
-下記の例では、浮動要素の上にコンテンツを引き寄せるために、`inset()` のシェイプを使用しています。オフセット値を変更するとシェイプの変化を確認することができます。
+下記の例では、浮動要素の上にコンテンツを引き寄せるために、 `inset()` のシェイプを使用しています。オフセット値を変更するとシェイプの変化を確認することができます。
 
 {{EmbedGHLiveSample("css-examples/shapes/basic-shape/inset.html", '100%', 800)}}
 
@@ -40,4 +43,5 @@ shape-outside: inset(20px 50px 10px 0 round 50px);
 ## 関連情報
 
 - このデータ型を使用するプロパティ: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [基本シェイプのガイド](/ja/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
+- [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes) モジュール
+- [基本シェイプのガイド](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes)

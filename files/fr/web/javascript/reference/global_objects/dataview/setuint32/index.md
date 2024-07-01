@@ -1,15 +1,6 @@
 ---
 title: DataView.prototype.setUint32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint32
-tags:
-  - DataView
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setUint32
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/setUint32
 ---
 
 {{JSRef}}

@@ -1,8 +1,9 @@
 ---
-title: HTMLFormElement.action
+title: "HTMLFormElement: action プロパティ"
+short-title: action
 slug: Web/API/HTMLFormElement/action
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -18,7 +19,7 @@ l10n:
 ## 例
 
 ```js
-form.action = '/cgi-bin/publish';
+form.action = "/cgi-bin/publish";
 ```
 
 ## 仕様書

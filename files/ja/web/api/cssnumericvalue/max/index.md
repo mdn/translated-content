@@ -10,7 +10,7 @@ slug: Web/API/CSSNumericValue/max
 ## 構文
 
 ```js
-max(number1, /* ..., */ numberN)
+max(number1, /* ..., */ numberN);
 ```
 
 ### 引数

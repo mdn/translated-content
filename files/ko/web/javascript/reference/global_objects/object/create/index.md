@@ -2,6 +2,7 @@
 title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
+
 {{JSRef}}
 
 **`Object.create()`** 메서드는 지정된 프로토타입 객체 및 속성(property)을 갖는 새 객체를 만듭니다.
@@ -41,10 +42,10 @@ function Shape() {
 }
 
 // 상위클래스 메서드
-Shape.prototype.move = function(x, y) {
+Shape.prototype.move = function (x, y) {
   this.x += x;
   this.y += y;
-  console.info('Shape moved.');
+  console.info("Shape moved.");
 };
 
 // Rectangle - 하위클래스
@@ -58,8 +59,8 @@ Rectangle.prototype.constructor = Rectangle;
 
 var rect = new Rectangle();
 
-console.log('Is rect an instance of Rectangle?', rect instanceof Rectangle); // true
-console.log('Is rect an instance of Shape?', rect instanceof Shape); // true
+console.log("Is rect an instance of Rectangle?", rect instanceof Rectangle); // true
+console.log("Is rect an instance of Shape?", rect instanceof Shape); // true
 rect.move(1, 1); // Outputs, 'Shape moved.'
 ```
 
@@ -74,7 +75,7 @@ function MyClass() {
 MyClass.prototype = Object.create(SuperClass.prototype); // 상속
 mixin(MyClass.prototype, OtherSuperClass.prototype); // mixin
 
-MyClass.prototype.myMethod = function() {
+MyClass.prototype.myMethod = function () {
   // 기능 수행
 };
 ```
@@ -89,28 +90,29 @@ var o;
 // 프로토타입이 null인 객체 생성
 o = Object.create(null);
 
-
 o = {};
 // 위는 아래와 같습니다:
 o = Object.create(Object.prototype);
-
 
 // 샘플 속성 두개를 갖는 객체를 만드는 예.
 // (두 번째 매개변수는 키를 *속성 설명자*에 맵핑함을 주의하세요.)
 o = Object.create(Object.prototype, {
   // foo는 정규 '값 속성'
-  foo: { writable: true, configurable: true, value: 'hello' },
+  foo: { writable: true, configurable: true, value: "hello" },
   // bar는 접근자(accessor, getter-및-setter) 속성
   bar: {
     configurable: false,
-    get: function() { return 10; },
-    set: function(value) { console.log('Setting `o.bar` to', value); }
-/* ES5 접근자로 코드는 이렇게 할 수 있습니다
+    get: function () {
+      return 10;
+    },
+    set: function (value) {
+      console.log("Setting `o.bar` to", value);
+    },
+    /* ES5 접근자로 코드는 이렇게 할 수 있습니다
     get function() { return 10; },
     set function(value) { console.log('setting `o.bar` to', value); } */
-  }
+  },
 });
-
 
 function Constructor() {}
 o = new Constructor();
@@ -118,7 +120,6 @@ o = new Constructor();
 o = Object.create(Constructor.prototype);
 // 물론, 생성자 함수에 실제 초기화 코드가 있다면
 // Object.create()는 그것을 반영할 수 없습니다
-
 
 // 빈 새 객체가 프로토타입인 새 객체를 만들고
 // 값이 42인 단일 속성 'p' 추가.
@@ -139,14 +140,17 @@ delete o.p;
 // false
 
 // ES3 속성을 지정하기 위해
-o2 = Object.create({}, {
-  p: {
-    value: 42,
-    writable: true,
-    enumerable: true,
-    configurable: true
-  }
-});
+o2 = Object.create(
+  {},
+  {
+    p: {
+      value: 42,
+      writable: true,
+      enumerable: true,
+      configurable: true,
+    },
+  },
+);
 ```
 
 ## 폴리필
@@ -156,12 +160,12 @@ o2 = Object.create({}, {
 `[[Prototype]]`에 `null` 을 설정하는 것이 실제 ES5 `Object.create`에서는 지원되지만, ECMAScript 5 보다 낮은 버전에서는 상속에 제한이 있기 때문에 이 폴리필에서는 지원할 수 없음에 주의하세요.
 
 ```js
-if (typeof Object.create != 'function') {
-  Object.create = (function(undefined) {
-    var Temp = function() {};
+if (typeof Object.create != "function") {
+  Object.create = (function (undefined) {
+    var Temp = function () {};
     return function (prototype, propertiesObject) {
-      if(prototype !== Object(prototype) && prototype !== null) {
-        throw TypeError('Argument must be an object, or null');
+      if (prototype !== Object(prototype) && prototype !== null) {
+        throw TypeError("Argument must be an object, or null");
       }
       Temp.prototype = prototype || {};
       if (propertiesObject !== undefined) {
@@ -170,8 +174,8 @@ if (typeof Object.create != 'function') {
       var result = new Temp();
       Temp.prototype = null;
       // Object.create(null)인 경우 모방
-      if(prototype === null) {
-         result.__proto__ = null;
+      if (prototype === null) {
+        result.__proto__ = null;
       }
       return result;
     };

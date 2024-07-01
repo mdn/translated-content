@@ -1,12 +1,6 @@
 ---
 title: Access-Control-Allow-Methods
 slug: Web/HTTP/Headers/Access-Control-Allow-Methods
-tags:
-  - CORS
-  - HTTP
-  - Заголовки
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Methods
-original_slug: Web/HTTP/Заголовки/Access-Control-Allow-Methods
 ---
 
 {{HTTPSidebar}}
@@ -45,9 +39,7 @@ Access-Control-Allow-Methods: POST, GET, OPTIONS
 
 ## Спецификации
 
-| Спецификация                                                                                                             | Статус                   | Комментарий           |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | --------------------- |
-| {{SpecName('Fetch','#http-access-control-allow-methods', 'Access-Control-Allow-Methods')}} | {{Spec2("Fetch")}} | Начальное определение |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
@@ -58,10 +50,10 @@ Access-Control-Allow-Methods: POST, GET, OPTIONS
 - Подстановочное значение (\*), которое упоминается в последней спецификации ещё не реализовано в браузерах:
 
   - Chromium: [Issue 615313](https://bugs.chromium.org/p/chromium/issues/detail?id=615313)
-  - Firefox: {{bug(1309358)}}
+  - Firefox: [Firefox bug 1309358](https://bugzil.la/1309358)
   - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
 
-## See also
+## Смотрите также
 
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
 - {{HTTPHeader("Access-Control-Expose-Headers")}}

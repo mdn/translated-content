@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: Unexpected token'
+title: "SyntaxError: Unexpected token"
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
 ---
 
@@ -30,7 +30,7 @@ Se esperaba un constructor específico de JavaScript pero se recibió algo difer
 
 Cuando se llama a una función, no se permiten comas al final de los argumentos. JavaScript espera un argumento que puede ser en realidad cualquier tipo de expresión.
 
-```js example-bad
+```js-nolint example-bad
 Math.max(2, 42,);
 // SyntaxError: expected expression, got ')'
 ```

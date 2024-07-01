@@ -30,10 +30,10 @@ wm.get(key);
 
 ```js
 var wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.get(window); // "foo" を返す
-wm.get('baz');  // undefined を返す
+wm.get("baz"); // undefined を返す
 ```
 
 ## 仕様書
@@ -42,7 +42,7 @@ wm.get('baz');  // undefined を返す
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakMap.get")}}
+{{Compat}}
 
 ## 関連情報
 

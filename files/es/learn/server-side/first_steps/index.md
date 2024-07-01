@@ -1,7 +1,6 @@
 ---
 title: Primeros Pasos en la Programación de Lado-Servidor
 slug: Learn/Server-side/First_steps
-original_slug: Learn/Server-side/Primeros_pasos
 ---
 
 {{LearnSidebar}}

@@ -1,15 +1,6 @@
 ---
 title: Error.prototype.fileName
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
-tags:
-  - Error
-  - JavaScript
-  - Non-standard
-  - Propriété
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/fileName
-original_slug: Web/JavaScript/Reference/Objets_globaux/Error/fileName
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -36,7 +27,7 @@ Ne fait partie d'aucune spécification. Non standard.
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Error.fileName")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,9 @@
 ---
 title: Date.prototype.setUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
 ---
-{{JSRef("Global_Objects", "Date")}}
+
+{{JSRef}}
 
 ## Сводка
 
@@ -45,11 +39,7 @@ theBigDay.setUTCMonth(11);
 
 ## Спецификации
 
-| Спецификация                                                                                                     | Статус                   | Комментарии                                            |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                                                          | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.39', 'Date.prototype.setUTCMonth')}}                     | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-date.prototype.setutcmonth', 'Date.prototype.setUTCMonth')}} | {{Spec2('ES6')}}     |                                                        |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

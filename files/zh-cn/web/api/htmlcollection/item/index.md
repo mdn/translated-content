@@ -23,9 +23,9 @@ HTMLCollection 中 `item()` 方法返回一个编号的元素，在 JavaScript �
 ## Example
 
 ```js
-var c = document.images;  // This is an HTMLCollection
-var img0 = c.item(0);     // You can use the item( ) method this way
-var img1 = c[1];          // But this notation is easier and more common
+var c = document.images; // This is an HTMLCollection
+var img0 = c.item(0); // You can use the item( ) method this way
+var img1 = c[1]; // But this notation is easier and more common
 ```
 
 ## See also

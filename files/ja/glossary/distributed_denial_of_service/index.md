@@ -3,6 +3,8 @@ title: Distributed Denial of Service
 slug: Glossary/Distributed_Denial_of_Service
 ---
 
+{{GlossarySidebar}}
+
 **Distributed Denial-of-Service**（**DDoS**、分散型サービス拒否）は、サーバー資源を襲って正当なユーザーをブロックするために、多数の侵害されたシステムが単一のターゲットを攻撃する攻撃です。
 
 通常、多くの人が多くのボットを使用して、銀行やクレジットカード決済ゲートウェイなどの注目を浴びるウェブ{{glossary("server","サーバー")}}を攻撃します。DDoS は、コンピューターネットワークと CPU 資源管理に関係します。

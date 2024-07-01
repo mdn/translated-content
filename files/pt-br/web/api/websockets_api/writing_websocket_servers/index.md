@@ -1,7 +1,6 @@
 ---
 title: Escrevendo um servidor WebSocket
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
-original_slug: WebSockets/Writing_WebSocket_servers
 ---
 
 Um servidor de WebSocket é uma aplicação TCP que escuta uma porta de um servidor que segue um protocolo específico, simples assim. A tarefa de criar um servidor personalizado costuma assustar as pessoas; no entanto, pode ser fácil implementar um simples servidor WebSocket na sua plataforma de escolha.
@@ -80,7 +79,7 @@ Cada _data frame_ (do cliente para o servidor ou vice-versa) segue o mesmo forma
 
 ```
 Frame format:
-​​
+
       0                   1                   2                   3
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
      +-+-+-+-+-------+-+-------------+-------------------------------+

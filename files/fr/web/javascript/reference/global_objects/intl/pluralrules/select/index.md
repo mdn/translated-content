@@ -1,15 +1,6 @@
 ---
 title: Intl.PluralRules.select()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - PluralRules
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/PluralRules/select
 ---
 
 {{JSRef}}
@@ -19,7 +10,7 @@ La méthode **`Intl.PluralRules.prototype.select`** renvoie une chaîne de carac
 ## Syntaxe
 
 ```js
-pluralRule.select(nombre)
+pluralRule.select(nombre);
 ```
 
 ### Paramètres
@@ -34,19 +25,19 @@ Cette fonction permet de sélectionner une règle de nombre en fonction de la lo
 ## Exemples
 
 ```js
- new Intl.PluralRules('ar-EG').select(0);
+new Intl.PluralRules("ar-EG").select(0);
 // → 'zero'
 
-new Intl.PluralRules('ar-EG').select(1);
+new Intl.PluralRules("ar-EG").select(1);
 // → 'one'
 
-new Intl.PluralRules('ar-EG').select(2);
+new Intl.PluralRules("ar-EG").select(2);
 // → 'two'
 
-new Intl.PluralRules('ar-EG').select(6);
+new Intl.PluralRules("ar-EG").select(6);
 // → 'few'
 
-new Intl.PluralRules('ar-EG').select(18);
+new Intl.PluralRules("ar-EG").select(18);
 // → 'many'
 ```
 

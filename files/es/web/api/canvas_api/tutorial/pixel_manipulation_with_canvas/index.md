@@ -1,7 +1,6 @@
 ---
 title: Pixel manipulation with canvas
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
-original_slug: Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
@@ -238,7 +237,7 @@ zoomctx.drawImage(
   0,
   0,
   200,
-  200
+  200,
 );
 ```
 
@@ -285,7 +284,7 @@ function draw(img) {
       0,
       0,
       200,
-      200
+      200,
     );
   };
 

@@ -1,23 +1,25 @@
 ---
 title: perspective-origin
 slug: Web/CSS/perspective-origin
+l10n:
+  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
 {{CSSRef}}
 
-[CSS](/ja/docs/Web/CSS) の **`perspective-origin`** プロパティは、閲覧者の視点の位置を決めます。これは {{cssxref("perspective")}} プロパティによって*消失点*として使われます。
+**`perspective-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、閲覧者の視点の位置を決めます。これは {{cssxref("perspective")}} プロパティによって*消点*として使われます。
 
 {{EmbedInteractiveExample("pages/css/perspective-origin.html")}}
 
-**`perspective-origin`** および {{cssxref('perspective')}} の各プロパティは、三次元空間で座標変換される子の親に設定するものであり、座標変換される要素に設定される [`perspective()`](/ja/docs/Web/CSS/transform-function/perspective()) 変換関数とは異なります。
+**`perspective-origin`** および {{cssxref('perspective')}} の各プロパティは、三次元空間で座標変換される子の親に設定するものであり、座標変換される要素に設定される [`perspective()`](/ja/docs/Web/CSS/transform-function/perspective) 変換関数とは異なります。
 
 ## 構文
 
 ```css
-/* １値構文 */
+/* 1 値構文 */
 perspective-origin: x-position;
 
-/* ２値構文 */
+/* 2 値構文 */
 perspective-origin: x-position y-position;
 
 /* x-position と y-position がキーワードである場合は、
@@ -28,6 +30,7 @@ perspective-origin: y-position x-position;
 perspective-origin: inherit;
 perspective-origin: initial;
 perspective-origin: revert;
+perspective-origin: revert-layer;
 perspective-origin: unset;
 ```
 
@@ -61,297 +64,9 @@ perspective-origin: unset;
 
 ## 例
 
-<h3 id="Changing_the_perspective_origin">視点の変更</h3>
+### 視点の原点の変更
 
-この例は主要な `perspective-origin` 値で立方体を表示します。
-
-#### HTML
-
-```html
-<section>
-
-<figure>
-  <figcaption><code>perspective-origin: top left;</code></figcaption>
-    <div class="container">
-     <div class="cube potl">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
-     </div>
-    </div>
-</figure>
-
-<figure>
-  <figcaption><code>perspective-origin: top;</code></figcaption>
-   <div class="container">
-    <div class="cube potm">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
-    </div>
-  </div>
-</figure>
-
-<figure>
-  <figcaption><code>perspective-origin: top right;</code></figcaption>
-  <div class="container">
-    <div class="cube potr">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
-    </div>
-  </div>
-</figure>
-
-<figure>
-  <figcaption><code>perspective-origin: left;</code></figcaption>
-  <div class="container">
-    <div class="cube poml">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
-    </div>
-  </div>
-</figure>
-
-<figure>
-  <figcaption><code>perspective-origin: 50% 50%;</code></figcaption>
-  <div class="container">
-    <div class="cube pomm">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
-    </div>
-  </div>
-</figure>
-
-<figure>
-  <figcaption><code>perspective-origin: right;</code></figcaption>
-  <div class="container">
-    <div class="cube pomr">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
-    </div>
-  </div>
-</figure>
-
-<figure>
-  <figcaption><code>perspective-origin: bottom left;</code></figcaption>
-  <div class="container">
-    <div class="cube pobl">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
-    </div>
-  </div>
-</figure>
-
-<figure>
-  <figcaption><code>perspective-origin: bottom;</code></figcaption>
-  <div class="container">
-    <div class="cube pobm">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
-    </div>
-  </div>
-</figure>
-
-<figure>
-  <figcaption><code>perspective-origin: bottom right;</code></figcaption>
-  <div class="container">
-    <div class="cube pobr">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
-    </div>
-  </div>
-</figure>
-
-<figure>
-  <figcaption><code>perspective-origin: -200% -200%;</code></figcaption>
-  <div class="container">
-    <div class="cube po200200neg">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
-    </div>
-  </div>
-</figure>
-
-<figure>
-  <figcaption><code>perspective-origin: 200% 200%;</code></figcaption>
-  <div class="container">
-    <div class="cube po200200pos">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
-    </div>
-  </div>
-</figure>
-
-<figure>
-  <figcaption><code>perspective-origin: 200% -200%;</code></figcaption>
-  <div class="container">
-    <div class="cube po200200">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
-    </div>
-  </div>
-</figure>
-
-</section>
-```
-
-#### CSS
-
-```css
-/* perspective-origin の値 (例ごとに異なる) */
-.potl {
-  perspective-origin: top left;
-}
-.potm {
-  perspective-origin: top;
-}
-.potr {
-  perspective-origin: top right;
-}
-.poml {
-  perspective-origin: left;
-}
-.pomm {
-  perspective-origin: 50% 50%;
-}
-.pomr {
-  perspective-origin: right;
-}
-.pobl {
-  perspective-origin: bottom left;
-}
-.pobm {
-  perspective-origin: bottom;
-}
-.pobr {
-  perspective-origin: bottom right;
-}
-.po200200neg {
-  perspective-origin: -200% -200%;
-}
-.po200200pos {
-  perspective-origin: 200% 200%;
-}
-.po200200 {
-  perspective-origin: 200% -200%;
-}
-
-/* コンテナーの div、立方体の div、面の一般的な設定 */
-.container {
-  width: 100px;
-  height: 100px;
-  margin: 24px;
-  border: none;
-}
-
-.cube {
-  width: 100%;
-  height: 100%;
-  backface-visibility: visible;
-  perspective: 300px;
-  transform-style: preserve-3d;
-}
-
-.face {
-  display: block;
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border: none;
-  line-height: 100px;
-  font-family: sans-serif;
-  font-size: 60px;
-  color: white;
-  text-align: center;
-}
-
-/* 方向に基づいてそれぞれの面を設定 */
-.front {
-  background: rgba(0, 0, 0, 0.3);
-  transform: translateZ(50px);
-}
-.back {
-  background: rgba(0, 255, 0, 1);
-  color: black;
-  transform: rotateY(180deg) translateZ(50px);
-}
-.right {
-  background: rgba(196, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
-}
-.left {
-  background: rgba(0, 0, 196, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
-}
-.top {
-  background: rgba(196, 196, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
-}
-.bottom {
-  background: rgba(196, 0, 196, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
-}
-
-/* レイアウトの見栄えをよくする */
-section {
-  background-color: #EEE;
-  padding: 10px;
-  font-family: sans-serif;
-  text-align: left;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-```
-
-#### 結果
-
-{{EmbedLiveSample('Changing_the_perspective_origin', '100%', 700)}}
+`perspective-origin` の変更方法を示す例は、 [CSS 座標変換の使用 > 視点の変更](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms#視点の変更)にあります。
 
 ## 仕様書
 
@@ -363,8 +78,8 @@ section {
 
 ## 関連情報
 
-- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - {{cssxref('transform-style')}}
 - {{cssxref('transform-function')}}
 - {{cssxref('perspective')}}
-- [`transform: perspective()`](/ja/docs/Web/CSS/transform-function/perspective()) 関数
+- [`transform: perspective()`](/ja/docs/Web/CSS/transform-function/perspective) 関数

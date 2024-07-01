@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.connectionState
 slug: Web/API/RTCPeerConnection/connectionState
-translation_of: Web/API/RTCPeerConnection/connectionState
 ---
 
 {{APIRef("WebRTC")}}
@@ -19,8 +18,6 @@ var connectionState = RTCPeerConnection.connectionState;
 ### Значение
 
 Текущий статус соединения представлен одним из значений перечисления [`RTCPeerConnectionState`](#RTCPeerConnectionState_enum).
-
-{{page("/en-US/docs/Web/API/RTCPeerConnection", "RTCPeerConnectionState enum", 0, 1)}}
 
 ## Пример
 

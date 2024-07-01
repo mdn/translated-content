@@ -1,11 +1,6 @@
 ---
-title: 'SyntaxError: missing variable name'
+title: "SyntaxError: missing variable name"
 slug: Web/JavaScript/Reference/Errors/No_variable_name
-tags:
-  - JavaScript
-  - SyntaxError
-  - Ошибки
-translation_of: Web/JavaScript/Reference/Errors/No_variable_name
 ---
 
 {{jsSidebar("Errors")}}
@@ -65,11 +60,12 @@ var second = document.getElementById('два'),
 Исправленный вариант:
 
 ```js example-good
-var x, y = "foo";
+var x,
+  y = "foo";
 var x = "foo";
 
-var first = document.getElementById('раз');
-var second = document.getElementById('два');
+var first = document.getElementById("раз");
+var second = document.getElementById("два");
 ```
 
 ### Массивы
@@ -84,7 +80,7 @@ var arr = 1,2,3,4,5;
 А вот так будет правильно:
 
 ```js example-good
-var arr = [1,2,3,4,5];
+var arr = [1, 2, 3, 4, 5];
 ```
 
 ## Смотрите также

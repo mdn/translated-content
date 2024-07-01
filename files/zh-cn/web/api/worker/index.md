@@ -20,7 +20,7 @@ Worker 也可以创建新的 Worker，当然，所有 Worker 必须与其创建�
 
 ## 属性
 
-*继承*父对象*{{domxref("EventTarget")}} 的属性，以及实现对象 {{domxref("AbstractWorker")}}的属性。*
+_继承父接口 {{domxref("EventTarget")}} 的属性。_
 
 ### _事件句柄_
 
@@ -33,7 +33,7 @@ Worker 也可以创建新的 Worker，当然，所有 Worker 必须与其创建�
 
 ## 方法
 
-*继承*父对象*{{domxref("EventTarget")}} 的方法，以及实现对象 {{domxref("AbstractWorker")}}的方法。*
+_继承父接口 {{domxref("EventTarget")}} 的方法。_
 
 - {{domxref("Worker.postMessage()")}}
   - : 发送一条消息到最近的外层对象，消息可由任何 JavaScript 对象组成。
@@ -45,14 +45,14 @@ Worker 也可以创建新的 Worker，当然，所有 Worker 必须与其创建�
 下面的代码通过构造函数 {{domxref("Worker.Worker", "Worker()")}} 创建了一个 {{domxref("Worker")}} 对象。
 
 ```js
-var myWorker = new Worker('worker.js');
-var first = document.querySelector('#number1');
-var second = document.querySelector('#number2');
+var myWorker = new Worker("worker.js");
+var first = document.querySelector("#number1");
+var second = document.querySelector("#number2");
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+first.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 ```
 
 完整的示例，请查阅 [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
@@ -71,9 +71,9 @@ first.onchange = function() {
 
 浏览器的早期版本中，加载跨域的执行者脚本导致 `SecurityError`事件。根据规范的变更，而新版本的浏览器只有[`error`](/zh-CN/docs/Web/API/Element/error_event)事件发生
 
-## 相关链接
+## 参见
 
-- [Using web workers](/En/Using_web_workers)
-- [Functions available to workers](/En/DOM/Worker/Functions_available_to_workers)
-- Other kind of workers: {{ domxref("SharedWorker") }} and [ServiceWorker](/zh-CN/docs/Web/API/ServiceWorker_API).
-- Non-standard, Gecko-specific workers: {{ domxref("ChromeWorker") }}, used by extensions.
+- [使用 Web Worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Web Worker 可用的函数和类](/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
+- 其他类型的 worker：{{ domxref("SharedWorker") }} 和 [ServiceWorker](/zh-CN/docs/Web/API/Service_Worker_API).
+- [`OffscreenCanvas`](/zh-CN/docs/Web/API/OffscreenCanvas) 接口

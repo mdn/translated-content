@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/new.target
 ## 구문
 
 ```js
-    new.target
+new.target;
 ```
 
 ## 설명
@@ -48,7 +48,11 @@ class A {
   }
 }
 
-class B extends A { constructor() { super(); } }
+class B extends A {
+  constructor() {
+    super();
+  }
+}
 
 var a = new A(); // logs "A"
 var b = new B(); // logs "B"

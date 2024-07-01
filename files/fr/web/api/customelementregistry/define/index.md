@@ -68,31 +68,33 @@ class PopUpInfo extends HTMLElement {
     super();
 
     // On crée une racine sombre
-    const shadow = this.attachShadow({mode: 'open'});
+    const shadow = this.attachShadow({ mode: "open" });
 
     // On crée quelques éléments <span>
-    const wrapper = document.createElement('span');
-    wrapper.setAttribute('class', 'wrapper');
+    const wrapper = document.createElement("span");
+    wrapper.setAttribute("class", "wrapper");
 
-    const icon = document.createElement('span');
-    icon.setAttribute('class', 'icon');
-    icon.setAttribute('tabindex', 0);
+    const icon = document.createElement("span");
+    icon.setAttribute("class", "icon");
+    icon.setAttribute("tabindex", 0);
 
-    const info = document.createElement('span');
-    info.setAttribute('class', 'info');
+    const info = document.createElement("span");
+    info.setAttribute("class", "info");
 
     // On prend le contenu de l'attribut et on le place
     // dans le fragment d'informations
-    const text = this.getAttribute('data-text');
+    const text = this.getAttribute("data-text");
     info.textContent = text;
 
     // On insère l'icône
-    const img = document.createElement('img');
-    img.src = this.hasAttribute('img') ? this.getAttribute('img') : 'img/default.png';
+    const img = document.createElement("img");
+    img.src = this.hasAttribute("img")
+      ? this.getAttribute("img")
+      : "img/default.png";
     icon.appendChild(img);
 
     // On met en forme
-    const style = document.createElement('style');
+    const style = document.createElement("style");
     console.log(style.isConnected);
 
     style.textContent = `
@@ -132,7 +134,7 @@ class PopUpInfo extends HTMLElement {
 }
 
 // On définit le nouvel élément
-customElements.define('popup-info', PopUpInfo);
+customElements.define("popup-info", PopUpInfo);
 ```
 
 #### HTML
@@ -161,18 +163,21 @@ class WordCount extends HTMLParagraphElement {
     // On compte les mots dans l'élément parent
     const wcParent = this.parentNode;
 
-    function countWords(node){
+    function countWords(node) {
       const text = node.innerText || node.textContent;
-      return text.trim().split(/\s+/g).filter((a) => a.trim().length > 0).length;
+      return text
+        .trim()
+        .split(/\s+/g)
+        .filter((a) => a.trim().length > 0).length;
     }
 
     const count = `Mots : ${countWords(wcParent)}`;
 
     // On crée une racine sombre
-    const shadow = this.attachShadow({mode: 'open'});
+    const shadow = this.attachShadow({ mode: "open" });
 
     // On crée un nœud texte et on y inscrit le nombre de mot
-    const text = document.createElement('span');
+    const text = document.createElement("span");
     text.textContent = count;
 
     // On l'ajoute à la racine sombre
@@ -188,7 +193,7 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // On définit le nouvel élément
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 #### HTML
@@ -203,12 +208,14 @@ Si la classe utilisée pour l'élément contient une propriété statique nommé
 
 ```js
 class PopUpInfo extends HTMLElement {
-  static get disabledFeatures() { return ['shadow']; }
+  static get disabledFeatures() {
+    return ["shadow"];
+  }
 
   constructor() {
     super();
 
-    const shadow = this.attachShadow({mode: 'open'});
+    const shadow = this.attachShadow({ mode: "open" });
     // Cela entraînera une erreur lors de la définition de
     // l'élément.
   }

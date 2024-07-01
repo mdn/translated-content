@@ -33,8 +33,8 @@ _`TextEncoder` 接口不继承任何方法。_
 ## 示例
 
 ```js
-const encoder = new TextEncoder()
-const view = encoder.encode('€')
+const encoder = new TextEncoder();
+const view = encoder.encode("€");
 console.log(view); // Uint8Array(3) [226, 130, 172]
 ```
 

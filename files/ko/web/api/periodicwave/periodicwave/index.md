@@ -41,10 +41,10 @@ real[1] = 1;
 imag[1] = 0;
 
 var options = {
-  real : real,
-  imag : imag,
-  disableNormalization : false
-}
+  real: real,
+  imag: imag,
+  disableNormalization: false,
+};
 
 var wave = new PeriodicWave(ac, options);
 ```

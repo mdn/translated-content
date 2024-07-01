@@ -368,7 +368,7 @@ Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
 Cache-Control: no-store
 ```
 
-### Almacenamiento en caché de activos estáticos con “cache busting”
+### Almacenamiento en caché de activos estáticos con "cache busting"
 
 Cuando crea activos estáticos con mecanismos de control de versiones/hashing, agregar una versión/hash al nombre de archivo o cadena de consulta es una buena manera de administrar el almacenamiento en caché.
 
@@ -397,7 +397,7 @@ Puede agregar un valor grande de `max-age` e `immutable`, porque el contenido nu
 Cache-Control: max-age=31536000, immutable
 ```
 
-Cuando actualiza la biblioteca o edita la imagen, el nuevo contenido debe tener una nueva URL y los cachés no se reutilizan. Eso se llama el patrón “cache busting”.
+Cuando actualiza la biblioteca o edita la imagen, el nuevo contenido debe tener una nueva URL y los cachés no se reutilizan. Eso se llama el patrón "cache busting".
 
 Utilice `no-cache` para asegurarse de que la respuesta HTML en sí misma no se almacene en caché. `no-cache` puede causar la revalidación y el cliente recibirá correctamente una nueva versión de la respuesta HTML y los activos estáticos.
 

@@ -1,7 +1,6 @@
 ---
 title: MediaCapabilitiesInfo
 slug: Web/API/MediaCapabilities/encodingInfo
-original_slug: Web/API/MediaCapabilitiesInfo
 ---
 
 {{APIRef("Media Capabilities API")}}

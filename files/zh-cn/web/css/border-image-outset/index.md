@@ -3,7 +3,7 @@ title: border-image-outset
 slug: Web/CSS/border-image-outset
 ---
 
-{{CSSRef("CSS Borders")}}
+{{CSSRef}}
 
 ## 概述
 

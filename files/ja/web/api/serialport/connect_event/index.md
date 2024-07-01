@@ -1,5 +1,5 @@
 ---
-title: 'SerialPort: connect イベント'
+title: "SerialPort: connect イベント"
 slug: Web/API/SerialPort/connect_event
 l10n:
   sourceCommit: ba5931fadbcc3b79ffacbb442b58380c827fc0ae
@@ -16,9 +16,9 @@ l10n:
 {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を用いるか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener('connect', (event) => { });
+addEventListener("connect", (event) => {});
 
-onconnect = (event) => { };
+onconnect = (event) => {};
 ```
 
 ## 型
@@ -41,7 +41,7 @@ onconnect = (event) => { };
 // ユーザーにシリアルポートを選んでもらう
 const port = await navigator.serial.requestPort();
 
-port.addEventListener('connect', (event) => {
+port.addEventListener("connect", (event) => {
   // 選択されたポートが接続されたら通知する
 });
 ```
@@ -51,7 +51,7 @@ port.addEventListener('connect', (event) => {
 `connect` イベントは {{domxref("Serial")}} オブジェクトに伝搬し、ここで新しく接続された任意のポートを監視することができます。
 
 ```js
-navigator.serial.addEventListener('connect', (event) => {
+navigator.serial.addEventListener("connect", (event) => {
   // 新しいポートが利用可能になったら通知する
   // 新しいポートを参照するには、`event.target` を使う
 });

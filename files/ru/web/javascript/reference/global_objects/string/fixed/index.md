@@ -1,17 +1,9 @@
 ---
 title: String.prototype.fixed()
 slug: Web/JavaScript/Reference/Global_Objects/String/fixed
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Методы оборачивания в HTML
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fixed
 ---
-{{JSRef("Global_Objects", "String")}} {{deprecated_header}}
+
+{{JSRef}} {{deprecated_header}}
 
 ## Сводка
 
@@ -34,7 +26,7 @@ str.fixed()
 В следующем примере для изменения форматирования строки используется метод `fixed()`:
 
 ```js
-var worldString = 'Привет, мир';
+var worldString = "Привет, мир";
 
 document.write(worldString.fixed());
 ```
@@ -47,9 +39,7 @@ document.write(worldString.fixed());
 
 ## Спецификации
 
-| Спецификация                                                                                         | Статус               | Комментарии                                                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.fixed', 'String.prototype.fixed')}} | {{Spec2('ES6')}} | Изначальное определение. Реализована в JavaScript 1.0. Определена в (нормативном) Приложении B по Дополнительным возможностям ECMAScript для веб-браузеров. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

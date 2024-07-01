@@ -2,6 +2,7 @@
 title: String.prototype.trimStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
 ---
+
 {{JSRef}}
 
 **`trimStart()`** 메서드는 문자열 시작부분의 공백을 제거합니다. 또한 `trimLeft()`라는 별칭으로 호출이 가능합니다.
@@ -10,9 +11,9 @@ slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
 ## 구문
 
 ```js
-trimStart()
+trimStart();
 
-trimLeft()
+trimLeft();
 ```
 
 ### 반환값
@@ -36,13 +37,13 @@ String.prototype.trimLeft.name === "trimStart";
 다음 예제는 `'foo  '` 문자열을 표시합니다.
 
 ```js
-var str = '   foo  ';
+var str = "   foo  ";
 
 console.log(str.length); // 8
 
 str = str.trimStart();
 console.log(str.length); // 5
-console.log(str);        // 'foo  '
+console.log(str); // 'foo  '
 ```
 
 ## 폴리필
@@ -50,18 +51,20 @@ console.log(str);        // 'foo  '
 ```js
 //https://github.com/FabioVergani/js-Polyfill_String-trimStart
 
-(function(w){
-    var String=w.String, Proto=String.prototype;
+(function (w) {
+  var String = w.String,
+    Proto = String.prototype;
 
-    (function(o,p){
-        if(p in o?o[p]?false:true:true){
-            var r=/^\s+/;
-            o[p]=o.trimLeft||function(){
-                return this.replace(r,'')
-            }
-        }
-    })(Proto,'trimStart');
-
+  (function (o, p) {
+    if (p in o ? (o[p] ? false : true) : true) {
+      var r = /^\s+/;
+      o[p] =
+        o.trimLeft ||
+        function () {
+          return this.replace(r, "");
+        };
+    }
+  })(Proto, "trimStart");
 })(window);
 
 /*

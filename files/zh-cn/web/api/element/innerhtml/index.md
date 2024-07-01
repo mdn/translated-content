@@ -61,9 +61,8 @@ document.body.innerHTML = "";
 下面这个例子，首先获取文档当前的 HTML 标记并替换 `"<"` 字符为 HTML 实体 `"&lt;"`，从本质上来看，它是将 HTML 转换成原始文本，将其包裹在 {{HTMLElement("pre")}} 元素中。然后 `innerHTML` 的值被替换成新的字符串。最后，文档的内容被替换为页面显示源码。
 
 ```js
-document.documentElement.innerHTML = "<pre>" +
-         document.documentElement.innerHTML.replace(/</g,"&lt;") +
-            "</pre>";
+document.documentElement.innerHTML =
+  "<pre>" + document.documentElement.innerHTML.replace(/</g, "&lt;") + "</pre>";
 ```
 
 #### 其他：
@@ -89,7 +88,7 @@ name = "<script>alert('I am John in an annoying alert!')</script>";
 el.innerHTML = name; // harmless in this case
 ```
 
-尽管这看上去像 [cross-site scripting](https://zh.wikipedia.org/wiki/cross-site_scripting) 攻击，结果并不会导致什么。HTML 5 中指定不执行由 `innerHTML` 插入的 {{HTMLElement("script")}} 标签。
+尽管这看上去像[跨站脚本](https://zh.wikipedia.org/wiki/跨網站指令碼)攻击，结果并不会导致什么。HTML 5 中指定不执行由 `innerHTML` 插入的 {{HTMLElement("script")}} 标签。
 
 然而，有很多不依赖 {{HTMLElement("script")}} 标签去执行 JavaScript 的方式。所以当你使用`innerHTML` 去设置你无法控制的字符串时，这仍然是一个安全问题。例如：
 
@@ -126,8 +125,14 @@ log() 函数通过 {{jsxref("Date")}} 对象的 {{jsxref("Date.toLocaleTimeStrin
 
 ```js
 function logEvent(event) {
-  var msg = "Event <strong>" + event.type + "</strong> at <em>" +
-            event.clientX + ", " + event.clientY + "</em>";
+  var msg =
+    "Event <strong>" +
+    event.type +
+    "</strong> at <em>" +
+    event.clientX +
+    ", " +
+    event.clientY +
+    "</em>";
   log(msg);
 }
 ```
@@ -191,7 +196,7 @@ boxElem.addEventListener("mouseleave", logEvent);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("Node.textContent")}} and {{domxref("Node.innerText")}}
 - {{domxref("Element.insertAdjacentHTML()")}}

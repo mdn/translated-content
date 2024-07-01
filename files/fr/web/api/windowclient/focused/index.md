@@ -1,7 +1,6 @@
 ---
 title: WindowClient.focused
 slug: Web/API/WindowClient/focused
-translation_of: Web/API/WindowClient/focused
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}

@@ -1,7 +1,6 @@
 ---
 title: Animation()
 slug: Web/API/Animation/Animation
-original_slug: Web/API/Animation/Animación
 ---
 
 {{ APIRef("Web Animations API") }}

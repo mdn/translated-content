@@ -1,8 +1,6 @@
 ---
-title: '<td> : l''élément de cellule de tableau'
+title: "<td> : l'élément de cellule de tableau"
 slug: Web/HTML/Element/td
-translation_of: Web/HTML/Element/td
-browser-compat: html.elements.td
 ---
 
 {{HTMLSidebar}}
@@ -57,9 +55,11 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<td>`** définit une cellule d'un table
 Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `colspan`
+
   - : Cet attribut contient un entier positif indiquant le nombre de colonnes sur lesquelles s'étend la cellule. La valeur par défaut est 1. Des valeurs supérieures à 1000 peuvent être considérées comme incorrectes et seront interprétées comme valant la valeur par défaut (1).
 
 - `headers`
+
   - : Cet attribut est une liste de chaînes de caractères séparées par des espaces. Chacune correspond à l'attribut `id` de l'élément [`<th>`](/fr/docs/Web/HTML/Element/th) qui s'applique à la cellule courante.
 
 - `rowspan`
@@ -68,11 +68,13 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 ### Attributs dépréciés
 
 - `abbr` {{deprecated_inline}}
+
   - : Cet attribut contient une description courte et abrégée du contenu de la cellule. Certains outils utilisateurs, comme la synthèse vocale, peuvent décrire cette information avant le contenu lui-même.
 
     > **Note :** Cet attribut est obsolète dans le dernier standard et ne doit donc plus être utilisé. Il faut dans ces cas introduire la description au sein de la cellule comme un élément [`<abbr>`](/fr/docs/Web/HTML/Element/abbr) indépendant ou utiliser l'attribut `title` de la cellule pour représenter le contenu et la cellule elle-même pour représenter le contenu abrégé.
 
 - `align` {{deprecated_inline}}
+
   - : Cet attribut à valeurs définit l'alignement horizontal pour le contenu de chaque cellule de la colonne. Les valeurs possibles sont&nbsp;:
 
     - `left`
@@ -94,26 +96,33 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
     > - Pour réaliser le même effet qu'avec la valeur `char`. Il est possible, en CSS3, d'utiliser la valeur de l'attribut `char` comme valeur de la propriété [`text-align`](/fr/docs/Web/CSS/text-align) (non implémenté à date).
 
 - `axis` {{deprecated_inline}}
+
   - : Cet attribut contient une liste de chaînes de caractères (séparées par des espaces). Chaque chaîne de caractère est l'identifiant d'un groupe de cellule auquel cet en-tête s'applique.
 
 - `bgcolor` {{Non-standard_inline}}
+
   - : Cet attribut définit la couleur d'arrière-plan de chaque cellule dans une colonne. Sa valeur est [un code hexadécimal RGB sur 6 chiffres](/fr/docs/Web/CSS/color_value#les_couleurs_rgb), préfixé d'un '`#`' ou un des [mots-clés de couleurs prédéfinis](/fr/docs/Web/CSS/color_value#les_mots-clés).
 
     Pour réaliser un effet équivalent, on utilisera plutôt la propriété CSS [`background-color`](/fr/docs/Web/CSS/background-color).
 
 - `char` {{deprecated_inline}}
+
   - : Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut `align` ne vaut pas `char`, l'attribut est ignoré.
 
 - `charoff` {{deprecated_inline}}
+
   - : Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère défini par l'attribut `char` à appliquer au contenu des cellules.
 
 - `height` {{deprecated_inline}}
+
   - : Cet attribut définit une hauteur de cellule recommandée. On utilisera plutôt la propriété CSS [`height`](/fr/docs/Web/CSS/height).
 
 - `scope` {{deprecated_inline}}
+
   - : Cet attribut à valeurs énumérées définit les cellules qui sont liées à l'en-tête défini par l'élément [`<th>`](/fr/docs/Web/HTML/Element/th). À utiliser uniquement avec l'élément `<th>` pour définir la ligne ou la colonne pour laquelle il est son en-tête.
 
 - `valign` {{deprecated_inline}}
+
   - : Cet attribut définit l'alignement vertical du texte des cellules de la colonne. Les valeurs possibles de cet attribut sont&nbsp;:
 
     - `baseline`

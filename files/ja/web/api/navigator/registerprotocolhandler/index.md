@@ -12,8 +12,8 @@ slug: Web/API/Navigator/registerProtocolHandler
 ## 構文
 
 ```js
-registerProtocolHandler(scheme, url)
-registerProtocolHandler(scheme, url, title)
+registerProtocolHandler(scheme, url);
+registerProtocolHandler(scheme, url, title);
 ```
 
 > **メモ:** 非推奨の `title` 引数が付いたものは、互換性のために推奨されます（下記の引数情報を参照してください）。
@@ -48,6 +48,7 @@ registerProtocolHandler(scheme, url, title)
 ### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
+
   - : ユーザーエージェントが登録をブロックしました。
     以下のような場合に起こる可能性があります。
 
@@ -105,9 +106,11 @@ registerProtocolHandler(scheme, url, title)
 ウェブアプリケーションが `burgers.example.com` にある場合、次のようにして `web+burger:` リンクを処理するプロトコルハンドラーを登録することができます。
 
 ```js
-navigator.registerProtocolHandler("web+burger",
-                                  "https://burgers.example.com/?burger=%s",
-                                  "Burger handler"); // 最後の title 引数は互換性のために入れている
+navigator.registerProtocolHandler(
+  "web+burger",
+  "https://burgers.example.com/?burger=%s",
+  "Burger handler",
+); // 最後の title 引数は互換性のために入れている
 ```
 
 これは、 `web+burger:` リンクがアクセスしたバーガーの URL を `%s` プレースホルダーに挿入し、ユーザーをサイトに誘導するハンドラーを作成します。

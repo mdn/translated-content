@@ -1,7 +1,6 @@
 ---
 title: <defs>
 slug: Web/SVG/Element/defs
-translation_of: Web/SVG/Element/defs
 ---
 
 {{SVGRef}}

@@ -1,35 +1,29 @@
 ---
-title: Notification.body
-slug: Web/API/notification/body
+title: Notification：body 属性
+slug: Web/API/Notification/body
+l10n:
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
-{{domxref("Notification")}} 的只读属性 body 返回了构造函数{{domxref("Notification")}}实例化时，options 所使用的 body 值。
+{{domxref("Notification")}} 接口的 **`body`** 只读属性指示通知的正文字符串，该字符串在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `body` 选项中指定。
 
-{{AvailableInWorkers}}
+## 值
 
-## 语法
-
-```plain
-var body = Notification.body;
-```
-
-### 值
-
-{{domxref("DOMString")}}.
+一个字符串。
 
 ## 示例
 
-在 [Emogotchi demo](https://mdn.github.io/emogotchi/) ([see source code](https://github.com/mdn/emogotchi)) 中，我们在激活一个桌面通知时，调用了`spawnNotification()`函数—函数被传入了指定的参数 body、icon、title , 创建了一个必选对象传入{{domxref("Notification.Notification","Notification()")}} 构造函数创建了一个实例。
-
 ```js
-function spawnNotification(theBody,theIcon,theTitle) {
-  var options = {
-      body: theBody,
-      icon: theIcon
-  }
-  var n = new Notification(theTitle,options);
+function spawnNotification(theBody, theIcon, theTitle) {
+  const options = {
+    body: theBody,
+    icon: theIcon,
+  };
+  const n = new Notification(theTitle, options);
+
+  console.log(n.body);
 }
 ```
 
@@ -41,6 +35,6 @@ function spawnNotification(theBody,theIcon,theTitle) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [Using the Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [使用 Notification API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)

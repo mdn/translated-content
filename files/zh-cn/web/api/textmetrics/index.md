@@ -5,7 +5,7 @@ slug: Web/API/TextMetrics
 
 {{APIRef("Canvas API")}}
 
-`在 canvas 中，TextMetrics` 接口表示文本的尺寸，通过 {{domxref("CanvasRenderingContext2D.measureText()")}} 方法创建。
+在 canvas 中，**`TextMetrics`** 接口表示文本的尺寸，通过 {{domxref("CanvasRenderingContext2D.measureText()")}} 方法创建。
 
 ## 属性
 
@@ -32,7 +32,79 @@ slug: Web/API/TextMetrics
 - {{domxref("TextMetrics.alphabeticBaseline")}} {{readonlyInline}}
   - : **double** 类型，从{{domxref("CanvasRenderingContext2D.textBaseline")}} 属性标明的水平线到线框的 alphabetic 基线的距离，使用 CSS 像素计算。
 - {{domxref("TextMetrics.ideographicBaseline")}} {{readonlyInline}}
-  - : **double** 类型，从{{domxref("CanvasRenderingContext2D.textBaseline")}} 属性标明的水平线到线框的 ideographic 基线的距离，使用 CSS 像素计算。
+  - : **double** 类型，从 {{domxref("CanvasRenderingContext2D.textBaseline")}} 属性标明的水平线到线框的 ideographic 基线的距离，使用 CSS 像素计算。
+
+## 示例
+
+### 基线说明
+
+下面这个例子展示了 `TextMetrics` 对象所包含的基线。默认的基线是 `alphabeticBaseline`（字母基线）。参见 {{domxref("CanvasRenderingContext2D.textBaseline")}} 属性。
+
+#### HTML
+
+```html
+<canvas id="canvas" width="550" height="500"></canvas>
+```
+
+#### JavaScript
+
+```js
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const baselinesAboveAlphabetic = [
+  "fontBoundingBoxAscent",
+  "actualBoundingBoxAscent",
+  "emHeightAscent",
+  "hangingBaseline",
+];
+const baselinesBelowAlphabetic = [
+  "ideographicBaseline",
+  "emHeightDescent",
+  "actualBoundingBoxDescent",
+  "fontBoundingBoxDescent",
+];
+const baselines = [...baselinesAboveAlphabetic, ...baselinesBelowAlphabetic];
+ctx.font = "25px serif";
+ctx.strokeStyle = "red";
+baselines.forEach((baseline, index) => {
+  const text = `Abcdefghijklmnop (${baseline})`;
+  const textMetrics = ctx.measureText(text);
+  const y = 50 + index * 50;
+  ctx.beginPath();
+  ctx.fillText(text, 0, y);
+  let lineY = y - Math.abs(textMetrics[baseline]);
+  if (baselinesBelowAlphabetic.includes(baseline)) {
+    lineY = y + Math.abs(textMetrics[baseline]);
+  }
+  ctx.moveTo(0, lineY);
+  ctx.lineTo(550, lineY);
+  ctx.stroke();
+});
+```
+
+#### 结果
+
+{{EmbedLiveSample('基线说明', 700, 550)}}
+
+### 测量文本宽度
+
+当测量一段文本的水平宽度时，由于字母倾斜/斜体导致字符的宽度可能超出其预定的宽度，因此 `actualBoundingBoxLeft` 和 `actualBoundingBoxRight` 的总和可能会比内联盒子的宽度（`width`）更大。
+
+因此，计算 `actualBoundingBoxLeft` 和 `actualBoundingBoxRight` 的总和是一种更准确地获取文本绝对宽度的方法：
+
+```js
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const text = "Abcdefghijklmnop";
+ctx.font = "italic 50px serif";
+const textMetrics = ctx.measureText(text);
+console.log(textMetrics.width);
+// 459.8833312988281
+console.log(
+  textMetrics.actualBoundingBoxRight + textMetrics.actualBoundingBoxLeft,
+);
+// 462.8833333333333
+```
 
 ## 规范
 

@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: listbox ロール'
+title: "ARIA: listbox ロール"
 slug: Web/Accessibility/ARIA/Roles/listbox_role
 ---
 
@@ -150,17 +150,23 @@ HTML の選択要素や、1 項目しか選択できない場合はラジオボ�
 
 ```html
 <p id="listbox1label" role="label">色を選択:</p>
-<div role="listbox" tabindex="0" id="listbox1" aria-labelledby="listbox1label"
+<div
+  role="listbox"
+  tabindex="0"
+  id="listbox1"
+  aria-labelledby="listbox1label"
   onclick="return listItemClick(event);"
   onkeydown="return listItemKeyEvent(event);"
   onkeypress="return listItemKeyEvent(event);"
   aria-activedescendant="listbox1-1">
-    <div role="option" id="listbox1-1" class="selected" aria-selected="true">緑</div>
-    <div role="option" id="listbox1-2">オレンジ</div>
-    <div role="option" id="listbox1-3">赤</div>
-    <div role="option" id="listbox1-4">青</div>
-    <div role="option" id="listbox1-5">紫</div>
-    <div role="option" id="listbox1-6">ペリウィンクル</div>
+  <div role="option" id="listbox1-1" class="selected" aria-selected="true">
+    緑
+  </div>
+  <div role="option" id="listbox1-2">オレンジ</div>
+  <div role="option" id="listbox1-3">赤</div>
+  <div role="option" id="listbox1-4">青</div>
+  <div role="option" id="listbox1-5">紫</div>
+  <div role="option" id="listbox1-6">ペリウィンクル</div>
 </div>
 ```
 
@@ -169,12 +175,12 @@ HTML の選択要素や、1 項目しか選択できない場合はラジオボ�
 ```html
 <label for="listbox1">色を選択:</label>
 <select id="listbox1">
-   <option selected>緑</option>
-   <option>オレンジ</option>
-   <option>赤</option>
-   <option>青</option>
-   <option>紫</option>
-   <option>ペリウィンクル</option>
+  <option selected>緑</option>
+  <option>オレンジ</option>
+  <option>赤</option>
+  <option>青</option>
+  <option>紫</option>
+  <option>ペリウィンクル</option>
 </select>
 ```
 

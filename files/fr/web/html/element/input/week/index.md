@@ -1,8 +1,6 @@
 ---
 title: <input type="week">
 slug: Web/HTML/Element/input/week
-translation_of: Web/HTML/Element/input/week
-browser-compat: html.elements.input.input-week
 ---
 
 {{HTMLSidebar}}
@@ -65,7 +63,7 @@ Il est possible de définir une valeur par défaut grâce à l'attribut [`value`
 
 ```html
 <label for="week">À quelle semaine souhaiteriez-vous démarrer ?</label>
-<input id="week" type="week" name="week" value="2017-W01">
+<input id="week" type="week" name="week" value="2017-W01" />
 ```
 
 {{EmbedLiveSample('', 600, 60)}}
@@ -76,7 +74,7 @@ Il est également possible d'accéder à la valeur ou de la définir en JavaScri
 
 ```js
 let weekControl = document.querySelector('input[type="week"]');
-weekControl.value = '2017-W45';
+weekControl.value = "2017-W45";
 ```
 
 ## Attributs supplémentaires
@@ -126,7 +124,7 @@ La forme la plus simple de `<input type="week">` se compose d'un élément `<inp
 ```html
 <form>
   <label for="week">À quelle semaine souhaiteriez-vous commencer ?</label>
-  <input id="week" type="week" name="week">
+  <input id="week" type="week" name="week" />
 </form>
 ```
 
@@ -151,8 +149,7 @@ Les attributs [`min`](/fr/docs/Web/HTML/Element/Input#attr-min) et [`max`](/fr/d
 ```html
 <form>
   <label for="week">À quelle semaine souhaiteriez-vous commencer ?</label>
-  <input id="week" type="week" name="week"
-         min="2017-W01" max="2017-W52">
+  <input id="week" type="week" name="week" min="2017-W01" max="2017-W52" />
   <span class="validity"></span>
 </form>
 ```
@@ -175,15 +172,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -200,12 +197,17 @@ Prenons un autre exemple (où la période a été restreinte comme précédemmen
 <form>
   <div>
     <label for="week">À quelle semaine souhaiteriez-vous commencer ?</label>
-    <input id="week" type="week" name="week"
-         min="2017-W01" max="2017-W52" required>
+    <input
+      id="week"
+      type="week"
+      name="week"
+      min="2017-W01"
+      max="2017-W52"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-    <input type="submit" value="Envoyer le formulaire">
+    <input type="submit" value="Envoyer le formulaire" />
   </div>
 </form>
 ```
@@ -251,8 +253,13 @@ Voici le code HTML utilisé&nbsp;:
 <form>
   <div class="nativeWeekPicker">
     <label for="week">À quelle semaine souhaiteriez-vous commencer ?</label>
-    <input id="week" type="week" name="week"
-           min="2017-W01" max="2018-W52" required>
+    <input
+      id="week"
+      type="week"
+      name="week"
+      min="2017-W01"
+      max="2018-W52"
+      required />
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">À quelle semaine souhaiteriez-vous commencer ?</p>
@@ -260,8 +267,7 @@ Voici le code HTML utilisé&nbsp;:
     <div>
       <span>
         <label for="week">Semaine :</label>
-        <select id="fallbackWeek" name="week">
-        </select>
+        <select id="fallbackWeek" name="week"></select>
       </span>
       <span>
         <label for="year">Année :</label>
@@ -291,15 +297,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -308,29 +314,29 @@ Dans le fragment de code JavaScript qui suit, on montre comment détecter si la 
 
 ```js
 // On définit certaines variables
-let nativePicker = document.querySelector('.nativeWeekPicker');
-let fallbackPicker = document.querySelector('.fallbackWeekPicker');
-let fallbackLabel = document.querySelector('.fallbackLabel');
+let nativePicker = document.querySelector(".nativeWeekPicker");
+let fallbackPicker = document.querySelector(".fallbackWeekPicker");
+let fallbackLabel = document.querySelector(".fallbackLabel");
 
-let yearSelect = document.querySelector('#year');
-let weekSelect = document.querySelector('#fallbackWeek');
+let yearSelect = document.querySelector("#year");
+let weekSelect = document.querySelector("#fallbackWeek");
 
 // À l'état initial, on masque le sélecteur alternatif
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // On teste si le sélecteur natif se transforme en
 // contrôle de saisie de texte ou non
-let test = document.createElement('input');
-test.type = 'week';
+let test = document.createElement("input");
+test.type = "week";
 // Si c'est le cas, on exécute le code dans le bloc
 // conditionnel if() {}
-if(test.type === 'text') {
+if (test.type === "text") {
   // On masque alors le sélecteur natif et
   // on affiche le sélecteur alternatif
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // On ajoute les semaines dynamiquement
   populateWeeks();
@@ -338,9 +344,9 @@ if(test.type === 'text') {
 
 function populateWeeks() {
   // On ajoute 52 semaines grâce à une boucle
-  for(let i = 1; i <= 52; i++) {
-    let option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+  for (let i = 1; i <= 52; i++) {
+    let option = document.createElement("option");
+    option.textContent = i < 10 ? "0" + i : i;
     weekSelect.appendChild(option);
   }
 }

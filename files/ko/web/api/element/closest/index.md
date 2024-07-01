@@ -10,7 +10,7 @@ slug: Web/API/Element/closest
 ## 구문
 
 ```js
-closest(selectors)
+closest(selectors);
 ```
 
 ### 매개변수
@@ -33,8 +33,10 @@ closest(selectors)
 
 ```html
 <article>
-  <div id="div-01">Here is div-01
-    <div id="div-02">Here is div-02
+  <div id="div-01">
+    Here is div-01
+    <div id="div-02">
+      Here is div-02
       <div id="div-03">Here is div-03</div>
     </div>
   </div>
@@ -44,13 +46,13 @@ closest(selectors)
 ### JavaScript
 
 ```js
-const el = document.getElementById('div-03');
+const el = document.getElementById("div-03");
 
 // ID가 "div-02"인 가장 가까운 조상
-console.log(el.closest('#div-02')); // <div id="div-02">
+console.log(el.closest("#div-02")); // <div id="div-02">
 
 // div 안에 놓인 div인 가장 가까운 조상
-console.log(el.closest('div div')); // <div id="div-03">
+console.log(el.closest("div div")); // <div id="div-03">
 
 // div면서 article을 부모로 둔 가장 가까운 조상
 console.log(el.closest("article > div")); // <div id="div-01">
@@ -71,7 +73,7 @@ if (!Element.prototype.matches) {
 }
 
 if (!Element.prototype.closest) {
-  Element.prototype.closest = function(s) {
+  Element.prototype.closest = function (s) {
     var el = this;
 
     do {
@@ -87,14 +89,14 @@ if (!Element.prototype.closest) {
 
 ```js
 if (window.Element && !Element.prototype.closest) {
-  Element.prototype.closest = function(s) {
+  Element.prototype.closest = function (s) {
     var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-        i,
-        el = this;
+      i,
+      el = this;
     do {
       i = matches.length;
-      while (--i >= 0 && matches.item(i) !== el) {};
-    } while ((i < 0) && (el = el.parentElement));
+      while (--i >= 0 && matches.item(i) !== el) {}
+    } while (i < 0 && (el = el.parentElement));
     return el;
   };
 }

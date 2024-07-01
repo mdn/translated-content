@@ -1,8 +1,6 @@
 ---
 title: Conventions et définitions relatives à MDN
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
-translation_of: MDN/Guidelines/Conventions_definitions
-original_slug: MDN/Guidelines/Conventions_definitions
 ---
 
 {{MDNSidebar}}
@@ -70,7 +68,7 @@ Sur MDN, nous cherchons continuellement à documenter les technologies web stand
 
 En général, le seuil pour déclencher la documentation d'une nouvelle technologie web correspond au moment où&nbsp;:
 
-_«&nbsp;La fonctionnalité est en voie de standardisation et implémentée quelque part.&nbsp;»_
+« _La fonctionnalité est en voie de standardisation et implémentée quelque part._ »
 
 Une nouvelle technologie mérite sans doute d'être documentée si&nbsp;:
 

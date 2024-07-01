@@ -1,23 +1,21 @@
 ---
 title: Intl.Segments.prototype[@@iterator]()
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator
-original_slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments/@@iterator
+slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator
 ---
 
 {{JSRef}}
 
-**`[@@iterator]()`** メソッドは、[iterable プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)の一部で、`Intl.Segmenter` オブジェクトのエントリーを反復処理できる新しいイテレーターオブジェクトを返します。各エントリーは、オブジェクトとして返されます。
+**`[@@iterator]()`** メソッドは、[iterable プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)の一部で、`Intl.Segmenter` オブジェクトのエントリーを反復処理できる新しいイテレーターオブジェクトを返します。各エントリーは、オブジェクトとして返されます。
 
-{{EmbedInteractiveExample("pages/js/intl-segments-prototype-@@iterator.html")}}
+{{EmbedInteractiveExample("pages/js/segments-prototype-@@iterator.html")}}
 
 ## 構文
 
 ```js
-segments[Symbol.iterator]
+segments[Symbol.iterator];
 ```
 
-利用できるイテレーター関数は、[iterable プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復子_iterator_プロトコル)のページで説明したように、`.next()` の 1 つです。
+利用できるイテレーター関数は、[iterable プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)のページで説明したように、`.next()` の 1 つです。
 
 ### 返値
 
@@ -26,7 +24,7 @@ segments[Symbol.iterator]
 ## 例
 
 ```js
-const segmenter = new Intl.Segmenter("fr", {granularity: "word"});
+const segmenter = new Intl.Segmenter("fr", { granularity: "word" });
 const input = "Moi ? N'est-ce pas ?";
 const segments = segmenter.segment(input);
 const iterator = segments[Symbol.iterator]();

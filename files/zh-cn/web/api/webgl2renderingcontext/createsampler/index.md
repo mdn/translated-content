@@ -37,6 +37,6 @@ var sampler = gl.createSampler();
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLSampler")}}

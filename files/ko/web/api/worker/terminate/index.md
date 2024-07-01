@@ -26,7 +26,7 @@ terminate()
 아래의 코드 스니펫은 {{domxref("Worker.Worker", "Worker()")}} 생성자를 이용하여 {{domxref("Worker")}} 객체를 생성하고, 즉시 종료하는 예를 보여줍니다.
 
 ```js
-const myWorker = new Worker('worker.js');
+const myWorker = new Worker("worker.js");
 
 myWorker.terminate();
 ```

@@ -1,110 +1,106 @@
 ---
 title: La négociation de contenu
 slug: Web/HTTP/Content_negotiation
-translation_of: Web/HTTP/Content_negotiation
+l10n:
+  sourceCommit: 8c4e47ca0a8d95ef49ea3b39f5eec454a3d15ae9
 ---
 
 {{HTTPSidebar}}
 
-En [HTTP](/fr/docs/Glossary/HTTP), la **_négociation de contenu_** est le mécanisme utilisé pour fournir différentes représentations d'une ressource à la même URI, afin que l'agent utilisateur puisse spécifier celle qui convient le mieux à l'utilisateur (par exemple, la langue d'un document, le format d'image, ou l'encodage du contenu).
+En [HTTP](/fr/docs/Glossary/HTTP), **la négociation de contenu** est le mécanisme utilisé pour servir différentes [représentations](/fr/docs/Glossary/Representation_header) d'une ressource à partir du même URI pour aider l'agent utilisateur à indiquer la représentation la plus adaptée à l'utilisatrice ou à l'utilisateur (par exemple, la langue du document, le format d'image ou l'encodage à utiliser pour le contenu).
 
-## Principes de la négociation de contenu
+> **Note :** [Le wiki du WHATWG](https://wiki.whatwg.org/wiki/Why_not_conneg) explique certains inconvénients liés à la négociation de contenu HTTP. Sachez que HTML fournit des méthodes complémentaires pour la négociation de contenu, par exemple avec [l'élément `<source>`](/fr/docs/Web/HTML/Element/source).
 
-Un document spécifique s'appelle une _ressource_. Lorsqu'un client veut y accéder, il le demande en utilisant son URL. Le serveur utilise cette URL pour choisir une des différentes versions qu'il peut fournir - chaque version étant appelée une représentation - et renvoie cette représentation spécifique au client. La ressource globale, ainsi que chacune de ses représentations, ont une URL spécifique. La façon dont une représentation spécifique est choisie est déterminée par la _négociation de contenu_ et il existe plusieurs façons de négocier entre le client et le serveur.
+## Les principes de la négociation de contenu
 
-![](httpnego.png)
+Un document donné est défini comme une _ressource_. Lorsqu'un client souhaite obtenir une ressource, il la demande via une URL. Le serveur utilise alors cette URL pour choisir l'une des variantes disponibles. Chaque variante est appelée une _représentation_. Le serveur renvoie alors une représentation donnée au client. La ressource, ainsi que chacune de ses représentations, dispose d'une URL spécifique. _La négociation de contenu_ détermine quelle représentation donnée est utilisée lorsque la ressource est demandée. Il existe plusieurs méthodes de négociation entre le client et le serveur.
 
-La sélection de la représentation la mieux adaptée se fait par l'un des deux mécanismes suivants:
+![Un client demandant une URL. Le serveur possède plusieurs ressources représentant cette URL, il renvoie le contenu approprié selon la requête.](httpnego.png)
 
-- Des [en-têtes HTTP](/fr/docs/Web/HTTP/Headers) spécifiques envoyés par le client (_négociation pilotée par le serveur_ ou _négociation proactive_), qui est le moyen standard de négocier un type de ressource spécifique.
-- Les [codes réponses](/fr/docs/Web/HTTP/Status) {{HTTPStatus("300")}} (Multiple Choices) ou {{HTTPStatus("406")}} (Not Acceptable) envoyés par le serveur (_négociation pilotée par le client_ ou _négociation réactive_), qui sont utilisés comme mécanismes de repli.
+La représentation la plus adaptée est choisie selon l'un de ces deux mécanismes&nbsp;:
 
-Au fil des ans, d'autres propositions de négociation de contenu, comme la négociation transparente du contenu et l'en-tête `Alternates`, ont été proposées. Elles n'ont pas réussi à emporter l'adhésion et ont été abandonnées.
+- [Des en-têtes HTTP spécifiques](/fr/docs/Web/HTTP/Headers) envoyés par le client (_négociation menée par le serveur_ ou _négociation proactive_)&nbsp;: il s'agit de la méthode standard pour négocier un type de ressource donné.
+- [Les codes de réponse HTTP](/fr/docs/Web/HTTP/Status) [`300 Multiple Choices`](/fr/docs/Web/HTTP/Status/300), [`406 Not Acceptable`](/fr/docs/Web/HTTP/Status/406) ou [`415 Unsupported Media Type`](/fr/docs/Web/HTTP/Status/415) envoyés par le serveur (_négociation menée par l'agent_ ou _négociation réactive_), sont utilisés comme mécanismes de recours.
 
-## La négociation de contenu gérée par le serveur
+Au fur et à mesure des années, d'autres propositions relatives à la négociation de contenu ont été faites, comme [la négociation de contenu transparente](https://datatracker.ietf.org/doc/html/rfc2295) et l'en-tête `Alternates`. Toutefois, elles n'ont pas suffisamment pris d'ampleur et ont finalement été abandonnées.
 
-Dans la _négociation de contenu gérée par le serveur_, ou négociation proactive de contenu, le navigateur (ou tout autre type de client) envoie plusieurs en-têtes HTTP avec l'URL décrivant les choix préférés de l'utilisateur. Le serveur les utilise comme indications et un algorithme interne choisit le meilleur contenu à servir au client. L'algorithme est spécifique au serveur et n'est pas défini dans la norme. Voir, par exemple, l'[algorithme de négociation d'Apache 2.2](http://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm).
+## Négociation de contenu menée par le serveur
 
-![](httpnegoserver.png)
+Lors d'une _négociation de contenu menée par le serveur_ (aussi appelée négociation de contenu proactive), le navigateur (ou tout autre agent utilisateur) envoie plusieurs en-têtes HTTP avec l'URL. Ces en-têtes décrivent les préférences de la personne. Le serveur utilise alors ces en-têtes comme indications et un algorithme interne détermine le meilleur contenu à servir au client. Si le serveur ne peut fournir une ressource adéquate, il peut répondre avec les erreurs [`406 Not Acceptable`](/fr/docs/Web/HTTP/Status/406) ou [`415 Unsupported Media Type`](/fr/docs/Web/HTTP/Status/415) et renvoyer des en-têtes indiquant les types de média qu'il prend en charge (par exemple avec [`Accept-Post`](/fr/docs/Web/HTTP/Headers/Accept-Post) ou [`Accept-Patch`](/fr/docs/Web/HTTP/Headers/Accept-Patch) selon que la requête utilise respectivement le verbe `POST` ou `PATCH`). L'algorithme est propre au serveur et n'est pas défini par le standard. Comme exemple, vous pouvez consulter [l'algorithme de négociation utilisé par le serveur HTTP httpd d'Apache](https://httpd.apache.org/docs/current/en/content-negotiation.html#algorithm).
 
-La norme HTTP/1.1 définit la liste des en-têtes standard qui initient la négociation pilotée par le serveur ({{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}). Bien qu'à proprement parler {{HTTPHeader("User-Agent")}} ne figure pas dans la liste, il est aussi parfois utilisé pour envoyer une représentation spécifique de la ressource demandée, bien que cela ne soit pas considéré comme une bonne pratique. Le serveur utilise l'en-tête {{HTTPHeader("Vary")}} pour indiquer quels en-têtes il a effectivement utilisés pour la négociation de contenu (ou plus précisément les en-têtes de réponse associés), pour que les [caches](/fr/docs/Web/HTTP/Caching) puissent fonctionner de manière optimale.
+![Un client dem ande une URL avec des en-têtes indiquant une préférence pour des types de contenu. Le serveur possède plusieurs ressources représentant cette URL et renvoie le contenu associé à la langue préférée tout en compressant le corps de la requête avec la méthode demandée par le client dans les en-têtes de la requête.](httpnegoserver.png)
 
-En outre, il existe une proposition expérimentale visant à ajouter d'autres en-têtes à la liste des en-têtes disponibles, appelés indications (_hints_) du client. Ces hints indiquent sur quel type de périphérique l'agent utilisateur fonctionne (par exemple, s'il s'agit d'un ordinateur de bureau ou d'un périphérique mobile).
+Le standard HTTP/1.1 définit une liste des en-têtes standard qui initient la négociation menée par le serveur (comme [`Accept`](/fr/docs/Web/HTTP/Headers/Accept), [`Accept-Encoding`](/fr/docs/Web/HTTP/Headers/Accept-Encoding), et [`Accept-Language`](/fr/docs/Web/HTTP/Headers/Accept-Language)). Bien que l'en-tête [`User-Agent`](/fr/docs/Web/HTTP/Headers/User-Agent) ne soit pas dans cette liste, il est parfois utilisé en pratique pour déterminer la ressource à envoyer, bien que ce ne soit pas une bonne pratique. Le serveur utilise l'en-tête [`Vary`](/fr/docs/Web/HTTP/Headers/Vary) pour indiquer les en-têtes effectivement utilisés pour la négociation de contenu (ou, plus précisément, les en-têtes correspondants à ceux de la requête), afin que [les caches](/fr/docs/Web/HTTP/Caching) puissent fonctionner de façon optimale.
 
-Même si la négociation de contenu gérée par le serveur est le moyen le plus courant de s'entendre sur une représentation spécifique d'une ressource, elle présente plusieurs inconvénients:
+En complément de ces en-têtes, une proposition expérimentale décrit plusieurs en-têtes supplémentaires appelés _indications client_ (<i lang="en">client hints</i>). Ces indications exposent le type d'appareil sur lequel est utilisé l'agent utilisateur (par exemple un ordinateur de bureau ou un appareil).
 
-- Le serveur n'a pas une connaissance totale du navigateur. Même avec l'extension _Client Hints_, il n'a pas une connaissance complète des capacités du navigateur. Contrairement à la négociation de contenu réactif où le client fait le choix, celui du serveur est toujours quelque peu arbitraire.
-- L'information fournie par le client est assez verbeuse (la compression de l'en-tête HTTP/2 atténue ce problème) et est un risque d'atteinte à la vie privée (empreintes digitales HTTP)
-- Comme plusieurs représentations d'une ressource donnée sont envoyées, les caches partagés sont moins efficaces et les implémentations des serveurs sont plus complexes.
+Même si la négociation menée par le serveur est la méthode la plus fréquemment employée pour s'accorder sur la représentation spécifique d'une ressource, elle souffre de plusieurs inconvénients&nbsp;:
 
-### The `Accept` header
+- Le serveur ne connaît pas tout du navigateur. Même avec les indications client, le serveur ne peut connaître toutes les capacités du navigateur. Contrairement à la négociation de contenu menée par le client, où c'est ce dernier qui fait le choix, le choix du serveur repose toujours sur une partie d'arbitraire.
+- Les informations envoyées par le client sont assez verbeuses (la compression des en-têtes HTTP/2 atténue ce problème) et peuvent être un risque quant à la vie privée (en permettant par exemple de construire [des empreintes HTTP uniques](/fr/docs/Glossary/Fingerprinting)).
+- Lorsque plusieurs représentations d'une même ressource sont envoyées par le serveur, l'efficacité des caches est réduite et les implémentations des serveurs deviennent plus complexes.
 
-The {{HTTPHeader("Accept")}} header lists the MIME types of media resources that the agent is willing to process. It is comma-separated lists of MIME types, each combined with a quality factor, a parameter indicating the relative degree of preference between the different MIME types.
+### L'en-tête `Accept`
 
-The {{HTTPHeader("Accept")}} header is defined by the browser, or any other user-agent, and can vary according to the context, like fetching an HTML page or an image, a video, or a script: It is different when fetching a document entered in the address bar or an element linked via an {{ HTMLElement("img") }}, {{ HTMLElement("video") }} or {{ HTMLElement("audio") }} element. Browsers are free to use the value of the header that they think is the most adequate; an exhaustive list of [default values for common browsers](/fr/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) is available.
+L'en-tête [`Accept`](/fr/docs/Web/HTTP/Headers/Accept) liste les types MIME des ressources média que l'agent accepte de traiter. Il s'agit d'une liste de types MIME séparés par des virgules, chacun associé avec un facteur de qualité indiquant la préférence relative entre chaque type MIME.
 
-### The `Accept-CH` header {{experimental_inline}}
+L'en-tête `Accept` est défini par le navigateur (ou tout autre agent utilisateur) et peut varier selon le contexte, par exemple que la ressource soit une page HTML, une image, une vidéo ou un script. Cet en-tête sera différent selon qu'on récupère un document demandé via la barre d'adresse, ou une ressource désignée par un élément [`<img>`](/fr/docs/Web/HTML/Element/img), [`<video>`](/fr/docs/Web/HTML/Element/video), ou [`<audio>`](/fr/docs/Web/HTML/Element/audio). Les navigateurs peuvent utiliser la valeur d'en-tête qu'ils estiment la plus adéquate. Une [liste exhaustive des valeurs par défaut pour les navigateurs principaux](/fr/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) est disponible.
 
-> **Note :** This is part of an **experimental** technology called _Client Hints_. Initial support is in Chrome 46 or later. The Device-Memory value is in Chrome 61 or later.
+### L'en-tête `Accept-CH` {{experimental_inline}}
 
-The experimental {{HTTPHeader("Accept-CH")}} lists configuration data that can be used by the server to select an appropriate response. Valid values are:
+> **Note :** Cet en-tête fait partie de la technologie **expérimentale** des _indications client_ (<i lang="en">client hints</i>). La prise en charge initiale est arrivée avec Chrome 46 et celle de la valeur `Device-Memory` avec Chrome 61.
 
-| Value            | Meaning                                                                                                                                                                                                             |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Device-Memory`  | Indicates the approximate amount of device RAM. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024. For example, 512 megabytes will be reported as `0.5`.  |
-| `DPR`            | Indicates the client's device pixel ratio.                                                                                                                                                                          |
-| `Viewport-Width` | Indicates the layout viewport width in CSS pixels.                                                                                                                                                                  |
-| `Width`          | Indicates the resource width in physical pixels (in other words the intrinsic size of an image).                                                                                                                    |
+L'en-tête expérimental [`Accept-CH`](/fr/docs/Web/HTTP/Headers/Accept-CH) expose les données de configuration que le serveur peut utiliser afin de déterminer une réponse appropriée. Les valeurs valides sont&nbsp;:
 
-### The `Accept-Charset` header
+| Valeur           | Signification                                                                                                                                                                                                           |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Device-Memory`  | Indique la quantité approximative de mémoire vive de l'appareil. Cette valeur est une approximation à la puissance de deux la plus proche, divisée par 1024. Ainsi, 512 mégaoctets seront indiqués par la valeur `0.5`. |
+| `Viewport-Width` | Indique la largeur de la zone d'affichage (<i lang="en">viewport</i>) en pixels CSS.                                                                                                                                    |
+| `Width`          | Indique la largeur de la ressource en pixels physiques (autrement dit, la taille intrinsèque d'une image).                                                                                                              |
 
-The {{HTTPHeader("Accept-Charset")}} header indicates to the server what kinds of character encodings are understood by the user-agent. Traditionally, it was set to a different value for each locale for the browser, like `ISO-8859-1,utf-8;q=0.7,*;q=0.7` for a Western European locale.
+### L'en-tête `Accept-CH-Lifetime` {{experimental_inline}}
 
-With UTF-8 now being well-supported, being the preferred way of encoding characters, [and to guarantee better privacy through less configuration-based entropy](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy), browsers omit the `Accept-Charset` header: Internet Explorer 8, Safari 5, Opera 11, Firefox 10 and Chrome 27 have abandoned this header.
+> **Note :** Cet en-tête fait partie de la technologie **expérimentale** des _indications client_ (<i lang="en">client hints</i>) et est uniquement disponible pour Chrome, à partir de Chrome 61.
 
-### The `Accept-CH-Lifetime` header
+L'en-tête [`Accept-CH-Lifetime`](/fr/docs/Web/HTTP/Headers/Accept-CH-Lifetime) est utilisé de concert avec la valeur `Device-Memory` de l'en-tête `Accept-CH` et indique la durée pendant laquelle l'appareil devrait partager sa quantité de mémoire vive. La valeur est exprimée en millisecondes et est optionnelle.
 
-> **Note :** This is part of an **experimental** technology called *Client Hints* and is only available in Chrome 61 or later.
+### L'en-tête `Accept-Encoding`
 
-The {{HTTPHeader("Accept-CH-Lifetime")}} header is used with the `Device-Memory` value of the `Accept-CH` header and indicates the amount of time the device should opt-in to sharing the amount of device memory with the server. The value is given in miliseconds and it's use is optional.
+L'en-tête [`Accept-Encoding`](/fr/docs/Web/HTTP/Headers/Accept-Encoding) définit les encodages de contenu acceptables (et les compressions associées). La valeur est une liste de valeurs pondérées (par exemple, `br, gzip;q=0.8`) qui indique la priorité de chaque encodage. La valeur par défaut, `identity` reçoit la priorité la plus basse (sauf mention contraire).
 
-### The `Accept-Encoding` header
+La compression des messages HTTP est l'une des méthodes majeures pour améliorer la performance d'un site web. Elle permet de réduire la taille des données transmises sur le réseau et de mieux utiliser la bande passant. Les navigateurs envoient toujours cet en-tête et le serveur devrait être configuré pour utiliser de la compression.
 
-The {{HTTPHeader("Accept-Encoding")}} header defines the acceptable content-encoding (supported compressions). The value is a q-factor list (e.g.: `br, gzip;q=0.8`) that indicates the priority of the encoding values. The default value `identity` is at the lowest priority (unless otherwise declared).
+### L'en-tête `Accept-Language`
 
-Compressing HTTP messages is one of the most important ways to improve the performance of a Web site, it shrinks the size of the data transmitted and makes better use of the available bandwidth; browsers always send this header and the server should be configured to abide to it and to use compression.
+L'en-tête [`Accept-Language`](/fr/docs/Web/HTTP/Headers/Accept-Language) sert à indiquer la langue à privilégier pour l'utilisatrice ou l'utilisateur. Il s'agit d'une liste de valeurs pondérées (par exemple `de, en;q=0.7`). Une valeur par défaut est généralement paramétrée à travers l'interface graphique de l'agent utilisateur, mais la plupart des navigateurs autorisent la sélection de plusieurs langues.
 
-### The `Accept-Language` header
+En raison de [l'entropie croissante déduite de la configuration](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy), une valeur modifiée peut être utilisée pour tracer la personne. Il n'est pas recommandé de la charger et un site web ne peut pas intégralement se baser sur cette valeur pour déduire l'intention effective de la personne. Il est préférable d'éviter la détection des langues via cet en-tête, car l'expérience utilisateur peut être dégradée.
 
-The {{HTTPHeader("Accept-Language")}} header is used to indicate the language preference of the user. It is a list of values with quality factors (like: `"de, en;q=0.7`"). A default value is often set according the language of the graphical interface of the user agent, but most browsers allow to set different language preferences.
+- Les sites devraient toujours fournir une méthode pour passer outre la langue sélectionnée par défaut par le serveur, par exemple en fournissant un menu de sélection des langues. La plupart des agents utilisateur fournissent une valeur par défaut pour l'en-tête `Accept-Language` qui est adaptée à la langue de l'interface utilisateur. Les utilisatrices et utilisateurs finaux ne modifient pas nécessairement ce réglage, soit parce qu'ils ne savent pas comment, soit parce que celui-ci est basé sur l'environnement sous-jacent (par exemple, la langue configurée sur l'ordinateur).
+- Une fois que la personne a choisi une autre langue que celle fournie par le serveur par défaut, un site ne devrait plus utiliser la détection de langue, mais conserver l'utilisation de la langue choisie. Autrement dit, seules les pages d'accueil d'un site devraient utiliser cet en-tête pour sélectionner la langue à utiliser.
 
-Due to the [configuration-based entropy](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy) increase, a modified value can be used to fingerprint the user, it is not recommended to change it and a Web site cannot trust this value to reflect the actual wish of the user. Site designers must not be over-zealous by using language detection via this header as it can lead to a poor user experience:
+### L'en-tête `User-Agent`
 
-- They should always provide a way to overcome the server-chosen language, e.g., by providing a language menu on the site. Most user-agents provide a default value for the `Accept-Language` header, adapted to the user interface language and end users often do not modify it, either by not knowing how, or by not being able to do it, as in an Internet café for instance.
-- Once a user has overridden the server-chosen language, a site should no longer use language detection and should stick with the explicitly-chosen language. In other words, only entry pages of a site should select the proper language using this header.
+> **Note :** Bien qu'il existe certains cas d'usage légitimes pour cet en-tête afin de sélectionner du contenu, [il s'agit d'une mauvaise pratique](/fr/docs/Web/HTTP/Browser_detection_using_the_user_agent) quand il s'agit de déterminer les fonctionnalités prises en charge ou non par l'agent utilisateur.
 
-### The `User-Agent` header
+L'en-tête [`User-Agent`](/fr/docs/Web/HTTP/Headers/User-Agent) identifie le navigateur qui envoie la requête. Cette chaîne de caractères peut contenir une liste de _jetons produits_ et de _commentaires_ séparés par des espaces.
 
-> **Note :** Though there are legitimate uses of this header for selecting content, [it is considered bad practice](/fr/docs/Web/HTTP/Browser_detection_using_the_user_agent) to rely on it to define what features are supported by the user agent.
+Un _jeton produit_ est un nom suivi par une barre oblique (`/`) puis d'un numéro de version (par exemple `Firefox/4.0.1`). L'agent utilisateur peut inclure autant de jetons qu'il le souhaite. Un _commentaire_ est une chaîne de caractères optionnelle délimitée par des parenthèses. Les informations qui sont fournies par le commentaire ne sont pas standardisées, bien que plusieurs navigateurs y ajoutent plusieurs jetons séparés par des points-virgules.
 
-The {{HTTPHeader("User-Agent")}} header identifies the browser sending the request. This string may contain a space-separated list of _product tokens_ and _comments_.
+### L'en-tête de réponse `Vary`
 
-A _product token_ is a name followed by a '`/`' and a version number, like `Firefox/4.0.1`. There may be as many of them as the user-agent wants. A _comment_ is a free string delimited by parentheses. Obviously parentheses cannot be used in that string. The inner format of a comment is not defined by the standard, though several browser put several tokens in it, separated by '`;`'.
+Contrairement aux en-têtes `Accept-*` précédents qui sont envoyés par le client, l'en-tête HTTP [`Vary`](/fr/docs/Web/HTTP/Headers/Vary) est envoyé par le serveur dans la réponse. Il indique la liste des en-têtes que le serveur utilise pendant la phase de négociation menée par le serveur. L'en-tête `Vary` est nécessaire pour informer le cache des critères de décision afin qu'il puisse les reproduire. Cela permet au cache d'être opérationnel tout en s'assurant que le bon contenu est servi au client.
 
-### The `Vary` response header
+La valeur spéciale `*` signifie que la négociation menée par le serveur utilise également des informations qui ne sont pas transmises par un en-tête afin de déterminer le contenu approprié.
 
-In opposition to the previous `Accept-*` headers which are sent by the client, the {{HTTPHeader("Vary")}} HTTP header is sent by the web server in its response. It indicates the list of headers used by the server during the server-driven content negotiation phase. The header is needed in order to inform the cache of the decision criteria so that it can reproduce it, allowing the cache to be functional while preventing serving erroneous content to the user.
+L'en-tête `Vary` a été ajouté à la version 1.1 de HTTP et permet le fonctionnement approprié. Pour fonctionner lors de la négociation menée par le serveur, un cache a besoin de connaître les critères utilisés par le serveur pour sélectionner le contenu à transmettre. Ainsi, le cache peut rejouer l'algorithme et être capable de servir le contenu acceptable directement, sans envoyer d'autres requêtes au serveur. Bien entendu, le joker `*` empêche toute mise en cache, car le cache ne peut alors pas savoir l'élément responsable de la sélection. Pour plus d'informations, voir [mise en cache HTTP > réponses variantes](/fr/docs/Web/HTTP/Caching#varier_les_réponses).
 
-The special value of '`*`' means that the server-driven content negotiation also uses information not conveyed in a header to choose the appropriate content.
+## Négociation menée par l'agent
 
-The `Vary` header was added in the version 1.1 of HTTP and is necessary in order to allow caches to work appropriately. A cache, in order to work with server-driven content negotiation, needs to know which criteria was used by the server to select the transmitted content. That way, the cache can replay the algorithm and will be able to serve acceptable content directly, without more request to the server. Obviously, the wildcard '`*`' prevents caching from occurring, as the cache cannot know what element is behind it.
+La négociation menée par le serveur possède quelques inconvénients&nbsp;: elle s'étend assez mal. Un en-tête est utilisé par fonctionnalité lors de la négociation. Si on veut utiliser la taille d'écran, la résolution ou d'autres dimensions, il faudra créer un nouvel en-tête HTTP. Les en-têtes doivent ensuite être envoyés à chaque requête. Ce n'est pas un problème lorsqu'il y a peu d'en-têtes, mais si le nombre d'en-têtes devient trop élevé, la taille du message pourra avoir un impact sur les performances. En contrepartie, plus des en-têtes précis sont envoyés, plus d'entropie est envoyée, facilitant le pistage et l'identification via des empreintes HTTP.
 
-## Agent-driven negotiation
+HTTP permet un autre type de négociation&nbsp;: _la négociation menée par l'agent_, aussi appelée _négociation réactive_. Dans ce cas, le serveur envoie une page contenant les liens vers les différentes ressources alternatives lorsqu'il reçoit une requête ambigüe. Les ressources seront présentées à l'utilisatrice ou à l'utilisateur, qui choisira celle à utiliser.
 
-Server-driven negotiation suffers from a few downsides: it doesn't scale well. There is one header per feature used in the negotiation. If you want to use screen size, resolution or other dimensions, a new HTTP header must be created. Sending of the headers must be done on every request. This is not too problematic with few headers, but with the eventual multiplications of them, the message size would lead to a decrease in performance. The more precise headers are sent, the more entropy is sent, allowing for more HTTP fingerprinting and corresponding privacy concern.
+![Un client demande une URL dont les en-têtes indiquent une préférence pour les types de contenu. Le serveur possède plusieurs ressources qui correspondent à l'URL et renvoie une réponse multiple afin que le client puisse choisir un corps avec l'algorithme de compression privilégié.](httpnego3.png)
 
-From the beginnings of HTTP, the protocol allowed another negotiation type: _agent-driven negotiation_ or _reactive negotiation_. In this negotiation, when facing an ambiguous request, the server sends back a page containing links to the available alternative resources. The user is presented the resources and choose the one to use.
-
-![](httpnego3.png)
-
-Unfortunately, the HTTP standard does not specify the format of the page allowing to choose between the available resource, which prevents to easily automatize the process. Besides falling back to the _server-driven negotiation_, this method is almost always used in conjunction with scripting, especially with JavaScript redirection: after having checked for the negotiation criteria, the script performs the redirection. A second problem is that one more request is needed in order to fetch the real resource, slowing the availability of the resource to the user.
+Cependant, le standard HTTP ne définit pas le format de la page pour le choix entre les ressources disponibles, ce qui empêche d'automatiser le procédé. En plus d'utiliser _la négociation menée par le serveur_ en cas de recours, cette méthode est toujours utilisée avec des scripts. Il faut aussi plus d'une requête pour obtenir la ressource finale, ralentissant ainsi l'arrivée de la ressource jusqu'au client.

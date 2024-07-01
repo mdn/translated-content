@@ -51,7 +51,7 @@ Using [XHR](/ko/docs/Web/API/XMLHttpRequest) with credentials:
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://example.com/', true);
+xhr.open("GET", "http://example.com/", true);
 xhr.withCredentials = true;
 xhr.send(null);
 ```
@@ -60,8 +60,8 @@ Using [Fetch](/ko/docs/Web/API/Fetch_API) with credentials:
 
 ```js
 fetch(url, {
-  credentials: 'include'
-})
+  credentials: "include",
+});
 ```
 
 ## 명세서
@@ -70,7 +70,7 @@ fetch(url, {
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Access-Control-Allow-Credentials")}}
+{{Compat}}
 
 ## See also
 

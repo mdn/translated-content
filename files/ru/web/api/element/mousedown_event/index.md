@@ -1,8 +1,10 @@
 ---
 title: mousedown
 slug: Web/API/Element/mousedown_event
-translation_of: Web/API/Element/mousedown_event
 ---
+
+{{APIRef}}
+
 Событие `mousedown` срабатывает, когда кнопка указывающего устройства (к примеру, мыши) нажата над элементом.
 
 ## Общая информация

@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createDynamicsCompressor()
 slug: Web/API/BaseAudioContext/createDynamicsCompressor
-original_slug: Web/API/AudioContext/createDynamicsCompressor
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -15,7 +14,7 @@ original_slug: Web/API/AudioContext/createDynamicsCompressor
 ## 構文
 
 ```js
-createDynamicsCompressor()
+createDynamicsCompressor();
 ```
 
 ### 引数
@@ -46,24 +45,24 @@ compressor.release.setValueAtTime(0.25, audioCtx.currentTime);
 // AudioBufferSourceNode を出力先につなげる
 source.connect(audioCtx.destination);
 
-button.onclick = function() {
-  var active = button.getAttribute('data-active');
-  if(active == 'false') {
-    button.setAttribute('data-active', 'true');
-    button.textContent = 'Remove compression';
+button.onclick = function () {
+  var active = button.getAttribute("data-active");
+  if (active == "false") {
+    button.setAttribute("data-active", "true");
+    button.textContent = "Remove compression";
 
     source.disconnect(audioCtx.destination);
     source.connect(compressor);
     compressor.connect(audioCtx.destination);
-  } else if(active == 'true') {
-    button.setAttribute('data-active', 'false');
-    button.textContent = 'Add compression';
+  } else if (active == "true") {
+    button.setAttribute("data-active", "false");
+    button.textContent = "Add compression";
 
     source.disconnect(compressor);
     compressor.disconnect(audioCtx.destination);
     source.connect(audioCtx.destination);
   }
-}
+};
 ```
 
 ## 仕様書

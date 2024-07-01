@@ -31,7 +31,7 @@ dataview.setInt8(byteOffset, value)
 - {{jsxref("RangeError")}}
   - : 如果 byteOffset 超出了视图能储存的值，就会抛出错误
 
-## 例子
+## 示例
 
 ```js
 var buffer = new ArrayBuffer(8);

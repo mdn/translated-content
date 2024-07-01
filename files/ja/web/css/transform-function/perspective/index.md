@@ -1,7 +1,8 @@
 ---
 title: perspective()
 slug: Web/CSS/transform-function/perspective
-original_slug: Web/CSS/transform-function/perspective()
+l10n:
+  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
 {{CSSRef}}
@@ -10,7 +11,7 @@ original_slug: Web/CSS/transform-function/perspective()
 
 {{EmbedInteractiveExample("pages/css/function-perspective.html")}}
 
-`perspective()` 座標変換関数は {{cssxref('transform')}} 値の一部で、変形される要素に適用されます。これは {{cssxref('perspective')}} および {{cssxref('perspective-origin')}} の各プロパティが三次元空間に座標変換される子の親に付けられるのとは異なります。
+`perspective()` 座標変換関数は {{cssxref('transform')}} 値の一部で、座標変換される要素に適用されます。これは {{cssxref('perspective')}} および {{cssxref('perspective-origin')}} の各プロパティが三次元空間に座標変換される子の親に付けられるのとは異なります。
 
 ## 構文
 
@@ -20,7 +21,7 @@ z=0 平面とは、二次元表示ですべてが見える平面、つまり画�
 `1px` より小さい値 (ゼロを含む) は `1px` になります。
 値が `none` 以外の場合、 z が正の位置にある要素は大きく表示されます。また、z が負の位置にある要素は小さく表示されます。
 z 位置が `perspective` の値と同じか大きい要素は、ユーザーの背後にあるかのようになり、非表示になります。
-`perspective()` が大きいと、変形が小さいことを表します。`perspective()` の値が小さいと、変形が大きいことを表します。`perspective(none)` は無限の距離からの遠近感を表し、変形はありません。
+`perspective()` が大きいと、座標変換が小さいことを表します。`perspective()` の値が小さいと、座標変換が大きいことを表します。`perspective(none)` は無限の距離からの遠近感を表し、座標変換はありません。
 
 ```css
 perspective(d)
@@ -34,21 +35,25 @@ perspective(d)
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">ℝ^2 のデカルト座標</th>
-      <th scope="col">ℝℙ^2 の同次座標</th>
-      <th scope="col">ℝ^3 のデカルト座標</th>
-      <th scope="col">ℝℙ^3 の同次座標</th>
+      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
+      <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
+      <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="2" rowspan="2">
-        この変換は三次元空間に適用され、平面で表現することはできません。
+      <td colspan="2">
+        <p>
+          この変換は 3D 空間に適用され、平面で表現することはできません。
+        </p>
       </td>
-      <td colspan="1" rowspan="2">この変換は ℝ^3 では線形変換ではないので、デカルト座標行列を使用して表現することはできません。</td>
+      <td>
+        この変換は ℝ^3 では線形変換ではないので、直交座標行列を使用して表現することはできません。
+      </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
@@ -68,7 +73,7 @@ perspective(d)
                   <mi>d</mi> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
@@ -76,7 +81,7 @@ perspective(d)
   </tbody>
 </table>
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
@@ -165,3 +170,7 @@ p + div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
+- 独立の座標変換プロパティ:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}

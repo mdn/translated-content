@@ -13,8 +13,8 @@ O código resposta HyperText Transfer Protocol (HTTP) **`202 Accepted`** indica 
 
 ## Especificações
 
-| Especificação                                            | Título                                                        |
-| -------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                             | Título                                                        |
+| ----------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "202 Accepted" , "6.3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Veja também

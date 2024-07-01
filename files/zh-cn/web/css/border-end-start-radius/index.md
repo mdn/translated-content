@@ -1,0 +1,92 @@
+---
+title: border-end-start-radius
+slug: Web/CSS/border-end-start-radius
+---
+
+{{CSSRef}}
+
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-end-start-radius`** 定义了元素的逻辑边框半径，并根据元素的书写模式、行内方向和文本朝向对应至实体边框半径。此属性便于构建适应各种[文本朝向](/zh-CN/docs/Web/CSS/text-orientation)和[书写模式](/zh-CN/docs/Web/CSS/CSS_writing_modes)的样式。
+
+{{EmbedInteractiveExample("pages/css/border-end-start-radius.html")}}
+
+此属性影响元素块末与行首之间的拐角。例如在 `horizontal-tb` 书写模式和 `ltr` 行内方向下，此属性对应于 {{CSSXref("border-bottom-left-radius")}} 属性。
+
+## 语法
+
+```css
+/* 长度值 */
+/* 使用一个值所得拐角为圆形 */
+border-end-start-radius: 10px;
+border-end-start-radius: 1em;
+
+/* 使用两个值所得拐角为椭圆形 */
+border-end-start-radius: 1em 2em;
+
+/* 全局值 */
+border-end-start-radius: inherit;
+border-end-start-radius: initial;
+border-end-start-radius: revert;
+border-end-start-radius: revert-layer;
+border-end-start-radius: unset;
+```
+
+### 取值
+
+- `<length-percentage>`
+  - : 表示圆的半径或者椭圆半长轴和半短轴的尺寸。表示绝对尺寸可用 CSS {{CSSXref("&lt;length&gt;")}} 数据类型所允许的任意单位。水平轴的百分比参照盒的宽度，竖直轴的百分比参照盒的高度。负值无效。
+
+## 形式定义
+
+{{CSSInfo}}
+
+## 形式语法
+
+{{CSSSyntax}}
+
+## 示例
+
+### 竖排文本的边框半径
+
+#### HTML
+
+```html
+<div>
+  <p class="exampleText">示例</p>
+</div>
+```
+
+#### CSS
+
+```css
+div {
+  background-color: rebeccapurple;
+  width: 120px;
+  height: 120px;
+  border-end-start-radius: 10px;
+}
+
+.exampleText {
+  writing-mode: vertical-rl;
+  padding: 10px;
+  background-color: #fff;
+  border-end-start-radius: 10px;
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample("竖排文本的边框半径", 140, 140)}}
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
+- 对应的实体属性：{{CSSXref("border-top-right-radius")}}
+- {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}

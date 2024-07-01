@@ -1,39 +1,33 @@
 ---
-title: MessageChannel.port1
+title: MessageChannel：port1 属性
 slug: Web/API/MessageChannel/port1
+l10n:
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
 
-{{domxref("MessageChannel")}} 的只读属性 **`port1`** 返回消息通道的第一个端口，此端口连接到源上下文通道。
+{{domxref("MessageChannel")}} 接口的 **`port1`** 只读属性返回消息 channel 的第一个端口——即附加到发起 channel 的上下文的端口。
 
-{{AvailableInWorkers}}
+## 值
 
-## 语法
-
-```
-channel.port1;
-```
-
-### Value
-
-一个 {{domxref("MessagePort")}} 对象，通道的第一个端口，此端口连接到源上下文通道。
+一个 {{domxref("MessagePort")}} 对象，它是 channel 的第一个端口，即连接到发起 channel 上下文的端口。
 
 ## 示例
 
-在以下代码块中，您可以看到使用 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} 构造函数创建的新通道。当 {{HTMLElement("iframe")}} 加载完毕，我们使用 {{domxref("MessagePort.postMessage")}} 方法把一条消息和 {{domxref("MessageChannel.port2")}} 传递给 {{HTMLElement("iframe")}}。handleMessage 处理程序将会从 \<iframe> 中（使用 {{domxref("MessagePort.onmessage")}} 监听事件）接收到信息，将数据其放入一个段落。handleMessage 方法关联到 port1 用于监听收到的消息。
+在以下的代码块中，你可以看到使用 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} 构造函数创建的新 Channel。当 {{HTMLElement("iframe")}} 加载完成后，我们使用 {{domxref("MessagePort.postMessage")}} 将 {{domxref("MessageChannel.port2", "port2")}} 传递给 {{HTMLElement("iframe")}}，并附带一条消息。然后 `handleMessage` 处理程序响应从 `<iframe>` 发送回来的消息（使用 {{domxref("MessagePort.message_event", "onmessage")}}），并将其放入一个段落中。同时监听 `port1` 以检查何时接收到消息。
 
 ```js
-var channel = new MessageChannel();
-var para = document.querySelector('p');
+const channel = new MessageChannel();
+const para = document.querySelector("p");
 
-var ifr = document.querySelector('iframe');
-var otherWindow = ifr.contentWindow;
+const ifr = document.querySelector("iframe");
+const otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
-  otherWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+  otherWindow.postMessage("来自主页的问候！", "*", [channel.port2]);
 }
 
 channel.port1.onmessage = handleMessage;
@@ -41,8 +35,6 @@ function handleMessage(e) {
   para.innerHTML = e.data;
 }
 ```
-
-一个完整的运行示例，可以在 GitHub 上查看 [channel messaging basic demo](https://github.com/mdn/channel-messaging-basic-demo) ([run it live too](http://mdn.github.io/channel-messaging-basic-demo/)).
 
 ## 规范
 
@@ -52,6 +44,6 @@ function handleMessage(e) {
 
 {{Compat}}
 
-## 参考
+## 参见
 
-- [Using channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [使用 channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

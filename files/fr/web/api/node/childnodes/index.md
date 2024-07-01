@@ -1,13 +1,6 @@
 ---
 title: element.childNodes
 slug: Web/API/Node/childNodes
-tags:
-  - API
-  - DOM
-  - Enfants
-  - Noeuds
-  - Propriétés
-translation_of: Web/API/Node/childNodes
 ---
 
 {{APIRef("DOM")}}
@@ -43,9 +36,9 @@ if (parg.hasChildNodes()) {
 ```js
 // Voici une manière de supprimer tous les enfants d'un nœud
 // (boite est une référence à un élément ayant des enfants)
-while( boite.firstChild) {
+while (boite.firstChild) {
   // La liste n'est pas une copie, elle sera donc réindexée à chaque appel
-  boite.removeChild( boite.firstChild);
+  boite.removeChild(boite.firstChild);
 }
 ```
 
@@ -55,7 +48,7 @@ Les éléments de la collection de noeuds sont des objets et non des chaînes de
 
 L'objet [`document`](/fr/DOM/document) lui-même a deux enfants&nbsp;: la déclaration [Doctype](/fr/DOM/document.doctype) et l'élément racine, généralement appelés `documentElement` . (Dans les documents (X)HTML il s'agit d'éléments [`HTML`](/fr/HTML/Element/html)).
 
-`childNodes`  inclut tous les noeuds enfants, y compris les noeuds qui ne sont pas des éléments comme les noeuds texte et commentaire. Pour obtenir une collection des seuls éléments, utilisez {{domxref("ParentNode.children")}} à la place.
+`childNodes` inclut tous les noeuds enfants, y compris les noeuds qui ne sont pas des éléments comme les noeuds texte et commentaire. Pour obtenir une collection des seuls éléments, utilisez {{domxref("ParentNode.children")}} à la place.
 
 ## Spécifications
 

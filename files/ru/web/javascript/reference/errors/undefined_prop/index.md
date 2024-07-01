@@ -1,12 +1,6 @@
 ---
 title: 'ReferenceError: reference to undefined property "x"'
 slug: Web/JavaScript/Reference/Errors/Undefined_prop
-tags:
-  - JavaScript
-  - ReferenceError
-  - Ошибки
-  - Строгий режим
-translation_of: Web/JavaScript/Reference/Errors/Undefined_prop
 ---
 
 {{jsSidebar("Errors")}}
@@ -45,12 +39,12 @@ var foo = {};
 
 // Задать свойство bar
 
-foo.bar = 'moon';
+foo.bar = "moon";
 console.log(foo.bar); // "moon"
 
 // Убедиться, что свойство bar существует, прежде чем обращаться к нему
 
-if (foo.hasOwnProperty('bar')) {
+if (foo.hasOwnProperty("bar")) {
   console.log(foo.bar);
 }
 ```

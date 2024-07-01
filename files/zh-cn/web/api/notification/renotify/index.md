@@ -1,44 +1,31 @@
 ---
-title: Notification.renotify
-slug: Web/API/notification/renotify
+title: Notification：renotify 属性
+slug: Web/API/Notification/renotify
+l10n:
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
-`renotify` 是 {{domxref("Notification")}} 接口的只读属性，如果有新的通知替换了一个旧的通知，这个属性指明用户是否应该重新收到通知。它也可以通过{{domxref("Notification.Notification","Notification()")}} 构造函数的 `renotify` option 来指定。
+{{domxref("Notification")}} 接口的 **`renotify`** 只读属性指定在新通知替换旧通知后是否应当通知用户，在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `renotify` 选项中指定。
 
-## 语法
+## 值
 
-```plain
-var renotify = Notification.renotify;
-```
+一个布尔值。默认值为 `false`；设为 `true` 将会使通知重新通知用户。
 
-### 值
+## 示例
 
-{{domxref("Boolean")}}. 默认为`false`；设为 `true` 将会重新通知用户。
-
-## 例子
-
-以下代码片段用于在一个通知被替换以后触发通报以重新通知用户；它创建一个简单的 `options` 对象，然后使用`Notification()` 构造函数触发通报。
+以下代码片段用于在一个通知被替换以后触发重新向用户发送通知；它创建一个简单的 `options` 对象，然后调用 `Notification()` 构造函数触发通知。
 
 ```js
-var options = {
-  body: 'Do you like my body?',
-  tag: 'renotify',
-  renotify: true
-}
+const options = {
+  body: "你提交的代码收到了 3 条新的审阅意见。",
+  renotify: true,
+};
 
-var n = new Notification('Test notification',options);
+const n = new Notification("新评论活动", options);
 
-n.renotify // should return true
-```
-
-## 使用注意
-
-renotify 覆盖通知选项必须搭配 tag 标签选项进行使用，否则会收到错误通知。
-
-```plain
-Notifications which set the renotify flag must specify a non-empty tag.
+console.log(n.renotify); // true
 ```
 
 ## 规范
@@ -51,4 +38,4 @@ Notifications which set the renotify flag must specify a non-empty tag.
 
 ## 参见
 
-- [使用通知 API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [使用 Notification API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)

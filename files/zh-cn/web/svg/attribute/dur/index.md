@@ -3,7 +3,7 @@ title: dur
 slug: Web/SVG/Attribute/dur
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 该属性标识了动画的简单持续时间。
 
@@ -11,7 +11,7 @@ slug: Web/SVG/Attribute/dur
 
 | 类别     | 动画定时属性                                                                |
 | -------- | --------------------------------------------------------------------------- |
-| 值       | [\<clock-value>](/zh-CN/SVG/Content_type#Clock-value) \| **indefinite**         |
+| 值       | [\<clock-value>](/zh-CN/SVG/Content_type#Clock-value) \| **indefinite**     |
 | 可变性   | No                                                                          |
 | 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#DurAttribute) |
 

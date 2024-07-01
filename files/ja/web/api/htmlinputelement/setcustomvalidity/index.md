@@ -1,6 +1,9 @@
 ---
-title: HTMLInputElement.setCustomValidity()
+title: "HTMLInputElement: setCustomValidity() メソッド"
+short-title: setCustomValidity()
 slug: Web/API/HTMLInputElement/setCustomValidity
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,8 +12,8 @@ slug: Web/API/HTMLInputElement/setCustomValidity
 
 ## 構文
 
-```js
-element.setCustomValidity(message);
+```js-nolint
+setCustomValidity(message)
 ```
 
 ### 引数
@@ -20,7 +23,7 @@ element.setCustomValidity(message);
 
 ### 返値
 
-{{jsxref('undefined')}}
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
@@ -36,13 +39,13 @@ function validate(inputID) {
   const validityState = input.validity;
 
   if (validityState.valueMissing) {
-    input.setCustomValidity('You gotta fill this out, yo!');
+    input.setCustomValidity("You gotta fill this out, yo!");
   } else if (validityState.rangeUnderflow) {
-    input.setCustomValidity('We need a higher number!');
+    input.setCustomValidity("We need a higher number!");
   } else if (validityState.rangeOverflow) {
-    input.setCustomValidity('Thats too high!');
+    input.setCustomValidity("That's too high!");
   } else {
-    input.setCustomValidity('');
+    input.setCustomValidity("");
   }
 
   input.reportValidity();
@@ -62,6 +65,5 @@ function validate(inputID) {
 ## 関連情報
 
 - [学習: クライアント側フォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)
-- [制約検証 API](/ja/docs/Web/API/Constraint_validation)
+- [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)
 - {{domxref('ValidityState')}}

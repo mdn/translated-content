@@ -1,8 +1,9 @@
 ---
 title: Sincrónico
 slug: Glossary/Synchronous
-original_slug: Glossary/Sincronico
 ---
+
+{{GlossarySidebar}}
 
 Sincrónico _se_ refiere a la comunicación en tiempo real donde cada lado recibe (y si es necesario, procesa y responde) mensajes instantáneamente (o lo más cerca posible a instantáneamente).
 

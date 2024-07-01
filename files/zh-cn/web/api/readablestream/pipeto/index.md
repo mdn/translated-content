@@ -11,7 +11,7 @@ slug: Web/API/ReadableStream/pipeTo
 
 ## 语法
 
-```js
+```js-nolint
 pipeTo(destination)
 pipeTo(destination, options)
 ```
@@ -19,6 +19,7 @@ pipeTo(destination, options)
 ### 参数
 
 - `destination`
+
   - : 充当 {{domxref("ReadableStream")}} 最终目标的 {{domxref("WritableStream")}}。
 
 - `options` {{optional_inline}}
@@ -47,11 +48,11 @@ pipeTo(destination, options)
 
 ```js
 // 获取原始图像
-fetch('png-logo.png')
-// 取回响应的 body 属性，该属性继承 ReadableStream
-.then(response => response.body)
-.then(body => body.pipeThrough(new PNGTransformStream()))
-.then(rs => rs.pipeTo(new FinalDestinationStream()))
+fetch("png-logo.png")
+  // 取回响应的 body 属性，该属性继承 ReadableStream
+  .then((response) => response.body)
+  .then((body) => body.pipeThrough(new PNGTransformStream()))
+  .then((rs) => rs.pipeTo(new FinalDestinationStream()));
 ```
 
 ## 规范
@@ -61,3 +62,8 @@ fetch('png-logo.png')
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造函数
+- [链式管道传输](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams#链式管道传输)

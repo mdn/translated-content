@@ -1,20 +1,11 @@
 ---
 title: 异步 JavaScript
 slug: Learn/JavaScript/Asynchronous
-original_slug: learn/JavaScript/异步
 ---
 
 {{LearnSidebar}}
 
 在这个模块，我们将查看{{Glossary("asynchronous", "异步")}} {{Glossary("JavaScript")}}，异步为什么很重要，以及怎样使用异步来有效处理潜在的阻塞操作，比如从服务器上获取资源。
-
-> **标注：**
->
-> #### 想成为一名前端工程师？
->
-> 我们汇总了一门课程，其中包含你实现目标所需要的所有基本信息。
->
-> [**点击开始**](/zh-CN/docs/Learn/Front-end_web_developer)
 
 ## 预备知识
 
@@ -36,7 +27,7 @@ original_slug: learn/JavaScript/异步
 ## 测验
 
 - [序列动画](/zh-CN/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)
-  - : 这个测验要求您使用 Promise 来播放一组特定序列的动画。
+  - : 这个测验要求你使用 Promise 来播放一组特定序列的动画。
 
 ## 参见
 

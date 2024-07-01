@@ -3,7 +3,7 @@ title: Date.prototype.toTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toTimeString
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`toTimeString()`** 方法以人类易读形式返回一个日期对象时间部分的字符串，该字符串以美式英语格式化。
 
@@ -21,14 +21,14 @@ dateObj.toTimeString()
 
 The `toTimeString` method is especially useful because compliant engines implementing [ECMA-262](/zh-CN/docs/ECMAScript) may differ in the string obtained from `toString` for `Date` objects, as the format is implementation-dependent; simple string slicing approaches may not produce consistent results across multiple engines.
 
-## 例子
+## 示例
 
-### 例子：`toTimeString` 方法的简单使用
+### 示例：`toTimeString` 方法的简单使用
 
 ```js
 var d = new Date(1993, 6, 28, 14, 39, 7);
 
-println(d.toString());     // prints Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
+println(d.toString()); // prints Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
 println(d.toTimeString()); // prints 14:39:07 GMT-0600 (PDT)
 ```
 
@@ -40,7 +40,7 @@ println(d.toTimeString()); // prints 14:39:07 GMT-0600 (PDT)
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
 - {{jsxref("Date.prototype.toDateString()")}}

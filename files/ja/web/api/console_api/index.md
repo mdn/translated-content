@@ -26,10 +26,10 @@ Console API は、一貫性のない方法ではありますが、さまざま�
 ## 例
 
 ```js
-let myString = 'Hello world';
+let myString = "Hello world";
 
 // "Hello world" をコンソールに出力
-console.log(myString)
+console.log(myString);
 ```
 
 その他の例については、[`console` のリファレンスページ](/ja/docs/Web/API/Console#Usage)を参照してください。

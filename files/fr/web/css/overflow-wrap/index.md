@@ -1,11 +1,6 @@
 ---
 title: overflow-wrap
 slug: Web/CSS/overflow-wrap
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/overflow-wrap
 ---
 
 {{CSSRef}}
@@ -85,33 +80,47 @@ p {
 
 ```html
 <h3><code>normal</code></h3>
-<p>They say the fishing is excellent at
-  Lake <em class="normal">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself.</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="normal">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+  I've never been there myself.
+</p>
 <h3><code>overflow-wrap: anywhere</code></h3>
-<p>They say the fishing is excellent at
-  Lake <em class="ow-anywhere">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself.</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="ow-anywhere">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself.
+</p>
 <h3><code>overflow-wrap: break-word</code></h3>
-<p>They say the fishing is excellent at
-  Lake <em class="ow-break-word">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. </p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="ow-break-word">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself.
+</p>
 <h3><code>word-break: break-all</code></h3>
-<p>They say the fishing is excellent at
-  Lake <em class="word-break">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself.</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="word-break">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself.
+</p>
 <h3><code>hyphens: auto</code>, without <code>lang</code> attribute</h3>
-<p class="hyphens">They say the fishing is excellent at
-  Lake <em>Chargoggagoggmanchauggagoggchaubunagungamaugg</em>
-  though I've never been there myself. </p>
+<p class="hyphens">
+  They say the fishing is excellent at Lake
+  <em>Chargoggagoggmanchauggagoggchaubunagungamaugg</em> though I've never been
+  there myself.
+</p>
 <h3><code>hyphens: auto</code>, English rules</h3>
-<p class="hyphens" lang="en">They say the fishing is excellent at
-  Lake <em>Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself.</p>
+<p class="hyphens" lang="en">
+  They say the fishing is excellent at Lake
+  <em>Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though I've never been
+  there myself.
+</p>
 <h3><code>hyphens: auto</code>, German rules</h3>
-<p class="hyphens" lang="de">They say the fishing is excellent at
-  Lake <em>Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself.</p>
+<p class="hyphens" lang="de">
+  They say the fishing is excellent at Lake
+  <em>Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though I've never been
+  there myself.
+</p>
 ```
 
 ### Résultat

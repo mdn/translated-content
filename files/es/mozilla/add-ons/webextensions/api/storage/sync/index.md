@@ -3,7 +3,7 @@ title: storage.sync
 slug: Mozilla/Add-ons/WebExtensions/API/storage/sync
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Representa el área de almacenamiento de sincronización. Los elementos en el almacenamiento de sincronización están sincronizados por el navegador y están disponibles en todas las instancias de ese navegador en el que el usuario está conectado (por ejemplo, a través de Firefox Sync o una cuenta de Google), en diferentes dispositivos.
 
@@ -28,9 +28,9 @@ El objeto de sincronización implementa los métodos definidos en el {{WebExtAPI
 - {{WebExtAPIRef("storage.StorageArea.clear()")}}
   - : Elimina todos los elementos del área de almacenamiento.
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("webextensions.api.storage.sync")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

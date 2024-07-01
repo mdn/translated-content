@@ -12,20 +12,22 @@ slug: Web/CSS/@font-face/src
 ```css
 /* <url> 値 */
 src: url(https://somewebsite.com/path/to/font.woff); /* 絶対 URL */
-src: url(path/to/font.woff);                         /* 相対 URL */
-src: url(path/to/font.woff) format("woff");          /* 明示的な書式 */
-src: url('path/to/font.woff');                       /* 引用符付きの URL */
-src: url(path/to/svgfont.svg#example);               /* フラグメントで識別するフォント */
+src: url(path/to/font.woff); /* 相対 URL */
+src: url(path/to/font.woff) format("woff"); /* 明示的な書式 */
+src: url("path/to/font.woff"); /* 引用符付きの URL */
+src: url(path/to/svgfont.svg#example); /* フラグメントで識別するフォント */
 
 /* <font-face-name> 値 */
-src: local(font);      /* 引用符なしの名前 */
+src: local(font); /* 引用符なしの名前 */
 src: local(some font); /* 空白が入った名前 */
-src: local("font");    /* 引用符付きの名前 */
+src: local("font"); /* 引用符付きの名前 */
 
 /* 複数の項目 */
-src: local(font), url(path/to/font.svg) format("svg"),
-     url(path/to/font.woff) format("woff"),
-     url(path/to/font.otf) format("opentype");
+src:
+  local(font),
+  url(path/to/font.svg) format("svg"),
+  url(path/to/font.woff) format("woff"),
+  url(path/to/font.otf) format("opentype");
 ```
 
 ### 値
@@ -57,18 +59,20 @@ CSS のその他の URL と同様に、相対 URL を使用することができ
 /* 通常のフォントフェイス */
 @font-face {
   font-family: examplefont;
-  src: local(Example Font),
-       url('examplefont.woff') format("woff"),
-       url('examplefont.otf') format("opentype");
+  src:
+    local(Example Font),
+    url("examplefont.woff") format("woff"),
+    url("examplefont.otf") format("opentype");
 }
 
 /* 同じフォントファミリーで太字のフォントフェイス */
 @font-face {
   font-family: examplefont;
-  src: local(Example Font Bold), /* 完全なフォント名 */
-       local(Example Font-Bold), /* Postscript 名 */
-       url('examplefont.woff') format("woff"),
-       url('examplefont.otf') format("opentype");
+  src:
+    local(Example Font Bold),
+    /* 完全なフォント名 */ local(Example Font-Bold),
+    /* Postscript 名 */ url("examplefont.woff") format("woff"),
+    url("examplefont.otf") format("opentype");
   font-weight: bold;
 }
 ```

@@ -1,7 +1,6 @@
 ---
 title: Event.isTrusted
 slug: Web/API/Event/isTrusted
-translation_of: Web/API/Event/isTrusted
 ---
 
 {{APIRef("DOM")}}
@@ -24,7 +23,7 @@ var bool = event.isTrusted;
  }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

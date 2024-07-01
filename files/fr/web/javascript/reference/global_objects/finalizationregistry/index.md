@@ -1,8 +1,6 @@
 ---
 title: FinalizationRegistry
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
-translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
-browser-compat: javascript.builtins.FinalizationRegistry
 ---
 
 {{JSRef}}
@@ -18,12 +16,12 @@ Un objet **`FinalizationRegistry`** permet de déclencher une fonction de rappel
 On crée le registre en passant la fonction de rappel en paramètre&nbsp;:
 
 ```js
-const registre = new FinalizationRegistry(valeurTenue => {
+const registre = new FinalizationRegistry((valeurTenue) => {
   // …
 });
 ```
 
-Ensuite, avec la méthode `register` on inscrit au registre les différents objets pour lesquels on veut que la fonction de rappel de nettoyage soit appelée. Cette fonction prend en argument la valeur courante et une *valeur tenue* pour celle-ci&nbsp;:
+Ensuite, avec la méthode `register` on inscrit au registre les différents objets pour lesquels on veut que la fonction de rappel de nettoyage soit appelée. Cette fonction prend en argument la valeur courante et une _valeur tenue_ pour celle-ci&nbsp;:
 
 ```js
 registre.register(unObjet, "une valeur");
@@ -69,7 +67,7 @@ Une utilisation correcte de `FinalizationRegistry` nécessite une réflexion suf
 
 Voici quelques sujets spécifiques inclus dans [le document explicatif de la proposition correspondante](https://github.com/tc39/proposal-weakrefs/blob/master/reference.md)&nbsp;:
 
-> [Les ramasses-miettes](https://fr.wikipedia.org/wiki/Ramasse-miettes_(informatique)) sont compliqués. Si une application ou une bibliothèque dépend d'un ramasse-miettes nettoyant un registre FinalizationRegistry ou appelant un finaliseur de façon précise et prédictible, qu'elle se prépare à être déçue&nbsp;: le nettoyage pourra avoir lieu bien plus tard que prévu voire pas du tout. Ce comportement grandement variable est dû&nbsp;:
+> [Les ramasses-miettes](<https://fr.wikipedia.org/wiki/Ramasse-miettes_(informatique)>) sont compliqués. Si une application ou une bibliothèque dépend d'un ramasse-miettes nettoyant un registre FinalizationRegistry ou appelant un finaliseur de façon précise et prédictible, qu'elle se prépare à être déçue&nbsp;: le nettoyage pourra avoir lieu bien plus tard que prévu voire pas du tout. Ce comportement grandement variable est dû&nbsp;:
 >
 > - Au fait qu'un objet peut être récupéré par le ramasse-miettes bien plus tôt qu'un autre, même s'il devient inaccessible au même temps, par exemple en raison du ramassage générationnel.
 > - À l'action du ramasse-miettes qui peut être divisée dans le temps en utilisant des techniques incrémentales et concurrentes.
@@ -96,14 +94,14 @@ Quelques notes à propos des fonctions de rappel de nettoyage&nbsp;:
 On crée le registre en y passant la fonction de rappel&nbsp;:
 
 ```js
-const registre = new FinalizationRegistry(valeurTenue => {
+const registre = new FinalizationRegistry((valeurTenue) => {
   // ....
 });
 ```
 
 ### Enregistrer des objets en vue de leur nettoyage
 
-Ensuite, on enregistre les objets pour lesquels on souhaite avoir la fonction de rappel de nettoyage exécutée. Pour cela, on appelle la méthode `register` en lui passant l'objet et une *valeur tenue* correspondante&nbsp;:
+Ensuite, on enregistre les objets pour lesquels on souhaite avoir la fonction de rappel de nettoyage exécutée. Pour cela, on appelle la méthode `register` en lui passant l'objet et une _valeur tenue_ correspondante&nbsp;:
 
 ```js
 registre.register(unObjet, "une valeur");

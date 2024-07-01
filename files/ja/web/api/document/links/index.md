@@ -1,29 +1,25 @@
 ---
-title: document.links
+title: "Document: links プロパティ"
+short-title: links
 slug: Web/API/Document/links
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef}}
+{{ APIRef("DOM") }}
 
-## 概要
+**`links`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、文書中のすべての {{HTMLElement("area")}} 要素および {{HTMLElement("a")}} 要素のうち、[href](/ja/docs/Web/HTML/Element/a#href) 属性の値があるものの集合を返します。
 
-`links` プロパティは、文書中の、 `href` 属性の値を持つすべての {{htmlelement("area")}} 要素とアンカー要素のコレクションを返します。
+## 値
 
-## 構文
-
-```
-nodeList = document.links;
-```
+{{domxref("HTMLCollection")}} です。
 
 ## 例
 
 ```js
-var links = document.links;
-
-for(var i = 0; i < links.length; i++) {
-  var linkHref = document.createTextNode(links[i].href);
-  var lineBreak = document.createElement("br");
-
+for (const link of document.links) {
+  const linkHref = document.createTextNode(link.href);
+  const lineBreak = document.createElement("br");
   document.body.appendChild(linkHref);
   document.body.appendChild(lineBreak);
 }
@@ -31,4 +27,8 @@ for(var i = 0; i < links.length; i++) {
 
 ## 仕様書
 
-- [DOM Level 2 HTML: links](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7068919)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

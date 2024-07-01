@@ -1,7 +1,6 @@
 ---
 title: ボールを動かす
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 ---
 
 {{GamesSidebar}}
@@ -16,7 +15,7 @@ original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 
 キャンバスを毎フレーム、定期的に更新し続けるためには、何度も実行されるような関数を定義する必要があります。この関数には画像の位置を変えたりするために毎回違う値が与えらます。 JavaScript のタイミング関数、例えば {{domxref("setInterval()")}} や {{domxref("window.requestAnimationFrame()", "requestAnimationFrame()")}} を用いれば同じ関数を何度も実行できます。
 
-現在 HTML ファイル内にある JavaScript を、最初の 2 行を除いてすべて削除し、その下に以下のように追加してください。draw()` 関数は `setInterval` 内で 10 ミリ秒ごとに実行されます。
+現在 HTML ファイル内にある JavaScript を、最初の 2 行を除いてすべて削除し、その下に以下のように追加してください。`draw()` 関数は `setInterval` 内で 10 ミリ秒ごとに実行されます。
 
 ```js
 function draw() {

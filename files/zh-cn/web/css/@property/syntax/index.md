@@ -12,13 +12,13 @@ slug: Web/CSS/@property/syntax
 如下是所有的有效 syntax 字符串：
 
 ```css
-syntax: '<color>'; /* 接收一个颜色值 */
+syntax: "<color>"; /* 接收一个颜色值 */
 
-syntax: '<length> | <percentage>'; /* 接收长度或百分比参数，但是二者之间不进行计算合并 */
+syntax: "<length> | <percentage>"; /* 接收长度或百分比参数，但是二者之间不进行计算合并 */
 
-syntax: 'small | medium | large'; /* 接收这些参数值之一作为自定义标识符 */
+syntax: "small | medium | large"; /* 接收这些参数值之一作为自定义标识符 */
 
-syntax: '*'; /* 任何有效字符 */
+syntax: "*"; /* 任何有效字符 */
 ```
 
 ## 取值
@@ -54,15 +54,13 @@ syntax: '*'; /* 任何有效字符 */
 - `"<transform-list>"`
   - : A list of valid {{cssxref("&lt;transform-function&gt;")}} 值。
 
-## 标准定义
+## 形式定义
 
 {{cssinfo}}
 
-## 标准语法
+## 形式语法
 
-```css
 {{csssyntax}}
-```
 
 ## 实例
 
@@ -72,7 +70,7 @@ syntax: '*'; /* 任何有效字符 */
 
 ```css
 @property --my-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
@@ -82,16 +80,12 @@ syntax: '*'; /* 任何有效字符 */
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
-
-## 标准语法
-
-{{csssyntax}}
 
 ## 规范
 
@@ -101,7 +95,7 @@ window.CSS.registerProperty({
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [CSS 属性与值 API](/zh-CN/docs/Web/API/CSS_Properties_and_值_API)
 - [CSS 绘图 API](/zh-CN/docs/Web/API/CSS_Painting_API)

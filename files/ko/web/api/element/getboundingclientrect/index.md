@@ -57,11 +57,17 @@ domRect = element.getBoundingClientRect();
 
 ```js
 // scrollX의 경우
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.scrollLeft == 'number' ? t : document.body).scrollLeft
-// scrollY의 경우
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.scrollTop == 'number' ? t : document.body).scrollTop
+(((t = document.documentElement) || (t = document.body.parentNode)) &&
+typeof t.scrollLeft == "number"
+  ? t
+  : document.body
+).scrollLeft(
+  // scrollY의 경우
+  ((t = document.documentElement) || (t = document.body.parentNode)) &&
+    typeof t.scrollTop == "number"
+    ? t
+    : document.body,
+).scrollTop;
 ```
 
 ## 예제
@@ -86,12 +92,12 @@ div {
 ```
 
 ```js
-let elem = document.querySelector('div');
+let elem = document.querySelector("div");
 let rect = elem.getBoundingClientRect();
 for (var key in rect) {
-  if(typeof rect[key] !== 'function') {
-    let para = document.createElement('p');
-    para.textContent  = `${ key } : ${ rect[key] }`;
+  if (typeof rect[key] !== "function") {
+    let para = document.createElement("p");
+    para.textContent = `${key} : ${rect[key]}`;
     document.body.appendChild(para);
   }
 }
@@ -112,8 +118,8 @@ for (var key in rect) {
 
 ```html
 <div></div>
-    <div id="example"></div>
-    <div id="controls"></div>
+<div id="example"></div>
+<div id="controls"></div>
 ```
 
 ```css
@@ -125,27 +131,31 @@ div#example {
   background: purple;
 }
 
-body { padding-bottom: 1000px; }
-p { margin: 0; }
+body {
+  padding-bottom: 1000px;
+}
+p {
+  margin: 0;
+}
 ```
 
 ```js
 function update() {
   const container = document.getElementById("controls");
-  const elem = document.querySelector('div');
+  const elem = document.querySelector("div");
   const rect = elem.getBoundingClientRect();
 
-  container.innerHTML = '';
+  container.innerHTML = "";
   for (let key in rect) {
-    if(typeof rect[key] !== 'function') {
-      let para = document.createElement('p');
-      para.textContent  = `${ key } : ${ rect[key] }`;
+    if (typeof rect[key] !== "function") {
+      let para = document.createElement("p");
+      para.textContent = `${key} : ${rect[key]}`;
       container.appendChild(para);
     }
   }
 }
 
-document.addEventListener('scroll', update);
+document.addEventListener("scroll", update);
 update();
 ```
 

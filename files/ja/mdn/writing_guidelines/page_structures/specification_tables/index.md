@@ -1,20 +1,19 @@
 ---
 title: 仕様書一覧表
 slug: MDN/Writing_guidelines/Page_structures/Specification_tables
-original_slug: MDN/Structures/Specification_tables
 l10n:
-  sourceCommit: 1c5c86c721a5935e89065246d49506f1d4cf9567
+  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
 ---
 
 {{MDNSidebar}}
 
 MDN 上のすべてのリファレンスページでは、 API または技術が定義されている仕様書に関する情報を提供するようにしてください。この記事ではこれらの表の外見を示し、構築方法を説明します。
 
-この表は[互換性一覧表](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)と似ており、ふつうは両方ともリファレンスページの中にあります。
+仕様書一覧表の節の定義は[互換性一覧表](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)と似ており、ページでは通常その直前に現れる、同じデータソースから生成されるのが一般的です。
 
 ## 標準の仕様書一覧表
 
-標準の仕様書の節は次のようになります。
+標準の仕様書の節は次のようにしてください。
 
 ```md
 ## 仕様書
@@ -22,24 +21,35 @@ MDN 上のすべてのリファレンスページでは、 API または技術�
 \{{Specifications}}
 ```
 
-`\{{Specifications}}` マクロはすべての作業を行い、関連する最新の仕様書を含む一覧表を生成します。
-どの機能に対して仕様書を読み込むかを決定するために、ページの先頭部分の `browser-compat` プロパティをチェックします。
+`\{{Specifications}}` マクロはページのフロントマターの値に基づいて仕様表を生成します。
 
-もし、ページが `browser-compat: css.property.text-align` のような先頭部分を持っていれば、マクロは {{cssxref("text-align")}} の仕様書を取得し、表に表示します。
+既定では `browser-compat` キーの値が使用されます。
+各値は [browser-compat-data](https://github.com/mdn/browser-compat-data) リポジトリーにある特定の機能とそれに関連する互換性や仕様情報を参照します。
+例えば、 {{cssxref("text-align")}} ページには次のキーがあり、関連する仕様情報を取得するために使用します。
+
+```yaml
+browser-compat: css.property.text-align
+```
+
+一部の機能は上記のリポジトリーで管理されていません。
+このような用途では、 `spec-urls` キーを使用してページのフロントマターに仕様情報を追加することができます。
+例えば、 [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) 属性はフロントマターキーがあります。
+
+```yaml
+spec-urls: https://w3c.github.io/aria/#aria-atomic
+```
+
+上記の `css.property.text-align` キーの仕様表は、示すように表でレンダリングされます。
 
 ### 仕様書
 
-{{Specifications("css.properties.text-align")}}
-
-## 先頭部分のない仕様書一覧表
-
-先頭部分が用意されていないページで仕様書の節を表示したい場合、 browser-compat クエリーを直接マクロに渡し、 `{{Specifications("css.properties.text-align")}}` とすることができます。
+{{Specifications}}
 
 ## 標準外の機能
 
-（既に）仕様書に載っていない機能を文書化する場合は、 `\{{Specifications}}` マクロを呼び出さないでください。
+標準外の機能、特に標準化の流れから除去された機能を文書化する場合は、 `{{Specifications}}` マクロを呼び出さないでください。
 
-その代わり、標準化の状況や考えられる代替案についての情報を提供するようにしましょう。例えば次のようにします。
+その代わり、機能の状況や考えられる代替案についての情報を提供するようにしましょう。例えば次のようにします。
 
 - このメソッドはもう標準化路線にありません。互換性のために残してあります。代わりに _他のこのメソッド_ を使用してください。
 - このメソッドはもともと [DOM Level 2 Traversal and Range](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/) の一部でしたが、現在の DOM 仕様には存在しません。この機能は、もはや標準になる見込みはありません。

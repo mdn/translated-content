@@ -1,56 +1,59 @@
 ---
-title: IDBFactory.deleteDatabase
+title: IDBFactory.deleteDatabase()
 slug: Web/API/IDBFactory/deleteDatabase
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-{{ APIRef("IDBFactory") }}
+{{APIRef("IndexedDB")}}
 
-{{domxref("IDBFactory")}} インターフェイスの **`deleteDatabase()`** メソッドは、データベースの削除を要求します。このメソッドは直ちに {{domxref("IDBOpenDBRequest")}} オブジェクトを返し、非同期でデータベースの削除処理を行います。
+**`deleteDatabase()`** は {{DOMxRef("IDBFactory")}} インターフェイスのメソッドで、データベースの削除を要求します。このメソッドは直ちに {{DOMxRef("IDBOpenDBRequest")}} オブジェクトを返し、非同期でデータベースの削除処理を行います。
 
-データベースの削除が成功した場合、このメソッドから返された `request` オブジェクトにおいて、`result` に `null` が設定された状態で `success` イベントが発生します。 データベースの削除中にエラーが発生した場合、このメソッドから返された `request` オブジェクトで、`error` イベントが発生します。
+データベースの削除が成功した場合、このメソッドから返された `request` オブジェクトにおいて、`result` に `undefined` が設定された状態で `success` イベントが発生します。 データベースの削除中にエラーが発生した場合、このメソッドから返された `request` オブジェクトで、`error` イベントが発生します。
+
+`deleteDatabase()` が呼び出されると、この具体的なデータベースに対して開いている他の接続には [versionchange](/ja/docs/Web/API/IDBDatabase/versionchange_event) イベントが送られます。
+
+{{AvailableInWorkers}}
 
 ## 構文
 
-現在の標準:
+```js-nolint
+// 現行標準の場合
+deleteDatabase(name)
 
-```js
-var request = window.indexedDB.deleteDatabase("toDoList");
+// `options` （下記参照）を使用した実験的な版
+deleteDatabase(name)
+deleteDatabase(name, options)
 ```
 
-オプション付の実験バージョン (下を見てください):
+### 引数
 
-```js
-var request = window.indexedDB.deleteDatabase("toDoList", storage: "temporary");
-```
+- `name`
+  - : 削除したいデータベースの名前。存在しないデータベースを削除しようとしても、例外は発生しません。これとは対照的に、 {{DOMxRef("IDBDatabase.deleteObjectStore()")}} は、指定したオブジェクトストアが存在しない場合に例外が発生します。
+- `options` {{optional_inline}} {{NonStandardBadge}}
+  - : Gecko では、[バージョン 26](/ja/docs/Mozilla/Firefox/Releases/26) 以降、`permanent`（既定値）の IndexedDB を削除するか、`temporary` ストレージ （別名共有プール）の indexedDB を削除するかを指定する、非標準のオプションストレージ引数を含めることができます。
 
 ### 返値
 
-この要求に関連のある連続したイベントが発生する {{domxref("IDBOpenDBRequest")}}。
+この要求に関連のある連続したイベントが発生する {{DOMxRef("IDBOpenDBRequest")}}。
+
+処理が成功した場合、リクエストの {{domxref("IDBRequest.result", "result")}} プロパティの値は `null` となります。
 
 ## 例
 
 ```js
-var DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
+const DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
 
-DBDeleteRequest.onerror = function(event) {
-  console.log("データベースの削除中にエラーが発生しました。");
+DBDeleteRequest.onerror = (event) => {
+  console.error("データベースの削除中にエラーが発生しました。");
 };
 
-DBDeleteRequest.onsuccess = function(event) {
+DBDeleteRequest.onsuccess = (event) => {
   console.log("データベースが正常に削除されました。");
 
-  console.log(request.result); // null のはず
+  console.log(event.result); // null のはず
 };
 ```
-
-## 引数
-
-- `name`
-  - : データベース名
-- `options` {{ NonStandardBadge() }}
-  - : Gecko の [version 26](/ja/Firefox/Releases/26) から、永続的な（既定値）IndexedDB または、一時的なストレージ（shared pool）を削除するための、標準化されていないオプションのストレージパラメーターを含めることができます。
-
-> **メモ:** 一時的なストレージに保存されているデータは、プールのグローバル制限に達するまで保持されますが、これを変えることを検討しています。({{ Bug("968272") }} を見てください) グローバル制限に達した時、使用したのが最も昔であるオリジンのデータが削除されます。さらに、グループ制限 (eTLD+1 グループ / ドメイン) もあり、これは現在グローバル制限の 20% です。このグループ制限を超える要求は、すべて単に拒否されます。
 
 ## 仕様書
 
@@ -58,14 +61,14 @@ DBDeleteRequest.onsuccess = function(event) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.IDBFactory.deleteDatabase")}}
+{{Compat}}
 
 ## 関連情報
 
 - [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始 : {{domxref("IDBDatabase")}}
-- トランザクションの使用 : {{domxref("IDBTransaction")}}
-- キーの範囲の設定 : {{domxref("IDBKeyRange")}}
-- データの取得と変更 : {{domxref("IDBObjectStore")}}
-- カーソルの使用 : {{domxref("IDBCursor")}}
-- リファレンス例 : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- トランザクションの開始: {{DOMxRef("IDBDatabase")}}
+- トランザクションの使用: {{DOMxRef("IDBTransaction")}}
+- キーの範囲の設定: {{DOMxRef("IDBKeyRange")}}
+- データの取得と変更: {{DOMxRef("IDBObjectStore")}}
+- カーソルの使用: {{DOMxRef("IDBCursor")}}
+- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))

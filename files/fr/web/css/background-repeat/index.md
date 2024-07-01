@@ -1,8 +1,6 @@
 ---
 title: background-repeat
 slug: Web/CSS/background-repeat
-browser-compat: css.properties.background-repeat
-translation_of: Web/CSS/background-repeat
 ---
 
 {{CSSRef}}
@@ -102,25 +100,32 @@ background-repeat: unset;
 
 ```html
 <ol>
-  <li>no-repeat
+  <li>
+    no-repeat
     <div class="un"></div>
   </li>
-  <li>repeat
+  <li>
+    repeat
     <div class="deux"></div>
   </li>
-  <li>repeat-x
+  <li>
+    repeat-x
     <div class="trois"></div>
   </li>
-  <li>repeat-y
+  <li>
+    repeat-y
     <div class="quatre"></div>
   </li>
-  <li>space
+  <li>
+    space
     <div class="cinq"></div>
   </li>
-  <li>round
+  <li>
+    round
     <div class="six"></div>
   </li>
-  <li>repeat-x, repeat-y (plusieurs images)
+  <li>
+    repeat-x, repeat-y (plusieurs images)
     <div class="sept"></div>
   </li>
 </ol>
@@ -130,7 +135,8 @@ background-repeat: unset;
 
 ```css
 /* Commun à tous les DIVS */
-ol, li {
+ol,
+li {
   margin: 0;
   padding: 0;
 }
@@ -157,18 +163,16 @@ div {
   background-repeat: repeat-y;
 }
 .cinq {
-   background-repeat: space;
+  background-repeat: space;
 }
 .six {
-   background-repeat: round;
+  background-repeat: round;
 }
 
 /* Plusieurs images */
 .sept {
-  background-image:  url(starsolid.gif),
-                     url(favicon.png);
-  background-repeat: repeat-x,
-                     repeat-y;
+  background-image: url(starsolid.gif), url(favicon.png);
+  background-repeat: repeat-x, repeat-y;
   height: 144px;
 }
 ```

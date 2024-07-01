@@ -85,4 +85,4 @@ browser.pageAction.onClicked.addListener(handleClick);
 
 ## 示例
 
-GitHub 上的 [webextensions-examples](https://github.com/mdn/webextensions-examples) 库中包括了实现无 popup 地址栏按钮的例子 [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out) 。
+GitHub 上的 [webextensions-examples](https://github.com/mdn/webextensions-examples) 库中包括了实现无 popup 地址栏按钮的例子 [chill-out](https://github.com/mdn/webextensions-examples/tree/main/chill-out) 。

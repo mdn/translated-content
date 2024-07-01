@@ -5,7 +5,7 @@ slug: Learn/Getting_started_with_the_web/Dealing_with_files
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 
-一個網站會包含許多檔案: 文字內容、程式碼、樣式表、影音內容......等。每當你建立一個網站時，你需要將這些檔案在你的電腦上合理架構好。以確保它們能夠互相溝通，並讓內容正常顯示。然後你接著才能[將你的網站發佈上線](/zh-TW/Learn/Getting_started_with_the_web/Publishing_your_website)。本篇文章將探討你應該注意的一些議題，以便讓你能夠為你的網站設定好合理的檔案架構。
+一個網站會包含許多檔案: 文字內容、程式碼、樣式表、影音內容......等。每當你建立一個網站時，你需要將這些檔案在你的電腦上合理架構好。以確保它們能夠互相溝通，並讓內容正常顯示。然後你接著才能[將你的網站發佈上線](/zh-TW/docs/Learn/Getting_started_with_the_web/Publishing_your_website)。本篇文章將探討你應該注意的一些議題，以便讓你能夠為你的網站設定好合理的檔案架構。
 
 ## 你的網站在哪裡?
 
@@ -36,23 +36,23 @@ slug: Learn/Getting_started_with_the_web/Dealing_with_files
 
 ## 檔案路徑
 
-要讓一個檔案能夠與另一個檔案"溝通"，你需要提供一個他們之間的相對檔案路徑以讓檔案能夠找到另一個檔案在哪裡。為了要展示，我們將插入一小段的 HTML 到我們的 `index.html` 檔案中，並且讓它顯示你在 ["What will your website look like?"](/zh-TW/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like) 這篇文章中所選的圖片。
+要讓一個檔案能夠與另一個檔案"溝通"，你需要提供一個他們之間的相對檔案路徑以讓檔案能夠找到另一個檔案在哪裡。為了要展示，我們將插入一小段的 HTML 到我們的 `index.html` 檔案中，並且讓它顯示你在 ["What will your website look like?"](/zh-TW/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like) 這篇文章中所選的圖片。
 
 1. 複製你選的圖片並放到 `images` 資料夾中。
 2. 打開你的 `index.html`，並複製貼上下面這段 code。先別擔心這些 code 代表什麼意思，我們會在後面的時候講解它們代表的意義。
 
-    ```html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>My test page</title>
-      </head>
-      <body>
-        <img src="" alt="My test image">
-      </body>
-    </html>
-    ```
+   ```html
+   <!doctype html>
+   <html>
+     <head>
+       <meta charset="utf-8" />
+       <title>My test page</title>
+     </head>
+     <body>
+       <img src="" alt="My test image" />
+     </body>
+   </html>
+   ```
 
 3. `<img src="" alt="My test image">` 這行是一段將圖片插入到頁面中的 HTML code，我們必須告訴 HTML 圖片在哪。我們知道圖片在 _images_ 資料夾中，而 _images_ 資料夾就跟 `index.html`在同一目錄下。為了要在檔案系統結構中從 `index.html` 走到我們的圖片，我們需要將檔案路徑設為`images/your-image-filename`. 舉例來說，我們的圖片命名為 `firefox-icon.png`，所以這裡的檔案路徑即為 `images/firefox-icon.png`.
 4. 將檔案路徑貼到你的 HTML code 中的 `src=""` 的雙引號之間。
@@ -78,14 +78,3 @@ slug: Learn/Getting_started_with_the_web/Dealing_with_files
 ![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](file-structure.png)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
-
-## In this module
-
-- [安裝基本軟體](/zh-TW/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [你的網站看起來會是什麼樣子？](/zh-TW/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [與各式各樣檔案打交道](/zh-TW/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 基本概念](/zh-TW/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 基本概念](/zh-TW/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 基本概念](/zh-TW/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [將你的網站發佈上線](/zh-TW/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [網站的運作方式](/zh-TW/Learn/Getting_started_with_the_web/How_the_Web_works)

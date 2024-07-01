@@ -1,13 +1,6 @@
 ---
 title: ShadowRoot
 slug: Web/API/ShadowRoot
-tags:
-  - API
-  - Interface
-  - Reference
-  - ShadowRoot
-  - Web Components
-translation_of: Web/API/ShadowRoot
 ---
 
 {{APIRef('Shadow DOM')}}
@@ -73,14 +66,20 @@ Quant à la fonction `updateStyle()`, voyons ici son fonctionnement. On récupè
 function updateStyle(elem) {
   var shadow = elem.shadowRoot;
   var childNodes = shadow.childNodes;
-  for(var i = 0; i < childNodes.length; i++) {
-    if(childNodes[i].nodeName === 'STYLE') {
+  for (var i = 0; i < childNodes.length; i++) {
+    if (childNodes[i].nodeName === "STYLE") {
       childNodes[i].textContent =
-        'div {' +
-          'width: ' + elem.getAttribute('l') + 'px;' +
-          'height: ' + elem.getAttribute('l') + 'px;' +
-          'background-color: ' + elem.getAttribute('c') + ';' +
-        '}';
+        "div {" +
+        "width: " +
+        elem.getAttribute("l") +
+        "px;" +
+        "height: " +
+        elem.getAttribute("l") +
+        "px;" +
+        "background-color: " +
+        elem.getAttribute("c") +
+        ";" +
+        "}";
     }
   }
 }

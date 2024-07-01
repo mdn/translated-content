@@ -1,11 +1,8 @@
 ---
 title: Document.readyState
 slug: Web/API/Document/readyState
-tags:
-  - API
-  - Property
-translation_of: Web/API/Document/readyState
 ---
+
 {{APIRef("DOM")}}
 
 Свойство **`Document.readyState`** описывает состояние загрузки {{domxref("document")}}.
@@ -48,7 +45,9 @@ switch (document.readyState) {
     break;
   case "complete":
     // Страница загружена вместе с дополнительными ресурсами.
-    console.log("The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText);
+    console.log(
+      "The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText,
+    );
     break;
 }
 ```
@@ -61,7 +60,7 @@ document.onreadystatechange = function () {
   if (document.readyState == "interactive") {
     initApplication();
   }
-}
+};
 ```
 
 ### readystatechange как альтернатива событию load
@@ -72,14 +71,14 @@ document.onreadystatechange = function () {
   if (document.readyState == "complete") {
     initApplication();
   }
-}
+};
 ```
 
 ## Спецификации
 
 {{Specifications}}
 
-## Браузерная поддержка
+## Совместимость с браузерами
 
 {{Compat}}
 

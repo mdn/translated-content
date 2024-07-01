@@ -1,14 +1,6 @@
 ---
 title: NodeIterator.whatToShow
 slug: Web/API/NodeIterator/whatToShow
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Itérateur
-  - Noeuds
-  - Propriétés
-translation_of: Web/API/NodeIterator/whatToShow
 ---
 
 {{APIRef("DOM")}}
@@ -140,14 +132,21 @@ Les valeurs pouvant être combinées pour former le masque de bits sont :
 
 ```js
 var nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT + NodeFilter.SHOW_COMMENT + NodeFilter.SHOW_TEXT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT + NodeFilter.SHOW_COMMENT + NodeFilter.SHOW_TEXT,
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
-if( (nodeIterator.whatToShow == NodeFilter.SHOW_ALL) ||
-    (nodeIterator.whatToShow % (NodeFilter.SHOW_COMMENT*2)) >= NodeFilter.SHOW_COMMENT) {
-    // nodeIterator affichera les commentaires
+if (
+  nodeIterator.whatToShow == NodeFilter.SHOW_ALL ||
+  nodeIterator.whatToShow % (NodeFilter.SHOW_COMMENT * 2) >=
+    NodeFilter.SHOW_COMMENT
+) {
+  // nodeIterator affichera les commentaires
 }
 ```
 

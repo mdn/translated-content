@@ -1,16 +1,6 @@
 ---
-title: 'Учебник Express: сайт Local Library'
+title: "Учебник Express: сайт Local Library"
 slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
-tags:
-  - Express
-  - Node
-  - nodejs
-  - Введение
-  - Для начинающих
-  - Серверная часть
-  - Учебник
-translation_of: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
-original_slug: Learn/Server-side/Express_Nodejs/Учебник_сайт_local_library
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}

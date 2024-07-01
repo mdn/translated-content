@@ -25,18 +25,20 @@ constructor = customElements.get(name);
 ## 例
 
 ```js
-customElements.define('my-paragraph',
+customElements.define(
+  "my-paragraph",
   class extends HTMLElement {
     constructor() {
-      let templateContent = document.getElementById('my-paragraph').content;
+      let templateContent = document.getElementById("my-paragraph").content;
       super() // このスコープの要素を返す
-        .attachShadow({mode: 'open'}) // this.shadowRoot を設定して返す
+        .attachShadow({ mode: "open" }) // this.shadowRoot を設定して返す
         .append(templateContent.cloneNode(true));
-  }
-})
+    }
+  },
+);
 
 // my-paragraph のコンストラクターの参照を返す
-let ctor = customElements.get('my-paragraph');
+let ctor = customElements.get("my-paragraph");
 ```
 
 ## 仕様書

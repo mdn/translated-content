@@ -3,7 +3,7 @@ title: runtime.MessageSender
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 メッセージや接続要求の送信元に関する情報を持つオブジェクトです。このオブジェクトは、{{WebExtAPIRef("runtime.onMessage()")}} リスナーに渡されます。
 
@@ -29,7 +29,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.runtime.MessageSender")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

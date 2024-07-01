@@ -1,8 +1,8 @@
 ---
 title: TouchList
 slug: Web/API/TouchList
-translation_of: Web/API/TouchList
 ---
+
 {{ APIRef("Touch Events") }}
 
 Интерфейс **`TouchList`** представляет собой список точек касаний сенсорной поверхности. Например, если пользователь коснулся сенсорной поверхности (такой как экран или трекпад) тремя пальцами, соответствующий объект `TouchList` будет содержать по одному объекту {{domxref("Touch")}} для каждого пальца, всего три объекта.
@@ -14,7 +14,7 @@ translation_of: Web/API/TouchList
 
 ## Методы
 
-- {{domxref("TouchList.identifiedTouch()")}} {{obsolete_inline}}
+- {{domxref("TouchList.identifiedTouch()")}}
   - : Возвращает первый объект {{domxref("Touch")}} из списка, чей идентификатор соответствует заданному значению.
 - {{domxref("TouchList.item()")}}
   - : Возвращает объект {{domxref("Touch")}}, находящийся в списке по указанному индексу
@@ -27,7 +27,7 @@ translation_of: Web/API/TouchList
 
 {{Specifications}}
 
-## Доступность в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

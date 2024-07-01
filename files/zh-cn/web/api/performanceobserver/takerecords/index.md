@@ -24,13 +24,13 @@ var PerformanceEntry[] = performanceObserver.takeRecords();
 ## 例子
 
 ```js
-var observer = new PerformanceObserver(function(list, obj) {
+var observer = new PerformanceObserver(function (list, obj) {
   var entries = list.getEntries();
-  for (var i=0; i < entries.length; i++) {
+  for (var i = 0; i < entries.length; i++) {
     // Process "mark" and "frame" events
   }
 });
-observer.observe({entryTypes: ["mark", "frame"]});
+observer.observe({ entryTypes: ["mark", "frame"] });
 var records = observer.takeRecords();
 console.log(records[0].name);
 console.log(records[0].startTime);

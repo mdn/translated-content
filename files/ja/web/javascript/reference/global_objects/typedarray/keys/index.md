@@ -1,34 +1,42 @@
 ---
 title: TypedArray.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
+l10n:
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-**`keys()`** メソッドは、配列内の各インデックスに対するキーを含む新しい配列イテレーターオブジェクトを返します。
+**`keys()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、配列内の各インデックスに対するキーを含む新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.keys()")}} と同じです。
 
 {{EmbedInteractiveExample("pages/js/typedarray-keys.html")}}
 
 ## 構文
 
+```js-nolint
+keys()
 ```
-arr.keys()
-```
+
+### 引数
+
+なし。
 
 ### 返値
 
-新しい配列イテレーターオブジェクトです。
+新しい[配列イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
+
+## 解説
+
+詳細については、 {{jsxref("Array.prototype.keys()")}} をご覧ください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
 ### for...of を使用した反復処理
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArray = arr.keys();
-// ブラウザーが for..of loop および for ループ内の
-// let-scoped 変数に対応している必要があります
-for (let n of eArray) {
+const arr = new Uint8Array([10, 20, 30, 40, 50]);
+const arrKeys = arr.keys();
+for (const n of arrKeys) {
   console.log(n);
 }
 ```
@@ -36,13 +44,13 @@ for (let n of eArray) {
 ### 他の繰り返し処理
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArr = arr.keys();
-console.log(eArr.next().value); // 0
-console.log(eArr.next().value); // 1
-console.log(eArr.next().value); // 2
-console.log(eArr.next().value); // 3
-console.log(eArr.next().value); // 4
+const arr = new Uint8Array([10, 20, 30, 40, 50]);
+const arrKeys = arr.keys();
+console.log(arrKeys.next().value); // 0
+console.log(arrKeys.next().value); // 1
+console.log(arrKeys.next().value); // 2
+console.log(arrKeys.next().value); // 3
+console.log(arrKeys.next().value); // 4
 ```
 
 ## 仕様書
@@ -51,14 +59,15 @@ console.log(eArr.next().value); // 4
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.TypedArray.keys")}}
+{{Compat}}
 
 ## 関連情報
 
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [`TypedArray.prototype.keys` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.values()")}}
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
-- [for...of](/ja/docs/Web/JavaScript/Reference/Statements/for...of)
+- [`TypedArray.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- {{jsxref("Array.prototype.keys()")}}
 - [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)

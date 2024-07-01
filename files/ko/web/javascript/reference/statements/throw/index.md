@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/throw
 
 {{jsSidebar("Statements")}}
 
-**`throw`**문은 사용자 정의 예외를 발생(throw)할 수 있습니다. 예외가 발생하면 현재 함수의 실행이 중지되고 (`throw` 이후의
+**`throw`** 문은 사용자 정의 예외를 발생(throw)할 수 있습니다. 예외가 발생하면 현재 함수의 실행이 중지되고 (`throw` 이후의
 명령문은 실행되지 않습니다.), 제어 흐름은 콜스택의 첫 번째 [`catch`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch)
 블록으로 전달됩니다. 호출자 함수 사이에 `catch` 블록이 없으면 프로그램이 종료됩니다.
 
@@ -26,9 +26,9 @@ throw expression;
 다음 각각은 예외를 발생시킵니다:
 
 ```js
-throw 'Error2'; // 문자열 값을 가지는 예외가 발생합니다.
-throw 42;       // 42 값을 가진 예외가 발생합니다.
-throw true;     // true 값을 가지는 예외가 발생합니다.
+throw "Error2"; // 문자열 값을 가지는 예외가 발생합니다.
+throw 42; // 42 값을 가진 예외가 발생합니다.
+throw true; // true 값을 가지는 예외가 발생합니다.
 ```
 
 또한 `throw` 문은 [자동 세미콜론 삽입](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) (ASI)에 의해 영향을 받으며 `throw` 키워드와 표현식 사이에 줄 종결자는 허용되지 않으므로 주의해야합니다.
@@ -42,17 +42,29 @@ throw true;     // true 값을 가지는 예외가 발생합니다.
 
 ```js
 function UserException(message) {
-   this.message = message;
-   this.name = 'UserException';
+  this.message = message;
+  this.name = "UserException";
 }
 function getMonthName(mo) {
   mo = mo - 1; // 월 숫자를 배열의 인덱스 값과 맞추기 위해서 입니다.(1 = 1월, 12 = 12월)
-  var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
-    'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
   if (months[mo] !== undefined) {
     return months[mo];
   } else {
-    throw new UserException('InvalidMonthNo');
+    throw new UserException("InvalidMonthNo");
   }
 }
 
@@ -61,7 +73,7 @@ try {
   var myMonth = 15; // 15 는 범위를 벗어났기 때문에 예외를 발생시킵니다
   var monthName = getMonthName(myMonth);
 } catch (e) {
-  monthName = 'unknown';
+  monthName = "unknown";
   console.error(e.message, e.name); // 오류 처리기에 예외 객체를 전달합니다
 }
 ```
@@ -86,28 +98,28 @@ try {
  */
 
 function ZipCode(zip) {
-   zip = new String(zip);
-   pattern = /[0-9]{5}([- ]?[0-9]{4})?/;
-   if (pattern.test(zip)) {
-      // 우편번호 값은 문자열의 첫 번째 매칭일 것입니다.
-      this.value = zip.match(pattern)[0];
-      this.valueOf = function() {
-         return this.value
-      };
-      this.toString = function() {
-         return String(this.value)
-      };
-   } else {
-      throw new ZipCodeFormatException(zip);
-   }
+  zip = new String(zip);
+  pattern = /[0-9]{5}([- ]?[0-9]{4})?/;
+  if (pattern.test(zip)) {
+    // 우편번호 값은 문자열의 첫 번째 매칭일 것입니다.
+    this.value = zip.match(pattern)[0];
+    this.valueOf = function () {
+      return this.value;
+    };
+    this.toString = function () {
+      return String(this.value);
+    };
+  } else {
+    throw new ZipCodeFormatException(zip);
+  }
 }
 
 function ZipCodeFormatException(value) {
-   this.value = value;
-   this.message = 'does not conform to the expected format for a zip code';
-   this.toString = function() {
-      return this.value + this.message;
-   };
+  this.value = value;
+  this.message = "does not conform to the expected format for a zip code";
+  this.toString = function () {
+    return this.value + this.message;
+  };
 }
 
 /*
@@ -119,23 +131,23 @@ const ZIPCODE_INVALID = -1;
 const ZIPCODE_UNKNOWN_ERROR = -2;
 
 function verifyZipCode(z) {
-   try {
-      z = new ZipCode(z);
-   } catch (e) {
-      if (e instanceof ZipCodeFormatException) {
-         return ZIPCODE_INVALID;
-      } else {
-         return ZIPCODE_UNKNOWN_ERROR;
-      }
-   }
-   return z;
+  try {
+    z = new ZipCode(z);
+  } catch (e) {
+    if (e instanceof ZipCodeFormatException) {
+      return ZIPCODE_INVALID;
+    } else {
+      return ZIPCODE_UNKNOWN_ERROR;
+    }
+  }
+  return z;
 }
 
-a = verifyZipCode(95060);         // 95060 반환
-b = verifyZipCode(9560);          // -1 반환
-c = verifyZipCode('a');           // -1 반환
-d = verifyZipCode('95060');       // 95060 반환
-e = verifyZipCode('95060 1234');  // 95060 1234 반환
+a = verifyZipCode(95060); // 95060 반환
+b = verifyZipCode(9560); // -1 반환
+c = verifyZipCode("a"); // -1 반환
+d = verifyZipCode("95060"); // 95060 반환
+e = verifyZipCode("95060 1234"); // 95060 1234 반환
 ```
 
 ### 예외 다시 발생시키기
@@ -146,7 +158,7 @@ e = verifyZipCode('95060 1234');  // 95060 1234 반환
 
 ```js
 try {
-   throw n; // 숫자 값으로 예외를 발생시킵니다.
+  throw n; // 숫자 값으로 예외를 발생시킵니다.
 } catch (e) {
   if (e <= 50) {
     // 1-50 사이의 예외를 처리하는 구문

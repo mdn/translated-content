@@ -49,10 +49,10 @@ mySet.forEach(callback[, thisArg])
 
 ```js
 function logSetElements(value1, value2, set) {
-    console.log('s[' + value1 + '] = ' + value2);
+  console.log("s[" + value1 + "] = " + value2);
 }
 
-new Set(['foo', 'bar', undefined]).forEach(logSetElements);
+new Set(["foo", "bar", undefined]).forEach(logSetElements);
 
 // 콘솔 로그:
 // "s[foo] = foo"

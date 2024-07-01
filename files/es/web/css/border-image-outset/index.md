@@ -2,6 +2,7 @@
 title: border-image-outset
 slug: Web/CSS/border-image-outset
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -59,6 +60,6 @@ border-image-outset: inherit;
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-image-outset")}}
+{{Compat}}

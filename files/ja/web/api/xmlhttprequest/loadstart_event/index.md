@@ -1,11 +1,12 @@
 ---
-title: 'XMLHttpRequest: loadstart イベント'
+title: "XMLHttpRequest: loadstart イベント"
+short-title: loadstart
 slug: Web/API/XMLHttpRequest/loadstart_event
 l10n:
-  sourceCommit: 073f70e052ff92ab715df3c20678c11c9b51747f
+  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
 
-{{APIRef}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`loadstart`** イベントは、リクエストがデータを読み込み始めたときに発行されます。
 
@@ -14,9 +15,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('loadstart', (event) => { })
+addEventListener("loadstart", (event) => {});
 
-onloadstart = (event) => { }
+onloadstart = (event) => {};
 ```
 
 ## イベント型
@@ -44,9 +45,21 @@ _下記のプロパティに加え、親インターフェイスである {{domx
 
 ```html
 <div class="controls">
-    <input class="xhr success" type="button" name="xhr" value="Click to start XHR (success)" />
-    <input class="xhr error" type="button" name="xhr" value="Click to start XHR (error)" />
-    <input class="xhr abort" type="button" name="xhr" value="Click to start XHR (abort)" />
+  <input
+    class="xhr success"
+    type="button"
+    name="xhr"
+    value="Click to start XHR (success)" />
+  <input
+    class="xhr error"
+    type="button"
+    name="xhr"
+    value="Click to start XHR (error)" />
+  <input
+    class="xhr abort"
+    type="button"
+    name="xhr"
+    value="Click to start XHR (abort)" />
 </div>
 
 <textarea readonly class="event-log"></textarea>
@@ -54,60 +67,60 @@ _下記のプロパティに加え、親インターフェイスである {{domx
 
 ```css hidden
 .event-log {
-    width: 25rem;
-    height: 4rem;
-    border: 1px solid black;
-    margin: .5rem;
-    padding: .2rem;
+  width: 25rem;
+  height: 4rem;
+  border: 1px solid black;
+  margin: 0.5rem;
+  padding: 0.2rem;
 }
 
 input {
-    width: 11rem;
-    margin: .5rem;
+  width: 11rem;
+  margin: 0.5rem;
 }
 ```
 
 #### JavaScript
 
 ```js
-const xhrButtonSuccess = document.querySelector('.xhr.success');
-const xhrButtonError = document.querySelector('.xhr.error');
-const xhrButtonAbort = document.querySelector('.xhr.abort');
-const log = document.querySelector('.event-log');
+const xhrButtonSuccess = document.querySelector(".xhr.success");
+const xhrButtonError = document.querySelector(".xhr.error");
+const xhrButtonAbort = document.querySelector(".xhr.abort");
+const log = document.querySelector(".event-log");
 
 function handleEvent(e) {
-    log.textContent = `${log.textContent}${e.type}: ${e.loaded} bytes transferred\n`;
+  log.textContent = `${log.textContent}${e.type}: ${e.loaded} bytes transferred\n`;
 }
 
 function addListeners(xhr) {
-    xhr.addEventListener('loadstart', handleEvent);
-    xhr.addEventListener('load', handleEvent);
-    xhr.addEventListener('loadend', handleEvent);
-    xhr.addEventListener('progress', handleEvent);
-    xhr.addEventListener('error', handleEvent);
-    xhr.addEventListener('abort', handleEvent);
+  xhr.addEventListener("loadstart", handleEvent);
+  xhr.addEventListener("load", handleEvent);
+  xhr.addEventListener("loadend", handleEvent);
+  xhr.addEventListener("progress", handleEvent);
+  xhr.addEventListener("error", handleEvent);
+  xhr.addEventListener("abort", handleEvent);
 }
 
 function runXHR(url) {
-    log.textContent = '';
+  log.textContent = "";
 
-    const xhr = new XMLHttpRequest();
-    addListeners(xhr);
-    xhr.open("GET", url);
-    xhr.send();
-    return xhr;
+  const xhr = new XMLHttpRequest();
+  addListeners(xhr);
+  xhr.open("GET", url);
+  xhr.send();
+  return xhr;
 }
 
-xhrButtonSuccess.addEventListener('click', () => {
-    runXHR('dgszyjnxcaipwzy.jpg');
+xhrButtonSuccess.addEventListener("click", () => {
+  runXHR("example-image.jpg");
 });
 
-xhrButtonError.addEventListener('click', () => {
-    runXHR('https://somewhere.org/i-dont-exist');
+xhrButtonError.addEventListener("click", () => {
+  runXHR("https://example.com/notfound.jpg");
 });
 
-xhrButtonAbort.addEventListener('click', () => {
-    runXHR('dgszyjnxcaipwzy.jpg').abort();
+xhrButtonAbort.addEventListener("click", () => {
+  runXHR("example-image.jpg").abort();
 });
 ```
 
@@ -126,4 +139,4 @@ xhrButtonAbort.addEventListener('click', () => {
 ## 関連情報
 
 - 関連イベント: {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
-- [進捗の監視](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
+- [進捗の監視](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#進捗の監視)

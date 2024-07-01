@@ -1,9 +1,9 @@
 ---
 title: Window
 slug: Web/API/Window
-translation_of: Web/API/Window
 ---
-{{APIRef}}
+
+{{APIRef("DOM")}}
 
 Объект `window` представляет собой окно, содержащее DOM документ; свойство `document` указывает на [DOM document](/ru/docs/DOM/document), загруженный в данном окне. Окно текущего документа может быть получено с помощью свойства {{Domxref("document.defaultView")}}.
 
@@ -13,31 +13,31 @@ translation_of: Web/API/Window
 
 ## Свойства
 
-_Данный интерфейс наследует свойства из интерфейса {{domxref("EventTarget")}} и реализует свойства из {{domxref("WindowOrWorkerGlobalScope")}} и миксин {{domxref("WindowEventHandlers")}}._
+_Данный интерфейс наследует свойства из интерфейса {{domxref("EventTarget")}}._
 
 Отметим, что свойства, являющиеся объектами (например, перезаписанные прототипы встроенных элементов), перечислены в отдельном разделе ниже.
 
-- {{domxref("Window.applicationCache")}} {{readOnlyInline}}
-  - : Объект {{domxref("OfflineResourceList")}}, обеспечивающий для окна доступ к ресурсам вне сети.
+- {{domxref("caches", "Window.caches")}} {{ReadOnlyInline}}
+  - : Возвращает объект {{domxref("CacheStorage")}}, связанный с текущим контекстом. Этот объект добавляет такой функционал как хранение ресурсов для использования вне сети и генерирования встроенных ответов на запросы.
 - {{domxref("Window.closed")}} {{Non-standard_inline}}{{readOnlyInline}}
   - : Свойство, указывающее было ли текущее окно закрыто или нет.
 - {{domxref("Window.Components")}} {{Non-standard_inline}}
   - : Точка доступа к богатой функциональности [XPCOM](/ru/docs/XPCOM). Некоторые свойства, т.к. [classes](/ru/docs/Components.classes), доступны только для достаточно привилегированного кода. **Web-код не должен использовать эти свойства.**
 - {{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}
   - : Возвращает ссылку на объект консоли, обеспечивающего доступ к консоли браузера.
-- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
+- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}}{{ReadOnlyInline}}
   - : Возвращает ссылку на элемент содержимого в текущем окне. Устаревший вариант в нижним подчёркиванием более не доступен для Web-содержимого.
 - {{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}
   - : Возвращает XUL контроллер объектов для текущего окна chrome.
 - {{domxref("Window.crypto")}} {{readOnlyInline}}
   - : Возвращает зашифрованный объект браузера.
-- {{domxref("Window.defaultStatus")}} {{Obsolete_inline("gecko23")}}
+- {{domxref("Window.defaultStatus")}}
   - : Получает/устанавливает текст статус-бара для данного окна.
 - {{domxref("Window.devicePixelRatio")}} {{non-standard_inline}}{{ReadOnlyInline}}
   - : Возвращает соотношение между физическими пикселями и пикселями на дисплее текущего устройства.
 - {{domxref("Window.dialogArguments")}} {{ReadOnlyInline}}
   - : Получает аргументы, переданные в окно (если это диалоговое окно) в момент вызова {{domxref("window.showModalDialog()")}}. Это `nsIArray`.
-- {{domxref("Window.directories")}} {{obsolete_inline}}
+- {{domxref("Window.directories")}}
   - : Синоним {{domxref("window.personalbar")}}
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
   - : Возвращает ссылку на содержащийся в окне документ.
@@ -47,16 +47,18 @@ _Данный интерфейс наследует свойства из инт
   - : Возвращает массив дополнительных фреймов в текущем окне.
 - {{domxref("Window.fullScreen")}}
   - : Это свойство указывает, отображается ли окно в полноэкранном режиме или нет.
-- {{domxref("Window.globalStorage")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}
+- {{domxref("Window.globalStorage")}} {{Non-standard_inline}}
   - : Не поддерживает с Gecko 13 (Firefox 13). Использовать вместо него{{domxref("Window.localStorage")}}. Было: Множественные объекты хранения, которые используются для хранения данных на нескольких страницах.
 - {{domxref("Window.history")}} {{ReadOnlyInline}}
   - : Возвращает ссылку на объект истории.
+- {{domxref("indexedDB", "Window.indexedDB")}} {{ReadOnlyInline}}
+  - : Обеспечивает механизм для приложений для возможности асинхронного доступа индексированных баз данных; возвращает объект {{domxref("IDBFactory")}}.
 - {{domxref("Window.innerHeight")}}
   - : Получает высоту области содержимого окна браузера, включая, если есть, горизонтальный скроллбар.
 - {{domxref("window.innerWidth")}}
   - : Получает ширину области содержимого окна браузера, включая, если есть, вертикальный скроллбар.
-- {{domxref("Window.isSecureContext")}} {{readOnlyInline}}
-  - : Указывает, способен ли контекст использовать функциональность, требующую безопасного контекста.
+- {{domxref("isSecureContext", "Window.isSecureContext")}} {{ReadOnlyInline}}
+  - : Возвращает булевское значение, указывающее является ли текущий контент безопасным (`true`) или нет (`false`).
 - {{domxref("Window.length")}} {{readOnlyInline}}
   - : Возвращает число фреймов в окне. Смотрите также {{domxref("window.frames")}}.
 - {{domxref("Window.location")}} {{ReadOnlyInline}}
@@ -83,6 +85,8 @@ _Данный интерфейс наследует свойства из инт
   - : Возвращает ссылку на объект навигатора.
 - {{domxref("Window.opener")}}
   - : Возвращает ссылку на окно, открывшее текущее окно.
+- {{domxref("origin", "Window.origin")}} {{ReadOnlyInline}}
+  - : Возвращает источник глобального объекта в виде строки.
 - {{domxref("Window.orientation")}}{{non-standard_inline}}{{deprecated_inline}}{{readOnlyInline}}
   - : Возвращает ориентировку в градусах (с увеличением на 90 градусов) окна просмотра относительно настоящей ориентировки устройства.
 - {{domxref("Window.outerHeight")}} {{readOnlyInline}}
@@ -101,7 +105,7 @@ _Данный интерфейс наследует свойства из инт
   - : Обеспечивает главенствующее пространство для атрибутов, [относящихся к производительности](/ru/docs/Navigation_timing).
 - {{domxref("Window.personalbar")}} {{readOnlyInline}}
   - : Возвращает объект personalbar, который может быть добавлен и убран из окна.
-- {{domxref("Window.pkcs11")}} {{obsolete_inline(29)}}
+- {{domxref("Window.pkcs11")}}
   - : Раньше предоставлял доступ к установке и удалению PKCS11 модуля.
 - {{domxref("Window.returnValue")}}
   - : Возвращаемое значение, которое будет передано в функцию, которая вызвала {{domxref("window.showModalDialog()")}} для отображения окна как модального диалога.
@@ -142,29 +146,26 @@ _Данный интерфейс наследует свойства из инт
 - `window[0]`, `window[1]`, etc.
   - : Возвращает ссылку на объект окна во фреймах. Смотри {{domxref("Window.frames")}}.
 
-### Свойства, реализованные из других мест
-
-- {{domxref("WindowOrWorkerGlobalScope.caches")}} {{readOnlyinline}}
-  - : Возвращает объект {{domxref("CacheStorage")}}, связанный с текущим контекстом. Этот объект добавляет такой функционал как хранение ресурсов для использования вне сети и генерирования встроенных ответов на запросы.
-- {{domxref("WindowOrWorkerGlobalScope.indexedDB")}} {{readonlyInline}}
-  - : Обеспечивает механизм для приложений для возможности асинхронного доступа индексированных баз данных; возвращает объект {{domxref("IDBFactory")}}.
-- {{domxref("WindowOrWorkerGlobalScope.isSecureContext")}} {{readOnlyinline}}
-  - : Возвращает булевское значение, указывающее является ли текущий контент безопасным (`true`) или нет (`false`).
-- {{domxref("WindowOrWorkerGlobalScope.origin")}} {{readOnlyinline}}
-  - : Возвращает источник глобального объекта, преобразованного в строку. (Это свойство пока ещё не существует, поэтому не может быть использовано в браузерах.)
-
 ## Методы
 
-_Этот интерфейс наследует методы от интерфейса {{domxref("EventTarget")}} и реализует свойства {{domxref("WindowOrWorkerGlobalScope")}} и {{domxref("EventTarget")}}._
+_Этот интерфейс наследует методы от интерфейса {{domxref("EventTarget")}}._
 
+- {{domxref("atob", "Window.atob()")}}
+  - : Декодирует строку данных, которая была закодирована, используя кодировку base-64.
 - {{domxref("Window.alert()")}}
   - : Отображает предупреждающее диалоговое окно.
-- {{domxref("Window.back()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.back()")}} {{Non-standard_inline}}
   - : Возвращается на один шаг назад в истории окна.
 - {{domxref("Window.blur()")}}
   - : Убирает фокус с окна.
+- {{domxref("btoa", "Window.btoa()")}}
+  - : Создать закодированную base-64 ASCII строку из строки бинарных данных.
 - {{domxref("Window.cancelIdleCallback()")}} {{experimental_inline}}
   - : Позволяет отменить колбэк-функцию прежде чем определить расписание её вызова с {{domxref("Window.requestIdleCallback")}}.
+- {{domxref("clearInterval", "Window.clearInterval()")}}
+  - : Отменяет повторяющееся исполнение, установленного с помощью {{domxref("setInterval()")}}.
+- {{domxref("clearTimeout()", "Window.clearTimeout()")}}
+  - : Отменяет отложенное исполнение, установленного с {{domxref("setTimeout()")}}.
 - {{domxref("Window.captureEvents()")}} {{Deprecated_inline}}
   - : Регистрирует окно, которое будет перехватывать все события определённого типа.
 - {{domxref("Window.clearImmediate()")}}
@@ -177,19 +178,23 @@ _Этот интерфейс наследует методы от интерфе
   - : Закрывает текущее окно.
 - {{domxref("Window.confirm()")}}
   - : Отображает диалог с сообщением, на которое пользователь должен ответить.
-- {{domxref("Window.disableExternalCapture()")}} {{obsolete_inline(24)}}
+- {{domxref("createImageBitmap", "Window.createImageBitmap()")}}
+  - : Принимает множество различных изображений и возвращает {{domxref("Promise")}}, который возвращает {{domxref("ImageBitmap")}}. Опционально ресурс может быть обрезан до прямоугольника, заданного в пикселях _(sx, sy)_ с шириной sw и высотой sh.
+- {{domxref("Window.disableExternalCapture()")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.dispatchEvent()")}}
   - : Используется для вызова события.
 - {{domxref("Window.dump()")}}
   - : Отправляет сообщение в консоль.
-- {{domxref("Window.enableExternalCapture()")}} {{obsolete_inline(24)}}
+- {{domxref("fetch", "Window.fetch()")}}
+  - : Начинает процесс загрузки ресурса из сети.
+- {{domxref("Window.enableExternalCapture()")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.find()")}}
   - : Ищет необходимую строку в окне window.
 - {{domxref("Window.focus()")}}
   - : Устанавливает фокус на текущем окне.
-- {{domxref("Window.forward()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.forward()")}} {{Non-standard_inline}}
   - : Переходит на один документ вперёд в текущей истории окна.
 - {{domxref("Window.getAttention()")}}
   - : Заставляет мигать иконку приложения.
@@ -201,7 +206,7 @@ _Этот интерфейс наследует методы от интерфе
   - : Получает подсчитанные стили по умолчанию для определённого элемента, игнорируя авторские стили.
 - {{domxref("Window.getSelection()")}}
   - : Возвращает выбранный объект, представляющий выбранный элемент(ы).
-- {{domxref("Window.home()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.home()")}} {{Non-standard_inline}}
   - : Возвращает браузер на домашнюю страницу.
 - {{domxref("Window.matchMedia()")}}
   - : Возвращает объект {{domxref("MediaQueryList")}}, представляющий указанную строку медиавыражения.
@@ -237,7 +242,7 @@ _Этот интерфейс наследует методы от интерфе
   - : Динамически меняет размер окна.
 - {{domxref("Window.restore()")}}
   - : {{todo("NeedsContents")}}
-- {{domxref("Window.routeEvent()")}} {{obsolete_inline(24)}}
+- {{domxref("Window.routeEvent()")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.scroll()")}}
   - : Scrolls the window to a particular place in the document.
@@ -249,6 +254,10 @@ _Этот интерфейс наследует методы от интерфе
   - : Прокручивает документ на данное число страниц.
 - {{domxref("Window.scrollTo()")}}
   - : Прокручивает до заданных координат в документе.
+- {{domxref("setInterval", "Window.setInterval()")}}
+  - : Устанавливает расписание для исполнения функции каждый раз через заданное число миллисекунд.
+- {{domxref("setTimeout()", "Window.setTimeout()")}}
+  - : Устанавливает расписание для исполнения функции в назначенное время.
 - {{domxref("Window.setCursor()")}}
   - : Меняет курсор для текущего окна.
 - {{domxref("Window.setImmediate()")}}
@@ -268,38 +277,9 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("Window.updateCommands()")}}
   - : Обновляет состояние команд текущего окна chrome (UI).
 
-### Методы, реализованные из других мест
-
-- {{domxref("EventTarget.addEventListener()")}}
-
-  - : Регистрирует обработчики определённого типа событий в окне.
-
-- {{domxref("WindowOrWorkerGlobalScope.atob()")}}
-  - : Декодирует строку данных, которая была закодирована, используя кодировку base-64.
-- {{domxref("WindowOrWorkerGlobalScope.btoa()")}}
-  - : Создать закодированную base-64 ASCII строку из строки бинарных данных.
-- {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}
-  - : Отменяет повторяющееся исполнение, установленного с помощью {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}.
-- {{domxref("WindowOrWorkerGlobalScope.clearTimeout()")}}
-  - : Отменяет отложенное исполнение, установленного с {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}.
-- {{domxref("WindowOrWorkerGlobalScope.createImageBitmap()")}}
-  - : Принимает множество различных изображений и возвращает {{domxref("Promise")}}, который возвращает {{domxref("ImageBitmap")}}. Опционально ресурс может быть обрезан до прямоугольника, заданного в пикселях _(sx, sy)_ с шириной sw и высотой sh.
-- {{domxref("WindowOrWorkerGlobalScope.fetch()")}}
-  - : Начинает процесс загрузки ресурса из сети.
-- {{domxref("EventTarget.removeEventListener")}}
-  - : Удаляет обработчик события из окна.
-- {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}
-  - : Устанавливает расписание для исполнения функции каждый раз через заданное число миллисекунд.
-- {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}
-  - : Устанавливает расписание для исполнения функции в назначенное время.
-
 ## Обработчики событий
 
-Это методы объекта window, которые могут устанавливаться для перехвата всех событий, которые могут происходить с объектом window.
-
-Интерфейс наследует обработчики событий от _{{domxref("EventTarget")}}_ интерфейса и реализует обработчики событий _{{domxref("WindowEventHandlers")}}._
-
-> **Примечание:** **Замета:** Начиная с {{Gecko("9.0")}}, вы можете использовать синтаксис `if ("onabort" in window),` чтобы определить существует ли обработчик данного события. Интерфейсы обработчиков событий были обновлены таким образом, чтобы соответствовать web IDL интерфейсам. Смотри [обработчики событий DOM](/ru/docs/DOM/DOM_event_handlers) для деталей.
+Подписываться на события можно с помощью [`addEventListener()`](/ru/docs/Web/API/EventTarget/addEventListener) или присваивая обработчик события свойству `oneventname`. В дополнение к событиям, перечисленным ниже, события могут всплывать из {{domxref("Document")}} глобального объекта.
 
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : Обработчик события для отмены событий в окне.

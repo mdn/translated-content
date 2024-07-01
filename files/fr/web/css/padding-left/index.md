@@ -1,16 +1,11 @@
 ---
 title: padding-left
 slug: Web/CSS/padding-left
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/padding-left
 ---
 
 {{CSSRef}}
 
-La propriété **`padding-left`** d'un élément correspond à l'espace nécessaire à la gauche d'un élément. La [zone de remplissage](/fr/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte) correspond à l'espace entre le contenu et la bordure. `padding-left` ne peut pas recevoir de valeurs négatives.
+La propriété **`padding-left`** d'un élément correspond à l'espace nécessaire à la gauche d'un élément. La [zone de remplissage](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) correspond à l'espace entre le contenu et la bordure. `padding-left` ne peut pas recevoir de valeurs négatives.
 
 {{EmbedInteractiveExample("pages/css/padding-left.html")}}
 
@@ -56,10 +51,8 @@ padding-left: unset;
 
 ```html
 <p class="padd">
-  Elle n’avait pas bu la moitié de la bouteille,
-  que sa tête touchait au plafond et qu’elle fut
-  forcée de se baisser pour ne pas se casser le
-  cou.
+  Elle n’avait pas bu la moitié de la bouteille, que sa tête touchait au plafond
+  et qu’elle fut forcée de se baisser pour ne pas se casser le cou.
 </p>
 ```
 

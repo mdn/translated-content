@@ -2,12 +2,12 @@
 title: BackgroundFetchManager.get()
 slug: Web/API/BackgroundFetchManager/get
 l10n:
-  sourceCommit: 02e1bfcad5fd0de845fb033d331c3c027afa2d6e
+  sourceCommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
 ---
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-{{domxref("BackgroundFetchManager")}} インターフェイスの **`get()`** メソッドは、引数に与えられた `id` に紐づく {{domxref("BackgroundFetchRegistration")}} で解決される {{jsxref("Promise")}} を返します。 `id` が見つからない場合は {{jsxref("undefined")}} を返します。
+**`get()`** は {{domxref("BackgroundFetchManager")}} インターフェイスのメソッドで、引数に与えられた `id` に紐づく {{domxref("BackgroundFetchRegistration")}} で解決される {{jsxref("Promise")}} を返します。 `id` が見つからない場合は {{jsxref("undefined")}} を返します。
 
 ## 構文
 

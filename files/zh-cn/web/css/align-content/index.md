@@ -3,9 +3,9 @@ title: align-content
 slug: Web/CSS/align-content
 ---
 
-{{CSSRef("CSS Flexible Boxes")}}
+{{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 的 **`align-content`** 属性设置了浏览器如何沿着[弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)的纵轴和[网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)的主轴在内容项之间和周围分配空间。
+[CSS](/zh-CN/docs/Web/CSS) 的 **`align-content`** 属性设置了浏览器如何沿着[弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)的纵轴和[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)的主轴在内容项之间和周围分配空间。
 
 {{EmbedInteractiveExample("pages/css/align-content.html")}}
 
@@ -16,11 +16,11 @@ slug: Web/CSS/align-content
 ```css
 /* 基本位置对齐 */
 /*align-content 不采用左右值 */
-align-content: center;     /* 将项目放置在中点 */
-align-content: start;      /* 最先放置项目 */
-align-content: end;        /* 最后放置项目 */
+align-content: center; /* 将项目放置在中点 */
+align-content: start; /* 最先放置项目 */
+align-content: end; /* 最后放置项目 */
 align-content: flex-start; /* 从起始点开始放置 flex 元素 */
-align-content: flex-end;   /* 从终止点开始放置 flex 元素 */
+align-content: flex-end; /* 从终止点开始放置 flex 元素 */
 
 /* 默认对齐 */
 align-content: normal;
@@ -34,11 +34,11 @@ align-content: last baseline;
 align-content: space-between; /* 均匀分布项目
                                  第一项与起始点齐平，
                                  最后一项与终止点齐平 */
-align-content: space-around;  /* 均匀分布项目
+align-content: space-around; /* 均匀分布项目
                                  项目在两端有一半大小的空间*/
-align-content: space-evenly;  /* 均匀分布项目
+align-content: space-evenly; /* 均匀分布项目
                                  项目周围有相等的空间 */
-align-content: stretch;       /* 均匀分布项目
+align-content: stretch; /* 均匀分布项目
                                  拉伸‘自动’ - 大小的项目以充满容器 */
 
 /* 溢出对齐 */
@@ -47,7 +47,7 @@ align-content: unsafe center;
 
 /* 全局属性 */
 align-content: inherit; /* 继承 */
-align-content: initial;  /* 初始值 */
+align-content: initial; /* 初始值 */
 align-content: unset; /* 未设置 */
 ```
 
@@ -96,7 +96,7 @@ align-content: unset; /* 未设置 */
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-content: center; /* Can be changed in the live sample */
   background-color: #8c8c8c;
@@ -215,15 +215,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.alignContent = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```
@@ -242,7 +242,7 @@ display.addEventListener('change', function (evt) {
 
 ## 参见
 
-- 弹性盒子布局的基本概念：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- 对齐弹性容器中的弹性项目：_[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- 网格布局中的盒模型对齐：_[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)
+- 弹性盒子布局的基本概念：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- 对齐弹性容器中的弹性项目：_[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- 网格布局中的盒模型对齐：_[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment)

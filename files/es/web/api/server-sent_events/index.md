@@ -1,34 +1,54 @@
 ---
-title: Server-sent events
+title: Eventos enviados por el servidor
 slug: Web/API/Server-sent_events
-original_slug: Server-sent_events
+l10n:
+  sourceCommit: c2274293475b0a5b4febf85a49c1f91bf43ebac7
 ---
 
-Traditionally, a web page has to send a request to the server to receive new data; that is, the page requests data from the server. With server-sent events, it's possible for a server to send new data to a web page at any time, by pushing messages to the web page. These incoming messages can be treated as _[Events](/es/docs/DOM/event) + data_ inside the web page.
+{{DefaultAPISidebar("Server Sent Events")}}
 
-## Documentation
+Tradicionalmente, una página web tiene que enviar una solicitud al servidor para recibir nuevos datos; es decir, la página solicita datos del servidor. Con los eventos enviados por el servidor, es posible que un servidor envíe nuevos datos a una página web en cualquier momento, enviando mensajes a la página web. Estos mensajes entrantes pueden ser tratados como _[Eventos](/es/docs/Web/API/Event) + datos_ dentro de la página web.
 
-- [Using server-sent events](/es/docs/Server-sent_events/Using_server-sent_events)
-  - : A tutorial guide to writing both server and client side part of a server-sent events app.
-- [EventSource reference](/es/docs/Server-sent_events/EventSource)
-  - : A reference to the client-side EventSource API.
+{{AvailableInWorkers}}
 
-## Tools
+> **Nota:** Firefox actualmente no admite el uso de eventos enviados por el servidor en _service workers_ (sí los admite en trabajadores dedicados y compartidos). Ver [error 1681218, en Firefox](https://bugzil.la/1681218).
 
-- Remy Sharp’s [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
-- Yaffle’s [EventSource polyfill](https://github.com/Yaffle/EventSource)
-- Rick Waldron’s [jquery plugin](https://github.com/rwldrn/jquery.eventsource)
+## Conceptos y uso
 
-## Related Topics
+Para saber cómo usar los eventos enviados por el servidor, consulta nuestro artículo [Usar eventos enviados por el servidor](/es/docs/Web/API/Server-sent_events/Using_server-sent_events).
 
-- [AJAX](/es/docs/AJAX), [JavaScript](/es/docs/JavaScript), [WebSockets](/es/docs/WebSockets)
+## Interfaces
 
-## See also
+- {{domxref("EventSource")}}
+  - : Define todas las características que manejan conección a un servidor, recibir eventos/datos, errores, cerrar una conexión, etc.
 
-- A [Twitter like application](http://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) powered by server-sent events and [its code on Github](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline).
-- [HTML5 and Server-sent events](http://dsheiko.com/weblog/html5-and-server-sent-events)
-- [Server-sent events using Asp.Net](http://rajudasa.blogspot.in/2012/05/html5-server-sent-events-using-aspnet.html)
+## Ejemplos
 
-## Specification
+- [Demostración simple de SSE usando PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events)
 
-- [Server-sent events](http://dev.w3.org/html5/eventsource/)
+## Especificaciones
+
+{{Specifications}}
+
+## Véase también
+
+### Herramientas
+
+- [Mercure: un protocolo de comunicación en tiempo real (publicación-suscripción) construido sobre SSE](https://mercure.rocks)
+- [Polyfill de EventSource para Node.js](https://github.com/EventSource/eventsource)
+- [Polyfill de EventSource](https://github.com/remy/polyfills/blob/master/EventSource.js) de Remy Sharp
+- [Polyfill de EventSource](https://github.com/Yaffle/EventSource) de Yaffle
+- Rick Waldron's [jquery plugin](https://github.com/rwaldron/jquery.eventsource)
+- El [complemento de jquery](https://github.com/rwaldron/jquery.eventsource) de Rick Waldron
+- intercooler.js [soporte SSE declarativo](https://intercoolerjs.org/docs.html#sse)
+
+### Temas relacionados
+
+- [AJAX](/es/docs/Web/Guide/AJAX)
+- [JavaScript](/es/docs/Web/JavaScript)
+- [WebSockets](/es/docs/Web/API/WebSockets_API)
+
+### Otros recursos
+
+- Una [aplicación similar a Twitter](https://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) impulsada por eventos enviados por el servidor y [su código en GitHub](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline).
+- [HTML5 y eventos enviados por el servidor](https://dsheiko.com/weblog/html5-and-server-sent-events/)

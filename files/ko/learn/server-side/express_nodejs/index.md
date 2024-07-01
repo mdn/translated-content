@@ -2,6 +2,7 @@
 title: Express 웹 프레임워크 (Node.js/JavaScript의 활용)
 slug: Learn/Server-side/Express_Nodejs
 ---
+
 {{LearnSidebar}}
 
 Express는 JavaScript로 작성되고 Node.js 런타임 환경에서 구동되는 인기 있는 웹 프레임워크입니다. 이 장에서는 Express 프레임워크의 몇 가지 장점과 개발환경 설치 방법, 웹 개발과 배포작업의 방법을 다룹니다.
@@ -10,7 +11,7 @@ Express는 JavaScript로 작성되고 Node.js 런타임 환경에서 구동되�
 
 이 장의 내용은 Server-side 웹 프로그래밍과 웹 프레임워크에 대한 이해가 필요합니다. 잘 모르겠다면 [Server-side website programming first steps](/ko/docs/Learn/Server-side/First_steps) 을 먼저 확인해보세요. 일반적인 프로그래밍 컨셉과 [JavaScript](/ko/docs/Web/JavaScript) 의 지식이 요구되지만, 핵심까지 세세하게 알 필요는 없습니다.
 
-> **참고:** 여기서는 클라이언트 측에서의 자바스크립에 관한 많은 유용한 자료들을 이용할 수 있다. [JavaScript](/ko/docs/Web/JavaScript), [JavaScript Guide](/ko/docs/Web/JavaScript/Guide), [JavaScript Basics](/ko/docs/Learn/Getting_started_with_the_web/JavaScript_basics), [JavaScript](/ko/docs/Learn/JavaScript) (한 번 배워보자). 자바스크립트의 핵심과 컨셉은 Node.js를 이용한 서버측 개발과 같으므로, 여기의 자료들을 이용하는 게 좋을 것이다. Node.js 는HTTP서버를 구축하고 파일 시스템에 접근하는 등의 브라우저가 필요없는 환경에서에서 유용한 기능을 제공하는 [additional APIs](https://nodejs.org/dist/latest-v6.x/docs/api/documentation.htm)를 제공하지만, 브라우저나 DOM에서 작동되는 자바스크립트 API는 지원하지 않는다.
+> **참고:** 여기서는 클라이언트 측에서의 자바스크립에 관한 많은 유용한 자료들을 이용할 수 있다. [JavaScript](/ko/docs/Web/JavaScript), [JavaScript Guide](/ko/docs/Web/JavaScript/Guide), [JavaScript Basics](/ko/docs/Learn/Getting_started_with_the_web/JavaScript_basics), [JavaScript](/ko/docs/Learn/JavaScript) (한 번 배워보자). JavaScript의 핵심과 컨셉은 Node.js를 이용한 서버측 개발과 같으므로, 여기의 자료들을 이용하는 게 좋을 것이다. Node.js 는HTTP서버를 구축하고 파일 시스템에 접근하는 등의 브라우저가 필요없는 환경에서에서 유용한 기능을 제공하는 [additional APIs](https://nodejs.org/dist/latest-v6.x/docs/api/documentation.htm)를 제공하지만, 브라우저나 DOM에서 작동되는 JavaScript API는 지원하지 않는다.
 >
 > 다음 목차에서는 Node.js와 Express 그리고 인터넷과 책에서의 방대한 좋은 자료들에 있는 정보들을 알려준다. 이들은 [How do I get started with Node.js](http://stackoverflow.com/a/5511507/894359) (StackOverflow) 나 [What are the best resources for learning Node.js?](https://www.quora.com/What-are-the-best-resources-for-learning-Node-js?) (Quora)에 참고해보자
 

@@ -1,10 +1,6 @@
 ---
 title: Форматирование текста
 slug: Web/JavaScript/Guide/Text_formatting
-tags:
-  - JavaScript
-  - Руководство
-translation_of: Web/JavaScript/Guide/Text_formatting
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
@@ -19,17 +15,16 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 
 Вы можете создавать простые строки, используя либо одинарные, либо двойные кавычки:
 
-```js
-'foo'
-"bar"
+```js-nolint
+'foo';
+"bar";
 ```
 
 Начиная со стандарта ES6 (ES-2015) для простых и сложных строк можно использовать обратные косые кавычки, а также, вставлять значения:
 
 ```js
 const name = "Alex";
-const str =
-  `Привет, ${name},
+const str = `Привет, ${name},
    как дела?`;
 
 console.log(str);
@@ -46,7 +41,7 @@ console.log(str);
 Число после \x трактуется как [шестнадцатеричное.](https://en.wikipedia.org/wiki/Hexadecimal)
 
 ```js
-'\xA9' // "©"
+"\xA9"; // "©"
 ```
 
 #### Unicode экранированные последовательности
@@ -54,7 +49,7 @@ console.log(str);
 Экранированные последовательности Unicode требуют по меньшей мере 4 символа после `\u`.
 
 ```js
-'\u00A9' // "©"
+"\u00A9"; // "©"
 ```
 
 #### Экранирование элементов кода Unicode
@@ -64,10 +59,10 @@ console.log(str);
 Смотрите также {{jsxref("String.fromCodePoint()")}} или {{jsxref("String.prototype.codePointAt()")}}.
 
 ```js
-'\u{2F804}'
+"\u{2F804}";
 
 // То же самое с простым Unicode
-'\uD87E\uDC04'
+"\uD87E\uDC04";
 ```
 
 ### Объекты String
@@ -96,7 +91,7 @@ eval(s2); // Вернёт строку "2 + 2"
 ```js
 var mystring = "Hello, World!";
 var x = mystring.length;
-mystring[0] = 'L'; // Ничего не произойдёт, т.к. строки неизменяемые
+mystring[0] = "L"; // Ничего не произойдёт, т.к. строки неизменяемые
 mystring[0]; // Вернёт: "H"
 ```
 
@@ -104,21 +99,21 @@ mystring[0]; // Вернёт: "H"
 
 В таблице ниже представлены методы String объекта.
 
-| Метод                                                                                                                                                                            | Описание                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Метод                                                                                                                                 | Описание                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{jsxref("String.charAt", "charAt")}}, {{jsxref("String.charCodeAt", "charCodeAt")}}, {{jsxref("String.codePointAt", "codePointAt")}} | Возвращает символ или символьный код в указанной позиции в строке.                                                                                |
-| {{jsxref("String.indexOf", "indexOf")}}, {{jsxref("String.lastIndexOf", "lastIndexOf")}}                                                           | Возвращает первую (indexOf) или последнюю (lastIndexOf) позицию указанной подстроки в строке. Если данная подстрока не найдена, то возвращает -1. |
-| {{jsxref("String.startsWith", "startsWith")}}, {{jsxref("String.endsWith", "endsWith")}}, {{jsxref("String.includes", "includes")}} | Проверяет, начинается/кончается/содержит ли строка указанную подстроку.                                                                           |
-| {{jsxref("String.concat", "concat")}}                                                                                                                                 | Объединяет две строки и возвращает результат в качестве новой строки.                                                                             |
-| {{jsxref("String.fromCharCode", "fromCharCode")}}, {{jsxref("String.fromCodePoint", "fromCodePoint")}}                                           | Создаёт строку из указанной последовательности Unicode значений. Это метод класса String, а не отдельного экземпляра этого класса.                |
-| {{jsxref("String.split", "split")}}                                                                                                                                 | Разбивает строку на подстроки, результат возвращает в виде массива строк.                                                                         |
-| {{jsxref("String.slice", "slice")}}                                                                                                                                 | Извлекает часть строки и возвращает её в качестве новой строки.                                                                                   |
-| {{jsxref("String.substring", "substring")}}, {{jsxref("String.substr", "substr")}}                                                                       | Возвращает указанную часть строки по начальному и конечному индексам, либо по начальному индексу и длине.                                         |
-| {{jsxref("String.match", "match")}}, {{jsxref("String.replace", "replace")}}, {{jsxref("String.search", "search")}}                         | Работа с регулярными выражениями.                                                                                                                 |
-| {{jsxref("String.toLowerCase", "toLowerCase")}}, {{jsxref("String.toUpperCase", "toUpperCase")}}                                               | Возвращает строку полностью в нижнем (toLowerCase) или верхнем (toUpperCase) регистре.                                                            |
-| {{jsxref("String.normalize", "normalize")}}                                                                                                                         | Возвращает нормализованную Unicode форму строки - значения объекта String, на котором вызывается.                                                 |
-| {{jsxref("String.repeat", "repeat")}}                                                                                                                                 | Возвращает строку, которая представляет собой повторение исходной строки указанное количество раз.                                                |
-| {{jsxref("String.trim", "trim")}}                                                                                                                                     | Убирает пробелы в начале и в конце строки, результат возвращается в качестве новой строки.                                                        |
+| {{jsxref("String.indexOf", "indexOf")}}, {{jsxref("String.lastIndexOf", "lastIndexOf")}}                                              | Возвращает первую (indexOf) или последнюю (lastIndexOf) позицию указанной подстроки в строке. Если данная подстрока не найдена, то возвращает -1. |
+| {{jsxref("String.startsWith", "startsWith")}}, {{jsxref("String.endsWith", "endsWith")}}, {{jsxref("String.includes", "includes")}}   | Проверяет, начинается/кончается/содержит ли строка указанную подстроку.                                                                           |
+| {{jsxref("String.concat", "concat")}}                                                                                                 | Объединяет две строки и возвращает результат в качестве новой строки.                                                                             |
+| {{jsxref("String.fromCharCode", "fromCharCode")}}, {{jsxref("String.fromCodePoint", "fromCodePoint")}}                                | Создаёт строку из указанной последовательности Unicode значений. Это метод класса String, а не отдельного экземпляра этого класса.                |
+| {{jsxref("String.split", "split")}}                                                                                                   | Разбивает строку на подстроки, результат возвращает в виде массива строк.                                                                         |
+| {{jsxref("String.slice", "slice")}}                                                                                                   | Извлекает часть строки и возвращает её в качестве новой строки.                                                                                   |
+| {{jsxref("String.substring", "substring")}}, {{jsxref("String.substr", "substr")}}                                                    | Возвращает указанную часть строки по начальному и конечному индексам, либо по начальному индексу и длине.                                         |
+| {{jsxref("String.match", "match")}}, {{jsxref("String.replace", "replace")}}, {{jsxref("String.search", "search")}}                   | Работа с регулярными выражениями.                                                                                                                 |
+| {{jsxref("String.toLowerCase", "toLowerCase")}}, {{jsxref("String.toUpperCase", "toUpperCase")}}                                      | Возвращает строку полностью в нижнем (toLowerCase) или верхнем (toUpperCase) регистре.                                                            |
+| {{jsxref("String.normalize", "normalize")}}                                                                                           | Возвращает нормализованную Unicode форму строки - значения объекта String, на котором вызывается.                                                 |
+| {{jsxref("String.repeat", "repeat")}}                                                                                                 | Возвращает строку, которая представляет собой повторение исходной строки указанное количество раз.                                                |
+| {{jsxref("String.trim", "trim")}}                                                                                                     | Убирает пробелы в начале и в конце строки, результат возвращается в качестве новой строки.                                                        |
 
 ### Многострочные шаблонные строки
 
@@ -131,8 +126,10 @@ mystring[0]; // Вернёт: "H"
 Каждая новая горизонтальная линия символов, вставленная в исходный код, является частью шаблонной строки. Используя обычные строки, вам бы потребовалось использовать следующий синтаксис для многострочной записи:
 
 ```js
-console.log("string text line 1\n\
-string text line 2");
+console.log(
+  "string text line 1\n\
+string text line 2",
+);
 // "string text line 1
 // string text line 2"
 ```
@@ -184,8 +181,14 @@ var msPerDay = 24 * 60 * 60 * 1000;
 // July 17, 2014 00:00:00 UTC.
 var july172014 = new Date(msPerDay * (44 * 365 + 11 + 197));
 
-var options = { year: "2-digit", month: "2-digit", day: "2-digit",
-                hour: "2-digit", minute: "2-digit", timeZoneName: "short" };
+var options = {
+  year: "2-digit",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+  timeZoneName: "short",
+};
 var americanDateTime = new Intl.DateTimeFormat("en-US", options).format;
 
 console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
@@ -196,14 +199,18 @@ console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 Объект {{jsxref("NumberFormat")}} полезен при форматировании чисел, например, валют.
 
 ```js
-var gasPrice = new Intl.NumberFormat("en-US",
-                        { style: "currency", currency: "USD",
-                          minimumFractionDigits: 3 });
+var gasPrice = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 3,
+});
 
 console.log(gasPrice.format(5.259)); // $5.259
 
-var hanDecimalRMBInChina = new Intl.NumberFormat("zh-CN-u-nu-hanidec",
-                        { style: "currency", currency: "CNY" });
+var hanDecimalRMBInChina = new Intl.NumberFormat("zh-CN-u-nu-hanidec", {
+  style: "currency",
+  currency: "CNY",
+});
 
 console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
 ```

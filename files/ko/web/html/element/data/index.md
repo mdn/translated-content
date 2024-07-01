@@ -59,7 +59,7 @@ slug: Web/HTML/Element/data
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다
 
-- {{htmlattrdef("value")}}
+- `value`
   - : 기계가 읽을 수 있는 형태의 콘텐츠 해석본.
 
 ## 예제
@@ -69,9 +69,9 @@ slug: Web/HTML/Element/data
 ```html
 <p>새로운 상품들</p>
 <ul>
- <li><data value="398">미니 케찹</data></li>
- <li><data value="399">점보 케찹</data></li>
- <li><data value="400">메가 점보 케찹</data></li>
+  <li><data value="398">미니 케찹</data></li>
+  <li><data value="399">점보 케찹</data></li>
+  <li><data value="400">메가 점보 케찹</data></li>
 </ul>
 ```
 
@@ -81,7 +81,7 @@ slug: Web/HTML/Element/data
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.data")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -10,7 +10,7 @@ slug: Web/API/ShadowRoot/styleSheets
 ## 構文
 
 ```js
-shadowRoot.styleSheets
+shadowRoot.styleSheets;
 ```
 
 ### 値
@@ -20,7 +20,7 @@ shadowRoot.styleSheets
 ## 例
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 let styleSheets = shadow.styleSheets;
 ```

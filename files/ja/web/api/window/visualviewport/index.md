@@ -23,4 +23,4 @@ var visualViewport = Window.visualViewport
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.visualViewport")}}
+{{Compat}}

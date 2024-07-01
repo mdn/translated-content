@@ -1,13 +1,6 @@
 ---
 title: Основы этикета для проектов с открытым исходным кодом
 slug: MDN/Community/Open_source_etiquette
-tags:
-  - Best practices
-  - Сообщество
-  - Open source
-  - MDN
-  - Новичок
-original_slug: MDN/Contribute/Open_source_etiquette
 ---
 
 {{MDNSidebar}}

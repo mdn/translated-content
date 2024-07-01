@@ -3,6 +3,8 @@ title: Constructor (コンストラクター)
 slug: Glossary/Constructor
 ---
 
+{{GlossarySidebar}}
+
 **コンストラクター**は、インスタンス化された特定のクラス{{glossary("object","オブジェクト")}}に属しています。コンストラクターは、そのオブジェクトを初期化し、オブジェクトの非公開の情報にアクセスできるようにします。コンストラクターの概念は、ほとんどの{{glossary("OOP","オブジェクト指向プログラミング")}}言語にあります。本質的に、{{glossary("JavaScript")}} のコンストラクターは{{glossary("class","クラス")}}のインスタンスで宣言します。
 
 ## 構文
@@ -21,8 +23,7 @@ function Overloaded(arg1, arg2, ...,argN){
 JavaScript でクラスのコンストラクターを呼び出すには、`new` 演算子を使用して新しい{{glossary("object reference","オブジェクトへの参照")}}を{{glossary("variable","変数")}}に割り当てます。
 
 ```js
-function Default() {
-}
+function Default() {}
 
 // Default オブジェクトの新しい参照が、ローカル変数の
 // defaultReference に割り当てられます

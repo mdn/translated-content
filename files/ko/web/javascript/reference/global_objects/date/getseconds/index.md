@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 ## 구문
 
 ```js
-    dateObj.getSeconds()
+dateObj.getSeconds();
 ```
 
 ### 반환 값
@@ -26,7 +26,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 다음 예제는 {{jsxref("Date")}} 객체 `Xmas95`의 값을 사용해 변수 `seconds`에 30을 할당합니다.
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
+var Xmas95 = new Date("December 25, 1995 23:15:30");
 var seconds = Xmas95.getSeconds();
 
 console.log(seconds); // 30

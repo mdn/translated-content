@@ -1,9 +1,6 @@
 ---
 title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView
-browser-compat: javascript.builtins.DataView
 ---
 
 {{JSRef}}
@@ -17,7 +14,7 @@ La vue **`DataView`** fournit une interface de bas niveau pour lire et écrire d
 Les formats numériques sur plusieurs octets sont représentés différemment en mémoire selon l'architecture de la machine (voir [la page du glossaire sur le boutisme](/fr/docs/Glossary/Endianness) pour plus d'explications). Les accesseurs `DataView` permettent de contrôler explicitement la façon dont se fait l'accès aux données, quel que soit le boutisme de l'ordinateur.
 
 ```js
-var littleEndian = (function() {
+var littleEndian = (function () {
   var buffer = new ArrayBuffer(2);
   new DataView(buffer).setInt16(0, 256, true /* littleEndian */);
   // Int16Array utilise le boutisme de la plateforme
@@ -37,9 +34,14 @@ function getUint64(dataview, byteOffset, littleEndian) {
   const droite = dataview.getUint32(byteOffset + 4, littleEndian);
 
   // on combine les deux valeurs 32 bits
-  const combinaison = littleEndian ? gauche + 2**32*droite : 2**32*gauche + droite;
-  if(!Number.isSafeInteger(combinaison)){
-    console.warn(combinaison, " dépasse MAX_SAFE_INTEGER : perte de précision !");
+  const combinaison = littleEndian
+    ? gauche + 2 ** 32 * droite
+    : 2 ** 32 * gauche + droite;
+  if (!Number.isSafeInteger(combinaison)) {
+    console.warn(
+      combinaison,
+      " dépasse MAX_SAFE_INTEGER : perte de précision !",
+    );
   }
   return combinaison;
 }
@@ -48,14 +50,22 @@ function getUint64(dataview, byteOffset, littleEndian) {
 On peut également créer un objet [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) si on veut avoir accès à 64 bits. Sur le plan des performances, les grands entiers ([`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) ont une taille variable, aussi leur manipulation sera nécessairement plus lente que celle des nombres stockés sur 32 bits. Ceci étant écrit, les valeurs natives [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) seront plus performantes que les implémentations tierces (bibliothèques, etc.).
 
 ```js
-const BigInt = window.BigInt, bigThirtyTwo = BigInt(32), bigZero = BigInt(0);
+const BigInt = window.BigInt,
+  bigThirtyTwo = BigInt(32),
+  bigZero = BigInt(0);
 function getUint64BigInt(dataview, byteOffset, littleEndian) {
   // on décompose la valeur 64 sur bits en deux nombres 32 bits (4 octets)
-  const gauche = BigInt(dataview.getUint32(byteOffset|0, !!littleEndian)>>>0);
-  const droite = BigInt(dataview.getUint32((byteOffset|0) + 4|0, !!littleEndian)>>>0);
+  const gauche = BigInt(
+    dataview.getUint32(byteOffset | 0, !!littleEndian) >>> 0,
+  );
+  const droite = BigInt(
+    dataview.getUint32(((byteOffset | 0) + 4) | 0, !!littleEndian) >>> 0,
+  );
 
   // on recombine les deux valeurs sur 32 bits et on la renvoie
-  return littleEndian ? (droite<<bigThirtyTwo)|gauche : (gauche<<bigThirtyTwo)|droite;
+  return littleEndian
+    ? (droite << bigThirtyTwo) | gauche
+    : (gauche << bigThirtyTwo) | droite;
 }
 ```
 

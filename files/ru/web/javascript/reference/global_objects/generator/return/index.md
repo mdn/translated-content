@@ -1,7 +1,6 @@
 ---
 title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/return
 ---
 
 {{JSRef}}
@@ -38,9 +37,9 @@ function* gen() {
 
 var g = gen();
 
-g.next();        // { value: 1, done: false }
-g.return('foo'); // { value: "foo", done: true }
-g.next();        // { value: undefined, done: true }
+g.next(); // { value: 1, done: false }
+g.return("foo"); // { value: "foo", done: true }
+g.next(); // { value: undefined, done: true }
 ```
 
 Если `return(value)` вызывает генератор, который находится в уже "завершённом" состоянии, генератор останется в "завершённом" состоянии. Если аргумент не был передан, свойство `value` вернёт тот же объект, что и `.next()`. Если аргумент был передан, он будет установлен как значение свойства `value` возвращаемого объекта.

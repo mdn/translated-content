@@ -40,7 +40,7 @@ slug: Web/API/Cache
 
 ## 示例
 
-此代码段来自 [service worker selective caching sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js). (请参阅 [selective caching live](https://googlechrome.github.io/samples/service-worker/selective-caching/)) 。该代码使用{{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}} 打开任何具有以`font/开始的`Content-Type 头的{{domxref("Cache")}}对象。
+此代码段来自 [service worker 选择性缓存示例](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js)。（请参阅[选择性缓存在线示例](https://googlechrome.github.io/samples/service-worker/selective-caching/)）该代码使用 {{domxref("CacheStorage.open()")}} 打开任何具有以 `font/` 开始的 `Content-Type` 标头的 `Cache` 对象。
 
 代码然后使用{{domxref("Cache.match", "Cache.match(request, options)")}}查看缓存中是否已经有一个匹配的 font，如果是，则返回它。如果没有匹配的字体，代码将通过网络获取字体，并使用 {{domxref("Cache.put","Cache.put(request, response)")}}来缓存获取的资源。
 
@@ -55,51 +55,52 @@ var CACHE_VERSION = 1;
 
 // 简写标识符映射到特定版本的缓存。
 var CURRENT_CACHES = {
-  font: 'font-cache-v' + CACHE_VERSION
+  font: "font-cache-v" + CACHE_VERSION,
 };
 
-self.addEventListener('activate', function(event) {
-  var expectedCacheNames = Object.keys(CURRENT_CACHES).map(function(key) {
+self.addEventListener("activate", function (event) {
+  var expectedCacheNames = Object.keys(CURRENT_CACHES).map(function (key) {
     return CURRENT_CACHES[key];
   });
 
   // 在 promise 成功完成之前，活跃的 worker 不会被视作已激活。
   event.waitUntil(
-    caches.keys().then(function(cacheNames) {
+    caches.keys().then(function (cacheNames) {
       return Promise.all(
-        cacheNames.map(function(cacheName) {
+        cacheNames.map(function (cacheName) {
           if (expectedCacheNames.indexOf(cacheName) == -1) {
-            console.log('Deleting out of date cache:', cacheName);
+            console.log("Deleting out of date cache:", cacheName);
 
             return caches.delete(cacheName);
           }
-        })
+        }),
       );
-    })
+    }),
   );
 });
 
-self.addEventListener('fetch', function(event) {
-  console.log('Handling fetch event for', event.request.url);
+self.addEventListener("fetch", function (event) {
+  console.log("Handling fetch event for", event.request.url);
 
   event.respondWith(
-
     // 打开以'font'开头的 Cache 对象。
-    caches.open(CURRENT_CACHES['font']).then(function(cache) {
-      return cache.match(event.request).then(function(response) {
-        if (response) {
-          console.log(' Found response in cache:', response);
+    caches.open(CURRENT_CACHES["font"]).then(function (cache) {
+      return cache
+        .match(event.request)
+        .then(function (response) {
+          if (response) {
+            console.log(" Found response in cache:", response);
 
-          return response;
-        }
-      }).catch(function(error) {
+            return response;
+          }
+        })
+        .catch(function (error) {
+          // 处理 match() 或 fetch() 引起的异常。
+          console.error("  Error in fetch handler:", error);
 
-        // 处理 match() 或 fetch() 引起的异常。
-        console.error('  Error in fetch handler:', error);
-
-        throw error;
-      });
-    })
+          throw error;
+        });
+    }),
   );
 });
 ```
@@ -114,8 +115,6 @@ self.addEventListener('fetch', function(event) {
 
 ## 参见
 
-- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
-- [Using web workers](/zh-CN/docs/Web/Guide/Performance/Using_web_workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers 基本代码示例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
+- [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)

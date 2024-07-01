@@ -25,18 +25,16 @@ _Esta interface implementa métodos definidos em {{domxref("RandomSource")}}._
 
 ## Especificações
 
-| Especificação                                                                    | Status                               | Comentário         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName("Web Crypto API", "#crypto-interface", "Crypto")}} | {{Spec2("Web Crypto API")}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Crypto")}}
+{{Compat}}
 
 ## Veja também
 
 - [Components.utils.importGlobalProperties](/pt-BR/docs/Components.utils.importGlobalProperties)
 
-## Dicionário:
+## Dicionário
 
 "Key" = "Chave"

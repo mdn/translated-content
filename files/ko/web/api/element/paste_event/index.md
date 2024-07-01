@@ -1,5 +1,5 @@
 ---
-title: 'Element: paste 이벤트'
+title: "Element: paste 이벤트"
 slug: Web/API/Element/paste_event
 ---
 
@@ -41,35 +41,38 @@ slug: Web/API/Element/paste_event
 ### HTML
 
 ```html
-<div class="source" contenteditable="true">이 상자에서 텍스트를 복사해보세요...</div>
+<div class="source" contenteditable="true">
+  이 상자에서 텍스트를 복사해보세요...
+</div>
 <div class="target" contenteditable="true">...여기에 붙여 넣어 보세요.</div>
 ```
 
 ```css hidden
-div.source, div.target {
-    border: 1px solid gray;
-    margin: .5rem;
-    padding: .5rem;
-    height: 1rem;
-    background-color: #e9eef1;
+div.source,
+div.target {
+  border: 1px solid gray;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  height: 1rem;
+  background-color: #e9eef1;
 }
 ```
 
 ### JS
 
 ```js
-const target = document.querySelector('div.target');
+const target = document.querySelector("div.target");
 
-target.addEventListener('paste', (event) => {
-    const paste = (event.clipboardData || window.clipboardData).getData('text');
-    const reversed = Array.from(paste).reverse().join('');
+target.addEventListener("paste", (event) => {
+  const paste = (event.clipboardData || window.clipboardData).getData("text");
+  const reversed = Array.from(paste).reverse().join("");
 
-    const selection = window.getSelection();
-    if (!selection.rangeCount) return false;
-    selection.deleteFromDocument();
-    selection.getRangeAt(0).insertNode(document.createTextNode(reversed));
+  const selection = window.getSelection();
+  if (!selection.rangeCount) return false;
+  selection.deleteFromDocument();
+  selection.getRangeAt(0).insertNode(document.createTextNode(reversed));
 
-    event.preventDefault();
+  event.preventDefault();
 });
 ```
 

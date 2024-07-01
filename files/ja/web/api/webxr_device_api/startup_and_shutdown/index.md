@@ -33,7 +33,7 @@ WebXR 仕様を設計しているチームは、WebXR API をサポートして�
 
 #### WebXR API エミュレーター拡張機能
 
-[Mozilla WebXR チーム](https://mixedreality.mozilla.org/)は、WebXR API をエミュレートし、HTC Vive、Oculus Go、Oculus Quest、Samsung Gear、Google Cardboard などの互換性のあるさまざまなデバイスをシミュレートする、Firefox と Chrome の両方と互換性のある [WebXR API Emulator](https://blog.mozvr.com/webxr-emulator-extension/) ブラウザー拡張機能を作成しました。 拡張機能を配置すると、ヘッドセットと任意のハンドコントローラーの位置と向き、およびコントローラーのボタンを制御できる開発者ツールパネルを開くことができます。
+Mozilla WebXR チームは、WebXR API をエミュレートし、HTC Vive、Oculus Go、Oculus Quest、Samsung Gear、Google Cardboard などの互換性のあるさまざまなデバイスをシミュレートする、Firefox と Chrome の両方と互換性のある [WebXR API Emulator](https://blog.mozvr.com/webxr-emulator-extension/) ブラウザー拡張機能を作成しました。 拡張機能を配置すると、ヘッドセットと任意のハンドコントローラーの位置と向き、およびコントローラーのボタンを制御できる開発者ツールパネルを開くことができます。
 
 ##### エミュレーターの使用
 
@@ -76,7 +76,7 @@ let webxrPolyfill = null;
 function getXR(usePolyfill) {
   let tempXR;
 
-  switch(usePolyfill) {
+  switch (usePolyfill) {
     case "if-needed":
       tempXR = navigator.xr;
       if (!tempXR) {
@@ -97,7 +97,7 @@ function getXR(usePolyfill) {
   return tempXR;
 }
 
-const xr = getXR("no");  // ネイティブの XRSystem オブジェクトを取得
+const xr = getXR("no"); // ネイティブの XRSystem オブジェクトを取得
 const xr = getXR("yes"); // 常にポリフィルから XRSystem を返す
 const xr = getXR("if-needed"); // navigator.xr がない場合にのみポリフィルを使用
 ```
@@ -155,7 +155,7 @@ async function createImmersiveSession(xr) {
   try {
     session = await xr.requestSession("immersive-vr");
     return session;
-  } catch(error) {
+  } catch (error) {
     throw error;
   }
 }
@@ -173,10 +173,10 @@ async function createImmersiveSession(xr) {
 async function createImmersiveSession(xr) {
   try {
     session = await xr.requestSession("immersive-vr", {
-      requiredFeatures: [ "unbounded" ]
+      requiredFeatures: ["unbounded"],
     });
     return session;
-  } catch(error) {
+  } catch (error) {
     throw error;
   }
 }
@@ -188,10 +188,10 @@ async function createImmersiveSession(xr) {
 async function createInlineSession(xr) {
   try {
     session = await xr.requestSession("inline", {
-      optionalFeatures: [ "local" ]
+      optionalFeatures: ["local"],
     });
     return session;
-  } catch(error) {
+  } catch (error) {
     throw error;
   }
 }
@@ -235,15 +235,20 @@ async function runSession(session) {
   // WebGL の構成を完了する
 
   worldData.session.updateRenderState({
-    baseLayer: new XRWebGLLayer(worldData.session, gl)
+    baseLayer: new XRWebGLLayer(worldData.session, gl),
   });
 
   // シーンのレンダリングを開始します
 
   referenceSpace = await worldData.session.requestReferenceSpace("unbounded");
   worldData.referenceSpace = referenceSpace.getOffsetReferenceSpace(
-        new XRRigidTransform(worldData.playerSpawnPosition, worldData.playerSpawnOrientation));
-  worldData.animationFrameRequestID = worldData.session.requestAnimationFrame(onDrawFrame);
+    new XRRigidTransform(
+      worldData.playerSpawnPosition,
+      worldData.playerSpawnOrientation,
+    ),
+  );
+  worldData.animationFrameRequestID =
+    worldData.session.requestAnimationFrame(onDrawFrame);
 
   return worldData;
 }
@@ -283,7 +288,7 @@ WebXR セッションの過程で、セッションの状態の変化を示す�
 
 ```js
 session.onvisibilitychange = (event) => {
-  switch(event.session.visibilityState) {
+  switch (event.session.visibilityState) {
     case "hidden":
       myFrameRate = 10;
       break;

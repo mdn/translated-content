@@ -1,7 +1,6 @@
 ---
 title: Constructeur Intl.NumberFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
-browser-compat: javascript.builtins.Intl.NumberFormat.NumberFormat
 ---
 
 {{JSRef}}
@@ -13,9 +12,9 @@ Le constructeur **`Intl.NumberFormat()`** permet de créer des objets [`Intl.Num
 ## Syntaxe
 
 ```js
-new Intl.NumberFormat()
-new Intl.NumberFormat(locales)
-new Intl.NumberFormat(locales, options)
+new Intl.NumberFormat();
+new Intl.NumberFormat(locales);
+new Intl.NumberFormat(locales, options);
 ```
 
 ### Paramètres
@@ -121,9 +120,9 @@ console.log(new Intl.NumberFormat().format(amount));
 ```js
 let amount = 3500;
 
-new Intl.NumberFormat('en-US', {style: 'decimal'}).format(amount);
+new Intl.NumberFormat("en-US", { style: "decimal" }).format(amount);
 // → '3,500'
-new Intl.NumberFormat('fr', {style: 'percent'}).format(amount);
+new Intl.NumberFormat("fr", { style: "percent" }).format(amount);
 // → '350 000 %'
 ```
 
@@ -134,10 +133,14 @@ Si l'option `style` vaut `'unit'`, une propriété `unit` doit être fournie. Le
 ```js
 let amount = 3500;
 
-new Intl.NumberFormat('en-US', {style: 'unit', unit: 'liter'}).format(amount);
+new Intl.NumberFormat("en-US", { style: "unit", unit: "liter" }).format(amount);
 // → '3,500 L'
 
-new Intl.NumberFormat('fr', {style: 'unit', unit: 'liter', unitDisplay: 'long'}).format(amount);
+new Intl.NumberFormat("fr", {
+  style: "unit",
+  unit: "liter",
+  unitDisplay: "long",
+}).format(amount);
 // → '3 500 litres'
 ```
 
@@ -147,22 +150,24 @@ Si l'option `style` vaut `'currency'`, une propriété `currency` doit être fou
 
 ```js
 let amount = -3500;
-new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(amount);
+new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(
+  amount,
+);
 // → '-$3,500.00'
 
-new Intl.NumberFormat('bn', {
-  style: 'currency',
-  currency: 'USD',
-  currencyDisplay: 'name'
+new Intl.NumberFormat("bn", {
+  style: "currency",
+  currency: "USD",
+  currencyDisplay: "name",
 }).format(amount);
 // →  '-3,500.00 US dollars'
 
-new Intl.NumberFormat('fr', {
-  style: 'currency',
-  currency: 'EUR',
-  currencySign: 'accounting'
+new Intl.NumberFormat("fr", {
+  style: "currency",
+  currency: "EUR",
+  currencySign: "accounting",
 }).format(amount);
-// →  "(3 500,00 €)"
+// →  "(3 500,00 €)"
 ```
 
 ### Notations scientifique, ingénieur et compacte
@@ -170,30 +175,30 @@ new Intl.NumberFormat('fr', {
 Ces notations sont portées par l'option `notation` et peuvent être formatées ainsi&nbsp;:
 
 ```js
-new Intl.NumberFormat('en-US', { notation: "scientific" }).format(987654321);
+new Intl.NumberFormat("en-US", { notation: "scientific" }).format(987654321);
 // → 9.877E8
 
-new Intl.NumberFormat('pt-PT', { notation: "scientific" }).format(987654321);
+new Intl.NumberFormat("pt-PT", { notation: "scientific" }).format(987654321);
 // → 9,877E8
 
-new Intl.NumberFormat('en-GB', { notation: "engineering" }).format(987654321);
+new Intl.NumberFormat("en-GB", { notation: "engineering" }).format(987654321);
 // → 987.654E6
 
-new Intl.NumberFormat('de', { notation: "engineering" }).format(987654321);
+new Intl.NumberFormat("de", { notation: "engineering" }).format(987654321);
 // → 987,654E6
 
-new Intl.NumberFormat('zh-CN', { notation: "compact" }).format(987654321);
+new Intl.NumberFormat("zh-CN", { notation: "compact" }).format(987654321);
 // → 9.9亿
 
-new Intl.NumberFormat('fr', {
+new Intl.NumberFormat("fr", {
   notation: "compact",
-  compactDisplay: "long"
+  compactDisplay: "long",
 }).format(987654321);
 // → 988 millions
 
-new Intl.NumberFormat('en-GB', {
+new Intl.NumberFormat("en-GB", {
   notation: "compact",
-  compactDisplay: "short"
+  compactDisplay: "short",
 }).format(987654321);
 // → 988M
 ```
@@ -204,8 +209,8 @@ Dans l'exemple qui suit, on affiche toujours le signe sauf si la valeur est zér
 
 ```js
 new Intl.NumberFormat("en-US", {
-    style: "percent",
-    signDisplay: "exceptZero"
+  style: "percent",
+  signDisplay: "exceptZero",
 }).format(0.55);
 // → '+55%'
 ```
@@ -213,11 +218,11 @@ new Intl.NumberFormat("en-US", {
 On notera que lorsque le style porte sur les devises et que le style de signe vaut "`accounting`", des parenthèses pourront être utilisées plutôt qu'un signe moins&nbsp;:
 
 ```js
-new Intl.NumberFormat('bn', {
-  style: 'currency',
-  currency: 'USD',
-  currencySign: 'accounting',
-  signDisplay: 'always'
+new Intl.NumberFormat("bn", {
+  style: "currency",
+  currency: "USD",
+  currencySign: "accounting",
+  signDisplay: "always",
 }).format(-3500);
 
 // → '($3,500.00)'

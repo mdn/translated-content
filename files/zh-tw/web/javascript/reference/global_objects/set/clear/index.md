@@ -11,13 +11,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/clear
 
 ## 語法
 
-```plain
+```js
 mySet.clear();
 ```
 
 ### 回傳值
 
-{{jsxref("undefined")}}.
+{{jsxref("undefined")}}。
 
 ## 範例
 
@@ -26,15 +26,15 @@ mySet.clear();
 ```js
 var mySet = new Set();
 mySet.add(1);
-mySet.add('foo');
+mySet.add("foo");
 
-mySet.size;       // 2
-mySet.has('foo'); // true
+mySet.size; // 2
+mySet.has("foo"); // true
 
 mySet.clear();
 
-mySet.size;       // 0
-mySet.has('bar')  // false
+mySet.size; // 0
+mySet.has("bar"); // false
 ```
 
 ## 規範
@@ -45,7 +45,7 @@ mySet.has('bar')  // false
 
 {{Compat}}
 
-## 另見
+## 參見
 
 - {{jsxref("Set")}}
 - {{jsxref("Set.prototype.delete()")}}

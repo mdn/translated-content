@@ -1,13 +1,6 @@
 ---
-title: ':-moz-ui-invalid'
+title: ":-moz-ui-invalid"
 slug: Web/CSS/:user-invalid
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:user-invalid
-original_slug: Web/CSS/:-moz-ui-invalid
 ---
 
 {{Non-standard_header}}{{CSSRef}}

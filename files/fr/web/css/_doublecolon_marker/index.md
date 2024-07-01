@@ -1,12 +1,6 @@
 ---
-title: '::marker'
+title: "::marker"
 slug: Web/CSS/::marker
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::marker
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -41,7 +35,7 @@ Seul un sous-ensemble de propriétés CSS peuvent être utilisées pour une règ
 
 ```css
 li::marker {
-  color:red;
+  color: red;
 }
 ```
 
@@ -49,8 +43,8 @@ li::marker {
 
 ```html
 <ol>
- <li>Savoir lacer ses chaussures</li>
- <li>Et compter deux par deux.</li>
+  <li>Savoir lacer ses chaussures</li>
+  <li>Et compter deux par deux.</li>
 </ol>
 ```
 

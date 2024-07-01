@@ -21,8 +21,8 @@ stylesheet.insertRule(rule [, index])
 
   - : 一个包含了将要插入的规则的 {{domxref("DOMString")}}。规则字符串必须包含的内容取决于它的类型：
 
-    - **[rule-sets](/zh-CN/docs/Web/CSS/Syntax#CSS_statements) 类型**（普通带有选择器的规则）**，**需要[选择器](/zh-CN/docs/Web/Guide/CSS/Getting_Started/Selectors)和样式声明；
-    - **[at-rules](/zh-CN/docs/Web/CSS/At-rule) 类型**（以 `@` 开头的规则，如 `@import, @media` 等）**，**需要 at-identifier 和规则内容。
+    - **[rule-set](/zh-CN/docs/Web/CSS/Syntax#css_语句) 类型**（普通带有选择器的规则），需要[选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)和样式声明；
+    - **[at-rule](/zh-CN/docs/Web/CSS/At-rule) 类型**（以 `@` 开头的规则，如 `@import, @media` 等），需要 at-identifier 和规则内容。
 
 - `index` {{optional_inline}}
   - : 一个小于或等于 `stylesheet.cssRules.length` 的正整数，表示新插入的规则在`{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` 中的位置。默认值是 `0`。（在过去的实现中，这个参数是必需的，详情参见[浏览器兼容性](#浏览器兼容性)。）
@@ -48,7 +48,7 @@ CSS 中存在一些直观和不是太直观能感受到的限制规则影响着�
 下面的代码片段将在样式表 `myStyle` 的顶部插入一条新规则：
 
 ```js
- myStyle.insertRule("#blanc { color: white }", 0);
+myStyle.insertRule("#blanc { color: white }", 0);
 ```
 
 ### 实现一个添加样式表规则的函数
@@ -71,31 +71,36 @@ addStylesheetRules([
   ]
 ]);
  */
-function addStylesheetRules (decls) {
-    var style = document.createElement('style');
-    document.getElementsByTagName('head')[0].appendChild(style);
-    if (!window.createPopup) { /* For Safari */
-       style.appendChild(document.createTextNode(''));
+function addStylesheetRules(decls) {
+  var style = document.createElement("style");
+  document.getElementsByTagName("head")[0].appendChild(style);
+  if (!window.createPopup) {
+    /* For Safari */
+    style.appendChild(document.createTextNode(""));
+  }
+  var s = document.styleSheets[document.styleSheets.length - 1];
+  for (var i = 0, dl = decls.length; i < dl; i++) {
+    var j = 1,
+      decl = decls[i],
+      selector = decl[0],
+      rulesStr = "";
+    if (Object.prototype.toString.call(decl[1][0]) === "[object Array]") {
+      decl = decl[1];
+      j = 0;
     }
-    var s = document.styleSheets[document.styleSheets.length - 1];
-    for (var i=0, dl = decls.length; i < dl; i++) {
-        var j = 1, decl = decls[i], selector = decl[0], rulesStr = '';
-        if (Object.prototype.toString.call(decl[1][0]) === '[object Array]') {
-            decl = decl[1];
-            j = 0;
-        }
-        for (var rl=decl.length; j < rl; j++) {
-            var rule = decl[j];
-            rulesStr += rule[0] + ':' + rule[1] + (rule[2] ? ' !important' : '') + ';\n';
-        }
+    for (var rl = decl.length; j < rl; j++) {
+      var rule = decl[j];
+      rulesStr +=
+        rule[0] + ":" + rule[1] + (rule[2] ? " !important" : "") + ";\n";
+    }
 
-        if (s.insertRule) {
-            s.insertRule(selector + '{' + rulesStr + '}', s.cssRules.length);
-        }
-        else { /* IE */
-            s.addRule(selector, rulesStr, -1);
-        }
+    if (s.insertRule) {
+      s.insertRule(selector + "{" + rulesStr + "}", s.cssRules.length);
+    } else {
+      /* IE */
+      s.addRule(selector, rulesStr, -1);
     }
+  }
 }
 ```
 
@@ -159,7 +164,7 @@ function addStylesheetRules (decls) {
 
 另外注意非标准的 [`removeRule()`](http://www.quirksmode.org/dom/w3c_css.html#change) 和 [`.rules`](http://www.quirksmode.org/dom/w3c_css.html#access) 方法分别用 {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} 和{{domxref("CSSStyleSheet",".cssRules")}} 代替。
 
-## 相关链接
+## 参见
 
 - {{domxref("CSSStyleSheet.deleteRule")}}
 - [Cross-Browser CSS-rules ordering (CSS1)](http://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority)

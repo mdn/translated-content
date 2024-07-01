@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
-original_slug: Web/API/RTCConfiguration
 ---
 
 {{APIRef("WebRTC")}}
@@ -11,13 +10,14 @@ original_slug: Web/API/RTCConfiguration
 ## 構文
 
 ```js
-new RTCPeerConnection()
-new RTCPeerConnection(configuration)
+new RTCPeerConnection();
+new RTCPeerConnection(configuration);
 ```
 
 ### 引数
 
 - `configuration` {{optional_inline}}
+
   - : 新しい接続を構成するためのオプションを提供するオブジェクトです。
 
     - `bundlePolicy` {{optional_inline}}
@@ -103,8 +103,6 @@ new RTCPeerConnection(configuration)
 この属性は複数の資格情報の提供に対応しています。それは、与えられた DTLS 接続が 1 つの資格情報のみを使用したとしても、複数の資格情報を提供することで複数の暗号化アルゴリズムに対応することができるからです。 `RTCPeerConnection` の実装は、DTLS ハンドシェイク中に決定された、自身とリモートピアーが対応するアルゴリズムに基づいて、使用する資格情報を選択することになります。
 
 資格情報を提供しない場合、新しい資格情報が自動的に生成されます。自分で資格情報を用意することの明らかな利点は、 ID キーの継続性です。次回以降の呼び出しに同じ資格情報を使用すると、リモートピアーは同じ呼び出し元であることを指示することができます。また、新しい鍵を生成するコストもかかりません。
-
-**<<<--- add link to information about identity --->>>**
 
 ## 仕様書
 

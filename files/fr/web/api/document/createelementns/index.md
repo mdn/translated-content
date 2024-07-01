@@ -1,15 +1,6 @@
 ---
 title: document.createElementNS
 slug: Web/API/Document/createElementNS
-tags:
-  - API
-  - Création
-  - DOM
-  - Document
-  - Elements
-  - Méthodes
-  - URI
-translation_of: Web/API/Document/createElementNS
 ---
 
 {{ApiRef("DOM")}}

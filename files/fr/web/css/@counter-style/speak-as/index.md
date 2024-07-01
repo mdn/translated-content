@@ -1,11 +1,6 @@
 ---
 title: speak-as
 slug: Web/CSS/@counter-style/speak-as
-tags:
-  - CSS
-  - Descripteur
-  - Reference
-translation_of: Web/CSS/@counter-style/speak-as
 ---
 
 {{CSSRef}}
@@ -69,7 +64,6 @@ speak-as: <counter-style-name>;
   suffix: " ";
   speak-as: numbers;
 }
-
 
 .exemple {
   list-style: speak-as-exemple;

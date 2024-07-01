@@ -12,7 +12,7 @@ Window\.stop()메서드는 window 객체의 로딩을 취소하는 메서드입�
 ## 문법
 
 ```js
-window.stop()
+window.stop();
 ```
 
 ## 예시

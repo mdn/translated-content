@@ -28,7 +28,7 @@ interface CSSMediaRule : CSSConditionRule {
 
 `CSSMediaRule`은 {{domxref("CSSConditionRule")}}, 그리고 {{domxref("CSSGroupingRule")}}와 {{domxref("CSSRule")}}로서 해당 인터페이스의 메서드를 구현합니다. 자체 메서드는 가지지 않습니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

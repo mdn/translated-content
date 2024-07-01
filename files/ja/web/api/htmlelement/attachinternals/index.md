@@ -1,16 +1,18 @@
 ---
-title: HTMLElement.attachInternals()
+title: "HTMLElement: attachInternals() メソッド"
 slug: Web/API/HTMLElement/attachInternals
+l10n:
+  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
 ---
 
 {{APIRef('DOM')}}
 
-**`HTMLElement.attachInternals()`** メソッドは、 {{domxref("ElementInternals")}} オブジェクトを返します。このメソッドにより、[カスタム要素](/ja/docs/Web/Web_Components/Using_custom_elements)が HTML フォームに参加することができるようになります。 `ElementInternals` インターフェイスは、標準的な HTML フォーム要素と同じようにこれらの要素を扱うためのユーティリティを提供し、また、要素に対して[アクセシビリティオブジェクトモデル](https://wicg.github.io/aom/explainer.html)を公開します。
+**`HTMLElement.attachInternals()`** メソッドは、 {{domxref("ElementInternals")}} オブジェクトを返します。このメソッドにより、[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)が HTML フォームに参加することができるようになります。 `ElementInternals` インターフェイスは、標準的な HTML フォーム要素と同じようにこれらの要素を扱うためのユーティリティを提供し、また、要素に対して[アクセシビリティオブジェクトモデル](https://wicg.github.io/aom/explainer.html)を公開します。
 
 ## 構文
 
-```js
-var internals = element.attachInternals();
+```js-nolint
+attachInternals()
 ```
 
 ### 引数
@@ -42,11 +44,10 @@ class CustomCheckbox extends HTMLElement {
     super();
     this.internals_ = this.attachInternals();
   }
+  // …
+}
 
-  /* ... */
-
-  window.customElements.define("custom-checkbox", CustomCheckbox);
-})();
+window.customElements.define("custom-checkbox", CustomCheckbox);
 
 let element = document.getElementById("custom-checkbox");
 console.log(element.internals_.form);

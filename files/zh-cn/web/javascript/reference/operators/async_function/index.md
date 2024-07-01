@@ -1,7 +1,6 @@
 ---
 title: 异步函数（async function）表达式
 slug: Web/JavaScript/Reference/Operators/async_function
-original_slug: Web/JavaScript/Reference/Operators/async
 ---
 
 {{jsSidebar("Operators")}}

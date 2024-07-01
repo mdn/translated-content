@@ -1,5 +1,5 @@
 ---
-title: 'スキルテスト: オブジェクトの基本'
+title: "スキルテスト: オブジェクトの基本"
 slug: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
 ---
 
@@ -44,7 +44,7 @@ slug: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
 
 `albums` 配列には、少なくとも 2 つのアルバムを含めること。
 
-​ これが終わったら、変数`bandInfo`に、名前、国籍、活動年数、スタイル、最初のアルバムのタイトルと発売日などの少しの詳細を書き込みます。
+これが終わったら、変数`bandInfo`に、名前、国籍、活動年数、スタイル、最初のアルバムのタイトルと発売日などの少しの詳細を書き込みます。
 
 以下のライブコードを更新して、完成した例を再現してみてください。
 
@@ -73,7 +73,7 @@ slug: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
 自分のコードの評価が欲しい、または行き詰まって助けを求めたい場合：
 
 1. CodePen、jsFiddle、Glitch などのオンライン共有可能なエディターで作業をします。コードを自分で作成することも、上記のセクションでリンクされているスターティングポイントファイルを使用することもできます。
-2. [MDNDiscourse フォーラムの学習カテゴリ](https://discourse.mozilla.org/c/mdn/learn/250)で評価や支援を求める投稿を書いてください。投稿には次のものを含める必要があります。
+2. [MDNDiscourse フォーラムの学習カテゴリー](https://discourse.mozilla.org/c/mdn/learn/250)で評価や支援を求める投稿を書いてください。投稿には次のものを含める必要があります。
 
 - 「オブジェクトの基本 1 の スキルテスト を行ったので評価して欲しい」などの説明的なタイトル。
 - あなたがすでに試したことの詳細、そしてあなたが私たちに何をしてほしいか、例えば行き詰まって助けが必要な場合、または評価が必要な場合。

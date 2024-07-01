@@ -51,7 +51,7 @@ Access-Control-Allow-Methods: *
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Access-Control-Allow-Methods")}}
+{{Compat}}
 
 ## 関連情報
 

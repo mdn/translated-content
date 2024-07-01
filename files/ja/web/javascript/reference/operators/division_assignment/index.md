@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Division_assignment
 <h2 id="Syntax" name="Syntax">構文</h2>
 
 ```js
-x /= y // x = x / y
+x /= y; // x = x / y
 ```
 
 <h2 id="Examples" name="Examples">例</h2>
@@ -23,10 +23,10 @@ x /= y // x = x / y
 // 以下の変数があり、すべての演算がこの順に実行されると想定する
 //  bar = 5
 
-bar /= 2     // 2.5
-bar /= 2     // 1.25
-bar /= 0     // Infinity
-bar /= 'foo' // NaN
+bar /= 2; // 2.5
+bar /= 2; // 1.25
+bar /= 0; // Infinity
+bar /= "foo"; // NaN
 ```
 
 ## 仕様書
@@ -39,5 +39,5 @@ bar /= 'foo' // NaN
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子)
+- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
 - [除算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Division)

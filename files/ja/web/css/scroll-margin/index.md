@@ -23,7 +23,7 @@ slug: Web/CSS/scroll-margin
 ```css
 /* <length> 値 */
 scroll-margin: 10px;
-scroll-margin: 1em .5em 1em 1em;
+scroll-margin: 1em 0.5em 1em 1em;
 
 /* グローバル値 */
 scroll-margin: inherit;

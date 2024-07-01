@@ -31,10 +31,10 @@ l10n:
 ポインターロック API は [全画面 API](/ja/docs/Web/API/Fullscreen_API) と同様に、 DOM 要素に新たなメソッド {{domxref("Element.requestPointerLock","requestPointerLock()")}} を追加することで拡張しています。接頭辞が最近削除されましたので、例えば `canvas` 要素で ポインターロックを要求したい場合は、現在は以下のように宣言します。
 
 ```js
-canvas.requestPointerLock = canvas.requestPointerLock ||
-                            canvas.mozRequestPointerLock;
+canvas.requestPointerLock =
+  canvas.requestPointerLock || canvas.mozRequestPointerLock;
 
-canvas.requestPointerLock()
+canvas.requestPointerLock();
 ```
 
 > **メモ:** ユーザーが[既定のロック解除ジェスチャ](https://w3c.github.io/pointerlock/#dfn-default-unlock-gesture)でポインターロックを解除した場合、またはこの文書に対して以前にポインターロックが入力されていない場合、[エンゲージメントジェスチャ](https://w3c.github.io/pointerlock/#dfn-engagement-gesture)の結果として生成されるイベントを [`requestPointerLock`](https://w3c.github.io/pointerlock/#dom-element-requestpointerlock) が成功する前に、文書内で受信する必要があります。（<https://w3c.github.io/pointerlock/#extensions-to-the-element-interface> より）
@@ -48,19 +48,21 @@ canvas.requestPointerLock()
 `pointerLockElement` の使用例を示します。
 
 ```js
-if (document.pointerLockElement === canvas ||
-  document.mozPointerLockElement === canvas) {
-    console.log('The pointer lock status is now locked');
+if (
+  document.pointerLockElement === canvas ||
+  document.mozPointerLockElement === canvas
+) {
+  console.log("The pointer lock status is now locked");
 } else {
-    console.log('The pointer lock status is now unlocked');
+  console.log("The pointer lock status is now unlocked");
 }
 ```
 
 {{domxref("Document.exitPointerLock()")}} メソッドはポインターロックを終えるために使用され、{{domxref("Element.requestPointerLock","requestPointerLock()")}} と同様に {{domxref("Document/pointerlockchange_event", "pointerlockchange")}} イベントや {{domxref("Document/pointerlockerror_event", "pointerlockerror")}} イベントを用いて非同期的に動作します。使用例は以下のとおりです。
 
 ```js
-document.exitPointerLock = document.exitPointerLock    ||
-                           document.mozExitPointerLock;
+document.exitPointerLock =
+  document.exitPointerLock || document.mozExitPointerLock;
 
 // ロック解除を試みる
 document.exitPointerLock();
@@ -72,18 +74,20 @@ document.exitPointerLock();
 
 ```js
 if ("onpointerlockchange" in document) {
-  document.addEventListener('pointerlockchange', lockChangeAlert, false);
+  document.addEventListener("pointerlockchange", lockChangeAlert, false);
 } else if ("onmozpointerlockchange" in document) {
-  document.addEventListener('mozpointerlockchange', lockChangeAlert, false);
+  document.addEventListener("mozpointerlockchange", lockChangeAlert, false);
 }
 
 function lockChangeAlert() {
-  if (document.pointerLockElement === canvas ||
-  document.mozPointerLockElement === canvas) {
-    console.log('The pointer lock status is now locked');
+  if (
+    document.pointerLockElement === canvas ||
+    document.mozPointerLockElement === canvas
+  ) {
+    console.log("The pointer lock status is now locked");
     // 応答として役に立つ処理
   } else {
-    console.log('The pointer lock status is now unlocked');
+    console.log("The pointer lock status is now unlocked");
     // 応答として役に立つ処理
   }
 }
@@ -94,8 +98,8 @@ function lockChangeAlert() {
 {{domxref("Element.requestPointerLock","requestPointerLock()")}} または {{domxref("Document.exitPointerLock","exitPointerLock()")}} の呼び出しによりエラーが発生したときは、{{domxref("Document/pointerlockerror_event", "pointerlockerror")}} イベントが `document` に発生します。これはシンプルなイベントであり、付加的なデータは含まれません。
 
 ```js
-document.addEventListener('pointerlockerror', lockError, false);
-document.addEventListener('mozpointerlockerror', lockError, false);
+document.addEventListener("pointerlockerror", lockError, false);
+document.addEventListener("mozpointerlockerror", lockError, false);
 
 function lockError(e) {
   alert("Pointer lock failed");
@@ -120,11 +124,7 @@ function lockError(e) {
 
 ## シンプルな例のウォークスルー
 
-ポインターロックの使用方法やシンプルな制御システムの設定方法を示すため、[シンプルな ポインターロックのデモ](https://mdn.github.io/dom-examples/pointer-lock/) を作成しました ([ソースコードを確認する](https://github.com/mdn/dom-examples/tree/master/pointer-lock))。デモは以下のようなものです:
-
-![黒地に赤い丸が描かれている。](pointer-lock.png)
-
-このデモでは、JavaScript を使用して {{htmlelement("canvas")}} 要素上にボールを描画します。canvas をクリックすると ポインターロックがマウスポインターを取り除いて、マウスを使用してボールを直接動かすことができます。このデモの仕組みを見ていきましょう。
+ポインターロックの使用方法やシンプルな制御システムの設定方法を示すため、[シンプルな ポインターロックのデモ](https://mdn.github.io/dom-examples/pointer-lock/) を作成しました ([ソースコードを確認する](https://github.com/mdn/dom-examples/tree/master/pointer-lock))。このデモでは、JavaScript を使用して {{htmlelement("canvas")}} 要素上にボールを描画します。canvas をクリックすると ポインターロックがマウスポインターを取り除いて、マウスを使用してボールを直接動かすことができます。このデモの仕組みを見ていきましょう。
 
 canvas 内の、x および y の初期位置を設定します。
 
@@ -136,11 +136,11 @@ const y = 50;
 現在は ポインターロックのメソッドに接頭辞がついていますので、ブラウザー実装ごとに処理を分けています。
 
 ```js
-canvas.requestPointerLock = canvas.requestPointerLock ||
-                            canvas.mozRequestPointerLock;
+canvas.requestPointerLock =
+  canvas.requestPointerLock || canvas.mozRequestPointerLock;
 
-document.exitPointerLock = document.exitPointerLock ||
-                           document.mozExitPointerLock;
+document.exitPointerLock =
+  document.exitPointerLock || document.mozExitPointerLock;
 ```
 
 キャンバスがクリックされたときに、キャンバスで `requestPointerLock()` メソッドを実行するイベントリスナーを設定します。これは、ポインターロックを開始します。
@@ -148,7 +148,7 @@ document.exitPointerLock = document.exitPointerLock ||
 ```js
 canvas.onclick = () => {
   canvas.requestPointerLock();
-}
+};
 ```
 
 ポインターロックイベント `pointerlockchange` のイベントリスナーを設定します。イベントが発生したら、ポインターロックの変更を制御するために `lockChangeAlert()` という名前の関数を実行します。
@@ -157,20 +157,22 @@ canvas.onclick = () => {
 // ポインターロックのイベントリスナー
 
 // さまざまなブラウザー向けに、ポインターロックの状態変化イベントをフックする
-document.addEventListener('pointerlockchange', lockChangeAlert, false);
-document.addEventListener('mozpointerlockchange', lockChangeAlert, false);
+document.addEventListener("pointerlockchange", lockChangeAlert, false);
+document.addEventListener("mozpointerlockchange", lockChangeAlert, false);
 ```
 
 この関数は、 pointLockElement プロパティがキャンバスを示しているかを確認します。示している場合は、マウスの移動を扱うために、イベントリスナーを `updatePosition()` に設定します。示していない場合は、イベントリスナーを再び削除します。
 
 ```js
 function lockChangeAlert() {
-  if (document.pointerLockElement === canvas ||
-      document.mozPointerLockElement === canvas) {
-    console.log('The pointer lock status is now locked');
+  if (
+    document.pointerLockElement === canvas ||
+    document.mozPointerLockElement === canvas
+  ) {
+    console.log("The pointer lock status is now locked");
     document.addEventListener("mousemove", updatePosition, false);
   } else {
-    console.log('The pointer lock status is now unlocked');
+    console.log("The pointer lock status is now unlocked");
     document.removeEventListener("mousemove", updatePosition, false);
   }
 }
@@ -179,7 +181,7 @@ function lockChangeAlert() {
 updatePosition() 関数が、キャンバス内のボールの位置 (`x` および `y`) を更新します。また、ボールがキャンバスの端からはみ出すかをチェックする `if()` 文が含まれています。ボールがはみ出す場合は、反対側の端にボールを描画します。また、[`requestAnimationFrame()`](/ja/docs/Web/API/Window/requestAnimationFrame) がすでに呼び出されたかを確認しており、呼び出された場合は必要に応じて再び呼び出して、キャンバスのシーンを更新するために `canvasDraw()` 関数を呼び出します。さらに、参照用に X および Y の位置を表示するための tracker も設定します。
 
 ```js
-const tracker = document.getElementById('tracker');
+const tracker = document.getElementById("tracker");
 
 let animation;
 function updatePosition(e) {

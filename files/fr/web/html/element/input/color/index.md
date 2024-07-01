@@ -13,7 +13,7 @@ L'apparence du contrôle de sélection des couleurs peut grandement varier d'un 
 
 ## Valeur
 
-L'attribut {{htmlattrxref("value", "input")}} d'un élément `<input type="color">` est une chaîne de caractères sur 7 caractères qui correspond au code de la couleur en représentation hexadécimale RGB. Autrement dit, le premier caractère est un croisillon (#) , les deux suivants indiquent la composante rouge (R) de la couleur, les deux suivants indiquent la couleur verte (G pour _Green_ en anglais) et les deux suivants indiquent la composante bleue (B) de la couleur. La valeur respecte nécessairement ce format et n'est jamais vide.
+L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) d'un élément `<input type="color">` est une chaîne de caractères sur 7 caractères qui correspond au code de la couleur en représentation hexadécimale RGB. Autrement dit, le premier caractère est un croisillon (#) , les deux suivants indiquent la composante rouge (R) de la couleur, les deux suivants indiquent la couleur verte (G pour _Green_ en anglais) et les deux suivants indiquent la composante bleue (B) de la couleur. La valeur respecte nécessairement ce format et n'est jamais vide.
 
 > **Note :** Si la valeur saisie n'est pas un code hexadécimal RGB d'une couleur opaque valide, c'est la valeur `"#000000"` (c'est-à-dire la couleur noire) qui sera utilisée. Il est notamment impossible d'utiliser les noms de couleurs CSS ou des fonctions CSS afin de définir cette valeur. Il faut garder à l'esprit que HTML et CSS sont deux langages séparés, définis par des spécifications distinctes. De plus, les couleurs avec un canal alpha ne sont pas prises en charges, utiliser un code avec une notation sur 9 caractères entraînera également l'utilisation de `"#000000"`.
 
@@ -26,7 +26,7 @@ Les éléments `<input type="color">` sont simples à utiliser (notamment en rai
 Il est possible de créer un sélecteur de couleur qui emploie une valeur par défaut :
 
 ```html
-<input type="color" value="#ff0000">
+<input type="color" value="#ff0000" />
 ```
 
 {{EmbedLiveSample("Fournir_une_couleur_par_défaut", 700, 30)}}
@@ -42,7 +42,7 @@ colorPicker.addEventListener("input", updateFirst, false);
 colorPicker.addEventListener("change", watchColorPicker, false);
 
 function watchColorPicker(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach(function (p) {
     p.style.color = event.target.value;
   });
 }
@@ -69,16 +69,21 @@ Créons un exemple qui utilise un sélecteur de couleur et les évènements [`ch
 Le fragment de code HTML utilisé est relativement simple. On utilise quelques paragraphes descriptifs ainsi qu'un élément {{HTMLElement("input")}} de type `"color"` dont l'identifiant est `"colorWell"` (c'est la valeur de cette couleur qu'on utilisera pour changer la couleur du texte des paragraphes).
 
 ```html
-<p>Un exemple qui illustre l'utilisation de <code>&lt;input type="color"&gt;</code>.</p>
+<p>
+  Un exemple qui illustre l'utilisation de
+  <code>&lt;input type="color"&gt;</code>.
+</p>
 
 <label for="colorWell">Couleur :</label>
-<input type="color" value="#ff0000" id="colorWell">
+<input type="color" value="#ff0000" id="colorWell" />
 
-<p>Vous pouvez ici voir que la couleur du premier paragraphe changer
-   lorsqu'on ajuste la valeur dans le sélecteur. Pour cela, on
-   utilise l'évènement <code>input</code>. Lorsqu'on ferme le
-   sélecteur, l'évènement <code>change</code> est déclenché et on
-   applique la modification est appliquée à l'ensemble des paragraphes.</p>
+<p>
+  Vous pouvez ici voir que la couleur du premier paragraphe changer lorsqu'on
+  ajuste la valeur dans le sélecteur. Pour cela, on utilise l'évènement
+  <code>input</code>. Lorsqu'on ferme le sélecteur, l'évènement
+  <code>change</code> est déclenché et on applique la modification est appliquée
+  à l'ensemble des paragraphes.
+</p>
 ```
 
 ### JavaScript
@@ -86,7 +91,7 @@ Le fragment de code HTML utilisé est relativement simple. On utilise quelques p
 Tout d'abord, on établit certains variables : une pour la couleur du sélecteur et une autre couleur pour la couleur par défaut. On ajoute un gestionnaire [`load`](/fr//docs/Web/API/Window/load_event) afin de lancer les actions de démarrage lorsque la page est chargée.
 
 ```js
-var colorWell
+var colorWell;
 var defaultColor = "#0000ff";
 
 window.addEventListener("load", startup, false);
@@ -128,7 +133,7 @@ Lorsque le sélecteur est fermé, cela signifie que la valeur ne sera plus modif
 
 ```js
 function updateAll(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach(function (p) {
     p.style.color = event.target.value;
   });
 }
@@ -159,8 +164,8 @@ Cela permet de modifier la couleur de chaque bloc {{HTMLElement("p")}} du docume
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}} et
-        {{htmlattrxref("list", "input")}}.
+        <a href="/fr/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a> et
+        <a href="/fr/docs/Web/HTML/Element/input#list"><code>list</code></a>.
       </td>
     </tr>
     <tr>

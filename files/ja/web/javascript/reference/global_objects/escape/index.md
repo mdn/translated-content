@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/escape
 > **警告:** `escape()` は厳密には (「ウェブ標準から削除された」という意味で) 非推奨ではありませんが、ECMA-262 標準の [Annex B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) で定義されており、その導入部には次のように書かれています。
 >
 > > … この付録で規定されているすべての言語機能と動作は、 1 つ以上の望ましくない特性を持ち、レガシーな使用例がない場合は、この仕様から削除されます。…
-> … プログラマーは、新しい ECMAScript のコードを書くときに、これらの機能や動作の存在を使用したり、仮定したりしてはいけません。…
+> > … プログラマーは、新しい ECMAScript のコードを書くときに、これらの機能や動作の存在を使用したり、仮定したりしてはいけません。…
 
 The **`escape()`** 関数は、特定の文字を 16 進数のエスケープシーケンスで置き換えた新しい文字列を計算します。
 
@@ -19,7 +19,7 @@ The **`escape()`** 関数は、特定の文字を 16 進数のエスケープシ
 ## 構文
 
 ```js
-escape(str)
+escape(str);
 ```
 
 ### 引数
@@ -42,12 +42,12 @@ escape(str)
 ### escape の使用
 
 ```js
-escape('abc123');     // "abc123"
-escape('äöü');        // "%E4%F6%FC"
-escape('ć');          // "%u0107"
+escape("abc123"); // "abc123"
+escape("äöü"); // "%E4%F6%FC"
+escape("ć"); // "%u0107"
 
 // 特殊文字
-escape('@*_+-./');    // "@*_+-./"
+escape("@*_+-./"); // "@*_+-./"
 ```
 
 ## 仕様書

@@ -1,7 +1,6 @@
 ---
 title: is
 slug: Web/HTML/Global_attributes/is
-original_slug: Web/HTML/Atributos_Globales/is
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -39,9 +38,9 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.is")}}
+{{Compat}}
 
 ## Vea también
 

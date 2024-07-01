@@ -1,5 +1,5 @@
 ---
-title: '-webkit-mask-composite'
+title: "-webkit-mask-composite"
 slug: Web/CSS/-webkit-mask-composite
 ---
 
@@ -12,7 +12,7 @@ La propiedad `-webkit-mask-composite` especifica la forma en la que múltiples i
 - {{ Xref_cssinitial() }}: source-over
 - Se aplica a : todos los elementos
 - {{ Xref_cssinherited() }}: no
-- Media: {{ Xref_cssvisual() }}
+- Media: {{cssxref("Media/Visual", "visual")}}
 - {{ Xref_csscomputed() }}: tal y como se especifica.
 
 ## Síntaxis
@@ -55,14 +55,18 @@ Donde:
 
 ```css
 .example {
-    -webkit-mask-image: url(mask1.png), url('mask2.png');
-    -webkit-mask-composite: xor, source-over;
+  -webkit-mask-image: url(mask1.png), url("mask2.png");
+  -webkit-mask-composite: xor, source-over;
 }
 ```
 
-## Compatibilidad con los distintos navegadores
+## Especificaciones
 
-{{Compat("css.properties.-webkit-mask-composite")}}
+No forma parte de ningún estándar. Esta propiedad se especifica como {{CSSxRef("mask-composite")}} utilizando diferentes valores.
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver además
 

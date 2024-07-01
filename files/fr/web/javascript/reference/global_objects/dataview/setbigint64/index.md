@@ -1,15 +1,6 @@
 ---
 title: DataView.prototype.setBigInt64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setBigInt64
-tags:
-  - BigInt
-  - DataView
-  - JavaScript
-  - Méthode
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setBigInt64
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/setBigInt64
 ---
 
 {{JSRef}}
@@ -55,13 +46,11 @@ dataview.getInt32(0); // 3n
 
 ## Spécifications
 
-| Spécification                                                                                                                     | État |
-| --------------------------------------------------------------------------------------------------------------------------------- | ---- |
-| [Proposition pour `DataView.prototype.setBigInt64()`](https://tc39.github.io/proposal-bigint/#sec-dataview.prototype.setbigint64) |      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.setBigInt64")}}
+{{Compat}}
 
 ## Voir aussi
 

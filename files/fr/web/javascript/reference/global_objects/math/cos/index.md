@@ -1,13 +1,6 @@
 ---
 title: Math.cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cos
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/cos
 ---
 
 {{JSRef}}
@@ -19,7 +12,7 @@ La fonction **`Math.cos()`** retourne le [cosinus](https://fr.wikipedia.org/wiki
 ## Syntaxe
 
 ```js
-Math.cos(x)
+Math.cos(x);
 ```
 
 ### Paramètres
@@ -42,10 +35,10 @@ La méthode `Math.cos()` renvoie une valeur numérique comprise entre -1 et 1. C
 ### Utiliser `Math.cos()`
 
 ```js
-Math.cos(0);           // 1
-Math.cos(1);           // 0.5403023058681398
+Math.cos(0); // 1
+Math.cos(1); // 0.5403023058681398
 
-Math.cos(Math.PI);     // -1
+Math.cos(Math.PI); // -1
 Math.cos(2 * Math.PI); // 1
 ```
 

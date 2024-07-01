@@ -19,7 +19,7 @@ l10n:
 _`EyeDropper` インターフェイスは、メソッドを継承しません。_
 
 - {{DOMxRef("EyeDropper.open()")}} {{Experimental_Inline}}
-  - : 選択された色へのアクセスを提供するオブジェクトで解決する {{jsxref("Promise")}} を返します。
+  - : 選択された色へのアクセスを提供するオブジェクトで解決するプロミスを返します。
 
 ## 例
 
@@ -36,22 +36,26 @@ _`EyeDropper` インターフェイスは、メソッドを継承しません。
 #### JavaScript
 
 ```js
-document.getElementById('start-button').addEventListener('click', () => {
-  const resultElement = document.getElementById('result');
+document.getElementById("start-button").addEventListener("click", () => {
+  const resultElement = document.getElementById("result");
 
   if (!window.EyeDropper) {
-    resultElement.textContent = 'このブラウザーは EyeDropper API に対応していません';
+    resultElement.textContent =
+      "このブラウザーは EyeDropper API に対応していません";
     return;
   }
 
   const eyeDropper = new EyeDropper();
 
-  eyeDropper.open().then((result) => {
-    resultElement.textContent = result.sRGBHex;
-    resultElement.style.backgroundColor = result.sRGBHex;
-  }).catch((e) => {
-    resultElement.textContent = e;
-  });
+  eyeDropper
+    .open()
+    .then((result) => {
+      resultElement.textContent = result.sRGBHex;
+      resultElement.style.backgroundColor = result.sRGBHex;
+    })
+    .catch((e) => {
+      resultElement.textContent = e;
+    });
 });
 ```
 
@@ -72,23 +76,27 @@ document.getElementById('start-button').addEventListener('click', () => {
 #### JavaScript
 
 ```js
-document.getElementById('start-button').addEventListener('click', () => {
-  const resultElement = document.getElementById('result');
+document.getElementById("start-button").addEventListener("click", () => {
+  const resultElement = document.getElementById("result");
 
   if (!window.EyeDropper) {
-    resultElement.textContent = 'このブラウザーは EyeDropper API に対応していません';
+    resultElement.textContent =
+      "このブラウザーは EyeDropper API に対応していません";
     return;
   }
 
   const eyeDropper = new EyeDropper();
   const abortController = new AbortController();
 
-  eyeDropper.open({ signal: abortController.signal }).then((result) => {
-    resultElement.textContent = result.sRGBHex;
-    resultElement.style.backgroundColor = result.sRGBHex;
-  }).catch((e) => {
-    resultElement.textContent = e;
-  });
+  eyeDropper
+    .open({ signal: abortController.signal })
+    .then((result) => {
+      resultElement.textContent = result.sRGBHex;
+      resultElement.style.backgroundColor = result.sRGBHex;
+    })
+    .catch((e) => {
+      resultElement.textContent = e;
+    });
 
   setTimeout(() => {
     abortController.abort();

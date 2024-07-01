@@ -1,7 +1,6 @@
 ---
 title: Animation.cancel()
 slug: Web/API/Animation/cancel
-translation_of: Web/API/Animation/cancel
 ---
 
 {{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
@@ -28,17 +27,15 @@ None.
 
 Этот метод не выбрасывает напрямую исключения; однако, если {{domxref("Animation.playState", "playState")}} анимации во время отмены ничего кроме `"idle"`, {{domxref("Animation.finished", "current finished promise", "", 1)}} отклоняется с помощью {{domxref("DOMException")}} названным `AbortError`.
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                            | Status                               | Comment         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------- |
-| {{SpecName('Web Animations', '#dom-animation-cancel', 'Animation.cancel()' )}} | {{Spec2('Web Animations')}} | Editor's draft. |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Web Animations API](/ru/docs/Web/API/Web_Animations_API)
 - {{domxref("KeyframeEffect")}}

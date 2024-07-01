@@ -2,20 +2,18 @@
 title: フォームへの高度なスタイル設定
 slug: Learn/Forms/Advanced_form_styling
 l10n:
-  sourceCommit: 05324ee8658ea78ab284a736511581effbaf784b
-original_slug: Learn/Forms/Learn/Forms/Advanced_form_styling
+  sourceCommit: d54192c90e24a1ca5d3a4a65b7d5bf8b1c0ef1e5
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
-この記事では、スタイル設定がより難しい、「不良」「劣悪」に分類される種類のフォームコントロールにスタイル設定するために、 CSS で何ができるかを見ていきます。[前の記事](/ja/docs/Learn/Forms/Styling_web_forms)で見たように、テキストフィールドやボタンでの CSS 使用はまったく問題がありません。ここからは、ウェブフォームへのスタイル設定の闇の部分を見ていきます。
+この記事では、スタイル設定がより難しい、「不良」「劣悪」に分類される種類のフォームコントロールにスタイル設定するために、CSS で何ができるかを見ていきます。[前の記事](/ja/docs/Learn/Forms/Styling_web_forms)で見たように、テキストフィールドやボタンでの CSS 使用はまったく問題がありません。ここからは、より問題のある部分のスタイル設定を掘り下げます。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピューターリテラシーと、
         <a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML</a> および
         <a href="/ja/docs/Learn/CSS/First_steps">CSS</a> に対する基本的な理解。
       </td>
@@ -47,7 +45,7 @@ original_slug: Learn/Forms/Learn/Forms/Advanced_form_styling
 
 最初に [`appearance`](/ja/docs/Web/CSS/appearance) プロパティについて説明します。これは上記のすべてをよりスタイル付けできるようにするためにかなり有用なプロパティです。
 
-## 見た目: OS レベルのスタイル制御
+## appearance: OS レベルのスタイル制御
 
 前の記事では歴史的に、ウェブフォームのスタイル設定は OS で行われており、それがこのコントロールの見た目のカスタマイズの問題の一部となっていました。
 
@@ -59,26 +57,26 @@ original_slug: Learn/Forms/Learn/Forms/Advanced_form_styling
 <form>
   <p>
     <label for="search">search: </label>
-    <input id="search" name="search" type="search">
+    <input id="search" name="search" type="search" />
   </p>
   <p>
     <label for="text">text: </label>
-    <input id="text" name="text" type="text">
+    <input id="text" name="text" type="text" />
   </p>
   <p>
     <label for="date">date: </label>
-    <input id="date" name="date" type="datetime-local">
+    <input id="date" name="date" type="datetime-local" />
   </p>
   <p>
     <label for="radio">radio: </label>
-    <input id="radio" name="radio" type="radio">
+    <input id="radio" name="radio" type="radio" />
   </p>
   <p>
     <label for="checkbox">checkbox: </label>
-    <input id="checkbox" name="checkbox" type="checkbox">
+    <input id="checkbox" name="checkbox" type="checkbox" />
   </p>
-  <p><input type="submit" value="submit"></p>
-  <p><input type="button" value="button"></p>
+  <p><input type="submit" value="submit" /></p>
+  <p><input type="button" value="button" /></p>
 </form>
 ```
 
@@ -96,7 +94,7 @@ input {
 
 たいていの場合、効果は枠線を除去し、 CSS でのスタイル設定を少し簡単にしますが、それは本質できありません。いくつかの場合 — 検索やラジオボタン/チェックボックスでは、もっと便利です。これを見ていきましょう。
 
-### 検索ボックスを変更する
+### 検索ボックスの変更
 
 [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search) は基本的に単なるテキスト入力ですが、なぜ `appearance: none;` が便利なのでしょうか? 答えは Safari では、検索ボックスにスタイル設定の制限があるからです。例えば `height` や `font-size` を自在に調整できません。
 
@@ -104,7 +102,7 @@ input {
 
 ```css
 input[type="search"] {
-    appearance: none;
+  appearance: none;
 }
 ```
 
@@ -118,39 +116,42 @@ input[type="search"] {
 
 > **メモ:** 検索フィールドでは、Edge と Chrome で入力がフォーカスされないときに "x" の削除アイコンが消えるが、Safari では残ることに気づくこともあるでしょう。CSS で消すには、`input[type="search"]::-webkit-search-cancel-button { display: none; }`を使用できますが、フォーカス時のアイコンも取り除き、見た目が元に戻らないようです。
 
-### チェックボックスとラジオボタン
+### チェックボックスとラジオボタンのスタイル設定
 
 チェックボックスやラジオボタンのスタイル設定は、初期設定のままでは厄介です。チェックボックスやラジオボタンのサイズは初期設定のままでは変更できないようになっていますし、変更しようとするとブラウザーの反応もとても異なります。
 
 例えば、シンプルなテストケースを考えてみます。
 
 ```html
-<label><span><input type="checkbox" name="q5" value="true"></span> True</label>
-<label><span><input type="checkbox" name="q5" value="false"></span> False</label>
+<label
+  ><span><input type="checkbox" name="q5" value="true" /></span> True</label
+>
+<label
+  ><span><input type="checkbox" name="q5" value="false" /></span> False</label
+>
 ```
 
 ```css
 span {
-    display: inline-block;
-    background: red;
+  display: inline-block;
+  background: red;
 }
 
 input[type="checkbox"] {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 ```
 
 ブラウザーによってチェックボックスとスパンの扱いは異なっており多くは劣悪なものです。
 
-| ブラウザー                          | 描画結果                          |
-| ----------------------------------- | --------------------------------- |
-| Firefox 71 (macOS)                  | ![](firefox-mac-checkbox.png)     |
-| Firefox 57 (Windows 10)             | ![](firefox-windows-checkbox.png) |
-| Chrome 77 (macOS), Safari 13, Opera | ![](chrome-mac-checkbox.png)      |
-| Chrome 63 (Windows 10)              | ![](chrome-windows-checkbox.png)  |
-| Internet Explorer 11 (Windows 10)   | ![](ie11-checkbox.png)            |
-| Edge 16 (Windows 10)                | ![](edge-checkbox.png)            |
+| ブラウザー                          | 描画結果                                                                         |
+| ----------------------------------- | -------------------------------------------------------------------------------- |
+| Firefox 71 (macOS)                  | ![角が丸く 1px の淡灰色の境界線](firefox-mac-checkbox.png)                       |
+| Firefox 57 (Windows 10)             | ![角ばった 1px の中灰色の境界線](firefox-windows-checkbox.png)                   |
+| Chrome 77 (macOS), Safari 13, Opera | ![角が丸く 1px の中灰色の境界線](chrome-mac-checkbox.png)                        |
+| Chrome 63 (Windows 10)              | ![白の代わりにやや灰色がかった背景の角ばった境界線](chrome-windows-checkbox.png) |
+| Edge 16 (Windows 10)                | ![白の代わりにやや灰色がかった背景の角ばった境界線](edge-checkbox.png)           |
 
 #### ラジオボタン/チェックボックスで appearance: none を使う
 
@@ -163,19 +164,19 @@ input[type="checkbox"] {
 
     <p>
       <label>
-        <input type="checkbox" name="fruit" value="cherry">
+        <input type="checkbox" name="fruit" value="cherry" />
         I like cherry
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" name="fruit" value="banana" disabled>
+        <input type="checkbox" name="fruit" value="banana" disabled />
         I can't like banana
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" name="fruit" value="strawberry">
+        <input type="checkbox" name="fruit" value="strawberry" />
         I like strawberry
       </label>
     </p>
@@ -242,8 +243,6 @@ input[type="checkbox"]:disabled {
 
 {{cssxref("appearance")}} に対応していないブラウザーで、これらのチェックボックスを表示できます。カスタムデザインは失われますが、チェックボックスのままに見えて使用できます。
 
-> **メモ:** Internet Explorer はどのバージョンでも `appearance` に対応していませんが、`input[type=checkbox]::-ms-check` にて IE のみチェックボックスをターゲットにできます。この手法は、`-ms-check` という名前にもかかわらず、ラジオボタンでも機能します。
-
 ## 「劣悪」要素に何ができるか
 
 今度は「劣悪」コントロールに注目しましょう。これは完全にスタイル設定するのが本当に難しいものです。簡単にいうと、これはドロップダウンボックス、 [`color`](/ja/docs/Web/HTML/Element/input/color) や [`datetime-local`](/ja/docs/Web/HTML/Element/input/datetime-local) のような複合コントロール型、 {{HTMLElement("progress")}} や {{HTMLElement("meter")}} のようなコントロール志向のフィードバックです。
@@ -260,7 +259,7 @@ input[type="checkbox"]:disabled {
 
 ```css
 body {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   margin: 20px auto;
   max-width: 400px;
 }
@@ -271,6 +270,8 @@ form > div {
 
 select {
   appearance: none;
+  width: 100%;
+  height: 100%;
 }
 
 .select-wrapper {
@@ -280,12 +281,17 @@ select {
 .select-wrapper::after {
   content: "▼";
   font-size: 1rem;
-  top: 6px;
+  top: 3px;
   right: 10px;
   position: absolute;
 }
 
-button, label, input, select, progress, meter {
+button,
+label,
+input,
+select,
+progress,
+meter {
   display: block;
   font-family: inherit;
   font-size: 100%;
@@ -296,7 +302,10 @@ button, label, input, select, progress, meter {
   height: 30px;
 }
 
-input[type="text"], input[type="datetime-local"], input[type="color"], select {
+input[type="text"],
+input[type="datetime-local"],
+input[type="color"],
+select {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
 }
@@ -320,7 +329,12 @@ button {
 前の記事で述べたように、すべてのコントロールとそのラベルにグローバルな正規化 CSS を適用して、同じサイズになるようにし、親フォントを採用するなどの工夫をしています。
 
 ```css
-button, label, input, select, progress, meter {
+button,
+label,
+input,
+select,
+progress,
+meter {
   display: block;
   font-family: inherit;
   font-size: 100%;
@@ -335,7 +349,10 @@ button, label, input, select, progress, meter {
 コントロールに統一した影と角丸も与えて、意味のあるようにします。
 
 ```css
-input[type="text"], input[type="datetime-local"], input[type="color"], select {
+input[type="text"],
+input[type="datetime-local"],
+input[type="color"],
+select {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
 }
@@ -388,7 +405,7 @@ select {
 }
 ```
 
-2 つ目の、もう少し大きな問題は、 `<select>` ボックスをクリックして開いたときに現れる、選択肢の入ったボックスを操作することができないことです。選択肢は親に設定されたフォントを引き継がないことに気がつくでしょう。また、余白の設定や色なども一貫して設定することができません。例えば、 Firefox では [`color`](/ja/docs/Web/CSS/color) と [`background-color`](/ja/docs/Web/CSS/background-color) が [`<option>`](/ja/docs/Web/HTML/Element/option) 要素に適用できますが、 Chrome ではそうなりません。どちらも余白（例えば [`padding`](/ja/docs/Web/CSS/padding)）を適用できません。同じことはデータリスト用に出てくる自動補完リストにも当てはまります。
+2 つ目の、もう少し重要な問題は、 `<select>` ボックスをクリックして開いたときに現れる、選択肢の入ったボックスを操作することができないことです。親要素に設定されているフォントを継承することはできますが、間隔や色などを設定することはできません。{{HTMLElement("datalist")}} で現れる自動補完リストも同様です。
 
 本当に選択肢をスタイル設定する必要がある場合、カスタムコントロールを生成するライブラリーを使用するか、独自のカスタムコントロールを作成するかのどちらかが必要で、あるいは `multiple` 属性を使う select の場合、これはページ上に出てくるすべての選択肢を作成し、この特殊な問題を避けることができます。
 
@@ -487,9 +504,7 @@ label[for="file"]:active {
 
 スタイル設定を制御したい場合は、この機能のカスタムソリューションを作ったり、[progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#例) のようなサードパーティのソリューションを使ったりした方が簡単です。
 
-## スキルをテストしましょう!
-
-この記事の最後に到達しましたが、重要な情報を覚えていますか？次に進む前に、この情報を保持しているか検証するテストがあります — [Test your skills: Advanced styling](/ja/docs/Learn/Forms/Test_your_skills:_Advanced_styling) を見てください。心に留めておくこととして、この評価シリーズでの質問は、[次の記事](/ja/docs/Learn/Forms/UI_pseudo-classes)の知識も前提していてるので、試す前にその記事に取り組むとよいかもしれません。
+[カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)の記事には、HTML、CSS、JavaScript を用いた独自デザインの選択フィールドを構築する方法の例があります。
 
 ## まとめ
 
@@ -499,21 +514,8 @@ HTML フォームで CSS を使用するのはまだ困難ですが、しばし�
 
 {{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
-## このモジュール
-
-- [初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)
-- [ウェブフォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
-- [基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)
-- [その他のフォームコントロール](/ja/docs/Learn/Forms/Other_form_controls)
-- [ウェブフォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
-- [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
-- [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
-- [クライアント側のフォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
 ### 高度なトピック
 
-- [カスタムフォームウィジェットの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [フォームウィジェット向けのプロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

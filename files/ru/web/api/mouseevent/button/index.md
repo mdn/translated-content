@@ -1,10 +1,9 @@
 ---
 title: MouseEvent.button
 slug: Web/API/MouseEvent/button
-translation_of: Web/API/MouseEvent/button
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`MouseEvent.button`** свойство доступное только для чтения, возвращает значение, соответствующее нажатой кнопки мыши, которое инициировало событие.
 
@@ -71,7 +70,7 @@ var whichButton = function (e) {
 
 {{Specifications}}
 
-## Поддерживается браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

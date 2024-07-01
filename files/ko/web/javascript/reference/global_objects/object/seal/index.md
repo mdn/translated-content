@@ -2,6 +2,7 @@
 title: Object.seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
 ---
+
 {{JSRef}}
 
 **`Object.seal()`** 메서드는 객체를 밀봉합니다. 객체를 밀봉하면 그 객체에는 새로운 속성을 추가할 수 없고, 현재 존재하는 모든 속성을 설정 불가능 상태로 만들어줍니다. 하지만 쓰기 가능한 속성의 값은 밀봉 후에도 변경할 수 있습니다(역자 주 : 바로 이 점이 `Object.freeze()`와의 차이라고 할 수 있습니다).
@@ -11,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/seal
 ## 구문
 
 ```js
-Object.seal(obj)
+Object.seal(obj);
 ```
 
 ### 매개변수
@@ -33,13 +34,13 @@ Object.seal(obj)
 
 ```js
 var obj = {
-  prop: function() {},
-  foo: 'bar'
+  prop: function () {},
+  foo: "bar",
 };
 
 // 새 속성이 추가되고, 기존 속성은 변경되거나 제거될 수 있음
-obj.foo = 'baz';
-obj.lumpy = 'woof';
+obj.foo = "baz";
+obj.lumpy = "woof";
 delete obj.prop;
 
 var o = Object.seal(obj);
@@ -48,27 +49,31 @@ assert(o === obj);
 assert(Object.isSealed(obj) === true);
 
 // 밀봉한 객체의 속성값은 밀봉 전과 마찬가지로 변경할 수 있음
-obj.foo = 'quux';
-obj.foo // 'quux' 가 출력됨
+obj.foo = "quux";
+obj.foo; // 'quux' 가 출력됨
 
 // 데이터 속성과 접근자 속성 사이의 전환은 불가
-Object.defineProperty(obj, 'foo', { get: function() { return 'g'; } }); // TypeError 발생
+Object.defineProperty(obj, "foo", {
+  get: function () {
+    return "g";
+  },
+}); // TypeError 발생
 
 // 속성값의 변경을 제외한 어떤 변경도 적용되지 않음
-obj.quaxxor = 'the friendly duck'; // 에러가 나지는 않지만 속성은 추가되지 않음
+obj.quaxxor = "the friendly duck"; // 에러가 나지는 않지만 속성은 추가되지 않음
 delete obj.foo; // 에러가 나지는 않지만 속성이 삭제되지 않음
 
 // strict mode 에서는 속성값의 변경을 제외한 모든 변경은 TypeError 발생
 function fail() {
-  'use strict';
+  "use strict";
   delete obj.foo; // TypeError 발생
-  obj.sparky = 'arf'; // TypeEror 발생
+  obj.sparky = "arf"; // TypeEror 발생
 }
 fail();
 
 // Object.defineProperty() 메서드를 이용한 속성의 추가도 TypeError 발생
-Object.defineProperty(obj, 'ohai', { value: 17 }); // TypeErorr 발생
-Object.defineProperty(obj, 'foo', { value: 'eit' }); // 속성값의 변경은 가능함
+Object.defineProperty(obj, "ohai", { value: 17 }); // TypeErorr 발생
+Object.defineProperty(obj, "foo", { value: "eit" }); // 속성값의 변경은 가능함
 ```
 
 ## 참고

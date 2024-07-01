@@ -12,7 +12,7 @@ slug: Web/API/URL/toString
 ## 구문
 
 ```js
-href = url.toString()
+href = url.toString();
 ```
 
 ### 반환 값
@@ -22,7 +22,9 @@ href = url.toString()
 ## 예제
 
 ```js
-const url = new URL("https://developer.mozilla.org/ko/docs/Web/API/URL/toString");
+const url = new URL(
+  "https://developer.mozilla.org/ko/docs/Web/API/URL/toString",
+);
 url.toString(); // should return the URL as a string
 ```
 

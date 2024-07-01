@@ -1,13 +1,6 @@
 ---
 title: DOMError
 slug: Web/API/DOMError
-tags:
-  - API
-  - DOM
-  - Erreurs
-  - Interface
-  - Reference
-translation_of: Web/API/DOMError
 ---
 
 {{ APIRef("DOM") }}{{deprecated_header}}
@@ -23,29 +16,29 @@ L'interface **`DOMError`** décrit un objet d'erreur contenant le nom de l'erreu
 
 ## Type d'erreurs
 
-| Type                         | Description                                                                                                     |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Type                         | Description                                                                                               |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------- |
 | `IndexSizeError`             | L'index n'est pas dans l'étendue autorisée (par exemple, déclenché dans un objet {{ domxref("range") }}). |
-| `HierarchyRequestError`      | La hiérarchie de l'arbre de noeud est incorrecte.                                                               |
-| `WrongDocumentError`         | L'objet est dans le mauvais {{ domxref("document") }}.                                                   |
-| `InvalidCharacterError`      | La chaîne de caractères contient des caractères non valides.                                                    |
-| `NoModificationAllowedError` | L'objet ne peut pas être modifié.                                                                               |
-| `NotFoundError`              | L'objet ne peut pas être trouvé.                                                                                |
-| `NotSupportedError`          | Cette opération n'est pas supportée.                                                                            |
-| `InvalidStateError`          | L'objet est dans un état non valide.                                                                            |
-| `SyntaxError`                | La chaîne de caractère ne correspond pas au motif attendu.                                                      |
-| `InvalidModificationError`   | L'objet ne peut pas être modifié de cette façon.                                                                |
-| `NamespaceError`             | Cette opération n'est pas autorisée par les Namespaces en XML.                                                  |
-| `InvalidAccessError`         | L'objet ne supporte pas cette opération ou cet argument.                                                        |
-| `TypeMismatchError`          | Le type de l'objet ne correspond pas au type attendu.                                                           |
-| `SecurityError`              | L'opération n'est pas sécurisée.                                                                                |
-| `NetworkError`               | Une erreur réseau est survenue.                                                                                 |
-| `AbortError`                 | L'opération a été annulée.                                                                                      |
-| `URLMismatchError`           | L'URL fournie ne correspond pas à une autre URL.                                                                |
-| `QuotaExceededError`         | Le quota a été dépassé.                                                                                         |
-| `TimeoutError`               | L'opération a dépassé le temps autorisé. (Time Out)                                                             |
-| `InvalidNodeTypeError`       | Le noeud est incorrect ou a un ancêtre incorrect pour cette opération.                                          |
-| `DataCloneError`             | L'objet n'a pas pu être cloné.                                                                                  |
+| `HierarchyRequestError`      | La hiérarchie de l'arbre de noeud est incorrecte.                                                         |
+| `WrongDocumentError`         | L'objet est dans le mauvais {{ domxref("document") }}.                                                    |
+| `InvalidCharacterError`      | La chaîne de caractères contient des caractères non valides.                                              |
+| `NoModificationAllowedError` | L'objet ne peut pas être modifié.                                                                         |
+| `NotFoundError`              | L'objet ne peut pas être trouvé.                                                                          |
+| `NotSupportedError`          | Cette opération n'est pas supportée.                                                                      |
+| `InvalidStateError`          | L'objet est dans un état non valide.                                                                      |
+| `SyntaxError`                | La chaîne de caractère ne correspond pas au motif attendu.                                                |
+| `InvalidModificationError`   | L'objet ne peut pas être modifié de cette façon.                                                          |
+| `NamespaceError`             | Cette opération n'est pas autorisée par les Namespaces en XML.                                            |
+| `InvalidAccessError`         | L'objet ne supporte pas cette opération ou cet argument.                                                  |
+| `TypeMismatchError`          | Le type de l'objet ne correspond pas au type attendu.                                                     |
+| `SecurityError`              | L'opération n'est pas sécurisée.                                                                          |
+| `NetworkError`               | Une erreur réseau est survenue.                                                                           |
+| `AbortError`                 | L'opération a été annulée.                                                                                |
+| `URLMismatchError`           | L'URL fournie ne correspond pas à une autre URL.                                                          |
+| `QuotaExceededError`         | Le quota a été dépassé.                                                                                   |
+| `TimeoutError`               | L'opération a dépassé le temps autorisé. (Time Out)                                                       |
+| `InvalidNodeTypeError`       | Le noeud est incorrect ou a un ancêtre incorrect pour cette opération.                                    |
+| `DataCloneError`             | L'objet n'a pas pu être cloné.                                                                            |
 
 ## Spécifications
 

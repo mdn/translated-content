@@ -1,9 +1,9 @@
 ---
-title: 'false'
+title: "false"
 slug: Web/XPath/Functions/false
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `false` 関数は論理値 false を返します。
 

@@ -1,17 +1,6 @@
 ---
 title: Публикация вашего веб-сайта
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
-tags:
-  - FTP
-  - GitHub
-  - Google App Engine
-  - Веб
-  - Веб сервер
-  - Изучение
-  - Начинающий
-  - Публикация
-  - Хостинг
-translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
@@ -26,12 +15,12 @@ translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 
 Чтобы иметь больший контроль над контентом и внешним видом веб-сайта, большинство людей предпочитают покупать веб-хостинг и доменное имя:
 
-- Хостинг — арендованное файловое пространство на [веб-сервере](/en-US/Learn/What_is_a_web_server) хостинговой компании. Вы размещаете ваши файлы веб-сайта в этом пространстве, и веб-сервер выдаёт контент для веб-пользователей, которые запрашивают его.
-- [Доменное имя](/en-US/Learn/Understanding_domain_names) — уникальный адрес по которому люди могут найти ваш веб-сайт, например `http://www.mozilla.org` или `http://www.bbc.co.uk`. Вы можете арендовать доменное имя на столько лет, сколько захотите (минимум на 1 год) у **регистратора доменов**.
+- Хостинг — арендованное файловое пространство на [веб-сервере](/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) хостинговой компании. Вы размещаете ваши файлы веб-сайта в этом пространстве, и веб-сервер выдаёт контент для веб-пользователей, которые запрашивают его.
+- [Доменное имя](/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name) — уникальный адрес по которому люди могут найти ваш веб-сайт, например `http://www.mozilla.org` или `http://www.bbc.co.uk`. Вы можете арендовать доменное имя на столько лет, сколько захотите (минимум на 1 год) у **регистратора доменов**.
 
 Множество профессиональных веб-сайтов располагается в Интернете именно таким образом.
 
-Кроме того, вам потребуется {{Glossary("FTP", "File Transfer Protocol (FTP)")}}-клиент (более подробно см. [Сколько это стоит: программное обеспечение](/en-US/Learn/How_much_does_it_cost#Software)), чтобы передать файлы веб-сайта на сервер. Существует множество FTP-клиентов, но, как правило, вам нужно войти на веб-сервер, используя данные, предоставленные вашей хостинговой компанией (например: имя пользователя (логин), пароль, имя хоста). Затем FTP-клиент отобразит файлы на вашем компьютере в одной половине окна и файлы на хостинговом сервере в другой половине, так вы сможете перетаскивая копировать файлы с вашего компьютера на сервер и обратно.
+Кроме того, вам потребуется {{Glossary("FTP", "File Transfer Protocol (FTP)")}}-клиент (более подробно см. [Сколько это стоит: программное обеспечение](/ru/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#software)), чтобы передать файлы веб-сайта на сервер. Существует множество FTP-клиентов, но, как правило, вам нужно войти на веб-сервер, используя данные, предоставленные вашей хостинговой компанией (например: имя пользователя (логин), пароль, имя хоста). Затем FTP-клиент отобразит файлы на вашем компьютере в одной половине окна и файлы на хостинговом сервере в другой половине, так вы сможете перетаскивая копировать файлы с вашего компьютера на сервер и обратно.
 
 ![](ftp.jpg)
 
@@ -47,7 +36,7 @@ translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 Некоторые сервисы позволяют вам опубликовать сайт:
 
 - [GitHub](https://github.com/) - это "социальная сеть программистов". С помощью неё можно загружать репозитории с вашими разработками для хранения в [Git](http://git-scm.com/) - **систему контроля версий.** По умолчанию все разработки хранятся с открытым исходным кодом, а это значит, что ваш код будет доступен любому - участники могут по нему учиться либо же предлагать свои улучшения. Вы также можете объединяться с другими кодерами! Это очень большое и полезное сообщество, в чьи ряды лучше вступить, и Git/GitHub это очень популярная [система контроля версий](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) — большинство компаний сейчас использует её для работы. GitHub имеет очень полезную функцию [GitHub pages](https://pages.github.com/), с помощью которой вы сможете опубликовать ваш код (ваш сайт) в интернете.
-- [Google App Engine](https://cloud.google.com/appengine/) - это мощная платформа, которая позволяет создавать и запускать приложения в инфраструктуре Google — нужно ли вам создать многоуровневое веб-приложение с нуля или разместить статический веб-сайт. Смотрите [как разместить ваш веб-сайт на Google App Engine](/ru/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine) чтобы узнать больше информации.
+- [Google App Engine](https://cloud.google.com/appengine/) - это мощная платформа, которая позволяет создавать и запускать приложения в инфраструктуре Google — нужно ли вам создать многоуровневое веб-приложение с нуля или разместить статический веб-сайт. Смотрите [как разместить ваш веб-сайт на Google App Engine](/ru/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine) чтобы узнать больше информации.
 
 В отличие от других хостингов, эти услуги обычно бесплатны, но взамен вы получите ограниченный набор инструментов.
 
@@ -58,8 +47,8 @@ translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 Попробуйте один из этих и посмотрите, какой из них вам больше нравится:
 
 - [JSFiddle](https://jsfiddle.net/)
-- [Thimble](https://thimble.mozilla.org)
-- [JSBin](http://jsbin.com/)
+- [Glitch](https://glitch.com/)
+- [JS Bin](https://jsbin.com/)
 - [CodePen](https://codepen.io/)
 
 ![](jsbin-screen.png)
@@ -101,34 +90,34 @@ translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 
 1. Укажите в командной строке каталог `test-site` (или другое название каталога, содержащего ваш сайт). Для этого используйте команду `cd` (т.е. «change directory»). Вот то, что вы наберёте, если разместили свой веб-сайт в каталоге под названием `test-site` на рабочем столе:
 
-    ```bash
-    cd Desktop/test-site
-    ```
+   ```bash
+   cd Desktop/test-site
+   ```
 
 2. Когда командная строка указывает внутрь вашего каталога веб-сайта, введите следующую команду, которая сообщает инструменту `git`, чтобы он превратил каталог в репозиторий git:
 
-    ```bash
-    git init
-    ```
+   ```bash
+   git init
+   ```
 
 3. Далее вернёмся к сайту GitHub. На текущей странице вас интересует раздел "…or push an existing repository from the command line". Вы должны увидеть две строки кода в этом разделе. Скопируйте всю первую строку, вставьте её в командную строку и нажмите Enter. Команда должна выглядеть примерно так:
 
-    ```bash
-    git remote add origin https://github.com/bobsmith/bobsmith.github.io.git
-    ```
+   ```bash
+   git remote add origin https://github.com/bobsmith/bobsmith.github.io.git
+   ```
 
 4. Далее введите следующие две команды, нажимая Enter после каждой. Это подготовит код к загрузке на GitHub, и укажет Git управлять этими файлами.
 
-    ```bash
-    git add --all
-    git commit -m 'adding my files to my repository'
-    ```
+   ```bash
+   git add --all
+   git commit -m 'adding my files to my repository'
+   ```
 
 5. Наконец, загрузите код на GitHub - вернитесь на веб-страницу GitHub, на которой вы находились, и введите в терминал команду:
 
-    ```bash
-    git push -u origin master
-    ```
+   ```bash
+   git push -u origin master
+   ```
 
 6. Теперь, когда вы перейдёте по веб-адресу, созданному в GitHub, в новом окне браузера (_username.github.io_), вы увидите ваш сайт онлайн! Разошлите ссылку вашим друзьям, пусть оценят ваше мастерство.
 
@@ -157,20 +146,9 @@ git push
 ### Дальнейшее чтение
 
 - [Что такое веб-сервер?](/ru/docs/Learn/%D0%A7%D1%82%D0%BE_%D1%82%D0%B0%D0%BA%D0%BE%D0%B5_%D0%B2%D0%B5%D0%B1_%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80)
-- [Что такое доменные имена?](/ru/docs/Learn/Understanding_domain_names)
-- [Сколько стоит сделать что-то в Интернете?](/en-US/Learn/How_much_does_it_cost)
+- [Что такое доменные имена?](/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [Сколько стоит сделать что-то в Интернете?](/ru/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
 - [Развёртывание сайта](https://www.codecademy.com/learn/deploy-a-website): хороший курс от Codecademy, который забегает немного вперёд и показывает некоторые дополнительные техники.
 - [Cheap or Free Static Website Hosting](http://alignedleft.com/resources/cheap-web-hosting), статья написанная Скоттом Мюрреем содержит некоторые полезные идеи о доступных сервисах.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
-
-## В этом модуле
-
-- [Установка базового программного обеспечения](/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F)
-- [Каким должен быть ваш веб-сайт?](/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Работа с файлами](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [Основы HTML](/ru/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [Основы CSS](/ru/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [Основы JavaScript](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Публикация вашего веб-сайта](/ru/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Как работает Веб](/ru/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

@@ -1,11 +1,13 @@
 ---
 title: border-image-repeat
 slug: Web/CSS/border-image-repeat
+l10n:
+  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
 {{CSSRef}}
 
-[CSS](/ja/docs/Web/CSS) の **`border-image-repeat`** プロパティは、元画像の[辺の領域](/ja/docs/Web/CSS/border-image-slice#edge-regions)を、どうやって要素の[境界画像](/ja/docs/Web/CSS/border-image)に合うように合わせるかを定義します。
+[CSS](/ja/docs/Web/CSS) の **`border-image-repeat`** プロパティは、元画像の[辺の領域](/ja/docs/Web/CSS/border-image-slice#edge-regions)と[中央の領域](/ja/docs/Web/CSS/border-image-slice#middle-region)を、どうやって要素の[境界画像](/ja/docs/Web/CSS/border-image)に合うように合わせるかを定義します。 border-image-slice プロパティでキーワード "fill" を使用することで、中央の領域を表示することができます。
 
 {{EmbedInteractiveExample("pages/css/border-image-repeat.html")}}
 
@@ -25,13 +27,14 @@ border-image-repeat: round stretch;
 border-image-repeat: inherit;
 border-image-repeat: initial;
 border-image-repeat: revert;
+border-image-repeat: revert-layer;
 border-image-repeat: unset;
 ```
 
 `border-image-repeat` プロパティは、下記の値のリストにある値を 1 つまたは 2 つ使用して指定することができます。
 
 - 値が **1 つ**指定された場合、**全四辺**に同じ動作が適用されます。
-- 値が **2 つ**指定された場合、1 つ目の動作が**上下**に、2 つ目が**左右**に適用されます。
+- 値が **2 つ**指定された場合、1 つ目の動作が**上、中、下**に、2 つ目が**左、右**に適用されます。
 
 ### 値
 
@@ -54,7 +57,7 @@ border-image-repeat: unset;
 
 ## 例
 
-<h3 id="Repeating_border_images">反復する境界画像</h3>
+### 反復する境界画像
 
 #### CSS
 
@@ -65,7 +68,7 @@ border-image-repeat: unset;
   padding: 1rem;
   border: 40px solid;
   border-image: url("border.png") 27;
-  border-image-repeat: stretch;  /* live sample で変更可能 */
+  border-image-repeat: stretch; /* live sample で変更可能 */
 }
 ```
 
@@ -83,9 +86,10 @@ border-image-repeat: unset;
 ```
 
 ```js hidden
-var repetition = document.getElementById("repetition");
-repetition.addEventListener("change", function (evt) {
-  document.getElementById("bordered").style.borderImageRepeat = evt.target.value;
+const repetition = document.getElementById("repetition");
+repetition.addEventListener("change", (evt) => {
+  document.getElementById("bordered").style.borderImageRepeat =
+    evt.target.value;
 });
 ```
 
@@ -103,5 +107,5 @@ repetition.addEventListener("change", function (evt) {
 
 ## 関連情報
 
-- [背景と境界](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
 - [CSS の学習: 背景と境界](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

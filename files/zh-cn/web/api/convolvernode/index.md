@@ -89,6 +89,6 @@ reverb.connect(audioCtx.destination);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

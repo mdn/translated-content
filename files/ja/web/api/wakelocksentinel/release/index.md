@@ -30,9 +30,9 @@ WakeLockSentinel.release().then(...);
 この例では、ユーザーがボタンをクリックすると {{domxref("WakeLockSentinel")}} が解放されます。
 
 ```js
-wakeLockOffButton.addEventListener('click', () => {
+wakeLockOffButton.addEventListener("click", () => {
   WakeLockSentinel.release();
-})
+});
 ```
 
 ## 仕様書

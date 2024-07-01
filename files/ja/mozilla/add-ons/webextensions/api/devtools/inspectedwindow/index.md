@@ -1,7 +1,6 @@
 ---
 title: devtools.inspectedWindow
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow
 ---
 
 {{AddonSidebar}}
@@ -26,7 +25,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.devtools.inspectedWindow")}}{{WebExtExamples("h2")}}
+{{Compat}}{{WebExtExamples("h2")}}
 
 > **メモ:** この API は Chromium の [`chrome.devtools.inspectedWindow`](https://developer.chrome.com/extensions/devtools_inspectedWindow) API に基づいています。また、このドキュメントは bookmarks.json における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 

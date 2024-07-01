@@ -1,10 +1,9 @@
 ---
 title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/flatMap
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 El método **`flatMap()`** primero mapea cada elemento usando una función de mapeo, luego aplana el resultado en una nueva matriz. Es idéntico a un [map](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido de un [flatten](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten)de profundidad 1, pero `flatMap` es a menudo útil y la fusión de ambos en un método es ligeramente más eficiente.
 
@@ -53,14 +52,14 @@ Ver {{jsxref("Array.prototype.map()")}} para una descripción detallada de la fu
 ```js
 var arr1 = [1, 2, 3, 4];
 
-arr1.map(x => [x * 2]);
+arr1.map((x) => [x * 2]);
 // [[2], [4], [6], [8]]
 
-arr1.flatMap(x => [x * 2]);
+arr1.flatMap((x) => [x * 2]);
 // [2, 4, 6, 8]
 
 // solo un nivel es aplanado
-arr1.flatMap(x => [[x * 2]]);
+arr1.flatMap((x) => [[x * 2]]);
 // [[2], [4], [6], [8]]
 ```
 
@@ -73,7 +72,7 @@ arr1.flatMap(x => [[x * 2]]);
 ```js
 var arr1 = [1, 2, 3, 4];
 
-arr1.flatMap(x => [x * 2]);
+arr1.flatMap((x) => [x * 2]);
 // es equivalente a
 arr1.reduce((acc, x) => acc.concat([x * 2]), []);
 // [2, 4, 6, 8]
@@ -87,7 +86,7 @@ Este polyfill necesita [Array.prototype.flat polyfill](/es/docs/Web/JavaScript/R
 
 ```js
 if (!Array.prototype.flatMap) {
-  Array.prototype.flatMap = function() {
+  Array.prototype.flatMap = function () {
     return Array.prototype.map.apply(this, arguments).flat(1);
   };
 }
@@ -95,13 +94,11 @@ if (!Array.prototype.flatMap) {
 
 ## Especificaciones
 
-| Especificación                                                                                    | Estado         | Comentario |
-| ------------------------------------------------------------------------------------------------- | -------------- | ---------- |
-| [`Array.prototype.flatMap`](https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatMap) | Finalizado (4) |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.flatMap")}}
+{{Compat}}
 
 ## Ver también
 

@@ -11,7 +11,7 @@ slug: Web/API/Channel_Messaging_API
 
 ## Channel 通信的概念和用法
 
-使用 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} 构造函数来创建通讯信道。一旦创建，信道的两个端口即可通过 {{domxref("MessageChannel.port1")}} 和 {{domxref("MessageChannel.port2")}} 属性进行访问（都会返回 {{domxref("MessagePort")}} 对象）。创建信道的应用程序使用 `port1`，在另一端的程序使用 `port2` —— 你向 `port2` 发送信息，然后携带 2 个参数（需要传递的消息，要传递所有权的对象，在这里是 port 自身）调用 {{domxref("window.postMessage")}} 方法将端口信息传递到另一个浏览器上下文。
+使用 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} 构造函数来创建通讯信道。一旦创建，信道的两个端口即可通过 {{domxref("MessageChannel.port1")}} 和 {{domxref("MessageChannel.port2")}} 属性进行访问（都会返回 {{domxref("MessagePort")}} 对象）。创建信道的应用程序使用 `port1`，在另一端的程序使用 `port2`——你向 `port2` 发送信息，然后携带 2 个参数（需要传递的消息，要传递所有权的对象，在这里是 port 自身）调用 {{domxref("window.postMessage")}} 方法将端口信息传递到另一个浏览器上下文。
 
 当这些可传递的对象被传递后，他们就从之前所属的上下文中消失了。比如一个 port，一旦被发送，在原本的上下文中就再也不可用了。注意当前仅有 {{domxref("ArrayBuffer")}} 和 {{domxref("MessagePort")}} 对象可以被发送。
 
@@ -32,8 +32,8 @@ slug: Web/API/Channel_Messaging_API
 
 ## 例子
 
-- 我们在 Github 上发布了 [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic)，在[这里](http://mdn.github.io/dom-examples/channel-messaging-basic/)直接尝试。这个例子展示了一次页面和嵌入 {{htmlelement("iframe")}} 间的真实而简易的消息传递。
-- 你也可以参考 [多个消息 demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-multimessage) ([在线演示](http://mdn.github.io/dom-examples/channel-messaging-multimessage/))。这个例子展示了稍微复杂些的设置，可以在主页面和 IFrame 之间传递多条消息。
+- 我们在 Github 上发布了 [channel messaging 基本演示](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic)，在[这里](http://mdn.github.io/dom-examples/channel-messaging-basic/)直接尝试。这个例子展示了一次页面和嵌入 {{htmlelement("iframe")}} 间的真实而简易的消息传递。
+- 你也可以参考[多个消息演示](https://github.com/mdn/dom-examples/tree/main/channel-messaging-multimessage)（[在线演示](http://mdn.github.io/dom-examples/channel-messaging-multimessage/)）。这个例子展示了稍微复杂些的设置，可以在主页面和 IFrame 之间传递多条消息。
 
 ## 规范
 

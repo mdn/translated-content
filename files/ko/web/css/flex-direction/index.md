@@ -2,6 +2,7 @@
 title: flex-direction
 slug: Web/CSS/flex-direction
 ---
+
 {{CSSRef}}
 
 **`flex-direction`** [CSS](/ko/docs/Web/CSS) 속성은 플렉스 컨테이너 내의 아이템을 배치할 때 사용할 주축 및 방향(정방향, 역방향)을 지정합니다.
@@ -53,15 +54,15 @@ flex-direction: unset;
 ```html
 <h4>This is a Column-Reverse</h4>
 <div id="content">
-    <div class="box" style="background-color:red;">A</div>
-    <div class="box" style="background-color:lightblue;">B</div>
-    <div class="box" style="background-color:yellow;">C</div>
+  <div class="box" style="background-color:red;">A</div>
+  <div class="box" style="background-color:lightblue;">B</div>
+  <div class="box" style="background-color:yellow;">C</div>
 </div>
 <h4>This is a Row-Reverse</h4>
 <div id="content1">
-    <div class="box1" style="background-color:red;">A</div>
-    <div class="box1" style="background-color:lightblue;">B</div>
-    <div class="box1" style="background-color:yellow;">C</div>
+  <div class="box1" style="background-color:red;">A</div>
+  <div class="box1" style="background-color:lightblue;">B</div>
+  <div class="box1" style="background-color:yellow;">C</div>
 </div>
 ```
 

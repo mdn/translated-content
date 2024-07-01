@@ -1,14 +1,6 @@
 ---
 title: Reflect.get()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/get
-original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/get
 ---
 
 {{JSRef}}
@@ -55,9 +47,11 @@ Reflect.get(obj, "x"); // 1
 Reflect.get(["zero", "un"], 1); // "un"
 
 // Proxy qui intercepte get
-var x = {p: 1};
+var x = { p: 1 };
 var obj = new Proxy(x, {
-  get(t, k, r) { return k + "truc"; }
+  get(t, k, r) {
+    return k + "truc";
+  },
 });
 Reflect.get(obj, "toto"); // "tototruc"
 ```

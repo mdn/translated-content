@@ -1,11 +1,6 @@
 ---
 title: Survol des technologies JavaScript
 slug: Web/JavaScript/JavaScript_technologies_overview
-tags:
-  - Beginner
-  - DOM
-  - JavaScript
-translation_of: Web/JavaScript/JavaScript_technologies_overview
 ---
 
 {{JsSidebar("Introductory")}}
@@ -36,7 +31,7 @@ Entre autres choses, ECMAScript définit :
 
 ### Support des navigateurs
 
-En octobre 2016, les versions actuelles des principaux navigateurs web supportent [ECMAScript 5.1](/fr/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla) et [ECMAScript 2015 (aussi appelé ES6)](/fr/docs/Web/JavaScript/Nouveaut%C3%A9s_et_historique_de_JavaScript/Support_ECMAScript_6_par_Mozilla) mais certaines anciennes versions n'implémentent que ECMAScript 5.
+En octobre 2016, les versions actuelles des principaux navigateurs web supportent [ECMAScript 5.1](/fr/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla) et [ECMAScript 2015 (aussi appelé ES6)](/fr/docs/Web/JavaScript/Nouveautés_et_historique_de_JavaScript/Support_ECMAScript_6_par_Mozilla) mais certaines anciennes versions n'implémentent que ECMAScript 5.
 
 ### Futur
 

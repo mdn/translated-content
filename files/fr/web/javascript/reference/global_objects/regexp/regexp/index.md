@@ -1,8 +1,6 @@
 ---
 title: Constructeur RegExp()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
-browser-compat: javascript.builtins.RegExp.RegExp
 ---
 
 {{JSRef}}
@@ -73,9 +71,9 @@ Il existe deux façons de créer un objet `RegExp`&nbsp;: en utilisant _une nota
 Les trois expressions suivantes permettent de créer la même expression rationnelle&nbsp;:
 
 ```js
-/ab+c/i
-new RegExp(/ab+c/, 'i') // Notation littérale
-new RegExp('ab+c', 'i') // Constructeur
+/ab+c/i;
+new RegExp(/ab+c/, "i"); // Notation littérale
+new RegExp("ab+c", "i"); // Constructeur
 ```
 
 La notation littérale provoque la compilation de l'expression rationnelle lorsque l'expression est évaluée. On utilisera la notation littérale lorsque l'expression rationnelle demeure constante. Ainsi, si on utilise une notation littérale pour construire une expression rationnelle utilisée dans une boucle, l'expression rationnelle ne sera pas recompilée à chaque itération.

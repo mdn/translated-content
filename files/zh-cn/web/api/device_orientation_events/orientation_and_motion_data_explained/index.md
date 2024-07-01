@@ -1,8 +1,9 @@
 ---
 title: Orientation 和 motion 数据解释
 slug: Web/API/Device_orientation_events/Orientation_and_motion_data_explained
-original_slug: Web/Events/Orientation_and_motion_data_explained
 ---
+
+{{DefaultAPISidebar("Device Orientation Events")}}
 
 ## 总言
 

@@ -1,21 +1,18 @@
 ---
-title: DOMException.name
+title: "DOMException: name プロパティ"
+short-title: name
 slug: Web/API/DOMException/name
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{ APIRef("DOM") }}
 
-**`name`** は {{domxref("DOMException")}} インターフェイスの読取専用プロパティで、 [エラー名](/ja/docs/Web/API/DOMException#Error_names)に結びつけられた文字列のうちの一つを含む {{domxref("DOMString")}} を返します。
+**`name`** は {{domxref("DOMException")}} インターフェイスの読み取り専用プロパティで、[エラー名](/ja/docs/Web/API/DOMException#エラー名)に結びつけられた文字列のうちの 1 つを含む文字列を返します。
 
-## 構文
+## 値
 
-```
-var domExceptionName = domExceptionInstance.name;
-```
-
-### 値
-
-{{domxref("DOMString")}} です。
+文字列です。
 
 ## 仕様書
 
@@ -23,4 +20,4 @@ var domExceptionName = domExceptionInstance.name;
 
 ## ブラウザーの互換性
 
-{{Compat("api.DOMException.name")}}
+{{Compat}}

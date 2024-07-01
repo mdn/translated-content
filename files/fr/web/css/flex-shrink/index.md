@@ -1,11 +1,6 @@
 ---
 title: flex-shrink
 slug: Web/CSS/flex-shrink
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/flex-shrink
 ---
 
 {{CSSRef}}
@@ -72,7 +67,7 @@ La propriété `flex-shrink` est définie grâce à une valeur de type [`<number
 
 #content div {
   flex-basis: 120px;
-  border: 3px solid rgba(0,0,0.2);
+  border: 3px solid rgba(0, 0, 0.2);
 }
 
 .box {

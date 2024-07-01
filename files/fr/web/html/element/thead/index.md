@@ -1,8 +1,6 @@
 ---
 title: <thead>
 slug: Web/HTML/Element/thead
-translation_of: Web/HTML/Element/thead
-browser-compat: html.elements.thead
 ---
 
 {{HTMLSidebar}}
@@ -59,6 +57,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 ### Attributs dépréciés ou obsolètes
 
 - `align` {{Deprecated_inline}}
+
   - : Cet attribut définit l'alignement horizontal pour le contenu de chaque cellule. Les valeurs possibles sont&nbsp;:
 
     - `left`
@@ -80,21 +79,25 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
     > - Pour réaliser le même effet qu'avec `char`, vous pouvez utiliser la valeur de `char` comme valeur pour la propriété [`text-align`](/fr/docs/Web/CSS/text-align).
 
 - `bgcolor` {{Non-standard_inline}}
+
   - : Cet attribut définit la couleur d'arrière-plan de chaque cellule dans une colonne. Sa valeur est [un code hexadécimal RGB sur 6 chiffres](/fr/docs/Web/CSS/color_value#les_couleurs_rgb), préfixé d'un '`#`' ou un des [mots-clés de couleurs prédéfinis](/fr/docs/Web/CSS/color_value#les_mots-clés).
 
     Pour réaliser un effet équivalent, on utilisera plutôt la propriété CSS [`background-color`](/fr/docs/Web/CSS/background-color).
 
 - `char` {{Deprecated_inline}}
+
   - : Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut `align` ne vaut pas `char`, l'attribut est ignoré.
 
     > **Note :** Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec `char`, on peut utiliser la même valeur sur la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align).
 
 - `charoff` {{Deprecated_inline}}
+
   - : Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut `char` à appliquer au contenu des cellules.
 
     > **Note :** Cet attribut ne doit plus être utilisé, car il est maintenant obsolète et n'est plus supporté dans le dernier standard.
 
 - `valign` {{Deprecated_inline}}
+
   - : Cet attribut définit l'alignement vertical du texte des cellules de la colonne. Les valeurs possibles pour cet attribut sont&nbsp;:
 
     - `baseline`

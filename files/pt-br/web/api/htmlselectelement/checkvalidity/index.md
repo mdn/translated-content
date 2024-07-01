@@ -15,14 +15,11 @@ var resultado = selectElt.checkValidity();
 
 ## Especificações
 
-| Especificação                                                                                                                        | Status                           | Comentário                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-cva-checkvalidity', 'HTMLSelectElement.checkValidity()')}}             | {{Spec2('HTML WHATWG')}} | No change since the latest snapshot, {{SpecName('HTML5 W3C')}}. |
-| {{SpecName('HTML5 W3C', 'forms.html#dom-cva-checkvalidity', 'HTMLSelectElement.checkValidity()')}} | {{Spec2('HTML5 W3C')}}     | Initial definition, snapshot of {{SpecName('HTML WHATWG')}}   |
+{{Specifications}}
 
-## Browser compatibilidade
+## Compatibilidade com navegadores
 
-{{Compat("api.HTMLSelectElement.checkValidity")}}
+{{Compat}}
 
 ## Veja também
 

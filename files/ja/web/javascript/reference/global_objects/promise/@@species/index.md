@@ -14,7 +14,7 @@ l10n:
 ## 構文
 
 ```js
-Promise[Symbol.species]
+Promise[Symbol.species];
 ```
 
 ### 返値

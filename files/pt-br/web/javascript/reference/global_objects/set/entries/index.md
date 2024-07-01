@@ -32,14 +32,11 @@ console.log(setIter.next().value); // ["baz", "baz"]
 
 ## Especificações
 
-| Especificações                                                                                           | Status                       | Comentário        |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------- |
-| {{SpecName('ES6', '#sec-set.prototype.entries', 'Set.prototype.entries')}}     | {{Spec2('ES6')}}         | Definição inicial |
-| {{SpecName('ESDraft', '#sec-set.prototype.entries', 'Set.prototype.entries')}} | {{Spec2('ESDraft')}} |                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Set.entries")}}
+{{Compat}}
 
 ## Veja também
 

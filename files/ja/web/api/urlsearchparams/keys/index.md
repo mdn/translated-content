@@ -1,55 +1,58 @@
 ---
-title: URLSearchParams.keys()
+title: "URLSearchParams: keys() メソッド"
+short-title: keys()
 slug: Web/API/URLSearchParams/keys
+l10n:
+  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
 
 {{APIRef("URL API")}}
 
-{{domxref("URLSearchParams")}} インターフェイスの **`keys()`** メソッドは、このオブジェクトに含まれるすべてのキーを反復処理できる {{jsxref("Iteration_protocols",'iterator')}} を返します。 キーは {{domxref("USVString")}} オブジェクトです。
+**`keys()`** は {{domxref("URLSearchParams")}} インターフェイスのメソッドで、このオブジェクトに含まれるすべてのキーを反復処理できる{{jsxref("Iteration_protocols",'イテレーター')}}を返します。 キーは文字列です。
 
-{{availableinworkers}}
+> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
 
 ## 構文
 
-```
-searchParams.keys();
+```js-nolint
+keys()
 ```
 
-### パラメーター
+### 引数
 
 なし。
 
-### 戻り値
+### 返値
 
-{{jsxref("Iteration_protocols","iterator")}} を返します。
+{{jsxref("Iteration_protocols","イテレーター")}}を返します。
 
 ## 例
 
 ```js
 // テスト用の URLSearchParams オブジェクトの作成
-var searchParams = new URLSearchParams("key1=value1&key2=value2");
+const searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // キーの表示
-for(var key of searchParams.keys()) {
+for (const key of searchParams.keys()) {
   console.log(key);
 }
 ```
 
 結果は次のとおりです。
 
-```
+```plain
 key1
 key2
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.URLSearchParams.keys")}}
+{{Compat}}
 
 ## 関連項目
 
-- {{domxref("URL")}} インターフェイス。
+- {{domxref("URL")}} インターフェイス

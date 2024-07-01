@@ -30,22 +30,22 @@ A promise that resolves with a {{domxref("USVString")}}.
 当进入 `getData()` 函数，我们使用 {{domxref("Request.Request","Request()")}} 构造函数创建了一个请求（Request）对象，然后，使用它获取指定的`.txt`的文件，当 fetch 函数执行成功，我们使用 `text()` 函数来返回一个{{jsxref("USVString")}} (text) 对象，将它设置到 {{htmlelement("article")}} 对象的{{domxref("Element.innerHTML","innerHTML")}}（元素文本）中。
 
 ```js
-const myArticle = document.querySelector('article');
-const myLinks   = document.querySelectorAll('ul a');
+const myArticle = document.querySelector("article");
+const myLinks = document.querySelectorAll("ul a");
 
-for(i = 0; i <= myLinks.length-1; i++) {
-  myLinks[i].onclick = function(e) {
+for (i = 0; i <= myLinks.length - 1; i++) {
+  myLinks[i].onclick = function (e) {
     e.preventDefault();
-    var linkData = e.target.getAttribute('data-page');
+    var linkData = e.target.getAttribute("data-page");
     getData(linkData);
-  }
-};
+  };
+}
 
 function getData(pageId) {
   console.log(pageId);
-  const myRequest = new Request(pageId + '.txt');
-  fetch(myRequest).then(function(response) {
-    return response.text().then(function(text) {
+  const myRequest = new Request(pageId + ".txt");
+  fetch(myRequest).then(function (response) {
+    return response.text().then(function (text) {
       myArticle.innerHTML = text;
     });
   });

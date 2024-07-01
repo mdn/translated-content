@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
-translation_of: Web/API/HTMLElement/offsetLeft
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -33,16 +32,18 @@ if (tOLeft > 5) {
 
 This example shows a 'long' sentence that wraps within a div with a blue border, and a red box that one might think should describe the boundaries of the span.
 
-![Image:offsetLeft.jpg](/@api/deki/files/790/=OffsetLeft.jpg)
+![](offsetleft.jpg)
 
 ```html
-<div style="width: 300px; border-color:blue; border-style:solid; border-width:1;">
+<div
+  style="width: 300px; border-color:blue; border-style:solid; border-width:1;">
   <span>Short span. </span>
   <span id="longspan">Long span that wraps within this div.</span>
 </div>
 
-<div id="box" style="position: absolute; border-color: red; border-width: 1; border-style: solid; z-index: 10">
-</div>
+<div
+  id="box"
+  style="position: absolute; border-color: red; border-width: 1; border-style: solid; z-index: 10"></div>
 
 <script type="text/javascript">
   var box = document.getElementById("box");
@@ -56,14 +57,12 @@ This example shows a 'long' sentence that wraps within a div with a blue border,
 
 ## Specification
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsetleft', 'offsetLeft')}} | {{Spec2('CSSOM View')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("HTMLElement.offsetParent")}}, {{domxref("HTMLElement.offsetTop")}}, {{domxref("HTMLElement.offsetWidth")}}, {{domxref("HTMLElement.offsetHeight")}}

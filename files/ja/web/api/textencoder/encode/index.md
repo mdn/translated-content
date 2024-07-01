@@ -1,6 +1,8 @@
 ---
-title: TextEncode.encode()
+title: "TextEncoder: encode() メソッド"
 slug: Web/API/TextEncoder/encode
+l10n:
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
 {{APIRef("Encoding API")}}
@@ -9,7 +11,7 @@ slug: Web/API/TextEncoder/encode
 
 ## 構文
 
-```js
+```js-nolint
 encode(string)
 ```
 
@@ -26,12 +28,12 @@ encode(string)
 
 ```html
 <p class="source">This is a sample paragraph.</p>
-<p class="result">Encoded result: </p>
+<p class="result">Encoded result:</p>
 ```
 
 ```js
-const sourcePara = document.querySelector('.source');
-const resultPara = document.querySelector('.result');
+const sourcePara = document.querySelector(".source");
+const resultPara = document.querySelector(".result");
 const string = sourcePara.textContent;
 
 const textEncoder = new TextEncoder();

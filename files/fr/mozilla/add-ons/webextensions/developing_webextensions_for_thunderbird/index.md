@@ -1,7 +1,6 @@
 ---
 title: Développer des WebExtensions pour Thunderbird
 slug: Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
-translation_of: Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
 ---
 
 {{AddonSidebar}}

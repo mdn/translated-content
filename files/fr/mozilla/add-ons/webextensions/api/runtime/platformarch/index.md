@@ -1,20 +1,9 @@
 ---
 title: runtime.PlatformArch
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - PlatformArch
-  - Reference
-  - Type
-  - WebExtensions
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'architecture du processeur de la machine.
 
@@ -29,9 +18,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possible sont :
 - `"x86-64"`
   - : La plateforme est basé sur l'architecture x86 64-bits.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.PlatformArch")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

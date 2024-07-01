@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.getPose()
 slug: Web/API/VRDisplay/getPose
-original_slug: Web/API/VRDevice/getPose
 ---
 
 {{APIRef("WebVR API")}}{{deprecated_header}}
@@ -15,7 +14,7 @@ original_slug: Web/API/VRDevice/getPose
 ## 構文
 
 ```js
-getPose()
+getPose();
 ```
 
 ### 引数
@@ -64,5 +63,4 @@ if(navigator.getVRDisplays) {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

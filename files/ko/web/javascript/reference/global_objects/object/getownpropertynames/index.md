@@ -2,6 +2,7 @@
 title: Object.getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 ---
+
 {{JSRef}}
 
 **`Object.getOwnPropertyNames()`** 메서드는 전달된 객체의 모든 속성 (심볼을 사용하는 속성을 제외한 열거할 수 없는 속성 포함) 들을 배열로 반환합니다.
@@ -11,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 ## 구문
 
 ```js
-Object.getOwnPropertyNames(obj)
+Object.getOwnPropertyNames(obj);
 ```
 
 ### 매개변수
@@ -33,10 +34,10 @@ ES5에서는 인수(`obj`)가 객체가 아닌 경우 (원시 타입) {{jsxref("
 ES2015에서는, 객체가 아닌 인수를 객체 타입으로 강제 형변환합니다.
 
 ```js
-Object.getOwnPropertyNames('foo');
+Object.getOwnPropertyNames("foo");
 // TypeError: "foo" is not an object (ES5 code)
 
-Object.getOwnPropertyNames('foo');
+Object.getOwnPropertyNames("foo");
 // ["0", "1", "2", "length"]  (ES2015 code)
 ```
 
@@ -45,33 +46,36 @@ Object.getOwnPropertyNames('foo');
 ### Using Object.getOwnPropertyNames()
 
 ```js
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 console.log(Object.getOwnPropertyNames(arr).sort()); // .sort() 는 배열 메서드입니다.
 // logs ["0", "1", "2", "length"]
 
 // 배열형 객체
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
+var obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.getOwnPropertyNames(obj).sort()); // .sort() 는 배열 메서드입니다.
 // logs ["0", "1", "2"]
 
 // 속성 명과 속성 값을 Array.forEach 메서드를 사용하여 로깅합니다.
-Object.getOwnPropertyNames(obj).forEach(
-  function (val, idx, array) {
-    console.log(val + ' -> ' + obj[val]);
-  }
-);
+Object.getOwnPropertyNames(obj).forEach(function (val, idx, array) {
+  console.log(val + " -> " + obj[val]);
+});
 // logs
 // 0 -> a
 // 1 -> b
 // 2 -> c
 
 // 열거할 수 없는 속성
-var my_obj = Object.create({}, {
-  getFoo: {
-    value: function() { return this.foo; },
-    enumerable: false
-  }
-});
+var my_obj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+      enumerable: false,
+    },
+  },
+);
 my_obj.foo = 1;
 
 console.log(Object.getOwnPropertyNames(my_obj).sort());
@@ -85,19 +89,19 @@ console.log(Object.getOwnPropertyNames(my_obj).sort());
 
 ```js
 function ParentClass() {}
-ParentClass.prototype.inheritedMethod = function() {};
+ParentClass.prototype.inheritedMethod = function () {};
 
 function ChildClass() {
   this.prop = 5;
-  this.method = function() {};
+  this.method = function () {};
 }
-ChildClass.prototype = new ParentClass;
-ChildClass.prototype.prototypeMethod = function() {};
+ChildClass.prototype = new ParentClass();
+ChildClass.prototype.prototypeMethod = function () {};
 
 console.log(
   Object.getOwnPropertyNames(
-    new ChildClass() // ["prop", "method"]
-  )
+    new ChildClass(), // ["prop", "method"]
+  ),
 );
 ```
 
@@ -109,7 +113,7 @@ console.log(
 var target = myObject;
 var enum_and_nonenum = Object.getOwnPropertyNames(target);
 var enum_only = Object.keys(target);
-var nonenum_only = enum_and_nonenum.filter(function(key) {
+var nonenum_only = enum_and_nonenum.filter(function (key) {
   var indexInEnum = enum_only.indexOf(key);
   if (indexInEnum == -1) {
     // enum_only 에 키 값이 없다는 것은

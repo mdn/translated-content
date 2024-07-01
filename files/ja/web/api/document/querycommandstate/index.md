@@ -1,16 +1,19 @@
 ---
-title: Document.queryCommandState()
+title: "Document: queryCommandState() メソッド"
+short-title: queryCommandState()
 slug: Web/API/Document/queryCommandState
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}
+{{ApiRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 **`queryCommandState()`** メソッドは、現在の選択範囲に特定の {{domxref("Document.execCommand()")}} コマンドが適用されているかどうかを知らせます。
 
 ## 構文
 
-```js
-queryCommandState(String command)
+```js-nolint
+queryCommandState(command)
 ```
 
 ### 引数
@@ -29,13 +32,14 @@ queryCommandState(String command)
 <div contenteditable="true">Select a part of this text!</div>
 <button onclick="makeBold();">Test the state of the 'bold' command</button>
 
-<hr>
+<hr />
 
 <div id="output"></div>
 ```
 
 ```css hidden
-hr, button {
+hr,
+button {
   margin: 1rem 0;
 }
 ```
@@ -58,7 +62,7 @@ function makeBold() {
       break;
   }
   document.querySelector("#output").textContent = `Output: ${message}`;
-  document.execCommand('bold');
+  document.execCommand("bold");
 }
 ```
 

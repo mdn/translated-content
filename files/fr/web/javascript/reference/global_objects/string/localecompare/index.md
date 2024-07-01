@@ -1,9 +1,6 @@
 ---
 title: String.prototype.localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
-translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/localeCompare
-browser-compat: javascript.builtins.String.localeCompare
 ---
 
 {{JSRef}}
@@ -17,14 +14,15 @@ Les arguments `locales` et `options` permettent de définir la locale et des opt
 ## Syntaxe
 
 ```js
-localeCompare(chaineAComparer)
-localeCompare(chaineAComparer, locales)
-localeCompare(chaineAComparer, locales, options)
+localeCompare(chaineAComparer);
+localeCompare(chaineAComparer, locales);
+localeCompare(chaineAComparer, locales, options);
 ```
 
 ### Paramètres
 
 - `chaineAComparer`
+
   - : La chaîne avec laquelle on souhaite comparer la chaîne de caractères courante.
 
 - `locales` et `options`
@@ -79,8 +77,8 @@ L'exemple qui suit illustre les différents cas de figures lors de la comparaiso
 `localeCompare()` permet de trier un tableau sans tenir compte de la casse&nbsp;:
 
 ```js
-var items = ['réservé', 'Premier', 'Cliché', 'communiqué', 'café', 'Adieu'];
-items.sort((a, b) => a.localeCompare(b, 'fr', {ignorePunctuation: true}));
+var items = ["réservé", "Premier", "Cliché", "communiqué", "café", "Adieu"];
+items.sort((a, b) => a.localeCompare(b, "fr", { ignorePunctuation: true }));
 // ['Adieu', 'café', 'Cliché', 'communiqué', 'Premier', 'réservé']
 ```
 
@@ -93,9 +91,9 @@ Pour vérifier qu'une implémentation implémente ces paramètres, il est possib
 ```js
 function localeCompareSupportsLocales() {
   try {
-    'toto'.localeCompare('truc', 'i');
+    "toto".localeCompare("truc", "i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -106,8 +104,8 @@ function localeCompareSupportsLocales() {
 Les résultats fournis par la méthode `localeCompare()` peuvent varier selon les locales utilisées. Pour spécifier la locale à utiliser pour votre application, utilisez l'argument `locales` (éventuellement en incluant des locales de recours)&nbsp;:
 
 ```js
-console.log('ä'.localeCompare('z', 'de')); // une valeur négative : en allemand ä est avant z
-console.log('ä'.localeCompare('z', 'sv')); // une valeur positive : en suédois, ä arrive après z
+console.log("ä".localeCompare("z", "de")); // une valeur négative : en allemand ä est avant z
+console.log("ä".localeCompare("z", "sv")); // une valeur positive : en suédois, ä arrive après z
 ```
 
 ### Utiliser le paramètre `options`
@@ -116,10 +114,10 @@ Les résultats construits par la méthode `localeCompare()` peuvent être adapt�
 
 ```js
 // en allemand, ä et a ont la même lettre de base
-console.log('ä'.localeCompare('a', 'de', {sensitivity: "base"})); // 0
+console.log("ä".localeCompare("a", "de", { sensitivity: "base" })); // 0
 
 // en suédois, ä et a n'ont pas la même lettre de base
-console.log('ä'.localeCompare('a', 'sv', {sensitivity: "base"})); // une valeur positive
+console.log("ä".localeCompare("a", "sv", { sensitivity: "base" })); // une valeur positive
 ```
 
 ### Tri numérique
@@ -129,10 +127,10 @@ console.log('ä'.localeCompare('a', 'sv', {sensitivity: "base"})); // une valeur
 console.log("2".localeCompare("10")); // 1
 
 // En utilisant un ordre numérique
-console.log("2".localeCompare("10", undefined, {numeric: true})); // -1
+console.log("2".localeCompare("10", undefined, { numeric: true })); // -1
 
 // En utilisant une balise de locale
-console.log("2".localeCompare("10","en-u-kn-true")); // -1
+console.log("2".localeCompare("10", "en-u-kn-true")); // -1
 ```
 
 ## Spécifications

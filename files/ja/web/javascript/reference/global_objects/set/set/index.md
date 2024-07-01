@@ -1,20 +1,24 @@
 ---
 title: Set() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
+l10n:
+  sourceCommit: 84aaeee9a64e1bfe002837468eb798e5d5eb2bbe
 ---
 
 {{JSRef}}
 
-**`Set` コンストラクター**は、あらゆる型の一意な[プリミティブ値](/ja/docs/Glossary/Primitive)やオブジェクト参照を格納する `Set` オブジェクトを生成します。
+**`Set()`** コンストラクターは {{jsxref("Set")}} オブジェクトを生成します。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-constructor.html")}}
 
 ## 構文
 
-```js
+```js-nolint
 new Set()
 new Set(iterable)
 ```
+
+> **メモ:** `Set()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を付けてのみ構築することができ案す。 `new` 無しで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
 
 ### 引数
 
@@ -33,14 +37,14 @@ new Set(iterable)
 ### `Set` オブジェクトの使用
 
 ```js
-let mySet = new Set()
+const mySet = new Set();
 
-mySet.add(1)           // Set [ 1 ]
-mySet.add(5)           // Set [ 1, 5 ]
-mySet.add(5)           // Set [ 1, 5 ]
-mySet.add('some text') // Set [ 1, 5, 'some text' ]
-let o = {a: 1, b: 2}
-mySet.add(o)
+mySet.add(1); // Set [ 1 ]
+mySet.add(5); // Set [ 1, 5 ]
+mySet.add(5); // Set [ 1, 5 ]
+mySet.add("some text"); // Set [ 1, 5, 'some text' ]
+const o = { a: 1, b: 2 };
+mySet.add(o);
 ```
 
 ## 仕様書
@@ -53,5 +57,5 @@ mySet.add(o)
 
 ## 関連情報
 
-- `Set` のポリフィルが [`core-js`](https://github.com/zloirock/core-js#set) で利用できます
+- [`Set` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#set)
 - {{jsxref("Set")}}

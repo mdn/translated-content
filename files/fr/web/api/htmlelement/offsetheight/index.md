@@ -1,9 +1,6 @@
 ---
 title: element.offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
-tags:
-  - Référence_du_DOM_Gecko
-translation_of: Web/API/HTMLElement/offsetHeight
 ---
 
 {{ ApiRef() }}

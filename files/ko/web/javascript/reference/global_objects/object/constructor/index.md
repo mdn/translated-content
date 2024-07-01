@@ -12,20 +12,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
 모든 객체는 자신의 `prototype`으로부터 `constructor` 속성을 상속합니다:
 
 ```js
-    var o = {};
-    o.constructor === Object; // true
+var o = {};
+o.constructor === Object; // true
 
-    var o = new Object;
-    o.constructor === Object; // true
+var o = new Object();
+o.constructor === Object; // true
 
-    var a = [];
-    a.constructor === Array; // true
+var a = [];
+a.constructor === Array; // true
 
-    var a = new Array;
-    a.constructor === Array; // true
+var a = new Array();
+a.constructor === Array; // true
 
-    var n = new Number(3);
-    n.constructor === Number; // true
+var n = new Number(3);
+n.constructor === Number; // true
 ```
 
 ## 예제
@@ -39,8 +39,8 @@ function Tree(name) {
   this.name = name;
 }
 
-var theTree = new Tree('Redwood');
-console.log('theTree.constructor is ' + theTree.constructor);
+var theTree = new Tree("Redwood");
+console.log("theTree.constructor is " + theTree.constructor);
 ```
 
 이 예는 다음 출력을 표시합니다:
@@ -56,34 +56,38 @@ theTree.constructor is function Tree(name) {
 다음 예는 일반 객체의 constructor 값을 수정하는 법을 보입니다. `true`, `1` 및 `"test"`만이 원래 읽기 전용 생성자를 갖기에 영향을 받지 않습니다. 이 예는 객체의 `constructor` 속성에 의존하는 게 항상 안전하지는 않음을 보입니다.
 
 ```js
-function Type () {}
+function Type() {}
 
 var types = [
   new Array(),
   [],
   new Boolean(),
-  true,             // 바뀌지 않음
+  true, // 바뀌지 않음
   new Date(),
   new Error(),
   new Function(),
   function () {},
   Math,
   new Number(),
-  1,                // 바뀌지 않음
+  1, // 바뀌지 않음
   new Object(),
   {},
   new RegExp(),
   /(?:)/,
   new String(),
-  'test'            // 바뀌지 않음
+  "test", // 바뀌지 않음
 ];
 
 for (var i = 0; i < types.length; i++) {
   types[i].constructor = Type;
-  types[i] = [types[i].constructor, types[i] instanceof Type, types[i].toString()];
+  types[i] = [
+    types[i].constructor,
+    types[i] instanceof Type,
+    types[i].toString(),
+  ];
 }
 
-console.log(types.join('\n'));
+console.log(types.join("\n"));
 ```
 
 이 예는 다음 출력을 표시합니다:

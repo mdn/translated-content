@@ -1,40 +1,38 @@
 ---
-title: URL.hostname
+title: "URL: hostname プロパティ"
+short-title: hostname
 slug: Web/API/URL/hostname
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{ApiRef("URL API")}}
 
-{{domxref("URL")}} インターフェイスの **`hostname`** プロパティは、URL のドメインを含む {{domxref("USVString")}} です。
+**`hostname`** は {{domxref("URL")}} インターフェイスのプロパティで、URL の{{glossary("domain name", "ドメイン名")}}の入った文字列です。
 
 {{AvailableInWorkers}}
 
-## 構文
+## 値
 
-```
-string = object.hostname;
-object.hostname = string;
-```
-
-### 値
-
-{{domxref("USVString")}}。
+文字列です。
 
 ## 例
 
 ```js
-var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/hostname');
-var result = url.hostname; // 戻り値: 'developer.mozilla.org'
+const url = new URL(
+  "https://developer.mozilla.org/ja/docs/Web/API/URL/hostname",
+);
+console.log(url.hostname); // 'developer.mozilla.org' をログ出力
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.URL.hostname")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{domxref("URL")}} インターフェイスに属します。
+- 所属先の {{domxref("URL")}} インターフェイス

@@ -1,11 +1,6 @@
 ---
 title: Guides pour les développeurs du Web
 slug: Web/Guide
-tags:
-  - Guide
-  - Landing
-  - Web
-translation_of: Web/Guide
 ---
 
 **Ces articles sont des tutoriels et guides pratiques permettant d'utiliser certaines API et technologies web.**

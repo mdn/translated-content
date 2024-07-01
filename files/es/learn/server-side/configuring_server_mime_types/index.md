@@ -1,8 +1,9 @@
 ---
 title: Configurar correctamente los tipos MIME del servidor
 slug: Learn/Server-side/Configuring_server_MIME_types
-original_slug: Configurar_correctamente_los_tipos_MIME_del_servidor
 ---
+
+{{LearnSidebar}}
 
 ### Introduccion
 

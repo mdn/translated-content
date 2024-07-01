@@ -30,10 +30,10 @@ O protocolo HTTP define um conjunto de **métodos de requisição** responsávei
 
 ## Especificações
 
-| Especificação                                        | Título                                                        | Comentário                                                                   |
-| ---------------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Especificação                           | Título                                                        | Comentário                                                                   |
+| --------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | {{RFC("7231", "Request methods", "4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content | Especifica os métodos GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE. |
-| {{RFC("5789", "Patch method", "2")}}     | PATCH Method for HTTP                                         | Especifica o método PATCH.                                                   |
+| {{RFC("5789", "Patch method", "2")}}    | PATCH Method for HTTP                                         | Especifica o método PATCH.                                                   |
 
 ## Compatibilidade com navegadores
 

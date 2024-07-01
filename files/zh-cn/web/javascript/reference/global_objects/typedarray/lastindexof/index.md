@@ -9,8 +9,9 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
 
 ## 语法
 
-```plain
-typedarray.lastIndexOf(searchElement[, fromIndex = typedarray.length])
+```js-nolint
+lastIndexOf(searchElement)
+lastIndexOf(searchElement, fromIndex)
 ```
 
 ### 参数
@@ -32,10 +33,10 @@ typedarray.lastIndexOf(searchElement[, fromIndex = typedarray.length])
 
 ```js
 var uint8 = new Uint8Array([2, 5, 9, 2]);
-uint8.lastIndexOf(2);     // 3
-uint8.lastIndexOf(7);     // -1
-uint8.lastIndexOf(2, 3);  // 3
-uint8.lastIndexOf(2, 2);  // 0
+uint8.lastIndexOf(2); // 3
+uint8.lastIndexOf(7); // -1
+uint8.lastIndexOf(2, 3); // 3
+uint8.lastIndexOf(2, 2); // 0
 uint8.lastIndexOf(2, -2); // 0
 uint8.lastIndexOf(2, -1); // 3
 ```
@@ -48,7 +49,7 @@ uint8.lastIndexOf(2, -1); // 3
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("TypedArray.prototype.indexOf()")}}
 - {{jsxref("Array.prototype.lastIndexOf()")}}

@@ -1,14 +1,6 @@
 ---
 title: Symbol.keyFor()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/keyFor
 ---
 
 {{JSRef}}

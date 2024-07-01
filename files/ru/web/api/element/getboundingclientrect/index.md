@@ -1,18 +1,6 @@
 ---
 title: Element.getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
-tags:
-  - API
-  - DOM
-  - JavaScript
-  - getBoundingClientRect
-  - Позиция
-  - Прямоугольник
-  - Самый маленький
-  - Справка
-  - Элемент
-  - метод
-translation_of: Web/API/Element/getBoundingClientRect
 ---
 
 {{APIRef("DOM")}}
@@ -43,11 +31,17 @@ domRect = element.getBoundingClientRect();
 
 ```js
 // Для scrollX
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.scrollLeft == 'number' ? t : document.body).scrollLeft
-// Для scrollY
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.scrollTop == 'number' ? t : document.body).scrollTop
+(((t = document.documentElement) || (t = document.body.parentNode)) &&
+typeof t.scrollLeft == "number"
+  ? t
+  : document.body
+).scrollLeft(
+  // Для scrollY
+  ((t = document.documentElement) || (t = document.body.parentNode)) &&
+    typeof t.scrollTop == "number"
+    ? t
+    : document.body,
+).scrollTop;
 ```
 
 ## Пример
@@ -57,31 +51,11 @@ domRect = element.getBoundingClientRect();
 var rect = obj.getBoundingClientRect();
 ```
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                                                         | Статус                           | Комментарий        |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM View", "#dom-element-getboundingclientrect", "Element.getBoundingClientRect()")}} | {{Spec2("CSSOM View")}} | Initial definition |
+{{Specifications}}
 
-### Примечания
-
-Возвращаемый `DOMRect` объект может быть модифицирован в современных браузерах. Это не так со старыми версиями, которые возвращали `DOMRectReadOnly`. У IE и Edge, не имея возможности добавить пропущенные свойства к возвращаемым ими [`ClientRect`](<https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx>), объект не позволял добавить `x` и `y`.
-
-Для кроссбраузерности надёжно использовать только `left`, `top`, `right`, и `bottom`.
-
-Свойства у `DOMRect` не являются собственными. `in` оператор и `for...in` найдут возвращённые значение, но другие APIs, `Object.keys()`, — нет. А ещё `Object.assign()` и spread оператор не копируют их.
-
-```
-rect = elt.getBoundingClientRect()
-// emptyObj всегда {}
-emptyObj = Object.assign({}, rect)
-emptyObj = { ...rect }
-{width, ...emptyObj} = rect
-```
-
-`DOMRect` свойства `top`, `left`, `right` и `bottom` вычисляются, используя значения других свойств объекта.
-
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

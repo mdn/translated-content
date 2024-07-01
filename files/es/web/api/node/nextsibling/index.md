@@ -32,20 +32,19 @@ for more information.
 <div id="div-02">Este es el div-02</div>
 
 <script type="text/javascript">
-var el = document.getElementById('div-01').nextSibling,
+  var el = document.getElementById("div-01").nextSibling,
     i = 1;
 
-console.log('Hermanos de div-01:');
+  console.log("Hermanos de div-01:");
 
-while (el) {
-  console.log(i + '. ' + el.nodeName);
-  el = el.nextSibling;
-  i++;
-}
-
+  while (el) {
+    console.log(i + ". " + el.nodeName);
+    el = el.nextSibling;
+    i++;
+  }
 </script>
 
-/**************************************************
+<!--
   Lo siguiente se escribe en la consola cuando carga:
 
       Nodos hermanos del div-01
@@ -55,21 +54,20 @@ while (el) {
       3. #text
       4. SCRIPT
 
-**************************************************/
+-->
 ```
 
 En el ejemplo anterior, se puede observar que los nodos `#text` se insertan en el DOM, donde se produce un espacio en blanco en el marcado entre las etiquetas (es decir, después de la etiqueta de cierre de un elemento y antes de la etiqueta de apertura del siguiente). No se crea ningún espacio en blanco entre los elementos insertados por la sentencia `document.write`.
 
 La posible inclusión de los nodos de texto en el DOM se debe permitir cuando se atraviese el DOM utilizando `nextSibling`. Vea los recursos en la sección Notas.
 
-## Especificación
+## Especificaciones
 
-- [DOM Level 1 Core: nextSibling](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling)
-- [DOM Level 2 Core: nextSibling](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F)
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Node.nextSibling")}}
+{{Compat}}
 
 ## Ver también
 

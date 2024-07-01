@@ -37,7 +37,7 @@ tokenList.item(index)
 ```js
 let span = document.querySelector("span");
 let classes = span.classList;
-let item = classes.item(classes.length-1);
+let item = classes.item(classes.length - 1);
 span.textContent = item;
 ```
 

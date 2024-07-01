@@ -1,15 +1,6 @@
 ---
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/isArray
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/isArray
 ---
 
 {{JSRef}}
@@ -17,16 +8,16 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Array/isArray
 La méthode **`Array.isArray()`** permet de déterminer si l'objet passé en argument est un objet {{jsxref("Array")}}, elle renvoie `true` si le paramètre passé à la fonction est de type `Array` et `false` dans le cas contraire.
 
 ```js
-Array.isArray([1, 2, 3]);   // true
-Array.isArray({toto: 123}); // false
-Array.isArray("tototruc");  // false
-Array.isArray(undefined);   // false
+Array.isArray([1, 2, 3]); // true
+Array.isArray({ toto: 123 }); // false
+Array.isArray("tototruc"); // false
+Array.isArray(undefined); // false
 ```
 
 ## Syntaxe
 
 ```js
-Array.isArray(value)
+Array.isArray(value);
 ```
 
 ### Paramètres
@@ -51,10 +42,10 @@ Voir aussi : « [Determining with absolute accuracy whether or not a JavaScript 
 Array.isArray([]);
 Array.isArray([1]);
 Array.isArray(new Array());
-Array.isArray(new Array('a', 'b', 'c'));
+Array.isArray(new Array("a", "b", "c"));
 Array.isArray(new Array(3));
 // Une petite anecdote: Array.prototype lui même est un Array
-Array.isArray( Array.prototype );
+Array.isArray(Array.prototype);
 
 // Tous les appels suivant renvoient false
 Array.isArray();
@@ -66,7 +57,7 @@ Array.isArray("Array");
 Array.isArray(true);
 Array.isArray(false);
 Array.isArray(new Uint8Array(32));
-Array.isArray({ __proto__ : Array.prototype });
+Array.isArray({ __proto__: Array.prototype });
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -74,9 +65,9 @@ Array.isArray({ __proto__ : Array.prototype });
 Exécuter ce code avant tout les autres aboutira à la création de la méthode `Array.isArray()`si elle n'est pas nativement prise en charge par le navigateur.
 
 ```js
-if(!Array.isArray) {
-  Array.isArray = function(arg) {
-    return Object.prototype.toString.call(arg) === '[object Array]';
+if (!Array.isArray) {
+  Array.isArray = function (arg) {
+    return Object.prototype.toString.call(arg) === "[object Array]";
   };
 }
 ```

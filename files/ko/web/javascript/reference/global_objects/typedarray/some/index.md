@@ -2,6 +2,7 @@
 title: TypedArray.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
 ---
+
 {{JSRef}}
 
 **`some()`** 메서드는 형식화 배열 내 일부 요소가 제공되는 함수에 의해 구현되는 테스트를 통과하는지 여부를 테스트합니다. 이 메서드는 {{jsxref("Array.prototype.some()")}}과 같은 알고리즘입니다. *TypedArray*는 여기 [TypedArray 객체 유형](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 중 하나입니다.
@@ -55,8 +56,8 @@ new Uint8Array([12, 5, 8, 1, 4]).some(isBiggerThan10); // true
 [화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/애로우_펑션)는 같은 테스트에 대해 더 짧은 구문을 제공합니다.
 
 ```js
-new Uint8Array([2, 5, 8, 1, 4]).some(elem => elem > 10); // false
-new Uint8Array([12, 5, 8, 1, 4]).some(elem => elem > 10); // true
+new Uint8Array([2, 5, 8, 1, 4]).some((elem) => elem > 10); // false
+new Uint8Array([12, 5, 8, 1, 4]).some((elem) => elem > 10); // true
 ```
 
 ## 명세

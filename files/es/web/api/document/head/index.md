@@ -21,7 +21,7 @@ var aHead = document.head;
 
 alert(aHead.id); // "my-document-head";
 
-alert( document.head === document.querySelector("head") ); // true
+alert(document.head === document.querySelector("head")); // true
 ```
 
 ## Notas

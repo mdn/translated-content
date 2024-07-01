@@ -1,16 +1,11 @@
 ---
 title: width
 slug: Web/CSS/@media/width
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/width
 ---
 
 {{CSSRef}}
 
-**`width`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui permet d'appliquer des styles différents en fonction de la largeur de la zone d'affichage (_viewport_) ou de la largeur de la page (pour [les média paginés](/fr/docs/Web/CSS/M%C3%A9dia_pagin%C3%A9s)). La largeur est exprimée comme une longueur CSS (type {{cssxref("&lt;length&gt;")}}.
+**`width`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui permet d'appliquer des styles différents en fonction de la largeur de la zone d'affichage (_viewport_) ou de la largeur de la page (pour [les média paginés](/fr/docs/Web/CSS/Média_paginés)). La largeur est exprimée comme une longueur CSS (type {{cssxref("&lt;length&gt;")}}.
 
 ## Syntaxe
 
@@ -18,13 +13,16 @@ translation_of: Web/CSS/@media/width
 
 ```css
 /* Largeur exacte */
-@media (width: 300px) {}
+@media (width: 300px) {
+}
 
 /* Un viewport avec une largeur minimale */
-@media (min-width: 50em) {}
+@media (min-width: 50em) {
+}
 
 /* Un viewport avec une largeur maximale */
-@media (max-width: 1000px) {}
+@media (max-width: 1000px) {
+}
 ```
 
 ## Exemples
@@ -32,7 +30,9 @@ translation_of: Web/CSS/@media/width
 ### HTML
 
 ```html
-<div>Observez cet élément lorsque vous redimensionnez la largeur du viewport.</div>
+<div>
+  Observez cet élément lorsque vous redimensionnez la largeur du viewport.
+</div>
 ```
 
 ### CSS

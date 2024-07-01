@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Multiplication
 ## 구문
 
 ```js
-x * y
+x * y;
 ```
 
 ## 예제
@@ -20,21 +20,21 @@ x * y
 ### 곱셈
 
 ```js
- 2 * 2     // 4
--2 * 2     // -4
+2 * 2; // 4
+-2 * 2; // -4
 ```
 
 ### Infinity 곱하기
 
 ```js
-Infinity * 0         // NaN
-Infinity * Infinity  // Infinity
+Infinity * 0; // NaN
+Infinity * Infinity; // Infinity
 ```
 
 ### 숫자가 아닌 경우
 
 ```js
-'foo' * 2 // NaN
+"foo" * 2; // NaN
 ```
 
 ## 명세

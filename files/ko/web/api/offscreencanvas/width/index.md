@@ -2,6 +2,7 @@
 title: OffscreenCanvas.width
 slug: Web/API/OffscreenCanvas/width
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 **`width`** 프로퍼티는 {{domxref("OffscreenCanvas")}} 객체에 할당된 너비를 반환합니다.

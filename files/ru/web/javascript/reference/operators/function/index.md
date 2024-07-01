@@ -1,11 +1,6 @@
 ---
 title: Функциональное выражение
 slug: Web/JavaScript/Reference/Operators/function
-tags:
-  - JavaScript
-  - Оператор
-  - Функция
-translation_of: Web/JavaScript/Reference/Operators/function
 ---
 
 {{jsSidebar("Operators")}}
@@ -42,12 +37,12 @@ var myFunction = function [name]([param1[, param2[, ..., paramN]]]) {
 Функциональные выражения в JavaScript не {{Glossary("поднятие", "поднимаются (hoisting)")}}, в отличие от {{jsxref("Statements/function", "объявленных функций", "#Поднимание_объявленной_функции")}}. Вы не можете использовать функциональные выражения прежде, чем вы их определили.
 
 ```js
-console.log(notHoisted) // undefined
+console.log(notHoisted); // undefined
 //Хотя объявленная переменная и поднимается, определение переменной происходит позже
 notHoisted(); // TypeError: notHoisted is not a function
 
-var notHoisted = function() {
-   console.log('bar');
+var notHoisted = function () {
+  console.log("bar");
 };
 ```
 
@@ -57,29 +52,29 @@ var notHoisted = function() {
 
 ```js
 var math = {
-  'factit': function factorial(n) {
+  factit: function factorial(n) {
     console.log(n);
     if (n <= 1) {
       return 1;
     }
     return n * factorial(n - 1);
-  }
+  },
 };
 
-math.factit(3) //3;2;1;
+math.factit(3); //3;2;1;
 ```
 
 Переменная, которой присвоено функциональное выражение, будет иметь свойство `name`, содержащее имя функции. Оно не изменится при переприсваивании другой переменной. Для анонимной функции, значением свойства `name` будет имя переменной (неявное имя). Если же имя задано, то будет использовано имя функции (явное имя). Это же касается стрелочных функций (в их случае там будет записано имя переменной, т.к. они всегда анонимные).
 
 ```js
-var foo = function() {}
-foo.name // "foo"
+var foo = function () {};
+foo.name; // "foo"
 
-var foo2 = foo
-foo2.name // "foo"
+var foo2 = foo;
+foo2.name; // "foo"
 
-var bar = function baz() {}
-bar.name // "baz"
+var bar = function baz() {};
+bar.name; // "baz"
 
 console.log(foo === foo2); // true
 console.log(typeof baz); // undefined
@@ -92,15 +87,15 @@ console.log(bar === baz); // false (errors because baz == undefined)
 
 ```js
 var x = function (y) {
-   return y * y;
+  return y * y;
 };
 ```
 
 Преимущественно анонимные функции используются как {{Glossary("колбэк-функция", "колбэк-функции", 1)}}.
 
 ```js
-button.addEventListener('click', function(event) {
-    console.log('button is clicked!')
+button.addEventListener("click", function (event) {
+  console.log("button is clicked!");
 });
 ```
 

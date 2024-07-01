@@ -7,10 +7,12 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
 
 **`Intl.PluralRules.prototype.resolvedOptions()`** メソッドは、この {{jsxref("Intl.PluralRules")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
+{{EmbedInteractiveExample("pages/js/intl-pluralrules-prototype-resolvedoptions.html")}}
+
 ## 構文
 
 ```js
-resolvedOptions()
+resolvedOptions();
 ```
 
 ### 返値
@@ -40,15 +42,15 @@ resolvedOptions()
 ### resolvedOptions() メソッドの使用
 
 ```js
-var de = new Intl.PluralRules('de-DE');
+var de = new Intl.PluralRules("de-DE");
 var usedOptions = de.resolvedOptions();
 
-usedOptions.locale;                // "de-DE"
+usedOptions.locale; // "de-DE"
 usedOptions.maximumFractionDigits; // 3
 usedOptions.minimumFractionDigits; // 0
-usedOptions.minimumIntegerDigits;  // 1
-usedOptions.pluralCategories;      // Array [ "one", "other" ]
-usedOptions.type;                  // "cardinal"
+usedOptions.minimumIntegerDigits; // 1
+usedOptions.pluralCategories; // Array [ "one", "other" ]
+usedOptions.type; // "cardinal"
 ```
 
 ## 仕様書

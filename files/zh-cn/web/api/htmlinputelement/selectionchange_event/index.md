@@ -18,8 +18,8 @@ obj.onselectionchange = function;
 ```js
 var selection;
 
-document.onselectionchange = function() {
-  console.log('New selection made');
+document.onselectionchange = function () {
+  console.log("New selection made");
   selection = document.getSelection();
 };
 ```

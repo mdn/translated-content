@@ -1,7 +1,6 @@
 ---
-title: ':not()'
+title: ":not()"
 slug: Web/CSS/:not
-original_slug: Web/CSS/:not()
 ---
 
 {{CSSRef}}
@@ -79,4 +78,4 @@ body :not(.crazy, .fancy) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.not")}}
+{{Compat}}

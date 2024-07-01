@@ -1,10 +1,9 @@
 ---
 title: apply-templates
 slug: Web/XSLT/Element/apply-templates
-original_slug: Web/XSLT/apply-templates
 ---
 
-{{XsltRef}}
+{{XsltSidebar}}{{XsltRef}}
 
 El elemento `<xsl:apply-templates>` selecciona un conjunto de nodos del documento de entrada e instruye al procesador para aplicar las plantillas apropiadas a ellos.
 

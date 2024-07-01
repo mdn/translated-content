@@ -1,7 +1,6 @@
 ---
 title: VRLayerInit
 slug: Web/API/VRLayerInit
-original_slug: Web/API/VRLayer
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
@@ -71,5 +70,4 @@ if(navigator.getVRDisplays) {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

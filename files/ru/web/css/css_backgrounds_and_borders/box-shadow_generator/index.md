@@ -1,15 +1,17 @@
 ---
-title: Генератор теней
-slug: Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
-tags:
-  - CSS3
-  - Тень
-  - инструменты
-translation_of: Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
-original_slug: Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
+title: Генератор теней (box-shadow)
+slug: Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
 ---
-Этот инструмент позволяет вам создавать CSS {{cssxref("box-shadow")}} эффекты, добавлять тени вашим элементам.
 
-{{EmbedGHLiveSample("css-examples/tools/box-shadow-generator/", '100%', 900)}}
+{{CSSRef}}
 
-**Похожий инструмент:** [Генератор CSS Box Shadow](https://cssgenerator.org/box-shadow-css-generator.html)
+Этот инструмент можно использовать для создания эффектов теней элементов с помощью CSS-свойства {{cssxref("box-shadow")}}.
+
+{{EmbedGHLiveSample("css-examples/tools/box-shadow-generator/", "100%", 900)}}
+
+## Смотрите также
+
+- [Генератор рамок (border-image)](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
+  - : Визуальный инструмент для создания рамок вокруг элементов с помощью CSS-свойства {{cssxref("border-image")}}.
+- [Генератор скруглений границ (border-radius)](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)
+  - : Визуальный инструмент для создания скруглённых границ с помощью CSS-свойства {{cssxref("border-radius")}}.

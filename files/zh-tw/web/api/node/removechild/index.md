@@ -31,11 +31,11 @@ node.removeChild(child);
 
 1. 如果 `child` 確實是 `element` 的子元素且確實存在於 DOM，但已被刪除，則會丟出以下異常：
 
-    `Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node`.
+   `Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node`.
 
 2. 如果 `child` 不存在於頁面的 DOM，則會拋出下列的異常：
 
-    `Uncaught TypeError: Failed to execute 'removeChild' on 'Node': parameter 1 is not of type 'Node'.`
+   `Uncaught TypeError: Failed to execute 'removeChild' on 'Node': parameter 1 is not of type 'Node'.`
 
 ## 例子
 
@@ -79,7 +79,7 @@ while (element.firstChild) {
 
 ```html
 <!--Sample HTML code-->
-<div id="top"> </div>
+<div id="top"></div>
 
 <script type="text/javascript">
   let top = document.getElementById("top");

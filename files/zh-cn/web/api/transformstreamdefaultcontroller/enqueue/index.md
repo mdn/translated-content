@@ -11,7 +11,7 @@ slug: Web/API/TransformStreamDefaultController/enqueue
 
 ## 语法
 
-```js
+```js-nolint
 enqueue(chunk)
 ```
 

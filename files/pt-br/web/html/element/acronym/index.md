@@ -3,13 +3,11 @@ title: <acronym>
 slug: Web/HTML/Element/acronym
 ---
 
-{{obsolete_header}}
-
 ## Resumo
 
 O Elemento HTML Acrônimo (`<acronym>)` permite à autores claramente indicar que uma seqüência de caracteres compõe um acrônimo ou uma abreviação de uma palavra.
 
-> **Note:** **Nota de uso:** Este elemento foi removido no HTML5 e não deve ser usado mais. Ao invés dele, desenvolvedores devem usar o elemento {{HTMLElement("abbr")}}.
+> **Note:** Este elemento foi removido no HTML5 e não deve ser usado mais. Ao invés dele, desenvolvedores devem usar o elemento {{HTMLElement("abbr")}}.
 
 ## Atributos
 
@@ -24,7 +22,10 @@ Este elemento implementa a interface {{domxref('HTMLElement')}}.
 ## Exemplo
 
 ```html
-<p>A <acronym title="World Wide Web">WWW</acronym> é somente um dos componentes da Internet.</p>
+<p>
+  A <acronym title="World Wide Web">WWW</acronym> é somente um dos componentes
+  da Internet.
+</p>
 ```
 
 ## Estilo padrão
@@ -39,7 +40,7 @@ Embo is purely for the convenira o propósito desta tag seja meramente a conveni
 
 ## Compatibilidade de navegadores
 
-{{Compat("html.elements.acronym")}}
+{{Compat}}
 
 ## Ver também
 

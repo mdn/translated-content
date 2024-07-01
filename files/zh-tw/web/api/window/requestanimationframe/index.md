@@ -1,7 +1,6 @@
 ---
 title: Window.requestAnimationFrame()
-slug: Web/API/window/requestAnimationFrame
-original_slug: Web/API/Window.requestAnimationFrame
+slug: Web/API/Window/requestAnimationFrame
 ---
 
 {{APIRef}}
@@ -33,12 +32,13 @@ window.requestAnimationFrame(callback);
 
 ```js
 var start = null;
-var element = document.getElementById('SomeElementYouWantToAnimate');
+var element = document.getElementById("SomeElementYouWantToAnimate");
 
 function step(timestamp) {
   if (!start) start = timestamp;
   var progress = timestamp - start;
-  element.style.transform = 'translateX(' + Math.min(progress / 10, 200) + 'px)';
+  element.style.transform =
+    "translateX(" + Math.min(progress / 10, 200) + "px)";
   if (progress < 2000) {
     window.requestAnimationFrame(step);
   }
@@ -59,7 +59,7 @@ Edge 低於 17 的版本和 Internet Explorer 無法保證在繪製循環前觸�
 
 {{Compat}}
 
-## 其他參考
+## 參見
 
 - {{domxref("Window.mozAnimationStartTime")}}
 - {{domxref("Window.cancelAnimationFrame()")}}

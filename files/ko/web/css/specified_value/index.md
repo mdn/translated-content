@@ -2,6 +2,7 @@
 title: 지정값
 slug: Web/CSS/specified_value
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) 속성의 **지정값**은 세 가지 방법 중 하나로 설정됩니다.
@@ -17,13 +18,17 @@ slug: Web/CSS/specified_value
 ```html
 <p>My specified color is given explicitly in the CSS.</p>
 
-<div>The specified values of all my properties default to their
-    initial values, because none of them are given in the CSS.</div>
+<div>
+  The specified values of all my properties default to their initial values,
+  because none of them are given in the CSS.
+</div>
 
 <div class="fun">
-  <p>The specified value of my font family is not given explicitly
-      in the CSS, so it is inherited from my parent. However,
-      the border is not an inheriting property.</p>
+  <p>
+    The specified value of my font family is not given explicitly in the CSS, so
+    it is inherited from my parent. However, the border is not an inheriting
+    property.
+  </p>
 </div>
 ```
 

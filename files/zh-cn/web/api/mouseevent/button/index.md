@@ -3,7 +3,7 @@ title: MouseEvent.button
 slug: Web/API/MouseEvent/button
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`MouseEvent.button`**是只读属性，它返回一个值，代表用户按下并触发了事件的鼠标按键。
 
@@ -16,7 +16,7 @@ slug: Web/API/MouseEvent/button
 ## 语法
 
 ```js
-var buttonPressed = instanceOfMouseEvent.button
+var buttonPressed = instanceOfMouseEvent.button;
 ```
 
 ### 返回值
@@ -36,28 +36,30 @@ var buttonPressed = instanceOfMouseEvent.button
 ### HTML
 
 ```html
-<button id="button" oncontextmenu="event.preventDefault();">Click here with your mouse...</button>
+<button id="button" oncontextmenu="event.preventDefault();">
+  Click here with your mouse...
+</button>
 <p id="log"></p>
 ```
 
 ### JavaScript
 
 ```js
-let button = document.querySelector('#button');
-let log = document.querySelector('#log');
-button.addEventListener('mouseup', logMouseButton);
+let button = document.querySelector("#button");
+let log = document.querySelector("#log");
+button.addEventListener("mouseup", logMouseButton);
 
 function logMouseButton(e) {
-  if (typeof e === 'object') {
+  if (typeof e === "object") {
     switch (e.button) {
       case 0:
-        log.textContent = 'Left button clicked.';
+        log.textContent = "Left button clicked.";
         break;
       case 1:
-        log.textContent = 'Middle button clicked.';
+        log.textContent = "Middle button clicked.";
         break;
       case 2:
-        log.textContent = 'Right button clicked.';
+        log.textContent = "Right button clicked.";
         break;
       default:
         log.textContent = `Unknown button code: ${e.button}`;

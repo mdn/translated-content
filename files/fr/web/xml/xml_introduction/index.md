@@ -1,11 +1,9 @@
 ---
 title: Introduction à XML
 slug: Web/XML/XML_introduction
-tags:
-  - XML
-translation_of: Web/XML/XML_introduction
-original_slug: Web/XML/Introduction_à_XML
 ---
+
+{{QuickLinksWithSubpages("/fr/docs/Web/XML")}}
 
 ### Définition
 

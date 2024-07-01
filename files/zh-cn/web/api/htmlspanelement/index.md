@@ -1,21 +1,23 @@
 ---
 title: HTMLSpanElement
 slug: Web/API/HTMLSpanElement
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLSpanElement`** interface represents a {{HTMLElement("span")}} element and derives from the {{ domxref("HTMLElement") }} interface, but without implementing any additional properties or methods.
+**`HTMLSpanElement`** 接口表示一个 {{HTMLElement("span")}} 元素，继承自 {{DOMxRef("HTMLElement")}} 接口，但没有实现任何额外的属性和方法。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
-## 属性
+## 实例属性
 
-_无特定属性；从其父元素{{domxref("HTMLElement")}}继承属性。_
+_无特定属性；从其父元素 {{domxref("HTMLElement")}} 继承属性。_
 
-## 方法
+## 实例方法
 
-_无特定方法；从其父元素{{domxref("HTMLElement")}}继承方法。_
+_无特定方法；从其父元素 {{domxref("HTMLElement")}} 继承方法。_
 
 ## 规范
 
@@ -25,6 +27,6 @@ _无特定方法；从其父元素{{domxref("HTMLElement")}}继承方法。_
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
-- The HTML element implementing this interface: {{HTMLElement("span")}}.
+- 实现此接口的 HTML 元素：{{HTMLElement("span")}}。

@@ -56,7 +56,7 @@ for octal literals use the \"0o\" prefix instead
 8 進エスケープシーケンスの代わりに、16 進エスケープシーケンスを使用できます:
 
 ```js example-good
-'\xA9';
+"\xA9";
 ```
 
 ## 関連項目

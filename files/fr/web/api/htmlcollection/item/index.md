@@ -1,7 +1,6 @@
 ---
 title: HTMLCollection.item
 slug: Web/API/HTMLCollection/item
-translation_of: Web/API/HTMLCollection/item
 ---
 
 {{APIRef("HTML DOM")}}
@@ -24,9 +23,9 @@ La méthode `item()` retourne un élément numéroté d'une HTMLCollection. En J
 ## Exemple
 
 ```js
-var c = document.images;  // Ceci est une HTMLCollection.
-var img0 = c.item(0);     // Vous pouvez utiliser la méthode item comme ceci,
-var img1 = c[1];          // Mais cette notation est plus simple et plus commune
+var c = document.images; // Ceci est une HTMLCollection.
+var img0 = c.item(0); // Vous pouvez utiliser la méthode item comme ceci,
+var img1 = c[1]; // Mais cette notation est plus simple et plus commune
 ```
 
 ## Voir aussi

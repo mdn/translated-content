@@ -28,7 +28,7 @@ getDay()
 以下の 2 行目の文は、 [`Date`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) オブジェクトである `xmas95` の値に基づき、`weekday` に 1 という値を代入します。1995 年 12 月 25 日は月曜日です。
 
 ```js
-const xmas95 = new Date('December 25, 1995 23:15:30');
+const xmas95 = new Date("December 25, 1995 23:15:30");
 const weekday = xmas95.getDay();
 
 console.log(weekday); // 1
@@ -37,10 +37,10 @@ console.log(weekday); // 1
 > **メモ:** 必要であれば、曜日の完全な名前 (例えば "`Monday`") は [`Intl.DateTimeFormat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) に `options` 引数を設定することで取得することができます。このメソッドを使用すれば、国際化がより簡単になります。
 >
 > ```js
-> const options = { weekday: 'long'};
-> console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
+> const options = { weekday: "long" };
+> console.log(new Intl.DateTimeFormat("en-US", options).format(Xmas95));
 > // Monday
-> console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
+> console.log(new Intl.DateTimeFormat("de-DE", options).format(Xmas95));
 > // Montag
 > ```
 

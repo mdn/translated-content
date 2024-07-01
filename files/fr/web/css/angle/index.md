@@ -1,11 +1,6 @@
 ---
 title: <angle>
 slug: Web/CSS/angle
-tags:
-  - CSS
-  - Reference
-  - Type
-translation_of: Web/CSS/angle
 ---
 
 {{CSSRef}}
@@ -25,7 +20,7 @@ Pour les propriétés statiques et pour une unité donnée, un même angle pourr
 Pour représenter une valeur dans le type `<angle>`, on pourra utiliser les unités suivantes :
 
 - `deg`
-  - : Cette unité permet de représenter un angle exprimé en [degrés](<https://fr.wikipedia.org/wiki/Degr%C3%A9_(angle)>). Un cercle complet correspondra à `360deg`. Voici des valeurs pour l'exemple : `0deg`, `90deg`, `360deg`.
+  - : Cette unité permet de représenter un angle exprimé en [degrés](<https://fr.wikipedia.org/wiki/Degré_(angle)>). Un cercle complet correspondra à `360deg`. Voici des valeurs pour l'exemple : `0deg`, `90deg`, `360deg`.
 - `grad`
   - : Cette unité permet de représenter un angle exprimé en [grades](<https://fr.wikipedia.org/wiki/Grade_(angle)>). Un cercle complet correspondra à `400grad`. Voici des valeurs pour l'exemple : `0grad`, `100grad`, `400grad`.
 - `rad`

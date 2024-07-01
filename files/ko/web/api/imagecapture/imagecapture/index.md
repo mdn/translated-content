@@ -2,6 +2,7 @@
 title: ImageCapture() 생성자
 slug: Web/API/ImageCapture/ImageCapture
 ---
+
 {{APIRef("MediaStream Image")}}
 
 **`ImageCapture()`** 생성자는 새로운 {{domxref("ImageCapture")}} 객체를 생성합니다.
@@ -9,7 +10,7 @@ slug: Web/API/ImageCapture/ImageCapture
 ## 구문
 
 ```js
-const imageCapture = new ImageCapture(videoTrack)
+const imageCapture = new ImageCapture(videoTrack);
 ```
 
 ### 매개변수
@@ -26,13 +27,14 @@ const imageCapture = new ImageCapture(videoTrack)
 다음 예제는 {{domxref("MediaDevices.getUserMedia()")}}을 사용해, `ImageCapture()` 생성자에 필요한 {{domxref("MediaStreamTrack")}}을 가져오는 법을 보입니다.
 
 ```js
- navigator.mediaDevices.getUserMedia({video: true})
-  .then(mediaStream => {
-    document.querySelector('video').srcObject = mediaStream
+navigator.mediaDevices
+  .getUserMedia({ video: true })
+  .then((mediaStream) => {
+    document.querySelector("video").srcObject = mediaStream;
     const track = mediaStream.getVideoTracks()[0];
     imageCapture = new ImageCapture(track);
   })
-  .catch(error => console.log(error));
+  .catch((error) => console.log(error));
 ```
 
 ## 명세

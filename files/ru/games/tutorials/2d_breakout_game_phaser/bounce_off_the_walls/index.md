@@ -1,8 +1,6 @@
 ---
 title: Отскакивания
 slug: Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls
-original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Bounce_off_the_walls
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Physics", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Платформа_и_управление")}}

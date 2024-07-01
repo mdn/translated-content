@@ -5,16 +5,16 @@ slug: Web/API/TransformStreamDefaultController
 
 {{DefaultAPISidebar("Streams API")}}
 
-[Streams API](/zh-CN/docs/Web/API/Streams_API) 的 **`TransformStreamDefaultController`** 接口提供了操作关联的 {{domxref("ReadableStream")}} 和 {{domxref("WritableStream")}} 的方法。
+[Stream API](/zh-CN/docs/Web/API/Streams_API) 的 **`TransformStreamDefaultController`** 接口提供了操作关联的 {{domxref("ReadableStream")}} 和 {{domxref("WritableStream")}} 的方法。
 
 当构造 {{domxref("TransformStream")}} 时，会创建一个 `TransformStreamDefaultController`。因此它没有构造函数。获取 `TransformStreamDefaultController` 实例的方式是通过 {{domxref("TransformStream.TransformStream", "TransformStream()")}} 的回调方法。
 
-## 属性
+## 实例属性
 
 - {{domxref("TransformStreamDefaultController.desiredSize")}}{{readonlyinline}}
   - : 返回填充满流内部队列的可读端所需要的大小。
 
-## 方法
+## 实例方法
 
 - {{domxref("TransformStreamDefaultController.enqueue()")}}
   - : 排入一个分块（单个数据）到流的可读端。
@@ -29,38 +29,49 @@ slug: Web/API/TransformStreamDefaultController
 
 ```js
 const transformContent = {
-  start() { }, // required.
+  start() {}, // required.
   async transform(chunk, controller) {
-    chunk = await chunk
+    chunk = await chunk;
     switch (typeof chunk) {
-      case 'object':
+      case "object":
         // just say the stream is done I guess
-        if (chunk === null) controller.terminate()
+        if (chunk === null) controller.terminate();
         else if (ArrayBuffer.isView(chunk))
-          controller.enqueue(new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength))
-        else if (Array.isArray(chunk) && chunk.every(value => typeof value === 'number'))
-          controller.enqueue(new Uint8Array(chunk))
-        else if ('function' === typeof chunk.valueOf && chunk.valueOf() !== chunk)
-          this.transform(chunk.valueOf(), controller) // hack
-        else if ('toJSON' in chunk) this.transform(JSON.stringify(chunk), controller)
-        break
-      case 'symbol':
-        controller.error("Cannot send a symbol as a chunk part")
-        break
-      case 'undefined':
-        controller.error("Cannot send undefined as a chunk part")
-        break
+          controller.enqueue(
+            new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength),
+          );
+        else if (
+          Array.isArray(chunk) &&
+          chunk.every((value) => typeof value === "number")
+        )
+          controller.enqueue(new Uint8Array(chunk));
+        else if (
+          "function" === typeof chunk.valueOf &&
+          chunk.valueOf() !== chunk
+        )
+          this.transform(chunk.valueOf(), controller); // hack
+        else if ("toJSON" in chunk)
+          this.transform(JSON.stringify(chunk), controller);
+        break;
+      case "symbol":
+        controller.error("Cannot send a symbol as a chunk part");
+        break;
+      case "undefined":
+        controller.error("Cannot send undefined as a chunk part");
+        break;
       default:
-        controller.enqueue(this.textencoder.encode(String(chunk)))
-        break
+        controller.enqueue(this.textencoder.encode(String(chunk)));
+        break;
     }
   },
-  flush() { /* do any destructor work here */ }
-}
+  flush() {
+    /* do any destructor work here */
+  },
+};
 
 class AnyToU8Stream extends TransformStream {
   constructor() {
-    super({ ...transformContent, textencoder: new TextEncoder() })
+    super({ ...transformContent, textencoder: new TextEncoder() });
   }
 }
 ```

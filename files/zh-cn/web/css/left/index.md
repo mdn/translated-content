@@ -31,7 +31,7 @@ left: unset;
 - 当`position`设置为`sticky`时，如果元素在 viewport 里面，`left`属性的效果和 position 为`relative`等同；如果元素在 viewport 外面，`left`属性的效果和 position 为`fixed`等同。
 - 当`position`设置为`static`时，`left`属性无效。
 
-当`left`和{{cssxref("right")}}​​​​​​ 同时指定时，元素的位置会被重复指定。当容器是从左到右时，`left`的值会被优先设定；当容器是从右到左时，`right`的值会被优先设定。
+当`left`和{{cssxref("right")}} 同时指定时，元素的位置会被重复指定。当容器是从左到右时，`left`的值会被优先设定；当容器是从右到左时，`right`的值会被优先设定。
 
 {{cssinfo}}
 
@@ -70,7 +70,7 @@ left: unset;
 #wrap {
   width: 700px;
   margin: 0 auto;
-  background: #5C5C5C;
+  background: #5c5c5c;
 }
 
 pre {
@@ -86,7 +86,7 @@ pre {
   position: absolute;
   left: 20px;
   top: 20px;
-  background-color: #D8F5FF;
+  background-color: #d8f5ff;
 }
 
 #example_2 {
@@ -95,8 +95,7 @@ pre {
   position: relative;
   top: 0;
   right: 0;
-  background-color: #C1FFDB;
-
+  background-color: #c1ffdb;
 }
 #example_3 {
   width: 600px;
@@ -104,16 +103,16 @@ pre {
   position: relative;
   top: 20px;
   left: 20px;
-  background-color: #FFD7C2;
+  background-color: #ffd7c2;
 }
 
 #example_4 {
-  width:200px;
-  height:200px;
-  position:absolute;
-  bottom:10px;
-  right:20px;
-  background-color:#FFC7E4;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  background-color: #ffc7e4;
 }
 ```
 
@@ -127,7 +126,10 @@ pre {
       left: 20px;
       top: 20px;
     </pre>
-    <p>The only containing element for this div is the main window, so it positions itself in relation to it.</p>
+    <p>
+      The only containing element for this div is the main window, so it
+      positions itself in relation to it.
+    </p>
   </div>
 
   <div id="example_2">
@@ -168,7 +170,7 @@ pre {
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

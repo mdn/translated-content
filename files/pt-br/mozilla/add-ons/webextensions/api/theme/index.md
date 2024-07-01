@@ -1,7 +1,6 @@
 ---
 title: tema
 slug: Mozilla/Add-ons/WebExtensions/API/theme
-original_slug: Mozilla/Add-ons/WebExtensions/API/tema
 ---
 
 {{AddonSidebar}}
@@ -33,6 +32,6 @@ Para usar esta API, uma extensão deve solicitar a [permission](/pt-BR/docs/Mozi
 
 ## Compatibilidade com navegadores
 
-{{Compat("webextensions.api.theme")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}

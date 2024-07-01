@@ -2,6 +2,7 @@
 title: 계산값
 slug: Web/CSS/computed_value
 ---
+
 {{cssref}}
 
 [CSS](/ko/docs/Web/CSS) 속성의 **계산값**은 상속 과정에서 부모가 자식에게 물려주는 값을 말합니다. 계산값은 [지정값](/ko/docs/Web/CSS/specified_value)으로부터 다음 방법을 통해 구합니다.

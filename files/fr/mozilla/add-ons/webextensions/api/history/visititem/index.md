@@ -1,20 +1,9 @@
 ---
 title: history.VisitItem
 slug: Mozilla/Add-ons/WebExtensions/API/history/VisitItem
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Non-standard
-  - Reference
-  - Type
-  - VisiItem
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/VisitItem
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet décrivant une seule visite sur une page.
 
@@ -33,9 +22,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `transition`
   - : {{WebExtAPIRef('history.TransitionType')}}. Décrit comment le navigateur a navigué vers la page à cette occasion.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.VisitItem")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

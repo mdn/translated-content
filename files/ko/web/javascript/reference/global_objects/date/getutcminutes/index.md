@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
 ## Syntax
 
 ```js
-    dateObj.getUTCMinutes()
+dateObj.getUTCMinutes();
 ```
 
 ### Return value

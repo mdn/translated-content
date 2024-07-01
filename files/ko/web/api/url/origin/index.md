@@ -16,7 +16,7 @@ slug: Web/API/URL/origin
 ## 구문
 
 ```js
-const originString = url.origin
+const originString = url.origin;
 ```
 
 ### 값
@@ -26,7 +26,7 @@ A {{domxref("USVString")}}.
 ## 예제
 
 ```js
-const url = new URL("blob:https://mozilla.org:443/")
+const url = new URL("blob:https://mozilla.org:443/");
 console.log(url.origin); // Logs 'https://mozilla.org'
 ```
 

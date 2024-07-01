@@ -1,8 +1,9 @@
 ---
-title: 'HTMLSlotElement: slotchange イベント'
+title: "HTMLSlotElement: slotchange イベント"
+short-title: slotchange
 slug: Web/API/HTMLSlotElement/slotchange_event
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef}}
@@ -20,9 +21,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティに設定するかしてください。
 
 ```js
-addEventListener('slotchange', (event) => {});
+addEventListener("slotchange", (event) => {});
 
-onslotchange = (event) => { };
+onslotchange = (event) => {};
 ```
 
 ## イベント型
@@ -32,19 +33,21 @@ onslotchange = (event) => { };
 ## 例
 
 ```js
-element.setAttribute('slot', slotName);
+element.setAttribute("slot", slotName);
 // element.assignedSlot = $slot
-element.removeAttribute('slot');
+element.removeAttribute("slot");
 // element.assignedSlot = null
 ```
 
 次のスニペットは、 [slotchange の例](https://github.com/mdn/web-components-examples/tree/main/slotchange)から取りました ([ライブでも確認できます](https://mdn.github.io/web-components-examples/slotchange/))。
 
 ```js
-let slots = this.shadowRoot.querySelectorAll('slot');
-slots[1].addEventListener('slotchange', (e) => {
+let slots = this.shadowRoot.querySelectorAll("slot");
+slots[1].addEventListener("slotchange", (e) => {
   let nodes = slots[1].assignedNodes();
-  console.log(`Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`);
+  console.log(
+    `Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`,
+  );
 });
 ```
 

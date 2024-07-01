@@ -1,7 +1,6 @@
 ---
 title: grayscale()
 slug: Web/CSS/filter-function/grayscale
-original_slug: Web/CSS/filter-function/grayscale()
 ---
 
 {{cssref}}

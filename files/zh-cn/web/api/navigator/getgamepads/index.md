@@ -1,26 +1,43 @@
 ---
-title: Navigator.getGamepads()
+title: Navigator：getGamepads() 方法
 slug: Web/API/Navigator/getGamepads
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Gamepad API")}}{{SeeCompatTable}}
+{{APIRef("Gamepad API")}}{{securecontext_header}}
 
-调用 **`Navigator.getGamepads()`** 方法会返回一个数组：第一个值为 `null` ，其他的值均为 {{ domxref("Gamepad") }} 对象，表示每一个与设备连接的游戏手柄。所以如果没有连接任何游戏手柄，这个方法将只会返回 `null`。
+**`Navigator.getGamepads()`** 方法返回一个包含 {{domxref("Gamepad")}} 数组对象，每个对象代表与设备相连的一个游戏手柄。
+
+如果游戏手柄在过程断开连接，则数组中的元素可能为 `null`，但剩余的游戏手柄的索引保持不变。
 
 ## 语法
 
-```plain
- var arrayGP = navigator.getGamepads();
+```js-nolint
+getGamepads()
 ```
 
-## 样例
+### 参数
+
+无。
+
+### 返回值
+
+一个 {{domxref("Gamepad")}} 对象的{{jsxref("Array", "数组", "", 1)}}，最终可能为空。
+
+### 异常
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止了此特性的使用。
+
+## 示例
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
-  var gp = navigator.getGamepads()[e.gamepad.index];
-  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-  gp.index, gp.id,
-  gp.buttons.length, gp.axes.length);
+window.addEventListener("gamepadconnected", (e) => {
+  const gp = navigator.getGamepads()[e.gamepad.index];
+  console.log(
+    `游戏手柄在索引 ${gp.index} 处已连接：其 ID 为 ${gp.id}，具有 ${gp.buttons.length} 个按键和 ${gp.axes.length} 个轴。`,
+  );
 });
 ```
 
@@ -32,7 +49,7 @@ window.addEventListener("gamepadconnected", function(e) {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
-- [Using the Gamepad API](/zh-CN/docs/Web/Guide/API/Gamepad)
-- [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API)
+- [使用游戏手柄 API](/zh-CN/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+- [游戏手柄 API](/zh-CN/docs/Web/API/Gamepad_API)

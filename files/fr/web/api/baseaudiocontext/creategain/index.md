@@ -1,18 +1,6 @@
 ---
 title: AudioContext.createGain()
 slug: Web/API/BaseAudioContext/createGain
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - Contrôle du volume
-  - Méthode
-  - Son
-  - Volume
-  - Web Audio
-  - createGain
-translation_of: Web/API/BaseAudioContext/createGain
-original_slug: Web/API/AudioContext/createGain
 ---
 
 {{ APIRef("Web Audio API") }}

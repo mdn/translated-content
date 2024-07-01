@@ -1,11 +1,6 @@
 ---
 title: Оператор new
 slug: Web/JavaScript/Reference/Operators/new
-tags:
-  - JavaScript
-  - Левосторонние выражения
-  - Оператор
-translation_of: Web/JavaScript/Reference/Operators/new
 ---
 
 {{jsSidebar("Operators")}}
@@ -40,24 +35,24 @@ new constructor[([arguments])]
 Когда исполняется `new Foo(...)` , происходит следующее:
 
 1. Создаётся новый объект, наследующий `Foo.prototype.`
-2. Вызывается конструктор — функция `Foo` с указанными аргументами и [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), привязанным к только что созданному объекту. `new Foo` эквивалентно `new Foo()`, то есть если аргументы не указаны, `Foo` вызывается без аргументов.
+2. Вызывается конструктор — функция `Foo` с указанными аргументами и [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this), привязанным к только что созданному объекту. `new Foo` эквивалентно `new Foo()`, то есть если аргументы не указаны, `Foo` вызывается без аргументов.
 3. Результатом выражения new становится объект, возвращённый конструктором. Если конструктор не возвращает объект явно, используется объект из п. 1. (Обычно конструкторы не возвращают значение, но они могут делать это, если нужно переопределить обычный процесс создания объектов.)
 
 Всегда можно добавить свойство к уже созданному объекту. Например, `car1.color = "black"` добавляет свойство `color` к объекту `car1`, и присваивает ему значение "`black`". Это не затрагивает другие объекты. Чтобы добавить свойство ко всем объектам типа, нужно добавлять его в определение типа Car.
 
-Добавить свойство к ранее определённому типу можно используя свойство [`Function.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype). Это определит свойство для всех объектов, созданных этой функцией, а не только у какого-либо экземпляра. Следующий пример добавляет свойство color со значением `null` всем объектам типа `car`, а потом меняет его на "`black`" только у экземпляра `car1`. Больше информации в статье [prototype](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype).
+Добавить свойство к ранее определённому типу можно используя свойство [`Function.prototype`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype). Это определит свойство для всех объектов, созданных этой функцией, а не только у какого-либо экземпляра. Следующий пример добавляет свойство color со значением `null` всем объектам типа `car`, а потом меняет его на "`black`" только у экземпляра `car1`. Больше информации в статье [prototype](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype).
 
 ```js
 function Car() {}
 car1 = new Car();
 
-console.log(car1.color);    // undefined
+console.log(car1.color); // undefined
 
 Car.prototype.color = null;
-console.log(car1.color);    // null
+console.log(car1.color); // null
 
 car1.color = "black";
-console.log(car1.color);   // black
+console.log(car1.color); // black
 ```
 
 ## Примеры
@@ -128,7 +123,7 @@ var car2 = new Car("Nissan", "300ZX", 1992, ken);
 Вместо строковых или численных значений можно передать объект как параметр. Чтобы узнать имя владельца `car2`, получим доступ к свойству:
 
 ```js
-car2.owner.name
+car2.owner.name;
 ```
 
 ## Спецификации

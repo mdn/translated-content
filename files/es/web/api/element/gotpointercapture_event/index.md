@@ -1,7 +1,6 @@
 ---
 title: Element.ongotpointercapture
 slug: Web/API/Element/gotpointercapture_event
-original_slug: Web/API/GlobalEventHandlers/ongotpointercapture
 ---
 
 {{ APIRef }}

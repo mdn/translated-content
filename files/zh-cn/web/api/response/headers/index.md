@@ -24,13 +24,13 @@ var myHeaders = response.headers;
 注意，在`fetch()`的顶级块中我们输出了`headers`到控制台。
 
 ```js
-var myImage = document.querySelector('img');
+var myImage = document.querySelector("img");
 
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 
-fetch(myRequest).then(function(response) {
+fetch(myRequest).then(function (response) {
   console.log(response.headers); // returns a Headers{} object
-  response.blob().then(function(myBlob) {
+  response.blob().then(function (myBlob) {
     var objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });

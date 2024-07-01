@@ -45,9 +45,9 @@ void ctx.fillRect(x, y, width, height);
 下面绘制的矩形左上顶点在 (20, 10)，宽高分别是 150 和 100 像素。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
 ctx.fillRect(20, 10, 150, 100);
 ```
 
@@ -60,8 +60,8 @@ ctx.fillRect(20, 10, 150, 100);
 下面这个代码片段使用本方法填充了整个画布。这样做通常的目的是在开始绘制其他内容前设置一个背景。为了达到这样的效果，需要让填充的范围和画布的范围相同，需要访问{{HtmlElement("canvas")}}元素的`width` 和 `height` 属性。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 

@@ -1,8 +1,6 @@
 ---
 title: mask-clip
 slug: Web/CSS/mask-clip
-translation_of: Web/CSS/mask-clip
-browser-compat: css.properties.mask-clip
 ---
 
 {{CSSRef}}

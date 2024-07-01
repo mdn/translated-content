@@ -1,108 +1,99 @@
 ---
-title: Learn HTML to solve problems
+title: HTML을 사용하여 일반적인 문제 해결하기
 slug: Learn/HTML/Howto
+l10n:
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-Once you've covered [the basics](/en-US/Learn/Getting_started_with_the_web/HTML_basics), there isn't one right path to learn {{Glossary("HTML")}}. You can pick up whatever you like at your own pace. HTML is simply a set of {{glossary("tag","tags")}} you can use to set up your document structure and add extra functionality to your document. The following articles explain thoroughly, with full working examples, how to use HTML for the most common, frequent Web development tasks. If you need a quick explanation of a tag, please head over to our [HTML reference](/ko/docs/Web/HTML/Reference).
+{{LearnSidebar}}
 
-## Common use cases
+다음 링크들은 HTML로 해결해야 할 일반적인 일상적 문제에 대한 해결책을 가리킵니다.
 
-HTML covers a lot of very common use cases in Web design. It's highly likely you'll come across these scenarios:
+### 기본 구조
 
-### Basic structure
+HTML의 가장 기본적인 응용은 문서 구조입니다. HTML을 처음 접한다면 이것부터 시작해야 합니다.
 
-The most basic application of HTML is document structure. If you're new to HTML you should start with this.
+- [기본 HTML 문서를 만들기](/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document)
+- [웹 페이지를 논리적 섹션으로 나누기](/ko/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+- [제목과 단락의 적절한 구조 설정](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#기본적인_것_제목과_단락)
 
-- [How to create a basic HTML document](/ko/docs/Learn/HTML/Howto/Create_a_basic_HTML_document)
-- [How to divide a webpage into logical sections](/ko/docs/Learn/HTML/Howto/Divide_a_webpage_into_logical_sections)
-- [How to set up a proper title hierarchy](/ko/docs/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy)
+### 기본 텍스트 - 의미론적 수준
 
-### Basic text-level semantics
+HTML은 문서에 대한 의미론적 정보 제공을 전문으로 하므로 HTML은 문서에서 메시지를 가장 잘 전달하는 방법에 대한 많은 질문에 답합니다.
 
-HTML specializes in providing semantic information for a document, so HTML answers many questions you might have about how to get your message across best in your document.
+- [HTML을 사용하여 항목 목록 만들기](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists)
+- [콘텐츠 강조하기](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#중요와_강조)
+- [텍스트 강조하기](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#중요와_강조)
+- [HTML로 컴퓨터 코드를 표시하기](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#컴퓨터_코드를_나타내기)
+- [이미지 및 그래픽에 주석달기](/ko/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#figures_및_figure_captions으로_이미지에_주석_달기)
+- [약어를 표시하고 이해하기 쉽게 만들기](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#약어)
+- [웹 페이지에 인용문 추가하기](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#인용구)
+- [HTML로 용어 정의하기](/ko/docs/Learn/HTML/Howto/Define_terms_with_HTML)
 
-- [How to create list of items with HTML](/ko/docs/Learn/HTML/Howto/Create_list_of_items_with_HTML)
-- [How to stress or emphasize content](/ko/docs/Learn/HTML/Howto/Emphasize_content_or_indicate_that_text_is_important)
-- [How to indicate that text is important](/ko/docs/Learn/HTML/Howto/Emphasize_content_or_indicate_that_text_is_important)
-- [How to display computer code with HTML](/ko/docs/Learn/HTML/Howto/Display_computer_code_with_HTML)
-- [How to indicate exponential notation with HTML](/ko/docs/Learn/HTML/Howto/Indicate_exponential_notation_with_HTML)
-- [How to provide contact information within a webpage](/ko/docs/Learn/HTML/Howto/Provide_contact_information_within_a_webpage)
-- [How to annotate images and graphics](/ko/docs/Learn/HTML/Howto/Annotate_images_and_graphics)
-- [How to mark abbreviations and make them understandable](/ko/docs/Learn/HTML/Howto/Mark_abbreviations_and_make_them_understandable)
-- [How to add citations to webpages](/ko/docs/Learn/HTML/Howto/Add_citations_to_webpages)
-- [How to define terms with HTML](/ko/docs/Learn/HTML/Howto/Define_terms_with_HTML)
+### 하이퍼링크
 
-### Hyperlinks
+HTML을 사용하는 주된 이유 중 하나는 다양한 방법으로 사용할 수 있는 {{Glossary("hyperlink", "하이퍼링크")}}를 사용하여 탐색을 쉽게 만드는 것입니다.
 
-One of the main reasons for HTML is make navigation easy with {{Glossary("hyperlink", "hyperlinks")}}, which can be used in many different ways:
+- [하이퍼링크 만들기](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [HTML로 목차 만들기](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#활동적인_학습_탐색_메뉴_만들기)
 
-- [How to create a hyperlink](/ko/docs/Learn/HTML/Howto/Create_a_hyperlink)
-- [How to create a table of contents with HTML](/ko/docs/Learn/HTML/Howto/Create_list_of_items_with_HTML)
+### 이미지 & 멀티미디어
 
-### Images & multimedia
+- [웹 페이지에 이미지 추가](/ko/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#웹페이지에_어떻게_이미지를_넣을까)
+- [웹 페이지에 비디오 콘텐츠 추가](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 
-- [How to add images to a webpage](/ko/docs/Learn/HTML/Howto/Add_images_to_a_webpage)
-- [How to add video content to a webpage](/ko/docs/Learn/HTML/Howto/Add_audio_or_video_content_to_a_webpage)
-- [How to add audio content to a webpage](/ko/docs/Learn/HTML/Howto/Add_audio_or_video_content_to_a_webpage)
+### 스크립팅 & 스타일링
 
-### Scripting & styling
+HTML은 문서 구조만 설정합니다. 프레젠테이션 문제를 해결하려면 {{glossary("CSS")}}를 사용하거나 스크립팅을 사용하여 페이지를 대화형으로 만드세요.
 
-HTML only sets up document structure. To solve presentation issues, use {{glossary("CSS")}}, or use scripting to make your page interactive.
+- [웹 페이지에서 CSS 사용하기](/ko/docs/Learn/CSS/First_steps/How_CSS_works#dom에_css_적용하기)
+- [웹 페이지 내에서 JavaScript 사용하기](/ko/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage)
 
-- [How to use CSS within a webpage](/ko/docs/Learn/HTML/Howto/Use_CSS_within_a_webpage)
-- [How to use JavaScript within a webpage](/ko/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage)
+### 내장 콘텐츠
 
-### Embedded content
+- [다른 웹 페이지 내에 웹 페이지 삽입하기](/ko/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
 
-- [How to embed a webpage within another webpage](/ko/docs/Learn/HTML/Howto/Embed_a_webpage_within_another_webpage)
-- [How to add Flash content within a webpage](/ko/docs/Learn/HTML/Howto/Add_Flash_content_within_a_webpage)
+## 흔하지 않거나 고급 문제
 
-## Uncommon or advanced problems
+기본 사항 외에도 HTML은 매우 풍부하며 복잡한 문제를 해결하기 위한 고급 기능을 제공합니다. 다음 문서는 직면할 수 있는 덜 일반적인 사용 사례를 해결하는 데 도움이 됩니다.
 
-Beyond the basics, HTML is very rich and offers advanced features for solving complex problems. These articles help you tackle the less common use cases you may face:
+### 양식
 
-### Forms
+양식은 웹 페이지에서 웹 서버로 데이터를 보내기 위해 만들어진 복잡한 HTML 구조입니다. [전체 가이드](/ko/docs/Learn/Forms)를 살펴보시기 바랍니다. 시작하고 싶다면, 아래 링크를 참조하세요.
 
-Forms are a complex HTML structure made to send data from a webpage to a web server. We encourage you to go over our [full dedicated guide](/ko/docs/Web/Guide/HTML/Forms). Here is where you should start:
+- [간단한 웹 양식 작성](/ko/docs/Learn/Forms/Your_first_form)
+- [웹 양식 구성](/ko/docs/Learn/Forms/How_to_structure_a_web_form)
 
-- [How to create a simple Web form](/ko/docs/Web/Guide/HTML/Forms/My_first_HTML_form)
-- [How to structure a Web form](/ko/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form)
+### 표 정보
 
-### Tabular information
+표 형식 데이터라고 불리는 일부 정보는 열과 행이 있는 표로 구성되어야 합니다. 이는 가장 복잡한 HTML 구조 중 하나이며 이를 마스터하는 것은 쉽지 않습니다.
 
-Some information, called tabular data, needs to be organized into tables with columns and rows. It's one of the most complex HTML structures, and mastering it is not easy:
+- [데이터 테이블 만들기](/ko/docs/Learn/HTML/Tables/Basics)
+- [HTML 테이블을 액세스 가능하게 만들기](/ko/docs/Learn/HTML/Tables/Advanced)
 
-- [How to create a data spreadsheet](/ko/docs/Learn/HTML/Howto/Create_a_data_spreadsheet)
-- [How to make HTML tables accessible](/ko/docs/Learn/HTML/Howto/Make_HTML_tables_accessible)
-- [How to optimize HTML table rendering](/ko/docs/Learn/HTML/Howto/Optimize_HTML_table_rendering)
+### 데이터 표현
 
-### Data representation
+- HTML로 숫자 및 코드 값 표현 — [위 첨자와 아래 첨자](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#위_첨자와_아래_첨자)와 [컴퓨터 코드 나타내기](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#컴퓨터_코드를_나타내기)를 참조하세요.
+- [데이터 속성 사용](/ko/docs/Learn/HTML/Howto/Use_data_attributes)
 
-- [How to represent numeric values with HTML](/ko/docs/Learn/HTMLHowto/Represent_numeric_values_with_HTML)
-- [How to associate human readable content with arbitrary computer data structures](/ko/docs/Learn/HTML/Howto/Associate_human_readable_content_with_arbitrary_computer_data_structures)
+### 고급 텍스트 의미론
 
-### Interactivity
+- [HTML 줄 바꿈 제어](/ko/docs/Web/HTML/Element/br)
+- 변경 사항 표시 (추가 및 제거된 텍스트) — {{htmlelement("ins")}} 와 {{htmlelement("del")}} 요소를 참조하세요.
 
-- [How to create collapsible content with HTML](/ko/docs/Learn/HTML/Howto/Create_collapsible_content_with_HTML)
-- [How to add context menus to a webpage](/ko/docs/Learn/HTML/Howto/Add_context_menus_to_a_webpage)
-- [How to create dialog boxes with HTML](/ko/docs/Learn/HTML/Howto/Create_dialog_boxes_with_HTML)
+### 고급 이미지 & 멀티미디어
 
-### Advanced text semantics
+- [웹 페이지에 반응형 이미지 추가](/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [웹 페이지에 백터 이미지 추가](/ko/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
+- [이미지 위에 히트 맵 추가](/ko/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)
 
-- [How to take control of HTML line breaking](/ko/docs/Learn/HTML/Howto/Take_control_of_HTML_line_breaking)
-- [How to mark changes (added and removed text)](/ko/docs/Learn/HTML/Howto/Mark_text_insertion_and_deletion)
+### 국제화
 
-### Advanced images & multimedia
+HTML은 단일 언어가 아닙니다. 일반적인 국제화 문제를 처리하는 도구를 제공합니다.
 
-- [How to add responsive image to a webpage](/ko/docs/Learn/HTML/Howto/Add_responsive_image_to_a_webpage)
-- [How to add vector image to a webpage](/ko/docs/Learn/HTML/Howto/Add_vector_image_to_a_webpage)
-- [How to add a hit map on top of an image](/ko/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)
-- [How to create dynamic and interactive images](/ko/docs/Learn/HTML/Howto/Create_dynamic_and_interactive_images)
+- [단일 웹 페이지에 여러 언어 추가](/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#문서의_기본_언어_설정)
+- [HTML로 시간과 날짜 표시](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#시간과_날짜_표시)
 
-### Internationalization
+### 성능
 
-HTML is not monolingual. It provides tools to handle common internationalization issues.
-
-- [How to add multiple languages into a single webpage](/ko/docs/Learn/HTML/Howto/Add_multiple_languages_into_a_single_webpage)
-- [How to handle Japanese ruby characters](/ko/docs/Learn/HTML/Howto/Handle_Japanese_ruby_characters)
-- [How to display time and date with HTML](/ko/docs/Learn/HTML/Howto/Display_time_and_date_with_HTML)
+- [빠르게 로드되는 HTML 페이지 작성](/ko/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)

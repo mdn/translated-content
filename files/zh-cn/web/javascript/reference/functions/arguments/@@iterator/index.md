@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
 arguments[Symbol.iterator]()
 ```
 
-## 实例
+## 示例
 
 ### 使用`for...of`循环的迭代
 
@@ -25,7 +25,7 @@ function f() {
     console.log(letter);
   }
 }
-f('w', 'y', 'k', 'o', 'p');
+f("w", "y", "k", "o", "p");
 ```
 
 ## 规范

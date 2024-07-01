@@ -9,11 +9,11 @@ slug: Web/JavaScript/Guide/Introduction
 
 ## 在開始前需具備之能力
 
-本手冊假設您具有以下基本背景：
+本手冊假設你具有以下基本背景：
 
 - 對網際網路及全球資訊網有大致上的了解
 - 對 HTML(HyperText Markup Language )語法理解至一定程度
-- 有寫過程式的經驗，若您是完全的新手，可嘗試在主頁上有關[JavaScript](/zh-TW/docs/Web/JavaScript)的教程。
+- 有寫過程式的經驗，若你是完全的新手，可嘗試在主頁上有關[JavaScript](/zh-TW/docs/Web/JavaScript)的教程。
 
 ## 什麼是 JavaScript？
 

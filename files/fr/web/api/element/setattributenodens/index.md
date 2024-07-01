@@ -1,52 +1,64 @@
 ---
-title: element.setAttributeNodeNS
+title: "Element : méthode setAttributeNodeNS()"
 slug: Web/API/Element/setAttributeNodeNS
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthodes
-translation_of: Web/API/Element/setAttributeNodeNS
+l10n:
+  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}
 
-`setAttributeNodeNS` ajoute un nouveau nœud attribut avec l'espace de noms et le nom spécifiés.
+La méthode **`setAttributeNodeNS()`**, rattachée à l'interface [`Element`](/fr/docs/Web/API/Element), ajoute un nouveau nœud [`Attr`](/fr/docs/Web/API/Attr) d'un espace de noms à l'élément courant.
+
+S'il n'est pas nécessaire de travailler sur le nœud [`Attr`](/fr/docs/Web/API/Attr) avant de l'ajouter (par exemple en le clonant depuis un autre élément), on pourra utiliser la méthode [`setAttributeNS()`](/fr/docs/Web/API/Element/setAttributeNS) à la place.
+
+Si vous manipulez des documents HTML et n'avez pas besoin d'utiliser d'espace de noms, vous pouvez utiliser la méthode [`setAttribute()`](/fr/docs/Web/API/Element/setAttribute) à la place.
 
 ## Syntaxe
 
-```js
-replacedAttr = element.setAttributeNodeNS(attributeNode)
+```js-nolint
+setAttributeNodeNS(attributeNode)
 ```
 
-- `replacedAttr`
-  - : Le nœud attribut remplacé, si applicable, renvoyé par cette fonction.
-- `attributeNode`
-  - : Un nœud `Attr`.
+### Paramètre
 
-## Exemple
+- `attributeNode`
+  - : Un nœud [`Attr`](/fr/docs/Web/API/Attr) à associer à l'élément courant (en ajout ou remplacement).
+
+### Valeur de retour
+
+L'éventuel nœud [`Attr`](/fr/docs/Web/API/Attr) remplacé.
+
+## Exemples
 
 ```js
-// <div id="one" special-align="utterleft">one</div>
+// <div id="one" xmlns:myNS="http://www.mozilla.org/ns/specialspace"
+//            myNS:special-align="utterleft">one</div>
 // <div id="two">two</div>
 
-var myns = "http://www.mozilla.org/ns/specialspace";
-var d1 = document.getElementById("one");
-var d2 = document.getElementById("two");
-var a = d1.getAttributeNodeNS(myns, "special-align");
-d2.setAttributeNodeNS(a);
-
-alert(d2.attributes[1].value) // renvoie&nbsp;: "utterleft"
+const myns = "http://www.mozilla.org/ns/specialspace";
+const d1 = document.getElementById("one");
+const d2 = document.getElementById("two");
+const a = d1.getAttributeNodeNS(myns, "special-align");
+d2.setAttributeNodeNS(a.cloneNode(true));
+console.log(d2.attributes[1].value); // returns: `utterleft'
 ```
 
 ## Notes
 
-Si l'attribut spécifié existe déjà sur l'élément, cet attribut est remplacé par le nouveau et l'ancien est renvoyé.
+Si l'attribut indiqué existe déjà sur l'élément, cet attribut est remplacé par le nouveau et l'ancien est renvoyé.
 
-Notez que si vous essayez de définir sans cloner le noeud, Mozilla donne une erreur "Attribut déjà utilisé" NS_ERROR_DOM_INUSE_ATTRIBUTE_ERR, car le DOM nécessite que le clonage d'`Attr` soit réutilisé (contrairement aux autres Noeuds qui peuvent être déplacés).
+## Spécifications
 
-{{ DOMAttributeMethods() }}
+{{Specifications}}
 
-## Spécification
+## Compatibilité des navigateurs
 
-- [DOM Level 2 Core: setAttributeNodeNS (en)](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElSetAtNodeNS) (non normative)
+{{Compat}}
+
+## Voir aussi
+
+- [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute)
+- [`Element.setAttributeNode()`](/fr/docs/Web/API/Element/setAttributeNode)
+- [`Document.createAttribute()`](/fr/docs/Web/API/Document/createAttribute)
+- [`Document.createAttributeNS()`](/fr/docs/Web/API/Document/createAttributeNS)
+- [`Element.getAttributeNodeNS()`](/fr/docs/Web/API/Element/getAttributeNodeNS)

@@ -11,16 +11,16 @@ Esse objeto está disponível pela propriedade `dataTransfer` de todos os evento
 
 ## Visão geral das propriedades
 
-| Propriedades                                                                                                                                                 | Tipo                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| [`dropEffect`](#dropEffect.28.29)                                                                                      | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
-| [`effectAllowed`](#effectAllowed.28.29)                                                                             | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
-| [`files`](#files.28.29)                                                 | {{ domxref("FileList") }}                                                                                       |
-| [`mozCursor`](#mozCursor) {{ non-standard_inline() }}      | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String)            |
-| [`mozItemCount`](#mozItemCount.28.29) {{ non-standard_inline() }}                                           | `unsigned long`                                                                                                        |
-| [`mozSourceNode`](#mozSourceNode) {{ non-standard_inline() }} | {{ domxref("Node") }}                                                                                           |
-| [`mozUserCancelled`](#mozUserCancelled)                                                                          | [`Boolean`](/pt-BR/JavaScript/Reference/Global_Objects/Boolean) |
-| [`types`](#types.28.29)                                                                                                     | [`DOMStringList`](/en-US/docs/Web/API/DOMStringList)                                |
+| Propriedades                                                      | Tipo                                                               |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------ |
+| [`dropEffect`](#dropEffect.28.29)                                 | [`String`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String) |
+| [`effectAllowed`](#effectAllowed.28.29)                           | [`String`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String) |
+| [`files`](#files.28.29)                                           | {{ domxref("FileList") }}                                          |
+| [`mozCursor`](#mozCursor) {{ non-standard_inline() }}             | [`String`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String) |
+| [`mozItemCount`](#mozItemCount.28.29) {{ non-standard_inline() }} | `unsigned long`                                                    |
+| [`mozSourceNode`](#mozSourceNode) {{ non-standard_inline() }}     | {{ domxref("Node") }}                                              |
+| [`mozUserCancelled`](#mozUserCancelled)                           | [`Boolean`](/pt-BR/JavaScript/Reference/Global_Objects/Boolean)    |
+| [`types`](#types.28.29)                                           | [`DOMStringList`](/pt-BR/docs/Web/API/DOMStringList)               |
 
 ## Visão geral dos métodos
 
@@ -82,7 +82,7 @@ Contains a list of all the local files available on the data transfer. If the dr
 
 These examples dump the list of files dragged into the browser window.
 
-- (Firefox only): <http://jsfiddle.net/9C2EF/>
+- (Firefox only): <https://jsfiddle.net/9C2EF/>
 - (All browsers): [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
 
 ### types

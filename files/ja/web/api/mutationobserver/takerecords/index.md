@@ -31,8 +31,8 @@ const mutationRecords = mutationObserver.takeRecords()
 const targetNode = document.querySelector("#someElement");
 const observerOptions = {
   childList: true,
-  attributes: true
-}
+  attributes: true,
+};
 
 const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);
@@ -58,4 +58,4 @@ if (mutations) {
 
 ## ブラウザ互換性
 
-{{Compat("api.MutationObserver.takeRecords")}}
+{{Compat}}

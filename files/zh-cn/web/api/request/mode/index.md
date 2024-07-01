@@ -37,7 +37,7 @@ var myMode = request.mode;
 In the following snippet, we create a new request using theconstructor (for an image file in the same directory as the script), then save the request mode in a variable:
 
 ```js
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 var myMode = myRequest.mode; // returns "cors" by default
 ```
 

@@ -10,9 +10,9 @@ slug: Web/API/PageTransitionEvent/persisted
 ## Syntax
 
 ```js
-window.addEventListener('pageshow', function(event) {
+window.addEventListener("pageshow", function (event) {
   if (event.persisted) {
-    console.log('Page was loaded from cache.');
+    console.log("Page was loaded from cache.");
   }
 });
 ```

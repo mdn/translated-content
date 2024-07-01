@@ -3,7 +3,7 @@ title: storage.StorageArea
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 StorageArea はストレージ領域を表すオブジェクトです。
 
@@ -26,7 +26,7 @@ StorageArea はオブジェクト型です。
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.storage.StorageArea")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

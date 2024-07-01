@@ -24,7 +24,7 @@ Entre outras coisas, o ECMAScript define:
 - Tipos (_boolean_, _number_, _string_, _function_, _object_...)
 - O objeto global. Num navegador esse objeto global é o objeto _window_, mas o ECMAScript apenas define as APIs, não especificamente para navegadores, por exemplo: _parseInt_, _parseFloat_, _decodeURI_, _encodeURI_...
 - Um mecanismo de herança baseado em protótipo
-- Objetos e funções embutidas ({{jsxref("JSON")}}, {{jsxref("Math")}}, [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), _Object introspection_...)
+- Objetos e funções embutidas ({{jsxref("JSON")}}, {{jsxref("Math")}}, [Array](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array), _Object introspection_...)
 - [Modo estrito](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode) (rigoroso)
 
 ### Suporte do navegador

@@ -3,7 +3,9 @@ title: FormData.entries()
 slug: Web/API/FormData/entries
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 **`FormData.entries()`** 메서드는 이 객체에 포함된 모든 key/value 쌍을 통과하는 {{jsxref("Iteration_protocols",'iterator')}} 를 반환합니다. 각 쌍의 key는 {{domxref("USVString")}} 객체입니다; value는 {{domxref("USVString")}} 또는 {{domxref("Blob")}} 중 하나입니다.
 
@@ -24,12 +26,12 @@ formData.entries();
 ```js
 // Create a test FormData object
 var formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 // Display the key/value pairs
-for(var pair of formData.entries()) {
-   console.log(pair[0]+ ', '+ pair[1]);
+for (var pair of formData.entries()) {
+  console.log(pair[0] + ", " + pair[1]);
 }
 ```
 
@@ -40,11 +42,11 @@ key1, value1
 key2, value2
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

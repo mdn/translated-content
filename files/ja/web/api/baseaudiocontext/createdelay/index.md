@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createDelay()
 slug: Web/API/BaseAudioContext/createDelay
-original_slug: Web/API/AudioContext/createDelay
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -13,7 +12,7 @@ original_slug: Web/API/AudioContext/createDelay
 ## 構文
 
 ```js
-createDelay(maxDelayTime)
+createDelay(maxDelayTime);
 ```
 
 ### 引数

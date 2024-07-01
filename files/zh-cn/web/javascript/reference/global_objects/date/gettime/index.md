@@ -25,7 +25,7 @@ dateObj.getTime()
 
 `getTime` 方法的返回值一个数值，表示从 1970 年 1 月 1 日 0 时 0 分 0 秒（UTC，即协调世界时）距离该日期对象所代表时间的毫秒数。
 
-## 例子
+## 示例
 
 ### 使用 getTime() 复制日期对象
 
@@ -61,7 +61,7 @@ console.log("Operation took " + (end.getTime() - start.getTime()) + " msec");
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.setTime()")}}
 - {{jsxref("Date.prototype.valueOf()")}}

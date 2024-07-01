@@ -3,6 +3,8 @@ title: performance.getEntriesByName()
 slug: Web/API/Performance/getEntriesByName
 ---
 
+{{APIRef("Performance API")}}
+
 **`getEntriesByName()`**方法返回一个给定名称和 name 和 type 属性的{{domxref("PerformanceEntry")}}对象数组。在创建 performance 标记或在明确的时间点测量（比如手动调用{{domxref("Performance.mark","mark()")}}方法）也可以创建这样的对象数组。
 
 在 Workers 中可以使用该方法。
@@ -48,32 +50,46 @@ function use_PerformanceEntry_methods() {
 
   // Use getEntries() to iterate through the each entry
   var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
+  for (var i = 0; i < p.length; i++) {
     log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
 
   // Use getEntries(name, entryType) to get specific entries
-  p = performance.getEntries({name : "Begin", entryType: "mark"});
-  for (var i=0; i < p.length; i++) {
+  p = performance.getEntries({ name: "Begin", entryType: "mark" });
+  for (var i = 0; i < p.length; i++) {
     log("Begin[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
 
   // Use getEntriesByType() to get all "mark" entries
   p = performance.getEntriesByType("mark");
-  for (var i=0; i < p.length; i++) {
-    log ("Mark only entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
+  for (var i = 0; i < p.length; i++) {
+    log(
+      "Mark only entry[" +
+        i +
+        "]: name = " +
+        p[i].name +
+        "; startTime = " +
+        p[i].startTime +
+        "; duration  = " +
+        p[i].duration,
+    );
   }
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
   p = performance.getEntriesByName("Begin", "mark");
-  for (var i=0; i < p.length; i++) {
-    log ("Mark and Begin entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
+  for (var i = 0; i < p.length; i++) {
+    log(
+      "Mark and Begin entry[" +
+        i +
+        "]: name = " +
+        p[i].name +
+        "; startTime = " +
+        p[i].startTime +
+        "; duration  = " +
+        p[i].duration,
+    );
   }
 }
 ```

@@ -31,21 +31,21 @@ function stopLink(event) {
 }
 
 function logClick(event) {
-  const log = document.getElementById('log');
+  const log = document.getElementById("log");
 
-  if (event.target.tagName === 'A') {
+  if (event.target.tagName === "A") {
     if (event.defaultPrevented) {
-      log.innerText = '죄송합니다. 이 링크는 방문할 수 없습니다.\n' + log.innerText;
-    }
-    else {
-      log.innerText = '링크 방문 중...\n' + log.innerText;
+      log.innerText =
+        "죄송합니다. 이 링크는 방문할 수 없습니다.\n" + log.innerText;
+    } else {
+      log.innerText = "링크 방문 중...\n" + log.innerText;
     }
   }
 }
 
-const a = document.getElementById('link2');
-a.addEventListener('click', stopLink);
-document.addEventListener('click', logClick);
+const a = document.getElementById("link2");
+a.addEventListener("click", stopLink);
+document.addEventListener("click", logClick);
 ```
 
 ### 결과

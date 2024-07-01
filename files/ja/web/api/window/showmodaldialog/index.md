@@ -14,9 +14,9 @@ slug: Web/API/Window/showModalDialog
 ## 構文
 
 ```js
-showModalDialog(uri)
-showModalDialog(uri, arguments)
-showModalDialog(uri, arguments, options)
+showModalDialog(uri);
+showModalDialog(uri, arguments);
+showModalDialog(uri, arguments, options);
 ```
 
 ### 引数
@@ -83,7 +83,7 @@ showModalDialog(uri, arguments, options)
 
 ### 返値
 
- `uri` で指定した文書で設定された `returnValue` プロパティを保持します。
+`uri` で指定した文書で設定された `returnValue` プロパティを保持します。
 
 ## メモ
 

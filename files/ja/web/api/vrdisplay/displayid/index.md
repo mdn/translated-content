@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.displayId
 slug: Web/API/VRDisplay/displayId
-original_slug: Web/API/VRDevice/displayId
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
@@ -30,5 +29,4 @@ original_slug: Web/API/VRDevice/displayId
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

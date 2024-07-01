@@ -20,9 +20,9 @@ l10n:
 > **メモ:** `fetch()` ブロックの先頭で、レスポンスの `ok` 値をコンソールにログ出力します。
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest).then((response) => {
   console.log(response.ok); // レスポンスが正常に返された場合に true を返します。

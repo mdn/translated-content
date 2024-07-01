@@ -1,15 +1,6 @@
 ---
 title: arguments[@@iterator]()
 slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
-tags:
-  - Déprécié
-  - Fonctions
-  - JavaScript
-  - Propriété
-  - Reference
-  - arguments
-translation_of: Web/JavaScript/Reference/Functions/arguments/@@iterator
-original_slug: Web/JavaScript/Reference/Fonctions/arguments/@@iterator
 ---
 
 {{jsSidebar("Functions")}}
@@ -19,7 +10,7 @@ La valeur initiale de la propriété **`@@iterator`** est le même objet que la 
 ## Syntaxe
 
 ```js
-arguments[Symbol.iterator]()
+arguments[Symbol.iterator]();
 ```
 
 ## Exemples
@@ -35,7 +26,7 @@ function f() {
     console.log(letter);
   }
 }
-f('w', 'y', 'k', 'o', 'p');
+f("w", "y", "k", "o", "p");
 ```
 
 ## Spécifications

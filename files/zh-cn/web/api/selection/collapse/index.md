@@ -25,7 +25,7 @@ sel.collapse(parentNode, offset);
 ```js
 /* 将光标收起到文档 body 的开头 */
 var body = document.getElementsByTagName("body")[0];
-window.getSelection().collapse(body,0);
+window.getSelection().collapse(body, 0);
 ```
 
 ## 规范

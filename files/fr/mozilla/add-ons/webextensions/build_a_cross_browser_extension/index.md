@@ -1,16 +1,9 @@
 ---
 title: Construction d'une extension multi-navigateur
 slug: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
-tags:
-  - Add-ons
-  - Extensions
-  - Guide
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
-original_slug: Mozilla/Add-ons/WebExtensions/construction_extension_cross_browser
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'introduction de l'API WebExtension a créé un paysage plus homogène pour le développement des extensions des navigateurs. Cependant, parmi les navigateurs qui utilisent les API d'extensions (les principaux étant Chrome, Firefox, Opera et Edge), il existe des différences à la fois dans l'implémentation de l'API et dans la couverture des différentes fonctionnalités. Par ailleurs, Safari utilise ses propres extensions Safari Extensions JS.
 
@@ -67,13 +60,10 @@ Ainsi, par exemple, ce code `manifest.json` rend le _polyfill_ disponible pour v
 
 ```json
 {
- // ...
- "background": {
-   "scripts": [
-     "browser-polyfill.js",
-     "background.js"
-   ]
- }
+  // ...
+  "background": {
+    "scripts": ["browser-polyfill.js", "background.js"]
+  }
 }
 ```
 

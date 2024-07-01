@@ -1,12 +1,6 @@
 ---
 title: Content Security Policy (CSP)
 slug: Web/HTTP/CSP
-tags:
-  - CSP
-  - Content Security Policy
-  - Reference
-  - Security
-translation_of: Web/HTTP/CSP
 ---
 
 {{HTTPSidebar}}
@@ -161,11 +155,11 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-u
 et qui contient le code HTML suivant :
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Connectez-vous</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     ... Contenu ...

@@ -21,39 +21,39 @@ JavaScript では、関数の引数は、指定しなければ {{jsxref("undefin
 
 以前は、既定値を設定するための一般的な方法は、関数の本体で引数の値を検査し、`undefined` であった場合に値を代入することでした。
 
-次の例では、`b` の値を指定せずに `multiply` を呼び出した場合、`a` * `b` を評価するときに `b` の値が `undefined` となり、`multiply` は `NaN` を返します。</p>
+次の例では、`b` の値を指定せずに `multiply` を呼び出した場合、`a` \* `b` を評価するときに `b` の値が `undefined` となり、`multiply` は `NaN` を返します。</p>
 
 ```js
 function multiply(a, b) {
-  return a * b
+  return a * b;
 }
 
-multiply(5, 2)  // 10
-multiply(5)     // NaN !
+multiply(5, 2); // 10
+multiply(5); // NaN !
 ```
 
 こうなることを防ぐためには、 2 行目で使われているように、`multiply` が 1 つだけの引数で呼び出された場合に `b` を `1` に設定します。</p>
 
 ```js
 function multiply(a, b) {
-  b = (typeof b !== 'undefined') ?  b : 1
-  return a * b
+  b = typeof b !== "undefined" ? b : 1;
+  return a * b;
 }
 
-multiply(5, 2)  // 10
-multiply(5)     // 5
+multiply(5, 2); // 10
+multiply(5); // 5
 ```
 
 ES2015 のデフォルト引数を用いると、関数本体内のチェックはもはや必要なくなります。関数の先頭で `1` を `b` の既定値として設定するだけです。
 
 ```js
 function multiply(a, b = 1) {
-  return a * b
+  return a * b;
 }
 
-multiply(5, 2)          // 10
-multiply(5)             // 5
-multiply(5, undefined)  // 5
+multiply(5, 2); // 10
+multiply(5); // 5
+multiply(5, undefined); // 5
 ```
 
 ## 例
@@ -80,29 +80,29 @@ test(null)       // 'object' (num は null に設定)
 
 ```js
 function append(value, array = []) {
-  array.push(value)
-  return array
+  array.push(value);
+  return array;
 }
 
-append(1)  // [1]
-append(2)  // [1, 2] ではなく [2]
+append(1); // [1]
+append(2); // [1, 2] ではなく [2]
 ```
 
 これは、関数と変数にも適用されます。
 
 ```js
 function callSomething(thing = something()) {
-  return thing
+  return thing;
 }
 
-let numberOfTimesCalled = 0
+let numberOfTimesCalled = 0;
 function something() {
-  numberOfTimesCalled += 1
-  return numberOfTimesCalled
+  numberOfTimesCalled += 1;
+  return numberOfTimesCalled;
 }
 
-callSomething()  // 1
-callSomething()  // 2
+callSomething(); // 1
+callSomething(); // 2
 ```
 
 ### 前の引数を後のデフォルト引数で利用可能
@@ -110,24 +110,31 @@ callSomething()  // 2
 前に (左側で) 定義された引数は、その後のデフォルト引数で利用することができます。
 
 ```js
-function greet(name, greeting, message = greeting + ' ' + name) {
-  return [name, greeting, message]
+function greet(name, greeting, message = greeting + " " + name) {
+  return [name, greeting, message];
 }
 
-greet('David', 'Hi')                     // ["David", "Hi", "Hi David"]
-greet('David', 'Hi', 'Happy Birthday!')  // ["David", "Hi", "Happy Birthday!"]
+greet("David", "Hi"); // ["David", "Hi", "Hi David"]
+greet("David", "Hi", "Happy Birthday!"); // ["David", "Hi", "Happy Birthday!"]
 ```
 
 この機能はこの、いくつもの極端な例を扱うデモに近いかもしれません。
 
 ```js
 function go() {
-  return ':P'
+  return ":P";
 }
 
-function withDefaults(a, b = 5, c = b, d = go(), e = this,
-                      f = arguments, g = this.value) {
-  return [a, b, c, d, e, f, g]
+function withDefaults(
+  a,
+  b = 5,
+  c = b,
+  d = go(),
+  e = this,
+  f = arguments,
+  g = this.value,
+) {
+  return [a, b, c, d, e, f, g];
 }
 
 function withoutDefaults(a, b, c, d, e, f, g) {
@@ -151,10 +158,10 @@ function withoutDefaults(a, b, c, d, e, f, g) {
   return [a, b, c, d, e, f, g];
 }
 
-withDefaults.call({value: '=^_^='});
+withDefaults.call({ value: "=^_^=" });
 // [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
 
-withoutDefaults.call({value: '=^_^='});
+withoutDefaults.call({ value: "=^_^=" });
 // [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
 ```
 
@@ -169,8 +176,11 @@ withoutDefaults.call({value: '=^_^='});
 次の関数では、デフォルト引数が関数本体の子スコープにアクセスできないため、呼び出されると `ReferenceError` が発生します。T
 
 ```js example-bad
-function f(a = go()) { // `f` を呼び出すと `ReferenceError` が発生する。
-  function go() { return ':P' }
+function f(a = go()) {
+  // `f` を呼び出すと `ReferenceError` が発生する。
+  function go() {
+    return ":P";
+  }
 }
 ```
 
@@ -178,8 +188,8 @@ function f(a = go()) { // `f` を呼び出すと `ReferenceError` が発生す�
 
 ```js example-bad
 function f(a, b = () => console.log(a)) {
-  var a = 1
-  b() // `undefined` と表示。デフォルト引数の値は独自のスコープにあるため
+  var a = 1;
+  b(); // `undefined` と表示。デフォルト引数の値は独自のスコープにあるため
 }
 ```
 
@@ -189,11 +199,11 @@ function f(a, b = () => console.log(a)) {
 
 ```js
 function f(x = 1, y) {
-  return [x, y]
+  return [x, y];
 }
 
-f()   // [1, undefined]
-f(2)  // [2, undefined]
+f(); // [1, undefined]
+f(2); // [2, undefined]
 ```
 
 ### 既定値のある分割代入の引数
@@ -208,19 +218,19 @@ function preFilledArray([x = 1, y = 2] = []) {
   return x + y;
 }
 
-preFilledArray();       // 3
-preFilledArray([]);     // 3
-preFilledArray([2]);    // 4
+preFilledArray(); // 3
+preFilledArray([]); // 3
+preFilledArray([2]); // 4
 preFilledArray([2, 3]); // 5
 
 // オブジェクトでも同様に動作します。
-function preFilledObject({z = 3} = {}) {
+function preFilledObject({ z = 3 } = {}) {
   return z;
 }
 
-preFilledObject();          // 3
-preFilledObject({});        // 3
-preFilledObject({ z: 2 });  // 2
+preFilledObject(); // 3
+preFilledObject({}); // 3
+preFilledObject({ z: 2 }); // 2
 ```
 
 ## 仕様書

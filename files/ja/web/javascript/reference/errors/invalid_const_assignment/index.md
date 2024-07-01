@@ -80,14 +80,14 @@ function setupBigScreenEnvironment() {
 `const` 宣言は、値への読み取り専用の参照を作成します。それが保持している値が不変であることを意味するものでは**なく**、変数識別子に再代入できないだけです。たとえば、コンテンツがオブジェクトである場合、オブジェクト自体はまだ変更可能であることを意味します。 つまり、変数に格納されている値を変更することはできないということです。
 
 ```js example-bad
-const obj = {foo: 'bar'};
-obj = {foo: 'baz'}; // TypeError: invalid assignment to const `obj'
+const obj = { foo: "bar" };
+obj = { foo: "baz" }; // TypeError: invalid assignment to const `obj'
 ```
 
 しかし、変数内のプロパティは変更することができます。
 
 ```js example-good
-obj.foo = 'baz';
+obj.foo = "baz";
 obj; // Object { foo: "baz" }
 ```
 

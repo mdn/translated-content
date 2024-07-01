@@ -1,9 +1,9 @@
 ---
 title: Browsing context
 slug: Glossary/Browsing_context
-translation_of: Glossary/Browsing_context
-original_slug: Глоссарий/Browsing_context
 ---
+
+{{GlossarySidebar}}
 
 **Browsing context** (контекст просмотра) - это окружение, в котором {{glossary("browser","браузер")}} отображает {{domxref("Document")}} (на сегодняшний день обычно это вкладки, однако, возможно окно или frame внутри страницы).
 

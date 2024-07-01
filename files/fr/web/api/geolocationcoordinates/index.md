@@ -1,7 +1,6 @@
 ---
 title: Coordinates
 slug: Web/API/GeolocationCoordinates
-translation_of: Web/API/GeolocationCoordinates
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}L'interface **`Coordinates`** représente la position et l'altitude du périphérique sur Terre, ainsi que la précision avec lesquels ces propriétés sont calculées.

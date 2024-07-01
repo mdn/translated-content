@@ -33,17 +33,17 @@ slug: Web/SVG/Element/feMorphology
 
 ## 例
 
-<h3 id="Filtering_SVG_content">SVG コンテンツのフィルタリング</h3>
+### SVG コンテンツのフィルタリング
 
 #### SVG
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="180">
   <filter id="erode">
-    <feMorphology operator="erode" radius="1"/>
+    <feMorphology operator="erode" radius="1" />
   </filter>
   <filter id="dilate">
-    <feMorphology operator="dilate" radius="2"/>
+    <feMorphology operator="dilate" radius="2" />
   </filter>
   <text y="1em">Normal text</text>
   <text id="thin" y="2em">Thinned text</text>
@@ -68,19 +68,19 @@ text {
 }
 ```
 
-{{EmbedLiveSample("Filtering_SVG_content", 340, 180)}}
+{{EmbedLiveSample("SVG コンテンツのフィルタリング", 340, 180)}}
 
-<h3 id="Filtering_HTML_content">HTML コンテンツのフィルタリング</h3>
+### HTML コンテンツのフィルタリング
 
 #### SVG
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
   <filter id="erode">
-    <feMorphology operator="erode" radius="1"/>
+    <feMorphology operator="erode" radius="1" />
   </filter>
   <filter id="dilate">
-    <feMorphology operator="dilate" radius="2"/>
+    <feMorphology operator="dilate" radius="2" />
   </filter>
 </svg>
 
@@ -107,7 +107,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample("Filtering_HTML_content", 340, 180)}}
+{{EmbedLiveSample("HTML コンテンツのフィルタリング", 340, 180)}}
 
 ## 仕様書
 

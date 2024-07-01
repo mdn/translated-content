@@ -163,7 +163,7 @@ any gl.getUniform(program, location);
 ## 示例
 
 ```js
-var loc = gl.getUniformLocation(program, 'u_foobar');
+var loc = gl.getUniformLocation(program, "u_foobar");
 gl.getUniform(program, loc);
 
 //code in vertex-shader

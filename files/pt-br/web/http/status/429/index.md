@@ -25,8 +25,8 @@ Retry-After: 3600
 
 ## Especificações
 
-| Especificações                                               | Título                 |
-| ------------------------------------------------------------ | ---------------------- |
+| Especificações                                 | Título                 |
+| ---------------------------------------------- | ---------------------- |
 | {{RFC("6585", "429 Too Many Requests" , "4")}} | Status HTTP adicionais |
 
 ## Veja também

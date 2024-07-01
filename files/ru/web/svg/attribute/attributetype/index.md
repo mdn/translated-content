@@ -1,11 +1,9 @@
 ---
 title: attributeType
 slug: Web/SVG/Attribute/attributeType
-tags:
-  - SVG
-  - SVG атрибуты
-translation_of: Web/SVG/Attribute/attributeType
 ---
+
+{{SVGRef}}
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 

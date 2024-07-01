@@ -1,6 +1,8 @@
 ---
-title: 'CSP: block-all-mixed-content'
+title: "CSP: block-all-mixed-content"
 slug: Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
+l10n:
+  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
 {{HTTPSidebar}}{{deprecated_header}}
@@ -16,13 +18,13 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) **`block-all-mixed-cont
 
 ## 構文
 
-```
+```http
 Content-Security-Policy: block-all-mixed-content;
 ```
 
 ## 例
 
-```
+```http
 Content-Security-Policy: block-all-mixed-content;
 
 <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
@@ -31,7 +33,7 @@ Content-Security-Policy: block-all-mixed-content;
 より詳細なレベルで http 資産を無効にするには、個々のディレクティブに `https:` を設定することもできます。
 安全ではない HTTP の画像を許可しないようにするには次のようにします。
 
-```
+```http
 Content-Security-Policy: img-src https:
 ```
 

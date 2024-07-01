@@ -50,7 +50,7 @@ font-display: optional;
 
 {{cssinfo}}
 
-## 構文
+## 形式文法
 
 {{csssyntax}}
 
@@ -61,8 +61,9 @@ font-display: optional;
 ```css
 @font-face {
   font-family: ExampleFont;
-  src: url(/path/to/fonts/examplefont.woff) format('woff'),
-       url(/path/to/fonts/examplefont.eot) format('eot');
+  src:
+    url(/path/to/fonts/examplefont.woff) format("woff"),
+    url(/path/to/fonts/examplefont.eot) format("eot");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;

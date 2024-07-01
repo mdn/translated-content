@@ -1,12 +1,6 @@
 ---
 title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/do...while
-original_slug: Web/JavaScript/Reference/Instructions/do...while
 ---
 
 {{jsSidebar("Statements")}}
@@ -18,8 +12,7 @@ L'instruction **`do...while`** crée une boucle qui exécute une instruction jus
 ## Syntaxe
 
 ```js
-do
-  instruction
+do instruction;
 while (condition);
 ```
 
@@ -37,8 +30,8 @@ Dans l'exemple suivant, la boucle `do...while` est parcourue au moins une fois e
 ```js
 var i = 0;
 do {
-   i += 1;
-   console.log(i);
+  i += 1;
+  console.log(i);
 } while (i < 5);
 ```
 

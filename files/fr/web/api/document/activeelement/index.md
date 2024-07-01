@@ -1,10 +1,6 @@
 ---
 title: Document.activeElement
 slug: Web/API/Document/activeElement
-translation_of: Web/API/DocumentOrShadowRoot/activeElement
-translation_of_original: Web/API/Document/activeElement
-original_slug: Web/API/DocumentOrShadowRoot/activeElement
-browser-compat: api.Document.activeElement
 ---
 
 {{APIRef("Shadow DOM")}}
@@ -30,8 +26,12 @@ Un objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément qui 
 <p>Sélectionnez le texte d'une des zones de texte ci-après :</p>
 
 <form>
-  <textarea name="ta-exemple-un" id="ta-exemple-un" rows="7" cols="40">Voici la zone de texte n°1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.</textarea>
-  <textarea name="ta-exemple-deux" id="ta-exemple-deux" rows="7" cols="40">Voici la zone de texte n°2. Fusce ullamcorper, nisl ac porttitor adipiscing, urna orci egestas libero, ut accumsan orci lacus laoreet diam. Morbi sed euismod diam.</textarea>
+  <textarea name="ta-exemple-un" id="ta-exemple-un" rows="7" cols="40">
+Voici la zone de texte n°1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.</textarea
+  >
+  <textarea name="ta-exemple-deux" id="ta-exemple-deux" rows="7" cols="40">
+Voici la zone de texte n°2. Fusce ullamcorper, nisl ac porttitor adipiscing, urna orci egestas libero, ut accumsan orci lacus laoreet diam. Morbi sed euismod diam.</textarea
+  >
 </form>
 
 <p>Identifiant de l'élément actif : <b id="output-element"></b></p>
@@ -44,19 +44,20 @@ Un objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément qui 
 function onMouseUp(e) {
   const activeTextarea = document.activeElement;
   const selection = activeTextarea.value.substring(
-    activeTextarea.selectionStart, activeTextarea.selectionEnd
+    activeTextarea.selectionStart,
+    activeTextarea.selectionEnd,
   );
 
-  const outputElement = document.getElementById('output-element');
-  const outputText = document.getElementById('output-text');
+  const outputElement = document.getElementById("output-element");
+  const outputText = document.getElementById("output-text");
   outputElement.innerHTML = activeTextarea.id;
   outputText.innerHTML = selection;
 }
 
-const textarea1 = document.getElementById('ta-exemple-un');
-const textarea2 = document.getElementById('ta-exemple-deux');
-textarea1.addEventListener('mouseup', onMouseUp, false);
-textarea2.addEventListener('mouseup', onMouseUp, false);
+const textarea1 = document.getElementById("ta-exemple-un");
+const textarea2 = document.getElementById("ta-exemple-deux");
+textarea1.addEventListener("mouseup", onMouseUp, false);
+textarea2.addEventListener("mouseup", onMouseUp, false);
 ```
 
 ### Résultat

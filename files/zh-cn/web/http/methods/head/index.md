@@ -5,23 +5,46 @@ slug: Web/HTTP/Methods/HEAD
 
 {{HTTPSidebar}}
 
-**HTTP `HEAD` 方法** 请求资源的头部信息，并且这些头部与 HTTP {{HTTPMethod("GET")}} 方法请求时返回的一致。该请求方法的一个使用场景是在下载一个大文件前先获取其大小再决定是否要下载，以此可以节约带宽资源。
+**HTTP `HEAD` 方法**请求资源的[标头](/zh-CN/docs/Web/HTTP/Headers)信息，并且这些标头与 HTTP {{HTTPMethod("GET")}} 方法请求时返回的一致。该请求方法的一个使用场景是在下载一个大文件前先通过 `HEAD` 请求读取其 {{HTTPHeader("Content-Length")}} 标头的值获取文件的大小，而无需实际下载文件，以此可以节约带宽资源。
 
-`HEAD` 方法的响应不应包含响应正文。即使包含了正文也必须忽略掉。虽然描述正文信息的 {{glossary("Entity header", "entity headers")}}, 例如 {{HTTPHeader("Content-Length")}} 可能会包含在响应中，但它们并不是用来描述 `HEAD` 响应本身的，而是用来描述同样情况下的 {{HTTPMethod("GET")}} 请求应该返回的响应。
+> **警告：** `HEAD` 方法的响应*不应*包含响应主体。即使包含了响应主体，也*必须*忽略掉：任何（可能用于描述错误响应主体的）{{glossary("Representation header", "表示标头")}}会被假定为在发送相似的 `GET` 请求时也会接收到。
 
-如果 `HEAD` 请求的结果显示在上一次 {{HTTPMethod("GET")}} 请求后缓存的资源已经过期了，即使没有发出{{HTTPMethod("GET")}}请求，缓存也会失效
+如果对 `HEAD` 请求的响应显示一个缓存的 URL 响应现在已经过期，即使没有发出 `GET` 请求，缓存的副本也会失效。
 
-| 请求是否有正文                                         | 否  |
-| ------------------------------------------------------ | --- |
-| 成功的响应是否有正文                                   | 否  |
-| {{Glossary("Safe/HTTP", "安全")}}                           | 是  |
-| {{Glossary("Idempotent", "幂等")}}                           | 是  |
-| {{Glossary("Cacheable", "可缓存")}}                       | 是  |
-| [HTML 表单](/zh-CN/docs/Web/Guide/HTML/Forms) 是否支持 | 否  |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">请求是否有主体</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">成功的响应是否有主体</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Safe/HTTP", "安全")}}</th>
+      <td>是</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Idempotent","幂等")}}</th>
+      <td>是</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Cacheable","可缓存")}}</th>
+      <td>是</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        允许在 <a href="/zh-CN/docs/Learn/Forms">HTML 表单</a>中使用
+      </th>
+      <td>不允许</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
-```plain
+```http
 HEAD /index.html
 ```
 
@@ -33,6 +56,6 @@ HEAD /index.html
 
 {{Compat}}
 
-## ?另见
+## 参见
 
 - {{HTTPMethod("GET")}}

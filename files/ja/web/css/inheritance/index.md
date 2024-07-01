@@ -1,6 +1,6 @@
 ---
 title: 継承
-slug: Web/CSS/inheritance
+slug: Web/CSS/Inheritance
 ---
 
 {{CSSRef}}
@@ -21,7 +21,9 @@ CSS プロパティは 2 種類に分類することができます。
 継承プロパティの一般例として {{ Cssxref("color") }} プロパティが挙げられます。以下のスタイルルールとマークアップを考えてみましょう。
 
 ```css
-p { color: green; }
+p {
+  color: green;
+}
 ```
 
 ```html
@@ -37,11 +39,13 @@ p { color: green; }
 非継承プロパティの一般的な例としては {{ Cssxref("border") }} プロパティが挙げられます。以下のスタイルルールとマークアップを考えてみましょう。
 
 ```css
- p { border: medium solid; }
+p {
+  border: medium solid;
+}
 ```
 
 ```html
-  <p>この段落には<em>強調されたテキスト</em>があります。</p>
+<p>この段落には<em>強調されたテキスト</em>があります。</p>
 ```
 
 この場合、「強調されたテキスト」という文字列は ({{ Cssxref("border-style") }} の初期値が `none` であるため) 境界がありません。
@@ -72,10 +76,10 @@ p {
   - [アットルール](/ja/docs/Web/CSS/At-rule)
   - [コメント](/ja/docs/Web/CSS/Comments)
   - [詳細度](/ja/docs/Web/CSS/Specificity)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
   - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
-  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
     - [初期値](/ja/docs/Web/CSS/initial_value)
     - [計算値](/ja/docs/Web/CSS/computed_value)

@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: for-in loop head declarations may not have initializers'
+title: "SyntaxError: for-in loop head declarations may not have initializers"
 slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 ---
 
@@ -46,7 +46,7 @@ for-in ループのヘッダーから初期化子 (`i = 0`) を削除してく�
 ```js example-good
 "use strict";
 
-var obj = {a: 1, b: 2, c: 3 };
+var obj = { a: 1, b: 2, c: 3 };
 
 for (var i in obj) {
   console.log(obj[i]);
@@ -58,7 +58,7 @@ for (var i in obj) {
 for...in ループは [Array の反復処理で使用すべきではありません](/ja/docs/Web/JavaScript/Reference/Statements/for...in#array_iteration_and_for...in)。 {{jsxref("Array")}} を反復するのに、 [`for`](/ja/docs/Web/JavaScript/Reference/Statements/for) ループを `for-in` ループの代わりに使うつもりだったのでしょうか。 `for` ループならば、初期化子を設定することができます。
 
 ```js example-good
-var arr = [ "a", "b", "c" ]
+var arr = ["a", "b", "c"];
 
 for (var i = 2; i < arr.length; i++) {
   console.log(arr[i]);

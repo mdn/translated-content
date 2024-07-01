@@ -1,8 +1,9 @@
 ---
 title: SEO - Otimização dos Mecanismos de Buscas
 slug: Glossary/SEO
-original_slug: Glossario/SEO
 ---
+
+{{GlossarySidebar}}
 
 **SEO** (Search Engine Optimization - Otimização dos Mecanismos de Pesquisa) é o processo de fazer com que um sítio fique mais visível nos resultados da procura, também denominado melhoramento na classificação da busca.
 
@@ -23,7 +24,7 @@ Os métodos SEO dividem-se em três grandes classes:
 
 ### Conhecimento Geral
 
-- {{Interwiki("wikipedia", "SEO")}} na Wikipedia
+- [SEO](https://pt.wikipedia.org/wiki/SEO) na Wikipedia
 
 ### Aprenda SEO
 

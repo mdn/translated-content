@@ -14,7 +14,7 @@ Animation.effect 属性可以获取或设置动画的目标效果。目标效果
 var effect = animation.effect;
 
 // Set an Animation's target effect
-animation.effect = new KeyframeEffect({ opacity: [ 1, 0 ] }, 300);
+animation.effect = new KeyframeEffect({ opacity: [1, 0] }, 300);
 ```
 
 ### 值

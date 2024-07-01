@@ -31,6 +31,7 @@ some(function (element, index, array) { /* … */ }, thisArg)
 ### 매개변수
 
 - `callbackFn`
+
   - : 배열의 각 요소에 대해 실행할 함수. 이 함수는 요소가 시험을 통과하면 [참 같은 값](/ko/docs/Glossary/Truthy)을 반환하며, 그렇지 않으면 거짓인 값을 반환합니다.
 
   다음의 인자와 함께 함수를 호출합니다.
@@ -43,7 +44,7 @@ some(function (element, index, array) { /* … */ }, thisArg)
     - : `some`을 호출한 배열
 
 - `thisArg` {{optional_inline}}
-  - : `callbackFn`을 실행할 때 `this`로 사용하는 값. [반복 메소드](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods)를 참고하세요.
+  - : `callbackFn`을 실행할 때 `this`로 사용하는 값. [반복 메소드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods)를 참고하세요.
 
 ### 반환 값
 

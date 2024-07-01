@@ -3,6 +3,8 @@ title: Escribiendo aplicaciones con WebSockets
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 ---
 
+{{DefaultAPISidebar("WebSockets API")}}
+
 WebSockets es una tecnología basada en el protocolo ws, este hace posible establecer una conexión continua full-duplex, entre un cliente y servidor. Un cliente websocket podría ser el navegador del usuario, pero el protocolo es una plataforma independiente.
 
 > **Nota:** Tenemos un ejemplo funcional de un sistema de chat/servidor usado para ejemplos de código que estará disponible una vez nuestra infraestructura esté en posición de hospedar ejemplos de WebSocket apropiadamente.
@@ -54,7 +56,10 @@ A partir de Firefox 11, es normal recibir un mensaje de error descriptivo en la 
 En este ejemplo de crea un nuevo WebSocket, conectandose al servidor `ws://www.example.com/socketserver`. El nombre del protocolo "protocolOne" es el utilizado para la consulta del socket, aunque puede ser omitido.
 
 ```js
-var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
+var exampleSocket = new WebSocket(
+  "ws://www.example.com/socketserver",
+  "protocolOne",
+);
 ```
 
 Como respuesta, `exampleSocket.readyState` es `CONNECTING`. El `readyState` será `OPEN` una vez que la conexión este lista para transferir información.
@@ -62,7 +67,10 @@ Como respuesta, `exampleSocket.readyState` es `CONNECTING`. El `readyState` ser�
 Si se quiere establecer una conexión que soporte varios protocolos, se puede establecer un array de protocolos:
 
 ```js
-var exampleSocket = new WebSocket("ws://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
+var exampleSocket = new WebSocket("ws://www.example.com/socketserver", [
+  "protocolOne",
+  "protocolTwo",
+]);
 ```
 
 Una vez que la conexión este establecida (`readyState` estará `OPEN`), `exampleSocket.protocol` te dirá qué protocolo ha seleccionado el servidor.
@@ -100,8 +108,8 @@ function sendText() {
   var msg = {
     type: "message",
     text: document.getElementById("text").value,
-    id:   clientID,
-    date: Date.now()
+    id: clientID,
+    date: Date.now(),
   };
 
   // Send the msg object as a JSON-formatted string.
@@ -119,7 +127,7 @@ WebSockets API es un manejador de eventos; cuando el mensaje es recibido, un "me
 ```js
 exampleSocket.onmessage = function (event) {
   console.log(event.data);
-}
+};
 ```
 
 ### Recibiendo e interpretando objetos JSON
@@ -133,30 +141,38 @@ Vamos a imaginar una aplicación de chat, donde el cliente usa JSON para transmi
 El código que interpretará los mensajes entrantes será así:
 
 ```js
-exampleSocket.onmessage = function(event) {
+exampleSocket.onmessage = function (event) {
   var f = document.getElementById("chatbox").contentDocument;
   var text = "";
   var msg = JSON.parse(event.data);
   var time = new Date(msg.date);
   var timeStr = time.toLocaleTimeString();
 
-  switch(msg.type) {
+  switch (msg.type) {
     case "id":
       clientID = msg.id;
       setUsername();
       break;
     case "username":
-      text = "<b>User <em>" + msg.name + "</em> signed in at " + timeStr + "</b><br>";
+      text =
+        "<b>User <em>" +
+        msg.name +
+        "</em> signed in at " +
+        timeStr +
+        "</b><br>";
       break;
     case "message":
       text = "(" + timeStr + ") <b>" + msg.name + "</b>: " + msg.text + "<br>";
       break;
     case "rejectusername":
-      text = "<b>Your username has been set to <em>" + msg.name + "</em> because the name you chose is in use.</b><br>"
+      text =
+        "<b>Your username has been set to <em>" +
+        msg.name +
+        "</em> because the name you chose is in use.</b><br>";
       break;
     case "userlist":
       var ul = "";
-      for (i=0; i < msg.users.length; i++) {
+      for (i = 0; i < msg.users.length; i++) {
         ul += msg.users[i] + "<br>";
       }
       document.getElementById("userlistbox").innerHTML = ul;

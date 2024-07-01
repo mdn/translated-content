@@ -1,8 +1,9 @@
 ---
-title: MessageEvent()
+title: "MessageEvent: MessageEvent() コンストラクター"
+short-title: MessageEvent()
 slug: Web/API/MessageEvent/MessageEvent
 l10n:
-  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
+  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
 {{APIRef("HTML DOM")}}
@@ -11,7 +12,7 @@ l10n:
 
 ## 構文
 
-```js
+```js-nolint
 new MessageEvent(type)
 new MessageEvent(type, options)
 ```
@@ -45,8 +46,8 @@ new MessageEvent(type, options)
 ## 例
 
 ```js
-const myMessage = new MessageEvent('message', {
-  data : 'hello'
+const myMessage = new MessageEvent("message", {
+  data: "hello",
 });
 ```
 

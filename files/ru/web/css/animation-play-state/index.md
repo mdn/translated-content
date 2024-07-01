@@ -1,7 +1,6 @@
 ---
 title: animation-play-state
 slug: Web/CSS/animation-play-state
-translation_of: Web/CSS/animation-play-state
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -24,7 +23,7 @@ animation-play-state: paused;
 /* Несколько анимаций */
 animation-play-state: paused, running, running;
 
-/* Глобальный значения */
+/* Глобальные значения */
 animation-play-state: inherited;
 animation-play-state: initial;
 animation-play-state: unset;

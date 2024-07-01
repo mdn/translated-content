@@ -1,68 +1,80 @@
 ---
 title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
+l10n:
+  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
 {{JSRef}}
 
-**`Number.isNaN()`** メソッドは、渡された値が {{jsxref("NaN")}} であり、かつその型が {{jsxref("Number")}} であるかどうかを判断します。元となるグローバルの {{jsxref("isNaN", "isNaN()")}} よりも堅牢な版です。
+**`Number.isNaN()`** は静的メソッドで、渡された値が数値型の {{jsxref("NaN")}} であるかどうかを判定します。入力が数値型でなかった場合は `false` を返します。元となるグローバルの {{jsxref("isNaN", "isNaN()")}} よりも堅牢な版です。
 
 {{EmbedInteractiveExample("pages/js/number-isnan.html", "taller")}}
 
 ## 構文
 
-```js
+```js-nolint
 Number.isNaN(value)
 ```
 
 ### 引数
 
 - `value`
-  - : {{jsxref("NaN")}} かどうかテストされる値です。
+  - : {{jsxref("NaN")}} かどうか検査される値です。
 
 ### 返値
 
-与えられた値が {{jsxref("NaN")}} であり、かつその型が {{jsxref("Number")}} である場合は **true**、それ以外の場合は **false** です。
+論理値で、与えられた値が数値で、かつ値が {{jsxref("NaN")}} である場合は `true` を返します。そうでなければ `false` です。
 
 ## 解説
 
-{{jsxref("Operators", "==", "#Equality")}} と {{jsxref("Operators", "===", "#Identity")}} の等価演算子ではどちらも、 {{jsxref("NaN")}} が {{jsxref("NaN")}} であるかどうかを検査すると `false` と評価されてしまうため、 `Number.isNaN()` 関数が必要となります。この状況は、 JavaScript においてあり得る他のすべての値の比較と異なります。
+`Number.isNaN()` 関数は、`NaN` と等しいことをチェックする便利な方法を提供します。なお、`NaN` と等しいことは [`==`](/ja/docs/Web/JavaScript/Reference/Operators/Equality) 演算子でも [`===`](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality) 演算子でも検査できません。JavaScript の他のすべての値との比較とは異なり、一方のオペランドが {{jsxref("NaN")}} であれば、もう一方のオペランドが {{jsxref("NaN")}} であっても `false` と評価します。
 
-グローバルの {{jsxref("isNaN", "isNaN()")}} 関数とは異なり、 `Number.isNaN()` は強制的に引数が数値に変換される問題の影響をうけません。これは、通常 {{jsxref("NaN")}} に変換されるが実際には {{jsxref("NaN")}} ではない値が、安全に渡されることを意味します。つまりこの関数は、数値型であり、かつ {{jsxref("NaN")}} である値が渡されたときのみ、 `true` を返すということです。
+JavaScript の有効なすべての値の中で、`x !== x` は `NaN` だけが true になりますので、`Number.isNaN(x)` は `x !== x` の検査を置き換えることができますが、後者の方が可読性が低くなります。
+
+グローバルの {{jsxref("isNaN", "isNaN()")}} 関数とは異なり、 `Number.isNaN()` は強制的に引数が数値に変換される問題の影響をうけません。これにより、通常 {{jsxref("NaN")}} に変換されるが実際には {{jsxref("NaN")}} ではない値が、安全に渡されます。つまりこの関数は、数値型であり、かつ {{jsxref("NaN")}} である値が渡されたときのみ、 `true` を返すということです。
 
 ## 例
 
-### isNaN の使用
+### isNaN() の使用
 
 ```js
-Number.isNaN(NaN);        // true
+Number.isNaN(NaN); // true
 Number.isNaN(Number.NaN); // true
-Number.isNaN(0 / 0);      // true
-
-// たとえば、以下の値を isNaN() グローバル関数に渡すと true が返される
-Number.isNaN('NaN');      // false
-Number.isNaN(undefined);  // false
-Number.isNaN({});         // false
-Number.isNaN('blabla');   // false
-
-// 以下はすべて false を返す
-Number.isNaN(true);
-Number.isNaN(null);
-Number.isNaN(37);
-Number.isNaN('37');
-Number.isNaN('37.37');
-Number.isNaN('');
-Number.isNaN(' ');
+Number.isNaN(0 / 0); // true
+Number.isNaN(37); // false
 ```
 
-## ポリフィル
+### Number.isNaN() とグローバルの isNaN() の相違点
 
-以下の例が動作するのは、 NaN が JavaScript で唯一、自分自身と比較して等しくない値だからです。
+`Number.isNaN()` は引数を数値へ変換することを試みないので、数値でないものはすべて `false` を返します。以下のものはすべて `false` になります。
 
 ```js
-Number.isNaN = Number.isNaN || function isNaN(input) {
-    return typeof input === 'number' && input !== input;
-}
+Number.isNaN("NaN");
+Number.isNaN(undefined);
+Number.isNaN({});
+Number.isNaN("blabla");
+Number.isNaN(true);
+Number.isNaN(null);
+Number.isNaN("37");
+Number.isNaN("37.37");
+Number.isNaN("");
+Number.isNaN(" ");
+```
+
+グローバルの {{jsxref("isNaN", "isNaN()")}} は、引数を数値に変換します。
+
+```js
+isNaN("NaN"); // true
+isNaN(undefined); // true
+isNaN({}); // true
+isNaN("blabla"); // true
+isNaN(true); // false、これは 1 に変換される
+isNaN(null); // false、これは 0 に変換される
+isNaN("37"); // false、これは 37 に変換される
+isNaN("37.37"); // false、これは 37.37 に変換される
+isNaN(""); // false、これは 0 に変換される
+isNaN(" "); // false、これは 0 に変換される
 ```
 
 ## 仕様書
@@ -75,6 +87,6 @@ Number.isNaN = Number.isNaN || function isNaN(input) {
 
 ## 関連情報
 
-- `Number.isNaN` のポリフィルは [`core-js`](https://github.com/zloirock/core-js#ecmascript-number) で利用できます
+- [`Number.isNaN` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-number)
 - {{jsxref("Number")}}
 - {{jsxref("isNaN", "isNaN()")}}

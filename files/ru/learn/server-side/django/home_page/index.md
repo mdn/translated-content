@@ -1,17 +1,6 @@
 ---
-title: 'Руководство часть 5: Создание домашней страницы'
+title: "Руководство часть 5: Создание домашней страницы"
 slug: Learn/Server-side/Django/Home_page
-tags:
-  - django
-  - Для начинающих
-  - Изучение
-  - Кодирование
-  - Отображения
-  - Руководство
-  - Серверная сторона
-  - Статья
-  - Шаблоны
-translation_of: Learn/Server-side/Django/Home_page
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
@@ -151,8 +140,8 @@ def index(request):
 
 > **Примечание:** _Тэги_ шаблона подобны функциям, которые могут применяться для создания циклов по спискам, выполнять условные операции и так далее. Кроме тэгов, язык шаблона позволяет использовать переменные (которые передаются в шаблон из отображения), а также _шаблонные фильтры_, которые переформатируют переменные (например, переводят строку в нижний регистр).
 
-```html
-<!DOCTYPE html>
+```django
+<!doctype html>
 <html lang="en">
 <head>
   {% block title %}<title>Local Library</title>{% endblock %}
@@ -169,12 +158,15 @@ def index(request):
 
 Например фрагмент кода, показанный ниже, демонстрирует применение тэга `extends` и переопределяет блок с именем `content`. Окончательный код HTML будет содержать все структуры базового файла шаблона (включая содержимое по умолчанию, которое мы указали в блоке `title`) и код блока `content`, который мы разместили в текущем файле шаблона.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-<h1>Local Library Home</h1>
-<p>Welcome to <em>LocalLibrary</em>, a very basic Django website developed as a tutorial example on the Mozilla Developer Network.</p>
+  <h1>Local Library Home</h1>
+  <p>
+    Welcome to <em>LocalLibrary</em>, a very basic Django website developed as a
+    tutorial example on the Mozilla Developer Network.
+  </p>
 {% endblock %}
 ```
 
@@ -186,44 +178,40 @@ def index(request):
 
 Создайте новый файл — **/locallibrary/catalog/templates/_base_generic.html_** — и добавьте в него следующее содержимое:
 
-```html
-<!DOCTYPE html>
+```django
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
+    {% block title %}<title>Local Library</title>{% endblock %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  {% block title %}<title>Local Library</title>{% endblock %}
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Добавление дополнительного статического CSS файла -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
 
-  <!-- Добавление дополнительного статического CSS файла -->
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
-
-<body>
-
-  <div class="container-fluid">
-
-    <div class="row">
-      <div class="col-sm-2">
-      {% block sidebar %}
-      <ul class="sidebar-nav">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="">All books</a></li>
-          <li><a href="">All authors</a></li>
-      </ul>
-     {% endblock %}
-      </div>
-      <div class="col-sm-10 ">
-      {% block content %}{% endblock %}
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2">
+          {% block sidebar %}
+            <ul class="sidebar-nav">
+              <li><a href="{% url 'index' %}">Home</a></li>
+              <li><a href="">All books</a></li>
+              <li><a href="">All authors</a></li>
+            </ul>
+          {% endblock %}
+        </div>
+        <div class="col-sm-10 ">{% block content %}{% endblock %}</div>
       </div>
     </div>
-
-  </div>
-</body>
+  </body>
 </html>
 ```
 
@@ -233,9 +221,9 @@ def index(request):
 
 ```css
 .sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 ```
 
@@ -243,7 +231,7 @@ def index(request):
 
 Создайте файл HTML **/locallibrary/catalog/templates/_index.html_** и скопируйте в него код, указанный ниже. Как вы наверное заметили, в первой строке мы расширяем наш базовый шаблон, а затем замещаем содержимое блока `content`, базового шаблона, новым содержимым текущего шаблона.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -284,17 +272,20 @@ return render(
 
 Внутри шаблона вы вызываете функцию (тэг) `load`, которая загружает статическую библиотеку "static" (как показано ниже). После того как статическая библиотека загружена, вы можете использовать тэг шаблона `static`, который указывает относительный путь URL к интересующему вас файлу.
 
-```html
- <!-- Добавляем дополнительный статический CSS-файл -->
+```django
+<!-- Добавляем дополнительный статический CSS-файл -->
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 ```
 
 Тем же способом вы можете загрузить нужное изображение. Например:
 
-```html
+```django
 {% load static %}
-<img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="My image" style="width:555px;height:540px;"/>
+<img
+  src="{% static 'catalog/images/local_library_model_uml.png' %}"
+  alt="My image"
+  style="width:555px;height:540px;" />
 ```
 
 > **Примечание:** Фрагменты выше указывают пути расположения файлов, но Django не использует их по умолчанию. В процессе разработки сервер использует значения, указанные в глобальном файле URL-преобразований (**/locallibrary/locallibrary/urls.py**), который мы создали в части [создание скелета сайта](/ru/docs/Learn/Server-side/Django/skeleton_website). В дальнейшем, в продакшене, вам нужно будет уточнить параметры расположения статических файлов. Мы вернёмся к этому позже.

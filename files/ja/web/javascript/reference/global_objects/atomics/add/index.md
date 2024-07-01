@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
 ## 構文
 
 ```js
-Atomics.add(typedArray, index, value)
+Atomics.add(typedArray, index, value);
 ```
 
 ### 引数

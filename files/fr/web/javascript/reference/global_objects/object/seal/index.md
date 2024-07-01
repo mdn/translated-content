@@ -1,15 +1,6 @@
 ---
 title: Object.seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Méthode
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/seal
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/seal
 ---
 
 {{JSRef}}
@@ -21,7 +12,7 @@ La méthode **`Object.seal()`** scelle un objet afin d'empêcher l'ajout de nouv
 ## Syntaxe
 
 ```js
-Object.seal(obj)
+Object.seal(obj);
 ```
 
 ### Paramètres
@@ -43,9 +34,9 @@ La chaîne de prototypes reste la même. Cependant, la propriété [`Object.prot
 
 ```js
 var obj = {
-    prop: function () {},
-    toto: "truc"
-  };
+  prop: function () {},
+  toto: "truc",
+};
 
 // On peut ajouter de nouvelles propriétés
 // Les propriétés existantes peuvent être
@@ -65,7 +56,11 @@ obj.toto = "moh";
 
 // Mais on ne peut pas convertir les données
 // en accesseurs (ou vice versa)
-Object.defineProperty(obj, "toto", { get: function() { return "g"; } });
+Object.defineProperty(obj, "toto", {
+  get: function () {
+    return "g";
+  },
+});
 // lancera une TypeError
 
 // Tout autre changement que celui d'une valeur

@@ -33,15 +33,15 @@ selectElem.selectedIndex = index;
 ### JavaScript
 
 ```js
-var selectElem = document.getElementById('select')
-var pElem = document.getElementById('p')
+var selectElem = document.getElementById("select");
+var pElem = document.getElementById("p");
 
 // 当有新的<option>元素被选中时
-selectElem.addEventListener('change', function() {
+selectElem.addEventListener("change", function () {
   var index = selectElem.selectedIndex;
   // 把 index 数据添加到 p 元素中
-  pElem.innerHTML = 'selectedIndex: ' + index;
-})
+  pElem.innerHTML = "selectedIndex: " + index;
+});
 ```
 
 {{EmbedLiveSample("示例", "200px", "130px")}}

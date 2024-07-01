@@ -1,7 +1,6 @@
 ---
 title: Pseudoelementos
 slug: Web/CSS/Pseudo-elements
-original_slug: Web/CSS/Pseudoelementos
 ---
 
 {{ CSSRef() }}

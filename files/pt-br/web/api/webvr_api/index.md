@@ -22,7 +22,7 @@ O método {{domxref("HMDVRDevice.getEyeParameters()")}} retorna um objeto {{domx
 {{domxref("VRDisplay")}}
 Representa qualquer dispositivo VR suportado por esta API. Ele inclui informações genéricas, como IDs de dispositivo e descrições, bem como métodos para começar a apresentar uma cena VR, recuperar os parâmetros do olho e exibir capacidades e outras funcionalidades importantes.
 {{domxref("VRDisplayCapabilities")}}
-Descreve os recursos de um {{domxref("VRDisplay")}} - seus recursos podem ser usados ​​para executar testes de capacidade do dispositivo VR, por exemplo, ele pode retornar informações de posição.
+Descreve os recursos de um {{domxref("VRDisplay")}} - seus recursos podem ser usados para executar testes de capacidade do dispositivo VR, por exemplo, ele pode retornar informações de posição.
 {{domxref("VRPose")}}
 Representa o estado de posição em um dado carimbo de data/hora (que inclui orientação, posição, velocidade e aceleração).
 {{domxref ("VREyeParameters")}}
@@ -59,19 +59,16 @@ Você pode encontrar uma série de exemplos nesses repositórios Github:
 
 ## Especificações
 
-| Specificação                 | Status                   | Comentario         |
-| ---------------------------- | ------------------------ | ------------------ |
-| {{SpecName('WebVR')}} | {{Spec2('WebVR')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Navigator.getVRDisplays")}}
+{{Compat}}
 
 ## Veja Também
 
 - [webvr.info](https://webvr.info)- Informações atualizadas sobre WebVR, configuração do navegador e comunidade.
 - [webvr.rocks](https://iswebvrready.com)- Informações atualizadas sobre o suporte ao navegador WebVR (incluindo compilações experimentais).
-- [MozVr.com](http://mozvr.com/)- Demos, downloads, outros recursos da equipe de VR da Mozilla.
 - [A-Frame](https://aframe.io)- A web framework para a construção de experiências VR (com HTML), a partir da equipe Mozilla VR.
 - [Console Game on Web](http://dsmu.me/ConsoleGameOnWeb/)- Uma coleção de demonstrações interessantes conceito de jogo, alguns dos quais incluem WebVR.
 - [threejs-vr-boilerplate](https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate)- Um modelo de iniciador muito útil para escrever aplicações WebVR.

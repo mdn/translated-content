@@ -1,11 +1,6 @@
 ---
 title: color
 slug: Web/CSS/color
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/color
 ---
 
 {{CSSRef}}
@@ -39,7 +34,7 @@ color: rgb(34, 12, 64, 0.6);
 color: rgba(34, 12, 64, 0.6);
 color: rgb(34 12 64 / 0.6);
 color: rgba(34 12 64 / 0.3);
-color: rgb(34.0 12 64 / 60%);
+color: rgb(34 12 64 / 60%);
 color: rgba(34.6 12 64 / 30%);
 
 /* Valeurs <hsl()> */
@@ -47,9 +42,8 @@ color: hsl(30, 100%, 50%, 0.6);
 color: hsla(30, 100%, 50%, 0.6);
 color: hsl(30 100% 50% / 0.6);
 color: hsla(30 100% 50% / 0.6);
-color: hsl(30.0 100% 50% / 60%);
+color: hsl(30 100% 50% / 60%);
 color: hsla(30.2 100% 50% / 60%);
-
 
 /* Valeurs globales */
 color: inherit;
@@ -97,16 +91,11 @@ La propriété `color` est définie grâce à une valeur de type {{cssxref("&lt;
 
 ```html
 <p class="exemple">
-  En passant elle prit sur un rayon un pot de
-  confiture portant cette étiquette,
-  <span class="confiture">
-    «&nbsp;MARMELADE D’ORANGES.&nbsp;»
-  </span>
-  Mais, à son grand regret, le pot était vide&nbsp;:
-  elle n’osait le laisser tomber dans la crainte
-  de tuer quelqu’un&nbsp;; aussi s’arrangea-t-elle de
-  manière à le déposer en passant dans une
-  des armoires.
+  En passant elle prit sur un rayon un pot de confiture portant cette étiquette,
+  <span class="confiture"> «&nbsp;MARMELADE D’ORANGES.&nbsp;» </span>
+  Mais, à son grand regret, le pot était vide&nbsp;: elle n’osait le laisser
+  tomber dans la crainte de tuer quelqu’un&nbsp;; aussi s’arrangea-t-elle de
+  manière à le déposer en passant dans une des armoires.
 </p>
 ```
 
@@ -122,7 +111,7 @@ Le ratio de contraste est déterminé en comparant la luminosité de la couleur 
 
 - [Contrôleur de contraste WebAIM](https://webaim.org/resources/contrastchecker/)
 - [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- _[Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- _[Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)_
 
 ## Spécifications
 

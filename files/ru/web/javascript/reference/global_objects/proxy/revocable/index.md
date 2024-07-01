@@ -1,67 +1,75 @@
 ---
 title: Proxy.revocable()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Proxy
-  - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
+l10n:
+  sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
 ---
 
 {{JSRef}}
 
-Метод **`Proxy.revocable()`** используется, чтобы создать отменяемый {{jsxref("Proxy")}} объект.
+Статический метод **`Proxy.revocable()`** создаёт подлежащий отзыву объект {{jsxref("Proxy")}}.
 
 ## Синтаксис
 
-```
-Proxy.revocable(target, handler);
+```js-nolint
+Proxy.revocable(target, handler)
 ```
 
 ### Параметры
 
-{{ Page("/docs/Web/JavaScript/Reference/Global_Objects/Proxy", "Parameters") }}
+- `target`
+  - : Целевой объект для оборачивания в `Proxy`. Это может быть любой объект (массив, функция или даже другой прокси).
+- `handler`
+  - : Объект, свойства которого являются функциями, которые определяют поведение `proxy`, когда с ним происходит действие.
 
 ### Возвращаемое значение
 
-Создаётся и возвращается отменяемый `Proxy` объект.
+Обычный объект с двумя свойствами:
+
+- `proxy`
+  - : Прокси объект, идентичный создаваемому с помощью вызова [`new Proxy(target, handler)`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy).
+- `revoke`
+  - : Функция без параметров для отзыва (выключения) `proxy`.
 
 ## Описание
 
-Отменяемый `Proxy` - объект со следующими двумя свойствами `{proxy: proxy, revoke: revoke}`.
+Фабричная функция `Proxy.revocable()` это то же самое, что конструктор [`Proxy()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy), но в дополнение к созданию прокси объекта она создаёт функцию `revoke`, которая может быть вызвана для отмены прокси. Прокси объект и функция `revoke` оборачиваются в обычный объект.
 
-- `proxy`
-  - : Объект `Proxy`, созданный с помощью вызова `new Proxy(target, handler)`.
-- `revoke`
-  - : Функция, не принимающая аргументов, которая сделает недействительным (выключит) `proxy`.
+Функция `revoke` не принимает параметров и не зависит от значения `this`. Созданный объект `proxy` прикрепляется к функции `revoke` в виде [приватного свойства](/ru/docs/Web/JavaScript/Reference/Classes/Private_properties), к которому функция `revoke` обращается при вызове (приватное свойство незаметно извне, но оно влияет на то, как происходит сбор мусора). Объект `proxy` _не_ попадает в [замыкание](/ru/docs/Web/JavaScript/Closures) функции `revoke` (что делает сбор мусора `proxy` невозможным если `revoke` ещё существует).
 
-Если вызовется функция `revoke()`, `proxy` становится неиспользуемым: Любой `proxy`-перехватчик событий объекта будет вызывать исключение {{jsxref("TypeError")}}. Как только `proxy` отменена, она останется отменённой и дальше, и может быть собрана сборщиком мусора. Повторный вызов `revoke()` не будет иметь никакого эффекта.
+После вызова функции `revoke()` прокси становится непригодным для использования: любое обращени к обработчику вызовет {{jsxref("TypeError")}}. Прокси, будучи однажды отозван, остаётся отозванным, и повторный вызов `revoke()` не имеет эффекта — фактически вызов `revoke()` отделяет объект `proxy` от функции `revoke`, и у неё больше нет доступа к объекту. Если на прокси больше нет ссылок, то он становится доступным для сбора мусора. Функция `revoke` также отделяет `target` и `handler` от `proxy`, поэтому если на `target` нет ссылок, то он тоже становится доступным для сбора мусора (даже если прокси ещё существует), поскольку больше нет явного способа взаимодействия с целевым объектом.
+
+Предоставление пользователям возможность взаимодействовать с объектом через подлежащий отзыву прокси позволяет [контролировать время жизни](/ru/docs/Web/JavaScript/Memory_management) объекта доступного пользователю. Вы можете сделать объект пригодным для сбора мусора, даже если пользователь все ещё хранит ссылку на его прокси.
 
 ## Примеры
 
+### Использование Proxy.revocable()
+
 ```js
-var revocable = Proxy.revocable({}, {
-  get: function(target, name) {
-    return "[[" + name + "]]";
-  }
-});
-var proxy = revocable.proxy;
+const revocable = Proxy.revocable(
+  {},
+  {
+    get(target, name) {
+      return `[[${name}]]`;
+    },
+  },
+);
+const proxy = revocable.proxy;
 console.log(proxy.foo); // "[[foo]]"
 
 revocable.revoke();
 
-console.log(proxy.foo); // Вызвано исключение TypeError
-proxy.foo = 1           // TypeError снова
-delete proxy.foo;       // Всё ещё TypeError
-typeof proxy            // "object", typeof не вызывает никаких proxy-перехватчиков событий
+console.log(proxy.foo); // возникает исключение TypeError
+proxy.foo = 1; // снова TypeError
+delete proxy.foo; // всё ещё TypeError
+typeof proxy; // "object", typeof не вызывает никаких proxy-перехватчиков событий
 ```
 
 ## Спецификации
 
 {{Specifications}}
 
-## Совместимость браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

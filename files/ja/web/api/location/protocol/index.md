@@ -1,25 +1,24 @@
 ---
-title: location.protocol
+title: "location: protocol プロパティ"
 slug: Web/API/Location/protocol
+l10n:
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{ApiRef("Location")}}
 
-**`protocol`** は {{domxref("Location")}} インターフェイスのプロパティで、 URL のプロトコルスキームを、最後の `':'` を含めて表す {{domxref("USVString")}} です。
+**`protocol`** は {{domxref("Location")}} インターフェイスのプロパティで、 URL のプロトコルスキームを、最後の `':'` を含めて表す文字列です。
 
-## 構文
+## 値
 
-```js
-string = object.protocol;
-object.protocol = string;
-```
+文字列です。
 
 ## 例
 
 ```js
-// Let's an <a id="myAnchor" href="https://developer.mozilla.org/ja/Location.protocol"> element be in the document
-var anchor = document.getElementById("myAnchor");
-var result = anchor.protocol; // Returns:'https:'
+// 文書内に <a id="myAnchor" href="/ja/docs/Location.search?q=123"> 要素があるとする
+const anchor = document.getElementById("myAnchor");
+const result = anchor.protocol; // Returns:'https:'
 ```
 
 ## 仕様書

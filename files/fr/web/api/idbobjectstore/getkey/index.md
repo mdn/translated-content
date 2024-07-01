@@ -1,15 +1,6 @@
 ---
 title: IDBObjectStore.getKey()
 slug: Web/API/IDBObjectStore/getKey
-tags:
-  - IBDObjectStore
-  - IndexedDB
-  - Method
-  - Méthode
-  - Reference
-  - Storage
-  - Web API
-translation_of: Web/API/IDBObjectStore/getKey
 ---
 
 {{APIRef("IndexedDB")}}
@@ -39,10 +30,10 @@ Un objet {{domxref("IDBRequest")}} sur lequel les événements ultérieurs liés
 
 Cette méthode peut provoquer une {{domxref("DOMException")}} de l'un des types suivants :
 
-| Exception                  | Description                                                                 |
-| -------------------------- | --------------------------------------------------------------------------- |
+| Exception                  | Description                                                      |
+| -------------------------- | ---------------------------------------------------------------- |
 | `TransactionInactiveError` | La transaction de ce {{domxref("IDBObjectStore")}} est inactive. |
-| `DataError`                | La clé ou la plage de clés fournie contient une clé invalide.               |
+| `DataError`                | La clé ou la plage de clés fournie contient une clé invalide.    |
 | `InvalidStateError`        | Le {{domxref("IDBObjectStore")}} a été supprimé ou retiré.       |
 
 ## Exemple
@@ -80,4 +71,4 @@ openRequest.onsuccess = (event) => {
 - Réglage d'une fourchette de clés : {{domxref("IDBKeyRange")}}
 - Récupération et modification de vos données : {{domxref("IDBObjectStore")}}
 - Utilisation des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence : [Notifications des tâches](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([voir l'exemple en direct](https://mdn.github.io/to-do-notifications/).)
+- Exemple de référence : [Notifications des tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple en direct](https://mdn.github.io/dom-examples/to-do-notifications/).)

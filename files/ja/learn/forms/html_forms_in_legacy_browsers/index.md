@@ -25,12 +25,12 @@ HTML フォームに関する例をいくつか見ていきましょう。
 
 #### HTML の入力型
 
-HTML5 で追加された入力型は、劣化の仕方が高度に予測可能であるため、古いブラウザーでもすべて使用可能です。ブラウザーにとって未知の {{htmlattrxref("type","input")}} 属性の値が {{HTMLElement("input")}} 要素にあった場合、その値が `text` であったかのように代替されます。
+HTML5 で追加された入力型は、劣化の仕方が高度に予測可能であるため、古いブラウザーでもすべて使用可能です。ブラウザーにとって未知の [`type`](/ja/docs/Web/HTML/Element/input#type) 属性の値が {{HTMLElement("input")}} 要素にあった場合、その値が `text` であったかのように代替されます。
 
 ```html
 <label for="myColor">
   Pick a color
-  <input type="color" id="myColor" name="color">
+  <input type="color" id="myColor" name="color" />
 </label>
 ```
 
@@ -63,7 +63,7 @@ HTML5 で追加された入力型は、劣化の仕方が高度に予測可能�
 
 HTML フォームでボタンを定義する方法は 2 つあります。
 
-- {{HTMLElement("input")}} 要素の {{htmlattrxref("type","input")}} 属性に `button`、`submit`、`reset`、`image` のいずれかの値に設定したもの
+- {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Element/input#type) 属性に `button`、`submit`、`reset`、`image` のいずれかの値に設定したもの
 - {{HTMLElement("button")}} 要素
 
 ##### {{HTMLElement("input")}}
@@ -71,7 +71,7 @@ HTML フォームでボタンを定義する方法は 2 つあります。
 {{HTMLElement("input")}} 要素は、要素セレクターを使用して CSS を適用したい場合に少し難しくなることがあります。
 
 ```html
-<input type="button" value="click me">
+<input type="button" value="click me" />
 ```
 
 すべての input から境界線を削除する場合、ボタンについてのみ既定の外見に戻すことができるでしょうか？
@@ -80,7 +80,7 @@ HTML フォームでボタンを定義する方法は 2 つあります。
 input {
   /* この規則は、input 要素で定義するボタンを含む、境界線を持つ入力型の
   既定のレンダリングを無効にします */
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
 }
 input[type="button"] {
   /* これでは既定のレンダリングを復元できません */
@@ -103,8 +103,8 @@ input[type="button"] {
 
 {{HTMLElement("button")}} 要素は 2 つの問題に悩まされていましたが、すでに解決しました。
 
-- 古いバージョンの Internet Explorer では、クリックされたときに、 {{HTMLElement("button")}} 要素の開始タグと終了タグの間にある HTML コンテンツが、 {{htmlattrxref("value","button")}} 属性の内容の代わりに送信されるというバグがありました。これは、ユーザーがどのボタンをクリックしたかによってデータ処理が決まる場合など、その値を送信する必要がある場合にのみ問題となっていました。
-- 一部のとても古いブラウザーは `submit` を {{htmlattrxref("type","button")}} 属性の既定値として使用していませんでした。すべての現在のブラウザーでは解決していますが、 {{htmlattrxref("type","button")}} 属性を常に {{HTMLElement("button")}} 要素に設定することを推奨します。
+- 古いバージョンの Internet Explorer では、クリックされたときに、 {{HTMLElement("button")}} 要素の開始タグと終了タグの間にある HTML コンテンツが、 [`value`](/ja/docs/Web/HTML/Element/button#value) 属性の内容の代わりに送信されるというバグがありました。これは、ユーザーがどのボタンをクリックしたかによってデータ処理が決まる場合など、その値を送信する必要がある場合にのみ問題となっていました。
+- 一部のとても古いブラウザーは `submit` を [`type`](/ja/docs/Web/HTML/Element/button#type) 属性の既定値として使用していませんでした。すべての現在のブラウザーでは解決していますが、 [`type`](/ja/docs/Web/HTML/Element/button#type) 属性を常に {{HTMLElement("button")}} 要素に設定することを推奨します。
 
 ```html
 <!-- ボタンをクリックすると "A" ではなく "<em>Do A</em>" を送信する場合があります -->
@@ -161,18 +161,18 @@ CSS や JavaScript は素晴らしい技術ですが、古いブラウザーで�
 ```js
 Modernizr.load({
   // ブラウザーがフォーム検証 API に対応しているかを確認します
-  test : Modernizr.formvalidation,
+  test: Modernizr.formvalidation,
 
   // ブラウザーが対応していない場合は、以下のポリフィルを読み込みます
-  nope : form-validation-API-polyfill.js,
+  nope: form_validation_API_polyfill.js,
 
   // どの場合でも、API に依存するコアアプリのファイルを読み込みます
-  both : app.js,
+  both: app.js,
 
   // 両方のファイルを読み込んだら、アプリを初期化するためにこの関数を呼び出します
-  complete : function () {
+  complete: function () {
     app.init();
-  }
+  },
 });
 ```
 

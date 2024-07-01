@@ -61,6 +61,6 @@ De manera que en teoria si mantiene la pista de los objetos {{domxref("MutationR
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("api.MutationObserver.observe")}}
+{{Compat}}

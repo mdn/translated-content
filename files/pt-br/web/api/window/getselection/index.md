@@ -21,10 +21,10 @@ selection = window.getSelection();
 
 ```js
 function foo() {
-    var selObj = window.getSelection();
-    alert(selObj);
-    var selRange = selObj.getRangeAt(0);
-    // do stuff with the range
+  var selObj = window.getSelection();
+  alert(selObj);
+  var selRange = selObj.getRangeAt(0);
+  // do stuff with the range
 }
 ```
 
@@ -53,13 +53,11 @@ Note a diferença entre _selection_ e _focus_. {{domxref("Document.activeElement
 
 ## Especificações
 
-| Especificação                                                                                                | Status                           | Comentário        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
-| {{SpecName("HTML Editing", "#dom-window-getselection", "Window.getSelection()")}} | {{Spec2("HTML Editing")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Window.getSelection")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,5 +1,5 @@
 ---
-title: 'Element: contextmenu event'
+title: "Element: contextmenu event"
 slug: Web/API/Element/contextmenu_event
 ---
 
@@ -46,9 +46,9 @@ slug: Web/API/Element/contextmenu_event
 ### JavaScript
 
 ```js
-noContext = document.getElementById('noContextMenu');
+noContext = document.getElementById("noContextMenu");
 
-noContext.addEventListener('contextmenu', e => {
+noContext.addEventListener("contextmenu", (e) => {
   e.preventDefault();
 });
 ```

@@ -1,20 +1,8 @@
 ---
-title: 'Причина: CORS заголовок ''Access-Control-Allow-Origin'' не соответствует ''xyz'''
+title: "Причина: CORS заголовок 'Access-Control-Allow-Origin' не соответствует 'xyz'"
 slug: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
-tags:
-  - CORS
-  - CORSAllowOriginNotMatchingOrigin
-  - Cross-Origin
-  - HTTP
-  - HTTPS
-  - Безопасность
-  - Исправление проблем
-  - Ошибка
-  - Сообщения
-  - консоль
-  - причины
-translation_of: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
@@ -43,7 +31,7 @@ Header set Access-Control-Allow-Origin 'origin-list'
 add_header 'Access-Control-Allow-Origin' 'origin-list'
 ```
 
-## See also
+## Смотрите также
 
 - [CORS errors](/ru/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}

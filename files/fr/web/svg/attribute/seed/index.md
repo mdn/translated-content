@@ -1,11 +1,9 @@
 ---
 title: seed
 slug: Web/SVG/Attribute/seed
-tags:
-  - Attribut SVG
-  - Filtre
-translation_of: Web/SVG/Attribute/seed
 ---
+
+{{SVGRef}}
 
 « [Page de référence des attributs SVG](/fr/docs/Web/SVG/Attribute)
 

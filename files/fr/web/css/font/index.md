@@ -1,12 +1,6 @@
 ---
 title: font
 slug: Web/CSS/font
-tags:
-  - CSS
-  - Polices CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/font
 ---
 
 {{CSSRef}}
@@ -24,10 +18,14 @@ Comme pour les autres propriétés CSS, les valeurs qui ne sont pas définies av
 
 ```css
 /* size | family */
-font: 2em "Open Sans", sans-serif;
+font:
+  2em "Open Sans",
+  sans-serif;
 
 /* style | size | family */
-font: italic 2em "Open Sans", sans-serif;
+font:
+  italic 2em "Open Sans",
+  sans-serif;
 
 /* style | variant | weight | size/line-height | family */
 font: italic small-caps bolder 16px/3 cursive;
@@ -181,29 +179,25 @@ Si `font` est définie comme une propriété raccourcie :
 
 ```html
 <p class="exemple1">
-  « Toujours aussi mouillée, » dit Alice tristement.
-  « Je ne sèche que d’ennui. »
+  « Toujours aussi mouillée, » dit Alice tristement. « Je ne sèche que d’ennui.
+  »
 </p>
 
 <p class="exemple2">
-  « Dans ce cas, » dit le Dodo avec emphase, se
-  dressant sur ses pattes, « je propose l’ajournement,
-  et l’adoption immédiate de mesures énergiques. »
+  « Dans ce cas, » dit le Dodo avec emphase, se dressant sur ses pattes, « je
+  propose l’ajournement, et l’adoption immédiate de mesures énergiques. »
 </p>
 
 <p class="gras_italique_serif">
-  « Parlez français, » dit l’Aiglon ; « je ne
-  comprends pas la moitié de ces grands mots, et, qui
-  plus est, je ne crois pas que vous les compreniez
-  vous-même. » L’Aiglon baissa la tête pour cacher
-  un sourire, et quelques-uns des autres oiseaux
-  ricanèrent tout haut.
+  « Parlez français, » dit l’Aiglon ; « je ne comprends pas la moitié de ces
+  grands mots, et, qui plus est, je ne crois pas que vous les compreniez
+  vous-même. » L’Aiglon baissa la tête pour cacher un sourire, et quelques-uns
+  des autres oiseaux ricanèrent tout haut.
 </p>
 
 <p class="statut">
-  « J’allais proposer, » dit le Dodo d’un ton vexé,
-  « une course cocasse ; c’est ce que nous pouvons
-  faire de mieux pour nous sécher. »
+  « J’allais proposer, » dit le Dodo d’un ton vexé, « une course cocasse ; c’est
+  ce que nous pouvons faire de mieux pour nous sécher. »
 </p>
 ```
 

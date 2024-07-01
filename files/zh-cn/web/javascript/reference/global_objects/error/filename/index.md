@@ -11,12 +11,12 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
 
 此非标准属性包含引发此错误的文件的路径。如果从调试器上下文调用，例如 Firefox Developer Tools，将会返回“debugger eval code”.
 
-## 例子
+## 示例
 
 ### 使用 `fileName`
 
 ```js
-var e = new Error('Could not parse input');
+var e = new Error("Could not parse input");
 throw e;
 // e.fileName could look like "file:///C:/example.html"
 ```
@@ -29,7 +29,7 @@ throw e;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
 - {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}

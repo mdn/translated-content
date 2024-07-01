@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.getImmediatePose()
 slug: Web/API/VRDisplay/getImmediatePose
-original_slug: Web/API/VRDevice/getImmediatePose
 ---
 
 {{deprecated_header}}{{APIRef("WebVR API")}}
@@ -13,7 +12,7 @@ original_slug: Web/API/VRDevice/getImmediatePose
 ## 構文
 
 ```js
-getImmediatePose()
+getImmediatePose();
 ```
 
 ### 引数
@@ -36,5 +35,4 @@ getImmediatePose()
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

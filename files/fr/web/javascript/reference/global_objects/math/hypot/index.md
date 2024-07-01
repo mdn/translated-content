@@ -1,15 +1,6 @@
 ---
 title: Math.hypot()
 slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/hypot
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/hypot
 ---
 
 {{JSRef}}
@@ -48,13 +39,13 @@ Cette fonction permet entre autres de gérer certains cas où, pour les grands n
 ### Utiliser `Math.hypot()`
 
 ```js
-Math.hypot(3, 4)        // 5
-Math.hypot(3, 4, 5)     // 7.0710678118654755
-Math.hypot()            // 0
-Math.hypot(NaN)         // NaN
-Math.hypot(3, 4, "toto") // NaN, +"toto" => NaN
-Math.hypot(3, 4, "5")   // 7.0710678118654755, +"5" => 5
-Math.hypot(-3)          // 3, the same as Math.abs(-3)
+Math.hypot(3, 4); // 5
+Math.hypot(3, 4, 5); // 7.0710678118654755
+Math.hypot(); // 0
+Math.hypot(NaN); // NaN
+Math.hypot(3, 4, "toto"); // NaN, +"toto" => NaN
+Math.hypot(3, 4, "5"); // 7.0710678118654755, +"5" => 5
+Math.hypot(-3); // 3, the same as Math.abs(-3)
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -62,18 +53,20 @@ Math.hypot(-3)          // 3, the same as Math.abs(-3)
 Si elle n'est pas disponible, cette fonction peut être émulée de la façon suivante :
 
 ```js
-Math.hypot =  Math.hypot || function() {
+Math.hypot =
+  Math.hypot ||
+  function () {
     var y = 0;
     var length = arguments.length;
 
     for (var i = 0; i < length; i++) {
-      if(arguments[i] === Infinity || arguments[i] === -Infinity) {
+      if (arguments[i] === Infinity || arguments[i] === -Infinity) {
         return Infinity;
       }
       y += arguments[i] * arguments[i];
     }
     return Math.sqrt(y);
-};
+  };
 ```
 
 Voici une seconde version qui évite les dépassements :

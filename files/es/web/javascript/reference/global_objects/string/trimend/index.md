@@ -1,7 +1,6 @@
 ---
 title: String.prototype.trimEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/trimEnd
 ---
 
 {{JSRef}}
@@ -40,22 +39,22 @@ String.prototype.trimRight.name === "trimEnd";
 El siguiente ejemplo muestra la cadena de texto en minusculas `' foo'`:
 
 ```js
-var str = '   foo  ';
+var str = "   foo  ";
 
 console.log(str.length); // 8
 
 str = str.trimEnd();
 console.log(str.length); // 6
-console.log(str);        // '   foo'
+console.log(str); // '   foo'
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.trimEnd")}}
+{{Compat}}
 
 ## Ver también
 

@@ -14,7 +14,7 @@ slug: Web/API/AudioParam/exponentialRampToValueAtTime
 ## 구문
 
 ```js
-var AudioParam = AudioParam.exponentialRampToValueAtTime(value, endTime)
+var AudioParam = AudioParam.exponentialRampToValueAtTime(value, endTime);
 ```
 
 ### 매개변수
@@ -39,14 +39,14 @@ var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 // 예제를 위한 기본 변수를 설정합니다
-var myAudio = document.querySelector('audio');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+var myAudio = document.querySelector("audio");
+var pre = document.querySelector("pre");
+var myScript = document.querySelector("script");
 
 pre.innerHTML = myScript.innerHTML;
 
-var expRampPlus = document.querySelector('.exp-ramp-plus');
-var expRampMinus = document.querySelector('.exp-ramp-minus');
+var expRampPlus = document.querySelector(".exp-ramp-plus");
+var expRampMinus = document.querySelector(".exp-ramp-minus");
 
 // MediaElementAudioSourceNode를 생성합니다
 // HTMLMediaElement를 노드 내로 전달합니다
@@ -62,13 +62,13 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
 // onclick이 발생했을 때 무언가를 하기 위해 버튼을 설정합니다
-expRampPlus.onclick = function() {
+expRampPlus.onclick = function () {
   gainNode.gain.exponentialRampToValueAtTime(1.0, audioCtx.currentTime + 2);
-}
+};
 
-expRampMinus.onclick = function() {
+expRampMinus.onclick = function () {
   gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 2);
-}
+};
 ```
 
 > **참고:** 마지막 함수에서 변화시킬 값으로 0이 아니라 0.01의 값이 사용되었는데,

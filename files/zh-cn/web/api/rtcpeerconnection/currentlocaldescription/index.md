@@ -49,8 +49,8 @@ else {
 
 > **备注：** The addition of `currentLocalDescription` and {{domxref("RTCPeerConnection.pendingLocalDescription", "pendingLocalDescription")}} to the WebRTC spec is relatively recent. In browsers which don't support them, just use {{domxref("RTCPeerConnection.localDescription", "localDescription")}}.
 
-## 参阅
+## 参见
 
-- {{domxref("RTCPeerConnection.setLocalDescription()")}}, {{domxref("RTCPeerConnection.pendingLocalDescription")}}, {{domxref("RTCPeerConnection.localDescription")}}
-- {{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.remoteDescription")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.currentRemoteDescription")}}
-- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)
+- {{domxref("RTCPeerConnection.setLocalDescription()")}}、{{domxref("RTCPeerConnection.pendingLocalDescription")}}、{{domxref("RTCPeerConnection.localDescription")}}
+- {{domxref("RTCPeerConnection.setRemoteDescription()")}}、{{domxref("RTCPeerConnection.remoteDescription")}}、{{domxref("RTCPeerConnection.pendingRemoteDescription")}}、{{domxref("RTCPeerConnection.currentRemoteDescription")}}
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)

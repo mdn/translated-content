@@ -1,8 +1,8 @@
 ---
 title: XMLHttpRequest.open()
 slug: Web/API/XMLHttpRequest/open
-translation_of: Web/API/XMLHttpRequest/open
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 Метод **XMLHttpRequest.open()** инициализирует новый запрос или повторно инициализирует уже созданный.
@@ -36,13 +36,13 @@ XMLHttpRequest.open(method, url[, async[, user[, password]]])
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}
 - {{domxref("XMLHttpRequest.send", "send()")}}
 - {{domxref("XMLHttpRequest.abort", "abort()")}}

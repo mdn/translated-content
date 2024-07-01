@@ -1,7 +1,6 @@
 ---
 title: contrast()
 slug: Web/CSS/filter-function/contrast
-original_slug: Web/CSS/filter-function/contrast()
 ---
 
 {{cssref}}

@@ -1,13 +1,6 @@
 ---
 title: AnimationEvent.pseudoElement
 slug: Web/API/AnimationEvent/pseudoElement
-tags:
-  - API
-  - AnimationEvent
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/API/AnimationEvent/pseudoElement
 ---
 
 {{SeeCompatTable}}{{ apiref("AnimationEvent") }}
@@ -17,7 +10,7 @@ La propriété en lecture seule **`AnimationEvent.pseudoElement`** est une {{dom
 ## Syntaxe
 
 ```js
-nom = AnimationEvent.pseudoElement
+nom = AnimationEvent.pseudoElement;
 ```
 
 ## Spécifications

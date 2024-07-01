@@ -1,24 +1,33 @@
 ---
-title: 'Location: toString()'
+title: Location：toString() 方法
 slug: Web/API/Location/toString
+l10n:
+  sourceCommit: 1238ffad886924b20549d0cf3adca735cb0d074f
 ---
 
 {{ApiRef("Location")}}
 
-**`toString()`**{{domxref("Location")}}接口的 stringifier 方法返回包含整个 URL 的{{domxref("USVString")}}}。它是{{domxref("Location.href")}}的只读版本。
+{{domxref("Location")}} 接口的 **`toString()`** {{Glossary("stringifier", "字符串化")}}方法返回一个包含整个 URL 的字符串。它是 {{domxref("Location.href")}} 的只读版本。
 
-## 句法
+## 语法
 
-```plain
-string = object.toString();
+```js-nolint
+toString()
 ```
 
-## 例子
+### 参数
+
+无。
+
+### 返回值
+
+表示对象的 URL 的字符串。
+
+## 示例
 
 ```js
-// Let's imagine an <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/Location/toString"> element is in the document
-var anchor = document.getElementById("myAnchor");
-var result = anchor.toString(); // Returns: 'https://developer.mozilla.org/en-US/docs/Location/toString'
+// 假设这段代码在 https://example.com/path?search#hash 上执行
+const result = window.location.toString(); // 返回：'https://example.com/path?search#hash'
 ```
 
 ## 规范

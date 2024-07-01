@@ -1,15 +1,19 @@
 ---
-title: Grid Column
+title: 网格列
 slug: Glossary/Grid_Column
+l10n:
+  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
-**网格列**是[Grid 布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)中的垂直轨道，即两个垂直网格线之间的空间。它通过属性 {{cssxref("grid-template-columns")}} 或者简写属性 {{cssxref("grid")}}，{{cssxref("grid-template")}} 定义。
+{{GlossarySidebar}}
 
-另外，当项目被放置到显示网格中创建的列外面时，可以在隐式网格中创建网格列。默认情况这些列自动调整大小，也可以使用 {{cssxref("grid-auto-columns")}} 属性指定其大小。
+**网格列**是[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)中的垂直轨道，即两个垂直网格线之间的空间。它通过属性 {{cssxref("grid-template-columns")}} 或者简写属性 {{cssxref("grid")}}、{{cssxref("grid-template")}} 定义。
 
-在[Grid 布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)中使用对齐方式时，网格列沿着纵轴运行。
+此外，当项目被放置在*显式网格*创建的列之外时，可能会在*隐式网格*中创建列。这些列默认情况下会自动调整大小，或者可以使用 {{cssxref("grid-auto-columns")}} 属性指定大小。
 
-## 了解更多
+在[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)中使用对齐方式时，网格列沿着*块（列）轴*运行。
+
+## 参见
 
 ### 属性参考
 
@@ -20,4 +24,4 @@ slug: Glossary/Grid_Column
 
 ### 扩展阅读
 
-- CSS Grid Layout Guide: _[Basic concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- CSS 网格布局指南：_[网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_

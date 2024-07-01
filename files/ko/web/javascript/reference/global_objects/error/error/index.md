@@ -10,10 +10,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/Error
 ## 구문
 
 ```js
-new Error()
-new Error(message)
-new Error(message, fileName)
-new Error(message, fileName, lineNumber)
+new Error();
+new Error(message);
+new Error(message, fileName);
+new Error(message, fileName, lineNumber);
 ```
 
 ### 매개변수
@@ -37,10 +37,10 @@ new Error(message, fileName, lineNumber)
 
 ```js
 // 함수로 호출해도...
-const x = Error('함수 호출로 만들기!')
+const x = Error("함수 호출로 만들기!");
 
 // ...이렇게 생성자로 사용한 것과 같은 결과
-const y = new Error('"new" 키워드를 써서 만들기!')
+const y = new Error('"new" 키워드를 써서 만들기!');
 ```
 
 ## 명세

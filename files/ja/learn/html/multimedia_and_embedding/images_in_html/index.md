@@ -2,19 +2,19 @@
 title: HTML の画像
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 l10n:
-  sourceCommit: 634b9ba6aeb5991b1c7bc9a1e44461f5be130faa
+  sourceCommit: e831294901a97571f85c34651460401d6d0be897
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
-当初、ウェブは単なるテキストであり、とても退屈でした。幸運なことに、ウェブページ内に画像（および他のより面白い種類のコンテンツ）を埋め込む能力が追加されるまでにはあまり時間がかかりませんでした。考慮すべき他の種類のマルチメディアもありますが、単純な画像をウェブページに埋め込むために使用される、慎ましい {{htmlelement("img")}} 要素から始めるのが理にかなっています。この記事では、基本的な使い方を含め、 {{htmlelement("figure")}} を使ったキャプションの注釈付け、{{glossary("CSS")}} 背景画像との関連付けなど、詳細な使い方を見ていきます。
+当初、ウェブは単なるテキストであり、とてもつまらないものでした。幸運なことに、ウェブページ内に画像（および他のより面白い種類のコンテンツ）を埋め込む能力が追加されるまでにはあまり時間がかかりませんでした。ウェブページに単純な画像を埋め込むために用いる地味な {{htmlelement("img")}} 要素から始めるのは論理的ですが、他にも考慮すべき種類のマルチメディアがあります。この記事では、基本的な使い方、 {{htmlelement("figure")}} を使用したキャプションの注釈、 {{glossary("CSS")}} 背景画像との関連の詳細、そして他にもウェブプラットフォームで使用することができるグラフィックを紹介するなど、詳しく見ていきます。
 
 <table>
+<caption>マルチメディアと埋め込み画像</caption>
   <tbody>
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピューターリテラシー、
         <a
           href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >インストール済みの基本的なソフトウェア</a
@@ -38,45 +38,43 @@ l10n:
 
 ## ウェブページに画像を置くにはどうするのか
 
-単純な画像をウェブページに配置するには、 {{htmlelement("img")}} 要素を使用します。これは{{glossary("empty element","空要素")}}であり（すなわちテキストコンテンツや終了タグがない）、役立つには少なくとも 1 つの属性 — `src` （フルタイトルやソースと呼ばれることもあります）を必要とします。 `src` 属性には、ページに埋め込む画像を指すパスが含まれ、 {{htmlelement("a")}} 要素の `href` 属性値と同じように、相対 URL または絶対 URL にすることができます。
+単純な画像をウェブページに配置するには、 {{htmlelement("img")}} 要素を使用します。これは{{glossary("void element","空要素")}}であり（すなわち子要素や終了タグを置くことができない）、役立つには 2 つの属性、 `src` と `alt` が必要です。`src` 属性には、ページに埋め込む画像を指す URL を指定します。{{htmlelement("a")}} 要素の `href` 属性と同じように、`src` 属性は相対 URL または絶対 URL にすることができます。`src` 属性がないと、`img` 要素は画像を読み込みません。
+
+[`alt` 属性は後で説明します](#代替テキスト)。
 
 > **メモ:** 続行する前に、[URL とパスに関する簡単な入門](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#url_とパスに関する簡単な入門)を読んで、相対 URL と絶対 URL の記憶を更新してください。
 
 例えば、画像が `dinosaur.jpg` というファイル名で、HTML ページと同じディレクトリーにある場合、画像を次のように埋め込むことができます。
 
 ```html
-<img src="dinosaur.jpg" alt="Dinosaur">
+<img src="dinosaur.jpg" alt="Dinosaur" />
 ```
 
-画像がこの HTML ページのと同じディレクトリーの `images` サブディレクトリーにある場合は、次のように埋め込みます。
+画像がこの HTML ページと同じディレクトリーの `images` サブディレクトリーにある場合は、次のように埋め込みます。
 
 ```html
-<img src="images/dinosaur.jpg" alt="Dinosaur">
+<img src="images/dinosaur.jpg" alt="Dinosaur" />
 ```
 
-このようにします。
+他も同様です。
 
-> **メモ:** 検索エンジンは画像ファイル名も読み込み、 SEO に向けて数えます。したがって、画像にわかりやすいファイル名を付けてください。 `dinosaur.jpg` は `img835.png` よりも優れています。
+> **メモ:** 検索エンジンは画像ファイル名も読み込み、SEO に向けてカウントします。したがって、画像にわかりやすいファイル名を付けてください。 `dinosaur.jpg` は `img835.png` よりも優れています。
 
-たとえば、絶対 URL を使用して画像を埋め込むことができます。
+例えば次のように、絶対 URL を使用して画像を埋め込むこともできます。
 
 ```html
-<img src="https://www.example.com/images/dinosaur.jpg" alt="Dinosaur">
+<img src="https://www.example.com/images/dinosaur.jpg" alt="Dinosaur" />
 ```
 
-しかし、これは無意味だけでなく、ブラウザーが DNS サーバーから IP アドレスを再度検索するなどより多くの作業をすることになります。ほとんどの場合、ウェブサイトの画像は HTML と同じサーバーに保存します。
+ただし、絶対 URL によるリンクは推奨されません。自分のサイトで使用したい画像をホスティングしましょう。単純な設定では、ウェブサイトの画像を HTML と同じサーバーに置いておくことを意味しています。また、メンテナンスの面でも、絶対 URL よりも相対 URL を使用した方が効率的です（サイトを別のドメインに移したときに、新しいドメインを記載するためにすべての URL を更新する必要はありません）。より高度な設定では、 [CDN (Content Delivery Network)](/ja/docs/Glossary/CDN) を使用して画像を配信することもできます。
 
-> **警告:** ほとんどの画像は著作権で保護されています。次の場合を除き、ウェブページに画像を表示**しない**でください。
->
-> - 画像を所有している
-> - 画像の所有者からの書面による明示的な許可を得ている、または
-> - 画像は、実際にパブリックドメインであるという十分な証拠がある。
->
-> 著作権侵害は違法で非倫理的です。加えて、リンクする権限を持たない他の誰かのウェブサイトでホストされている画像へ自分の `src` 属性を向け**ない**でください。これは「ホットリンク」と呼ばれます。さらに、誰かの帯域幅を盗むことは違法です。また、ページが遅くなり、画像が削除されたり、恥ずかしいものに置き換えられたりするかどうかを制御できません。
+もし自分で画像を作成していないのであれば、その画像が公開されているライセンスの条件下で使用する許可をあなたが持っていることを確認してください（詳しくは下記の[メディア資産とライセンス](#メディア資産とライセンス)をご覧ください）。
 
-上のコードでは、次の結果が得られます。
+> **警告:** 他人のウェブサイトでホスティングされている画像を、**許可なく** src 属性で指しては**いけません**。これは「ホットリンク」と呼ばれます。誰かがページにアクセスしたときに画像を配信するための帯域幅のコストを他の誰かが負担することになるため、一般に倫理的に問題があると考えられています。
 
-![恐竜の基本的な画像が、ブラウザーに埋め込まれ、その上に "Images in HTML" が書かれています](basic-image.png)
+先のコードスニペットは、絶対 URL でも相対 URL でも、以下のような結果になります。
+
+![恐竜の基本的な画像が、ブラウザーに埋め込まれ、その上に "Images in HTML" と書かれています](basic-image.png)
 
 > **メモ:** {{htmlelement("img")}} や {{htmlelement("video")}} のような要素は、**置換要素**と呼ばれることがあります。これは、要素の内容とサイズが、要素自体の内容ではなく、外部リソース（画像ファイルや動画ファイルなど）によって定義されているためです。詳しくは[置換要素](/ja/docs/Web/CSS/Replaced_element)を参照してください。
 
@@ -87,9 +85,10 @@ l10n:
 次に見ていくのは `alt` 属性です。この値は、画像が見えない/表示されない場合や、インターネット接続が遅いために描画に時間がかかる場合に使用する、画像のテキストによる説明文となるはずです。例えば、上記のコードはこのように変更することができます。
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="恐竜の骨格の頭と胴体、
-          それは長い鋭い歯を持つ大きな頭を持っています">
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth" />
 ```
 
 `alt` テキストをテストする最も簡単な方法は、わざとファイル名のスペルミスをすることです。たとえば、画像名のスペルが `dinosooooor.jpg` の場合、ブラウザーは画像を表示せず、代わりに代替テキストを表示します。
@@ -98,15 +97,15 @@ l10n:
 
 では、なぜ代替テキストを見かけたり、必要としたりするのでしょうか？それは、さまざまな理由で決まります。
 
-- 視覚障害のユーザーがおり、ウェブを読むのに[画面リーダー](https://ja.wikipedia.org/wiki/スクリーンリーダー)を使用している場合。実際、画像を記述するための代替テキストを用意することは、ほとんどのユーザーにとって有益です。
+- 視覚障碍のユーザーがおり、ウェブを読むのに[スクリーンリーダー](https://ja.wikipedia.org/wiki/スクリーンリーダー)を使用している場合。実際、画像を記述するための代替テキストを用意することは、ほとんどのユーザーにとって有益です。
 - 上記のように、ファイル名またはパス名のスペルが間違っている可能性があります。
 - ブラウザーがその画像の種類に対応していないことがあります。人によっては [Lynx](<https://ja.wikipedia.org/wiki/Lynx_(%E3%82%A6%E3%82%A7%E3%83%96%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6)>) などのテキストのみのブラウザーを使用している人もおり、その場合は代わりに画像の代替テキストを表示します。
 - 検索エンジンにテキストを提供して利便性を図ることができます。たとえば、検索エンジンは検索クエリーで照合することがあります。
-- ユーザーは画像をオフにして、データ転送量や目移りを減らすことがあります。。これは特に、携帯電話や帯域幅が限られて高価な国では一般的です。
+- ユーザーは画像をオフにして、データ転送量や目移りを減らすことがあります。これは特に、携帯電話や帯域幅が限られて高価な国では一般的です。
 
 `alt` 属性の中に正確に何を書けばいいのでしょうか？それは、最初に画像を置く理由に依存します。言い換えれば、画像が表示されないと何を失うかです。
 
-- **装飾**。装飾的な画像には [CSS 背景画像](#css_背景画像)を使用すべきですが、 HTML を使用する必要がある場合は、空白の `alt=""` を追加してください。画像がコンテンツの一部でない場合、画面リーダーは読んで時間を浪費すべきではありません。
+- **装飾**。装飾的な画像には [CSS 背景画像](#css_背景画像)を使用すべきですが、 HTML を使用する必要がある場合は、空白の `alt=""` を追加してください。画像がコンテンツの一部でない場合、スクリーンリーダーは読んで時間を浪費すべきではありません。
 - **コンテンツ**。画像が重要な情報を提供している場合は、簡単な代替テキストで同じ情報を提供してください。それよりもっと良いのは、誰もが見ることができる本文の中で提供することです。冗長な `alt` テキストを書かないでください。すべての段落がメインコンテンツに 2 重に書かれていると、目に見えるユーザーにとってはどれほど迷惑でしょうか？画像が主たる本文で十分に記述されている場合は、単に `alt=""` が使用できます。
 - **リンク**。 {{htmlelement("a")}} タグ内に画像を置いた場合、画像をリンクにすると、[アクセス可能なリンクテキスト](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#明確なリンク語を使う)を提供する必要があります。そのような場合は、同じ `<a>` 要素内に、または画像の `alt` 属性内に書き込むことができます。
 - **テキスト**。テキストを画像に入れないでください。たとえば、メインの見出しにドロップシャドウが必要な場合は、テキストを画像に入れるのではなく、 [CSS を使用](/ja/docs/Web/CSS/text-shadow)してください。しかし、これが本当に避けられない場合は、 `alt` 属性でテキストを与える必要があります。
@@ -117,44 +116,86 @@ l10n:
 
 ### 幅と高さ
 
-`width` 属性と `height` 属性を使用して、画像の幅と高さを指定することができます。画像の幅と高さはさまざまな方法で確認できます。たとえば Mac では、 <kbd>Cmd</kbd> + <kbd>I</kbd> を使用して画像ファイルの情報を表示することができます。例に戻ると、これをこのように行うことができます。
+[`width`](/ja/docs/Web/HTML/Element/img#width) 属性と [`height`](/ja/docs/Web/HTML/Element/img#height) 属性を使用して、画像の幅と高さを指定することができます。これらは単位なしの整数で指定され、画像の幅と高さをピクセル単位で表します。
+
+画像の幅と高さは、いくつかの方法で探すことができます。例えば Mac では、 <kbd>Cmd</kbd> + <kbd>I</kbd> を使用して画像ファイルの表示情報を取得することができます。この例に戻ると、次のようになります。
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="恐竜の骨格の頭と胴体、
-          それは長い鋭い歯を持つ大きな頭を持っています"
-     width="400"
-     height="341">
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth"
+  width="400"
+  height="341" />
 ```
 
-これは、通常の状況下では表示が大きく異なるものではありません。しかし、画像が表示されていない場合、たとえば、ユーザーがページに移動して画像がまだ読み込まれていない場合、ブラウザーには画像が表示される空間が残ります。
+これにはとても良い理由があります。ページの HTML と画像は別個のリソースであり、ブラウザーは別個の HTTP(S) リクエストとして取得します。ブラウザーは HTML を受け取るとすぐに、それをユーザーに表示し始めます。画像がまだ受信されていない場合（画像のファイルサイズは HTML ファイルよりはるかに大きいことが多いので、このケースは多いでしょう）、ブラウザーは HTML だけをレンダリングし、画像が受信され次第ページを更新します。
 
-![恐竜の代替テキストを含む Images in HTML タイトルは、幅と高さの設定の結果として大きなボックスの内側に表示されます](alt-text-with-width-height.png)
+例えば、画像の後にテキストを指定されたとします。
 
-これは良いことです。その結果、ページの読み込みがより迅速かつスムーズに行われます。
+```html
+<h1>Images in HTML</h1>
 
-ただし、 HTML 属性を使用して画像のサイズを変更しないでください。画像のサイズを大きくしすぎると、ざらついて、ぼやけた画像になり、小さくしすぎると、帯域幅を無駄にしてユーザーのニーズに合わない画像をダウンロードすることになります。正しい[アスペクト比](https://ja.wikipedia.org/wiki/アスペクト比)を維持しないと、画像が歪んで見えることもあります。画像エディターを使用して画像を正しいサイズにしてから、ウェブページに配置する必要があります。
+<img
+  src="dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"
+  title="A T-Rex on display in the Manchester University Museum" />
+<blockquote>
+  <p>
+    But down there it would be dark now, and not the lovely lighted aquarium she
+    imagined it to be during the daylight hours, eddying with schools of tiny,
+    delicate animals floating and dancing slowly to their own serene currents
+    and creating the look of a living painting. That was wrong, in any case. The
+    ocean was different from an aquarium, which was an artificial environment.
+    The ocean was a world. And a world is not art. Dorothy thought about the
+    living things that moved in that world: large, ruthless and hungry. Like us
+    up here.
+  </p>
+  <footer>- Rachel Ingalls, <cite>Mrs. Caliban</cite></footer>
+</blockquote>
+```
 
-> **メモ:** 画像のサイズを変更する必要がある場合は、代わりに [CSS](/ja/docs/Learn/CSS) を使用してください。
+ブラウザーはHTMLをダウンロードするとすぐにページの表示を始めます。
+
+画像が読み込まれると、ブラウザーは画像をページに追加します。画像は空間を取るので、ブラウザーは画像をその上に収めるために、テキストをページの下に移動しなければなりません。
+
+![画像サイズを指定しない場合の、ブラウザーがページを読み込んでいるときと完了したときのページレイアウトの比較。](no-size.png)
+
+このようにテキストを移動させることは、ユーザー、特にすでに読み始めたユーザーにとって非常にわずらわしいものです。
+
+HTML で `width` 属性と `height` 属性を用いて画像の実際の大きさを指定すると、ブラウザーは画像をダウンロードする前に、その画像のためにどれだけの空間が必要かを知ることができます。
+
+これにより、画像がダウンロードされたとき、ブラウザーは周囲のコンテンツを移動させる必要がなくなります。
+
+![画像サイズを指定した場合の、ブラウザーがページを読み込んでいるときと完了したときのページレイアウトの比較。](size.png)
+
+この機能の歴史に関する優れた記事は、 [Setting height and width on images is important again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/) を参照してください。
+
+> **メモ:** これまでに述べたように、 HTML 属性を使って画像の実際の大きさを指定するのは良い習慣ですが、画像のサイズ変更にこれらを使用するべきではありません。
+>
+> 画像サイズを大きく設定しすぎると、画像が粗くなったり、ぼやけたり、小さすぎたりして、ユーザーのニーズに合っていない画像をダウンロードすることになり、帯域幅を浪費することになります。また、正しい[アスペクト比](https://ja.wikipedia.org/wiki/アスペクト比)を維持しないと、画像が歪んでいってしまうかもしれません。ウェブページに画像を掲載する前に、画像エディターを使用して正しいサイズにしましょう。
+>
+> 画像のサイズを変更する必要がある場合は、代わりに [CSS](/ja/docs/Learn/CSS) を使用しましょう。
 
 ### 画像のタイトル
 
 [リンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#title_属性による補足情報の追加)と同様に、画像に `title` 属性を追加して、必要に応じてさらに補足情報を提供することもできます。この例では、これを行うことができます。
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="恐竜の骨格の頭と胴体、
-          それは長い鋭い歯を持つ大きな頭を持っています"
-     width="400"
-     height="341"
-     title="A T-Rex on display in the Manchester University Museum">
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth"
+  width="400"
+  height="341"
+  title="A T-Rex on display in the Manchester University Museum" />
 ```
 
 これは、リンクのタイトルと同様に、マウスのホバーによるツールチップを提供します。
 
-![恐竜の画像に、 A T-Rex on display in the Manchester University Museum というツールチップのタイトルが表示されています](image-with-title.png)
+![恐竜の画像に、 A T-Rex on display at the Manchester University Museum というツールチップのタイトルが表示されています](image-with-title.png)
 
-しかし、これは推奨されていません — `title` には多くのアクセシビリティ上の問題があります。主に、画面リーダーの対応予測不可能で、ほとんどのブラウザーではマウスを当てない限り表示されません（そのため、例えばキーボードのユーザーはアクセスできません）。このことについてもっと知りたい場合は、Scott O'Hara の[タイトル属性の試行錯誤](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) （英語）をお読みください。
+しかし、これは推奨されていません。`title` には多くのアクセシビリティ上の問題があります。主に、スクリーンリーダーの対応予測不可能で、ほとんどのブラウザーではマウスを当てない限り表示されません（そのため、例えばキーボードのユーザーはアクセスできません）。このことについてもっと知りたい場合は、Scott O'Hara の[タイトル属性の試行錯誤](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) （英語）をお読みください。
 
 画像に添付するのではなく、メインの記事のテキストにそのような補足情報を含めた方がいいでしょう。
 
@@ -162,7 +203,7 @@ l10n:
 
 今度はあなたの番です。このアクティブラーニングの節では、簡単な埋め込み練習をさせていただきます。基本的な {{htmlelement("img")}} タグが提供されています。次の URL の画像を埋め込むようにしてください。
 
-```
+```url
 https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
 ```
 
@@ -179,19 +220,21 @@ https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-e
 ```html hidden
 <h2>ライブ出力</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>編集可能なコード</h2>
-<p class="a11y-label">Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。</p>
+<p class="a11y-label">
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
+  はタブ文字を挿入します）。
+</p>
 
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
 <img>
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="リセット">
-  <input id="solution" type="button" value="答えを表示">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="答えを表示" />
 </div>
 ```
 
@@ -218,10 +261,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -229,30 +272,31 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171"\n title="A T-Rex on display in the Manchester University Museum">';
+const htmlSolution =
+  '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171"\n title="A T-Rex on display in the Manchester University Museum">';
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '答えを表示';
+  solution.value = "答えを表示";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === '答えを表示') {
+solution.addEventListener("click", () => {
+  if (solution.value === "答えを表示") {
     textarea.value = solutionEntry;
-    solution.value = '答えを隠す';
+    solution.value = "答えを隠す";
   } else {
     textarea.value = userEntry;
-    solution.value = '答えを表示';
+    solution.value = "答えを表示";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -260,7 +304,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -273,7 +317,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -284,10 +331,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === '答えを表示') {
+  if (solution.value === "答えを表示") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -299,33 +346,94 @@ textarea.onkeyup = function(){
 
 {{ EmbedLiveSample('Active_learning_embedding_an_image', 700, 350) }}
 
+## メディア資産とライセンス
+
+ウェブ上で見つかる画像（やその他のメディア資産）は、さまざまな種類のライセンスのもとで公開されています。構築中のサイトで画像を使用する前に、その画像を自分で所有しているか、使用する権利を持っているか、所有者のライセンス条件を遵守しているかを確認してください。
+
+### ライセンス種類を知る
+
+ウェブで見つかる一般的なライセンスのカテゴリーを見ていきましょう。
+
+#### すべての権利を留保
+
+歌、書籍、ソフトウェアなどのオリジナルの著作物の作成者は、多くの場合、閉じられた著作権保護の下で作品をリリースします。これは既定では、彼ら（または彼らの出版社）がその著作物を使用する（例えば、展示したり配布したりする）独占的な権利を持っている、ということを意味しています。著作権保護された画像を「すべての権利を留保」ライセンスで使用したい場合、以下のいずれかを行う必要があります：
+
+- 著作権者から書面による明示的な許可を得てください。
+- 使用するためにはライセンス料を支払います。これは、無制限に使用するための1回限りの料金（「ロイヤリティフリー」）である場合もあれば、「ライツマネージド」である場合もあり、その場合は、時間、地域、業界、メディアの種類などによって、使用するごとに固有の料金を支払わなければならないことがあります。
+- 自分の法域で[フェアユース](https://fairuse.stanford.edu/overview/fair-use/what-is-fair-use/)または[公正取引](https://copyrightservice.co.uk/copyright/p27_work_of_others)とみなされる使用に限定してください。
+
+著作者は作品に著作権表示やライセンス条項を記載することは求められていません。著作権は、有形媒体に作成された時点で、オリジナル著作物に自動的に発生します。ですから、もしオンラインで画像を見つけて、著作権表示やライセンス条項がない場合、最も安全な方法は、それが著作権によって保護されており、すべての権利が留保されていると想定することです。
+
+#### 寛容なライセンス
+
+画像が [MIT](https://mit-license.org/) や [BSD](https://opensource.org/license/BSD-3-clause/)、あるいは適切な[クリエイティブ・コモンズ（CC）ライセンス](https://creativecommons.org/choose/)のような寛容なライセンスでリリースされている場合、使用するためにライセンス料を支払ったり、その権限を求めたりする必要はありません。それでも、満たす必要がある様々なライセンス条件があり、それはライセンスによって異なります。
+
+例えば、守る必要があるかもしれないことは次の通りです。
+
+- 画像の元ソースへのリンクを提供し、作成者のクレジットを記載すること。
+- 何か変更があったかどうかを示すこと。
+- 画像を使用して作成した二次的著作物は、元と同じライセンスの下で共有すること。
+- 二次的著作物をまったく共有しないこと。
+- 画像を商用作業で使用しないこと。
+- 画像を使用するリリースには、ライセンスのコピーを記載すること。
+
+従うべき固有の仕様については、該当するライセンスを参照してください。
+
+> **メモ:** 寛容なライセンスの文脈で「コピーレフト」という用語を見かけることがあります。コピーレフトライセンス（[GNU 一般公衆ライセンス (GPL)](https://www.gnu.org/licenses/gpl-3.0.en.html)や "Share Alike" クリエイティブコモンズライセンスなど）は、派生作品の場合、元と同じライセンスでリリースする必要があると規定しています。
+
+コピーレフトライセンスは、ソフトウェアの世界では有名です。基本的な考え方は、コピーレフトでライセンスされた自分のプロジェクトのコードで構築された新しいプロジェクト（これは元ソフトウェアの「フォーク」として知られています）も、同じコピーレフトライセンスで使用許諾する必要があるということです。これによって、自分の新しいプロジェクトのソースコードも、確実に、他の人が研究したり変更したりして利用できるようにします。一般に、 GPL の6ようなソフトウェアのために立案されたライセンスは、ソフトウェア以外の作品を念頭に置いて立案されたものではないので、ソフトウェア以外の著作物にとって良いライセンスとはみなされないことに注意してください。
+
+この章で指定されたリンクから、さまざまなライセンスの種類と、それらが指定する条件の種類をお読みください。
+
+#### パブリックドメイン/CC0
+
+パブリックドメインで公開された作品は、「権利留保なし」と呼ばれることがあります。著作権が適用されず、その権限はなく、ライセンス条件を履行する必要もなく、使用することができます。作品がパブリックドメインになるのは、著作権の失効や特定の権利の放棄など、様々な意味があります。
+
+作品をパブリックドメインにする最も効果的な方法の1つは、 [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) でライセンスすることです。 CC0 は、そのために明確で曖昧さのない法的手段を提供する固有のクリエイティブ・コモンズライセンスです。
+
+パブリックドメインの画像を使用する場合は、その画像がパブリックドメインであるという証拠を入手し、記録として保管してください。例えば、ライセンス状態が明確に掲載されている元画像のスクリーンショットを撮ったり、ライセンス要求されている画像とともに取得した画像の一覧を掲載したページをウェブサイトに追加することを検討してください。
+
+### 寛容にライセンスされた画像の検索
+
+自分のプロジェクトに使用する寛容なライセンスの画像は、画像検索エンジンを用いたり、画像リポジトリーから直接探したりすることができます。
+
+探したい画像の説明と関連するライセンス用語を使用して画像を検索します。例えば、「黄色い恐竜」を検索する場合、検索クエリーに「パブリックドメイン画像」、「パブリックドメイン画像ライブラリー」、「オープンライセンス画像」などの用語を追加します。
+
+検索エンジンの中には、寛容なライセンスの画像を探すのに役立つツールがあるものもあります。例えば Google を使用している場合、「画像」タブで画像を検索し、「ツール」をクリックします。表示されるツールバーに「ライセンス」のドロップダウンがあり、クリエイティブ・コモンズ・ライセンスの画像に限定した検索を選べます。
+
+[Flickr](https://flickr.com/)、[ShutterStock](https://www.shutterstock.com)、[Pixabay](https://pixabay.com/) などの画像リポジトリーサイトには、その権限でライセンスされた画像だけを検索できるオプションの権限があります。 [Picryl](https://picryl.com) や [The Noun Project](https://thenounproject.com/) のように、寛容なライセンスの画像やアイコンを専門に配布しているサイトもあります。
+
+画像がリリースされたライセンスを遵守するにあたっては、ライセンスの詳細を探し、ソースから提供されたライセンスや説明のページを読み、その指示に従うことが必要です。良質な画像リポジトリーは、そのライセンス条件を明確にしており、簡単に探すことができます。
+
 ## 図表と図表のキャプションで画像に注釈を付ける
 
-キャプションといえば、画像に付けるキャプションを追加する方法はいくつかあります。たとえば、これをやめさせることは何もありません。
+キャプションといえば、画像に付けるキャプションを追加する方法はいくつかあります。たとえば、こうするのをやめる理由は何もないでしょう。
 
 ```html
 <div class="figure">
-  <img src="images/dinosaur.jpg"
-       alt="恐竜の骨格の頭と胴体、
-            それは長い鋭い歯を持つ大きな頭を持っています"
-       width="400"
-       height="341">
+  <img
+    src="images/dinosaur.jpg"
+    alt="The head and torso of a dinosaur skeleton;
+            it has a large head with long sharp teeth"
+    width="400"
+    height="341" />
 
   <p>マンチェスター大学博物館に展示されている T-Rex。</p>
 </div>
 ```
 
-これで結構です。それはあなたが必要とするコンテンツを含んでおり、CSS を使って素敵に書式設定できます。しかし、ここに問題があります。画像をキャプションに意味的にリンクするものは何もありません。画面リーダーにとっては問題を引き起こす可能性があります。たとえば、50 個の画像とキャプションがある場合、どのキャプションにどの画像が表示されるのでしょうか？
+これで結構です。それはあなたが必要とするコンテンツを含んでおり、CSS を使って素敵に書式設定できます。しかし、ここに問題があります。画像をキャプションに意味的にリンクするものは何もありません。スクリーンリーダーにとっては問題を引き起こす可能性があります。たとえば、50 個の画像とキャプションがある場合、どのキャプションにどの画像が表示されるのでしょうか？
 
 より良い解決策は、HTML の {{htmlelement("figure")}} と {{htmlelement("figcaption")}} 要素を使用することです。図表のための意味的なコンテナーを提供し、図表をキャプションに明確にリンクさせること。これはまさにこの目的のために作成されたものです。上記の例は次のように書き直すことができます。
 
-```
+```html
 <figure>
-  <img src="images/dinosaur.jpg"
-       alt="恐竜の骨格の頭と胴体、
-            それは長い鋭い歯を持つ大きな頭を持っています"
-       width="400"
-       height="341">
+  <img
+    src="images/dinosaur.jpg"
+    alt="The head and torso of a dinosaur skeleton;
+            it has a large head with long sharp teeth"
+    width="400"
+    height="341" />
 
   <figcaption>マンチェスター大学博物館に展示されている T-Rex。</figcaption>
 </figure>
@@ -333,7 +441,7 @@ textarea.onkeyup = function(){
 
 {{htmlelement("figcaption")}} 要素は、キャプションが {{htmlelement("figure")}} 要素の他のコンテンツを説明していることをブラウザーと支援技術に伝えます。
 
-> **メモ:** アクセシビリティの観点から、キャプションと {{htmlattrxref('alt','img')}} テキストには明確な役割があります。キャプションは画像を見ることができる人にも利益をもたらしますが、代替テキストは欠けている画像と同じ機能を提供します。したがって、キャプションと代替テキストは、画像がなくなったときに両方が表示されるため、同じことを言うべきではありません。ブラウザーで画像をオフにして見た目を確認してみてください。
+> **メモ:** アクセシビリティの観点から、キャプションと [`alt`](/ja/docs/Web/HTML/Element/img#alt) テキストには明確な役割があります。キャプションは画像を見ることができる人にも利益をもたらしますが、[`alt`](/ja/docs/Web/HTML/Element/img#alt) テキストは欠けている画像と同じ機能を提供します。したがって、キャプションと `alt` テキストは、画像がなくなったときに両方が表示されるため、同じことを言うべきではありません。ブラウザーで画像をオフにして見た目を確認してみてください。
 
 図表は画像である必要はありません。それは次のようにコンテンツの独立した単位です。
 
@@ -355,18 +463,22 @@ textarea.onkeyup = function(){
 ```html hidden
 <h2>ライブ出力</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>編集可能なコード</h2>
-<p class="a11y-label">Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。</p>
+<p class="a11y-label">
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
+  はタブ文字を挿入します）。
+</p>
 
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">
-</textarea>
+<textarea
+  id="code"
+  class="input"
+  style="min-height: 100px; width: 95%"></textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="リセット">
-  <input id="solution" type="button" value="答えを表示">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="答えを表示" />
 </div>
 ```
 
@@ -393,10 +505,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -404,30 +516,31 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<figure>\n <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171">\n <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
+const htmlSolution =
+  '<figure>\n <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171">\n <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '答えを表示';
+  solution.value = "答えを表示";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === '答えを表示') {
+solution.addEventListener("click", () => {
+  if (solution.value === "答えを表示") {
     textarea.value = solutionEntry;
-    solution.value = '答えを隠す';
+    solution.value = "答えを隠す";
   } else {
     textarea.value = userEntry;
-    solution.value = '答えを表示';
+    solution.value = "答えを表示";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -435,7 +548,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -448,7 +561,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -462,7 +578,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === '答えを表示') {
+  if (solution.value === "答えを表示") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -476,7 +592,7 @@ textarea.onkeyup = () => {
 
 ## CSS 背景画像
 
-また、CSS を使用して画像をウェブページに埋め込むこともできます（JavaScript でもできますが、それはまったく別の話です）。CSS の {{cssxref("background-image")}} プロパティとその他の `background-*` プロパティは、背景画像の配置を制御するために使用されます。たとえば、ページ上の各段落に背景画像を配置するには、次のようにします。
+CSS を使用して画像をウェブページに埋め込むこともできます（JavaScript でもできますが、それはまったく別の話です）。CSS の {{cssxref("background-image")}} プロパティとその他の `background-*` プロパティは、背景画像の配置を制御するために使用されます。たとえば、ページ上の各段落に背景画像を配置するには、次のようにします。
 
 ```css
 p {
@@ -484,27 +600,33 @@ p {
 }
 ```
 
-その結果、埋め込み画像は、 HTML 画像よりも間違いなく位置決めや操作がしやすくなっています。では、なぜわざわざ HTML 画像なのでしょうか？先に述べたように、 CSS の背景画像はあくまで装飾のためのものです。ページに何かきれいなものを追加してビジュアルを向上させたいだけなら、これでよいのです。しかし、このような画像には何の意味もありません。同等のテキストを保有することはできませんし、画面リーダーからも見えない、などです。そこで、 HTML 画像が威力を発揮します。
+その結果、埋め込み画像は、 HTML 画像よりも間違いなく位置決めや操作がしやすくなっています。では、なぜわざわざ HTML 画像なのでしょうか？先に述べたように、CSS の背景画像はあくまで装飾のためのものです。ページに何かきれいなものを追加してビジュアルを向上させたいだけなら、これでよいのです。しかし、このような画像には何の意味もありません。同等のテキストを保有することはできませんし、スクリーンリーダーからも見えない、などです。そこで、 HTML 画像が威力を発揮します。
 
-要約: 画像に意味がある場合は、コンテンツに関して、 HTML 画像を使用してください。画像が純粋に装飾である場合は、 CSS 背景画像を使用してください。
+要約: 画像に意味がある場合、すなわちコンテンツであれば、HTML 画像を使用してください。画像が純粋に装飾である場合は、 CSS 背景画像を使用してください。
 
 > **メモ:** [CSS 背景画像](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)については、[CSS](/ja/docs/Learn/CSS) のトピックで詳しく説明します。
 
-## スキルをテストしましょう
+## ウェブ上のその他のグラフィック
 
-この記事の終わりまで到達しましたが、最も大事な情報を覚えていますか？移動する前に、この情報を取得したかのテストを見ることができます — [Test your skills: HTML images](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images) を見てください。
+静止画像は {{HTMLElement("img")}} 要素を使用して表示したり、 {{cssxref("background-image")}} プロパティを使用してHTML要素の背景を設定したりすることができます。また、その場で画像を作成したり、後から画像を操作することもできます。ブラウザーには、コードで 2D や 3D グラフィックを作成する方法や、アップロードされたファイルやユーザーのカメラからライブ配信された動画を記載する方法があります。この記事では、より高度なグラフィックスのトピックを紹介しています：
+
+- [キャンバス](/ja/docs/Web/API/Canvas_API)
+  - : {{HTMLElement("canvas")}} 要素は、 JavaScript で 2D グラフィックを描画する API を提供します。
+- [SVG](/ja/docs/Web/SVG)
+  - : SVG (Scalable Vector Graphics) は、線、曲線、その他の幾何学図形を使用して 2D グラフィックスをレンダリングします。ベクターを用いて、どんなサイズにもきれいに変倍する画像を作成することができます。
+- [WebGL](/ja/docs/Web/API/WebGL_API)
+  - : WebGL API ガイドは、ウェブコンテンツで標準の OpenGL ES を使用することができるウェブ用 3D グラフィック API である WebGL を使い始めるために役立ちます。
+- [HTML の音声と動画の使用](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+  - : `<img>` と同様に、 HTML を使用して動画 ({{htmlelement("video")}}) や 音声({{htmlelement("audio")}}) をウェブページに埋め込み、その再生を制御することができます。
+- [WebRTC](/ja/docs/Web/API/WebRTC_API)
+  - : WebRTC の RTC は Real-Time Communications の略で、ブラウザークライアント（ピア）間の音声/動画ストリーミングとデータ共有を可能にする技術です。
+
+## スキルテスト
+
+この記事の終わりまで到達しましたが、最も大事な情報を覚えていますか？移動する前に、この情報を取得したかのテストを見ることができます — [スキルテスト: HTML 画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images) を見てください。
 
 ## まとめ
 
-今回は以上です。ここまで画像とキャプションについて詳しく述べてきました。次の記事では、さらにギアを上げて、 HTML を使用してウェブページに[動画や音声コンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)を埋め込む方法について見ていきたいと思います。
+今回は以上です。ここまで画像とキャプションについて詳しく述べてきました。次の記事では、さらにギアを上げて、HTML を使用してウェブページに[動画や音声コンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)を埋め込む方法について見ていきたいと思います。
 
 {{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
-
-## このモジュール
-
-- [HTML の画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [\<object> から \<iframe> まで — その他の埋め込み技術](/ja/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [ウェブへのベクターグラフィックの追加](/ja/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla のスプラッシュページ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

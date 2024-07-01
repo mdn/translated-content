@@ -1,18 +1,9 @@
 ---
 title: Object.prototype.__lookupSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Non-standard
-  - Object
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 ---
 
-{{JSRef("Global_Objects", "Object")}} {{non-standard_header}} {{deprecated_header}}
+{{JSRef}} {{non-standard_header}} {{deprecated_header}}
 
 ## Сводка
 
@@ -40,18 +31,16 @@ obj.__lookupSetter__(sprop)
 ```js
 var obj = {
   set foo(value) {
-    return this.bar = value;
-  }
+    return (this.bar = value);
+  },
 };
 
-
 // Нестандартный и устаревший способ
-obj.__lookupSetter__('foo')
+obj.__lookupSetter__("foo");
 // (function(value) { this.bar = value; })
 
-
 // Способ, совместимый со стандартом
-Object.getOwnPropertyDescriptor(obj, 'foo').set;
+Object.getOwnPropertyDescriptor(obj, "foo").set;
 // (function(value) { this.bar = value; })
 ```
 

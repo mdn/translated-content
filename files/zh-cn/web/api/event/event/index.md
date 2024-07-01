@@ -30,7 +30,7 @@ slug: Web/API/Event/Event
 ```js
 // 创建一个支持冒泡且不能被取消的 look 事件
 
-var ev = new Event("look", {"bubbles":true, "cancelable":false});
+var ev = new Event("look", { bubbles: true, cancelable: false });
 document.dispatchEvent(ev);
 
 // 事件可以在任何元素触发，不仅仅是 document

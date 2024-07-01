@@ -19,7 +19,7 @@ var offsetWidth =element.offsetWidth;
 
 ## Ejemplo
 
-![Image:Dimensions-offset.png](/@api/deki/files/186/=Dimensions-offset.png)
+![Image:Dimensions-offset.png](dimensions-offset.png)
 
 ## Especificaciones
 
@@ -29,9 +29,9 @@ var offsetWidth =element.offsetWidth;
 
 `offsetWidth` es una propiedad del DHTML "object model" que fue inicialmente introducido por MSIE. A veces es referido como box-width.
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLElement.offsetWidth")}}
+{{Compat}}
 
 ## Links Relacionados
 

@@ -31,8 +31,8 @@ window.name = "lab_view";
 （译注：此处似有不妥，私以为调用的应是 `ToString` 抽象方法。事实上，如果将一个 Symbol 类型的值赋给 `window.name`，会报 `TypeError`，而非调用 `Symbol.toString()` 转换成字符串后进行赋值。例如：
 
 ```js
-window.name = Symbol.for('foo'); // TypeError
-window.name = Symbol.for('foo').toString(); // "Symbol(foo)"
+window.name = Symbol.for("foo"); // TypeError
+window.name = Symbol.for("foo").toString(); // "Symbol(foo)"
 ```
 
 具体可参见 EMCA 语言规范中 Type Conversion 一节。）

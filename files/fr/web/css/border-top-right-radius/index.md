@@ -1,11 +1,6 @@
 ---
 title: border-top-right-radius
 slug: Web/CSS/border-top-right-radius
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-top-right-radius
 ---
 
 {{CSSRef}}
@@ -90,10 +85,10 @@ div {
 ### HTML
 
 ```html
- <div class="arc_cercle"></div>
- <div class="arc_ellipse"></div>
- <div class="pourcentage"></div>
- <div class="rognage"></div>
+<div class="arc_cercle"></div>
+<div class="arc_ellipse"></div>
+<div class="pourcentage"></div>
+<div class="rognage"></div>
 ```
 
 ### Résultat

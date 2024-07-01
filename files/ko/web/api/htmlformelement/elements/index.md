@@ -27,7 +27,7 @@ HTML 5 이전에는 `HTMLFormControlsCollection`을 기반으로 하는 {{domxre
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
-- {{HTMLElement("input")}} (단, {{htmlattrxref("type", "input")}}이 `"image"`인 경우는 역사적으로 다른 기능을 위해 작동했기 때문에 생략됩니다.)
+- {{HTMLElement("input")}} (단, [`type`](/ko/docs/Web/HTML/Element/input#type)이 `"image"`인 경우는 역사적으로 다른 기능을 위해 작동했기 때문에 생략됩니다.)
 - {{HTMLElement("object")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("select")}}
@@ -41,9 +41,9 @@ HTML 5 이전에는 `HTMLFormControlsCollection`을 기반으로 하는 {{domxre
 
 ```html
 <form id="my-form">
-  <input type="text" name="username">
-  <input type="text" name="full-name">
-  <input type="password" name="password">
+  <input type="text" name="username" />
+  <input type="text" name="full-name" />
+  <input type="password" name="password" />
 </form>
 ```
 

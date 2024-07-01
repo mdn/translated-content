@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Left_shift
 ## 構文
 
 ```js
-a << b
+a << b;
 ```
 
 ## 解説
@@ -28,7 +28,7 @@ a << b
 ```
 
 任意の数 `x` を `y` ビット分だけ左にビット単位にずらすと、 `x * 2 ** y` になります。
- ですから、例えば `9 << 3` は `9 * (2 ** 3) = 9 * (8) = 72` になります。
+ですから、例えば `9 << 3` は `9 * (2 ** 3) = 9 * (8) = 72` になります。
 
 ## 例
 
@@ -50,5 +50,5 @@ a << b
 
 ## 関連情報
 
-- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#ビット演算子)
+- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#ビット演算子)
 - [左シフト代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)

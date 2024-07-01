@@ -20,7 +20,7 @@ TypeError: undefined has no properties
 
 {{jsxref("null")}} 和 {{jsxref("undefined")}}中，没有你需要的属性。
 
-## 例子
+## 示例
 
 ```js example-bad
 null.foo;

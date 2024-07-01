@@ -108,7 +108,7 @@ Este cabeçalho foi originalmente definido na [RFC 3230](https://tools.ietf.org/
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Want-Digest")}}
+{{Compat}}
 
 ## Veja também
 

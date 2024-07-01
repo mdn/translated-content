@@ -1,13 +1,9 @@
 ---
 title: number
 slug: Web/XSLT/Element/number
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/number
-original_slug: Web/XSLT/number
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:number>` compte des éléments de façon séquentielle. Il peut également être utilisé
 pour formater rapidement un nombre.

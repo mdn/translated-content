@@ -1,8 +1,9 @@
 ---
 title: Descifrado
 slug: Glossary/Decryption
-original_slug: Glossary/Descifrado
 ---
+
+{{GlossarySidebar}}
 
 En {{glossary("cryptography" ,"criptografía")}}, el descifrado es la conversión de {{glossary("Ciphertext", "texto cifrado")}} en {{glossary("Plaintext", "texto simple")}}.
 

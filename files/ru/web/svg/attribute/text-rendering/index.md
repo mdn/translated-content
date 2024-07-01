@@ -1,8 +1,9 @@
 ---
 title: text-rendering
 slug: Web/SVG/Attribute/text-rendering
-translation_of: Web/SVG/Attribute/text-rendering
 ---
+
+{{SVGRef}}
 
 « [SVG Attribute reference home](/en/SVG/Attribute)
 
@@ -73,6 +74,6 @@ The following elements can use the `text-rendering` attribute
 
 - {{ SVGElement("text") }}
 
-## See also
+## Смотрите также
 
 - {{ cssxref("text-rendering","CSS text-rendering") }}

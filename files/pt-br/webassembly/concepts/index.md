@@ -50,7 +50,7 @@ Os diferentes tipos de códigos podem invocar um ao outro conforme necessário �
 
 Existem diversos conceitos-chave que precisam ser compreendidos, sobre como o WebAssembly é executado no browser. Todos estes conceitos são refletidos 1:1 na [WebAssembly JavaScript API](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly).
 
-- **Módulo**: Representa o binário do WebAssembly que foi compilado pelo browser, em código executável pela máquina. Um módulo não tem estado e, tal qual um [Blob](/pt-BR/docs/Web/API/Blob), pode ser explicitamente compartilhado entre janelas e workers (via [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage)). Um Módulo declara imports e exports, assim com um módulo ES2015.
+- **Módulo**: Representa o binário do WebAssembly que foi compilado pelo browser, em código executável pela máquina. Um módulo não tem estado e, tal qual um [Blob](/pt-BR/docs/Web/API/Blob), pode ser explicitamente compartilhado entre janelas e workers (via [`postMessage()`](/pt-BR/docs/Web/API/MessagePort/postMessage)). Um Módulo declara imports e exports, assim com um módulo ES2015.
 - **Memória**: Um ArrayBuffer redimensionável que contém um array linear de bytes, lidos e escritos pelas intruções de memória de baixo nível do WebAssembly.
 - **Tabela**: Um array tipado de referências redimensionável (por exemplo para funções) que, em outra situação, não poderia ser armazenado como bytes puros na Memória (por questões de segurança e portabilidade).
 - **Instância**: Um Módulo pareado com todo o estado utilizado durante a execução, incluindo uma Memória, Tabela e um conjunto de valores importados. Uma Instância é como um módulo ES2015 que foi carregado em um global específico com um conjunto de importações específico.
@@ -92,13 +92,13 @@ De maneira resumida, o processo funciona da seguinte maneira:
 
 1. Emscripten primeiro alimenta o C/C++ no clang+LLVM — um maduro compilador C/C++, enviado como parte do Xcode do OSX, por exemplo.
 2. Emscripten transforma o resultado compilado do clang+LLVM em um binário .wasm
-3. Por si só, o WebAssembly atualmente não pode acessar diretamente o DOM; ele só pode chamar o JavaScript, transmitindo tipos de dados primitivos de ponto flutuante e inteiro. Portanto, para acessar qualquer API da Web, o WebAssembly precisa chamar o JavaScript, que faz a chamada da API da Web. Portanto, o Emscripten cria o código de “cola” HTML e JavaScript necessário para alcançar isso.
+3. Por si só, o WebAssembly atualmente não pode acessar diretamente o DOM; ele só pode chamar o JavaScript, transmitindo tipos de dados primitivos de ponto flutuante e inteiro. Portanto, para acessar qualquer API da Web, o WebAssembly precisa chamar o JavaScript, que faz a chamada da API da Web. Portanto, o Emscripten cria o código de "cola" HTML e JavaScript necessário para alcançar isso.
 
 > **Nota:** Existem planos futuros para [permitir o WebAssembly chamar APIs Web diretamente](https://github.com/WebAssembly/gc/blob/master/README.md).
 
 O código de "cola" JavaScript não é tão simples quanto você imagina. Para começar, o Emscripten implementa bibliotecas populares de C/C++ como SDL, OpenGL, OpenAL e partes do POSIX. Essas bibliotecas são implementadas em termos de APIs da Web e, portanto, cada uma exige algum código JavaScript para conectar o WebAssembly à API da Web subjacente.
 
-Portanto, parte do código está implementando a funcionalidade de cada biblioteca respectiva usada pelo código C/C ++. O código de “cola” também contém a lógica para chamar as APIs JavaScript do WebAssembly mencionadas acima para buscar, carregar e executar o arquivo .wasm.
+Portanto, parte do código está implementando a funcionalidade de cada biblioteca respectiva usada pelo código C/C ++. O código de "cola" também contém a lógica para chamar as APIs JavaScript do WebAssembly mencionadas acima para buscar, carregar e executar o arquivo .wasm.
 
 O documento HTML gerado carrega o arquivo JavaScript e grava stdout em um {{htmlelement("textarea")}}. Se o aplicativo usar OpenGL, o HTML também conterá um elemento {{htmlelement("canvas")}} usado como destino de renderização. É muito fácil modificar a saída do Emscripten e transformá-la em qualquer aplicativo da web que você precisar.
 

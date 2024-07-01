@@ -54,7 +54,7 @@ Aqui está um exemplo de como usar **deriveKey()** para criar uma **Secure Remot
 
 ```js
 // salt deve ser Uint8Array ou ArrayBuffer
-var saltBuffer = Unibabel.hexToBuffer('e85c53e7f119d41fd7895cdc9d7bb9dd');
+var saltBuffer = Unibabel.hexToBuffer("e85c53e7f119d41fd7895cdc9d7bb9dd");
 
 // não use métodos naïve para conversão de texto, senão caracteres
 // internacionais não terão a sequência correta de byte. Use o TextEncoder quando
@@ -62,67 +62,63 @@ var saltBuffer = Unibabel.hexToBuffer('e85c53e7f119d41fd7895cdc9d7bb9dd');
 var passphraseKey = Unibabel.utf8ToBuffer("I hëart årt and £$¢!");
 
 // Você deve primeiramente importar sua passphrase Uint8array em uma CryptoKey
-window.crypto.subtle.importKey(
-  'raw',
-  passphraseKey,
-  {name: 'PBKDF2'},
-  false,
-  ['deriveBits', 'deriveKey']
-).then(function(key) {
+window.crypto.subtle
+  .importKey("raw", passphraseKey, { name: "PBKDF2" }, false, [
+    "deriveBits",
+    "deriveKey",
+  ])
+  .then(function (key) {
+    return window.crypto.subtle.deriveKey(
+      {
+        name: "PBKDF2",
+        salt: saltBuffer,
+        // não seja muito ambicioso, ou pelo menos tenha em mente
+        // que celulares com baixo poder de processamento vão acessar o seu app
+        iterations: 100,
+        hash: "SHA-256",
+      },
+      key,
 
-  return window.crypto.subtle.deriveKey(
-    { "name": 'PBKDF2',
-      "salt": saltBuffer,
-      // não seja muito ambicioso, ou pelo menos tenha em mente
-      // que celulares com baixo poder de processamento vão acessar o seu app
-      "iterations": 100,
-      "hash": 'SHA-256'
-    },
-    key,
+      // Nota: para essa demo nós não vamos precisar de uma cipher suite,
+      // mas a API exige que a mesma seja especificada.
 
-    // Nota: para essa demo nós não vamos precisar de uma cipher suite,
-    // mas a API exige que a mesma seja especificada.
+      // Para AES o comprimento requerido é de 128 ou 256 bits (não bytes)
+      { name: "AES-CBC", length: 256 },
 
-    // Para AES o comprimento requerido é de 128 ou 256 bits (não bytes)
-    { "name": 'AES-CBC', "length": 256 },
+      // Independente da resposta a key é extraível (menos seguro) ou não extraível (mais seguro),
+      // quando falso, a key pode ser entregue apenas como um objeto crypto web, não inspecionado
+      true,
 
-    // Independente da resposta a key é extraível (menos seguro) ou não extraível (mais seguro),
-    // quando falso, a key pode ser entregue apenas como um objeto crypto web, não inspecionado
-    true,
-
-    // esse objeto crypto web será permitido para apenas essas funções:
-    [ "encrypt", "decrypt" ]
-  )
-}).then(function (webKey) {
-
-  return crypto.subtle.exportKey("raw", webKey);
-
-}).then(function (buffer) {
-
+      // esse objeto crypto web será permitido para apenas essas funções:
+      ["encrypt", "decrypt"],
+    );
+  })
+  .then(function (webKey) {
+    return crypto.subtle.exportKey("raw", webKey);
+  })
+  .then(function (buffer) {
     var proofOfSecret = Unibabel.bufferToHex(buffer);
     // esta proof-of-secret / password remota-segura
     // pode agora ser enviada no lugar da password do usuário
-});
+  });
 ```
 
 Nota: Por conta de não haver ferramentas nativas que convertam entre Uint8Array, Unicode, hex, e base64, você provavelmente vai querer utilizar algo como o [Unibabel](https://github.com/coolaj86/unibabel-js) ou [Buffer](https://github.com/feross/buffer) para converter entre eles.
 
 ## Especificações
 
-| Especificação                                                                                                                        | Status                                   | Comentário         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-deriveKey', 'SubtleCrypto.deriveKey()') }} | {{ Spec2('Web Crypto API') }} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.SubtleCrypto.deriveKey")}}
+{{Compat}}
 
 ## Veja também
 
 - {{domxref("Crypto")}} e {{domxref("Crypto.subtle")}}.
 - {{domxref("SubtleCrypto")}}, a interface a qual ele pertence.
 
-### Dicionário:
+### Dicionário
 
 "Key" = "Chave"
 

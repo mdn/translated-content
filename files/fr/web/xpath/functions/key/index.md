@@ -1,13 +1,9 @@
 ---
 title: key
 slug: Web/XPath/Functions/key
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/key
-original_slug: Web/XPath/Fonctions/key
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `key` retourne un ensemble de nœuds ayant la valeur donnée pour la clef donnée.
 

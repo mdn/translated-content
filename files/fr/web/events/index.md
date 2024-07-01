@@ -1,11 +1,6 @@
 ---
 title: Référence des événements
 slug: Web/Events
-tags:
-  - Event
-  - Overview
-  - Reference
-translation_of: Web/Events
 ---
 
 Les [événements DOM](/fr/docs/Web/API/Document_Object_Model/Events) sont déclenchés pour notifier au code des « changements intéressants » qui peuvent affecter l'exécution du code. Ces changements peuvent résulter d'interactions avec l'utilisateur, comme l'utilisation de la souris ou le redimensionnement d'une fenêtre, de changements dans l'état de l'environnement sous-jacent (par exemple, une batterie faible ou des événements médiatiques provenant du système d'exploitation), et d'autres causes.
@@ -1251,7 +1246,7 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [cut](/fr/docs/Web/API/Window/cut_event)
   - [devicemotion](/fr/docs/Web/API/Window/devicemotion_event)
   - [deviceorientation](/fr/docs/Web/API/Window/deviceorientation_event)
-  - [DOMContentLoaded](/fr/docs/Web/API/Window/DOMContentLoaded_event)
+  - [DOMContentLoaded](/fr/docs/Web/API/Document/DOMContentLoaded_event)
   - [error](/fr/docs/Web/API/Window/error_event)
   - [focus](/fr/docs/Web/API/Window/focus_event)
   - [gamepadconnected](/fr/docs/Web/API/Window/gamepadconnected_event)

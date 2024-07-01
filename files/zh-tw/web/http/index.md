@@ -53,5 +53,5 @@ slug: Web/HTTP
   - : 旨在幫助開發者、系統管理員和安全專業人員安全地配置網站的專案。
 - [RedBot](https://redbot.org/)
   - : 用於檢查與暫存相關的 HTTP 檔頭的工具。
-- [How Browsers Work](https://web.dev/howbrowserswork/)
+- [瀏覽器的運作方式](https://web.dev/articles/howbrowserswork)
   - : 關於瀏覽器內部實作及 HTTP 通訊協定請求流程的一篇非常詳盡的文章。可以說是所有 Web 開發者都**必讀**的內容。

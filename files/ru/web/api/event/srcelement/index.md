@@ -1,20 +1,17 @@
 ---
-title: Event.srcElement
+title: "Event: свойство srcElement"
 slug: Web/API/Event/srcElement
-translation_of: Web/API/Event/srcElement
+l10n:
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}} {{Deprecated_Header}} {{AvailableInWorkers}}
 
-{{ Non-standard_header() }}
-
-**`Event.srcElement`** это проприетарный синоним стандартного свойства {{domxref("Event.target")}}. Специфичен для старых версий Microsoft Internet Explorer.
+Устаревшее свойство **`Event.srcElement`** является псевдонимом свойства {{domxref("Event.target")}}. Следует использовать {{domxref("Event.target")}}.
 
 ## Спецификации
 
-Не является частью каких-либо спецификаций.
-
-Имеет [описание от Microsoft на MSDN](<https://msdn.microsoft.com/en-us/library/ff974945(v=vs.85).aspx>).
+{{Specifications}}
 
 ## Совместимость с браузерами
 

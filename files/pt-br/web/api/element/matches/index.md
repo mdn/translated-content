@@ -28,11 +28,11 @@ var result = element.matches(selectorString);
 </ul>
 
 <script type="text/javascript">
-  var birds = document.getElementsByTagName('li');
+  var birds = document.getElementsByTagName("li");
 
   for (var i = 0; i < birds.length; i++) {
-    if (birds[i].matches('.endangered')) {
-      console.log('The ' + birds[i].textContent + ' is endangered!');
+    if (birds[i].matches(".endangered")) {
+      console.log("The " + birds[i].textContent + " is endangered!");
     }
   }
 </script>
@@ -66,12 +66,10 @@ if (!Element.prototype.matches) {
 }
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                            | Status                           | Comentário         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM WHATWG', '#dom-element-matches', 'Element.prototype.matches')}} | {{Spec2('DOM WHATWG')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Element.matches")}}
+{{Compat}}

@@ -33,25 +33,21 @@ line-height: unset;
 
 `line-height` 属性被指定为以下任何一个：
 
-- 一个 [`<数字>`](#number)
-- 一个 [`<长度>`](#length)
-- 一个 [`<百分比>`](#percentage)
-- 关键词 [`normal`](#normal)。
+- 一个 [`<number>`](#number) 值
+- 一个 [`<length>`](#length) 值
+- 一个 [`<percentage>`](#percentage) 值
+- 关键字 [`normal`](#normal)。
 
 ### 取值
 
 - `normal`
-
-  - : 取决于用户端。桌面浏览器（包括 Firefox）使用默认值，约为`1.2`，这取决于元素的 `font-family`。
-
-- `<数字>`
-  - : 该属性的应用值是这个无单位数字{{cssxref("&lt;number&gt;", "&lt;数字&gt;")}}乘以该元素的字体大小。计算值与指定值相同。大多数情况下，这是设置`line-height`的**推荐方法**，不会在继承时产生不确定的结果。
-- `<长度>`
-  - : 指定{{cssxref("&lt;length&gt;", "&lt;长度&gt;")}}用于计算 line box 的高度。参考{{cssxref("&lt;length&gt;", "&lt;长度&gt;")}}了解可使用的单位。以 **em** 为单位的值可能会产生不确定的结果（见下面的例子）。
-- `<百分比>`
-  - : 与元素自身的字体大小有关。计算值是给定的百分比值乘以元素计算出的字体大小。**百分比**值可能会带来不确定的结果（见下面第二个例子）。
-- `-moz-block-height` {{non-standard_inline}}
-  - : 将行高设置为当前块的内容区域高度。
+  - : 取决于用户代理。桌面浏览器（包括 Firefox）使用默认值，约为 **`1.2`**，这取决于元素的 `font-family`。
+- `<number>`（无单位）
+  - : 该属性的应用值是这个无单位{{cssxref("&lt;number&gt;", "&lt;数字&gt;")}}乘以该元素的字体大小。计算值与指定的 `<number>` 值相同。大多数情况下，这是设置 `line-height` 的**推荐方法**，不会在继承时产生不确定的结果。
+- `<length>`
+  - : 指定用于计算行向盒高度的{{cssxref("&lt;length&gt;", "&lt;长度&gt;")}}值。以 **em** 为单位的值可能会产生不确定的结果（见下面的示例）。
+- `<percentage>`
+  - : 与元素自身的字体大小有关。计算值是给定的百分比值乘以元素计算出的字体大小。{{cssxref("&lt;percentage&gt;")}} 值可能会带来不确定的结果（见下面第二个示例）。
 
 ### 形式化语法
 
@@ -64,10 +60,24 @@ line-height: unset;
 ```css
 /* 理论上，以下所有规则拥有相同的行高 */
 
-div { line-height: 1.2;   font-size: 10pt; }   /* 无单位数值 number/unitless */
-div { line-height: 1.2em; font-size: 10pt; }   /* 长度 length */
-div { line-height: 120%;  font-size: 10pt; }   /* 百分比 percentage */
-div { font: 10pt/1.2  Georgia,"Bitstream Charter",serif; } /* font 简写属性 font shorthand */
+div {
+  line-height: 1.2;
+  font-size: 10pt;
+} /* 无单位数值 number/unitless */
+div {
+  line-height: 1.2em;
+  font-size: 10pt;
+} /* 长度 length */
+div {
+  line-height: 120%;
+  font-size: 10pt;
+} /* 百分比 percentage */
+div {
+  font:
+    10pt/1.2 Georgia,
+    "Bitstream Charter",
+    serif;
+} /* font 简写属性 font shorthand */
 ```
 
 为了简便，可以通过 {{cssxref("font")}} 简写来设置 `line-height`，但这要求在使用该简写属性时同时设置 `font-family` 属性。
@@ -105,12 +115,12 @@ h1 {
 
 ```html
 <div class="box green">
- <h1>Avoid unexpected results by using unitless line-height.</h1>
+  <h1>Avoid unexpected results by using unitless line-height.</h1>
   length and percentage line-heights have poor inheritance behavior ...
 </div>
 
 <div class="box red">
- <h1>Avoid unexpected results by using unitless line-height.</h1>
+  <h1>Avoid unexpected results by using unitless line-height.</h1>
   length and percentage line-heights have poor inheritance behavior ...
 </div>
 

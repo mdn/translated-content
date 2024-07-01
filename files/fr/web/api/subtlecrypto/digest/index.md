@@ -1,7 +1,6 @@
 ---
 title: SubtleCrypto.digest()
 slug: Web/API/SubtleCrypto/digest
-translation_of: Web/API/SubtleCrypto/digest
 ---
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
@@ -62,12 +61,13 @@ Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpub
 Cet exemple encode un message, puis calcule le condensé avec SHA-256, enfin affiche la longueur du résultat.
 
 ```js
-const text = 'Un obscur message venant du le système S-K, votre majesté. Ses habitants le nomment la planète Terre.';
+const text =
+  "Un obscur message venant du le système S-K, votre majesté. Ses habitants le nomment la planète Terre.";
 
 async function digestMessage(message) {
   const encoder = new TextEncoder();
   const data = encoder.encode(message);
-  const hash = await crypto.subtle.digest('SHA-256', data);
+  const hash = await crypto.subtle.digest("SHA-256", data);
   return hash;
 }
 
@@ -80,13 +80,16 @@ console.log(digestBuffer.byteLength);
 Le condensé est retourné sous forme d'un `ArrayBuffer`, mais la comparaison et l'affichage se fait souvent avec des chaînes hexadécimales. Cet exemple calcule un condensé puis converti l'`ArrayBuffer` vers une chaîne hexadécimale.
 
 ```js
-const text = 'Un obscur message venant du le système S-K, votre majesté. Ses habitants le nomment la planète Terre.';
+const text =
+  "Un obscur message venant du le système S-K, votre majesté. Ses habitants le nomment la planète Terre.";
 
 async function digestMessage(message) {
-  const msgUint8 = new TextEncoder().encode(message);                           // encode comme (utf-8) Uint8Array
-  const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // fait le condensé
-  const hashArray = Array.from(new Uint8Array(hashBuffer));                     // convertit le buffer en tableau d'octet
-  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convertit le tableau en chaîne hexadélimale
+  const msgUint8 = new TextEncoder().encode(message); // encode comme (utf-8) Uint8Array
+  const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8); // fait le condensé
+  const hashArray = Array.from(new Uint8Array(hashBuffer)); // convertit le buffer en tableau d'octet
+  const hashHex = hashArray
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join(""); // convertit le tableau en chaîne hexadélimale
   return hashHex;
 }
 

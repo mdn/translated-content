@@ -30,7 +30,7 @@ slug: Web/JavaScript/Reference/Operators/yield
 
 - `yield`，导致生成器再次暂停并返回生成器的新值。下一次调用 `next()` 时，在 `yield` 之后紧接着的语句继续执行。
 - {{jsxref("Statements/throw", "throw")}} 用于从生成器中抛出异常。这让生成器完全停止执行，并在调用者中继续执行，正如通常情况下抛出异常一样。
-- 到达生成器函数的结尾.在这种情况下，生成器的执行结束，并且 `IteratorResult` 给调用者返回 `value` 的值是 {{jsxref("undefined")}} 并且 `done` 为 `true`。
+- 到达生成器函数的结尾。在这种情况下，生成器的执行结束，并且 `IteratorResult` 给调用者返回 `value` 的值是 {{jsxref("undefined")}} 并且 `done` 为 `true`。
 - 到达 {{jsxref("Statements/return", "return")}} 语句。在这种情况下，生成器的执行结束，并将 `IteratorResult` 返回给调用者，其 `value` 的值是由 `return` 语句指定的，并且 `done` 为 `true`。
 
 如果将参数传递给生成器的 `next()` 方法，则该值将成为生成器当前 `yield` 操作返回的值。
@@ -46,7 +46,7 @@ slug: Web/JavaScript/Reference/Operators/yield
 以下代码是一个生成器函数的声明。
 
 ```js
-function* countAppleSales () {
+function* countAppleSales() {
   const saleList = [3, 7, 5];
   for (let i = 0; i < saleList.length; i++) {
     yield saleList[i];

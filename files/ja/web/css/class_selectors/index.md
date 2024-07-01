@@ -5,7 +5,7 @@ slug: Web/CSS/Class_selectors
 
 {{CSSRef}}
 
-[CSS](/ja/docs/Web/CSS) の**クラスセレクター** (class selector) は、 {{htmlattrxref("class")}} 属性の内容に基づいて要素を選択します。
+[CSS](/ja/docs/Web/CSS) の**クラスセレクター** (class selector) は、 [`class`](/ja/docs/Web/HTML/Global_attributes#class) 属性の内容に基づいて要素を選択します。
 
 ```css
 /* class="spacious" であるすべての要素 */

@@ -1,11 +1,12 @@
 ---
-title: 'XMLHttp​Request: timeout イベント'
+title: "XMLHttpRequest: timeout イベント"
+short-title: timeout
 slug: Web/API/XMLHttpRequest/timeout_event
 l10n:
-  sourceCommit: 073f70e052ff92ab715df3c20678c11c9b51747f
+  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
 
-{{APIRef}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`timeout`** イベントは、設定された時間が経過したことで進行が終了すると発行されます。
 
@@ -14,9 +15,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('timeout', (event) => { })
+addEventListener("timeout", (event) => {});
 
-ontimeout = (event) => { }
+ontimeout = (event) => {};
 ```
 
 ## イベント型
@@ -40,9 +41,9 @@ _以下に挙げたプロパティに加えて、親インターフェイスで�
 
 ```js
 const client = new XMLHttpRequest();
-client.open('GET', 'http://www.example.org/example.txt');
+client.open("GET", "http://www.example.org/example.txt");
 client.ontimeout = () => {
-    console.error('Timeout!!')
+  console.error("Timeout!!");
 };
 
 client.send();
@@ -51,8 +52,8 @@ client.send();
 イベントハンドラーは {{domxref("EventTarget/addEventListener", "addEventListener()")}} メソッドを使用して設定することもできます。
 
 ```js
-client.addEventListener('timeout', () => {
-    console.error("Timeout!!");
+client.addEventListener("timeout", () => {
+  console.error("Timeout!!");
 });
 ```
 

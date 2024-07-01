@@ -10,18 +10,18 @@ slug: Web/API/ServiceWorkerGlobalScope/clients
 ## Syntax
 
 ```js
-swClients = self.clients
+swClients = self.clients;
 ```
 
 ### Value
 
 특정한 워커와 관련된 {{domxref("Clients")}} 객체.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

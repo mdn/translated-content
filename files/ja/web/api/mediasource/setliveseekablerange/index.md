@@ -1,28 +1,31 @@
 ---
-title: MediaSource.setLiveSeekableRange()
+title: "MediaSource: setLiveSeekableRange() メソッド"
+short-title: setLiveSeekableRange()
 slug: Web/API/MediaSource/setLiveSeekableRange
+l10n:
+  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
-{{domxref("MediaSource")}} インターフェイスの **`setLiveSeekableRange()`** メソッドは、ユーザーがメディア要素でシークできる範囲を設定します。
+**`setLiveSeekableRange()`** は {{domxref("MediaSource")}} インターフェイスのメソッドで、ユーザーがメディア要素でシークできる範囲を設定します。
 
 ## 構文
 
+```js-nolint
+setLiveSeekableRange(start, end)
 ```
-mediaSource.setLiveSeekableRange(start, end)
-```
 
-### パラメーター
+### 引数
 
-- start
-  - : ソースの最初から測定された秒単位で設定するシーク可能な範囲の始まり。 メディアソースの期間が正の無限大である場合、{{domxref("HTMLMediaElement.seekable")}} プロパティによって返される {{domxref("TimeRanges")}} オブジェクトは、この値以下の開始タイムスタンプを持ちます。
-- end
-  - : ソースの最初から測定された秒単位で設定するシーク可能な範囲の終わり。 メディアソースの期間が正の無限大である場合、{{domxref("HTMLMediaElement.seekable")}} プロパティによって返される {{domxref("TimeRanges")}} オブジェクトは、この値以上の終了タイムスタンプを持ちます。
+- `start`
+  - : ソースの最初から測定された秒単位で設定するシーク可能な範囲の始まり。 メディアソースの期間が正の無限大である場合、 {{domxref("HTMLMediaElement.seekable")}} プロパティによって返される {{domxref("TimeRanges")}} オブジェクトは、この値以下の開始タイムスタンプを持ちます。
+- `end`
+  - : ソースの最初から測定された秒単位で設定するシーク可能な範囲の終わり。 メディアソースの期間が正の無限大である場合、 {{domxref("HTMLMediaElement.seekable")}} プロパティによって返される {{domxref("TimeRanges")}} オブジェクトは、この値以上の終了タイムスタンプを持ちます。
 
-### 戻り値
+### 返値
 
-{{jsxref('undefined')}}
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -30,10 +33,10 @@ mediaSource.setLiveSeekableRange(start, end)
 // 未定
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaSource.setLiveSeekableRange")}}
+{{Compat}}

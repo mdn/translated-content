@@ -1,18 +1,9 @@
 ---
 title: Document.compatMode
 slug: Web/API/Document/compatMode
-tags:
-  - API
-  - DOM
-  - almost standards
-  - quirk
-  - standards
-  - Свойство
-  - режимы
-translation_of: Web/API/Document/compatMode
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
 Определяет когда документ отображается в [Quirks mode](/en/Quirks_Mode_and_Standards_Mode) или Стандартном режиме.
 

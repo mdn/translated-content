@@ -1,8 +1,6 @@
 ---
 title: list-style-position
 slug: Web/CSS/list-style-position
-translation_of: Web/CSS/list-style-position
-browser-compat: css.properties.list-style-position
 ---
 
 {{CSSRef}}
@@ -55,19 +53,22 @@ La propriété `list-style-position` est définie avec l'un des mots-clés suiva
 #### HTML
 
 ```html
-<ul class="un">Liste 1
+<ul class="un">
+  Liste 1
   <li>Élément 1-1</li>
   <li>Élément 1-2</li>
   <li>Élément 1-3</li>
   <li>Élément 1-4</li>
 </ul>
-<ul class="deux">Liste 2
+<ul class="deux">
+  Liste 2
   <li>Élément 2-1</li>
   <li>Élément 2-2</li>
   <li>Élément 2-3</li>
   <li>Élément 2-4</li>
 </ul>
-<ul class="trois">Liste 3
+<ul class="trois">
+  Liste 3
   <li>Élément 3-1</li>
   <li>Élément 3-2</li>
   <li>Élément 3-3</li>

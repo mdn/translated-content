@@ -2,6 +2,7 @@
 title: AnalyserNode.maxDecibels
 slug: Web/API/AnalyserNode/maxDecibels
 ---
+
 {{APIRef("Web Audio API")}}
 
 {{domxref("AnalyserNode")}} 인터페이스의 **`maxDecibels`** 속성은 unsigned byte 값으로의 전환에 대해서, FFT 분석 데이터의 스케일링 범위에서의 최대 power 값을 나타내는 double 값입니다 — 기본적으로, 이것은 `getByteFrequencyData()`를 사용할 때 결과의 범위에 대한 최대 값을 명시합니다.

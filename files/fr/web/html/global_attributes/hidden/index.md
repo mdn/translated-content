@@ -1,13 +1,6 @@
 ---
 title: hidden
 slug: Web/HTML/Global_attributes/hidden
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/hidden
-original_slug: Web/HTML/Attributs_universels/hidden
 ---
 
 {{HTMLSidebar("Global_attributes")}}

@@ -1,10 +1,6 @@
 ---
 title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
-tags:
-  - Кеширование
-translation_of: Web/HTTP/Headers/Cache-Control
-original_slug: Web/HTTP/Заголовки/Cache-Control
 ---
 
 {{HTTPSidebar}}
@@ -136,11 +132,11 @@ Cache-Control: no-cache, no-store, must-revalidate
 Cache-Control: public, max-age=31536000
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

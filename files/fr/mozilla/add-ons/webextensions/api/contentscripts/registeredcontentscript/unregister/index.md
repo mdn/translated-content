@@ -1,23 +1,14 @@
 ---
 title: contentScripts.RegisteredContentScript.unregister()
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript/unregister
-tags:
-  - API
-  - Extensions
-  - Reference
-  - RegisteredContentScript.unregister
-  - contentScripts
-translation_of: >-
-  Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript/unregister
+slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript/unregister
 ---
 
-{{AddonSidebar()}}Annule l'inscription des scripts de contenu représentés par cet objet `RegisteredContentScript`.
+{{AddonSidebar}}Annule l'inscription des scripts de contenu représentés par cet objet `RegisteredContentScript`.
 
 ## Syntaxe
 
 ```js
-registered.unregister()
+registered.unregister();
 ```
 
 ### Paramètres
@@ -28,9 +19,9 @@ None.
 
 None.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.contentScripts.RegisteredContentScript.unregister", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -40,15 +31,15 @@ Ce code permet de basculer un script de contenu enregistré sur un clic d'action
 var registered = null;
 
 async function register() {
-
   registered = await browser.contentScripts.register({
     matches: ["*://*.org/*"],
-    js: [{
-      code: "document.body.innerHTML = '<h1>This page has been eaten<h1>'"
-    }],
-    runAt: "document_idle"
+    js: [
+      {
+        code: "document.body.innerHTML = '<h1>This page has been eaten<h1>'",
+      },
+    ],
+    runAt: "document_idle",
   });
-
 }
 
 function toggle() {

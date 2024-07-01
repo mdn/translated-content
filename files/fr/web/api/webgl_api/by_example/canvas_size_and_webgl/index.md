@@ -1,14 +1,6 @@
 ---
 title: Tailles de canvas et WebGL
 slug: Web/API/WebGL_API/By_example/Canvas_size_and_WebGL
-tags:
-  - Apprendre
-  - Débutant
-  - Exemple
-  - Tutoriel
-  - WebGL
-translation_of: Web/API/WebGL_API/By_example/Canvas_size_and_WebGL
-original_slug: Web/API/WebGL_API/By_example/Tailles_de_canvas_et_WebGL
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_découpes_simples","Apprendre/WebGL/Par_exemple/Modèle_1")}}
@@ -29,55 +21,60 @@ L'effet devient visible quand on utilise les méthodes {{domxref("WebGLRendering
 
 ```html
 <p>On compare les deux canevas.</p>
-<canvas>Votre navigateur ne semble pas
-    supporter l'élément HTML5 canvas.</canvas>
-<canvas>Votre navigateur ne semble pas
-    supporter l'élément HTML5 canvas.</canvas>
+<canvas
+  >Votre navigateur ne semble pas supporter l'élément HTML5 canvas.</canvas
+>
+<canvas
+  >Votre navigateur ne semble pas supporter l'élément HTML5 canvas.</canvas
+>
 ```
 
 ```css
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  width : 120px;
-  height : 80px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  width: 120px;
+  height: 80px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 ```
 
 ```js
-window.addEventListener("load", function() {
-  "use strict"
-  var firstCanvas = document.getElementsByTagName("canvas")[0],
-    secondCanvas = document.getElementsByTagName("canvas")[1];
+window.addEventListener(
+  "load",
+  function () {
+    "use strict";
+    var firstCanvas = document.getElementsByTagName("canvas")[0],
+      secondCanvas = document.getElementsByTagName("canvas")[1];
 
-  // Ici on applique le traitement spécifique au premier
-  // canevas
-  firstCanvas.width = firstCanvas.clientWidth;
-  firstCanvas.height = firstCanvas.clientHeight;
+    // Ici on applique le traitement spécifique au premier
+    // canevas
+    firstCanvas.width = firstCanvas.clientWidth;
+    firstCanvas.height = firstCanvas.clientHeight;
 
-  // Ensuite on traite les deux canevas de la même façon
-  [firstCanvas, secondCanvas].forEach(function(canvas) {
-    var gl = canvas.getContext("webgl")
-      || canvas.getContext("experimental-webgl");
-    if (!gl) {
-      document.querySelector("p").innerHTML =
-        "Échec de l'obtention du contexte WebGL. "
-        + "Votre navigateur peut ne pas supporter WebGL.";
-      return;
-    }
-    gl.viewport(0, 0,
-      gl.drawingBufferWidth, gl.drawingBufferHeight);
-    gl.enable(gl.SCISSOR_TEST);
-    gl.scissor(30, 10, 60, 60);
-    gl.clearColor(1.0, 1.0, 0.0, 1.0);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-  });
-}, false);
+    // Ensuite on traite les deux canevas de la même façon
+    [firstCanvas, secondCanvas].forEach(function (canvas) {
+      var gl =
+        canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+      if (!gl) {
+        document.querySelector("p").innerHTML =
+          "Échec de l'obtention du contexte WebGL. " +
+          "Votre navigateur peut ne pas supporter WebGL.";
+        return;
+      }
+      gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+      gl.enable(gl.SCISSOR_TEST);
+      gl.scissor(30, 10, 60, 60);
+      gl.clearColor(1.0, 1.0, 0.0, 1.0);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+    });
+  },
+  false,
+);
 ```
 
 Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/canvas-size-and-webgl).

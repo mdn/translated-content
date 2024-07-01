@@ -1,7 +1,11 @@
 ---
-title: HTTP 标头（header）
+title: HTTP 标头
 slug: Glossary/HTTP_header
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
+
+{{GlossarySidebar}}
 
 **HTTP 标头**是用于 HTTP 请求或响应的字段，它传递关于请求或者响应的额外上下文和元数据。例如，请求消息可以使用标头表明它首选的媒体格式，而响应可以使用标头表明返回主体的媒体格式。标头是不区分大小写，开始于行首，后面紧跟着一个 `':'` 和与之相关的值。字段值在一个换行符（CRLF）前或者整个消息的末尾结束。
 
@@ -19,7 +23,7 @@ GET /example.html HTTP/1.1
 Host: example.com
 ```
 
-重定向请求中必须包含（{{HTTPHeader("Location")}}）标头：
+重定向请求中必须包含的标头（{{HTTPHeader("Location")}}）：
 
 ```http
 302 Found
@@ -44,7 +48,7 @@ X-Cache: Hit from cloudfront
 X-Cache-Info: cached
 ```
 
-> **备注：** 规范的旧版本指的是：
+> **备注：** 规范的旧版本还提及了：
 >
 > - {{Glossary("General header", "通用标头")}}：该标头同时适用于请求和响应，但是与在主体中传输的数据无关。
 > - {{Glossary("Entity header", "实体标头")}}: 该标头含有与消息主体相关的附加信息，比如长度或者 MIME 类型（这是现在被称为表示（Representation）元数据标头的超集）。

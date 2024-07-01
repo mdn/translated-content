@@ -1,11 +1,6 @@
 ---
 title: pad
 slug: Web/CSS/@counter-style/pad
-tags:
-  - CSS
-  - Descripteur
-  - Reference
-translation_of: Web/CSS/@counter-style/pad
 ---
 
 {{CSSRef}}

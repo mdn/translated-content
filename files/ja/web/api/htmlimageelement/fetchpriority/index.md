@@ -1,6 +1,9 @@
 ---
-title: HTMLImageElement.fetchPriority
+title: "HTMLImageElement: fetchPriority プロパティ"
+short-title: fetchPriority
 slug: Web/API/HTMLImageElement/fetchPriority
+l10n:
+  sourceCommit: f8b524a5fbdedf04ed5d3bac2200c33c5eda8148
 ---
 
 {{APIRef}}
@@ -11,11 +14,14 @@ slug: Web/API/HTMLImageElement/fetchPriority
 
 優先度ヒントを表す文字列です。使用可能な値は以下の通りです。
 
-- **`high`**: 他の画像と比較して高い優先度で画像を取得します。
-- **`low`**: 他の画像と比較して低い優先度で画像を取得します。
-- **`auto`**: 既定のモード。取得の優先順位がないことを示します。ユーザーにとって最適なものをブラウザーが決定します。
+- `high`
+  - : 他の画像と比較して高い優先度で画像を取得します。
+- `low`
+  - : 他の画像と比較して低い優先度で画像を取得します。
+- `auto`
+  - : 既定のモード。取得の優先順位がないことを示します。ユーザーにとって最適なものをブラウザーが決定します。
 
-`fetchPriority` プロパティを使用すると、画像の取得の優先順位を高くしたり低くしたりすることができます。これは {{HTMLElement("img")}} 要素に適用すると、読み込み処理の早い段階でユーザの操作にとって「重要」な画像を通知するのに役立ちます。
+`fetchPriority` プロパティを使用すると、画像の取得の優先順位を高くしたり低くしたりすることができます。これは {{HTMLElement("img")}} 要素に適用すると、読み込み処理の早い段階でユーザーの操作にとって「重要」な画像を通知するのに役立ちます。
 
 リソースの読み込みに対するヒントの効果はブラウザーに依存するため、複数のブラウザーエンジンで試すようにしてください。
 
@@ -24,9 +30,9 @@ slug: Web/API/HTMLImageElement/fetchPriority
 ## 例
 
 ```js
-var img = new Image();
-img.fetchPriority = 'high';
-img.src = 'img/logo.png';
+const img = new Image();
+img.fetchPriority = "high";
+img.src = "img/logo.png";
 ```
 
 ## 仕様書
@@ -36,3 +42,8 @@ img.src = 'img/logo.png';
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("HTMLLinkElement.fetchPriority")}}
+- {{domxref("HTMLScriptElement.fetchPriority")}}

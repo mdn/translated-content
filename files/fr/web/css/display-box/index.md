@@ -1,7 +1,6 @@
 ---
 title: <display-box>
 slug: Web/CSS/display-box
-translation_of: Web/CSS/display-box
 ---
 
 {{CSSRef}}
@@ -86,9 +85,7 @@ Via leur implémentation, la plupart des navigation retireront un élément de [
 
 ## Compatibilité des navigateurs
 
-### Prise en charge `contents`
-
-{{Compat("css.properties.display.contents", 10)}}
+{{Compat}}
 
 ## Voir aussi
 

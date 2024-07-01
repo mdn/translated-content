@@ -2,6 +2,7 @@
 title: AudioParamMap
 slug: Web/API/AudioParamMap
 ---
+
 {{APIRef("Web Audio API")}}
 
 Web Audio API의 **`AudioParamMap`** 인터페이스는 다수의 오디오 파라미터의 집합을 나타내는데, 각 파라미터는 {{domxref("DOMString")}}의 매핑으로 기술되고, DOMString은 {{domxref("AudioParam")}} 객체에 대한 파라미터를 명시하며, AudioParam 객체는 자신의 값을 나타냅니다.

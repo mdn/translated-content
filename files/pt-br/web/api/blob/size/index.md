@@ -33,13 +33,11 @@ for (var i = 0; i < files.length; i++) {
 
 ## Especificações
 
-| Especificação                                                | Status                       | Comentário         |
-| ------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('File API', '#dfn-size', 'size')}} | {{Spec2('File API')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Blob.size")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,17 +1,6 @@
 ---
 title: ServiceWorkerRegistration.getNotifications()
 slug: Web/API/ServiceWorkerRegistration/getNotifications
-tags:
-  - API
-  - API Service worker
-  - Expérimentale
-  - Méthode
-  - Notifications
-  - Reference
-  - Service Workers
-  - ServiceWorkerRegistration
-  - getNotifications
-translation_of: Web/API/ServiceWorkerRegistration/getNotifications
 ---
 
 {{APIRef("Service Workers API")}}
@@ -40,15 +29,15 @@ Une {{jsxref ("Promise", "Promesse")}} qui se résout en une liste d'objets {{do
 ## Exemple
 
 ```js
-navigator.serviceWorker.register('sw.js')
+navigator.serviceWorker.register("sw.js");
 
-const options = { tag: 'user_alerts' }
+const options = { tag: "user_alerts" };
 
 navigator.serviceWorker.ready.then((registration) => {
   registration.getNotifications(options).then((notifications) => {
     // do something with your notifications
-  })
-})
+  });
+});
 ```
 
 ## Spécifications

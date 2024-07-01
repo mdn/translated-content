@@ -18,7 +18,7 @@ Um conhecimento geral de conceitos de programação e Python é recomendado, mas
 ## Como começar?
 
 - [Introdução ao Django](/pt-BR/docs/Learn/Server-side/Django/Introdu%C3%A7%C3%A3o)
-  - : Neste primeiro artigo sobre Django vamos responder a questão “O que é Django?” e mostrar um resumo sobre o que faz esse web framework ser especial. Nós vamos resumir os recursos principais, incluindo algumas das funcionalidades avançadas que não teremos tempo de detalhar neste módulo. Também mostraremos alguns dos principais blocos de construção de um aplicativo Django, para que você tenha uma idéia do que ele pode fazer antes de continuar e configurá-lo e começar a se divertir.
+  - : Neste primeiro artigo sobre Django vamos responder a questão "O que é Django?" e mostrar um resumo sobre o que faz esse web framework ser especial. Nós vamos resumir os recursos principais, incluindo algumas das funcionalidades avançadas que não teremos tempo de detalhar neste módulo. Também mostraremos alguns dos principais blocos de construção de um aplicativo Django, para que você tenha uma idéia do que ele pode fazer antes de continuar e configurá-lo e começar a se divertir.
 - [Configurando um ambiente de desenvolvimento Django](/pt-BR/docs/Learn/Server-side/Django/development_environment)
   - : Agora que você sabe para quê o Django serve, iremos mostrar-lhe como configurar e testar um ambiente de desenvolvimento Django no Windows, Linux (Ubuntu) e Mac OS X - ou qualquer outro sistema operacional que você esteja usando, esse artigo deve ajudá-lo no que precisa para começar a desenvolver aplicações no Django.
 - [Tutorial Django: Website de uma Biblioteca Local](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)

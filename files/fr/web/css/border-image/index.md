@@ -1,7 +1,6 @@
 ---
 title: border-image
 slug: Web/CSS/border-image
-translation_of: Web/CSS/border-image
 ---
 
 {{CSSRef}}
@@ -65,7 +64,7 @@ La propriété `border-image` peut être définie avec une à cinq valeurs parmi
 
 Les technologies d'assistance ne peuvent pas analyser les images de bordure. Si l'image contient des informations essentielles au sens de la page, mieux vaut décrire ces informations dans le contenu sémantique du document.
 
-- [Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content)
+- [Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_—_Providing_text_alternatives_for_non-text_content)
 - [Comprendre les critères pour 1.1.1 | Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Définition formelle
@@ -107,7 +106,9 @@ On découpe l'image et on la répète pour remplir la zone entre les bordures.
 #### HTML
 
 ```html
-<div id="gradient">L'image formée par le dégradé est étirée pour remplir la zone.</div>
+<div id="gradient">
+  L'image formée par le dégradé est étirée pour remplir la zone.
+</div>
 ```
 
 #### CSS
@@ -138,11 +139,11 @@ On découpe l'image et on la répète pour remplir la zone entre les bordures.
 - [`outline`](/fr/docs/Web/CSS/outline)
 - [`box-shadow`](/fr/docs/Web/CSS/box-shadow)
 - [`background-image`](/fr/docs/Web/CSS/background-image)
-- La fonction [`url()`](/fr/docs/Web/CSS/url())
+- La fonction [`url()`](</fr/docs/Web/CSS/url()>)
 - Fonctions pour les dégradés&nbsp;:
 
-  - [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient())
-  - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient())
-  - [`repeating-linear-gradient()`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient())
-  - [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient())
-  - [`repeating-radial-gradient()`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient())
+  - [`conic-gradient()`](</fr/docs/Web/CSS/gradient/conic-gradient()>)
+  - [`linear-gradient()`](</fr/docs/Web/CSS/gradient/linear-gradient()>)
+  - [`repeating-linear-gradient()`](</fr/docs/Web/CSS/gradient/repeating-linear-gradient()>)
+  - [`radial-gradient()`](</fr/docs/Web/CSS/gradient/radial-gradient()>)
+  - [`repeating-radial-gradient()`](</fr/docs/Web/CSS/gradient/repeating-radial-gradient()>)

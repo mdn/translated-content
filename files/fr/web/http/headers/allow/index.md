@@ -1,12 +1,6 @@
 ---
 title: Allow
 slug: Web/HTTP/Headers/Allow
-tags:
-  - Entête HTTP
-  - HTTP
-  - Reference
-  - entête
-translation_of: Web/HTTP/Headers/Allow
 ---
 
 {{HTTPSidebar}}
@@ -47,9 +41,11 @@ Allow: GET, POST, HEAD
 
 ## Spécifications
 
-| Spécification                                | Titre                                                         |
-| -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Allow", "7.4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

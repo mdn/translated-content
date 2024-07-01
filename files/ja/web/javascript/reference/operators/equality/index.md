@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Equality
 ## 構文
 
 ```js
-x == y
+x == y;
 ```
 
 ## 解説
@@ -40,36 +40,36 @@ x == y
 ### 型変換がない場合の比較
 
 ```js
-1 == 1;              // true
-"hello" == "hello";  // true
+1 == 1; // true
+"hello" == "hello"; // true
 ```
 
 ### 型変換がある場合の比較
 
 ```js
-"1" ==  1;            // true
-1 == "1";             // true
-0 == false;           // true
-0 == null;            // false
-0 == undefined;       // false
-0 == !!null;          // true (論理 NOT 演算子を参照)
-0 == !!undefined;     // true (論理 NOT 演算子を参照)
-null == undefined;    // true
+"1" == 1; // true
+1 == "1"; // true
+0 == false; // true
+0 == null; // false
+0 == undefined; // false
+0 == !!null; // true (論理 NOT 演算子を参照)
+0 == !!undefined; // true (論理 NOT 演算子を参照)
+null == undefined; // true
 
 const number1 = new Number(3);
 const number2 = new Number(3);
-number1 == 3;         // true
-number1 == number2;   // false
+number1 == 3; // true
+number1 == number2; // false
 ```
 
 ### オブジェクトの比較
 
 ```js
-const object1 = {"key": "value"}
-const object2 = {"key": "value"};
+const object1 = { key: "value" };
+const object2 = { key: "value" };
 
-object1 == object2 // false
-object2 == object2 // true
+object1 == object2; // false
+object2 == object2; // true
 ```
 
 ### 文字列と String オブジェクトの比較
@@ -92,9 +92,9 @@ console.log(string4 == string4); // true
 ### Date と文字列の比較
 
 ```js
-const d = new Date('December 17, 1995 03:24:00');
+const d = new Date("December 17, 1995 03:24:00");
 const s = d.toString(); // for example: "Sun Dec 17 1995 03:24:00 GMT-0800 (Pacific Standard Time)"
-console.log(d == s);    //true
+console.log(d == s); //true
 ```
 
 ## 仕様書

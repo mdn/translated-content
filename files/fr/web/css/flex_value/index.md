@@ -1,13 +1,6 @@
 ---
 title: <flex>
 slug: Web/CSS/flex_value
-tags:
-  - CSS
-  - Disposition
-  - Reference
-  - Type de donnée CSS
-  - Web
-translation_of: Web/CSS/flex_value
 ---
 
 {{CSSRef}}

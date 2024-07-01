@@ -40,7 +40,10 @@ form.addEventListener("submit", (event) => {
   if (handler) {
     processOrder(form, handler);
   } else {
-    showAlertMessage("不明または未対応の支払い方法が選択されました。やり直してください。", "OK");
+    showAlertMessage(
+      "不明または未対応の支払い方法が選択されました。やり直してください。",
+      "OK",
+    );
   }
 });
 ```

@@ -42,8 +42,8 @@ slug: Web/API/HTMLInputElement/select_event
 
 ## 属性
 
-| Property                              | Type                                             | Description                                                                                   |
-| ------------------------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------- |
+| Property                        | Type                                             | Description                                                                                   |
+| ------------------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------- |
 | `target` {{readonlyInline}}     | [`EventTarget`](/zh-CN/docs/Web/API/EventTarget) | The event target (the topmost target in the DOM tree).                                        |
 | `type` {{readonlyInline}}       | [`DOMString`](/zh-CN/docs/Web/API/DOMString)     | The type of event.                                                                            |
 | `bubbles` {{readonlyInline}}    | [`Boolean`](/zh-CN/docs/Web/API/Boolean)         | Whether the event normally bubbles or not.                                                    |
@@ -56,7 +56,7 @@ slug: Web/API/HTMLInputElement/select_event
 ### HTML
 
 ```html
-<input value="Try selecting some text in this element.">
+<input value="Try selecting some text in this element." />
 <p id="log"></p>
 ```
 
@@ -64,13 +64,16 @@ slug: Web/API/HTMLInputElement/select_event
 
 ```js
 function logSelection(event) {
-  const log = document.getElementById('log');
-  const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
+  const log = document.getElementById("log");
+  const selection = event.target.value.substring(
+    event.target.selectionStart,
+    event.target.selectionEnd,
+  );
   log.textContent = `You selected: ${selection}`;
 }
 
-const input = document.querySelector('input');
-input.addEventListener('select', logSelection);
+const input = document.querySelector("input");
+input.addEventListener("select", logSelection);
 ```
 
 ### 结果

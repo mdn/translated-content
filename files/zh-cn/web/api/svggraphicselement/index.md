@@ -16,7 +16,7 @@ slug: Web/API/SVGGraphicsElement
 此接口还从其父接口{{domxref("SVGElement")}}继承属性
 
 - {{domxref("SVGGraphicsElement.transform")}} {{ReadOnlyInline}}
-  - : 一个{{domxref("SVGAnimatedTransformList")}}反映给定元素的{{cssxref("transform")}}属性的计算值及其对应的{{SVGAttr("transform")}}}属性。
+  - : 一个{{domxref("SVGAnimatedTransformList")}}反映给定元素的{{cssxref("transform")}}属性的计算值及其对应的{{SVGAttr("transform")}}属性。
 
 ## 方法
 

@@ -18,7 +18,7 @@ Aunque todas las unidades representen la misma frecuencia para el valor `0`, la 
 
 ## Ejemplos
 
-**Valores de frecuencia permitidos**
+### Valores de frecuencia permitidos
 
 | Código    | Significado                                                                                                        |
 | --------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -29,10 +29,10 @@ Aunque todas las unidades representen la misma frecuencia para el valor `0`, la 
 | `+0Hz`    | Cero, con un símbolo `+ y la unidad`.                                                                              |
 | `-0kHz`   | Cero, con un símbolo `-` y la unidad (Aunque no sea común, es un valor permitido).                                 |
 
-**Valores de frecuencia no permitidos**
+### Valores de frecuencia no permitidos
 
-| Código | Significado                                                                                                               |
-| ------ | ------------------------------------------------------------------------------------------------------------------------- |
+| Código | Significado                                                                                                    |
+| ------ | -------------------------------------------------------------------------------------------------------------- |
 | `12.0` | Éste es un tipo {{cssxref("&lt;number&gt;")}}, no un tipo \<frequency>, debe tener una unidad.                 |
 | `7 Hz` | No se permite espacio entre el número {{cssxref("&lt;number&gt;")}} y la unidad.                               |
 | `0`    | El valor cero puede ser escrito sin unidad solo para tipo {{cssxref("&lt;length&gt;")}}, no para \<frequency>. |
@@ -41,6 +41,6 @@ Aunque todas las unidades representen la misma frecuencia para el valor `0`, la 
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.frequency")}}
+{{Compat}}

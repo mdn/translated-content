@@ -54,10 +54,10 @@ Veja também [autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication) para exe
 
 ## Especificações
 
-| Especificação                                        | Título                                 |
-| ---------------------------------------------------- | -------------------------------------- |
+| Especificação                           | Título                                 |
+| --------------------------------------- | -------------------------------------- |
 | {{RFC("7235", "Authorization", "4.2")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                                 | O esquema de autenticação HTTP 'Basic' |
+| {{RFC("7617")}}                         | O esquema de autenticação HTTP 'Basic' |
 
 ## Veja também
 

@@ -1,7 +1,6 @@
 ---
 title: Asignacion (=)
 slug: Web/JavaScript/Reference/Operators/Assignment
-original_slug: Web/JavaScript/Referencia/Operadores/Asignacion
 ---
 
 {{jsSidebar("Operators")}}
@@ -26,17 +25,17 @@ Operador: x = y
 //  n = 10
 //  z = 25
 
-x = n     // La variable x contiene el valor 10
-x = n = z // x = n (es decir 10) y z pisa el valor total remplazandolo por 25
+x = n; // La variable x contiene el valor 10
+x = n = z; // x = n (es decir 10) y z pisa el valor total remplazandolo por 25
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.assignment")}}
+{{Compat}}
 
 ## Ver también
 

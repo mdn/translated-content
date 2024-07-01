@@ -1,9 +1,6 @@
 ---
 title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
-original_slug: Web/JavaScript/Reference/Objets_globaux/Boolean
-browser-compat: javascript.builtins.Boolean
 ---
 
 {{JSRef}}
@@ -37,18 +34,18 @@ if (x) {
 Il ne faut pas utiliser un objet `Boolean` pour convertir une valeur non-booléenne en une valeur booléenne. On utilisera plutôt `Boolean` comme une fonction (sans l'opérateur `new`) ou alors la [double négation](/fr/docs/Web/JavaScript/Reference/Operators/Logical_NOT)&nbsp;:
 
 ```js
-var x = Boolean(expression);     // conseillé
-var x = !!(expression);          // une autre méthode
+var x = Boolean(expression); // conseillé
+var x = !!expression; // une autre méthode
 var x = new Boolean(expression); // à ne pas utiliser
 ```
 
 Si vous spécifiez un objet quelconque, incluant un objet booléen qui vaut `false`, le nouvel objet `Boolean` vaudra `true`.
 
 ```js
-var monFalse = new Boolean(false);   // valeur initiale à false
-var g = Boolean(monFalse);           // valeur initiale à true
-var maChaine = new String("Hello");  // un objet String
-var s = Boolean(maChaine);           // valeur initiale à true
+var monFalse = new Boolean(false); // valeur initiale à false
+var g = Boolean(monFalse); // valeur initiale à true
+var maChaine = new String("Hello"); // un objet String
+var s = Boolean(maChaine); // valeur initiale à true
 ```
 
 Il ne faut pas utiliser un objet `Boolean` à la place d'une valeur primitive booléenne.
@@ -66,10 +63,10 @@ if ([]) {
 if ([] == false) {
   console.log("[] == false");
   // affiche "[] == false"
-} 
+}
 ```
 
-En effet, on a bien `[] == false` bien que `[]` est équivalent à vrai. La comparaison `[] == false` compare la *valeur* de `[]` avec `false`. Or, pour obtenir la *valeur* de `[]`, le moteur JavaScript appelle `[].toString()` dont le résultat vaut `""`, et c'est *cette chaîne de caractères* qui est comparée avec `false`. Autrement dit, `[] == false` est équivalent à `"" == false`. Avec `""` qui est équivalent à faux, on a donc le résultat observé.
+En effet, on a bien `[] == false` bien que `[]` est équivalent à vrai. La comparaison `[] == false` compare la _valeur_ de `[]` avec `false`. Or, pour obtenir la _valeur_ de `[]`, le moteur JavaScript appelle `[].toString()` dont le résultat vaut `""`, et c'est _cette chaîne de caractères_ qui est comparée avec `false`. Autrement dit, `[] == false` est équivalent à `"" == false`. Avec `""` qui est équivalent à faux, on a donc le résultat observé.
 
 ## Constructeur
 
@@ -91,7 +88,7 @@ En effet, on a bien `[] == false` bien que `[]` est équivalent à vrai. La comp
 var bSansParam = new Boolean();
 var bZero = new Boolean(0);
 var bNull = new Boolean(null);
-var bChaineVide = new Boolean('');
+var bChaineVide = new Boolean("");
 var bfalse = new Boolean(false);
 ```
 
@@ -99,9 +96,9 @@ var bfalse = new Boolean(false);
 
 ```js
 var bTrue = new Boolean(true);
-var bChaineTrue = new Boolean('true');
-var bChaineFalse = new Boolean('false');
-var bSuLin = new Boolean('Su Lin');
+var bChaineTrue = new Boolean("true");
+var bChaineFalse = new Boolean("false");
+var bSuLin = new Boolean("Su Lin");
 var bArrayProto = new Boolean([]);
 var bObjProto = new Boolean({});
 ```

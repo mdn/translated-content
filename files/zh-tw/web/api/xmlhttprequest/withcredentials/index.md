@@ -17,7 +17,7 @@ In addition, this flag is also used to indicate when cookies are to be ignored i
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://example.com/', true);
+xhr.open("GET", "http://example.com/", true);
 xhr.withCredentials = true;
 xhr.send(null);
 ```

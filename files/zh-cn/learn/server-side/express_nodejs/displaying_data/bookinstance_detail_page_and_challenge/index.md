@@ -1,12 +1,11 @@
 ---
 title: 书本实例细节页面、与自我挑战
-slug: >-
-  Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
+slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
 ---
 
 ## 书本实例细节页面
 
-`BookInstance`细节页面，需要呈现每一个`BookInstance`的信息，用 `_id` 字段值（自动产生）做识别。它包含了 `Book` 名称 (也是一个连结，连到 书本细节页面)，接着是纪录中的其它的信息。
+`BookInstance`细节页面，需要呈现每一个`BookInstance`的信息，用 `_id` 字段值（自动产生）做识别。它包含了 `Book` 名称 (也是一个连结，连到 书本细节页面)，接着是纪录中的其他的信息。
 
 ### 控制器
 
@@ -14,21 +13,25 @@ slug: >-
 
 ```js
 // Display detail page for a specific BookInstance.
-exports.bookinstance_detail = function(req, res, next) {
-
-    BookInstance.findById(req.params.id)
-    .populate('book')
+exports.bookinstance_detail = function (req, res, next) {
+  BookInstance.findById(req.params.id)
+    .populate("book")
     .exec(function (err, bookinstance) {
-      if (err) { return next(err); }
-      if (bookinstance==null) { // No results.
-          var err = new Error('Book copy not found');
-          err.status = 404;
-          return next(err);
-        }
+      if (err) {
+        return next(err);
+      }
+      if (bookinstance == null) {
+        // No results.
+        var err = new Error("Book copy not found");
+        err.status = 404;
+        return next(err);
+      }
       // Successful, so render.
-      res.render('bookinstance_detail', { title: 'Book:', bookinstance:  bookinstance});
-    })
-
+      res.render("bookinstance_detail", {
+        title: "Book:",
+        bookinstance: bookinstance,
+      });
+    });
 };
 ```
 
@@ -73,7 +76,7 @@ block content
 
 目前，我们网站上显示的大多数日期，都使用默认的 JavaScript 格式（例如 _Tue Dec 06 2016 15:49:58 GMT+1100_（AUS 东部夏令时间）。本文的挑战，是改善作者`Author`生命周期日期显示的外观信息（死亡/出生日期）和 BookInstance 详细信息页面，使用格式：December 6th, 2016。
 
-> **备注：** 您可以使用与我们用于 Book Instance List 的相同方法（将生命周期的虚拟属性，添加到`Author`模型，并使用[moment](https://www.npmjs.com/package/moment)来设置日期字符串的格式）。
+> **备注：** 你可以使用与我们用于 Book Instance List 的相同方法（将生命周期的虚拟属性，添加到`Author`模型，并使用[moment](https://www.npmjs.com/package/moment)来设置日期字符串的格式）。
 
 这一挑战的要求：
 

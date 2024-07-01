@@ -1,5 +1,5 @@
 ---
-title: 'ReferenceError: can''t access lexical declaration`X'' before initialization'
+title: "ReferenceError: can't access lexical declaration`X' before initialization"
 slug: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 ---
 
@@ -17,7 +17,7 @@ ReferenceError: 'x' is not defined (Chrome)
 
 {{jsxref("ReferenceError")}}
 
-## O que está errado:
+## O que está errado
 
 Uma variável léxica foi acessada antes de ser inicializada. Isso acontece dentro de qualquer declaração de bloco, quando as declarações `let` ou `const` são acessadas antes de serem definidas.
 
@@ -31,7 +31,7 @@ Neste caso, a variável "foo" é redeclarada usando `let`.
 function test() {
   let foo = 33;
   if (true) {
-    let foo = (foo + 55);
+    let foo = foo + 55;
     // ReferenceError: can't access lexical
     // declaration `foo' before initialization
   }
@@ -44,11 +44,11 @@ test();
 Para mudar "foo" dentro do bloco if você precisa remover o `let` que causa a redeclaração.
 
 ```js example-good
-function test(){
-   let foo = 33;
-   if (true) {
-      foo = (foo + 55);
-   }
+function test() {
+  let foo = 33;
+  if (true) {
+    foo = foo + 55;
+  }
 }
 test();
 ```

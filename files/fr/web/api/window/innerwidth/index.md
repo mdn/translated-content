@@ -1,7 +1,6 @@
 ---
 title: window.innerWidth
 slug: Web/API/Window/innerWidth
-translation_of: Web/API/Window/innerWidth
 ---
 
 {{ ApiRef() }}

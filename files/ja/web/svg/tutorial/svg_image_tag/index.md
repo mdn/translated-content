@@ -1,11 +1,15 @@
 ---
 title: SVG の image 要素
 slug: Web/SVG/Tutorial/SVG_Image_Tag
+l10n:
+  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}
 
-SVG の {{ SVGElement("image") }} 要素は、ラスター画像を SVG オブジェクト内に描画することを可能にします。
+SVG の {{ SVGElement("image") }} 要素により、ラスター画像を SVG オブジェクト内に描画することができます。
 
 以下の基本的な例では、 {{ SVGAttr("href") }} 属性で参照されている .jpg 画像を SVG オブジェクト内に描画します。
 
@@ -19,10 +23,10 @@ SVG の {{ SVGElement("image") }} 要素は、ラスター画像を SVG オブ�
 </svg>
 ```
 
-いくつか注意すべき重要事項があります ([W3 仕様書](http://www.w3.org/TR/SVG/struct.html#ImageElement)に基づくものです)。
+いくつか注意すべき重要事項があります（[W3 仕様書](https://www.w3.org/TR/SVG/struct.html#ImageElement)に基づくものです）。
 
-- x 属性や y 属性を措定しない場合、それらの値は 0 になります。
-- height 属性や width 属性を指定しない場合、それらの値は 0 になります。
-- height 属性または width 属性の値が 0 である場合、その画像を描画しません。
+- `x` 属性や `y` 属性を措定しない場合、それらの値は `0` になります。
+- `height` 属性や `width` 属性を指定しない場合、それらの値は `0` になります。
+- `height` 属性または `width` 属性の値が `0` である場合、その画像を描画しません。
 
 {{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}

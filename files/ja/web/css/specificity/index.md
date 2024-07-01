@@ -157,7 +157,9 @@ div:not(.inner, #fakeId) p {
 一般的に、詳細度は最小限に抑えたいものですが、特定の理由で要素の詳細度を上げる必要がある場合は、この 3 つの擬似クラスが役に立ちます。
 
 ```css
-a:not(#fakeId#fakeId#fakeID) { color: blue; /* 3-0-1 */}
+a:not(#fakeId#fakeId#fakeID) {
+  color: blue; /* 3-0-1 */
+}
 ```
 
 この例では、 3 つ以上の ID を持つリンク宣言、 `a` に一致する色の値が [`!important` フラグ](#!important_の例外)を含む場合、またはリンクに[インラインスタイル](#インラインスタイル)の色宣言がある場合で上書きされなければ、すべてのリンクは青色となります。このようなテクニックを使用する場合は、なぜそのハックが必要であったかを説明するコメントを追加してください。
@@ -441,11 +443,11 @@ input[type="password"]:required {
   - [CSS の構文](/ja/docs/Web/CSS/Syntax)
   - [アットルール](/ja/docs/Web/CSS/At-rule)
   - [コメント](/ja/docs/Web/CSS/Comments)
-  - [継承](/ja/docs/Web/CSS/inheritance)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [継承](/ja/docs/Web/CSS/Inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
   - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
-  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
     - [初期値](/ja/docs/Web/CSS/initial_value)
     - [計算値](/ja/docs/Web/CSS/computed_value)

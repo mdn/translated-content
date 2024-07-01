@@ -1,8 +1,6 @@
 ---
 title: Constructeur ReferenceError()
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError
-translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError
-browser-compat: javascript.builtins.ReferenceError.ReferenceError
 ---
 
 {{JSRef}}
@@ -12,10 +10,10 @@ Le constructeur **`ReferenceError()`** permet de créer des objets représentant
 ## Syntaxe
 
 ```js
-new ReferenceError()
-new ReferenceError(message)
-new ReferenceError(message, nomFichier)
-new ReferenceError(message, nomFichier, numeroLigne)
+new ReferenceError();
+new ReferenceError(message);
+new ReferenceError(message, nomFichier);
+new ReferenceError(message, nomFichier, numeroLigne);
 ```
 
 ### Paramètres
@@ -35,13 +33,13 @@ new ReferenceError(message, nomFichier, numeroLigne)
 try {
   let a = variableIndefinie;
 } catch (e) {
-  console.log(e instanceof ReferenceError);  // true
-  console.log(e.message);                    // "variableIndefinie is not defined"
-  console.log(e.name);                       // "ReferenceError"
-  console.log(e.fileName);                   // "Scratchpad/1"
-  console.log(e.lineNumber);                 // 2
-  console.log(e.columnNumber);               // 6
-  console.log(e.stack);                      // "@Scratchpad/2:2:7\n"
+  console.log(e instanceof ReferenceError); // true
+  console.log(e.message); // "variableIndefinie is not defined"
+  console.log(e.name); // "ReferenceError"
+  console.log(e.fileName); // "Scratchpad/1"
+  console.log(e.lineNumber); // 2
+  console.log(e.columnNumber); // 6
+  console.log(e.stack); // "@Scratchpad/2:2:7\n"
 }
 ```
 
@@ -49,15 +47,15 @@ try {
 
 ```js
 try {
-  throw new ReferenceError('Coucou', 'unFichier.js', 10);
+  throw new ReferenceError("Coucou", "unFichier.js", 10);
 } catch (e) {
-  console.log(e instanceof ReferenceError);  // true
-  console.log(e.message);                    // "Coucou"
-  console.log(e.name);                       // "ReferenceError"
-  console.log(e.fileName);                   // "unFichier.js"
-  console.log(e.lineNumber);                 // 10
-  console.log(e.columnNumber);               // 0
-  console.log(e.stack);                      // "@Scratchpad/2:2:9\n"
+  console.log(e instanceof ReferenceError); // true
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "ReferenceError"
+  console.log(e.fileName); // "unFichier.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 

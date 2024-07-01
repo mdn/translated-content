@@ -28,7 +28,13 @@ var xpathResult = document.evaluate(
 ## 示例
 
 ```js
-var headings = document.evaluate("/html/body//h2", document, null, XPathResult.ANY_TYPE, null);
+var headings = document.evaluate(
+  "/html/body//h2",
+  document,
+  null,
+  XPathResult.ANY_TYPE,
+  null,
+);
 /* 在 document 中查找所有的 h2 元素。
  * 结果可能是无序节点迭代器。 */
 var thisHeading = headings.iterateNext();
@@ -93,4 +99,4 @@ Results of `NODE_SNAPSHOT` types are snapshots, which are essentially lists of m
 - {{domxref("Document.createExpression()")}}
 - {{domxref("XPathResult")}}
 - [XPath Code Snippets](/zh-CN/docs/Code_snippets/XPath)
-- [Check for browser support](http://codepen.io/johan/full/ckFgn)
+- [Check for browser support](https://codepen.io/johan/full/ckFgn)

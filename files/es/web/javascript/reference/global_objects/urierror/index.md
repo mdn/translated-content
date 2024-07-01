@@ -36,7 +36,7 @@ global se usó de manera incorrecta.
 
 ```js
 try {
-  decodeURIComponent('%');
+  decodeURIComponent("%");
 } catch (e) {
   console.log(e instanceof URIError); // true
   console.log(e.message); // "malformed URI sequence"
@@ -52,7 +52,7 @@ try {
 
 ```js
 try {
-  throw new URIError('Hello', 'someFile.js', 10);
+  throw new URIError("Hello", "someFile.js", 10);
 } catch (e) {
   console.log(e instanceof URIError); // true
   console.log(e.message); // "Hello"

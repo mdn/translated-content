@@ -1,8 +1,9 @@
 ---
 title: additive-symbols
 slug: Web/CSS/@counter-style/additive-symbols
-translation_of: Web/CSS/@counter-style/additive-symbols
 ---
+
+{{CSSRef}}
 
 ## Описание
 
@@ -16,8 +17,12 @@ translation_of: Web/CSS/@counter-style/additive-symbols
 
 ```css
 additive-symbols: 3 "0";
-additive-symbols: 3 "0", 2 "\2E\20";
-additive-symbols: 3 "0", 2 url(symbol.png);
+additive-symbols:
+  3 "0",
+  2 "\2E\20";
+additive-symbols:
+  3 "0",
+  2 url(symbol.png);
 ```
 
 ### Формальный синтаксис
@@ -30,11 +35,11 @@ additive-symbols: 3 "0", 2 url(symbol.png);
 
 ```html
 <ul class="list">
-   <li>One</li>
-   <li>Two</li>
-   <li>Three</li>
-   <li>Four</li>
-   <li>Five</li>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
 </ul>
 ```
 

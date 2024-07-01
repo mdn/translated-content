@@ -1,15 +1,9 @@
 ---
 title: Date.prototype.getUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
 ---
-{{JSRef("Global_Objects", "Date")}}
+
+{{JSRef}}
 
 ## Сводка
 
@@ -42,11 +36,7 @@ var minutes = today.getUTCMinutes();
 
 ## Спецификации
 
-| Спецификация                                                                                                         | Статус                   | Комментарии                                            |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                                                              | Стандарт                 | Изначальное определение. Реализовано в JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.21', 'Date.prototype.getUTCMinutes')}}                     | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-date.prototype.getutcminutes', 'Date.prototype.getUTCMinutes')}} | {{Spec2('ES6')}}     |                                                        |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

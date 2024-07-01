@@ -1,7 +1,6 @@
 ---
 title: API Fetch
 slug: Web/API/Fetch_API
-translation_of: Web/API/Fetch_API
 ---
 
 {{DefaultAPISidebar("Fetch API")}}

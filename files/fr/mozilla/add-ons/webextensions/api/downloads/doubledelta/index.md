@@ -1,20 +1,9 @@
 ---
 title: downloads.DoubleDelta
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DoubleDelta
-tags:
-  - API
-  - Add-ons
-  - DoubleDelta
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DoubleDelta
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type `DoubleDelta` de l'API {{WebExtAPIRef("downloads")}} représente la différence entre deux doubles.
 
@@ -27,9 +16,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `previous`{{optional_inline}}
   - : Un `number` représentant la valeur double précédente.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.DoubleDelta")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

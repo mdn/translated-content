@@ -5,7 +5,7 @@ slug: Web/CSS/overflow
 
 {{CSSRef}}
 
-**`overflow`** 是 [CSS](/zh-CN/docs/Web/CSS) 的[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)，其设置了元素溢出时所需的行为——即当元素的内容太大而无法适应它的[块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)时。
+**`overflow`** 是 [CSS](/zh-CN/docs/Web/CSS) 的[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)，其设置了元素溢出时所需的行为——即当元素的内容太大而无法适应它的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)时。
 
 {{EmbedInteractiveExample("pages/css/overflow.html")}}
 
@@ -69,7 +69,7 @@ overflow: unset;
 
 overflow 选项包括裁减、显示滚动条，或者显示从容器流向周围区域的内容。
 
-指定 `visible`（默认）或 `clip` 以外的值，会创建一个新的[块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)。由于技术原因，这是必要的——如果浮动包含滚动元素，它将在每个滚动步骤后强制重新包装内容，从而导致一个缓慢的滚动体验。
+指定 `visible`（默认）或 `clip` 以外的值，会创建一个新的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)。由于技术原因，这是必要的——如果浮动包含滚动元素，它将在每个滚动步骤后强制重新包装内容，从而导致一个缓慢的滚动体验。
 
 为使 `overflow` 具有效果，块级水平的容器必须有一个设定的高度（`height` 或 `max-height`）或 `white-space` 设置为 `nowrap`。
 
@@ -176,4 +176,4 @@ p.auto {
 ## 参见
 
 - 相关 CSS 属性：{{cssxref("text-overflow")}}、{{cssxref("white-space")}}、{{Cssxref("overflow-x")}}、{{Cssxref("overflow-y")}}、{{Cssxref("overflow-inline")}}、{{Cssxref("overflow-block")}}、{{Cssxref("clip")}}、{{Cssxref("display")}}
-- [CSS Overflow](/zh-CN/docs/Web/CSS/CSS_Overflow) 和 [Debug scrollable overflow](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/debug_scrollable_overflow/index.html)
+- [CSS Overflow](/zh-CN/docs/Web/CSS/CSS_overflow) 和 [Debug scrollable overflow](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/debug_scrollable_overflow/index.html)

@@ -1,8 +1,6 @@
 ---
 title: Game over
 slug: Games/Tutorials/2D_breakout_game_Phaser/Game_over
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Game_over
-original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Game_over
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Платформа_и_управление", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Создание_кирпичей")}}
@@ -23,9 +21,9 @@ game.physics.arcade.checkCollision.down = false;
 
 ```js
 ball.checkWorldBounds = true;
-ball.events.onOutOfBounds.add(function(){
-    alert('Game over!');
-    location.reload();
+ball.events.onOutOfBounds.add(function () {
+  alert("Game over!");
+  location.reload();
 }, this);
 ```
 

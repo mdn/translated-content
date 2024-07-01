@@ -1,13 +1,6 @@
 ---
 title: offset-distance
 slug: Web/CSS/offset-distance
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - motion-offset
-  - offset-distance
-translation_of: Web/CSS/offset-distance
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -50,7 +43,7 @@ La notion de mouvement contenue dans _CSS Motion Path_ vient principalement de l
 
 ```css
 #motion-demo {
-  offset-path: path('M20,20 C20,100 200,0 200,100');
+  offset-path: path("M20,20 C20,100 200,0 200,100");
   animation: move 3000ms infinite alternate ease-in-out;
   width: 40px;
   height: 40px;

@@ -1,12 +1,9 @@
 ---
 title: Cookie
 slug: Glossary/Cookie
-tags:
-  - Glossaire
-  - Mécanique web
-translation_of: Glossary/Cookie
-original_slug: Glossaire/Cookie
 ---
+
+{{GlossarySidebar}}
 
 Un cookie est un petit bout d'information laissé via le navigateur web par un site web sur l'ordinateur du visiteur.
 

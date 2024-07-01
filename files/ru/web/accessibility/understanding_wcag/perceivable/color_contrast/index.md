@@ -1,12 +1,9 @@
 ---
 title: Цветовой контраст
 slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
-tags:
-  - WCAG
-  - Контраст
-  - доступность
-translation_of: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 ---
+
+{{AccessibilitySidebar}}
 
 ## Описание проблемы
 

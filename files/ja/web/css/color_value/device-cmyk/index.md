@@ -2,7 +2,7 @@
 title: device-cmyk()
 slug: Web/CSS/color_value/device-cmyk
 l10n:
-  sourceCommit: 6be1b954a117202d7635caeec74ebbbde984d3f3
+  sourceCommit: a4064aa5583a624ae257cabf514e31dd12e53a90
 ---
 
 {{CSSRef}}
@@ -21,7 +21,7 @@ device-cmyk(0 81% 81% 30% / .5, rgb(178 34 34));
 
 ### 値
 
-- 関数記法: `device-cmyk( <cmyk-component>{4} [ / <alpha-value> ]? , <color>? )`
+- 関数記法: `device-cmyk(C M Y K[ / A][, color])`
 
   - : `<cmyk-component>` は 4 つの {{cssxref("number")}} または {{cssxref("percentage")}} の値で、 CMYK 色のシアン、マゼンタ、黄、黒の成分を指定します。
 
@@ -29,10 +29,26 @@ device-cmyk(0 81% 81% 30% / .5, rgb(178 34 34));
 
     `<color>` は、ユーザーエージェントが CMYK 色を RGB に変換する方法を知らない場合に使用する、オプションの代替値の {{cssxref("&lt;color&gt;")}} です。
 
+- `C`, `M`, `Y`, `K`
+
+  - : {{CSSXref("number")}} または {{CSSXref("percentage")}} の値で、 CMYK 色の成分であるシアン、マゼンタ、黄、黒の成分を指定します。
+
+- `A` {{optional_inline}}
+
+  - : {{CSSXref("&lt;alpha-value&gt;")}} またはキーワード `none` で、 `1` は `100%` （完全に不透明）に対応します。
+
+- `color` {{optional_inline}}
+
+  - : オプションで、代替の {{CSSXref("&lt;color&gt;")}} です。ユーザーエージェントが CMYK 色から RGB への変換方法を知らない場合に使用されます。
+
+### 形式文法
+
+{{csssyntax}}
+
 ## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+この機能を実装しているブラウザーはありません。

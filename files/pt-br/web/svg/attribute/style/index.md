@@ -9,10 +9,10 @@ Este atributo especifica informação de estilo para o elemento atual. O atribut
 
 ## Contexto de uso
 
-| Categorias          | Atributo de apresentação                                                    |
-| ------------------- | --------------------------------------------------------------------------- |
-| Valor               | \<style>                                                                    |
-| Animável?           | Não                                                                         |
+| Categorias          | Atributo de apresentação                                                     |
+| ------------------- | ---------------------------------------------------------------------------- |
+| Valor               | \<style>                                                                     |
+| Animável?           | Não                                                                          |
 | Documento Normativo | [SVG 1.1 (2ª Edição)](https://www.w3.org/TR/SVG/styling.html#StyleAttribute) |
 
 - \<style>
@@ -24,8 +24,12 @@ O exemplo a seguir mostra a estilização de um retângulo com um atributo de es
 
 ```html
 <svg version="1.1" viewbox="0 0 1000 500" xmlns="https://www.w3.org/2000/svg">
-  <rect height="300" width="600" x="200" y="100"
-     style="fill: red; stroke: blue; stroke-width: 3"/>
+  <rect
+    height="300"
+    width="600"
+    x="200"
+    y="100"
+    style="fill: red; stroke: blue; stroke-width: 3" />
 </svg>
 ```
 

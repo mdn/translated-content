@@ -1,10 +1,11 @@
 ---
 title: FormData.has()
 slug: Web/API/FormData/has
-translation_of: Web/API/FormData/has
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 Метод **`has()`** из интерфейса {{domxref("FormData")}} возвращает логическое значение, указывающее, содержит ли объект `FormData` указанный ключ.
 
@@ -36,16 +37,16 @@ var formData = new FormData();
 В следующем коде показаны результаты проверки существования `username` в объекте `FormData`, до и после добавления значения `username` в {{domxref("FormData.append")}}:
 
 ```js
-formData.has('username'); // Returns false
-formData.append('username', 'Chris');
-formData.has('username'); // Returns true
+formData.has("username"); // Returns false
+formData.append("username", "Chris");
+formData.has("username"); // Returns true
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

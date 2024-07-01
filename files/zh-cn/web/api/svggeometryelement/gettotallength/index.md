@@ -11,8 +11,8 @@ slug: Web/API/SVGGeometryElement/getTotalLength
 
 ## 语法
 
-```
-float someElement.getTotalLength();
+```js-nolint
+getTotalLength();
 ```
 
 ### 返回值
@@ -27,6 +27,6 @@ float someElement.getTotalLength();
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{DOMxRef("SVGGeometryElement.getTotalLength()")}}

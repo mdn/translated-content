@@ -1,17 +1,9 @@
 ---
-title: GlobalEventHandlers.onchange
+title: "HTMLElement: событие change"
 slug: Web/API/HTMLElement/change_event
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - onchange
-translation_of: Web/API/GlobalEventHandlers/onchange
-original_slug: Web/API/GlobalEventHandlers/onchange
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{APIRef}}
 
 Свойство `onchange` (Дословно "На изменение") устанавливает и возвращает [обработчик события](/docs/Web/Guide/Events/Event_handlers), для события {{event("change")}} (Изменение чего-либо).
 
@@ -30,11 +22,9 @@ var handlerFunction = element.onchange;
 
 Документация по событию {{event("change")}}.
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                     | Статус                           | Комментарий |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onchange','onchange')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

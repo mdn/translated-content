@@ -1,8 +1,9 @@
 ---
-title: 'WorkerGlobalScope: languagechange イベント'
+title: "WorkerGlobalScope: languagechange イベント"
+short-title: languagechange
 slug: Web/API/WorkerGlobalScope/languagechange_event
 l10n:
-  sourceCommit: 0fe2d3ee23b1b23be971d42c7c56729bd23a3f83
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}
@@ -16,9 +17,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('languagechange', (event) => { });
+addEventListener("languagechange", (event) => {});
 
-onlanguagechange = (event) => { };
+onlanguagechange = (event) => {};
 ```
 
 ## イベント型
@@ -30,16 +31,16 @@ onlanguagechange = (event) => { };
 `languagechange` は {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッドで使用することができます。
 
 ```js
-worker.addEventListener('languagechange', () => {
-  console.log('languagechange event detected!');
+worker.addEventListener("languagechange", () => {
+  console.log("languagechange event detected!");
 });
 ```
 
-または、 `onlanguagechange`  イベントハンドラープロパティを使用します。
+または、 `onlanguagechange` イベントハンドラープロパティを使用します。
 
 ```js
 worker.onlanguagechange = (event) => {
-  console.log('languagechange event detected!');
+  console.log("languagechange event detected!");
 };
 ```
 

@@ -73,7 +73,7 @@ page-break-after: unset;
 ```css
 /* move to a new page after footnotes */
 div.footnotes {
-  page-break-after:always;
+  page-break-after: always;
 }
 ```
 

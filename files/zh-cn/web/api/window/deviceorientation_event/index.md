@@ -1,5 +1,5 @@
 ---
-title: 'Window：deviceorientation 事件'
+title: Window：deviceorientation 事件
 slug: Web/API/Window/deviceorientation_event
 ---
 
@@ -16,9 +16,9 @@ slug: Web/API/Window/deviceorientation_event
 在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 方法中使用事件名称，或使用事件处理器属性。
 
 ```js
-addEventListener('deviceorientation', event => { });
+addEventListener("deviceorientation", (event) => {});
 
-ondeviceorientation = event => { };
+ondeviceorientation = (event) => {};
 ```
 
 ## 事件类型
@@ -46,20 +46,28 @@ ondeviceorientation = event => { };
 
 ```js
 if (window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", function(event) {
-        // alpha: rotation around z-axis
-        var rotateDegrees = event.alpha;
-        // gamma: left to right
-        var leftToRight = event.gamma;
-        // beta: front back motion
-        var frontToBack = event.beta;
+  window.addEventListener(
+    "deviceorientation",
+    function (event) {
+      // alpha: rotation around z-axis
+      var rotateDegrees = event.alpha;
+      // gamma: left to right
+      var leftToRight = event.gamma;
+      // beta: front back motion
+      var frontToBack = event.beta;
 
-        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
-    }, true);
+      handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+    },
+    true,
+  );
 }
 
-var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
-    // do something amazing
+var handleOrientationEvent = function (
+  frontToBack,
+  leftToRight,
+  rotateDegrees,
+) {
+  // do something amazing
 };
 ```
 

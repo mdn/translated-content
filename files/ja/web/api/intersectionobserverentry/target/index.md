@@ -1,17 +1,18 @@
 ---
-title: IntersectionObserverEntry.target
+title: "IntersectionObserverEntry: target プロパティ"
+short-title: target
 slug: Web/API/IntersectionObserverEntry/target
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: 618aa21b32b84cdd69b6982303e4ec9667efa48c
 ---
 
 {{APIRef("Intersection Observer API")}}
 
-{{domxref("IntersectionObserverEntry")}} インターフェイスの読み取り専用の **`target`** プロパティは、どの対象の {{domxref("Element")}} で交差ルートとの交差量が変化したかを示します。
+{{domxref("IntersectionObserverEntry")}} インターフェイスの読み取り専用の **`target`** プロパティは、交差ルートとの交差量が変化したのがどの対象要素であるかを {{domxref("Element")}} で示します。
 
 ## 値
 
-`IntersectionObserverEntry` の `target` プロパティは、以前に {{domxref("IntersectionObserver.observe()")}} を呼び出して対象とした要素の中で、ルートとの交差が変化した要素を指定します。
+`IntersectionObserverEntry` の `target` プロパティは、以前に {{domxref("IntersectionObserver.observe()")}} を呼び出して対象とした {{domxref("Element")}} の中で、ルートとの交差量が変化したものを示します。
 
 ## 例
 
@@ -20,7 +21,7 @@ l10n:
 ```js
 function intersectionCallback(entries) {
   entries.forEach((entry) => {
-    entry.target.opacity = entry.intersectionRatio;
+    entry.target.style.opacity = entry.intersectionRatio;
   });
 }
 ```

@@ -24,14 +24,14 @@ Only certain events can bubble. Events that do bubble have this property set to 
 ### 範例
 
 ```js
- function goInput(e) {
+function goInput(e) {
   // checks bubbles and
   if (!e.bubbles) {
-     // passes event along if it's not
-     passItOn(e);
+    // passes event along if it's not
+    passItOn(e);
   }
   // already bubbling
-  doOutput(e)
+  doOutput(e);
 }
 ```
 

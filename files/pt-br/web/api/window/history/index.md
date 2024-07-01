@@ -18,8 +18,8 @@ var historyObj = window.history;
 ## Example
 
 ```js
-History.back (); // equivalente ao clique no botão Voltar
-History.go (-1); // equivalente a history.back ();
+History.back(); // equivalente ao clique no botão Voltar
+History.go(-1); // equivalente a history.back ();
 ```
 
 ## Notas
@@ -32,7 +32,8 @@ Não há nenhuma maneira de limpar o histórico da sessão ou desabilitar a nave
 
 ## Especificações
 
-| Especificações                                                                                                           | Status                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#the-history-interface', 'The History interface')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'browsers.html#the-history-interface', 'The History interface')}} | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

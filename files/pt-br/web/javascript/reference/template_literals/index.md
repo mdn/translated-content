@@ -1,12 +1,11 @@
 ---
 title: Template strings
 slug: Web/JavaScript/Reference/Template_literals
-original_slug: Web/JavaScript/Reference/template_strings
 ---
 
 {{JsSidebar("More")}}
 
-_Template_ Strings são _string_s que permitem expressões embutidas. Você pode _utilizar string_ multi-linhas e interpolação de _string_ com elas.
+_Template_ Strings são *string*s que permitem expressões embutidas. Você pode _utilizar string_ multi-linhas e interpolação de _string_ com elas.
 
 Basicamente é uma nova forma de criar strings e tornar o seu código um pouco mais legível.
 
@@ -28,7 +27,7 @@ tag `texto string ${expression} texto string`
 _Template strings_ são envolvidas por ([acentos graves](https://pt.wikipedia.org/wiki/Acento_grave)) (\` \`) em vez de aspas simples ou duplas. _Template strings_ podem possuir _placeholders_. Estes são indicados por um cifrão seguido de chaves (`${expression}`). As expressões nos _placeholders_, bem como o texto em volta delas são passados a uma função. A função padrão apenas concatena as partes em uma _string_ única. Se existir uma expressão precedendo a _template string_ (função `tag` exemplo), a _template string_ é definida como "_tagged template string_". No caso, a expressão _tag_ (geralmente uma função) é chamada pela _template string_ processada, que você pode manipular antes de produzir o resultado.
 
 ```js
-`\`` === '`' // --> true
+`\`` === "`"; // --> true
 ```
 
 ### Strings multi-linhas
@@ -36,8 +35,7 @@ _Template strings_ são envolvidas por ([acentos graves](https://pt.wikipedia.or
 Qualquer caracter de nova linha inserido no código é parte da _template string_. Utilizando _strings_ normais, você teria de usar a síntaxe a seguir para obter strings multi-linhas:
 
 ```js
-console.log('texto string linha 1\n' +
-'texto string linha 2');
+console.log("texto string linha 1\n" + "texto string linha 2");
 // "texto string linha 1
 // texto string linha 2"
 ```
@@ -58,7 +56,7 @@ Para encapsular expressões dentro de strings, você precisava utilizar a seguin
 ```js
 var a = 5;
 var b = 10;
-console.log('Quinze é ' + (a + b) + ' e\nnão ' + (2 * a + b) + '.');
+console.log("Quinze é " + (a + b) + " e\nnão " + (2 * a + b) + ".");
 // "Quinze é 15 e
 // não 20."
 ```
@@ -85,13 +83,13 @@ var b = 10;
 function tag(strings, ...values) {
   console.log(strings[0]); // "Hello "
   console.log(strings[1]); // " world "
-  console.log(values[0]);  // 15
-  console.log(values[1]);  // 50
+  console.log(values[0]); // 15
+  console.log(values[1]); // 50
 
   return "Bazinga!";
 }
 
-tag`Hello ${ a + b } world ${ a * b}`;
+tag`Hello ${a + b} world ${a * b}`;
 // "Bazinga!"
 ```
 
@@ -111,7 +109,7 @@ tag`string text line 1 \n string text line 2`;
 Adicionalmente, o método {{jsxref("String.raw()")}} permite a criação de strings cruas, exatamente como as _template functions_ e as concatenações deveram criar.
 
 ```js
-String.raw`Hi\n${2+3}!`; // "Hi\\n5!"
+String.raw`Hi\n${2 + 3}!`; // "Hi\\n5!"
 ```
 
 ## Especificações

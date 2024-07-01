@@ -1,12 +1,6 @@
 ---
 title: Document.readyState
 slug: Web/API/Document/readyState
-tags:
-  - API
-  - DOM
-  - HTML
-  - Référence(2)
-translation_of: Web/API/Document/readyState
 ---
 
 {{APIRef("DOM")}}
@@ -49,7 +43,9 @@ switch (document.readyState) {
     break;
   case "complete":
     // La page est pleinement chargée.
-    console.log("The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText);
+    console.log(
+      "The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText,
+    );
     break;
 }
 ```
@@ -62,7 +58,7 @@ document.onreadystatechange = function () {
   if (document.readyState == "interactive") {
     initApplication();
   }
-}
+};
 ```
 
 ### readystatechange comme alternative à load
@@ -73,18 +69,21 @@ document.onreadystatechange = function () {
   if (document.readyState == "complete") {
     initApplication();
   }
-}
+};
 ```
 
 ### readystatechange comme event listener pour insérer ou modifier le DOM avant DOMContentLoaded
 
 ```js
 // Modification du document <body> dès que possible en utilisant un script externe
-var bootstrap = function(evt){
-  if (evt.target.readyState === "interactive") { initLoader(); }
-  else if (evt.target.readyState === "complete") { initApp(); }
-}
-document.addEventListener('readystatechange', bootstrap, false);
+var bootstrap = function (evt) {
+  if (evt.target.readyState === "interactive") {
+    initLoader();
+  } else if (evt.target.readyState === "complete") {
+    initApp();
+  }
+};
+document.addEventListener("readystatechange", bootstrap, false);
 ```
 
 ## Spécifications

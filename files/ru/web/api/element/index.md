@@ -1,13 +1,6 @@
 ---
 title: Element
 slug: Web/API/Element
-tags:
-  - API
-  - DOM
-  - Element
-  - Interface
-  - Reference
-translation_of: Web/API/Element
 ---
 
 {{ APIRef("DOM") }}
@@ -124,9 +117,9 @@ _Наследует методы от своих родителей {{domxref("N
   - : Извлекает значение именованного атрибута из текущего узла и возвращает его в виде{{jsxref("Object")}}.
 - {{ domxref("Element.getAttributeNS()") }}
   - : Извлекает значение атрибута с указанным именем и пространством имён из текущего узла и возвращает его как {{jsxref("Object")}}.
-- {{ domxref("Element.getAttributeNode()") }} {{obsolete_inline}}
+- {{ domxref("Element.getAttributeNode()") }}
   - : Извлекает представление узла именованного атрибута из текущего узла и возвращает его в виде {{ domxref("Attr") }}.
-- {{ domxref("Element.getAttributeNodeNS()") }} {{obsolete_inline}}
+- {{ domxref("Element.getAttributeNodeNS()") }}
   - : Извлекает представление узла атрибута с указанным именем и пространством имён из текущего узла и возвращает его в виде {{ domxref("Attr") }}.
 - {{ domxref("Element.getBoundingClientRect()") }} {{experimental_inline}}
   - : ...
@@ -160,7 +153,7 @@ _Наследует методы от своих родителей {{domxref("N
   - : Удаляет именованный атрибут из текущего узла.
 - {{ domxref("Element.removeAttributeNS()") }}
   - : Удаляет атрибут с указанным именем и пространством имён, из текущего узла.
-- {{ domxref("Element.removeAttributeNode()") }} {{obsolete_inline}}
+- {{ domxref("Element.removeAttributeNode()") }}
   - : Удаляет представление узла именованного атрибута из текущего узла.
 - {{ domxref("EventTarget.removeEventListener()") }}
   - : Удаляет обработчик событий из элемента.
@@ -177,9 +170,9 @@ _Наследует методы от своих родителей {{domxref("N
   - : Устанавливает значение именованного атрибута из текущей узла.
 - {{ domxref("Element.setAttributeNS()") }}
   - : Устанавливает значение атрибута с определённым именем и пространством имён из текущей узла.
-- {{ domxref("Element.setAttributeNode()") }} {{obsolete_inline}}
+- {{ domxref("Element.setAttributeNode()") }}
   - : Задаёт представление узла именованного атрибута из текущего узла.
-- {{ domxref("Element.setAttributeNodeNS()") }} {{obsolete_inline}}
+- {{ domxref("Element.setAttributeNodeNS()") }}
   - : Установите представление узла атрибута с указанным именем и пространством имён из текущего узла.
 - {{ domxref("Element.setCapture()") }} {{non-standard_inline}}
   - : Настройка захвата событий мыши, перенаправление всех событий мыши на этот элемент.

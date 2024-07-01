@@ -1,7 +1,6 @@
 ---
 title: AudioWorkletNode.onprocessorerror
 slug: Web/API/AudioWorkletNode/processorerror_event
-original_slug: Web/API/AudioWorkletNode/onprocessorerror
 ---
 
 {{ APIRef("Web Audio API") }}

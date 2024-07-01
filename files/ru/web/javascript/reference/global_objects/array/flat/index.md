@@ -1,15 +1,8 @@
 ---
 title: Array.prototype.flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
-tags:
-  - Массив
-  - Ссылка
-  - Экспериментальная
-  - метод
-  - прототип
-  - яваскрипт
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 ---
+
 {{JSRef}}
 
 Метод **`flat()`** возвращает новый массив, в котором все элементы вложенных подмассивов были рекурсивно "подняты" на указанный уровень depth.
@@ -70,10 +63,10 @@ var arr1 = [1, 2, [3, 4]];
 arr1.flat();
 
 // В одномерный массив
-arr1.reduce((acc, val) => acc.concat(val), []);// [1, 2, 3, 4]
+arr1.reduce((acc, val) => acc.concat(val), []); // [1, 2, 3, 4]
 
 //или
-const flatSingle = arr => [].concat(...arr);
+const flatSingle = (arr) => [].concat(...arr);
 ```
 
 ```js
@@ -81,9 +74,14 @@ const flatSingle = arr => [].concat(...arr);
 const arr = [1, 2, [3, 4, [5, 6]]];
 
 function flatDeep(arr, d = 1) {
-   return d > 0 ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
-                : arr.slice();
-};
+  return d > 0
+    ? arr.reduce(
+        (acc, val) =>
+          acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val),
+        [],
+      )
+    : arr.slice();
+}
 
 flatDeep(arr, Infinity);
 // [1, 2, 3, 4, 5, 6]
@@ -91,7 +89,7 @@ flatDeep(arr, Infinity);
 
 ```js
 //не рекурсивное упрощение с использованием стэка
-var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
+var arr1 = [1, 2, 3, [1, 2, 3, 4, [2, 3, 4]]];
 function flatten(input) {
   const stack = [...input];
   const res = [];
@@ -108,7 +106,7 @@ function flatten(input) {
   //разворачиваем массив, чтобы восстановить порядок элементов
   return res.reverse();
 }
-flatten(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
+flatten(arr1); // [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
 ```
 
 ```js
@@ -116,7 +114,7 @@ flatten(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
 function flatten(array) {
   var flattend = [];
   (function flat(array) {
-    array.forEach(function(el) {
+    array.forEach(function (el) {
       if (Array.isArray(el)) flat(el);
       else flattend.push(el);
     });

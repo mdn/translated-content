@@ -1,14 +1,6 @@
 ---
 title: length
 slug: Web/JavaScript/Reference/Functions/arguments/length
-tags:
-  - Functions
-  - JavaScript
-  - Propriété
-  - Reference
-  - arguments
-translation_of: Web/JavaScript/Reference/Functions/arguments/length
-original_slug: Web/JavaScript/Reference/Fonctions/arguments/length
 ---
 
 {{jsSideBar("Functions")}}
@@ -18,7 +10,7 @@ La propriété **`arguments.length`** contient le nombre d'arguments passés à 
 ## Syntaxe
 
 ```js
-arguments.length
+arguments.length;
 ```
 
 ## Description
@@ -33,18 +25,18 @@ Dans cet exemple, on définit une fonction qui permet d'additionner plusieurs no
 
 ```js
 function somme(x /*, y, z, ...*/) {
-   x = Number(x);
-   for (var i = 1; i < arguments.length; i++) {
-      x += Number(arguments[i]);
-   }
-   return x;
+  x = Number(x);
+  for (var i = 1; i < arguments.length; i++) {
+    x += Number(arguments[i]);
+  }
+  return x;
 }
 ```
 
 ```js
-résultat = somme(3, 4, 5);        // renvoie 12
-résultat = somme(3, 4);           // renvoie 7
-résultat = somme(103, 104, 105);  // renvoie 312
+résultat = somme(3, 4, 5); // renvoie 12
+résultat = somme(3, 4); // renvoie 7
+résultat = somme(103, 104, 105); // renvoie 312
 ```
 
 > **Note :** `arguments.length` ne doit pas être confondu avec {{jsxref("Function.length")}}.

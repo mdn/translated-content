@@ -1,7 +1,6 @@
 ---
-title: 'Feature-Policy: payment'
+title: "Feature-Policy: payment"
 slug: Web/HTTP/Headers/Permissions-Policy/payment
-original_slug: Web/HTTP/Headers/Feature-Policy/payment
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}}

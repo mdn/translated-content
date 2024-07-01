@@ -1,5 +1,5 @@
 ---
-title: '<article>: El elemento con contendio del artículo'
+title: "<article>: El elemento con contendio del artículo"
 slug: Web/HTML/Element/article
 l10n:
   sourceCommit: 8507170b71a6612358bdf2d9ec47b4e9b825bd78
@@ -65,7 +65,7 @@ Un mismo documento puede tener varios artículos; por ejemplo, en un blog en el 
     <tr>
       <th scope="row">Rol ARIA implícito</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/article_role"
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/article_role"
           ><code>article (en-US)</code></a
         >
       </td>

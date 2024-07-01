@@ -28,10 +28,10 @@ HTTP define un conjunto de **métodos de petición** para indicar la acción que
 
 ## Especificaciones
 
-| Especificación                                               | Título                                                                      | Comentario                                                        |
-| ------------------------------------------------------------ | --------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| Especificación                              | Título                                                                      | Comentario                                                        |
+| ------------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | {{RFC("7231", "Métodos de petición", "4")}} | Protocolo de Transferencia de HiperTexto (HTTP/1.1): Semánticas y Contenido | Especifica GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE. |
-| {{RFC("5789", "Método Patch", "2")}}             | Método PATCH para HTTP                                                      | Especifica PATCH.                                                 |
+| {{RFC("5789", "Método Patch", "2")}}        | Método PATCH para HTTP                                                      | Especifica PATCH.                                                 |
 
 ## Compatibilidad del navegador
 

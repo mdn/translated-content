@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toString
 ## 구문
 
 ```js
-toString()
+toString();
 ```
 
 ### 반환 값
@@ -30,9 +30,9 @@ toString()
 {{jsxref("String")}} 객체의 문자열 값을 표시하는 예제입니다.
 
 ```js
-var x = new String('Hello world')
+var x = new String("Hello world");
 
-console.log(x.toString()) // logs 'Hello world'
+console.log(x.toString()); // logs 'Hello world'
 ```
 
 ## 명세

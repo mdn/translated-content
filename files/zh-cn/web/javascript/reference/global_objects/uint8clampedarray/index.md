@@ -24,8 +24,6 @@ new Uint8ClampedArray(buffer [, byteOffset [, length]]);
   - : 返回元素大小的一个数值。对 `Uint8ClampedArray` 而言是 1。
 - {{jsxref("TypedArray.prototype.length", "Uint8ClampedArray.prototype.length")}}
   - : 静态长度属性值为 0。对于实际长度（元素的数量），见 {{jsxref("TypedArray.prototype.length", "Uint8ClampedArray.prototype.length")}}。
-- {{jsxref("TypedArray.name", "Uint8ClampedArray.name")}}
-  - : 返回构造函数名的字符串值。对 `Uint8ClampedArray` 类型而言："Uint8ClampedArray"。
 - {{jsxref("TypedArray.prototype", "Uint8ClampedArray.prototype")}}
   - : 原型是 _TypedArray_（类型化数组）对象。
 
@@ -83,7 +81,7 @@ new Uint8ClampedArray(buffer [, byteOffset [, length]]);
   - : Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found. See also {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Uint8ClampedArray.prototype.map()")}}
   - : Creates a new array with the results of calling a provided function on every element in this array. See also {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Uint8ClampedArray.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
+- {{jsxref("TypedArray.move", "Uint8ClampedArray.prototype.move()")}} {{non-standard_inline}}
   - : Former non-standard version of {{jsxref("TypedArray.copyWithin", "Uint8ClampedArray.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Uint8ClampedArray.prototype.reduce()")}}
   - : Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value. See also {{jsxref("Array.prototype.reduce()")}}.
@@ -110,7 +108,7 @@ new Uint8ClampedArray(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.@@iterator", "Uint8ClampedArray.prototype[@@iterator]()")}}
   - : Returns a new `Array Iterator` object that contains the values for each index in the array.
 
-## 实例
+## 示例
 
 创建一个 `Uint8ClampedArray` 的不同方式：
 
@@ -125,7 +123,7 @@ console.log(uintc8.length); // 2
 console.log(uintc8.BYTES_PER_ELEMENT); // 1
 
 // From an array
-var arr = new Uint8ClampedArray([21,31]);
+var arr = new Uint8ClampedArray([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -138,7 +136,9 @@ var buffer = new ArrayBuffer(8);
 var z = new Uint8ClampedArray(buffer, 1, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var uintc8 = new Uint8ClampedArray(iterable);
 // Uint8ClampedArray[1, 2, 3]
 ```

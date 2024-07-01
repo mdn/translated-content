@@ -46,4 +46,4 @@ span {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.type")}}
+{{Compat}}

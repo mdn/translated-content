@@ -1,7 +1,6 @@
 ---
 title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
-original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap
 ---
 
 {{JSRef}}
@@ -74,11 +73,11 @@ Pero debido a que un `WeakMap` no permite observar la vida de sus llaves, sus ll
 
 ```js
 const wm1 = new WeakMap(),
-      wm2 = new WeakMap(),
-      wm3 = new WeakMap();
+  wm2 = new WeakMap(),
+  wm3 = new WeakMap();
 const o1 = {},
-      o2 = function () {},
-      o3 = window;
+  o2 = function () {},
+  o3 = window;
 
 wm1.set(o1, 37);
 wm1.set(o2, "azerty");

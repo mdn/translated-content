@@ -2,6 +2,7 @@
 title: RTCPeerConnection.createDataChannel()
 slug: Web/API/RTCPeerConnection/createDataChannel
 ---
+
 {{APIRef("WebRTC")}}
 
 {{domxref("RTCPeerConnection")}} 인터페이스의 **`createDataChannel()`** 메소드는 어떤 형식의 데이터든 송신 할 수 있도록 원격 유저와 연결하는 신규 채널을 생성합니다.이 방법은 이미지, 파일 전송, 문자 채팅, 게임 패킷 업데이트 등과 같은 백채널 컨텐츠에 유용하게 사용 가능합니다.
@@ -67,27 +68,27 @@ dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
 
 var pc = new RTCPeerConnection(options);
 var channel = pc.createDataChannel("chat");
-channel.onopen = function(event) {
-  channel.send('Hi you!');
-}
-channel.onmessage = function(event) {
+channel.onopen = function (event) {
+  channel.send("Hi you!");
+};
+channel.onmessage = function (event) {
   console.log(event.data);
-}
+};
 ```
 
 ```js
 // Answerer side
 
 var pc = new RTCPeerConnection(options);
-pc.ondatachannel = function(event) {
+pc.ondatachannel = function (event) {
   var channel = event.channel;
-﻿  channel.onopen = function(event) {
-    channel.send('Hi back!');
-  }
-  channel.onmessage = function(event) {
+  channel.onopen = function (event) {
+    channel.send("Hi back!");
+  };
+  channel.onmessage = function (event) {
     console.log(event.data);
-  }
-}
+  };
+};
 ```
 
 다른 방법으로는 양쪽에서 합의한 id를 사용하여 보다 대칭적인 대역 밴드 외 협상이 가능합니다. (id는 0입니다):
@@ -96,13 +97,13 @@ pc.ondatachannel = function(event) {
 // Both sides
 
 var pc = new RTCPeerConnection(options);
-var channel = pc.createDataChannel("chat", {negotiated: true, id: 0});
-channel.onopen = function(event) {
-  channel.send('Hi!');
-}
-channel.onmessage = function(event) {
+var channel = pc.createDataChannel("chat", { negotiated: true, id: 0 });
+channel.onopen = function (event) {
+  channel.send("Hi!");
+};
+channel.onmessage = function (event) {
   console.log(event.data);
-}
+};
 ```
 
 연결 및 채널이 구성되는 예를 더 자세히 알고 싶다면, [A simple RTCDataChannel sample](/ko/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)를 참조하십시오.

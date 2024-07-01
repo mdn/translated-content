@@ -1,8 +1,6 @@
 ---
 title: line-gap-override
 slug: Web/CSS/@font-face/line-gap-override
-translation_of: Web/CSS/@font-face/line-gap-override
-browser-compat: css.at-rules.font-face.line-gap-override
 ---
 
 {{CSSRef}}

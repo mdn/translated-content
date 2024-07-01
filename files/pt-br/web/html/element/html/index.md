@@ -18,9 +18,9 @@ O elemento **HTML \<html> **(ou _HTML root element_) representa a raiz de um HTM
 
 Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("manifest")}} {{deprecated_inline}} {{Non-standard_Inline}}
+- `manifest` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Especifica a URI de um recurso manifest indicando os recursos que devem ser carregados na memória local. Veja [Recursos offline em Firefox](/pt-BR/docs/HTML/Using_the_application_cache) para detalhes.
-- {{htmlattrdef("version")}} {{deprecated_inline}}
+- `version` {{deprecated_inline}}
   - : Especifica a versão da definição de tipo de documento HTML que governa o documento atual. Esse atributo não é necessário, porque é redundante com a informação de versão na declaração de tipo de documento.
 
 ## Exemplo
@@ -28,10 +28,14 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 O DOCTYPE usado no exemplo seguinte indica HTML5.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>...</head>
-  <body>...</body>
+  <head>
+    ...
+  </head>
+  <body>
+    ...
+  </body>
 </html>
 ```
 
@@ -41,15 +45,11 @@ Desde que o elemento `<html>` seja o primeiro em documento outro que comenta, es
 
 ## Especificações
 
-| Especificação                                                                                                    | Status                           | Comentário |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-html-element', '&lt;html&gt;')}}         | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'the-html-element.html#the-html-element', '&lt;html&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'global.html#h-7.3', '&lt;html&gt;')}}                                 | {{Spec2('HTML4.01')}}     |            |
+{{Specifications}}
 
 ## Compatibilidade dos navegadores
 
-{{Compat("html.elements.html")}}
+{{Compat}}
 
 ## Veja também
 

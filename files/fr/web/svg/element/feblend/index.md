@@ -1,11 +1,6 @@
 ---
 title: <feBlend>
 slug: Web/SVG/Element/feBlend
-tags:
-  - Element
-  - SVG
-  - SVG Filter
-translation_of: Web/SVG/Element/feBlend
 ---
 
 {{SVGRef}}
@@ -41,19 +36,32 @@ Cet élément implémente l'interface {{domxref("SVGFEBlendElement")}}.
 ### SVG
 
 ```html
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="200"
+  height="200"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <filter id="spotlight">
-      <feFlood result="floodFill" x="0" y="0" width="100%" height="100%"
-          flood-color="green" flood-opacity="1"/>
-      <feBlend in="SourceGraphic" in2="floodFill" mode="multiply"/>
+      <feFlood
+        result="floodFill"
+        x="0"
+        y="0"
+        width="100%"
+        height="100%"
+        flood-color="green"
+        flood-opacity="1" />
+      <feBlend in="SourceGraphic" in2="floodFill" mode="multiply" />
     </filter>
   </defs>
 
-  <image xlink:href="/files/6457/mdn_logo_only_color.png"
-      x="10%" y="10%" width="80%" height="80%"
-      style="filter:url(#spotlight);"/>
+  <image
+    xlink:href="/files/6457/mdn_logo_only_color.png"
+    x="10%"
+    y="10%"
+    width="80%"
+    height="80%"
+    style="filter:url(#spotlight);" />
 </svg>
 ```
 

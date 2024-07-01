@@ -72,7 +72,9 @@ IndexedDB API は必要なエラー処理を最小限にするよう設計され
 let db;
 const request = indexedDB.open("MyTestDatabase");
 request.onerror = (event) => {
-  console.error("なぜ私の ウェブアプリで IndexedDB を使わせてくれないのですか?!");
+  console.error(
+    "なぜ私の ウェブアプリで IndexedDB を使わせてくれないのですか?!",
+  );
 };
 request.onsuccess = (event) => {
   db = event.target.result;
@@ -170,7 +172,7 @@ request.onupgradeneeded = (event) => {
 // 顧客データがどのようなものかを示します
 const customerData = [
   { ssn: "444-44-4444", name: "Bill", age: 35, email: "bill@company.com" },
-  { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" }
+  { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" },
 ];
 ```
 
@@ -190,8 +192,8 @@ request.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   // 顧客の情報を保存する objectStore を作成します。
-  // "ssn" は一意であることが保証されていますので、キーパスとして使用します。
-  // あるいは少なくとも、キックオフミーティングで言われたことです。
+  // "ssn" は一意であることが保証されています - 少なくとも、キックオフミーティングで
+  // そのように言われました。なので、キーパスとして使用します。
   const objectStore = db.createObjectStore("customers", { keyPath: "ssn" });
 
   // 顧客を名前で検索するためのインデックスを作成します。
@@ -206,7 +208,9 @@ request.onupgradeneeded = (event) => {
   // transaction oncomplete を使用します。
   objectStore.transaction.oncomplete = (event) => {
     // 新たに作成した objectStore に値を保存します。
-    const customerObjectStore = db.transaction("customers", "readwrite").objectStore("customers");
+    const customerObjectStore = db
+      .transaction("customers", "readwrite")
+      .objectStore("customers");
     customerData.forEach((customer) => {
       customerObjectStore.add(customer);
     });
@@ -235,11 +239,10 @@ request.onupgradeneeded = (event) => {
 const request = indexedDB.open(dbName, 3);
 
 request.onupgradeneeded = (event) => {
-
   const db = event.target.result;
 
   // autoIncrement フラグに true を設定した、"names" という名前のオブジェクトストアを作成します。
-  const objStore = db.createObjectStore("names", { autoIncrement : true });
+  const objStore = db.createObjectStore("names", { autoIncrement: true });
 
   // "names" オブジェクトストアはキージェネレーターを持っていますので、値 name のキーは自動的に生成されます。
   // 追加したレコードは以下のようになります:
@@ -261,7 +264,7 @@ request.onupgradeneeded = (event) => {
 
 既存のオブジェクトストアからレコードを読み出すには、トランザクションで `readonly` モードまたは `readwrite` モードを使用できます。既存のオブジェクトストアに変更処理を行うには、トランザクションを `readwrite` モードにしなければなりません。このようなトランザクションは {{domxref("IDBDatabase.transaction")}} で開きます。このメソッドの引数は 2 つあり、`storeNames` (アクセスしたいオブジェクトストアの配列で定義されるスコープ) とトランザクションの `mode` (`readonly` または `readwrite`) です。またこのメソッドは、{{domxref("IDBTransaction.objectStore")}} メソッドを持つトランザクションオブジェクトを返します。`objectStore` メソッドは、オブジェクトストアにアクセスするために使用できます。デフォルトでは、モードを指定しなければ `readonly` モードでトランザクションを開きます。
 
-> **メモ:** Firefox 40 で、IndexedDB トランザクションはパフォーマンスを向上させるために、永続性の保証を緩和しました ({{Bug("1112702")}} を参照)。以前は `readwrite` モードのトランザクションで、すべてのデータをディスク上に反映したことが保証された場合に限り {{domxref("IDBTransaction.complete_event", "complete")}} 発生しました。Firefox 40 以降では OS がデータの書き込みを指示した時点で `complete` が発生しており、実際にはデータがディスク上に反映されていない可能性があります。これにより `complete` イベントをより早く発生させられますが、データをディスク上に反映する前に OS のクラッシュや電源断が発生するとトランザクション全体を失う危険性が若干あります。このような破壊的な事象はまれですので、ほとんどの利用者は心配する必要がないでしょう。何らかの理由 (例えば、後で再計算できない重要なデータを保存する) で永続性を保証しなければならない場合は、実験的 (非標準) な `readwriteflush` モード ({{domxref("IDBDatabase.transaction")}} を参照) を使用してトランザクションを生成すると、`complete` イベントを発生させる前にディスクへの反映を強制させることができます。
+> **メモ:** Firefox 40 で、IndexedDB トランザクションはパフォーマンスを向上させるために、永続性の保証を緩和しました ([Firefox バグ 1112702](https://bugzil.la/1112702) を参照)。以前は `readwrite` モードのトランザクションで、すべてのデータをディスク上に反映したことが保証された場合に限り {{domxref("IDBTransaction.complete_event", "complete")}} 発生しました。Firefox 40 以降では OS がデータの書き込みを指示した時点で `complete` が発生しており、実際にはデータがディスク上に反映されていない可能性があります。これにより `complete` イベントをより早く発生させられますが、データをディスク上に反映する前に OS のクラッシュや電源断が発生するとトランザクション全体を失う危険性が若干あります。このような破壊的な事象はまれですので、ほとんどの利用者は心配する必要がないでしょう。何らかの理由 (例えば、後で再計算できない重要なデータを保存する) で永続性を保証しなければならない場合は、実験的 (非標準) な `readwriteflush` モード ({{domxref("IDBDatabase.transaction")}} を参照) を使用してトランザクションを生成すると、`complete` イベントを発生させる前にディスクへの反映を強制させることができます。
 
 トランザクションで適切なスコープおよびモードを使用すると、データアクセスを高速化できます。ヒントを 2 つ紹介します。
 
@@ -342,7 +345,10 @@ request.onsuccess = (event) => {
 "単純に" 読み出すにも多くのコードがあります。データベースレベルでエラー処理を行うとすれば、コードを少々短縮できることを以下に示します。
 
 ```js
-db.transaction("customers").objectStore("customers").get("444-44-4444").onsuccess = (event) => {
+db
+  .transaction("customers")
+  .objectStore("customers")
+  .get("444-44-4444").onsuccess = (event) => {
   console.log(`Name for SSN 444-44-4444 is ${event.target.result.name}`);
 };
 ```
@@ -359,7 +365,9 @@ db.transaction("customers").objectStore("customers").get("444-44-4444").onsucces
 読み出したデータを更新して IndexedDB に書き戻す方法は、とてもシンプルです。先ほどのサンプルを多少更新しましょう。
 
 ```js
-const objectStore = db.transaction(["customers"], "readwrite").objectStore("customers");
+const objectStore = db
+  .transaction(["customers"], "readwrite")
+  .objectStore("customers");
 const request = objectStore.get("444-44-4444");
 request.onerror = (event) => {
   // エラー処理!
@@ -458,7 +466,9 @@ index.openCursor().onsuccess = (event) => {
   const cursor = event.target.result;
   if (cursor) {
     // cursor.key は "Bill" のような名前、cursor.value はオブジェクト全体です。
-    console.log(`Name: ${cursor.key}, SSN: ${cursor.value.ssn}, email: ${cursor.value.email}`);
+    console.log(
+      `Name: ${cursor.key}, SSN: ${cursor.value.ssn}, email: ${cursor.value.email}`,
+    );
     cursor.continue();
   }
 };
@@ -574,7 +584,9 @@ function useDatabase(db) {
   // これを行わなければ、ユーザーがタブを閉じるまでデータベースはアップグレードされません。
   db.onversionchange = (event) => {
     db.close();
-    console.log("新しいバージョンのページが使用可能になりました。再読み込みしてください!");
+    console.log(
+      "新しいバージョンのページが使用可能になりました。再読み込みしてください!",
+    );
   };
 
   // データベースを使用する処理
@@ -587,7 +599,7 @@ function useDatabase(db) {
 
 IndexedDB は同一生成元の原則を使用します。すなわち、ストアとサイトの生成元 (通常、サイトのドメインまたはサブドメイン) を紐づけますので、他の生成元からアクセスすることはできません。
 
-サードパーティの window コンテンツ (例えば {{htmlelement("iframe")}} のコンテンツ) は、ブラウザーが[サードパーティ Cookie を禁止していない](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection?redirectslug=disable-third-party-cookies&redirectlocale=en-US)限り、自身が埋め込まれている生成元の IndexedDB ストアにアクセスできます ({{bug("1147821")}} をご覧ください)。
+サードパーティの window コンテンツ (例えば {{htmlelement("iframe")}} のコンテンツ) は、ブラウザーが[サードパーティ Cookie を禁止していない](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection?redirectslug=disable-third-party-cookies&redirectlocale=en-US)限り、自身が埋め込まれている生成元の IndexedDB ストアにアクセスできます ([Firefox バグ 1147821](https://bugzil.la/1147821) をご覧ください)。
 
 ## ブラウザーの終了に関する警告
 
@@ -607,7 +619,7 @@ IndexedDB は同一生成元の原則を使用します。すなわち、スト�
 
 第二に、データベースのトランザクションと `unload` イベントを紐づけるべきではありません。ブラウザーを閉じることで `unload` イベントが発生した場合、`unload` イベントハンドラーで作成したトランザクションは完了しません。ブラウザーのセッションにわたって情報を管理するための直感的な方法は、ブラウザー (または特定のページ) を開いたときに情報を読み込んで、ユーザーとブラウザーとの対話に応じて更新して、ブラウザー (またはページ) を閉じるときに保存する流れです。しかし、これは動作しないでしょう。データベースのトランザクションは `unload` イベントハンドラーで作成されますが、これらは非同期処理ですので、実行できるようになる前に中止されるでしょう。
 
-実は通常のブラウザー終了であっても、IndexedDB のトランザクションが完了するよう保証する手段はありません。{{bug(870645)}} をご覧ください。通常の終了通知の回避策として、トランザクションの状況を追跡して、アンロード時にトランザクションが完了していないことをユーザーに警告するための `beforeunload` イベントを追加するとよいでしょう。
+実は通常のブラウザー終了であっても、IndexedDB のトランザクションが完了するよう保証する手段はありません。[Firefox バグ 870645](https://bugzil.la/870645) をご覧ください。通常の終了通知の回避策として、トランザクションの状況を追跡して、アンロード時にトランザクションが完了していないことをユーザーに警告するための `beforeunload` イベントを追加するとよいでしょう。
 
 少なくとも中止通知と {{domxref("IDBDatabase.close_event", "IDBDatabase.onclose")}} を追加することで、いつ起こったのかがわかります。
 

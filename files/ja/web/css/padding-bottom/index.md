@@ -1,11 +1,13 @@
 ---
 title: padding-bottom
 slug: Web/CSS/padding-bottom
+l10n:
+  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
 {{CSSRef}}
 
-**`padding-bottom`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[パディング領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#パディング領域)における下側の高さを設定します。
+**`padding-bottom`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[パディング領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#パディング領域)における下側の高さを設定します。
 
 {{EmbedInteractiveExample("pages/css/padding-bottom.html")}}
 
@@ -29,7 +31,8 @@ padding-bottom: 10%;
 /* グローバル値 */
 padding-bottom: inherit;
 padding-bottom: initial;
-padding-botom: revert;
+padding-bottom: revert;
+padding-bottom: revert-layer;
 padding-bottom: unset;
 ```
 
@@ -40,7 +43,7 @@ padding-bottom: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : パディングの寸法を固定値で表したものです。負の数であってはいけません。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : パディングの寸法を包含ブロックの*幅*に対するパーセント値で表したものです。負の数であってはいけません。
+  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
 
 ## 公式定義
 
@@ -55,8 +58,12 @@ padding-bottom: unset;
 ### ピクセル数とパーセント値で下パディングを設定
 
 ```css
-.content { padding-bottom: 5%; }
-.sidebox { padding-bottom: 10px; }
+.content {
+  padding-bottom: 5%;
+}
+.sidebox {
+  padding-bottom: 10px;
+}
 ```
 
 ## 仕様書
@@ -69,6 +76,6 @@ padding-bottom: unset;
 
 ## 関連情報
 
-- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-left")}} および {{cssxref("padding")}} 一括指定
 - 対応付けられる論理的プロパティ: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}} および一括指定の {{cssxref("padding-block")}} と {{cssxref("padding-inline")}}

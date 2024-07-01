@@ -1,40 +1,44 @@
 ---
 title: <number>
 slug: Web/CSS/number
+l10n:
+  sourceCommit: a1596fe065b9c726f9412999d2218b7b6e256e30
 ---
 
 {{CSSRef}}
 
+**`<number>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示整数或者是带有小数部分的数字。
+
 ## 语法
 
-`<数字>` [CSS](/zh-CN/docs/CSS) 数据类型代表一个数字，可为整数或小数。它的语法扩展了{{cssxref("&lt;integer&gt;")}}的数据值。要表示一个小数则加上小数部分 -- “."后跟一或多为十进制数字--到任何{{cssxref("&lt;integer&gt;")}}数据值。像{{cssxref("&lt;integer&gt;")}}数据类型一样，\<number>没有任何单位，并不是一个 CSS 尺寸。
+`<number>` 的语法扩展了 {{CSSxRef("&lt;integer&gt;")}} 的语法。分数值由一个点 `.` 后跟一个或多个十进制数字表示，并且可以附加到整数上。数值没有关联单位。
 
-## 插值
+## 差值
 
-`<number>` CSS 数据类型的值可以被插值，用于动画。这种情况下，它们的插值是浮点实数。插值的速度取决于动画的 [timing function](/zh-CN/docs/CSS/timing-function)。
+当被动画化时，`<number>` CSS 数据类型的值会作为实数、浮点数进行插值计算。插值的速度由与动画相关的[缓动函数](/zh-CN/docs/Web/CSS/easing-function)来决定。
 
 ## 示例
 
-合法值示例：
+### 有效数字
 
-```plain
-12          A raw <integer> is also a <number>
-4.01        正非整 <数字>
--456.8      负非整 <数字>
+```plain example-good
+12          原始的 <integer> 也是 <number>。
+4.01        正分数
+-456.8      负分数
 0.0         零
-+0.0        带正号的零
--0.0        带负号的零 (尽管奇怪，但合法)
-.60         点前的数字可以省略
++0.0        带 + 号的零
+-0.0        带 - 号的零
+.60         不带零的小数
 10e3        科学计数法
--3.4e-2     科学计数法最复杂的情况
+-3.4e-2     复杂的科学记数法
 ```
 
-非法值示例：
+### 无效数字
 
-```plain
-12.         点后需有数字
-+-12.2      只能有一个符号
-12.1.1      只能有一个点
+```plain example-bad
+12.         小数点后必须至少跟随一位数字。
++-12.2      只允许有一个前置的正负号 + 或 -。
+12.1.1      只允许存在一个小数点。
 ```
 
 ## 规范
@@ -47,4 +51,4 @@ slug: Web/CSS/number
 
 ## 参见
 
-- [CSS Reference](/zh-CN/docs/CSS/CSS_Reference) index
+- {{CSSxRef("&lt;integer&gt;")}}

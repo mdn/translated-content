@@ -1,7 +1,6 @@
 ---
 title: ExtendableEvent.waitUntil()
 slug: Web/API/ExtendableEvent/waitUntil
-translation_of: Web/API/ExtendableEvent/waitUntil
 ---
 
 {{APIRef("Service Workers API")}}
@@ -14,7 +13,7 @@ translation_of: Web/API/ExtendableEvent/waitUntil
 
 Метод `waitUntil()` должен быть изначально вызван внутри колбэка события (_event callback_), но после этого он может быть вызван множество раз, до тех пор пока все промисы, переданные в него, не завершатся успешно.
 
-> **Примечание:** Поведение описанное в параграфе выше, было исправлено в Firefix 43 (смотрите {{bug(1180274)}}).
+> **Примечание:** Поведение описанное в параграфе выше, было исправлено в Firefix 43 (смотрите [Firefox bug 1180274](https://bugzil.la/1180274)).
 
 ## Синтаксис
 
@@ -35,14 +34,10 @@ extendableEvent.waitUntil(promise);
 Использование `waitUntil()` внутри события `install` в service worker:
 
 ```js
-addEventListener('install', event => {
+addEventListener("install", (event) => {
   const preCache = async () => {
-    const cache = await caches.open('static-v1');
-    return cache.addAll([
-      '/',
-      '/about/',
-      '/static/styles.css'
-    ]);
+    const cache = await caches.open("static-v1");
+    return cache.addAll(["/", "/about/", "/static/styles.css"]);
   };
   event.waitUntil(preCache());
 });

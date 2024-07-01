@@ -1,5 +1,5 @@
 ---
-title: 'Warning: unreachable code after return statement'
+title: "Warning: unreachable code after return statement"
 slug: Web/JavaScript/Reference/Errors/Stmt_after_return
 ---
 
@@ -39,17 +39,17 @@ unreachable code after a return statement は、以下のような場合に発�
 
 ### 無効な場合
 
-```js example-bad
+```js-nolint example-bad
 function f() {
   var x = 3;
   x += 4;
-  return x;   // return は直ちに関数を終了します。
-  x -= 3;     // そのため、この行は実行されません。到達不可能です。
+  return x; // return は直ちに関数を終了します。
+  x -= 3; // そのため、この行は実行されません。到達不可能です。
 }
 
 function f() {
-  return     // これは `return;` のように扱われます。
-    3 + 4;   // そのため、関数を抜け出し、この行には決して到達しません。
+  return // これは `return;` のように扱われます。
+    3 + 4; // そのため、関数を抜け出し、この行には決して到達しません。
 }
 ```
 
@@ -60,11 +60,11 @@ function f() {
   var x = 3;
   x += 4;
   x -= 3;
-  return x;  // OK: すべての式の後に return があります。
+  return x; // OK: すべての式の後に return があります。
 }
 
 function f() {
-  return 3 + 4  // OK: 同じ行に式があるセミコロンなしの return です。
+  return 3 + 4; // OK: 同じ行に式があるセミコロンなしの return です。
 }
 ```
 

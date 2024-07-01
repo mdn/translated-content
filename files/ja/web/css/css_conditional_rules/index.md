@@ -1,6 +1,6 @@
 ---
 title: CSS 条件付き規則
-slug: Web/CSS/CSS_Conditional_Rules
+slug: Web/CSS/CSS_conditional_rules
 ---
 
 {{CSSRef}}
@@ -24,16 +24,16 @@ slug: Web/CSS/CSS_Conditional_Rules
 
 ### `@document` ルール
 
-{{Compat("css.at-rules.document")}}
+{{Compat}}
 
 ### `@import` ルール
 
-{{Compat("css.at-rules.import")}}
+{{Compat}}
 
 ### `@media` ルール
 
-{{Compat("css.at-rules.media")}}
+{{Compat}}
 
 ### `@supports` ルール
 
-{{Compat("css.at-rules.supports")}}
+{{Compat}}

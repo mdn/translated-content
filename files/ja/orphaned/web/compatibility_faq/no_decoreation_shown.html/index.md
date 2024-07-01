@@ -1,7 +1,6 @@
 ---
 title: 枠のシャドウや角丸が抜けている
 slug: orphaned/Web/Compatibility_FAQ/No_Decoreation_Shown.html
-original_slug: Web/Compatibility_FAQ/No_Decoreation_Shown.html
 ---
 
 ## 概要
@@ -15,7 +14,7 @@ original_slug: Web/Compatibility_FAQ/No_Decoreation_Shown.html
 要因の代表例として以下があります。
 
 1. **ベンダープレフィックス**
-    webkit ブラウザ向けの記述がされている場合、この現象が発生します。
+    webkit ブラウザー向けの記述がされている場合、この現象が発生します。
     例えば、以下のような場合です。
 
     - **シャドウの場合**
@@ -40,7 +39,7 @@ original_slug: Web/Compatibility_FAQ/No_Decoreation_Shown.html
 要因の解決策の代表例として以下があります。
 
 1. **ベンダープレフィックス**
-    他ブラウザで互換性を維持する為に、以下のような[box-shadow](/ja/docs/Web/CSS/box-shadow)プロパティ、[border-radius](/ja/docs/Web/CSS/border-radius)プロパティの記述を追加します。
+    他ブラウザーで互換性を維持する為に、以下のような[box-shadow](/ja/docs/Web/CSS/box-shadow)プロパティ、[border-radius](/ja/docs/Web/CSS/border-radius)プロパティの記述を追加します。
 
     - **シャドウの場合**
 
@@ -63,7 +62,7 @@ original_slug: Web/Compatibility_FAQ/No_Decoreation_Shown.html
 
 ## メリット
 
-- 他のブラウザでも互換性を維持することができます。
+- 他のブラウザーでも互換性を維持することができます。
   - 追記のみの対応のため改修が容易です。
 
 [戻る](/ja/docs/Web/Compatibility_FAQ)

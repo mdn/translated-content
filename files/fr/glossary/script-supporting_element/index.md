@@ -1,19 +1,21 @@
 ---
-title: Éléments supports de script
+title: Éléments de prise en charge des scripts
 slug: Glossary/Script-supporting_element
-tags:
-  - Contenus
-  - Glossaire
-  - HTML
-  - scripts
-translation_of: Glossary/Script-supporting_element
-original_slug: Glossaire/Éléments_supports_de_script
+l10n:
+  sourceCommit: e9d266e58c2464eb6dd745d68c18cb6db8a3d3c6
 ---
 
-Dans un document {{Glossary("HTML")}}, **script-supporting elements** (**_éléments supports de scripts_**) sont les éléments qui ne contribuent pas directement à l'apparence ou à la disposition de la page ; à la place, ce sont soit des scripts, soit des informations qui ne sont utilisées que par les scripts. Ces éléments peuvent être importants, mais n'affectent pas la page affichée à moins que les scripts de la page ne les y incitent explicitement.
+{{GlossarySidebar}}
 
-Il n'y a que deux éléments supports de scripts : {{HTMLElement("script")}} et {{HTMLElement("template")}}.
+Dans un document [HTML](/fr/docs/Glossary/HTML), les **éléments de prise en charge des scripts** (<i lang="en">script-supporting elements</i>)sont les éléments qui ne contribuent pas directement à l'apparence ou à la disposition de la page, mais qui sont soit des scripts, soit des informations qui ne sont utilisées que par les scripts.
 
-## Référence technique
+Ces éléments peuvent être importants, mais n'ont pas d'impact direct sur l'affichage de la page (bien que les scripts eux-mêmes puissent modifier cet affichage).
 
-Pour en apprendre plus, voir {{SectionOnPage("/fr/docs/Web/HTML/Catégorie_de_contenu","Éléments supports de script")}}.
+Il n'existe que deux éléments HTML qui appartiennent à cette catégorie&nbsp;:
+
+- [`<script>`](/fr/docs/Web/HTML/Element/script)
+- [`<template>`](/fr/docs/Web/HTML/Element/template)
+
+## Voir aussi
+
+- [Les éléments de prise en charge des scripts dans la référence HTML](/fr/docs/Web/HTML/Content_categories#éléments_supports_de_script)

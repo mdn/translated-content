@@ -28,7 +28,7 @@ getDevices()
 この例では、デバイスのリストを取得し、デバイス名をコンソールに出力します。
 
 ```js
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener("DOMContentLoaded", async () => {
   let devices = await navigator.hid.getDevices();
   devices.forEach((device) => {
     console.log(`HID: ${device.productName}`);

@@ -5,7 +5,7 @@ slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 
 {{DefaultAPISidebar("Canvas API")}}
 
-비디오에서 다양한 시각적 효과를 보여주기 위해,`캔버스`와 [`비디오`](/ko/docs/Web/HTML/Element/Video)의 기능을 결합하여 실시간으로 비디오 데이터를 조작할 수 있습니다. 이 튜토리얼에서는 자바스크립트 코드로 어떻게 크로마 키잉(chroma-keying, 또한 "녹색 스크린 효과, green screen effect")을 구현할 수 있는지 보여줍니다.
+비디오에서 다양한 시각적 효과를 보여주기 위해,`캔버스`와 [`비디오`](/ko/docs/Web/HTML/Element/Video)의 기능을 결합하여 실시간으로 비디오 데이터를 조작할 수 있습니다. 이 튜토리얼에서는 JavaScript 코드로 어떻게 크로마 키잉(chroma-keying, 또한 "녹색 스크린 효과, green screen effect")을 구현할 수 있는지 보여줍니다.
 
 {{EmbedGHLiveSample('dom-examples/canvas/chroma-keying/index.html', 700, 400) }}
 
@@ -14,13 +14,13 @@ slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 이 내용을 보여주기 위한 XHTML 문서는 아래와 같습니다.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <style>
       body {
         background: black;
-        color:#CCCCCC;
+        color: #cccccc;
       }
       #c2 {
         background-image: url(foo.png);
@@ -28,10 +28,10 @@ slug: Web/API/Canvas_API/Manipulating_video_using_canvas
       }
       div {
         float: left;
-        border :1px solid #444444;
-        padding:10px;
+        border: 1px solid #444444;
+        padding: 10px;
         margin: 10px;
-        background:#3B3B3B;
+        background: #3b3b3b;
       }
     </style>
     <script type="text/javascript" src="main.js"></script>
@@ -39,7 +39,7 @@ slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 
   <body onload="processor.doLoad()">
     <div>
-      <video id="video" src="video.ogv" controls="true"/>
+      <video id="video" src="video.ogv" controls="true" />
     </div>
     <div>
       <canvas id="c1" width="160" height="96"></canvas>
@@ -52,12 +52,12 @@ slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 여기에서 중요한 요소는:
 
 1. 이 문서에는 ID가 c1, c2인 두 개의 [`캔버스`](/ko/docs/Web/HTML/Element/canvas)가 있습니다. 캔버스 c1은 비디오 원본의 현재 프레임을 보여주기 위해 사용되고, c2는 크로마 키잉 효과를 수행한 결과를 보여줍니다. c2에서 비디오의 녹색 배경을 대체할 정지 이미지를 미리 로드합니다.
-2. 자바스크립트 코드는 main.js에서 가져옵니다. 이 스크립트는 자바스크립트 1.8 기능을 사용했기 때문에 스크립트를 가져오는 22번째 줄에서 버전이 명시됩니다
+2. JavaScript 코드는 main.js에서 가져옵니다. 이 스크립트는 JavaScript 1.8 기능을 사용했기 때문에 스크립트를 가져오는 22번째 줄에서 버전이 명시됩니다
 3. 문서가 로드되면, processor.doLoad() 메서드가 실행됩니다.
 
-## 자바스크립트 코드
+## JavaScript 코드
 
-main.js에 있는 자바스크립트 코드는 3개의 메서드로 구성됩니다.
+main.js에 있는 JavaScript 코드는 3개의 메서드로 구성됩니다.
 
 ### 크로마 키잉 플레이어 초기화
 
@@ -113,21 +113,20 @@ main.js에 있는 자바스크립트 코드는 3개의 메서드로 구성됩니
 아래의 `computeFrame()` 메서드는 프레임 데이터를 가져와서 크로마 키잉 효과를 수행하는 역할을 합니다.
 
 ```js
-  processor.computeFrame = function computeFrame() {
-    this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
-    let frame = this.ctx1.getImageData(0, 0, this.width, this.height);
-    let l = frame.data.length / 4;
+processor.computeFrame = function computeFrame() {
+  this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
+  let frame = this.ctx1.getImageData(0, 0, this.width, this.height);
+  let l = frame.data.length / 4;
 
-    for (let i = 0; i < l; i++) {
-      let r = frame.data[i * 4 + 0];
-      let g = frame.data[i * 4 + 1];
-      let b = frame.data[i * 4 + 2];
-      if (g > 100 && r > 100 && b < 43)
-        frame.data[i * 4 + 3] = 0;
-    }
-    this.ctx2.putImageData(frame, 0, 0);
-    return;
+  for (let i = 0; i < l; i++) {
+    let r = frame.data[i * 4 + 0];
+    let g = frame.data[i * 4 + 1];
+    let b = frame.data[i * 4 + 2];
+    if (g > 100 && r > 100 && b < 43) frame.data[i * 4 + 3] = 0;
   }
+  this.ctx2.putImageData(frame, 0, 0);
+  return;
+};
 ```
 
 위 과정이 계속 호출 되면, 아래와 같이 비디오 요소에 가장 최근 프레임의 비디오 데이터가 표출됩니다.

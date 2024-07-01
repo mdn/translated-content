@@ -1,7 +1,6 @@
 ---
 title: Constructor Error()
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/constructor_Error
 ---
 
 {{JSRef}}
@@ -31,19 +30,19 @@ Cuando se usa `Error` como una función, sin {{JSxRef("Operators/new", "new")}},
 
 ```js
 // esto...
-const x = Error('¡Fui creado usando una llamada a función!')
+const x = Error("¡Fui creado usando una llamada a función!");
 
-    // ...tiene la misma funcionalidad que esta.
-const y = new Error('¡Fui construido con la palabra clave "new"!')
+// ...tiene la misma funcionalidad que esta.
+const y = new Error('¡Fui construido con la palabra clave "new"!');
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Error.Error")}}
+{{Compat}}
 
 ## Ve también
 

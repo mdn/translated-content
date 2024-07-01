@@ -1,7 +1,9 @@
 ---
 title: Application Context (アプリケーションコンテキスト)
-slug: Glossary/application_context
+slug: Glossary/Application_context
 ---
+
+{{GlossarySidebar}}
 
 **アプリケーションコンテキスト**は、それに適用される[マニフェスト](/ja/docs/Web/Manifest)のある最上位の{{Glossary("Browsing_context", "閲覧コンテキスト")}}です。
 

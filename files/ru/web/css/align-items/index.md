@@ -1,7 +1,6 @@
 ---
 title: align-items
 slug: Web/CSS/align-items
-translation_of: Web/CSS/align-items
 ---
 
 {{CSSRef}}
@@ -67,12 +66,6 @@ align-items: unset;
 {{Specifications("css.properties.align-items.grid_context")}}
 
 ## Совместимость с браузерами
-
-### Support in Flex layout
-
-{{Compat}}
-
-### Support in Grid layout
 
 {{Compat}}
 

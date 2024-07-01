@@ -1,28 +1,18 @@
 ---
 title: contextualIdentities.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onCreated
-tags:
-  - API
-  - APIReference
-  - Add-ons
-  - Evènement
-  - Extensions
-  - WebExtensions
-  - contextualIdentities
-  - onCreated
-translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onCreated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'une nouvelle identité contextuelle est créée. Les identités contextuelles peuvent être créées par des extensions en utilisant l'API `contextualIdentities`, ou directement par l'utilisateur, en utilisant l'interface utilisateur du navigateur.
 
 ## Syntaxe
 
 ```js
-browser.contextualIdentities.onCreated.addListener(listener)
-browser.contextualIdentities.onCreated.removeListener(listener)
-browser.contextualIdentities.onCreated.hasListener(listener)
+browser.contextualIdentities.onCreated.addListener(listener);
+browser.contextualIdentities.onCreated.removeListener(listener);
+browser.contextualIdentities.onCreated.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -45,9 +35,9 @@ Les événements ont trois fonctions :
     - `changeInfo`
       - : `object`. Un objet contenant une seule propriété, `contextualIdentity`, qui est un objet {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} représentant l'identité créée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.contextualIdentities.onCreated")}}
+{{Compat}}
 
 ## Examples
 

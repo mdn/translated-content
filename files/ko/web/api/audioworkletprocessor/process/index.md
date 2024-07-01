@@ -2,6 +2,7 @@
 title: AudioWorkletProcessor.process
 slug: Web/API/AudioWorkletProcessor/process
 ---
+
 {{APIRef("Web Audio API")}}
 
 {{domxref("AudioWorkletProcessor")}}에서 파생된 클래스의 **`process()`** 메서드는 오디오 프로세서 worklet에 대한 오디오 프로세싱 알고리즘을 구현합니다.
@@ -26,7 +27,11 @@ slug: Web/API/AudioWorkletProcessor/process
 ## 구문
 
 ```js
-var isActivelyProcessing = audioWorkletProcessor.process(inputs, outputs, parameters);
+var isActivelyProcessing = audioWorkletProcessor.process(
+  inputs,
+  outputs,
+  parameters,
+);
 ```
 
 ### 매개변수
@@ -80,38 +85,41 @@ var isActivelyProcessing = audioWorkletProcessor.process(inputs, outputs, parame
 
 ```js
 class WhiteNoiseProcessor extends AudioWorkletProcessor {
-  process (inputs, outputs, parameters) {
+  process(inputs, outputs, parameters) {
     // 첫번째 출력을 취합니다
-    const output = outputs[0]
+    const output = outputs[0];
     // 각 채널을 gain에 의해 곱해진 무작위 값으로 채웁니다
-    output.forEach(channel => {
+    output.forEach((channel) => {
       for (let i = 0; i < channel.length; i++) {
         // 각 샘플에 대해 무작위 값을 생성합니다
         // Math.random의 범위는 [0; 1)입니다; 우리는 [-1; 1]이 필요합니다
         // 이것은 정확한 1을 포함하지 않을 것이지만 단순성을 위해 지금으로선 괜찮습니다
-        channel[i] = (Math.random() * 2 - 1) *
+        channel[i] =
+          (Math.random() * 2 - 1) *
           // 배열은 자동화가 존재하는지와
           // 자동화가 k-rate인지 a-rate인지에 따라
           // 1개 또는 128개의 값을 포함할 수 있습니다
-          (parameters['customGain'].length > 1
-            ? parameters['customGain'][i]
-            : parameters['customGain'][0])
+          (parameters["customGain"].length > 1
+            ? parameters["customGain"][i]
+            : parameters["customGain"][0]);
       }
-    })
+    });
     // 이것은 자신만의 출력을 생성하는 소스 노드이므로, 만약 우리가
     // 메인 스레드에서 이것에 대해 어떠한 참조도 가지고 있지 않는다면
     // 이것이 뜻하지 않게 garbage-collected되지 않도록 우리는 true를 반환할 것입니다
-    return true
+    return true;
   }
   // process 메서드에서 사용되는 customGain 파라미터를 정의합니다
-  static get parameterDescriptors () {
-    return [{
-      name: 'customGain',
-      defaultValue: 1,
-      minValue: 0,
-      maxValue: 1,
-      automationRate: 'a-rate'
-    }]
+  static get parameterDescriptors() {
+    return [
+      {
+        name: "customGain",
+        defaultValue: 1,
+        minValue: 0,
+        maxValue: 1,
+        automationRate: "a-rate",
+      },
+    ];
   }
 }
 ```
@@ -122,9 +130,8 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
 
 ## 브라우저 호환성
 
-{{Compat}}
+브라우저에서 제공하는 메서드가 아니라 클라이언트 코드로 작성해야 하는 콜백 메서드입니다.
 
 ## 같이 보기
 
-- [Web Audio
-  API 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio API 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

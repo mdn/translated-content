@@ -35,17 +35,19 @@ var estimatePromise = StorageManager.estimate();
 
 ```html
 <p>
-  You're currently using about <span id="percent">
-  </span>% of your available storage.
+  You're currently using about <span id="percent"> </span>% of your available
+  storage.
 </p>
 ```
 
 ### JavaScript
 
 ```js
-navigator.storage.estimate().then(function(estimate) {
-  document.getElementById("percent").innerHTML =
-      (estimate.usage / estimate.quota * 100).toFixed(2);
+navigator.storage.estimate().then(function (estimate) {
+  document.getElementById("percent").innerHTML = (
+    (estimate.usage / estimate.quota) *
+    100
+  ).toFixed(2);
 });
 ```
 

@@ -1,8 +1,9 @@
 ---
 title: Função
 slug: Glossary/Function
-original_slug: Glossario/Função
 ---
+
+{{GlossarySidebar}}
 
 Uma **função** **(function)** é um fragmento de código que pode ser invocado por outro código, por si mesmo ou uma {{Glossary ("variável")}} que se refere à função. Quando uma função é invocada, o {{Glossary ("Argument", "argumento")}} é passado para a função como input (entrada) e a função pode opcionalmente retornar um output (saída). Uma função em {{glossary ("JavaScript")}} também é um {{glossary ("objeto")}}.
 
@@ -21,7 +22,7 @@ function () {};
 Uma **função nomeada** é uma função com o nome da função:
 
 ```js
-function foo() {};
+function foo() {}
 // or using the ECMAScript 2015 arrow notation
 const foo = () => {};
 ```
@@ -29,16 +30,16 @@ const foo = () => {};
 Uma **função interna** é uma função dentro de outra função (`square` nesse caso). Uma **função externa** é uma função contendo uma função (`addSquares` nesse caso):
 
 ```js
-function addSquares(a,b) {
-   function square(x) {
-      return x * x;
-   }
-   return square(a) + square(b);
-};
+function addSquares(a, b) {
+  function square(x) {
+    return x * x;
+  }
+  return square(a) + square(b);
+}
 //Using ECMAScript 2015 arrow notation
-const addSquares = (a,b) => {
-   const square = x => x*x;
-   return square(a) + square(b);
+const addSquares = (a, b) => {
+  const square = (x) => x * x;
+  return square(a) + square(b);
 };
 ```
 
@@ -46,15 +47,13 @@ Uma **função recursiva** é uma função que invoca a si mesma. Veja {{Glossar
 
 ```js
 function loop(x) {
-   if (x >= 10)
-      return;
-   loop(x + 1);
-};
+  if (x >= 10) return;
+  loop(x + 1);
+}
 //Using ECMAScript 2015 arrow notation
-const loop = x => {
-   if (x >= 10)
-      return;
-   loop(x + 1);
+const loop = (x) => {
+  if (x >= 10) return;
+  loop(x + 1);
 };
 ```
 
@@ -63,17 +62,17 @@ Uma **Expressão de Função Invocada Imediatamente** (IIFE em Inglês) é uma f
 ```js
 // Error (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 /*
-​function foo() {
+function foo() {
     console.log('Hello Foo');
 }();
 */
 
 (function foo() {
-    console.log("Hello Foo");
-}());
+  console.log("Hello Foo");
+})();
 
 (function food() {
-    console.log("Hello Food");
+  console.log("Hello Food");
 })();
 ```
 

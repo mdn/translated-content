@@ -1,127 +1,98 @@
 ---
-title: MDN Web Docs에 대해
+title: 쓰기 안내서
 slug: MDN/Writing_guidelines
-original_slug: MDN/About
+l10n:
+  sourceCommit: dab1b3e38e8b58b64991218c682f41b236032a36
 ---
+
 {{MDNSidebar}}
 
-MDN Web Docs는 [CSS](/ko/docs/Web/CSS), [HTML](/ko/docs/Web/HTML),
-[JavaScript](/ko/docs/Web/JavaScript) 등 웹 기술과 웹의 기반 소프트웨어를 배울 수 있는, 계속해서
-발전하는 학습 플랫폼입니다. 초심자가 사용할 수 있는 학습 자료도 준비되어 있습니다.
-[웹 개발 학습하기](/ko/docs/Learn)를 살펴보세요.
+MDN 웹 문서는 오픈 소스 프로젝트입니다. 아래에 요약된 섹션은 저희가 문서화하는 것과 MDN 웹 문서에서 문서화하는 방법에 대한 지침을 설명합니다. 기여 방법에 대해 알아보려면 [기여 안내서](/ko/docs/MDN/Community)를 참조하세요.
 
-## 우리의 목표
+- [우리가 쓰는 것](/ko/docs/MDN/Writing_guidelines/What_we_write)
 
-MDN의 목표는 간단합니다. [열린 웹](/ko/docs/Web)의 프로젝트를 쉽게 개발하기 위한 정보를 제공해 드리는
-것입니다. 웹에서 사용할 수 있는 열린 기술이라면 문서로 만드는 것이 그 방법입니다.
+  - : 이 섹션에서는 MDN 웹 문서에 포함하는 것과 포함하지 않는 것, 그리고 새로운 기술을 작성할 때, 콘텐츠 제안 과정, 외부 링크 허용 여부와 같은 기타 여러 정책에 대해 다룹니다. 저희를 위해 콘텐츠를 작성하거나 갱신하는 것을 고려하고 있다면 이곳이 좋은 출발점 일겁니다. 이 섹션은 다음도 포함합니다.
 
-어떤 주제를 MDN이 다뤄야 하는지, 다루지 않아야 하는지 잘 와닿지 않으신가요?
-[이건 MDN에 있나요?](/ko/docs/MDN/Guidelines/Does_this_belong_on_MDN) 문서를 읽어보세요.
+    - [포함 기준](/ko/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)
 
-## 도움을 주시려면
+      - : MDN 웹 문서에 포함할 콘텐츠에 대한 심층적인 기준, MDN 웹 문서에 새 문서를 추가하기 위한 신청 과정, 그리고 신청 당사자에 대한 기대와지침을 제공합니다.
 
-MDN은 세계적인 공동체입니다. 전세계에 걸쳐 콘텐츠를 추가하고, 버그를 수정하고, 변경사항을 리뷰하고, 샘플 코드를
-추가하고 있는 엄청난 기여자들과 함께하고 있습니다.
+- [쓰기 스타일 안내서](/ko/docs/MDN/Writing_guidelines/Writing_style_guide)
 
-그렇지만 MDN에 도움을 주실 때 전문 개발자나 작가여야만 하는 것은 아닙니다!
-[참여하기](/ko/docs/MDN/Contribute) 페이지에서 여러분의 경험과, 사용하실 수 있는 시간에 따라서 도움을 주실
-수 있는 부분을 찾아보세요.
+  - : 쓰기 스타일 안내서는 MDN 웹 문서 작성에 사용하는 언어와 스타일을 다룹니다. [코드 예제의 형식](/ko/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)을 지정하는 방법도 다룹니다.
 
-## MDN Web Docs 콘텐츠 사용하기
+- [MDN 웹 문서를 쓰는 방법](/ko/docs/MDN/Writing_guidelines/Howto)
 
-MDN의 콘텐츠는 무료이며, 오픈 소스 라이선스에 따라 사용할 수 있습니다.
+  - : 이 섹션에서는 저희가 준수하는 특정 과정과 기술을 포함하여 페이지 생성과 편집에 대한 모든 정보를 다룹니다. 이 섹션에서는 시작하기, 페이지 구성 방법에 대한 일반적인 개요, 그리고 특정 작업에 대한 방법을 찾을 수 있는 곳에 대한 정보를 제공합니다. 이 섹션에는 다음 주제가 포함됩니다.
 
-### 저작권과 라이선스
+    - [기술을 검색하는 방법](/ko/docs/MDN/Writing_guidelines/Howto/Research_technology)
 
-MDN의 콘텐츠는 모두 다양한 오픈 소스 라이선스 하에 사용 가능합니다. 이 장에서는 MDN이 제공하는 콘텐츠의 유형과,
-유형별로 어떤 라이선스가 적용되어 있는지 설명합니다.
+      - : 이 섹션에서는 여러분이 문서화 중인 기술에 대해 검색하기 위한 몇 가지 유용한 팁을 제공합니다.
 
-#### 문서 및 기고문
+    - [페이지를 생성, 이동, 삭제하는 방법](/ko/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)
 
-**MDN 콘텐츠**는 Mozilla 안팎의 기여자들이 제공했습니다. 별다른 표시가 없는 한, 콘텐츠는
-[Creative Commons Attribution-ShareAlike 라이선스](https://creativecommons.org/licenses/by-sa/2.5/)(CC-BY-SA) v2.5와 그 이후 버전이 적용됩니다.
+      - : 이 섹션에서는 MDN 웹 문서에서 페이지를 생성, 이동 또는 삭제하는 방법에 대해 설명합니다. 또한 페이지를 이동하거나 삭제할 때 페이지를 리다이렉션하는 방법에 대해서도 설명합니다.
 
-MDN 콘텐츠를 재사용할 땐 다음의 두 가지를 기억해주세요.
+    - [마크다운을 사용하는 방법](/ko/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN)
 
-1. 원본 콘텐츠로의 출처를 표기해야 합니다.
+      - : 저희가 사용하는 마크다운 형식은 [GitHub flavored markdown (GFM)](https://github.github.com/gfm/)에서 파생됩니다. 이 섹션은 참고와 정의 목록과 같은 특정 페이지 내 구성 요소에 대한 형식을 포함한 MDN 웹 문서에서 사용하는 마크다운에 대한 안내서입니다.
 
-    저작자로 "Mozilla 기여자"를 명시해주세요. 원본 콘텐츠 페이지로의 하이퍼링크(온라인) 또는 URL(출력물)을 포함해야
-    합니다. 예를 들어, 이 글의 출처를 표기할 땐 다음처럼 작성해주세요.
+    - [이미지와 미디어 추가하기](/ko/docs/MDN/Writing_guidelines/Howto/Images_media)
 
-    > [Mozilla 기여자](/ko/docs/MDN/About/contributors.txt)가 작성한
-    > [MDN에 대해](/ko/docs/MDN/About)는
-    > [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) 라이선스에 따라 사용할 수 있습니다.
+      - : 이 섹션에서는 이미지와 같은 미디어를 페이지에 포함시키기 위한 요구 사항을 설명합니다.
 
-2. 여러분의 콘텐츠 역시 원본 콘텐츠와 동일한 라이선스, 즉 CC-BY-SA v2.5 또는 그 이후 버전을 적용해야 합니다.
+    - [CSS 속성을 문서화하는 방법](/ko/docs/MDN/Writing_guidelines/Howto/Document_a_CSS_property)
 
-#### 예제 코드와 코드 조각
+      - : 이 문서에서는 레이아웃과 콘텐츠를 포함하여 CSS 속성 페이지를 작성하는 방법을 설명합니다.
 
-2010년 8월 20일 또는 그 이후 추가된 코드 예제는
-[퍼블릭 도메인](https://creativecommons.org/publicdomain/zero/1.0/)(CC0)이며, 별도의 라이선스 표기가
-필요하지 않습니다. 그러나 표기를 해야 하는 경우 "모든 저작권을 퍼블릭 도메인으로 양도합니다.
-"http://creativecommons.org/publicdomain/zero/1.0/" 을 추가하세요.
+    - [API 참조를 문서화하는 방법](/ko/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference)
 
-2010년 8월 20일 이전에 추가된 코드 예제는
-[MIT 라이선스](https://opensource.org/licenses/mit-license.php)의 적용을 받으니, 반드시 다음의 저작자
-정보를 MIT 템플릿에 삽입해야 합니다. "© <마지막으로 페이지가 수정된 날짜> <문서에 이 내용을 넣은 사람의
-이름>"
+      - : 이 섹션에서는 Web API를 문서화하는 방법에 대해 설명합니다.
 
-#### 기여
+    - [HTTP 헤더를 문서화하는 방법](/ko/docs/MDN/Writing_guidelines/Howto/Document_an_HTTP_header)
 
-MDN에 기여하고 싶으시면, 문서는 반드시 Attribution-ShareAlike 라이선스 (또는, 편집 중인 문서에 이미 적용된 다른
-라이선스), 코드 샘플은 [Creative Commons CC-0](https://creativecommons.org/publicdomain/zero/1.0/)(퍼블릭
-도메인으로 양도)에 따라 사용할 수 있어야 합니다. MDN에 기여하시는 것은 여러분의 기여를 이 라이선스 아래에서 이용할 수
-있음에 동의하시는 것입니다.
+      - : 이 문서에서는 HTTP 헤더에 대한 새 참조 페이지를 만드는 방법에 대해 설명합니다.
 
-몇몇 오래된 컨텐츠는 위에서 설명했던 것과는 다른 라이선스 하에 이용 가능합니다. 이러한 경우 해당 문서는 대체 라이선스
-블록을 페이지의 맨 아래에 배치해 표시하고 있습니다.
+    - [용어집에 항목을 추가하는 방법](/ko/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary)
 
-> **경고:** 다른 라이선스를 적용한 페이지는 더 이상 만들 수 없습니다.
+      - : 이 문서는 MDN 웹 문서 용어집에 항목을 추가하고 링크하는 방법에 대해 설명합니다. 또한 용어집 항목의 레이아웃과 콘텐츠에 대한 지침을 제공합니다.
 
-**기여한 자료의 저작권은 해당 작성자에게 있으며, 이는 작성자가 타인에게 양도하지 않는 한 유효합니다.**
+- [MDN 웹 문서의 페이지 유형](/ko/docs/MDN/Writing_guidelines/Page_structures/Page_types)
 
-지금까지의 내용에 대해 질문이 있으시거나, 걱정하시는 것이 있으면
-[MDN 관리자 이메일](mailto:mdn-admins@mozilla.org?subject=MDN%20licensing%20question)로 연락해주세요.
+  - : CSS 참조 페이지든 JavaScript 안내서 페이지든 MDN 웹 문서의 각 페이지에는 특정 페이지 유형이 있습니다. 이 섹션에서는 다양한 페이지 유형을 나열하고 각 유형에 대한 템플릿을 제공합니다. 작성 중인 페이지 유형을 이해하려면 이러한 항목을 찾아보는 것이 좋습니다.
 
-#### 로고, 상표, 서비스마크 및 워드마크
+- [MDN 웹 문서의 페이지 구조](/ko/docs/MDN/Writing_guidelines/Page_structures)
 
----
+  - : 이 섹션에서는 MDN 웹 문서에서 정보를 일관되게 표시하기 위해 사용하는 다양한 페이지 구조를 다룹니다. 다음이 포함됩니다.
 
-이 웹사이트의 외관을 포함한 상표, 로고, 서비스마크의 저작권은 Mozilla Foundation이 보유하며 Creative Commons
-라이선스의 적용을 받지 않습니다. 로고 및 그래픽 디자인 등의 저작물이 Creative Commons 라이선스의 영향을 받는 다른
-저작물에 포함되더라도, 로고 및 그래픽 디자인 등의 저작물은 Creative Commons 라이선스를 사용한 파생 저작물에 포함할 수
-없습니다. 문서의 텍스트를 사용하면서 이러한 저작물의 권리도 사용하고자 하시거나, 로고, 상표, 서비스마크 및 워드마크
-라이선스에 대한 문의사항이 있으시면
-<licensing@mozilla.org>를
-통해 Mozilla Foundation에 연락해주세요.
+    - [구문 섹션](/ko/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections)
 
-### MDN으로의 링크
+      - : MDN 웹 문서에 있는 참조 페이지의 구문 섹션에는 기능의 정확한 구문을 정의하는 구문 상자가 포함되어 있습니다. 이 문서는 참조 문서에 대한 구문 상자를 작성하는 방법을 설명합니다.
 
-MDN으로 향하는 링크를 추가해도 되는지에 대한 질문을 주기적으로 받고 있는데요, 짧은 대답은
-**네, MDN으로 링크를 거실 수 있어요!** 하이퍼텍스트는 웹의 정수이기도 하지만, 여러분의 사용자를 귀중한
-리소스로 안내하는 방법이면서, MDN 커뮤니티가 이뤄낸 일에 신뢰를 표하는 방법이기도 합니다.
+    - [코드 섹션](/ko/docs/MDN/Writing_guidelines/Page_structures/Code_examples)
 
-## MDN Web Docs의 문제 제보하기
+      - : 페이지에 코드 예제를 포함하는 방법에는 여러 가지가 있습니다. 이 섹션은 이에 대한 개요를 설명하고 다양한 언어에 대한 구문 지침을 제공합니다.
 
-[MDN에 문제 제보하는 법](/ko/docs/MDN/Contribute/Howto/Report_a_problem)을 참고하세요.
+    - [배너와 알림](/ko/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)
 
-## MDN Web Docs가 지나온 길
+      - : 경우에 따라 문서에 특별한 알림이 추가되어야 합니다. 페이지에서 더 이상 사용되지 않는 기술이나 프로덕션 코드에 사용하면 안 되는 기타 자료를 다루는 경우 이러한 상황이 발생할 수 있습니다. 이 문서에서는 가장 일반적인 경우와 이를 처리하는 방법을 다룹니다.
 
-MDN Web Docs (이전 이름 Mozilla Developer Network (MDN), 더 이전 이름 Mozilla Developer Center (MDC) 또는
-_Devmo_) 프로젝트는 [Mozilla Foundation](https://www.mozilla.org/en-US/foundation/)이 AOL로부터
-NetScape [DevEdge](https://web.archive.org/web/*/devedge.netscape.com)의 원본 콘텐츠 사용 라이선스를 취득한
-2005년 초에 시작했습니다. 자원봉사자들은 DevEdge에서 아직 쓸만한 내용을 추출해서, 업데이트와 관리가 쉽도록 MDN의
-전신으로 옮겨놓았습니다.
+    - [명세서 표](/ko/docs/MDN/Writing_guidelines/Page_structures/Specification_tables)
 
-2017년 7월부터 지금의 이름인 MDN Web Docs를 사용했습니다.
-[The Future of MDN: A Focus on Web Docs](https://blog.mozilla.org/opendesign/future-mdn-focus-web-docs/)에서 이 결정의 이유를 알 수 있습니다.
+      - : MDN 웹 문서의 모든 참조 페이지는 해당 API 또는 기술이 정의된 명세에 대한 정보를 제공해야 합니다. 이 문서는 이러한 표의 모양과 표를 추가하는 방법을 설명합니다.
 
-[10주년 기념](/ko/docs/MDN/At_ten) 페이지에서, MDN에 참여했던 사람들의 역사 증언을 포함한 더 자세한 내용을
-볼 수 있습니다.
-[MDN Web Docs: 15 years young](https://hacks.mozilla.org/2020/07/mdn-web-docs-15-years-young/)에서는
-15주년을 맞이한 MDN의 다양한 정보를 읽을 수 있어요!
+    - [호환성 표](/ko/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)
 
-2020년 12월 14일에는 앞으로 나아가기 위한 큰 변화를 다시 한 번 맞이했습니다. 플랫폼을 새롭게 Yari로 이전하고,
-[모든 콘텐츠를 GitHub 저장소](https://github.com/mdn/content)로 옮긴 것입니다.
-[Welcome Yari: MDN Web Docs has a new platform](https://hacks.mozilla.org/2020/12/welcome-yari-mdn-web-docs-has-a-new-platform/)
-에서 자세한 정보를 볼 수 있습니다.
+      - : MDN 웹 문서에는 개방형 웹 문서의 호환성 표에 대한 표준 형식이 있습니다. 이 문는 호환성 표를 생성하는 데 사용되는 데이터베이스를 추가하고 유지 관리하는 방법과 테이블을 문서에 통합하는 방법에 대해 설명합니다.
+
+    - [매크로](/ko/docs/MDN/Writing_guidelines/Page_structures/Macros)
+
+      - : 매크로는 페이지에서 사이드바와 같은 콘텐츠를 생성하는 데 사용되는 바로가기입니다. 이 섹션에서는 저희가 사용하는 매크로와 그 기능을 나열합니다.
+
+- [귀속 및 저작권 라이선스 정보](/ko/docs/MDN/Writing_guidelines/Attrib_copyright_license)
+
+  - : 웹의 다른 곳에서 MDN 웹 문서 콘텐츠를 사용하는 것에 대한 정책, MDN에서 콘텐츠를 재배포할 수 있는 권한을 얻는 방법, 그리고 MDN 콘텐츠에 링크하기 위한 힌트를 설명합니다.
+
+- [기술에 레이블을 지정하는 방법](/ko/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)
+
+  - : 이 섹션에서는 obsolete, deprecated, 그리고 experimental 이라는 용어에 대한 정의를 다루고 이러한 용어를 기술에 레이블하는 방법과 MDN 웹 문서에서 콘텐츠를 제거하는 시기에 대한 지침을 제공합니다.

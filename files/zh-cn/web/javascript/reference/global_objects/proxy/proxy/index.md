@@ -1,88 +1,94 @@
 ---
-title: Proxy() 构造器
+title: Proxy() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
+l10n:
+  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
-{{JSRef}}**`Proxy()`** 构造器用来创建 {{jsxref("Proxy")}} 对象。
+{{JSRef}}
+
+**`Proxy()`** 构造函数用于创建 {{jsxref("Proxy")}} 对象。
 
 ## 语法
 
-```plain
+```js-nolint
 new Proxy(target, handler)
 ```
+
+> **备注：** `Proxy()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 关键字来调用。如果不使用 `new` 关键字调用，则会抛出 {{jsxref("TypeError")}}。
 
 ### 参数
 
 - `target`
-  - : `Proxy` 会对 target 对象进行包装。它可以是任何类型的对象，包括内置的数组，函数甚至是另一个代理对象。
+  - : `Proxy` 会对目标（target）对象进行包装。它可以是任何类型的对象，包括原生的数组、函数甚至是另一个代理对象。
 - `handler`
-  - : 它是一个对象，它的属性提供了某些操作发生时所对应的处理函数。
+  - : 一个对象，其属性是定义了在对代理执行操作时的行为的函数。
 
 ## 描述
 
-我们可以使用 `Proxy()` 构造器来创建一个新的 `Proxy` 对象。构造器接收两个主要参数：
+可以使用 `Proxy()` 构造函数来创建一个新的 `Proxy` 对象。构造函数接收两个必须的参数：
 
-- `target` 被代理的对象
-- `handler` 被代理对象上的自定义行为
+- `target` 是要创建代理的对象
+- `handler` 是定义了代理的自定义行为的对象
 
-一个空的 `handler` 参数将会创建一个与被代理对象行为几乎完全相同的代理对象。通过在 `handler` 对象上定义一组处理函数，你可以自定义被代理对象的一些特定行为。例如，通过定义 `get()` 你就可以自定义被代理对象的 [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)。
+一个空的处理器（handler）将会创建一个与被代理对象行为几乎完全相同的代理对象。通过在 `handler` 对象上定义一组函数，你可以自定义被代理对象的一些特定行为。例如，通过定义 `get()` 你就可以自定义被代理对象的[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)。
 
-### 处理函数
+### 处理器函数
 
-本节列出了所有你可以自定义的处理函数。处理函数有时候也被成为“劫持”（traps），这是由于它们会对底层被代理对象的调用进行劫持。
+本节列出了所有你可以自定义的处理函数。处理器函数有时候也被称为*劫持*（trap），这是由于它们会对底层被代理对象的调用进行劫持。
 
-- {{JSxRef("Global_Objects/Proxy/Proxy/apply", "handler.apply()")}}
+- {{jsxref("Proxy/Proxy/apply", "handler.apply()")}}
   - : 函数调用劫持。
-- {{JSxRef("Global_Objects/Proxy/Proxy/construct", "handler.construct()")}}
-  - : {{JSxRef("Operators/new", "new")}} 操作符劫持
-- {{JSxRef("Global_Objects/Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
-  - : {{JSxRef("Object.defineProperty")}}调用劫持。
-- {{JSxRef("Global_Objects/Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
-  - : {{JSxRef("Operators/delete", "delete")}} 操作符劫持。
-- {{JSxRef("Global_Objects/Proxy/Proxy/get", "handler.get()")}}
+- {{jsxref("Proxy/Proxy/construct", "handler.construct()")}}
+  - : {{JSxRef("Operators/new", "new")}} 运算符劫持。
+- {{jsxref("Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
+  - : {{JSxRef("Object.defineProperty")}} 调用劫持。
+- {{jsxref("Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
+  - : {{JSxRef("Operators/delete", "delete")}} 运算符劫持。
+- {{jsxref("Proxy/Proxy/get", "handler.get()")}}
   - : 获取属性值劫持。
-- {{JSxRef("Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
+- {{jsxref("Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
   - : {{JSxRef("Object.getOwnPropertyDescriptor")}} 调用劫持。
-- {{JSxRef("Global_Objects/Proxy/Proxy/getPrototypeOf", "handler.getPrototypeOf()")}}
-  - : {{JSxRef("Object.getPrototypeOf")}}调用劫持。
-- {{JSxRef("Global_Objects/Proxy/Proxy/has", "handler.has()")}}
-  - : {{JSxRef("Operators/in", "in")}} 操作符劫持。
-- {{JSxRef("Global_Objects/Proxy/Proxy/isExtensible", "handler.isExtensible()")}}
-  - : {{JSxRef("Object.isExtensible")}}调用劫持。
-- {{JSxRef("Global_Objects/Proxy/Proxy/ownKeys", "handler.ownKeys()")}}
-  - : {{JSxRef("Object.getOwnPropertyNames")}} 和{{JSxRef("Object.getOwnPropertySymbols")}}调用劫持。
-- {{JSxRef("Global_Objects/Proxy/Proxy/preventExtensions", "handler.preventExtensions()")}}
-  - : {{JSxRef("Object.preventExtensions")}}调用劫持。
-- {{JSxRef("Global_Objects/Proxy/Proxy/set", "handler.set()")}}
+- {{jsxref("Proxy/Proxy/getPrototypeOf", "handler.getPrototypeOf()")}}
+  - : {{JSxRef("Object.getPrototypeOf")}} 调用劫持。
+- {{jsxref("Proxy/Proxy/has", "handler.has()")}}
+  - : {{JSxRef("Operators/in", "in")}} 运算符劫持。
+- {{jsxref("Proxy/Proxy/isExtensible", "handler.isExtensible()")}}
+  - : {{JSxRef("Object.isExtensible")}} 调用劫持。
+- {{jsxref("Proxy/Proxy/ownKeys", "handler.ownKeys()")}}
+  - : {{JSxRef("Object.getOwnPropertyNames")}} 和{{JSxRef("Object.getOwnPropertySymbols")}} 调用劫持。
+- {{jsxref("Proxy/Proxy/preventExtensions", "handler.preventExtensions()")}}
+  - : {{JSxRef("Object.preventExtensions")}} 调用劫持。
+- {{jsxref("Proxy/Proxy/set", "handler.set()")}}
   - : 设置属性值劫持。
-- {{JSxRef("Global_Objects/Proxy/Proxy/setPrototypeOf", "handler.setPrototypeOf()")}}
-  - : {{JSxRef("Object.setPrototypeOf")}}调用劫持。
+- {{jsxref("Proxy/Proxy/setPrototypeOf", "handler.setPrototypeOf()")}}
+  - : {{JSxRef("Object.setPrototypeOf")}} 调用劫持。
 
 ## 示例
 
 ### 选择性代理属性访问器
 
-本例中，被代理对象有两个属性： `notProxied` 和 `proxied` 。我们定义了一个处理函数，它为 `proxied` 属性返回一个不同的值，而其他属性返回原值。
+本示例中，被代理对象有两个属性：`notProxied` 和 `proxied`。我们定义了一个处理器，它为 `proxied` 属性返回一个不同的值，而其他属性则通过目标获取。
 
 ```js
 const target = {
-  notProxied: "original value",
-  proxied: "original value"
+  notProxied: "原始值",
+  proxied: "原始值",
 };
 
 const handler = {
-  get: function(target, prop, receiver) {
+  get(target, prop, receiver) {
     if (prop === "proxied") {
-      return "replaced value";
+      return "替换值";
     }
     return Reflect.get(...arguments);
-  }
+  },
 };
 
 const proxy = new Proxy(target, handler);
 
-console.log(proxy.notProxied); // "original value"
-console.log(proxy.proxied);    // "replaced value"
+console.log(proxy.notProxied); // "原始值"
+console.log(proxy.proxied); // "替换值"
 ```
 
 ## 规范
@@ -93,7 +99,7 @@ console.log(proxy.proxied);    // "replaced value"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [`Proxy` and `Reflect` in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Meta_programming)
-- {{jsxref("Global_Objects/Reflect", "Reflect")}}
+- [元编程](/zh-CN/docs/Web/JavaScript/Guide/Meta_programming)指南
+- {{jsxref("Reflect")}}

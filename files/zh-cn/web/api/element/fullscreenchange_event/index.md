@@ -3,6 +3,8 @@ title: Element.onfullscreenchange
 slug: Web/API/Element/fullscreenchange_event
 ---
 
+{{APIRef}}
+
 元素接口的 **`onfullscreenchange`** 属性是在元素过渡到或过渡到全屏模式时触发的全屏更改事件的事件处理程序。
 
 ## 语法
@@ -27,9 +29,14 @@ function toggleFullscreen() {
 
   elem.onfullscreenchange = handleFullscreenChange;
   if (!document.fullscreenElement) {
-    elem.requestFullscreen().then({}).catch(err => {
-      alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-    });
+    elem
+      .requestFullscreen()
+      .then({})
+      .catch((err) => {
+        alert(
+          `Error attempting to enable full-screen mode: ${err.message} (${err.name})`,
+        );
+      });
   } else {
     document.exitFullscreen();
   }

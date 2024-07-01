@@ -1,14 +1,8 @@
 ---
 title: visibility
 slug: Web/CSS/visibility
-tags:
-  - CSS
-  - Web
-  - Расположение CSS
-  - Свойства CSS
-  - Шаблон
-translation_of: Web/CSS/visibility
 ---
+
 {{CSSRef}}
 
 Свойство **`visibility`** скрывает или показывает элемент без изменения разметки документа. Также скрывает строки и столбцы {{HTMLElement("table")}}.
@@ -44,7 +38,11 @@ visibility: unset;
     - Для XUL элементов размер всегда равен 0, независимо от других стилей, влияющих на размер, хотя отступы продолжают учитываться.
     - Для других элементов `collapse` обрабатывается также, как `hidden`
 
-### Синтаксис
+## Формальное определение
+
+{{cssinfo}}
+
+## Формальный синтаксис
 
 {{csssyntax}}
 
@@ -61,7 +59,9 @@ visibility: unset;
 ```html
 <p class="visible">Первый параграф виден.</p>
 <p class="not-visible">Второй параграф не виден.</p>
-<p class="visible">Третий параграф также виден. Заметь, второй параграф занимает место.</p>
+<p class="visible">
+  Третий параграф также виден. Заметь, второй параграф занимает место.
+</p>
 ```
 
 #### CSS
@@ -129,16 +129,9 @@ td {
 - Поддержка `visibility:collapse` отсутствует или частично не работает в некоторых современных браузерах. Во многих случаях может не корректно работать `visibility:hidden` со столбцами и строками.
 - `visibility:collapse` может изменить шаблон таблицы, если таблица содержит вложенные таблицы, пока `visibility:visible` не указан явно для вложенной таблицы.
 
-## Спецификация
+## Спецификации
 
-| Specification                                                                            | Status                                   | Comment                                                    |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------- |
-| {{SpecName('CSS3 Flexbox', '#visibility-collapse', 'visibility')}} | {{Spec2('CSS3 Flexbox')}}         | Определяет значение `collapse` применимым к flex элементам |
-| {{SpecName('CSS3 Box', '#the-visibility-property', 'visibility')}} | {{Spec2('CSS3 Box')}}             | Без изменений                                              |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'visibility')}} | {{Spec2('CSS3 Transitions')}} | Определяет `visibility` как анимируемое.                   |
-| {{SpecName('CSS2.1', 'visufx.html#visibility', 'visibility')}}     | {{Spec2('CSS2.1')}}                 | Изначальное определение                                    |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Совместимость с браузерами
 

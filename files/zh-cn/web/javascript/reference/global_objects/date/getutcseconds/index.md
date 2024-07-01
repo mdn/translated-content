@@ -3,7 +3,7 @@ title: Date.prototype.getUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`getUTCSeconds()`** 方法以世界时为标准，返回一个指定的日期对象的秒数。
 
@@ -23,9 +23,9 @@ dateObj.getUTCSeconds()
 
 `getUTCSeconds()` 返回一个 0 到 59 的整数。
 
-## 例子
+## 示例
 
-### 例子：使用 `getUTCSeconds()` 方法
+### 示例：使用 `getUTCSeconds()` 方法
 
 下例将当前时间的秒数部分赋值给变量 `seconds`。
 
@@ -42,7 +42,7 @@ var seconds = today.getUTCSeconds();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getSeconds()")}}
 - {{jsxref("Date.prototype.setUTCSeconds()")}}

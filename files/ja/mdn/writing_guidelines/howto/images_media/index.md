@@ -1,22 +1,21 @@
 ---
 title: 画像やメディアの追加方法
 slug: MDN/Writing_guidelines/Howto/Images_media
-original_slug: MDN/Guidelines/Video
 l10n:
-  sourceCommit: 294dc5cb436d4f86ed789be8fded3ff615768fb0
+  sourceCommit: 2077d0702d038c9ccc743a53d8ad1c0c21fef5be
 ---
 
 {{MDNSidebar}}
 
 ## 画像の追加
 
-文書に画像を追加するには、文書のフォルダーに画像ファイルを追加し、文書の `index.md` ファイルから `<img>` 要素または [同等の Markdown 構文](https://github.github.com/gfm/#images) を使用して画像を参照してください。
+文書に画像を追加するには、文書のフォルダーに画像ファイルを追加し、文書の `index.md` ファイルで [Markdown の画像構文（英語）](https://github.github.com/gfm/#images) または HTML の `<img>` 要素を使用して画像を参照してください。
 
 例を通して説明しましょう。
 
 1. `mdn` リモートの `main` ブランチから、最新の内容を含む新しい作業用ブランチを作成することから始めましょう。
 
-   ```sh
+   ```bash
    cd ~/path/to/mdn/content
    git checkout main
    git pull mdn main
@@ -26,9 +25,9 @@ l10n:
    git checkout -b my-images
    ```
 
-2. 文書フォルダー内に自分の画像を追加してください。この例では、 `files/en-us/web/css` の記事に新しい画像を追加することを想定してみてください。
+2. 文書フォルダー内に自分の画像を追加してください。この例では、 `files/en-us/web/css` の記事に新しい画像を追加することを想定してください。
 
-   ```sh
+   ```bash
    cd ~/path/to/mdn/content
    cp ../some/path/my-cool-image.png files/en-us/web/css/
    ```
@@ -36,47 +35,57 @@ l10n:
 3. 各画像に対して `filecheck` を実行すると、何か問題があった場合にメッセージが表示されるかもしれません。
    詳しくは、[画像の圧縮](#画像の圧縮)の節を参照してください。
 
-   ```sh
+   ```bash
    yarn filecheck files/en-us/web/css/my-cool-image.png
    ```
 
-4. `files/en-us/web/css/index.md` 内の `<img>` 要素と `alt` 属性で、文書内の画像を参照します。
+4. 文書内で画像用の Markdown 構文を使って画像を参照し、画像を記述する括弧の間に [`alt` 属性用の説明テキスト](/ja/docs/Learn/Accessibility/HTML#代替テキスト)を記述するか、 `files/en-us/web/css/index.md` 内に `alt` 属性を持つ {{htmlelement("img")}} 要素を記述してください。
 
-   ```html
+   ```md
+   ![My cool image](my-cool-image.png)
    <img src="my-cool-image.png" alt="My cool image" />
    ```
 
-5. 削除・作成・変更したファイルをすべて追加してコミットし、さらにブランチをフォークにプッシュします。
+5. 削除・作成・変更したファイルをすべて追加してコミットし、さらにブランチをフォークにプッシュしてください。
 
-   ```sh
+   ```bash
    git add files/en-us/web/css/my-cool-image.png files/en-us/web/css/index.html
    git commit
    git push -u origin my-images
    ```
 
-6. これで
-   [プルリクエスト](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)を作成する準備ができました。
+6. これで[プルリクエスト](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)を作成する準備ができました。
 
 ## 画像に代替テキストを追加
 
-すべての画像、`![]`、`<img>`には、`alt`テキストを記載しなければなりません。画像が伝えるすべての関連情報を提供する、短くて簡潔なテキストを指定してください。このテキストは画像を見ることができない人が読むことができます。
+すべての画像、`![]` および `<img>` には、`alt` テキストを記載する必要があります。
+alt 属性は短く、画像が伝えるすべての関連情報を提供する必要があります。
+画像の説明文を書くときは、その画像の価値ある情報と、ページのコンテンツは読めても画像を読み込めない人にその情報をどう伝えるかを考えてください。
 
-`alt` テキストの中身は、文脈によって異なります。例えば、犬の写真が Yuckymeat ドッグフードのレビューのアバターである場合、 `alt="フラッフィー"` が適切です。動物の里親募集サイトの犬の画像であれば、`alt="「フラッフィー」はとても短い毛の中型トライカラーテリアで、噛むおもちゃで遊んでいます。"` と記述すれば、その画像は犬の里親候補に関連する情報を伝えており、周囲のテキストと重複していないため適切となります。画像そのものを説明する必要はほとんどありません。フラッフィーが赤い首輪と青いリードをつけて屋外にいることは、どちらの文脈でも有益な情報を追加しません。
+画像の代替テキストは、その文脈に基づいたものにしましょう。
+犬のフラッフィーの写真が、Yuckymeat ドッグフードのレビューの横にいるアバターであれば、`alt="Fluffy"` が適切です。
+同じ写真が動物保護団体の里親募集ページの一部である場合、画像から伝わる情報は、犬の親になる見込みのある人に関連するものです。例えば、`alt="フラッフィー、テニスボールを咥えた、とても毛の短い三毛のテリア。"` のようにします。
+周囲のテキストには、フラッフィーの大きさや犬種が記載されている可能性が高いので、それを含めると冗長になってしまいます。
+画像を詳細に記述するのは控えましょう。親になる見込みのある人は、犬が屋内か屋外か、赤い首輪と青いリードを持っているかなどは知る必要がありません。
 
-代替テキストは、画像が伝える情報のうち、目の見えるユーザーがアクセスでき、かつ文脈に関連するものすべてを記載し、それ以上のことは記載しないでください。短く、正確に、そして有益なものを使用してください。
+スクリーンショットの場合は、画像から何を知ったかを書き、スクリーンショットの内容は詳しく書かず、読者が必要としない、あるいはすでに知っている情報を除外しましょう。
+例えば、Bing の設定変更についてのページで、Bing の検索結果のスクリーンショットがある場合、検索語や検索結果の数などはこの画像のポイントではないので記載しないようにしましょう。
+alt は、Bing で設定を変更する方法という、その時点でのトピックに限定してください。
+alt は、`alt="設定アイコンは、検索フィールドの下記ナビゲーションバーにあります。"` のようにします。
+スクリーンショットであることをユーザーが知る必要はなく、 Bing の設定変更を説明するページにいるため、すでに Bing であることを知っているため、「スクリーンショット」や「Bing」を記載しないでください。
 
 Markdown と HTML での構文は以下の通りです。
 
-```html
+```md-nolint
 ![<代替テキスト>](<画像の URL>)
 <img alt="<代替テキスト>" src="<画像の URL>">
 ```
 
 例えば次のようにします。
 
-```html
+```md
 ![OpenWebDocs のロゴ: 本の虫のカール](carle.png)
-<img alt="OpenWebDocs のロゴ: 本の虫のカール" src="carle.png">
+<img alt="OpenWebDocs のロゴ: 本の虫のカール" src="carle.png" />
 ```
 
 純粋に装飾的な画像は空の `alt` を設定すべきですが、 MDN ドキュメント内の画像には何らかの目的があるはずなので、空ではない文字列の記述が必要です。
@@ -91,7 +100,7 @@ MDN Web Docs のページに画像を追加する場合、読者のためにダ�
 このオプションは画像を可能な限り圧縮し、元画像を圧縮後の画像に置き換えます。
 例えば、次のようにします。
 
-```sh
+```bash
 yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
 ```
 
@@ -109,7 +118,7 @@ MDN Web Docs は動画が多いサイトではありませんが、動画コン�
 - 動画はテキストよりも情報密度が低い。
   何かを説明する動画を視聴するのは、同等の説明書を読むよりも時間がかかります。
 - 動画はファイルサイズが大きいので、テキストよりもコストがかかり、パフォーマンスも低い。
-- 動画にはアクセシビリティの問題があります。一般にテキストよりも制作費がかかりますが、特にローカライズや画面リーダーの利用者が使えるようにするのが大変です。
+- 動画にはアクセシビリティの問題があります。一般にテキストよりも制作費がかかりますが、特にローカライズやスクリーンリーダーの利用者が使えるようにするのが大変です。
 - 最後の点に加えて、動画は、テキストコンテンツよりも編集・更新・保守がはるかに困難です。
 
 > **メモ:** 動画を作るときにも、これらの問題を念頭に置いて、少しでも軽減できるように工夫するとよいでしょう。
@@ -160,14 +169,14 @@ MDN 用の動画は以下のようにあるべきです。
 
 次の表は、良いスターターツールのお勧めをいくつか示しています。
 
-| ツール                      | OS                    | コスト   | 後処理機能 |
-| ------------------------- | --------------------- | ------ | ----------------------------------- |
-| Open Broadcaster Software | macOS, Windows, Linux | フリー   | あり                                 |
-| CamStudio                 | Windows               | フリー   | 限定的                             |
-| Camtasia                  | Windows, macOS        | 高   | あり                                 |
-| QuickTime Player          | macOS                 | フリー   | なし。単純に録画できるだけ    |
-| ScreenFlow                | macOS                 | 中 | あり                                 |
-| Kazam                     | Linux                 | フリー   | 最小限                             |
+| ツール                    | OS                    | コスト | 後処理機能                 |
+| ------------------------- | --------------------- | ------ | -------------------------- |
+| Open Broadcaster Software | macOS, Windows, Linux | フリー | あり                       |
+| CamStudio                 | Windows               | フリー | 限定的                     |
+| Camtasia                  | Windows, macOS        | 高     | あり                       |
+| QuickTime Player          | macOS                 | フリー | なし。単純に録画できるだけ |
+| ScreenFlow                | macOS                 | 中     | あり                       |
+| Kazam                     | Linux                 | フリー | 最小限                     |
 
 ### QuickTime Player のコツ
 
@@ -180,7 +189,7 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
 4. _録画開始_ ボタンを押します。
 5. 録画したい動作をする。
 6. _停止_ ボタンを押す。
-7. メインメニューから_File_ > _Export As..._ > _1080p_ を選択し、 Hi Definition として保存します。
+7. メインメニューから*File* > _Export As..._ > _1080p_ を選択し、 Hi Definition として保存します。
 
 ### その他のリソース
 
@@ -253,13 +262,13 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
 アップロードした動画は、[`EmbedYouTube`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedYouTube.ejs) というマクロを使って、ページ内に埋め込むことができます。
 これは、ページ内の動画を表示させたい位置に以下のように挿入することで使用します。
 
-```
+```plain
 \{{EmbedYouTube("you-tube-url-slug")}}
 ```
 
 マクロ呼び出しで取るプロパティは、 URL 全体ではなく、動画の URL の末尾にある文字の列です。
 例えば、動画の URL が `https://www.youtube.com/watch?v=ELS2OOUvxIw` であれば、必要なマクロ呼び出しは次のようになります。
 
-```
+```plain
 \{{EmbedYouTube("ELS2OOUvxIw")}}
 ```

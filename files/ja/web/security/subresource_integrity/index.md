@@ -69,9 +69,10 @@ Access-Control-Allow-Origin: *
 次の {{HTMLElement("script")}} 要素により、ブラウザーが `https://example.com/example-framework.js` を実行する前に、まず想定されるハッシュ値とスクリプトのハッシュ値が一致することをブラウザーに確認させることができます。
 
 ```html
-<script src="https://example.com/example-framework.js"
-        integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
-        crossorigin="anonymous"></script>
+<script
+  src="https://example.com/example-framework.js"
+  integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+  crossorigin="anonymous"></script>
 ```
 
 > **メモ:** **crossorigin** 属性については [CORS 設定属性](/ja/docs/Web/HTML/CORS_settings_attributes)を参照してください。

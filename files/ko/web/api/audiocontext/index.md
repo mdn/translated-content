@@ -2,6 +2,7 @@
 title: AudioContext
 slug: Web/API/AudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 `AudioContext` 인터페이스는 {{domxref("AudioNode")}}에 의해 각각 표현되는, 함께 연결된 오디오 모듈로부터 만들어진 오디오 프로세싱 그래프를 표현합니다. 오디오 컨텍스트는 이것이 포함하는 노드의 생성과 오디오 프로세싱 혹은 디코딩의 실행 둘 다를 제어합니다. 여러분은 다른 무언가를 하기 전에 `AudioContext`를 생성할 필요가 있습니다. 왜냐하면 모든 것은 컨텍스트 내에서 발생하기 때문입니다. 매번 새로운 컨텍스트를 초기화하는 대신 하나의 AudioContext를 생성하고 재사용하는 것이 추천되며, 몇 개의 다른 오디오 소스에 대해 하나의 `AudioContext`를 사용하고 동시에 연결하는 것은 문제없습니다.

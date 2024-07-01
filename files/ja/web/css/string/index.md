@@ -1,6 +1,8 @@
 ---
 title: <string>
 slug: Web/CSS/string
+l10n:
+  sourceCommit: 9428e6f9ac2fd4166b5cf245fb674123209787ff
 ---
 
 {{CSSRef}}
@@ -25,7 +27,7 @@ slug: Web/CSS/string
 
 ### 有効な文字列の例
 
-```js
+```css
 /* 単純な文字列 */
 "This string is demarcated by double quotes."
 'This string is demarcated by single quotes.'

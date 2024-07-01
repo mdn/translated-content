@@ -114,8 +114,11 @@ Bookmarks API の使い方を理解するため、[bookmark-it](https://github.c
 他のバックグラウンドスクリプトと同様に、[background.js](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js) は拡張機能が開始してすぐに実行されます。最初にスクリプトは `updateActiveTab()` を呼び出し、ここでは {{WebExtAPIRef("tabs.query")}} を使って現在のタブの `Tabs` オブジェクトを取得して開始し、そのオブジェクトを `updatetab()` に渡します、コードは次の通り:
 
 ```js
-  var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
-  gettingActiveTab.then(updateTab);
+var gettingActiveTab = browser.tabs.query({
+  active: true,
+  currentWindow: true,
+});
+gettingActiveTab.then(updateTab);
 ```
 
 `updatetab()` は 最初にアクティブなタブの URL を `isSupportedProtocol()` に渡します:
@@ -130,12 +133,12 @@ Bookmarks API の使い方を理解するため、[bookmark-it](https://github.c
 `isSupportedProtocol()` はアクティブタブに表示される URL がブックマークできるかを決めます。タブの URL からプロトコルを抽出するために、拡張機能は [HTMLHyperlinkElementUtils](/ja/docs/Web/API/HTMLHyperlinkElementUtils) を利用して `<a>` 要素にタブの URL を追加してから、`protocol` プロパティを使ってプロトコルを取得します。
 
 ```js
-  function isSupportedProtocol(urlString) {
-    var supportedProtocols = ["https:", "http:", "ftp:", "file:"];
-    var url = document.createElement('a');
-    url.href = urlString;
-    return supportedProtocols.indexOf(url.protocol) != -1;
-  }
+function isSupportedProtocol(urlString) {
+  var supportedProtocols = ["https:", "http:", "ftp:", "file:"];
+  var url = document.createElement("a");
+  url.href = urlString;
+  return supportedProtocols.indexOf(url.protocol) != -1;
+}
 ```
 
 ブックマークがプロトコルをサポートしている場合、拡張機能はタブの URL がブックマーク済みかどうかを決めて、その場合に `updateIcon()` を呼び出します:
@@ -152,19 +155,21 @@ Bookmarks API の使い方を理解するため、[bookmark-it](https://github.c
 ```js
 function updateIcon() {
   browser.browserAction.setIcon({
-    path: currentBookmark ? {
-      19: "icons/star-filled-19.png",
-      38: "icons/star-filled-38.png"
-    } : {
-      19: "icons/star-empty-19.png",
-      38: "icons/star-empty-38.png"
-    },
-    tabId: currentTab.id
+    path: currentBookmark
+      ? {
+          19: "icons/star-filled-19.png",
+          38: "icons/star-filled-38.png",
+        }
+      : {
+          19: "icons/star-empty-19.png",
+          38: "icons/star-empty-38.png",
+        },
+    tabId: currentTab.id,
   });
   browser.browserAction.setTitle({
     // Screen readers can see the title
-    title: currentBookmark ? 'Unbookmark it!' : 'Bookmark it!',
-    tabId: currentTab.id
+    title: currentBookmark ? "Unbookmark it!" : "Bookmark it!",
+    tabId: currentTab.id,
   });
 }
 ```
@@ -182,7 +187,7 @@ function toggleBookmark() {
   if (currentBookmark) {
     browser.bookmarks.remove(currentBookmark.id);
   } else {
-    browser.bookmarks.create({title: currentTab.title, url: currentTab.url});
+    browser.bookmarks.create({ title: currentTab.title, url: currentTab.url });
   }
 }
 ```

@@ -3,7 +3,7 @@ title: WheelEvent
 slug: Web/API/WheelEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 El interface **`WheelEvent`** retrata los eventos que ocurren cuando el usuario mueve la rueda del ratón o de un dispositivo similar.
 
@@ -46,9 +46,9 @@ _Este interfaz no define ningún método, pero hereda métodos de estos padres, 
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.WheelEvent")}}
+{{Compat}}
 
 ## Ver también
 

@@ -25,7 +25,7 @@ class caseInsensitiveSearch {
   }
 }
 
-console.log('foobar'.search(new caseInsensitiveSearch('BaR')));
+console.log("foobar".search(new caseInsensitiveSearch("BaR")));
 // expected output: 3
 ```
 
@@ -35,7 +35,7 @@ console.log('foobar'.search(new caseInsensitiveSearch('BaR')));
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Symbol.search")}}
+{{Compat}}
 
 ## 関連情報
 

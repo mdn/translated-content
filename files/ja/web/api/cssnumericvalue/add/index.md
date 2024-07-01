@@ -10,7 +10,7 @@ slug: Web/API/CSSNumericValue/add
 ## 構文
 
 ```js
-add(number)
+add(number);
 ```
 
 ### 引数
@@ -30,7 +30,10 @@ add(number)
 ## 例
 
 ```js
-let mathSum = CSS.px("23").add(CSS.percent("4")).add(CSS.cm("3")).add(CSS.in("9"));
+let mathSum = CSS.px("23")
+  .add(CSS.percent("4"))
+  .add(CSS.cm("3"))
+  .add(CSS.in("9"));
 // Prints "calc(23px + 4% + 3cm + 9in)"
 console.log(mathSum.toString());
 ```

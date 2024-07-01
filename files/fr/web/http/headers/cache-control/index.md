@@ -126,7 +126,7 @@ Cache-Control: no-cache
 
 Si vous souhaitez que les caches vérifient leur contenu à chaque mise à jour tout en réutilisant du contenu stocké, `no-cache` est la directive à utiliser.
 
-On notera que `no-cache` ne signifie pas «&nbsp;ne pas mettre en cache&nbsp;». `no-cache` permet aux caches de stocker une réponse, mais impose une revalidation avant toute réutilisation. Si vous souhaitez effectivement ne pas *stocker* de données pour ne pas avoir de cache du tout, il faudra utiliser la directive `no-store`.
+On notera que `no-cache` ne signifie pas «&nbsp;ne pas mettre en cache&nbsp;». `no-cache` permet aux caches de stocker une réponse, mais impose une revalidation avant toute réutilisation. Si vous souhaitez effectivement ne pas _stocker_ de données pour ne pas avoir de cache du tout, il faudra utiliser la directive `no-store`.
 
 #### `must-revalidate`
 
@@ -371,7 +371,7 @@ Ainsi&nbsp;:
 ```html example-bad
 <!-- index.html -->
 <script src="/assets/react.min.js"></script>
-<img src="/assets/hero.png" width="900" height="400">
+<img src="/assets/hero.png" width="900" height="400" />
 ```
 
 La bibliothèque React pourra changer de version lors d'une mise à jour, et `hero.png` pourra aussi évoluer si l'image est éditée. Il est donc difficile de stocker ces fichiers tels quels dans un cache en le gérant avec `max-age`.
@@ -381,7 +381,7 @@ Dans un tel scénario, on peut régler le problème de cache en suffixant le nom
 ```html example-good
 <!-- index.html -->
 <script src="/assets/react.0.0.0min.js"></script>
-<img src="/assets/hero.png?hash=deadbeef" width="900" height="400">
+<img src="/assets/hero.png?hash=deadbeef" width="900" height="400" />
 ```
 
 Avec ce format, on peut ajouter une valeur élevée pour `max-age` et la directive `immutable`, car le contenu ne changera jamais pour une URL donnée.

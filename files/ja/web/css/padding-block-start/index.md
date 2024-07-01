@@ -1,6 +1,8 @@
 ---
 title: padding-block-start
 slug: Web/CSS/padding-block-start
+l10n:
+  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
 {{CSSRef}}
@@ -13,16 +15,17 @@ slug: Web/CSS/padding-block-start
 
 ```css
 /* <length> 値 */
-padding-block-start: 10px;      /* 絶対的な長さ */
-padding-block-start: 1em;       /* テキストの大きさに対する相対値 */
+padding-block-start: 10px; /* 絶対的な長さ */
+padding-block-start: 1em; /* テキストの大きさに対する相対値 */
 
 /* <percentage> 値 */
-padding-block-start: 5%;        /* ブロックコンテナーの幅に対する割合のパディング */
+padding-block-start: 5%; /* ブロックコンテナーの幅に対する割合のパディング */
 
 /* グローバル値 */
 padding-block-start: inherit;
 padding-block-start: initial;
 padding-block-start: revert;
+padding-block-start: revert-layer;
 padding-block-start: unset;
 ```
 
@@ -31,7 +34,7 @@ padding-block-start: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : パディングの寸法を固定値で指定します。負の値は指定できません。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : パディングの寸法をパーセント値で表したもので、含まれるブロックの _inline-size_ に対する相対値です。負の値は指定できません。
+  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)の[インラインサイズ](/ja/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
 
 ## 解説
 
@@ -49,7 +52,7 @@ padding-block-start: unset;
 
 ## 例
 
-<h3 id="Setting_block_start_padding_for_vertical_text">縦書きテキストにおけるブロック方向の先頭のパディングの設定</h3>
+### 縦書きテキストにおけるブロック方向の先頭のパディングの設定
 
 #### HTML
 
@@ -71,13 +74,13 @@ div {
 .exampleText {
   writing-mode: vertical-lr;
   padding-block-start: 20px;
-  background-color: #C8C800;
+  background-color: #c8c800;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_block_start_padding_for_vertical_text", 140, 140)}}
+{{EmbedLiveSample("縦書きテキストにおけるブロック方向の先頭のパディングの設定", 140, 140)}}
 
 ## 仕様書
 
@@ -89,5 +92,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - 対応づけ先の物理的なプロパティ: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

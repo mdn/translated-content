@@ -3,6 +3,8 @@ title: Request header (リクエストヘッダー)
 slug: Glossary/Request_header
 ---
 
+{{GlossarySidebar}}
+
 **リクエストヘッダー**は、 HTTP リクエストで使用される {{glossary("header", "HTTP ヘッダー")}}であり、メッセージの内容には関連しないものです。 {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language", "Accept-*")}}, {{HTTPHeader("If-Modified-Since", "If-*")}} などのリクエストヘッダーは、条件付きリクエストを行うことができます。他の {{HTTPHeader("Cookie")}}, {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Referer")}} などはサーバーが回答を作成するための文脈を明確にします。
 
 リクエストに現れるすべてのヘッダーが*リクエストヘッダー*であるとは限りません。例えば、 {{HTTPMethod("POST")}} リクエストの中に現れる {{HTTPHeader("Content-Length")}} は、実際にはリクエストメッセージの本文の長さを表す{{glossary("entity header", "エンティティヘッダー")}}です。しかし、これらのエンティティヘッダーもそのような場面ではリクエストヘッダーと呼ばれることがよくあります。

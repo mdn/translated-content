@@ -1,7 +1,9 @@
 ---
 title: DOMException
-slug: Web/API/DomException
+slug: Web/API/DOMException
 ---
+
+{{ APIRef("DOM") }}
 
 La interfaz **`DOMException`** representa un evento anormal (llamado **excepción**) que ocurre como el resultado de llamar a un método o acceder a una propiedad de una API web. Asi es como las condiciones de error se describen en las API web.
 

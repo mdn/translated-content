@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onerror
 slug: Web/API/Window/error_event
-original_slug: Web/API/GlobalEventHandlers/onerror
 ---
 
 {{ ApiRef("HTML DOM") }}
@@ -47,7 +46,7 @@ window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
 
   // Just let default handler run.
   return false;
-}
+};
 ```
 
 ## Notas

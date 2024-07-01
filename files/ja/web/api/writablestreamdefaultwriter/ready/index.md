@@ -1,8 +1,9 @@
 ---
-title: WritableStreamDefaultWriter.ready
+title: "WritableStreamDefaultWriter: ready プロパティ"
+short-title: ready
 slug: Web/API/WritableStreamDefaultWriter/ready
 l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef("Streams")}}
@@ -22,7 +23,7 @@ function sendMessage(message, writableStream) {
   // defaultWriter は WritableStreamDefaultWriter 型です
   const defaultWriter = writableStream.getWriter();
   const encoder = new TextEncoder();
-  const encoded = encoder.encode(message, {stream: true});
+  const encoded = encoder.encode(message, { stream: true });
   encoded.forEach((chunk) => {
     // ストリームとそのライターがデータを
     // 受信できることを確認します。

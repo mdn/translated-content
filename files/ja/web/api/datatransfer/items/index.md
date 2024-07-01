@@ -21,8 +21,12 @@ slug: Web/API/DataTransfer/items
 
 ```html
 <ul>
-  <li id="source1" draggable="true">項目 1 をドロップゾーンにドラッグしてください</li>
-  <li id="source2" draggable="true">項目 2 をドロップゾーンにドラッグしてください</li>
+  <li id="source1" draggable="true">
+    項目 1 をドロップゾーンにドラッグしてください
+  </li>
+  <li id="source2" draggable="true">
+    項目 2 をドロップゾーンにドラッグしてください
+  </li>
 </ul>
 <div id="target">ドロップゾーン</div>
 
@@ -52,40 +56,40 @@ div {
 
 ```js
 function dragstartHandler(ev) {
- log(`dragstart: target.id = ${ev.target.id}`);
- // この要素の ID をドラッグの内容に追加し、ドロップハンドラーがどの
- // 要素をツリーに追加すればよいかを知ることができるようにします。
- ev.dataTransfer.setData("text/plain", ev.target.id);
- ev.dataTransfer.effectAllowed = "move";
+  log(`dragstart: target.id = ${ev.target.id}`);
+  // この要素の ID をドラッグの内容に追加し、ドロップハンドラーがどの
+  // 要素をツリーに追加すればよいかを知ることができるようにします。
+  ev.dataTransfer.setData("text/plain", ev.target.id);
+  ev.dataTransfer.effectAllowed = "move";
 }
 
 function dropHandler(ev) {
- ev.preventDefault();
- // ターゲットの ID を取得し、移動した要素をターゲットの DOM に追加します
- const data = ev.dataTransfer.getData("text");
- ev.target.appendChild(document.getElementById(data));
- // 各項目の "kind" と "type" を表示する
- if (ev.dataTransfer.items != null) {
-   for (const item of ev.dataTransfer.items) {
-     log(`kind = ${item.kind}, type = ${item.type}`);
-   }
- }
+  ev.preventDefault();
+  // ターゲットの ID を取得し、移動した要素をターゲットの DOM に追加します
+  const data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+  // 各項目の "kind" と "type" を表示する
+  if (ev.dataTransfer.items != null) {
+    for (const item of ev.dataTransfer.items) {
+      log(`kind = ${item.kind}, type = ${item.type}`);
+    }
+  }
 }
 
 function dragoverHandler(ev) {
- ev.preventDefault();
- // dropEffect を move に設定する
- ev.dataTransfer.dropEffect = "move"
+  ev.preventDefault();
+  // dropEffect を move に設定する
+  ev.dataTransfer.dropEffect = "move";
 }
 
 const source1 = document.querySelector("#source1");
 const source2 = document.querySelector("#source2");
 const target = document.querySelector("#target");
 
-source1.addEventListener("dragstart", dragstartHandler)
-source2.addEventListener("dragstart", dragstartHandler)
-target.addEventListener("dragover", dragoverHandler)
-target.addEventListener("drop", dropHandler)
+source1.addEventListener("dragstart", dragstartHandler);
+source2.addEventListener("dragstart", dragstartHandler);
+target.addEventListener("dragover", dragoverHandler);
+target.addEventListener("drop", dropHandler);
 
 function log(message) {
   const output = document.querySelector("#output");

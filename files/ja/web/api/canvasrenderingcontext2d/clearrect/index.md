@@ -1,6 +1,9 @@
 ---
-title: CanvasRenderingContext2D.clearRect()
+title: "CanvasRenderingContext2D: clearRect() メソッド"
+short-title: clearRect()
 slug: Web/API/CanvasRenderingContext2D/clearRect
+l10n:
+  sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
 ---
 
 {{APIRef}}
@@ -11,11 +14,11 @@ slug: Web/API/CanvasRenderingContext2D/clearRect
 
 ## 構文
 
-```js
-void ctx.clearRect(x, y, width, height);
+```js-nolint
+clearRect(x, y, width, height)
 ```
 
-`clearRect()` メソッドは、矩形領域のピクセルを透明な黒 (`rgba(0,0,0,0)`) に設定します。矩形の角は `(x, y)` にあり、大きさは `width` と `height` で指定されます。
+`clearRect()` メソッドは、矩形領域のピクセルを透明な黒 (`rgb(0 0 0 / 0%)`) に設定します。矩形の左上の角は `(x, y)` にあり、大きさは `width` と `height` で指定されます。
 
 ### 引数
 
@@ -28,6 +31,10 @@ void ctx.clearRect(x, y, width, height);
 - `height`
   - : 矩形領域の高さを指定します。
 
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
 ## 例
 
 ### キャンバス全体の消去
@@ -35,8 +42,8 @@ void ctx.clearRect(x, y, width, height);
 このコードでは、キャンバス全体を消去します。これは一般的に、アニメーションの各フレームの開始時に必要とされます。消去される領域の寸法は {{HtmlElement("canvas")}} 要素の `width` と `height` 属性に等しくなるように設定します。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 ```
 
@@ -55,17 +62,17 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
 消去する領域はの形状は矩形で、左上の角が (10, 10) になっています。幅は 120、高さは 100 です。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // 黄色い背景を描画
 ctx.beginPath();
-ctx.fillStyle = '#ff6';
+ctx.fillStyle = "#ff6";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 // 青い三角形を描画
 ctx.beginPath();
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.moveTo(20, 20);
 ctx.lineTo(180, 20);
 ctx.lineTo(130, 130);

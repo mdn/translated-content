@@ -16,13 +16,19 @@ slug: Web/API/Screen/orientation
 ## 例
 
 ```js
-var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
+var orientation =
+  (screen.orientation || {}).type ||
+  screen.mozOrientation ||
+  screen.msOrientation;
 
 if (orientation === "landscape-primary") {
   console.log("良い感じですね。");
 } else if (orientation === "landscape-secondary") {
   console.log("うーん…。画面が上下逆です！");
-} else if (orientation === "portrait-secondary" || orientation === "portrait-primary") {
+} else if (
+  orientation === "portrait-secondary" ||
+  orientation === "portrait-primary"
+) {
   console.log("うーん…。スクリーンを横向きにした方がいいですよ");
 } else if (orientation === undefined) {
   console.log("このブラウザーは画面方向 API に対応していません :(");

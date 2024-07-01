@@ -1,5 +1,5 @@
 ---
-title: '-moz-image-rect'
+title: "-moz-image-rect"
 slug: Web/CSS/-moz-image-rect
 ---
 
@@ -46,14 +46,14 @@ CSS では、1 つのコンテナーのスタイルを定義した後、画像�
 
 ```css
 #container {
-  width:267px;
-  height:272px;
-  top:100px;
-  left:100px;
-  position:absolute;
-  font-size:16px;
-  text-shadow:white 0px 0px 6px;
-  text-align:center;
+  width: 267px;
+  height: 272px;
+  top: 100px;
+  left: 100px;
+  position: absolute;
+  font-size: 16px;
+  text-shadow: white 0px 0px 6px;
+  text-align: center;
 }
 ```
 
@@ -62,9 +62,9 @@ CSS では、1 つのコンテナーのスタイルを定義した後、画像�
 ```css
 #box1 {
   background-image: -moz-image-rect(url(firefox.png), 0%, 50%, 50%, 0%);
-  width:133px;
-  height:136px;
-  position:absolute;
+  width: 133px;
+  height: 136px;
+  position: absolute;
 }
 ```
 
@@ -73,9 +73,9 @@ CSS では、1 つのコンテナーのスタイルを定義した後、画像�
 ```css
 #box2 {
   background-image: -moz-image-rect(url(firefox.png), 0%, 100%, 50%, 50%);
-  width:133px;
-  height:136px;
-  position:absolute;
+  width: 133px;
+  height: 136px;
+  position: absolute;
 }
 ```
 
@@ -86,15 +86,15 @@ CSS では、1 つのコンテナーのスタイルを定義した後、画像�
 ```css
 #box3 {
   background-image: -moz-image-rect(url(firefox.png), 50%, 50%, 100%, 0%);
-  width:133px;
-  height:136px;
-  position:absolute;
+  width: 133px;
+  height: 136px;
+  position: absolute;
 }
 #box4 {
   background-image: -moz-image-rect(url(firefox.png), 50%, 100%, 100%, 50%);
-  width:133px;
-  height:136px;
-  position:absolute;
+  width: 133px;
+  height: 136px;
+  position: absolute;
 }
 ```
 
@@ -119,16 +119,20 @@ HTML はとてもシンプルです。
 
 ```js
 function rotate() {
-  var prevStyle = window.getComputedStyle(document.getElementById("box4"), null).getPropertyValue("background-image");
+  var prevStyle = window
+    .getComputedStyle(document.getElementById("box4"), null)
+    .getPropertyValue("background-image");
 
   // 最後の 1 枚を保存したところで、回転を開始します。
 
-  for (var i=1; i<=4; i++) {
+  for (var i = 1; i <= 4; i++) {
     var curId = "box" + i;
 
     // 背景画像のをずらす
 
-    var curStyle = window.getComputedStyle(document.getElementById(curId), null).getPropertyValue("background-image");
+    var curStyle = window
+      .getComputedStyle(document.getElementById(curId), null)
+      .getPropertyValue("background-image");
     document.getElementById(curId).style.backgroundImage = prevStyle;
     prevStyle = curStyle;
   }

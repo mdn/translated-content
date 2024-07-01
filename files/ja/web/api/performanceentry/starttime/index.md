@@ -1,84 +1,76 @@
 ---
-title: PerformanceEntry.startTime
+title: "PerformanceEntry: startTime プロパティ"
+short-title: startTime
 slug: Web/API/PerformanceEntry/startTime
+l10n:
+  sourceCommit: 99a75e695dbb46731dca4757e9d4c42d80bb52fc
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
-**`startTime`** プロパティは、{{domxref("PerformanceEntry","performance entry")}} のうち最初に記録された {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
+**`startTime`** プロパティは読み取り専用で、{{domxref("PerformanceEntry","パフォーマンス項目", "", "no-code")}}のうち最初に記録された {{domxref("DOMHighResTimeStamp","タイムスタンプ", "", "no-code")}}を返します。このプロパティの意味は、この項目の {{domxref("PerformanceEntry.entryType", "entryType")}} の値によって異なります。
 
-{{AvailableInWorkers}}
+## 値
 
-このプロパティによって返される値は、パフォーマンスエントリの{{domxref("PerformanceEntry.entryType","タイプ")}}によって異なります。
+この{{domxref("PerformanceEntry","パフォーマンス項目")}}が作成されたときの最初のタイムスタンプを表す {{domxref("DOMHighResTimeStamp")}} です。
 
-- "`frame`" - フレームが開始されたときに{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します
-- "`mark`" - マークが{{domxref("Performance.mark","performance.mark()")}} の呼び出しによって作成された場合は、{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します
-- "`measure`" - メジャーが　{{domxref("Performance.measure","performance.measure()")}} の呼び出しによって作成された場合、{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します
-- "`navigation`" - "`0`" の値を持つ{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します
-- "`resource`" - ブラウザー{{domxref( "PerformanceEntry.fetchStart","リソースの取得")}}の直前に{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します
+このプロパティの意味は、この項目の {{domxref("PerformanceEntry.entryType", "entryType")}} の値によって異なります。
 
-このプロパティは {{readonlyInline}} です。
-
-## 構文
-
-```
-entry.startTime;
-```
-
-### 返値
-
-{{domxref("PerformanceEntry","パフォーマンスエントリ")}}が作成されたときの最初のタイムスタンプを表す {{domxref("DOMHighResTimeStamp")}}。
-
-> **メモ:** パフォーマンスエントリが "`resource`" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つ場合 (つまり、エントリが{{domxref("PerformanceResourceTiming")}} オブジェクトである場合)、このプロパティは{{domxref("PerformanceEntry.fetchStart")}} {{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。
+- `element`
+  - : この項目の {{domxref("PerformanceElementTiming.renderTime", "renderTime")}} の値が `0` でない場合はその値、そうでない場合はこの項目の {{domxref("PerformanceElementTiming.loadTime", "loadTime")}} の値。
+- `event`
+  - : イベントが作成された時刻、すなわちそのイベントの [`timeStamp`](/ja/docs/Web/API/Event/timeStamp) プロパティです。
+- `first-input`
+  - : 最初の入力イベントが作成された時刻、すなわちそのイベtのの [`timeStamp`](/ja/docs/Web/API/Event/timeStamp) プロパティです。
+- `largest-contentful-paint`
+  - : この項目の {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} の値が `0` でない場合はその値、そうでない場合はこの項目の {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} の値。
+- `layout-shift`
+  - : レイアウトシフトが始まった時刻。
+- `longtask`
+  - : タスクが始まった時刻。
+- `mark`
+  - : {{domxref("Performance.mark","performance.mark()")}} の呼び出しによってマークが作成された時刻。
+- `measure`
+  - : {{domxref("Performance.measure","performance.measure()")}} の呼び出しによって指標が作成された時刻。
+- `navigation`
+  - : 常に `0` です。
+- `paint`
+  - : 描画が発生した時刻。
+- `resource`
+  - : この項目の {{domxref("PerformanceResourceTiming.fetchStart", "fetchStart")}} プロパティの値。
+- `taskattribution`
+  - : 常に `0` です。
+- `visibility-state`
+  - : 可視状態の変更が発生した時刻。
 
 ## 例
 
-次の例は、`startTime` プロパティの使用方法を示しています。
+### startTime プロパティの使用
+
+次の例は、パフォーマンス監視中にログ出力することができる `startTime` プロパティの使用例を示しています。
+
+メモ: {{domxref("performance.mark()")}} メソッドでは、自分自身で `startTime` を設定することができ、 {{domxref("performance.measure()")}} メソッドでは、測定の開始を設定することができます。
 
 ```js
-function run_PerformanceEntry() {
-  log("PerformanceEntry support ...");
+performance.mark("my-mark");
+performance.mark("my-other-mark", { startTime: 12.5 });
 
-  if (performance.mark === undefined) {
-    log("... performance.mark Not supported");
-    return;
-  }
+loginButton.addEventListener("click", (clickEvent) => {
+  performance.measure("login-click", { start: clickEvent.timeStamp });
+});
 
-  // Create some performance entries via the mark() method
-  performance.mark("Begin");
-  do_work(50000);
-  performance.mark("End");
-
-  // Use getEntries() to iterate through the each entry
-  var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
-    log("Entry[" + i + "]");
-    check_PerformanceEntry(p[i]);
-  }
-}
-function check_PerformanceEntry(obj) {
-  var properties = ["name", "entryType", "startTime", "duration"];
-  var methods = ["toJSON"];
-
-  for (var i=0; i < properties.length; i++) {
-    // check each property
-    var supported = properties[i] in obj;
-    if (supported)
-      log("..." + properties[i] + " = " + obj[properties[i]]);
-    else
-      log("..." + properties[i] + " = Not supported");
-  }
-  for (var i=0; i < methods.length; i++) {
-    // check each method
-    var supported = typeof obj[methods[i]] == "function";
-    if (supported) {
-      var js = obj[methods[i]]();
-      log("..." + methods[i] + "() = " + JSON.stringify(js));
-    } else {
-      log("..." + methods[i] + " = Not supported");
+function perfObserver(list, observer) {
+  list.getEntries().forEach((entry) => {
+    if (entry.entryType === "mark") {
+      console.log(`${entry.name}'s startTime: ${entry.startTime}`);
     }
-  }
+    if (entry.entryType === "measure") {
+      console.log(`${entry.name}'s duration: ${entry.duration}`);
+    }
+  });
 }
+const observer = new PerformanceObserver(perfObserver);
+observer.observe({ entryTypes: ["measure", "mark"] });
 ```
 
 ## 仕様書
@@ -87,4 +79,4 @@ function check_PerformanceEntry(obj) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceEntry.startTime")}}
+{{Compat}}

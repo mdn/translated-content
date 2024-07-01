@@ -1,10 +1,6 @@
 ---
 title: Стандартные встроенные объекты
 slug: Web/JavaScript/Reference/Global_Objects
-tags:
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects
 ---
 
 {{jsSidebar("Objects")}}

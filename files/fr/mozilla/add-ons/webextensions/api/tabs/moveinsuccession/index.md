@@ -1,19 +1,9 @@
 ---
 title: tabs.moveInSuccession()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - onglets
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Modifie la relation de succession pour un groupe d'onglets.
 
@@ -28,7 +18,7 @@ While the successor tab can be assigned with {{WebExtAPIRef('tabs.update()')}}, 
 ## Syntaxe
 
 ```js
-browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, {insert:true})
+browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, { insert: true });
 ```
 
 ### Paramètres
@@ -46,6 +36,6 @@ browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, {insert:true})
     - `insert` {{optional_inline}}
       - : `boolean`. Détermine s'il faut lier les prédécesseurs ou successeurs actuels (selon `options.append`) de `tabId` à l'autre côté de la chaîne après son ajout ou son ajout. Si true, l'un des événements suivants se produit : si `options.append` est `false`, le premier onglet du tableau est défini comme successeur de tout prédécesseur actuel de `tabId`; Si `options.append` est `true`, le successeur actuel de tabId est défini comme le successeur du dernier onglet du tableau. La valeur par défaut est `false`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.moveInSuccession", 10)}}
+{{Compat}}

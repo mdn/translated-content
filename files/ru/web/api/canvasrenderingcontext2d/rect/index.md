@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.rect()
 slug: Web/API/CanvasRenderingContext2D/rect
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
-translation_of: Web/API/CanvasRenderingContext2D/rect
 ---
+
 {{APIRef}}
 
 Метод **`CanvasRenderingContext2D.rect()`**, предоставляемый Canvas 2D API, создаёт контур прямоугольника в позиции _(x, y)_, размеры которого устанавливаются аргументами _width_ и _height_. Четыре точки прямоугольника соединяются прямыми линиями, и получившийся фрагмент контура отмечается как замкнутый, так что вы можете выполнить его заливку или обрисовать контур.
@@ -61,7 +55,8 @@ ctx.fill();
 </div>
 <textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.fill();</textarea>
+ctx.fill();</textarea
+>
 ```
 
 ```js hidden
@@ -77,14 +72,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

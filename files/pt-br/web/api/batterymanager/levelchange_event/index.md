@@ -1,7 +1,6 @@
 ---
 title: BatteryManager.onlevelchange
 slug: Web/API/BatteryManager/levelchange_event
-original_slug: Web/API/BatteryManager/onlevelchange
 ---
 
 {{APIRef("Battery API")}}

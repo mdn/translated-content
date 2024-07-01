@@ -31,9 +31,11 @@ slug: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 使用 JavaScript 也可輕易新增消息來源的閱讀工具，只要用 `navigator.registerContentHandler()` 函式即可，如下：
 
 ```js
-navigator.registerContentHandler("application/vnd.mozilla.maybe.feed",
-                                  "http://www.theeasyreaderurl.com?feed=%s",
-                                  "Easy Reader");
+navigator.registerContentHandler(
+  "application/vnd.mozilla.maybe.feed",
+  "http://www.theeasyreaderurl.com?feed=%s",
+  "Easy Reader",
+);
 ```
 
 ## 新增本機閱讀程式

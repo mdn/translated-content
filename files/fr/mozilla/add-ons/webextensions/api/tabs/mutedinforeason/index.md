@@ -1,20 +1,9 @@
 ---
 title: tabs.MutedInfoReason
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - MutedInfoReason
-  - Non-standard
-  - Refrence
-  - Type
-  - WebExtensions
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Spécifie la raison pour laquelle un onglet a été désactivé ou désactivé.
 
@@ -29,9 +18,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - "user"
   - : L'utilisateur définit l'état muet.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.MutedInfoReason")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

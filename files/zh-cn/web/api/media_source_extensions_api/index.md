@@ -57,10 +57,6 @@ DASH 的两个最常见的用例涉及“点播”或“直播”观看内容。
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - [媒体源扩展的音视频资源转码](/zh-CN/docs/Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE)

@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/charAt
 ## 구문
 
 ```js
-str.charAt(index)
+str.charAt(index);
 ```
 
 ### 매개변수
@@ -40,15 +40,15 @@ str.charAt(index)
 아래 예제는 문자열 `"Brave new world"`의 다른 위치에 있는 문자들을 출력합니다.
 
 ```js
-var anyString = 'Brave new world';
-console.log("The character at index 0   is '" + anyString.charAt()   + "'");
+var anyString = "Brave new world";
+console.log("The character at index 0   is '" + anyString.charAt() + "'");
 // No index was provided, used 0 as default
 
-console.log("The character at index 0   is '" + anyString.charAt(0)   + "'");
-console.log("The character at index 1   is '" + anyString.charAt(1)   + "'");
-console.log("The character at index 2   is '" + anyString.charAt(2)   + "'");
-console.log("The character at index 3   is '" + anyString.charAt(3)   + "'");
-console.log("The character at index 4   is '" + anyString.charAt(4)   + "'");
+console.log("The character at index 0   is '" + anyString.charAt(0) + "'");
+console.log("The character at index 1   is '" + anyString.charAt(1) + "'");
+console.log("The character at index 2   is '" + anyString.charAt(2) + "'");
+console.log("The character at index 3   is '" + anyString.charAt(3) + "'");
+console.log("The character at index 4   is '" + anyString.charAt(4) + "'");
 console.log("The character at index 999 is '" + anyString.charAt(999) + "'");
 ```
 
@@ -68,7 +68,7 @@ The character at index 999 is ''
 아래 예제는 문자열 전체를 순회하며 각 문자가 완전한지 확인하는 프로그램입니다. 심지어 [기본 다국어 평면(Basic Multilingual Plane)](https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C_%ED%8F%89%EB%A9%B4)에 포함되지 않은 문자들이 포함되어 있다고 하더라도 잘 동작합니다.
 
 ```js
-var str = 'A \uD87E\uDC04 Z'; // 기본 다국어 평면에 포함되지 않는 문자를 사용합니다.
+var str = "A \uD87E\uDC04 Z"; // 기본 다국어 평면에 포함되지 않는 문자를 사용합니다.
 for (var i = 0, chr; i < str.length; i++) {
   if ((chr = getWholeChar(str, i)) === false) {
     continue;
@@ -84,34 +84,34 @@ function getWholeChar(str, i) {
   var code = str.charCodeAt(i);
 
   if (Number.isNaN(code)) {
-    return ''; // Position not found
+    return ""; // Position not found
   }
-  if (code < 0xD800 || code > 0xDFFF) {
+  if (code < 0xd800 || code > 0xdfff) {
     return str.charAt(i);
   }
 
   // High surrogate (could change last hex to 0xDB7F to treat high private
   // surrogates as single characters)
-  if (0xD800 <= code && code <= 0xDBFF) {
-    if (str.length <= (i + 1)) {
-      throw 'High surrogate without following low surrogate';
+  if (0xd800 <= code && code <= 0xdbff) {
+    if (str.length <= i + 1) {
+      throw "High surrogate without following low surrogate";
     }
     var next = str.charCodeAt(i + 1);
-      if (0xDC00 > next || next > 0xDFFF) {
-        throw 'High surrogate without following low surrogate';
-      }
-      return str.charAt(i) + str.charAt(i + 1);
+    if (0xdc00 > next || next > 0xdfff) {
+      throw "High surrogate without following low surrogate";
+    }
+    return str.charAt(i) + str.charAt(i + 1);
   }
   // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
   if (i === 0) {
-    throw 'Low surrogate without preceding high surrogate';
+    throw "Low surrogate without preceding high surrogate";
   }
   var prev = str.charCodeAt(i - 1);
 
   // (could change last hex to 0xDB7F to treat high private
   // surrogates as single characters)
-  if (0xD800 > prev || prev > 0xDBFF) {
-    throw 'Low surrogate without preceding high surrogate';
+  if (0xd800 > prev || prev > 0xdbff) {
+    throw "Low surrogate without preceding high surrogate";
   }
   // We can pass over low surrogates now as the second component
   // in a pair which we have already processed
@@ -122,7 +122,7 @@ function getWholeChar(str, i) {
 [비구조화 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)을 허용하는 ECMAScript 2016 환경에서는 아래 예제 코드가 더 간결하고, 문자가 [서러게이트 페어](https://ko.wikipedia.org/wiki/UTF-16)가 되는 것을 허용할 때는 증가해야 하는 변수를 자동적으로 증가하기에 위의 코드보다 다소 더 유연합니다.
 
 ```js
-var str = 'A\uD87E\uDC04Z'; // We could also use a non-BMP character directly
+var str = "A\uD87E\uDC04Z"; // We could also use a non-BMP character directly
 for (var i = 0, chr; i < str.length; i++) {
   [chr, i] = getWholeCharAndI(str, i);
   // Adapt this line at the top of each loop, passing in the whole string and
@@ -136,34 +136,34 @@ function getWholeCharAndI(str, i) {
   var code = str.charCodeAt(i);
 
   if (Number.isNaN(code)) {
-    return ''; // Position not found
+    return ""; // Position not found
   }
-  if (code < 0xD800 || code > 0xDFFF) {
+  if (code < 0xd800 || code > 0xdfff) {
     return [str.charAt(i), i]; // Normal character, keeping 'i' the same
   }
 
   // High surrogate (could change last hex to 0xDB7F to treat high private
   // surrogates as single characters)
-  if (0xD800 <= code && code <= 0xDBFF) {
-    if (str.length <= (i + 1)) {
-      throw 'High surrogate without following low surrogate';
+  if (0xd800 <= code && code <= 0xdbff) {
+    if (str.length <= i + 1) {
+      throw "High surrogate without following low surrogate";
     }
     var next = str.charCodeAt(i + 1);
-      if (0xDC00 > next || next > 0xDFFF) {
-        throw 'High surrogate without following low surrogate';
-      }
-      return [str.charAt(i) + str.charAt(i + 1), i + 1];
+    if (0xdc00 > next || next > 0xdfff) {
+      throw "High surrogate without following low surrogate";
+    }
+    return [str.charAt(i) + str.charAt(i + 1), i + 1];
   }
   // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
   if (i === 0) {
-    throw 'Low surrogate without preceding high surrogate';
+    throw "Low surrogate without preceding high surrogate";
   }
   var prev = str.charCodeAt(i - 1);
 
   // (could change last hex to 0xDB7F to treat high private surrogates
   // as single characters)
-  if (0xD800 > prev || prev > 0xDBFF) {
-    throw 'Low surrogate without preceding high surrogate';
+  if (0xd800 > prev || prev > 0xdbff) {
+    throw "Low surrogate without preceding high surrogate";
   }
   // Return the next character instead (and increment)
   return [str.charAt(i + 1), i + 1];
@@ -176,12 +176,12 @@ function getWholeCharAndI(str, i) {
 
 ```js
 function fixedCharAt(str, idx) {
-  var ret = '';
-  str += '';
+  var ret = "";
+  str += "";
   var end = str.length;
 
   var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while ((surrogatePairs.exec(str)) != null) {
+  while (surrogatePairs.exec(str) != null) {
     var li = surrogatePairs.lastIndex;
     if (li - 2 < idx) {
       idx++;
@@ -191,12 +191,15 @@ function fixedCharAt(str, idx) {
   }
 
   if (idx >= end || idx < 0) {
-    return '';
+    return "";
   }
 
   ret += str.charAt(idx);
 
-  if (/[\uD800-\uDBFF]/.test(ret) && /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))) {
+  if (
+    /[\uD800-\uDBFF]/.test(ret) &&
+    /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))
+  ) {
     // Go one further, since one of the "characters" is part of a surrogate pair
     ret += str.charAt(idx + 1);
   }

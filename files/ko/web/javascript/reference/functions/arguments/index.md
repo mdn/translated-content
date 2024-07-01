@@ -2,6 +2,7 @@
 title: arguments 객체
 slug: Web/JavaScript/Reference/Functions/arguments
 ---
+
 {{jsSidebar("Functions")}}
 
 **`arguments`** 객체는 함수에 전달된 인수에 해당하는 `Array` 형태의 객체입니다.
@@ -25,15 +26,15 @@ slug: Web/JavaScript/Reference/Functions/arguments
 예를 들어, 함수가 세 개의 인수를 받은 경우 다음과 같이 접근할 수 있습니다.
 
 ```js
-arguments[0]
-arguments[1]
-arguments[2]
+arguments[0];
+arguments[1];
+arguments[2];
 ```
 
 각 인수를 설정하거나 재할당할 수도 있습니다.
 
 ```js
-arguments[1] = 'new value';
+arguments[1] = "new value";
 ```
 
 `arguments` 객체는 {{jsxref("Array")}}가 아닙니다. `Array`와 비슷하지만, {{jsxref("Array.prototype.length", "length")}} 빼고는 {{jsxref("Array.prototype.pop", "pop()")}}과 같은 어떤 `Array` 속성도 없습니다. 그러나 실제 `Array`로 변환할 수 있습니다:
@@ -130,7 +131,7 @@ foo(1, 2, 3); // { "0": 1, "1": 2, "2": 3 }
 그러나, 비엄격 함수에서는 **mapped `arguments` 객체**는 함수가 어떤 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 또는 [비구조화된 매개변수](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)든 포함하지 **않는** 경우에만 제공됩니다. 예를 들어, 기본 매개변수를 사용하는 다음 함수에서는, 100 대신에 `10`이 반환됩니다:
 
 ```js
-function bar(a=1) {
+function bar(a = 1) {
   arguments[0] = 100;
   return a;
 }

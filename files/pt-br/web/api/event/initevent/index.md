@@ -46,14 +46,11 @@ elem.dispatchEvent(event);
 
 ## Especificações
 
-| Especificação                                                                                        | Estado                           | Comentário                                                                                  |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-event-initevent','Event.initEvent()')}}         | {{Spec2("DOM WHATWG")}} | From {{SpecName('DOM2 Events')}}, deprecated it, superseded by event constructors. |
-| {{SpecName('DOM2 Events','##Events-Event-initEvent','Event.initEvent()')}} | {{Spec2('DOM2 Events')}} | Initial definition.                                                                         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Event.initEvent")}}
+{{Compat}}
 
 ## Veja também
 

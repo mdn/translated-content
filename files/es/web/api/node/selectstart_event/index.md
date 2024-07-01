@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onselectstart
 slug: Web/API/Node/selectstart_event
-original_slug: Web/API/Document/selectstart_event
 ---
 
 {{ApiRef('DOM')}}{{SeeCompatTable}}

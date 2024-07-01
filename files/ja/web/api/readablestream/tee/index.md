@@ -1,8 +1,9 @@
 ---
-title: ReadableStream.tee()
+title: "ReadableStream: tee() メソッド"
+short-title: tee()
 slug: Web/API/ReadableStream/tee
 l10n:
-  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
+  sourceCommit: d41c5446d4ef257280fae9b78e2298ced8954a95
 ---
 
 {{APIRef("Streams")}}
@@ -53,7 +54,7 @@ function fetchStream(stream, list) {
   // read() は、値を受け取ったときに解決するプロミスを返します
   reader.read().then(function processText({ done, value }) {
     // 結果オブジェクトには 2 つのプロパティが含まれます。
-    // done  - ストリームがすべてのデータを既に提供している場合は true。
+    // done - ストリームがすべてのデータを既に提供している場合は true。
     // value - 一部のデータ。 done が true の場合、常に undefined。
     if (done) {
       console.log("Stream complete");
@@ -63,7 +64,7 @@ function fetchStream(stream, list) {
     // フェッチしたストリームの値は Uint8Array です
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
+    let listItem = document.createElement("li");
     listItem.textContent = `Read ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list.appendChild(listItem);
 
@@ -80,3 +81,8 @@ function fetchStream(stream, list) {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} コンストラクター
+- [ストリームの分岐](/ja/docs/Web/API/Streams_API/Using_readable_streams#ストリームの分岐)

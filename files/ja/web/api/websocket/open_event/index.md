@@ -1,6 +1,9 @@
 ---
-title: 'WebSocket: open イベント'
+title: "WebSocket: open イベント"
+short-title: open
 slug: Web/API/WebSocket/open_event
+l10n:
+  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
 {{APIRef}}
@@ -12,9 +15,9 @@ slug: Web/API/WebSocket/open_event
 イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('open', event => { })
+addEventListener("open", (event) => {});
 
-onopen = event => { }
+onopen = (event) => {};
 ```
 
 ## イベント型
@@ -25,11 +28,11 @@ onopen = event => { }
 
 ```js
 // WebSocket の接続を作成
-const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket("ws://localhost:8080");
 
 // 接続が開かれた場合
-socket.addEventListener('open', (event) => {
-  socket.send('Hello Server!');
+socket.addEventListener("open", (event) => {
+  socket.send("Hello Server!");
 });
 ```
 

@@ -63,11 +63,11 @@ blockquote {
 
 ```html
 <blockquote>
-<p>この段落は日本語ですが、間違って右から左へ書かれています。<p>
+  <p>この段落は日本語ですが、間違って右から左へ書かれています。</p>
 </blockquote>
 
 <blockquote>
-<p>هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.<p>
+  <p>هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.</p>
 </blockquote>
 ```
 
@@ -85,4 +85,4 @@ blockquote {
 
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("writing-mode")}}
-- HTML の {{htmlattrxref("dir")}} グローバル属性
+- HTML の [`dir`](/ja/docs/Web/HTML/Global_attributes#dir) グローバル属性

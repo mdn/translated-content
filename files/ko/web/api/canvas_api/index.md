@@ -1,7 +1,6 @@
 ---
 title: Canvas API
 slug: Web/API/Canvas_API
-original_slug: Web/HTML/Canvas
 ---
 
 {{DefaultAPISidebar("Canvas API")}}
@@ -27,10 +26,10 @@ canvas에 초록색 사각형을 그리는 간단한 예시입니다.
 실제 그리기는 {{domxref("CanvasRenderingContext2D")}} 인터페이스를 사용해 수행됩니다. {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 프로퍼티는 사각형을 초록색으로 만듭니다. {{domxref("CanvasRenderingContext2D.fillRect()", "fillRect()")}} 메소드는 좌측 상단 코너를 (10, 10) 위치에 놓으며, 너비를 150, 높이를 100으로 지정합니다.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 150, 100);
 ```
 

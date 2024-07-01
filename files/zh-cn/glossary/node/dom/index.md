@@ -1,12 +1,15 @@
 ---
-title: Node (DOM)
+title: 节点（DOM）
 slug: Glossary/Node/DOM
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-在 {{Glossary("DOM")}} 的上下文中，节点（Node）是节点树中的单个点。包括文档本身、元素、文本以及注释都属于是节点。
+{{GlossarySidebar}}
 
-## 了解更多
+在 {{Glossary("DOM")}} 的上下文中，**节点**是节点树中的单个点。文档本身、元素、文本以及注释都是节点。
 
-### 技术信息
+## 参见
 
-- The [node tree](https://dom.spec.whatwg.org/#concept-node) WHATWG spec
+- WHATWG 规范中的[节点树](https://dom.spec.whatwg.org/#concept-node)
+- [Node](/zh-CN/docs/Web/API/Node) 对象

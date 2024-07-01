@@ -3,6 +3,8 @@ title: border-top-left-radius
 slug: Web/CSS/border-top-left-radius
 ---
 
+{{CSSRef}}
+
 ## 概要
 
 **`border-top-left-radius`** 用来设置元素左上角的圆角效果。这段圆弧（角）可以是圆或椭圆的一部分。如果其中有一个值为 0，那么将无圆角效果（见 **`border-top-left-radius`** 取值方式)。
@@ -187,6 +189,6 @@ div {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - border-radius 相关 CSS 属性：{{cssxref("border-radius")}}, 其他边角属性： {{cssxref("border-top-right-radius")}}, {{cssxref("border-bottom-right-radius")}}, and {{cssxref("border-bottom-left-radius")}}.

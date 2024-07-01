@@ -1,13 +1,16 @@
 ---
-title: XMLHttpRequest.send()
+title: "XMLHttpRequest: send() メソッド"
+short-title: send()
 slug: Web/API/XMLHttpRequest/send
+l10n:
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 {{domxref("XMLHttpRequest")}} の **`send()`** メソッドは、リクエストをサーバーに送信します。
 
-リクエストが非同期の場合 (これが既定)、このメソッドはリクエストが送信されるとすぐに戻り、結果はイベントを用いて配信されます。リクエストが同期の場合、このメソッドはレスポンスが到着するまで戻りません。
+リクエストが非同期の場合（これが既定）、このメソッドはリクエストが送信されるとすぐに戻り、結果はイベントを用いて配信されます。リクエストが同期の場合、このメソッドはレスポンスが到着するまで戻りません。
 
 `send()` はリクエストの本文を示す引数を一つ受け取ることができます。これは主に {{HTTPMethod("PUT")}} のようなリクエストに使用されます。リクエストメソッドが {{HTTPMethod("GET")}} または {{HTTPMethod("HEAD")}} であれば、 `body` 引数は無視され、リクエストの本文は `null` に設定されます。
 
@@ -15,8 +18,9 @@ slug: Web/API/XMLHttpRequest/send
 
 ## 構文
 
-```js
-XMLHttpRequest.send(body)
+```js-nolint
+send()
+send(body)
 ```
 
 ### 引数
@@ -26,16 +30,16 @@ XMLHttpRequest.send(body)
   - : XHR のリクエストの中で送られる本文データです。次のものが使用できます。
 
     - {{domxref("Document")}}: 送信前にシリアライズされている場合。
-    - `BodyInit`: [Fetch の仕様書](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit)によれば、 {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} のオブジェクトが利用できます。
+    - `XMLHttpRequestBodyInit`: [Fetch の仕様書](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit)によれば、{{domxref("Blob")}}、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("FormData")}}、{{domxref("URLSearchParams")}}、文字列リテラル、オブジェクトが利用できます。
     - `null`
 
     body に値が設定されていない場合、既定値の `null` が使用されます。
 
-バイナリコンテンツの送信 (例えばファイルのアップロード) の最適な方法は、 {{domxref("ArrayBufferView")}} または {{domxref("Blob")}} と `send()` メソッドを組み合わせることです。
+バイナリーコンテンツの送信（例えばファイルのアップロード）の最適な方法は、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("Blob")}} の何れかのオブジェクトと `send()` メソッドを組み合わせることです。
 
 ### 返値
 
-`undefined`
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
@@ -47,10 +51,10 @@ XMLHttpRequest.send(body)
 ## GET の例
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+const xhr = new XMLHttpRequest();
+xhr.open("GET", "/server", true);
 
-xhr.onload = function () {
+xhr.onload = () => {
   // リクエストの終了。ここの処理を実行します。
 };
 
@@ -64,17 +68,18 @@ xhr.send(null);
 ## POST の例
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open("POST", '/server', true);
+const xhr = new XMLHttpRequest();
+xhr.open("POST", "/server", true);
 
 //リクエストに従って正しいヘッダー情報を送信してください
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-xhr.onreadystatechange = function() { // 状態が変化すると関数が呼び出されます。
-    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-        // リクエストの終了。ここの処理を実行します。
-    }
-}
+xhr.onreadystatechange = () => {
+  // 状態が変化すると関数が呼び出されます。
+  if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+    // リクエストの終了。ここの処理を実行します。
+  }
+};
 xhr.send("foo=bar&lorem=ipsum");
 // xhr.send(new Int8Array());
 // xhr.send(document);
@@ -90,5 +95,5 @@ xhr.send("foo=bar&lorem=ipsum");
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)

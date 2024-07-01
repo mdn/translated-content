@@ -1,28 +1,30 @@
 ---
-title: HTMLSelectElement.namedItem()
+title: "HTMLSelectElement: namedItem() メソッド"
+short-title: namedItem()
 slug: Web/API/HTMLSelectElement/namedItem
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{ APIRef("HTML DOM") }}
 
 **`HTMLSelectElement.namedItem()`** メソッドは、{{domxref("HTMLOptionElement")}} のうち `name` または `id` が指定された名前に一致する {{domxref("HTMLOptionElement")}} を、一致するものがない場合は `null` を返します。
 
-JavaScript では、配列のブラケット構文に {{jsxref("String")}} を使用すると (`selectElt["value"]` など)、`selectElt.namedItem("value")` と同等になります。
+JavaScript では、`selectElt.namedItem('value')` を使用すると `selectElt.namedItem('value')` と同等になります。
 
 ## 構文
 
-```js
-var item = collection.namedItem(str);
-var item = collection[str];
+```js-nolint
+namedItem(str)
 ```
 
 ### 引数
 
-- `str` is a {{domxref("DOMString")}}.
+- `str` は文字列です。
 
 ### 返値
 
-- `item` is a {{domxref("HTMLOptionElement")}}.
+- `item` は {{domxref("HTMLOptionElement")}} です。
 
 ## 例
 
@@ -40,7 +42,16 @@ var item = collection[str];
 ### JavaScript
 
 ```js
-elem1 = document.forms[0]['myFormControl']['o1']; // Returns the HTMLOptionElement representing #o1
+let selectElt = document.getElementById("myFormControl");
+elem1 = selectElt.namedItem("o1"); // #o1 を表す HTMLOptionElement
+```
+
+ただし、次のように書くことはできません。
+
+```js
+let selectElt = document.getElementById("myFormControl");
+elem1 = selectElt.o1; // undefined を返す
+elem1 = selectElt["o1"]; // undefined を返す
 ```
 
 ## 仕様書

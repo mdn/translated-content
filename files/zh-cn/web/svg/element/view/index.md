@@ -1,32 +1,63 @@
 ---
-title: view
+title: <view>
 slug: Web/SVG/Element/view
+l10n:
+  sourceCommit: b439985acb7c71d271115723522aa55cc7a43cbe
 ---
 
 {{SVGRef}}
 
-`view`元素是查看图片的一个限定方法，就像一个缩放级别或者一个详细视图。
+`<view>` SVG 元素定义了 SVG 文档的特定视图。可以通过将 `<view>` 元素的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id) 作为 URL 的目标片段来显示特定的视图。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
-## 示例
-
 ## 属性
 
-### 全局属性
+- {{SVGAttr("viewBox")}}
+- {{SVGAttr("preserveAspectRatio")}}
+- {{SVGAttr("zoomAndPan")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
 
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- {{ SVGAttr("externalResourcesRequired") }}
+## 示例
 
-### 专有属性
+### SVG
 
-- {{ SVGAttr("viewBox") }}
-- {{ SVGAttr("preserveAspectRatio") }}
-- {{ SVGAttr("zoomAndPan") }}
-- {{ SVGAttr("viewTarget") }}
+```svg
+<svg viewBox="0 0 300 100" width="300" height="100"
+      xmlns="http://www.w3.org/2000/svg">
+
+  <view id="one" viewBox="0 0 100 100" />
+  <circle cx="50" cy="50" r="40" fill="red" />
+
+  <view id="two" viewBox="100 0 100 100" />
+  <circle cx="150" cy="50" r="40" fill="green" />
+
+  <view id="three" viewBox="200 0 100 100" />
+  <circle cx="250" cy="50" r="40" fill="blue" />
+</svg>
+```
+
+### HTML
+
+```html
+<img src="example.svg" alt="三个圆形" width="300" height="100" />
+<br />
+<img src="example.svg#three" alt="蓝色圆形" width="100" height="100" />
+```
+
+### 结果
+
+{{EmbedLiveSample("示例", "85ch", "240px")}}
 
 ## DOM 接口
 
-该元素实现了[`SVGViewElement`](/zh-CN/DOM/SVGViewElement)接口。
+此元素实现了 {{domxref("SVGViewElement")}} 接口。
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}

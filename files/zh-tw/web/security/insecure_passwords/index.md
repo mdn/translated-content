@@ -13,10 +13,10 @@ slug: Web/Security/Insecure_passwords
 
 網站有時會需要用戶名稱與密碼，但並不實際儲存敏感資料。例如，新聞網站可能會儲存用戶想要再次閱覽的文章，但不會儲存其它用戶資料。上述範例的網頁開發者可能較無動機保護他們的網站與用戶憑證。
 
-不幸的是，[重複使用相同密碼是非常危險的](https://www.lightbluetouchpaper.org/2011/02/09/measuring-password-re-use-empirically/)。用戶在多個網站皆使用相同密碼(如新聞網站、社群網站、電子信箱等)。因此，即使非法存取貴網站的用戶名稱與密碼並不對您構成嚴重問題，對於在不同網站(如網路銀行)使用相同名稱與密碼的用戶而言，卻會造成嚴重威脅。攻擊者愈來愈聰明，他們會從一個網站竊取用戶名稱與密碼的配對，並在更有利可圖的網站上重複嘗試。
+不幸的是，[重複使用相同密碼是非常危險的](https://www.lightbluetouchpaper.org/2011/02/09/measuring-password-re-use-empirically/)。用戶在多個網站皆使用相同密碼(如新聞網站、社群網站、電子信箱等)。因此，即使非法存取貴網站的用戶名稱與密碼並不對你構成嚴重問題，對於在不同網站(如網路銀行)使用相同名稱與密碼的用戶而言，卻會造成嚴重威脅。攻擊者愈來愈聰明，他們會從一個網站竊取用戶名稱與密碼的配對，並在更有利可圖的網站上重複嘗試。
 
 ## 參見
 
 - [No More Passwords over HTTP, Please!](https://blog.mozilla.org/tanvi/2016/01/28/no-more-passwords-over-http-please/) — 提供詳細資訊和常見問題的部落格文章
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/zh-TW/docs/Web/Security")}}

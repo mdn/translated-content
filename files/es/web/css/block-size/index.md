@@ -74,9 +74,9 @@ La propiedad `block-size` toma los mismos valores que las propiedades {{cssxref(
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.block-size")}}
+{{Compat}}
 
 ## Véase también
 

@@ -24,8 +24,6 @@ new Int32Array(buffer [, byteOffset [, length]]);
   - : Returns a number value of the element size. `4` in the case of an `Int32Array`.
 - Int32Array.length
   - : Static length property whose value is 3. For the actual length (number of elements), see {{jsxref("TypedArray.prototype.length", "Int32Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Int32Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `Int32Array` type: "Int32Array".
 - {{jsxref("TypedArray.prototype", "Int32Array.prototype")}}
   - : Prototype for the _TypedArray_ objects.
 
@@ -83,7 +81,7 @@ new Int32Array(buffer [, byteOffset [, length]]);
   - : Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found. See also {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Int32Array.prototype.map()")}}
   - : Creates a new array with the results of calling a provided function on every element in this array. See also {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Int32Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
+- {{jsxref("TypedArray.move", "Int32Array.prototype.move()")}} {{non-standard_inline}}
   - : Former non-standard version of {{jsxref("TypedArray.copyWithin", "Int32Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Int32Array.prototype.reduce()")}}
   - : Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value. See also {{jsxref("Array.prototype.reduce()")}}.
@@ -110,7 +108,7 @@ new Int32Array(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.@@iterator", "Int32Array.prototype[@@iterator]()")}}
   - : Returns a new `Array Iterator` object that contains the values for each index in the array.
 
-## 例子
+## 示例
 
 不同的方式创建一个 `Int32Array`
 
@@ -123,7 +121,7 @@ console.log(int32.length); // 2
 console.log(int32.BYTES_PER_ELEMENT); // 4
 
 // 从一个数组
-var arr = new Int32Array([21,31]);
+var arr = new Int32Array([21, 31]);
 console.log(arr[1]); // 31
 
 // 从一个其他 TypedArray

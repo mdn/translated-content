@@ -1,14 +1,6 @@
 ---
 title: 'Django Didactique: Site web "Bibliothèque locale"'
 slug: Learn/Server-side/Django/Tutorial_local_library_website
-tags:
-  - Apprentissage
-  - Article
-  - Didacticiel
-  - Débutant
-  - Guide
-  - django
-translation_of: Learn/Server-side/Django/Tutorial_local_library_website
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
@@ -66,7 +58,7 @@ Cet exemple a été soigneusement choisi car il permet de progresser en montrant
 - Une première étape consistera à définir un catalogue simple qui permet aux utilisateurs de consulter les ouvrages disponibles. Cela combine les schémas classiques et les opérations communes à la plupart de ce type de sites : lire et afficher le contenu d'une base de données...
 - La progression des différents articles permettra d'étudier des fonctions plus avancées du quadriciel. Par exemple, utiliser des formulaires et permettre aux utilisateurs de réserver leurs ouvrages, ceci conduit à mettre en place et utiliser la gestion des utilisateurs et de l'authentification.
 
-Même s'il s'agit d'un sujet extensible, son sujet de *Bibliothèque **locale*** est volontaire. Il s'agit d'aborder rapidement de nombreux sujets de Django en manipulant un minimum d'information. Il s'agit d'enregistrer localement les informations fictives sur les livres, copies, auteurs, etc. Il ne s'agit en aucun cas d'élaborer un produit qui gère, comme pourrait le faire une bibliothèque classique d'autres informations, ni gérer un réseau de bibliothèques comme cela pourrait être le cas avec une _**grande** biblothèque_.
+Même s'il s'agit d'un sujet extensible, son sujet de _Bibliothèque **locale**_ est volontaire. Il s'agit d'aborder rapidement de nombreux sujets de Django en manipulant un minimum d'information. Il s'agit d'enregistrer localement les informations fictives sur les livres, copies, auteurs, etc. Il ne s'agit en aucun cas d'élaborer un produit qui gère, comme pourrait le faire une bibliothèque classique d'autres informations, ni gérer un réseau de bibliothèques comme cela pourrait être le cas avec une _**grande** biblothèque_.
 
 ## Je suis coincé, où puis-je trouver les sources ?
 
@@ -79,21 +71,3 @@ Si vous êtes coincé, vous pourrez trouver une version totalement développée 
 Vous en savez plus sur le projet _LocalLibrary_ et ce que vous allez progressivement apprendre, il est désormais temps de créer le [squellette du projet](/fr/docs/Learn/Server-side/Django/skeleton_website) qui hébergera la bibliothèque.
 
 {{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
-
-## Dans ce module
-
-- [Django introduction](/fr/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/fr/docs/Learn/Server-side/Django/development_environment)
-- [Django Didactique: Site web "Bibliothèque locale"](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django didactique Section 2: Créer le squelette du site web](/fr/docs/Learn/Server-side/Django/skeleton_website)
-- [Django didactique Section 3: Utilisation des modèles de données](/fr/docs/Learn/Server-side/Django/Models)
-- [Django didactique Section 4 : Site d'administration de Django](/fr/docs/Learn/Server-side/Django/Admin_site)
-- [Django didactique Section 5: Créer la page d'accueil](/fr/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/fr/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/fr/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/fr/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/fr/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/fr/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/fr/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/fr/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/fr/docs/Learn/Server-side/Django/django_assessment_blog)

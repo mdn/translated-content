@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: can''t convert x to BigInt'
+title: "TypeError: can't convert x to BigInt"
 slug: Web/JavaScript/Reference/Errors/Cant_convert_x_to_BigInt
 l10n:
   sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4

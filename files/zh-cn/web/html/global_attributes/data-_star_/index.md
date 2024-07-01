@@ -15,7 +15,7 @@ slug: Web/HTML/Global_attributes/data-*
 - 该名称不能包含任何分号 (`U+003A`)；
 - 该名称不能包含 A 至 Z 的大写字母。
 
-注意，{{domxref("HTMLElement.dataset")}} 属性是一个{{domxref("DOMStringMap")}}，并且自定义数据属性 _data-test-value_ 可以通过 `HTMLElement.dataset.testValue` ( 或者是` HTMLElement.dataset["testValue"] `) 来访问，任何破折号 (`U+002D`) 都会被下个字母的大写替代 (驼峰拼写)。
+注意，{{domxref("HTMLElement.dataset")}} 属性是一个{{domxref("DOMStringMap")}}，并且自定义数据属性 _data-test-value_ 可以通过 `HTMLElement.dataset.testValue` ( 或者是 `HTMLElement.dataset["testValue"]`) 来访问，任何破折号 (`U+002D`) 都会被下个字母的大写替代 (驼峰拼写)。
 
 ### 用法
 

@@ -1,20 +1,11 @@
 ---
 title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Object
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/is
 ---
 
 {{JSRef}}
 
-La méthode **`Object.is()`** permet de déterminer si deux valeurs sont [les mêmes](/fr/docs/Web/JavaScript/Guide/%C3%89galit%C3%A9_en_JavaScript).
+La méthode **`Object.is()`** permet de déterminer si deux valeurs sont [les mêmes](/fr/docs/Web/JavaScript/Guide/Égalité_en_JavaScript).
 
 ## Syntaxe
 
@@ -35,7 +26,7 @@ Un booléen indiquant si les arguments ont la même valeur.
 
 ## Description
 
-`Object.is()` permet de déterminer si deux valeurs sont [identiques](/fr/docs/Web/JavaScript/Guide/%C3%89galit%C3%A9_en_JavaScript). Deux valeurs sont considérées identiques si :
+`Object.is()` permet de déterminer si deux valeurs sont [identiques](/fr/docs/Web/JavaScript/Guide/Égalité_en_JavaScript). Deux valeurs sont considérées identiques si :
 
 - elles sont toutes les deux {{jsxref("undefined")}}
 - elles sont toutes les deux {{jsxref("null")}}
@@ -56,32 +47,33 @@ Cette égalité est également différente de l'égalité stricte qu'on peut avo
 ## Exemples
 
 ```js
-Object.is("toto", "toto");     // true
-Object.is(window, window);     // true
+Object.is("toto", "toto"); // true
+Object.is(window, window); // true
 
-Object.is("toto", "truc");     // false
-Object.is([], []);             // false
+Object.is("toto", "truc"); // false
+Object.is([], []); // false
 
-var toto = {a: 1};
-var truc = {a: 1};
-Object.is(toto, toto);          // true
-Object.is(toto, truc);          // false
+var toto = { a: 1 };
+var truc = { a: 1 };
+Object.is(toto, toto); // true
+Object.is(toto, truc); // false
 
-Object.is(null, null);          // true
+Object.is(null, null); // true
 
 // Cas aux limites (cas spéciaux)
-Object.is(0, -0);                // false
-Object.is(-0, -0);               // true
-Object.is(NaN, 0/0);             // true
+Object.is(0, -0); // false
+Object.is(-0, -0); // true
+Object.is(NaN, 0 / 0); // true
 ```
 
 ## Prothèse d'émulation (_polyfill_)
 
 ```js
 if (!Object.is) {
-  Object.is = function(v1, v2) {
+  Object.is = function (v1, v2) {
     // Algorithme SameValue
-    if (v1 === v2) { //Étapes 1-5, 7-10
+    if (v1 === v2) {
+      //Étapes 1-5, 7-10
       //Étapes 6.b-6.b +0 !=-0
       return v1 !== 0 || 1 / v1 === 1 / v2;
     } else {

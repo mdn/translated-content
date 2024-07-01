@@ -2,6 +2,7 @@
 title: Object.prototype.__defineSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
 ---
+
 {{JSRef}}
 
 > **Aviso:** Esta funcionalidade está depreciada em favor da definição de setters usando a [sintaxe de inicialização de objeto](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer) ou a API {{jsxref("Object.defineProperty()")}}.
@@ -45,7 +46,9 @@ O método `__defineSetter__` permite um {{jsxref("Operators/set", "setter", "", 
 
 ```js
 var o = {};
-o.__defineSetter__('value', function(val) { this.anotherValue = val; });
+o.__defineSetter__("value", function (val) {
+  this.anotherValue = val;
+});
 o.value = 5;
 console.log(o.value); // undefined
 console.log(o.anotherValue); // 5
@@ -55,17 +58,21 @@ console.log(o.anotherValue); // 5
 
 ```js
 // Usando o operador set
-var o = { set value(val) { this.anotherValue = val; } };
+var o = {
+  set value(val) {
+    this.anotherValue = val;
+  },
+};
 o.value = 5;
 console.log(o.value); // undefined
 console.log(o.anotherValue); // 5
 
 // Usando Object.defineProperty
 var o = {};
-Object.defineProperty(o, 'value', {
-  set: function(val) {
+Object.defineProperty(o, "value", {
+  set: function (val) {
     this.anotherValue = val;
-  }
+  },
 });
 o.value = 5;
 console.log(o.value); // undefined

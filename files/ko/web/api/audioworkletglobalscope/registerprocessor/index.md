@@ -2,6 +2,7 @@
 title: AudioWorkletGlobalScope.registerProcessor
 slug: Web/API/AudioWorkletGlobalScope/registerProcessor
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{domxref("AudioWorkletGlobalScope")}} 인터페이스의 **`registerProcessor`** 메서드는 명시된 _name_ 아래에서 {{domxref("AudioWorkletProcessor")}} 인터페이스로부터 파생된 클래스 생성자를 등록합니다.
@@ -55,21 +56,21 @@ AudioWorkletGlobalScope.registerProcessor(name, processorCtor);
 ```js
 // test-processor.js
 class TestProcessor extends AudioWorkletProcessor {
-  process (inputs, outputs, parameters) {
-    return true
+  process(inputs, outputs, parameters) {
+    return true;
   }
 }
 
-registerProcessor('test-processor', TestProcessor)
+registerProcessor("test-processor", TestProcessor);
 ```
 
 다음으로, 메인 스크립트 파일에서 우리는 프로세서를 로드하고, `AudioWorkletNode` 에 우리가 `registerProcessor` 를 호출할 때 사용했던 프로세서 이름을 전달하며 `AudioWorkletNode` 의 인스턴스를 생성하고, 이것을 오디오 그래프에 연결할 것입니다.
 
 ```js
-const audioContext = new AudioContext()
-await audioContext.audioWorklet.addModule('test-processor.js')
-const node = new AudioWorkletNode(audioContext, 'test-processor')
-node.connect(audioContext.destination)
+const audioContext = new AudioContext();
+await audioContext.audioWorklet.addModule("test-processor.js");
+const node = new AudioWorkletNode(audioContext, "test-processor");
+node.connect(audioContext.destination);
 ```
 
 ## 명세서

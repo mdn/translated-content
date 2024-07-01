@@ -107,17 +107,18 @@ You can find a number of examples at these locations:
 
 ## Especificaciones
 
-{{Specifications}}
+Esta API se especificó en la antigua [API de WebVR](https://immersive-web.github.io/webvr/spec/1.1/) que fue reemplazada por la [API del dispositivo WebXR](https://immersive-web.github.io/webxr/). Ya no está en camino de convertirse en un estándar.
 
-## Browser compatibility
+Hasta que todos los navegadores hayan implementado las nuevas [API de WebXR](/es/docs/Web/API/WebXR_Device_API/Fundamentals), se recomienda confiar en _frameworks_, como [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), o [Three.js](https://threejs.org/), o un [polyfill](https://github.com/immersive-web/webxr-polyfill), para desarrollar aplicaciones WebXR que funcionen en todos los navegadores [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/).
 
-{{Compat("api.Navigator.getVRDisplays")}}
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## See also
 
 - [vr.mozilla.org](https://vr.mozilla.org) — The main Mozilla landing pad for WebVR, with demos, utilities, and other information.
 - [A-Frame](https://aframe.io/) — Open source web framework for building VR experiences.
 - [webvr.info](https://webvr.info) — Up-to-date information about WebVR, browser setup, and community.
-- [MozVr.com](http://mozvr.com/) — Demos, downloads, and other resources from the Mozilla VR team.
 - [threejs-vr-boilerplate](https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate) — A useful starter template for writing WebVR apps into.
 - [Web VR polyfill](https://github.com/googlevr/webvr-polyfill/) — JavaScript implementation of WebVR.

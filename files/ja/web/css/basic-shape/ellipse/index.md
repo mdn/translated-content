@@ -1,12 +1,15 @@
 ---
 title: ellipse()
 slug: Web/CSS/basic-shape/ellipse
-original_slug: Web/CSS/basic-shape/ellipse()
+l10n:
+  sourceCommit: 3a1ad1fcf1a399211b333eed524fe9df13bdb62b
 ---
 
 {{CSSRef}}
 
 **`ellipse()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Types)の一つです。
+
+{{EmbedInteractiveExample("pages/css/function-ellipse.html")}}
 
 ## 構文
 
@@ -15,7 +18,7 @@ shape-outside: ellipse(40% 50% at left);
 shape-outside: ellipse(closest-side farthest-side at 30%);
 ```
 
-楕円は基本的に円を潰したものなので、`ellipse()` は、2 つの半径 x と y を指定しなければならないことを除けば、 {{cssxref("basic-shape/circle()","circle()")}} とよく似た方法で動作します。
+楕円は基本的に円を潰したものなので、 `ellipse()` は、2 つの半径 x と y を指定しなければならないことを除けば、 {{cssxref("basic-shape/circle","circle()")}} とよく似た方法で動作します。
 
 ### 値
 
@@ -56,4 +59,4 @@ shape-outside: ellipse(closest-side farthest-side at 30%);
 ## 関連情報
 
 - このデータ型を使用するプロパティ: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [基本シェイプのガイド](/ja/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
+- [基本シェイプのガイド](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes)

@@ -115,7 +115,7 @@ HTTP requests는 본문을 가질수 있지만 이번 케이스에서는 비어 
 
 메시지의 마지막에는 요청에 의해 반환된 실제 HTML을 포함하는 **본문** 콘텐츠를 볼 수 있습니다.
 
-```html
+```http
 HTTP/1.1 200 OK
 Server: Apache
 X-Backend-Server: developer1.webapp.scl3.mozilla.com
@@ -128,8 +128,6 @@ X-Frame-Options: DENY
 Allow: GET
 X-Cache-Info: caching
 Content-Length: 41823
-
-
 
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
@@ -150,7 +148,7 @@ HTTP `POST`는 당신이 정보를 포함한 폼을 작성하여 서버에 저�
 
 아래의 텍스트는 사용자가 새로운 프로필 정보를 사이트에 전송할때 만들어지는 HTTP request를 보여줍니다. 이 요청의 대한 포맷은 이전 `GET` request의 예시와 거의 비슷해 보입니다, 그렇지만 첫번째 줄은 이것이 `POST` 요청임을 보여주고 있습니다.
 
-```html
+```http
 POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
@@ -176,7 +174,7 @@ csrfmiddlewaretoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT&user-username=hamishwillee&
 
 요청에서 온 응답은 아래와 같이 보여집니다. "`302 Found`"의 상태 코드는 브라우저에게 post가 성공했고, `Location` 필드가 지정된 페이지를 로드하기 위해 두번째 HTTP request를 실행해야 하는 것을 알려줍니다. 그렇지 않은 경우 정보는 `GET` request에 대한 응답정보와 유사합니다.
 
-```html
+```http
 HTTP/1.1 302 FOUND
 Server: Apache
 X-Backend-Server: developer3.webapp.scl3.mozilla.com

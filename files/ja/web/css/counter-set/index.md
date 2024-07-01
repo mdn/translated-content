@@ -7,6 +7,8 @@ slug: Web/CSS/counter-set
 
 **`counter-set`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)を指定された値に設定します。これは既存のカウンターの値を操作し、その要素に指定された名前のカウンターがまだ存在しない場合は新しいカウンターを生成します。
 
+{{EmbedInteractiveExample("pages/css/counter-set.html")}}
+
 > **メモ:** カウンターの値は {{cssxref("counter-increment")}} プロパティを使用して増減させることができます。
 
 ## 構文

@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.strokeStyle
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
-translation_of: Web/API/CanvasRenderingContext2D/strokeStyle
 ---
 
 {{APIRef}}
@@ -59,7 +58,8 @@ ctx.strokeRect(10, 10, 100, 100);
 </div>
 <textarea id="code" class="playable-code">
 ctx.strokeStyle = "blue";
-ctx.strokeRect(10, 10, 100, 100);</textarea>
+ctx.strokeRect(10, 10, 100, 100);</textarea
+>
 ```
 
 ```js hidden
@@ -75,14 +75,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -95,13 +95,17 @@ window.addEventListener("load", drawCanvas);
 В этом примере свойство `strokeStyle` используется для рисования границ фигур. Мы используем метод {{domxref("CanvasRenderingContext2D.arc", "arc()")}} для рисования кругов.
 
 ```js
-var ctx = document.getElementById('canvas').getContext('2d');
-for (var i=0;i<6;i++){
-  for (var j=0;j<6;j++){
-    ctx.strokeStyle = 'rgb(0,' + Math.floor(255-42.5*i) + ',' +
-                      Math.floor(255-42.5*j) + ')';
+var ctx = document.getElementById("canvas").getContext("2d");
+for (var i = 0; i < 6; i++) {
+  for (var j = 0; j < 6; j++) {
+    ctx.strokeStyle =
+      "rgb(0," +
+      Math.floor(255 - 42.5 * i) +
+      "," +
+      Math.floor(255 - 42.5 * j) +
+      ")";
     ctx.beginPath();
-    ctx.arc(12.5+j*25,12.5+i*25,10,0,Math.PI*2,true);
+    ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
     ctx.stroke();
   }
 }
@@ -122,17 +126,6 @@ for (var i=0;i<6;i++){
 ## Совместимость с браузерами
 
 {{Compat}}
-
-## Особенности WebKit/Blink
-
-- В браузерах на базе Webkit и Blink помимо этого свойства, также поддерживается нестандартный метод `ctx.setStrokeColor()`.
-
-  ```js
-  setStrokeColor(color, optional alpha);
-  setStrokeColor(grayLevel, optional alpha);
-  setStrokeColor(r, g, b, a);
-  setStrokeColor(c, m, y, k, a);
-  ```
 
 ## Смотрите также
 

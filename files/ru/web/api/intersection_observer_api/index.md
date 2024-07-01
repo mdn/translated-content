@@ -1,11 +1,8 @@
 ---
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
-tags:
-  - Intersection Observer API
-  - пересечение объектов
-translation_of: Web/API/Intersection_Observer_API
 ---
+
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 Intersection Observer API позволяет веб-приложениям асинхронно следить за изменением пересечения элемента с его родителем или областью видимости документа {{Glossary("viewport")}}.
@@ -41,12 +38,12 @@ Intersection Observer API позволяет указать функцию, ко
 
 ```js
 var options = {
-    root: document.querySelector('#scrollArea'),
-    rootMargin: '0px',
-    threshold: 1.0
-}
-var callback = function(entries, observer) {
-    /* Content excerpted, show below */
+  root: document.querySelector("#scrollArea"),
+  rootMargin: "0px",
+  threshold: 1.0,
+};
+var callback = function (entries, observer) {
+  /* Content excerpted, show below */
 };
 var observer = new IntersectionObserver(callback, options);
 ```
@@ -67,23 +64,23 @@ var observer = new IntersectionObserver(callback, options);
 После того, как вы создали наблюдателя, вам нужно дать ему целевой элемент для просмотра:
 
 ```js
-var target = document.querySelector('#listItem');
+var target = document.querySelector("#listItem");
 observer.observe(target);
 ```
 
 Всякий раз, когда цель достигает порогового значения, указанного для `IntersectionObserver`, вызывается колбэк-функция `callback`. Где `callback` получает список объектов {{domxref ("IntersectionObserverEntry")}} и наблюдателя:
 
 ```js
-var callback = function(entries, observer) {
-    entries.forEach(entry => {
-        entry.time;               // a DOMHightResTimeStamp indicating when the intersection occurred.
-        entry.rootBounds;         // a DOMRectReadOnly for the intersection observer's root.
-        entry.boundingClientRect; // a DOMRectReadOnly for the intersection observer's target.
-        entry.intersectionRect;   // a DOMRectReadOnly for the visible portion of the intersection observer's target.
-        entry.intersectionRatio;  // the number for the ratio of the intersectionRect to the boundingClientRect.
-        entry.target;             // the Element whose intersection with the intersection root changed.
-        entry.isIntersecting;     // intersecting: true or false
-    });
+var callback = function (entries, observer) {
+  entries.forEach((entry) => {
+    entry.time; // a DOMHightResTimeStamp indicating when the intersection occurred.
+    entry.rootBounds; // a DOMRectReadOnly for the intersection observer's root.
+    entry.boundingClientRect; // a DOMRectReadOnly for the intersection observer's target.
+    entry.intersectionRect; // a DOMRectReadOnly for the visible portion of the intersection observer's target.
+    entry.intersectionRatio; // the number for the ratio of the intersectionRect to the boundingClientRect.
+    entry.target; // the Element whose intersection with the intersection root changed.
+    entry.isIntersecting; // intersecting: true or false
+  });
 };
 ```
 
@@ -100,13 +97,11 @@ var callback = function(entries, observer) {
 
 ## Спецификации
 
-| Specification                                    | Status                                       | Comment |
-| ------------------------------------------------ | -------------------------------------------- | ------- |
-| {{SpecName('IntersectionObserver')}} | {{Spec2('IntersectionObserver')}} |         |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
 ## Смотрите также
 

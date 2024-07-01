@@ -2,6 +2,7 @@
 title: Math.sign()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sign
 ---
+
 {{JSRef}}
 
 **`Math.sign()`** 함수는 주어진 수의 부호를 나타내는 +/-1을 반환합니다. 단, `Math.sign()`에 제공한 수가 0일 경우 부호에 따라 +/-0을 반환합니다.
@@ -11,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/sign
 ## 구문
 
 ```js
-Math.sign(x)
+Math.sign(x);
 ```
 
 ### 매개변수
@@ -38,17 +39,17 @@ Math.sign(x)
 ### `Math.sign()` 사용하기
 
 ```js
-Math.sign(3);     //  1
-Math.sign(-3);    // -1
-Math.sign('-3');  // -1
-Math.sign(0);     //  0
-Math.sign(-0);    // -0
-Math.sign(NaN);   // NaN
-Math.sign('foo'); // NaN
-Math.sign();      // NaN
+Math.sign(3); //  1
+Math.sign(-3); // -1
+Math.sign("-3"); // -1
+Math.sign(0); //  0
+Math.sign(-0); // -0
+Math.sign(NaN); // NaN
+Math.sign("foo"); // NaN
+Math.sign(); // NaN
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

@@ -1,9 +1,6 @@
 ---
 title: Event.originalTarget
 slug: Web/API/Event/originalTarget
-page-type: web-api-instance-property
-translation_of: Web/API/Event/originalTarget
-browser-compat: api.Event.originalTarget
 l10n:
   sourceCommit: 95b52aa7aeabbd2670f762da4fb7c0b0133f4d9f
 ---

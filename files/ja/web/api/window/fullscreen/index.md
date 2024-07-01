@@ -34,12 +34,11 @@ isInFullScreen = windowRef.fullScreen;
 ```js
 if (window.fullScreen) {
   // 全画面モード
-}
-else {
+} else {
   // 全画面モードではない
 }
 ```
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.fullScreen")}}
+{{Compat}}

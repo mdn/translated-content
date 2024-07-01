@@ -1,12 +1,6 @@
 ---
 title: Замещаемый элемент
 slug: Web/CSS/Replaced_element
-tags:
-  - CSS
-  - Reference
-  - замещаемый элемент
-translation_of: Web/CSS/Replaced_element
-original_slug: Web/CSS/Замещаемый_элемент
 ---
 
 {{CSSRef}}
@@ -27,7 +21,6 @@ original_slug: Web/CSS/Замещаемый_элемент
 - {{HTMLElement("audio")}}
 - {{HTMLElement("canvas")}}
 - {{HTMLElement("object")}}
-- {{HTMLElement("applet")}}
 
 Спецификация HTML также указывает, что элемент {{HTMLElement("input")}} может быть замещаемым, поскольку элемент {{HTMLElement("input")}} с типом image является замещаемым элементом наподобие {{HTMLElement("img")}}. Однако другие элементы форм, включая другие типы элементов {{HTMLElement("input")}}, явно отнесены к незамещаемым элементам (для описания их отображения по умолчанию, которое может быть разным на разных платформах, спецификация использует термин «Виджеты»).
 

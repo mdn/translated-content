@@ -1,7 +1,6 @@
 ---
 title: Document.URL
 slug: Web/API/Document/URL
-translation_of: Web/API/Document/URL
 ---
 
 {{APIRef("DOM")}}
@@ -11,7 +10,7 @@ Retourne l'**`URL`** du {{domxref("Document")}} sous forme de string (lecture se
 ## Syntaxe
 
 ```js
-var string = document.URL
+var string = document.URL;
 ```
 
 ## Exemple

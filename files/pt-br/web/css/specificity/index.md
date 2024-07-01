@@ -13,7 +13,7 @@ A espeficicação é calculada na concatenação da contagem de cada tipo de sel
 
 No caso de igualdade de especificação, a última declaração encontrada no CSS é aplicada ao elemento.
 
-> **Note:** Note: O fato de elementos estarem próximos na árvore do documento não tem efeito sobre a especificação.
+> **Nota:**: O fato de elementos estarem próximos na árvore do documento não tem efeito sobre a especificação.
 
 ### Ordem crescente de especificação
 
@@ -39,7 +39,7 @@ Aqui está um trecho de CSS:
 
 ```css
 div.outer p {
-  color:orange;
+  color: orange;
 }
 div:not(.outer) p {
   color: lime;
@@ -107,9 +107,9 @@ Com o HTML seguinte::
 
 ```html
 <html>
-<body>
-  <h1>Aqui está o título!</h1>
-</body>
+  <body>
+    <h1>Aqui está o título!</h1>
+  </body>
 </html>
 ```
 

@@ -1,22 +1,22 @@
 ---
 title: 背景画像の拡大縮小
-slug: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
-original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images
+slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
+l10n:
+  sourceCommit: d45f6c3733728f0eefdb7fd4b9a84c4858b35fd1
 ---
 
 {{CSSRef}}
 
 **{{cssxref("background-size")}}** は CSS のプロパティで、要素の背景画像の大きさを変更し、画像の幅や高さから見た完全な大きさの画像をタイル表示するという既定の動作を変更することができます。こうすることで、画像を必要に応じて拡大したり縮小したりすることができます。
 
-<h2 id="Tiling_a_large_image">巨大な画像を並べて表示</h2>
+## 巨大な画像を並べて表示
 
-巨大な画像、2982 x 2808 の Firefox のロゴ画像を想像してください。この画像を 300 x 300 ピクセルの要素の中に 4 枚並べて表示したいとします (いくつかの理由で恐ろしく悪いサイトデザインですが)。 `background-size` に固定値の 150 ピクセルの値を使用すると、このようにすることができます。
+巨大な画像、2982 x 2808 の Firefox のロゴ画像を想像してください。この画像を 300 x 300 ピクセルの要素の中に 4 枚並べて表示したいとします（いくつかの理由で恐ろしく悪いサイトデザインですが）。 `background-size` に固定値の 150 ピクセルの値を使用すると、このようにすることができます。
 
 ### HTML
 
 ```html
-<div class="tiledBackground">
-</div>
+<div class="tiledBackground"></div>
 ```
 
 ### CSS
@@ -46,13 +46,13 @@ background-size: 300px 150px;
 
 結果は以下のようになります。
 
-![引き伸ばされた新しい Firefox のロゴ](s.codepen.io_richienb_debug_lonxgp_pnkvygvggyxa.png)
+![引き伸ばされた新しい Firefox のロゴ](stretched_firefox_logo.png)
 
 ## 画像の拡大
 
 一方で、背景の画像を拡大することができます。ここでは 32 x 32 ピクセルのファビコンを 300 x 300 ピクセルに拡大します。
 
-![拡大された MDN ロゴ](favicon57.de33179910ae.1.1.png)
+![拡大された MDN ロゴ](scaled_mdn_logo.png)
 
 ```css
 .square2 {
@@ -68,11 +68,11 @@ background-size: 300px 150px;
 
 見てのとおり、 CSS は画像ファイルの名前を除けば、実際には基本的に同一です。
 
-## 特殊な値: "contain" と "cover"
+## 特殊な値: `contain` と `cover`
 
-{{cssxref("&lt;length&gt;")}} の値以外に、 CSS の {{ cssxref("background-size") }} プロパティは `contain` と `cover` という二つの特殊な寸法の値を提供しています。これらを見てみましょう。
+{{cssxref("&lt;length&gt;")}} の値以外に、 CSS の {{cssxref("background-size")}} プロパティは `contain` と `cover` という 2 つの特殊な寸法の値を提供しています。これらを見てみましょう。
 
-### contain
+### `contain`
 
 `contain` の値は、包含ボックスの寸法にかかわらず、背景画像をそれぞれの方向にできるだけ大きくなるように、ただしコンテナーの対応する辺の長さを超えないように拡大します。以下の例の大きさを変えて試してみてください。
 
@@ -93,7 +93,6 @@ background-size: 300px 150px;
   width: 160px;
   height: 160px;
   border: 2px solid;
-  color: pink;
   resize: both;
   overflow: scroll;
 }
@@ -101,9 +100,9 @@ background-size: 300px 150px;
 
 #### 結果
 
-{{ EmbedLiveSample('contain', 250, 250) }}
+{{EmbedLiveSample('contain', 250, 250)}}
 
-### cover
+### `cover`
 
 `cover` の値は、背景画像が対応する方向のコンテナーの寸法より大きいか同じであることを保証しつつ、できるだけ画像が小さくなるように拡大縮小することを指定します。以下の例の大きさを変えて試してみてください。
 
@@ -124,7 +123,6 @@ background-size: 300px 150px;
   width: 160px;
   height: 160px;
   border: 2px solid;
-  color: pink;
   resize: both;
   overflow: scroll;
 }
@@ -132,10 +130,10 @@ background-size: 300px 150px;
 
 #### 結果
 
-{{ EmbedLiveSample('cover', 250, 250) }}
+{{EmbedLiveSample('cover', 250, 250)}}
 
 ## 関連情報
 
-- {{ cssxref("background-size") }}
-- {{ cssxref("background") }}
+- {{cssxref("background-size")}}
+- {{cssxref("background")}}
 - [SVG の背景画像の拡大縮小](/ja/docs/Web/CSS/Scaling_of_SVG_backgrounds)

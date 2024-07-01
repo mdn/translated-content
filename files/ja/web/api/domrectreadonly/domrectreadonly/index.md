@@ -1,6 +1,9 @@
 ---
-title: DOMRectReadOnly()
+title: "DOMRectReadOnly: DOMRectReadOnly() コンストラクター"
+short-title: DOMRectReadOnly()
 slug: Web/API/DOMRectReadOnly/DOMRectReadOnly
+l10n:
+  sourceCommit: a631fd40bdc682a82be57be9932c9853a86ac1b5
 ---
 
 {{APIRef("Geometry Interfaces")}}
@@ -9,30 +12,29 @@ slug: Web/API/DOMRectReadOnly/DOMRectReadOnly
 
 ## 構文
 
-```js
+```js-nolint
 new DOMRectReadOnly(x, y, width, height)
 ```
 
 ### 引数
 
-- _x_
+- `x`
   - : `DOMRectReadOnly` の原点の `x` 座標です。
-- _y_
+- `y`
   - : `DOMRectReadOnly` の原点の `y` 座標です。
-
-- _width_
+- `width`
   - : `DOMRectReadOnly` の幅です。
-- _height_
+- `height`
   - : `DOMRectReadOnly` の高さです。
 
 ## 例
 
-新しい `DOMPoint` を作成するには、次のようなコード行を実行します。
+新しい `DOMRectReadOnly` を作成するには、次のようなコード行を実行します。
 
 ```js
-const myDOMRect = new DOMRectReadOnly(0, 0, 100, 100)
+const myDOMRect = new DOMRectReadOnly(0, 0, 100, 100);
 // 'myDOMRect' をコンソールで実行すると、次の行が返ります。
-// DOMRect { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
+// DOMRectReadOnly { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
 ```
 
 ## 仕様書

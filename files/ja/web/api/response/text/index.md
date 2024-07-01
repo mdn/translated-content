@@ -1,7 +1,6 @@
 ---
 title: Response.text()
 slug: Web/API/Response/text
-original_slug: Web/API/Body/text
 l10n:
   sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
@@ -31,13 +30,13 @@ text()
 `getData()` が実行されると、{{domxref("Request.Request","Request()")}} コンストラクターを使用して新しいリクエストを作成し、それを使用して特定の `.txt` ファイルをフェッチします。 フェッチが成功したら、`text()` を使用してレスポンスから {{domxref("USVString")}} (テキスト) オブジェクトを読み取り、{{htmlelement("article")}} 要素の {{domxref("Element.innerHTML","innerHTML")}} にテキストオブジェクトの値を設定します。
 
 ```js
-const myArticle = document.querySelector('article');
-const myLinks = document.querySelectorAll('ul a');
+const myArticle = document.querySelector("article");
+const myLinks = document.querySelectorAll("ul a");
 
 for (const link of myLinks) {
   link.onclick = (e) => {
     e.preventDefault();
-    const linkData = e.target.getAttribute('data-page');
+    const linkData = e.target.getAttribute("data-page");
     getData(linkData);
   };
 }

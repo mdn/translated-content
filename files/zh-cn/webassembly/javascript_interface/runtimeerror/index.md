@@ -1,10 +1,9 @@
 ---
 title: WebAssembly.RuntimeError()
 slug: WebAssembly/JavaScript_interface/RuntimeError
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.RuntimeError()`**构造函数创建一个新的 WebAssembly RuntimeError 对象 --- 一个每当 WebAssembly 陷入指定陷阱时将抛出的类型。
 
@@ -30,7 +29,7 @@ _`RuntimeError`构造函数不包含其自身特有的属性，但是，它确�
 - `WebAssembly.RuntimeError.prototype.constructor`
   - : 创建示例原型的特定函数。
 - {{jsxref("Error.prototype.message", "WebAssembly.RuntimeError.prototype.message")}}
-  - : 错误信息。尽管 ECMA-262 指定{{jsxref("URIError")}}应提供自己的`message`属性，但在[SpiderMonkey](/zh-CN/docs/Mozilla/Projects/SpiderMonkey)中，它继承了{{jsxref("Error.prototype.message")}}。
+  - : 错误信息。尽管 ECMA-262 指定 {{jsxref("URIError")}} 应提供自己的 `message` 属性，但在 [SpiderMonkey](/zh-CN/docs/Mozilla/Projects/SpiderMonkey) 中，它继承了 {{jsxref("Error.prototype.message")}}。
 - {{jsxref("Error.prototype.name", "WebAssembly.RuntimeError.prototype.name")}}
   - : 错误名称。继承自 {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "WebAssembly.RuntimeError.prototype.fileName")}}
@@ -57,15 +56,15 @@ _`RuntimeError`构造函数不包含自己的方法，但是，它确实通过�
 
 ```js
 try {
-  throw new WebAssembly.RuntimeError('Hello', 'someFile', 10);
+  throw new WebAssembly.RuntimeError("Hello", "someFile", 10);
 } catch (e) {
   console.log(e instanceof RuntimeError); // true
-  console.log(e.message);                 // "Hello"
-  console.log(e.name);                    // "RuntimeError"
-  console.log(e.fileName);                // "someFile"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // 返回代码运行的位置
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "RuntimeError"
+  console.log(e.fileName); // "someFile"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // 返回代码运行的位置
 }
 ```
 

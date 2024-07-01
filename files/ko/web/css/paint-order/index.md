@@ -2,6 +2,7 @@
 title: paint-order
 slug: Web/CSS/paint-order
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`paint-order`** 속성은 텍스트 및 모양의 채움 색과 테두리(마커 포함)를 그리는 순서를 지정합니다.

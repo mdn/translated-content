@@ -1,15 +1,17 @@
 ---
 title: transition-duration
 slug: Web/CSS/transition-duration
+l10n:
+  sourceCommit: 1608a85abb1d05dadc63f27c93fc3e4b7e630db0
 ---
 
 {{CSSRef}}
 
-**`transition-duration`** は [CSS](/ja/docs/Web/CSS) のプロパティで、トランジションによるアニメーションが完了するまでの所要時間を秒数またはミリ秒数で指定します。既定値は `0s` であり、これはアニメーションを実行しないことを示します。
+**`transition-duration`** は [CSS](/ja/docs/Web/CSS) のプロパティで、トランジションによるアニメーションが完了するまでの再生時間を秒数またはミリ秒数で指定します。既定値は `0s` であり、これはアニメーションを実行しないことを示します。
 
 {{EmbedInteractiveExample("pages/css/transition-duration.html")}}
 
-このプロパティには複数の所要時間を指定することができます。それぞれの時間は、マスターリストを務める {{ cssxref("transition-property") }} プロパティの指定値で対応するプロパティに適用されます。指定した所要時間の数がマスターリストで指定したプロパティの数より少ない場合は、ユーザーエージェントは所要時間のリストを反復して使用します。また所要時間の数が多い場合は、リストを適切な長さに切り詰めます。どちらの場合も、CSS の宣言として妥当です。
+複数の再生時間を指定することができます; それぞれの再生時間は、マスターリストとして機能する {{ cssxref("transition-property") }} プロパティによって指定された、対応するプロパティに適用されます。指定する再生時間の数がマスターリストより少ない場合、ユーザーエージェントは再生時間のリストを繰り返します。指定した再生時間の数がマスターリストより多い場合、リストは正しいサイズに切り詰められます。どちらの場合でも、 CSS 宣言は有効です。
 
 ## 構文
 
@@ -24,6 +26,7 @@ transition-duration: 10s, 30s, 230ms;
 transition-duration: inherit;
 transition-duration: initial;
 transition-duration: revert;
+transition-duration: revert-layer;
 transition-duration: unset;
 ```
 
@@ -42,18 +45,18 @@ transition-duration: unset;
 
 ## 例
 
-### 様々な所要時間を表す例
+### 様々な再生時間を表す例
 
 #### HTML
 
 ```html
-  <div class="box duration-1">0.5 seconds</div>
+<div class="box duration-1">0.5 seconds</div>
 
-  <div class="box duration-2">2 seconds</div>
+<div class="box duration-2">2 seconds</div>
 
-  <div class="box duration-3">4 seconds</div>
+<div class="box duration-3">4 seconds</div>
 
-  <button id="change">Change</button>
+<button id="change">Change</button>
 ```
 
 #### CSS
@@ -67,7 +70,7 @@ transition-duration: unset;
   height: 100px;
   background-color: red;
   font-size: 18px;
-  transition-property: background-color font-size transform color;
+  transition-property: background-color, font-size, transform, color;
   transition-timing-function: ease-in-out;
 }
 
@@ -76,7 +79,7 @@ transition-duration: unset;
   background-color: blue;
   color: yellow;
   font-size: 12px;
-  transition-property: background-color font-size transform color;
+  transition-property: background-color, font-size, transform, color;
   transition-timing-function: ease-in-out;
 }
 
@@ -98,7 +101,7 @@ transition-duration: unset;
 ```js
 function change() {
   const elements = document.querySelectorAll("div.box");
-  for (let element of elements) {
+  for (const element of elements) {
     element.classList.toggle("transformed-state");
   }
 }
@@ -121,7 +124,7 @@ changeButton.addEventListener("click", change);
 
 ## 関連情報
 
-- [CSS トランジションの利用](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}
 - {{cssxref('transition-timing-function')}}

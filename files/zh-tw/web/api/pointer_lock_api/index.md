@@ -3,7 +3,7 @@ title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
 ---
 
-{{ SeeCompatTable() }}
+{{DefaultAPISidebar("Pointer Lock API")}}{{ SeeCompatTable() }}
 
 **Pointer lock** (之前稱為 Mouse lock) 提供「隨時間經過所產生的滑鼠位移資訊 (即 deltas)」的輸入方法，而不只是滑鼠游標的絕對位置而已。此函式可存取基本的滑鼠位移、將滑鼠事件的目標鎖定至單一元素、讓滑鼠單一方向的位移距離不再受限、將游標移除到視點之外。
 
@@ -117,9 +117,10 @@ Pointer lock API 另擴充了 [and \<table>) and provides functionality global t
 [pointerLockElement](/zh-TW/docs/Web/API/Document.pointerLockElement) 屬性可確定指標目前是否鎖定了任何元素 (例如進行 Boolean 檢查)。若確實有鎖定的元素，則可取得參考。以下為此二種用法的範例：
 
 ```js
-document.pointerLockElement = document.pointerLockElement    ||
-                              document.mozPointerLockElement ||
-                              document.webkitPointerLockElement;
+document.pointerLockElement =
+  document.pointerLockElement ||
+  document.mozPointerLockElement ||
+  document.webkitPointerLockElement;
 
 // 1) Used as a boolean check: are we pointer locked?
 if (!!document.pointerLockElement) {
@@ -137,14 +138,16 @@ if (document.pointerLockElement === someElement) {
 [Document.exitPointerLock](/zh-TW/docs/Web/API/Document.exitPointerLock) 函式則用以退出 Pointer lock。且和 [requestPointerLock](/zh-TW/docs/Web/API/Element.requestPointerLock) 一樣，[Document.exitPointerLock](/zh-TW/docs/Web/API/Document.exitPointerLock) 是使用 [pointerlockchange](/zh-TW/docs/Web/API/GlobalEventHandlers.pointerlockchange) 與 [pointerlockerror](/zh-TW/docs/Web/API/GlobalEventHandlers.pointerlockerror) 事件，以非同步方式作業：
 
 ```js
-document.exitPointerLock = document.exitPointerLock    ||
-                           document.mozExitPointerLock ||
-                           document.webkitExitPointerLock;
+document.exitPointerLock =
+  document.exitPointerLock ||
+  document.mozExitPointerLock ||
+  document.webkitExitPointerLock;
 
 function pointerLockChange() {
-  document.pointerLockElement = document.pointerLockElement    ||
-                                document.mozPointerLockElement ||
-                                document.webkitPointerLockElement;
+  document.pointerLockElement =
+    document.pointerLockElement ||
+    document.mozPointerLockElement ||
+    document.webkitPointerLockElement;
 
   if (!!document.pointerLockElement) {
     console.log("Still locked.");
@@ -153,9 +156,9 @@ function pointerLockChange() {
   }
 }
 
-document.addEventListener('pointerlockchange', pointerLockChange, false);
-document.addEventListener('mozpointerlockchange', pointerLockChange, false);
-document.addEventListener('webkitpointerlockchange', pointerLockChange, false);
+document.addEventListener("pointerlockchange", pointerLockChange, false);
+document.addEventListener("mozpointerlockchange", pointerLockChange, false);
+document.addEventListener("webkitpointerlockchange", pointerLockChange, false);
 
 // Attempt to unlock
 document.exitPointerLock();

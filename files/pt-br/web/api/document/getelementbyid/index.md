@@ -23,22 +23,22 @@ onde
 ## Exemplo
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>Exemplo getElementById</title>
-  <script>
-  function mudarCor(novaCor) {
-    var elemento = document.getElementById("para1");
-    elemento.style.color = novaCor;
-  }
-  </script>
-</head>
-<body>
-  <p id="para1">Algum texto de exemplo</p>
-  <button onclick="mudarCor('blue');">Azul</button>
-  <button onclick="mudarCor('red');">Vermelho</button>
-</body>
+  <head>
+    <title>Exemplo getElementById</title>
+    <script>
+      function mudarCor(novaCor) {
+        var elemento = document.getElementById("para1");
+        elemento.style.color = novaCor;
+      }
+    </script>
+  </head>
+  <body>
+    <p id="para1">Algum texto de exemplo</p>
+    <button onclick="mudarCor('blue');">Azul</button>
+    <button onclick="mudarCor('red');">Vermelho</button>
+  </body>
 </html>
 ```
 
@@ -52,21 +52,19 @@ Se não existe um elemento com o id fornecido, esta função retorna `null`. Not
 
 ```js
 var elemento = document.createElement("div");
-elemento.id = 'testqq';
-var el = document.getElementById('testqq'); // el será null!
+elemento.id = "testqq";
+var el = document.getElementById("testqq"); // el será null!
 ```
 
 **Documentos não-HTML.** A implementação do DOM deve ter informações que diz quais atributos são do tipo ID. Atributos com o nome "id" não são do tipo ID a menos que assim sejam definidos nos documentos DTD. O atributo `id` é definido para ser um tipo ID em casos comuns de [XHTML](/pt-BR/docs/XHTML), [XUL](/pt-BR/docs/XUL), e outros. Implementações que não reconhecem se os atributos são do tipo ID, ou não são esperados retornam `null`.
 
-## Compatibilidade do Navegador
-
-{{Compat("api.Document.getElementById")}}
-
 ## Especificações
 
-`getElementById` foi introduzido no DOM Level 1 para documentos HTML e movidos para todos documentos no DOM Level 2
+{{Specifications}}
 
-- Especificação núcleo DOM Level 2: [getElementById](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBId)
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ## Veja também
 

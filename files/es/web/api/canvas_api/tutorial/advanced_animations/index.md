@@ -1,7 +1,6 @@
 ---
 title: Advanced animations
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
-original_slug: Web/Guide/HTML/Canvas_tutorial/Advanced_animations
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
@@ -19,21 +18,21 @@ Vamos a usar una bola para nuestro estudio de la animación, entonces primero di
 Como siempre, necesitamos un entorno para dibujar. Para dibujar la bola, creamos un contenido `ball` lo cual contiene propiedades y un método `draw()`.
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 var ball = {
   x: 100,
   y: 100,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 ball.draw();
@@ -46,8 +45,8 @@ Nada especial aquí; la bola es en realidad un circulo sencillo y se dibuja con 
 Ya que tenemos una bola, estamos listos agregar una animación básica así como aprendimos en el [último capítulo](/es/docs/Web/API/Canvas_API/Tutorial/Basic_animations) de esta tutoría. De nuevo, {{domxref("window.requestAnimationFrame()")}} nos ayuda controlar la animación. La bola empieza moverse por agregar un vector de velocidad a la posición. Para cada fotograma, también {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} el canvas para quitar los circulos viejos de los fotogramas anteriores.
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 var raf;
 
 var ball = {
@@ -56,29 +55,29 @@ var ball = {
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener("mouseover", function (e) {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", function (e) {
   window.cancelAnimationFrame(raf);
 });
 
@@ -107,8 +106,8 @@ Veamos como se ve en acción hasta este punto. Dirige el ratón dentro del canva
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 var raf;
 
 var ball = {
@@ -117,39 +116,37 @@ var ball = {
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
 
-  if (ball.y + ball.vy > canvas.height ||
-      ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width ||
-      ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener("mouseover", function (e) {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", function (e) {
   window.cancelAnimationFrame(raf);
 });
 
@@ -169,8 +166,8 @@ Esto reduce el vector vertical de velocidad para cada fotograma para que la bola
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 var raf;
 
 var ball = {
@@ -179,41 +176,39 @@ var ball = {
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
-  ball.vy *= .99;
-  ball.vy += .25;
+  ball.vy *= 0.99;
+  ball.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height ||
-      ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width ||
-      ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener("mouseover", function (e) {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", function (e) {
   window.cancelAnimationFrame(raf);
 });
 
@@ -221,8 +216,8 @@ ball.draw();
 ```
 
 ```js
-ball.vy *= .99;
-ball.vy += .25;
+ball.vy *= 0.99;
+ball.vy += 0.25;
 ```
 
 {{EmbedLiveSample("Second_demo", "610", "310")}}
@@ -236,8 +231,8 @@ Hasta este punto hemos limpiado los fotogramas anteriores con el método {{domxr
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 var raf;
 
 var ball = {
@@ -246,42 +241,40 @@ var ball = {
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+  ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
-  ball.vy *= .99;
-  ball.vy += .25;
+  ball.vy *= 0.99;
+  ball.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height ||
-      ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width ||
-      ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener("mouseover", function (e) {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", function (e) {
   window.cancelAnimationFrame(raf);
 });
 
@@ -289,7 +282,7 @@ ball.draw();
 ```
 
 ```js
-ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 
@@ -304,8 +297,8 @@ Para controlar la bola, podemos hacerla seguir nuestro ratón usando el evento [
 ```
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 var raf;
 var running = false;
 
@@ -315,19 +308,19 @@ var ball = {
   vx: 5,
   vy: 1,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function clear() {
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
-  ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 function draw() {
@@ -346,7 +339,7 @@ function draw() {
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mousemove', function(e) {
+canvas.addEventListener("mousemove", function (e) {
   if (!running) {
     clear();
     ball.x = e.clientX;
@@ -355,14 +348,14 @@ canvas.addEventListener('mousemove', function(e) {
   }
 });
 
-canvas.addEventListener('click', function(e) {
+canvas.addEventListener("click", function (e) {
   if (!running) {
     raf = window.requestAnimationFrame(draw);
     running = true;
   }
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", function (e) {
   window.cancelAnimationFrame(raf);
   running = false;
 });

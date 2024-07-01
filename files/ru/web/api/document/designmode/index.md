@@ -1,32 +1,24 @@
 ---
-title: Document.designMode
+title: "Document: свойство designMode"
 slug: Web/API/Document/designMode
-tags:
-  - API
-  - DOM
-  - Document
-  - HTML
-  - JS
-  - designmode
-  - editor
-translation_of: Web/API/Document/designMode
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
-{{ ApiRef() }}
 
-`document.designMode` переключает режим редактирования для всего документа. Допустимые значения: "on" и "off". В соответствии со спецификацией, это свойство по умолчанию имеет значение "off". Firefox следует этому стандарту. В более ранних версии Chrome и IE это свойство по умолчанию имеет значение "inherit". Начиная с Chrome 43 значение по умолчанию "off", а значение "inherit" более не поддерживается. В IE6-10 значение должно быть указанно с большой буквы ("On" и "Off")
+{{ApiRef}}
 
-## Синтаксис
+Свойство **`document.designMode`** управляет режимом редактирования всего документа. Допустимые значения: `"on"` и `"off"`. В соответствии со спецификацией, это свойство по умолчанию имеет значение `"off"`. Firefox следует этому стандарту. В ранних версиях Chrome и IE значение этого свойства по умолчанию равно `"inherit"`. Начиная с Chrome 43 значение по умолчанию `"off"`, а значение `"inherit"` не поддерживается. В IE6-10 значение должно быть указанно с большой буквы.
 
-```
-var mode = document.designMode;
-document.designMode = "on" || "off";
-```
+## Значение
+
+Строка, указывающая, включен или выключен параметр `designMode`.
+Доступные значения: `on` и `off`.
 
 ## Пример
 
-Включить режим редактирования для {{HTMLElement("iframe")}} :
+Включает режим редактирования для {{HTMLElement("iframe")}}:
 
-```
+```js
 iframeNode.contentDocument.designMode = "on";
 ```
 
@@ -40,6 +32,4 @@ iframeNode.contentDocument.designMode = "on";
 
 ## Смотрите также
 
-- [Rich-Text Editing в Mozilla](/ru/docs/Rich-Text_Editing_in_Mozilla)
 - {{domxref("HTMLElement.contentEditable")}}
-- [Свойство designMode](<https://msdn.microsoft.com/ru-ru/library/ms533720(v=vs.85).aspx>) на MSDN

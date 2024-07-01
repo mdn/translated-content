@@ -1,20 +1,9 @@
 ---
 title: downloads.acceptDanger()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/acceptDanger
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - acceptDanger
-  - downloads
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/acceptDanger
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`acceptDanger()`** de l'API {{WebExtAPIRef("downloads")}} invite l'utilisateur à accepter ou à annuler un téléchargement potentiellement dangereux.
 
@@ -26,8 +15,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var prompting = browser.downloads.acceptDanger(
-  downloadId      // integer
-)
+  downloadId, // integer
+);
 ```
 
 ### Parameters
@@ -39,9 +28,9 @@ var prompting = browser.downloads.acceptDanger(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Lorsque la boîte de dialogue se ferme, la promesse sera remplie sans arguments.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.acceptDanger")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

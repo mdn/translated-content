@@ -1,7 +1,6 @@
 ---
 title: WindowClient.visibilityState
 slug: Web/API/WindowClient/visibilityState
-translation_of: Web/API/WindowClient/visibilityState
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}

@@ -53,7 +53,7 @@ A operação AND bit a bit (Bitwase) de qualquer número `x` com `0` produz
 
 ### Usando bitwase AND
 
-``` js
+```js
 //  5: 00000000000000000000000000000101
 //  2: 00000000000000000000000000000010
 5  e  2 ; // 0

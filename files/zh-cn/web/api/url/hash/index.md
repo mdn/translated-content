@@ -1,32 +1,27 @@
 ---
-title: URL.hash
+title: URL：hash 属性
 slug: Web/API/URL/hash
+l10n:
+  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ APIRef("URL API") }}
+{{ APIRef("URL API") }} {{AvailableInWorkers}}
 
-{{domxref("URL")}} 接口的 **`hash`** 属性返回一个 {{domxref("USVString")}}，其中会包含 URL 标识中的 `'#'` 和 fragment 标识符（fragment 即我们通常所说的 URL hash）。
+{{domxref("URL")}} 接口的 **`hash`** 属性是一个包含以 `'#'` 开头的 URL 片段标识符的字符串。
 
-这里 fragment 不会经过[百分比编码](/zh-CN/docs/Glossary/percent-encoding)（URL 编码）。如果 URL 中没有 fragment，该属性会包含一个空字符串 —— `""`.
+片段不会经过 [URL 解码](https://zh.wikipedia.org/wiki/百分号编码)。如果某个 URL 没有片段，该属性会包含一个空字符串——`""`。
 
-{{AvailableInWorkers}}
+## 值
 
-## 语法
-
-```plain
-string = object.hash;
-object.hash = string;
-```
-
-### 返回值
-
-{{domxref("USVString")}}.
+一个字符串。
 
 ## 示例
 
-```html
-var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href#Examples');
-url.hash // Returns '#Examples'
+```js
+const url = new URL(
+  "https://developer.mozilla.org/zh-CN/docs/Web/API/URL/href#示例",
+);
+console.log(url.hash); // 输出：'#%E7%A4%BA%E4%BE%8B'
 ```
 
 ## 规范
@@ -37,6 +32,6 @@ url.hash // Returns '#Examples'
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - 所属的 {{domxref("URL")}} 接口。

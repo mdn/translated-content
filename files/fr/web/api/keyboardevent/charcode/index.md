@@ -1,18 +1,11 @@
 ---
 title: KeyboardEvent.charCode
 slug: Web/API/KeyboardEvent/charCode
-tags:
-  - API
-  - Clavier
-  - DOM
-  - Déprécié
-  - Propriété
-  - Référence(2)
-  - évènements
-translation_of: Web/API/KeyboardEvent/charCode
 ---
 
-{{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}
+{{Deprecated_Header}}
+
+{{APIRef("UI Events")}}
 
 La propriété en lecture seule {{domxref("KeyboardEvent.charCode")}} retourne la valeur Unicode d'une touche caractère pressée pendant un évènement {{ domxref("element.onkeypress", "keypress") }}.
 
@@ -36,16 +29,15 @@ var value = event.charCode;
     <title>Exemple charCode</title>
 
     <script type="text/javascript">
-
-      function AfficherCaractere(e)
-      {
+      function AfficherCaractere(e) {
         alert(
-                "Touche tapée : " +
-                String.fromCharCode(e.charCode) + "\n" +
-                "charCode: " + e.charCode
+          "Touche tapée : " +
+            String.fromCharCode(e.charCode) +
+            "\n" +
+            "charCode: " +
+            e.charCode,
         );
       }
-
     </script>
   </head>
 

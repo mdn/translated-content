@@ -17,7 +17,7 @@ Os itens tipicamente são exibidos em linha com um separador para indicar uma hi
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
 
-> **Note:** [Baixe esse exemplo](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
+> **Nota:** [Baixe esse exemplo](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
 
 ## Faça escolhas
 
@@ -33,7 +33,7 @@ Os vários métodos de layout têm diferente suporte para o navegador. Veja os g
 
 #### Flexbox
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## Veja também
 

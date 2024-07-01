@@ -1,33 +1,24 @@
 ---
-title: HTMLHyperlinkElementUtils.pathname
+title: "HTMLAnchorElement: свойство pathname"
 slug: Web/API/HTMLAnchorElement/pathname
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/pathname
-original_slug: Web/API/HTMLHyperlinkElementUtils/pathname
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("URL API")}}
+{{APIRef("HTML DOM")}}
 
-Свойство **`HTMLHyperlinkElementUtils.pathname`** – это {{domxref("USVString")}}, содержащий первый `'/'` после хоста с последующим текстом URL.
+Свойство **`HTMLAnchorElement.pathname`** — это строка, начинающаяся с символа`'/'`, за которым следует путь к ресурсу, не включающий параметры запроса и якорь. Если пути нет, то будет возвращена пустая строка.
 
-## Синтаксис
+## Значение
 
-```
-string = object.pathname;
-object.pathname = string;
-```
+Строка.
 
 ## Примеры
 
 ```js
-// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.pathname">
-var anchor = document.getElementById("myAnchor");
-var result = anchor.pathname; // Вернёт: '/en-US/docs/HTMLHyperlinkElementUtils.pathname'
+// Документ содержит элемент <a id="myAnchor" href="/en-US/docs/HTMLAnchorElement">
+const anchor = document.getElementById("myAnchor");
+anchor.pathname; // вернёт '/en-US/docs/HTMLAnchorElement'
 ```
 
 ## Спецификации
@@ -40,4 +31,4 @@ var result = anchor.pathname; // Вернёт: '/en-US/docs/HTMLHyperlinkElement
 
 ## Смотрите также
 
-- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.
+- Интерфейс {{domxref("HTMLAnchorElement")}}.

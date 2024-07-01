@@ -1,11 +1,12 @@
 ---
-title: 'Worker: message イベント'
+title: "Worker: message イベント"
+short-title: message
 slug: Web/API/Worker/message_event
 l10n:
-  sourceCommit: 6d697b8a86ea3ce1bf82615c5dc006aeaa22d90b
+  sourceCommit: e6457c34ac16790d4e62bc9ba21e899ac560089c
 ---
 
-{{APIRef}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("window_and_worker_except_service")}}
 
 `message` イベントは {{domxref('Worker')}} オブジェクトで、ワーカーの親がワーカーからメッセージを受け取ったとき（すなわち、ワーカーが [`DedicatedWorkerGlobalScope.postMessage()`](/ja/docs/Web/API/DedicatedWorkerGlobalScope/postMessage) を用いてメッセージを送信したとき）に発生します。
 
@@ -16,9 +17,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('message', (event) => { });
+addEventListener("message", (event) => {});
 
-onmessage = (event) => { };
+onmessage = (event) => {};
 ```
 
 ## イベント型
@@ -38,7 +39,7 @@ _このインターフェイスには、親である {{domxref("Event")}} から
 - {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
   - : 文字列で、このイベントの固有の ID を表します。
 - {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : `MessageEventSource` （{{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} の何れかのオブジェクトがなれる）で、メッセージ送信者を表します。
+  - : `MessageEventSource` （{{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} のいずれかのオブジェクトがなれる）で、メッセージ送信者を表します。
 - {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
   - : {{domxref("MessagePort")}} オブジェクトの配列で、メッセージが送信されるチャネルに関連するポートを表します（チャネルメッセージングや共有ワーカーにメッセージを送信する場合など、必要に応じて）。
 
@@ -49,8 +50,8 @@ _このインターフェイスには、親である {{domxref("Event")}} から
 ```js
 const worker = new Worker("static/scripts/worker.js");
 
-worker.addEventListener('message', (event) => {
-    console.log(`Received message from worker: ${event.data}`)
+worker.addEventListener("message", (event) => {
+  console.log(`Received message from worker: ${event.data}`);
 });
 ```
 
@@ -60,7 +61,7 @@ worker.addEventListener('message', (event) => {
 const worker = new Worker("static/scripts/worker.js");
 
 worker.onmessage = (event) => {
-    console.log(`Received message from worker: ${event.data}`)
+  console.log(`Received message from worker: ${event.data}`);
 };
 ```
 
@@ -69,7 +70,7 @@ worker.onmessage = (event) => {
 ```js
 // static/scripts/worker.js
 
-self.postMessage('I\'m alive!');
+self.postMessage("I'm alive!");
 ```
 
 ## 仕様書

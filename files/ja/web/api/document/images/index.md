@@ -1,43 +1,47 @@
 ---
-title: document.images
+title: "Document: images プロパティ"
+short-title: images
 slug: Web/API/Document/images
+l10n:
+  sourceCommit: 0af9a589170f1535622062de89bbf73507580b8f
 ---
 
-{{ApiRef}}
+{{APIRef("DOM")}}
 
-## 概要
+**`images`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、現在の HTML 文書内の[画像](/ja/docs/Web/API/HTMLImageElement)の[集合](/ja/docs/Web/API/HTMLCollection)を返します。
 
-`document.images` は、現在の HTML 文書の {{domxref("Image")}} のコレクションを返します。
+## 値
 
-## 構文
+現在の文書内に掲載されているすべての画像の生きたリストを提供する {{domxref("HTMLCollection")}} 。
+集合の各項目は、単一の画像要素を表す {{domxref("HTMLImageElement")}} です。
 
-```
-var htmlCollection = document.images;
+## 使用メモ
+
+返された集合において、集合内のアイテムにアクセスするには、JavaScript の配列記法か {{domxref("HTMLCollection.item", "item()")}} メソッドを使用することができます。
+以下はのものは同等です。
+
+```js
+firstImage = imageCollection.item(0);
+
+firstImage = imageCollection[0];
 ```
 
 ## 例
 
-特定の src 属性値を持つ img 要素が文書中に存在する場合にのみ何らかの処理を行う例を以下に示します。
+この例では、画像のリストを見て、`"banner.gif"` という名前の画像を探します。
 
 ```js
-var ilist = document.images;
-
-for(var i = 0; i < ilist.length; i++) {
-    if(ilist[i].src == "banner.gif") {
-        // bunner.gif が存在した場合の処理
-    }
+for (const image of document.images) {
+  if (image.src === "banner.gif") {
+    console.log("バナーを見つけました");
+  }
 }
 ```
 
-## プロパティ
-
-- `document.images.length`
-  - : 文書中の画像の数を返す
-
-## 注記
-
-`document.images` は DOM HTML の一部であり、HTML 文書に於いてのみ動作します。
-
 ## 仕様書
 
-- [DOM Level 2 HTML: HTMLDocument.images](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

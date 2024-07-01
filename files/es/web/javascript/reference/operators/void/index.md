@@ -1,7 +1,6 @@
 ---
 title: void
 slug: Web/JavaScript/Reference/Operators/void
-original_slug: Web/JavaScript/Referencia/Operadores/void
 ---
 
 {{jsSidebar("Operators")}}

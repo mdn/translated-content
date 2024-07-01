@@ -1,16 +1,11 @@
 ---
 title: border-width
 slug: Web/CSS/border-width
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-width
 ---
 
 {{CSSRef}}
 
-La propriété CSS **`border-width`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui définit la largeur de la bordure d'un élément.
+La propriété CSS **`border-width`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui définit la largeur de la bordure d'un élément.
 
 Cette propriété raccourcie définit les propriétés détaillées
 
@@ -84,26 +79,21 @@ La propriété `border-width` peut être définie avec une, deux, trois ou quatr
 ### HTML
 
 ```html
-<p id="unevaleur">
-  Une valeur : la bordure fait 6px sur les 4 côtés.
-</p>
+<p id="unevaleur">Une valeur : la bordure fait 6px sur les 4 côtés.</p>
 
 <p id="deuxvaleurs">
-  Deux valeurs différentes : elle fait 2px en haut
-  et en bas et elle mesure 10px pour les bords droit
-  et gauche.
+  Deux valeurs différentes : elle fait 2px en haut et en bas et elle mesure 10px
+  pour les bords droit et gauche.
 </p>
 
 <p id="troisvaleurs">
-  Trois valeurs différentes : 0.3em pour le haut,
-  9px pour le bas et zéro pour la droite et la
-  gauche.
+  Trois valeurs différentes : 0.3em pour le haut, 9px pour le bas et zéro pour
+  la droite et la gauche.
 </p>
 
 <p id="quatrevaleurs">
-  Quatre valeurs différentes : "thin" pour le haut,
-  "medium" pour la droite, "thick" pour le bas
-  et 1em pour la gauche.
+  Quatre valeurs différentes : "thin" pour le haut, "medium" pour la droite,
+  "thick" pour le bas et 1em pour la gauche.
 </p>
 ```
 

@@ -1,10 +1,9 @@
 ---
 title: comment
 slug: Web/XSLT/Element/comment
-original_slug: Web/XSLT/comment
 ---
 
-{{XsltRef}}
+{{XsltSidebar}}{{XsltRef}}
 
 El elemento `<xsl:comment>` escribe un comentario en el documento de salida. Debe incluir sólo texto.
 

@@ -58,20 +58,22 @@ function check(it) {
 }
 
 const globalObject =
-  check(typeof window === 'object' && window) ||
-  check(typeof self === 'object' && self) ||
-  check(typeof global === 'object' && global) ||
+  check(typeof window === "object" && window) ||
+  check(typeof self === "object" && self) ||
+  check(typeof global === "object" && global) ||
   // 엄격 모드에서 실행할 때 undefined를 반환합니다.
-  (function () { return this; })() ||
-  Function('return this')();
+  (function () {
+    return this;
+  })() ||
+  Function("return this")();
 ```
 
 전역 객체를 얻은 후 새로운 전역을 정의할 수 있습니다. 예를 들어 [`Intl`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl)에 대한 구현을 추가합니다.
 
 ```js
-if (typeof globalObject.Intl === 'undefined') {
+if (typeof globalObject.Intl === "undefined") {
   // No Intl in this environment; define our own on the global scope
-  Object.defineProperty(globalObject, 'Intl', {
+  Object.defineProperty(globalObject, "Intl", {
     value: {
       // Our Intl implementation
     },
@@ -85,8 +87,8 @@ if (typeof globalObject.Intl === 'undefined') {
 `globalThis`를 사용할 수 있으므로 환경 전체에 대한 추가 검색이 더 이상 필요하지 않습니다.
 
 ```js
-if (typeof globalThis.Intl === 'undefined') {
-  Object.defineProperty(globalThis, 'Intl', {
+if (typeof globalThis.Intl === "undefined") {
+  Object.defineProperty(globalThis, "Intl", {
     value: {
       // Our Intl implementation
     },

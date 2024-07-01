@@ -18,7 +18,7 @@ l10n:
 この例では、`DecompressionStream` から {{domxref("WritableStream")}} を返します。
 
 ```js
-let stream = new DecompressionStream('gzip');
+let stream = new DecompressionStream("gzip");
 console.log(stream.writeable); // WritableStream
 ```
 

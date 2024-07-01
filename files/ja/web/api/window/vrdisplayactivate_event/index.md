@@ -1,5 +1,5 @@
 ---
-title: 'Window: vrdisplayactivate イベント'
+title: "Window: vrdisplayactivate イベント"
 slug: Web/API/Window/vrdisplayactivate_event
 l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
@@ -18,9 +18,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('vrdisplayactivate', (event) => { });
+addEventListener("vrdisplayactivate", (event) => {});
 
-onvrdisplayactivate = (event) => { };
+onvrdisplayactivate = (event) => {};
 ```
 
 ## イベント型
@@ -43,8 +43,8 @@ _`VRDisplayEvent` は親オブジェクトである {{domxref("Event")}} から�
 `vrdisplayactivate` イベントは [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで使用することができます。
 
 ```js
-window.addEventListener('vrdisplayactivate', () => {
-  info.textContent = 'Display activated.';
+window.addEventListener("vrdisplayactivate", () => {
+  info.textContent = "Display activated.";
   reportDisplays();
 });
 ```
@@ -53,7 +53,7 @@ window.addEventListener('vrdisplayactivate', () => {
 
 ```js
 window.onvrdisplayactivate = () => {
-  info.textContent = 'Display activated.';
+  info.textContent = "Display activated.";
   reportDisplays();
 };
 ```
@@ -70,5 +70,4 @@ window.onvrdisplayactivate = () => {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームが提供するデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

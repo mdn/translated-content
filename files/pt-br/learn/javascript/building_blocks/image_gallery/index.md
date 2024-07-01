@@ -1,7 +1,6 @@
 ---
 title: Galeria de Imagens
 slug: Learn/JavaScript/Building_blocks/Image_gallery
-original_slug: Aprender/JavaScript/Elementos_construtivos/Image_gallery
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
@@ -31,7 +30,7 @@ Agora que analisamos os blocos de construção fundamentais do JavaScript, testa
 
 Para começar esta avaliação, você deve [pegar o arquivo ZIP](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/gallery/gallery-start.zip?raw=true) para o exemplo e descompactá-lo em algum lugar no seu computador.
 
-> **Nota:** Como alternativa, você pode usar um site como o [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) para fazer sua avaliação. Você pode colar o HTML, CSS e JavaScript em um desses editores on-line. Se o editor on-line que você está usando não tiver painéis JavaScript / CSS separados, sinta-se à vontade para colocar os elementos in-line `<script>` e `<style>` dentro da página HTML.
+Como alternativa, você pode usar um site como o [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) para fazer sua avaliação. Você pode colar o HTML, CSS e JavaScript em um desses editores on-line. Se o editor on-line que você está usando não tiver painéis JavaScript / CSS separados, sinta-se à vontade para colocar os elementos in-line `<script>` e `<style>` dentro da página HTML.
 
 ## Resumo do projeto
 
@@ -41,14 +40,12 @@ Você recebeu alguns recursos de HTML, CSS e imagem e algumas linhas de código 
 <h1>Image gallery example</h1>
 
 <div class="full-img">
-  <img class="displayed-img" src="images/pic1.jpg">
+  <img class="displayed-img" src="images/pic1.jpg" />
   <div class="overlay"></div>
   <button class="dark">Darken</button>
 </div>
 
-<div class="thumb-bar">
-
-</div>
+<div class="thumb-bar"></div>
 ```
 
 O exemplo é assim:
@@ -85,7 +82,7 @@ Você precisa:
 
 Em cada iteração de loop, você precisa adicionar um manipulador `onclick` ao atual `newImage` — isso deve:
 
-1. Encontre o valor do atributo `src` da imagem atual. Isto pode ser feito executando a função [`getAttribute()`](/en-US/docs/Web/API/Element/getAttribute) no `<img>` em cada caso e passando um parâmetro de `"src"` em cada caso. Mas como conseguir a imagem? O uso do `newImage.getAttribute()` não funcionará, pois o loop é concluído antes de os manipuladores de eventos serem aplicados; fazer desta forma resultaria no retorno do valor `src` do último `<img>` para todos os casos. Para resolver isso, tenha em mente que, no caso de cada manipulador de eventos, o `<img>` é o destino do manipulador. Que tal obter as informações do objeto de evento?
+1. Encontre o valor do atributo `src` da imagem atual. Isto pode ser feito executando a função [`getAttribute()`](/pt-BR/docs/Web/API/Element/getAttribute) no `<img>` em cada caso e passando um parâmetro de `"src"` em cada caso. Mas como conseguir a imagem? O uso do `newImage.getAttribute()` não funcionará, pois o loop é concluído antes de os manipuladores de eventos serem aplicados; fazer desta forma resultaria no retorno do valor `src` do último `<img>` para todos os casos. Para resolver isso, tenha em mente que, no caso de cada manipulador de eventos, o `<img>` é o destino do manipulador. Que tal obter as informações do objeto de evento?
 2. Rode uma função, passando o valor `src` retornado como um parâmetro. Você pode chamar essa função como quiser.
 3. Esta função do manipulador de eventos deve definir o valor do atributo `src` do `displayed-img <img>` para o valor `src` passado como um parâmetro. Já fornecemos uma linha que armazena uma referência ao `<img>` relevante em uma variável chamada `displayedImg`. Note que queremos uma função nomeada definida aqui.
 
@@ -94,13 +91,13 @@ Em cada iteração de loop, você precisa adicionar um manipulador `onclick` ao 
 Isso só deixa o nosso escurecer / clarear `<button>` — nós já fornecemos uma linha que armazena uma referência ao `<button>` em uma variável chamada `btn`. Você precisa adicionar um manipulador `onclick` que:
 
 1. Verifica o nome da classe atual definido no `<button>` — você pode novamente fazer isso usando `getAttribute()`.
-2. Se o nome da classe for `"dark"`, altera a classe `<button>` para `"light"` (usando [`setAttribute()`](/en-US/docs/Web/API/Element/setAttribute)), seu conteúdo de texto para "Lighten", e o {{cssxref("background-color")}} da sobreposição `<div>` para `"rgba(0,0,0,0.5)"`.
+2. Se o nome da classe for `"dark"`, altera a classe `<button>` para `"light"` (usando [`setAttribute()`](/pt-BR/docs/Web/API/Element/setAttribute)), seu conteúdo de texto para "Lighten", e o {{cssxref("background-color")}} da sobreposição `<div>` para `"rgba(0,0,0,0.5)"`.
 3. Se o nome da classe não for `"dark"`, a classe `<button>` será alterada para `"dark"`, o conteúdo de texto de volta para "Darken", e o {{cssxref("background-color")}} da sobreposição `<div>` para `"rgba(0,0,0,0)"`.
 
 As linhas seguintes fornecem uma base para alcançar as mudanças estipuladas nos pontos 2 e 3 acima.
 
 ```js
-btn.setAttribute('class', xxx);
+btn.setAttribute("class", xxx);
 btn.textContent = xxx;
 overlay.style.backgroundColor = xxx;
 ```
@@ -114,13 +111,3 @@ overlay.style.backgroundColor = xxx;
 Se você está seguindo esta avaliação como parte de um curso organizado, você deve poder dar seu trabalho ao seu professor / mentor para marcação. Se você é auto-didata, então pode obter o guia de marcação com bastante facilidade, perguntando no tópico de [discussão sobre este exercício](https://discourse.mozilla.org/t/image-gallery-assessment/24687), ou no canal [#mdn](irc://irc.mozilla.org/mdn) IRC da [Mozilla IRC](https://wiki.mozilla.org/IRC). Tente o exercício primeiro — não há nada a ganhar com a trapaça!
 
 {{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-## In this module
-
-- [Making decisions in your code — conditionals](/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/pt-BR/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/pt-BR/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/pt-BR/docs/Learn/JavaScript/Building_blocks/Image_gallery)

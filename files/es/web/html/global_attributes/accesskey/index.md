@@ -1,7 +1,6 @@
 ---
 title: accesskey
 slug: Web/HTML/Global_attributes/accesskey
-original_slug: Web/HTML/Atributos_Globales/accesskey
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -73,9 +72,9 @@ Notar que Firefox puede personalizar la tecla de modificación requerida por las
 
 {{Specifications}}
 
-## Compatibilidad con exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.accesskey")}}
+{{Compat}}
 
 ## Ver también
 

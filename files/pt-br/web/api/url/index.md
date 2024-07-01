@@ -98,7 +98,7 @@ O método {{domxref("URL.toString", "toString()")}} de `URL` apenas retorna o va
 
 ```js
 const response = await fetch(
-  new URL("http://www.example.com/démonstration.html")
+  new URL("http://www.example.com/démonstration.html"),
 );
 ```
 

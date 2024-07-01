@@ -1,6 +1,8 @@
 ---
 title: animation-timing-function
 slug: Web/CSS/animation-timing-function
+l10n:
+  sourceCommit: b81ce97c7b37b6339c95cf7a0ee0b72963dd0186
 ---
 
 {{CSSRef}}
@@ -24,7 +26,7 @@ animation-timing-function: step-start;
 animation-timing-function: step-end;
 
 /* 関数値 */
-animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
 animation-timing-function: steps(4, end);
 
 /* 段階関数のキーワード */
@@ -36,26 +38,23 @@ animation-timing-function: steps(6, start);
 animation-timing-function: steps(8, end);
 
 /* 複数のアニメーション */
-animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* グローバル値 */
 animation-timing-function: inherit;
 animation-timing-function: initial;
 animation-timing-function: revert;
+animation-timing-function: revert-layer;
 animation-timing-function: unset;
 ```
-
-タイミング関数は [@keyframes](/ja/docs/Web/CSS/@keyframes) ルール内にあるそれぞれのキーフレームに指定されることがあります。キーフレームに **`animation-timing-function`** が指定されていない場合、そのキーフレームにはアニメーションが適用された要素から **`animation-timing-function`** の適切な値が使用されます。
-
-キーフレームのタイミング関数は、指定されたキーフレームからそのプロパティを指定する次のキーフレームまで、またはそのプロパティを指定する後続のキーフレームがない場合はアニメーションの終わりまで、プロパティごとに適用されます。結果的に、 **`animation-timing-function`** のうち **`100%`** または **`to`** に指定したものは使用されません。
 
 ### 値
 
 - {{cssxref("&lt;easing-function&gt;")}}
 
-  - : {{cssxref("animation-name")}} で定められた、アニメーションに対応するタイミング関数です。
+  - : {{cssxref("animation-name")}} で定められた、アニメーションに対応するイージング関数です。
 
-    ステップではないキーワード値 (ease, linear, ease-in-out など) は、それぞれ固定の 4 点値を持つ三次ベジェ曲線を表し、 cubic-bezier() 関数の値で非定義値を指定することができます。ステップタイミング関数は、入力時間を長さが等しい指定された数の間隔に分割します。これは、ステップ数とステップ位置によって定義されます。
+    ステップではないキーワード値 (ease, linear, ease-in-out など) は、それぞれ固定の 4 点値を持つ三次ベジェ曲線を表し、 cubic-bezier() 関数の値で非定義値を指定することができます。ステップイージング関数は、入力時間を長さが等しい指定された数の間隔に分割します。これは、ステップ数とステップ位置によって定義されます。
 
 - `ease`
   - : `cubic-bezier(0.25, 0.1, 0.25, 1.0)` と同じで、既定値であり、アニメーションの中央に向けて変化量が増加し、最後に向けて減少します。
@@ -78,19 +77,28 @@ animation-timing-function: unset;
     - `jump-end`
       - : アニメーションの終了時に最後のジャンプが発生するように、右連続関数を表します。
     - `jump-none`
-      - : どちらにもジャンプはありません。代わりに、 0% 位置と 100% 位置の両方で、それぞれ 1/n の間隔を保持します。
+      - : どちらの側でもジャンプは行わず、効果的に補間の反復処理中に段階が除去されます。代わりに、 0% 位置と 100% 位置の両方で、それぞれ 1/n の間隔を保持します。
     - `jump-both`
       - : 0% 位置と 100% 位置の両方で一時停止を含み、アニメーションの反復中に効果的にステップを追加します。
     - `start`
       - : `jump-start` と同じです。
     - `end`
       - : `jump-end` と同じです。
+
 - `step-start`
   - : `steps(1, jump-start)` と同じです。
 - `step-end`
   - : `steps(1, jump-end)` と同じです。
 
-> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} プロパティで指定したアニメーションに割り当てられますが、いくつあるかによって異なる方法で割り当てられます。詳しくは、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values)を参照してください。
+> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
+
+> **メモ:** `animation-timing-function` は、 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成するときに、通常の時間ベースのアニメーションと同じ効果があります。
+
+## 解説
+
+イージング関数は [@keyframes](/ja/docs/Web/CSS/@keyframes) ルール内にあるそれぞれのキーフレームに指定されることがあります。キーフレームに **`animation-timing-function`** が指定されていない場合、そのキーフレームにはアニメーションが適用された要素から **`animation-timing-function`** の適切な値が使用されます。
+
+キーフレーム内では、`animation-timing-function` はアットルール固有の記述子であり、同名のプロパティではありません。時間ではアニメーションされません。むしろ、キーフレームのイージング関数は、それが指定されたキーフレームから、そのプロパティを指定する次のキーフレームまで、またはそのプロパティを指定する次のキーフレームがない場合はアニメーションが終わるまで、プロパティごとに適用されます。その結果、 **`animation-timing-function`** のうち **`100%`** または **`to`** に指定したものは使用されません。
 
 ## 公式定義
 
@@ -117,47 +125,47 @@ animation-timing-function: unset;
 
 ```css hidden
 .parent > div[class] {
-    animation-name: changeme;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    margin-bottom: 4px;
+  animation-name: changeme;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  margin-bottom: 4px;
 }
 @keyframes changeme {
-   0% {
-      min-width: 12em;
-      width: 12em;
-      background-color: black;
-      border: 1px solid red;
-      color: white;
-   }
-   100% {
-      width: 90vw;
-      min-width: 24em;
-      background-color: magenta;
-      color: yellow;
-      border: 1px solid orange;
-   }
+  0% {
+    min-width: 12em;
+    width: 12em;
+    background-color: black;
+    border: 1px solid red;
+    color: white;
+  }
+  100% {
+    width: 90vw;
+    min-width: 24em;
+    background-color: magenta;
+    color: yellow;
+    border: 1px solid orange;
+  }
 }
 ```
 
 ```css
 .ease {
-   animation-timing-function: ease;
+  animation-timing-function: ease;
 }
 .easein {
-   animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
 }
 .easeout {
-   animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
 }
 .easeinout {
-   animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 .linear {
-   animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 .cb {
-   animation-timing-function: cubic-bezier(0.2,-2,0.8,2);
+  animation-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
 }
 ```
 
@@ -180,53 +188,53 @@ animation-timing-function: unset;
 
 ```css hidden
 .parent > div[class] {
-    animation-name: changeme;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    margin-bottom: 4px;
+  animation-name: changeme;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  margin-bottom: 4px;
 }
 @keyframes changeme {
-   0% {
-      min-width: 12em;
-      width: 12em;
-      background-color: black;
-      border: 1px solid red;
-      color: white;
-   }
-   100% {
-      width: 90vw;
-      min-width: 24em;
-      background-color: magenta;
-      color: yellow;
-      border: 1px solid orange;
-   }
+  0% {
+    min-width: 12em;
+    width: 12em;
+    background-color: black;
+    border: 1px solid red;
+    color: white;
+  }
+  100% {
+    width: 90vw;
+    min-width: 24em;
+    background-color: magenta;
+    color: yellow;
+    border: 1px solid orange;
+  }
 }
 ```
 
 ```css
 .jump-start {
-   animation-timing-function: steps(5, jump-start);
+  animation-timing-function: steps(5, jump-start);
 }
 .jump-end {
-   animation-timing-function: steps(5, jump-end);
+  animation-timing-function: steps(5, jump-end);
 }
 .jump-none {
-   animation-timing-function: steps(5, jump-none);
+  animation-timing-function: steps(5, jump-none);
 }
 .jump-both {
-   animation-timing-function: steps(5, jump-both);
+  animation-timing-function: steps(5, jump-both);
 }
 .start {
-   animation-timing-function: steps(5, start);
+  animation-timing-function: steps(5, start);
 }
 .end {
-   animation-timing-function: steps(5, end);
+  animation-timing-function: steps(5, end);
 }
 .step-start {
-   animation-timing-function: step-start;
+  animation-timing-function: step-start;
 }
 .step-end {
-   animation-timing-function: step-end;
+  animation-timing-function: step-end;
 }
 ```
 
@@ -242,7 +250,8 @@ animation-timing-function: unset;
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{cssxref('easing-function')}}
 - JavaScript の {{domxref("AnimationEvent")}} API
 - [cubic-bezier.com](https://cubic-bezier.com)
+- その他のアニメーション関連プロパティ: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}

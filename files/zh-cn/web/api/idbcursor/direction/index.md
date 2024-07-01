@@ -38,24 +38,28 @@ prev
 
 ```js
 function backwards() {
-  list.innerHTML = '';
-  var transaction = db.transaction(['rushAlbumList'], 'readonly');
-  var objectStore = transaction.objectStore('rushAlbumList');
+  list.innerHTML = "";
+  var transaction = db.transaction(["rushAlbumList"], "readonly");
+  var objectStore = transaction.objectStore("rushAlbumList");
 
-  objectStore.openCursor(null,'prev').onsuccess = function(event) {
+  objectStore.openCursor(null, "prev").onsuccess = function (event) {
     var cursor = event.target.result;
-      if(cursor) {
-        var listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.albumTitle + '</strong>, ' + cursor.value.year;
-        list.appendChild(listItem);
+    if (cursor) {
+      var listItem = document.createElement("li");
+      listItem.innerHTML =
+        "<strong>" +
+        cursor.value.albumTitle +
+        "</strong>, " +
+        cursor.value.year;
+      list.appendChild(listItem);
 
-        console.log(cursor.direction);
-        cursor.continue();
-      } else {
-        console.log('Entries displayed backwards.');
-      }
+      console.log(cursor.direction);
+      cursor.continue();
+    } else {
+      console.log("Entries displayed backwards.");
+    }
   };
-};
+}
 ```
 
 ## Specifications
@@ -74,4 +78,4 @@ function backwards() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

@@ -34,7 +34,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
 var re = /foo/;
 re[Symbol.match] = false;
 "/foo/".startsWith(re); // true
-"/baz/".endsWith(re);   // false
+"/baz/".endsWith(re); // false
 ```
 
 ## 规范
@@ -45,7 +45,7 @@ re[Symbol.match] = false;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.search")}}

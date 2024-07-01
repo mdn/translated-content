@@ -1,7 +1,6 @@
 ---
 title: data-*
 slug: Web/HTML/Global_attributes/data-*
-original_slug: Web/HTML/Atributos_Globales/data-*
 ---
 
 > **Nota:** {{HTMLSidebar("Global_attributes")}}
@@ -20,9 +19,9 @@ Notar que la propiedad {{domxref("HTMLElement.dataset")}} es un {{domxref("Strin
 
 {{Specifications}}
 
-## Compatibilidad en exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.data_attributes")}}
+{{Compat}}
 
 ## Ver también
 

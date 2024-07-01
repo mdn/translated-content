@@ -5,13 +5,15 @@ l10n:
   sourceCommit: eda72fa0408af18fba06416b616308084c903fee
 ---
 
+{{AccessibilitySidebar}}
+
 ### 概要
 
 ウェブアプリケーションは、メニュー、ツリービュー、リッチテキストフィールド、タブパネルなどのデスクトップウィジェットを模倣するために JavaScript を使用することがよくあります。 これらのウィジェットは通常、 {{ HTMLElement("div") }} 要素や {{ HTMLElement("span") }} 要素で構成されています。これらの要素は本来、デスクトップのものと同じキーボード機能を提供しません。 このドキュメントは JavaScript ウィジェットをキーボードでアクセス可能にするためのテクニックを説明します。
 
 ### tabindex を使う
 
-デフォルトでは、人々がウェブページを閲覧するために <kbd>Tab</kbd> キーを使うとき、（リンクやフォームコントロールのような）インタラクティブ要素だけがフォーカスされます。 {{htmlattrxref("tabindex")}} [グローバル属性](/ja/docs/Web/HTML/Global_attributes)を使うと、作成者は他の要素もフォーカス可能にできます。 `0` に設定すると、要素はキーボードとスクリプトによってフォーカス可能になります。 `-1` に設定すると、要素はスクリプトによってフォーカス可能になりますが、キーボードによるフォーカスの順序の一部にはなりません。
+デフォルトでは、人々がウェブページを閲覧するために <kbd>Tab</kbd> キーを使うとき、（リンクやフォームコントロールのような）インタラクティブ要素だけがフォーカスされます。 [`tabindex`](/ja/docs/Web/HTML/Global_attributes#tabindex) [グローバル属性](/ja/docs/Web/HTML/Global_attributes)を使うと、作成者は他の要素もフォーカス可能にできます。 `0` に設定すると、要素はキーボードとスクリプトによってフォーカス可能になります。 `-1` に設定すると、要素はスクリプトによってフォーカス可能になりますが、キーボードによるフォーカスの順序の一部にはなりません。
 
 キーボードを使用したときに要素がフォーカスを得る順序は、デフォルトではソースの順序です。 例外的な状況では、作成者は順序を再定義したいと思うかもしれません。 これを行うために、作成者は `tabindex` を任意の正数に設定することができます。
 
@@ -65,7 +67,8 @@ l10n:
 
 ```html
 <ul id="mb1" tabindex="0">
-  <li id="mb1_menu1" tabindex="-1"> フォント
+  <li id="mb1_menu1" tabindex="-1">
+    フォント
     <ul id="fontMenu" title="フォント" tabindex="-1">
       <li id="sans-serif" tabindex="-1">サンセリフ</li>
       <li id="serif" tabindex="-1">セリフ</li>
@@ -73,14 +76,16 @@ l10n:
       <li id="fantasy" tabindex="-1">ファンタジー</li>
     </ul>
   </li>
-  <li id="mb1_menu2" tabindex="-1"> スタイル
+  <li id="mb1_menu2" tabindex="-1">
+    スタイル
     <ul id="styleMenu" title="スタイル" tabindex="-1">
       <li id="italic" tabindex="-1">斜体</li>
       <li id="bold" tabindex="-1">太字</li>
       <li id="underline" tabindex="-1">下線</li>
     </ul>
   </li>
-  <li id="mb1_menu3" tabindex="-1"> 位置揃え
+  <li id="mb1_menu3" tabindex="-1">
+    位置揃え
     <ul id="justificationMenu" title="位置揃え" tabindex="-1">
       <li id="left" tabindex="-1">左</li>
       <li id="center" tabindex="-1">中央</li>
@@ -124,7 +129,7 @@ l10n:
 
 全てのフォーカスの変更がキーイベントやマウスイベントを介して行われるとは限りません。 スクリーンリーダーなどの支援技術では、フォーカスを任意のフォーカス可能な要素に設定できます。 代わりに `onfocus` と `onblur` を使ってフォーカスを追跡します。
 
-`onfocus` と `onblur` は全ての要素で使用できるようになりました。 現在のドキュメントのフォーカスを取得するための標準的な DOM インターフェースはありません。 フォーカスの状態を追跡したい場合は、[document.activeElement](/ja/docs/Web/API/Document/activeElement) を使ってアクティブな要素を取得できます。 [document.hasFocus](/ja/docs/Web/API/Document/hasFocus) を使って、現在のドキュメントのフォーカスかどうかを確認することもできます。
+`onfocus` と `onblur` は全ての要素で使用できるようになりました。 現在のドキュメントのフォーカスを取得するための標準的な DOM インターフェイスはありません。 フォーカスの状態を追跡したい場合は、[document.activeElement](/ja/docs/Web/API/Document/activeElement) を使ってアクティブな要素を取得できます。 [document.hasFocus](/ja/docs/Web/API/Document/hasFocus) を使って、現在のドキュメントのフォーカスかどうかを確認することもできます。
 
 ### テクニック 2: `aria-activedescendant`
 

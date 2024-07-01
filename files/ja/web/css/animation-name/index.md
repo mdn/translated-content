@@ -1,11 +1,13 @@
 ---
 title: animation-name
 slug: Web/CSS/animation-name
+l10n:
+  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
 {{CSSRef}}
 
-**`animation-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に適用される 1 つまたは複数のアニメーションを記述する {{cssxref("@keyframes")}} アットルールの名前を指定します。
+**`animation-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に適用されるアニメーションを記述する 1 つまたは複数の {{cssxref("@keyframes")}} アットルールの名前を指定します。複数の `@keyframe` アットルールをカンマ区切りの文字列で指定します。指定した名前がどの `@keyframe` アットルールにも一致しない場合、プロパティはアニメーションしません。
 
 {{EmbedInteractiveExample("pages/css/animation-name.html")}}
 
@@ -22,12 +24,16 @@ animation-name: sliding-vertically;
 
 /* 複数のアニメーション */
 animation-name: test1, animation4;
-animation-name: none, -moz-specific, sliding;
+animation-name:
+  none,
+  -moz-specific,
+  sliding;
 
 /* グローバル値 */
-animation-name: initial;
 animation-name: inherit;
+animation-name: initial;
 animation-name: revert;
+animation-name: revert-layer;
 animation-name: unset;
 ```
 
@@ -38,7 +44,7 @@ animation-name: unset;
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : アニメーションを識別する名前です。識別子は大文字小文字の区別がない英文字 `a` から `z`、 数字 `0` から `9`、 アンダースコア (`_`)、 ダッシュ (`-`) から成ります。最初のダッシュ以外の文字は英文字でなければなりません。また、二重ダッシュは識別子の先頭では禁止されています。さらに、識別子は `none`, `unset`, `initial`, `inherit` であってはなりません。
 
-> **メモ:** `animation-*` プロパティにコンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} プロパティで指定したアニメーションに割り当てられますが、いくつあるかによって異なる方法で割り当てられます。詳しくは、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values)を参照してください。
+> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
 
 ## 公式定義
 
@@ -50,7 +56,9 @@ animation-name: unset;
 
 ## 例
 
-### animation-name が rotate であるアニメーション
+### アニメーションに名前を付ける
+
+このアニメーションは `animation-name` を `rotate` としています。
 
 #### HTML
 
@@ -66,6 +74,9 @@ animation-name: unset;
   border-radius: 10px;
   width: 100px;
   height: 100px;
+}
+
+.box:hover {
   animation-name: rotate;
   animation-duration: 0.7s;
 }
@@ -82,9 +93,11 @@ animation-name: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Examples","100%","250")}}
+矩形にポインターを当てるとアニメーションが始まります。
 
-例については[CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)を参照してください。
+{{EmbedLiveSample("Naming an animation","100%","250")}}
+
+例については [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
 
 ## 仕様書
 
@@ -96,5 +109,6 @@ animation-name: unset;
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API
+- その他のアニメーション関連プロパティ: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}

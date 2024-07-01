@@ -17,7 +17,7 @@ En Internet Explorer, la propiedad _timeout_ se puede establecer solo después d
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 xhr.timeout = 2000; // tiempo en milisegundos
 
@@ -38,4 +38,4 @@ xhr.send(null);
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.XMLHttpRequest.timeout")}}
+{{Compat}}

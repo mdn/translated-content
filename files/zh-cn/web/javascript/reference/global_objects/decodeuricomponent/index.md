@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 
 {{jsSidebar("Objects")}}
 
-**`decodeURIComponent()`** 方法用于解码由 {{jsxref("encodeURIComponent")}} 方法或者其它类似方法编码的部分统一资源标识符（URI）。
+**`decodeURIComponent()`** 方法用于解码由 {{jsxref("encodeURIComponent")}} 方法或者其他类似方法编码的部分统一资源标识符（URI）。
 
 ## 语法
 
@@ -43,8 +43,8 @@ decodeURIComponent("JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
 
 ```js
 try {
-  var a = decodeURIComponent('%E0%A4%A');
-} catch(e) {
+  var a = decodeURIComponent("%E0%A4%A");
+} catch (e) {
   console.error(e);
 }
 
@@ -59,7 +59,7 @@ try {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("decodeURI")}}
 - {{jsxref("encodeURI")}}

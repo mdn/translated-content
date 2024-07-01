@@ -1,14 +1,6 @@
 ---
 title: Intl.getCanonicalLocales()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/getCanonicalLocales
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`Intl.getCanonicalLocales()`** renvoie un tableau contenant les no
 ## Syntaxe
 
 ```js
-Intl.getCanonicalLocales(locales)
+Intl.getCanonicalLocales(locales);
 ```
 
 ### Paramètres

@@ -1,7 +1,6 @@
 ---
 title: パドルとキーボード操作
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 ---
 
 {{GamesSidebar}}

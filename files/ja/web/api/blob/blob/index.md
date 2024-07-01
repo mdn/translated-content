@@ -20,7 +20,7 @@ new Blob(array, options)
 
 - `array`
 
-  - : [反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)オブジェクト、例えば {{jsxref("Array")}} などです。その中身が {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("Blob")}}、文字列などのオブジェクト、またはそのようなオブジェクトの何れかが混合したもので、それが {{domxref("Blob")}} の中に入れられます。ここで文字列は UTF-8 で符号化されたものであり、 JavaScript におけるふつうの UTF-16 の文字列ではありません。
+  - : [反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)オブジェクト、例えば {{jsxref("Array")}} などです。その中身が {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("Blob")}}、文字列などのオブジェクト、またはそのようなオブジェクトの何れかが混合したもので、それが {{domxref("Blob")}} の中に入れられます。ここで文字列は UTF-8 で符号化されたものであり、 JavaScript におけるふつうの UTF-16 の文字列ではありません。
 
 - `options` {{optional_inline}}
   - : 以下のいずれかのプロパティを指定することができるオブジェクトです。

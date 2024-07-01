@@ -69,7 +69,7 @@ Os elementos precisam ser abertos e fechados corretamente para que eles estejam 
 Alguns elementos não possuem conteúdo e são chamados de **elementos vazios**. Considere o elemento {{htmlelement("img")}} que temos na nossa página HTML:
 
 ```html
-<img src="imagens/firefox-icon.png" alt="Minha imagem de teste">
+<img src="imagens/firefox-icon.png" alt="Minha imagem de teste" />
 ```
 
 Ele contém dois atributos, mas não há tag `</img>` de fechamento, e não há conteúdo interno. Isso acontece porque um elemento de imagem não envolve conteúdo para ter efeito em si mesmo. Sua proposta é incorporar uma imagem na página HTML no lugar que o código aparece.
@@ -79,7 +79,7 @@ Ele contém dois atributos, mas não há tag `</img>` de fechamento, e não há 
 Isso resume o básico dos elementos HTML individuais, mas eles não são úteis por si só. Agora vamos ver como elementos individuais são combinados para formar uma página HTML inteira. Vamos visitar novamente os códigos que colocamos no exemplo de `index.html` (que vimos no artigo [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files)):
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -87,7 +87,7 @@ Isso resume o básico dos elementos HTML individuais, mas eles não são úteis 
     <title>Minha página de teste</title>
   </head>
   <body>
-    <img src="images/firefox-icon.png" alt="minha página de teste">
+    <img src="images/firefox-icon.png" alt="minha página de teste" />
   </body>
 </html>
 ```
@@ -106,7 +106,7 @@ Aqui nós temos:
 Vamos voltar nossa atenção para o elemento {{htmlelement("img")}} novamente:
 
 ```html
-<img src="images/firefox-icon.png" alt="Minha imagem de teste">
+<img src="images/firefox-icon.png" alt="Minha imagem de teste" />
 ```
 
 Como dissemos antes, isso incorpora uma imagem na nossa página na posição que aparece. Isso é feito pelo atributo `src` (_source_), que contém o caminho para nosso arquivo de imagem.
@@ -133,15 +133,14 @@ Essa seção abordará alguns dos elementos HTML essenciais que você usará par
 Os elementos de cabeçalhos permitem especificar que certas partes do seu conteúdo são títulos ou subtítulos. Da mesma forma que um livro tem o título principal e os capítulos possuem títulos e subtítulos, um documento HTML também tem. HTML contém 6 níveis de título, {{htmlelement ("h1")}} - {{htmlelement ("h6")}}, embora você normalmente só use de 3 a 4:
 
 ```html
+<!-- 4 níveis de título -->
 <h1>Meu título principal</h1>
 <h2>Meu título de alto nível</h2>
 <h3>Meu subtítulo</h3>
 <h4>Meu segundo subtítulo</h4>
 ```
 
-Agora, tente adicionar um título adequado à sua página HTML logo acima do elemento {{htmlelement("img")}}.
-
-> **Nota:** Você verá que seu nível de cabeçalho 1 tem um estilo implícito. Não use elementos de cabeçalho para aumentar ou negritar o texto, pois eles são usados para [acessibilidade](/pt-BR/docs/Learn/Accessibility/HTML#text_content) e [outros motivos, como SEO](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure). Tente criar uma sequência significativa de títulos em suas páginas, sem pular os níveis.
+> **Nota:** Qualquer coisa em HTML entre `<!--` e `-->` é um **comentário HTML**. O navegador ignora comentários enquanto renderiza o código. Em outras palavras, eles não são visíveis na página – apenas no código. Os comentários HTML são uma forma de escrever notas úteis sobre seu código ou lógica.
 
 Agora tente adicionar um título adequado à sua página HTML logo acima do elemento {{htmlelement("img")}}.
 
@@ -170,8 +169,8 @@ Por exemplo, se nós quisermos tornar uma parte de um parágrafo numa lista:
 
 ```html
 <p>
-  Na Mozilla, somos uma comunidade global de tecnólogos, pensadores e construtores
-  trabalhando juntos ...
+  Na Mozilla, somos uma comunidade global de tecnólogos, pensadores e
+  construtores trabalhando juntos ...
 </p>
 ```
 
@@ -186,7 +185,7 @@ Nós podemos fazer assim:
   <li>construtores</li>
 </ul>
 
-<p>trabalhando juntos ... </p>
+<p>trabalhando juntos ...</p>
 ```
 
 Tente adicionar uma lista ordenada ou não ordenada à sua página de exemplo.
@@ -211,7 +210,9 @@ Links são muito importantes — eles são o que faz da web ser de fato uma REDE
 4. Preencha o valor desse atributo com o endereço da Web que você deseja vincular o link:
 
    ```html
-   <a href="https://www.mozilla.org/pt-BR/about/manifesto/">Mozilla Manifesto</a>
+   <a href="https://www.mozilla.org/pt-BR/about/manifesto/"
+     >Mozilla Manifesto</a
+   >
    ```
 
 Você pode obter resultados inesperados se omitir a parte `https://` ou o `http://`, o chamado _protocolo_, no começo do endereço web. Então depois de criar um link, clique nele para ter certeza de que ele está indo para onde você deseja.
@@ -231,14 +232,3 @@ Se você ficar emperrado, pode sempre comparar seu trabalho com nosso [código d
 Aqui, nós só arranhamos na superfície do HTML. Para descobrir mais, vá a nossa [Estruturando a web com HTML](/pt-BR/docs/Learn/HTML).
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
-
-## Neste módulo
-
-- [Instalando os programas básicos](/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [Como será o seu site?](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML básico](/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS básico](/pt-BR/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [Javascript básico](/pt-BR/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publicando seu website](/pt-BR/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Como a web funciona](/pt-BR/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

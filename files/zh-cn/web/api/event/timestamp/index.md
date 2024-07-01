@@ -1,50 +1,64 @@
 ---
-title: event.timeStamp
+title: Event：timeStamp 属性
 slug: Web/API/Event/timeStamp
+l10n:
+  sourceCommit: 9dd97c02a28cc9027f9fd0a28e2e1b4b09405181
 ---
 
-{{APIRef}}
+{{APIRef("DOM")}}
 
-> **警告：** 在 Gecko 中，该属性的值不是事件发生时正确的事件戳。查看 <https://bugzilla.mozilla.org/show_bug.cgi?id=238041>
+{{domxref("Event")}} 接口的 **`timeStamp`** 只读属性返回事件创建的时间（以毫秒为单位）。
 
-### 概述
+## 值
 
-返回事件发生时的时间戳。
+该值是从时间原点开始到创建事件的毫秒数。如果全局对象是 {{domxref("Window")}}，则时间原点是用户单击链接或脚本使文档开始加载的时刻。在 worker 中，时间原点是 worker 被创建的时刻。
 
-### 语法
+该值是一个精确到 5 微秒（0.005 ms）的 {{domxref("DOMHighResTimeStamp")}}，但为了防止[指纹识别](/zh-CN/docs/Glossary/Fingerprinting)，其[精度已被降低](#降低时间精度)。
 
-```
-var number = event.timeStamp;
-```
+## 示例
 
-### 例子
+### HTML
 
 ```html
-<html>
-<head>
-
-<title>timeStamp example</title>
-
-<script type="text/javascript">
-function getTime(event) {
-  document.getElementById("time").firstChild.nodeValue = event.timeStamp;
-}
-</script>
-</head>
-
-<body onkeypress="getTime(event)">
-
-<p>按下任意键获取 onkeypress 事件对象的 timestamp 属性值。</p>
-<p>timeStamp: <span id="time">-</span></p>
-
-</body>
-</html>
+<p>聚焦此 iframe 并按任意键即可获取按键事件当前的时间戳。</p>
+<p>时间戳：<span id="time">—</span></p>
 ```
 
-### 备注
+### JavaScript
 
-此属性仅适用于事件系统支持该属性的特定事件类型。
+```js
+function getTime(event) {
+  const time = document.getElementById("time");
+  time.firstChild.nodeValue = event.timeStamp;
+}
+document.body.addEventListener("keypress", getTime);
+```
 
-### 规范
+### 结果
 
-[event.timestamp](http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-timeStamp)
+{{EmbedLiveSample("示例", "100%", 100)}}
+
+## 降低时间精度
+
+为了提供对时序攻击和指纹识别的保护，`Event.timeStamp` 的精度可能会根据浏览器设置而被舍入。
+
+在 Firefox 中，`privacy.reduceTimerPrecision` 首选项默认启用，且默认值为 2 毫秒。
+
+```js
+// Firefox 中降低后的时间精度（默认：2ms）
+event.timeStamp;
+// 9934
+// 10362
+// 11670
+// …
+```
+
+在 Firefox 中，如果你还启用了 `privacy.resistFingerprinting`，则精度将为 100 毫秒或 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 的值中的较大者。
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}

@@ -23,33 +23,32 @@ animation.play();
 
 ## 例子
 
-在 [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) 示例中，单击或点击蛋糕会导致 Alice 的增长动画 (`aliceChange`) 播放，导致她体型变大并触发蛋糕的动画。在以下示例中，使用了一个事件监听器来触发两者的动画：
+在 [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) 示例中，单击或点击蛋糕会导致 Alice 的增长动画 (`aliceChange`) 播放，导致她体型变大并触发蛋糕的动画。在以下示例中，使用了一个事件监听器来触发两者的动画：
 
 ```js
 // 蛋糕拥有其自己的动画：
-var nommingCake = document.getElementById('eat-me_sprite').animate(
-[
-  { transform: 'translateY(0)' },
-  { transform: 'translateY(-80%)' }
-], {
-  fill: 'forwards',
-  easing: 'steps(4, end)',
-  duration: aliceChange.effect.timing.duration / 2
-});
+var nommingCake = document
+  .getElementById("eat-me_sprite")
+  .animate(
+    [{ transform: "translateY(0)" }, { transform: "translateY(-80%)" }],
+    {
+      fill: "forwards",
+      easing: "steps(4, end)",
+      duration: aliceChange.effect.timing.duration / 2,
+    },
+  );
 
 // 暂停蛋糕的动画，以避免动画立即播放。
 nommingCake.pause();
 
 // 该函数会在用户点击时触发
-var growAlice = function() {
-
+var growAlice = function () {
   // Play Alice's animation.
   aliceChange.play();
 
   // Play the cake's animation.
   nommingCake.play();
-
-}
+};
 
 // 当用户持续按下或点击时，调用 growAlice 函数使得所有的动画播放。
 cake.addEventListener("mousedown", growAlice, false);

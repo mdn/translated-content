@@ -1,13 +1,6 @@
 ---
 title: border-inline-width
 slug: Web/CSS/border-inline-width
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/border-inline-width
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

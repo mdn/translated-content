@@ -1,15 +1,17 @@
 ---
 title: number
 slug: Web/XPath/Functions/number
+l10n:
+  sourceCommit: 4a6dacf8c68925a8538585be3b2728bcb271241e
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 `number` 関数はオブジェクトを数値に変換し、その数値を返します。
 
 ### 構文
 
-```
+```plain
 number( [object] )
 ```
 
@@ -31,7 +33,7 @@ number( [object] )
 
 ### 定義
 
-[XPath 1.0 4.4](https://www.w3.org/TR/xpath#function-number)
+[XPath 1.0 4.4](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-number)
 
 ### Gecko での対応
 

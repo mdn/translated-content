@@ -1,51 +1,48 @@
 ---
-title: gamepadconnected
+title: "Window: gamepadconnected イベント"
+short-title: gamepadconnected
 slug: Web/API/Window/gamepadconnected_event
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-`gamepadconnected` イベントは、ゲームパッドが接続されたことをブラウザが検出したとき、またはゲームパッドのボタン/軸が初めて使用されたときに発生します。
+{{APIRef}}
 
-## 一般的な情報
+`gamepadconnected` イベントは、ゲームパッドが接続されたことをブラウザーが検出したとき、またはゲームパッドのボタン/軸が初めて使用されたときに発生します。
 
-- 仕様
-  - : [Gamepad](http://www.w3.org/TR/gamepad/#the-gamepadconnected-event)
-- インターフェース
-  - : Event
-- バブリング
-  - : No
-- キャンセル可能
-  - : No
-- 対象
-  - : DefaultView (`<window>`)
-- 標準の動作
-  - : None
+このイベントは、文書の {{httpheader('Permissions-Policy/gamepad','gamepad')}} [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)が不許可になっている場合には発生しません。
 
-## 属性
-
-| Property                              | Type                                 | Description                                                                                 |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree).                                      |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                                                          |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.                                                  |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.                                                    |
-| `gamepad` {{readonlyInline}}    | {{domxref("Gamepad")}}         | The single gamepad attribute provides access to the associated gamepad data for this event. |
+このイベントはキャンセル不可で、バブリングしません。
 
 ## 例
 
+ゲームパッドが接続されたことを通知するには、{{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用してウィンドウにハンドラーを追加します。
+
 ```js
-// Note that the API is still vendor-prefixed in browsers implementing it
-window.addEventListener("gamepadconnected", function( event ) {
-
-    // All buttons and axes values can be accessed through
-    event.gamepad;
-
+window.addEventListener("gamepadconnected", (event) => {
+  // すべてのボタンと軸の値は、次の方法でアクセスできます。
+  const gamepad = event.gamepad;
 });
 ```
 
-## 関連するイベント
+また、`window.ongamepadconnected` イベントハンドラープロパティを使用して、`gamepadconnected` イベントのハンドラーを確立することもできます。
 
-- [gamepaddisconnected](/ja/docs/Web/Reference/Events/gamepaddisconnected)
+```js
+window.ongamepadconnected = (event) => {
+  // すべてのボタンと軸の値は、次の方法でアクセスできます。
+  const gamepad = event.gamepad;
+};
+```
 
-## 参照
+## 仕様書
 
-- [Gamepad API の利用](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [gamepaddisconnected](/ja/docs/Web/API/Window/gamepaddisconnected_event)
+- [Gamepad API の使用](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

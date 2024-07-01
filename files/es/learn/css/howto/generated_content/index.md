@@ -1,7 +1,6 @@
 ---
 title: Uso de contenido generado por CSS
 slug: Learn/CSS/Howto/Generated_content
-original_slug: Learn/CSS/Howto/Generated_content
 ---
 
 {{LearnSidebar}}
@@ -62,7 +61,7 @@ Esta regla agrega un espacio y un ícono después de cada enlace que tiene la cl
 
 ```css
 a.glossary::after {
-   content: " " url("glossary-icon.gif");
+  content: " " url("glossary-icon.gif");
 }
 ```
 

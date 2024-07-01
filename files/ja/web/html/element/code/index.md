@@ -1,19 +1,50 @@
 ---
-title: '<code>: 行内コード要素'
+title: "<code>: インラインコード要素"
 slug: Web/HTML/Element/code
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<code>` 要素**は、コンピューターコードの短い断片の文字列であると識別できるような外見のコンテンツを表示します。既定では、中の文字列が{{Glossary("user agent", "ユーザーエージェント")}}の既定の等幅フォントを使用して表示されます。
+**`<code>`** は [HTML](/ja/docs/Web/HTML) の要素で、コンピューターコードの短い断片の文字列であると識別できるような外見のコンテンツを表示します。既定では、中の文字列が{{Glossary("user agent", "ユーザーエージェント")}}の既定の等幅フォントを使用して表示されます。
 
 {{EmbedInteractiveExample("pages/tabbed/code.html", "tabbed-shorter")}}
+
+## 属性
+
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)以外の属性はありません。
+
+## 例
+
+`<code>` を含むテキストの段落です。
+
+```html
+<p>
+  The function <code>selectAll()</code> highlights all the text in the input
+  field so the user can, for example, copy or delete the text.
+</p>
+```
+
+### 結果
+
+{{EmbedLiveSample("Example", 640, 70)}}
+
+## 補足
+
+複数行のコードを表すには、 `<code>` 要素を {{HTMLElement("pre")}} 要素の中に入れてください。 `<code>` 要素自身は、コードの単一のフレーズや 1 行のみを表します。
+
+CSS のルールによって、`code` セレクターを定義して、ブラウザーの既定のフォントを上書きすることができます。ユーザーによる設定を CSS による指定より優先させることもできます。
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
@@ -67,41 +98,17 @@ slug: Web/HTML/Element/code
   </tbody>
 </table>
 
-## 属性
-
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)以外の属性はありません。
-
-## 例
-
-`<code>` を含むテキストの段落です。
-
-```html
-<p>The function <code>selectAll()</code> highlights all the text in the
-input field so the user can, for example, copy or delete the text.</p>
-```
-
-この HTML によって生成される出力は以下のようになります。
-
-{{EmbedLiveSample("Example", 640, 70)}}
-
-## 補足
-
-複数行のコードを表すには、 `<code>` 要素を {{HTMLElement("pre")}} 要素の中に入れてください。 `<code>` 要素自身は、コードの単一のフレーズや 1 行のみを表します。
-
-CSS の規則によって、 `code` セレクターを定義して、ブラウザーの既定のフォントを上書きすることができます。ユーザーによる設定を CSS による指定より優先させることもできます。
-
 ## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.code")}}
+{{Compat}}
 
 ## 関連情報
 
 - {{HTMLElement("samp")}}
 - {{HTMLElement("kbd")}}
-- {{HTMLElement("command")}} (非推奨)
 - {{HTMLElement("var")}}
 - {{HTMLElement("pre")}}

@@ -1,9 +1,6 @@
 ---
 title: Symbol
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol
-browser-compat: javascript.builtins.Symbol
 ---
 
 {{JSRef}}
@@ -18,14 +15,14 @@ Pour créer une nouvelle valeur primitive symbole, il suffit d'appeler `Symbol()
 
 ```js
 let sym1 = Symbol();
-let sym2 = Symbol('toto');
-let sym3 = Symbol('toto');
+let sym2 = Symbol("toto");
+let sym3 = Symbol("toto");
 ```
 
 Le fragment de code ci-dessus permet de créer trois nouveaux symboles. On notera que l'instruction `Symbol('toto')` ne convertit pas la chaîne `'toto'` en un symbole. On crée bien un nouveau symbole pour chaque instruction ci-avant.
 
 ```js
-Symbol('toto') === Symbol('toto'); // false
+Symbol("toto") === Symbol("toto"); // false
 ```
 
 La syntaxe suivante, utilisant l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new), entraînera une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError)&nbsp;:
@@ -39,10 +36,10 @@ Cela est fait pour empêcher d'écrire une enveloppe (<i lang="en">wrapper</i>) 
 Si on souhaite obtenir un object contenant un symbole, on pourra toujours utiliser la fonction `Object()`&nbsp;:
 
 ```js
-let sym = Symbol('toto');
-typeof sym;     // "symbol"
+let sym = Symbol("toto");
+typeof sym; // "symbol"
 let symObj = Object(sym);
-typeof symObj;  // "object"
+typeof symObj; // "object"
 ```
 
 ### Symboles partagés et registre global des symboles
@@ -115,9 +112,9 @@ La méthode [`Object.getOwnPropertySymbols()`](/fr/docs/Web/JavaScript/Reference
 L'opérateur [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof) permet d'identifier des symboles&nbsp;:
 
 ```js
-typeof Symbol() === 'symbol'
-typeof Symbol('toto') === 'symbol'
-typeof Symbol.iterator === 'symbol'
+typeof Symbol() === "symbol";
+typeof Symbol("toto") === "symbol";
+typeof Symbol.iterator === "symbol";
 ```
 
 ### Les symboles et les conversions
@@ -136,10 +133,10 @@ Les symboles ne peuvent pas être énumérés dans les boucles [`for…in`](/fr/
 ```js
 let obj = {};
 
-obj[Symbol('a')] = 'a';
-obj[Symbol.for('b')] = 'b';
-obj['c'] = 'c';
-obj.d = 'd';
+obj[Symbol("a")] = "a";
+obj[Symbol.for("b")] = "b";
+obj["c"] = "c";
+obj.d = "d";
 
 for (let i in obj) {
   console.log(i); // affiche "c" et "d"
@@ -151,7 +148,7 @@ for (let i in obj) {
 Les propriétés identifiées par des symboles seront totalement ignorées par `JSON.stringify()`&nbsp;:
 
 ```js
-JSON.stringify({[Symbol('toto')]: 'toto'});
+JSON.stringify({ [Symbol("toto")]: "toto" });
 // '{}'
 ```
 
@@ -162,10 +159,10 @@ Pour plus de détails, voir la page [`JSON.stringify()`](/fr/docs/Web/JavaScript
 Lorsqu'on utilise un objet pour contenir la valeur du symbole et faire référence à une propriété, l'objet sera ramené au symbole d'origine&nbsp;:
 
 ```js
-let sym = Symbol('toto')
-let obj = {[sym]: 1};
-obj[sym];              // 1
-obj[Object(sym)];      // toujours 1
+let sym = Symbol("toto");
+let obj = { [sym]: 1 };
+obj[sym]; // 1
+obj[Object(sym)]; // toujours 1
 ```
 
 ## Spécifications

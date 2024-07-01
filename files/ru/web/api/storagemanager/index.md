@@ -1,18 +1,6 @@
 ---
 title: StorageManager
 slug: Web/API/StorageManager
-tags:
-  - API
-  - Interface
-  - Persistence
-  - Quotas
-  - Reference
-  - Secure context
-  - Storage
-  - Storage API
-  - StorageManager
-  - Usage
-translation_of: Web/API/StorageManager
 ---
 
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}
@@ -28,7 +16,7 @@ translation_of: Web/API/StorageManager
 - {{domxref("StorageManager.persisted()")}} {{securecontext_inline}}
   - : Возвращает {{jsxref('Promise')}}, который принимает значение `true` в случае, когда сайт получил возможность хранить данные в браузере.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

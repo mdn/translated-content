@@ -1,6 +1,8 @@
 ---
-title: Node.previousSibling
+title: "Node: previousSibling プロパティ"
 slug: Web/API/Node/previousSibling
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -12,7 +14,7 @@ slug: Web/API/Node/previousSibling
 >
 > [DOM でのホワイトスペース](/ja/docs/Web/API/Document_Object_Model/Whitespace)の記事に、この動作に関する詳しい情報があります。
 >
-> [`previousElementSibling`](/ja/docs/Web/API/Element/previousElementSibling) を使用すると、（テキストノードやその他の要素以外のノードを飛ばして）次の要素を取得することができます。
+> [`previousElementSibling`](/ja/docs/Web/API/Element/previousElementSibling) を使用すると、（テキストノードやその他の要素以外のノードを飛ばして）前の要素を取得することができます。
 >
 > 子ノードのリストで反対方向に移動する場合は、 [Node.nextSibling](/ja/docs/Web/API/Node/nextSibling) を使用してください。
 
@@ -30,11 +32,11 @@ slug: Web/API/Node/previousSibling
 この例では、一連の `img` 要素が互いに隣り合っており、その間にホワイトスペースがありません。
 
 ```html
-<img id="b0"><img id="b1"><img id="b2">
+<img id="b0" /><img id="b1" /><img id="b2" />
 ```
 
 ```js
-document.getElementById("b1").previousSibling;    // <img id="b0">
+document.getElementById("b1").previousSibling; // <img id="b0">
 document.getElementById("b2").previousSibling.id; // "b1"
 ```
 
@@ -43,17 +45,17 @@ document.getElementById("b2").previousSibling.id; // "b1"
 この例では、 `img` 要素の間にホワイトスペースのテキストノード（改行）があります。
 
 ```html
-<img id="b0">
-<img id="b1">
-<img id="b2">
+<img id="b0" />
+<img id="b1" />
+<img id="b2" />
 ```
 
 ```js
-document.getElementById("b1").previousSibling;                 // #text
+document.getElementById("b1").previousSibling; // #text
 document.getElementById("b1").previousSibling.previousSibling; // <img id="b0">
 document.getElementById("b2").previousSibling.previousSibling; // <img id="b1">
-document.getElementById("b2").previousSibling;                 // #text
-document.getElementById("b2").previousSibling.id;              // undefined
+document.getElementById("b2").previousSibling; // #text
+document.getElementById("b2").previousSibling.id; // undefined
 ```
 
 ## 仕様書

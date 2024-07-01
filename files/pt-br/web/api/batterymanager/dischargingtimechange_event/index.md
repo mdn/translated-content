@@ -1,7 +1,6 @@
 ---
 title: BatteryManager.ondischargingtimechange
 slug: Web/API/BatteryManager/dischargingtimechange_event
-original_slug: Web/API/BatteryManager/ondischargingtimechange
 ---
 
 {{APIRef("Battery API")}}

@@ -110,7 +110,7 @@ Você pode criar um {{jsxref("Array")}} a partir de um Set usando {{jsxref("Arra
 Array.from(mySet);
 [...mySet2];
 
-mySet2 = new Set([1,2,3,4]);
+mySet2 = new Set([1, 2, 3, 4]);
 ```
 
 ### `Array` e `Set` comparados

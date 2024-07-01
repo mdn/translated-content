@@ -3,7 +3,7 @@ title: Symbol.keyFor()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 ---
 
-{{JSRef("Global_Objects", "Symbol")}}
+{{JSRef}}
 
 ## 概述
 
@@ -35,7 +35,7 @@ var localSym = Symbol();
 Symbol.keyFor(localSym); // undefined，
 
 // 以下 Symbol 不是保存在全局 Symbol 注册表中
-Symbol.keyFor(Symbol.iterator) // undefined
+Symbol.keyFor(Symbol.iterator); // undefined
 ```
 
 ## 规范
@@ -46,6 +46,6 @@ Symbol.keyFor(Symbol.iterator) // undefined
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Symbol.prototype.for()")}}

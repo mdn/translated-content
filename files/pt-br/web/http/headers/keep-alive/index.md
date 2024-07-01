@@ -63,7 +63,7 @@ Server: Apache
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Keep-Alive")}}
+{{Compat}}
 
 ## Veja também
 

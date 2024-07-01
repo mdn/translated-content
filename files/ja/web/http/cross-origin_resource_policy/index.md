@@ -1,7 +1,6 @@
 ---
 title: Cross-Origin Resource Policy (CORP)
 slug: Web/HTTP/Cross-Origin_Resource_Policy
-original_slug: Web/HTTP/Cross-Origin_Resource_Policy_(CORP)
 ---
 
 {{HTTPSidebar}}
@@ -49,7 +48,7 @@ Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Cross-Origin-Resource-Policy")}}
+{{Compat}}
 
 ## 仕様書
 

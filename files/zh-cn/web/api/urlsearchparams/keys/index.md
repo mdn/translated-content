@@ -1,47 +1,55 @@
 ---
-title: URLSearchParams.keys()
+title: URLSearchParams：keys() 方法
 slug: Web/API/URLSearchParams/keys
+l10n:
+  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{APIRef("URL API")}}{{SeeCompatTable}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-URLSearchParams.keys() 返回一个{{jsxref("Iteration_protocols",'iterator')}}，遍历器允许遍历对象中包含的所有键。这些键都是{{domxref("USVString")}}对象。
-
-> **备注：** 该方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)中也可使用
+{{domxref("URLSearchParams")}} 接口的 **`keys()`** 方法返回一个用于遍历对象中包含的所有键的{{jsxref("Iteration_protocols", "迭代器", "", 1)}}。这些键都是字符串对象。
 
 ## 语法
 
+```js-nolint
+keys()
 ```
-searchParams.keys();
-```
+
+### 参数
+
+无。
 
 ### 返回值
 
-返回一个{{jsxref("Iteration_protocols","iterator")}}.
+返回一个 {{jsxref("Iteration_protocols","iterator")}}。
 
-## 例子
+## 示例
 
 ```js
 // 建立一个测试用 URLSearchParams 对象
-var searchParams = new URLSearchParams("key1=value1&key2=value2");
+const searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // 输出键值对
-for(var key of searchParams.keys()) {
+for (const key of searchParams.keys()) {
   console.log(key);
 }
 ```
 
 结果如下：
 
-```
+```plain
 key1
 key2
 ```
+
+## 规范
+
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 另请参考
+## 参见
 
-- 其他 URL 相关接口：{{domxref("URL")}}, {{domxref("URLUtils")}}.
+- {{domxref("URL")}} 接口。

@@ -1,14 +1,8 @@
 ---
 title: break
 slug: Web/JavaScript/Reference/Statements/break
-tags:
-  - JavaScript
-  - Возможности языка
-  - Справочник
-  - Оператор
-translation_of: Web/JavaScript/Reference/Statements/break
-browser-compat: javascript.statements.break
 ---
+
 {{jsSidebar("Statements")}}
 
 **Оператор `break`** прерывает выполнение текущего цикла, оператора множественного выбора {{jsxref("Statements/switch", "switch")}} или блочного {{jsxref("Statements/label", "выражения с меткой", "", 1)}}. Выполнение кода продолжается с конструкции, следующей за прерванной.
@@ -78,11 +72,11 @@ switch (food) {
 ```js
 outer_block: {
   inner_block: {
-    console.log('1');
+    console.log("1");
     break outer_block; // break прервёт выполнение кода как в inner_block, так и в outer_block
-    console.log(':-('); // не будет выполнено
+    console.log(":-("); // не будет выполнено
   }
-  console.log('2'); // не будет выполнено
+  console.log("2"); // не будет выполнено
 }
 ```
 

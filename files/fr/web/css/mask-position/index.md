@@ -1,8 +1,6 @@
 ---
 title: mask-position
 slug: Web/CSS/mask-position
-translation_of: Web/CSS/mask-position
-browser-compat: css.properties.mask-position
 ---
 
 {{CSSRef}}
@@ -24,7 +22,9 @@ mask-position: 10% 8em;
 
 /* Valeurs multiples */
 mask-position: top right;
-mask-position: 1rem 1rem, center;
+mask-position:
+  1rem 1rem,
+  center;
 
 /* Valeurs globales */
 mask-position: inherit;

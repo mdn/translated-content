@@ -25,7 +25,7 @@ _このインターフェイスは、親である {{DOMxRef("UIEvent")}}、{{DOM
 - {{DOMxRef("InputEvent.dataTransfer")}} {{ReadOnlyInline}}
   - : 編集可能なコンテンツに追加されたリッチテキストまたはプレーンテキストデータ、あるいは削除されたプレーンテキストデータに関する情報を保持する {{DOMxRef("DataTransfer")}} オブジェクトを返します。
 - {{DOMxRef("InputEvent.inputType")}} {{ReadOnlyInline}}
-  - : テキストの挿入、削除、書式設定など、編集可能なコンテンツに対する変更の種類を返します。入力する種類の完全なリストは、プロパティのページを参照してください。
+  - : テキストの挿入、削除、書式設定など、編集可能なコンテンツに対する変更の種類を返します。
 - {{DOMxRef("InputEvent.isComposing")}} {{ReadOnlyInline}}
   - : 論理値で、イベントが {{domxref("Element/compositionstart_event", "compositionstart")}} の後かつ {{domxref("Element/compositionend_event", "compositionend")}} の前に発生したかを示す値を返します。
 

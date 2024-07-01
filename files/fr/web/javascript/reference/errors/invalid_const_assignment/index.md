@@ -1,12 +1,6 @@
 ---
 title: 'TypeError: invalid assignment to const "x"'
 slug: Web/JavaScript/Reference/Errors/Invalid_const_assignment
-tags:
-  - Erreurs
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Invalid_const_assignment
-original_slug: Web/JavaScript/Reference/Erreurs/Invalid_const_assignment
 ---
 
 {{jsSidebar("Errors")}}
@@ -83,14 +77,14 @@ function setupBigScreenEnvironment() {
 La déclaration `const` crée une référence en lecture seule vers une valeur. Elle ne signifie pas que la valeur en question est immuable mais uniquement que l'identifiant de la référence ne peut pas recevoir de nouvelle valeur. Ainsi, si le contenu est un objet, celui-ci pourra toujours être modifié :
 
 ```js example-bad
-const obj = {toto: 'truc'};
-obj = {toto: 'bidule'}; // TypeError: invalid assignment to const `obj'
+const obj = { toto: "truc" };
+obj = { toto: "bidule" }; // TypeError: invalid assignment to const `obj'
 ```
 
 En revanche, on peut modifier les propriétés :
 
 ```js example-good
-obj.toto = 'bidule';
+obj.toto = "bidule";
 obj; // Object { toto: "bidule" }
 ```
 

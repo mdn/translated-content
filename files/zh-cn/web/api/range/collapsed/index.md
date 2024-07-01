@@ -1,27 +1,27 @@
 ---
-title: Range.collapsed
+title: Range：collapsed 属性
 slug: Web/API/Range/collapsed
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
 {{ APIRef("DOM") }}
 
-**`Range.collapsed`** 是只读属性。它返回一个 {{domxref("Boolean")}} 值表示是否起始点和结束点是同一个位置。如果返回 `true` 表示{{domxref("Range")}} 的起始位置和结束位置重合，`false` 表示不重合。
+**`Range.collapsed`** 只读属性返回一个表示 {{domxref("Range")}} 的开始和结束节点是否重合的布尔标志。如果 {{domxref("Range")}} 的开始和结束节点在 DOM 中是同一个位置，则该属性返回 `true`；反之返回 `false`。
 
-一个折叠的{{domxref("Range")}} 是空的，不包含内容，表示 Dom 树中的一个点。collapsed 属性是只读的。可以调用 {{domxref("Range.collapse()")}} 方法来折叠选区。
+折叠后的 {{domxref("Range")}} 是空的（不含任何内容），并指向 DOM 树中的单个位置点。若要折叠一个范围，请参考 {{domxref("Range.collapse()")}} 方法。
 
-## 语法
+## 值
 
-```plain
-isCollapsed = range.collapsed;
-```
+一个布尔值。
 
-## 例子
+## 示例
 
 ```js
-var range = document.createRange();
+let range = document.createRange();
 
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 isCollapsed = range.collapsed;
 ```
 
@@ -33,6 +33,6 @@ isCollapsed = range.collapsed;
 
 {{Compat}}
 
-## 参阅
+## 参见
 
-- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)
+- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model)

@@ -1,8 +1,9 @@
 ---
-title: Gamepad.hand
+title: "Gamepad: hand プロパティ"
+short-title: hand
 slug: Web/API/Gamepad/hand
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
@@ -15,7 +16,7 @@ l10n:
 
 - `left` — 左手。
 - `right` — 右手。
-- 空文字列 ("") — この値は、他の値が適用できない場合に返されます。コントローラーは両手で持っているか、またはどちらでも結構です。
+- `""` （空文字列） — この値は、他の値が適用できない場合に返されます。コントローラーは両手で持っているか、またはどちらかの可能性があります。
 
 ## 例
 

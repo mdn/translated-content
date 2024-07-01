@@ -26,7 +26,7 @@ if (window.confirm("Você realmente quer sair?")) {
 
 Produzirá:
 
-![firefox confirm](firefoxcomfirmdialog_zpsf00ec381.png)
+![firefox confirm](firefox_confirm_dialog.png)
 
 ## Notas
 

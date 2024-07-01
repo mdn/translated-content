@@ -20,7 +20,7 @@ l10n:
 次のスニペットでは {{domxref("Request.Request()")}} コンストラクターを使用して新しいリクエストを作成し（スクリプトと同じディレクトリーにある画像ファイルに対して）、そのリクエストの `integrity` 値を変数に保存します。
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const myIntegrity = myRequest.integrity;
 ```
 

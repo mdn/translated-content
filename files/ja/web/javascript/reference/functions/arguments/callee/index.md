@@ -22,8 +22,8 @@ slug: Web/JavaScript/Reference/Functions/arguments/callee
 例えば、以下の構文は動作しました。
 
 ```js
-function factorial (n) {
-    return !(n > 1) ? 1 : factorial(n - 1) * n;
+function factorial(n) {
+  return !(n > 1) ? 1 : factorial(n - 1) * n;
 }
 
 [1, 2, 3, 4, 5].map(factorial);
@@ -32,16 +32,16 @@ function factorial (n) {
 しかし、
 
 ```js
-[1, 2, 3, 4, 5].map(function(n) {
-    return !(n > 1) ? 1 : /* ここでどうする？ */ (n - 1) * n;
+[1, 2, 3, 4, 5].map(function (n) {
+  return !(n > 1) ? 1 : /* ここでどうする？ */ (n - 1) * n;
 });
 ```
 
 とは書けませんでした。回避策としてこの `arguments.callee` が追加され、以下のようなことができるようになりました。
 
 ```js
-[1, 2, 3, 4, 5].map(function(n) {
-    return !(n > 1) ? 1 : arguments.callee(n - 1) * n;
+[1, 2, 3, 4, 5].map(function (n) {
+  return !(n > 1) ? 1 : arguments.callee(n - 1) * n;
 });
 ```
 
@@ -50,14 +50,16 @@ function factorial (n) {
 ```js
 var global = this;
 
-var sillyFunction = function(recursed) {
-    if (!recursed) { return arguments.callee(true); }
-    if (this !== global) {
-        alert('This is: ' + this);
-    } else {
-        alert('This is the global');
-    }
-}
+var sillyFunction = function (recursed) {
+  if (!recursed) {
+    return arguments.callee(true);
+  }
+  if (this !== global) {
+    alert("This is: " + this);
+  } else {
+    alert("This is the global");
+  }
+};
 
 sillyFunction();
 ```
@@ -66,7 +68,7 @@ ECMAScript 3 では、以下のように名前付き関数式を許可するこ�
 
 ```js
 [1, 2, 3, 4, 5].map(function factorial(n) {
-    return !(n > 1) ? 1 : factorial(n - 1)*n;
+  return !(n > 1) ? 1 : factorial(n - 1) * n;
 });
 ```
 
@@ -79,7 +81,9 @@ ECMAScript 3 では、以下のように名前付き関数式を許可するこ�
 もう一つ非推奨になった機能として `arguments.callee.caller`、より具体的には `Function.caller` がありました。これはなぜでしょうか。どの時点でも、スタック上で任意の関数の最も深い呼び出し元を見つけることができますが、前述のように、コールスタックを見ることは、一つの大きな影響があります。これによって数多くの最適化が不可能になったり、はるかに困難になったりするのです。例えば、関数 `f` が未知の関数を呼び出さないことを保証できない場合、 `f` をインライン化することはできません。基本的には些細なことでインライン化できたかもしれない呼び出し箇所に、大量の防護壁が積み重なるということです。
 
 ```js
-function f(a, b, c, d, e) { return a ? b * c : d * e; }
+function f(a, b, c, d, e) {
+  return a ? b * c : d * e;
+}
 ```
 
 JavaScript インタープリターは、呼び出しが行われた時点で提供されたすべての引数が数字であることを保証できない場合、インライン化されたコードの前ですべての引数のチェックを挿入するか、関数をインライン化できないようにする必要があります。この場合は、賢いインタープリターであれば、チェックをより最適な形に組み替え、使われない値はチェックしないようにできるはずです。しかし、多くの場合それは不可能であり、したがってインライン化することは不可能になります。
@@ -94,11 +98,10 @@ JavaScript インタープリターは、呼び出しが行われた時点で提
 
 ```js
 function create() {
-   return function(n) {
-      if (n <= 1)
-         return 1;
-      return n * arguments.callee(n - 1);
-   };
+  return function (n) {
+    if (n <= 1) return 1;
+    return n * arguments.callee(n - 1);
+  };
 }
 
 var result = create()(5); // 120 (5 * 4 * 3 * 2 * 1) を返す
@@ -110,12 +113,12 @@ var result = create()(5); // 120 (5 * 4 * 3 * 2 * 1) を返す
 
 ```js
 function createPerson(sIdentity) {
-    var oPerson = new Function('alert(arguments.callee.identity);');
-    oPerson.identity = sIdentity;
-    return oPerson;
+  var oPerson = new Function("alert(arguments.callee.identity);");
+  oPerson.identity = sIdentity;
+  return oPerson;
 }
 
-var john = createPerson('John Smith');
+var john = createPerson("John Smith");
 
 john();
 ```

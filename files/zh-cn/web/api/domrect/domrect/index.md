@@ -29,7 +29,7 @@ var myDOMRect = new DOMRect(x, y, width, height);
 想生成一个新 `DOMRect`，你可以运行一行这样的代码：
 
 ```js
-myDOMRect = new DOMRect(0,0,100,100);
+myDOMRect = new DOMRect(0, 0, 100, 100);
 // running 'myDOMRect' in the console would then return
 // DOMRect { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
 ```

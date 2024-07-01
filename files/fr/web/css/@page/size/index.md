@@ -1,12 +1,6 @@
 ---
 title: size
 slug: Web/CSS/@page/size
-tags:
-  - CSS
-  - Descripteur
-  - Experimental
-  - Reference
-translation_of: Web/CSS/@page/size
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

@@ -5,12 +5,12 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
 
 {{JSRef}}
 
-**`keys()`**方法返回新的 `Array Iterator` 对象，包含数组中每个下标的键。
+**`keys()`** 方法返回新的 `Array Iterator` 对象，包含数组中每个下标的键。
 
 ## 语法
 
-```plain
-arr.keys()
+```js-nolint
+keys()
 ```
 
 ### 返回值
@@ -51,7 +51,7 @@ console.log(eArr.next().value); // 4
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("TypedArray")}}

@@ -1,13 +1,15 @@
 ---
-title: Attr.ownerElement
+title: "Attr: ownerElement プロパティ"
 slug: Web/API/Attr/ownerElement
+l10n:
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
 {{APIRef("DOM")}}
 
 **`ownerElement`** は {{domxref("Attr")}} インターフェイスの読み取り専用プロパティで、この属性が所属する要素 ({{domxref("Element")}}) を返します。
 
-### 値
+## 値
 
 この属性が所属する要素 ({{domxref("Element")}})、またはこの属性が要素に結びついていない場合は `null` です。
 
@@ -21,29 +23,31 @@ slug: Web/API/Attr/ownerElement
 <svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
 <label xml:lang="en-US" class="struct"></label>
 
-<button>Click me for &lt;svg&gt;…</button>
-<button>Click me for &lt;label&gt;…</button>
-<br><br>
-Qualified name of the owner element of the attribute <code>xml:lang</code>: <output id="result"><i>None.</i></output>
+<p>
+  <button>Show value for &lt;svg&gt;</button>
+  <button>Show value for &lt;label&gt;</button>
+</p>
+
+<p>
+  Qualified name of the owner element of the attribute <code>xml:lang</code>:
+  <output id="result">None.</output>
+</p>
 ```
 
 ### JavaScript コンテンツ
 
 ```js
-const elements = document.getElementsByClassName("struct");
-const buttons = document.getElementsByTagName("button");
-const result  = document.querySelector("#result");
+const elements = document.querySelectorAll(".struct");
+const buttons = document.querySelectorAll("button");
+const outputEl = document.querySelector("#result");
 
-function handleEvent(element) {
-  return function(e) {
-    attribute = element.attributes[0];
-    result.value = attribute.ownerElement.tagName.toLowerCase();
-  }
-}
-
-let i=0;
-for (let button of buttons) {
-  button.addEventListener('click', handleEvent(elements[i]));
+let i = 0;
+for (const button of buttons) {
+  const element = elements[i];
+  button.addEventListener("click", () => {
+    const attribute = element.attributes[0];
+    outputEl.value = attribute.ownerElement.tagName.toLowerCase();
+  });
   i++;
 }
 ```

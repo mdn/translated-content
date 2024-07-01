@@ -62,7 +62,7 @@ Web Audio API を使用してできるすばらしいことをすべて利用す
 
 ```js
 // get the audio element
-const audioElement = document.querySelector('audio');
+const audioElement = document.querySelector("audio");
 
 // pass it into the audio context
 const track = audioContext.createMediaElementSource(audioElement);
@@ -82,7 +82,7 @@ JavaScript コードからプログラム的に音声を制御することは、
 
 ```html
 <button data-playing="false" role="switch" aria-checked="false">
-    <span>Play/Pause</span>
+  <span>Play/Pause</span>
 </button>
 ```
 
@@ -102,33 +102,39 @@ track.connect(audioContext.destination);
 
 ```js
 // select our play button
-const playButton = document.querySelector('button');
+const playButton = document.querySelector("button");
 
-playButton.addEventListener('click', function() {
-
+playButton.addEventListener(
+  "click",
+  function () {
     // check if context is in suspended state (autoplay policy)
-    if (audioContext.state === 'suspended') {
-        audioContext.resume();
+    if (audioContext.state === "suspended") {
+      audioContext.resume();
     }
 
     // play or pause track depending on state
-    if (this.dataset.playing === 'false') {
-        audioElement.play();
-        this.dataset.playing = 'true';
-    } else if (this.dataset.playing === 'true') {
-        audioElement.pause();
-        this.dataset.playing = 'false';
+    if (this.dataset.playing === "false") {
+      audioElement.play();
+      this.dataset.playing = "true";
+    } else if (this.dataset.playing === "true") {
+      audioElement.pause();
+      this.dataset.playing = "false";
     }
-
-}, false);
+  },
+  false,
+);
 ```
 
 また、トラックの再生が終了したらどうするかを考慮しておく必要があります。 `HTMLMediaElement` は `ended` イベントを再生終了時に一度発生させるので、これを待ち受けして関連するコードを実行します。
 
 ```js
-audioElement.addEventListener('ended', () => {
-    playButton.dataset.playing = 'false';
-}, false);
+audioElement.addEventListener(
+  "ended",
+  () => {
+    playButton.dataset.playing = "false";
+  },
+  false,
+);
 ```
 
 ## 音の加工
@@ -156,7 +162,7 @@ gain の既定値は 1 です。これは現在の音量を同じに維持しま
 ユーザーがこれを制御できるようにしましょう。 — [range 入力](/ja/docs/Web/HTML/Element/input/range)を使用します。
 
 ```html
-<input type="range" id="volume" min="0" max="2" value="1" step="0.01">
+<input type="range" id="volume" min="0" max="2" value="1" step="0.01" />
 ```
 
 > **メモ:** range 入力は、音声ノードの値を更新するのに実に手軽な入力型です。 range の値を音声ノードの引数に直接設定したり、使用したりすることができます。
@@ -164,11 +170,15 @@ gain の既定値は 1 です。これは現在の音量を同じに維持しま
 それでは、ユーザーが値を変更したときに入力された値を取得して gain の値を更新するようにしましょう。
 
 ```js
-const volumeControl = document.querySelector('#volume');
+const volumeControl = document.querySelector("#volume");
 
-volumeControl.addEventListener('input', function() {
+volumeControl.addEventListener(
+  "input",
+  function () {
     gainNode.gain.value = this.value;
-}, false);
+  },
+  false,
+);
 ```
 
 > **メモ:** ノードオブジェクトの値 (例えば `GainNode.gain`) は単純な値ではなく、実際には {{domxref("AudioParam")}} 型のオブジェクト — これが引数と呼ばれています。なぜかといえば、 `GainNode.gain` の `value` プロパティを設定しなければならず、 `gain` を直接設定するだけではないからです。これによってはるかに柔軟になり、例えば特定の値のセットを引数で渡して、一定の期間にわたって変化させたりすることができます。
@@ -199,17 +209,21 @@ const panner = new StereoPannerNode(audioContext, pannerOptions);
 個々の値の範囲は -1 (はるか左) と 1 (はるか右) の間です。今回も range 型の入力でこの引数を変更できるようにしましょう。
 
 ```html
-<input type="range" id="panner" min="-1" max="1" value="0" step="0.01">
+<input type="range" id="panner" min="-1" max="1" value="0" step="0.01" />
 ```
 
 以前行ったのと同じ方法で、この入力から得た値を使ってパンの値を調整します。
 
 ```js
-const pannerControl = document.querySelector('#panner');
+const pannerControl = document.querySelector("#panner");
 
-pannerControl.addEventListener('input', function() {
+pannerControl.addEventListener(
+  "input",
+  function () {
     panner.pan.value = this.value;
-}, false);
+  },
+  false,
+);
 ```
 
 また音声グラフを調整して、すべてのノードを互いに接続しましょう。

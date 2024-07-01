@@ -26,7 +26,7 @@ dateObj.setYear(yearValue)
 
 如果`yearValue` 是介于 0 到 99(包含 99) 之间的整数，则目标对象 `dateObj` 的年份被设置为 `1900 + yearValue`。否则，目标对象 `dateObj` 的年份被设置为 `yearValue`.
 
-## 例子
+## 示例
 
 ### 使用 `setYear()`
 
@@ -48,7 +48,7 @@ theBigDay.setYear(2000);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getFullYear()")}}
 - {{jsxref("Date.prototype.getUTCFullYear()")}}

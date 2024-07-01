@@ -1,13 +1,10 @@
 ---
 title: Синхронный
 slug: Glossary/Synchronous
-tags:
-  - Веб
-  - Веб механика
-  - Глоссарий
-translation_of: Glossary/Synchronous
-original_slug: Глоссарий/Синхронный
 ---
+
+{{GlossarySidebar}}
+
 _Синхронный_ относится к среде связи где каждый участник получает (и если нужно обрабатывает и/или отвечает) сообщения немедленно (или настолько быстро, на сколько это возможно).
 
 Примером из жизни является телефон — во время телефонного разговора вы можете отвечать собеседнику незамедлительно.
@@ -19,4 +16,4 @@ _Синхронный_ относится к среде связи где каж
 ### Техническая документация
 
 - {{glossary("Asynchronous")}}
-- [Синхронные и асинхронные запросы](/ru/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) с использованием [XMLHttpRequest()](/ru/docs/Web/API/XMLHttpRequest) {{glossary("API")}}
+- [Синхронные и асинхронные запросы](/ru/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests) с использованием [XMLHttpRequest()](/ru/docs/Web/API/XMLHttpRequest) {{glossary("API")}}

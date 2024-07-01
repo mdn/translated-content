@@ -1,8 +1,6 @@
 ---
 title: Constructeur Function()
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/Function
-browser-compat: javascript.builtins.Function.Function
 ---
 
 {{JSRef}}
@@ -46,7 +44,7 @@ Le code qui suit crée un objet `Function` qui prend deux arguments.
 
 ```js
 // Crée une fonction qui prend deux arguments et qui en renvoie la somme
-const additionneur = new Function('a', 'b', 'return a + b');
+const additionneur = new Function("a", "b", "return a + b");
 
 // Appeler la fonction
 additionneur(2, 6);
@@ -63,7 +61,9 @@ Les arguments `"a"` et `"b"` sont les noms formels des arguments utilisés dans 
 
 // On peut voir ici que le résultat de new Function est appelé.
 // Ainsi, on peut invoquer juste après la fonction qui vient d'être créée.
-const sommeTableau = new Function('const sommeTableau = (arr) => arr.reduce((precedente, courante) => precedente + courante); return sommeTableau')();
+const sommeTableau = new Function(
+  "const sommeTableau = (arr) => arr.reduce((precedente, courante) => precedente + courante); return sommeTableau",
+)();
 
 // On appelle la fonction
 sommeTableau([1, 2, 3, 4]);
@@ -71,17 +71,21 @@ sommeTableau([1, 2, 3, 4]);
 
 // Si on n'appelle pas new Function au moment de la création,
 // on peut toujours utiliser la méthode Function.call() ensuite
-const plusGrandNombre = new Function('function plusGrandNombre (arr) { return Math.max(...arr) }; return plusGrandNombre');
+const plusGrandNombre = new Function(
+  "function plusGrandNombre (arr) { return Math.max(...arr) }; return plusGrandNombre",
+);
 
 // On appelle la fonction
 plusGrandNombre.call({}).call({}, [2, 4, 1, 8, 5]);
 // 8
 
 // Une déclaration de fonction ne nécessite pas d'instruction return
-const direCoucou = new Function('return function (nom) { return `Coucou, ${nom}` }')();
+const direCoucou = new Function(
+  "return function (nom) { return `Coucou, ${nom}` }",
+)();
 
 // On appelle la fonction
-direCoucou('monde');
+direCoucou("monde");
 // Coucou, monde
 ```
 

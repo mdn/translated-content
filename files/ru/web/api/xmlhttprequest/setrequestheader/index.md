@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.setRequestHeader()
 slug: Web/API/XMLHttpRequest/setRequestHeader
-translation_of: Web/API/XMLHttpRequest/setRequestHeader
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -31,10 +30,10 @@ XMLHttpRequest.setRequestHeader(header, value)
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-[Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+[Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

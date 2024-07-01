@@ -1,6 +1,9 @@
 ---
-title: ClipboardEvent.clipboardData
+title: "ClipboardEvent: clipboardData プロパティ"
+short-title: clipboardData
 slug: Web/API/ClipboardEvent/clipboardData
+l10n:
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{APIRef("Clipboard API")}}

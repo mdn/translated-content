@@ -3,7 +3,7 @@ title: StorageArea.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 1 つ以上のアイテムをストレージ領域から削除します。
 
@@ -30,7 +30,7 @@ let removingItem = browser.storage.<storageType>.remove(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.storage.StorageArea.remove")}}
+{{Compat}}
 
 ## 例
 

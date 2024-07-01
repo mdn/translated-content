@@ -18,7 +18,7 @@ _Heredando propiedades de los elementos padres {{domxref("HTMLElement")}}._
 - {{domxref("HTMLLabelElement.form")}} {{ReadOnlyInline}}
   - : Es un objeto {{domxref("HTMLFormElement")}} representado el formulario al cual el control etiquetado está asociado, arrojando el valor `null`, si no hay asociado ningun control o si ese control no está asociado con un formulario. En otras palabras, esto es un atajo para: `HTMLLabelElement.control.form`.
 - {{domxref("HTMLLabelElement.htmlFor")}}
-  - : Este es un contenedor de caracteres que contiene el ID del control etiquetado, esto es lo que refleja el atributo {{htmlattrxref("for", "label")}}
+  - : Este es un contenedor de caracteres que contiene el ID del control etiquetado, esto es lo que refleja el atributo [`for`](/es/docs/Web/HTML/Element/label#for)
 
 ## Métodos
 
@@ -28,9 +28,9 @@ _No hay metodos específicos, hereda los metodos de los elelemtos padres, {{domx
 
 {{Specifications}}
 
-## Compatibilidad de Navegador Web
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLLabelElement")}}
+{{Compat}}
 
 ## Ver también
 

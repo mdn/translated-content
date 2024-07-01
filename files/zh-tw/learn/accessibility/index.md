@@ -21,7 +21,7 @@ When someone describes a site as "accessible," they mean that any user can use a
 
 要理解本模塊的概念，最少理解 [HTML](/zh-TW/docs/Learn/HTML)、[CSS](/zh-TW/docs/Learn/CSS)、[JavaScript](/zh-TW/docs/Learn/JavaScript) 是個好主意。如果在學習相關技術時學習會更好。
 
-> **備註：** 如果使用的設備無法讓你建立自己的文件，可以試著在 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 這種程式撰寫網站，執行大多數範例。
+> **備註：** 如果使用的設備無法讓你建立自己的文件，可以試著在 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 這種程式撰寫網站，執行大多數範例。
 
 ## 教學
 
@@ -47,5 +47,5 @@ When someone describes a site as "accessible," they mean that any user can use a
 
 - [Start Building Accessible Web Applications Today](https://egghead.io/courses/start-building-accessible-web-applications-today)：Marcy Sutton 所作的一套優秀教學影片。
 - [Deque University resources](https://dequeuniversity.com/resources/)：包含程式碼範例、螢幕閱讀器參考、或是其他有用的資源。
-- [WebAIM resources](http://webaim.org/resources/)：有教學、便覽、工具……等。
+- [WebAIM resources](https://webaim.org/resources/)：有教學、便覽、工具……等。
 - [Web Accessibility Evaluation Tools List](https://www.w3.org/WAI/ER/tools/) - includes a list of web accessibility evaluation tools.

@@ -1,6 +1,8 @@
 ---
 title: HTTP レスポンスステータスコード
 slug: Web/HTTP/Status
+l10n:
+  sourceCommit: e39a9f516b1a994590c9bdf622b60244739060ad
 ---
 
 {{HTTPSidebar}}
@@ -8,13 +10,13 @@ slug: Web/HTTP/Status
 HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/Web/HTTP) リクエストが正常に完了したどうかを示します。
 レスポンスは 5 つのクラスに分類されています。
 
-1. [情報レスポンス](#情報レスポンス) (`100`–`199`)
-2. [成功レスポンス](#成功レスポンス) (`200`–`299`)
-3. [リダイレクトメッセージ](#リダイレクトメッセージ) (`300`–`399`)
-4. [クライアントエラーレスポンス](#クライアントエラーレスポンス) (`400`–`499`)
-5. [サーバーエラーレスポンス](#サーバーエラーレスポンス) (`500`–`599`)
+1. [情報レスポンス](#情報レスポンス) (`100` – `199`)
+2. [成功レスポンス](#成功レスポンス) (`200` – `299`)
+3. [リダイレクトメッセージ](#リダイレクトメッセージ) (`300` – `399`)
+4. [クライアントエラーレスポンス](#クライアントエラーレスポンス) (`400` – `499`)
+5. [サーバーエラーレスポンス](#サーバーエラーレスポンス) (`500` – `599`)
 
-以下のステータスコードは [RFC 2616 の第 10 章](https://datatracker.ietf.org/doc/html/rfc2616#section-10)で定義されています。更新版の仕様書は [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-6) にあります。
+下記の一覧は [RFC 9110](https://httpwg.org/specs/rfc9110.html#overview.of.status.codes) で定義されているステータスコードです。
 
 > **メモ:** [この一覧](#情報レスポンス)にないレスポンスを受け取った場合、それは標準外のレスポンスであり、おそらくそのサーバーソフトウェアに固有のものです。
 
@@ -27,7 +29,7 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
 - {{HTTPStatus(102, "102 Processing")}} ({{Glossary("WebDAV")}})
   - : このコードは、サーバーはリクエストを受け取って処理しているが、まだレスポンスを提供できないことを示します。
 - {{HTTPStatus(103, "103 Early Hints")}}
-  - : このステータスコードは主に {{HTTPHeader("Link")}} ヘッダーとともに使用され、サーバーがリソースを準備している間、ユーザーエージェントがリソースの[先読み](/ja/docs/Web/HTML/Link_types/preload)を開始できるようにするためのものです。
+  - : このステータスコードは、主に {{HTTPHeader("Link")}} ヘッダーと共に使用することを意図しており、サーバーがレスポンスを準備している間、ユーザーエージェントにリソースの[事前読み込み](/ja/docs/Web/HTML/Attributes/rel/preload)を開始させたり、ページがリソースを必要とする元のサーバーに[事前接続](/ja/docs/Web/HTML/Attributes/rel/preconnect)させたりします。
 
 ## 成功レスポンス
 
@@ -65,7 +67,7 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
 
 ## リダイレクトメッセージ
 
-- {{HTTPStatus(300, "300 Multiple Choice")}}
+- {{HTTPStatus(300, "300 Multiple Choices")}}
   - : リクエストに対して複数のレスポンスがあることを示します。ユーザーエージェントやユーザーは、それらからひとつを選択します。 (複数のレスポンスからひとつを選ぶ方法は標準化されていませんが、選択肢へリンクする HTML が推奨されており、それによってユーザーが選択することができます。)
 - {{HTTPStatus(301, "301 Moved Permanently")}}
   - : リクエストされたリソースの URL が永遠に変更されたことを示します。レスポンスで新しい URL が与えられます。
@@ -87,12 +89,12 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
     これは `302 Found` HTTP レスポンスコードと同じ意味を持ちますが、ユーザーエージェントは使用する HTTP メソッドを*変更してはならない*点が異なります。始めのリクエストで `POST` を用いた場合は、次のリクエストでも `POST` を使用しなければなりません。
 - {{HTTPStatus(308, "308 Permanent Redirect")}}
   - : これは、リソースが HTTP の `Location:` レスポンスヘッダーで指定した別の URI へ永続的に置かれていることを示します。
-  これは `301 Moved Permanently` HTTP レスポンスコードと同じ意味を持ちますが、ユーザーエージェントは使用する HTTP メソッドを*変更してはならない*点が異なります。始めのリクエストで `POST` を用いた場合は、次のリクエストでも `POST` を使用しなければなりません。
+    これは `301 Moved Permanently` HTTP レスポンスコードと同じ意味を持ちますが、ユーザーエージェントは使用する HTTP メソッドを*変更してはならない*点が異なります。始めのリクエストで `POST` を用いた場合は、次のリクエストでも `POST` を使用しなければなりません。
 
 ## クライアントエラーレスポンス
 
 - {{HTTPStatus(400, "400 Bad Request")}}
-  - : 構文が無効であるためサーバーがリクエストを理解できないことを示します。
+  - : クライアントのエラーとみなされるもの（例えば、不正なリクエスト構文、不正なリクエストメッセージフレーム、不正なリクエストルーティング）のために、 サーバーがリクエストを処理できない、あるいは処理しようとしない場合を示します。
 - {{HTTPStatus(401, "401 Unauthorized")}}
   - : HTTP 標準では "unauthorized" (不許可) と定義されていますが、意味的にはこのレスポンスは "unauthenticated" (未認証) です。
     つまり、クライアントはリクエストされたレスポンスを得るためには認証を受けなければなりません。
@@ -110,7 +112,7 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
 - {{HTTPStatus(405, "405 Method Not Allowed")}}
   - : サーバーがリクエストメソッドを理解しているものの、無効にされており使用することができません。例えば、 API がリソースを DELETE することを禁止できます。 `GET` および `HEAD` の 2 つは必須で、無効にすることができず、このエラーコードを返してはいけません。
 - {{HTTPStatus(406, "406 Not Acceptable")}}
-  - : このレスポンスは、ウェブサーバーが [サーバー駆動型コンテンツネゴシエーション](/ja/docs/HTTP/Content_negotiation#server-driven_negotiation) を行った結果、ユーザーエージェントから与えられた条件に合うコンテンツが見つからない場合に送信されます。
+  - : このレスポンスは、ウェブサーバーが [サーバー駆動型コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation#server-driven_negotiation) を行った結果、ユーザーエージェントから与えられた条件に合うコンテンツが見つからない場合に送信されます。
 - {{HTTPStatus(407, "407 Proxy Authentication Required")}}
   - : これは `401 Unauthorized` と似ていますが、プロキシーサーバーが認証を要求している点が異なります。
 - {{HTTPStatus(408, "408 Request Timeout")}}
@@ -146,7 +148,7 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
 - {{HTTPStatus(421, "421 Misdirected Request")}}
   - : リクエストは、レスポンスを生成できないサーバーに送られました。
     リクエストの URI に含まれているスキームや権限の組み合わせに対してレスポンスを生成するよう設定されていないサーバーが、このコードを送ることがあります。
-- {{HTTPStatus(422, "422 Unprocessable Entity")}} ({{Glossary("WebDAV")}})
+- {{HTTPStatus(422, "422 Unprocessable Content")}} ({{Glossary("WebDAV")}})
   - : リクエストは適正ですが、意味が誤っているために従うことができません。
 - {{HTTPStatus(423, "423 Locked")}} ({{Glossary("WebDAV")}})
   - : アクセス中のリソースはロックされています。
@@ -199,9 +201,9 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
 
 ## ブラウザーの互換性
 
-{{Compat("http.status")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Wikipedia の、HTTP ステータスコードの一覧](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+- [HTTP ステータスコードの一覧 (Wikipedia)](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 - [HTTP ステータスコードの、IANA 公式レジストリー](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)

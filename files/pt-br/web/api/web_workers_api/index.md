@@ -52,10 +52,11 @@ Você pode descobrir mais informações sobre como essas demonstrações funcion
 
 ## Especificações
 
-| Especificação                                            | Status                           | Comentário                                           |
-| -------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#toc-workers')}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("Web Workers")}}. |
-| {{SpecName('Web Workers')}}                     | {{Spec2('Web Workers')}} | Initial definition.                                  |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ## Veja também
 

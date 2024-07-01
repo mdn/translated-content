@@ -1,20 +1,13 @@
 ---
 title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
-tags:
-  - WebExtensions
-  - manifest.json
-  - Веб-расширения
-  - Дополнения
-  - Обзор
-  - Расширения
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
+
 {{AddonSidebar}}
 
-> **Примечание:** В этой статье описан файл manifest.json для веб-расширений. Если вы ищете информацию о manifest.json для Прогрессивных веб-приложений (PWAs), смотрите статью [Манифест веб-приложения](/ru/docs/Web/Манифест).
+> **Примечание:** В этой статье описан файл manifest.json для веб-расширений. Если вы ищете информацию о manifest.json для Прогрессивных веб-приложений (PWAs), смотрите статью [Манифест веб-приложения](/ru/docs/Web/Manifest).
 
-Файл `manifest.json` это единственный файл, который обязательно должен быть в каждом расширении, использующем API Веб-расширения (WebExtension APIs).
+Файл `manifest.json` это единственный файл, который обязательно должен быть в каждом расширении, использующем WebExtension API.
 
 Используя manifest.json, вы определяете базовые метаданные о расширении, такие как имя и версия. Также можно определить некоторые аспекты функциональности (такие, как фоновые скрипты, контент скрипты и действия браузера).
 
@@ -58,7 +51,7 @@ browser.runtime.getManifest().version;
   },
 
   "background": {
-    "scripts": ["jquery.js", "my-background.js"],
+    "scripts": ["jquery.js", "my-background.js"]
   },
 
   "browser_action": {
@@ -117,7 +110,7 @@ browser.runtime.getManifest().version;
   "version": "0.1",
 
   "user_scripts": {
-    "api_script": "apiscript.js",
+    "api_script": "apiscript.js"
   },
 
   "web_accessible_resources": ["images/my-image.png"]

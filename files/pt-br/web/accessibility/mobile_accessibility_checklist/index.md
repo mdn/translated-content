@@ -1,7 +1,6 @@
 ---
 title: Acessibilidade para plataforma móvel
 slug: Web/Accessibility/Mobile_accessibility_checklist
-original_slug: Web/Acessibilidade/Accessibilidade_para_plataforma_movel
 ---
 
 Este documento contém uma lista concisa de requisitos para desenvolvedores de aplicativos móveis. Tem como intenção evoluir continuamente conforme forem aparecendo outros padrões.
@@ -55,9 +54,9 @@ Este documento contém uma lista concisa de requisitos para desenvolvedores de a
 
   ```html
   <h1>Heading primeiro nível</h1>
-    <h2>Heading segundo nível</h2>
-    <h2>Outro Heading segundo nível</h2>
-      <h3>Heading terceiro nível</h3>
+  <h2>Heading segundo nível</h2>
+  <h2>Outro Heading segundo nível</h2>
+  <h3>Heading terceiro nível</h3>
   ```
 
 - [ARIA Landmark Roles](https://www.w3.org/TR/wai-aria/roles#landmark_roles_header) **DEVE** ser usado para descrever o aplicativo ou a estrutura do documento, como: `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.

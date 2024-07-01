@@ -36,8 +36,8 @@ slug: Web/API/Window/online_event
 
 ```js
 // addEventListener version
-window.addEventListener('online', (event) => {
-    console.log("You are now connected to the network.");
+window.addEventListener("online", (event) => {
+  console.log("You are now connected to the network.");
 });
 
 // ononline version

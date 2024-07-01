@@ -2,6 +2,7 @@
 title: Date.prototype.setDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setDate
 ---
+
 {{JSRef}}
 
 **setDate()** 메서드는 현재 설정된 월의 시작 부분을 기준으로 {{jsxref ( "Date")}} 객체의 날짜를 설정합니다.
@@ -9,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setDate
 ## Syntax
 
 ```js
-    dateObj.setDate(dayValue)
+dateObj.setDate(dayValue);
 ```
 
 ### Parameters
@@ -31,9 +32,9 @@ dayValue가 해당 월의 날짜 값 범위를 벗어나면 setDate ()는 그에
 
 ```js
 var theBigDay = new Date(1962, 6, 7); // 1962-07-07
-theBigDay.setDate(24);  // 1962-07-24
-theBigDay.setDate(32);  // 1962-08-01
-theBigDay.setDate(22);  // 1962-08-22
+theBigDay.setDate(24); // 1962-07-24
+theBigDay.setDate(32); // 1962-08-01
+theBigDay.setDate(22); // 1962-08-22
 ```
 
 ## 명세

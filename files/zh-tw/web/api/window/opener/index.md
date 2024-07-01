@@ -25,7 +25,7 @@ if (window.opener != indexWin) {
 
 ## 備註
 
-當一個視窗是由另一個視窗所開啟（使用 {{domxref("Window.open")}} 或一個帶有 [`target`](/zh-TW/docs/Web/HTML/Element/a#attr-target) 屬性設定的連結），被開啟的這個視窗會於 **window\.opener** 保留開啟它的第一個視窗之參考。假如目前的視窗沒有開啟它的視窗，則會回傳 NULL。
+當一個視窗是由另一個視窗所開啟（使用 {{domxref("Window.open")}} 或一個帶有 [`target`](/zh-TW/docs/Web/HTML/Element/a#target) 屬性設定的連結），被開啟的這個視窗會於 **window\.opener** 保留開啟它的第一個視窗之參考。假如目前的視窗沒有開啟它的視窗，則會回傳 NULL。
 
 Windows Phone 瀏覽器不支援 `window.opener`（測試版本為 Microsoft Edge 25.10586.36.0）。若 `window.opener` 為不同的安全區域（security zone），則 IE 也不支援此屬性。
 

@@ -26,16 +26,16 @@ XMLHttpRequest.onreadystatechange = callback;
 ## 示例
 
 ```js
-var xhr= new XMLHttpRequest(),
-    method = "GET",
-    url = "https://developer.mozilla.org/";
+var xhr = new XMLHttpRequest(),
+  method = "GET",
+  url = "https://developer.mozilla.org/";
 
 xhr.open(method, url, true);
 xhr.onreadystatechange = function () {
-  if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-    console.log(xhr.responseText)
+  if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+    console.log(xhr.responseText);
   }
-}
+};
 xhr.send();
 ```
 

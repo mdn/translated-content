@@ -1,8 +1,6 @@
 ---
-title: ':host-context()'
+title: ":host-context()"
 slug: Web/CSS/:host-context
-translation_of: 
-browser-compat: css.selectors.host-context
 l10n:
   sourceCommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
 ---
@@ -42,8 +40,9 @@ p {
 
 ## Syntaxe
 
-```css
-:host-context( <selecteur-composite> )
+```css-nolint
+:host-context(<selecteur-composite>) {
+}
 ```
 
 ## Exemples
@@ -56,27 +55,29 @@ Dans cet exemple, on a un élément personnalisé, `<context-span>`, dans lequel
 
 ```html
 <h1>
-  <a href="#"><context-span>Exemple</context-span></a> pour les sélecteurs d'hôte
+  <a href="#"><context-span>Exemple</context-span></a> pour les sélecteurs
+  d'hôte
 </h1>
 ```
 
 Dans le constructeur de l'élément, on crée des éléments `<style>` et `<span>`, et on remplit l'élément `<span>` avec le contenu de l'élément personnalisé, puis on remplit l'élément `<style>` avec quelques règles CSS&nbsp;:
 
 ```js
-let style = document.createElement('style');
-let span = document.createElement('span');
+let style = document.createElement("style");
+let span = document.createElement("span");
 span.textContent = this.textContent;
 
-const shadowRoot = this.attachShadow({mode: 'open'});
+const shadowRoot = this.attachShadow({ mode: "open" });
 shadowRoot.appendChild(style);
 shadowRoot.appendChild(span);
 
-style.textContent = 'span:hover { text-decoration: underline; }' +
-                    ':host-context(h1) { font-style: italic; }' +
-                    ':host-context(h1):after { content: " - pas de lien dans les titres !" }' +
-                    ':host-context(article, aside) { color: gray; }' +
-                    ':host(.footer) { color : red; }' +
-                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';
+style.textContent =
+  "span:hover { text-decoration: underline; }" +
+  ":host-context(h1) { font-style: italic; }" +
+  ':host-context(h1):after { content: " - pas de lien dans les titres !" }' +
+  ":host-context(article, aside) { color: gray; }" +
+  ":host(.footer) { color : red; }" +
+  ":host { background: rgba(0,0,0,0.1); padding: 2px 5px; }";
 ```
 
 Les règles `:host-context(h1) { font-style: italic; }` et `:host-context(h1):after { content: " - pas de lien dans les titres !" }` mettent en forme les instances de l'élément `<context-span>` (ici l'hôte sombre) contenus dans des éléments `<h1>`. Dans notre exemple, nous avons utilisé ces règles pour afficher clairement que cet élément personnalisé ne devrait pas apparaître dans un élément `<h1>`.

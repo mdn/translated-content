@@ -34,9 +34,9 @@ gl.attachShader(program, fragmentShader);
 gl.linkProgram(program);
 gl.validateProgram(program);
 
-if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
+if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
   var info = gl.getProgramInfoLog(program);
-  throw '不能编译 WebGL 程序。\n\n' + info;
+  throw "不能编译 WebGL 程序。\n\n" + info;
 }
 
 gl.useProgram(program);

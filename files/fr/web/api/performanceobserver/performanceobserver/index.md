@@ -1,14 +1,6 @@
 ---
 title: PerformanceObserver()
 slug: Web/API/PerformanceObserver/PerformanceObserver
-tags:
-  - API
-  - Constructor
-  - Constructeur
-  - PerformanceObserver
-  - Reference
-  - Performance Web
-translation_of: Web/API/PerformanceObserver/PerformanceObserver
 ---
 
 {{APIRef("Performance Timeline API")}}
@@ -33,19 +25,19 @@ Un nouvel objet [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) qu
 ## Exemple
 
 ```js
-const observer = new PerformanceObserver(function(list, obj) {
+const observer = new PerformanceObserver(function (list, obj) {
   let entries = list.getEntries();
   for (let i = 0; i < entries.length; i++) {
     // Traiter les événements "mark" et "frame"
   }
 });
-observer.observe({entryTypes: ["mark", "frame"]});
+observer.observe({ entryTypes: ["mark", "frame"] });
 
 function perf_observer(list, observer) {
   // Traiter l'événement "measure"
 }
 const observer2 = new PerformanceObserver(perf_observer);
-observer2.observe({entryTypes: ["measure"]});
+observer2.observe({ entryTypes: ["measure"] });
 ```
 
 ## Spécifications

@@ -49,7 +49,7 @@ _此接口还从其父_ _{{domxref("SVGGraphicsElement")}}_ _继承属性，并�
     - 在{{SVGAttr("currentView")}}中{{SVGAttr("viewBox")}}，{{SVGAttr("preserveAspectRatio")}}和{{SVGAttr("zoomAndPan")}}的值将对应于给定{{SVGElement("view")}}元素的相应属性
     - } {{SVGAttr("currentView")}}中的{{SVGAttr("transform")}}和{{SVGAttr("viewTarget")}}的值将为 null
 
-    如果初始视图是指向另一个元素的链接（即，除了{{SVGElement("view")}}}之外的其他元素，则：
+    如果初始视图是指向另一个元素的链接（即，除了{{SVGElement("view")}}之外的其他元素，则：
 
     - {{SVGAttr("viewBox")}}，{{SVGAttr("preserveAspectRatio")}}和{{SVGAttr("currentView")}}中的{{SVGAttr("zoomAndPan")}}的值将与值匹配对于`SVGSVGElement`直接用于最近祖先{{SVGElement("svg")}}元素的相应 DOM 属性
     - {{SVGAttr("currentView")}}中{{SVGAttr("transform")}}的值将为 null
@@ -125,7 +125,7 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 - {{domxref("SVGSVGElement.createSVGPoint()")}}
   - : Creates an {{domxref("SVGPoint")}} object outside of any document trees. The object is initialized to the point (0,0) in the user coordinate system.
 - {{domxref("SVGSVGElement.createSVGMatrix()")}}
-  - : Creates an {{domxref("SVGMatrix")}} object outside of any document trees. The object is initialized to the identity matrix.
+  - : Creates an {{domxref("DOMMatrix", "SVGMatrix")}} object outside of any document trees. The object is initialized to the identity matrix.
 - {{domxref("SVGSVGElement.createSVGRect()")}}
   - : Creates an {{domxref("SVGRect")}} object outside of any document trees. The object is initialized such that all values are set to 0 user units.
 - {{domxref("SVGSVGElement.createSVGTransform()")}}
@@ -143,6 +143,6 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - {{SVGElement("circle")}}

@@ -49,7 +49,7 @@ http://searchfox.org/mozilla-central/rev/48ea452803907f2575d81021e8678634e8067fc
 
 ## 解決方法
 
-この問題を解決するために、 Mozilla は {{bug(863246)}} のリソースを読み込む動作を変更しました。これは [Firefox 57 (Quantum)](/ja/docs/Mozilla/Firefox/Releases/57) で登場しました。
+この問題を解決するために、 Mozilla は [Firefox バグ 863246](https://bugzil.la/863246) のリソースを読み込む動作を変更しました。これは [Firefox 57 (Quantum)](/ja/docs/Mozilla/Firefox/Releases/57) で登場しました。
 
 過去には、ウェブコンテンツは、 Firefox の内部リソースだけでなく、拡張機能の資産も含め、URI が必要とするあらゆるリソースにアクセスすることができました。 現在、この動作はデフォルトでは禁止されています。
 

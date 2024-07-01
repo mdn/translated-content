@@ -1,6 +1,9 @@
 ---
-title: HTMLTableElement.createTFoot()
+title: "HTMLTableElement: createTFoot() メソッド"
+short-title: createTFoot()
 slug: Web/API/HTMLTableElement/createTFoot
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -11,9 +14,13 @@ slug: Web/API/HTMLTableElement/createTFoot
 
 ## 構文
 
-```js
-table.createTFoot();
+```js-nolint
+createTFoot()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
@@ -23,7 +30,7 @@ table.createTFoot();
 
 ```js
 let myfoot = mytable.createTFoot();
-// myfoot == mytable.tFoot は真になります
+// myfoot === mytable.tFoot は真になります
 ```
 
 ## 仕様書

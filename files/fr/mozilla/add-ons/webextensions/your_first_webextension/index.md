@@ -1,7 +1,6 @@
 ---
 title: Votre première WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
 
 {{AddonSidebar}}
@@ -27,7 +26,6 @@ Créez un nouveau fichier nommé `manifest.json` directement dans le répertoire
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Borderify",
   "version": "1.0",
@@ -44,7 +42,6 @@ Créez un nouveau fichier nommé `manifest.json` directement dans le répertoire
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 
@@ -91,7 +88,7 @@ Une alternative est de fournir un fichier SVG qui sera automatiquement mis à la
 Enfin, créez un fichier nommé `borderify.js` directement dans le répertoire `borderify` et insérez-y le code qui suit&nbsp;:
 
 ```js
-document.body.style.border = '5px solid red';
+document.body.style.border = "5px solid red";
 ```
 
 Ce script sera chargé dans chaque page où le domaine correspond au motif fourni par la clé `content_scripts` du manifeste (`manifest.json`). Ce script a un accès direct au document contrairement à des scripts chargés par la page elle-même.
@@ -144,4 +141,4 @@ Maintenant que vous avez eu une introduction au processus de développement d'un
 - [En lire davantage sur l'anatomie d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [Explorer les exemples d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples)
 - [Découvrir ce dont vous avez besoin pour développer, tester et publier votre extension](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_)
-- [Poursuivre votre apprentissage](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_#continuez_votre_exp%c3%a9rience_d'apprentissage)
+- [Poursuivre votre apprentissage](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_#continuez_votre_expérience_d'apprentissage)

@@ -1,13 +1,6 @@
 ---
 title: class
 slug: Web/HTML/Global_attributes/class
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/class
-original_slug: Web/HTML/Attributs_universels/class
 ---
 
 {{HTMLSidebar("Global_attributes")}}

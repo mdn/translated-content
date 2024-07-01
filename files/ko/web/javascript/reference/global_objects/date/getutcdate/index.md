@@ -2,6 +2,7 @@
 title: Date.prototype.getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 ---
+
 {{JSRef}}
 
 **getUTCDate()** 메서드는 표준시에 따라 지정된 날짜에 해당 월의 요일 (날짜)을 반환합니다.
@@ -9,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 ## Syntax
 
 ```js
-    dateObj.getUTCDate()
+dateObj.getUTCDate();
 ```
 
 ### Return value

@@ -99,6 +99,6 @@ Algunos ejemplos específicos:
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.length")}}
+{{Compat}}

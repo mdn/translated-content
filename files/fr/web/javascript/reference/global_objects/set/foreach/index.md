@@ -1,15 +1,6 @@
 ---
 title: Set.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/forEach
-original_slug: Web/JavaScript/Reference/Objets_globaux/Set/forEach
 ---
 
 {{JSRef}}
@@ -66,7 +57,7 @@ Le code qui suit permet d'enregistrer une ligne pour chaque élément contenu da
 
 ```js
 function logSetElements(valeur1, valeur2, set) {
-    console.log("s[" + valeur1 + "] = " + valeur2);
+  console.log("s[" + valeur1 + "] = " + valeur2);
 }
 
 new Set(["toto", "truc", undefined]).forEach(logSetElements);

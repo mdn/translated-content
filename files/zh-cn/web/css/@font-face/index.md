@@ -1,5 +1,5 @@
 ---
-title: '@font-face'
+title: "@font-face"
 slug: Web/CSS/@font-face
 ---
 
@@ -10,8 +10,9 @@ slug: Web/CSS/@font-face
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src:
+    url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
 }
 ```
 
@@ -46,20 +47,22 @@ slug: Web/CSS/@font-face
 
 ```html
 <html>
-<head>
-  <title>Web Font Sample</title>
-  <style type="text/css" media="screen, print">
-    @font-face {
-      font-family: "Bitstream Vera Serif Bold";
-      src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
-    }
+  <head>
+    <title>Web Font Sample</title>
+    <style type="text/css" media="screen, print">
+      @font-face {
+        font-family: "Bitstream Vera Serif Bold";
+        src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
+      }
 
-    body { font-family: "Bitstream Vera Serif Bold", serif }
-  </style>
-</head>
-<body>
-  This is Bitstream Vera Serif Bold.
-</body>
+      body {
+        font-family: "Bitstream Vera Serif Bold", serif;
+      }
+    </style>
+  </head>
+  <body>
+    This is Bitstream Vera Serif Bold.
+  </body>
 </html>
 ```
 
@@ -68,9 +71,8 @@ slug: Web/CSS/@font-face
 ```css
 @font-face {
   font-family: MyHelvetica;
-  src: local("Helvetica Neue Bold"),
-  local("HelveticaNeue-Bold"),
-  url(MgOpenModernaBold.ttf);
+  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+    url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }
 ```
@@ -81,22 +83,22 @@ slug: Web/CSS/@font-face
 
 ```css
 @font-face {
-    font-family: myFirstFont;
-    src: local("Times New Roman");
-    font-weight:normal;
+  font-family: myFirstFont;
+  src: local("Times New Roman");
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: myFirstFont;
-    src: local(Consolas);
-    font-weight:bold;
+  font-family: myFirstFont;
+  src: local(Consolas);
+  font-weight: bold;
 }
 ```
 
 ## 注意
 
 - 这里使用的 Web fonts 仍然受到同域限制 (字体文件必须和调用它的网页同一域), 但可以使用 [HTTP access controls](/zh-CN/docs/HTTP_access_control) 解除这一限制。
-- 因为这里没有为 TrueType(ttf), OpenType(otf) 和 Web Open File Format(WOFF) 字体定义 MIME，因此不能为这些字体类型设置特定的 MIME（实际上 WOFF 的 MIME 将会是 application/font-woff，但浏览器对此 MIME 的识别还不统一，其它字体情况也类似，可暂时使用 application/octet-stream）。
+- 因为这里没有为 TrueType(ttf), OpenType(otf) 和 Web Open File Format(WOFF) 字体定义 MIME，因此不能为这些字体类型设置特定的 MIME（实际上 WOFF 的 MIME 将会是 application/font-woff，但浏览器对此 MIME 的识别还不统一，其他字体情况也类似，可暂时使用 application/octet-stream）。
 - 你不能在一个 CSS 选择器中定义 @font-face。例如，这样写是无效的：
 
   ```css example-bad
@@ -104,7 +106,7 @@ slug: Web/CSS/@font-face
     @font-face {
       font-family: MyHelvetica;
       src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-          url(MgOpenModernaBold.ttf);
+        url(MgOpenModernaBold.ttf);
       font-weight: bold;
     }
   }

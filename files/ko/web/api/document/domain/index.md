@@ -12,8 +12,8 @@ slug: Web/API/Document/domain
 ## 구문
 
 ```js
-const domainString = document.domain
-document.domain = domainString
+const domainString = document.domain;
+document.domain = domainString;
 ```
 
 ### 값
@@ -33,7 +33,7 @@ document.domain = domainString
 
 ### 도메인 가져오기
 
-`http://developer.mozilla.org/en-US/docs/Web` 주소에서, 다음 코드는 `currentDomain` 변수에 "`developer.mozilla.org`" 문자열을 할당합니다.
+`http://developer.mozilla.org/ko/docs/Web` 주소에서, 다음 코드는 `currentDomain` 변수에 "`developer.mozilla.org`" 문자열을 할당합니다.
 
 ```js
 const currentDomain = document.domain;

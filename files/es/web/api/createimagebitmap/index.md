@@ -1,7 +1,6 @@
 ---
 title: self.createImageBitmap()
 slug: Web/API/createImageBitmap
-original_slug: Web/API/WindowOrWorkerGlobalScope/createImageBitmap
 ---
 
 {{APIRef("Canvas API")}}
@@ -49,25 +48,25 @@ Una {{domxref("Promise")}} que es resuelta con un objeto {{domxref("ImageBitmap"
 El siguiente ejemplo carga un _sprite sheet_, extrae los _sprites_, y muestra cada uno de ellos en el _canvas_. Un _sprite sheet_ es una imagen que contiene multiples imágenes más pequeñas, que finalmente son utilizadas de manera individual.
 
 ```js
-var canvas = document.getElementById('myCanvas'),
-ctx = canvas.getContext('2d'),
-image = new Image();
+var canvas = document.getElementById("myCanvas"),
+  ctx = canvas.getContext("2d"),
+  image = new Image();
 
 // Esperar que el sprite sheet se cargue
-image.onload = function() {
+image.onload = function () {
   Promise.all([
     // Recortar dos sprites del conjunto
     createImageBitmap(image, 0, 0, 32, 32),
-    createImageBitmap(image, 32, 0, 32, 32)
-  ]).then(function(sprites) {
+    createImageBitmap(image, 32, 0, 32, 32),
+  ]).then(function (sprites) {
     // Pintar cada uno de los sprites en el canvas
     ctx.drawImage(sprites[0], 0, 0);
     ctx.drawImage(sprites[1], 32, 32);
   });
-}
+};
 
 // Cargar el sprite sheet desde un archivo de imagen
-image.src = 'sprites.png';
+image.src = "sprites.png";
 ```
 
 ## Especificaciones

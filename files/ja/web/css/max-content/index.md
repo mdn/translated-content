@@ -1,9 +1,13 @@
 ---
 title: max-content
 slug: Web/CSS/max-content
+l10n:
+  sourceCommit: 726f971467b4cdd339e29ee10403fce5b3e87f42
 ---
 
-`max-content` は大きさのキーワードで、コンテンツの内在的な最大幅や高さを表しています。テキストコンテンツの場合は、オーバーフローが発生しても、コンテンツはまったく折り返されないことを意味します。
+{{CSSRef}}
+
+`max-content` は大きさのキーワードで、コンテンツの{{glossary("intrinsic size", "内在的な")}}最大幅や高さを表します。テキストコンテンツの場合、これはオーバーフローが発生しても、コンテンツがまったく折り返されないことを意味します。
 
 ## 構文
 
@@ -16,24 +20,20 @@ block-size: max-content;
 
 /* グリッドトラックで使用 */
 grid-template-columns: 200px 1fr max-content;
-
-/* グローバル値 */
-max-content: inherit;
-max-content: initial;
-max-content: revert;
-max-content: unset;
 ```
 
 ## 例
 
-<h3 id="Using_max-content_for_box_sizing">max-content をボックスの大きさに使用</h3>
+### max-content をボックスの大きさに使用
 
 #### HTML
 
 ```html
 <div id="container">
   <div class="item">Item</div>
-  <div class="item">Item with more text in it which will overflow the fixed width box.</div>
+  <div class="item">
+    Item with more text in it which will overflow the fixed width box.
+  </div>
 </div>
 ```
 
@@ -58,17 +58,15 @@ max-content: unset;
 
 {{EmbedLiveSample("Using_max-content_for_box_sizing", "100%", 200)}}
 
-<h3 id="Sizing_grid_columns_with_max-content">max-content をグリッド列の大きさに使用</h3>
+### max-content をグリッド列の大きさに使用
 
 #### HTML
 
 ```html
 <div id="container">
-  Item
-  <div>
-    Item with more text in it.
-  </div>
-  Flexible item
+  <div>Item</div>
+  <div>Item with more text in it.</div>
+  <div>Flexible item</div>
 </div>
 ```
 
@@ -102,10 +100,9 @@ max-content: unset;
 
 ## ブラウザーの互換性
 
-### width (および他の大きさのプロパティ) での対応
-
 {{Compat}}
 
 ## 関連情報
 
 - 関連する大きさのキーワード: {{cssxref("min-content")}}, {{cssxref("fit-content")}}
+- [CSS ボックスサイズ](/ja/docs/Web/CSS/CSS_box_sizing)モジュール

@@ -1,7 +1,6 @@
 ---
 title: Redirecionamentos em HTTP
 slug: Web/HTTP/Redirections
-original_slug: Web/HTTP/Redirecionamento
 ---
 
 {{HTTPSidebar}}
@@ -20,10 +19,10 @@ Existem vários tipos de redirecionamentos e eles se enquadram em três categori
 
 Estes redirecionamentos devem durar permanentemente. Eles implicam que o URL original não deve mais ser usado e que o novo é preferido. Os robôs dos mecanismos de pesquisa desencadeiam uma atualização do URL associado para o recurso em seus índices.
 
-| Code  | Text                            | Method handling                                                                                                                         | Typical use case                                           |
-| ----- | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| Code  | Text                            | Method handling                                                                                                           | Typical use case                                           |
+| ----- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
 | `301` | `Movido permanentemente`        | {{HTTPMethod("GET")}} métodos inalterados. Outros podem ou não serem alterados para {{HTTPMethod("GET")}}.[\[1\]](#attr1) | Reorganização de um web site.                              |
-| `308` | `Permanentemente redirecionado` | Método e corpo não alterados                                                                                                            | Reorganização de um web site, com não-GET links/operações. |
+| `308` | `Permanentemente redirecionado` | Método e corpo não alterados                                                                                              | Reorganização de um web site, com não-GET links/operações. |
 
 \[1]A especificação não tinha intenção de permitir mudanças de método, mas praticamente existem agentes de usuários lá fazendo isso. 308 foi criado para remover a ambiguidade do comportamento ao usar métodos não-GET.
 
@@ -31,11 +30,11 @@ Estes redirecionamentos devem durar permanentemente. Eles implicam que o URL ori
 
 Às vezes, o recurso solicitado não pode ser acessado a partir da sua localização canônica, mas pode ser acessado a partir de outro local. Neste caso, um redirecionamento temporário pode ser usado. Os robôs do mecanismo de busca não memorizam o novo e temporário link. Os redirecionamentos temporários também são usados ao criar, atualizar e excluir recursos para apresentar páginas de progresso temporárias.
 
-| Code  | Text                          | Method handling                                                                                                                         | Typical use case                                                                                                                                                                                                        |
-| ----- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Code  | Text                          | Method handling                                                                                                           | Typical use case                                                                                                                                                                                                        |
+| ----- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `302` | `Encontrado`                  | {{HTTPMethod("GET")}} métodos inalterados. Outros podem ou não serem alterados para {{HTTPMethod("GET")}}.[\[2\]](#attr2) | A página da Web não está temporariamente disponível por motivos imprevisíveis. Dessa forma, os motores de busca não atualizam seus links.                                                                               |
-| `303` | `Ver outro`                   | {{HTTPMethod("GET")}} Métodos inalterados. Outros _alterados_ para `GET` (corpo perdido).                                        | Usado para redirecionar após um {{HTTPMethod ("PUT")}} ou um {{HTTPMethod ("POST")}} para evitar uma atualização da página que reativaria a operação.                                                    |
-| `307` | `Redirecionamento temporário` | Método ou corpo não alterados                                                                                                           | A página da Web não está temporariamente disponível por motivos imprevisíveis. Dessa forma, os motores de busca não atualizam seus links. Melhor que 302 quando os links / operações não-GET estão disponíveis no site. |
+| `303` | `Ver outro`                   | {{HTTPMethod("GET")}} Métodos inalterados. Outros _alterados_ para `GET` (corpo perdido).                                 | Usado para redirecionar após um {{HTTPMethod ("PUT")}} ou um {{HTTPMethod ("POST")}} para evitar uma atualização da página que reativaria a operação.                                                                   |
+| `307` | `Redirecionamento temporário` | Método ou corpo não alterados                                                                                             | A página da Web não está temporariamente disponível por motivos imprevisíveis. Dessa forma, os motores de busca não atualizam seus links. Melhor que 302 quando os links / operações não-GET estão disponíveis no site. |
 
 \[2] A especificação não tinha intenção de permitir mudanças de método, mas praticamente existem agentes de usuários lá fazendo isso. 307 foi criado para remover a ambiguidade do comportamento ao usar métodos não-GET.
 
@@ -43,10 +42,10 @@ Estes redirecionamentos devem durar permanentemente. Eles implicam que o URL ori
 
 Além desses redirecionamentos usuais, existem dois redirecionamentos específicos. O {{HTTPStatus ("304")}} (Não Modificado) redireciona uma página para a cópia em cache local (que estava obsoleta) e {{HTTPStatus ("300")}} (Múltipla escolha) é um redirecionamento manual: o corpo, apresentado pelo navegador como uma página da Web, lista os possíveis redirecionamentos e o usuário clica em um para selecioná-lo.
 
-| Code  | Text               | Typical use case                                                                                                                     |
-| ----- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Code  | Text               | Typical use case                                                                                                               |
+| ----- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
 | `300` | `Múltipla Escolha` | Não muitas: as opções estão listadas em uma página HTML no corpo. Poderia ser servido com um estado {{HTTPStatus ("200")}} OK. |
-| `304` | `Não Modificado`   | Atualização de cache: isso indica que o valor do cache ainda é recente e pode ser usado.                                             |
+| `304` | `Não Modificado`   | Atualização de cache: isso indica que o valor do cache ainda é recente e pode ser usado.                                       |
 
 ## Alternative way of specifying redirections
 
@@ -54,7 +53,7 @@ HTTP redirects aren't the only way to define redirections. There are two other m
 
 ### HTML redirections
 
-HTTP redirects are the preferred way to create redirections, but sometimes the Web developer doesn't have control over the server or cannot configure it. For these specific cases, the Web developers can craft an HTML page with a {{HTMLElement("meta")}} element and the {{htmlattrxref("http-equiv", "meta")}} attribute set to `refresh` in the {{HTMLElement("head")}} of the page. When displaying the page, the browser will find this element and will go to the indicated page.
+HTTP redirects are the preferred way to create redirections, but sometimes the Web developer doesn't have control over the server or cannot configure it. For these specific cases, the Web developers can craft an HTML page with a {{HTMLElement("meta")}} element and the [`http-equiv`](/pt-BR/docs/Web/HTML/Element/meta#http-equiv) attribute set to `refresh` in the {{HTMLElement("head")}} of the page. When displaying the page, the browser will find this element and will go to the indicated page.
 
 ```html
 <head>
@@ -62,7 +61,7 @@ HTTP redirects are the preferred way to create redirections, but sometimes the W
 </head>
 ```
 
-The {{htmlattrxref("content")}} attribute starts with a number indicating how many seconds the browser should wait before redirecting to the given URL. Always set it to `0`, for better accessibility.
+The [`content`](/pt-BR/docs/Web/HTML/Global_attributes#content) attribute starts with a number indicating how many seconds the browser should wait before redirecting to the given URL. Always set it to `0`, for better accessibility.
 
 Obviously, this method only works with HTML pages (or similar) and cannot be used for images or any other type of content.
 

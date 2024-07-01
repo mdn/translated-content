@@ -1,13 +1,6 @@
 ---
 title: inset-block-start
 slug: Web/CSS/inset-block-start
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/inset-block-start
-original_slug: inset-block-start
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

@@ -36,7 +36,7 @@ Array.prototype.values === Array.prototype[Symbol.iterator]; // true
 `values()`는 순회 가능한 반복자를 반환하므로, [`for...of`](/ko/docs/Web/JavaScript/Reference/Statements/for...of) 루프를 사용하여 순회할 수 있습니다.
 
 ```js
-const arr = ['a', 'b', 'c', 'd', 'e'];
+const arr = ["a", "b", "c", "d", "e"];
 const iterator = arr.values();
 
 for (const letter of iterator) {
@@ -49,7 +49,7 @@ for (const letter of iterator) {
 반환 값도 반복자이므로 `next()` 메서드를 직접 호출할 수 있습니다.
 
 ```js
-const arr = ['a', 'b', 'c', 'd', 'e'];
+const arr = ["a", "b", "c", "d", "e"];
 const iterator = arr.values();
 iterator.next(); // { value: "a", done: false }
 iterator.next(); // { value: "b", done: false }
@@ -67,7 +67,7 @@ console.log(iterator.next().value); // undefined
 `values()`에서 반환되는 반복자는 재사용할 수 없습니다. `next().done = true` 또는 `currentIndex > length`, [the `for...of` loop ends](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#interactions_between_the_language_and_iteration_protocols) 그리고 추가적인 순회는 아무 효과가 없습니다.
 
 ```js
-const arr = ['a', 'b', 'c', 'd', 'e'];
+const arr = ["a", "b", "c", "d", "e"];
 const values = arr.values();
 for (const letter of values) {
   console.log(letter);
@@ -82,11 +82,11 @@ for (const letter of values) {
 [`break`](/ko/docs/Web/JavaScript/Reference/Statements/break)문을 사용하여 순회를 조기에 종료하면, 나중에 순회를 다시 이어나가고자 할 때 현재 위치에서 반복자를 다시 사용할 수 있습니다.
 
 ```js
-const arr = ['a', 'b', 'c', 'd', 'e'];
+const arr = ["a", "b", "c", "d", "e"];
 const values = arr.values();
 for (const letter of values) {
   console.log(letter);
-  if (letter === 'b') {
+  if (letter === "b") {
     break;
   }
 }
@@ -103,11 +103,11 @@ for (const letter of values) {
 `values()`에서 반환되는 배열 반복자 객체에는 저장되어 있는 값이 없습니다. 대신 생성에 사용된 배열의 주소를 저장하고 각 순회에서 현재 방문 중인 인덱스를 읽습니다. 따라서 순회 시 출력은 순회할 때의 인덱스에 담겨있는 값에 따라 달라집니다. 배열의 값이 변경되면 배열 반복자 객체의 값도 변경됩니다.
 
 ```js
-const arr = ['a', 'b', 'c', 'd', 'e'];
+const arr = ["a", "b", "c", "d", "e"];
 const iterator = arr.values();
 console.log(iterator); // Array Iterator { }
 console.log(iterator.next().value); // "a"
-arr[1] = 'n';
+arr[1] = "n";
 console.log(iterator.next().value); // "n"
 ```
 
@@ -116,7 +116,7 @@ console.log(iterator.next().value); // "n"
 `values()`은 빈 슬롯을 마치 `undefined`인 것처럼 방문합니다.
 
 ```js
-for (const element of [, 'a'].values()) {
+for (const element of [, "a"].values()) {
   console.log(element);
 }
 // undefined

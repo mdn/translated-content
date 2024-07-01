@@ -24,8 +24,6 @@ new Float64Array(buffer [, byteOffset [, length]]);
   - : 返回元素字节数。在 `Float64Array` 的情况下返回 8。
 - Float64Array.length
   - : 长度属性的值为 3。关于其实际长度 (元素数量) 参见 {{jsxref("TypedArray.prototype.length", "Float64Array.prototype.length")}}。
-- {{jsxref("TypedArray.name", "Float64Array.name")}}
-  - : 返回构造函数名字的字符串值。在 `Float64Array` 类型的情况下为："Float64Array"。
 - {{jsxref("TypedArray.prototype", "Float64Array.prototype")}}
   - : *TypedArray*对象的原型。
 
@@ -83,8 +81,8 @@ new Float64Array(buffer [, byteOffset [, length]]);
   - : 返回数组中等于给定值的元素的最后（最大）位置，没有找到则返回 -1。参见{{jsxref("Array.prototype.lastIndexOf()")}}。
 - {{jsxref("TypedArray.map", "Float64Array.prototype.map()")}}
   - : 创建一个新的数组，数据由原数组每个元素依次传入给定函数后返回的值组成。参见{{jsxref("Array.prototype.map()")}}。
-- {{jsxref("TypedArray.move", "Float64Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
-  - : {{jsxref("TypedArray.copyWithin", "Float64Array.prototype.copyWithin()")}}以前的一个非标准版本。
+- {{jsxref("TypedArray.move", "Float64Array.prototype.move()")}} {{non-standard_inline}}
+  - : {{jsxref("TypedArray.copyWithin", "Float64Array.prototype.copyWithin()")}} 以前的一个非标准版本。
 - {{jsxref("TypedArray.reduce", "Float64Array.prototype.reduce()")}}
   - : 传入一个函数作为累加器，从左到右遍历，最终得到一个值。参见{{jsxref("Array.prototype.reduce()")}}。
 - {{jsxref("TypedArray.reduceRight", "Float64Array.prototype.reduceRight()")}}
@@ -110,7 +108,7 @@ new Float64Array(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.@@iterator", "Float64Array.prototype[@@iterator]()")}}
   - : 返回一个新的包含数组元素的数组迭代器对象。
 
-## 例子
+## 示例
 
 ```js
 // From a length
@@ -121,7 +119,7 @@ console.log(float64.length); // 2
 console.log(float64.BYTES_PER_ELEMENT); // 8
 
 // From an array
-var arr = new Float64Array([21,31]);
+var arr = new Float64Array([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray

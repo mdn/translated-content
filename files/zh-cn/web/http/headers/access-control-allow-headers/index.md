@@ -1,85 +1,103 @@
 ---
 title: Access-Control-Allow-Headers
 slug: Web/HTTP/Headers/Access-Control-Allow-Headers
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-响应首部 **`Access-Control-Allow-Headers`** 用于 {{glossary("preflight request")}}（预检请求）中，列出了将会在正式请求的 {{HTTPHeader("Access-Control-Request-Headers")}} 字段中出现的首部信息。
+**`Access-Control-Allow-Headers`** 响应标头中用于响应包含了 {{HTTPHeader("Access-Control-Request-Headers")}} 的{{glossary("preflight request", "预检请求")}}，以指示在实际请求中可以使用哪些 HTTP 标头。
 
-简单首部，如 {{glossary("simple header", "simple headers")}}、{{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Content-Language")}}、{{HTTPHeader("Content-Type")}}（只限于解析后的值为 `application/x-www-form-urlencoded`、`multipart/form-data` 或 `text/plain` 三种 MIME 类型（不包括参数）），它们始终是被支持的，不需要在这个首部特意列出。
+如果请求中包含 {{HTTPHeader("Access-Control-Request-Headers")}} 标头，那么此响应标头是必需的。
 
-如果请求中含有 {{HTTPHeader("Access-Control-Request-Headers")}} 字段，那么这个首部是必要的。
+> **备注：** {{glossary("CORS-safelisted_request_header", "列入 CORS 白名单的请求标头")}}始终被允许，通常无需在 `Access-Control-Allow-Headers` 中列出（除非有必要绕过白名单的[额外限制](/zh-CN/docs/Glossary/CORS-safelisted_request_header#额外限制)）。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">标头类型</th>
+      <td>{{Glossary("Response header", "响应标头")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
-```plain
-Access-Control-Allow-Headers: <header-name>[, <header-name>]*
+```http
+Access-Control-Allow-Headers: [<header-name>[, <header-name>]*]
 Access-Control-Allow-Headers: *
 ```
 
 ## 指令
 
 - `<header-name>`
-  - : 可支持的请求首部名字。请求头会列出所有支持的首部列表，用逗号隔开。
-
-注意以下这些特定的首部是一直允许的：{{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}}（但只在其值属于 MIME 类型 `application/x-www-form-urlencoded`, `multipart/form-data` 或 `text/plain`中的一种时）。这些被称作{{Glossary("simple headers")}}，你无需特意声明它们。
-
-**`*` (wildcard)**
-
-对于没有凭据的请求（没有 HTTP cookie 或 HTTP 认证信息的请求），值“ `*`”仅作为特殊的通配符值。在具有凭据的请求中，它被视为没有特殊语义的文字标头名称“ \*”。请注意，{{HTTPHeader("Authorization")}}标头不能使用通配符，并且始终需要明确列出。
+  - : 支持的请求标头名称。此标头可以列出任意数量的请求标头，用逗号分隔。
+- `*`（通配符）
+  - : “`*`”值仅在无凭证的请求（即不包含 [HTTP cookie](/zh-CN/docs/Web/HTTP/Cookies) 或 HTTP 认证信息的请求）中视为特殊的通配符值。在带有凭证的请求中，它被当作字面意义的标头名称“`*`”处理，不具有特殊语义。请注意，在 {{HTTPHeader("Authorization")}} 标头不能被泛化处理，始终需要明确列出。
 
 ## 示例
 
-### 自定义的请求头
+### 自定义标头
 
-下面是 `Access-Control-Allow-Headers` 标头的一个示例。它表明，除了 CORS 安全清单列出的请求标头外，对服务器的 CORS 请求还支持名为 X-Custom-Header 的自定义标头。
+以下是一个 `Access-Control-Allow-Headers` 标头可能的样子。它表明服务器支持名为 `X-Custom-Header` 的自定义标头（除了{{glossary("CORS-safelisted_request_header", "列入 CORS 白名单的请求标头")}}之外）。
 
-```plain
+```http
 Access-Control-Allow-Headers: X-Custom-Header
 ```
 
-### Multiple headers
+### 多个标头
 
-此示例展示了支持多个标头时的 `Access-Control-Allow-Headers` 。
+此示例展示了 `Access-Control-Allow-Headers` 如何指定支持多个标头的情况。
 
-```plain
+```http
 Access-Control-Allow-Headers: X-Custom-Header, Upgrade-Insecure-Requests
 ```
 
-### Example preflight request
+### 绕过额外限制
 
-让我们看一个涉及`Access-Control-Allow-Headers`的预检请求示例。
+尽管{{glossary("CORS-safelisted_request_header", "列入 CORS 白名单的请求标头")}}始终被允许，并且通常无需在 `Access-Control-Allow-Headers` 中列出，但无论如何列出它们都将绕过适用的[额外限制](/zh-CN/docs/Glossary/CORS-safelisted_request_header#额外限制)。
 
-#### Request
+```http
+Access-Control-Allow-Headers: Accept
+```
 
-First, the request. The preflight request is an {{HTTPMethod("OPTIONS")}} request which includes some combination of the three preflight request headers: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, and {{HTTPHeader("Origin")}}, such as:
+### 预检请求示例
 
-```plain
+让我们来看一个涉及 `Access-Control-Allow-Headers` 的{{glossary("preflight request", "预检请求")}}的示例。
+
+#### 请求
+
+首先看请求。预检请求是一个使用 {{HTTPMethod("OPTIONS")}} 方法的请求，它包含预检请求头中的三个部分的某些组合：{{HTTPHeader("Access-Control-Request-Method")}}、{{HTTPHeader("Access-Control-Request-Headers")}} 和 {{HTTPHeader("Origin")}}。
+
+下面的预检请求告知服务器，我们想要发送一个 CORS `GET` 请求，并且该请求携带着 {{HTTPHeader("Access-Control-Request-Headers")}} 中列出的标头（即 {{HTTPHeader("Content-Type")}} 和 `x-requested-with`）。
+
+```http
 OPTIONS /resource/foo
-Access-Control-Request-Method: DELETE
-Access-Control-Request-Headers: origin, x-requested-with
+Access-Control-Request-Method: GET
+Access-Control-Request-Headers: Content-Type, x-requested-with
 Origin: https://foo.bar.org
 ```
 
-#### Response
+#### 响应
 
-If the server allows CORS requests to use the {{HTTPMethod("DELETE")}} method, it responds with an {{HTTPHeader("Access-Control-Allow-Methods")}} response header, which lists `DELETE` along with the other methods it supports:
+如果由预检请求指示的 CORS 请求被授权，服务器将使用一个消息响应预检请求，该消息表明允许的源、方法和标头。如下所示，{{HTTPHeader("Access-Control-Allow-Headers")}} 包含了所请求的标头信息。
 
-```plain
+```http
 HTTP/1.1 200 OK
 Content-Length: 0
 Connection: keep-alive
 Access-Control-Allow-Origin: https://foo.bar.org
 Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+Access-Control-Allow-Headers: Content-Type, x-requested-with
 Access-Control-Max-Age: 86400
 ```
 
-If the requested method isn't supported, the server will respond with an error.
+如果请求的方法不被支持，服务器将响应一个错误。
 
 ## 规范
 
@@ -89,16 +107,7 @@ If the requested method isn't supported, the server will respond with an error.
 
 {{Compat}}
 
-## 有关兼容性的注意事项
-
-- 在最新规范中提出的通配符 (\*)，尚未被如下浏览器实现：
-
-  - Chromium: [Issue 615313](https://bugs.chromium.org/p/chromium/issues/detail?id=615313)
-  - Firefox: {{bug(1309358)}}
-  - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
-  - WebKit: [Issue 165508](https://bugs.webkit.org/show_bug.cgi?id=165508)
-
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
 - {{HTTPHeader("Access-Control-Expose-Headers")}}

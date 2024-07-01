@@ -1,26 +1,22 @@
 ---
-title: Navigator.buildID
+title: Navigator：buildID 属性
 slug: Web/API/Navigator/buildID
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{ApiRef("HTML DOM")}}{{Non-standard_Header}}
 
-返回所使用浏览器的构建标识符。现代浏览器中，这个属性返回一个固定的时间戳作为私有的计量方法，比如 Firefox 64 及以后的版本返回 `20181001000000`。
+返回浏览器的构建标识符。在现代浏览器中，为了保护隐私，该属性现在返回一个固定的时间戳，例如 Firefox 64 及更高版本中返回 `20181001000000`。
 
-## 语法
+## 值
 
-```js
-buildID = navigator.buildID;
-```
+一个表示应用程序构建标识符的字符串。构建 ID 的格式为 `YYYYMMDDHHMMSS`。
 
-### 值
-
-一个字符串，用来表示当前应用的构建标识。构建 ID 的格式为：`YYYYMMDDHHMMSS`。
-
-## **示例**
+## 示例
 
 ```js
-console.log(window.navigator.buildID);
+console.log(navigator.buildID);
 ```
 
 ## 规范

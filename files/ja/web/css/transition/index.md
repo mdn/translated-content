@@ -1,11 +1,13 @@
 ---
 title: transition
 slug: Web/CSS/transition
+l10n:
+  sourceCommit: bed59f268d5e299beb538e435f08c4f4ce685980
 ---
 
 {{CSSRef}}
 
-**`transition`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("transition-property")}}、 {{cssxref("transition-duration")}}、 {{cssxref("transition-timing-function")}}、 {{cssxref("transition-delay")}} の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。
+**`transition`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{ cssxref("transition-property") }}、 {{ cssxref("transition-duration") }}、 {{ cssxref("transition-timing-function") }}、 {{ cssxref("transition-delay") }}、 {{ cssxref("transition-behavior") }} の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。
 
 {{EmbedInteractiveExample("pages/css/transition.html")}}
 
@@ -15,6 +17,7 @@ slug: Web/CSS/transition
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
+- [`transition-behavior`](/ja/docs/Web/CSS/transition-behavior) {{experimental_inline}}
 - [`transition-delay`](/ja/docs/Web/CSS/transition-delay)
 - [`transition-duration`](/ja/docs/Web/CSS/transition-duration)
 - [`transition-property`](/ja/docs/Web/CSS/transition-property)
@@ -24,45 +27,64 @@ slug: Web/CSS/transition
 
 ```css
 /* 1 つのプロパティへの適用 */
-/* プロパティ名 | 所要時間 */
+/* プロパティ名 | 再生時間 */
 transition: margin-right 4s;
 
-/* プロパティ名 | 所要時間 | 待ち時間 */
+/* プロパティ名 | 再生時間 | 待ち時間 */
 transition: margin-right 4s 1s;
 
-/* プロパティ名 | 所要時間 | イージング関数 */
+/* プロパティ名 | 再生時間 | イージング関数 */
 transition: margin-right 4s ease-in-out;
 
-/* プロパティ名 | 所要時間 | イージング関数 | 待ち時間 */
+/* プロパティ名 | 再生時間 | イージング関数 | 待ち時間 */
 transition: margin-right 4s ease-in-out 1s;
 
+/* プロパティ名 | 再生時間 | 振る舞い */
+transition: display 4s allow-discrete;
+
 /* 2 つのプロパティへの適用 */
-transition: margin-right 4s, color 1s;
+transition:
+  margin-right 4s,
+  color 1s;
 
 /* 変化するすべてのプロパティへの適用 */
-transition: all 0.5s ease-out;
+transition: all 0.5s ease-out allow-discrete;
+transition: 200ms linear 50ms;
 
 /* グローバル値 */
 transition: inherit;
 transition: initial;
 transition: revert;
+transition: revert-layer;
 transition: unset;
 ```
 
-`transition` プロパティは、 1 つまたは複数の単体プロパティによるトランジションを、カンマで区切って指定します。
+`transition` プロパティの値は、以下のどちらかで指定します。
 
-それぞれの単体プロパティのトランジションでは、単体のプロパティ (または特別な値である `all` および `none`) に適用されるトランジションを記述します。記述は以下の通りです。
+- 特別な値 `none` は、この要素にトランジションが発生しないことを指定します。これが既定値です。
+- カンマ区切りの、トランジションする 1 つ以上の単体プロパティ。
 
-- トランジションを適用するプロパティを表す 0 ～ 1 個の値。以下のうちの一つです。
+それぞれの単体プロパティのトランジションでは、単体のプロパティまたはすべてのプロパティに適用されるトランジションを記述します。記述は以下の通りです。
 
-  - `none` キーワード
-  - `all` キーワード
-  - CSS プロパティの名前である {{cssxref("&lt;custom-ident&gt;")}}
+- トランジションを適用するプロパティ（群）を表す 0 ～ 1 個の値。以下のいずれかで設定することができます。
+  - {{cssxref("&lt;custom-ident&gt;")}} は単体のプロパティを表します。
+  - 特別な値 `all` は、要素の状態が変化したときに変化するすべてのプロパティにトランジションを適用することを指定します。
+  - 値を指定しない場合、値は `all` とみなされ、指定したトランジションは変化するすべてのプロパティに適用されます。
+- 使用するイージング関数を表す 0 ～ 1 個の {{cssxref("&lt;easing-function&gt;")}} の値。
+- 0 ～ 2 個の {{cssxref("&lt;time&gt;")}} の値。 1 番目の値は {{cssxref("transition-duration")}} に割り当てられる再生時間として解釈され、 2 番目の値は {{cssxref("transition-delay")}} に割り当てられる待ち時間として解釈されます。
+- アニメーション動作が[離散的](/ja/docs/Web/CSS/CSS_animated_properties#離散)であるプロパティに対して、トランジションを始めるかどうかを宣言する 0 または 1 つの値。この値が存在する場合、キーワード `allow-discrete` またはキーワード `normal` のどちらかになります。
 
-- 使用するイージング関数を表す 0 または 1 個の {{cssxref("&lt;easing-function&gt;")}} の値
-- 0 ～ 2 個の {{cssxref("&lt;time&gt;")}} の値。 1 番目の値は {{cssxref("transition-duration")}} に割り当てられる所要時間として解釈され、 2 番目の値は {{cssxref("transition-delay")}} に割り当てられる待ち時間として解釈されます。
+単体プロパティのトランジションに、 `all` をトランジションするプロパティとして指定したものの、その後で {{cssxref("&lt;custom-ident&gt;")}} の値によって単体のプロパティを指定した場合、後のトランジションが先のものを上書きします。例えば次のように指定されていたとします。
 
-プロパティ値の一覧が同じ長さではない場合については、[プロパティ値のリストの長さが異なる場合](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#when_property_value_lists_are_of_different_lengths)を参照してください。つまり、実際にアニメーション化されているプロパティの数を超える余分なトランジションの記述は無視されます。
+```css
+transition:
+  all 200ms,
+  opacity 400ms;
+```
+
+この場合、要素の状態が変わると変化するプロパティは、 {{cssxref("opacity")}} を除き、すべて 200ms の再生時間でトランジションします。
+
+プロパティ値の一覧が同じ長さではない場合については、[プロパティ値のリストの長さが異なる場合](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#when_property_value_lists_are_of_different_lengths)を参照してください。つまり、実際にアニメーション化されているプロパティの数を超える余分なトランジションの記述は無視されます。
 
 ## 公式定義
 
@@ -74,17 +96,19 @@ transition: unset;
 
 ## 例
 
-### 単純な例
+### 基本的な例
 
-この例では、ユーザーが要素の上にカーソルを置いたときに、 1 秒間の遅延をつけて 4 秒間でフォントサイズの遷移を行います。
+この例では、ユーザーが要素の上にポインターを当てたとき、 4 秒間の `font-size` のトランジションが起こるまでに 1 秒の待ち時間があります。
 
 #### HTML
 
 ```html
-<a class="target">この上にポインターを移動してください</a>
+<a class="target">ポインターを当ててください</a>
 ```
 
 #### CSS
+
+2 つの {{cssxref("time")}} 値を記述しています。 `transition` の一括指定では、最初の `<time>` 値は `transition-duration` です。 2 つ目の time 値は `transition-delay` です。省略した場合の既定値はどちらも `0s` です。
 
 ```css
 .target {
@@ -97,11 +121,7 @@ transition: unset;
 }
 ```
 
-#### 結果
-
-{{EmbedLiveSample('Simple_example', 600, 100)}}
-
-[CSS トランジションの使用](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) の記事に、 CSS トランジションの例がいくつかあります。
+{{EmbedLiveSample('Basic_example', 600, 100)}}
 
 ## 仕様書
 
@@ -113,5 +133,6 @@ transition: unset;
 
 ## 関連情報
 
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)モジュール
+- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{ domxref("TransitionEvent") }}

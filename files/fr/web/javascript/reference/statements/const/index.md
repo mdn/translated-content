@@ -1,13 +1,6 @@
 ---
 title: const
 slug: Web/JavaScript/Reference/Statements/const
-tags:
-  - ECMAScript 2015
-  - Instruction
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Statements/const
-original_slug: Web/JavaScript/Reference/Instructions/const
 ---
 
 {{jsSidebar("Statements")}}

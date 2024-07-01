@@ -1,49 +1,51 @@
 ---
 title: Object.prototype.propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
+l10n:
+  sourceCommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
 ---
 
 {{JSRef}}
 
-**`propertyIsEnumerable()`** メソッドは、指定されたプロパティが列挙可能で、かつオブジェクト自身のプロパティであるかどうかを示す論理値を返します。
+**`propertyIsEnumerable()`** メソッドは、指定されたプロパティが[列挙可能で、かつオブジェクト自身の](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)プロパティであるかどうかを示す論理値を返します。
 
 {{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html", "taller")}}
 
 ## 構文
 
-```js
+```js-nolint
 propertyIsEnumerable(prop)
 ```
 
 ### 引数
 
 - `prop`
-  - : 調べたいプロパティの名前です。
+  - : 調べたいプロパティの名前です。文字列または {{jsxref("Symbol")}} が指定できます。
 
 ### 返値
 
-`true` または `false` の値で、指定されたプロパティが列挙可能であり、かつオブジェクト自身のプロパティであるかどうかを示します。
+論理値で、指定されたプロパティが列挙可能であり、かつオブジェクト自身のプロパティであるかどうかを示します。
 
 ## 解説
 
-すべてのオブジェクトは `propertyIsEnumerable` メソッドを持っています。このメソッドはあるオブジェクトのプロパティが、プロトタイプチェーンを通じて継承されたプロパティを除いて {{jsxref("Statements/for...in", "for...in")}} ループで列挙可能かどうかを特定することができます。もしオブジェクトが指定されたプロパティを持っていない場合、このメソッドは `false` を返します。
+すべてのオブジェクトは `Object.prototype` から（つまり、 [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)を除くすべてが） `propertyIsEnumerable` メソッドを継承しています。このメソッドは、指定したプロパティ（文字列またはシンボル）がオブジェクトの列挙可能な自分自身のプロパティであるかどうかを判定します。オブジェクトが指定したプロパティを持っていない場合、このメソッドは `false` を返します。
 
-> **メモ:** 列挙可能なプロパティは {{jsxref("Statements/for...in", "for...in")}} ループで反復処理されますが、 {{jsxref("Global_Objects/Symbol", "Symbol")}} は含まれないことに留意してください。
+このメソッドは [`Object.getOwnPropertyDescriptor(obj, prop)?.enumerable ?? false`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) と等価です。
 
 ## 例
 
-### `propertyIsEnumerable` の基本的な使い方
+### propertyIsEnumerable() の基本的な使い方
 
-以下の例はオブジェクトと配列での `propertyIsEnumerable` の使い方を示しています。
+以下の例はオブジェクトと配列での `propertyIsEnumerable()` の使い方を示しています。
 
 ```js
-var o = {};
-var a = [];
-o.prop = 'is enumerable';
-a[0] = 'is enumerable';
+const o = {};
+const a = [];
+o.prop = "is enumerable";
+a[0] = "is enumerable";
 
-o.propertyIsEnumerable('prop');   // true を返す
-a.propertyIsEnumerable(0);        // true を返す
+o.propertyIsEnumerable("prop"); // true
+a.propertyIsEnumerable(0); // true
 ```
 
 ### ユーザー定義オブジェクトと組み込みオブジェクト
@@ -51,62 +53,97 @@ a.propertyIsEnumerable(0);        // true を返す
 以下の例は、ユーザー定義プロパティと組み込みプロパティの列挙可能性を実証しています。
 
 ```js
-var a = ['is enumerable'];
+const a = ["is enumerable"];
 
-a.propertyIsEnumerable(0);          // true を返す
-a.propertyIsEnumerable('length');   // false を返す
+a.propertyIsEnumerable(0); // true
+a.propertyIsEnumerable("length"); // false
 
-Math.propertyIsEnumerable('random');   // false を返す
-this.propertyIsEnumerable('Math');     // false を返す
+Math.propertyIsEnumerable("random"); // false
+globalThis.propertyIsEnumerable("Math"); // false
 ```
 
-<h3 id="Direct_versus_inherited_properties" name="Direct_versus_inherited_properties">直接のプロパティと継承されたプロパティ</h3>
+### 直接のプロパティと継承されたプロパティ
+
+列挙可能な自分自身で持つプロパティだけが `propertyIsEnumerable()` で `true` を返しますが、継承されたものを含むすべての列挙可能なプロパティは [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループによって処理されます。
 
 ```js
-var a = [];
-a.propertyIsEnumerable('constructor');         // false を返す
+const o1 = {
+  enumerableInherited: "is enumerable",
+};
+Object.defineProperty(o1, "nonEnumerableInherited", {
+  value: "is non-enumerable",
+  enumerable: false,
+});
+const o2 = {
+  // o1 は o2 のプロトタイプ
+  __proto__: o1,
+  enumerableOwn: "is enumerable",
+};
+Object.defineProperty(o2, "nonEnumerableOwn", {
+  value: "is non-enumerable",
+  enumerable: false,
+});
 
-function firstConstructor() {
-  this.property = 'is not enumerable';
-}
-
-firstConstructor.prototype.firstMethod = function() {};
-
-function secondConstructor() {
-  this.method = function() { return 'is enumerable'; };
-}
-
-secondConstructor.prototype = new firstConstructor;
-secondConstructor.prototype.constructor = secondConstructor;
-
-var o = new secondConstructor();
-o.arbitraryProperty = 'is enumerable';
-
-o.propertyIsEnumerable('arbitraryProperty');   // true を返す
-o.propertyIsEnumerable('method');              // true を返す
-o.propertyIsEnumerable('property');            // false を返す
-
-o.property = 'is enumerable';
-
-o.propertyIsEnumerable('property');            // true を返す
-
-// これらはすべて false を返します。これは、 (最後の 2 つは for-in で
-// 反復処理可能であるにもかかわらず) propertyIsEnumerable が考慮しない
-// プロトタイプであるためです。
-o.propertyIsEnumerable('prototype');   // false を返す (as of JS 1.8.1/FF3.6)
-o.propertyIsEnumerable('constructor'); // false を返す
-o.propertyIsEnumerable('firstMethod'); // false を返す
+o2.propertyIsEnumerable("enumerableInherited"); // false
+o2.propertyIsEnumerable("nonEnumerableInherited"); // false
+o2.propertyIsEnumerable("enumerableOwn"); // true
+o2.propertyIsEnumerable("nonEnumerableOwn"); // false
 ```
 
-## Specifications
+### シンボルプロパティの検査
+
+`propertyIsEnumerable()` は{{jsxref("Symbol", "シンボル")}}プロパティにも対応しています。なお、多くの列挙メソッドは、文字列プロパティのみを扱います。シンボルプロパティの列挙可能性は、{{jsxref("Object.assign()")}} や[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用している場合にのみ有益です。詳細については、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)を参照してください。
+
+```js
+const sym = Symbol("enumerable");
+const sym2 = Symbol("non-enumerable");
+const o = {
+  [sym]: "is enumerable",
+};
+Object.defineProperty(o, sym2, {
+  value: "is non-enumerable",
+  enumerable: false,
+});
+
+o.propertyIsEnumerable(sym); // true
+o.propertyIsEnumerable(sym2); // false
+```
+
+### null プロパティオブジェクトの使用
+
+`null` プロトタイプオブジェクトは `Object.prototype` を継承していないため、 `propertyIsEnumerable()` メソッドを継承しません。代わりにオブジェクトを `this` として `Object.prototype.propertyIsEnumerable` を呼び出す必要があります。
+
+```js
+const o = {
+  __proto__: null,
+  enumerableOwn: "is enumerable",
+};
+
+o.propertyIsEnumerable("enumerableOwn"); // TypeError: o.propertyIsEnumerable は関数ではありません
+Object.prototype.propertyIsEnumerable.call(o, "enumerableOwn"); // true
+```
+
+また、代わりに {{jsxref("Object.getOwnPropertyDescriptor()")}} を使用することもできます。これは、存在しないプロパティと実際に列挙できないプロパティを判別するのにも有益です。
+
+```js
+const o = {
+  __proto__: null,
+  enumerableOwn: "is enumerable",
+};
+
+Object.getOwnPropertyDescriptor(o, "enumerableOwn")?.enumerable; // true
+Object.getOwnPropertyDescriptor(o, "nonExistent")?.enumerable; // undefined
+```
+
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - [列挙可能性とプロパティの所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Statements/for...in", "for...in")}}

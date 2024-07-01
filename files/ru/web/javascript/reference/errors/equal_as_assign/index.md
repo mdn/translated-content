@@ -1,9 +1,6 @@
 ---
-title: >-
-  SyntaxError: test for equality (==) mistyped as assignment (=)?(тест на
-  равенство (==) опечатка как присваивание (=)?)
+title: "SyntaxError: test for equality (==) mistyped as assignment (=)?(тест на равенство (==) опечатка как присваивание (=)?)"
 slug: Web/JavaScript/Reference/Errors/Equal_as_assign
-translation_of: Web/JavaScript/Reference/Errors/Equal_as_assign
 ---
 
 {{jsSidebar("Errors")}}
@@ -28,7 +25,7 @@ Warning: SyntaxError: тест на равенство (==) опечатка к�
 
 Рекомендуется не использовать простые назначения в условном выражении (например, if...else), поскольку при просмотре кода назначение можно спутать с равенством. Например, не используйте следующий код:
 
-```js example-bad
+```js-nolint example-bad
 if (x = y) {
   // делать правильные вещи
 }
@@ -52,5 +49,5 @@ if (x == y) {
 
 ## Смотрите также
 
-- [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+- [`if...else`](/ru/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Comparison operators](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)

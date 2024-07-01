@@ -1,14 +1,6 @@
 ---
 title: document.importNode
 slug: Web/API/Document/importNode
-tags:
-  - API
-  - Copie
-  - Document
-  - Méthodes
-  - Noeud
-  - Reference
-translation_of: Web/API/Document/importNode
 ---
 
 {{APIRef("DOM")}}

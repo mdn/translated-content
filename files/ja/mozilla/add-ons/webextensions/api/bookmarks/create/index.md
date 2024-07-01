@@ -3,17 +3,17 @@ title: bookmarks.create()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-**`bookmarks.create()`** は、`parentId` で指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} の配下に、ブックマークやフォルダを作成するメソッドです。フォルダを作成する場合は、{{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}} の引数を省略するか空にします。
+**`bookmarks.create()`** は、`parentId` で指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} の配下に、ブックマークやフォルダーを作成するメソッドです。フォルダーを作成する場合は、{{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}} の引数を省略するか空にします。
 
 ## 構文
 
 ```js
 browser.bookmarks.create(
   bookmark, // CreateDetails
-  callback  // 関数（省略可）
-)
+  callback, // 関数（省略可）
+);
 ```
 
 ### 引数
@@ -29,21 +29,24 @@ browser.bookmarks.create(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.create")}}
+{{Compat}}
 
 ## 使用例
 
-以下の例は、このページのブックマークをデフォルトのフォルダ（Firefox は「未分類のブックマーク」、Chrome は「その他のブックマーク」）に作成するものです。
+以下の例は、このページのブックマークをデフォルトのフォルダー（Firefox は「未分類のブックマーク」、Chrome は「その他のブックマーク」）に作成するものです。
 
 ```js
 function onBookmarkAdded(bookmarkItem) {
   console.log("Bookmark added with ID: " + bookmarkItem.id);
 }
 
-chrome.bookmarks.create({
-  title: "bookmarks.create() on MDN",
-  url: "https://developer.mozilla.org/Add-ons/WebExtensions/API/bookmarks/create"
-}, onBookmarkAdded);
+chrome.bookmarks.create(
+  {
+    title: "bookmarks.create() on MDN",
+    url: "https://developer.mozilla.org/Add-ons/WebExtensions/API/bookmarks/create",
+  },
+  onBookmarkAdded,
+);
 ```
 
 {{WebExtExamples}}

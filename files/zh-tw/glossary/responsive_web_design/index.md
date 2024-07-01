@@ -3,6 +3,8 @@ title: 響應式網頁設計
 slug: Glossary/Responsive_web_design
 ---
 
+{{GlossarySidebar}}
+
 _響應式網頁設計_（**RWD**）是一種強調製作能在所有上網設備上，提供最佳外觀和體驗的 Web 開發觀念。
 
 ## 深入理解

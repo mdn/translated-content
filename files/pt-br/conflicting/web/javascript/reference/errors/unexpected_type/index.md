@@ -1,7 +1,6 @@
 ---
 title: 'TypeError: can''t access property "x" of "y"'
 slug: conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
-original_slug: Web/JavaScript/Reference/Errors/Cant_access_property
 ---
 
 {{jsSidebar("Errors")}}

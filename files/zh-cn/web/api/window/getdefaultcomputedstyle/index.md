@@ -57,18 +57,18 @@ The returned object is of the same type as the object returned by [`getComputedS
 
 ```html
 <style>
- h3:after {
-   content: ' rocks!';
- }
+  h3:after {
+    content: " rocks!";
+  }
 </style>
 
 <h3>generated content</h3>
 
 <script>
-  var h3       = document.querySelector('h3'),
-      result   = getDefaultComputedStyle(h3, ':after').content;
+  var h3 = document.querySelector("h3"),
+    result = getDefaultComputedStyle(h3, ":after").content;
 
-  console.log('the generated content is: ', result); // 返回 'none'
+  console.log("the generated content is: ", result); // 返回 'none'
 </script>
 ```
 

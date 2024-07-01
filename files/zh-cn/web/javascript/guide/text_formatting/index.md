@@ -3,7 +3,7 @@ title: 文本格式化
 slug: Web/JavaScript/Guide/Text_formatting
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_expressions")}}
 
 本章介绍在 Javascript 中如何使用字符串与文本内容。
 
@@ -16,8 +16,8 @@ JavaScript 中的 {{Glossary("String")}} 类型用于表示文本型的数据。
 可以使用单引号或双引号创建简单的字符串：
 
 ```js
-'foo'
-"bar"
+"foo";
+"bar";
 ```
 
 可以使用转义序列来创建更复杂的字符串：
@@ -27,7 +27,7 @@ JavaScript 中的 {{Glossary("String")}} 类型用于表示文本型的数据。
 \x 之后的数值将被认为是一个 16 进制数。
 
 ```js
-'\xA9' // "©"
+"\xA9"; // "©"
 ```
 
 #### Unicode 转义序列
@@ -35,7 +35,7 @@ JavaScript 中的 {{Glossary("String")}} 类型用于表示文本型的数据。
 Unicode 转义序列在\u 之后需要至少 4 个字符。
 
 ```js
-'\u00A9' // "©"
+"\u00A9"; // "©"
 ```
 
 #### Unicode 字元逸出
@@ -45,10 +45,10 @@ Unicode 转义序列在\u 之后需要至少 4 个字符。
 请参阅 {{jsxref("String.fromCodePoint()")}} 或 {{jsxref("String.prototype.codePointAt()")}}。
 
 ```js
-'\u{2F804}'
+"\u{2F804}";
 
 // the same with simple Unicode escapes
-'\uD87E\uDC04'
+"\uD87E\uDC04";
 ```
 
 ### 字符串对象
@@ -56,7 +56,7 @@ Unicode 转义序列在\u 之后需要至少 4 个字符。
 {{jsxref("String")}} 对象是对原始 string 类型的封装 .
 
 ```js
-const foo = new String('foo'); // 创建一个 String 对象
+const foo = new String("foo"); // 创建一个 String 对象
 console.log(foo); // 输出：[String: 'foo']
 typeof foo; // 返回 'object'
 ```
@@ -66,8 +66,8 @@ typeof foo; // 返回 'object'
 除非必要，应该尽量使用 String 字面值，因为 String 对象的某些行为可能并不与直觉一致。举例：
 
 ```js
-const firstString = '2 + 2'; //创建一个字符串字面量
-const secondString = new String('2 + 2'); // 创建一个字符串对象
+const firstString = "2 + 2"; //创建一个字符串字面量
+const secondString = new String("2 + 2"); // 创建一个字符串对象
 eval(firstString); // 返回数字 4
 eval(secondString); // 返回包含 "2 + 2" 的字符串对象
 ```
@@ -75,9 +75,9 @@ eval(secondString); // 返回包含 "2 + 2" 的字符串对象
 `String` 对象有一个属性 `length`，标识了字符串中 UTF-16 的码点个数。举例，下面的代码把 13 赋值给了`helloLength`，因为 "Hello, World!" 包含 13 个字符，每个字符用一个 UTF-16 码点表示。你可以通过数组的方式访问每一个码点，但你不能修改每个字符，因为字符串是不变的类数组对象：
 
 ```js
-const hello = 'Hello, World!';
+const hello = "Hello, World!";
 const helloLength = hello.length;
-hello[0] = 'L'; // 无效，因为字符串是不变的
+hello[0] = "L"; // 无效，因为字符串是不变的
 hello[0]; // 返回 "H"
 ```
 
@@ -87,21 +87,21 @@ Unicode 标量值（Unicode scalar value）大于 U+FFFF 的字符（比如中�
 
 下表总结了 {{jsxref("String")}} 对象的方法。
 
-| 方法                                                                                                                                                                             | 描述                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| 方法                                                                                                                                  | 描述                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | {{jsxref("String.charAt", "charAt")}}, {{jsxref("String.charCodeAt", "charCodeAt")}}, {{jsxref("String.codePointAt", "codePointAt")}} | 返回字符串指定位置的字符或者字符编码。                                        |
-| {{jsxref("String.indexOf", "indexOf")}}, {{jsxref("String.lastIndexOf", "lastIndexOf")}}                                                           | 分别返回字符串中指定子串的位置或最后位置。                                    |
-| {{jsxref("String.startsWith", "startsWith")}}, {{jsxref("String.endsWith", "endsWith")}}, {{jsxref("String.includes", "includes")}} | 返回字符串是否以指定字符串开始、结束或包含指定字符串。                        |
-| {{jsxref("String.concat", "concat")}}                                                                                                                                 | 连接两个字符串并返回新的字符串。                                              |
-| {{jsxref("String.fromCharCode", "fromCharCode")}}, {{jsxref("String.fromCodePoint", "fromCodePoint")}}                                           | 从指定的 Unicode 值序列构造一个字符串。这是一个 String 类方法，不是实例方法。 |
-| {{jsxref("String.split", "split")}}                                                                                                                                 | 通过将字符串分离成一个个子串来把一个 String 对象分裂到一个字符串数组中。      |
-| {{jsxref("String.slice", "slice")}}                                                                                                                                 | 从一个字符串提取片段并作为新字符串返回。                                      |
-| {{jsxref("String.substring", "substring")}}, {{jsxref("String.substr", "substr")}}                                                                       | 分别通过指定起始和结束位置，起始位置和长度来返回字符串的指定子集。            |
-| {{jsxref("String.match", "match")}}, {{jsxref("String.replace", "replace")}}, {{jsxref("String.search", "search")}}                         | 通过正则表达式来工作。                                                        |
-| {{jsxref("String.toLowerCase", "toLowerCase")}}, {{jsxref("String.toUpperCase", "toUpperCase")}}                                               | 分别返回字符串的小写表示和大写表示。                                          |
-| {{jsxref("String.normalize", "normalize")}}                                                                                                                         | 按照指定的一种 Unicode 正规形式将当前字符串正规化。                           |
-| {{jsxref("String.repeat", "repeat")}}                                                                                                                                 | 将字符串内容重复指定次数后返回。                                              |
-| {{jsxref("String.trim", "trim")}}                                                                                                                                     | 去掉字符串开头和结尾的空白字符。                                              |
+| {{jsxref("String.indexOf", "indexOf")}}, {{jsxref("String.lastIndexOf", "lastIndexOf")}}                                              | 分别返回字符串中指定子串的位置或最后位置。                                    |
+| {{jsxref("String.startsWith", "startsWith")}}, {{jsxref("String.endsWith", "endsWith")}}, {{jsxref("String.includes", "includes")}}   | 返回字符串是否以指定字符串开始、结束或包含指定字符串。                        |
+| {{jsxref("String.concat", "concat")}}                                                                                                 | 连接两个字符串并返回新的字符串。                                              |
+| {{jsxref("String.fromCharCode", "fromCharCode")}}, {{jsxref("String.fromCodePoint", "fromCodePoint")}}                                | 从指定的 Unicode 值序列构造一个字符串。这是一个 String 类方法，不是实例方法。 |
+| {{jsxref("String.split", "split")}}                                                                                                   | 通过将字符串分离成一个个子串来把一个 String 对象分裂到一个字符串数组中。      |
+| {{jsxref("String.slice", "slice")}}                                                                                                   | 从一个字符串提取片段并作为新字符串返回。                                      |
+| {{jsxref("String.substring", "substring")}}, {{jsxref("String.substr", "substr")}}                                                    | 分别通过指定起始和结束位置，起始位置和长度来返回字符串的指定子集。            |
+| {{jsxref("String.match", "match")}}, {{jsxref("String.replace", "replace")}}, {{jsxref("String.search", "search")}}                   | 通过正则表达式来工作。                                                        |
+| {{jsxref("String.toLowerCase", "toLowerCase")}}, {{jsxref("String.toUpperCase", "toUpperCase")}}                                      | 分别返回字符串的小写表示和大写表示。                                          |
+| {{jsxref("String.normalize", "normalize")}}                                                                                           | 按照指定的一种 Unicode 正规形式将当前字符串正规化。                           |
+| {{jsxref("String.repeat", "repeat")}}                                                                                                 | 将字符串内容重复指定次数后返回。                                              |
+| {{jsxref("String.trim", "trim")}}                                                                                                     | 去掉字符串开头和结尾的空白字符。                                              |
 
 ### 多行模板字符串
 
@@ -114,8 +114,10 @@ Unicode 标量值（Unicode scalar value）大于 U+FFFF 的字符（比如中�
 源代码中插入的任何新行开始字符都作为模板字符串的内容。使用一般的字符串时，为了创建多行的字符串不得不用如下语法：
 
 ```js
-console.log("string text line 1\n\
-string text line 2");
+console.log(
+  "string text line 1\n\
+string text line 2",
+);
 // "string text line 1
 // string text line 2"
 ```
@@ -136,7 +138,9 @@ string text line 2`);
 ```js
 const five = 5;
 const ten = 10;
-console.log('Fifteen is ' + (five + ten) + ' and not ' + (2 * five + ten) + '.');
+console.log(
+  "Fifteen is " + (five + ten) + " and not " + (2 * five + ten) + ".",
+);
 // "Fifteen is 15 and not 20."
 ```
 
@@ -160,18 +164,23 @@ console.log(`Fifteen is ${five + ten} and not ${2 * five + ten}.`);
 {{jsxref("DateTimeFormat")}} 对象在日期和时间的格式化方面很有用。下面的代码把一个日期格式化为美式英语格式。(不同时区结果不同.)
 
 ```js
-const msPerDay = 24 * 60 * 60 * 1000;
+// July 17, 2014 00:00:00 UTC:
+const july172014 = new Date("2014-07-17");
 
-// July 17, 2014 00:00:00 UTC.
-const july172014 = new Date(msPerDay * (44 * 365 + 11 + 197));//2014-1970=44 年
-//这样创建日期真是醉人。。。还要自己计算天数。。。11 是闰年中多出的天数。。。
-//197 是 6×30+16(7 月的 16 天)+3(3 个大月)-2(2 月少 2 天)
-
-const options = { year: "2-digit", month: "2-digit", day: "2-digit",
-                hour: "2-digit", minute: "2-digit", timeZoneName: "short" };
+const options = {
+  year: "2-digit",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+  timeZoneName: "short",
+};
 const americanDateTime = new Intl.DateTimeFormat("en-US", options).format;
 
-console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
+// 本地时区会根据你的设置而有所不同。
+// 在 CEST（中欧夏令时）中，输出：07/17/14, 02:00 AM GMT+2。
+// 在 PDT（太平洋夏令时）中，输出：07/16/14, 05:00 PM GMT-7。
+console.log(americanDateTime(july172014));
 ```
 
 ### 数字格式化
@@ -179,14 +188,18 @@ console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 {{jsxref("NumberFormat")}} 对象在数字的格式化方面很有用，比如货币数量值。
 
 ```js
-var gasPrice = new Intl.NumberFormat("en-US",
-                        { style: "currency", currency: "USD",
-                          minimumFractionDigits: 3 });
+var gasPrice = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 3,
+});
 
 console.log(gasPrice.format(5.259)); // $5.259
 
-var hanDecimalRMBInChina = new Intl.NumberFormat("zh-CN-u-nu-hanidec",
-                        { style: "currency", currency: "CNY" });
+var hanDecimalRMBInChina = new Intl.NumberFormat("zh-CN-u-nu-hanidec", {
+  style: "currency",
+  currency: "CNY",
+});
 
 console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一，三一四。二五
 ```
@@ -219,4 +232,4 @@ console.log(names.sort(germanDictionary.compare).join(", "));
 
 关于{{jsxref("Intl")}} API 的更多信息，请参考 [Introducing the JavaScript Internationalization API](https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/)。
 
-{{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_expressions")}}

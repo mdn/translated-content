@@ -1,7 +1,6 @@
 ---
 title: forced-colors
 slug: Web/CSS/@media/forced-colors
-translation_of: Web/CSS/@media/forced-colors
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

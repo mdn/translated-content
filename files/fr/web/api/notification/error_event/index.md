@@ -1,16 +1,6 @@
 ---
 title: Notification.onerror
 slug: Web/API/Notification/error_event
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - onerror
-translation_of: Web/API/Notification/onerror
-original_slug: Web/API/notification/onerror
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

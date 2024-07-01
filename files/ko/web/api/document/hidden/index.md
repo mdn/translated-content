@@ -10,7 +10,7 @@ slug: Web/API/Document/hidden
 ## 예제
 
 ```js
-document.addEventListener("visibilitychange", function() {
+document.addEventListener("visibilitychange", function () {
   console.log(document.hidden);
   // 숨김 여부가 변했을 때의 행동
 });

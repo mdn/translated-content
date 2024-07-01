@@ -1,13 +1,9 @@
 ---
 title: copy
 slug: Web/XSLT/Element/copy
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/copy
-original_slug: Web/XSLT/copy
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:copy>` transfert une copie limitée (le nœud et tous les nœuds d'espace de nommage associés) du nœud courant vers le document de sortie. Il ne copie aucun enfant ni attribut du nœud courant.
 

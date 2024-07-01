@@ -1,7 +1,6 @@
 ---
-title: 'Notification: close イベント'
+title: "Notification: close イベント"
 slug: Web/API/Notification/close_event
-original_slug: Web/API/Notification/onclose
 l10n:
   sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
@@ -15,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使うか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('close', (event) => { });
+addEventListener("close", (event) => {});
 
-onclose = (event) => { };
+onclose = (event) => {};
 ```
 
 ## イベント型

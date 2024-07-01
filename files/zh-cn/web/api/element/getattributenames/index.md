@@ -19,8 +19,7 @@ let attributeNames = element.getAttributeNames();
 
 ```js
 // 遍历 elements 的元素
-for(let name of element.getAttributeNames())
-{
+for (let name of element.getAttributeNames()) {
   let value = element.getAttribute(name);
   console.log(name, value);
 }

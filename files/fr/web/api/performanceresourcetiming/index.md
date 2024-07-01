@@ -1,14 +1,6 @@
 ---
 title: PerformanceResourceTiming
 slug: Web/API/PerformanceResourceTiming
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-  - Performance Web
-  - Resource Timing API
-translation_of: Web/API/PerformanceResourceTiming
 ---
 
 {{APIRef("Resource Timing API")}}

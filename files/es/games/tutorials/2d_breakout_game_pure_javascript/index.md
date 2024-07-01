@@ -1,7 +1,6 @@
 ---
 title: Famoso juego 2D usando JavaScript puro
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
-original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro
 ---
 
 {{GamesSidebar}}

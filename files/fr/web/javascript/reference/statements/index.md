@@ -1,12 +1,6 @@
 ---
 title: Instructions
 slug: Web/JavaScript/Reference/Statements
-tags:
-  - JavaScript
-  - Reference
-  - statements
-translation_of: Web/JavaScript/Reference/Statements
-original_slug: Web/JavaScript/Reference/Instructions
 ---
 
 {{jsSidebar("Statements")}}
@@ -100,4 +94,4 @@ Pour une liste alphabétique, voir le volet de navigation situé à gauche sur c
 
 ## Voir aussi
 
-- Le chapitre de cette référence sur les [opérateurs JavaScript](/fr/docs/JavaScript/Reference/Op%C3%A9rateurs).
+- Le chapitre de cette référence sur les [opérateurs JavaScript](/fr/docs/JavaScript/Reference/Opérateurs).

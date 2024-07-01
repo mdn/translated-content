@@ -1,7 +1,6 @@
 ---
 title: Estruturando a web com HTML
 slug: Learn/HTML
-original_slug: Aprender/HTML
 ---
 
 {{LearnSidebar}}

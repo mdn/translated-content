@@ -1,6 +1,8 @@
 ---
-title: CharacterData.nextElementSibling
+title: "CharacterData: nextElementSibling プロパティ"
 slug: Web/API/CharacterData/nextElementSibling
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef("DOM")}}
@@ -15,24 +17,24 @@ slug: Web/API/CharacterData/nextElementSibling
 
 ```html
 TEXT
-<div id="div-01">Here is div-01</div>
+<div id="div-01">これは div-01 です</div>
 TEXT2
-<div id="div-02">Here is div-02</div>
-<pre>Here is the result area</pre>
+<div id="div-02">これは div-02 です</div>
+<pre>こちらは結果領域です</pre>
 ```
 
 ```js
-// Initially, set node to the Text node with `TEXT`
-let node = document.getElementById('div-01').previousSibling;
+// 最初は、ノードに Text ノード `TEXT` を設定します
+let node = document.getElementById("div-01").previousSibling;
 
-let result = 'Next element siblings of TEXT:\n';
+let result = "TEXT の次の兄弟要素:\n";
 
 while (node) {
-  result += node.nodeName + '\n';
-  node = node.nextElementSibling; // The first node is a CharacterData, the others Element objects
+  result += `${node.nodeName}\n`;
+  node = node.nextElementSibling; // 最初のノードが CharacterData で、その他は Element オブジェクトです
 }
 
-document.getElementsByTagName('pre')[0].textContent = result;
+document.querySelector("pre").textContent = result;
 ```
 
 {{EmbedLiveSample("Example", "100%", "230")}}

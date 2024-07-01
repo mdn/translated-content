@@ -1,8 +1,6 @@
 ---
 title: padding-inline-start
 slug: Web/CSS/padding-inline-start
-translation_of: Web/CSS/padding-inline-start
-browser-compat: css.properties.padding-inline-start
 ---
 
 {{CSSRef}}
@@ -17,11 +15,11 @@ La propriété **`padding-inline-start`** définit le décalage avec le début d
 /* Valeurs de longueur */
 /* Type <length>       */
 padding-inline-start: 10px; /* Une longueur absolue */
-padding-inline-start: 1em;  /* Relatif à la taille du texte */
+padding-inline-start: 1em; /* Relatif à la taille du texte */
 
 /* Valeurs de proportions */
 /* Type <percentage>      */
-padding-inline-start: 5%;  /* Relatif à la largeur du bloc englobant */
+padding-inline-start: 5%; /* Relatif à la largeur du bloc englobant */
 
 /* Valeurs globales */
 padding-inline-start: inherit;
@@ -35,7 +33,7 @@ padding-inline-start: unset;
 - [`<length>`](/fr/docs/Web/CSS/length)
   - : La taille de la zone de remplissage exprimée de façon absolue. Les valeurs négatives sont interdites.
 - [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : La taille de la zone de remplissage exprimée de façon relative à la *taille en ligne* (<i lang="en">inline</i> en anglais) du bloc englobant. Les valeurs négatives sont interdites.
+  - : La taille de la zone de remplissage exprimée de façon relative à la _taille en ligne_ (<i lang="en">inline</i> en anglais) du bloc englobant. Les valeurs négatives sont interdites.
 
 ## Description
 
@@ -75,7 +73,7 @@ div {
 .exemple {
   writing-mode: vertical-lr;
   padding-inline-start: 20px;
-  background-color: #C8C800;
+  background-color: #c8c800;
 }
 ```
 

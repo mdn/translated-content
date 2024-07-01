@@ -1,17 +1,9 @@
 ---
 title: Intl.Collator.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
-tags:
-  - Collator
-  - Internationalization
-  - JavaScript
-  - Method
-  - NeedsExample
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
 ---
 
-{{JSRef("Global_Objects", "Collator", "Intl,DateTimeFormat,NumberFormat")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -47,9 +39,7 @@ collator.resolvedOptions()
 
 ## Спецификации
 
-| Спецификация                                                                                                     | Статус                           | Комментарии              |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------ |
-| {{SpecName('ES Int 1.0', '#sec-10.3.3', 'Intl.Collator.prototype.resolvedOptions')}} | {{Spec2('ES Int 1.0')}} | Изначальное определение. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext/bindAttribLocation
 
 {{APIRef("WebGL")}}
 
-WebGL API 的 WebGLRenderingContext.bindAttribLocation（）方法将通用顶点索引绑定到属性变量。
+WebGL API 的 **`WebGLRenderingContext.bindAttribLocation()`** 方法将通用顶点索引绑定到属性变量。
 
 ## 语法
 
@@ -17,14 +17,14 @@ void gl.bindAttribLocation(program, index, name);
 
 - `program`
   - : 要绑定的{{domxref("WebGLProgram")}} 对象。
-- index
+- `index`
   - : {{domxref("GLuint")}} 指定要绑定的通用顶点的索引。
-- name
+- `name`
   - : {{domxref("DOMString")}}指定要绑定到通用顶点索引的变量的名称。该名称不能以“webgl\_”或“\_webgl\_”开头，因为这些名称将保留供 WebGL 使用。
 
 ### 返回值
 
-None.
+无。
 
 ## 示例
 
@@ -40,7 +40,7 @@ gl.bindAttribLocation(program, colorLocation, 'vColor');
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.getActiveAttrib()")}}
 - {{domxref("WebGLRenderingContext.getAttribLocation()")}}

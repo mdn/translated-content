@@ -13,9 +13,9 @@ The **`X-Forwarded-Host`** (XFH) 是一个事实上的标准首部，用来确�
 
 HTTP 协议中的 {{HTTPHeader("Forwarded")}} 是这个消息首部的标准化版本。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | no                             |
 
 ## 语法
 
@@ -38,7 +38,7 @@ X-Forwarded-Host: id42.example-cdn.com
 
 不属于任何一份既有规范。这个消息首部的标准版本是 {{HTTPHeader("Forwarded")}}.
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Host")}}
 - {{HTTPHeader("Forwarded")}}

@@ -49,12 +49,10 @@ Escute esses eventos usando {{domxref("EventTarget.addEventListener", "addEventL
   - : Enviado par a instancia do `RTCIceTransport` quando o valor da propriedade {{domxref("RTCIceTransport.state", "state")}} foi alterada, indicando que o processo de recolhimento ICE mudou de estado.
     Também esta disponível através da propriedade _event handler_ {{domxref("RTCIceTransport.onstatechange", "onstatechange")}}.
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                | Status                           | Comentário         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('WebRTC 1.0', '#dom-rtcicetransport', 'RTCIceTransport')}} | {{Spec2('WebRTC 1.0')}} | Definição initial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.RTCIceTransport")}}
+{{Compat}}

@@ -5,25 +5,76 @@ slug: Web/HTML/Global_attributes/title
 
 {{HTMLSidebar("Global_attributes")}}
 
-**title** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 包含了表示咨询信息文本，和它属于的元素相关。这个信息通常存在，但绝不必要，作为提示信息展示给用户。一些典型用例：
+[全局属性](/zh-CN/docs/Web/HTML/Global_attributes) **`title`** 包含代表与它所属的元素有关的咨询信息的文本。
 
-- 链接：被链接文档的标题或描述
-- 媒体元素，例如图像：描述或关联信息
-- 段落：脚注或者相关的评论
-- 引用：作者信息，以及其他
+{{EmbedInteractiveExample("pages/tabbed/attribute-title.html","tabbed-shorter")}}
 
-如果省略了这个属性，就意味着这个元素的最近祖先的标题仍然是相关的（并且可以用作元素的提示信息）。如果这个属性设为空字符串，它就明确意味着，它的最近祖先的标题是不相关的（并且不应用于这个元素的提示信息）。
+`title` 属性的主要用途是为辅助技术标注 {{HTMLElement("iframe")}} 元素。
 
-额外的语义可以附加到 {{ HTMLElement("link") }}，{{ HTMLElement("abbr") }}，{{ HTMLElement("input") }} 和 { HTMLElement("menuitem") }} 元素的 **title** 属性。
+`title` 属性也可以用来标注[数据表格](/zh-CN/docs/Web/HTML/Element/table)中的控件。
 
-**title** 属性可以包含多行。每个插入的 `U+000A LINE FEED` (`LF`) 代表一个换行。有一些需要注意的东西，因为这意味着：
+当 `title` 属性被添加到 [`<link rel="styleheet">`](/zh-CN/docs/Web/HTML/Element/link) 时，将创建一个替代的样式表。当用 `<link rel="alternate">` 定义一个备用样式表时，该属性是必需的，并且必须设置为一个非空字符串。
+
+如果包含在 {{htmlelement('abbr')}} 起始标签上，`title` 必须是缩写或首字母的完整扩展。尽可能不要使用 `title`，而是在第一次使用时以纯文本提供缩写或缩略语的扩展，使用 `<abbr>` 来标记缩写。这使所有的用户知道这个缩写或简称是什么名字或术语，同时为用户代理提供一个提示，告诉它们如何宣告这个内容。
+
+虽然 `title` 可以用来为 {{HTMLElement("input")}} 元素提供一个编程关联的标签，但这并不是好的做法。请使用 {{HTMLElement("label")}} 代替。
+
+## 多行标题
+
+`title` 属性可以包含多行。每个 `U+000A LINE FEED`（`LF`）符号代表一个换行。有一些需要注意的东西，因为这意味着下面的渲染要跨越两行：
+
+### HTML
 
 ```html
-<p>Newlines in title should be taken into account,like this <abbr title="This is a
-multiline title">example</abbr>.</p>
+<p>
+  需要考虑 <code>title</code> 中的换行，像
+  <span
+    title="这是
+多行标题"
+    >这个示例</span
+  >。
+</p>
 ```
 
-这个示例定义了两行的标题。
+### 结果
+
+{{EmbedLiveSample('多行标题')}}
+
+## Title 属性继承
+
+如果一个元素没有 `title` 属性，那么它就从它的父节点继承，而父节点又可以从它的父节点继承，以此类推。
+
+如果这个属性被设置为空字符串，这意味着它的祖先的 `title` 是不相关的，不应该被用于这个元素的工具提示（tooltip）中。
+
+### HTML
+
+```html
+<div title="CoolTip">
+  <p>鼠标在这里停留会显示“CoolTip”。</p>
+  <p title="">鼠标在这里停留不会显示任何东西。</p>
+</div>
+```
+
+### 结果
+
+{{EmbedLiveSample('Title 属性继承')}}
+
+## 无障碍考虑
+
+在以下情况下使用 `title` 属性会引发问题：
+
+- 使用触摸屏设备的人员
+- 使用键盘导航的人员
+- 使用屏幕阅读器或放大镜等辅助技术导航的人员
+- 出现精细运动控制障碍的人员
+- 有认知问题的人员
+
+这是由于浏览器的支持不一致，再加上对浏览器渲染的页面进行了额外的辅助技术解析。如果需要工具提示效果，最好是[使用可以用上述浏览方法访问的更方便的技术](https://inclusive-components.design/tooltips-toggletips/)。
+
+- [3.2.5.1. title 属性 | W3C HTML 5.2: 3. HTML 文档的语义、结构和 API](https://html.spec.whatwg.org/multipage/dom.html#the-title-attribute)
+- [使用 HTML title 属性——更新版 | The Paciello Group](https://www.tpgi.com/using-the-html-title-attribute-updated/)
+- [Tooltips & Toggletips - Inclusive Components](https://inclusive-components.design/tooltips-toggletips/)
+- [title 属性的考验与磨难 - 24 Accessibility](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/)
 
 ## 规范
 
@@ -33,7 +84,7 @@ multiline title">example</abbr>.</p>
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
-- 反映这个属性的 {{domxref("HTMLElement.title")}}
+- 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+- 反映这个属性的 {{domxref("HTMLElement.title")}}。

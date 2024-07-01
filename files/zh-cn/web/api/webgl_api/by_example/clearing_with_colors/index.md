@@ -23,22 +23,21 @@ slug: Web/API/WebGL_API/By_example/Clearing_with_colors
 <p>A very simple WebGL program that shows some color.</p>
 <!-- Text within a canvas element is displayed
     only if canvas is not supported. -->
-<canvas>Your browser does not seem to support
-    HTML5 canvas.</canvas>
+<canvas>Your browser does not seem to support HTML5 canvas.</canvas>
 ```
 
 ```css
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  display : block;
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  display: block;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 ```
 
@@ -48,40 +47,42 @@ canvas {
 // and to not mess up the global scope. We are giving the event
 // handler a name (setupWebGL) so that we can refer to the
 // function object within the function itself.
-window.addEventListener("load", function setupWebGL (evt) {
-  "use strict"
+window.addEventListener(
+  "load",
+  function setupWebGL(evt) {
+    "use strict";
 
-  // Cleaning after ourselves. The event handler removes
-  // itself, because it only needs to run once.
-  window.removeEventListener(evt.type, setupWebGL, false);
+    // Cleaning after ourselves. The event handler removes
+    // itself, because it only needs to run once.
+    window.removeEventListener(evt.type, setupWebGL, false);
 
-  // References to the document elements.
-  var paragraph = document.querySelector("p"),
-    canvas = document.querySelector("canvas");
+    // References to the document elements.
+    var paragraph = document.querySelector("p"),
+      canvas = document.querySelector("canvas");
 
-  // Getting the WebGL rendering context.
-  var gl = canvas.getContext("webgl")
-    || canvas.getContext("experimental-webgl");
+    // Getting the WebGL rendering context.
+    var gl =
+      canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
 
-  // If failed, inform user of failure. Otherwise, initialize
-  // the drawing buffer (the viewport) and clear the context
-  // with a solid color.
-  if (!gl) {
-    paragraph.innerHTML = "Failed to get WebGL context. "
-      + "Your browser or device may not support WebGL.";
-    return;
-  }
-  paragraph.innerHTML =
-    "Congratulations! Your browser supports WebGL. ";
-  gl.viewport(0, 0,
-    gl.drawingBufferWidth, gl.drawingBufferHeight);
-  // Set the clear color to darkish green.
-  gl.clearColor(0.0, 0.5, 0.0, 1.0);
-  // Clear the context with the newly set color. This is
-  // the function call that actually does the drawing.
-  gl.clear(gl.COLOR_BUFFER_BIT);
-
-}, false);
+    // If failed, inform user of failure. Otherwise, initialize
+    // the drawing buffer (the viewport) and clear the context
+    // with a solid color.
+    if (!gl) {
+      paragraph.innerHTML =
+        "Failed to get WebGL context. " +
+        "Your browser or device may not support WebGL.";
+      return;
+    }
+    paragraph.innerHTML = "Congratulations! Your browser supports WebGL. ";
+    gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+    // Set the clear color to darkish green.
+    gl.clearColor(0.0, 0.5, 0.0, 1.0);
+    // Clear the context with the newly set color. This is
+    // the function call that actually does the drawing.
+    gl.clear(gl.COLOR_BUFFER_BIT);
+  },
+  false,
+);
 ```
 
 这个例子的代码可以在 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/clearing-with-colors) 上下载。

@@ -1,14 +1,6 @@
 ---
-title: '<marquee> : l''élément de fronton (obsolète)'
+title: "<marquee> : l'élément de fronton (obsolète)"
 slug: Web/HTML/Element/marquee
-tags:
-  - Element
-  - HTML
-  - Non-standard
-  - Obsolete
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/marquee
 ---
 
 {{HTMLSidebar}}{{non-standard_header}}{{deprecated_header}}
@@ -17,36 +9,36 @@ L'élément HTML **`<marquee>`** est utilisé pour insérer une zone de texte d�
 
 ## Attributs
 
-- {{htmlattrdef("behavior")}}
+- `behavior`
   - : Définit comment le texte defile à l'intérieur du `<marquee>`. Les valeurs possibles sont `scroll`, `slide` et `alternate`. Si aucune valeur n'est spécifiée, la valeur par défaut est `scroll`.
-- {{htmlattrdef("bgcolor")}}
+- `bgcolor`
   - : Définit la couleur de fond en utilisant le nom de la couleur ou son code hexadécimal.
-- {{htmlattrdef("direction")}}
+- `direction`
   - : Définit la direction du défilement dans le `<marquee>`. Les valeurs possibles sont `left`, `right`, `up` et `down`. SI aucune valeur n'est spécifiée, la valeur par défaut est `left`.
-- {{htmlattrdef("height")}}
+- `height`
   - : Définit la hauteur en pixels ou en pourcentage.
-- {{htmlattrdef("hspace")}}
+- `hspace`
   - : Définit la marge horizontale.
-- {{htmlattrdef("loop")}}
+- `loop`
   - : Définit le nombre de fois que le marquee va faire défiler le texte. Si aucune valeur n'est spécifiée, la valeur par défaut est `-1`, ce qui signifie que le marquee va défiler indéfiniment.
-- {{htmlattrdef("scrollamount")}}
+- `scrollamount`
   - : Définit la quantité de défilement de chaque défilement en pixels. La valeur par défaut est `6`.
-- {{htmlattrdef("scrolldelay")}}
-  - : Définit l'intervalle entre chaque défilement en millisecondes. La valeur par défaut est `85`. Notez que toute valeur inférieure à 60 sera ignorée et 60 sera utilisé à la place, à moins que` truespeed `ne soit spécifié.
-- {{htmlattrdef("truespeed")}}
+- `scrolldelay`
+  - : Définit l'intervalle entre chaque défilement en millisecondes. La valeur par défaut est `85`. Notez que toute valeur inférieure à 60 sera ignorée et 60 sera utilisé à la place, à moins que`truespeed`ne soit spécifié.
+- `truespeed`
   - : Par défaut, les valeurs de `scrolldelay` inférieures à 60 sont ignorées. Si `truespeed` est présent, ces valeurs ne seront pas ignorées.
-- {{htmlattrdef("vspace")}}
+- `vspace`
   - : Définit la marge verticale en pixel ou en pourcentage.
-- {{htmlattrdef("width")}}
+- `width`
   - : Définit la largeur en pixel en ou pourcentage.
 
-## Gestionnaire d’évènements
+## Gestionnaire d'évènements
 
-- {{htmlattrdef("onbounce")}}
+- `onbounce`
   - : Se déclenche quand le `<marquee>` arrive à la fin de son défilement. Il peut seulement se déclencher quand `behavior` est mis à `alternate`.
-- {{htmlattrdef("onfinish")}}
+- `onfinish`
   - : Se déclenche quand le `<marquee>` arrive à la fin de tous ses défilements tels que définis par l'attribut `loop`. Il peut seulement se déclencher quand le nombre de défilements est supérieur à 0.
-- {{htmlattrdef("onstart")}}
+- `onstart`
   - : Se déclenche quand le `<marquee>` commence à défiler.
 
 ## Méthodes
@@ -65,10 +57,13 @@ L'élément HTML **`<marquee>`** est utilisé pour insérer une zone de texte d�
 
 <marquee direction="up">Ce texte va défiler de bas en haut</marquee>
 
-<marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
-  <marquee behavior="alternate">
-    Ce texte va rebondir
-  </marquee>
+<marquee
+  direction="down"
+  width="250"
+  height="200"
+  behavior="alternate"
+  style="border:solid">
+  <marquee behavior="alternate">Ce texte va rebondir</marquee>
 </marquee>
 ```
 

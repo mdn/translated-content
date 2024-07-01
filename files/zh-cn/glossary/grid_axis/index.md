@@ -1,26 +1,28 @@
 ---
-title: Grid Axis
+title: 网格轴
 slug: Glossary/Grid_Axis
+l10n:
+  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
-Grid 布局是一种二维布局方法，能够在行和列中布置内容。因此在任何网格中都有两个轴，横轴（即行轴，内联）和纵轴（即列轴，块）。
+{{GlossarySidebar}}
 
-沿着这些轴，可以使用[盒模型对齐规范](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)中定义的属性对项目进行行对齐和列对齐。
+CSS 网格布局是一种二维布局方法，能够按*行*和*列*对内容布局。因此在任何网格中都有两个轴——*块（列）轴*和*行轴*。
 
-在 CSS 中，纵轴是放置文本时用的轴。如果你有两个段落，它们从右到左，从上到下书写。在纵轴上，它们一个被放置在另一个下面。
+沿着这些轴可以使用[盒对齐规范](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)中定义的属性对元素按块向轴或行向轴对齐。
 
-![Diagram showing the block axis in CSS Grid Layout.](7_block_axis.png)
+在 CSS 中，*块（列）轴*用于对文本区块布局。如果你有两个段落，用的从右到左、从上到下的语言，那么在块向轴上两个段落一个排在另一个下面。
 
-横轴与纵轴交叉，方向是沿着常规文本流动的。这是我们在 Grid 布局中的行。
+![CSS 网格布局中的块轴图示](7_block_axis.png)
 
-![Diagram showing the inline axis in CSS Grid Layout.](7_inline_axis.png)
+*行轴*沿与块向轴垂直的方向延伸，常规文本沿其方向流动。以下是我们在网格布局中的行。
 
-这些轴的物理方向可以根据文档的[写入模式](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)而改变。
+![CSS 网格布局中的行轴图示](7_inline_axis.png)
 
-## 了解更多
+这些轴的实体方向可根据文档的[书写模式](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)改变。
 
-### 扩展阅读
+## 参见
 
-- CSS Grid Layout Guide: _[Grid 布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
-- CSS Grid Layout Guide: _[Box alignment in Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- CSS Grid Layout Guide: _[Grids, logical values and writing modes](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)_
+- CSS 网格布局指南：_[网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
+- CSS 网格布局指南：_[网格布局中的盒对齐](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- CSS 网格布局指南：_[网格、逻辑值和书写模式](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)_

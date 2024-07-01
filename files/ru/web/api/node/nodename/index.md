@@ -1,7 +1,6 @@
 ---
 title: Node.nodeName
 slug: Web/API/Node/nodeName
-translation_of: Web/API/Node/nodeName
 ---
 
 {{APIRef("DOM")}}
@@ -10,20 +9,20 @@ translation_of: Web/API/Node/nodeName
 
 Возвращаемое значение для различных типов узлов:
 
-| Интерфейс                                        | значение nodeName                                                 |
-| ------------------------------------------------ | ----------------------------------------------------------------- |
-| {{domxref("Attr")}}                         | Значение {{domxref("Attr.name")}}                         |
-| {{domxref("CDATASection")}}             | `"#cdata-section"`                                                |
-| {{domxref("Comment")}}                     | `"#comment"`                                                      |
-| {{domxref("Document")}}                 | `"#document"`                                                     |
-| {{domxref("DocumentFragment")}}         | `"#document-fragment"`                                            |
-| {{domxref("DocumentType")}}             | Значение {{domxref("DocumentType.name")}}             |
-| {{domxref("Element")}}                     | Значение {{domxref("Element.tagName")}}                 |
-| {{domxref("Entity")}}                     | имя сущности                                                      |
-| {{domxref("EntityReference")}}         | Имя сущности ссылки                                               |
-| {{domxref("Notation")}}                 | Название обозначения                                              |
+| Интерфейс                            | значение nodeName                                    |
+| ------------------------------------ | ---------------------------------------------------- |
+| {{domxref("Attr")}}                  | Значение {{domxref("Attr.name")}}                    |
+| {{domxref("CDATASection")}}          | `"#cdata-section"`                                   |
+| {{domxref("Comment")}}               | `"#comment"`                                         |
+| {{domxref("Document")}}              | `"#document"`                                        |
+| {{domxref("DocumentFragment")}}      | `"#document-fragment"`                               |
+| {{domxref("DocumentType")}}          | Значение {{domxref("DocumentType.name")}}            |
+| {{domxref("Element")}}               | Значение {{domxref("Element.tagName")}}              |
+| {{domxref("Entity")}}                | имя сущности                                         |
+| {{domxref("EntityReference")}}       | Имя сущности ссылки                                  |
+| {{domxref("Notation")}}              | Название обозначения                                 |
 | {{domxref("ProcessingInstruction")}} | Значение {{domxref("ProcessingInstruction.target")}} |
-| {{domxref("Text")}}                         | `"#text"`                                                         |
+| {{domxref("Text")}}                  | `"#text"`                                            |
 
 ## Синтаксис
 
@@ -37,7 +36,7 @@ var str = node.nodeName;
 
 ```html
 <div id="d1">hello world</div>
-<input type="text" id="t"/>
+<input type="text" id="t" />
 ```
 
 и следующий скрипт:
@@ -51,10 +50,12 @@ text_field.value = div1.nodeName;
 
 В XHTML (или любых других форматов XML), значение `text_field` будет прочитано как "div". Тем не менее, в HTML, значение `text_field` будет прочитано как "DIV", потому что `nodeName` и `tagName` возвращают в верхнем регистре элементы HTML в DOM помеченном как HTML документ. Узнайте больше [деталей о чувствительности регистра nodeName в различных браузерах.](http://ejohn.org/blog/nodename-case-sensitivity/)
 
-Обратите внимание, что свойство [`tagName`](/en-US/docs/DOM/element.tagName) можно было бы использовать вместо него, поскольку `nodeName` имеет тоже значение что и `tagName` для элемента. Однако имейте в виду, что `nodeName` будет возвращать `#text` для текстово узла, в то время как `tagName` будет возвращать `undefined`.
+Обратите внимание, что свойство [`tagName`](/ru/docs/DOM/element.tagName) можно было бы использовать вместо него, поскольку `nodeName` имеет тоже значение что и `tagName` для элемента. Однако имейте в виду, что `nodeName` будет возвращать `#text` для текстово узла, в то время как `tagName` будет возвращать `undefined`.
 
 ## Спецификации
 
-- [DOM Level 2 Core: Node.nodeName](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D095)
-- [DOM Level 3 Core: Node.nodeName](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-F68D095)
-- [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

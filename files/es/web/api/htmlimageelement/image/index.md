@@ -15,14 +15,14 @@ Ejemplo:
 
 ```js
 var myImage = new Image(100, 200);
-myImage.src = 'picture.jpg';
+myImage.src = "picture.jpg";
 console.log(myImage);
 ```
 
 Resultado:
 
 ```html
-<img width="100" height="200" src="picture.jpg">
+<img width="100" height="200" src="picture.jpg" />
 ```
 
 | Specification                                                                                                                          | Status         | Comment                                                                                                                                                                                                                                                                                                                                         |

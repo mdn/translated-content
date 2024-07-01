@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.createLinearGradient()
 slug: Web/API/CanvasRenderingContext2D/createLinearGradient
-translation_of: Web/API/CanvasRenderingContext2D/createLinearGradient
 ---
 
 {{APIRef}}
@@ -51,12 +50,12 @@ Ceci est seulement un simple fragment de code qui utilise la méthode `createLin
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 var gradient = ctx.createLinearGradient(0, 0, 200, 0);
-gradient.addColorStop(0, 'green');
-gradient.addColorStop(1, 'white');
+gradient.addColorStop(0, "green");
+gradient.addColorStop(1, "white");
 ctx.fillStyle = gradient;
 ctx.fillRect(10, 10, 200, 100);
 ```
@@ -76,7 +75,8 @@ var gradient = ctx.createLinearGradient(0,0,200,0);
 gradient.addColorStop(0,"green");
 gradient.addColorStop(1,"white");
 ctx.fillStyle = gradient;
-ctx.fillRect(10,10,200,100);</textarea>
+ctx.fillRect(10,10,200,100);</textarea
+>
 ```
 
 ```js hidden
@@ -92,14 +92,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

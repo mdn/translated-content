@@ -1,16 +1,6 @@
 ---
 title: Set.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
-original_slug: Web/JavaScript/Reference/Objets_globaux/Set/@@iterator
 ---
 
 {{JSRef}}
@@ -22,7 +12,7 @@ La valeur initiale de la propriété **`@@iterator`** est le même objet fonctio
 ## Syntaxe
 
 ```js
-monSet[Symbol.iterator]
+monSet[Symbol.iterator];
 ```
 
 ### Valeur de retour
@@ -49,7 +39,7 @@ console.log(setIter.next().value); // {}
 ### Utiliser `[@@iterator]()` avec une boucle `for..of`
 
 ```js
-const monSet= new Set();
+const monSet = new Set();
 monSet.add("0");
 monSet.add(1);
 monSet.add({});

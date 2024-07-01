@@ -1,7 +1,6 @@
 ---
 title: Worker.postMessage()
 slug: Web/API/Worker/postMessage
-translation_of: Web/API/Worker/postMessage
 ---
 
 {{ apiref("Worker") }}
@@ -35,17 +34,17 @@ Vide.
 L'extrait de code suivant montre la création d'un objet {{domxref("Worker")}} en utilisant le constructeur {{domxref("Worker.Worker", "Worker()")}}. Quand les deux champs de formulaire (`fisrt` et `second`) ont été changés, les évènements [`change`](/fr/docs/Web/API/HTMLElement/change_event) invoquent `postMessage()` pour envoyer la valeur des deux entrées au _worker_ courant.
 
 ```js
-var myWorker = new Worker('worker.js');
+var myWorker = new Worker("worker.js");
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+first.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 
-second.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+second.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 ```
 
 Pour l'exemple en entier, voir [Basic dedicated worder example](https://github.com/mdn/simple-web-worker) ([démonstration](http://mdn.github.io/simple-web-worker/)).
@@ -56,66 +55,66 @@ Pour l'exemple en entier, voir [Basic dedicated worder example](https://github.c
 
 Cette exemple montre une extension pour Firefox qui transfert un `ArrarBuffer` depuis le _thread_ principal vers le `ChromeWorker`, et le `ChromeWorker` répond au le thread principal.
 
-#### Main thread code:
+#### Main thread code
 
 ```js
-var myWorker = new ChromeWorker(self.path + 'myWorker.js');
+var myWorker = new ChromeWorker(self.path + "myWorker.js");
 
 function handleMessageFromWorker(msg) {
-    console.log('incoming message from worker, msg:', msg);
-    switch (msg.data.aTopic) {
-        case 'do_sendMainArrBuff':
-            sendMainArrBuff(msg.data.aBuf)
-            break;
-        default:
-            throw 'no aTopic on incoming message to ChromeWorker';
-    }
+  console.log("incoming message from worker, msg:", msg);
+  switch (msg.data.aTopic) {
+    case "do_sendMainArrBuff":
+      sendMainArrBuff(msg.data.aBuf);
+      break;
+    default:
+      throw "no aTopic on incoming message to ChromeWorker";
+  }
 }
 
-myWorker.addEventListener('message', handleMessageFromWorker);
+myWorker.addEventListener("message", handleMessageFromWorker);
 
 // Ok lets create the buffer and send it
 var arrBuf = new ArrayBuffer(8);
-console.info('arrBuf.byteLength pre transfer:', arrBuf.byteLength);
+console.info("arrBuf.byteLength pre transfer:", arrBuf.byteLength);
 
 myWorker.postMessage(
-    {
-        aTopic: 'do_sendWorkerArrBuff',
-        aBuf: arrBuf // The array buffer that we passed to the transferrable section 3 lines below
-    },
-    [
-        arrBuf // The array buffer we created 9 lines above
-    ]
+  {
+    aTopic: "do_sendWorkerArrBuff",
+    aBuf: arrBuf, // The array buffer that we passed to the transferrable section 3 lines below
+  },
+  [
+    arrBuf, // The array buffer we created 9 lines above
+  ],
 );
 
-console.info('arrBuf.byteLength post transfer:', arrBuf.byteLength);
+console.info("arrBuf.byteLength post transfer:", arrBuf.byteLength);
 ```
 
 #### Worker code
 
 ```js
 self.onmessage = function (msg) {
-    switch (msg.data.aTopic) {
-        case 'do_sendWorkerArrBuff':
-                sendWorkerArrBuff(msg.data.aBuf)
-            break;
-        default:
-            throw 'no aTopic on incoming message to ChromeWorker';
-    }
-}
+  switch (msg.data.aTopic) {
+    case "do_sendWorkerArrBuff":
+      sendWorkerArrBuff(msg.data.aBuf);
+      break;
+    default:
+      throw "no aTopic on incoming message to ChromeWorker";
+  }
+};
 
 function sendWorkerArrBuff(aBuf) {
-    console.info('from worker, PRE send back aBuf.byteLength:', aBuf.byteLength);
+  console.info("from worker, PRE send back aBuf.byteLength:", aBuf.byteLength);
 
-    self.postMessage({aTopic:'do_sendMainArrBuff', aBuf:aBuf}, [aBuf]);
+  self.postMessage({ aTopic: "do_sendMainArrBuff", aBuf: aBuf }, [aBuf]);
 
-    console.info('from worker, POST send back aBuf.byteLength:', aBuf.byteLength);
+  console.info("from worker, POST send back aBuf.byteLength:", aBuf.byteLength);
 }
 ```
 
 #### Output logged
 
-```html
+```plain
 arrBuf.byteLength pre transfer: 8                              bootstrap.js:40
 arrBuf.byteLength post transfer: 0                             bootstrap.js:42
 

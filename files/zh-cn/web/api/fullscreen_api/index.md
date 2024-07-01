@@ -27,7 +27,7 @@ slug: Web/API/Fullscreen_API
 ### Element 中的方法
 
 - {{DOMxRef("Element.requestFullscreen()")}}
-  - : 请求浏览器（user agent）将特定元素（甚至延伸到它的后代元素）置为全屏模式，隐去屏幕上的浏览器所有 UI 元素，以及其它应用。返回一个 {{jsxref("Promise")}}，并会在全屏模式被激活的时候变成 resolved 状态。
+  - : 请求浏览器（user agent）将特定元素（甚至延伸到它的后代元素）置为全屏模式，隐去屏幕上的浏览器所有 UI 元素，以及其他应用。返回一个 {{jsxref("Promise")}}，并会在全屏模式被激活的时候变成 resolved 状态。
 
 ## 属性
 
@@ -104,11 +104,15 @@ Fullscreen API 定义了两个事件，可用于检测全屏模式的打开和�
 当页面加载时，这段代码会运行，设置一个事件监听器以监听 <kbd>Enter</kbd> 键。
 
 ```js
-document.addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keydown",
+  function (e) {
+    if (e.keyCode == 13) {
+      toggleFullScreen();
+    }
+  },
+  false,
+);
 ```
 
 ### 切换全屏模式
@@ -118,7 +122,7 @@ document.addEventListener("keydown", function(e) {
 ```js
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
+    document.documentElement.requestFullscreen();
   } else {
     if (document.exitFullscreen) {
       document.exitFullscreen();
@@ -147,4 +151,4 @@ function toggleFullScreen() {
 - {{ domxref("Document.fullscreen") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }}, {{cssxref("::backdrop")}}
-- {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen)

@@ -24,7 +24,7 @@ newNode = textNode.splitText(offset)
 
 ### 返回值
 
-返回一个新创建的 {{domxref("Text")}} 节点，该节点包含了 the text after the specified offset point.
+返回一个新创建的 {{domxref("Text")}} 节点，该节点包含了指定偏移量之后的文本。
 
 ### 异常
 
@@ -40,13 +40,13 @@ newNode = textNode.splitText(offset)
 ### HTML
 
 ```html
-  <p id="p">foobar</p>
+<p id="p">foobar</p>
 ```
 
 ### JavaScript
 
 ```js
-const  p = document.getElementById('p');
+const p = document.getElementById("p");
 
 // 将 <p> 的内容读取为一个文本节点
 const foobar = p.firstChild;
@@ -55,8 +55,8 @@ const foobar = p.firstChild;
 const bar = foobar.splitText(3);
 
 // 创建一个包含了内容为 ' new content ' 的文本节点的 <u> 元素
-const u = document.createElement('u');
-u.appendChild(document.createTextNode(' new content '));
+const u = document.createElement("u");
+u.appendChild(document.createTextNode(" new content "));
 
 // 将 <u> 元素插入到后一个文本节点 'bar' 的前面
 p.insertBefore(u, bar);
@@ -78,5 +78,5 @@ p.insertBefore(u, bar);
 
 ## 参见
 
-- The {{domxref("Text")}} interface it belongs to.
-- The opposite method: {{domxref("Node.normalize")}}.
+- 所属的接口：{{domxref("Text")}}。
+- 相反的方法：{{domxref("Node.normalize")}}。

@@ -1,18 +1,6 @@
 ---
 title: Qu'est-ce qui n'a pas fonctionné ? Déboguer du code JavaScript
 slug: Learn/JavaScript/First_steps/What_went_wrong
-tags:
-  - Apprentissage
-  - Article
-  - Codage
-  - Débutant
-  - Erreur
-  - JavaScript
-  - Tutoriel
-  - console.log
-  - débogage
-  - outils de développement
-translation_of: Learn/JavaScript/First_steps/What_went_wrong
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
@@ -56,9 +44,9 @@ Pour commencer, revenons à notre jeu de devinettes numériques — sauf que cet
 1. Pour commencer, ouvrez la copie locale avec votre éditeur de texte favoris.
 2. Essayez de lancer le jeu — vous remarquerez que quand vous pressez le bouton
 
-    <kbd>Submit guess</kbd>
+   <kbd>Submit guess</kbd>
 
-    , cela ne fonctionne pas!
+   , cela ne fonctionne pas!
 
 > **Note :** Votre propre version de l'exemple de jeu ne fonctionne pas, vous pourriez vouloir la corriger ! Il nous semble plus efficace que vous travailliez sur notre version boguée, afin que vous puissiez apprendre les techniques que nous enseignons ici. Ensuite, vous pouvez revenir en arrière et essayer de réparer votre exemple.
 
@@ -71,17 +59,17 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
 1. Allez à l'onglet dans lequel est affiché `number-game-errors.html`, et ouvrez la console JavaScript. Vous devriez voir un message d'erreur dans les lignes qui suivent&nbsp;: ![](not-a-function.png)
 2. C'est une erreur très facile à trouver, et le navigateur vous fournit quelques indices pour vous en sortir (la copie d'écran ci‑dessus provient de Firefox, mais les autres navigateurs donnent des indications semblables). De gauche à droite, nous avons :
 
-    - Une croix rouge indiquant que c'est une erreur.
-    - Un message d'erreur précisant ce qui ne va pas : "TypeError: guessSubmit.addeventListener is not a function" ("Type d'erreur&nbsp;: guessSubmit.addeventListener n'est pas une fonction")
-    - Un lien "Learn More" ("En savoir plus") pointant sur une page MDN explicitant ce que l'erreur signifie avec pléthore de détails.
-    - Le nom du fichier JavaScript, lié à l'onglet Debugger de l'outil de développement. Si vous suivez le lien, vous verrez exactement la ligne dans laquelle l'erreur est mise en évidence.
-    - Le numéro de la ligne où se situe l'erreur, et le rang du caractère dans cette ligne où l'erreur a été repérée pour la première fois. Dans notre cas, il s'agit de la ligne 86, caractère 3.
+   - Une croix rouge indiquant que c'est une erreur.
+   - Un message d'erreur précisant ce qui ne va pas : "TypeError: guessSubmit.addeventListener is not a function" ("Type d'erreur&nbsp;: guessSubmit.addeventListener n'est pas une fonction")
+   - Un lien "Learn More" ("En savoir plus") pointant sur une page MDN explicitant ce que l'erreur signifie avec pléthore de détails.
+   - Le nom du fichier JavaScript, lié à l'onglet Debugger de l'outil de développement. Si vous suivez le lien, vous verrez exactement la ligne dans laquelle l'erreur est mise en évidence.
+   - Le numéro de la ligne où se situe l'erreur, et le rang du caractère dans cette ligne où l'erreur a été repérée pour la première fois. Dans notre cas, il s'agit de la ligne 86, caractère 3.
 
 3. En examinant la ligne 86 dans l'éditeur de code, nous voyons :
 
-    ```js
-    guessSubmit.addeventListener('click', checkGuess);
-    ```
+   ```js
+   guessSubmit.addeventListener("click", checkGuess);
+   ```
 
 4. Le message d'erreur dit "guessSubmit.addeventListener n'est pas une fonction", donc nous avons probablement mal orthographié quelque chose. Si vous n'êtes pas sûr de la bonne orthographe d'un élément syntaxique, il est fréquemment opportun de regarder dans MDN. Actuellement, la meilleure façon d'opérer consiste à faire une recherche pour "mdn _nom-de-fonctionnalité_" avec votre moteur de recherche préféré. Voici un raccourci pour gagner un peu de temps dans le cas présent : [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener).
 5. Donc, en regardant cette page, il apparaît que nous avions mal orthographié le nom de la fonction ! Souvenez-vous que JavaScript est sensible à la casse, et que la moindre différence dans l'orthographe ou la casse déclenchera une erreur. Remplacer `addeventListener` par `addEventListener` corrigera cela. Faisons‑le maintenant.
@@ -94,36 +82,36 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
 2. Maintenant si vous entrez une supposition et pressez le bouton de soumission, vous constaterez ... une autre erreur&nbsp;! ![](variable-is-null.png)
 3. Cette fois‑ci, l'erreur rapportée est "TypeError: lowOrHi is null", à la ligne 78.
 
-    > **Note :** [`Null`](/fr/docs/Glossary/Null) est une valeur spéciale signifiant "rien" ou "aucune valeur". Or `lowOrHi` a été déclaré et initialisé, mais sans valeur signifiante — il n'a ni type ni valeur.
+   > **Note :** [`Null`](/fr/docs/Glossary/Null) est une valeur spéciale signifiant "rien" ou "aucune valeur". Or `lowOrHi` a été déclaré et initialisé, mais sans valeur signifiante — il n'a ni type ni valeur.
 
-    > **Note :** Cette erreur n'apparaît pas au moment du chargement de la page car elle survient à l'intérieur d'une fonction (dans `checkGuess() { ... }`). Comme vous l'apprendrez de manière plus précise plus loin dans l'article à propos des fonctions, le code dans les fonctions s'exécute dans une instance séparée du code en dehors des fonctions. Dans notre cas, le code n'avait pas été exécuté et l'erreur ne pouvait pas survenir avant que la fonction `checkGuess()` soit lancée à la ligne 86.
+   > **Note :** Cette erreur n'apparaît pas au moment du chargement de la page car elle survient à l'intérieur d'une fonction (dans `checkGuess() { ... }`). Comme vous l'apprendrez de manière plus précise plus loin dans l'article à propos des fonctions, le code dans les fonctions s'exécute dans une instance séparée du code en dehors des fonctions. Dans notre cas, le code n'avait pas été exécuté et l'erreur ne pouvait pas survenir avant que la fonction `checkGuess()` soit lancée à la ligne 86.
 
 4. Regardez à la ligne 78, vous verrez ce code&nbsp;:
 
-    ```js
-    lowOrHi.textContent = 'Last guess was too high!';
-    ```
+   ```js
+   lowOrHi.textContent = "Last guess was too high!";
+   ```
 
 5. La commande dans cette ligne essaie de définir la propriété `textContent` de la variable `lowOrHi` à l'aide d'une chaîne textuelle ; mais cela ne fonctionne pas car `lowOrHi` ne contient pas ce qui est attendu. Voyons voir — recherchons d'autres occurrences de `lowOrHi` dans le code. La plus proche que vous trouverez dans le JavaScript se situe à la ligne 48&nbsp;:
 
-    ```js
-    let lowOrHi = document.querySelector('lowOrHi');
-    ```
+   ```js
+   let lowOrHi = document.querySelector("lowOrHi");
+   ```
 
 6. Là, nous essayons de faire en sorte que la variable contienne une référence à un élément dans le HTML du document. Vérifions si sa valeur est `null` après que cette ligne ait été exécutée. Ajoutez le code suivant à la ligne 49&nbsp;:
 
-    ```js
-    console.log(lowOrHi);
-    ```
+   ```js
+   console.log(lowOrHi);
+   ```
 
-    > **Note :** [`console.log()`](/fr/docs/Web/API/Console/log) est vraiment utile pour déboguer une fonction en affichant sa valeur sur la console. Donc, elle affichera sur cette dernière la valeur de `lowOrHi` que nous avons essayé de définir à la ligne 48.
+   > **Note :** [`console.log()`](/fr/docs/Web/API/Console/log) est vraiment utile pour déboguer une fonction en affichant sa valeur sur la console. Donc, elle affichera sur cette dernière la valeur de `lowOrHi` que nous avons essayé de définir à la ligne 48.
 
 7. Enregistrez et actualisez la page, et vous verrez le résultat de `console.log()` sur la console. ![](console-log-output.png) C'est sûr, la valeur de `lowOrHi` est `null` à ce niveau&nbsp;; il y a bien un problème à la ligne 48.
 8. Quel est ce problème&nbsp;? Réfléchissons. À la ligne 48, nous avons utilisé la méthode [`document.querySelector()`](/fr/docs/Web/API/Document/querySelector) pour obtenir une référence sur un élément avec un sélecteur CSS. En regardant plus en amont dans notre fichier, nous pouvons trouver le paragraphe en question&nbsp;:
 
-    ```js
-    <p class="lowOrHi"></p>
-    ```
+   ```js
+   <p class="lowOrHi"></p>
+   ```
 
 9. Donc, il nous faut un sélecteur de classe ici, précédé d'un point (.), alors que le sélecteur passé à la méthode `querySelector()` en ligne 48 n'en a pas. Ce pourrait être le problème&nbsp;! Changeons `lowOrHi` en `.lowOrHi` à la ligne 48.
 10. Enregistrons et actualisons à nouveau, et la directive `console.log()` renvoie bien l'élément `<p>` attendu. Pfff&nbsp;! Une autre erreur corrigée&nbsp;! On peut enlever la ligne `console.log()` maintenant, ou bien la garder pour s'y reporter plus tard — comme vous l'entendez.
@@ -144,21 +132,21 @@ Il y a sûrement un problème dans la logique du jeu quelque part — le jeu ne 
 
 1. Recherchons les lignes où la variable `randomNumber` est définie. L'instance qui stocke en début de jeu le nombre aléatoire à deviner se situe autour de la ligne 44&nbsp;:
 
-    ```js
-    let randomNumber = Math.floor(Math.random()) + 1;
-    ```
+   ```js
+   let randomNumber = Math.floor(Math.random()) + 1;
+   ```
 
-    Et celle qui génére le nombre aléatoire pour une succession de jeux se situe autour de la ligne 113&nbsp;:
+   Et celle qui génére le nombre aléatoire pour une succession de jeux se situe autour de la ligne 113&nbsp;:
 
-    ```js
-    randomNumber = Math.floor(Math.random()) + 1;
-    ```
+   ```js
+   randomNumber = Math.floor(Math.random()) + 1;
+   ```
 
 2. Pour vérifier si ces lignes sont vraiment à l'origine du problème, faisons appel à nouveau à notre ami `console.log()` — insérons la ligne suivante directement en dessous des deux lignes indiquées plus haut&nbsp;:
 
-    ```js
-    console.log(randomNumber);
-    ```
+   ```js
+   console.log(randomNumber);
+   ```
 
 3. Enregistrons, actualisons et jouons quelques parties — on constate que `randomNumber` est égal à 1 quel que soit le point où il est raccordé à la console.
 
@@ -167,7 +155,7 @@ Il y a sûrement un problème dans la logique du jeu quelque part — le jeu ne 
 Pour corriger cela, examinons d'abord le fonctionnement de cette ligne. Premièrement, appelons [`Math.random()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/random), qui génére un nombre décimal aléatoire compris entre 0 et 1, par exemple 0.5675493843.
 
 ```js
-Math.random()
+Math.random();
 ```
 
 Puis, nous passons le résultat de l'appel de `Math.random()` à [`Math.floor()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/floor), qui arrondit le nombre passé à l'entier inférieur le plus proche. Puis, on ajoute 1 au résultat&nbsp;:
@@ -179,13 +167,13 @@ Math.floor(Math.random()) + 1;
 Garder la partie entière d'un nombre décimal compris entre 0 et 1 renvoie toujours 0, y ajouter 1 donne toujours 1. Il faut multiplier le nombre aléatoire par 100 avant de l'arrondir par défaut. La ligne suivante nous donne un entier aléatoire entre 0 et 99&nbsp;:
 
 ```js
-Math.floor(Math.random()*100);
+Math.floor(Math.random() * 100);
 ```
 
 Maintenant ajoutons 1 pour obtenir un nombre aléatoire entre 1 et 100&nbsp;:
 
 ```js
-Math.floor(Math.random()*100) + 1;
+Math.floor(Math.random() * 100) + 1;
 ```
 
 Modifiez ces deux lignes comme indiqué, enregistrez, actualisez — le jeu devrait maintenant fonctionner comme il faut&nbsp;!
@@ -212,7 +200,7 @@ cela déclenchera cette même erreur car le logiciel pense que vous êtes en tra
 
 > **Note :** Voyez la page relative à [SyntaxError: missing ; before statement](/fr/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) pour plus de précisions à propos de cette erreur.
 
-### Le programme dit que vous avez gagné quelle que soit votre suggestion.
+### Le programme dit que vous avez gagné quelle que soit votre suggestion
 
 Voilà un autre symptome de la confusion entre opérateur d'assignation et opérateur de test d'égalité. Ainsi, dans `checkGuess()`, si vous modifiez cette ligne&nbsp;:
 

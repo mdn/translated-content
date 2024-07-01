@@ -74,14 +74,12 @@ The file consists of a function called `FindProxyForURL`. The example below will
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isResolvable(host))
-    return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+  if (isResolvable(host)) return "DIRECT";
+  else return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
-See [Proxy Auto-Configuration (PAC)](/zh-/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) for more examples.
+参见[代理自动配置（PAC）](/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file)以获取更多示例。
 
 ## 参见
 

@@ -52,32 +52,37 @@ clip: inherit
 ## Ejemplos
 
 ```css
-p { border:dotted;  position:relative; }
+p {
+  border: dotted;
+  position: relative;
+}
 
 #img2 {
-  position:absolute;  left:263px;
+  position: absolute;
+  left: 263px;
 
   clip: rect(40px, 200px, 150px, 30px);
   /* sintáxis estándar, no soportada por Internet Explorer 4-7 */
 }
 
 #img3 {
-  position: absolute; left:526px;
+  position: absolute;
+  left: 526px;
 
-  clip: rect(40px  200px  150px  30px);
+  clip: rect(40px 200px 150px 30px);
   /* sintáxis no-estándar, pero soportada por todos los exploradores importantes incluyendo Firefox y IE */
 }
 ```
 
-![hut.jpg](/@api/deki/files/3613/=hut.jpg) ![hut.jpg](/@api/deki/files/3613/=hut.jpg) ![hut.jpg](/@api/deki/files/3613/=hut.jpg)
+![hut.jpg](hut.jpg) ![hut.jpg](hut.jpg) ![hut.jpg](hut.jpg)
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad entre exploradores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.clip")}}
+{{Compat}}
 
 ## Ver también
 

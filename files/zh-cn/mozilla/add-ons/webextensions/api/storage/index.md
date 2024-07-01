@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage
 
 此存储系统 API 基于 [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API), 并有少许不同。
 
-为了使用该 API，您需要在[manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)文件包含"storage"[权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions)。每一个浏览器扩展有自己的储存区域，每一个储存区域又分为几种不同的存储类型。
+为了使用该 API，你需要在[manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)文件包含"storage"[权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions)。每一个浏览器扩展有自己的储存区域，每一个储存区域又分为几种不同的存储类型。
 
 虽然此 API 类似于 {{domxref("Window.localStorage")}}，但仍建议你不要在插件中使用 `Window.localStorage`。当用户由于隐私原因清除历史浏览记录及数据时，火狐会将在浏览器扩展使用 `localStorage API` 存储的数据一并清除。而使用 `storage.localAPI` 存储的数据将会恰当保留。
 

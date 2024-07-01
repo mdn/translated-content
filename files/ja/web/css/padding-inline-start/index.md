@@ -1,6 +1,8 @@
 ---
 title: padding-inline-start
 slug: Web/CSS/padding-inline-start
+l10n:
+  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
 {{CSSRef}}
@@ -13,16 +15,17 @@ slug: Web/CSS/padding-inline-start
 
 ```css
 /* <length> 値 */
-padding-inline-start: 10px;   /* 絶対的な長さ */
-padding-inline-start: 1em;    /* テキストの大きさに対する相対値 */
+padding-inline-start: 10px; /* 絶対的な長さ */
+padding-inline-start: 1em; /* テキストの大きさに対する相対値 */
 
 /* <percentage> 値 */
-padding-inline-start: 5%;     /* ブロックコンテナーの幅に対する割合のパディング */
+padding-inline-start: 5%; /* ブロックコンテナーの幅に対する割合のパディング */
 
 /* グローバル値 */
 padding-inline-start: inherit;
 padding-inline-start: initial;
 padding-inline-start: revert;
+padding-inline-start: revert-layer;
 padding-inline-start: unset;
 ```
 
@@ -31,7 +34,7 @@ padding-inline-start: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : パディングの寸法を固定値で指定します。負の値は指定できません。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : パディングの寸法をパーセント値で表したもので、含まれるブロックの _inline-size_ に対する相対値です。負の値は指定できません。
+  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
 
 ## 解説
 
@@ -49,7 +52,7 @@ padding-inline-start: unset;
 
 ## 例
 
-<h3 id="Setting_inline_start_padding_for_vertical_text">縦書きテキストにおけるインライン方向の先頭のパディングの設定</h3>
+### 縦書きテキストにおけるインライン方向の先頭のパディングの設定
 
 #### HTML
 
@@ -71,13 +74,13 @@ div {
 .exampleText {
   writing-mode: vertical-lr;
   padding-inline-start: 20px;
-  background-color: #C8C800;
+  background-color: #c8c800;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_inline_start_padding_for_vertical_text", 140, 140)}}
+{{EmbedLiveSample("縦書きテキストにおけるインライン方向の先頭のパディングの設定", 140, 140)}}
 
 ## 仕様書
 
@@ -89,5 +92,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - 対応づけ先の物理的プロパティ: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

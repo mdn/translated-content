@@ -20,16 +20,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 ## 예제
 
 ```js
-Number.MAX_SAFE_INTEGER // 9007199254740991
-Number.MAX_SAFE_INTEGER * Number.EPSILON // 2 because in floating points, the value is actually the decimal trailing "1"
-                                         // except for in subnormal precision cases such as zero
+Number.MAX_SAFE_INTEGER; // 9007199254740991
+Number.MAX_SAFE_INTEGER * Number.EPSILON; // 2 because in floating points, the value is actually the decimal trailing "1"
+// except for in subnormal precision cases such as zero
 ```
 
 ## 폴리필
 
 ```js
 if (!Number.MAX_SAFE_INTEGER) {
-    Number.MAX_SAFE_INTEGER = Math.pow(2, 53) - 1; // 9007199254740991
+  Number.MAX_SAFE_INTEGER = Math.pow(2, 53) - 1; // 9007199254740991
 }
 ```
 

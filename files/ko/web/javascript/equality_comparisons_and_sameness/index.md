@@ -1,40 +1,41 @@
 ---
-title: 동치 비교 및 동일성
+title: 동등 비교 및 동일성
 slug: Web/JavaScript/Equality_comparisons_and_sameness
+l10n:
+  sourceCommit: 270351317fdaa57ba9123a19aa281e9e40bb0baa
 ---
 
 {{jsSidebar("Intermediate")}}
 
-ES2015에는 4가지 같음(equality) 알고리즘이 있습니다:
+JavaScript는 다음 세 가지의 값 비교 연산을 제공합니다.
 
-- 추상적(abstract) 같음 비교 (`==`)
-- 엄격한(strict) 같음 비교 (`===`): `Array.prototype.indexOf`, `Array.prototype.lastIndexOf` 및 `case` 절 매칭에 쓰임
-- 등가0(SameValueZero): `Map` 및 `Set` 연산뿐만 아니라 `%TypedArray%` 및 `ArrayBuffer` 생성자, 그리고 ES2016에 예정된 `String.prototype.includes`에 쓰임
-- 등가(SameValue): 그 외 모든 곳에 쓰임
+- [`===`](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality) - 엄격한 동등 (삼중 등호)
+- [`==`](/ko/docs/Web/JavaScript/Reference/Operators/Equality) - 느슨한 동등 (이중 등호)
+- [`Object.is()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/is)
 
-JavaScript는 3가지 서로 다른 값 비교 연산을 제공합니다:
+어느 연산을 사용할지 선택하는 것은 여러분이 어떤 종류의 비교를 수행하려고 하는지에 달려있습니다. 간단히 말하자면 다음과 같습니다.
 
-- [===](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity)를 사용하는 엄격한 같음 (또는 "삼중 등호" 또는 "항등(identity)"),
-- [==](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality)를 사용하는 느슨한(loose) 같음 ("이중 등호"),
-- 그리고 [`Object.is`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/is) (ECMAScript 2015에 새로 들임).
+- 이중 등호(`==`)는 두 대상을 비교할 때 유형 변환을 수행한 뒤, IEEE 754를 준수하도록 `NaN`, `-0`, `+0`을 특별히 처리합니다(따라서 `NaN != NaN`이고 `-0 == +0`).
+- 삼중 등호(`===`)는 이중 등호와 동일한 비교(`NaN`, `-0`, `+0`에 대한 특수 처리 포함)를 수행하지만 유형 변환은 수행하지 않습니다. 유형이 다르면 `false`가 반환됩니다.
+- `Object.is()`는 `NaN`, `-0`, `+0`에 대한 형식 변환과 특수 처리를 수행하지 않습니다(특수 숫자 값을 제외하고 `===`와 동일한 동작 제공).
 
-어느 연산을 쓸 지 그 선택은 당신이 어떤 종류의 비교를 수행하기 위해 찾고 있는 지에 달렸습니다.
+이들은 JavaScript의 4가지 동등 알고리즘 중 3가지에 해당합니다.
 
-- 이중 equals (`==`)는 두 가지를 비교할 때 유형 변환을 수행하고 IEEE 754를 준수하기 위해 `NaN`, `-0` 및 `+0`을 특별히 처리합니다 (그래서`NaN != NaN`이고 `-0 == +0`입니다);
-- 트리플 equals (`===`)는 이중 equals (`NaN`, `-0` 및 `+0`의 특수 처리 포함)와 동일한 비교를 수행하지만 유형 변환은 수행하지 않습니다. 형식이 다른 경우 `false`가 반환됩니다.
-- `Object.is`는 형식 변환을하지 않으며 `NaN`, `-0` 및 `+0`에 대한 특수 처리를 수행하지 않습니다 (특수 숫자 값을 제외하고는 `===`와 동일한 동작을 제공함).
+- [IsLooselyEqual](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-islooselyequal): `==`
+- [IsStrictlyEqual](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-isstrictlyequal): `===`
+- [SameValue](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-samevalue): `Object.is()`
+- [SameValueZero](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-samevaluezero): 많은 내장 연산에 사용됨.
 
-이들 사이의 구분은 모두 원시형(primitive) 처리와 관련이 있습니다. 매개 변수가 구조적, 개념적으로 유사한 지 비교하는 것이 없습니다. 같은 구조를 가지지만 개체 자체가 각각인 비원시형(non-primitive) 개체 x 및 y의 경우 위의 모든 형태(form)는 false로 평가됩니다.
+이들 사이의 구별은 모두 원시 값 처리와 관련 있습니다. 이들 중 어느 것도 매개변수가 구조에서 개념적으로 유사한지 비교하지 않습니다. 동일한 구조를 가지고 있지만, 고유한 객체인 비 원시 값 객체 `x`와 `y`의 경우, 위의 모든 형식은 `false`로 평가됩니다.
 
-## `===`를 사용하는 엄격한 같음
+## ===를 사용하는 엄격한 동등
 
-엄격한 같음(strict equality)은 두 값이 같은 지 비교합니다. 어느 값도 비교되기 전에 어떤 다른 값으로 남몰래 변환되지 않습니다. 둘이 서로 다른 형이면, 둘은 같지 않다고 여깁니다. 그렇지 않고 둘이 같은 형이고 숫자가 아닌 경우, 같은 값이면 같다고 여깁니다. 끝으로, 둘이 숫자인 경우, 둘 다 `NaN`이 아닌 같은 값이거나 하나는 `+0` 또 하나는 `-0`인 경우 같다고 여깁니다.
+엄격한 동등은 두 값이 같은지 비교합니다. 비교되기 전 어떠한 값도 암시적으로 다른 값으로 변환되지 않습니다. 값의 형식이 다른 경우, 두 값은 동등하지 않다고 간주됩니다. 값의 형식이 같고 숫자가 아니고 값이 같다면 두 값은 동등하다고 간주됩니다. 마지막으로 두 값이 모두 숫자인 경우, 둘 다 `NaN`이 아닌 동일한 값이거나, 하나가 `+0`이고 하나가 `-0`이면 동등한 것으로 간주됩니다.
 
 ```js
-var num = 0;
-var obj = new String("0");
-var str = "0";
-var b = false;
+const num = 0;
+const obj = new String("0");
+const str = "0";
 
 console.log(num === num); // true
 console.log(obj === obj); // true
@@ -48,66 +49,50 @@ console.log(obj === null); // false
 console.log(obj === undefined); // false
 ```
 
-엄격한 같음은 거의 항상 사용하는 올바른 비교 연산입니다. 숫자를 뺀 모든 값에 대해, 분명한 의미(semantics)를 사용합니다: 값은 그 자체와만 같습니다(/ 단지 그 자체입니다). 숫자는 서로 다른 두 극단 상황(edge case)을 얼버무리기(gloss over) 위해 약간 다른 의미를 사용합니다. 첫째는 부동 소수점 0은 양이든 음이든 하나의 부호를 지닙니다. 이는 특정 수학상의 해결책을 나타내는 데 유용하지만, 대부분의 상황에 `+0`과 `-0`의 차이에 신경쓰지 않기에, 엄격한 같음은 둘을 같은 값으로 다룹니다. 둘째는 부동 소수점은 not-a-number 값(`NaN`) 개념을 포함합니다, 특정 잘못 정의된(ill-defined) 수학 문제의 해결책을 보여주기 위해: 예를 들어, 양의 무한대(infinity)에 추가된 음의 무한대. 엄격한 같음은 `NaN`을 다른 모든 값과 같지 않게 다룹니다 -- 자신 포함. (`(x !== x)`가 `true`인 유일한 경우는 `x`가 `NaN`일 때입니다.)
+엄격한 동등은 거의 항상 사용하는 올바른 비교 연산입니다. 숫자를 제외한 모든 값에 대해 "한 값은 자신과만 같다"라는 명백한 의미 체계를 사용합니다. 숫자의 경우 약간 다른 의미 체계를 사용하여 서로 다른 두 가지 경우를 처리합니다. 첫 번째는 부동 소수점 0이 양수 또는 음수로 부호화 된다는점입니다. 이는 특정 수학 해를 나타내는 데 유용하지만, 대부분의 상황에서는 `+0`과 `-0`의 차이를 신경 쓰지 않으므로 엄격한 동등은 두 값을 동일한 값으로 취급합니다. 두 번째는 부동 소수점이 `NaN`이라는 숫자가 아닌 값의 개념을 포함하여 어떤 불분명한 수학 문제(예: 양의 무한대에 음의 무한대를 더함)에 대한 해를 나타내는 경우입니다. 엄격한 동등은 `NaN`을 다른 모든 값과 같지 않은 것으로 취급합니다. (`(x !== x)`가 `true`인 유일한 경우는 `x`가 `NaN`일 때입니다.)
 
-## ==를 사용하는 느슨한 같음
+`===` 외에도 엄격한 동등은 [`Array.prototype.indexOf()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf), [`Array.prototype.lastIndexOf()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf), [`TypedArray.prototype.indexOf()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf), [`TypedArray.prototype.lastIndexOf()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf), 그리고 [`case`](/ko/docs/Web/JavaScript/Reference/Statements/switch) 일치를 포함한 인덱스 검색 메서드에서 사용됩니다. 즉, `indexOf(NaN)`을 사용하여 배열에서 `NaN` 값의 인덱스를 찾거나 `NaN`을 `switch` 문에서 `case` 값으로 사용하여 어떤 항목과 일치하도록 만들 수 없습니다.
 
-The behavior for performing loose equality using `==` is as follows:
+```js
+console.log([NaN].indexOf(NaN)); // -1
+switch (NaN) {
+  case NaN:
+    console.log("Surprise"); // 아무것도 로그되지 않습니다.
+}
+```
 
-- 느슨한 같음(loose equality)은 두 값이 같은 지 비교합니다, 두 값을 공통(common) 형으로 변환한 후에. 변환 후 (하나 또는 양쪽이 변환을 거칠 수 있음), 최종 같음 비교는 꼭 `===`처럼 수행됩니다.
-- 느슨한 같음은 대칭(_symmetric_)입니다: `A == B`는 `A` 및 `B`가 어떤 값이든 항상 `B == A`와 같은 의미를 갖습니다 (적용된 변환의 순서 말고는).
-- `undefined` and `null` are loosely equal; that is, `undefined == null` is true, and `null == undefined` is true
+## ==를 사용하는 느슨한 동등
 
-전통 및 ECMAScript에 따르면, 모든 객체는 `undefined` 및 `null`과 느슨하게 같지 않습니다. 그러나 대부분의 브라우저는 일부 문맥(context)에서 `undefined`값을 모방하는(_emulate_) 것처럼 행동하기 위해 매우 좁은 부류의 객체(특히, 모든 페이지에 대한 `document.all` 객체)에 허용합니다. 느슨한 같음이 그러한 문맥 중 하나입니다: `null == A` 및 `undefined == A`는 A가 `undefined`를 *모방*하는 객체인 경우, 그리고 그 경우에만 true로 평가합니다. 다른 모든 경우에 객체는 결코 `undefined` 또는 `null`과 느슨하게 같지 않습니다.
+느슨한 동등은 대칭입니다. 즉, `A == B`는 `A`와 `B`가 어떤 값이든 항상 `B == A`와 동일한 의미 체계를 가집니다(적용된 변환 순서 제외). `==`를 사용하여 느슨한 동등을 수행하는 동작은 다음과 같습니다.
 
-Loose equality comparisons among other combinations of operand types are performed as shown in the tables below. The following notations are used in the tables:
+1. 피연산자의 형식이 동일한 경우 다음과 같이 비교됩니다.
+   - 객체: 두 피연산자가 동일한 객체를 참조하는 경우에만 `true`를 반환합니다.
+   - 문자열: 두 피연산자가 동일한 순서로 동일한 문자를 갖는 경우에만 `true`를 반환합니다.
+   - 숫자: 두 피연산자의 값이 같은 경우에만 `true`를 반환합니다. `+0`과 -`0`은 같은 값으로 취급합니다. 피연산자 중 하나가 `NaN` 이면 `false`를 반환합니다. 따라서 `NaN`은 결코 `NaN`과 같지 않습니다.
+   - 불리언: 피연산자가 둘 다 `true`이거나 둘 다 `false`인 경우에만 `true`를 반환합니다.
+   - BigInt: 두 피연산자가 동일한 값인 경우에만 `true`를 반환합니다.
+   - Symbol: 두 피연산자가 동일한 symbol을 참조하는 경우에만 `true`를 반환합니다.
+2. 피연산자 중 하나가 `null`이거나 `undefined`인 경우 `true`를 반환하려면 다른 피연산자도 `null`이거나 `undefined` 여야 합니다. 그렇지 않으면 `false`를 반환합니다.
+3. 피연산자 중 하나가 객체이고 다른 하나가 원시 값인 경우 [객체를 원시 값으로 변환](/ko/docs/Web/JavaScript/Data_structures#primitive_coercion)합니다.
+4. 이 단계에서 두 피연산자는 원시 값(문자열, 숫자, 불리언, Symbol, BigInt 중 하나)로 변환됩니다. 나머지 변환은 사항별로 수행됩니다.
+   - 동일한 형식인 경우, 1단계를 사용하여 비교합니다.
+   - 피연산자 중 하나가 Symbol이고 다른 피연산자는 아닌 경우, `false`를 반환합니다.
+   - 피연산자 중 하나가 불리언이고 다른 피연산자는 아닌 경우, [불리언을 숫자로 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)합니다. `true`는 1로 변환되고 `false`는 0으로 변환됩니다. 그런 다음 두 피연산자를 다시 느슨하게 비교합니다.
+   - 숫자를 문자열로: [문자열을 숫자로 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)합니다. 변환 실패로 인해 `NaN`이 발생하면 동등성이 `false` 임을 보장합니다.
+   - 숫자를 BigInt로: 숫자 값으로 비교합니다. 숫자가 ±Infinity이거나 `NaN` 이면 `false`를 반환합니다.
+   - 문자열을 BigInt로: [`BigInt()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) 생성자와 동일한 알고리즘을 사용하여 문자열을 BigInt로 변환합니다. 변환에 실패하면 `false`를 반환합니다.
 
-- `ToNumber(A)` attempts to convert its argument to a number before comparison. Its behavior is equivalent to `+A` (the unary + operator).
-- `ToPrimitive(A)` attempts to convert its object argument to a primitive value, by invoking varying sequences of `A.toString()` and `A.valueOf()` methods on `A`.
-- `ℝ(A)` attempts to convert its argument to an ECMAScript [mathematical value](https://tc39.es/ecma262/#mathematical-value).
-- `StringToBigInt(A)` attempts to convert its argument to a `BigInt` by applying the ECMAScript [`StringToBigInt`](https://tc39.es/ecma262/#sec-stringtobigint) algorithm.
+전통적으로, 그리고 ECMAScript에 따르면 모든 원시 값과 객체는 `undefined`와 `null`과 느슨하게 동등하지 않습니다. 그러나 대부분의 브라우저는 특정한 클래스의 객체(특히 모든 페이지의 `document.all` 객체)가 일부 상황에서 마치 값 `undefined`을 모방하는 것처럼 동작하는 것을 허용합니다. 느슨한 동등성은 다음 맥락 중 하나입니다. `null == A`와 `undefined == A`는 A가 `undefined`로 에뮬레이트 하는 객체인 경우에만 `true`로 평가됩니다. 다른 모든 경우에는 객체가 `undefined` 또는 `null`과 느슨하게 동등하지 않습니다.
 
-**number** primitive `A` compared to operand `B`:
+대부분의 경우에서 느슨한 동등을 사용하는 것이 권장되지 않습니다. 엄격한 동등을 사용한 비교 결과는 예측하기 쉽고, 강제 형변환이 없기 때문에 더 빨리 평가될 수 있습니다.
 
-| number    | bigint             | string              | boolean             | Object                |
-| --------- | ------------------ | ------------------- | ------------------- | --------------------- |
-| `A === B` | `ℝ(A) equals ℝ(B)` | `A === ToNumber(B)` | `A === ToNumber(B)` | `A == ToPrimitive(B)` |
-
-**bigint** primitive `A` compared to operand `B`:
-
-| number             | bigint    | string                    | boolean            | Object                |
-| ------------------ | --------- | ------------------------- | ------------------ | --------------------- |
-| `ℝ(A) equals ℝ(B)` | `A === B` | `A === StringToBigInt(B)` | `A == ToNumber(B)` | `A == ToPrimitive(B)` |
-
-**string** primitive `A` compared to operand `B`:
-
-| number              | bigint                    | string    | boolean                       | Object                |
-| ------------------- | ------------------------- | --------- | ----------------------------- | --------------------- |
-| `ToNumber(A) === B` | `StringToBigInt(A) === B` | `A === B` | `ToNumber(A) === ToNumber(B)` | `A == ToPrimitive(B)` |
-
-**boolean** primitive `A` compared to operand `B`:
-
-| number              | bigint             | string                        | boolean   | Object                          |
-| ------------------- | ------------------ | ----------------------------- | --------- | ------------------------------- |
-| `ToNumber(A) === B` | `ToNumber(A) == B` | `ToNumber(A) === ToNumber(B)` | `A === B` | `ToNumber(A) == ToPrimitive(B)` |
-
-**Object** `A` compared to operand `B`:
-
-| number                | bigint                | string                | boolean                         | Object    |
-| --------------------- | --------------------- | --------------------- | ------------------------------- | --------- |
-| `ToPrimitive(A) == B` | `ToPrimitive(A) == B` | `ToPrimitive(A) == B` | `ToPrimitive(A) == ToNumber(B)` | `A === B` |
-
-In most cases, using loose equality is discouraged. The result of a comparison using strict equality is easier to predict, and may evaluate more quickly due to the lack of type coercion.
-
-### Example
-
-The following example demonstrates loose equality comparisons involving the number primitive `0`, the bigint primitive `0n`, the string primitive `'0'`, and an object whose `toString()` value is `'0'`.
+다음 예제는 숫자 원시 값 `0`, bigint 원시 값 `0n`, 문자열 원시 값 `'0'`, 그리고 `toString()` 값이 `'0'`인 객체와 관련된 느슨한 동등 비교를 보여줍니다.
 
 ```js
 const num = 0;
 const big = 0n;
-const str = '0';
-const obj = new String('0');
+const str = "0";
+const obj = new String("0");
 
 console.log(num == str); // true
 console.log(big == num); // true
@@ -118,42 +103,53 @@ console.log(big == obj); // true
 console.log(str == obj); // true
 ```
 
-대부분의 경우 느슨한 같음을 사용하는 것은 바람직하지 않습니다. strict equality를 사용한 비교의 결과는 예측하기가 쉽고 형 강제(coercion) 변환이 일어나지 않기에 평가가 빠를 수 있습니다.
+느슨한 동등에는 `==` 연산자만 사용합니다.
 
-## Same-value equality
+## Object.is()를 사용한 동일 값 동등
 
-등가(same-value) 같음은 최종 사용 사례(use case)를 다룹니다: 두 값이 모든 문맥에서 _기능상 같은지_ 여부를 결정하는. (이 사용 사례는 [리스코프 치환 원칙](https://ko.wikipedia.org/wiki/리스코프_치환_원칙)의 실례를 보입니다.) 다음은 불변 속성(property)을 변화시키려 시도할 때 일어나는 한 사례입니다:
+동일 값 동등은 두 값이 모든 맥락에서 기능적으로 동일한지 여부를 결정합니다. (이 사용 사례는[Liskov 대체 원칙](https://en.wikipedia.org/wiki/Liskov_substitution_principle) 사례를 보여줍니다.) 변경할 수 없는 속성을 변경하려 하는 경우 한 사례가 발생합니다.
 
 ```js
-// 불변(immutable) NEGATIVE_ZERO 속성을 Number 생성자에 추가.
-Object.defineProperty(Number, "NEGATIVE_ZERO",
-                      { value: -0, writable: false, configurable: false, enumerable: false });
+// 변경할 수 없는 NEGATIVE_ZERO 속성을 Number 생성자에 추가합니다.
+Object.defineProperty(Number, "NEGATIVE_ZERO", {
+  value: -0,
+  writable: false,
+  configurable: false,
+  enumerable: false,
+});
 
-function attemptMutation(v)
-{
+function attemptMutation(v) {
   Object.defineProperty(Number, "NEGATIVE_ZERO", { value: v });
 }
 ```
 
-`Object.defineProperty`는 변경 불가능한 속성을 변경하려고 시도 할 때 예외를 throw하지만 실제 변경이 요청되지 않으면 아무 것도 수행하지 않습니다. `v`가 `-0`이면, 변경 사항이 요청되지 않고 오류가 발생하지 않습니다. 내부적으로, 불변의 property가 재정의 (redefined)되었을 때, 새롭게 지정된 값은 같은 값의 동등성을 사용해 현재의 값과 비교됩니다.
+`Object.defineProperty`는 변경할 수 없는 속성을 변경하려고 시도할 때 예외를 발생시키지지만, 실제 변경이 요청되지 않으면 아무 작업도 수행하지 않습니다. `v`가 `-0`이면 변경이 요청되지 않았으며, 오류가 발생하지 않습니다. 내부적으로 변경할 수 없는 속성이 재정의되면, 새로 지정된 값을 동일 값 동등을 사용하여 현재 값과 비교합니다.
 
-Same-value equality는 {{jsxref("Object.is")}} 메서드로 제공됩니다.
+동일 값 동등은 {{jsxref("Object.is")}} 메서드에 의해 제공됩니다. 이는 동등한 ID 값이 예상되는 언어의 거의 모든 곳에서 사용됩니다.
 
-## Same-value-zero equality
+## 동일 값 제로 동등
 
-등가 같음과 비슷하지만 +0과 -0이 같다고 여깁니다.
+동일 값 값 동등과 유사하지만, +0과 -0은 같은 것으로 간주됩니다.
 
-## 스펙 내 추상적 같음, 엄격한 같음 및 등가
+동일 값 제로 동등은 JavaScript API로 노출되지 않지만, 사용자 지정 코드로 구현할 수 있습니다.
 
-In ES5, the comparison performed by [`==`](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) is described in [Section 11.9.3, The Abstract Equality Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-11.9.3). The [`===`](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) comparison is [11.9.6, The Strict Equality Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-11.9.6). (Go look at these. They're brief and readable. Hint: read the strict equality algorithm first.) ES5 also describes, in [Section 9.12, The SameValue Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-9.12) for use internally by the JS engine. It's largely the same as the Strict Equality Algorithm, except that 11.9.6.4 and 9.12.4 differ in handling {{jsxref("Number")}}s. ES2015 simply proposes to expose this algorithm through {{jsxref("Object.is")}}.
+```js
+function sameValueZero(x, y) {
+  if (typeof x === "number" && typeof y === "number") {
+    // x와 y는 같거나(-0과 0일 수 있음) 둘 다 NaN입니다.
+    return x === y || (x !== x && y !== y);
+  }
+  return x === y;
+}
+```
 
-We can see that with double and triple equals, with the exception of doing a type check upfront in 11.9.6.1, the Strict Equality Algorithm is a subset of the Abstract Equality Algorithm, because 11.9.6.2–7 correspond to 11.9.3.1.a–f.
+동일 값 제로는 `NaN`을 동등하게 취급하는 점에서만 엄격한 동등과 다르고, `-0`을 `0`과 동등하게 취급하는 점에서만 동일 값 동등과 다릅니다. 따라서 특히 NaN으로 작업할 때, 일반적으로 검색에서 가장 합리적인 동작을 수행합니다. 키 동등을 비교하기 위해 [`Array.prototype.includes()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/includes), [`TypedArray.prototype.includes()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes), 그리고 [`Map`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Map)과 [`Set`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set) 메서드에서 사용됩니다.
 
-## 같음 비교를 이해하기 위한 모델은?
+## 동등 메서드 비교
 
-ES2015 이전에, 이중 등호 및 삼중 등호에 대해 하나가 다른 하나의 "확장"판이라고 (말)했을 지 모릅니다. 예를 들어, 누군가는 이중 등호는 삼중 등호의 확장판이라고 합니다, 전자는 후자가 하는 모든 것을 하지만 그 피연산자에 형 변환을 하기에. 가령, `6 == "6"`. (대신에, 이중 등호는 기준선이고 삼중 등호는 향상판이라고 하는 이도 있습니다, 두 피연산자가 같은 형이길 요구하고 그래서 별도 제약을 추가하기에. 어느 게 더 이해하기 좋은 모델인지는 당신이 상태(things)를 보기 위해 선택한 방법에 달렸습니다.)
+사람들은 종종 삼중 등호가 이중 등호의 "향상된" 버전이라고 말하면서 이 둘을 비교합니다. 예를 들어, 이중 등호는 삼중 등호의 확장된 버전이라고 말할 수 있습니다. 왜냐하면 전자는 후자의 모든 작업을 수행하지만 피연산자에 유형 변환이 있기 때문입니다(예: `6 == "6"`). 또는 이중 등호가 기준선이고 삼중 등호가 향상된 버전이라고 주장할 수 있습니다. 두 피연산자가 동일한 유형이어야 하므로 추가 제약 조건이 추가되기 때문입니다.
 
-However, this way of thinking about the built-in sameness operators is not a model that can be stretched to allow a place for ES2015's {{jsxref("Object.is")}} on this "spectrum". {{jsxref("Object.is")}} isn't simply "looser" than double equals or "stricter" than triple equals, nor does it fit somewhere in between (i.e., being both stricter than double equals, but looser than triple equals). We can see from the sameness comparisons table below that this is due to the way that {{jsxref("Object.is")}} handles {{jsxref("NaN")}}. Notice that if `Object.is(NaN, NaN)`evaluated to `false`, we *could* say that it fits on the loose/strict spectrum as an even stricter form of triple equals, one that distinguishes between `-0` and `+0`. The {{jsxref("NaN")}} handling means this is untrue, however. Unfortunately, {{jsxref("Object.is")}} simply has to be thought of in terms of its specific characteristics, rather than its looseness or strictness with regard to the equality operators.
+그러나 이러한 생각은 방식은 동등 비교가 한쪽 끝에는 "완전히 엄격함"이 있고, 다른쪽에는 "완전히 느슨함"이 있는 1차원 "스펙트럼"을 형성합니다. 이 스펙트럼은 {{jsxref("Object.is")}}에서 부족한 점이 드러나는데, 이는 이중 등호보다 "느슨하지"도 않고, 삼중 등호보다 "엄격"하지도 않아 중간 어딘가에 맞지도 않기 때문입니다(즉, 이중 등호보단 엄격하지만 삼중 등호보다 느슨하다). 아래의 동일성 비교 표에서 이것이 {{jsxref("Object.is")}}가 `NaN`을 처리하는 방식 때문임을 알 수 있습니다. 만약 `Object.is(NaN, NaN)`이 `false`로 평가되면 {{jsxref("Object.is")}}는 `-0`과 `+0`을 구별하는 더 엄격한 삼중 등호의 형식으로 느슨/엄격 스펙트럼에 적합하다고 말할 수 있습니다. 그러나 `NaN` 처리는 이것이 사실이 아님을 의미합니다. 불행하게도 {{jsxref("Object.is")}}는 등호 연산자에 대한 느슨함이나 엄격함이 아니라 고유한 특성의 관점에서 생각해야 합니다.
 
 | x                   | y                   | `==`       | `===`      | `Object.is` | `SameValueZero` |
 | ------------------- | ------------------- | ---------- | ---------- | ----------- | --------------- |
@@ -184,49 +180,49 @@ However, this way of thinking about the built-in sameness operators is not a mod
 | `'foo'`             | `NaN`               | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
 | `NaN`               | `NaN`               | `❌ false` | `❌ false` | `✅ true`   | `✅ true`       |
 
-## {{jsxref("Object.is")}} 대신 삼중 등호를 사용하는 경우
+### 언제 Object.is()와 삼중 등호를 사용해야 할까?
 
-In general, the only time {{jsxref("Object.is")}}'s special behavior towards zeros is likely to be of interest is in the pursuit of certain meta-programming schemes, especially regarding property descriptors, when it is desirable for your work to mirror some of the characteristics of {{jsxref("Object.defineProperty")}}. If your use case does not require this, it is suggested to avoid {{jsxref("Object.is")}} and use [`===`](/ko/docs/Web/JavaScript/Reference/Operators) instead. Even if your requirements involve having comparisons between two {{jsxref("NaN")}} values evaluate to `true`, generally it is easier to special-case the {{jsxref("NaN")}} checks (using the {{jsxref("isNaN")}} method available from previous versions of ECMAScript) than it is to work out how surrounding computations might affect the sign of any zeros you encounter in your comparison.
+일반적으로 0에 대한 {{jsxref("Object.is")}}의 특별한 동작에 관심을 가질 수 있는 유일한 시간은 특정 메타 프로그래밍 체계를 추구할 때, 특히 속성 설명자와 관련하여 작업이 {{jsxref("Object.defineProperty")}}의 일부 특성을 반영하는 것이 바람직할 때 입니다. 여러분의 사용 사례에 이것이 필요하지 않은 경우, {{jsxref("Object.is")}}를 피하고 대신 [`===`](/ko/docs/Web/JavaScript/Reference/Operators)를 사용하는 것이 좋습니다. 요구 사항에 두 {{jsxref("NaN")}} 값 간의 비교가 `true`로 평가되는 것이 포함되더라도, 일반적으로 {{jsxref("NaN")}} 검사(이전 버전의 ECMAScript에서 사용할 수 있는 {{jsxref("isNaN")}} 메서드 사용)를 특수한 경우로 지정하는 것이 비교에서 발생하는 0의 부호가 주변 계산에 어떻게 영향을 미칠 수 있는지 알아내는 것보다 쉽습니다.
 
-여기 당신 코드에서 그 자체를 드러내기 위해 `-0`과 `+0` 사이의 구별을 일으킬 수도 있는 철저하지 않은(in-exhaustive) 내장 메서드 및 연산자 목록이 있습니다:
+다음은 코드에서 `-0`과 `+0`을 구분할 수 있는 내장 메서드와 연산자의 일부 목록입니다.
 
-- {{jsxref("Operators/Unary_negation", "- (unary negation)")}}
-  - : Consider the following example:
+- [`-` (단항 부정)](/ko/docs/Web/JavaScript/Reference/Operators/Unary_negation)
 
-  ```js
-    let stoppingForce = obj.mass * -obj.velocity;
-  ```
+  - : 다음 예제를 참조하세요.
 
-  If `obj.velocity` is `0` (or computes to `0`), a `-0` is introduced at that place and propagates out into `stoppingForce`.
+    ```js
+    const stoppingForce = obj.mass * -obj.velocity;
+    ```
+
+    `obj.velocity`가 `0`(또는 `0`으로 계산)이면 해당 위치에 `-0`이 도입되고 `stopsingForce`로 전파됩니다.
+
 - {{jsxref("Math.atan2")}}, {{jsxref("Math.ceil")}}, {{jsxref("Math.pow")}}, {{jsxref("Math.round")}}
-  - : In some cases,it's possible for a `-0` to be introduced into an expression as a return value of these methods even when no `-0` exists as one of the parameters. For example, using {{jsxref("Math.pow")}} to raise {{jsxref("Infinity", "-Infinity")}} to the power of any negative, odd exponent evaluates to `-0`. Refer to the documentation for the individual methods.
+  - : 경우에 따라 `-0`이 매개변수 중 하나로 존재하지 않는 경우에도 `-0`이 이 메서드의 반환 값으로 식에 도입될 수 있습니다. 예를 들어 {{jsxref("Math.pow")}}를 사용하여 {{jsxref("Infinity", "-Infinity")}}를 음의 거듭제곱으로 올리면 홀수 지수는 `-0`으로 평가됩니다. 개별 메서드에 대한 문서를 참조하세요.
 - {{jsxref("Math.floor")}}, {{jsxref("Math.max")}}, {{jsxref("Math.min")}}, {{jsxref("Math.sin")}}, {{jsxref("Math.sqrt")}}, {{jsxref("Math.tan")}}
-  - : It's possible to get a `-0` return value out of these methods in some cases where a `-0` exists as one of the parameters. E.g., `Math.min(-0, +0)` evaluates to `-0`. Refer to the documentation for the individual methods.
-- [`~`](/ko/docs/Web/JavaScript/Reference/Operators), [`<<`](/ko/docs/Web/JavaScript/Reference/Operators), [`>>`](/ko/docs/Web/JavaScript/Reference/Operators)
-  - : Each of these operators uses the ToInt32 algorithm internally. Since there is only one representation for 0 in the internal 32-bit integer type, `-0` will not survive a round trip after an inverse operation. E.g., both `Object.is(~~(-0), -0)` and `Object.is(-0 << 2 >> 2, -0)` evaluate to `false`.
+  - : `-0`이 매개변수 중 하나로 존재하는 경우에 이 메서드에서 `-0` 반환 값을 가져올 수 있습니다. 예를 들어 `Math.min(-0, +0)`은 `-0`으로 평가됩니다. 개별 메서드,에 대한 문서를 참조하세요.
+- [`~`](/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT), [`<<`](/ko/docs/Web/JavaScript/Reference/Operators/Left_shift), [`>>`](/ko/docs/Web/JavaScript/Reference/Operators/Right_shift)
+  - : 이러한 연산자는 내부적으로 ToInt32 알고리즘을 사용합니다. 내부 32비트 정수 유형에는 0에 대한 표현이 하나만 있기 때문에 `-0`은 역 연산 후 왕복 여행에서 살아남지 못합니다. 예를 들어, `Object.is(~~(-0), -0)`과 `Object.is(-0 << 2 >> 2, -0)`은 모두 `false`로 평가됩니다.
 
-Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken into account can be hazardous. Of course, when the intent is to distinguish between `-0` and `+0`, it does exactly what's desired.
+0의 부호가 고려되지 않은 경우 {{jsxref("Object.is")}}에 의존하는 것은 위험할 수 있습니다. 물론 의도가 `-0`과 `+0`을 구분하는 것이라면 정확히 원하는대로 수행됩니다.
 
-## Caveat: Object.is and NaN
+### 주의: Object.is()와 NaN
 
-The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/ko/docs/Web/JavaScript/Typed_arrays) are available, we can have distinct instances, which don't behave identically in all contexts. For example:
+{{jsxref("Object.is")}} 사양은 {{jsxref("NaN")}}의 모든 인스턴스를 동일한 객체로 취급합니다. 그러나 형식화 배열을 사용할 수 있으므로 모든 맥락에서 동일하게 작동하지 않는 `NaN`의 고유한 부동 소수점 표현을 가질 수 있습니다.
 
 ```js
-var f2b = x => new Uint8Array(new Float64Array([x]).buffer);
-var b2f = x => new Float64Array(x.buffer)[0];
-var n = f2b(NaN);
+const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
+const b2f = (x) => new Float64Array(x.buffer)[0];
+// NaN의 바이트 표현을 가져옵니다.
+const n = f2b(NaN);
+// NaN에 중요하지 않은 부호 비트인 첫 번째 비트를 변경합니다.
 n[0] = 1;
-var nan2 = b2f(n);
-nan2;
-// > NaN
-Object.is(nan2, NaN);
-// > true
-f2b(NaN);
-// > Uint8Array(8) [0, 0, 0, 0, 0, 0, 248,127)
-f2b(nan2);
-// > Uint8Array(8) [1, 0, 0, 0, 0, 0, 248,127)
+const nan2 = b2f(n);
+console.log(nan2); // NaN
+console.log(Object.is(nan2, NaN)); // true
+console.log(f2b(NaN)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 127]
+console.log(f2b(nan2)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
 ```
 
-## 참조
+## 같이 보기
 
-- [JS 비교 표](http://dorey.github.io/JavaScript-Equality-Table/)
+- [JS 비교 표](https://dorey.github.io/JavaScript-Equality-Table/)

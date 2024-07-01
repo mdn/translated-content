@@ -1,8 +1,6 @@
 ---
 title: Страница о Mozilla
 slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
-translation_of: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
-original_slug: Learn/HTML/Multimedia_and_embedding/заставка_Mozilla
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
@@ -51,7 +49,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/заставка_Mozilla
 
 ### Добавление отзывчивых изображений к ссылкам с доп. информацией
 
-Внутри {{htmlelement("div")}} с классом `further-info` вы найдёте четыре элемента {{htmlelement("a")}} — каждый из которых ссылается на интересную страницу, связанную с Mozilla. Для завершения этой секции вам необходимо поместить элемент {{htmlelement("img")}} внутрь каждого элемента {{htmlelement("a")}} дополнив подходящими атрибутами {{htmlattrxref("src", "img")}}, {{htmlattrxref("alt", "img")}}, {{htmlattrxref("srcset", "img")}} и {{htmlattrxref("sizes", "img")}}.
+Внутри {{htmlelement("div")}} с классом `further-info` вы найдёте четыре элемента {{htmlelement("a")}} — каждый из которых ссылается на интересную страницу, связанную с Mozilla. Для завершения этой секции вам необходимо поместить элемент {{htmlelement("img")}} внутрь каждого элемента {{htmlelement("a")}} дополнив подходящими атрибутами [`src`](/ru/docs/Web/HTML/Element/img#src), [`alt`](/ru/docs/Web/HTML/Element/img#alt), [`srcset`](/ru/docs/Web/HTML/Element/img#srcset) и [`sizes`](/ru/docs/Web/HTML/Element/img#sizes).
 
 В каждом случае (кроме одного - какой из них по сути отзывчивый?) мы хотим, чтобы браузер использовал изображение шириной 120px , когда экран меньше или равен 480px, либо шириной 400px в других случаях.
 
@@ -76,12 +74,3 @@ original_slug: Learn/HTML/Multimedia_and_embedding/заставка_Mozilla
 Если вы выполняете это задание как часть организованного курса вам следует передать вашу работу учителю/наставнику для оценки. Если вы обучаетесь самостоятельно, то вы легко можете получить отметку [в ветке форума этого упражнения](https://discourse.mozilla.org/t/mozilla-splash-page-assessment/24679), либо в IRC канале [#mdn](irc://irc.mozilla.org/mdn) на [Mozilla IRC](https://wiki.mozilla.org/IRC). Сначала попробуйте выполнить упражнение - жульничеством ничего не добиться!
 
 {{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
-
-## В этом модуле
-
-- [Изображения в HTML](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Видео и аудио контент](/ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [От \<object> до \<iframe> — другие технологии встраивания](/ru/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Добавление векторной графики в Web](/ru/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Отзывчивые изображения](/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Сайт-визитка Mozilla](/ru/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

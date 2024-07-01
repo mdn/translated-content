@@ -2,6 +2,7 @@
 title: CSS
 slug: Web/API/CSS
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSS`** 인터페이스는 유용한 CSS 관련 메서드를 가집니다. `CSS` 인터페이스는 정적 속성과 메서드만 가지고 있으며 아무런 객체도 `CSS` 인터페이스를 구현하지 않습니다.
@@ -22,6 +23,7 @@ _CSS 인터페이스는 유틸리티 인터페이스이며, 이러한 형식의 
 - {{domxref("CSS.registerProperty()")}}
   - : [사용자 지정 CSS 속성](/ko/docs/Web/CSS/--*)을 등록하고 속성 자료형 검사, 기본값, 상속 여부 등을 설정할 수 있습니다.
 - {{domxref("CSS.supports()")}}
+
   - : 매개변수로 주어진 속성-값 쌍 또는 조건의 지원 여부를 나타내는 {{jsxref("Boolean")}}을 반환합니다.
 
 - {{domxref("CSS.escape()")}} {{experimental_inline}}

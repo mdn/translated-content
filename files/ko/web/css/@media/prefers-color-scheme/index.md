@@ -2,6 +2,7 @@
 title: prefers-color-scheme
 slug: Web/CSS/@media/prefers-color-scheme
 ---
+
 **`prefers-color-scheme`** [CSS](/ko/docs/Web/CSS) [미디어 특성](/ko/docs/Web/CSS/@media#media_features)은 사용자의 시스템이 라이트 테마나 다크 테마를 사용하는지 탐지하는 데에 사용됩니다.
 
 사용자는 운영체제 설정(라이트 모드 또는 다크 모드)이나 사용자 에이전트 설정에서 선호하는 테마를 나타낼 수 있습니다.
@@ -22,7 +23,8 @@ slug: Web/CSS/@media/prefers-color-scheme
 ```html
 <div class="day">Day (initial)</div>
 <div class="day light-scheme">Day (changes in light scheme)</div>
-<div class="day dark-scheme">Day (changes in dark scheme)</div> <br>
+<div class="day dark-scheme">Day (changes in dark scheme)</div>
+<br />
 
 <div class="night">Night (initial)</div>
 <div class="night light-scheme">Night (changes in light scheme)</div>
@@ -32,20 +34,39 @@ slug: Web/CSS/@media/prefers-color-scheme
 ### CSS
 
 ```css
-.day   { background: #eee; color: black; }
-.night { background: #333; color: white; }
+.day {
+  background: #eee;
+  color: black;
+}
+.night {
+  background: #333;
+  color: white;
+}
 
 @media (prefers-color-scheme: dark) {
-  .day.dark-scheme   { background:  #333; color: white; }
-  .night.dark-scheme { background: black; color:  #ddd; }
+  .day.dark-scheme {
+    background: #333;
+    color: white;
+  }
+  .night.dark-scheme {
+    background: black;
+    color: #ddd;
+  }
 }
 
 @media (prefers-color-scheme: light) {
-  .day.light-scheme   { background: white; color:  #555; }
-  .night.light-scheme { background:  #eee; color: black; }
+  .day.light-scheme {
+    background: white;
+    color: #555;
+  }
+  .night.light-scheme {
+    background: #eee;
+    color: black;
+  }
 }
 
-.day, .night {
+.day,
+.night {
   display: inline-block;
   padding: 1em;
   width: 7em;

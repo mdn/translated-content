@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing ) after argument list'
+title: "SyntaxError: missing ) after argument list"
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 ---
 
@@ -34,7 +34,7 @@ console.log('PI: ' Math.PI);
 "`+`" 演算子を追加することで、`log` の呼び出しを修正できます。
 
 ```js example-good
-console.log('PI: ' + Math.PI);
+console.log("PI: " + Math.PI);
 // "PI: 3.141592653589793"
 ```
 
@@ -48,7 +48,7 @@ console.log('"Java" + "Script" = \"' + 'Java' + 'Script\");
 ここで、 JavaScript は `);` が文字列の中にあると誤解して無視し、結局、 `);` が `console.log` の末尾に入っていることを知らないままになってしまいます。これを修正するには、 `'` を "Script" の文字列の後に入れます。
 
 ```js example-good
-console.log('"Java" + "Script" = \"' + 'Java' + 'Script\"');
+console.log('"Java" + "Script" = "' + "Java" + 'Script"');
 // '"Java" + "Script" = "JavaScript"'
 ```
 

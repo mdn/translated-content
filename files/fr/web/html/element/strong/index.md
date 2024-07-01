@@ -1,12 +1,6 @@
 ---
-title: '<strong> : l''élément de haute importance'
+title: "<strong> : l'élément de haute importance"
 slug: Web/HTML/Element/strong
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/strong
 ---
 
 {{HTMLSidebar}}
@@ -46,8 +40,7 @@ En HTML 4, `<strong>` indiquait simplement une emphase plus forte. En HTML5, l'�
 ```html
 <p>
   Avant de faire le truc X il est
-  <strong>nécessaire</strong> de
-  faire le truc Y avant.
+  <strong>nécessaire</strong> de faire le truc Y avant.
 </p>
 ```
 
@@ -72,7 +65,7 @@ En HTML 4, `<strong>` indiquait simplement une emphase plus forte. En HTML5, l'�
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >,
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
@@ -84,7 +77,7 @@ En HTML 4, `<strong>` indiquait simplement une emphase plus forte. En HTML5, l'�
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >Contenu phrasé</a
         >.
       </td>
@@ -101,7 +94,7 @@ En HTML 4, `<strong>` indiquait simplement une emphase plus forte. En HTML5, l'�
       <td>
         Tout élément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >
         ou tout élément acceptant du

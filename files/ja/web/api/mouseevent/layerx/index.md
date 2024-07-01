@@ -1,9 +1,9 @@
 ---
-title: MouseEvent.layerX
+title: "MouseEvent: layerX プロパティ"
+short-title: layerX
 slug: Web/API/MouseEvent/layerX
-original_slug: Web/API/UIEvent/layerX
 l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("UI Events")}}{{Non-standard_Header}}

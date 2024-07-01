@@ -1,8 +1,6 @@
 ---
 title: Object.hasOwn()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
-browser-compat: javascript.builtins.Object.hasOwn
 ---
 
 {{JSRef}}{{SeeCompatTable}}
@@ -16,7 +14,7 @@ La méthode statique **`Object.hasOwn()`** renvoie `true` si l'objet indiqué po
 ## Syntaxe
 
 ```js
-Object.hasOwn(instance,prop)
+Object.hasOwn(instance, prop);
 ```
 
 ### Paramètres
@@ -44,16 +42,16 @@ Le code suivant illustre comment déterminer si l'objet `exemple` contient une p
 
 ```js
 let exemple = {};
-Object.hasOwn(exemple, 'prop');   // false : 'prop' n'a pas été définie
+Object.hasOwn(exemple, "prop"); // false : 'prop' n'a pas été définie
 
-exemple.prop = 'existe';
-Object.hasOwn(exemple, 'prop');   // true : 'prop' a été définie
+exemple.prop = "existe";
+Object.hasOwn(exemple, "prop"); // true : 'prop' a été définie
 
 exemple.prop = null;
-Object.hasOwn(exemple, 'prop');   // true : la propriété existe malgré sa valeur null
+Object.hasOwn(exemple, "prop"); // true : la propriété existe malgré sa valeur null
 
 exemple.prop = undefined;
-Object.hasOwn(exemple, 'prop');   // true : la propriété existe malgré sa valeur undefined
+Object.hasOwn(exemple, "prop"); // true : la propriété existe malgré sa valeur undefined
 ```
 
 ### Propriétés propres et propriétés héritées
@@ -61,18 +59,18 @@ Object.hasOwn(exemple, 'prop');   // true : la propriété existe malgré sa val
 Dans l'exemple suivant, on distingue les propriétés propres/directes et celles qui sont héritées via la chaîne de prototypes&nbsp;:
 
 ```js
-let exemple = {}
-exemple.prop = 'existe';
+let exemple = {};
+exemple.prop = "existe";
 
 // `Objet.hasOwn()` renverra true seulement pour les propriétés propres
-Object.hasOwn(exemple, 'prop');             // renvoie true
-Object.hasOwn(exemple, 'toString');         // renvoie false
-Object.hasOwn(exemple, 'hasOwnProperty');   // renvoie false
+Object.hasOwn(exemple, "prop"); // renvoie true
+Object.hasOwn(exemple, "toString"); // renvoie false
+Object.hasOwn(exemple, "hasOwnProperty"); // renvoie false
 
 // L'opérateur `in` renverra true pour les propriétés propres et héritées
-'prop' in exemple;                          // renvoie true
-'toString' in exemple;                      // renvoie true
-'hasOwnProperty' in exemple;                // renvoie true
+"prop" in exemple; // renvoie true
+"toString" in exemple; // renvoie true
+"hasOwnProperty" in exemple; // renvoie true
 ```
 
 ### Parcourir les propriétés d'un objet=
@@ -102,9 +100,9 @@ for (let nom in exemple) {
 Les éléments d'un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) sont définis comme propriétés propres. Ainsi, `Object.hasOwn()` pourra être utilisé pour vérifier si un indice donné existe&nbsp;:
 
 ```js
-let fruits = ['Pomme', 'Banane', 'Melon', 'Orange'];
-Object.hasOwn(fruits, 3);   // true ('Orange')
-Object.hasOwn(fruits, 4);   // false, non défini
+let fruits = ["Pomme", "Banane", "Melon", "Orange"];
+Object.hasOwn(fruits, 3); // true ('Orange')
+Object.hasOwn(fruits, 4); // false, non défini
 ```
 
 ### Cas problématiques pour hasOwnProperty()
@@ -113,13 +111,13 @@ Cette section illustre l'immunité de `Object.hasOwn()` concernant des problème
 
 ```js
 let toto = {
-  hasOwnProperty: function() {
+  hasOwnProperty: function () {
     return false;
   },
-  truc: 'Ga bu zo meu'
+  truc: "Ga bu zo meu",
 };
 
-if (Object.hasOwn(toto, 'truc')) {
+if (Object.hasOwn(toto, "truc")) {
   console.log(toto.truc); //true - la surcharge de hasOwnProperty() n'a pas d'impact
 }
 ```
@@ -128,8 +126,8 @@ On peut également l'utiliser pour tester des objets créés avec [`Object.creat
 
 ```js
 let toto = Object.create(null);
-toto.prop = 'existe';
-if (Object.hasOwn(toto, 'prop')) {
+toto.prop = "existe";
+if (Object.hasOwn(toto, "prop")) {
   console.log(toto.prop); // true.
 }
 ```

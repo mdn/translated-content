@@ -5,8 +5,6 @@ slug: Web/CSS/Replaced_element
 
 {{CSSRef}}
 
-{{CSSRef()}}
-
 ## 摘要
 
 CSS 中所謂的「置換元素 (**Replaced element**)」，即是該元素所呈現的內容不在 CSS 的控制範圍之內。這類外部物件所呈現的內容均獨立於 CSS 之外。常見的置換元素包含 {{HTMLElement("img")}}、{{HTMLElement("object")}}、{{HTMLElement("video")}}，或如 {{HTMLElement("textarea")}} 與 {{HTMLElement("input")}} 的表單元素。某些元素 (像是 {{HTMLElement("audio")}} 或 {{HTMLElement("canvas")}}) 只有在特殊情況下才是置替換元素。若是透過 CSS {{cssxref("content")}} 屬性所插入的物件，則稱為「不具名置換元素 (Anonymous replaced elements)」。
@@ -24,10 +22,10 @@ CSS 中所謂的「置換元素 (**Replaced element**)」，即是該元素所�
   - [註釋](/zh-TW/docs/Web/CSS/Comments)
   - [優先級](/zh-TW/docs/Web/CSS/Specificity)
   - [繼承](/zh-TW/docs/Web/CSS/inheritance)
-  - [盒模型](/zh-TW/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [佈局模式](/zh-TW/docs/Web/CSS/Layout_mode)
   - [視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model)
-  - [外邊距合併](/zh-TW/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [外邊距合併](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
     - [初始值](/zh-TW/docs/Web/CSS/initial_value)

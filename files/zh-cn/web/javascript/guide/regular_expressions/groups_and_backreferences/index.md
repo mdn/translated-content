@@ -1,7 +1,6 @@
 ---
 title: Groups and ranges
-slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
-original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
+slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -38,7 +37,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
       <td>
         <p>
           字符集。
-          匹配任何一个包含的字符。您可以使用连字符来指定字符范围，但如果连字符显示为方括号中的第一个或最后一个字符，则它将被视为作为普通字符包含在字符集中的文字连字符。也可以在字符集中包含字符类。
+          匹配任何一个包含的字符。你可以使用连字符来指定字符范围，但如果连字符显示为方括号中的第一个或最后一个字符，则它将被视为作为普通字符包含在字符集中的文字连字符。也可以在字符集中包含字符类。
         </p>
         <p>
           例如，<code>[abcd]</code> 是与<code>[a-d]</code>.一样的，它们会
@@ -72,7 +71,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
           <p>
             <strong>备注：</strong> ^ 字符也可以表示
             <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries"
+              href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Boundaries"
               >输入的起始</a
             >
           </p>
@@ -102,7 +101,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
               >String.match()</a
             ></code
           >
-          不会返回组，如果设置了 <code>/.../g</code> 标志。但是，您仍然可以使用
+          不会返回组，如果设置了 <code>/.../g</code> 标志。但是，你仍然可以使用
           <code
             ><a
               href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll"
@@ -112,7 +111,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
           to get all matches.
         </p>
         <p>
-          match() 不会返回组，如果/…但是，您仍然可以使用 String.matchAll()
+          match() 不会返回组，如果/…但是，你仍然可以使用 String.matchAll()
           来获取所有匹配项。
         </p>
       </td>
@@ -127,9 +126,9 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
           括号匹配的最后一个子字符串的反向引用 (计算左括号)。例如，<code
             >/apple(,)\sorange\1/</code
           >
-          匹配“apple，orange，cherry，peach”中的 "apple，orange，"，其中
-          <code>\1</code> 引用了 之前使用 <code>（）</code> 捕获的
-          <code>，</code>
+          匹配“apple, orange, cherry, peach”中的 "apple, orange,"，其中
+          <code>\1</code> 引用了 之前使用 <code>()</code> 捕获的
+          <code>,</code>
         </p>
       </td>
     </tr>
@@ -169,57 +168,45 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
   </tbody>
 </table>
 
-## 一些例子
+## 示例
 
-### 计算元音数
-
-```js
-var aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
-var regexpVowels = /[aeiouy]/g;
-
-console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
-// Number of vowels: 25
-```
-
-### 使用 组
+### 使用组
 
 ```js
 let personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
-let regexpNames =  /First_Name: (\w+), Last_Name: (\w+)/mg;
+let regexpNames = /First_Name: (\w+), Last_Name: (\w+)/gm;
 let match = regexpNames.exec(personList);
 do {
   console.log(`Hello ${match[1]} ${match[2]}`);
-} while((match = regexpNames.exec(personList)) !== null);
+} while ((match = regexpNames.exec(personList)) !== null);
 ```
 
 ### 使用命名组
 
 ```js
-let users= `姓氏：李，名字：雷
+let users = `姓氏：李，名字：雷
 姓氏：韩，名字：梅梅`;
 
-let regexpNames =  /姓氏：(?<first>.+)，名字：(?<last>.+)/mg;
+let regexpNames = /姓氏：(?<first>.+)，名字：(?<last>.+)/gm;
 let match = regexpNames.exec(users);
 
 do {
   console.log(`Hello ${match.groups.first} ${match.groups.last}`);
-} while((match = regexpNames.exec(users)) !== null);
+} while ((match = regexpNames.exec(users)) !== null);
 
 // Hellow 李 雷
 // Hellow 韩 梅梅
 ```
 
-> **备注：** 并不是所有的浏览器都支持这个功能; 参考兼容表： [compatibility table](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#Browser_compatibility).
+## 参见
 
-## 另请参阅
+- [正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
 
-- [正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
-
-  - [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
-  - [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
-  - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
-  - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
+  - [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+  - [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+  - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+  - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
 
 - [正则构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

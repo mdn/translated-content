@@ -1,6 +1,6 @@
 ---
 title: CSS Fonts
-slug: Web/CSS/CSS_Fonts
+slug: Web/CSS/CSS_fonts
 ---
 
 {{CSSRef}}
@@ -15,7 +15,7 @@ slug: Web/CSS/CSS_Fonts
 p {
   width: 600px;
   margin: 0 auto;
-  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
   font-style: italic;
   font-weight: 100;
   font-variant-ligatures: normal;

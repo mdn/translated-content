@@ -60,9 +60,13 @@ min-width: unset;
 ### 要素の最小幅を設定
 
 ```css
-table { min-width: 75%; }
+table {
+  min-width: 75%;
+}
 
-form { min-width: 0; }
+form {
+  min-width: 0;
+}
 ```
 
 ## 仕様書
@@ -76,4 +80,4 @@ form { min-width: 0; }
 ## 関連情報
 
 - {{Cssxref("width")}}, {{Cssxref("max-width")}}
-- [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{Cssxref("box-sizing")}}
+- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{Cssxref("box-sizing")}}

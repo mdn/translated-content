@@ -1,5 +1,5 @@
 ---
-title: '::-moz-color-swatch'
+title: "::-moz-color-swatch"
 slug: Web/CSS/::-moz-color-swatch
 ---
 
@@ -24,7 +24,7 @@ El **`::-moz-color-swatch`** [pdseudo-elemento CSS](/es/docs/Web/CSS) es una [ex
 ### CSS
 
 ```css
-input[type=color]::-moz-color-swatch {
+input[type="color"]::-moz-color-swatch {
   border-radius: 10px;
   border-style: none;
 }
@@ -38,9 +38,9 @@ input[type=color]::-moz-color-swatch {
 
 No es parte de ninguna especificacion. Es un pseudo-elemento patentado específicamente para Gecko.
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.-moz-color-swatch")}}
+{{Compat}}
 
 ## Ver tambien
 

@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: test for equality (==) mistyped as assignment (=)?'
+title: "SyntaxError: test for equality (==) mistyped as assignment (=)?"
 slug: Web/JavaScript/Reference/Errors/Equal_as_assign
 ---
 
@@ -25,7 +25,7 @@ Warning: SyntaxError: test for equality (==) mistyped as assignment (=)?
 
 不建议在条件表达式中（例如 [`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)）使用简单赋值语句，因为在扫视代码的时候赋值操作与相等判定容易产生混淆。例如，不要使用以下写法：
 
-```js example-bad
+```js-nolint example-bad
 if (x = y) {
   // do the right thing
 }

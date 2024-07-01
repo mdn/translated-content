@@ -1,8 +1,9 @@
 ---
-title: WritableStreamDefaultWriter.closed
+title: "WritableStreamDefaultWriter: closed プロパティ"
+short-title: closed
 slug: Web/API/WritableStreamDefaultWriter/closed
 l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Streams")}}
@@ -16,19 +17,21 @@ l10n:
 ## 例
 
 ```js
-const writableStream = new WritableStream({
-  start(controller) {
+const writableStream = new WritableStream(
+  {
+    start(controller) {},
+    write(chunk, controller) {
+      // ...
+    },
+    close(controller) {
+      // ...
+    },
+    abort(err) {
+      // ...
+    },
   },
-  write(chunk, controller) {
-    // ...
-  },
-  close(controller) {
-    // ...
-  },
-  abort(err) {
-    // ...
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
 // ...
 
@@ -38,8 +41,8 @@ const writer = writableStream.getWriter();
 
 // ストリームが閉じているかどうかを確認します
 writer.closed.then(() => {
-  console.log('writer closed');
-})
+  console.log("writer closed");
+});
 ```
 
 ## 仕様書

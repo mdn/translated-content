@@ -9,7 +9,7 @@ slug: Web/API/Request/arrayBuffer
 
 ## 语法
 
-```js
+```js-nolint
 arrayBuffer()
 ```
 
@@ -26,12 +26,12 @@ arrayBuffer()
 ```js
 const myArray = new Uint8Array(10);
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: myArray
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: myArray,
 });
 
-request.arrayBuffer().then(function(buffer) {
+request.arrayBuffer().then(function (buffer) {
   // do something with the buffer sent in the request
 });
 ```

@@ -1,15 +1,9 @@
 ---
 title: Adobe Flash
 slug: Glossary/Adobe_Flash
-tags:
-  - Adobe
-  - Написание скриптов
-  - Flash
-  - Глоссарий
-  - Инфраструктура
-translation_of: Glossary/Adobe_Flash
-original_slug: Глоссарий/Adobe-Flash
 ---
+
+{{GlossarySidebar}}
 
 Flash — устаревшая технология, разработанная Adobe, для создания веб-приложений с богатой функциональностью, просмотра мультимедиа контента и потокового медиа. Для использования Flash необходимо установить соответствующий плагин в ваш {{Glossary("Browser","браузер")}}.
 
@@ -19,8 +13,4 @@ Flash — устаревшая технология, разработанная 
 4. [Ruffle, свободная реализация](https://ruffle.rs)
 5. [Глоссарий](/ru/docs/Glossary)
 
-    1. {{Glossary("Browser", "браузер")}}
-
-6. Статья на Wikipedia
-
-    1. {{Interwiki("wikipedia", "Adobe Flash")}}
+   1. {{Glossary("Browser", "браузер")}}

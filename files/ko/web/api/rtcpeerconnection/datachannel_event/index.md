@@ -1,8 +1,8 @@
 ---
 title: RTCPeerConnection.ondatachannel
 slug: Web/API/RTCPeerConnection/datachannel_event
-original_slug: Web/API/RTCPeerConnection/ondatachannel
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCPeerConnection.ondatachannel`** 속성은 {{domxref("RTCPeerConnection")}}에서 발생하는 {{event("datachannel")}} 이벤트에 의해 호출되는 {{event("Event_handlers", "event handler")}}입니다. 이 속성에는 함수를 정의하게됩니다. {{domxref("RTCDataChannelEvent")}}의 한 종류인 이 이벤트는 원격 유저가 {{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}}를 호출해서 연결에 {{domxref("RTCDataChannel")}}가 추가되었을 때, 전달됩니다.
@@ -22,10 +22,10 @@ RTCPeerConnection.ondatachannel = function;
 ## 예시
 
 ```js
-pc.ondatachannel = function(ev) {
-  console.log('Data channel is created!');
-  ev.channel.onopen = function() {
-    console.log('Data channel is open and ready to be used.');
+pc.ondatachannel = function (ev) {
+  console.log("Data channel is created!");
+  ev.channel.onopen = function () {
+    console.log("Data channel is open and ready to be used.");
   };
 };
 ```

@@ -1,33 +1,35 @@
 ---
-title: font-face-name
+title: <font-face-name>
 slug: Web/SVG/Element/font-face-name
+l10n:
+  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-{{SVGRef}}
+{{SVGRef}}{{deprecated_header}}
 
-`font-face-name`元素指向本地安装的字体副本，用字体名称识别。
+**`<font-face-name>`** 元素通过字体名称标识并指向本地安装的该字体副本。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
-## 示例
-
 ## 属性
 
-### 全局属性
-
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-
-### 专有属性
-
-- {{ SVGATTR("name") }}
+- {{SVGATTR("name")}} {{Deprecated_Inline}}
 
 ## DOM 接口
 
-该对象实现了[`SVGFontFaceNameElement`](/zh-CN/DOM/SVGFontFaceNameElement)接口。
+此元素实现了 {{domxref("SVGFontFaceNameElement")}} 接口。
 
-## 相关内容
+## 规范
 
-- {{ SVGElement("font-face-src") }}
-- [SVG 教程：SVG 字体](/zh-CN/SVG/Tutorial/SVG_fonts)
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{SVGElement("font-face-src")}}
+- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorial/SVG_fonts)

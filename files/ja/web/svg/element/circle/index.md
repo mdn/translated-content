@@ -17,7 +17,7 @@ slug: Web/SVG/Element/circle
 
 - [条件処理属性](/ja/SVG/Attribute#Conditional_processing_attributes)
 - [コア属性](/ja/SVG/Attribute#Core_attributes)
-- [グラフィカルイベント属性](/ja/SVG/Attribute#Graphical_event_attributes)
+- [グラフィックイベント属性](/ja/SVG/Attribute#Graphical_event_attributes)
 - [プレゼンテーション属性](/ja/SVG/Attribute#Presentation_attributes)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
@@ -40,7 +40,7 @@ slug: Web/SVG/Element/circle
 
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="100"/>
+  <circle cx="100" cy="100" r="100" />
 </svg>
 ```
 
@@ -54,7 +54,7 @@ slug: Web/SVG/Element/circle
 
 ## ブラウザ実装状況
 
-{{Compat("svg.elements.circle")}}
+{{Compat}}
 
 ## 関連情報
 

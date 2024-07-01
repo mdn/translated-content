@@ -1,11 +1,39 @@
 ---
-title: <noscript>
+title: "<noscript>: スクリプト無し要素"
 slug: Web/HTML/Element/noscript
+l10n:
+  sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<noscript>` 要素**は、このページ上のスクリプトの種類に対応していない場合や、スクリプトの実行がブラウザーで無効にされている場合に表示する HTML の部分を定義します。
+**`<noscript>`** は [HTML](/ja/docs/Web/HTML) の要素で、ブラウザーがこのページ上のスクリプトの種類に対応していない場合や、スクリプトの実行が無効にされている場合に表示する HTML の部分を定義します。
+
+## 属性
+
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+
+## 例
+
+```html
+<noscript>
+  <!-- 外部ファイルにリンクするアンカー -->
+  <a href="https://www.mozilla.org/">外部リンク</a>
+</noscript>
+<p>ロック！！</p>
+```
+
+### スクリプトが有効になっている場合の表示例
+
+ロック！！
+
+### スクリプトが無効になっている場合の表示例
+
+[外部リンク](https://www.mozilla.org/)
+
+ロック！！
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
@@ -27,12 +55,12 @@ slug: Web/HTML/Element/noscript
       <th scope="row">許可されている内容</th>
       <td>
         スクリプトの実行が無効かつ {{HTMLElement("head")}}
-        要素の子孫である場合: 任意の順序で、0個以上の
+        要素の子孫である場合: 任意の順序で、0 個以上の
         {{HTMLElement("link")}}
-        要素、0個以上の{{HTMLElement("style")}} 要素、0個以上の
+        要素、0 個以上の{{HTMLElement("style")}} 要素、0 個以上の
         {{HTMLElement("meta")}} 要素。<br />スクリプトの実行が無効かつ
         {{HTMLElement("head")}} 要素の子孫ではない場合: 任意の<a
-          href="/ja/docs/Web/Guide/HTML/Content_categories#透過的コンテンツ"
+          href="/ja/docs/Web/HTML/Content_categories#透過的コンテンツ"
           >透過的コンテンツ</a
         >、ただし
         <code>&#x3C;noscript></code>
@@ -42,7 +70,7 @@ slug: Web/HTML/Element/noscript
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
@@ -76,34 +104,10 @@ slug: Web/HTML/Element/noscript
   </tbody>
 </table>
 
-## 属性
-
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
-
-## 例
-
-```html
-<noscript>
-  <!-- 外部ファイルにリンクするアンカー -->
-  <a href="https://www.mozilla.com/">外部リンク</a>
-</noscript>
-<p>ロック！！</p>
-```
-
-### スクリプトが有効になっている場合の表示例
-
-ロック！！
-
-### スクリプトが無効になっている場合の表示例
-
-[外部リンク](https://www.mozilla.com/)
-
-ロック！！
-
 ## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.noscript")}}
+{{Compat}}

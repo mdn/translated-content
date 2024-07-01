@@ -21,8 +21,7 @@ slug: Web/API/MediaSource
     子集的对象—即提供当前被选中的视频轨（video track），启用的音频轨（audio tracks）以及显示/隐藏的字幕轨（text tracks）的对象列表。
 - {{domxref("MediaSource.readyState")}} {{readonlyInline}}
 
-  - : `返回一个包含当前 MediaSource`状态的集合，即使它当前没有附着到一个 media 元素（`closed`），或者已附着并准备接收{{domxref("SourceBuffer")}} 对象
-（`open`），亦或者已附着但这个流已被{{domxref("MediaSource.endOfStream()")}}关闭（`ended`）。
+  - : 返回一个代表当前 `MediaSource` 状态的枚举值，即当前是否未连接到媒体元素（`closed`），是否已连接并准备好接收 {{domxref("SourceBuffer")}} 对象（`open`），或者是否已连接但已通过 {{domxref("MediaSource.endOfStream()")}} 结束媒体流（`ended`）。
 
 - {{domxref("MediaSource.duration")}}
   - : 获取和设置当前正在推流媒体的持续时间。
@@ -48,46 +47,46 @@ _从父接口{{domxref("EventTarget")}}上继承而来。_
 这个例子尽可能快地逐块加载视频，并在加载好后立刻播放。以下片段基于 Nick Desaulniers 编写的一个简单示例（[查看完整的在线演示](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html)，或者[下载源代码](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)进行进一步研究）。
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-const assetURL = 'frag_bunny.mp4';
+const assetURL = "frag_bunny.mp4";
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
+if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
   const mediaSource = new MediaSource();
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
-  mediaSource.addEventListener('sourceopen', sourceOpen);
+  mediaSource.addEventListener("sourceopen", sourceOpen);
 } else {
-  console.error('Unsupported MIME type or codec: ', mimeCodec);
+  console.error("Unsupported MIME type or codec: ", mimeCodec);
 }
 
-function sourceOpen (_) {
+function sourceOpen(_) {
   //console.log(this.readyState); // open
   const mediaSource = this;
   const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, function (buf) {
-    sourceBuffer.addEventListener('updateend', function (_) {
+    sourceBuffer.addEventListener("updateend", function (_) {
       mediaSource.endOfStream();
       video.play();
       //console.log(mediaSource.readyState); // ended
     });
     sourceBuffer.appendBuffer(buf);
   });
-};
+}
 
-function fetchAB (url, cb) {
+function fetchAB(url, cb) {
   console.log(url);
-  const xhr = new XMLHttpRequest;
-  xhr.open('get', url);
-  xhr.responseType = 'arraybuffer';
+  const xhr = new XMLHttpRequest();
+  xhr.open("get", url);
+  xhr.responseType = "arraybuffer";
   xhr.onload = function () {
     cb(xhr.response);
   };
   xhr.send();
-};
+}
 ```
 
 ## 规范

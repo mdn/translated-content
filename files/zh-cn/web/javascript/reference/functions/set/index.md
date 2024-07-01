@@ -5,15 +5,15 @@ slug: Web/JavaScript/Reference/Functions/set
 
 {{jsSidebar("Functions")}}
 
-当尝试设置属性时，**`set`**语法将对象属性绑定到要调用的函数。
+当尝试设置属性时，**`set`** 语法将对象属性绑定到要调用的函数。它还可以在[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)中应用。
 
 {{EmbedInteractiveExample("pages/js/functions-setter.html")}}
 
 ## 语法
 
-```plain
-{set prop(val) { . . . }}
-{set [expression](val) { . . . }}
+```js-nolint
+{ set prop(val) { /* … */ } }
+{ set [expression](val) { /* … */ } }
 ```
 
 ### 参数
@@ -47,13 +47,13 @@ const language = {
   set current(name) {
     this.log.push(name);
   },
-  log: []
-}
+  log: [],
+};
 
-language.current = 'EN';
+language.current = "EN";
 console.log(language.log); // ['EN']
 
-language.current = 'FA';
+language.current = "FA";
 console.log(language.log); // ['EN', 'FA']
 ```
 
@@ -72,12 +72,16 @@ delete language.current;
 我们可以随时使用 {{jsxref("Object.defineProperty()")}} 给一个已经存在的对象添加一个 setter。
 
 ```js
-const o = { a:0 };
+const o = { a: 0 };
 
-Object.defineProperty(o, "b", { set: function (x) { this.a = x / 2; } });
+Object.defineProperty(o, "b", {
+  set: function (x) {
+    this.a = x / 2;
+  },
+});
 
 o.b = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
-console.log(o.a) // 5
+console.log(o.a); // 5
 ```
 
 ### 使用计算属性名
@@ -87,11 +91,13 @@ const expr = "foo";
 
 const obj = {
   baz: "bar",
-  set [expr](v) { this.baz = v; }
+  set [expr](v) {
+    this.baz = v;
+  },
 };
 
 console.log(obj.baz); // "bar"
-obj.foo = "baz";      // run the setter
+obj.foo = "baz"; // run the setter
 console.log(obj.baz); // "baz"
 ```
 
@@ -103,11 +109,12 @@ console.log(obj.baz); // "baz"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Defining Getters and Setters](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) in JavaScript Guide
+- JavaScript 指南中[定义 Getter 和 Setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#定义_getter_与_setter) 一文
+- [不兼容的 ES5 变化：字面量的 getter 和 setter 函数现在必须正好有零或一个参数](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)

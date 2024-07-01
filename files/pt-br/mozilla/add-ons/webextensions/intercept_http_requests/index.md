@@ -28,10 +28,7 @@ Crie um novo diretório chamado "requests". Neste diretório, crie um arquivo ch
   "name": "webRequest-demo",
   "version": "1.0",
 
-  "permissions": [
-    "webRequest",
-    "<all_urls>"
-  ],
+  "permissions": ["webRequest", "<all_urls>"],
 
   "background": {
     "scripts": ["background.js"]
@@ -46,10 +43,9 @@ function logURL(requestDetails) {
   console.log("Loading: " + requestDetails.url);
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  logURL,
-  {urls: ["<all_urls>"]}
-);
+browser.webRequest.onBeforeRequest.addListener(logURL, {
+  urls: ["<all_urls>"],
+});
 ```
 
 Aqui vamos usar {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} para chamar a função `logURL()` antes do inicio da requisição. A função `logURL()` guarda a URL da requisição para o objeto event e efetua log no console do navegador. O [padrão](/pt-BR/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]}` significa que iremos interceptar as requisições HTTP para todas URLs.
@@ -64,7 +60,6 @@ Agora vamos usar o `webRequest` para redirecionar requisições HTTP. Primeiro, 
 
 ```json
 {
-
   "description": "Demonstrating webRequests",
   "manifest_version": 2,
   "name": "webRequest-demo",
@@ -80,7 +75,6 @@ Agora vamos usar o `webRequest` para redirecionar requisições HTTP. Primeiro, 
   "background": {
     "scripts": ["background.js"]
   }
-
 }
 ```
 
@@ -94,14 +88,15 @@ var pattern = "https://mdn.mozillademos.org/*";
 function redirect(requestDetails) {
   console.log("Redirecting: " + requestDetails.url);
   return {
-    redirectUrl: "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif"
+    redirectUrl:
+      "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif",
   };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   redirect,
-  {urls:[pattern], types:["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 
@@ -126,21 +121,22 @@ Modifique o "background.js" com este código:
 ```js
 var targetPage = "http://useragentstring.com/*";
 
-var ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+var ua =
+  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 function rewriteUserAgentHeader(e) {
-  e.requestHeaders.forEach(function(header){
+  e.requestHeaders.forEach(function (header) {
     if (header.name.toLowerCase() == "user-agent") {
       header.value = ua;
     }
   });
-  return {requestHeaders: e.requestHeaders};
+  return { requestHeaders: e.requestHeaders };
 }
 
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeader,
-  {urls: [targetPage]},
-  ["blocking", "requestHeaders"]
+  { urls: [targetPage] },
+  ["blocking", "requestHeaders"],
 );
 ```
 

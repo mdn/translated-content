@@ -1,14 +1,15 @@
 ---
 title: 屬性的刪除
 slug: Web/JavaScript/Reference/Operators/delete
-original_slug: Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/屬性的刪除
 ---
+
+{{jsSidebar("Operators")}}
 
 你可以使用 `delete` 運算子移除屬性。下面的代碼示範如何移除屬性︰
 
 ```js
 // 建立新的物件 myobj，以及兩個屬性 a 和 b。
-myobj = new Object;
+myobj = new Object();
 myobj.a = 5;
 myobj.b = 12;
 

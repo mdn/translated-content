@@ -1,8 +1,8 @@
 ---
 title: ArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 ---
+
 {{JSRef}}
 
 Метод **`slice()`** вернёт новый `ArrayBuffer`, содержимое которого, будет копией содержимого, содержащегося в исходом ArrayBuffer, начиная с begin (включительно), и до end(не включая).
@@ -40,18 +40,14 @@ var buf1 = new ArrayBuffer(8);
 var buf2 = buf1.slice(0);
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                            | Status                           | Comment                                 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------- |
-| {{SpecName('Typed Array')}}                                                                                     | {{Spec2('Typed Array')}} | Superseded by EMCAScript 6.             |
-| {{SpecName('ES6', '#sec-arraybuffer.prototype.slice', 'ArrayBuffer.prototype.slice')}}     | {{Spec2('ES6')}}             | Initial definition in an ECMA standard. |
-| {{SpecName('ESDraft', '#sec-arraybuffer.prototype.slice', 'ArrayBuffer.prototype.slice')}} | {{Spec2('ESDraft')}}     |                                         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("ArrayBuffer")}}

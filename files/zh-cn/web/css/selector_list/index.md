@@ -44,7 +44,12 @@ div {
 此示例显示了将选择器编组进一个以逗号分隔的单行列表。
 
 ```css
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: helvetica;
 }
 ```
@@ -85,7 +90,9 @@ h3 {
 ```
 
 ```css
-h1, h2:invalid-pseudo, h3 {
+h1,
+h2:invalid-pseudo,
+h3 {
   font-family: sans-serif;
 }
 ```
@@ -120,7 +127,7 @@ h3 {
 
 ### 可容错相对选择器列表
 
-可容错相对选择器列表类似于[可容错选择器列表](#可容错选择器列表)；它只是将列表的组成部分按[相对选择器](/zh-CN/docs/Web/CSS/CSS_Selectors#相对选择器)来解析，以显式或隐式的组合器开头。
+可容错相对选择器列表类似于[可容错选择器列表](#可容错选择器列表)；它只是将列表的组成部分按[相对选择器](/zh-CN/docs/Web/CSS/CSS_selectors#相对选择器)来解析，以显式或隐式的组合器开头。
 
 ```css
 h2:has(+ p, > ul::after, + ul.red) {
@@ -141,4 +148,4 @@ h2:has(+ p, > ul::after, + ul.red) {
 ## 参见
 
 - 伪类 [`:is()`](/zh-CN/docs/Web/CSS/:is)、[`:where()`](/zh-CN/docs/Web/CSS/:where)、[`:not()`](/zh-CN/docs/Web/CSS/:not) 和 [`:has()`](/zh-CN/docs/Web/CSS/:has) 接受可容错选择器列表。
-- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_Selectors)
+- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)

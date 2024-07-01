@@ -1,15 +1,6 @@
 ---
 title: Delay
 slug: Web/API/KeyframeEffect/KeyframeEffect
-tags:
-  - API
-  - Animation
-  - AnimationEffectTimingProperties
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/API/EffectTiming/delay
-original_slug: Web/API/EffectTiming/delay
 ---
 
 {{SeeCompatTable}}{{APIRef("Web Animations")}}
@@ -22,7 +13,7 @@ La propriété **`delay`** est un dictionnaire pour {{domxref("AnimationEffectTi
 
 ```js
 var timingProperties = {
-  delay: delayInMilliseconds
+  delay: delayInMilliseconds,
 };
 
 timingProperties.delay = delayInMilliseconds;
@@ -39,22 +30,19 @@ Dans l'exemple _[Pool of Tears](https://codepen.io/rachelnabors/pen/EPJdJx?edito
 ```js
 // Générateur de valeurs plus
 // ou moins aléatoires
-var getRandomMsRange = function(min, max) {
+var getRandomMsRange = function (min, max) {
   return Math.random() * (max - min) + min;
-}
+};
 
 // On parcourt l'ensemble des larmes
-tears.forEach(function(el) {
-
+tears.forEach(function (el) {
   // On anime chacune des larmes
-  el.animate(
-    tearsFalling,
-    {
-      delay: getRandomMsRange(-1000, 1000), // aléatoire pour chaque larme
-      duration: getRandomMsRange(2000, 6000), // aléatoire pour chaque larme
-      iterations: Infinity,
-      easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)"
-    });
+  el.animate(tearsFalling, {
+    delay: getRandomMsRange(-1000, 1000), // aléatoire pour chaque larme
+    duration: getRandomMsRange(2000, 6000), // aléatoire pour chaque larme
+    iterations: Infinity,
+    easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)",
+  });
 });
 ```
 

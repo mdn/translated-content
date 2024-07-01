@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 ## 구문
 
 ```js
-    ArrayBuffer.isView(value)
+ArrayBuffer.isView(value);
 ```
 
 ### 매개변수
@@ -27,15 +27,15 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 ## 예제
 
 ```js
-ArrayBuffer.isView();                    // false
-ArrayBuffer.isView([]);                  // false
-ArrayBuffer.isView({});                  // false
-ArrayBuffer.isView(null);                // false
-ArrayBuffer.isView(undefined);           // false
+ArrayBuffer.isView(); // false
+ArrayBuffer.isView([]); // false
+ArrayBuffer.isView({}); // false
+ArrayBuffer.isView(null); // false
+ArrayBuffer.isView(undefined); // false
 ArrayBuffer.isView(new ArrayBuffer(10)); // false
 
-ArrayBuffer.isView(new Uint8Array());    // true
-ArrayBuffer.isView(new Float32Array());  // true
+ArrayBuffer.isView(new Uint8Array()); // true
+ArrayBuffer.isView(new Float32Array()); // true
 ArrayBuffer.isView(new Int8Array(10).subarray(0, 3)); // true
 
 const buffer = new ArrayBuffer(2);

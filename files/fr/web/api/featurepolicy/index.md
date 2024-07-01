@@ -1,19 +1,6 @@
 ---
 title: FeaturePolicy
 slug: Web/API/FeaturePolicy
-tags:
-  - API
-  - Feature Policy
-  - Feature-Policy
-  - FeaturePolicy
-  - Interface
-  - Permissions
-  - Privileges
-  - Reference
-  - access
-  - accès
-  - delegation
-translation_of: Web/API/FeaturePolicy
 ---
 
 {{APIRef("Feature Policy")}}

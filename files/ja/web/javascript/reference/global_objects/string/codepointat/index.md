@@ -1,112 +1,83 @@
 ---
 title: String.prototype.codePointAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
+l10n:
+  sourceCommit: a49d60648404407784b04ff5ff7e16a6a8d1ac25
 ---
 
 {{JSRef}}
 
-**`codePointAt()`** メソッドは、 Unicode コードポイント値である負ではない整数を返します。
+**`codePointAt()`** は {{jsxref("String")}} のメソッドで、指定されたインデックスから始まる文字の Unicode コードポイント値である非負の整数を返します。インデックスは Unicode コードポイントではなく、UTF-16 コード単位に基づくことに注意してください。
 
 {{EmbedInteractiveExample("pages/js/string-codepointat.html","shorter")}}
 
 ## 構文
 
-```
-str.codePointAt(pos)
+```js-nolint
+codePointAt(index)
 ```
 
 ### 引数
 
-- `pos`
-  - : コードポイント値を返す `str` の中の要素の位置です。
+- `index`
+  - : 返す文字の 0 基点のインデックスです。[整数に変換され](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)、`undefined` は 0 に変換されます。
 
 ### 返値
 
-与えられた `pos` の位置にあるコードポイント値を表す数値です。 `pos` の位置に要素がない場合は {{jsxref("undefined")}} を返します。
+指定された位置 `index` にある文字のコードポイント値を表す非負の整数値です。
+
+- `index` が `0` – `str.length - 1` の範囲外であれば、`codePointAt()` は {{jsxref("undefined")}} を返します。
+- `index` の位置の要素が UTF-16 高サロゲートであった場合、そのコードポイントのサロゲートペアを返します。
+- `index` の位置の要素が UTF-16 低サロゲートであった場合、低サロゲートコードポイントのみを返します。
 
 ## 解説
 
-指定された位置に要素が存在しない場合は {{jsxref("undefined")}} を返します。 `pos` の位置から UTF-16 サロゲートペアが始まらない場合は、 `pos` の位置のコードユニットを返します。
+文字列の中の文字は、左から右に向けてインデックス付けされています。最初の文字の添字は `0` であり、最後の文字の添字は `str` という名前の文字列であれば `str.length - 1` です。
+
+Unicode のコードポイントは `0` から `1114111` (`0x10FFFF`) までの範囲です。UTF-16 では、それぞれの文字列のインデックスは `0` ～ `65536` のコード単位です。上位のコードポイントは 16 ビットのサロゲート擬似文字のペアによって表されます。したがって、`codePointAt()` は文字列の 2 つのインデックスにまたがるコードポイントを返す可能性があります。Unicode に関する情報は[UTF-16 文字、Unicode コードポイント、書記素クラスター](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)を参照してください。
 
 ## 例
 
 ### codePointAt() の使用
 
 ```js
-'ABC'.codePointAt(1)           // 66
-'\uD800\uDC00'.codePointAt(0)  // 65536
+"ABC".codePointAt(0); // 65
+"ABC".codePointAt(0).toString(16); // 41
 
-'XYZ'.codePointAt(42)          // undefined
+"😍".codePointAt(0); // 128525
+"\ud83d\ude0d".codePointAt(0); // 128525
+"\ud83d\ude0d".codePointAt(0).toString(16); // 1f60d
+
+"😍".codePointAt(1); // 56845
+"\ud83d\ude0d".codePointAt(1); // 56845
+"\ud83d\ude0d".codePointAt(1).toString(16); // de0d
+
+"ABC".codePointAt(42); // undefined
 ```
 
 ### codePointAt() の繰り返し
 
-```js
-for (let codePoint of '\ud83d\udc0e\ud83d\udc71\u2764') {
-   console.log(codePoint.codePointAt(0).toString(16))
+要素が UTF-16 の低サロゲートである `index` へのインデックス付けは、低サロゲートのみを返すので、文字列のインデックスをループに使わない方がよいでしょう。
+
+```js example-bad
+const str = "\ud83d\udc0e\ud83d\udc71\u2764";
+
+for (let i = 0; i < str.length; i++) {
+  console.log(str.codePointAt(i).toString(16));
 }
-// '1f40e', '1f471', '2764'
+// '1f40e', 'dc0e', '1f471', 'dc71', '2764'
 ```
 
-## ポリフィル
-
-次のプログラムは、 ECMAScript 2015 で定義された `codePointAt()` をネイティブで対応していないブラウザーで利用できるよう String を拡張します。
+代わりに、[`for...of`](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 文や[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用してください。どちらも文字列の [`@@iterator`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) を呼び出し、コードポイント単位で反復処理をします。それから、`codePointAt(0)` でそれぞれの要素のコードポイントを取得してください。
 
 ```js
-/*! https://mths.be/codepointat v0.2.0 by @mathias */
-if (!String.prototype.codePointAt) {
-  (function() {
-    'use strict'; // needed to support `apply`/`call` with `undefined`/`null`
-    var defineProperty = (function() {
-      // IE 8 only supports `Object.defineProperty` on DOM elements
-      try {
-        var object = {};
-        var $defineProperty = Object.defineProperty;
-        var result = $defineProperty(object, object, object) && $defineProperty;
-      } catch(error) {}
-      return result;
-    }());
-    var codePointAt = function(position) {
-      if (this == null) {
-        throw TypeError();
-      }
-      var string = String(this);
-      var size = string.length;
-      // `ToInteger`
-      var index = position ? Number(position) : 0;
-      if (index != index) { // better `isNaN`
-        index = 0;
-      }
-      // Account for out-of-bounds indices:
-      if (index < 0 || index >= size) {
-        return undefined;
-      }
-      // Get the first code unit
-      var first = string.charCodeAt(index);
-      var second;
-      if ( // check if it’s the start of a surrogate pair
-        first >= 0xD800 && first <= 0xDBFF && // high surrogate
-        size > index + 1 // there is a next code unit
-      ) {
-        second = string.charCodeAt(index + 1);
-        if (second >= 0xDC00 && second <= 0xDFFF) { // low surrogate
-          // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
-          return (first - 0xD800) * 0x400 + second - 0xDC00 + 0x10000;
-        }
-      }
-      return first;
-    };
-    if (defineProperty) {
-      defineProperty(String.prototype, 'codePointAt', {
-        'value': codePointAt,
-        'configurable': true,
-        'writable': true
-      });
-    } else {
-      String.prototype.codePointAt = codePointAt;
-    }
-  }());
+for (const codePoint of str) {
+  console.log(codePoint.codePointAt(0).toString(16));
 }
+// '1f40e', '1f471', '2764'
+
+[...str].map((cp) => cp.codePointAt(0).toString(16));
+// ['1f40e', '1f471', '2764']
 ```
 
 ## 仕様書
@@ -115,10 +86,11 @@ if (!String.prototype.codePointAt) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.String.codePointAt")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`String.prototype.codePointAt` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.fromCodePoint()")}}
 - {{jsxref("String.fromCharCode()")}}
 - {{jsxref("String.prototype.charCodeAt()")}}

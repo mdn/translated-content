@@ -1,11 +1,6 @@
 ---
-title: '::first-line (:first-line)'
+title: "::first-line (:first-line)"
 slug: Web/CSS/::first-line
-tags:
-  - CSS
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::first-line
 ---
 
 {{CSSRef}}
@@ -63,8 +58,8 @@ p::first-line {
 
 ```html
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-  sed do eiusmod tempor incididunt ut labore.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore.
 </p>
 ```
 
@@ -88,8 +83,8 @@ p::first-line {
 
 ```html
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-  sed do eiusmod tempor incididunt ut labore.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore.
 </p>
 ```
 
@@ -113,8 +108,8 @@ p::first-line {
 
 ```html
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-  sed do eiusmod tempor incididunt ut labore.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore.
 </p>
 ```
 

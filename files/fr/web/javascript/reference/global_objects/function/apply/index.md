@@ -1,13 +1,6 @@
 ---
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
-tags:
-  - Function
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
-original_slug: Web/JavaScript/Reference/Objets_globaux/Function/apply
 ---
 
 {{JSRef}}
@@ -23,7 +16,7 @@ La méthode **`apply()`** appelle une fonction en lui passant une valeur `this` 
 ## Syntaxe
 
 ```js
-fun.apply(thisArg, [argsArray])
+fun.apply(thisArg, [argsArray]);
 ```
 
 ### Paramètres
@@ -66,10 +59,11 @@ Function.prototype.construct = function (aArgs) {
 > **Note :** La méthode {{jsxref("Object.create()")}} utilisée ci-avant est relativement nouvelle. Pour une autre méthode qui utilise les `closure`, on pourra utiliser :
 >
 > ```js
-> Function.prototype.construct = function(aArgs) {
->   var fConstructeur = this, fNouveauConstructeur = function() {
->     fConstructeur.apply(this, aArgs);
->   };
+> Function.prototype.construct = function (aArgs) {
+>   var fConstructeur = this,
+>     fNouveauConstructeur = function () {
+>       fConstructeur.apply(this, aArgs);
+>     };
 >   fNouveauConstructeur.prototype = fConstructeur.prototype;
 >   return new fNouveauConstructeur();
 > };
@@ -78,10 +72,10 @@ Function.prototype.construct = function (aArgs) {
 Exemple d'utilisation :
 
 ```js
-function MonConstructeur () {
-    for (var nProp = 0; nProp < arguments.length; nProp++) {
-        this["propriété" + nProp] = arguments[nProp];
-    }
+function MonConstructeur() {
+  for (var nProp = 0; nProp < arguments.length; nProp++) {
+    this["propriété" + nProp] = arguments[nProp];
+  }
 }
 
 var monTableau = [4, "Coucou monde !", false];
@@ -133,13 +127,11 @@ var max = Math.max.apply(null, nombres);
 var min = Math.min.apply(null, nombres);
 
 /* vs. algorithme trivial avec une boucle */
-max = -Infinity, min = +Infinity;
+(max = -Infinity), (min = +Infinity);
 
 for (var i = 0; i < nombres.length; i++) {
-  if (nombres[i] > max)
-    max = nombres[i];
-  if (nombres[i] < min)
-    min = nombres[i];
+  if (nombres[i] > max) max = nombres[i];
+  if (nombres[i] < min) min = nombres[i];
 }
 ```
 
@@ -151,8 +143,10 @@ function minimumDuTableau(tab) {
   var QUANTUM = 32768;
 
   for (var i = 0, longueur = tab.length; i < len; i += QUANTUM) {
-    var submin = Math.min.apply(null,
-                                tab.slice(i, Math.min(i + QUANTUM, longueur)));
+    var submin = Math.min.apply(
+      null,
+      tab.slice(i, Math.min(i + QUANTUM, longueur)),
+    );
     min = Math.min(submin, min);
   }
 

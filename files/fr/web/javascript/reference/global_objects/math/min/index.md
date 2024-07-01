@@ -1,13 +1,6 @@
 ---
 title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/min
 ---
 
 {{JSRef}}
@@ -46,7 +39,8 @@ Si au moins un des arguments ne peut pas être converti en un nombre, le résult
 Dans cet exemple, on trouve le minimum de x et y et on affecte cette valeur à z :
 
 ```js
-var x = 10, y = -20;
+var x = 10,
+  y = -20;
 var z = Math.min(x, y);
 ```
 

@@ -22,7 +22,7 @@ Reflect.getPrototypeOf(target)
 
 ### 返値
 
-与えられたオブジェクトのプロトタイプです。継承されたプロパティがない場合、{{jsxref("null")}} を返します。
+与えられたオブジェクトのプロトタイプです。継承されたプロパティがない場合、[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返します。
 
 ### 例外
 
@@ -37,28 +37,28 @@ Reflect.getPrototypeOf(target)
 ### Reflect.getPrototypeOf() の使用
 
 ```js
-Reflect.getPrototypeOf({})                  // Object.prototype
-Reflect.getPrototypeOf(Object.prototype)    // null
-Reflect.getPrototypeOf(Object.create(null)) // null
+Reflect.getPrototypeOf({}); // Object.prototype
+Reflect.getPrototypeOf(Object.prototype); // null
+Reflect.getPrototypeOf(Object.create(null)); // null
 ```
 
 ### Object.getPrototypeOf() との比較
 
 ```js
 // Object の結果は同じです
-Object.getPrototypeOf({})   // Object.prototype
-Reflect.getPrototypeOf({})  // Object.prototype
+Object.getPrototypeOf({}); // Object.prototype
+Reflect.getPrototypeOf({}); // Object.prototype
 
 // ES5 上では非Objectの結果は両方とも例外です
-Object.getPrototypeOf('foo')   // Throws TypeError
-Reflect.getPrototypeOf('foo')  // Throws TypeError
+Object.getPrototypeOf("foo"); // Throws TypeError
+Reflect.getPrototypeOf("foo"); // Throws TypeError
 
 // ES2015 上では Reflect のみ例外で、Object は 非Object を Object として扱います
-Object.getPrototypeOf('foo')   // String.prototype
-Reflect.getPrototypeOf('foo')  // Throws TypeError
+Object.getPrototypeOf("foo"); // String.prototype
+Reflect.getPrototypeOf("foo"); // Throws TypeError
 
 // To mimic the Object ES2015 behavior you need to coerce
-Reflect.getPrototypeOf(Object('foo'))  // String.prototype
+Reflect.getPrototypeOf(Object("foo")); // String.prototype
 ```
 
 ## 仕様書
@@ -67,7 +67,7 @@ Reflect.getPrototypeOf(Object('foo'))  // String.prototype
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Reflect.getPrototypeOf")}}
+{{Compat}}
 
 ## 関連情報
 

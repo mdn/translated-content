@@ -1,20 +1,37 @@
 ---
 title: HTMLFormControlsCollection
 slug: Web/API/HTMLFormControlsCollection
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-{{ApiRef}}
+{{APIRef("HTML DOM")}}
 
-HTMLFormControlsCollection は、HTML フォームコントロール要素のコレクションを表すインタフェースです。 {{domxref("HTMLCollection")}} から継承されるプロパティとメソッドの他に、追加メソッドがひとつ提供されます。
+**`HTMLFormControlsCollection`** インターフェイスは、HTML のフォームコントロール要素の集合を表すインターフェイスです。{{domxref("HTMLFormElement")}} インターフェイスの {{domxref("HTMLFormElement.elements", "elements")}} プロパティから返されます。
 
-このインタフェースは {{domxref("HTMLFormElement")}} インタフェースの {{domxref("HTMLFormElement.elements","elements")}} プロパティ及び `HTMLFieldSetElement` インタフェースの `elements` プロパティで用いられます。
+{{domxref("HTMLCollection")}} から継承されるプロパティとメソッドの他に、追加メソッドが一つ提供されます。
 
-## メソッド
+{{InheritanceDiagram}}
 
-| メソッド名 & 引数                                      | 返値   | 説明                                                                                                                                                             |
-| ------------------------------------------------------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `namedItem` ({{domxref("DOMString")}} name 内) | `object` | 指定した name と一致する `name` 属性または `id` 属性を持つコレクション内のノードまたはノードリストを取得。一致するノードが存在しない場合は `null` が取得される。 |
+## インスタンスプロパティ
+
+_このインターフェイスには親である {{domxref("HTMLCollection")}} から継承したプロパティがあります。_
+
+## インスタンスメソッド
+
+_このインターフェイスには親である {{domxref("HTMLCollection")}} から継承したメソッドがあります。_
+
+- {{domxref("HTMLFormControlsCollection.namedItem()")}}
+  - : 集合内の {{domxref("RadioNodeList")}} または {{domxref("Element")}} の `name` または `id` が指定した名前と一致するノード、または一致するノードがない場合は `null` を返します。このバージョンの `namedItem()` は {{domxref("HTMLCollection")}} から継承されたものを隠していることに注意してください。そのメソッドと同様、`collection["value"]` のように文字列で JavaScript の配列の括弧構文を使用すると、 `collection.namedItem("value")` と同等になります。
 
 ## 仕様書
 
-- [HTML 5, Section 2.7.2.3 HTMLFormControlsCollection](http://www.w3.org/TR/html5/common-dom-interfaces.html#htmlformcontrolscollection)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("HTMLCollection")}}, {{domxref("RadioNodeList")}}, {{domxref("HTMLOptionsCollection")}}

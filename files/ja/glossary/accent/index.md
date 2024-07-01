@@ -1,7 +1,9 @@
 ---
 title: accent (強調表示)
-slug: Glossary/accent
+slug: Glossary/Accent
 ---
+
+{{GlossarySidebar}}
 
 **強調表示** は主に明るい色によって、配色内でよりわかりやすく背景色と前景色を引き立たせます。これらは多くのプラットフォームの視覚スタイルに存在します (しかしながら、全てではありません) 。
 

@@ -1,16 +1,6 @@
 ---
-title: '<del> : l''élément de texte supprimé'
+title: "<del> : l'élément de texte supprimé"
 slug: Web/HTML/Element/del
-tags:
-  - Deleted Text
-  - Element
-  - HTML
-  - HTML edits
-  - Reference
-  - Web
-  - del
-translation_of: Web/HTML/Element/del
-browser-compat: html.elements.del
 ---
 
 {{HTMLSidebar}}

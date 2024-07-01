@@ -1,13 +1,9 @@
 ---
 title: value-of
 slug: Web/XSLT/Element/value-of
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/value-of
-original_slug: Web/XSLT/value-of
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:value-of>` évalue une expression XPath, la convertit en chaîne et écrit cette chaîne dans l'arbre de sortie.
 

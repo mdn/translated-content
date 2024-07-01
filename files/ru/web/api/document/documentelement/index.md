@@ -1,16 +1,9 @@
 ---
 title: Document.documentElement
 slug: Web/API/Document/documentElement
-tags:
-  - API,
-  - DOM
-  - Свойство
-  - Ссылка
-  - Только для чтения
-translation_of: Web/API/Document/documentElement
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
 **`Document.documentElement`** - свойство только для чтения, которое возвращает элемент [`Element`](/ru/docs/DOM/element) , который является коренным элементом документа [`document`](/ru/docs/DOM/document) (например элемент `<html>` для HTML документов).
 
@@ -28,8 +21,8 @@ var firstTier = rootElement.childNodes;
 
 // firstTier -переменная объекта NodeList непосредственных потомков корневого элемента
 for (var i = 0; i < firstTier.length; i++) {
-   // что-то делает с каждым прямым потомком корневого элемента
-   // как и firstTier[i]
+  // что-то делает с каждым прямым потомком корневого элемента
+  // как и firstTier[i]
 }
 ```
 
@@ -41,6 +34,10 @@ HTML документ обычно содержит один дочерний у
 
 Поэтому вам стоит использовать `document.documentElement` вместо {{Domxref("document.firstChild")}} для доступа к корневому элементу.
 
-## Спецификация
+## Спецификации
 
-- [DOM Level 2 Core: Document.documentElement](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-87CD092)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

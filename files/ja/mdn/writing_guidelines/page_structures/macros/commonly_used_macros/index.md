@@ -1,9 +1,8 @@
 ---
 title: よく使われるマクロ
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
-original_slug: MDN/Structures/Macros/Commonly-used_macros
 l10n:
-  sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
+  sourceCommit: 614bf89612683e1837c846b7d9485061ebd281a6
 ---
 
 {{MDNSidebar}}
@@ -17,7 +16,7 @@ l10n:
 
 MDN では、リファレンスページや用語集などへのリンクを簡単に作成するためのリンクマクロを多数提供しています。
 
-リンクマクロは、簡潔で翻訳に適しているため、通常の HTML リンクよりも推奨されます。
+リンクマクロは、簡潔で翻訳に適しているため、通常の Markdown リンクよりも推奨されます。
 例えば、マクロを使って作成された用語集やリファレンスのリンクは、翻訳する必要がありません。 他のロケールでは、自動的に正しいバージョンのファイルへリンクされます。
 
 ### 用語集へのリンク
@@ -30,7 +29,7 @@ MDN では、リファレンスページや用語集などへのリンクを簡�
 
 ### リファレンスのページへのリンク
 
-MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）のページに、ロケールに依存しないリンクを張るためのマクロが用意されています。
+MDN の特定の参照領域（JavaScript、CSS、HTML 要素、SVG など）のページに、ロケールに依存しないリンクを張るためのマクロが用意されています。
 
 マクロの使い方は簡単です。
 必要なのは、第一引数にリンクするアイテムの名前を指定することだけです。
@@ -77,20 +76,6 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
       </td>
       <td>
         <code>\{{HTMLElement("select")}}</code> は {{HTMLElement("select")}} になります。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/htmlattrxref.ejs"
-          >HTMLAttrxRef</a>
-      </td>
-      <td>
-        属性名のみを指定した場合は <a href="/ja/docs/Web/HTML/Global_attributes">HTML のグローバル属性の説明</a>。
-        <br />属性名と要素名を指定した場合は、特定の HTML 要素に関連付けられた属性。
-      </td>
-      <td>
-        <code>\{{HTMLAttrxRef("lang")}}</code> は、グローバル属性の説明 {{HTMLAttrxRef("lang")}} にリンクします。<br />
-        <code>\{{HTMLAttrxRef("type","input")}}</code> は（{{HTMLElement("input")}} 要素の） {{htmlattrxref("type","input")}} 属性へのリンクになります。
       </td>
     </tr>
     <tr>
@@ -163,13 +148,6 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
   </tbody>
 </table>
 
-### バグへのリンク
-
-- バグ
-
-  - [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) を使うと、 bugzilla.mozilla.org に登録されているバグへのリンクを簡単に作ることができます。構文は `\{{Bug(123456)}}` です。 {{Bug(123456)}} のようなリンクになります。
-  - [`WebkitBug`](https://github.com/mdn/yari/blob/main/kumascript/macros/WebkitBug.ejs) は WebKit バグのデータベースへのリンクを挿入します。例えば `\{{WebkitBug(31277)}}` は {{WebkitBug(31277)}} を挿入します。
-
 ### 複数のページからなるガイドのためのナビゲーション補助
 
 [`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs)、[`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs)、[`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) は、一連の記事の中でのナビゲーションコントロールを提供します。一方向用のテンプレートでは、 前の または 次の 記事の Wiki 位置を指す 1 つの引数が必要です。 [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) については、前の記事、次の記事を指す 2 つの引数を取ります。最初の引数が前の記事を指し、2 番めの引数が次の記事を指します。
@@ -201,9 +179,9 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
 用法: `\{{Optional_Inline}}` または `\{{ReadOnlyInline}}` です。
 例:
 
-- `isCustomObject`{{ReadOnlyInline}}
+- `isCustomObject` {{ReadOnlyInline}}
   - : `true` の場合、オブジェクトはカスタムオブジェクトであることを示します。
-- `parameterX`{{Optional_Inline}}
+- `parameterX` {{optional_inline}}
   - : ごにょごにょごにょ...
 
 ## 状態と互換性についての表示
@@ -225,6 +203,7 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
 #### 実験的なもの
 
 [`experimental_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/experimental_inline.ejs) は、その API が広く実装されておらず、また将来変更される可能性があることを示すインラインマークを付けます。
+**experimental** の定義の詳細については、[実験的、非推奨、廃止](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)の記事を参照してください。
 
 ##### 構文
 
@@ -239,6 +218,7 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
 #### 非推奨のもの
 
 [`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) はインラインの非推奨 (deprecated) マークを付け、その API が公式には非推奨であり、使用を控えるべきであることを示します。
+**deprecated** の定義の詳細については、[実験的、非推奨、廃止](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)の記事を参照してください。
 
 ##### 構文
 
@@ -250,17 +230,18 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
 
 ### ページまたはセクションのヘッダーを示すインジケーター
 
-これらのテンプレートが示すのは、上記の対応するインラインマークと同じものです。テンプレートはリファレンスページのメインページタイトルの (または、パンくずリストがあるならばその) 直下に置きます。ページ内のセクションをマークアップすることもできます。
+これらのテンプレートが示すのは、上記の対応するインラインマークと同じものです。テンプレートはリファレンスページのメインページタイトルの (または、パンくずリストがあるならばその) 直下に置きます。
+ページ内のセクションをマークアップすることもできます。
 
 - [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs): `\{{Non-standard_Header}}` {{Non-standard_Header}}
 - [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) は[実験的な機能](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)のドキュメントのページに使用してください。
   例: `\{{SeeCompatTable}}` {{SeeCompatTable}}
 - [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
 - [`secureContext_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/secureContext_header.ejs).
-  インターフェイスページ、 API 概要ページ、 API エントリーポイント（例: `navigator.xyz`）などのメインページで使用するべきですが、通常メソッドやプロパティページなどのサブページでは使用するべきではありません。
+  インターフェイスページ、 API 概要ページ、 API エントリーポイント（例: `navigator.xyz`）などのメインページで使用が、通常メソッドやプロパティページなどのサブページでは使用するべきではありません。
   例: `\{{SecureContext_Header}}` {{SecureContext_Header}}
 
-### ウェブワーカーで使用できる機能であることを示す
+#### ウェブワーカーで使用できる機能であることを示す
 
 [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) マクロは、その機能が[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)のコンテキストで有効であることを示すためのローカライズされた注釈ボックスを挿入するのに使われます。
 引数 `notservice` を使用すると、ある機能がサービスワーカー以外のウェブワーカーで動作することを示すことができます。
@@ -276,3 +257,22 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
 
 {{AvailableInWorkers}}
 {{AvailableInWorkers("notservice")}}
+
+## ブラウザーの互換性と仕様書のマクロ
+
+以下のマクロはすべてのリファレンスページに記載されていますが、すべてのページ型でも対応しています。
+
+- `\{{Compat}}` / `\{{Compat(&lt;feature>)}}` / `\{{Compat(&lt;feature>, &lt;depth>)}}`
+
+  - : 引数として渡した機能の [互換性一覧表](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) を生成します。引数が指定されていない場合、フロントマターで `browser-compat` によって定義された機能が既定で指定されます。オプションの depth 引数は、どの程度の深さのサブ機能を表に追加するかを設定します。省略した場合は、既定で 1 となり、BCD から最初のレベルのサブ機能のデータのみが掲載されるという意味になります。
+
+- `\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`
+  - : 引数で指定した機能の仕様を掲載します。引数が渡されなかった場合、掲載される仕様書は、フロントマターに `spec_urls` の値が存在する場合はその値によって定義され、存在しない場合はフロントマターの `browser-compat` によって定義されたブラウザー互換性データに掲載されている仕様によって定義されます。仕様書は外部リンクとしてレンダリングされます。
+
+## 関連情報
+
+- [サイドバーマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
+- [ページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types#ページテンプレート)
+- [ページコンポーネント](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)
+- [機能状態マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status)
+- [マクロの一覧](https://github.com/mdn/yari/tree/main/kumascript/macros) (GitHub)

@@ -19,11 +19,11 @@ L'attribut `value` est une chaîne de caractères (un objet {{domxref("DOMString
 
 ### Définir un groupe de boutons radio
 
-Pour définir un groupe de boutons radio, on leur donne le même nom via l'attribut {{htmlattrxref("name", "input")}}. Une fois qu'on a formé un groupe de boutons radio, on ne pourra sélectionner qu'une seule des options de ce groupes (cliquer sur une option désélectionnera automatiquement l'option précédemment choisie dans ce groupe).
+Pour définir un groupe de boutons radio, on leur donne le même nom via l'attribut [`name`](/fr/docs/Web/HTML/Element/input#name). Une fois qu'on a formé un groupe de boutons radio, on ne pourra sélectionner qu'une seule des options de ce groupes (cliquer sur une option désélectionnera automatiquement l'option précédemment choisie dans ce groupe).
 
 Il est possible d'avoir autant de groupes que nécessaire, il suffit que chaque groupe ait un nom (l'attribut `name`) unique.
 
-Ainsi, si on souhaite utiliser un formulaire afin de demander à l'utilisateur sa méthode de contact préférée, on pourra créer trois boutons radio avec l'attribut `name` qui vaut `contact` et pour lesquels l'attribut {{htmlattrxref("value", "input")}} varie : `email` pour le premier, `telephone` pour le deuxième et `courrier` pour le dernier. Cette valeur et le nom du groupe ne sont pas affichés (ce sera le rôle de l'élément {{HTMLElement("label")}} de fournir un intitulé).
+Ainsi, si on souhaite utiliser un formulaire afin de demander à l'utilisateur sa méthode de contact préférée, on pourra créer trois boutons radio avec l'attribut `name` qui vaut `contact` et pour lesquels l'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) varie : `email` pour le premier, `telephone` pour le deuxième et `courrier` pour le dernier. Cette valeur et le nom du groupe ne sont pas affichés (ce sera le rôle de l'élément {{HTMLElement("label")}} de fournir un intitulé).
 
 Voici le fragment de code HTML correspondant à cet exemple :
 
@@ -31,16 +31,13 @@ Voici le fragment de code HTML correspondant à cet exemple :
 <form>
   <p>Veuillez choisir la meilleure méthode pour vous contacter :</p>
   <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email">
+    <input type="radio" id="contactChoice1" name="contact" value="email" />
     <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="telephone">
+    <input type="radio" id="contactChoice2" name="contact" value="telephone" />
     <label for="contactChoice2">Téléphone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="courrier">
+    <input type="radio" id="contactChoice3" name="contact" value="courrier" />
     <label for="contactChoice3">Courrier</label>
   </div>
   <div>
@@ -49,13 +46,13 @@ Voici le fragment de code HTML correspondant à cet exemple :
 </form>
 ```
 
-On voit ici trois boutons radio dont l'attribut `name` vaut `contact` et dont chacun possède une valeur unique pour l'attribut `value`. Ils possèdent également un identifiant unique ({{domxref("Element.id", "id")}}) qui est utilisé pour rattacher le libellé fourni par l'élément {{HTMLElement("label")}} via l'attribut {{htmlattrxref("for", "label")}}.
+On voit ici trois boutons radio dont l'attribut `name` vaut `contact` et dont chacun possède une valeur unique pour l'attribut `value`. Ils possèdent également un identifiant unique ({{domxref("Element.id", "id")}}) qui est utilisé pour rattacher le libellé fourni par l'élément {{HTMLElement("label")}} via l'attribut [`for`](/fr/docs/Web/HTML/Element/label#for).
 
 Voici le résultat obtenu :
 
 {{EmbedLiveSample('Définir_un_groupe_de_boutons_radio', 600, 130)}}
 
-### La représentation des données d’un groupe de boutons radio
+### La représentation des données d'un groupe de boutons radio
 
 Lorsqu'on envoie le formulaire précédent avec une option sélectionnée, les données du formulaire contiendront une valeur sous la forme `"contact=valeur"`. Ainsi, si l'utilisateur clique sur le bouton radio « Téléphone » et envoie le formulaire, les données du formulaire contiendront `"contact=telephone"`.
 
@@ -71,24 +68,20 @@ Ajoutant un peu de code à notre exemple pour étudier les données générées 
 <form>
   <p>Veuillez choisir la meilleure méthode pour vous contacter :</p>
   <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email">
+    <input type="radio" id="contactChoice1" name="contact" value="email" />
     <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="telephone">
+    <input type="radio" id="contactChoice2" name="contact" value="telephone" />
     <label for="contactChoice2">Téléphone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="courrier">
+    <input type="radio" id="contactChoice3" name="contact" value="courrier" />
     <label for="contactChoice3">Courrier</label>
   </div>
   <div>
     <button type="submit">Envoyer</button>
   </div>
 </form>
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 Ensuite, on ajoute du code [JavaScript](/fr/docs/Web/JavaScript) pour rattacher un gestionnaire d'évènement sur l'évènement [`submit`](/fr/docs/Web/API/HTMLFormElement/submit_event) qui est déclenché lorsque l'utilisateur clique sur le bouton « Envoyer » :
@@ -97,37 +90,41 @@ Ensuite, on ajoute du code [JavaScript](/fr/docs/Web/JavaScript) pour rattacher 
 var form = document.querySelector("form");
 var log = document.querySelector("#log");
 
-form.addEventListener("submit", function(event) {
-  var data = new FormData(form);
-  var output = "";
-  for (const entry of data) {
-    output = entry[0] + "=" + entry[1] + "\r";
-  };
-  log.innerText = output;
-  event.preventDefault();
-}, false);
+form.addEventListener(
+  "submit",
+  function (event) {
+    var data = new FormData(form);
+    var output = "";
+    for (const entry of data) {
+      output = entry[0] + "=" + entry[1] + "\r";
+    }
+    log.innerText = output;
+    event.preventDefault();
+  },
+  false,
+);
 ```
 
 Vous pouvez manipuler cet exemple et voir qu'il n'y a jamais plus 'un résultat pour le groupe `"contact"`.
 
-{{EmbedLiveSample("La_représentation_des_données_d’un_groupe_de_boutons_radio", 600, 130)}}
+{{EmbedLiveSample("La_représentation_des_données_d'un_groupe_de_boutons_radio", 600, 130)}}
 
 ## Attributs supplémentaires
 
 En complément des attributs partagés par l'ensemble des éléments {{HTMLElement("input")}}, les boutons radio peuvent utiliser les attributs suivants :
 
-| Attribut                   | Definition                                                                                                     |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Attribut              | Definition                                                                                                     |
+| --------------------- | -------------------------------------------------------------------------------------------------------------- |
 | [`checked`](#checked) | Un attribut booléen qui indique si le bouton radio est l'élément sélectionné du groupe.                        |
-| [`value`](#value) | Une chaîne à utiliser comme valeur pour le bouton radio lors de l'envoi du formulaire si ce bouton est choisi. |
+| [`value`](#value)     | Une chaîne à utiliser comme valeur pour le bouton radio lors de l'envoi du formulaire si ce bouton est choisi. |
 
-### {{htmlattrdef("checked")}}
+### `checked`
 
 Un attribut booléen qui indique si c'est ce champ radio qui est sélectionné parmi le groupe.
 
-À la différence des autres navigateurs, Firefox conservera [l'état coché dynamique](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un bouton radio au fur et à mesure des chargements de la page. On pourra utiliser l'attribut {{htmlattrxref("autocomplete","input")}} afin de contrôler cette fonctionnalité.
+À la différence des autres navigateurs, Firefox conservera [l'état coché dynamique](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un bouton radio au fur et à mesure des chargements de la page. On pourra utiliser l'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/input#autocomplete) afin de contrôler cette fonctionnalité.
 
-### {{htmlattrdef("value")}}
+### `value`
 
 L'attribut `value` est partagé par l'ensemble des types d'élément {{HTMLElement("input")}}. Dans le cas d'un bouton radio, il a un rôle spécifique et permet d'associer un texte qui sera envoyé avec le formulaire pour représenter la valeur sélectionnée. Si la valeur de `value` n'est pas définie, ce sera la chaîne de caractères `"on"` qui sera envoyée.
 
@@ -143,16 +140,18 @@ Pour qu'un bouton radio soit sélectionné par défaut, on ajoutera l'attribut b
 <form>
   <p>Veuillez choisir la meilleure méthode pour vous contacter :</p>
   <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email" checked>
+    <input
+      type="radio"
+      id="contactChoice1"
+      name="contact"
+      value="email"
+      checked />
     <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="telephone">
+    <input type="radio" id="contactChoice2" name="contact" value="telephone" />
     <label for="contactChoice2">Téléphone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="courrier">
+    <input type="radio" id="contactChoice3" name="contact" value="courrier" />
     <label for="contactChoice3">Courrier</label>
   </div>
   <div>
@@ -186,16 +185,22 @@ L'exemple qui suit est une version légèrement plus détaillée de l'exemple pr
   <fieldset>
     <legend>Veuillez choisir la meilleure méthode pour vous contacter :</legend>
     <div>
-      <input type="radio" id="contactChoice1"
-       name="contact" value="email" checked>
+      <input
+        type="radio"
+        id="contactChoice1"
+        name="contact"
+        value="email"
+        checked />
       <label for="contactChoice1">Email</label>
 
-      <input type="radio" id="contactChoice2"
-       name="contact" value="telephone">
+      <input
+        type="radio"
+        id="contactChoice2"
+        name="contact"
+        value="telephone" />
       <label for="contactChoice2">Téléphone</label>
 
-      <input type="radio" id="contactChoice3"
-       name="contact" value="courrier">
+      <input type="radio" id="contactChoice3" name="contact" value="courrier" />
       <label for="contactChoice3">Courrier</label>
     </div>
     <div>
@@ -293,7 +298,7 @@ De plus, la légende et le bouton d'envoi ont été mis en forme pour avoir un c
     </tr>
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
-      <td>{{htmlattrxref("checked", "input")}}</td>
+      <td><a href="/fr/docs/Web/HTML/Element/input#checked"><code>checked</code></a></td>
     </tr>
     <tr>
       <td><strong>Attributs IDL</strong></td>

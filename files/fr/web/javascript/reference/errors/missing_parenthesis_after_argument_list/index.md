@@ -1,12 +1,6 @@
 ---
-title: 'SyntaxError: missing ) after argument list'
+title: "SyntaxError: missing ) after argument list"
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
-original_slug: Web/JavaScript/Reference/Erreurs/Missing_parenthesis_after_argument_list
 ---
 
 {{jsSidebar("Errors")}}
@@ -52,7 +46,7 @@ console.log('"Java" + "Script" = \"' + 'Java' + 'Script\");
 Dans cet exemple, le moteur JavaScript considère qu'on souhaitait avoir `);` dans la chaîne de caractères et l'ignore. Aussi, le moteur considère que l'appelle à `console.log` n'est pas terminé et qu'il manque une parenthèse fermante. Pour corriger ce problème, on peut rajouter une quote `'` après la chaîne de caractères `"Script"` :
 
 ```js example-good
-console.log('"Java" + "Script" = \"' + 'Java' + 'Script\"');
+console.log('"Java" + "Script" = "' + "Java" + 'Script"');
 // '"Java" + "Script" = "JavaScript"'
 ```
 

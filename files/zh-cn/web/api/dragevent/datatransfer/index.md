@@ -26,13 +26,17 @@ var data = dragEvent.dataTransfer;
 
 ```js
 function process_data(d) {
-   // Process the data ...
+  // Process the data ...
 }
 
-dragTarget.addEventListener("dragend", function(ev) {
-   // Call the drag and drop data processor
-   if (ev.dataTransfer != null) process_data(ev.dataTransfer);
- }, false);
+dragTarget.addEventListener(
+  "dragend",
+  function (ev) {
+    // Call the drag and drop data processor
+    if (ev.dataTransfer != null) process_data(ev.dataTransfer);
+  },
+  false,
+);
 ```
 
 ## 规范

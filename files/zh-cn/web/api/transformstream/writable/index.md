@@ -17,7 +17,7 @@ slug: Web/API/TransformStream/writable
 
 ```js
 const textEncoderStream = new TransformStream();
-console.log(textEncoderStream.writable) // a WritableStream
+console.log(textEncoderStream.writable); // a WritableStream
 ```
 
 ## 规范

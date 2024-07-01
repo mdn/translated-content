@@ -1,38 +1,43 @@
 ---
-title: 伸缩性
+title: 弹性
 slug: Glossary/Flex
+l10n:
+  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
-`flex` 是一个 CSS 的{{cssxref("display")}} 属性中新添加一个值。随着`inline-flex`的使用，它将使它适用的元素成为一个{{glossary("flex container")}}（伸缩容器），而这个元素的每个子元素将成为 {{glossary("flex item")}}（伸缩项目）。伸缩项目将参与到 flex 布局中，所有由 CSS Flexible Box Layout Module（CSS 伸缩盒布局模型）定义的属性都能被它们使用。
+{{GlossarySidebar}}
 
-`flex` 属性是`flex-grow`, `flex-shrink` 和 `flex-basis` 属性的简写。
+`flex` 是一个 CSS 的 {{cssxref("display")}} 属性中新添加一个值。与 `inline-flex` 一起，它将使应用了它的元素变成{{glossary("flex container", "弹性容器")}}，而这个元素的每个子元素将变成{{glossary("flex item", "弹性项目")}}。弹性项目会参与弹性布局，所有由 CSS 弹性盒子布局模块定义的属性都能被它们使用。
 
-此外，`<flex>` 可以作为[弹性长度](/zh-CN/docs/Web/CSS/flex_value)被引用在 CSS Grid（栅格）布局中。
+`flex` 属性是 `flex-grow`、`flex-shrink` 和 `flex-basis` 属性的简写。
 
-## 了解更多
+此外，`<flex>` 可以作为[弹性长度](/zh-CN/docs/Web/CSS/flex_value)在 CSS 网格布局中使用。
+
+## 参见
 
 ### 属性参考
 
-- {{cssxref("align-content")}} 堆栈伸缩行
-- {{cssxref("align-items")}} 侧轴上项目对齐方式
-- {{cssxref("align-self")}} 侧轴上单个项目对齐方式
-- {{cssxref("flex")}} 伸缩性
-- {{cssxref("flex-basis")}} 伸缩 - 基准值
-- {{cssxref("flex-direction")}} 伸缩流方向
-- {{cssxref("flex-flow")}}伸缩流的方向与换行
-- {{cssxref("flex-grow")}}伸缩 - 扩展基数
-- {{cssxref("flex-shrink")}} 伸缩 - 收缩比率
-- {{cssxref("flex-wrap")}} 伸缩 - 换行
-- {{cssxref("justify-content")}} 主轴对齐
-- {{cssxref("order")}} 伸缩 - 顺序
+- {{cssxref("align-content")}}
+- {{cssxref("align-items")}}
+- {{cssxref("align-self")}}
+- {{cssxref("flex")}}
+- {{cssxref("flex-basis")}}
+- {{cssxref("flex-direction")}}
+- {{cssxref("flex-flow")}}
+- {{cssxref("flex-grow")}}
+- {{cssxref("flex-shrink")}}
+- {{cssxref("flex-wrap")}}
+- {{cssxref("justify-content")}}
+- {{cssxref("order")}}
 
 ### 延伸阅读
 
-- _[CSS Flexible Box Layout Module Level 1 Specification](https://www.w3.org/TR/css-flexbox-1/)（CSS 盒布局模型一级规范）_
-- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)（伸缩）_
-- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Relationship of flexbox to other layout methods](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)（伸缩盒子与其他布局方法的关系）_
-- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)（伸缩容器中项的对齐）_
-- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Ordering flex items](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)（伸缩项的顺序）_
-- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Controlling Ratios of flex items along the main axis](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)（控制主轴上伸缩项的比率）_
-- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Mastering wrapping of flex items](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)（掌握如何包装伸缩项）_
-- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Typical use cases of flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)（伸缩盒子的典型用例）_
+- _[CSS 弹性盒布局模型第一版规范](https://www.w3.org/TR/css-flexbox-1/)_
+- CSS 弹性盒子指南：
+  - [弹性盒子的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+  - [弹性盒子与其他布局方法的关系](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
+  - [对齐弹性容器中的弹性项目](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+  - [弹性项目排序](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
+  - [控制主轴上弹性项目的比率](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+  - [掌握弹性项目的包装](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+  - [弹性盒子的典型用例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)

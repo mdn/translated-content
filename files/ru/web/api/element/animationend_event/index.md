@@ -1,11 +1,9 @@
 ---
 title: GlobalEventHandler.onanimationend
 slug: Web/API/Element/animationend_event
-translation_of: Web/API/GlobalEventHandlers/onanimationend
-original_slug: Web/API/GlobalEventHandlers/onanimationend
 ---
 
-{{APIRef("CSS3 Animations")}}
+{{APIRef}}
 
 Обработчик события {{event("animationend")}}. Это событие вызывается когда [CSS-анимация](/ru/docs/Web/CSS/CSS_Animations) достигает конца своего активного периода, который вычисляется как ({{cssxref("animation-duration")}} \* {{cssxref("animation-iteration-count")}}) + {{cssxref("animation-delay")}}.
 
@@ -21,15 +19,9 @@ target.onanimationend = {{jsxref("Function")}}
 
 A {{jsxref ("Function")}} вызывается, когда происходит событие {{event ("animationend")}}, указывающее, что анимация CSS начинается с цели, где целевой объект является HTML-элементом ({{ Domxref ("HTMLElement")}}), документ ({{domxref ("Document")}}) или окно ({{domxref ("Window")}}). Функция получает в качестве входного параметра один параметр: {{domxref ("AnimationEvent")}} объект, описывающий событие, которое произошло.
 
-## Example
+## Спецификации
 
-{{Page("/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart", "Example")}}
-
-## Specification
-
-| Specification                                                                                                        | Status                               | Comment |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('CSS3 Animations','#eventdef-animationevent-animationend','onanimationend')}} | {{Spec2('CSS3 Animations')}} |         |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

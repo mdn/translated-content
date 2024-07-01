@@ -9,7 +9,7 @@ slug: Web/API/HTMLFormElement/requestSubmit
 
 ## 语法
 
-```js
+```js-nolint
 requestSubmit()
 requestSubmit(submitter)
 ```
@@ -31,7 +31,7 @@ requestSubmit(submitter)
 - {{jsxref("TypeError")}}
   - : 如果指定的 `submitter` 不是一个提交按钮则抛出该错误。
 - `NotFoundError` {{domxref("DOMException")}}
-  - : 如果调用 `requestSubmit()` 时指定的 `submitter` 不是表单的成员则抛出该错误。submitter 必须是一个表单元素的后代或者必须具有引用表单的 {{htmlattrxref("form", "input")}} 属性。
+  - : 如果调用 `requestSubmit()` 时指定的 `submitter` 不是表单的成员则抛出该错误。submitter 必须是一个表单元素的后代或者必须具有引用表单的 [`form`](/zh-CN/docs/Web/HTML/Element/input#form) 属性。
 
 ## 使用说明
 

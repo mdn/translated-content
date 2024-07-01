@@ -3,6 +3,8 @@ title: additive-symbols
 slug: Web/CSS/@counter-style/additive-symbols
 ---
 
+{{CSSRef}}
+
 ## Resumen
 
 El descriptor additive-symbols es similar al descriptor {{cssxref('symbols')}}, y permite al usuario especificar símbolos que se usarán para representación de contadores cuando el valor del descriptor {{cssxref('system')}} es _additive_. El descriptor `additive-symbols` define lo que se conoce como tuplas aditivas, cada una de las cuales es un par que contiene un símbolo y su peso como entero no negativo. El sistema aditivo es usado para construir sistemas de [numeración de valores de signos](http://en.wikipedia.org/wiki/Sign-value_notation) como la numeración romana.
@@ -15,8 +17,12 @@ Cuando el valor del descriptor es _cyclic_, _numeric_, _alphabetic_, _symbolic_,
 
 ```css
 additive-symbols: 3 "0";
-additive-symbols: 3 "0", 2 "\2E\20";
-additive-symbols: 3 "0", 2 url(symbol.png);
+additive-symbols:
+  3 "0",
+  2 "\2E\20";
+additive-symbols:
+  3 "0",
+  2 url(symbol.png);
 ```
 
 ### Sintaxis formal
@@ -29,11 +35,11 @@ additive-symbols: 3 "0", 2 url(symbol.png);
 
 ```html
 <ul class="list">
-   <li>One</li>
-   <li>Two</li>
-   <li>Three</li>
-   <li>Four</li>
-   <li>Five</li>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
 </ul>
 ```
 
@@ -57,9 +63,9 @@ additive-symbols: 3 "0", 2 url(symbol.png);
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.counter-style.additive-symbols")}}
+{{Compat}}
 
 ## Véase también
 

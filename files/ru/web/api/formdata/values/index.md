@@ -1,10 +1,11 @@
 ---
 title: FormData.values()
 slug: Web/API/FormData/values
-translation_of: Web/API/FormData/values
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 The **`FormData.values()`** метод возвращает {{jsxref("Iteration_protocols",'iterator')}} позволяя пройтись по всем значениям в этом объекте. Значения - это {{domxref("USVString")}} или {{domxref("Blob")}} объекты.
 
@@ -25,12 +26,12 @@ formData.values();
 ```js
 // Create a test FormData object
 var formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 // Display the values
 for (var value of formData.values()) {
-   console.log(value);
+  console.log(value);
 }
 ```
 
@@ -41,11 +42,11 @@ value1
 value2
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -1,11 +1,24 @@
 ---
 title: inset-inline
 slug: Web/CSS/inset-inline
+l10n:
+  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
 {{CSSRef}}
 
 **`inset-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素におけるインライン方向の先頭および末尾からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}} と {{cssxref("bottom")}}、または {{cssxref("right")}} と {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+
+{{EmbedInteractiveExample("pages/css/inset-inline.html")}}
+
+## 構成要素のプロパティ
+
+このプロパティは、以下の CSS プロパティの一括指定です。
+
+- {{cssxref("inset-inline-end")}}
+- {{cssxref("inset-inline-start")}}
+
+## 構文
 
 ```css
 /* <length> 値 */
@@ -23,17 +36,9 @@ inset-inline: auto;
 inset-inline: inherit;
 inset-inline: initial;
 inset-inline: revert;
+inset-inline: revert-layer;
 inset-inline: unset;
 ```
-
-## 構成要素のプロパティ
-
-このプロパティは以下の CSS プロパティの一括指定です。
-
-- {{cssxref("inset-inline-end")}}
-- {{cssxref("inset-inline-start")}}
-
-## 構文
 
 ### 値
 
@@ -49,9 +54,7 @@ inset-inline: unset;
 
 ## 例
 
-<h3 id="Setting_inline_start_and_end_offsets">インライン方向の先頭と末尾のオフセットの設定</h3>
-
-<h4 id="HTML">HTML</h4>
+### インライン方向の先頭と末尾のオフセットの設定
 
 #### HTML
 
@@ -80,7 +83,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_inline_start_and_end_offsets", 140, 140)}}
+{{EmbedLiveSample("インライン方向の先頭と末尾のオフセットの設定", 140, 140)}}
 
 ## 仕様書
 

@@ -26,9 +26,9 @@ l10n:
 なお、 `fetch()` ブロックの先頭で、レスポンスの `statusText` 値をコンソールにログ出力していることに注意してください。
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest).then((response) => {
   console.log(response.statusText); // レスポンスが成功した場合は "OK" を返す

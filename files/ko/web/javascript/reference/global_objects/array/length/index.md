@@ -2,6 +2,7 @@
 title: Array.length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
 ---
+
 {{JSRef}}
 
 `Array` 인스턴스의 **`length`** 속성은 배열의 길이를 반환합니다. 반환값은 부호 없는 32비트 정수형이며, 배열의 최대 인덱스보다 항상 큽니다. **`length`** 속성에 값을 설정할 경우 배열의 길이를 변경합니다.
@@ -14,13 +15,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/length
 
 ```js
 var namelistA = new Array(4294967296); // 2의 32제곱 = 4294967296
-var namelistC = new Array(-100) // 음수
+var namelistC = new Array(-100); // 음수
 
 console.log(namelistA.length); // RangeError: Invalid array length
 console.log(namelistC.length); // RangeError: Invalid array length
 
 var namelistB = [];
-namelistB.length = Math.pow(2,32)-1; // 길이를 2의 32제곱 미만으로 설정
+namelistB.length = Math.pow(2, 32) - 1; // 길이를 2의 32제곱 미만으로 설정
 console.log(namelistB.length);
 
 // 4294967295
@@ -40,7 +41,7 @@ function printEntries(arr) {
   for (var i = 0; i < length; i++) {
     console.log(arr[i]);
   }
-  console.log('=== printed ===');
+  console.log("=== printed ===");
 }
 
 // 1
@@ -82,7 +83,7 @@ for (var i = 0; i < length; i++) {
 var numbers = [1, 2, 3, 4, 5];
 
 if (numbers.length > 3) {
-    numbers.length = 3;
+  numbers.length = 3;
 }
 
 console.log(numbers); // [1, 2, 3]

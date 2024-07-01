@@ -5,29 +5,27 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
 
 {{JSRef}}
 
-如果某个元素满足所提供的测试函数，**`findIndex()`**方法返回类型化数组中的 **下标**。否则返回 -1。_TypedArray_ 是这里的 [类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
+如果某个元素满足所提供的测试函数，**`findIndex()`** 方法返回类型化数组中的**下标**，否则返回 -1。_TypedArray_ 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)之一。
 
-同时请参见{{jsxref("TypedArray.findIndex", "find()")}}方法，它返回了类型化数组中所发现元素的 **值** ，而不是它的下标。
+同时请参见 {{jsxref("TypedArray.findIndex", "find()")}} 方法，它返回了类型化数组中所发现元素的**值**，而不是它的下标。
 
 ## 语法
 
-```plain
-typedarray.findIndex(callback[, thisArg])
+```js-nolint
+findIndex(callbackFn)
+findIndex(callbackFn, thisArg)
 ```
 
 ### 参数
 
 - `callback`
-
   - : 用于在类型化数组中的每个元素上执行的函数，接受三个参数：
-
     - `element`
       - : 要处理的类型化数组的当前元素。
     - `index`
       - : 要处理的当前元素在类型化数组中的下标
     - `array`
       - : `find` 在其上调用的类型化数组
-
 - `thisArg`
   - : 可选，执行`callback`时的`this`值。
 
@@ -71,44 +69,6 @@ console.log(uint8.findIndex(isPrime)); // -1，未发现
 console.log(uint16.findIndex(isPrime)); // 2
 ```
 
-## Polyfill
-
-```js
-TypedArray.prototype.findIndex = Array.prototype.findIndex = Array.prototype.findIndex || function(evaluator, thisArg) {
-        'use strict';
-        if (!this) {
-          throw new TypeError('Array.prototype.some called on null or undefined');
-        }
-
-        if (typeof(evaluator) !== 'function') {
-            if (typeof(evaluator) === 'string') {
-                // 尝试将其转换为函数
-                if ( ! (evaluator = eval(evaluator)) ){
-                    throw new TypeError();
-                }
-            } else {
-                throw new TypeError();
-            }
-        }
-
-        var i;
-        if (thisArg === undefined) {  // 为 thisArg 优化
-            for (i in this) {
-                if (evaluator(this[i], i, this)) {
-                    return i;
-                }
-            }
-            return -1;
-        }
-        for (i in this) {
-            if (evaluator.call(thisArg, this[i], i, this)) {
-                return i;
-            }
-        }
-        return -1;
-};
-```
-
 ## 规范
 
 {{Specifications}}
@@ -117,7 +77,14 @@ TypedArray.prototype.findIndex = Array.prototype.findIndex = Array.prototype.fin
 
 {{Compat}}
 
-## 另见
+## 参见
 
+- [`core-js` 中 `TypedArray.prototype.findIndex` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
+- {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.find()")}}
+- {{jsxref("TypedArray.prototype.findLast()")}}
+- {{jsxref("TypedArray.prototype.findLastIndex()")}}
 - {{jsxref("TypedArray.prototype.indexOf()")}}
+- {{jsxref("TypedArray.prototype.lastIndexOf()")}}
+- {{jsxref("Array.prototype.findIndex()")}}

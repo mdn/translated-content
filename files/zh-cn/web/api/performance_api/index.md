@@ -15,7 +15,7 @@ Performance API 是一组用于衡量 web 应用性能的标准。
 
 大部分性能条目都在不需要任何额外操作的情况下进行记录，并可以通过 {{domxref("Performance.getEntries()")}} 或（最好）通过 {{domxref("PerformanceObserver")}} 访问。例如，{{domxref("PerformanceEventTiming")}} 条目用于记录花费的时间超过设定阈值的事件。而 Performance API 也允许你使用 {{domxref("PerformanceMark")}} 和 {{domxref("PerformanceMeasure")}} 接口定义和记录自定义事件。
 
-{{domxref("Performance")}} 主接口在全局作用域下可通过 {{domxref("performance_property", "self.performance")}} 访问，并允许你增加自定义性能条目、清除性能条目，以及查询性能条目。
+{{domxref("Performance")}} 主接口在 {{domxref("Window.performance", "Window")}} 和 {{domxref("WorkerGlobalScope.performance", "Worker")}} 全局作用域下都可用，并允许你增加自定义性能条目、清除性能条目，以及查询性能条目。
 
 {{domxref("PerformanceObserver")}} 接口允许你监听记录的不同类型的性能条目。
 
@@ -28,7 +28,7 @@ Performance API 是一组用于衡量 web 应用性能的标准。
 - {{domxref("LargestContentfulPaint")}}
   - : 测量视口范围内可见的图像和文本块的最大渲染时间，从页面开始加载时开始记录。
 - {{domxref("Performance")}}
-  - : 用于性能测量的主接口。可在 window 和 worker 上下文中通过 {{domxref("performance_property", "self.performance")}} 来访问。
+  - : 用于性能测量的主接口。可在 window 和 worker 上下文中通过 {{domxref("Window.performance")}} 或 {{domxref("WorkerGlobalScope.performance")}} 来访问。
 - {{domxref("PerformanceElementTiming")}}
   - : 测量特定元素的渲染时间戳。
 - {{domxref("PerformanceEntry")}}
@@ -36,7 +36,7 @@ Performance API 是一组用于衡量 web 应用性能的标准。
 - {{domxref("PerformanceEventTiming")}}
   - : 测量事件的延迟和首次输入延迟（FID）。
 - {{domxref("PerformanceLongTaskTiming")}}
-  - : 检测占用渲染并阻止其它任务执行的长任务。
+  - : 检测占用渲染并阻止其他任务执行的长任务。
 - {{domxref("PerformanceMark")}}
   - : 在性能时间线上标记自定义条目。
 - {{domxref("PerformanceMeasure")}}
@@ -59,10 +59,9 @@ Performance API 是一组用于衡量 web 应用性能的标准。
 ## 教程和指南
 
 - [使用 Performance API](/zh-CN/docs/Web/API/Performance_API/Using_the_Performance_API)
-- [使用性能时间线](/zh-CN/docs/Web/API/Performance_Timeline/Using_Performance_Timeline)
-- [使用 User Timing API](/zh-CN/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
-- [使用 Navigation Timing](/zh-CN/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing)
-- [使用 Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [User Timing（概览）](/zh-CN/docs/Web/API/Performance_API/User_timing)
+- [Navigation Timing（概览）](/zh-CN/docs/Web/API/Performance_API/Navigation_timing)
+- [Resource Timing（概览）](/zh-CN/docs/Web/API/Performance_API/Resource_timing)
 
 ## 规范
 
@@ -71,4 +70,4 @@ Performance API 是一组用于衡量 web 应用性能的标准。
 ## 参见
 
 - [Web 性能](/zh-CN/docs/Web/Performance)
-- [学习：Web 性能](/en-US/docs/Learn/Performance)
+- [学习：Web 性能](/zh-CN/docs/Learn/Performance)

@@ -1,7 +1,6 @@
 ---
 title: lang
 slug: Web/HTML/Global_attributes/lang
-original_slug: Web/HTML/Atributos_Globales/lang
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -16,9 +15,9 @@ Para la pseudo clase { cssxref(":lang") }} de CSS, dos nombres invalidos de leng
 
 {{Specifications}}
 
-## Compatibilidad en exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.lang")}}
+{{Compat}}
 
 ## Ver también
 

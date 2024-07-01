@@ -1,13 +1,6 @@
 ---
 title: CredentialsContainer.preventSilentAccess()
 slug: Web/API/CredentialsContainer/preventSilentAccess
-tags:
-  - API
-  - Credential Management API
-  - CredentialsContainer
-  - Méthode
-  - Reference
-translation_of: Web/API/CredentialsContainer/preventSilentAccess
 ---
 
 {{APIRef("")}}{{SeeCompatTable}}
@@ -21,7 +14,7 @@ Dans des versions antérieures de la spécification, cette méthode était intit
 ## Syntaxe
 
 ```js
-var Promise = CredentialsContainer.preventSilentAccess()
+var Promise = CredentialsContainer.preventSilentAccess();
 ```
 
 ### Paramètres

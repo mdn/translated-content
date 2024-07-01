@@ -1,31 +1,39 @@
 ---
-title: PushManager.permissionState()
+title: "PushManager: permissionState() メソッド"
+short-title: permissionState()
 slug: Web/API/PushManager/permissionState
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{SeeCompatTable}}{{ApiRef("Push API")}}
+{{ApiRef("Push API")}}
 
-{{domxref("PushManager")}} インターフェイスの **`permissionState()`** メソッドは、プッシュマネージャーの許可状態を示す {{domxref("DOMString")}} で解決される {{jsxref("Promise")}} を返します。許可状態は、`'prompt'` か `'denied'`、`'granted'` です。
+**`permissionState()`** は {{domxref("PushManager")}} インターフェイスのメソッドで、プッシュマネージャーの許可状態を示す文字列で解決される {{jsxref("Promise")}} を返します。許可状態は、`'prompt'` か `'denied'`、`'granted'` のいずれかです。
 
-> **メモ:** Firefox 44 では、[Notifications](/ja/docs/Web/API/Notifications_API) と [Push](/ja/docs/Web/API/Push_API) の許可は統合されています。notifications が許可された場合、 push も使用できます。
+> **メモ:** Firefox 44 では、[通知](/ja/docs/Web/API/Notifications_API)と[プッシュ](/ja/docs/Web/API/Push_API)の許可が統合されています。
+> 通知が許可された場合、プッシュも利用できます。
 
 ## 構文
 
 ```js-nolint
-PushManager.permissionState(options).then(function(PushMessagingState) { ... });
+permissionState()
+permissionState(options)
 ```
 
 ### 引数
 
 - `options` {{optional_inline}}
 
-  - : オプションの設定パラメーターを含むオブジェクト。次のプロパティが設定可能：
+  - : オプションの設定パラメーターを含むオブジェクト。以下のプロパティが利用可能です。
 
-    - `userVisibleOnly`: 返されたプッシュサブスクリプションの効果がユーザーに表示するメッセージにだけ使われるかを示す boolean 値。
+    - `userVisibleOnly`
+      - : 論理値で、返されたプッシュサブスクリプションは、その効果がユーザーに見えるようにされたメッセージに のみ使用することを示します。
+    - `applicationServerKey`
+      - : プッシュサーバー経由でクライアントアプリにメッセージを送信する際に、プッシュサーバーが使用する公開鍵。この値はアプリケーションサーバーが生成する署名鍵ペアの一部であり、 P-256 曲線上の楕円曲線デジタル署名 (ECDSA) で使用できます。
 
 ### 返値
 
-`'prompt'` か `'denied'`、`'granted'` を持つ {{domxref("DOMString")}} で解決される {{jsxref("Promise")}} 。
+{{jsxref("Promise")}} で、`'prompt'`、`'denied'`、`'granted'` のいずれかの値の文字列に解決します。
 
 ## 仕様書
 
@@ -33,8 +41,4 @@ PushManager.permissionState(options).then(function(PushMessagingState) { ... });
 
 ## ブラウザーの互換性
 
-{{Compat("api.PushManager.permissionState")}}
-
-## 関連項目
-
-- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)
+{{Compat}}

@@ -1,11 +1,6 @@
 ---
 title: column-width
 slug: Web/CSS/column-width
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/column-width
 ---
 
 {{CSSRef}}
@@ -67,10 +62,9 @@ column-width: unset;
 
 ```html
 <div class="content-box">
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-  sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-  magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-  quis nostrud exerci tation ullamcorper suscipit lobortis
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+  enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
   nisl ut aliquip ex ea commodo consequat.
 </div>
 ```

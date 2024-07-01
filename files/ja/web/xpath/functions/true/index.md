@@ -1,9 +1,9 @@
 ---
-title: 'true'
+title: "true"
 slug: Web/XPath/Functions/true
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `true` 関数は true の論理値を返します。
 

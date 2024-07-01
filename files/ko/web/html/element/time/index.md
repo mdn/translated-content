@@ -65,7 +65,7 @@ slug: Web/HTML/Element/time
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : 요소의 시간 또는 날짜 값. 아래에서 설명하는 형식 중 하나여야 합니다.
 
 ## 사용 일람
@@ -99,7 +99,9 @@ slug: Web/HTML/Element/time
 #### HTML
 
 ```html
-<p>The concert took place on <time datetime="2001-05-15 19:00">May 15</time>.</p>
+<p>
+  The concert took place on <time datetime="2001-05-15 19:00">May 15</time>.
+</p>
 ```
 
 #### 결과
@@ -112,7 +114,7 @@ slug: Web/HTML/Element/time
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.time")}}
+{{Compat}}
 
 ## 같이 보기
 

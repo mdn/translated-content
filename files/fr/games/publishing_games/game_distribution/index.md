@@ -1,18 +1,6 @@
 ---
 title: Distribution de jeux
 slug: Games/Publishing_games/Game_distribution
-tags:
-  - CocoonIO
-  - Game
-  - Game publishing
-  - Games
-  - Gaming
-  - HTML5
-  - JavaScript
-  - Mobile Game Distribution
-  - Phonegap
-  - Web Stores
-  - distribution
 ---
 
 {{GamesSidebar}}

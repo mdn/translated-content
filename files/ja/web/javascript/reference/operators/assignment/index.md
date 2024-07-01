@@ -12,21 +12,21 @@ slug: Web/JavaScript/Reference/Operators/Assignment
 ## 構文
 
 ```js
-x = y
+x = y;
 ```
 
 ## 例
 
 ### 代入と連鎖
 
-```ja
+```js
 // 以下の変数を想定
 //  x = 5
 //  y = 10
 //  z = 25
 
-x = y     // x は 10
-x = y = z // x, y そして z はすべて 25
+x = y; // x は 10
+x = y = z; // x, y そして z はすべて 25
 ```
 
 ## 仕様書
@@ -39,4 +39,4 @@ x = y = z // x, y そして z はすべて 25
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子)
+- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)

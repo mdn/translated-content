@@ -33,8 +33,8 @@ list-style-image: <uri> | none | inherit
 
 ```html
 <ul>
-    <li>Item 1</li>
-    <li>Item 2</li>
+  <li>Item 1</li>
+  <li>Item 2</li>
 </ul>
 ```
 
@@ -42,7 +42,7 @@ list-style-image: <uri> | none | inherit
 
 ```css
 ul {
-  list-style-image: url("starsolid.gif")
+  list-style-image: url("starsolid.gif");
 }
 ```
 

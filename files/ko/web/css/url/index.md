@@ -1,7 +1,6 @@
 ---
 title: <url>
 slug: Web/CSS/url
-original_slug: Web/CSS/url()
 ---
 
 {{ CssRef() }}
@@ -22,13 +21,13 @@ original_slug: Web/CSS/url()
 <a_css_property>: url(http://mysite.example.com/mycursor.png)
 ```
 
-> **참고:** Firefox 15부터, 0x7e을 초과하는 제어 문자는 URL을 따옴표로 둘러싸야 유요합니다. 자세한 내용은 {{Bug(752230)}}을 참고하세요.
+> **참고:** Firefox 15부터, 0x7e을 초과하는 제어 문자는 URL을 따옴표로 둘러싸야 유요합니다. 자세한 내용은 [Firefox bug 752230](https://bugzil.la/752230)을 참고하세요.
 
 ## 예제
 
 ```css
 .topbanner {
-  background: url("topbanner.png") #00D no-repeat fixed;
+  background: url("topbanner.png") #00d no-repeat fixed;
 }
 ```
 

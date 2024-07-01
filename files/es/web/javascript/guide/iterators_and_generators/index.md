@@ -1,6 +1,6 @@
 ---
 title: Iteradores y generadores
-slug: Web/JavaScript/Guide/Iterators_and_Generators
+slug: Web/JavaScript/Guide/Iterators_and_generators
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Meta_programming")}}
@@ -30,39 +30,40 @@ Un iterador se considera ya terminado/finalizado cuando la invocación de `next(
 Una vez creado, un objeto iterador puede utilizarse explícitamente llamando repetidamente al método `next()`.
 
 ```js
-function crearIterador(arreglo){
-    var siguienteIndice = 0;
+function crearIterador(arreglo) {
+  var siguienteIndice = 0;
 
-    return {
-       next: function(){
-           return siguienteIndice < arreglo.length ?
-               {value: arreglo[siguienteIndice++], done: false} :
-               {done: true};
-       }
-    }
+  return {
+    next: function () {
+      return siguienteIndice < arreglo.length
+        ? { value: arreglo[siguienteIndice++], done: false }
+        : { done: true };
+    },
+  };
 }
 ```
 
 Una vez inicializado, se puede invocar al método `next()` para acceder a las parejas llave-valor del objeto en cuestión:
 
 ```js
-var it = crearIterador(['yo', 'ya']);
+var it = crearIterador(["yo", "ya"]);
 console.log(it.next().value); // 'yo'
 console.log(it.next().value); // 'ya'
-console.log(it.next().done);  // true
+console.log(it.next().done); // true
 ```
 
 ## Generadores
 
-Aunque los iteradores personalizados son una herramienta útil, su creación require una programación meticulosa ya que necesitan mantener su estado interno explícitamente. Los **{{jsxref("Objetos_globales/Generador","generadores","","true")}}** son una alternativa poderosa: permiten definir un algoritmo iterativo al escribir una sola función que puede mantener su propio estado.
+Aunque los iteradores personalizados son una herramienta útil, su creación require una programación meticulosa ya que necesitan mantener su estado interno explícitamente. Los **{{jsxref("Objetos_globales/Generador","generadores","",1)}}** son una alternativa poderosa: permiten definir un algoritmo iterativo al escribir una sola función que puede mantener su propio estado.
 
 Una función generadora (constructor GeneratorFunction) es un tipo especial de función que sirve como una fábrica de iteradores. Cuando se ejecuta, regresa un nuevo objeto Generador. Una función se convierte en una Función Generadora si utiliza la sintáxis {{jsxref("Sentencias/function*","function*")}}.
 
 ```js
 function* hacedorIds() {
   var indice = 0;
-  while(true)
+  while (true) {
     yield indice++;
+  }
 }
 
 var gen = hacedorIds();
@@ -84,15 +85,15 @@ Con el fin de ser **iterable**, un objeto debe implementar el método **@@iterat
 Podemos hacer nuestros propios objetos iterables de este modo:
 
 ```js
-var miIterable = {}
+var miIterable = {};
 miIterable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
 
 for (let valor of miIterable) {
-    console.log(valor)
+  console.log(valor);
 }
 // 1
 // 2
@@ -100,7 +101,7 @@ for (let valor of miIterable) {
 
 // ó
 
-[...miIterable] // [1, 2, 3]
+[...miIterable]; // [1, 2, 3]
 ```
 
 ### Iterables integrados
@@ -109,26 +110,26 @@ for (let valor of miIterable) {
 
 ### Sintaxis que esperan objetos iterables
 
-Algunas sentencias y expresiones esperan objetos iterables, por ejemplo los bucles {{jsxref("Sentencias/for...of","for-of")}}, {{jsxref("Operadores/Spread_operator","el operador de propagación")}}, {{jsxref("Operadores/yield*","yield*")}}, y {{jsxref("Operadores/Destructuring_assignment","la asignación por desestructuración","","true")}}.
+Algunas sentencias y expresiones esperan objetos iterables, por ejemplo los bucles {{jsxref("Sentencias/for...of","for-of")}}, {{jsxref("Operadores/Spread_operator","el operador de propagación")}}, {{jsxref("Operadores/yield*","yield*")}}, y {{jsxref("Operadores/Destructuring_assignment","la asignación por desestructuración","",1)}}.
 
 ```js
-for(let valor of ["a", "b", "c"]){
-    console.log(valor)
+for (let valor of ["a", "b", "c"]) {
+  console.log(valor);
 }
 // "a"
 // "b"
 // "c"
 
-[..."abc"] // ["a", "b", "c"]
+[..."abc"]; // ["a", "b", "c"]
 
-function* gen(){
-  yield* ["a", "b", "c"]
+function* gen() {
+  yield* ["a", "b", "c"];
 }
 
-gen().next() // { value:"a", done:false }
+gen().next(); // { value:"a", done:false }
 
-[a, b, c] = new Set(["a", "b", "c"])
-a // "a"
+[a, b, c] = new Set(["a", "b", "c"]);
+a; // "a"
 ```
 
 ## Generadores avanzados
@@ -140,33 +141,33 @@ El método {{jsxref("Objetos_globales/Generador/next","next()")}} también acept
 A continuación se muestra un generador de Fibonacci usando `next(x)` para reiniciar la secuencia:
 
 ```js
-function* fibonacci(){
+function* fibonacci() {
   var fn1 = 1;
   var fn2 = 1;
-  while (true){
+  while (true) {
     var actual = fn2;
     fn2 = fn1;
     fn1 = fn1 + actual;
     var reset = yield actual;
-    if (reset){
-        fn1 = 1;
-        fn2 = 1;
+    if (reset) {
+      fn1 = 1;
+      fn2 = 1;
     }
   }
 }
 
 var secuencia = fibonacci();
-console.log(secuencia.next().value);     // 1
-console.log(secuencia.next().value);     // 1
-console.log(secuencia.next().value);     // 2
-console.log(secuencia.next().value);     // 3
-console.log(secuencia.next().value);     // 5
-console.log(secuencia.next().value);     // 8
-console.log(secuencia.next().value);     // 13
+console.log(secuencia.next().value); // 1
+console.log(secuencia.next().value); // 1
+console.log(secuencia.next().value); // 2
+console.log(secuencia.next().value); // 3
+console.log(secuencia.next().value); // 5
+console.log(secuencia.next().value); // 8
+console.log(secuencia.next().value); // 13
 console.log(secuencia.next(true).value); // 1
-console.log(secuencia.next().value);     // 1
-console.log(secuencia.next().value);     // 2
-console.log(secuencia.next().value);     // 3
+console.log(secuencia.next().value); // 1
+console.log(secuencia.next().value); // 2
+console.log(secuencia.next().value); // 3
 ```
 
 Es posible forzar a un generador a lanzar una excepción cuando se invoca al método {{jsxref("Objetos_globales/Generador/throw","throw()")}} y se pasa el valor de excepción a lanzar. Esta excepción será lanzada desde el contexto actual suspendido del generador, como si en vez del estado suspendido actualmente de `yield` se tuviera una sentencia `throw valor`.

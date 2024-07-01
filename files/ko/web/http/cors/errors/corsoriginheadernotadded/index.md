@@ -20,6 +20,6 @@ Reason: CORS header 'Origin' cannot be added
 
 ## 같이 보기
 
-- [CORS 에러](/en-US/docs/Web/HTTP/CORS/Errors)
+- [CORS 에러](/ko/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
-- [CORS 소개](/en-US/docs/Web/HTTP/CORS)
+- [CORS 소개](/ko/docs/Web/HTTP/CORS)

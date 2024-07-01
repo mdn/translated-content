@@ -18,11 +18,11 @@ l10n:
 以下の例では、新しい {{domxref("VTTCue")}} （`TextTrackCue` を継承したもの）が作成されます。そして、キューを追加する前に、 `id` プロパティを "first" に設定しています。
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, 'Hildy!');
+let cue1 = new VTTCue(0, 0.9, "Hildy!");
 cue1.id = "first";
 track.addCue(cue1);
 ```

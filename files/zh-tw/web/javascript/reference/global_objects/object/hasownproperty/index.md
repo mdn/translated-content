@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 
 ## 表達式
 
-```plain
+```js-nolint
 obj.hasOwnProperty(prop)
 ```
 
@@ -30,16 +30,16 @@ obj.hasOwnProperty(prop)
 
 ```js
 o = new Object();
-o.prop = 'exists';
+o.prop = "exists";
 
 function changeO() {
   o.newprop = o.prop;
   delete o.prop;
 }
 
-o.hasOwnProperty('prop');   // 回傳 true
+o.hasOwnProperty("prop"); // 回傳 true
 changeO();
-o.hasOwnProperty('prop');   // 回傳 false
+o.hasOwnProperty("prop"); // 回傳 false
 ```
 
 ### 直接與繼承的屬性
@@ -48,10 +48,10 @@ o.hasOwnProperty('prop');   // 回傳 false
 
 ```js
 o = new Object();
-o.prop = 'exists';
-o.hasOwnProperty('prop');             // 回傳 true
-o.hasOwnProperty('toString');         // 回傳 false
-o.hasOwnProperty('hasOwnProperty');   // 回傳 false
+o.prop = "exists";
+o.hasOwnProperty("prop"); // 回傳 true
+o.hasOwnProperty("toString"); // 回傳 false
+o.hasOwnProperty("hasOwnProperty"); // 回傳 false
 ```
 
 ### 遍歷物件的屬性
@@ -60,14 +60,13 @@ o.hasOwnProperty('hasOwnProperty');   // 回傳 false
 
 ```js
 var buz = {
-  fog: 'stack'
+  fog: "stack",
 };
 
 for (var name in buz) {
   if (buz.hasOwnProperty(name)) {
-    console.log('this is fog (' + name + ') for sure. Value: ' + buz[name]);
-  }
-  else {
+    console.log("this is fog (" + name + ") for sure. Value: " + buz[name]);
+  } else {
     console.log(name); // toString or something else
   }
 }
@@ -79,19 +78,19 @@ JavaScript 並未保護 `hasOwnProperty`；因此，如果一個物件擁有一�
 
 ```js
 var foo = {
-  hasOwnProperty: function() {
+  hasOwnProperty: function () {
     return false;
   },
-  bar: 'Here be dragons'
+  bar: "Here be dragons",
 };
 
-foo.hasOwnProperty('bar'); // 總是回傳 false
+foo.hasOwnProperty("bar"); // 總是回傳 false
 
 // 使用其他物件的 hasOwnProperty 和 call it with 'this' set to foo
-({}).hasOwnProperty.call(foo, 'bar'); // true
+({}).hasOwnProperty.call(foo, "bar"); // true
 
 // 從物件的原型使用 hasOwnProperty 也是可行的
-Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
+Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 ```
 
 註：在最後一個例子中並未創建任何新的物件。

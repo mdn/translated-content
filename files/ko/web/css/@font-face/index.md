@@ -1,7 +1,8 @@
 ---
-title: '@font-face'
+title: "@font-face"
 slug: Web/CSS/@font-face
 ---
+
 {{CSSRef}}
 
 ## 요약(Summary)
@@ -63,9 +64,8 @@ slug: Web/CSS/@font-face
 ```css
 @font-face {
   font-family: MyHelvetica;
-  src: local("Helvetica Neue Bold"),
-  local("HelveticaNeue-Bold"),
-  url(MgOpenModernaBold.ttf);
+  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+    url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }
 ```
@@ -86,7 +86,7 @@ slug: Web/CSS/@font-face
 
 ## 참고자료(See also)
 
-- [About WOFF](/en-US/docs/Web/Guide/WOFF)
+- [About WOFF](/ko/docs/Web/Guide/WOFF)
 - [FontSquirrel @font-face generator](http://www.fontsquirrel.com/fontface/generator)
 - [Beautiful fonts with @font-face](http://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
 - [Open Font Library](http://openfontlibrary.org/)

@@ -1,7 +1,6 @@
 ---
 title: Entendiendo los frameworks de JavaScript del lado del cliente
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
-original_slug: Learn/Herramientas_y_pruebas/Lado-del-cliente_JavaScript_frameworks
 ---
 
 {{LearnSidebar}}

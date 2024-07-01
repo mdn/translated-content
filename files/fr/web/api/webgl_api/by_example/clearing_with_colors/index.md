@@ -1,18 +1,9 @@
 ---
 title: Appliquer des couleurs
 slug: Web/API/WebGL_API/By_example/Clearing_with_colors
-tags:
-  - Apprendre
-  - Débutant
-  - Exemple
-  - Graphisme
-  - Tutoriel
-  - WebGL
-translation_of: Web/API/WebGL_API/By_example/Clearing_with_colors
-original_slug: Web/API/WebGL_API/By_example/Appliquer_des_couleurs
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Détecter_WebGL","Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_%C3%A0_la_souris")}}
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Détecter_WebGL","Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_à_la_souris")}}
 
 Dans cet article, on voit comment appliquer une couleur unie dans le contexte de rendu.
 
@@ -32,22 +23,23 @@ Enfin, vous pouvez voir que les couleurs manipulées en WebGL sont décrites ave
 <p>Un programme WebGL très simple qui affiche une couleur.</p>
 <!-- Le texte d'un élément canvas est affiché uniquement
     si canvas n'est pas supporté. -->
-<canvas>Il semblerait que votre navigateur ne supporte pas
-    le canevas HTML5</canvas>
+<canvas
+  >Il semblerait que votre navigateur ne supporte pas le canevas HTML5</canvas
+>
 ```
 
 ```css
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  display : block;
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  display: block;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 ```
 
@@ -58,46 +50,48 @@ canvas {
 // avant de le manipuler et d'encombrer la portée globale.
 // On donne un nom au gestionnaire (setupWebGL) afin de
 // pouvoir y faire référence par la suite.
-window.addEventListener("load", function setupWebGL (evt) {
-  "use strict"
+window.addEventListener(
+  "load",
+  function setupWebGL(evt) {
+    "use strict";
 
-  // On fait le ménage : le gestionnaire se supprime lui-
-  // même car il n'a besoin d'être exécuté qu'une fois.
-  window.removeEventListener(evt.type, setupWebGL, false);
+    // On fait le ménage : le gestionnaire se supprime lui-
+    // même car il n'a besoin d'être exécuté qu'une fois.
+    window.removeEventListener(evt.type, setupWebGL, false);
 
-  // On fait référence aux éléments du document.
-  var paragraph = document.querySelector("p"),
-    canvas = document.querySelector("canvas");
+    // On fait référence aux éléments du document.
+    var paragraph = document.querySelector("p"),
+      canvas = document.querySelector("canvas");
 
-  // On récupère le contexte de rendu WebGL.
-  var gl = canvas.getContext("webgl")
-    || canvas.getContext("experimental-webgl");
+    // On récupère le contexte de rendu WebGL.
+    var gl =
+      canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
 
-  // Si cela échoue, on informe l'utilisateur.
-  // Sinon, on initialise la zone de dessin et on
-  // applique une couleur dans le contexte.
-  if (!gl) {
-    paragraph.innerHTML = "Échec de la récupération du "
-      + "contexte WebGL. Votre navigateur peut ne pas "
-      + " supporter WebGL.";
-    return;
-  }
-  paragraph.innerHTML =
-    "Félicitations, votre navigateur supporte WebGL. ";
-  gl.viewport(0, 0,
-    gl.drawingBufferWidth, gl.drawingBufferHeight);
+    // Si cela échoue, on informe l'utilisateur.
+    // Sinon, on initialise la zone de dessin et on
+    // applique une couleur dans le contexte.
+    if (!gl) {
+      paragraph.innerHTML =
+        "Échec de la récupération du " +
+        "contexte WebGL. Votre navigateur peut ne pas " +
+        " supporter WebGL.";
+      return;
+    }
+    paragraph.innerHTML = "Félicitations, votre navigateur supporte WebGL. ";
+    gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
 
-  // On définit la couleur qu'on veut appliquer
-  // (ici un vert foncé).
-  gl.clearColor(0.0, 0.5, 0.0, 1.0);
+    // On définit la couleur qu'on veut appliquer
+    // (ici un vert foncé).
+    gl.clearColor(0.0, 0.5, 0.0, 1.0);
 
-  // Enfin, on applique la couleur dans le contexte. C'est
-  // cette fonction qui « dessine » réellement quelque chose.
-  gl.clear(gl.COLOR_BUFFER_BIT);
-
-}, false);
+    // Enfin, on applique la couleur dans le contexte. C'est
+    // cette fonction qui « dessine » réellement quelque chose.
+    gl.clear(gl.COLOR_BUFFER_BIT);
+  },
+  false,
+);
 ```
 
 Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/clearing-with-colors).
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Détecter_WebGL","Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_%C3%A0_la_souris")}}
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Détecter_WebGL","Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_à_la_souris")}}

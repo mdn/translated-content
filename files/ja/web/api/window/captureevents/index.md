@@ -10,7 +10,7 @@ slug: Web/API/Window/captureEvents
 ## 構文
 
 ```js
-window.captureEvents(eventType)
+window.captureEvents(eventType);
 ```
 
 `eventType` は、 `Event.ABORT`, `Event.BLUR`, `Event.CLICK`, `Event.CHANGE`, `Event.DBLCLICK`, `Event.DRAGDDROP`, `Event.ERROR`, `Event.FOCUS`, `Event.KEYDOWN`, `Event.KEYPRESS`, `Event.KEYUP`, `Event.LOAD`, `Event.MOUSEDOWN`, `Event.MOUSEMOVE`, `Event.MOUSEOUT`, `Event.MOUSEOVER`, `Event.MOUSEUP`, `Event.MOVE`, `Event.RESET`, `Event.RESIZE`, `Event.SELECT`, `Event.SUBMIT`, `Event.UNLOAD` の値の組み合わせを取ります。
@@ -18,25 +18,25 @@ window.captureEvents(eventType)
 ## 例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<!-- ... -->
-<script>
-function reg() {
-  window.captureEvents(Event.CLICK);
-  window.onclick = page_click;
-}
+  <head>
+    <!-- ... -->
+    <script>
+      function reg() {
+        window.captureEvents(Event.CLICK);
+        window.onclick = page_click;
+      }
 
-function page_click() {
-  alert('ページクリックイベントが検出されました！');
-}
-</script>
-</head>
+      function page_click() {
+        alert("ページクリックイベントが検出されました！");
+      }
+    </script>
+  </head>
 
-<body onload="reg();">
-<p>click anywhere on this page.</p>
-</body>
+  <body onload="reg();">
+    <p>click anywhere on this page.</p>
+  </body>
 </html>
 ```
 

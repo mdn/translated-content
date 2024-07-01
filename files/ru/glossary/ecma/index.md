@@ -1,9 +1,9 @@
 ---
 title: ECMA
 slug: Glossary/ECMA
-translation_of: Glossary/ECMA
-original_slug: Глоссарий/ECMA
 ---
+
+{{GlossarySidebar}}
 
 **Ecma International**, ранее известная как European Computers Manufactures Association (Европейская Ассоциация Производителей Компьютеров) — некоммерческая организация, утверждающая и развивающая стандарты в областях аппаратного обеспечения компьютеров, коммуникационных технологий и языков программирования.
 
@@ -11,5 +11,4 @@ original_slug: Глоссарий/ECMA
 
 ## Узнать больше
 
-- {{interwiki("wikipedia", "Ecma_International", "Ecma International")}} на Википедии
 - [Официальный сайт Ecma International](http://www.ecma-international.org/)

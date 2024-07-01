@@ -1,11 +1,6 @@
 ---
-title: ':visited'
+title: ":visited"
 slug: Web/CSS/:visited
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:visited
 ---
 
 {{CSSRef}}
@@ -40,18 +35,24 @@ Pour d'autres informations sur ces limitations et leurs raisons d'être, se réf
 ### CSS
 
 ```css
-a:visited { color: #00ff00; }
+a:visited {
+  color: #00ff00;
+}
 ```
 
 ### HTML
 
 ```html
-<p><a href="https://developer.mozilla.org/fr/docs/Web/CSS/:visited">
-  Cette page est visitée
-</a></p>
-<p><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/">
-  Essayez celle-ci peut-être ?
-</a></p>
+<p>
+  <a href="https://developer.mozilla.org/fr/docs/Web/CSS/:visited">
+    Cette page est visitée
+  </a>
+</p>
+<p>
+  <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/">
+    Essayez celle-ci peut-être ?
+  </a>
+</p>
 ```
 
 ### Résultat

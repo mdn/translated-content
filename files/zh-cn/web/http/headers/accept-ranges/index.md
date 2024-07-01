@@ -1,35 +1,46 @@
 ---
 title: Accept-Ranges
 slug: Web/HTTP/Headers/Accept-Ranges
+l10n:
+  sourceCommit: eddef03cfbc7f50806a348f4093601033a7976fc
 ---
 
 {{HTTPSidebar}}
 
-服务器使用 HTTP 响应头 **`Accept-Ranges`** 标识自身支持范围请求 (partial requests)。字段的具体值用于定义范围请求的单位。
+**`Accept-Ranges`** HTTP 响应标头是服务器使用的一个标记，用于向客户端宣传其对文件下载的部分请求的支持。此字段的值表示可用于定义范围的单位。
 
-当浏览器发现` Accept-Ranges `头时，可以尝试*继续*中断了的下载，而不是重新开始。
+当存在 `Accept-Ranges` 标头时，浏览器可能会尝试*恢复*中断的下载，而不是尝试重新启动下载。
 
-| 头部类型                                                               | {{Glossary("Response header")}} |
-| ---------------------------------------------------------------------- | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}}（禁止修改的 HTTP 头） | 否                                       |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">标头类型</th>
+      <td>{{Glossary("Response header", "响应标头")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
-```plain
-Accept-Ranges: bytes
+```http
+Accept-Ranges: <range-unit>
 Accept-Ranges: none
 ```
 
 ## 指令
 
+- `<range-unit>`
+  - : 定义了服务器所支持的范围单位。尽管根据 {{RFC("7233")}} 正式定义的唯一范围单位是 `bytes`，但可以通过 [HTTP 范围单位注册表](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units)注册额外的范围单位。
 - `none`
-  - : 不支持任何范围请求单位，由于其等同于没有返回此头部，因此很少使用。不过一些浏览器，比如 IE9，会依据该头部去禁用或者移除下载管理器的暂停按钮。
-- `bytes`
-  - : 范围请求的单位是 bytes（字节）。
+  - : 表示不支持任何范围单位。这使得该标头等同于其不存在的状态，因此很少使用。然而在某些浏览器中，例如 IE9，此设置被用来禁用或移除下载管理器中的暂停按钮。
 
 ## 示例
 
-```plain
+```http
 Accept-Ranges: bytes
 ```
 
@@ -45,3 +56,4 @@ Accept-Ranges: bytes
 
 - {{HTTPHeader("If-Range")}}
 - {{HTTPHeader("Range")}}
+- [IANA HTTP 范围单位注册表](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units)

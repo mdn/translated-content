@@ -1,39 +1,35 @@
 ---
-title: HTMLImageElement.complete
+title: HTMLImageElement：complete 属性
 slug: Web/API/HTMLImageElement/complete
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLImageElement")}} 的只读属性 **`complete`** 是一个布尔值，表示图片是否完全加载完成。
+{{domxref("HTMLImageElement")}} 接口的 **`complete`** 只读属性是一个布尔值，用于指示图像是否已完全加载。
 
-## 语法
+## 值
 
-```plain
-let doneLoading = htmlImageElement.complete;
-```
+一个布尔值，如果图像加载完成，则为 `true`；否则，值为 `false`。
 
-### 值
+如果满足以下任何一个条件，则认为图像已经加载完毕：
 
-当图片完全加载完成时值为 `true`；否则，值为 `false`。
+- 没有指定 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 和 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 属性。
+- `srcset` 属性不存在且 `src` 属性被指定为空字符串（`""`）时。
+- 图片资源已经完全获取，并且已经排队等待渲染/合成。
+- 图像元素已预先确定，图像已完全可用并准备好使用。
+- 图像“损坏”，即由于错误或图像加载被禁用导致图像加载失败。
 
-以下任意一条为 true 则认为图片完全加载完成：
+值得注意的是，由于图像可能是异步接收的，因此 `complete` 的值可能在脚本运行时发生变化。
 
-- Neither the {{htmlattrxref("src", "img")}} nor the {{htmlattrxref("srcset", "img")}} attribute is specified.
-- The `srcset` attribute is absent and the `src` attribute, while specified, is the empty string (`""`).
-- The image resource has been fully fetched and has been queued for rendering/compositing.
-- The image element has previously determined that the image is fully available and ready for use.
-- The image is "broken;" that is, the image failed to load due to an error or because image loading is disabled.
+## 示例
 
-It's worth noting that due to the image potentially being received asynchronously, the value of `complete` may change while your script is running.
+假设有这么一个图库应用程序，它能够以灯箱模式打开图像，以便更好地查看和编辑图像。这些照片可能非常大，所以你不想等待它们加载，因此你在代码中使用 `async`/`await` 在后台加载图像。
 
-## Example
+但是想象一下，你还有其他一些仅需要在图像完成加载后运行的代码，例如对灯箱中的图像执行红眼消除的命令。理想情况下，如果图像尚未完全加载，则不会执行此命令，但为了提高可靠性，你需要检查以确保情况确实如此。
 
-Consider a photo library app that provides the ability to open images into a lightbox mode for improved viewing as well as editing of the image. These photos may be very large, so you don't want to wait for them to load, so your code uses `async`/`await` to load the images in the background.
-
-But imagine that you have other code that needs to only run when the image has completed loading, such as a command that performs red-eye removal on the image in the lightbox. While ideally this command wouldn't even be executed if the image hasn't fully loaded, for improved reliability you want to check to ensure this is the case.
-
-So the `fixRedEyeCommand()` function, which is called by the button that triggers red-eye removal, checks the value of the lightbox image's `complete` property before attempting to do its work. This is demonstrated in the code below.
+因此，触发红眼移除按钮会在调用 `fixRedEyeCommand()` 函数之前，先检查灯箱图像的 `complete` 属性的值，如下面的代码所示。
 
 ```js
 let lightboxElem = document.querySelector("#lightbox");
@@ -54,21 +50,21 @@ async function lightBox(url) {
   lightboxControlsElem.disabled = false;
 }
 
-/* ... */
+// …
 
 function fixRedEyeCommand() {
   if (lightboxElem.style.display === "block" && lightboxImgElem.complete) {
     fixRedEye(lightboxImgElem);
   } else {
-    /* can't start doing this until the image is fully loaded */
+    /* 在图片完全加载之前不能开始这样做 */
   }
 }
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}

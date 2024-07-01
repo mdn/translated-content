@@ -1,17 +1,6 @@
 ---
 title: Service Worker API
 slug: Web/API/Service_Worker_API
-tags:
-  - API
-  - Landing
-  - NeedsTranslation
-  - Offline
-  - Overview
-  - Reference
-  - Service Workers
-  - TopicStub
-  - Workers
-translation_of: Web/API/Service_Worker_API
 ---
 
 {{DefaultAPISidebar("Service Workers API")}}
@@ -120,17 +109,15 @@ Service worker'ы также предназначены для таких вещ
 - {{domxref("WindowClient") }}
   - : Представляет область видимости клиентского service worker'а, представленного в виде документа в контакте браузера, контролируемого активным воркером. Это особый тип объекта {{domxref("Client")}} с некоторыми дополнительными методами и свойствами.
 
-## Спецификации (характеристики)
+## Спецификации
 
-| Спецификации                             | Статус                               | Комментарий              |
-| ---------------------------------------- | ------------------------------------ | ------------------------ |
-| {{SpecName('Service Workers')}} | {{Spec2('Service Workers')}} | Изначальное определение. |
+{{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
-## Смотрите также:
+## Смотрите также
 
 - Кулинарная книга [ServiceWorker](https://github.com/mdn/serviceworker-cookbook)
 - Использование[Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)

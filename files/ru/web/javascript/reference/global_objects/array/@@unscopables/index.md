@@ -1,18 +1,11 @@
 ---
 title: Array.prototype[@@unscopables]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Prototype
-  - Массив
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 ---
 
 {{JSRef}}
 
-Свойства символа **`@@unscopable`** содержат свойства имён, которые не были включены в ECMAScript до версии ES2015. Эти свойства исключены из привязок оператора [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with).
+Свойства символа **`@@unscopable`** содержат свойства имён, которые не были включены в ECMAScript до версии ES2015. Эти свойства исключены из привязок оператора [`with`](/ru/docs/Web/JavaScript/Reference/Statements/with).
 
 ## Синтаксис
 
@@ -36,7 +29,7 @@ arr[Symbol.unscopables]
 var keys = [];
 
 with (Array.prototype) {
-  keys.push('что-то');
+  keys.push("что-то");
 }
 
 Object.keys(Array.prototype[Symbol.unscopables]);

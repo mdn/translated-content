@@ -3,6 +3,8 @@ title: Dynamic typing (動的型付け)
 slug: Glossary/Dynamic_typing
 ---
 
+{{GlossarySidebar}}
+
 **動的型付け言語**では、({{glossary("JavaScript")}} のように) インタプリターが実行時に、変数の{{glossary( "value", "値")}} に基づいて、{{glossary("variable","変数")}} に{{glossary("type", "データ型")}} を割り当てます。
 
 ## 関連項目

@@ -1,5 +1,5 @@
 ---
-title: '@font-feature-values'
+title: "@font-feature-values"
 slug: Web/CSS/@font-feature-values
 ---
 
@@ -10,21 +10,25 @@ slug: Web/CSS/@font-feature-values
 **`@font-feature-values`** [CSS](/zh-CN/docs/Web/CSS) [at-rule](/zh-CN/docs/Web/CSS/At-rule) 允许作者在{{cssxref("font-variant-alternates")}} 中使用通用名称，用于在 OpenType 中以不同方式激活功能。它允许在使用几种字体时简化 CSS。
 
 ```css
-@font-feature-values Font One { /* How to activate nice-style in Font One */
+@font-feature-values Font One {
+  /* How to activate nice-style in Font One */
   @styleset {
     nice-style: 12;
   }
 }
 
-@font-feature-values Font Two { /* How to activate nice-style in Font Two */
+@font-feature-values Font Two {
+  /* How to activate nice-style in Font Two */
   @styleset {
     nice-style: 4;
   }
 }
 
-…
+/* … */
 
-.nice-look { font-variant-alternates: styleset(nice-style); } /* Independent of the font */
+.nice-look {
+  font-variant-alternates: styleset(nice-style);
+} /* Independent of the font */
 ```
 
 The `@font-feature-values` at-rule may be used at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/zh-CN/docs/Web/CSS/At-rule#Conditional_Group_Rules).

@@ -33,8 +33,8 @@ slug: Web/API/FileSystem
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-引用：[File System API](/zh-CN/DOM/File_API/File_System_API)
-
-介绍：[Basic Concepts About the File System API](/zh-CN/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API)
+- [文件与目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
+- [文件与目录条目 API 介绍](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemEntry")}}、{{domxref("FileSystemFileEntry")}} 和 {{domxref("FileSystemDirectoryEntry")}}

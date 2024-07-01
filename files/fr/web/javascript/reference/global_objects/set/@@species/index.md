@@ -1,14 +1,6 @@
 ---
 title: get Set[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@species
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Reference
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@species
-original_slug: Web/JavaScript/Reference/Objets_globaux/Set/@@species
 ---
 
 {{JSRef}}
@@ -18,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Set/@@species
 ## Syntaxe
 
 ```js
-Set[Symbol.species]
+Set[Symbol.species];
 ```
 
 ## Description

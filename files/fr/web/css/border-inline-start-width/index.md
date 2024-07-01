@@ -1,13 +1,6 @@
 ---
 title: border-inline-start-width
 slug: Web/CSS/border-inline-start-width
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/border-inline-start-width
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

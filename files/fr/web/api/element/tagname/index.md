@@ -1,13 +1,6 @@
 ---
 title: element.tagName
 slug: Web/API/Element/tagName
-tags:
-  - API
-  - DOM
-  - Element
-  - Nom
-  - Propriétés
-translation_of: Web/API/Element/tagName
 ---
 
 {{ApiRef("DOM")}}

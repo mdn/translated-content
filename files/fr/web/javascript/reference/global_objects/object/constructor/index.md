@@ -1,14 +1,6 @@
 ---
 title: Object.prototype.constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
-tags:
-  - JavaScript
-  - Object
-  - Propriété
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/constructor
 ---
 
 {{JSRef}}
@@ -26,7 +18,7 @@ o.constructor === Object; // true
 var a = [];
 a.constructor === Array; // true
 
-var n = new Number(3)
+var n = new Number(3);
 n.constructor === Number; // true
 ```
 
@@ -38,11 +30,11 @@ L'exemple ci-dessous crée un constructeur `Arbre`, et un objet de ce type, `mon
 
 ```js
 function Arbre(nom) {
-   this.nom = nom;
+  this.nom = nom;
 }
 
 var monArbre = new Arbre("Sequoia");
-console.log( "monArbre.constructor vaut " + monArbre.constructor );
+console.log("monArbre.constructor vaut " + monArbre.constructor);
 ```
 
 Cet exemple produira le résultat suivant :
@@ -58,34 +50,38 @@ monArbre.constructor vaut function Arbre(nom) {
 Dans l'exemple suivant, on illustre comment modifier la valeur d'un constructeur pour les objets génériques. Dans l'exemple suivant, seules les valeurs `true`, `1` et `"test"` ne seront pas affectées car leurs constructeurs sont en lecture seule uniquement. Cet exemple montre qu'il ne faut pas se reposer de façon aveugle sur la propriété `constructor` d'un objet.
 
 ```js
-function Type () {}
+function Type() {}
 
 var types = [
   new Array(),
   [],
   new Boolean(),
-  true,             // restera tel quel
+  true, // restera tel quel
   new Date(),
   new Error(),
   new Function(),
   function () {},
   Math,
   new Number(),
-  1,                // restera tel quel
+  1, // restera tel quel
   new Object(),
   {},
   new RegExp(),
   /(?:)/,
   new String(),
-  'test'            // restera tel quel
+  "test", // restera tel quel
 ];
 
 for (var i = 0; i < types.length; i++) {
   types[i].constructor = Type;
-  types[i] = [types[i].constructor, types[i] instanceof Type, types[i].toString()];
+  types[i] = [
+    types[i].constructor,
+    types[i] instanceof Type,
+    types[i].toString(),
+  ];
 }
 
-console.log(types.join('\n'));
+console.log(types.join("\n"));
 ```
 
 L'exemple produira le résultat suivant :
@@ -140,14 +136,14 @@ Essayons de définir les cas où il est nécessaire de réaffecter le constructe
 Imaginons que l'objet possède une méthode `create()` qui lui permette de créer un autre exemplaire :
 
 ```js
-function Parent() {};
+function Parent() {}
 function CreatedConstructor() {}
 
 CreatedConstructor.prototype = Object.create(Parent.prototype);
 
 CreatedConstructor.prototype.create = function create() {
   return new this.constructor();
-}
+};
 
 new CreatedConstructor().create().create();
 // error undefined is not a function car constructor === Parent
@@ -158,7 +154,7 @@ Dans l'exemple précédent, on a une exception car le constructeur pointe vers `
 Pour éviter cet écueil, il suffit d'affecter le bon constructeur (celui qui sera utilisé ensuite) :
 
 ```js
-function Parent() {};
+function Parent() {}
 function CreatedConstructor() {}
 
 CreatedConstructor.prototype = Object.create(Parent.prototype);
@@ -167,7 +163,7 @@ CreatedConstructor.prototype.constructor = CreatedConstructor;
 
 CreatedConstructor.prototype.create = function create() {
   return new this.constructor();
-}
+};
 
 new CreatedConstructor().create().create();
 // pas d'exception cette fois-ci
@@ -178,30 +174,31 @@ Prenons un autre exemple :
 ```js
 function ParentWithStatic() {}
 
-ParentWithStatic.startPosition = { x: 0, y:0 };
+ParentWithStatic.startPosition = { x: 0, y: 0 };
 ParentWithStatic.getStartPosition = function getStartPosition() {
   return this.startPosition;
-}
+};
 
 function Child(x, y) {
   this.position = {
     x: x,
-    y: y
+    y: y,
   };
 }
 
 Child.prototype = Object.create(ParentWithStatic.prototype);
 Child.prototype.constructor = Child;
 
-Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition() {
-  var position = this.position;
-  var startPosition = this.constructor.getStartPosition(); // error undefined is not a function, since the constructor is Child
+Child.prototype.getOffsetByInitialPosition =
+  function getOffsetByInitialPosition() {
+    var position = this.position;
+    var startPosition = this.constructor.getStartPosition(); // error undefined is not a function, since the constructor is Child
 
-  return {
-    offsetX: startPosition.x - position.x,
-    offsetY: startPosition.y - position.y
-  }
-};
+    return {
+      offsetX: startPosition.x - position.x,
+      offsetY: startPosition.y - position.y,
+    };
+  };
 ```
 
 Ici, il faudra conserverr le constructeur parent si on veut que le code fonctionne correctement.

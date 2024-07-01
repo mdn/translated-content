@@ -1,7 +1,13 @@
 ---
 title: アクセシビリティ
 slug: Web/Accessibility
+l10n:
+  sourceCommit: f6d04a43eadf5ab26a3488942dfb318b58234eb5
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/ja/docs/Web/Accessibility", 1)}}
+</section>
 
 ウェブ開発におけるアクセシビリティとは、何らかの理由により能力に制約がある場合でも、可能な限り多くの人々がウェブサイトを使用できるようにすることを意味します。この記事では、アクセシビリティを考慮したコンテンツを開発するための情報を提供します。
 
@@ -11,9 +17,9 @@ slug: Web/Accessibility
 
 ## 主なチュートリアル
 
-MDN の[アクセシビリティ学習エリア](/ja/docs/Learn/Accessibility)には、アクセシビリティの基本事項を含むモダンな最新のチュートリアルが含まれています:
+MDN の[アクセシビリティ学習領域](/ja/docs/Learn/Accessibility)には、アクセシビリティの基本事項を含む近代的な最新のチュートリアルが含まれています。
 
-- [アクセシビリティとは何か？](/ja/docs/Learn/Accessibility/What_is_accessibility)
+- [アクセシビリティとは何か](/ja/docs/Learn/Accessibility/What_is_accessibility)
   - : この記事では、アクセシビリティが実際にどのようなものであるかをよく見てモジュールを開始します。これには、どのグループを考慮する必要があるのかとそのグループの理由、さまざまな人々がウェブとやりとりするために使用するツール、アクセシビリティをウェブ開発ワークフローの一部にする方法を含みます。
 - [HTML: アクセシビリティのための良い基礎](/ja/docs/Learn/Accessibility/HTML)
   - : 適切な HTML 要素が常に正しい目的で使用されていることを確認するだけで、大量のウェブコンテンツをアクセシブルにすることができます。この記事では、最大限のアクセシビリティを確保するために HTML をどのように使用できるかについて詳しく説明します。
@@ -28,25 +34,22 @@ MDN の[アクセシビリティ学習エリア](/ja/docs/Learn/Accessibility)�
 
 ## その他の文書
 
-- [ウェブコンテンツ・アクセシビリティガイドラインを理解する](/ja/docs/Web/Accessibility/Understanding_WCAG)
-  - : この一連の記事では、W3C ウェブコンテンツ・アクセシビリティガイドライン 2.0 (WCAG、Web Content Accessibility Guidelines) で概説されている推奨事項に準拠するために必要な手順を理解するのに役立つ簡単な説明を提供します。
-- [キーボードでナビゲート可能な JavaScript ウィジェット](/ja/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
-  - : 今まで、スタイル付きの `<div>` や `<span>` ベースのウィジェットを作りたいというウェブ開発者は、適切な技術を欠いていました。 **キーボード・アクセシビリティ**は、開発者が知っておくべき最低限のアクセシビリティ要件の一部です。
-- [ARIA](/ja/docs/Accessibility/ARIA)
+- [ウェブコンテンツアクセシビリティガイドラインを理解する](/ja/docs/Web/Accessibility/Understanding_WCAG)
+  - : この一連の記事では、W3C のウェブコンテンツアクセシビリティガイドライン 2.0 (WCAG、Web Content Accessibility Guidelines) で概説されている推奨事項に準拠するために必要な手順を理解するのに役立つ簡単な説明を提供します。
+- [色とアクセシビリティ入門](/ja/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
+  - : この記事では、光と色に対する私たちの認識について説明し、アクセシブルなデザインにおける色使いの基礎を提供し、視覚的で読みやすいコンテンツのベストプラクティスを示します。
+- [キーボードで操作可能な JavaScript ウィジェット](/ja/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+  - : 今まで、スタイル付きの `<div>` や `<span>` ベースのウィジェットを作りたいというウェブ開発者は、適切な技術を欠いていました。 **キーボードアクセシビリティ**は、開発者が知っておくべき最低限のアクセシビリティ要件の一部です。
+- [ARIA](/ja/docs/Web/Accessibility/ARIA)
   - : ARIA を使用して HTML 文書をより使いやすくする方法を学ぶための記事のコレクション。
-- [支援技術 (AT) 開発](/ja/docs/Web/Accessibility/AT_Development)
-  - : 支援技術の開発者向け記事のコレクション
 - [モバイルアクセシビリティのチェックリスト](/ja/docs/Web/Accessibility/Mobile_accessibility_checklist)
-  - : このドキュメントは、モバイルアプリ開発者向けのアクセシビリティ要求事項の簡潔なチェックリストを提供します。
-- [Cognitive accessibility](/ja/docs/Web/Accessibility/Cognitive_accessibility)
+  - : この記事は、モバイルアプリ開発者向けのアクセシビリティ要求事項の簡潔なチェックリストを提供します。
+- [認知的アクセシビリティ](/ja/docs/Web/Accessibility/Cognitive_accessibility)
   - : ウェブコンテンツを作成する際には、認知機能障碍者がアクセスできるようにすることを意識してください。
 - [痙攣性疾患に対するアクセシビリティ](/ja/docs/Web/Accessibility/Seizure_disorders)
   - : ウェブ上のビジュアルコンテンツの中には、特定の脳疾患を持つ人に発作を引き起こす可能性があるものがあります。問題となりうるコンテンツの種類を理解し、それらを回避するためのツールや戦略を見つけましょう。
 
 ## 関連情報
 
-- [アクセシビリティに関する Mozilla メーリングリスト](https://lists.mozilla.org/listinfo/accessibility)
-- [WAI Interest Group](https://www.w3.org/WAI/IG/)
-- [Mozillians group about accessibility](https://mozillians.org/en-US/group/1-accessibility)
+- [WAI Interest Group](https://www.w3.org/WAI/about/groups/waiig/)
 - [開発者ガイド](/ja/docs/Web/Guide)
-- [アクセシビリティと Mozilla](/ja/docs/Mozilla/Accessibility)

@@ -1,33 +1,43 @@
 ---
-title: Text()
+title: Text：Text() 构造函数
 slug: Web/API/Text/Text
+l10n:
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{ Apiref("DOM")}}{{seeCompatTable}}
+{{ APIRef("DOM")}}
 
-**`Text()`** 构造方法返回一个最新创建的{{domxref("Text")}} 对象，该对象带有可选参数 {{domxref("DOMString")}} 作为文本节点的文本内容 (textual content)。
+**`Text()`** 构造函数返回一个新创建的 {{domxref("Text")}} 对象，其文本内容为参数中给出的可选字符串。
 
-## Syntax
+## 语法
 
-```plain
-text1 = new Text(); // 创建一个空的文本节点 (text node),即它的 textContent 为空字符
-text2 = new Text("This is a text node");//该构造方法参数作为文本节点的 textContent 的值。
+```js-nolint
+new Text()
+new Text(string)
 ```
 
-## Example
+### 参数
+
+- `string` {{optional_inline}}
+
+### 返回值
+
+一个新的 {{domxref("Text")}} 对象，包含参数 `string` 的内容，如果没有给定参数，则为空字符串。
+
+## 示例
 
 ```js
-text = new Text("Test");
+let text = new Text("Test");
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [The DOM interfaces index.](/zh-CN/docs/DOM/DOM_Reference)
+- [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)

@@ -29,7 +29,7 @@ slug: Web/SVG/Element/hkern
 
 ## DOM 接口
 
-该元素实现了[`SVGHKernElement`](/zh-CN/DOM/SVGVKernElement)接口。
+该元素实现了 [`SVGHKernElement`](/zh-CN/DOM/SVGVKernElement) 接口。
 
 ## 参见
 

@@ -1,8 +1,8 @@
 ---
 title: Список авторов. Тест - список жанров
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 ---
+
 Страница списка авторов должна показывать список всех авторов, хранимых в БД, причём каждое имя автора должно быть связано со страницей подробностей для этого автора. Дата рождения автора и дата смерти должны выводиться в одной строке после имени автора.
 
 ## Контроллер
@@ -13,16 +13,19 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_pag
 
 ```js
 // Display list of all Authors.
-exports.author_list = function(req, res, next) {
-
+exports.author_list = function (req, res, next) {
   Author.find()
-    .sort([['family_name', 'ascending']])
+    .sort([["family_name", "ascending"]])
     .exec(function (err, list_authors) {
-      if (err) { return next(err); }
+      if (err) {
+        return next(err);
+      }
       //Successful, so render
-      res.render('author_list', { title: 'Author List', author_list: list_authors });
+      res.render("author_list", {
+        title: "Author List",
+        author_list: list_authors,
+      });
     });
-
 };
 ```
 
@@ -71,7 +74,7 @@ block content
 1. Следует отредактировать `genre_list()` в файле **/controllers/genreController.js**.
 2. Реализация почти такая же, как и для контроллера `author_list()` .
 
-    - Sort the results by name, in ascending order.
+   - Sort the results by name, in ascending order.
 
 3. Отображающий шаблон должен быть назван **genre_list.pug**.
 4. Шаблону для отображения должны быть переданы переменные `title` (строка 'Genre List') и `genre_list` (the list of список жанров, который вернёт колбэк-функция `Genre.find()`.

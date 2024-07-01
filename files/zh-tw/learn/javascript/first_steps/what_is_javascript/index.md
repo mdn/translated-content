@@ -42,18 +42,18 @@ JavaScript 是一種腳本，也能稱它為程式語言，可以讓你在網頁
 
 ```css
 p {
-  font-family: 'helvetica neue', helvetica, sans-serif;
+  font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  border: 2px solid rgba(0,0,200,0.6);
-  background: rgba(0,0,200,0.3);
-  color: rgba(0,0,200,0.6);
-  box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+  border: 2px solid rgba(0, 0, 200, 0.6);
+  background: rgba(0, 0, 200, 0.3);
+  color: rgba(0, 0, 200, 0.6);
+  box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
   border-radius: 10px;
   padding: 3px 10px;
   display: inline-block;
-  cursor:pointer;
+  cursor: pointer;
 }
 ```
 
@@ -62,19 +62,19 @@ p {
 最後，我們可以加一些 JavaScript 來作出互動的行為：
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('click', updateName);
+para.addEventListener("click", updateName);
 
 function updateName() {
-  let name = prompt('輸入新的名字');
-  para.textContent = 'Player 1: ' + name;
+  let name = prompt("輸入新的名字");
+  para.textContent = "Player 1: " + name;
 }
 ```
 
 {{ EmbedLiveSample('高層次的定義', '100%', 80, "", "", "hide-codepen-jsfiddle") }}
 
-試試點擊這最後版本的文字，看看會發生什麼事情（你同樣也可以在 GitHub 找到這個範例，來查看[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/javascript-label.html)或[在線上執行](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html)）！
+試試點擊這最後版本的文字，看看會發生什麼事情（你同樣也可以在 GitHub 找到這個範例，來查看[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/javascript-label.html)或[在線上執行](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html)）！
 
 JavaScript 能做到更多，讓我們更深入地探索。
 
@@ -95,14 +95,14 @@ API 是預先製作完成的程式模組，支援開發者實現困難或無法�
 
 ![](browser.png)
 
-**瀏覽器 API（Browser APIs）**內建在你的瀏覽器中，能夠依本地的電腦環境輸出資料或實現複雜的功能。舉例而言：
+**瀏覽器 API**（Browser API）內建在你的瀏覽器中，能夠依本地的電腦環境輸出資料或實現複雜的功能。舉例而言：
 
 - {{domxref("Document_Object_Model","DOM （文件物件模型） API")}} 讓你能操作 HTML 和 CSS，像是建立、移除或改變 HTML 元素，或動態地將新樣式套用到頁面…等等。每當你看到彈出視窗，或有新的內容出現在畫面上（就像上面的範例所展示的），那就是 DOM 在動作。
 - {{domxref("Geolocation","Geolocations（地理位置） API")}} 可以取得位置資訊。這就是 [Google Maps](https://www.google.com/maps) 取得你的位置並標示在地圖上所透過的方式。
-- {{domxref("Canvas_API","Canvas")}} 和 {{domxref("WebGL_API","WebGL")}} API 可以讓你在網頁創造 2D 動畫及 3D 圖像。人們正使用這些技術來作一些令人驚奇的事，參見 [Chrome Experiments](https://www.chromeexperiments.com/) 及 [webglsamples](http://webglsamples.org/).
-- [Audio 和 Video API](/zh-TW/Apps/Fundamentals/Audio_and_video_delivery) 像 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC")}} 一樣讓你可以使用多媒體做真正有趣的事情，例如在網頁中播放音樂或影片，或由網路攝影機頡取你的影像顯示在另一個人電腦裡（試試我們的[簡單例子](http://chrisdavidmills.github.io/snapshot/)來了解）。
+- {{domxref("Canvas_API","Canvas")}} 和 {{domxref("WebGL_API","WebGL")}} API 可以讓你在網頁創造 2D 動畫及 3D 圖像。人們正使用這些技術來作一些令人驚奇的事，參見 [Chrome Experiments](https://www.chromeexperiments.com/) 及 [webglsamples](https://webglsamples.org/).
+- [Audio 和 Video API](/zh-TW/docs/Web/Apps/Fundamentals/Audio_and_video_delivery) 像 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC")}} 一樣讓你可以使用多媒體做真正有趣的事情，例如在網頁中播放音樂或影片，或由網路攝影機頡取你的影像顯示在另一個人電腦裡（試試我們的[簡單例子](https://chrisdavidmills.github.io/snapshot/)來了解）。
 
-> **備註：** 上面的許多範例無法在舊版的瀏覽器上運作。使用現代的瀏覽器像是 Firefox、Chrome、Edge 或 Opera 來嘗試執行你的程式總是比較好的。當你接近要交付作為產品的程式（也就是實際的用戶將要使用的時候)，就需要思考關於[跨瀏覽器測試](/zn-TW/docs/Learn/Tools_and_testing/Cross_browser_testing)的事情。
+> **備註：** 上面的許多範例無法在舊版的瀏覽器上運作。使用現代的瀏覽器像是 Firefox、Chrome、Edge 或 Opera 來嘗試執行你的程式總是比較好的。當你接近要交付作為產品的程式（也就是實際的用戶將要使用的時候)，就需要思考關於[跨瀏覽器測試](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing)的事情。
 
 **第三方 API** 預設不內建在瀏覽器裡，你通常由網路上取得他們的程式碼與資訊。例如：
 
@@ -117,11 +117,11 @@ API 是預先製作完成的程式模組，支援開發者實現困難或無法�
 
 這裡我們開始看一些程式碼，探索當 JavaScript 在你的頁面上執行時，發生了哪些事情。
 
-簡單回顧一下當瀏覽器載入一個網站時會發生的事情（第一次是在我們的[CSS 如何工作](/zh-TW/Learn/CSS/Introduction_to_CSS/How_CSS_works#How_does_CSS_actually_work)章節中提到）。當瀏覽器載入一個網頁，就是在執行環境（瀏覽器分頁）中執行程式碼（HTML，CSS 和 JavaScript）。就像是工廠收集原料（程式碼）並且產出商品（網頁呈現的結果）。
+簡單回顧一下當瀏覽器載入一個網站時會發生的事情（第一次是在我們的[CSS 如何工作](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_works#how_does_css_actually_work)章節中提到）。當瀏覽器載入一個網頁，就是在執行環境（瀏覽器分頁）中執行程式碼（HTML，CSS 和 JavaScript）。就像是工廠收集原料（程式碼）並且產出商品（網頁呈現的結果）。
 
 ![](execution.png)
 
-透過 DOM API （上面提到的）動態調整 HTML 與 CSS 進行改變網頁呈現，在 JavaScript 是很常見的使用方式。要注意的是，檔案中的程式碼通常會以出現在頁面上的順序來執行。如果 JavaScript 比準備操作的 HTML 、 CSS 更早被載入，就可能會發生錯誤。你將會在這個章節的後段學到一些解決問題的方法，它在[腳本載入策略](/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies)的部分。
+透過 DOM API （上面提到的）動態調整 HTML 與 CSS 進行改變網頁呈現，在 JavaScript 是很常見的使用方式。要注意的是，檔案中的程式碼通常會以出現在頁面上的順序來執行。如果 JavaScript 比準備操作的 HTML 、 CSS 更早被載入，就可能會發生錯誤。你將會在這個章節的後段學到一些解決問題的方法，它在[腳本載入策略](#腳本載入策略)的部分。
 
 ### 瀏覽器安全性
 
@@ -134,13 +134,13 @@ API 是預先製作完成的程式模組，支援開發者實現困難或無法�
 當瀏覽器遇到一段 JavaScript 程式碼，通常會由上到下執行。這意味著你需要注意東西擺放的順序。為了說明，讓我們回到我們曾看過的第一個範例：
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('click', updateName);
+para.addEventListener("click", updateName);
 
 function updateName() {
-  let name = prompt('輸入新的名字');
-  para.textContent = 'Player 1: ' + name;
+  let name = prompt("輸入新的名字");
+  para.textContent = "Player 1: " + name;
 }
 ```
 
@@ -172,7 +172,7 @@ JavaScript 是一個輕量的直接程式語言。網頁瀏覽器收到文字格
 
 一個沒有動態更新內容能力的網頁被稱為**靜態**，它在任何時候都只顯示一樣的內容。
 
-## 如何在網頁中增加 JavaScript ？
+## 如何在網頁中增加 JavaScript？
 
 在 HTML 頁面中使用 JavaScript 與 CSS 的方法類似。在 HTML 中 CSS 藉著{{htmlelement("link")}} 元素引入外部樣式（stylesheets）以及 {{htmlelement("style")}} 元素定義內部樣式。JavaScript 在 HTML 中只需要一個朋友 — {{htmlelement("script")}} 元素。讓我們了解它是如何運作。
 
@@ -182,37 +182,35 @@ JavaScript 是一個輕量的直接程式語言。網頁瀏覽器收到文字格
 2. 用瀏覽器與文字編輯器打開範例。你會看到 HTML 建立了一個簡單的網頁，包含一個可點擊的按鈕。
 3. 接著，切換到文字編輯器，在標頭區加入下面的文字，就放在 `</head>` 結尾標籤前：
 
-    ```html
-    <script>
-
-      // JavaScript 將放在這裡
-
-    </script>
-    ```
+   ```html
+   <script>
+     // JavaScript 將放在這裡
+   </script>
+   ```
 
 4. 現在，我們將在我們的 {{htmlelement("script")}} 元素中加入一些 JavaScript 程式，讓網頁能做些有趣的事，接者在「// JavaScript 將放在這裡」那行後面：
 
-    ```js
-    document.addEventListener("DOMContentLoaded", function() {
-      function createParagraph() {
-        let para = document.createElement('p');
-        para.textContent = 'You clicked the button!';
-        document.body.appendChild(para);
-      }
+   ```js
+   document.addEventListener("DOMContentLoaded", function () {
+     function createParagraph() {
+       let para = document.createElement("p");
+       para.textContent = "You clicked the button!";
+       document.body.appendChild(para);
+     }
 
-      const buttons = document.querySelectorAll('button');
+     const buttons = document.querySelectorAll("button");
 
-      for(let i = 0; i < buttons.length ; i++) {
-        buttons[i].addEventListener('click', createParagraph);
-      }
-    });
-    ```
+     for (let i = 0; i < buttons.length; i++) {
+       buttons[i].addEventListener("click", createParagraph);
+     }
+   });
+   ```
 
 5. 儲存你的檔案並且重新整理網頁，現在你會發現每次點擊按鈕，都會在下方產生一個新的文字段落。
 
-> **備註：** 如果你的版本不能正常運作，重新按照步驟再操作一次，檢查每一步都正確。你下載的範例是 `.html` 結尾的檔名？你加入的 {{htmlelement("script")}} 元素在 `</head>` 標籤的前面？你輸入的 JavaScript 與上面提供的一模一樣？ **JavaScript 程式大小寫，而且很挑剔，所以你輸入的語法要一模一樣，不然可能會無法運作。**
+> **備註：** 如果你的版本不能正常運作，重新按照步驟再操作一次，檢查每一步都正確。你下載的範例是 `.html` 結尾的檔名？你加入的 {{htmlelement("script")}} 元素在 `</head>` 標籤的前面？你輸入的 JavaScript 與上面提供的一模一樣？**JavaScript 程式大小寫，而且很挑剔，所以你輸入的語法要一模一樣，不然可能會無法運作。**
 
-> **備註：** GitHub 上有完整版本的範例在 [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)（[看線上版本](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)）。
+> **備註：** GitHub 上有完整版本的範例在 [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)（[看線上版本](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)）。
 
 ### 外部的 JavaScript
 
@@ -221,29 +219,29 @@ JavaScript 是一個輕量的直接程式語言。網頁瀏覽器收到文字格
 1. 首先，建立一個新的檔案，和 HTML 檔案放在相同的目錄下，命名為 `script.js` ，確定這個檔案是以 .js 為副檔名， 因為這就是它被識別為 JavaScript 的原因。
 2. 將 {{htmlelement("script")}} 元素（包含裡面的程式）換成下面的樣子：
 
-    ```html
-    <script src="script.js" async></script>
-    ```
+   ```html
+   <script src="script.js" async></script>
+   ```
 
 3. 在 `script.js` 中，加入下面的程式碼：
 
-    ```js
-    function createParagraph() {
-      let para = document.createElement('p');
-      para.textContent = 'You clicked the button!';
-      document.body.appendChild(para);
-    }
+   ```js
+   function createParagraph() {
+     let para = document.createElement("p");
+     para.textContent = "You clicked the button!";
+     document.body.appendChild(para);
+   }
 
-    const buttons = document.querySelectorAll('button');
+   const buttons = document.querySelectorAll("button");
 
-    for(let i = 0; i < buttons.length ; i++) {
-      buttons[i].addEventListener('click', createParagraph);
-    }
-    ```
+   for (let i = 0; i < buttons.length; i++) {
+     buttons[i].addEventListener("click", createParagraph);
+   }
+   ```
 
 4. 儲存檔案並在你的瀏覽器執行重新整理，你應該會看到一樣的結果！雖然是一樣的結果，但現在我們是由外部的檔案來引入 JavaScript 程式。就組織程式碼，讓程式可以在多個 HTML 間重複被使用而言，這通常是好的作法。另外，因為少了一大堆程式碼在裡頭，也能夠讓 HTML 檔案更容易被閱讀。
 
-> **備註：** 你可以在 GitHub 上找到這個版本的 [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) 與 [script.js](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js) （[看線上版本](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)）。
+> **備註：** 你可以在 GitHub 上找到這個版本的 [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) 與 [script.js](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js) （[看線上版本](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)）。
 
 ### 行內的 JavaScript
 
@@ -251,8 +249,8 @@ JavaScript 是一個輕量的直接程式語言。網頁瀏覽器收到文字格
 
 ```js example-bad
 function createParagraph() {
-  var para = document.createElement('p');
-  para.textContent = 'You clicked the button!';
+  var para = document.createElement("p");
+  para.textContent = "You clicked the button!";
   document.body.appendChild(para);
 }
 ```
@@ -283,7 +281,7 @@ for (var i = 0; i < buttons.length ; i++) {
 
 > **備註：** 試著編輯你自己版本的 `apply-javascript.html` ，在裡面多添加一點按鈕。當你重新載入網頁，你應該會發現所有按鈕，按下去的時候都會建立一的段落。很簡潔吧！
 
-### 腳本載入策略(Script loading strategies)
+### 腳本載入策略
 
 在正確的時機載入腳本涉及一些要注意的東西。並不如它看起來的簡單！其中一個常見的問題是，所有的 HTML 是根據出現順序載入。假如你使用 JavaScript 操作頁面中的元素（精確地來說是 [DOM 元素](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#The_document_object_model)），如果 JavaScript 在這些 HTML 操作對象前被讀取及解析，你的程式將無法運作。
 
@@ -374,8 +372,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // 函數：建立一個段落元素並加到 HTML body 的尾端
 
 function createParagraph() {
-  var para = document.createElement('p');
-  para.textContent = 'You clicked the button!';
+  var para = document.createElement("p");
+  para.textContent = "You clicked the button!";
   document.body.appendChild(para);
 }
 
@@ -386,10 +384,10 @@ function createParagraph() {
   當任何按鈕被按下，執行 createParagraph() 函數
 */
 
-var buttons = document.querySelectorAll('button');
+var buttons = document.querySelectorAll("button");
 
-for (var i = 0; i < buttons.length ; i++) {
-  buttons[i].addEventListener('click', createParagraph);
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", createParagraph);
 }
 ```
 
@@ -400,17 +398,5 @@ for (var i = 0; i < buttons.length ; i++) {
 所以你已經踏出在 JavaScript 世界中的第一步。我們從理論開始，逐漸熟悉使用 JavaScript 的原因，以及你可以用它做些什麼。過程中你看到了一些程式碼範例，學到如何將 JavaScript 與你網站的其它東西放在一起。
 
 JavaScript 目前可能看起來有一點嚇人，然而不用擔心，在本課程我們會透過簡單的步驟，帶著你建立觀念並繼續向前。 在下一章節，我們將會[投入更實用的知識](/zh-TW/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash)，帶你直接入門並建立你自己的 JavaScript 作品。
-
-## 在這個學習模組中
-
-- [什麼是 JavaScript？](/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [初次接觸 Javascript](/zh-TW/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [什麼出錯了？ JavaScript 的疑難排解（除錯）](/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [儲存你需要的資訊 — 變數](/zh-TW/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript 的基本運算— 數字 與 運算子](/zh-TW/docs/Learn/JavaScript/First_steps/Math)
-- [處理文字 — JavaScript 的字串](/zh-TW/docs/Learn/JavaScript/First_steps/Strings)
-- [有用的字串方法](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [陣列](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays)
-- [附錄：笑話產生器](/zh-TW/docs/Learn/JavaScript/First_steps/Silly_story_generator)
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}

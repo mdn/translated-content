@@ -1,8 +1,9 @@
 ---
 title: end
 slug: Web/SVG/Attribute/end
-translation_of: Web/SVG/Attribute/end
 ---
+
+{{SVGRef}}
 
 « [SVG Attribute reference home](/en/SVG/Attribute)
 

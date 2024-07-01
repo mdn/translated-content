@@ -13,7 +13,7 @@ Desplaza el documento el número de pixels proporcionados.
 
 ```js
 window.scrollBy(X, Y);
-window.scrollBy(opciones)
+window.scrollBy(opciones);
 ```
 
 ### Parámetros
@@ -50,8 +50,8 @@ Utilizando opciones:
 window.scrollBy({
   top: 100,
   left: 100,
-  behaviour: 'smooth'
-})
+  behaviour: "smooth",
+});
 ```
 
 ## Notas

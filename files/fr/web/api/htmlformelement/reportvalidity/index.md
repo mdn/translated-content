@@ -1,10 +1,6 @@
 ---
 title: HTMLFormElement.reportValidity()
 slug: Web/API/HTMLFormElement/reportValidity
-tags:
-  - HTML
-  - Méthode
-translation_of: Web/API/HTMLFormElement/reportValidity
 ---
 
 {{APIRef("HTML DOM")}}
@@ -14,7 +10,7 @@ La méthode **`HTMLFormElement.reportValidity()`** renvoie true si les contrôle
 ## Syntaxe
 
 ```js
-HTMLFormElement.reportValidity()
+HTMLFormElement.reportValidity();
 ```
 
 ### Valeur de retour
@@ -24,13 +20,21 @@ HTMLFormElement.reportValidity()
 ## Exemple
 
 ```js
-document.forms['myform'].addEventListener('invalid', function() {
-  // Optional response here
-}, false);
+document.forms["myform"].addEventListener(
+  "invalid",
+  function () {
+    // Optional response here
+  },
+  false,
+);
 
-document.forms['myform'].addEventListener('submit', function() {
-  document.forms['myform'].reportValidity();
-}, false);
+document.forms["myform"].addEventListener(
+  "submit",
+  function () {
+    document.forms["myform"].reportValidity();
+  },
+  false,
+);
 ```
 
 ## Spécifications

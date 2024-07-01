@@ -1,8 +1,9 @@
 ---
-title: WorkerNavigator.product
+title: "WorkerNavigator: product プロパティ"
+short-title: product
 slug: Web/API/WorkerNavigator/product
 l10n:
-  sourceCommit: 7993e46a20267e041a259e8bd2d788d3f6a211d5
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}

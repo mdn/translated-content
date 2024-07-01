@@ -1,111 +1,114 @@
 ---
 title: MessageEvent
 slug: Web/API/MessageEvent
+l10n:
+  sourceCommit: 2ba2c0efbdf0c34b1da02203e4e84b571c883629
 ---
 
 {{APIRef("HTML DOM")}}
 
-La interface **`MessageEvent`** representa un mensaje recibido por un objeto de destino.
+La interfaz **`MessageEvent`** representa un mensaje recibido por un objeto de destino.
 
-Este es usado para representar mensajes en :
+Esto se utiliza para representar mensajes en:
 
-- [Eventos enviados por el servidor](/es/docs/Web/API/Server-sent_events)(ver {{domxref("EventSource.onmessage")}}).
-- [Web sockets](/es/docs/Web/API/WebSockets_API) (ver la propiedad `onmessage` de la interface [WebSocket](/es/docs/Web/API/WebSocket) ).
-- Mensajeria cruzada(ver {{domxref("Window.postMessage()")}} y {{domxref("Window.onmessage")}}).
-- [Mensajes de canal](/es/docs/Web/API/Channel_Messaging_API)(ver {{domxref("MessagePort.postMessage()")}} y {{domxref("MessagePort.onmessage")}}).
-- Trabajo cruzado / Mensajes de texto (vea las dos entradas anteriores, pero también {{domxref("Worker.postMessage()")}}, {{domxref("Worker.onmessage")}}, {{domxref("ServiceWorkerGlobalScope.onmessage")}}, etc.)
-- [Canales de Transmisión](/es/docs/Web/API/Broadcast_Channel_API)(ver{{domxref("Broadcastchannel.postMessage()")}}) y {{domxref("BroadcastChannel.onmessage")}}).
-- Canal de datos WebRTC (ver {{domxref("RTCDataChannel.onmessage")}}).
+- [Eventos enviados por el servidor](/es/docs/Web/API/Server-sent_events) (ver {{domxref("EventSource.message_event")}}).
+- [Web sockets](/es/docs/Web/API/WebSockets_API) (ver la propiedad `onmessage` de la interfaz [WebSocket](/es/docs/Web/API/WebSocket)).
+- Mensajes entre documentos (ver {{domxref("Window.postMessage()")}} y {{domxref("Window.message_event")}}).
+- [Canal de mensajería](/es/docs/Web/API/Channel_Messaging_API) (ver {{domxref("MessagePort.postMessage()")}} y {{domxref("MessagePort.message_event")}}).
+- Mensajes entre _workers_ y/o documentos (consulte las dos entradas anteriores, pero también {{domxref("Worker.postMessage()")}}, {{domxref("Worker.message_event")}}, {{domxref("ServiceWorkerGlobalScope.message_event")}}, etcetera).
+- [Canales de difusión](/es/docs/Web/API/Broadcast_Channel_API) (ver {{domxref("Broadcastchannel.postMessage()")}}) y {{domxref("BroadcastChannel.message_event")}}).
+- Canales de datos WebRTC (consulte {{domxref("RTCDataChannel.message_event", "onmessage")}}).
 
-La acción desencadenada por este evento es definida en una función establecida como el controlador de eventos para el evento pertinente [`message`](/es/docs/Web/Reference/Events/message) ( es decir : Usando un manejador de `onmessage` como se lista arriba).
+La acción desencadenada por este evento se define en un conjunto de funciones como el manejador de eventos para el evento `message` relevante (por ejemplo, usando `onmessage` como se indica arriba).
 
 {{AvailableInWorkers}}
+{{InheritanceDiagram}}
 
 ## Constructor
 
 - {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}}
-  - : Crear un nuevo `MessageEvent`.
+  - : Crea un nuevo `MessageEvent`.
 
-## Propiedades
+## Propiedades de instancia
 
-_Esta interface tambien herada propiedadesde desde su padre {{domxref("Evento")}}._
+_Esta interfaz también hereda propiedades de su padre, {{domxref("Event")}}._
 
-- {{domxref("MessageEvent.data")}} {{readonlyInline}}
-  - : La información enviada por el emisor del mensaje.
-- {{domxref("MessageEvent.origin")}} {{readonlyInline}}
-  - : {{domxref("USVString")}} es una representacion del origen del emisor del mensaje.
-- {{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}
-  - : {{domxref("DOMString")}} es una representación de una ID unico para el evento.
-- {{domxref("MessageEvent.source")}} {{readonlyInline}}
-  - : El `MessageEventSource` (El cual puede ser un {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) es ima representación del mensaje emitido.
-- {{domxref("MessageEvent.ports")}} {{readonlyInline}}
-  - : Un array de objetos {{domxref("MessagePort")}} representa los puertos asociados al canal, el mensaje se esta enviado a traves de (donde sea apropiado, por ejemplo, en mensajes de canal o al enviar un mensaje a un trabajador compartido).
+- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
+  - : Los datos enviados por el emisor del mensaje.
+- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
+  - : Una cadena que representa el origen del emisor del mensaje.
+- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
+  - : Una cadena que representa un ID único para el evento.
+- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
+  - : Un `MessageEventSource` (que puede ser un objeto {{glossary("WindowProxy")}}, {{domxref("MessagePort")}} o {{domxref("ServiceWorker")}}) que representa el emisor del mensaje.
+- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
+  - : Un arreglo de objetos {{domxref("MessagePort")}} que representan los puertos asociados con el canal a través del cual se envía el mensaje (cuando corresponda, por ejemplo, en la mensajería del canal o cuando se envía un mensaje a un _worker_ compartido).
 
-## Metodos
+## Métodos de instancia
 
-_Esta interface tambien herada propiedadesde desde su padre, {{domxref("Evento")}}._
+_Esta interfaz también hereda métodos de su padre, {{domxref("Event")}}._
 
-- {{domxref("MessageEvent.initMessageEvent()")}} {{deprecated_inline}}
-  - : Inicializar un vento de mensaje. **No use esto mas** — en vez de eso use el constructor **{{domxref("MessageEvent.MessageEvent", "MessageEvent()")}} .**
+- {{domxref("MessageEvent.initMessageEvent","initMessageEvent()")}} {{deprecated_inline}}
+  - : Inicializa un evento de mensaje. **No uses más esto** — **usa el constructor {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}} en su lugar.**
 
 ## Ejemplos
 
-En nuestro [Ejemplo basico de trabajador compartido](https://github.com/mdn/simple-shared-worker)([Ejecutar trabajador compartdo](http://mdn.github.io/simple-shared-worker/)), Tenemos dos paginas HTML, cada una de las cuales usa algo de JavaScript para mejorar un calculo simple. Los diferentes scripts estan usando el mismo archivo de trabajo para mejorar el calculo — Ambos pueden accederlo, Incluso si sus paginas esta corriendo n diferentes ventanas.
+En nuestro [Ejemplo de un _worker_ compartido básico](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([ejecutar _worker_ compartido](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)), tenemos dos páginas HTML, cada una de las cuales usa algo de JavaScript para realizar un cálculo simple. Los diferentes _scripts_ usan el mismo archivo de trabajo para realizar el cálculo; ambos pueden acceder a él, incluso si sus páginas se ejecutan dentro de ventanas diferentes.
 
-The following code snippet shows creation of a `SharedWorker` object using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. Both scripts contain this:
+El siguiente fragmento de código muestra la creación de un objeto {{domxref("SharedWorker")}} mediante el constructor {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}. Ambos _scripts_ contienen esto:
 
 ```js
-var myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker("worker.js");
 ```
 
-Both scripts then access the worker through a {{domxref("MessagePort")}} object created using the {{domxref("SharedWorker.port")}} property. If the onmessage event is attached using addEventListener, the port is manually started using its `start()` method:
+Ambos _scripts_ luego acceden al _worker_ a través de un objeto {{domxref("MessagePort")}} creado usando la propiedad {{domxref("SharedWorker.port")}}. Si el evento `onmessage` se adjunta usando `addEventListener`, el puerto se inicia manualmente usando su método `start()`:
 
 ```js
 myWorker.port.start();
 ```
 
-When the port is started, both scripts post messages to the worker and handle messages sent from it using `port.postMessage()` and `port.onmessage`, respectively:
+Cuando se inicia el puerto, ambos _scripts_ envían mensajes al _worker_ y manejan los mensajes enviados desde él usando `port.postMessage()` y `port.onmessage`, respectivamente:
 
 ```js
-first.onchange = function() {
-  myWorker.port.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+first.onchange = () => {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Mensaje publicado al worker");
+};
 
-second.onchange = function() {
-  myWorker.port.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+second.onchange = () => {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Mensaje publicado al worker");
+};
 
-myWorker.port.onmessage = function(e) {
+myWorker.port.onmessage = (e) => {
   result1.textContent = e.data;
-  console.log('Message received from worker');
-}
+  console.log("Mensaje recibido del worker");
+};
 ```
 
-Inside the worker we use the {{domxref("SharedWorkerGlobalScope.onconnect")}} handler to connect to the same port discussed above. The ports associated with that worker are accessible in the [`connect`](/es/docs/Web/Reference/Events/connect) event's `ports` property — we then use {{domxref("MessagePort")}} `start()` method to start the port, and the `onmessage` handler to deal with messages sent from the main threads.
+Dentro del _worker_ usamos el manejador {{domxref("SharedWorkerGlobalScope.connect_event", "onconnect")}} para conectarnos al mismo puerto mencionado anteriormente. Se puede acceder a los puertos asociados con ese _worker_ en la propiedad `ports` del evento {{domxref("SharedWorkerGlobalScope/connect_event", "connect")}} — luego usamos {{domxref("MessagePort")}} `start()` para iniciar el puerto, y el manejador `onmessage` para manejar los mensajes enviados desde los hilos principales.
 
 ```js
-onconnect = function(e) {
-  var port = e.ports[0];
+onconnect = (e) => {
+  const port = e.ports[0];
 
-  port.addEventListener('message', function(e) {
-    var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  port.addEventListener("message", (e) => {
+    const workerResult = `Resultado: ${e.data[0] * e.data[1]}`;
     port.postMessage(workerResult);
   });
 
-  port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
-}
+  port.start(); // Requerido cuando se usa addEventListener. De lo contrario, lo llama implícitamente onmessage setter.
+};
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.MessageEvent")}}
+{{Compat}}
 
-## Ver tambien
+## Véase también
 
-- {{domxref("ExtendableMessageEvent")}} — similar to this interface but used in interfaces that needs to give more flexibility to authors.
+- {{domxref("ExtendableMessageEvent")}} — similar a esta interfaz pero utilizada en interfaces que necesitan dar más flexibilidad a los autores.

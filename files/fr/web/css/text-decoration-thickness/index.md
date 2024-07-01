@@ -1,11 +1,6 @@
 ---
 title: text-decoration-thickness
 slug: Web/CSS/text-decoration-thickness
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-decoration-thickness
 ---
 
 {{CSSRef}}
@@ -49,7 +44,10 @@ text-decoration-thickness: unset;
 ```html
 <p class="longhand">Voici du texte avec un soulignement rouge de 2px.</p>
 <p class="under-and-over">Celui est souligné et surligné.</p>
-<p class="shorthand">Ce texte sera souligné avec une ligne bleue de 1px si la formulation raccourcie est prise en charge.</p>
+<p class="shorthand">
+  Ce texte sera souligné avec une ligne bleue de 1px si la formulation
+  raccourcie est prise en charge.
+</p>
 ```
 
 ### CSS

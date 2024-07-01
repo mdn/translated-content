@@ -1,8 +1,8 @@
 ---
 title: HTMLMediaElement.duration
 slug: Web/API/HTMLMediaElement/duration
-translation_of: Web/API/HTMLMediaElement/duration
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.duration`** свойство возвращает длину медиа в секундах или ноль, если данные по медиа недоступны.
@@ -10,7 +10,7 @@ translation_of: Web/API/HTMLMediaElement/duration
 ## Синтаксис
 
 ```js
-var myDuration = audioOrVideo.duration
+var myDuration = audioOrVideo.duration;
 ```
 
 ### Значения
@@ -20,18 +20,15 @@ var myDuration = audioOrVideo.duration
 ## Пример
 
 ```js
-var obj = document.createElement('video');
+var obj = document.createElement("video");
 console.log(obj.duration); // NaN
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                                        | Status                           | Comment             |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', "#dom-media-duration", "HTMLMediaElement.duration")}}                             | {{Spec2('HTML WHATWG')}} |                     |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement.duration")}} | {{Spec2('HTML5 W3C')}}     | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

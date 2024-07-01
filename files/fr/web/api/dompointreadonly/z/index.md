@@ -1,16 +1,6 @@
 ---
 title: DOMPoint.z
 slug: Web/API/DOMPointReadOnly/z
-tags:
-  - API
-  - Coordonnées
-  - DOM
-  - Géométrie
-  - Point
-  - Propriétés
-  - Quadrilatère
-  - z
-translation_of: Web/API/DOMPointReadOnly/z
 ---
 
 {{APIRef("DOM")}}{{ SeeCompatTable() }}

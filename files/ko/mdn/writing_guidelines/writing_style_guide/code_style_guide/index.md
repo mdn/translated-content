@@ -1,7 +1,6 @@
 ---
 title: 모든 코드에 대한 일반 가이드라인
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
-original_slug: MDN/Guidelines/Code_guidelines/General
 ---
 
 {{MDNSidebar}}
@@ -39,8 +38,8 @@ original_slug: MDN/Guidelines/Code_guidelines/General
 
 ```js example-good
 function myFunc() {
-  if(thingy) {
-    console.log('Yup, that worked.');
+  if (thingy) {
+    console.log("Yup, that worked.");
   }
 }
 ```
@@ -52,16 +51,18 @@ function myFunc() {
 예를 들면, 아래는 안 좋은 예입니다.
 
 ```js example-bad
-let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign matter may have nestled its way into his mighty throat. Many a fat alley rat had met its demise while staring point blank down the cavernous barrel of this awesome prowling machine.';
+let tommyCat =
+  "Said Tommy the Cat as he reeled back to clear whatever foreign matter may have nestled its way into his mighty throat. Many a fat alley rat had met its demise while staring point blank down the cavernous barrel of this awesome prowling machine.";
 ```
 
 이것은 좀 낫지만, 그래도 여전히 좋지 않습니다:
 
 ```js
-let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign '
-+ 'matter may have nestled its way into his mighty throat. Many a fat alley rat '
-+ 'had met its demise while staring point blank down the cavernous barrel of '
-+ 'this awesome prowling machine.';
+let tommyCat =
+  "Said Tommy the Cat as he reeled back to clear whatever foreign " +
+  "matter may have nestled its way into his mighty throat. Many a fat alley rat " +
+  "had met its demise while staring point blank down the cavernous barrel of " +
+  "this awesome prowling machine.";
 ```
 
 템플릿 리터럴을 사용하는 것이 더 좋습니다:
@@ -138,24 +139,23 @@ color: #fff;
 이 처럼 하려면, MDN 에디터 콘트롤로 코드 블럭을 `<pre>` 블럭이 되도록 하고, 적절한 문법 강조를 설정해야 합니다. 소스 코드는 아래와 비슷하게 보일겁니다:
 
 ```html
-    <pre class="brush: js">
+<pre class="brush: js">
     function myFunc() {
       console.log('Hello!');
-    };</pre>
+    };</pre
+>
 ```
 
 이 상태에서 좋은 예시로 만들려면, `class` 속성의 오른쪽 따옴표 바로 앞에 `example-good`을 넣으면 됩니다:
 
 ```html
-    <pre class="brush: js example-good">
-      ...
+<pre class="brush: js example-good">      ...</pre>
 ```
 
 나쁜 예시로 만들려면, `class` 속성의 오른쪽 따옴표 바로 앞에 `example-bad`를 넣으면 됩니다:
 
 ```html
-    <pre class="brush: js example-bad">
-      ...
+<pre class="brush: js example-bad">      ...</pre>
 ```
 
 우리는 당신이 이 기능을 사용하길 권장합니다. 모든 곳에 사용할 필요는 없습니다. 당신의 코드에서 좋은 예와 나쁜 예를 구분할 필요가 있을때 사용하세요.

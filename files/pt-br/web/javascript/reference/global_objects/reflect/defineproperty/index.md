@@ -43,9 +43,9 @@ O método `Reflect.defineProperty` permite a adição precisa ou a modificação
 ### Usando `Reflect.defineProperty()`
 
 ```js
-let obj = {}
-Reflect.defineProperty(obj, 'x', {value: 7})  // true
-obj.x                                         // 7
+let obj = {};
+Reflect.defineProperty(obj, "x", { value: 7 }); // true
+obj.x; // 7
 ```
 
 ### Verificando se a definição da propriedade foi bem-sucedida
@@ -64,13 +64,11 @@ if (Reflect.defineProperty(target, property, attributes)) {
 
 ## Especificações
 
-| Especificação                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-reflect.defineproperty', 'Reflect.defineProperty')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Reflect.defineProperty")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,12 +1,6 @@
 ---
 title: <feDistantLight>
 slug: Web/SVG/Element/feDistantLight
-tags:
-  - Element
-  - SVG
-  - SVG Filter
-  - SVG Light Source
-translation_of: Web/SVG/Element/feDistantLight
 ---
 
 {{SVGRef}}

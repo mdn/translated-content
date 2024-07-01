@@ -1,13 +1,9 @@
 ---
 title: Справочник SVG элементов
 slug: Web/SVG/Element
-tags:
-  - SVG
-  - SVG Reference
-  - Руководство
-translation_of: Web/SVG/Element
-original_slug: Web/SVG/Элемент
 ---
+
+{{SVGRef}}
 
 « [SVG](/ru/docs/Web/SVG) / [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute) »
 

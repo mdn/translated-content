@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
 ## 構文
 
 ```js
-formatRange(startRange, endRange)
+selectRange(startRange, endRange);
 ```
 
 ### 返値
@@ -26,10 +26,10 @@ formatRange(startRange, endRange)
 ### selectRange() の使用
 
 ```js
- new Intl.PluralRules('sl').selectRange(102, 201);
+new Intl.PluralRules("sl").selectRange(102, 201);
 // → 'few'
 
- new Intl.PluralRules('pt').selectRange(102, 102);
+new Intl.PluralRules("pt").selectRange(102, 102);
 // → 'other'
 ```
 

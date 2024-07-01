@@ -42,7 +42,7 @@ var new_array = old_array.concat(value1[, value2[, ...[, valueN]]])
 下面的程式碼為合併兩個陣列：
 
 ```js
-var alpha = ['a', 'b', 'c'];
+var alpha = ["a", "b", "c"];
 var numeric = [1, 2, 3];
 
 alpha.concat(numeric);
@@ -55,8 +55,8 @@ alpha.concat(numeric);
 
 ```js
 var num1 = [1, 2, 3],
-    num2 = [4, 5, 6],
-    num3 = [7, 8, 9];
+  num2 = [4, 5, 6],
+  num3 = [7, 8, 9];
 
 var nums = num1.concat(num2, num3);
 
@@ -69,7 +69,7 @@ console.log(nums);
 下面的程式碼為合併三個值到一個陣列中：
 
 ```js
-var alpha = ['a', 'b', 'c'];
+var alpha = ["a", "b", "c"];
 
 var alphaNumeric = alpha.concat(1, [2, 3]);
 

@@ -29,57 +29,53 @@ Indexadores numéricos são úteis para percorrer através de todos os atributos
 O exemplo a seguir percorre através dos nós dos atributos do elemento no documento que tenha o id de "p1", e imprime o valor de cada atributo.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
+  <head>
+    <title>Exemplo com atributos</title>
+    <script type="text/javascript">
+      function listAttributes() {
+        var paragraph = document.getElementById("paragraph");
+        var result = document.getElementById("result");
 
- <head>
-  <title>Exemplo com atributos</title>
-  <script type="text/javascript">
-   function listAttributes() {
-     var paragraph = document.getElementById("paragraph");
-     var result = document.getElementById("result");
+        // Antes, vamos verificar se o paragrafo tem algum atributo
+        if (paragraph.hasAttributes()) {
+          var attrs = paragraph.attributes;
+          var output = "";
+          for (var i = attrs.length - 1; i >= 0; i--) {
+            output += attrs[i].name + "->" + attrs[i].value;
+          }
+          result.value = output;
+        } else {
+          result.value = "Nenhum atributo para mostrar";
+        }
+      }
+    </script>
+  </head>
 
-     // Antes, vamos verificar se o paragrafo tem algum atributo
-     if (paragraph.hasAttributes()) {
-       var attrs = paragraph.attributes;
-       var output = "";
-       for(var i = attrs.length - 1; i >= 0; i--) {
-         output += attrs[i].name + "->" + attrs[i].value;
-       }
-       result.value = output;
-     } else {
-       result.value = "Nenhum atributo para mostrar";
-     }
-   }
-  </script>
- </head>
-
-<body>
- <p id="paragraph" style="color: green;">Paragrafo de exemplo</p>
- <form action="">
-  <p>
-    <input type="button" value="Mostra o nome e o valor do atributo"
-      onclick="listAttributes();">
-    <input id="result" type="text" value="">
-  </p>
- </form>
-</body>
+  <body>
+    <p id="paragraph" style="color: green;">Paragrafo de exemplo</p>
+    <form action="">
+      <p>
+        <input
+          type="button"
+          value="Mostra o nome e o valor do atributo"
+          onclick="listAttributes();" />
+        <input id="result" type="text" value="" />
+      </p>
+    </form>
+  </body>
 </html>
 ```
 
 ## Especificações
 
-| Especificação                                                                                        | Status                           | Comentário                                                                                                |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-attributes', 'Element.attributes')}} | {{Spec2('DOM WHATWG')}} | Da {{SpecName('DOM3 Core')}}, movido de {{domxref("Node")}} para {{domxref("Element")}} |
-| {{SpecName('DOM3 Core', 'core.html#ID-84CF096', 'Element.attributes')}}     | {{Spec2('DOM3 Core')}}     | Nenhuma alteração a partir da {{SpecName('DOM2 Core')}}                                            |
-| {{SpecName('DOM2 Core', 'core.html#ID-84CF096', 'Element.attributes')}}     | {{Spec2('DOM2 Core')}}     | Nenhuma alteração a partir da {{SpecName('DOM1')}}                                                |
-| {{SpecName('DOM1', 'level-one-core.html#ID-84CF096', 'Element.attributes')}} | {{Spec2('DOM1')}}         | Definição inicial.                                                                                        |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Element.attributes")}}
+{{Compat}}
 
 ## Veja também
 

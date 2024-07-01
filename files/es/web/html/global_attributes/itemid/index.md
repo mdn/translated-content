@@ -1,7 +1,6 @@
 ---
 title: itemid
 slug: Web/HTML/Global_attributes/itemid
-original_slug: Web/HTML/Global_attributes/itemid
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -48,19 +47,20 @@ Este ejemplo utiliza atributos de microdatos para representar los siguientes dat
 #### HTML
 
 ```html
-<dl itemscope
+<dl
+  itemscope
   itemtype="https://schema.org/Book"
   itemid="urn:isbn:0-374-22848-5<">
- <dt>Título
-   <dd
-    itemprop="title">Owls of the Eastern Ice
- <dt>Autor
-   <dd
-     itemprop="author">Jonathan C Slaght
- <dt>Fecha de publicación
- <dd><time
-   itemprop="datePublished"
-   datetime="2020-08-04">4 de Agosto del 2020</time>
+  <dt>Título</dt>
+  <dd itemprop="title">Owls of the Eastern Ice</dd>
+  <dt>Autor</dt>
+  <dd itemprop="author">Jonathan C Slaght</dd>
+  <dt>Fecha de publicación</dt>
+  <dd>
+    <time itemprop="datePublished" datetime="2020-08-04"
+      >4 de Agosto del 2020</time
+    >
+  </dd>
 </dl>
 ```
 

@@ -1,8 +1,6 @@
 ---
 title: Как "оживить" примеры кода
 slug: MDN/Writing_guidelines/Page_structures/Live_samples
-translation_of: MDN/Contribute/Howto/Convert_code_samples_to_be_live
-original_slug: MDN/Contribute/Howto/Convert_code_samples_to_be_live
 ---
 
 {{MDNSidebar}}

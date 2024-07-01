@@ -20,6 +20,7 @@ isInFullScreen = windowRef.fullScreen;
 ## 返回值
 
 - `isInFullScreen`
+
   - : 一个布尔值。可能的值如下：
 
     - `true`: 窗口处于全屏模式下。
@@ -41,5 +42,5 @@ DOM 0 级。window\.fullScreen 并不属于任何 W3C 规范或技术推荐中�
 
 ## 备注
 
-- 这个属性仅在 Mozilla 1.9（Firefox 3）及之后才有意义。Mozilla 1.8 及早期版本确实有这个属性，但它总是返回 false，即使在窗口确实处于全屏模式的情况下 ({{Bug("127013")}})。
+- 这个属性仅在 Mozilla 1.9（Firefox 3）及之后才有意义。Mozilla 1.8 及早期版本确实有这个属性，但它总是返回 false，即使在窗口确实处于全屏模式的情况下 ([Firefox bug 127013](https://bugzil.la/127013))。
 - 在常规窗口与全屏窗口之间切换会在相应的窗口中触发“resize”事件。

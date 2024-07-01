@@ -13,23 +13,25 @@ slug: Web/API/Window/customElements
 
 ```js
 let customElementRegistry = window.customElements;
-customElementRegistry.define('my-custom-element', MyCustomElement);
+customElementRegistry.define("my-custom-element", MyCustomElement);
 ```
 
 그러나, 보통은 다음 코드처럼 줄여서 사용하곤 합니다.
 
 ```js
-customElements.define('element-details',
+customElements.define(
+  "element-details",
   class extends HTMLElement {
     constructor() {
       super();
-      const template = document
-        .getElementById('element-details-template')
-        .content;
-      const shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(template.cloneNode(true));
+      const template = document.getElementById(
+        "element-details-template",
+      ).content;
+      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
+        template.cloneNode(true),
+      );
     }
-  }
+  },
 );
 ```
 

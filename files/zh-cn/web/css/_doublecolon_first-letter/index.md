@@ -1,9 +1,9 @@
 ---
-title: '::first-letter (:first-letter)'
+title: "::first-letter (:first-letter)"
 slug: Web/CSS/::first-letter
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 [CSS](/zh-CN/CSS) [伪元素](/zh-CN/CSS/Pseudo-elements) `::first-letter`会选中某 [block-level element](/zh-CN/docs/Web/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes)（块级元素）第一行的第一个字母，并且文字所处的行之前没有其他内容（如图片和内联的表格）。
 
@@ -47,7 +47,8 @@ p::first-letter {
 ```css
 /* 使每段开头的第一个字母变红变大 */
 
-p::first-letter {  /* 使用:first 来兼容 IE8- */
+p::first-letter {
+  /* 使用:first 来兼容 IE8- */
   color: red;
   font-size: 130%;
 }

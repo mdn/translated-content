@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.fillRect()
 slug: Web/API/CanvasRenderingContext2D/fillRect
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
-translation_of: Web/API/CanvasRenderingContext2D/fillRect
 ---
+
 {{APIRef}}
 
 Метод **`CanvasRenderingContext2D.fillRect()`**, предоставляемый Canvas 2D API, рисует залитый прямоугольник в позиции _(x, y),_ размер которого определяется аргументами _width_ и _height_, и стиль которого определяется атрибутом {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}.
@@ -64,7 +58,8 @@ ctx.fillRect(10, 10, 100, 100);
 </div>
 <textarea id="code" class="playable-code">
 ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);</textarea>
+ctx.fillRect(10, 10, 100, 100);</textarea
+>
 ```
 
 ```js hidden
@@ -80,14 +75,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

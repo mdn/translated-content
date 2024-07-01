@@ -11,8 +11,8 @@ Firefox 73 は、米国時間 2020 年 2 月 11 日にリリースされまし�
 
 ### 開発者ツール
 
-- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors) をコンソールでエラーとして示す (警告として表示しない) ことで、適切な表示になりました ({{bug(1602093)}})。
-- ウェブコンソールの文字列検索や正規表現検索で、['-' を前につけて否定することが可能になりました](/ja/docs/Tools/Web_Console/Console_messages#Filtering_and_searching) ({{bug(1291192)}})。
+- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors) をコンソールでエラーとして示す (警告として表示しない) ことで、適切な表示になりました ([Firefox バグ 1602093](https://bugzil.la/1602093))。
+- ウェブコンソールの文字列検索や正規表現検索で、['-' を前につけて否定することが可能になりました](/ja/docs/Tools/Web_Console/Console_messages#Filtering_and_searching) ([Firefox バグ 1291192](https://bugzil.la/1291192))。
 
 ### HTML
 
@@ -20,39 +20,39 @@ _変更なし。_
 
 ### CSS
 
-- {{cssxref("overscroll-behavior-x")}} および {{cssxref("overscroll-behavior-y")}} を論理的にしたものである {{cssxref("overscroll-behavior-block")}} および {{cssxref("overscroll-behavior-inline")}} を追加しました ({{bug(833953)}})。
+- {{cssxref("overscroll-behavior-x")}} および {{cssxref("overscroll-behavior-y")}} を論理的にしたものである {{cssxref("overscroll-behavior-block")}} および {{cssxref("overscroll-behavior-inline")}} を追加しました ([Firefox バグ 833953](https://bugzil.la/833953))。
 
 #### 廃止
 
-- 独自仕様である [`-moz-touch-enabled`](/ja/docs/Web/CSS/@media/-moz-touch-enabled) メディアクエリーを削除しました ({{bug(1486964)}})。代わりに [`pointer: coarse`](/ja/docs/Web/CSS/@media/pointer) を使用してください。
+- 独自仕様である [`-moz-touch-enabled`](/ja/docs/Web/CSS/@media/-moz-touch-enabled) メディアクエリーを削除しました ([Firefox バグ 1486964](https://bugzil.la/1486964))。代わりに [`pointer: coarse`](/ja/docs/Web/CSS/@media/pointer) を使用してください。
 
 ### SVG
 
-- {{SVGAttr("letter-spacing")}} および {{SVGAttr("word-spacing")}} プロパティが SVG で動作するようになりました ({{bug(371787)}})。
+- {{SVGAttr("letter-spacing")}} および {{SVGAttr("word-spacing")}} プロパティが SVG で動作するようになりました ([Firefox バグ 371787](https://bugzil.la/371787))。
 
 ### MathML
 
 #### 廃止
 
-- 非推奨の {{MathMLElement("mfenced")}} 要素を削除しました ({{bug(1603773)}})。代わりに {{MathMLElement("mrow")}} および {{MathMLElement("mo")}} 要素を使用してください。
+- 非推奨の {{MathMLElement("mfenced")}} 要素を削除しました ([Firefox バグ 1603773](https://bugzil.la/1603773))。代わりに {{MathMLElement("mrow")}} および {{MathMLElement("mo")}} 要素を使用してください。
 
 ### JavaScript
 
-- The `yearName` および `relatedYear` フィールドが [`DateTimeFormat.prototype.formatToParts()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/formatToParts) メソッドで使用可能になりました。CJK カレンダー向けに役立つフォーマットです ({{bug(1591664)}})。
+- The `yearName` および `relatedYear` フィールドが [`DateTimeFormat.prototype.formatToParts()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/formatToParts) メソッドで使用可能になりました。CJK カレンダー向けに役立つフォーマットです ([Firefox バグ 1591664](https://bugzil.la/1591664))。
 
 ### API
 
 #### DOM
 
-- {{domxref("Window")}} オブジェクトの {{domxref("Window.innerWidth", "innerWidth")}} および {{domxref("Window.innerHeight", "innerHeight")}} プロパティが、ときどき視覚的なビューポートに基づいて幅や高を返すことなく、常にレイアウトビューポートの幅や高さを返すようになりました。特に、以前は [レスポンシブデザインモード](/ja/docs/Tools/Responsive_Design_Mode) を使用するときに視覚的なビューポートの寸法を返しており、想定とは異なる動作でした ({{bug(1514429)}})。
+- {{domxref("Window")}} オブジェクトの {{domxref("Window.innerWidth", "innerWidth")}} および {{domxref("Window.innerHeight", "innerHeight")}} プロパティが、ときどき視覚的なビューポートに基づいて幅や高を返すことなく、常にレイアウトビューポートの幅や高さを返すようになりました。特に、以前は [レスポンシブデザインモード](/ja/docs/Tools/Responsive_Design_Mode) を使用するときに視覚的なビューポートの寸法を返しており、想定とは異なる動作でした ([Firefox バグ 1514429](https://bugzil.la/1514429))。
 
 #### WebVR
 
-- 非推奨の [WebVR API](/ja/docs/Web/API/WebVR_API) ([拡張現実](https://ja.wikipedia.org/wiki/%E6%8B%A1%E5%BC%B5%E7%8F%BE%E5%AE%9F) および [バーチャル・リアリティ](https://ja.wikipedia.org/wiki/%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%83%AB%E3%83%BB%E3%83%AA%E3%82%A2%E3%83%AA%E3%83%86%E3%82%A3) アプリケーションの両方をサポートする [WebXR](/ja/docs/Web/API/WebXR_Device_API) に取って代わられました) を動作させるために、{{Glossary("HTTPS")}} プロトコルを使用する [安全なコンテキストが必要になりました](/ja/docs/Web/API/WebVR_API#API_availability)。これは、個人情報を含む可能性がある機微な入力ソースを使用できるためです ({{bug(1381645)}})。
+- 非推奨の [WebVR API](/ja/docs/Web/API/WebVR_API) ([拡張現実](https://ja.wikipedia.org/wiki/%E6%8B%A1%E5%BC%B5%E7%8F%BE%E5%AE%9F) および [バーチャル・リアリティ](https://ja.wikipedia.org/wiki/%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%83%AB%E3%83%BB%E3%83%AA%E3%82%A2%E3%83%AA%E3%83%86%E3%82%A3) アプリケーションの両方をサポートする [WebXR](/ja/docs/Web/API/WebXR_Device_API) に取って代わられました) を動作させるために、{{Glossary("HTTPS")}} プロトコルを使用する [安全なコンテキストが必要になりました](/ja/docs/Web/API/WebVR_API#API_availability)。これは、個人情報を含む可能性がある機微な入力ソースを使用できるためです ([Firefox バグ 1381645](https://bugzil.la/1381645))。
 
 #### 廃止
 
-- {{domxref("VideoPlaybackQuality")}} の {{domxref("VideoPlaybackQuality.corruptedVideoFrames", "corruptedVideoFrames")}} プロパティは仕様書で非推奨とされており、Firefox から削除しました ({{bug(1602163)}})。
+- {{domxref("VideoPlaybackQuality")}} の {{domxref("VideoPlaybackQuality.corruptedVideoFrames", "corruptedVideoFrames")}} プロパティは仕様書で非推奨とされており、Firefox から削除しました ([Firefox バグ 1602163](https://bugzil.la/1602163))。
 
 ### セキュリティ
 
@@ -60,9 +60,9 @@ _変更なし。_
 
 ### WebDriver conformance (Marionette)
 
-- カレントページを PDF 文書として印刷する `WebDriver:Print` を追加しました ({{bug(1604506)}})。
-- `Webdriver:TakeScreenshot` が、キャプチャーする要素が指定されていない場合に現在選択されているブラウジングコンテキストではなく、常にトップレベルのブラウジングコンテキストをキャプチャーするようになりました ({{bug(1398087)}}, {{bug(1606794)}})。
-- `Webdriver:TakeScreenshot` の `full` 引数を使用すると、ページ全体をキャプチャーします ({{bug(1571424)}})。
+- カレントページを PDF 文書として印刷する `WebDriver:Print` を追加しました ([Firefox バグ 1604506](https://bugzil.la/1604506))。
+- `Webdriver:TakeScreenshot` が、キャプチャーする要素が指定されていない場合に現在選択されているブラウジングコンテキストではなく、常にトップレベルのブラウジングコンテキストをキャプチャーするようになりました ([Firefox バグ 1398087](https://bugzil.la/1398087), [Firefox バグ 1606794](https://bugzil.la/1606794))。
+- `Webdriver:TakeScreenshot` の `full` 引数を使用すると、ページ全体をキャプチャーします ([Firefox バグ 1571424](https://bugzil.la/1571424))。
 
 ## アドオン開発者向けの変更点
 

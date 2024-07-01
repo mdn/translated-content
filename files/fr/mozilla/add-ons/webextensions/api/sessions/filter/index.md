@@ -1,20 +1,9 @@
 ---
 title: sessions.Filter
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/Filter
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - filter
-  - sessions
-translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/Filter
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'objet `Filter` permet de restreindre le nombre d'objets {{WebExtAPIRef("sessions.Session", "Session")}} retournés par un appel à {{WebExtAPIRef("sessions.getRecentlyClosed()")}}.
 
@@ -25,9 +14,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les proriétés suivante
 - `maxResults`{{optional_inline}}
   - : `number`. Le nombre maximal de résultats à retourner.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions.Filter")}}
+{{Compat}}
 
 ## Exemples
 

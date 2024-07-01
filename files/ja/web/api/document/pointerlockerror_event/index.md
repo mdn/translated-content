@@ -1,25 +1,25 @@
 ---
-title: 'Document: pointerlockerror イベント'
+title: "Document: pointerlockerror イベント"
+short-title: pointerlockerror
 slug: Web/API/Document/pointerlockerror_event
-original_slug: Web/API/Element/pointerlockerror_event
 l10n:
-  sourceCommit: d4619276d67ca1ee02bd964d884ec52c2aa2ad4by
+  sourceCommit: c99ff93a1b71e7d664509fdd3e0c168920be967a
 ---
 
-{{APIRef}}
+{{APIRef("Pointer Lock API")}}
 
-`pointerlockerror` イベントは、（技術的な理由、または権限が拒否されたために）ポインターのロックに失敗したときに発生します。
+**`pointerlockerror`** イベントは、（技術的な理由、または権限が拒否されたために）ポインターのロックに失敗したときに発生します。
 
-このイベントはキャンセル不可です。
+このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('pointerlockerror', (event) => { });
+addEventListener("pointerlockerror", (event) => {});
 
-onpointerlockerror = (event) => { };
+onpointerlockerror = (event) => {};
 ```
 
 ## イベント型
@@ -31,10 +31,10 @@ onpointerlockerror = (event) => { };
 `addEventListener()` を使用した場合
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-document.addEventListener('pointerlockerror', (event) => {
-  console.log('ポインターのロックエラー');
+document.addEventListener("pointerlockerror", (event) => {
+  console.log("ポインターのロックエラー");
 });
 ```
 
@@ -42,7 +42,7 @@ document.addEventListener('pointerlockerror', (event) => {
 
 ```js
 document.onpointerlockerror = (event) => {
-  console.log('ポインターのロックエラー');
+  console.log("ポインターのロックエラー");
 };
 ```
 

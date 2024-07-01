@@ -49,7 +49,7 @@ arr; // [1, 2, 3, , 5]
 Reflect.deleteProperty({}, "foo"); // true
 
 // 如果属性不可配置，返回 false
-Reflect.deleteProperty(Object.freeze({foo: 1}), "foo"); // false
+Reflect.deleteProperty(Object.freeze({ foo: 1 }), "foo"); // false
 ```
 
 ## 规范
@@ -60,7 +60,9 @@ Reflect.deleteProperty(Object.freeze({foo: 1}), "foo"); // false
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [`core-js` 中 `Reflect.deleteProperty` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
-- [`delete` operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)
+- [`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)
+- [`handler.deleteProperty()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty)

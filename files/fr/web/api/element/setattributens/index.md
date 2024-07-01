@@ -1,45 +1,62 @@
 ---
-title: element.setAttributeNS
+title: "Element : méthode setAttributeNS()"
 slug: Web/API/Element/setAttributeNS
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthodes
-translation_of: Web/API/Element/setAttributeNS
+l10n:
+  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}
 
-`setAttributeNS` ajoute un nouvel attribut ou modifie la valeur d'un attribut avec un espace de noms et un nom donnés.
+La méthode **`setAttributeNS()`**, rattachée à l'interface [`Element`](/fr/docs/Web/API/Element), ajoute à l'élément courant un nouvel attribut ou modifie la valeur d'un attribut existant avec l'espace de noms et le nom indiqués en arguments.
+
+Si vous manipulez des documents HTML et n'avez pas besoin d'utiliser d'espace de noms, vous pouvez utiliser la méthode [`setAttribute()`](/fr/docs/Web/API/Element/setAttribute) à la place.
 
 ## Syntaxe
 
-```js
-element.setAttributeNS(
-namespace,
-name,
-value)
+```js-nolint
+setAttributeNS(namespace, name, value)
 ```
 
-- `namespace` est une chaîne spécifiant l'espace de noms de l'attribut.
-- `name` est une chaîne identifiant l'attribut par son nom qualifié ; c'est-à-dire un préfixe d'espace de noms suivi d'un deux-points suivi d'un nom local.
-- `value` est la valeur chaîne désirée pour le nouvel attribut.
+### Paramètres
 
-## Exemple
+- `namespace`
+  - : Une chaîne de caractères spécifiant l'espace de noms de l'attribut.
+- `name`
+  - : Une chaîne de caractères indiquant le nom qualifié de l'attribut, c'est-à-dire un préfixe d'espace de noms suivi d'un deux-points suivi d'un nom local.
+- `value`
+  - : La valeur à utiliser pour le nouvel attribut, exprimée avec une chaîne de caractères.
+
+### Valeur de retour
+
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+
+## Exemples
 
 ```js
-var d = document.getElementById("d1");
-d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
+let d = document.getElementById("d1");
+d.setAttributeNS(
+  "http://www.mozilla.org/ns/specialspace",
+  "spec:align",
+  "center",
+);
 ```
 
 ## Notes
 
-{{ DOMAttributeMethods() }}
+`setAttributeNS()` est la seule méthode pour les attributs d'espace nom qui attend le nom qualifié complet de l'attribut, c'est-à-dire `"namespace:localname"`.
 
-`setAttributeNS`  est la seule méthode pour les attributs d'espace nom qui attend le nom qualifié complet, c'est-à-dire `"namespace:localname"`.
+## Spécifications
 
-## Spécification
+{{Specifications}}
 
-- [DOM Level 2 Core: setAttributeNS (en)](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElSetAttrNS) (non normative)
-- [DOM-Level-2-Core: glossary qualified name](https://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-qualifiedname)
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute)
+- [`Element.hasAttributeNS()`](/fr/docs/Web/API/Element/hasAttributeNS)
+- [`Element.getAttributeNS()`](/fr/docs/Web/API/Element/getAttributeNS)
+- [`Element.removeAttributeNS()`](/fr/docs/Web/API/Element/removeAttributeNS)
+- [`Element.setAttributeNode()`](/fr/docs/Web/API/Element/setAttributeNode)

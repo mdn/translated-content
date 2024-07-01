@@ -38,11 +38,8 @@ Em XHTML (ou qualquer outro formato XML), "`span`" será a saída. Em HTML, "`SP
 
 ## Especificações
 
-| Especificação                                                                                | Status                       | Comentário         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("DOM3 Core", "core.html#ID-104682815", "Element.tagName")}} | {{Spec2("DOM3 Core")}} | No change          |
-| {{SpecName("DOM2 Core", "core.html#ID-104682815", "Element.tagName")}} | {{Spec2("DOM2 Core")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Element.tagName")}}
+{{Compat}}

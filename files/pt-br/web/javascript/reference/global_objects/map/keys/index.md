@@ -13,7 +13,7 @@ as chaves de cada elemento dentro do objeto `Map` na ordem em que foram inserido
 ## Sintaxe
 
 ```js
-keys()
+keys();
 ```
 
 ### Valor retornado
@@ -26,9 +26,9 @@ Um novo objeto {{jsxref("Map")}} iterador.
 
 ```js
 var myMap = new Map();
-myMap.set('0', 'foo');
-myMap.set(1, 'bar');
-myMap.set({}, 'baz');
+myMap.set("0", "foo");
+myMap.set(1, "bar");
+myMap.set({}, "baz");
 
 var mapIter = myMap.keys();
 

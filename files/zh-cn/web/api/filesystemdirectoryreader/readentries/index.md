@@ -1,6 +1,8 @@
 ---
-title: FileSystemDirectoryReader.readEntries()
+title: FileSystemDirectoryReader：readEntries() 方法
 slug: Web/API/FileSystemDirectoryReader/readEntries
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("File and Directory Entries API")}}
@@ -11,7 +13,7 @@ slug: Web/API/FileSystemDirectoryReader/readEntries
 
 ## 语法
 
-```js
+```js-nolint
 readEntries(successCallback)
 readEntries(successCallback, errorCallback)
 ```

@@ -1,39 +1,34 @@
 ---
-title: credentials
+title: Navigator：credentials 属性
 slug: Web/API/Navigator/credentials
+l10n:
+  sourceCommit: 61e0e2ba096262b69b86b36bbadb5fcbfd546b1e
 ---
 
-{{SeeCompatTable}}{{APIRef("")}}
+{{securecontext_header}}{{APIRef("Credential Management API")}}
 
-{{domxref("Navigator")}}接口的 **`credentials`** 属性返回{{domxref("CredentialsContainer")}}接口，该接口暴露了请求凭证的方法。 {{domxref("CredentialsContainer")}}接口还会在下相关事件发生时通知用户，例如登录或注销成功。该接口可用于特征检测。
+{{domxref("Navigator")}} 接口的只读属性 **`credentials`** 返回与当前文档关联的 {{domxref("CredentialsContainer")}} 对象，该对象暴露用于请求凭据的方法。{{domxref("CredentialsContainer")}} 接口还会在发生感兴趣的事件时通知用户代理，例如成功登录或注销。此接口可用于特性检测。
 
-## 语法
+## 值
 
-```plain
-var credentialsContainer = navigator.credentials
-```
-
-### 返回值
-
-{{domxref("CredentialsContainer")}} 接口。
+一个 {{domxref("CredentialsContainer")}} 对象。
 
 ## 示例
 
 ```js
-if ('credentials' in navigator) {
-  navigator.credentials.get({password: true})
-  .then(function(creds) {
-    //Do something with the credentials.
+if ("credentials" in navigator) {
+  navigator.credentials.get({ password: true }).then((creds) => {
+    // 使用凭据执行操作
   });
 } else {
-  //Handle sign-in the way you did before.
-};
+  // 使用之前的方式处理登录
+}
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}

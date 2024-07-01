@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.strokeRect()
 slug: Web/API/CanvasRenderingContext2D/strokeRect
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
-translation_of: Web/API/CanvasRenderingContext2D/strokeRect
 ---
+
 {{APIRef}}
 
 Метод **`CanvasRenderingContext2D.strokeRect()`**, предоставляемый Canvas 2D API, рисует на холсте прямоугольник, имеющий начальную точку с координатами _(x, y)_, а так же ширину _w_ и высоту _h_, используя текущий стиль линий.
@@ -62,7 +56,8 @@ ctx.strokeRect(10, 10, 100, 100);
 </div>
 <textarea id="code" class="playable-code">
 ctx.strokeStyle = "green";
-ctx.strokeRect(10, 10, 100, 100);</textarea>
+ctx.strokeRect(10, 10, 100, 100);</textarea
+>
 ```
 
 ```js hidden
@@ -78,14 +73,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

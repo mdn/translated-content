@@ -1,12 +1,6 @@
 ---
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/try...catch
-original_slug: Web/JavaScript/Reference/Instructions/try...catch
 ---
 
 {{jsSidebar("Statements")}}
@@ -66,13 +60,12 @@ Lorsqu'une seule clause `catch` inconditionnelle est utilisée, le bloc `catch` 
 
 ```js
 try {
-   throw "monException"; // génère une exception
-}
-catch (e) {
-   // les instructions utilisées pour gérer les
-   // exceptions
-   logErreurs(e); // on transfère l'objet de l'exception à une méthode
-                  // gestionnaire
+  throw "monException"; // génère une exception
+} catch (e) {
+  // les instructions utilisées pour gérer les
+  // exceptions
+  logErreurs(e); // on transfère l'objet de l'exception à une méthode
+  // gestionnaire
 }
 ```
 
@@ -104,17 +97,17 @@ Dans le fragment de code qui suit, on aura le même fonctionnement mais en utili
 
 ```js
 try {
-    maRoutine(); // may throw three types of exceptions
+  maRoutine(); // may throw three types of exceptions
 } catch (e) {
-    if (e instanceof TypeError) {
-        // les instructions pour gérer TypeError
-    } else if (e instanceof RangeError) {
-        // les instructions pour gérer RangeError
-    } else if (e instanceof EvalError) {
-        // les instructions pour gérer EvalError
-    } else {
-       // les instructions pour gérer les autres exceptions
-    }
+  if (e instanceof TypeError) {
+    // les instructions pour gérer TypeError
+  } else if (e instanceof RangeError) {
+    // les instructions pour gérer RangeError
+  } else if (e instanceof EvalError) {
+    // les instructions pour gérer EvalError
+  } else {
+    // les instructions pour gérer les autres exceptions
+  }
 }
 ```
 
@@ -123,7 +116,7 @@ try {
 Lorsqu'une exception est levée dans le bloc `try`, `exception_var` (par exemple le `e` dans « `catch (e)` ») contient la valeur définie par l'instruction {{jsxref("Instructions/throw","throw")}}. Cet identifiant peut être utilisé pour accéder aux propriétés de l'objet et ainsi obtenir des informations sur l'exception qui a eu lieu. Cet identifiant est local à la clause `catch`, il est créé lorsqu'on rentre dans la clause `catch` et n'est plus disponible une fois que la clause a fini son exécution.
 
 ```js
-function isValidJSON(txt){
+function isValidJSON(txt) {
   try {
     JSON.parse(txt);
     return true;
@@ -142,13 +135,12 @@ Cela peut paraître étrange qu'un bloc de code qui s'exécute même lorsqu'il y
 La clause `finally` peut être utilisée afin d'exécuter les actions nécessaires pour que le script « échoue correctement » en cas d'erreur. On peut par exemple tirer parti de `finally` pour fermer un flux, libérer une ressource, etc. Dans l'exemple suivant, exécuté côté serveur, le script accède à un fichier. Si une exception se produit lorsque le fichier est ouvert, la clause `finally` permet de fermer le fichier avant que le script échoue. Le code contenu dans le bloc `finally` sera exécuté même si on a une instruction `return` dans la section `try` ou dans la section `catch`.
 
 ```js
-ouvrirMonFichier()
+ouvrirMonFichier();
 try {
-   // on utilise une ressource
-   écrireDansMonFichier(mesDonnées);
-}
-finally {
-   fermerMonFichier(); // on ferme toujours la ressource
+  // on utilise une ressource
+  écrireDansMonFichier(mesDonnées);
+} finally {
+  fermerMonFichier(); // on ferme toujours la ressource
 }
 ```
 
@@ -162,12 +154,10 @@ Tout d'abord, on utilise ce fragment de code, qui produit le résultat suivant :
 try {
   try {
     throw new Error("oups");
-  }
-  finally {
+  } finally {
     console.log("finally");
   }
-}
-catch (ex) {
+} catch (ex) {
   console.error("externe", ex.message);
 }
 
@@ -182,15 +172,12 @@ Et maintenant, si on a déjà intercepté l'exception avec une clause `catch` da
 try {
   try {
     throw new Error("oups");
-  }
-  catch (ex) {
+  } catch (ex) {
     console.error("interne", ex.message);
-  }
-  finally {
+  } finally {
     console.log("finally");
   }
-}
-catch (ex) {
+} catch (ex) {
   console.error("externe", ex.message);
 }
 
@@ -205,16 +192,13 @@ Ensuite, si on propage l'erreur à nouveau :
 try {
   try {
     throw new Error("oups");
-  }
-  catch (ex) {
+  } catch (ex) {
     console.error("interne", ex.message);
     throw ex;
-  }
-  finally {
+  } finally {
     console.log("finally");
   }
-}
-catch (ex) {
+} catch (ex) {
   console.error("externe", ex.message);
 }
 
@@ -234,17 +218,14 @@ Lorsque le bloc `finally` renvoie une valeur, c'est cette valeur qui devient la 
 try {
   try {
     throw new Error("oups");
-  }
-  catch (ex) {
+  } catch (ex) {
     console.error("interne", ex.message);
     throw ex;
-  }
-  finally {
+  } finally {
     console.log("finally");
     return;
   }
-}
-catch (ex) {
+} catch (ex) {
   console.error("externe", ex.message);
 }
 

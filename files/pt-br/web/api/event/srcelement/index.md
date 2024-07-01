@@ -17,7 +17,7 @@ Microsoft [tem uma descrição na MSDN](<https://msdn.microsoft.com/en-us/librar
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Event.srcElement")}}
+{{Compat}}
 
 ## Veja também
 

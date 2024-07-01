@@ -1,18 +1,8 @@
 ---
 title: String.prototype.repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
-tags:
-  - ECMAScript 2015
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 ---
+
 {{JSRef}}Метод **`repeat()`** конструирует и возвращает новую строку, содержащую указанное количество соединённых вместе копий строки, на которой он был вызван.
 
 ## Синтаксис
@@ -40,14 +30,14 @@ str.repeat(count)
 ## Примеры
 
 ```js
-'абв'.repeat(-1);   // RangeError
-'абв'.repeat(0);    // ''
-'абв'.repeat(1);    // 'абв'
-'абв'.repeat(2);    // 'абвабв'
-'абв'.repeat(3.5);  // 'абвабвабв' (количество будет преобразовано в целое число)
-'абв'.repeat(1/0);  // RangeError
+"абв".repeat(-1); // RangeError
+"абв".repeat(0); // ''
+"абв".repeat(1); // 'абв'
+"абв".repeat(2); // 'абвабв'
+"абв".repeat(3.5); // 'абвабвабв' (количество будет преобразовано в целое число)
+"абв".repeat(1 / 0); // RangeError
 
-({ toString: () => 'абв', repeat: String.prototype.repeat }).repeat(2);
+({ toString: () => "абв", repeat: String.prototype.repeat }).repeat(2);
 // 'абвабв' (метод repeat() является обобщённым методом)
 ```
 
@@ -57,38 +47,40 @@ str.repeat(count)
 
 ```js
 if (!String.prototype.repeat) {
-  String.prototype.repeat = function(count) {
-    'use strict';
+  String.prototype.repeat = function (count) {
+    "use strict";
     if (this == null) {
-      throw new TypeError('can\'t convert ' + this + ' to object');
+      throw new TypeError("can't convert " + this + " to object");
     }
-    var str = '' + this;
+    var str = "" + this;
     count = +count;
     if (count != count) {
       count = 0;
     }
     if (count < 0) {
-      throw new RangeError('repeat count must be non-negative');
+      throw new RangeError("repeat count must be non-negative");
     }
     if (count == Infinity) {
-      throw new RangeError('repeat count must be less than infinity');
+      throw new RangeError("repeat count must be less than infinity");
     }
     count = Math.floor(count);
     if (str.length == 0 || count == 0) {
-      return '';
+      return "";
     }
     // Обеспечение того, что count является 31-битным целым числом, позволяет нам значительно
     // соптимизировать главную часть функции. Впрочем, большинство современных (на август
     // 2014 года) браузеров не обрабатывают строки, длиннее 1 << 28 символов, так что:
     if (str.length * count >= 1 << 28) {
-      throw new RangeError('repeat count must not overflow maximum string size');
+      throw new RangeError(
+        "repeat count must not overflow maximum string size",
+      );
     }
-    var rpt = '';
+    var rpt = "";
     for (var i = 0; i < count; i++) {
       rpt += str;
     }
     return rpt;
-  }
+  };
 }
 ```
 

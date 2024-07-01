@@ -1,7 +1,6 @@
 ---
 title: Response.arrayBuffer()
 slug: Web/API/Response/arrayBuffer
-original_slug: Web/API/Body/arrayBuffer
 l10n:
   sourceCommit: 84fc68f1674c9b2d1708fb38dc2824e228f9bb3f
 ---
@@ -42,7 +41,7 @@ new Audio("music.ogg").play();
 function getData() {
   const audioCtx = new AudioContext();
 
-  return fetch('viper.ogg')
+  return fetch("viper.ogg")
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error, status = ${response.status}`);
@@ -56,16 +55,16 @@ function getData() {
       source.connect(audioCtx.destination);
       return source;
     });
-};
+}
 
 // wire up buttons to stop and play audio
 
 play.onclick = () => {
   getData().then((source) => {
     source.start(0);
-    play.setAttribute('disabled', 'disabled');
+    play.setAttribute("disabled", "disabled");
   });
-}
+};
 ```
 
 ### ファイルを読む

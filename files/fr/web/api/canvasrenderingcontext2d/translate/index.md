@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.translate()
 slug: Web/API/CanvasRenderingContext2D/translate
-translation_of: Web/API/CanvasRenderingContext2D/translate
 ---
 
 {{APIRef}}
@@ -38,8 +37,8 @@ Il s'agit seulement d'un extrait de code simple qui utilise la méthode translat
 #### JavaScript
 
 ```js
-var canevas = document.getElementById('canevas');
-var ctx = canevas.getContext('2d');
+var canevas = document.getElementById("canevas");
+var ctx = canevas.getContext("2d");
 
 ctx.translate(50, 50);
 ctx.fillRect(0, 0, 100, 100);
@@ -61,7 +60,8 @@ Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct s
 <textarea id="code" class="playable-code">
 ctx.translate(50, 50);
 ctx.fillRect(0,0,100,100);
-ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea>
+ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea
+>
 ```
 
 ```js hidden
@@ -77,14 +77,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

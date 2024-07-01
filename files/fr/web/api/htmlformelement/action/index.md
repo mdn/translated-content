@@ -1,7 +1,6 @@
 ---
 title: HTMLFormElement.action
 slug: Web/API/HTMLFormElement/action
-translation_of: Web/API/HTMLFormElement/action
 ---
 
 {{APIRef("HTML DOM")}}
@@ -13,8 +12,8 @@ L'action d'un formulaire est le programme exécuté sur le serveur lorsque le fo
 ## Syntaxe
 
 ```js
-string = form.action
-form.action = string
+string = form.action;
+form.action = string;
 ```
 
 ## Exemple

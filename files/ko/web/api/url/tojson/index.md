@@ -12,7 +12,7 @@ slug: Web/API/URL/toJSON
 ## 구문
 
 ```js
-const href = url.toJSON()
+const href = url.toJSON();
 ```
 
 ### 반환 값
@@ -22,7 +22,9 @@ const href = url.toJSON()
 ## 예제
 
 ```js
-const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
+const url = new URL(
+  "https://developer.mozilla.org/ko/docs/Web/API/URL/toString",
+);
 url.toJSON(); // should return the URL as a string
 ```
 

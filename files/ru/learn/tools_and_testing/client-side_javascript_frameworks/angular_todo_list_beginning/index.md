@@ -1,20 +1,6 @@
 ---
 title: Начинаем приложение списка дел с использованием Angular
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
-tags:
-  - Новички
-  - Фреймворки
-  - JavaScript
-  - Изучение
-  - client-side
-  - Angular
-  - Компоненты
-  - Структура
-translation_of: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
-original_slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
 ---
 
 {{LearnSidebar}}

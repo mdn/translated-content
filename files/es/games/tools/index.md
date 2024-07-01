@@ -1,7 +1,6 @@
 ---
 title: Herramientas para desarrolladores de juegos
 slug: Games/Tools
-original_slug: Games/Herramients
 ---
 
 {{GamesSidebar}}

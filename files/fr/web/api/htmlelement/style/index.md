@@ -1,8 +1,6 @@
 ---
 title: HTMLElement.style
 slug: Web/API/HTMLElement/style
-translation_of: Web/API/HTMLElement/style
-browser-compat: api.HTMLElement.style
 ---
 
 {{APIRef("CSSOM")}}
@@ -37,7 +35,7 @@ La propriété `style` n'est pas utile pour tout savoir des styles appliqués à
 Le fragment de code qui suit illustre la différence entre les valeurs obtenues avec la propriété `style` et celles obtenues avec la méthode `getComputedStyle()`&nbsp;:
 
 ```html
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
   <body style="font-weight:bold;">
     <div style="color:red" id="monElement">..</div>
@@ -53,10 +51,17 @@ let computedStyle = window.getComputedStyle(element, null);
 
 for (prop in elementStyle) {
   if (elementStyle.hasOwnProperty(prop)) {
-    out += "  " + prop + " = '" + elementStyle[prop] + "' > '" + computedStyle[prop] + "'\n";
+    out +=
+      "  " +
+      prop +
+      " = '" +
+      elementStyle[prop] +
+      "' > '" +
+      computedStyle[prop] +
+      "'\n";
   }
 }
-console.log(out)
+console.log(out);
 ```
 
 Le résultat devrait ressembler à&nbsp;:

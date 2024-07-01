@@ -21,7 +21,9 @@ box-sizing 属性可以被用来调整这些表现：
 > **备注：** 对于新的 web 站点，你可能希望首先将 box-sizing 设置为 border-box，如下所示：
 >
 > ```css
-> * { box-sizing: border-box; }
+> * {
+>   box-sizing: border-box;
+> }
 > ```
 >
 > 这使得处理元素大小的工作变得容易得多，并且通常消除了在布局内容时可能遇到的许多陷阱。然而，在某些情况下，你应谨慎使用这个属性。例如：你正在编写一个将由其他人使用的共享组件库，如果他们网站的其余部分没有设置此值，他们可能会发现很难使用你的组件库。
@@ -33,6 +35,7 @@ box-sizing 属性可以被用来调整这些表现：
 ### 属性值
 
 - `content-box`
+
   - : 默认值，标准盒子模型。{{Cssxref("width")}} 与 {{Cssxref("height")}} 只包括内容的宽和高，不包括边框（border），内边距（padding），外边距（margin）。注意：内边距、边框和外边距都在这个盒子的外部。比如说，`.box {width: 350px; border: 10px solid black;}` 在浏览器中的渲染的实际宽度将是 370px。
 
     尺寸计算公式：
@@ -41,7 +44,9 @@ box-sizing 属性可以被用来调整这些表现：
     - `height` = 内容的高度
 
     宽度和高度的计算值都不包含内容的边框（border）和内边距（padding）。
+
 - `border-box`
+
   - : {{Cssxref("width")}} 和 {{Cssxref("height")}} 属性包括内容，内边距和边框，但不包括外边距。这是当文档处于 Quirks 模式 时 Internet Explorer 使用的[盒模型](/zh-CN/docs/CSS/Box_model)。注意，填充和边框将在盒子内 , 例如， `.box {width: 350px; border: 10px solid black;}` 导致在浏览器中呈现的宽度为 350px 的盒子。内容框不能为负，并且被分配到 0，使得不可能使用 border-box 使元素消失。
 
     尺寸计算公式：
@@ -61,7 +66,7 @@ box-sizing 属性可以被用来调整这些表现：
 
 ```html
 <div class="content-box">Content box</div>
-<br>
+<br />
 <div class="border-box">Border box</div>
 ```
 

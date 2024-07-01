@@ -3,6 +3,8 @@ title: blur (event)
 slug: Web/API/Element/blur_event
 ---
 
+{{APIRef}}
+
 当一个元素失去焦点的时候 blur 事件被触发。它和 [`focusout`](/zh-CN/docs/Mozilla_event_reference/focusout) 事件的主要区别是 focusout 支持冒泡。
 
 ## 常规信息
@@ -20,16 +22,16 @@ slug: Web/API/Element/blur_event
 - 默认行为
   - : 无
 
-> **备注：** {{domxref("Document.activeElement")}} 的值随浏览器的不同而不同（{{bug(452307)}}）：IE10 把值设为焦点将要移向的对象，而 Firefox 和 Chrome 往往把值设为 `body`。
+> **备注：** {{domxref("Document.activeElement")}} 的值随浏览器的不同而不同（[Firefox bug 452307](https://bugzil.la/452307)）：IE10 把值设为焦点将要移向的对象，而 Firefox 和 Chrome 往往把值设为 `body`。
 
 ## 属性
 
-| 属性                                     | 类型                                            | 描述                                         |
-| ---------------------------------------- | ----------------------------------------------- | -------------------------------------------- |
+| 属性                               | 类型                                  | 描述                                         |
+| ---------------------------------- | ------------------------------------- | -------------------------------------------- |
 | `target` {{readonlyInline}}        | {{domxref("EventTarget")}}            | 产生该事件的对象 (DOM 树中最顶级的那个对象). |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                | 事件类型。                                   |
-| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | 该事件是否冒泡。                             |
-| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | 该事件是否可取消默认行为。                   |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}              | 事件类型。                                   |
+| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                 | 该事件是否冒泡。                             |
+| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                 | 该事件是否可取消默认行为。                   |
 | `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM 元素) | 无                                           |
 
 ## 事件代理
@@ -40,8 +42,8 @@ slug: Web/API/Element/blur_event
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <input type="text" placeholder="text input" />
+  <input type="password" placeholder="password" />
 </form>
 ```
 
@@ -49,12 +51,20 @@ slug: Web/API/Element/blur_event
 
 ```js
 var form = document.getElementById("form");
-form.addEventListener("focus", function( event ) {
-  event.target.style.background = "pink";
-}, true);
-form.addEventListener("blur", function( event ) {
-  event.target.style.background = "";
-}, true);
+form.addEventListener(
+  "focus",
+  function (event) {
+    event.target.style.background = "pink";
+  },
+  true,
+);
+form.addEventListener(
+  "blur",
+  function (event) {
+    event.target.style.background = "";
+  },
+  true,
+);
 ```
 
 {{EmbedLiveSample('事件代理')}}

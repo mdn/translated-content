@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
 ## 構文
 
 ```js
-Atomics.xor(typedArray, index, value)
+Atomics.xor(typedArray, index, value);
 ```
 
 ### 引数
@@ -64,7 +64,7 @@ const ta = new Uint8Array(sab);
 ta[0] = 5;
 
 Atomics.xor(ta, 0, 1); // 古い値である 5 を返す
-Atomics.load(ta, 0);  // 4
+Atomics.load(ta, 0); // 4
 ```
 
 ## 仕様書

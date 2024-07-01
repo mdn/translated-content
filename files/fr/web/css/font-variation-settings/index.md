@@ -1,11 +1,6 @@
 ---
 title: font-variation-settings
 slug: Web/CSS/font-variation-settings
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/font-variation-settings
 ---
 
 {{CSSRef}}

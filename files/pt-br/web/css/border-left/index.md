@@ -76,9 +76,7 @@ Os três valores da propriedade abreviada podem ser especificados em qualquer or
 #### HTML
 
 ```html
-<div>
-  Essa caixa tem uma borda no seu lado esquerdo.
-</div>
+<div>Essa caixa tem uma borda no seu lado esquerdo.</div>
 ```
 
 #### CSS

@@ -1,7 +1,6 @@
 ---
-title: 'SpeechRecognition: nomatch イベント'
+title: "SpeechRecognition: nomatch イベント"
 slug: Web/API/SpeechRecognition/nomatch_event
-original_slug: Web/API/SpeechRecognition/onnomatch
 l10n:
   sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
@@ -17,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('nomatch', (event) => { })
+addEventListener("nomatch", (event) => {});
 
-onnomatch = (event) => { }
+onnomatch = (event) => {};
 ```
 
 ## イベント型
@@ -48,8 +47,8 @@ _以下に列挙したプロパティに加えて、親インターフェイス�
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('nomatch', (event) => {
-  console.error('音声が認識されませんでした');
+recognition.addEventListener("nomatch", (event) => {
+  console.error("音声が認識されませんでした");
 });
 ```
 
@@ -57,8 +56,8 @@ recognition.addEventListener('nomatch', (event) => {
 
 ```js
 recognition.onnomatch = () => {
-  console.error('音声が認識されませんでした');
-}
+  console.error("音声が認識されませんでした");
+};
 ```
 
 ## 仕様書

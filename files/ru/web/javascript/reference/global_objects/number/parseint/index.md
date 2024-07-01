@@ -1,15 +1,9 @@
 ---
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Number
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 ---
 
-{{JSRef("Global_Objects", "Number")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -46,7 +40,7 @@ Number.parseInt === parseInt; // true
 
 ```js
 if (Number.parseInt === undefined) {
-    Number.parseInt = window.parseInt;
+  Number.parseInt = window.parseInt;
 }
 ```
 

@@ -1,10 +1,9 @@
 ---
 title: Selection.toString()
 slug: Web/API/Selection/toString
-translation_of: Web/API/Selection/toString
 ---
 
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 Метод **`Selection.toString()`** возвращает строку, содержащуюся в выделенном объекте, т.е. выделенный текст.
 
@@ -16,7 +15,7 @@ str = sel.toString()
 
 ### Return value
 
-- _`str`_ -- это строка, содержащаяся в выделении.
+- _`str`_ — это строка, содержащаяся в выделении.
 
 ### Parameters
 
@@ -29,20 +28,18 @@ _None (отсутствуют)._
 В [JavaScript](en/JavaScript), этот метод вызывается автоматически, когда функция, которой он передаётся, требует строку:
 
 ```js
-alert(window.getSelection()) // What is called
-alert(window.getSelection().toString())  // What is actually being effectively called.
+alert(window.getSelection()); // What is called
+alert(window.getSelection().toString()); // What is actually being effectively called.
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('HTML Editing', '#dom-selection-stringifier', 'Selection.toString()')}} | {{Spec2('HTML Editing')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("Selection")}}, the interface it belongs to.

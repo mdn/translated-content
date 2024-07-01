@@ -69,7 +69,7 @@ Reflect.getPrototypeOf(Object('foo'))  // String.prototype
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.getPrototypeOf()")}}

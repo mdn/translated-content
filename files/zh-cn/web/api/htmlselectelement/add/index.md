@@ -20,7 +20,7 @@ collection.add(item[, before]);
 
 ### 异常
 
-- 如果传入的 _item_ 是 `{{domxref("HTMLSelectElement")}}` 的祖先元素，`HierarchyRequestError` 类型的 {{domxref("DOMError")}} 会被抛出。
+- 如果传入的 _item_ 是 {{domxref("HTMLSelectElement")}} 的祖先元素，`HierarchyRequestError` 类型的 {{domxref("DOMError")}} 会被抛出。
 
 ## 示例
 

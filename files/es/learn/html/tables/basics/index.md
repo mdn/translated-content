@@ -1,7 +1,6 @@
 ---
 title: Conceptos básicos de las tablas HTML
 slug: Learn/HTML/Tables/Basics
-original_slug: Learn/HTML/Tablas/Conceptos_básicos_de_las_tablas_HTML
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
@@ -218,33 +217,33 @@ Ya hemos hablado bastante sobre la teoría de las tablas, así que veamos un eje
 2. El contenido de cada tabla está delimitado entre estas dos etiquetas: **[`<table></table>`](/es/docs/Web/HTML/Element/table)**. Añádelas al cuerpo de tu código HTML.
 3. El contenedor más pequeño dentro de una tabla es una celda, que se crea con un elemento **[`<td>`](/es/docs/Web/HTML/Element/td)** ('td' significa 'table data', _datos de tabla_). Añade lo siguiente dentro de tus etiquetas de tabla:
 
-    ```html
-    <td>Hola, soy tu primera celda.</td>
-    ```
+   ```html
+   <td>Hola, soy tu primera celda.</td>
+   ```
 
 4. Si quieres una fila de cuatro celdas, tienes que copiar estas etiquetas tres veces. Actualiza el contenido de la tabla para que se vea así:
 
-    ```html
-    <td>Hola, soy tu primera celda.</td>
-    <td>Soy tu segunda celda.</td>
-    <td>Soy tu tercera celda.</td>
-    <td>Soy tu cuarta celda.</td>
-    ```
+   ```html
+   <td>Hola, soy tu primera celda.</td>
+   <td>Soy tu segunda celda.</td>
+   <td>Soy tu tercera celda.</td>
+   <td>Soy tu cuarta celda.</td>
+   ```
 
 Como verás, las celdas no se colocan una debajo de la otra, sino que se alinean automáticamente entre sí en la misma fila. Cada elemento \<td> crea una sola celda, y juntas forman la primera fila. Cada celda que agregamos hace crecer la fila.
 
-Para detener el crecimiento de esta fila y comenzar a colocar las celdas posteriores en una segunda fila, necesitamos usar el elemento **[`<tr>`](/es/docs/Web/HTML/Element/tr)** ('tr' significa 'table raw', _fila de tabla_). Vamos a verlo en detalle.
+Para detener el crecimiento de esta fila y comenzar a colocar las celdas posteriores en una segunda fila, necesitamos usar el elemento **[`<tr>`](/es/docs/Web/HTML/Element/tr)** ('tr' significa 'table row', _fila de tabla_). Vamos a verlo en detalle.
 
 1. Coloca las cuatro celdas que has creado dentro de las etiquetas `<tr>`, de esta forma:
 
-    ```html
-    <tr>
-      <td>Hola, soy tu primera celda.</td>
-      <td>Soy tu segunda celda.</td>
-      <td>Soy tu tercera celda.</td>
-      <td>Soy tu cuarta celda.</td>
-    </tr>
-    ```
+   ```html
+   <tr>
+     <td>Hola, soy tu primera celda.</td>
+     <td>Soy tu segunda celda.</td>
+     <td>Soy tu tercera celda.</td>
+     <td>Soy tu cuarta celda.</td>
+   </tr>
+   ```
 
 2. Ahora que has hecho una fila, intenta hacer una o dos más: cada fila debe estar delimitada por un elemento `<tr>` adicional, con cada celda contenida en un `<td>`.
 
@@ -307,10 +306,10 @@ Ahora nos vamos a centrar en los encabezados de tabla: celdas especiales que van
     <td>Hábitos alimentarios</td>
     <td>Come las sobras de todos</td>
 
-<td>Mordisquea la comida</td>
+    <td>Mordisquea la comida</td>
     <td>Come en abundancia</td>
 
-<td>Come hasta que revienta</td>
+    <td>Come hasta que revienta</td>
   </tr>
 </table>
 ```
@@ -399,14 +398,12 @@ El marcado inicial se ve así:
     <td>Semental</td>
   </tr>
   <tr>
-
-<th>Cocodrilo</th>
+    <th>Cocodrilo</th>
   </tr>
   <tr>
+    <th>Pollo</th>
 
-<th>Pollo</th>
-
-<td>Gallina</td>
+    <td>Gallina</td>
   </tr>
   <tr>
     <td>Gallo</td>
@@ -448,14 +445,14 @@ Necesitamos una forma de hacer que «Animales», «Hipopótamo» y «Cocodrilo»
 
 Usemos `colspan` y `rowspan` para mejorar esta tabla.
 
-1. Primero, haz una copia local de nuestros archivos [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) en un directorio nuevo de tu ordenador. El HTML contiene el mismo ejemplo sobre perros que viste arriba.
+1. Primero, haz una copia local de nuestros archivos [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) en un directorio nuevo de tu ordenador. El HTML contiene el mismo ejemplo sobre animales que viste arriba.
 2. Luego, usa `colspan` para extender las celdas «Animales», «Hipopótamo» y «Cocodrilo» dos columnas más allá.
 3. Por último, usa `rowspan` para extender las celdas de «Caballo» y «Pollo» dos filas más abajo.
 4. Guarda tu código y ábrelo en un navegador para ver la mejora.
 
 > **Nota:** Puedes encontrar nuestro ejemplo terminado en [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) en GitHub ([o consultarlo en vivo](http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
-## Proporcionar un estilo común a las columnas.
+## Proporcionar un estilo común a las columnas
 
 Hay una última característica de la que queremos hablar en este artículo antes de continuar. El HTML tiene un método para definir información de estilo para una columna completa de datos en un solo lugar: los elementos **[`<col>`](/es/docs/Web/HTML/Elemento/col)** y **[`<colgroup>`](/es/docs/Web/HTML/Elemento/colgroup)**. Estos atributos existen porque especificar el estilo de las columnas puede resultar enojoso e ineficiente; en general hay que especificar la información de estilo en _cada_ `<td>` o `<th>` de la columna, o utilizar un selector complejo como {{cssxref(":nth-child()")}}.
 
@@ -500,14 +497,13 @@ Esto no es ideal, porque hay que repetir la información de estilo en las tres c
 ```html
 <table>
   <colgroup>
-    <col>
-    <col style="background-color: yellow">
+    <col />
+    <col style="background-color: yellow" />
   </colgroup>
   <tr>
+    <th>Dato 1</th>
 
-<th>Dato 1</th>
-
-<th>Dato 2</th>
+    <th>Dato 2</th>
   </tr>
   <tr>
     <td>Calcuta</td>
@@ -526,7 +522,7 @@ Si quisiéramos aplicar la información de estilo a ambas columnas, podríamos i
 
 ```html
 <colgroup>
-  <col style="background-color: yellow" span="2">
+  <col style="background-color: yellow" span="2" />
 </colgroup>
 ```
 
@@ -558,9 +554,3 @@ Mira cómo sigue en el ejemplo. Si te encallas o quieres verificar tu trabajo, p
 Con esto casi hemos abarcado todos los conceptos básicos de las tablas HTML. En el próximo artículo, veremos algunas características un poco más avanzadas de las tablas y comenzaremos a pensar acerca de su accesibilidad para las personas con discapacidad visual.
 
 {{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
-
-## En este módulo
-
-- [Conceptos básicos de las tablas en HTML](/es/docs/Learn/HTML/Tables/Basics)
-- [Funciones avanzadas de las tablas HTML y accesibilidad](/es/docs/Learn/HTML/Tables/Advanced)
-- [Estructuración de datos planetarios](/es/docs/Learn/HTML/Tables/Structuring_planet_data)

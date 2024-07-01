@@ -153,12 +153,12 @@ console.log(leadingThirtySevenList()); // [37]
 console.log(leadingThirtySevenList(1, 2, 3)); // [37, 1, 2, 3]
 console.log(addThirtySeven(5)); // 42
 console.log(addThirtySeven(5, 10)); // 42
-// (the second argument is ignored)
+// (最後の引数 10 は無視されます)
 ```
 
 ### setTimeout() での利用
 
-既定では、 {{domxref("setTimeout()")}} 内部の `this` キーワードは [`globalThis`](/ja/docs/Web/JavaScript/Reference/Global_Objects/globalThis)、すなわちブラウザーでは {{domxref("window")}} に設定されます。暮らすメソッドを使用して `this` がクラスインスタンスを参照するようにする必要がある場合、インスタンスを保守するために、明示的に `this` をコールバック関数にバインドすることができます。
+既定では、 {{domxref("setTimeout()")}} 内部の `this` キーワードは [`globalThis`](/ja/docs/Web/JavaScript/Reference/Global_Objects/globalThis)、すなわちブラウザーでは {{domxref("window")}} に設定されます。クラスメソッドを使用して `this` がクラスインスタンスを参照するようにする必要がある場合、インスタンスを保守するために、明示的に `this` をコールバック関数にバインドすることができます。
 
 ```js
 class LateBloomer {

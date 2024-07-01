@@ -1,5 +1,5 @@
 ---
-title: '-webkit-mask-composite'
+title: "-webkit-mask-composite"
 slug: Web/CSS/-webkit-mask-composite
 ---
 
@@ -70,7 +70,7 @@ slug: Web/CSS/-webkit-mask-composite
 
 ```css
 .example {
-  -webkit-mask-image: url(mask1.png), url('mask2.png');
+  -webkit-mask-image: url(mask1.png), url("mask2.png");
   -webkit-mask-composite: xor, source-over;
 }
 ```

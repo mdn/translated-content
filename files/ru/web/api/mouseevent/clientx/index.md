@@ -1,18 +1,9 @@
 ---
 title: MouseEvent.clientX
 slug: Web/API/MouseEvent/clientX
-tags:
-  - API
-  - CSSOM View
-  - DOM
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-translation_of: Web/API/MouseEvent/clientX
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`MouseEvent.clientX`** свойство доступное только для чтения. Это свойство является горизонтальной координатой в пределах клиентской области приложения, на которой произошло событие (в отличие от координат внутри страницы). Для примера, нажатие в верхнем левом углу клиентской области будет всегда приводить к событию со значением свойства `clientX` равным 0, независимо от того, прокручена страницы по горизонтали или нет.
 
@@ -29,24 +20,28 @@ var x = instanceOfMouseEvent.clientX
 ## Пример
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<title>Пример для clientX\clientY</title>
+  <head>
+    <title>Пример для clientX\clientY</title>
 
-<script>
-function showCoords(evt){
-  alert(
-    "clientX value: " + evt.clientX + "\n" +
-    "clientY value: " + evt.clientY + "\n"
-  );
-}
-</script>
-</head>
+    <script>
+      function showCoords(evt) {
+        alert(
+          "clientX value: " +
+            evt.clientX +
+            "\n" +
+            "clientY value: " +
+            evt.clientY +
+            "\n",
+        );
+      }
+    </script>
+  </head>
 
-<body onmousedown="showCoords(event)">
-<p>Для показа координат мышки нажмите в любом месте страницы.</p>
-</body>
+  <body onmousedown="showCoords(event)">
+    <p>Для показа координат мышки нажмите в любом месте страницы.</p>
+  </body>
 </html>
 ```
 

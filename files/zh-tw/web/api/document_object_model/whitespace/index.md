@@ -3,6 +3,8 @@ title: DOM 中的空白字元
 slug: Web/API/Document_Object_Model/Whitespace
 ---
 
+{{DefaultAPISidebar("DOM")}}
+
 #### 問題說明
 
 [DOM](zh_tw/DOM) 裡的空白字元會讓處理節點結構時增加不少麻煩。Mozilla 相關軟體中，原始文件裡所有空白字元都會在 DOM 中出現（不包括標籤內含的空白字元）。這樣的處理方式有其必要，一方面編輯器中可逕行排列文字、二方面 [CSS](zh_tw/CSS) 裡的 `white-space: pre` 也才能發揮作用。 如此一來就表示：
@@ -15,15 +17,13 @@ slug: Web/API/Document_Object_Model/Whitespace
 ```html
 <!-- My document -->
 <html>
-<head>
-  <title>My Document</title>
-</head>
-<body>
-  <h1>Header</h1>
-  <p>
-    Paragraph
-  </p>
-</body>
+  <head>
+    <title>My Document</title>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+  </body>
 </html>
 ```
 
@@ -46,19 +46,16 @@ slug: Web/API/Document_Object_Model/Whitespace
  * 不包括 JavaScript 的「\s」，因為那代表如不斷行字元等其他字元。
  */
 
-
 /**
  * 測知某節點的文字內容是否全為空白。
  *
  * @參數   nod  |CharacterData| 類的節點（如  |Text|、|Comment| 或 |CDATASection|）。
  * @傳回值      若 |nod| 的文字內容全為空白則傳回 true，否則傳回 false。
  */
-function is_all_ws( nod )
-{
+function is_all_ws(nod) {
   // Use ECMA-262 Edition 3 String and RegExp features
-  return !(/[^\t\n\r ]/.test(nod.data));
+  return !/[^\t\n\r ]/.test(nod.data);
 }
-
 
 /**
  * 測知是否該略過某節點。
@@ -68,10 +65,11 @@ function is_all_ws( nod )
  *              否則傳回 false。
  */
 
-function is_ignorable( nod )
-{
-  return ( nod.nodeType == 8) || // 註解節點
-         ( (nod.nodeType == 3) && is_all_ws(nod) ); // 僅含空白字元的文字節點
+function is_ignorable(nod) {
+  return (
+    nod.nodeType == 8 || // 註解節點
+    (nod.nodeType == 3 && is_all_ws(nod))
+  ); // 僅含空白字元的文字節點
 }
 
 /**
@@ -83,8 +81,7 @@ function is_ignorable( nod )
  *               1) |sib| 的前一個「非空白、非註解」節點（由 |is_ignorable| 測知。）
  *               2) 若該節點前無任何此類節點，則傳回 null。
  */
-function node_before( sib )
-{
+function node_before(sib) {
   while ((sib = sib.previousSibling)) {
     if (!is_ignorable(sib)) return sib;
   }
@@ -99,8 +96,7 @@ function node_before( sib )
  *               1) |sib| 的下一個「非空白、非註解」節點。
  *               2) 若該節點後無任何此類節點，則傳回 null。
  */
-function node_after( sib )
-{
+function node_after(sib) {
   while ((sib = sib.nextSibling)) {
     if (!is_ignorable(sib)) return sib;
   }
@@ -116,9 +112,8 @@ function node_after( sib )
  *               1) |par| 中最後一個「非空白、非註解」節點。
  *               2) 若該節點中無任何此類子節點，則傳回 null。
  */
-function last_child( par )
-{
-  var res=par.lastChild;
+function last_child(par) {
+  var res = par.lastChild;
   while (res) {
     if (!is_ignorable(res)) return res;
     res = res.previousSibling;
@@ -134,9 +129,8 @@ function last_child( par )
  *               1) |par| 中第一個「非空白、非註解」節點。
  *               2) 若該節點中無任何此類子節點，則傳回 null。
  */
-function first_child( par )
-{
-  var res=par.firstChild;
+function first_child(par) {
+  var res = par.firstChild;
   while (res) {
     if (!is_ignorable(res)) return res;
     res = res.nextSibling;
@@ -152,13 +146,11 @@ function first_child( par )
  * @參數   txt 欲傳回其中資料的文字節點
  * @傳回值     文字節點的內容，其中空白字元已依前述方式處理。
  */
-function data_of( txt )
-{
+function data_of(txt) {
   var data = txt.data;
   // Use ECMA-262 Edition 3 String and RegExp features
   data = data.replace(/[\t\n\r ]+/g, " ");
-  if (data.charAt(0) == " ")
-    data = data.substring(1, data.length);
+  if (data.charAt(0) == " ") data = data.substring(1, data.length);
   if (data.charAt(data.length - 1) == " ")
     data = data.substring(0, data.length - 1);
   return data;
@@ -171,12 +163,10 @@ function data_of( txt )
 
 ```js
 var cur = first_child(document.getElementById("test"));
-while (cur)
-{
-  if (data_of(cur.firstChild) == "This is the third paragraph.")
-  {
-      cur.className = "magic";
-      cur.firstChild.data = "This is the magic paragraph.";
+while (cur) {
+  if (data_of(cur.firstChild) == "This is the third paragraph.") {
+    cur.className = "magic";
+    cur.firstChild.data = "This is the magic paragraph.";
   }
   cur = node_after(cur);
 }

@@ -1,16 +1,9 @@
 ---
 title: Moteur de recherche
 slug: Glossary/Search_engine
-tags:
-  - Glossaire
-  - Moteur de recherche
-  - Mécanismes web
-  - Navigation
-  - Recherche
-  - Web
-translation_of: Glossary/Search_engine
-original_slug: Glossaire/Moteur_de_recherche
 ---
+
+{{GlossarySidebar}}
 
 Un moteur de recherche est un système logiciel qui collecte des informations à partir du {{Glossary("World Wide Web")}} et qui les présente aux utilisateurs qui recherchent des informations spécifiques.
 

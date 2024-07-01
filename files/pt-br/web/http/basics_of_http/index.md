@@ -1,7 +1,6 @@
 ---
 title: Básico sobre HTTP
 slug: Web/HTTP/Basics_of_HTTP
-original_slug: Web/HTTP/Basico_sobre_HTTP
 ---
 
 {{HTTPSidebar}}

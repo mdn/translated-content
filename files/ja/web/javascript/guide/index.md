@@ -51,13 +51,13 @@ slug: Web/JavaScript/Guide
         href="/ja/docs/Web/JavaScript/Guide/Functions#function_parameters">仮引数</a><br><a
         href="/ja/docs/Web/JavaScript/Guide/Functions#arrow_functions">アロー関数</a></p>
   </li>
-  <li><a href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators">式と演算子</a>
-    <p><a href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子">代入演算子</a> と <a
-        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#比較演算子">比較演算子</a><br><a
-        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#算術演算子">算術演算子</a><br><a
-        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#ビット演算子">ビット演算子</a> と <a
-        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#論理演算子">論理演算子</a><br><a
-        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#条件（三項）演算子">条件演算子</a></p>
+  <li><a href="/ja/docs/Web/JavaScript/Guide/Expressions_and_operators">式と演算子</a>
+    <p><a href="/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子">代入演算子</a> と <a
+        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#比較演算子">比較演算子</a><br><a
+        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#算術演算子">算術演算子</a><br><a
+        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#ビット演算子">ビット演算子</a> と <a
+        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#論理演算子">論理演算子</a><br><a
+        href="/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#条件（三項）演算子">条件演算子</a></p>
   </li>
   <li><a href="/ja/docs/Web/JavaScript/Guide/Numbers_and_dates">数値と日付</a> <a
       href="/ja/docs/Web/JavaScript/Guide/Numbers_and_dates#numbers">数値リテラル</a>
@@ -84,11 +84,11 @@ slug: Web/JavaScript/Guide
       <code><a href="/ja/docs/Web/JavaScript/Guide/Keyed_collections#map_object">Map</a></code><br><code><a href="/ja/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object">WeakMap</a></code><br><code><a href="/ja/docs/Web/JavaScript/Guide/Keyed_collections#set_object">Set</a></code><br><code><a href="/ja/docs/Web/JavaScript/Guide/Keyed_collections#weakset_object">WeakSet</a></code>
     </p>
   </li>
-  <li><a href="/ja/docs/Web/JavaScript/Guide/Working_with_Objects">オブジェクトを利用する</a>
-    <p><a href="/ja/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties">オブジェクトとそのプロパティ</a><br><a
-        href="/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects">新しいオブジェクトの作成</a><br><a
-        href="/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods">メソッドの定義</a><br><a
-        href="/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters">getter と setter</a></p>
+  <li><a href="/ja/docs/Web/JavaScript/Guide/Working_with_objects">オブジェクトを利用する</a>
+    <p><a href="/ja/docs/Web/JavaScript/Guide/Working_with_objects#オブジェクトとプロパティ">オブジェクトとそのプロパティ</a><br><a
+        href="/ja/docs/Web/JavaScript/Guide/Working_with_objects#新しいオブジェクトの作成">新しいオブジェクトの作成</a><br><a
+        href="/ja/docs/Web/JavaScript/Guide/Working_with_objects#メソッドの定義">メソッドの定義</a><br><a
+        href="/ja/docs/Web/JavaScript/Guide/Working_with_objects#ゲッターとセッターの定義">getter と setter</a></p>
   </li>
   <li><a href="/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">オブジェクトモデルの詳細</a>
     <p><a

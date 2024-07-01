@@ -1,5 +1,5 @@
 ---
-title: 'USB: connect イベント'
+title: "USB: connect イベント"
 slug: Web/API/USB/connect_event
 l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
@@ -14,9 +14,9 @@ l10n:
 {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を使うか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener('connect', (event) => { })
+addEventListener("connect", (event) => {});
 
-onconnect = (event) => { }
+onconnect = (event) => {};
 ```
 
 ## イベント型
@@ -37,7 +37,7 @@ _以下に挙げるプロパティに加え、親インターフェイス {{domx
 USB デバイスが接続された時、UI を更新したいかもしれません。
 
 ```js
-navigator.usb.addEventListener('connect', (event) => {
+navigator.usb.addEventListener("connect", (event) => {
   // event.device を UI に追加する
 });
 ```

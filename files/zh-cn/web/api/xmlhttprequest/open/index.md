@@ -45,4 +45,4 @@ xhrReq.open(method, url, async, user, password);
 
 ## 参见
 
-[使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+[使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

@@ -1,16 +1,6 @@
 ---
 title: DOMRectReadOnly
 slug: Web/API/DOMRectReadOnly
-tags:
-  - API
-  - DOM Reference
-  - DOMRectReadOnly
-  - Experimental
-  - Geometry
-  - Rectangle
-  - Reference
-  - TopicStub
-translation_of: Web/API/DOMRectReadOnly
 ---
 
 {{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}

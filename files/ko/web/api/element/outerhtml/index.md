@@ -66,7 +66,7 @@ console.log(container.firstChild.nodeName); // "P"를 출력합니다.
 
 ```js
 var div = document.createElement("div");
-div.outerHTML = "<div class=\"test\">test</div>";
+div.outerHTML = '<div class="test">test</div>';
 // 많은 브라우저에서 DOMException 예외를 발생시킵니다.
 console.log(div.outerHTML); // 결과: "<div></div>"
 ```

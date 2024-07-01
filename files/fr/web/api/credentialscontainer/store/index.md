@@ -1,13 +1,6 @@
 ---
 title: CredentialsContainer.store()
 slug: Web/API/CredentialsContainer/store
-tags:
-  - API
-  - Credential Management API
-  - CredentialsContainer
-  - Méthode
-  - Reference
-translation_of: Web/API/CredentialsContainer/store
 ---
 
 {{APIRef("")}}{{SeeCompatTable}}

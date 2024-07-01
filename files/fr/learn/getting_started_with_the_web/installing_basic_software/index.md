@@ -1,70 +1,65 @@
 ---
 title: Installation des outils de base
 slug: Learn/Getting_started_with_the_web/Installing_basic_software
-tags:
-  - Apprendre
-  - Débutant
-  - Navigateurs
-  - Outils
-  - Setup
-  - Web
-  - Éditeurs de texte
-translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
-original_slug: Apprendre/Commencer_avec_le_web/Installation_outils_de_base
+l10n:
+  sourceCommit: f1d0f645561a3658f896d2e0f0c670686c949492
 ---
 
-{{LearnSidebar}}
-{{NextMenu("Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site","Apprendre/Commencer_avec_le_web")}}
+{{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
 
-Dans cet article, nous allons vous montrer les outils dont vous aurez besoin pour développer un site web simple, ainsi que leur installation.
+Dans cet article, nous verrons les outils nécessaires pour commencer le développement web et comment les installer.
 
-## Quels outils utilisent les professionnels ?
+## Quels outils sont nécessaires pour le moment&nbsp;?
 
-- **Un ordinateur**. Ça peut sembler évident, mais certains d'entre vous lisent cet article depuis leur téléphone ou un terminal de bibliothèque. Pour du développement web sérieux, il est préférable d'investir dans un ordinateur de bureau tournant sous Linux, Mac ou Windows.
-- **Un éditeur de texte**, pour y écrire du code. Cela peut être un éditeur gratuit (ex : [Visual Studio Code](https://code.visualstudio.com/), [Atom,](https://atom.io/) [Sublime Text](https://www.sublimetext.com/) ou [Notepad++](https://notepad-plus-plus.org/)) ou un éditeur hybride ([Dreamweaver](http://www.adobe.com/products/dreamweaver.html)). Les éditeurs de documents Office ne sont pas adaptés à cette utilisation, car ils reposent sur des éléments cachés qui interfèrent avec les moteurs de rendu utilisés par les navigateurs web.
-- **Un navigateur web**, pour y tester le code. Les navigateurs les plus utilisés sont [Firefox](https://www.mozilla.org/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](http://www.opera.com/), [Safari](https://www.apple.com/safari/), [Internet Explorer](http://windows.microsoft.com/fr-fr/internet-explorer/download-ie) et [Microsoft Edge](https://www.microsoft.com/en-us/windows/microsoft-edge) . Vous devez également tester le fonctionnement de votre site sur les appareils mobiles, et sur tous les anciens navigateurs que votre public cible utilise encore beaucoup (comme IE 8-10).
-- **Un éditeur graphique**, comme [GIMP](http://www.gimp.org/), [Paint.NET](http://www.getpaint.net/), [Krita](https://krita.org/) ou [Photoshop](http://www.adobe.com/uk/products/photoshop.html) pour réaliser les images de vos pages web.
-- **Un système de contrôle de versions**, pour gérer les fichiers sur le serveur, collaborer sur les projets avec une équipe, partager le code et les ressources et éviter les conflits d'édition. À ce jour, [Git](http://git-scm.com/) est l'outil lde contrôle de version le plus connu et le service d'hébergement de code [GitHub](https://github.com), fondé sur Git, est également très populaire**.**
-- **Un programme FTP**, utilisé sur les anciens comptes d'hébergement Web pour gérer les fichiers sur les serveurs ([Git](http://git-scm.com/) remplace de plus en plus le FTP à cette fin). Il existe une grande quantité de programmes de ce genre comme [Cyberduck](https://cyberduck.io/), [Fetch](http://fetchsoftworks.com/) et [FileZilla](https://filezilla-project.org/).
-- **Un système d'automatisation**, comme [Grunt](http://gruntjs.com/) ou [Gulp](http://gulpjs.com/), pour automatiser les tâches répétitives, comme minimiser le code, ou lancer des tests.
-- Des modèles, bibliothèques, frameworks, etc. pour accélérer le développement de fonctionnalités courantes.
-- Et encore plus d'outils !
-
-## De quels outils ai-je besoin tout de suite ?
-
-Cette liste peut paraître effrayante, mais heureusement vous pouvez vous lancer dans le développement web sans rien savoir de tout cela. Dans cet article nous allons vous présenter le minimum : un éditeur de texte et quelques navigateurs web modernes.
+Dans cet article, nous prendrons uniquement le bagage minimum&nbsp;: un éditeur de texte, ainsi que des navigateurs web récents.
 
 ### Installer un éditeur de texte
 
-Vous avez probablement un éditeur de texte basique sur votre ordinateur. Par défaut Windows propose [Notepad](https://fr.wikipedia.org/wiki/Bloc-notes_%28Windows%29) et macOS, [TextEdit](https://fr.wikipedia.org/wiki/TextEdit). Pour les distributions Linux cela varie. Ubuntu propose [gedit](https://fr.wikipedia.org/wiki/Gedit) par défaut.
+Vous disposez sans doute déjà d'un éditeur de texte basique sur votre ordinateur. Par défaut, Windows inclut [Bloc-notes](<https://fr.wikipedia.org/wiki/Bloc-notes_(Windows)>), et macOS inclut [TextEdit](https://fr.wikipedia.org/wiki/TextEdit). Pour les distributions Linux, cela peut varier d'une à l'autre, par exemple Ubuntu 22.04 permet d'utiliser [l'éditeur de texte GNOME](https://en.wikipedia.org/wiki/GNOME_Text_Editor) par défaut.
 
-Pour le développement web, vous trouverez surement mieux que Notepad ou TextEdit. Nous vous recommandons de commencer avec [Visual Studio Code](https://code.visualstudio.com/), qui est un éditeur libre offrant des aperçus en direct et des conseils de code.
+Pour le développement web, Notepad ou TextEdit seront certainement limités. Nous vous recommandons de démarrer avec [Visual Studio Code](https://code.visualstudio.com/), un éditeur gratuit et <i lang="en">open source</i> qui permet des prévisualisations en direct et qui fournit des indications pour la complétion du code.
 
-### Installer un navigateur moderne
+### Installer des navigateurs web récents
 
-Pour l'instant, nous n'installerons que deux navigateurs pour y tester notre code. Choisissez votre système d'exploitation ci-dessous et cliquez sur les liens pour télécharger les programmes d'installation correspondants à vos navigateurs favoris :
+Pour le moment, nous allons installer quelques navigateurs de bureau dans lesquels nous pourrons tester notre code. Sélectionnez votre système d'exploitation et utilisez les liens associés pour télécharger les installeurs des navigateurs les plus répandus&nbsp;:
 
-- Linux : [Firefox](https://www.mozilla.org/en-US/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](http://www.opera.com/).
-- Windows : [Firefox](https://www.mozilla.org/en-US/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](http://www.opera.com/), [Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/download-ie), [Microsoft Edge](https://www.microsoft.com/en-us/windows/microsoft-edge) (Windows 10 est livré avec Edge par défaut, si vous avez Windows 7 ou supérieur, vous pouvez installer Internet Explorer 11, sinon, vous devez installer un autre navigateur).
-- Mac : [Firefox](https://www.mozilla.org/en-US/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](http://www.opera.com/), [Safari](https://www.apple.com/safari/) (Safari est proposé sur iOS et macOS par défaut).
+- Génériques (Linux, Windows, macOS)
+  - [Firefox](https://www.mozilla.org/fr/firefox/new/)
+  - [Chrome](https://www.google.com/chrome/)
+  - [Opera](https://www.opera.com/)
+  - [Brave](https://brave.com)
+- Windows
+  - [Edge](https://www.microsoft.com/edge) (Edge est préinstallé par défaut sur Windows 10 et 11)
+- macOS
+  - [Safari](https://www.apple.com/safari/) (Safari est présent par défaut sur macOS et iOS)
 
-Avant de continuer, vous devriez installer au moins deux de ces navigateurs et les préparer pour les tests.
-
-**Note**: Internet Explorer n'est pas compatible avec les dernières améliorations proposées par le Web. Il est possible que votre projet ne fonctionne pas sur ce navigateur. Vous n'avez généralement pas à vous soucier de rendre vos projets Web compatibles avec celui-ci, car très peu de personnes l'utilisent encore. Mais pour certains besoins spécifique, il faudra rendre votre projet compatible.
+Avant d'aller plus loin, installez au moins deux navigateurs différents afin de pouvoir tester vos sites ou applications web avec.
 
 ### Installer un serveur web local
 
-Certains projets Web ont besoin d'être lancés sur un serveur Web pour fonctionner correctement. Vous pouvez trouver ces explications ici: [Comment installer en local un serveur de tests&nbsp;?](/fr/Apprendre/Common_questions/configurer_un_serveur_de_test_local)
+Pour que certains exemples fonctionnent correctement, il vous faudra avoir mis en place un serveur web local. Pour cela, vous pouvez consulter l'article [Comment configurer un serveur de test local&nbsp;?](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)
 
-{{NextMenu("Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site","Apprendre/Commencer_avec_le_web")}}
+## Quels outils sont nécessaires pour du développement web professionnel&nbsp;?
 
-## Dans ce module
+La liste ci-après peut sembler longue, mais il est tout à fait possible de se lancer dans du développement web sans pour autant connaître dans les détails ce qui suit.
 
-- [Installer les logiciels de base](/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base)
-- [Quel aspect pour votre site Web&nbsp;?](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site)
-- [Gérer les fichiers](/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers)
-- [Bases du HTML](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_HTML)
-- [Bases des CSS](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS)
-- [Bases du JavaScript](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_JavaScript)
-- [Publier votre site Web](/fr/Apprendre/Commencer_avec_le_web/Publier_votre_site_web)
-- [Comment fonctionne le Web](/fr/Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web)
+- Un ordinateur
+  - : Si vous lisez cet article depuis un téléphone ou l'ordinateur d'une bibliothèque, sachez qu'il est préférable de disposer d'un ordinateur (de bureau ou portable) sous Linux, Windows ou macOS pour le développement web.
+- Un éditeur de texte
+  - : Un logiciel qui vous permettra d'écrire votre code. Il peut s'agir d'un éditeur de texte (comme [Visual Studio Code](https://code.visualstudio.com/), [Notepad++](https://notepad-plus-plus.org/), [Sublime Text](https://www.sublimetext.com/), [Pulsar](https://pulsar-edit.dev), [GNU Emacs](https://www.gnu.org/software/emacs/), ou [VIM](https://www.vim.org/)), ou d'un éditeur hybride (comme [Dreamweaver](https://www.adobe.com/fr/products/dreamweaver.html) ou [WebStorm](https://www.jetbrains.com/webstorm/)). Les éditeurs de texte graphiques comme Office Word ne doivent pas être utilisés, car ils ne permettent pas d'enregistrer des fichiers texte simple et contiennent des éléments qui interfèrent avec les moteurs de rendu des navigateurs web.
+- Des navigateurs web
+  - : Les navigateurs vous permettront de tester votre code. Les navigateurs les plus répandus sont [Firefox](https://www.mozilla.org/fr/firefox/new/), [Chrome](https://www.google.com/chrome/), [Safari](https://www.apple.com/safari/), [Edge](https://www.microsoft.com/edge). Il est également recommandé de tester votre site sur des appareils mobiles et sur d'éventuels anciens navigateurs qui seraient utilisés par votre public. [Lynx](https://lynx.browser.org/) est un navigateur web texte, qui s'affiche dans un terminal, et qui permet de voir comment le site peut être utilisé par les personnes en situation de handicap visuel.
+- Un éditeur graphique
+  - : [GIMP](https://www.gimp.org/), [Figma](https://www.figma.com/), [Paint.NET](https://www.getpaint.net/), [Photoshop](https://www.adobe.com/products/photoshop.html), [Sketch](https://www.sketch.com) ou [XD](https://www.adobe.com/products/xd.html) vous permettent d'éditer des images pour les visuels de vos pages web.
+- Un système de gestion de version
+  - : Qu'il s'agisse de travailler en équipe sur les mêmes fichiers, d'avoir un serveur de stockage, de partager du code ou d'éviter les conflits de version, vous devrez utiliser un outil de gestion de version. [Git](https://git-scm.com/) est le plus répandu aujourd'hui, et permet d'utiliser des plateformes d'hébergement comme [GitHub](https://github.com/) ou [GitLab](https://about.gitlab.com/).
+- Un client (S)FTP
+  - : Certains hébergeurs vous permettent de téléverser vos fichiers web via (S)FTP (même si [Git](https://git-scm.com/) tend à remplacer (S)FTP). Il existe de nombreux clients (S)FTP comme [Cyberduck](https://cyberduck.io/), [Fetch](https://fetchsoftworks.com/), [WinSCP](https://winscp.net/eng/docs/lang:fr), et [FileZilla](https://filezilla-project.org/).
+- Un système d'automatisation
+  - : Des systèmes comme [Webpack](https://webpack.js.org/), [Grunt](https://gruntjs.com/), ou [Gulp](https://gulpjs.com/) vous permettront d'automatiser certaines tâches répétitives comme la minification du code et le lancement des tests.
+- Bibliothèques et <i lang="en">frameworks</i>
+  - : Ces outils vous permettront de gagner en efficacité pour implémenter les fonctionnalités les plus communes. Une bibliothèque prendra généralement la forme d'un fichier JavaScript ou CSS qui fournit une fonctionnalité prête à l'usage que vous pouvez inclure dans votre code. Un <i lang="en">framework</i> va plus loin et fournit un système complet, avec une surcouche spécifique dans laquelle vous pouvez écrire votre application web.
+
+Cette liste n'est pas exhaustive, il existe de nombreux autres outils qui pourront vous être utiles.
+
+{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}

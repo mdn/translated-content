@@ -1,20 +1,9 @@
 ---
 title: runtime.OnInstalledReason
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/OnInstalledReason
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - OnInstalledReason
-  - Reference
-  - Type
-  - WebExtensions
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/OnInstalledReason
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Les valeurs pour laquelle l'événement {{WebExtAPIRef("runtime.onInstalled")}} est en cours d'envoi.
 
@@ -31,9 +20,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - `"shared_module_update"`
   - : Une autre extension, qui contient un module utilisé par cette extension, a été mise à jour.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.OnInstalledReason")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

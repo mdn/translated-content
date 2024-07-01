@@ -46,9 +46,9 @@ slug: Web/HTML/Element/track
 
 该元素包含 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("default")}}
+- `default`
   - : 该属性定义了该 track 应该启用，除非用户首选项指定了更合适一个 track。每个媒体元素里面只有一个 `track` 元素可以有这个属性。
-- {{htmlattrdef("kind")}}
+- `kind`
 
   - : 定义了 text track 应该如何使用。如果省略了该属性，默认的 kind 值就是 `subtitles`。下面是允许的关键字：
 
@@ -76,11 +76,11 @@ slug: Web/HTML/Element/track
 
       - 脚本使用的 track。对用户不可见。
 
-- {{htmlattrdef("label")}}
+- `label`
   - : 当列出可用的 text tracks 时，给浏览器使用的 text track 的标题，这种标题是用户可读的。
-- {{htmlattrdef("src")}}
+- `src`
   - : track 的地址。必须是合法的 URL。该属性必须定义。
-- {{htmlattrdef("srclang")}}
+- `srclang`
   - : track 文本数据的语言。它必须是合法的 [BCP 47](http://people.w3.org/rishida/utils/subtags/) 语言标签。如果 `kind` 属性被设为 `subtitles`, 那么 `srclang` 必须定义。
 
 ## 用法说明

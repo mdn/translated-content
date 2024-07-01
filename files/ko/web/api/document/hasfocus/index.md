@@ -22,48 +22,48 @@ focused = document.hasFocus();
 ## 예제
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>TEST</title>
-<style>
-#message { font-weight: bold; }
-</style>
+  <head>
+    <meta charset="UTF-8" />
+    <title>TEST</title>
+    <style>
+      #message {
+        font-weight: bold;
+      }
+    </style>
 
-<script>
+    <script>
+      setInterval(CheckPageFocus, 200);
 
-setInterval( CheckPageFocus, 200 );
+      function CheckPageFocus() {
+        var info = document.getElementById("message");
 
-function CheckPageFocus() {
-  var info = document.getElementById("message");
+        if (document.hasFocus()) {
+          info.innerHTML = "The document has the focus.";
+        } else {
+          info.innerHTML = "The document doesn't have the focus.";
+        }
+      }
 
-  if ( document.hasFocus() ) {
-    info.innerHTML = "The document has the focus.";
-  } else {
-    info.innerHTML = "The document doesn't have the focus.";
-  }
-}
+      function OpenWindow() {
+        window.open(
+          "http://developer.mozilla.org/",
+          "mozdev",
+          (width = 640),
+          (height = 300),
+          (left = 150),
+          (top = 260),
+        );
+      }
+    </script>
+  </head>
 
-function OpenWindow() {
-  window.open (
-    "http://developer.mozilla.org/",
-    "mozdev",
-    width=640,
-    height=300,
-    left=150,
-    top=260
-  );
-}
-
-</script>
-</head>
-
-<body>
-  <h1>JavaScript hasFocus example</h1>
-  <div id="message">Waiting for user action</div>
-  <div><button onclick="OpenWindow()">Open a new window</button></div>
-</body>
+  <body>
+    <h1>JavaScript hasFocus example</h1>
+    <div id="message">Waiting for user action</div>
+    <div><button onclick="OpenWindow()">Open a new window</button></div>
+  </body>
 </html>
 ```
 

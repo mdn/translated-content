@@ -3,7 +3,9 @@ title: FormData.getAll()
 slug: Web/API/FormData/getAll
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 {{domxref("FormData")}} 인터페이스의 **`getAll()`** 메서드는 `FormData` 객체에서 지정된 키와 연관된 모든 값을 반환합니다.
 
@@ -35,21 +37,21 @@ var formData = new FormData();
 {{domxref("FormData.append")}}를 사용하여 `username` 에 두 개의 값을 추가합니다:
 
 ```js
-formData.append('username', 'Chris');
-formData.append('username', 'Bob');
+formData.append("username", "Chris");
+formData.append("username", "Bob");
 ```
 
 `getAll()` 함수는 `username` 의 값들을 배열로 반환합니다:
 
 ```js
-formData.getAll('username'); // Returns ["Chris", "Bob"]
+formData.getAll("username"); // Returns ["Chris", "Bob"]
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

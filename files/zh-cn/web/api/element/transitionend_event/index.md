@@ -1,92 +1,120 @@
 ---
-title: GlobalEventHandlers.ontransitionend
+title: Element：transitionend 事件
 slug: Web/API/Element/transitionend_event
 ---
 
-{{APIRef("CSS3 Transitions")}}
+{{APIRef}}
 
-{{domxref("GlobalEventHandlers")}} 混入对象的 **`ontransitionend`** 属性是一个处理 [`transitionend`](/zh-CN/docs/Web/API/Element/transitionend_event) 事件的 [事件处理函数](/zh-CN/docs/Web/Events/Event_handlers)。
+**`transitionend`** 事件会在 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)完成的时候触发。如果过渡在完成前就被移除，比如删除 {{cssxref("transition-property")}} 或者将 {{cssxref("display")}} 设置为 `none`，那么该事件就不会生成。
 
-`transitionend` 事件的事件处理函数，在某个 [CSS transition](/zh-CN/docs/Web/CSS/CSS_Transitions) 完成时触发。
+`transitionend` 事件在两个方向上触发：当它完成从初始状态到过渡状态的过渡时，以及当它完全恢复到默认或非过渡状态时。如果没有设置过渡延迟或持续时间，或者两者都是 0 秒或都没有声明，则没有过渡，且不会触发任何过渡事件。如果触发了 `transitioncancel` 事件，`transitionend` 事件就不会触发。
 
-> **备注：** 如果在 transition 完成前，该 transition 已从目标节点上移除，那么 [`transitionend`](/zh-CN/docs/Web/API/Element/transitionend_event) 将不会被触发。一种可能的情况是修改了目标节点的 {{cssxref("transition-property")}} 属性，另一种可能的情况是 {{cssxref("display")}} 属性被设为 `"none"`。
+这个事件是无法取消的。
 
 ## 语法
 
-```js
-var transitionEndHandler = target.ontransitionend;
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 的方法中使用该事件的名称或者设置事件处理器属性。
 
-target.ontransitionend = {{jsxref("Global_Objects/Function", "Function")}}
+```js
+addEventListener("transitionend", (event) => {});
+
+ontransitionend = (event) => {};
 ```
 
-### 值
+## 事件类型
 
-一个 {{jsxref("Global_Objects/Function")}} 会在 [`transitionend`](/zh-CN/docs/Web/API/Element/transitionend_event) 事件发生时被触发，表示目标节点的 CSS transition 已经完成。目标节点可能是一个 HTML 元素 ({{domxref("HTMLElement")}})，document ({{domxref("Document")}})，或者 window ({{domxref("Window")}})。该函数接受一个参数：一个描述该事件的 {{domxref("TransitionEvent")}} 对象；其 {{domxref("TransitionEvent.elapsedTime")}} 属性值与 {{cssxref("transition-duration")}} 的值一致。
+一个 {{domxref("TransitionEvent")}}，继承自 {{domxref("Event")}}。
 
-> **备注：** `elapsedTime` 并不包括 transition 效果开始前的时间，也就是说，{{cssxref("transition-delay")}} 属性并不会影响 `elapsedTime` 的值，其在延迟结束、动画开始之时，值为零。
+{{InheritanceDiagram("TransitionEvent")}}
+
+## 事件属性
+
+_同样继承来自父级 {{domxref("Event")}} 的属性_。
+
+- {{domxref("TransitionEvent.propertyName")}} {{ReadOnlyInline}}
+  - : 与过渡相关的 CSS 属性名称的字符串。
+- {{domxref("TransitionEvent.elapsedTime")}} {{ReadOnlyInline}}
+  - : 一个 `float` 类型的数值，表示在事件触发时过渡已经运行的时间，以秒为单位。该值不受 {{cssxref("transition-delay")}} 属性的影响。
+- {{domxref("TransitionEvent.pseudoElement")}} {{ReadOnlyInline}}
+  - : 一个以 `::` 开始的字符串，包含运行动画效果的[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)名称。如果过渡效果并不是在伪元素上运行的，则该值是空字符串 `''`。
 
 ## 示例
 
-本例中，我们使用了 [`transitionrun`](/zh-CN/docs/Web/API/Element/transitionrun_event) 和 [`transitionend`](/zh-CN/docs/Web/API/Element/transitionend_event) 事件来监测 transition 的开始和结束，从而在 transition 的过程中更新文本。这也可以被用来触发动画或者其它效果来实现连锁反应。
-
-### HTML
-
-这里简单地创建了一个 {{HTMLElement("div")}}，我们将使用 CSS 来改变其大小和颜色。
-
-```html
-<div class="box"></div>
-```
-
-### CSS
-
-以下为 CSS 样式，并添加了 transition 属性。当鼠标悬浮时，盒子大小和颜色会发生变化，而且还会转动。
-
-```css
-.box {
-  margin-left: 70px;
-  margin-top: 30px;
-  border-style: solid;
-  border-width: 1px;
-  display: block;
-  width: 100px;
-  height: 100px;
-  background-color: #0000FF;
-  color: #FFFFFF;
-  padding: 20px;
-  font: bold 1.6em "Helvetica", "Arial", sans-serif;
-  transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s;
-}
-
-.box:hover {
-  background-color: #FFCCCC;
-  color: #000000;
-  width: 200px;
-  height: 200px;
-  transform: rotate(180deg);
-}
-```
-
-### JavaScript
-
-接下来，我们需要事件处理函数以在 transition 发生和结束时修改文本内容。
+下面的代码先获取一个定义了过渡效果的元素，然后添加了一个监听器来监听 `transitionend` 事件：
 
 ```js
-let box = document.querySelector(".box");
-box.ontransitionrun = function(event) {
-  box.textContent = "Zooming...";
+const transition = document.querySelector(".transition");
+
+transition.addEventListener("transitionend", () => {
+  console.log("过渡结束");
+});
+```
+
+使用 `ontransitionend` 也是一样的：
+
+```js
+const transition = document.querySelector(".transition");
+
+transition.ontransitionend = () => {
+  console.log("过渡结束");
+};
+```
+
+### 实时示例
+
+在下面的示例中，我们有一个简单的 {{HTMLElement("div")}} 元素，它通过过渡样式进行了修饰，其中包括一个延迟：
+
+```html
+<div class="transition">让鼠标在这里悬停</div>
+<div class="message"></div>
+```
+
+```css
+.transition {
+  width: 100px;
+  height: 100px;
+  background: rgb(255 0 0 / 100%);
+  transition-property: transform, background;
+  transition-duration: 2s;
+  transition-delay: 1s;
 }
-box.ontransitionend = function(event) {
-  box.textContent = "Done!";
+
+.transition:hover {
+  transform: rotate(90deg);
+  background: rgb(255 0 0 / 0%);
 }
 ```
 
-### 效果
+为此，我们将添加一些 JavaScript 代码来展示 [`transitionstart`](/zh-CN/docs/Web/API/Element/transitionstart_event)、[`transitionrun`](/zh-CN/docs/Web/API/Element/transitionrun_event)、[`transitioncancel`](/zh-CN/docs/Web/API/Element/transitioncancel_event) 和 `transitionend` 事件的触发。在此示例中，如果要取消过渡，则需在过渡结束前不要将鼠标悬停在正在过渡的框上。为了触发过渡结束事件，需要在过渡结束时保持悬停在过渡上。
 
-最后的效果如下：
+```js
+const message = document.querySelector(".message");
+const el = document.querySelector(".transition");
 
-{{EmbedLiveSample('示例', 600, 280)}}
+el.addEventListener("transitionrun", () => {
+  message.textContent = "触发 transitionrun";
+});
 
-注意观察当鼠标悬浮在元素上以及移出时发生的变化。
+el.addEventListener("transitionstart", () => {
+  message.textContent = "触发 transitionstart";
+});
+
+el.addEventListener("transitioncancel", () => {
+  message.textContent = "触发 transitioncancel";
+});
+
+el.addEventListener("transitionend", () => {
+  message.textContent = "触发 transitionend";
+});
+```
+
+{{ EmbedLiveSample('实时示例', '100%', '150px') }}
+
+`transitionend` 事件会在两个方向上触发：当方框结束旋转并且不透明度达到 0 或 1 时（具体取决于方向）。
+
+如果没有过渡延迟或持续时间，即如果两者都为 0 或未声明，则不会发生过渡，也不会触发任何过渡事件。
+
+如果触发了 `transitioncancel` 事件，则不会触发 `transitionend` 事件。
 
 ## 规范
 

@@ -39,4 +39,4 @@ Veja [DOM specification](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Ev
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Event.stopPropagation")}}
+{{Compat}}

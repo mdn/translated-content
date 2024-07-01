@@ -1,51 +1,66 @@
 ---
 title: text-decoration
 slug: Web/CSS/text-decoration
+l10n:
+  sourceCommit: b782b7d57e7040d5d9644a19017f4683044b5c90
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
-## 简介
+**`text-decoration`** [CSS](/zh-CN/docs/Web/CSS) [简写](/zh-CN/docs/Web/CSS/Shorthand_properties)属性设置文本上的装饰性线条的外观。它是 {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} 和较新的 {{cssxref("text-decoration-thickness")}} 属性的缩写。
 
 {{EmbedInteractiveExample("pages/css/text-decoration.html")}}
 
-`text-decoration` 这个 CSS 属性是用于设置文本的修饰线外观的（下划线、上划线、贯穿线/删除线 或 闪烁）它是 {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, 和新出现的 {{cssxref("text-decoration-thickness")}} 属性的缩写。
+文本装饰会覆盖子文本元素。这意味着如果一个元素指定了文本装饰，那么子元素无法去除这个装饰。例如，在标记 `<p>这段文字中有<em>一些强调词</em>。</p>` 中，样式规则 `p { text-decoration: underline; }` 会导致整个段落包含下划线。样式规则 `em { text-decoration: none; }` 不会有任何变化；整个段落仍然会包含下划线。但是，规则 `em { text-decoration: overline; }` 会导致“一些强调词”上出现上划线。
 
-文本修饰属性会延伸到子元素。这意味着如果祖先元素指定了文本修饰属性，子元素则不能将其删除。例如，在如下标记中 `<p>This text has <em>some emphasized words</em> in it.</p>`，应用样式 `p { text-decoration: underline }` 会对整个段落添加下划线，此时再添加样式 `em { text-decoration: none }` 则不会引起任何改变，整个段落仍然有下划线修饰。然而，新加样式 `em { text-decoration: overline }` 则会在\<em>标记的文字上再添加上这种 overline 样式。
+## 属性构成
+
+该属性是以下 CSS 属性的简写：
+
+- [`text-decoration-color`](/zh-CN/docs/Web/CSS/text-decoration-color)
+- [`text-decoration-line`](/zh-CN/docs/Web/CSS/text-decoration-line)
+- [`text-decoration-style`](/zh-CN/docs/Web/CSS/text-decoration-style)
+- [`text-decoration-thickness`](/zh-CN/docs/Web/CSS/text-decoration-thickness)
 
 ## 语法
 
-text-decoration 属性是一种简写属性，并且可以使用普通属性三个值中的任何一个。普通属性如下：{{cssxref("text-decoration-line")}}，{{cssxref("text-decoration-color")}}和{{cssxref("text-decoration-style")}}
+```css
+text-decoration: underline;
+text-decoration: overline red;
+text-decoration: none;
+
+/* 全局值 */
+text-decoration: inherit;
+text-decoration: initial;
+text-decoration: revert;
+text-decoration: revert-layer;
+text-decoration: unset;
+```
+
+`text-decoration` 属性由一个或多个用空格分隔的值组成，表示各种普通文本装饰属性。
 
 ### 值
 
 - {{cssxref("text-decoration-line")}}
-  - : 文本修饰的位置，如下划线`underline`，删除线`line-through`
+  - : 设置使用的装饰类型，例如 `underline` 或 `line-through`。
 - {{cssxref("text-decoration-color")}}
-  - : 文本修饰的颜色
+  - : 设置装饰的颜色。
 - {{cssxref("text-decoration-style")}}
-  - : 文本修饰的样式，如波浪线`wavy`实线`solid`虚线`dashed`
+  - : 设置装饰的线条的样式，例如 `solid`、`wavy` 或 `dashed`。
 - {{cssxref("text-decoration-thickness")}}
-  - : 文本修饰线的粗细
+  - : 设置装饰的线条粗细。
 
-### 语法形式
+## 形式定义
 
-{{csssyntax("text-decoration")}}
+{{CSSInfo}}
+
+## 形式语法
+
+{{csssyntax}}
 
 ## 示例
 
-```html
-<p class="under">This text has a line underneath it.</p>
-<p class="over">This text has a line over it.</p>
-<p class="line">This text has a line going through it.</p>
-<p>This <a class="plain" href="#">link will not be underlined</a>,
-    as links generally are by default. Be careful when removing
-    the text decoration on anchors since users often depend on
-    the underline to denote hyperlinks.</p>
-<p class="underover">This text has lines above <em>and</em> below it.</p>
-<p class="blink">This text might blink for you,
-    depending on the browser you use.</p>
-```
+### text-decoration 值的演示
 
 ```css
 .under {
@@ -68,20 +83,33 @@ text-decoration 属性是一种简写属性，并且可以使用普通属性三�
   text-decoration: dashed underline overline;
 }
 
+.thick {
+  text-decoration: solid underline purple 4px;
+}
+
 .blink {
   text-decoration: blink;
 }
 ```
 
-### 结果
+```html
+<p class="under">此文本下方有一行线。</p>
+<p class="over">此文本上面有一行线。</p>
+<p class="line">此文本有一条线穿过它。</p>
+<p>
+  此<a class="plain" href="#">链接不会具有下划线</a
+  >，因为链接默认加下划线。移除锚点上的文本装饰时要小心，因为用户通常依赖下划线来表示超链接
+</p>
+<p class="underover">此文本在其上方<em>和</em>下方都有线条。</p>
+<p class="thick">在浏览器支持的情况下，此文本具有非常粗的紫色下划线。</p>
+<p class="blink">此文本可能会为你闪烁，具体取决于你使用的浏览器。</p>
+```
 
-{{EmbedLiveSample('示例','auto','280')}}
+{{EmbedLiveSample('text-decoration 值的演示','auto','320')}}
 
 ## 规范
 
 {{Specifications}}
-
-{{cssinfo}}
 
 ## 浏览器兼容性
 
@@ -89,5 +117,6 @@ text-decoration 属性是一种简写属性，并且可以使用普通属性三�
 
 ## 参见
 
-- The individual text-decoration properties are {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, and {{cssxref("text-decoration-style")}}.
-- The {{cssxref("list-style")}} attribute controls the appearance of items in HTML {{HTMLElement("ol")}} and {{HTMLElement("ul")}} lists.
+- 包括的文本装饰属性分别是 {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} 和 {{cssxref("text-decoration-thickness")}}。
+- {{cssxref("text-decoration-skip-ink")}}、{{cssxref("text-underline-offset")}} 和 {{cssxref("text-underline-position")}} 属性也会影响文本装饰，但不包括在该简写属性中。
+- {{cssxref("list-style")}} 属性控制 {{HTMLElement("ol")}} 和 {{HTMLElement("ul")}} 列表的每一项的外观。

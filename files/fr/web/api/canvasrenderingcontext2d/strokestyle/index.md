@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.strokeStyle
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
-translation_of: Web/API/CanvasRenderingContext2D/strokeStyle
 ---
 
 {{APIRef}}
@@ -42,10 +41,10 @@ Ceci est un simple snippet de code utilisant la propriété `strokeStyle` pour d
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-ctx.strokeStyle = 'blue';
+ctx.strokeStyle = "blue";
 ctx.strokeRect(10, 10, 100, 100);
 ```
 
@@ -61,15 +60,16 @@ ctx.strokeRect(10, 10, 100, 100);
 </div>
 <textarea id="code" class="playable-code">
 ctx.strokeStyle = 'blue';
-ctx.strokeRect(10, 10, 100, 100);</textarea>
+ctx.strokeRect(10, 10, 100, 100);</textarea
+>
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
 var code = textarea.value;
 
 function drawCanvas() {
@@ -77,17 +77,17 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', drawCanvas);
-window.addEventListener('load', drawCanvas);
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
 ```
 
 {{ EmbedLiveSample('Code_jouable', 700, 360) }}
@@ -97,12 +97,16 @@ window.addEventListener('load', drawCanvas);
 Cet exemple utilise la propriété `strokeStyle` pour changer les couleurs des contours des formes. Nous utilisons la méthode {{domxref("CanvasRenderingContext2D.arc", "arc()")}} pour dessiner des cercles au lieu de carrés.
 
 ```js
-var ctx = document.getElementById('canvas').getContext('2d');
+var ctx = document.getElementById("canvas").getContext("2d");
 
 for (var i = 0; i < 6; i++) {
   for (var j = 0; j < 6; j++) {
-    ctx.strokeStyle = 'rgb(0,' + Math.floor(255 - 42.5 * i) + ',' +
-                      Math.floor(255 - 42.5 * j) + ')';
+    ctx.strokeStyle =
+      "rgb(0," +
+      Math.floor(255 - 42.5 * i) +
+      "," +
+      Math.floor(255 - 42.5 * j) +
+      ")";
     ctx.beginPath();
     ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
     ctx.stroke();

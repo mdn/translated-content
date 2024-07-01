@@ -3,7 +3,7 @@ title: bookmarks.onImportEnded
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportEnded
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 ブックマークのインポートが終了した際に発火します。
 
@@ -35,7 +35,7 @@ browser.bookmarks.onImportEnded.hasListener(listener)
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.onImportEnded")}}
+{{Compat}}
 
 ## 使用例
 

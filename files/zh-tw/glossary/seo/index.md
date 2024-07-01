@@ -3,6 +3,8 @@ title: SEO
 slug: Glossary/SEO
 ---
 
+{{GlossarySidebar}}
+
 **搜尋引擎最佳化**（Search Engine Optimization、SEO）是提高網站於搜尋引擎的能見度之過程，又稱搜索排名改進。
 
 搜尋引擎會{{Glossary("Crawler", "爬行")}}網路，從某個頁面連結到另一個頁面，並編篡找到的內容。當你搜尋的時候，搜尋引擎就會顯示已編好的內容。爬蟲遵循規則。如果你在給網站 SEO 時遵循這些規則，就能提高網站出現在搜尋結果首位的機會。它能增進流量，並透過電子商務與廣告，增加潛在收入。
@@ -29,4 +31,4 @@ SEO 方法分為三大類：
 - [什麼是 SEO？由淺入深新手教學](https://seo.whoops.com.tw/what-is-seo/)
 - [SEO 新手初入門，3 分鐘了解什麼是 SEO 教學](https://techmoon.xyz/what-is-seo/)
 - [Google Webmaster Central](https://www.google.com/webmasters/)
-- [您需要 SEO 嗎？ - Search Console 說明](https://support.google.com/webmasters/answer/35291?hl=zh-Hant)
+- [你需要 SEO 嗎？ - Search Console 說明](https://support.google.com/webmasters/answer/35291?hl=zh-Hant)

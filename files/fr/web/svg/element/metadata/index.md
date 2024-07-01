@@ -1,11 +1,6 @@
 ---
 title: <metadata>
 slug: Web/SVG/Element/metadata
-tags:
-  - Element
-  - SVG
-  - SVG Description
-translation_of: Web/SVG/Element/metadata
 ---
 
 {{SVGRef}}
@@ -25,7 +20,7 @@ L'élément [SVG](/fr/docs/Web/SVG) **`<metadata>`** permet d'ajouter des metado
 
 ### Attributs spécifiques
 
-_Aucun_
+_Aucun._
 
 ## Interface DOM
 

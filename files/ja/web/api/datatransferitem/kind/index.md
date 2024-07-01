@@ -24,27 +24,24 @@ l10n:
 
 ```js
 function drop_handler(ev) {
- console.log("Drop");
- ev.preventDefault();
- const data = event.dataTransfer.items;
- for (let i = 0; i < data.length; i += 1) {
-   if ((data[i].kind === 'string') &&
-       (data[i].type.match('^text/plain'))) {
-     // This item is the target node
-     data[i].getAsString((s) => {
-       ev.target.appendChild(document.getElementById(s));
-     });
-   } else if ((data[i].kind === 'string') &&
-              (data[i].type.match('^text/html'))) {
-     // Drag data item is HTML
-     console.log("… Drop: HTML");
-   } else if ((data[i].kind === 'file') &&
-              (data[i].type.match('^image/'))) {
-     // Drag data item is an image file
-     const f = data[i].getAsFile();
-     console.log("… Drop: File ");
-   }
- }
+  console.log("Drop");
+  ev.preventDefault();
+  const data = event.dataTransfer.items;
+  for (let i = 0; i < data.length; i += 1) {
+    if (data[i].kind === "string" && data[i].type.match("^text/plain")) {
+      // This item is the target node
+      data[i].getAsString((s) => {
+        ev.target.appendChild(document.getElementById(s));
+      });
+    } else if (data[i].kind === "string" && data[i].type.match("^text/html")) {
+      // Drag data item is HTML
+      console.log("… Drop: HTML");
+    } else if (data[i].kind === "file" && data[i].type.match("^image/")) {
+      // Drag data item is an image file
+      const f = data[i].getAsFile();
+      console.log("… Drop: File ");
+    }
+  }
 }
 ```
 

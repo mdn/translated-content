@@ -1,8 +1,6 @@
 ---
 title: Очки
 slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/The_score
-original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Очки
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Обработка_коллизий", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Победа")}}
@@ -28,7 +26,10 @@ var score = 0;
 А сейчас добавим строку кода в самый конец функции `create()`:
 
 ```js
-scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095DD' });
+scoreText = game.add.text(5, 5, "Points: 0", {
+  font: "18px Arial",
+  fill: "#0095DD",
+});
 ```
 
 Функция `text()` может принимать четыре параметра:
@@ -45,9 +46,9 @@ scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095D
 
 ```js
 function ballHitBrick(ball, brick) {
-    brick.kill();
-    score += 10;
-    scoreText.setText('Points: '+score);
+  brick.kill();
+  score += 10;
+  scoreText.setText("Points: " + score);
 }
 ```
 

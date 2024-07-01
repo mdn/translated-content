@@ -21,8 +21,8 @@ Existem algumas raras condições em que isso pode ocorrer:
 
 ## Especificações
 
-| Especificação                                                | Título                                                        |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| Especificação                                  | Título                                                        |
+| ---------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "414 URI Too Long" , "6.5.12")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Veja também

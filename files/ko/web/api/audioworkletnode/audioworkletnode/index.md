@@ -48,9 +48,11 @@ var node = new AudioWorkletNode(context, name, options);
 ### 예외
 
 - `NotSupportedError` {{domxref("DOMException")}}
+
   - : 명시된 `options.outputChannelCount` 이 `0` 또는 현재 구현 지원보다 더 큽니다.
 
     `options.numberOfInputs`와 `options.numberOfOutputs`가 둘 다 0입니다.
+
 - `IndexSizeError` {{domxref("DOMException")}}
   - : `options.outputChannelCount` 배열의 길이가 `options.numberOfOutputs`와 일치하지 않습니다.
 

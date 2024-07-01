@@ -1,7 +1,6 @@
 ---
-title: 'TypeError: ''x'' is not iterable (Тип ошибки  ''x'' не является итерационным)'
+title: "TypeError: 'x' is not iterable (Тип ошибки  'x' не является итерационным)"
 slug: Web/JavaScript/Reference/Errors/is_not_iterable
-translation_of: Web/JavaScript/Reference/Errors/is_not_iterable
 ---
 
 {{jsSidebar("Errors")}}
@@ -28,43 +27,42 @@ TypeError: 'x' не является функцией или её возвращ
 В JavaScript, {{jsxref("object")}} не повторяется, если они реализуют итерационный протокол . Поэтому нельзя использовать for...of для перебора свойств объекта.
 
 ```js example-bad
-var obj = { 'France': 'Paris', 'England': 'London' };
-for (let p of obj) { // TypeError: obj не является итерационным
-    // …
+var obj = { France: "Paris", England: "London" };
+for (let p of obj) {
+  // TypeError: obj не является итерационным
+  // …
 }
 ```
 
 Вместо этого вы должны использовать {{jsxref("Object.keys")}} или {{jsxref("Object.entries")}}, для итерации по свойствам или записям объекта.
 
 ```js example-good
-var obj = { 'France': 'Paris', 'England': 'London' };
+var obj = { France: "Paris", England: "London" };
 // Iterate over the property names:
 for (let country of Object.keys(obj)) {
-    var capital = obj[country];
-    console.log(country, capital);
+  var capital = obj[country];
+  console.log(country, capital);
 }
 
 for (const [country, capital] of Object.entries(obj))
-    console.log(country, capital);
+  console.log(country, capital);
 ```
 
 Другим вариантом для этого варианта использования может быть использование {{jsxref("Map")}}:
 
 ```js example-good
-var map = new Map;
-map.set('France', 'Paris');
-map.set('England', 'London');
+var map = new Map();
+map.set("France", "Paris");
+map.set("England", "London");
 // Iterate over the property names:
 for (let country of map.keys()) {
-    let capital = map[country];
-    console.log(country, capital);
+  let capital = map[country];
+  console.log(country, capital);
 }
 
-for (let capital of map.values())
-    console.log(capital);
+for (let capital of map.values()) console.log(capital);
 
-for (const [country, capital] of map.entries())
-    console.log(country, capital);
+for (const [country, capital] of map.entries()) console.log(country, capital);
 ```
 
 ### Итерация по генератору
@@ -78,19 +76,18 @@ function* generate(a, b) {
 }
 
 for (let x of generate) // TypeError: генерация не является итерационной
-    console.log(x);
+  console.log(x);
 ```
 
 Если они не вызываются, то объект {{jsxref("Function")}}, соответствующий генератору, можно вызвать, но нельзя выполнить итерацию. Вызов генератора создаёт итерационный объект, который будет выполнять итерацию по значениям, полученным во время выполнения генератора.
 
 ```js example-good
 function* generate(a, b) {
-    yield a;
-    yield b;
+  yield a;
+  yield b;
 }
 
-for (let x of generate(1,2))
-    console.log(x);
+for (let x of generate(1, 2)) console.log(x);
 ```
 
 ## Смотрите также

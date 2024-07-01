@@ -1,57 +1,82 @@
 ---
-title: History.pushState()
+title: "History: pushState() 메서드"
 slug: Web/API/History/pushState
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("DOM")}}
 
-[HTML](/ko/docs/Web/HTML) 문서에서, **`history.pushState()`** 메서드는 브라우저의 세션 기록 스택에 상태를 추가합니다.
+[HTML](/ko/docs/Web/HTML) 문서에서, **`history.pushState()`** 메서드는 브라우저의 세션 기록 스택에 항목을 추가합니다.
+
+이 메서드는 {{glossary("asynchronous", "비동기")}}로 동작합니다. 네비게이션이 언제 완료되었는지 결정하기 위해 {{domxref("Window/popstate_event", "popstate")}} 이벤트에 대한 수신기를 추가합니다. 이때 `state` 매개변수를 사용할 수 있습니다.
 
 ## 구문
 
-```js
-history.pushState(state, title[, url]);
+```js-nolint
+pushState(state, unused)
+pushState(state, unused, url)
 ```
 
 ### 매개변수
 
 - `state`
-  - : 새로운 세션 기록 항목에 연결할 상태 객체. 사용자가 새로운 상태로 이동할 때마다 {{event("popstate")}} 이벤트가 발생하는데, 이 때 이벤트 객체의 `state` 속성에 해당 상태의 복제본이 담겨 있습니다.
 
-    상태 객체는 직렬화 가능한 객체라면 모두 가능합니다.
-- `title`
-  - : [지금은 대부분의 브라우저가 `title` 매개변수를 무시하지만](https://github.com/whatwg/html/issues/2174), 미래에 쓰일 수도 있습니다. 빈 문자열을 지정하면 나중의 변경사항에도 안전할 것입니다. 아니면, 상태에 대한 짧은 제목을 제공할 수도 있습니다.
+  - : `state` 객체는 `pushState()`에 의해 생성되어 새로운 기록 항목과 관련된 JavaScript 객체입니다. 사용자가 새로운 `state`로 이동할 때마다 {{domxref("Window/popstate_event", "popstate")}} 이벤트가 발생되고 이벤트 `state` 속성은 기록 항목의 `state` 객체 복사본을 포함합니다.
+
+    `state` 객체는 직렬화될 수 있는 모든 것일 수 있습니다. Firefox는 사용자가 브라우저를 다시 시작한 후 복원될 수 있도록 사용자의 디스크에 `state` 객체를 저장하기 때문에, `state` 객체의 직렬화된 표현에 16MiB의 크기 제한을 적용합니다. 이보다 더 큰 직렬화된 표현 `state` 객체를 `pushState()`에 전달하면 메서드는 예외를 발생시킵니다. 이보다 더 많은 공간이 필요하다면 {{domxref("Window.sessionStorage", "sessionStorage")}} 혹은 {{domxref("Window.localStorage", "localStorage")}}를 사용하는 것이 좋습니다.
+
+- `unused`
+
+  - : 이 매개변수는 역사적인 이유로 존재해서 생략할 수 없습니다. 빈 문자열을 전달하는 것이 나중에 메서드가 변경될 경우에도 안전합니다.
+
 - `url` {{optional_inline}}
-  - : 새로운 세션 기록 항목의 URL. `pushState()` 호출 이후에 브라우저는 주어진 URL로 탐색하지 않습니다. 그러나 이후, 예컨대 브라우저를 재시작할 경우 탐색을 시도할 수도 있습니다. 상대 URL을 지정할 수 있으며, 이 땐 현재 URL을 기준으로 사용합니다. 새로운 URL은 현재 URL과 같은 {{glossary("origin", "출처")}}를 가져야 하며, 그렇지 않을 경우 예외가 발생합니다. 지정하지 않은 경우 문서의 현재 URL을 사용합니다.
+  - : 새로운 기록 항목의 URL입니다. 브라우저는 `pushState()` 호출 후에는 이 URL을 로드하려고 시도하지 않습니다. 하지만, 예를 들어 사용자가 브라우저를 다시 시작한 후에는 나중에 URL을 로드하려고 시도할 수 있습니다. 새로운 URL은 절대 경로일 필요가 없습니다. 상대 경로인 경우 현재 URL을 기준으로 해결됩니다. 새로운 URL은 현재 URL과 같은 {{glossary("origin", "출처")}}여야 합니다. 그렇지 않으면, `pushState()`는 예외를 발생시킵니다. 이 매개변수가 지정되지 않으면, 문서의 현재 URL로 설정됩니다.
+
+### 반환 값
+
+없음 ({{jsxref("undefined")}}).
 
 ## 설명
 
-어떤 면에선 `pushState()`와 `window.location = "#foo"`가 비슷합니다. 둘 다 새로운 세션 기록 항목을 생성하고 활성화하기 때문입니다. 그러나 `pushState()`에는 몇 가지 장점이 있습니다.
+어떤 의미에서 `pushState()`를 호출하는 것은 `window.location = "#foo"`를 설정하는 것과 유사합니다. 둘 다 현재 문서와 연결된 다른 기록 항목을 생성하고 활성화합니다. 그러나 `pushState()`에는 몇 가지 이점이 있습니다.
 
-- 새로운 URL은 같은 출처에 한해서 아무 URL이나 가능합니다. 반면 {{domxref("window.location")}} 설정은 해시만 수정해야 같은 문서에 머무릅니다.
-- 원할 경우 URL을 바꾸지 않을 수도 있습니다. 그러나 `window.location = "#foo"`는 현재 해시가 `#foo`가 아닐 때만 새로운 기록 항목을 생성합니다.
-- `pushState()`는 임의의 데이터를 세션 기록 항목에 연결할 수 있습니다. 해시 기반 방식에서는 필요한 모든 데이터를 인코딩 해 짧은 문자열로 만들어야 합니다.
+- 새로운 URL은 현재 URL과 같은 출처에서 모든 URL이 될 수 있습니다. 반면, {{domxref("window.location")}}을 설정하는 것은 오직 해시를 수정하는 경우에만 동일한 문서를 유지할 수 있습니다.
+- 페이지의 URL 변경은 선택 사항입니다. 반면, `window.location = "#foo";`를 설정하는 것은 현재 해시가 `#foo`가 아닌 경우에만 새로운 기록 항목을 생성합니다.
+- 임의 데이터를 새로운 기록 항목과 연결할 수 있습니다. 해시 기반 접근에서는 모든 관련 데이터를 짧은 문자열로 인코딩할 필요가 있습니다.
 
-다만 `pushState()`는 이전 URL과 신규 URL의 해시가 다르더라도 절대 {{event("hashchange")}} 이벤트를 유발하지 않습니다.
-
-HTML 외의 문서에서는 이름공간 URI가 `null`인 요소를 생성합니다.
+새로운 URL이 오래된 URL과 오직 해시만 다를지라도 `pushState()`는 {{domxref("Window/hashchange_event", "hashchange")}} 이벤트를 발생시키지 않습니다.
 
 ## 예제
 
-다음 코드는 주어진 상태, 제목, URL을 사용해 새로운 세션 기록을 생성합니다.
+다음 코드는 상태와 url를 설정하는 새로운 브라우저 기록 항목을 생성합니다.
+
+### JavaScript
 
 ```js
-const state = { 'page_id': 1, 'user_id': 5 }
-const title = ''
-const url = 'hello-world.html'
+const state = { page_id: 1, user_id: 5 };
+const url = "hello-world.html";
 
-history.pushState(state, title, url)
+history.pushState(state, "", url);
 ```
 
-## 명세
+### 쿼리 매개변수 변경
+
+```js
+const url = new URL(location);
+url.searchParams.set("foo", "bar");
+history.pushState({}, "", url);
+```
+
+## 명세서
 
 {{Specifications}}
 
 ## 브라우저 호환성
 
 {{Compat}}
+
+## 같이 보기
+
+- [Working with the History API](/ko/docs/Web/API/History_API/Working_with_the_History_API)
+- [Window: popstate event](/ko/docs/Web/API/Window/popstate_event)

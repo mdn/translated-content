@@ -1,14 +1,6 @@
 ---
 title: Atomics.add()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/add
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/add
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode statique **`Atomics.add()`** ajoute une valeur donnée à un éléme
 ## Syntaxe
 
 ```js
-Atomics.add(typedArray, index, valeur)
+Atomics.add(typedArray, index, valeur);
 ```
 
 ### Paramètres
@@ -49,7 +41,7 @@ var sab = new SharedArrayBuffer(1024);
 var ta = new Uint8Array(sab);
 
 Atomics.add(ta, 0, 12); // renvoie 0, l'ancienne valeur
-Atomics.load(ta, 0);    // 12
+Atomics.load(ta, 0); // 12
 ```
 
 ## Spécifications

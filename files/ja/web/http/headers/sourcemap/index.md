@@ -46,7 +46,7 @@ SourceMap: /path/to/file.js.map
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.SourceMap")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -1,20 +1,9 @@
 ---
 title: tabs.ZoomSettings
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettings
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - ZoomSettings
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettings
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Définit les paramètres de zoom pour un onglet : {{WebExtAPIRef("tabs.ZoomSettingsMode", "mode")}}, {{WebExtAPIRef("tabs.ZoomSettingsScope", "scope")}}, et le facteur de zoom par défaut.
 
@@ -29,9 +18,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `scope`{{optional_inline}}
   - : {{WebExtAPIRef('tabs.ZoomSettingsScope')}}. Définit si les changements de zoom persisteront pour l'origine de la page ou ne prendront effet que dans cet onglet.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.ZoomSettings")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

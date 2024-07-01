@@ -1,7 +1,6 @@
 ---
 title: Codes de réponse HTTP
 slug: Web/HTTP/Status
-translation_of: Web/HTTP/Status
 ---
 
 {{HTTPSidebar}}
@@ -28,6 +27,7 @@ Les codes de statut de réponse HTTP indiquent si une requête [HTTP](/fr/docs/W
 ## Réponses de succès
 
 - [`200 OK`](/fr/docs/Web/HTTP/Status/200)
+
   - : La requête a réussi. La signification du succès peut varier selon la méthode HTTP&nbsp;:
 
     - `GET`&nbsp;: La ressource a été récupérée et est retransmise dans le corps du message.
@@ -163,7 +163,7 @@ Les codes de statut de réponse HTTP indiquent si une requête [HTTP](/fr/docs/W
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.status")}}
+{{Compat}}
 
 ## Voir aussi
 

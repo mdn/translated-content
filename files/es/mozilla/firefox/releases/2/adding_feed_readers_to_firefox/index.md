@@ -1,7 +1,6 @@
 ---
 title: Añadir lectores de canales a Firefox
 slug: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
-original_slug: Añadir_lectores_de_canales_a_Firefox
 ---
 
 {{FirefoxSidebar}}

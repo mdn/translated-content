@@ -44,7 +44,7 @@ let nestedProp = obj.first?.second;
 
 ```js
 let temp = obj.first;
-let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.second);
+let nestedProp = temp === null || temp === undefined ? undefined : temp.second;
 ```
 
 ### 可選串連呼叫函數
@@ -68,9 +68,9 @@ let result = someInterface.customMethod?.();
 function doSomething(onContent, onError) {
   try {
     // ... 對資料進行一些處理
-  }
-  catch (err) {
-    if (onError) { // 測試 onError 是否真的存在
+  } catch (err) {
+    if (onError) {
+      // 測試 onError 是否真的存在
       onError(err.message);
     }
   }
@@ -81,9 +81,8 @@ function doSomething(onContent, onError) {
 // 使用可選串連進行函式呼叫
 function doSomething(onContent, onError) {
   try {
-   // ... 對資料進行一些處理
-  }
-  catch (err) {
+    // ... 對資料進行一些處理
+  } catch (err) {
     onError?.(err.message); // 就算 onError 是 undefined 也不會抛出錯誤
   }
 }
@@ -94,7 +93,7 @@ function doSomething(onContent, onError) {
 你也可以在[方括號屬性存取](/zh-TW/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation)表達式中使用可選串連：
 
 ```js
-let nestedProp = obj?.['prop' + 'Name'];
+let nestedProp = obj?.["prop" + "Name"];
 ```
 
 ### 矩陣項目的可選串連
@@ -111,7 +110,7 @@ let arrayItem = arr?.[42];
 
 ```js
 let myMap = new Map();
-myMap.set("foo", {name: "baz", desc: "inga"});
+myMap.set("foo", { name: "baz", desc: "inga" });
 
 let nameBar = myMap.get("bar")?.name;
 ```
@@ -137,8 +136,8 @@ let customer = {
   name: "Carl",
   details: {
     age: 82,
-    location: "Paradise Falls" // 詳細地址 address 並不知道
-  }
+    location: "Paradise Falls", // 詳細地址 address 並不知道
+  },
 };
 let customerCity = customer.details?.address?.city;
 
@@ -153,7 +152,7 @@ let duration = vacations.trip?.getTime?.();
 ```js
 let customer = {
   name: "Carl",
-  details: { age: 82 }
+  details: { age: 82 },
 };
 const customerCity = customer?.city ?? "Unknown city";
 console.log(customerCity); // Unknown city

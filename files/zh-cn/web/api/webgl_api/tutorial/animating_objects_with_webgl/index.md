@@ -18,10 +18,12 @@ var squareRotation = 0.0;
 现在我们需要更新`drawScene()`函数以在绘制正方形时将当前旋转应用于正方形。转换为正方形的初始绘图位置后，我们像这样应用旋转：
 
 ```js
-  mat4.rotate(modelViewMatrix,  // destination matrix
-              modelViewMatrix,  // matrix to rotate
-              squareRotation,   // amount to rotate in radians
-              [0, 0, 1]);       // axis to rotate around
+mat4.rotate(
+  modelViewMatrix, // destination matrix
+  modelViewMatrix, // matrix to rotate
+  squareRotation, // amount to rotate in radians
+  [0, 0, 1],
+); // axis to rotate around
 ```
 
 这会将 modelViewMatrix 的当前值`squareRotation`绕 Z 轴旋转。
@@ -29,19 +31,19 @@ var squareRotation = 0.0;
 要进行动画制作，我们需要添加`squareRotation`随时间更改值的代码。为此，我们可以创建一个新变量来跟踪上次动画播放的时间（我们称之为`then`），然后将以下代码添加到主函数的末尾
 
 ```js
-  var then = 0;
+var then = 0;
 
-  // Draw the scene repeatedly
-  function render(now) {
-    now *= 0.001;  // convert to seconds
-    const deltaTime = now - then;
-    then = now;
+// Draw the scene repeatedly
+function render(now) {
+  now *= 0.001; // convert to seconds
+  const deltaTime = now - then;
+  then = now;
 
-    drawScene(gl, programInfo, buffers, deltaTime);
+  drawScene(gl, programInfo, buffers, deltaTime);
 
-    requestAnimationFrame(render);
-  }
   requestAnimationFrame(render);
+}
+requestAnimationFrame(render);
 ```
 
 该代码用于 `requestAnimationFrame` 要求浏览器在每一帧上调用函数“`render`”。`requestAnimationFrame` 自页面加载以来经过的时间（以毫秒为单位）。我们将其转换为秒，然后从中减去，以计算 `deltaTime` 自渲染最后一帧以来的秒数。在 drawscene 的结尾，我们添加了要更新的代码 `squareRotation`。

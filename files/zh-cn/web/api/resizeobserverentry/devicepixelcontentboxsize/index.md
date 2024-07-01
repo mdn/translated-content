@@ -20,7 +20,7 @@ slug: Web/API/ResizeObserverEntry/devicePixelContentBoxSize
 
 ## 示例
 
-以下片段取自文章[使用 devicePixelContentBox 完美地渲染](https://web.dev/device-pixel-content-box/)。由于 {{domxref("ResizeObserver")}} 的回调函数在绘制前和布局后调用。这提供了一个精确记录物理像素大小的机会，以确保将画布像素与物理像素一对一映射。
+以下片段取自文章[使用 devicePixelContentBox 完美地渲染](https://web.dev/articles/device-pixel-content-box)。由于 {{domxref("ResizeObserver")}} 的回调函数在绘制前和布局后调用。这提供了一个精确记录物理像素大小的机会，以确保将画布像素与物理像素一对一映射。
 
 ```js
 const observer = new ResizeObserver((entries) => {
@@ -30,7 +30,7 @@ const observer = new ResizeObserver((entries) => {
 
   /* … render to canvas … */
 });
-observer.observe(canvas, {box: 'device-pixel-content-box'});
+observer.observe(canvas, { box: "device-pixel-content-box" });
 ```
 
 ## 规范

@@ -1,13 +1,6 @@
 ---
 title: DOMRect
 slug: Web/API/DOMRect
-tags:
-  - API
-  - DOM
-  - Géométrie
-  - Objets
-  - Rectangle
-translation_of: Web/API/DOMRect
 ---
 
 {{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}

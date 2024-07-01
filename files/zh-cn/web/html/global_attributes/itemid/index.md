@@ -16,13 +16,17 @@ slug: Web/HTML/Global_attributes/itemid
 ### HTML
 
 ```html
-<dl itemscope
-    itemtype="http://vocab.example.net/book"
-    itemid="urn:isbn:0-330-34032-8">
-<dt>Title <dd itemprop="title">The Reality Dysfunction
-<dt>Author <dd itemprop="author">Peter F. Hamilton
-<dt>Publication date
-<dd><time itemprop="pubdate" datetime="1996-01-26">26 January 1996</time> </dl>
+<dl
+  itemscope
+  itemtype="http://vocab.example.net/book"
+  itemid="urn:isbn:0-330-34032-8">
+  <dt>Title</dt>
+  <dd itemprop="title">The Reality Dysfunction</dd>
+  <dt>Author</dt>
+  <dd itemprop="author">Peter F. Hamilton</dd>
+  <dt>Publication date</dt>
+  <dd><time itemprop="pubdate" datetime="1996-01-26">26 January 1996</time></dd>
+</dl>
 ```
 
 ### 结构化数据
@@ -68,13 +72,13 @@ slug: Web/HTML/Global_attributes/itemid
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- [其它不同的全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
-- 其它 microdata 相关的全局属性
+- [其他不同的全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- 其他 microdata 相关的全局属性
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/zh-CN/docs/Web/HTML/Global_attributes#itemid)
+  - [`itemprop`](/zh-CN/docs/Web/HTML/Global_attributes#itemprop)
+  - [`itemref`](/zh-CN/docs/Web/HTML/Global_attributes#itemref)
+  - [`itemscope`](/zh-CN/docs/Web/HTML/Global_attributes#itemscope)
+  - [`itemtype`](/zh-CN/docs/Web/HTML/Global_attributes#itemtype)

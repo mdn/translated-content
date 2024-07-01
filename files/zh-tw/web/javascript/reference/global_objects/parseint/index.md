@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/parseInt
 
 ## 語法
 
-```plain
+```js-nolint
 parseInt(string, radix);
 ```
 
@@ -72,7 +72,7 @@ parseInt("12", 13);
 
 ```js
 parseInt("Hello", 8); // 根本不是數字
-parseInt("546", 2);   // 在二進位無效
+parseInt("546", 2); // 在二進位無效
 ```
 
 以下的範例，回傳的值均為 **`-15`**：
@@ -81,7 +81,7 @@ parseInt("546", 2);   // 在二進位無效
 parseInt("-F", 16);
 parseInt("-0F", 16);
 parseInt("-0XF", 16);
-parseInt(-15.1, 10)
+parseInt(-15.1, 10);
 parseInt(" -17", 8);
 parseInt(" -15", 10);
 parseInt("-1111", 2);
@@ -124,23 +124,22 @@ Many implementations have not adopted this behavior as of 2013, and because olde
 
 ## 嚴謹的解析 function
 
-有的時候，使用更嚴謹的 code 能夠更精確地轉換整數值。 Regular expressions 可以幫你：
+有的時候，使用更嚴謹的 code 能夠更精確地轉換整數值。Regular expression 可以幫你：
 
 ```js
 filterInt = function (value) {
-  if(/^(\-|\+)?([0-9]+|Infinity)$/.test(value))
-    return Number(value);
+  if (/^(\-|\+)?([0-9]+|Infinity)$/.test(value)) return Number(value);
   return NaN;
-}
+};
 
-console.log(filterInt('421'));               // 421
-console.log(filterInt('-421'));              // -421
-console.log(filterInt('+421'));              // 421
-console.log(filterInt('Infinity'));          // Infinity
-console.log(filterInt('421e+0'));            // NaN
-console.log(filterInt('421hop'));            // NaN
-console.log(filterInt('hop1.61803398875'));  // NaN
-console.log(filterInt('1.61803398875'));     // NaN
+console.log(filterInt("421")); // 421
+console.log(filterInt("-421")); // -421
+console.log(filterInt("+421")); // 421
+console.log(filterInt("Infinity")); // Infinity
+console.log(filterInt("421e+0")); // NaN
+console.log(filterInt("421hop")); // NaN
+console.log(filterInt("hop1.61803398875")); // NaN
+console.log(filterInt("1.61803398875")); // NaN
 ```
 
 ## 規範
@@ -151,7 +150,7 @@ console.log(filterInt('1.61803398875'));     // NaN
 
 {{Compat}}
 
-## 延伸閱讀
+## 參見
 
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
 - {{jsxref("Number.parseFloat()")}}

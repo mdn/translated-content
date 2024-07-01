@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 ## Syntax
 
 ```js
-    dateObj.getTimezoneOffset()
+dateObj.getTimezoneOffset();
 ```
 
 ### Return value
@@ -33,7 +33,7 @@ var x = new Date();
 var currentTimeZoneOffsetInHours = x.getTimezoneOffset() / 60;
 
 // 2016 년 국제 노동절 (5 월 1 일)에 대한 시간대 오프셋 가져 오기
-var labourDay = new Date(2016,4,1)
+var labourDay = new Date(2016, 4, 1);
 var labourDayOffset = labourDay.getTimezoneOffset() / 60;
 ```
 

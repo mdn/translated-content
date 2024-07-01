@@ -1,20 +1,25 @@
 ---
 title: ドキュメントオブジェクトモデル (DOM)
 slug: Web/API/Document_Object_Model
+l10n:
+  sourceCommit: 56c76424a5edb45f6716ac4ee48861dac8e7ae38
 ---
 
 {{DefaultAPISidebar("DOM")}}
 
-**ドキュメントオブジェクトモデル** (**Document Object Model**, **DOM**) は、— ウェブページを表す HTML のように — 文書の構造をメモリー内に表現することで、ウェブページとスクリプトやプログラミング言語を接続するものです。ふつうは JavaScript を使用しますが、 HTML、 SVG、 XML などの文書をオブジェクトとしてモデリングすることはコア JavaScript 言語の一部ではありません。
+**ドキュメントオブジェクトモデル** (**Document Object Model**, **DOM**) は、ウェブページを表す HTML のような文書の構造をメモリー内に表現することで、ウェブページとスクリプトやプログラミング言語を接続するものです。ふつうは JavaScript を使用しますが、HTML、SVG、XML などの文書をオブジェクトとしてモデリングすることはコア JavaScript 言語の一部ではありません。
 
 DOM は文書を論理的なツリーで表現します。ツリーのそれぞれの枝はノードで終わっており、それぞれのノードがオブジェクトを含んでいます。 DOM のメソッドでプログラム的にツリーにアクセスできます。これにより、文書構造やスタイルやコンテンツを変更することができます。
 
 ノードにはイベントハンドラーを割り当てることができます。イベントが発生すると、イベントハンドラーが実行されます。
 
-DOM とは何であるか、どのように文書を表現するのかについてもっと学習するのであれば、 [DOM 入門](/ja/docs/Web/API/Document_Object_Model/Introduction)をご覧ください。
+DOM とは何であるか、どのように文書を表現するのかについてもっと学習するのであれば、[DOM 入門](/ja/docs/Web/API/Document_Object_Model/Introduction)をご覧ください。
 
 ## DOM インターフェイス
 
+- {{DOMxRef("AbortController")}}
+- {{DOMxRef("AbortSignal")}}
+- {{DOMxRef("AbstractRange")}}
 - {{DOMxRef("Attr")}}
 - {{DOMxRef("CDATASection")}}
 - {{DOMxRef("CharacterData")}}
@@ -26,9 +31,10 @@ DOM とは何であるか、どのように文書を表現するのかについ�
 - {{DOMxRef("DOMError")}} {{Deprecated_Inline}}
 - {{DOMxRef("DOMException")}}
 - {{DOMxRef("DOMImplementation")}}
-- {{DOMxRef("DOMString")}}
-- {{DOMxRef("DOMTimeStamp")}}
-- {{DOMxRef("DOMStringList")}}
+- {{DOMxRef("DOMParser")}}
+- {{DOMxRef("DOMPoint")}}
+- {{DOMxRef("DOMPointReadOnly")}}
+- {{DOMxRef("DOMRect")}}
 - {{DOMxRef("DOMTokenList")}}
 - {{DOMxRef("Element")}}
 - {{DOMxRef("Event")}}
@@ -38,20 +44,17 @@ DOM とは何であるか、どのように文書を表現するのかについ�
 - {{DOMxRef("MutationRecord")}}
 - {{DOMxRef("NamedNodeMap")}}
 - {{DOMxRef("Node")}}
-- {{DOMxRef("NodeFilter")}}
 - {{DOMxRef("NodeIterator")}}
 - {{DOMxRef("NodeList")}}
 - {{DOMxRef("ProcessingInstruction")}}
 - {{DOMxRef("Range")}}
+- {{DOMxRef("StaticRange")}}
 - {{DOMxRef("Text")}}
-- {{DOMxRef("TextDecoder")}} {{Experimental_Inline}}
-- {{DOMxRef("TextEncoder")}} {{Experimental_Inline}}
+- {{DOMxRef("TextDecoder")}}
+- {{DOMxRef("TextEncoder")}}
 - {{DOMxRef("TimeRanges")}}
 - {{DOMxRef("TreeWalker")}}
-- {{DOMxRef("URL")}}
-- {{DOMxRef("Window")}}
-- {{DOMxRef("Worker")}}
-- {{DOMxRef("XMLDocument")}} {{Experimental_Inline}}
+- {{DOMxRef("XMLDocument")}}
 
 ### 廃止された DOM インターフェイス
 
@@ -78,16 +81,13 @@ DOM とは何であるか、どのように文書を表現するのかについ�
 
 HTML を含む文書は、 HTML 仕様で拡張した様々な HTML 固有の機能を含む {{DOMxRef("Document")}} インターフェイスを使用して記述されます。具体的には、 {{domxref("Element")}} インターフェイスは拡張されて {{domxref("HTMLElement")}} を始めとするサブクラスになっており、それぞれが要素の一つ (または深く関係した同類のもの) を表します。
 
-HTML DOM API によって、タブやウィンドウ、 CSS スタイルやスタイルシート、ブラウザーの履歴など、様々なブラウザーの機能にアクセスすることができます。これらのインターフェイスの詳細については、 [HTML DOM API](/ja/docs/Web/API/HTML_DOM) のドキュメントにあります。
+HTML DOM API によって、タブやウィンドウ、 CSS スタイルやスタイルシート、ブラウザーの履歴など、様々なブラウザーの機能にアクセスすることができます。これらのインターフェイスの詳細については、 [HTML DOM API](/ja/docs/Web/API/HTML_DOM_API) のドキュメントにあります。
 
 ## SVG のインターフェイス
 
 ### SVG 要素のインターフェイス
 
 - {{DOMxRef("SVGAElement")}}
-- {{DOMxRef("SVGAltGlyphElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGAltGlyphDefElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGAltGlyphItemElement")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGAnimationElement")}}
 - {{DOMxRef("SVGAnimateElement")}}
 - {{DOMxRef("SVGAnimateColorElement")}} {{Deprecated_Inline}}
@@ -180,7 +180,7 @@ HTML DOM API によって、タブやウィンドウ、 CSS スタイルやス�
 
 SVG のプロパティと属性の定義で使用されるデータタイプの DOM API を次に示します。
 
-##### 静的型
+#### 静的型
 
 - {{DOMxRef("SVGAngle")}}
 - {{DOMxRef("SVGColor")}} {{Deprecated_Inline}}
@@ -189,7 +189,6 @@ SVG のプロパティと属性の定義で使用されるデータタイプの 
 - {{DOMxRef("SVGElementInstanceList")}}
 - {{DOMxRef("SVGLength")}}
 - {{DOMxRef("SVGLengthList")}}
-- {{DOMxRef("SVGMatrix")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGNameList")}}
 - {{DOMxRef("SVGNumber")}}
 - {{DOMxRef("SVGNumberList")}}
@@ -234,7 +233,6 @@ SVG のプロパティと属性の定義で使用されるデータタイプの 
 - {{DOMxRef("SVGAnimatedNumber")}}
 - {{DOMxRef("SVGAnimatedNumberList")}}
 - {{DOMxRef("SVGAnimatedPathData")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGAnimatedPoints")}}
 - {{DOMxRef("SVGAnimatedPreserveAspectRatio")}}
 - {{DOMxRef("SVGAnimatedRect")}}
 - {{DOMxRef("SVGAnimatedString")}}
@@ -263,9 +261,7 @@ SVG のプロパティと属性の定義で使用されるデータタイプの 
 
 ## 仕様書
 
-| 仕様書                                       |
-| --------------------------------------------------- |
-| [DOM Living Standard](https://dom.spec.whatwg.org/) |
+{{Specifications}}
 
 ## 関連情報
 

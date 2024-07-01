@@ -39,9 +39,9 @@ transform-style: unset;
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.transform-style")}}
+{{Compat}}
 
 ## See also
 

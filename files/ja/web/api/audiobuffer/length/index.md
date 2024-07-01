@@ -1,6 +1,9 @@
 ---
-title: AudioBuffer.length
+title: "AudioBuffer: length プロパティ"
+short-title: length
 slug: Web/API/AudioBuffer/length
+l10n:
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -15,19 +18,19 @@ slug: Web/API/AudioBuffer/length
 
 ```js
 // ステレオ
-var channels = 2;
+const channels = 2;
 
 // AudioContext のサンプルレートで 2 秒間の空のステレオバッファーを生成する
-var frameCount = audioCtx.sampleRate * 2.0;
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+const frameCount = audioCtx.sampleRate * 2.0;
+const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
-button.onclick = function() {
+button.onclick = () => {
   // バッファーにホワイトノイズを書き込む
   // 単なる -1.0 から 1.0 の間の乱数の値である
-  for (var channel = 0; channel < channels; channel++) {
+  for (let channel = 0; channel < channels; channel++) {
     // 実際のデータの配列を得る
-    var nowBuffering = myArrayBuffer.getChannelData(channel);
-    for (var i = 0; i < frameCount; i++) {
+    const nowBuffering = myArrayBuffer.getChannelData(channel);
+    for (let i = 0; i < frameCount; i++) {
       // Math.random() は [0; 1.0] である
       // 音声は [-1.0; 1.0] である必要がある
       nowBuffering[i] = Math.random() * 2 - 1;
@@ -35,7 +38,7 @@ button.onclick = function() {
   }
 
   console.log(myArrayBuffer.length);
-}
+};
 ```
 
 ## 仕様書

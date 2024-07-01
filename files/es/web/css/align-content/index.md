@@ -184,9 +184,9 @@ Su resultado es:
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.align-content")}}
+{{Compat}}
 
 ## Véase también
 

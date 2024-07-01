@@ -18,6 +18,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 ### 매개변수
 
 - `begin`
+
   - : 자르기 시작할 지점을 나타내는 0 기반 인덱스.
 
 - `end` {{optional_inline}}

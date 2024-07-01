@@ -1,6 +1,9 @@
 ---
-title: CSSRule.cssText
+title: "CSSRule: cssText プロパティ"
+short-title: cssText
 slug: Web/API/CSSRule/cssText
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
 {{APIRef("CSSOM") }}

@@ -35,11 +35,11 @@ str.concat(string2, string3[, ..., stringN])
 아래 예제에서는 문자열을 결합하여 새로운 문자열을 만듭니다.
 
 ```js
-var hello = 'Hello, ';
-console.log(hello.concat('Kevin', '. Have a nice day.'));
+var hello = "Hello, ";
+console.log(hello.concat("Kevin", ". Have a nice day."));
 /* Hello, Kevin. Have a nice day. */
 
-var greetList = ['Hello', ' ', 'Venkat', '!'];
+var greetList = ["Hello", " ", "Venkat", "!"];
 "".concat(...greetList); // "Hello Venkat!"
 
 "".concat({}); // [object Object]

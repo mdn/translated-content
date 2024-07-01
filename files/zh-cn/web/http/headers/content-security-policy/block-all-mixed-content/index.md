@@ -1,5 +1,5 @@
 ---
-title: 'CSP: block-all-mixed-content'
+title: "CSP: block-all-mixed-content"
 slug: Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
 ---
 
@@ -39,7 +39,7 @@ Content-Security-Policy: img-src https:
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{CSP("upgrade-insecure-requests")}}

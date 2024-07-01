@@ -1,18 +1,9 @@
 ---
 title: WheelEvent.deltaX
 slug: Web/API/WheelEvent/deltaX
-tags:
-  - API
-  - DOM
-  - Lecture seulement
-  - Propriété
-  - Reference
-  - Référence(2)
-  - WheelEvent
-translation_of: Web/API/WheelEvent/deltaX
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 La propriété en lecture seule **`WheelEvent.deltaX`** est un `double` représentant la quantité de défilement horizontal dans l'unité {{domxref("WheelEvent.deltaMode")}}.
 
@@ -25,7 +16,10 @@ var dX = event.deltaX;
 ## Exemple
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaX": 4, "deltaMode": 0});
+var syntheticEvent = new WheelEvent("syntheticWheel", {
+  deltaX: 4,
+  deltaMode: 0,
+});
 
 console.log(syntheticEvent.deltaX);
 ```

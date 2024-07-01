@@ -1,7 +1,6 @@
 ---
 title: Window.orientation
 slug: Web/API/Window/orientation
-translation_of: Web/API/Window/orientation
 ---
 
 {{APIRef}}{{deprecated_header}}

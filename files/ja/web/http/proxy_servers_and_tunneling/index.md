@@ -74,10 +74,8 @@ application/x-ns-proxy-autoconfig
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isResolvable(host))
-    return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+  if (isResolvable(host)) return "DIRECT";
+  else return "PROXY proxy.mydomain.com:8080";
 }
 ```
 

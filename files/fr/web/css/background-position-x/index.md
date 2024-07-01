@@ -1,12 +1,6 @@
 ---
 title: background-position-x
 slug: Web/CSS/background-position-x
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/background-position-x
 ---
 
 {{CSSRef}}

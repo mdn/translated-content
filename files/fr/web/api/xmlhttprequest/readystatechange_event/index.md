@@ -1,8 +1,6 @@
 ---
 title: XMLHttpRequest.onreadystatechange
 slug: Web/API/XMLHttpRequest/readystatechange_event
-translation_of: Web/API/XMLHttpRequest/onreadystatechange
-original_slug: Web/API/XMLHttpRequest/onreadystatechange
 ---
 
 {{APIRef}}
@@ -25,12 +23,12 @@ XMLHttpRequest.onreadystatechange = callback;
 
 ```js
 var xhr = new XMLHttpRequest(),
-    method = "GET",
-    url = "https://developer.mozilla.org/";
+  method = "GET",
+  url = "https://developer.mozilla.org/";
 
 xhr.open(method, url, true);
 xhr.onreadystatechange = function () {
-  if(xhr.readyState === 4 && xhr.status === 200) {
+  if (xhr.readyState === 4 && xhr.status === 200) {
     console.log(xhr.responseText);
   }
 };

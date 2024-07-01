@@ -3,6 +3,8 @@ title: pageshow
 slug: Web/API/Window/pageshow_event
 ---
 
+{{APIRef("HTML DOM")}}
+
 当一条会话历史记录被执行的时候将会触发页面显示 (pageshow) 事件。(这包括了后退/前进按钮操作，同时也会在 onload 事件触发后初始化页面时触发)
 
 ## 基本信息
@@ -22,13 +24,13 @@ slug: Web/API/Window/pageshow_event
 
 ## 属性
 
-| Property                              | Type                                 | Description                                            |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| Property                        | Type                       | Description                                            |
+| ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
-| `persisted` {{readonlyInline}}  | {{jsxref("boolean")}}         | 表示网页是否是来自缓存。                               |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
+| `persisted` {{readonlyInline}}  | {{jsxref("boolean")}}      | 表示网页是否是来自缓存。                               |
 
 ## 示例
 

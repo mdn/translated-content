@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 
 {{JSRef}}
 
-**`values()`**返回新的 `Array Iterator` 对象，包含数组中每个下标处的值。
+**`values()`** 返回新的 `Array Iterator` 对象，包含数组中每个下标处的值。
 
 ## 语法
 
@@ -51,7 +51,7 @@ console.log(eArr.next().value); // 50
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("TypedArray")}}

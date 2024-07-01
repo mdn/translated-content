@@ -1,7 +1,6 @@
 ---
 title: AudioBuffer()
 slug: Web/API/AudioBuffer/AudioBuffer
-translation_of: Web/API/AudioBuffer/AudioBuffer
 ---
 
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}

@@ -1,7 +1,6 @@
 ---
-title: 'Erro de sintaxe: declaração de função requer um nome'
+title: "Erro de sintaxe: declaração de função requer um nome"
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
-original_slug: Web/JavaScript/Reference/Errors/NãoNomeado_funcão_declaração
 ---
 
 {{jsSidebar("Errors")}}
@@ -38,17 +37,15 @@ function () {
 Você pode usar uma expressão de função ao invés de uma atribuição.
 
 ```js example-good
-var saudar = function() {
-  return 'Ola mundo';
+var saudar = function () {
+  return "Ola mundo";
 };
 ```
 
 Ou, sua função pode ser pretendida a ser uma [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (Immediately Invoked Function Expression), qual é uma função que será em breve definida. Você vai precisar de um pouco mais de colchetes neste caso:
 
 ```js example-good
-(function () {
-
-})();
+(function () {})();
 ```
 
 ### Funçoes etiquetadas
@@ -82,7 +79,7 @@ Se pretende criar um metodo para um objeto, voce precisa-rá criar um objeto (he
 var saudacao = {
   alemao: function () {
     return "Moin";
-  }
+  },
 };
 ```
 

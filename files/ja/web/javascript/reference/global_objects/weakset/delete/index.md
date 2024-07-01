@@ -34,10 +34,10 @@ var obj = {};
 
 ws.add(window);
 
-ws.delete(obj);    // false を返します。削除する obj が見つかりません。
+ws.delete(obj); // false を返します。削除する obj が見つかりません。
 ws.delete(window); // true を返します。正常に削除されます。
 
-ws.has(window);    // false を返します。 window はもう WeakSet の中にないからです。
+ws.has(window); // false を返します。 window はもう WeakSet の中にないからです。
 ```
 
 ## 仕様書
@@ -46,7 +46,7 @@ ws.has(window);    // false を返します。 window はもう WeakSet の中�
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakSet.delete")}}
+{{Compat}}
 
 ## 関連情報
 

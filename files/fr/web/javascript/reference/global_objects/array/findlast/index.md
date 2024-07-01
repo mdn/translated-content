@@ -88,10 +88,10 @@ Dans cet exemple, on illustre comment créer un test manipulant les propriétés
 
 ```js
 const inventaire = [
-  { nom: 'pommes', quantite: 2 },
-  { nom: 'bananes', quantite: 0 },
-  { nom: 'poissons', quantite: 1 },
-  { nom: 'cerises', quantite: 5 }
+  { nom: "pommes", quantite: 2 },
+  { nom: "bananes", quantite: 0 },
+  { nom: "poissons", quantite: 1 },
+  { nom: "cerises", quantite: 5 },
 ];
 
 // Renvoie true si le stock est faible
@@ -109,10 +109,10 @@ L'exemple précédent peut être écrit à l'aide d'une fonction fléchée et [u
 
 ```js
 const inventaire = [
-  { nom: 'pommes', quantite: 2 },
-  { nom: 'bananes', quantite: 0 },
-  { nom: 'poissons', quantite: 1 },
-  { nom: 'cerises', quantite: 5 },
+  { nom: "pommes", quantite: 2 },
+  { nom: "bananes", quantite: 0 },
+  { nom: "poissons", quantite: 1 },
+  { nom: "cerises", quantite: 5 },
 ];
 
 const resultat = inventaire.findLast(({ quantite }) => quantite < 2);

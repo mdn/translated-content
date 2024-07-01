@@ -1,7 +1,6 @@
 ---
 title: Publicando seu site
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
-original_slug: Aprender/Getting_started_with_the_web/Publicando_seu_site
 ---
 
 {{LearnSidebar}}
@@ -49,9 +48,9 @@ Há um número grande de web apps que emulam um ambiente de desenvolvimento de s
 
 Tente codificar com alguns desses exemplos, e veja qual se encaixa melhor para você:
 
-- [JSFiddle](http://jsfiddle.net/)
-- [Thimble](https://thimble.mozilla.org/pt-BR/)
-- [JSBin](http://jsbin.com/)
+- [JSFiddle](https://jsfiddle.net/)
+- [Glitch](https://glitch.com/)
+- [JS Bin](https://jsbin.com/)
 - [CodePen](https://codepen.io/)
 
 ![](jsbin-screen.png)
@@ -66,7 +65,7 @@ Agora vamos mostrar como publicar seu site facilmente por meio das páginas do G
 4. ![](github-create-repo.png)
 5. Arraste e solte o conteúdo da pasta do site no seu repositório e clique em _Commit changes_ (confirmar alterações).
 
-    > **Nota:** Nota: Certifique-se que sua pasta possui um arquivo `index.html`.
+   > **Nota:** Nota: Certifique-se que sua pasta possui um arquivo `index.html`.
 
 6. Navegue em seu navegador até _username_.github.io para ver seu site online. Por exemplo, para o usuário _chrisdavidmills_, vá para [_chrisdavidmills_.github.io](http://chrisdavidmills.github.io/).
 
@@ -83,14 +82,3 @@ Para aprender mais, consulte a [Ajuda do Github Pages](https://help.github.com/e
 - [Hospedagem baratas ou gratuitas de sites estáticos](https://alignedleft.com/resources/cheap-web-hosting), por Scott Murray, tem algumas idéias úteis sobre serviços disponíveis.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
-
-## Neste módulo
-
-- [Instalando os programas básicos](/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos)
-- [Comp será o seu site?](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer)
-- [Lidando com arquivos](/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos)
-- [HTML básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico)
-- [CSS básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico)
-- [JavaScript básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/JavaScript_basico)
-- [Publicando seu website](/pt-BR/docs/Aprender/Getting_started_with_the_web/Publicando_seu_site)
-- [Como a web funciona](/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona)

@@ -1,11 +1,6 @@
 ---
 title: Infinity
 slug: Web/JavaScript/Reference/Global_Objects/Infinity
-tags:
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Infinity
-original_slug: Web/JavaScript/Reference/Objets_globaux/Infinity
 ---
 
 {{jsSidebar("Objects")}}
@@ -19,7 +14,7 @@ La propriété globale **`Infinity`** est une valeur numérique représentant l'
 ## Syntaxe
 
 ```js
-Infinity
+Infinity;
 ```
 
 ## Description
@@ -33,11 +28,11 @@ D'après la spécification ECMAScript 5, `Infinity` est en lecture seule.
 ## Exemples
 
 ```js
-console.log(Infinity);          // Infinity
-console.log(Infinity + 1);      // Infinity
+console.log(Infinity); // Infinity
+console.log(Infinity + 1); // Infinity
 console.log(Math.pow(10, 1000)); // Infinity
-console.log(Math.log(0));       // -Infinity
-console.log(1 / Infinity);      // 0
+console.log(Math.log(0)); // -Infinity
+console.log(1 / Infinity); // 0
 ```
 
 ## Spécifications

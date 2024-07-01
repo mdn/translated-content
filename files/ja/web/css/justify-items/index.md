@@ -26,15 +26,15 @@ justify-items: normal;
 justify-items: stretch;
 
 /* 位置による配置 */
-justify-items: center;     /* 中央付近にアイテムを集める */
-justify-items: start;      /* 先頭側にアイテムを集める */
-justify-items: end;        /* 末尾側にアイテムを集める */
+justify-items: center; /* 中央付近にアイテムを集める */
+justify-items: start; /* 先頭側にアイテムを集める */
+justify-items: end; /* 末尾側にアイテムを集める */
 justify-items: flex-start; /* 'start' と同等です。なお、 justify-items はフレックスボックスレイアウト内では無視されます。 */
-justify-items: flex-end;   /* 'end' と同等です。なお、 justify-items はフレックスボックスレイアウト内では無視されます。 */
+justify-items: flex-end; /* 'end' と同等です。なお、 justify-items はフレックスボックスレイアウト内では無視されます。 */
 justify-items: self-start;
 justify-items: self-end;
-justify-items: left;       /* 左側にアイテムを集める */
-justify-items: right;      /* 右側にアイテムを集める */
+justify-items: left; /* 左側にアイテムを集める */
+justify-items: right; /* 右側にアイテムを集める */
 
 /* ベースラインの配置 */
 justify-items: baseline;
@@ -153,7 +153,8 @@ article {
   justify-items: stretch;
 }
 
-article:hover, article:focus {
+article:hover,
+article:focus {
   justify-items: center;
 }
 
@@ -164,7 +165,8 @@ article span {
   text-align: center;
 }
 
-article, span {
+article,
+span {
   padding: 10px;
   border-radius: 7px;
 }
@@ -188,7 +190,7 @@ article {
 
 ## 関連情報
 
-- CSS グリッドガイド: _[CSS グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)
 - {{CSSxRef("place-items")}} 一括指定プロパティ
 - {{CSSxRef("justify-self")}} プロパティ

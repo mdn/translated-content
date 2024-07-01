@@ -1,8 +1,6 @@
 ---
 title: Window.length
 slug: Web/API/Window/length
-translation_of: Web/API/Window/length
-browser-compat: api.Window.length
 ---
 
 {{ApiRef}}

@@ -1,17 +1,6 @@
 ---
 title: Window.parent
 slug: Web/API/Window/parent
-tags:
-  - API
-  - HTML DOM
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/parent
 ---
 
 {{APIRef}}
@@ -36,7 +25,7 @@ if (window.parent != window.top) {
 }
 ```
 
-## Спецификация
+## Спецификации
 
 - [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#dom-parent)
 

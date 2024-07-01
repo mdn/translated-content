@@ -1,37 +1,43 @@
 ---
 title: Access-Control-Max-Age
 slug: Web/HTTP/Headers/Access-Control-Max-Age
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-The **`Access-Control-Max-Age`** 这个响应头表示 {{glossary("preflight request")}} （预检请求）的返回结果（即 {{HTTPHeader("Access-Control-Allow-Methods")}} 和{{HTTPHeader("Access-Control-Allow-Headers")}} 提供的信息）可以被缓存多久。
+**`Access-Control-Max-Age`** 响应标头指示了{{glossary("preflight request", "预检请求")}}（即包含在 {{HTTPHeader("Access-Control-Allow-Methods")}} 和 {{HTTPHeader("Access-Control-Allow-Headers")}} 标头中的信息）的结果能够被缓存多久。
 
-| 报头类型                                         | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">标头类型</th>
+      <td>{{Glossary("Response header", "响应标头")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
-```plain
+```http
 Access-Control-Max-Age: <delta-seconds>
 ```
 
 ## 指令
 
 - \<delta-seconds>
-  - : 返回结果可以被缓存的最长时间（秒）。
-    在 Firefox 中，[上限是 24 小时](https://dxr.mozilla.org/mozilla-central/rev/7ae377917236b7e6111146aa9fb4c073c0efc7f4/netwerk/protocol/http/nsCORSListenerProxy.cpp#1131) （即 86400 秒）。
-    在 Chromium v76 之前， [上限是 10 分钟](https://cs.chromium.org/chromium/src/services/network/public/cpp/cors/preflight_result.cc?l=36&rcl=52002151773d8cd9ffc5f557cd7cc880fddcae3e)（即 600 秒)。
-    从 Chromium v76 开始，[上限是 2 小时](https://cs.chromium.org/chromium/src/services/network/public/cpp/cors/preflight_result.cc?l=31&rcl=49e7c0b4886cac1f3d09dc046bd528c9c811a0fa)（即 7200 秒)。
-    Chromium 同时规定了一个默认值 5 秒。
-    如果值为 **-1**，表示禁用缓存，则每次请求前都需要使用 OPTIONS 预检请求。
+  - : 结果可被缓存的最大秒数，以无符号非负整数表示。Firefox [上限为 24 小时](https://searchfox.org/mozilla-central/source/netwerk/protocol/http/nsCORSListenerProxy.cpp#1207)（86400 秒）。Chromium（76 版本之前）[上限为 10 分钟](https://source.chromium.org/chromium/chromium/src/+/main:services/network/public/cpp/cors/preflight_result.cc;drc=52002151773d8cd9ffc5f557cd7cc880fddcae3e;l=36)（600 秒）。Chromium（从 76 版本开始）[上限为 2 小时](https://source.chromium.org/chromium/chromium/src/+/main:services/network/public/cpp/cors/preflight_result.cc;drc=49e7c0b4886cac1f3d09dc046bd528c9c811a0fa;l=31)（7200 秒）。默认值为 5 秒。
 
 ## 示例
 
 将预检请求的结果缓存 10 分钟：
 
-```plain
+```http
 Access-Control-Max-Age: 600
 ```
 
@@ -43,7 +49,7 @@ Access-Control-Max-Age: 600
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Access-Control-Allow-Headers")}}
 - {{HTTPHeader("Access-Control-Allow-Methods")}}

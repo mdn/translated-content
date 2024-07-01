@@ -37,7 +37,7 @@ HTML 文件中的元素和其他內容文字不同的地方，在於元素名稱
   - : 本模塊探究如何使用 HTML 在你的網頁裡置入多媒體，包含多種不同載入圖片的方式，如何嵌入影音，甚至是另外一整個網頁。
 - [HTML 表格](/zh-TW/docs/Learn/HTML/Tables)
   - : 要以簡單易懂的方式將表格式的資訊呈現在網頁上會是一件挑戰。本模組涵蓋了基本的表格使用與更複雜的功能，例如標題和總結。
-- [HTML 表單](/zh-TW/docs/Learn/HTML/Forms)
+- [HTML 表單](/zh-TW/docs/Learn/Forms)
   - : 表單是網頁相當重要的部分，能夠提供與網頁互動時所需的各式的功能性。例如：註冊和登入、發送回饋意見、購買產品以及更多實用的功能。這個單元將帶領你建立網頁端的表單功能。
 - [用 HTML 解決常見問題](/zh-TW/docs/Learn/HTML/Howto)
   - : 提供部分內容註釋連結。 當你建立一個網頁時，如何解決 HTML 中常見問題，例如 : 處理標題、增加圖片或影片、強調內文、建立基本表單等。.
@@ -45,15 +45,15 @@ HTML 文件中的元素和其他內容文字不同的地方，在於元素名稱
 ## 進階部份
 
 - [CORS 圖像](/zh-TW/docs/Web/HTML/CORS_enabled_image)
-  - : `當結合了一個適合的`[CORS](/zh-TW/docs/Glossary/CORS)，[`crossorigin`](/zh-TW/docs/Web/HTML/Element/img#attr-crossorigin) 屬性允許 {{HTMLElement("img")}} 元素定義的圖像被從一個地方載入，並被使用於 {{HTMLElement("canvas")}}，即便載入的地方是原處也一樣。
+  - : `當結合了一個適合的`[CORS](/zh-TW/docs/Glossary/CORS)，[`crossorigin`](/zh-TW/docs/Web/HTML/Element/img#crossorigin) 屬性允許 {{HTMLElement("img")}} 元素定義的圖像被從一個地方載入，並被使用於 {{HTMLElement("canvas")}}，即便載入的地方是原處也一樣。
 - [設定 CORS 屬性](/zh-TW/docs/Web/HTML/CORS_settings_attributes)
-  - : 有些 HTML 元素可以支援 [CORS](/zh-TW/docs/HTTP/Access_control_CORS),像 {{HTMLElement("img")}} 或者 {{HTMLElement("video")}},有著 `crossorigin` (`crossOrigin` property)的屬性, 讓你能直接使用 CORS 的元素。
+  - : 有些 HTML 元素可以支援 [CORS](/zh-TW/docs/Web/HTTP/CORS),像 {{HTMLElement("img")}} 或者 {{HTMLElement("video")}},有著 `crossorigin` (`crossOrigin` property)的屬性, 讓你能直接使用 CORS 的元素。
 - [管理 HTML 中的焦點](/zh-TW/docs/Web/HTML/Focus_management_in_HTML)
   - : The [`activeElement`](/zh-TW/docs/Web/API/Document/activeElement) DOM attribute and the [`hasFocus()`](/zh-TW/docs/Web/API/Document/hasFocus) DOM method help you track and control a user's interactions with elements on a web page.
 - [使用 application cache](/zh-TW/docs/Web/HTML/Using_the_application_cache)
   - : Application caching lets web-based applications run offline. You can use the **Application Cache** (_AppCache_) interface to specify resources that the browser should cache and make available to offline users. Applications that are cached load and work correctly even if users click the refresh button when they are offline.
 - [使用 rel="preload" 來預載內容](/zh-TW/docs/Web/HTML/Preloading_content)
-  - : The `preload` value of the {{htmlelement("link")}} element's {{htmlattrxref("rel", "link")}} attribute allows you to write declarative fetch requests in your HTML {{htmlelement("head")}}, specifying resources that your pages will need very soon after loading, which you therefore want to start preloading early in the lifecycle of a page load, before the browser's main rendering machinery kicks in. This ensures that they are made available earlier and are less likely to block the page's first render, leading to performance improvements. This article provides a basic guide to how `preload` works.
+  - : The `preload` value of the {{htmlelement("link")}} element's [`rel`](/zh-TW/docs/Web/HTML/Element/link#rel) attribute allows you to write declarative fetch requests in your HTML {{htmlelement("head")}}, specifying resources that your pages will need very soon after loading, which you therefore want to start preloading early in the lifecycle of a page load, before the browser's main rendering machinery kicks in. This ensures that they are made available earlier and are less likely to block the page's first render, leading to performance improvements. This article provides a basic guide to how `preload` works.
 
 ## 參考資料
 
@@ -65,7 +65,7 @@ HTML 文件中的元素和其他內容文字不同的地方，在於元素名稱
   - : HTML 元素都有**屬性**。這些額外屬性能透過數種方法設定元素、調整行為。
 - [全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)
   - : [HTML 元素](/zh-TW/docs/Web/HTML/Element)能指定全域屬性，_就算它不是標準元素_。也就是說，即使是與 HTML5 標準不相容的非標準元素，依舊允許全域屬性。
-- [行內元素](/zh-TW/docs/Web/HTML/Inline_elements)與[塊級元素](/zh-TW/docs/Web/HTML/Block-level_elements)
+- [行內元素](/zh-TW/docs/Glossary/Inline-level_content)與[塊級元素](/zh-TW/docs/Glossary/Block-level_content)
   - : HTML 元素通常為**行內**或**區塊**。行內元素佔據由標籤所定義的其餘空白位置，區塊元素則占據母元素的所有空白位置。
 - [超連結類型](/zh-TW/docs/Web/HTML/Link_types)
   - : 在 HTML 中有多種超連結類型能夠使用，並解定義兩個頁面間的關係，超連結元素包含了[`<a>`](/zh-TW/docs/Web/HTML/Element/a), [`<area>`](/zh-TW/docs/Web/HTML/Element/area), [`<link>`](/zh-TW/docs/Web/HTML/Element/link)

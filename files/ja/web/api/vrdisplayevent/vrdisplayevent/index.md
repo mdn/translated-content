@@ -36,9 +36,9 @@ new VRDisplayEvent(type, options)
 ## 例
 
 ```js
-const myEventObject = new VRDisplayEvent('custom', {
+const myEventObject = new VRDisplayEvent("custom", {
   display: vrDisplay,
-  reason: 'Custom reason'
+  reason: "Custom reason",
 });
 ```
 
@@ -54,5 +54,4 @@ const myEventObject = new VRDisplayEvent('custom', {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームが提供するデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

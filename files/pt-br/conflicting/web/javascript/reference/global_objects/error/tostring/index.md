@@ -1,7 +1,6 @@
 ---
 title: Error.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
-original_slug: Web/JavaScript/Reference/Global_Objects/Error/toSource
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -38,7 +37,7 @@ Não faz parte de nenhum padrão.
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Error.toSource")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,14 +1,6 @@
 ---
 title: Blob()
 slug: Web/API/Blob/Blob
-tags:
-  - API
-  - Blob
-  - Constructeur
-  - Experimental
-  - File API
-  - Reference
-translation_of: Web/API/Blob/Blob
 ---
 
 {{APIRef("File API")}}
@@ -18,8 +10,8 @@ Le constructeur **`Blob()`** retourne un nouvel objet {{domxref("Blob")}}. Le co
 ## Syntaxe
 
 ```js
-var aBlob = new Blob( array)
-var aBlob = new Blob( array, options );
+var aBlob = new Blob(array);
+var aBlob = new Blob(array, options);
 ```
 
 ### Paramètres
@@ -45,7 +37,7 @@ var aBlob = new Blob( array, options );
 var aFileParts = ['<a id="a"><b id="b">Coucou :) !</b></a>'];
 
 // Le blob
-var oMyBlob = new Blob(aFileParts, {type : 'text/html'});
+var oMyBlob = new Blob(aFileParts, { type: "text/html" });
 ```
 
 ## Spécifications

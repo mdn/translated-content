@@ -1,13 +1,6 @@
 ---
 title: Math.LN10
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN10
-tags:
-  - JavaScript
-  - Math
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN10
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/LN10
 ---
 
 {{JSRef}}
@@ -30,7 +23,7 @@ La fonction suivante renvoie le logarithme naturel de 10 :
 
 ```js
 function getNatLog10() {
-   return Math.LN10;
+  return Math.LN10;
 }
 
 getNatLog10(); // 2.302585092994046

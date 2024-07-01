@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/Strict-Transport-Security
 
 **HTTP `Strict-Transport-Security`** (a menudo abreviado como {{Glossary("HSTS")}}) es una característica de seguridad que permite a un sitio web indicar a los navegadores que sólo se debe comunicar con HTTPS en lugar de usar HTTP.
 
-| Tipo de Encabezado                                           | {{Glossary("Encabezado de Respuesta")}} |
-| ------------------------------------------------------------ | ---------------------------------------------------- |
-| {{Glossary("Nombre de Encabezado Prohibido")}} | no                                                   |
+| Tipo de Encabezado                             | {{Glossary("Encabezado de Respuesta")}} |
+| ---------------------------------------------- | --------------------------------------- |
+| {{Glossary("Nombre de Encabezado Prohibido")}} | no                                      |
 
 ## Sintaxis
 
@@ -36,7 +36,7 @@ Esto habilita el potencial ataque man-in-the-middle, donde el redireccionamiento
 
 El encabezado HTTP Strict Transport Security permite a un sitio web informar al navegador que nunca cargue el sitio usando HTTP y que debe automáticamente convertir todos los intentos de acceso HTTP a HTTPS.
 
-> **Nota:** El encabezado `Strict-Transport-Security` es **ignorado** por el navegador cuando el sitio es accedido usando HTTP; esto es porque un atacante podría interceptar las conexines HTTP e inyectar el encabezado o removerlo. Cuando el sitio es accedido a través de HTTPS con un certificado sin errores, el navegador sabe que el sitio es capaz de usar HTTPS y cumple con lo indicado en el encabezado `Strict-Transport-Security`.
+> **Nota:** El encabezado `Strict-Transport-Security` es **ignorado** por el navegador cuando el sitio es accedido usando HTTP; esto es porque un atacante podría interceptar las conexiones HTTP e inyectar el encabezado o removerlo. Cuando el sitio es accedido a través de HTTPS con un certificado sin errores, el navegador sabe que el sitio es capaz de usar HTTPS y cumple con lo indicado en el encabezado `Strict-Transport-Security`.
 
 ### Un escenario de ejemplo
 

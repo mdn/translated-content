@@ -1,12 +1,6 @@
 ---
 title: Element.outerHTML
 slug: Web/API/Element/outerHTML
-tags:
-  - API
-  - DOM
-  - Privacy
-  - Propriétés
-translation_of: Web/API/Element/outerHTML
 ---
 
 {{APIRef("DOM")}}
@@ -17,9 +11,8 @@ Pour obtenir uniquement la représentation HTML du contenu d'un élément ou pou
 
 ## Syntaxe
 
-```html
+```js
 var content = element.outerHTML;
-
 element.outerHTML = htmlString;
 ```
 
@@ -32,7 +25,7 @@ La lecture de la valeur de `outerHTML` renvoie une {{domxref("DOMString")}} cont
 - `SyntaxError`
   - : Une tentative a été faite de définir la valeur de `outerHTML` en utilisant une chaîne qui n'est pas correctement formée HTML.
 - `NoModificationAllowedError`
-  - : Une tentative a été faite de définir `outerHTML`  sur un élément qui est enfant direct du {{domxref("Document")}}, tel que {{domxref("Document.documentElement")}}.
+  - : Une tentative a été faite de définir `outerHTML` sur un élément qui est enfant direct du {{domxref("Document")}}, tel que {{domxref("Document.documentElement")}}.
 
 ## Exemples
 
@@ -72,7 +65,7 @@ Si un élément n'a pas de noeud parent, définir sa propriété `outerHTML` ne 
 
 ```js
 var div = document.createElement("div");
-div.outerHTML = "<div class=\"test\">test</div>";
+div.outerHTML = '<div class="test">test</div>';
 console.log(div.outerHTML); // output: "<div></div>"
 ```
 

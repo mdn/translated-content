@@ -1,8 +1,8 @@
 ---
 title: background-position-x
 slug: Web/CSS/background-position-x
-translation_of: Web/CSS/background-position-x
 ---
+
 {{CSSRef}}
 
 Свойство **`background-position-x`** - это [CSS](/ru/docs/Web/CSS) - свойство, которое устанавливает начальную горизонтальную позицию для каждого фонового изображения. Эта позиция является относительной к позиции слоя, установленной с помощью свойства {{cssxref("background-origin")}}.

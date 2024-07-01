@@ -1,7 +1,6 @@
 ---
 title: Bonnes pratiques GitHub pour MDN
 slug: MDN/Community/Issues
-original_slug: MDN/Contribute/GitHub_best_practices
 l10n:
   sourceCommit: ca4de15aa8391a1e3fed7c651d5ee941051cb3fe
 ---

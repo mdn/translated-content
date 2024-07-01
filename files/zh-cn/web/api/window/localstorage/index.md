@@ -31,19 +31,19 @@ myStorage = localStorage;
 下面的代码片段访问了当前域名下的本地 {{domxref("Storage")}} 对象，并通过 {{domxref("Storage.setItem()")}} 增加了一个数据项目。
 
 ```js
-localStorage.setItem('myCat', 'Tom');
+localStorage.setItem("myCat", "Tom");
 ```
 
 该语法用于读取 `localStorage` 项，如下：
 
 ```js
-let cat = localStorage.getItem('myCat');
+let cat = localStorage.getItem("myCat");
 ```
 
 该语法用于移除 `localStorage` 项，如下：
 
 ```js
-localStorage.removeItem('myCat');
+localStorage.removeItem("myCat");
 ```
 
 该语法用于移除所有的 `localStorage` 项，如下：

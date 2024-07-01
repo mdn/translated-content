@@ -1,30 +1,25 @@
 ---
-title: URL.hostname
+title: URL：hostname 属性
 slug: Web/API/URL/hostname
+l10n:
+  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URL")}} 接口的 **`hostname`** 属性是一个 {{domxref("USVString")}} 值，包含有 URL 中的域名。
+{{domxref("URL")}} 接口的 **`hostname`** 属性是一个包含 URL 的{{glossary("domain name", "域名")}}的字符串。
 
-{{AvailableInWorkers}}
+## 值
 
-## 语法
-
-```plain
-string = object.hostname;
-object.hostname = string;
-```
-
-### 返回值
-
-{{domxref("USVString")}}.
+字符串。
 
 ## 示例
 
 ```js
-var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/hostname');
-var result = url.hostname; // Returns:'developer.mozilla.org'
+const url = new URL(
+  "https://developer.mozilla.org/zh-CN/docs/Web/API/URL/hostname",
+);
+console.log(url.hostname); // 输出：'developer.mozilla.org'
 ```
 
 ## 规范
@@ -35,6 +30,6 @@ var result = url.hostname; // Returns:'developer.mozilla.org'
 
 {{Compat}}
 
-## 参考
+## 参见
 
-- 属的 {{domxref("URL")}} 接口。
+- 所属的 {{domxref("URL")}} 接口。

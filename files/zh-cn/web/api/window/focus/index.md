@@ -1,26 +1,40 @@
 ---
-title: Window.focus()
+title: Window：focus() 方法
 slug: Web/API/Window/focus
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}
 
-## 概述
-
-请求将窗口显示在前（靠近屏幕），这可能由于用户设置而失败，并且该窗口在方法返回之前不能保证会显示在最前。
+发出将窗口置顶的请求。用户设置可能导致此操作失败，并且在方法返回之前并不能保证窗口已处于最前端。
 
 ## 语法
 
-```js
-window.focus()
+```js-nolint
+focus()
 ```
+
+### 参数
+
+无。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
 ```js
-if (clicked) { window.focus(); }
+if (clicked) {
+  window.focus();
+}
 ```
 
 ## 规范
 
 {{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}

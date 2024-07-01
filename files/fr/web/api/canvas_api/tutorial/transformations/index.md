@@ -1,19 +1,11 @@
 ---
 title: Transformations
 slug: Web/API/Canvas_API/Tutorial/Transformations
-tags:
-  - Canvas
-  - Graphismes
-  - Guide
-  - HTML
-  - Web
-translation_of: Web/API/Canvas_API/Tutorial/Transformations
-original_slug: Web/API/Canvas_API/Tutoriel_canvas/Transformations
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Utilisation_d'images", " Web/API/Canvas_API/Tutorial/Compositing ")}}
 
-Précédemment dans ce tutoriel, nous avons étudié la [grille du canevas](/fr/docs/Tutoriel_canvas/Formes_g%C3%A9om%C3%A9triques) et le **système de coordonnées**. Jusqu'à maintenant, nous avons uniquement utilisé la grille par défaut et modifié la taille de la globalité du canevas afin de répondre à nos besoins. Les transformations que nous allons aborder dans la suite vont nous permettre, de manière plus puissante, d'effectuer des déplacements et des rotations sur la grille et même d'effectuer des mises à l'échelle.
+Précédemment dans ce tutoriel, nous avons étudié la [grille du canevas](/fr/docs/Tutoriel_canvas/Formes_géométriques) et le **système de coordonnées**. Jusqu'à maintenant, nous avons uniquement utilisé la grille par défaut et modifié la taille de la globalité du canevas afin de répondre à nos besoins. Les transformations que nous allons aborder dans la suite vont nous permettre, de manière plus puissante, d'effectuer des déplacements et des rotations sur la grille et même d'effectuer des mises à l'échelle.
 
 ## Sauvegarde et restauration d'état
 
@@ -38,24 +30,24 @@ Cet exemple tente d'illustrer comment fonctionne la pile d'états de dessin en d
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
-  ctx.fillRect(0, 0, 150, 150);   // Dessine un rectangle avec les réglages par défaut
-  ctx.save();                  // Sauvegarde l'état par défaut
+  ctx.fillRect(0, 0, 150, 150); // Dessine un rectangle avec les réglages par défaut
+  ctx.save(); // Sauvegarde l'état par défaut
 
-  ctx.fillStyle = '#09F';      // Fait des changements de réglages
+  ctx.fillStyle = "#09F"; // Fait des changements de réglages
   ctx.fillRect(15, 15, 120, 120); // Dessine un rectangle avec les nouveaux réglages
 
-  ctx.save();                  // Sauvegarde l'état actuel
-  ctx.fillStyle = '#FFF';      // Fait des changements de réglages
+  ctx.save(); // Sauvegarde l'état actuel
+  ctx.fillStyle = "#FFF"; // Fait des changements de réglages
   ctx.globalAlpha = 0.5;
-  ctx.fillRect(30, 30, 90, 90);   // Dessine un rectangle avec de nouveaux réglages
+  ctx.fillRect(30, 30, 90, 90); // Dessine un rectangle avec de nouveaux réglages
 
-  ctx.restore();               // Restaure l'état précédent
-  ctx.fillRect(45, 45, 60, 60);   // Dessine un rectangle avec les réglages restaurés
+  ctx.restore(); // Restaure l'état précédent
+  ctx.fillRect(45, 45, 60, 60); // Dessine un rectangle avec les réglages restaurés
 
-  ctx.restore();               // Restaure l'état d'origine
-  ctx.fillRect(60, 60, 30, 30);   // Dessine un rectangle avec les réglages restaurés
+  ctx.restore(); // Restaure l'état d'origine
+  ctx.fillRect(60, 60, 30, 30); // Dessine un rectangle avec les réglages restaurés
 }
 ```
 
@@ -94,11 +86,11 @@ Dans la fonction `draw ()`, nous appelons la fonction `fillRect ()` neuf fois en
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   for (var i = 0; i < 3; i++) {
     for (var j = 0; j < 3; j++) {
       ctx.save();
-      ctx.fillStyle = 'rgb(' + (51 * i) + ', ' + (255 - 51 * i) + ', 255)';
+      ctx.fillStyle = "rgb(" + 51 * i + ", " + (255 - 51 * i) + ", 255)";
       ctx.translate(10 + j * 50, 10 + i * 50);
       ctx.fillRect(0, 0, 25, 25);
       ctx.restore();
@@ -136,32 +128,32 @@ Dans cet exemple, nous utiliserons la méthode `rotate ()` pour faire d'abord to
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // rectangles de gauche, rotation depuis l'origine du canevas
   ctx.save();
   // rectangle bleu
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(30, 30, 100, 100);
   ctx.rotate((Math.PI / 180) * 25);
   // rectangle gris
-  ctx.fillStyle = '#4D4E53';
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(30, 30, 100, 100);
   ctx.restore();
 
   // rectangles de droite, rotation depuis le centre du rectangle
   // dessine le rectangle bleu
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(150, 30, 100, 100);
 
   ctx.translate(200, 80); // déplace au centre du rectangle
-                          // x = x + 0.5 * width
-                          // y = y + 0.5 * height
+  // x = x + 0.5 * width
+  // y = y + 0.5 * height
   ctx.rotate((Math.PI / 180) * 25); // rotation
   ctx.translate(-200, -80); // déplace en arrière
 
   // dessine le rectangle gris
-  ctx.fillStyle = '#4D4E53';
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(150, 30, 100, 100);
 }
 ```
@@ -195,7 +187,7 @@ Dans ce dernier exemple, nous allons dessiner des formes avec différents facteu
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // dessine un rectangle simple, mais le met à l'échelle.
   ctx.save();
@@ -205,8 +197,8 @@ function draw() {
 
   // mirror horizontally
   ctx.scale(-1, 1);
-  ctx.font = '48px serif';
-  ctx.fillText('MDN', -135, 120);
+  ctx.font = "48px serif";
+  ctx.fillText("MDN", -135, 120);
 }
 ```
 
@@ -255,21 +247,21 @@ Les paramètres de cette fonction sont :
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   var sin = Math.sin(Math.PI / 6);
   var cos = Math.cos(Math.PI / 6);
   ctx.translate(100, 100);
   var c = 0;
   for (var i = 0; i <= 12; i++) {
-    c = Math.floor(255 / 12 * i);
-    ctx.fillStyle = 'rgb(' + c + ', ' + c + ', ' + c + ')';
+    c = Math.floor((255 / 12) * i);
+    ctx.fillStyle = "rgb(" + c + ", " + c + ", " + c + ")";
     ctx.fillRect(0, 0, 100, 10);
     ctx.transform(cos, sin, -sin, cos, 0, 0);
   }
 
   ctx.setTransform(-1, 0, 0, 1, 100, 100);
-  ctx.fillStyle = 'rgba(255, 128, 255, 0.5)';
+  ctx.fillStyle = "rgba(255, 128, 255, 0.5)";
   ctx.fillRect(0, 50, 100, 100);
 }
 ```

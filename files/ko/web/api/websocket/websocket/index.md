@@ -10,8 +10,8 @@ slug: Web/API/WebSocket/WebSocket
 ## 구문
 
 ```js
-new WebSocket(url)
-new WebSocket(url, protocols)
+new WebSocket(url);
+new WebSocket(url, protocols);
 ```
 
 ### 매개변수
@@ -19,9 +19,10 @@ new WebSocket(url, protocols)
 - `url`
   - : 연결할 URL입니다. WebSocket 서버가 응답할 URL이어야 합니다.
 - `protocols` {{optional_inline}}
+
   - : 하나의 프로토콜 문자열, 또는 프로토콜 문자열로 구성된 배열입니다. 하나의 서버가 다수의 WebSocket 하위 프로토콜을 구현할 수 있도록, 사용할 하위 프로토콜을 가리키기 위한 값입니다. (예를 들어, 지정한 `protocol`에 따라 하나의 서버로 서로 다른 유형의 상호작용을 처리하길 바랄 때 사용할 수 있습니다)
 
-      생략할 때의 기본 값은 빈 배열, 즉 `[]` 입니다.
+    생략할 때의 기본 값은 빈 배열, 즉 `[]` 입니다.
 
 ### 예외
 

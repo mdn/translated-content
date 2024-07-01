@@ -1,11 +1,13 @@
 ---
-title: location.origin
+title: "location: origin プロパティ"
 slug: Web/API/Location/origin
+l10n:
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{APIRef("Location")}}
 
-**`origin`** は {{domxref("Location")}} インターフェイスの読み取り専用プロパティで、 {{domxref("USVString")}} で指定された URL のオリジンの Unicode シリアライズが入ります。
+**`origin`** は {{domxref("Location")}} インターフェイスの読み取り専用プロパティで、指定された URL のオリジンの Unicode シリアライズが入った文字列です。
 
 すなわち、下記のようになります。
 
@@ -15,17 +17,15 @@ slug: Web/API/Location/origin
 
 {{AvailableInWorkers}}
 
-## 構文
+## 値
 
-```js
-string = object.origin;
-```
+文字列です。
 
 ## 例
 
 ```js
 // このページ上の、オリジンを返します。
-var result = window.location.origin; // Returns:'https://developer.mozilla.org'
+const result = window.location.origin; // 返値:'https://developer.mozilla.org'
 ```
 
 ## 仕様書

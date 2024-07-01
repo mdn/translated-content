@@ -52,7 +52,38 @@ selector::pseudo-element {
 
 ## 브라우저 호환성
 
-{{compat}}
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th>브라우저</th>
+      <th>최소 버전</th>
+      <th>지원</th>
+    </tr>
+    <tr>
+      <td rowspan="2">Firefox (Gecko)</td>
+      <td>1.0 (1.0)</td>
+      <td><code>:pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td>1.0 (1.5)</td>
+      <td><code>:pseudo-element ::pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td rowspan="2">Opera</td>
+      <td>4.0</td>
+      <td><code>:pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td>7.0</td>
+      <td><code>:pseudo-element ::pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td>Safari (WebKit)</td>
+      <td>1.0 (85)</td>
+      <td><code>:pseudo-element ::pseudo-element</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ## 같이 보기
 

@@ -3,13 +3,13 @@ title: ProgressEvent()
 slug: Web/API/ProgressEvent/ProgressEvent
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`ProgressEvent()`** 构造函数返回一个新的 {{domxref("ProgressEvent")}} 对象，表示当前一个漫长处理过程的完成进度。
 
 ## 语法
 
-```js
+```js-nolint
 new ProgressEvent(type)
 new ProgressEvent(type, options)
 ```
@@ -23,9 +23,9 @@ new ProgressEvent(type, options)
     - `lengthComputable` {{optional_inline}}
       - : 一个布尔值，表示底层的进程将要完成的总工作量和已经完成的工作量是否是可计算的。换句话说，它说明进度是否可衡量。它的默认值是 `false`。
     - `loaded` {{optional_inline}}
-      - : 一个数值，表示底层的进程已经完成的工作量。可以使用该属性和 `ProgressEvent.total` 计算完成工作的比例。当使用 HTTP 下载一个资源时，其仅表示内容本身（body）的部分，不包含头和其它开销。它默认值为 `0`。
+      - : 一个数值，表示底层的进程已经完成的工作量。可以使用该属性和 `ProgressEvent.total` 计算完成工作的比例。当使用 HTTP 下载一个资源时，其仅表示内容本身（body）的部分，不包含头和其他开销。它默认值为 `0`。
     - `total` {{optional_inline}}
-      - : 一个数值，表示底层的进程正在进行的工作的总工作量。当使用 HTTP 下载一个资源时，其仅表示内容本身（body）的部分，不包含头和其它开销。它默认值为 `0`。
+      - : 一个数值，表示底层的进程正在进行的工作的总工作量。当使用 HTTP 下载一个资源时，其仅表示内容本身（body）的部分，不包含头和其他开销。它默认值为 `0`。
 
 ### 返回值
 

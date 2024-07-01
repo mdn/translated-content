@@ -1,61 +1,46 @@
 ---
-title: Notification.data
-slug: Web/API/notification/data
+title: Notification：data 属性
+slug: Web/API/Notification/data
+l10n:
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
-`data` 只读属性是 {{domxref("Notification")}} 的接口，当它作为构造函数的 option 可选项之一时，返回结构化的 Notification 的 data 数据。
+{{domxref("Notification")}} 接口的 **`data`** 只读属性根据 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `data` 选项返回一个通知数据的结构化克隆。
 
-当你创建 Notification 时，notification 使用的数据可以使任意类型。
+通知的数据可以是任何你想要与通知关联的任意数据。
 
-{{AvailableInWorkers}}
+## 值
 
-附加语法糖：关于克隆对象的速度研究。
+一个结构化克隆的数据。
 
-<https://dassur.ma/things/deep-copy/>
+## 示例
 
-博客作者认为目前（参考）最快的 object 克隆、复制方式。
-
-```js
-function structuralClone(obj) {
-  return new Notification('', {data: obj, silent: true}).data;
-}
-```
-
-## Syntax 表达式
-
-```
-var data = Notification.data;
-```
-
-### Value（返回值）
-
-结构化的克隆数据
-
-## Examples 例子
-
-产生一个 notification; 简单的 `options` 作为构造参数，将会触发以 option 为构造参数的 `Notification()`。
+以下代码段会触发一条通知。一个简单的 `options` 对象被创建，然后使用 `Notification()` 构造函数触发通知。
 
 ```js
-var options = {
-  body: 'Do you like my body?',
-  data: 'I like peas.'
-}
+const options = {
+  body: "你提交的代码收到了 3 条新的审阅意见。",
+  data: {
+    url: "https://example.com/review/12345",
+    status: "open",
+  },
+};
 
-var n = new Notification('Test notification',options);
+const n = new Notification("新评论活动", options);
 
-n.data // should return 'I like peas.'
+console.log(n.data); // 打印 data 对象
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Using the Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [使用 Notification API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)

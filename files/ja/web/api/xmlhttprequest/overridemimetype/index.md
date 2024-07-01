@@ -1,9 +1,12 @@
 ---
-title: XMLHttpRequest.overrideMimeType()
+title: "XMLHttpRequest: overrideMimeType() メソッド"
+short-title: overrideMimeType()
 slug: Web/API/XMLHttpRequest/overrideMimeType
+l10n:
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 {{domxref("XMLHttpRequest")}} の **`overrideMimeType()`** メソッドは、リクエストで転送されるデータを解釈するときに、 サーバーが提供されたもの以外の MIME タイプを代わりに使用するように指定します。
 
@@ -11,18 +14,18 @@ slug: Web/API/XMLHttpRequest/overrideMimeType
 
 ## 構文
 
-```js
-XMLHttpRequest.overrideMimeType(mimeType)
+```js-nolint
+overrideMimeType(mimeType)
 ```
 
 ### 引数
 
 - `mimeType`
-  - : {{domxref("DOMString")}} で、サーバーが指定した MIME タイプの代わりに使用する MIME タイプを指定します。サーバーがタイプを指定しなかった場合、 `XMLHttpRequest` は `"text/xml"` と仮定されます。
+  - : 文字列で、サーバーが指定した MIME タイプの代わりに使用する MIME タイプを指定します。サーバーがタイプを指定しなかった場合、 `XMLHttpRequest` は `"text/xml"` と仮定されます。
 
 ### 返値
 
-`undefined`.
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -50,5 +53,5 @@ req.send();
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - {{domxref("XMLHttpRequest.responseType")}}

@@ -1,8 +1,6 @@
 ---
 title: image-rendering
-slug: Web/CSS/Image-rendering
-translation_of: Web/CSS/image-rendering
-browser-compat: css.properties.image-rendering
+slug: Web/CSS/image-rendering
 ---
 
 {{CSSRef}}

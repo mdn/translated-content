@@ -1,49 +1,42 @@
 ---
 title: Fetch API
 slug: Web/API/Fetch_API
+l10n:
+  sourceCommit: 0bf8bfec4bc106a38ce9b63aa9ab46b050b3abc0
 ---
 
 {{DefaultAPISidebar("Fetch API")}}
 
-**Fetch API**는 네트워크 통신을 포함한 리소스 취득을 위한 인터페이스가 정의되어 있습니다. {{domxref("XMLHttpRequest")}}와 같은 비슷한 API가 존재합니다만, 새로운 Fetch API는 좀더 강력하고 유연한 조작이 가능합니다.
+Fetch API는 네트워크 통신을 포함한 리소스 취득을 위한 인터페이스를 제공하며, {{domxref("XMLHttpRequest")}}보다 강력하고 유연한 대체제입니다.
 
-## 기본 개념과 사용 방법
+{{AvailableInWorkers}}
 
-Fetch에는 일반적인 오브젝트로로 {{domxref("Request")}} 와 {{domxref("Response")}}가 포함되어 있습니다. 이것들은 service worker이나 Cache API같이 Response와 Request객체를 다루는 API나 독자적으로 리스폰스를 발생시키는 경우에도 사용 가능합니다.
+## 개념과 사용법
 
-또한 CORS나 HTTP 오리진 헤더의 행동에 관련한 개념에 대해서도 정의되어 있습니다. 이 정의는 여러곳에 분산되어있는 갖가지 행동에대한 정의들을 한곳에 고쳐 쓴 것입니다.
+Fetch API는 {{domxref("Request")}}와 {{domxref("Response")}} 객체, 그리고 기타 네트워크 요청에 관련된 것들을 사용하고, CORS와 HTTP Origin 헤더 행동 등 관련한 개념도 포함하고 있습니다.
 
-Fetch API로 리소스를 취득하기 위해서 {{domxref("GlobalFetch.fetch")}} 메소드를 불러들여야 합니다. 이 메소드는 {{domxref("Window")}}나 {{domxref("WorkerGlobalScope")}}와 같은 인터페이스로부터 구현되었습니다.
+요청을 생성하고 리소스를 취득하려면 {{domxref("fetch")}} 메서드를 사용하세요. `fetch()`는 {{domxref("Window")}}와 {{domxref("WorkerGlobalScope", "Worker")}} 컨텍스트 양쪽에서 모두 사용할 수 있는 전역 메서드입니다. 그러므로 리소스를 취득할 상황이 생기는 거의 모든 컨텍스트에서 사용할 수 있습니다.
 
-`fetch()`를 불러들이는 경우, 취득할 리소스를 반드시 인수로 지정하지 않으면 안됩니다. 읽어들인 뒤, `fetch()`는 `Promise`객체를 반환합니다. 리퀘스트가 성공하든 실패하든 해당 리퀘스트 통신에 대한 {{domxref("Response")}}객체가 취득됩니다. `fetch()`의 두번째 인수는 초기화에 사용되는 객체를 정의하고 있습니다. 이 인수는 기입하지 않아도 함수의 동작에 문제가 없습니다. 이 인수에 대한 상세한 정보는 {{domxref("Request")}})를 참고해주시기 바랍니다.
+`fetch()` 메서드는 하나의 필수 매개변수로 가져오려는 리소스 경로를 받습니다. 반환 값은 해당 요청에 대한 {{domxref("Response")}}로 이행하는 {{jsxref("Promise")}}인데, 서버가 헤더를 포함한 응답을 하는 순간 이행합니다. 이는 **서버가 HTTP 오류 응답 코드로 응답해도 이행한다는 뜻**입니다. 선택 사항으로, 두 번째 매개변수에 `init` 옵션 객체를 제공할 수 있습니다({{domxref("Request")}} 를 참고하세요).
 
-{{domxref("Response")}}를 가져온 후에, 콜백함수의 매개변수로 담긴 response 객체에는 리스폰스에 포함되어있는 컨텐츠와 그에대한 처리방법이 담긴 메소드들이 담겨있습니다. 자세한 사항은 {{domxref("Body")}}를 참고해주시기 바랍니다.
+{{DOMxRef("Response")}}를 가져온 후에는 본문 콘텐츠의 유형과 처리 방법을 정의할 수 있는 다양한 메서드를 사용할 수 있습니다.
 
-{{domxref("Request.Request","Request()")}}와 {{domxref("Response.Response","Response()")}}를 사용하는 것으로, Request와 Response를 직접 작성할 수 있습니다. 하지만 이러한 추가 옵션들은 {{domxref("FetchEvent.respondWith")}}와 같은 또다른 API를 불러 들이는 작업이 수행되어야 하므로 필요하지 않다면 굳이 작성하지 않는 편이 좋습니다.
+{{domxref("Request.Request", "Request()")}}와 {{domxref("Response.Response", "Response()")}} 생성자를 직접 호출해서 요청과 응답을 생성할 수 있지만, 이런 사용법은 흔치 않습니다. 보통 이 두 객체는 다른 API(예를 들어, 서비스 워커의 {{domxref("FetchEvent.respondWith()")}})에 의해 생성됩니다.
 
-> **참고:** Fetch API에 대한 자세한 이용방법은 [Using Fetch](/ko/docs/Web/API/Fetch_API/Using_Fetch)를 참고해주시기 바랍니다. 또한 [Fetch basic concepts](/ko/docs/Web/API/Fetch_API/Basic_concepts)에서는 Fetch API의 기본개념 또한 설명되어 있습니다.
-
-### Aborting a fetch
-
-몇몇 브라우저들은 {{domxref("AbortController")}}와 {{domxref("AbortSignal")}} 인터페이스에 대한 실험적인 기능을 추가로 지원하였습니다. 만약 Fetch API와 XHR API 호출이 완료되지 않았다면, 중단 될 수 있도록 하는 기능입니다. 자세한 사항은 인터페이스 문서를 참고해주시기 바랍니다.
+Fetch API가 제공하는 기능의 자세한 정보는 [Fetch 사용하기](/ko/docs/Web/API/Fetch_API/Using_Fetch)에서, 개념 학습은 [Fetch 기본 개념](/ko/docs/Web/API/Fetch_API/Basic_concepts)에서 확인하세요.
 
 ## Fetch 인터페이스
 
-- {{domxref("GlobalFetch")}}
-  - : 리소스를 취득하기 위해 사용되는 `fetch()` 메서드가 정의되어 있습니다.
+- {{domxref("fetch()")}}
+  - : 리소스를 취득하기 위한 `fetch()` 메서드입니다.
 - {{domxref("Headers")}}
-  - : 리퀘스트와 리스폰스 객체에 대한 헤더입니다. 헤더정보에 보내는 쿼리나 통신 결과의 행동에 대한 선택이 가능합니다.
+  - : 요청/응답 헤더를 나타냅니다. 헤더를 질의하고 그 결과에 따라 다양한 동작을 취하기 위해 사용할 수 있습니다.
 - {{domxref("Request")}}
-  - : 리소스에 대한 리퀘스트의 객체입니다.
+  - : 리소스 요청을 나타냅니다.
 - {{domxref("Response")}}
-  - : 리퀘스트에 대한 리스폰스 객체입니다.
+  - : 요청에 대한 응답을 나타냅니다.
 
-## Fetch 믹스인
-
-- {{domxref("Body")}}
-  - : Response와 Request 본체에 관련한 메소드들이 정의되어 있습니다. 이것들을 이용함으로써 response 결과물을 html, json과 같이 컨텐츠 타입별로 처리하는것이 가능합니다.
-
-## 명세
+## 명세서
 
 {{Specifications}}
 
@@ -53,9 +46,9 @@ Fetch API로 리소스를 취득하기 위해서 {{domxref("GlobalFetch.fetch")}
 
 ## 관련정보
 
-- [Using Fetch](/ko/docs/Web/API/Fetch_API/Using_Fetch)
-- [ServiceWorker API](/ko/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ko/docs/Web/HTTP/Access_control_CORS)
+- [Fetch 사용하기](/ko/docs/Web/API/Fetch_API/Using_Fetch)
+- [Service Worker API](/ko/docs/Web/API/Service_Worker_API)
+- [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/CORS)
 - [HTTP](/ko/docs/Web/HTTP)
-- [Fetch polyfill](https://github.com/github/fetch)
-- [Fetch basic concepts](/ko/docs/Web/API/Fetch_API/Basic_concepts)
+- [Fetch 폴리필](https://github.com/github/fetch)
+- [Fetch 기본 개념](/ko/docs/Web/API/Fetch_API/Basic_concepts)

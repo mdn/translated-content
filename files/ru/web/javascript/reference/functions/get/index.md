@@ -1,9 +1,6 @@
 ---
 title: getter
 slug: Web/JavaScript/Reference/Functions/get
-tags:
-  - геттер
-translation_of: Web/JavaScript/Reference/Functions/get
 ---
 
 {{jsSidebar("Functions")}}
@@ -38,7 +35,7 @@ translation_of: Web/JavaScript/Reference/Functions/get
 - Он должен иметь ровно 0 параметров (смотрите [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) для доп. информации);
 - Он не должен появляться в объектном литерале вместе с другим get или через ввод данных для того же свойства (`{ get x() { }, get x() { } }` и `{ x: ..., get x() { } }` запрещены).
 
-Геттер можно удалить при помощи оператора [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
+Геттер можно удалить при помощи оператора [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete).
 
 ## Примеры
 
@@ -48,12 +45,12 @@ translation_of: Web/JavaScript/Reference/Functions/get
 
 ```js
 const obj = {
-  log: ['example','test'],
+  log: ["example", "test"],
   get latest() {
     if (this.log.length === 0) return undefined;
     return this.log[this.log.length - 1];
-  }
-}
+  },
+};
 console.log(obj.latest); // "test"
 ```
 
@@ -72,11 +69,15 @@ delete obj.latest;
 Для добавления геттера к существующему объекту в любое время используйте [Object.defineProperty()](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty).
 
 ```js
-const o = {a: 0};
+const o = { a: 0 };
 
-Object.defineProperty(o, 'b', { get: function() { return this.a + 1; } });
+Object.defineProperty(o, "b", {
+  get: function () {
+    return this.a + 1;
+  },
+});
 
-console.log(o.b) // Runs the getter, which yields a + 1 (which is 1)
+console.log(o.b); // Runs the getter, which yields a + 1 (which is 1)
 ```
 
 ### Использование вычисляемого именованного свойства
@@ -87,7 +88,9 @@ console.log(o.b) // Runs the getter, which yields a + 1 (which is 1)
 var expr = "foo";
 
 var obj = {
-  get [expr]() { return "bar"; }
+  get [expr]() {
+    return "bar";
+  },
 };
 
 console.log(obj.foo); // "bar"
@@ -114,7 +117,7 @@ get notifier() {
 },
 ```
 
-Для Firefox смотрите также модуль XPCOMUtils.jsm , который определяет функцию [`defineLazyGetter()`](</en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>).
+Для Firefox смотрите также модуль XPCOMUtils.jsm , который определяет функцию [`defineLazyGetter()`](</ru/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>).
 
 ### `get` и `defineProperty`
 
@@ -125,16 +128,18 @@ get notifier() {
 ```js
 class Example {
   get hello() {
-    return 'world';
+    return "world";
   }
 }
 
 const obj = new Example();
 console.log(obj.hello);
 // "world"
-console.log(Object.getOwnPropertyDescriptor(obj, 'hello'));
+console.log(Object.getOwnPropertyDescriptor(obj, "hello"));
 // undefined
-console.log(Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), 'hello'));
+console.log(
+  Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), "hello"),
+);
 // { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }
 ```
 

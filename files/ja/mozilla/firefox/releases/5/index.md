@@ -3,9 +3,11 @@ title: Firefox 5 for developers
 slug: Mozilla/Firefox/Releases/5
 ---
 
-Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日にリリースされました。このページは Firefox 5 のリリースにあたり、開発者に影響する変更について情報をまとめたものです。
+{{FirefoxSidebar}}
 
-## Web 開発者向けの変更点一覧
+Firefox 5 は Gecko 5.0 ベースのブラウザーで、2011 年 6 月 21 日にリリースされました。このページは Firefox 5 のリリースにあたり、開発者に影響する変更について情報をまとめたものです。
+
+## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
@@ -43,27 +45,27 @@ Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日に�
 - 上記と同様に、アクティブでないタブにおける {{ domxref("window.setInterval()") }} も 1 秒に 1 回以下になりました。
 - [`XMLHttpRequest`](/ja/docs/DOM/XMLHttpRequest) が [`loadend` イベントをサポート](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Detecting_any_load_end_condition) for progress listeners. このイベントはすべての転送が終了した際 (つまり、`abort`, `error`, `load` イベントの後) に発生します。このイベントを利用すると、転送の成功・失敗に関わらず実行されるタスクを処理できます。
 - {{ domxref("Blob") }} オブジェクトと {{ domxref("File") }} オブジェクトの `slice()` メソッドが削除され、代わりに提案中のメソッドに置き換えられました。提案中のメソッドは JavaScript の [`Array.slice()`](/ja/docs/JavaScript/Reference/Global_Objects/Array/slice), [`String.slice()`](/ja/docs/JavaScript/Reference/Global_Objects/String/slice) メソッドにより近いものです。現時点では [`mozSlice()`](</ja/docs/DOM/Blob#mozSlice()>) という名前がつけられています。
-- {{ domxref("window.navigator.language") }} の値が `Accept-Language` [HTTP ヘッダ](/ja/docs/HTTP/Headers) の値から決定されるようになりました。
+- {{ domxref("window.navigator.language") }} の値が `Accept-Language` [HTTP ヘッダー](/ja/docs/HTTP/Headers) の値から決定されるようになりました。
 - DOM 仕様の要件により、{{ domxref("Node.prefix") }} プロパティが readonly になりました。
 
 ### JavaScript
 
-- 正規表現を関数のように呼び出せなくなりました。この変更は WebKit チームと互換性の確保について話し合った結果行われたものです。({{ WebkitBug(28285) }} をお読みください。この機能は長いこと存在していたものの、少なくとも MDC ではドキュメント化されていませんでした。)
+- 正規表現を関数のように呼び出せなくなりました。この変更は WebKit チームと互換性の確保について話し合った結果行われたものです。([WebKit bug 28285](https://webkit.org/b/28285) をお読みください。この機能は長いこと存在していたものの、少なくとも MDC ではドキュメント化されていませんでした。)
 - [`Function.prototype.isGenerator()`](/ja/docs/JavaScript/Reference/Global_Objects/Function/isGenerator) メソッドがサポートされました。個のメソッドによってある関数が [generator](/ja/docs/JavaScript/Guide/Iterators_and_Generators#Generators.3a_a_better_way_to_build_Iterators) であるかを調べられます。
 - chrome コード内に生成された DOM 文書が sandbox 内のスクリプトに現れなくなりました。
 - [予約語](/ja/docs/JavaScript/Reference/Reserved_Words) `class`, `enum`, `export`, `extends`, `import`, `super` はこれまで Strict Mode のみで予約されていましたが、Strict Mode ではない通常のモードでも予約語扱いになりました。
-- JSON パーサが書き直され、スピードと準拠度が向上しました。この書き直しには {{ bug("572279") }} の修正も含まれています。
+- JSON パーサーが書き直され、スピードと準拠度が向上しました。この書き直しには [Firefox バグ 572279](https://bugzil.la/572279) の修正も含まれています。
 
 ### SVG
 
 - {{ SVGAttr("class") }} SVG アトリビュートを動的に変化させられるようになりました。
-- {{ domxref("SVGLengthList") }}, {{ domxref("SVGNumberList") }}, {{ domxref("SVGPathSegList") }}, {{ domxref("SVGPointList") }} など、オブジェクトのリストを表す SVG DOM インターフェースがインデックスされ、配列のようにアクセス可能となりました。加えて、リスト中の項目数を表す `length` も持ちます。
+- {{ domxref("SVGLengthList") }}, {{ domxref("SVGNumberList") }}, {{ domxref("SVGPathSegList") }}, {{ domxref("SVGPointList") }} など、オブジェクトのリストを表す SVG DOM インターフェイスがインデックスされ、配列のようにアクセス可能となりました。加えて、リスト中の項目数を表す `length` も持ちます。
 
 ### HTTP
 
-- Firefox は `Keep-Alive` HTTP ヘッダを送信しないようになります。私たちはこのヘッダを正しく整形していませんでした。また、{{ httpheader("Connection") }} や {{ httpheader("Proxy-Connection") }} ヘッダに "keep-alive" を指定していたため重複しており、意味がなかったのです。
+- Firefox は `Keep-Alive` HTTP ヘッダーを送信しないようになります。私たちはこのヘッダーを正しく整形していませんでした。また、{{ httpheader("Connection") }} や {{ httpheader("Proxy-Connection") }} ヘッダーに "keep-alive" を指定していたため重複しており、意味がなかったのです。
 - HTTP のトランザクションモデルを変更し、持続的接続プール内の接続を再利用するというより高度なものになりました。Necko はプールを [FIFO](https://ja.wikipedia.org/wiki/FIFO) と扱うのではなく、プール内の接続を [congestion window](https://en.wikipedia.org/wiki/congestion_window) (CWND) の大きい順に並べ替えます。Window のサイズ拡大を避けることで、多くのケースで HTTP トランザクションの確認応答時間 (RTT) を減少させることができるでしょう。
-- Firefox は `Content-Disposition` HTTP レスポンスヘッダについて、`filename`, `filename*` パラメタがどちらも与えられている場合にそれらをより効果的に処理するようになりました。これは `filename` が先に与えられている場合でも `filename*` をまず調べすべての名前を読み取ることで実現しています。これまでは最初にマッチしたパラメタが使われており、後により適切な名前が与えられていた場合でもそれが使われなかったのです。詳細は {{ bug(588781) }} をお読みください。
+- Firefox は `Content-Disposition` HTTP レスポンスヘッダーについて、`filename`, `filename*` パラメタがどちらも与えられている場合にそれらをより効果的に処理するようになりました。これは `filename` が先に与えられている場合でも `filename*` をまず調べすべての名前を読み取ることで実現しています。これまでは最初にマッチしたパラメタが使われており、後により適切な名前が与えられていた場合でもそれが使われなかったのです。詳細は [Firefox バグ 588781](https://bugzil.la/588781) をお読みください。
 
 ### MathML
 
@@ -71,13 +73,13 @@ Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日に�
 
 ### 開発者ツール
 
-- [Web コンソールの `Console` オブジェクト](/ja/docs/Using_the_Web_Console#The_console_object) に `debug()` メソッドが導入されました。これは `log()` のエイリアスで、導入によっていくつかの Web サイトとの互換性が向上します。
+- [ウェブコンソールの `Console` オブジェクト](/ja/docs/Using_the_Web_Console#The_console_object) に `debug()` メソッドが導入されました。これは `log()` のエイリアスで、導入によっていくつかのウェブサイトとの互換性が向上します。
 
 ## アドオン開発者向けの変更点一覧
 
 すでに開発済みのアドオンを Firefox 5 向けにアップデートを行う方法については [Firefox 5 へのアドオンのアップデート方法](/ja/docs/Firefox/Updating_add-ons_for_Firefox_5)をご覧ください。
 
-> **メモ:** Firefox 5 は他のメジャーリリース版の Firefox と同様に、再コンパイルされたバイナリコンポーネントが必要となります。詳しくは[バイナリインターフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces)をご覧ください。
+> **メモ:** Firefox 5 は他のメジャーリリース版の Firefox と同様に、再コンパイルされたバイナリーコンポーネントが必要となります。詳しくは[バイナリーインターフェイス](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces)をご覧ください。
 
 ### JavaScript コードモジュールに対する変更点
 
@@ -89,27 +91,27 @@ Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日に�
 
 - [`asyncFetch()`](</ja/docs/JavaScript_code_modules/NetUtil.jsm#asyncFetch()>) メソッドは今回から`nsIInputStream` として入力ソースの特定をサポートします。
 
-### インターフェースの変更点
+### インターフェイスの変更点
 
-- `nsIHttpChannelInternal` インターフェースはチャネルの端点のアドレスとポートの情報にアクセスする新しい属性を持っています。この情報は主にデバッグに用いることができます。
-- {{ HTMLElement("canvas") }} エレメントの {{ htmlattrxref("width", "canvas") }} と {{ htmlattrxref("height", "canvas") }} 属性は今回から符号付き整数から符合なし整数に変わり、IDL におけるリフレクトを行います（[`HTMLCanvasElement`](/ja/docs/DOM/HTMLCanvasElement) をご覧ください）。
-- `nsIAppStartup2` と `nsIAppStartup_MOZILLA_2_0` インターフェースは`nsIAppStartup` インターフェースに統合されました。
-- `nsIDocShell_MOZILLA_2_0_BRANCH は` `nsIDocShell` インターフェースに統合されました。
-- `nsIFocusManager_MOZILLA_2_0_BRANCH` インターフェースは `nsIFocusManager` インターフェースに統合されました。
-- `nsIHTMLEditor_MOZILLA_2_0_BRANCH` インターフェースは `nsIHTMLEditor` インターフェースに統合されました。
+- `nsIHttpChannelInternal` インターフェイスはチャネルの端点のアドレスとポートの情報にアクセスする新しい属性を持っています。この情報は主にデバッグに用いることができます。
+- {{ HTMLElement("canvas") }} エレメントの [`width`](/ja/docs/Web/HTML/Element/canvas#width) と [`height`](/ja/docs/Web/HTML/Element/canvas#height) 属性は今回から符号付き整数から符合なし整数に変わり、IDL におけるリフレクトを行います（[`HTMLCanvasElement`](/ja/docs/DOM/HTMLCanvasElement) をご覧ください）。
+- `nsIAppStartup2` と `nsIAppStartup_MOZILLA_2_0` インターフェイスは`nsIAppStartup` インターフェイスに統合されました。
+- `nsIDocShell_MOZILLA_2_0_BRANCH は` `nsIDocShell` インターフェイスに統合されました。
+- `nsIFocusManager_MOZILLA_2_0_BRANCH` インターフェイスは `nsIFocusManager` インターフェイスに統合されました。
+- `nsIHTMLEditor_MOZILLA_2_0_BRANCH` インターフェイスは `nsIHTMLEditor` インターフェイスに統合されました。
 
-#### 新しいインターフェース
+#### 新しいインターフェイス
 
 - `nsIDOMAnimationEvent` が追加されました。 {{domxref("AnimationEvent")}}
 
-#### 削除されたインターフェース
+#### 削除されたインターフェイス
 
-次にあげるインターフェースはもはや必要がないと判断されました。
+次にあげるインターフェイスはもはや必要がないと判断されました。
 
-- `nsICiter` （{{ bug("633066") }} をご覧ください）
-- `nsIDOM3Document` （{{ bug("639849") }} をご覧ください。）
+- `nsICiter` （[Firefox バグ 633066](https://bugzil.la/633066) をご覧ください）
+- `nsIDOM3Document` （[Firefox バグ 639849](https://bugzil.la/639849) をご覧ください。）
 - `nsIFIXptrEvaluator`
-- `nsISelectElement` （{{ bug("619996") }} をご覧ください。）
+- `nsISelectElement` （[Firefox バグ 619996](https://bugzil.la/619996) をご覧ください。）
 
 ### デバッグの補助
 

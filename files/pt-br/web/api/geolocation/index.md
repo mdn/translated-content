@@ -28,13 +28,11 @@ _A interface_ Geolocation _não herda qualquer métodos._
 
 ## Especificações
 
-| Especificação                        | Status                           | Comentário            |
-| ------------------------------------ | -------------------------------- | --------------------- |
-| {{SpecName('Geolocation')}} | {{Spec2('Geolocation')}} | Especificação Inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Geolocation")}}
+{{Compat}}
 
 ## Veja Também
 

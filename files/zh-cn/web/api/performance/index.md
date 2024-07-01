@@ -3,15 +3,15 @@ title: Performance
 slug: Web/API/Performance
 ---
 
-{{APIRef("High Resolution Time")}}
+{{APIRef("Performance API")}}
 
-**`Performance`** 接口可以获取到当前页面中与性能相关的信息。它是 High Resolution Time API 的一部分，同时也融合了 Performance Timeline API、[Navigation Timing API](/zh-CN/docs/Web/API/Navigation_timing_API)、 [User Timing API](/zh-CN/docs/Web/API/User_Timing_API) 和 [Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API)。
+**`Performance`** 接口可用于获取当前页面中与性能相关的信息。
 
-该类型的对象可以通过调用只读属性 {{domxref("Window.performance")}} 来获得。
+性能条目特定于执行上下文。你可以通过 {{domxref("Window.performance")}} 访问窗口中运行的代码的性能信息，通过 {{domxref("WorkerGlobalScope.performance")}} 访问 worker 中运行的代码的性能信息。
 
-> **备注：** 除了以下指出的情况外，该接口及其成员在 {{domxref("Web Worker")}} 中可用。此外，还需注意，performance 的创建和衡量都是同一环境下的。即，如果你在主线程（或者其他 worker）中创建了一个 performance，那么它在另外的 worker 线程中是不可用的；反之亦然。
+{{InheritanceDiagram}}
 
-## 属性
+## 实例属性
 
 _`Performance` 接口没有继承任何属性。_
 
@@ -24,14 +24,9 @@ _`Performance` 接口没有继承任何属性。_
 - {{domxref("Performance.timeOrigin")}} {{readonlyInline}} {{Non-standard_inline}}
   - : 返回性能测量开始时的时间的高精度时间戳。
 
-### 事件处理程序
+## 实例方法
 
-- {{domxref("Performance.onresourcetimingbufferfull")}}
-  - : 一个回调的 {{domxref("EventTarget")}}，当触发 `resourcetimingbufferfull` 事件的时候会被调用。
-
-## 方法
-
-**`Performance` 接口没有继承任何方法。**
+_`Performance` 接口没有继承任何方法。_
 
 - {{domxref("Performance.clearMarks()")}}
   - : 将给定的 mark 从浏览器的性能输入缓冲区中移除。
@@ -55,6 +50,13 @@ _`Performance` 接口没有继承任何属性。_
   - : 将浏览器的资源 timing 缓冲区的大小设置为 "`resource`" {{domxref("PerformanceEntry.entryType","type")}} {{domxref("PerformanceEntry","performance entry")}} 对象的指定数量
 - {{domxref("Performance.toJSON()")}}
   - : 其是一个 JSON 格式转化器，返回 `Performance` 对象的 JSON 对象
+
+### 事件
+
+使用 `addEventListener()` 或者将事件监听器赋给该接口的 `oneventname` 属性来监听这些事件。
+
+- {{DOMxRef("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}}
+  - : 在浏览器的[资源计时缓冲区](/zh-CN/docs/Web/API/Performance/setResourceTimingBufferSize)已满时触发。
 
 ## 规范
 

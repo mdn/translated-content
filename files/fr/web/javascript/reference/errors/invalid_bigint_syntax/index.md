@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: invalid BigInt syntax'
+title: "SyntaxError: invalid BigInt syntax"
 slug: Web/JavaScript/Reference/Errors/Invalid_BigInt_syntax
 l10n:
   sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4

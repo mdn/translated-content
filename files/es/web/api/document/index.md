@@ -1,7 +1,6 @@
 ---
 title: Document
 slug: Web/API/Document
-original_slug: Web/API/Document
 ---
 
 {{APIRef("DOM")}}

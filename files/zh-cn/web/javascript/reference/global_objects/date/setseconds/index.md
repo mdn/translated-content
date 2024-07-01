@@ -3,7 +3,7 @@ title: Date.prototype.setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`setSeconds()`** 方法根据本地时间设置一个日期对象的秒数。
 
@@ -34,13 +34,13 @@ dateObj.setSeconds(secondsValue)
 
 如果一个参数超出了合理范围， `setSeconds` 方法会相应地更新日期对象的时间信息。例如，为 `secondsValue` 指定 100，则日期对象的分钟数会相应地加 1，秒数将会使用 40。
 
-## 例子
+## 示例
 
-### 例子：使用`setSeconds` 方法
+### 示例：使用`setSeconds` 方法
 
 ```js
 var theBigDay = new Date();
-theBigDay.setSeconds(30)
+theBigDay.setSeconds(30);
 ```
 
 ## 规范
@@ -51,7 +51,7 @@ theBigDay.setSeconds(30)
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getSeconds()")}}
 - {{jsxref("Date.prototype.setUTCSeconds()")}}

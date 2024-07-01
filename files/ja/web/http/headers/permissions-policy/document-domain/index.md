@@ -1,7 +1,6 @@
 ---
-title: 'Feature-Policy: document-domain'
+title: "Feature-Policy: document-domain"
 slug: Web/HTTP/Headers/Permissions-Policy/document-domain
-original_slug: Web/HTTP/Headers/Feature-Policy/document-domain
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}}

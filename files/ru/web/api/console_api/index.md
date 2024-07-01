@@ -1,11 +1,6 @@
 ---
 title: Console API
 slug: Web/API/Console_API
-tags:
-  - API
-  - console
-  - Отладка
-translation_of: Web/API/Console_API
 ---
 
 {{DefaultAPISidebar("Console API")}}Console API обеспечивает функциональность, которая позволяет разработчикам выполнять задачи по отладке, такие как логирование сообщений или значений переменных в определённых местах кода, измерение времени, требуемое на выполнение задачи
@@ -29,21 +24,21 @@ Console API изначально было собственным API с разл
 ## Примеры
 
 ```js
-let myString = 'Hello world';
+let myString = "Hello world";
 
 // Вывод "Hello world" в консоль
-console.log(myString)
+console.log(myString);
 ```
 
 Смотрите больше примеров на странице [Console](/ru/docs/Web/API/Console#Usage).
 
 ## Спецификации
 
-{{Specifications("api.console")}}
+{{Specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat("api.console")}}
+{{Compat}}
 
 ## Смотрите также
 

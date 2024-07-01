@@ -1,5 +1,5 @@
 ---
-title: 'SVG: Gráficos Vetoriais Escaláveis'
+title: "SVG: Gráficos Vetoriais Escaláveis"
 slug: Web/SVG
 ---
 

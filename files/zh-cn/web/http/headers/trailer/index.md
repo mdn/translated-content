@@ -9,9 +9,9 @@ slug: Web/HTTP/Headers/Trailer
 
 > **备注：** 请求首部 {{HTTPHeader("TE")}} 需要设置 trailers 来允许挂载字段。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | yes                             |
 
 ## 语法
 
@@ -22,6 +22,7 @@ Trailer: header-names
 ## 指令
 
 - `header-names`
+
   - : 出现在分块信息挂载部分的消息首部。以下首部字段**不允许**出现：
 
     - 用于信息分帧的首部 (例如{{HTTPHeader("Transfer-Encoding")}} 和 {{HTTPHeader("Content-Length")}}),

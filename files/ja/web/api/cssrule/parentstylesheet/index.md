@@ -1,6 +1,9 @@
 ---
-title: CSSRule.parentStyleSheet
+title: "CSSRule: parentStyleSheet プロパティ"
+short-title: parentStyleSheet
 slug: Web/API/CSSRule/parentStyleSheet
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
 {{ APIRef("CSSOM") }}
@@ -14,8 +17,8 @@ slug: Web/API/CSSRule/parentStyleSheet
 ## 例
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules.parentStyleSheet);
+const docRules = document.styleSheets[0].cssRules;
+console.log(docRules[0].parentStyleSheet == document.styleSheets[0]); // returns true
 ```
 
 ## 仕様書

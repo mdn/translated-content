@@ -1,5 +1,5 @@
 ---
-title: ':only-of-type'
+title: ":only-of-type"
 slug: Web/CSS/:only-of-type
 ---
 
@@ -13,6 +13,8 @@ p:only-of-type {
   background-color: lime;
 }
 ```
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-only-of-type.html", "tabbed-shorter")}}
 
 > **メモ:** 最初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
 
@@ -33,7 +35,8 @@ p:only-of-type {
   <div>I am `div` #1.</div>
   <p>I am the only `p` among my siblings.</p>
   <div>I am `div` #2.</div>
-  <div>I am `div` #3.
+  <div>
+    I am `div` #3.
     <i>I am the only `i` child.</i>
     <em>I am `em` #1.</em>
     <em>I am `em` #2.</em>

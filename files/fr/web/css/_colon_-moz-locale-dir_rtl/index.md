@@ -1,15 +1,6 @@
 ---
-title: ':-moz-locale-dir(rtl)'
+title: ":-moz-locale-dir(rtl)"
 slug: Web/CSS/:-moz-locale-dir_rtl
-tags:
-  - CSS
-  - Droite-à-gauche
-  - Localisation
-  - Non-standard
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:-moz-locale-dir(rtl)
-original_slug: Web/CSS/:-moz-locale-dir(rtl)
 ---
 
 {{Non-standard_header}}{{CSSRef}}

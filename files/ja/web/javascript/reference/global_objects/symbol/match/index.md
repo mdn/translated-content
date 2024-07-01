@@ -22,7 +22,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
 以下のコードは {{jsxref("TypeError")}} を投げます。
 
 ```js
-'/bar/'.startsWith(/bar/);
+"/bar/".startsWith(/bar/);
 
 // Throws TypeError, as /bar/ is a regular expression
 // and Symbol.match is not modified.
@@ -33,8 +33,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
 ```js
 var re = /foo/;
 re[Symbol.match] = false;
-'/foo/'.startsWith(re); // true
-'/baz/'.endsWith(re);   // false
+"/foo/".startsWith(re); // true
+"/baz/".endsWith(re); // false
 ```
 
 ## 仕様
@@ -43,7 +43,7 @@ re[Symbol.match] = false;
 
 ## ブラウザー実装状況
 
-{{Compat("javascript.builtins.Symbol.match")}}
+{{Compat}}
 
 ## 関連情報
 

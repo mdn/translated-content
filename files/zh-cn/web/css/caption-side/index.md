@@ -5,88 +5,87 @@ slug: Web/CSS/caption-side
 
 {{CSSRef}}
 
-[CSS](/zh-CN/CSS) 中 **`caption-side`** 属性会将表格的标题{{HTMLElement("caption")}} 放到规定的位置。但是具体显示的位置与表格的 {{cssxref('writing-mode')}} 属性值有关。
+[CSS](/zh-CN/docs/Web/CSS) 中 **`caption-side`** 属性会将表格的标题（{{HTMLElement("caption")}}）放到规定的位置。但是具体显示的位置与表格的 {{cssxref('writing-mode')}} 属性值有关。
 
 {{EmbedInteractiveExample("pages/css/caption-side.html")}}
 
 ## 语法
 
-`caption-side` 属性的取值必须是下面所列值中的一个。
-
-### CSS
-
 ```css
-/* Directional values */
+/* 方向值 */
 caption-side: top;
 caption-side: bottom;
 
-/* Warning: non-standard values */
-caption-side: left;
-caption-side: right;
-caption-side: top-outside;
-caption-side: bottom-outside;
+/* 逻辑值 */
+caption-side: block-start;
+caption-side: block-end;
+caption-side: inline-start;
+caption-side: inline-end;
 
-/* Global values */
+/* 全局值 */
 caption-side: inherit;
 caption-side: initial;
+caption-side: revert;
+caption-side: revert-layer;
 caption-side: unset;
 ```
+
+`caption-side` 属性的取值必须是下面所列值中的一个。
 
 ### 取值
 
 - `top`
-  - : 标题会出现在表格的上方。
+  - : 标题盒应置于表格上方。
 - `bottom`
-  - : 标题会出现在表格的下方。
-- `left` {{non-standard_inline}}
+  - : 标题盒应置于表格下方。
+- `block-start`
+  - : 标题盒应置于表格的块首一侧。
+- `block-end`
+  - : 标题盒应置于表格的块末一侧。
+- `inline-start`
+  - : 标题盒应置于表格的行首一侧。
+- `inline-end`
+  - : 标题盒应置于表格的行末一侧。
 
-  - : 标题会出现在表格的左侧。
+## 形式定义
 
-    > **备注：** 在 CSS 2 阶段，这个值被建议加入到规范中，但是在在最终的 CSS 2.1 规范中被移除。它是非标准属性。
+{{CSSInfo}}
 
-- `right` {{non-standard_inline}}
+## 形式语法
 
-  - : 标题会出现在表格的右侧。
-
-    > **备注：** 在 CSS 2 阶段，这个值被建议加入到规范中，但是在在最终的 CSS 2.1 规范中被移除。它是非标准属性。
-
-- `top-outside` {{non-standard_inline}}
-
-  - : 标题会被放置在表格上方，但是标题的宽度和水平对齐方式不受表格水平布局的约束。
-
-    > **备注：** 在 CSS 2.1 规范中提到：CSS 2 规范中对 `top` 值产生的效果有不同的定义，在未来可能会重新定义这个值产生的影响效果。
-
-- `bottom-outside` {{non-standard_inline}}
-
-  - : 标题会被放置在表格下方，但是标题的宽度和水平对齐方式不受表格水平布局的约束。
-
-    > **备注：** 在 CSS 2.1 规范中提到：CSS 2 规范中对 `top` 值产生的效果有不同的定义，在未来可能会重新定义这个值产生的影响效果。
+{{CSSSyntax}}
 
 ## 示例
 
-### HTML
+### 在上方和下方设置标题
+
+#### HTML
 
 ```html
 <table class="top">
-  <caption>Caption ABOVE the table</caption>
+  <caption>
+    表格上方的标题
+  </caption>
   <tr>
-    <td>Some data</td>
-    <td>Some more data</td>
+    <td>一些数据</td>
+    <td>又一些数据</td>
   </tr>
 </table>
 
-<br>
+<br />
 
 <table class="bottom">
-  <caption>Caption BELOW the table</caption>
+  <caption>
+    表格下方的标题
+  </caption>
   <tr>
-    <td>Some data</td>
-    <td>Some more data</td>
+    <td>一些数据</td>
+    <td>又一些数据</td>
   </tr>
 </table>
 ```
 
-### CSS
+#### CSS
 
 ```css
 .top caption {
@@ -106,9 +105,9 @@ td {
 }
 ```
 
-### 结果
+#### 结果
 
-{{EmbedLiveSample('示例', 'auto', 160)}}
+{{EmbedLiveSample("在上方和下方设置标题", "auto", 160)}}
 
 ## 规范
 

@@ -1,10 +1,6 @@
 ---
 title: CSS Object Model (CSSOM)
 slug: Web/API/CSS_Object_Model
-tags:
-  - API
-  - CSSOM
-translation_of: Web/API/CSS_Object_Model
 ---
 
 {{DefaultAPISidebar('CSSOM')}}
@@ -92,13 +88,11 @@ translation_of: Web/API/CSS_Object_Model
 - {{DOMxRef("StylePropertyMap")}} {{experimental_inline}}
 - {{DOMxRef("StylePropertyMapReadOnly")}} {{experimental_inline}}
 
-### Устаревшие CSSOM interfaces {{obsolete_inline}}
+### Устаревшие CSSOM interfaces
 
-{{obsolete_header}}
-
-- {{DOMxRef("CSSPrimitiveValue")}} {{obsolete_inline}}
-- {{DOMxRef("CSSValue")}} {{obsolete_inline}}
-- {{DOMxRef("CSSValueList")}} {{obsolete_inline}}
+- {{DOMxRef("CSSPrimitiveValue")}}
+- {{DOMxRef("CSSValue")}}
+- {{DOMxRef("CSSValueList")}}
 
 ## Уроки
 

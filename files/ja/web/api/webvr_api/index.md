@@ -113,7 +113,7 @@ WebVR API は、以下の API を継承することで、掲載されている�
 次の Github リポジトリーでいくつかの例を見つけられます。
 
 - [webvr-tests](https://github.com/mdn/webvr-tests): 基本的な機能の使い方を示すためのシンプルなデモ。
-- [Carmel starter kit](https://github.com/facebook/Carmel-Starter-Kit) — Facebook の WebVR ブラウザーである Carmel に沿った、単純でよくコメントされた素敵な例です。
+- [Carmel starter kit](https://github.com/facebookarchive/Carmel-Starter-Kit) — Facebook の WebVR ブラウザーである Carmel に沿った、単純でよくコメントされた素敵な例です。
 - [WebVR.info samples](https://webvr.info/samples/) — より詳細な例とソースコード
 - [WebVR.rocks Firefox demos](https://webvr.rocks/firefox#demos) — ショーケースの例
 - [A-Frame homepage](https://aframe.io/) — A-Frameの使用例を示します。
@@ -130,7 +130,6 @@ WebVR API は、以下の API を継承することで、掲載されている�
 
 ## 関連情報
 
-- [vr.mozilla.org](https://mixedreality.mozilla.org/) — Mozilla の WebVR に関するメインのランディングパッドで、デモやユーティリティ、その他の情報が掲載されています。
 - [A-Frame](https://aframe.io/) — VR 体験を構築するためのオープンソースのウェブフレームワーク。
 - [webvr.info](https://webvr.info) — WebVR の最新情報、ブラウザー設定、コミュニティなど。
 - [threejs-vr-boilerplate](https://github.com/MozillaReality/vr-web-examples/tree/master/threejs-vr-boilerplate) — WebVR アプリを書き込むための有益なスターターテンプレートです。

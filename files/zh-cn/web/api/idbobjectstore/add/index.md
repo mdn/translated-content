@@ -92,14 +92,14 @@ var request = objectStore.add(value, key);
 
 ## 示例
 
-在以下的代码片段中，在我们数据库中打开一个 read/write（读写）事务和使用 `add()` 方法添加一些数据到存储对象中。还要注意附加到事务事件处理程序的函数，这些函数用于报告事务打开成功或失败时的结果。完整的示例代码，请查看我们的 [To-do Notifications](https://github.com/mdn/to-do-notifications/) 应用（[在线查看示例](http://mdn.github.io/to-do-notifications/)）。
+在以下的代码片段中，在我们数据库中打开一个 read/write（读写）事务和使用 `add()` 方法添加一些数据到存储对象中。还要注意附加到事务事件处理程序的函数，这些函数用于报告事务打开成功或失败时的结果。完整的示例代码，请查看我们的 [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) 应用（[在线查看示例](https://mdn.github.io/dom-examples/to-do-notifications/)）。
 
 ```js
 // Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Database initialised.</li>";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -111,18 +111,29 @@ DBOpenRequest.onsuccess = function(event) {
 
 function addData() {
   // Create a new object ready to insert into the IDB
-  var newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  var newItem = [
+    {
+      taskTitle: "Walk dog",
+      hours: 19,
+      minutes: 30,
+      day: 24,
+      month: "December",
+      year: 2013,
+      notified: "no",
+    },
+  ];
 
   // open a read/write db transaction, ready for adding the data
   var transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of the transaction completing, when everything is done
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction completed.</li>';
+  transaction.oncomplete = function (event) {
+    note.innerHTML += "<li>Transaction completed.</li>";
   };
 
-  transaction.onerror = function(event) {
-  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+  transaction.onerror = function (event) {
+    note.innerHTML +=
+      "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
   };
 
   // create an object store on the transaction
@@ -131,11 +142,11 @@ function addData() {
   // Make a request to add our newItem object to the object store
   var objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = function (event) {
     // report the success of our request
-    note.innerHTML += '<li>Request successful.</li>';
+    note.innerHTML += "<li>Request successful.</li>";
   };
-};
+}
 ```
 
 ## Specification
@@ -154,4 +165,4 @@ function addData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

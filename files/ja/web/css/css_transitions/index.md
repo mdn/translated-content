@@ -1,11 +1,13 @@
 ---
 title: CSS トランジション
-slug: Web/CSS/CSS_Transitions
+slug: Web/CSS/CSS_transitions
+l10n:
+  sourceCommit: e21c6c187a1049d29f69eeeedfcfb4843b01569a
 ---
 
 {{CSSRef}}
 
-**CSS トランジション** (CSS Transition) は CSS のモジュールの一つで、特定の CSS プロパティの値の間でスムーズな変化を作り出す方法を定義します。タイミング関数を使って、ただ作り出すだけでなく、その進化を定義することもできます。
+**CSS トランジション** (CSS Transition) モジュールは、特定の CSS プロパティの値の間でスムーズな変化を作り出す方法を定義します。これらのトランジションの動作は、イージング関数や持続時間、その他の属性を指定することで制御できます。
 
 ## リファレンス
 
@@ -17,9 +19,13 @@ slug: Web/CSS/CSS_Transitions
 - {{cssxref("transition-property")}}
 - {{cssxref("transition-timing-function")}}
 
+### アットルール
+
+- {{cssxref("@starting-style")}}
+
 ## ガイド
 
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
   - : CSS を使ってスムーズな変化を作る方法についての、ステップバイステップのチュートリアルです。この記事では関連する各 CSS プロパティと、それらがどのように作用するかを解説します。
 
 ## 仕様書
@@ -28,4 +34,4 @@ slug: Web/CSS/CSS_Transitions
 
 ## 関連情報
 
-- CSS トランジションに関連して、[CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)では、より細かいプロパティの動きの制御を提供します。
+- CSS トランジションに関連して、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)では、より細かいプロパティの動きの制御を提供します。

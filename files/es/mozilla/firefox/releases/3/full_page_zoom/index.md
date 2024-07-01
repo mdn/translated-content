@@ -1,7 +1,6 @@
 ---
 title: Zoom a página completa
 slug: Mozilla/Firefox/Releases/3/Full_page_zoom
-original_slug: Zoom_a_página_completa
 ---
 
 {{FirefoxSidebar}}

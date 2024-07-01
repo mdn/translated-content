@@ -48,8 +48,8 @@ new Math();
 new Symbol();
 // TypeError: Symbol is not a constructor
 
-function* f() {};
-var obj = new f;
+function* f() {}
+var obj = new f();
 // TypeError: f is not a constructor
 ```
 
@@ -68,7 +68,7 @@ function Car(make, model, year) {
 次のようにして `mycar` というオブジェクトを生成できるようになりました。
 
 ```js
-var mycar = new Car('Eagle', 'Talon TSi', 1993);
+var mycar = new Car("Eagle", "Talon TSi", 1993);
 ```
 
 ### プロミスの場合

@@ -1,11 +1,6 @@
 ---
-title: ':first-child'
+title: ":first-child"
 slug: Web/CSS/:first-child
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:first-child
 ---
 
 {{CSSRef}}
@@ -45,17 +40,21 @@ p:first-child {
 
 ```html
 <div>
-  <p>Ce paragraphe est mis en forme car c'est un élément
-     p ET que c'est le premier fils de l'élément div.</p>
-  <p>En revanche, ce paragraphe n'est pas mis en forme
-     car ce n'est pas le premier !</p>
+  <p>
+    Ce paragraphe est mis en forme car c'est un élément p ET que c'est le
+    premier fils de l'élément div.
+  </p>
+  <p>
+    En revanche, ce paragraphe n'est pas mis en forme car ce n'est pas le
+    premier !
+  </p>
 </div>
 
 <div>
-  <h2>Ce titre h2 n'est pas mis en forme car ce n'est pas
-      un paragraphe.</h2>
-  <p>Et ce paragraphe n'est pas mis en forme car ce n'est pas
-     le premier fils !</p>
+  <h2>Ce titre h2 n'est pas mis en forme car ce n'est pas un paragraphe.</h2>
+  <p>
+    Et ce paragraphe n'est pas mis en forme car ce n'est pas le premier fils !
+  </p>
 </div>
 ```
 
@@ -68,12 +67,12 @@ p:first-child {
 #### CSS
 
 ```css
-li{
-  color:blue;
+li {
+  color: blue;
 }
 
-li:first-child{
-  color:green;
+li:first-child {
+  color: green;
 }
 ```
 

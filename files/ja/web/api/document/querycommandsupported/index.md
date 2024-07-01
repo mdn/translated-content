@@ -1,15 +1,18 @@
 ---
-title: Document.queryCommandSupported()
+title: "Document: queryCommandSupported() メソッド"
+short-title: queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}
+{{ApiRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
-**`Document.queryCommandSupported()`** メソッドは、指定しされたエディターコマンドにブラウザーが対応しているかどうかを報告します。
+**`Document.queryCommandSupported()`** メソッドは、指定されたエディターコマンドにブラウザーが対応しているかどうかを報告します。
 
 ## 構文
 
-```js
+```js-nolint
 queryCommandSupported(command)
 ```
 
@@ -29,9 +32,9 @@ queryCommandSupported(command)
 ## 例
 
 ```js
-var flg = document.queryCommandSupported("SelectAll");
+const flg = document.queryCommandSupported("SelectAll");
 
-if(flg) {
+if (flg) {
   // ...何か行う
 }
 ```

@@ -16,11 +16,11 @@ l10n:
 ## 例
 
 ```js
-navigator.permissions.query({name:'notifications'}).then((result) => {
-  if (result.state === 'granted') {
+navigator.permissions.query({ name: "notifications" }).then((result) => {
+  if (result.state === "granted") {
     showNotification();
-  } else if (result.state === 'prompt') {
-    requestNotificationPermission()
+  } else if (result.state === "prompt") {
+    requestNotificationPermission();
   }
 });
 ```

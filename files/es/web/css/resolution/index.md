@@ -1,7 +1,6 @@
 ---
 title: <resolution>
 slug: Web/CSS/resolution
-original_slug: Web/CSS/resolución
 ---
 
 {{CSSRef}}
@@ -44,9 +43,9 @@ ten dpi                                            Incorecto: sólo deben ser ut
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.resolution")}}
+{{Compat}}
 
 ## Ver también
 

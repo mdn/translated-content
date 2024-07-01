@@ -38,8 +38,8 @@ var span = document.querySelector("span");
 var classes = span.classList;
 var iterator = classes.keys();
 
-for(var value of iterator) {
-  span.textContent += value + ' ++ ';
+for (var value of iterator) {
+  span.textContent += value + " ++ ";
 }
 ```
 

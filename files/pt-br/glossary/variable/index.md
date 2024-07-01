@@ -3,13 +3,15 @@ title: Variável
 slug: Glossary/Variable
 ---
 
+{{GlossarySidebar}}
+
 Uma **variável (variable)** é um local nomeado para armazenar um {{Glossary("Value", "valor")}}. Dessa forma, um valor pode ser acessado através de um nome predeterminado.
 
 ## Leia mais
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "Variável (programação)")}} na Wikipédia
+- [Variável (programação)](<https://pt.wikipedia.org/wiki/Variável_(programação)>) na Wikipédia
 
 ### Referências técnicas
 

@@ -1,67 +1,78 @@
 ---
 title: min-width
 slug: Web/CSS/min-width
+l10n:
+  sourceCommit: 925b2bd8beeae6ce8237863637bcd28ccbb8d47f
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
-## 概述
+`min-width` [CSS](/zh-CN/docs/Web/CSS) 属性为给定元素设置最小宽度。它可以阻止 {{cssxref("width")}} 属性的[应用值](/zh-CN/docs/Web/CSS/used_value)小于 `min-width` 指定的值。
 
-`min-width` 属性为给定元素设置最小宽度。它可以阻止 {{ Cssxref("width") }} 属性的应用值小于 `min-width` 的值。
+{{EmbedInteractiveExample("pages/css/min-width.html")}}
 
-`min-width 的值会同时覆盖` {{ Cssxref("max-width") }} 和 {{ Cssxref("width") }}。
+当 `min-width` 大于 {{Cssxref("max-width")}} 或 {{Cssxref("width")}} 时，元素的宽度将被设置为 `min-width` 的值。
 
 ## 语法
 
-```
-形式语法： {{csssyntax("min-width")}}
-```
+```css
+/* <length> 值 */
+min-width: 3.5em;
 
-```
-/* <length> value */
-min-width: 3.5em
+/* <percentage> 值 */
+min-width: 10%;
 
-/* <percentage> value */
-min-width: 10%
+/* 关键字值 */
+min-width: max-content;
+min-width: min-content;
+min-width: fit-content;
+min-width: fit-content(20em);
 
-/* Keyword values */
-min-width: max-content
-min-width: min-content
-min-width: fit-content
-min-width: fill-available
-
-/* Global values */
-min-width: inherit
-min-width: initial
-min-width: unset
+/* 全局值 */
+min-width: inherit;
+min-width: initial;
+min-width: revert;
+min-width: revert-layer;
+min-width: unset;
 ```
 
 ### 值
 
 - `<length>`
-  - : 固定的最小宽度。查看 {{cssxref("&lt;length&gt;")}} 了解可用单位。负值会让该声明失效。
+  - : 以绝对值定义 `min-width`。
 - `<percentage>`
-  - : 固定的最小宽度表现为包含块宽度的 {{cssxref("&lt;percentage&gt;")}} (百分比值)。负值会让该声明失效。
-
-#### Keyword values
-
+  - : 以包含区块的宽度百分比定义 `min-width`。
 - `auto`
-  - : 用于弹性元素的默认最小宽度。相比其他布局中以`0`为默认值，`auto`能为弹性布局指明更合理的默认表现。
+  - : 浏览器将计算并选择指定元素的 `min-width`。
 - `max-content` {{ experimental_inline() }}
-  - : 固有首选宽度。
+  - : 固有首选 `min-width`。
 - `min-content` {{ experimental_inline() }}
-  - : 固有最小宽度
-- `fill-available`{{ experimental_inline() }}
-  - : 包含块的宽度减去水平 margin、border 和 padding。有些浏览器在实现时使用了该关键字的早期名字： `available`。
-- `fit-content` {{ experimental_inline() }}
-  - : 等同于 `min(max-content, max(min-content, fill-available)`.
+  - : 固有最小 `min-width`。
+- `fit-content`
+  - : 使用可用空间，但不得超过 [max-content](/zh-CN/docs/Web/CSS/max-content)，即 `min(max-content,max(min-content,stretch))`。
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})` {{Experimental_Inline}}
+  - : 使用 `fit-content` 公式，用指定参数替换可用空间，即 `min(max-content, max(min-content, argument))`。
+
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
+
+{{csssyntax}}
 
 ## 示例
 
-```css
-table { min-width: 75%; }
+### 设置元素最小宽度
 
-form { min-width: 0; }
+```css
+table {
+  min-width: 75%;
+}
+
+form {
+  min-width: 0;
+}
 ```
 
 ## 规范
@@ -72,7 +83,7 @@ form { min-width: 0; }
 
 {{Compat}}
 
-## See also
+## 参见
 
-- {{ Cssxref("width") }}, {{ Cssxref("max-width") }}, {{ Cssxref("min-height") }}
-- The [box model](/zh-CN/docs/CSS/box_model), {{ Cssxref("box-sizing") }}
+- {{ Cssxref("width") }}、{{ Cssxref("max-width") }}
+- [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)，{{ Cssxref("box-sizing") }}

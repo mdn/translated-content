@@ -1,12 +1,6 @@
 ---
 title: <s>
 slug: Web/HTML/Element/s
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/s
 ---
 
 {{HTMLSidebar}}
@@ -24,9 +18,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 ### HTML
 
 ```html
-<p>
-  <s>Le plat du jour : saumon à la hollandaise</s> <em>plus disponible</em>
-</p>
+<p><s>Le plat du jour : saumon à la hollandaise</s> <em>plus disponible</em></p>
 ```
 
 ### Résultat

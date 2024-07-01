@@ -12,10 +12,13 @@ slug: Web/CSS/display-box
 有效的 `<display-box>` 值：
 
 - `contents` {{Experimental_Inline}}
+
   - : 这些元素自己不显示。它们被它们的伪盒（pseudo-box）和子项盒（child boxes）取代。请注意 CSS 层次 3 显示规格定义的 `contents` 值应该怎样影响"非常见元素" - 即不由 CSS 渲染的元素（诸如被取代元素）。参考 [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) 以获取细节。
 
     由于浏览器中有个 bug，它会从访问树（accessibility tree）删除元素，屏幕阅读者会看不到里面内容。参考下方访问性关注 [Accessibility concerns](#accessibility_concerns) 章节以获取细节。
+
 - `none`
+
   - : 关闭元素的显示，不影响布局（文件中没有该元素）。所有子项的显示也被关闭。
 
     要一个元素占据空间（文件中存在），但不渲染，请使用 {{CSSxRef("visibility")}} 属性。

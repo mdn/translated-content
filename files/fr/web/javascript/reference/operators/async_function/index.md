@@ -1,13 +1,6 @@
 ---
 title: Expression async function
 slug: Web/JavaScript/Reference/Operators/async_function
-tags:
-  - Function
-  - JavaScript
-  - Opérateur
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/async_function
-original_slug: Web/JavaScript/Reference/Opérateurs/async_function
 ---
 
 {{jsSidebar("Operators")}}
@@ -33,7 +26,7 @@ async function [name]([param1[, param2[, …, paramN]]]) {
 - `instructions`
   - : Les instructions qui composent le corps de la fonction.
 
-> **Note :** À partir d'ES2015 (ES6), il est aussi possible d'utiliser des [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) pour les expressions de fonction asynchrone.
+> **Note :** À partir d'ES2015 (ES6), il est aussi possible d'utiliser des [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) pour les expressions de fonction asynchrone.
 
 ## Description
 
@@ -45,29 +38,30 @@ Une expression `async function` est très proche, et partage quasiment la même 
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
   });
-};
+}
 
-(async function(x) { // fonction asynchrone immédiatement appelée
+(async function (x) {
+  // fonction asynchrone immédiatement appelée
   var a = resolveAfter2Seconds(20);
   var b = resolveAfter2Seconds(30);
-  return x + await a + await b;
-})(10).then(v => {
-  console.log(v);  // affiche 60 après 2 secondes.
+  return x + (await a) + (await b);
+})(10).then((v) => {
+  console.log(v); // affiche 60 après 2 secondes.
 });
 
-var add = async function(x) {
+var add = async function (x) {
   var a = await resolveAfter2Seconds(20);
   var b = await resolveAfter2Seconds(30);
   return x + a + b;
 };
 
-add(10).then(v => {
-  console.log(v);  // affiche 60 après 4 secondes.
+add(10).then((v) => {
+  console.log(v); // affiche 60 après 4 secondes.
 });
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.submitFrame()
 slug: Web/API/VRDisplay/submitFrame
-original_slug: Web/API/VRDevice/submitFrame
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
@@ -15,7 +14,7 @@ original_slug: Web/API/VRDevice/submitFrame
 ## 構文
 
 ```js
-submitFrame()
+submitFrame();
 ```
 
 ### 引数
@@ -103,5 +102,4 @@ function drawVRScene() {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

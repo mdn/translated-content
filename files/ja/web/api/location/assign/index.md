@@ -1,6 +1,8 @@
 ---
-title: location.assign()
+title: "location: assign() メソッド"
 slug: Web/API/Location/assign
+l10n:
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -13,20 +15,26 @@ slug: Web/API/Location/assign
 
 ## 構文
 
-```js
-location.assign(url);
+```js-nolint
+assign(url)
 ```
 
 ### 引数
 
 - `url`
-  - : {{domxref("DOMString")}} で、移動先のページの URL です。
+  - : 文字列で、移動先のページの URL です。
 
-## Example
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
+## 例
 
 ```js
 // Location.reload の記事へ移動
-window.location.assign('https://developer.mozilla.org/ja/docs/Web/API/Location/reload');
+window.location.assign(
+  "https://developer.mozilla.org/ja/docs/Web/API/Location/reload",
+);
 ```
 
 ## 仕様書

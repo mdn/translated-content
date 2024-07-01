@@ -16,7 +16,7 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
 
 以下状态码由 [section 10 of RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-10)定义。你可以在[RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-6)中找到更新后的规范。
 
-> **备注：** 如果您收到的响应不在 [此列表](#信息响应) 中，则它为非标准响应，可能是服务器软件的自定义响应。
+> **备注：** 如果你收到的响应不在 [此列表](#信息响应) 中，则它为非标准响应，可能是服务器软件的自定义响应。
 
 ## 信息响应
 

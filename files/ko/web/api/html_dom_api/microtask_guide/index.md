@@ -72,16 +72,18 @@ queueMicrotask(() => {
 마이크로태스크를 사용해 실행 순서를 항상 일정하게 유지할 수 있는 상황은 `if...else` 선언문 (또는 다른 조건 선언문) 중 한 절에서만 프로미스를 사용하고, 다른 절에서는 사용하지 않는 것입니다. 다음과 같은 코드를 고려해보겠습니다.
 
 ```js
-customElement.prototype.getData = url => {
+customElement.prototype.getData = (url) => {
   if (this.cache[url]) {
     this.data = this.cache[url];
     this.dispatchEvent(new Event("load"));
   } else {
-    fetch(url).then(result => result.arrayBuffer()).then(data => {
-      this.cache[url] = data;
-      this.data = data;
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((result) => result.arrayBuffer())
+      .then((data) => {
+        this.cache[url] = data;
+        this.data = data;
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
 ```
@@ -118,18 +120,20 @@ Data fetched
 `if` 절에서 마이크로태스크를 사용해 두 절의 균형을 맞춰주는 방법으로 항상 같은 실행 순서를 유지할 수 있습니다.
 
 ```js
-customElement.prototype.getData = url => {
+customElement.prototype.getData = (url) => {
   if (this.cache[url]) {
     queueMicrotask(() => {
       this.data = this.cache[url];
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then(result => result.arrayBuffer()).then(data => {
-      this.cache[url] = data;
-      this.data = data;
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((result) => result.arrayBuffer())
+      .then((data) => {
+        this.cache[url] = data;
+        this.data = data;
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
 ```
@@ -145,7 +149,7 @@ customElement.prototype.getData = url => {
 ```js
 const messageQueue = [];
 
-let sendMessage = message => {
+let sendMessage = (message) => {
   messageQueue.push(message);
 
   if (messageQueue.length === 1) {
@@ -175,15 +179,14 @@ let sendMessage = message => {
 다음의 간단한 예제에서는, 큐에 추가한 마이크로태스크의 콜백은 최상위 스크립트의 동작이 끝난 후 실행된다는 것을 보입니다.
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = s => logElem.innerHTML += s + "<br>";
+let log = (s) => (logElem.innerHTML += s + "<br>");
 ```
 
 이어지는 코드에서 {{domxref("queueMicrotask()")}}를 사용해 실행할 마이크로태스크를 예약하는 것을 볼 수 있습니다. 앞뒤로는 `log()` 호출을 배치했는데, 화면에 텍스트를 출력하는 함수입니다.
@@ -191,7 +194,7 @@ let log = s => logElem.innerHTML += s + "<br>";
 ```js
 log("마이크로태스크 추가 전");
 queueMicrotask(() => {
-  log("마이크로태스크를 실행했습니다.")
+  log("마이크로태스크를 실행했습니다.");
 });
 log("마이크로태스크 추가 후");
 ```
@@ -205,15 +208,14 @@ log("마이크로태스크 추가 후");
 이 예제에서는 0밀리초의 타임아웃("최대한 빠르게")을 예약합니다. 여기서 확인할 수 있는 것은 (`setTimeout()` 등을 사용해) 태스크를 생성할 때의 "최대한 빠르게"와, 마이크로태스크에서의 "최대한 빠르게"는 다르다는 점입니다.
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = s => logElem.innerHTML += s + "<br>";
+let log = (s) => (logElem.innerHTML += s + "<br>");
 ```
 
 이어지는 코드에서 {{domxref("queueMicrotask()")}}를 사용해 실행할 마이크로태스크를 예약하는 것을 볼 수 있습니다. 그 위에서는 타임아웃을 0ms 후 발동하도록 예약합니다. 앞뒤로는 `log()` 호출을 배치했는데, 화면에 텍스트를 출력하는 함수입니다.
@@ -240,15 +242,14 @@ log("주 프로그램 종료");
 이 예제는 이전 예제를 약간 확장해, `queueMicrotask()`로 마이크로태스크를 예약한 후 모종의 계산 작업을 수행하는 함수를 사용합니다. 여기서 확인해야 할 것은 마이크로태스크의 실행 시점이 함수의 종료 순간이 아니고 주 프로그램의 종료 시점이라는 점입니다.
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = s => logElem.innerHTML += s + "<br>";
+let log = (s) => (logElem.innerHTML += s + "<br>");
 ```
 
 주 프로그램 코드는 다음과 같습니다. `doWork()` 함수가 `queueMicrotask()`를 호출하지만, 태스크가 종료되어 실행 스택에 아무것도 남지 않은 상태가 되는, 즉 전체 프로그램 실행이 종료되기 전까지 이 마이크로태스크는 처리되지 않는 것을 결과에서 볼 수 있습니다.
@@ -263,7 +264,7 @@ let doWork = () => {
 
   queueMicrotask(urgentCallback);
 
-  for (let i=2; i<=10; i++) {
+  for (let i = 2; i <= 10; i++) {
     result *= i;
   }
   return result;

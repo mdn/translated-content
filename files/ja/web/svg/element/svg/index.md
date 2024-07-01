@@ -9,12 +9,22 @@ slug: Web/SVG/Element/svg
 
 > **メモ:** `xmlns` 属性は *SVG ドキュメント*の最も外側の `svg` 要素にのみ必要です。内部の `svg` 要素や HTML 文書の内部には不要です。
 
+## 例
+
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="grey">
+<svg
+  viewBox="0 0 300 100"
+  xmlns="http://www.w3.org/2000/svg"
+  stroke="red"
+  fill="grey">
   <circle cx="50" cy="50" r="40" />
   <circle cx="150" cy="50" r="4" />
 
@@ -24,17 +34,17 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('Exeemple', 150, '100%')}}
+{{EmbedLiveSample('Example', 300, 100)}}
 
 ## 属性
 
-- {{SVGAttr("baseProfile")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("baseProfile")}} {{deprecated_inline}}
   - : 文書が要求する最小の SVG 言語プロファイル
     _値の型_: **\<string>** ; _初期値_: none; _Animatable_: **no**
-- {{SVGAttr("contentScriptType")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("contentScriptType")}} {{deprecated_inline}}
   - : SVG フラグメントで用いられる初期記述言語
     _値の型_: **\<string>** ; _初期値_: `application/ecmascript`; _アニメーション可否_: **no**
-- {{SVGAttr("contentStyleType")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("contentStyleType")}} {{deprecated_inline}}
   - : SVG フラグメントで用いられる初期のスタイルシート言語
     _値の型_: **\<string>** ; _初期値_: `text/css`; _アニメーション可否_: **no**
 - {{SVGAttr("height")}}
@@ -43,7 +53,7 @@ html,body,svg { height:100% }
 - {{SVGAttr("preserveAspectRatio")}}
   - : 異なるアスペクト比での表示時に、`svg`フラグメントがどう変形されるか
     _値の型_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _初期値_: `xMidYMid meet`; _アニメーション可否_: **yes**
-- {{SVGAttr("version")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("version")}} {{deprecated_inline}}
   - : 要素内の内容にどのバージョンの SVG が用いられるか
     _値の型_: **[\<number>](/ja/docs/Web/SVG/Content_type#Number)** ; _初期値_: none; _アニメーション可否_: **no**
 - {{SVGAttr("viewBox")}}
@@ -70,7 +80,7 @@ html,body,svg { height:100% }
 - [条件処理属性](/ja/docs/Web/SVG/Attribute/Conditional_Processing)
   - : 特に: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
 - イベント属性
-  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [グラフィカルイベント属性](/ja/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes), [文書イベント属性](/ja/docs/Web/SVG/Attribute/Events#Document_Event_Attributes), [文書要素イベント属性](/ja/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes)
+  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#グローバルイベント属性), [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute/Events#グラフィックイベント属性), [文書イベント属性](/ja/docs/Web/SVG/Attribute/Events#文書イベント属性), [文書要素イベント属性](/ja/docs/Web/SVG/Attribute/Events#文書要素イベント属性)
 - [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation)
   - : 特に: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - Aria 属性
@@ -86,4 +96,4 @@ html,body,svg { height:100% }
 
 ## ブラウザの実装状況
 
-{{Compat("svg.elements.svg")}}
+{{Compat}}

@@ -1,15 +1,6 @@
 ---
 title: BaseAudioContext
 slug: Web/API/BaseAudioContext
-tags:
-  - API
-  - Audio
-  - BaseAudioContext
-  - Interface
-  - Reference
-  - TopicStub
-  - Web Audio API
-translation_of: Web/API/BaseAudioContext
 ---
 
 {{APIRef("Web Audio API")}}

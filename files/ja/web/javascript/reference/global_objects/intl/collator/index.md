@@ -35,9 +35,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 次の例では、一方の文字列が他方の文字列より前である場合、後である場合、および同じレベルである場合の比較結果を表示します。
 
 ```js
-console.log(new Intl.Collator().compare('a', 'c')); // → 負の値
-console.log(new Intl.Collator().compare('c', 'a')); // → 正の値
-console.log(new Intl.Collator().compare('a', 'a')); // → 0
+console.log(new Intl.Collator().compare("a", "c")); // → 負の値
+console.log(new Intl.Collator().compare("c", "a")); // → 正の値
+console.log(new Intl.Collator().compare("a", "a")); // → 0
 ```
 
 上記コードの結果は、ブラウザーやブラウザーのバージョンによって異なる可能性がある点に注意してください。というのも前および後を表す数値については、それぞれ負の数および正の数であることだけが仕様によって定めています。具体的な数値は定められていないため、実装ごとに異なる数値になるかもしれません。
@@ -48,11 +48,11 @@ console.log(new Intl.Collator().compare('a', 'a')); // → 0
 
 ```js
 // in German, ä sorts with a
-console.log(new Intl.Collator('de').compare('ä', 'z'));
+console.log(new Intl.Collator("de").compare("ä", "z"));
 // → 負の値
 
 // in Swedish, ä sorts after z
-console.log(new Intl.Collator('sv').compare('ä', 'z'));
+console.log(new Intl.Collator("sv").compare("ä", "z"));
 // → 正の値
 ```
 
@@ -62,11 +62,11 @@ console.log(new Intl.Collator('sv').compare('ä', 'z'));
 
 ```js
 // in German, ä has a as the base letter
-console.log(new Intl.Collator('de', { sensitivity: 'base' }).compare('ä', 'a'));
+console.log(new Intl.Collator("de", { sensitivity: "base" }).compare("ä", "a"));
 // → 0
 
 // in Swedish, ä and a are separate base letters
-console.log(new Intl.Collator('sv', { sensitivity: 'base' }).compare('ä', 'a'));
+console.log(new Intl.Collator("sv", { sensitivity: "base" }).compare("ä", "a"));
 // → 正の値
 ```
 

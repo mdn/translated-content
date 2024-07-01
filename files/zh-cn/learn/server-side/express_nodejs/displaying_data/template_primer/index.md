@@ -11,19 +11,19 @@ Express 可以与许多不同的[模板渲染引擎](https://expressjs.com/en/gu
 
 不同的模板语言使用不同的方法，来定义布局和标记数据的占位符 — 一些使用 HTML 来定义布局，而另一些则使用可以编译为 HTML 的不同标记格式。Pug 是第二种类型；它使用 HTML 的表示形式，其中任何行中的第一个单词，通常表示 HTML 元素，后续行中的缩进，用于表示嵌套在这些元素中的任何内容。结果是一个页面定义直接转换为 HTML，但可以说更简洁，更容易阅读。
 
-> **备注：** 使用 Pug 的缺点，是它对缩进和空格敏感（如果在错误的位置添加额外的空格，可能会得到没什么帮助的错误代码）。但是，一旦您的模板到位，它们就很容易阅读和维护。
+> **备注：** 使用 Pug 的缺点，是它对缩进和空格敏感（如果在错误的位置添加额外的空格，可能会得到没什么帮助的错误代码）。但是，一旦你的模板到位，它们就很容易阅读和维护。
 
 ## 模板组态
 
-在我们[创建骨架网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)时，LocalLibrary 配置为使用 [Pug](https://pugjs.org/api/getting-started.html)。您应该看到 Pug 模块作为依赖项，包含在网站的 **package.json**文件中，以及 **app.js**文件中的以下配置设置。设置告诉我们，使用 Pug 作为视图引擎，Express 应该在 **/views**子目录中搜索模板。
+在我们[创建骨架网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)时，LocalLibrary 配置为使用 [Pug](https://pugjs.org/api/getting-started.html)。你应该看到 Pug 模块作为依赖项，包含在网站的 **package.json**文件中，以及 **app.js**文件中的以下配置设置。设置告诉我们，使用 Pug 作为视图引擎，Express 应该在 **/views**子目录中搜索模板。
 
 ```js
 // View engine setup.
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
 ```
 
-如果查看 views 目录，您将看到项目默认视图的 .pug 文件。这包括需要用自己的内容替换的主页（**index.pug**）和基本模板（**layout.pug**）的视图。
+如果查看 views 目录，你将看到项目默认视图的 .pug 文件。这包括需要用自己的内容替换的主页（**index.pug**）和基本模板（**layout.pug**）的视图。
 
 ```plain
 /express-locallibrary-tutorial  //the project root
@@ -39,7 +39,7 @@ app.set('view engine', 'pug');
 
 首先要注意的是，该文件映射典型 HTML 文件的结构，其中（几乎）每一行中的第一个单词是 HTML 元素，并且缩进用于指示嵌套元素。因此，例如，`body` 本文元素位于 `html` 元素内，而段落元素（`p`）位于 `body` 元素内等。非嵌套元素（例如，各个段落）位于不同的行上。
 
-```html
+```pug
 doctype html
 html(lang="en")
   head
@@ -86,30 +86,30 @@ html(lang="en")
 
 如果标记后跟着等号，则以下文本将被视为 JavaScript 表达式。因此，打个比方，在下面的第一行中，`h1`标记的内容将是标题变量`title`（在文件中定义，或从 Express 传递到模板中）。在第二行中，段落内容是与标题变量`title`连接的文本字符串。在这两种情况下，默认行为是转义该行。
 
-```html
+```pug
 h1= title
 p= 'Evaluated and <em>escaped expression</em>:' + title
 ```
 
-如果标记后面没有等号，则将内容视为纯文本。在纯文本中，您可以使用`#{}` 和`!{}`语法，插入转义和非转义数据，如下所示。您还可以在纯文本中添加原始 HTML。
+如果标记后面没有等号，则将内容视为纯文本。在纯文本中，你可以使用`#{}` 和`!{}`语法，插入转义和非转义数据，如下所示。你还可以在纯文本中添加原始 HTML。
 
-```html
+```pug
 p This is a line with #[em some emphasis] and #[strong strong text] markup.
 p This line has an un-escaped string: !{'<em> is emphasised</em>'}, an escaped string: #{'<em> is not emphasised</em>'}, and escaped variables: #{title}.
 ```
 
-> **备注：** 您几乎总是希望转义来自用户的数据（通过 **`#{}`** 语法）。可信任的数据（例如，生成的记录计数等）可以不先转义就显示。
+> **备注：** 你几乎总是希望转义来自用户的数据（通过 **`#{}`** 语法）。可信任的数据（例如，生成的记录计数等）可以不先转义就显示。
 
-您可以在行的开头使用管道（“**|**”）字符来表示“[纯文本](https://pugjs.org/language/plain-text.html)”。例如，下面显示的附加文本，将显示在与前一个锚点相同的行上，但不会链接。
+你可以在行的开头使用管道（“**|**”）字符来表示“[纯文本](https://pugjs.org/language/plain-text.html)”。例如，下面显示的附加文本，将显示在与前一个锚点相同的行上，但不会链接。
 
-```html
+```pug
 a(href='http://someurl/') Link text
 | Plain text
 ```
 
-Pug 允许您使用`if`, `else` , `else if` 和 `unless`执行条件操作 - 例如：
+Pug 允许你使用`if`, `else` , `else if` 和 `unless`执行条件操作 - 例如：
 
-```html
+```pug
 if title
   p A variable named "title" exists
 else
@@ -118,7 +118,7 @@ else
 
 以使用`each-in` 或 `while`语法执行循环/迭代操作。在下面的代码片段中，我们循环遍历数组，以显示变量列表（注意，使用 'li =' 来评估“val” ，以作为下面的变量。）迭代的值也可以传递给模板作为变量！
 
-```html
+```pug
 ul
   each val in [1, 2, 3, 4, 5]
     li= val
@@ -132,7 +132,7 @@ ul
 
 例如，在我们的[骨架项目](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)中，创建的基本模板 **layout.pug**，如下所示：
 
-```html
+```pug
 doctype html
 html
   head
@@ -146,7 +146,7 @@ html
 
 默认的 **index.pug**（为我们的骨架项目所创建），显示了我们如何覆盖基本模板。`extends`标记，标识要使用的基本模板，然后我们使用 `block section_name` ，来指示我们将覆盖的部分的新内容。
 
-```html
+```pug
 extends layout
 
 block content

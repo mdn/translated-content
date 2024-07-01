@@ -1,8 +1,6 @@
 ---
-title: 'WebSocket : évènement close'
+title: "WebSocket : évènement close"
 slug: Web/API/WebSocket/close_event
-translation_of: Web/API/WebSocket/close_event
-browser-compat: api.WebSocket.close_event
 ---
 
 {{APIRef}}
@@ -39,8 +37,8 @@ L'évènement `close` est déclenché lorsqu'une connexion avec une `WebSocket` 
 On peut vouloir savoir lorsque la connexion a été fermée afin de mettre à jour l'interface utilisateur ou, éventuellement, pour sauvegarder des données à propos de la connexion. Soit une variable `socketExemple` qui fait référence à une connexion WebSocket ouverte, le fragment de code suivant gère la situation où la socket a été fermée :
 
 ```js
-socketExemple.addEventListener('close', (event) => {
-  console.log('La connexion a été fermée avec succès.');
+socketExemple.addEventListener("close", (event) => {
+  console.log("La connexion a été fermée avec succès.");
 });
 ```
 
@@ -48,7 +46,7 @@ On peut effectuer les mêmes actions avec la propriété de gestion d'évènemen
 
 ```js
 socketExemple.onclose = function (event) {
-  console.log('La connexion a été fermée avec succès.');
+  console.log("La connexion a été fermée avec succès.");
 };
 ```
 

@@ -1,16 +1,6 @@
 ---
 title: TypedArray.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/join
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/join
 ---
 
 {{JSRef}}
@@ -22,7 +12,7 @@ La méthode **`join()`** fusionne l'ensemble des éléments d'un tableau en une 
 ## Syntaxe
 
 ```js
-typedarray.join([séparateur = ',']);
+typedarray.join([(séparateur = ",")]);
 ```
 
 ### Paramètres
@@ -37,10 +27,10 @@ Une chaîne de caractères formée par la concaténation des différents éléme
 ## Exemples
 
 ```js
-var uint8 = new Uint8Array([1,2,3]);
-uint8.join();      // '1,2,3'
-uint8.join(' / '); // '1 / 2 / 3'
-uint8.join('');    // '123'
+var uint8 = new Uint8Array([1, 2, 3]);
+uint8.join(); // '1,2,3'
+uint8.join(" / "); // '1 / 2 / 3'
+uint8.join(""); // '123'
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -50,8 +40,8 @@ Il n'existe pas d'objet global _TypedArray_, il faut donc ajouter une prothèse 
 ```js
 // https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.join
 if (!Uint8Array.prototype.join) {
-  Object.defineProperty(Uint8Array.prototype, 'join', {
-    value: Array.prototype.join
+  Object.defineProperty(Uint8Array.prototype, "join", {
+    value: Array.prototype.join,
   });
 }
 ```

@@ -2,6 +2,7 @@
 title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 ---
+
 {{JSRef}}
 
 **getTime()** 메서드는 표준시에 따라 지정된 날짜의 시간에 해당하는 숫자 값을 반환합니다.
@@ -11,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 ## Syntax
 
 ```js
-    dateObj.getTime()
+dateObj.getTime();
 ```
 
 ### Return value
@@ -44,7 +45,7 @@ for (var i = 0; i < 1000; i++) {
 }
 end = new Date();
 
-console.log('Operation took ' + (end.getTime() - start.getTime()) + ' msec');
+console.log("Operation took " + (end.getTime() - start.getTime()) + " msec");
 ```
 
 ## 명세

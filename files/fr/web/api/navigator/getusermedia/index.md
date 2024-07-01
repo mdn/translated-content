@@ -1,9 +1,6 @@
 ---
 title: Navigator.getUserMedia()
 slug: Web/API/Navigator/getUserMedia
-translation_of: Web/API/Navigator/getUserMedia
-original_slug: NavigatorUserMedia.getUserMedia
-browser-compat: api.Navigator.getUserMedia
 ---
 
 {{APIRef("Media Capture and Streams")}}{{deprecated_header}}
@@ -52,25 +49,27 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
 Voici un exemple d'utilisation de `getUserMedia()` qui contient notamment les techniques pour gérer la compatibilité avec les différents préfixes des navigateurs. On notera bien que ce qui suit correspond à la façon déconseillée de procéder. Consultez [ces exemples](/fr/docs/Web/API/MediaDevices/getUserMedia#taux_dimages) de la page [`MediaDevices.getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) pour de meilleures pratiques.
 
 ```js
-navigator.getUserMedia = navigator.getUserMedia ||
-                         navigator.webkitGetUserMedia ||
-                         navigator.mozGetUserMedia;
+navigator.getUserMedia =
+  navigator.getUserMedia ||
+  navigator.webkitGetUserMedia ||
+  navigator.mozGetUserMedia;
 
 if (navigator.getUserMedia) {
-   navigator.getUserMedia({ audio: true, video: { width: 1280, height: 720 } },
-      function(stream) {
-         var video = document.querySelector('video');
-         video.src = window.URL.createObjectURL(stream);
-         video.onloadedmetadata = function(e) {
-           video.play();
-         };
-      },
-      function(err) {
-         console.log("L'erreur suivante s'est produite : " + err.name);
-      }
-   );
+  navigator.getUserMedia(
+    { audio: true, video: { width: 1280, height: 720 } },
+    function (stream) {
+      var video = document.querySelector("video");
+      video.src = window.URL.createObjectURL(stream);
+      video.onloadedmetadata = function (e) {
+        video.play();
+      };
+    },
+    function (err) {
+      console.log("L'erreur suivante s'est produite : " + err.name);
+    },
+  );
 } else {
-   console.log("getUserMedia n'est pas pris en charge");
+  console.log("getUserMedia n'est pas pris en charge");
 }
 ```
 

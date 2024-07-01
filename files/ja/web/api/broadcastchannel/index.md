@@ -23,7 +23,7 @@ l10n:
 _このインターフェイスは、その親である {{domxref("EventTarget")}} からもプロパティを継承します。_
 
 - {{domxref("BroadcastChannel.name")}} {{ReadOnlyInline}}
-  - : 文字列で、チャンネルの名前であるを返します。
+  - : チャンネルの名前を表す文字列を返します。
 
 ## インスタンスメソッド
 
@@ -36,10 +36,10 @@ _このインターフェイスは、その親である {{domxref("EventTarget")
 
 ## イベント
 
-- [`message`](/en-US/docs/Web/API/BroadcastChannel/message_event)
+- [`message`](/ja/docs/Web/API/BroadcastChannel/message_event)
   - : メッセージがチャンネルに到着したときに発生します。
     `onmessage` プロパティからも利用できます。
-- [`messageerror`](/en-US/docs/Web/API/BroadcastChannel/messageerror_event)
+- [`messageerror`](/ja/docs/Web/API/BroadcastChannel/messageerror_event)
   - : 逆シリアル化できないメッセージが到着したときに発生します。
     `onmessageerror` プロパティからも利用できます。
 

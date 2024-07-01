@@ -1,11 +1,13 @@
 ---
 title: レンダリングと WebXR フレームアニメーションコールバック
 slug: Web/API/WebXR_Device_API/Rendering
+l10n:
+  sourceCommit: 73b724ad82b94d2a4c314924218367cea2740e97
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}
 
-WebXR 環境をセットアップし、進行中の XR 環境セッションを表す {{domxref("XRSession")}} を作成したら、レンダリングのためにシーンのフレームを XR デバイスに提供する必要があります。 この記事では、{{domxref("XRSession")}} を使用して各フレームを表す {{domxref("XRFrame")}} オブジェクトを取得し、それを使用して、XR デバイスに配信するためのフレームバッファーを準備し、レンダリングループで XR シーンのフレームをデバイスに駆動するプロセスについて説明します。
+WebXR 環境をセットアップし、進行中の XR 環境セッションを表す {{domxref("XRSession")}} を作成したら、レンダリングのためにシーンのフレームを XR 機器に提供する必要があります。 この記事では、{{domxref("XRSession")}} を使用して各フレームを表す {{domxref("XRFrame")}} オブジェクトを取得し、それを使用して、XR 機器に配信するためのフレームバッファーを準備し、レンダリングループで XR シーンのフレームを機器に駆動するプロセスについて説明します。
 
 仮想環境をレンダリングする前に、[`navigator.xr.requestSession()`](/ja/docs/Web/API/XRSystem/requestSession) メソッドを使用して {{domxref("XRSession")}} を作成することにより、WebXR セッションを確立する必要があります。 また、セッションをフレームバッファーに関連付けて、他のセットアップタスクを実行する必要もあります。 これらのセットアップタスクについては、[WebXR セッションの起動と停止](/ja/docs/Web/API/WebXR_Device_API/Startup_and_shutdown)の記事で説明されています。
 
@@ -19,11 +21,12 @@ XR セッションをセットアップし、WebGL フレームバッファー�
 let worldRefSpace;
 
 async function runXR(xrSession) {
-  worldRefSpace = await xrSession.requestReferenceSpace("immersive-vr");
+  worldRefSpace = await xrSession.requestReferenceSpace("local");
 
   if (worldRefSpace) {
     viewerRefSpace = worldRefSpace.getOffsetReferenceSpace(
-        new XRRigidTransform(viewerStartPosition, viewerStartOrientation));
+      new XRRigidTransform(viewerStartPosition, viewerStartOrientation),
+    );
     animationFrameRequestID = xrSession.requestAnimationFrame(myDrawFrame);
   }
 }
@@ -41,7 +44,7 @@ async function runXR(xrSession) {
 
 ### ハードウェア垂直リフレッシュレート
 
-ブラウザーは、WebXR コンテンツが表示されている {{HTMLElement("canvas")}} をリフレッシュする準備ができると、フレームレンダリングコールバックを呼び出します。 このコールバックは、指定されたタイムスタンプと、モデルやテクスチャーなどの他の関連データ、およびアプリケーションの状態を使用して、指定された時刻に表示されるように、シーンを WebGL バックバッファーにレンダリングします。 コールバックが戻ると、ブラウザーは最後に画面がリフレッシュされてから変更されたものと共に、そのバックバッファーをディスプレイまたは XR デバイスに転送します。
+ブラウザーは、WebXR コンテンツが表示されている {{HTMLElement("canvas")}} をリフレッシュする準備ができると、フレームレンダリングコールバックを呼び出します。 このコールバックは、指定されたタイムスタンプと、モデルやテクスチャーなどの他の関連データ、およびアプリケーションの状態を使用して、指定された時刻に表示されるように、シーンを WebGL バックバッファーにレンダリングします。 コールバックが戻ると、ブラウザーは最後に画面がリフレッシュされてから変更されたものと共に、そのバックバッファーをディスプレイまたは XR 機器に転送します。
 
 歴史的に、ディスプレイは毎秒 60 回リフレッシュされています。 これは、タイミングを合わせるために、米国では 1 秒あたり 60 回（ヨーロッパでは 50 回）循環する AC 配電網の電流フロー波形を使用した初期のディスプレイによるものです。 次のように、このことはいくつかの異なる名前で示されていますが、それらはすべて同等またはほぼ同じです。
 
@@ -56,7 +59,7 @@ async function runXR(xrSession) {
 
 ### 各フレームのレンダリングに利用できる時間
 
-これにより、フレーム間で利用可能なほとんどの時間を使用することが重要になります。 ユーザーのデバイスが 60 Hz のディスプレイを使用している場合、コールバックは 1 秒あたり最大 60 回呼び出され、それよりも頻繁に呼び出されることはないので、確実にできることをすることが目標です。 これを実現するには、メインスレッド外で可能な限り実行し、フレームレンダリングのコールバックをできるだけ効率的にします。 以下の図は、時間の 60 Hz ブロックへの分割を示しています。 各ブロックは、少なくとも部分的にシーンのレンダリングに使用されています。
+これにより、フレーム間で利用可能なほとんどの時間を使用することが重要になります。 ユーザーの端末が 60 Hz のディスプレイを使用している場合、コールバックは 1 秒あたり最大 60 回呼び出され、それよりも頻繁に呼び出されることはないので、確実にできることをすることが目標です。 これを実現するには、メインスレッド外で可能な限り実行し、フレームレンダリングのコールバックをできるだけ効率的にします。 以下の図は、時間の 60 Hz ブロックへの分割を示しています。 各ブロックは、少なくとも部分的にシーンのレンダリングに使用されています。
 
 ![フレーム期間あたりのレンダラー実行時間](frames-and-refresh-rate.svg)
 
@@ -114,7 +117,7 @@ async function runXR(xrSession) {
 
 シーンを 2 回レンダリングした後（フレームバッファーの左半分に 1 回、フレームバッファーの右半分に 1 回）、フレームバッファーは XR ハードウェアに送信され、フレームバッファーの各半分が対応する目に表示されます。 これは、多くの場合（常にではありません）、画像を 1 つの画面に描画し、レンズを使用してその画像の正しい半分を各目に転送します。
 
-3D が WebXR によってどのように表現されるかについて詳しくは、[視点とビューアー: WebXR でのカメラのシミュレーション](/ja/docs/Web/API/WebXR_Device_API/Cameras)の [WebXR による 3D の表現](/ja/docs/Web/API/WebXR_Device_API/Cameras#Representing_3D_with_WebXR)をご覧ください。
+3D が WebXR によってどのように表現されるかについて詳しくは、[WebXR による 3D の表現](/ja/docs/Web/API/WebXR_Device_API/Cameras#representing_3d_with_webxr)をご覧ください。
 
 ## シーンを描く
 
@@ -126,7 +129,7 @@ async function runXR(xrSession) {
 
 このバージョンの WebXR レンダリングコールバックでは、比較的単純なプロジェクトに最適な非常に単純なアプローチを使用しています。 この疑似コードは、そのプロセスの概要を示しています。
 
-```js
+```
 for each view in the pose's views list:
   get the WebXR GL layer's viewport
   set the WebGL viewport to match
@@ -140,9 +143,9 @@ for each view in the pose's views list:
     drawMyObject()
 ```
 
-簡単に言えば、この形式のレンダラーは**ビュー優先順**（view-first order）を使用しています。 すべてのオブジェクトを 1 つのビューに描画してから、同じオブジェクトのセットを他のビューにレンダリングして、XR デバイスのディスプレイを構成する 2 つのビューのそれぞれを続けてレンダリングします。 その結果、オブジェクトを描画するために必要なデータの多くは、フレームごとに 2 回 GPU に送信されるため、多くの複製された作業があります。 ただし、これは既存の WebGL コードの移植を簡略化し、多くの場合、この作業を行うのに十分なほど優れているため、最初にこの方法を見ていきます。
+簡単に言えば、この形式のレンダラーは**ビュー優先順**（view-first order）を使用しています。 すべてのオブジェクトを 1 つのビューに描画してから、同じオブジェクトのセットを他のビューにレンダリングして、XR 機器のディスプレイを構成する 2 つのビューのそれぞれを続けてレンダリングします。 その結果、オブジェクトを描画するために必要なデータの多くは、フレームごとに 2 回 GPU に送信されるため、多くの複製された作業があります。 ただし、これは既存の WebGL コードの移植を簡略化し、多くの場合、この作業を行うのに十分なほど優れているため、最初にこの方法を見ていきます。
 
-そのフレームのシーンを構成する次のオブジェクトに進む前に、各オブジェクトを各目に対して 1 回ずつ、2 回続けてレンダリングする（つまり、**オブジェクト優先順**（object-first order）でレンダリングする）代替アプローチについては、[オブジェクト優先順でレンダリングすることによる最適化](/ja/docs/Web/API/WebXR_Device_API/Rendering#Optimizing_by_rendering_in_object-first_order)を参照してください。
+そのフレームのシーンを構成する次のオブジェクトに進む前に、各オブジェクトを各目に対して 1 回ずつ、2 回続けてレンダリングする（つまり、**オブジェクト優先順**（object-first order）でレンダリングする）代替アプローチについては、[オブジェクト優先順でレンダリングすることによる最適化](#オブジェクト優先順でレンダリングすることによる最適化)を参照してください。
 
 #### レンダリングコールバックのサンプル
 
@@ -152,7 +155,7 @@ for each view in the pose's views list:
 let lastFrameTime = 0;
 
 function myDrawFrame(currentFrameTime, frame) {
-  let session = frame.session;
+  const session = frame.session;
   let viewerPose;
 
   // 時間が来たらペイントされる次のフレームをスケジュールします。
@@ -164,7 +167,7 @@ function myDrawFrame(currentFrameTime, frame) {
 
   viewerPose = frame.getViewerPose(viewerRefSpace);
   if (viewerPose) {
-    let glLayer = session.renderState.baseLayer;
+    const glLayer = session.renderState.baseLayer;
     gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 
     // まず、色と奥行きのフレームバッファーを消去します。
@@ -181,8 +184,8 @@ function myDrawFrame(currentFrameTime, frame) {
 
     // 次に、セッションのビューごとにシーンレンダリングコードを1回呼び出します。
 
-    for (let view of viewerPose.views) {
-      let viewport = glLayer.getViewport(view);
+    for (const view of viewerPose.views) {
+      const viewport = glLayer.getViewport(view);
       gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
       myDrawSceneIntoView(view, deltaTime);
     }
@@ -192,9 +195,9 @@ function myDrawFrame(currentFrameTime, frame) {
 
 `myDrawFrame()` 関数は、`frame` パラメーターで指定された {{domxref("XRFrame")}} オブジェクトから {{domxref("XRSession")}} を取得し、セッションの {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} メソッドを呼び出して、次のフレームのレンダリングをすぐにスケジュールします。 これにより、すぐにキューに入ることが保証され、`myDrawFrame()` 関数のこの反復で費やされた残りの時間は、次のフレームを描画するタイミングにカウントされます。
 
-次に、フレームの {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} メソッドを使用して、ビューアーのポーズ（その位置と方向）を表す {{domxref("XRViewerPose")}} オブジェクトを取得し、[WebXR セッションのセットアップ中](/ja/docs/Web/API/WebXR_Device_API/Rendering#Preparing_the_renderer)に以前に取得した `viewerRefSpace` からビューアーの参照空間を渡します。
+次に、フレームの {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} メソッドを使用して、ビューアーのポーズ（その位置と方向）を表す {{domxref("XRViewerPose")}} オブジェクトを取得し、[WebXR セッションのセットアップ中](#preparing_the_renderer)に以前に取得した `viewerRefSpace` からビューアーの参照空間を渡します。
 
-ビューアーのポーズを手にすると、フレームのレンダリングを開始できます。 最初のステップは、WebXR デバイスがフレームを描画したいフレームバッファーへのアクセスを取得することです。 これは、セッションの {{domxref("XRSession.renderState", "renderState")}} オブジェクトの {{domxref("XRRenderState.baseLayer", "baseLayer")}} プロパティからターゲット WebGL レイヤーを取得してから、その {{domxref("XRWebGLLayer")}} オブジェクトから {{domxref("XRWebGLLayer.framebuffer", "framebuffer")}} を取得することによって行われます。 次に、[`gl.bindFrameBuffer()`](/ja/docs/Web/API/WebGLRenderingContext/bindFramebuffer) を呼び出して、今後のすべての描画コマンドのターゲットとしてそのフレームバッファーをバインドします。
+ビューアーのポーズを手にすると、フレームのレンダリングを開始できます。 最初のステップは、WebXR 機器がフレームを描画したいフレームバッファーへのアクセスを取得することです。 これは、セッションの {{domxref("XRSession.renderState", "renderState")}} オブジェクトの {{domxref("XRRenderState.baseLayer", "baseLayer")}} プロパティからターゲット WebGL レイヤーを取得してから、その {{domxref("XRWebGLLayer")}} オブジェクトから {{domxref("XRWebGLLayer.framebuffer", "framebuffer")}} を取得することによって行われます。 次に、[`gl.bindFrameBuffer()`](/ja/docs/Web/API/WebGLRenderingContext/bindFramebuffer) を呼び出して、今後のすべての描画コマンドのターゲットとしてそのフレームバッファーをバインドします。
 
 次のステップは、フレームバッファーを消去することです。 _レンダリングコードがフレームバッファー内のすべてのピクセルを書き込むことが保証されている場合に限り_、理論上はこのステップをスキップできますが、パフォーマンスの全てを最後まで出し切る必要がない限り、とにかくすべてのピクセルに触れていることを確実にするために、描画を開始する前にそれをクリアして、描画を開始するのが一般的に最も安全です。 背景色は、[`gl.clearColor()`](/ja/docs/Web/API/WebGLRenderingContext/clearColor) を使用して完全に不透明な黒に設定します。 奥行きのクリアは、[`gl.cleardepth()`](/ja/docs/Web/API/WebGLRenderingContext/clearDepth) を呼び出して 1.0 に設定します。 これにより、ピクセルが属するオブジェクトがどれだけ離れているかに関係なく、すべてのピクセルがクリアされます。 最後に、フレームのピクセルバッファーと奥行きバッファーは、`COLOR_BUFFER_BIT` と `DEPTH_BUFFER_BIT` の両方を設定したビットマスクを渡して [`gl.clear()`](/ja/docs/Web/API/WebGLRenderingContext/clear) を呼び出して両方とも消去します。
 
@@ -208,19 +211,19 @@ WebXR はすべてのビューに単一のフレームバッファーを使用�
 
 最後に、メソッド `myDrawSceneIntoView()` を呼び出して、実際に WebGL を使用してシーンをレンダリングします。 これには、描画する目を表す {{domxref("XRView")}}（透視マッピング（perspective mapping）などを実行するため）と `deltaTime` を渡します。 これにより、シーン描画コードは、時間とともに移動するオブジェクトの位置を決定するときに経過時間を正確に表すことができます。
 
-ビューを反復するループが終了すると、ビューアーにシーンを提示するために必要なすべての画像がレンダリングされ、戻ると、フレームバッファーは GPU を経由して、最終的には XR デバイスのディスプレイに到達します。 関数の上部で {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} を呼び出してあるので、シーンのアニメーションの次のフレームをレンダリングするときに、コールバックがもう一度呼び出されます。
+ビューを反復するループが終了すると、ビューアーにシーンを提示するために必要なすべての画像がレンダリングされ、戻ると、フレームバッファーは GPU を経由して、最終的には XR 機器のディスプレイに到達します。 関数の上部で {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} を呼び出してあるので、シーンのアニメーションの次のフレームをレンダリングするときに、コールバックがもう一度呼び出されます。
 
 #### このアプローチの欠点
 
 この関数に費やす時間をできるだけ最小限に抑えることが重要であるため、状態変化の処理に費やす時間が長いほど、実際に描画する時間が短くなります。 このテクニックは少数のオブジェクトに対して非常にうまく機能しますが、各オブジェクトのすべてのデータを 2 回（左目に対して 1 回、右目に対して 1 回）再バインドする必要があるため、状態の調整、バッファーとテクスチャーのアップロードなどに、多くの時間を費やしています。 次のセクションでは、これらの状態の変化を大幅に減らし、特にオブジェクト数が増えるにつれて、はるかに高速なレンダリングアプローチを提供する、変更されたアプローチについて説明します。
 
-### オブジェクト優先でレンダリングすることによる最適化
+### オブジェクト優先順でレンダリングすることによる最適化
 
 単一の WebGL フレームバッファーを使用して、左目と右目の両方のビューを単一のフレームバッファーに含めるという WebXR のアプローチの利点は、処理の順序を再配置することにより、レンダリングパフォーマンスを大幅に向上できることです。 特定のビュー（左目など）のビューポートを設定し、左目で見えるすべてのオブジェクトを 1 つずつレンダリングし、各オブジェクトに行ったらバッファーを再構成する代わりに、各オブジェクトをそれぞれの目に 1 回ずつ、2 回続けてレンダリングします。 したがって、両方の目に対してバッファー、ユニフォームなどを 1 回セットアップするだけで済みます。
 
 結果の疑似コードは次のようになります。
 
-```js
+```
 for each object in the scene
   bindProgram()
   bindUniforms()
@@ -274,7 +277,7 @@ function drawFrame(time, frame) {
   const deltaTime = (time - lastFrameTime) * 0.001;
   lastFrameTime = time;
 
-  for (let view of pose.views) {
+  for (const view of pose.views) {
     /* 各ビューのレンダリング */
   }
 }
@@ -285,9 +288,12 @@ function drawFrame(time, frame) {
 経過時間を手に入れれば、レンダリングコードは、すべての移動オブジェクトが経過時間内にどれだけ移動したかを計算する手段を持ちます。 例えば、オブジェクトが回転している場合、次のように回転を適用できます。
 
 ```js
-const xDeltaRotation = (xRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
-const yDeltaRotation = (yRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
-const zDeltaRotation = (zRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
+const xDeltaRotation =
+  xRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
+const yDeltaRotation =
+  yRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
+const zDeltaRotation =
+  zRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
 ```
 
 これは、フレームが最後に描画されてからオブジェクトが 3 つの軸のそれぞれを中心に回転した量を計算します。 これがないと、経過時間に関係なく、シェイプはフレームごとに指定された量だけ回転します。 これにより、多くの場合、かなりのつっかえが発生します。
@@ -338,7 +344,7 @@ WebXR を使用してシーンを表示する際にユーザー入力を処理�
 
 ## 関連情報
 
-- [WebXR の幾何学と参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)
+- [WebXR の形状と参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)
 - [WebXR での空間追跡](/ja/docs/Web/API/WebXR_Device_API/Spatial_tracking)
 - [視点とビューアー: WebXR でのカメラのシミュレーション](/ja/docs/Web/API/WebXR_Device_API/Cameras)
 - [移動、向き、モーション: WebXR の例](/ja/docs/Web/API/WebXR_Device_API/Movement_and_motion)

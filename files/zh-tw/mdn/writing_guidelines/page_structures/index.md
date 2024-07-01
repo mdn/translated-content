@@ -1,7 +1,6 @@
 ---
 title: MDN 內容與風格指南文檔歷史
 slug: MDN/Writing_guidelines/Page_structures
-original_slug: MDN/Guidelines
 ---
 
 {{MDNSidebar}}

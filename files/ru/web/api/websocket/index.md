@@ -1,162 +1,84 @@
 ---
 title: WebSocket
 slug: Web/API/WebSocket
-tags:
-  - API
-  - WebSocket
-  - WebSockets
-translation_of: Web/API/WebSocket
+l10n:
+  sourceCommit: 73b724ad82b94d2a4c314924218367cea2740e97
 ---
 
-Объект **WebSocket** предоставляет API для создания и управления [веб-сокет](/ru/WebSockets)-подключения к серверу, а также для отправки и получения данных в этом подключении.
+{{APIRef("Web Sockets API")}}
 
-Конструктор WebSocket принимает один обязательный и один опциональный параметр:
+Объект `WebSocket` предоставляет API для создания и управления [WebSocket](/ru/docs/Web/API/WebSockets_API)-соединением с сервером, а также для отправки и получения данных через это соединение.
 
+Для создания `WebSocket` используйте конструктор [`WebSocket()`](/ru/docs/Web/API/WebSocket/WebSocket).
+
+{{AvailableInWorkers}}
+
+{{InheritanceDiagram}}
+
+## Конструктор
+
+- {{domxref("WebSocket.WebSocket", "WebSocket()")}}
+  - : Возвращает созданный объект `WebSocket`.
+
+## Свойства экземпляра
+
+- {{domxref("WebSocket.binaryType")}}
+  - : Тип используемых в соединении бинарных данных.
+- {{domxref("WebSocket.bufferedAmount")}} {{ReadOnlyInline}}
+  - : Количество байтов данных в очереди.
+- {{domxref("WebSocket.extensions")}} {{ReadOnlyInline}}
+  - : Расширения, выбранные сервером.
+- {{domxref("WebSocket.protocol")}} {{ReadOnlyInline}}
+  - : Подпротокол, выбранный сервером.
+- {{domxref("WebSocket.readyState")}} {{ReadOnlyInline}}
+  - : Текущее состояние соединения.
+- {{domxref("WebSocket.url")}} {{ReadOnlyInline}}
+  - : Абсолютный URL-адрес WebSocket.
+
+## Методы экземпляра
+
+- {{domxref("WebSocket.close()")}}
+  - : Закрывает соединение.
+- {{domxref("WebSocket.send()")}}
+  - : Добавляет в очередь данные для отправки.
+
+## События
+
+Подписывайтесь на события с помощью `addEventListener()` или присвоением обработчика события свойству `oneventname` этого интерфейса.
+
+- {{domxref("WebSocket/close_event", "close")}}
+  - : Возникает, когда соединение с `WebSocket` закрыто.
+    Также доступно через свойство `onclose`
+- {{domxref("WebSocket/error_event", "error")}}
+  - : Возникает, когда соединение с `WebSocket` было закрыто из-за ошибки, например, когда не удалось отправить какие-то данные.
+    Также доступно через свойство `onerror`.
+- {{domxref("WebSocket/message_event", "message")}}
+  - : Возникает, когда через `WebSocket` получены данные.
+    Также доступно через свойство `onmessage`.
+- {{domxref("WebSocket/open_event", "open")}}
+  - : Возникает, когда соединение с `WebSocket` открыто.
+    Также доступно через свойство `onopen`.
+
+## Примеры
+
+```js
+// Создание WebSocket-соединения.
+const socket = new WebSocket("ws://localhost:8080");
+
+// Соединение открыто
+socket.addEventListener("open", (event) => {
+  socket.send("Hello Server!");
+});
+
+// Получение сообщений
+socket.addEventListener("message", (event) => {
+  console.log("Message from server ", event.data);
+});
 ```
-WebSocket WebSocket(
-  in DOMString url,
-  in optional DOMString protocols
-);
-
-WebSocket WebSocket(
-  in DOMString url,
-  in optional DOMString[] protocols
-);
-```
-
-- `url`
-  - : URL-адрес к которому подключаться; сервер по этому адресу должен ответить на websocket-запрос.
-- `protocols` {{ optional_inline() }}
-  - : Протокол в виде строки или массив строк протоколов. Эти строки используются для определения подпротоколов клиента, т.к. один сервер может поддерживать несколько WebSocket-подпротоколов (например, вы можете захотеть, чтобы один сервер мог обрабатывать разные типы взаимодействия в зависимости от указанного протокола). Если вы не укажете значение протокола, по умолчанию будет использоваться пустая строка.
-
-Конструктор может выбросить исключение:
-
-- `SECURITY_ERR`
-  - : Порт, на который устанавливается подключение заблокирован.
-
-<!---->
-
-## Обзор метода
-
-| `void close(in optional unsigned long code, in optional DOMString reason);` |
-| --------------------------------------------------------------------------- |
-| `void send(in DOMString data);`                                             |
-
-## Атрибуты
-
-| Атрибут          | Тип                                                        | Описание                                                                                                                                                                                                                                                                                                                 |
-| ---------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `binaryType`     | {{ DOMXref("DOMString") }}                       | Строка, указывающая на тип двоичных данных, которые будут переданы по соединению. Это может быть "blob" если будут использованы {{ domxref("Blob") }} объекты или "arraybuffer" если будут использованы объекты [`ArrayBuffer`](/en/JavaScript_typed_arrays/ArrayBuffer) |
-| `bufferedAmount` | [`unsigned long`](/en/unsigned_long)    | Количество байтов данных, которые были поставлены в очередь, используя вызовы [send](#send), но ещё не переданные в сеть. Это значение не сбрасывается в ноль, при закрытии соединения; если продолжить вызывать [send](#send), значение будет расти. **Только чтение.**                                                 |
-| `extensions`     | {{ DOMXref("DOMString") }}                       | Расширения, выбранные сервером. В настоящее время это только пустая строка или список расширений, согласованных соединением.                                                                                                                                                                                             |
-| `onclose`        | {{ domxref("EventListener") }}                   | Обработчик событий, вызываемый, когда `readyState` WebSocket соединения изменяется на `CLOSED`. Наблюдатель получает [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) с именем "close".                                                                    |
-| `onerror`        | {{ domxref("EventListener") }}                   | Обработчик событий, вызываемый, когда происходит ошибка. Это простое событие, называемое "error".                                                                                                                                                                                                                        |
-| `onmessage`      | {{ domxref("EventListener") }}                   | Обработчик событий , вызываемый, когда получается сообщение с сервера. Наблюдатель получает [`MessageEvent`](en-US/docs/Web/API/MessageEvent), называемое "message".                                                                                                                   |
-| `onopen`         | {{ domxref("EventListener") }}                   | Наблюдатель событий, вызываемый, когда `readyState` WebSocket - соединения изменяется на `OPEN`; это показывает, что соединение готово отсылать и принимать данные. Это простое событие, называемое "open".                                                                                                              |
-| `protocol`       | {{ DOMXref("DOMString") }}                       | Строка, обозначающая имя подпротокола выбранного сервера; это будет одной из строк, указываемой в параметре `protocols` при создании WebSocket - объекта.                                                                                                                                                                |
-| `readyState`     | [`unsigned short`](/en/unsigned_short) | Текущее состояние подключения; это одно из [Ready state constants](#ready_state_constants). **Только для чтения**.                                                                                                                                                                                               |
-| `url`            | {{ DOMXref("DOMString") }}                       | URL, создаваемый конструктором. Это всегда абсолютный URL. **Только для чтения.**                                                                                                                                                                                                                                        |
-
-## Константы
-
-### Константы состояния готовности
-
-Эти константы используются атрибутом `readyState` для описания состояния WebSocket - подключения
-
-| Константа    | Значение | Описание                                      |
-| ------------ | -------- | --------------------------------------------- |
-| `CONNECTING` | `0`      | Соединение ещё не открыто.                    |
-| `OPEN`       | `1`      | Соединение открыто и готово к обмену данными. |
-| `CLOSING`    | `2`      | Соединение в процессе закрытия.               |
-| `CLOSED`     | `3`      | Соединение закрыто или не может открыться.    |
-
-## Методы
-
-### close()
-
-Закрывает WebSocket - подключение или заканчивает попытку подключения. Если подключение уже закрыто, этот метод не делает ничего.
-
-```
-void close(
-  in optional unsigned short code,
-  in optional DOMString reason
-);
-```
-
-###### Параметры
-
-- `code` {{ optional_inline() }}
-  - : Числовое значение, обозначающее статус-код, описывающий почему подключение будет закрыто. Если параметр не указан, значение по умолчанию равно 1000(обозначает "обмен завершён"). Смотрите [list of status codes](en-US/docs/Web/API/CloseEvent#properties) для [`CloseEvent`](en-US/docs/Web/API/CloseEvent), чтобы узнать разрешённые значения.
-- `reason` {{ optional_inline() }}
-  - : Читаемая человеком строка, объясняющая, почему подключение закрывается. Строка должна быть не длиннее, чем 123 байта UTF-8 текста (**не** символов).
-
-###### Возможные исключения
-
-- `INVALID_ACCESS_ERR`
-  - : Указан неверный `code`.
-- `SYNTAX_ERR`
-  - : Строка `reason` слишком длинные или содержит непарные суррогаты.
-
-###### Примечания
-
-В Gecko этот метод не поддерживает никакие параметры включительно до Gecko 8.0 {{ geckoRelease("8.0") }}.
-
-### send()
-
-Передаёт данные на сервер через WebSocket - соединение.
-
-```
-void send(
-  in DOMString data
-);
-
-void send(
-  in ArrayBuffer data
-);
-
-void send(
-  in Blob data
-);
-```
-
-###### Параметры
-
-- `data`
-  - : Текстовая строка, которая будет отправлена на сервер.
-
-###### Возможные исключения
-
-- `INVALID_STATE_ERR`
-  - : Соединение ещё не открыто.
-- `SYNTAX_ERR`
-  - : Строка `data` содержит непарные суррогаты
-
-> **Примечание:** **Заметьте:** Gecko - реализация метода `send()` несколько отличается от специфицированной в {{Gecko("6.0")}}; Gecko возвращает `boolean`, обозначающий, открыто ли соединение до сих пор (и, в дополнение, были ли доставлены данные); это было исправлено в {{Gecko("8.0")}}.
->
-> Начиная с {{Gecko("11.0")}}, поддержка [`ArrayBuffer`](/en/JavaScript_typed_arrays/ArrayBuffer) была реализована, но не {{ domxref("Blob") }} типы данных.
 
 ## Спецификации
 
-| **Спецификация**                                                                                                 | **Статус**                       |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName("HTML WHATWG", "web-sockets.html#the-websocket-interface", "WebSocket")}} | {{Spec2("HTML WHATWG")}} |
-
-## Пример
-
-```js
-// Создаёт WebSocket - подключение.
-const socket = new WebSocket('ws://localhost:8080');
-
-// Соединение открыто
-socket.addEventListener('open', function (event) {
-    socket.send('Hello Server!');
-});
-
-// Наблюдает за сообщениями
-socket.addEventListener('message', function (event) {
-    console.log('Message from server ', event.data);
-});
-```
+{{Specifications}}
 
 ## Совместимость с браузерами
 
@@ -164,5 +86,4 @@ socket.addEventListener('message', function (event) {
 
 ## Смотрите также
 
-- [Writing WebSocket client applications](/en/WebSockets/Writing_WebSocket_client_applications)
-- [HTML5: WebSockets](http://dev.w3.org/html5/websockets/)
+- [Написание клиентских приложений с помощью веб-сокетов](/ru/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
