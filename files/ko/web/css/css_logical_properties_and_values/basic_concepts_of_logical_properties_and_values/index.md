@@ -11,7 +11,7 @@ l10n:
 
 ## 논리적 속성이 유용한 이유
 
-CSS 2.1과 이전 버전에서는 화면의 물리적 크기를 따라 요소의 크기를 설정해왔습니다. 그렇기 떄문에 박스를 {{CSSxRef("width")}} 와 {{CSSxRef("height")}} 로 표현했고, 아이템은 `top` 과 `left` 에서부터 위치시키고, 테두리, 바깥 여백, 그리고 안쪽 여백을 `top`, `right`, `bottom`, `left` 등에 할당했습니다. 논리적 속성과 값 모듈은 이러한 {{glossary("physical properties")}} 와 값의 매핑하여 흐름 상대적으로 `start` 와 `end` 를 이용하여 `left` 및 `right`/`top` 및 `bottom` 을 대신하여 정의합니다.
+CSS 2.1과 이전 버전에서는 화면의 물리적 크기를 따라 요소의 크기를 설정해왔습니다. 그렇기 떄문에 박스를 {{CSSxRef("width")}} 와 {{CSSxRef("height")}} 로 표현했고, 아이템은 `top` 과 `left` 에서부터 위치시키고, 테두리, 바깥 여백, 그리고 안쪽 여백을 `top`, `right`, `bottom`, `left` 등에 할당했습니다. 논리적 속성과 값 모듈은 이러한 {{glossary("physical properties")}} 와 값을 논리적이거나 흐름 상대적인 값에 매핑합니다. 예로 `left`와 `right`, `top` 과 `bottom` 대신에 `start`와 `end`를 이용합니다.
 
 이러한 매핑은 원래의 레이아웃과 다른 쓰기 모드의 언어로 번역되는 사이트에서 매우 유용합니다. 예를 들어, CSS 그리드 레이아웃에서는, 만일 그리드 컨테이너가 그리드 요소들을 정렬하기 위해 {{CSSxRef("align-self")}} 와 {{CSSxRef("justify-self")}} 속성이 적용된 너비를 가지고 있을 때, 이 속성은 흐름 상대적이기 때문에 `justify-self: start` 는 요소를 인라인 차원의 시작 지점에 요소들을 정렬하고, `align-self: start` 는 블록 차원에서의 시작 지점에 요소들을 정렬합니다.
 
