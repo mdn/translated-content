@@ -96,11 +96,11 @@ console.log(o.anotherValue); // 5
 
 ## 같이 보기
 
-- [Polyfill of `Object.prototype.__defineSetter__` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [`core-js`에서의 `Object.prototype.__defineSetter__` 폴리필](https://github.com/zloirock/core-js#ecmascript-object)
 - [`Object.prototype.__defineGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - {{jsxref("Functions/set", "set")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__lookupGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
 - [`Object.prototype.__lookupSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-- [JS Guide: Defining Getters and Setters](/ko/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)
+- [JS 안내서: 접근자와 설정자 정의하기](/ko/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)
 - [Firefox bug 647423](https://bugzil.la/647423)
