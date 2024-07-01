@@ -74,7 +74,6 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 
 - {{SVGAttr("edgeMode")}}
 - {{SVGAttr("elevation")}}
-- {{SVGAttr("enable-background")}}
 - {{SVGAttr("end")}}
 - {{SVGAttr("exponent")}}
 
@@ -388,7 +387,6 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 - {{SVGAttr("direction")}}
 - {{SVGAttr("display")}}
 - {{SVGAttr("dominant-baseline")}}
-- {{SVGAttr("enable-background")}}
 - {{SVGAttr("fill")}}
 - {{SVGAttr("fill-opacity")}}
 - {{SVGAttr("fill-rule")}}
