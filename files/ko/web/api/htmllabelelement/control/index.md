@@ -1,5 +1,5 @@
 ---
-title: "HTMLLabelElement: control property"
+title: "HTMLLabelElement: control 속성"
 short-title: control
 slug: Web/API/HTMLLabelElement/control
 l10n:
@@ -9,7 +9,7 @@ l10n:
 {{APIRef("HTML DOM")}}
 
 읽기 전용인 **`HTMLLabelElement.control`** 속성은
-{{HTMLElement("label")}} 요소와 연관되어 있는 컨트롤을 참조합니다.
+{{HTMLElement("label")}} 요소와 연관되어 있는 컨트롤을 참조하여 반환합니다.
 (폼에서는 {{domxref("HTMLElement")}} 타입 혹은 그 파생 객체입니다.)
 만일 라벨이 컨트롤과 연관되어 있지 않다면 `null` 을 반환합니다.
 
