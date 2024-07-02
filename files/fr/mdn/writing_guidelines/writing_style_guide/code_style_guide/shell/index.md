@@ -12,9 +12,9 @@ Les directives suivantes expliquent comment rédiger des exemples de lignes de c
 Un _shell_ est un programme qui attend que vous tapiez une commande et que vous appuyiez sur la touche retour. Pour indiquer les commandes que vous devez taper, la documentation MDN les répertorie dans un bloc de code, similaire aux exemples de code. Un tel bloc ressemble à ceci :
 
 ```bash example-good
-# Cela peut prendre un certain temps…
-hg clone https://hg.mozilla.org/mozilla-central/ firefox
-cd firefox
+# This may take a while...
+git clone https://github.com/mdn/content
+cd content
 ```
 
 ## Directives
