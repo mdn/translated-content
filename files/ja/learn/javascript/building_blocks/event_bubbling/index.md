@@ -1,6 +1,7 @@
 ---
 title: イベントターゲットの比較
-slug: Web/API/Event/Comparison_of_Event_Targets
+slug: Learn/JavaScript/Building_blocks/Event_bubbling
+original_slug: Web/API/Event/Comparison_of_Event_Targets
 l10n:
   sourceCommit: 196cc4ff3068a59b962a3fe1cbb960eb72ef542b
 ---
