@@ -4161,10 +4161,6 @@
       "enlinea777"
     ]
   },
-  "Web/API/Fetch_API/Basic_concepts": {
-    "modified": "2019-03-18T21:24:00.327Z",
-    "contributors": ["IsraelFloresDGA"]
-  },
   "Web/API/Fetch_API/Using_Fetch": {
     "modified": "2020-12-08T11:29:15.934Z",
     "contributors": [
@@ -14049,6 +14045,10 @@
   "conflicting/Web/API/EventTarget/addEventListener": {
     "modified": "2019-03-23T22:49:37.176Z",
     "contributors": ["gdlm91", "japho"]
+  },
+  "conflicting/Web/API/Fetch_API/Using_Fetch": {
+    "modified": "2019-03-18T21:24:00.327Z",
+    "contributors": ["IsraelFloresDGA"]
   },
   "conflicting/Web/API/Geolocation": {
     "modified": "2019-03-23T23:01:31.642Z",

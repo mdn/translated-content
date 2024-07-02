@@ -3557,6 +3557,10 @@
       "ppphp"
     ]
   },
+  "Learn/JavaScript/Building_blocks/Event_bubbling": {
+    "modified": "2019-03-18T21:17:15.255Z",
+    "contributors": ["zhuangyin"]
+  },
   "Learn/JavaScript/Building_blocks/Events": {
     "modified": "2020-08-04T06:06:58.173Z",
     "contributors": [
@@ -9176,10 +9180,6 @@
       "jinyc",
       "TigerSoldier"
     ]
-  },
-  "Web/API/Event/Comparison_of_Event_Targets": {
-    "modified": "2019-03-18T21:17:15.255Z",
-    "contributors": ["zhuangyin"]
   },
   "Web/API/Event/Event": {
     "modified": "2020-10-15T21:37:04.498Z",
