@@ -33,7 +33,7 @@ let removing = browser.tabs.removeCSS(
     - `allFrames` {{optional_inline}}
       - `boolean`。如果为 `true`，则从当前页面的所有框架中移除 CSS。如果为 `false`，则只从顶层框架中移除。默认为 `false`。
     - `code` {{optional_inline}}
-      - `string`。要移除的 CSS，作为文本字符串。这个字符串必须与之前使用 {{WebExtAPIRef("tabs.insertCSS()")}} 插入到页面中的 CSS 字符串完全匹配。
+      - `string`。要删除的 CSS 的文本字符串。这个字符串必须与之前使用 {{WebExtAPIRef("tabs.insertCSS()")}} 插入到页面中的 CSS 字符串完全匹配。
     - `cssOrigin` {{optional_inline}}
       - `string`。可以取两个值之一：“user”，表示作为用户样式表添加的 CSS；“author”，表示作为作者样式表添加的 CSS。如果之前通过 {{WebExtAPIRef("tabs.insertCSS()")}} 设置了这个选项，则它必须完全匹配。
     - `file` {{optional_inline}}
