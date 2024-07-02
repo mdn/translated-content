@@ -9,8 +9,3 @@ slug: WebAssembly/Reference
 - [`變數相關指令`](/zh-TW/docs/WebAssembly/Reference/Variables)
 - [`記憶體相關指令`](/zh-TW/docs/WebAssembly/Reference/Memory)
 - [`控制流相關指令`](/zh-TW/docs/WebAssembly/Reference/Control_flow)
-<!-- These pages are not written yet
-- [`Vector/SIMD instructions`](/zh-TW/docs/WebAssembly/Reference/Vector)
-- [`Reference instructions`](/zh-TW/docs/WebAssembly/Reference/Reference)
-- [`Table instructions`](/zh-TW/docs/WebAssembly/Reference/Table)
-  -->

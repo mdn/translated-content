@@ -10,7 +10,7 @@ WebAssembly 控制流相關指令。
 - [`block`](/zh-TW/docs/WebAssembly/Reference/Control_flow/block)
   - : 建立一個區塊標籤，事後可以用 [`br`](/zh-TW/docs/WebAssembly/Reference/Control_flow/br) 讓程式跳出該區塊標籤。
 - [`br`](/zh-TW/docs/WebAssembly/Reference/Control_flow/br)
-  - : 讓程式跳躍至某一 loop 或是 block。
+  - : 讓程式跳躍至某一迴圈或是區塊。
 - [`call`](/zh-TW/docs/WebAssembly/Reference/Control_flow/call)
   - : 執行某一函數。
 - [`drop`](/zh-TW/docs/WebAssembly/Reference/Control_flow/Drop)
@@ -26,6 +26,6 @@ WebAssembly 控制流相關指令。
 - [`return`](/zh-TW/docs/WebAssembly/Reference/Control_flow/return)
   - : 處理函數的回傳。
 - [`select`](/zh-TW/docs/WebAssembly/Reference/Control_flow/Select)
-  - : Selects one of its first two operands based on a boolean condition.
+  - : 根據布林條件，從前兩個運算元中選擇其中之一。
 - [`unreachable`](/zh-TW/docs/WebAssembly/Reference/Control_flow/unreachable)
   - : 表示程式不應該執行到此段。
