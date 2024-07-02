@@ -9,7 +9,7 @@ l10n:
 
 移动一个或多个标签页到同一窗口中的新位置或不同窗口中。
 
-只能将标签页移动到和从其 {{WebExtAPIRef('windows.WindowType', 'WindowType')}} 属性为 `"normal"` 的窗口中。
+只能将标签页移动到 {{WebExtAPIRef('windows.WindowType', 'WindowType')}} 属性为 `"normal"` 的窗口，或在 {{WebExtAPIRef('windows.WindowType', 'WindowType')}} 属性为 `"normal"` 的窗口中移动标签页。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -25,7 +25,7 @@ let moving = browser.tabs.move(
 ### 参数
 
 - `tabIds`
-  - : 整数或整数数组。要移动的标签页的 ID，或标签页 ID 数组。
+  - : 整数或整数数组。要移动的{{WebExtAPIRef('tabs.Tab', '标签页', '', 'nocode')}}的 ID，或标签页 ID 数组。
 - `moveProperties`
 
   - : `object`。指定标签页移动目标的对象。
@@ -38,11 +38,11 @@ let moving = browser.tabs.move(
 
         如果传递一个小于 -1 的值，函数将抛出错误。
 
-        注意，不能将固定标签页移动到未固定标签页之后的位置，也不能将任何未固定标签页移动到固定标签页之前的位置。例如，如果目标窗口中有一个或多个固定标签页，并且 `tabIds` 引用的是一个未固定标签页，则不能在此处传递 0。如果尝试这样做，函数将悄悄失败（不会抛出错误）。
+        注意，不能将固定标签页移动到未固定标签页之后的位置，也不能将任何未固定标签页移动到固定标签页之前的位置。例如，如果目标窗口中有一个或多个固定标签页，并且 `tabIds` 引用的是一个未固定标签页，则不能在此处传递 0。如果尝试这样做，函数将静默失败（不会抛出错误）。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在所有移动的标签页都完成移动时其会兑现一个 `{{WebExtAPIRef('tabs.Tab')}}` 对象或包含移动标签页详情的对象数组。如果没有标签页被移动（例如，因为尝试将一个未固定标签页移动到一个固定标签页之前），则返回一个空数组。如果发生任何错误，promise 将会被拒绝并返回错误信息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在所有移动的标签页都完成移动时其会兑现为一个 `{{WebExtAPIRef('tabs.Tab')}}` 对象或包含多个 `{{WebExtAPIRef('tabs.Tab')}}` 对象的数组，其中每个 `{{WebExtAPIRef('tabs.Tab')}}` 对象包含了已进行移动的标签页的详情。如果没有标签页被移动（例如，因为尝试将一个未固定标签页移动到一个固定标签页之前），则返回一个空数组。如果发生任何错误，promise 将会被拒绝并返回错误信息。
 
 ## 示例
 
@@ -94,7 +94,7 @@ browser.browserAction.onClicked.addListener(() => {
 });
 ```
 
-将所有通过 HTTP 或 HTTPS 提供的来自 \*.mozilla.org 的标签页移动到第一个这样的标签页所在窗口的开头位置（索引为 0）：
+将所有通过 HTTP 或 HTTPS 提供的来自 \*.mozilla.org 的标签页移动到第一个这样的标签页所在窗口，从 0 号位置开始：
 
 ```js
 function onMoved(tab) {
