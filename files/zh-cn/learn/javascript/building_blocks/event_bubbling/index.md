@@ -1,10 +1,9 @@
 ---
-title: Comparison of Event Targets
+title: 事件冒泡
 slug: Learn/JavaScript/Building_blocks/Event_bubbling
-original_slug: Web/API/Event/Comparison_of_Event_Targets
 ---
 
-{{ ApiRef() }}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Events","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
 ### Event targets
 
@@ -20,10 +19,10 @@ There are 5 targets to consider:
       <th>Purpose</th>
     </tr>
     <tr>
-      <td><a href="/en/DOM/event.target">event.target</a></td>
+      <td><a href="/zh-CN/docs/Web/API/Event/target">event.target</a></td>
       <td>
         <a
-          href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-interface"
+          href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-interface"
           >DOM Event Interface</a
         >
       </td>
@@ -37,22 +36,22 @@ There are 5 targets to consider:
       </td>
     </tr>
     <tr>
-      <td><a href="/en/DOM/event.currentTarget">event.currentTarget</a></td>
+      <td><a href="/zh-CN/docs/Web/API/Event/currentTarget">event.currentTarget</a></td>
       <td>
         <a
-          href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-interface"
+          href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-interface"
           >DOM Event Interface</a
         >
       </td>
       <td>
         The
         <a
-          href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget"
+          href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget"
           ><code>EventTarget</code></a
         >
         whose
         <a
-          href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener"
+          href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener"
           ><code>EventListeners</code></a
         >
         are currently being processed. As the event capturing and bubbling
@@ -60,10 +59,10 @@ There are 5 targets to consider:
       </td>
     </tr>
     <tr>
-      <td><a href="/en/DOM/event.relatedTarget">event.relatedTarget</a></td>
+      <td><a href="/zh-CN/docs/Web/API/Event/relatedTarget">event.relatedTarget</a></td>
       <td>
         <a
-          href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-MouseEvent"
+          href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-MouseEvent"
           >DOM MouseEvent Interface</a
         >
       </td>
@@ -71,7 +70,7 @@ There are 5 targets to consider:
     </tr>
     <tr>
       <td>
-        <a href="/en/DOM/event.explicitOriginalTarget"
+        <a href="/zh-CN/docs/Web/API/Event/explicitOriginalTarget"
           >event.explicitOriginalTarget</a
         >
       </td>
@@ -94,7 +93,7 @@ There are 5 targets to consider:
       </td>
     </tr>
     <tr>
-      <td><a href="/en/DOM/event.originalTarget">event.originalTarget</a></td>
+      <td><a href="/zh-CN/docs/Web/API/Event/originalTarget">event.originalTarget</a></td>
       <td>
         <a
           href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl"
