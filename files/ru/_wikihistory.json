@@ -2252,6 +2252,10 @@
     "modified": "2020-07-16T22:31:31.342Z",
     "contributors": ["chergav", "ConstantineZz", "slychai85"]
   },
+  "Learn/JavaScript/Building_blocks/Event_bubbling": {
+    "modified": "2019-03-18T21:46:09.700Z",
+    "contributors": ["ademaro"]
+  },
   "Learn/JavaScript/Building_blocks/Events": {
     "modified": "2020-08-14T06:15:51.092Z",
     "contributors": [
@@ -4953,10 +4957,6 @@
   "Web/API/Event": {
     "modified": "2019-08-14T12:21:25.951Z",
     "contributors": ["pk.prog", "emil4", "Sasha4ever"]
-  },
-  "Web/API/Event/Comparison_of_Event_Targets": {
-    "modified": "2019-03-18T21:46:09.700Z",
-    "contributors": ["ademaro"]
   },
   "Web/API/Event/Event": {
     "modified": "2020-10-15T21:57:32.652Z",
