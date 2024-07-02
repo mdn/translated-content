@@ -13,7 +13,7 @@ l10n:
 
 你可以将代码注入到其 URL 可以用[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)表示的页面中。为此，其协议必须是以下之一：`http`、`https` 或 `file`。
 
-你必须拥有页面 URL 的权限。无论是明确的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)，还是通过 [activeTab 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission)。请注意，一些特殊页面不允许此权限，包括阅读器视图、view-source 以及 PDF 查看器页面。
+你必须拥有页面 URL 的权限。无论是明确的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)，还是通过 [activeTab 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_权限)。请注意，一些特殊页面不允许此权限，包括阅读器视图、view-source 以及 PDF 查看器页面。
 
 你还可以将代码注入到你自己扩展中打包的页面：
 
@@ -77,7 +77,7 @@ let executing = browser.tabs.executeScript(
       - : `string`。包含要注入代码的文件的路径。
 
         - 在 Firefox 中，不从扩展根目录开始的相对 URL 相对于当前页面 URL 解析。
-        - 在 Chrome 中，这些 URL 相对于扩展的基本 URL 解析。
+        - 在 Chrome 中，这些 URL 相对于扩展的根 URL 解析。
 
         为了跨浏览器工作，可以指定从扩展根目录开始的相对 URL，如：`"/path/to/script.js"`。
 
@@ -89,7 +89,7 @@ let executing = browser.tabs.executeScript(
 
     - `matchAboutBlank` {{optional_inline}}
 
-      - : `boolean`。如果为 `true`，代码将注入到嵌入的 `about:blank` 和 `about:srcdoc` 框架中，如果你的扩展具有访问其父文档的权限。代码不能插入顶层 `about:` 框架中。
+      - : `boolean`。如果为 `true`，且你的扩展具有访问其父文档的权限，代码将注入到内嵌的 `about:blank` 和 `about:srcdoc` 框架中。代码不能注入到顶层 `about:` 框架中。
 
         默认为 `false`。
 
@@ -112,7 +112,7 @@ foo;
 
 在这里，结果数组将包含字符串 `"my result"` 作为元素。
 
-结果值必须是[结构化可克隆](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)的（请参见[数据克隆算法](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)）。
+结果值必须是[可结构化克隆](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)的（请参见[数据克隆算法](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#数据克隆算法)）。
 
 > **备注：** 最后一个语句也可能是一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，但 [webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript) 库不支持此功能。
 
