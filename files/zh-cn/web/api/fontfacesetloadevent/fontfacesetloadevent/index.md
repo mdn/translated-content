@@ -21,7 +21,7 @@ new FontFaceSetLoadEvent(type, options)
 - `type`
   - : 包含事件名称的字符串。它区分大小写，且浏览器总是将其设置为 `loading`、`loadingdone` 或 `loadingerror`。
 - `options` {{optional_inline}}
-  - : 一个对象，该对象*除了在 {{domxref("Event/Event", "Event()")}} 中定义的属性之外*，还可以具有以下属性：
+  - : 一个对象，_除了在 {{domxref("Event/Event", "Event()")}} 中定义的属性之外_，该对象还具有以下属性：
     - `fontfaces` {{optional_inline}}
       - : 一个 {{domxref("FontFace")}} 实例数组，默认值是空数组。
 
