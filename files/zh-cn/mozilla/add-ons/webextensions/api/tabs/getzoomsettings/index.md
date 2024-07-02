@@ -26,7 +26,7 @@ let gettingZoomSettings = browser.tabs.getZoomSettings(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 {{WebExtAPIRef('tabs.ZoomSettings')}} 对象，表示标签页的当前缩放设置。如果找不到标签页或发生其他错误，promise 将会被拒绝并返回错误信息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 {{WebExtAPIRef('tabs.ZoomSettings')}} 对象，表示标签页的当前缩放设置。如果找不到标签页或发生其他错误，promise 将会以错误信息拒绝。
 
 ## 示例
 
