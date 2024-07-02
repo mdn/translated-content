@@ -2,7 +2,7 @@
 title: 100 Continue
 slug: Web/HTTP/Status/100
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: b085d5418eb8ef812682e647045746221bad0e7e
 ---
 
 {{HTTPSidebar}}
@@ -20,10 +20,6 @@ HTTP **`100 Continue`** 資訊回應碼表示到目前為止一切正常，用�
 ## 規範
 
 {{Specifications}}
-
-## 瀏覽器相容性
-
-{{Compat}}
 
 ## 參見
 
