@@ -9,7 +9,7 @@ l10n:
 
 [CSS 字体加载 API](/zh-CN/docs/Web/API/CSS_Font_Loading_API) 的 **`FontFaceSetLoadEvent`** 接口表示事件在 {{domxref("FontFaceSet")}} 开始加载字体集之后被触发。
 
-当字体加载开始 ([`loading`](/zh-CN/docs/Web/API/FontFaceSet/loading_event))、加载完成 ([`loadingdone`](/zh-CN/docs/Web/API/FontFaceSet/loadingdone_event)) 或加载其中一种字体产生错误 ([`loadingerror`](/zh-CN/docs/Web/API/FontFaceSet/loadingerror_event)) 时，会触发事件。
+当字体加载开始（[`loading`](/zh-CN/docs/Web/API/FontFaceSet/loading_event)）、加载完成（[`loadingdone`](/zh-CN/docs/Web/API/FontFaceSet/loadingdone_event)）或加载其中一种字体产生错误（[`loadingerror`](/zh-CN/docs/Web/API/FontFaceSet/loadingerror_event)）时，会触发事件。
 
 {{InheritanceDiagram}}
 
@@ -20,7 +20,7 @@ l10n:
 
 ## 实例属性
 
-_也从其父 {{domxref("Event")}} 继承实例属性。_
+_也从其父接口 {{domxref("Event")}} 继承实例属性。_
 
 - {{domxref("FontFaceSetLoadEvent.fontfaces")}} {{ReadOnlyInline}}
   - : 返回 {{domxref("FontFace")}} 实例的数组。
@@ -28,7 +28,7 @@ _也从其父 {{domxref("Event")}} 继承实例属性。_
 
 ## 实例方法
 
-_从其父 {{domxref("Event")}} 继承方法。_
+_从其父接口 {{domxref("Event")}} 继承方法。_
 
 ## 规范
 
