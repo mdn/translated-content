@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-给定一个标签页 ID，获取该标签页的详细信息作为 {{WebExtAPIRef("tabs.Tab")}} 对象。
+给定一个标签页 ID，获取表示该标签页详细信息的{{WebExtAPIRef("tabs.Tab")}} 对象。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -26,7 +26,7 @@ let getting = browser.tabs.get(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含标签页信息的 {{WebExtAPIRef('tabs.Tab')}} 对象。如果发生任何错误，则该 promise 将被拒绝并带有错误消息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含标签页信息的 {{WebExtAPIRef('tabs.Tab')}} 对象。如果发生任何错误，则该 promise 将以错误消息拒绝。
 
 ## 示例
 
