@@ -9,7 +9,7 @@ l10n:
 
 获取一个包含当前脚本所在标签页信息的 {{WebExtAPIRef("tabs.Tab")}} 对象。
 
-> **备注：** 此函数只在存在浏览器标签页的上下文中有用，例如[选项页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages)。
+> **备注：** 此函数只在浏览器标签页的上下文中有用，例如[选项页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#选项页面)。
 >
 > 如果在后台脚本或弹出窗口中调用该函数，它将返回 `undefined`。
 
@@ -27,7 +27,7 @@ const gettingCurrent = browser.tabs.getCurrent()
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，其会兑现一个包含当前标签页信息的 {{WebExtAPIRef('tabs.Tab')}} 对象。如果发生任何错误，promise 将会被拒绝并返回错误信息。
+一个 {{jsxref("Promise")}}，其会兑现一个包含当前标签页信息的 {{WebExtAPIRef('tabs.Tab')}} 对象。如果发生任何错误，promise 将会以错误信息拒绝。
 
 ## 示例
 
