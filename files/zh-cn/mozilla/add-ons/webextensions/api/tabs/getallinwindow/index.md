@@ -28,7 +28,7 @@ let getting = browser.tabs.getAllInWindow(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，它将会被包含该窗口中所有标签页信息的 `{{WebExtAPIRef('tabs.Tab')}}` 对象数组解决。如果找不到窗口或发生其他错误，则该 promise 将被拒绝并带有错误消息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，它将会兑现包含该窗口中所有标签页信息的 {{WebExtAPIRef('tabs.Tab')}} 对象数组。如果找不到窗口或发生其他错误，则该 promise 将以错误消息拒绝。
 
 ## 浏览器兼容性
 
