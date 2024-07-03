@@ -1,5 +1,5 @@
 ---
-title: CanvasPattern.setTransform()
+title: CanvasPattern：setTransform() 方法
 slug: Web/API/CanvasPattern/setTransform
 l10n:
   sourceCommit: daeff1a2efaae366bcc8b6d911d86985646e665e
@@ -22,7 +22,7 @@ setTransform(matrix)
 
 ### 返回值
 
-无 ({{jsxref("undefined")}})。
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
