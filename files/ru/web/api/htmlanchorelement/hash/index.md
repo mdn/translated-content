@@ -1,25 +1,37 @@
 ---
-title: HTMLHyperlinkElementUtils.hash
+title: "HTMLAnchorElement: свойство hash"
 slug: Web/API/HTMLAnchorElement/hash
+l10n:
+  sourceCommit: 9198f194be8bfa585826df90a72779c10dfbd49d
 ---
 
-{{ APIRef("URLUtils") }}
+{{ APIRef("HTML DOM") }}
 
-Свойство **`HTMLHyperlinkElementUtils.hash`** – это {{domxref("USVString")}}, содержащий `'#'` с последующим идентификатором. Идентификатор не декодирован.
+Свойство **`HTMLHyperlinkElementUtils.hash`** возвращает строку, содержащую `'#'` с последующим якорем URL.
 
-## Синтаксис
+Якорь URL [закодирован](https://en.wikipedia.org/wiki/Percent-encoding). Если в URL нет якоря, это свойство содержит пустую строку (`""`).
 
-```
-string = object.hash;
-object.hash = string;
-```
+## Значение
+
+Строка.
 
 ## Примеры
 
+### Получение якоря из ссылки
+
+При наличии такой ссылки
+
+```html
+<a id="myAnchor" href="/ru/docs/Web/API/HTMLAnchorElement/hash#примеры">
+  Примеры
+</a>
+```
+
+можно получить из неё якорь таким образом:
+
 ```js
-// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/ru/docs/HTMLHyperlinkElementUtils.href#youhou">
-var anchor = document.getElementByID("myAnchor");
-var result = anchor.hash; // Вернёт: '#youhou'
+const anchor = document.getElementById("myAnchor");
+anchor.hash; // '#примеры'
 ```
 
 ## Спецификации
@@ -32,4 +44,4 @@ var result = anchor.hash; // Вернёт: '#youhou'
 
 ## Смотрите также
 
-- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.
+- Интерфейс {{domxref("HTMLAnchorElement")}}.
