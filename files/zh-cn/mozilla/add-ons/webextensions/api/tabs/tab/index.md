@@ -17,7 +17,7 @@ l10n:
 
   - : `boolean`。标签页是否在其窗口中处于活动状态。即使标签页的窗口当前未被聚焦，此属性也可能为 true。
 
-    活动标签页通常是选定的标签页。但是，在 Firefox for Android 上，扩展弹出窗口会在新标签页中打开。当选择弹出窗口标签页时，活动标签页将是打开弹出窗口的标签页。
+    活动标签页通常是选定的标签页。但是，在 Android 版 Firefox 上，扩展弹出窗口会在新标签页中打开。当选择弹出窗口标签页时，活动标签页将是打开弹出窗口的标签页。
 
 - `attention` {{optional_inline}}
   - : `boolean`。指示标签页是否正在吸引注意力。例如，当标签页显示模态对话框时，`attention` 将为 `true`。
@@ -26,11 +26,11 @@ l10n:
 - `autoDiscardable` {{optional_inline}}
   - : `boolean`。标签页是否可以被浏览器丢弃。默认值为 `true`。当设置为 `false` 时，浏览器不能自动丢弃标签页，但可以通过 {{WebExtAPIRef("tabs.discard")}} 进行丢弃。
 - `cookieStoreId` {{optional_inline}}
-  - : `string`。标签页的 cookie 存储。更多信息请参见 [使用上下文身份工作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
+  - : `string`。标签页的 cookie 存储。更多信息请参见[使用上下文身份工作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 - `discarded` {{optional_inline}}
   - : `boolean`。标签页是否已被丢弃。已丢弃的标签页是指其内容已从内存中卸载，但在标签栏中仍可见。下次激活时，其内容将重新加载。
 - `favIconUrl` {{optional_inline}}
-  - : `string`。标签页的网站图标（favicon）的 URL。仅当扩展具有 `"tabs"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)或[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)时才会显示。如果页面没有网站图标，则可能为 `undefined`，或者如果标签页正在加载，则为空字符串。
+  - : `string`。标签页的网站图标（favicon）的 URL。仅当扩展具有 `"tabs"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)或[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)时才会显示。如果页面没有网站图标，则可能为 `undefined`，或者如果标签页正在加载，则为空字符串。
 - `height` {{optional_inline}}
   - : `integer`。标签页的高度，以像素为单位。
 - `hidden`
@@ -39,10 +39,10 @@ l10n:
 
   - : `boolean`。标签页是否被突出显示，即是否为当前选定的标签页。活动标签页始终处于突出显示状态，但某些浏览器允许额外的标签页被突出显示，例如通过按住 <kbd>Ctrl</kbd>、<kbd>Shift</kbd> 或 <kbd>⌘ Command</kbd> 键点击它们。
 
-    Firefox for Android 不支持突出显示多个标签页。
+    Android 版 Firefox 不支持突出显示多个标签页。
 
 - `id` {{optional_inline}}
-  - : `integer`。标签页的 ID。标签页 ID 在浏览器会话中是唯一的。对于不承载内容标签页（例如开发者工具窗口），标签页 ID 也可以设置为 {{WebExtAPIRef('tabs.TAB_ID_NONE')}}。
+  - : `integer`。标签页的 ID。标签页 ID 在浏览器会话中是唯一的。对于不承载内容的标签页（例如开发者工具窗口），标签页 ID 也可以设置为 {{WebExtAPIRef('tabs.TAB_ID_NONE')}}。
 - `incognito`
   - : `boolean`。标签页是否在隐私浏览窗口中。
 - `index`
@@ -52,13 +52,13 @@ l10n:
 - `isInReaderMode`
   - : `boolean`。如果标签页当前正[在阅读模式中渲染](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode)，则为 true，否则为 false。
 - `lastAccessed` {{optional_inline}}
-  - : `double`。标签页上次访问的时间，以自纪元以来的毫秒数表示。
+  - : `double`。标签页上次访问的时间，以[自纪元以来的毫秒数](https://zh.wikipedia.org/wiki/UNIX时间)表示。
 - `mutedInfo` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfo')}}。标签页的当前静音状态及最后一次状态更改的原因。
 - `openerTabId` {{optional_inline}}
-  - : `integer`。打开此标签页的标签页的 ID，如果有的话。此属性仅在打开者标签页仍然存在且在同一窗口中时才存在。
+  - : `integer`。打开此标签页的标签页的 ID（如果有）。此属性仅在打开者标签页仍然存在且在同一窗口中时才存在。
 - `pendingUrl`
-  - : `string`。标签页正在导航到的 URL，在提交之前有效。此属性仅在扩展清单包含“tabs”权限且存在挂起导航时才会出现。
+  - : `string`。标签页正在导航到的 URL，在提交之前有效。此属性仅在扩展清单包含“tabs”权限且存在待定导航时才会出现。
 - `pinned`
   - : `boolean`。标签页是否被固定。
 - `selected` {{deprecated_inline}}
@@ -72,7 +72,7 @@ l10n:
 - `title` {{optional_inline}}
   - : `string`。标签页的标题。仅当扩展具有 `"tabs"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)或匹配标签页 URL 的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)时才会显示。
 - `url` {{optional_inline}}
-  - : `string`。标签页显示的文档的 URL。仅当扩展具有 `"tabs"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)或匹配[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)时才会显示。
+  - : `string`。标签页显示的文档的 URL。仅当扩展具有 `"tabs"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)或匹配[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)时才会显示。
 - `width` {{optional_inline}}
   - : `integer`。标签页的宽度，以像素为单位。
 - `windowId`
