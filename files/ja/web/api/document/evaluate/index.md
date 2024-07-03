@@ -3,7 +3,7 @@ title: "Document: evaluate() メソッド"
 short-title: evaluate()
 slug: Web/API/Document/evaluate
 l10n:
-  sourceCommit: 3966c40a3917825e6e467f1592bc7f8d59458e74
+  sourceCommit: 8d89e9669f59f208a80c0bdbee48ba75d37a726e
 ---
 
 {{ ApiRef("DOM") }}

@@ -59,6 +59,7 @@
 | Polyfill               | 폴리필          | [링크](https://github.com/mdn/translated-content/pull/1779/files)                                                                       |
 | Recommendations        | 권장 사항       |                                                                                                                                         |
 | Reference              | 참고서          |                                                                                                                                         |
+| Return Value           | 반환 값         |                                                                                                                                         |
 | See also               | 같이 보기       | [링크][target]                                                                                                                          |
 | Specifications         | 명세서          | [링크](https://github.com/mdn/translated-content/pull/1779/files)                                                                       |
 | Static properties      | 정적 속성       |                                                                                                                                         |

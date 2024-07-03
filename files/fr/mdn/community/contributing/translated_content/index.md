@@ -40,6 +40,11 @@ Nous avons actuellement dégelé les langues suivantes :
 - Discussions : [Matrix (#mdn-l10n-ru channel)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
 - Contributeurs actuels : [leon-win](https://github.com/leon-win), [sashasushko](https://github.com/sashasushko), [Saionaro](https://github.com/Saionaro), [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [lex111](https://github.com/lex111)
 
+### Espagnol (es)
+
+- Discussions : [Matrix (`#mdn-l10n-es`)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
+- Contributeurs actuels : [Graywolf9](https://github.com/Graywolf9), [JuanVqz](https://github.com/JuanVqz), [Jalkhov](https://github.com/Jalkhov), [marcelozarate](https://github.com/marcelozarate), [davbrito](https://github.com/davbrito), [Vallejoanderson](https://github.com/Vallejoanderson)
+
 ## Autres sujets de localisation sur MDN
 
 Pour l'instant, la nouvelle interface utilisateur de la plateforme MDN sera uniquement en anglais. C'est un problème que nous aborderons plus tard.
