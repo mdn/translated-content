@@ -1642,7 +1642,8 @@
 /es/docs/Web/API/Event/createEvent	/es/docs/Web/API/Document/createEvent
 /es/docs/Web/API/EventListener	/es/docs/conflicting/Web/API/EventTarget/addEventListener
 /es/docs/Web/API/EventSource/onopen	/es/docs/Web/API/EventSource/open_event
-/es/docs/Web/API/Fetch_API/Conceptos_basicos	/es/docs/Web/API/Fetch_API/Basic_concepts
+/es/docs/Web/API/Fetch_API/Basic_concepts	/es/docs/conflicting/Web/API/Fetch_API/Using_Fetch
+/es/docs/Web/API/Fetch_API/Conceptos_basicos	/es/docs/conflicting/Web/API/Fetch_API/Using_Fetch
 /es/docs/Web/API/Fetch_API/Utilizando_Fetch	/es/docs/Web/API/Fetch_API/Using_Fetch
 /es/docs/Web/API/File/Using_files_from_web_applications	/es/docs/Web/API/File_API/Using_files_from_web_applications
 /es/docs/Web/API/File/fileName	/es/docs/web/api/file/name

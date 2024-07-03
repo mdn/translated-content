@@ -43,7 +43,7 @@ const string4 = new String("A String object");
 "cat"[1]; // gives value "a"
 ```
 
-当使用方括号表示法进行字符串访问时，尝试删除或为其复制的行为将不成功。涉及的属性既不可写（writable）也不可配置（configurable）（更多细节，请参见 {{jsxref("Object.defineProperty()")}}）。
+当使用方括号表示法进行字符串访问时，尝试删除或为其赋值的行为将不成功。涉及的属性既不可写（writable）也不可配置（configurable）（更多细节，请参见 {{jsxref("Object.defineProperty()")}}）。
 
 ### 比较字符串
 
@@ -366,5 +366,5 @@ String(undefinedVar); // "undefined"
 
 ## 参见
 
-- [JavaScript 指南中的文本格式化](/zh-CN/docs/Web/JavaScript/Guide/Text_formatting)
+- [文本格式化](/zh-CN/docs/Web/JavaScript/Guide/Text_formatting)指南
 - {{jsxref("RegExp")}}

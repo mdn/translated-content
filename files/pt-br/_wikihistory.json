@@ -10257,11 +10257,11 @@
       "Fulanodigital"
     ]
   },
-  "Web/Security/Securing_your_site": {
+  "Web/Security/Practical_implementation_guides": {
     "modified": "2019-03-23T22:41:54.591Z",
     "contributors": ["julio-elipse", "ygormaximo", "marumari"]
   },
-  "Web/Security/Securing_your_site/Turning_off_form_autocompletion": {
+  "Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion": {
     "modified": "2019-03-23T22:41:55.986Z",
     "contributors": [
       "VitorTakara",

@@ -1338,12 +1338,14 @@
 /ja/docs/Glossary/First_interactive	/ja/docs/Glossary/First_CPU_idle
 /ja/docs/Glossary/Global_attribute	/ja/docs/Web/HTML/Global_attributes
 /ja/docs/Glossary/Grid_Rows	/ja/docs/Glossary/Grid_Row
+/ja/docs/Glossary/Guard	/ja/docs/Web/API/Fetch_API/Using_Fetch
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
 /ja/docs/Glossary/I18N	/ja/docs/Glossary/Internationalization
 /ja/docs/Glossary/Index	/ja/docs/Glossary
 /ja/docs/Glossary/Internationalization_and_localization	/ja/docs/Glossary/Internationalization
 /ja/docs/Glossary/POP3	/ja/docs/Glossary/POP
 /ja/docs/Glossary/Reference	/ja/docs/Glossary/Object_reference
+/ja/docs/Glossary/Rendering_engine	/ja/docs/Glossary/Engine/Rendering
 /ja/docs/Glossary/Round_Trip_Time_(RTT)	/ja/docs/Glossary/Round_Trip_Time
 /ja/docs/Glossary/SSL_Glossary	/ja/docs/Glossary/SSL
 /ja/docs/Glossary/Scrollport	/ja/docs/Glossary/Scroll_container
@@ -2745,6 +2747,7 @@
 /ja/docs/Web/API/Element/pointerlockerror_event	/ja/docs/Web/API/Document/pointerlockerror_event
 /ja/docs/Web/API/Element/select_event	/ja/docs/Web/API/HTMLInputElement/select_event
 /ja/docs/Web/API/Element/show_event	/ja/docs/orphaned/Web/API/Element/show_event
+/ja/docs/Web/API/Event/Comparison_of_Event_Targets	/ja/docs/Learn/JavaScript/Building_blocks/Event_bubbling
 /ja/docs/Web/API/Event/button	/ja/docs/Web/API/MouseEvent/button
 /ja/docs/Web/API/Event/createEvent	/ja/docs/Web/API/Document/createEvent
 /ja/docs/Web/API/EventHandler	/ja/docs/Web/Events/Event_handlers
@@ -2757,6 +2760,7 @@
 /ja/docs/Web/API/EventTarget.removeEventListener	/ja/docs/Web/API/EventTarget/removeEventListener
 /ja/docs/Web/API/EventTarget/attachEvent	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/Web/API/FetchEvent_clone	/ja/docs/Web/API/FetchEvent
+/ja/docs/Web/API/Fetch_API/Basic_concepts	/ja/docs/Web/API/Fetch_API/Using_Fetch
 /ja/docs/Web/API/File.name	/ja/docs/Web/API/File/name
 /ja/docs/Web/API/File.size	/ja/docs/Web/API/Blob/size
 /ja/docs/Web/API/File.type	/ja/docs/Web/API/Blob/type
@@ -3726,6 +3730,7 @@
 /ja/docs/Web/CSS/border-top-left-radius_|_-moz-border-radius-topleft	/ja/docs/Web/CSS/border-top-left-radius
 /ja/docs/Web/CSS/box_model	/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 /ja/docs/Web/CSS/calc()	/ja/docs/Web/CSS/calc
+/ja/docs/Web/CSS/calc-constant	/ja/docs/Web/CSS/calc-keyword
 /ja/docs/Web/CSS/clamp()	/ja/docs/Web/CSS/clamp
 /ja/docs/Web/CSS/color-adjust	/ja/docs/conflicting/Web/CSS/print-color-adjust
 /ja/docs/Web/CSS/color_value/hexadecimal_rgb	/ja/docs/orphaned/Web/CSS/color_value/hexadecimal_rgb
