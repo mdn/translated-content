@@ -16,29 +16,31 @@ l10n:
 ## 示例
 
 ```js
-// 获取对表单的引用。
+// 获取对表单的引用
 const formElem = document.querySelector("form");
 
-// submit 处理程序。
+// submit 处理器
+
 formElem.addEventListener("submit", (e) => {
-  // 在表单提交时，防止默认行为。
+  // 在表单提交时，阻止默认行为
   e.preventDefault();
 
-  // 构造 FormData 对象，用于触发 formdata 事件。
+  // 构造 FormData 对象，用于触发 formdata 事件
   new FormData(formElem);
 });
 
-// 获得数据的 formdata 处理程序。
+// 获得数据的 formdata 处理器
+
 formElem.addEventListener("formdata", (e) => {
   console.log("formdata fired");
 
-  // 从事件对象中获取表单数据。
+  // 从事件对象中获取表单数据
   let data = e.formData;
   for (const value of data.values()) {
     console.log(value);
   }
 
-  // 通过 XHR 提交数据。
+  // 通过 XHR 提交数据
   const request = new XMLHttpRequest();
   request.open("POST", "/formHandler");
   request.send(data);

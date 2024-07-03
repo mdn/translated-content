@@ -22,7 +22,7 @@ new FormDataEvent(type, formEventInit)
 - `options`
   - : 一个对象，该对象*除了在 {{domxref("Event/Event", "Event()")}} 中定义的属性之外*，还可以具有以下属性：
     - `formData`
-      - : 一个预填充 {{domxref("FormDataEvent")}} 的 {{domxref("FormData")}} 对象，然后通过 {{domxref("FormDataEvent.formData")}} 属性访问该属性。
+      - : 一个预填充 {{domxref("FormDataEvent")}} 的 {{domxref("FormData")}} 对象，然后可以通过 {{domxref("FormDataEvent.formData")}} 属性访问该对象。
 
 ### 返回值
 
