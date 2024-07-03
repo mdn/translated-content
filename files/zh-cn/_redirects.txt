@@ -1485,7 +1485,7 @@
 /zh-CN/docs/Web/API/FetchController/AbortController	/zh-CN/docs/Web/API/AbortController/AbortController
 /zh-CN/docs/Web/API/FetchController/abort	/zh-CN/docs/Web/API/AbortController/abort
 /zh-CN/docs/Web/API/Fetch_API/Basic_concepts	/zh-CN/docs/Web/API/Fetch_API/Using_Fetch
-/zh-CN/docs/Web/API/Fetch_API/Cross-global_fetch_usage	/zh-CN/docs/conflicting/Web/API/Fetch_API/Using_Fetch
+/zh-CN/docs/Web/API/Fetch_API/Cross-global_fetch_usage	/zh-CN/docs/Web/API/Fetch_API/Using_Fetch
 /zh-CN/docs/Web/API/Fetch_API/基本概念	/zh-CN/docs/Web/API/Fetch_API/Using_Fetch
 /zh-CN/docs/Web/API/File.fileName	/zh-CN/docs/Web/API/File/name
 /zh-CN/docs/Web/API/File.fileSize	/zh-CN/docs/Web/API/Blob/size
