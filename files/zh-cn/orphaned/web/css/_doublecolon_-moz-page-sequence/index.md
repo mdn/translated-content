@@ -1,6 +1,7 @@
 ---
 title: "::-moz-page-sequence"
-slug: Web/CSS/::-moz-page-sequence
+slug: orphaned/Web/CSS/::-moz-page-sequence
+original_slug: Web/CSS/::-moz-page-sequence
 l10n:
   sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---

@@ -1,6 +1,7 @@
 ---
 title: "::-moz-page"
-slug: Web/CSS/::-moz-page
+slug: orphaned/Web/CSS/::-moz-page
+original_slug: Web/CSS/::-moz-page
 l10n:
   sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---

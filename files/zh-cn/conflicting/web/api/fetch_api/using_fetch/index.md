@@ -1,6 +1,7 @@
 ---
 title: 跨全局的 Fetch 使用方法
-slug: Web/API/Fetch_API/Cross-global_fetch_usage
+slug: conflicting/Web/API/Fetch_API/Using_Fetch
+original_slug: Web/API/Fetch_API/Cross-global_fetch_usage
 ---
 
 {{DefaultAPISidebar("Fetch API")}}
