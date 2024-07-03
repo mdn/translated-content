@@ -1,6 +1,7 @@
 ---
 title: "::-moz-page-sequence"
-slug: Web/CSS/::-moz-page-sequence
+slug: orphaned/Web/CSS/::-moz-page-sequence
+original_slug: Web/CSS/::-moz-page-sequence
 ---
 
 {{CSSRef}}{{non-standard_header}}

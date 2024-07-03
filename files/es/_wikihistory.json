@@ -6074,14 +6074,6 @@
     "modified": "2019-03-23T22:29:22.603Z",
     "contributors": ["pekechis"]
   },
-  "Web/CSS/::-moz-page": {
-    "modified": "2019-03-23T22:29:23.000Z",
-    "contributors": ["teoli", "pekechis"]
-  },
-  "Web/CSS/::-moz-page-sequence": {
-    "modified": "2019-03-23T22:29:18.734Z",
-    "contributors": ["teoli", "pekechis"]
-  },
   "Web/CSS/::-moz-progress-bar": {
     "modified": "2019-03-23T22:29:21.640Z",
     "contributors": ["lajaso", "pekechis"]
@@ -6096,10 +6088,6 @@
   },
   "Web/CSS/::-moz-range-track": {
     "modified": "2019-03-23T22:27:41.835Z",
-    "contributors": ["teoli", "pekechis"]
-  },
-  "Web/CSS/::-moz-scrolled-page-sequence": {
-    "modified": "2019-03-23T22:27:47.385Z",
     "contributors": ["teoli", "pekechis"]
   },
   "Web/CSS/::-webkit-inner-spin-button": {
@@ -15155,6 +15143,18 @@
   },
   "orphaned/Web/CSS/:-moz-ui-valid": {
     "modified": "2019-03-23T22:29:23.305Z",
+    "contributors": ["teoli", "pekechis"]
+  },
+  "orphaned/Web/CSS/::-moz-page": {
+    "modified": "2019-03-23T22:29:23.000Z",
+    "contributors": ["teoli", "pekechis"]
+  },
+  "orphaned/Web/CSS/::-moz-page-sequence": {
+    "modified": "2019-03-23T22:29:18.734Z",
+    "contributors": ["teoli", "pekechis"]
+  },
+  "orphaned/Web/CSS/::-moz-scrolled-page-sequence": {
+    "modified": "2019-03-23T22:27:47.385Z",
     "contributors": ["teoli", "pekechis"]
   },
   "orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support": {
