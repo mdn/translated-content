@@ -108,21 +108,21 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.font")}}
   - : 字体设置。默认值为 `"10px sans-serif"`。
 - {{domxref("CanvasRenderingContext2D.textAlign")}}
-  - : 文本对齐设置。允许的值：`start`（默认），`end`，`left`，`right`，`center`。
+  - : 文本对齐设置。允许的值：`start`（默认）、`end`、`left`、`right` 或 `center`。
 - {{domxref("CanvasRenderingContext2D.textBaseline")}}
-  - : 基线对齐设置。允许的值：`top`，`hanging`，`middle`，`alphabetic`（默认），`ideographic`，`bottom`。
+  - : 基线对齐设置。允许的值：`top`、`hanging`、`middle`、`alphabetic`（默认）、`ideographic` 或 `bottom`。
 - {{domxref("CanvasRenderingContext2D.direction")}}
-  - : 文字方向。允许的值：`ltr`，`rtl`，`inherit`（默认）。
+  - : 文字方向。允许的值：`ltr`、`rtl` 或 `inherit`（默认）。
 - {{domxref("CanvasRenderingContext2D.letterSpacing")}}
   - : 字母间距。默认值为：`0px`。
 - {{domxref("CanvasRenderingContext2D.fontKerning")}}
-  - : 字体字距调整。允许的值：`auto`（默认），`normal`，`none`。
+  - : 字体字距调整。允许的值：`auto`（默认）、`normal` 或 `none`。
 - {{domxref("CanvasRenderingContext2D.fontStretch")}}
-  - : 字体拉伸。允许的值：`ultra-condensed`，`extra-condensed`，`condensed`，`semi-condensed`，`normal`（默认），`semi-expanded`，`expanded`，`extra-expanded`，`ultra-expanded`。
+  - : 字体拉伸。允许的值：`ultra-condensed`、`extra-condensed`、`condensed`、`semi-condensed`、`normal`（默认）、`semi-expanded`、`expanded`、`extra-expanded` 或 `ultra-expanded`。
 - {{domxref("CanvasRenderingContext2D.fontVariantCaps")}}
-  - : 字体变体大小写。允许的值：`normal`（默认），`small-caps`，`all-small-caps`，`petite-caps`，`all-petite-caps`，`unicase`，`titling-caps`。
+  - : 字体变体大小写。允许的值：`normal`（默认）、`small-caps`、`all-small-caps`、`petite-caps`、`all-petite-caps`、`unicase` 或 `titling-caps`。
 - {{domxref("CanvasRenderingContext2D.textRendering")}}
-  - : 文本渲染。允许的值：`auto`（默认），`optimizeSpeed`，`optimizeLegibility`，`geometricPrecision`。
+  - : 文本渲染。允许的值：`auto`（默认）、`optimizeSpeed`、`optimizeLegibility` 或 `geometricPrecision`。
 - {{domxref("CanvasRenderingContext2D.wordSpacing")}}
   - : 单词间距。默认值为：`0px`。
 
@@ -168,7 +168,7 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.moveTo()")}}
   - : 将一个新的子路径的起始点移动到 (x，y) 坐标。
 - {{domxref("CanvasRenderingContext2D.lineTo()")}}
-  - : 使用直线连接子路径的最后的点到 (x，y) 坐标。
+  - : 使用直线连接子路径的最后的点到 (x, y) 坐标。
 - {{domxref("CanvasRenderingContext2D.bezierCurveTo()")}}
   - : 添加一个 3 次贝赛尔曲线路径。
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo()")}}
