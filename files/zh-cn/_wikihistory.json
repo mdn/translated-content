@@ -9496,10 +9496,6 @@
       "xcatliu"
     ]
   },
-  "Web/API/Fetch_API/Cross-global_fetch_usage": {
-    "modified": "2019-03-18T21:35:40.335Z",
-    "contributors": ["DuckSoft", "wynejan"]
-  },
   "Web/API/Fetch_API/Using_Fetch": {
     "modified": "2020-10-15T21:39:39.542Z",
     "contributors": [
