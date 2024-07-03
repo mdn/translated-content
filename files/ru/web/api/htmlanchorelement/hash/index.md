@@ -2,7 +2,7 @@
 title: "HTMLAnchorElement: свойство hash"
 slug: Web/API/HTMLAnchorElement/hash
 l10n:
-  sourceCommit: 9198f194be8bfa585826df90a72779c10dfbd49d
+  sourceCommit: 3e301467a02808e9fc488d7012f1f49eb66a5980
 ---
 
 {{ APIRef("HTML DOM") }}
