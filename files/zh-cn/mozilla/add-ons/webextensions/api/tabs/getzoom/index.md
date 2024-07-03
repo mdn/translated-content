@@ -26,7 +26,7 @@ let gettingZoom = browser.tabs.getZoom(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现标签页的当前缩放因子，取值范围为 0.3 到 5。如果找不到标签页或发生其他错误，promise 将会被拒绝并返回错误信息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现标签页的当前缩放因子，取值范围为 0.3 到 5。如果找不到标签页或发生其他错误，promise 将会以错误信息拒绝。
 
 ## 示例
 
