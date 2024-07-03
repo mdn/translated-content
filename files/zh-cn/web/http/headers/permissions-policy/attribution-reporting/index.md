@@ -9,7 +9,7 @@ l10n:
 
 HTTP {{HTTPHeader("Permissions-Policy")}} 标头的 `attribution-reporting` 指令控制当前文档是否被允许使用 [Attribution Reporting API](/zh-CN/docs/Web/API/Attribution_Reporting_API)。
 
-具体来说，如果定义的策略阻止使用此功能：
+具体来说，如果定义的策略阻止使用此特性：
 
 - 不会进行后台 `attributionsrc` 请求。
 - 调用 {{domxref("XMLHttpRequest.setAttributionReporting()")}} 方法时会抛出异常。
@@ -23,7 +23,7 @@ Permissions-Policy: attribution-reporting=<allowlist>;
 ```
 
 - `<allowlist>`
-  - : 允许使用该功能的来源列表。请参阅 [`Permissions-Policy` > 语法](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#语法)了解更多详细信息。
+  - : 允许使用该特性的来源列表。请参阅 [`Permissions-Policy` > 语法](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#语法)了解更多详细信息。
 
 ## 默认策略
 
