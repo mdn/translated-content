@@ -18,7 +18,7 @@ WebAssembly 控制流相關指令。
 - [`end`](/zh-TW/docs/WebAssembly/Reference/Control_flow/end)
   - : 結束 `block`、`loop`、`if` 或是 `else` 區塊。
 - [`if...else`](/zh-TW/docs/WebAssembly/Reference/Control_flow/if...else)
-  - : 如果記憶體堆疊中的最後一個值為 true (1)，就會執行陳述式裡的程式。
+  - : 如果記憶體堆疊中的最後一個值為 true（`1`），就會執行陳述式裡的程式。
 - [`loop`](/zh-TW/docs/WebAssembly/Reference/Control_flow/loop)
   - : 建立一個迴圈區塊，事後可以用 [`br`](/zh-TW/docs/WebAssembly/Reference/Control_flow/br) 讓程式跳出該區塊標籤。
 - [`nop`](/zh-TW/docs/WebAssembly/Reference/Control_flow/nop)
