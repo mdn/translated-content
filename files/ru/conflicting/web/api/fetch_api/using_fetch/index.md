@@ -1,6 +1,7 @@
 ---
 title: Cross-global fetch usage
-slug: Web/API/Fetch_API/Cross-global_fetch_usage
+slug: conflicting/Web/API/Fetch_API/Using_Fetch
+original_slug: Web/API/Fetch_API/Cross-global_fetch_usage
 ---
 
 {{DefaultAPISidebar("Fetch API")}}

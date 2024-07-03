@@ -5153,10 +5153,6 @@
       "savelevcorr"
     ]
   },
-  "Web/API/Fetch_API/Cross-global_fetch_usage": {
-    "modified": "2019-03-18T21:00:16.677Z",
-    "contributors": ["Akh-rman", "qqwweeaassdd"]
-  },
   "Web/API/Fetch_API/Using_Fetch": {
     "modified": "2020-03-12T12:40:18.070Z",
     "contributors": [
@@ -15965,6 +15961,10 @@
   "conflicting/Glossary/CORS-safelisted_request_header": {
     "modified": "2019-03-18T21:32:57.580Z",
     "contributors": ["Skinny-Hunter"]
+  },
+  "conflicting/Web/API/Fetch_API/Using_Fetch": {
+    "modified": "2019-03-18T21:00:16.677Z",
+    "contributors": ["Akh-rman", "qqwweeaassdd"]
   },
   "conflicting/Web/HTML/Element/img": {
     "modified": "2019-03-18T20:41:47.756Z",
