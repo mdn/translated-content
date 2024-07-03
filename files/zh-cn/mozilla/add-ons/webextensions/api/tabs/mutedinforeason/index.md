@@ -13,11 +13,11 @@ l10n:
 
 此类型的值是字符串，表示标签页被静音或取消静音的原因。可能的取值包括：
 
-- “capture”
+- "capture"
   - : 开始标签页捕获，强制更改静音状态。
-- “extension”
-  - : 扩展程序设置了静音状态。如果原因是扩展程序设置的，{{WebExtAPIRef("tabs.mutedInfo")}} 中的 `extensionId` 属性将包含负责的扩展程序的 ID。
-- “user”
+- "extension"
+  - : 扩展程序设置了静音状态。如果是这个原因，{{WebExtAPIRef("tabs.mutedInfo")}} 中的 `extensionId` 属性将包含负责的扩展程序的 ID。
+- "user"
   - : 用户设置了静音状态。
 
 ## 浏览器兼容性
