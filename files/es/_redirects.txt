@@ -1813,6 +1813,7 @@
 /es/docs/Web/CSS/-webkit-mask-origin	/es/docs/Web/CSS/mask-origin
 /es/docs/Web/CSS/-webkit-mask-position	/es/docs/Web/CSS/mask-position
 /es/docs/Web/CSS/-webkit-mask-repeat	/es/docs/Web/CSS/mask-repeat
+/es/docs/Web/CSS/-webkit-overflow-scrolling	/es/docs/orphaned/Web/CSS/-webkit-overflow-scrolling
 /es/docs/Web/CSS/-webkit-print-color-adjust	/es/docs/Web/CSS/print-color-adjust
 /es/docs/Web/CSS/:-moz-focusring	/es/docs/conflicting/Web/CSS/:focus-visible
 /es/docs/Web/CSS/:-moz-list-bullet	/es/docs/Web/CSS/::-moz-list-bullet
