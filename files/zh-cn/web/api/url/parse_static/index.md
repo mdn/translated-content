@@ -2,8 +2,6 @@
 title: URL：parse() 静态方法
 short-title: parse()
 slug: Web/API/URL/parse_static
-page-type: web-api-static-method
-browser-compat: api.URL.parse_static
 ---
 
 {{ApiRef("URL API")}}
@@ -27,7 +25,7 @@ URL.parse(url, base)
 
   - : 一个字符串，表示在 `url` 为相对 URL 时使用的基础 URL。如果未指定，则默认为 `undefined`。
 
-    当你指定一个 `base` URL 时，解析后的 URL 并不是简单地将 `url` 和 `base` 拼接起来。对父目录和当前目录的相对引用是相对于 `base` URL 的当前目录解析的，当前目录仅包含直到最后一个斜杠的路径段，但不包括之后的任何内容。对根目录的相对引用是相对于基础 URL 的源解析的。更多信息请参见 [解析 URL 的相对引用](/en-US/docs/Web/API/URL_API/Resolving_relative_references)。
+    当你指定一个 `base` URL 时，解析后的 URL 并不是简单地将 `url` 和 `base` 拼接起来。对父目录和当前目录的相对引用是相对于 `base` URL 的当前目录解析的，当前目录仅包含直到最后一个斜杠的路径段，但不包括之后的任何内容。对根目录的相对引用是相对于基础 URL 的源解析的。更多信息请参见 [解析 URL 的相对引用](/zh-CN/docs/Web/API/URL_API/Resolving_relative_references)。
 
 > **备注：** `url` 和 `base` 参数会将你传递的任何值字符串化，例如 {{domxref("HTMLAnchorElement")}} 或 {{domxref("HTMLAreaElement")}} 元素，就像其他接受字符串的 Web API 一样。特别是，你可以为任一参数使用现有的 {{domxref("URL")}} 对象，它将从对象的 {{domxref("URL.href", "href")}} 属性中字符串化。
 
@@ -37,13 +35,13 @@ URL.parse(url, base)
 
 ## 示例
 
-[解析 URL 的相对引用](/en-US/docs/Web/API/URL_API/Resolving_relative_references) 和 [`URL()` 构造函数](/zh-CN/docs/Web/API/URL/URL#示例) 提供了更多示例，演示了不同的 `url` 和 `base` 值如何解析为最终的绝对 URL（尽管主要使用 `URL()`）。
+[解析 URL 的相对引用](/zh-CN/docs/Web/API/URL_API/Resolving_relative_references) 和 [`URL()` 构造函数](/zh-CN/docs/Web/API/URL/URL#示例) 提供了更多示例，演示了不同的 `url` 和 `base` 值如何解析为最终的绝对 URL（尽管主要使用 `URL()`）。
 
 ### 使用 URL.parse()
 
 这个实时示例演示了如何使用 `URL.parse()` 静态方法处理一些不同的绝对和相对引用值。
 
-首先我们定义了一个HTML `<pre>` 元素用于日志记录，并提供了一个记录方法 `log()`。
+首先我们定义了一个 HTML `<pre>` 元素用于日志记录，并提供了一个记录方法 `log()`。
 
 ```html
 <pre id="log"></pre>
@@ -65,7 +63,7 @@ function log(text) {
 }
 ```
 
-下一步，我们检查 `URL.parse()` 方法是否受支持，使用条件 `"parse" in URL`。如果该方法受支持，我们会记录检查绝对 URL 的结果、相对引用和基础 URL 的结果、具有更[复杂基础 URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references)的相对引用的结果、具有有效基础 URL 的有效绝对 URL（基础 URL 未使用）的结果，以及导致方法返回 `null` 的无效基础 URL 的结果。
+下一步，我们检查 `URL.parse()` 方法是否受支持，使用条件 `"parse" in URL`。如果该方法受支持，我们会记录检查绝对 URL 的结果、相对引用和基础 URL 的结果、具有更[复杂基础 URL](/zh-CN/docs/Web/API/URL_API/Resolving_relative_references)的相对引用的结果、具有有效基础 URL 的有效绝对 URL（基础 URL 未使用）的结果，以及导致方法返回 `null` 的无效基础 URL 的结果。
 
 我们还会记录 `URL.parse()` 不支持的情况。
 
