@@ -29,7 +29,7 @@ let zooming = browser.tabs.setZoom(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在缩放因子更改后其会被兑现且不带有参数。如果找不到标签页或发生其他错误，promise 以错误消息拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在缩放因子更改后其会被兑现且不带有参数。如果找不到标签页或发生其他错误，promise 会以错误消息拒绝。
 
 ## 示例
 
