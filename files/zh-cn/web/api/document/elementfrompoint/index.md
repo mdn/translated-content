@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("Document")}} 对象的 **`elementFromPoint()`** 方法返回给定坐标点下相对于视口的最上层 {{domxref("Element")}}。
+{{domxref("Document")}} 对象的 **`elementFromPoint()`** 方法返回给定相对于视口的坐标点下最上层的 {{domxref("Element")}}。
 
 如果指定位置的元素属于另一个文档（例如 {{HTMLElement("iframe")}} 的文档），则会返回该文档的父元素（`<iframe>` 本身）。如果给定点上的元素是匿名或 XBL 生成的内容（例如文本框的滚动条），则会返回第一个非匿名的祖先元素（例如文本框）。
 
