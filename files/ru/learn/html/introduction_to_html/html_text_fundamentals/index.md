@@ -13,7 +13,7 @@ slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 
 ## Основы: Заголовки и абзацы / параграфы
 
-Большинство структурированных текстов состоят из параграфов и заголовков, независимо от того, читаете ли вы рассказ, или газету, или учебник, журнал и т.д.
+Большинство структурированных текстов состоят из параграфов и заголовков, независимо от того, читаете ли вы рассказ, газету, учебник или журнал.
 
 ![An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.](newspaper_small.jpg)
 
