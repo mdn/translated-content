@@ -32,4 +32,4 @@ _没有特定的方法，从其父接口 {{domxref("HTMLElement")}} 继承方法
 
 ## 参见
 
-- 实现此接口的 HTML 元素: {{ HTMLElement("dl") }}
+- 实现此接口的 HTML 元素：{{ HTMLElement("dl") }}
