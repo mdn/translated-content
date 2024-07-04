@@ -158,7 +158,7 @@ _此接口也从父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承
 - {{domxref("Element.keydown_event", "keydown")}}
   - : 一个键被按下。
 - {{domxref("Element.keyup_event", "keyup")}}
-  - : 一个键被释放
+  - : 一个键被释放。
 
 ### 废弃事件
 
@@ -252,7 +252,7 @@ document.addEventListener(
 
 {{Specifications}}
 
-`KeyboardEvent` 接口规范经历了多个草案版本，首先是 DOM 事件 2 级规范，由于未达成共识而被放弃，然后是 DOM 事件 3 级规范。这导致了非标准初始化方法的实施，早期的 DOM 事件 2 级版本，{{domxref("KeyboardEvent.initKeyEvent()")}} 被 Gecko 浏览器采用，而早期的 DOM 事件 3 级版本，{{domxref("KeyboardEvent.initKeyboardEvent()")}} 则被其他浏览器采用。这两个版本都已被构造函数的现代用法所取代： {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}。
+`KeyboardEvent` 接口规范经历了多个草案版本，首先是 DOM 事件 2 级规范，由于未达成共识而被放弃，然后是 DOM 事件 3 级规范。这导致了非标准初始化方法的实施，早期的 DOM 事件 2 级版本，{{domxref("KeyboardEvent.initKeyEvent()")}} 被 Gecko 浏览器采用，而早期的 DOM 事件 3 级版本，{{domxref("KeyboardEvent.initKeyboardEvent()")}} 则被其他浏览器采用。这两个版本都已被构造函数的现代用法所取代：{{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}。
 
 ## 浏览器兼容性
 
@@ -260,7 +260,7 @@ document.addEventListener(
 
 ### 兼容性说明
 
-- 从 Firefox 65 开始，[非打印按键](/zh-CN/docs/Web/API/KeyboardEvent/keyCode#不可打印键（功能键）) 不再触发 `keypress` 事件（[Firefox bug 968056](https://bugzil.la/968056)），除
+- 从 Firefox 65 开始，[非打印按键](/zh-CN/docs/Web/API/KeyboardEvent/keyCode#不可打印键（功能键）)不再触发 `keypress` 事件（[Firefox bug 968056](https://bugzil.la/968056)），除
 
   <kbd>Enter</kbd>
 
