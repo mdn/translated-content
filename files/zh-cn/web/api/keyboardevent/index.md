@@ -260,7 +260,7 @@ document.addEventListener(
 
 ### 兼容性说明
 
-- 从 Firefox 65 开始，[非打印按键](</zh-CN/docs/Web/API/KeyboardEvent/keyCode#不可打印键（功能键）>) 不再触发 `keypress` 事件（[Firefox bug 968056](https://bugzil.la/968056)），除
+- 从 Firefox 65 开始，[非打印按键](/zh-CN/docs/Web/API/KeyboardEvent/keyCode#不可打印键（功能键）) 不再触发 `keypress` 事件（[Firefox bug 968056](https://bugzil.la/968056)），除
 
   <kbd>Enter</kbd>
 
