@@ -16497,10 +16497,6 @@
     "modified": "2020-10-15T22:24:06.241Z",
     "contributors": ["liuruiqi1993", "herotangabc", "litaoAurora"]
   },
-  "Web/CSS/-webkit-overflow-scrolling": {
-    "modified": "2019-03-23T23:02:52.440Z",
-    "contributors": ["teoli", "Ende93", "FrontENG", "limichange", "ccforward"]
-  },
   "Web/CSS/-webkit-tap-highlight-color": {
     "modified": "2019-03-23T22:22:56.346Z",
     "contributors": ["smilewalker"]
@@ -32594,5 +32590,9 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
+  },
+  "orphaned/Web/CSS/-webkit-overflow-scrolling": {
+    "modified": "2019-03-23T23:02:52.440Z",
+    "contributors": ["teoli", "Ende93", "FrontENG", "limichange", "ccforward"]
   }
 }
