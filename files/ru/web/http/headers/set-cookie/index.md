@@ -5,7 +5,10 @@ slug: Web/HTTP/Headers/Set-Cookie
 
 {{HTTPSidebar}}
 
-HTTP заголовок **`Set-Cookie`** используется для отправки cookies с сервера на агент пользователя.
+HTTP заголовок **`Set-Cookie`** используется для отправки cookies с сервера на агент пользователя. После чего агент пользователя сможет отправлять их обратно на сервер с запросами.
+Что бы проставить несколько cookies нужно отправить несколько **`Set-Cookie`** заголовков в одном ответе.
+
+> **Предупреждение:** Браузеры блокируют доступ клиентскому JavaScript коду к `Set-Cookie` заголовкам, так как это того требует спецификация Fetch, она определяет `Set-Cookie` как [запрещённый заголовок ответа](https://fetch.spec.whatwg.org/#forbidden-response-header-name) который [должен быть исключён](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0) из любого ответа доступного для клиентских скриптов.
 
 Для детальной информации, смотрите руководство по [HTTP cookies](/ru/docs/Web/HTTP/Cookies).
 
@@ -28,7 +31,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; SameSite=Strict
 Set-Cookie: <cookie-name>=<cookie-value>; SameSite=Lax
 Set-Cookie: <cookie-name>=<cookie-value>; SameSite=None {{experimental_inline}}
 
-// Multiple directives are also possible, for example:
+// Так же возможно указать несколько директив, например:
 Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnly
 ```
 
@@ -41,20 +44,13 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
 <!---->
 
-- По умолчанию - хост текущего URL документа, не включая поддомены
-- В текущей спецификация начальная точка в имени хоста игнорируется (.example.com)
-- Cookie будут отправляться также на поддомены указанного хоста
-- Указывать несколько хостов недопустимо.
-
-<!---->
-
 - `<cookie-name>=<cookie-value>`
 
   - : Cookie начинается с пары имя-значение:
 
     - `<cookie-name>` может содержать любые символы US-ASCII, за исключением управляющих символов (CTLs), пробелов, или табуляций. Оно также не должно содержать разделительных символов, таких как следующие: `( ) < > @ , ; : \ " / [ ] ? = { }`.
     - `<cookie-value>` может быть опционально заключено в двойные кавычки, разрешены любые символы US-ASCII за исключением CTLs, пробела, двойных кавычек, запятой, точки с запятой, и обратного слеша. **Кодирование:** Многие реализации выполняют кодирование в значениях cookies, однако этого не требуется по спецификации RFC. Однако, это помогает удовлетворить требование о разрешённых символах в \<cookie-value>.
-    - **`__Secure-` prefix** {{non-standard_inline}}: Cookies с именем, начинающимся с `__Secure-` (подчёркивание является частью префикса ) должны быть установлены вместе с флагом secure, и должны быть с безопасной страницы (HTTPS).
+    - **`__Secure-` prefix** {{non-standard_inline}}: Cookies с именем, начинающимся с `__Secure-` (подчёркивание является частью префикса) должны быть установлены вместе с флагом secure, и должны быть с безопасной страницы (HTTPS).
     - **`__Host-` prefix** {{non-standard_inline}}: Cookies с именем, начинающимся с `__Host-` должны быть установлены с флагом secure `secure`, должны быть с безопасной страницы (HTTPS), не должны иметь определённый домен (и, следовательно, не не посылаются поддоменами), а также параметр Path должен быть "/".
 
 - `Expires=<date>` {{optional_inline}}
@@ -87,7 +83,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     Cookie не будет дополнительно шифроваться, поэтому в нем не стоит хранить конфиденциальную информацию.
 
-    **Note:** небезопасные сайты (`http:`) не могут использовать cookie с атрибутом "secure" (начиная с Chrome 52+ и Firefox 52+).
+    > **Note:** небезопасные сайты (`http:`) не могут использовать cookie с атрибутом "secure" (начиная с Chrome 52+ и Firefox 52+).
 
 - `HttpOnly` {{optional_inline}}
 
@@ -99,11 +95,11 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
   - :&#x20;
 
-    - `Strict`: The browser sends the cookie only for same-site requests (that is, requests originating from the same site that set the cookie). If the request originated from a different URL than the current one, no cookies with the `SameSite=Strict` attribute are sent.
-    - `Lax`: The cookie is withheld on cross-site subrequests, such as calls to load images or frames, but is sent when a user navigates to the URL from an external site, such as by following a link
-    - `None`: The browser sends the cookie with both cross-site and same-site requests
+    - `Strict`: Браузер отправляет куки только для запросов с того же сайта (то есть запросов, исходящих с того же сайта, который установил куки). Если запрос исходит с другого URL, чем текущий, куки с атрибутом `SameSite=Strict` не отправляются.
+    - `Lax`: Куки не отправляются при cross-site подзапросах, таких как вызовы для загрузки изображений или фреймов, но отправляются, когда пользователь переходит на URL с внешнего сайта, например, следуя по ссылке.
+    - `None`: Браузер отправляет куки как с cross-site, так и с запросами с того же сайта.
 
-    Allows servers to assert that a cookie ought not to be sent along with cross-site requests, which provides some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).
+    Позволяет серверам утверждать, что куки не должны отправляться вместе с cross-site запросами, что обеспечивает некоторую защиту от атак межсайтовой подделки запроса ({{Glossary("CSRF")}}).
 
     Современные браузеры используют `SameSite=Lax`. Если необходима работа `SameSite=None` cookie должна быть установлена с атрибутом `Secure`.
 
@@ -133,22 +129,22 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
 Set-Cookie: qwerty=219ffwef9w0f; Domain=somecompany.co.uk; Path=/; Expires=Wed, 30 Aug 2019 00:00:00 GMT
 ```
 
-### Cookie prefixes
+### Cookie с префиксами
 
-Cookies names with the prefixes `__Secure-` and `__Host-` can be used only if they are set with the `secure` directive from a secure (HTTPS) origin. In addition, cookies with the `__Host-` prefix must have a path of "/" (the entire host) and must not have a domain attribute. For clients that don't implement cookie prefixes, you cannot count on having these additional assurances and the cookies will always be accepted.
+Имена cookie с префиксами `__Secure-` и `__Host-` могут использоваться только в том случае, если они установлены с директивой `secure` с защищенного (HTTPS) источника. Кроме того, куки с префиксом `__Host-` должны иметь путь "/" (весь хост) и не должны иметь атрибут домена. Для клиентов, которые не реализуют префиксы куки, нельзя полагаться на эти дополнительные гарантии, и куки всегда будут приниматься.
 
 ```
-// Both accepted when from a secure origin (HTTPS)
+// Оба принимаются, если источник защищен (HTTPS)
 Set-Cookie: __Secure-ID=123; Secure; Domain=example.com
 Set-Cookie: __Host-ID=123; Secure; Path=/
 
-// Rejected due to missing Secure directive
+// Отклонено из-за отсутствия директивы Secure
 Set-Cookie: __Secure-id=1
 
-// Rejected due to the missing Path=/ directive
+// Отклонено из-за отсутствия директивы Path=/
 Set-Cookie: __Host-id=1; Secure
 
-// Rejected due to setting a domain
+// Отклонено из-за установки домена
 Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 ```
 
@@ -165,7 +161,7 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 
 ## Compatibility notes
 
-- Starting with Chrome 52 and Firefox 52, insecure sites (`http:`) can't set cookies with the "secure" directive anymore.
+- Начиная с Chrome 52 и Firefox 52, небезопасные сайты (`http:`) не могут ставить куки если в заголовке есть "secure" директива.
 
 ## Смотрите также
 
