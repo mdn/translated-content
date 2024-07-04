@@ -70,7 +70,7 @@ l10n:
 - `successorTabId` {{optional_inline}}
   - : `integer`。标签页的后继标签页的 ID。
 - `title` {{optional_inline}}
-  - : `string`。标签页的标题。仅当扩展具有 `"tabs"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)或匹配标签页 URL 的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)时才会显示。
+  - : `string`。标签页的标题。仅当扩展具有 `"tabs"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)或匹配标签页 URL 的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)时才会显示。
 - `url` {{optional_inline}}
   - : `string`。标签页显示的文档的 URL。仅当扩展具有 `"tabs"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)或匹配[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)时才会显示。
 - `width` {{optional_inline}}
