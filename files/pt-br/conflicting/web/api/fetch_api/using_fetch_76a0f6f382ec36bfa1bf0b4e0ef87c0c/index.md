@@ -1,6 +1,7 @@
 ---
 title: Uso de busca Cross-global
-slug: Web/API/Fetch_API/Cross-global_fetch_usage
+slug: conflicting/Web/API/Fetch_API/Using_Fetch_76a0f6f382ec36bfa1bf0b4e0ef87c0c
+original_slug: Web/API/Fetch_API/Cross-global_fetch_usage
 ---
 
 Este artigo explica um "edge case" (um problema ou situação que ocorre apenas em um parâmetro operacional extremo) que ocorre ao utilizar fetch (e potencialmente outras APIs que exibem o mesmo tipo de comportamento de recuperação de recurso). Quando uma busca de cross-origin envolvendo uma URL relativa é iniciada a partir de um {{htmlelement ("iframe")}}, a URL relativa costumava ser resolvida na localização global atual, em vez da localização do iframe.

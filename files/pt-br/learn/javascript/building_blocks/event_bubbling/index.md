@@ -1,6 +1,7 @@
 ---
 title: Comparativo entre Event Targets
-slug: Web/API/Event/Comparison_of_Event_Targets
+slug: Learn/JavaScript/Building_blocks/Event_bubbling
+original_slug: Web/API/Event/Comparison_of_Event_Targets
 ---
 
 {{ ApiRef() }}
