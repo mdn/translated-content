@@ -29,16 +29,16 @@ let highlighting = browser.tabs.highlight(
       - : `integer`。包含要突出显示标签页的窗口的 ID。
     - `populate` {{optional_inline}}
 
-      - : `boolean`。默认为 `true`。如果设置为 `false`，则 {{WebExtAPIRef('windows.Window')}} 对象不会包含一个 `tabs` 属性，该属性包含表示窗口中打开的标签页的 {{WebExtAPIRef('tabs.Tab')}} 对象列表。
+      - : `boolean`。默认为 `true`。如果设置为 `false`，则 {{WebExtAPIRef('windows.Window')}} 对象不会包含 `tabs` 属性，该属性包含表示窗口中打开的标签页的 {{WebExtAPIRef('tabs.Tab')}} 对象列表。
 
-        > **备注：** 对窗口进行填充（默认行为）如果标签页很多可能会消耗大量资源。为了更好的性能，建议如果不需要标签页详情，则手动将 `populate` 设置为 `false`。
+        > **备注：** 在标签页很多的情况下，对窗口进行填充（默认行为）可能会消耗大量资源。为了更好的性能，如果不需要标签页详情，建议手动将 `populate` 设置为 `false`。
 
     - `tabs`
       - : `integer` 数组，指定要突出显示的一个或多个标签页索引。之前突出显示的但未包含在 `tabs` 中的标签页将停止被突出显示。`tabs` 中的第一个标签页将成为活动标签页。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含突出显示的标签页信息的 {{WebExtAPIRef('windows.Window')}} 对象来完成。如果无法找到窗口或发生其他错误，promise 将会被拒绝并返回错误信息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含突出显示的标签页信息的 {{WebExtAPIRef('windows.Window')}} 对象。如果无法找到窗口或发生其他错误，promise 会以错误信息拒绝。
 
 ## 浏览器兼容性
 
