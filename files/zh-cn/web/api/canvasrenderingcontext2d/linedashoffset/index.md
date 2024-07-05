@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.lineDashOffset
+title: CanvasRenderingContext2D：lineDashOffset 属性
 slug: Web/API/CanvasRenderingContext2D/lineDashOffset
 l10n:
   sourceCommit: 1cd766933b00753370868cdd3b64b74ba17fe646
