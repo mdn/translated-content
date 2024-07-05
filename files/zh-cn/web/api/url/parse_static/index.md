@@ -6,7 +6,7 @@ slug: Web/API/URL/parse_static
 
 {{ApiRef("URL API")}}
 
-{{domxref("URL")}} 接口的 parse() 静态方法它返回一个根据参数定义的新创建的 {{domxref("URL")}} 对象。
+{{domxref("URL")}} 接口的 `URL.parse()` 静态方法返回一个根据参数定义的新创建的 {{domxref("URL")}} 对象。
 
 如果给定的基础 URL 或结果 URL 无法解析为有效的 URL，则返回 `null`。这是使用 {{domxref("URL.URL", "URL()")}} 构造函数在 [try...catch](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 块中构造 `URL` 的一种替代方法，或者使用 {{domxref("URL.canParse_static", "canParse()")}} 检查参数，如果方法返回 `false`，则返回 `null`。
 
@@ -35,7 +35,7 @@ URL.parse(url, base)
 
 ## 示例
 
-[解析 URL 的相对引用](/zh-CN/docs/Web/API/URL_API/Resolving_relative_references) 和 [`URL()` 构造函数](/zh-CN/docs/Web/API/URL/URL#示例) 提供了更多示例，演示了不同的 `url` 和 `base` 值如何解析为最终的绝对 URL（尽管主要使用 `URL()`）。
+[解析 URL 的相对引用](/zh-CN/docs/Web/API/URL_API/Resolving_relative_references)和 [`URL()` 构造函数](/zh-CN/docs/Web/API/URL/URL#示例)提供了更多示例，演示了不同的 `url` 和 `base` 值如何解析为最终的绝对 URL（尽管主要使用 `URL()`）。
 
 ### 使用 URL.parse()
 
