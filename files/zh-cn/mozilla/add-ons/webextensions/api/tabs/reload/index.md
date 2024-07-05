@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-重新加载一个标签页，可选择是否绕过本地网络缓存。
+重新加载一个标签页，可选择是否绕过本地 web 缓存。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -28,11 +28,11 @@ let reloading = browser.tabs.reload(
 
   - : 一个包含以下属性的对象：
     - `bypassCache` {{optional_inline}}
-      - : `boolean`。是否绕过本地网络缓存。默认为 `false`。
+      - : `boolean`。是否绕过本地 web 缓存。默认为 `false`。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当标签页重新加载完成时其会被兑现且不带有参数。如果发生任何错误，promise 将会被拒绝并返回错误信息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当标签页重新加载完成时其会被兑现且不带有参数。如果发生任何错误，promise 会错误信息拒绝。
 
 ## 示例
 
