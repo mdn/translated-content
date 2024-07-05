@@ -119,7 +119,7 @@ try {
 あなたが発生した元々のエラーを管理していない場合、エラーを捕捉して、より詳細なメッセージを持つ新しい `Error` オブジェクトを発生させることが一つの選択肢となります。
 元のエラーは新しい `Error` のコンストラクターの [`options`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/Error#options) パラメーターの `cause` プロパティに渡すべきです。これによって、上位の try/catch ブロックが元のエラーとスタックトレースが利用できることを保証します。
 
-以下の例は、似たエラーで失敗する2つのメソッドを示しています（`doFailSomeWay()` と `doFailAnotherWay()`）:
+以下の例は、似たエラーで失敗する 2 つのメソッドを示しています（`doFailSomeWay()` と `doFailAnotherWay()`）:
 
 ```js
 function doWork() {
@@ -171,14 +171,14 @@ console.log(new MyError("test", { cause: new Error("cause") }).cause);
 
 StackOverflow の突っ込んだ議論、 ["What's a good way to extend Error in JavaScript?"](http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) も参照してください。
 
-> **警告**: 組み込みのサブクラス化は、ES6より古いコードに確実にトランスパイルできるわけではありません。なぜなら {{jsxref("Reflect.construct()")}} を使わずに特定の `new.target` を持つ基底クラスを構築する手段がないためです。[追加の設定](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend)を行うか、コンストラクタの最後で手動で {{jsxref("Object/setPrototypeOf", "Object.setPrototypeOf(this, CustomError.prototype)")}} を呼ぶ必要があります。そうしないと、構築されたインスタンスは `CustomError` のインスタンスになりません。詳しくは [the TypeScript FAQ](https://github.com/microsoft/TypeScript/wiki/FAQ#why-doesnt-extending-built-ins-like-error-array-and-map-work) をご覧ください。
+> **警告**: 組み込みのサブクラス化は、ES6 より古いコードに確実にトランスパイルできるわけではありません。なぜなら {{jsxref("Reflect.construct()")}} を使わずに特定の `new.target` を持つ基底クラスを構築する手段がないためです。[追加の設定](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend)を行うか、コンストラクターの最後で手動で {{jsxref("Object/setPrototypeOf", "Object.setPrototypeOf(this, CustomError.prototype)")}} を呼ぶ必要があります。そうしないと、構築されたインスタンスは `CustomError` のインスタンスになりません。詳しくは [the TypeScript FAQ](https://github.com/microsoft/TypeScript/wiki/FAQ#why-doesnt-extending-built-ins-like-error-array-and-map-work) をご覧ください。
 
-> **メモ:** ES2015 クラスを使用した場合、一部のブラウザはスタックトレース上に `CustomError` コンストラクタを含めます。
+> **メモ:** ES2015 クラスを使用した場合、一部のブラウザはスタックトレース上に `CustomError` コンストラクターを含めます。
 
 ```js
 class CustomError extends Error {
   constructor(foo = "bar", ...params) {
-    // 親のコンストラクタに（ベンダー固有のものも含めて）残りの引数を渡す
+    // 親のコンストラクターに（ベンダー固有のものも含めて）残りの引数を渡す
     super(...params);
 
     // エラーが発生した箇所の正しいスタックトレースを維持する （V8でのみ有効）
