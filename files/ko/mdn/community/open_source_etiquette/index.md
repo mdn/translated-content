@@ -132,6 +132,6 @@ MDN의 많은 작업은 문서 작성과 코드 예제를 중심으로 이루어
 
 ## 같이 보기
 
-- [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/)
-- [More general freeCodeCamp "How to contribute to open source" list](https://github.com/freeCodeCamp/how-to-contribute-to-open-source)
-- [Getting started with contributing to open source](https://stackoverflow.blog/2020/08/03/getting-started-with-contributing-to-open-source/)
+- [오픈 소스에 기여하는 방법](https://opensource.guide/how-to-contribute/)
+- [FreeCodeCamp의 "오픈 소스에 기여하는 방법" 목록](https://github.com/freeCodeCamp/how-to-contribute-to-open-source)
+- [오픈 소스 기여 시작하기](https://stackoverflow.blog/2020/08/03/getting-started-with-contributing-to-open-source/)
