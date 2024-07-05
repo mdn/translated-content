@@ -1,6 +1,7 @@
 ---
 title: "-webkit-overflow-scrolling"
-slug: Web/CSS/-webkit-overflow-scrolling
+slug: orphaned/Web/CSS/-webkit-overflow-scrolling
+original_slug: Web/CSS/-webkit-overflow-scrolling
 ---
 
 {{CSSRef}} {{Non-standard_header}}

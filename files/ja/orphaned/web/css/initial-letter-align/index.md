@@ -1,6 +1,7 @@
 ---
 title: initial-letter-align
-slug: Web/CSS/initial-letter-align
+slug: orphaned/Web/CSS/initial-letter-align
+original_slug: Web/CSS/initial-letter-align
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

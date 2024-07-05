@@ -1,6 +1,7 @@
 ---
 title: SLD
-slug: Glossary/Second-level_Domain
+slug: Glossary/SLD
+original_slug: Glossary/Second-level_Domain
 ---
 
 {{GlossarySidebar}}

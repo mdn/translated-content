@@ -8434,10 +8434,6 @@
       "chikoski"
     ]
   },
-  "Web/API/Fetch_API/Cross-global_fetch_usage": {
-    "modified": "2020-01-07T17:57:37.167Z",
-    "contributors": ["Wind1808"]
-  },
   "Web/API/Fetch_API/Using_Fetch": {
     "modified": "2020-10-15T21:47:32.462Z",
     "contributors": [
@@ -15513,10 +15509,6 @@
     "modified": "2020-11-22T08:36:33.464Z",
     "contributors": ["mixplace", "8845musign"]
   },
-  "Web/CSS/-webkit-overflow-scrolling": {
-    "modified": "2020-10-15T22:08:24.081Z",
-    "contributors": ["mfuji09"]
-  },
   "Web/CSS/-webkit-tap-highlight-color": {
     "modified": "2019-04-25T10:41:36.517Z",
     "contributors": ["mfuji09"]
@@ -18632,10 +18624,6 @@
   },
   "Web/CSS/initial-letter": {
     "modified": "2020-10-16T11:19:53.557Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/initial-letter-align": {
-    "modified": "2020-10-15T22:13:14.565Z",
     "contributors": ["mfuji09"]
   },
   "Web/CSS/initial_value": {
@@ -30284,6 +30272,10 @@
     "modified": "2020-02-11T06:17:04.429Z",
     "contributors": ["tyankatsu", "Marsf"]
   },
+  "conflicting/Web/API/Fetch_API/Using_Fetch": {
+    "modified": "2020-01-07T17:57:37.167Z",
+    "contributors": ["Wind1808"]
+  },
   "conflicting/Web/API/FormData": {
     "modified": "2019-04-26T23:54:27.353Z",
     "contributors": ["mfuji09"]
@@ -30505,6 +30497,10 @@
     "modified": "2020-04-13T14:01:47.252Z",
     "contributors": ["mfuji09", "Marsf"]
   },
+  "orphaned/Web/CSS/-webkit-overflow-scrolling": {
+    "modified": "2020-10-15T22:08:24.081Z",
+    "contributors": ["mfuji09"]
+  },
   "orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support": {
     "modified": "2019-03-18T21:20:29.728Z",
     "contributors": ["mfuji09"]
@@ -30512,6 +30508,10 @@
   "orphaned/Web/CSS/CSS_Properties_Reference": {
     "modified": "2019-03-18T21:41:37.652Z",
     "contributors": ["mfuji09", "Uemmra3"]
+  },
+  "orphaned/Web/CSS/initial-letter-align": {
+    "modified": "2020-10-15T22:13:14.565Z",
+    "contributors": ["mfuji09"]
   },
   "orphaned/Web/Compatibility_FAQ": {
     "modified": "2019-03-23T23:03:33.809Z",
