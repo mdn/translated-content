@@ -28,15 +28,15 @@ isDisjointFrom(other)
 
 如果两个集合没有公共元素，那么它们是*不相交*的。使用数学记号：
 
-<math display="block"><semantics><mrow><mi>A</mi><mtext>&nbsp;与&nbsp;</mtext><mi>B</mi><mtext>&nbsp;不相交</mtext><mo stretchy="false">⇔</mo><mi>A</mi><mo>∩</mo><mi>B</mi><mo>=</mo><mi>∅</mi></mrow><annotation encoding="TeX">A\text{ 与 }B \text{ 不相交 } \Leftrightarrow A\cap B = \empty</annotation></semantics></math>
+<math display="block"><semantics><mrow><mi>A</mi><mtext>&nbsp;与&nbsp;</mtext><mi>B</mi><mtext>&nbsp;不相交&nbsp;</mtext><mo stretchy="false">⇔</mo><mi>A</mi><mo>∩</mo><mi>B</mi><mo>=</mo><mi>∅</mi></mrow><annotation encoding="TeX">A\text{ 与 }B \text{ 不相交 } \Leftrightarrow A\cap B = \empty</annotation></semantics></math>
 
 使用维恩图表示：
 
-![有两个圆的维恩图。因为A 和 B 没有重叠的部分，所以它们是不相交的。](diagram.svg)
+![有两个圆的维恩图。因为 A 和 B 没有重叠的部分，所以它们是不相交的。](diagram.svg)
 
-`isDisjointFrom()`  接受[类集合](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set#类_set_浏览器_api)对象作为 `other` 参数。方法要求 {{jsxref("Operators/this", "this")}} 是一个 {{jsxref("Set")}} 的实例，因为它不调用任何用户代码而直接获取 `this` 中存储的数据。然后，方法的行为取决于 `this` 和 `other` 的元素数量：
+`isDisjointFrom()` 接受[类集合](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set#类_set_浏览器_api)对象作为 `other` 参数。方法要求 {{jsxref("Operators/this", "this")}} 是一个 {{jsxref("Set")}} 的实例，因为它不调用任何用户代码而直接获取 `this` 中存储的数据。然后，方法的行为取决于 `this` 和 `other` 的元素数量：
 
-- 如果 `this` 中的元素数量比 `other.size` 大，那么它将调用 `other` 的 `keys()` 方法遍历 `other`。如果 `other` 中有任何元素出现在 `this` 中，方法返回 `false`（并且通过调用 `keys()` 迭代器的 `return()` 方法关闭迭代器 ）；否则，返回 `true`。
+- 如果 `this` 中的元素数量比 `other.size` 大，那么它将调用 `other` 的 `keys()` 方法遍历 `other`。如果 `other` 中有任何元素出现在 `this` 中，方法返回 `false`（并且通过调用 `keys()` 迭代器的 `return()` 方法关闭迭代器）；否则，返回 `true`。
 - 否则，它将遍历 `this`。如果有任何元素 `e` 使得 `other.has(e)` 返回[真值](/zh-CN/docs/Glossary/Truthy)，方法返回 `false`；否则，返回 `true`。
 
 由于这种实现，`isDisjointFrom()` 的效率主要取决于 `this` 和 `other` 中数量较少的集合（假定两个集合都能以次线性时间复杂度访问）。
