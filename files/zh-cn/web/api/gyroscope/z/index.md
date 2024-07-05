@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Sensor API")}}
 
-{{domxref("Gyroscope")}} 接口的只读属性 **`z`** 返回一个数字表示设备沿着 Z 轴的角速度。
+{{domxref("Gyroscope")}} 接口的 **`z`** 只读属性返回一个数字表示设备沿着 Z 轴的角速度。
 
 ## 值
 
