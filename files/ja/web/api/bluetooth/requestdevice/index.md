@@ -23,7 +23,7 @@ requestDevice(options)
 - `options` {{optional_inline}}
 
   - : 機器の選択に関するオプションを設定するオブジェクトです。
-  以下のオプションが利用可能です。
+    以下のオプションが利用可能です。
 
     - `filters` {{optional_inline}}
 
