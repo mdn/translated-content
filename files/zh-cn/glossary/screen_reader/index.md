@@ -15,9 +15,9 @@ l10n:
 
 ### 旁白
 
-iOS 和 macOS 自带一个内置的屏幕阅读器——旁白。要在 macOS 上访问 VoiceOver，请转到“系统设置” > “辅助功能” > “旁白实用工具”。你也可以使用 fn+command + F5 来切换 VoiceOver 的开关。旁白既可以朗读内容，也可以显示内容。朗读的内容会在一个深灰色的框中显示出来。
+iOS 和 macOS 自带一个内置的屏幕阅读器——旁白。要在 macOS 上访问旁白（VoiceOver），请转到“系统设置” > “辅助功能” > “旁白实用工具”。你也可以使用 fn + command + F5 来切换旁白的开关。旁白既可以朗读内容，也可以显示内容。朗读的内容会在一个深灰色的框中显示出来。
 
-旁白也可以通过快捷键使用。参见 [Mac 上的旁白通用命令](https://support.apple.com/zh-cn/guide/voiceover/cpvokys01/mac)) 以得到完整列表。
+旁白也可以通过快捷键使用。参见 [Mac 上的旁白通用命令](https://support.apple.com/zh-cn/guide/voiceover/cpvokys01/mac)以得到完整列表。
 
 更多详情内容，参见[适用于 Mac 的旁白使用手册](https://support.apple.com/zh-cn/guide/voiceover/welcome/mac)以及[在 iPhone 上的 App 中使用旁白](https://support.apple.com/guide/iphone/use-voiceover-in-apps-iphe4ee74be8/ios)。
 
@@ -25,7 +25,7 @@ iOS 和 macOS 自带一个内置的屏幕阅读器——旁白。要在 macOS �
 
 讲述人是内置于 Windows 10 和 Windows 11 中的屏幕阅读器。
 
-更多详情内容，参见[讲述人完整指南](https://support.microsoft.com/zh-cn/windows/%E8%AE%B2%E8%BF%B0%E4%BA%BA%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97-e4397a0d-ef4f-b386-d8ae-c172f109bdb1).
+更多详情内容，参见[讲述人完整指南](https://support.microsoft.com/zh-cn/windows/讲述人完整指南-e4397a0d-ef4f-b386-d8ae-c172f109bdb1)。
 
 ### ChromeVox
 
