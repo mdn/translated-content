@@ -22,11 +22,11 @@ let removing = browser.tabs.remove(
 ### 参数
 
 - `tabIds`
-  - 类型：`integer` 或 `integer` 数组。要关闭的标签页的 ID 或 ID 数组。
+  - : `integer` 或 `integer` 数组。要关闭的标签页的 ID。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当所有指定的标签页已被关闭或其 `beforeunload` 提示已被处理时其会被兑现且不带有参数。如果发生任何错误，promise 将会被拒绝并返回错误信息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当所有指定的标签页已被关闭或其 `beforeunload` 提示已被处理时其会被兑现且不带有参数。如果发生任何错误，promise 会以错误信息拒绝。
 
 ## 示例
 
