@@ -28,7 +28,7 @@ let updating = browser.tabs.update(
   - : `integer`。默认为当前窗口中选定的标签页。
 - `updateProperties`
 
-  - : `object`。要更新的这个标签页的一组属性。要了解更多有关这些属性的信息，请查看 {{WebExtAPIRef("tabs.Tab")}} 的文档。
+  - : `object`。标签页中要更新的一组属性。要了解更多有关这些属性的信息，请查看 {{WebExtAPIRef("tabs.Tab")}} 的文档。
 
     - `active` {{optional_inline}}
       - : `boolean`。标签页是否应该变为活动状态。不影响窗口是否被聚焦（参见 {{WebExtAPIRef('windows.update')}}）。如果设置为 `true`，非活动的突出显示的标签页将停止被突出显示。如果设置为 `false`，则不做任何操作。
@@ -36,15 +36,15 @@ let updating = browser.tabs.update(
       - : `boolean`。标签页是否可以被浏览器丢弃。默认值为 `true`。当设置为 `false` 时，浏览器无法自动丢弃该标签页。但是，可以通过 {{WebExtAPIRef("tabs.discard")}} 丢弃该标签页。
     - `highlighted` {{optional_inline}}
 
-      - : `boolean`。将标签页添加或从当前选择中移除。如果设置为 `true` 并且标签页未被突出显示，则默认情况下它将变为活动状态。
+      - : `boolean`。将标签页添加到当前的选择中，或从中移除。如果设置为 `true` 并且标签页未被突出显示，则默认情况下它将变为活动状态。
 
         如果只想突出显示标签页而不激活它，在 Firefox 中可以将 `highlighted` 设置为 `true`，并将 `active` 设置为 `false`。其他浏览器可能即使在这种情况下也会激活标签页。
 
     - `loadReplace` {{optional_inline}}
 
-      - : `boolean`。新的 URL 是否应该替换标签页导航历史中的旧 URL，即可通过“返回”按钮访问的历史。
+      - : `boolean`。新的 URL 是否应该替换标签页导航历史中的旧 URL（可通过“返回”按钮访问）。
 
-        例如，用户使用 Ctrl+T 创建一个新的标签页。默认情况下，在 Firefox 中，这会加载 "about:newtab"。如果你的扩展然后使用 {{WebExtAPIRef("tabs.update")}} 更新此页面，如果没有使用 `loadReplace`，则“返回”按钮将启用，并且用户将返回到 "about:newtab"。如果扩展设置了 `loadReplace`，则“返回”按钮将被禁用，并且就像扩展提供的 URL 是该标签页访问的第一个页面一样。
+        例如，用户使用 Ctrl+T 创建一个新的标签页。默认情况下，在 Firefox 中，这会加载“about:newtab”。然后，如果你的扩展使用 {{WebExtAPIRef("tabs.update")}} 更新此页面且没有使用 `loadReplace`，则“返回”按钮将启用，并且用户可以返回到“about:newtab”。如果扩展设置了 `loadReplace`，则“返回”按钮将被禁用，并且就像扩展提供的 URL 是该标签页访问的第一个页面一样。
 
         请注意，原始 URL 仍将出现在浏览器的全局历史记录中。
 
@@ -62,7 +62,7 @@ let updating = browser.tabs.update(
 
       - : `string`。要导航标签页到的 URL。
 
-        由于安全原因，在 Firefox 中，这可能不是特权 URL。因此，传递以下任何 URL 将失败，并设置 {{WebExtAPIRef("runtime.lastError")}} 为错误消息：
+        由于安全原因，在 Firefox 中，这不能是特权 URL。因此，传递以下任何 URL 将失败，并设置 {{WebExtAPIRef("runtime.lastError")}} 为错误消息：
 
         - chrome: 类型的 URL
         - javascript: 类型的 URL
@@ -70,11 +70,11 @@ let updating = browser.tabs.update(
         - file: 类型的 URL（即文件系统上的文件。但是，要使用打包在扩展中的文件，请参见下文）
         - 特权 about: 类型的 URL（例如 `about:config`、`about:addons`、`about:debugging`、`about:newtab`）。非特权的 URL（例如 `about:blank`）是允许的。
 
-        要加载打包在你的扩展中的页面，请指定从扩展的 `manifest.json` 文件开始的绝对 URL。例如：'/path/to/my-page.html'。如果省略前导的“/”，则 URL 被视为相对 URL，不同的浏览器可能会构造不同的绝对 URL。
+        要加载打包在你的扩展中的页面，请指定从扩展的 `manifest.json` 文件开始的绝对 URL。例如：“/path/to/my-page.html”。如果省略前导的“/”，则 URL 被视为相对 URL，不同的浏览器可能会构造不同的绝对 URL。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含有关更新的标签页的 {{WebExtAPIRef('tabs.Tab')}} 对象。{{WebExtAPIRef('tabs.Tab')}} 对象不包含 `url`、`title` 和 `favIconUrl`，除非匹配的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)或已请求 `"tabs"` 权限。如果找不到标签页或发生其他错误，承诺将被拒绝并附带错误消息。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含有关更新的标签页的 {{WebExtAPIRef('tabs.Tab')}} 对象。{{WebExtAPIRef('tabs.Tab')}} 对象不包含 `url`、`title` 和 `favIconUrl`，除非匹配的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)或已请求 `"tabs"` 权限。如果找不到标签页或发生其他错误，promise 将以错误消息拒绝。
 
 ## 示例
 
