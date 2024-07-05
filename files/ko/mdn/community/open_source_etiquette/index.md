@@ -1,6 +1,8 @@
 ---
 title: 오픈 소스 에티켓
 slug: MDN/Community/Open_source_etiquette
+l10n:
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
 
 {{MDNSidebar}}
