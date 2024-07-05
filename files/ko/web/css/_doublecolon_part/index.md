@@ -15,7 +15,7 @@ custom-element::part(foo) {
 }
 ```
 
-## 문법
+## 구문
 
 ```css
 ::part(<ident>+) {
