@@ -1,6 +1,8 @@
 ---
 title: 스네이크 케이스(Snake case)
 slug: Glossary/Snake_case
+l10n:
+  sourceCommit: 6aa664dc5ccb5edf0897f99ad5feb59325dff831
 ---
 
 {{GlossarySidebar}}
