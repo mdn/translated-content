@@ -24,7 +24,7 @@ l10n:
 
 > **참고:** 추가적인 CSS 속성에 대한 명세서가 추후 지원될 수 있습니다.
 
-## 문법
+## 구문
 
 ```css
 ::marker {
@@ -68,6 +68,6 @@ ul li::marker {
 ## 같이 보기
 
 - 마커 박스를 기본적으로 가지고 있는 HTML 요소들: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("summary")}}
-- [CSS generated content](/ko/docs/Web/CSS/CSS_generated_content) 모듈
+- [CSS 생성된 콘텐츠](/ko/docs/Web/CSS/CSS_generated_content) 모듈
 - [CSS 목록과 카운터](/ko/docs/Web/CSS/CSS_lists) 모듈
 - [CSS 카운터 스타일](/ko/docs/Web/CSS/CSS_counter_styles) 모듈
