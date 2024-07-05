@@ -9,9 +9,9 @@ l10n:
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html")}}
 
-在创建对等体后，你将希望获得浏览器访问麦克风的权限。我们将在 [`navigator.mediaDevices`](/zh-CN/docs/Web/API/Navigator/mediaDevices) 对象上使用 [`getUserMedia()`](/zh-CN/docs/Web/API/MediaDevices/getUserMedia) 方法。`getUserMedia()` 端点接受一个 `constraints` 对象，该对象指定所需的权限。`getUserMedia()` 是一个 promise，当成功解析时，会返回一个包含来自我们流的音频的 [`MediaStream`](/zh-CN/docs/Web/API/MediaStream) 对象。如果 promise 没有成功解析，你将需要捕获并显示错误。
+在创建对等方后，你将希望获得浏览器访问麦克风的权限。我们将使用 [`navigator.mediaDevices`](/zh-CN/docs/Web/API/Navigator/mediaDevices) 对象的 [`getUserMedia()`](/zh-CN/docs/Web/API/MediaDevices/getUserMedia) 方法。`getUserMedia()` 端点接受一个 `constraints` 对象，该对象指定所需的权限。`getUserMedia()` 是一个 promise，当成功兑现时，会返回一个包含来自我们流的音频的 [`MediaStream`](/zh-CN/docs/Web/API/MediaStream) 对象。如果 promise 没有成功兑现，你将需要捕获并显示错误。
 
-1. 在你的 script.js 文件底部添加以下代码：
+1. 在你的 `script.js` 文件底部添加以下代码：
 
    ```js
    function getLocalStream() {
@@ -30,13 +30,13 @@ l10n:
 
    让我们解释一下最重要的几行：
 
-   - `window.localStream = stream` 将 `MediaStream` 对象（我们在上一行分配给 `stream` 的对象）附加到窗口作为 `localStream`。
-   - `window.localAudio.srcObject = stream` 将具有 ID 为 localAudio 的 [`<audio> 元素`](/zh-CN/docs/Web/HTML/Element/audio)的 `src` 属性设置为由 promise 返回的 `MediaStream`，以便它会播放我们的流。
+   - `window.localStream = stream` 将 `MediaStream` 对象（我们在上一行赋值给 `stream` 的对象）附加到窗口的 `localStream`。
+   - `window.localAudio.srcObject = stream` 将 ID 为 `localAudio` 的 [`<audio>` 元素](/zh-CN/docs/Web/HTML/Element/audio)的 `src` 属性设置为由 promise 返回的 `MediaStream`，以便它会播放我们的流。
    - `window.localAudio.autoplay = true` 将 `<audio>` 元素的 `autoplay` 属性设置为 true，以便音频自动播放。
 
    > **警告：** 如果你在网上进行了一些调查，可能会发现 [`navigator.getUserMedia`](/zh-CN/docs/Web/API/Navigator/getUserMedia) 并认为你可以使用它而不是 `navigator.mediaDevices.getUserMedia`。你是错误的。前者是一个已弃用的方法，它需要回调以及约束作为参数。后者使用 promise，因此你不需要使用回调。
 
-2. 尝试调用你的 getLocalStream 函数，通过在代码底部添加以下行：
+2. 通过在代码底部添加以下行来尝试调用你的 `getLocalStream` 函数：
 
    ```js
    getLocalStream();
@@ -51,7 +51,7 @@ l10n:
 这就是所有内容的综合效果：
 
 ```js
-/* global Peer */
+/* 全局对等方 */
 
 /**
  * 获取当前呼叫者的本地音频流

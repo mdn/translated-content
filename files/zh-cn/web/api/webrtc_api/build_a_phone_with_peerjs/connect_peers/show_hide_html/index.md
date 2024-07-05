@@ -9,9 +9,9 @@ l10n:
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection")}}
 
-好了，你已经设置好了麦克风权限。下一步是确保每个用户知道他们的对等 ID，以便他们可以建立连接。PeerJS 框架为我们提供了一堆可以在之前创建的对等体上调用的事件侦听器。
+好了，你已经设置好了麦克风权限。下一步是确保每个用户知道他们的对等方 ID，以便他们可以建立连接。PeerJS 框架为我们提供了一堆可以在之前创建的对等方上调用的事件监听器。
 
-1. 让我们使用 `open` 事件创建一个侦听器，当对等体打开时显示对等体的 ID。将以下代码添加到 `script.js` 的底部：
+1. 让我们使用 `open` 事件创建一个当对等方打开时显示对等方的 ID 的监听器。将以下代码添加到 `script.js` 的底部：
 
    ```js
    peer.on("open", () => {
@@ -19,9 +19,9 @@ l10n:
    });
    ```
 
-   这里你正在替换 HTML 元素 ID 为 `caststatus` 的文本。
+   这里你正在替换 ID 为 `caststatus` 的 HTML 元素的文本。
 
-2. 尝试在浏览器中重新加载应用程序。不再显示`connecting...`，而是应该看到 `Your device ID is: <peer ID>`。
+2. 尝试在浏览器中重新加载应用程序。不再显示 `connecting...`，而是应该看到 `Your device ID is: <peer ID>`。
 
    ![一个深绿色粗体字的奶油色背景，上面写着“phone a friend”。紧接着是“Your device ID is: 3b77”，下面是“please use headphones!”。然后是一个大的深绿色按钮，上面写着“Call”，颜色与背景相同。](app_showing_device_id.png)
 
@@ -30,7 +30,7 @@ l10n:
    ```js
    const audioContainer = document.querySelector(".call-container");
 
-   // 显示呼叫按钮和对等体 ID
+   // 显示呼叫按钮和对等方 ID
    function showCallContent() {
      window.caststatus.textContent = `Your device ID is: ${peer.id}`;
      callBtn.hidden = false;

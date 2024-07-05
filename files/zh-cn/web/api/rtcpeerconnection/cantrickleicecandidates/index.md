@@ -13,9 +13,9 @@ slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
 
 ## 值
 
-{{jsxref("Boolean")}} 如果远程对等体可以接受滴入的 ICE candidate，则为 true；如果不能，则为 false。如果尚未建立远程对等方，则此值为 null。
+{{jsxref("Boolean")}} 如果远程对等方可以接受滴入的 ICE candidate，则为 true；如果不能，则为 false。如果尚未建立远程对等方，则此值为 null。
 
-> **备注：** 一旦本地对等方调用{{domxref("RTCPeerConnection.setRemoteDescription()")}}，就确定该属性的值; ICE 代理使用所提供的描述来确定远程对等体是否支持滴入的 ICE candidates。
+> **备注：** 一旦本地对等方调用{{domxref("RTCPeerConnection.setRemoteDescription()")}}，就确定该属性的值; ICE 代理使用所提供的描述来确定远程对等方是否支持滴入的 ICE candidates。
 
 ## 示例
 

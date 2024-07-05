@@ -13,11 +13,11 @@ WebRTC 的主要问题之一是它相当复杂，使用和开发起来很复杂�
 
 在这一系列的文章中，我们将使用 PeerJS 创建一个简单的电话应用程序。我们将使用服务器和客户端框架，但我们的大部分工作将涉及处理客户端代码。
 
-### 先决条件
+### 前提
 
 这是一个中级教程；在尝试之前，你应该已经熟悉：
 
-- [纯正的 JavaScript](/zh-CN/docs/Web/JavaScript)
+- [原生 JavaScript](/zh-CN/docs/Web/JavaScript)
 - [Node](https://nodejs.org/en/docs/)
 - [Express](/zh-CN/docs/Learn/Server-side/Express_Nodejs)
 - [HTML](/zh-CN/docs/Web/HTML)
@@ -29,7 +29,7 @@ WebRTC 的主要问题之一是它相当复杂，使用和开发起来很复杂�
 ### 目录
 
 1. [设置](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup)
-2. [连接对等体](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers)
+2. [连接对等方](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers)
 
    1. [获取麦克风权限](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission)
    2. [显示和隐藏 HTML](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html)

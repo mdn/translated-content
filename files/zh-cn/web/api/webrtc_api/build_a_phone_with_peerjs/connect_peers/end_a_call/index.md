@@ -9,7 +9,7 @@ l10n:
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading")}}
 
-你已经快完成了！最后一件事是确保你的呼叫者有一种结束通话的方式。最优雅的方式是使用 close() 函数关闭连接，你可以在挂断按钮的事件侦听器中执行这个操作。
+你已经快完成了！最后一件事是确保你的呼叫者有一种结束通话的方式。最优雅的方式是使用 `close()` 函数关闭连接，你可以在挂断按钮的事件侦听器中执行这个操作。
 
 1. 在你的 `script.js` 文件的末尾添加以下内容：
 
