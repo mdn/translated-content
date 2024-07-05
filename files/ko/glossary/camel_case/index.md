@@ -1,6 +1,8 @@
 ---
 title: 카멜 케이스(Camel case)
 slug: Glossary/Camel_case
+l10n:
+  sourceCommit: 4087e29297477d29ee9d4c34a11310cfc09da275
 ---
 
 {{GlossarySidebar}}
