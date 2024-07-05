@@ -2762,7 +2762,7 @@
 /ja/docs/Web/API/EventTarget/attachEvent	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/Web/API/FetchEvent_clone	/ja/docs/Web/API/FetchEvent
 /ja/docs/Web/API/Fetch_API/Basic_concepts	/ja/docs/Web/API/Fetch_API/Using_Fetch
-/ja/docs/Web/API/Fetch_API/Cross-global_fetch_usage	/ja/docs/conflicting/Web/API/Fetch_API/Using_Fetch
+/ja/docs/Web/API/Fetch_API/Cross-global_fetch_usage	/ja/docs/Web/API/Fetch_API/Using_Fetch
 /ja/docs/Web/API/File.name	/ja/docs/Web/API/File/name
 /ja/docs/Web/API/File.size	/ja/docs/Web/API/Blob/size
 /ja/docs/Web/API/File.type	/ja/docs/Web/API/Blob/type
@@ -3562,7 +3562,6 @@
 /ja/docs/Web/CSS/-moz-zoom-out	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-ms-scroll-snap-type	/ja/docs/Web/CSS/scroll-snap-type
 /ja/docs/Web/CSS/-webkit-mask-attachment	/ja/docs/Web/CSS
-/ja/docs/Web/CSS/-webkit-overflow-scrolling	/ja/docs/orphaned/Web/CSS/-webkit-overflow-scrolling
 /ja/docs/Web/CSS/-webkit-print-color-adjust	/ja/docs/Web/CSS/print-color-adjust
 /ja/docs/Web/CSS/:-moz-focusring	/ja/docs/Web/CSS/:focus-visible
 /ja/docs/Web/CSS/:-moz-list-bullet	/ja/docs/Web/CSS/::-moz-list-bullet
@@ -3773,7 +3772,6 @@
 /ja/docs/Web/CSS/image/image()	/ja/docs/Web/CSS/image/image
 /ja/docs/Web/CSS/image/image-set()	/ja/docs/Web/CSS/image/image-set
 /ja/docs/Web/CSS/image/paint()	/ja/docs/Web/CSS/image/paint
-/ja/docs/Web/CSS/initial-letter-align	/ja/docs/orphaned/Web/CSS/initial-letter-align
 /ja/docs/Web/CSS/justify-tracks	/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /ja/docs/Web/CSS/linear-gradient	/ja/docs/Web/CSS/gradient/linear-gradient
 /ja/docs/Web/CSS/linear-gradient()	/ja/docs/Web/CSS/gradient/linear-gradient
