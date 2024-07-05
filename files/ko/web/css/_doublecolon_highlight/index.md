@@ -23,7 +23,7 @@ l10n:
 
 부분적으로 {{CSSxRef("background-image")}}는 무시됩니다.
 
-## 문법
+## 구문
 
 ```css-nolint
 ::highlight(custom-highlight-name)
