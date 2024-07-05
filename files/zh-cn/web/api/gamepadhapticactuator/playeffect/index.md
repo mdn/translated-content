@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Gamepad")}}
 
-{{domxref("GamepadHapticActuator")}} 接口的 **`playEffect()`** 方法使硬件播放特定的震动模式。
+{{domxref("GamepadHapticActuator")}} 接口的 **`playEffect()`** 方法使硬件播放特定的振动模式。
 
 ## 语法
 
