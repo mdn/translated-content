@@ -124,4 +124,4 @@ l10n:
 - [WebSocket](/ja/docs/Web/API/WebSockets_API)
   - : WebSocket API を使用すると、あなたのアプリやサイトをサーバーと接続し、リアルタイムにデータのやり取りを行うことができます。マルチプレイヤーゲームアクションやチャットサービスなどに最適です。
 - [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
-  - : Worker を使用すると、モダンでマルチコアなプロセッサを利用し、独自の JavaScript コードを実行して、バックグラウンドのスレッドを生成することができます。
+  - : Worker を使用すると、モダンでマルチコアなプロセッサーを利用し、独自の JavaScript コードを実行して、バックグラウンドのスレッドを生成することができます。

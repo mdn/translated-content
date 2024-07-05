@@ -3,6 +3,8 @@ title: 나의 웹사이트를 설계하기 위해서는?
 slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 이 글은 모든 프로젝트에서 중요한 첫 단계 - 프로젝트를 통해 달성하고 싶은 것을 정의하기 - 를 다룬다.
 
 <table class="learn-box standard-table">

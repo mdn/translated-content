@@ -2,16 +2,15 @@
 title: WebSocket クライアントアプリケーションの記述
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 l10n:
-  sourceCommit: 50e215d730cd173d93b9bf75785c0d8ed2f67cb0
+  sourceCommit: 8a9085b96d0135920be9b281d4500ff72a7a8369
 ---
 
-{{APIRef("Websockets API")}}
+{{DefaultAPISidebar("WebSockets API")}} {{AvailableInWorkers}}
 
 WebSocket クライアントアプリケーションは [WebSocket API](/ja/docs/Web/API/WebSockets_API) を使用して、 WebSocket プロトコルを経由して [WebSocket サーバー](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)と通信します。
 
-{{AvailableInWorkers}}
-
-> **メモ:** この記事のサンプルスニペットは WebSocket チャットクライアント/サーバーサンプルから取得したものです。[コードはこちらからご覧ください](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)。
+> **メモ:** この記事のサンプルスニペットは WebSocket チャットクライアント/サーバーサンプルから取得したものです。
+> [コードはこちらからご覧ください](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)。
 
 ## WebSocket オブジェクトの作成
 
@@ -24,21 +23,26 @@ webSocket = new WebSocket(url, protocols);
 ```
 
 - `url`
-  - : 接続先 URL。これは、 WebSocket サーバーが応答する URL である必要があります。これは URL スキームに `wss://` を使用するべきですが、ソフトウェアによってはローカル接続用に安全ではない `ws://` を使用することを許可していることがあります。
+  - : 接続先 URL。これは、 WebSocket サーバーが応答する URL である必要があります。
+    これは URL スキームに `wss://` を使用するべきですが、ソフトウェアによってはローカル接続用に安全ではない `ws://` を使用することを許可していることがあります。
 - `protocols` {{ optional_inline() }}
-  - : 単一のプロトコル文字列または一連のプロトコル文字列。これらの文字列はサブプロトコルを示すのに使用されるため、単一のサーバーで複数の WebSocket サブプロトコルを実装できます（たとえば、特定の `protocol` に応じて 1 つのサーバーで異なる種類の対話を処理できるようにする）。プロトコル文字列を指定しない場合、空文字列であると仮定されます。
+  - : 単一のプロトコル文字列または一連のプロトコル文字列。
+    これらの文字列はサブプロトコルを示すのに使用されるため、単一のサーバーで複数の WebSocket サブプロトコルを実装できます（たとえば、特定の `protocol` に応じて 1 つのサーバーで異なる種類の対話を処理できるようにする）。
+    プロトコル文字列を指定しない場合、空文字列であると仮定されます。
 
-コンストラクターは、接続先がアクセスを許可していない場合に `SecurityError` 例外を発生させます。これは安全ではない接続を利用しようとしたときに発生することがあります（ほとんどの{{Glossary("user agent", "ユーザーエージェント")}}は、同じ機器か、可能であれば同じネットワークでない限り、すべての WebSocket 接続に安全なリンクを要求します）。
+コンストラクターは、接続先がアクセスを許可していない場合に `SecurityError` 例外を発生させます。
+これは安全ではない接続を利用しようとしたときに発生することがあります（ほとんどの{{Glossary("user agent", "ユーザーエージェント")}}は、同じ機器か、可能であれば同じネットワークでない限り、すべての WebSocket 接続に安全なリンクを要求します）。
 
 ### 接続エラー
 
 接続中にエラーが発生した場合、最初に `error` という名前の単純なイベントが {{domxref("WebSocket")}} オブジェクトに送信され（その結果、その {{domxref("WebSocket/error_event", "onerror")}} ハンドラーが呼び出されます）、次に {{domxref("CloseEvent")}} が `WebSocket` オブジェクトに送信され（{{domxref("WebSocket/close_event", "onclose")}} ハンドラーが呼び出されます）接続の終了の理由を示します。
 
-ブラウザーは {{domxref("CloseEvent")}} 経由で、コンソールにも [RFC 6455 第 7.4 節]で定義されている終了コードと同時に、もっと説明的なエラーメッセージを出力するができます。
+ブラウザーは {{domxref("CloseEvent")}} 経由で、コンソールにも [RFC 6455 第 7.4 節](https://datatracker.ietf.org/doc/html/rfc6455#section-7.4)で定義されている終了コードと同時に、もっと説明的なエラーメッセージを出力するができます。
 
 ### 例
 
-この簡単な例では新しい WebSocket を作成し、 `wss://www.example.com/socketserver` のサーバーに接続します。この例では、ソケットのリクエストで "protocolOne" のカスタムプロトコルが指定されていますが、省略することもできます。
+この簡単な例では新しい WebSocket を作成し、 `wss://www.example.com/socketserver` のサーバーに接続します。
+この例では、ソケットのリクエストで "protocolOne" のカスタムプロトコルが指定されていますが、省略することもできます。
 
 ```js
 const exampleSocket = new WebSocket(
@@ -64,7 +68,8 @@ WebSocket を確立するには、 [HTTP アップグレードメカニズム](/
 
 ## サーバーへのデータの送信
 
-接続を開くと、サーバーにデータを送信することができます。 これを行うには、送信するメッセージごとに `WebSocket` オブジェクトの {{domxref("WebSocket.send", "send()")}} メソッドを呼び出します。
+接続を開くと、サーバーにデータを送信することができます。
+これを行うには、送信するメッセージごとに `WebSocket` オブジェクトの {{domxref("WebSocket.send", "send()")}} メソッドを呼び出します。
 
 ```js
 exampleSocket.send("Here's some text that the server is urgently awaiting!");
@@ -72,7 +77,8 @@ exampleSocket.send("Here's some text that the server is urgently awaiting!");
 
 データは文字列、 {{ domxref("Blob") }}、 {{jsxref("ArrayBuffer")}} のいずれかで送信することができます。
 
-接続の確立は非同期であり、失敗しやすいため、 `send()` メソッドの呼び出しが WebSocket オブジェクトの作成直後に成功するという保証はありません。データの送信を試みるのは、少なくともいったん接続が確立してからでなければならないので、作業を行うための {{domxref("WebSocket/open_event", "onopen")}} イベントハンドラーを定義してその中で行います。
+接続の確立は非同期であり、失敗しやすいため、 `send()` メソッドの呼び出しが WebSocket オブジェクトの作成直後に成功するという保証はありません。
+データの送信を試みるのは、少なくともいったん接続が確立してからでなければならないので、作業を行うための {{domxref("WebSocket/open_event", "onopen")}} イベントハンドラーを定義してその中で行います。
 
 ```js
 exampleSocket.onopen = (event) => {
@@ -171,8 +177,10 @@ WebSocket 接続の使用を終了したら、 WebSocket のメソッド {{domxr
 exampleSocket.close();
 ```
 
-接続を閉じようとする前に、ソケットの {{domxref("WebSocket.bufferedAmount", "bufferedAmount")}} 属性を確認して、データがネットワーク上でまだ送信されていないかどうかを判断すると有用かもしれません。この値が 0 ではない場合、まだ待ち状態のデータがあるので、接続を閉じる前に待ったほうが良いかもしれません。
+接続を閉じようとする前に、ソケットの {{domxref("WebSocket.bufferedAmount", "bufferedAmount")}} 属性を確認して、データがネットワーク上でまだ送信されていないかどうかを判断すると有用かもしれません。
+この値が 0 ではない場合、まだ待ち状態のデータがあるので、接続を閉じる前に待ったほうが良いかもしれません。
 
 ## セキュリティの考慮事項
 
-混合コンテンツ環境では WebSocket を使用しないでください。つまり、 HTTPS を使用もしくはそうでない方法でもロードされたページから、セキュアでない WebSocket 接続を開くべきではありません。最近のブラウザーは安全な WebSocket 接続のみを許可し、また安全ではないコンテキストでの使用には対応しなくなってきています。
+混合コンテンツ環境では WebSocket を使用しないでください。つまり、 HTTPS を使用もしくはそうでない方法でもロードされたページから、セキュアでない WebSocket 接続を開くべきではありません。
+最近のブラウザーは安全な WebSocket 接続のみを許可し、また安全ではないコンテキストでの使用には対応しなくなってきています。

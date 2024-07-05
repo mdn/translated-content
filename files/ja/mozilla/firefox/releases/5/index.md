@@ -3,6 +3,8 @@ title: Firefox 5 for developers
 slug: Mozilla/Firefox/Releases/5
 ---
 
+{{FirefoxSidebar}}
+
 Firefox 5 は Gecko 5.0 ベースのブラウザーで、2011 年 6 月 21 日にリリースされました。このページは Firefox 5 のリリースにあたり、開発者に影響する変更について情報をまとめたものです。
 
 ## ウェブ開発者向けの変更点一覧
@@ -77,7 +79,7 @@ Firefox 5 は Gecko 5.0 ベースのブラウザーで、2011 年 6 月 21 日�
 
 すでに開発済みのアドオンを Firefox 5 向けにアップデートを行う方法については [Firefox 5 へのアドオンのアップデート方法](/ja/docs/Firefox/Updating_add-ons_for_Firefox_5)をご覧ください。
 
-> **メモ:** Firefox 5 は他のメジャーリリース版の Firefox と同様に、再コンパイルされたバイナリコンポーネントが必要となります。詳しくは[バイナリインターフェイス](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces)をご覧ください。
+> **メモ:** Firefox 5 は他のメジャーリリース版の Firefox と同様に、再コンパイルされたバイナリーコンポーネントが必要となります。詳しくは[バイナリーインターフェイス](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces)をご覧ください。
 
 ### JavaScript コードモジュールに対する変更点
 

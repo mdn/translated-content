@@ -131,7 +131,7 @@ borderify/
 
 ## 打包和发布
 
-为了给其他人使用你的插件，你需要打包，并将其提交给 Mozilla 进行签名。要了解更多有关，请参考[“发布你的扩展”](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension)。
+为了给其他人使用你的插件，你需要打包，并将其提交给 Mozilla 进行签名。要了解更多有关，请参考[“发布你的扩展”](https://extensionworkshop.com/documentation/publish/package-your-extension/)。
 
 ## 下一步
 

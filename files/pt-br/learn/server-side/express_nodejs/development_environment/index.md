@@ -237,13 +237,13 @@ Os passos seguintes mostram como baixar pacotes via NPM, salvá-los nas dependê
 
 ### Desenvolvendo dependências
 
-Se você utilizar uma dependência apenas durante o desenvolvimento da aplicação, é recomendado que você a salve como uma "development dependency". Dessa forma, o pacote não será utilizado no ambiente de produção. Por exemplo: caso utilizar o pacote [esling](http://eslint.org/) (JavaScript Linting), você faria a instalação via NPM da seguinte forma.
+Se você utilizar uma dependência apenas durante o desenvolvimento da aplicação, é recomendado que você a salve como uma "development dependency". Dessa forma, o pacote não será utilizado no ambiente de produção. Por exemplo: caso utilizar o pacote [eslint](http://eslint.org/) (JavaScript Linting), você faria a instalação via NPM da seguinte forma.
 
 ```bash
 npm install eslint --save-dev
 ```
 
-Assim, a esling vai aparecer da seguinte forma na lista de dependências do **package.json**.
+Assim, a eslint vai aparecer da seguinte forma na lista de dependências do **package.json**.
 
 ```json
   "devDependencies": {
@@ -259,7 +259,7 @@ Além de definir e buscar dependências, você também pode nomear scripts dentr
 
 > **Nota:** Ferramentas de automação de tarefas como o [Gulp](http://gulpjs.com/) e o [Grunt](http://gruntjs.com/) também podem ser utilizados, além de outros pacotes externos.
 
-Para definir o script que roda o _esling_, citado na seção acima, nós precisamos adicionar o seguinte bloco no nosso **package.json** (importante: sua aplicação precisa ter como source está na pasta /src/js):
+Para definir o script que roda o _eslint_, citado na seção acima, nós precisamos adicionar o seguinte bloco no nosso **package.json** (importante: sua aplicação precisa ter como source está na pasta /src/js):
 
 ```json
 "scripts": {

@@ -98,8 +98,8 @@ ml2FIkoovZh/8yeTKmjUMb804g6OmjUc9vVojCRV0YdaSmYkkJMJbLg=
 
 要将其转换为你可以传递给 `importKey()` 的格式，你需要做两件事：
 
-- 头部和尾部之间的部分使用 [`window.atob()`](/zh-CN/docs/Web/API/atob) 进行 base64 解码。
-- 将生成的字符串转换为 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)。
+- 头部和尾部之间的部分使用 {{domxref("Window.atob()")}} 进行 base64 解码。
+- 将生成的字符串转换为 {{jsxref("ArrayBuffer")}}。
 
 请参阅[示例](#示例)部分，以获得更具体的指导。
 
@@ -133,8 +133,8 @@ gQIDAQAB
 
 与 [PKCS #8](#pkcs_8) 一样，你可以传递给 `importKey()` 的格式，你需要做两件事：
 
-- 头部和尾部之间的部分使用 [`window.atob()`](/zh-CN/docs/Web/API/atob) 进行 base64 解码。
-- 将生成的字符串转换为 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)。
+- 头部和尾部之间的部分使用 {{domxref("Window.atob()")}} 进行 base64 解码。
+- 将生成的字符串转换为 {{jsxref("ArrayBuffer")}}。
 
 请参阅[示例](#示例)部分，以获得更具体的指导。
 

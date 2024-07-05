@@ -15,7 +15,7 @@ JavaScript에서는 배열과같은 기능부터 JavaScript 위에 구축된 브
 
 JavaScript 객체에 대해 자세히 알아보려면, 기본 문법에 대해 어느 정도 능숙해야 합니다. 이 장을 읽기 전에 [JavaScript 첫걸음](/ko/docs/Learn/JavaScript/First_steps)과 [JavaScript 구성 요소](/ko/docs/Learn/JavaScript/Building_blocks)를 먼저 읽어보시기를 바랍니다.
 
-> **참고:** 컴퓨터/태블릿/혹은 다른 디바이스 상에서 스스로 파일을 만들수 없는 환경이라면, [JSBin](http://jsbin.com/) 또는 [Thimble](https://thimble.mozilla.org/) 과 같은 온라인 코딩 프로그램을 이용하여 (거의 모든) 예제 코드를 테스트해 보실 수 있습니다.
+> **참고:** 컴퓨터/태블릿/혹은 다른 디바이스 상에서 스스로 파일을 만들수 없는 환경이라면, [JSBin](https://jsbin.com/) 또는 [Glitch](https://glitch.com/) 과 같은 온라인 코딩 프로그램을 이용하여 (거의 모든) 예제 코드를 테스트해 보실 수 있습니다.
 
 ## 가이드
 

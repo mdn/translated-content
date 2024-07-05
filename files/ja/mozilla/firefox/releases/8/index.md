@@ -3,6 +3,8 @@ title: Firefox 8 for developers
 slug: Mozilla/Firefox/Releases/8
 ---
 
+{{FirefoxSidebar}}
+
 Firefox 8 は 2011 年 11 月 8 日にリリースされました。このページでは、開発者に影響する Firefox 8 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -85,7 +87,7 @@ Firefox 8 は 2011 年 11 月 8 日にリリースされました。このペー
 
 アドオンを Firefox 8 互換にする際に必要となりそうな変更点は [Updating add-ons for Firefox 8](/ja/docs/Firefox/Updating_add-ons_for_Firefox_8) にまとめられています。
 
-> **メモ:** Firefox 8 では、従来のメジャーリリースと同様に、バイナリコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリインターフェイス](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
+> **メモ:** Firefox 8 では、従来のメジャーリリースと同様に、バイナリーコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリーインターフェイス](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
 
 ### XPCOM
 

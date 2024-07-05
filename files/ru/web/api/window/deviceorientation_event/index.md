@@ -3,6 +3,8 @@ title: deviceorientation
 slug: Web/API/Window/deviceorientation_event
 ---
 
+{{APIRef("Device Orientation Events")}}
+
 Событие `deviceorientation` срабатывает, когда с сенсоров ориентации поступают новые данные о текущем положении устройства внутри Земной системы координат. Эти данные собираются с помощью магнитометра устройства. Более детальное объяснение дано в [Ориентация и объяснение данных движения](/ru/docs/DOM/Orientation_and_motion_data_explained).
 
 ## Общая информация

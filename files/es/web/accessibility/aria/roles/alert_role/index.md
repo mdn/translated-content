@@ -3,6 +3,8 @@ title: Using the alert role
 slug: Web/Accessibility/ARIA/Roles/alert_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Descripción
 
 Esta técnica demuestra como usar el rol [alert](https://www.w3.org/TR/wai-aria-1.1/#alert) y describe el efecto que tiene en los navegadores y tecnologías de asistencia.

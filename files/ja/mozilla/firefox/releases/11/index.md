@@ -3,6 +3,8 @@ title: Firefox 11 for developers
 slug: Mozilla/Firefox/Releases/11
 ---
 
+{{FirefoxSidebar}}
+
 Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました。この記事はウェブ開発者とアドオン開発者向けに、今回のリリースにおける新機能と修正された重要なバグについての情報とより詳細なドキュメントへのリンクをまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -41,9 +43,9 @@ Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました�
 
 ### WebSocket
 
-- [WebSocket](/ja/docs/WebSockets) API がバイナリ形式のメッセージをサポートしました ([Firefox バグ 676439](https://bugzil.la/676439) を参照)。
+- [WebSocket](/ja/docs/WebSockets) API がバイナリー形式のメッセージをサポートしました ([Firefox バグ 676439](https://bugzil.la/676439) を参照)。
 - プロトコルおよび API が最新のドラフト仕様に更新され、また API から接頭辞が除去されました ([Firefox バグ 666349](https://bugzil.la/666349) および [Firefox バグ 695635](https://bugzil.la/695635) を参照)。
-- 以前 Firefox では WebSockets で送受信するメッセージのサイズが 16 MB に制限されていましたが、この制限を 2 GB に引き上げました (メモリ容量の制限で大きなデータを扱えない場合もありますが、Firefox は 2 GB までサポートします)。
+- 以前 Firefox では WebSockets で送受信するメッセージのサイズが 16 MB に制限されていましたが、この制限を 2 GB に引き上げました (メモリー容量の制限で大きなデータを扱えない場合もありますが、Firefox は 2 GB までサポートします)。
 
 ### IndexedDB
 
