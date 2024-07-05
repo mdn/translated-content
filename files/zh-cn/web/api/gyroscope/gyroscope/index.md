@@ -28,7 +28,7 @@ new Gyroscope(options)
 ### 异常
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : 此功能的使用被 [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy) 阻止。
+  - : 此功能的使用被[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止。
 
 ## 规范
 
