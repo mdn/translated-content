@@ -1,6 +1,8 @@
 ---
 title: MDN 웹 문서 저장소
 slug: MDN/Community/Contributing/Our_repositories
+l10n:
+  sourceCommit: db32c2f103885a65715e2cce48bda44be03f44f7
 ---
 
 {{MDNSidebar}}
