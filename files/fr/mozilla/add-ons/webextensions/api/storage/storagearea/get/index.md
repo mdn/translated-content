@@ -22,7 +22,7 @@ let gettingItem = browser.storage.<storageType>.get(
 ### Paramètres
 
 - `keys`
-  - : Une clé (chaîne) ou des clés (un tableau de chaînes ou un objet spécifiant des valeurs par défaut) pour identifier le ou les articles à extraire du stockage. Si vous passez une chaîne vide, un objet ou un tableau ici, un objet vide sera récupéré. Si vous passez `null`, ou une valeur indéfinie, le contenu entier du stockage sera récupéré.
+  - : Une clé (chaîne) ou des clés (un tableau de chaînes ou un objet spécifiant des valeurs par défaut) pour identifier le ou les articles à extraire du stockage. Si vous passez un objet ou un tableau vide ici, un objet vide sera récupéré. Si vous passez `null`, ou une valeur indéfinie, le contenu entier du stockage sera récupéré.
 
 ### Valeur retournée
 
