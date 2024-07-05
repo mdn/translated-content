@@ -25,7 +25,7 @@ browser.tabs.print()
 
 ## 示例
 
-在这个示例中，一个后台脚本监听浏览器操作按钮点击事件，然后尝试打印当前活动的标签页：
+在这个示例中，一个后台脚本监听[浏览器操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2)按钮点击事件，然后尝试打印当前活动的标签页：
 
 ```js
 browser.browserAction.onClicked.addListener(() => {
