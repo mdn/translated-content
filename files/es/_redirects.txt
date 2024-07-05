@@ -1642,7 +1642,8 @@
 /es/docs/Web/API/Event/createEvent	/es/docs/Web/API/Document/createEvent
 /es/docs/Web/API/EventListener	/es/docs/conflicting/Web/API/EventTarget/addEventListener
 /es/docs/Web/API/EventSource/onopen	/es/docs/Web/API/EventSource/open_event
-/es/docs/Web/API/Fetch_API/Conceptos_basicos	/es/docs/Web/API/Fetch_API/Basic_concepts
+/es/docs/Web/API/Fetch_API/Basic_concepts	/es/docs/conflicting/Web/API/Fetch_API/Using_Fetch
+/es/docs/Web/API/Fetch_API/Conceptos_basicos	/es/docs/conflicting/Web/API/Fetch_API/Using_Fetch
 /es/docs/Web/API/Fetch_API/Utilizando_Fetch	/es/docs/Web/API/Fetch_API/Using_Fetch
 /es/docs/Web/API/File/Using_files_from_web_applications	/es/docs/Web/API/File_API/Using_files_from_web_applications
 /es/docs/Web/API/File/fileName	/es/docs/web/api/file/name
@@ -1812,6 +1813,7 @@
 /es/docs/Web/CSS/-webkit-mask-origin	/es/docs/Web/CSS/mask-origin
 /es/docs/Web/CSS/-webkit-mask-position	/es/docs/Web/CSS/mask-position
 /es/docs/Web/CSS/-webkit-mask-repeat	/es/docs/Web/CSS/mask-repeat
+/es/docs/Web/CSS/-webkit-overflow-scrolling	/es/docs/orphaned/Web/CSS/-webkit-overflow-scrolling
 /es/docs/Web/CSS/-webkit-print-color-adjust	/es/docs/Web/CSS/print-color-adjust
 /es/docs/Web/CSS/:-moz-focusring	/es/docs/conflicting/Web/CSS/:focus-visible
 /es/docs/Web/CSS/:-moz-list-bullet	/es/docs/Web/CSS/::-moz-list-bullet
@@ -1820,6 +1822,9 @@
 /es/docs/Web/CSS/:-moz-locale-dir(rtl)	/es/docs/Web/CSS/:-moz-locale-dir_rtl
 /es/docs/Web/CSS/:-moz-ui-invalid	/es/docs/Web/CSS/:user-invalid
 /es/docs/Web/CSS/:-webkit-autofill	/es/docs/Web/CSS/:autofill
+/es/docs/Web/CSS/::-moz-page	/es/docs/orphaned/Web/CSS/::-moz-page
+/es/docs/Web/CSS/::-moz-page-sequence	/es/docs/orphaned/Web/CSS/::-moz-page-sequence
+/es/docs/Web/CSS/::-moz-scrolled-page-sequence	/es/docs/orphaned/Web/CSS/::-moz-scrolled-page-sequence
 /es/docs/Web/CSS/::-webkit-file-upload-button	/es/docs/Web/CSS/::file-selector-button
 /es/docs/Web/CSS/::-webkit-outer-spin-button	/es/docs/conflicting/Web/CSS/::-webkit-inner-spin-button
 /es/docs/Web/CSS/:any	/es/docs/Web/CSS/:is
@@ -2796,7 +2801,9 @@
 /es/docs/Web/SVG/Index	/es/docs/Web/SVG
 /es/docs/Web/SVG/Tutorial/Introducción	/es/docs/Web/SVG/Tutorial/Introduction
 /es/docs/Web/Security/Same-origin_politica	/es/docs/Web/Security/Same-origin_policy
-/es/docs/Web/Security/Securing_your_site/desactivar_autocompletado_formulario	/es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion
+/es/docs/Web/Security/Securing_your_site	/es/docs/Web/Security/Practical_implementation_guides
+/es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/es/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
+/es/docs/Web/Security/Securing_your_site/desactivar_autocompletado_formulario	/es/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /es/docs/Web/Tutoriales	/es/docs/Web/Tutorials
 /es/docs/Web/WebGL	/es/docs/Web/API/WebGL_API
 /es/docs/Web/WebGL/Getting_started_with_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL

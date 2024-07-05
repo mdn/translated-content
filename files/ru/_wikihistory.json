@@ -2252,6 +2252,10 @@
     "modified": "2020-07-16T22:31:31.342Z",
     "contributors": ["chergav", "ConstantineZz", "slychai85"]
   },
+  "Learn/JavaScript/Building_blocks/Event_bubbling": {
+    "modified": "2019-03-18T21:46:09.700Z",
+    "contributors": ["ademaro"]
+  },
   "Learn/JavaScript/Building_blocks/Events": {
     "modified": "2020-08-14T06:15:51.092Z",
     "contributors": [
@@ -4954,10 +4958,6 @@
     "modified": "2019-08-14T12:21:25.951Z",
     "contributors": ["pk.prog", "emil4", "Sasha4ever"]
   },
-  "Web/API/Event/Comparison_of_Event_Targets": {
-    "modified": "2019-03-18T21:46:09.700Z",
-    "contributors": ["ademaro"]
-  },
   "Web/API/Event/Event": {
     "modified": "2020-10-15T21:57:32.652Z",
     "contributors": ["zardo96", "fscholz", "Lazy_Den", "ilyacuc"]
@@ -5152,10 +5152,6 @@
       "visortelle",
       "savelevcorr"
     ]
-  },
-  "Web/API/Fetch_API/Cross-global_fetch_usage": {
-    "modified": "2019-03-18T21:00:16.677Z",
-    "contributors": ["Akh-rman", "qqwweeaassdd"]
   },
   "Web/API/Fetch_API/Using_Fetch": {
     "modified": "2020-03-12T12:40:18.070Z",
@@ -15853,6 +15849,10 @@
       "Sheppy"
     ]
   },
+  "Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion": {
+    "modified": "2019-12-18T06:44:21.121Z",
+    "contributors": ["KolesnikovR"]
+  },
   "Web/Security/Same-origin_policy": {
     "modified": "2020-10-20T11:28:42.439Z",
     "contributors": [
@@ -15863,10 +15863,6 @@
       "vladlipski",
       "ZVanoZ"
     ]
-  },
-  "Web/Security/Securing_your_site/Turning_off_form_autocompletion": {
-    "modified": "2019-12-18T06:44:21.121Z",
-    "contributors": ["KolesnikovR"]
   },
   "Web/Tutorials": {
     "modified": "2019-10-02T16:11:49.043Z",
@@ -15965,6 +15961,10 @@
   "conflicting/Glossary/CORS-safelisted_request_header": {
     "modified": "2019-03-18T21:32:57.580Z",
     "contributors": ["Skinny-Hunter"]
+  },
+  "conflicting/Web/API/Fetch_API/Using_Fetch": {
+    "modified": "2019-03-18T21:00:16.677Z",
+    "contributors": ["Akh-rman", "qqwweeaassdd"]
   },
   "conflicting/Web/HTML/Element/img": {
     "modified": "2019-03-18T20:41:47.756Z",

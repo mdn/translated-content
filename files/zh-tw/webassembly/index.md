@@ -38,8 +38,10 @@ WebAssembly 被設計來與 JavaScript 協同工作 —— 藉由 WebAssembly �
 
 ## API 參考
 
-- [WebAssembly control flow](/zh-TW/docs/WebAssembly/Reference/Control_flow)
-  - : Reference documentation for the set of WebAssembly control-flow operators.
+- [WebAssembly 參考指令](/zh-TW/docs/WebAssembly/Reference)
+  - : WebAssembly 運算子相關的說明文件，內含互動式範例。
+- [WebAssembly JavaScript 介面](/zh-TW/docs/WebAssembly/JavaScript_interface)
+  - : 該物件充當所有與 WebAssembly 相關的功能的命名空間。
 - {{jsxref("Global_objects/WebAssembly", "WebAssembly")}}
   - : This object acts as the namespace for all WebAssembly related functionality.
 - {{jsxref("Global_objects/WebAssembly/Global", "WebAssembly.Global()")}}
