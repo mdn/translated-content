@@ -35,7 +35,7 @@ URL.parse(url, base)
 
 ## 示例
 
-[解析 URL 的相对引用](/zh-CN/docs/Web/API/URL_API/Resolving_relative_references)和 [`URL()` 构造函数](/zh-CN/docs/Web/API/URL/URL#示例)提供了更多示例，演示了不同的 `url` 和 `base` 值如何解析为最终的绝对 URL（尽管主要使用 `URL()`）。
+[解析 URL 的相对引用](/zh-CN/docs/Web/API/URL_API/Resolving_relative_references)和[`URL()` 构造函数](/zh-CN/docs/Web/API/URL/URL#示例)提供了更多示例，演示了不同的 `url` 和 `base` 值如何解析为最终的绝对 URL（尽管主要使用 `URL()`）。
 
 ### 使用 URL.parse()
 
