@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Gamepad")}}
 
-{{domxref("GamepadHapticActuator")}} 接口的只读属性 **`type`** 返回一个表示触觉硬件类型的枚举值。
+{{domxref("GamepadHapticActuator")}} 接口的 **`type`** 只读属性返回一个表示触觉硬件类型的枚举值。
 
 ## 值
 

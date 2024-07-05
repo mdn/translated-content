@@ -19,7 +19,7 @@ playEffect(type, params)
 
 - `type`
 
-  - : 表示所需效果的字符串。这可能因硬件类型而异，可能的值为“双重隆隆声”或“振动”。
+  - : 表示所需效果的字符串。这可能因硬件类型而异，可能的值为 `"dual-rumble"`（双重隆隆声）或 `"vibration"`（振动）。
 
 - `params`
   - : 描述所需触觉效果的对象。期望值是：
@@ -32,7 +32,7 @@ playEffect(type, params)
 
 ### 返回值
 
-当脉冲成功完成时，返回一个由 `true` 值解决的 Promise。
+当 playEffect 成功完成时，返回一个兑现为 `true` 的 Promise。
 
 ## 示例
 

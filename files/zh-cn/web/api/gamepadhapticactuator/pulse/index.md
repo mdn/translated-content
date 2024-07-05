@@ -26,7 +26,7 @@ pulse(value, duration)
 
 ### 返回值
 
-当脉冲成功完成时，返回一个由 `true` 值解决的 Promise。
+当脉冲成功完成时，返回一个兑现为 `true` 的 Promise。
 
 ## 示例
 
