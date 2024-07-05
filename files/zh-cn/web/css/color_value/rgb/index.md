@@ -27,7 +27,7 @@ rgb(from hwb(120deg 10% 20%) r g calc(b + 200))
 > **备注：** `rgb（）` / `rgba（）` 都可接受旧版的语法，即所有的值都是用逗号分隔的，如 rgb(255，0，0)、rgba(255，0，0,0.5)。在逗号分隔的传统语法中，混合数字和百分比值类型是无效的（即 R、G 和 B 值必须是全部数字或全部百分比），也不允许使用 none 值。
 ### 值
 
-下面是对 `绝对值颜色` 和 [相对值颜色](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) 的描述
+下面是对 `绝对值颜色` 和 [相对值颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors) 的描述
 
 #### 绝对值颜色语法
 
