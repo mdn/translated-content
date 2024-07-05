@@ -58,7 +58,7 @@ slug: MDN/Community/Contributing/Our_repositories
 
 ### 코드 예제와 데모
 
-[//]: #"할일 : 저장소를 분류하여 업데이트하기"
+[//]: # "TODO : 저장소를 분류하여 업데이트하기"
 
 MDN 웹 문서 GitHub에는 많은 예제 저장소가 있습니다. 이 저장소는 일반적으로 종종 저희 페이지와 연결되는 독립적인 코드 예제를 포함하고 있습니다. 그러나 가끔 다음과 같은 매크로 호출을 사용하여 이러한 예제들이 페이지에 포함되기도 합니다. `\{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid1.html", '100%', 700)}}`.
 
