@@ -8,9 +8,26 @@ slug: Web/HTTP/Headers/Set-Cookie
 Заголовок HTTP-ответа **`Set-Cookie`** используется для отправки куки-файлов с сервера агенту пользователя, чтобы он мог позже отправить его обратно на сервер.
 Для отправки нескольких куки-файлов в одном ответе должны быть отправлены несколько заголовков **`Set-Cookie`**.
 
-> **Предупреждение:** Браузеры блокируют доступ клиентскому JavaScript коду к `Set-Cookie` заголовкам, так как это того требует спецификация Fetch, она определяет `Set-Cookie` как [запрещённый заголовок ответа](https://fetch.spec.whatwg.org/#forbidden-response-header-name) который [должен быть исключён](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0) из любого ответа доступного для клиентских скриптов.
+> **Предупреждение:** Браузеры блокируют доступ клиентскому JavaScript-коду к заголовкам `Set-Cookie`, как этого требует спецификация Fetch, определяющая `Set-Cookie` как [запрещённый заголовок ответа](https://fetch.spec.whatwg.org/#forbidden-response-header-name), который [должен быть исключён](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0) из любого ответа доступного для клиентских скриптов.
 
-Для детальной информации, смотрите руководство по [HTTP cookies](/ru/docs/Web/HTTP/Cookies).
+Больше информации в руководстве по [использованию HTTP-кук](/ru/docs/Web/HTTP/Cookies).
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Тип заголовка</th>
+      <td>{{Glossary("Response header", "Заголовок ответа")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>нет</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden response header name")}}</th>
+      <td>да</td>
+    </tr>
+  </tbody>
+</table>
 
 | Тип заголовка                         | {{Glossary("Response header")}} |
 | ------------------------------------- | ------------------------------- |
