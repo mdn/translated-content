@@ -29,10 +29,6 @@ slug: Web/HTTP/Headers/Set-Cookie
   </tbody>
 </table>
 
-| Тип заголовка                         | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | нет                             |
-
 ## Синтаксис
 
 ```
