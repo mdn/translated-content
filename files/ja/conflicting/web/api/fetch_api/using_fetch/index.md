@@ -1,6 +1,7 @@
 ---
 title: グローバル間フェッチの使用
-slug: Web/API/Fetch_API/Cross-global_fetch_usage
+slug: conflicting/Web/API/Fetch_API/Using_Fetch
+original_slug: Web/API/Fetch_API/Cross-global_fetch_usage
 l10n:
   sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
