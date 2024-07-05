@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-设置指定标签页的缩放设置。这些设置在导航到该标签页后会被重置为默认设置。
+设定指定标签页的缩放设置。这些设置在标签页进行导航后被重置为默认设置。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -29,7 +29,7 @@ let settingZoomSettings = browser.tabs.setZoomSettings(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在更改缩放设置后其会被兑现且不带有参数。如果找不到标签页或发生其他错误，promise 会兑现为其中一个响应。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在更改缩放设置后其会被兑现且不带有参数。如果找不到标签页或发生其他错误，promise 会以错误消息拒绝。
 
 ## 示例
 
