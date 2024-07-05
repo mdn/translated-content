@@ -2,7 +2,7 @@
 title: よくある JavaScript の問題の扱い
 slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 l10n:
-  sourceCommit: b59c2c5d26c86704c0f16e02fa5e0ec9475314c9
+  sourceCommit: e8d495591fefeb3c0c484b989cc155b84b50bb57
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -191,7 +191,7 @@ Firefoxでは、デバッガータブは次のようになります。
 
 このようなツールの主な特徴は、コードにブレークポイントを追加できることです。ブレークポイントとは、コードの実行が停止する位置のことで、その位置で現在の状態の環境を調べ、何が起こっているかを確認することができます。
 
-さっそくやってみましょう。エラーは現在 26 行目で発生しています。中央のパネルで 26 行目をクリックし、ブレークポイントを追加してください（一番上に青い矢印が表示されます）。ページを更新してみてください (Cmd/Ctrl + R)。ブラウザーは 51 行目でコードの実行を一時停止します。この時点で右側が更新され、とても有益な情報が表示されます。
+さっそくやってみましょう。エラーは現在 26 行目で発生しています。中央のパネルで 26 行目をクリックし、ブレークポイントを追加してください（一番上に青い矢印が表示されます）。ページを更新してみてください (Cmd/Ctrl + R)。ブラウザーは 26 行目でコードの実行を一時停止します。この時点で右側が更新され、とても有益な情報が表示されます。
 
 ![ブレークポイント付き Firefox デバッガー](breakpoint.png)
 
@@ -258,11 +258,11 @@ CSS 機能が対応している場合にスタイルを適用したい場合は�
 
 ```css
 @supports (container-type: inline-size) {
-  /* 対応している場合はコンテナクエリーを使用します。 */
+  /* 対応している場合はコンテナークエリーを使用します。 */
 }
 ```
 
-最後に、機能検出を**ブラウザー検出**（具体的にどのブラウザーがサイトにアクセスしているかを検出すること）と混同しないでください。これはひどい行為なので、まったくお勧めできません。詳細は後述の[悪いブラウザー検出コードの使用](#悪いブラウザー検出コードの使用)を参照してください。
+最後に、機能検出を**ブラウザー検出**（具体的にどのブラウザーがサイトにアクセスしているかを検出すること）と混同しないでください。これはひどい行為なので、まったくお勧めできません。詳細は後述の[ブラウザー検出をしない](#ブラウザー検出をしない)を参照してください。
 
 > **メモ:** 機能検出については、このモジュールの後の方で、専用の記事で詳しく述べます。
 
@@ -337,7 +337,7 @@ function main(err) {
 }
 ```
 
-そこで最初に、関数 `browserSupportsAllFeatures()` が true を返すかどうかを調べる条件を実行します。もし true を返したら、アプリのコードをすべて格納する `main()` 関数を実行します。 `browserSupportsAllFeatures()` は次のようになります：
+そこで最初に、関数 `browserSupportsAllFeatures()` が `true` を返すかどうかを調べる条件を実行します。もし `true` を返したら、アプリのコードをすべて格納する `main()` 関数を実行します。 `browserSupportsAllFeatures()` は次のようになります。
 
 ```js
 function browserSupportsAllFeatures() {
@@ -345,7 +345,7 @@ function browserSupportsAllFeatures() {
 }
 ```
 
-ここでは、[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) オブジェクトと [`fetch()`](/ja/docs/Web/API/fetch) 関数がブラウザーで存在するかどうかをテストしています。両方が存在する場合、関数は true を返します。もし関数が `false` を返したら、条件分岐の2つ目の部分のコードを実行します。これは loadScript() と呼ばれる関数を実行し、ポリフィルをページに読み込み、読み込み完了後に `main()` を実行します。 `loadScript()` は次のようになります。
+ここでは、[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) オブジェクトと [`fetch()`](/ja/docs/Web/API/fetch) 関数がブラウザーで存在するかどうかをテストしています。両方が存在する場合、関数は `true` を返します。もし関数が `false` を返したら、条件分岐の2つ目の部分のコードを実行します。これは `loadScript()` と呼ばれる関数を実行し、ポリフィルをページに読み込み、読み込み完了後に `main()` を実行します。 `loadScript()` は次のようになります。
 
 ```js
 function loadScript(src, done) {
@@ -363,7 +363,7 @@ function loadScript(src, done) {
 
 この関数は新しい `<script>` 要素を作成し、その `src` 属性に最初の引数で指定したパス（上のコードで呼び出したときは `'polyfills.js'`）を設定します。読み込んだら、 2 つ目の引数に指定した関数 (`main()`) を実行します。スクリプトの読み込みでエラーが発生した場合は、関数を呼び出しますが、その際、問題が発生した場合にデバッグに役立つよう、カスタムエラーを取得します。
 
-polyfills.js は基本的に使用している 2 つのポリフィルを 1 つのファイルにまとめたものです。私たちは手動でこれを行いましたが、自動的にバンドルを生成してくれる賢いソリューションもあります。 [Browserify](https://browserify.org/) を参照してください（基本的なチュートリアルは [Getting started with Browserify](https://www.sitepoint.com/getting-started-browserify/) を参照してください）。このように JS ファイルを 1 つにバンドルするのはよいアイディアです。 HTTP リクエストを縮小することで、サイトのパフォーマンスが向上します。
+`polyfills.js` は基本的に使用している 2 つのポリフィルを 1 つのファイルにまとめたものです。私たちは手動でこれを行いましたが、自動的にバンドルを生成してくれる賢いソリューションもあります。 [Browserify](https://browserify.org/) を参照してください（基本的なチュートリアルは [Getting started with Browserify](https://www.sitepoint.com/getting-started-browserify/) を参照してください）。このように JS ファイルを 1 つにバンドルするのはよいアイディアです。 HTTP リクエストを縮小することで、サイトのパフォーマンスが向上します。
 
 このコードが動作している様子は、 [fetch-polyfill-only-when-need.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html) で見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html)も参照）。このコードは元々 Philip Walton によって書かれたものです。元コードは Philip Walton 氏の記事 [Loading Polyfills Only When Needed](https://philipwalton.com/articles/loading-polyfills-only-when-needed/) を調べてください（この記事には有益な説明がたくさんあります）。
 

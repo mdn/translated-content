@@ -8434,10 +8434,6 @@
       "chikoski"
     ]
   },
-  "Web/API/Fetch_API/Cross-global_fetch_usage": {
-    "modified": "2020-01-07T17:57:37.167Z",
-    "contributors": ["Wind1808"]
-  },
   "Web/API/Fetch_API/Using_Fetch": {
     "modified": "2020-10-15T21:47:32.462Z",
     "contributors": [
@@ -15513,10 +15509,6 @@
     "modified": "2020-11-22T08:36:33.464Z",
     "contributors": ["mixplace", "8845musign"]
   },
-  "Web/CSS/-webkit-overflow-scrolling": {
-    "modified": "2020-10-15T22:08:24.081Z",
-    "contributors": ["mfuji09"]
-  },
   "Web/CSS/-webkit-tap-highlight-color": {
     "modified": "2019-04-25T10:41:36.517Z",
     "contributors": ["mfuji09"]
@@ -18632,10 +18624,6 @@
   },
   "Web/CSS/initial-letter": {
     "modified": "2020-10-16T11:19:53.557Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/initial-letter-align": {
-    "modified": "2020-10-15T22:13:14.565Z",
     "contributors": ["mfuji09"]
   },
   "Web/CSS/initial_value": {
