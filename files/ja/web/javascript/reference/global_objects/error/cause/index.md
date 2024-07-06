@@ -63,15 +63,15 @@ function makeRSA(p, q) {
 }
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{jsxref("Error.prototype.message")}}
 - {{jsxref("Error.prototype.toString()")}}
