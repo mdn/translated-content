@@ -65,7 +65,7 @@ em {
 
 #### 结果
 
-{{EmbedLiveSample("Emphasis_with_a_color_and_custom_character", 450，100)}}
+{{EmbedLiveSample("Emphasis_with_a_color_and_custom_character", 450, 100)}}
 
 ## 规范
 
