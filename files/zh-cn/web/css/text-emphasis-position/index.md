@@ -131,7 +131,7 @@ ruby {
 
 ```css
 em {
-  text-emphasis: dot;  /* 为 <em> 元素设置强调标记 */
+  text-emphasis: dot; /* 为 <em> 元素设置强调标记 */
 }
 
 em rt {
