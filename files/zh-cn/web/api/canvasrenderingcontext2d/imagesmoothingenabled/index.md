@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.imageSmoothingEnabled
+title: CanvasRenderingContext2D：imageSmoothingEnabled 属性
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 l10n:
   sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
