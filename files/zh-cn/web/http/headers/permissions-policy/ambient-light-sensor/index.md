@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-HTTP {{HTTPHeader('Permissions-Policy')}} 标头的 `ambient-light-sensor` 指令控制当前文档是否被允许通过 {{domxref('AmbientLightSensor')}} 接口收集设备周围环境中的光照信息。
+HTTP {{HTTPHeader('Permissions-Policy')}} 标头的 `ambient-light-sensor` 指令控制当前文档是否被允许通过 {{domxref('AmbientLightSensor')}} 接口收集设备周围环境中的光亮信息。
 
 具体来说，如果定义的策略阻止使用此特性，则 {{domxref("AmbientLightSensor.AmbientLightSensor", "AmbientLightSensor()")}} 构造函数调用将抛出类型为 `SecurityError` 的 {{domxref("DOMException")}}。
 
