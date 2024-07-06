@@ -17,7 +17,7 @@ l10n:
 
 ## 实例属性
 
-_VirtualKeyboard 接口从其父类 {{domxref("EventTarget")}} 继承属性。_
+_VirtualKeyboard 接口从其父接口 {{domxref("EventTarget")}} 继承属性。_
 
 - {{DOMxRef("VirtualKeyboard.boundingRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 描述虚拟键盘几何结构的 {{domxref("DOMRect")}}。
