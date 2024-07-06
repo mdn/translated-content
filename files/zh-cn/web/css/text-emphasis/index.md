@@ -15,7 +15,6 @@ slug: Web/CSS/text-emphasis
 
 > **注意：** `text-emphasis` 不会重置 {{cssxref("text-emphasis-position")}} 的值。这是因为如果文本中的强调标记的样式和颜色不同，它们的位置几乎不会变化。在极少数情况需要时，可以使用 `text-emphasis-position` 属性。
 
-
 ## Syntax
 
 ```css
