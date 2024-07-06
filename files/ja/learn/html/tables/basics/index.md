@@ -47,7 +47,7 @@ l10n:
 ```html hidden
 <table>
   <caption>
-    太陽系の惑星のデータ（引用元: 
+    太陽系の惑星のデータ（引用元:
     <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
       >Nasa の惑星情報シート - メートル法</a
     >）。
