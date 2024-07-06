@@ -32,8 +32,8 @@ myNotification.close();
 ## 参见
 
 - Techopedia 上的 [Static Method](https://www.techopedia.com/definition/24034/static-method-java)
-- [static](/en-US/docs/Web/JavaScript/Reference/Classes/static)
-- [MDN Web 术语表](/en-US/docs/Glossary)
+- [static](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)
+- [MDN Web 术语表](/zh-CN/docs/Glossary)
 
   - {{Glossary("Object", "对象")}}
   - {{Glossary("Method", "方法")}}
