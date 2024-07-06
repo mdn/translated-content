@@ -2,7 +2,7 @@
 title: 语句
 slug: Glossary/Statement
 l10n:
-    sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
