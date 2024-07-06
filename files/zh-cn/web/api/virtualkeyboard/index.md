@@ -26,7 +26,7 @@ _VirtualKeyboard 接口从其父类 {{domxref("EventTarget")}} 继承属性。_
 
 ## 实例方法
 
-_VirtualKeyboard 接口从其父类 {{domxref("EventTarget")}} 继承方法。_
+_VirtualKeyboard 接口从其父接口 {{domxref("EventTarget")}} 继承方法。_
 
 - {{domxref('VirtualKeyboard.show()')}} {{experimental_inline}}
   - : 显示虚拟键盘。
