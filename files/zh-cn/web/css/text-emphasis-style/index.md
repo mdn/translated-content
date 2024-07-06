@@ -5,7 +5,7 @@ slug: Web/CSS/text-emphasis-style
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`text-emphasis-style`** 设置强调标记的样式。这个值也可以使用[简写属性](/zh-cn/web/css/shorthand_properties) {{cssxref("text-emphasis")}} 来设置。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`text-emphasis-style`** 设置强调标记的样式。这个值也可以使用[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) {{cssxref("text-emphasis")}} 来设置。
 
 {{EmbedInteractiveExample("pages/css/text-emphasis-style.html")}}
 
@@ -100,4 +100,4 @@ h2 {
 
 ## 参见
 
-- {{cssxref('text-emphasis-color')}}，{{cssxref('text-emphasis')}} 和 {{cssxref('text-emphasis-position')}}——其他强调标记相关属性
+- {{cssxref('text-emphasis-color')}}、{{cssxref('text-emphasis')}} 和 {{cssxref('text-emphasis-position')}}——其他强调标记相关属性

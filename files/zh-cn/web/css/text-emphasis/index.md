@@ -5,7 +5,7 @@ slug: Web/CSS/text-emphasis
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`text-emphasis`** 将强调标记应用到除去空格和控制字符的文本。这个值是 {{cssxref("text-emphasis")}} 和 {{cssxref("text-emphasis-color")}} 的[简写属性](/zh-cn/web/css/shorthand_properties)。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`text-emphasis`** 将强调标记应用到除去空格和控制字符的文本。这个值是 {{cssxref("text-emphasis")}} 和 {{cssxref("text-emphasis-color")}} 的[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)。
 
 {{EmbedInteractiveExample("pages/css/text-emphasis.html")}}
 
@@ -108,5 +108,5 @@ h2 {
 
 ## 参见
 
-- {{cssxref('text-emphasis-style')}}, {{cssxref('text-emphasis-color')}}——相关全称属性
+- {{cssxref('text-emphasis-style')}}、{{cssxref('text-emphasis-color')}}——相关全称属性
 - {{cssxref('text-emphasis-position')}}——可定义强调标记位置的属性

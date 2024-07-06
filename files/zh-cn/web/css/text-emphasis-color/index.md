@@ -5,7 +5,7 @@ slug: Web/CSS/text-emphasis-color
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`text-emphasis-color`** 设置强调色。这个值也可以使用[简写属性](/zh-cn/web/css/shorthand_properties) {{cssxref("text-emphasis")}} 来设置。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`text-emphasis-color`** 设置强调色。这个值也可以使用[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) {{cssxref("text-emphasis")}} 来设置。
 
 {{EmbedInteractiveExample("pages/css/text-emphasis-color.html")}}
 
@@ -78,5 +78,5 @@ em {
 ## 参见
 
 - {{cssxref("&lt;color&gt;")}}——相关数据类型
-- {{cssxref('text-emphasis-style')}}，{{cssxref('text-emphasis')}}，和 {{cssxref("text-emphasis-position")}}——其他强调标记相关属性
-- {{cssxref("color")}}，{{cssxref("background-color")}}，{{cssxref("border-color")}}，{{cssxref("outline-color")}}，{{cssxref("text-emphasis-color")}}，{{cssxref("text-shadow")}}，{{cssxref("caret-color")}}，和 {{cssxref("column-rule-color")}}——其他颜色相关属性
+- {{cssxref('text-emphasis-style')}}、{{cssxref('text-emphasis')}}、和 {{cssxref("text-emphasis-position")}}——其他强调标记相关属性
+- {{cssxref("color")}}、{{cssxref("background-color")}}、{{cssxref("border-color")}}、{{cssxref("outline-color")}}、{{cssxref("text-emphasis-color")}}、{{cssxref("text-shadow")}}、{{cssxref("caret-color")}}、和 {{cssxref("column-rule-color")}}——其他颜色相关属性

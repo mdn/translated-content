@@ -149,5 +149,5 @@ em rt {
 
 ## 参见
 
-- {{cssxref("text-emphasis-style")}}，{{cssxref("text-emphasis-color")}}——相关全称属性
+- {{cssxref("text-emphasis-style")}}、{{cssxref("text-emphasis-color")}}——相关全称属性
 - {{cssxref("text-emphasis")}}——相关简写属性
