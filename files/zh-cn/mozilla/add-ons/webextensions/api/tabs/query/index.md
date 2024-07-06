@@ -34,7 +34,7 @@ let querying = browser.tabs.query(queryInfo)
     - `autoDiscardable` {{optional_inline}}
       - : `boolean`。浏览器是否可以自动丢弃该标签页。默认值为 `true`。若设置为 `false`，则浏览器将不会自动丢弃该标签页。但是，标签页仍可使用 {{WebExtAPIRef("tabs.discard")}} 来丢弃。
     - `cookieStoreId` {{optional_inline}}
-      - : `string` 或 `string` 数组。使用它来返回 `tab.cookieStoreId` 与指定的任何 `cookieStoreId` 字符串相匹配的标签页。此选项仅在附加组件具有 `"cookies"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)时才可用。
+      - : `string` 或 `string` 数组。使用它来返回 `tab.cookieStoreId` 与指定的任何 `cookieStoreId` 字符串相匹配的标签页。此选项仅在附加组件具有 `"cookies"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)时才可用。有关详细信息，请参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
     - `currentWindow` {{optional_inline}}
       - : `boolean`。标签页是否在当前窗口中。
     - `discarded` {{optional_inline}}
