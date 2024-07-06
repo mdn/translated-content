@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.fontVariantCaps
+title: CanvasRenderingContext2D：fontVariantCaps 属性
 slug: Web/API/CanvasRenderingContext2D/fontVariantCaps
 l10n:
   sourceCommit: 44cf523714745d626317192bfbe849b47144f3ab
