@@ -1,8 +1,6 @@
 ---
 title: text-emphasis-color
 slug: Web/CSS/text-emphasis-color
-page-type: css-property
-browser-compat: css.properties.text-emphasis-color
 ---
 
 {{CSSRef}}
@@ -67,7 +65,7 @@ em {
 
 #### 结果
 
-{{EmbedLiveSample("Emphasis_with_a_color_and_custom_character"，450，100)}}
+{{EmbedLiveSample("Emphasis_with_a_color_and_custom_character", 450，100)}}
 
 ## 规范
 

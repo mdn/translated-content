@@ -1,8 +1,6 @@
 ---
 title: text-emphasis-position
 slug: Web/CSS/text-emphasis-position
-page-type: css-property
-browser-compat: css.properties.text-emphasis-position
 ---
 
 {{CSSRef}}
@@ -119,7 +117,7 @@ text-emphasis-position: unset;
 
 ### 优先显示注音标记
 
-一些编辑器在注音标记与强调标记冲突时倾向于隐藏强调标记。在HTML中，可以通过以下 CSS 实现：
+一些编辑器在注音标记与强调标记冲突时倾向于隐藏强调标记。在 HTML 中，可以通过以下 CSS 实现：
 
 ```css
 ruby {
@@ -129,7 +127,7 @@ ruby {
 
 ### 优先显示强调标记
 
-一些编辑器在强调标记与注音标记冲突时倾向于隐藏注音标记。在HTML中，可以通过以下 CSS 实现：
+一些编辑器在强调标记与注音标记冲突时倾向于隐藏注音标记。在 HTML 中，可以通过以下 CSS 实现：
 
 ```css
 em {
