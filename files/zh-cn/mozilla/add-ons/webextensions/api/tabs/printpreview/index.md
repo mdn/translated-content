@@ -31,7 +31,7 @@ let openingPreview = browser.tabs.printPreview()
 
 ## 示例
 
-在这个示例中，后台脚本监听浏览器操作按钮点击事件，然后为当前活动标签页打开打印预览：
+在这个示例中，后台脚本监听[浏览器操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2)按钮点击事件，然后为当前活动标签页打开打印预览：
 
 ```js
 browser.browserAction.onClicked.addListener(() => {
