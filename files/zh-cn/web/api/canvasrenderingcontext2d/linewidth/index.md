@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.lineWidth
+title: CanvasRenderingContext2D：lineWidth 属性
 slug: Web/API/CanvasRenderingContext2D/lineWidth
 l10n:
   sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
@@ -9,7 +9,7 @@ l10n:
 
 Canvas 2D API 的 **`CanvasRenderingContext2D.lineWidth`** 属性用于设置线段厚度。
 
-> **备注：** 线可以通过{{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}, 和{{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} 方法绘制。
+> **备注：** 线可以通过 {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}、{{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}} 和 {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} 方法绘制。
 
 ## 值
 
