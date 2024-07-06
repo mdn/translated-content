@@ -22,7 +22,7 @@ let saving = browser.tabs.saveAsPDF(
 ### 参数
 
 - `pageSettings`
-  - : `object`。保存页面的设置，作为一个 `browser.tabs.PageSettings` 对象。这个对象必须提供，但其中的所有属性都是可选的。若未指定的属性将使用默认值，详细的默认值列表请参考 {{WebExtAPIRef("tabs.PageSettings", "PageSettings")}} 文档。
+  - : `object`。保存页面的设置（一个 {{WebExtAPIRef("tabs.PageSettings")}} 对象）。这个对象必须提供，但其中的所有属性都是可选的。任何未指定的属性将使用默认值，详细的默认值列表请参考 {{WebExtAPIRef("tabs.PageSettings", "PageSettings")}} 文档。
 
 ### 返回值
 
