@@ -2,7 +2,7 @@
 title: 符号
 slug: Glossary/Symbol
 l10n:
-    sourceCommit: 3cfbf63f7a2779fddf992863a96cb8947d407cf2
+  sourceCommit: 3cfbf63f7a2779fddf992863a96cb8947d407cf2
 ---
 
 {{GlossarySidebar}}
