@@ -903,10 +903,6 @@
     "modified": "2019-03-18T21:34:38.990Z",
     "contributors": ["yshenhua"]
   },
-  "Glossary/Guard": {
-    "modified": "2019-03-18T20:37:40.179Z",
-    "contributors": ["aximario"]
-  },
   "Glossary/Gutters": {
     "modified": "2020-06-14T12:16:58.334Z",
     "contributors": ["lmx-Hexagram", "yshenhua"]
@@ -3560,6 +3556,10 @@
       "Hecdi",
       "ppphp"
     ]
+  },
+  "Learn/JavaScript/Building_blocks/Event_bubbling": {
+    "modified": "2019-03-18T21:17:15.255Z",
+    "contributors": ["zhuangyin"]
   },
   "Learn/JavaScript/Building_blocks/Events": {
     "modified": "2020-08-04T06:06:58.173Z",
@@ -9181,10 +9181,6 @@
       "TigerSoldier"
     ]
   },
-  "Web/API/Event/Comparison_of_Event_Targets": {
-    "modified": "2019-03-18T21:17:15.255Z",
-    "contributors": ["zhuangyin"]
-  },
   "Web/API/Event/Event": {
     "modified": "2020-10-15T21:37:04.498Z",
     "contributors": [
@@ -9499,21 +9495,6 @@
       "yqjiang",
       "xcatliu"
     ]
-  },
-  "Web/API/Fetch_API/Basic_concepts": {
-    "modified": "2019-03-23T22:45:38.912Z",
-    "contributors": [
-      "zhuangyin",
-      "jswisher",
-      "xgqfrms-GitHub",
-      "Jeff-Kook",
-      "xcatliu",
-      "ziyunfei"
-    ]
-  },
-  "Web/API/Fetch_API/Cross-global_fetch_usage": {
-    "modified": "2019-03-18T21:35:40.335Z",
-    "contributors": ["DuckSoft", "wynejan"]
   },
   "Web/API/Fetch_API/Using_Fetch": {
     "modified": "2020-10-15T21:39:39.542Z",
@@ -16515,10 +16496,6 @@
   "Web/CSS/-webkit-line-clamp": {
     "modified": "2020-10-15T22:24:06.241Z",
     "contributors": ["liuruiqi1993", "herotangabc", "litaoAurora"]
-  },
-  "Web/CSS/-webkit-overflow-scrolling": {
-    "modified": "2019-03-23T23:02:52.440Z",
-    "contributors": ["teoli", "Ende93", "FrontENG", "limichange", "ccforward"]
   },
   "Web/CSS/-webkit-tap-highlight-color": {
     "modified": "2019-03-23T22:22:56.346Z",
@@ -31505,10 +31482,6 @@
     "modified": "2019-03-23T22:46:21.766Z",
     "contributors": ["fanxiaojie"]
   },
-  "Web/SVG/Attribute/enable-background": {
-    "modified": "2020-10-15T22:34:25.447Z",
-    "contributors": ["SphinxKnight", "SoMuchTo"]
-  },
   "Web/SVG/Attribute/end": {
     "modified": "2019-03-23T22:46:42.288Z",
     "contributors": ["fanxiaojie"]
@@ -32323,6 +32296,27 @@
     "modified": "2020-10-15T22:15:40.587Z",
     "contributors": ["Yayure"]
   },
+  "Web/Security/Practical_implementation_guides": {
+    "modified": "2019-05-30T06:18:16.799Z",
+    "contributors": [
+      "Qos",
+      "Roscoe93",
+      "keep2zero",
+      "xgqfrms-GitHub",
+      "hashedhyphen"
+    ]
+  },
+  "Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion": {
+    "modified": "2020-06-26T14:51:08.712Z",
+    "contributors": [
+      "Clarkkkk",
+      "zhangchen",
+      "nick-ChenZe",
+      "tsejx",
+      "1010Tech",
+      "xgqfrms-GitHub"
+    ]
+  },
   "Web/Security/Same-origin_policy": {
     "modified": "2020-04-07T00:07:57.795Z",
     "contributors": [
@@ -32361,27 +32355,6 @@
   "Web/Security/Secure_Contexts": {
     "modified": "2020-09-16T05:44:30.532Z",
     "contributors": ["gjc9620"]
-  },
-  "Web/Security/Securing_your_site": {
-    "modified": "2019-05-30T06:18:16.799Z",
-    "contributors": [
-      "Qos",
-      "Roscoe93",
-      "keep2zero",
-      "xgqfrms-GitHub",
-      "hashedhyphen"
-    ]
-  },
-  "Web/Security/Securing_your_site/Turning_off_form_autocompletion": {
-    "modified": "2020-06-26T14:51:08.712Z",
-    "contributors": [
-      "Clarkkkk",
-      "zhangchen",
-      "nick-ChenZe",
-      "tsejx",
-      "1010Tech",
-      "xgqfrms-GitHub"
-    ]
   },
   "Web/Security/Subresource_Integrity": {
     "modified": "2020-06-01T06:08:59.407Z",

@@ -702,6 +702,10 @@
     "modified": "2019-03-23T22:38:34.635Z",
     "contributors": ["mfuji09", "kubota-aoi"]
   },
+  "Glossary/Engine/Rendering": {
+    "modified": "2020-09-28T13:40:38.634Z",
+    "contributors": ["mfuji09", "Uemmra3"]
+  },
   "Glossary/Entity": {
     "modified": "2020-08-26T12:57:35.570Z",
     "contributors": ["mfuji09", "Uemmra3", "dskmori", "asuktakahashi"]
@@ -897,10 +901,6 @@
   "Glossary/Grid_Tracks": {
     "modified": "2020-03-26T14:31:20.417Z",
     "contributors": ["mfuji09", "dynamis"]
-  },
-  "Glossary/Guard": {
-    "modified": "2020-01-10T08:49:48.628Z",
-    "contributors": ["Wind1808"]
   },
   "Glossary/Gutters": {
     "modified": "2019-03-18T20:48:45.475Z",
@@ -1592,10 +1592,6 @@
   "Glossary/Regular_expression": {
     "modified": "2020-05-04T13:19:46.805Z",
     "contributors": ["Uemmra3", "segayuu"]
-  },
-  "Glossary/Rendering_engine": {
-    "modified": "2020-09-28T13:40:38.634Z",
-    "contributors": ["mfuji09", "Uemmra3"]
   },
   "Glossary/Repo": {
     "modified": "2019-03-18T21:21:56.601Z",
@@ -8437,21 +8433,6 @@
       "mdmss37",
       "chikoski"
     ]
-  },
-  "Web/API/Fetch_API/Basic_concepts": {
-    "modified": "2020-10-01T22:06:38.159Z",
-    "contributors": [
-      "mpcjazz",
-      "Uemmra3",
-      "dskmori",
-      "hamasaki",
-      "chikoski",
-      "YuichiNukiyama"
-    ]
-  },
-  "Web/API/Fetch_API/Cross-global_fetch_usage": {
-    "modified": "2020-01-07T17:57:37.167Z",
-    "contributors": ["Wind1808"]
   },
   "Web/API/Fetch_API/Using_Fetch": {
     "modified": "2020-10-15T21:47:32.462Z",
@@ -15528,10 +15509,6 @@
     "modified": "2020-11-22T08:36:33.464Z",
     "contributors": ["mixplace", "8845musign"]
   },
-  "Web/CSS/-webkit-overflow-scrolling": {
-    "modified": "2020-10-15T22:08:24.081Z",
-    "contributors": ["mfuji09"]
-  },
   "Web/CSS/-webkit-tap-highlight-color": {
     "modified": "2019-04-25T10:41:36.517Z",
     "contributors": ["mfuji09"]
@@ -18647,10 +18624,6 @@
   },
   "Web/CSS/initial-letter": {
     "modified": "2020-10-16T11:19:53.557Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/initial-letter-align": {
-    "modified": "2020-10-15T22:13:14.565Z",
     "contributors": ["mfuji09"]
   },
   "Web/CSS/initial_value": {
@@ -29501,6 +29474,14 @@
     "modified": "2020-08-31T12:56:43.359Z",
     "contributors": ["mfuji09", "YuichiNukiyama", "hashedhyphen", "clariroid"]
   },
+  "Web/Security/Practical_implementation_guides": {
+    "modified": "2020-07-25T12:16:18.770Z",
+    "contributors": ["pcw", "mfuji09", "satakeh", "hashedhyphen"]
+  },
+  "Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion": {
+    "modified": "2020-07-25T12:03:22.245Z",
+    "contributors": ["pcw", "mfuji09", "hashedhyphen"]
+  },
   "Web/Security/Referer_header:_privacy_and_security_concerns": {
     "modified": "2020-10-24T06:28:29.243Z",
     "contributors": ["silverskyvicto", "soratako", "mfuji09", "ShowGoTagami"]
@@ -29533,14 +29514,6 @@
   "Web/Security/Secure_Contexts/features_restricted_to_secure_contexts": {
     "modified": "2020-10-23T09:50:39.875Z",
     "contributors": ["silverskyvicto", "mfuji09", "YuichiNukiyama"]
-  },
-  "Web/Security/Securing_your_site": {
-    "modified": "2020-07-25T12:16:18.770Z",
-    "contributors": ["pcw", "mfuji09", "satakeh", "hashedhyphen"]
-  },
-  "Web/Security/Securing_your_site/Turning_off_form_autocompletion": {
-    "modified": "2020-07-25T12:03:22.245Z",
-    "contributors": ["pcw", "mfuji09", "hashedhyphen"]
   },
   "Web/Security/Subdomain_takeovers": {
     "modified": "2020-10-23T16:21:24.230Z",
@@ -30350,10 +30323,6 @@
   "conflicting/Web/Accessibility/ARIA": {
     "modified": "2019-03-23T23:28:42.286Z",
     "contributors": ["yyss", "teoli"]
-  },
-  "conflicting/Web/Accessibility/ARIA/Roles/alert_role": {
-    "modified": "2019-03-18T21:24:32.583Z",
-    "contributors": ["8845musign"]
   },
   "conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122": {
     "modified": "2019-03-23T23:28:50.521Z",

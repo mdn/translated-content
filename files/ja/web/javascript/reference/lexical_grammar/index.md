@@ -156,7 +156,7 @@ lbl: console.log(1); // ラベル
 
 JavaScript では、識別子は一般的に英数字、アンダースコア (`_`)、ドル記号 (`$`) で構成されます。識別子は数字で始めることはできません。しかし、JavaScript で使用できる識別子は {{Glossary("ASCII")}} だけではなく、ほとんどの Unicode コードポイントも使用可能です。つまり、識別子は [ID_Start](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Start%7D) カテゴリーにある文字で始めることができ、[ID_Continue](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Continue%7D) カテゴリーにある文字は先頭文字の後に置くことができます。
 
-> **メモ:** もし何らかの理由で JavaScript のソースを自分で解析する必要がある場合、すべての識別子が `/[A-Za-z_$][\w$]*/` のパターンに従っている（つまり ASCII のみ）と仮定しないでください。 識別子の範囲は正規表現 `/[$_p{ID_Start}][$u200cu200dp{ID_Continue}]*/u` (Unicodeエスケープシーケンスを除く) で記述することができます。
+> **メモ:** もし何らかの理由で JavaScript のソースを自分で解析する必要がある場合、すべての識別子が `/[A-Za-z_$][\w$]*/` のパターンに従っている（つまり ASCII のみ）と仮定しないでください。 識別子の範囲は正規表現 `/[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*/u` (Unicodeエスケープシーケンスを除く) で記述することができます。
 
 また、JavaScript では、識別子の中で [Unicode エスケープシーケンス](#unicode_escape_sequences)を `\u0000` または `\u{000000}` という形式で使用することができ、これは実際の Unicode 文字と同じ文字列値をエンコードするものです。例えば、`你好` と `\u4f60\u597d` は同じ識別子です。
 
