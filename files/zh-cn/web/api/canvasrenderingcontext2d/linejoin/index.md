@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.lineJoin
+title: CanvasRenderingContext2D：lineJoin 属性
 slug: Web/API/CanvasRenderingContext2D/lineJoin
 l10n:
   sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
@@ -15,7 +15,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.lineJoin`** 属性用于设置 2 �
 
 ## 值
 
-此属性有 3 个值： `round`, `bevel` and `miter`。默认值是 `miter`。
+此属性有 3 个值： `round`、`bevel` 和 `miter`。默认值是 `miter`。
 
 ![三条水平的锯齿线，分别使用圆角、斜角和斜接的线段连接样式，从上到下依次展示。](canvas_linejoin.png)
 
