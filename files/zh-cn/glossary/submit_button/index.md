@@ -2,7 +2,7 @@
 title: 提交按钮
 slug: Glossary/Submit_button
 l10n:
-    sourceCommit: c9a87fc4010cef73c21c5f46662431f3c8ad2d28
+  sourceCommit: c9a87fc4010cef73c21c5f46662431f3c8ad2d28
 ---
 
 {{GlossarySidebar}}
@@ -20,7 +20,7 @@ l10n:
 提交按钮可以通过各种属性重写表单的提交行为：
 
 - {{HtmlElement("button#formaction", "formaction")}}：重写表单的 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) 属性。
-- {{HtmlElement("button#formenctype", "formenctype")}}：重写表单的  [`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype) 属性。
+- {{HtmlElement("button#formenctype", "formenctype")}}：重写表单的 [`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype) 属性。
 - {{HtmlElement("button#formmethod", "formmethod")}}：重写表单的 [`method`](/zh-CN/docs/Web/HTML/Element/form#method) 属性。
 - {{HtmlElement("button#formnovalidate", "formnovalidate")}}：重写表单的 [`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate) 属性。
 - {{HtmlElement("button#formtarget", "formtarget")}}：重写表单的 [`target`](/zh-CN/docs/Web/HTML/Element/form#target) 属性。
