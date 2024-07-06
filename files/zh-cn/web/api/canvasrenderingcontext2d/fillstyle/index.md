@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.fillStyle
+title: CanvasRenderingContext2D：fillStyle 属性
 slug: Web/API/CanvasRenderingContext2D/fillStyle
 l10n:
   sourceCommit: c8b447485fd893d5511d88f592f5f3aec29a725b
@@ -82,7 +82,7 @@ for (let i = 0; i < 6; i++) {
 
 ### WebKit/Blink-specific 注解
 
-在支持 WebKit- 和 Blink-based 的浏览器中，有一个不标准的、被反对的方法 `ctx.setFillColor()` 已经实现这一属性。
+在支持 WebKit- 和 Blink-based 的浏览器中，有一个不标准的、被弃用的方法 `ctx.setFillColor()` 已经实现这一属性。
 
 ```js
 setFillColor(color, /* (optional) */ alpha);
