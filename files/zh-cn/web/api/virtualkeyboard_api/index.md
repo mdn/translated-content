@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}{{DefaultAPISidebar("VirtualKeyboard API")}}{{securecontext_header}}
 
-虚拟键盘（VirtualKeyboard）API 允许开发者在如平板电脑、手机等没有物理键盘的设备上，当虚拟键盘出现/消失时控制其应用程序布局。
+VirtualKeyboard（虚拟键盘）API 允许开发者在如平板电脑、手机等没有物理键盘的设备上，当虚拟键盘出现/消失时控制其应用程序布局。
 
 Web 浏览器通常会自动调整视窗高度，并在输入字段聚焦时滚动，以处理虚拟键盘的显示和隐藏。
 
