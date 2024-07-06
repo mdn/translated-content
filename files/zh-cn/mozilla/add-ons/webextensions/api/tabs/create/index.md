@@ -70,7 +70,7 @@ let creating = browser.tabs.create(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含有关已创建标签页详细信息的 {{WebExtAPIRef('tabs.Tab')}} 对象。如果无法创建标签页（例如因为 `url` 使用了特权方案），则该 promise 将以错误消息返回。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含有关已创建标签页详细信息的 {{WebExtAPIRef('tabs.Tab')}} 对象。如果无法创建标签页（例如因为 `url` 使用了特权方案），则该 promise 将以错误消息拒绝。
 
 `browser.tabs.create()` 返回的 promise 在标签页创建后立即兑现。标签页可能仍在加载中。要检测标签页何时加载完成，可以监听 {{WebExtAPIRef('tabs.onUpdated')}} 或 {{WebExtAPIRef('webNavigation.onCompleted')}} 事件，然后调用 `tabs.create`。
 
