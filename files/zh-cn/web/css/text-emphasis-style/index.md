@@ -41,23 +41,23 @@ text-emphasis-style: unset;
 ### Values
 
 - `none`
-  - : No emphasis marks.
+  - : 没有强调标记。
 - `filled`
-  - : The shape is filled with solid color. If neither `filled` nor `open` is present, this is the default.
+  - : 形状填充为实色。如果 `filled` 和 `open`都未被设置，这是默认设置。
 - `open`
-  - : The shape is hollow.
+  - : 形状为空心。
 - `dot`
-  - : Display small circles as marks. The filled dot is `'•'` (`U+2022`), and the open dot is `'◦'` (`U+25E6`).
+  - : 显示小圆点作为标记。填充圆点是 `'•'`（`U+2022`），空心圆点是 `'◦'`（`U+25E6`）。
 - `circle`
-  - : Display large circles as marks. The filled circle is `'●'` (`U+25CF`), and the open circle is `'○'` (`U+25CB`).
+  - : 显示大圆圈作为标记。填充圆圈是 `'●'`（`U+25CF`），空心圆圈是 `'○'`（`U+25CB`）。在水平书写模式下，如果没有指定其他形状，则默认为此形状。
 - `double-circle`
-  - : Display double circles as marks. The filled double-circle is `'◉'` (`U+25C9`), and the open double-circle is `'◎'` (`U+25CE`).
+  - : 显示双重圆圈作为标记。填充双重圆圈是 `'◉'`（`U+25C9`），空心双重圆圈是 `'◎'`（`U+25CE`）。
 - `triangle`
-  - : Display triangles as marks. The filled triangle is `'▲'` (`U+25B2`), and the open triangle is `'△'` (`U+25B3`).
+  - : 显示三角形作为标记。填充三角形是 `'▲'`（`U+25B2`），空心三角形是 `'△'`（`U+25B3`）。
 - `sesame`
-  - : Display sesames as marks. The filled sesame is `'﹅'` (`U+FE45`), and the open sesame is `'﹆'` (`U+FE46`).
+  - : 显示圏点形状作为标记。填充圏点是 `'﹅'`（`U+FE45`），空心圏点是 `'﹆'`（`U+FE46`）。在垂直书写模式下，如果没有指定其他形状，则默认为此形状。
 - `<string>`
-  - : Display the given string as marks. Authors should not specify more than one _character_ in `<string>`. The UA may truncate or ignore strings consisting of more than one grapheme cluster.
+  - : 将指定的字符串作为标记显示。不应指定多于一个字符的 `<string>`。用户代理（UA）可能会截断或忽略超过一个字形集群的字符串。
 
 ## 形式定义
 
@@ -69,7 +69,7 @@ text-emphasis-style: unset;
 
 ## 示例
 
-### CSS
+#### CSS
 
 ```css
 h2 {
@@ -78,7 +78,7 @@ h2 {
 }
 ```
 
-### HTML
+#### HTML
 
 ```html
 <h2>这是一个二级标题</h2>
@@ -88,7 +88,7 @@ h2 {
 
 #### 结果
 
-{{EmbedLiveSample("Emphasis_with_a_color_and_custom_character", 450, 100)}}
+{{EmbedLiveSample("带有强调标记的示例", 450, 100)}}
 
 ## 规范
 

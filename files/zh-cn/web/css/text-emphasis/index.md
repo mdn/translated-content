@@ -91,12 +91,12 @@ h2 {
 #### HTML
 
 ```html
-<h2>This is important!</h2>
+<h2>这是一个很重要的二级标题！</h2>
 ```
 
 #### 结果
 
-{{EmbedLiveSample("A_heading_with_emphasis_shape_and_color", 500, 90)}}
+{{EmbedLiveSample("使用强调标记和强调色的标题示例", 500, 90)}}
 
 ## 规范
 

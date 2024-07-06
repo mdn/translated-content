@@ -35,13 +35,13 @@ text-emphasis-position: unset;
 ### 取值
 
 - `over`
-  - : 在水平书写模式下，在文本上方绘制标记。
+  - : 在横排文本中，在文本上方绘制标记。
 - `under`
-  - : 在水平书写模式下，在文本下方绘制标记。
+  - : 在横排文本中，在文本下方绘制标记。
 - `right`
-  - : 在垂直书写模式下，在文本右侧绘制标记。
+  - : 在竖排文本中，在文本右侧绘制标记。
 - `left`
-  - : 在垂直书写模式下，在文本左侧绘制标记。
+  - : 在竖排文本中，在文本左侧绘制标记。
 
 ## 描述
 
@@ -49,54 +49,54 @@ text-emphasis-position: unset;
 
 <table>
   <caption>
-    Preferred emphasis mark and ruby position
+    标记和注音文字的首选强调标记位置
   </caption>
   <thead>
     <tr>
-      <th rowspan="2" scope="col">Language</th>
-      <th colspan="2" scope="col">Preferred position</th>
-      <th colspan="2" rowspan="2" scope="col">Illustration</th>
+      <th rowspan="2" scope="col">语言</th>
+      <th colspan="2" scope="col">偏好位置</th>
+      <th colspan="2" rowspan="2" scope="col">效果</th>
     </tr>
     <tr>
-      <th>Horizontal</th>
-      <th>Vertical</th>
+      <th>水平排列</th>
+      <th>垂直排列</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Japanese</td>
-      <td rowspan="3">over</td>
-      <td rowspan="3">right</td>
+      <td>日语</td>
+      <td rowspan="3">上方</td>
+      <td rowspan="3">右侧</td>
       <td rowspan="3">
         <img
-          alt="Emphasis marks appear over each emphasized character in horizontal Japanese text."
+          alt="水平排列的日语文本中强调标记出现在日语文字的上方"
           src="text-emphasis-ja.png"
-          title="Emphasis (shown in blue for clarity) applied above a fragment of Japanese text"
+          title="应用在每个日语文字上方的蓝色强调标记"
         />
       </td>
       <td rowspan="4">
         <img
-          alt="Emphasis marks appear on the right of each emphasized character in vertical Japanese text."
+          alt="垂直排列的日语文本中强调标记出现在日语文字的右侧"
           src="text-emphasis-v.gif"
-          title="Emphasis applied on the right of a fragment of Japanese text"
+          title="应用在每个日语文字右侧的蓝色强调标记"
         />
       </td>
     </tr>
     <tr>
-      <td>Korean</td>
+      <td>韩语</td>
     </tr>
     <tr>
-      <td>Mongolian</td>
+      <td>蒙古语</td>
     </tr>
     <tr>
-      <td>Chinese</td>
-      <td>under</td>
-      <td>right</td>
+      <td>中文</td>
+      <td>下方</td>
+      <td>右侧</td>
       <td>
         <img
-          alt="Emphasis marks appear below each emphasized character in horizontal Simplified Chinese text."
+          alt="垂直排列的中文文本中强调标记出现在汉字的下方"
           src="text-emphasis-zh.gif"
-          title="Emphasis (shown in blue for clarity) applied below a fragment of Chinese text"
+          title="应用在每个汉字下方的蓝色强调标记"
         />
       </td>
     </tr>
