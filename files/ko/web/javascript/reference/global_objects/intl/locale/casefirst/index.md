@@ -2,7 +2,7 @@
 title: Intl.Locale.prototype.caseFirst
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst
 l10n:
-  sourceCommit:
+  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 
 ---
 
