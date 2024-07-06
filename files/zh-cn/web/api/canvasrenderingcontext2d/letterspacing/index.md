@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.letterSpacing
+title: CanvasRenderingContext2D：letterSpacing 属性
 slug: Web/API/CanvasRenderingContext2D/letterSpacing
 l10n:
   sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
