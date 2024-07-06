@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.shadowBlur
+title: CanvasRenderingContext2D：shadowBlur 属性
 slug: Web/API/CanvasRenderingContext2D/shadowBlur
 l10n:
   sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
@@ -13,7 +13,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.shadowBlur`** 属性用于描述�
 
 ## 值
 
-一个非负浮点数，指定阴影模糊的级别，其中 `0` 表示没有模糊，更大的数值表示越来越多的模糊效果。这个值不对应于像素数量，并且不受当前变换矩阵的影响。默认值为 `0`。负数、{{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 将被忽略。
+一个非负浮点数，指定阴影模糊的级别，其中 `0` 表示没有模糊，数字越大表示模糊程度越高。这个值不对应于像素数量，并且不受当前变换矩阵的影响。默认值为 `0`。负数、{{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 将被忽略。
 
 ## 示例
 
@@ -56,7 +56,7 @@ ctx.fillRect(20, 20, 150, 100);
 
 ### WebKit/Blink 特定注意事项
 
-在基于 WebKit 和 Blink 的浏览器中，除了这个属性外，还实现了一个非标准且已废弃的方法 `ctx.setShadow()`。
+在基于 WebKit 和 Blink 的浏览器中，除了这个属性外，还实现了一个非标准且已弃用的方法 `ctx.setShadow()`。
 
 ```js
 setShadow(width, height, blur, color, alpha);
