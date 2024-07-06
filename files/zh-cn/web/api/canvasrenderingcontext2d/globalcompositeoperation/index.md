@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.globalCompositeOperation
+title: CanvasRenderingContext2D：globalCompositeOperation 属性
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 l10n:
   sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
