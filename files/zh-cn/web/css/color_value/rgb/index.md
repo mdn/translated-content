@@ -40,7 +40,7 @@ rgb(R G B[ / A])
 - `R`、`G`、`B`
   - : 每个都是从 `0` 到 `255` 之间的 {{CSSXref("&lt;number&gt;")}} 值，或从 `0%` 到 `100%` 之间的 {{CSSXref("&lt;percentage&gt;")}} 值，或为关键字 `none`（与 `0%` 等价），分别代表红色、绿色和蓝色的通道。
 - `A` {{optional_inline}}
-  - : {{CSSXref("&lt;alpha-value&gt;")}}表示输出颜色的 alpha 通道值，其中数字 `0` 对应于 `0%` （完全透明），`1` 对应 `100%`（完全不透明），关键字 `none` 用于显式地指定无 alpha 通道。未明确指定 `A` 通道值，则会默认为原始颜色的 alpha 通道值，使用时需在前面添加（`/`），如 `rgb(0 0 0 / 0.5)`。
+  - : {{CSSXref("&lt;alpha-value&gt;")}} 表示输出颜色的 alpha 通道值，其中数字 `0` 对应于 `0%` （完全透明），`1` 对应 `100%`（完全不透明），关键字 `none` 用于显式地指定无 alpha 通道。未明确指定 `A` 通道值，则会默认为原始颜色的 alpha 通道值，使用时需在前面添加（`/`），如 `rgb(0 0 0 / 0.5)`。
 
 > **备注：** 参见[缺失颜色成分](/zh-CN/docs/Web/CSS/color_value#缺失颜色成分)以了解 `none` 的效果。
 
@@ -53,11 +53,11 @@ rgb(from <color> R G B[ / A])
 参数说明：
 
 - `from <color>`
-  - : 当使用相对颜色时，需用到关键字 `from`，其后跟着一个表示{{cssxref("&lt;color&gt;")}}的**原始颜色**：这是相对颜色所基于的原始颜色。原始颜色可以是任意有效的{{cssxref("&lt;color&gt;")}}语法，包括其他相对颜色。
+  - : 当使用相对颜色时，需用到关键字 `from`，其后跟着一个表示 {{cssxref("&lt;color&gt;")}} 的**原始颜色**：这是相对颜色所基于的原始颜色。原始颜色可以是任意有效的 {{cssxref("&lt;color&gt;")}} 语法，包括其他相对颜色。
 - `R`、`G`、`B`
   - : 每个都是从 `0` 到 `255` 之间的 {{CSSXref("&lt;number&gt;")}} 值，或从 `0%` 到 `100%` 之间的 {{CSSXref("&lt;percentage&gt;")}} 值，或为关键字 `none`（与 `0%` 等价），分别代表输出颜色中红色、绿色和蓝色的通道值。
 - `A` {{optional_inline}}
-  - : {{CSSXref("&lt;alpha-value&gt;")}}表示输出颜色的 alpha 通道值，其中数字 `0` 对应于 `0%` （完全透明），`1` 对应 `100%` （完全不透明），关键字 `none` 用于显式地指定无 alpha 通道。未明确指定 `A` 通道值，则会默认为原始颜色的 alpha 通道值，使用时需在前面添加（`/`），如 `rgb(from rgb(0 0 0) r g b / 0.5)`。
+  - : {{CSSXref("&lt;alpha-value&gt;")}} 表示输出颜色的 alpha 通道值，其中数字 `0` 对应于 `0%` （完全透明），`1` 对应 `100%` （完全不透明），关键字 `none` 用于显式地指定无 alpha 通道。未明确指定 `A` 通道值，则会默认为原始颜色的 alpha 通道值，使用时需在前面添加（`/`），如 `rgb(from rgb(0 0 0) r g b / 0.5)`。
 
 > **备注：** 别名 `rgba()` 也可用于输出指定原始颜色的相对颜色，当使用 `rgba()` 输出相对颜色时，必须使用无逗号的现代语法，如 `rgba(from #000000 r g b / 0.5)` 。
 
@@ -89,7 +89,7 @@ rgb(from hsl(0 100% 50%) 132 132 132)
 rgb(132 132 132)
 ```
 
-第三个例子我们将使用{{cssxref("calc")}}函数去修改 `r`、`g`、`b` 和 `a` 的通道值。
+第三个例子我们将使用 {{cssxref("calc")}} 函数去修改 `r`、`g`、`b` 和 `a` 的通道值。
 
 ```css
 rgb(from hsl(0 100% 50%) calc(r - 55) calc(g + 25) calc(b + 175) / calc(alpha - 0.6))
@@ -97,7 +97,7 @@ rgb(from hsl(0 100% 50%) calc(r - 55) calc(g + 25) calc(b + 175) / calc(alpha - 
 rgb(200 25 175 / 0.4)
 ```
 
-> **Note:** 因为原始颜色通道值会被解析为 `<number>` 值，所以在使用它们进行计算时，即使通道能够接受 `<percenter>` 、 `<angle>` 或其他值类型，我们也必须使用`<number>` 进行运算。
+> **Note:** 因为原始颜色通道值会被解析为 `<number>` 值，所以在使用它们进行计算时，即使通道能够接受 `<percenter>` 、 `<angle>` 或其他值类型，我们也必须使用 `<number>` 进行运算。
 
 ### 形式语法
 
@@ -107,7 +107,7 @@ rgb(200 25 175 / 0.4)
 
 ### 基本语法
 
-下面我们会将三个不同背景颜色的{{htmlelement("div")}} 元素放在条纹背景上。
+下面我们会将三个不同背景颜色的 {{htmlelement("div")}} 元素放在条纹背景上。
 
 #### HTML
 
@@ -121,7 +121,7 @@ rgb(200 25 175 / 0.4)
 
 #### CSS
 
-在本例中，三个{{htmlelement("div")}} 元素的背景色都会使用 `rgb()` 函数进行设置，同时为了体现第三个元素的透明通道，我们在{{htmlelement("body")}}上使用了{{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 函数设置斜条纹背景。
+在本例中，三个 {{htmlelement("div")}} 元素的背景色都会使用 `rgb()` 函数进行设置，同时为了体现第三个元素的透明通道，我们在 {{htmlelement("body")}} 上使用了 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 函数设置斜条纹背景。
 
 ```css hidden
 div {
@@ -164,7 +164,7 @@ body {
 rgb(from <color> R G B[ / A])
 ```
 
-在本例中，三个{{htmlelement("div")}} 元素的背景会被设置成不同颜色： `#one` 被赋予我们设定的原始颜色，`#two` 和 `#three` 都会通过{{cssxref("calc")}}函数进行计算，得到想要的红色和蓝色通道值，同时我们保持绿色通道值不变，其中 `#three` 的修改幅度更大。
+在本例中，三个 {{htmlelement("div")}} 元素的背景会被设置成不同颜色： `#one` 被赋予我们设定的原始颜色，`#two` 和 `#three` 都会通过 {{cssxref("calc")}} 函数进行计算，得到想要的红色和蓝色通道值，同时我们保持绿色通道值不变，其中 `#three` 的修改幅度更大。
 
 #### HTML
 
