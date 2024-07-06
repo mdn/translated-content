@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.imageSmoothingQuality
+title: CanvasRenderingContext2D：imageSmoothingQuality 属性
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingQuality
 l10n:
   sourceCommit: d0d8f446ab0e7330a741fd8cbf1ecb8a2077d3f0
@@ -9,7 +9,7 @@ l10n:
 
 Canvas 2D API 的 {{domxref("CanvasRenderingContext2D")}} 接口的 **`imageSmoothingQuality`** 属性，用于设置图像平滑度。
 
-> **备注：** 要使此属性生效，{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} 必须为 `true`。
+> **备注：** 要使此属性生效，{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} 属性必须为 `true`。
 
 ## 值
 
