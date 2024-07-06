@@ -2,7 +2,7 @@
 title: 字符串化器
 slug: Glossary/Stringifier
 l10n:
-    sourceCommit: e099e74fe5c09c46f0dfe044894692721a713d29
+  sourceCommit: e099e74fe5c09c46f0dfe044894692721a713d29
 ---
 
 {{GlossarySidebar}}
@@ -11,4 +11,4 @@ l10n:
 
 ## 参见
 
-- [WebIDL 文件中包含的信息](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#stringifiers)中的字符串化器
+- [WebIDL 文件中包含的信息](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#stringifiers)中的字符串化器
