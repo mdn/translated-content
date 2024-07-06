@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.globalAlpha
+title: CanvasRenderingContext2D：globalAlpha 属性
 slug: Web/API/CanvasRenderingContext2D/globalAlpha
 l10n:
   sourceCommit: c8b447485fd893d5511d88f592f5f3aec29a725b
