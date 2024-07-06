@@ -9,6 +9,8 @@ l10n:
 
 **`CanvasPattern`** 接口表示描述一个模板（基于 image、canvas 或 video）的[不透明对象](https://en.wikipedia.org/wiki/Opaque_data_type)，通过 {{domxref("CanvasRenderingContext2D.createPattern()")}} 方法创建。
 
+它可以用作 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 或 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}。
+
 ## 属性
 
 _非透明对象，没有暴露的属性。_
