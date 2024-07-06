@@ -38,7 +38,7 @@ try {
 }
 ```
 
-より詳細な例については、[Error > Differentiate between similar errors](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error#differentiate_between_similar_errors) を参照してください。
+より詳細な例については、[Error > 類似するエラーと区別する](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error#類似するエラーと区別する) を参照してください。
 
 ### 構造化データをエラーの原因として提供する
 
