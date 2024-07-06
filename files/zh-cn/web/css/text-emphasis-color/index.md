@@ -81,4 +81,4 @@ em {
 
 - {{cssxref("&lt;color&gt;")}}——相关数据类型
 - {{cssxref('text-emphasis-style')}}，{{cssxref('text-emphasis')}}，和 {{cssxref("text-emphasis-position")}}——其他强调标记相关属性
-- Other color-related properties: {{cssxref("color")}}，{{cssxref("background-color")}}，{{cssxref("border-color")}}，{{cssxref("outline-color")}}，{{cssxref("text-emphasis-color")}}，{{cssxref("text-shadow")}}，{{cssxref("caret-color")}}，和 {{cssxref("column-rule-color")}}——其他颜色相关属性
+- {{cssxref("color")}}，{{cssxref("background-color")}}，{{cssxref("border-color")}}，{{cssxref("outline-color")}}，{{cssxref("text-emphasis-color")}}，{{cssxref("text-shadow")}}，{{cssxref("caret-color")}}，和 {{cssxref("column-rule-color")}}——其他颜色相关属性
