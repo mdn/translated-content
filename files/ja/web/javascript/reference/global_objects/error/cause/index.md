@@ -1,32 +1,34 @@
 ---
 title: "Error: cause"
 slug: Web/JavaScript/Reference/Global_Objects/Error/cause
-page-type: javascript-instance-data-property
-browser-compat: javascript.builtins.Error.cause
+l10n:
+  sourceCommit: 17b9bcb5be24a5b7cbb8954c906e1392ac8e4f56
 ---
 
 {{JSRef}}
 
-The **`cause`** data property of an {{jsxref("Error")}} instance indicates the specific original cause of the error.
+{{jsxref("Error")}} インスタンスの **`cause`** データプロパティはエラーの元の原因を示します。
 
-It is used when catching and re-throwing an error with a more-specific or useful error message in order to still have access to the original error.
+これはエラーをキャッチし、より具体的もしくは有用なエラーメッセージを再スローする際に、元のエラーにアクセスできるようにするために使用されます。
 
-## Value
+## 値
 
-The value that was passed to the [`Error()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) constructor in the `options.cause` argument. It may not be present.
+[`Error()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) コンストラクタ内で、引数`options.cause`に渡された値。存在しない場合もあります。
 
 {{js_property_attributes(1, 0, 1)}}
 
-## Description
+## 概要
 
-The value of `cause` can be of any type. You should not make assumptions that the error you caught has an `Error` as its `cause`, in the same way that you cannot be sure the variable bound in the `catch` statement is an `Error` either. The "Providing structured data as the error cause" example below shows a case where a non-error is deliberately provided as the cause.
+`cause`の値はどのような型でもかまいません。`catch`文でバインドされる変数が`Error`であると確定しないのと同様に、キャッチしたエラーの原因が`Error`であると仮定してはいけません。
 
-## Examples
+以下の「構造化データをエラーの原因として提供する」例では、エラーでないものを意図的に原因として提供しています。
 
-### Rethrowing an error with a cause
+## 例
 
-It is sometimes useful to catch an error and re-throw it with a new message.
-In this case you should pass the original error into the constructor for the new `Error`, as shown.
+### causeによるエラーの再スロー
+
+エラーをキャッチし、新しいメッセージで再スローすると便利なことがあります。
+この例では、元のエラーを新しい`Error`のコンストラクタに渡しています。
 
 ```js
 try {
@@ -36,11 +38,14 @@ try {
 }
 ```
 
-For a more detailed example see [Error > Differentiate between similar errors](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error#differentiate_between_similar_errors).
+より詳細な例については、[Error > Differentiate between similar errors](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error#differentiate_between_similar_errors) を参照してください。
 
-### Providing structured data as the error cause
+### 構造化データをエラーの原因として提供する
 
-Error messages written for human consumption may be inappropriate for machine parsing — since they're subject to rewording or punctuation changes that may break any existing parsing written to consume them. So when throwing an error from a function, as an alternative to a human-readable error message, you can instead provide the cause as structured data, for machine parsing.
+人間が読むために書かれたエラーメッセージは、機械が解析するには不適切があります。
+
+エラーメッセージは語句の言い換えや句読点の変更に影響されるため、それらを処理するために書かれた既存の構文解析を壊してしまう可能性があるからです。
+そのため関数からエラーをスローする場合、人間が読めるエラーメッセージと共に機械が解析できるように構造化データとして原因を提供することができます。
 
 ```js
 function makeRSA(p, q) {
