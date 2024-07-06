@@ -13,13 +13,13 @@ l10n:
 
 ## 値
 
-[`Error()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) コンストラクタ内で、引数`options.cause`に渡された値。存在しない場合もあります。
+[`Error()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) コンストラクタ内で、引数 `options.cause` に渡された値。存在しない場合もあります。
 
 {{js_property_attributes(1, 0, 1)}}
 
 ## 概要
 
-`cause`の値はどのような型でもかまいません。`catch`文でバインドされる変数が`Error`であると確定しないのと同様に、キャッチしたエラーの原因が`Error`であると仮定してはいけません。
+`cause` の値はどのような型でもかまいません。`catch` 文でバインドされる変数が `Error` であると確定しないのと同様に、キャッチしたエラーの原因が `Error` であると仮定してはいけません。
 
 以下の「構造化データをエラーの原因として提供する」例では、エラーでないものを意図的に原因として提供しています。
 
@@ -28,7 +28,7 @@ l10n:
 ### causeによるエラーの再スロー
 
 エラーをキャッチし、新しいメッセージで再スローすると便利なことがあります。
-この例では、元のエラーを新しい`Error`のコンストラクタに渡しています。
+この例では、元のエラーを新しい `Error` のコンストラクタに渡しています。
 
 ```js
 try {
