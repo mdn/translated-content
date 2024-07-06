@@ -58,13 +58,13 @@ let querying = browser.tabs.query(queryInfo)
     - `url` {{optional_inline}}
       - : `string` 或 `string` 数组。将标签页与一个或多个[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)进行匹配。请注意，不会匹配片段标识符。需要“tabs”权限或匹配标签的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
     - `windowId` {{optional_inline}}
-      - : `integer`。父窗口的 `ID`，或 {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}}（用于当前窗口）。
+      - : `integer`。父窗口的 `id`，或 {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}}（用于当前窗口）。
     - `windowType` {{optional_inline}}
       - : {{WebExtAPIRef('tabs.WindowType')}}。标签页所在窗口的类型。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) ，其会兑现为包含 {{WebExtAPIRef('tabs.Tab')}} 对象（其中包含有关每个匹配的标签页的信息）的数组。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现为包含 {{WebExtAPIRef('tabs.Tab')}} 对象（其中包含有关每个匹配的标签页的信息）的数组。
 
 如果发生任何错误，promise 将会被拒绝并返回错误信息。
 
