@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.miterLimit
+title: CanvasRenderingContext2D：miterLimit 属性
 slug: Web/API/CanvasRenderingContext2D/miterLimit
 l10n:
   sourceCommit: bda6da832e5682d6247e1c20790e7b0aa0ec45e1
