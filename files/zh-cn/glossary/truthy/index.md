@@ -11,7 +11,7 @@ l10n:
 
 {{Glossary("JavaScript")}} 在布尔值上下文中使用{{Glossary("Type_Coercion", "强制类型转换")}}。
 
-JavaScript 中的*真值*示例如下（这些值会被转换为 `true`，因此 `if` 后的代码段将被执行）：
+JavaScript 中的*真值*示例如下（这些值会被强制转换为 `true`，因此 `if` 后的代码段将被执行）：
 
 ```js-nolint
 if (true)
@@ -35,10 +35,10 @@ if (-Infinity)
 
 ```js-nolint
 true && "狗狗"
-// 返回"狗狗"
+// 返回“狗狗”
 
 [] && "狗狗"
-// returns "狗狗"
+// 返回“狗狗”
 ```
 
 ## 参见
