@@ -31,7 +31,7 @@ addColorStop(offset, color)
 - `IndexSizeError` {{domxref("DOMException")}}
   - : 如果 `offset` 不在 0 和 1 之间（包括边界），则抛出此异常。
 - `SyntaxError` {{domxref("DOMException")}}
-  - : 如果 `color` 无法解析为 CSS 颜色值{{cssxref("&lt;color&gt;")}}，则抛出此异常。
+  - : 如果 `color` 无法解析为 CSS 颜色值 {{cssxref("&lt;color&gt;")}}，则抛出此异常。
 
 ## 示例
 
