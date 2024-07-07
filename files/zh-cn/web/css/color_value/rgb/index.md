@@ -5,9 +5,7 @@ slug: Web/CSS/color_value/rgb
 
 {{CSSRef}}
 
-**`rgb()`** 函数标记根据颜色的红色、绿色和蓝色成分来表达颜色。可选的 alpha 成分代表了颜色的透明度。
-
-> **备注：** 旧版的 `rgba()` 语法是 `rgb()` 的别称，接收相同的参数，行为也是相同的。
+**`rgb()`** 函数符号会根据颜色自身的红色、绿色和蓝色分量，在 {{glossary("RGB", "sRGB")}} {{glossary("color space"，"色彩空间")}}中表达颜色。可选的 alpha 成分代表了颜色的透明度。
 
 {{EmbedInteractiveExample("pages/css/function-rgb.html")}}
 
@@ -23,6 +21,8 @@ rgb(from green r g b / 0.5)
 rgb(from #0000FF calc(r + 40) calc(g + 40) b)
 rgb(from hwb(120deg 10% 20%) r g calc(b + 200))
 ```
+
+`rgba()` 函数也可用于表示 sRGB 颜色。这是接受相同参数的 `rgb()` 的别称。
 
 > **备注：** `rgb()` / `rgba()` 都可使用旧版的语法编写，即所有的值都是用逗号分隔的，如 `rgb(255, 0, 0)`。在逗号分隔的传统语法中，混合数字和百分比值类型是无效的（即 `R`、`G` 和 `B` 值必须是全部数字或全部百分比），也不允许使用 `none` 值。
 
@@ -69,36 +69,59 @@ rgb(from <color> R G B[ / A])
 - `r`、`g` 和 `b` 值均被解析为 `<number>`，取值范围在 `0` 到 `255` 之间（含 `0` 和 `255` ）。
 - `alpha` 通道会被解析为 `<number>`，取值范围在 `0` 到 `1` 之间（含 `0` 和 `1` ）。
 
-定义相对颜色时，输出颜色的不同通道可以用几种不同的方式表示。
+定义相对颜色时，输出颜色的不同通道可以用几种不同的方式表示。下面，我们将通过一些例子来说明这些。
 
-第一个例子将输出与原始颜色相同的颜色。我们使用 `hsl(0 100% 50%)`（与 `rgb(255 0 0)` 等价）作为原始颜色，以下函数将把原始颜色的 `r`、`g` 和 `b` 通道值（`255` `0` 和 `0`）作为输出通道值。
+在下面的前两个示例中，我们都使用了相对颜色语法。示例一输出与原始颜色相同的颜色，然而示例二输出完全不基于原始颜色的颜色。它们不能真正地创造相对颜色！你也不太可能会在真正的代码仓库中去使用这些，更多只会使用绝对值颜色。我们将这些示例作为学习相对 `rgb()` 语法的起点。
 
-> **备注：** 参见 [hsl()](/zh-CN/docs/Web/CSS/color_value/hsl) 函数以了解其定义。
+让我们从 `hsl(0 100% 50%)`（与 `rgb(255 0 0)` 等价）作为原始颜色开始。以下函数输出与原始颜色相同的颜色——它使用原始颜色的 `r`、`g` 和 `b` 通道值（`255`、`0` 和 `0`）作为输出通道值：
 
 ```css
 rgb(from hsl(0 100% 50%) r g b)
-/* 等价于 */
-rgb(from rgb(255 0 0) r g b)
-rgb(255 0 0)
 ```
 
-第二个例子我们将输出固定颜色通道值。
+此函数的输出颜色是 sRGB `color()`，等价于 `rgb(255 0 0)`：`color(srgb 1 0 0)`。
+
+下一个函数在输出颜色通道值中使用了绝对值，输出一种完全不基于原始颜色的不同颜色：
 
 ```css
-rgb(from hsl(0 100% 50%) 132 132 132)
-/* 等价于 */
-rgb(132 132 132)
+rgb(from hsl(0 100% 50%) 132 132 224)
 ```
 
-第三个例子我们将使用 {{cssxref("calc")}} 函数去修改 `r`、`g`、`b` 和 `a` 的通道值。
+在上述情况下，输出颜色是 sRGB `color()` 等价于 `rgb(132 132 224)`：`color(srgb 0.517647 0.517647 0.878431)`。
+
+下一个函数会基于原始颜色来创造一个相对颜色：
 
 ```css
-rgb(from hsl(0 100% 50%) calc(r - 55) calc(g + 25) calc(b + 175) / calc(alpha - 0.6))
-/* 等价于 */
-rgb(200 25 175 / 0.4)
+rgb(from hsl(0 100% 50%) r 80 80)
 ```
 
-> **Note:** 因为原始颜色通道值会被解析为 `<number>` 值，所以在使用它们进行计算时，即使通道能够接受 `<percenter>`、`<angle>` 或其他值类型，我们也必须使用 `<number>` 进行运算。
+在这个例子中：
+
+- 将原始颜色（`hsl(0 100% 50%)`）转换为等价的 `rgb()`（`rgb(255 0 0)`）。
+- 将输出颜色的 `R` 通道值设置为原始颜色 `rgb()` 的等价 `R` 通道值——`255`。
+- 将输出颜色的 `G` 和 `B` 通道值设置为不基于原始颜色的新值：分别为 `80` 和 `80`。
+
+最终输出颜色等价于 sRGB 颜色空间中的 `rgb(255 80 80)`—— `color(srgb 1 0.313726 0.313726)`。
+
+>**备注：** 如上所述，如果输出颜色使用了与原始颜色不同的颜色模型，则原始颜色会在后台转换为与输出颜色相同的模型或空间，从而可以以兼容的方式表示（即使用相同的通道）。
+
+在本节之前我们看到的示例中，均未明确指定 alpha 通道值用于原始颜色或输出颜色。如果未指定输出颜色的 alpha 通道值，默认为与原始颜色的 alpha 通道值相同。如果未指定原始颜色的 alpha 通道（并且它不是相对颜色），则默认为 `1`。因此，对于上述示例，原始颜色和输出颜色的 alpha 通道值都为 `1`
+
+```css
+rgb(from hsl(0 100% 50% / 0.8) r g b / alpha)
+/* 输出颜色的计算结果： color(srgb 1 0 0 / 0.8) */
+
+rgb(from hsl(0 100% 50% / 0.8) r g b / 0.5)
+/* 输出颜色的计算结果： color(srgb 1 0 0 / 0.5) */
+```
+
+在接下来的示例中，`hsl()` 表示形式的原始颜色再次转换为 `rgb()`——`rgb(255 0 0)`。{{cssxref("calc")}} 计算会应用于 `R`、`G`、`B` 和 `A` 值。经过计算，`R`、`G`、`B` 和 `A` 的值分别为 `127.5`、`25`、`175` 和 `0.9`。最终输出颜色等价于 sRGB 颜色空间中的 `rgb(127.5 25 175 / 0.9)`：`color(srgb 0.5 0.0980392 0.686275 / 0.9)`。
+
+```css
+rgb(from hsl(0 100% 50%) calc(r/2) calc(g + 25) calc(b + 175) / calc(alpha - 0.1))
+```
+
+> **备注：** 因为原始颜色通道值会被解析为 `<number>` 值，所以在使用它们进行计算时，即使通道能够接受 `<percenter>`、`<angle>` 或其他值类型，我们在计算中也必须添加 `<number>` 。例如在 `<number>` 中添加 `<percenter>` 是不起作用的。
 
 ### 形式语法
 
@@ -106,9 +129,9 @@ rgb(200 25 175 / 0.4)
 
 ## 示例
 
-### 基本语法
+### 基础语法
 
-下面我们会将三个不同背景颜色的 {{htmlelement("div")}} 元素放在条纹背景上。
+在这个例子中，下面我们会有三个不同背景颜色的 {{htmlelement("div")}} 元素展示在条纹背景上。
 
 #### HTML
 
@@ -122,7 +145,7 @@ rgb(200 25 175 / 0.4)
 
 #### CSS
 
-在本例中，三个 {{htmlelement("div")}} 元素的背景色都会使用 `rgb()` 函数进行设置，同时为了体现第三个元素的透明通道，我们在 {{htmlelement("body")}} 上使用了 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 函数设置斜条纹背景。
+背景颜色是使用 `rgb()` color 函数设置的。这三种颜色是一样的。第三个是半透明的，所以我们在 {{htmlelement("body")}} 上使用了一个 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}，以更好地展示 alpha 通道的透明度。
 
 ```css hidden
 div {
@@ -157,19 +180,15 @@ body {
 
 #### Result
 
-{{ EmbedLiveSample("基本语法", "100%", "75") }}
+{{ EmbedLiveSample("基础语法", "100%", "75") }}
 
-### 如何使用相对值
+### 在 rgb() 中使用相对值
 
-```text
-rgb(from <color> R G B[ / A])
-```
+本示例使用了不同的背景颜色来设置三个 {{htmlelement("div")}} 元素样式。左边元素被赋予未修改的 `--base-color`，而中间和右边的元素被赋予该 `--base-color` 的变体，会依次移除更多红色通道值，增加更多蓝色通道值。
 
-在本例中，三个 {{htmlelement("div")}} 元素的背景会被设置成不同颜色： `#one` 被赋予我们设定的原始颜色，`#two` 和 `#three` 都会通过 {{cssxref("calc")}} 函数进行计算，得到想要的红色和蓝色通道值，同时我们保持绿色通道值不变，其中 `#three` 的修改幅度更大。
+这些变体是使用了相对颜色定义的——`--base-color` [自定义属性](/zh-CN/docs/Web/CSS/--*) 被传递到 `rgb()` 函数里，然后通过 `calc()` 函数修改了输出颜色的红色和蓝色通道值，得到预期效果，同时绿色通道保持不变。
 
-#### HTML
-
-```html
+```html hidden
 <div id="container">
   <div class="item" id="one"></div>
   <div class="item" id="two"></div>
@@ -178,8 +197,6 @@ rgb(from <color> R G B[ / A])
 ```
 
 #### CSS
-
-下面例子中的 `--base-color` 为[自定义属性：CSS 变量](/zh-CN/docs/Web/CSS/--*)
 
 ```css hidden
 #container {
@@ -198,7 +215,7 @@ rgb(from <color> R G B[ / A])
 ```css
 :root {
   --base-color: orange;
-  /* 等同于 --base-color: rgb(255 165 0) */
+  /* 等价于 --base-color: rgb(255 165 0) */
 }
 
 #one {
@@ -207,18 +224,30 @@ rgb(from <color> R G B[ / A])
 
 #two {
   background-color: rgb(from var(--base-color) calc(r - 76.5) g calc(b + 76.5));
-  /* 红蓝通道增加 30% 的值，即 255*30% = 76.5，上列语句等价于 background-color: rgb(178.5 165 76.5)  */
+  /* 76.5 是 255 的 30%。等价于 background-color: rgb(178.5 165 76.5)  */
 }
 
 #three {
   background-color: rgb(from var(--base-color) calc(r - 153) g calc(b + 153));
-  /* 红蓝通道增加 60% 的值，即 255*60% = 153，上列语句等价于 background-color: rgb(102 165 153) */
+  /* 153 是 255 的 60%。等价于 background-color: rgb(102 165 153) */
+}
+
+/*  使用 @supports 添加对旧语法的支持，该语法要求在计算中将 r g b 值指定为百分比（带单位）。
+    在 Safari 16.4+ 是必需的。 */
+@supports (color: rgb(from red r g calc(b + 30%))) {
+  #two {
+    background-color: rgb(from var(--base-color) calc(r - 30%) g calc(b + 30%));
+  }
+
+  #three {
+    background-color: rgb(from var(--base-color) calc(r - 60%) g calc(b + 60%));
+  }
 }
 ```
 
 #### Result
 
-{{ EmbedLiveSample("如何使用相对值", "100%", "200") }}
+{{ EmbedLiveSample("在 rgb() 中使用相对值", "100%", "200") }}
 
 ### 旧版语法：逗号分隔值
 
@@ -241,7 +270,7 @@ div {
 }
 
 div.space-separated {
-  background-color: rgb(255 0 0 / 0.5);
+  background-color: rgb(255 0 0 / 50%);
 }
 
 div.comma-separated {
@@ -253,9 +282,9 @@ div.comma-separated {
 
 {{EmbedLiveSample('旧版语法：逗号分隔值', '100%', '150px')}}
 
-### 旧版语法：rgba()
+### rgba() 语法
 
-旧版的 `rgba()` 语法是 `rgb()` 的别称。
+ `rgba()` 语法是 `rgb()` 的别称。
 
 #### HTML
 
@@ -274,7 +303,7 @@ div {
 }
 
 div.rgb {
-  background-color: rgb(255 0 0 / 0.5);
+  background-color: rgb(255 0 0 / 50%);
 }
 
 div.rgba {
@@ -284,7 +313,7 @@ div.rgba {
 
 #### 结果
 
-{{EmbedLiveSample('旧版语法：rgba()', '100%', '150px')}}
+{{EmbedLiveSample('rgba() 语法', '100%', '150px')}}
 
 ## 规范
 
@@ -297,3 +326,6 @@ div.rgba {
 ## 参见
 
 - {{CSSXref("&lt;color&gt;")}} 数据类型，以了解所有颜色标记的列表
+- [sRGB 色彩选择和转换工具](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [使用相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)
+- [CSS 颜色](/zh-CN/docs/Web/CSS/CSS_colors) 模块
