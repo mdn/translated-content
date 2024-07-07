@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.getContextAttributes()
+title: CanvasRenderingContext2D：getContextAttributes() 方法
 slug: Web/API/CanvasRenderingContext2D/getContextAttributes
 l10n:
   sourceCommit: ba09b113ee91eee477894ef2ac028bbc63f480b5
