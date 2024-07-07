@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-[Canvas API](/zh-CN/docs/Web/API/Canvas_API) 的 **`CanvasRenderingContext2D.canvas`** 属性是对与给定上下文关联的 {{domxref("HTMLCanvasElement")}} 对象的只读引用。如果没有 {{HTMLElement("canvas")}} 元素与之对应，对象值为 {{jsxref("null")}}。
+[Canvas API](/zh-CN/docs/Web/API/Canvas_API) 的 **`CanvasRenderingContext2D.canvas`** 属性是对与给定上下文关联的 {{domxref("HTMLCanvasElement")}} 对象的只读引用。如果没有与之关联的 {{HTMLElement("canvas")}} 元素，对象值为 {{jsxref("null")}}。
 
 ## 值
 
@@ -21,7 +21,7 @@ l10n:
 <canvas id="canvas"></canvas>
 ```
 
-你可以通过 `CanvasRenderingContext2D` 调用内部的 `canvas` 属性，获取 `canvas` 的一个引用：
+你可以通过 `CanvasRenderingContext2D` 调用内部的 `canvas` 属性，获取 canvas 元素的引用：
 
 ```js
 const canvas = document.getElementById("canvas");
