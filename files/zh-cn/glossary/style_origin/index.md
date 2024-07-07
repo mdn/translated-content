@@ -16,8 +16,8 @@ l10n:
 - 作者来源
   - : 作者来源是包含文档中所有样式的样式来源，无论是嵌入在 {{Glossary("HTML")}} 中还是从外部样式表文件加载的。
 
-当移除样式时（如使用 {{cssxref("unset")}} 或 {{cssxref("revert")}} 关键字时），样式来源用于确定在样式级联回溯过程中停止的地方。
+当移除样式时（如使用 {{cssxref("unset")}} 或 {{cssxref("revert")}} 关键字时），样式来源用于确定在样式层叠回溯过程中停止的地方。
 
 ## 参见
 
-- [CSS 级联与继承：级联来源](https://drafts.csswg.org/css-cascade-4/#cascading-origins)
+- [CSS 层叠与继承：层叠来源](https://drafts.csswg.org/css-cascade-4/#cascading-origins)
