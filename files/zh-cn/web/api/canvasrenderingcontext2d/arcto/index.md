@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.arcTo()
+title: CanvasRenderingContext2D：arcTo() 方法
 slug: Web/API/CanvasRenderingContext2D/arcTo
 l10n:
   sourceCommit: af1e384356e21dbcc573d1c1cc015ec79c644de1
