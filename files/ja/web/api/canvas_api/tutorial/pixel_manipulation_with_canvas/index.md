@@ -126,7 +126,7 @@ canvas.addEventListener("click", (event) => pick(event, selectedColor));
 
 ## コンテキストへのピクセルデータの描画
 
- [putImageData()](/ja/docs/Web/API/CanvasRenderingContext2D/putImageData) メソッドを使用して、コンテキストにピクセルデータを描くことができます。
+[putImageData()](/ja/docs/Web/API/CanvasRenderingContext2D/putImageData) メソッドを使用して、コンテキストにピクセルデータを描くことができます。
 
 ```js
 ctx.putImageData(myImageData, dx, dy);
