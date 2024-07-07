@@ -31,7 +31,7 @@ hide()
 
 下面的代码片段展示了如何使用 `virtualkeyboardpolicy` 属性阻止浏览器在单击或点击时显示虚拟键盘。代码还使用 `navigator.virtualKeyboard.show()` 和 `navigator.virtualKeyboard.hide()` 方法，在点击按钮时显示和隐藏虚拟键盘：
 
-```js
+```html
 <div contenteditable virtualkeyboardpolicy="manual" id="editor"></div>
 <button id="edit-button">编辑</button>
 <script>
