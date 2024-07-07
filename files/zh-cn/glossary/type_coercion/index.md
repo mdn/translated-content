@@ -1,11 +1,13 @@
 ---
 title: 强制类型转换
 slug: Glossary/Type_coercion
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
 
-强制类型转换是将值从一种数据类型自动或隐式地转换为另一种数据类型（例如字符串转换为数字）。*{{Glossary("Type conversion", "类型转换")}}*类似于*强制类型转换*，因为它们都将值从一种数据类型转换为另一种数据类型，只有一个关键的区别——*强制类型转换*是隐式的，而*类型转换*可以是隐式的，*也*可以是显式的。
+强制类型转换是将值从一种数据类型自动或隐式地转换为另一种数据类型（例如字符串转换为数字）。[_类型转换_](/zh-CN/docs/Glossary/Type_conversion)类似于*强制类型转换*，因为它们都将值从一种数据类型转换为另一种数据类型，只有一个关键的区别——*强制类型转换*是隐式的，而*类型转换*可以是隐式的，*也*可以是显式的。
 
 ## 示例
 
@@ -27,7 +29,7 @@ sum = Number(value1) + value2;
 
 ## 参见
 
-- [类型转换](https://zh.wikipedia.org/wiki/类型转换)（维基百科）
+- 维基百科上的[类型转换](https://zh.wikipedia.org/wiki/类型转换)
 - [术语表](/zh-CN/docs/Glossary)
 
   - {{Glossary("Type", "类型")}}
