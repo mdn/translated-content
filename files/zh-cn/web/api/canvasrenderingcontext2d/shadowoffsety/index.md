@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.shadowOffsetY
+title: CanvasRenderingContext2D：shadowOffsetY 属性
 slug: Web/API/CanvasRenderingContext2D/shadowOffsetY
 l10n:
   sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
@@ -9,7 +9,7 @@ l10n:
 
 Canvas 2D API 的 **`CanvasRenderingContext2D.shadowOffsetY`** 属性用于描述阴影垂直偏移距离。
 
-> **备注：** 只有当 `shadowColor` 属性设置为非透明值时，阴影才会被绘制。其中的 {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}、`shadowOffsetX` 或 {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} 属性中至少有一个必须是非零的。
+> **备注：** 只有当 `shadowColor` 属性设置为非透明值时，阴影才会被绘制。其中的 {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}、{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}} 或 `shadowOffsetY` 属性中至少有一个必须是非零的。
 
 ## 值
 
@@ -19,7 +19,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.shadowOffsetY`** 属性用于描�
 
 ### 垂直移动阴影
 
-这个例子向一个矩形添加了模糊的阴影。`shadowColor` 属性设置阴影的颜色，`shadowOffsetY` 设置阴影向下偏移 25 个单位，而 `shadowBlur` 设置阴影的模糊程度为 10。
+这个例子向一个矩形添加了模糊的阴影。`shadowColor` 属性设置阴影的颜色，`shadowOffsetY` 设置阴影向下偏移 25 个单位，而 `shadowBlur` 设置阴影的模糊等级为 10。
 
 #### HTML
 
