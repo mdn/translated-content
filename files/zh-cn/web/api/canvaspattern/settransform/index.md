@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
-**`CanvasPattern.setTransform()`** 方法使用 {{domxref("DOMMatrix")}} 对象作为图案的变换矩阵，并在此图案上调用它。
+**`CanvasPattern.setTransform()`** 方法使用 {{domxref("DOMMatrix")}} 对象作为图案的变换矩阵，并在当前图案上调用它。
 
 ## 语法
 
