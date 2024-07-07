@@ -9,7 +9,7 @@ l10n:
 
 Canvas 2D API 的 **`CanvasRenderingContext2D.clearRect()`** 方法用于通过把像素设置为透明以达到擦除一个矩形区域的目的。
 
-> **备注：** 如果没有依照[绘制路径](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#%E7%BB%98%E5%88%B6%E8%B7%AF%E5%BE%84)的步骤，使用 `clearRect()` 会导致意想之外的结果。请确保在调用 `clearRect()` 之后绘制新内容前调用{{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} 。
+> **备注：** 如果没有[正确绘制路径](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#绘制路径)，使用 `clearRect()` 可能会导致意想之外的结果。请确保在调用 `clearRect()` 之后开始绘制新内容前调用 {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} 。
 
 ## 语法
 
@@ -26,9 +26,9 @@ clearRect(x, y, width, height)
 - `y`
   - : 矩形起点的 y 轴坐标。
 - `width`
-  - : 矩形的宽度。正值向右延伸，负值向左延伸。
+  - : 矩形的宽度。正值向右，负值向左。
 - `height`
-  - : 矩形的高度。正值向下延伸，负值向上延伸。
+  - : 矩形的高度。正值向下，负值向上。
 
 ### 返回值
 
@@ -48,7 +48,7 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 ### 清除一部分画布
 
-这个例子在黄色背景上绘制了一个蓝色三角形，然后使用`clearRect()`方法擦除了画布的部分内容。
+这个例子在黄色背景上绘制了一个蓝色三角形，然后使用 `clearRect()` 方法擦除了画布的部分内容。
 
 #### HTML
 
