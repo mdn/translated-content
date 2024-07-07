@@ -21,7 +21,7 @@ find(callbackFn, thisArg)
 ### 매개변수
 
 - `callback`
-  - : 형식화 배열의 각 요소에 대해 실행할 함수입니다. 일치하는 요소를 찾았으면 [참](/ko/docs/Glossary/Truthy) 값을 반환하고, 그렇지 않으면 [거짓](/ko/docs/Glossary/Falsy) 값을 반환해야 합니다. 함수는 다음 인수를 사용하여 호출됩니다.
+  - : 형식화 배열의 각 요소에 대해 실행할 함수입니다. 일치하는 요소를 찾았으면 [참 같은](/ko/docs/Glossary/Truthy) 값을 반환하고, 그렇지 않으면 [거짓 같은](/ko/docs/Glossary/Falsy) 값을 반환해야 합니다. 함수는 다음 인수를 사용하여 호출됩니다.
     - `element`
       - : 형식화 배열에서 현재 처리되고 있는 요소.
     - `index`
@@ -33,7 +33,8 @@ find(callbackFn, thisArg)
 
 ### 반환 값
 
-제공된 테스트 함수를 만족하는 형식화 배열의 첫 번째 요소입니다. 테스트 함수를 만족하는 요소가 없으면, {{jsxref("undefined")}}가 반환됩니다.
+제공된 테스트 함수를 만족하는 형식화 배열의 첫 번째 요소입니다.
+테스트 함수를 만족하는 요소가 없으면, {{jsxref("undefined")}}가 반환됩니다.
 
 ## 설명
 
@@ -71,7 +72,7 @@ console.log(uint8.find(isPrime)); // 5
 ## 같이 보기
 
 - [`core-js`에서 `TypedArray.prototype.find` 폴리필](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 안내서
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.findIndex()")}}
 - {{jsxref("TypedArray.prototype.findLast()")}}
