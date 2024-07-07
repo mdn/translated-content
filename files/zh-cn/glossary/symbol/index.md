@@ -13,9 +13,9 @@ l10n:
 
 在 JavaScript 中，`symbol` 是[原始类型](/zh-CN/docs/Glossary/Primitive)之一，可以使用 [`Symbol()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 工厂方法创建。该方法每次返回一个不同的符号，可以用作对象的键，而永远不会与其他属性发生意外冲突。
 
-JavaScript 还定义了两种其他类别的符号：知名符号和注册符号。有关更多信息，参见 {{jsxref("Symbol")}} 参考。
+JavaScript 还定义了两种其他类别的符号：内置通用符号和注册符号。有关更多信息，参见 {{jsxref("Symbol")}} 参考。
 
-## See also
+## 参见
 
 - 维基百科上的[数据类型](https://zh.wikipedia.org/wiki/資料類型)
 - 维基百科上的[符号](<https://en.wikipedia.org/wiki/Symbol_(programming)>)
