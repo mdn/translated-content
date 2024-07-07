@@ -18,5 +18,5 @@ l10n:
 ## See also
 
 - {{glossary("Real user monitoring", "真实用户监控")}}（RUM）
-- [真实用户监控（RUM） vs. 模拟监控](/zh-CN/docs/Web/Performance/Rum-vs-Synthetic)
+- [真实用户监控（RUM）vs. 模拟监控](/zh-CN/docs/Web/Performance/Rum-vs-Synthetic)
 - {{glossary("Beacon", "信标")}}
