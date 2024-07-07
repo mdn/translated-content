@@ -14,7 +14,7 @@ CSS와 JavaScript는 적절하게 사용될 때 접근성 높은 웹 경험을 �
     <tr>
       <th scope="row">필요한 사전 지식:</th>
       <td>
-        HTML, CSS, JavaScript에 대한 
+        HTML, CSS, JavaScript에 대한
         기본적인 이해와
         <a href="/ko/docs/Learn/Accessibility/What_is_accessibility">
         접근성이 무엇인지</a>에
@@ -24,7 +24,7 @@ CSS와 JavaScript는 적절하게 사용될 때 접근성 높은 웹 경험을 �
     <tr>
       <th scope="row">목표:</th>
       <td>
-        웹 문서에 CSS와 JavaScript를 적절하게 사용하여 접근성을 최대화하고 
+        웹 문서에 CSS와 JavaScript를 적절하게 사용하여 접근성을 최대화하고
         접근성을 저하시키지 않는 방법에 익숙해집니다.
       </td>
     </tr>
