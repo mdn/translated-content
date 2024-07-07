@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("VirtualKeyboard")}} 接口的 **`boundingRect`** 属性包含一个 {{domxref("DOMRect")}}，用于指示覆盖在网页上的屏幕虚拟键盘的位置和大小。
 
-当使用 {{domxref("VirtualKeyboard_API", "Virtual Keyboard API", "", "nocode")}} 时，设置 {{domxref("VirtualKeyboard.overlaysContent", "overlaysContent")}} 属性为 `true` 可防止浏览器自动调整视窗大小，使屏幕虚拟键盘覆盖在视窗上。
+当使用 {{domxref("VirtualKeyboard_API", "虚拟键盘 API", "", "nocode")}} 时，设置 {{domxref("VirtualKeyboard.overlaysContent", "overlaysContent")}} 属性为 `true` 可防止浏览器自动调整视窗大小，使屏幕虚拟键盘覆盖在视窗上。
 
 ## 值
 
