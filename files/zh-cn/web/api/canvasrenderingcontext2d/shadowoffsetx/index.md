@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.shadowOffsetX
+title: CanvasRenderingContext2D：shadowOffsetX 属性
 slug: Web/API/CanvasRenderingContext2D/shadowOffsetX
 l10n:
   sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
@@ -19,7 +19,7 @@ Canvas 2D API 的**`CanvasRenderingContext2D.shadowOffsetX`** 属性用于描述
 
 ### 水平移动阴影
 
-这个例子向一个矩形添加了模糊的阴影。`shadowColor` 属性设置阴影的颜色，`shadowOffsetX` 设置阴影向右偏移 25 个单位，而 `shadowBlur` 设置阴影的模糊程度为 10。
+这个例子向一个矩形添加了模糊的阴影。{{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} 属性设置阴影的颜色，`shadowOffsetX` 设置阴影向右偏移 25 个单位，而 {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} 设置阴影的模糊等级为 10。
 
 #### HTML
 
