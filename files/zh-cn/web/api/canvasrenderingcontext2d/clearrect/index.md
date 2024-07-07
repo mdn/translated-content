@@ -17,7 +17,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.clearRect()`** 方法用于通过�
 clearRect(x, y, width, height)
 ```
 
-`clearRect()` 方法在一个矩形区域内设置所有像素都是透明的 (`rgba(0,0,0,0)`)。这个矩形范围的左上角在 `(x, y)`，宽度和高度分别由 `width` 和`height`确定。
+`clearRect()` 方法在一个矩形区域内设置所有像素都是透明的（`rgba(0,0,0,0)`）。这个矩形范围的左上角在 `(x, y)`，宽度和高度分别由 `width` 和`height` 确定。
 
 ### 参数
 
