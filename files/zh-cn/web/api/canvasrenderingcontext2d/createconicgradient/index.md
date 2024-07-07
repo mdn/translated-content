@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.createConicGradient()
+title: CanvasRenderingContext2D：createConicGradient() 方法
 slug: Web/API/CanvasRenderingContext2D/createConicGradient
 l10n:
   sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
