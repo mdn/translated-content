@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**ECMAScript** 是基于 {{glossary("JavaScript")}} 的脚本语言规范。[Ecma 国际组织](https://www.ecma-international.org) 负责将 ECMAScript 标准化。
+**ECMAScript** 是 {{glossary("JavaScript")}} 所基于的脚本语言规范。[Ecma 国际](https://www.ecma-international.org)负责将 ECMAScript 标准化。
 
 ## 参见
 
