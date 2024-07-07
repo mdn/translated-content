@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.fillText()
+title: CanvasRenderingContext2D：fillText() 方法
 slug: Web/API/CanvasRenderingContext2D/fillText
 l10n:
   sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
