@@ -2,7 +2,7 @@
 title: TURN
 slug: Glossary/TURN
 l10n:
-  sourceCommie: fbc9980c0718c3ead40863b20a74fc8535ebcc85
+  sourceCommit: fbc9980c0718c3ead40863b20a74fc8535ebcc85
 ---
 
 {{GlossarySidebar}}
