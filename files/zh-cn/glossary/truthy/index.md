@@ -35,7 +35,7 @@ if (-Infinity)
 
 ```js-nolint
 true && "狗狗"
-// returns "狗狗"
+// 返回"狗狗"
 
 [] && "狗狗"
 // returns "狗狗"
