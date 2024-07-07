@@ -18,7 +18,9 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.direction`** 属性用来在绘制
 - `"rtl"`
   - : 文字方向为从右到左。
 - `"inherit"`
-  - : 文字方向从相应的 {{HTMLElement("canvas")}} 元素或 {{domxref("Document")}} 继承。默认值为 `"inherit"`。
+  - : 文字方向从相应的 {{HTMLElement("canvas")}} 元素或 {{domxref("Document")}} 继承。
+
+默认值为 `"inherit"`。
 
 ## 示例
 
