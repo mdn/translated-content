@@ -48,7 +48,7 @@ let querying = browser.tabs.query(queryInfo)
     - `muted` {{optional_inline}}
       - : `boolean`。标签页是否静音。
     - `lastFocusedWindow` {{optional_inline}}
-      - : `boolean`。标签页是否在最近聚焦的（last focused）窗口中。
+      - : `boolean`。标签页是否在最近聚焦的窗口中。
     - `pinned` {{optional_inline}}
       - : `boolean`。标签页是否固定。
     - `status` {{optional_inline}}
@@ -66,7 +66,7 @@ let querying = browser.tabs.query(queryInfo)
 
 一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现为包含 {{WebExtAPIRef('tabs.Tab')}} 对象（其中包含有关每个匹配的标签页的信息）的数组。
 
-如果发生任何错误，promise 将会被拒绝并返回错误信息。
+如果发生任何错误，promise 将以错误消息拒绝。
 
 ## 示例
 
@@ -75,7 +75,7 @@ let querying = browser.tabs.query(queryInfo)
 ```js
 function logTabs(tabs) {
   for (const tab of tabs) {
-    // tab.url 需要 `tabs` 权限或匹配的主机（host）权限。
+    // tab.url 需要 `tabs` 权限或匹配的主机权限。
     console.log(tab.url);
   }
 }
