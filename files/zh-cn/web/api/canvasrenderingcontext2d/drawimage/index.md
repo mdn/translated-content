@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.drawImage()
+title: CanvasRenderingContext2D：drawImage() 方法
 slug: Web/API/CanvasRenderingContext2D/drawImage
 l10n:
   sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
