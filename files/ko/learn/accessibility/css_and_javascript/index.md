@@ -7,21 +7,25 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
 
-CSS와 JavaScript는 적절하게 사용될 때 접근 가능한 웹 경험을 제공할 수 있지만, 잘못 사용될 경우 접근성에 심각한 영향을 줄 수 있습니다. 이 문서에서는 복잡한 콘텐츠라도 가능한 한 접근성을 보장하기 위해 고려해야 할 몇 가지 CSS와 JavaScript 모범 사례를 설명합니다.
+CSS와 JavaScript는 적절하게 사용될 때 접근성 높은 웹 경험을 제공할 수 있지만, 잘못 사용될 경우 접근성에 심각한 영향을 줄 수 있습니다. 이 문서에서는 복잡한 콘텐츠라도 가능한 한 접근성을 보장하기 위해 고려해야 할 몇 가지 CSS와 JavaScript 모범 사례를 설명합니다.
 
 <table>
   <tbody>
     <tr>
       <th scope="row">필요한 사전 지식:</th>
       <td>
-        HTML, CSS, JavaScript에 대한 기본적인 이해와
-        <a href="/ko/docs/Learn/Accessibility/What_is_accessibility">접근성이 무엇인지</a>에 대한 이해.
+        HTML, CSS, JavaScript에 대한 
+        기본적인 이해와
+        <a href="/ko/docs/Learn/Accessibility/What_is_accessibility">
+        접근성이 무엇인지</a>에
+        대한 이해.
       </td>
     </tr>
     <tr>
       <th scope="row">목표:</th>
       <td>
-        웹 문서에 CSS와 JavaScript를 적절하게 사용하여 접근성을 최대화하고 접근성을 저하시키지 않는 방법에 익숙해집니다.
+        웹 문서에 CSS와 JavaScript를 적절하게 사용하여 접근성을 최대화하고 
+        접근성을 저하시키지 않는 방법에 익숙해집니다.
       </td>
     </tr>
   </tbody>
@@ -35,11 +39,11 @@ CSS와 JavaScript는 HTML만큼 접근성에 중요하지는 않지만, 사용 �
 
 CSS부터 살펴봅시다.
 
-### 올바른 의미론적 표현과 사용자의 기대
+### 올바른 의미론적 표현과 사용자 경험
 
-CSS를 사용하여 HTML 요소를 원하는 대로 보이게 만들 수 있지만, 항상 그렇게 해야 하는 것은 아닙니다. [HTML: 접근성을 위한 좋은 기초](/ko/docs/Learn/Accessibility/HTML) 문서에서 자주 말했듯이, 가능한 경우 적절한 의미론적 요소를 사용해야 합니다. 그렇지 않으면 모두에게 혼란과 사용성 문제가 발생할 수 있으며, 특히 장애를 가진 사용자에게는 더 큰 문제가 될 수 있습니다. 올바른 의미론적 요소를 사용하는 것은 사용자 기대와 많은 관련이 있습니다. 요소는 기능에 따라 특정한 방식으로 보이고 동작하며, 이러한 일반적인 규칙은 사용자에게 기대됩니다.
+CSS를 사용하여 HTML 요소를 원하는 대로 보이게 만들 수 있지만, 항상 그렇게 해야 하는 것은 아닙니다. [HTML: 접근성을 위한 좋은 기초](/ko/docs/Learn/Accessibility/HTML) 문서에서 자주 말했듯이, 가능한 경우 적절한 의미론적 요소를 사용해야 합니다. 그렇지 않으면 모두에게 혼란과 사용성 문제가 발생할 수 있으며, 특히 장애를 가진 사용자에게는 더 큰 문제가 될 수 있습니다. 올바른 의미론적 요소를 사용하는 것은 사용자 경험과 많은 관련이 있습니다. 요소는 기능에 따라 특정한 방식으로 보이고 동작하며, 이러한 일반적인 규칙은 사용자에게 기대됩니다.
 
-예를 들어, 스크린 리더 사용자는 개발자가 콘텐츠를 마크업할 때 적절한 헤딩 요소를 사용하지 않으면 페이지를 헤딩 요소를 통해 탐색할 수 없습니다. 마찬가지로, 헤딩은 헤딩처럼 보이지 않도록 스타일을 변경하면 시각적인 목적을 읽게 됩니다.
+예를 들어, 스크린 리더 사용자는 개발자가 콘텐츠를 마크업할 때 적절한 제목 요소를 사용하지 않으면 페이지를 제목 요소를 통해 탐색할 수 없습니다. 마찬가지로, 제목은 제목처럼 보이지 않도록 스타일을 변경하면 시각적인 목적을 읽게 됩니다.
 
 요약하면, 페이지 기능의 스타일을 업데이트하여 디자인에 맞게 조정할 수 있지만, 너무 많이 기대와 다르게 보이거나 동작하지 않도록 변경하지는 마십시오. 다음 섹션에서는 고려해야 할 주요 HTML 기능을 요약합니다.
 
@@ -78,7 +82,7 @@ li {
 - 제목은 본문 텍스트와 구분되도록 일반적으로 기본 스타일과 같이 크고 굵게 보이도록 해야 합니다. 목록은 목록처럼 보여야 합니다.
 - 텍스트 색상은 배경 색상과 잘 대비되어야 합니다.
 
-자세한 내용은 [HTML 텍스트 기본 사항](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)와 [텍스트 스타일링](/ko/docs/Learn/CSS/Styling_text)을 참조하세요.
+자세한 내용은 [HTML 텍스트 기본 사항](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)와 [텍스트 스타일링](/ko/docs/Learn/CSS/Styling_text)을 참고하세요.
 
 #### 텍스트 강조
 
@@ -101,7 +105,7 @@ em {
 }
 ```
 
-그러나 강조할 요소를 의미있는 방식으로 스타일을 지정할 경우는 거의 없을 것입니다. 굵은 글꼴과 기울임꼴 텍스트의 표준 규칙은 쉽게 알아볼 수 있으며 스타일을 변경하면 혼란이 발생할 수 있습니다. 강조에 대한 자세한 내용은 [강조 및 중요성](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance)를 참조하세요.
+그러나 강조할 요소를 의미 있는 방식으로 스타일을 지정할 경우는 거의 없을 것입니다. 굵은 글꼴과 기울임 꼴 텍스트의 표준 규칙은 쉽게 알아볼 수 있으며 스타일을 변경하면 혼란이 발생할 수 있습니다. 강조에 대한 자세한 내용은 [강조 및 중요성](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance)를 참고하세요.
 
 #### 약어
 
@@ -122,7 +126,7 @@ abbr {
 }
 ```
 
-약어에 대해 인정된 스타일링 규칙은 점선 밑줄이며, 이에 크게 벗어나는 것은 현명하지 않습니다. 약어에 대한 더 많은 것은 [약어](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#약어)를 참조하세요.
+약어에 대해 인정된 스타일링 규칙은 점선 밑줄이며, 이에 크게 벗어나는 것은 현명하지 않습니다. 약어에 대한 더 많은 것은 [약어](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#약어)를 참고하세요.
 
 #### 링크
 
@@ -154,9 +158,9 @@ a:active {
 
 표준 링크 규칙은 밑줄이 그어져 있으며 표준 상태에서는 다른 색상(기본값: 파랑색), 이전에 링크를 방문했을 때는 다른 색상(기본값: 빨간색)으로 표시됩니다. 또한, 링크 위에 마우스를 올리면 마우스 포인터가 포인터 아이콘으로 바뀌고, 링크에 초점을 맞추거나(예: 탭 이동을 통해) 활성화되면 강조 표시됩니다. 다음 이미지는 Firefox(점선 윤곽선)와 Chrome(파란색 윤곽선) 모두 강조 표시를 보여줍니다.
 
-![Screenshot of a list of links in Firefox browser. The list contains 4 items. The second list item is highlighted using a blue dotted outline when it is focussed via tabbing.](focus-highlight-firefox.png)
+![Firefox 브라우저에 있는 링크 목록의 스크린샷. 목록에는 4개의 항목이 포함되어 있습니다. 두 번째 목록 항목은 탭을 통해 초점이 맞춰질 때 파란색 점선 윤곽선을 사용하여 강조 표시됩니다.](focus-highlight-firefox.png)
 
-![Screenshot of a list of links in Chrome browser. The list contains 4 items. The third list item is highlighted using a blue outline when it is focussed via tabbing.](focus-highlight-chrome.png)
+![Chrome 브라우저에 있는 링크 목록의 스크린샷. 목록에는 4개의 항목이 포함되어 있습니다. 세 번째 목록 항목은 탭을 통해 초점이 맞춰질 때 파란색 외곽선을 사용하여 강조 표시됩니다.](focus-highlight-chrome.png)
 
 사용자가 링크와 상호작용을 할 때 계속 피드백을 제공하는 한 링크 스타일을 창의적으로 사용할 수 있습니다. 상태가 변경되면 반드시 어떤 일이 발생해야 하며 포인터 커서나 윤곽선을 제거해서는 안 됩니다. 둘 다 키보드 컨트롤을 사용하는 사람들에게 매우 중요한 접근성 도구입니다.
 
@@ -171,20 +175,19 @@ a:active {
 </div>
 ```
 
-[form-css.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-css.html) 예시에서 CSS의 좋은 예시를 볼 수 있습니다. ([see it live](https://mdn.github.io/learning-area/accessibility/css/form-css.html)도 있습니다.)
+[form-css.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-css.html) 예시에서 CSS의 좋은 예시를 볼 수 있습니다. ([라이브 보기](https://mdn.github.io/learning-area/accessibility/css/form-css.html)도 있습니다.)
 
 양식을 위해 작성할 대부분의 CSS는 요소의 크기를 조정하고, 레이블과 입력을 정렬하고, 깔끔하고 단정하게 보이기 위한 것입니다.
 
-그러나 양식 요소에 초점이 맞춰졌을 때 받을 것으로 예상되는 시각적인 피드백에서 너무 많이 벗어나서는 안 됩니다. 이는 기본적으로 링크와 동일합니다(위 참조). 양식 포커스/호버 상태의 스타일을 지정하여 브라우저 전체에서 이 동작을 보다 일관되게 만들거나 페이지 디자인에 더 잘 맞도록 할 수 있지만 완전히 제거하지는 마십시오. 다시 말하지만 사람들은 이러한 단서에 의존하여 무슨 일이 일어나고 있는지 알 수 있습니다.
+그러나 양식 요소에 초점이 맞춰졌을 때 받을 것으로 예상되는 시각적인 피드백에서 너무 많이 벗어나서는 안 됩니다. 이는 기본적으로 링크와 동일합니다(위 참고). 양식 포커스/호버 상태의 스타일을 지정하여 브라우저 전체에서 이 동작을 보다 일관되게 만들거나 페이지 디자인에 더 잘 맞도록 할 수 있지만 완전히 제거하지는 마십시오. 다시 말하지만 사람들은 이러한 단서에 의존하여 무슨 일이 일어나고 있는지 알 수 있습니다.
 
 #### 테이블
 
 표 형식의 데이터를 표현하기 위한 표입니다.
 
-[table-css.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/table-css.html) 예제에서 표 HTML 및 CSS의 훌륭하고 간단한 예를 볼 수 있습니다. ([see it live also](https://mdn.github.io/learning-area/accessibility/css/table-css.html)도 있습니다.)
+[table-css.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/table-css.html) 예제에서 표 HTML 및 CSS의 훌륭하고 간단한 예를 볼 수 있습니다. ([라이브 보기](https://mdn.github.io/learning-area/accessibility/css/table-css.html)도 있습니다.)
 
 표 CSS는 일반적으로 표를 디자인에 더 잘 어울리게 하고 보기 좋게 만드는 역할을 합니다. 표 헤더가 눈에 띄도록 하고(일반적으로 굵게 표시), 얼룩말 줄무늬를 사용하여 여러 행을 구문 분석하기 쉽게 하는 것이 좋습니다.
-
 
 ### 색상 및 색상 대비
 
@@ -196,13 +199,13 @@ a:active {
 
 또 다른 팁은 표지판/정보를 색상에만 의존하지 않는 것입니다. 이는 색상을 볼 수 없는 사람들에게는 좋지 않기 때문입니다. 예를 들어, 필수 양식 필드를 빨간색으로 표시하는 대신 별표와 빨간색으로 표시하세요.
 
-### Hiding things
+### 요소 숨기기
 
 시각적 디자인에서 모든 콘텐츠가 한 번에 표시되지 않도록 요구하는 경우가 많이 있습니다. 예를 들어, [탭 정보 상자 예시](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([소스 코드](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html))에는 세가지 정보 패널이 있지만, 우리는 그것들을 서로의 위에 [배치](/ko/docs/Learn/CSS/CSS_layout/Positioning)하고 클릭하여 각각을 표시할 수 있는 탭을 제공하고 있습니다. (Tab 키와 Enter/Return을 사용하여 키보드로 액세스할 수도 있습니다.)
 
-![Three tab interface with Tab 1 selected and only its contents are displayed. The contents of other tabs are hidden. If a tab is selected, then it's text-color changes from black to white and the background-color changes from orange-red to saddle brown.](tabbed-info-box.png)
+![탭 1이 선택된 3개의 탭 인터페이스는 해당 탭의 내용만 표시됩니다. 다른 탭의 내용은 숨깁니다. 탭을 선택하면 텍스트 색상이 검은색에서 흰색으로 바뀌고 배경 색상이 주황색에서 빨간색으로 바뀝니다.](tabbed-info-box.png)
 
-스크린 리더 사용자는 이 중 어떤 것도 신경 쓰지 않습니다. 소스 순서가 적절하고 모든 내용을 읽을 수 있다면 만족합니다. 이 예에서 사용된 절대 위치 지정은 일반적으로 스크린 리더가 콘텐츠에 접근하는 것을 방해하지 않기 때문에 시각적 효과를 위해 콘텐츠를 숨기는  가장 좋은 메커니즘 중 하나로 간주됩니다.
+스크린 리더 사용자는 이 중 어떤 것도 신경 쓰지 않습니다. 소스 순서가 적절하고 모든 내용을 읽을 수 있다면 만족합니다. 이 예에서 사용된 절대 위치 지정은 일반적으로 스크린 리더가 콘텐츠에 접근하는 것을 방해하지 않기 때문에 시각적 효과를 위해 콘텐츠를 숨기는 가장 좋은 메커니즘 중 하나로 간주됩니다.
 
 반면에 {{cssxref("visibility")}}`:hidden` 또는 {{cssxref("display")}}`:none`은 스크린 리더에서 콘텐츠를 숨기기 때문에 사용하면 안 됩니다. 물론, 이 콘텐츠를 스크린 리더에서 숨기려는 타당한 이유가 있는 경우는 예외입니다.
 
@@ -212,10 +215,10 @@ a:active {
 
 사용자가 자신만의 맞춤 스타일로 스타일을 재정의할 수 있습니다. 예를 들면 다음과 같습니다.
 
-- Sarah Maddox의 [Firefox에서 사용자 정의 스타일 시트(CSS)를 사용하는 방법](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-firefox/)을 참조하세요. Firefox에서 이 작업을 수동으로 수행하는 방법을 다루는 유용한 가이드입니다.
+- Sarah Maddox의 [Firefox에서 사용자 정의 스타일 시트(CSS)를 사용하는 방법](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-firefox/)을 참고하세요. Firefox에서 이 작업을 수동으로 수행하는 방법을 다루는 유용한 가이드입니다.
 - 확장 프로그램을 사용하는 것이 더 쉬울 수도 있습니다. 예를 들어, Stylus 확장 프로그램은 [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)에서 사용할 수 있으며 Stylish는 [Chrome](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe)과 동일합니다.
 
-사용자는 다양한 이유로 이 작업을 수행할 수 있다. 시각 장애가 있는 사용자는 방문하는 모든 웹 사이트에서 텍스트를 더 크게 표시하고 싶을 수도 있고, 심각한 색맹이 있는 사용자는 모든 웹 사이트를 쉽게 볼 수 있도록 고대비 색상으로 표시할 수도 있습니다. 필요가 무엇이든, 이에 익숙해져야 하며 그러한 변경 사항이 디자인에 적용될 수 있도록 디자인을 충분히 유연하게 만들어야 합니다. 예를 들어, 기본 콘텐츠 영역이 더 큰 텍스트를 처리할 수 있고(모든 내용이 표시되도록 스크롤되기 시작할 수도 있음) 단순히 숨기거나 완전히 중단되지 않도록 할 수 있습니다.
+사용자는 다양한 이유로 이 작업을 수행할 수 있다. 시각 장애가 있는 사용자는 방문하는 모든 웹 사이트에서 텍스트를 더 크게 표시하고 싶을 수도 있고, 심각한 색맹이 있는 사용자는 모든 웹 사이트를 쉽게 볼 수 있도록 고대비 색상으로 표시할 수도 있습니다. 필요가 무엇이든, 이에 익숙해져야 하며 그러한 변경 사항이 디자인에 적용될 수 있도록 디자인을 충분히 유연하게 만들어야 합니다. 예를 들어, 기본 콘텐츠 영역이 더 큰 텍스트를 처리할 수 있는지(모든 내용이 표시되도록 스크롤되기 시작할 수도 있음) 단순히 숨기거나 완전히 깨지지 않도록 할 수 있습니다.
 
 ## JavaScript
 
@@ -247,9 +250,9 @@ JavaScript는 어떻게 사용하냐에 따라 접근성을 깨뜨릴 수 있습
 - 서버가 데이터를 확인할 때까지 기다리지 않고도 사용자에게 양식 항목에 대한 문제를 빠르게 알려주는 클라이언트 측 양식 검증을 제공합니다. 사용할 수 없는 경우 양식은 여전히 작동하지만 검증은 더 느릴 수 있습니다.
 - JavaScript를 사용할 수 없는 경우 사용할 수 있는 동영상에 대한 직접 링크와 함께 키보드 사용자가 엑세스할 수 있는 HTML `<video>`의 맞춤형 컨트롤을 제공합니다(기본 `<video>` 브라우저 컨트롤은 대부분의 브라우저에서 키보드로 액세스할 수 없습니다).
 
-예제로 빠르고 지저분한 클라이언트 측 양식 유효성 검사를 작성했습니다. [form-validation.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-validation.html)를 참조하세요. 여기서는 간단한 양식을 볼 수 있습니다. 하나 또는 두 필드를 모두 비워 두고 양식을 제출하려고 하면 제출이 실패하고 무엇이 잘못되었는지 알려주는 오류 메시지가 나타납니다.
+예제로 빠르고 지저분한 클라이언트 측 양식 유효성 검사를 작성했습니다. [form-validation.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-validation.html)를 참고하세요. 여기서는 간단한 양식을 볼 수 있습니다. 하나 또는 두 필드를 모두 비워 두고 양식을 제출하려고 하면 제출이 실패하고 무엇이 잘못되었는지 알려주는 오류 메시지가 나타납니다.
 
-이러한 종류의 양식 유효성 검사는 눈에 띄지 않습니다. JavaScript를 사용할 수 없어도 양식을 완벽하게 사용할 수 있으며, 악의적인 사용자가 클라이언트 측 검증(예: 브라우저에서 JavaScript 비활성화)을 우회하기가 너무 쉽게 때문에 합리적인 양식 구현에서는 서버 측 유효성 검사도 활성화됩니다. 클라이언트 측 검증은 오류를 보고하는 데 여전히 매우 유용합니다. 사용자는 서버로 왕복하고 페이지를 다시 로드할 필요 없이 즉시 실수를 알 수 있습니다. 이는 확실히 유용한 점입니다.
+이러한 종류의 양식 유효성 검사는 눈에 띄지 않습니다. JavaScript를 사용할 수 없어도 양식을 완벽하게 사용할 수 있으며, 악의적인 사용자가 클라이언트 측 검증(예: 브라우저에서 JavaScript 비활성화)을 우회하기가 너무 쉽기 때문에 합리적인 양식 구현에서는 서버 측 유효성 검사도 활성화됩니다. 클라이언트 측 검증은 오류를 보고하는 데 여전히 매우 유용합니다. 사용자는 서버로 왕복하고 페이지를 다시 로드할 필요 없이 즉시 실수를 알 수 있습니다. 이는 확실히 유용한 점입니다.
 
 > **참고:** 이 간단한 데모에서는 서버측 유효성 검사가 구현되지 않았습니다.
 
@@ -285,7 +288,7 @@ function validate(e) {
 
 실제 양식 유효성 검사는 이보다 훨씬 더 복잡합니다. 입력한 이름이 실제로 이름처럼 보이고, 입력된 나이가 실제로 숫자이며 사실적인지(예: 음수가 아니며 4자리 미만) 확인하고자 합니다. 여기서는 각 입력 필드에 대한 값이 입력되었는지 (`if (testItem.input.value === '')`) 확인하는 간단한 검사를 구현했습니다.
 
-유효성 검사가 수행되었을 때 테스트가 통과되면 양식이 제출됩니다. 오류가 있는 경우 (`if (errorList.innerHTML !== '')`) 양식 제출을 중지하고 ([`preventDefault()`](/ko/docs/Web/API/Event/preventDefault)를 사용) 생성된 오류 메시지를 표시합니다(아래 참조). 이 메커니즘은 오류가 있는 경우에만 오류가 표시됨을 의미하므로 사용성에 더 좋습니다. 
+유효성 검사가 수행되었을 때 테스트가 통과되면 양식이 제출됩니다. 오류가 있는 경우 (`if (errorList.innerHTML !== '')`) 양식 제출을 중지하고 ([`preventDefault()`](/ko/docs/Web/API/Event/preventDefault)를 사용) 생성된 오류 메시지를 표시합니다(아래 참고). 이 메커니즘은 오류가 있는 경우에만 오류가 표시됨을 의미하므로 사용성에 더 좋습니다.
 
 양식을 제출할 때 입력한 값이 없는 입력에 대해 링크가 있는 목록 아이템을 만들어 `errorList`에 삽입합니다.
 
@@ -316,7 +319,7 @@ function createLink(testItem) {
 
 이러한 속성에 대해서는 [WAI-ARIA](/ko/docs/Learn/Accessibility/WAI-ARIA_basics)를 훨씬 더 자세히 다루는 다음 문서에서 설명하겠습니다.
 
-> **참고:** HTML 양식에 `required`, `min`/`minlength`, `max`/`maxlength` 속성과 같은 검증 메커니즘이 내장되어 있다는 사실을 생각해 보시는 분들도 있을 것입니다(자세한 내용은 {{htmlelement("input")}} 요소를 참조하세요). 여러 브라우저에서 지원이 고르지 않기 때문에 데모에서 사용하지 못했습니다(예: IE10 이상에만 지원).
+> **참고:** HTML 양식에 `required`, `min`/`minlength`, `max`/`maxlength` 속성과 같은 검증 메커니즘이 내장되어 있다는 사실을 생각해 보시는 분들도 있을 것입니다(자세한 내용은 {{htmlelement("input")}} 요소를 참고하세요). 여러 브라우저에서 지원이 고르지 않기 때문에 데모에서 사용하지 못했습니다(예: IE10 이상에만 지원).
 
 > **참고:** WebAIM의 [사용 가능하고 액세스 가능한 양식 유효성 검사 및 오류 복구](https://webaim.org/techniques/formvalidation/)는 액세스 가능한 양식 유효성 검사에 대한 몇 가지 유용한 정보를 더 제공합니다.
 
@@ -332,7 +335,7 @@ JavaScript를 구현하고 접근성에 대해 생각할 때 주의해야 할 �
 
 이것이 유용할 수 있는 경우를 살펴보겠습니다. 전자상거래 제품 카탈로그에서 볼 수 있는 것처럼 마우스를 올리거나 초점을 맞추면 이미지의 더 큰 버전을 표시하는 썸네일 이미지를 제공하고 싶을 수도 있습니다.
 
-우리는 [mouse-and-keyboard-events.html](https://mdn.github.io/learning-area/accessibility/css/mouse-and-keyboard-events.html) ([소스 코드](https://github.com/mdn/learning-area/blob/main/accessibility/css/mouse-and-keyboard-events.html)를 참조하세요.)에서 매우 간단한 예를 만들었습니다. 이 코드에는 확대된 이미지를 표시하고 숨기는 두 가지 기능이 있습니다. 이는 이벤트 핸들러로 설정된 다음 줄에 의해 실행됩니다.
+우리는 [mouse-and-keyboard-events.html](https://mdn.github.io/learning-area/accessibility/css/mouse-and-keyboard-events.html) ([소스 코드](https://github.com/mdn/learning-area/blob/main/accessibility/css/mouse-and-keyboard-events.html)를 참고하세요.)에서 매우 간단한 예를 만들었습니다. 이 코드에는 확대된 이미지를 표시하고 숨기는 두 가지 기능이 있습니다. 이는 이벤트 핸들러로 설정된 다음 줄에 의해 실행됩니다.
 
 ```js
 imgThumb.onmouseover = showImg;
@@ -344,11 +347,11 @@ imgThumb.onblur = hideImg;
 
 처음 두 줄은 각각 마우스 포인터를 썸네일 위로 가져갈 때와 멈추었을 때 기능을 실행합니다. 하지만 키보드로 확대/축소된 보기에 액세스할 수는 없습니다. 이를 허용하기 위해 이미지에 초점이 맞춰지고 흐려질 때(초점이 멈출 때) 기능을 실행하는 마지막 두 줄을 포함했습니다. 이것은 이미지 위에 `tabindex="0"`을 포함시켰기 때문에 이미지 위에 탭을 눌러 수행할 수 있습니다.
 
-[click](/ko/docs/Web/API/Element/click_event) 이벤트는 흥미롭습니다. 마우스에 의존하는 것처럼 보이지만 대부분의 브라우저는 초점이 있는 링크나 양식 요소에서 Enter/Return을 누른 후 또는 터치 스크린 장치에서 이러한 요소를 탭할 때 [onclick](/ko/docs/Web/API/Element/click_event) 이벤트 핸들러를 활성화합니다. 그러나 tabindex를 사용하여 기본 초점 가능 이벤트가 아닌 이벤트에 초점을 두는 경우에는 기본적으로 동작하지 않습니다. 이러한 경우 정확한 키를 눌렀을 때 특별히 감지해야 합니다([키보드 접근성 다시 구축](/ko/docs/Learn/Accessibility/HTML#키보드_접근성_다시_구축하기)를 참조하세요.).
+[click](/ko/docs/Web/API/Element/click_event) 이벤트는 흥미롭습니다. 마우스에 의존하는 것처럼 보이지만 대부분의 브라우저는 초점이 있는 링크나 양식 요소에서 Enter/Return을 누른 후 또는 터치 스크린 장치에서 이러한 요소를 탭할 때 [onclick](/ko/docs/Web/API/Element/click_event) 이벤트 핸들러를 활성화합니다. 그러나 tabindex를 사용하여 기본 초점 가능 이벤트가 아닌 이벤트에 초점을 두는 경우에는 기본적으로 동작하지 않습니다. 이러한 경우 정확한 키를 눌렀을 때 특별히 감지해야 합니다([키보드 접근성 다시 구축](/ko/docs/Learn/Accessibility/HTML#키보드_접근성_다시_구축하기)를 참고하세요.).
 
 ## 실력을 시험해 보세요!
 
-이 문서를 끝까지 읽었지만 가장 중요한 정보를 기억할 수 있습니까? 계속 진행하기 전에 이 정보를 유지했는지 확인하기 위한 몇가지 추가 테스트를 확인할 수 있습니다. [실력 테스트: CSS 및 JavaScript 접근성](/ko/docs/Learn/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility)를 참조하세요.
+이 문서를 끝까지 읽었지만 가장 중요한 정보를 기억할 수 있습니까? 계속 진행하기 전에 이 정보를 유지했는지 확인하기 위한 몇가지 추가 테스트를 확인할 수 있습니다. [실력 테스트: CSS 및 JavaScript 접근성](/ko/docs/Learn/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility)를 참고하세요.
 
 ## 요약
 
