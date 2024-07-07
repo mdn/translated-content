@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.closePath()
+title: CanvasRenderingContext2D：closePath() 方法
 slug: Web/API/CanvasRenderingContext2D/closePath
 l10n:
   sourceCommit: 882679ef575f519ddb80095398a1235415ac01f1
