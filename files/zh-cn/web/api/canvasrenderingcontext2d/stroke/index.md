@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.stroke()`** 方法用于根据当前的画线样式，绘制当前或指定的路径。
+Canvas 2D API 的 **`CanvasRenderingContext2D.stroke()`** 方法用于根据当前的描边样式，绘制当前或指定的路径。
 
-描边沿着路径的中心对齐，也就是说，描边的一半位于路径的内侧，另一半位于外侧。
+描边与路径的中心对齐，也就是说，描边的一半位于路径的内侧，另一半位于外侧。
 
 描边使用[非零环绕规则](https://en.wikipedia.org/wiki/Nonzero-rule)进行绘制，这意味着路径交叉点仍会被填充。
 
@@ -23,7 +23,7 @@ stroke(path)
 ### 参数
 
 - `path`
-  - : 绘制的路径 {{domxref("Path2D")}} 。
+  - : 要描边的路径 {{domxref("Path2D")}} 。
 
 ### 返回值
 
@@ -33,7 +33,7 @@ stroke(path)
 
 ### 一个简单的矩形轮廓线
 
-这个例子使用 `rect()` 方法创建一个矩形，然后使用 `stroke()` 方法将其绘制到画布上。
+此示例使用 `rect()` 方法创建一个矩形，然后使用 `stroke()` 方法将其绘制到画布上。
 
 #### HTML
 
@@ -54,7 +54,7 @@ ctx.stroke();
 
 {{ EmbedLiveSample('一个简单的矩形轮廓线', 700, 180) }}
 
-### 重新描边路径
+### 重新对路径进行描边
 
 通常情况下，每当你想要描边新的内容时，应调用 {{domxref("CanvasRenderingContext2D.beginPath()", "beginPath()")}} 方法。如果不这样做，之前的子路径将保留在当前路径中，并且每次调用 `stroke()` 方法时都会被描边。然而，在某些情况下，这可能是期望的效果。
 
@@ -96,7 +96,7 @@ ctx.stroke();
 
 #### 结果
 
-{{ EmbedLiveSample('重新描边路径', 700, 180) }}
+{{ EmbedLiveSample('重新对路径进行描边', 700, 180) }}
 
 ### 描边和填充
 
