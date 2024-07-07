@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.clip()
+title: CanvasRenderingContext2D：clip() 方法
 slug: Web/API/CanvasRenderingContext2D/clip
 l10n:
   sourceCommit: 882679ef575f519ddb80095398a1235415ac01f1
