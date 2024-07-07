@@ -63,4 +63,4 @@ if ("virtualKeyboard" in navigator) {
 ## 参见
 
 - {{domxref("VirtualKeyboard_API", "VirtualKeyboard API", "", "nocode")}}
-- [使用 VirtualKeyboard API 实现完全控制](https://developer.chrome.com/docs/web-platform/virtual-keyboard/)
+- [使用虚拟键盘 API 实现完全控制](https://developer.chrome.com/docs/web-platform/virtual-keyboard/)
