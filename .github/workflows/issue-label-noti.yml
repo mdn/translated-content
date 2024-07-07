@@ -20,7 +20,7 @@ jobs:
         echo "EOF" >> $GITHUB_ENV
 
     - name: Send ko-locale Discord Notification
-      if: contains(github.event.issue.labels.*.name, 'ko-locale')
+      if: contains(github.event.issue.labels.*.name, 'l10n-ko')
       env:
         TRIMMED_BODY: ${{ env.TRIMMED_BODY }}
       run: |
