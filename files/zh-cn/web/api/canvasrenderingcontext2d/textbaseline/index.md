@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.textBaseline
+title: CanvasRenderingContext2D：textBaseline 属性
 slug: Web/API/CanvasRenderingContext2D/textBaseline
 l10n:
   sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
