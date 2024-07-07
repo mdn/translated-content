@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef}}
 
-[Canvas API](/zh-CN/docs/Web/API/Canvas_API) 的 {{domxref("CanvasRenderingContext2D")}} 接口的 **`imageSmoothingEnabled`** 属性用于设置图片是否进行平滑处理，`true` 表示图片平滑（默认值），`false` 表示图片不平滑。当我们获取 `imageSmoothingEnabled` 属性值时，它会返回最新设置的值。
+[Canvas API](/zh-CN/docs/Web/API/Canvas_API) 的 {{domxref("CanvasRenderingContext2D")}} 接口的 **`imageSmoothingEnabled`** 属性用于设置是否对缩放后的图片进行平滑处理，`true` 表示进行平滑处理（默认值），`false` 表示不进行。当我们获取 `imageSmoothingEnabled` 属性值时，它会返回最新设置的值。
 
-以缩放画布为例，这个属性对像素为主的游戏很有用。默认的改变大小的算法会造成图片模糊并且破坏图片原有的像素。可以设置其属性值为 `false` 来保证像素的锐度。
+这个属性对像素为主的游戏或其他应用很有用。放大图像时，默认的调整大小的算法会使得像素变模糊。可以将此属性设为 `false` 来保证像素的清晰度。
 
 > **备注：** 你可以使用 {{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}} 属性来调整平滑质量。
 
