@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.wordSpacing
+title: CanvasRenderingContext2D：wordSpacing 属性
 slug: Web/API/CanvasRenderingContext2D/wordSpacing
 l10n:
   sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
