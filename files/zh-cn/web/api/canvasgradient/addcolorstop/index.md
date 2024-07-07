@@ -1,5 +1,5 @@
 ---
-title: CanvasGradient.addColorStop()
+title: CanvasGradient：addColorStop() 方法
 slug: Web/API/CanvasGradient/addColorStop
 l10n:
   sourceCommit: daeff1a2efaae366bcc8b6d911d86985646e665e
