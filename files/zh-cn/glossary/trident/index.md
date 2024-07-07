@@ -13,7 +13,7 @@ Trident 也在 Microsoft Edge 中“IE 模式”打开时使用。这是一个�
 
 ## 参见
 
-- 维基百科上的 [Trident](Trident_(排版引擎)>)
+- 维基百科上的 [Trident](<https://zh.wikipedia.org/wiki/Trident_(排版引擎)>)
 - 术语
   - {{Glossary("Microsoft Internet Explorer")}}
   - {{Glossary("Microsoft Edge")}}
