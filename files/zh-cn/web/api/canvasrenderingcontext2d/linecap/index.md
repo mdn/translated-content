@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.lineCap
+title: CanvasRenderingContext2D：lineCap 属性
 slug: Web/API/CanvasRenderingContext2D/lineCap
 l10n:
   sourceCommit: c8b447485fd893d5511d88f592f5f3aec29a725b
