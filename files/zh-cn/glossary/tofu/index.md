@@ -9,7 +9,7 @@ l10n:
 
 **TOFU**（首次使用时信任）是一种客户端需要与未知服务器建立信任关系的安全模型。为了做到这一点，客户端将查找本地存储的标识符（例如公钥）。如果找到标识符，客户端可以建立连接。如果没有找到标识符，客户端可以提示用户确定是否应该信任标识符。
 
-TOFU 在 SSH 协议中使用，在 {{HTTPHeader("Strict-Transport-Security")}}（{{Glossary("HSTS")}}）中，浏览器将遵守重定向规则。
+TOFU 被用于 SSH 协议和 {{HTTPHeader("Strict-Transport-Security")}}（{{Glossary("HSTS")}}）——浏览器将遵守重定向规则。
 
 ## 参见
 
