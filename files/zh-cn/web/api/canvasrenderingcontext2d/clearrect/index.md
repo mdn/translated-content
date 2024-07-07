@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.clearRect()
+title: CanvasRenderingContext2D：clearRect() 方法
 slug: Web/API/CanvasRenderingContext2D/clearRect
 l10n:
   sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
