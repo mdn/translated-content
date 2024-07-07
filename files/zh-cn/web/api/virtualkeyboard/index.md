@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}{{APIRef("VirtualKeyboard API")}}{{securecontext_header}}
 
-[VirtualKeyboard API](/zh-CN/docs/Web/API/VirtualKeyboard_API) 的 **`VirtualKeyboard`** 接口用于具有虚拟键盘（如平板电脑、手机或其他没有物理键盘的设备）的设备。
+[虚拟键盘 API](/zh-CN/docs/Web/API/VirtualKeyboard_API) 的 **`VirtualKeyboard`** 接口用于具有屏幕虚拟键盘的设备（如平板电脑、手机或其他没有物理键盘的设备）。
 
 `VirtualKeyboard` 接口使你可以选择退出浏览器自动处理屏幕虚拟键盘的方式，通过减少视窗的高度以为虚拟键盘腾出空间。你可以阻止浏览器改变视窗大小，检测虚拟键盘的位置和大小，并通过编程方式显示或隐藏虚拟键盘。
 
