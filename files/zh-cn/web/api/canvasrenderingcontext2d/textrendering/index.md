@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.textRendering
+title: CanvasRenderingContext2D：textRendering 属性
 slug: Web/API/CanvasRenderingContext2D/textRendering
 l10n:
   sourceCommit: e7eb0e7c8c9e23554bb4f85ce6f86dc4991c419b
