@@ -1,5 +1,5 @@
 ---
-title: CanvasRenderingContext2D.textAlign
+title: CanvasRenderingContext2D：textAlign 属性
 slug: Web/API/CanvasRenderingContext2D/textAlign
 l10n:
   sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
