@@ -95,7 +95,7 @@ colors[5] = "purple";
 colors.forEach((item, index) => {
   console.log(`${index}: ${item}`);
 });
-// 输出:
+// 输出：
 // 0: red
 // 1: yellow
 // 2: blue
@@ -861,6 +861,7 @@ testSideEffect((arr) => arr.push("new"));
 // 数组：[e1, e2, e3, e4, new, new, new], 索引：3, 元素：e4
 // 最终数组：[e1, e2, e3, e4, new, new, new, new]
 ```
+
 对已经访问过的索引插入 _n_ 元素将不会使它们被访问，但它会将剩余元素向后移动 _n_，因此当前索引和它之前的 _n - 1_ 元素会再次被访问。
 
 ```js
