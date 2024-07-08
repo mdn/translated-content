@@ -2,7 +2,7 @@
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
 l10n:
-  sourceCommit: af1e384356e21dbcc573d1c1cc015ec79c644de1
+  sourceCommit: 829720f86ce858b9bb8cbe7aa9e0bea148915f8c
 ---
 
 {{APIRef("UI Events")}}
