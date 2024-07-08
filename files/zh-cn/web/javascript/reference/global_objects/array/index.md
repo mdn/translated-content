@@ -208,6 +208,7 @@ function method(callbackFn, thisArg) {
 ```
 
 备注如下内容：
+
 1. 不是所有的方法都执行 `i in this` 验证，`find`、`findIndex`、`findLast` 和 `findLastIndex` 方法不执行，其他的会。
 2. `length` 变量在循环开始前存储。这会影响迭代过程中插入和删除的处理方式（参见[迭代方法中的改变初始数组](#迭代方法中的改变初始数组)）。
 3. `method` 方法不会存储数组内容，因此如果迭代期间，有任何索引发生更改，可以观察到新的值。
