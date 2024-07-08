@@ -1,5 +1,5 @@
 ---
-title: HTMLMediaElement：readyState属性
+title: HTMLMediaElement：readyState 属性
 slug: Web/API/HTMLMediaElement/readyState
 l10n:
   sourceCommit: e932acf254c5dd06e26798b9d8fe01ce8dab1fb7
