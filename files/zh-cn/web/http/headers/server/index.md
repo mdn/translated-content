@@ -33,7 +33,7 @@ Server: <product>
 ## 指令
 
 - \<product>
-  - : 处理请求的软件或产品名称。通常格式类似于 {{HTTPHeader('User-Agent')}}}。
+  - : 处理请求的软件或产品名称。通常格式类似于 {{HTTPHeader('User-Agent')}}。
 
 包含多少细节是一个需要平衡的问题；暴露操作系统版本可能是个坏主意，正如前面关于过于详细的值的警告所提到的。不过，暴露的 Apache 版本可以帮助浏览器解决版本中的一个错误，即结合使用 {{HTTPHeader('Content-Encoding')}} 和 {{HTTPHeader('Range')}}。
 
