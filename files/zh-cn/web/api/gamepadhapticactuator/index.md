@@ -21,7 +21,7 @@ l10n:
 - {{domxref("GamepadHapticActuator.pulse()")}} {{ReadOnlyInline}}
   - : 使硬件在指定的期间内脉冲达到一定强度。
 - {{domxref("GamepadHapticActuator.playEffect()")}} {{ReadOnlyInline}}
-  - : 使硬件播放特定的震动模式。
+  - : 使硬件播放特定的振动模式。
 
 ## 示例
 
