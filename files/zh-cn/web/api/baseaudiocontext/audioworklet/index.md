@@ -26,7 +26,7 @@ _如果需要完整的用户自定义音频处理示例，可以查看{{domxref(
 
 {{Compat}}
 
-## See also
+## 参见
 
 - [使用 Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("AudioWorkletNode")}}
