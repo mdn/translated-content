@@ -24,17 +24,17 @@ slug: WebAssembly/Using_the_JavaScript_API
 
    ```wasm
    (module
-     (func $i (import "imports" "imported_func") (param i32))
+     (func $i (import "my_namespace" "imported_func") (param i32))
      (func (export "exported_func")
        i32.const 42
            call $i))
    ```
 
-5. 在第二行，你将看到导入有一个两级命名空间——内部函数 `$i` 是从 imports.imported_func 导入的。编写要导入到 wasm 模块的对象时，我们需要在 JavaScript 中反映这个两级命名空间。创建一个 `<script></script>` 节点在你的 HTML 文件中，并且添加下面的代码：
+5. 在第二行，你将看到导入有一个两级命名空间——内部函数 `$i` 是从 my_namespace.imported_func 导入的。编写要导入到 wasm 模块的对象时，我们需要在 JavaScript 中反映这个两级命名空间。创建一个 `<script></script>` 节点在你的 HTML 文件中，并且添加下面的代码：
 
    ```js
    var importObject = {
-     imports: {
+     my_namespace: {
        imported_func: function (arg) {
          console.log(arg);
        },
@@ -42,13 +42,13 @@ slug: WebAssembly/Using_the_JavaScript_API
    };
    ```
 
-如上所述，我们在 `imports.imported_func` 中有我们导入的函数。
+如上所述，我们在 `my_namespace.imported_func` 中有我们导入的函数。
 
 > **备注：** 使用 [ES6 箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 将会更加简洁：
 >
 > ```js
 > let importObject = {
->   imports: {
+>   my_namespace: {
 >     imported_func: (arg) => console.log(arg),
 >   },
 > };
