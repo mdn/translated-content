@@ -1,6 +1,5 @@
 ---
-title: "BaseAudioContext: audioWorklet 属性"
-short-title: audioWorklet
+title: BaseAudioContext：audioWorklet 属性
 slug: Web/API/BaseAudioContext/audioWorklet
 l10n:
   sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
@@ -8,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Audio API") }}{{securecontext_header}}
 
-{{domxref("BaseAudioContext")}} 接口的只读属性`audioWorklet`返回一个{{domxref("AudioWorklet")}}实例，该实例可以用于添加实现用户自定义的音频加工{{domxref("AudioWorkletProcessor")}}的派生类。
+{{domxref("BaseAudioContext")}} 接口的只读属性 `audioWorklet` 返回一个 {{domxref("AudioWorklet")}} 实例，该实例可用于添加实现自定义音频处理的 {{domxref("AudioWorkletProcessor")}} 的派生类。
 
 ## 值
 
@@ -16,7 +15,7 @@ l10n:
 
 ## 示例
 
-_如果需要完整的用户自定义音频处理示例，可以查看{{domxref("AudioWorkletNode")}}演示。_
+_参见 {{domxref("AudioWorkletNode")}} 页面，以获取完整的用户自定义音频处理示例。_
 
 ## 规范
 
