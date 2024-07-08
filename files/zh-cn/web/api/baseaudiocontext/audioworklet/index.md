@@ -12,7 +12,7 @@ l10n:
 
 ## 值
 
-{{domxref("AudioWorklet")}} 实例.
+{{domxref("AudioWorklet")}} 实例。
 
 ## 示例
 
