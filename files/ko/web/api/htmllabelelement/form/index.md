@@ -1,5 +1,5 @@
 ---
-title: "HTMLLabelElement: form property"
+title: "HTMLLabelElement: form 속성"
 short-title: form
 slug: Web/API/HTMLLabelElement/form
 l10n:
