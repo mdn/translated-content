@@ -16,7 +16,7 @@ new String(thing)
 String(thing)
 ```
 
-> **참고:** `String()`은 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)와 함께 호출하거나 아니면 단독으로 호출할 수 있습니다. 하지만 효과는 다릅니다. [반환 값](#return_value)을 참고하시기 바랍니다.
+> **참고:** `String()`은 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)와 함께 호출하거나 아니면 단독으로 호출할 수 있습니다. 하지만 효과는 다릅니다. [반환 값](#반환_값)을 참고하시기 바랍니다.
 
 ### 매개변수
 
@@ -74,4 +74,4 @@ String(sym); // "Symbol(example)"
 
 ## 같이 보기
 
-- [텍스트 서식](/ko/docs/Web/JavaScript/Guide/Text_formatting) 가이드
+- [텍스트 서식](/ko/docs/Web/JavaScript/Guide/Text_formatting) 안내서
