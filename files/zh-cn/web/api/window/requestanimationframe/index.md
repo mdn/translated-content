@@ -7,7 +7,7 @@ slug: Web/API/Window/requestAnimationFrame
 
 **`window.requestAnimationFrame()`** 方法会告诉浏览器你希望执行一个动画。它要求浏览器在下一次重绘之前，调用用户提供的回调函数。
 
-对回调函数的调用频率通常是与显示器的刷新率相匹配。虽然75hz、120hz和144hz也被广泛使用，但是最常见的刷新率还是 60hz（每秒 60 个周期/帧）。为了提高性能和电池寿命，大多数浏览器都会暂停在后台选项卡或者隐藏的 {{ HTMLElement("iframe") }} 中运行的 `requestAnimationFrame()`
+对回调函数的调用频率通常是与显示器的刷新率相匹配。虽然 75hz、120hz 和 144hz 也被广泛使用，但是最常见的刷新率还是 60hz（每秒 60 个周期/帧）。为了提高性能和电池寿命，大多数浏览器都会暂停在后台选项卡或者隐藏的 {{ HTMLElement("iframe") }} 中运行的 `requestAnimationFrame()`
 
 > **备注：** 若你想在浏览器下次重绘之前继续更新下一帧动画，那么回调函数自身必须再次调用 `requestAnimationFrame()`。`requestAnimationFrame()` 是一次性的。
 
