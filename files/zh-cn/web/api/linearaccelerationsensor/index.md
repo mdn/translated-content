@@ -7,9 +7,9 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Sensor API")}}
 
-[Sensor API](/zh-CN/docs/Web/API/Sensor_APIs) 的 **`LinearAccelerationSensor`** 接口在每次读取时提供沿所有三个轴加到设备上的加速度，但没有重力作用。
+[Sensor API](/zh-CN/docs/Web/API/Sensor_APIs) 的 **`LinearAccelerationSensor`** 接口在每次读取时提供沿所有三个轴加到设备上的加速度（不包含重力加速度）。
 
-要使用此传感器，用户必须通过 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 授予 `accelerometer` 设备传感器的权限。此外，此功能可能会被服务器上设置的[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止。
+要使用此传感器，用户必须通过 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 授予 `accelerometer` 设备传感器的权限。此外，此特性可能会被服务器设置的[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止。
 
 {{InheritanceDiagram}}
 
@@ -28,7 +28,7 @@ _`LinearAccelerationSensor` 没有自己的事件。然而，它从其父接口 
 
 ## 事件
 
-_`LinearAccelerationSensor` 没有自己的事件。然而，它从其父接口继承事件，{{domxref('Sensor')}}。_
+_`LinearAccelerationSensor` 没有自己的事件。然而，它从其父接口 {{domxref('Sensor')}} 继承事件。_
 
 ## 示例
 
