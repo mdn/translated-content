@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.fill()`** 方法用于根据当前的 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}，填充当前或已存在的路径。
+Canvas 2D API 的 **`CanvasRenderingContext2D.fill()`** 方法用于根据当前的 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}，填充当前或给定的路径。
 
 ## 语法
 
@@ -31,7 +31,7 @@ fill(path, fillRule)
       - : [奇偶环绕规则](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)。
 
 - `path`
-  - : 需要填充的{{domxref("Path2D")}} 路径。
+  - : 需要填充的 {{domxref("Path2D")}} 路径。
 
 ### 返回值
 
@@ -41,7 +41,7 @@ fill(path, fillRule)
 
 ### 填充矩形
 
-该示例使用 `fill` 方法填充矩形。
+该示例使用 `fill()` 方法填充矩形。
 
 #### HTML
 
