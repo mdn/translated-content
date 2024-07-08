@@ -1,6 +1,7 @@
 ---
 title: 2단계 도메인 (Second-level Domain, SLD)
-slug: Glossary/Second-level_Domain
+slug: conflicting/Glossary/SLD
+original_slug: Glossary/Second-level_Domain
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
