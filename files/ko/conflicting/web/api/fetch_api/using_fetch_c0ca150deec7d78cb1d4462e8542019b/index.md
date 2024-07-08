@@ -1,6 +1,7 @@
 ---
 title: Fetch 기본 개념
-slug: Web/API/Fetch_API/Basic_concepts
+slug: conflicting/Web/API/Fetch_API/Using_Fetch_c0ca150deec7d78cb1d4462e8542019b
+original_slug: Web/API/Fetch_API/Basic_concepts
 l10n:
   sourceCommit: c88a329069328522a5c20c054f9dbced9967dbd4
 ---
