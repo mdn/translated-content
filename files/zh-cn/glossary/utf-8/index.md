@@ -14,4 +14,4 @@ UTF-8 (UCS 转换格式 8) 是万维网上最常用的{{Glossary("Character enco
 ## 参见
 
 - 维基百科上的 [UTF-8](https://zh.wikipedia.org/wiki/UTF-8)
-- [Unicode 网站上关于 UTF-8 常见问答](https://www.unicode.org/faq/utf_bom.html#UTF8)
+- [Unicode 网站上关于 UTF-8 的常见问答](https://www.unicode.org/faq/utf_bom.html#UTF8)
