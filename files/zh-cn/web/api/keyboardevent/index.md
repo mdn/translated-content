@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("UI Events")}}
 
-**`KeyboardEvent`** 对象描述了用户与键盘的交互。每个事件都描述了用户与一个按键（或一个按键和修饰键的组合）的单个交互；事件类型（{{domxref("Element/keydown_event", "keydown")}}、{{domxref("Element/keypress_event", "keypress")}} 和{{domxref("Element/keyup_event", "keyup")}}）用于识别不同的键盘活动类型。
+**`KeyboardEvent`** 对象描述了用户与键盘的交互。每个事件都描述了用户与一个按键（或一个按键和修饰键的组合）的单个交互；事件类型（{{domxref("Element/keydown_event", "keydown")}}、{{domxref("Element/keypress_event", "keypress")}} 和 {{domxref("Element/keyup_event", "keyup")}}）用于标识不同的键盘活动类型。
 
-> **备注：** `KeyboardEvent` 只在低级别提示用户与键盘按键进行了哪些交互，并不提供交互的上下文含义。当你需要处理文本输入的时候，使用 {{domxref("Element/input_event", "input")}} 事件代替。用户使用其他方式输入文本时，如使用平板电脑的手写系统或绘图板，键盘事件可能不会触发。
+> **备注：** `KeyboardEvent` 只在低级别提示用户与键盘按键进行了哪些交互，并不提供交互的场景含义。当你需要处理文本输入的时候，使用 {{domxref("Element/input_event", "input")}} 事件代替。用户使用其他方式输入文本时，如使用平板电脑的手写系统或绘图板，键盘事件可能不会触发。
 
 {{InheritanceDiagram}}
 
@@ -24,7 +24,7 @@ l10n:
 
 ### 键盘定位
 
-下述常量用于识别产生按键事件的键盘位置，以类似 `KeyboardEvent.DOM_KEY_LOCATION_STANDARD` 的形式来访问。
+下述常量用于标识产生按键事件的键盘位置，以类似 `KeyboardEvent.DOM_KEY_LOCATION_STANDARD` 的形式来访问。
 
 <table class="standard-table">
   <caption>
@@ -123,7 +123,7 @@ _此接口从其父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承
 
   - : 如果按键事件发生时 <kbd>Shift</kbd> 键处于活动状态，则返回布尔值 `true`。
 
-### 废弃属性
+### 过时属性
 
 - {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}} {{ReadOnlyInline}}
 
@@ -131,10 +131,10 @@ _此接口从其父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承
 
 - {{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}} {{ReadOnlyInline}}
 
-  - : 返回一个数字，该数字代表一个与系统和执行相关的数字代码，用于识别按下按键的未修改值。
+  - : 返回一个数字，该数字代表一个与系统和执行相关的数字代码，用于标识按下按键的未修改值。
 
 - {{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}} {{deprecated_inline}} {{ReadOnlyInline}}
-  - : 此属性为非标准属性，已被弃用；改用 {{domxref("KeyboardEvent.key")}}。它是旧版 DOM 3 级规范事件的一部分。
+  - : 此属性为非标准属性，已被弃用；改用 {{domxref("KeyboardEvent.key")}}。它属于旧版 DOM 第 3 版规范的事件。
 
 ## 方法
 
@@ -144,12 +144,12 @@ _此接口也从父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承
 
   - : 返回一个布尔值，表示事件创建时是否按下了 <kbd>Alt</kbd>、<kbd>Shift</kbd>、<kbd>Ctrl</kbd> 或 <kbd>Meta</kbd> 等修饰符键。
 
-### 废弃方法
+### 过时方法
 
 - {{domxref("KeyboardEvent.initKeyEvent()")}} {{deprecated_inline}}
   - : 初始化一个 `KeyboardEvent` 对象。只有 Firefox 实现了这一功能，但现在已经不再支持；相反，你应该使用 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} 构造函数。
 - {{domxref("KeyboardEvent.initKeyboardEvent()")}} {{deprecated_inline}}
-  - : 初始化一个 `KeyboardEvent` 对象。此方法已废弃，应该使用 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} 构造函数。
+  - : 初始化一个 `KeyboardEvent` 对象。此方法已弃用，应该使用 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} 构造函数。
 
 ## 事件
 
@@ -160,10 +160,10 @@ _此接口也从父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承
 - {{domxref("Element.keyup_event", "keyup")}}
   - : 一个键被释放。
 
-### 废弃事件
+### 过时事件
 
 - {{domxref("Element.keypress_event", "keypress")}} {{Deprecated_Inline}}
-  - : 通常在一个按键被按下时触发，并产生一个字符串值，这个事件高度依赖硬件且已废弃，不应该使用它。
+  - : 通常在一个按键被按下时触发，并产生一个字符串值，这个事件高度依赖硬件且已过时，不应该使用它。
 
 ## 用法说明
 
@@ -175,11 +175,11 @@ _此接口也从父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承
 
 ### 特殊情况
 
-有些按键可以切换指示灯的状态；其中包括大写锁定（Caps Lock）、数字锁定（Num Lock）和滚动锁定（Scroll Lock）等按键。在 Windows 和 Linux 中，这些按键只调度 `keydown` 和 `keyup` 事件。
+有些按键可以切换指示灯的状态；其中包括大写锁定（Caps Lock）、数字锁定（Num Lock）和滚动锁定（Scroll Lock）等按键。在 Windows 和 Linux 中，这些按键只派发 `keydown` 和 `keyup` 事件。
 
 > **备注：** 在 Linux 上，Firefox 12 和更早版本也会为这些按键发送 `keypress` 事件。
 
-不过，由于 macOS 事件模型的限制，大写锁定只能调度 `keydown` 事件。一些较旧的笔记本电脑型号（2007 年及以前的型号）支持数字锁定，但从那时起，即使在外置键盘上，macOS 也不支持数字锁定。在带有数字锁定键的旧款 MacBook 上，该键不会生成任何按键事件。如果连接了带有 F14 键的外置键盘，Gecko 确实支持滚动锁定键。在某些旧版本的 Firefox 中，该键会生成 `keypress` 事件；这种不一致的行为是 [Firefox bug 602812](https://bugzil.la/602812)。
+不过，由于 macOS 事件模型的限制，大写锁定只能派发 `keydown` 事件。一些较旧的笔记本电脑型号（2007 年及以前的型号）支持数字锁定，但从那时起，即使在外置键盘上，macOS 也不支持数字锁定。在带有数字锁定键的旧款 MacBook 上，该键不会生成任何按键事件。如果连接了带有 F14 键的外置键盘，Gecko 确实支持滚动锁定键。在某些旧版本的 Firefox 中，该键会生成 `keypress` 事件；这种不一致的行为是 [Firefox bug 602812](https://bugzil.la/602812)。
 
 ### 处理自动重复
 
@@ -192,7 +192,7 @@ _此接口也从父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承
 5. <\<重复，直到用户释放按键>>
 6. `keyup`
 
-这就是 DOM 3 级规范所说的应该发生的情况。但也有一些注意事项，如下所述。
+这就是 DOM 第 3 版规范所说的应该发生的情况。但也有一些注意事项，如下所述。
 
 #### 在某些 GTK 环境（如 Ubuntu 9.4）中的自动重复行为
 
@@ -207,7 +207,7 @@ _此接口也从父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承
 7. <\<重复，直到用户释放按键>>
 8. `keyup`
 
-遗憾的是，在这些环境中，网页内容无法区分自动重复按键和被重复按下的按键。
+遗憾的是，在这些环境中，Web 内容无法区分自动重复按键和被重复按下的按键。
 
 ## 示例
 
@@ -223,7 +223,7 @@ document.addEventListener(
     }
 
     if (event.ctrlKey) {
-      // 即使 event.key 不为 'Control'（如按下了“a“键），
+      // 即使 event.key 不为“Control”（如按下了“a“键），
       // 在同时按下了 Ctrl 键的情况下，event.ctrlKey 也可能为 true。
       alert(`ctrlKey + ${keyName} 组合`);
     } else {
@@ -238,7 +238,7 @@ document.addEventListener(
   (event) => {
     const keyName = event.key;
 
-    // 当用户释放了 Ctrl 键时，该键不再为活动状态，
+    // 当用户释放了 Ctrl 键时，该键不再为激活状态，
     // 故 event.ctrlKey 为 false。
     if (keyName === "Control") {
       alert("释放了 Control 键");
@@ -252,7 +252,7 @@ document.addEventListener(
 
 {{Specifications}}
 
-`KeyboardEvent` 接口规范经历了多个草案版本，首先是 DOM 事件 2 级规范，由于未达成共识而被放弃，然后是 DOM 事件 3 级规范。这导致了非标准初始化方法的实施，早期的 DOM 事件 2 级版本，{{domxref("KeyboardEvent.initKeyEvent()")}} 被 Gecko 浏览器采用，而早期的 DOM 事件 3 级版本，{{domxref("KeyboardEvent.initKeyboardEvent()")}} 则被其他浏览器采用。这两个版本都已被构造函数的现代用法所取代：{{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}。
+`KeyboardEvent` 接口规范经历了多个草案版本，首先是 DOM 事件第 2 版规范，由于未达成共识而被放弃，然后是 DOM 事件第 3 版规范。这导致了非标准初始化方法的实施，早期的 DOM 事件第 2 版，{{domxref("KeyboardEvent.initKeyEvent()")}} 被 Gecko 浏览器采用，而早期的 DOM 事件第 3 版，{{domxref("KeyboardEvent.initKeyboardEvent()")}} 则被其他浏览器采用。这两个版本都已被构造函数的现代用法所取代：{{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}。
 
 ## 浏览器兼容性
 
