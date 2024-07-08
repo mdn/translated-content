@@ -22,9 +22,9 @@ requestAnimationFrame(callback)
 ### 参数
 
 - `callback`
-  - : 该函数会在下一次重绘更新你的动画时被调用到。这个回调函数只会传递一个参数：一个 {{domxref("DOMHighResTimeStamp")}} 参数，用于表示上一帧渲染的结束时间（基于 [time origin](/zh-CN/docs/Web/API/Performance/timeOrigin) 的毫秒数）
-  - : 时间戳是一个以毫秒为单位的十进制数字，最小精度为 1 毫秒。对于 `Window` 对象（非 `workers`）来说，它等同于 {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}}。此时间戳在同一代理上（所有同源的`窗口`，更重要的是同源的 `iframes`）运行的所有窗口之间共享——它允许在多个`requestAnimationFrame`回调函数中执行同步动画。此时间戳值也近似于在回调函数开始时调用 {{domxref('performance.now()')}}，但它们永远都不会是相同的值。
-  - : 当多个回调函数队列在同一帧中被 `requestAnimationFrame()` 所激发时，它们都会收到相同的时间戳，即便时间会在计算先前的回调函数中流逝。
+  - 该函数会在下一次重绘更新你的动画时被调用到。这个回调函数只会传递一个参数：一个 {{domxref("DOMHighResTimeStamp")}} 参数，用于表示上一帧渲染的结束时间（基于 [time origin](/zh-CN/docs/Web/API/Performance/timeOrigin) 的毫秒数）
+  - 时间戳是一个以毫秒为单位的十进制数字，最小精度为 1 毫秒。对于 `Window` 对象（非 `workers`）来说，它等同于 {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}}。此时间戳在同一代理上（所有同源的`窗口`，更重要的是同源的 `iframes`）运行的所有窗口之间共享——它允许在多个`requestAnimationFrame`回调函数中执行同步动画。此时间戳值也近似于在回调函数开始时调用 {{domxref('performance.now()')}}，但它们永远都不会是相同的值。
+  - 当多个回调函数队列在同一帧中被 `requestAnimationFrame()` 所激发时，它们都会收到相同的时间戳，即便时间会在计算先前的回调函数中流逝。
 
 ### 返回值
 
