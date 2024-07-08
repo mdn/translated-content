@@ -17,7 +17,7 @@ l10n:
 
 > **备注：** 一个元素可以绑定多个事件处理器，甚至是对于完全相同的事件。尤其是相互独立的代码模块出于不同的目的附加事件处理器。（比如，一个网页同时有着广告模块和统计模块同时监听视频播放。）
 
-当有很多嵌套的元素，每个元素都有着自己的事件处理器，事件处理过程会变得非常复杂。尤其当一个父元素和子元素绑定完全相同的事件时，因为结构上的重叠，事件在技术层面发生在两个元素中，触发的顺序取决于每个处理器的[事件冒泡和事件捕获](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件冒泡及捕获)的设置。
+当有很多嵌套的元素，每个元素都有着自己的事件处理器，事件处理过程会变得非常复杂。尤其当一个父元素和子元素绑定完全相同的事件时，因为结构上的重叠，事件在技术层面发生在两个元素中，触发的顺序取决于每个处理器的[事件冒泡](/zh-CN/docs/Learn/JavaScript/Building_blocks/Event_bubbling)的设置。
 
 ## 基于 Event 的接口
 
@@ -138,5 +138,6 @@ l10n:
 ## 参见
 
 - 可用的事件类型：[Event 参考](/zh-CN/docs/Web/Events)
-- [Event 目标的比较](/zh-CN/docs/Web/API/Event/Comparison_of_Event_Targets)（目标 `target` vs 当前目标 `currentTarget` vs 相关目标 `relatedTarget` vs 初始目标 `originalTarget`）
+- [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
+- [事件冒泡](/zh-CN/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
 - [创建和触发自定义事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events)
