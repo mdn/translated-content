@@ -7,7 +7,7 @@ slug: Web/API/Window/requestAnimationFrame
 
 **`window.requestAnimationFrame()`** 方法会告诉浏览器你希望执行一个动画。它要求浏览器在下一次重绘之前，调用用户提供的回调函数。
 
-对回调函数的调用频率通常是与显示器的刷新率相匹配。虽然75hz、120hz和144hz也被广泛使用，但是最常见的刷新率还是60hz（每秒 60 个周期/帧）。为了提高性能和电池寿命，大多数浏览器都会暂停在后台选项卡或者隐藏的 {{ HTMLElement("iframe") }} 中运行的 `requestAnimationFrame()` 
+对回调函数的调用频率通常是与显示器的刷新率相匹配。虽然75hz、120hz和144hz也被广泛使用，但是最常见的刷新率还是 60hz（每秒 60 个周期/帧）。为了提高性能和电池寿命，大多数浏览器都会暂停在后台选项卡或者隐藏的 {{ HTMLElement("iframe") }} 中运行的 `requestAnimationFrame()`
 
 > **备注：** 若你想在浏览器下次重绘之前继续更新下一帧动画，那么回调函数自身必须再次调用 `requestAnimationFrame()`。`requestAnimationFrame()` 是一次性的。
 
@@ -65,7 +65,7 @@ function step(timestamp) {
 window.requestAnimationFrame(step);
 ```
 
-以下三个示例说明了设置时间零点的不同方法，时间零点是计算每帧中动画进度的起点。如果您想同步到外部时钟，例如 {{domxref("BaseAudioContext.currentTime")}}，可用的最高精度是单帧的持续时间，16.67ms @60hz。回调函数的时间戳参数表示上一帧的结束，因此最快将在下一帧中呈现新计算的值。
+以下三个示例说明了设置时间零点的不同方法，时间零点是计算每帧中动画进度的起点。如果你想同步到外部时钟，例如 {{domxref("BaseAudioContext.currentTime")}}，可用的最高精度是单帧的持续时间，16.67ms @60hz。回调函数的时间戳参数表示上一帧的结束，因此最快将在下一帧中呈现新计算的值。
 
 此示例会等待第一个回调函数执行时设置 `zero`。如果你的动画在开始时跳转到新值，则必须以这种方式构建。如果你无需与任意外部同步，例如音频，则建议使用此方法，因为某些浏览器对 `requestAnimationFrame()` 的初始调用和对回调函数的第一次调用，会存在多帧延迟。
 
@@ -85,7 +85,7 @@ function animate(timeStamp) {
 }
 ```
 
-此示例在第一次调用 `requestAnimationFrame` 前使用 {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}} 设置了一个零值。`document.timeline.currentTime` 与 `timeStamp` 参数对齐，因此零值等价于第0帧的时间戳。
+此示例在第一次调用 `requestAnimationFrame` 前使用 {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}} 设置了一个零值。`document.timeline.currentTime` 与 `timeStamp` 参数对齐，因此零值等价于第 0 帧的时间戳。
 
 ```js
 const zero = document.timeline.currentTime;
