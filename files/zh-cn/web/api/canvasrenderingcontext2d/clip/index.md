@@ -7,15 +7,15 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.clip()`** 方法用于将当前创建的路径设置为当前剪切路径。前面的裁剪区域（如果有的话）将与当前路径或给定路径相交，从而创建新的裁剪区域。
+Canvas 2D API 的 **`CanvasRenderingContext2D.clip()`** 方法用于将当前或给定路径转换为当前裁剪区域。前面的裁剪区域（如果有的话）将与当前路径或给定路径相交，从而创建新的裁剪区域。
 
 在下面的图像中，红色轮廓表示一个星形的裁剪区域。只有在裁剪区域内的棋盘格模式的部分才会被绘制出来。
 
 ![星形裁剪区域](canvas_clipping_path.png)
 
-> **备注：** 请注意，裁剪区域仅由添加到路径中的形状构成。它不适用于直接绘制到画布上的形状基元，比如 {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}。相反，你需要使用 {{domxref("CanvasRenderingContext2D.rect()","rect()")}} 在调用 `clip()` 前将一个矩形形状添加到路径中。
+> **备注：** 请注意，裁剪区域仅由添加到路径中的形状构成。它不适用于直接绘制到画布上的形状基元，比如 {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}。相反，在调用 `clip()` 前，你需要使用 {{domxref("CanvasRenderingContext2D.rect()","rect()")}} 将一个矩形形状添加到路径中。
 
-> **备注：** 裁剪路径不能直接撤销。在调用 `clip()` 前，你必须使用 {{domxref("CanvasRenderingContext2D/save", "save()")}} 保存画布状态，并在在裁剪区域完成绘制后使用 {{domxref("CanvasRenderingContext2D/restore", "restore()")}} 还原。
+> **备注：** 裁剪路径不能直接撤销。在调用 `clip()` 前，你必须使用 {{domxref("CanvasRenderingContext2D/save", "save()")}} 保存画布状态，并在裁剪区域完成绘制后使用 {{domxref("CanvasRenderingContext2D/restore", "restore()")}} 还原。
 
 ## 语法
 
@@ -28,20 +28,18 @@ clip(path, fillRule)
 
 ### 参数
 
-![](canvas_clipping_path.png)
-
 - `fillRule`
 
-  - : 这个算法判断一个点是在路径内还是在路径外。
+  - : 这个算法判断一个点是在裁剪区域内还是在此之外。
     允许的值：
 
     - `nonzero`
-      - : [非零环绕原则](https://en.wikipedia.org/wiki/Nonzero-rule)，默认的原则。
+      - : [非零环绕规则](https://en.wikipedia.org/wiki/Nonzero-rule)，默认的规则。
     - `evenodd`
-      - : [奇偶环绕原则](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)。
+      - : [非零环绕规则](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)。
 
 - `path`
-  - : 需要剪切的 {{domxref("Path2D")}} 路径。
+  - : 需要用作裁剪区域的 {{domxref("Path2D")}} 路径。
 
 ### 返回值
 
@@ -51,7 +49,7 @@ clip(path, fillRule)
 
 ### 一个简单的裁剪区域
 
-这个例子使用`clip()`方法根据圆弧的形状创建一个裁剪区域。然后绘制了两个矩形；只有在裁剪区域内的部分才会被渲染。
+此示例使用 `clip()` 方法根据圆弧的形状创建一个裁剪区域。然后绘制了两个矩形；只有在裁剪区域内的部分才会被渲染。
 
 #### HTML
 
@@ -61,7 +59,7 @@ clip(path, fillRule)
 
 #### JavaScript
 
-裁剪区域是一个以中心点 (100, 75) 和半径 50 的完整圆。
+裁剪区域是一个以 (100, 75) 为中心点、以 50 为半径的完整圆。
 
 ```js
 const canvas = document.getElementById("canvas");
@@ -85,7 +83,7 @@ ctx.fillRect(0, 0, 100, 100);
 
 ### 指定路径和填充规则
 
-这个例子中，将两个矩形保存到一个 Path2D 对象中，然后使用 `clip()` 方法将其作为当前的裁剪区域。使用 `"evenodd"` 规则在裁剪矩形交集处创建一个孔洞；默认情况下（使用 `"nonzero"` 规则），不会有孔洞。
+此示例将两个矩形保存到一个 Path2D 对象中，然后使用 `clip()` 方法将其作为当前的裁剪区域。使用 `"evenodd"` 规则在裁剪矩形交集处创建一个孔洞；默认情况下（使用 `"nonzero"` 规则），不会有孔洞。
 
 #### HTML
 
@@ -112,11 +110,11 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 #### 结果
 
-{{ EmbedLiveSample('Specifying_a_path_and_a_fillRule', 700, 180) }}
+{{ EmbedLiveSample('指定路径和填充规则', 700, 180) }}
 
 ### 创建复杂的裁剪区域
 
-这个例子使用了两个路径，一个矩形和一个正方形，来创建一个复杂的裁剪区域。`clip()` 方法被调用两次，第一次使用 `Path2D` 对象将当前裁剪区域设置为圆形，然后再次调用以将圆形裁剪区域与一个正方形相交。最终的裁剪区域是圆形和正方形的交集形状。
+此示例使用了两个路径，一个矩形和一个正方形，来创建一个复杂的裁剪区域。`clip()` 方法被调用两次，第一次使用 `Path2D` 对象将当前裁剪区域设置为圆形，然后再次调用以将圆形裁剪区域与一个正方形相交。最终的裁剪区域是圆形和正方形的交集形状。
 
 #### HTML
 
