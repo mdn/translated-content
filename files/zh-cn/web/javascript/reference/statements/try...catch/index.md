@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`try...catch`** 语句由一个 `try` 块和 `catch` 块、`finally` 块或两者组成。首先执行 `try` 块中的代码，如果它抛出异常，则将执行 `catch` 块中的代码。`finally` 块中的代码将在控制流退出整个结构之前始终被执行。
+**`try...catch`** 语句由一个 `try` 块和一个 `catch` 块或`finally` 块组成，或者两者皆有。首先执行 `try` 块中的代码，如果它抛出异常，则将执行 `catch` 块中的代码。`finally` 块中的代码将在控制流退出整个结构之前始终被执行。
 
 {{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
 
