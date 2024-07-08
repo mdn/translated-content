@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("TypedArray")}} 인스턴스의 **`at()`** 메서드는 정숫값을 받아 해당 인덱스에 있는 항목을 반환하며, 양수와 음수를 사용할 수 있습니다. 음의 정수는 배열의 마지막 항목부터 거슬러 셉니다. 이 메서드는 {{jsxref("Array.prototype.at()")}}와 같은 알고리즘을 가집니다.
+{{jsxref("TypedArray")}} 인스턴스의 **`at()`** 메서드는 정수 값을 받아 해당 인덱스에 있는 항목을 반환하며, 양의 정수와 음의 정수를 모두 허용합니다. 음의 정수는 배열의 마지막 항목에서부터 역순으로 셉니다. 이 메서드는 {{jsxref("Array.prototype.at()")}}와 동일한 알고리즘을 가집니다.
 
 {{EmbedInteractiveExample("pages/js/typedarray-at.html")}}
 
@@ -20,7 +20,7 @@ at(index)
 ### 매개변수
 
 - `index`
-  - : 반환할 배열 요소의 0부터 시작하는 인덱스로, [정수로 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#정수_변환)됩니다. 음수 인덱스는 형식화 배열 끝부터 거슬러 셉니다. `index < 0`인 경우, `index + array.length`로 접근합니다.
+  - : 반환할 배열 요소의 0부터 시작하는 인덱스로, [정수로 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#정수_변환)됩니다. 음수 인덱스는 형식화 배열 끝부터 역순으로 셉니다. `index < 0`인 경우, `index + array.length`로 접근합니다.
 
 ### 반환 값
 
@@ -50,9 +50,7 @@ console.log(lastItem); // 18
 
 ### 비교 메서드
 
-Here we compare different ways to select the penultimate (last but one) item of a {{jsxref("TypedArray")}}. Whilst all below methods are valid, it highlights the succinctness and readability of the `at()` method.
-
-아래 예제에서는 {{jsxref("TypedArray")}}의 뒤에서 두 번째 요소를 가져오는 서로 다른 방법을 비교합니다. 모든 방법이 유효하긴 하지만 `at()` 메서드의 간결성과 가독성을 확인할 수 있습니다.
+아래 예제에서는 {{jsxref("TypedArray")}}의 뒤에서 두 번째 요소를 선택하는 다양한 방법을 비교합니다. 아래의 모든 방법이 유효하지만, `at()` 메서드의 간결성과 가독성을 강조합니다.
 
 ```js
 // 몇 가지 값이 있는 형식화 배열
