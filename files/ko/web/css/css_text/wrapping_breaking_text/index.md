@@ -1,5 +1,5 @@
 ---
-title: Wrapping and breaking text
+title: 텍스트의 줄 바꾸기 및 끊기
 slug: Web/CSS/CSS_text/Wrapping_breaking_text
 l10n:
   sourceCommit: 5637472cb47c01ed1fda8bcad41a1244b239b226
@@ -62,10 +62,9 @@ CSS 는 추가적인 하이폰 제어도 제공합니다. {{cssxref("hyphenate-l
 
 ## `<wbr>` 요소
 
-If you know where you want a long string to break, then it is also possible to insert the HTML {{HTMLElement("wbr")}} element. This can be useful in cases such as displaying a long URL on a page. You can then add the property in order to break the string in sensible places that will make it easier to read.
 긴 문자열을 어디서 끊을지 알고 있다면 HTML {{HTMLElement("wbr")}} 요소를 삽입하는 것 또한 가능합니다. 이것은 긴 URL 을 페이지에 표시하는 경우에 유용하게 사용됩니다. 읽기 쉬운 적절한 위치에서 문자열을 끊고자 할 때 이 속성을 추가합니다.
 
-다음 예제에서는 {{HTMLElement("wbr")}} 의 위치에서 텍스트가 끊깁니다.
+다음 예제에서는 {{HTMLElement("wbr")}}의 위치에서 텍스트가 끊깁니다.
 
 {{EmbedGHLiveSample("css-examples/css-text/wbr.html", '100%', 460)}}
 
