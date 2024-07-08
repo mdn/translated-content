@@ -23,7 +23,7 @@ new Gyroscope(options)
     - `frequency` {{optional_inline}}
       - : 每秒采样所需的次数，即每秒调用 {{domxref('sensor.reading_event', 'reading')}} 事件的次数。可使用整数或者小数，小数用于小于一秒的频率。实际读取频率取决于设备硬件，因此可能小于所请求的。
     - `referenceFrame` {{optional_inline}}
-      - : `“device”` 或 `“screen”`，默认值是 `“device”`。
+      - : `'device'` 或 `'screen'`，默认值是 `'device'`。
 
 ### 异常
 
