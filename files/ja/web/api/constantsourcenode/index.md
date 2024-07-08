@@ -2,7 +2,7 @@
 title: ConstantSourceNode
 slug: Web/API/ConstantSourceNode
 l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+  sourceCommit: e811fc31b67e145c5882e8e3f128d1938c627a51
 ---
 
 {{APIRef("Web Audio API")}}
@@ -29,7 +29,7 @@ l10n:
 ## コンストラクター
 
 - {{domxref("ConstantSourceNode.ConstantSourceNode", "ConstantSourceNode()")}}
-  - : 新しい `ConstantSourceNode` インスタンスを作成して返します。オプションとして、オブジェクトのプロパティの初期値を確立するためのオブジェクトを指定します。別の方法として、{{domxref("BaseAudioContext.createConstantSource()")}} ファクトリーメソッドを使用することができます。[AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+  - : 新しい `ConstantSourceNode` インスタンスを作成して返します。オプションとして、オブジェクトのプロパティの初期値を確立するためのオブジェクトを指定します。別の方法として、{{domxref("BaseAudioContext.createConstantSource()")}} ファクトリーメソッドを使用することができます。[AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
 
 ## インスタンスプロパティ
 
