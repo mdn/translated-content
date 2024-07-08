@@ -89,13 +89,13 @@ l10n:
   </tbody>
 </table>
 
-## 属性
+## 实例属性
 
 _此接口从其父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承属性。_
 
 - {{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}
 
-  - : 如果按键事件发生时 <kbd>Alt</kbd>（macOS 中为 <kbd>Option</kbd> 或 <kbd>⌥</kbd>）键处于活动状态，则返回布尔值 `true`。
+  - : 返回一个布尔值，如果按键事件发生时 <kbd>Alt</kbd>（macOS 中为 <kbd>Option</kbd> 或 <kbd>⌥</kbd>）键处于活动状态，则该值为 `true`。
 
 - {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
 
@@ -105,23 +105,23 @@ _此接口从其父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
 
-  - : 返回一个 {{jsxref("Boolean")}}，如果按键事件发生时 <kbd>Ctrl</kbd> 键被按下，则该值为 `true` 。
+  - : 返回一个布尔值，如果按键事件发生时 <kbd>Ctrl</kbd> 键被按下，则该值为 `true` 。
 
 - {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
-  - : 如果事件在 `compositionstart` 之后和 `compositionend` 之前触发，则返回一个布尔值，该布尔值为 `true`。
+  - : 返回一个布尔值，如果事件在 `compositionstart` 之后和 `compositionend` 之前触发，则该值为 `true`。
 - {{domxref("KeyboardEvent.key")}} {{Readonlyinline}}
   - : 返回一个字符串，表示事件所代表的键的键值。
 - {{domxref("KeyboardEvent.location")}} {{Readonlyinline}}
   - : 返回代表键盘或其他输入设备上按键位置的数字。上面的[键盘定位](#键盘定位)中列出了标识位置的常量。
 - {{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}
 
-  - : 如果键事件发生时 <kbd>Meta</kbd>（在 Mac 键盘上为 <kbd>⌘ Command</kbd> ；在 Windows 键盘上为 Windows 键（<kbd>⊞</kbd>））键处于活动状态，则返回布尔值 `true`。
+  - : 返回一个布尔值，如果键事件发生时 <kbd>Meta</kbd>（在 Mac 键盘上为 <kbd>⌘ Command</kbd> ；在 Windows 键盘上为 Windows 键（<kbd>⊞</kbd>））键处于活动状态，则该值为 `true`。
 
 - {{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}
-  - : 返回一个布尔值，如果按键被按住，会自动重复，则布尔值为 `true`。
+  - : 返回一个布尔值，如果按键被按住，会自动重复，则该值为 `true`。
 - {{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}
 
-  - : 如果按键事件发生时 <kbd>Shift</kbd> 键处于活动状态，则返回布尔值 `true`。
+  - : 返回一个布尔值，如果按键事件发生时 <kbd>Shift</kbd> 键处于活动状态，则该值为 `true`。
 
 ### 过时属性
 
@@ -136,7 +136,7 @@ _此接口从其父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承
 - {{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : 此属性为非标准属性，已被弃用；改用 {{domxref("KeyboardEvent.key")}}。它属于旧版 DOM 第 3 版规范的事件。
 
-## 方法
+## 实例方法
 
 _此接口也从父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承方法。_
 
