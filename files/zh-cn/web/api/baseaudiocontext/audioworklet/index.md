@@ -15,7 +15,7 @@ l10n:
 
 ## 示例
 
-_如果需要完整的用户自定义音频处理示例，可以查看{{domxref("AudioWorkletNode")}}演示。_
+_参见 {{domxref("AudioWorkletNode")}} 页面，以获取完整的用户自定义音频处理示例。_
 
 ## 规范
 
