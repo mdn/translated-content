@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Audio API") }}{{securecontext_header}}
 
-{{domxref("BaseAudioContext")}} 接口的只读属性`audioWorklet`返回一个{{domxref("AudioWorklet")}}实例，该实例可以用于添加实现用户自定义的音频加工{{domxref("AudioWorkletProcessor")}}的派生类。
+{{domxref("BaseAudioContext")}} 接口的只读属性 `audioWorklet` 返回一个 {{domxref("AudioWorklet")}} 实例，该实例可用于添加实现自定义音频处理的 {{domxref("AudioWorkletProcessor")}} 的派生类。
 
 ## 值
 
