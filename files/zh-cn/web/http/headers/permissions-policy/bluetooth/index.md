@@ -32,7 +32,7 @@ Permissions-Policy: bluetooth=<allowlist>;
 
 ### 通用示例
 
-SecureCorp Inc. 希望在所有浏览上下文中禁用 Web Bluetooth API，除了其自身的来源和 `https://example.com` 的来源。它可以通过发送以下 HTTP 响应头来定义权限策略：
+SecureCorp Inc. 希望在所有浏览上下文中禁用 Web Bluetooth API，除了其自身的来源和来源 `https://example.com`。它可以通过发送以下 HTTP 响应标头来定义权限策略：
 
 ```http
 Permissions-Policy: bluetooth=(self "https://example.com")
@@ -40,13 +40,13 @@ Permissions-Policy: bluetooth=(self "https://example.com")
 
 ### 带有 \<iframe> 元素
 
-FastCorp Inc. 希望为除了特定的 `<iframe>` 的所有跨来源的子框架禁用 `bluetooth`。它可以通过发送以下 HTTP 响应头来定义权限策略：
+FastCorp Inc. 希望为除了特定的 `<iframe>` 的所有跨来源的子框架禁用 `bluetooth`。它可以通过发送以下 HTTP 响应标头来定义权限策略：
 
 ```http
 Permissions-Policy: bluetooth=(self https://other.com/blue)
 ```
 
-然后在 `<iframe>` 元素上包含一个 {{HTMLElement('iframe','allow','#Attributes')}} 属性：
+然后在 `<iframe>` 元素上包含一个 {{HTMLElement('iframe','allow','#属性')}} 属性：
 
 ```html
 <iframe src="https://other.com/blue" allow="bluetooth"></iframe>
