@@ -903,14 +903,14 @@
 /ja/docs/DOM/window.alert	/ja/docs/Web/API/Window/alert
 /ja/docs/DOM/window.alert-redirect-1	/ja/docs/Web/API/Window/alert
 /ja/docs/DOM/window.arguments	/ja/docs/Web/API/Window
-/ja/docs/DOM/window.atob	/ja/docs/Web/API/atob
-/ja/docs/DOM/window.atob-redirect-1	/ja/docs/Web/API/atob
+/ja/docs/DOM/window.atob	/ja/docs/Web/API/Window/atob
+/ja/docs/DOM/window.atob-redirect-1	/ja/docs/Web/API/Window/atob
 /ja/docs/DOM/window.back	/ja/docs/Web/API/Window/back
 /ja/docs/DOM/window.back-redirect-1	/ja/docs/Web/API/Window/back
 /ja/docs/DOM/window.blur	/ja/docs/Web/API/Window/blur
 /ja/docs/DOM/window.blur-redirect-1	/ja/docs/Web/API/Window/blur
-/ja/docs/DOM/window.btoa	/ja/docs/Web/API/btoa
-/ja/docs/DOM/window.btoa-redirect-1	/ja/docs/Web/API/btoa
+/ja/docs/DOM/window.btoa	/ja/docs/Web/API/Window/btoa
+/ja/docs/DOM/window.btoa-redirect-1	/ja/docs/Web/API/Window/btoa
 /ja/docs/DOM/window.cancelAnimationFrame	/ja/docs/Web/API/Window/cancelAnimationFrame
 /ja/docs/DOM/window.captureEvents	/ja/docs/Web/API/Window/captureEvents
 /ja/docs/DOM/window.clearInterval	/ja/docs/Web/API/clearInterval
@@ -1129,10 +1129,10 @@
 /ja/docs/DOM:selection	/ja/docs/Web/API/Selection
 /ja/docs/DOM:window	/ja/docs/Web/API/Window
 /ja/docs/DOM:window.alert	/ja/docs/Web/API/Window/alert
-/ja/docs/DOM:window.atob	/ja/docs/Web/API/atob
+/ja/docs/DOM:window.atob	/ja/docs/Web/API/Window/atob
 /ja/docs/DOM:window.back	/ja/docs/Web/API/Window/back
 /ja/docs/DOM:window.blur	/ja/docs/Web/API/Window/blur
-/ja/docs/DOM:window.btoa	/ja/docs/Web/API/btoa
+/ja/docs/DOM:window.btoa	/ja/docs/Web/API/Window/btoa
 /ja/docs/DOM:window.captureEvents	/ja/docs/Web/API/Window/captureEvents
 /ja/docs/DOM:window.clearInterval	/ja/docs/Web/API/clearInterval
 /ja/docs/DOM:window.clearTimeout	/ja/docs/Web/API/clearTimeout
@@ -1338,15 +1338,18 @@
 /ja/docs/Glossary/First_interactive	/ja/docs/Glossary/First_CPU_idle
 /ja/docs/Glossary/Global_attribute	/ja/docs/Web/HTML/Global_attributes
 /ja/docs/Glossary/Grid_Rows	/ja/docs/Glossary/Grid_Row
+/ja/docs/Glossary/Guard	/ja/docs/Web/API/Fetch_API/Using_Fetch
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
 /ja/docs/Glossary/I18N	/ja/docs/Glossary/Internationalization
 /ja/docs/Glossary/Index	/ja/docs/Glossary
 /ja/docs/Glossary/Internationalization_and_localization	/ja/docs/Glossary/Internationalization
 /ja/docs/Glossary/POP3	/ja/docs/Glossary/POP
 /ja/docs/Glossary/Reference	/ja/docs/Glossary/Object_reference
+/ja/docs/Glossary/Rendering_engine	/ja/docs/Glossary/Engine/Rendering
 /ja/docs/Glossary/Round_Trip_Time_(RTT)	/ja/docs/Glossary/Round_Trip_Time
 /ja/docs/Glossary/SSL_Glossary	/ja/docs/Glossary/SSL
 /ja/docs/Glossary/Scrollport	/ja/docs/Glossary/Scroll_container
+/ja/docs/Glossary/Second-level_Domain	/ja/docs/Glossary/SLD
 /ja/docs/Glossary/Signature/セキュリティ	/ja/docs/Glossary/Signature/Security
 /ja/docs/Glossary/Signature/関数	/ja/docs/Glossary/Signature/Function
 /ja/docs/Glossary/Simple_header	/ja/docs/Glossary/CORS-safelisted_request_header
@@ -1557,7 +1560,7 @@
 /ja/docs/HTTP/X-Frame-Options	/ja/docs/Web/HTTP/Headers/X-Frame-Options
 /ja/docs/HTTP_Pipelining_FAQ	/ja/docs/Web/HTTP/Connection_management_in_HTTP_1.x
 /ja/docs/HTTP_access_control	/ja/docs/Web/HTTP/CORS
-/ja/docs/How_to_create_a_DOM_tree	/ja/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree
+/ja/docs/How_to_create_a_DOM_tree	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /ja/docs/IndexedDB	/ja/docs/Web/API/IndexedDB_API
 /ja/docs/Installing_Extensions_and_Themes_From_Web_Pages	/ja/docs/orphaned/Installing_Extensions_and_Themes_From_Web_Pages
 /ja/docs/Introducing_Content_Security_Policy	/ja/docs/Web/HTTP/CSP
@@ -2374,7 +2377,6 @@
 /ja/docs/Security/CSP_(Content_Security_Policy)	/ja/docs/Web/HTTP/CSP
 /ja/docs/Security/HTTP_Strict_Transport_Security	/ja/docs/Web/HTTP/Headers/Strict-Transport-Security
 /ja/docs/Security/混在コンテンツ	/ja/docs/Web/Security/Mixed_content
-/ja/docs/Security/混在コンテンツ/How_to_fix_website_with_mixed_content	/ja/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
 /ja/docs/Server-sent_events	/ja/docs/Web/API/Server-sent_events
 /ja/docs/Server-sent_events/Using_server-sent_events	/ja/docs/Web/API/Server-sent_events/Using_server-sent_events
 /ja/docs/Setting_up_extension_development_environment	/ja/docs/orphaned/Setting_up_extension_development_environment
@@ -2665,7 +2667,7 @@
 /ja/docs/Web/API/DOMRect/fromRect	/ja/docs/Web/API/DOMRect/fromRect_static
 /ja/docs/Web/API/DOMRectReadOnly/fromRect	/ja/docs/Web/API/DOMRectReadOnly/fromRect_static
 /ja/docs/Web/API/DOMString	/ja/docs/Glossary/String
-/ja/docs/Web/API/DOMString/Binary	/ja/docs/Web/API/btoa
+/ja/docs/Web/API/DOMString/Binary	/ja/docs/Web/API/Window/btoa
 /ja/docs/Web/API/DOMTimeStamp	/ja/docs/Glossary/Unix_time
 /ja/docs/Web/API/DeviceAcceleration	/ja/docs/Web/API/DeviceMotionEventAcceleration
 /ja/docs/Web/API/Document.domConfig	/ja/docs/Web/API/Document
@@ -2727,6 +2729,7 @@
 /ja/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/ja/docs/Web/API/Document/pointerLockElement
 /ja/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ja/docs/Web/API/Document/styleSheets
 /ja/docs/Web/API/Document_Object_Model/Events	/ja/docs/orphaned/Web/API/Document_Object_Model/Events
+/ja/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /ja/docs/Web/API/Element.contentEditable	/ja/docs/Web/API/HTMLElement/contentEditable
@@ -2745,6 +2748,7 @@
 /ja/docs/Web/API/Element/pointerlockerror_event	/ja/docs/Web/API/Document/pointerlockerror_event
 /ja/docs/Web/API/Element/select_event	/ja/docs/Web/API/HTMLInputElement/select_event
 /ja/docs/Web/API/Element/show_event	/ja/docs/orphaned/Web/API/Element/show_event
+/ja/docs/Web/API/Event/Comparison_of_Event_Targets	/ja/docs/Learn/JavaScript/Building_blocks/Event_bubbling
 /ja/docs/Web/API/Event/button	/ja/docs/Web/API/MouseEvent/button
 /ja/docs/Web/API/Event/createEvent	/ja/docs/Web/API/Document/createEvent
 /ja/docs/Web/API/EventHandler	/ja/docs/Web/Events/Event_handlers
@@ -2757,6 +2761,8 @@
 /ja/docs/Web/API/EventTarget.removeEventListener	/ja/docs/Web/API/EventTarget/removeEventListener
 /ja/docs/Web/API/EventTarget/attachEvent	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/Web/API/FetchEvent_clone	/ja/docs/Web/API/FetchEvent
+/ja/docs/Web/API/Fetch_API/Basic_concepts	/ja/docs/Web/API/Fetch_API/Using_Fetch
+/ja/docs/Web/API/Fetch_API/Cross-global_fetch_usage	/ja/docs/Web/API/Fetch_API/Using_Fetch
 /ja/docs/Web/API/File.name	/ja/docs/Web/API/File/name
 /ja/docs/Web/API/File.size	/ja/docs/Web/API/Blob/size
 /ja/docs/Web/API/File.type	/ja/docs/Web/API/Blob/type
@@ -3191,8 +3197,8 @@
 /ja/docs/Web/API/Window/vrdisplaypointerunrestricted_event	/ja/docs/Web/API/Window
 /ja/docs/Web/API/WindowBase64	/ja/docs/Glossary/Base64
 /ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/ja/docs/Glossary/Base64
-/ja/docs/Web/API/WindowBase64/atob	/ja/docs/Web/API/atob
-/ja/docs/Web/API/WindowBase64/btoa	/ja/docs/Web/API/btoa
+/ja/docs/Web/API/WindowBase64/atob	/ja/docs/Web/API/Window/atob
+/ja/docs/Web/API/WindowBase64/btoa	/ja/docs/Web/API/Window/btoa
 /ja/docs/Web/API/WindowEventHandlers/onafterprint	/ja/docs/Web/API/Window/afterprint_event
 /ja/docs/Web/API/WindowEventHandlers/onbeforeprint	/ja/docs/Web/API/Window/beforeprint_event
 /ja/docs/Web/API/WindowEventHandlers/onbeforeunload	/ja/docs/Web/API/Window/beforeunload_event
@@ -3205,8 +3211,8 @@
 /ja/docs/Web/API/WindowEventHandlers/onstorage	/ja/docs/Web/API/Window/storage_event
 /ja/docs/Web/API/WindowEventHandlers/onunhandledrejection	/ja/docs/Web/API/Window/unhandledrejection_event
 /ja/docs/Web/API/WindowEventHandlers/onunload	/ja/docs/Web/API/Window/unload_event
-/ja/docs/Web/API/WindowOrWorkerGlobalScope/atob	/ja/docs/Web/API/atob
-/ja/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/ja/docs/Web/API/btoa
+/ja/docs/Web/API/WindowOrWorkerGlobalScope/atob	/ja/docs/Web/API/Window/atob
+/ja/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/ja/docs/Web/API/Window/btoa
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/ja/docs/Web/API/clearInterval
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/ja/docs/Web/API/clearTimeout
@@ -3224,7 +3230,6 @@
 /ja/docs/Web/API/WindowTimers/setTimeout	/ja/docs/Web/API/setTimeout
 /ja/docs/Web/API/Worker/onerror	/ja/docs/Web/API/Worker/error_event
 /ja/docs/Web/API/Worker/onmessageerror	/ja/docs/Web/API/Worker/messageerror_event
-/ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/WorkerGlobalScope/console	/ja/docs/conflicting/Web/API/console
 /ja/docs/Web/API/XMLDocument/async	/ja/docs/Web/API/XMLDocument
 /ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest	/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest
@@ -3245,6 +3250,8 @@
 /ja/docs/Web/API/XRTargetRayMode	/ja/docs/Web/API/XRInputSource/targetRayMode
 /ja/docs/Web/API/XSLTProcessor/Browser_Differences	/ja/docs/orphaned/Web/API/XSLTProcessor/Browser_Differences
 /ja/docs/Web/API/XSLTProcessor/Resources	/ja/docs/Web/API/XSLTProcessor
+/ja/docs/Web/API/atob	/ja/docs/Web/API/Window/atob
+/ja/docs/Web/API/btoa	/ja/docs/Web/API/Window/btoa
 /ja/docs/Web/API/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/console.dir	/ja/docs/Web/API/console/dir_static
 /ja/docs/Web/API/console.log	/ja/docs/Web/API/console/log_static
@@ -3373,10 +3380,10 @@
 /ja/docs/Web/API/window.URL.revokeObjectURL	/ja/docs/Web/API/URL/revokeObjectURL_static
 /ja/docs/Web/API/window.alert	/ja/docs/Web/API/Window/alert
 /ja/docs/Web/API/window.arguments	/ja/docs/Web/API/Window
-/ja/docs/Web/API/window.atob	/ja/docs/Web/API/atob
+/ja/docs/Web/API/window.atob	/ja/docs/Web/API/Window/atob
 /ja/docs/Web/API/window.back	/ja/docs/Web/API/Window/back
 /ja/docs/Web/API/window.blur	/ja/docs/Web/API/Window/blur
-/ja/docs/Web/API/window.btoa	/ja/docs/Web/API/btoa
+/ja/docs/Web/API/window.btoa	/ja/docs/Web/API/Window/btoa
 /ja/docs/Web/API/window.cancelAnimationFrame	/ja/docs/Web/API/Window/cancelAnimationFrame
 /ja/docs/Web/API/window.captureEvents	/ja/docs/Web/API/Window/captureEvents
 /ja/docs/Web/API/window.clearInterval	/ja/docs/Web/API/clearInterval
@@ -3489,7 +3496,7 @@
 /ja/docs/Web/API/window.unescape	/ja/docs/Web/JavaScript/Reference/Global_Objects/unescape
 /ja/docs/Web/API/window.updateCommands	/ja/docs/Web/API/Window/updateCommands
 /ja/docs/Web/API/window.window	/ja/docs/Web/API/Window/window
-/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/ja/docs/conflicting/Web/Accessibility/ARIA/Roles/alert_role
+/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/ja/docs/Web/Accessibility/ARIA/Roles/alert_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/ja/docs/Web/Accessibility/ARIA/Roles/alertdialog_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/ja/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role	/ja/docs/Web/Accessibility/ARIA/Roles/button_role
@@ -3713,6 +3720,7 @@
 /ja/docs/Web/CSS/Using_media_queries_from_code	/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /ja/docs/Web/CSS/Using_multi-column_layouts	/ja/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /ja/docs/Web/CSS/Using_multiple_backgrounds	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
+/ja/docs/Web/CSS/align-tracks	/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /ja/docs/Web/CSS/attr()	/ja/docs/Web/CSS/attr
 /ja/docs/Web/CSS/aural	/ja/docs/Web/CSS/@media/aural
 /ja/docs/Web/CSS/auto	/ja/docs/Web/CSS/width
@@ -3724,6 +3732,7 @@
 /ja/docs/Web/CSS/border-top-left-radius_|_-moz-border-radius-topleft	/ja/docs/Web/CSS/border-top-left-radius
 /ja/docs/Web/CSS/box_model	/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 /ja/docs/Web/CSS/calc()	/ja/docs/Web/CSS/calc
+/ja/docs/Web/CSS/calc-constant	/ja/docs/Web/CSS/calc-keyword
 /ja/docs/Web/CSS/clamp()	/ja/docs/Web/CSS/clamp
 /ja/docs/Web/CSS/color-adjust	/ja/docs/conflicting/Web/CSS/print-color-adjust
 /ja/docs/Web/CSS/color_value/hexadecimal_rgb	/ja/docs/orphaned/Web/CSS/color_value/hexadecimal_rgb
@@ -3763,6 +3772,7 @@
 /ja/docs/Web/CSS/image/image()	/ja/docs/Web/CSS/image/image
 /ja/docs/Web/CSS/image/image-set()	/ja/docs/Web/CSS/image/image-set
 /ja/docs/Web/CSS/image/paint()	/ja/docs/Web/CSS/image/paint
+/ja/docs/Web/CSS/justify-tracks	/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /ja/docs/Web/CSS/linear-gradient	/ja/docs/Web/CSS/gradient/linear-gradient
 /ja/docs/Web/CSS/linear-gradient()	/ja/docs/Web/CSS/gradient/linear-gradient
 /ja/docs/Web/CSS/margin-new	/ja/docs/Web/CSS/margin
@@ -3777,6 +3787,7 @@
 /ja/docs/Web/CSS/offset-inline-start	/ja/docs/Web/CSS/inset-inline-start
 /ja/docs/Web/CSS/paint	/ja/docs/Web/CSS/image/paint
 /ja/docs/Web/CSS/paint()	/ja/docs/Web/CSS/image/paint
+/ja/docs/Web/CSS/path	/ja/docs/Web/CSS/basic-shape/path
 /ja/docs/Web/CSS/radial-gradient	/ja/docs/Web/CSS/gradient/radial-gradient
 /ja/docs/Web/CSS/radial-gradient()	/ja/docs/Web/CSS/gradient/radial-gradient
 /ja/docs/Web/CSS/repeat()	/ja/docs/Web/CSS/repeat
@@ -4574,6 +4585,8 @@
 /ja/docs/Web/Security/HTTP_Strict_Transport_Security	/ja/docs/Web/HTTP/Headers/Strict-Transport-Security
 /ja/docs/Web/Security/Information_Security_Basics	/ja/docs/orphaned/Web/Security/Information_Security_Basics
 /ja/docs/Web/Security/Public_Key_Pinning	/ja/docs/conflicting/Web/Security/Certificate_Transparency
+/ja/docs/Web/Security/Securing_your_site	/ja/docs/Web/Security/Practical_implementation_guides
+/ja/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/ja/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /ja/docs/Web/WebGL	/ja/docs/Web/API/WebGL_API
 /ja/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/ja/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ja/docs/Web/WebGL/Animating_objects_with_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL

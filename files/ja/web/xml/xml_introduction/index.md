@@ -3,6 +3,8 @@ title: XML のイントロダクション
 slug: Web/XML/XML_introduction
 ---
 
+{{QuickLinksWithSubpages("/ja/docs/Web/XML")}}
+
 概要: この記事は、'eXtensible Markup Language' (XML、拡張可能マークアップ言語) を紹介し、その使い道について XML は HTML に似たマークアップ言語です。 これは Extensible Markup Language の略で、汎用マークアップ言語として [W3C が推奨する](https://www.w3.org/TR/xml/)仕様です。つまり、他のマークアップ言語とは異なり、XML は事前定義されていないため、独自のタグを定義する必要があります。この言語の主な目的は、インターネットなどのさまざまなシステム間でデータを共有することです。
 
 XML に基づいた言語はたくさんあります。[XHTML](/ja/docs/XHTML)、[MathML](/ja/docs/Web/MathML)、[SVG](/ja/docs/Web/SVG)、[XUL](/ja/docs/Mozilla/Tech/XUL)、[XBL](/ja/docs/XBL)、[RSS](/ja/docs/Archive/RSS)、[RDF](/ja/docs/RDF) などがあります。 あなた自身のものを作ることもできます。

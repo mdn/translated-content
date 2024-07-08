@@ -3,7 +3,7 @@ title: Element.addEventListener()
 slug: Web/API/EventTarget/addEventListener
 ---
 
-{{apiref("DOM Events")}}
+{{APIRef("DOM")}}
 
 `addEventListener()` registra uma única espera de evento em um único alvo. O [alvo do evento](/pt-BR/docs/DOM/EventTarget) pode ser um único [elemento](/pt-BR/docs/DOM/element) em um documento, o [`documento`](/pt-BR/docs/DOM/document) em si, uma [`janela`](/pt-BR/docs/DOM/window), ou um [`XMLHttpRequest`](/pt-BR/docs/DOM/XMLHttpRequest).
 

@@ -1,12 +1,14 @@
 ---
-title: self.crypto
+title: "Window: crypto プロパティ"
+short-title: crypto
 slug: Web/API/Window/crypto
-original_slug: Web/API/crypto_property
+l10n:
+  sourceCommit: e897fbfbefff7a7178af36a57944821dbc49318f
 ---
 
-{{APIRef}}
+{{APIRef("Web Crypto API")}}
 
-グローバルの **`crypto`** プロパティは読み取り専用で、グローバルオブジェクトに関連付けられた {{domxref("Crypto")}} オブジェクトを返します。このオブジェクトは、ウェブページが暗号に関連したサービスにアクセスできるようにします。
+**`crypto`** は {{domxref("Window")}} インターフェイスの読み取り専用プロパティで、グローバルオブジェクトに関連付けられた {{domxref("Crypto")}} オブジェクトを返します。このオブジェクトは、ウェブページが暗号に関連したサービスにアクセスできるようにします。
 
 このプロパティ自体は読み取り専用ですが、そのメソッドすべて（加えて子オブジェクトのメソッドと {{domxref("SubtleCrypto")}}）は読み取り専用ではありません。そのため{{glossary("polyfill", "ポリフィル")}}による攻撃には脆弱です。
 
@@ -23,15 +25,12 @@ original_slug: Web/API/crypto_property
 ### JavaScript
 
 ```js
-genRandomNumbers = function getRandomNumbers() {
+globalThis.genRandomNumbers = () => {
   const array = new Uint32Array(10);
-  crypto.getRandomValues(array);
+  globalThis.crypto.getRandomValues(array);
 
   const randText = document.getElementById("myRandText");
-  randText.textContent = "乱数: ";
-  for (let i = 0; i < array.length; i++) {
-    randText.textContent += array[i] + " ";
-  }
+  randText.textContent = `乱数: ${array.join(" ")}`;
 };
 ```
 
@@ -44,7 +43,7 @@ genRandomNumbers = function getRandomNumbers() {
 
 ### 結果
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## 仕様書
 
@@ -56,5 +55,5 @@ genRandomNumbers = function getRandomNumbers() {
 
 ## 関連情報
 
-- {{domxref("Window")}} グローバルオブジェクト
 - {{domxref("Crypto")}} インターフェイス
+- {{domxref("WorkerGlobalScope.crypto")}}

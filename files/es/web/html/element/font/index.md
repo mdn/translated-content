@@ -3,6 +3,8 @@ title: font
 slug: Web/HTML/Element/font
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - **font** -_fuente_ . Indica el tamaño, color, o fuente del texto que contiene.

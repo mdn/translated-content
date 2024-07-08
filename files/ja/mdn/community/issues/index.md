@@ -2,7 +2,7 @@
 title: 課題の作成と作業のガイドライン
 slug: MDN/Community/Issues
 l10n:
-  sourceCommit: a15be9cc426c19e3a1a510a49c4615d56ba4415d
+  sourceCommit: 94ef07a7b073c2663cbace0667bdb717a40bfa28
 ---
 
 {{MDNSidebar}}
@@ -81,7 +81,7 @@ MDN Web Docs のコンテンツやウェブサイトの外観に関するバグ�
 
 ### 説明
 
-CSS プロパティページのテンプレートは[こちら](https://developer.mozilla.org/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template)で定義されています。
+CSS プロパティページのテンプレートは[こちら](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template)で定義されています。
 この課題のタスクリストは、文書化された CSS プロパティをテンプレートと比較し、準拠のためにプロパティページの変更を追跡するために使用されます。
 
 ### チェックするページの一覧

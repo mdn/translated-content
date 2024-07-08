@@ -433,7 +433,7 @@
 /ko/docs/Web/API/DocumentOrShadowRoot/getSelection	/ko/docs/Web/API/Document/getSelection
 /ko/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ko/docs/Web/API/Document/styleSheets
 /ko/docs/Web/API/Document_Object_Model/Preface	/ko/docs/Web/API/Document_Object_Model
-/ko/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ko/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
+/ko/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ko/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /ko/docs/Web/API/Document_Object_Model/소개	/ko/docs/Web/API/Document_Object_Model/Introduction
 /ko/docs/Web/API/Document_Object_Model/예제	/ko/docs/Web/API/Document_Object_Model/Examples
 /ko/docs/Web/API/Element.clientHeight	/ko/docs/Web/API/Element/clientHeight
@@ -513,6 +513,8 @@
 /ko/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/ko/docs/Web/API/setTimeout
 /ko/docs/Web/API/WindowTimers/setTimeout	/ko/docs/Web/API/setTimeout
 /ko/docs/Web/API/XMLHttpRequest/timeout	/ko/docs/Web/API/XMLHttpRequest/timeout_event
+/ko/docs/Web/API/atob	/ko/docs/Web/API/Window/atob
+/ko/docs/Web/API/btoa	/ko/docs/Web/API/Window/btoa
 /ko/docs/Web/API/console/assert	/ko/docs/Web/API/console/assert_static
 /ko/docs/Web/API/console/clear	/ko/docs/Web/API/console/clear_static
 /ko/docs/Web/API/console/count	/ko/docs/Web/API/console/count_static
@@ -805,6 +807,9 @@
 /ko/docs/Web/SVG/Tutorial/기본_도형	/ko/docs/Web/SVG/Tutorial/Basic_Shapes
 /ko/docs/Web/SVG/Tutorial/시작하기	/ko/docs/Web/SVG/Tutorial/Getting_Started
 /ko/docs/Web/SVG/Tutorial/위치	/ko/docs/Web/SVG/Tutorial/Positions
+/ko/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content	/ko/docs/orphaned/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
+/ko/docs/Web/Security/Securing_your_site	/ko/docs/Web/Security/Practical_implementation_guides
+/ko/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/ko/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /ko/docs/Web/WebGL	/ko/docs/Web/API/WebGL_API
 /ko/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/ko/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ko/docs/Web/WebGL/Animating_objects_with_WebGL	/ko/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL

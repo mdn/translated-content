@@ -304,8 +304,8 @@ HTML также имеет функции, доступные для марки�
 
 Источники цитирования, которые вам потребуются:
 
-- <http://www.brainyquote.com/quotes/authors/c/confucius> — HTML-страница с цитатами Конфуция
-- <https://www.affirmationsforpositivethinking> — HTML-страница _The Need To Eliminate Negative Self Talk_.
+- `http://www.brainyquote.com/quotes/authors/c/confucius` — HTML-страница с цитатами Конфуция,
+- `http://example.com/affirmationsforpositivethinking` — HTML-страница _The Need To Eliminate Negative Self Talk_.
 
 Если вы ошиблись, то всегда можете начать снова, воспользовавшись кнопкой _Сбросить_. Если упражнение вызывает у вас затруднения, то нажмите кнопку _Показать решение_, чтобы увидеть правильный ответ.
 
@@ -385,7 +385,7 @@ solution.addEventListener("click", function () {
 });
 
 var htmlSolution =
-  '<p>Здравствуйте и добро пожаловать на мою страницу мотивации! <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Конфуций</cite></a> как-то сказал:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>Не важно, с какой скоростью ты движешься к своей цели, — главное не останавливаться.</p>\n</blockquote>\n\n<p>Мне также нравится концепция позитивного мышления, и я считаю, каждый ощущает <q cite="http://www.affirmationsforpositivethinking.com/index.htm">Необходимость избавления от негативного внутреннего разговора</q> (как сказано в зарубежной статье <a href="http://www.affirmationsforpositivethinking.com/index.htm"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
+  '<p>Здравствуйте и добро пожаловать на мою страницу мотивации! <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Конфуций</cite></a> как-то сказал:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>Не важно, с какой скоростью ты движешься к своей цели, — главное не останавливаться.</p>\n</blockquote>\n\n<p>Мне также нравится концепция позитивного мышления, и я считаю, каждый ощущает <q cite="http://example.com/affirmationsforpositivethinking">Необходимость избавления от негативного внутреннего разговора</q> (как сказано в зарубежной статье <a href="http://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
 var solutionEntry = htmlSolution;
 
 textarea.addEventListener("input", updateCode);

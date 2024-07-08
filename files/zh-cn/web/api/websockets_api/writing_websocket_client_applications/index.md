@@ -3,6 +3,8 @@ title: 编写 WebSocket 客户端应用
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 ---
 
+{{DefaultAPISidebar("WebSockets API")}}
+
 WebSocket 客户端应用程序使用 WebSocket API 通过 WebSocket 协议与 WebSocket 服务器通信。
 
 {{AvailableInWorkers}}

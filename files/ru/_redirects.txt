@@ -38,7 +38,7 @@
 /ru/docs/Core_JavaScript_1.5_Reference:Global_Objects:Boolean	/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ru/docs/DOM/DOM_Reference	/ru/docs/Web/API/Document_Object_Model
 /ru/docs/DOM/DOM_Reference/Examples	/ru/docs/Web/API/Document_Object_Model/Examples
-/ru/docs/DOM/DOM_Reference/Locating_DOM_elements_using_selectors	/ru/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
+/ru/docs/DOM/DOM_Reference/Locating_DOM_elements_using_selectors	/ru/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 /ru/docs/DOM/DOM_Reference/Введение	/ru/docs/Web/API/Document_Object_Model/Introduction
 /ru/docs/DOM/HTMLTableElement	/ru/docs/Web/API/HTMLTableElement
 /ru/docs/DOM/Node.compareDocumentPosition	/ru/docs/Web/API/Node/compareDocumentPosition
@@ -50,7 +50,7 @@
 /ru/docs/DOM/element.dispatchEvent	/ru/docs/Web/API/EventTarget/dispatchEvent
 /ru/docs/DOM/element.getAttribute	/ru/docs/Web/API/Element/getAttribute
 /ru/docs/DOM/table	/ru/docs/Web/API/HTMLTableElement
-/ru/docs/DOM/window.requestAnimationFrame	/ru/docs/Web/API/window/requestAnimationFrame
+/ru/docs/DOM/window.requestAnimationFrame	/ru/docs/Web/API/Window/requestAnimationFrame
 /ru/docs/DOM:document.createElement	/ru/docs/Web/API/Document/createElement
 /ru/docs/DOM:table	/ru/docs/Web/API/HTMLTableElement
 /ru/docs/Firefox_3.5_для_разработчика	/ru/docs/Mozilla/Firefox/Releases/3.5
@@ -395,7 +395,9 @@
 /ru/docs/Web/API/Element/accessKey	/ru/docs/Web/API/HTMLElement/accessKey
 /ru/docs/Web/API/Element/createShadowRoot	/ru/docs/Web/API/Element/shadowRoot
 /ru/docs/Web/API/Element/error_event	/ru/docs/Web/API/HTMLElement/error_event
+/ru/docs/Web/API/Event/Comparison_of_Event_Targets	/ru/docs/Learn/JavaScript/Building_blocks/Event_bubbling
 /ru/docs/Web/API/EventTarget.addEventListener	/ru/docs/Web/API/EventTarget/addEventListener
+/ru/docs/Web/API/Fetch_API/Cross-global_fetch_usage	/ru/docs/conflicting/Web/API/Fetch_API/Using_Fetch
 /ru/docs/Web/API/File/Using_files_from_web_applications	/ru/docs/Web/API/File_API/Using_files_from_web_applications
 /ru/docs/Web/API/FileReader/onabort	/ru/docs/Web/API/FileReader/abort_event
 /ru/docs/Web/API/File_and_Directory_Entries_API/Введение	/ru/docs/Web/API/File_and_Directory_Entries_API/Introduction
@@ -476,7 +478,7 @@
 /ru/docs/Web/API/WebRTC_API/связь	/ru/docs/Web/API/WebRTC_API/Connectivity
 /ru/docs/Web/API/Window/mozAnimationStartTime	/ru/docs/Web/API/Animation/startTime
 /ru/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/ru/docs/Glossary/Base64
-/ru/docs/Web/API/WindowBase64/btoa	/ru/docs/Web/API/btoa
+/ru/docs/Web/API/WindowBase64/btoa	/ru/docs/Web/API/Window/btoa
 /ru/docs/Web/API/WindowEventHandlers/onafterprint	/ru/docs/Web/API/Window/afterprint_event
 /ru/docs/Web/API/WindowEventHandlers/onunload	/ru/docs/Web/API/Window/unload_event
 /ru/docs/Web/API/WindowTimers.setTimeout	/ru/docs/Web/API/setTimeout
@@ -487,6 +489,8 @@
 /ru/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests	/ru/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
 /ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /ru/docs/Web/API/XMLHttpRequest/onreadystatechange	/ru/docs/Web/API/XMLHttpRequest/readystatechange_event
+/ru/docs/Web/API/atob	/ru/docs/Web/API/Window/atob
+/ru/docs/Web/API/btoa	/ru/docs/Web/API/Window/btoa
 /ru/docs/Web/API/caches	/ru/docs/Web/API/Window/caches
 /ru/docs/Web/API/console.timeEnd	/ru/docs/Web/API/console/timeend_static
 /ru/docs/Web/API/console/assert	/ru/docs/Web/API/console/assert_static
@@ -857,6 +861,7 @@
 /ru/docs/Web/SVG/Элемент/rect	/ru/docs/Web/SVG/Element/rect
 /ru/docs/Web/SVG/Элемент/svg	/ru/docs/Web/SVG/Element/svg
 /ru/docs/Web/SVG/Элемент/use	/ru/docs/Web/SVG/Element/use
+/ru/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/ru/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /ru/docs/Web/WebGL	/ru/docs/Web/API/WebGL_API
 /ru/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/ru/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ru/docs/Web/WebGL/Animating_objects_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL

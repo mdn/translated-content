@@ -3,6 +3,8 @@ title: "MathML: 二次方程式の解の公式を導く"
 slug: Web/MathML/Examples/Deriving_the_Quadratic_Formula
 ---
 
+{{MathMLRef}}
+
 このページでは、二次方程式の解の公式の導出について概説します。
 
 二次方程式の一般形をとり、 x について解きます。

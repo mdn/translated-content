@@ -3,6 +3,8 @@ title: Labels multi-options
 slug: Web/Accessibility/ARIA/Multipart_labels
 ---
 
+{{AccessibilitySidebar}}
+
 ## Utiliser ARIA avec des labels comportant des champs
 
 ### Problème

@@ -130,9 +130,7 @@ application/x-ns-proxy-autoconfig
 > **备注：** pactester ([pacparser](https://github.com/pacparser/pacparser) 的一部分) 可以用来检测语法是否符合要求，使用方法如下：
 >
 > - PAC 文件保存为 `proxy.pac`
-> - 命令行输入：`pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org`。
->
->   - 该命令中， `host` 参数为 `www.mozilla.org` ， `url` 参数为`http://www.mozilla.org`。
+> - 命令行输入：`pactester -p ~/pacparser-master/tests/proxy.pac -u https://www.mozilla.org`（传入 `host` 参数 `www.mozilla.org`、`url` 参数 `https://www.mozilla.org`）
 
 ### isPlainHostName()
 

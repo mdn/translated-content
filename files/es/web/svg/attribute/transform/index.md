@@ -3,6 +3,8 @@ title: transform
 slug: Web/SVG/Attribute/transform
 ---
 
+{{SVGRef}}
+
 « Indice de atributos SVG
 
 El atributo `transform` exhibe una lista de definiciones de transformación que se aplican a un elemento y a sus hijos. Los elementos en la lista de tranformación están separados por espacios en blanco y/o comas y se aplican de derecha a izquierda.

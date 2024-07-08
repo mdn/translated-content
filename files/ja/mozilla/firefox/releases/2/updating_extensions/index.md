@@ -37,6 +37,6 @@ Firefox 2 はデフォルトのテーマに変更を加えています。さら�
 
 ## ステップ 4: リリース
 
-[http://addons.mozilla.org](https://addons.mozilla.org) 上のあなたの拡張機能のエントリーを更新してください。ユーザーが更新を見つけられるようになります。
+[https://addons.mozilla.org](https://addons.mozilla.org) 上のあなたの拡張機能のエントリーを更新してください。ユーザーが更新を見つけられるようになります。
 
 さらに、あなたの拡張機能のインストール定義ファイルで [`updateURL`](/ja/Install_Manifests#updateURL) を提供している場合は、必ず update manifest を更新し、Firefox が自動的に拡張機能の新バージョンを見つけられるようにしてください。こうすることによって、ユーザーが Firefox 2 にアップグレードした後で最初にあなたの拡張機能を実行した時、新バージョンを自動的にインストールさせることができます。
