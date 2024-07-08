@@ -123,7 +123,7 @@ rgb(from hsl(0 100% 50% / 0.8) r g b / 0.5)
 rgb(from hsl(0 100% 50%) calc(r/2) calc(g + 25) calc(b + 175) / calc(alpha - 0.1))
 ```
 
-> **备注：** 因为原始颜色通道值会被解析为 `<number>` 值，所以在使用它们进行计算时，即使通道能够接受 `<percenter>`、`<angle>` 或其他值类型，我们也必须使用 `<number>`进行运算。例如在 `<number>` 中添加 `<percenter>` 是不起作用的。
+> **备注：** 因为原始颜色通道值会被解析为 `<number>` 值，所以在使用它们进行计算时，即使通道能够接受 `<percenter>`、`<angle>` 或其他值类型，我们也必须使用 `<number>` 进行运算。例如在 `<number>` 中添加 `<percenter>` 是不起作用的。
 
 ### 形式语法
 
@@ -330,4 +330,4 @@ div.rgba {
 - {{CSSXref("&lt;color&gt;")}} 数据类型，以了解所有颜色标记的列表
 - [sRGB 色彩选择和转换工具](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool)
 - [使用相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)
-- [CSS 颜色](/zh-CN/docs/Web/CSS/CSS_colors) 模块
+- [CSS 颜色](/zh-CN/docs/Web/CSS/CSS_colors)模块
