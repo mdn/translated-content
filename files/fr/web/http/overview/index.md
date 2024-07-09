@@ -148,7 +148,7 @@ Une requête comprend les éléments suivants :
 
 Un exemple de réponse :
 
-![Une réponse HTTP](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-response.svg)
+![Une réponse HTTP « 200 OK » à une requête GET et les en-têtes de réponse.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-response.svg)
 
 Une réponse comprend les éléments suivants:
 
