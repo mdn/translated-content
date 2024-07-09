@@ -25,9 +25,9 @@ l10n:
 
 아래 속성은 `Intl.Segmenter.prototype`에 정의되어 있으며, 모든 `Intl.Segmenter` 인스턴스가 공유합니다.
 
-- {{jsxref("Object/constructor", "Intl.Segmenter.prototype.constructor")}}
+- : {{jsxref("Object/constructor", "Intl.Segmenter.prototype.constructor")}}
   - 인스턴스 객체를 생성한 생성자 함수입니다. `Intl.Segmenter` 인스턴스의 경우, 초기 값은 {{jsxref("Intl/Segmenter/Segmenter", "Intl.Segmenter")}} 생성자입니다.
-- `Intl.Segmenter.prototype[@@toStringTag]`
+- : `Intl.Segmenter.prototype[@@toStringTag]`
   - [`@@toStringTag`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 속성의 초기 값은 문자열 `"Intl.Segmenter"`입니다. 이 속성은 {{jsxref("Object.prototype.toString()")}}에서 사용됩니다.
 
 ## 인스턴스 매서드
@@ -47,7 +47,7 @@ l10n:
 const str = "吾輩は猫である。名前はたぬき。";
 console.table(str.split(" "));
 // ['吾輩は猫である。名前はたぬき。']
-// The two sentences are not correctly segmented.
+// 두 문장이 올바르게 분할되지 않았습니다.
 ```
 
 ```js example-good
@@ -57,7 +57,7 @@ const segmenterJa = new Intl.Segmenter("ja-JP", { granularity: "word" });
 const segments = segmenterJa.segment(str);
 console.table(Array.from(segments));
 // [{segment: '吾輩', index: 0, input: '吾輩は猫である。名前はたぬき。', isWordLike: true},
-// etc.
+// 기타 등등.
 // ]
 ```
 
