@@ -119,7 +119,7 @@ try {
 異なる対処が必要な原因で失敗するにもかかわらず、コードブロックが非常によく似たエラー（すなわち同じ型やメッセージ）を投げることがあります。
 
 発生した元のエラーが管理下にない場合、エラーを捕捉してより詳細なメッセージを持つ新しい `Error` オブジェクトを投げることが一つの選択肢となります。
-元のエラーは新しい `Error` のコンストラクターの [`options`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/Error#options) パラメーターの `cause` プロパティに渡すべきです。これにより上位の try/catch ブロックが元のエラーとスタックトレースを利用できることを保証します。
+元のエラーは新しい `Error` のコンストラクターの [`options`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/Error#options) パラメーターの `cause` プロパティに渡すべきです。これによって、上位の try/catch ブロックが元のエラーとスタックトレースを利用できることを保証します。
 
 以下の例は、似たエラーで失敗する 2 つのメソッドを示しています（`doFailSomeWay()` と `doFailAnotherWay()`）:
 
