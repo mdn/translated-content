@@ -40,7 +40,7 @@ toSorted(compareFn)
 const numbers = new Uint8Array([40, 1, 5, 200]);
 const numberSorted = numbers.toSorted();
 console.log(numberSorted); // Uint8Array [ 1, 5, 40, 200 ]
-// 일반 배열과는 다르게, 숫자를 산술적으로 정렬하기 위해서 
+// 일반 배열과는 다르게, 숫자를 산술적으로 정렬하기 위해서
 // 비교 함수가 필수는 아닙니다.
 console.log(numbers); // Uint8Array [ 40, 1, 5, 200 ]
 ```
