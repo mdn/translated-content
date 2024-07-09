@@ -95,7 +95,7 @@ console.log(numbers[3]); // undefined; 추가 요소는 삭제되었습니다.
 
 ### 고정 길이의 빈 배열 생성하기
 
-`length`를 현재 크기보다 더 크게 설정하면 [회소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#희소_배열)을 생성합니다.
+`length`를 현재 크기보다 더 크게 설정하면 [희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#희소_배열)을 생성합니다.
 
 ```js
 const numbers = [];
