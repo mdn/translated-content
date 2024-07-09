@@ -48,7 +48,7 @@ function log(text) {
 }
 ```
 
-接下来，我们使用 `"canParse" in URL` 条件检查是否支持 `URL.canParse()` 方法。如果支持该方法，我们会继续检查绝对 URL、无基本 URL 的相对 URL 和有效基本 URL 的相对 URL 的结果。我们还记录了不支持 `URL.canParse()` 的情况。
+接下来，我们使用 `"canParse" in URL` 条件检查是否支持 `URL.canParse()` 方法。如果支持该方法，我们会记录检查绝对 URL、无基本 URL 的相对 URL 和有效基本 URL 的相对 URL 的结果。我们还记录了不支持 `URL.canParse()` 的情况。
 
 ```js
 if ("canParse" in URL) {
