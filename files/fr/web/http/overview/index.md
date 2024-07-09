@@ -134,7 +134,7 @@ Il existe deux types de messages HTTP, les requêtes et les réponses, chacun ay
 
 Un exemple de requête HTTP :
 
-![Une requête HTTP basique](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-request.svg)
+![Une requête HTTP GET et ses en-têtes](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-request.svg)
 
 Une requête comprend les éléments suivants :
 
