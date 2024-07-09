@@ -7,13 +7,13 @@ l10n:
 
 {{APIRef("VirtualKeyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-{{domxref("VirtualKeyboard")}} 接口的 **`boundingRect`** 属性包含一个 {{domxref("DOMRect")}}，用于指示覆盖在网页上的屏幕虚拟键盘的位置和大小。
+{{domxref("VirtualKeyboard")}} 接口的 **`boundingRect`** 属性包含一个用于指示覆盖在网页上的屏幕虚拟键盘的位置和大小的 {{domxref("DOMRect")}}。
 
-当使用 {{domxref("VirtualKeyboard_API", "虚拟键盘 API", "", "nocode")}} 时，设置 {{domxref("VirtualKeyboard.overlaysContent", "overlaysContent")}} 属性为 `true` 可防止浏览器自动调整视口大小，使屏幕虚拟键盘覆盖在视口上。
+当使用{{domxref("VirtualKeyboard_API", "虚拟键盘 API", "", "nocode")}} 时，设置 {{domxref("VirtualKeyboard.overlaysContent", "overlaysContent")}} 属性为 `true` 可通过使屏幕虚拟键盘覆盖在视口上，以防止浏览器自动调整视口大小。
 
 ## 值
 
-一个 {{domxref("DOMRect")}}，指示视窗中虚拟键盘的位置和大小。
+一个指示视窗中虚拟键盘的位置和大小的 {{domxref("DOMRect")}}。
 
 矩形的 `x`、`y`、`width` 和 `height` 坐标对于重新定位网页中需要在虚拟键盘显示时仍可见的内容非常有用。
 
