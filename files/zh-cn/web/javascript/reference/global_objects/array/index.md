@@ -182,7 +182,6 @@ method(callbackFn, thisArg)
 
 如果想要在迭代期间读取另一个索引值的话，传递给 `callbackFn` 的 `array` 参数是有用的，因为可能并不总是有一个引用当前数据的现有变量。在迭代过程中，通常不应更改数组（参见 [迭代方法中的改变初始数组](#迭代方法中的改变初始数组)），但可以使用这个参数这样做。`array` 参数 _不是_ 正在构建的数组，在类似 `map()`、`filter()` 和 `flatMap()` 方法的情况下——无法通过回调函数访问正在构建的数组。
 
-
 所有迭代方法都是[复制方法](#复制方法和修改方法)和[通用方法](#通用数组方法)，尽管它们在处理[空槽](#数组方法和空槽)时的行为不同。
 
 以下方法是迭代方法：{{jsxref("Array/every", "every()")}}、{{jsxref("Array/filter", "filter()")}}、{{jsxref("Array/find", "find()")}}、{{jsxref("Array/findIndex", "findIndex()")}}、{{jsxref("Array/findLast", "findLast()")}}、{{jsxref("Array/findLastIndex", "findLastIndex()")}}、{{jsxref("Array/flatMap", "flatMap()")}}、{{jsxref("Array/forEach", "forEach()")}}、{{jsxref("Array/map", "map()")}} 和 {{jsxref("Array/some", "some()")}}。
