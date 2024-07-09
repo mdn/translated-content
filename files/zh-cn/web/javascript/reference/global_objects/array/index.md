@@ -18,7 +18,7 @@ l10n:
 - **JavaScript 数组的[索引从 0 开始](https://zh.wikipedia.org/zh-cn/從零開始的編號)**：数组的第一个元素在索引 `0` 处，第二个在索引 `1` 处，以此类推，最后一个元素是数组的 {{jsxref("Array/length", "length")}} 属性减去 `1` 的值。
 - **JavaScript [数组复制操作](#复制数组)创建[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)**。（_所有_ JavaScript 对象的标准内置复制操作都会创建浅拷贝，而不是[深拷贝](/zh-CN/docs/Glossary/Deep_copy)）。
 
-### 数组下标
+### 数组索引
 
 `Array` 对象不能使用任意字符串作为元素索引（如[关联数组](https://zh.wikipedia.org/wiki/关联数组)），必须使用非负整数（或它们的字符串形式）。通过非整数设置或访问不会设置或从数组列表本身检索元素，但会设置或访问与该数组的[对象属性集合](/zh-CN/docs/Web/JavaScript/Data_structures#属性)相关的变量。数组的对象属性和数组元素列表是分开的，数组的[遍历和修改操作](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#数组方法)不能应用于这些命名属性。
 
@@ -28,7 +28,7 @@ l10n:
 arr.0; // 语法错误
 ```
 
-JavaScript 语法要求使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#对象和属性)而不是[点号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)来访问以数字开头的属性。也可以用引号包裹数组下标（例如，`years['2']` 而不是 `years[2]`），尽管通常没有必要。
+JavaScript 语法要求使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#对象和属性)而不是[点号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)来访问以数字开头的属性。也可以用引号包裹数组索引（例如，`years['2']` 而不是 `years[2]`），尽管通常没有必要。
 
 JavaScript 引擎通过隐式的 `toString`，将 `years[2]` 中的 `2` 强制转换为字符串。因此，`'2'` 和 `'02'` 将指向 `years` 对象上的两个不同的槽位，下面的例子可能是 `true`：
 
