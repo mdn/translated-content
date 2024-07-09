@@ -20,7 +20,7 @@ l10n:
 JavaScript には、一般的な `Error` コンストラクターの他に、中核となる他のエラーコンストラクターがあります。クライアント側の例外については、[例外処理文](/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#例外処理文)を参照してください。
 
 - {{jsxref("EvalError")}}
-  - : グローバル関数 {{jsxref("eval", "eval()")}} に関して発生するエラーを表すインスタンスを生成します。
+  - : グローバル関数 {{jsxref("Global_Objects/eval", "eval()")}} に関して発生するエラーを表すインスタンスを生成します。
 - {{jsxref("RangeError")}}
   - : 数値変数または引数が、その有効範囲外である場合に発生するエラーを表すインスタンスを生成します。
 - {{jsxref("ReferenceError")}}
