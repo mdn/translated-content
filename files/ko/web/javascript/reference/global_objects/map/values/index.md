@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
- {{jsxref("Map")}} 인스턴스의 **`values()`** 메서드는 맵의 각 아이템의 값을 삽입 순서대로 순회하는 새로운 [맵 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator) 객체를 반환합니다.
+{{jsxref("Map")}} 인스턴스의 **`values()`** 메서드는 맵의 각 아이템의 값을 삽입 순서대로 순회하는 새로운 [맵 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator) 객체를 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-values.html")}}
 
