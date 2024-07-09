@@ -17,7 +17,7 @@ l10n:
 
 ### エラーの型
 
-JavaScript には、一般的な `Error` コンストラクターの他に、中核となる他のエラーコンストラクターがあります。クライアント側の例外については、[例外処理文](/ja/docs/Web/JavaScript/Guide/Web/JavaScript/Guide/Control_flow_and_error_handling#例外処理文)を参照してください。
+JavaScript には、一般的な `Error` コンストラクターの他に、中核となる他のエラーコンストラクターがあります。クライアント側の例外については、[例外処理文](/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#例外処理文)を参照してください。
 
 - {{jsxref("EvalError")}}
   - : グローバル関数 {{jsxref("eval", "eval()")}} に関して発生するエラーを表すインスタンスを生成します。
