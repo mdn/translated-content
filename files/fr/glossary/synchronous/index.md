@@ -15,5 +15,6 @@ De nombreuses commandes de programmation sont synchrones, par exemple quand vous
 
 ### Référence technique
 
-- {{glossary("Asynchronous")}}
+- Termes du glossaire associés
+  - {{glossary("Asynchronous")}}
 - [Requêtes synchrones et asynchrones](/fr/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) avec l'{{glossary("API")}} [XMLHttpRequest()](/fr/docs/Web/API/XMLHttpRequest)
