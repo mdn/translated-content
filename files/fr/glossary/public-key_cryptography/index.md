@@ -17,7 +17,7 @@ Parmi les systèmes de chiffrement par clé publique les plus courants, on retro
 
 ## Voir aussi
 
-- [Glossaire](/fr/docs/Glossary)
+- Termes du glossaire associés
 
   - [Chiffrement par clé symétrique](/fr/docs/Glossary/Symmetric-key_cryptography)
 

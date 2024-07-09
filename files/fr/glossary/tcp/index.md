@@ -14,8 +14,7 @@ Le rôle de TCP est d'assurer la livraison fiable et sans erreur des paquets. TC
 - [La page à propose de TCP sur Wikipédia](https://fr.wikipedia.org/wiki/Transmission_Control_Protocol)
 - [Aperçu de HTTP](/fr/docs/Web/HTTP/Overview)
 - [Le fonctionnement des navigateurs](/fr/docs/Web/Performance/How_browsers_work)
-- [Glossaire](/fr/docs/Glossary)
-
+- Termes du glossaire associés
   - [IPv4](/fr/docs/Glossary/IPv4)
   - [IPv6](/fr/docs/Glossary/IPv6)
   - [Paquet](/fr/docs/Glossary/Packet)

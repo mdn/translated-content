@@ -14,8 +14,7 @@ l10n:
 - [Page d'accueil](https://www.chromium.org/blink) du projet Blink
 - [Blink](<https://fr.wikipedia.org/wiki/Blink_(moteur_de_rendu)>) sur Wikipédia.
 - [FAQ](https://www.chromium.org/blink/developer-faq/) sur Blink
-- [Glossaire](/fr/docs/Glossary)
-  - [Google Chrome](/fr/docs/Glossary/Google_Chrome)
+- Termes du glossaire associés - [Google Chrome](/fr/docs/Glossary/Google_Chrome)
   - [Gecko](/fr/docs/Glossary/Gecko)
   - [Trident](/fr/docs/Glossary/Trident)
   - [WebKit](/fr/docs/Glossary/WebKit)
