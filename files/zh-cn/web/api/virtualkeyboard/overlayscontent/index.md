@@ -7,20 +7,20 @@ l10n:
 
 {{APIRef("VirtualKeyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-VirtualKeyboard 接口的 **`overlaysContent`** 属性用于选择退出浏览器自动处理屏幕虚拟键盘的方式，通过减小视窗大小为其腾出空间。
+VirtualKeyboard 接口的 **`overlaysContent`** 属性用于选择不使用浏览器自动处理屏幕虚拟键盘的方式（减小视窗大小来为屏幕虚拟键盘腾出空间）。
 
-如果将 `overlaysContent` 属性设置为 `true`，则浏览器在虚拟键盘出现时不再调整视口大小，而是让虚拟键盘覆盖在网页内容上。从而，你可以使用 {{domxref("VirtualKeyboard_API", "Virtual Keyboard API", "", "nocode")}}、自定义的 CSS 和 JavaScript 适应页面布局。
+如果将 `overlaysContent` 属性设置为 `true`，则浏览器在虚拟键盘出现时不再调整视口大小，而是让虚拟键盘覆盖在网页内容上。从而，你可以使用{{domxref("VirtualKeyboard_API", "虚拟键盘 API", "", "nocode")}}、自定义 CSS 和 JavaScript 适应页面布局。
 
 ## 值
 
-一个布尔值。默认为 `false`，设置为 `true` 可选择退出浏览器对屏幕虚拟键盘的自动处理。
+一个布尔值。默认为 `false`，设置为 `true` 可选择不使用浏览器对屏幕虚拟键盘的自动处理。
 
 ## 示例
 
 ```js
 if ("virtualKeyboard" in navigator) {
   console.log(navigator.virtualKeyboard.overlaysContent); // false
-  navigator.virtualKeyboard.overlaysContent = true; // 选择退出自动处理。
+  navigator.virtualKeyboard.overlaysContent = true; // 选择不使用自动处理。
 }
 ```
 
