@@ -11,7 +11,7 @@ l10n:
 
 ## 描述
 
-在 JavaScript 中，数组不是[基本类型](/zh-CN/docs/Glossary/Primitive)，而是具有以下核心特征的 `Array` 对象：
+在 JavaScript 中，数组不是[原始类型](/zh-CN/docs/Glossary/Primitive)，而是具有以下核心特征的 `Array` 对象：
 
 - **JavaScript 数组是可调整大小的，并且可以包含不同的[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)**。（当不需要这些特征时，可以使用[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)。）
 - **JavaScript 数组不是关联数组**，因此，不能使用任意字符串作为索引访问数组元素，但必须使用非负整数（或它们各自的字符串形式）作为索引访问。
@@ -83,9 +83,7 @@ console.log(fruits.length); // 2
 
 ### 数组方法和空槽
 
-数组方法在遇到空槽时有不同的行为
-
-在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中数组方法遇到空槽时有不同的行为。通常，较旧的方法（例如 `forEach`）处理空槽的方式与处理包含 `undefined` 索引的方式不同。
+数组方法在遇到空槽时有不同的行为，在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中数组方法遇到空槽时有不同的行为。通常，较旧的方法（例如 `forEach`）处理空槽的方式与处理包含 `undefined` 索引的方式不同。
 
 对空槽进行特殊处理的方法包括：{{jsxref("Array/concat", "concat()")}}、{{jsxref("Array/copyWithin", "copyWithin()")}}、{{jsxref("Array/every", "every()")}}、{{jsxref("Array/filter", "filter()")}}、{{jsxref("Array/flat", "flat()")}}、{{jsxref("Array/flatMap", "flatMap()")}}、{{jsxref("Array/forEach", "forEach()")}}、{{jsxref("Array/indexOf", "indexOf()")}}、{{jsxref("Array/lastIndexOf", "lastIndexOf()")}}、{{jsxref("Array/map", "map()")}}、{{jsxref("Array/reduce", "reduce()")}}、{{jsxref("Array/reduceRight", "reduceRight()")}}、{{jsxref("Array/reverse", "reverse()")}}、{{jsxref("Array/slice", "slice()")}}、{{jsxref("Array/some", "some()")}}、{{jsxref("Array/sort", "sort()")}} 和 {{jsxref("Array/splice", "splice()")}}。诸如 `forEach` 之类的迭代方法根本不会访问空槽。其他方法，如 `concat`、`copyWithin` 等，在进行复制时会保留空槽，因此最终数组依然是稀疏的。
 
@@ -178,9 +176,9 @@ method(callbackFn, thisArg)
 
 `callbackFn` 的返回值取决于调用的数组方法。
 
-`thisArg` 参数（默认为 `undefined`）将在调用 `callbackFn` 时用作 `this` 值。最终由 `callbackFn` 观察到的 `this` 值根据[通常的规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 确定：如果 `callbackFn` 是[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)（译注：[正常模式/马虎模式](/zh-CN/docs/Glossary/Sloppy_mode)），原始 `this` 值将被包装为对象，并将 `undefined`/`null` 替换为 [`globalThis`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis)。对于使用[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 定义的任何 `callbackFn` 来说，`thisArg` 参数都是无关紧要的，因为箭头函数没有自己的 `this` {{Glossary("binding")}}。
+`thisArg` 参数（默认为 `undefined`）将在调用 `callbackFn` 时用作 `this` 值。最终由 `callbackFn` 观察到的 `this` 值根据[通常的规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)确定：如果 `callbackFn` 是[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)，原始 `this` 值将被包装为对象，并将 `undefined`/`null` 替换为 [`globalThis`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis)。对于使用[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 定义的任何 `callbackFn` 来说，`thisArg` 参数都是无关紧要的，因为箭头函数没有自己的 `this` {{Glossary("binding", "绑定")}}。
 
-如果想要在迭代期间读取另一个索引值的话，传递给 `callbackFn` 的 `array` 参数是有用的，因为可能并不总是有一个引用当前数据的现有变量。在迭代过程中，通常不应更改数组（参见 [迭代方法中的改变初始数组](#迭代方法中的改变初始数组)），但可以使用这个参数这样做。`array` 参数 _不是_ 正在构建的数组，在类似 `map()`、`filter()` 和 `flatMap()` 方法的情况下——无法通过回调函数访问正在构建的数组。
+如果想要在迭代期间读取另一个索引值的话，传递给 `callbackFn` 的 `array` 参数是有用的，因为可能并不总是有一个引用当前数据的现有变量。在迭代过程中，通常不应更改数组（参见 [迭代方法中的改变初始数组](#迭代方法中的改变初始数组)），但可以使用这个参数这样做。`array` 参数*不是*正在构建的数组，在类似 `map()`、`filter()` 和 `flatMap()` 方法的情况下——无法通过回调函数访问正在构建的数组。
 
 所有迭代方法都是[复制方法](#复制方法和修改方法)和[通用方法](#通用数组方法)，尽管它们在处理[空槽](#数组方法和空槽)时的行为不同。
 
@@ -804,7 +802,7 @@ console.log(execResult); // [ "dbBd", "bB", "d" ]
 function testSideEffect(effect) {
   const arr = ["e1", "e2", "e3", "e4"];
   arr.forEach((elem, index, arr) => {
-    console.log(`数组：[${arr.join(", ")}], 索引：${index}, 元素：${elem}`);
+    console.log(`数组：[${arr.join(", ")}]，索引：${index}，元素：${elem}`);
     effect(arr, index);
   });
   console.log(`最终数组：[${arr.join(", ")}]`);
@@ -817,10 +815,10 @@ function testSideEffect(effect) {
 testSideEffect((arr, index) => {
   if (index + 1 < arr.length) arr[index + 1] += "*";
 });
-// 数组：[e1, e2, e3, e4], 索引：0, 元素：e1
-// 数组：[e1, e2*, e3, e4], 索引：1, 元素：e2*
-// 数组：[e1, e2*, e3*, e4], 索引：2, 元素：e3*
-// 数组：[e1, e2*, e3*, e4*], 索引：3, 元素：e4*
+// 数组：[e1, e2, e3, e4]，索引：0，元素：e1
+// 数组：[e1, e2*, e3, e4]，索引：1，元素：e2*
+// 数组：[e1, e2*, e3*, e4]，索引：2，元素：e3*
+// 数组：[e1, e2*, e3*, e4*]，索引：3，元素：e4*
 // 最终数组：[e1, e2*, e3*, e4*]
 ```
 
@@ -830,10 +828,10 @@ testSideEffect((arr, index) => {
 testSideEffect((arr, index) => {
   if (index > 0) arr[index - 1] += "*";
 });
-// 数组：[e1, e2, e3, e4], 索引：0, 元素：e1
-// 数组：[e1, e2, e3, e4], 索引：1, 元素：e2
-// 数组：[e1*, e2, e3, e4], 索引：2, 元素：e3
-// 数组：[e1*, e2*, e3, e4], 索引：3, 元素：e4
+// 数组：[e1, e2, e3, e4]，索引：0，元素：e1
+// 数组：[e1, e2, e3, e4]，索引：1，元素：e2
+// 数组：[e1*, e2, e3, e4]，索引：2，元素：e3
+// 数组：[e1*, e2*, e3, e4]，索引：3，元素：e4
 // 最终数组：[e1*, e2*, e3*, e4]
 ```
 
@@ -843,10 +841,10 @@ testSideEffect((arr, index) => {
 testSideEffect((arr, index) => {
   if (index === 1) arr.splice(2, 0, "new");
 });
-// 数组：[e1, e2, e3, e4], 索引：0, 元素：e1
-// 数组：[e1, e2, e3, e4], 索引：1, 元素：e2
-// 数组：[e1, e2, new, e3, e4], 索引：2, 元素：new
-// 数组：[e1, e2, new, e3, e4], 索引：3, 元素：e3
+// 数组：[e1, e2, e3, e4]，索引：0，元素：e1
+// 数组：[e1, e2, e3, e4]，索引：1，元素：e2
+// 数组：[e1, e2, new, e3, e4]，索引：2，元素：new
+// 数组：[e1, e2, new, e3, e4]，索引：3，元素：e3
 // 最终数组：[e1, e2, new, e3, e4]
 // e4 不会被访问因为它的索引是 4
 ```
@@ -855,10 +853,10 @@ testSideEffect((arr, index) => {
 
 ```js
 testSideEffect((arr) => arr.push("new"));
-// 数组：[e1, e2, e3, e4], 索引：0, 元素：e1
-// 数组：[e1, e2, e3, e4, new], 索引：1, 元素：e2
-// 数组：[e1, e2, e3, e4, new, new], 索引：2, 元素：e3
-// 数组：[e1, e2, e3, e4, new, new, new], 索引：3, 元素：e4
+// 数组：[e1, e2, e3, e4]，索引：0，元素：e1
+// 数组：[e1, e2, e3, e4, new]，索引：1，元素：e2
+// 数组：[e1, e2, e3, e4, new, new]，索引：2，元素：e3
+// 数组：[e1, e2, e3, e4, new, new, new]，索引：3，元素：e4
 // 最终数组：[e1, e2, e3, e4, new, new, new, new]
 ```
 
@@ -866,10 +864,10 @@ testSideEffect((arr) => arr.push("new"));
 
 ```js
 testSideEffect((arr, index) => arr.splice(index, 0, "new"));
-// 数组：[e1, e2, e3, e4], 索引：0, 元素：e1
-// 数组：[new, e1, e2, e3, e4], 索引：1, 元素：e1
-// 数组：[new, new, e1, e2, e3, e4], 索引：2, 元素：e1
-// 数组：[new, new, new, e1, e2, e3, e4], 索引：3, 元素：e1
+// 数组：[e1, e2, e3, e4]，索引：0，元素：e1
+// 数组：[new, e1, e2, e3, e4]，索引：1，元素：e1
+// 数组：[new, new, e1, e2, e3, e4]，索引：2，元素：e1
+// 数组：[new, new, new, e1, e2, e3, e4]，索引：3，元素：e1
 // 最终数组：[new, new, new, new, e1, e2, e3, e4]
 // e1 不断被访问，因为它不断被移回
 ```
@@ -880,32 +878,32 @@ testSideEffect((arr, index) => arr.splice(index, 0, "new"));
 testSideEffect((arr, index) => {
   if (index === 1) arr.splice(2, 1);
 });
-// 数组：[e1, e2, e3, e4], 索引：0, 元素：e1
-// 数组：[e1, e2, e3, e4], 索引：1, 元素：e2
-// 数组：[e1, e2, e4], 索引：2, 元素：e4
+// 数组：[e1, e2, e3, e4]，索引：0，元素：e1
+// 数组：[e1, e2, e3, e4]，索引：1，元素：e2
+// 数组：[e1, e2, e4]，索引：2，元素：e4
 // 最终数组：[e1, e2, e4]
 // 不会访问索引 3 因为它越界
 
 // 与 find() 比较，后者将不存在的索引视为未定义：
 const arr2 = ["e1", "e2", "e3", "e4"];
 arr2.find((elem, index, arr) => {
-  console.log(`数组：[${arr.join(", ")}], 索引：${index}, 元素：${elem}`);
+  console.log(`数组：[${arr.join(", ")}]，索引：${index}，元素：${elem}`);
   if (index === 1) arr.splice(2, 1);
   return false;
 });
-// 数组：[e1, e2, e3, e4], 索引：0, 元素：e1
-// 数组：[e1, e2, e3, e4], 索引：1, 元素：e2
-// 数组：[e1, e2, e4], 索引：2, 元素：e4
-// 数组：[e1, e2, e4], 索引：3, 元素：undefined
+// 数组：[e1, e2, e3, e4]，索引：0，元素：e1
+// 数组：[e1, e2, e3, e4]，索引：1，元素：e2
+// 数组：[e1, e2, e4]，索引：2，元素：e4
+// 数组：[e1, e2, e4]，索引：3，元素：undefined
 ```
 
 删除已访问索引处的 _n_ 元素不会改变它们在删除之前被访问的事实。因为数据已经缩小，在当前索引后的下 _n_ 元素被跳过。如果此方法忽略不存在索引，最后的 _n_ 次迭代将会被跳过；否则，它们将收到 `undefined`：
 
 ```js
 testSideEffect((arr, index) => arr.splice(index, 1));
-// 数组：[e1, e2, e3, e4], 索引：0, 元素：e1
+// 数组：[e1, e2, e3, e4]，索引：0，元素：e1
 // 不会范围内 e2 因为 e2 现在的索引是 0，索引 0 已经被访问过
-// 数组：[e2, e3, e4], 索引：1, 元素：e3
+// 数组：[e2, e3, e4]，索引：1，元素：e3
 // 不会范围内 e4 因为 e4 现在的索引是 1，索引 1 已经被访问过
 // 最终数组：[e2, e4]
 // 索引 2 越界，索引它不会被访问
@@ -913,14 +911,14 @@ testSideEffect((arr, index) => arr.splice(index, 1));
 // 与 find() 比较，后者将不存在的索引视为未定义：
 const arr2 = ["e1", "e2", "e3", "e4"];
 arr2.find((elem, index, arr) => {
-  console.log(`数组：[${arr.join(", ")}], 索引：${index}, 元素：${elem}`);
+  console.log(`数组：[${arr.join(", ")}]，索引：${index}，元素：${elem}`);
   arr.splice(index, 1);
   return false;
 });
-// 数组：[e1, e2, e3, e4], 索引：0, 元素：e1
-// 数组：[e2, e3, e4], 索引：1, 元素：e3
-// 数组：[e2, e4], 索引：2, 元素：undefined
-// 数组：[e2, e4], 索引：3, 元素：undefined
+// 数组：[e1, e2, e3, e4]，索引：0，元素：e1
+// 数组：[e2, e3, e4]，索引：1，元素：e3
+// 数组：[e2, e4]，索引：2，元素：undefined
+// 数组：[e2, e4]，索引：3，元素：undefined
 ```
 
 对于按索引降序迭代的方法，插入会导致元素被跳过，删除会导致元素被多次访问，调整上面的代码以查看效果。
@@ -935,6 +933,6 @@ arr2.find((elem, index, arr) => {
 
 ## 参见
 
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections) 指南
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)指南
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
