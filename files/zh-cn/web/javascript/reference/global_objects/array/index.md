@@ -90,38 +90,38 @@ console.log(fruits.length); // 2
 对空槽进行特殊处理的方法包括：{{jsxref("Array/concat", "concat()")}}、{{jsxref("Array/copyWithin", "copyWithin()")}}、{{jsxref("Array/every", "every()")}}、{{jsxref("Array/filter", "filter()")}}、{{jsxref("Array/flat", "flat()")}}、{{jsxref("Array/flatMap", "flatMap()")}}、{{jsxref("Array/forEach", "forEach()")}}、{{jsxref("Array/indexOf", "indexOf()")}}、{{jsxref("Array/lastIndexOf", "lastIndexOf()")}}、{{jsxref("Array/map", "map()")}}、{{jsxref("Array/reduce", "reduce()")}}、{{jsxref("Array/reduceRight", "reduceRight()")}}、{{jsxref("Array/reverse", "reverse()")}}、{{jsxref("Array/slice", "slice()")}}、{{jsxref("Array/some", "some()")}}、{{jsxref("Array/sort", "sort()")}} 和 {{jsxref("Array/splice", "splice()")}}。诸如 `forEach` 之类的迭代方法根本不会访问空槽。其他方法，如 `concat`、`copyWithin` 等，在进行复制时会保留空槽，因此最终数组依然是稀疏的。
 
 ```js
-const colors = ["red", "yellow", "blue"];
-colors[5] = "purple";
+const colors = ["红", "黄", "蓝"];
+colors[5] = "紫";
 colors.forEach((item, index) => {
-  console.log(`${index}: ${item}`);
+  console.log(`${index}：${item}`);
 });
 // 输出：
-// 0: red
-// 1: yellow
-// 2: blue
-// 5: purple
+// 0：红
+// 1：黄
+// 2：蓝
+// 5：蓝
 
-colors.reverse(); // ['purple', empty × 2, 'blue', 'yellow', 'red']
+colors.reverse(); // ['紫', 空槽 × 2, '蓝', '黄', '红']
 ```
 
-较新的方法（例如 `keys`）不会特别地对待空槽，将它们视为包含 `undefined`。将空槽和 `undefined` 元素合并的方法有：{{jsxref("Array/entries", "entries()")}}、{{jsxref("Array/fill", "fill()")}}、{{jsxref("Array/find", "find()")}}、{{jsxref("Array/findIndex", "findIndex()")}}、{{jsxref("Array/findLast", "findLast()")}}、{{jsxref("Array/findLastIndex", "findLastIndex()")}}、{{jsxref("Array/includes", "includes()")}}、{{jsxref("Array/join", "join()")}}、{{jsxref("Array/keys", "keys()")}}、{{jsxref("Array/toLocaleString", "toLocaleString()")}} 和 {{jsxref("Array/values", "values()")}}
+较新的方法（例如 `keys`）不会对空槽进行特殊处理，而是将它们视为包含 `undefined`。将空槽合并为 `undefined` 元素方法有：{{jsxref("Array/entries", "entries()")}}、{{jsxref("Array/fill", "fill()")}}、{{jsxref("Array/find", "find()")}}、{{jsxref("Array/findIndex", "findIndex()")}}、{{jsxref("Array/findLast", "findLast()")}}、{{jsxref("Array/findLastIndex", "findLastIndex()")}}、{{jsxref("Array/includes", "includes()")}}、{{jsxref("Array/join", "join()")}}、{{jsxref("Array/keys", "keys()")}}、{{jsxref("Array/toLocaleString", "toLocaleString()")}} 和 {{jsxref("Array/values", "values()")}}
 
 ```js
-const colors = ["red", "yellow", "blue"];
-colors[5] = "purple";
+const colors = ["红", "黄", "蓝"];
+colors[5] = "紫";
 const iterator = colors.keys();
 for (const key of iterator) {
-  console.log(`${key}: ${colors[key]}`);
+  console.log(`${key}：${colors[key]}`);
 }
 // 输出
-// 0: red
-// 1: yellow
-// 2: blue
-// 3: undefined
-// 4: undefined
-// 5: purple
+// 0：红
+// 1：黄
+// 2：蓝
+// 3：undefined
+// 4：undefined
+// 5：紫
 
-const newColors = colors.toReversed(); // ['purple', undefined, undefined, 'blue', 'yellow', 'red']
+const newColors = colors.toReversed(); // ['紫', undefined, undefined, '蓝', '黄', '红']
 ```
 
 ### 复制方法和修改方法
@@ -129,11 +129,11 @@ const newColors = colors.toReversed(); // ['purple', undefined, undefined, 'blue
 有些方法不会修改调用该方法的现有数组，而是返回一个新的数组。它们通过首先构造一个新数组，然后填充元素来实现。复制始终是[_浅层次的_](/zh-CN/docs/Glossary/Shallow_copy)——该方法从不复制一开始创建的数组之外的任何内容。原始数组的元素将按以下方式复制到新数组中：
 
 - 对象：对象引用被复制到新数组中。原数组和新数组都引用同一个对象。也就是说，如果一个被引用的对象被修改，新数组和原数组都可以看到更改。
-- 基本类型，如字符串、数字和布尔值（不是 {{jsxref("String")}}、{{jsxref("Number")}} 和 {{jsxref("Boolean")}} 对象）：它们的值被复制到新数组中。
+- 原始类型，如字符串、数字和布尔值（不是 {{jsxref("String")}}、{{jsxref("Number")}} 和 {{jsxref("Boolean")}} 对象）：它们的值被复制到新数组中。
 
 其他方法会改变调用该方法的数组，在这种情况下，它们的返回值根据方法的不同而不同：有时是对相同数组的引用，有时是新数组的长度。
 
-以下方法通过访问 [`this.constructor[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) 来创建新数组，以确定要使用的构造函数：{{jsxref("Array/concat", "concat()")}}、{{jsxref("Array/filter", "filter()")}}、{{jsxref("Array/flat", "flat()")}}、{{jsxref("Array/flatMap", "flatMap()")}}、{{jsxref("Array/map", "map()")}}、{{jsxref("Array/slice", "slice()")}} 和 {{jsxref("Array/splice", "splice()")}}（构造返回的已删除元素数组）
+以下方法通过访问 [`this.constructor[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) 来创建新数组，以确定要使用的构造函数：{{jsxref("Array/concat", "concat()")}}、{{jsxref("Array/filter", "filter()")}}、{{jsxref("Array/flat", "flat()")}}、{{jsxref("Array/flatMap", "flatMap()")}}、{{jsxref("Array/map", "map()")}}、{{jsxref("Array/slice", "slice()")}} 和 {{jsxref("Array/splice", "splice()")}}（返回构造的已删除元素数组）
 
 以下方法总是使用 `Array` 基础构造函数创建新数组：{{jsxref("Array/toReversed", "toReversed()")}}、{{jsxref("Array/toSorted", "toSorted()")}}、{{jsxref("Array/toSpliced", "toSpliced()")}} 和 {{jsxref("Array/with", "with()")}}。
 
