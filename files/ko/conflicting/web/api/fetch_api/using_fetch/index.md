@@ -1,6 +1,7 @@
 ---
 title: 가드 (Guard)
-slug: Glossary/Guard
+slug: conflicting/Web/API/Fetch_API/Using_Fetch
+original_slug: Glossary/Guard
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
