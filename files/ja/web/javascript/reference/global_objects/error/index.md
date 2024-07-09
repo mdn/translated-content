@@ -151,7 +151,7 @@ try {
 }
 ```
 
-> **メモ:** もしあなたがライブラリを制作しているなら、利用者にエラーメッセージをパースするようお願いするよりも、発生したエラーを区別するために Error の cause を使用すべきです。例については [Error の cause ページ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause) をご覧ください。
+> **メモ:** もしあなたがライブラリを制作しているなら、利用者にエラーメッセージをパースするようお願いするよりも発生したエラーを区別するために Error の cause を使用すべきです。例については [Error の cause ページ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause) をご覧ください。
 
 サブクラスのコンストラクターが `super()` を呼び出すときに `options` パラメーターを渡せば、[独自のエラー型](#独自のエラー型)も `cause` プロパティを利用できます。基底クラスのコンストラクター `Error()` は `options.cause` を読み取って、新しいエラーのインスタンスに `cause` プロパティを定義します。
 
