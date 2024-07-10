@@ -13,7 +13,7 @@ l10n:
 
 ## 値
 
-[`Error()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) コンストラクタ内で、引数 `options.cause` に渡された値。存在しない場合もあります。
+[`Error()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) コンストラクター内で、引数 `options.cause` に渡された値。存在しない場合もあります。
 
 {{js_property_attributes(1, 0, 1)}}
 
