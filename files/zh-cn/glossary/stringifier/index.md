@@ -11,4 +11,4 @@ l10n:
 
 ## 参见
 
-- [WebIDL 文件中包含的信息](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#stringifiers)中的字符串化器
+- [WebIDL 文件中包含的信息](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#字符串化器)中的字符串化器
