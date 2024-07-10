@@ -10,7 +10,7 @@ l10n:
 {{jsxref("Object")}} 인스턴스의 **`hasOwnProperty()`** 메서드는 이 객체가 지정된 속성을 자체 속성으로 가지고 있는지(상속하는 것과는 반대로)를 나타내는 불리언을 반환합니다.
 
 > **참고:** 지원되는 브라우저에서는 `hasOwnProperty()` 보다
-{{jsxref("Object.hasOwn()")}} 사용을 권장합니다.
+> {{jsxref("Object.hasOwn()")}} 사용을 권장합니다.
 
 {{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}
 
