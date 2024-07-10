@@ -18,14 +18,13 @@ l10n:
 
 ## 处理任意字符串
 
-当处理字符串时，有很多推荐的策略来安全添加他们到页面：标准的 DOM 节点创建方法或 jQuery。
+当处理字符串时，有很多推荐的方法可以安全地将它们添加到页面：标准的 DOM 节点创建方法或 jQuery。
 
 ### DOM 节点创建方法
 
-一个轻量级的方法来插入字符串到页面是使用原生的 DOM 操纵方法：[`document.createElement`](/zh-CN/docs/Web/API/Document/createElement)、[`Element.setAttribute`](/zh-CN/docs/Web/API/Element/setAttribute) 以及[`Node.textContent`](/zh-CN/docs/Web/API/Node/textContent)。安全的方法是分别创建节点并使用 textContent 属性赋值：
+一个轻量级的方法来插入字符串到页面是使用原生的 DOM 操纵方法：[`document.createElement`](/zh-CN/docs/Web/API/Document/createElement)、[`Element.setAttribute`](/zh-CN/docs/Web/API/Element/setAttribute) 以及 [`Node.textContent`](/zh-CN/docs/Web/API/Node/textContent)。安全的方法是分别创建节点并使用 textContent 属性赋值：
 
 ```js example-good
-var data = JSON.parse(responseText);
 let data = JSON.parse(responseText);
 let div = document.createElement("div");
 div.className = data.className;
@@ -33,7 +32,7 @@ div.textContent = `你最喜欢的颜色现在是${data.color}`;
 addonElement.appendChild(div);
 ```
 
-这种方法安全原因是使用 `.textContent` 时会自动转义 `data.color` 中的任何远程 HTML 代码。
+这种方法安全的原因是使用 `.textContent` 时会自动转义 `data.color` 中的任何远程 HTML 代码。
 
 但是要注意，使用原生方法不能保证绝对安全，例如下面的代码：
 
@@ -91,14 +90,14 @@ elem.html(cleanHTML);
 
 ### 模板引擎
 
-另一个常见的模式是对一个页面创建本地 HTML 模板并通过远端的值来填空。这种方法被广泛应用，应该注意去避免构建函数的使用，可能会导致执行代码的注入。当模板引擎使用构建函数插入未处理的 HTML 到文档的时候会发生这种情况。如果用来注入原始 HTML 的变量是远端代码，则会面临导言中提到的同样的安全风险。
+另一个常见的模式是对一个页面创建本地 HTML 模板并通过远端的值来填空。这种方法被广泛应用，应该注意去避免构建函数的使用，可能会导致执行代码的注入。当模板引擎使用构建函数插入未处理的 HTML 到文档的时候会发生这种情况。如果用来注入原始 HTML 的变量是远端代码，则会面临引言中提到的同样的安全风险。
 
 例如，在使用 [mustache 模板](https://mustache.github.io/)时，必须使用双大括号，即 `\{{variable}}`，它可以转义任何 HTML。必须避免使用三重大括号（`\{\{{variable}}}`），因为这会注入原始 HTML 字符串，并可能在模板中添加可执行代码。[Handlebars](https://handlebarsjs.com/) 的工作方式与此类似，双大括号中的变量（`\{{variable}}`）会被转义。而三重大括号中的变量则是原始变量，必须避免使用。此外，如果你使用 `Handlebars.SafeString` 创建了一个 Handlebars 辅助函数，请使用 `Handlebars.escapeExpression()` 来转义传递给辅助函数的任何动态参数。之所以需要这样做，是因为 `Handlebars.SafeString` 产生的变量被认为是安全的，而且在插入双大括号中时不会转义。
 
 在其他模板系统中也有类似的构建函数，需要有同样的考虑。
 
-## 补充阅读
+## 扩展阅读
 
-关于这个主题更多的信息，可以查看下面的文章
+关于这个主题更多的信息，可以查看以下文章：
 
 - [XSS（跨站脚本攻击）防御小窍门](https://owasp.org/www-community/xss-filter-evasion-cheatsheet)
