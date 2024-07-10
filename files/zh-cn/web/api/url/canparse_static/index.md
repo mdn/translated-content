@@ -7,9 +7,9 @@ l10n:
 
 {{ApiRef("URL API")}}
 
-{{domxref("URL")}} 接口的 **`URL.canParse()`** 静态方法返回一个布尔值，表示绝对地址或与基本地址结合的相对地址是否可解析和有效。
+{{domxref("URL")}} 接口的 **`URL.canParse()`** 静态方法返回一个布尔值，表示绝对 URL 或与基本 URL 结合的相对地址是否可解析和有效。
 
-这是在 [try...catch](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 代码块中构造 `URL` 的快速而简单的替代方法。对于会使得 [`URL()` 构造函数](/zh-CN/docs/Web/API/URL/URL)返回成功的相同值，它将返回 `true`，而对于会导致构造函数抛出的错误的值，它返回 `false`。
+这是在 [try...catch](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 代码块中构造 `URL` 的快速而简单的替代方法。对于会使得 [`URL()` 构造函数](/zh-CN/docs/Web/API/URL/URL)成功的相同值，它将返回 `true`，而对于会导致构造函数抛出的错误的值，它返回 `false`。
 
 ## 语法
 
@@ -98,4 +98,4 @@ if ("canParse" in URL) {
 ## 参见
 
 - {{domxref("URL.URL", "URL()")}}
-- [`URL.canParse()` 的 polyfill](https://github.com/zloirock/core-js#url-and-urlsearchparams) 可在 [`core-js`](https://github.com/zloirock/core-js) 中使用
+- [`core-js`](https://github.com/zloirock/core-js) 中可用的 [`URL.canParse()` 的 polyfill](https://github.com/zloirock/core-js#url-and-urlsearchparams)
