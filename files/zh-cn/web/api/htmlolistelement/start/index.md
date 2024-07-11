@@ -37,9 +37,9 @@ olElement.start = "11";
 console.log(olElement.start); // 输出："11"
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Examples", 400, 100)}}
+{{EmbedLiveSample("示例", 400, 100)}}
 
 ## 规范
 

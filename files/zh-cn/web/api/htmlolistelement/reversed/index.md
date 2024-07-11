@@ -11,7 +11,7 @@ l10n:
 
 ## 值
 
-`boolean` 值。如果是 `true`，表示列表是降序列表（...、3、2、1）。
+`boolean` 值。如果是 `true`，表示列表是降序列表（……、3、2、1）。
 
 ## 示例
 
@@ -37,7 +37,7 @@ console.log(olElement.reversed); // 输出："true"
 
 ### 结果
 
-{{EmbedLiveSample("Examples", 400, 100)}}
+{{EmbedLiveSample("示例", 400, 100)}}
 
 ## 规范
 

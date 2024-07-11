@@ -15,7 +15,7 @@ l10n:
 
 表示类型的字符串。
 
-其可能的值列在属性[标记类型](/zh-CN/docs/Web/HTML/Element/ol#type) 部分。
+其可能的值列在属性[标记类型](/zh-CN/docs/Web/HTML/Element/ol#type)部分。
 
 ## 示例
 
@@ -42,7 +42,7 @@ console.log(olElement.type); // 输出："i"
 
 ### 结果
 
-{{EmbedLiveSample("Examples", 400, 100)}}
+{{EmbedLiveSample("示例", 400, 100)}}
 
 ## 规范
 

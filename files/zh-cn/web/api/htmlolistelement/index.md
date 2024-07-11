@@ -16,7 +16,7 @@ l10n:
 _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 - {{domxref("HTMLOListElement.reversed")}}
-  - : 一个布尔值反映 [`reversed`](/zh-CN/docs/Web/HTML/Element/ol#reversed) 并定义是否序号是递减的，就是说它的值是 `true` 还是递增 (`false`)。
+  - : 一个布尔值反映 [`reversed`](/zh-CN/docs/Web/HTML/Element/ol#reversed) 并定义是否序号是递减的，就是说它的值是 `true` 还是递增（`false`）。
 - {{domxref("HTMLOListElement.start")}}
   - : 一个 `long` 值反映 [`start`](/zh-CN/docs/Web/HTML/Element/ol#start) 并定义列表第一个元素的开始序号的值。
 - {{domxref("HTMLOListElement.type")}}
