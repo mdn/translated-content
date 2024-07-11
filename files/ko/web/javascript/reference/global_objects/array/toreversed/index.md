@@ -2,7 +2,7 @@
 title: Array.prototype.toReversed()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toReversed
 l10n:
-  sourceCommit: 6bd17cb9cbc2d11163617b9f71706e93fdd743c8
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
@@ -15,6 +15,10 @@ l10n:
 toReversed()
 ```
 
+### 매개변수
+
+없음.
+
 ### 반환 값
 
 역순으로 정렬된 새로운 배열을 반환합니다.
@@ -23,9 +27,9 @@ toReversed()
 
 `toReversed()` 메서드는 호출한 배열 객체의 요소를 반대로 변경하고 새로운 배열을 반환합니다.
 
-[희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)에서 사용할 때, `toReversed()` 메서드는 빈 슬롯을 `undefined` 값으로 간주하고 반복합니다.
+[희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#희소_배열)에서 사용할 때, `toReversed()` 메서드는 빈 슬롯을 `undefined` 값으로 간주하고 반복합니다.
 
-`toReversed()` 메서드는 [일반화](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)되어 있습니다. `this` 값이 `length` 속성과 정수로 키가 지정된 속성을 가지고 있다고 기대합니다.
+`toReversed()` 메서드는 [범용적](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#범용_배열_메서드)입니다. `this` 값이 `length` 속성과 정수로 키가 지정된 속성을 가지고 있다고 기대합니다.
 
 ## 예제
 
@@ -76,7 +80,8 @@ console.log(Array.prototype.toReversed.call(arrayLike));
 
 ## 같이 보기
 
-- [Polyfill of `Array.prototype.toReversed` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
+- [`core-js`에서의 `Array.prototype.toReversed` 폴리필](https://github.com/zloirock/core-js#change-array-by-copy)
+- [인덱스 기반 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections) 가이드
 - {{jsxref("Array.prototype.reverse()")}}
 - {{jsxref("Array.prototype.toSorted()")}}
 - {{jsxref("Array.prototype.toSpliced()")}}
