@@ -53,10 +53,10 @@ new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 
 ```js
 // index.mjs
-import './index2.mjs?someURLInfo=5';
+import "./index2.mjs?someURLInfo=5";
 
 // index2.mjs
-new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
+new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 ```
 
 Node.js 中 ES 模块的实现支持在解析模块的标识符中含有查询参数和片段标识符，如上述示例所示。然而，从命令行指定模块标识符时无法使用查询参数和片段标识符（例如 `node index.mjs?someURLInfo=5`），因为命令行的入口点使用了类似于 CommonJS 的解析模式，将整个路径视为文件而非 URL。要将参数传递给入口点模块，需要改用命令行参数，并从 `precess.argv` 读取（如 `node index.mjs --someURLInfo=5`）。
