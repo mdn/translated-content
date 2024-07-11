@@ -1,7 +1,8 @@
 ---
 title: URL：parse() 静态方法
-short-title: parse()
 slug: Web/API/URL/parse_static
+l10n:
+  sourceCommit: 6592d9b17990c03bffe810c4696f6161f9c49063
 ---
 
 {{ApiRef("URL API")}}
@@ -20,7 +21,7 @@ URL.parse(url, base)
 ### 参数
 
 - `url`
-  - : 一个字符串或任何其他具有 {{Glossary("stringifier")}} 的对象，表示绝对 URL 或 URL 的相对引用。如果 `url` 是相对引用，则需要 `base`，并用于解析最终的 URL。如果 `url` 是绝对 URL，则不会使用给定的 `base` 来创建结果 URL。
+  - : 一个字符串或任何其他具有{{Glossary("stringifier", "字符串化器")}}的对象，表示绝对 URL 或 URL 的相对引用。如果 `url` 是相对引用，则 `base` 是必需的，并用于解析最终的 URL。如果 `url` 是绝对 URL，则不会使用给定的 `base` 来创建结果 URL。
 - `base` {{optional_inline}}
 
   - : 一个字符串，表示在 `url` 为相对 URL 时使用的基础 URL。如果未指定，则默认为 `undefined`。
@@ -35,19 +36,17 @@ URL.parse(url, base)
 
 ## 示例
 
-[解析 URL 的相对引用](/zh-CN/docs/Web/API/URL_API/Resolving_relative_references)和[`URL()` 构造函数](/zh-CN/docs/Web/API/URL/URL#示例)提供了更多示例，演示了不同的 `url` 和 `base` 值如何解析为最终的绝对 URL（尽管主要使用 `URL()`）。
+[解析 URL 的相对引用](/zh-CN/docs/Web/API/URL_API/Resolving_relative_references)和 [`URL()` 构造函数](/zh-CN/docs/Web/API/URL/URL#示例)提供了更多示例，演示了不同的 `url` 和 `base` 值如何解析为最终的绝对 URL（尽管主要使用 `URL()`）。
 
 ### 使用 URL.parse()
 
 这个实时示例演示了如何使用 `URL.parse()` 静态方法处理一些不同的绝对和相对引用值。
 
-首先我们定义了一个 HTML `<pre>` 元素用于日志记录，并提供了一个记录方法 `log()`。
-
-```html
+```html hidden
 <pre id="log"></pre>
 ```
 
-```css
+```css hidden
 #log {
   height: 100px;
   overflow: scroll;
@@ -63,7 +62,7 @@ function log(text) {
 }
 ```
 
-下一步，我们检查 `URL.parse()` 方法是否受支持，使用条件 `"parse" in URL`。如果该方法受支持，我们会记录检查绝对 URL 的结果、相对引用和基础 URL 的结果、具有更[复杂基础 URL](/zh-CN/docs/Web/API/URL_API/Resolving_relative_references)的相对引用的结果、具有有效基础 URL 的有效绝对 URL（基础 URL 未使用）的结果，以及导致方法返回 `null` 的无效基础 URL 的结果。
+首先，我们使用条件 `"parse" in URL` 检查是否支持 `URL.parse()` 方法。如果该方法受支持，我们会记录检查绝对 URL 的结果、相对引用和基础 URL 的结果、具有更[复杂基础 URL](/zh-CN/docs/Web/API/URL_API/Resolving_relative_references)的相对引用的结果、具有有效基础 URL 的有效绝对 URL（基础 URL 未使用）的结果，以及导致方法返回 `null` 的无效基础 URL 的结果。
 
 我们还会记录 `URL.parse()` 不支持的情况。
 
@@ -78,7 +77,7 @@ if ("parse" in URL) {
   log(`[2]: ${result.href}`);
 
   // 相对引用到更复杂的有效基础 URL
-  // （仅使用方案和域名来解析 URL）
+  //（仅使用协议和域名来解析 URL）
   result = URL.parse(
     "/different/place",
     "https://developer.mozilla.org:443/some/path?id=4",
