@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp
 
 **`RegExp`** 생성자는 패턴을 사용해 텍스트를 판별할 때 사용합니다.
 
-정규 표현식에 대한 소개는 [JavaScript 안내서의 정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_Expressions)을 참고하세요.
+정규 표현식에 대한 소개는 JavaScript 안내서의 [정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_Expressions)을 참고하세요. 정규 표현식 구문에 대한 더 자세한 정보는 [정규 표현식 참고서](/ko/docs/Web/JavaScript/Reference/Regular_expressions)를 참고하시기 바랍니다.
 
 ## 설명
 
@@ -15,32 +15,37 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp
 
 `RegExp` 객체는 리터럴 표기법과 생성자로써 생성할 수 있습니다.
 
-- **리터럴 표기법**의 매개변수는 두 빗금으로 감싸야 하며 따옴표를 사용하지 않습니다.
-- **생성자 함수**의 매개변수는 빗금으로 감싸지 않으나 따옴표를 사용합니다.
+- **리터럴 표기법**은 두 빗금 사이에 패턴을 사용하며, 두 번째 빗금 뒤에 선택적으로 [플래그](/ko/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags)가 올 수 있습니다.
+- **생성자 함수**은 첫 번째 매개변수로 문자열이나 `RegExp` 객체 중 하나를 받고 두 번째 매개변수로 선택적 [플래그](/ko/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) 문자열을 받습니다.
 
 다음의 세 표현식은 모두 같은 정규 표현식을 생성합니다.
 
 ```js
-/ab+c/i;
-new RegExp(/ab+c/, "i"); // 리터럴
-new RegExp("ab+c", "i"); // 생성자
+const re = /ab+c/i; // 리터럴 표기법
+// 혹은
+const re = new RegExp("ab+c", "i"); // 첫 번째 인수로 문자열 패턴과 함께 생성자 사용
+// 혹은
+const re = new RegExp(/ab+c/, "i"); // 첫 번째 인수로 정규 표현식 리터럴과 함께 생성자 사용
 ```
 
-리터럴 표기법은 표현식을 평가할 때 정규 표현식을 컴파일합니다. 정규 표현식이 변하지 않으면 리터럴 표기법을 사용하세요. 예를 들어, 반복문 안에서 사용할 정규 표현식을 리터럴 표기법으로 생성하면 정규 표현식을 매번 다시 컴파일하지 않습니다.
+정규 표현식을 사용하려면 먼저 정규 표현식을 컴파일해야 합니다. 이 과정을 통해 보다 효율적으로 매칭을 수행할 수 있습니다. 이 프로세스에 대한 보다 자세한 내용은 [dotnet 문서](https://docs.microsoft.com/dotnet/standard/base-types/compilation-and-reuse-in-regular-expressions)에서 확인할 수 있습니다.
 
-정규 표현식 객체의 생성자(`new RegExp('ab+c')`)를 사용하면 정규 표현식이 런타임에 컴파일됩니다. 패턴이 변할 가능성이 있거나, 사용자 입력과 같이 알 수 없는 외부 소스에서 가져오는 정규 표현식의 경우 생성자 함수를 사용하세요.
+리터럴 표기법은 표현식이 평가될 때 정규 표현식이 컴파일됩니다. 반면에 `RegExp` 객체의 생성자 `new RegExp('ab+c')`는 정규 표현식을 런타임에 컴파일합니다.
+
+[동적 입력에서 정규식을 빌드](#building_a_regular_expression_from_dynamic_inputs)하려면 `RegExp()` 생성자의 첫 번째 인수로 문자열을 사용합니다.
 
 ### 생성자의 플래그
 
-ECMAScript 6부터는 `new RegExp(/ab+c/, 'i')`처럼, 첫 매개변수가 `RegExp`이면서 `flags`를 지정해도 {{jsxref("TypeError")}} (`"can't supply flags when constructing one RegExp from another"`)가 발생하지 않고, 매개변수로부터 새로운 정규 표현식을 생성합니다.
+표현식 `new RegExp(/ab+c/, flags)`은 첫 번째 매개변수의 소스와 두 번째 매개변수의 [플래그](/ko/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags)를 사용하여 새로운 `RegExp`를 생성합니다.
 
-생성자 함수를 사용할 경우 보통의 문자열 이스케이프 규칙(특수 문자를 문자열에 사용할 때 앞에 역빗금(`\`)을 붙이는 것)을 준수해야 합니다.
+생성자 함수를 사용할 경우, 일반 문자열 이스케이프 규칙(문자열에 포함될 때 특수 문자 앞에 `\` 추가)이 필요합니다.
 
 예를 들어 다음 두 줄은 동일한 정규 표현식을 생성합니다.
 
 ```js
-let re = /\w+/;
-let re = new RegExp("\\w+");
+const re = /\w+/;
+// 혹은
+const re = new RegExp("\\w+");
 ```
 
 ### Perl 형태의 `RegExp` 속성

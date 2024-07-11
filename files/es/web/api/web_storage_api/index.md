@@ -18,8 +18,6 @@ Estos mecanismos están disponibles mediante las propiedades [`Window.sessionSto
 
 > **Nota:** Acceder al Almacenamiento web desde IFrames de terceros está prohibido si el usuario tiene [deshabilitadas las cookies de terceros](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (Firefox implementa este comportamiento a partir de la [versión 43](/es/docs/Mozilla/Firefox/Releases/43)).
 
-> **Nota:** El almacenamiento web no es lo mismo que [mozStorage](/es/docs/Storage) (interfaces Mozilla's XPCOM para SQLite) o la [Session store API](/es/docs/Session_store_API) (una utilidad de almacenamiento [XPCOM](/es/docs/XPCOM) usada por extensiones).
-
 ## Interfaces de almacenamiento web
 
 - {{domxref("Storage")}}
@@ -31,9 +29,9 @@ Estos mecanismos están disponibles mediante las propiedades [`Window.sessionSto
 
 ## Ejemplos
 
-Para ilustrar algunos usos típicos del almacenamiento web, hemos creado un ejemplo simple, llamado [Demo de almacenamiento web](https://github.com/mdn/web-storage-demo). La [página de inicio](http://mdn.github.io/web-storage-demo/) proporciona controles que puedes utilizar para personalizar el color, la tipografía y la imagen decorativa. Cuando seleccionas una opción diferente, la página se actualiza instantáneamente; además, tus opciones se almacenan en `localStorage`, de forma que si abandonas la página y la vuelves a cargar, tus opciones son recordadas.
+Para ilustrar algunos usos típicos del almacenamiento web, hemos creado un ejemplo simple, llamado [Demo de almacenamiento web](https://github.com/mdn/dom-examples/tree/main/web-storage). La [página de inicio](https://mdn.github.io/dom-examples/web-storage/) proporciona controles que puedes utilizar para personalizar el color, la tipografía y la imagen decorativa. Cuando seleccionas una opción diferente, la página se actualiza instantáneamente; además, tus opciones se almacenan en `localStorage`, de forma que si abandonas la página y la vuelves a cargar, tus opciones son recordadas.
 
-También creamos una[página de salida del evento](http://mdn.github.io/web-storage-demo/event.html) — si cargas esta página en otra pestaña y luego haces cambios a tus opciones en la página de inicio, verás que se muestra la información almacenada actualizada puesto que se dispara un evento [`StorageEvent`](/es/docs/Web/Reference/Events/StorageEvent).
+También creamos una[página de salida del evento](https://mdn.github.io/dom-examples/web-storage/event.html) — si cargas esta página en otra pestaña y luego haces cambios a tus opciones en la página de inicio, verás que se muestra la información almacenada actualizada puesto que se dispara un evento [`StorageEvent`](/es/docs/Web/API/StorageEvent).
 
 ## Especificaciones
 
