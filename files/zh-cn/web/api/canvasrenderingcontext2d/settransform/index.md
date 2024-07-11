@@ -36,9 +36,9 @@ setTransform(matrix)
 
 ### 参数
 
-`setTransform()`方法有两种可以接受的参数类型。较旧的类型由几个参数组成，代表要设置的变换矩阵的各个组成部分：
+`setTransform()` 方法有两种可以接受的参数类型。较旧的类型由几个参数组成，代表要设置的变换矩阵的各个组成部分：
 
-- `a` (`m11`)
+- `a`（`m11`）
   - ：矩阵的第一行第一列的单元格。
 - `b` (`m12`)
   - ：矩阵的第二行第一列的单元格。
@@ -51,7 +51,7 @@ setTransform(matrix)
 - `f` (`m42`)
   - ：矩阵的第二行第三列的单元格。
 
-或者，你可以传递一个单一的参数，该参数是一个包含上述属性值的对象。属性名是属性键，如果两个同义名都存在（例如 `m11` 和 `a`），它们必须是相同的数值，否则会抛出 {{jsxref("TypeError")}}。使用对象形式允许省略一些参数 — `a` 和 `d` 默认为 `1`，而其余默认为 `0`。
+或者，你可以传递一个单一的参数，该参数是一个包含上述属性值的对象。属性名是属性键，如果两个同义名都存在（例如 `m11` 和 `a`），它们必须是相同的数值，否则会抛出 {{jsxref("TypeError")}}。使用对象形式允许省略一些参数——`a` 和 `d` 默认为 `1`，而其余默认为 `0`。
 
 如果一个点原始坐标为 <math><semantics><mrow><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>)</mo></mrow><annotation encoding="TeX">(x, y)</annotation></semantics></math>，那么经过变换后，它的坐标将变为 <math><semantics><mrow><mo>(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>c</mi><mi>y</mi><mo>+</mo><mi>e</mi><mo>,</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>d</mi><mi>y</mi><mo>+</mo><mi>f</mi><mo>)</mo></mrow><annotation encoding="TeX">(ax + cy + e, bx + dy + f)</annotation></semantics></math>。这意味着：
 
