@@ -5974,10 +5974,6 @@
     "modified": "2019-03-23T22:34:06.535Z",
     "contributors": ["pekechis"]
   },
-  "Web/CSS/-webkit-overflow-scrolling": {
-    "modified": "2020-10-15T21:44:50.401Z",
-    "contributors": ["AlePerez92", "teoli", "natav", "pekechis"]
-  },
   "Web/CSS/-webkit-tap-highlight-color": {
     "modified": "2019-03-23T22:35:33.059Z",
     "contributors": ["pekechis"]
@@ -15140,6 +15136,10 @@
   "orphaned/Web/CSS/-moz-context-properties": {
     "modified": "2020-10-15T22:13:14.061Z",
     "contributors": ["Adorta4"]
+  },
+  "orphaned/Web/CSS/-webkit-overflow-scrolling": {
+    "modified": "2020-10-15T21:44:50.401Z",
+    "contributors": ["AlePerez92", "teoli", "natav", "pekechis"]
   },
   "orphaned/Web/CSS/:-moz-ui-valid": {
     "modified": "2019-03-23T22:29:23.305Z",

@@ -184,10 +184,13 @@
 /ko/docs/Glossary/Descriptor_(CSS)	/ko/docs/Glossary/CSS_Descriptor
 /ko/docs/Glossary/Empty_element	/ko/docs/Glossary/Void_element
 /ko/docs/Glossary/First_interactive	/ko/docs/conflicting/Glossary/First_CPU_idle
+/ko/docs/Glossary/Guard	/ko/docs/conflicting/Web/API/Fetch_API/Using_Fetch
 /ko/docs/Glossary/Header	/ko/docs/Glossary/HTTP_header
 /ko/docs/Glossary/I18N	/ko/docs/Glossary/Internationalization
 /ko/docs/Glossary/Index	/ko/docs/Glossary
 /ko/docs/Glossary/Internationalization_and_localization	/ko/docs/conflicting/Glossary/Internationalization
+/ko/docs/Glossary/Rendering_engine	/ko/docs/Glossary/Engine/Rendering
+/ko/docs/Glossary/Second-level_Domain	/ko/docs/conflicting/Glossary/SLD
 /ko/docs/Glossary/Simple_header	/ko/docs/conflicting/Glossary/CORS-safelisted_request_header
 /ko/docs/Glossary/Simple_response_header	/ko/docs/conflicting/Glossary/CORS-safelisted_response_header
 /ko/docs/Glossary/Symbol	/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol
@@ -442,6 +445,7 @@
 /ko/docs/Web/API/Element/firstChild	/ko/docs/Web/API/Node/firstChild
 /ko/docs/Web/API/Event/createEvent	/ko/docs/Web/API/Document/createEvent
 /ko/docs/Web/API/EventListener	/ko/docs/Web/API/EventTarget/addEventListener
+/ko/docs/Web/API/Fetch_API/Basic_concepts	/ko/docs/conflicting/Web/API/Fetch_API/Using_Fetch_c0ca150deec7d78cb1d4462e8542019b
 /ko/docs/Web/API/Fetch_API/Fetch의_사용법	/ko/docs/Web/API/Fetch_API/Using_Fetch
 /ko/docs/Web/API/File/Using_files_from_web_applications	/ko/docs/Web/API/File_API/Using_files_from_web_applications
 /ko/docs/Web/API/File/size	/ko/docs/Web/API/Blob/size
@@ -543,6 +547,7 @@
 /ko/docs/Web/API/window.screen.unlockOrientation	/ko/docs/Web/API/Screen/unlockOrientation
 /ko/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute	/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label
 /ko/docs/Web/Accessibility/ARIA/forms	/ko/docs/Web/Accessibility/ARIA
+/ko/docs/Web/CSS/-webkit-overflow-scrolling	/ko/docs/orphaned/Web/CSS/-webkit-overflow-scrolling
 /ko/docs/Web/CSS/@viewport	/ko/docs/Web/CSS
 /ko/docs/Web/CSS/Adjacent_sibling_combinator	/ko/docs/Web/CSS/Next-sibling_combinator
 /ko/docs/Web/CSS/All_About_The_Containing_Block	/ko/docs/Web/CSS/Containing_block
