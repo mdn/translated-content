@@ -34,7 +34,7 @@ l10n:
 - {{domxref("PushManager.registrations()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : 기존 푸시 구독을 검색합니다. {{domxref("PushManager.getSubscription()")}}으로 대체되었습니다.
 - {{domxref("PushManager.unregister()")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : 명시된 구독 엔드포인트를 등록 취소하고 삭제합니다. 갱신된 API에서 구독은 {{domxref("PushSubscription.unsubscribe()")}} 메서드 호출에 의해 등록 취소됩니다.
+  - : 지정된 구독 엔드포인트를 등록 취소하고 삭제합니다. 갱신된 API에서 구독은 {{domxref("PushSubscription.unsubscribe()")}} 메서드 호출에 의해 등록 취소됩니다.
 
 ## 예제
 
