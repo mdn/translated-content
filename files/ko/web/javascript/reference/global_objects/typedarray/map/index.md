@@ -62,7 +62,7 @@ const roots = numbers.map(Math.sqrt);
 ```js
 const numbers = new Uint8Array([1, 4, 9]);
 const doubles = numbers.map((num) => num * 2);
-// doubles 은 이제 Uint8Array [2, 8, 18] 이며 
+// doubles 은 이제 Uint8Array [2, 8, 18] 이며
 // numbers 여전히 Uint8Array [1, 4, 9] 입니다
 ```
 
