@@ -7,7 +7,7 @@ l10n:
 
 {{JSSidebar("Operators")}}
 
-`import.meta` 元属性将特定上下文的元数据暴露给 JavaScript 模块。它包含了这个模块的信息，例如这个模块的 URL。
+**`import.meta`** 元属性将特定上下文的元数据暴露给 JavaScript 模块。它包含了这个模块的信息，例如这个模块的 URL。
 
 ## 语法
 
@@ -15,9 +15,9 @@ l10n:
 import.meta
 ```
 
-### 取值
+### 值
 
-`import.meta` 是一个宿主环境创建的可扩展的 [`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)，其所有属性均可写、可配置、可枚举。规范没有在对象上明确定义任何属性，但是宿主环境通常会定义以下属性：
+`import.meta` 是一个宿主环境创建的可扩展的 [`null` 原型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)对象，其所有属性均可写、可配置、可枚举。规范没有在对象上明确定义任何属性，但是宿主环境通常会定义以下属性：
 
 - `url`
   - : 到此模块的完整 URL，包括查询参数和片段标识符（在 `?` 和 `#` 之后）。在浏览器中，它是可获取此脚本的 URL（对外部脚本）或者是包含此脚本的文档的 URL（对内联脚本）。在 Node.js 中，它是文件路径（包括 `file://` 协议部分）。
@@ -26,9 +26,9 @@ import.meta
 
 ## 描述
 
-`import.meta` 语法由关键字 `import`、一个点符号和 `meta` 标识符组成。因为 `import` 是[保留字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#保留字)而不是标识符，这个语法并不是[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)而是特殊的表达式语法。
+`import.meta` 语法由关键字 `import`、一个点符号和 `meta` 标识符组成。因为 `import` 是[保留字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#保留字)而不是标识符，其并不是[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)而是特殊的表达式语法。
 
-`import.meta` 元属性在 JavaScript 模块中可用；在模块之外（包括在模块中[直接调用 `eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval#direct_and_indirect_eval)）使用 `import.meta` 是语法错误。
+`import.meta` 元属性在 JavaScript 模块中可用；在模块之外（包括在模块中[直接调用 `eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval#直接和间接_eval)）使用 `import.meta` 是语法错误。
 
 ## 示例
 
