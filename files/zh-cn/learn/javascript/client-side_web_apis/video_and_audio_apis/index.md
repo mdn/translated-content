@@ -16,7 +16,7 @@ HTML 提供了用于在文档中嵌入富媒体的元素：{{htmlelement("video"
       <td>
         JavaScript 基础（见<a href="/zh-CN/docs/Learn/JavaScript/First_steps"
           >JavaScript 第一步</a
-        >，<a href="/zh-CN/docs/learn/JavaScript/Building_blocks"
+        >，<a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
           >创建 JavaScript 代码块</a
         >，<a href="/zh-CN/docs/Learn/JavaScript/Objects">JavaScript 对象介绍</a
         >）、<a
@@ -458,9 +458,9 @@ clearInterval(intervalFwd);
 
 - {{domxref("HTMLMediaElement")}}
 - [视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)：`<video>` 和 `<audio>` 的简单指南。
-- [音频与视频传递](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery)：给浏览器传递音频和视频的详细指南，包括很多提示、技巧和指向更深层次教程的相关链接。
-- [操作音频与视频](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation)：操作音频和视频的详细指南，例如：使用 [Canvas API](/zh-CN/docs/Web/API/Canvas_API)、[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 等。
+- [音频与视频传递](/zh-CN/docs/Web/Media/Audio_and_video_delivery)：给浏览器传递音频和视频的详细指南，包括很多提示、技巧和指向更深层次教程的相关链接。
+- [操作音频与视频](/zh-CN/docs/Web/Media/Audio_and_video_manipulation)：操作音频和视频的详细指南，例如：使用 [Canvas API](/zh-CN/docs/Web/API/Canvas_API)、[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 等。
 - {{htmlelement("video")}}、{{htmlelement("audio")}} 参考。
-- [HTML audio 和 video 元素支持的媒体格式](/zh-CN/docs/Web/HTML/Supported_media_formats).
+- [Web 上的媒体类型与格式教程](/zh-CN/docs/Web/Media/Formats).
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
