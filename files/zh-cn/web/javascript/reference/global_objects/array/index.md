@@ -61,7 +61,7 @@ console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
 console.log(fruits.length); // 6
 ```
 
-增加 {{jsxref("Array/length", "length")}}。
+增加 {{jsxref("Array/length", "length")}} 会通过添加空槽来扩展数组，而不是创建任何新元素——甚至不会是 `undefined`。
 
 ```js
 fruits.length = 10;
@@ -102,7 +102,7 @@ colors.forEach((item, index) => {
 colors.reverse(); // ['紫', 空槽 × 2, '蓝', '黄', '红']
 ```
 
-较新的方法（例如 `keys`）不会对空槽进行特殊处理，而是将它们视为包含 `undefined`。将空槽合并为 `undefined` 元素方法有：{{jsxref("Array/entries", "entries()")}}、{{jsxref("Array/fill", "fill()")}}、{{jsxref("Array/find", "find()")}}、{{jsxref("Array/findIndex", "findIndex()")}}、{{jsxref("Array/findLast", "findLast()")}}、{{jsxref("Array/findLastIndex", "findLastIndex()")}}、{{jsxref("Array/includes", "includes()")}}、{{jsxref("Array/join", "join()")}}、{{jsxref("Array/keys", "keys()")}}、{{jsxref("Array/toLocaleString", "toLocaleString()")}} 和 {{jsxref("Array/values", "values()")}}
+较新的方法（例如 `keys`）不会对空槽进行特殊处理，而是将它们视为包含 `undefined`。将空槽合并为 `undefined` 元素方法有：{{jsxref("Array/entries", "entries()")}}、{{jsxref("Array/fill", "fill()")}}、{{jsxref("Array/find", "find()")}}、{{jsxref("Array/findIndex", "findIndex()")}}、{{jsxref("Array/findLast", "findLast()")}}、{{jsxref("Array/findLastIndex", "findLastIndex()")}}、{{jsxref("Array/includes", "includes()")}}、{{jsxref("Array/join", "join()")}}、{{jsxref("Array/keys", "keys()")}}、{{jsxref("Array/toLocaleString", "toLocaleString()")}}、{{jsxref("Array/values", "values()")}} 和 {{jsxref("Array/with", "with()")}}。
 
 ```js
 const colors = ["红", "黄", "蓝"];
