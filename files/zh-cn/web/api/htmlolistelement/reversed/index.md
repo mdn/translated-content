@@ -7,7 +7,9 @@ l10n:
 
 {{ApiRef("HTML DOM")}}
 
-{{domxref("HTMLOListElement")}} 接口的 **`reversed`** 属性表示列表的顺序。它反映了 {{HTMLElement("ol")}} 元素的 [`reversed`](/zh-CN/docs/Web/HTML/Element/ol#reversed) 属性。
+{{domxref("HTMLOListElement")}} 接口的 **`reversed`** 属性表示列表的顺序。
+
+它反映了 {{HTMLElement("ol")}} 元素的 [`reversed`](/zh-CN/docs/Web/HTML/Element/ol#reversed) 属性。
 
 ## 值
 
@@ -30,9 +32,9 @@ l10n:
 
 ```js
 const olElement = document.querySelector("#order-list");
-console.log(olElement.reversed); // 输出："false"
+console.log(olElement.reversed); // 输出：“false”
 olElement.reversed = "true";
-console.log(olElement.reversed); // 输出："true"
+console.log(olElement.reversed); // 输出：“true”
 ```
 
 ### 结果

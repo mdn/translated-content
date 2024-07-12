@@ -7,7 +7,9 @@ l10n:
 
 {{ApiRef("HTML DOM")}}
 
-{{domxref("HTMLOListElement")}} 接口的 **`start`** 属性表示有序列表的起始值，默认值是 1。它反映了 {{HTMLElement("ol")}} 元素的 [`start`](/zh-CN/docs/Web/HTML/Element/ol#start) 属性。
+{{domxref("HTMLOListElement")}} 接口的 **`start`** 属性表示有序列表的起始值，默认值是 1。
+
+它反映了 {{HTMLElement("ol")}} 元素的 [`start`](/zh-CN/docs/Web/HTML/Element/ol#start) 属性。
 
 > **备注：** `start` 属性值独立于 {{domxref("HTMLOListElement.type")}} 属性；它总是数字，即使当类型是字母或罗马数字。
 
@@ -32,9 +34,9 @@ l10n:
 
 ```js
 const olElement = document.querySelector("#order-list");
-console.log(olElement.start); // 输出："1"
+console.log(olElement.start); // 输出：“1”
 olElement.start = "11";
-console.log(olElement.start); // 输出："11"
+console.log(olElement.start); // 输出：“11”
 ```
 
 ### 结果
