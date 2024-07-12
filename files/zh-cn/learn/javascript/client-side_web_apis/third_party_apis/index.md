@@ -191,17 +191,17 @@ L.marker([53.480759, -2.242631], {
 
 1. 找到以下行：
 
-  ```js
-  const key = "INSERT-YOUR-API-KEY-HERE";
-  ```
+   ```js
+   var key = "INSERT-YOUR-API-KEY-HERE";
+   ```
 
-  用你在上一部分中获取的实际API密钥替换现有的API密钥。
+   用你在上一部分中获取的实际API密钥替换现有的API密钥。
 
 2. 在 `// 控制功能的事件监听器` 注释下面的 JavaScript 中添加以下行。当表单提交（按钮被按下）时，这会调用一个名为 `submitSearch()` 的函数。
 
-  ```js
-  searchForm.addEventListener("submit", submitSearch);
-  ```
+   ```js
+   searchForm.addEventListener("submit", submitSearch);
+   ```
 
 3. 现在在上面的行下方添加 `submitSearch()` 和 `fetchResults()` 函数定义：
 
@@ -227,7 +227,7 @@ L.marker([53.480759, -2.242631], {
      }
    }
    ```
-   
+
 `submitSearch()` 将页码设置回 0，然后调用 `fetchResults()`。首先在事件对象上调用 [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault)，以阻止表单实际提交（否则会破坏示例运行）。接下来，我们使用一些字符串操作来组装我们将向其发送请求的完整 URL。我们从组装 URL 的部分开始（我们认为对这个示例来说，组装 URL 是必需的）：
 
 - 基本 URL（取自 `baseURL` 变量）。
