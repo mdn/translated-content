@@ -1,5 +1,5 @@
 ---
-title: "SyntaxError: \"x\" is not a legal ECMA-262 octal constant"
+title: 'SyntaxError: "x" is not a legal ECMA-262 octal constant'
 slug: Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 original_slug: Web/JavaScript/Reference/Errors/Deprecated_octal
 ---
