@@ -2,7 +2,7 @@
 title: 视频和音频 API
 slug: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 l10n:
-   sourceCommit: d6a792e3adce2c8b29a73a3b407e786091363980
+  sourceCommit: d6a792e3adce2c8b29a73a3b407e786091363980
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -79,21 +79,21 @@ HTML 提供了用于在文档中嵌入富媒体的元素：{{htmlelement("video"
 
 ```html
 <div class="player">
-   <video controls>
-      <source src="video/sintel-short.mp4" type="video/mp4" />
-      <source src="video/sintel-short.webm" type="video/webm" />
-      <!-- fallback content here -->
-   </video>
-   <div class="controls">
-      <button class="play" data-icon="P" aria-label="play pause toggle"></button>
-      <button class="stop" data-icon="S" aria-label="stop"></button>
-      <div class="timer">
-         <div></div>
-         <span aria-label="timer">00:00</span>
-      </div>
-      <button class="rwd" data-icon="B" aria-label="rewind"></button>
-      <button class="fwd" data-icon="F" aria-label="fast forward"></button>
-   </div>
+  <video controls>
+    <source src="video/sintel-short.mp4" type="video/mp4" />
+    <source src="video/sintel-short.webm" type="video/webm" />
+    <!-- fallback content here -->
+  </video>
+  <div class="controls">
+    <button class="play" data-icon="P" aria-label="play pause toggle"></button>
+    <button class="stop" data-icon="S" aria-label="stop"></button>
+    <div class="timer">
+      <div></div>
+      <span aria-label="timer">00:00</span>
+    </div>
+    <button class="rwd" data-icon="B" aria-label="rewind"></button>
+    <button class="fwd" data-icon="F" aria-label="fast forward"></button>
+  </div>
 </div>
 ```
 
@@ -111,18 +111,18 @@ HTML 提供了用于在文档中嵌入富媒体的元素：{{htmlelement("video"
 
 ```css
 .controls {
-   visibility: hidden;
-   opacity: 0.5;
-   width: 400px;
-   border-radius: 10px;
-   position: absolute;
-   bottom: 20px;
-   left: 50%;
-   margin-left: -200px;
-   background-color: black;
-   box-shadow: 3px 3px 5px black;
-   transition: 1s all;
-   display: flex;
+  visibility: hidden;
+  opacity: 0.5;
+  width: 400px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -200px;
+  background-color: black;
+  box-shadow: 3px 3px 5px black;
+  transition: 1s all;
+  display: flex;
 }
 
 .player:hover .controls,
@@ -139,24 +139,24 @@ HTML 提供了用于在文档中嵌入富媒体的元素：{{htmlelement("video"
 
 ```css
 @font-face {
-   font-family: "HeydingsControlsRegular";
-   src: url("fonts/heydings_controls-webfont.eot");
-   src:
-           url("fonts/heydings_controls-webfont.eot?#iefix")
-           format("embedded-opentype"),
-           url("fonts/heydings_controls-webfont.woff") format("woff"),
-           url("fonts/heydings_controls-webfont.ttf") format("truetype");
-   font-weight: normal;
-   font-style: normal;
+  font-family: "HeydingsControlsRegular";
+  src: url("fonts/heydings_controls-webfont.eot");
+  src:
+    url("fonts/heydings_controls-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/heydings_controls-webfont.woff") format("woff"),
+    url("fonts/heydings_controls-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 button:before {
-   font-family: HeydingsControlsRegular;
-   font-size: 20px;
-   position: relative;
-   content: attr(data-icon);
-   color: #aaa;
-   text-shadow: 1px 1px 0px black;
+  font-family: HeydingsControlsRegular;
+  font-size: 20px;
+  position: relative;
+  content: attr(data-icon);
+  color: #aaa;
+  text-shadow: 1px 1px 0px black;
 }
 ```
 
@@ -174,29 +174,29 @@ button:before {
 
 ```css
 .timer {
-   line-height: 38px;
-   font-size: 10px;
-   font-family: monospace;
-   text-shadow: 1px 1px 0px black;
-   color: white;
-   flex: 5;
-   position: relative;
+  line-height: 38px;
+  font-size: 10px;
+  font-family: monospace;
+  text-shadow: 1px 1px 0px black;
+  color: white;
+  flex: 5;
+  position: relative;
 }
 
 .timer div {
-   position: absolute;
-   background-color: rgb(255 255 255 / 20%);
-   left: 0;
-   top: 0;
-   width: 0;
-   height: 38px;
-   z-index: 2;
+  position: absolute;
+  background-color: rgb(255 255 255 / 20%);
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 38px;
+  z-index: 2;
 }
 
 .timer span {
-   position: absolute;
-   z-index: 3;
-   left: 19px;
+  position: absolute;
+  z-index: 3;
+  left: 19px;
 }
 ```
 
@@ -394,18 +394,18 @@ media.addEventListener("timeupdate", setTime);
 
 ```js
 function setTime() {
-   const minutes = Math.floor(media.currentTime / 60);
-   const seconds = Math.floor(media.currentTime - minutes * 60);
+  const minutes = Math.floor(media.currentTime / 60);
+  const seconds = Math.floor(media.currentTime - minutes * 60);
 
-   const minuteValue = minutes.toString().padStart(2, "0");
-   const secondValue = seconds.toString().padStart(2, "0");
+  const minuteValue = minutes.toString().padStart(2, "0");
+  const secondValue = seconds.toString().padStart(2, "0");
 
    const mediaTime = `${minuteValue}:${secondValue}`;
    timer.textContent = mediaTime;
 
-   const barLength =
-           timerWrapper.clientWidth * (media.currentTime / media.duration);
-   timerBar.style.width = `${barLength}px`;
+  const barLength =
+    timerWrapper.clientWidth * (media.currentTime / media.duration);
+  timerBar.style.width = `${barLength}px`;
 }
 ```
 
