@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLObjectElement")}} 接口的  **`willValidate`**  只读属性返回一个布尔值指示元素是否为约束验证的候选者。对于 `HTMLObjectElement` 对象，始终为 `false`。
+{{domxref("HTMLObjectElement")}} 接口的 **`willValidate`** 只读属性返回一个布尔值指示元素是否为约束验证的候选者。对于 `HTMLObjectElement` 对象，始终为 `false`。
 
 ## 值
 
