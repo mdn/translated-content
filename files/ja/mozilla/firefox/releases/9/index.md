@@ -109,7 +109,7 @@ See [Updating add-ons for Firefox 9](/ja/docs/Firefox/Updating_add-ons_for_Firef
 
 ### IDL パーサー
 
-IDL パーサーから、これまで完全に実装されたことのなかったユニークポインタの概念が削除されました。
+IDL パーサーから、これまで完全に実装されたことのなかったユニークポインターの概念が削除されました。
 
 ### Build system changes
 

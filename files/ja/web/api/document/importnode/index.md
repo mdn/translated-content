@@ -1,6 +1,9 @@
 ---
-title: Document.importNode()
+title: "Document: importNode() メソッド"
+short-title: importNode()
 slug: Web/API/Document/importNode
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
@@ -13,9 +16,9 @@ slug: Web/API/Document/importNode
 
 ## 構文
 
-```js
-importNode(externalNode);
-importNode(externalNode, deep);
+```js-nolint
+importNode(externalNode)
+importNode(externalNode, deep)
 ```
 
 ### 引数

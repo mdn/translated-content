@@ -521,13 +521,15 @@
 /zh-CN/docs/Glossary/Descriptor_(CSS)	/zh-CN/docs/Glossary/CSS_Descriptor
 /zh-CN/docs/Glossary/Empty_element	/zh-CN/docs/Glossary/Void_element
 /zh-CN/docs/Glossary/Grid_Rows	/zh-CN/docs/Glossary/Grid_Row
+/zh-CN/docs/Glossary/Guard	/zh-CN/docs/Web/API/Fetch_API/Using_Fetch
 /zh-CN/docs/Glossary/Header	/zh-CN/docs/Glossary/HTTP_header
 /zh-CN/docs/Glossary/I18N	/zh-CN/docs/Glossary/Internationalization
 /zh-CN/docs/Glossary/IP地址	/zh-CN/docs/Glossary/IP_Address
+/zh-CN/docs/Glossary/Rendering_engine	/zh-CN/docs/Glossary/Engine/Rendering
+/zh-CN/docs/Glossary/Second-level_Domain	/zh-CN/docs/Glossary/SLD
 /zh-CN/docs/Glossary/Serialize	/zh-CN/docs/Glossary/Serialization
 /zh-CN/docs/Glossary/Simple_header	/zh-CN/docs/Glossary/CORS-safelisted_request_header
 /zh-CN/docs/Glossary/Simple_response_header	/zh-CN/docs/Glossary/CORS-safelisted_response_header
-/zh-CN/docs/Glossary/Symbol	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /zh-CN/docs/Glossary/Transferable_objects	/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects
 /zh-CN/docs/Glossary/XHR_(XMLHttpRequest)	/zh-CN/docs/Glossary/XMLHttpRequest
 /zh-CN/docs/Glossary/主轴	/zh-CN/docs/Glossary/Main_Axis
@@ -1468,6 +1470,7 @@
 /zh-CN/docs/Web/API/Element/pointerlockchange_event	/zh-CN/docs/Web/API/Document/pointerlockchange_event
 /zh-CN/docs/Web/API/Element/removeAttributre	/zh-CN/docs/Web/API/Element/removeAttribute
 /zh-CN/docs/Web/API/Element/select_event	/zh-CN/docs/Web/API/HTMLInputElement/select_event
+/zh-CN/docs/Web/API/Event/Comparison_of_Event_Targets	/zh-CN/docs/Learn/JavaScript/Building_blocks/Event_bubbling
 /zh-CN/docs/Web/API/Event/CustomEvent	/zh-CN/docs/Web/API/CustomEvent
 /zh-CN/docs/Web/API/Event/pageY	/zh-CN/docs/Web/API/MouseEvent/pageY
 /zh-CN/docs/Web/API/Event/禁用时间冒泡	/zh-CN/docs/Web/API/Event/cancelBubble
@@ -1480,7 +1483,9 @@
 /zh-CN/docs/Web/API/FetchController	/zh-CN/docs/Web/API/AbortController
 /zh-CN/docs/Web/API/FetchController/AbortController	/zh-CN/docs/Web/API/AbortController/AbortController
 /zh-CN/docs/Web/API/FetchController/abort	/zh-CN/docs/Web/API/AbortController/abort
-/zh-CN/docs/Web/API/Fetch_API/基本概念	/zh-CN/docs/Web/API/Fetch_API/Basic_concepts
+/zh-CN/docs/Web/API/Fetch_API/Basic_concepts	/zh-CN/docs/Web/API/Fetch_API/Using_Fetch
+/zh-CN/docs/Web/API/Fetch_API/Cross-global_fetch_usage	/zh-CN/docs/Web/API/Fetch_API/Using_Fetch
+/zh-CN/docs/Web/API/Fetch_API/基本概念	/zh-CN/docs/Web/API/Fetch_API/Using_Fetch
 /zh-CN/docs/Web/API/File.fileName	/zh-CN/docs/Web/API/File/name
 /zh-CN/docs/Web/API/File.fileSize	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/Web/API/File.lastModifiedDate	/zh-CN/docs/Web/API/File/lastModifiedDate
@@ -2710,7 +2715,9 @@
 /zh-CN/docs/Web/SVG/Element/线性渐变	/zh-CN/docs/Web/SVG/Element/linearGradient
 /zh-CN/docs/Web/SVG/Tutorial/渐变	/zh-CN/docs/Web/SVG/Tutorial/Gradients
 /zh-CN/docs/Web/Security/CSP/Using_Content_Security_Policy	/zh-CN/docs/Web/HTTP/CSP
+/zh-CN/docs/Web/Security/Securing_your_site	/zh-CN/docs/Web/Security/Practical_implementation_guides
 /zh-CN/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types	/zh-CN/docs/Learn/Server-side/Configuring_server_MIME_types
+/zh-CN/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/zh-CN/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /zh-CN/docs/Web/Security/传输层安全协议	/zh-CN/docs/Web/Security/Transport_Layer_Security
 /zh-CN/docs/Web/Security/子资源完整性	/zh-CN/docs/Web/Security/Subresource_Integrity
 /zh-CN/docs/Web/WEB_API_---js	/zh-CN/docs/Web/API
