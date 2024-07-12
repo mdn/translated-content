@@ -11,8 +11,7 @@ l10n:
 
 ## 허용되는 속성
 
-Only a small subset of CSS properties can be used in a rule with `::spelling-error` in its selector:
-몇 개의 특정한 CSS 속성만이 `::spelling-error` 과 해당 선택자 내에서 함께 사용될 수 있습니다.
+CSS 속성의 일부만이 `::spelling-error` 과 해당 선택자 내에서 함께 사용될 수 있습니다.
 
 - {{cssxref("color")}}
 - {{cssxref("background-color")}}
