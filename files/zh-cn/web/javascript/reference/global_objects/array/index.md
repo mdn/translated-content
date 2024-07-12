@@ -20,7 +20,7 @@ l10n:
 
 ### 数组索引
 
-`Array` 对象不能使用任意字符串作为元素索引（如[关联数组](https://zh.wikipedia.org/wiki/关联数组)），必须使用非负整数（或它们的字符串形式）。通过非整数设置或访问不会设置或从数组列表本身检索元素，但会设置或访问与该数组的[对象属性集合](/zh-CN/docs/Web/JavaScript/Data_structures#属性)相关的变量。数组的对象属性和数组元素列表是分开的，数组的[遍历和修改操作](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#数组方法)不能应用于这些命名属性。
+`Array` 对象不能使用任意字符串作为元素索引（如[关联数组](https://zh.wikipedia.org/wiki/关联数组)），必须使用非负整数（或它们的字符串形式）。通过非整数设置或访问不会设置或从数组列表本身检索元素，但会设置或访问与该数组的[对象属性集合](/zh-CN/docs/Web/JavaScript/Data_structures#属性)相关的变量。数组的对象属性和数组元素列表是分开的，数组的[遍历和修改操作](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#数组方法)不能应用于这些具名属性。
 
 数组元素是对象属性，就像 `toString` 是属性一样（具体来说，`toString()` 是一种方法）。然而，尝试按以下方式访问数组的元素会抛出语法错误，因为属性名无效：
 
@@ -271,7 +271,7 @@ f("a", "b"); // 'a+b'
 
 - {{jsxref("Array.from()")}}
   - : 从数组类对象或可迭代对象创建一个新的 `Array` 实例。
-- {{jsxref("Array.fromAsync()")}} {{Experimental_Inline}}
+- {{jsxref("Array.fromAsync()")}}
   - : 从异步可迭代、可迭代或类数组对象创建新的 `Array` 实例。
 - {{jsxref("Array.isArray()")}}
   - : 如果参数是数组则返回 `true` ，否则返回 `false` 。
@@ -788,7 +788,7 @@ console.log(execResult); // [ "dbBd", "bB", "d" ]
 
 ### 迭代方法中的改变初始数组
 
-[迭代方法](#迭代方法中的改变初始数组) 不会改变调用它的数组，但作为 `callbackFn` 提供的函数可以。要记住关键原则是只有 0 和 `arrayLength - 1` 之间的索引可访问，`arrayLength` 是数组方法第一次被调用时的长度值，但传递给回调的元素是访问索引时的值。因此：
+[迭代方法](#迭代方法)不会改变调用它的数组，但作为 `callbackFn` 提供的函数可以。要记住关键原则是只有 0 和 `arrayLength - 1` 之间的索引可访问，`arrayLength` 是数组方法第一次被调用时的长度值，但传递给回调的元素是访问索引时的值。因此：
 
 - `callbackFn` 不会访问任何添加到超出数组的初始化长度之外的元素，当开始调用迭代方法时。
 - 对已访问索引的变更不会导致再次对其调用 `callbackFn`。
