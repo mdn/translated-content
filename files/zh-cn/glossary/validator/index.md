@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-验证器是检查代码中的语法错误的程序。验证器可以为任何格式或语言创建，但在我们的上下文中，我们谈论检查 {{Glossary("HTML")}}、{{Glossary("CSS")}} 和 {{Glossary("XML")}} 的工具。
+验证器是检查代码中的语法错误的程序。验证器可以为任何格式或语言创建，但在我们的上下文中，指的是检查 {{Glossary("HTML")}}、{{Glossary("CSS")}} 和 {{Glossary("XML")}} 的工具。
 
 ## 参见
 
