@@ -2,7 +2,7 @@
 title: 第三方 API
 slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 l10n:
-   sourceCommit: 3684ed02bbb3efbb16e25b08cf81b3a6aff97a9c
+  sourceCommit: 3684ed02bbb3efbb16e25b08cf81b3a6aff97a9c
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -68,9 +68,9 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
 
 ```js
 const map = L.mapquest.map("map", {
-   center: [53.480759, -2.242631],
-   layers: L.mapquest.tileLayer("map"),
-   zoom: 12,
+  center: [53.480759, -2.242631],
+  layers: L.mapquest.tileLayer("map"),
+  zoom: 12,
 });
 ```
 
@@ -80,14 +80,14 @@ const map = L.mapquest.map("map", {
 
 ### 它们需要 API 密钥
 
-浏览器的 API 的安全通常通过权限弹窗处理，正如[我们前文所说](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#they_have_additional_security_mechanisms_where_appropriate)。这样做的目的是让用户知道他们访问的网站上发生了什么，并且不太可能成为恶意使用 API 的人的受害者。
+浏览器的 API 的安全通常通过权限弹窗处理，正如[我们前文所说](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#they_have_additional_security_mechanisms_where_appropriate)。这样做的目的是让用户知道他们访问的网站上发生了什么，并且不太可能成为恶意使用 API 的人的受害者。
 
 第三方 API 有一个稍微不同的权限系统——它们倾向于使用关键代码来允许开发人员访问 API 功能。这更多是为了保护 API 的提供者而非用户。
 
 在 Mapquest API 示例中，你会找到一行这样的：
 
 ```js
-L.mapquest.key = "你的 API 密钥"
+L.mapquest.key = "你的 API 密钥";
 ```
 
 这一行指定了一个在你的应用中使用的 API 或开发者密钥——应用的开发者必须要申请获得一个密钥，然后在他们的代码中包含这个密钥，从而可以访问 API 的功能。在我们的示例中，我们只提供了一个占位符。
@@ -103,13 +103,13 @@ L.mapquest.key = "你的 API 密钥"
 
 让我们为 Mapquest 示例添加一些更多的功能，以展示如何使用 API 的其他功能。
 
-1. 首先，在一个新目录中创建 [Mapquest 入门文件](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/start/index.html)的副本。如果你已经[克隆了示例代码库](/en-US/docs/Learn#getting_our_code_examples)，你将已经拥有这个文件的副本：你可以在 _javascript/apis/third-party-apis/mapquest/start_ 目录中找到它。
+1. 首先，在一个新目录中创建 [Mapquest 入门文件](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/start/index.html)的副本。如果你已经[克隆了示例代码库](/zh-CN/docs/Learn#getting_our_code_examples)，你将已经拥有这个文件的副本：你可以在 _javascript/apis/third-party-apis/mapquest/start_ 目录中找到它。
 2. 接下来，你需要访问 Mapquest 开发者网站，创建一个账户，然后创建一个开发者密钥来使用你的示例。（在编纂本文时，它在网站上被称为“consumer key”，密钥创建过程还要求提供一个可选的“callback URL”。现在你并不需要给出 URL，只需留空即可。）
 3. 打开你的起始文件，并用你的密钥替换 API 密钥占位符。
 
 ### 更改地图类型
 
-Mapquest API可以显示多种不同类型的地图。找到以下行：
+Mapquest API 可以显示多种不同类型的地图。找到以下行：
 
 ```js
 layers: L.mapquest.tileLayer("map");
@@ -171,15 +171,15 @@ L.marker([53.480759, -2.242631], {
 
 ### 查找文档
 
-当你想使用第三方 API 时，找到文档的位置是至关重要的，这样你才能找到API的功能，如何使用它们等。纽约时报 API 文档在 <https://developer.nytimes.com/>。
+当你想使用第三方 API 时，找到文档的位置是至关重要的，这样你才能找到 API 的功能，如何使用它们等。纽约时报 API 文档在 <https://developer.nytimes.com/>。
 
 ### 获取开发者密钥
 
-出于安全和责任的考虑，大多数 API 要求你使用某种开发者密钥。请按照 <https://developer.nytimes.com/get-started> 的指示注册一个纽约时报API密钥。
+出于安全和责任的考虑，大多数 API 要求你使用某种开发者密钥。请按照 <https://developer.nytimes.com/get-started> 的指示注册一个纽约时报 API 密钥。
 
 1. 让我们请求一个文章搜索 API 的密钥——创建一个新应用，选择这个 API 作为你想要使用的 API（填写名称和描述，在“Article Search API”下切换开关到开启位置，然后点击“Create”）。
-2. 从结果页面获取API密钥。
-3. 现在，开始修改示例。先将 [nytimes/start](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/nytimes/start) 目录中的所有文件复制一份。如果你已经[克隆了示例代码库](/en-US/docs/Learn#getting_our_code_examples)，你将已经拥有这些文件的副本，可以在 _javascript/apis/third-party-apis/nytimes/start_ 目录中找到。最开始 `script.js` 文件会包含设置示例所需的一些变量；下面我们将填写所需的功能。
+2. 从结果页面获取 API 密钥。
+3. 现在，开始修改示例。先将 [nytimes/start](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/nytimes/start) 目录中的所有文件复制一份。如果你已经[克隆了示例代码库](/zh-CN/docs/Learn#getting_our_code_examples)，你将已经拥有这些文件的副本，可以在 _javascript/apis/third-party-apis/nytimes/start_ 目录中找到。最开始 `script.js` 文件会包含设置示例所需的一些变量；下面我们将填写所需的功能。
 
 该应用程序最终允许你输入搜索词和可选的开始和结束日期，然后使用这些信息查询文章搜索 API 并显示搜索结果。
 
@@ -187,7 +187,7 @@ L.marker([53.480759, -2.242631], {
 
 ### 将 API 连接到你的应用程序
 
-首先，你需要在 API 和你的应用程序之间建立连接。在纽约时报文章搜索这个 API 的情况下，你需要每次从服务请求数据时都将 API 密钥作为 [get](/en-US/docs/Web/HTTP/Methods/GET) 参数包含在正确的 URL 中。
+首先，你需要在 API 和你的应用程序之间建立连接。在纽约时报文章搜索这个 API 的情况下，你需要每次从服务请求数据时都将 API 密钥作为 [get](/zh-CN/docs/Web/HTTP/Methods/GET) 参数包含在正确的 URL 中。
 
 1. 找到以下行：
 
@@ -236,7 +236,7 @@ L.marker([53.480759, -2.242631], {
 - 搜索词作为一个查询字符串参数。它需要在 `q` URL 参数中指定（取自 `searchTerm` 文本 {{htmlelement("input")}} 的值）。
 - 要返回结果中的文档类型。它需要在 `fq` URL 参数中传递一个表达式。在该示例中，我们希望返回的是文章。
 
-接下来，我们使用几个 [`if ()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) 语句检查 `startDate` 和 `endDate` 元素是否已填入值。如果填入了值，我们将其分别附加到 URL 中的 `begin_date` 和 `end_date` 参数中。
+接下来，我们使用几个 [`if ()`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 语句检查 `startDate` 和 `endDate` 元素是否已填入值。如果填入了值，我们将其分别附加到 URL 中的 `begin_date` 和 `end_date` 参数中。
 
 因此，完整的 URL 可能如下所示：
 
@@ -244,13 +244,13 @@ L.marker([53.480759, -2.242631], {
 https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=YOUR-API-KEY-HERE&page=0&q=cats&fq=document_type:("article")&begin_date=20170301&end_date=20170312
 ```
 
-> **备注:** 你可以在 NYTimes 开发者文档中找到更多关于可以包含的 URL 参数的详细信息。
+> **备注：** 你可以在 NYTimes 开发者文档中找到更多关于可以包含的 URL 参数的详细信息。
 
 > **备注：** 这个例子包含了基本的表单数据验证——在表单提交之前，搜索词字段必须被填入（通过 `required` 属性实现），日期字段包含 `pattern` 属性，这意味着它们的值必须由 8 个数字组成（`pattern="[0-9]{8}"`）。有关这些工作原理的更多详情，请参阅表单数据验证。
 
 ### 从 API 请求数据
 
-现在我们已经构建了 URL，让我们向其发出请求。我们将使用 [Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch) 来实现这一目的。
+现在我们已经构建了 URL，让我们向其发出请求。我们将使用 [Fetch API](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch) 来实现这一目的。
 
 在 `fetchResults()` 函数内部的闭合大括号之前，添加以下代码块：
 
@@ -262,7 +262,7 @@ fetch(url)
   .catch((error) => console.error(`获取数据时出错：${error.message}`));
 ```
 
-这里我们通过将 `url` 变量传递给 [`fetch()`](/en-US/docs/Web/API/fetch) 来运行请求，使用 [`json()`](/en-US/docs/Web/API/Response/json) 函数将响应主体转换为 JSON，然后将生成的 JSON 传递给 `displayResults()` 函数，以便在 UI 中显示数据。我们还捕获并记录可能抛出的任何错误。
+这里我们通过将 `url` 变量传递给 [`fetch()`](/zh-CN/docs/Web/API/fetch) 来运行请求，使用 [`json()`](/zh-CN/docs/Web/API/Response/json) 函数将响应主体转换为 JSON，然后将生成的 JSON 传递给 `displayResults()` 函数，以便在 UI 中显示数据。我们还捕获并记录可能抛出的任何错误。
 
 ### 显示数据
 
@@ -322,21 +322,21 @@ function displayResults(json) {
 
 这里有很多代码，让我们一步步解释它们：
 
-- [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) 循环是一个常见的模式，用于删除 DOM 元素的所有内容，在这种情况下是 {{htmlelement("section")}} 元素。我们不断检查 `<section>` 是否有第一个子元素，如果有，我们就删除第一个子元素。循环在 `<section>` 没有任何子元素时结束。
+- [`while`](/zh-CN/docs/Web/JavaScript/Reference/Statements/while) 循环是一个常见的模式，用于删除 DOM 元素的所有内容，在这种情况下是 {{htmlelement("section")}} 元素。我们不断检查 `<section>` 是否有第一个子元素，如果有，我们就删除第一个子元素。循环在 `<section>` 没有任何子元素时结束。
 - 接下来，我们将 `articles` 变量设置为等于 `json.response.docs`（一个包含所有表示搜索返回文章对象的数组）。这纯粹是为了简化后续代码。
-- 第一个 [`if ()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) 块检查是否返回了 10 篇文章（API 一次最多返回 10 篇文章）。如果是，我们显示包含 _前10篇_/_后10篇_ 分页按钮的 {{htmlelement("nav")}}。如果返回的文章少于 10 篇，它们都可以放在一页上，所以我们不需要显示分页按钮。我们将在下一节中连接分页功能。
+- 第一个 [`if ()`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 块检查是否返回了 10 篇文章（API 一次最多返回 10 篇文章）。如果是，我们显示包含 _前 10 篇_/_后 10 篇_ 分页按钮的 {{htmlelement("nav")}}。如果返回的文章少于 10 篇，它们都可以放在一页上，所以我们不需要显示分页按钮。我们将在下一节中连接分页功能。
 - 下一个 `if ()` 块检查是否未返回任何文章。如果是，我们不会尝试显示任何内容——我们创建一个包含文本"没有返回结果。"的 {{htmlelement("p")}} 并将其插入到 `<section>` 中。
-- 如果返回了一些文章，我们首先创建我们想用来显示每个新闻故事的所有元素，将正确的内容插入到每个元素中，然后将它们插入到 DOM 中的适当位置。为了找出文章对象中哪些属性包含要显示的正确数据，我们查阅了文章搜索 API参考（参见[纽约时报 API](https://developer.nytimes.com/apis)）。大多数操作是显而易见的，但有几个值得指出：
-  - 我们使用 [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 循环遍历与每篇文章关联的所有关键词，并将每个关键词插入到自己的 {{htmlelement("span")}} 中，放在一个 `<p>` 中。这是为了便于对每个关键词进行样式设置。
+- 如果返回了一些文章，我们首先创建我们想用来显示每个新闻故事的所有元素，将正确的内容插入到每个元素中，然后将它们插入到 DOM 中的适当位置。为了找出文章对象中哪些属性包含要显示的正确数据，我们查阅了文章搜索 API 参考（参见[纽约时报 API](https://developer.nytimes.com/apis)）。大多数操作是显而易见的，但有几个值得指出：
+  - 我们使用 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环遍历与每篇文章关联的所有关键词，并将每个关键词插入到自己的 {{htmlelement("span")}} 中，放在一个 `<p>` 中。这是为了便于对每个关键词进行样式设置。
   - 我们使用一个 `if ()` 块（`if (current.multimedia.length > 0) { }`）检查每篇文章是否有任何相关图片，因为有些文章没有。如果存在，我们只显示第一张图片；否则会抛出错误。
 
 ### 连接分页按钮
 
-要使分页按钮工作，我们将增加（或减少）`pageNumber` 变量的值，然后重新运行 fetch 请求，并在页面 URL 参数中包含新值。这是可以做到的，因为纽约时报 API一次只返回 10 个结果（如果有超过 10 个结果可用）。如果 pageURL 参数设置为 0（不包括任何值时的默认值也为 0），它将返回前 10 个（0-9））；如果设置为 1，则会返回接下来的 10 个（10-19），依此类推。
+要使分页按钮工作，我们将增加（或减少）`pageNumber` 变量的值，然后重新运行 fetch 请求，并在页面 URL 参数中包含新值。这是可以做到的，因为纽约时报 API 一次只返回 10 个结果（如果有超过 10 个结果可用）。如果 pageURL 参数设置为 0（不包括任何值时的默认值也为 0），它将返回前 10 个（0-9））；如果设置为 1，则会返回接下来的 10 个（10-19），依此类推。
 
 这允许我们编写一个简单的分页函数。
 
-1. 在现有的 [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) 调用下方，添加这两个新的调用，它们在相关按钮被点击时调用 `nextPage()` 和 `previousPage()` 函数：
+1. 在现有的 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 调用下方，添加这两个新的调用，它们在相关按钮被点击时调用 `nextPage()` 和 `previousPage()` 函数：
 
    ```js
    nextBtn.addEventListener("click", nextPage);
