@@ -127,7 +127,7 @@ HTML 提供了用于在文档中嵌入富媒体的元素：{{htmlelement("video"
 
 .player:hover .controls,
 .player:focus-within .controls {
-   opacity: 1;
+  opacity: 1;
 }
 ```
 
@@ -400,8 +400,8 @@ function setTime() {
   const minuteValue = minutes.toString().padStart(2, "0");
   const secondValue = seconds.toString().padStart(2, "0");
 
-   const mediaTime = `${minuteValue}:${secondValue}`;
-   timer.textContent = mediaTime;
+  const mediaTime = `${minuteValue}:${secondValue}`;
+  timer.textContent = mediaTime;
 
   const barLength =
     timerWrapper.clientWidth * (media.currentTime / media.duration);
