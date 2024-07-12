@@ -272,7 +272,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.from()")}}
   - : 从数组类对象或可迭代对象创建一个新的 `Array` 实例。
 - {{jsxref("Array.fromAsync()")}} {{Experimental_Inline}}
-  - 从异步可迭代、可迭代或类数组对象创建新的 `Array` 实例。
+  - : 从异步可迭代、可迭代或类数组对象创建新的 `Array` 实例。
 - {{jsxref("Array.isArray()")}}
   - : 如果参数是数组则返回 `true` ，否则返回 `false` 。
 - {{jsxref("Array.of()")}}
