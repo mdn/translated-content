@@ -52,8 +52,8 @@ document.onclick = (event) => {
 
 ## 参见
 
-- [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API)
-- [全屏指南](/zh-CN/docs/Web/API/Fullscreen_API/Guide)
+- [全屏 API](/zh-CN/docs/Web/API/Fullscreen_API)
+- [全屏 API 指南](/zh-CN/docs/Web/API/Fullscreen_API/Guide)
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }} 和 {{cssxref("::backdrop")}}
