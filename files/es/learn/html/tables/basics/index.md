@@ -232,7 +232,7 @@ Ya hemos hablado bastante sobre la teoría de las tablas, así que veamos un eje
 
 Como verás, las celdas no se colocan una debajo de la otra, sino que se alinean automáticamente entre sí en la misma fila. Cada elemento \<td> crea una sola celda, y juntas forman la primera fila. Cada celda que agregamos hace crecer la fila.
 
-Para detener el crecimiento de esta fila y comenzar a colocar las celdas posteriores en una segunda fila, necesitamos usar el elemento **[`<tr>`](/es/docs/Web/HTML/Element/tr)** ('tr' significa 'table raw', _fila de tabla_). Vamos a verlo en detalle.
+Para detener el crecimiento de esta fila y comenzar a colocar las celdas posteriores en una segunda fila, necesitamos usar el elemento **[`<tr>`](/es/docs/Web/HTML/Element/tr)** ('tr' significa 'table row', _fila de tabla_). Vamos a verlo en detalle.
 
 1. Coloca las cuatro celdas que has creado dentro de las etiquetas `<tr>`, de esta forma:
 
@@ -445,7 +445,7 @@ Necesitamos una forma de hacer que «Animales», «Hipopótamo» y «Cocodrilo»
 
 Usemos `colspan` y `rowspan` para mejorar esta tabla.
 
-1. Primero, haz una copia local de nuestros archivos [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) en un directorio nuevo de tu ordenador. El HTML contiene el mismo ejemplo sobre perros que viste arriba.
+1. Primero, haz una copia local de nuestros archivos [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) en un directorio nuevo de tu ordenador. El HTML contiene el mismo ejemplo sobre animales que viste arriba.
 2. Luego, usa `colspan` para extender las celdas «Animales», «Hipopótamo» y «Cocodrilo» dos columnas más allá.
 3. Por último, usa `rowspan` para extender las celdas de «Caballo» y «Pollo» dos filas más abajo.
 4. Guarda tu código y ábrelo en un navegador para ver la mejora.

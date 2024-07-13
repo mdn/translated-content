@@ -236,6 +236,6 @@ A 명령어는 일단 x축, y축 반지름을 매개변수로 받는다. 혹시 
 
 원을 한 바퀴 도는 패스의 경우 시작점과 끝점이 같으므로 선택할 수 있는 원이 무한히 있으며, 그러므로 실제 패스가 정의되지 않는다. 이때는 시작점과 끝점을 살짝 비뚤어지게 배치하고 이 둘을 다른 패스 선으로 마저 이음으로써 비슷하게 만들 수 있지만, 이때는 실제 원이나 타원 노드를 쓰는 것이 쉬울 때가 많다.
 
-[캔버스](/ko/docs/Web/HTML/Canvas)에서 SVG로 넘어오는 사람에게는 호가 가장 배우기 어려울 수도 있지만, 그런 만큼 강력하기도 하다. 다음 반응형 예제를 보면 SVG 호의 개념을 이해하는 데 도움이 될 것이다. <http://codepen.io/lingtalfi/pen/yaLWJG> (크롬과 Firefox로만 테스트했으므로 일부 브라우저에서 동작하지 않을 수 있음)
+[캔버스](/ko/docs/Web/HTML/Canvas)에서 SVG로 넘어오는 사람에게는 호가 가장 배우기 어려울 수도 있지만, 그런 만큼 강력하기도 하다. 다음 반응형 예제를 보면 SVG 호의 개념을 이해하는 데 도움이 될 것이다. <https://codepen.io/lingtalfi/pen/yaLWJG> (크롬과 Firefox로만 테스트했으므로 일부 브라우저에서 동작하지 않을 수 있음)
 
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
