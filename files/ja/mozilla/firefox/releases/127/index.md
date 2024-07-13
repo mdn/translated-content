@@ -73,7 +73,7 @@ l10n:
 - {{WebExtAPIRef("declarativeNetRequest.getDynamicRules")}} および {{WebExtAPIRef("declarativeNetRequest.getSessionRules")}} に引数 `filter` を追加しました。これは、返されるルールのリストを ID でフィルタリングできるようにします ([Firefox bug 1820870](https://bugzil.la/1820870))。
 - Manifest V3 拡張機能の [`host_permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) を、インストール中にユーザーへ表示するようになりました ([Firefox bug 1889402](https://bugzil.la/1889402))。ただし、更新した拡張機能が新たなホストパーミッションを要求してもユーザーに表示されません ([Firefox bug 1893232](https://bugzil.la/1893232))。
 - 拡張機能に関連付けられたコンテキストの情報を返す {{WebExtAPIRef("runtime.getContexts")}} 関数を追加しました ([Firefox bug 1875480](https://bugzil.la/1875480))。
-- Manifest V3 拡張機能向けに、`_execute_action` のユーザー定義ショートカットがない場合に、特殊な [`_execute_browser_action`](ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#特殊なショートカット) コマンドをユーザー定義ショートカットにフォールバックする機能を追加しました。これにより、Manifest V2 から V3 へ移行する拡張機能がブラウザーアクションのユーザー定義ショートカットを維持できます ([Firefox bug 1797811](https://bugzil.la/1797811))。
+- Manifest V3 拡張機能向けに、`_execute_action` のユーザー定義ショートカットがない場合に、特殊な [`_execute_browser_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#特殊なショートカット) コマンドをユーザー定義ショートカットにフォールバックする機能を追加しました。これにより、Manifest V2 から V3 へ移行する拡張機能がブラウザーアクションのユーザー定義ショートカットを維持できます ([Firefox bug 1797811](https://bugzil.la/1797811))。
 
 ## 実験的なウェブ機能
 
