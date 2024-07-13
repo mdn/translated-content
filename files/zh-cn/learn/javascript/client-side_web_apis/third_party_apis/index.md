@@ -16,7 +16,7 @@ l10n:
       <td>
         JavaScript 基础（见 <a href="/zh-CN/docs/Learn/JavaScript/First_steps"
           >JavaScript 第一步</a
-        >，<a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
+        >、<a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
           >创建 JavaScript 代码块</a
         >、<a href="/zh-CN/docs/Learn/JavaScript/Objects">JavaScript 对象介绍</a
         >）、<a
