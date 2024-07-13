@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.createPattern()`** 方法用于使用指定的图像或重复创建模式的方法。此方法返回一个 {{domxref("CanvasPattern")}} 对象。
+Canvas 2D API 的 **`CanvasRenderingContext2D.createPattern()`** 方法用于使用指定的图像或重复创建图案。此方法返回一个 {{domxref("CanvasPattern")}} 对象。
 
 这个方法并不直接在画布上绘制任何内容。它所创建的图案必须赋值给 {{domxref("CanvasRenderingContext2D.fillStyle")}} 或 {{domxref("CanvasRenderingContext2D.strokeStyle")}}，之后才会应用于接下来的绘制操作。
 
@@ -25,7 +25,7 @@ createPattern(image, repetition)
 
     - {{domxref("HTMLImageElement")}}（{{HTMLElement("img")}}）
     - {{domxref("SVGImageElement")}}（{{SVGElement("image")}}）
-    - {{domxref("HTMLVideoElement")}}（{{HTMLElement("video")}}，通过使用捕获视频）
+    - {{domxref("HTMLVideoElement")}}（{{HTMLElement("video")}}，通过使用视频捕获）
     - {{domxref("HTMLCanvasElement")}}（{{HTMLElement("canvas")}}）
     - {{domxref("ImageBitmap")}}
     - {{domxref("OffscreenCanvas")}}
@@ -40,12 +40,12 @@ createPattern(image, repetition)
     - `"repeat-y"`（仅垂直方向重复）
     - `"no-repeat"`（两个方向都不重复）
 
-    如果 `repetition` 被指定为空字符串（`""`）或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)（但不是 {{jsxref("undefined")}}），则将使用 `"repeat"` 的值。
+    [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 值与空字符串（`""`）的处理方式相同：两者都是 `"repeat"` 的同义词。
 
 ### 返回值
 
 - {{domxref("CanvasPattern")}}
-  - : 描述模式的不透明对象
+  - : 描述图案的不透明对象
 
 如果 `image` 没有完全加载（即 {{domxref("HTMLImageElement.complete")}} 是 `false`），则返回 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
 
