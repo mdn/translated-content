@@ -111,7 +111,6 @@ Web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
 
 对于获取元素引用，还有一些更旧的方法，如：
 
-
 - {{domxref("Document.getElementById()")}}，选择一个 `id` 属性值已知的元素，例如 `<p id="myId">My paragraph</p>`。ID 作为参数传递给函数，即 `const elementRef = document.getElementById('myId')`。
 - {{domxref("Document.getElementsByTagName()")}}，返回页面中包含的所有已知类型元素的数组。如 `<p>`、`<a>` 等。元素类型作为参数传递给函数，即 `const elementRefArray = document.getElementsByTagName('p')`。
 
