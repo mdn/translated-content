@@ -68,7 +68,7 @@ l10n:
 
 #### WebDriver BiDi
 
-- WebDriver BiDi 仕様に準拠して、WebDriver セッションの "BiDi flag" フラグをサポートしました。これにより、WebDriver BiDi 向けに作成またはアップグレードしたセッションを識別できます ([Firefox bug 1898719](https://bugzil.la/1898719))。
+- WebDriver BiDi 仕様に準拠して、WebDriver セッションの "BiDi フラグ" をサポートしました。これにより、WebDriver BiDi 向けに作成またはアップグレードしたセッションを識別できます ([Firefox bug 1898719](https://bugzil.la/1898719))。
 - `network.continueRequest` コマンドでいくつかの引数をサポートしました。これらはリクエストがネットワークへ送信される前に、ヘッダー、Cookie、メソッド、内容を変更することを可能にします ([Firefox bug 1850680](https://bugzil.la/1850680))。
 - `permissions.setPermission` コマンドで引数 `userContext` をサポートしました。これは特定のユーザーコンテキスト (Firefox ではコンテナーとして実装) へのパーミッションを分離することを可能にします ([Firefox bug 1894217](https://bugzil.la/1894217))。
 - `browsingContext.navigate` で、ナビゲーションエラーによりエラーページが読み込まれて以降のコマンドが失敗する不具合を修正しました ([Firefox bug 1878690](https://bugzil.la/1878690))。
@@ -78,7 +78,7 @@ l10n:
 
 #### Marionette
 
-- WebDriver クラシック仕様に準拠して、WebDriver セッションの "HTTP flag" フラグをサポートしました。これにより、WebDriver クラシック向けに作成したセッションを識別できます ([Firefox bug 1884090](https://bugzil.la/1884090))。
+- WebDriver クラシック仕様に準拠して、WebDriver セッションの "HTTP フラグ" をサポートしました。これにより、WebDriver クラシック向けに作成したセッションを識別できます ([Firefox bug 1884090](https://bugzil.la/1884090))。
 - WebDriver クラシックで Permissions API をサポートしました ([Firefox bug 1524074](https://bugzil.la/1524074))。
 
 ## アドオン開発者向けの変更点一覧
