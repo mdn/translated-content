@@ -98,7 +98,7 @@ Web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
 4. 现在我们已经将元素引用存储在一个变量中，我们可以开始使用可用的属性和方法来操作它（它们定义在 {{htmlelement("a")}} 元素的 {{domxref("HTMLAnchorElement")}} 接口上，它继承于更一般的父接口 {{domxref("HTMLElement")}}，以及 {{domxref("Node")}}——它代表 DOM 中所有节点）。首先，让我们通过更新 {{domxref("Node.textContent")}} 属性的值来改变链接中的文本。在前一行下面添加以下内容：
 
    ```js
-   link.textContent = "Mozilla 开发者网络";
+   link.textContent = "Mozilla Developer Network";
    ```
 
 5. 我们也能修改链接指向的 URL，使得它被点击时不会走向错误的位置。在底部再次加入下列代码：
@@ -130,7 +130,7 @@ Web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
 
    ```js
    const para = document.createElement("p");
-   para.textContent = "我们希望你享受这段旅程。";
+   para.textContent = "We hope you enjoyed the ride.";
    ```
 
 3. 现在可以用 {{domxref("Node.appendChild()")}} 方法在后面追加新的段落：
@@ -142,7 +142,9 @@ Web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
 4. 最后，在内部链接的段落中添加文本节点，完美的结束句子。首先我们要使用 {{domxref("Document.createTextNode()")}} 创建一个文本节点：
 
    ```js
-   const text = document.createTextNode(" — 最易懂的 Web 开发知识的源泉。");
+   const text = document.createTextNode(
+     " — the premier source for web development knowledge.",
+   );
    ```
 
 5. 现在获取内部连接的段落的引用，并把文本节点附加到这个节点上：
@@ -209,7 +211,7 @@ linkPara.parentNode.removeChild(linkPara);
    ```html
    <p
      style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">
-     我们希望你你享受这段旅程。
+     We hope you enjoyed the ride.
    </p>
    ```
 
