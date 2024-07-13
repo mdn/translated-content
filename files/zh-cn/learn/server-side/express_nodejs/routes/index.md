@@ -2,7 +2,7 @@
 title: Express 教程 4：路由和控制器
 slug: Learn/Server-side/Express_Nodejs/routes
 l10n:
-  sourceCommit: 0eb30db11ae26e8c6ab044c644a65de49b860d9f
+  sourceCommit: e39ad1510b9794cd393dfc6a48e3a3d3d7a4c732
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
