@@ -36,7 +36,7 @@ CSS 嵌套帮助增强 CSS 的可读性、模块化程度和可维护性。它�
 
 ## 规范
 
-  {{Specifications}}
+{{Specifications}}
 
 ## 参见
 
