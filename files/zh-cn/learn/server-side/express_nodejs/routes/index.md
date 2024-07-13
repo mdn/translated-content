@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 
-在本教程中，我们将为 [LocalLibrary](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 网站最终需要的所有资源端点设置具有 "虚拟 "处理函数的路由（URL 处理代码）。完成后，我们就有了路由处理代码的模块化结构，可以在接下来的文章中使用真正的处理函数对其进行扩展。此外，我们还将真正了解如何使用 Express 创建模块化路由！
+在本教程中，我们将为 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 网站最终需要的所有资源端点设置具有 "虚拟 "处理函数的路由（URL 处理代码）。完成后，我们就有了路由处理代码的模块化结构，可以在接下来的文章中使用真正的处理函数对其进行扩展。此外，我们还将真正了解如何使用 Express 创建模块化路由！
 
 <table class="learn-box standard-table">
   <tbody>
@@ -188,13 +188,13 @@ router.get("/about", (req, res, next) => {
 
 ### 处理路由函数中的异常
 
-上一节展示了 Express 期望路由函数返回错误的方式。该框架设计用于异步函数，这些函数采用回调函数（带有错误和结果参数），该函数在操作完成时调用。这是一个问题，因为稍后我们将使用基于 [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的 API 进行 Mongoose 数据库查询，并且可能会在路由函数中抛出异常（而不是在回调中返回错误）。
+上一节展示了 Express 期望路由函数返回错误的方式。该框架设计用于异步函数，这些函数采用回调函数（带有错误和结果参数），该函数在操作完成时调用。这是一个问题，因为稍后我们将使用基于 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的 API 进行 Mongoose 数据库查询，并且可能会在路由函数中抛出异常（而不是在回调中返回错误）。
 
 为了使框架正确处理异常，这些异常必须被捕获，然后将其作为错误转发，如上一节所示。
 
 > **备注：** 目前处于测试阶段的 Express 5 有望处理 JavaScript 异常。
 
-在上一节中的简单示例中，`About.find().exec()` 是返回 Promise 的数据库查询，我们可以在 [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) 块内编写路由函数，如下所示：
+在上一节中的简单示例中，`About.find().exec()` 是返回 Promise 的数据库查询，我们可以在 [`try...catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 块内编写路由函数，如下所示：
 
 ```js
 exports.get("/about", async function (req, res, next) {
@@ -420,7 +420,6 @@ exports.genre_update_post = asyncHandler(async (req, res, next) => {
 
 #### Book 控制器
 
-
 打开 **/controllers/bookController.js** 文件，复制以下代码。该代码与其他控制器模块的模式相同，但增加了一个用于显示网站欢迎页面的 `index()` 函数：
 
 ```js
@@ -528,9 +527,9 @@ router.get("/book/:id", book_controller.book_detail);
 router.get("/books", book_controller.book_list);
 
 
-/// AUTHOR ROUTES ///
+/// 作者路由 ///
 
-// GET request for creating Author. NOTE This must come before route for id (i.e. display author).
+// 用于创建作者的 GET 请求。注意这必须在 id 的路由之前（比如说显示作者）
 router.get("/author/create", author_controller.author_create_get);
 
 // POST request for creating Author.
@@ -556,7 +555,7 @@ router.get("/authors", author_controller.author_list);
 
 /// GENRE ROUTES ///
 
-// 用于创建 Genre 的 GET 请求。注意：这必须在显示 Genre 的路由之前。
+// 用于创建 Genre 的 GET 请求。注意：这必须在显示 Genre 的路由之前（使用 id 的路由）。
 router.get("/genre/create", genre_controller.genre_create_get);
 
 //POST request for creating Genre.
@@ -582,40 +581,40 @@ router.get("/genres", genre_controller.genre_list);
 
 /// BOOKINSTANCE ROUTES ///
 
-// 用于创建 BookInstance 的 GET 请求。注意：这必须在显示 BookInstance 的路由之前。
+// 用于创建 BookInstance 的 GET 请求。注意：这必须在显示 BookInstance 的路由之前（使用 id 的路由）。
 router.get(
-        "/bookinstance/create",
-        book_instance_controller.bookinstance_create_get,
+  "/bookinstance/create",
+  book_instance_controller.bookinstance_create_get,
 );
 
 // POST request for creating BookInstance.
 router.post(
-        "/bookinstance/create",
-        book_instance_controller.bookinstance_create_post,
+  "/bookinstance/create", 
+  book_instance_controller.bookinstance_create_post,
 );
 
 // GET request to delete BookInstance.
 router.get(
-        "/bookinstance/:id/delete",
-        book_instance_controller.bookinstance_delete_get,
+  "/bookinstance/:id/delete",
+  book_instance_controller.bookinstance_delete_get,
 );
 
 // POST request to delete BookInstance.
 router.post(
-        "/bookinstance/:id/delete",
-        book_instance_controller.bookinstance_delete_post,
+  "/bookinstance/:id/delete",
+  book_instance_controller.bookinstance_delete_post,
 );
 
 // GET request to update BookInstance.
 router.get(
-        "/bookinstance/:id/update",
-        book_instance_controller.bookinstance_update_get,
+  "/bookinstance/:id/update",
+  book_instance_controller.bookinstance_update_get,
 );
 
 // POST request to update BookInstance.
 router.post(
-        "/bookinstance/:id/update",
-        book_instance_controller.bookinstance_update_post,
+  "/bookinstance/:id/update",
+  book_instance_controller.bookinstance_update_post,
 );
 
 // GET request for one BookInstance.
