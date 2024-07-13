@@ -117,7 +117,7 @@ API 使用一个或多个 [JavaScript 对象](/zh-CN/docs/Learn/JavaScript/Objec
 <br />
 <input type="range" min="0" max="1" step="0.01" value="1" class="volume" />
 ```
-    
+
 首先，我们包含一个 `<audio>` 元素，用于在页面中嵌入一个 MP3 文件。我们没有包含任何默认的浏览器控件。接下来，我们包含一个 {{htmlelement("button")}}，用于播放和停止音乐，以及一个类型为 range 的 {{htmlelement("input")}} 元素，用于在播放时调整音轨的音量。
 
 接下来，我们来看一下这个示例的 JavaScript 代码。
