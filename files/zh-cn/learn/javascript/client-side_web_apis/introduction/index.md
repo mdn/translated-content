@@ -86,7 +86,7 @@ _图片来自：[过载插头接口](https://www.flickr.com/photos/easy-pics/951
 - [Google Maps API](https://developers.google.com/maps/)，允许你在网页上对地图进行很多操作（这很有趣，它也是 Google 地图的驱动器）。现在它是一整套完整的，能够胜任广泛任务的 API。其能力已经被[Google Maps API Picker](https://developers.google.com/maps/documentation/api-picker)见证。
 - [Facebook API](https://developers.facebook.com/docs/)，允许你将很多 Facebook 生态系统中的功能应用到你的应用并使之受益，比如说它提供了通过 Facebook 账户登录、接受应用内支付、推送有针对性的广告活动等功能。
 - [YouTube API](https://developers.google.com/youtube/)，允许你将 Youtube 上的视频嵌入到网站中去，同时提供搜索 Youtube，创建播放列表等众多功能。
-- [Pinterest API](https://developers.pinterest.com/)，提供了管理 Pinterest 板和图钉的工具，以便将它们纳入您的网站。
+- [Pinterest API](https://developers.pinterest.com/)，提供了管理 Pinterest 板和图钉的工具，以便将它们纳入你的网站。
 - [Twilio API](https://www.twilio.com/)，为你的应用提供了针对语音通话和视频聊天的框架，以及从你的 app 发送短信息或多媒体信息等诸多功能。
 - [Disqus API](https://disqus.com/api/docs/)，提供了一个可集成到网站中的评论平台。
 - [Mastodon API](https://docs.joinmastodon.org/api/)，让你以编程方式操作 Mastodon 社交网络的功能。
@@ -117,8 +117,8 @@ API 使用一个或多个 [JavaScript 对象](/zh-CN/docs/Learn/JavaScript/Objec
 <br />
 <input type="range" min="0" max="1" step="0.01" value="1" class="volume" />
 ```
-
-首先，我们包含一个 `<audio>` 元素，用于在页面中嵌入一个MP3文件。我们没有包含任何默认的浏览器控件。接下来，我们包含一个 {{htmlelement("button")}}，用于播放和停止音乐，以及一个类型为 range 的 {{htmlelement("input")}} 元素，用于在播放时调整音轨的音量。
+    
+首先，我们包含一个 `<audio>` 元素，用于在页面中嵌入一个 MP3 文件。我们没有包含任何默认的浏览器控件。接下来，我们包含一个 {{htmlelement("button")}}，用于播放和停止音乐，以及一个类型为 range 的 {{htmlelement("input")}} 元素，用于在播放时调整音轨的音量。
 
 接下来，我们来看一下这个示例的 JavaScript 代码。
 
@@ -192,9 +192,9 @@ audioSource.connect(gainNode).connect(audioCtx.destination);
 
 ### 它们有可识别的入口点
 
-在使用API时，你应该确保知道API的入口点在哪里。在 Web Audio API 中，这非常简单——就是 {{domxref("AudioContext")}} 对象，需要使用它来进行任何音频操作。
+在使用 API 时，你应该确保知道 API 的入口点在哪里。在 Web Audio API 中，这非常简单——就是 {{domxref("AudioContext")}} 对象，需要使用它来进行任何音频操作。
 
-文档对象模型（DOM）API也有一个简单的入口点——其功能通常位于{{domxref("Document")}}对象或你想要以某种方式影响的HTML元素实例上，例如：
+文档对象模型（DOM）API 也有一个简单的入口点——其功能通常位于{{domxref("Document")}}对象或你想要以某种方式影响的 HTML 元素实例上，例如：
 
 ```js
 var em = document.createElement("em"); // 创建一个新的 em 元素
@@ -267,12 +267,12 @@ Web API 功能受到与 JavaScript 和其他 Web 技术（例如[同源政策](/
 
 ![浏览器通知 API 提供的弹出式通知对话框截图。mdn.github.io 网站正在请求向用户代理推送通知的权限，用 X 关闭对话框和下拉菜单选项，默认情况下选择 "始终接收通知"。](notification-permission.png)
 
-Web Audio 和 {{domxref("HTMLMediaElement")}} API 受制于一种名为[自动播放策略](/zh-CN/docs/Web/API/Web_Audio_API/Best_practices#自动播放策略)的安全机制。这基本上意味着您不能在页面加载时自动播放音频：你必须允许用户通过按钮等控件启动音频播放。这样做的原因是，自动播放音频通常非常恼人，我们实在不应该让用户忍受它。
+Web Audio 和 {{domxref("HTMLMediaElement")}} API 受制于一种名为[自动播放策略](/zh-CN/docs/Web/API/Web_Audio_API/Best_practices#自动播放策略)的安全机制。这基本上意味着你不能在页面加载时自动播放音频：你必须允许用户通过按钮等控件启动音频播放。这样做的原因是，自动播放音频通常非常恼人，我们实在不应该让用户忍受它。
 
 > **备注：** 根据浏览器的严格程度，这种安全机制甚至可能会阻止示例在本地运行，也就是说，如果你在浏览器中加载本地示例文件，而不是从网络服务器上运行它的话。在撰写本文时，我们的网络音频 API 示例在 Google Chrome 浏览器上无法本地运行，必须上传到 GitHub 才能运行。
 
 ## 总结
 
-至此，您应该对什么是 API、API 如何工作以及在 JavaScript 代码中如何使用 API 有了一定的了解。您可能已经迫不及待地想开始使用特定的 API 做一些有趣的事情了，那就开始吧！接下来，我们将学习使用文档对象模型 (DOM) 操作文档。
+至此，你应该对什么是 API、API 如何工作以及在 JavaScript 代码中如何使用 API 有了一定的了解。你可能已经迫不及待地想开始使用特定的 API 做一些有趣的事情了，那就开始吧！接下来，我们将学习使用文档对象模型 (DOM) 操作文档。
 
 {{NextMenu("Learn/JavaScript/Client-side_Web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
