@@ -11,10 +11,10 @@ l10n:
 
 ## 返回值
 
-返回一个数字，代表在{{domxref("HTMLMediaElement")}}上定义的可能的状态值。
+一个数字，为 {{domxref("HTMLMediaElement")}} 接口上定义的五个可能的状态常量之一：
 
 - `HTMLMediaElement.HAVE_NOTHING`（0）
-  - : 没有关于音频/视频是否就绪的信息。
+  - : 没有可用的关于媒体资源的信息。
 - `HTMLMediaElement.HAVE_METADATA`（1）
   - : 已检索到足够的媒体资源，元数据属性已经初始化。查询操作将不再引发异常。
 - `HTMLMediaElement.HAVE_CURRENT_DATA`（2）
