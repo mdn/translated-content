@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.clearRect()`** 方法用于通过把像素设置为透明以达到擦除一个矩形区域的目的。
+Canvas 2D API 的 **`CanvasRenderingContext2D.clearRect()`** 方法用于通过把像素设置为透明黑色以达到擦除一个矩形区域的目的。
 
-> **备注：** 如果没有[正确绘制路径](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#绘制路径)，使用 `clearRect()` 可能会导致意想之外的结果。请确保在调用 `clearRect()` 之后开始绘制新内容前调用 {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} 。
+> **备注：** 如果没有[正确使用路径](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#绘制路径)，`clearRect()` 可能会导致意想之外的结果。请确保在调用 `clearRect()` 之后开始绘制新内容前调用 {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} 。
 
 ## 语法
 
@@ -17,7 +17,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.clearRect()`** 方法用于通过�
 clearRect(x, y, width, height)
 ```
 
-`clearRect()` 方法在一个矩形区域内设置所有像素都是透明的（`rgba(0,0,0,0)`）。这个矩形范围的左上角在 `(x, y)`，宽度和高度分别由 `width` 和`height` 确定。
+`clearRect()` 方法在一个矩形区域内将所有像素都设置成透明黑色（`rgba(0,0,0,0)`）。矩形区域的左上角在 `(x, y)`，其大小由 `width` 和`height` 指定。
 
 ### 参数
 
