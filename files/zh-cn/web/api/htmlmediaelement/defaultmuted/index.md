@@ -31,6 +31,6 @@ console.log(videoEle.outerHTML); // <video muted=""></video>
 
 ## 参见
 
-- {{domxref("HTMLMediaElement")}}: 用于指定 `HTMLMediaElement.defaultMuted` 属性
+- {{domxref("HTMLMediaElement")}}：用于定义 `HTMLMediaElement.defaultMuted` 属性的接口
 - {{domxref("HTMLMediaElement.muted")}}
 - {{domxref("HTMLMediaElement.volume")}}
