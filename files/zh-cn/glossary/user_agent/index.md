@@ -23,6 +23,7 @@ l10n:
 - {{domxref("navigator.userAgent")}}
 - [使用用户代理进行浏览器检测](/zh-CN/docs/Web/HTTP/Browser_detection_using_the_user_agent)
 - {{RFC(2616, "", "14.43")}}：`User-Agent` 标头
-- {{Glossary("Browser")}}（术语）
+- 相关术语：
+  - {{Glossary("Browser", "浏览器")}}
 - HTTP 标头
   - {{HTTPHeader("User-agent")}}
