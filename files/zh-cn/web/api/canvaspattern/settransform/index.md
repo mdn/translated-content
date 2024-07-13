@@ -28,7 +28,7 @@ setTransform(matrix)
 
 ### 使用 `setTransform` 方法
 
-这是一段简单的代码片段，使用 `setTransform` 方法创建一个来自 {{domxref("DOMMatrix")}} 具有指定图案变化的 {{domxref("CanvasPattern")}}。如例子所示，如果你把图案赋值给当前的 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}，当你使用 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 方法时，图案会被应用到 canvas 上绘制出效果。
+这是一段简单的代码片段，使用 `setTransform` 方法创建一个来自 {{domxref("DOMMatrix")}} 具有指定图案变化的 {{domxref("CanvasPattern")}}。如例子所示，图案会在其被设置为当前的 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 时应用；并在使用 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 方法时会被绘制到 canvas 上。
 
 #### HTML
 
