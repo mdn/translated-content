@@ -19,9 +19,9 @@ CSS **`&` 嵌套选择器** 明确指示在使用 [CSS 嵌套](/zh-CN/docs/Web/C
 
 ```css
 parentRule {
-  /* 父元素样式属性 */
+  /* 父元素的属性 */
   & childRule {
-    /* 子元素样式属性 */
+    /* 子元素的属性 */
   }
 }
 ```
@@ -32,9 +32,9 @@ parentRule {
 
 ```css
 .parent-rule {
-  /* 父元素样式属性 */
+  /* 父元素的属性 */
   .child-rule {
-    /* 子元素样式属性 */
+    /* 子元素的属性 */
   }
 }
 ```
@@ -43,11 +43,11 @@ parentRule {
 
 ```css
 .parent-rule {
-  /* 父元素样式属性 */
+  /* 父元素的属性 */
 }
 
 .parent-rule .child-rule {
-  /* 是 .parent-rule 的子元素且是 .child-rule 的元素的样式属性 */
+  /* 是 .parent-rule 的子元素且是 .child-rule 的元素的属性 */
 }
 ```
 
@@ -57,19 +57,19 @@ parentRule {
 
 ```css
 .parent-rule {
-  /* 父元素样式属性 */
+  /* 父元素的属性 */
   :hover {
-    /* 子元素样式属性 */
+    /* 子元素的属性 */
   }
 }
 
 /* 浏览器会将以上嵌套规则分析为 */
 .parent-rule {
-  /* 父元素样式属性 */
+  /* 父元素的属性 */
 }
 
 .parent-rule *:hover {
-  /* 子元素样式属性 */
+  /* 子元素的属性 */
 }
 ```
 
@@ -77,19 +77,19 @@ parentRule {
 
 ```css
 .parent-rule {
-  /* 父元素样式属性 */
+  /* 父元素的属性 */
   &:hover {
-    /* 子元素样式属性 */
+    /* 子元素的属性 */
   }
 }
 
 /* 浏览器会将以上嵌套规则分析为 */
 .parent-rule {
-  /* 父元素样式属性 */
+  /* 父元素的属性 */
 }
 
 .parent-rule:hover {
-  /* 子元素样式属性 */
+  /* 子元素的属性 */
 }
 ```
 
@@ -99,20 +99,20 @@ parentRule {
 
 ```css
 .card {
-  /* .card 样式 */
+  /* .card 的样式 */
   .featured & {
-    /* .featured .card 样式 */
+    /* .featured .card 的样式 */
   }
 }
 
 /* 浏览器会将以上嵌套规则分析为 */
 
 .card {
-  /* .card 样式 */
+  /* .card 的样式 */
 }
 
 .featured .card {
-  /* .featured .card 样式 */
+  /* .featured .card 的样式 */
 }
 ```
 
@@ -120,20 +120,20 @@ parentRule {
 
 ```css
 .card {
-  /* .card 样式 */
+  /* .card 的样式 */
   .featured & & & {
-    /* .featured .card .card .card 样式 */
+    /* .featured .card .card .card 的样式 */
   }
 }
 
 /* 浏览器会将以上嵌套规则分析为 */
 
 .card {
-  /* .card 样式 */
+  /* .card 的样式 */
 }
 
 .featured .card .card .card {
-  /* .featured .card .card .card 样式 */
+  /* .featured .card .card .card 的样式 */
 }
 ```
 
@@ -214,7 +214,7 @@ parentRule {
 如果不在一个嵌套规则里使用，则 `&` 嵌套选择器将代表其[根作用域](/zh-CN/docs/Web/CSS/:scope)。
 
 ```html
-<p>在输入框上方悬停以更改文档背景颜色。</p>
+<p>在文本上方悬停以更改文档的背景颜色。</p>
 ```
 
 ```css
