@@ -1,7 +1,6 @@
 ---
-title: "SyntaxError: unterminated string literal"
+title: "SyntaxError: string literal contains an unescaped line break"
 slug: Web/JavaScript/Reference/Errors/String_literal_EOL
-original_slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 ---
 
 {{jsSidebar("Errors")}}
@@ -9,7 +8,9 @@ original_slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 ## 信息
 
 ```plain
-SyntaxError: unterminated string literal
+SyntaxError: Invalid or unexpected token (V8-based)
+SyntaxError: '' string literal contains an unescaped line break (Firefox)
+SyntaxError: Unexpected EOF (Safari)
 ```
 
 ## 错误类型
