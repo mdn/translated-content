@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.readyState`**属性返回音频/视频的当前就绪状态。
+**`HTMLMediaElement.readyState`** 属性返回媒体的就绪状态。
 
 ## 返回值
 
