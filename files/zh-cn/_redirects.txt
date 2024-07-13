@@ -2447,7 +2447,6 @@
 /zh-CN/docs/Web/HTTP/Headers/Feature-Policy/autoplay	/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/autoplay
 /zh-CN/docs/Web/HTTP/Headers/Feature-Policy/camera	/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/camera
 /zh-CN/docs/Web/HTTP/Headers/Feature-Policy/picture-in-picture	/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/picture-in-picture
-/zh-CN/docs/Web/HTTP/Headers/Large-Allocation	/zh-CN/docs/orphaned/Web/HTTP/Headers/Large-Allocation
 /zh-CN/docs/Web/HTTP/Headers/Public-Key-Pins	/zh-CN/docs/Web/HTTP/Headers/Expect-CT
 /zh-CN/docs/Web/HTTP/Headers/Public-Key-Pins-Report-Only	/zh-CN/docs/Web/HTTP/Headers/Expect-CT
 /zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite	/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value

@@ -32579,10 +32579,6 @@
     "modified": "2020-03-12T19:44:58.615Z",
     "contributors": ["Davont", "jitingsun"]
   },
-  "orphaned/Web/HTTP/Headers/Large-Allocation": {
-    "modified": "2020-10-15T21:56:09.177Z",
-    "contributors": ["wyapx", "crper", "shevacjs"]
-  },
   "orphaned/Web/JavaScript/Reference/Errors/Equal_as_assign": {
     "modified": "2020-03-12T19:44:21.268Z",
     "contributors": ["niaodan2b"]
