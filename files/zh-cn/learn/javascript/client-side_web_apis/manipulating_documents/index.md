@@ -216,7 +216,7 @@ linkPara.parentNode.removeChild(linkPara);
    </p>
    ```
 
-> **备注：** 请注意，CSS 样式的 JavaScript 属性版本是用{{Glossary("camel_case", "驼峰命名法")}}书写的，而 CSS 版本是{{Glossary("kebab_case", "烤串命名法")}}的（例如，`backgroundColor` 对 `background-color`）。确保你不要把这些混为一谈，否则将无法工作。
+> **备注：** 请注意，CSS 样式的 JavaScript 属性版本是用{{Glossary("camel_case", "小驼峰命名法")}}书写的，而 CSS 版本是{{Glossary("kebab_case", "烤串命名法")}}的（例如，`backgroundColor` 对 `background-color`）。确保你不要把这些混为一谈，否则将无法工作。
 
 还有一种在你的文档上动态操作样式的常见方法，我们现在就来看看。
 
