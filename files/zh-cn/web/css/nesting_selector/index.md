@@ -181,9 +181,7 @@ parentRule {
 #### HTML
 
 ```html
-<p class="example">
-  这段文字<a href="#">包含一个链接</a>，尝试悬停或聚焦它。
-</p>
+<p class="example">这段文字<a href="#">包含一个链接</a>，尝试悬停或聚焦它。</p>
 ```
 
 #### CSS
