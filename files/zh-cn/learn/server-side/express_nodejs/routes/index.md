@@ -20,7 +20,7 @@ l10n:
         >。完成本教程之前小节（<a
           href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose"
           >Express 教程 3：使用数据库 (Mongoose)</a
-        >。
+        >）。
       </td>
     </tr>
     <tr>
@@ -54,7 +54,7 @@ l10n:
 
 创建路由有几种方法。本教程将使 [`express.Router`](http://expressjs.com/en/guide/routing.html#express-router) 中间件，因为使用它可以将站点特定部分的路由处理程序打包，并使用通用路由前缀访问它们。我们会将所有与图书馆有关的路由保存在 `catalog` 模块中，在添加处理帐户或其他功能的路由时，可以分开保存。
 
-> **备注：** [Express 简介 > 创建路由处理程序](/zh-CN/docs/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#创建路由处理器（Route_handler）) 简要讨论了 Express 应用的路由机制。使用 `Router` 可以保证更好的模块化（下文所述），且用法与直接在 Express 应用对象定义路由非常类似。
+> **备注：** [Express 简介 > 创建路由处理程序](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#创建路由处理器（route_handler）) 简要讨论了 Express 应用的路由机制。使用 `Router` 可以保证更好的模块化（下文所述），且用法与直接在 Express 应用对象定义路由非常类似。
 
 本段以下内容介绍使用 `Router` 定义路由的方法。
 
