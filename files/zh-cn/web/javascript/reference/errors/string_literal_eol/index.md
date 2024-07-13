@@ -1,6 +1,7 @@
 ---
 title: "SyntaxError: unterminated string literal"
-slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
+slug: Web/JavaScript/Reference/Errors/String_literal_EOL
+original_slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 ---
 
 {{jsSidebar("Errors")}}
