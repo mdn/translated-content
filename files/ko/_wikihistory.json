@@ -2927,10 +2927,6 @@
     "modified": "2020-10-15T21:59:47.472Z",
     "contributors": ["alattalatta", "ggihwa", "jennybehan", "gw1021", "BANIP"]
   },
-  "Web/API/Fetch_API/Basic_concepts": {
-    "modified": "2019-03-18T21:45:15.491Z",
-    "contributors": ["BANIP"]
-  },
   "Web/API/Fetch_API/Using_Fetch": {
     "modified": "2020-10-15T22:00:18.673Z",
     "contributors": [
@@ -4714,10 +4710,6 @@
   "Web/CSS/-webkit-line-clamp": {
     "modified": "2020-10-15T22:25:56.637Z",
     "contributors": ["alattalatta"]
-  },
-  "Web/CSS/-webkit-overflow-scrolling": {
-    "modified": "2020-10-15T21:37:39.290Z",
-    "contributors": ["alattalatta", "epicsaga"]
   },
   "Web/CSS/::after": {
     "modified": "2020-10-15T21:37:38.967Z",
@@ -10762,6 +10754,10 @@
     "modified": "2019-01-17T02:54:48.050Z",
     "contributors": ["wbamberg", "zziuni"]
   },
+  "conflicting/Web/API/Fetch_API/Using_Fetch_c0ca150deec7d78cb1d4462e8542019b": {
+    "modified": "2019-03-18T21:45:15.491Z",
+    "contributors": ["BANIP"]
+  },
   "conflicting/Web/API/XSLTProcessor": {
     "modified": "2019-03-23T23:42:13.222Z",
     "contributors": ["chrisdavidmills", "teoli", "Sebuls"]
@@ -10818,6 +10814,10 @@
   "orphaned/Web/API/Proximity_Events": {
     "modified": "2019-03-23T23:26:46.443Z",
     "contributors": ["yunji_koh"]
+  },
+  "orphaned/Web/CSS/-webkit-overflow-scrolling": {
+    "modified": "2020-10-15T21:37:39.290Z",
+    "contributors": ["alattalatta", "epicsaga"]
   },
   "orphaned/Web/HTML/Element/applet": {
     "modified": "2019-03-23T22:50:49.180Z",

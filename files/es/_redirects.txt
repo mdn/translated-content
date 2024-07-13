@@ -2318,12 +2318,15 @@
 /es/docs/Web/JavaScript/Primeros_Pasos	/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 /es/docs/Web/JavaScript/Reference/About	/es/docs/conflicting/Web/JavaScript/Reference
 /es/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/es/docs/Web/JavaScript/Reference/Classes/Private_properties
-/es/docs/Web/JavaScript/Reference/Errors/Bad_octal	/es/docs/Web/JavaScript/Reference/Errors/Deprecated_octal
-/es/docs/Web/JavaScript/Reference/Errors/Falta_puntoycoma_antes_de_declaracion	/es/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
+/es/docs/Web/JavaScript/Reference/Errors/Bad_octal	/es/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
+/es/docs/Web/JavaScript/Reference/Errors/Deprecated_octal	/es/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
+/es/docs/Web/JavaScript/Reference/Errors/Falta_puntoycoma_antes_de_declaracion	/es/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_token
 /es/docs/Web/JavaScript/Reference/Errors/Indicador_regexp_no-val	/es/docs/Web/JavaScript/Reference/Errors/Bad_regexp_flag
 /es/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/es/docs/conflicting/Web/JavaScript/Reference/Errors/Missing_formal_parameter
+/es/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement	/es/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_token
 /es/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/es/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
 /es/docs/Web/JavaScript/Reference/Errors/Strict_y_parámetros_complejos	/es/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params
+/es/docs/Web/JavaScript/Reference/Errors/Undefined_prop	/es/docs/orphaned/Web/JavaScript/Reference/Errors/Undefined_prop
 /es/docs/Web/JavaScript/Reference/Errors/caracter_ilegal	/es/docs/Web/JavaScript/Reference/Errors/Illegal_character
 /es/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
 /es/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource	/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString
