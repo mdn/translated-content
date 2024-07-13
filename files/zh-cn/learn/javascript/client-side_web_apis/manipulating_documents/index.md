@@ -111,7 +111,8 @@ Web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
 
 对于获取元素引用，还有一些更旧的方法，如：
 
-- {{domxref("Document.getElementById()")}}，选择一个 `id` 属性值已知的元素，例如 `<p id="myId">我的段落</p>`。ID 作为参数传递给函数，即 `const elementRef = document.getElementById('myId')`。
+
+- {{domxref("Document.getElementById()")}}，选择一个 `id` 属性值已知的元素，例如 `<p id="myId">My paragraph</p>`。ID 作为参数传递给函数，即 `const elementRef = document.getElementById('myId')`。
 - {{domxref("Document.getElementsByTagName()")}}，返回页面中包含的所有已知类型元素的数组。如 `<p>`、`<a>` 等。元素类型作为参数传递给函数，即 `const elementRefArray = document.getElementsByTagName('p')`。
 
 这两种方法在旧的浏览器中比现代方法如 `querySelector()` 更好用，但没有那么方便。看一看，看看你还能找到什么其他的方法！
@@ -260,7 +261,7 @@ linkPara.parentNode.removeChild(linkPara);
 
 完成后的演示程序看起来有点像这样的：
 
-![购物清单的演示布局。标题是“我的购物清单”，后面是“输入一个新项目”，有一个输入字段和“增加新项目”按钮。下面是已经添加的项目的列表，每个项目都有一个相应的删除按钮](shopping-list.png)
+![购物清单的演示布局。标题是“my shopping list”，后面是“Enter a new item”，有一个输入字段和“add item”按钮。下面是已经添加的项目的列表，每个项目都有一个相应的删除按钮](shopping-list.png)
 
 要完成实验，要按照下面的步骤，确保购物单的行为如上所述。
 
