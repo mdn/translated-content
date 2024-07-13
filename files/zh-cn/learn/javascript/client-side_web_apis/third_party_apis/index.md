@@ -18,7 +18,7 @@ l10n:
           >JavaScript 第一步</a
         >，<a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
           >创建 JavaScript 代码块</a
-        >，<a href="/zh-CN/docs/Learn/JavaScript/Objects">JavaScript 对象介绍</a
+        >、<a href="/zh-CN/docs/Learn/JavaScript/Objects">JavaScript 对象介绍</a
         >）、<a
           href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
           >Web API 简介</a
