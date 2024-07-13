@@ -56,9 +56,7 @@ Web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
       <img
         src="dinosaur.png"
         alt="红色霸王龙：像人一样直立的双腿恐龙，手臂细小，头很大，有很多锋利的牙齿。" />
-      <p>
-        一个前往<a href="https://www.mozilla.org/">Mozilla 主页</a>的链接
-      </p>
+      <p>一个前往<a href="https://www.mozilla.org/">Mozilla 主页</a>的链接</p>
     </section>
   </body>
 </html>
@@ -141,9 +139,7 @@ Web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
 4. 最后，在内部链接的段落中添加文本节点，完美的结束句子。首先我们要使用 {{domxref("Document.createTextNode()")}} 创建一个文本节点：
 
    ```js
-   const text = document.createTextNode(
-     " — 最易懂的 Web 开发知识的源泉。",
-   );
+   const text = document.createTextNode(" — 最易懂的 Web 开发知识的源泉。");
    ```
 
 5. 现在获取内部连接的段落的引用，并把文本节点附加到这个节点上：
