@@ -9,7 +9,7 @@ l10n:
 
 在任何计算机编程语言中，字符串都是用于表示文本的{{Glossary("character", "字符")}}序列。
 
-在 {{Glossary("JavaScript")}} 中，字符串是{{Glossary("Primitive", "原始值")}}的其中一个，而 {{jsxref("String")}} 是一个包装字符串原始值的 {{Glossary("wrapper", "包装器")}}。
+在 {{Glossary("JavaScript")}} 中，字符串是一种{{Glossary("Primitive", "原始值")}}，而 {{jsxref("String")}} 是字符串原始值的{{Glossary("wrapper", "包装器")}}。
 
 ## 参见
 
