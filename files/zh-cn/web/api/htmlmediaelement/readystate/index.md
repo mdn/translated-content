@@ -13,7 +13,7 @@ l10n:
 
 返回一个数字，代表在{{domxref("HTMLMediaElement")}}上定义的可能的状态值。
 
-- `HTMLMediaElement.HAVE_NOTHING` (0)
+- `HTMLMediaElement.HAVE_NOTHING`（0）
   - : 没有关于音频/视频是否就绪的信息。
 - `HTMLMediaElement.HAVE_METADATA` (1)
   - : 已经成功加载了足够的媒体资源，元数据属性已经初始化。搜索操作将不再引发异常。
