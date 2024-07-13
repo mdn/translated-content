@@ -9,7 +9,7 @@ l10n:
 
 Canvas 2D API 的 **`CanvasRenderingContext2D.createPattern()`** 方法用于使用指定的图像或重复创建模式的方法。此方法返回一个 {{domxref("CanvasPattern")}} 对象。
 
-这个方法并不直接在画布上绘制任何内容。它所创建的图案必须赋值给 属性 {{domxref("CanvasRenderingContext2D.fillStyle")}} 或 {{domxref("CanvasRenderingContext2D.strokeStyle")}}，之后才会应用于接下来的绘制操作。
+这个方法并不直接在画布上绘制任何内容。它所创建的图案必须赋值给 {{domxref("CanvasRenderingContext2D.fillStyle")}} 或 {{domxref("CanvasRenderingContext2D.strokeStyle")}}，之后才会应用于接下来的绘制操作。
 
 ## 语法
 
@@ -23,10 +23,10 @@ createPattern(image, repetition)
 
   - : 用作图案图像的图像。可以是下列之一：
 
-    - {{domxref("HTMLImageElement")}} ({{HTMLElement("img")}})
-    - {{domxref("SVGImageElement")}} ({{SVGElement("image")}})
-    - {{domxref("HTMLVideoElement")}} ({{HTMLElement("video")}}，通过使用捕获视频)
-    - {{domxref("HTMLCanvasElement")}} ({{HTMLElement("canvas")}})
+    - {{domxref("HTMLImageElement")}}（{{HTMLElement("img")}}）
+    - {{domxref("SVGImageElement")}}（{{SVGElement("image")}}）
+    - {{domxref("HTMLVideoElement")}}（{{HTMLElement("video")}}，通过使用捕获视频）
+    - {{domxref("HTMLCanvasElement")}}（{{HTMLElement("canvas")}}）
     - {{domxref("ImageBitmap")}}
     - {{domxref("OffscreenCanvas")}}
     - {{domxref("VideoFrame")}}
@@ -40,7 +40,7 @@ createPattern(image, repetition)
     - `"repeat-y"`（仅垂直方向重复）
     - `"no-repeat"`（两个方向都不重复）
 
-    如果 `repetition` 被指定为空字符串 (`""`) 或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)（但不是 {{jsxref("undefined")}}），则将使用 `"repeat"` 的值。
+    如果 `repetition` 被指定为空字符串（`""`）或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)（但不是 {{jsxref("undefined")}}），则将使用 `"repeat"` 的值。
 
 ### 返回值
 
