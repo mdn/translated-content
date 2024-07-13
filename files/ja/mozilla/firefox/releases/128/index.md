@@ -33,7 +33,7 @@ l10n:
     バッファーで許可される最大サイズは、[`SharedArrayBuffer()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer#maxbytelength) の `options.maxByteLength` 引数で設定します。
     {{jsxref("SharedArrayBuffer.prototype.growable")}} および {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}} プロパティはそれぞれバッファーが拡張可能であるか、および許可される最大サイズを表します。
   - {{jsxref("ArrayBuffer.prototype.resize()")}} メソッドを使用して {{jsxref("ArrayBuffer")}} のサイズを変更します。
-    バッファーで許可される最大サイズは、[`ArrayBufferffer()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer#maxbytelength) の `options.maxByteLength` パラメーターで設定します。
+    バッファーで許可される最大サイズは、[`ArrayBuffer()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer#maxbytelength) の `options.maxByteLength` パラメーターで設定します。
     {{jsxref("ArrayBuffer.prototype.resizable")}} および {{jsxref("ArrayBuffer.prototype.maxByteLength")}} プロパティはそれぞれバッファーがサイズ変更可能であるか、および許可される最大サイズを表します。
 
 ### HTTP
@@ -51,7 +51,7 @@ l10n:
   これは最適な解像度での再生が許可されるかを、メディアキーセッションを作成したり実際のライセンスを取得したりする必要なく事前に知るためのシンプルな仕組みをアプリケーションに提供します ([Firefox bug 1878714](https://bugzil.la/1878714))。
 - {{domxref('RTCRtpTransceiver.setCodecPreferences()')}} をサポートしました。WebRTC のローカルピアが受信したデータをデコードするために使用できるコーデックを、好みの順番で設定します。ウェブアプリケーションは、リモートピアに好みのコーデックを選択させたり、(再送信、冗長化、前方誤り訂正に使用するものを含む) 特定のコーデックのネゴシエーションを無効にしたりするためにこのメソッドを使用できます ([Firefox bug 1396922](https://bugzil.la/1396922))。
 - {{domxref('ShadowRoot.getHTML()')}}、{{domxref('Element.getHTML()')}} メソッド、およびこれらに関連する {{domxref('ShadowRoot.serializable')}}、{{domxref('HTMLTemplateElement.shadowRootSerializable')}} プロパティを含む、[宣言的なシャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html) のシリアライズをサポートしました。
-- [`CSSPropertyRule`](/ja/docs/Web/API/CSSPropertyRule) インターフェイスをデフォルトで有効にして、CSS の [`@property`](/en-US/docs/Web/CSS/@property) アットルールを表すようになりました。このインターフェイスは [`name`](/ja/docs/Web/API/CSSPropertyRule/name)、[`syntax`](/ja/docs/Web/API/CSSPropertyRule/syntax)、[`inherits`](/ja/docs/Web/API/CSSPropertyRule/inherits)、[`initialValue`](/ja/docs/Web/API/CSSPropertyRule/initialvalue) のような、`@property` アットルールを使用して定義した CSS カスタムプロパティの値を取得できます ([Firefox bug 1864818](https://bugzil.la/1864818))。
+- [`CSSPropertyRule`](/ja/docs/Web/API/CSSPropertyRule) インターフェイスをデフォルトで有効にして、CSS の [`@property`](/ja/docs/Web/CSS/@property) アットルールを表すようになりました。このインターフェイスは [`name`](/ja/docs/Web/API/CSSPropertyRule/name)、[`syntax`](/ja/docs/Web/API/CSSPropertyRule/syntax)、[`inherits`](/ja/docs/Web/API/CSSPropertyRule/inherits)、[`initialValue`](/ja/docs/Web/API/CSSPropertyRule/initialvalue) のような、`@property` アットルールを使用して定義した CSS カスタムプロパティの値を取得できます ([Firefox bug 1864818](https://bugzil.la/1864818))。
 - [`registerProperty()`](/ja/docs/Web/API/CSS/registerProperty_static) メソッドをデフォルトで有効にしました。JavaScript で [CSS カスタムプロパティ](/ja/docs/Web/CSS/--*) を定義できます。これは、CSS の `@property` アットルールを使用することに似ています ([Firefox bug 1864818](https://bugzil.la/1864818))。
 
 #### Media、WebRTC、Web Audio
@@ -84,7 +84,7 @@ l10n:
 ## アドオン開発者向けの変更点一覧
 
 - 静的な宣言型ネットワークリクエストのルールセットのルールを {{WebExtAPIRef("declarativeNetRequest.updateStaticRules")}} で有効化または無効化する機能、および静的ルールセットで無効化されたルールを {{WebExtAPIRef("declarativeNetRequest.getDisabledRuleIds")}} で取得する機能を追加しました ([Firefox bug 1810762](https://bugzil.la/1810762))。
-- [`declarative_net_request` マニフェストキー](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) で定義された静的な宣言型ネットワークリクエストのルールが、認識できないプロパティを含むがほかのプロパティが有効である場合に読み込まれるようになりました ([Firefox bug 1886608](https://bugzil.la/1886608)。
+- [`declarative_net_request` マニフェストキー](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) で定義された静的な宣言型ネットワークリクエストのルールが、認識できないプロパティを含むがほかのプロパティが有効である場合に読み込まれるようになりました ([Firefox bug 1886608](https://bugzil.la/1886608))。
 - {{WebExtAPIRef("proxy.settings")}} プロパティの `proxyDNS` の既定値が、SOCKS4 を使用する場合は `false`、SOCKS5 を使用する場合は `true` になりました。以前は、SOCKS4 および SOCKS5 で既定値が `false` でした ([Firefox bug 1741375](https://bugzil.la/1741375))。
 - 非標準の Web API イベント `overflow` および `underflow` が非推奨になりました。Firefox 131 のリリースより前に、拡張機能の文書からこれらのイベントの使用方法を削除する予定です ([Firefox bug 1898445](https://bugzil.la/1898445))。
 - ウェブページの実行環境でスクリプトを実行する機能をサポートしました。これは {{WebExtAPIRef("scripting")}} API で {{WebExtAPIRef("scripting.executionWorld","ExecutionWorld")}} の `MAIN` をサポートすること、{{WebExtAPIRef("contentScripts.register()")}} API に `world` を追加すること、[`content_scripts`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) マニフェストキーで `world` をサポートすることにより提供されます ([Firefox bug 1736575](https://bugzil.la/1736575))。
