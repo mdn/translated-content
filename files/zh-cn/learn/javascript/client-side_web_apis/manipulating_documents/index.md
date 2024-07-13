@@ -49,14 +49,17 @@ Web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <title>简单 DOM 示例</title>
+    <title>Simple DOM example</title>
   </head>
   <body>
     <section>
       <img
         src="dinosaur.png"
-        alt="红色霸王龙：像人一样直立的双腿恐龙，手臂细小，头很大，有很多锋利的牙齿。" />
-      <p>一个前往<a href="https://www.mozilla.org/">Mozilla 主页</a>的链接</p>
+        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+      <p>
+        Here we will add a link to the
+        <a href="https://www.mozilla.org/">Mozilla homepage</a>
+      </p>
     </section>
   </body>
 </html>
