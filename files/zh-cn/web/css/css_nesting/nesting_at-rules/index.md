@@ -1,7 +1,6 @@
 ---
 title: CSS at-rule 嵌套
 slug: Web/CSS/CSS_nesting/Nesting_at-rules
-page-type: guide
 l10n:
   sourceCommit: 4b6b77bc36496c88dcbe477ec46da678a85d8e6e
 ---

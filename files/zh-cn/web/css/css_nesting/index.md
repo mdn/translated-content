@@ -1,8 +1,6 @@
 ---
 title: CSS 嵌套
 slug: Web/CSS/CSS_nesting
-page-type: css-module
-spec-urls: https://drafts.csswg.org/css-nesting-1/
 l10n:
   sourceCommit: 13746bf1d5d8e5c7c7bce5e1281e6eeee77b3d44
 ---

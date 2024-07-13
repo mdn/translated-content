@@ -1,7 +1,6 @@
 ---
 title: CSS 嵌套与优先级
 slug: Web/CSS/CSS_nesting/Nesting_and_specificity
-page-type: guide
 l10n:
   sourceCommit: 7e1956dbec8369ae5533be89e21cbce2d5a2ae1c
 ---

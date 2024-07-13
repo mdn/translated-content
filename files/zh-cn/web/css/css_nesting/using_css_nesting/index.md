@@ -1,7 +1,6 @@
 ---
 title: 使用 CSS 嵌套
 slug: Web/CSS/CSS_nesting/Using_CSS_nesting
-page-type: guide
 l10n:
   sourceCommit: c8f8d139207c796a49390614fbe4e65a8ab9bfac
 ---

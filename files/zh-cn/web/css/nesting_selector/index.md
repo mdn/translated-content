@@ -1,8 +1,6 @@
 ---
 title: "& 嵌套选择器"
 slug: Web/CSS/Nesting_selector
-page-type: css-selector
-browser-compat: css.selectors.nesting
 l10n:
   sourceCommit: c6b772b874485e67bb8cf8eff8c1874deb2e66c3
 ---
