@@ -330,42 +330,42 @@ const asyncHandler = require("express-async-handler");
 
 // 显示所有的 BookInstances
 exports.bookinstance_list = asyncHandler(async (req, res, next) => {
-  res.send("未实现：BookInstance list");
+  res.send("未实现：BookInstance 列表");
 });
 
 // 显示特定 BookInstance 的详情页
 exports.bookinstance_detail = asyncHandler(async (req, res, next) => {
-  res.send(`未实现：BookInstance detail: ${req.params.id}`);
+  res.send(`未实现：BookInstance 详情页面：${req.params.id}`);
 });
 
 // 由 GET 显示创建 BookInstance 的表单
 exports.bookinstance_create_get = asyncHandler(async (req, res, next) => {
-  res.send("未实现：BookInstance create GET");
+  res.send("未实现：BookInstance 创建 GET");
 });
 
 // 由 POST 处理创建 BookInstance
 exports.bookinstance_create_post = asyncHandler(async (req, res, next) => {
-  res.send("未实现：BookInstance create POST");
+  res.send("未实现：BookInstance 创建 POST");
 });
 
 // 由 GET 显示删除 BookInstance 的表单
 exports.bookinstance_delete_get = asyncHandler(async (req, res, next) => {
-  res.send("未实现：BookInstance delete GET");
+  res.send("未实现：BookInstance 删除 GET");
 });
 
 // 由 POST 删除 BookInstance
 exports.bookinstance_delete_post = asyncHandler(async (req, res, next) => {
-  res.send("未实现：BookInstance delete POST");
+  res.send("未实现：BookInstance 删除 POST");
 });
 
 // 由 GET 显示更新 BookInstance 的表单
 exports.bookinstance_update_get = asyncHandler(async (req, res, next) => {
-  res.send("未实现：BookInstance update GET");
+  res.send("未实现：BookInstance 更新 GET");
 });
 
 // 由 POST 处理更新 BookInstance
 exports.bookinstance_update_post = asyncHandler(async (req, res, next) => {
-  res.send("未实现：BookInstance update POST");
+  res.send("未实现：BookInstance 更新 POST");
 });
 ```
 
@@ -379,42 +379,42 @@ const asyncHandler = require("express-async-handler");
 
 // 显示所有的 Genre.
 exports.genre_list = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Genre list");
+  res.send("未实现：Genre 列表");
 });
 
-// Display detail page for a specific Genre.
+// 显示特定 Genre 的详情页。
 exports.genre_detail = asyncHandler(async (req, res, next) => {
-  res.send(`未实现：Genre detail: ${req.params.id}`);
+  res.send(`未实现：Genre 详情页：${req.params.id}`);
 });
 
-// Display Genre create form on GET.
+// 通过 GET 显示创建流派表单。
 exports.genre_create_get = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Genre create GET");
+  res.send("未实现：Genre 创建 GET");
 });
 
-// Handle Genre create on POST.
+// 以 POST 方式处理创建流派。
 exports.genre_create_post = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Genre create POST");
+  res.send("未实现：Genre 创建 POST");
 });
 
-// Display Genre delete form on GET.
+// 通过 GET 显示 Genre 删除表单。
 exports.genre_delete_get = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Genre delete GET");
+  res.send("未实现：Genre 删除 GET");
 });
 
-// Handle Genre delete on POST.
+// 处理 POST 时的 Genre 删除。
 exports.genre_delete_post = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Genre delete POST");
+  res.send("未实现：Genre 删除 POST");
 });
 
-// Display Genre update form on GET.
+// 通过 GET 显示 Genre 更新表单。
 exports.genre_update_get = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Genre update GET");
+  res.send("未实现：Genre 更新 GET");
 });
 
-// Handle Genre update on POST.
+// 处理 POST 上的流派更新。
 exports.genre_update_post = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Genre update POST");
+  res.send("未实现：Genre 更新 POST");
 });
 ```
 
@@ -427,47 +427,47 @@ const Book = require("../models/book");
 const asyncHandler = require("express-async-handler");
 
 exports.index = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Site Home Page");
+  res.send("未实现：网站主页");
 });
 
-// 显示所有的 books.
+// 显示所有的图书
 exports.book_list = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Book list");
+  res.send("未实现：Book 列表");
 });
 
-// Display detail page for a specific book.
+// 显示特定 Book 的详情页面。
 exports.book_detail = asyncHandler(async (req, res, next) => {
-  res.send(`未实现：Book detail: ${req.params.id}`);
+  res.send(`未实现：Book 详情页面：${req.params.id}`);
 });
 
-// Display book create form on GET.
+// 通过 GET 显示 Book 创建表单。
 exports.book_create_get = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Book create GET");
+  res.send("未实现：Book 创建 GET");
 });
 
-// Handle book create on POST.
+// 以 POST 方式处理 Book 创建。
 exports.book_create_post = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Book create POST");
+  res.send("未实现：Book 创建 POST");
 });
 
-// Display book delete form on GET.
+// 通过 GET 显示 Book 删除表单。
 exports.book_delete_get = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Book delete GET");
+  res.send("未实现：Book 删除 GET");
 });
 
-// Handle book delete on POST.
+// 以 POST 方式处理 Book 删除。
 exports.book_delete_post = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Book delete POST");
+  res.send("未实现：Book 删除 POST");
 });
 
-// Display book update form on GET.
+// 通过 GET 显示 Book 更新表单。
 exports.book_update_get = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Book update GET");
+  res.send("未实现：Book 更新 GET");
 });
 
-// Handle book update on POST.
+// 处理 POST 时的 Book 更新。
 exports.book_update_post = asyncHandler(async (req, res, next) => {
-  res.send("未实现：Book update POST");
+  res.send("未实现：Book 更新 POST");
 });
 ```
 
@@ -532,51 +532,51 @@ router.get("/books", book_controller.book_list);
 // 用于创建作者的 GET 请求。注意这必须在 id 的路由之前（比如说显示作者）
 router.get("/author/create", author_controller.author_create_get);
 
-// POST request for creating Author.
-router.post("/author/create", author_controller.author_create_post);
+// 创建作者的 POST 请求。
+router.post("/author/create",author_controller.author_create_post);
 
-// GET request to delete Author.
+// 删除作者的 GET 请求。
 router.get("/author/:id/delete", author_controller.author_delete_get);
 
-// POST request to delete Author.
+// POST 请求删除作者。
 router.post("/author/:id/delete", author_controller.author_delete_post);
 
-// GET request to update Author.
+// 更新作者的 GET 请求。
 router.get("/author/:id/update", author_controller.author_update_get);
 
-// POST request to update Author.
+// POST 请求更新作者。
 router.post("/author/:id/update", author_controller.author_update_post);
 
-// GET request for one Author.
+// 获取一个作者的 GET 请求。
 router.get("/author/:id", author_controller.author_detail);
 
-// GET request for list of all Authors.
+// 获取所有作者列表的 GET 请求。
 router.get("/authors", author_controller.author_list);
 
-/// GENRE ROUTES ///
+/// 类型路由 ///
 
 // 用于创建 Genre 的 GET 请求。注意：这必须在显示 Genre 的路由之前（使用 id 的路由）。
 router.get("/genre/create", genre_controller.genre_create_get);
 
-//POST request for creating Genre.
+//POST 请求创建 Genre。
 router.post("/genre/create", genre_controller.genre_create_post);
 
-// GET request to delete Genre.
+// 删除 Genre 的 GET 请求。
 router.get("/genre/:id/delete", genre_controller.genre_delete_get);
 
-// POST request to delete Genre.
+// POST 请求删除 Genre。
 router.post("/genre/:id/delete", genre_controller.genre_delete_post);
 
-// GET request to update Genre.
+// 更新 Genre 的 GET 请求。
 router.get("/genre/:id/update", genre_controller.genre_update_get);
 
-// POST request to update Genre.
+// 更新 Genre 的 POST 请求。
 router.post("/genre/:id/update", genre_controller.genre_update_post);
 
-// GET request for one Genre.
+// 获取一个 Genre 的 GET 请求。
 router.get("/genre/:id", genre_controller.genre_detail);
 
-// GET request for list of all Genre.
+// 获取所有 Genre 列表的 GET 请求
 router.get("/genres", genre_controller.genre_list);
 
 /// BOOKINSTANCE ROUTES ///
@@ -587,40 +587,40 @@ router.get(
   book_instance_controller.bookinstance_create_get,
 );
 
-// POST request for creating BookInstance.
+// 创建 BookInstance 的 POST 请求。
 router.post(
-  "/bookinstance/create", 
+        "/bookinstance/create",
   book_instance_controller.bookinstance_create_post,
 );
 
-// GET request to delete BookInstance.
-router.get(
+// 删除 BookInstance 的 GET 请求。
+router.post(
   "/bookinstance/:id/delete",
   book_instance_controller.bookinstance_delete_get,
 );
 
-// POST request to delete BookInstance.
+// POST 请求删除 BookInstance。
 router.post(
-  "/bookinstance/:id/delete",
+        "/bookinstance/:id/delete",
   book_instance_controller.bookinstance_delete_post,
 );
 
-// GET request to update BookInstance.
+// 更新 BookInstance 的 GET 请求。
 router.get(
-  "/bookinstance/:id/update",
+  "/bookinstance/:id/delete",
   book_instance_controller.bookinstance_update_get,
 );
 
-// POST request to update BookInstance.
+// 更新 BookInstance 的 POST 请求。
 router.post(
   "/bookinstance/:id/update",
-  book_instance_controller.bookinstance_update_post,
+  book_instance_controller.bookinstance_update_post
 );
 
-// GET request for one BookInstance.
+// 一个 BookInstance 的 GET 请求。
 router.get("/bookinstance/:id", book_instance_controller.bookinstance_detail);
 
-// GET request for list of all BookInstance.
+// GET 请求获取所有 BookInstance 的列表。
 router.get("/bookinstances", book_instance_controller.bookinstance_list);
 
 module.exports = router;
