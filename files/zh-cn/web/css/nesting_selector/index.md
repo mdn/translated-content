@@ -1,0 +1,249 @@
+---
+title: "& 嵌套选择器"
+slug: Web/CSS/Nesting_selector
+page-type: css-selector
+browser-compat: css.selectors.nesting
+l10n:
+  sourceCommit: c6b772b874485e67bb8cf8eff8c1874deb2e66c3
+---
+
+{{CSSRef}}
+
+CSS **`&` 嵌套选择器** 明确指示在使用 [CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting)时，父规则和子规则的关系。它使得内嵌规则的选择器*相对于其父元素*。若没有 `&` 嵌套选择器，则子规则将选择子元素。子选择器的[优先级](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)和它们被包含在{{cssxref(":is", ":is()")}}伪类内的情况一样。
+
+> **备注：** *子规则*不等于*子元素选择器*。一个子规则可以通过 `&` 嵌套选择器来选择父元素或子元素。
+
+如果不在一个嵌套规则里使用，则 `&` 嵌套选择器将代表其[根作用域](/zh-CN/docs/Web/CSS/:scope)。
+
+## 语法
+
+```css
+parentRule {
+  /* 父元素样式属性 */
+  & childRule {
+    /* 子元素样式属性 */
+  }
+}
+```
+
+### `&` 嵌套选择器与空格
+
+考虑以下*不使用* `&` 嵌套选择器的嵌套代码。
+
+```css
+.parent-rule {
+  /* 父元素样式属性 */
+  .child-rule {
+    /* 子元素样式属性 */
+  }
+}
+```
+
+当浏览器分析嵌套选择器时，它将自动在选择器之间添加空格以创建新 CSS 选择器规则。以下代码显示不使用嵌套的等价规则：
+
+```css
+.parent-rule {
+  /* 父元素样式属性 */
+}
+
+.parent-rule .child-rule {
+  /* 是 .parent-rule 的子元素且是 .child-rule 的元素的样式属性 */
+}
+```
+
+当嵌套规则需要被附加（无空格）到父规则上时，例如当使用{{cssxref('Pseudo-classes', '伪类')}}，或者创建[组合选择器](/zh-CN/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)时，`&` 嵌套选择器必须紧跟子选择器。
+
+考虑以下示例。我们想要为一个元素添加样式，一些是需要永久应用的，而另一些嵌套样式则仅当鼠标悬停时才被应用。如果不添加 `&` 嵌套选择器，浏览器会添加空格，最终我们得到的将是一个匹配*任意被悬停的子元素*的选择器。当然，这才不是我们想要的结果。
+
+```css
+.parent-rule {
+  /* 父元素样式属性 */
+  :hover {
+    /* 子元素样式属性 */
+  }
+}
+
+/* 浏览器会将以上嵌套规则分析为 */
+.parent-rule {
+  /* 父元素样式属性 */
+}
+
+.parent-rule *:hover {
+  /* 子元素样式属性 */
+}
+```
+
+在紧跟（不添加空格）添加 `&` 嵌套选择器后，由父规则匹配的元素在被悬停时就会应用样式了。
+
+```css
+.parent-rule {
+  /* 父元素样式属性 */
+  &:hover {
+    /* 子元素样式属性 */
+  }
+}
+
+/* 浏览器会将以上嵌套规则分析为 */
+.parent-rule {
+  /* 父元素样式属性 */
+}
+
+.parent-rule:hover {
+  /* 子元素样式属性 */
+}
+```
+
+## 后附嵌套选择器
+
+`&` 嵌套选择器也可以添加到一个选择器的后方，来反转上下文。
+
+```css
+.card {
+  /* .card 样式 */
+  .featured & {
+    /* .featured .card 样式 */
+  }
+}
+
+/* 浏览器会将以上嵌套规则分析为 */
+
+.card {
+  /* .card 样式 */
+}
+
+.featured .card {
+  /* .featured .card 样式 */
+}
+```
+
+`&` 嵌套选择器可以在一个选择器里多次使用：
+
+```css
+.card {
+  /* .card 样式 */
+  .featured & & & {
+    /* .featured .card .card .card 样式 */
+  }
+}
+
+/* 浏览器会将以上嵌套规则分析为 */
+
+.card {
+  /* .card 样式 */
+}
+
+.featured .card .card .card {
+  /* .featured .card .card .card 样式 */
+}
+```
+
+## 示例
+
+这两个示例的输出相同。第一个使用正常 CSS 样式，第二个使用 `&` 嵌套选择器。
+
+### 使用正常 CSS 样式
+
+使用正常 CSS 样式的示例。
+
+#### HTML
+
+```html
+<p class="example">
+  这段文字<a href="#">包含一个链接</a>，尝试悬停或聚焦它。
+</p>
+```
+
+#### CSS
+
+```css
+.example {
+  font-family: system-ui;
+  font-size: 1.2rem;
+}
+
+.example > a {
+  color: tomato;
+}
+
+.example > a:hover,
+.example > a:focus {
+  color: ivory;
+  background-color: tomato;
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample('Original_CSS_styles','100%','65')}}
+
+### 使用 `&` 嵌套选择器
+
+使用 `&` 嵌套选择器的示例。
+
+#### HTML
+
+```html
+<p class="example">
+  这段文字<a href="#">包含一个链接</a>，尝试悬停或聚焦它。
+</p>
+```
+
+#### CSS
+
+```css
+.example {
+  font-family: system-ui;
+  font-size: 1.2rem;
+  & > a {
+    color: tomato;
+    &:hover,
+    &:focus {
+      color: ivory;
+      background-color: tomato;
+    }
+  }
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample('Nested_CSS_styles','100%','65')}}
+
+### 在嵌套规则外使用 `&`
+
+如果不在一个嵌套规则里使用，则 `&` 嵌套选择器将代表其[根作用域](/zh-CN/docs/Web/CSS/:scope)。
+
+```html
+<p>在输入框上方悬停以更改文档背景颜色。</p>
+```
+
+```css
+& {
+  color: blue;
+  font-weight: bold;
+}
+
+&:hover {
+  background-color: wheat;
+}
+```
+
+#### 结果
+
+在这个示例中，所有样式均被应用到 [document](/zh-CN/docs/Web/API/Document) 上。
+
+{{EmbedLiveSample('Usage_outside_nested_rule','100%','65')}}
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- [使用 CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
+- [CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting)模块
+- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)模块
