@@ -36,7 +36,7 @@ clearRect(x, y, width, height)
 
 ## 示例
 
-### 清除整个画布
+### 擦除整个画布
 
 这段代码片段用于擦除整个画布。这通常在动画的每一帧开始时需要执行。清除的区域尺寸设置为与 `<canvas>` 元素的 `width` 和 `height` 属性相等。
 
@@ -46,9 +46,9 @@ const ctx = canvas.getContext("2d");
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 ```
 
-### 清除一部分画布
+### 擦除一部分画布
 
-这个例子在黄色背景上绘制了一个蓝色三角形，然后使用 `clearRect()` 方法擦除了画布的部分内容。
+此示例在黄色背景上绘制了一个蓝色三角形，然后使用 `clearRect()` 方法擦除了画布的部分内容。
 
 #### HTML
 
@@ -58,11 +58,11 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 #### JavaScript
 
-下面代码中被清除的区域是一个矩形，它的左上点坐标在 (10, 10)，宽度和高度分别是 120 和 100 像素。
+被清除的区域是一个矩形，它的左上点坐标在 (10, 10)。清除区域的宽度为 120，高度为 100。
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // 绘制黄色背景
 ctx.beginPath();
@@ -84,7 +84,7 @@ ctx.clearRect(10, 10, 120, 100);
 
 #### 结果
 
-{{EmbedLiveSample('清除一部分画布', 700, 180)}}
+{{EmbedLiveSample('擦除一部分画布', 700, 180)}}
 
 ## 规范
 
