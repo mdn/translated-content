@@ -92,7 +92,7 @@ function updateDisplay(verse) {
 
 나중에 필요하므로 로드할 텍스트 파일을 가리키는 상대적인 URL을 구성하는 것으로 시작합니다. {{htmlelement("select")}} 요소의 값은 선택한 {{htmlelement("option")}} 내부의 텍스트와 동일합니다(value 속성에 다른 값을 지정하지 않는 한). 예를 들어 "Verse 1"입니다. 해당 Verse 텍스트 파일은 "Verse 1.txt"이며 HTML 파일과 동일한 디렉토리에 있으므로 파일 이름만 있으면 됩니다.
 
-그러나 웹 서버는 대소문자를 구분하는 경향이 있으며 파일 이름에 공백이 없습니다. "Verse 1"을 "verse1.txt"로 변환하려면 "V"를 소문자로 변환하고 공백을 제거한 다음 끝에 ".txt"를 추가해야 합니다. 이는  {{jsxref("String.replace", "replace()")}}, {{jsxref("String.toLowerCase", "toLowerCase()")}}, [template literal](/ko/docs/Web/JavaScript/Reference/Template_literals)로 수행할 수 있습니다. `updateDisplay()` 함수 내부에 다음 행을 추가합니다.
+그러나 웹 서버는 대소문자를 구분하는 경향이 있으며 파일 이름에 공백이 없습니다. "Verse 1"을 "verse1.txt"로 변환하려면 "V"를 소문자로 변환하고 공백을 제거한 다음 끝에 ".txt"를 추가해야 합니다. 이는 {{jsxref("String.replace", "replace()")}}, {{jsxref("String.toLowerCase", "toLowerCase()")}}, [template literal](/ko/docs/Web/JavaScript/Reference/Template_literals)로 수행할 수 있습니다. `updateDisplay()` 함수 내부에 다음 행을 추가합니다.
 
 ```js
 verse = verse.replace(" ", "").toLowerCase();
@@ -251,6 +251,7 @@ try {
 Fetch API가 이보다 더 개선된 것이라고 생각하기를 바랍니다. 특히, 우리가 다른 두 곳에서 어떻게 오류를 처리해야 하는지 보세요.
 
 ## 요약
+
 이 문서에서는 Fetch를 사용하여 서버에서 데이터를 가져오는 방법을 보여줍니다.
 
 
