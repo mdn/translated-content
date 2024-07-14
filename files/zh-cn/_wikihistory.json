@@ -3557,6 +3557,10 @@
       "ppphp"
     ]
   },
+  "Learn/JavaScript/Building_blocks/Event_bubbling": {
+    "modified": "2019-03-18T21:17:15.255Z",
+    "contributors": ["zhuangyin"]
+  },
   "Learn/JavaScript/Building_blocks/Events": {
     "modified": "2020-08-04T06:06:58.173Z",
     "contributors": [
@@ -9177,10 +9181,6 @@
       "TigerSoldier"
     ]
   },
-  "Web/API/Event/Comparison_of_Event_Targets": {
-    "modified": "2019-03-18T21:17:15.255Z",
-    "contributors": ["zhuangyin"]
-  },
   "Web/API/Event/Event": {
     "modified": "2020-10-15T21:37:04.498Z",
     "contributors": [
@@ -9495,10 +9495,6 @@
       "yqjiang",
       "xcatliu"
     ]
-  },
-  "Web/API/Fetch_API/Cross-global_fetch_usage": {
-    "modified": "2019-03-18T21:35:40.335Z",
-    "contributors": ["DuckSoft", "wynejan"]
   },
   "Web/API/Fetch_API/Using_Fetch": {
     "modified": "2020-10-15T21:39:39.542Z",
@@ -16500,10 +16496,6 @@
   "Web/CSS/-webkit-line-clamp": {
     "modified": "2020-10-15T22:24:06.241Z",
     "contributors": ["liuruiqi1993", "herotangabc", "litaoAurora"]
-  },
-  "Web/CSS/-webkit-overflow-scrolling": {
-    "modified": "2019-03-23T23:02:52.440Z",
-    "contributors": ["teoli", "Ende93", "FrontENG", "limichange", "ccforward"]
   },
   "Web/CSS/-webkit-tap-highlight-color": {
     "modified": "2019-03-23T22:22:56.346Z",

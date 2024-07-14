@@ -51,7 +51,7 @@ l10n:
 
 ### 西班牙文（`es`）
 
-- 討論群組：[Matrix（`#mdn-l10n-es`）](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org)、[Telegram（`MDN l10n ES`）](https://t.me/+Dr6qKQCAepw4MjFj)
+- 討論群組：[Matrix（`#mdn-l10n-es`）](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org)、[Telegram（`MDN l10n ES`）](https://t.me/+Dr6qKQCAepw4MjFj)、[Discord（`#spanish`）](/discord)
 - 目前的維護者：[JuanVqz](https://github.com/JuanVqz)、[davbrito](https://github.com/davbrito)、[Graywolf9](https://github.com/Graywolf9)、[Vallejoanderson](https://github.com/Vallejoanderson)、[marcelozarate](https://github.com/marcelozarate)、[Jalkhov](https://github.com/Jalkhov)
 
 ## 參見
