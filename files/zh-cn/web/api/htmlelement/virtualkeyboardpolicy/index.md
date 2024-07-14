@@ -2,7 +2,7 @@
 title: HTMLElement：virtualKeyboardPolicy 属性
 slug: Web/API/HTMLElement/virtualKeyboardPolicy
 l10n:
-  sourceCommit: 96e73ab4d1fdb714a6a6516821b3206d83909046
+  sourceCommit: c7e432ec4c970b0b63741101bacce148804138e4
 ---
 
 {{APIRef("VirtualKeyboard API")}}{{SeeCompatTable}}
