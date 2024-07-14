@@ -11,7 +11,6 @@ l10n:
 
 수학을 사용하지 않고도 `rem`, `vw`, 그리고 `%`와 같은 내장 [CSS 단위들](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)을 통하여 HTML 요소를 더 유연하게 스타일링하여 특정 사용자 경험을 향상시킬 수 있습니다.
 
-However, there are cases where we might feel limited by expressing an element's style using a single value and unit. Consider the following examples:
 그러나, 단일 값과 단위들을 사용하여 요소들을 스타일링하는 것은 어딘가 제한적이라고 충분히 느껴질 수 있습니다. 다음 경우들을 생각해 보세요.
 
 1. "navbar 의 높이를 제외한 뷰포트만큼의 높이" 를 콘텐츠 영역의 높이로 설정하고 싶을 수 있습니다.
