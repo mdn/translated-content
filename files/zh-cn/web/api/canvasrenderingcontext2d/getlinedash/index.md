@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 {{domxref("CanvasRenderingContext2D")}}接口的 **`getLineDash()`** 方法用于获取当前线段样式。
+Canvas 2D API 的 {{domxref("CanvasRenderingContext2D")}} 接口的 **`getLineDash()`** 方法用于获取当前的虚线样式。
 
 ## 语法
 
@@ -25,9 +25,9 @@ getLineDash()
 
 ## 示例
 
-### 获取当前的划线设置
+### 获取当前的虚线设置
 
-这是一段使用 `getLineDash` 方法的示例。
+此示例演示了 `getLineDash` 方法。
 
 #### HTML
 
