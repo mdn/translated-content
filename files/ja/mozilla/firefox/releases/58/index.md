@@ -99,7 +99,7 @@ _変更なし。_
 
 ### CSS
 
-- Mozilla 独自仕様である以下の system metric 疑似クラスが、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1396066](https://bugzil.la/1396066)):
+- Mozilla 独自仕様である以下の system metric 擬似クラスが、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1396066](https://bugzil.la/1396066)):
 
   - {{Cssxref(":-moz-system-metric(images-in-menus)")}}
   - {{Cssxref(":-moz-system-metric(mac-graphite-theme)")}}
@@ -133,7 +133,7 @@ _変更なし。_
   - [`-moz-windows-glass`](/ja/docs/Web/CSS/@media/-moz-windows-glass)
   - [`-moz-windows-theme`](/ja/docs/Web/CSS/@media/-moz-windows-theme)
 
-- Mozilla 独自仕様である `:-moz-styleeditor-transitioning` 疑似クラスが、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1396099](https://bugzil.la/1396099))。
+- Mozilla 独自仕様である `:-moz-styleeditor-transitioning` 擬似クラスが、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1396099](https://bugzil.la/1396099))。
 
 ### JavaScript
 
