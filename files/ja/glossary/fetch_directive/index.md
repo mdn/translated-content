@@ -13,7 +13,7 @@ slug: Glossary/Fetch_directive
 
 ## 関連情報
 
-- 関連用語：
+- 関連用語:
 
   - {{Glossary("CSP")}}
   - {{Glossary("Reporting directive", "報告ディレクティブ")}}

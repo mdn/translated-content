@@ -16,6 +16,6 @@ CSS プリプロセッサーを使うためには、 CSS コンパイラーを�
    3. [Stylus](http://stylus-lang.com/)
    4. [PostCSS](http://postcss.org/)
 
-2. 関連用語：
+2. 関連用語:
 
    1. {{Glossary("CSS")}}

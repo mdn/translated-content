@@ -56,7 +56,7 @@ greeting: function greeting() {
 }
 ```
 
-- 関連用語：
+- 関連用語:
 
   - {{glossary("global scope", "グローバルスコープ")}}
   - {{glossary("object", "オブジェクト")}}

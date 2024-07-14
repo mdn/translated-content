@@ -69,7 +69,7 @@ greeting();
 
 <!---->
 
-- 関連用語：
+- 関連用語:
 
   - {{Glossary("Call stack", "コールスタック")}}
   - {{Glossary("Function", "関数")}}

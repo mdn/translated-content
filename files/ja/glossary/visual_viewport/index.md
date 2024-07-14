@@ -14,6 +14,6 @@ slug: Glossary/Visual_Viewport
 - [Visual Viewport API](/ja/docs/Web/API/Visual_Viewport_API)
 - [Viewport](https://en.wikipedia.org/wiki/Viewport) (Wikipedia)
 - [A tale of two viewports](https://www.quirksmode.org/mobile/viewports.html) (Quirksmode)
-- 関連用語：
+- 関連用語:
   - {{Glossary("Viewport", "ビューポート")}}
   - {{Glossary("Layout viewport", "レイアウトビューポート")}}

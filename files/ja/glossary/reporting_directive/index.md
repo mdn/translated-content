@@ -11,7 +11,7 @@ slug: Glossary/Reporting_directive
 
 ## 関連情報
 
-- 関連用語：
+- 関連用語:
 
   - {{Glossary("CSP")}}
   - {{Glossary("Fetch directive", "フェッチディレクティブ")}}

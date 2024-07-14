@@ -9,7 +9,7 @@ slug: Glossary/RTL
 
 RTL とは対照的に、LTR (Left To Right, 左書き) は、英語 (`en`, `en-US`, `en-GB`, など)、スペイン語 (`es`)、フランス語 (`fr`) などの他の言語で使用されます。
 
-- 関連用語：
+- 関連用語:
 
   - {{Glossary("Localization")}}
   - {{Glossary("LTR", "LTR (左書き)")}}

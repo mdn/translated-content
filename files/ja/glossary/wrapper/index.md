@@ -14,7 +14,7 @@ JavaScript のようなプログラミング言語において、ラッパー (w
 ## 関連情報
 
 - [Wrapper function](https://en.wikipedia.org/wiki/Wrapper_function) (Wikipedia, 英語)
-- 関連用語：
+- 関連用語:
 
   - {{Glossary("API")}}
   - {{Glossary("Class", "クラス")}}

@@ -22,7 +22,7 @@ slug: Glossary/Method
 
 <!---->
 
-- 関連用語：
+- 関連用語:
 
   - {{Glossary("function", "関数")}}
   - {{Glossary("object","オブジェクト")}}

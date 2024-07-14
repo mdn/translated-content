@@ -16,7 +16,7 @@ slug: Glossary/Browser
 - [Microsoft Edge](https://www.microsoft.com/ja-JP/edge)
 - [Opera ブラウザー](https://www.opera.com/)
 
-1. 関連用語：
+1. 関連用語:
 
    1. {{Glossary("user agent", "ユーザーエージェント")}}
 

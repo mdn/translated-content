@@ -24,7 +24,7 @@ slug: Glossary/TLS
    1. [Transport Layer Security](/ja/docs/Web/Security/Transport_Layer_Security)
    2. [OWASP: Transport Layer Protection Cheat Sheet](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
 
-4. 関連用語：
+4. 関連用語:
 
    1. {{Glossary("HTTPS")}}
    2. {{Glossary("SSL")}}

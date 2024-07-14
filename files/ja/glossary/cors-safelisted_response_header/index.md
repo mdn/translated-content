@@ -36,7 +36,7 @@ Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding
 - [HTTP](/ja/docs/Web/HTTP)
 - [HTTP headers](/ja/docs/Web/HTTP/Headers)
 - {{HTTPHeader("Access-Control-Expose-Headers")}}
-- 関連用語：
+- 関連用語:
 
   - {{Glossary("CORS")}}
   - {{Glossary("CORS-safelisted_request_header", "CORS セーフリストリクエストヘッダー")}}
