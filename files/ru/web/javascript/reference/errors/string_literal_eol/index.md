@@ -1,6 +1,7 @@
 ---
 title: "SyntaxError: unterminated string literal"
-slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
+slug: Web/JavaScript/Reference/Errors/String_literal_EOL
+original_slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 l10n:
   sourceCommit: d71b141d2d18b96639547856714df19cefacfebf
 ---
@@ -66,8 +67,8 @@ const longString =
 Ещё одна возможность — использовать [шаблонные строки](/ru/docs/Web/JavaScript/Reference/Template_literals):
 
 ```js example-good
-const longString = `Это очень длинная строка, которую 
-необходимо разбивать на несколько строк, 
+const longString = `Это очень длинная строка, которую
+необходимо разбивать на несколько строк,
 потому что иначе её трудно читать.`;
 ```
 
