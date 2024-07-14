@@ -84,4 +84,4 @@ console.log(el.ariaRowIndexText); // "Updated heading row"
 
 ## 関連情報
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
+- [ARIA: table role](/ja/docs/Web/Accessibility/ARIA/Roles/table_role)
