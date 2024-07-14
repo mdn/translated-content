@@ -14,7 +14,7 @@ l10n:
 会出现在顶层的元素包括：
 
 - 全屏元素，即通过成功调用 {{domxref("Element.requestFullscreen()")}} 而显示在全屏模式中的元素。
-- 通过成功调用 {{domxref("HTMLDialogElement.showModal()")}} 而显示为模态的 {{htmlelement("dialog")}} 元素。
+- 通过成功调用 {{domxref("HTMLDialogElement.showModal()")}} 而显示为模态框的 {{htmlelement("dialog")}} 元素。
 - 通过成功调用 {{domxref("HTMLElement.showPopover()")}} 而显示的弹出元素。
 
 一些浏览器，例如 Chrome，会在一个特殊的 DOM 树条目中显示位于顶层的元素。例如：
