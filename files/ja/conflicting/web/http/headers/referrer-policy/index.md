@@ -1,6 +1,7 @@
 ---
 title: "CSP: referrer"
-slug: Web/HTTP/Headers/Content-Security-Policy/referrer
+slug: conflicting/Web/HTTP/Headers/Referrer-Policy
+original_slug: Web/HTTP/Headers/Content-Security-Policy/referrer
 l10n:
   sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---

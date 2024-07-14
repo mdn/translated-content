@@ -3572,6 +3572,7 @@
 /ja/docs/Web/CSS/:-webkit-autofill	/ja/docs/Web/CSS/:autofill
 /ja/docs/Web/CSS/::-moz-placeholder	/ja/docs/Web/CSS/::placeholder
 /ja/docs/Web/CSS/::-webkit-input-placeholder	/ja/docs/Web/CSS/::placeholder
+/ja/docs/Web/CSS/::cue-region	/ja/docs/conflicting/Web/API/WebVTT_API
 /ja/docs/Web/CSS/:any	/ja/docs/Web/CSS/:is
 /ja/docs/Web/CSS/:host()	/ja/docs/Web/CSS/:host_function
 /ja/docs/Web/CSS/:matches	/ja/docs/Web/CSS/:is
@@ -4156,6 +4157,8 @@
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSPreflightDidNotSucceed	/ja/docs/Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSRequestNotHttp	/ja/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
 /ja/docs/Web/HTTP/HTTP_response_codes	/ja/docs/Web/HTTP/Status
+/ja/docs/Web/HTTP/Headers/Content-Security-Policy/plugin-types	/ja/docs/orphaned/Web/HTTP/Headers/Content-Security-Policy/plugin-types
+/ja/docs/Web/HTTP/Headers/Content-Security-Policy/referrer	/ja/docs/conflicting/Web/HTTP/Headers/Referrer-Policy
 /ja/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for	/ja/docs/Web/HTTP/Headers/Content-Security-Policy
 /ja/docs/Web/HTTP/Headers/Feature-Policy	/ja/docs/Web/HTTP/Headers/Permissions-Policy
 /ja/docs/Web/HTTP/Headers/Feature-Policy/accelerometer	/ja/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer
@@ -4242,14 +4245,19 @@
 /ja/docs/Web/JavaScript/Reference/About/Formatting_Conventions	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
 /ja/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/ja/docs/Web/JavaScript/Reference/Classes/Private_properties
 /ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
-/ja/docs/Web/JavaScript/Reference/Errors/Bad_octal	/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal
+/ja/docs/Web/JavaScript/Reference/Errors/Bad_octal	/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 /ja/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/ja/docs/Web/JavaScript/Reference/Errors/Bad_return
 /ja/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/ja/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 /ja/docs/Web/JavaScript/Reference/Errors/Deprecated_String_generics	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /ja/docs/Web/JavaScript/Reference/Errors/Deprecated_expression_closures	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal	/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 /ja/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/ja/docs/Web/JavaScript/Reference/Errors/Equal_as_assign	/ja/docs/orphaned/Web/JavaScript/Reference/Errors/Equal_as_assign
 /ja/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/ja/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter
+/ja/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement	/ja/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_token
 /ja/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/ja/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
+/ja/docs/Web/JavaScript/Reference/Errors/Undefined_prop	/ja/docs/orphaned/Web/JavaScript/Reference/Errors/Undefined_prop
+/ja/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal	/ja/docs/Web/JavaScript/Reference/Errors/String_literal_EOL
 /ja/docs/Web/JavaScript/Reference/Functions_and_function_scope	/ja/docs/Web/JavaScript/Reference/Functions
 /ja/docs/Web/JavaScript/Reference/Functions_and_function_scope/Arrow_functions	/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /ja/docs/Web/JavaScript/Reference/Functions_and_function_scope/Default_parameters	/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters

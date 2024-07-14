@@ -21793,17 +21793,9 @@
     "modified": "2020-10-15T22:21:12.475Z",
     "contributors": ["mfuji09"]
   },
-  "Web/HTTP/Headers/Content-Security-Policy/plugin-types": {
-    "modified": "2020-10-15T22:21:09.218Z",
-    "contributors": ["mfuji09"]
-  },
   "Web/HTTP/Headers/Content-Security-Policy/prefetch-src": {
     "modified": "2020-10-15T22:22:28.558Z",
     "contributors": ["mfuji09"]
-  },
-  "Web/HTTP/Headers/Content-Security-Policy/referrer": {
-    "modified": "2020-10-15T22:08:56.755Z",
-    "contributors": ["mfuji09", "k-kuwahara"]
   },
   "Web/HTTP/Headers/Content-Security-Policy/report-to": {
     "modified": "2020-10-15T22:08:00.031Z",
@@ -23082,17 +23074,13 @@
     "modified": "2020-03-12T19:44:11.490Z",
     "contributors": ["YuichiNukiyama"]
   },
-  "Web/JavaScript/Reference/Errors/Deprecated_octal": {
+  "Web/JavaScript/Reference/Errors/Deprecated_octal_literal": {
     "modified": "2020-03-12T19:46:02.313Z",
     "contributors": ["YuichiNukiyama"]
   },
   "Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma": {
     "modified": "2020-11-30T05:51:07.489Z",
     "contributors": ["mfuji09", "YuichiNukiyama"]
-  },
-  "Web/JavaScript/Reference/Errors/Equal_as_assign": {
-    "modified": "2020-03-12T19:44:14.617Z",
-    "contributors": ["YuichiNukiyama"]
   },
   "Web/JavaScript/Reference/Errors/Getter_only": {
     "modified": "2020-03-12T19:46:14.314Z",
@@ -23174,10 +23162,6 @@
     "modified": "2020-03-12T19:46:02.571Z",
     "contributors": ["YuichiNukiyama"]
   },
-  "Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement": {
-    "modified": "2020-03-12T19:44:11.437Z",
-    "contributors": ["Uemmra3", "YuichiNukiyama"]
-  },
   "Web/JavaScript/Reference/Errors/More_arguments_needed": {
     "modified": "2020-03-12T19:44:02.760Z",
     "contributors": ["lv7777", "YuichiNukiyama"]
@@ -23254,16 +23238,16 @@
     "modified": "2020-03-12T19:45:05.346Z",
     "contributors": ["okayurisotto", "koba04", "YuichiNukiyama"]
   },
+  "Web/JavaScript/Reference/Errors/String_literal_EOL": {
+    "modified": "2020-03-12T19:44:13.962Z",
+    "contributors": ["Uemmra3", "YuichiNukiyama"]
+  },
   "Web/JavaScript/Reference/Errors/Too_much_recursion": {
     "modified": "2020-03-15T12:39:02.760Z",
     "contributors": ["mfuji09", "YuichiNukiyama"]
   },
   "Web/JavaScript/Reference/Errors/Undeclared_var": {
     "modified": "2020-03-12T19:44:07.574Z",
-    "contributors": ["YuichiNukiyama"]
-  },
-  "Web/JavaScript/Reference/Errors/Undefined_prop": {
-    "modified": "2020-03-12T19:44:11.614Z",
     "contributors": ["YuichiNukiyama"]
   },
   "Web/JavaScript/Reference/Errors/Unexpected_token": {
@@ -23277,10 +23261,6 @@
   "Web/JavaScript/Reference/Errors/Unnamed_function_statement": {
     "modified": "2020-03-12T19:46:03.437Z",
     "contributors": ["YuichiNukiyama"]
-  },
-  "Web/JavaScript/Reference/Errors/Unterminated_string_literal": {
-    "modified": "2020-03-12T19:44:13.962Z",
-    "contributors": ["Uemmra3", "YuichiNukiyama"]
   },
   "Web/JavaScript/Reference/Errors/in_operator_no_object": {
     "modified": "2020-12-06T05:38:03.601Z",
@@ -30356,6 +30336,10 @@
     "modified": "2020-08-12T12:42:41.854Z",
     "contributors": ["mfuji09", "tamura4278"]
   },
+  "conflicting/Web/HTTP/Headers/Referrer-Policy": {
+    "modified": "2020-10-15T22:08:56.755Z",
+    "contributors": ["mfuji09", "k-kuwahara"]
+  },
   "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
     "modified": "2020-10-21T02:00:03.457Z",
     "contributors": [
@@ -30401,6 +30385,10 @@
       "Taken",
       "electrolysis"
     ]
+  },
+  "conflicting/Web/JavaScript/Reference/Errors/Unexpected_token": {
+    "modified": "2020-03-12T19:44:11.437Z",
+    "contributors": ["Uemmra3", "YuichiNukiyama"]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
     "modified": "2020-03-12T19:48:11.857Z",
@@ -30581,6 +30569,10 @@
     "modified": "2020-09-18T02:40:01.125Z",
     "contributors": ["morinokami", "silverskyvicto"]
   },
+  "orphaned/Web/HTTP/Headers/Content-Security-Policy/plugin-types": {
+    "modified": "2020-10-15T22:21:09.218Z",
+    "contributors": ["mfuji09"]
+  },
   "orphaned/Web/JavaScript/Guide/Objects_and_Properties": {
     "modified": "2019-03-24T00:01:07.858Z",
     "contributors": ["ethertank", "happysadman", "electrolysis", "Mgjbot"]
@@ -30595,12 +30587,20 @@
       "electrolysis"
     ]
   },
+  "orphaned/Web/JavaScript/Reference/Errors/Equal_as_assign": {
+    "modified": "2020-03-12T19:44:14.617Z",
+    "contributors": ["YuichiNukiyama"]
+  },
   "orphaned/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated": {
     "modified": "2020-03-12T19:44:36.287Z",
     "contributors": ["YuichiNukiyama"]
   },
   "orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments": {
     "modified": "2020-03-12T19:46:14.001Z",
+    "contributors": ["YuichiNukiyama"]
+  },
+  "orphaned/Web/JavaScript/Reference/Errors/Undefined_prop": {
+    "modified": "2020-03-12T19:44:11.614Z",
     "contributors": ["YuichiNukiyama"]
   },
   "orphaned/Web/JavaScript/Reference/Errors/Var_hides_argument": {

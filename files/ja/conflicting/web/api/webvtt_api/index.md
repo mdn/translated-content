@@ -1,6 +1,7 @@
 ---
 title: "::cue-region"
-slug: Web/CSS/::cue-region
+slug: conflicting/Web/API/WebVTT_API
+original_slug: Web/CSS/::cue-region
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

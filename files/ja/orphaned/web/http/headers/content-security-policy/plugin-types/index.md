@@ -1,6 +1,7 @@
 ---
 title: "CSP: plugin-types"
-slug: Web/HTTP/Headers/Content-Security-Policy/plugin-types
+slug: orphaned/Web/HTTP/Headers/Content-Security-Policy/plugin-types
+original_slug: Web/HTTP/Headers/Content-Security-Policy/plugin-types
 l10n:
   sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
