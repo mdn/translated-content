@@ -61,7 +61,7 @@ CSS 객체 모델에는 네 가지 표준 좌표계가 사용됩니다. 주요 �
 
 ### JavaScript
 
-자바스크립트에서는 {{domxref("Element/mouseenter_event", "mouseenter")}}, {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/mouseleave_event", "mouseleave")}} 각 이벤트 유형에 대해 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 를 호출해 내부 상자에 이벤트 핸들러를 설정합니다.
+JavaScript에서는 {{domxref("Element/mouseenter_event", "mouseenter")}}, {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/mouseleave_event", "mouseleave")}} 각 이벤트 유형에 대해 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 를 호출해 내부 상자에 이벤트 처리기를 설정합니다.
 각 이벤트에 대해, 각 시스템의 좌표를 `<p>` 요소의 내부 텍스트로 설정하는 setCoords() 함수를 호출합니다.
 
 ```js
