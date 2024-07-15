@@ -15,7 +15,7 @@ slug: Glossary/Public-key_cryptography
 
 よく使われる公開鍵暗号システムには、 RSA (署名と暗号化の両方)、 DSA (署名用)、 Diffie-Hellman (鍵の合意用) などがあります。
 
-- [MDN 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("Symmetric-key cryptography", "共通鍵暗号")}}
 

@@ -16,6 +16,6 @@ Real-time streaming protocol (RTSP) はネットワークプロトコルの一�
 
 <!---->
 
-- [MDN Web Docs 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("RTSP")}}
