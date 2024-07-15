@@ -2,12 +2,12 @@
 title: VirtualKeyboard：hide() 方法
 slug: Web/API/VirtualKeyboard/hide
 l10n:
-  sourceCommit: 5cdb341c723de0edb273769555d9124266d9c851
+  sourceCommit: 957097d5450e24397857fc10902e3d2028f1bc50
 ---
 
 {{APIRef("VirtualKeyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-{{domxref("VirtualKeyboard")}} 接口的 **`hide()`** 方法用于以编程方式隐藏屏幕上的虚拟键盘。在需要通过使用 {{domxref("VirtualKeyboard_API", "VirtualKeyboard API", "", "nocode")}} 实现自己的虚拟键盘逻辑时非常有用。
+{{domxref("VirtualKeyboard")}} 接口的 **`hide()`** 方法用于以编程方式隐藏屏幕上的虚拟键盘。这在需要通过使用{{domxref("VirtualKeyboard_API", "虚拟键盘 API", "", "nocode")}} 实现自己的虚拟键盘逻辑时非常有用。
 
 该方法仅在当前焦点元素的 [`virtualKeyboardPolicy`](/zh-CN/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy) 属性设置为 `manual`，且 [`inputmode`](/zh-CN/docs/Web/HTML/Global_attributes/inputmode) 没有设置为 `none` 时起作用。
 
@@ -29,7 +29,7 @@ hide()
 
 ## 示例
 
-下面的代码片段展示了如何使用 `virtualkeyboardpolicy` 属性阻止浏览器在单击或点击时显示虚拟键盘。代码还使用 `navigator.virtualKeyboard.show()` 和 `navigator.virtualKeyboard.hide()` 方法，在点击按钮时显示和隐藏虚拟键盘：
+下面的代码片段展示了如何使用 `virtualkeyboardpolicy` 属性阻止浏览器在单击或轻触时显示虚拟键盘。代码还使用 `navigator.virtualKeyboard.show()` 和 `navigator.virtualKeyboard.hide()` 方法，在点击按钮时显示和隐藏虚拟键盘：
 
 ```html
 <div contenteditable virtualkeyboardpolicy="manual" id="editor"></div>
@@ -66,5 +66,5 @@ hide()
 
 ## 参见
 
-- {{domxref("VirtualKeyboard_API", "VirtualKeyboard API", "", "nocode")}}
-- [使用 VirtualKeyboard API 实现完全控制](https://developer.chrome.com/docs/web-platform/virtual-keyboard/)
+- {{domxref("VirtualKeyboard_API", "虚拟键盘 API", "", "nocode")}}
+- [使用虚拟键盘 API 实现完全控制](https://developer.chrome.com/docs/web-platform/virtual-keyboard/)
