@@ -11,7 +11,7 @@ _WebKit_ 是一个显示基于标记的正确格式化网页的框架。{{Glossa
 
 WebKit 最初是 KDE 的 KHTML 和 KJS 库的一个分支，但自那时以来，许多个人和公司都做出了贡献（包括 KDE、Apple、Google 和 Nokia）。
 
-WebKit 是 Apple 的商标，该框架根据 BSD 形式的许可证分发。然而，两个重要组件属于 {{Glossary("LGPL")}}：**WebCore** 渲染库和 **JavaScriptCore** 引擎。
+WebKit 是 Apple 的商标，该框架根据 BSD 形式的许可证分发。然而，两个重要组件在 {{Glossary("LGPL")}} 下分发：**WebCore** 渲染库和 **JavaScriptCore** 引擎。
 
 ## 参见
 
