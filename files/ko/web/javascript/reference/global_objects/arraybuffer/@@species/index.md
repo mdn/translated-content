@@ -1,6 +1,6 @@
 ---
 title: ArrayBuffer[Symbol.species]
-slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
+slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species
 l10n:
   sourceCommit: 6e93ec8fc9e1f3bd83bf2f77e84e1a39637734f8
 ---
