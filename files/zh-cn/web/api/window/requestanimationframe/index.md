@@ -1,13 +1,15 @@
 ---
 title: Window：requestAnimationFrame() 方法
 slug: Web/API/Window/requestAnimationFrame
+l10n:
+  sourceCommit: 71f57bc7f6065d835a5af7c3ced3ef26263c809f
 ---
 
 {{APIRef}}
 
 **`window.requestAnimationFrame()`** 方法会告诉浏览器你希望执行一个动画。它要求浏览器在下一次重绘之前，调用用户提供的回调函数。
 
-对回调函数的调用频率通常是与显示器的刷新率相匹配。虽然 75hz、120hz 和 144hz 也被广泛使用，但是最常见的刷新率还是 60hz（每秒 60 个周期/帧）。为了提高性能和电池寿命，大多数浏览器都会暂停在后台选项卡或者隐藏的 {{ HTMLElement("iframe") }} 中运行的 `requestAnimationFrame()`
+对回调函数的调用频率通常与显示器的刷新率相匹配。虽然 75hz、120hz 和 144hz 也被广泛使用，但是最常见的刷新率还是 60hz（每秒 60 个周期/帧）。为了提高性能和电池寿命，大多数浏览器都会暂停在后台选项卡或者隐藏的 {{ HTMLElement("iframe") }} 中运行的 `requestAnimationFrame()`。
 
 > **备注：** 若你想在浏览器下次重绘之前继续更新下一帧动画，那么回调函数自身必须再次调用 `requestAnimationFrame()`。`requestAnimationFrame()` 是一次性的。
 
@@ -23,17 +25,16 @@ requestAnimationFrame(callback)
 
 - `callback`
   - 该函数会在下一次重绘更新你的动画时被调用到。这个回调函数只会传递一个参数：一个 {{domxref("DOMHighResTimeStamp")}} 参数，用于表示上一帧渲染的结束时间（基于 [time origin](/zh-CN/docs/Web/API/Performance/timeOrigin) 的毫秒数）
-  - 时间戳是一个以毫秒为单位的十进制数字，最小精度为 1 毫秒。对于 `Window` 对象（非 `workers`）来说，它等同于 {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}}。此时间戳在同一代理上（所有同源的`窗口`，更重要的是同源的 `iframes`）运行的所有窗口之间共享——它允许在多个`requestAnimationFrame`回调函数中执行同步动画。此时间戳值也近似于在回调函数开始时调用 {{domxref('performance.now()')}}，但它们永远都不会是相同的值。
-  - 当多个回调函数队列在同一帧中被 `requestAnimationFrame()` 所激发时，它们都会收到相同的时间戳，即便时间会在计算先前的回调函数中流逝。
+  - 时间戳是一个以毫秒为单位的十进制数字，最小精度为 1 毫秒。对于 `Window` 对象（而非 `workers`）来说，它等同于 {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}}。此时间戳在同一代理上（所有同源的 `window`，更重要的是同源的 `iframe`）运行的所有窗口之间共享——它允许在多个 `requestAnimationFrame` 回调函数中执行同步动画。此时间戳值也近似于在回调函数开始时调用 {{domxref('performance.now()')}}，但它们永远都不会是相同的值。
+  - 当 `requestAnimationFrame()` 队列中的多个回调开始在同一帧中触发时，它们都会收到相同的时间戳，即便在计算前一个回调函数工作量时这一帧的时间已经过去。
 
 ### 返回值
 
-请求 ID 是一个 `long` 类型整数值，是在回调列表里的唯一标识符。这是一个非零值，但你不能对该值做任何其他猜想。你可以将此值传递给 {{domxref("window.cancelAnimationFrame()")}} 函数以取消该刷新回调请求。
+请求 ID 是一个 `long` 类型整数值，是在回调列表里的唯一标识符。这是一个非零值，但你不能对该值做任何其他假设。你可以将此值传递给 {{domxref("window.cancelAnimationFrame()")}} 函数以取消该刷新回调请求。
 
 ## 示例
 
-在这个例子中，一个元素的动画时间是 2 秒（2000 毫秒）。该元素以 0.1px/ms 的速度向右移动，所以它的相对位置（以 CSS 像素为单位）可以通过动画开始后所经过的时间（以
-毫秒）的函数来计算 `0.1 * elapsed`。该元素的最终位置是在其初始位置的右边 200px（`0.1 * 2000`）。
+在这个例子中，一个元素的动画时间是 2 秒（2000 毫秒）。该元素以 0.1px/ms 的速度向右移动，所以它的相对位置（以 CSS 像素为单位）可以通过动画开始后所经过的时间（以毫秒）的函数来计算 `0.1 * elapsed`。该元素的最终位置是在其初始位置的右边 200px（`0.1 * 2000`）。
 
 ```js
 const element = document.getElementById("some-element-you-want-to-animate");
@@ -65,9 +66,9 @@ function step(timestamp) {
 window.requestAnimationFrame(step);
 ```
 
-以下三个示例说明了设置时间零点的不同方法，时间零点是计算每帧中动画进度的起点。如果你想同步到外部时钟，例如 {{domxref("BaseAudioContext.currentTime")}}，可用的最高精度是单帧的持续时间，16.67ms @60hz。回调函数的时间戳参数表示上一帧的结束，因此最快将在下一帧中呈现新计算的值。
+以下三个示例说明了设置时间零点的不同方法，时间零点是计算每帧中动画进度的起点。如果你想同步到外部时钟，例如 {{domxref("BaseAudioContext.currentTime")}}，可用的最高精度是单帧的持续时间（16.67ms @60hz）。回调函数的时间戳参数表示上一帧的结束，因此最快将在下一帧中呈现新计算的值。
 
-此示例会等待第一个回调函数执行时设置 `zero`。如果你的动画在开始时跳转到新值，则必须以这种方式构建。如果你无需与任意外部同步，例如音频，则建议使用此方法，因为某些浏览器对 `requestAnimationFrame()` 的初始调用和对回调函数的第一次调用，会存在多帧延迟。
+此示例会等待第一个回调函数执行时设置 `zero`。如果你的动画在开始时跳转到新值，则必须采用这种结构。如果你无需与任意外部同步（例如音频），则建议使用此方法，因为某些浏览器在首次调用 `requestAnimationFrame()` 和首次调用回调函数之间会有多帧延迟。
 
 ```js
 let zero;
@@ -125,9 +126,5 @@ function animate() {
 
 - {{domxref("Window.cancelAnimationFrame()")}}
 - {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
-- [mozRequestAnimationFrame](https://robert.ocallahan.org/2010/08/mozrequestanimationframe-frame-rate_17.html)——博文
-- [requestAnimationFrame 用于智能动画制作](https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/)——博文
 - [用 JavaScript 做动画：从 setInterval 到 requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/)——博文
 - [TestUFO：测试你的网络浏览器 requestAnimationFrame() 的时间偏差](https://www.testufo.com/#test=animation-time-graph)
-- Paul Irish：[requestAnimationFrame API：现在具有亚毫秒级的精度](https://developer.chrome.com/blog/requestanimationframe-api-now-with-sub-millisecond-precision/)
-- [一个 polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)
