@@ -2,7 +2,7 @@
 title: 기준선 (타이포그래피)
 slug: Glossary/Baseline/Typography
 l10n:
-  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
+  sourceCommit: 703476742325afe583b74ba0203ff0894b831110
 ---
 
 {{GlossarySidebar}}
