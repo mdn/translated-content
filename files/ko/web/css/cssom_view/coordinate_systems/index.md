@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-그래픽 맥락에서 픽셀의 위치를 지정할 때 ([대수학](https://en.wikipedia.org/wiki/Algebra) 에서 좌표계를 지정할 때처럼) 그 위치는 맥락의 고정점에 상대적으로 정의됩니다. 이 고정점을 [원점](<https://en.wikipedia.org/wiki/Origin_(mathematics)>) 이라고 합니다. 위치는 맥락의 각 차원을 따라 원점에서 떨어진 픽셀 수로 지정됩니다.
+픽셀의 위치를 그래픽 맥락에서 지정할 때(마치 [대수학](https://en.wikipedia.org/wiki/Algebra) 에서 좌표계를 지정하는 것처럼), 그 위치는 맥락의 고정된 점을 기준으로 정의됩니다. 이 고정된 점을 [원점](<https://en.wikipedia.org/wiki/Origin_(mathematics)>) 이라고 합니다. 위치는 맥락의 각 차원을 따라 원점에서 떨어진 픽셀 수로 지정됩니다.
 
 이 안내서는 CSS 객체 모델에서 사용하는 표준 좌표계들을 설명합니다. 이들은 일반적으로 원점의 위치가 다른 점을 제외하고는 차이가 없습니다.
 
