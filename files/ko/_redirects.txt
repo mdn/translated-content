@@ -737,8 +737,11 @@
 /ko/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/ko/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
 /ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/ko/docs/Web/JavaScript/Reference/Classes/Private_properties
 /ko/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/ko/docs/Web/JavaScript/Reference/Errors/Bad_return
+/ko/docs/Web/JavaScript/Reference/Errors/Deprecated_octal	/ko/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 /ko/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/ko/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter
+/ko/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement	/ko/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_token
 /ko/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/ko/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
+/ko/docs/Web/JavaScript/Reference/Errors/Undefined_prop	/ko/docs/orphaned/Web/JavaScript/Reference/Errors/Undefined_prop
 /ko/docs/Web/JavaScript/Reference/Functions/애로우_펑션	/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /ko/docs/Web/JavaScript/Reference/Global_Functions	/ko/docs/Web/JavaScript/Reference/Global_Objects
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Array/constructor	/ko/docs/Web/JavaScript/Reference/Global_Objects/Array
