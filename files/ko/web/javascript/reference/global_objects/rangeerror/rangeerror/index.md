@@ -1,11 +1,14 @@
 ---
 title: RangeError() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/RangeError/RangeError
+l10n:
+  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
 ---
 
 {{JSRef}}
 
-**`RangeError()`** 생성자는 어떤 값이 집합에 없거나 허용되는 범위가 아닐 때 발생하는 오류를 생성합니다
+**`RangeError()`** 생성자는 어떤 값이 집합에 없거나
+허용되는 범위가 아닐 때 발생하는 오류를 생성합니다
 
 ## 구문
 
@@ -37,7 +40,7 @@ RangeError(message, fileName, lineNumber)
 - `fileName` {{optional_inline}} {{non-standard_inline}}
   - : 예외가 발생한 코드를 담고 있는 파일 이름
 - `lineNumber` {{optional_inline}} {{non-standard_inline}}
-  - : 예외가 발상한 코드의 줄 수
+  - : 예외가 발생한 코드의 줄 수
 
 ## 예제
 
@@ -53,7 +56,7 @@ try {
   check(2000);
 } catch (error) {
   if (error instanceof RangeError) {
-    // Handle the error
+    // 오류 처리
   }
 }
 ```
@@ -72,7 +75,7 @@ try {
   check("cabbage");
 } catch (error) {
   if (error instanceof RangeError) {
-    // Handle the error
+    // 오류 처리
   }
 }
 ```

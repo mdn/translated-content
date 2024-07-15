@@ -10,7 +10,7 @@ l10n:
 **`CSSContainerRule`** インターフェイスは、単一の CSS の {{cssxref("@container")}} ルールを表します。
 
 この型のオブジェクトを使用して、 {{cssxref("@container")}} のクエリー条件と、コンテナー名が定義されている場合はコンテナー名を取得することができます。
-なお、コンテナ名とクエリーを合わせて「条件テキスト」を定義し、 {{domxref("CSSConditionRule.conditionText")}} を使用して取得することができます。
+なお、コンテナー名とクエリーを合わせて「条件テキスト」を定義し、 {{domxref("CSSConditionRule.conditionText")}} を使用して取得することができます。
 
 {{InheritanceDiagram}}
 

@@ -2,12 +2,12 @@
 title: Map.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Map/has
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 3cfd663738e9963157d90f359789d675a6662ec2
 ---
 
 {{JSRef}}
 
-**`has()`** 메서드는 주어진 키에 해당하는 요소가 존재 여부를 가리키는 불리언 값을 반환합니다.
+{{jsxref("Map")}} 인스턴스의 **`has()`** 메서드는 주어진 키에 해당하는 요소의 존재 여부를 가리키는 불리언 값을 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-has.html")}}
 
