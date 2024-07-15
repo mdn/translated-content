@@ -56,7 +56,7 @@ block-size: fit-content;
 
 #### 結果
 
-{{EmbedLiveSample("Using_fit-content_for_box_sizing", "100%", 200)}}
+{{EmbedLiveSample("fit-content を使用してボックスの大きさを指定", "100%", 200)}}
 
 ## 仕様書
 

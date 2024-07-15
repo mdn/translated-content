@@ -831,10 +831,6 @@
     "modified": "2020-10-09T04:30:17.457Z",
     "contributors": ["benniks", "lizzxc"]
   },
-  "Glossary/GZip_compression": {
-    "modified": "2019-03-18T20:37:26.371Z",
-    "contributors": ["RainSlide"]
-  },
   "Glossary/Garbage_collection": {
     "modified": "2020-08-17T13:28:57.259Z",
     "contributors": ["xgqfrms"]
@@ -906,10 +902,6 @@
   "Glossary/Grid_Tracks": {
     "modified": "2019-03-18T21:34:38.990Z",
     "contributors": ["yshenhua"]
-  },
-  "Glossary/Guard": {
-    "modified": "2019-03-18T20:37:40.179Z",
-    "contributors": ["aximario"]
   },
   "Glossary/Gutters": {
     "modified": "2020-06-14T12:16:58.334Z",
@@ -1605,6 +1597,10 @@
   "Glossary/XQuery": {
     "modified": "2019-03-18T21:21:58.755Z",
     "contributors": ["Chor"]
+  },
+  "Glossary/gzip_compression": {
+    "modified": "2019-03-18T20:37:26.371Z",
+    "contributors": ["RainSlide"]
   },
   "Learn": {
     "modified": "2020-07-16T22:43:49.854Z",
@@ -3561,6 +3557,10 @@
       "ppphp"
     ]
   },
+  "Learn/JavaScript/Building_blocks/Event_bubbling": {
+    "modified": "2019-03-18T21:17:15.255Z",
+    "contributors": ["zhuangyin"]
+  },
   "Learn/JavaScript/Building_blocks/Events": {
     "modified": "2020-08-04T06:06:58.173Z",
     "contributors": [
@@ -4870,13 +4870,13 @@
     "modified": "2019-03-18T21:16:25.185Z",
     "contributors": ["wbamberg", "micblo"]
   },
-  "MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file": {
-    "modified": "2019-03-18T20:48:39.486Z",
-    "contributors": ["Syclover-u2400"]
-  },
   "MDN/Writing_guidelines/Howto/Write_an_api_reference": {
     "modified": "2019-03-18T20:48:40.005Z",
     "contributors": ["Sheppy"]
+  },
+  "MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file": {
+    "modified": "2019-03-18T20:48:39.486Z",
+    "contributors": ["Syclover-u2400"]
   },
   "MDN/Writing_guidelines/Page_structures": {
     "modified": "2020-10-15T21:37:24.190Z",
@@ -8272,6 +8272,15 @@
       "Darrel.Hsu"
     ]
   },
+  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
+    "modified": "2019-03-23T22:45:22.118Z",
+    "contributors": [
+      "xgqfrms-GitHub",
+      "ZhuYonglin",
+      "gavinkwoe",
+      "liurenxingyu"
+    ]
+  },
   "Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces": {
     "modified": "2020-10-08T06:13:28.865Z",
     "contributors": [
@@ -8289,26 +8298,13 @@
       "Heagle"
     ]
   },
+  "Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
+    "modified": "2019-12-13T21:06:35.933Z",
+    "contributors": ["wbamberg", "alwxkxk", "xhlsrj", "EugeneZeng"]
+  },
   "Web/API/Document_Object_Model/Whitespace": {
     "modified": "2020-01-30T13:21:03.275Z",
     "contributors": ["chrisdavidmills", "lon", "ziyunfei"]
-  },
-  "Web/API/Document_object_model/How_to_create_a_DOM_tree": {
-    "modified": "2019-03-23T22:09:45.087Z",
-    "contributors": ["ArcherGrey"]
-  },
-  "Web/API/Document_object_model/Locating_DOM_elements_using_selectors": {
-    "modified": "2019-03-23T22:45:22.118Z",
-    "contributors": [
-      "xgqfrms-GitHub",
-      "ZhuYonglin",
-      "gavinkwoe",
-      "liurenxingyu"
-    ]
-  },
-  "Web/API/Document_object_model/Using_the_Document_Object_Model": {
-    "modified": "2019-12-13T21:06:35.933Z",
-    "contributors": ["wbamberg", "alwxkxk", "xhlsrj", "EugeneZeng"]
   },
   "Web/API/DragEvent": {
     "modified": "2019-03-23T22:58:48.150Z",
@@ -9185,10 +9181,6 @@
       "TigerSoldier"
     ]
   },
-  "Web/API/Event/Comparison_of_Event_Targets": {
-    "modified": "2019-03-18T21:17:15.255Z",
-    "contributors": ["zhuangyin"]
-  },
   "Web/API/Event/Event": {
     "modified": "2020-10-15T21:37:04.498Z",
     "contributors": [
@@ -9503,21 +9495,6 @@
       "yqjiang",
       "xcatliu"
     ]
-  },
-  "Web/API/Fetch_API/Basic_concepts": {
-    "modified": "2019-03-23T22:45:38.912Z",
-    "contributors": [
-      "zhuangyin",
-      "jswisher",
-      "xgqfrms-GitHub",
-      "Jeff-Kook",
-      "xcatliu",
-      "ziyunfei"
-    ]
-  },
-  "Web/API/Fetch_API/Cross-global_fetch_usage": {
-    "modified": "2019-03-18T21:35:40.335Z",
-    "contributors": ["DuckSoft", "wynejan"]
   },
   "Web/API/Fetch_API/Using_Fetch": {
     "modified": "2020-10-15T21:39:39.542Z",
@@ -15097,6 +15074,20 @@
     "modified": "2019-03-18T21:40:44.436Z",
     "contributors": ["Aaron_Zhung", "echoArray"]
   },
+  "Web/API/Window/atob": {
+    "modified": "2020-10-15T21:07:00.713Z",
+    "contributors": [
+      "RainSlide",
+      "zhangchen",
+      "nkliyc",
+      "dingyanhe",
+      "xgqfrms-GitHub",
+      "ziyunfei",
+      "happyWang",
+      "teoli",
+      "khalid32"
+    ]
+  },
   "Web/API/Window/back": {
     "modified": "2019-03-23T22:12:59.387Z",
     "contributors": ["xilixinluo"]
@@ -15134,6 +15125,21 @@
   "Web/API/Window/blur_event": {
     "modified": "2020-10-15T22:18:42.062Z",
     "contributors": ["zhangchen", "mozzix"]
+  },
+  "Web/API/Window/btoa": {
+    "modified": "2020-10-15T21:06:58.236Z",
+    "contributors": [
+      "RainSlide",
+      "zhangchen",
+      "RoXoM",
+      "Carrotzpc",
+      "dingyanhe",
+      "xgqfrms-GitHub",
+      "ziyunfei",
+      "teoli",
+      "khalid32",
+      "cuixiping"
+    ]
   },
   "Web/API/Window/caches": {
     "modified": "2019-09-21T03:33:16.440Z",
@@ -15271,6 +15277,10 @@
       "RobinXiong",
       "arcy"
     ]
+  },
+  "Web/API/Window/getDefaultComputedStyle": {
+    "modified": "2019-03-18T20:36:51.313Z",
+    "contributors": ["teoli", "xgqfrms-GitHub", "ektx"]
   },
   "Web/API/Window/getSelection": {
     "modified": "2020-10-15T21:28:34.122Z",
@@ -15538,6 +15548,32 @@
   "Web/API/Window/rejectionhandled_event": {
     "modified": "2020-10-15T22:26:00.037Z",
     "contributors": ["mengli404"]
+  },
+  "Web/API/Window/requestAnimationFrame": {
+    "modified": "2020-10-15T23:30:32.456Z",
+    "contributors": [
+      "wudexiang",
+      "ruiyang0012",
+      "oxyg3n",
+      "Yifang-Tongxing",
+      "hawtim",
+      "xianghui-ma",
+      "zhuangyin",
+      "LiaoNa",
+      "luoway",
+      "liuliangsir",
+      "tangj1206",
+      "PaperFlu",
+      "RayJune",
+      "King.",
+      "xgqfrms-GitHub",
+      "aki",
+      "chinaliyun",
+      "teoli",
+      "warmhug",
+      "ziyunfei",
+      "MiyagiRyota"
+    ]
   },
   "Web/API/Window/requestFileSystem": {
     "modified": "2020-10-15T22:21:45.553Z",
@@ -16059,35 +16095,6 @@
     "modified": "2020-10-15T22:15:17.137Z",
     "contributors": ["CarmeloXue", "Sebastianz"]
   },
-  "Web/API/atob": {
-    "modified": "2020-10-15T21:07:00.713Z",
-    "contributors": [
-      "RainSlide",
-      "zhangchen",
-      "nkliyc",
-      "dingyanhe",
-      "xgqfrms-GitHub",
-      "ziyunfei",
-      "happyWang",
-      "teoli",
-      "khalid32"
-    ]
-  },
-  "Web/API/btoa": {
-    "modified": "2020-10-15T21:06:58.236Z",
-    "contributors": [
-      "RainSlide",
-      "zhangchen",
-      "RoXoM",
-      "Carrotzpc",
-      "dingyanhe",
-      "xgqfrms-GitHub",
-      "ziyunfei",
-      "teoli",
-      "khalid32",
-      "cuixiping"
-    ]
-  },
   "Web/API/clearInterval": {
     "modified": "2020-10-15T21:21:33.193Z",
     "contributors": [
@@ -16337,36 +16344,6 @@
       "ziyunfei"
     ]
   },
-  "Web/API/window/getDefaultComputedStyle": {
-    "modified": "2019-03-18T20:36:51.313Z",
-    "contributors": ["teoli", "xgqfrms-GitHub", "ektx"]
-  },
-  "Web/API/window/requestAnimationFrame": {
-    "modified": "2020-10-15T23:30:32.456Z",
-    "contributors": [
-      "wudexiang",
-      "ruiyang0012",
-      "oxyg3n",
-      "Yifang-Tongxing",
-      "hawtim",
-      "xianghui-ma",
-      "zhuangyin",
-      "LiaoNa",
-      "luoway",
-      "liuliangsir",
-      "tangj1206",
-      "PaperFlu",
-      "RayJune",
-      "King.",
-      "xgqfrms-GitHub",
-      "aki",
-      "chinaliyun",
-      "teoli",
-      "warmhug",
-      "ziyunfei",
-      "MiyagiRyota"
-    ]
-  },
   "Web/Accessibility": {
     "modified": "2020-08-04T10:11:09.882Z",
     "contributors": [
@@ -16519,10 +16496,6 @@
   "Web/CSS/-webkit-line-clamp": {
     "modified": "2020-10-15T22:24:06.241Z",
     "contributors": ["liuruiqi1993", "herotangabc", "litaoAurora"]
-  },
-  "Web/CSS/-webkit-overflow-scrolling": {
-    "modified": "2019-03-23T23:02:52.440Z",
-    "contributors": ["teoli", "Ende93", "FrontENG", "limichange", "ccforward"]
   },
   "Web/CSS/-webkit-tap-highlight-color": {
     "modified": "2019-03-23T22:22:56.346Z",
@@ -20856,17 +20829,6 @@
       "TimZhao"
     ]
   },
-  "Web/Demos": {
-    "modified": "2019-09-04T03:32:34.828Z",
-    "contributors": [
-      "RainSlide",
-      "yzweb2018",
-      "nanflower",
-      "Vevlins",
-      "wth",
-      "awesomeric"
-    ]
-  },
   "Web/EXSLT/regexp": {
     "modified": "2019-01-16T21:33:33.048Z",
     "contributors": ["Sheppy"]
@@ -22764,10 +22726,6 @@
     "modified": "2020-10-15T22:24:12.153Z",
     "contributors": ["xuhui98"]
   },
-  "Web/HTTP/Headers/Accept-CH-Lifetime": {
-    "modified": "2020-10-15T22:25:10.809Z",
-    "contributors": ["chen3feng"]
-  },
   "Web/HTTP/Headers/Accept-Charset": {
     "modified": "2020-10-15T21:50:53.082Z",
     "contributors": ["shinken008", "Dorllen", "WayneCui", "xgqfrms-GitHub"]
@@ -23108,10 +23066,6 @@
   "Web/HTTP/Headers/Keep-Alive": {
     "modified": "2020-10-15T21:55:00.550Z",
     "contributors": ["zhangchen", "WayneCui"]
-  },
-  "Web/HTTP/Headers/Large-Allocation": {
-    "modified": "2020-10-15T21:56:09.177Z",
-    "contributors": ["wyapx", "crper", "shevacjs"]
   },
   "Web/HTTP/Headers/Last-Modified": {
     "modified": "2020-10-15T21:55:00.234Z",
@@ -25033,17 +24987,13 @@
     "modified": "2020-03-12T19:45:21.241Z",
     "contributors": ["Ende93"]
   },
-  "Web/JavaScript/Reference/Errors/Deprecated_octal": {
+  "Web/JavaScript/Reference/Errors/Deprecated_octal_literal": {
     "modified": "2020-03-12T19:46:39.086Z",
     "contributors": ["WayneCui"]
   },
   "Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma": {
     "modified": "2020-03-12T19:45:31.617Z",
     "contributors": ["Kaede_Shinoda", "Ende93"]
-  },
-  "Web/JavaScript/Reference/Errors/Equal_as_assign": {
-    "modified": "2020-03-12T19:44:21.268Z",
-    "contributors": ["niaodan2b"]
   },
   "Web/JavaScript/Reference/Errors/Getter_only": {
     "modified": "2020-03-12T19:46:35.397Z",
@@ -25125,10 +25075,6 @@
     "modified": "2020-03-12T19:46:25.852Z",
     "contributors": ["WayneCui"]
   },
-  "Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement": {
-    "modified": "2020-03-12T19:44:58.615Z",
-    "contributors": ["Davont", "jitingsun"]
-  },
   "Web/JavaScript/Reference/Errors/More_arguments_needed": {
     "modified": "2020-03-12T19:45:18.099Z",
     "contributors": ["Ende93"]
@@ -25205,16 +25151,16 @@
     "modified": "2020-03-12T19:45:16.824Z",
     "contributors": ["xgqfrms-GitHub", "Ende93"]
   },
+  "Web/JavaScript/Reference/Errors/String_literal_EOL": {
+    "modified": "2020-03-12T19:45:03.493Z",
+    "contributors": ["Ende93", "luckyG0429"]
+  },
   "Web/JavaScript/Reference/Errors/Too_much_recursion": {
     "modified": "2020-03-12T19:43:57.558Z",
     "contributors": ["Jack-Q"]
   },
   "Web/JavaScript/Reference/Errors/Undeclared_var": {
     "modified": "2020-03-12T19:45:21.644Z",
-    "contributors": ["Ende93"]
-  },
-  "Web/JavaScript/Reference/Errors/Undefined_prop": {
-    "modified": "2020-03-12T19:45:16.927Z",
     "contributors": ["Ende93"]
   },
   "Web/JavaScript/Reference/Errors/Unexpected_token": {
@@ -25228,10 +25174,6 @@
   "Web/JavaScript/Reference/Errors/Unnamed_function_statement": {
     "modified": "2020-03-12T19:46:23.117Z",
     "contributors": ["Lxio", "WayneCui"]
-  },
-  "Web/JavaScript/Reference/Errors/Unterminated_string_literal": {
-    "modified": "2020-03-12T19:45:03.493Z",
-    "contributors": ["Ende93", "luckyG0429"]
   },
   "Web/JavaScript/Reference/Errors/in_operator_no_object": {
     "modified": "2020-03-12T19:46:27.485Z",
@@ -31524,10 +31466,6 @@
     "modified": "2019-03-23T22:46:21.766Z",
     "contributors": ["fanxiaojie"]
   },
-  "Web/SVG/Attribute/enable-background": {
-    "modified": "2020-10-15T22:34:25.447Z",
-    "contributors": ["SphinxKnight", "SoMuchTo"]
-  },
   "Web/SVG/Attribute/end": {
     "modified": "2019-03-23T22:46:42.288Z",
     "contributors": ["fanxiaojie"]
@@ -32342,6 +32280,27 @@
     "modified": "2020-10-15T22:15:40.587Z",
     "contributors": ["Yayure"]
   },
+  "Web/Security/Practical_implementation_guides": {
+    "modified": "2019-05-30T06:18:16.799Z",
+    "contributors": [
+      "Qos",
+      "Roscoe93",
+      "keep2zero",
+      "xgqfrms-GitHub",
+      "hashedhyphen"
+    ]
+  },
+  "Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion": {
+    "modified": "2020-06-26T14:51:08.712Z",
+    "contributors": [
+      "Clarkkkk",
+      "zhangchen",
+      "nick-ChenZe",
+      "tsejx",
+      "1010Tech",
+      "xgqfrms-GitHub"
+    ]
+  },
   "Web/Security/Same-origin_policy": {
     "modified": "2020-04-07T00:07:57.795Z",
     "contributors": [
@@ -32380,27 +32339,6 @@
   "Web/Security/Secure_Contexts": {
     "modified": "2020-09-16T05:44:30.532Z",
     "contributors": ["gjc9620"]
-  },
-  "Web/Security/Securing_your_site": {
-    "modified": "2019-05-30T06:18:16.799Z",
-    "contributors": [
-      "Qos",
-      "Roscoe93",
-      "keep2zero",
-      "xgqfrms-GitHub",
-      "hashedhyphen"
-    ]
-  },
-  "Web/Security/Securing_your_site/Turning_off_form_autocompletion": {
-    "modified": "2020-06-26T14:51:08.712Z",
-    "contributors": [
-      "Clarkkkk",
-      "zhangchen",
-      "nick-ChenZe",
-      "tsejx",
-      "1010Tech",
-      "xgqfrms-GitHub"
-    ]
   },
   "Web/Security/Subresource_Integrity": {
     "modified": "2020-06-01T06:08:59.407Z",

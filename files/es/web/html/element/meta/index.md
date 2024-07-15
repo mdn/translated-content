@@ -3,6 +3,8 @@ title: meta
 slug: Web/HTML/Element/meta
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - **meta** de "metainformation" - metainformación. Sirve para aportar información sobre el documento..

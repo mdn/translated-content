@@ -59,7 +59,7 @@ if (x === undefined) {
 
 > **メモ:** ここでは、標準の等価演算子ではなく厳密等価演算子を使わないといけません。厳密等価演算子とは違い、 `x == undefined` は、 `x` が `null` であるかどうかもチェックするからです。 `null` は `undefined` と等しくありません。
 >
-> 詳しくは、{{jsxref("Operators", "比較演算子","","true")}}を参照してください。
+> 詳しくは、{{jsxref("Operators", "比較演算子","",1)}}を参照してください。
 
 ### typeof 演算子と undefined
 

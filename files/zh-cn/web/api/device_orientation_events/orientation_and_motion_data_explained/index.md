@@ -3,6 +3,8 @@ title: Orientation 和 motion 数据解释
 slug: Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 ---
 
+{{DefaultAPISidebar("Device Orientation Events")}}
+
 ## 总言
 
 当我们要使用 orientation 和 motion 事件时，理解浏览器给我们的相关值是什么意思就显的相当重要了。这篇文章会详细介绍在用的坐标系统并会教你如何全用它们。

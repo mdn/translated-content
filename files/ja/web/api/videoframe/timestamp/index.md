@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Web Codecs API")}}
 
-**`timestamp`** は {{domxref("VideoFrame")}} インターフェイスのプロパティで、動画のタイムスタンプをミリ秒単位で表す整数を返します。
+**`timestamp`** は {{domxref("VideoFrame")}} インターフェイスのプロパティで、動画のタイムスタンプをマイクロ秒単位で表す整数を返します。
 
 ## 値
 

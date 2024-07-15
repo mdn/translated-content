@@ -129,8 +129,8 @@ var intervalID = window.setInterval(updateTransition, 7000);
   left: 0px;
   top: 0px;
   position: absolute;
-  -webkit-transition-property: width height background-color font-size left
-    top -webkit-transform color;
+  -webkit-transition-property: width height background-color font-size left top -webkit-transform
+    color;
   -webkit-transition-duration: 1s;
   -webkit-transition-timing-function: ease-in-out;
   transition-property: width height background-color font-size left top
@@ -149,8 +149,8 @@ var intervalID = window.setInterval(updateTransition, 7000);
   left: 150px;
   top: 25px;
   position: absolute;
-  -webkit-transition-property: width height background-color font-size left
-    top -webkit-transform transform color;
+  -webkit-transition-property: width height background-color font-size left top -webkit-transform
+    transform color;
   -webkit-transition-duration: 1s;
   -webkit-transition-timing-function: ease-in-out;
   transition-property: width height background-color font-size left top

@@ -3,6 +3,8 @@ title: 例
 slug: Web/MathML/Examples
 ---
 
+{{MathMLRef}}
+
 以下のリンクでは、複雑な数学の概念をウェブコンテンツで表示するための MathML の使い方を理解するのに役立つ例がいくつかあります。
 
 - [ピタゴラスの定理](/ja/docs/Web/MathML/Examples/MathML_Pythagorean_Theorem)

@@ -3,6 +3,8 @@ title: map
 slug: Web/HTML/Element/map
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - descripción de uno o dos párrafos

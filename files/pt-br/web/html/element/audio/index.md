@@ -63,10 +63,8 @@ O tempo de compensação (time offset) entre o áudio e o vídeo está especific
 
 ```html
 <!-- Reprodução simples de áudio -->
-<audio
-  src="https://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg"
-  autoplay>
-  O seu navegador não suporta o elemento <code>audio</code>.
+<audio src="AudioTest.ogg" autoplay>
+  <a href="AudioTest.ogg" download="AudioTest.ogg">Baixar áudio OGG</a>.
 </audio>
 
 <!-- Reprodução de áudio com legendas -->

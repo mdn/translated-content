@@ -3,6 +3,8 @@ title: Comprendre les URL et leur structure
 slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Cet article aborde les _Uniform Resource Locators_ (URL) en expliquant leur rôle et leur structure.
 
 <table class="standard-table">
