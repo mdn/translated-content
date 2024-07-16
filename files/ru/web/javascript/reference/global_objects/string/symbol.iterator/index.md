@@ -1,6 +1,6 @@
 ---
 title: String.prototype[@@iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
+slug: Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator
 ---
 
 {{JSRef}}

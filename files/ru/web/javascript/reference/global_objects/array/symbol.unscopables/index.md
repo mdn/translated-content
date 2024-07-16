@@ -1,6 +1,6 @@
 ---
 title: Array.prototype[@@unscopables]
-slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
+slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables
 ---
 
 {{JSRef}}
