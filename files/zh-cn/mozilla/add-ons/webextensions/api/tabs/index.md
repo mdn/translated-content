@@ -11,11 +11,11 @@ l10n:
 
 > **备注：** 使用 Manifest V3 或更高版本时，通过 {{WebExtAPIRef("scripting")}} API 提供的方法来执行脚本、插入 CSS 和移除 CSS，这些方法分别是 {{WebExtAPIRef("scripting.executeScript()")}}、{{WebExtAPIRef("scripting.insertCSS()")}} 和 {{WebExtAPIRef("scripting.removeCSS()")}}。
 
-你可以使用该 API 获取一个已打开标签的列表并且使用各种标准过滤标签，并进行打开、刷新、移动、重载和移除操作。该 API 不能直接访问标签中的主机内容，但是你可以使用 {{WebExtAPIRef("tabs.executeScript()")}} 或者 {{WebExtAPIRef("tabs.insertCSS()")}} API，来插入 Javascript 和 CSS。
+你可以使用该 API 获取一个已打开标签的列表并且使用各种标准过滤标签，并进行打开、刷新、移动、重载和移除操作。该 API 不能直接访问标签中的主机内容，但是你可以使用 {{WebExtAPIRef("tabs.executeScript()")}} 或者 {{WebExtAPIRef("tabs.insertCSS()")}} API，来插入 JavaScript 和 CSS。
 
 你可以在不需要任何特殊权限的情况下使用该 API 的大部分，除了：
 
-- 要访问 `Tab.url`、`Tab.title` 和 `Tab.favIconUrl`（或通过 {{WebExtAPIRef("tabs.query()")}} 过滤这些属性），需要具备 `"tabs"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)，或者具备匹配 `Tab.url` 的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)。
+- 要访问 `Tab.url`、`Tab.title` 和 `Tab.favIconUrl`（或通过 {{WebExtAPIRef("tabs.query()")}} 过滤这些属性），需要具备 `"tabs"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)，或者具备匹配 `Tab.url` 的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
 
   - 自 Firefox 86 和 Chrome 50 起，基于主机权限访问这些属性得到了支持。在 Firefox 85 及更早版本中，则需要“tabs”权限。
 
@@ -28,9 +28,9 @@ l10n:
 ## 类型
 
 - {{WebExtAPIRef("tabs.MutedInfoReason")}}
-  - : 指定一个标签静音与否的原因。
+  - : 指定一个标签被静音或被取消静音的原因。
 - {{WebExtAPIRef("tabs.MutedInfo")}}
-  - : 该对象包含一个布尔值指示该标签是否静音，以及最近一次静音的原因。
+  - : 该对象包含一个布尔值指示该标签是否静音，以及最近一次状态改变的原因。
 - {{WebExtAPIRef("tabs.PageSettings")}}
   - : 用于通过 [`tabs.saveAsPDF()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF) 方法控制标签页如何渲染为 PDF。
 - {{WebExtAPIRef("tabs.Tab")}}
@@ -51,7 +51,7 @@ l10n:
 - {{WebExtAPIRef("tabs.TAB_ID_NONE")}}
   - : 给予非浏览器标签的一个特殊 ID 值（比如，在开发者工具中的标签）。
 
-## 方法
+## 函数
 
 - {{WebExtAPIRef("tabs.captureTab()")}}
   - : 创建一个数据 URL，编码给定标签页可见区域的图像。
@@ -76,8 +76,7 @@ l10n:
 - {{WebExtAPIRef("tabs.getCurrent()")}}
   - : 返回一个 [`tabs.Tab`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab)。该对象包含了该脚本当前的宿主标签的信息。
 - {{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}
-  - : 获取在指定窗口被选定的标签。
-    **已弃用**：请改用 [`tabs.query({active: true})`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)。
+  - : 获取在指定窗口被选定的标签。**已弃用**：请改用 [`tabs.query({active: true})`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)。
 - {{WebExtAPIRef("tabs.getZoom()")}}
   - : 获取制定标签的缩放系数。
 - {{WebExtAPIRef("tabs.getZoomSettings()")}}
@@ -97,23 +96,23 @@ l10n:
 - {{WebExtApiRef("tabs.moveInSuccession()")}}
   - : 修改一组标签页的顺序关系。
 - {{WebExtAPIRef("tabs.print()")}}
-  - : 打印当前选项卡的内容。
+  - : 打印激活的标签页的内容。
 - {{WebExtAPIRef("tabs.printPreview()")}}
-  - : 打开当前选项卡的打印预览。
+  - : 打开激活的标签页的打印预览。
 - {{WebExtAPIRef("tabs.query()")}}
   - : 获取所有包含指定属性的标签，如果没有属性则获取所有标签。
 - {{WebExtAPIRef("tabs.reload()")}}
-  - : 重新加载选项卡，可选择是否绕过本地 Web 缓存。
+  - : 重新加载标签页，可选择是否绕过本地 Web 缓存。
 - {{WebExtAPIRef("tabs.remove()")}}
   - : 关闭一个或多个标签。
 - {{WebExtAPIRef("tabs.removeCSS()")}}（仅 Manifest V2）
-  - : 移除之前调用{{WebExtAPIRef("tabs.insertCSS()")}} 注入的一个 css。
+  - : 移除之前调用 {{WebExtAPIRef("tabs.insertCSS()")}} 注入的 CSS。
 - {{WebExtAPIRef("tabs.saveAsPDF()")}}
   - : 将当前页面保存为 PDF 格式。
 - {{WebExtAPIRef("tabs.sendMessage()")}}
   - : 向一个指定标签的 content script 发送单个消息。
 - {{WebExtAPIRef("tabs.sendRequest()")}} {{deprecated_inline}}
-  - : 向一个指定标签的 content script 发送一个单一请求。**已弃用**: 请使用 {{WebExtAPIRef("tabs.sendMessage()")}} 替代。
+  - : 向指定标签页的内容脚本发送单个请求。**已弃用**：请使用 {{WebExtAPIRef("tabs.sendMessage()")}} 替代。
 - {{WebExtAPIRef("tabs.setZoom()")}}
   - : 缩放指定标签。
 - {{WebExtAPIRef("tabs.setZoomSettings()")}}
@@ -132,7 +131,7 @@ l10n:
 - {{WebExtAPIRef("tabs.onActivated")}}
   - : 当窗口活动标签改变时触发，注意当该消息触发时，标签地址可能没有被设置。
 - {{WebExtAPIRef("tabs.onActiveChanged")}} {{deprecated_inline}}
-  - : 窗口中选定选项卡更改时触发的事件。**已弃用** ：请使用 {{WebExtAPIRef("tabs.onActivated")}} 代替。
+  - : 窗口中选定的标签页发生更改时触发。**已弃用** ：请使用 {{WebExtAPIRef("tabs.onActivated")}} 代替。
 - {{WebExtAPIRef("tabs.onAttached")}}
   - : 当一个标签被附加到一个窗口时触发，因为他可能在窗口间移动。
 - {{WebExtAPIRef("tabs.onCreated")}}
@@ -140,7 +139,7 @@ l10n:
 - {{WebExtAPIRef("tabs.onDetached")}}
   - : 当一个标签脱离一个窗口时被触发。
 - {{WebExtAPIRef("tabs.onHighlightChanged")}} {{deprecated_inline}}
-  - : 在窗口中选定的或突出显示的选项卡更改时触发。**已弃用**：请使用 {{WebExtAPIRef("tabs.onHighlighted")}} 代替。
+  - : 在窗口中选定的或突出显示的标签页发生更改时触发。**已弃用**：请使用 {{WebExtAPIRef("tabs.onHighlighted")}} 代替。
 - {{WebExtAPIRef("tabs.onHighlighted")}}
   - : 当一个标签被高亮显示或是被选中时触发。
 - {{WebExtAPIRef("tabs.onMoved")}}
@@ -150,7 +149,7 @@ l10n:
 - {{WebExtAPIRef("tabs.onReplaced")}}
   - : 当一个标签因为预载取代另一个标签时被触发。
 - {{WebExtAPIRef("tabs.onSelectionChanged")}} {{deprecated_inline}}
-  - : 窗口中所选选项卡更改时触发。**已弃用**：请使用 {{WebExtAPIRef("tabs.onActivated")}} 代替。
+  - : 窗口中所选标签页更改时触发。**已弃用**：请使用 {{WebExtAPIRef("tabs.onActivated")}} 代替。
 - {{WebExtAPIRef("tabs.onUpdated")}}
   - : 当一个标签被更新时触发。
 - {{WebExtAPIRef("tabs.onZoomChange")}}
