@@ -51,7 +51,8 @@ navigator.serviceWorker
     serviceWorkerRegistration.pushManager.subscribe().then(
       (pushSubscription) => {
         console.log(pushSubscription.endpoint);
-        // 이제 애플리케이션 서버에 필요한 푸시 구독 세부 정보를 사용할 수 있으며,
+        // 이제 애플리케이션 서버에 필요한 푸시 구독
+        // 세부 정보를 사용할 수 있습니다.
         // 예를 들어 fetch() API를 사용하여 서버로 전송할 수 있습니다.
       },
       (error) => {
