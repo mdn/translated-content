@@ -14,7 +14,7 @@ l10n:
 ## 인스턴스 속성
 
 - {{domxref("PushSubscription.endpoint")}} {{ReadOnlyInline}}
-  - : 푸시 구독과 연결된 엔드포인트가 포함된 문자열.
+  - : 푸시 구독과 관련된 엔드포인트가 포함된 문자열.
 - {{domxref("PushSubscription.expirationTime")}} {{ReadOnlyInline}}
   - : 푸시 구독과 관련된 구독 만료 시간이 있는 경우 {{domxref("DOMHighResTimeStamp")}}, 없는 경우 null입니다.
 - {{domxref("PushSubscription.options")}} {{ReadOnlyInline}}

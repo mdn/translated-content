@@ -9,7 +9,8 @@ l10n:
 {{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 {{domxref("PushSubscription")}} 인터페이스의 `unsubscribe()` 메서드는
-현재 구독이 성공적으로 구독 취소될 때 불리언 값으로 이행되는 {{jsxref("Promise")}}를 반환합니다.
+현재 구독이 성공적으로 구독 취소될 때 불리언 값으로 이행되는
+{{jsxref("Promise")}}를 반환합니다.
 
 ## 구문
 
@@ -23,7 +24,8 @@ unsubscribe()
 
 ### 반환 값
 
-현재 구독이 성공적으로 구독 취소될 때 불리언 값으로 이행되는 {{jsxref("Promise")}}.
+현재 구독이 성공적으로 구독 취소될 때
+불리언 값으로 이행되는 {{jsxref("Promise")}}.
 
 ## 예제
 
