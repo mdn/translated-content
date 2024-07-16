@@ -28,7 +28,7 @@ _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLObjectElement.codeType")}} {{deprecated_inline}}
   - : 反映 [`codetype`](/zh-CN/docs/Web/HTML/Element/object#codetype) HTML 属性的字符串，指定数据的内容类型。
 - {{domxref("HTMLObjectElement.contentDocument")}} {{ReadOnlyInline}}
-  - : 返回表示对象元素的嵌套浏览器上下文的活动文档的 {{domxref("Document")}} （如果有的话），否则返回 `null`。
+  - : 返回表示对象元素的嵌套浏览器上下文的活动文档的 {{domxref("Document")}}（如果有的话），否则返回 `null`。
 - {{domxref("HTMLObjectElement.contentWindow")}} {{ReadOnlyInline}}
   - : 返回表示对象元素的嵌套浏览器上下文的窗口代理的 {{glossary("WindowProxy")}}（如果有的话），否则返回 `null`。
 - {{domxref("HTMLObjectElement.data")}}
@@ -79,4 +79,4 @@ _从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 
 ## 参见
 
-- 实现此接口的 HTML 元素：{{ HTMLElement("object") }}
+- 实现此接口的 HTML 元素：{{HTMLElement("object")}}
