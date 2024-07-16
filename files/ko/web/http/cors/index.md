@@ -141,13 +141,13 @@ Access-Control-Allow-Origin: https://foo.example
 ```
 const xhr = new XMLHttpRequest();
 xhr.open('POST', 'https://bar.other/resources/post-here/');
-xhr.setRequestHeader('Ping-Other', 'pingpong');
+xhr.setRequestHeader('X-PINGOTHER', 'pingpong');
 xhr.setRequestHeader('Content-Type', 'application/xml');
 xhr.onreadystatechange = handler;
 xhr.send('<person><name>Arun</name></person>');
 ```
 
-위의 예제는 `POST` 요청과 함께 함께 보낼 XML body를 만듭니다. 또한 비표준 HTTP `Ping-Other` 요청 헤더가 설정됩니다. 이러한 헤더는 HTTP/1.1의 일부가 아니지만 일반적으로 웹 응용 프로그램에 유용합니다. Content-Type 이 `application/xml`이고, 사용자 정의 헤더가 설정되었기 때문에 이 요청은 preflighted 처리됩니다.
+위의 예제는 `POST` 요청과 함께 함께 보낼 XML body를 만듭니다. 또한 비표준 HTTP `X-PINGOTHER` 요청 헤더가 설정됩니다. 이러한 헤더는 HTTP/1.1의 일부가 아니지만 일반적으로 웹 응용 프로그램에 유용합니다. Content-Type 이 `application/xml`이고, 사용자 정의 헤더가 설정되었기 때문에 이 요청은 preflighted 처리됩니다.
 
 ![](preflight_correct.png)
 
@@ -163,7 +163,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-us,en;q=0.5
 Accept-Encoding: gzip,deflate
 Connection: keep-alive
-Origin: http://foo.example
+Origin: https://foo.example
 Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
@@ -227,7 +227,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 위의 13 - 22 행은 서버가 요청 메서드와 (`POST`) 요청 헤더를 (`X-PINGOTHER`) 받을 수 있음을 나타내는 응답입니다. 특히 16 - 19행을 살펴보겠습니다.
 
 ```
-Access-Control-Allow-Origin: http://foo.example
+Access-Control-Allow-Origin: https://foo.example
 Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
 Access-Control-Max-Age: 86400
@@ -269,7 +269,7 @@ CORS 프로토콜은 본래 그 동작(리다이렉트)이 필요했지만, [이
 
 ```
 const invocation = new XMLHttpRequest();
-const url = 'http://bar.other/resources/credentialed-content/';
+const url = 'https://bar.other/resources/credentialed-content/';
 
 function callOtherDomain() {
   if (invocation) {
@@ -295,8 +295,8 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-us,en;q=0.5
 Accept-Encoding: gzip,deflate
 Connection: keep-alive
-Referer: http://foo.example/examples/credential.html
-Origin: http://foo.example
+Referer: https://foo.example/examples/credential.html
+Origin: https://foo.example
 Cookie: pageAccess=2
 
 
@@ -315,11 +315,10 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 Content-Type: text/plain
 
-
 [text/plain payload]
 ```
 
-10행에는 `http://bar.other`의 컨텐츠를 대상으로 하는 쿠키가 포함되어 있습니다. 하지만 17행의 {{HTTPHeader("Access-Control-Allow-Credentials")}}: `true` 로 응답하지 않으면, 응답은 무시되고 웹 컨텐츠는 제공되지 않습니다.
+10행에는 `https://bar.other`의 컨텐츠를 대상으로 하는 쿠키가 포함되어 있습니다. 하지만 17행의 {{HTTPHeader("Access-Control-Allow-Credentials")}}: `true` 로 응답하지 않으면, 응답은 무시되고 웹 컨텐츠는 제공되지 않습니다.
 
 #### 실행 전 요청 및 자격 증명
 
