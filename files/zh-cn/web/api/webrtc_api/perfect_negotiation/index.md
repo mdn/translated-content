@@ -78,7 +78,7 @@ async function start() {
 
 ### 处理传入的轨道
 
-接下来，我们需要为 {{domxref("RTCPeerConnection.track_event", "track")}} 事件设置一个处理程序，以处理该对等连接协商接收的入站视频和音频轨迹。为此，我们实现了 {{domxref("RTCPeerConnection")}} 的 {{domxref("RTCPeerConnection.track_event", "ontrack")}} 事件处理程序。
+接下来，我们需要为 {{domxref("RTCPeerConnection.track_event", "track")}} 事件设置一个处理器，以处理该对等连接协商接收的入站视频和音频轨迹。为此，我们实现了 {{domxref("RTCPeerConnection")}} 的 {{domxref("RTCPeerConnection.track_event", "ontrack")}} 事件处理器。
 
 ```js
 pc.ontrack = ({ track, streams }) => {
@@ -91,9 +91,9 @@ pc.ontrack = ({ track, streams }) => {
 };
 ```
 
-当发生 `track` 事件时，将执行该处理程序。使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)可以提取 {{domxref("RTCTrackEvent")}} 的 {{domxref("RTCTrackEvent.track", "track")}} 和 {{domxref("RTCTrackEvent.streams", "streams")}} 属性。前者是接收到的视频轨或音频轨。后者是一个 {{domxref("MediaStream")}} 对象数组，每个对象代表一个包含该音轨的流（在极少数情况下，一个音轨可能同时属于多个流）。在我们的例子中，这将始终包含一个流，位于 0 号索引，因为我们之前在 `addTrack()` 中传递了一个流。
+当发生 `track` 事件时，将执行该处理器。使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)可以提取 {{domxref("RTCTrackEvent")}} 的 {{domxref("RTCTrackEvent.track", "track")}} 和 {{domxref("RTCTrackEvent.streams", "streams")}} 属性。前者是接收到的视频轨或音频轨。后者是一个 {{domxref("MediaStream")}} 对象数组，每个对象代表一个包含该音轨的流（在极少数情况下，一个音轨可能同时属于多个流）。在我们的例子中，这将始终包含一个流，位于 0 号索引，因为我们之前在 `addTrack()` 中传递了一个流。
 
-我们为轨道添加一个取消静音事件处理程序，因为轨道一旦开始接收数据包，就会取消静音。我们将接收代码的其余部分放在这里。
+我们为轨道添加一个取消静音事件处理器，因为轨道一旦开始接收数据包，就会取消静音。我们将接收代码的其余部分放在这里。
 
 如果我们已经从远程对等方接收到视频（我们可以通过远程视图的 `<video>` 元素的 {{domxref("HTMLMediaElement.srcObject", "srcObject")}} 属性已经有值来判断），我们不做任何操作。否则，我们将 `srcObject` 设置为 `streams` 数组中索引 0 处的流。
 
@@ -139,7 +139,7 @@ pc.onicecandidate = ({ candidate }) => signaler.send({ candidate });
 
 #### 在信令通道上处理收到的信息
 
-最后一块拼图是处理来自信令服务器的传入信息的代码。在这里，它是作为信令通道对象上的 `onmessage` 事件处理程序来实现的。每次信令服务器发送消息时，都会调用该方法。
+最后一块拼图是处理来自信令服务器的传入信息的代码。在这里，它是作为信令通道对象上的 `onmessage` 事件处理器来实现的。每次信令服务器发送消息时，都会调用该方法。
 
 ```js
 let ignoreOffer = false;
@@ -176,7 +176,7 @@ signaler.onmessage = async ({ data: { description, candidate } }) => {
 };
 ```
 
-在通过 `onmessage` 事件处理程序接收到来自 `SignalingChannel` 的传入消息时，会对接收到的 JSON 对象进行解构，以获得其中的 `description` 或 `candidate`。如果传入的消息有 `description`，那么它要么是对方发出的邀约，要么是对方发出的答复。
+在通过 `onmessage` 事件处理器接收到来自 `SignalingChannel` 的传入消息时，会对接收到的 JSON 对象进行解构，以获得其中的 `description` 或 `candidate`。如果传入的消息有 `description`，那么它要么是对方发出的邀约，要么是对方发出的答复。
 
 另一方面，如果消息中包含一个 `candidate` 字段，那么它就是作为[渐进式 ICE](/zh-CN/docs/Web/API/RTCPeerConnection/canTrickleIceCandidates) 的一部分，从远程对等方接收到的 ICE 候选信息。这个候选项将通过调用 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 方法传递给本地的 ICE 处理层。
 
@@ -198,11 +198,11 @@ signaler.onmessage = async ({ data: { description, candidate } }) => {
 
 ### 无冲突的 setLocalDescription()
 
-过去，{{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} 事件经常以一种容易导致冲突的方式处理——即容易发生 glare，也就是说，容易发生冲突，导致双方对等点同时尝试进行邀约，从而导致其中一方或另一方出现错误并中止连接尝试。
+过去，{{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} 事件经常以一种容易导致冲突的方式处理——即容易产生干扰，也就是说，容易发生冲突，导致双方对等点同时尝试进行邀约，从而导致其中一方或另一方出现错误并中止连接尝试。
 
 #### 传统方式
 
-考虑这个 {{domxref("RTCPeerConnection.negotiationneeded_event", "onnegotiationneeded")}} 事件处理程序：
+考虑这个 {{domxref("RTCPeerConnection.negotiationneeded_event", "onnegotiationneeded")}} 事件处理器：
 
 ```js example-bad
 pc.onnegotiationneeded = async () => {
@@ -374,11 +374,11 @@ pc.oniceconnectionstatechange = () => {
 };
 ```
 
-这种方法存在许多可靠性问题和明显的错误（比如当信令状态不是 `stable` 时，{{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} 事件触发时会失败），但你实际上没有其他方法可以请求 ICE 重新启动，除了创建并发送一个带有 `iceRestart` 选项设置为 `true` 的提议。因此，发送重新启动请求需要直接调用 `negotiationneeded` 事件的处理程序。要做到正确是相当困难的，而且很容易出错，因此错误很常见。
+这种方法存在许多可靠性问题和明显的错误（比如当信令状态不是 `stable` 时，{{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} 事件触发时会失败），但你实际上没有其他方法可以请求 ICE 重新启动，除了创建并发送一个带有 `iceRestart` 选项设置为 `true` 的提议。因此，发送重新启动请求需要直接调用 `negotiationneeded` 事件的处理器。要做到正确是相当困难的，而且很容易出错，因此错误很常见。
 
 #### 使用 restartIce()
 
-现在，你可以使用 restartIce() 来更清晰地执行此操作：
+现在，你可以使用 `restartIce()` 来更清晰地执行此操作：
 
 ```js example-good
 let makingOffer = false;
