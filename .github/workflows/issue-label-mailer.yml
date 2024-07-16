@@ -1,0 +1,38 @@
+name: Issue Label Mailer
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  send_notification:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trim issue body to 3 lines
+        if: github.event.label.name == 'l10n-ko'
+        run: |
+          echo "${{ github.event.issue.body }}" | head -n 3 > trimmed_body.txt
+          echo "TRIMMED_BODY<<EOF" >> $GITHUB_ENV
+          while IFS= read -r line; do
+            echo "$line" >> $GITHUB_ENV
+          done < trimmed_body.txt
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Send Email Notification
+        if: github.event.label.name == 'l10n-ko'
+        uses: dawidd6/action-send-mail@v3
+        env:
+          TRIMMED_BODY: ${{ env.TRIMMED_BODY }}
+        with:
+          secure: true
+          server_address: smtp.gmail.com
+          server_port: 465
+          # user credentials
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          # Mail
+          subject: "[l10n-ko] ${{ github.event.issue.title }}"
+          body: "Issue URL: ${{ github.event.issue.html_url }}\n\nBody:\n${{env.TRIMMED_BODY}}"
+          to: ${{ secrets.EMAIL_USERNAME }}
+          from: yari-content-ko
