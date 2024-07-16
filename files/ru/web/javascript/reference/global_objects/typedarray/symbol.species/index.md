@@ -1,6 +1,7 @@
 ---
 title: get TypedArray[@@species]
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
+slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species
+original_slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 ---
 
 {{JSRef}}
