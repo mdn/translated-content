@@ -41,7 +41,7 @@ l10n:
 
 ## 静态属性
 
-- {{jsxref("ArrayBuffer/@@species", "ArrayBuffer[@@species]")}}
+- [`ArrayBuffer[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species)
   - : 用于创建派生对象的构造函数。
 
 ## 静态方法
@@ -63,8 +63,8 @@ l10n:
   - : 只读，`ArrayBuffer` 可以调整到的最大字节长度。它在构造时确定，并且无法更改。
 - {{jsxref("ArrayBuffer.prototype.resizable")}}
   - : 只读。如果 `ArrayBuffer` 可调整大小，则返回 `true`，否则返回 `false`。
-- `ArrayBuffer.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"ArrayBuffer"`。它用于 {{jsxref("Object.prototype.toString()")}}。
+- `ArrayBuffer.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"ArrayBuffer"`。它用于 {{jsxref("Object.prototype.toString()")}}。
 
 ## 实例方法
 

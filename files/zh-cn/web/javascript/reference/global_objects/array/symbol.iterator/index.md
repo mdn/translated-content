@@ -1,5 +1,5 @@
 ---
-title: Array.prototype[@@iterator]()
+title: Array.prototype[Symbol.iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
 ---
 
