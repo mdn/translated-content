@@ -1,7 +1,6 @@
 ---
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
-original_slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ---
 
 {{JSRef}}
