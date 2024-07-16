@@ -34,5 +34,5 @@ jobs:
           # Mail
           subject: "[l10n-ko] ${{ github.event.issue.title }}"
           body: "Issue URL: ${{ github.event.issue.html_url }}\n\nBody:\n${{env.TRIMMED_BODY}}"
-          to: ${{ secrets.EMAIL_USERNAME }}
+          to: yari-content-ko@googlegroups.com
           from: yari-content-ko
