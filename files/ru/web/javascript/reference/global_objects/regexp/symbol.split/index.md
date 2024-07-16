@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype[@@split]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split
-original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
 ---
 
 {{JSRef}}
