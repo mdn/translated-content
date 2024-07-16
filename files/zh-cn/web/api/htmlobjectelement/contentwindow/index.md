@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLObjectElement")}} 接口的 **`contentWindow`** 只读属性返回一个 {{glossary("WindowProxy")}} 表示对象元素的嵌套浏览器上下文的窗口代理。如果有，是任意值；否则返回 `null`。
+{{domxref("HTMLObjectElement")}} 接口的 **`contentWindow`** 只读属性返回一个表示对象元素的嵌套浏览器上下文的窗口代理的 {{glossary("WindowProxy")}}（如果有的话），否则返回 `null`。
 
 ## 值
 

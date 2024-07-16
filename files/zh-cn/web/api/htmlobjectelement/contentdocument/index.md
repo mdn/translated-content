@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLObjectElement")}} 接口的只读属性返回的 **`contentDocument`** 只读属性返回 {{domxref("Document")}} 表示对象元素的嵌套浏览器上下文的活动文档，如果有，是任意值；否则返回 `null`。
+{{domxref("HTMLObjectElement")}} 接口的 **`contentDocument`** 只读属性返回一个表示对象元素的嵌套浏览器上下文的活动文档的 {{domxref("Document")}}（如果有的话），否则返回 `null`。
 
 ## 值
 

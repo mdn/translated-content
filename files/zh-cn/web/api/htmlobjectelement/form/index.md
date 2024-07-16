@@ -7,11 +7,11 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLObjectElement")}} 接口的 **`form`** 只读属性返回一个 {{domxref("HTMLFormElement")}} 表示对象元素的表单所有者，如果没有则为 `null`。
+{{domxref("HTMLObjectElement")}} 接口的 **`form`** 只读属性返回一个表示对象元素的表单所有者的 {{domxref("HTMLFormElement")}}，如果没有则为 `null`。
 
 ## 值
 
-A {{domxref('HTMLFormElement')}}。
+{{domxref('HTMLFormElement')}}。
 
 ## 规范
 

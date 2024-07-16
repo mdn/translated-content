@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLObjectElement")}} 接口的 **`setCustomValidity()`** 方法设置元素的自定义有效性消息。
+{{domxref("HTMLObjectElement")}} 接口的 **`setCustomValidity()`** 方法设置元素的自定义校验消息。
 
 ## 语法
 
@@ -18,7 +18,7 @@ setCustomValidity(errorMessage)
 ### 参数
 
 - `errorMessage`
-  - : 用于有效性错误的消息。
+  - : 用于校验错误的消息。
 
 ### 返回值
 
@@ -30,7 +30,7 @@ setCustomValidity(errorMessage)
 
 ## 示例
 
-在这个示例中，我们传入输入元素的 ID，并根据该值是缺失、过低或过高设置不同的错误消息。此外，你*必须*对同一元素调用 [reportValidity](/zh-CN/docs/Web/API/HTMLFormElement/reportValidity) 方法，或者任何事都不会发生。
+在这个示例中，我们传入输入元素的 ID，并根据该值是缺失、过小或过大设置不同的错误消息。此外，你*必须*对同一元素调用 [reportValidity](/zh-CN/docs/Web/API/HTMLFormElement/reportValidity) 方法，否则什么事都不会发生。
 
 ```js
 function validate(inputID) {
@@ -40,9 +40,9 @@ function validate(inputID) {
   if (validityState.valueMissing) {
     input.setCustomValidity("你必须填满这个，哟！");
   } else if (validityState.rangeUnderflow) {
-    input.setCustomValidity("我们需要一个更高的数字！");
+    input.setCustomValidity("我们需要一个更大的数字！");
   } else if (validityState.rangeOverflow) {
-    input.setCustomValidity("太高了！");
+    input.setCustomValidity("太大了！");
   } else {
     input.setCustomValidity("");
   }

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLObjectElement")}} 接口的 **`validity`** 只读属性返回一个具有该元素所在的有效状态的 {{domxref("ValidityState")}} 。
+{{domxref("HTMLObjectElement")}} 接口的 **`validity`** 只读属性返回一个具有该元素所在的有效状态的 {{domxref("ValidityState")}}。
 
 ## 值
 
