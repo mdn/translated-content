@@ -1,19 +1,18 @@
 ---
-title: RegExp.prototype[@@replace]()
+title: RegExp.prototype[Symbol.replace]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace
-original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@replace
 ---
 
 {{JSRef}}
 
-**`[@@replace]()`** 方法会在一个字符串中用给定的替换器，替换所有符合正则模式的匹配项，并返回替换后的新字符串结果。用来替换的参数可以是一个字符串或是一个针对每次匹配的回调函数。
+{{jsxref("RegExp")}} 实例的 **`[Symbol.replace]()`** 方法指定了 [`String.prototype.replace()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 和 [`String.prototype.replaceAll()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) 在传入作为模式的正则表达式时的行为。
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-@@replace.html")}}
 
 ## 语法
 
-```plain
-regexp[Symbol.replace](str, newSubStr|function)
+```js-nolint
+regexp[Symbol.replace](str, replacement)
 ```
 
 ### 参数
@@ -21,9 +20,9 @@ regexp[Symbol.replace](str, newSubStr|function)
 - `str`
   - : 正则替换的目标字符串。
 - `newSubStr (replacement)`
-  - : 类型为 {{jsxref("String")}} 的替换器。支持大多数特殊的替换匹配模式；见{{jsxref("String.prototype.replace()")}}页的{{jsxref("String.prototype.replace", "Specifying a string as a parameter", "#Specifying_a_string_as_a_parameter", 1)}}部分。
+  - : 类型为 {{jsxref("String")}} 的替换器。支持大多数特殊的替换匹配模式；见 `String.prototype.replace()` 的[指定字符串作为替换项](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace#指定字符串作为替换项)部分。
 - `function (replacement)`
-  - : 生成新的子字符串的回调函数替换器。作用于该函数的参数的详细描述见{{jsxref("String.prototype.replace()")}}页的 {{jsxref("String.prototype.replace", "Specifying a function as a parameter", "#Specifying_a_function_as_a_parameter", 1)}} 部分。
+  - : 生成新的子字符串的回调函数替换器。作用于该函数的参数的详细描述见 `String.prototype.replace()` 的[指定函数作为替换项](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace#指定函数作为替换项)部分。
 
 ### 返回值
 
@@ -31,7 +30,7 @@ regexp[Symbol.replace](str, newSubStr|function)
 
 ## 描述
 
-如果匹配模式也是{{jsxref("RegExp")}}对象，这个方法在 {{jsxref("String.prototype.replace()")}} 的内部调用。例如，下面的两个方法返回相同结果。
+如果匹配模式也是 {{jsxref("RegExp")}} 对象，这个方法在 {{jsxref("String.prototype.replace()")}} 的内部调用。例如，下面的两个方法返回相同结果。
 
 ```js
 "abc".replace(/a/, "A");
@@ -56,9 +55,9 @@ var newstr = re[Symbol.replace](str, ".");
 console.log(newstr); // 2016.01.01
 ```
 
-### 在子类中使用 @@replace
+### 在子类中使用 `[Symbol.replace]()`
 
-{{jsxref("RegExp")}} 的子类可以覆写 `[@@replace]()`方法来修改默认行为。
+{{jsxref("RegExp")}} 的子类可以覆写 `[Symbol.replace]()` 方法来修改默认行为。
 
 ```js
 class MyRegExp extends RegExp {
@@ -67,7 +66,7 @@ class MyRegExp extends RegExp {
     this.count = count;
   }
   [Symbol.replace](str, replacement) {
-    // Perform @@replace |count| times.
+    // 执行 [Symbol.replace]() |count| 次。
     var result = str;
     for (var i = 0; i < this.count; i++) {
       result = RegExp.prototype[Symbol.replace].call(this, result, replacement);
@@ -78,7 +77,7 @@ class MyRegExp extends RegExp {
 
 var re = new MyRegExp("\\d", "", 3);
 var str = "01234567";
-var newstr = str.replace(re, "#"); // String.prototype.replace calls re[@@replace].
+var newstr = str.replace(re, "#"); // String.prototype.replace 调用 re[Symbol.replace]()。
 console.log(newstr); // ###34567
 ```
 
@@ -92,9 +91,13 @@ console.log(newstr); // ###34567
 
 ## 参见
 
+- [`core-js` 中 `RegExp.prototype[Symbol.replace]` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.replace()")}}
-- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
-- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
-- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- {{jsxref("String.prototype.replaceAll()")}}
+- [`RegExp.prototype[Symbol.match]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)
+- [`RegExp.prototype[Symbol.matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
+- [`RegExp.prototype[Symbol.search]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)
+- [`RegExp.prototype[Symbol.split]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split)
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}
+- {{jsxref("Symbol.replace")}}

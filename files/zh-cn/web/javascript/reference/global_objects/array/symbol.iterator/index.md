@@ -1,12 +1,11 @@
 ---
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
-original_slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ---
 
 {{JSRef}}
 
-{{jsxref("Array")}} 实例的 **`[@@iterator]()`** 方法实现了[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)，允许数组被大多数期望可迭代对象的语法所使用，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个[数组迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，该对象会产生数组中每个索引的值。
+{{jsxref("Array")}} 实例的 **`[Symbol.iterator]()`** 方法实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)，允许数组被大多数期望可迭代对象的语法所使用，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个[数组迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，该对象会产生数组中每个索引的值。
 
 该属性的初始值与 {{jsxref("Array.prototype.values")}} 属性的初始值是相同的函数对象。
 
@@ -26,7 +25,7 @@ array[Symbol.iterator]()
 
 ### 使用 for...of 循环进行迭代
 
-请注意，你很少需要直接调用此方法。`@@iterator` 方法的存在使数组[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)，并且像 `for...of` 循环这样的迭代语法会自动调用此方法以获得要遍历的迭代器。
+请注意，你很少需要直接调用此方法。`[Symbol.iterator]()` 方法的存在使数组[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)，并且像 `for...of` 循环这样的迭代语法会自动调用此方法以获得要遍历的迭代器。
 
 #### HTML
 
@@ -66,7 +65,7 @@ console.log(arrIter.next().value); // e
 
 ### 使用相同的函数处理字符串和字符串数组
 
-因为[字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)和数组都实现了可迭代协议，所以可以设计一个通用函数以相同的方式处理这两种输入。这比直接调用 {{jsxref("Array.prototype.values()")}} 更好，后者要求输入是一个数组，或者至少是一个具有这种方法的对象。
+因为[字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)和数组都实现了可迭代协议，所以可以设计一个通用函数以相同的方式处理这两种输入。这比直接调用 {{jsxref("Array.prototype.values()")}} 更好，后者要求输入是一个数组，或者至少是一个具有这种方法的对象。
 
 ```js
 function logIterable(it) {
@@ -106,13 +105,13 @@ logIterable(123);
 
 ## 参见
 
-- [`core-js` 中 `Array.prototype[@@iterator]` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js` 中 `Array.prototype[Symbol.iterator]` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
 - [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.values()")}}
-- [`TypedArray.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
-- [`String.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- [`TypedArray.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
+- [`String.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
 - {{jsxref("Symbol.iterator")}}
 - [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)

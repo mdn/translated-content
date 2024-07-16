@@ -1,12 +1,11 @@
 ---
-title: Map.prototype[@@iterator]()
+title: Map.prototype[Symbol.iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 ---
 
 {{JSRef}}
 
-{{jsxref("Map")}} 实例的 **`[@@iterator]()`** 方法实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)以允许 `Map` 对象被大多数语法所接受，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个 [map 迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，此对象会以插入顺序生成 map 的键值对。
+{{jsxref("Map")}} 实例的 **`[Symbol.iterator]()`** 方法实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)以允许 `Map` 对象被大多数语法所接受，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个 [map 迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，此对象会以插入顺序生成 map 的键值对。
 
 该属性的初始值与 {{jsxref("Map.prototype.entries")}} 属性的初始值是同一个函数对象。
 
@@ -30,7 +29,7 @@ map[Symbol.iterator]()
 
 ### 使用 for...of 循环进行迭代
 
-请注意，通常你不需要直接调用此方法。`@@iterator` 方法的存在使得 `Map` 对象[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)，而像 `for...of` 循环这样的迭代语法会自动调用此方法以获取用于循环的迭代器。
+请注意，通常你不需要直接调用此方法。`[Symbol.iterator]()` 方法的存在使得 `Map` 对象[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)，而像 `for...of` 循环这样的迭代语法会自动调用此方法以获取用于循环的迭代器。
 
 ```js
 const myMap = new Map();

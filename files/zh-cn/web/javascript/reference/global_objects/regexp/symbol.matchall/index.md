@@ -1,18 +1,17 @@
 ---
-title: RegExp.prototype[@@matchAll]()
+title: RegExp.prototype[Symbol.matchAll]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll
-original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
 ---
 
 {{JSRef}}
 
-**`[@@matchAll]`**方法返回对字符串使用正则表达式的所有匹配项。
+{{jsxref("RegExp")}} 实例的 **`[Symbol.matchAll]`** 方法指定了 [`String.prototype.matchAll`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) 的行为。
 
-\\{{EmbedInteractiveExample("pages/js/regexp-prototype-@@matchall.html")}}
+{{EmbedInteractiveExample("pages/js/regexp-prototype-@@matchall.html", "taller")}}
 
 ## 语法
 
-```plain
+```js-nolint
 regexp[Symbol.matchAll](str)
 ```
 
@@ -52,9 +51,9 @@ console.log(Array.from(result, (x) => x[0]));
 // ["2016", "01", "02"]
 ```
 
-### 在子类中使用 `@@matchAll`
+### 在子类中使用 `[Symbol.matchAll]()`
 
-{{jsxref("RegExp")}} 的子类可以重写 `[@@matchAll]()` 方法来修改默认行为。例如，返回一个{{jsxref("Array", "数组", "", 1)}}而不是[迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)：
+{{jsxref("RegExp")}} 的子类可以重写 `[Symbol.matchAll]()` 方法来修改默认行为。例如，返回一个{{jsxref("Array", "数组", "", 1)}}而不是[迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)：
 
 ```js
 class MyRegExp extends RegExp {

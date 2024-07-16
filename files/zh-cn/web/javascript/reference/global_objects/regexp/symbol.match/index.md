@@ -1,18 +1,17 @@
 ---
-title: RegExp.prototype[@@match]()
+title: RegExp.prototype[Symbol.match]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match
-original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
 ---
 
 {{JSRef}}
 
-对*正则表达式*匹配*字符串*时，**`[@@match]()`**方法用于获取匹配结果。
+{{jsxref("RegExp")}} 实例的 **`[Symbol.match]()`** 方法指定了 [`String.prototype.match()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match) 的行为。此外，它的存在（或不存在）可能会影响对象是否被视为正则表达式。
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-@@match.html")}}
 
 ## 语法
 
-```plain
+```js-nolint
 regexp[Symbol.match](str)
 ```
 
@@ -50,9 +49,9 @@ var result = re[Symbol.match](str);
 console.log(result); // ["2016", "01", "02"]
 ```
 
-### 在子类中使用`@@match`
+### 在子类中使用 `[Symbol.match]()`
 
-{{jsxref("RegExp")}} 的子类可以覆写 `[@@match]()`方法来修改默认行为。
+{{jsxref("RegExp")}} 的子类可以覆写 `[Symbol.match]()` 方法来修改默认行为。
 
 ```js
 class MyRegExp extends RegExp {
@@ -69,7 +68,7 @@ class MyRegExp extends RegExp {
 
 var re = new MyRegExp("([0-9]+)-([0-9]+)-([0-9]+)");
 var str = "2016-01-02";
-var result = str.match(re); // String.prototype.match calls re[@@match].
+var result = str.match(re); // String.prototype.match 调用 re[Symbol.match]()。
 console.log(result.group(1)); // 2016
 console.log(result.group(2)); // 01
 console.log(result.group(3)); // 02
@@ -85,9 +84,12 @@ console.log(result.group(3)); // 02
 
 ## 参见
 
+- [`core-js` 中 `RegExp.prototype[Symbol.match]` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
-- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
-- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- [`RegExp.prototype[Symbol.matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
+- [`RegExp.prototype[Symbol.replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)
+- [`RegExp.prototype[Symbol.search]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)
+- [`RegExp.prototype[Symbol.split]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split)
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}
+- {{jsxref("Symbol.match")}}

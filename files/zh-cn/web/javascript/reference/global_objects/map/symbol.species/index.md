@@ -1,12 +1,11 @@
 ---
-title: get Map[@@species]
+title: Map[Symbol.species]
 slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.species
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 ---
 
 {{JSRef}}
 
-**`Map[@@species]`** 静态访问器属性是一个未使用的访问器属性，指定了如何复制 `Map` 对象。
+**`Map[Symbol.species]`** 静态访问器属性是一个未使用的访问器属性，指定了如何复制 `Map` 对象。
 
 ## 语法
 
@@ -16,11 +15,11 @@ Map[Symbol.species]
 
 ### 返回值
 
-调用 `get @@species` 的构造函数的值（`this`）。返回值用于构造复制的 `Map` 实例。
+调用 `get [Symbol.species]` 的构造函数的值（`this`）。返回值用于构造复制的 `Map` 实例。
 
 ## 描述
 
-`@@species` 访问器属性返回 `Map` 对象的默认构造函数。子类构造函数可以覆盖它以更改构造函数赋值。
+`[Symbol.species]` 访问器属性返回 `Map` 对象的默认构造函数。子类构造函数可以覆盖它以更改构造函数赋值。
 
 > **备注：** 目前所有 `Map` 方法均未使用此属性。
 
@@ -28,7 +27,7 @@ Map[Symbol.species]
 
 ### 普通对象的 species
 
-`@@species` 属性返回默认构造函数，即 `Map` 的构造函数。
+`[Symbol.species]` 属性返回默认构造函数，即 `Map` 的构造函数。
 
 ```js
 Map[Symbol.species]; // 函数 Map()

@@ -1,25 +1,25 @@
 ---
-title: RegExp.prototype[@@split]()
+title: RegExp.prototype[Symbol.split]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split
-original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
 ---
 
 {{JSRef}}
 
-**`[@@split]()`** 方法切割 {{jsxref("String")}} 对象为一个其子字符串的数组。
+**`[Symbol.split]()`** 方法切割 {{jsxref("String")}} 对象为一个其子字符串的数组。
 
 ## 语法
 
-```plain
-regexp[Symbol.split](str[, limit])
+```js-nolint
+regexp[Symbol.split](str)
+regexp[Symbol.split](str, limit)
 ```
 
 ### 参数
 
 - `str`
   - : 切割操作的目标字符串
-- `limit`
-  - : 可选。一个为了限制切割数量的特定整数。 `[@@split]()` 防范仍会切割每个匹配正则模式的匹配项，直到切割数量达到该限制数，除非提前切割完字符串。
+- `limit` {{optional_inline}}
+  - : 可选。一个为了限制切割数量的特定整数。`[Symbol.split]()` 防范仍会切割每个匹配正则模式的匹配项，直到切割数量达到该限制数，除非提前切割完字符串。
 
 ### 返回值
 
@@ -50,9 +50,9 @@ var result = re[Symbol.split](str);
 console.log(result); // ["2016", "01", "02"]
 ```
 
-### 在子类中使用 `@@split`
+### 在子类中使用 `[Symbol.split]()`
 
-{{jsxref("RegExp")}} 的子类可以覆写 `[@@split]()`方法来修改默认行为。
+{{jsxref("RegExp")}} 的子类可以覆写 `[Symbol.split]()` 方法来修改默认行为。
 
 ```js
 class MyRegExp extends RegExp {
@@ -64,7 +64,7 @@ class MyRegExp extends RegExp {
 
 var re = new MyRegExp("-");
 var str = "2016-01-02";
-var result = str.split(re); // String.prototype.split calls re[@@split].
+var result = str.split(re); // String.prototype.split 调用 re[Symbol.split]()。
 console.log(result); // ["(2016)", "(01)", "(02)"]
 ```
 
@@ -78,9 +78,12 @@ console.log(result); // ["(2016)", "(01)", "(02)"]
 
 ## 参见
 
+- [`core-js` 中 `RegExp.prototype[Symbol.split]` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.split()")}}
-- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
-- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
-- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
+- [`RegExp.prototype[Symbol.match]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)
+- [`RegExp.prototype[Symbol.matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
+- [`RegExp.prototype[Symbol.replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)
+- [`RegExp.prototype[Symbol.search]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}
+- {{jsxref("Symbol.split")}}

@@ -1,14 +1,13 @@
 ---
-title: Array[@@species]
+title: Array[Symbol.species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.species
-original_slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
 ---
 
 {{JSRef}}
 
-**`Array[@@species]`** 是一个静态访问器属性，用于返回构造函数，构造函数用于构造数组方法返回值。
+**`Array[Symbol.species]`** 静态访问器属性返回构造函数，构造函数用于构造数组方法返回值。
 
-> **警告：** `@@species` 的存在允许执行任意代码，这可能会产生安全漏洞。它还会使某些优化变得更加困难。引擎开发者正在[调查是否要移除此特性](https://github.com/tc39/proposal-rm-builtin-subclassing)。如果可能，请避免依赖它。现代数组方法，如 {{jsxref("Array/toReversed", "toReversed()")}}，不使用 `@@species` 且始终返回一个新的 `Array` 基类实例。
+> **警告：** `[Symbol.species]` 的存在允许执行任意代码，这可能会产生安全漏洞。它还会使某些优化变得更加困难。引擎开发者正在[调查是否要移除此特性](https://github.com/tc39/proposal-rm-builtin-subclassing)。如果可能，请避免依赖它。现代数组方法，如 {{jsxref("Array/toReversed", "toReversed()")}}，不使用 `[Symbol.species]` 且始终返回一个新的 `Array` 基类实例。
 
 ## 语法
 
@@ -18,11 +17,11 @@ Array[Symbol.species]
 
 ### 返回值
 
-`get @@species` 被调用的构造函数 (`this`) 的值。该返回值用于构造创建新数组的数组方法的返回值。
+`get [Symbol.species]` 被调用的构造函数（`this`）的值。该返回值用于构造创建新数组的数组方法的返回值。
 
 ## 描述
 
-`@@species` 访问器属性返回 `Array` 对象的默认构造函数。子类的构造函数可能会覆盖并改变构造函数的赋值。默认实现基本上是这样的：
+`[Symbol.species]` 访问器属性返回 `Array` 对象的默认构造函数。子类的构造函数可能会覆盖并改变构造函数的赋值。默认实现基本上是这样的：
 
 ```js
 // 以下是一个用于说明的假设底层实现
@@ -33,14 +32,14 @@ class Array {
 }
 ```
 
-由于这种多态实现，派生子类的 `@@species` 默认情况下也会返回构造函数本身。
+由于这种多态实现，派生子类的 `[Symbol.species]` 默认情况下也会返回构造函数本身。
 
 ```js
 class SubArray extends Array {}
 SubArray[Symbol.species] === SubArray; // true
 ```
 
-调用不会改变现有数组但会返回新数组实例的数组方法时（例如 [`filter()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) 和 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map)），将访问数组的 `constructor[@@species]`。返回的构造函数将用于构造数组方法的返回值。这使得在技术上使数组方法返回与数组无关的对象成为可能。
+调用不会改变现有数组但会返回新数组实例的数组方法时（例如 [`filter()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) 和 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map)），将访问数组的 `constructor[Symbol.species]`。返回的构造函数将用于构造数组方法的返回值。这使得在技术上使数组方法返回与数组无关的对象成为可能。
 
 ```js
 class NotAnArray {
@@ -60,7 +59,7 @@ arr.concat([1, 2]); // NotAnArray { '0': 0, '1': 1, '2': 2, '3': 1, '4': 2, leng
 
 ### 普通对象中的 species
 
-`@@species` 属性返回默认构造函数，对于 `Array` 来说，它就是 `Array` 构造函数。
+`[Symbol.species]` 属性返回默认构造函数，对于 `Array` 来说，它就是 `Array` 构造函数。
 
 ```js
 Array[Symbol.species]; // [Function: Array]
