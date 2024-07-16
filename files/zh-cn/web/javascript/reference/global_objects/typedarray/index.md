@@ -174,7 +174,7 @@ new TypedArray(buffer, byteOffset, length)
 
 这些属性定义在 `TypedArray` 构造函数中，因此由所有 `TypedArray` 子类型共享。
 
-- {{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}
+- [`TypedArray[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species)
   - : 用于创建派生对象的构造函数。
 
 所有 `TypedArray` 子类也有着以下静态属性：
@@ -269,7 +269,7 @@ new TypedArray(buffer, byteOffset, length)
   - : 返回一个表示调用数组及其元素的本地化字符串。参见 {{jsxref("Array.prototype.toLocaleString()")}}。
 - {{jsxref("TypedArray.prototype.toString()")}}
   - : 返回一个表示调用数组及其元素的字符串。参见 {{jsxref("Array.prototype.toString()")}}。
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- [`TypedArray.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
   - : 返回一个新的*数组迭代器*对象，该对象包含数组中每个索引的值。
 
 ## 示例
