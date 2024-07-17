@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.globalAlpha`** 属性用于描述在 canvas 上绘图之前，设置图形和图片透明度。
+Canvas 2D API 的 **`CanvasRenderingContext2D.globalAlpha`** 属性指定将被绘制到 canvas 上的形状或图像的 alpha（透明度）值。
 
 > **备注：** 参见 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)中[应用样式和色彩](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)这一章节。
 
@@ -19,7 +19,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.globalAlpha`** 属性用于描述�
 
 ### 绘制半透明形状
 
-这是一段使用 `globalAlpha` 属性的简单代码片段，绘制了 2 个半透明的矩形。
+此示例用 `globalAlpha` 属性绘制了 2 个半透明的矩形。
 
 ```html
 <canvas id="canvas"></canvas>
@@ -46,7 +46,7 @@ ctx.fillRect(50, 50, 100, 100);
 
 ### 叠加透明形状
 
-这个示例演示了在彼此叠加多个透明形状的效果。我们首先绘制一个由四个不同颜色的方块组成的实心背景。接下来，将 `globalAlpha` 属性设置为 `0.2`（20% 不透明）；这个 alpha 级别将应用于所有透明形状。然后，我们使用一个 `for` 循环绘制一系列半径逐渐增大的圆。
+此示例演示了在彼此叠加多个透明形状的效果。我们首先绘制一个由四个不同颜色的方块组成的实心背景。接下来，将 `globalAlpha` 属性设置为 `0.2`（20% 不透明）；这个 alpha 级别将应用于所有透明形状。然后，我们使用一个 `for` 循环绘制一系列半径逐渐增大的圆。
 
 随着每个新圆的绘制，下面圆的透明度实际上增加了。如果我们增加循环的次数（从而绘制更多的圆），背景最终会完全从图像的中心消失。
 
