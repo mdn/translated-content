@@ -230,7 +230,7 @@ button:before {
 
    - `<video>` 元素和控制栏。
    - 播放/暂停、停止、回退和快进按钮。
-   - 进度条外面的 `<div>`，数字计时器的 `<span>`，以及内部的 `<div>` 会随着视频播放逐渐变宽。
+   - 进度条外面的 `<div>`、数字计时器的 `<span>` 以及内部的 `<div>` 会随着视频播放逐渐变宽。
 
 3. 接下来，在代码的底部插入以下内容：
 
@@ -245,7 +245,7 @@ button:before {
 
 让我们实现或许是最重要的控制——播放/暂停按钮。
 
-1. 首先，将以下内容添加到你代码的底部，以便于在单击播放按钮时调用 `playPauseMedia()`函数：
+1. 首先，将以下内容添加到你代码的底部，以便于在单击播放按钮时调用 `playPauseMedia()` 函数：
 
    ```js
    play.addEventListener("click", playPauseMedia);
@@ -296,9 +296,9 @@ button:before {
 
 #### 快进和快退
 
-有许多方法可以实现快退和快进功能;在这里，我们向你展示了一种相对复杂的方式，当按意外顺序按下不同的按钮时，它不会中断。
+有许多方法可以实现快退和快进功能；在这里，我们向你展示了一种相对复杂的方式，当按意外顺序按下不同的按钮时，它不会中断。
 
-1. 首先，在前面的代码之下添加以下两个[`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener)：
+1. 首先，在前面的代码之下添加以下两个 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener)：
 
    ```js
    rwd.addEventListener("click", mediaBackward);
@@ -412,12 +412,11 @@ function setTime() {
 这是一个相当长的函数，所以让我们一步一步地完成它：
 
 1. 首先，我们计算 {{domxref("HTMLMediaElement.currentTime")}} 值中的分钟数和秒数。
-2. 然后我们初始化另外两个变量 `minuteValue`和 `secondValue`。要显示的实际时间值设置为 `minuteValue` 加上冒号字符再加上 `secondValue`。
-3. 我们使用 {{jsxref("String/padStart", "padStart()")}} 将每个数值设置为 2 个字符，即使数值只有一位数。
-4. 要显示的实际时间值设置为 `minuteValue` 加上冒号字符，再加上 `secondValue`。
-5. 计时器的 {{domxref("Node.textContent")}} 值设置为时间值，以让这个时间在 UI 中显示。
-6. 内部 `<div>` 的长度是通过首先计算外部 `<div>` 的宽度来计算出来的（任何元素的 {{domxref("HTMLElement.clientWidth", "clientWidth")}} 属性将包含它的长度），然后乘以 {{domxref("HTMLMediaElement.currentTime")}} 除以媒体的总 {{domxref("HTMLMediaElement.duration")}}。
-7. 我们将内部 `<div>` 的宽度设置为等于计算的条形长度加上“px”，设置为这个数值大小的像素。
+2. 然后我们初始化另外两个变量 `minuteValue` 和 `secondValue`。我们将要使用 {{jsxref("String/padStart", "padStart()")}} 将每个数值变成为 2 个字符，即使数值只有一位数。
+3. 要显示的实际时间值设置为 `minuteValue` 加上冒号字符再加上 `secondValue`。
+4. 计时器的 {{domxref("Node.textContent")}} 值设置为时间值，以让这个时间在 UI 中显示。
+5. 内部 `<div>` 的长度是通过首先计算外部 `<div>` 的宽度来计算出来的（任何元素的 {{domxref("HTMLElement.clientWidth", "clientWidth")}} 属性将包含它的长度），然后乘以 {{domxref("HTMLMediaElement.currentTime")}} 除以媒体的总 {{domxref("HTMLMediaElement.duration")}}。
+6. 我们将内部 `<div>` 的宽度设置为等于计算的条形长度加上“px”，设置为这个数值大小的像素。
 
 #### 修复播放和暂停
 
