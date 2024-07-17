@@ -111,7 +111,7 @@ if ("parse" in URL) {
 
 下面显示了每个检查结果。
 
-{{EmbedLiveSample('URL.parse()', '100%')}}
+{{EmbedLiveSample('使用 URL.parse()', '100%')}}
 
 ## 规范
 
