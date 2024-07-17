@@ -2,7 +2,7 @@
 title: よくあるアクセシビリティの問題を扱う
 slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
 l10n:
-  sourceCommit: 9dff0e8d64d3a2e6eadec7ed9895f0713b10ab60
+  sourceCommit: af1e384356e21dbcc573d1c1cc015ec79c644de1
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -22,7 +22,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">目的:</th>
       <td>
         一般的なアクセシビリティの問題を診断し、それらを修正するための適切なツールとテクニックを使用できるようにすること。
       </td>
@@ -128,14 +128,13 @@ l10n:
 
 ブラウザーが異なれば、使用可能なキーボードコントロールオプションも異なることに注意してください。 最近のほとんどのブラウザーは上記のタブパターンに従いますが（フォーカス可能な要素を逆方向に移動するために <kbd>Shift</kbd> + <kbd>Tab</kbd> を押すこともできます）、次のようにブラウザーによっては独自の特徴があります。
 
-- Mac 用の Firefox は既定ではタブ移動を行いません。 オンにするには、 \[環境設定] > \[詳細] > \[一般] の順に選択してから、\[常にページ内を移動するにはカーソルキーを使用する] のチェックを外します。 次に、Mac のシステム環境設定アプリを開き、\[キーボード] > \[ショートカット] の順に選択して、\[全てのコントロール] ラジオボタンを選択します。
-- Safari では、既定ではリンクをタブ操作することはできません。 これを有効にするには、Safari の \[環境設定] を開き、\[詳細] に移動し、\[Tab キーを押してウェブページの各項目をハイライトする] チェックボックスをオンにする必要があります。
+- Safari では、既定ではリンクをタブ操作することはできません。 これを有効にするには、Safari の \[環境設定] を開き、\[詳細] に移動し、\[Tab キーを押してウェブページの各項目をハイライトする] チェックボックスをオンにする必要があります。古いバージョンの macOS を使用している場合は、Apple の macOS ユーザーガイドの [Mac でキーボードをマウスのように使用する](https://support.apple.com/ja-jp/guide/mac-help/mchlp1399/mac)を参照してください。
 
 > **警告:** あなたが書く新しいページのどれでも、この種のテストを実行するべきです — 機能がキーボードによってアクセスできることを確認してください。
 
 この例では、正しい仕事に正しい意味論的要素を使用することの重要性を強調しています。 任意の要素を、CSS でリンクやボタンのように見せたり、JavaScript でリンクやボタンのように振る舞うようにスタイルすることは可能ですが、実際にはリンクやボタンにはならず、あなたはこれらの要素が無料で与えるアクセシビリティの多くを失うでしょう。 あなたがそれを避けることができるならばしないでください。
 
-もう 1 つのヒントです。次の例に示すように、 [:focus](/ja/docs/Web/CSS/:focus) 疑似クラスを使用して、フォーカス可能要素のフォーカス時の外観をコントロールできます。 フォーカスとホバーのスタイルを倍増するのは良い考えです。 それにより、マウスやキーボードを使用しているかどうかに関わらず、ユーザーがコントロールをアクティブにしたときに何かが行われるという視覚的な手がかりを得ることができます。
+もう 1 つのヒントです。次の例に示すように、 [:focus](/ja/docs/Web/CSS/:focus) 擬似クラスを使用して、フォーカス可能要素のフォーカス時の外観をコントロールできます。 フォーカスとホバーのスタイルを倍増するのは良い考えです。 それにより、マウスやキーボードを使用しているかどうかに関わらず、ユーザーがコントロールをアクティブにしたときに何かが行われるという視覚的な手がかりを得ることができます。
 
 ```css
 a:hover,
@@ -156,20 +155,20 @@ select:focus {
 
 時にはキーボードアクセシビリティを失うことが避けられないこともあります。 意味論的にあまり良くないサイトを継承したかもしれませんし（`<div>` で作られたボタンを生成する恐ろしい {{glossary("CMS")}} に行き着くかもしれません）、HTML5 の {{htmlelement("video")}} 要素のようにキーボードアクセシビリティが組み込まれていない複雑なコントロールを使用しているかもしれません（驚くべきことに、Opera は `<video>` 要素の既定のブラウザーコントロールをタブ操作できる唯一のブラウザーです）。 次のようないくつかの選択肢があります。
 
-1. `<button>` 要素（既定でタブ移動可能）と JavaScript を使用してカスタムコントロールを作成し、それらの機能を関連付けます。 これについての良い例は、[クロスブラウザーのビデオプレーヤーの作成](/ja/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
+1. `<button>` 要素（既定でタブ移動可能）と JavaScript を使用してカスタムコントロールを作成し、それらの機能を関連付けます。 これについての良い例は、[クロスブラウザーのビデオプレーヤーの作成](/ja/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
 2. JavaScript でショートカットキーを作成すると、キーボードの特定のキーを押すことで機能をアクティブにできます。 あらゆる目的に適応できるゲーム関連の例については、[デスクトップのマウスとキーボードのコントロール](/ja/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)を参照してください。
 3. 偽のボタンの振る舞いのために、いくつかの興味深い戦術を使ってください。 例えば、[fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) の例を見てください（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)を見る）。 ここでは、それぞれの属性に `tabindex="0"` という属性を与えることで（もっと有用な詳細については WebAIM の [tabindex の記事](https://webaim.org/techniques/keyboard/tabindex)（英語）を見てください）、偽の `<div>` ボタンにフォーカスできるようにしました（タブを介すことも含む）。 これにより、ボタンにタブ移動することはできますが、 <kbd>Enter</kbd>/<kbd>Return</kbd> キーでそれらをアクティブにすることはできません。 そのためには、次のちょっとした JavaScript トリックを追加する必要があります。
 
    ```js
    document.onkeydown = (e) => {
-     if (e.keyCode === 13) {
+     if (e.code === "Enter") {
        // The Enter/Return key
        document.activeElement.onclick(e);
      }
    };
    ```
 
-   ここでは、`document` オブジェクトにリスナーを追加して、キーボードのボタンが押されたことを検出します。 イベントオブジェクトの [`keyCode`](/ja/docs/Web/API/KeyboardEvent/keyCode) プロパティを使ってどのボタンが押されたかをチェックし、 <kbd>Return</kbd>/<kbd>Enter</kbd> と一致するキーコードであれば、`document.activeElement.onclick()` を使用してボタンの `onclick` ハンドラーに格納されている関数を実行します。 [`activeElement`](/ja/docs/Web/API/Document/activeElement) は現在ページにフォーカスしている要素を与えます。
+   ここでは、`document` オブジェクトにリスナーを追加して、キーボードのボタンが押されたことを検出します。 イベントオブジェクトの [`code`](/ja/docs/Web/API/KeyboardEvent/code) プロパティを使ってどのボタンが押されたかをチェックし、 <kbd>Return</kbd>/<kbd>Enter</kbd> と一致するコードであれば、`document.activeElement.onclick()` を使用してボタンの `onclick` ハンドラーに格納されている関数を実行します。 [`activeElement`](/ja/docs/Web/API/Document/activeElement) は現在ページにフォーカスしている要素を与えます。
 
 > **メモ:** この手法は、イベントハンドラープロパティ（`onclick` など）を使ってオリジナルのイベントハンドラーを設定した場合にのみ機能します。 `addEventListener` は機能しません。 これは、機能を再構築するための非常に面倒な作業です。 それに他にも問題があるはずです。 そもそも正しい要素を正しい仕事に使うほうがよいでしょう。
 

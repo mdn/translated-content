@@ -172,7 +172,7 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
 
 ## 静态属性
 
-- {{jsxref("Promise/@@species", "Promise[@@species]")}}
+- [`Promise[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species)
   - : 返回用于构造从 Promise 方法返回值的构造函数。
 
 ## 静态方法
@@ -199,8 +199,8 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
 
 - {{jsxref("Object/constructor", "Promise.prototype.constructor")}}
   - : 创建实例对象的构造函数。对于 `Promise` 实例，初始值为 {{jsxref("Promise/Promise", "Promise")}} 构造函数。
-- `Promise.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串 `"Promise"`。该属性用于 {{jsxref("Object.prototype.toString()")}}。
+- `Promise.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串 `"Promise"`。该属性用于 {{jsxref("Object.prototype.toString()")}}。
 
 ## 实例方法
 

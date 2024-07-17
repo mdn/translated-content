@@ -47,7 +47,7 @@ Hemos _congelado_ todo el contenido localizado (lo que significa que no aceptare
 
 ### Español (es)
 
-- Discusiones: [Matrix (canal #mdn-l10n-es)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (canal MDN l10n ES)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (MDN Web Docs Community ,canal #spanish)](/discord)
+- Discusiones: [Matrix (`#mdn-l10n-es`)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
 - Colaboradores actuales: [Graywolf9](https://github.com/Graywolf9), [JuanVqz](https://github.com/JuanVqz), [Jalkhov](https://github.com/Jalkhov), [marcelozarate](https://github.com/marcelozarate), [davbrito](https://github.com/davbrito), [Vallejoanderson](https://github.com/Vallejoanderson).
 
 > **Nota:** Si quiere hablar sobre la posibilidad de _descongelar_ una localización, las [directrices sobre lo que se requiere se pueden encontrar aquí](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale)
