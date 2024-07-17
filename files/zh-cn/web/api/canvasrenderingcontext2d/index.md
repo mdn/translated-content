@@ -165,8 +165,6 @@ ctx.stroke();
   - : 使用当前的样式描边子路径。
 - {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}}
   - : 如果给定的元素获取了焦点，那么此方法会在当前的路径绘制一个焦点。
-- {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}}
-  - : 将当前或给定的路径滚动到窗口。
 - {{domxref("CanvasRenderingContext2D.clip()")}}
   - : 从当前路径创建一个剪切路径。在 **clip()** 调用之后，绘制的所有信息只会出现在剪切路径内部。例如：参见 Canvas 教程中的[剪切路径](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing)。
 - {{domxref("CanvasRenderingContext2D.isPointInPath()")}}

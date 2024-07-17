@@ -10787,15 +10787,15 @@
       "Mgjbot"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@iterator": {
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator": {
     "modified": "2020-10-15T22:06:23.853Z",
     "contributors": ["lajaso"]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@species": {
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.species": {
     "modified": "2020-10-15T22:07:11.429Z",
     "contributors": ["lajaso"]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@unscopables": {
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables": {
     "modified": "2020-10-15T22:04:47.805Z",
     "contributors": ["lajaso"]
   },
@@ -11140,7 +11140,7 @@
       "tamat"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species": {
+  "Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species": {
     "modified": "2020-10-15T22:05:03.686Z",
     "contributors": ["lajaso"]
   },
@@ -12137,7 +12137,7 @@
       "Chofoteddy"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Set/@@iterator": {
+  "Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator": {
     "modified": "2020-10-15T22:23:37.310Z",
     "contributors": ["devtoni"]
   },

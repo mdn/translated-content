@@ -17,6 +17,6 @@ slug: Glossary/Cryptographic_hash_function
 MD5 や SHA-1 などの暗号化ハッシュ関数は、衝突耐性を大幅に低下させる攻撃が見つかったため、破損しているとみなされています。
 
 - Wikipedia 上の [暗号学的ハッシュ関数](https://ja.wikipedia.org/wiki/暗号学的ハッシュ関数)
-- [MDN Web Docs 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("Symmetric-key cryptography", "共通鍵暗号")}}
