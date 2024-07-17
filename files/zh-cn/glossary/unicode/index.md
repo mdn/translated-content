@@ -18,4 +18,4 @@ Unicode 是一种标准{{Glossary("Character set", "字符集")}}，用于对来
 ## 参见
 
 - 维基百科上的 [Unicode](https://zh.wikipedia.org/wiki/Unicode)
-- [Unicode 标准：技术向简介](https://www.unicode.org/standard/principles.html)
+- [Unicode 标准：技术简介](https://www.unicode.org/standard/principles.html)
