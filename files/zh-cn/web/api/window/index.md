@@ -181,7 +181,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
   - : 用于触发事件。
 - {{domxref("Window.dump()")}} {{Non-standard_Inline}}
   - : 向控制台中写一条消息。
-- {{domxref("fetch", "Window.fetch()")}}
+- {{domxref("Window.fetch()")}}
   - : 开始从网络获取资源的过程。
 - {{domxref("Window.find()")}} {{Non-standard_Inline}}
   - : 在窗口中搜索给定的字符串。
