@@ -33,7 +33,8 @@ console.log(meta.content);
 ```js
 const meta = document.createElement("meta");
 meta.name = "description";
-meta.content = "<meta> 元素用于以名称/值对的形式提供文档描述性元数据，name 属性给出元数据名称，content 属性给出其值。";
+meta.content =
+  "<meta> 元素用于以名称/值对的形式提供文档描述性元数据，name 属性给出元数据名称，content 属性给出其值。";
 document.head.appendChild(meta);
 ```
 
