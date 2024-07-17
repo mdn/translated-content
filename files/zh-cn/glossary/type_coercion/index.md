@@ -2,7 +2,7 @@
 title: 强制类型转换
 slug: Glossary/Type_coercion
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
 {{GlossarySidebar}}
@@ -19,7 +19,7 @@ let sum = value1 + value2;
 console.log(sum);
 ```
 
-在上面的例子中，JavaScript 将数字 `9` 强制变成了一个字符串，然后将两个值连接在一起，得到了一个字符串 `59`。JavaScript 在字符串和数字之间进行选择，并决定使用字符串。
+在上面的例子中，JavaScript 将数字 `9` *强制转换*成了一个字符串，然后将两个值连接在一起，得到了一个字符串 `59`。JavaScript 在字符串和数字之间进行选择，并决定使用字符串。
 
 编译器本可以将 `5` 强制转换为数字并返回 `14` 的和，但它没有这样做。要返回这个结果，你必须使用 {{jsxref("Global_Objects/Number", "Number()")}} 方法显式地将 `5` 转换为一个数字：
 
@@ -30,7 +30,6 @@ sum = Number(value1) + value2;
 ## 参见
 
 - 维基百科上的[类型转换](https://zh.wikipedia.org/wiki/类型转换)
-- [术语表](/zh-CN/docs/Glossary)
-
+- 相关术语：
   - {{Glossary("Type", "类型")}}
   - {{Glossary("Type conversion", "类型转换")}}
