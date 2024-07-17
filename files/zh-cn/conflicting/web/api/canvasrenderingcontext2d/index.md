@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.scrollPathIntoView()
-slug: Web/API/CanvasRenderingContext2D/scrollPathIntoView
+slug: conflicting/Web/API/CanvasRenderingContext2D
+original_slug: Web/API/CanvasRenderingContext2D/scrollPathIntoView
 ---
 
 {{APIRef}} {{SeeCompatTable}}
