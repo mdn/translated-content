@@ -2,7 +2,7 @@
 title: Window：requestAnimationFrame() 方法
 slug: Web/API/Window/requestAnimationFrame
 l10n:
-  sourceCommit: 71f57bc7f6065d835a5af7c3ced3ef26263c809f
+  sourceCommit: f9f48866f02963e752717310b76a70d5bdaf554c
 ---
 
 {{APIRef}}
@@ -34,7 +34,7 @@ requestAnimationFrame(callback)
 
 ## 示例
 
-在这个例子中，一个元素的动画时间是 2 秒（2000 毫秒）。该元素以 0.1px/ms 的速度向右移动，所以它的相对位置（以 CSS 像素为单位）可以通过动画开始后所经过的时间（以毫秒）的函数来计算 `0.1 * elapsed`。该元素的最终位置是在其初始位置的右边 200px（`0.1 * 2000`）。
+在这个例子中，一个元素的动画时间是 2 秒（2000 毫秒）。该元素以 0.1px/ms 的速度向右移动，所以它的相对位置（以 CSS 像素为单位）可以通过动画开始后所经过的时间（以毫秒为单位）的函数来计算，即 `0.1 * elapsed`。该元素的最终位置是在其初始位置的右边 200px（`0.1 * 2000`）。
 
 ```js
 const element = document.getElementById("some-element-you-want-to-animate");
@@ -127,4 +127,4 @@ function animate() {
 - {{domxref("Window.cancelAnimationFrame()")}}
 - {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
 - [用 JavaScript 做动画：从 setInterval 到 requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/)——博文
-- [TestUFO：测试你的网络浏览器 requestAnimationFrame() 的时间偏差](https://www.testufo.com/#test=animation-time-graph)
+- [TestUFO：测试你的 web 浏览器 requestAnimationFrame() 的时间偏差](https://www.testufo.com/#test=animation-time-graph)
