@@ -2,7 +2,7 @@
 title: TCP
 slug: Glossary/TCP
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
 {{GlossarySidebar}}
@@ -16,7 +16,7 @@ TCP 的作用是确保数据包的可靠传输和无误。TCP 实现了[拥塞�
 - 维基百科上的[传输控制协议](https://zh.wikipedia.org/wiki/传输控制协议)
 - [HTTP 概述](/zh-CN/docs/Web/HTTP/Overview)
 - [浏览器工作原理](/zh-CN/docs/Web/Performance/How_browsers_work)
-- [术语表](/zh-CN/docs/Glossary)
+- 相关术语：
 
   - {{Glossary("IPv4")}}
   - {{Glossary("IPv6")}}
