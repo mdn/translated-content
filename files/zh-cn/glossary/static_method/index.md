@@ -33,7 +33,7 @@ myNotification.close();
 
 - Techopedia 上的[静态方法](https://www.techopedia.com/definition/24034/static-method-java)
 - [static](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)
-- [MDN Web 文档术语表](/zh-CN/docs/Glossary)
+- 相关术语：
 
   - {{Glossary("Object", "对象")}}
   - {{Glossary("Method", "方法")}}
