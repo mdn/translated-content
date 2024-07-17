@@ -32570,9 +32570,5 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
-  },
-  "conflicting/Web/API/CanvasRenderingContext2D": {
-    "modified": "2019-03-23T22:53:40.759Z",
-    "contributors": ["ice-i-snow"]
   }
 }
