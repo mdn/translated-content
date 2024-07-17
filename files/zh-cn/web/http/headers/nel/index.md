@@ -27,6 +27,7 @@ HTTP **`NEL`** 响应标头用于配置网络请求日志记录。
 ```http
 NEL: { "report_to": "name_of_reporting_group", "max_age": 12345, "include_subdomains": false, "success_fraction": 0.0, "failure_fraction": 1.0 }
 ```
+
 ## 规范
 
 {{Specifications}}
