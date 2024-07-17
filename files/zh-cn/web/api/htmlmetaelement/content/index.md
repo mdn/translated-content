@@ -1,0 +1,53 @@
+---
+title: HTMLMetaElement：content 属性
+slug: Web/API/HTMLMetaElement/content
+l10n:
+  sourceCommit: 83c8b8d54ac8fa2459b5a31011e68c0485084991
+---
+
+{{APIRef("HTML DOM")}}
+
+**`HTMLMetaElement.content`** 属性读取或设置 pragma 指令的 `content 属性，并与 {{domxref("HTMLMetaElement.name")}} 或者 {{domxref("HTMLMetaElement.httpEquiv")}}一起命名为 {{htmlelement("meta")}} 数据。更多信息，请参见 [content](/zh-CN/docs/Web/HTML/Element/meta#content) 属性。
+
+## 值
+
+一个字符串。
+
+## 示例
+
+### 读取 meta 元素的 content
+
+以下示例查询一个 `<meta>` 元素，该元素包含值为 `keywords` 的 `name` 属性。`content` 值输出到控制台用于显示文档的 [keywords](/zh-CN/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification)：
+
+```js
+// 假设 <meta name="keywords" content="documentation, HTML, web">
+const meta = document.querySelector("meta[name='keywords']");
+console.log(meta.content);
+// "documentation, HTML, web"
+```
+
+### 使用 content 创建 meta 元素
+
+以下示例创建一个新的 `<meta>` 元素，其 `name` 属性设置为 [`description`](/zh-CN/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification)，`content` 属性设置文档的描述，并附加到文档 `<head>` 上：
+
+```js
+const meta = document.createElement("meta");
+meta.name = "description";
+meta.content = "<meta> 元素用于以名称/值对的形式提供文档描述性元数据，name 属性给出元数据名称，content 属性给出其值。";
+document.head.appendChild(meta);
+```
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{HTMLElement("meta")}}
+- {{domxref("HTMLMetaElement.name")}}
+- {{domxref("HTMLMetaElement.httpEquiv")}}
+- [学习：HTML 中的元数据](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element)
