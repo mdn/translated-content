@@ -1,0 +1,40 @@
+---
+title: NEL
+slug: Web/HTTP/Headers/NEL
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+---
+
+{{HTTPSidebar}}{{SeeCompatTable}}
+
+**`NEL`** HTTP 响应标头用于配置网络请求日志记录。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">标头类型</th>
+      <td>{{Glossary("Response header", "响应标头")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
+
+## 语法
+
+```http
+NEL: { "report_to": "name_of_reporting_group", "max_age": 12345, "include_subdomains": false, "success_fraction": 0.0, "failure_fraction": 1.0 }
+```
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- [网络错误日志（NEL）说明](/zh-CN/docs/Web/HTTP/Network_Error_Logging)
