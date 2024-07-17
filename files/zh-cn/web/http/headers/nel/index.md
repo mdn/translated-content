@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-**`NEL`** HTTP 响应标头用于配置网络请求日志记录。
+HTTP **`NEL`** 响应标头用于配置网络请求日志记录。
 
 <table class="properties">
   <tbody>
