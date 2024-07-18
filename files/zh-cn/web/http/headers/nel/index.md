@@ -2,7 +2,7 @@
 title: NEL
 slug: Web/HTTP/Headers/NEL
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: 7ef65e18c747d5a6e109a0babf5c1ee3cb32a0a2
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}
