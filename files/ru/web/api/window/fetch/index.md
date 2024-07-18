@@ -1,7 +1,6 @@
 ---
 title: Глобальная функция fetch()
 slug: Web/API/Window/fetch
-original_slug: Web/API/fetch
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
