@@ -58,6 +58,7 @@ view-transition-group(embed-container) {
   z-index: 1;
 }
 ```
+
 ## 명세서
 
 {{Specifications}}
