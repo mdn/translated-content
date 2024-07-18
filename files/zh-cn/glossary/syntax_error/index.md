@@ -7,9 +7,9 @@ l10n:
 
 {{GlossarySidebar}}
 
-因为使用了未定义或错误的{{Glossary("syntax", "语法")}}而引发的{{Glossary("exception", "异常")}}。语法错误会在编译或者解析源码的过程中被检测出来。
+因为错误地使用预定义的{{Glossary("syntax", "语法")}}而引发的{{Glossary("exception", "异常")}}。语法错误会在编译或者解析源码的过程中被检测出来。
 
-例如，如果在定义一个 {{Glossary("JavaScript")}} 函数时遗漏了闭合花括号（`}`）时，会触发了一个语法错误。浏览器的开发者工具会在控制台输出 {{Glossary("JavaScript")}} 和 {{Glossary("CSS")}} 语法错误。
+例如，如果在定义一个 {{Glossary("JavaScript")}} 函数时遗漏了闭合花括号（`}`）时，则会触发语法错误。浏览器的开发者工具会在控制台输出 {{Glossary("JavaScript")}} 和 {{Glossary("CSS")}} 语法错误。
 
 ## 参见
 
