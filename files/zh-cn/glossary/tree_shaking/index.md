@@ -15,5 +15,5 @@ l10n:
 
 ## 参见
 
-- [“打包过程中去除死代码的好处”](https://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling)，在 Axel Rauschmayer 的“探索 JS：模块”一书中
+- Axel Rauschmayer 的“探索 JS：模块”一书中的[“打包过程中去除死代码的好处”](https://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling)
 - [用 webpack 实现摇树优化](https://webpack.js.org/guides/tree-shaking/)
