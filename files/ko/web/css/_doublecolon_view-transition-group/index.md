@@ -57,7 +57,6 @@ view-transition-group(embed-container) {
   animation-timing-function: ease;
   z-index: 1;
 }
-
 ```
 ## 명세서
 
