@@ -19,7 +19,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.lineDashOffset`** 属性用于设�
 
 ### 偏移虚线
 
-这个例子绘制了两条虚线。第一条没有虚线偏移量。第二条有一个虚线偏移量为 4。
+此示例绘制了两条虚线。第一条没有虚线偏移量。第二条虚线的偏移量为 4。
 
 #### HTML
 
