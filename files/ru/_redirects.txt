@@ -518,6 +518,7 @@
 /ru/docs/Web/API/document.designMode	/ru/docs/Web/API/Document/designMode
 /ru/docs/Web/API/document.execCommand	/ru/docs/Web/API/Document/execCommand
 /ru/docs/Web/API/document.querySelector	/ru/docs/Web/API/Document/querySelector
+/ru/docs/Web/API/fetch	/ru/docs/Web/API/Window/fetch
 /ru/docs/Web/API/origin	/ru/docs/Web/API/Window/origin
 /ru/docs/Web/API/performance_property	/ru/docs/Web/API/Window/performance
 /ru/docs/Web/API/range.getBoundingClientRect	/ru/docs/Web/API/Range/getBoundingClientRect

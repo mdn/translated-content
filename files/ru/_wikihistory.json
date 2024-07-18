@@ -7251,6 +7251,10 @@
     "modified": "2019-03-23T22:57:01.164Z",
     "contributors": ["wbamberg", "roman-dudin", "xercool"]
   },
+  "Web/API/Window/fetch": {
+    "modified": "2020-10-15T22:06:28.491Z",
+    "contributors": ["BadLame", "dasha_hshr"]
+  },
   "Web/API/Window/focus_event": {
     "modified": "2019-03-23T22:08:49.378Z",
     "contributors": ["goodleby", "FlowerDeLuce"]
@@ -7782,10 +7786,6 @@
   "Web/API/console/warn_static": {
     "modified": "2020-10-15T22:00:31.979Z",
     "contributors": ["ekirpichyov", "ArtemPolanskiy"]
-  },
-  "Web/API/fetch": {
-    "modified": "2020-10-15T22:06:28.491Z",
-    "contributors": ["BadLame", "dasha_hshr"]
   },
   "Web/API/setInterval": {
     "modified": "2020-11-18T12:13:20.493Z",
