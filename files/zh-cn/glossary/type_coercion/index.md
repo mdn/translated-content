@@ -21,7 +21,7 @@ console.log(sum);
 
 在上面的例子中，JavaScript 将数字 `9` *强制转换*成了一个字符串，然后将两个值连接在一起，得到了一个字符串 `59`。JavaScript 在字符串和数字之间进行选择，并决定使用字符串。
 
-编译器本可以将 `5` 强制转换为数字并返回 `14` 的和，但它没有这样做。要返回这个结果，你必须使用 {{jsxref("Global_Objects/Number", "Number()")}} 方法显式地将 `5` 转换为一个数字：
+编译器本可以将 `5` 强制转换为数字并返回两数总和 `14`，但它没有这样做。要返回这个结果，你必须使用 {{jsxref("Global_Objects/Number", "Number()")}} 方法显式地将 `5` 转换为一个数字：
 
 ```js
 sum = Number(value1) + value2;
