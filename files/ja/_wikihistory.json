@@ -13984,6 +13984,23 @@
     "modified": "2020-10-15T22:00:39.694Z",
     "contributors": ["yyss", "mk-tool"]
   },
+  "Web/API/Window/fetch": {
+    "modified": "2020-10-15T21:41:32.875Z",
+    "contributors": [
+      "mfuji09",
+      "gladenjoy",
+      "Uemmra3",
+      "hamasaki",
+      "woodmix",
+      "fscholz",
+      "mdmss37",
+      "dskmori",
+      "aliceinwire",
+      "lv7777",
+      "Piroro-hs",
+      "chikoski"
+    ]
+  },
   "Web/API/Window/find": {
     "modified": "2019-03-23T23:51:09.440Z",
     "contributors": ["yyss", "teoli", "khalid32", "ethertank", "Potappo"]
@@ -15153,23 +15170,6 @@
   "Web/API/createImageBitmap": {
     "modified": "2020-10-15T22:34:31.000Z",
     "contributors": ["silverskyvicto"]
-  },
-  "Web/API/fetch": {
-    "modified": "2020-10-15T21:41:32.875Z",
-    "contributors": [
-      "mfuji09",
-      "gladenjoy",
-      "Uemmra3",
-      "hamasaki",
-      "woodmix",
-      "fscholz",
-      "mdmss37",
-      "dskmori",
-      "aliceinwire",
-      "lv7777",
-      "Piroro-hs",
-      "chikoski"
-    ]
   },
   "Web/API/setInterval": {
     "modified": "2020-10-15T21:15:06.280Z",

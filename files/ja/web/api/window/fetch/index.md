@@ -1,7 +1,7 @@
 ---
 title: fetch() グローバル関数
-short-title: fetch()
-slug: Web/API/fetch
+slug: Web/API/Window/fetch
+original_slug: Web/API/fetch
 l10n:
   sourceCommit: bb75692ff9b82320169ed3f27fcc5136c86b8d21
 ---
