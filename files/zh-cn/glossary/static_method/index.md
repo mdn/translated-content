@@ -2,7 +2,7 @@
 title: 静态方法
 slug: Glossary/Static_method
 l10n:
-  sourceCommit: 1b094710cd2816a6669ce616b6f56d0a5b25e6ad
+  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
 {{GlossarySidebar}}
