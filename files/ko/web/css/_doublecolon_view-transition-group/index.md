@@ -11,7 +11,6 @@ l10n:
 
 뷰 전환이 이루어지는 동안, `::view-transition` 는 [뷰 전환 의사 요소 트리](/ko/docs/Web/API/View_Transitions_API/Using#the_view_transition_pseudo-element_tree) 에 기술된 것처럼 연관된 의사 요소 트리에 포함됩니다. 이는 {{cssxref("::view-transition")}}의 자식으로만 존재하며, {{cssxref("::view-transition-image-pair")}} 를 자식으로 가집니다.
 
-
 `::view-transition-group` 는 UA 스타일시트에서 다음과 같은 스타일을 기본으로 부여 받습니다.
 
 ```css
