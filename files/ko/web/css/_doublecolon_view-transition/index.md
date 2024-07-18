@@ -48,5 +48,5 @@ html::view-transition {
 
 ## 같이 보기
 
-- [View Transitions API](/ko/docs/Web/API/View_Transitions_API)
-- [View Transitions API와 부드럽고 간단한 트랜지션](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [뷰 전환 API](/ko/docs/Web/API/View_Transitions_API)
+- [뷰 전환 API와 부드럽고 간단한 트랜지션](https://developer.chrome.com/docs/web-platform/view-transitions/)
