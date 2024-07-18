@@ -250,4 +250,4 @@ const i32 = new Int32Array(new ArrayBuffer(4));
 - [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays) 안내서
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
-- [TextDecoder](/ko/docs/Web/API/TextDecoder) — 숫자 데이터에서 문자열을 디코딩하는 헬퍼
+- {{domxref("TextDecoder")}}
