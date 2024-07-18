@@ -48,7 +48,7 @@ TypedArray.of(element1, element2, /* …, */ elementN)
 
 ## 설명
 
-보다 자세한 설명ㅇㄴ {{jsxref("Array.of()")}}을 참고하시기 바랍니다.
+보다 자세한 설명은 {{jsxref("Array.of()")}}을 참고하시기 바랍니다.
 {{jsxref("Array.of()")}}와 `TypedArray.of()`는 약간의 미묘한 차이가 있습니다.
 
 - `TypedArray.of()`에 전달된 `this` 값이 생성자가 아닌 경우 `TypedArray.from()`은 {{jsxref("TypeError")}}를 발생시키고, `Array.of()`는 기본적으로 새 {{jsxref("Array")}}를 생성합니다.

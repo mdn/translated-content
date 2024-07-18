@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("TypedArray")}} 인스턴스의 **`reduce()`** 메서드는 형식화 배열의 각 요소에서 사용자가 제공한 "reducer" 콜백 함수를 순서대로 실행하여 이전 요소의 계산에서 반환값을 전달합니다. 입력된 배열의 모든 요소에 대해 reducer를 실행한 최종 결과는 단일 값입니다. 이 메서드는 {{jsxref("Array.prototype.reduce()")}}와 동일한 알고리즘을 가집니다.
+{{jsxref("TypedArray")}} 인스턴스의 **`reduce()`** 메서드는 형식화 배열의 각 요소에서 사용자가 제공한 "reducer" 콜백 함수를 순서대로 실행하여 이전 요소의 계산에서 반환 값을 전달합니다. 입력된 배열의 모든 요소에 대해 reducer를 실행한 최종 결과는 단일 값입니다. 이 메서드는 {{jsxref("Array.prototype.reduce()")}}와 동일한 알고리즘을 가집니다.
 
 {{EmbedInteractiveExample("pages/js/typedarray-reduce.html")}}
 
