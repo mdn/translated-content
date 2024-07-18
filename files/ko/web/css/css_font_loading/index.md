@@ -13,27 +13,27 @@ l10n:
 
 ### 인터페이스
 
-- {{domxref("fontFace")}} 
-  - [`FontFace()`](/en-US/docs/Web/API/FontFace/FontFace) 
-  - {{domxref("fontFace.family")}} 
-  - {{domxref("fontFace.style")}} 
-  - {{domxref("fontFace.weight")}} 
-  - {{domxref("fontFace.stretch")}} 
-  - {{domxref("fontFace.unicodeRange")}} 
-  - {{domxref("fontFace.variant")}} 
-  - {{domxref("fontFace.featureSettings")}} 
-  - {{domxref("fontFace.variationSettings")}} 
-  - {{domxref("fontFace.display")}} 
-  - {{domxref("fontFace.ascentOverride")}} 
-  - {{domxref("fontFace.descentOverride")}} 
-  - {{domxref("fontFace.lineGapOverride")}} 
-  - {{domxref("fontFace.load()")}} 
-- {{domxref("fontFaceSet")}} 
-- {{domxref("fontFaceSetLoadEvent")}} 
+- {{domxref("fontFace")}} 인터페이스
+  - [`FontFace()`](/ko/docs/Web/API/FontFace/FontFace) 생성자
+  - {{domxref("fontFace.family")}} 속성
+  - {{domxref("fontFace.style")}} 속성
+  - {{domxref("fontFace.weight")}} 속성
+  - {{domxref("fontFace.stretch")}} 속성
+  - {{domxref("fontFace.unicodeRange")}} 속성
+  - {{domxref("fontFace.variant")}} 속성
+  - {{domxref("fontFace.featureSettings")}} 속성
+  - {{domxref("fontFace.variationSettings")}} 속성
+  - {{domxref("fontFace.display")}} 속성
+  - {{domxref("fontFace.ascentOverride")}} 속성
+  - {{domxref("fontFace.descentOverride")}} 속성
+  - {{domxref("fontFace.lineGapOverride")}} 속성
+  - {{domxref("fontFace.load()")}} promise 반환 메서드
+- {{domxref("fontFaceSet")}} 인터페이스
+- {{domxref("fontFaceSetLoadEvent")}} 이벤트
 
 ## 가이드
 
-- [CSS font loading API](/en-US/docs/Web/API/CSS_Font_Loading_API)
+- [CSS font loading API](/ko/docs/Web/API/CSS_Font_Loading_API)
   - : 글꼴 리소스를 동적으로 로드하기 위한 이벤트와 인터페이스를 제공하는 CSS 글꼴 로딩 API에 대한 설명입니다.
 
 ## 명세서
