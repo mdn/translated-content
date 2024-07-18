@@ -36,7 +36,7 @@ matchAll(regexp)
 
 ## 描述
 
-`String.prototype.matchAll` 方法本身的实现非常简单，它只是调用了参数的 `Symbol.matchAll` 方法，并将字符串作为第一个参数传递了进去（除了额外的输入验证，即正则表达式必须是全局的）。实际的实现来自 [`RegExp.prototype[@@matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)。
+`String.prototype.matchAll` 方法本身的实现非常简单，它只是调用了参数的 `Symbol.matchAll` 方法，并将字符串作为第一个参数传递了进去（除了额外的输入验证，即正则表达式必须是全局的）。实际的实现来自 [`RegExp.prototypeSymbol.matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)。
 
 ## 示例
 
@@ -126,7 +126,7 @@ array[1];
 // ['test2', 'e', 'st2', '2', index: 5, input: 'test1test2', length: 4]
 ```
 
-### 使用实现了 @@matchAll 的非正则对象调用 matchAll()
+### 使用实现了 `[Symbol.matchAll]()` 的非正则对象调用 matchAll()
 
 如果一个对象有一个 `Symbol.matchAll` 方法，它可以被用作自定义匹配器。`Symbol.matchAll` 的返回值将成为 `matchAll()` 的返回值。
 
@@ -157,4 +157,4 @@ str.matchAll({
 - {{jsxref("RegExp")}}
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}
-- [`RegExp.prototype[@@matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
+- [`RegExp.prototype[Symbol.matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)

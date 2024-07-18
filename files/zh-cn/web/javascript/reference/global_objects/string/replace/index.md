@@ -34,7 +34,7 @@ replace(pattern, replacement)
 
 字符串模式只会被替换一次。要执行全局搜索和替换，请使用带有 `g` 标志的正则表达式或使用 [`replaceAll()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)。
 
-如果 `pattern` 是一个带有 [`Symbol.replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 方法的对象（包括 `RegExp` 对象），则该方法将被调用，传入目标字符串和 `replacement` 作为参数。它的返回值成为 `replace()` 的返回值。在这种情况下，`replace()` 的行为完全由 `@@replace` 方法定义——例如，下面的说明中提到的任何"捕获组"都实际上是由 [`RegExp.prototype[@@replace]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace) 提供的功能。
+如果 `pattern` 是一个带有 [`Symbol.replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 方法的对象（包括 `RegExp` 对象），则该方法将被调用，传入目标字符串和 `replacement` 作为参数。它的返回值成为 `replace()` 的返回值。在这种情况下，`replace()` 的行为完全由 `[Symbol.replace]()` 方法定义——例如，下面的说明中提到的任何"捕获组"都实际上是由 [`RegExp.prototype[Symbol.replace]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace) 提供的功能。
 
 如果 `pattern` 是一个空字符串，则替换项将被插入到字符串的开头。
 
@@ -42,7 +42,7 @@ replace(pattern, replacement)
 "xxx".replace("", "_"); // "_xxx"
 ```
 
-`replace()` 替换多次的唯一情况是传入带有 `g` 标志的正则表达式。有关正则表达式属性（特别是 [sticky](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) 标志）如何与 `replace()` 交互的更多信息，请参阅 [`RegExp.prototype[@@replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)。
+`replace()` 替换多次的唯一情况是传入带有 `g` 标志的正则表达式。有关正则表达式属性（特别是 [sticky](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) 标志）如何与 `replace()` 交互的更多信息，请参阅 [`RegExp.prototype[Symbol.replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)。
 
 ### 指定字符串作为替换项
 
@@ -249,4 +249,4 @@ console.log("abcd".replace(/(?<group>bc)/, addOffset)); // "abc (1) d"
 - {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test", "RegExp.prototype.test()")}}
 - [`Symbol.replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace)
-- [`RegExp.prototype[@@replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
+- [`RegExp.prototype[Symbol.replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)
