@@ -141,7 +141,7 @@ test.addEventListener(
 
 {{Compat}}
 
-## Veja Também
+## Veja também
 
 - [Introdução a eventos](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
 - {{domxref("Element/mousedown_event", "mousedown")}}
