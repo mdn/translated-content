@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.strokeRect()`** 方法用于在 canvas 中，使用当前的 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} 和其它设置描绘一个矩形。
+Canvas 2D API 的 **`CanvasRenderingContext2D.strokeRect()`** 方法根据当前的 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} 和其它设置描绘一个矩形的描边（轮廓）。
 
 此方法直接绘制到画布而不修改当前路径，因此任何后续 {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} 或 {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} 调用对它没有影响。
 
@@ -36,9 +36,9 @@ strokeRect(x, y, width, height)
 
 ## 示例
 
-### 一个简单的填充矩形
+### 简单的描边矩形
 
-这个例子使用 `strokeRect()` 方法绘制了一个带有绿色轮廓的矩形。
+此示例使用 `strokeRect()` 方法绘制了一个带有绿色轮廓的矩形。
 
 #### HTML
 
