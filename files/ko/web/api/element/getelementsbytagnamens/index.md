@@ -7,10 +7,10 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`Element.getElementsByTagNameNS()`** 는 지정된 네임스페이스에 
-속하는 주어진 태그 이름을 가진 요소들의 실시간 {{domxref("HTMLCollection")}} 을 반환합니다. 
-이는 
-{{Domxref("Document.getElementsByTagNameNS")}}와 유사하지만, 
+**`Element.getElementsByTagNameNS()`** 는 지정된 네임스페이스에
+속하는 주어진 태그 이름을 가진 요소들의 실시간 {{domxref("HTMLCollection")}} 을 반환합니다.
+이는
+{{Domxref("Document.getElementsByTagNameNS")}}와 유사하지만,
 지정된 요소의
 하위 요소들로 검색이 제한됩니다.
 
