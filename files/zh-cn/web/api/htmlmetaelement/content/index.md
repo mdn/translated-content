@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMetaElement.content`** 属性读取或设置 pragma 指令的 `content 属性，并与 {{domxref("HTMLMetaElement.name")}} 或者 {{domxref("HTMLMetaElement.httpEquiv")}}一起命名为 {{htmlelement("meta")}} 数据。更多信息，请参见 [content](/zh-CN/docs/Web/HTML/Element/meta#content) 属性。
+**`HTMLMetaElement.content`** 属性读取或设置 pragma 指令的 `content` 属性，并与 {{domxref("HTMLMetaElement.name")}} 或者 {{domxref("HTMLMetaElement.httpEquiv")}} 一起命名为 {{htmlelement("meta")}} 数据。更多信息，请参见 [content](/zh-CN/docs/Web/HTML/Element/meta#content) 属性。
 
 ## 值
 

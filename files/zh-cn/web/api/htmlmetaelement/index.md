@@ -59,7 +59,7 @@ meta.content = "width=device-width, initial-scale=1";
 document.head.appendChild(meta);
 ```
 
-关于设置视口的更多信息，请参见 [视口基础知识](/zh-CN/docs/Web/HTML/Viewport_meta_tag#viewport_basics)。
+关于设置视口的更多信息，请参见[视口基础知识](/zh-CN/docs/Web/HTML/Viewport_meta_tag#viewport_basics)。
 
 ## 规范
 
