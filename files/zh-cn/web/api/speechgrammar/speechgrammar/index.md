@@ -1,46 +1,48 @@
 ---
-title: SpeechGrammar.SpeechGrammar()
+title: SpeechGrammar：SpeechGrammar() 构造函数
 slug: Web/API/SpeechGrammar/SpeechGrammar
+l10n:
+  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}{{Non-standard_Header}}{{SeeCompatTable}}
 
-**`SpeechGrammar`** 是 {{domxref("SpeechGrammar")}} 接口的构造函数，创建一个新的 `SpeechGrammar` 对象实例。
+{{domxref("SpeechGrammar")}} 接口的 **`SpeechGrammar()`** 构造函数创建一个新的 `SpeechGrammar` 对象实例。
 
 ## 语法
 
-```plain
-var mySpeechGrammar = new SpeechGrammar();
+```js-nolint
+new SpeechGrammar()
 ```
 
-### Parameters
+### 参数
 
 无。
 
-## 样例
+## 示例
 
 ```js
-var grammar =
+const grammar =
   "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;";
-var recognition = new SpeechRecognition();
-var speechRecognitionList = new SpeechGrammarList();
+const recognition = new SpeechRecognition();
+const speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 
-var newGrammar = new SpeechGrammar();
+const newGrammar = new SpeechGrammar();
 newGrammar.src =
   "#JSGF V1.0; grammar names; public <name> = chris | kirsty | mike;";
-speechRecognitionList[1] = newGrammar; // 将 SpeechGrammar 对象添加到列表中
+speechRecognitionList[1] = newGrammar; // 应将新的 SpeechGrammar 对象添加到列表中。
 ```
 
-## 规格
+## 规范
 
-此 API 没有官方的 W3C 或 WHATWG 规范。
+此 API 没有官方 W3C 或 WHATWG 规范。
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API)
