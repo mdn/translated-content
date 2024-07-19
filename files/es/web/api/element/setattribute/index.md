@@ -61,8 +61,6 @@ Esto demuestra dos cosas:
 
 {{ EmbedLiveSample('Example', '300', '50') }}
 
-{{DOMAttributeMethods}}
-
 ## Especificaciones
 
 {{Specifications}}

@@ -196,8 +196,8 @@ const myObject = {
 - [我该使用什么样的机制将事件代码添加到我的网页上？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#我该使用哪种机制？)
 - [什么是事件对象，如何使用它？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件对象)
 - [如何防止默认事件行为？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#阻止默认行为)
-- [事件如何在嵌套元素中触发？（事件传递及其相关内容——事件冒泡及捕获）](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件冒泡及捕获)
-- [什么是事件委托，它如何工作？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件委托)
+- [事件如何在嵌套元素中触发？（事件传递及其相关内容——事件冒泡及捕获）](/zh-CN/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+- [什么是事件委托，它如何工作？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Event_bubbling#事件委托)
 
 ### 面向对象的 JavaScript
 

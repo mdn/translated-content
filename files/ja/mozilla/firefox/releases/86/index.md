@@ -29,7 +29,7 @@ _変更なし。_
 
 ### CSS
 
-- `-webkit-autofill` を別名にして、{{cssxref(":autofill")}} 疑似クラスを有効にしました ([Firefox バグ 1685675](https://bugzil.la/1685675)) および ([Firefox バグ 1475316](https://bugzil.la/1475316))。
+- `-webkit-autofill` を別名にして、{{cssxref(":autofill")}} 擬似クラスを有効にしました ([Firefox バグ 1685675](https://bugzil.la/1685675)) および ([Firefox バグ 1475316](https://bugzil.la/1475316))。
 - {{cssxref("list-style-image")}} プロパティが、有効な {{cssxref("image")}} を受け入れるようになりました ([Firefox バグ 1685078](https://bugzil.la/1685078))。
 
 ### JavaScript

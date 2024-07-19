@@ -43,17 +43,7 @@ ul.addEventListener("click", hide, false);
 
 {{Compat}}
 
-在 IE6-8 中，事件模型与标准不同。使用非标准的 [`element.attachEvent()`](http://msdn.microsoft.com/en-us/library/ie/ms536343%28v=vs.85%29.aspx) 方法绑定事件监听器。在该模型中，事件对象有一个 `srcElement` 属性，等价于`target` 属性。
-
-```js
-function hide(e) {
-  // 支持 IE6-8
-  var target = e.target || e.srcElement;
-  target.style.visibility = "hidden";
-}
-```
-
 ## 参见
 
-- [Comparison of Event Targets](/zh-CN/DOM/event/Comparison_of_Event_Targets)
+- [事件冒泡](/zh-CN/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
 - {{domxref("Event.currentTarget")}}

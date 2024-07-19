@@ -1,5 +1,5 @@
 ---
-title: HTTP 标头（header）
+title: HTTP 标头
 slug: Web/HTTP/Headers
 ---
 
@@ -67,11 +67,9 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 服务器使用 {{HTTPHeader("Accept-CH")}} 主动向客户端请求它们感兴趣的客户端提示标头。客户端可以选择在后续的请求中包含请求的标头。
 
 - {{HTTPHeader("Accept-CH")}} {{experimental_inline}}
-  - : 服务器可以使用 `Accept-CH` 标头字段或具有 [`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#attr-http-equiv) 属性的等效 HTML `<meta>` 元素来宣告对客户端提示的支持。
-- {{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}} {{deprecated_inline}}
-  - : 服务器可以要求客户端记住服务器在指定时间段内支持的客户端提示集合，以便在后续请求到服务器源站时能够传送客户端提示。
+  - : 服务器可以使用 `Accept-CH` 标头字段或具有 [`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#http-equiv) 属性的等效 HTML `<meta>` 元素来宣告对客户端提示的支持。
 - {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
-  - : 服务器使用 `Critical-CH` 和 {{HttpHeader("Accept-CH")}} 来指定接受的客户端提示，也是[重要的客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#critical_client_hints)。
+  - : 服务器使用 `Critical-CH` 和 {{HttpHeader("Accept-CH")}} 来指定接受的客户端提示，也是[重要的客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#重要客户端提示)。
 
 下面列出了不同类别的客户端提示。
 
@@ -366,8 +364,6 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
   - : 包含消息发出的日期和时间。
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : 指示请求已在 TLS 早期数据中传送。
-- {{HTTPHeader("Large-Allocation")}} {{deprecated_inline}}
-  - : 告诉浏览器正在加载的页面将要执行大量分配。
 - {{HTTPHeader("Link")}}
   - : [`Link`](https://datatracker.ietf.org/doc/html/rfc5988#section-5) 实体标头字段提供了一种在 HTTP 标头中序列化一个或多个链接的方法。它在语义上等同于 HTML 的 {{HTMLElement("link")}} 元素。
 - {{HTTPHeader("Push-Policy")}} {{experimental_inline}}

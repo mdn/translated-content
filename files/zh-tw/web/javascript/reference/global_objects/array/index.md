@@ -141,7 +141,7 @@ var myArray = myRe.exec("cdbBdbsbz");
 
 - Array.length
   - : `Array` 建構子的長度為 1。
-- {{jsxref("Array.@@species", "get Array[@@species]")}}
+- [`Array[Symbol.species]`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
   - : 用來建立衍生物件的建構函數。
 - {{jsxref("Array.prototype")}}
   - : 可加入屬性至所有陣列物件。
@@ -163,7 +163,7 @@ var myArray = myRe.exec("cdbBdbsbz");
 
 - {{jsxref("Array.prototype.length")}}
   - : Reflects the number of elements in an array.
-- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+- [`Array.prototype[Symbol.unscopables]`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables)
   - : Contains property names that were not included in the ECMAScript standard prior to the ES2015 version and that are ignored for [`with`](/zh-TW/docs/Web/JavaScript/Reference/Statements/with) statement-binding purposes.
 
 ### 方法
@@ -240,7 +240,7 @@ var myArray = myRe.exec("cdbBdbsbz");
   - : Adds one or more elements to the front of an array, and returns the new `length` of the array.
 - {{jsxref("Array.prototype.values()")}}
   - : Returns a new [_array iterator_](/zh-TW/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that contains the values for each index in the array.
-- [`Array.prototype[@@iterator]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[Symbol.iterator]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
   - : An alias for the [`values()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/values) method by default.
 
 ## 範例

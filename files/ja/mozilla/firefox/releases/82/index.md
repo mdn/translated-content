@@ -23,13 +23,13 @@ slug: Mozilla/Firefox/Releases/82
 
 ### CSS
 
-- {{CSSxRef("::file-selector-button", "::file-selector-button")}} 疑似要素を新たにサポートしました。この疑似要素は、[`<input type="file">`](/ja/docs/Web/HTML/Element/input/file) 要素の内部にあるファイル選択ボタンを表します ([Firefox バグ 1635675](https://bugzil.la/1635675), [Firefox バグ 1662478](https://bugzil.la/1662478))。
-- {{CSSxRef(":is", ":is()")}} および {{CSSxRef(":where", ":where()")}} 疑似クラスのエラー回復を改良しました。これらの疑似クラスは寛容なセレクターリストを受け入れるようになり、リスト内に無効なセレクターがあってもリスト全体が無効にはなりません ([Firefox バグ 1664718](https://bugzil.la/1664718))。
+- {{CSSxRef("::file-selector-button", "::file-selector-button")}} 擬似要素を新たにサポートしました。この擬似要素は、[`<input type="file">`](/ja/docs/Web/HTML/Element/input/file) 要素の内部にあるファイル選択ボタンを表します ([Firefox バグ 1635675](https://bugzil.la/1635675), [Firefox バグ 1662478](https://bugzil.la/1662478))。
+- {{CSSxRef(":is", ":is()")}} および {{CSSxRef(":where", ":where()")}} 擬似クラスのエラー回復を改良しました。これらの擬似クラスは寛容なセレクターリストを受け入れるようになり、リスト内に無効なセレクターがあってもリスト全体が無効にはなりません ([Firefox バグ 1664718](https://bugzil.la/1664718))。
 - `appearance: button` をボタンのみに適用するようになりました。従って、{{CSSxRef("appearance")}} の値 `button` は `auto` のように動作します ([Firefox バグ 1662703](https://bugzil.la/1662703))。
 
 #### 廃止
 
-- 独自仕様である [`:-moz-user-disabled`](/ja/docs/Web/CSS/:-moz-user-disabled) 疑似クラスを削除しました ([Firefox バグ 1664432](https://bugzil.la/1664432))。
+- 独自仕様である [`:-moz-user-disabled`](/ja/docs/Web/CSS/:-moz-user-disabled) 擬似クラスを削除しました ([Firefox バグ 1664432](https://bugzil.la/1664432))。
 
 ### HTTP
 

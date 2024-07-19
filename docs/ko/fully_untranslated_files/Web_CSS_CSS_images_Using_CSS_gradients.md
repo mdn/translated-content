@@ -113,11 +113,11 @@ div {
 
 ## 색상 선언 & 효과 생성
 
-All CSS gradient types are a range of position-dependent colors. The colors produced by CSS gradients can vary continuously with position, producing smooth color transitions. It is also possible to create bands of solid colors, and hard transitions between two colors. The following are valid for all gradient functions:
+모든 CSS 그레이디언트 유형은 위치에 따라 변하는 색상의 범위입니다. CSS 그레이디언트가 생성하는 색상은 위치에 따라 연속적으로 변하며 부드러운 색상 전환을 이룹니다. 또한, 단색 띠를 만들거나 두 색상 간의 뚜렷한 전환을 생성하는 것도 가능합니다. 다음 사항들은 모든 그레이디언트 함수에 적용됩니다.
 
 ### 두 개보다 많은 색 사용하기
 
-You don't have to limit yourself to two colors—you may use as many as you like! By default, colors are evenly spaced along the gradient.
+색상의 수는 두 가지로 제한되지 않으며, 원하는 만큼 사용할 수 있습니다! 기본적으로 색상은 그레이디언트에 따라 균일하게 배치됩니다.
 
 ```html hidden
 <div class="auto-spaced-linear-gradient"></div>
@@ -138,9 +138,9 @@ div {
 
 {{ EmbedLiveSample('두_개보다_많은_색_사용하기', 120, 120) }}
 
-### Positioning color stops
+### 색상 정지점 위치 지정하기
 
-You don't have to leave your color stops at their default positions. To fine-tune their locations, you can give each one zero, one, or two percentage or, for radial and linear gradients, absolute length values. If you specify the location as a percentage, `0%` represents the starting point, while `100%` represents the ending point; however, you can use values outside that range if necessary to get the effect you want. If you leave a location unspecified, the position of that particular color stop will be automatically calculated for you, with the first color stop being at `0%` and the last color stop being at `100%`, and any other color stops being half way between their adjacent color stops.
+색상 정지점을 기본 위치에 두지 않아도 됩니다. 위치를 세밀하게 조정하려면 각 정지점에 0개, 1개 또는 2개의 퍼센티지 값을 지정하거나, 방사형 및 선형 그레이디언트의 경우 절대 길이 값을 지정할 수 있습니다. 위치를 퍼센티지로 지정하면 0%는 시작 지점을, `100%`는 끝 지점을 나타냅니다. 그러나 원하는 효과를 얻기 위해 이 범위를 벗어나는 값을 사용할 수도 있습니다. 위치를 지정하지 않으면 첫 번째 색상 정지점은 자동으로 0%에, 마지막 색상 정지점은 `100%`에 배치되며, 나머지 색상 정지점은 인접한 색상 정지점의 중간에 자동으로 배치됩니다.
 
 ```html hidden
 <div class="multicolor-linear"></div>
@@ -161,9 +161,9 @@ div {
 
 {{ EmbedLiveSample('Positioning_color_stops', 120, 120) }}
 
-### Creating hard lines
+### 경계선 만들기
 
-To create a hard line between two colors, creating a stripe instead of a gradual transition, adjacent color stops can be set to the same location. In this example, the colors share a color stop at the `50%` mark, halfway through the gradient:
+두 색상 사이에 점진적인 전환 대신 명확한 경계선을 만들어 줄무늬를 만들려면, 인접한 색상 정지점을 동일한 위치에 설정할 수 있습니다. 이 예제에서는 색상들이 그레이디언트의 중간 지점인 `50%` 위치에서 색상 정지점을 공유합니다.
 
 ```html hidden
 <div class="striped"></div>
@@ -184,9 +184,9 @@ div {
 
 {{ EmbedLiveSample('Creating_hard_lines', 120, 120) }}
 
-### Gradient hints
+### 그레이디언트 힌트
 
-By default, the gradient transitions evenly from one color to the next. You can include a color-hint to move the midpoint of the transition value to a certain point along the gradient. In this example, we've moved the midpoint of the transition from the 50% mark to the 10% mark.
+기본적으로 그레이디언트는 한 색상에서 다음 색상으로 고르게 전환됩니다. 그러나 전환의 중간점을 특정 지점으로 옮기기 위해 색상 힌트를 추가할 수 있습니다. 이 예제에서는 전환의 중간점을 50% 지점에서 10% 지점으로 옮겼습니다.
 
 ```html hidden
 <div class="color-hint"></div>
@@ -213,9 +213,9 @@ div {
 
 {{ EmbedLiveSample('Gradient_hints', 120, 120) }}
 
-### Creating color bands & stripes
+### 색상 띠와 줄무늬 만들기
 
-To include a solid, non-transitioning color area within a gradient, include two positions for the color stop. Color stops can have two positions, which is equivalent to two consecutive color stops with the same color at different positions. The color will reach full saturation at the first color stop, maintain that saturation through to the second color stop, and transition to the adjacent color stop's color through the adjacent color stop's first position.
+그레이디언트 안에 단색 영역을 만들려면 색상 정지점에 두 개의 위치를 지정하면 됩니다. 이렇게 하면 하나의 색상이 두 위치에 걸쳐 유지됩니다. 이는 동일한 색상이 서로 다른 위치에 두 개의 연속된 색상 정지점을 가지는 것과 동일합니다. 색상은 첫 번째 위치에서 색상이 완전히 나타나고, 두 번째 위치까지 그대로 유지됩니다. 그런 다음 인접한 색상 정지점에서 다음 색상으로 부드럽게 전환됩니다.
 
 ```html hidden
 <div class="multiposition-stops"></div>

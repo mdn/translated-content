@@ -69,7 +69,7 @@ greeting();
 
 <!---->
 
-- [MDN Web Docs 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("Call stack", "コールスタック")}}
   - {{Glossary("Function", "関数")}}

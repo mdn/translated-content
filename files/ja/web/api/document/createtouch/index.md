@@ -1,8 +1,9 @@
 ---
-title: Document.createTouch()
+title: "Document: createTouch() メソッド"
+short-title: createTouch()
 slug: Web/API/Document/createTouch
 l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_header}}
