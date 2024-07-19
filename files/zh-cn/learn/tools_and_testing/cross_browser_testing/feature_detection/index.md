@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-功能检测包括确定浏览器是否支持某个代码块，并根据支持（或不支持）运行不同的代码，这样浏览器就能始终提供正常的使用体验，而不会在某些浏览器中崩溃或出错。 本文详细介绍了如何编写自己的简单特征检测、如何使用库加快实现速度，以及原生的特征检测特性（如 `@supports`）。
+功能检测包括确定浏览器是否支持某个代码块，并根据支持（或不支持）运行不同的代码，这样浏览器就能始终提供正常的使用体验，而不会在某些浏览器中崩溃或出错。本文详细介绍了如何编写自己的简单特征检测、如何使用库加快实现速度，以及原生的特征检测特性（如 `@supports`）。
 
 <table>
   <tbody>
@@ -57,11 +57,11 @@ if ("geolocation" in navigator) {
 
 ### CSS
 
-你可以通过在 JavaScript 中测试[*元素.style.属性*](/zh-CN/docs/Web/API/HTMLElement/style)（例如 `paragraph.style.rotate`）的存在来检测 CSS 特性。
+你可以通过在 JavaScript 中测试[_元素.style.属性_](/zh-CN/docs/Web/API/HTMLElement/style)（例如 `paragraph.style.rotate`）的存在来检测 CSS 特性。
 
 一个经典的例子可能是在浏览器中测试 [Subgrid](/zh-CN/docs/Web/CSS/CSS_grid_layout/Subgrid) 的支持情况。对于支持 [`grid-template-columns`](/zh-CN/docs/Web/CSS/grid-template-columns) 和 [`grid-template-rows`](/zh-CN/docs/Web/CSS/grid-template-rows) 属性的 `subgrid` 值的浏览器来说，我们可以在布局中使用 subgrid。对于不支持的浏览器，我们可以使用常规的 grid 布局，虽然不太酷，但也能正常工作。
 
-以此为例，我们可以在 HTML 文件的 head 部分包含两个样式表: 一个包含所有的样式，另一个在不支持 subgrid 的情况下实现默认的网格布局。
+以此为例，我们可以在 HTML 文件的 head 部分包含两个样式表：一个包含所有的样式，另一个在不支持 subgrid 的情况下实现默认的网格布局。
 
 ```html
 <link href="basic-styling.css" rel="stylesheet" />
@@ -167,7 +167,7 @@ CSS 有一个原生的特性检测机制：{{cssxref("@supports")}} at-规则。
 
   - : 使用 {{domxref("Document.createElement()")}} 在内存中创建一个元素，将一个属性设置为特定值，然后检查该值是否被保留。关于这种模式的例子，请参见[深入了解 HTML \<input> 类型检测](https://diveinto.html5doctor.com/detect.html#input-types)中的特性测试。
 
-不过要记住，有些特征是无法检测到的。 在这种情况下，你需要使用其他的方法，例如使用 {{Glossary("Polyfill", "polyfill")}}。
+不过要记住，有些特征是无法检测到的。在这种情况下，你需要使用其他的方法，例如使用 {{Glossary("Polyfill", "polyfill")}}。
 
 #### matchMedia
 
