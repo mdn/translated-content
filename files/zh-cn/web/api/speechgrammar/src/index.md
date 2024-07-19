@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-{{domxref("SpeechGrammar")}} 接口的 **`src`** 属性用于设置和返回包含 `SpeechGrammar` 对象中的语法字符串。 
+{{domxref("SpeechGrammar")}} 接口的 **`src`** 属性用于设置和返回包含 `SpeechGrammar` 对象中的语法字符串。
 
 ## 值
 
