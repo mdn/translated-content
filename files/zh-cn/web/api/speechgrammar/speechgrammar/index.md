@@ -37,7 +37,7 @@ speechRecognitionList[1] = newGrammar; // 应将新的 SpeechGrammar 对象添�
 
 ## 规范
 
-此 API 没有官方 W3C 或 WHATWG 规范。
+此 API 没有官方的 W3C 或 WHATWG 规范。
 
 ## 浏览器兼容性
 
