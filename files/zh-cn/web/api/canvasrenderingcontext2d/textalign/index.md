@@ -9,11 +9,11 @@ l10n:
 
 Canvas 2D API 的 **`CanvasRenderingContext2D.textAlign`** 属性用于描述绘制文本时文本的对齐方式。
 
-该对齐是基于 {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}} 方法的 `x` 的值。所以如果 `textAlign` 是 `"center"`，那么该文本将画在 `x - (textWidth / 2)`。
+对齐是相对于 {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}} 方法的 `x` 值的。例如，如果 `textAlign` 是 `"center"`，那么该文本的左侧边界会是 `x - (textWidth / 2)`。
 
 ## 值
 
-有效值：
+可能的值：
 
 - `"left"`
   - : 文本左对齐。
@@ -71,7 +71,7 @@ ctx.fillText("right-aligned", x, 130);
 
 ### 依赖方向的文本对齐
 
-这个例子演示了 `textAlign` 属性的两个依赖方向的值：`"start"` 和 `"end"`。注意，虽然英语文本的默认方向是 `"ltr"`，但我们在这里手动指定了 `direction` 属性为 `"ltr"`。
+这个例子演示了 `textAlign` 属性的两个依赖方向的值：`"start"` 和 `"end"`。注意，虽然英语文本的默认方向是 `"ltr"`，但我们在这里手动指定了 {{domxref("CanvasRenderingContext2D.direction", "direction")}} 属性为 `"ltr"`。
 
 #### HTML
 
