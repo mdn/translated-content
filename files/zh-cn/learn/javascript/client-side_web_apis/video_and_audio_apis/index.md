@@ -445,7 +445,7 @@ clearInterval(intervalFwd);
 
 1. 如果视频是一小时或更长时间（嗯，它不会显示小时：现在只能显示几分几秒），当前显示时间会出错。你能弄清楚如何更改示例以使其显示小时数吗？
 2. 由于 `<audio>` 元素具有相同的 {{domxref("HTMLMediaElement")}} 功能，因此你可以轻松地将此播放器用于 `<audio>` 元素。试着这样做。
-3. 你能找到一种方法将计时器内部的 `<div>` 元素转换为真正的搜索条/滑动条：也就是说，当你点击条形图上的某个位置时，它会跳转到视频播放中的相对位置吗？作为提示，你可以通过 [`getBoundingClientRect()`](/zh-CN/docs/Web/API/Element/getBoundingClientRect) 方法找出元素左/右和上/下侧的 X 和 Y 值，而且你可以通过 {{domxref("Document")}} 对象调用的 click 事件的事件对象找到鼠标单击的坐标。举个例子：
+3. 你能找到一种方法将计时器内部的 `<div>` 元素转换为真正的搜索条/滑动条——也就是说，当你点击进度条上的某个位置时，它会跳转到视频播放中的相对位置吗？作为提示，你可以通过 [`getBoundingClientRect()`](/zh-CN/docs/Web/API/Element/getBoundingClientRect) 方法找出元素左/右和上/下侧的 X 和 Y 值，而且你可以通过 {{domxref("Document")}} 对象调用的 click 事件的事件对象找到鼠标单击的坐标。举个例子：
 
    ```js
    document.onclick = function (e) {
@@ -457,7 +457,7 @@ clearInterval(intervalFwd);
 
 - {{domxref("HTMLMediaElement")}}
 - [视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)：`<video>` 和 `<audio>` 的简单指南。
-- [音频与视频传递](/zh-CN/docs/Web/Media/Audio_and_video_delivery)：给浏览器传递音频和视频的详细指南，包括很多提示、技巧和指向更深层次教程的相关链接。
+- [音频与视频传输](/zh-CN/docs/Web/Media/Audio_and_video_delivery)：给浏览器传输音频和视频的详细指南，包括很多提示、技巧和指向更深层次教程的相关链接。
 - [音频与视频操作](/zh-CN/docs/Web/Media/Audio_and_video_manipulation)：操作音频和视频的详细指南，例如：使用 [Canvas API](/zh-CN/docs/Web/API/Canvas_API)、[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 等。
 - {{htmlelement("video")}}、{{htmlelement("audio")}} 参考。
 - [Web 上的媒体类型与格式教程](/zh-CN/docs/Web/Media/Formats)
