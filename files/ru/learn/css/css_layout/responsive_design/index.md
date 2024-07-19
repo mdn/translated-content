@@ -238,7 +238,7 @@ h1 {
 
 ## Мета-тег viewport
 
-Если вы посмотрите на HTML-источник отзывчивой страницы, то обычно увидите следующий тег {{htmlelement(«meta»)}} в `<head>` документа.
+Если вы посмотрите на HTML-источник отзывчивой страницы, то обычно увидите следующий тег {{htmlelement("meta")}} в `<head>` документа.
 
 ```html
 <meta name="viewport" content="width=device-width,initial-scale=1" />
