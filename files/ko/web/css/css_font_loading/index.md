@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**CSS font loading**은 글꼴 관련 리소스를 동적으로 로드하는 데 사용되는 이벤트와 인터페이스를 설명하는 모듈입니다.
+**CSS 글꼴 로딩**은 글꼴 관련 리소스를 동적으로 로드하는 데 사용되는 이벤트와 인터페이스를 설명하는 모듈입니다.
 
 ## 참고서
 
@@ -31,9 +31,9 @@ l10n:
 - {{domxref("fontFaceSet")}} 인터페이스
 - {{domxref("fontFaceSetLoadEvent")}} 이벤트
 
-## 가이드
+## 안내서
 
-- [CSS font loading API](/ko/docs/Web/API/CSS_Font_Loading_API)
+- [CSS 글꼴 로딩 API](/ko/docs/Web/API/CSS_Font_Loading_API)
   - : 글꼴 리소스를 동적으로 로드하기 위한 이벤트와 인터페이스를 제공하는 CSS 글꼴 로딩 API에 대한 설명입니다.
 
 ## 명세서
@@ -42,4 +42,4 @@ l10n:
 
 ## 같이 보기
 
-- [CSS fonts](/ko/docs/Web/CSS/CSS_fonts) 모듈
+- [CSS 폰트](/ko/docs/Web/CSS/CSS_fonts) 모듈
