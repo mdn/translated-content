@@ -12,7 +12,7 @@ l10n:
 
 このメソッドは以下のどちらかの場合に `false` を返します。
 
-- 例えば CSS の {{cssxref("display")}} プロパティが [`none`](/ja/docs/Web/CSS/display#none) または [`contents`](/ja/docs/Web/CSS/display#contents) に設定されて場合のように、要素に関連づけられたボックスがない場合。
+- 例えば CSS の {{cssxref("display")}} プロパティが [`none`](/ja/docs/Web/CSS/display#none) または [`contents`](/ja/docs/Web/CSS/display#contents) に設定されている場合のように、要素に関連づけられたボックスがない場合。
 - 要素または祖先要素が {{cssxref("content-visibility")}} プロパティを [`hidden`](/ja/docs/Web/CSS/content-visibility#hidden) に設定しているため、要素が描画されない場合。
 
 オプションの引数を指定することで、「可視」の意味を他の解釈として検査することができます。
@@ -57,7 +57,7 @@ checkVisibility(options)
 - 要素の {{cssxref("content-visibility")}} プロパティが [`hidden`](/ja/docs/Web/CSS/visibility#hidden) の値である（または継承している）場合。
 - `opacityProperty`（または `checkOpacity`）が `true` で、要素 {{cssxref("opacity")}} プロパティの値が `0` である（または継承している）場合。
 - `visibilityProperty`（または `checkVisibilityCSS`）が `true` で、{{cssxref("visibility")}} プロパティの値によって要素が不可視になっている場合。
-- `contentVisibilityAuto` is `true`, the {{cssxref("content-visibility")}} property has (or inherits) a value of [`auto`](/ja/docs/Web/CSS/content-visibility#auto), and element rendering is being skipped.
+- `contentVisibilityAuto` が `true` で、{{cssxref("content-visibility")}} プロパティの値が [`auto`](/ja/docs/Web/CSS/content-visibility#auto) の値で（または継承している）、要素の描画がスキップされている場合。
 
 ## 例
 
