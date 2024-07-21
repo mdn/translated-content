@@ -12,7 +12,7 @@ l10n:
 WebRTC 主要由以下几个部分组成：
 
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}
-  - : 为一个 RTC 连接获取设备的摄像头与（或）麦克风权限，并为此 RTC 连接接入设备的摄像头与（或）麦克风的信号。
+  - : 获取设备的摄像头与（或）麦克风权限，并将这些信号接入 RTC 连接。
 - {{domxref("RTCPeerConnection")}}
   - : 用于配置音频或视频聊天。
 - {{domxref("RTCDataChannel")}}
