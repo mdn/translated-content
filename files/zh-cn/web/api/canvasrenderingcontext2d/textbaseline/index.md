@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.textBaseline`** 属性用于描述绘制文本时当前文本的基线。
+Canvas 2D API 的 **`CanvasRenderingContext2D.textBaseline`** 属性用于描述绘制文本时使用的文本基线。
 
 ## 值
 
@@ -20,7 +20,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.textBaseline`** 属性用于描述
 - `"middle"`
   - : 文本基线在文本块的中间。
 - `"alphabetic"`
-  - : 文本基线是标准的字母基线。
+  - : 文本基线是标准的字母基线。默认值。
 - `"ideographic"`
   - : 文字基线是表意字基线；如果字符本身超出了 alphabetic 基线，那么 ideograhpic 基线位置在字符本身的底部。（用于中文、日文和韩文。）
 - `"bottom"`
