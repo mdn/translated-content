@@ -93,41 +93,41 @@ argparse@^2.0.1:
   resolved "https://registry.yarnpkg.com/argparse/-/argparse-2.0.1.tgz#246f50f3ca78a3240f6c997e8a9bd1eac49e4b38"
   integrity sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
 
-autocorrect-node-darwin-arm64@2.10.0:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/autocorrect-node-darwin-arm64/-/autocorrect-node-darwin-arm64-2.10.0.tgz#70e5a943c1894a27ec813b68d0be2121b1326437"
-  integrity sha512-7wJWVY9KBvWDp+ga0mIW2aeeuEC8YuWk9qZROGz5yyTryxER8iOS/upMFxyamq1DsLuFmndALQTxYMh7qusQVw==
+autocorrect-node-darwin-arm64@2.11.1:
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/autocorrect-node-darwin-arm64/-/autocorrect-node-darwin-arm64-2.11.1.tgz#d45d4f804720535bab6a24e695f48d1736e8f398"
+  integrity sha512-7VdYsMAbJuLVHXPM6hv9+Sds91VX55DaMjiVvC6/p/orAg3pIy1wnk2JfJ0GKouKbkOKBp1fT2XFCJXVPBdh5w==
 
-autocorrect-node-darwin-x64@2.10.0:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/autocorrect-node-darwin-x64/-/autocorrect-node-darwin-x64-2.10.0.tgz#d9e8c964237499bf4a9ebe5558e517adea144799"
-  integrity sha512-vBiIxg+1AT9lEK1EgdjnTEks1OPaVKvmLSyqqRug2Ns7tSTt4ZIv4A3XeY7hWwpCTdDDcyie4p/ztpX/pUE0tg==
+autocorrect-node-darwin-x64@2.11.1:
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/autocorrect-node-darwin-x64/-/autocorrect-node-darwin-x64-2.11.1.tgz#09a9c69b1945762bb2eb929fa1eaba728522cb67"
+  integrity sha512-oHiIq+RQm70DfgliW2W5/J8i7ov2cZyyK6l73fHxKOUzwVi7CSxMV6CHnthOZ7yUA07Y2QlFqVyYYPYbMykavA==
 
-autocorrect-node-linux-x64-gnu@2.10.0:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/autocorrect-node-linux-x64-gnu/-/autocorrect-node-linux-x64-gnu-2.10.0.tgz#ec9cc723d5909c110c4a70ad4a3a0be739e95ef8"
-  integrity sha512-Yz2PkT2B0Z758dBUxQdGIIxRvHrRcOcr6fd+YdOZ0LqBUupA4mPglEhzhyxh1eE2WLQgbvulHcSetikuSkTEyw==
+autocorrect-node-linux-x64-gnu@2.11.1:
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/autocorrect-node-linux-x64-gnu/-/autocorrect-node-linux-x64-gnu-2.11.1.tgz#0d83cd938648ff7ca0046d472ee7c68ff25a50dd"
+  integrity sha512-qWFiur7vXgnMLQ0zLpJ+ZRpBg23FQY0UrWIXgv+5uSVgPIUcDWa78FVpSDVmeWelpP3XTJ4ljUQuuXdok8oQEA==
 
-autocorrect-node-linux-x64-musl@2.10.0:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/autocorrect-node-linux-x64-musl/-/autocorrect-node-linux-x64-musl-2.10.0.tgz#5d03162433ba8e6053dd882b97dbfe3ea6042720"
-  integrity sha512-CTPOoQy9n1kYL5TpKCwsuTLHiRZSqW5u8icDun2A2Mdf8sUcciBm8mcsc/jVtme9t3qCLe5OFYtousJrgiILtQ==
+autocorrect-node-linux-x64-musl@2.11.1:
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/autocorrect-node-linux-x64-musl/-/autocorrect-node-linux-x64-musl-2.11.1.tgz#570bf961dbfe1ed6a122ff6025a317bbacb62626"
+  integrity sha512-Hml5ZRdZMqpeM1p/j7TVy6xdv0+I5yxpRBAMCIkYJp6Le/NIz9EkEP9eYFxHOwdL+MexXvOd/1xSeHEjUL6JDw==
 
-autocorrect-node-win32-x64-msvc@2.10.0:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/autocorrect-node-win32-x64-msvc/-/autocorrect-node-win32-x64-msvc-2.10.0.tgz#b1eac7058bb1cfa6198d4623425873154f59ba60"
-  integrity sha512-Pcgn7jJlCQVSY6Qv7xQ6ZDZa/DDHEqVWYlugaSHtlhs9TUCHzWcDNolK/pubdmxq7LVr8U0bGXsx4ACEhD78BA==
+autocorrect-node-win32-x64-msvc@2.11.1:
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/autocorrect-node-win32-x64-msvc/-/autocorrect-node-win32-x64-msvc-2.11.1.tgz#7a54dc04d53115993bf7a9843d510da0f4f7eca6"
+  integrity sha512-1Cx2iI0eVz/tLyjnkaDx0uH+fXMRxV16tEjbnX0mWPV+LVp2KM5zqYYuzsSkm6f9O6dOFWGUn0ybKZ4QpZb/Dg==
 
-autocorrect-node@2.10.0:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/autocorrect-node/-/autocorrect-node-2.10.0.tgz#d292d23c61a184deb0f771555b1aa4839a40d896"
-  integrity sha512-T4Z/LkeP475pozez7Z1t+ne5I7AG1o8daVWTwD1Jfdb9anspnZyS7rqwOjpBp6aRthRjf8sysCa+9ztDUxK0jQ==
+autocorrect-node@2.11.1:
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/autocorrect-node/-/autocorrect-node-2.11.1.tgz#5e84f6541a2f62e9eb5858f46d6bcc6f610b5920"
+  integrity sha512-xalvvRcynT9BEKCq05SinOkaoINtmkqWk8qHQMh/R6ZA962we3W+zv1I4Qx6Ac3CcegSbGoJgCcYM59ZABhBNQ==
   optionalDependencies:
-    autocorrect-node-darwin-arm64 "2.10.0"
-    autocorrect-node-darwin-x64 "2.10.0"
-    autocorrect-node-linux-x64-gnu "2.10.0"
-    autocorrect-node-linux-x64-musl "2.10.0"
-    autocorrect-node-win32-x64-msvc "2.10.0"
+    autocorrect-node-darwin-arm64 "2.11.1"
+    autocorrect-node-darwin-x64 "2.11.1"
+    autocorrect-node-linux-x64-gnu "2.11.1"
+    autocorrect-node-linux-x64-musl "2.11.1"
+    autocorrect-node-win32-x64-msvc "2.11.1"
 
 balanced-match@^1.0.0:
   version "1.0.2"
@@ -411,10 +411,10 @@ human-signals@^5.0.0:
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-5.0.0.tgz#42665a284f9ae0dade3ba41ebc37eb4b852f3a28"
   integrity sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==
 
-husky@9.0.11:
-  version "9.0.11"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-9.0.11.tgz#fc91df4c756050de41b3e478b2158b87c1e79af9"
-  integrity sha512-AB6lFlbwwyIqMdHYhwPe+kjOC3Oc5P3nThEoW/AaO2BX3vJDjWPFxYLxokUZOo6RNX20He3AaT8sESs9NJcmEw==
+husky@9.1.1:
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-9.1.1.tgz#73f8f1b58329f377654293148c1a6458f54ca224"
+  integrity sha512-fCqlqLXcBnXa/TJXmT93/A36tJsjdJkibQ1MuIiFyCCYUlpYpIaj2mv1w+3KR6Rzu1IC3slFTje5f6DUp2A2rg==
 
 ignore@^5.2.4:
   version "5.2.4"
@@ -983,10 +983,10 @@ pidtree@~0.6.0:
   resolved "https://registry.yarnpkg.com/pidtree/-/pidtree-0.6.0.tgz#90ad7b6d42d5841e69e0a2419ef38f8883aa057c"
   integrity sha512-eG2dWTVw5bzqGRztnHExczNxt5VGsE6OwTeCG3fdUf9KBsZzO3R5OIIIzWR+iZA0NtZ+RDVdaoE2dK1cn6jH4g==
 
-prettier@3.3.2:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.3.2.tgz#03ff86dc7c835f2d2559ee76876a3914cec4a90a"
-  integrity sha512-rAVeHYMcv8ATV5d508CFdn+8/pHPpXeIid1DdrPwXnaAdH7cqjVbpJaT5eq4yRAFU/lsbwYwSF/n5iNrdJHPQA==
+prettier@3.3.3:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.3.3.tgz#30c54fe0be0d8d12e6ae61dbb10109ea00d53105"
+  integrity sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==
 
 punycode.js@^2.3.1:
   version "2.3.1"

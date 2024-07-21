@@ -395,7 +395,9 @@
 /ru/docs/Web/API/Element/accessKey	/ru/docs/Web/API/HTMLElement/accessKey
 /ru/docs/Web/API/Element/createShadowRoot	/ru/docs/Web/API/Element/shadowRoot
 /ru/docs/Web/API/Element/error_event	/ru/docs/Web/API/HTMLElement/error_event
+/ru/docs/Web/API/Event/Comparison_of_Event_Targets	/ru/docs/Learn/JavaScript/Building_blocks/Event_bubbling
 /ru/docs/Web/API/EventTarget.addEventListener	/ru/docs/Web/API/EventTarget/addEventListener
+/ru/docs/Web/API/Fetch_API/Cross-global_fetch_usage	/ru/docs/conflicting/Web/API/Fetch_API/Using_Fetch
 /ru/docs/Web/API/File/Using_files_from_web_applications	/ru/docs/Web/API/File_API/Using_files_from_web_applications
 /ru/docs/Web/API/FileReader/onabort	/ru/docs/Web/API/FileReader/abort_event
 /ru/docs/Web/API/File_and_Directory_Entries_API/Введение	/ru/docs/Web/API/File_and_Directory_Entries_API/Introduction
@@ -516,6 +518,7 @@
 /ru/docs/Web/API/document.designMode	/ru/docs/Web/API/Document/designMode
 /ru/docs/Web/API/document.execCommand	/ru/docs/Web/API/Document/execCommand
 /ru/docs/Web/API/document.querySelector	/ru/docs/Web/API/Document/querySelector
+/ru/docs/Web/API/fetch	/ru/docs/Web/API/Window/fetch
 /ru/docs/Web/API/origin	/ru/docs/Web/API/Window/origin
 /ru/docs/Web/API/performance_property	/ru/docs/Web/API/Window/performance
 /ru/docs/Web/API/range.getBoundingClientRect	/ru/docs/Web/API/Range/getBoundingClientRect
@@ -751,8 +754,16 @@
 /ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/ru/docs/Web/JavaScript/Reference/Classes/Private_properties
 /ru/docs/Web/JavaScript/Reference/Classes/Приватные_поля_класса	/ru/docs/Web/JavaScript/Reference/Classes/Private_properties
 /ru/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/ru/docs/Web/JavaScript/Reference/Errors/Bad_return
+/ru/docs/Web/JavaScript/Reference/Errors/Deprecated_octal	/ru/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
+/ru/docs/Web/JavaScript/Reference/Errors/Equal_as_assign	/ru/docs/orphaned/Web/JavaScript/Reference/Errors/Equal_as_assign
+/ru/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement	/ru/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_token
 /ru/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/ru/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
+/ru/docs/Web/JavaScript/Reference/Errors/Undefined_prop	/ru/docs/orphaned/Web/JavaScript/Reference/Errors/Undefined_prop
+/ru/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal	/ru/docs/Web/JavaScript/Reference/Errors/String_literal_EOL
 /ru/docs/Web/JavaScript/Reference/Functions/Определиние_методов	/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator	/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species	/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables	/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Array/contains	/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Collator	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Collator/compare	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
@@ -770,9 +781,14 @@
 /ru/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/supportedLocalesOf	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/deleteProperty	/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
+/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search	/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search
+/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split	/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split
+/ru/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator	/ru/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator
 /ru/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft	/ru/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /ru/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight	/ru/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /ru/docs/Web/JavaScript/Reference/Global_Objects/String/contains	/ru/docs/Web/JavaScript/Reference/Global_Objects/String/includes
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive	/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive
+/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@species	/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species
 /ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly	/ru/docs/WebAssembly/JavaScript_interface
 /ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table	/ru/docs/WebAssembly/JavaScript_interface/Table
 /ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile	/ru/docs/WebAssembly/JavaScript_interface/compile_static
@@ -859,6 +875,7 @@
 /ru/docs/Web/SVG/Элемент/rect	/ru/docs/Web/SVG/Element/rect
 /ru/docs/Web/SVG/Элемент/svg	/ru/docs/Web/SVG/Element/svg
 /ru/docs/Web/SVG/Элемент/use	/ru/docs/Web/SVG/Element/use
+/ru/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/ru/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /ru/docs/Web/WebGL	/ru/docs/Web/API/WebGL_API
 /ru/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/ru/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ru/docs/Web/WebGL/Animating_objects_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL

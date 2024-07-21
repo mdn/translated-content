@@ -25,12 +25,10 @@ slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 
 이 예제는 `SyntaxError`를 발생시킵니다.
 
-```js example-bad
-"use strict";
+```js-nolint example-bad
+const obj = { a: 1, b: 2, c: 3 };
 
-var obj = {a: 1, b: 2, c: 3 };
-
-for (var i = 0 in obj) {
+for (const i = 0 in obj) {
   console.log(obj[i]);
 }
 

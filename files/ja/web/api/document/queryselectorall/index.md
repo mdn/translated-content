@@ -1,8 +1,9 @@
 ---
 title: "Document: querySelectorAll() メソッド"
+short-title: querySelectorAll()
 slug: Web/API/Document/querySelectorAll
 l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+  sourceCommit: e099e74fe5c09c46f0dfe044894692721a713d29
 ---
 
 {{APIRef("DOM")}}
@@ -18,7 +19,7 @@ querySelectorAll(selectors)
 ### 引数
 
 - `selectors`
-  - : 文字列で、照合対象となる 1 つまたは複数のセレクターを含みます。この文字列は妥当な [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)でなければならず、そうでない場合は `SyntaxError` 例外が発生します。セレクターの仕様と要素の識別の詳細は、[セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)を参照してください。複数のセレクターは、カンマで区切って指定することができます。
+  - : 文字列で、照合対象となる 1 つまたは複数のセレクターを含みます。この文字列は妥当な [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)でなければならず、そうでない場合は `SyntaxError` 例外が発生します。セレクターの仕様と要素の識別の詳細は、[セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)を参照してください。複数のセレクターをカンマで区切って指定することができます。
 
 > **メモ:** 標準の CSS 構文に含まれない文字は、バックスラッシュ文字を使ってエスケープしなければなりません。 JavaScript でもバックスラッシュによるエスケープが使われているため、これらの文字を使った文字列リテラルを記述する際は、特に注意する必要があります。詳細は[特殊文字のエスケープ](/ja/docs/Web/API/Document/querySelector#特殊文字のエスケープ)を参照してください。
 
@@ -93,7 +94,7 @@ highlightedItems.forEach((userItem) => {
 
 ## 関連情報
 
-- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - CSS ガイドの[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)
 - MDN 学習領域の[属性セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
 - {{domxref("Element.querySelector()")}} および {{domxref("Element.querySelectorAll()")}}

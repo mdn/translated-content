@@ -2,10 +2,10 @@
 title: CacheStorage
 slug: Web/API/CacheStorage
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 2e327846966abb10de0b1c9bedc584caab71ec97
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 **`CacheStorage`** インターフェイスは、{{domxref("Cache")}} オブジェクトのストレージを表します。
 
@@ -18,15 +18,11 @@ l10n:
 
 {{domxref("CacheStorage.match()")}} を使用して、所与の {{domxref("Request")}} が `CacheStorage` オブジェクトが追跡する {{domxref("Cache")}} オブジェクトのキーであるかどうかを確認します。
 
-グローバルな {{domxref("caches")}} プロパティを介して `CacheStorage` にアクセスできます。
+`CacheStorage` には、ウィンドウの {{domxref("Window.caches")}} プロパティまたはワーカーの {{domxref("WorkerGlobalScope.caches")}} を介してアクセスできます。
 
-> **メモ:** `CacheStorage` は、信頼されていないオリジン（つまり、 HTTPS を使用しないオリジンですが、この定義は将来より複雑になる可能性があります）では常に拒否し、 `SecurityError` となります。 Firefox でテストする場合は、 Firefox 開発者ツールのオプション/ギアメニューの **HTTP による Service Worker を有効化 (ツールボックスを開いたとき)** オプションをチェックすることで回避することが可能です。さらに、 `CacheStorage` はファイルシステムへのアクセスを必要とするため、Firefoxのプライベートモードでは利用できない場合があります。
+> **メモ:** `CacheStorage` は、信頼されていないオリジン（つまり、 HTTPS を使用しないオリジンですが、この定義は将来より複雑になる可能性があります）では常に拒否され、 `SecurityError` となります。 Firefox でテストする場合は、 Firefox 開発者ツールのオプション/ギアメニューの **HTTP による Service Worker を有効化 (ツールボックスを開いたとき)** オプションをチェックすることで回避することが可能です。さらに、 `CacheStorage` はファイルシステムへのアクセスを必要とするため、Firefoxのプライベートモードでは利用できない場合があります。
 
-> **メモ:** {{domxref("CacheStorage.match()")}} は便利なメソッドです。 キャッシュエントリと一致する同等の機能を実装するには、{{domxref("CacheStorage.keys()")}} からキャッシュ名の配列を返し、{{domxref("CacheStorage.open()")}} で各キャッシュを開き、{{domxref("Cache.match()")}} で必要なものと一致させます。
-
-{{AvailableInWorkers}}
-
-{{securecontext_header}}
+> **メモ:** {{domxref("CacheStorage.match()")}} は便利なメソッドです。 キャッシュエントリーと一致する同等の機能を実装するには、{{domxref("CacheStorage.keys()")}} からキャッシュ名の配列を返し、{{domxref("CacheStorage.open()")}} で各キャッシュを開き、{{domxref("Cache.match()")}} で必要なものと一致させます。
 
 ## インスタンスメソッド
 
@@ -43,7 +39,8 @@ l10n:
 
 ## 例
 
-このコードスニペットは、MDN の[単純なサービスワーカーの例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)からのものです（[単純なサービスワーカーがライブで実行する](https://bncb2v.csb.app/)のを見る）。 このサービスワーカーのスクリプトは、 {{domxref("InstallEvent")}} が発生するのを待ち、{{domxref("ExtendableEvent.waitUntil","waitUntil")}} を実行してアプリのインストールプロセスを処理します。 これは、{{domxref("CacheStorage.open")}} を呼び出して新しいキャッシュを作成し、{{domxref("Cache.addAll")}} を使用して一連のアセットを追加することで構成されます。
+このコードスニペットは、MDN の[単純なサービスワーカーの例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)からのものです（[単純なサービスワーカーがライブで実行する](https://bncb2v.csb.app/)のを見る）。
+このサービスワーカーのスクリプトは、{{domxref("ServiceWorkerGlobalScope/install_event", "install")}} イベントが発生するのを待ち、{{domxref("ExtendableEvent.waitUntil","waitUntil")}} を実行してアプリのインストールプロセスを処理します。 これは、{{domxref("CacheStorage.open")}} を呼び出して新しいキャッシュを作成し、{{domxref("Cache.addAll")}} を使用して一連のアセットを追加することで構成されます。
 
 2 番目のコードブロックでは、 {{domxref("FetchEvent")}} が発生するのを待ちます。 次のようなカスタムレスポンスを作成します。
 
@@ -171,5 +168,5 @@ try {
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
-- [プライベートブラウジング \/ シークレットモード](/ja/docs/Web/API/Web_Storage_API#プライベートブラウジング_シークレットモード)
+- {{domxref("Window.caches")}} および {{domxref("WorkerGlobalScope.caches")}}
+- [プライベートブラウジング / シークレットモード](/ja/docs/Web/API/Web_Storage_API#プライベートブラウジング_シークレットモード)

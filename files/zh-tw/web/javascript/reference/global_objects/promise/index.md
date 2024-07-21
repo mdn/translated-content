@@ -65,8 +65,8 @@ new Promise( /* executor */ function(resolve, reject) { ... } );
 
 ### 屬性
 
-- `Promise.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Promise"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Promise.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`Symbol.toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Promise"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ### 方法
 

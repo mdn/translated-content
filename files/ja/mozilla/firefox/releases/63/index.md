@@ -30,7 +30,7 @@ Firefox 63 は、米国時間 2018 年 10 月 23 日 にリリースされまし
 
 ### CSS
 
-- {{Cssxref(":defined")}} 疑似クラスをサポートしました ([Firefox バグ 1331334](https://bugzil.la/1331334))。
+- {{Cssxref(":defined")}} 擬似クラスをサポートしました ([Firefox バグ 1331334](https://bugzil.la/1331334))。
 - [Flexbox レイアウト](/ja/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox#The_gap_properties) で {{cssxref("row-gap")}}、{{cssxref("column-gap")}}、{{cssxref("gap")}} をサポートしました ([Firefox バグ 1398483](https://bugzil.la/1398483))。
 - [webkit 接頭辞付きの画素密度に関する @media クエリー](/ja/docs/Web/CSS/@media/-webkit-device-pixel-ratio) のサポートを再び有効化しました ([Firefox バグ 1444139](https://bugzil.la/1444139))。
 - Firefox で [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) の {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("align-items")}}、{{cssxref("justify-content")}} プロパティをサポートしました ([Firefox バグ 1472843](https://bugzil.la/1472843))。

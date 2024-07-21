@@ -56,12 +56,6 @@ HTTP/1.1 规范指定了一系列的标准标头用于启动服务端驱动型�
 | `Viewport-Width` | 标明用 CSS 像素数值表示的布局视口（layout viewport）宽度。                                                                    |
 | `Width`          | 标明用物理像素值表示的资源宽度（换句话说就是一张图片的固有大小）。                                                            |
 
-### `Accept-CH-Lifetime` 标头
-
-> **备注：** 这是被称为*客户端提示*的**实验性**技术方案的一部分，目前仅在 Chrome 61 及以后的版本中得到了实现。
-
-{{HTTPHeader("Accept-CH-Lifetime")}} 标头与 `Accept-CH` 标头的 `Device-Memory` 值一起使用，并指示设备应与服务器共享设备内存的时间量。该值以毫秒为单位给出，并且是可选的。
-
 ### `Accept-Encoding` 标头
 
 {{HTTPHeader("Accept-Encoding")}} 标头明确说明了（接收端）可以接受的内容编码形式（所支持的压缩算法）。该标头的值是一个 Q 因子清单（例如 `br, gzip;q=0.8`），用来提示不同编码类型值的优先级顺序。默认值 `identity` 的优先级最低（除非声明为其他优先级）。
