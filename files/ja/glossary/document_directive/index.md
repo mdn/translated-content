@@ -13,7 +13,7 @@ slug: Glossary/Document_directive
 
 ## 関連情報
 
-- [用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("CSP")}}
   - {{Glossary("Reporting directive", "報告ディレクティブ")}}

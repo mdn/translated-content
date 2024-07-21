@@ -2,7 +2,7 @@
 title: 具有 Mozilla 厂商前缀的 CSS 扩展
 slug: Web/CSS/Mozilla_Extensions
 l10n:
-  sourceCommit: cdee001e162f12f451549ec667a67fc3f8805932
+  sourceCommit: d36cd679498a75dccf51685d8e178994a0df585e
 ---
 
 {{CSSRef}}
@@ -450,8 +450,6 @@ Firefox 支持一些 _[CSS](/zh-CN/docs/Web/CSS) 的 Mozilla 扩展_，包括属
 
 - {{CSSxRef(":-moz-native-anonymous")}}
 - {{CSSxRef(":-moz-only-whitespace")}}
-- {{CSSxRef("::-moz-page")}}
-- {{CSSxRef("::-moz-page-sequence")}}
 - {{CSSxRef("::-moz-pagebreak")}}
 - {{CSSxRef("::-moz-pagecontent")}}
 - {{CSSxRef(":placeholder-shown", ":-moz-placeholder")}} {{deprecated_inline}}
@@ -467,7 +465,6 @@ Firefox 支持一些 _[CSS](/zh-CN/docs/Web/CSS) 的 Mozilla 扩展_，包括属
 
 - {{CSSxRef("::-moz-scrolled-canvas")}}
 - {{CSSxRef("::-moz-scrolled-content")}}
-- {{CSSxRef("::-moz-scrolled-page-sequence")}}
 - {{CSSxRef("::selection","::-moz-selection")}} {{deprecated_inline}}
 - {{CSSxRef(":-moz-submit-invalid")}}
 - {{CSSxRef(":-moz-suppressed")}}

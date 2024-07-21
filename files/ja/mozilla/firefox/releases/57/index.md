@@ -50,7 +50,7 @@ Quantum で以下の不具合を修正しました。
 - Gecko では {{CSSxRef("calc", "calc()")}} 式を {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}} の半径の構成要素として使用すると、式が拒否されて値が無効になります ([Firefox バグ 1376019](https://bugzil.la/1376019))。
 - Gecko では `calc(1*2*3)` が正しく解析されません。Quantum CSS でこの不具合を修正しました ([Firefox バグ 1379467](https://bugzil.la/1379467))。
 - Quantum CSS では、[`calc()` を仕様書で説明されているとおり全面的にサポートしています](https://drafts.csswg.org/css-values-3/#calc-notation) ([Firefox バグ 1350857](https://bugzil.la/1350857))。Gecko はそうではありません。
-- Gecko は {{CSSxRef("::before")}} および {{CSSxRef("::after")}} 疑似要素で、{{CSSxRef("content")}} プロパティの値が `normal` や `none` であっても疑似要素を生成する不具合があります。仕様書によると、このようにするべきではありません ([Firefox バグ 1387931](https://bugzil.la/1387931))。
+- Gecko は {{CSSxRef("::before")}} および {{CSSxRef("::after")}} 擬似要素で、{{CSSxRef("content")}} プロパティの値が `normal` や `none` であっても擬似要素を生成する不具合があります。仕様書によると、このようにするべきではありません ([Firefox バグ 1387931](https://bugzil.la/1387931))。
 - Gecko は {{CSSxRef("background-position")}} プロパティで、異なる数の {{CSSxRef("&lt;position&gt;")}} 値を持つ 2 つの値の間 (例えば `background-position: 10px 10px;` と `background-position: 20px 20px, 30px 30px;`) でトランジションを行えない不具合があります ([Firefox バグ 1390446](https://bugzil.la/1390446))。
 
 ### SVG
