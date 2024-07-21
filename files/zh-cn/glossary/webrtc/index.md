@@ -14,7 +14,7 @@ WebRTC 主要由以下几个部分组成：
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}
   - : 获取设备的摄像头与（或）麦克风权限，并将这些信号接入 RTC 连接。
 - {{domxref("RTCPeerConnection")}}
-  - : 用于配置音频或视频聊天。
+  - : 用于配置音频或视频聊天的接口。
 - {{domxref("RTCDataChannel")}}
   - : 用于设置两个浏览器之间的{{Glossary("P2P", "端到端")}}数据连接。
 
