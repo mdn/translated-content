@@ -22,17 +22,17 @@ Fullscreen API 向 {{DOMxRef("Document")}} 和 {{DOMxRef("Element")}} 接口添�
 ### Document 接口上的实例方法
 
 - {{DOMxRef("Document.exitFullscreen()")}}
-  - : 请求 {{Glossary("user agent")}} 从全屏模式切换回窗口模式。返回一个 {{jsxref("Promise")}}，在全屏模式完全关闭后解决。
+  - : 请求{{Glossary("user agent", "用户代理")}}从全屏模式切换回窗口模式。返回一个 {{jsxref("Promise")}}，在全屏模式完全关闭后兑现。
 
 ### Element 接口上的实例方法
 
 - {{DOMxRef("Element.requestFullscreen()")}}
-  - : 请求用户代理将指定元素（及其后代）置于全屏模式，移除所有浏览器的用户界面元素以及所有其他应用程序。返回一个 {{jsxref("Promise")}}，在全屏模式激活后解决。
+  - : 请求用户代理将指定元素（及其后代）置于全屏模式，移除所有浏览器的用户界面元素以及所有其他应用程序。返回一个 {{jsxref("Promise")}}，在全屏模式激活后兑现。
 
 ## 实例属性
 
 - {{DOMxRef("Document.fullscreenElement")}} / {{DOMxRef("ShadowRoot.fullscreenElement")}}
-  - : `fullscreenElement` 属性告诉你当前在 DOM（或 shadow DOM）中以全屏模式显示的 {{DOMxRef("Element")}}。如果为 `null`，则文档（或 shadow DOM）不在全屏模式。
+  - : `fullscreenElement` 属性告诉你当前在 DOM（或影子 DOM）中以全屏模式显示的 {{DOMxRef("Element")}}。如果为 `null`，则文档（或影子 DOM）不在全屏模式。
 - {{DOMxRef("Document.fullscreenEnabled")}}
   - : `fullscreenEnabled` 属性告诉你是否可以启用全屏模式。如果由于任何原因（例如 `"fullscreen"` 功能不被允许，或不支持全屏模式）而无法启用全屏模式，此属性为 `false`。
 
