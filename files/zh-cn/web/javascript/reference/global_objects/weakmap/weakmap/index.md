@@ -19,7 +19,7 @@ new WeakMap(iterable)
 ## 参数
 
 - `iterable`
-  - : 一个 [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array) 或者其他实现了 [`@@iterator`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator) 方法的可迭代对象，该方法返回一个迭代器对象，该对象会产生一个二元类数组对象，其第一个元素是将被用作 `WeakMap` 键的对象，第二个元素是与该键相关联的值。每个键值对都会被添加到新的 `WeakMap` 对象中。`null` 会被视为 `undefined`。
+  - : 一个 [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array) 或者其他实现了 [`[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator) 方法的可迭代对象，该方法返回一个迭代器对象，该对象会产生一个二元类数组对象，其第一个元素是将被用作 `WeakMap` 键的对象，第二个元素是与该键相关联的值。每个键值对都会被添加到新的 `WeakMap` 对象中。`null` 会被视为 `undefined`。
 
 ## 示例
 

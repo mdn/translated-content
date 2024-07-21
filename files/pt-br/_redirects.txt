@@ -569,10 +569,13 @@
 /pt-BR/docs/Web/API/Element.removeAttribute	/pt-BR/docs/Web/API/Element/removeAttribute
 /pt-BR/docs/Web/API/Element/accessKey	/pt-BR/docs/Web/API/HTMLElement/accessKey
 /pt-BR/docs/Web/API/Element/addEventListener	/pt-BR/docs/Web/API/EventTarget/addEventListener
-/pt-BR/docs/Web/API/Event/Comparativo_entre_Event_Targets	/pt-BR/docs/Web/API/Event/Comparison_of_Event_Targets
+/pt-BR/docs/Web/API/Event/Comparativo_entre_Event_Targets	/pt-BR/docs/Learn/JavaScript/Building_blocks/Event_bubbling
+/pt-BR/docs/Web/API/Event/Comparison_of_Event_Targets	/pt-BR/docs/Learn/JavaScript/Building_blocks/Event_bubbling
 /pt-BR/docs/Web/API/EventListener	/pt-BR/docs/conflicting/Web/API/EventTarget/addEventListener
 /pt-BR/docs/Web/API/EventSource/onerror	/pt-BR/docs/Web/API/EventSource/error_event
-/pt-BR/docs/Web/API/Fetch_API/Uso_de_busca_Cross-global	/pt-BR/docs/Web/API/Fetch_API/Cross-global_fetch_usage
+/pt-BR/docs/Web/API/Fetch_API/Basic_concepts	/pt-BR/docs/conflicting/Web/API/Fetch_API/Using_Fetch
+/pt-BR/docs/Web/API/Fetch_API/Cross-global_fetch_usage	/pt-BR/docs/conflicting/Web/API/Fetch_API/Using_Fetch_76a0f6f382ec36bfa1bf0b4e0ef87c0c
+/pt-BR/docs/Web/API/Fetch_API/Uso_de_busca_Cross-global	/pt-BR/docs/conflicting/Web/API/Fetch_API/Using_Fetch_76a0f6f382ec36bfa1bf0b4e0ef87c0c
 /pt-BR/docs/Web/API/FileReader/onload	/pt-BR/docs/Web/API/FileReader/load_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onabort	/pt-BR/docs/conflicting/Web/API/HTMLMediaElement/abort_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onblur	/pt-BR/docs/Web/API/Window/blur_event
@@ -681,6 +684,7 @@
 /pt-BR/docs/Web/Acessibilidade/Entendendo_WCAG	/pt-BR/docs/Web/Accessibility/Understanding_WCAG
 /pt-BR/docs/Web/Apps/Progressive/Introdução	/pt-BR/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /pt-BR/docs/Web/CSS/-moz-box-ordinal-group	/pt-BR/docs/Web/CSS/box-ordinal-group
+/pt-BR/docs/Web/CSS/-webkit-overflow-scrolling	/pt-BR/docs/orphaned/Web/CSS/-webkit-overflow-scrolling
 /pt-BR/docs/Web/CSS/CSS_Animations/Usando_animações_CSS	/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations
 /pt-BR/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 /pt-BR/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator

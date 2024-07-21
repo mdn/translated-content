@@ -364,8 +364,6 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
   - : 包含消息发出的日期和时间。
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : 指示请求已在 TLS 早期数据中传送。
-- {{HTTPHeader("Large-Allocation")}} {{deprecated_inline}}
-  - : 告诉浏览器正在加载的页面将要执行大量分配。
 - {{HTTPHeader("Link")}}
   - : [`Link`](https://datatracker.ietf.org/doc/html/rfc5988#section-5) 实体标头字段提供了一种在 HTTP 标头中序列化一个或多个链接的方法。它在语义上等同于 HTML 的 {{HTMLElement("link")}} 元素。
 - {{HTTPHeader("Push-Policy")}} {{experimental_inline}}

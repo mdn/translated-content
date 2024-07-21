@@ -7,11 +7,11 @@ slug: Web/HTTP/Overview
 
 **HTTP는 HTML 문서와 같은 리소스들을 가져올 수 있도록 해주는** {{glossary("protocol", "프로토콜")}}입니다. HTTP는 웹에서 이루어지는 모든 데이터 교환의 기초이며, 클라이언트-서버 프로토콜이기도 합니다. 클라이언트-서버 프로토콜이란 (보통 웹브라우저인) 수신자 측에 의해 요청이 초기화되는 프로토콜을 의미합니다. 하나의 완전한 문서는 텍스트, 레이아웃 설명, 이미지, 비디오, 스크립트 등 불러온(fetched) 하위 문서들로 재구성됩니다.
 
-![웹 문서는 다른 리소스들의 구성](fetching_a_page.png)
+![웹 문서는 다른 리소스들의 구성](https://mdn.github.io/shared-assets/images/diagrams/http/overview/fetching-a-page.svg)
 
 클라이언트와 서버들은 (데이터 스트림과 대조적으로) 개별적인 메시지 교환에 의해 통신합니다. 보통 브라우저인 클라이언트에 의해 전송되는 메시지를 요청(_requests_)이라고 부르며, 그에 대해 서버에서 응답으로 전송되는 메시지를 응답(_responses_)이라고 부릅니다.
 
-![TCP(전송 계층) 및 IP(네트워크 계층) 위 및 표시 계층 아래의 응용 계층 프로토콜로서의 HTTP.](http-layers.png)
+![TCP(전송 계층) 및 IP(네트워크 계층) 위 및 표시 계층 아래의 응용 계층 프로토콜로서의 HTTP.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-layers.svg)
 
 1990년대 초에 설계된 HTTP는 거듭하여 진화해온 확장 가능한 프로토콜입니다. HTTP는 애플리케이션 계층의 프로토콜로, 신뢰 가능한 전송 프로토콜이라면 이론상으로는 무엇이든 사용할 수 있으나 {{glossary("TCP")}} 혹은 암호화된 TCP 연결인 {{glossary("TLS")}}를 통해 전송됩니다. HTTP의 확장성 덕분에, 오늘날 하이퍼텍스트 문서 뿐만 아니라 이미지와 비디오 혹은 HTML 폼 결과와 같은 내용을 서버로 포스트(POST)하기 위해서도 사용됩니다. HTTP는 또한 필요할 때마다 웹 페이지를 갱신하기 위해 문서의 일부를 가져오는데 사용될 수도 있습니다.
 
@@ -21,7 +21,7 @@ HTTP는 클라이언트-서버 프로토콜입니다. 요청은 하나의 개체
 
 각각의 개별적인 요청들은 서버로 보내지며, 서버는 요청을 처리하고 *response*라고 불리는 응답을 제공합니다. 이 요청과 응답 사이에는 여러 개체들이 있는데, 예를 들면 다양한 작업을 수행하는 게이트웨이 또는 {{glossary("Cache", "캐시")}} 역할을 하는 {{glossary("Proxy_server", "프록시")}} 등이 있습니다.
 
-![클라이언트 서버 체인](client-server-chain.png)
+![클라이언트 서버 체인](https://mdn.github.io/shared-assets/images/diagrams/http/overview/client-server-chain.svg)
 
 실제로는 브라우저와 요청을 처리하는 서버 사이에는 좀 더 많은 컴퓨터들이 존재합니다: 라우터, 모뎀 등이 있죠. 웹의 계층적인 설계 덕분에, 이들은 네트워크와 전송 계층 내로 숨겨집니다. HTTP은 애플리케이션 계층의 최상위에 있습니다. 네트워크 문제를 진단하는 것도 중요하지만, 기본 레이어들은 HTTP의 명세와는 거의 관련이 없습니다.
 
@@ -143,9 +143,9 @@ HTTP 메시지의 두 가지 타입인 요청(requests)과 응답(responses)은 
 
 요청은 다음의 요소들로 구성됩니다.
 
-![HTTP 요청](http_request.png)
+![HTTP 요청](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-request.svg)
 
-- HTTP [메서드](/ko/docs/Web/HTTP/Methods), 보통 클라이언트가 수행하고자 하는 동작을 정의한 {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} 같은 동사나 {{HTTPMethod("OPTIONS")}}나 {{HTTPMethod("HEAD")}}와 같은 명사입니다. 일반적으로, 클라이언트는 리소스를 가져오거나(`GET`을 사용하여) [HTML 폼](/ko/docs/Web/Guide/HTML/Forms)의 데이터를 전송(`POST`를 사용하여)하려고 하지만, 다른 경우에는 다른 동작이 요구될 수도 있습니다.
+- HTTP [메서드](/ko/docs/Web/HTTP/Methods), 보통 클라이언트가 수행하고자 하는 동작을 정의한 {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} 같은 동사나 {{HTTPMethod("OPTIONS")}}나 {{HTTPMethod("HEAD")}}와 같은 명사입니다. 일반적으로, 클라이언트는 리소스를 가져오거나(`GET`을 사용하여) [HTML 폼](/ko/docs/Learn/Forms)의 데이터를 전송(`POST`를 사용하여)하려고 하지만, 다른 경우에는 다른 동작이 요구될 수도 있습니다.
 - 가져오려는 리소스의 경로; 예를 들면 {{glossary("protocol", "프로토콜")}} (`http://`), {{glossary("domain", "도메인")}} (여기서는 `developer.mozilla.org`), 또는 TCP {{glossary("port", "포트")}} (여기서는 `80`)인 요소들을 제거한 리소스의 URL입니다.
 - HTTP 프로토콜의 버전.
 - 서버에 대한 추가 정보를 전달하는 선택적 [헤더들](/ko/docs/Web/HTTP/Headers).
@@ -155,7 +155,7 @@ HTTP 메시지의 두 가지 타입인 요청(requests)과 응답(responses)은 
 
 응답은 다음의 요소들로 구성됩니다.
 
-![HTTP 응답](http_response.png)
+![HTTP 응답](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-response.svg)
 
 - HTTP 프로토콜의 버전
 - 요청의 성공 여부와, 그 이유를 나타내는 [상태 코드](/ko/docs/Web/HTTP/Status)
