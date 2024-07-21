@@ -2,12 +2,12 @@
 title: SpeechGrammar：src 属性
 slug: Web/API/SpeechGrammar/src
 l10n:
-  sourceCommit: 23e1a97d50050a3b3518a4b2f67ccf42e5fd75b7
+  sourceCommit: 5ccd2f0e0565ec9b3539cc067cdae369adc307b8
 ---
 
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-{{domxref("SpeechGrammar")}} 接口的 **`src`** 属性用于设置和返回包含 `SpeechGrammar` 对象中的语法字符串。
+{{domxref("SpeechGrammar")}} 接口的 **`src`** 属性用于获取或设置 `SpeechGrammar` 对象中包含语法的字符串。
 
 ## 值
 
