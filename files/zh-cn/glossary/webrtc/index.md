@@ -21,5 +21,5 @@ WebRTC 主要由以下几个部分组成：
 ## 参见
 
 - 维基百科上的 [WebRTC](https://zh.wikipedia.org/wiki/WebRTC)
-- [MDN 上的 WebRTC 教程](/zh-CN/docs/Web/API/WebRTC_API)
+- [MDN 上的 WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
 - [WebRTC 的浏览器支持](https://caniuse.com/rtcpeerconnection)
