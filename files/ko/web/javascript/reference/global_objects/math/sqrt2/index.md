@@ -23,7 +23,7 @@ l10n:
 
 ## 설명
 
-`Math.SQRT2`는 상수이며 [`Math.sqrt(2)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt)과 동일하지만 성능이 더 좋습니다.
+`Math.SQRT2`는 상수이며 [`Math.sqrt(2)`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt)과 동일하지만 성능이 더 좋습니다.
 
 `SQRT2`는 `Math`의 정적 속성이기 때문에 생성한 `Math`객체(`Math`는 생성자가 아닙니다)의 속성으로 사용하는 것보다 `Math.SQRT2`로 사용해야 합니다.
 
