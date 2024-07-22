@@ -64,7 +64,6 @@ UA 스타일시트에서 다음과 같은 스타일을 기본으로 부여 받�
 - {{cssxref("custom-ident")}}
   - : {{cssxref("view-transition-name")}} 속성을 통해 의사 요소를 주어진 {{cssxref("custom-ident")}} 로부터 할당받아 생성된 특정 뷰 전환 스냅샷 그룹과 일치하도록 합니다.
 
-
 ## 예제
 
 ```css
