@@ -2539,7 +2539,6 @@
 /ja/docs/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
 /ja/docs/Transforming_XML_with_XSLT:The_Netscape_XSLT_XPath_Reference	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
 /ja/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/ja/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
-/ja/docs/Tutorials	/ja/docs/orphaned/Tutorials
 /ja/docs/Tutorials/Using_CSS_gradients	/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients
 /ja/docs/Upcoming_Firefox_features_for_developers	/ja/docs/Mozilla/Firefox/Releases/4
 /ja/docs/Updating_extensions_for_Firefox_2	/ja/docs/Mozilla/Firefox/Releases/2/Updating_extensions
