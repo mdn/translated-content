@@ -591,7 +591,7 @@ ctx.stroke();
     return [-1]; // 没有找到
   }
 
-  /* 处理鼠标移动，适用于mousemove事件或mouseentry */
+  /* 处理鼠标移动，适用于 mousemove 事件或 mouseentry */
   function doMouseMove(pointCursor, rBtnDown) {
     /* 测试是否有活动的移动。如果有，根据鼠标位置移动。右键按下标志处理以下情况：
      * 鼠标在右键按下状态下离开画布，并在右键松开状态下进入画布（不移动）或按下状态下进入（移动）。
