@@ -1,6 +1,7 @@
 ---
 title: <menuitem>
-slug: Web/HTML/Element/menuitem
+slug: conflicting/Web/HTML/Element
+original_slug: Web/HTML/Element/menuitem
 l10n:
   sourceCommit: 76600240fbe75e083e964bc3707cce81e99999c2
 ---
