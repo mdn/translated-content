@@ -16,7 +16,7 @@ arc(x, y, radius, startAngle, endAngle)
 arc(x, y, radius, startAngle, endAngle, counterclockwise)
 ```
 
-`arc()` 方法在坐标 `(x, y)` 处创建一个以 `radius` 为半径的圆弧。路径从 `startAngle` 开始，到 `endAngle` 结束，路径方向由 `counterclockwise` 参数决定（默认为顺时针方向）。
+`arc()` 方法创建一个以坐标 `(x, y)` 为中心，以 `radius` 为半径的圆弧。路径从 `startAngle` 开始，到 `endAngle` 结束，路径方向由 `counterclockwise` 参数决定（默认为顺时针方向）。
 
 ### 参数
 
@@ -25,13 +25,13 @@ arc(x, y, radius, startAngle, endAngle, counterclockwise)
 - `y`
   - : 圆弧中心（圆心）的 y 轴坐标。
 - `radius`
-  - : 圆弧的半径。
+  - : 圆弧的半径。必须为正值。
 - `startAngle`
-  - : 圆弧的起始点，x 轴方向开始计算，单位以弧度表示。
+  - : 圆弧的起始点，从 x 轴方向开始计算，以弧度为单位。
 - `endAngle`
-  - : 圆弧的终点，单位以弧度表示。
+  - : 圆弧的终点，从 x 轴方向开始计算，以弧度为单位。
 - `counterclockwise` {{optional_inline}}
-  - : 可选的 boolean，如果为 `true`，逆时针绘制圆弧，反之，顺时针绘制。默认为 `false`（顺时针）。
+  - : 可选的布尔值，如果为 `true`，逆时针绘制圆弧，反之，顺时针绘制。默认为 `false`（顺时针）。
 
 ### 返回值
 
@@ -41,7 +41,7 @@ arc(x, y, radius, startAngle, endAngle, counterclockwise)
 
 ### 绘制一个完整的圆
 
-这个例子使用 `arc()` 方法在画布上绘制了一个完整的圆。
+此示例使用 `arc()` 方法在画布上绘制了一个完整的圆。
 
 #### HTML
 
@@ -68,7 +68,7 @@ ctx.stroke();
 
 ### 不同的形状演示
 
-这个例子使用 `arc()` 方法绘制了多种形状，展示了它的各种可能性。
+此示例使用 `arc()` 方法绘制了多种形状，展示了它的各种可能性。
 
 ```html hidden
 <canvas id="canvas" width="150" height="200"></canvas>
