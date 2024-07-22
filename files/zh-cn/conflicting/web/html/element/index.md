@@ -1,6 +1,7 @@
 ---
 title: <menuitem>
-slug: Web/HTML/Element/menuitem
+slug: conflicting/Web/HTML/Element
+original_slug: Web/HTML/Element/menuitem
 ---
 
 {{HTMLSidebar}}{{Deprecated_Header("HTML5.2")}}
