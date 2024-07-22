@@ -9,7 +9,7 @@ l10n:
 
 **`::view-transition-new`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 전환 후의 상태를 나타내는 스냅샷, 즉 뷰 전환의 새로운 뷰 상태를 나타냅니다.
 
-뷰 전환이 이루어지는 동안, `::view-transition` 는 [뷰 전환 의사 요소 트리](/ko/docs/Web/API/View_Transitions_API/Using#the_view_transition_pseudo-element_tree) 에 기술된 것처럼 연관된 의사 요소 트리에 포함됩니다. 이는 {{cssxref("::view-transition-image-pair")}} 의 자식 요소로만 존재하고, 다른 자식 요소는 가질 수 없습니다.
+뷰 전환이 이루어지는 동안, `::view-transition-new` 는 [뷰 전환 의사 요소 트리](/ko/docs/Web/API/View_Transitions_API/Using#the_view_transition_pseudo-element_tree) 에 기술된 것처럼 연관된 의사 요소 트리에 포함됩니다. 이는 {{cssxref("::view-transition-image-pair")}} 의 자식 요소로만 존재하고, 다른 자식 요소는 가질 수 없습니다.
 
 이 속성은 재배치된 요소이기 때문에, {{cssxref("object-fit")}} 와 {{cssxref("object-position")}} 같은 속성으로 조작할 수 있습니다. 이 요소의 자연 치수는 콘텐츠의 크기와 동일합니다.
 
