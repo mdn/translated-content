@@ -17,7 +17,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.font`** 属性指定绘制文字�
 
 ### 使用自定义字体
 
-这个例子使用 `font` 属性设置了不同的字体大小和字体种类。
+这个示例使用 `font` 属性设置了自定义的字体粗细、大小和字体家族。
 
 #### HTML
 
