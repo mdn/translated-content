@@ -15958,10 +15958,6 @@
     "modified": "2019-03-18T20:41:47.756Z",
     "contributors": ["Dozorengel", "KishiTako"]
   },
-  "conflicting/Web/JavaScript/Reference/Errors/Unexpected_token": {
-    "modified": "2020-03-12T19:46:03.538Z",
-    "contributors": ["KTatyana", "SedovDP", "Sparks"]
-  },
   "conflicting/Web/SVG/Attribute": {
     "modified": "2020-10-15T22:34:58.576Z",
     "contributors": ["osipov_s"]
