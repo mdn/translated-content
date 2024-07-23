@@ -85,8 +85,8 @@ for (let i = 0; i < 6; i++) {
 在基于 WebKit 和 Blink 的浏览器中，除了这个属性之外还实现了一个不标准的、被弃用的 `ctx.setFillColor()` 方法。
 
 ```js
-setFillColor(color, /* (optional) */ alpha);
-setFillColor(grayLevel, /* (optional) */ alpha);
+setFillColor(color, /* （可选） */ alpha);
+setFillColor(grayLevel, /* （可选） */ alpha);
 setFillColor(r, g, b, a);
 setFillColor(c, m, y, k, a);
 ```
