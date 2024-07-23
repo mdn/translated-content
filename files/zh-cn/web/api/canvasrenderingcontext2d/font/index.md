@@ -7,11 +7,11 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.font`** 属性是在描述绘制文字时，用以表示当前字体样式。使用和 [CSS font](/zh-CN/docs/Web/CSS/font) 规范相同的字符串值。
+Canvas 2D API 的 **`CanvasRenderingContext2D.font`** 属性指定绘制文字所使用的当前字体样式。使用和 [CSS 字体](/zh-CN/docs/Web/CSS/font)描述符相同的字符串值。
 
 ## 值
 
-一个被解析为 CSS {{cssxref("font")}} 值的字符串。默认字体为 10 像素的无衬线字体。
+一个被解析为 CSS {{cssxref("font")}} 值的字符串。默认字体为 10 像素的无衬线体（sans-serif）。
 
 ## 示例
 
