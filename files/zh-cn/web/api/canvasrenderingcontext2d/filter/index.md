@@ -7,16 +7,16 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.filter`** 属性是用来提供模糊、灰度等过滤效果。它类似于 CSS {{cssxref("filter")}} 属性，并且接受相同的值。
+Canvas 2D API 的 **`CanvasRenderingContext2D.filter`** 属性是用来提供模糊、灰度等滤镜效果。它类似于 CSS {{cssxref("filter")}} 属性，并且接受相同的值。
 
 ## 值
 
 `filter` 属性接受字符串形式的值，可以是 `"none"`，或者是以下一个或多个滤镜函数。
 
 - [`url()`](/zh-CN/docs/Web/CSS/url)
-  - : 一个 CSS {{cssxref("url", "url()")}}。接受一个指向 SVG 滤镜元素的 IRI，该元素可以嵌入在外部的 XML 文件中。
+  - : 一个 CSS {{cssxref("url", "url()")}}。接受一个指向 SVG 滤镜元素（可以被嵌入在外部的 XML 文件中）的 IRI。
 - [`blur()`](/zh-CN/docs/Web/CSS/filter-function/blur)
-  - : 一个 CSS {{cssxref("&lt;length&gt;")}}。将高斯模糊应用于绘图。它定义了高斯函数的标准偏差值，即屏幕上多少像素混合在一起；因此，较大的值会产生更多的模糊效果。值为 `0` 时保持输入不变。
+  - : 一个 CSS {{cssxref("&lt;length&gt;")}}。将高斯模糊应用于绘图。它定义了高斯函数的标准偏差值，即屏幕上多少像素混合在一起；因此，较大的值会产生更模糊的效果。值为 `0` 时保持输入不变。
 - [`brightness()`](/zh-CN/docs/Web/CSS/filter-function/brightness)
   - : 一个 CSS {{cssxref("&lt;percentage&gt;")}}。将线性乘数应用于绘图，使其看起来更亮或更暗。低于 `100%` 的值会使图像变暗，而高于 `100%` 的值会使其变亮。值为 `0%` 会生成完全黑色的图像，值为 `100%` 保持输入不变。
 - [`contrast()`](/zh-CN/docs/Web/CSS/filter-function/contrast)
@@ -40,7 +40,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.filter`** 属性是用来提供模
 - [`opacity()`](/zh-CN/docs/Web/CSS/filter-function/opacity)
   - : 一个 CSS {{cssxref("&lt;percentage&gt;")}}。对绘图应用透明度。值为 `0%` 完全透明，值为 `100%` 保持绘图不变。
 - [`saturate()`](/zh-CN/docs/Web/CSS/filter-function/saturate)
-  - : 一个 CSS {{cssxref("&lt;percentage&gt;")}}。使绘图饱和。值为 `0%` 完全不饱和，值为 `100%` 保持绘图不变。
+  - : 一个 CSS {{cssxref("&lt;percentage&gt;")}}。修改绘图饱和度。值为 `0%` 完全不饱和，值为 `100%` 保持绘图不变。
 - [`sepia()`](/zh-CN/docs/Web/CSS/filter-function/sepia)
   - : 一个 CSS {{cssxref("&lt;percentage&gt;")}}。将绘图转换为深褐色。值为 `100%` 完全深褐色，值为 `0%` 保持绘图不变。
 - `none`
@@ -48,7 +48,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.filter`** 属性是用来提供模
 
 ## 示例
 
-要查看这些示例，请确保使用支持此功能的浏览器；请参阅以下的浏览器兼容性表。
+要查看这些示例，请确保使用支持此特性的浏览器；请参阅以下的兼容性表格。
 
 ### 应用模糊
 
