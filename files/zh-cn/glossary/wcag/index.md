@@ -2,7 +2,7 @@
 title: WCAG
 slug: Glossary/WCAG
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 3163ae00b0d8ac11dc752ea9f7d956bd00551a3e
 ---
 
 {{GlossarySidebar}}
