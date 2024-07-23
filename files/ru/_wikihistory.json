@@ -15950,10 +15950,6 @@
     "modified": "2019-03-18T21:32:57.580Z",
     "contributors": ["Skinny-Hunter"]
   },
-  "conflicting/Web/API/Fetch_API/Using_Fetch": {
-    "modified": "2019-03-18T21:00:16.677Z",
-    "contributors": ["Akh-rman", "qqwweeaassdd"]
-  },
   "conflicting/Web/HTML/Element/img": {
     "modified": "2019-03-18T20:41:47.756Z",
     "contributors": ["Dozorengel", "KishiTako"]
