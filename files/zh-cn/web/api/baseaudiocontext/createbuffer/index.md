@@ -5,7 +5,7 @@ slug: Web/API/BaseAudioContext/createBuffer
 
 {{ APIRef("Web Audio API") }}
 
-音频环境{{ domxref("AudioContext") }} 接口的 `createBuffer() 方法用于新建一个空`白的 {{ domxref("AudioBuffer") }} 对象，以便用于填充数据，通过 {{ domxref("AudioBufferSourceNode") }} 播放。
+音频环境{{ domxref("AudioContext") }} 接口的 `createBuffer()` 方法用于新建一个空白的 {{ domxref("AudioBuffer") }} 对象，以便用于填充数据，通过 {{ domxref("AudioBufferSourceNode") }} 播放。
 
 更多关于音频片段 (Audio Buffer) 的细节，请参考{{ domxref("AudioBuffer") }}页面。
 
