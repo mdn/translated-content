@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.fillStyle`** 属性是用来以内部方式描述颜色和样式。默认值是 `#000`（黑色）。
+Canvas 2D API 的 **`CanvasRenderingContext2D.fillStyle`** 属性指定用于形状内部的颜色、渐变或图案。默认样式为 `#000`（黑色）。
 
-> **备注：** 想要了解更多填充和描边样式的示例，请参阅[应用样式和颜色](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)中的 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)。
+> **备注：** 想要了解更多填充和描边样式的示例，请参阅 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)中的[应用样式和颜色](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)。
 
 ## 值
 
@@ -23,7 +23,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.fillStyle`** 属性是用来以内
 
 ### 改变形状的填充颜色
 
-这个例子将一个蓝色填充色应用到一个矩形上。
+此示例将一个蓝色填充色应用到一个矩形上。
 
 #### HTML
 
@@ -47,7 +47,7 @@ ctx.fillRect(10, 10, 100, 100);
 
 ### 使用循环创建多种填充颜色
 
-在这个例子中，我们使用两个 `for` 循环来绘制一个矩形网格，每个矩形具有不同的填充颜色。为了实现这一点，我们使用变量 `i` 和 `j` 来为每个正方形生成唯一的 RGB 颜色，并且只修改红色和绿色的值。（蓝色通道的值是固定的。）通过修改通道的值，你可以生成各种颜色的调色板。
+在这个示例中，我们使用两个 `for` 循环来绘制一个矩形网格，每个矩形具有不同的填充颜色。为了实现这一点，我们使用变量 `i` 和 `j` 来为每个正方形生成唯一的 RGB 颜色，并且只修改红色和绿色的值。（蓝色通道的值是固定的。）通过修改通道的值，你可以生成各种颜色的调色板。
 
 ```html hidden
 <canvas id="canvas" width="150" height="150"></canvas>
@@ -82,7 +82,7 @@ for (let i = 0; i < 6; i++) {
 
 ### WebKit/Blink-specific 注解
 
-在支持 WebKit- 和 Blink-based 的浏览器中，有一个不标准的、被弃用的方法 `ctx.setFillColor()` 已经实现这一属性。
+在基于 WebKit 和 Blink 的浏览器中，除了这个属性之外还实现了一个不标准的、被弃用的 `ctx.setFillColor()` 方法。
 
 ```js
 setFillColor(color, /* (optional) */ alpha);
