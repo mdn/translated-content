@@ -24,37 +24,21 @@ slug: WebAssembly/Using_the_JavaScript_API
 
    ```wasm
    (module
-     (func $i (import "imports" "imported_func") (param i32))
+     (func $i (import "my_namespace" "imported_func") (param i32))
      (func (export "exported_func")
        i32.const 42
            call $i))
    ```
 
-5. 在第二行，你将看到导入有一个两级命名空间——内部函数 `$i` 是从 imports.imported_func 导入的。编写要导入到 wasm 模块的对象时，我们需要在 JavaScript 中反映这个两级命名空间。创建一个 `<script></script>` 节点在你的 HTML 文件中，并且添加下面的代码：
+5. 在第二行，你将看到导入有一个两级命名空间——内部函数 `$i` 是从 `my_namespace.imported_func` 导入的。编写要导入到 wasm 模块的对象时，我们需要在 JavaScript 中反映这个两级命名空间。创建一个 `<script></script>` 节点在你的 HTML 文件中，并且添加下面的代码：
 
    ```js
-   var importObject = {
-     imports: {
-       imported_func: function (arg) {
-         console.log(arg);
-       },
-     },
+   const importObject = {
+     my_namespace: { imported_func: (arg) => console.log(arg) },
    };
    ```
 
-如上所述，我们在 `imports.imported_func` 中有我们导入的函数。
-
-> **备注：** 使用 [ES6 箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 将会更加简洁：
->
-> ```js
-> let importObject = {
->   imports: {
->     imported_func: (arg) => console.log(arg),
->   },
-> };
-> ```
-
-具体哪种风格由你决定。
+如上所述，我们在 `my_namespace.imported_func` 中有我们导入的函数。
 
 ### 加载并使用 wasm 模块
 
@@ -101,21 +85,22 @@ fetch("simple.wasm")
 2. 在脚本的顶部添加下面的一行代码来创建一个内存实例：
 
    ```js
-   var memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
+   const memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
    ```
 
-   初始和最大的单位是 WebAssembly pages——这些页面的大小固定为 64KB。这意味着上述内存实例的初始大小为 640KB，最大大小为 6.4MB。
+   初始和最大的单位是 WebAssembly 页——这些页的大小固定为 64KB。这意味着上述内存实例的初始大小为 640KB，最大大小为 6.4MB。
 
    WebAssembly 内存通过简单地提供一个返回 ArrayBuffer 的缓冲区 getter / setter 来显示它的字节。例如，要直接将 42 写入线性内存的第一个单词，你可以这样做：
 
    ```js
-   new Uint32Array(memory.buffer)[0] = 42;
+   const data = new DataView(memory.buffer);
+   data.setUint32(0, 42, true);
    ```
 
    你也可以得到刚才的值通过：
 
    ```js
-   new Uint32Array(memory.buffer)[0];
+   data.getUint32(0, true);
    ```
 
 3. 现在尝试这个演示——保存目前为止添加的内容，将其加载到浏览器中，然后尝试在 JavaScript 控制台中输入上述两行。
@@ -142,26 +127,24 @@ Note: 由于 {{domxref("ArrayBuffer")}} 的 byteLength 是不可变的，所以�
 
    > **备注：** 你可以在这里 [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat) 找到模块的文本表示形式。
 
-2. 回到你的示例文件 memory.html，像前面那样获取、编译和实例化你的 wasm 模块——在你的脚本代码底部加入下面的代码：
+2. 回到你的示例文件 `memory.html`，像前面那样获取、编译和实例化你的 wasm 模块——在你的脚本代码底部加入下面的代码：
 
    ```js
-   fetch("memory.wasm")
-     .then((response) => response.arrayBuffer())
-     .then((bytes) => WebAssembly.instantiate(bytes))
-     .then((results) => {
-       // 在这里加入你的代码
-     });
+   WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
+     js: { mem: memory },
+   }).then((results) => {
+     // 在这里添加代码
+   });
    ```
 
 3. 因为该模块导出了它的内存，给定该模块的一个实例，我们可以使用一个导出函数 accumulate() 在该模块实例的线性内存（mem）中创建和填入一个输入数组。在前面指明的地方加入如下代码：
 
    ```js
-   var i32 = new Uint32Array(results.instance.exports.mem.buffer);
-   for (var i = 0; i < 10; i++) {
-     i32[i] = i;
+   const summands = new DataView(memory.buffer);
+   for (let i = 0; i < 10; i++) {
+     summands.setUint32(i * 4, i, true);
    }
-
-   var sum = results.instance.exports.accumulate(0, 10);
+   const sum = results.instance.exports.accumulate(0, 10);
    console.log(sum);
    ```
 
@@ -198,18 +181,15 @@ WebAssembly 表格是一个可变大小的带类型的引用数组，其中的�
 3. 如前所示，获取、编译并且实例化你的 wasm 模块——将下面的代码放入到 HTML body 底部的 [\<script>](/zh-CN/docs/Web/HTML/Element/script) 节点里面：
 
    ```js
-   fetch("table.wasm")
-     .then((response) => response.arrayBuffer())
-     .then((bytes) => WebAssembly.instantiate(bytes))
-     .then((results) => {
-       // 在这里添加你的代码
-     });
+   WebAssembly.instantiateStreaming(fetch("table.wasm")).then((results) => {
+     // 在这里添加代码
+   });
    ```
 
 4. 现在，让我们获取表格中的数据——将下面的代码放入到指定的位置：
 
    ```js
-   var tbl = results.instance.exports.tbl;
+   const tbl = results.instance.exports.tbl;
    console.log(tbl.get(0)()); // 13
    console.log(tbl.get(1)()); // 42
    ```

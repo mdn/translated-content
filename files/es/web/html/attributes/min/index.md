@@ -3,6 +3,8 @@ title: "HTML el atributo: min"
 slug: Web/HTML/Attributes/min
 ---
 
+{{HTMLSidebar}}
+
 El atributo [`min`](/es/docs/Web/HTML/Element/input#min) define el valor mínimo que es aceptable y válido para el {{HTMLElement("input")}} que contiene el atributo. Si el [value](/es/docs/Web/HTML/Element/input#attr-value) del elemento es menor que esto, el elemento falla la [restricción de validación](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation). Este valor debe ser menor o igual que el valor del atributo [`max`](/es/docs/Web/HTML/Element/input#max). Si se especifica un valor para [`min`](/es/docs/Web/HTML/Element/input#min) que no es un número válido, la entrada no tiene un valor mínimo.
 
 Válido para los tipos de entrada numérica, incluidos los tipos {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} y {{HTMLElement("input/range", "range")}}, y el elemento {{htmlelement('meter')}}, el atributo [`min`](/es/docs/Web/HTML/Element/input#min) es un número que especifica el valor mínimo de un control de formulario para ser considerado válido.

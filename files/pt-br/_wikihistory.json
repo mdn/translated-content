@@ -1420,6 +1420,10 @@
     "modified": "2020-07-20T16:29:20.448Z",
     "contributors": ["eziotristao", "gabriel_cadu", "artphil", "greysonf"]
   },
+  "Learn/JavaScript/Building_blocks/Event_bubbling": {
+    "modified": "2019-11-03T21:25:56.066Z",
+    "contributors": ["rayonnunes"]
+  },
   "Learn/JavaScript/Building_blocks/Events": {
     "modified": "2020-07-16T22:31:39.504Z",
     "contributors": [
@@ -2786,10 +2790,6 @@
     "modified": "2019-03-23T22:11:58.983Z",
     "contributors": ["virginiarcruz"]
   },
-  "Web/API/Document_Object_Model/How_to_create_a_DOM_tree": {
-    "modified": "2019-03-23T22:11:56.223Z",
-    "contributors": ["virginiarcruz"]
-  },
   "Web/API/Document_Object_Model/Introduction": {
     "modified": "2020-12-03T17:12:30.790Z",
     "contributors": [
@@ -2802,6 +2802,10 @@
       "ramonfranklyn",
       "onsistec"
     ]
+  },
+  "Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
+    "modified": "2019-03-23T22:11:56.223Z",
+    "contributors": ["virginiarcruz"]
   },
   "Web/API/Document_Object_Model/Whitespace": {
     "modified": "2019-03-18T21:38:03.775Z",
@@ -2991,10 +2995,6 @@
     "modified": "2019-03-23T23:01:39.950Z",
     "contributors": ["ralfting", "gregori", "juliocarneiro", "fscholz"]
   },
-  "Web/API/Event/Comparison_of_Event_Targets": {
-    "modified": "2019-11-03T21:25:56.066Z",
-    "contributors": ["rayonnunes"]
-  },
   "Web/API/Event/Event": {
     "modified": "2020-10-15T21:42:53.584Z",
     "contributors": ["fscholz", "juliocarneiro"]
@@ -3087,14 +3087,6 @@
   "Web/API/Fetch_API": {
     "modified": "2020-10-15T21:42:57.080Z",
     "contributors": ["mateusvelleda", "BrunoLucas", "fapbatista", "tcelestino"]
-  },
-  "Web/API/Fetch_API/Basic_concepts": {
-    "modified": "2020-02-17T13:24:31.887Z",
-    "contributors": ["diezan", "LincePotiguara"]
-  },
-  "Web/API/Fetch_API/Cross-global_fetch_usage": {
-    "modified": "2019-03-18T20:48:56.041Z",
-    "contributors": ["matluz"]
   },
   "Web/API/Fetch_API/Using_Fetch": {
     "modified": "2020-10-15T21:51:06.123Z",
@@ -3931,6 +3923,10 @@
     "modified": "2020-03-30T12:44:24.443Z",
     "contributors": ["raulnunesodre", "teoli", "alexandrem"]
   },
+  "Web/API/Window/atob": {
+    "modified": "2020-10-15T21:46:04.009Z",
+    "contributors": ["mateusvelleda", "joaoricardo_rm"]
+  },
   "Web/API/Window/beforeunload_event": {
     "modified": "2019-04-30T13:57:03.306Z",
     "contributors": ["wbamberg", "LeoNicolas"]
@@ -4171,10 +4167,6 @@
     "modified": "2019-03-23T23:03:40.500Z",
     "contributors": ["EduardoRedressa"]
   },
-  "Web/API/atob": {
-    "modified": "2020-10-15T21:46:04.009Z",
-    "contributors": ["mateusvelleda", "joaoricardo_rm"]
-  },
   "Web/API/clearTimeout": {
     "modified": "2020-10-15T21:31:54.685Z",
     "contributors": ["GarkGarcia", "teoli", "Willkuns"]
@@ -4329,16 +4321,6 @@
   "Web/CSS/--*": {
     "modified": "2019-03-23T22:04:16.687Z",
     "contributors": ["filipetorres"]
-  },
-  "Web/CSS/-webkit-overflow-scrolling": {
-    "modified": "2019-03-23T22:49:05.514Z",
-    "contributors": [
-      "teoli",
-      "otaviogui",
-      "rafaelcavalcante",
-      "fcard",
-      "alexanmtz"
-    ]
   },
   "Web/CSS/-webkit-text-security": {
     "modified": "2020-07-18T11:21:00.057Z",
@@ -5409,10 +5391,6 @@
     "modified": "2019-03-23T22:01:39.192Z",
     "contributors": ["jessuircleydson"]
   },
-  "Web/Demos": {
-    "modified": "2020-09-04T06:28:02.627Z",
-    "contributors": ["gustavoSoriano", "angelorubin", "arthur2323"]
-  },
   "Web/Guide": {
     "modified": "2020-10-30T13:31:43.101Z",
     "contributors": [
@@ -6319,10 +6297,6 @@
   },
   "Web/HTTP/Headers/Accept-CH": {
     "modified": "2020-10-15T22:26:08.419Z",
-    "contributors": ["FernandoKGA"]
-  },
-  "Web/HTTP/Headers/Accept-CH-Lifetime": {
-    "modified": "2020-10-15T22:26:09.466Z",
     "contributors": ["FernandoKGA"]
   },
   "Web/HTTP/Headers/Accept-Charset": {
@@ -10265,11 +10239,11 @@
       "Fulanodigital"
     ]
   },
-  "Web/Security/Securing_your_site": {
+  "Web/Security/Practical_implementation_guides": {
     "modified": "2019-03-23T22:41:54.591Z",
     "contributors": ["julio-elipse", "ygormaximo", "marumari"]
   },
-  "Web/Security/Securing_your_site/Turning_off_form_autocompletion": {
+  "Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion": {
     "modified": "2019-03-23T22:41:55.986Z",
     "contributors": [
       "VitorTakara",
@@ -10530,6 +10504,14 @@
   "conflicting/Web/API/EventTarget/addEventListener": {
     "modified": "2019-03-23T22:20:33.890Z",
     "contributors": ["cezaraugusto"]
+  },
+  "conflicting/Web/API/Fetch_API/Using_Fetch": {
+    "modified": "2020-02-17T13:24:31.887Z",
+    "contributors": ["diezan", "LincePotiguara"]
+  },
+  "conflicting/Web/API/Fetch_API/Using_Fetch_76a0f6f382ec36bfa1bf0b4e0ef87c0c": {
+    "modified": "2019-03-18T20:48:56.041Z",
+    "contributors": ["matluz"]
   },
   "conflicting/Web/API/Geolocation/getCurrentPosition": {
     "modified": "2019-03-23T22:47:40.708Z",
@@ -11232,6 +11214,16 @@
     "modified": "2020-10-15T22:12:51.330Z",
     "contributors": ["dekxside"]
   },
+  "orphaned/Web/CSS/-webkit-overflow-scrolling": {
+    "modified": "2019-03-23T22:49:05.514Z",
+    "contributors": [
+      "teoli",
+      "otaviogui",
+      "rafaelcavalcante",
+      "fcard",
+      "alexanmtz"
+    ]
+  },
   "orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support": {
     "modified": "2019-03-18T21:31:28.635Z",
     "contributors": ["wbamberg", "eyglys"]
@@ -11257,6 +11249,10 @@
       "teoli",
       "Erick_Ribeiro"
     ]
+  },
+  "orphaned/Web/Demos": {
+    "modified": "2020-09-04T06:28:02.627Z",
+    "contributors": ["gustavoSoriano", "angelorubin", "arthur2323"]
   },
   "orphaned/Web/Guide/CSS/CSS_media_queries_(consultas_de_mídia_em_CSS)": {
     "modified": "2019-03-23T23:08:21.480Z",
@@ -11344,6 +11340,10 @@
   },
   "orphaned/Web/HTTP/Feature_Policy/Using_Feature_Policy": {
     "modified": "2020-07-20T20:48:22.250Z",
+    "contributors": ["FernandoKGA"]
+  },
+  "orphaned/Web/HTTP/Headers/Accept-CH-Lifetime": {
+    "modified": "2020-10-15T22:26:09.466Z",
     "contributors": ["FernandoKGA"]
   },
   "orphaned/Web/HTTP/Headers/Set-Cookie/SameSite": {

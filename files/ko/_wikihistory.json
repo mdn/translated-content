@@ -2927,10 +2927,6 @@
     "modified": "2020-10-15T21:59:47.472Z",
     "contributors": ["alattalatta", "ggihwa", "jennybehan", "gw1021", "BANIP"]
   },
-  "Web/API/Fetch_API/Basic_concepts": {
-    "modified": "2019-03-18T21:45:15.491Z",
-    "contributors": ["BANIP"]
-  },
   "Web/API/Fetch_API/Using_Fetch": {
     "modified": "2020-10-15T22:00:18.673Z",
     "contributors": [
@@ -4714,10 +4710,6 @@
   "Web/CSS/-webkit-line-clamp": {
     "modified": "2020-10-15T22:25:56.637Z",
     "contributors": ["alattalatta"]
-  },
-  "Web/CSS/-webkit-overflow-scrolling": {
-    "modified": "2020-10-15T21:37:39.290Z",
-    "contributors": ["alattalatta", "epicsaga"]
   },
   "Web/CSS/::after": {
     "modified": "2020-10-15T21:37:38.967Z",
@@ -7911,7 +7903,7 @@
     "modified": "2020-03-12T19:44:32.792Z",
     "contributors": ["magnoliaa"]
   },
-  "Web/JavaScript/Reference/Errors/Deprecated_octal": {
+  "Web/JavaScript/Reference/Errors/Deprecated_octal_literal": {
     "modified": "2020-03-12T19:48:30.330Z",
     "contributors": ["magnoliaa"]
   },
@@ -7979,10 +7971,6 @@
     "modified": "2020-03-12T19:47:45.484Z",
     "contributors": ["Olivia_J"]
   },
-  "Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement": {
-    "modified": "2020-03-12T19:46:46.133Z",
-    "contributors": ["magnoliaa"]
-  },
   "Web/JavaScript/Reference/Errors/More_arguments_needed": {
     "modified": "2020-03-12T19:48:33.843Z",
     "contributors": ["magnoliaa"]
@@ -8041,10 +8029,6 @@
   },
   "Web/JavaScript/Reference/Errors/Undeclared_var": {
     "modified": "2020-03-12T19:44:33.741Z",
-    "contributors": ["magnoliaa"]
-  },
-  "Web/JavaScript/Reference/Errors/Undefined_prop": {
-    "modified": "2020-03-12T19:44:33.728Z",
     "contributors": ["magnoliaa"]
   },
   "Web/JavaScript/Reference/Errors/Unexpected_token": {
@@ -10762,6 +10746,10 @@
     "modified": "2019-01-17T02:54:48.050Z",
     "contributors": ["wbamberg", "zziuni"]
   },
+  "conflicting/Web/API/Fetch_API/Using_Fetch_c0ca150deec7d78cb1d4462e8542019b": {
+    "modified": "2019-03-18T21:45:15.491Z",
+    "contributors": ["BANIP"]
+  },
   "conflicting/Web/API/XSLTProcessor": {
     "modified": "2019-03-23T23:42:13.222Z",
     "contributors": ["chrisdavidmills", "teoli", "Sebuls"]
@@ -10807,6 +10795,10 @@
     "modified": "2020-03-12T19:44:24.834Z",
     "contributors": ["magnoliaa"]
   },
+  "conflicting/Web/JavaScript/Reference/Errors/Unexpected_token": {
+    "modified": "2020-03-12T19:46:46.133Z",
+    "contributors": ["magnoliaa"]
+  },
   "orphaned/Learn/Front-end_web_developer": {
     "modified": "2020-09-26T16:42:10.726Z",
     "contributors": ["DeadIntegral"]
@@ -10819,9 +10811,17 @@
     "modified": "2019-03-23T23:26:46.443Z",
     "contributors": ["yunji_koh"]
   },
+  "orphaned/Web/CSS/-webkit-overflow-scrolling": {
+    "modified": "2020-10-15T21:37:39.290Z",
+    "contributors": ["alattalatta", "epicsaga"]
+  },
   "orphaned/Web/HTML/Element/applet": {
     "modified": "2019-03-23T22:50:49.180Z",
     "contributors": ["Basix"]
+  },
+  "orphaned/Web/JavaScript/Reference/Errors/Undefined_prop": {
+    "modified": "2020-03-12T19:44:33.728Z",
+    "contributors": ["magnoliaa"]
   },
   "orphaned/Web/SVG/Element/altGlyph": {
     "modified": "2020-10-15T21:40:13.413Z",

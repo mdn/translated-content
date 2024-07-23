@@ -35,7 +35,7 @@ concat(value0, value1, /* … ,*/ valueN)
 
 如果任何源数组是[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，`concat()` 方法会保留空槽。
 
-`concat()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。`this` 值的处理方式与其他参数相同（除了它会先转换为对象），这意味着普通对象将直接添加到结果数组中，而 `@@isConcatSpreadable` 属性为真值的类数组对象将展开并添加到数组中。
+`concat()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。`this` 值的处理方式与其他参数相同（除了它会先转换为对象），这意味着普通对象将直接添加到结果数组中，而 `[Symbol.isConcatSpreadable]` 属性为真值的类数组对象将展开并添加到数组中。
 
 ## 示例
 

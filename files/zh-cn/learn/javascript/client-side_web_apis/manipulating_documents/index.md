@@ -1,16 +1,18 @@
 ---
 title: 操作文档
 slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
+l10n:
+  sourceCommit: 7e97f3c5ada65b6638909bde92881a4b8d46a2b8
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
 
-在编写网页和应用程序时，你最想做的事情之一是以某种方式操纵文档结构。这通常是通过使用文档对象模型（DOM）来实现的，这是一套用于控制 HTML 和样式信息的 API，大量使用了 {{domxref("Document")}} 对象。在这篇文章中，我们将详细了解如何使用 DOM，以及其他一些有趣的 API，它们可以以有趣的方式改变你的环境。
+在编写网页和应用程序时，你最想做的事情之一是以某种方式操纵文档结构。这通常是通过使用文档对象模型（DOM）来实现的。这是一套大量使用了 {{domxref("Document")}} 对象，用于控制 HTML 和样式信息的 API。在这篇文章中，我们将详细了解如何使用 DOM，以及其他一些有趣的 API，它们可以以有趣的方式改变你的环境。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备条件：</th>
+      <th scope="row">前提：</th>
       <td>
         基础的计算机常识，基本了解 HTML、CSS 和 JavaScript，包括 JavaScript 对象。
       </td>
@@ -22,13 +24,13 @@ slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
   </tbody>
 </table>
 
-## web 浏览器的重要部分
+## Web 浏览器的重要部分
 
-web 浏览器是非常复杂的软件，有许多活动部件，其中许多部件不能由 web 开发者用 JavaScript 控制或操纵。你可能认为这种限制是件坏事，但浏览器作出这些限制是有原因的，主要是围绕安全问题。想象一下，如果网站可以访问你存储的密码或其他敏感信息，且像你本人一样登录那些网站，会发生什么？
+Web 浏览器是非常复杂的软件，有许多活动部件，其中许多部件不能由 Web 开发者用 JavaScript 控制或操纵。你可能认为这种限制是件坏事，但浏览器作出这些限制是有原因的，主要是围绕安全问题。想象一下，如果网站可以访问你存储的密码或其他敏感信息，且像你本人一样登录那些网站，会发生什么？
 
 尽管有这些限制，Web API 仍然给我们提供了大量的功能，使我们能够用网页做很多事情。在你的代码中，有几个非常明显的部分你会经常参考。考虑下图，它代表了浏览器中直接参与浏览网页的主要部分：
 
-![web 浏览器的重要部分；文档就是网页。窗口包括整个文档，也包括标签。导航器是浏览器，它包括窗口（包括文档）和所有其他窗口](document-window-navigator.png)
+![Web 浏览器的重要部分；文档就是网页。窗口包括整个文档，也包括标签。导航器是浏览器，它包括窗口（包括文档）和所有其他窗口](document-window-navigator.png)
 
 - 窗口（window）是载入网页的浏览器标签；在 JavaScript 中，它由 {{domxref("Window")}} 对象表示。使用这个对象上的方法，你可以做一些事情，比如返回窗口的大小（见 {{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}），操作加载到窗口的文档，在客户端存储该文档的特定数据（例如使用本地数据库或其他存储机制），为当前窗口附加一个[事件处理器](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#一系列事件)等。
 - 导航器（navigator）在网络上出现时，代表浏览器的状态和身份（即用户代理）。在 JavaScript 中，它由 {{domxref("Navigator")}} 对象表示。你可以用这个对象来检索用户的首选语言、用户网络摄像头的媒体流等信息。
@@ -67,7 +69,7 @@ web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
 
 ![文档对象模型的树状结构表示：顶部节点是 doctype 和 HTML 元素。HTML 的子节点包括 head 和 body。每个子元素都是一个分支。所有的文本，甚至是空白处，也都被显示出来](dom-screenshot.png)
 
-> **备注：** 这个 DOM 树状图是用 Ian Hickson 的 [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/) 生成的。
+> **备注：** 这个 DOM 树状图是用 Ian Hickson 的[在线 DOM 查看器](https://software.hixie.ch/utilities/js/live-dom-viewer/)生成的。
 
 树上的每个条目都被称为**节点**。你可以在上图中看到，一些节点代表元素（标识为 `HTML`、`HEAD`、`META` 等），另一些代表文本（标识为 `#text`）。还有[其他类型的节点](/zh-CN/docs/Web/API/Node/nodeType)，但这些是你会遇到的主要类型。
 
@@ -105,7 +107,7 @@ web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
    link.href = "https://developer.mozilla.org";
    ```
 
-请注意，就像 JavaScript 中所做的那样，有许多方法可以选择一个元素并将其引用存储在一个变量中。{{domxref("Document.querySelector()")}} 是推荐的现代方法。它很方便，因为它允许你使用 CSS 选择器来选择元素。上面的 `querySelector()` 调用将匹配文档中出现的第一个 {{htmlelement("a")}} 元素。如果你想对多个元素进行匹配和操作，你可以使用 {{domxref("Document.querySelectorAll()")}}，它可以匹配文档中与选择器相匹配的每个元素，并将它们的引用存储在一个叫做 {{domxref("NodeList")}} 的[数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)对象中。
+请注意，就像 JavaScript 中所做的那样，有许多方法可以选择一个元素并将其引用存储在一个变量中。{{domxref("Document.querySelector()")}} 是推荐的现代方法。它很方便，因为它允许你使用 CSS 选择器来选择元素。上面的 `querySelector()` 调用将匹配文档中出现的第一个 {{htmlelement("a")}} 元素。如果你想对多个元素进行匹配和操作，你可以使用 {{domxref("Document.querySelectorAll()")}}，它可以匹配文档中与选择器相匹配的每个元素，并将它们的引用存储在一个叫做 {{domxref("NodeList")}} 的类[数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)对象中。
 
 对于获取元素引用，还有一些更旧的方法，如：
 
@@ -213,7 +215,7 @@ linkPara.parentNode.removeChild(linkPara);
    </p>
    ```
 
-> **备注：** 请注意，CSS 样式的 JavaScript 属性版本是用小驼峰命名法书写的，而 CSS 版本是连字符的（例如，`backgroundColor` 对 `background-color`）。确保你不要把这些混为一谈，否则将无法工作。
+> **备注：** 请注意，CSS 样式的 JavaScript 属性版本是用{{Glossary("camel_case", "小驼峰命名法")}}书写的，而 CSS 版本采用连字符（{{Glossary("kebab_case", "烤串命名法")}}）（例如，`backgroundColor` 对 `background-color`）。确保你不要把这些混为一谈，否则将无法工作。
 
 还有一种在你的文档上动态操作样式的常见方法，我们现在就来看看。
 

@@ -1,6 +1,8 @@
 ---
 title: d
 slug: Web/SVG/Attribute/d
+l10n:
+  sourceCommit: 8cd08162e592c1baf5d888f4c5a08a58360344b5
 ---
 
 {{SVGRef}}
@@ -11,7 +13,7 @@ slug: Web/SVG/Attribute/d
 
 你可以将此属性与以下 SVG 元素一起使用：[`<path>`](#path)、[`<glyph>`](#path)、[`<missing-glyph>`](#missing-glyph)。
 
-`d` 是一个[表现属性](/zh-CN/docs/Web/SVG/Attribute/Presentation)，因此可以[用于作为 CSS 属性](#将_d_作为_css_属性)。
+`d` 是一个表现属性，因此可以[用于作为 CSS 属性](#将_d_作为_css_属性)。
 
 ## 示例
 
@@ -40,7 +42,7 @@ svg {
 
 ## path
 
-对于 {{SVGElement('path')}}，`d` 是一个字符串，其中包含一组路径命令，用于定义要绘制的路径。
+对于 {{SVGElement('path')}}，`d` 是一个包含一组路径命令的字符串，用于定义要绘制的路径。
 
 <table class="properties">
   <tbody>
@@ -65,7 +67,7 @@ svg {
 
 > **警告：** 自 SVG2 起，{{SVGElement('glyph')}} 已被弃用，不应该继续使用。
 
-对于 {{SVGElement('glyph')}}，`d` 是一个字符串，其中包一组路径命令，用于定义字形（glyph）的轮廓形状。
+对于 {{SVGElement('glyph')}}，`d` 是一个包含一组路径命令的字符串，用于定义字形（glyph）的轮廓形状。
 
 <table class="properties">
   <tbody>
@@ -92,7 +94,7 @@ svg {
 
 > **警告：** 自 SVG2 起，{{SVGElement('missing-glyph')}} 已被弃用，不应该继续使用。
 
-对于 {{SVGElement('missing-glyph')}}，`d` 是一个字符串，其中包一组路径命令，用于定义字形（glyph）的轮廓形状。
+对于 {{SVGElement('missing-glyph')}}，`d` 是一个包含一组路径命令的字符串，用于定义字形（glyph）的轮廓形状。
 
 <table class="properties">
   <tbody>
@@ -115,9 +117,9 @@ svg {
 
 ## 将 d 作为 CSS 属性
 
-`d` 是一个[表现属性](/zh-CN/docs/Web/SVG/Attribute/Presentation)，因此也可以使用 CSS 进行修改。该属性采用 [path()](/zh-CN/docs/Web/CSS/path) 或 `none`。
+`d` 是一个表现属性，因此也可以使用 CSS 进行修改。该属性采用 [path()](/zh-CN/docs/Web/CSS/path) 或 `none`。
 
-下面的示例展示了如何在悬停在元素上时应用新的路径。新的路径与旧的路径现统，但额外增加了一条穿过心形图案的线。
+下面的示例展示了如何在悬停在元素上时应用新的路径。新的路径与旧的路径相同，但额外增加了一条穿过心形图案的线。
 
 ```css
 html,
@@ -126,7 +128,7 @@ svg {
   height: 100%;
 }
 
-/* This path is displayed on hover*/
+/* 这条路径会在悬停时显示 */
 #svg_css_ex1:hover path {
   d: path(
     "M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 z M5,5 L90,90"
@@ -156,12 +158,12 @@ svg {
 
 SVG 定义了六种路径命令类型，一共 20 条命令：
 
-- 移动到：`M`、`m`
-- 画线至：`L`、`l`、`H`、`h`、`V`、`v`
-- 三次方贝塞尔曲线：`C`、`c`、`S`、`s`
-- 二次方贝塞尔曲线：`Q`、`q`、`T`、`t`
-- 椭圆曲线：`A`、`a`
-- 封闭路径：`Z`、`z`
+- [MoveTo](#moveto_路径命令)：`M`、`m`
+- [LineTo](#lineto_路径命令)：`L`、`l`、`H`、`h`、`V`、`v`
+- [三次贝塞尔曲线](#三次贝塞尔曲线)：`C`、`c`、`S`、`s`
+- [二次贝塞尔曲线](#二次贝塞尔曲线)：`Q`、`q`、`T`、`t`
+- [椭圆曲线](#椭圆曲线)：`A`、`a`
+- [ClosePath](#closepath)：`Z`、`z`
 
 > **备注：** 命令是*大小写敏感*的。大写的命令指定绝对坐标，而小写命令指定相对（于当前位置的）坐标。
 
@@ -266,9 +268,6 @@ svg {
 ```
 
 {{EmbedLiveSample('MoveTo 路径命令', '100%', 200)}}
-
-- 位于绝对位置 x=50, y= 100：`<path d="M50,100..." />`
-- 往右移 50，往下移 100：`<path d="m50,100..." />`
 
 ### Lineto 路径命令
 
@@ -426,7 +425,7 @@ svg {
 
 ```html
 <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- LineTo commands with absolute coordinates -->
+  <!-- 使用绝对坐标的 LineTo 命令 -->
   <path
     fill="none"
     stroke="red"
@@ -435,7 +434,7 @@ svg {
            V 10
            H 50" />
 
-  <!-- LineTo commands with relative coordinates -->
+  <!-- 使用相对坐标的 LineTo 命令 -->
   <path
     fill="none"
     stroke="red"
@@ -448,7 +447,7 @@ svg {
 
 {{EmbedLiveSample('Lineto 路径命令', '100%', 200)}}
 
-## 三次贝塞尔曲线
+### 三次贝塞尔曲线
 
 _三次_[_贝塞尔曲线_](/zh-CN/docs/Glossary/Bezier_curve)是使用四个点定义的平滑曲线：
 
@@ -609,7 +608,7 @@ svg {
   viewBox="0 0 200 100"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- Cubic Bézier curve with absolute coordinates -->
+  <!-- 使用绝对坐标的三次贝塞尔曲线 -->
   <path
     fill="none"
     stroke="red"
@@ -617,7 +616,7 @@ svg {
            C 30,90 25,10 50,10
            S 70,90 90,90" />
 
-  <!-- Cubic Bézier curve with relative coordinates -->
+  <!-- 使用相对坐标的三次贝塞尔曲线 -->
   <path
     fill="none"
     stroke="red"
@@ -625,16 +624,16 @@ svg {
            c 20,0 15,-80 40,-80
            s 20,80 40,80" />
 
-  <!-- Highlight the curve vertex and control points -->
+  <!-- 高亮显示曲线顶点和控制点 -->
   <g id="ControlPoints">
-    <!-- First cubic command control points -->
+    <!-- 第一段三次贝塞尔曲线的控制点 -->
     <line x1="10" y1="90" x2="30" y2="90" stroke="lightgrey" />
     <circle cx="30" cy="90" r="1.5" />
 
     <line x1="50" y1="10" x2="25" y2="10" stroke="lightgrey" />
     <circle cx="25" cy="10" r="1.5" />
 
-    <!-- Second smooth command control points (the first one is implicit) -->
+    <!-- 第二段平滑三次贝塞尔曲线的控制点（第一个是隐式的） -->
     <line
       x1="50"
       y1="10"
@@ -647,7 +646,7 @@ svg {
     <line x1="90" y1="90" x2="70" y2="90" stroke="lightgrey" />
     <circle cx="70" cy="90" r="1.5" />
 
-    <!-- curve vertex points -->
+    <!-- 曲线顶点 -->
     <circle cx="10" cy="90" r="1.5" />
     <circle cx="50" cy="10" r="1.5" />
     <circle cx="90" cy="90" r="1.5" />
@@ -815,7 +814,7 @@ svg {
   viewBox="0 0 200 100"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- Quadratic Bézier curve with implicit repetition -->
+  <!-- 二次贝塞尔曲线，带有隐式重复 -->
   <path
     fill="none"
     stroke="red"
@@ -823,12 +822,12 @@ svg {
            Q 25,25 40,50
            t 30,0 30,0 30,0 30,0 30,0" />
 
-  <!-- Highlight the curve vertex and control points -->
+  <!-- 高亮显示曲线顶点和控制点 -->
   <g>
     <polyline points="10,50 25,25 40,50" stroke="rgba(0,0,0,.2)" fill="none" />
     <circle cx="25" cy="25" r="1.5" />
 
-    <!-- Curve vertex points -->
+    <!-- 曲线顶点 -->
     <circle cx="10" cy="50" r="1.5" />
     <circle cx="40" cy="50" r="1.5" />
 
@@ -975,7 +974,7 @@ svg {
 
 ```html
 <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-  <!-- The influence of the arc flags with which the arc is drawn -->
+  <!-- 通过弧形标志绘制不同的弧形路径 -->
   <path
     fill="none"
     stroke="red"
@@ -1004,7 +1003,7 @@ svg {
 
 {{EmbedLiveSample('椭圆曲线', '100%', 200)}}
 
-## ClosePath
+### ClosePath
 
 _ClosePath_ 命令将从*当前位置*绘制一条直线到路径中的第一个点。
 
@@ -1040,8 +1039,7 @@ svg {
 ```html
 <svg viewBox="0 -1 30 11" xmlns="http://www.w3.org/2000/svg">
   <!--
-  An open shape with the last point of
-  the path different to the first one
+  一个起点和终点不同的开放形状
   -->
   <path
     stroke="red"
@@ -1049,8 +1047,7 @@ svg {
            l -4,8 8,0" />
 
   <!--
-  An open shape with the last point of
-  the path matching the first one
+  一个起点和终点相同的开放形状
   -->
   <path
     stroke="red"
@@ -1058,8 +1055,7 @@ svg {
            l -4,8 8,0 -4,-8" />
 
   <!--
-  A closed shape with the last point of
-  the path different to the first one
+  一个起点和终点不同的闭合形状
   -->
   <path
     stroke="red"

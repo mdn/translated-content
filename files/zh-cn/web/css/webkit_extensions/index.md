@@ -436,7 +436,6 @@ slug: Web/CSS/WebKit_Extensions
 - `-webkit-margin-before-collapse`
 - `-webkit-margin-bottom-collapse`
 - `-webkit-margin-top-collapse`
-- {{CSSxRef("-webkit-overflow-scrolling", "-webkit-overflow-scrolling")}}
 - `-webkit-region-break-after`
 - `-webkit-region-break-before`
 - `-webkit-region-break-inside`

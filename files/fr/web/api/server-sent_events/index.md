@@ -3,6 +3,8 @@ title: Server-sent events
 slug: Web/API/Server-sent_events
 ---
 
+{{DefaultAPISidebar("Server Sent Events")}}
+
 Habituellement, une page web doit envoyer une requête au serveur pour obtenir de nouvelles données. Avec les server-Sent events, le serveur peut envoyer de nouvelles données vers une page web à n'importe quel moment. La page web reçoit alors ces nouveaux messages qui peuvent être traités comme des événements contenant des données.
 
 ## Documentation
