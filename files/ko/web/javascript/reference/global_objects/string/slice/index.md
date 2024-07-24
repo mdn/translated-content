@@ -2,7 +2,7 @@
 title: String.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
 l10n:
-  sourceCommit: 4406757f6bb4404b5309756bac2acb994c169e40
+  sourceCommit: 5f08178b7c2c97b15dd5d6483580fd70abd5169a
 ---
 
 {{JSRef}}
@@ -50,7 +50,7 @@ slice(indexStart, indexEnd)
 - `indexStart >= str.length`이라면, 빈 문자열이 반환됩니다.
 - `indexStart < 0`이라면, 문자열의 끝부터 인덱스를 셉니다. 보다 공식적으로 말하자면 이 경우, 하위 문자열은 `max(indexStart + str.length, 0)`에서 시작합니다.
 - `indexStart`가 생략되었거나 정의되지 않았거나 [숫자로 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)할 수 없는 경우, `0`으로 처리됩니다.
-- `indexEnd`가 생략되었거나, 정의되지 않았거나, [숫자로 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)할 수 없는 경우 또는 `indexEnd >= str.length`이면 `slice()`는 문자열 끝으로 추출합니다.
+- `indexEnd`가 생략되었거나 혹은 정의되지 않았거나 혹은 `indexEnd >= str.length`이면 `slice()`는 문자열 끝으로 추출합니다.
 - `indexEnd < 0`이면 문자열의 끝부터 인덱스를 셉니다. 보다 공식적으로 말하자면 이 경우, 하위 문자열은 `max(indexEnd + str.length, 0)`에서 끝납니다.
 - 음수 값을 정규화한 후 (즉, `indexEnd`가 `indexStart` 앞에 있는 문자를 나타내는 경우) `indexEnd <= indexStart`인 경우 빈 문자열이 반환됩니다.
 

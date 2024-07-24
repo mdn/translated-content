@@ -13,6 +13,6 @@ slug: Glossary/Hotlink
 
    1. Wikipedia 上の [直リンク](https://ja.wikipedia.org/wiki/直リンク)
 
-2. [MDN Web Docs 用語集](/ja/docs/Glossary)
+2. 関連用語:
 
    1. {{glossary("Hyperlink")}}

@@ -132,7 +132,7 @@ Child.prototype = Object.create(Parent.prototype);
 
 由于重新赋值了 `Child.prototype`，`Child` 实例的 `constructor` 将是 `Parent`。
 
-通常情况下，这不是什么大问题——JavaScript 几乎从不读取对象的 `constructor` 属性。唯一的例外是在使用 [`@@species`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) 创建类的新实例时，但这种情况很少见，并且你应该使用 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends) 语法来子类化内置对象。
+通常情况下，这不是什么大问题——JavaScript 几乎从不读取对象的 `constructor` 属性。唯一的例外是在使用 [`[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) 创建类的新实例时，但这种情况很少见，并且你应该使用 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends) 语法来子类化内置对象。
 
 然而，在某些调用使用 `constructor` 从实例中访问原始类时，确保 `Child.prototype.constructor` 总是指向 `Child` 本身非常重要。考虑这种情况：对象具有 `create()` 方法来创建自身。
 

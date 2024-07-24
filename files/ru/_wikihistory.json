@@ -7251,6 +7251,10 @@
     "modified": "2019-03-23T22:57:01.164Z",
     "contributors": ["wbamberg", "roman-dudin", "xercool"]
   },
+  "Web/API/Window/fetch": {
+    "modified": "2020-10-15T22:06:28.491Z",
+    "contributors": ["BadLame", "dasha_hshr"]
+  },
   "Web/API/Window/focus_event": {
     "modified": "2019-03-23T22:08:49.378Z",
     "contributors": ["goodleby", "FlowerDeLuce"]
@@ -7782,10 +7786,6 @@
   "Web/API/console/warn_static": {
     "modified": "2020-10-15T22:00:31.979Z",
     "contributors": ["ekirpichyov", "ArtemPolanskiy"]
-  },
-  "Web/API/fetch": {
-    "modified": "2020-10-15T22:06:28.491Z",
-    "contributors": ["BadLame", "dasha_hshr"]
   },
   "Web/API/setInterval": {
     "modified": "2020-11-18T12:13:20.493Z",
@@ -12242,15 +12242,15 @@
       "dbruant"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@iterator": {
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator": {
     "modified": "2019-03-23T23:03:21.064Z",
     "contributors": ["SphinxKnight", "Mingun"]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@species": {
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.species": {
     "modified": "2020-10-15T22:06:58.667Z",
     "contributors": ["DwarfMason"]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@unscopables": {
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables": {
     "modified": "2020-10-15T22:00:26.446Z",
     "contributors": ["fax1ty"]
   },
@@ -13853,11 +13853,11 @@
       "rhyne24"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/@@search": {
+  "Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search": {
     "modified": "2020-10-15T22:00:22.795Z",
     "contributors": ["fax1ty"]
   },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/@@split": {
+  "Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split": {
     "modified": "2020-10-15T22:05:39.755Z",
     "contributors": ["0x0071"]
   },
@@ -13999,7 +13999,7 @@
       "ethertank"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/@@iterator": {
+  "Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator": {
     "modified": "2020-10-14T10:03:26.063Z",
     "contributors": ["scrum", "SphinxKnight", "Mingun"]
   },
@@ -14262,7 +14262,7 @@
       "schyzoo"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive": {
+  "Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive": {
     "modified": "2020-10-15T22:24:20.085Z",
     "contributors": ["faramozzayw"]
   },
@@ -14334,12 +14334,12 @@
     "modified": "2020-10-15T21:48:29.544Z",
     "contributors": ["pk.prog", "arai"]
   },
-  "Web/JavaScript/Reference/Global_Objects/TypedArray/@@species": {
-    "modified": "2019-03-23T22:25:44.388Z",
-    "contributors": ["pk.prog"]
-  },
   "Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT": {
     "modified": "2019-03-23T22:25:40.817Z",
+    "contributors": ["pk.prog"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species": {
+    "modified": "2019-03-23T22:25:44.388Z",
     "contributors": ["pk.prog"]
   },
   "Web/JavaScript/Reference/Global_Objects/TypedArray/join": {
@@ -15965,9 +15965,5 @@
   "conflicting/Web/SVG/Attribute": {
     "modified": "2020-10-15T22:34:58.576Z",
     "contributors": ["osipov_s"]
-  },
-  "orphaned/Web/JavaScript/Reference/Errors/Undefined_prop": {
-    "modified": "2020-03-12T19:47:58.221Z",
-    "contributors": ["KTatyana"]
   }
 }
