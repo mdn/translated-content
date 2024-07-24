@@ -17,7 +17,7 @@ _无障碍_（Accessibility，缩写：**A11Y**）指尽管在物理条件和技
 
 - [无障碍](/zh-CN/docs/Web/Accessibility)
 - [学习无障碍](/zh-CN/docs/Learn/Accessibility)
-- [无障碍富互联网应用（ARIA）](/zh-CN/docs/Learn/Accessibility/ARIA)
+- [无障碍富互联网应用（ARIA）](/zh-CN/docs/Web/Accessibility/ARIA)
 - 维基百科的 [Web 无障碍](https://zh.wikipedia.org/wiki/网站无障碍)词条
 - W3C 上的 [Web 无障碍倡议](https://www.w3.org/WAI/)
 - [WAI-ARIA 推荐](https://www.w3.org/TR/wai-aria/)
