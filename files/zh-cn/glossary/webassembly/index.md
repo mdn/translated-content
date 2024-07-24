@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**WebAssembly**（缩写 _Wasm_）是一种开放的{{Glossary("binary", "二进制")}}编程格式，可以在现代网络{{Glossary("Browser", "浏览器")}}中运行，以提高性能，并为网页提供新功能。
+**WebAssembly**（缩写 _Wasm_）是一种开放的{{Glossary("binary", "二进制")}}编程格式，可以在现代 Web {{Glossary("Browser", "浏览器")}}中运行，以提高性能，并为网页提供新特性。
 
 ## 参见
 
