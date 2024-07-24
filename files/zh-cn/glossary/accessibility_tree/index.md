@@ -32,7 +32,7 @@ l10n:
 - [学习无障碍](/zh-CN/docs/Learn/Accessibility)
 - 维基百科的 [Web 无障碍](https://zh.wikipedia.org/wiki/网站无障碍)词条
 - [Web Accessibility In Mind](https://webaim.org/)
-- [无障碍富互联网应用（ARIA）](/zh-CN/docs/Learn/Accessibility/ARIA)
+- [无障碍富互联网应用（ARIA）](/zh-CN/docs/Web/Accessibility/ARIA)
 - [Web 无障碍倡议（WAI）](https://www.w3.org/WAI/)
 - [WAI-ARIA 推荐](https://w3c.github.io/aria/)
 - 相关术语：
