@@ -1370,6 +1370,7 @@
 /zh-CN/docs/Web/API/CanvasRenderingContext2D.createPattern	/zh-CN/docs/Web/API/CanvasRenderingContext2D/createPattern
 /zh-CN/docs/Web/API/CanvasRenderingContext2D/currentTransform	/zh-CN/docs/Web/API/CanvasRenderingContext2D
 /zh-CN/docs/Web/API/CanvasRenderingContext2D/drawWindow	/zh-CN/docs/Web/API/CanvasRenderingContext2D/drawImage
+/zh-CN/docs/Web/API/CanvasRenderingContext2D/scrollPathIntoView	/zh-CN/docs/Web/API/CanvasRenderingContext2D
 /zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing/Example	/zh-CN/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /zh-CN/docs/Web/API/Channel_Messaging_API/使用_channel_messaging	/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging
 /zh-CN/docs/Web/API/ChildNode.nextElementSibling	/zh-CN/docs/Web/API/Element/nextElementSibling
@@ -1587,7 +1588,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/ontransitionend	/zh-CN/docs/Web/API/Element/transitionend_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onwheel	/zh-CN/docs/Web/API/Element/wheel_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/动画效果	/zh-CN/docs/Web/API/Element/animationend_event
-/zh-CN/docs/Web/API/GlobalFetch/fetch	/zh-CN/docs/Web/API/fetch
+/zh-CN/docs/Web/API/GlobalFetch/fetch	/zh-CN/docs/Web/API/Window/fetch
 /zh-CN/docs/Web/API/HTMLAnchorElement/referrer	/zh-CN/docs/Web/API/HTMLAnchorElement/referrerPolicy
 /zh-CN/docs/Web/API/HTMLBaseFontElement	/zh-CN/docs/Web/CSS/CSS_fonts
 /zh-CN/docs/Web/API/HTMLCanvasElement/捕获流	/zh-CN/docs/Web/API/HTMLCanvasElement/captureStream
@@ -1902,7 +1903,7 @@
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/zh-CN/docs/Web/API/clearTimeout
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/zh-CN/docs/Web/API/createImageBitmap
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated	/zh-CN/docs/Web/API/Window/crossOriginIsolated
-/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/zh-CN/docs/Web/API/fetch
+/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/zh-CN/docs/Web/API/Window/fetch
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/zh-CN/docs/Web/API/Window/indexedDB
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/zh-CN/docs/Web/API/Window/isSecureContext
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/origin	/zh-CN/docs/Web/API/Window/origin
@@ -2020,6 +2021,7 @@
 /zh-CN/docs/Web/API/event.stopPropagation	/zh-CN/docs/Web/API/Event/stopPropagation
 /zh-CN/docs/Web/API/event.timeStamp	/zh-CN/docs/Web/API/Event/timeStamp
 /zh-CN/docs/Web/API/event.type	/zh-CN/docs/Web/API/Event/type
+/zh-CN/docs/Web/API/fetch	/zh-CN/docs/Web/API/Window/fetch
 /zh-CN/docs/Web/API/indexedDB	/zh-CN/docs/Web/API/Window/indexedDB
 /zh-CN/docs/Web/API/isSecureContext	/zh-CN/docs/Web/API/Window/isSecureContext
 /zh-CN/docs/Web/API/navigator.doNotTrack	/zh-CN/docs/Web/API/Navigator/doNotTrack
@@ -2395,6 +2397,7 @@
 /zh-CN/docs/Web/HTML/Element/bgsound	/zh-CN/docs/Web/HTML/Element/audio
 /zh-CN/docs/Web/HTML/Element/content	/zh-CN/docs/Web/HTML/Element/slot
 /zh-CN/docs/Web/HTML/Element/image	/zh-CN/docs/Web/HTML/Element/img
+/zh-CN/docs/Web/HTML/Element/menuitem	/zh-CN/docs/Web/HTML/Element
 /zh-CN/docs/Web/HTML/Element/video/timeupdate_event	/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event
 /zh-CN/docs/Web/HTML/Element/视频	/zh-CN/docs/Web/HTML/Element/video
 /zh-CN/docs/Web/HTML/Element/选项	/zh-CN/docs/Web/HTML/Element/option

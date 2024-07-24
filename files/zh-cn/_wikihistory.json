@@ -6693,10 +6693,6 @@
     "modified": "2020-11-22T03:12:30.867Z",
     "contributors": ["BuluGuy", "laampui", "ice-i-snow"]
   },
-  "Web/API/CanvasRenderingContext2D/scrollPathIntoView": {
-    "modified": "2019-03-23T22:53:40.759Z",
-    "contributors": ["ice-i-snow"]
-  },
   "Web/API/CanvasRenderingContext2D/setLineDash": {
     "modified": "2020-10-15T21:37:04.054Z",
     "contributors": ["Yayure", "Plearner", "zhangchen", "ice-i-snow"]
@@ -15234,6 +15230,26 @@
     "modified": "2020-10-15T22:13:52.002Z",
     "contributors": ["RainSlide", "EqualMa"]
   },
+  "Web/API/Window/fetch": {
+    "modified": "2020-10-15T21:38:47.827Z",
+    "contributors": [
+      "hughfenghen",
+      "jingkaimori",
+      "c1er",
+      "ldc-37",
+      "Rhys_211",
+      "zhangchen",
+      "fscholz",
+      "TiaossuP",
+      "Yanzengyong",
+      "wxs77577",
+      "Ende93",
+      "xuzhijun",
+      "ziyunfei",
+      "camsong",
+      "fuchao2012"
+    ]
+  },
   "Web/API/Window/find": {
     "modified": "2019-03-23T23:39:40.804Z",
     "contributors": ["teoli", "AshfaqHossain", "ziyunfei"]
@@ -16250,26 +16266,6 @@
   "Web/API/createImageBitmap": {
     "modified": "2019-03-18T20:44:01.174Z",
     "contributors": ["fanerge", "varcat"]
-  },
-  "Web/API/fetch": {
-    "modified": "2020-10-15T21:38:47.827Z",
-    "contributors": [
-      "hughfenghen",
-      "jingkaimori",
-      "c1er",
-      "ldc-37",
-      "Rhys_211",
-      "zhangchen",
-      "fscholz",
-      "TiaossuP",
-      "Yanzengyong",
-      "wxs77577",
-      "Ende93",
-      "xuzhijun",
-      "ziyunfei",
-      "camsong",
-      "fuchao2012"
-    ]
   },
   "Web/API/notification": {
     "modified": "2020-09-28T00:03:47.900Z",
@@ -21761,10 +21757,6 @@
   "Web/HTML/Element/menu": {
     "modified": "2020-10-15T21:37:16.105Z",
     "contributors": ["RainSlide", "yuyx91", "kgojiwong", "pantao", "holynewbie"]
-  },
-  "Web/HTML/Element/menuitem": {
-    "modified": "2020-10-15T21:58:27.361Z",
-    "contributors": ["RainSlide", "wangxuedongovo"]
   },
   "Web/HTML/Element/meta": {
     "modified": "2020-10-15T21:34:02.227Z",

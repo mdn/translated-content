@@ -2831,8 +2831,8 @@
 /ja/docs/Web/API/GlobalEventHandlers/ontransitioncancel	/ja/docs/Web/API/Element/transitioncancel_event
 /ja/docs/Web/API/GlobalEventHandlers/ontransitionend	/ja/docs/Web/API/Element/transitionend_event
 /ja/docs/Web/API/GlobalEventHandlers/onwheel	/ja/docs/Web/API/Element/wheel_event
-/ja/docs/Web/API/GlobalFetch	/ja/docs/Web/API/fetch
-/ja/docs/Web/API/GlobalFetch/fetch	/ja/docs/Web/API/fetch
+/ja/docs/Web/API/GlobalFetch	/ja/docs/Web/API/Window/fetch
+/ja/docs/Web/API/GlobalFetch/fetch	/ja/docs/Web/API/Window/fetch
 /ja/docs/Web/API/HTMLContentElement	/ja/docs/Web/API/HTMLSlotElement
 /ja/docs/Web/API/HTMLDialogElement/cancel_event	/ja/docs/Web/API/HTMLDialogElement
 /ja/docs/Web/API/HTMLElement/animationcancel_event	/ja/docs/Web/API/Element/animationcancel_event
@@ -3216,7 +3216,7 @@
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/ja/docs/Web/API/clearInterval
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/ja/docs/Web/API/clearTimeout
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/ja/docs/Web/API/createImageBitmap
-/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/ja/docs/Web/API/fetch
+/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/ja/docs/Web/API/Window/fetch
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/ja/docs/Web/API/Window/indexedDB
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/ja/docs/Web/API/Window/isSecureContext
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/origin	/ja/docs/Web/API/Window/origin
@@ -3355,6 +3355,7 @@
 /ja/docs/Web/API/event.stopPropagation	/ja/docs/Web/API/Event/stopPropagation
 /ja/docs/Web/API/event.timeStamp	/ja/docs/Web/API/Event/timeStamp
 /ja/docs/Web/API/event.type	/ja/docs/Web/API/Event/type
+/ja/docs/Web/API/fetch	/ja/docs/Web/API/Window/fetch
 /ja/docs/Web/API/form.acceptCharset	/ja/docs/Web/API/HTMLFormElement/acceptCharset
 /ja/docs/Web/API/form.action	/ja/docs/Web/API/HTMLFormElement/action
 /ja/docs/Web/API/form.elements	/ja/docs/Web/API/HTMLFormElement/elements
@@ -4057,6 +4058,7 @@
 /ja/docs/Web/HTML/Element/h6	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/image	/ja/docs/Web/HTML/Element/img
 /ja/docs/Web/HTML/Element/input/datetime	/ja/docs/Web/HTML/Element/input/datetime-local
+/ja/docs/Web/HTML/Element/menuitem	/ja/docs/Web/HTML/Element
 /ja/docs/Web/HTML/Element/video/waiting_event	/ja/docs/Web/API/HTMLMediaElement/waiting_event
 /ja/docs/Web/HTML/Focus_management_in_HTML	/ja/docs/Web/API/Document/hasFocus
 /ja/docs/Web/HTML/Forms	/ja/docs/Learn/Forms
