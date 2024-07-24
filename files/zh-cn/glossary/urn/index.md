@@ -11,4 +11,4 @@ URN（统一资源名称）是标准格式的 URI，指的是资源而不指定�
 
 ## 参见
 
-- 维基百科上的 [URN](https://zh.wikipedia.org/wiki/URN)
+- 维基百科上的 [URN](https://zh.wikipedia.org/wiki/统一资源名称)
