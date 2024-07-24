@@ -45,7 +45,9 @@ getParent(successCallback)
 fileEntry.getParent(
   (parent) => {
     fileEntry.moveTo(parent, "newname.html", (updatedEntry) => {
-      console.log(`ファイル ${fileEntry.name} は newname.html に改名されました。`);
+      console.log(
+        `ファイル ${fileEntry.name} は newname.html に改名されました。`,
+      );
     });
   },
   (error) => {
