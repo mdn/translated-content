@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.bezierCurveTo()`** 方法用于绘制三次[贝赛尔曲线](/zh-CN/docs/Glossary/Bezier_curve)路径。该方法需要三个点。第一、第二个点是控制点，第三个点是结束点。起始点是当前路径的最后一个点，绘制贝赛尔曲线前，可以通过调用 {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} 进行修改。
+Canvas 2D API 的 **`CanvasRenderingContext2D.bezierCurveTo()`** 方法用于将三次[贝赛尔曲线](/zh-CN/docs/Glossary/Bezier_curve)添加到当前子路径中。该方法需要三个点：前两个点是控制点，第三个点是结束点。起始点是当前路径的最后一个点，绘制贝赛尔曲线前，可以通过调用 {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} 进行修改。
 
 ## 语法
 
@@ -38,7 +38,7 @@ bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
 
 ### 如何使用 bezierCurveTo 方法
 
-这个例子展示了如何绘制一个三次贝塞尔曲线。
+此示例展示了如何绘制三次贝塞尔曲线。
 
 #### HTML
 
@@ -59,20 +59,20 @@ let cp1 = { x: 230, y: 30 };
 let cp2 = { x: 150, y: 80 };
 let end = { x: 250, y: 100 };
 
-// 绘制三次贝塞尔曲线
+// 三次贝塞尔曲线
 ctx.beginPath();
 ctx.moveTo(start.x, start.y);
 ctx.bezierCurveTo(cp1.x, cp1.y, cp2.x, cp2.y, end.x, end.y);
 ctx.stroke();
 
-// 绘制起点和终点
+// 起点和终点
 ctx.fillStyle = "blue";
 ctx.beginPath();
 ctx.arc(start.x, start.y, 5, 0, 2 * Math.PI); // 起点
 ctx.arc(end.x, end.y, 5, 0, 2 * Math.PI); // 终点
 ctx.fill();
 
-// 绘制控制点
+// 控制点
 ctx.fillStyle = "red";
 ctx.beginPath();
 ctx.arc(cp1.x, cp1.y, 5, 0, 2 * Math.PI); // 控制点一
@@ -86,9 +86,9 @@ ctx.fill();
 
 {{ EmbedLiveSample('如何使用_bezierCurveTo_方法', 315, 165) }}
 
-### 一个简单的贝塞尔曲线
+### 简单的贝塞尔曲线
 
-这个例子使用 `bezierCurveTo()` 绘制了一个简单的贝塞尔曲线。
+此示例使用 `bezierCurveTo()` 绘制了一条简单的贝塞尔曲线。
 
 #### HTML
 
@@ -112,7 +112,7 @@ ctx.stroke();
 
 #### 结果
 
-{{ EmbedLiveSample('一个简单的贝塞尔曲线', 700, 180) }}
+{{ EmbedLiveSample('简单的贝塞尔曲线', 700, 180) }}
 
 ## 规范
 
