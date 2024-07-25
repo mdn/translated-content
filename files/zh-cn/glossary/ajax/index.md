@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**AJAX**（Asynchronous {{glossary("JavaScript")}} And {{glossary("XML")}} ）是一种在 Web 应用中通过异步发送 HTTP 请求向服务器获取内容，并使用这些新内容更新页面中相关的部分，而无需重新加载整个页面的 Web 开发技术。因为只请求了需要更新的部分，该技术可以让网页更具有响应性。
+**AJAX**（Asynchronous {{glossary("JavaScript")}} And {{glossary("XML")}}）是一种在 Web 应用中通过异步发送 HTTP 请求向服务器获取内容，并使用这些新内容更新页面中相关的部分，而无需重新加载整个页面的 Web 开发技术。因为只请求了需要更新的部分，该技术可以让网页更具有响应性。
 
 AJAX 可以用于创建{{Glossary("SPA", "单页应用")}}——那些使用 AJAX 来更新需要的内容的、由单一文档构成的一整个 Web 应用。
 
