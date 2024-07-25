@@ -60,7 +60,7 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 </p>
 ```
 
-This turns the heading into a link:
+Это превращает заголовок в ссылку:
 {{EmbedLiveSample('Блочные ссылки', '100%', 150)}}
 
 ### Добавляем информацию с помощью атрибута title
@@ -306,7 +306,7 @@ _**Плохой** текст ссылки:_ [Нажми сюда](https://firefo
 ```html
 <a
   href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&amp;subject=The%20subject%20of%20the%20email &amp;body=The%20body%20of%20the%20email">
-  Send mail with cc, bcc, subject and body
+  Отправить письмо с cc, bcc, subject и body
 </a>
 ```
 
