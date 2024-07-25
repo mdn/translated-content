@@ -9,16 +9,16 @@ l10n:
 
 _无障碍_（Accessibility，缩写：**A11Y**）指尽管在物理条件和技术条件限制下，仍能保证网站可用的最佳实践。实现无障碍的最常见做法是确保无障碍技术可以正常运作访问到内容。这些技术包括{{glossary("screen reader", "屏幕阅读器")}}、屏幕放大镜、语音识别工具以及替代输入设备等。
 
-你可以使用类似 [Lighthouse](https://developer.chrome.com/docs/lighthouse/accessibility/scoring) 和 [Firefox 无障碍检查器](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) 这样的工具来衡量你的网站的无障碍性。
+你可以使用类似 [Lighthouse](https://developer.chrome.com/docs/lighthouse/accessibility/scoring) 和 [Firefox 无障碍检查器](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html)这样的工具衡量你的网站的无障碍性能。
 
-{{Glossary("W3C")}} 组织的 {{Glossary("WAI","Web 无障碍倡议")}}（WAI）正式定义和论述了 Web 无障碍技术。
+{{Glossary("W3C")}} 组织的 {{Glossary("WAI","Web 无障碍倡议")}}（WAI）正式地定义和论述了 Web 无障碍技术。
 
 ## 参见
 
 - [无障碍](/zh-CN/docs/Web/Accessibility)
 - [学习无障碍](/zh-CN/docs/Learn/Accessibility)
 - [无障碍富互联网应用（ARIA）](/zh-CN/docs/Web/Accessibility/ARIA)
-- 维基百科的 [Web 无障碍](https://zh.wikipedia.org/wiki/网站无障碍)词条
+- 维基百科的 [Web 无障碍](https://zh.wikipedia.org/wiki/网站无障碍)
 - W3C 上的 [Web 无障碍倡议](https://www.w3.org/WAI/)
 - [WAI-ARIA 推荐](https://www.w3.org/TR/wai-aria/)
 - [Web Accessibility In Mind](https://webaim.org/)
