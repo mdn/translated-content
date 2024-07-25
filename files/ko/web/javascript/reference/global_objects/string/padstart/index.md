@@ -23,13 +23,13 @@ padStart(targetLength, padString)
 
 - `targetLength`
   - : 현재 `str`이 패딩된 후의 결과 문자열의 길이입니다.
-  만약 이 값이 `str.length보`다 작거나 같다면,
-  `str`이 그대로 반환됩니다.
+    만약 이 값이 `str.length보`다 작거나 같다면,
+    `str`이 그대로 반환됩니다.
 - `padString` {{optional_inline}}
   - : 현재 `str`을 채우는 데 사용할 문자열입니다.
-  만약 `padString`이 `targetLength` 대비 너무 길다면,
-  끝 부분이 잘립니다. 기본값은 유니코드
-  "space" 문자 (U+0020)입니다.
+    만약 `padString`이 `targetLength` 대비 너무 길다면,
+    끝 부분이 잘립니다. 기본값은 유니코드
+    "space" 문자 (U+0020)입니다.
 
 ### 반환 값
 
