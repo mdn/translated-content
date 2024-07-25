@@ -2,7 +2,7 @@
 title: FileSystemEntry
 slug: Web/API/FileSystemEntry
 l10n:
-  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
+  sourceCommit: bd15d43260b7e72b1066c04d9d9f3b79129c619c
 ---
 
 {{APIRef("File and Directory Entries API")}}
