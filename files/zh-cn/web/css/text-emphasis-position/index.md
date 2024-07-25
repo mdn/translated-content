@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`text-emphasis-position`** 设置强调标记的位置。强调标记（如注音字符）需要足够空间时，会自动增加行高。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`text-emphasis-position`** 设置强调标记的位置。强调标记（如注音字符）在没有足够空间时，会自动增加行高。
 
 {{EmbedInteractiveExample("pages/css/text-emphasis-position.html")}}
 
@@ -37,13 +37,13 @@ text-emphasis-position: unset;
 ### 取值
 
 - `over`
-  - : 在横排文本中，在文本上方绘制标记。
+  - : 在水平书写模式下，在文本上方绘制标记。
 - `under`
-  - : 在横排文本中，在文本下方绘制标记。
+  - : 在水平书写模式下，在文本下方绘制标记。
 - `right`
-  - : 在竖排文本中，在文本右侧绘制标记。
+  - : 在垂直书写模式下，在文本右侧绘制标记。
 - `left`
-  - : 在竖排文本中，在文本左侧绘制标记。
+  - : 在垂直书写模式下，在文本左侧绘制标记。
 
 ## 描述
 
@@ -105,7 +105,8 @@ text-emphasis-position: unset;
   </tbody>
 </table>
 
-**注意：** `text-emphasis-position` 无法使用简写属性 {{cssxref("text-emphasis")}} 进行设置，因此也无法进行重置。
+> [!NOTE]
+> `text-emphasis-position` 无法使用简写属性 {{cssxref("text-emphasis")}} 进行设置，因此也无法进行重置。
 
 ## 形式定义
 
@@ -117,9 +118,9 @@ text-emphasis-position: unset;
 
 ## 示例
 
-### 优先显示注音标记
+### 优先使用注音标记而不是强调标记
 
-一些编辑器在注音标记与强调标记冲突时倾向于隐藏强调标记。在 HTML 中，可以通过以下 CSS 实现：
+一些编辑器在注音标记与强调标记冲突时倾向于隐藏强调标记。在 HTML 中，可以通过以下样式规则实现：
 
 ```css
 ruby {
@@ -127,13 +128,13 @@ ruby {
 }
 ```
 
-### 优先显示强调标记
+### 优先使用强调标记而不是注音标记
 
 一些编辑器在强调标记与注音标记冲突时倾向于隐藏注音标记。在 HTML 中，可以通过以下 CSS 实现：
 
 ```css
 em {
-  text-emphasis: dot; /* 为 <em> 元素设置强调标记 */
+  text-emphasis: dot; /* 为 <em> 元素设置 text-emphasis */
 }
 
 em rt {
@@ -151,5 +152,4 @@ em rt {
 
 ## 参见
 
-- {{cssxref("text-emphasis-style")}}、{{cssxref("text-emphasis-color")}}——相关全称属性
-- {{cssxref("text-emphasis")}}——相关简写属性
+- 相关全称属性：{{cssxref("text-emphasis-style")}}、{{cssxref("text-emphasis-color")}}，以及对应的简写属性 {{cssxref("text-emphasis")}}。
