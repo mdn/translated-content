@@ -38,9 +38,9 @@ getCalendars()
 - `dangi`
   - : 전통 한국력
 - `ethioaa`
-  - : 에디오피아력, Amete Alem (기원전 약 5493년경")
+  - : 에디오피아력, 아메테 알렘력 (기원전 약 5493년경)
 - `ethiopic`
-  - : 에디오피아력, Amete Mihret (기원전 약 8세기)
+  - : 에디오피아력, 아메테 미흐렛력 (기원후 약 8년경)
 - `gregory`
   - : 그레고리안력
 - `hebrew`
