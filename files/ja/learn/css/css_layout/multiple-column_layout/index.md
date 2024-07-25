@@ -372,7 +372,9 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Fragmented_boxes', '100%', 1000) }}
+{{ EmbedLiveSample('断片化されたボックス', '100%', 1000) }}
+
+### break-inside の設定
 
 このふるまいを制御するために、[CSS 断片化](/ja/docs/Web/CSS/CSS_fragmentation)の仕様のプロパティを使用できます。 この仕様は、段組みとページ付きメディアでのコンテンツの分割を制御するためのプロパティを提供します。 例えば、 {{cssxref("break-inside")}} を `avoid` の値で `.card` のルールに追加することができます。これは見出しとテキストの断片化したくないコンテナーとなります。
 
@@ -487,7 +489,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Setting_break-inside', '100%', 1100) }}
+{{ EmbedLiveSample('break-inside_の設定', '100%', 1100) }}
 
 ## スキルテスト
 

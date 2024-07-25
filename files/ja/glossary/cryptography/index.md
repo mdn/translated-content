@@ -13,7 +13,7 @@ slug: Glossary/Cryptography
    2. [情報セキュリティの基本](/ja/docs/Web/Security/Information_Security_Basics)
    3. [Encrypting and Decrypting](/ja/docs/Archive/Security/Encryption_and_Decryption)
 
-2. [MDN Web Docs 用語集](/ja/docs/Glossary)
+2. 関連用語:
 
    1. {{Glossary("Block cipher mode of operation", "暗号利用モード")}}
    2. {{Glossary("Cipher", "サイファー")}}

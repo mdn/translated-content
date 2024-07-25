@@ -3,6 +3,8 @@ title: Teclado (Keyboard)
 slug: Web/Accessibility/Understanding_WCAG/Keyboard
 ---
 
+{{AccessibilitySidebar}}
+
 Para ser completamente accesible, una página web debe ser operable por alguién utilizando únicamente un teclado para acceder y controlarla. Esto incluye usuarios de lectores de pantalla, pero también puede incluir a quienes tienen dificultades utilizando un dispositivo apuntador como un ratón o una bola de rastreo, o aquellos cuyo ratón no esta funcionando temporalmente, o la gente que simplemente prefiere usar un teclado como entrada siempre que les sea posible.
 
 ## Los elementos enfocables deben tener una semántica interactiva

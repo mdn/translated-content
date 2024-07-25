@@ -3,6 +3,8 @@ title: Key Values
 slug: Web/API/UI_Events/Keyboard_event_key_values
 ---
 
+{{DefaultAPISidebar("UI Events")}}
+
 下列表格列出了不同范畴的键的标准键值，以及这些键的一般作用。对应的，通用平台上可用的虚拟键码也包含其中。
 
 Learn how to use these key values in JavaScript using [KeyboardEvent.key](/zh-CN/docs/Web/API/KeyboardEvent/key)

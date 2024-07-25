@@ -87,7 +87,7 @@ Firefox 68 は、米国時間 2019 年 7 月 9 日 にリリースされまし�
   - {{CSSxRef("scroll-snap-align")}} ([Firefox バグ 1373835](https://bugzil.la/1373835))
 
 - ほかのブラウザーとの互換性のため、{{CSSxRef("-webkit-line-clamp")}} プロパティを実装しました ([Firefox バグ 866102](https://bugzil.la/866102))。
-- {{CSSxRef("::marker")}} 疑似要素 ([Firefox バグ 205202](https://bugzil.la/205202)) と、::marker のアニメーション ([Firefox バグ 1538618](https://bugzil.la/1538618)) をサポートしました。
+- {{CSSxRef("::marker")}} 擬似要素 ([Firefox バグ 205202](https://bugzil.la/205202)) と、::marker のアニメーション ([Firefox バグ 1538618](https://bugzil.la/1538618)) をサポートしました。
 - {{CSSxRef("currentColor")}} を計算値に変更しました ({{cssxref("color")}} プロパティを除く) ([Firefox バグ 760345](https://bugzil.la/760345))。
 - 長さの単位 'ch' を、仕様書に合うよう修正しました ('0' のグリフがない場合は高さにフォールバックする) ([Firefox バグ 282126](https://bugzil.la/282126))。
 - {{CSSxRef("counter-set")}} プロパティを実装しました ([Firefox バグ 1518201](https://bugzil.la/1518201))。

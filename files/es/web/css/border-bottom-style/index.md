@@ -3,6 +3,8 @@ title: border-bottom-style
 slug: Web/CSS/border-bottom-style
 ---
 
+{{CSSRef}}
+
 << [Volver](/es/Guía_de_referencia_de_CSS)
 
 ### Resumen

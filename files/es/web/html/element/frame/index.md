@@ -3,6 +3,8 @@ title: frame
 slug: Web/HTML/Element/frame
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - **frame** -_marcos_ . Define la organización de los marcos dentro de la ventana del usuario.

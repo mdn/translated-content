@@ -1,5 +1,5 @@
 ---
-title: Server-side website programming first steps
+title: 서버 사이드 웹사이트 프로그래밍 첫 걸음
 slug: Learn/Server-side/First_steps
 ---
 

@@ -3,7 +3,7 @@ title: "Element: requestFullscreen() メソッド"
 short-title: requestFullscreen()
 slug: Web/API/Element/requestFullscreen
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: bafc473d01411340a547b9fae11702ead2b28016
 ---
 
 {{APIRef("Fullscreen API")}}
@@ -28,12 +28,14 @@ requestFullscreen(options)
       - : 要素が全画面モードのときにナビゲーション UI を表示するかどうかを制御します。
         既定値では `"auto"` であり、これはブラウザーが何をすべきかを決定することを示す。
         - `"hide"`
-          - : このとき、ブラウザーのナビゲーションインターフェースは非表示になり、画面全体が要素の表示に割り当てられます。
+          - : このとき、ブラウザーのナビゲーションインターフェイスは非表示になり、画面全体が要素の表示に割り当てられます。
         - `"show"`
           - : ブラウザーは、ページナビゲーションコントロールや、場合によっては他のユーザーインターフェイスを表示します。要素の寸法（および画面の知覚サイズ）は、このユーザーインターフェイスのためのスペースを残すために締め付けられます。
         - `"auto"`
           - : 上記の設定のうち、どれを適用するかはブラウザーが選択します。
             これが既定値です。
+    - `screen` {{optional_inline}} {{experimental_inline}}
+      - : 要素を全画面モードで表示したい画面を指定します。これは {{domxref("ScreenDetailed")}} オブジェクトを値として取り、選択された画面を表します。
 
 ### 返値
 
@@ -123,6 +125,23 @@ elem
 ```
 
 プロミスの解決ハンドラーは何もしませんが、プロミスが拒否された場合は {{DOMxRef("Window.alert", "alert()")}} を呼び出すことでエラーメッセージが表示します。
+
+### screen オプションの使用
+
+要素を OS の第 1 画面で全画面にしたい場合は、以下のようなコードを使用することで実現できます。
+
+```js
+try {
+  const primaryScreen = (await getScreenDetails()).screens.find(
+    (screen) => screen.isPrimary,
+  );
+  await document.body.requestFullscreen({ screen: primaryScreen });
+} catch (err) {
+  console.error(err.name, err.message);
+}
+```
+
+{{domxref("Window.getScreenDetails()")}} メソッドを使用して、現在の端末の {{domxref("ScreenDetails")}} オブジェクトを取得します。これには、利用できるさまざまな画面を表す {{domxref("ScreenDetailed")}} オブジェクトが格納されています。
 
 ## 仕様書
 
