@@ -20931,16 +20931,6 @@
     "modified": "2020-10-15T21:19:27.214Z",
     "contributors": ["mfuji09", "YuichiNukiyama", "yyss", "ethertank"]
   },
-  "Web/HTML/Element/menuitem": {
-    "modified": "2020-11-28T12:02:55.965Z",
-    "contributors": [
-      "mfuji09",
-      "YuichiNukiyama",
-      "yyss",
-      "hamasaki",
-      "yuji38kwmt"
-    ]
-  },
   "Web/HTML/Element/meta": {
     "modified": "2020-10-15T21:26:24.555Z",
     "contributors": ["mfuji09", "yyss", "mizunashi_mana", "hashedhyphen"]
