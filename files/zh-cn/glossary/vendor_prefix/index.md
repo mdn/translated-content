@@ -11,17 +11,17 @@ l10n:
 
 Web 开发者一直在生产环境的网站上使用这些实验性代码，这使得浏览器厂商更难保证浏览器兼容性和处理新特性；这也伤害了更小众的浏览器，它们被迫添加其他浏览器前缀以渲染热门网站。
 
-现在，浏览器引擎的实验性功能被“放在一个标记（flag）后面”。这使得开发者可以更改浏览器配置来测试即将到来的功能。浏览器现在会将实验性功能添加在需要用户自行设置偏好或标记（flag）的地方，同时编写一个更小规模的规范，以更快达到稳定状态。
+现在，浏览器引擎的实验性功能被“放在一个标记（flag）后面”。这使得开发者可以更改浏览器配置来测试即将到来的功能。浏览器现在会将实验性特性添加在需要用户自行设置偏好或标记（flag）的地方，同时编写一个更小规模的规范，以更快达到稳定状态。
 
 ## CSS 前缀
 
 你在旧代码中可能会看到的最常见的浏览器 CSS 前缀包括：
 
-- `-webkit-`（谷歌，Safari，新版 Opera 浏览器，以及几乎所有 iOS 系统中的浏览器（包括 iOS 系统中的火狐浏览器）；基本上所有基于 WebKit 内核的浏览器）
+- `-webkit-`（Chrome、Safari、新版 Opera 浏览器以及几乎所有 iOS 系统中的浏览器（包括 iOS 系统中的火狐浏览器）；简单的说，所有基于 WebKit 内核的浏览器）
 - `-moz-`（火狐浏览器）
 - `-o-`（旧版 Opera 浏览器）
 - `-ms-`（IE 浏览器 和 Edge 浏览器）
-- `-webkit-`（Chrome、Safari，更新版本的 Opera 哥 Edge，几乎所有 iOS 浏览器（包括 iOS 系统中的 Firefox）；基本上所有基于 WebKit 或 Chromium 内核的浏览器）
+- `-webkit-`（Chrome、Safari，新版 Opera 浏览器、Edge 以及几乎所有 iOS 浏览器（包括 iOS 系统中的 Firefox）；也就是基本上所有基于 WebKit 或 Chromium 内核的浏览器）
 
 示例：
 
@@ -33,7 +33,7 @@ Web 开发者一直在生产环境的网站上使用这些实验性代码，这�
 transition: all 4s ease;
 ```
 
-如果你在代码库中遇到上面的代码，你可以安全地删除除最后一行之外的所有内容。所有浏览器都支持[过渡](/zh-CN/docs/Web/CSS/transition#browser_compatibility)而再无需浏览器引擎前缀：
+如果你在代码库中遇到上面的代码，你可以安全地删除除最后一行之外的所有内容，因为无需浏览器引擎前缀，所有浏览器都已支持[过渡](/zh-CN/docs/Web/CSS/transition#browser_compatibility)：
 
 ```css
 transition: all 4s ease;
@@ -47,7 +47,7 @@ transition: all 4s ease;
 
 需要使用大写的前缀修饰接口名：
 
-- `WebKit`（谷歌，Safari, 新版 Opera 浏览器，以及几乎所有 iOS 系统中的浏览器（包括 iOS 系统中的火狐浏览器）; 简单的说，所有基于 WebKit 内核的浏览器）
+- `WebKit`（Chrome、Safari、新版 Opera 浏览器以及几乎所有 iOS 系统中的浏览器（包括 iOS 系统中的火狐浏览器）；简单的说，所有基于 WebKit 内核的浏览器）
 - `Moz`（火狐浏览器）
 - `O`（旧版 Opera 浏览器）
 - `MS`（IE 浏览器 和 Edge 浏览器）
@@ -56,7 +56,7 @@ transition: all 4s ease;
 
 需要使用小写的前缀修饰属性或者方法
 
-- `webkit`（谷歌，Safari, 新版 Opera 浏览器，以及几乎所有 iOS 系统中的浏览器（包括 iOS 系统中的火狐浏览器）; 简单的说，所有基于 WebKit 内核的浏览器）
+- `webkit`（Chrome、Safari、新版 Opera 浏览器以及几乎所有 iOS 系统中的浏览器（包括 iOS 系统中的火狐浏览器）；简单的说，所有基于 WebKit 内核的浏览器）
 - `moz`（火狐浏览器）
 - `o`（旧版 Opera 浏览器）
 - `ms`（IE 浏览器 和 Edge 浏览器）
