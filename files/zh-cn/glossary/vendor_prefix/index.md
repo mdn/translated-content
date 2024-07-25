@@ -19,8 +19,8 @@ Web 开发者一直在生产环境的网站上使用这些实验性代码，这�
 
 - `-webkit-`（Chrome、Safari、新版 Opera 浏览器以及几乎所有 iOS 系统中的浏览器（包括 iOS 系统中的火狐浏览器）；简单的说，所有基于 WebKit 内核的浏览器）
 - `-moz-`（火狐浏览器）
-- `-o-`（旧版 Opera 浏览器）
-- `-ms-`（IE 浏览器 和 Edge 浏览器）
+- `-o-`（旧版、WebKit 之前的 Opera 浏览器）
+- `-ms-`（IE 浏览器和 Chromium 之前的 Edge 浏览器）
 
 示例：
 
@@ -48,8 +48,8 @@ transition: all 4s ease;
 
 - `WebKit`（Chrome、Safari、新版 Opera 浏览器以及几乎所有 iOS 系统中的浏览器（包括 iOS 系统中的火狐浏览器）；简单的说，所有基于 WebKit 内核的浏览器）
 - `Moz`（火狐浏览器）
-- `O`（旧版 Opera 浏览器）
-- `MS`（IE 浏览器 和 Edge 浏览器）
+- `O`（旧版、WebKit 之前的 Opera 浏览器）
+- `MS`（IE 浏览器和 Chromium 之前的 Edge 浏览器）
 
 ### 属性和方法前缀
 
@@ -57,8 +57,8 @@ transition: all 4s ease;
 
 - `webkit`（Chrome、Safari、新版 Opera 浏览器以及几乎所有 iOS 系统中的浏览器（包括 iOS 系统中的火狐浏览器）；简单的说，所有基于 WebKit 内核的浏览器）
 - `moz`（火狐浏览器）
-- `o`（旧版 Opera 浏览器）
-- `ms`（IE 浏览器 和 Edge 浏览器）
+- `o`（旧版、WebKit 之前的 Opera 浏览器）
+- `ms`（IE 浏览器和 Chromium 之前的 Edge 浏览器）
 
 示例：
 
