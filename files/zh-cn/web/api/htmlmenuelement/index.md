@@ -31,7 +31,3 @@ _`HTMLMenuElement` 没有实现特定的方法。_
 ## 浏览器兼容性
 
 {{Compat}}
-
-## 参见
-
-- {{DOMxRef("HTMLMenuItemElement")}}
