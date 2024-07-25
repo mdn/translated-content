@@ -33,7 +33,9 @@ el.addEventListener("touchcancel", handleCancel);
 - 当用户停止触摸屏幕时触发 [touchend](/zh-CN/docs/Web/API/Element/touchend_event) 事件。
 - 当触摸被取消，例如当用户将他们的手指移动到屏幕之外时触发 [touchcancel](/zh-CN/docs/Web/API/Element/touchcancel_event) 事件。
 
-> [!NOTE] > [触摸事件](/zh-CN/docs/Web/API/Touch_events)参考文章提供了更多的实例和介绍。
+> [!NOTE]
+>
+> [触摸事件](/zh-CN/docs/Web/API/Touch_events)参考文章提供了更多的实例和介绍。
 
 ### 纯 JavaScript 示例
 
