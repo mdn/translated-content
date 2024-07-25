@@ -50,7 +50,7 @@ rect2.bind("EnterFrame", function () {
 
 {{ EmbedLiveSample('轴对齐包围盒', '700', '300') }}
 
-> **备注：** [另一个不使用 Canvas 或外部库的示例](https://jsfiddle.net/jlr7245/217jrozd/3/)。
+> [!NOTE] > [另一个不使用 Canvas 或外部库的示例](https://jsfiddle.net/jlr7245/217jrozd/3/)。
 
 ## 圆形碰撞
 
@@ -122,7 +122,7 @@ circle2.bind("EnterFrame", function () {
 
 {{ EmbedLiveSample('圆形碰撞', '700', '300') }}
 
-> **备注：** [另一个不使用 Canvas 或外部库的示例](https://jsfiddle.net/jlr7245/teb4znk0/20/)
+> [!NOTE] > [另一个不使用 Canvas 或外部库的示例](https://jsfiddle.net/jlr7245/teb4znk0/20/)
 
 ## 分离轴定理
 
