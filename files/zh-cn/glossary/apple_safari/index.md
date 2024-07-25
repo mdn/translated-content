@@ -2,7 +2,7 @@
 title: Apple Safari
 slug: Glossary/Apple_Safari
 l10n:
-  sourceCommit: 09e550415b412a74c922cb48df92a85b397523ad
+  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
 {{GlossarySidebar}}
@@ -14,10 +14,10 @@ Safari 使用开源的 {{glossary("WebKit")}} 渲染引擎，该引擎源自 [KH
 ## 参见
 
 - 维基百科上的 [Safari](https://zh.wikipedia.org/wiki/Safari)
-- apple.com.cn 上的 [Safari 浏览器](https://www.apple.com.cn/safari/)
-- [WebKit 项目](https://www.webkit.org/)
-- [WebKit 构建归档](https://webkit.org/build-archives/)
-- [提交 Safari Bug](https://bugs.webkit.org/)
-- 相关术语：
-  - {{glossary("Browser")}}
-  - {{glossary("WebKit")}}
+  - apple.com.cn 上的 [Safari 浏览器](https://www.apple.com.cn/safari/)
+  - [WebKit 项目](https://www.webkit.org/)
+  - [WebKit 构建归档](https://webkit.org/build-archives/)
+  - [提交 Safari Bug](https://bugs.webkit.org/)
+  - 相关术语：
+    - {{glossary("Browser")}}
+    - {{glossary("WebKit")}}
