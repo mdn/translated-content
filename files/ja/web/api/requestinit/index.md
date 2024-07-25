@@ -2,7 +2,7 @@
 title: RequestInit
 slug: Web/API/RequestInit
 l10n:
-  sourceCommit: 80d3325431bf238f06c986c2dc78944ac5227372
+  sourceCommit: c0e43030605b6f12bc4d550c0d5b8bf8a633eff3
 ---
 
 {{APIRef("Fetch API")}}
