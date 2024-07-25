@@ -77,7 +77,7 @@ function decimalAdjust(type, value, exp) {
   }
   const [magnitude, exponent = 0] = value.toString().split("e");
   const adjustedValue = Math[type](`${magnitude}e${exponent - exp}`);
-  // Shift back
+  // 뒤로 이동
   const [newMagnitude, newExponent = 0] = adjustedValue.toString().split("e");
   return Number(`${newMagnitude}e${+newExponent + exp}`);
 }
