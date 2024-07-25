@@ -56,7 +56,7 @@ promise.then(
 );
 ```
 
-因为 `finally()` 调用 `then()`，所以它支持子类化。此外，请注意上面的 {{jsxref("Promise.resolve()")}} 调用——实际上，`onFinally()` 的返回值是使用与 `Promise.resolve()` 相同的算法解决的，但用于构造解决的 promise 的实际构造函数将是子类。`finally()` 通过 [`promise.constructor[@@species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/@@species) 获取构造函数。
+因为 `finally()` 调用 `then()`，所以它支持子类化。此外，请注意上面的 {{jsxref("Promise.resolve()")}} 调用——实际上，`onFinally()` 的返回值是使用与 `Promise.resolve()` 相同的算法解决的，但用于构造解决的 promise 的实际构造函数将是子类。`finally()` 通过 [`promise.constructor[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species) 获取构造函数。
 
 ## 示例
 

@@ -15,7 +15,7 @@ Antes de comenzar este módulo, deberías:
 2. Un entorno básico de trabajo configurado, como se detalla en la sección de [Instalación de software básico](/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico), y saber como crear y administrar archivos, o lo puedes ver en el módulo [Manejando los archivos](/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos).
 3. Conocimiento básico de HTML, como se muestra en [Introducción a HTML](/es/docs/Learn/HTML/Introduccion_a_HTML).
 
-> **Nota:** Si estás trabajando en un computador/tabla/otro dispositivo en el cual no puedes crear o almacenar tus propios archivos, podrías probar (la mayoría) de los ejemplos de código en un editor de código en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
+> **Nota:** Si estás trabajando en un computador/tablet/otro dispositivo en el cual no puedes crear o almacenar tus propios archivos, podrías probar (la mayoría) de los ejemplos de código en un editor de código en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 
@@ -24,7 +24,7 @@ Este módulo contiene los siguientes artículos, que te guiarán a través de to
 - [¿Qué es CSS?](/es/docs/Learn/CSS/First_steps/Qu%C3%A9_es_CSS)
   - : **{{Glossary("CSS")}}** (Cascading Style Sheets) te permite crear páginas Webs atractivas, pero ¿Cómo funciona por debajo? Este artículo explica que es CSS, con ejemplos simples de sintaxis, y cubre algunos temas clave sobre este lenguaje.
 - [Empezar con CSS](/es/docs/Learn/CSS/First_steps/Comenzando_CSS)
-  - : En este artículo se tomarná un documento HTML simple y se le aplicará CSS, aprendiendo algunas cosas prácticas mientras lo haces.
+  - : En este artículo se tomará un documento HTML simple y se le aplicará CSS, aprendiendo algunas cosas prácticas mientras lo haces.
 - [Como se estructura CSS](/es/docs/Learn/CSS/First_steps/Como_se_estructura_CSS)
   - : Ahora que sabes que es CSS y de su uso básico, es momento de sumergirnos un poco más dentro de la estructura del propio lenguaje. Ya hemos conocido muchos de los conceptos discutidos aquí; puedes volver a este resumen en el futuro si necesitas reforzar conocimientos o si tienes dudas sobre algun concepto.
 - [Como trabaja CSS](/es/docs/Learn/CSS/First_steps/Como_funciona_CSS)

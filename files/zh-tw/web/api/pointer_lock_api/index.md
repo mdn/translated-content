@@ -3,7 +3,7 @@ title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
 ---
 
-{{ SeeCompatTable() }}
+{{DefaultAPISidebar("Pointer Lock API")}}{{ SeeCompatTable() }}
 
 **Pointer lock** (之前稱為 Mouse lock) 提供「隨時間經過所產生的滑鼠位移資訊 (即 deltas)」的輸入方法，而不只是滑鼠游標的絕對位置而已。此函式可存取基本的滑鼠位移、將滑鼠事件的目標鎖定至單一元素、讓滑鼠單一方向的位移距離不再受限、將游標移除到視點之外。
 

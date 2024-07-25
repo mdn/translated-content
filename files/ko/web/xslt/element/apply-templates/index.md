@@ -3,7 +3,7 @@ title: apply-templates
 slug: Web/XSLT/Element/apply-templates
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:apply-templates>` 요소는 입력 트리 안 노드 집합을 선택하고 그 집합에 알맞은 템플릿을 적용하도록 처리기에게 지시합니다.
 

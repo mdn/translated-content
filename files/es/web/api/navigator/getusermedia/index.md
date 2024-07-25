@@ -3,6 +3,8 @@ title: Navigator.getUserMedia
 slug: Web/API/Navigator/getUserMedia
 ---
 
+{{APIRef("Media Capture and Streams")}}
+
 Pide al usuario permiso para usar un dispositivo multimedia como una cámara o micrófono. Si el usuario concede este permiso, el successCallback es invocado en la aplicación llamada con un objeto [LocalMediaStream](/es/docs/WebRTC/MediaStream_API#LocalMediaStream) como argumento.
 
 ## Sintaxis

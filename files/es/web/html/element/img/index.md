@@ -3,6 +3,8 @@ title: "<img>: El elemento incrustado de imagen"
 slug: Web/HTML/Element/img
 ---
 
+{{HTMLSidebar}}
+
 El elemento de imagen HTML **`<img>`** representa una imagen en el documento.
 
 > **Nota:**

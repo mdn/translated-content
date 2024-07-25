@@ -1,6 +1,9 @@
 ---
-title: DelayNode.delayTime
+title: "DelayNode: delayTime プロパティ"
+short-title: delayTime
 slug: Web/API/DelayNode/delayTime
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
 {{ APIRef("Web Audio API") }}

@@ -67,8 +67,8 @@ execRecursively((obj) => console.log(obj), foo);
 
 - {{jsxref("Object/constructor", "WeakSet.prototype.constructor")}}
   - : 创建了该实例对象的构造函数。对于 `WeakSet` 实例，初始值是 {{jsxref("WeakSet/WeakSet", "WeakSet")}} 构造函数。
-- `WeakSet.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"WeakSet"`。该属性被 {{jsxref("Object.prototype.toString()")}} 所使用。
+- `WeakSet.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"WeakSet"`。该属性被 {{jsxref("Object.prototype.toString()")}} 所使用。
 
 ## 实例方法
 

