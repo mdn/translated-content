@@ -2,7 +2,7 @@
 title: 实现特性检测
 slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 l10n:
-  sourceCommit: 1a14c35920c4896d74def784a9e73c7aef525457
+  sourceCommit: cde9330e9bbaddea72febf44dcc3a7db16fe1a11
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -157,7 +157,8 @@ CSS 有一个原生的特性检测机制：{{cssxref("@supports")}} at-规则。
     }
     ```
 
-    > **备注：** 上例中的双非运算符（`!!`）是一种将返回值强制转换为“适当的”布尔值的方法，而不是{{glossary("Truthy","真值")}}/{{glossary("Falsy","假值")}}，后者可能使结果偏离。
+    > [!NOTE]
+    > 上例中的双非运算符（`!!`）是一种将返回值强制转换为“适当的”布尔值的方法，而不是{{glossary("Truthy","真值")}}/{{glossary("Falsy","假值")}}，后者可能使结果偏离。
 
 - 方法在元素上的特定返回值
 
