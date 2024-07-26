@@ -210,7 +210,8 @@ MathML 表格元素与 [HTML 表格](/zh-CN/docs/Learn/HTML/Tables)的元素类�
 
 {{EmbedLiveSample('允许单元格横跨多行多列', 700, 200)}}
 
-> **备注：** 出于历史原因，MathML 中用于跨列的属性被称为 `columnspan` 而不是 `colspan`。
+> [!NOTE]
+> 出于历史原因，MathML 中用于跨列的属性被称为 `columnspan` 而不是 `colspan`。
 
 ## 高级布局用法
 
@@ -293,7 +294,8 @@ MathML 表格元素与 [HTML 表格](/zh-CN/docs/Learn/HTML/Tables)的元素类�
 
 {{ EmbedLiveSample('高级布局用法', 700, 200) }}
 
-> **警告：** [`<mtable>`](/zh-CN/docs/Web/MathML/Element/mtable) 文档中记录了更多高级布局选项，如对齐或间距等特殊属性。这些属性起源于 CSS 一类事物之前，最初设计用于不支持 CSS 的渲染器。然而，并非所有浏览器都实现了这些属性。将来，可能会用基于 CSS 的替代方案取代仅用于布局目的（即非实际矩阵对象）的 `<mtable>` 的用法。
+> [!WARNING]
+> [`<mtable>`](/zh-CN/docs/Web/MathML/Element/mtable) 文档中记录了更多高级布局选项，如对齐或间距等特殊属性。这些属性起源于 CSS 一类事物之前，最初设计用于不支持 CSS 的渲染器。然而，并非所有浏览器都实现了这些属性。将来，可能会用基于 CSS 的替代方案取代仅用于布局目的（即非实际矩阵对象）的 `<mtable>` 的用法。
 
 ## 总结
 

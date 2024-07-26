@@ -78,7 +78,8 @@ slug: Learn/MathML/First_steps/Scripts
 - `<msubsup>` 元素的第二个和第三个子元素分别作为其第一个子元素的下标和上标附加。
 - 上下标内的文本会缩小显示。
 
-> **备注：** MathML 元素 `<msub>` 和 `<msup>` 与 HTML 元素 [`<sub>`](/zh-CN/docs/Web/HTML/Element/sub) 和 [`<sup>`](/zh-CN/docs/Web/HTML/Element/sup) 不同。它们允许开发者将任意的 MathML 子树作为附加符号，而不仅仅是文本。
+> [!NOTE]
+> MathML 元素 `<msub>` 和 `<msup>` 与 HTML 元素 [`<sub>`](/zh-CN/docs/Web/HTML/Element/sub) 和 [`<sup>`](/zh-CN/docs/Web/HTML/Element/sup) 不同。它们允许开发者将任意的 MathML 子树作为附加符号，而不仅仅是文本。
 
 ## 正下标和正上标
 
@@ -359,7 +360,8 @@ math {
 
 可以看出底部括号“⎵”和右箭头“→”在水平方向上会延伸以覆盖被替代值的宽度。回想一下，[一些竖直运算符可以伸展](/zh-CN/docs/Learn/MathML/First_steps/Text_containers#active_learning_stretchy_operators)，以覆盖 `<mrow>` 中非伸展兄弟节点的高度。类似地，一些水平运算符可以伸展以覆盖 `<munder>`、`<mover>` 或 `<munderover>` 元素中非伸展兄弟节点的宽度。
 
-> **备注：** 伸展适用于 `<munder>`、`<mover>` 或 `<munderover>` 元素的任何子元素，不仅仅是正下标或正上标。
+> [!NOTE]
+> 伸展适用于 `<munder>`、`<mover>` 或 `<munderover>` 元素的任何子元素，不仅仅是正下标或正上标。
 
 ### 大型运算符和极限
 
@@ -468,7 +470,8 @@ math {
 - _largeop_：如果 `<math>` 标签具有 `display="block"` 属性，则使用更大的字形绘制运算符。
 - _movablelimits_：如果 `<math>` 标签没有 `display="block"` 属性，则将附加在运算符上的正下标和正上标分别渲染为下标和上标。
 
-> **备注：** _largeop_ 属性实际上与附加符号无关，尽管具有此属性的运算符通常会有附加符号。_movablelimits_ 属性也适用于 `<munder>` 和 `<mover>` 元素。
+> [!NOTE]
+> _largeop_ 属性实际上与附加符号无关，尽管具有此属性的运算符通常会有附加符号。_movablelimits_ 属性也适用于 `<munder>` 和 `<mover>` 元素。
 
 ## 总结
 
