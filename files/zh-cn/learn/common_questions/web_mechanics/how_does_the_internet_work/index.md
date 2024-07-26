@@ -41,7 +41,8 @@ l10n:
 
 当两台电脑需要通信的时候，你必须要连接他们，无论通过有线方式（通常是[网线](http://en.wikipedia.org/wiki/Ethernet_crossover_cable)）或是无线方式（比如 [WiFi](https://zh.wikipedia.org/wiki/Wi-Fi) 或[蓝牙](https://zh.wikipedia.org/wiki/藍牙)）。所有现代电脑都支持这些连接。
 
-> **备注：** 接下来的内容，我们将只谈论有线连接，而无线连接的原理与此相同。
+> [!NOTE]
+> 接下来的内容，我们将只谈论有线连接，而无线连接的原理与此相同。
 
 ![两台电脑连接在一起](internet-schema-1.png)
 

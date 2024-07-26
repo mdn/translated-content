@@ -1,22 +1,24 @@
 ---
 title: セレクターを使用した DOM 要素の特定
 slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+l10n:
+  sourceCommit: e099e74fe5c09c46f0dfe044894692721a713d29
 ---
 
 {{DefaultAPISidebar("DOM")}}
 
 セレクター API により提供されるメソッドを用いると、一連の[セレクター](/ja/docs/Web/CSS/CSS_selectors)に一致する要素 ({{domxref("Element")}}) ノードを DOM から簡単かつ素早く取り出すことができます。これは過去の技術よりもはるかに速く、必要な場所で、例えば、 JavaScript コードでループを使用して検索する必要があるアイテムを特定するために使います。
 
-## NodeSelector インターフェース
+## NodeSelector インターフェイス
 
-この仕様書では、 {{domxref("Document")}}, {{domxref("DocumentFragment")}}, {{domxref("Element")}} インターフェースを実装しているすべてのオブジェクトに対して 2 つの新しいメソッドを追加しています。
+この仕様書では、 {{domxref("Document")}}, {{domxref("DocumentFragment")}}, {{domxref("Element")}} インターフェイスを実装しているすべてのオブジェクトに対して 2 つの新しいメソッドを追加しています。
 
 - {{domxref("Element.querySelector", "querySelector()")}}
   - : ノードのサブツリー内で最初に一致した {{domxref("Element")}} ノードを返します。一致する要素がなかった場合は `null` を返します。
 - {{domxref("Element.querySelectorAll", "querySelectorAll()")}}
   - : ノードのサブツリー内で一致するすべての `Element` ノードを含む {{domxref("NodeList")}} を返すか、一致するものが見つからなかった場合は空の `NodeList` を返します。
 
-> **メモ:** {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} が返す {{domxref("NodeList")}} はライブではありません。すなわち、 DOM で行われた変更がコレクションに反映されません。これは他の DOM クエリメソッドがライブのノードリストを返すのと異なります。
+> **メモ:** {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} が返す {{domxref("NodeList")}} はライブではありません。すなわち、 DOM で行われた変更がコレクションに反映されません。これは他の DOM クエリーメソッドがライブのノードリストを返すのと異なります。
 
 例や詳細については、 {{domxref("Element.querySelector()")}} および {{domxref("Element.querySelectorAll()")}} メソッドの記事を参照してください。
 

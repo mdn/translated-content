@@ -1342,7 +1342,7 @@ Référence :
 - [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
 - [Using IndexedDB in chrome](/fr/docs/IndexedDB/Using_IndexedDB_in_chrome)
 - [Using JavaScript generators in Firefox](/fr/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox)
-- IndexedDB [interface files](https://mxr.mozilla.org/mozilla-central/find?text=&string=dom%2FindexedDB%2F.*%5C.idl&regexp=1) dans le code source de Firefox
+- IndexedDB [interface files](https://searchfox.org/mozilla-central/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true) dans le code source de Firefox
 
 Tutoriels :
 

@@ -14,7 +14,7 @@ slug: Glossary/Graceful_degradation
 1. Wikipedia 上の [Graceful degradation](https://en.wikipedia.org/wiki/Graceful_degradation) (英語)
 2. [一般的な HTML と CSS の問題への対処](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
 3. [機能検出の実装](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-4. [MDN Web Docs 用語集](/ja/docs/Glossary)
+4. 関連用語:
 
    1. {{Glossary("Graceful degradation", "グレースフルデグラデーション")}}
    2. {{Glossary("Polyfill", "ポリフィル")}}
