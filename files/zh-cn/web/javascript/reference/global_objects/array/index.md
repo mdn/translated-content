@@ -377,7 +377,8 @@ f("a", "b"); // 'a+b'
 
 本节提供一些 JavaScript 中常见的数组操作示例。
 
-> **备注：** 如果你还不熟悉数组的基础知识，可以考虑先读一下 [JavaScript 第一步：数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)，它解释了[数组是什么](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays#数组是什么？)，还包括其他常见的数组操作示例。
+> [!NOTE]
+> 如果你还不熟悉数组的基础知识，可以考虑先读一下 [JavaScript 第一步：数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)，它解释了[数组是什么](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays#数组是什么？)，还包括其他常见的数组操作示例。
 
 ### 创建数组
 
@@ -794,7 +795,8 @@ console.log(execResult); // [ "dbBd", "bB", "d" ]
 - 对已访问索引的变更不会导致再次对其调用 `callbackFn`。
 - 如果数组中存在但未访问的元素被 `callbackFn` 更改，则传递给 `callbackFn` 的值将是访问该元素时的值。删除的元素不会被访问。
 
-> **警告：** 上述类型的并发修改通常会导致代码难以理解，需要避免（特殊情况除外）。
+> [!WARNING]
+> 上述类型的并发修改通常会导致代码难以理解，需要避免（特殊情况除外）。
 
 下面的示例使用 `forEach` 方法作为一个例子，但以升序访问索引的其他的方法以相同的方式工作。我们将先定义一个帮助函数：
 
