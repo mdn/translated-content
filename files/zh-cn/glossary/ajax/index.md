@@ -20,6 +20,6 @@ AJAX 可以用于创建{{Glossary("SPA", "单页应用")}}——那些使用 AJA
 - [从服务器获取数据](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - {{DOMxRef("Fetch API")}}
 - 相关术语：
-    - {{Glossary("SPA", "单页应用")}}
+  - {{Glossary("SPA", "单页应用")}}
 - [使用 Fetch API](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
 - 维基百科上的 [AJAX](https://zh.wikipedia.org/wiki/AJAX)
