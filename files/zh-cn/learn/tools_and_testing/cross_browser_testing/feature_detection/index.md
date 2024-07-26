@@ -7,21 +7,21 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-功能检测包括确定浏览器是否支持某个代码块，并根据支持（或不支持）运行不同的代码，这样浏览器就能始终提供正常的使用体验，而不会在某些浏览器中崩溃或出错。本文详细介绍了如何编写自己的简单特征检测、如何使用库加快实现速度，以及原生的特征检测特性（如 `@supports`）。
+特性检测包括确定浏览器是否支持某个代码块，并根据支持（或不支持）运行不同的代码，这样浏览器就能始终提供正常的使用体验，而不会在某些浏览器中崩溃或出错。本文详细介绍了如何编写自己的简单特征检测、如何使用库加快实现速度，以及原生的特征检测特性（如 `@supports`）。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>
       <td>
-        熟悉 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
+        熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
           href="/zh-CN/docs/Learn/CSS"
           >CSS</a
         >
-        以及 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言的核心知识，对<a
+        以及 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解顶层的<a
           href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
-          >跨浏览器测试</a
-        >原则有充分了解。
+          >跨浏览器测试原则</a
+        >。
       </td>
     </tr>
     <tr>
@@ -35,9 +35,9 @@ l10n:
 
 ## 特性检测的概念
 
-特性检测的理念在于，通过执行一个测试来确认当前浏览器是否支持某项功能。然后，根据测试结果有条件地执行代码，确保在*支持*该功能的浏览器和*不支持*该功能的浏览器中都能提供一个可接受的用户体验。如果不采取这种做法，那么在那些不支持你代码中所用功能的浏览器上，你的网站将无法正确显示，从而导致糟糕的用户体验。
+特性检测的理念在于，通过执行一个测试来确认当前浏览器是否支持某项特性。然后，根据测试结果有条件地执行代码，确保在*支持*该特性的浏览器和*不支持*的浏览器中都能提供一个可接受的用户体验。如果不采取这种做法，那么在那些不支持你代码中所用特性的浏览器上，你的网站将无法正确显示，从而导致糟糕的用户体验。
 
-让我们回顾一下我们在[处理常见 JavaScript 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#特性检测)一文中提及的例子——[地理位置 API](/zh-CN/docs/Web/API/Geolocation_API)（它能够访问运行网页浏览器的设备的位置数据），其主要使用入口是全局 [Navigator](/zh-CN/docs/Web/API/Navigator) 对象上的 `geolocation` 属性。因此，你可以使用类似以下的方法来检测浏览器是否支持地理位置特性：
+让我们回顾一下我们在[处理常见 JavaScript 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#特性检测)一文中提及的例子——[地理位置 API](/zh-CN/docs/Web/API/Geolocation_API)（它能够访问运行网页浏览器的设备的位置数据），其主要使用入口点是全局 [Navigator](/zh-CN/docs/Web/API/Navigator) 对象上的 `geolocation` 属性。因此，你可以使用类似以下的方法来检测浏览器是否支持地理位置特性：
 
 ```js
 if ("geolocation" in navigator) {
@@ -59,16 +59,16 @@ if ("geolocation" in navigator) {
 
 你可以通过在 JavaScript 中测试[_元素.style.属性_](/zh-CN/docs/Web/API/HTMLElement/style)（例如 `paragraph.style.rotate`）的存在来检测 CSS 特性。
 
-一个经典的例子可能是在浏览器中测试 [Subgrid](/zh-CN/docs/Web/CSS/CSS_grid_layout/Subgrid) 的支持情况。对于支持 [`grid-template-columns`](/zh-CN/docs/Web/CSS/grid-template-columns) 和 [`grid-template-rows`](/zh-CN/docs/Web/CSS/grid-template-rows) 属性的 `subgrid` 值的浏览器来说，我们可以在布局中使用 subgrid。对于不支持的浏览器，我们可以使用常规的 grid 布局，虽然不太酷，但也能正常工作。
+一个经典的例子可能是在浏览器中测试[子网格](/zh-CN/docs/Web/CSS/CSS_grid_layout/Subgrid)的支持情况。对于支持 [`grid-template-columns`](/zh-CN/docs/Web/CSS/grid-template-columns) 和 [`grid-template-rows`](/zh-CN/docs/Web/CSS/grid-template-rows) 属性的 `subgrid` 值的浏览器来说，我们可以在布局中使用子网格。对于不支持的浏览器，我们可以使用常规的网格布局，虽然不太酷，但也能正常工作。
 
-以此为例，我们可以在 HTML 文件的 head 部分包含两个样式表：一个包含所有的样式，另一个在不支持 subgrid 的情况下实现默认的网格布局。
+以此为例，我们可用在支持该值的情况下包含子网格样式表，而在不支持的情况下包含常规网格样式表。要实现这一点，我们可以在 HTML 文件的 head 部分包含两个样式表：一个包含所有的样式，另一个在不支持子网格的情况下实现默认的布局。
 
 ```html
 <link href="basic-styling.css" rel="stylesheet" />
 <link class="conditional" href="grid-layout.css" rel="stylesheet" />
 ```
 
-这里，`basic-styling.css` 处理所有每个浏览器都支持的样式。我们还有两个 CSS 文件，`grid-layout.css` 和 `subgrid-layout.css`，它们包含了我们想根据浏览器的支持程度有选择地应用的 CSS。
+这里，`basic-styling.css` 处理所有每个浏览器都支持的样式。我们还有两个额外的 CSS 文件，`grid-layout.css` 和 `subgrid-layout.css`，它们包含了我们想根据浏览器的支持程度有选择地应用的 CSS。
 
 我们先使用 JavaScript 来测试对 subgrid 值的支持，然后根据浏览器的支持情况更新我们的条件样式表的 `href`。
 
@@ -112,7 +112,7 @@ CSS 有一个原生的特性检测机制：{{cssxref("@supports")}} at-规则。
 }
 ```
 
-只有当浏览器支持 `grid-template-columns: subgrid;` 声明时，这个 @supports 规则块才会应用其中的 CSS 规则。为了使带有值的条件生效，你需要包含完整的声明（而不仅仅是属性名称），并且不包括结尾的分号。
+只有当浏览器支持 `grid-template-columns: subgrid;` 声明时，这个 at 规则块才会应用其中的 CSS 规则。为了使带有值的条件生效，你需要包含完整的声明（而不仅仅是属性名称），并且不包括结尾的分号。
 
 `@supports` 还支持 `AND`、`OR` 和 `NOT` 逻辑——如果 subgrid 选项不可用，则另一个代码块会应用常规网格布局：
 
@@ -134,7 +134,7 @@ CSS 有一个原生的特性检测机制：{{cssxref("@supports")}} at-规则。
 
   - : 检查一个特定的方法或属性（通常是使用 API 的入口或你正在检测的其他特性）是否存在于其父 `Object` 中。
 
-    我们前面的例子使用这种模式来检测 [Geolocation](/zh-CN/docs/Web/API/Geolocation_API) 的支持，通过测试 [`navigator`](/zh-CN/docs/Web/API/Navigator) 对象的 `geolocation`成员：
+    我们前面的例子使用这种模式（通过测试 [`navigator`](/zh-CN/docs/Web/API/Navigator) 对象的 `geolocation` 成员）来检测 [Geolocation](/zh-CN/docs/Web/API/Geolocation_API) 的支持：
 
     ```js
     if ("geolocation" in navigator) {
@@ -188,7 +188,7 @@ if (window.matchMedia("(max-width: 480px)").matches) {
   media="all and (max-width: 480px)" />
 ```
 
-然后我们在 JavaScript 中多次使用 `matchMedia()`，只在小屏幕布局时运行 Brick 导航特性（在宽屏幕布局中，所有内容都可以一次看到，所以我们不需要在不同的视图之间导航）。
+然后我们在 JavaScript 中多次使用 `matchMedia()`，只在小屏幕布局时运行 Brick 导航功能（在宽屏幕布局中，所有内容都可以一次看到，所以我们不需要在不同的视图之间导航）。
 
 ```js
 if (window.matchMedia("(max-width: 480px)").matches) {
