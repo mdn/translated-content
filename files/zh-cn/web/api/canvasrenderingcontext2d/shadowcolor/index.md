@@ -2,16 +2,17 @@
 title: CanvasRenderingContext2D：shadowColor 属性
 slug: Web/API/CanvasRenderingContext2D/shadowColor
 l10n:
-  sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
+  sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
 ---
 
 {{APIRef}}
 
 Canvas 2D API 的 **`CanvasRenderingContext2D.shadowColor`** 属性用于描述阴影颜色。
 
-请注意，阴影的渲染不透明度会在当填充时，受到 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 颜色的不透明度影响，或在当描边时，受到 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} 颜色的不透明度影响。
+请注意，在进行填充时，阴影的渲染不透明度会受到 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 颜色的不透明度的影响；或在进行描边时，受到 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} 颜色的不透明度的影响。
 
-> **备注：** 只有当 `shadowColor` 属性设置为非透明值时，阴影才会被绘制。其中的 {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}、{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}} 或 {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} 属性中至少有一个必须是非零的。
+> [!NOTE]
+> 只有当 `shadowColor` 属性设置为非透明值时，阴影才会被绘制。其中的 {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}、{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}} 或 {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} 属性中至少有一个必须是非零的。
 
 ## 值
 
