@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.ellipse()`** 方法用于向当前子路径添加椭圆路径。
+Canvas 2D API 的 **`CanvasRenderingContext2D.ellipse()`** 方法用于向当前子路径添加椭圆弧。
 
 ## 语法
 
@@ -19,9 +19,9 @@ ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, counterclockwise
 ### 参数
 
 - `x`
-  - : 椭圆圆心的 x 轴坐标。
+  - : 椭圆圆心的 x 轴（水平）坐标。
 - `y`
-  - : 椭圆圆心的 y 轴坐标。
+  - : 椭圆圆心的 y 轴（垂直）坐标。
 - `radiusX`
   - : 椭圆长轴的半径。必须为非负数。
 - `radiusY`
@@ -29,9 +29,9 @@ ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, counterclockwise
 - `rotation`
   - : 椭圆的旋转角度，以弧度表示。
 - `startAngle`
-  - : 椭圆弧的起始[偏心角](https://www.simply.science/index.php/math/geometry/conic-sections/ellipse/10022-eccentric-angle-and-parametric-equations-of-an-ellipse)，从正 x 轴顺时针测量，用弧度表示。
+  - : 椭圆弧的起始[偏心角](https://www.simply.science/index.php/math/geometry/conic-sections/ellipse/10022-eccentric-angle-and-parametric-equations-of-an-ellipse)，从正 x 轴沿顺时针测量，用弧度表示。
 - `endAngle`
-  - : 椭圆弧的结束[偏心角](https://www.simply.science/index.php/math/geometry/conic-sections/ellipse/10022-eccentric-angle-and-parametric-equations-of-an-ellipse)，从正 x 轴顺时针测量，用弧度表示。
+  - : 椭圆弧的结束[偏心角](https://www.simply.science/index.php/math/geometry/conic-sections/ellipse/10022-eccentric-angle-and-parametric-equations-of-an-ellipse)，从正 x 轴沿顺时针测量，用弧度表示。
 - `counterclockwise` {{optional_inline}}
   - : 一个可选的布尔值，如果为 `true`，则逆时针绘制椭圆弧。默认值为 `false`（顺时针）。
 
@@ -41,9 +41,9 @@ ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, counterclockwise
 
 ## 示例
 
-### 画一个完整的椭圆
+### 画完整的椭圆
 
-这个例子以 π/4 弧度（45 **°**）的角度绘制一个椭圆。为了绘制完整的椭圆，弧的起始角度为 0 弧度（0 **°**），结束角度为 2π 弧度（360 **°**）。
+此示例以 π/4 弧度（45**°**）的角度绘制一个椭圆。为了绘制完整的椭圆，弧的起始角度为 0 弧度（0**°**），结束角度为 2π 弧度（360**°**）。
 
 #### HTML
 
@@ -72,11 +72,11 @@ ctx.stroke();
 
 #### 结果
 
-{{ EmbedLiveSample('画一个完整的椭圆', 700, 250) }}
+{{ EmbedLiveSample('画完整的椭圆', 700, 250) }}
 
 ### 不同的椭圆弧
 
-这个例子创建了三条具有不同属性的椭圆路径。
+此示例创建了三条具有不同属性的椭圆路径。
 
 #### HTML
 
@@ -90,19 +90,16 @@ ctx.stroke();
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-// 绘制红色椭圆
 ctx.fillStyle = "red";
 ctx.beginPath();
 ctx.ellipse(60, 75, 50, 30, Math.PI * 0.25, 0, Math.PI * 1.5);
 ctx.fill();
 
-// 绘制蓝色椭圆
 ctx.fillStyle = "blue";
 ctx.beginPath();
 ctx.ellipse(150, 75, 50, 30, Math.PI * 0.25, 0, Math.PI);
 ctx.fill();
 
-// 绘制绿色椭圆（逆时针方向）
 ctx.fillStyle = "green";
 ctx.beginPath();
 ctx.ellipse(240, 75, 50, 30, Math.PI * 0.25, 0, Math.PI, true);
@@ -124,4 +121,4 @@ ctx.fill();
 ## 参见
 
 - 定义该方法的接口：{{domxref("CanvasRenderingContext2D")}}
-- 使用 {{domxref("CanvasRenderingContext2D.arc()")}} 方法来绘制一个圆弧
+- 使用 {{domxref("CanvasRenderingContext2D.arc()")}} 方法来绘制圆弧
