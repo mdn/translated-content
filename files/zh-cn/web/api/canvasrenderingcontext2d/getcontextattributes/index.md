@@ -9,7 +9,7 @@ l10n:
 
 **`CanvasRenderingContext2D.getContextAttributes()`** 方法返回一个包含上下文使用的属性的对象。
 
-请注意，创建上下文时可能会通过 [`HTMLCanvasElement.getContext()`](/zh-CN/docs/Web/API/HTMLCanvasElement/getContext) 方法请求上下文属性，但实际支持和使用的属性可能会有所不同。
+请注意，使用 [`HTMLCanvasElement.getContext()`](/zh-CN/docs/Web/API/HTMLCanvasElement/getContext) 创建上下文时可能会请求上下文的属性，但实际支持和使用的属性可能会有所不同。
 
 ## 语法
 
@@ -28,13 +28,13 @@ getContextAttributes()
 - `alpha` {{optional_inline}}
   - : 一个布尔值，指示画布是否包含 alpha 通道。如果为 `false`，背景总是不透明的，这可以加快对透明内容和图像的绘制速度。
 - `colorSpace` {{optional_inline}}
-  - : 指定渲染上下文的颜色空间。可能的值有：
+  - : 指定渲染上下文的色彩空间。可能的值有：
     - `srgb`：表示 [sRGB 色彩空间](https://zh.wikipedia.org/wiki/SRGB)
     - `display-p3`：表示 [Display-P3 色彩空间](https://zh.wikipedia.org/wiki/DCI-P3)
 - `desynchronized` {{optional_inline}}
   - : 一个布尔值，指示用户代理通过将画布绘制周期与事件循环解耦，从而减少了延迟。
 - `willReadFrequently` {{optional_inline}}
-  - : 一个布尔值，指示该画布是否使用软件加速（而不是硬件加速）来支持通过 {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} 频繁读取操作。
+  - : 一个布尔值，指示该画布是否使用软件加速（而不是硬件加速）来支持通过 {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} 的频繁读取操作。
 
 ## 示例
 
