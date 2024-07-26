@@ -2,12 +2,12 @@
 title: Blink
 slug: Glossary/Blink
 l10n:
-  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
 
-**Blink** 是作为 Chromium 项目的一部分（因而也是 {{glossary("Google Chrome", "Chrome")}} 的一部分）由谷歌开发的一个开源的浏览器渲染引擎。具体而言，Blink 起初是 {{glossary("WebKit")}} 项目中 WebCore 库的分支，用于处理布局、渲染以及 {{Glossary("DOM")}}，不过现在独立出来作为单独的一个{{glossary("Engine/Rendering", "渲染引擎")}}。
+Blink 是一个开源的浏览器渲染引擎，由谷歌作为 Chromium 项目的一部分开发（因而也是 Chrome 的一部分）。具体而言，Blink 起初是 {{glossary("WebKit")}} 项目中 WebCore 库的分支，用于处理布局、渲染以及 {{Glossary("DOM")}}，不过现在独立出来作为单独的一个{{glossary("rendering engine", "渲染引擎")}}。
 
 ## 参见
 
@@ -19,4 +19,4 @@ l10n:
   - {{glossary("Gecko")}}
   - {{glossary("Trident")}}
   - {{glossary("WebKit")}}
-  - {{glossary("Engine/Rendering", "渲染引擎")}}
+  - {{glossary("Rendering engine", "渲染引擎")}}
