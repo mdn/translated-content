@@ -78,7 +78,7 @@ PNG 可以以三种不同的输出组合进行保存：
 - [WebP](/zh-CN/docs/Web/Media/Formats/Image_types#webp_图像)——既适用于图像又适用于动图的绝佳选择。WebP 提供比 PNG 或 JPEG 更好的压缩，支持更高的色深、动画帧和透明度等（但不支持渐进式显示）。除具有 Big Sur 或更早版本的 macOS 桌面版 Safari 14 外，所有主流浏览器都支持它。
 
   > [!NOTE]
-> 尽管 Apple [宣布在 Safari 14 中支持 WebP](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174)，但在 Safari 版本 16.0 之前，`.webp` 图像无法在早于 Big Sur 版本的 macOS 桌面版本上正常显示，而 iOS 14 上的 Safari *却能*正常显示 `.webp` 图像。
+  > 尽管 Apple [宣布在 Safari 14 中支持 WebP](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174)，但在 Safari 版本 16.0 之前，`.webp` 图像无法在早于 Big Sur 版本的 macOS 桌面版本上正常显示，而 iOS 14 上的 Safari *却能*正常显示 `.webp` 图像。
 
 - [AVIF](/zh-CN/docs/Web/Media/Formats/Image_types#avif_图像)——由于其是高性能和免版税的图像格式（甚至比 WebP 更高效），它是用于图像和动图的不错选择（尽管不太广泛）。它现在受 Chrome、Opera 和 Firefox 的支持。[Squoosh](https://squoosh.app/) 是一款出色的，可以将其他图像格式转换为 AVIF 的在线工具。
 - **JPEG2000**——曾经是 JPEG 的继任者，但仅受 Safari 支持。也不支持渐进式显示。
