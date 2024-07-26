@@ -15,7 +15,8 @@ l10n:
 
 包含指向提供媒体描述的媒体行集合的从零开始的索引，表明哪个媒体源与候选者相关联；如果没有这样的关联，则为 `null`。
 
-> **备注：** 使用 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 添加一个 `sdpMid` 和 `sdpMLineIndex` 都为 `null` 的候选者时，将抛出 {{jsxref("TypeError")}} 异常。
+> [!NOTE]
+> 使用 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 添加一个 `sdpMid` 和 `sdpMLineIndex` 都为 `null` 的候选者时，将抛出 {{jsxref("TypeError")}} 异常。
 
 ## 规范
 
