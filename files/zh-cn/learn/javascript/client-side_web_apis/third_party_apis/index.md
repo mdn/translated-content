@@ -112,7 +112,6 @@ URL 末尾提供的 URL 参数是一个开发人员密钥—应用程序的开�
    7. 复制你的 API 密钥并将示例中的第一个{{htmlelement("script")}}元素中的现有密钥替换为你自己的密钥。（位于`?key=`和属性结束引号标记 (`"`) 之间的位置。)
 
    > [!NOTE]
-   >
    > 获取 Google 相关 API 密钥可能会有一点困难——Google Cloud Platform API Manager 有许多不同的屏幕，并且工作流程可能因你是否设置账户而变得细微的不同。如果你在执行此步骤时遇到了困难，我们将很乐意为你提供帮助——[联系我们](/zh-CN/docs/Learn#Contact_us)。
 
 3. 打开你的 Google Maps 起始文件，找到`INSERT-YOUR-API-KEY-HERE`字符串，然后将其替换为你从 Google Cloud Platform API Manager dashboard 获取的实际 API 密钥。
