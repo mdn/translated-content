@@ -76,7 +76,8 @@ console.log(Object.keys("foo")); // ['0', '1', '2']
 console.log(Object.keys(100)); // []
 ```
 
-> **备注：** 在 ES5 中，将一个非对象传递给 `Object.keys()` 会抛出一个 {{jsxref("TypeError")}}。
+> [!NOTE]
+> 在 ES5 中，将一个非对象传递给 `Object.keys()` 会抛出一个 {{jsxref("TypeError")}}。
 
 ## 规范
 
