@@ -56,7 +56,6 @@ Django 的模板系统可以帮你抵挡大部分的 XSS 攻击，实现的方�
    ![Author Form XSS test](author_create_form_alert_xss.png)
 
    > [!NOTE]
-   >
    > 这一段代码并没有任何杀伤力，在执行的时候只会在浏览器中弹出一个警告提示框。如果这个警告提示框出现，则表明本网站存在可被 XSS 攻击的漏洞。
 
 5. 点击 **Submit** 按钮保存信息。
