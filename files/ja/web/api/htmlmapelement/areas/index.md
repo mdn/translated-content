@@ -3,7 +3,7 @@ title: "HTMLMapElement: areas プロパティ"
 short-title: areas
 slug: Web/API/HTMLMapElement/areas
 l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+  sourceCommit: da6219d9480147488eda1f9120359384ee652b92
 ---
 
 {{ApiRef("HTML DOM")}}
