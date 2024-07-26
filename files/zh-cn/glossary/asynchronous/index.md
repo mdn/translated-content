@@ -28,4 +28,5 @@ l10n:
 ## 参见
 
 - [从服务器获取数据](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)（学习区）
-- {{glossary("Synchronous", "同步")}}
+- 相关术语：
+  - {{glossary("Synchronous", "同步")}}

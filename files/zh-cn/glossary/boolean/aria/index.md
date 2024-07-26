@@ -13,4 +13,5 @@ l10n:
 
 ## 参见
 
-- {{Glossary("Enumerated", "枚举属性")}}包含更多有关 ARIA 布尔属性的行为细节和示例。
+- 相关术语：
+  - {{Glossary("Enumerated", "枚举属性")}}包含更多有关 ARIA 布尔属性的行为细节和示例。
