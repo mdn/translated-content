@@ -2,16 +2,16 @@
 title: 属性（Attribute）
 slug: Glossary/Attribute
 l10n:
-  sourceCommit: 66de1f47585ccf1539d5c1cd2b051de7bc19f59d
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
 
 **属性**（Attribute）可扩展 HTML 或 XML {{Glossary("element", "元素")}}，改变其行为或提供元数据。
 
-属性的形式总是 `name="value"`（属性的标识符后跟相关的值）。你可能会看到没有等号或值的属性。这是在 HTML 中提供空字符串。但是，在 XML 中这是无效的：XML 要求所有属性都有显式值。
+属性的形式总是 `name="value"`（属性的标识符后跟相关的值）。
 
-许多 HTML 属性是{{Glossary("Boolean/HTML", "布尔属性")}}。这些属性的值仅由属性的存在或不存在来控制。参见{{Glossary("Boolean/HTML", "布尔属性")}}以获取更多信息。
+你可能会看到没有等号或值的属性。这是在 HTML 中提供空字符串或在 XML 中提供属性名称的简写。
 
 ```html
 <input required />
@@ -50,11 +50,3 @@ console.log(attr.value); // 打印出 `修改过的占位符`
 
 - [HTML 属性参考](/zh-CN/docs/Web/HTML/Attributes)
 - 关于 HTML 的[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)的信息
-- [W3C XML 推荐](https://www.w3.org/TR/xml#sec-starttags)中的 XML StartTag 属性推荐
-- 相关术语：
-  - {{Glossary("Element", "元素")}}
-  - {{Glossary("Tag", "标签")}}
-  - {{Glossary("HTML")}}
-  - {{Glossary("XML")}}
-  - {{Glossary("Boolean/HTML", "布尔属性")}}
-  - {{Glossary("Enumerated", "枚举属性")}}
