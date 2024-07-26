@@ -229,7 +229,8 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
    - _This interface also inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._（_本接口也从 \\{{domxref("XYZ")}} 和 \\{{domxref("XYZ2")}} 继承方法。_）
 
    > [!NOTE]
-> 只读属性应该使用 \\{{ReadOnlyInline}} 宏，它可以创建一个漂亮的“只读”徽章，与它们的 \\{{domxref}} 链接在同一行（如果需要使用 \\{{experimentalInline}}、\\{{non-standard_Inline}} 和 \\{{deprecatedInline}} 宏，则需要放置在它们之后）。
+   >
+   > 只读属性应该使用 \\{{ReadOnlyInline}} 宏，它可以创建一个漂亮的“只读”徽章，与它们的 \\{{domxref}} 链接在同一行（如果需要使用 \\{{experimentalInline}}、\\{{non-standard_Inline}} 和 \\{{deprecatedInline}} 宏，则需要放置在它们之后）。
 
 6. **示例**：包括一个代码清单，以显示 API 的主要功能的典型用法。你不应该列出所有的代码，而应该列出其中一个有趣的子集。对于一个完整的代码清单，你可以参考包含完整示例的 [GitHub](https://github.com/) 仓库，你也可以链接到使用 [GitHub gh-pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) 功能创建的实时示例（当然，只要它只使用客户端代码）。如果该示例是可视化的，你也可以使用 MDN [实时示例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)功能，使其在页面上实时播放。
 7. **标准表格**：此时你需要包含一个标准表格——参见“创建规范参考表格”一节以获得更多信息。
