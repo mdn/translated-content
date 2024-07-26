@@ -56,7 +56,8 @@ Link: <https://fonts.googleapis.com/>; rel=dns-prefetch
 <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
 ```
 
-> **备注：** 如果页面需要建立与许多第三方域的连接，则将它们预先连接会适得其反。`preconnect` 提示最好仅用于最关键的连接。对于其他的连接，只需使用 `<link rel="dns-prefetch">` 即可节省第一步——DNS 查询——的时间。
+> [!NOTE]
+> 如果页面需要建立与许多第三方域的连接，则将它们预先连接会适得其反。`preconnect` 提示最好仅用于最关键的连接。对于其他的连接，只需使用 `<link rel="dns-prefetch">` 即可节省第一步——DNS 查询——的时间。
 
 配对这些提示的逻辑是因为对 dns-prefetch 的支持比对预连接的支持要好。不支持预连接的浏览器仍然可以通过回退到 dns-prefetch 来获得更多好处。由于这是 HTML 特性，因此容错性很强。如果不支持的浏览器遇到 dns-prefetch 提示（或任何其他资源提示），则网站不会中断，只是不会获得它提供的好处。
 

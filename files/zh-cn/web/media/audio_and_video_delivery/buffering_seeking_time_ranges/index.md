@@ -103,7 +103,8 @@ window.onload = () => {
 
 ![一个简单的音频播放器，带有播放按钮、搜索栏和音量控制，下面有一系列代表时间范围的红色矩形。](bufferedtimeranges.png)
 
-> **备注：** 你可以查看 [JS Bin 上实时运行的时间范围代码](https://jsbin.com/memazaro/1/edit)。
+> [!NOTE]
+> 你可以查看 [JS Bin 上实时运行的时间范围代码](https://jsbin.com/memazaro/1/edit)。
 
 ## Seekable
 
@@ -213,7 +214,8 @@ window.onload = () => {
 
 ![一个简单的音频播放器，带有播放按钮、搜索栏和音量控制，以及控件下方的进度条，其中的绿色部分显示已播放的视频，还有一个浅灰色的部分表示已缓冲的部分。](bufferedprogress.png)
 
-> **备注：** 你可以查看 [JS Bin 上实时运行的缓冲代码](https://jsbin.com/badimipi/1/edit)。
+> [!NOTE]
+> 你可以查看 [JS Bin 上实时运行的缓冲代码](https://jsbin.com/badimipi/1/edit)。
 
 ## 关于 Played 的简短说明
 
