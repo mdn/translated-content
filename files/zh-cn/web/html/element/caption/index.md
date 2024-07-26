@@ -45,7 +45,8 @@ slug: Web/HTML/Element/caption
     - `right`, 显示在表格右边
     - `bottom`, 显示在表格下面
 
-    > **备注：** 不要使用这个属性，它已经被弃用：{{HTMLElement("caption")}} 元素应该使用 [CSS](/zh-CN/docs/CSS)设置样式。要得到类似`align`属性的效果，使用 [CSS](/zh-CN/docs/CSS) 属性 {{cssxref("caption-side")}} 和 {{cssxref("text-align")}}.
+    > [!NOTE]
+    > 不要使用这个属性，它已经被弃用：{{HTMLElement("caption")}} 元素应该使用 [CSS](/zh-CN/docs/CSS)设置样式。要得到类似`align`属性的效果，使用 [CSS](/zh-CN/docs/CSS) 属性 {{cssxref("caption-side")}} 和 {{cssxref("text-align")}}.
 
 ## 使用说明
 

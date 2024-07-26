@@ -29,7 +29,8 @@ l10n:
 
     该类型会覆盖其父元素 {{HTMLElement("ol")}} 使用的类型（如果有的话）。
 
-    > **备注：** 该属性已被弃用；请使用 CSS {{cssxref("list-style-type")}} 属性代替。
+    > [!NOTE]
+    > 该属性已被弃用；请使用 CSS {{cssxref("list-style-type")}} 属性代替。
 
 ## 示例
 
