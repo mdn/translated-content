@@ -9,7 +9,8 @@ l10n:
 
 Canvas 2D API 的**`CanvasRenderingContext2D.shadowOffsetX`** 属性用于描述阴影水平偏移距离。
 
-> **备注：** 只有当 `shadowColor` 属性设置为非透明值时，阴影才会被绘制。其中的 {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}、`shadowOffsetX` 或 {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} 属性中至少有一个必须是非零的。
+> [!NOTE]
+> 只有当 `shadowColor` 属性设置为非透明值时，阴影才会被绘制。其中的 {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}、`shadowOffsetX` 或 {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} 属性中至少有一个必须是非零的。
 
 ## 值
 
