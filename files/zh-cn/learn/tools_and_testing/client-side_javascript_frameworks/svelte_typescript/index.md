@@ -223,7 +223,8 @@ TypeScript 支持结构类型。结构类型是一种基于类型成员进行关
    ```
 
    > [!NOTE]
-> Svelte 模板使用 [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess) 4.0.0 来支持 TypeScript。从该版本开始，你必须使用 `export`/`import` 类型语法来导入类型和接口。更多信息，请查看[故障排除指南的这个部分](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#how-do-i-import-interfaces-into-my-svelte-components-i-get-errors-after-transpilation)。
+   >
+   > Svelte 模板使用 [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess) 4.0.0 来支持 TypeScript。从该版本开始，你必须使用 `export`/`import` 类型语法来导入类型和接口。更多信息，请查看[故障排除指南的这个部分](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#how-do-i-import-interfaces-into-my-svelte-components-i-get-errors-after-transpilation)。
 
 4. 现在，我们将在 `Todo.svelte` 组件中使用 `TodoType`。首先在 `<script>` 标签中添加 `lang="ts"`。
 5. 使用 `import` 导入该类型并将其用于声明 `todo` 属性。将 `export let todo` 行替换为以下内容：
@@ -335,7 +336,8 @@ svelte-check found no errors and no warnings
    ```
 
    > [!NOTE]
-> 不需要使用 `export let ms:number = 3000` 来指定 `ms` 的类型，因为 TypeScript 已经从默认值推断出了它的类型。
+   >
+   > 不需要使用 `export let ms:number = 3000` 来指定 `ms` 的类型，因为 TypeScript 已经从默认值推断出了它的类型。
 
 ### MoreActions.svelte
 

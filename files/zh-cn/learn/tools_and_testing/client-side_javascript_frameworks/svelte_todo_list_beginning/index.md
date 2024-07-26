@@ -94,7 +94,8 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 1. 建立新文件夹——`src/components`。
 
    > [!NOTE]
-> 你可以把组件放在 `src` 文件夹当中的任何地方，但放在 `components` 文件夹是比较常见的做法，也让你可以更容易地找到它们。
+   >
+   > 你可以把组件放在 `src` 文件夹当中的任何地方，但放在 `components` 文件夹是比较常见的做法，也让你可以更容易地找到它们。
 
 2. 建立 `src/components/Todos.svelte` 文件并包含以下内容：
 

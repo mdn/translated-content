@@ -424,7 +424,8 @@ npm install --save-dev parcel-bundler
    Parcel 还安装了我们将在代码中使用的依赖项，包括 react、react-dom、react-async-hook、date-fns 和 format-number。因此，这第一次运行将比 Parcel 的典型运行时间更长。
 
    > [!NOTE]
-> 如果你在此项目上运行 Parcel 并遇到像 `Error: ENOENT: no such file or directory` 这样的错误，请使用 <kbd>Ctrl</kbd> + <kbd>C</kbd> 停止该进程，然后尝试重新运行它。
+   >
+   > 如果你在此项目上运行 Parcel 并遇到像 `Error: ENOENT: no such file or directory` 这样的错误，请使用 <kbd>Ctrl</kbd> + <kbd>C</kbd> 停止该进程，然后尝试重新运行它。
 
    服务器现在正在输出的 URL 上运行（在本例中为 localhost:1234）。
 
