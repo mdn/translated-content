@@ -4165,7 +4165,7 @@
 /ja/docs/Web/HTTP/Headers/Feature-Policy/accelerometer	/ja/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer
 /ja/docs/Web/HTTP/Headers/Feature-Policy/ambient-light-sensor	/ja/docs/Web/HTTP/Headers/Permissions-Policy/ambient-light-sensor
 /ja/docs/Web/HTTP/Headers/Feature-Policy/autoplay	/ja/docs/Web/HTTP/Headers/Permissions-Policy/autoplay
-/ja/docs/Web/HTTP/Headers/Feature-Policy/battery	/ja/docs/orphaned/Web/HTTP/Headers/Permissions-Policy/battery
+/ja/docs/Web/HTTP/Headers/Feature-Policy/battery	/ja/docs/Web/HTTP/Headers/Permissions-Policy
 /ja/docs/Web/HTTP/Headers/Feature-Policy/camera	/ja/docs/Web/HTTP/Headers/Permissions-Policy/camera
 /ja/docs/Web/HTTP/Headers/Feature-Policy/display-capture	/ja/docs/Web/HTTP/Headers/Permissions-Policy/display-capture
 /ja/docs/Web/HTTP/Headers/Feature-Policy/document-domain	/ja/docs/Web/HTTP/Headers/Permissions-Policy/document-domain
@@ -4181,7 +4181,7 @@
 /ja/docs/Web/HTTP/Headers/Feature-Policy/web-share	/ja/docs/Web/HTTP/Headers/Permissions-Policy/web-share
 /ja/docs/Web/HTTP/Headers/Feature-Policy/xr	/ja/docs/conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
 /ja/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking	/ja/docs/Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking
-/ja/docs/Web/HTTP/Headers/Permissions-Policy/battery	/ja/docs/orphaned/Web/HTTP/Headers/Permissions-Policy/battery
+/ja/docs/Web/HTTP/Headers/Permissions-Policy/battery	/ja/docs/Web/HTTP/Headers/Permissions-Policy
 /ja/docs/Web/HTTP/Headers/Set-Cookie2	/ja/docs/Web/HTTP/Headers/Set-Cookie
 /ja/docs/Web/HTTP/Index	/ja/docs/Web/HTTP
 /ja/docs/Web/HTTP/Link_prefetching_FAQ	/ja/docs/Glossary/Prefetch
