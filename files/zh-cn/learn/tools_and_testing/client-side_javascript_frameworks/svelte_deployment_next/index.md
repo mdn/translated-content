@@ -223,7 +223,8 @@ export default {
    ```
 
    > [!NOTE]
-> 你可以使用 [git 协议](https://git-scm.com/book/zh/v2/服务器上的-Git-协议#_git_协议)替代 `https`，它更快速，而且无需每次访问远程仓库时输入用户名和密码。要使用 git 协议，你需要[创建一个 SSH 密钥对](https://docs.gitlab.cn/jh/user/ssh.html#生成-ssh-密钥对)。你的远程仓库 URL 将是这样的：`git@gitlab.com:[你的用户名]/mdn-svelte-todo.git`。
+   >
+   > 你可以使用 [git 协议](https://git-scm.com/book/zh/v2/服务器上的-Git-协议#_git_协议)替代 `https`，它更快速，而且无需每次访问远程仓库时输入用户名和密码。要使用 git 协议，你需要[创建一个 SSH 密钥对](https://docs.gitlab.cn/jh/user/ssh.html#生成-ssh-密钥对)。你的远程仓库 URL 将是这样的：`git@gitlab.com:[你的用户名]/mdn-svelte-todo.git`。
 
 按照以上步骤初始化本地 git 仓库，然后将远程仓库设置为 GitLab 上的仓库，接下来将所有文件提交到本地 git 仓库，然后将它们推送到 GitLab 上的远程仓库。
 

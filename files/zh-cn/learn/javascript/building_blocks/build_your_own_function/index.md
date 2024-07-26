@@ -233,7 +233,8 @@ btn.onclick = displayMessage();
 1. 第一步，从 Github 上下载我们需要的图标 ([警告图标](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/warning.png) 和 [聊天图标](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/chat.png)) 。把图标保存在一个叫做`icons` 的文件夹下，和你的 HTML 文件在同一个目录下。
 
    > [!NOTE]
-> 警告和聊天图标是在这个网站 iconfinder.com 上找到的，设计者是 [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr)。感谢他！
+   >
+   > 警告和聊天图标是在这个网站 iconfinder.com 上找到的，设计者是 [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr)。感谢他！
 
 2. 下一步，找到页面的 CSS 文件。我们要修改下以便我们使用图标。首先，修改 `.msgBox` 的宽度：
 
