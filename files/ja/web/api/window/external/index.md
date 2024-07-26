@@ -1,6 +1,7 @@
 ---
 title: Window.sidebar
-slug: Web/API/Window/sidebar
+slug: Web/API/Window/external
+original_slug: Web/API/Window/sidebar
 ---
 
 {{APIRef}} {{Deprecated_Header}}
