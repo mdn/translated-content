@@ -187,7 +187,7 @@ const greeting = "这是一个错误示例";
 备注和警告将在输出中添加本地化的“**备注：**”或“**警告：**”，而标注不会。当你想要提供自定义标题时，标注会是一个不错的选择。
 
 > [!WARNING]
-> 在旧的 MDN 语法中，类型是本地化的，并且会以粗体文本添加到第一个段落中，例如 `**备注：** Foo bar` 而不是 `[!NOTE] ⏎ Foo bar`。为了迁移目的，此语法仍然受到支持。请避免在新文档中使用它。
+> 在旧的 MDN 语法中，类型是本地化的，并且会以粗体文本添加到第一个段落中，例如 `**备注：** Foo bar` 而不是 `[!NOTE] ⏎ Foo bar`。出于迁移的目的，此语法仍受支持。但请避免在新文档中使用。
 
 多行块引用由空的块引用生成，就像普通的段落一样。此外，没有空格的多行内容会像常规 Markdown 行一样被处理和连接。
 
@@ -208,7 +208,7 @@ const greeting = "这是一个错误示例";
 
 ```html
 <div class="notecard note">
-  <p><strong>备注：</strong> 这就是编写备注的方式。</p>
+  <p><strong>备注：</strong>这就是编写备注的方式。</p>
   <p>它可以有好几行。</p>
 </div>
 ```
@@ -233,7 +233,7 @@ const greeting = "这是一个错误示例";
 
 ```html
 <div class="notecard warning">
-  <p><strong>警告：</strong> 这就是编写警告的方式。</p>
+  <p><strong>警告：</strong>这就是编写警告的方式。</p>
   <p>它可以有好几段。</p>
 </div>
 ```
@@ -293,7 +293,7 @@ const greeting = "这是一个错误示例";
 
 ```html
 <div class="notecard note">
-  <p><strong>备注：</strong> 这是编写备注的方式。</p>
+  <p><strong>备注：</strong>这是编写备注的方式。</p>
   <p>它可以包含代码块。</p>
   <pre class="brush: js">const s = "我在代码块中";</pre>
   <p>就像这样。</p>
