@@ -2,7 +2,7 @@
 title: ATAG
 slug: Glossary/ATAG
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 66de1f47585ccf1539d5c1cd2b051de7bc19f59d
 ---
 
 {{GlossarySidebar}}
