@@ -37,7 +37,8 @@ slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 
 让我们再来瞧一眼这个地图的例子 (see the [source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/maps-example.html); [see it live also](https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), 从这里可以知道第三方 API 和浏览器 API 的区别是怎么样的。
 
-> **备注：** 你可能想要一次获得所有的代码示例，在这种情况下，你可以搜索 repo 来获取每个部分中需要的示例文件。
+> [!NOTE]
+> 你可能想要一次获得所有的代码示例，在这种情况下，你可以搜索 repo 来获取每个部分中需要的示例文件。
 
 ### 它们植根于第三方服务器
 
@@ -76,7 +77,8 @@ var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
 以上就是用 Google Maps API 建立一个简单地图所需要的所有信息。所有复杂的工作都全由你所连接的第三方服务器处理，包括展示正确地理位置的地图块，等等。
 
-> **备注：** 一些 api 处理对其功能的访问略有不同，相反，它们要求开发人员向特定的 URL 模式发出 HTTP 请求 (参见从服务器获取数据)，以检索特定的数据。这些被称为 RESTful api，稍后我们将在文章中展示这个示例。
+> [!NOTE]
+> 一些 api 处理对其功能的访问略有不同，相反，它们要求开发人员向特定的 URL 模式发出 HTTP 请求 (参见从服务器获取数据)，以检索特定的数据。这些被称为 RESTful api，稍后我们将在文章中展示这个示例。
 
 ### 权限的不同处理方式
 
@@ -109,7 +111,8 @@ URL 末尾提供的 URL 参数是一个开发人员密钥—应用程序的开�
    6. 单击创建凭据，然后选择 API 密钥。
    7. 复制你的 API 密钥并将示例中的第一个{{htmlelement("script")}}元素中的现有密钥替换为你自己的密钥。（位于`?key=`和属性结束引号标记 (`"`) 之间的位置。)
 
-   > **备注：** 获取 Google 相关 API 密钥可能会有一点困难——Google Cloud Platform API Manager 有许多不同的屏幕，并且工作流程可能因你是否设置账户而变得细微的不同。如果你在执行此步骤时遇到了困难，我们将很乐意为你提供帮助——[联系我们](/zh-CN/docs/Learn#Contact_us)。
+   > [!NOTE]
+> 获取 Google 相关 API 密钥可能会有一点困难——Google Cloud Platform API Manager 有许多不同的屏幕，并且工作流程可能因你是否设置账户而变得细微的不同。如果你在执行此步骤时遇到了困难，我们将很乐意为你提供帮助——[联系我们](/zh-CN/docs/Learn#Contact_us)。
 
 3. 打开你的 Google Maps 起始文件，找到`INSERT-YOUR-API-KEY-HERE`字符串，然后将其替换为你从 Google Cloud Platform API Manager dashboard 获取的实际 API 密钥。
 
@@ -148,9 +151,11 @@ URL 末尾提供的 URL 参数是一个开发人员密钥—应用程序的开�
 
    这里我们用`iconBase` 加上图标的文件名，从而创建完整 URL 的方式阐明了 icon 属性。现在尝试重新加载你的例子，你会看到你的地图上显示了一个定制的标记！
 
-> **备注：** 访问 [Customizing a Google Map: Custom Markers](https://developers.google.com/maps/documentation/javascript/custom-markers) 以查看更多信息。
+> [!NOTE]
+> 访问 [Customizing a Google Map: Custom Markers](https://developers.google.com/maps/documentation/javascript/custom-markers) 以查看更多信息。
 
-> **备注：** 访问 [Map marker or Icon names](https://fusiontables.google.com/DataSource?dsrcid=308519#map:id=3) 以找出还有哪些可以的图标，并查看它们的引用名称是什么。它们的文件名应当是当你点击它们时显示出的图标名，最后带有".png"。
+> [!NOTE]
+> 访问 [Map marker or Icon names](https://fusiontables.google.com/DataSource?dsrcid=308519#map:id=3) 以找出还有哪些可以的图标，并查看它们的引用名称是什么。它们的文件名应当是当你点击它们时显示出的图标名，最后带有".png"。
 
 ### 单击标记时显示弹出窗口
 
@@ -287,9 +292,11 @@ https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=4f3c267e125943d
 &begin_date=20170301&end_date=20170312
 ```
 
-> **备注：** 更多 URL 参数的说明参考 [NYTimes developer docs](https://developer.nytimes.com/).
+> [!NOTE]
+> 更多 URL 参数的说明参考 [NYTimes developer docs](https://developer.nytimes.com/).
 
-> **备注：** 示例包含了基本的表单数据验证操作 — 表项提交之前必须有内容 (用 `required` 属性实现)，此外，日期字段有确定的 `pattern` 属性，它们的值必须由 8 个数字组成 (`pattern="[0-9]{8}"`)，否则不能提交。更多细节参考 [Form data validation](/zh-CN/docs/Learn/HTML/Forms/Form_validation)
+> [!NOTE]
+> 示例包含了基本的表单数据验证操作 — 表项提交之前必须有内容 (用 `required` 属性实现)，此外，日期字段有确定的 `pattern` 属性，它们的值必须由 8 个数字组成 (`pattern="[0-9]{8}"`)，否则不能提交。更多细节参考 [Form data validation](/zh-CN/docs/Learn/HTML/Forms/Form_validation)
 
 ### 从 api 请求数据
 
@@ -421,7 +428,8 @@ function displayResults(json) {
 
    第二个函数基本上执行相反的操作，不过有个额外的步骤是检测 `pageNumber` 在 -1 之前是否已经是 0 — 如果 fetch 请求的 `page` URL 参数是负数，会导致错误。如果 `pageNumber` 已经是 0，则直接执行 [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 退出函数，避免多余的计算。 (如果当前页面已经是首页，就不需要重新加载)。
 
-> **备注：** 完整代码参考 [finished nytimes API example code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/index.html) (实例参考 [see it running live here](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/)).
+> [!NOTE]
+> 完整代码参考 [finished nytimes API example code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/index.html) (实例参考 [see it running live here](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/)).
 
 ## YouTube 示例
 
