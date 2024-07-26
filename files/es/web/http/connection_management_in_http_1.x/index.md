@@ -23,7 +23,7 @@ Un tema también relativo a esto, es el concepto de conexiones con protocolos HT
 
 ## Conexiones breves
 
-El modelo original de HTTP, y el modelo de HTTP/1.0, está basado, en conexiones breves. Cada petición HTTP, se completa estableciendo (iniciando, estableciendo y cerrando) su propia conexión. Esto supone que la coordinación en el protocolo HTTP (handshake), sucede de forma previa a cada petición HTTP.
+El modelo original de HTTP, y el modelo de HTTP/1.0, está basado, en conexiones breves. Cada petición HTTP, se completa estableciendo (iniciando, estableciendo y cerrando) su propia conexión. Esto supone que la coordinación en el protocolo TCP (handshake), sucede de forma previa a cada petición HTTP.
 
 La coordinación o inicialización de una comunicación en el protocolo TCP, requiere un tiempo dado, pero al adaptarse el protocolo TCP a su carga de transmisión de datos, este incrementa su eficiencia cuando se mantiene la conexión en el tiempo, utilizándose una conexión para transmitir numerosos peticiones de datos. Las conexiones breves, no utilizan esta característica del protocolo TCP, y el rendimiento de la conexión es peor que en el caso óptimo, al estar constantemente necesitando iniciar conexiones para transmitir cada mensaje (esto se conoce como conexiones 'en frio', o en inglés: 'cold connections').
 

@@ -15965,13 +15965,5 @@
   "conflicting/Web/SVG/Attribute": {
     "modified": "2020-10-15T22:34:58.576Z",
     "contributors": ["osipov_s"]
-  },
-  "orphaned/Web/JavaScript/Reference/Errors/Equal_as_assign": {
-    "modified": "2020-03-12T19:48:37.445Z",
-    "contributors": ["MakarovDs777"]
-  },
-  "orphaned/Web/JavaScript/Reference/Errors/Undefined_prop": {
-    "modified": "2020-03-12T19:47:58.221Z",
-    "contributors": ["KTatyana"]
   }
 }

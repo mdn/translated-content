@@ -60,11 +60,14 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 
 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 是 W3C 编写的规范，定义了一组可用于其他元素的 HTML 特性，用于提供额外的语义化以及改善缺乏的无障碍。以下是规范中三个主要的特性：
 
-- **角色** — 这定义了元素是干什么的。许多「标志性的角色」，其实重复了 HTML5 的结构元素的语义价值。例如 `role="navigation"` ({{htmlelement("nav")}}) 或者 `role="complementary"` ({{htmlelement("aside")}})，这也有一些描述其他页面结构的（角色），例如 `role="banner"`, `role="search"`, `role="tabgroup"`, `role="tab"` 等等。我们通常能从 UI 层面找到它们。
-- **属性** — 我们能通过定义一些属性给元素，让他们具备更多的语义。例如： `aria-required="true"` 意味着元素在表单上是必填的。然而 `aria-labelledby="label"` 允许你在元素上设置一个 ID，用于[`labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)引用作为屏幕阅读器指定的 label 内容，多个也可以。当然，下面这个代码是不行的： `<label for="input">` 。举个例子：你可以用 `aria-labelledby` 指定包含在 a 标签中的 key 描述{{htmlelement("div")}} 是多个 table 表格的 label，或者将它指定为 img 标签的 alt 内容 — 而无需重复在每一个 img 里头定义。如果迷糊了，你可以在这里看到例子： [Text alternatives](/zh-CN/docs/Learn/Accessibility/HTML?document_saved=true#Text_alternatives).
-- **状态** —用于表达元素当前的条件的特殊属性，例如 `aria-disabled="true"`，屏幕阅读器就会这个表单禁止输入。状态和属性的差异之处就是：属性在应用的生命周期中不会改变，而状态可以，通常我们用编程的方法改变它，例如 Javascript。
+- [角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
+  - : 这定义了元素是干什么的。许多「标志性的角色」，其实重复了 HTML5 的结构元素的语义价值。例如 `role="navigation"` ({{htmlelement("nav")}}) 或者 `role="complementary"` ({{htmlelement("aside")}})，这也有一些描述其他页面结构的（角色），例如 `role="banner"`, `role="search"`, `role="tabgroup"`, `role="tab"` 等等。我们通常能从 UI 层面找到它们。
+- 属性
+  - : 定义元素的属性，使元素具备额外的含义或语义。例如，`aria-required="true"` 指定表单输入元素需要被填写才能有效，而 `aria-labelledby="label"` 允许你在元素上设置一个 ID，用于在页面中的其他地方（包括多个元素）引用其作为标签，`<label for="input">` 不可能做到这一点。举个例子：你可以用 `aria-labelledby` 指定在 {{htmlelement("div")}} 中包含的关键描述是多个表格单元的标签，或者将它指定为图像的替代文本——为图像替代文本指定额外信息，而无需在每一个 `alt` 属性中重复。你可以在[替代文本](/zh-CN/docs/Learn/Accessibility/HTML#替代文本)中查看示例。
+- 状态
+  - : 用于表达元素当前的条件的特殊属性，例如 `aria-disabled="true"`，屏幕阅读器就会这个表单禁止输入。状态和属性的差异之处就是：属性在应用的生命周期中不会改变，而状态可以，通常我们用编程的方法改变它，例如 JavaScript。
 
-关于 WAI-ARIA 属性重要的一点是它不会对 web 页面有任何影响，除了让更多的信息从浏览器暴露给 accessibility APIs (无障碍 API)，这也是屏幕阅读器这一类软件的信息源。WAI-ARIA 不会影响网页的结构，以及 DOM 等等，尽管这些属性可用于作为 css 选择器。
+关于 WAI-ARIA 属性重要的一点是它不会对 web 页面有任何影响，除了让更多的信息从浏览器暴露给无障碍 API，这也是屏幕阅读器这一类软件的信息源。WAI-ARIA 不会影响网页的结构，以及 DOM 等等，尽管这些属性可用于作为 css 选择器。
 
 > **备注：** 关于 ARIA 的角色和他的用法，如需了解更多信息，尽在 WAI-ARIA 规范，查看 [角色定义](https://www.w3.org/TR/wai-aria-1.1/#role_definitions)
 >
