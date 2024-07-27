@@ -22,7 +22,7 @@ Les valeurs de ce type sont des objets. Ils ont les propriétés suivantes :
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/extensions/omnibox).
 >

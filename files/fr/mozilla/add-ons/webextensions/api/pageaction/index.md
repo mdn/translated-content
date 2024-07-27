@@ -54,7 +54,7 @@ Les actions de page sont pour des actions qui ne sont pertinentes que pour des p
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
 >

@@ -73,7 +73,7 @@ document
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Actuellement un [bug avec la demande d'origines](https://bugzilla.mozilla.org/show_bug.cgi?id=1411873) et la [demande des permissions sur la page about:addons](https://bugzilla.mozilla.org/show_bug.cgi?id=1382953).
 >

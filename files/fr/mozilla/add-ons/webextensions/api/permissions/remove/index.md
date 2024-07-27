@@ -53,7 +53,7 @@ document.querySelector("#remove").addEventListener("click", remove);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/extensions/permissions).
 >

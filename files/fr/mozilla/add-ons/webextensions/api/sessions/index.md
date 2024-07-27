@@ -61,7 +61,7 @@ Pour utiliser l'API des sessions, vous devez avoir la [permission API](/fr/Add-o
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/extensions/sessions).
 >

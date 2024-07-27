@@ -11,7 +11,7 @@ Le nombre maximum de sessions qui seront retournées par un appel à {{WebExtAPI
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/extensions/sessions).
 >

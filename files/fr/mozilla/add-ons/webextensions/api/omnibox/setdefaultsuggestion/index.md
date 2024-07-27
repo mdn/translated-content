@@ -40,7 +40,7 @@ browser.omnibox.setDefaultSuggestion({
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/extensions/omnibox).
 >
