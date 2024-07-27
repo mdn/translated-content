@@ -1,8 +1,9 @@
 ---
-title: AudioScheduledSourceNode.stop()
+title: "AudioScheduledSourceNode: stop() メソッド"
+short-title: stop()
 slug: Web/API/AudioScheduledSourceNode/stop
 l10n:
-  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
 {{ APIRef("Web Audio API") }}

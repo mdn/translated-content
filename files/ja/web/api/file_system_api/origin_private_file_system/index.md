@@ -13,7 +13,7 @@ l10n:
 
 [ファイルシステムアクセス API](https://wicg.github.io/file-system-access/) は、[ファイルシステム API](/ja/docs/Web/API/File_System_API) を拡張したもので、は、ピッカーメソッドを使ったファイルへのアクセスを提供します。例えば、
 
-1. {{domxref("Window.showOpenFilePicker()")}} では、ユーザがアクセスするファイルを選択することができ、その結果、 {{domxref("FileSystemFileHandle")}} オブジェクトが返されます。
+1. {{domxref("Window.showOpenFilePicker()")}} では、ユーザーがアクセスするファイルを選択することができ、その結果、 {{domxref("FileSystemFileHandle")}} オブジェクトが返されます。
 2. {{domxref("FileSystemFileHandle.getFile()")}} を呼び出してファイルの内容にアクセスし、 {{domxref("FileSystemFileHandle.createWritable()")}} / {{domxref("FileSystemWritableFileStream.write()")}} を使用して内容を変更します。
 3. {{domxref("FileSystemHandle.requestPermission()", "FileSystemHandle.requestPermission({mode:'readwrite'})")}} は、変更を保存する許可をユーザーにリクエストするために使用されます。
 4. ユーザーが許可リクエストを受け入れると、変更は元のファイルに保存されます。

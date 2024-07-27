@@ -84,7 +84,7 @@ original_slug: Web/API/Event/Comparison_of_Event_Targets
         >
       </td>
       <td>
-        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
+        <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} Если по какой-либо причине событие
@@ -107,7 +107,7 @@ original_slug: Web/API/Event/Comparison_of_Event_Targets
         >
       </td>
       <td>
-        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
+        <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} Первоначальная цель события перед

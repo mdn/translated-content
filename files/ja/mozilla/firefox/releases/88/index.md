@@ -21,7 +21,7 @@ _変更なし。_
 
 ### CSS
 
-- {{cssxref(":user-valid")}} および {{cssxref(":user-invalid")}} 疑似クラスを実装しました ([Firefox バグ 1694141](https://bugzil.la/1694141))。
+- {{cssxref(":user-valid")}} および {{cssxref(":user-invalid")}} 擬似クラスを実装しました ([Firefox バグ 1694141](https://bugzil.la/1694141))。
 - {{cssxref("image-set()")}} 関数表記を有効にしました ([Firefox バグ 1698133](https://bugzil.la/1698133))。また、{{cssxref("content")}} および {{cssxref("cursor")}} で使用可能になりました ([Firefox バグ 1695402](https://bugzil.la/1695402) および [Firefox バグ 1695403](https://bugzil.la/1695403))。
 - MacOS の既定の `monospace` フォントを Menlo に変更しました ([Firefox バグ 1342741](https://bugzil.la/1342741))。
 - {{cssxref("visibility")}} の値 `collapse` を、ルビに実装しました ([Firefox バグ 1697529](https://bugzil.la/1697529))。
@@ -30,7 +30,7 @@ _変更なし。_
 
 #### 廃止
 
-- {{cssxref(":-moz-submit-invalid")}} 疑似クラスを設定項目で無効化したため、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1694129](https://bugzil.la/1694129))。
+- {{cssxref(":-moz-submit-invalid")}} 擬似クラスを設定項目で無効化したため、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1694129](https://bugzil.la/1694129))。
 - 非標準の {{cssxref(":-moz-ui-invalid")}} および {{cssxref(":-moz-ui-valid")}} の、既定のスタイルを削除しました ([Firefox バグ 1693969](https://bugzil.la/1693969))。
 
 ### JavaScript

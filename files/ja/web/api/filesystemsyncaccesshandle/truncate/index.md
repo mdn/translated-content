@@ -27,7 +27,7 @@ truncate(newSize)
 ### 例外
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : 対応するアクセスハンドルが既に閉じられているか、ファイルのバイナリデータの変更が失敗したとき投げられます。
+  - : 対応するアクセスハンドルが既に閉じられているか、ファイルのバイナリーデータの変更が失敗したとき投げられます。
 - `QuotaExceededError` {{domxref("DOMException")}}
   - : `newSize` がファイルのもとのサイズより大きく、ブラウザーの[ストレージ制限](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)を超えるとき投げられます。
 
