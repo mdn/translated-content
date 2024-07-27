@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`Math.log()`** 정적 메서드는 숫자의 자연 로그(밑이 [e](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/E))를 반환합니다. 즉, 아래와 같습니다.
+**`Math.log()`** 정적 메서드는 숫자의 자연 로그(밑이 [e](/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/E))를 반환합니다. 즉, 아래와 같습니다.
 
 <!-- prettier-ignore-start -->
 <math display="block">
