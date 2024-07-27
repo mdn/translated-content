@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef}}
 
-Canvas API 的 `CanvasRenderingContext2D.fontKerning` 属性用于指定如何使用字体字距调整信息。
+Canvas API 的 **`CanvasRenderingContext2D.fontKerning`** 属性用于指定如何使用字体字距调整（kerning）信息。
 
-字距调整（Kerning）会调整比例字体中相邻字母的间距，允许它们在视觉上互相接触，如果有空间的话。例如，在良好的字距调整字体中，字符 `AV`、`Ta` 和 `We` 会更紧凑地排列，使得字符间距更加均匀，阅读起来更加愉悦，比没有使用字距调整的文本更好。
+字距调整会调整比例字体的相邻字母间距，如果有空间，则允许它们在视觉上互相接触。例如，在良好的字距调整字体中，字符 `AV`、`Ta` 和 `We` 会更紧凑地排列，使得字符间距更加均匀，阅读起来比没有调整字距的文本更加舒服。
 
 这个属性对应于 CSS 中的 [`font-kerning`](/zh-CN/docs/Web/CSS/font-kerning) 属性。
 
@@ -28,7 +28,7 @@ Canvas API 的 `CanvasRenderingContext2D.fontKerning` 属性用于指定如何�
 
 ## 示例
 
-以下示例演示了如何使用 `fontKerning` 属性在 Canvas 中显示文本“AVA Ta We”，并展示了支持的每个值的效果。
+以下示例演示了使用 `fontKerning` 属性所支持的每一个值来显示文本“AVA Ta We”。
 
 ### HTML
 
@@ -44,15 +44,15 @@ const ctx = canvas.getContext("2d");
 ctx.font = "30px serif";
 
 // 默认值（auto）
-ctx.fillText(`AVA Ta We (默认：${ctx.fontKerning})`, 5, 30);
+ctx.fillText(`AVA Ta We（默认：${ctx.fontKerning}）`, 5, 30);
 
 // 字距调整：normal
 ctx.fontKerning = "normal";
-ctx.fillText(`AVA Ta We (${ctx.fontKerning})`, 5, 70);
+ctx.fillText(`AVA Ta We（${ctx.fontKerning}）`, 5, 70);
 
 // 字距调整：none
 ctx.fontKerning = "none";
-ctx.fillText(`AVA Ta We (${ctx.fontKerning})`, 5, 110);
+ctx.fillText(`AVA Ta We（${ctx.fontKerning}）`, 5, 110);
 ```
 
 ### 结果
