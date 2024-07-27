@@ -2,7 +2,7 @@
 title: CanvasRenderingContext2D：createRadialGradient() 方法
 slug: Web/API/CanvasRenderingContext2D/createRadialGradient
 l10n:
-  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
+  sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
 ---
 
 {{APIRef}}
@@ -11,7 +11,8 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.createRadialGradient()`** 方法�
 
 这个方法返回 {{domxref("CanvasGradient")}}。要将其应用于形状，必须首先将渐变赋值给 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 或 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} 属性。
 
-> **备注：** 渐变坐标是全局的，即相对于当前的坐标空间。当应用于形状时，这些坐标并不是相对于形状本身的坐标。
+> [!NOTE]
+> 渐变坐标是全局的，即相对于当前的坐标空间。当应用于形状时，这些坐标并不是相对于形状本身的坐标。
 
 ## 语法
 
