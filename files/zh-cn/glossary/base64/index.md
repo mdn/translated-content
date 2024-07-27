@@ -2,20 +2,20 @@
 title: Base64
 slug: Glossary/Base64
 l10n:
-  sourceCommit: dd3048a4eb74a53395c9a2015baefaa46ef77a56
+  sourceCommit: 9409e72722add6d1c4baeaf7b262c9b0985c0bcf
 ---
 
 {{GlossarySidebar}}
 
-**Base64** 是一组相似的[二进制到文本](https://en.wikipedia.org/wiki/Binary-to-text_encoding)（binary-to-text）的编码规则，让二进制数据在解释成 64 进制的表现形式后能够用 ASCII 字符串的格式表示出来。_Base64_ 这个词出自一种特定的 [MIME 内容传输编码](https://zh.wikipedia.org/wiki/多用途互聯網郵件擴展#内容传输编码)。
+**Base64** 是一组相似的[二进制到文本](https://en.wikipedia.org/wiki/Binary-to-text_encoding)（binary-to-text）的编码规则，让二进制数据在解释成 64 进制的表现形式后能够用 {{glossary("ASCII")}} 字符串的格式表示出来。_Base64_ 这个词出自一种特定的 [MIME 内容传输编码](https://zh.wikipedia.org/wiki/多用途互聯網郵件擴展#内容传输编码)。
 
-当单独使用术语"Base64"指代特定算法时，通常指的是 [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648) 第 4 节中概述的 Base64 版本。该版本使用以下字母表来表示基于 64 进制的数字，以及 `=` 作为填充字符：
+当单独使用术语“Base64”指代特定{{glossary("algorithm", "算法")}}时，通常指的是 [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648) 第 4 节中概述的 Base64 版本。该版本使用以下字母表来表示基于 64 进制的数字，以及使用 `=` 作为填充字符：
 
 ```plain
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ```
 
-一种常见的变体是“URL 安全的 Base64”，它省略了填充，并将 `+/` 替换为 `-_`，以避免在 URL 路径段或查询参数中可能引起问题的字符的问题。
+一种常见的变体是“URL 安全的 Base64”，它省略了填充，并将 `+/` 替换为 `-_`，以避免在 {{glossary("URL")}} 路径段或查询参数中可能引起问题的字符的问题。如果不将数据放在路径段或查询参数中，你就不需要用到这一变体。例如，[data URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) 既没有路径段也没有查询参数，因此可以使用标准的 Base64 编码。
 
 Base64 编码方案通常用于对二进制数据进行编码，以便在只能处理 ASCII 文本（或某些 ASCII 的超集，仍不接受任意二进制数据）的媒体上进行存储或传输。这确保了数据在传输过程中保持不变。Base64 的常见应用包括：
 
