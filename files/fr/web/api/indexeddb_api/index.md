@@ -9,7 +9,8 @@ IndexedDB est une API de bas niveau qui permet le stockage côté client de quan
 
 {{AvailableInWorkers}}
 
-> **Note :** L'API IndexedDB est puissante, mais elle peut sembler trop compliquée dans les cas simples. Si vous préferez une API plus simple, essayez des librairies comme [localForage](https://localforage.github.io/localForage/), [dexie.js](http://www.dexie.org/), [ZangoDB](https://github.com/erikolson186/zangodb), [PouchDB](https://pouchdb.com/), [idb](https://www.npmjs.com/package/idb), [idb-keyval](https://www.npmjs.com/package/idb-keyval), [JsStore](http://jsstore.net/) et [lovefield](https://github.com/google/lovefield) qui offrent de nombreux avantages aux développeurs de IndexedDB.
+> [!NOTE]
+> L'API IndexedDB est puissante, mais elle peut sembler trop compliquée dans les cas simples. Si vous préferez une API plus simple, essayez des librairies comme [localForage](https://localforage.github.io/localForage/), [dexie.js](http://www.dexie.org/), [ZangoDB](https://github.com/erikolson186/zangodb), [PouchDB](https://pouchdb.com/), [idb](https://www.npmjs.com/package/idb), [idb-keyval](https://www.npmjs.com/package/idb-keyval), [JsStore](http://jsstore.net/) et [lovefield](https://github.com/google/lovefield) qui offrent de nombreux avantages aux développeurs de IndexedDB.
 
 ## Concepts clés et utilisation
 
@@ -19,7 +20,8 @@ IndexedDB est un système de gestion de base de données transactionnel, similai
 - Apprenez à utiliser IndexedDB de manière asynchrone à partir des principes fondamentaux grâce à notre guide [Utiliser IndexedDB](/fr/docs/IndexedDB/Using_IndexedDB).
 - Combinez IndexedDB pour le stockage des données en mode déconnecté avec les Service Workers pour stocker des assets en mode déconnecté, comme précisé dans [Faire fonctionner les PWAs en mode déconnecté grâce aux Service workers](/fr/docs/Web/Progressive_web_apps/Offline_Service_workers).
 
-> **Note :** Comme la plupart des solutions de stockage en ligne, IndexedDB suit la politique [same-origin policy](http://www.w3.org/Security/wiki/Same_Origin_Policy). Alors même que vous pouvez accèder à des données stockées au sein d'un domaine, vous ne pouvez pas accéder à des données sur plusieurs domaines.
+> [!NOTE]
+> Comme la plupart des solutions de stockage en ligne, IndexedDB suit la politique [same-origin policy](http://www.w3.org/Security/wiki/Same_Origin_Policy). Alors même que vous pouvez accèder à des données stockées au sein d'un domaine, vous ne pouvez pas accéder à des données sur plusieurs domaines.
 
 ### Synchrone et asynchrone
 

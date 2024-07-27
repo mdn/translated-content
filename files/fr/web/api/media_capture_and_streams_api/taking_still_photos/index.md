@@ -221,7 +221,8 @@ Comme pour chaque fois où il faut manipuler le contenu d'un canevas, on commenc
 
 Ensuite, si la hauteur et la largeur ne sont pas nulles (indiquant par là qu'il y a potentiellement des données d'image valides), on définit la largeur et la hauteur du canevas pour correspondre à celles de l'image capturée. Ensuite, on appelle [`drawImage()`](/fr/docs/Web/API/CanvasRenderingContext2D/drawImage) afin de dessiner l'image courante de la vidéo dans ce contexte, remplissant ainsi tous le canevas avec l'image.
 
-> **Note :** On tire parti de la ressemblance entre l'interface [`HTMLVideoElement`](/fr/docs/Web/API/HTMLVideoElement) et l'interface [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) lorsqu'on fournit `video` à `drawImage()`.
+> [!NOTE]
+> On tire parti de la ressemblance entre l'interface [`HTMLVideoElement`](/fr/docs/Web/API/HTMLVideoElement) et l'interface [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) lorsqu'on fournit `video` à `drawImage()`.
 
 Lorsque le canevas contient l'image capturée, on la convertit au format PNG à l'aide de [`HTMLCanvasElement.toDataURL()`](/fr/docs/Web/API/HTMLCanvasElement/toDataURL). Enfin, on appelle [`photo.setAttribute()`](/fr/docs/Web/API/Element/setAttribute) pour afficher l'image ainsi formée dans la boîte affichée à l'écran.
 

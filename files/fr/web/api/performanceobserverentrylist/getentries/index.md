@@ -7,7 +7,8 @@ slug: Web/API/PerformanceObserverEntryList/getEntries
 
 La méthode **`getEntries()`** de l'interface [`PerformanceObserverEntryList`](/fr/docs/Web/API/PerformanceObserverEntryList) retourne une liste d'objets explicitement _observés_ d'[entrées de performance](/fr/docs/Web/API/PerformanceEntry) pour un filtre donné. Les membres de la liste sont déterminés par l'ensemble des [types d'entrée](/fr/docs/Web/API/PerformanceEntry/entryType) spécifiés dans l'appel à la méthode [`observe()`](/fr/docs/Web/API/PerformanceObserver/observe). La liste est disponible dans la fonction de rappel de l'observateur (en tant que premier paramètre de la fonction de rappel).
 
-> **Note :** Cette interface est exposée à [`Window`](/fr/docs/Web/API/Window) et [`Worker`](/fr/docs/Web/API/Worker).
+> [!NOTE]
+> Cette interface est exposée à [`Window`](/fr/docs/Web/API/Window) et [`Worker`](/fr/docs/Web/API/Worker).
 
 ## Syntaxe
 

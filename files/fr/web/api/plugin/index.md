@@ -7,7 +7,8 @@ slug: Web/API/Plugin
 
 L'interface `Plugin` fournit des informations à propos d'un [plugin](/fr/docs/Mozilla/Add-ons/Plugins) du navigateur.
 
-> **Note :** Les propriétés propres des objets `Plugin` ne sont plus énumérables dans les dernières versions des navigateurs.
+> [!NOTE]
+> Les propriétés propres des objets `Plugin` ne sont plus énumérables dans les dernières versions des navigateurs.
 
 ## Propriétés
 

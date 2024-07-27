@@ -41,13 +41,15 @@ new RTCPeerConnection(configuration)
 
       - : Un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) contenant des objets [`RTCCertificate`](/fr/docs/Web/API/RTCCertificate) utilisés par la connexion pour l'authentification. Si cette propriété n'est pas fournie, un ensemble de certificats est généré automatiquement pour chaque connexion [`RTCPeerConnection`](/fr/docs/Web/API/RTCPeerConnection). Bien qu'un seul certificat est utilisé pour une connexion donnée, fournir des certificats basés sur des algorithmes différents pourra augmenter les chances de réussir la connexion dans certaines conditions circonstances. Voir ci-après, [la section sur l'utilisation des certificats](#utiliser_des_certificats) pour plus d'informations.
 
-        > **Note :** Cette option de configuration ne peut pas être modifiée après qu'elle a été fournie initialement. Une fois que les certificats ont été paramétrés, cette propriété sera ignorée par les appels ultérieurs à [`RTCPeerConnection.setConfiguration()`](/fr/docs/Web/API/RTCPeerConnection/setConfiguration).
+        > [!NOTE]
+        > Cette option de configuration ne peut pas être modifiée après qu'elle a été fournie initialement. Une fois que les certificats ont été paramétrés, cette propriété sera ignorée par les appels ultérieurs à [`RTCPeerConnection.setConfiguration()`](/fr/docs/Web/API/RTCPeerConnection/setConfiguration).
 
     - `iceCandidatePoolSize` {{optional_inline}}
 
       - : Un entier non-signé sur 16 bits qui indique la taille du volume de candidats ICE qui seront collectés au préalable (<i lang="en">prefetched</i>). La valeur par défaut est 0 (indiquant qu'aucune collecte préalable des candidats n'a lieu). Dans certains cas, l'établissement de la connexion pourra être plus rapide en permettant à l'agent ICE de récupérer les candidats ICE avant la tentative de connexion, afin qu'ils soient disponibles pour une inspection lors de l'appel à [`RTCPeerConnection.setLocalDescription()`](/fr/docs/Web/API/RTCPeerConnection/setLocalDescription).
 
-        > **Note :** Modifier la taille du volume de candidats ICE pourra déclencher le début de la collecte ICE.
+        > [!NOTE]
+        > Modifier la taille du volume de candidats ICE pourra déclencher le début de la collecte ICE.
 
     - `iceServers` {{optional_inline}}
 

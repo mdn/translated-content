@@ -32,7 +32,8 @@ Lors de la demande d'autorisation, une boîte de dialogue apparaît dans le navi
 
 Ainsi, on peut choisir d'autoriser les notifications d'une origine donnée ou les bloquer. Une fois le choix effectué, le paramètre persistera généralement pour la session en cours.
 
-> **Note :** Pour Firefox, à partir de Firefox 44, les permissions pour les notifications et [l'API Push](/fr/docs/Web/API/Push_API) ont été fusionnées. Ainsi, si on autorise les notifications, les messages et notifications <i lang="en">push</i> seront également autorisées.
+> [!NOTE]
+> Pour Firefox, à partir de Firefox 44, les permissions pour les notifications et [l'API Push](/fr/docs/Web/API/Push_API) ont été fusionnées. Ainsi, si on autorise les notifications, les messages et notifications <i lang="en">push</i> seront également autorisées.
 
 ### Création de la notification
 
@@ -40,7 +41,8 @@ Ensuite, on peut créer une nouvelle notification à l'aide du constructeur [`No
 
 En outre, la spécification de l'API Notifications spécifie un certain nombre d'ajouts à l'[API ServiceWorker](/fr/docs/Web/API/Service_Worker_API), qui permettent aux <i lang="en">service worker</i> de déclencher des notifications.
 
-> **Note :** Pour mieux savoir comment utiliser les notifications au sein de votre propre application, lisez [Utiliser l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API).
+> [!NOTE]
+> Pour mieux savoir comment utiliser les notifications au sein de votre propre application, lisez [Utiliser l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API).
 
 ## Interfaces
 
