@@ -149,7 +149,8 @@ textarea {
 }
 ```
 
-> **Примечание:** Normalizing stylesheets are used by many developers to create a set of baseline styles to use on all projects. Typically these do similar things to those described above, making sure that anything different across browsers is set to a consistent default before you do your own work on the CSS. They are not as important as they once were, as browsers are typically more consistent than in the past. However if you want to take a look at one example, check out [Normalize.css](http://necolas.github.io/normalize.css/), which is a very popular stylesheet used as a base by many projects.
+> [!NOTE]
+> Normalizing stylesheets are used by many developers to create a set of baseline styles to use on all projects. Typically these do similar things to those described above, making sure that anything different across browsers is set to a consistent default before you do your own work on the CSS. They are not as important as they once were, as browsers are typically more consistent than in the past. However if you want to take a look at one example, check out [Normalize.css](http://necolas.github.io/normalize.css/), which is a very popular stylesheet used as a base by many projects.
 
 Для дополнительной информации по стилизации форм, посмотрите две статьи в разделе HTML этого руководства.
 

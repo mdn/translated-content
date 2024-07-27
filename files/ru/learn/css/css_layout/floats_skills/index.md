@@ -7,7 +7,8 @@ slug: Learn/CSS/CSS_layout/Floats_skills
 
 Цель этого задания - чтобы вы поработали со свойствами CSS {{CSSxRef("float")}} и {{CSSxRef("clear")}} которые описаны в нашем уроке [Floats](/ru/docs/Learn/CSS/CSS_layout/Floats). Вы будете работать над тремя небольшими задачами, использующими различные элементы из пройденного материала.
 
-> **Примечание:** Вы можете опробовать решения в интерактивных редакторах ниже, однако может быть полезным загрузить код и использовать онлайн инструменты такие как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), или [Glitch](https://glitch.com/) чтобы проработать задания.
+> [!NOTE]
+> Вы можете опробовать решения в интерактивных редакторах ниже, однако может быть полезным загрузить код и использовать онлайн инструменты такие как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), или [Glitch](https://glitch.com/) чтобы проработать задания.
 >
 > Если вы застрянете, попросите нас о помощи — см. раздел [Оценка или дальнейшая помощь](#оценка_или_дальнейшая_помощь) в конце страницы
 
@@ -21,7 +22,8 @@ slug: Learn/CSS/CSS_layout/Floats_skills
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/float/float1.html", '100%', 700)}}
 
-> **Примечание:** Для оценки или дальнейшей работы, [загрузите отправную точку этого задания](https://github.com/mdn/css-examples/blob/master/learn/tasks/float/float1-download.html) чтобы работать в вашем собственном или онлайн редакторе.
+> [!NOTE]
+> Для оценки или дальнейшей работы, [загрузите отправную точку этого задания](https://github.com/mdn/css-examples/blob/master/learn/tasks/float/float1-download.html) чтобы работать в вашем собственном или онлайн редакторе.
 
 ## Float Два
 
@@ -33,7 +35,8 @@ slug: Learn/CSS/CSS_layout/Floats_skills
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/float/float2.html", '100%', 800)}}
 
-> **Примечание:** Для оценки или дальнейшей работы, [загрузите отправную точку этого задания](https://github.com/mdn/css-examples/blob/master/learn/tasks/float/float2-download.html) чтобы работать в вашем собственном или онлайн редакторе.
+> [!NOTE]
+> Для оценки или дальнейшей работы, [загрузите отправную точку этого задания](https://github.com/mdn/css-examples/blob/master/learn/tasks/float/float2-download.html) чтобы работать в вашем собственном или онлайн редакторе.
 
 ## Float Три
 
@@ -45,7 +48,8 @@ slug: Learn/CSS/CSS_layout/Floats_skills
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/float/float3.html", '100%', 800)}}
 
-> **Примечание:** Для оценки или дальнейшей работы, [загрузите отправную точку этого задания](https://github.com/mdn/css-examples/blob/master/learn/tasks/float/float3-download.html) чтобы работать в вашем собственном или онлайн редакторе.
+> [!NOTE]
+> Для оценки или дальнейшей работы, [загрузите отправную точку этого задания](https://github.com/mdn/css-examples/blob/master/learn/tasks/float/float3-download.html) чтобы работать в вашем собственном или онлайн редакторе.
 
 ## Оценка или дальнейшая помощь
 

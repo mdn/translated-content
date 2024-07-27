@@ -40,7 +40,8 @@ slug: Learn/CSS/CSS_layout/Positioning
 
 И если вы сейчас сохраните и обновите, то вы не увидите никаких изменений, не считая обновлённого цвета фона 2-го параграфа. Это нормально, как мы и говорили ранее, статическое позиционирование является поведением по умолчанию!
 
-> **Примечание:** вы можете посмотреть живой пример на данном этапе на [`1_static-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) ([см. исходный код](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)).
+> [!NOTE]
+> Вы можете посмотреть живой пример на данном этапе на [`1_static-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) ([см. исходный код](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)).
 
 ### Относительное позиционирование
 
@@ -61,7 +62,8 @@ top: 30px;
 left: 30px;
 ```
 
-> **Примечание:** значения этих свойств могут принимать любые [единицы](/ru/docs/Learn/CSS/Introduction_to_CSS/Values_and_units) которые вы ожидаете по логике: пиксели, мм, rems, %, и т.д.
+> [!NOTE]
+> Значения этих свойств могут принимать любые [единицы](/ru/docs/Learn/CSS/Introduction_to_CSS/Values_and_units) которые вы ожидаете по логике: пиксели, мм, rems, %, и т.д.
 
 Если вы сейчас сохраните и обновите, вы получите примерно такой результат:
 
@@ -124,7 +126,8 @@ span {
 
 Круто, правда? Хорошо, вероятно это не то, чего вы ожидали — почему он переместился вниз и вправо, когда мы указали вверх и влево? Как бы нелогично это ни звучало это всего лишь способ того как работает позиционирование — вам надо думать о невидимой силе толкающей указанную сторону позиционируемого блока, перемещая его в противоположную сторону. Так, например, если вы указали `top: 30px;`, сила толкает блок, заставляя его перемещаться вниз на 30px.
 
-> **Примечание:** вы можете посмотреть пример на этом этапе на [`2_relative-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) ([см. исходный код](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html)).
+> [!NOTE]
+> Вы можете посмотреть пример на этом этапе на [`2_relative-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) ([см. исходный код](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html)).
 
 ### Абсолютное позиционирование
 
@@ -197,11 +200,14 @@ span {
 
 Во-вторых, обратите внимание, что позиция элемента изменилась — это потому, что {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, и {{cssxref("right")}} ведут себя по-другому с абсолютным позиционированием. Вместо того, чтобы позиционировать элемент на основе его относительного положения в обычном потоке макета документа, они определяют расстояние, на котором элемент должен находиться от каждой из сторон содержащего элемента. Поэтому в этом случае мы говорим, что абсолютно позиционированный элемент должен располагаться в 30px от верха "содержащего элемента" и 30px от левого края (В этом случае "содержащий элемент" является **исходным содержащим блоком**. См. раздел ниже для дополнительной информации).
 
-> **Примечание:** вы можете использовать {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, и {{cssxref("right")}} для изменения размера элемента если вам надо. Попробуйте установить `top: 0; bottom: 0; left: 0; right: 0;` и `margin: 0;` для вашего позиционируемого элемента и посмотрите, что произойдёт! Потом снова все верните...
+> [!NOTE]
+> Вы можете использовать {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, и {{cssxref("right")}} для изменения размера элемента если вам надо. Попробуйте установить `top: 0; bottom: 0; left: 0; right: 0;` и `margin: 0;` для вашего позиционируемого элемента и посмотрите, что произойдёт! Потом снова все верните...
 
-> **Примечание:** Да, margin-ы все ещё влияют на позиционируемый элемент. Однако, схлопывания margin не происходит.
+> [!NOTE]
+> Да, значения `margin` все ещё влияют на позиционируемый элемент. Однако, схлопывания `margin` не происходит.
 
-> **Примечание:** вы можете посмотреть пример на этом этапе на [`3_absolute-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) ([см. исходный код](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html)).
+> [!NOTE]
+> Вы можете посмотреть пример на этом этапе на [`3_absolute-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) ([см. исходный код](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html)).
 
 ### Контекст позиционирования
 
@@ -276,7 +282,8 @@ span {
 
 Позиционируемый элемент теперь располагается относительно элемента {{htmlelement("body")}}.
 
-> **Примечание:** вы можете посмотреть живой пример на этом этапе на [`4_positioning-context.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) ([см. исходный код](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/4_positioning-context.html)).
+> [!NOTE]
+> Вы можете посмотреть живой пример на этом этапе на [`4_positioning-context.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) ([см. исходный код](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/4_positioning-context.html)).
 
 ### Введение в z-index
 
@@ -374,7 +381,8 @@ p:nth-of-type(1) {
 
 Обратите внимание что `z-index` принимает значения индекса только без единиц измерения; вы не можете задавать значения, что хотите, чтобы какой-то элемент был на 23 пикселя выше по z-оси — это так не работает. Более высокие значения будут располагаться над меньшими значениями и от вас зависит какие значения вы используете. Используя 2 и 3, вы получите тот же эффект что и 300 и 40000.
 
-> **Примечание:** вы можете посмотреть живой пример на этом этапе на [`5_z-index.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) ([см. исходный код](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html)).
+> [!NOTE]
+> Вы можете посмотреть живой пример на этом этапе на [`5_z-index.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) ([см. исходный код](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html)).
 
 ### Фиксированное позиционированиее
 
@@ -476,7 +484,8 @@ p:nth-of-type(1) {
 
 {{ EmbedLiveSample('Фиксированное_позиционированиее', '100%', 400) }}
 
-> **Примечание:** вы можете посмотреть живой пример на этом этапе на [`6_fixed-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) ([см. исходный код](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html)).
+> [!NOTE]
+> Вы можете посмотреть живой пример на этом этапе на [`6_fixed-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) ([см. исходный код](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html)).
 
 ### position: sticky
 
@@ -649,7 +658,8 @@ dt {
 
 Липкие элементы являются "липкими" относительно ближайшего предка с "прокручивающимся механизмом", который определяется свойством [позиции](/ru/docs/Web/CSS/position) его предка.
 
-> **Примечание:** вы можете посмотреть живой пример на этом этапе на [`7_sticky-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) ([см. исходный код](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html)).
+> [!NOTE]
+> Вы можете посмотреть живой пример на этом этапе на [`7_sticky-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) ([см. исходный код](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html)).
 
 ## Проверь свои навыки!
 

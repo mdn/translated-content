@@ -15,14 +15,16 @@ slug: Learn/CSS/Styling_text/Fundamentals
 
 Как вы уже проверили в своей работе с HTML и CSS, текст внутри элемента выкладывается в поле содержимого элемента. Он начинается в левом верхнем углу области содержимого (или в правом верхнем углу, в случае содержимого языка RTL) и течёт к концу строки. Как только он достигает конца, он переходит к следующей строке и продолжает, затем к следующей строке, пока все содержимое не будет помещено в коробку. Текстовое содержимое эффективно ведёт себя как ряд встроенных элементов, размещённых на соседних строках и не создающих разрывы строк до тех пор, пока не будет достигнут конец строки, или если вы не принудите разрыв строки вручную с помощью элемента {{htmlelement("br")}}.
 
-> **Примечание:** если приведённый выше абзац оставляет вас в замешательстве, то не имеет значения — вернитесь и просмотрите нашу статью о модели коробки, чтобы освежить теорию модели коробки, прежде чем продолжить.
+> [!NOTE]
+> Если приведённый выше абзац оставляет вас в замешательстве, то не имеет значения — вернитесь и просмотрите нашу статью о модели коробки, чтобы освежить теорию модели коробки, прежде чем продолжить.
 
 Свойства CSS, используемые для стилизации текста, обычно делятся на две категории, которые мы рассмотрим отдельно в этой статье:
 
 - **Font styles**: Свойства, влияющие на шрифт, применяемый к тексту, влияющие на то, какой шрифт применяется, насколько он велик, является ли он полужирным, курсивным и т. д.
 - **Text layout styles**: Свойства, влияющие на интервал и другие особенности компоновки текста, позволяющие манипулировать, например, пространством между строками и буквами, а также тем, как текст выравнивается в поле содержимого.
 
-> **Примечание:** имейте в виду, что текст внутри элемента все затронуты как одна единая сущность. Вы не можете выбирать и стилизовать подразделы текста, если вы не обернёте их в соответствующий элемент (например, {{htmlelement ("span")}} или {{htmlelement ("strong")}}), или использовать текстовый псевдоэлемент, такой как ::first-letter (выделяет первую букву текста элемента),:: first-line (выделяет первую строку текста элемента) или ::selection (выделяет текст, выделенный в данный момент курсором.)
+> [!NOTE]
+> Имейте в виду, что текст внутри элемента все затронуты как одна единая сущность. Вы не можете выбирать и стилизовать подразделы текста, если вы не обернёте их в соответствующий элемент (например, {{htmlelement ("span")}} или {{htmlelement ("strong")}}), или использовать текстовый псевдоэлемент, такой как ::first-letter (выделяет первую букву текста элемента),:: first-line (выделяет первую строку текста элемента) или ::selection (выделяет текст, выделенный в данный момент курсором.)
 
 ## Шрифты
 
@@ -103,9 +105,11 @@ The list of actual web safe fonts will change as operating systems evolve, but i
 | Trebuchet MS    | sans-serif   | You should be careful with using this font — it isn't widely available on mobile OSes.                                                                                                                                                            |
 | Verdana         | sans-serif   |                                                                                                                                                                                                                                                   |
 
-> **Примечание:** Among various resources, the [cssfontstack.com](http://www.cssfontstack.com/) website maintains a list of web safe fonts available on Windows and macOS operating systems, which can help you make your decision about what you consider safe for your usage.
+> [!NOTE]
+> Among various resources, the [cssfontstack.com](http://www.cssfontstack.com/) website maintains a list of web safe fonts available on Windows and macOS operating systems, which can help you make your decision about what you consider safe for your usage.
 
-> **Примечание:** There is a way to download a custom font along with a webpage, to allow you to customize your font usage in any way you want: **web fonts**. This is a little bit more complex, and we will be discussing this in a [separate article](/ru/docs/Learn/CSS/Styling_text/Web_fonts) later on in the module.
+> [!NOTE]
+> There is a way to download a custom font along with a webpage, to allow you to customize your font usage in any way you want: **web fonts**. This is a little bit more complex, and we will be discussing this in a [separate article](/ru/docs/Learn/CSS/Styling_text/Web_fonts) later on in the module.
 
 #### Default fonts
 
@@ -135,7 +139,8 @@ In such a case, the browser starts at the beginning of the list and looks to see
 
 It is a good idea to provide a suitable generic font name at the end of the stack so that if none of the listed fonts are available, the browser can at least provide something approximately suitable. To emphasise this point, paragraphs are given the browser's default serif font if no other option is available — which is usually Times New Roman — this is no good for a sans-serif font!
 
-> **Примечание:** Font names that have more than one word — like `Trebuchet MS` — need to be surrounded by quotes, for example `"Trebuchet MS"`.
+> [!NOTE]
+> Font names that have more than one word — like `Trebuchet MS` — need to be surrounded by quotes, for example `"Trebuchet MS"`.
 
 #### A font-family example
 
@@ -368,7 +373,8 @@ p {
 
 {{ EmbedLiveSample('Hidden_example1', '100%', 260) }}
 
-> **Примечание:** You can see more interesting examples of `text-shadow` usage in the Sitepoint article [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/).
+> [!NOTE]
+> You can see more interesting examples of `text-shadow` usage in the Sitepoint article [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/).
 
 ## Text layout
 

@@ -21,7 +21,8 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 
 Возможно, вы думаете: «Почему бы просто не создавать отдельные вкладки в виде отдельных веб-страниц и просто иметь вкладки, переходящие на отдельные страницы, чтобы создать эффект?» Этот код был бы проще, да, но тогда каждый отдельный «просмотр страницы» на самом деле был бы вновь загруженной веб-страницей, что затрудняло бы сохранение информации между представлениями и интеграцию этой функции в более крупный дизайн пользовательского интерфейса. Кроме того, так называемые «одностраничные приложения» становятся очень популярными - особенно для мобильных веб-интерфейсов - потому что все, что обслуживается как один файл, сокращает количество HTTP-запросов, необходимых для просмотра всего содержимого, тем самым повышая производительность.
 
-> **Примечание:** Некоторые веб-разработчики занимаются ещё более быстрыми темпами, имея только одну страницу информации, загружаемую сразу и динамическое изменение информации, отображаемой с помощью функции JavaScript, такой как [XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest). На этом этапе вашего обучения мы хотим сохранить все как можно проще. Впоследствии есть JavaScript, но только немного.
+> [!NOTE]
+> Некоторые веб-разработчики занимаются ещё более быстрыми темпами, имея только одну страницу информации, загружаемую сразу и динамическое изменение информации, отображаемой с помощью функции JavaScript, такой как [XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest). На этом этапе вашего обучения мы хотим сохранить все как можно проще. Впоследствии есть JavaScript, но только немного.
 
 Для начала мы хотели бы, чтобы вы создали локальную копию исходного HTML-файла — [info-box-start.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box-start.html). Сохраните это где вам удобно на локальном компьютере и откройте его в текстовом редакторе. Давайте посмотрим на HTML, содержащийся в теле:
 
@@ -120,7 +121,8 @@ body {
 }
 ```
 
-> **Примечание:** Мы используем селектор-потомки с полем `.info-box` в начале цепочки в этом примере - это значит, что мы можем вставить эту функцию на страницу с другим содержимым, уже на ней, не опасаясь вмешиваться в стили, применяемые к другим частям страницы.
+> [!NOTE]
+> Мы используем селектор-потомки с полем `.info-box` в начале цепочки в этом примере - это значит, что мы можем вставить эту функцию на страницу с другим содержимым, уже на ней, не опасаясь вмешиваться в стили, применяемые к другим частям страницы.
 
 Затем мы нарисуем горизонтальные вкладки - все элементы списка будут перемещены влево, чтобы заставить их сидеть в одной строке вместе, их {{cssxref ("list-style-type")}} имеет значение `none`, чтобы избавиться от пули и их {{cssxref ("width")}} установлены на `150px`, чтобы они удобно располагались в информационном окне. Элементы {{htmlelement ("a")}} имеют {{cssxref ("display")}} встроенный блок, поэтому они будут сидеть в строке, но всё же быть стильными и соответствующим образом оформлены для кнопок вкладок, используя множество других свойств.
 
@@ -242,7 +244,8 @@ In our second example, we will take our first example — our info-box — and a
 
 ![](fixed-info-box.png)
 
-> **Примечание:** You can see the finished example running live at [fixed-info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/fixed-info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
+> [!NOTE]
+> You can see the finished example running live at [fixed-info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/fixed-info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
 
 As a starting point, you can use your completed example from the first section of the article, or make a local copy of [info-box.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html) from our Github repo.
 
@@ -280,7 +283,8 @@ First of all, we need some additional HTML to represent the web site main conten
 </section>
 ```
 
-> **Примечание:** You can feel free to change the fake content for some real content if you like.
+> [!NOTE]
+> You can feel free to change the fake content for some real content if you like.
 
 ### Changes to the existing CSS
 
@@ -323,7 +327,8 @@ Our finished example will look like this:
 
 ![](hidden-sliding-panel.png)
 
-> **Примечание:** You can see the finished example running live at [hidden-info-panel.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html)). Check it out to get an idea of what you will be building in this section of the article.
+> [!NOTE]
+> You can see the finished example running live at [hidden-info-panel.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html)). Check it out to get an idea of what you will be building in this section of the article.
 
 As a starting point, make a local copy of [hidden-info-panel-start.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel-start.html) from our Github repo. This doesn't follow on from the previous example, so a fresh start file is required. Let's have a look at the HTML in the file:
 
@@ -339,7 +344,8 @@ As a starting point, make a local copy of [hidden-info-panel-start.html](https:/
 
 To start with here we've got a {{htmlelement("label")}} element and an {{htmlelement("input")}} element — `<label>` elements are normally used to associate a text label with a form element for accessibility purposes (allowing a screen user to see what description goes with what form element). Here it is associated with the `<input>` checkbox using the `for` and `id` attributes.
 
-> **Примечание:** We've put a special question mark character into our HTML to act as our info icon — this represents the button that will be pressed to show/hide the panel.
+> [!NOTE]
+> We've put a special question mark character into our HTML to act as our info icon — this represents the button that will be pressed to show/hide the panel.
 
 Here we are going to use these elements for a slightly different purpose — another useful side effect of `<label>` elements is that you can click a checkbox's label to check the checkbox, as well as just the checkbox itself. This has led to the well-known [checkbox hack](https://css-tricks.com/the-checkbox-hack/), which provides a JavaScript-free way of controlling an element by toggling a button. The element we'll be controlling is the {{htmlelement("aside")}} element that follows the other two (we've left its contents out of the above code listing for brevity).
 

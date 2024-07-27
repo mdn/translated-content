@@ -15,9 +15,11 @@ slug: Learn/CSS/Building_blocks/Values_and_units
 
 В спецификациях CSS и на страницах свойств здесь в MDN вы сможете определять (узнавать) значения, потому как они будут заключены в угловые скобки, например [`<color>`](/ru/docs/Web/CSS/color_value) или [`<length>`](/ru/docs/Web/CSS/length). Если вы видите значение `<color>` как действительное для определённого свойства это значит что вы можете использовать любой валидный цвет в качестве значение для этого свойства, как перечислено на странице [`<color>`](/ru/docs/Web/CSS/color_value)[.](/ru/docs/Web/CSS/color_value)
 
-> **Примечание:** You'll also see CSS values referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value.
+> [!NOTE]
+> You'll also see CSS values referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value.
 
-> **Примечание:** Yes, CSS values tend to be denoted using angle brackets, to differentiate them from CSS properties (e.g. the {{cssxref("color")}} property, versus the [\<color>](/ru/docs/Web/CSS/color_value) data type). You might get confused between CSS data types and HTML elements too, as they both use angle brackets, but this is unlikely — they are used in very different contexts.
+> [!NOTE]
+> Yes, CSS values tend to be denoted using angle brackets, to differentiate them from CSS properties (e.g. the {{cssxref("color")}} property, versus the [\<color>](/ru/docs/Web/CSS/color_value) data type). You might get confused between CSS data types and HTML elements too, as they both use angle brackets, but this is unlikely — they are used in very different contexts.
 
 В следующем примере мы установили цвет нашего заголовка используя ключевое слово и фон используя функцию `rgb()`:
 
@@ -133,7 +135,8 @@ HTML это набор вложенных списков — у нас имее�
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 500)}}
 
-> **Примечание:** Когда вы используете числа в CSS в качестве значений, они не должны быть заключены в кавычки.
+> [!NOTE]
+> Когда вы используете числа в CSS в качестве значений, они не должны быть заключены в кавычки.
 
 ## Цвет
 
@@ -141,7 +144,8 @@ HTML это набор вложенных списков — у нас имее�
 
 Стандартная система цветов доступная в современных компьютерах — это 24-битная система, которая позволяет отображать около 16.7 миллионов отдельных цветов через комбинацию различных красных, зелёных и синих каналов с 256 различными значениями каждого канала (256 x 256 x 256 = 16,777,216). Давайте взглянем на некоторые способы, с помощью которых мы можем определять цвет в CSS.
 
-> **Примечание:** В этом руководстве мы рассмотрим общие методы определения цвета, которые имеют хорошую поддержку браузерами; существуют и другие методы, но они не имеют столь же хорошей поддержки и являются менее общими.
+> [!NOTE]
+> В этом руководстве мы рассмотрим общие методы определения цвета, которые имеют хорошую поддержку браузерами; существуют и другие методы, но они не имеют столь же хорошей поддержки и являются менее общими.
 
 ### Ключевые слова цвета
 
@@ -169,7 +173,8 @@ HTML это набор вложенных списков — у нас имее�
 
 А также вы можете использовать цвета RGBA — что работает в точности, как и цвета RGB и то есть вы можете использовать любое значение RGB, однако существует четвёртое значение, которое представляет альфа канал цвета, которое контролирует мутность. Если вы установите это значение на `0`, то это сделает цвет полностью прозрачным, тогда как `1` сделает его полностью мутным. Значения между дают вам разные уровни прозрачности.
 
-> **Примечание:** Настройка альфа канала в цвете имеет одно ключевое различие в использовании свойства {{cssxref("opacity")}} которое мы рассматривали ранее. когда вы используете мутность вы делаете элемент и все внутри него мутным, тогда как при использовании цвета RGBA вы делаете мутным только тот цвет который вы специфицируете.
+> [!NOTE]
+> Настройка альфа канала в цвете имеет одно ключевое различие в использовании свойства {{cssxref("opacity")}} которое мы рассматривали ранее. когда вы используете мутность вы делаете элемент и все внутри него мутным, тогда как при использовании цвета RGBA вы делаете мутным только тот цвет который вы специфицируете.
 
 In the example below I have added a background image to the containing block of our colored boxes. I have then set the boxes to have different opacity values — notice how the background shows through more when the alpha channel value is smaller.
 
@@ -177,7 +182,8 @@ In the example below I have added a background image to the containing block of 
 
 **In this example, try changing the alpha channel values to see how it affects the color output.**
 
-> **Примечание:** At some point modern browsers were updated so that `rgba()` and `rgb()`, and `hsl()` and `hsla()` (see below), became pure aliases of each other and started to behave exactly the same. So for example both `rgba()` and `rgb()` accept colors with and without alpha channel values. Try changing the above example's `rgba()` functions to `rgb()` and see if the colors still work! Which style you use is up to you, but separating out non-transparent and transparent color definitions to use the different functions gives (very) slightly better browser support and can act as a visual indicator of where transparent colors are being defined in your code.
+> [!NOTE]
+> At some point modern browsers were updated so that `rgba()` and `rgb()`, and `hsl()` and `hsla()` (see below), became pure aliases of each other and started to behave exactly the same. So for example both `rgba()` and `rgb()` accept colors with and without alpha channel values. Try changing the above example's `rgba()` functions to `rgb()` and see if the colors still work! Which style you use is up to you, but separating out non-transparent and transparent color definitions to use the different functions gives (very) slightly better browser support and can act as a visual indicator of where transparent colors are being defined in your code.
 
 ### HSL and HSLA values
 
@@ -205,7 +211,8 @@ In the example below we have demonstrated an image and a gradient in use as a va
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 740)}}
 
-> **Примечание:** there are some other possible values for `<image>`, however these are newer and currently have poor browser support. Check out the page on MDN for the [`<image>`](/ru/docs/Web/CSS/image) data type if you want to read about them.
+> [!NOTE]
+> There are some other possible values for `<image>`, however these are newer and currently have poor browser support. Check out the page on MDN for the [`<image>`](/ru/docs/Web/CSS/image) data type if you want to read about them.
 
 ## Position
 
