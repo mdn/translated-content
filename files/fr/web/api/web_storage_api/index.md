@@ -16,11 +16,14 @@ Les deux mécanismes au sein du web storage sont les suivantes:
 
 Ces mécanismes sont disponibles via les propriétés {{domxref("Window.sessionStorage")}} et {{domxref("Window.localStorage")}} (pour être plus précis, pour le support des navigateurs, l'objet `Window` implemente le `WindowLocalStorage` et l'object `WindowSessionStorage`, dont les propriétés `localStorage` et `sessionStorage` dépendent) — L'appel de l'une de ces propriétés va créer une instance de l'objet {{domxref("Storage")}}, à travers de laquelle les éléments de données peuvent être définis, récupérés et éliminés. Un objet de stockage différent est utilisé pour le sessionStorage et le localStorage pour chaque origine — ils fonctionnent et sont contrôlés séparément.
 
-> **Note :** À partir de Firefox 45, lorsque le navigateur se bloque / redémarre, la quantité de données sauvegardées par origine est limitée à 10 Mo. Cela a été mis en place pour éviter les problèmes de mémoire causés par une utilisation excessive du stockage Web.
+> [!NOTE]
+> À partir de Firefox 45, lorsque le navigateur se bloque / redémarre, la quantité de données sauvegardées par origine est limitée à 10 Mo. Cela a été mis en place pour éviter les problèmes de mémoire causés par une utilisation excessive du stockage Web.
 
-> **Note :** L'accès au Web Storage à partir d'iframes externes est interdit si l'utilisateur a [désactivé les cookies tierce-partie](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (Firefox a adopté ce comportement à partir de la [version 43](/fr/docs/Mozilla/Firefox/Releases/43) et suivantes.)
+> [!NOTE]
+> L'accès au Web Storage à partir d'iframes externes est interdit si l'utilisateur a [désactivé les cookies tierce-partie](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (Firefox a adopté ce comportement à partir de la [version 43](/fr/docs/Mozilla/Firefox/Releases/43) et suivantes.)
 
-> **Note :** Le <i lang="en">Web Storage</i> n'est pas identique au `mozStorage` (interfaces XPCOM de Mozilla vers SQLite) ou l'API <i lang="en">Session Store</i> (un utilitaire de stockage XPCOM utilisable par des extensions).
+> [!NOTE]
+> Le <i lang="en">Web Storage</i> n'est pas identique au `mozStorage` (interfaces XPCOM de Mozilla vers SQLite) ou l'API <i lang="en">Session Store</i> (un utilitaire de stockage XPCOM utilisable par des extensions).
 
 ## Web Storage interfaces
 

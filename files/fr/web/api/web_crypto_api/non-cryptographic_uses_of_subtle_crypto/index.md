@@ -122,7 +122,8 @@ Un cas où ceci peut être utile est la vérification d'un fichier téléchargé
 
 Vous avez peut-être entendu l'expression _«&nbsp;saler le hash&nbsp;»_. Ce n'est pas quelque chose qui est directement pertinent ici, mais qu'il est intéressant de connaître.
 
-> **Note :** Cette section aborde la sécurité des mots de passe et les fonctions de hachage fournies par `SubtleCrypto` ne sont pas adaptées à un tel usage. Pour hacher un mot de passe, il faut des fonctions de hachage lentes et coûteuses (en complexité de calcul) comme `scrypt` et `bcrypt`. SHA est conçu pour être rapide et efficace, ce qui le rend inadapté au hachage de mots de passe. Cette section est purement informationnelle, n'utilisez pas l'API Web Crypto pour hacher des mots de passe côté client.
+> [!NOTE]
+> Cette section aborde la sécurité des mots de passe et les fonctions de hachage fournies par `SubtleCrypto` ne sont pas adaptées à un tel usage. Pour hacher un mot de passe, il faut des fonctions de hachage lentes et coûteuses (en complexité de calcul) comme `scrypt` et `bcrypt`. SHA est conçu pour être rapide et efficace, ce qui le rend inadapté au hachage de mots de passe. Cette section est purement informationnelle, n'utilisez pas l'API Web Crypto pour hacher des mots de passe côté client.
 
 Afin d'éviter de stocker des mots de passe en clair, on calcule leur empreinte afin que le mot de passe original ne puisse pas être reconstitué si jamais la base de données avec l'identifiant et le mot de passe était piratée. Mais on peut déterminer les mots de passe à partir des empreintes si on génère les empreintes de l'ensemble des mots de passe connu. Concaténer une chaîne de caractères aux mots de passe modifie l'empreinte. Toutefois si on utilise la même chaîne à concaténer pour tous les mots de passe, on retombe sur le même problème.
 

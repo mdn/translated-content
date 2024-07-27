@@ -51,7 +51,8 @@ WebSocket.send("Coucou serveur !");
 
     non appairés.
 
-> **Note :** Pour Gecko 6.0, l'implémentation de `send()` varie de la spécification : le moteur renvoie un booléen indiquant si la connexion est toujours ouverte (par extension, cela indique si les données ont été correctement rajoutées à la queue ou transmises). Ce comportement a été corrigé avec Gecko 8.0.
+> [!NOTE]
+> Pour Gecko 6.0, l'implémentation de `send()` varie de la spécification : le moteur renvoie un booléen indiquant si la connexion est toujours ouverte (par extension, cela indique si les données ont été correctement rajoutées à la queue ou transmises). Ce comportement a été corrigé avec Gecko 8.0.
 >
 > Avec Gecko 11.0, la prise en charge des [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) est implémentée mais pas celle pour les objets [`Blob`](/fr/docs/Web/API/Blob).
 

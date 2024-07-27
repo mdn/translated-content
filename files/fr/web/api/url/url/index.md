@@ -24,7 +24,8 @@ url = new URL(url, [base])
 - _base_ {{optional_inline}}
   - : Un {{domxref("USVString")}} représentant l'URL de base à utiliser dans le cas où l'URL est une URL relative. Si non spécifié, il est par défaut à `''`.
 
-> **Note :** Vous pouvez toujours utiliser un objet {{domxref ("URL")}} existant pour la base, qui se stringifie en attribut {{domxref ("DOMString.href", "href")}} de l'objet.
+> [!NOTE]
+> Vous pouvez toujours utiliser un objet {{domxref ("URL")}} existant pour la base, qui se stringifie en attribut {{domxref ("DOMString.href", "href")}} de l'objet.
 
 ### Exceptions
 

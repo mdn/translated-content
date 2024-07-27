@@ -5,7 +5,8 @@ slug: Web/API/Selection_API
 
 {{DefaultAPISidebar("Selection API")}}
 
-> **Note :** Cette API _n'est pas disponible_ dans [les <i lang="en">web workers</i>](/fr/docs/Web/API/Web_Workers_API) (elle n'est pas exposée via [`WorkerNavigator`](/fr/docs/Web/API/WorkerNavigator)).
+> [!NOTE]
+> Cette API _n'est pas disponible_ dans [les <i lang="en">web workers</i>](/fr/docs/Web/API/Web_Workers_API) (elle n'est pas exposée via [`WorkerNavigator`](/fr/docs/Web/API/WorkerNavigator)).
 
 L'**API Selection** permet d'accéder et de manipuler les portions du document sélectionnées par l'utilisatrice ou l'utilisateur.
 

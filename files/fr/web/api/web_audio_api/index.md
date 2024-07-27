@@ -29,7 +29,8 @@ Le timing est contrôlé avec une grande précision et une latence faible, ce qu
 
 La Web Audio API permet également de contrôler la _spatialisation_ du son. En utilisant un système basé sur le modèle _émetteur - récepteur,_ elle permet le contrôle de la balance ainsi que la gestion de l'atténuation du son en fonction de la distance, ou effet doppler, induite par un déplacement de la source sonore (ou de l'auditeur).
 
-> **Note :** Vous pouvez lire davantage de détails sur l'API <i lang="en">Web Audio</i> en vous rendant sur notre article [Les concepts de base de l'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
+> [!NOTE]
+> Vous pouvez lire davantage de détails sur l'API <i lang="en">Web Audio</i> en vous rendant sur notre article [Les concepts de base de l'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
 
 ## Interface de la Web Audio API
 
@@ -108,7 +109,8 @@ Une fois que le signal audio a été traité, ces interfaces définissent sa des
 
 ### Traitement audio avec JavaScript
 
-> **Note :** Au jour de la publication de la spécification Web Audio API le 29 août 2014, ces fonctionnalités sont dépréciées, et seront bientôt remplacées par [Audio_Workers](#audio_workers).
+> [!NOTE]
+> Au jour de la publication de la spécification Web Audio API le 29 août 2014, ces fonctionnalités sont dépréciées, et seront bientôt remplacées par [Audio_Workers](#audio_workers).
 
 - {{domxref("ScriptProcessorNode")}}
   - : Un noeud **`ScriptProcessorNode`** permet de générer, traiter ou analyser du son avec JavaScript. C'est un module de traitement audio qui est lié à deux buffers, l'un en entrée, et l'autre en sortie. Un évènement implémentant {{domxref("AudioProcessingEvent")}} est envoyé à l'objet à chaque fois que le buffer d'entrée reçoit de nouvelles données, et le gestionnaire d'évènement prend fin lorsque les nouvelles données ont été communiquées au buffer de sortie.

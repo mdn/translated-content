@@ -7,7 +7,8 @@ slug: Web/API/Worker/message_event
 
 La propriété **`onmessage`** de l'interface {{domxref("Worker")}} représente un gestionnaire d'évènement, à savoir une fonction qui est appelée lorsque l'événement `message` survient. Ces événements sont du type {{domxref("MessageEvent")}} et sont appelés quand le parent du worker reçoit un message (c'est-à-dire à partir de la méthode {{domxref("DedicatedWorkerGlobalScope.postMessage")}}).
 
-> **Note :** Le contenu du message est fourni par la propriété `data` de l'événement `message`.
+> [!NOTE]
+> Le contenu du message est fourni par la propriété `data` de l'événement `message`.
 
 ## Syntaxe
 

@@ -180,7 +180,8 @@ Opcode _0x1_ signifie que ceci est un texte. [Liste exhaustive des Opcodes](http
 
 Si le second octet moins 128 est entre 0 et 125, alors il s'agit de la longueur du message. Si c'est 126, les deux octets suivants (entier non signé de 16-bits), si c'est 127, les huit octets suivants (entier non signé de 64-bis, dont le poid ford doit être 0) sont la longueur.
 
-> **Note :** Je peux prendre 128 car le premier bit est toujours 1.
+> [!NOTE]
+> Je peux prendre 128 car le premier bit est toujours 1.
 
 \- 167, 225, 225 et 210 sont les octets de la clef à décoder. Cela change en permanence.
 

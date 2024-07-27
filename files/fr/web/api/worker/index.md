@@ -13,7 +13,8 @@ De plus les workers peuvent utiliser [`XMLHttpRequest`](/fr/docs/DOM/XMLHttpRequ
 
 [Toutes les interfaces et toutes les fonctions](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) ne seront pas disponibles pour le script associé au `Worker`.
 
-> **Note :** Dans Firefox, si vous souhaitez utiliser les workers dans une extension et que vous souhaitez avoir accès au [js-ctypes](/fr/docs/js-ctypes), vous devez utiliser le {{ domxref("ChromeWorker") }} à la place.
+> [!NOTE]
+> Dans Firefox, si vous souhaitez utiliser les workers dans une extension et que vous souhaitez avoir accès au [js-ctypes](/fr/docs/js-ctypes), vous devez utiliser le {{ domxref("ChromeWorker") }} à la place.
 
 ## Constructeurs
 

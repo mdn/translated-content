@@ -7,7 +7,8 @@ slug: Web/API/Window/frameElement
 
 La propriété **`Window.frameElement`** renvoie l'élément (tel que {{HTMLElement("iframe")}} ou {{HTMLElement("object")}}) dans lequel la fenêtre est intégrée.
 
-> **Note :** Malgré le nom de cette propriété, elle fonctionne pour les documents intégrés dans n'importe quel point d'incorporation, y compris {{HTMLElement("object")}}, {{HTMLElement("iframe")}}, ou {{HTMLElement("embed")}}.
+> [!NOTE]
+> Malgré le nom de cette propriété, elle fonctionne pour les documents intégrés dans n'importe quel point d'incorporation, y compris {{HTMLElement("object")}}, {{HTMLElement("iframe")}}, ou {{HTMLElement("embed")}}.
 
 ## Syntaxe
 

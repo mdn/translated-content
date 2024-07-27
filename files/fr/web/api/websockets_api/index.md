@@ -7,7 +7,8 @@ slug: Web/API/WebSockets_API
 
 L'**API WebSocket** est une technologie évoluée qui permet d'ouvrir un canal de communication bidirectionnelle entre un navigateur (côté client) et un serveur. Avec cette API vous pouvez envoyer des messages à un serveur et recevoir ses réponses de manière événementielle sans avoir à aller consulter le serveur pour obtenir une réponse.
 
-> **Note :** Bien que les connexions WebSocket soient fonctionnellement similaires aux sockets standard de type Unix, elles ne sont pas liées.
+> [!NOTE]
+> Bien que les connexions WebSocket soient fonctionnellement similaires aux sockets standard de type Unix, elles ne sont pas liées.
 
 ## Interfaces
 

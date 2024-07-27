@@ -7,7 +7,8 @@ slug: Web/API/Worker/Worker
 
 Le constructeur **`Worker()`** crée un objet {{domxref("Worker")}} qui exécute le script à l'URL spécifiée. Ce script doit obéir à la [same-origin policy](/fr/docs/Web/Security/Same-origin_policy).
 
-> **Note :** il y a un désaccord entre les éditeurs de navigateur sur la question de savoir si une donnée URI relève ou non de la même origine. Bien que Gecko 10.0 et suivant accepte les données URIs, ce n'est pas le cas dans tous les autres navigateurs.
+> [!NOTE]
+> Il y a un désaccord entre les éditeurs de navigateur sur la question de savoir si une donnée URI relève ou non de la même origine. Bien que Gecko 10.0 et suivant accepte les données URIs, ce n'est pas le cas dans tous les autres navigateurs.
 
 ## Syntaxe
 

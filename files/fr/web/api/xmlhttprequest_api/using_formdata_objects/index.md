@@ -33,7 +33,8 @@ request.open("POST", "https://example.com/submitform.php");
 request.send(formData);
 ```
 
-> **Note :** Les champs «&nbsp;userfile&nbsp;» et «&nbsp;webmasterfile&nbsp;» contiennent tous deux un fichier. Le numéro attribué au champ «&nbsp;accountnum&nbsp;» est immédiatement converti en chaîne par la méthode [`FormData.append()`](/fr/docs/Web/API/FormData/append) (la valeur du champ peut être un objet [`Blob`](/fr/docs/Web/API/Blob), [`File`](/fr/docs/Web/API/File) ou une chaîne&nbsp;: **s'il ne s'agit ni d'un objet `Blob`, ni d'un objet `File`, la valeur est convertie en chaîne**).
+> [!NOTE]
+> Les champs «&nbsp;userfile&nbsp;» et «&nbsp;webmasterfile&nbsp;» contiennent tous deux un fichier. Le numéro attribué au champ «&nbsp;accountnum&nbsp;» est immédiatement converti en chaîne par la méthode [`FormData.append()`](/fr/docs/Web/API/FormData/append) (la valeur du champ peut être un objet [`Blob`](/fr/docs/Web/API/Blob), [`File`](/fr/docs/Web/API/File) ou une chaîne&nbsp;: **s'il ne s'agit ni d'un objet `Blob`, ni d'un objet `File`, la valeur est convertie en chaîne**).
 
 Dans cet exemple, une instance `FormData` contenant les valeurs des champs «&nbsp;username&nbsp;», «&nbsp;accountnum&nbsp;», «&nbsp;userfile&nbsp;» et «&nbsp;webmasterfile&nbsp;» est créée, puis la méthode [`XMLHttpRequest.send()`](/fr/docs/Web/API/XMLHttpRequest/send) est utilisée pour envoyer les données du formulaire. Le champ «&nbsp;webmasterfile&nbsp;» est un objet [`Blob`](/fr/docs/Web/API/Blob). Un objet `Blob` représente un objet-fichier de données brutes immuables. Les blobs représentent des données qui ne sont pas nécessairement dans un format JavaScript natif. L'interface [`File`](/fr/docs/Web/API/File) se base sur l'objet `Blob`, elle en hérite les fonctionnalités et les étend pour prendre en charge les fichiers du système d'exploitation. Pour construire un `Blob`, vous pouvez invoquer [le constructeur `Blob()`](/fr/docs/Web/API/Blob/Blob).
 
@@ -133,9 +134,11 @@ form.addEventListener(
 );
 ```
 
-> **Note :** Si vous passez une référence dans le formulaire, [la méthode HTTP spécifiée](/fr/docs/Web/HTTP/Methods) dans ce dernier sera utilisée au lieu de celle définie dans l'appel de la méthode `open()`.
+> [!NOTE]
+> Si vous passez une référence dans le formulaire, [la méthode HTTP spécifiée](/fr/docs/Web/HTTP/Methods) dans ce dernier sera utilisée au lieu de celle définie dans l'appel de la méthode `open()`.
 
-> **Attention :** Lors de l'utilisation de `FormData` pour envoyer des requêtes POST à l'aide de [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) ou de [l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) pour du contenu de type `multipart/form-data` (par exemple pour téléverser des fichiers ou des blobs vers le serveur), _il ne faut pas indiquer de façon explicite_ l'en-tête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) sur la requête. Si vous le faites, cela empêchera le navigateur de renseigner l'en-tête `Content-Type` avec l'expression de limite qui sera utilisée pour délimiter les champs du formulaire dans le corps de la requête.
+> [!WARNING]
+> Lors de l'utilisation de `FormData` pour envoyer des requêtes POST à l'aide de [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) ou de [l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) pour du contenu de type `multipart/form-data` (par exemple pour téléverser des fichiers ou des blobs vers le serveur), _il ne faut pas indiquer de façon explicite_ l'en-tête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) sur la requête. Si vous le faites, cela empêchera le navigateur de renseigner l'en-tête `Content-Type` avec l'expression de limite qui sera utilisée pour délimiter les champs du formulaire dans le corps de la requête.
 
 Vous pouvez également ajouter un objet [`File`](/fr/docs/Web/API/File) ou [`Blob`](/fr/docs/Web/API/Blob) directement dans l'objet [`FormData`](/fr/docs/Web/API/FormData)&nbsp;:
 

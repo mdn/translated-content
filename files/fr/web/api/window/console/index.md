@@ -31,4 +31,5 @@ Pour plus d'exemples, voir la section [Exemples](/fr/docs/Web/API/Console#exempl
 
 {{Specifications}}
 
-> **Note :** Il existe de nombreuses différences d'implémentation parmi les navigateurs. Un travail d'homogénéisation et de standardisation est en cours afin de les rapprocher.
+> [!NOTE]
+> Il existe de nombreuses différences d'implémentation parmi les navigateurs. Un travail d'homogénéisation et de standardisation est en cours afin de les rapprocher.

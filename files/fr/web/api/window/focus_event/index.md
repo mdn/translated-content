@@ -11,7 +11,8 @@ L'évènement `focus` est déclenché lorsque la personne active le focus sur un
 
 Afin que `onfocus` soit déclenché sur les éléments qui ne sont pas des éléments `<input>`, il faut que ces derniers aient un attribut [`tabindex`](/fr/docs/Web/HTML/Global_attributes#attr-tabindex). Voir la section [Remettre l'accessibilité au clavier](/fr/docs/Learn/Accessibility/HTML#remettre_laccessibilité_au_clavier) pour plus de détails.
 
-> **Note :** Le gestionnaire d'évènement opposé à `onfocus` est [`onblur`](/fr/docs/Web/API/GlobalEventHandlers/onblur).
+> [!NOTE]
+> Le gestionnaire d'évènement opposé à `onfocus` est [`onblur`](/fr/docs/Web/API/GlobalEventHandlers/onblur).
 
 ## Syntaxe
 

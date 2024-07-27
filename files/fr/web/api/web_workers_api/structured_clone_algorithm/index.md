@@ -84,7 +84,8 @@ function clone(objectToBeCloned) {
 }
 ```
 
-> **Note :** Cet algorithme ne prend en charge que les objets spéciaux [`RegExp`](/fr/docs/JavaScript/Reference/Global_Objects/RegExp), [`Array`](/fr/docs/JavaScript/Reference/Global_Objects/Array) et [`Date`](/fr/docs/JavaScript/Reference/Global_Objects/Date). Vous pouvez implémenter d'autres cas spéciaux selon vos besoins.
+> [!NOTE]
+> Cet algorithme ne prend en charge que les objets spéciaux [`RegExp`](/fr/docs/JavaScript/Reference/Global_Objects/RegExp), [`Array`](/fr/docs/JavaScript/Reference/Global_Objects/Array) et [`Date`](/fr/docs/JavaScript/Reference/Global_Objects/Date). Vous pouvez implémenter d'autres cas spéciaux selon vos besoins.
 
 ## Voir aussi
 

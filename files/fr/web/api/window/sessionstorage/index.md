@@ -57,7 +57,8 @@ champ.addEventListener("change", function () {
 });
 ```
 
-> **Note :** Veuillez vous référer à l'article [Utilisation de l'API Web Storage](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) pour des exemples plus complets.
+> [!NOTE]
+> Veuillez vous référer à l'article [Utilisation de l'API Web Storage](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) pour des exemples plus complets.
 
 ## Spécifications
 
