@@ -24,7 +24,7 @@ __lookupSetter__(prop)
 
 ### 반환 값
 
-지정된 속성에 설정자로 바인딩된 함수를 반환합니다. 해당 속성을 찾을 수 없거나 해당 속성이 [데이터 속성](/ko/docs/Web/JavaScript/Data_structures#data_property)리먄 `undefined`를 반환합니다.
+지정된 속성에 설정자로 바인딩된 함수를 반환합니다. 해당 속성을 찾을 수 없거나 해당 속성이 [데이터 속성](/ko/docs/Web/JavaScript/Data_structures#data_property)이면 `undefined`를 반환합니다.
 
 ## 설명
 
