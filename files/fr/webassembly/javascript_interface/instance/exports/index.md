@@ -28,7 +28,8 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 );
 ```
 
-> **Note :** Voir le fichier [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) sur GitHub (ainsi que [la démonstration](https://mdn.github.io/webassembly-examples/js-api-examples/)) pour un exemple.
+> [!NOTE]
+> Voir le fichier [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) sur GitHub (ainsi que [la démonstration](https://mdn.github.io/webassembly-examples/js-api-examples/)) pour un exemple.
 
 ## Spécifications
 

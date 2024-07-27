@@ -9,7 +9,8 @@ Le constructeur **`WebAssembly.Instance()`** crée un nouvel objet `Instance` qu
 
 ## Syntaxe
 
-> **Attention :** Étant donné que l'instanciation de grands modules peut être coûteuse, il est préférable d'utiliser le constructeur `Instance()` uniquement lorsqu'une instanciation synchrone est nécessaire. Par défaut et dans tous les autres cas, on privilégiera l'utilisation de la méthode asynchrone [`WebAssembly.instantiateStreaming()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming).
+> [!WARNING]
+> Étant donné que l'instanciation de grands modules peut être coûteuse, il est préférable d'utiliser le constructeur `Instance()` uniquement lorsqu'une instanciation synchrone est nécessaire. Par défaut et dans tous les autres cas, on privilégiera l'utilisation de la méthode asynchrone [`WebAssembly.instantiateStreaming()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming).
 
 ```js
 new WebAssembly.Instance(module, importObject);

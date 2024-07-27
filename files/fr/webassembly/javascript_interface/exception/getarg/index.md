@@ -9,7 +9,8 @@ La méthode **`getArg()`**, rattachée au prototype d'un objet [`Exception`](/fr
 
 Cette méthode prend comme argument une balise [`WebAssembly.Tag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag) et fonctionnera uniquement si l'exception levée a été créée avec cette même balise. Dans le cas contraire, la méthode déclenchera une exception `TypeError`. On s'assure ainsi que l'exception puisse être lue seulement si le code appelant a accès à la balise. Les balies qui ne sont ni importées ni exportées dans/depuis le code WebAssembly sont internes et les exceptions correspondantes ne peuvent pas être inspectées avec cette méthode&nbsp;!
 
-> **Note :** Avoir la même séquence des mêmes types de données ne suffit pas. Il faut que la balise ait la même _identité_ (que ce soit la même balise) que celle utilisée pour créer l'exception.
+> [!NOTE]
+> Avoir la même séquence des mêmes types de données ne suffit pas. Il faut que la balise ait la même _identité_ (que ce soit la même balise) que celle utilisée pour créer l'exception.
 
 ## Syntaxe
 
