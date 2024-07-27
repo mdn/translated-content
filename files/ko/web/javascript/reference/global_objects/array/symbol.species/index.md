@@ -1,6 +1,7 @@
 ---
 title: Array[@@species]
-slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
+slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.species
+original_slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
 l10n:
   sourceCommit: 34a34bee83fb4accf073ebc0c8cfc8eff956dc9b
 ---

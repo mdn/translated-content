@@ -1,7 +1,7 @@
 ---
 title: fetch() 전역 함수
-short-title: fetch()
-slug: Web/API/fetch
+slug: Web/API/Window/fetch
+original_slug: Web/API/fetch
 l10n:
   sourceCommit: 15db4f1dd87a80c4aec2cfba3e73bc8291f29110
 ---
