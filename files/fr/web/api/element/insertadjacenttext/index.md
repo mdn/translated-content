@@ -49,7 +49,8 @@ Vide.
 <!-- afterend -->
 ```
 
-> **Note :** Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est dans l'arbre et possède un élément parent.
+> [!NOTE]
+> Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est dans l'arbre et possède un élément parent.
 
 ## Exemple
 
