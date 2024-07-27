@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.createRadialGradient()`** 方法用于根据参数确定两个圆的坐标绘制放射性渐变。
+Canvas 2D API 的 **`CanvasRenderingContext2D.createRadialGradient()`** 方法使用两个圆的坐标和大小绘制径向渐变。
 
-这个方法返回 {{domxref("CanvasGradient")}}。要将渐变应用于形状，必须首先将渐变赋值给 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 或 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} 属性。
+这个方法返回 {{domxref("CanvasGradient")}}。要将其应用于形状，必须首先将渐变赋值给 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 或 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} 属性。
 
 > **备注：** 渐变坐标是全局的，即相对于当前的坐标空间。当应用于形状时，这些坐标并不是相对于形状本身的坐标。
 
@@ -39,20 +39,20 @@ createRadialGradient(x0, y0, r0, x1, y1, r1)
 ### 返回值
 
 - {{domxref("CanvasGradient")}}
-  - : 一个径向的 {{domxref("CanvasGradient")}} 使用指定的两个圆初始化。
+  - : 一个使用指定的两个圆初始化的径向 {{domxref("CanvasGradient")}}。
 
 ### 异常
 
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : 当传递非有限值作为参数时抛出。
+  - : 当在参数中传递非有限值时抛出。
 - `IndexSizeError` {{domxref("DOMException")}}
-  - : 当传递负半径作为参数时抛出。
+  - : 当在参数追踪传递负半径时抛出。
 
 ## 示例
 
 ### 用径向渐变填充矩形
 
-这个例子使用 `createRadialGradient()` 方法初始化一个径向渐变。然后在渐变的两个圆之间创建了三个色阶。最后，将渐变赋值给画布上下文，并将其渲染到一个填充的矩形上。
+此示例使用 `createRadialGradient()` 方法初始化一个径向渐变。然后在渐变的两个圆之间创建了三个色标。最后，将渐变赋值给画布上下文，并将其渲染到一个填充的矩形上。
 
 #### HTML
 
@@ -67,16 +67,16 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 // 创建一个径向渐变
-// 内圆位于 x=110, y=90，半径为 30
-// 外圆位于 x=100, y=100，半径为 70
+// 内圆位于 x=110、y=90，半径为 30
+// 外圆位于 x=100,、y=100，半径为 70
 const gradient = ctx.createRadialGradient(110, 90, 30, 100, 100, 70);
 
-// 添加三个色阶
+// 添加三个色标
 gradient.addColorStop(0, "pink");
 gradient.addColorStop(0.9, "white");
 gradient.addColorStop(1, "green");
 
-// 设置填充样式并绘制一个矩形
+// 设置填充样式并绘制矩形
 ctx.fillStyle = gradient;
 ctx.fillRect(20, 20, 160, 160);
 ```
