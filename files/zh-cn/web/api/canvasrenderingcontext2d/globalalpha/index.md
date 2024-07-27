@@ -9,7 +9,8 @@ l10n:
 
 Canvas 2D API 的 **`CanvasRenderingContext2D.globalAlpha`** 属性指定将被绘制到 canvas 上的形状或图像的 alpha（透明度）值。
 
-> **备注：** 参见 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)中[应用样式和色彩](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)这一章节。
+> [!NOTE]
+> 参见 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)中[应用样式和色彩](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)这一章节。
 
 ## 值
 

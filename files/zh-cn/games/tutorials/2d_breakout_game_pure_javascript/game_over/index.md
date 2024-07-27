@@ -75,7 +75,8 @@ if (y + dy < ballRadius) {
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/z4zy79fo/","","320")}}
 
-> **备注：** 当球碰到球拍时，让球移动得更快
+> [!NOTE]
+> 当球碰到球拍时，让球移动得更快
 
 ## 下一步
 

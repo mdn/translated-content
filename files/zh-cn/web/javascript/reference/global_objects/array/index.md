@@ -97,7 +97,7 @@ colors.forEach((item, index) => {
 // 0：红
 // 1：黄
 // 2：蓝
-// 5：蓝
+// 5：紫
 
 colors.reverse(); // ['紫', 空槽 × 2, '蓝', '黄', '红']
 ```

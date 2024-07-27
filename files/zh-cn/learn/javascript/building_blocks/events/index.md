@@ -46,7 +46,8 @@ slug: Learn/JavaScript/Building_blocks/Events
 
 为了对一个事件做出反应，你要给它附加一个**事件处理器**。这是一个代码块（通常是你作为程序员创建的一个 JavaScript 函数），在事件发生时运行。当这样一个代码块被定义为响应一个事件而运行时，我们说我们在**注册一个事件处理器**。注意，事件处理器有时候被叫做**事件监听器**——从我们的用意来看这两个名字是相同的，尽管严格地来说这块代码既监听也处理事件。监听器留意事件是否发生，处理器对事件发生做出回应。
 
-> **备注：** web 事件不是 JavaScript 语言的核心——它们被定义成内置于浏览器的 API。
+> [!NOTE]
+> web 事件不是 JavaScript 语言的核心——它们被定义成内置于浏览器的 API。
 
 ### 示例：处理点击事件
 
@@ -296,11 +297,13 @@ function bgChange(e) {
 btn.addEventListener("click", bgChange);
 ```
 
-> **备注：** 你可以在 GitHub 上查看这个示例的[完整代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-eventobject.html) ，或者在这里查看[实时演示](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)。
+> [!NOTE]
+> 你可以在 GitHub 上查看这个示例的[完整代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-eventobject.html) ，或者在这里查看[实时演示](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)。
 
 在这里，可以看到我们在函数中包括一个事件对象 `e`，并在函数中设置背景颜色样式在 `e.target` 上——它指的是按钮本身。事件对象 `e` 的 `target` 属性始终是事件刚刚发生的元素的引用。所以在这个例子中，我们在按钮上设置一个随机的背景颜色，而不是页面。
 
-> **备注：** 可以使用任何喜欢的名称作为事件对象——只需要选择一个名称，然后可以在事件处理函数中引用它。开发人员最常使用 `e`/`evt`/`event`，因为它们很简单易记。保持一致总是好的——至少对自己。如果可能的话，对别人也是如此。
+> [!NOTE]
+> 可以使用任何喜欢的名称作为事件对象——只需要选择一个名称，然后可以在事件处理函数中引用它。开发人员最常使用 `e`/`evt`/`event`，因为它们很简单易记。保持一致总是好的——至少对自己。如果可能的话，对别人也是如此。
 
 ### 事件对象的额外属性
 
@@ -382,7 +385,8 @@ form.addEventListener("submit", (e) => {
 
 {{ EmbedLiveSample('阻止默认行为', '100%', 180) }}
 
-> **备注：** 你可以在 GitHub 上查看这个示例的完整源代码 [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html)，也可以[在线运行它](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html)。
+> [!NOTE]
+> 你可以在 GitHub 上查看这个示例的完整源代码 [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html)，也可以[在线运行它](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html)。
 
 ## 并不只是网页
 
