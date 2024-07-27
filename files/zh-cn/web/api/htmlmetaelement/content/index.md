@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMetaElement.content`** 属性读取或设置 pragma 指令的 `content` 属性，并与 {{domxref("HTMLMetaElement.name")}} 或者 {{domxref("HTMLMetaElement.httpEquiv")}} 一起命名为 {{htmlelement("meta")}} 数据。更多信息，请参见 [content](/zh-CN/docs/Web/HTML/Element/meta#content) 属性。
+**`HTMLMetaElement.content`** 属性读取或设置 pragma 指令和具名 {{htmlelement("meta")}} 数据的 `content` 属性（用于和 {{domxref("HTMLMetaElement.name")}} 或者 {{domxref("HTMLMetaElement.httpEquiv")}} 一起使用）。更多信息，请参见 [content](/zh-CN/docs/Web/HTML/Element/meta#content) 属性。
 
 ## 值
 
@@ -17,7 +17,7 @@ l10n:
 
 ### 读取 meta 元素的 content
 
-以下示例查询一个 `<meta>` 元素，该元素包含值为 `keywords` 的 `name` 属性。`content` 值输出到控制台用于显示文档的 [keywords](/zh-CN/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification)：
+以下示例查询一个 `name` 属性的值为 `keywords` 的 `<meta>` 元素。`content` 值输出到控制台以显示文档的[关键词](/zh-CN/docs/Web/HTML/Element/meta/name#html_规范中定义的标准元数据名称)：
 
 ```js
 // 假设 <meta name="keywords" content="documentation, HTML, web">
@@ -26,9 +26,9 @@ console.log(meta.content);
 // "documentation, HTML, web"
 ```
 
-### 使用 content 创建 meta 元素
+### 创建具有 content 的 meta 元素
 
-以下示例创建一个新的 `<meta>` 元素，其 `name` 属性设置为 [`description`](/zh-CN/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification)，`content` 属性设置文档的描述，并附加到文档 `<head>` 上：
+以下示例创建一个新的 `<meta>` 元素，其 `name` 属性设置为 [`description`](/zh-CN/docs/Web/HTML/Element/meta/name#html_规范中定义的标准元数据名称)，`content` 属性设置文档的描述，并附加到文档 `<head>` 上：
 
 ```js
 const meta = document.createElement("meta");
@@ -51,4 +51,4 @@ document.head.appendChild(meta);
 - {{HTMLElement("meta")}}
 - {{domxref("HTMLMetaElement.name")}}
 - {{domxref("HTMLMetaElement.httpEquiv")}}
-- [学习：HTML 中的元数据](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element)
+- [学习：HTML 中的元数据](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#元数据：meta_元素)
