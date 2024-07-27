@@ -37,7 +37,8 @@ window.main = function () {
 main(); // Start the cycle
 ```
 
-> **Примечание:** В каждом из методов `main()`, обсуждаемых здесь, мы планируем новый requestAnimationFrame перед выполнением нашего содержимого цикла. Это не случайно и считает лучшей практикой. Ранний вызов следующего `requestAnimationFrame` гарантирует, что браузер получит его вовремя, чтобы спланировать соответствующим образом, даже если ваш текущий кадр пропустит своё окно VSync.
+> [!NOTE]
+> В каждом из методов `main()`, обсуждаемых здесь, мы планируем новый requestAnimationFrame перед выполнением нашего содержимого цикла. Это не случайно и считает лучшей практикой. Ранний вызов следующего `requestAnimationFrame` гарантирует, что браузер получит его вовремя, чтобы спланировать соответствующим образом, даже если ваш текущий кадр пропустит своё окно VSync.
 
 Приведённый выше фрагмент кода содержит два оператора. Первый оператор создаёт функцию как глобальную переменную с именем `main()`.Эта функция выполняет некоторую работу, а также сообщает браузеру, что нужно вызвать следующий кадр с помощью `window.requestAnimationFrame()`. Второй оператор вызывает функцию `main()`, описанную в первом операторе. Поскольку `main()` вызывается один раз во втором операторе и каждый его вызов помещает себя в очерёдность действий, чтобы отрисовать следующий кадр, `main()` синхронизируется с вашей частотой кадров.
 
@@ -72,7 +73,8 @@ main(); // Start the cycle
 
 Когда браузер наткнётся на IIFE (Immediately Invoked Function Expression), он определит основной цикл и сразу же поставит его в очередь для следующего кадра. Он не будет привязан ни к какому объекту, и `main` (или `main()` для методов) будет неиспользуемым именем, доступным в остальной части приложения для определения чего-то другого.
 
-> **Примечание:** На практике распространено предотвращать следующий `requestAnimationFrame()` используя оператор if вместо вызова `cancelAnimationFrame()`.
+> [!NOTE]
+> На практике распространено предотвращать следующий `requestAnimationFrame()` используя оператор if вместо вызова `cancelAnimationFrame()`.
 
 Чтобы остановить основной цикл, вам понадобиться отменить вызов `main()` с помощью `{{ domxref("window.cancelAnimationFrame()") }}`. Необходимо передать в `cancelAnimationFrame()` идентификатор последнего вызова `requestAnimationFrame()`. Давайте предположим, что функции и переменные вашей игры были определены в пространстве имён, которое вы назвали `MyGame`. В таком случае, основной цикл будет выглядеть следующим образом:
 
@@ -107,7 +109,7 @@ window.cancelAnimationFrame(MyGame.stopMain);
 
 ## Построение _более оптимизированного_ основного цикла в JavaScript
 
-В конце контов, в JavaScript браузер выполняет свой собственный основной цикл, и ваш код существует на некоторых его этапах. В приведённых выше разделах описываются основные циклы, которые стараются не отнимать контроль у браузера. Их методы прикрепляют себя к `window.requestAnimationFrame(),` который запрашивает контроль над предстоящим кадром у браузера. Браузер решает, как связать эти запросы с их основным циклом. Спецификация [W3C для requestAnimationFrame](http://www.w3.org/TR/animation-timing/) на самом деле точно не определяет, когда браузеры должны выполнять колбэки `requestAnimationFrame`. Это может быть преимуществом, поскольку позволяет поставщикам браузеров свободно экспериментировать с решениями, которые они считают лучшими, и настраивать их с течением времени.
+Браузер выполняет свой собственный основной цикл, и ваш код существует на некоторых его этапах. В приведённых выше разделах описываются основные циклы, которые стараются не отнимать контроль у браузера. Их методы прикрепляют себя к `window.requestAnimationFrame(),` который запрашивает контроль над предстоящим кадром у браузера. Браузер решает, как связать эти запросы с их основным циклом. Спецификация [W3C для requestAnimationFrame](https://www.w3.org/TR/animation-timing/) на самом деле точно не определяет, когда браузеры должны выполнять колбэки `requestAnimationFrame`. Это может быть преимуществом, поскольку позволяет поставщикам браузеров свободно экспериментировать с решениями, которые они считают лучшими, и настраивать их с течением времени.
 
 Современные версии Firefox и Google Chrome (вероятно, и другие) _пытаются_ подключить колбэки `requestAnimationFrame` к своему основному потоку в самом начале временного интервала фрейма*.* Таким образом основной поток браузера _пытается_ выглядеть следующим образом:
 
@@ -120,7 +122,8 @@ window.cancelAnimationFrame(MyGame.stopMain);
 
 Пока мы обсуждаем распределение нашего временного бюджета, многие браузеры имеют инструмент под названием _High Resolution Time. Объект_ {{ domxref("Date") }} больше не используется в качестве основного метода синхронизации событий, поскольку он очень не точен и может быть изменён системными часами. High Resolution Time, с другой стороны, подсчитывает количество миллисекунд начиная с `navigationStart` (при выгрузке предыдущего документа). Это значение возвращается в виде десятичного числа с точностью до миллисекунды. Он известен как `DOMHighResTimeStamp`, но для всех целей и задач считайте его числом с плавающей запятой.
 
-> **Примечание:** Системы (аппаратные или программные), которые не могу обеспечить точность в микросекундах, могут по крайней мере обеспечить точность в миллисекундах. Однако, они должны обеспечивать точность до 0,001 мс, если способны на это.
+> [!NOTE]
+> Системы (аппаратные или программные), которые не могу обеспечить точность в микросекундах, могут по крайней мере обеспечить точность в миллисекундах. Однако, они должны обеспечивать точность до 0,001 мс, если способны на это.
 
 Это значение нельзя использовать само по себе, потому что оно относиться к неинтересному событию, но его можно вычесть из другой временной ветки, чтобы чётко и точно определить, сколько времени прошло между этими двумя точками. Чтобы получить одну из этих временных меток, вы можете вызвать `window.performance.now()` и сохранить результат в переменную.
 
@@ -160,7 +163,8 @@ Several other optimizations are possible and it really depends on what your game
 
 You will need to make hard decisions about your main loop: how to simulate the accurate progress of time. If you demand per-frame control then you will need to determine how frequently your game will update and draw. You might even want update and draw to occur at different rates. You will also need to consider how gracefully your game will fail if the user's system cannot keep up with the workload. Let us start by assuming that you will handle user input and update the game state every time you draw. We will branch out later.
 
-> **Примечание:** Changing how your main loop deals with time is a debugging nightmare, everywhere. Think about your needs carefully before working on your main loop.
+> [!NOTE]
+> Changing how your main loop deals with time is a debugging nightmare, everywhere. Think about your needs carefully before working on your main loop.
 
 ### What most browser games should look like
 
@@ -207,7 +211,7 @@ One common technique is to update the simulation at a constant frequency and the
 
   - This uses processor time even when unfocused or minimized, hogs the main thread, and is probably an artifact of traditional game loops (but it is simple.)
 
-- Draw on `requestAnimationFrame` and update on a `setInterval` or `setTimeout` in a [Web Worker](/ru/docs/Web/Guide/Performance/Using_web_workers).
+- Draw on `requestAnimationFrame` and update on a `setInterval` or `setTimeout` in a [Web Worker](/ru/docs/Web/API/Web_Workers_API/Using_web_workers).
 
   - This is the same as above, except update does not hog the main thread (nor does the main thread hog it). This is a more complex solution, and might be too much overhead for simple updates.
 
@@ -225,7 +229,8 @@ Each of these methods have similar tradeoffs:
 
 A separate update and draw method could look like the following example. For the sake of demonstration, the example is based on the third bullet point, just without using Web Workers for readability (and, let's be honest, writability).
 
-> **Предупреждение:** This example, specifically, is in need of technical review.
+> [!WARNING]
+> This example, specifically, is in need of technical review.
 
 ```js
 /*
