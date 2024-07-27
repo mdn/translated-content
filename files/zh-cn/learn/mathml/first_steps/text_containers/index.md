@@ -167,7 +167,8 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 </math>
 ```
 
-> **备注：** 对于给定的文本内容，有时很难确定要使用哪个标记元素。在实践中，选择错误的元素通常不会导致重大问题，因为所有的标记元素在浏览器实现中通常都会以相同的方式呈现（用于视觉显示和辅助技术）。然而，`<mi>` 和 `<mo>` 元素具有特殊的区别特征，需要注意。下面的小节将对它们进行解释。
+> [!NOTE]
+> 对于给定的文本内容，有时很难确定要使用哪个标记元素。在实践中，选择错误的元素通常不会导致重大问题，因为所有的标记元素在浏览器实现中通常都会以相同的方式呈现（用于视觉显示和辅助技术）。然而，`<mi>` 和 `<mo>` 元素具有特殊的区别特征，需要注意。下面的小节将对它们进行解释。
 
 ## \<mi> 的自动斜体化
 
@@ -197,7 +198,8 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 
 {{ EmbedLiveSample('阻止 <mi> 自动斜体化', 700, 50) }}
 
-> **备注：** 尽管可以应用此转换，但通常你只需直接使用所需的[数学字母数字符号](https://zh.wikipedia.org/wiki/数学字母数字符号)即可。
+> [!NOTE]
+> 尽管可以应用此转换，但通常你只需直接使用所需的[数学字母数字符号](https://zh.wikipedia.org/wiki/数学字母数字符号)即可。
 
 ## \<mo> 的运算符属性
 
@@ -316,7 +318,8 @@ document.getElementById("showSolution").addEventListener(
 
 {{ EmbedLiveSample('主动学习：发现不同点', 700, 500) }}
 
-> **备注：** 一个明显的区别是，使用 MathML 的源代码会变得更加冗长。请记住，本教程是关于学习语言本身，但在实践中，MathML 内容通常不会手动编写。要查看更多信息，请参阅[编写 MathML](/zh-CN/docs/Web/MathML/Authoring) 页面。
+> [!NOTE]
+> 一个明显的区别是，使用 MathML 的源代码会变得更加冗长。请记住，本教程是关于学习语言本身，但在实践中，MathML 内容通常不会手动编写。要查看更多信息，请参阅[编写 MathML](/zh-CN/docs/Web/MathML/Authoring) 页面。
 
 ### 主动学习：可伸缩运算符
 
@@ -455,7 +458,8 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 </math>
 ```
 
-> **警告：** 通常需要特殊的[数学字体](/zh-CN/docs/Web/MathML/Fonts)才能实现文本的拉伸效果，前面的示例依赖于 [Web 字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)。
+> [!WARNING]
+> 通常需要特殊的[数学字体](/zh-CN/docs/Web/MathML/Fonts)才能实现文本的拉伸效果，前面的示例依赖于 [Web 字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)。
 
 ## 总结
 

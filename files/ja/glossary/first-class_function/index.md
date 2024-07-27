@@ -60,7 +60,7 @@ function sayHello() {
 ## 関連情報
 
 - ウィキペディアの[第一級関数](https://ja.wikipedia.org/wiki/第一級関数)
-- [MDN Web Docs 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{glossary("Callback function", "コールバック関数")}}
   - {{glossary("Function", "関数")}}

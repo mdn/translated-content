@@ -89,7 +89,8 @@ npx degit opensas/mdn-svelte-tutorial/08-next-steps
 
 默认情况下，如果你使用 `npx degit sveltejs/template my-svelte-project` 来创建一个新的应用程序，Svelte 将使用 [rollup](https://rollupjs.org/) 来打包模块。
 
-> **备注：** 也有一个官方的模板使用 [webpack](https://webpack.js.org/)，还有许多[由社区维护的插件](https://github.com/sveltejs/integrations#bundler-plugins)适用于其他的打包工具。
+> [!NOTE]
+> 也有一个官方的模板使用 [webpack](https://webpack.js.org/)，还有许多[由社区维护的插件](https://github.com/sveltejs/integrations#bundler-plugins)适用于其他的打包工具。
 
 在 `package.json` 文件中，你可以看到 `build` 和 `dev` 脚本只是调用了 rollup：
 
@@ -153,7 +154,8 @@ export default {
 
 从 Web 服务器的角度来看，Svelte 应用程序只是一堆 HTML、CSS 和 JavaScript 文件。你只需要一个能够提供静态文件的 Web 服务器，就可以运行 Svelte 应用程序，这意味着你有很多选择。让我们来看几个例子。
 
-> **备注：** 下面的内容不仅适用于 Svelte 应用程序，还适用于任何需要构建步骤的客户端静态网站。
+> [!NOTE]
+> 下面的内容不仅适用于 Svelte 应用程序，还适用于任何需要构建步骤的客户端静态网站。
 
 ### 使用 Vercel 进行部署
 
@@ -193,7 +195,8 @@ export default {
 
 你还可以从 [GitHub](https://github.com/)、[GitLab](https://about.gitlab.com/) 或 [BitBucket](https://bitbucket.org/product) [导入 Svelte git 项目](https://vercel.com/import/svelte)到 Vercel 中。
 
-> **备注：** 你可以通过 `npm i -g vercel` 全局安装 Vercel，这样你就不必使用 `npx` 来运行它了。
+> [!NOTE]
+> 你可以通过 `npm i -g vercel` 全局安装 Vercel，这样你就不必使用 `npx` 来运行它了。
 
 ### 自动部署到 GitLab Pages
 
@@ -219,7 +222,8 @@ export default {
    git push -u origin main
    ```
 
-   > **备注：** 你可以使用 [git 协议](https://git-scm.com/book/zh/v2/服务器上的-Git-协议#_git_协议)替代 `https`，它更快速，而且无需每次访问远程仓库时输入用户名和密码。要使用 git 协议，你需要[创建一个 SSH 密钥对](https://docs.gitlab.cn/jh/user/ssh.html#生成-ssh-密钥对)。你的远程仓库 URL 将是这样的：`git@gitlab.com:[你的用户名]/mdn-svelte-todo.git`。
+   > [!NOTE]
+   > 你可以使用 [git 协议](https://git-scm.com/book/zh/v2/服务器上的-Git-协议#_git_协议)替代 `https`，它更快速，而且无需每次访问远程仓库时输入用户名和密码。要使用 git 协议，你需要[创建一个 SSH 密钥对](https://docs.gitlab.cn/jh/user/ssh.html#生成-ssh-密钥对)。你的远程仓库 URL 将是这样的：`git@gitlab.com:[你的用户名]/mdn-svelte-todo.git`。
 
 按照以上步骤初始化本地 git 仓库，然后将远程仓库设置为 GitLab 上的仓库，接下来将所有文件提交到本地 git 仓库，然后将它们推送到 GitLab 上的远程仓库。
 

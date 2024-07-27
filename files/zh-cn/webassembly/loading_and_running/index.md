@@ -55,9 +55,11 @@ fetch("module.wasm")
 }
 ```
 
-> **备注：** 通常，我们只关心实例，但是，当我们想缓存模块，使用 [`postMessage()`](/zh-CN/docs/Web/API/MessagePort/postMessage) 与另外一个 worker 或 window 共享模块或者只是创建更多的实例的时候，拥有模块对象是很有用的。
+> [!NOTE]
+> 通常，我们只关心实例，但是，当我们想缓存模块，使用 [`postMessage()`](/zh-CN/docs/Web/API/MessagePort/postMessage) 与另外一个 worker 或 window 共享模块或者只是创建更多的实例的时候，拥有模块对象是很有用的。
 
-> **备注：** 这二种重载形式接受一个 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/JavaScript_interface/Module) 对象作为参数，并且返回一个直接包含一个实例对象作为其结果的 promise。参考[第二种重载示例](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiate_static#第二种重载示例)。
+> [!NOTE]
+> 这二种重载形式接受一个 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/JavaScript_interface/Module) 对象作为参数，并且返回一个直接包含一个实例对象作为其结果的 promise。参考[第二种重载示例](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiate_static#第二种重载示例)。
 
 ### 运行你的 WebAssembly 代码
 
@@ -79,7 +81,8 @@ WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
 );
 ```
 
-> **备注：** 关于如何从 WebAssembly 模块中导出的更多信息，请阅读[使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API) 和[理解 WebAssembly 文本格式](/zh-CN/docs/WebAssembly/Understanding_the_text_format)。
+> [!NOTE]
+> 关于如何从 WebAssembly 模块中导出的更多信息，请阅读[使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API) 和[理解 WebAssembly 文本格式](/zh-CN/docs/WebAssembly/Understanding_the_text_format)。
 
 ## 使用 XMLHttpRequest
 
@@ -106,4 +109,5 @@ request.onload = () => {
 };
 ```
 
-> **备注：** 你可以在 [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html) 看到实际使用的示例。
+> [!NOTE]
+> 你可以在 [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html) 看到实际使用的示例。

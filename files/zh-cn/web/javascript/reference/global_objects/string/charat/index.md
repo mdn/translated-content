@@ -77,7 +77,7 @@ console.log(str.charAt(0)); // "\ud842"，这不是有效的 Unicode 字符
 console.log(str.charAt(1)); // "\udfb7"，这不是有效的 Unicode 字符
 ```
 
-要获取给定索引处的完整 Unicode 码位，请使用按 Unicode 码位拆分的索引方法，例如 {{jsxref("String.prototype.codePointAt()")}} 和将字符串[展开为 Unicode 码位数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)。
+要获取给定索引处的完整 Unicode 码位，请使用按 Unicode 码位拆分的索引方法，例如 {{jsxref("String.prototype.codePointAt()")}} 和将字符串[展开为 Unicode 码位数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)。
 
 ```js
 const str = "𠮷𠮾";

@@ -44,7 +44,8 @@ l10n:
 
 我们不会教你如何制作音频和视频，因为那需要完全不同的技术。如果你没有音频和视频的话，也没有关系，我们为你提供了[示例音频和视频文件以及示例代码](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content)供你实验。
 
-> **备注：** 在开始之前，你应当了解一些在线视频提供商，例如 [YouTube](https://www.youtube.com/) 、[Dailymotion](http://www.dailymotion.com) 、[Vimeo](https://vimeo.com/) 还有 [Bilibili](https://www.bilibili.com)，以及在线音频提供商，例如 [Soundcloud](https://soundcloud.com/)。这些公司可以让你以方便、简单的方式来托管和消费视频，所以你不必担心庞大的带宽消耗。在线视频提供商甚至提供现成的代码用于为你的 web 网页嵌入视频/音频。如果你使用这样的服务，你便可以避免在这篇文章中我们讨论的一些难题。在下一篇文章中，我们将会再讨论这样的服务。
+> [!NOTE]
+> 在开始之前，你应当了解一些在线视频提供商，例如 [YouTube](https://www.youtube.com/) 、[Dailymotion](http://www.dailymotion.com) 、[Vimeo](https://vimeo.com/) 还有 [Bilibili](https://www.bilibili.com)，以及在线音频提供商，例如 [Soundcloud](https://soundcloud.com/)。这些公司可以让你以方便、简单的方式来托管和消费视频，所以你不必担心庞大的带宽消耗。在线视频提供商甚至提供现成的代码用于为你的 web 网页嵌入视频/音频。如果你使用这样的服务，你便可以避免在这篇文章中我们讨论的一些难题。在下一篇文章中，我们将会再讨论这样的服务。
 
 ### \<video> 元素
 
@@ -101,7 +102,8 @@ l10n:
 
 #### 浏览器所支持的媒体文件
 
-> **备注：** 一些流行的格式，如 MP3 和 MP4/H.264，尽管非常出色，但它们受到专利的限制；也就是说，有一些专利涵盖了它们所基于的某些或全部技术。在美国，MP3 直到 2017 年都受到专利保护，而 H.264 至少到 2027 年仍受专利保护。
+> [!NOTE]
+> 一些流行的格式，如 MP3 和 MP4/H.264，尽管非常出色，但它们受到专利的限制；也就是说，有一些专利涵盖了它们所基于的某些或全部技术。在美国，MP3 直到 2017 年都受到专利保护，而 H.264 至少到 2027 年仍受专利保护。
 >
 > 由于这些专利，浏览器如果希望实现对这些编解码器的支持，通常必须支付巨额的许可费用。此外，一些人更倾向于避免使用受限制的软件，而只使用开放格式。由于这些法律和偏好原因，web 开发者往往不得不支持多种格式以满足他们的整个用户群。
 
@@ -191,7 +193,8 @@ l10n:
 
 ![简单的音频播放器，带有播放按钮、计时器、音量控制和进度条](audio-player.png)
 
-> **备注：** 你可以在 GitHub [运行音频示例](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)（也可以查看[音频播放器源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)）。
+> [!NOTE]
+> 你可以在 GitHub [运行音频示例](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)（也可以查看[音频播放器源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)）。
 
 因为音频播放器没有视觉部件，它所占用的空间比视频播放器要小（你只需要显示出能控制音频播放的控件）。其他一些 HTML `<audio>` 与 `<video>` 的差异如下：
 
@@ -211,7 +214,8 @@ l10n:
 
 为这些人提供音频/视频中话语的文字记录，将会对他们有很大的帮助。幸运的是，借助 HTML 视频，我们可以做到这一点。我们只需使用 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 文件格式和 {{htmlelement("track")}} 元素即可。
 
-> **备注：** “转录（transcribe）”是指将视频/音频中说的话记录成文字形式，转录的结果称为“文字记录（transcript）”。
+> [!NOTE]
+> “转录（transcribe）”是指将视频/音频中说的话记录成文字形式，转录的结果称为“文字记录（transcript）”。
 
 WebVTT 是一个格式，用来编写文本文件，这个文本文件包含了众多的字符串，这些字符串会带有一些元数据，它们可以用来描述这个字符串将会在视频中显示的时间，甚至可以用来描述这些字符串的样式以及定位信息（尽管有限制）。这些字符串叫做 **cue** ，你可以根据不同的需求来显示不同类型的 cue，最常见的如下：
 
@@ -259,7 +263,8 @@ WEBVTT
 
 如果你想了解更多细节，你可以阅读[为 HTML 视频添加标题和字幕](/zh-CN/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。在 Github 上你可以找到[与本文相关的样例](https://iandevlin.github.io/mdn/video-player-with-captions/)，它们由 Ian Devlin 编写（或者[查看源代码](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)）。这个样例使用了 JavaScript 代码，用户借此可以选择不同的字幕。注意，若想要显示字幕，你需要点击“CC”按钮，并且选择某个选项（English、Deutsch 或 Español）。
 
-> **备注：** 文本轨道还可以帮助你进行 {{glossary("SEO")}}，因为搜索引擎对文字特别感兴趣。搜索引擎甚至可以借助文本轨道直接链接到视频中的某个位置。
+> [!NOTE]
+> 文本轨道还可以帮助你进行 {{glossary("SEO")}}，因为搜索引擎对文字特别感兴趣。搜索引擎甚至可以借助文本轨道直接链接到视频中的某个位置。
 
 ## 主动练习：嵌入你自己的视频与音频
 

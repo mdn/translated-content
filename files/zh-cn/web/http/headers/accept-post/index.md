@@ -13,7 +13,8 @@ l10n:
 
 例如，服务器接收到具有不支持的媒体类型的 `POST` 请求时，可以回复 {{HTTPStatus("415")}} `Unsupported Media Type`（不支持的媒体类型）状态码，并在响应中包含一个 **`Accept-Post`** 标头，其中引用了一个或多个支持的媒体类型。
 
-> **备注：** IANA 维护了[一个完整的官方支持的编码方式列表](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)。
+> [!NOTE]
+> IANA 维护了[一个完整的官方支持的编码方式列表](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)。
 
 <table class="properties">
   <tbody>

@@ -82,7 +82,8 @@ router.get("/about", (req, res) => {
 module.exports = router;
 ```
 
-> **备注：** 上面的路由处理回调直接定义在了路由函数中。LocalLibrary 的回调将定义在单独的控制器模块中。
+> [!NOTE]
+> 上面的路由处理回调直接定义在了路由函数中。LocalLibrary 的回调将定义在单独的控制器模块中。
 
 要在主应用中使用该路由模块，首先应 `require` 它（**wiki.js**），然后对 Express 应用对象调用 `use()`（指定路径‘/wiki’），即可将其添加到中间件处理路径。
 
@@ -106,7 +107,8 @@ router.get("/about", (req, res) => {
 
 该回调有三个参数（通常命名为：`req`、`res`、`next`），分别是：HTTP 请求对象、HTTP 响应、中间件链中的下一个函数。
 
-> **备注：** 路由函数就是 [Express 中间件](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware)，这意味着它们必须（通过响应）结束请求，否则必须调用链中的 `next` 函数。上述示例使用`send()` 完成了请求，所以没有使用 `next` 参数（参数表中将其省略）。
+> [!NOTE]
+> 路由函数就是 [Express 中间件](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware)，这意味着它们必须（通过响应）结束请求，否则必须调用链中的 `next` 函数。上述示例使用`send()` 完成了请求，所以没有使用 `next` 参数（参数表中将其省略）。
 >
 > 上述路由函数只需要一个回调，可以根据需要指定任意数量的回调参数，或一个回调函数数组。每个函数都将加入中间件链，并且将按添加顺序调用（若有回调完成请求则中止当前周期）。
 
@@ -145,7 +147,8 @@ app.get(/.*fish$/, (req, res) => {
 });
 ```
 
-> **备注：** LocalLibrary 的大部分路由都只使用字符串，很少用字符串模式和正则表达式。接下来将讨论“路由参数”。
+> [!NOTE]
+> LocalLibrary 的大部分路由都只使用字符串，很少用字符串模式和正则表达式。接下来将讨论“路由参数”。
 
 ### 路由参数
 
@@ -163,7 +166,8 @@ app.get("/users/:userId/books/:bookId", (req, res) => {
 
 路由参数名必须由“单词字符”（/`[A-Za-z0-9_]`/）组成。
 
-> **备注：** URL `/book/create` 会匹配 `/book/:bookId` 这样的路由（将提取值为'`create`' 的 '`bookId`'）。第一个与传入 URL 相匹配的路由会被使用，因此 `/book/create` 的路由处理器必须定义在 `/book/:bookId` 路由之前，才能妥善处理。
+> [!NOTE]
+> URL `/book/create` 会匹配 `/book/:bookId` 这样的路由（将提取值为'`create`' 的 '`bookId`'）。第一个与传入 URL 相匹配的路由会被使用，因此 `/book/create` 的路由处理器必须定义在 `/book/:bookId` 路由之前，才能妥善处理。
 
 以上就是使用路由所有的预备知识。Express 文档中还能找到更多信息：[基础路由](http://expressjs.com/en/starter/basic-routing.html) 和 [路由指南](http://expressjs.com/en/guide/routing.html)。以下是 LocalLibrary 路由和控制器的设置过程。
 
@@ -182,7 +186,8 @@ app.get("/users/:userId/books/:bookId", (req, res) => {
 
 与之相反，其他 URL 是用于处理特定文档/模型实例的，它们会将项目的标识嵌入 URL（上文的 `<id>`）。可以用路径参数来提取嵌入的信息，并传递给路由处理器（后续章节中用于动态获取数据库中的信息）。通过在 URL 中嵌入信息，使得每种类型的所有资源只需要一个路由（例如，所有藏书副本的显示操作只需要一个路由）。
 
-> **备注：** Express 可以通过任何方式构造 URL，可以在 URL 正文中嵌入信息（如上文），或使用 URL `GET` 参数（例如 `/book/?id=6`）。无论哪种方法，URL 都应保持整洁、合理且易读（另请参阅 [W3C 相关建议](https://www.w3.org/Provider/Style/URI)）。
+> [!NOTE]
+> Express 可以通过任何方式构造 URL，可以在 URL 正文中嵌入信息（如上文），或使用 URL `GET` 参数（例如 `/book/?id=6`）。无论哪种方法，URL 都应保持整洁、合理且易读（另请参阅 [W3C 相关建议](https://www.w3.org/Provider/Style/URI)）。
 
 下面我们为上述所有 URL 创建路由处理器回调函数和路由代码。
 
@@ -201,7 +206,8 @@ app.get("/users/:userId/books/:bookId", (req, res) => {
     genreController.js
 ```
 
-> **备注：** 上述四个文件可到 GitHub 下载 [dummyControllers.zip](https://github.com/roy-tian/mdn-examples/blob/master/server/express-locallibrary-tutorial/controllers/dummyControllers.zip)。（链接已失效，请移步英文版查看具体代码）
+> [!NOTE]
+> 上述四个文件可到 GitHub 下载 [dummyControllers.zip](https://github.com/roy-tian/mdn-examples/blob/master/server/express-locallibrary-tutorial/controllers/dummyControllers.zip)。（链接已失效，请移步英文版查看具体代码）
 
 ### `Author` 控制器
 
@@ -283,7 +289,8 @@ exports.index = (req, res) => { res.send('未实现：站点首页'); };
     catalog.js
 ```
 
-> **备注：** 可到 GitHub 下载完整的 [catalog.js](https://raw.githubusercontent.com/roy-tian/mdn-examples/master/server/express-locallibrary-tutorial/routes/catalog.js)。
+> [!NOTE]
+> 可到 GitHub 下载完整的 [catalog.js](https://raw.githubusercontent.com/roy-tian/mdn-examples/master/server/express-locallibrary-tutorial/routes/catalog.js)。
 
 **/routes/catalog.js** 中有以下代码：
 
@@ -350,7 +357,8 @@ router.get("/", (req, res) => {
 });
 ```
 
-> **备注：** 这是我们第一次使用 [redirect()](https://expressjs.com/en/4x/api.html#res.redirect) 响应方法。它会使路由重定向到指定的页面，默认发送 HTTP 状态代码“302 Found”。可以根据需要更改返回的状态代码、设置绝对或相对路径。
+> [!NOTE]
+> 这是我们第一次使用 [redirect()](https://expressjs.com/en/4x/api.html#res.redirect) 响应方法。它会使路由重定向到指定的页面，默认发送 HTTP 状态代码“302 Found”。可以根据需要更改返回的状态代码、设置绝对或相对路径。
 
 ### 更新 app.js
 
@@ -372,7 +380,8 @@ app.use("/users", usersRouter);
 app.use("/catalog", catalogRouter); // 将 catalog 路由添加进中间件链
 ```
 
-> **备注：** 我们将图书编目模块添加到了 `'/catalog'` 路径，该路径是 catalog 模块中所有路径的前缀。例如，访问藏书列表 的 URL 为：`/catalog/books/`。
+> [!NOTE]
+> 我们将图书编目模块添加到了 `'/catalog'` 路径，该路径是 catalog 模块中所有路径的前缀。例如，访问藏书列表 的 URL 为：`/catalog/books/`。
 
 大功告成。LocalLibrary 网站所需的所有 URL 的路由和框架函数都已准备完毕。
 
@@ -392,7 +401,8 @@ app.use("/catalog", catalogRouter); // 将 catalog 路由添加进中间件链
   DEBUG=express-locallibrary-tutorial:* npm run devstart
   ```
 
-> **备注：** 以上命令只对 bash 有效，要在 Windows 上使用 bash，最简单的方法就是安装 Git。（详情参见[教程 2 相关译注](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website#使用应用生成器)）
+> [!NOTE]
+> 以上命令只对 bash 有效，要在 Windows 上使用 bash，最简单的方法就是安装 Git。（详情参见[教程 2 相关译注](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website#使用应用生成器)）
 
 接下来浏览上面一些 URL，确保不会收到错误页面（HTTP 404）。可以尝试以下示例：
 
