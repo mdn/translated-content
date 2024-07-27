@@ -63,6 +63,8 @@ WebRTC 连接上的端点配置称为**会话描述**。该描述包括关于要
 
 > **备注：** 一般来说，使用 TCP 的 ICE 候选者只有当 UDP 不可用或被限制使其不适用于媒体流时才会被使用。不是所有的浏览器都支持 ICE over TCP。
 
-## The entire exchange in a complicated diagram
+## 整个交换的复杂图表
 
-[![A complete architectural diagram showing the whole WebRTC process.](webrtc-complete-diagram.png)](https://hacks.mozilla.org/wp-content/uploads/2013/07/webrtc-complete-diagram.png)
+![展示 WebRTC 完整流程的架构图。](webrtc-complete-diagram.png)
+
+[原始来源](https://hacks.mozilla.org/2013/07/webrtc-and-the-ocean-of-acronyms/)

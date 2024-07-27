@@ -1,13 +1,14 @@
 ---
-title: AbortSignal.aborted
+title: "AbortSignal: aborted プロパティ"
+short-title: aborted
 slug: Web/API/AbortSignal/aborted
 l10n:
-  sourceCommit: 02e1bfcad5fd0de845fb033d331c3c027afa2d6e
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-**`aborted`** は読み取り専用プロパティで、そのシグナルが通信している DOM リクエストが中止されているか (`true`)、されていないか (`false`) を示す値を返します。
+**`aborted`** は読み取り専用プロパティで、そのシグナルがやりとりしている非同期操作が中止されているか (`true`)、されていないか (`false`) を示す値を返します。
 
 ## 値
 

@@ -754,10 +754,8 @@
 /ru/docs/Web/JavaScript/Reference/Classes/Приватные_поля_класса	/ru/docs/Web/JavaScript/Reference/Classes/Private_properties
 /ru/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/ru/docs/Web/JavaScript/Reference/Errors/Bad_return
 /ru/docs/Web/JavaScript/Reference/Errors/Deprecated_octal	/ru/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
-/ru/docs/Web/JavaScript/Reference/Errors/Equal_as_assign	/ru/docs/orphaned/Web/JavaScript/Reference/Errors/Equal_as_assign
 /ru/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement	/ru/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_token
 /ru/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/ru/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
-/ru/docs/Web/JavaScript/Reference/Errors/Undefined_prop	/ru/docs/orphaned/Web/JavaScript/Reference/Errors/Undefined_prop
 /ru/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal	/ru/docs/Web/JavaScript/Reference/Errors/String_literal_EOL
 /ru/docs/Web/JavaScript/Reference/Functions/Определиние_методов	/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator	/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
@@ -848,7 +846,7 @@
 /ru/docs/Web/Performance/Основы	/ru/docs/Web/Performance/Fundamentals
 /ru/docs/Web/Performance/Производительность_анимации	/ru/docs/Web/Performance/Animation_performance_and_frame_rate
 /ru/docs/Web/Progressive_web_apps/Installable_PWAs	/ru/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
-/ru/docs/Web/SVG/Attribute/Core	/ru/docs/conflicting/Web/SVG/Attribute
+/ru/docs/Web/SVG/Attribute/Core	/ru/docs/Web/SVG/Attribute
 /ru/docs/Web/SVG/Tutorial/Базовые_Преобразования	/ru/docs/Web/SVG/Tutorial/Basic_Transformations
 /ru/docs/Web/SVG/Tutorial/Введение	/ru/docs/Web/SVG/Tutorial/Introduction
 /ru/docs/Web/SVG/Tutorial/Основные_Фигуры	/ru/docs/Web/SVG/Tutorial/Basic_Shapes

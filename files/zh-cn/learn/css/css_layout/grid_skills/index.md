@@ -7,7 +7,8 @@ slug: Learn/CSS/CSS_layout/Grid_skills
 
 此任务的目的是让你使用 CSS 网格布局，并测试你是否了解网格和网格项的行为方式。你将会完成三个包括不同的元素小任务。
 
-> **备注：** 你可以在下面的交互式编辑器中试用解决方案，不过，下载代码并使用在线工具 (如 CodePen、jsFiddle 或 Glitch) 处理这些任务可能会更有帮助。
+> [!NOTE]
+> 你可以在下面的交互式编辑器中试用解决方案，不过，下载代码并使用在线工具 (如 CodePen、jsFiddle 或 Glitch) 处理这些任务可能会更有帮助。
 >
 > 如果你遇到困难，请向我们寻求帮助 — 参阅本页底部的 [评估或进一步帮助](#assessment_or_further_help) 部分。
 
@@ -21,7 +22,8 @@ slug: Learn/CSS/CSS_layout/Grid_skills
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid1.html", '100%', 700)}}
 
-> **备注：** 评估或进一步的工作目的，可以[下载此任务的源文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid1-download.html)在你自己的编辑器或使用线编辑器。
+> [!NOTE]
+> 评估或进一步的工作目的，可以[下载此任务的源文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid1-download.html)在你自己的编辑器或使用线编辑器。
 
 ## 网格布局 二
 
@@ -37,7 +39,8 @@ slug: Learn/CSS/CSS_layout/Grid_skills
 
 - 你可以把第一个元素覆盖到第二个元素，而不通过改变 html 元素的顺序吗？
 
-> **备注：** 评估或进一步的工作目的，可以 [下载此任务的源文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid2-download.html) 在你自己的编辑器或使用线编辑器。
+> [!NOTE]
+> 评估或进一步的工作目的，可以 [下载此任务的源文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid2-download.html) 在你自己的编辑器或使用线编辑器。
 
 ## 网格布局 三
 
@@ -49,7 +52,8 @@ slug: Learn/CSS/CSS_layout/Grid_skills
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid3.html", '100%', 800)}}
 
-> **备注：** 评估或进一步的工作目的，可以 [下载此任务的源文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid3-download.html) 在你自己的编辑器或使用线编辑器。
+> [!NOTE]
+> 评估或进一步的工作目的，可以 [下载此任务的源文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid3-download.html) 在你自己的编辑器或使用线编辑器。
 
 ## 网格布局 四
 
@@ -61,7 +65,8 @@ slug: Learn/CSS/CSS_layout/Grid_skills
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid4.html", '100%', 1200)}}
 
-> **备注：** 评估或进一步的工作目的，可以 [下载此任务的源文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid4-download.html) 在你自己的编辑器或使用线编辑器。
+> [!NOTE]
+> 评估或进一步的工作目的，可以 [下载此任务的源文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid4-download.html) 在你自己的编辑器或使用线编辑器。
 
 ## 评估 或者 帮助
 
