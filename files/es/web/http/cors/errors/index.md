@@ -28,7 +28,8 @@ impide leer el recurso remoto en https://alguna-url-aqui (razón:
 información adicional aquí).
 ```
 
-> **Nota:** Por razones de seguridad, los detalles sobre lo que salió mal con una solicitud CORS _no están disponibles para el código JavaScript_. Todo lo que el código sabe es que ocurrió un error. La única forma de determinar qué salió mal específicamente es mirar la consola del navegador para obtener más detalles.
+> [!NOTE]
+> Por razones de seguridad, los detalles sobre lo que salió mal con una solicitud CORS _no están disponibles para el código JavaScript_. Todo lo que el código sabe es que ocurrió un error. La única forma de determinar qué salió mal específicamente es mirar la consola del navegador para obtener más detalles.
 
 ## Mensajes de error de CORS
 
