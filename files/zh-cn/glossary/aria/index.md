@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**ARIA** (_无障碍富{{glossary("Internet", "互联网")}}应用_) 是由 {{glossary("WAI")}} 开发的 {{Glossary("W3C")}} 规范，旨在向 {{Glossary("HTML")}} 中添加语义和其他元数据的，从而让 Web 内容与程序对残障人士更加友好。它尤其帮助使用 HTML、JavaScript 和相关技术开发的动态内容和高级用户界面控件。
+**ARIA** (_{{Glossary("Accessibility", "无障碍")}}富{{glossary("Internet", "互联网")}}应用_) 是由 {{glossary("WAI")}} 开发的 {{Glossary("W3C")}} 规范，旨在让 Web 内容与程序对残障人士更加友好。它尤其有助于使用 HTML、JavaScript 和相关技术开发的动态内容和高级用户界面控件。
 
 例如，你可以将 `role="alert"` 添加到 {{HTMLElement("p")}} {{glossary("tag", "标签")}}来告知视力有问题的用户，这段信息是重要的（要不然你应该是会通过文字颜色传达这个意思）。
 
