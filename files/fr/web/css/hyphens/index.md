@@ -11,7 +11,8 @@ La propriété **`hyphens`** indique au navigateur comment gérer les traits d'u
 
 Les règles relatives aux traits d'union en fin de ligne dépendent de la langue utilisée. En HTML, la langue est définie grâce à l'attribut [`lang`](/fr/docs/Web/HTML/Global_attributes/lang) et les navigateurs n'appliqueront les règles que si cet attribut est présent et que le dictionnaire correspondant (pour la gestion des traits d'union et des fins de ligne) est disponible. Pour des documents XML, on utilisera l'attribut [`xml:lang`](/fr/docs/Web/SVG/Attribute/xml:lang).
 
-> **Note :** Les règles exactes qui définissent l'application des traits d'union en fin de ligne ne sont pas explicitement définies par la spécification, aussi, le comportement peut varier entre les navigateurs.
+> [!NOTE]
+> Les règles exactes qui définissent l'application des traits d'union en fin de ligne ne sont pas explicitement définies par la spécification, aussi, le comportement peut varier entre les navigateurs.
 
 ## Syntaxe
 
@@ -36,7 +37,8 @@ hyphens: unset;
 - `auto`
   - : Le navigateur est libre de couper les mots là où il l'estime approprié selon les règles qu'il choisit. Les emplacements de coupe suggérés par certains caractères devraient être privilégiés par rapport aux coupes automatiques.
 
-> **Note :** Le comportement défini par `auto` dépend de la langue indiquée par le document. Aussi, il faut indiquer la langue via l'attribut HTML `lang` pour s'assurer que les fins de ligne et les traits d'union sont bien gérés selon la langue indiquée.
+> [!NOTE]
+> Le comportement défini par `auto` dépend de la langue indiquée par le document. Aussi, il faut indiquer la langue via l'attribut HTML `lang` pour s'assurer que les fins de ligne et les traits d'union sont bien gérés selon la langue indiquée.
 
 ## Définition formelle
 

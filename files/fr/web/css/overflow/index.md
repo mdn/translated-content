@@ -13,9 +13,11 @@ Lorsqu'on utilise la propriété `overflow` avec une autre valeur que `visible` 
 
 Afin que la propriété `overflow` puisse avoir un effet, le conteneur de niveau de bloc doit avoir une hauteur limite (définie grâce à {{cssxref("height")}} ou {{cssxref("max-height")}}) ou avoir `white-space` avec la valeur `nowrap.`
 
-> **Note :** Si on définit un axe avec `visible` (la valeur par défaut) et qu'on définit l'autre axe avec une valeur différente, alors la valeur du premier axe (`visible`) sera considérée comme `auto`.
+> [!NOTE]
+> Si on définit un axe avec `visible` (la valeur par défaut) et qu'on définit l'autre axe avec une valeur différente, alors la valeur du premier axe (`visible`) sera considérée comme `auto`.
 
-> **Note :** Lorsqu'on définit, via un script, la propriété `scrollTop` sur les éléments HTML pertinents, même lorsque `overflow` vaut `hidden`, il faut parfois faire défiler l'élément.
+> [!NOTE]
+> Lorsqu'on définit, via un script, la propriété `scrollTop` sur les éléments HTML pertinents, même lorsque `overflow` vaut `hidden`, il faut parfois faire défiler l'élément.
 
 ## Syntaxe
 

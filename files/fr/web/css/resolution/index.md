@@ -26,7 +26,8 @@ Bien que toutes les unités représentent la même chose pour la valeur `0`, l'u
 - `x`
   - : Un alias pour `dppx`.
 
-> **Note :** Bien que le nombre `0` représente la même mesure pour ces différentes unités. Si la valeur est écrite sans unité, elle sera considérée comme invalide. Autrement dit, `0` est invalide et ne représente pas `0dpi`, `0dpcm` ou `0dppx`.
+> [!NOTE]
+> Bien que le nombre `0` représente la même mesure pour ces différentes unités. Si la valeur est écrite sans unité, elle sera considérée comme invalide. Autrement dit, `0` est invalide et ne représente pas `0dpi`, `0dpcm` ou `0dppx`.
 
 ## Exemples
 

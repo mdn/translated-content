@@ -38,7 +38,8 @@ place-content: unset;
 
 La première valeur utilisée sera celle qui correspond à {{cssxref("align-content")}} et la seconde valeur correspondra à {{cssxref("justify-content")}}. Si la deuxième valeur n'est pas présente, la première valeur indiquée sera également utilisée pour `justify-content`.
 
-> **Attention :** Si une seule valeur est fournie et que celle-ci est invalide pour l'une ou l'autre des propriétés détaillées, c'est la déclaration entière qui sera invalide.
+> [!WARNING]
+> Si une seule valeur est fournie et que celle-ci est invalide pour l'une ou l'autre des propriétés détaillées, c'est la déclaration entière qui sera invalide.
 
 ### Valeurs
 

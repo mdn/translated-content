@@ -9,7 +9,8 @@ La propriété **`padding-right`** d'un élément correspond à l'espace nécess
 
 {{EmbedInteractiveExample("pages/css/padding-right.html")}}
 
-> **Note :** La propriété raccourcie {{cssxref("padding")}} permet de paramétrer les dimensions des quatre côtés de cette boîte (y compris `padding-right` donc).
+> [!NOTE]
+> La propriété raccourcie {{cssxref("padding")}} permet de paramétrer les dimensions des quatre côtés de cette boîte (y compris `padding-right` donc).
 
 ## Syntaxe
 

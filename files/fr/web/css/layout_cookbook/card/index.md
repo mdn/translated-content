@@ -38,7 +38,8 @@ La piste pour le titre est définie avec {{cssxref("max-content")}} ce qui empê
 
 Si la carte possède un pied de page, celui-ci sera dimensionné automatiquement car les lignes ajoutées sur la grille implicite sont dimensionnés automatiquement. Aussi, le pied de page sera suffisamment grand pour contenir l'ensemble de son texte.
 
-> **Note :** Les éléments de différentes cartes ne seront pas alignés les uns avec les autres car chaque carte est une grille indépendante. La fonctionnalité de sous-grille (_subgrid_), proposée pour la version de niveau 2 du module de spécification CSS Grid, pourrait apporter une solution à ce problème.
+> [!NOTE]
+> Les éléments de différentes cartes ne seront pas alignés les uns avec les autres car chaque carte est une grille indépendante. La fonctionnalité de sous-grille (_subgrid_), proposée pour la version de niveau 2 du module de spécification CSS Grid, pourrait apporter une solution à ce problème.
 
 ## Méthodes alternatives
 

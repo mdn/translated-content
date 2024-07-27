@@ -53,7 +53,8 @@ La taille effective d'un objet est calculée avec l'algorithme suivant&nbsp;:
 2. Si la taille indiquée définit _uniquement la largeur ou la hauteur_, la valeur manquante est déterminée à l'aide des proportions intrinsèques si elles existent, de la dimension intrinsèque correspondante si la valeur correspond ou de la taille par défaut de l'objet pour la valeur manquante.
 3. Si la taille indiquée ne définit _ni la largeur, ni la hauteur_, la taille effective de l'objet est calculée afin de respecter les proportions intrinsèques de l'image sans dépasser la taille par défaut de l'objet sur aucun des deux axes. Si l'image n'a pas de proportions intrinsèques, ce sont celles de l'objet auquel elle s'applique qui sont utilisées et si l'objet n'en a pas non plus, la largeur ou la hauteur manquante est déterminée à partir de la taille par défaut de l'objet.
 
-> **Note :** Tous les navigateurs ne prennent pas en charge tous les types d'image pour chaque propriété. Voir [le tableau de compatibilité](#compatibilité_des_navigateurs) pour plus de détails.
+> [!NOTE]
+> Tous les navigateurs ne prennent pas en charge tous les types d'image pour chaque propriété. Voir [le tableau de compatibilité](#compatibilité_des_navigateurs) pour plus de détails.
 
 ## Accessibilité
 

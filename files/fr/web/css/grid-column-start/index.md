@@ -55,7 +55,8 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 
   - : S'il existe une ligne nommée avec '\<custom-ident>-start', le début de l'élément coincide avec la première ligne correspondante.
 
-    > **Note :** Les noms des zones de grille sont générés implicitement. Ainsi, en utilisant `grid-column-start: toto;` cela sélectionnera le bord de la zone de grille nommée correspondante (sauf si une autre ligne `toto-start` a explicitement été déclarée).
+    > [!NOTE]
+    > Les noms des zones de grille sont générés implicitement. Ainsi, en utilisant `grid-column-start: toto;` cela sélectionnera le bord de la zone de grille nommée correspondante (sauf si une autre ligne `toto-start` a explicitement été déclarée).
 
     Sinon, la valeur est traitée comme si on avait utilisé `<custom-ident>` et la valeur `1`.
 

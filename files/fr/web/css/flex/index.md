@@ -173,7 +173,8 @@ La propriété `flex` peut être définie avec une, deux ou trois valeurs.
 - `<'flex-basis'>`
   - : Voir {{cssxref("flex-basis")}}. Une valeur valide pour {{cssxref("width")}} et {{cssxref("height")}}. La valeur par défaut est `0`.
 
-> **Note :** Lorsqu'on utilise une ou deux valeurs sans unité dans la règle, `flex-basis` vaudra 0. Pour plus d'informations, voir [le brouillon de spécification du module des boîtes flexibles](https://drafts.csswg.org/css-flexbox/#flex-common).
+> [!NOTE]
+> Lorsqu'on utilise une ou deux valeurs sans unité dans la règle, `flex-basis` vaudra 0. Pour plus d'informations, voir [le brouillon de spécification du module des boîtes flexibles](https://drafts.csswg.org/css-flexbox/#flex-common).
 
 ## Définition formelle
 

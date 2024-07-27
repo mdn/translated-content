@@ -32,7 +32,8 @@ On utilise parfois cette propriété pour désactiver les interactions tactiles 
 
 Lorsqu'une interaction tactile a lieu, le navigateur inspecte les valeurs de `touch-action` pour l'élément et ses ancêtres jusqu'à atteindre l'élément qui implémente le geste (c'est-à-dire celui qui peut défiler/zoomer). En pratique, `touch-action` est généralement uniquement appliquée aux éléments de plus haut niveau ayant besoin d'un comportement spécifique. Il n'est pas nécessaire de redéfinir `touch-action` sur les descendants.
 
-> **Note :** Lorsqu'un geste est déjà initié, tout changement sur `touch-action` n'aura aucun impact sur le geste en cours.
+> [!NOTE]
+> Lorsqu'un geste est déjà initié, tout changement sur `touch-action` n'aura aucun impact sur le geste en cours.
 
 ## Syntaxe
 
@@ -100,7 +101,8 @@ ul > li {
 
 {{EmbedLiveSample('Exemples')}}
 
-> **Note :** La propriété `touch-action` est également utilisée afin de supprimer le délai donné à l'évènement `click` pour prendre en charge le zoom via la double-touche.
+> [!NOTE]
+> La propriété `touch-action` est également utilisée afin de supprimer le délai donné à l'évènement `click` pour prendre en charge le zoom via la double-touche.
 
 ## Accessibilité
 

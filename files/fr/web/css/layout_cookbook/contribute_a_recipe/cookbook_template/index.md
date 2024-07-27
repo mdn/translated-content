@@ -5,7 +5,8 @@ slug: Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template
 
 {{CSSRef}}
 
-> **Note :** Voici un modèle de contenu pour les pages de « recette » CSS. Vous êtes invité⋅e à utiliser cette page comme modèle lorsque vous créez une nouvelle recette.
+> [!NOTE]
+> Voici un modèle de contenu pour les pages de « recette » CSS. Vous êtes invité⋅e à utiliser cette page comme modèle lorsque vous créez une nouvelle recette.
 >
 > _Les commentaires en italiques sont des informations sur l'utilisation de telle ou telle partie du modèle._
 

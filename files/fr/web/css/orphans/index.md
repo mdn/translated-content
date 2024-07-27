@@ -17,7 +17,8 @@ orphans: initial;
 orphans: unset;
 ```
 
-> **Note :** En typographie, un orphelin (_orphan_ en anglais) est la première ligne d'un paragraphe qui apparaît isolée en bas d'une page (le paragraphe poursuivant sur la page suivante).
+> [!NOTE]
+> En typographie, un orphelin (_orphan_ en anglais) est la première ligne d'un paragraphe qui apparaît isolée en bas d'une page (le paragraphe poursuivant sur la page suivante).
 
 ## Syntaxe
 

@@ -15,7 +15,8 @@ p::first-line {
 }
 ```
 
-> **Note :** À la différence des pseudo-éléments, [les pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) peuvent être utilisées afin de mettre en forme un élément en fonction de son état.
+> [!NOTE]
+> À la différence des pseudo-éléments, [les pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) peuvent être utilisées afin de mettre en forme un élément en fonction de son état.
 
 ## Syntaxe
 

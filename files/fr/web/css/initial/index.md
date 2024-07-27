@@ -9,7 +9,8 @@ Le mot-clé **`initial`** applique la valeur initiale d'une propriété à un é
 
 La propriété {{cssxref("all")}} peut être utilisée avec cette valeur afin de réinitialiser l'ensemble des propriétés CSS.
 
-> **Note :** Pour [les propriétés héritées](/fr/docs/Web/CSS/Héritage#Propriétés_héritées), la valeur initiale peut donner des résultats étranges et mieux vaudra utiliser les mots-clés {{cssxref("inherit")}}, {{cssxref("unset")}} ou {{cssxref("revert")}}. Attention également à ne pas confondre la valeur initiale avec la valeur décrite dans la feuille de style portée par le navigateur.
+> [!NOTE]
+> Pour [les propriétés héritées](/fr/docs/Web/CSS/Héritage#Propriétés_héritées), la valeur initiale peut donner des résultats étranges et mieux vaudra utiliser les mots-clés {{cssxref("inherit")}}, {{cssxref("unset")}} ou {{cssxref("revert")}}. Attention également à ne pas confondre la valeur initiale avec la valeur décrite dans la feuille de style portée par le navigateur.
 
 ## Exemples
 

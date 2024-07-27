@@ -11,7 +11,8 @@ La propriété CSS **`object-fit`** définit la façon dont le contenu d'un [él
 
 Selon la valeur utilisée pour `object-fit`, l'élément peut être rogné, mis à l'échelle ou étiré, afin de remplir la boîte qui le contient.
 
-> **Note :** Il est possible de modifier l'alignement du contenu de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété [`object-position`](/fr/docs/Web/CSS/object-position).
+> [!NOTE]
+> Il est possible de modifier l'alignement du contenu de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété [`object-position`](/fr/docs/Web/CSS/object-position).
 
 ## Syntaxe
 
