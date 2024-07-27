@@ -52,7 +52,8 @@ slug: Web/HTML/Element/input/file
 
 文件 input 的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性包含了一个字符串，表示已选择文件的路径。如果用户没有选择任何文件，则该值为空字符串（`""`）。如果用户选择了多个文件，则 `value` 表示他们选择的文件列表中的第一个文件。可以使用 [input 的 `HTMLInputElement.files` 属性](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications#获取被选择文件的信息)标识其他文件。
 
-> **备注：** 为了阻止恶意软件猜测文件路径，该值的字符串表示[总是以 `C:\fakepath\` 为前缀的文件名](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)，而并不是文件的真实路径。
+> [!NOTE]
+> 为了阻止恶意软件猜测文件路径，该值的字符串表示[总是以 `C:\fakepath\` 为前缀的文件名](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)，而并不是文件的真实路径。
 
 ## 附加属性
 
@@ -133,7 +134,8 @@ div {
 
 {{EmbedLiveSample('基本示例', 650, 90)}}
 
-> **备注：** 你也可以在 GitHub 中找到这个示例——详见[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html)和[在线运行实例](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)。
+> [!NOTE]
+> 你也可以在 GitHub 中找到这个示例——详见[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html)和[在线运行实例](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)。
 
 无论用户的设备或操作系统是什么，文件输入都提供一个按钮，打开一个允许用户选择文件的文件选择对话框。
 
@@ -158,7 +160,8 @@ div {
 - `webkitRelativePath` {{non-standard_inline}}
   - : 一个字符串，指定了相对于在目录选择器中选择的基本目录的文件路径（即，一个设置了 [`webkitdirectory`](/zh-CN/docs/Web/HTML/Element/input/file#webkitdirectory) 属性的 `file` 选择器）。_这是非标准的，应该谨慎使用。_
 
-> **备注：** 你可以在所有现代浏览器中读写 `HTMLInputElement.files` 的值；该特性已经添加到了 Firefox 57 中（见 [Firefox bug 1384030](https://bugzil.la/1384030)）。
+> [!NOTE]
+> 你可以在所有现代浏览器中读写 `HTMLInputElement.files` 的值；该特性已经添加到了 Firefox 57 中（见 [Firefox bug 1384030](https://bugzil.la/1384030)）。
 
 ### 限制可接受的文件类型
 
@@ -199,7 +202,8 @@ div {
 
 {{EmbedLiveSample('限制可接受的文件类型', 650, 90)}}
 
-> **备注：** 你也可以在 GitHub 中找到这个示例——详见[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-with-accept.html)和[在线运行实例](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html)。
+> [!NOTE]
+> 你也可以在 GitHub 中找到这个示例——详见[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-with-accept.html)和[在线运行实例](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html)。
 
 这可能看起来很相似，但是如果你尝试用该输入选择一个文件，你将看到文件选择器只允许你选择 `accept` 值指定的文件类型（实际接口会按不同的浏览器和操作系统有所不同）。
 
@@ -222,7 +226,8 @@ div {
 
 在本例中，我们将展示一个稍微高级一点的文件选择器，它利用了在 `HTMLInputElement.files` 属性中可用的文件信息，并且展示了一些聪明的技巧。
 
-> **备注：** 你可以在 GitHub 中查看本示例的完整源代码——[file-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-example.html)（[参见在线的运行实例](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)）。我们不会解释 CSS；JavaScript 是主要的关注点。
+> [!NOTE]
+> 你可以在 GitHub 中查看本示例的完整源代码——[file-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-example.html)（[参见在线的运行实例](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)）。我们不会解释 CSS；JavaScript 是主要的关注点。
 
 首先，让我们看看 HTML：
 
@@ -319,7 +324,8 @@ const preview = document.querySelector(".preview");
 input.style.opacity = 0;
 ```
 
-> **备注：** 使用 {{cssxref("opacity")}} 来隐藏文件输入，而不是使用 {{cssxref("visibility", "visibility: hidden")}} 或者 {{cssxref("display", "display: none")}}，因为辅助技术将后两种样式解释为文件 input 是不可交互的。
+> [!NOTE]
+> 使用 {{cssxref("opacity")}} 来隐藏文件输入，而不是使用 {{cssxref("visibility", "visibility: hidden")}} 或者 {{cssxref("display", "display: none")}}，因为辅助技术将后两种样式解释为文件 input 是不可交互的。
 
 接下来，我们将[事件监听器](/zh-CN/docs/Web/API/EventTarget/addEventListener)添加到 input 中，以监听选择的值的更改（在本例中，当选择文件时）。事件监听器调用我们定制的 `updateImageDisplay()` 函数。
 

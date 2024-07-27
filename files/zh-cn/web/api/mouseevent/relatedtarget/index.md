@@ -110,4 +110,3 @@ function overListener(event) {
 ## 参见
 
 - {{ domxref("MouseEvent") }}
-- [Comparison of Event Targets](/zh-CN/docs/DOM/event/Comparison_of_Event_Targets)

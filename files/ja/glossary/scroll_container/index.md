@@ -9,7 +9,7 @@ slug: Glossary/Scroll_container
 
 スクロールコンテナーによって、ユーザーは領域をあふれて表示から切り取られ非表示になる部分をスクロールさせることができます。スクロールコンテナーの見える部分は、{{glossary("Scrollport", "スクロールポート")}}と呼ばれます。
 
-- [MDN Web Docs 用語集](/ja/docs/Glossary):
+- 関連用語:
 
   - {{glossary("Scroll container", "スクロールコンテナー")}}
   - {{glossary("Scrollport", "スクロールポート")}}

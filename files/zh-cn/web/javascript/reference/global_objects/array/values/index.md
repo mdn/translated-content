@@ -21,7 +21,7 @@ values()
 
 ## 描述
 
-`Array.prototype.values()` 是 [`Array.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator) 的默认实现。
+`Array.prototype.values()` 是 [`Array.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator) 的默认实现。
 
 ```js
 Array.prototype.values === Array.prototype[Symbol.iterator]; // true
@@ -159,6 +159,6 @@ for (const entry of Array.prototype.values.call(arrayLike)) {
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.keys()")}}
-- [`Array.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
 - {{jsxref("TypedArray.prototype.values()")}}
 - [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)

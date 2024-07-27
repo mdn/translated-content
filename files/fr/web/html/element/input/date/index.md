@@ -138,7 +138,7 @@ On ne peut donc ici que sélectionner une date en avril 2017. Seule la partie du
 
 ### Contrôler la taille du champ de saisie
 
-`<input type="date">` ne permet pas d'utiliser des attributs de dimensionnement tels que [`size`](/fr/docs/Web/HTML/Element/Input#attr-size). Il est nécessaire d'utiliser [CSS](/fr/docs/Web/CSS) pour adresser ces aspects de mise en forme.
+`<input type="date">` ne permet pas d'utiliser des attributs de dimensionnement tels que [`size`](/fr/docs/Web/HTML/Element/Input#attr-size). Il est nécessaire d'utiliser [CSS](/fr/docs/Web/CSS) pour gérer ces aspects de mise en forme.
 
 ## Validation
 

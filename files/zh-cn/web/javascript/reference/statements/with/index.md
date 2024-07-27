@@ -85,6 +85,6 @@ with (Math) {
 ## 参见
 
 - {{jsxref("Statements/block", "block")}}
-- [Strict mode](/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
+- [严格模式](/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
 - {{jsxref("Symbol.unscopables")}}
-- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+- [`Array.prototype[Symbol.unscopables]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables)
