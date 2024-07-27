@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.autoplay
+title: "HTMLMediaElement: autoplay プロパティ"
+short-title: autoplay
 slug: Web/API/HTMLMediaElement/autoplay
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -46,5 +47,5 @@ document.querySelector("#video").autoplay = false;
 
 ## 関連情報
 
-- これを定義しているインターフェイスである {{domxref("HTMLMediaElement")}}
-- {{HTMLElement("audio")}} および {{HTMLElement("video")}}
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.autoplay` プロパティを定義しているインターフェイス
+- {{HTMLElement("audio")}}, {{HTMLElement("video")}}
