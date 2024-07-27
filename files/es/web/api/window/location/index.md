@@ -50,7 +50,8 @@ function reloadPageWithHash() {
 }
 ```
 
-> **Nota:** El ejemplo anterior funciona en situaciones cuando location.hash no necesita ser retenido. Sin embargo, en navegadores basados en Gecko, configurar `location.pathname` en esta manera eliminará cualquier información en location.hash, mientras que en WebKit (y posiblemente en otros navegadores), configurar el pathname no afectará el hash. Si necesitas cambiar el pathname pero mantener el hash como está, usa el método `replace()`, el cual funcionará consistentemente a través de los navegadores..
+> [!NOTE]
+> El ejemplo anterior funciona en situaciones cuando location.hash no necesita ser retenido. Sin embargo, en navegadores basados en Gecko, configurar `location.pathname` en esta manera eliminará cualquier información en location.hash, mientras que en WebKit (y posiblemente en otros navegadores), configurar el pathname no afectará el hash. Si necesitas cambiar el pathname pero mantener el hash como está, usa el método `replace()`, el cual funcionará consistentemente a través de los navegadores..
 
 ### Ejemplo 4: Muestra las propiedades de la URL actual en una ventana emergente
 
@@ -379,7 +380,8 @@ La siguiente URL con "?Some%20data" anexa es enviada al servidor (Si no hay ning
 </html>
 ```
 
-> **Nota:** La función showNode es también un ejemplo del uso del ciclo [`for`](/en/JavaScript/Reference/Statements/for) sin una sección de `statement`. En este caso **un punto y coma es siempre puesto inmediatamente después de la declaración de el ciclo.**
+> [!NOTE]
+> La función showNode es también un ejemplo del uso del ciclo [`for`](/en/JavaScript/Reference/Statements/for) sin una sección de `statement`. En este caso **un punto y coma es siempre puesto inmediatamente después de la declaración de el ciclo.**
 
 …De igual manera pero con un scroll animado:
 
