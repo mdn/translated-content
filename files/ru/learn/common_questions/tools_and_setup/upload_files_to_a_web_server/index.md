@@ -19,7 +19,8 @@ slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 
 Существуют различные варианты SFTP клиентов. В нашем примере мы будем использовать [FileZilla](https://filezilla-project.org/), тк он бесплатен и подходит для Windows, macOS и Linux. Чтобы установить менеджер перейдите на страницу загрузки [FileZilla downloads page](https://filezilla-project.org/download.php?type=client), нажмите на кнопку загрузки, затем установите пакет из установочного файла обычным способом.
 
-> **Примечание:** Конечно, есть много других вариантов. Смотрите [Publishing tools](/en-US/Learn/How_much_does_it_cost#Publishing_tools.3A_FTP_client) для других способов.
+> [!NOTE]
+> Конечно, есть много других вариантов. Смотрите [Publishing tools](/en-US/Learn/How_much_does_it_cost#Publishing_tools.3A_FTP_client) для других способов.
 
 Откройте приложение FileZilla; вы должны увидеть что-то вроде этого:
 
@@ -51,7 +52,8 @@ slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 
 ![Our demozilla personal website, seen in a browser: it's empty](demozilla-empty.png)
 
-> **Примечание:** В зависимости от вашего хостинг-провайдера, когда вы впервые заходите на свой веб-адрес, большую часть времени вы будете видеть страницу, на которой написано что-то вроде этого: "This website is hosted by \[Hosting Service]."
+> [!NOTE]
+> В зависимости от вашего хостинг-провайдера, когда вы впервые заходите на свой веб-адрес, большую часть времени вы будете видеть страницу, на которой написано что-то вроде этого: "This website is hosted by \[Hosting Service]."
 
 Чтобы подключить SFTP клиент к удалённому серверу, выполните следующие действия:
 
