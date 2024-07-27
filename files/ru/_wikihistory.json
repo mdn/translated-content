@@ -15946,10 +15946,6 @@
     "modified": "2019-06-12T07:08:20.267Z",
     "contributors": ["deadblackclover", "vkorniiko"]
   },
-  "conflicting/Glossary/CORS-safelisted_request_header": {
-    "modified": "2019-03-18T21:32:57.580Z",
-    "contributors": ["Skinny-Hunter"]
-  },
   "conflicting/Web/API/Fetch_API/Using_Fetch": {
     "modified": "2019-03-18T21:00:16.677Z",
     "contributors": ["Akh-rman", "qqwweeaassdd"]
@@ -15961,9 +15957,5 @@
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_token": {
     "modified": "2020-03-12T19:46:03.538Z",
     "contributors": ["KTatyana", "SedovDP", "Sparks"]
-  },
-  "conflicting/Web/SVG/Attribute": {
-    "modified": "2020-10-15T22:34:58.576Z",
-    "contributors": ["osipov_s"]
   }
 }
