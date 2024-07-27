@@ -55,7 +55,8 @@ Dans l'exemple suivant, les paragraphes ont une marge en haut qui mesure 20 pixe
 
 Pour en savoir plus à propos de la fusion des marges, vous pouvez lire [l'article dédié à la fusion des marges](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing).
 
-> **Note :** Si vous n'êtes pas certain⋅e que la fusion des marges a lieu, vous pouvez utiliser les outils de développement de votre navigateur afin de voir la valeur réellement utilisée pour les marges.
+> [!NOTE]
+> Si vous n'êtes pas certain⋅e que la fusion des marges a lieu, vous pouvez utiliser les outils de développement de votre navigateur afin de voir la valeur réellement utilisée pour les marges.
 >
 > ![](box-model.png)
 

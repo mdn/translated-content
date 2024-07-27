@@ -57,7 +57,8 @@ La propriété {{CSSxRef("scroll-snap-stop")}} indique au navigateur qu'il devra
 
 Cela peut être utile pour s'assurer que les utilisateurs consultent chaque section sans louper du contenu par inadvertence. En revanche, cela peut rendre le défilement plus lent et ralentir considérablement un utilisateur qui chercherait une section donnée.
 
-> **Note :** La propriété `scroll-snap-stop` est actuellement mise en question dans la version _Candidate Recommendation_ de la spécification et pourrait être retirée.
+> [!NOTE]
+> La propriété `scroll-snap-stop` est actuellement mise en question dans la version _Candidate Recommendation_ de la spécification et pourrait être retirée.
 
 ## Compatibilité des navigateurs
 

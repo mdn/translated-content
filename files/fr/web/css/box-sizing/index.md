@@ -16,7 +16,8 @@ La propriété `box-sizing` peut être utilisée afin d'ajuster ce comportement 
 - `content-box` est la valeur par défaut et correspond au comportement par défaut décrit ci-avant. Si on définit un élément avec une largeur de 100 pixels, la boîte de contenu de cet élément mesurera 100 pixels de large et la largeur de la bordure et/ou du remplissage sera alors ajoutée pour constituer la largeur finalement affichée.
 - `border-box` indique au navigateur de prendre en compte la bordure et le remplissage dans la valeur définie pour la largeur et la hauteur. Autrement dit, si on définit un élément avec une largeur de 100 pixels, ces 100 pixels inclueront la bordure et le remplissage éventuellement ajoutés et c'est le contenu de la boîte qui sera compressé pour absorber cette largeur supplémentaire. Cela permet généralement de simplifier le dimensionnement des éléments.
 
-> **Note :** Il est souvent utile de définir `box-sizing` à `border-box` aux éléments de mise en page. Cela facilite grandement la gestion de la taille des éléments et élimine généralement un certain nombre d'écueils que vous pouvez rencontrer lors de la mise en page de votre contenu. D'autre part, lors de l'utilisation de la `position: relative` ou `position: absolute`, l'utilisation de `box-sizing: content-box` permet aux valeurs de positionnement d'être relatives au contenu, et indépendantes des changements de taille des bordures et de la taille de la marge interne, ce qui est parfois souhaitable.
+> [!NOTE]
+> Il est souvent utile de définir `box-sizing` à `border-box` aux éléments de mise en page. Cela facilite grandement la gestion de la taille des éléments et élimine généralement un certain nombre d'écueils que vous pouvez rencontrer lors de la mise en page de votre contenu. D'autre part, lors de l'utilisation de la `position: relative` ou `position: absolute`, l'utilisation de `box-sizing: content-box` permet aux valeurs de positionnement d'être relatives au contenu, et indépendantes des changements de taille des bordures et de la taille de la marge interne, ce qui est parfois souhaitable.
 
 ## Syntaxe
 
@@ -51,7 +52,8 @@ La propriété `box-sizing` peut être définie avec l'un des mots-clés suivant
 
 {{CSSSyntax}}
 
-> **Note :** La valeur `padding-box` a été dépréciée.
+> [!NOTE]
+> La valeur `padding-box` a été dépréciée.
 
 ## Exemples
 

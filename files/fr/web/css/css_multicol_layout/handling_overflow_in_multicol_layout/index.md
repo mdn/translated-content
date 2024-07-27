@@ -31,7 +31,8 @@ Dans l'exemple qui suit, on peut observer un tel dépassement. Le conteneur mult
 
 {{EmbedGHLiveSample("css-examples/multicol/overflow/overflow-inline.html", '100%', 800)}}
 
-> **Note :** On peut souhaiter qu'une future version de la spécification permette de préciser la direction selon laquelle les colonnes qui dépassent sont affichées et ainsi pouvoir dépasser dans la direction de bloc (et non uniquement selon l'axe en ligne).
+> [!NOTE]
+> On peut souhaiter qu'une future version de la spécification permette de préciser la direction selon laquelle les colonnes qui dépassent sont affichées et ainsi pouvoir dépasser dans la direction de bloc (et non uniquement selon l'axe en ligne).
 
 ## Utiliser les requêtes média verticales
 

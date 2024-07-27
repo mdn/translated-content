@@ -208,7 +208,8 @@ th {
 
 {{EmbedLiveSample("Exemples_avec_HSL", 300, 260)}}
 
-> **Note :** Il est possible d'omettre l'unité pour la valeur de la teinte (_hue_), l'unité par défaut utilisée sera alors les degrés (`deg`).
+> [!NOTE]
+> Il est possible d'omettre l'unité pour la valeur de la teinte (_hue_), l'unité par défaut utilisée sera alors les degrés (`deg`).
 
 ## Utiliser les couleurs
 
@@ -324,7 +325,8 @@ Prenons un exemple simple où l'utilisateur choisit une couleur qui est immédia
 
 {{EmbedLiveSample("Exemple_sélectionner_une_couleur", 525, 275)}}
 
-> **Note :** Sur macOS, pour indiquer qu'on a fini de choisir la couleur, il faut fermer la fenêtre du sélecteur de couleur.
+> [!NOTE]
+> Sur macOS, pour indiquer qu'on a fini de choisir la couleur, il faut fermer la fenêtre du sélecteur de couleur.
 
 #### HTML
 
@@ -405,7 +407,8 @@ La première étape consiste à choisir la couleur de base. C'est la couleur pri
 
 Une fois la couleur de base sélectionnée, vous pouvez utiliser certaines extensions de navigateur pour « prélever » des couleurs existantes sur le web. Le site web [ColorZilla](http://www.colorzilla.com/), par exemple, propose une extension ([Chrome](http://www.colorzilla.com/chrome) / [Firefox](http://www.colorzilla.com/firefox)) qui permet d'utiliser une pipette pour identifier les couleurs utilisées à un endroit d'une page web. Cette extension permet également de mesurer la couleur moyenne des pixels d'une zone donnée.
 
-> **Note :** On peut s'apercevoir qu'un site contient plusieurs couleurs très proches les unes des autres, utiliser une « moyenne » permet alors de récupérer le ton principal sous la forme d'une seule couleur.
+> [!NOTE]
+> On peut s'apercevoir qu'un site contient plusieurs couleurs très proches les unes des autres, utiliser une « moyenne » permet alors de récupérer le ton principal sous la forme d'une seule couleur.
 
 #### Agrémenter la palette
 
@@ -419,7 +422,8 @@ Voici quelques exemples (libres d'accès et gratuits au moment où nous écrivon
 
 Lorsque vous concevez votre palette de couleurs, gardez à l'esprit qu'en plus des couleurs générées par ces outils, il faudra vraisemblablement prévoir des couleurs neutres (telles que le blanc ou un ton de blanc, du noir ou un ton de noir et certaines nuances de gris).
 
-> **Note :** On utilise généralement le moins de couleurs possibles afin de garder une cohérence. En utilisant des couleurs afin d'accentuer certains éléments plutôt que d'en utiliser pour tous les éléments de la page, on rend le contenu plus facile à lire et à parcourir. De plus, les couleurs ont ainsi plus d'impact
+> [!NOTE]
+> On utilise généralement le moins de couleurs possibles afin de garder une cohérence. En utilisant des couleurs afin d'accentuer certains éléments plutôt que d'en utiliser pour tous les éléments de la page, on rend le contenu plus facile à lire et à parcourir. De plus, les couleurs ont ainsi plus d'impact
 
 ### Quelques ressources sur la théorie des couleurs
 
@@ -436,7 +440,8 @@ Une couleur peut poser différents problèmes d'accessibilité. Une couleur mal 
 
 Pour commencer, n'hésitez pas à vous renseigner sur le daltonisme et les différents types de daltonisme : confusion rouge/vert, confusion sur l'ensemble des couleurs.
 
-> **Note :** Une règle d'or consiste à ne jamais utiliser une couleur comme seule façon d'indiquer une information. Si, par exemple, vous souhaitez indiquer une réussite ou un échec en changeant uniquement la couleur d'un symbole (un drapeau par exemple), les utilisateurs souffrant de daltonismes et avec une confusion rouge/vert ne pourront pas lire cette information. Il est sans doute préférable d'utiliser du texte et de la couleur afin que tout le monde puisse être en mesure de comprendre ce qui a changé.
+> [!NOTE]
+> Une règle d'or consiste à ne jamais utiliser une couleur comme seule façon d'indiquer une information. Si, par exemple, vous souhaitez indiquer une réussite ou un échec en changeant uniquement la couleur d'un symbole (un drapeau par exemple), les utilisateurs souffrant de daltonismes et avec une confusion rouge/vert ne pourront pas lire cette information. Il est sans doute préférable d'utiliser du texte et de la couleur afin que tout le monde puisse être en mesure de comprendre ce qui a changé.
 
 Pour plus d'informations sur le daltonisme, vous pouvez consulter les articles suivants (en anglais, n'hésitez pas à éditer la page pour ajouter des ressources francophones) :
 
@@ -484,7 +489,8 @@ Par défaut, la propriété `color-adjust` vaut `economy` et indique au navigate
 
 `color-adjust` peut être paramétré avec la valeur `exact` afin d'indiquer au navigateur qu'un ou plusieurs éléments doivent être conservés tels quels afin que l'ensemble du document ne soit pas détérioré.
 
-> **Note :** Il n'est pas garanti que le navigateur respecte exactement la feuille de style utilisée avec `color-adjust: exact`. En effet, si le navigateur fournit une option à l'utilisateur pour ne pas imprimer les arrière-plans, ce réglage prendra le pas sur la feuille de style.
+> [!NOTE]
+> Il n'est pas garanti que le navigateur respecte exactement la feuille de style utilisée avec `color-adjust: exact`. En effet, si le navigateur fournit une option à l'utilisateur pour ne pas imprimer les arrière-plans, ce réglage prendra le pas sur la feuille de style.
 
 ## Voir aussi
 

@@ -143,7 +143,8 @@ La propriété `flex-grow` permet de gérer la façon dont l'espace est ajouté 
 
 La taille minimale de l'élément sera prise en compte lors du rétrécissement. Cela signifie que `flex-shrink` peut être moins cohérent que `flex-grow` selon les cas aux limites. Nous verrons plus en détails comment cet algorithme fonctionne dans l'article Contrôler les proportions des éléments le long de l'axe principal.
 
-> **Note :** Les valeurs de `flex-grow` et `flex-shrink` sont des proportions. Autrement dit, si tous les éléments ont `flex: 1 1 200px` et qu'on souhaite qu'un d'eux grandissent deux fois plus, on utiliserait `flex: 2 1 200px` pour cet élément. Mais avoir `flex: 10 1 200px` d'une part et `flex: 20 1 200px` d'autre part fonctionnerait exactement de la même façon.
+> [!NOTE]
+> Les valeurs de `flex-grow` et `flex-shrink` sont des proportions. Autrement dit, si tous les éléments ont `flex: 1 1 200px` et qu'on souhaite qu'un d'eux grandissent deux fois plus, on utiliserait `flex: 2 1 200px` pour cet élément. Mais avoir `flex: 10 1 200px` d'une part et `flex: 20 1 200px` d'autre part fonctionnerait exactement de la même façon.
 
 ### La propriété raccourcie `flex` et les valeurs synthétiques
 

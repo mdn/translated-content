@@ -15,7 +15,8 @@ Lorsqu'elle est appliquée aux éléments flottants, elle déplace [le bord de l
 
 Les éléments flottants qui sont dégagés sont les éléments flottants précédant l'élément ciblé, au sein de du [même contexte de formatage](/fr/docs/Web/Guide/CSS/Block_formatting_context).
 
-> **Note :** Si un élément ne contient que des éléments flottants, sa hauteur sera nulle. Si on souhaite redimensionner l'élément afin qu'il contienne tous les éléments flottants à l'intérieur, on peut faire flotter ce conteneur ou utiliser `clear` sur un pseudo-élément remplacé {{cssxref("::after")}}.
+> [!NOTE]
+> Si un élément ne contient que des éléments flottants, sa hauteur sera nulle. Si on souhaite redimensionner l'élément afin qu'il contienne tous les éléments flottants à l'intérieur, on peut faire flotter ce conteneur ou utiliser `clear` sur un pseudo-élément remplacé {{cssxref("::after")}}.
 >
 > ```css
 > #conteneur::after {

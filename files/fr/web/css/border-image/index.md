@@ -9,7 +9,8 @@ La propriété **`border-image`** dessine une image sur la bordure d'un élémen
 
 {{EmbedInteractiveExample("pages/css/border-image.html")}}
 
-> **Note :** Il est préférable d'indiquer un style de bordure distinct avec [`border-style`](/fr/docs/Web/CSS/border-style) dans le cas où l'image ne chargerait pas. Bien que la spécification ne le nécessite pas, certains navigateurs n'affichent pas l'image de bordure si [`border-style`](/fr/docs/Web/CSS/border-style) vaut `none` ou si [`border-width`](/fr/docs/Web/CSS/border-width) vaut `0`.
+> [!NOTE]
+> Il est préférable d'indiquer un style de bordure distinct avec [`border-style`](/fr/docs/Web/CSS/border-style) dans le cas où l'image ne chargerait pas. Bien que la spécification ne le nécessite pas, certains navigateurs n'affichent pas l'image de bordure si [`border-style`](/fr/docs/Web/CSS/border-style) vaut `none` ou si [`border-width`](/fr/docs/Web/CSS/border-width) vaut `0`.
 
 ## Propriétés détaillées correspondantes
 
@@ -45,7 +46,8 @@ border-image: unset;
 
 La propriété `border-image` peut être définie avec une à cinq valeurs parmi celles définies ci-après.
 
-> **Note :** Si la [valeur calculée](/fr/docs/Web/CSS/computed_value) de [`border-image-source`](/fr/docs/Web/CSS/border-image-source) vaut `none` ou si l'image ne peut pas être affichée, c'est le [`border-style`](/fr/docs/Web/CSS/border-style) correspondant qui sera affiché.
+> [!NOTE]
+> Si la [valeur calculée](/fr/docs/Web/CSS/computed_value) de [`border-image-source`](/fr/docs/Web/CSS/border-image-source) vaut `none` ou si l'image ne peut pas être affichée, c'est le [`border-style`](/fr/docs/Web/CSS/border-style) correspondant qui sera affiché.
 
 ### Valeurs
 

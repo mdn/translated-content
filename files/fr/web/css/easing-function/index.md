@@ -314,7 +314,8 @@ steps(2, start)
 steps(2)
 ```
 
-> **Note :** Si l'animation contient plusieurs arrêts, les marches décrites dans la fonction `steps()` s'appliqueront à chaque section. Ainsi, pour une animation avec trois segments et `steps(2)`, on aura au total 6 étapes, 2 pour chaque segment.
+> [!NOTE]
+> Si l'animation contient plusieurs arrêts, les marches décrites dans la fonction `steps()` s'appliqueront à chaque section. Ainsi, pour une animation avec trois segments et `steps(2)`, on aura au total 6 étapes, 2 pour chaque segment.
 
 Les fonctions de transitions qui suivent sont invalides :
 

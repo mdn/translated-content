@@ -9,7 +9,8 @@ La fonction CSS **`opacity()`** permet de modifier la transparence de l'image. L
 
 {{EmbedInteractiveExample("pages/css/function-opacity.html")}}
 
-> **Note :** Cette fonction est proche de la propriété [`opacity`](/fr/docs/Web/CSS/opacity) mais, selon le navigateur, les filtres CSS peuvent bénéficier de l'accélération matérielle pour de meilleures performances.
+> [!NOTE]
+> Cette fonction est proche de la propriété [`opacity`](/fr/docs/Web/CSS/opacity) mais, selon le navigateur, les filtres CSS peuvent bénéficier de l'accélération matérielle pour de meilleures performances.
 
 ## Syntaxe
 

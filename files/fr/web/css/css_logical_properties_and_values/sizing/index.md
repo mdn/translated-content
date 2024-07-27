@@ -54,4 +54,5 @@ La valeur `both` peut être utilisée dans un contexte physique ou dans un conte
 
 {{EmbedGHLiveSample("css-examples/logical/size-resize.html", "100%", 700)}}
 
-> **Attention :** À l'heure actuelle (décembre 2018), seul Firefox prend en charge les valeurs logiques pour `resize`.
+> [!WARNING]
+> À l'heure actuelle (décembre 2018), seul Firefox prend en charge les valeurs logiques pour `resize`.

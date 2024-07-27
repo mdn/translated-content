@@ -11,7 +11,8 @@ La fonction CSS **`drop-shadow()`** permet d'appliquer une ombre portée sur une
 
 En pratique, une ombre portée correspond à une version floutée et décalée du masque alpha de l'image, dessiné avec une couleur donnée et fusionné sous l'image.
 
-> **Note :** Cette fonction s'apparente à la propriété [`box-shadow`](/fr/docs/Web/CSS/box-shadow). La propriété `box-shadow` permet de créer une ombre rectangulaire sous **la boîte entière** d'un élément. En revanche, la fonction `drop-shadow()` permet de créer un ombre qui épouse la forme (le canal alpha) de **l'image même**.
+> [!NOTE]
+> Cette fonction s'apparente à la propriété [`box-shadow`](/fr/docs/Web/CSS/box-shadow). La propriété `box-shadow` permet de créer une ombre rectangulaire sous **la boîte entière** d'un élément. En revanche, la fonction `drop-shadow()` permet de créer un ombre qui épouse la forme (le canal alpha) de **l'image même**.
 
 ## Syntaxe
 

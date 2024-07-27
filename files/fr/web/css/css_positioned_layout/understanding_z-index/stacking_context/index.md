@@ -41,7 +41,8 @@ En bref&nbsp;:
 - Chaque contexte d'empilement est indépendant de ses voisins&nbsp;: seuls les éléments enfants sont pris en compte lorsque l'empilement est traité.
 - Chaque contexte d'empilement est autonome&nbsp;: Une fois que le contenu de l'élément est empilé, l'élément entier est pris en compte dans l'ordre d'empilement du contexte parent.
 
-> **Note :** La hiérarchie des contextes d'empilement est un sous-ensemble de la hiérarchie des éléments HTML, car seuls les éléments positionnés dans l'espace (avec la propriété `z-index` créent des contextes d'empilement. On peut dire que les éléments qui ne créent pas leur propre contexte d'empilement sont _assimilés_ par le contexte d'empilement parent.
+> [!NOTE]
+> La hiérarchie des contextes d'empilement est un sous-ensemble de la hiérarchie des éléments HTML, car seuls les éléments positionnés dans l'espace (avec la propriété `z-index` créent des contextes d'empilement. On peut dire que les éléments qui ne créent pas leur propre contexte d'empilement sont _assimilés_ par le contexte d'empilement parent.
 
 ## Un exemple
 
@@ -61,7 +62,7 @@ Dans cet exemple, tous les éléments positionnés créent leur propre contexte 
 
 Il est important de noter que les blocs DIV #4, DIV #5 et DIV #6 sont les enfants du bloc DIV #3, donc leur empilement est complètement résolu à l'intérieur de ce dernier. Une fois que l'empilement et le rendu à l'intérieur du bloc 3 sont définis, la totalité de l'élément DIV #3 est prise en compte pour l'empilement dans l'élément racine par rapport à ses DIV voisins.
 
-> **Note :**
+> [!NOTE]
 >
 > - _DIV #4_ est rendu dans le bloc _DIV #1_ car le `z-index` (5) de celui-ci est valide à l'intérieur du contexte d'empilement de l'élément racine, alors que le `z-index` (6) du bloc _DIV #4_ est valide à l'intérieur du contexte d'empilement du bloc _DIV #3_. Ainsi, DIV #4 se trouve sous _DIV #1_, parce que _DIV #4_ appartient à _DIV #3_, qui possède une valeur de `z-index` plus petite.
 > - Pour la même raison _DIV #2_ (dont le `z-index` est 2) est rendu sous _DIV#5_ (de `z-index` égal à 1) parce que _DIV #5_ appartient à _DIV #3_, qui possède une valeur de `z-index` plus grande.

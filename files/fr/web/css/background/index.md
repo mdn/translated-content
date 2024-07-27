@@ -24,7 +24,8 @@ Cette propriété permet de définir une ou plusieurs valeurs pour&nbsp;:
 
 Lorsqu'on utilise la propriété raccourcie `background`, les valeurs fournies sont appliquées et pour les valeurs absentes, la propriété réinitialisera les propriétés détaillées avec leurs valeurs initiales.
 
-> **Note :** La propriété [`background-color`](/fr/docs/Web/CSS/background-color) ne peut être définie que sur le dernier arrière-plan, car il n'y a qu'une seule couleur d'arrière-plan pour un élément.
+> [!NOTE]
+> La propriété [`background-color`](/fr/docs/Web/CSS/background-color) ne peut être définie que sur le dernier arrière-plan, car il n'y a qu'une seule couleur d'arrière-plan pour un élément.
 
 ## Syntaxe
 

@@ -5,7 +5,8 @@ slug: Web/CSS/box-pack
 
 {{CSSRef}}{{Non-standard_header}}
 
-> **Attention :** Cette propriété fait partie de la première version du standard pour les boîtes flexibles (_flexbox_) et sera remplacée dans une prochaine version.
+> [!WARNING]
+> Cette propriété fait partie de la première version du standard pour les boîtes flexibles (_flexbox_) et sera remplacée dans une prochaine version.
 
 Les propriétés CSS **`-moz-box-pack`** et **`-webkit-box-pack`** définissent la façon dont une boîte `-moz-box` ou `-webkit-box` groupe son contenu dans la direction de la disposition. L'effet de cette propriété n'est visible que s'il reste de l'espace supplémentaire dans la boîte. Pour plus de détails, se référer à la page [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) qui décrit les différentes propriétés des boîtes flexibles.
 

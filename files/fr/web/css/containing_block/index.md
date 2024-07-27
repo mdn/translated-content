@@ -16,7 +16,8 @@ Lorsqu'un agent utilisateur (un navigateur web par exemple) dispose un document,
 
 ![Diagram of the box model](box-model.png)
 
-> **Note :** Voir [cet article pour découvrir le modèle de boîtes](/fr/docs/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte) en CSS.
+> [!NOTE]
+> Voir [cet article pour découvrir le modèle de boîtes](/fr/docs/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte) en CSS.
 
 On pourrait penser que le bloc englobant d'un élément est toujours la zone de contenu de son élément parent. Toutefois, ce n'est pas toujours le cas. Voyons donc les facteurs qui déterminent ce bloc englobant.
 
@@ -40,7 +41,8 @@ Le bloc englobant est entièrement déterminé par la valeur de la propriété {
   3. Une propriété {{cssxref("filter")}} différente de `none` ou une propriété `will-change` différente of `filter` (ne fonctionne que pour Firefox).
   4. Une propriété {{cssxref("contain")}} qui vaut `paint`.
 
-> **Note :** Le bloc englobant contenant l'élément racine ({{HTMLElement("html")}}) est situé dans un rectangle appelé **bloc englobant initial**. Ce dernier a les dimensions de la zone d'affichage (_viewport_) ou de la page (pour les média paginés).
+> [!NOTE]
+> Le bloc englobant contenant l'élément racine ({{HTMLElement("html")}}) est situé dans un rectangle appelé **bloc englobant initial**. Ce dernier a les dimensions de la zone d'affichage (_viewport_) ou de la page (pour les média paginés).
 
 ## Calcul des pourcentages à partir du bloc englobant
 
