@@ -7,11 +7,13 @@ slug: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
 
 このスキルテストの目的は、[JavaScript オブジェクトの基本](/ja/docs/Learn/JavaScript/Objects/Basics)の理解度をテストすることです。
 
-> **メモ:** 以下のインタラクティブなエディターでソリューションを試すこともできますが、コードをダウンロードし、[CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/)や[Glitch](https://glitch.com/)のようなオンラインツールを使用してタスクを実行すると役立つ場合があります。
+> [!NOTE]
+> 以下のインタラクティブなエディターでソリューションを試すこともできますが、コードをダウンロードし、[CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/)や[Glitch](https://glitch.com/)のようなオンラインツールを使用してタスクを実行すると役立つ場合があります。
 >
 > 行き詰まった場合は、助けを求めてください — このページの下部にある評価またはさらなる支援セクションを参照してください。
 
-> **メモ:** 以下の例では、コードにエラーがある場合、ページの結果パネルに出力され、答えを見つけ出すのに役立ちます（ダウンロード可能なバージョンの場合は、ブラウザーの JavaScript コンソールに）
+> [!NOTE]
+> 以下の例では、コードにエラーがある場合、ページの結果パネルに出力され、答えを見つけ出すのに役立ちます（ダウンロード可能なバージョンの場合は、ブラウザーの JavaScript コンソールに）
 
 ## オブジェクトの基本 1
 
