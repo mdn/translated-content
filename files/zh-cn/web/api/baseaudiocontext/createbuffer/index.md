@@ -5,9 +5,9 @@ slug: Web/API/BaseAudioContext/createBuffer
 
 {{ APIRef("Web Audio API") }}
 
-音频环境{{ domxref("AudioContext") }} 接口的 `createBuffer() 方法用于新建一个空`白的 {{ domxref("AudioBuffer") }} 对象，以便用于填充数据，通过 {{ domxref("AudioBufferSourceNode") }} 播放。
+{{ domxref("AudioContext") }} 接口的 `createBuffer()` 方法用于新建一个空白的 {{ domxref("AudioBuffer") }} 对象，以便用于填充数据，并通过 {{ domxref("AudioBufferSourceNode") }} 播放。
 
-更多关于音频片段 (Audio Buffer) 的细节，请参考{{ domxref("AudioBuffer") }}页面。
+更多关于音频缓冲（audio buffer）的细节，请参见 {{domxref("AudioBuffer")}} 参考页。
 
 > **备注：** `createBuffer()` 曾被用于接收压缩后的音频数据，并返回被解码的音频，但是这项功能现在已经被移除，因为所有的解码工作应当在主线程中被完成，`createBuffer()` 阻塞了其他代码的执行。异步方法 `decodeAudioData()` 能够完成相同的工作——传入一个压缩过的音频（如 MP3 格式的文件），并直接返回一个可以通过 {{ domxref("AudioBufferSourceNode") }} 播放的 {{ domxref("AudioBuffer") }}。因此播放诸如 MP3 等格式的压缩音频时，你应当使用 `decodeAudioData()` 方法。
 
