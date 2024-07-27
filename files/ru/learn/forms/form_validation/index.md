@@ -34,7 +34,8 @@ slug: Learn/Forms/Form_validation
 - **Мы хотим защитить данные пользователей**. Принуждение пользователей вводить надёжные пароли облегчает защиту их аккаунтов.
 - **Мы хотим защитить себя**. Существует множество способов, позволяющих злоумышленникам с помощью незащищённых форм навредить приложению (смотрите [Безопасность вебсайтов](/ru/docs/Learn/Server-side/First_steps/Website_security)).
 
-  > **Предупреждение:** Никогда не доверяйте данным, передаваемым на сервер клиентской программой. Даже если ваша форма правильно валидируется и не допустит введение потенциально вредоносных данных на стороне клиента, злоумышленники по-прежнему могут изменить сетевой запрос.
+  > [!WARNING]
+  > Никогда не доверяйте данным, передаваемым на сервер клиентской программой. Даже если ваша форма правильно валидируется и не допустит введение потенциально вредоносных данных на стороне клиента, злоумышленники по-прежнему могут изменить сетевой запрос.
 
 ## Типы валидации на стороне клиента
 
@@ -65,7 +66,8 @@ slug: Learn/Forms/Form_validation
 - Элемент соответствует CSS-псевдоклассу {{cssxref(":invalid")}} или, в зависимости от ошибки, другим псевдоклассам (например, {{cssxref(":out-of-range")}}), которые позволяют применять определённые стили к элементам, не являющимся валидными.
 - Если пользователь пытается отправить данные, браузер заблокирует форму и выведет сообщение об ошибке.
 
-> **Примечание:** Существует ошибки, которые не позволяют отправлять форму, в частности {{domxref('validityState.badInput', 'badInput')}}, {{domxref('validityState.patternMismatch','patternMismatch')}}, {{domxref('validityState.rangeOverflow','rangeOverflow')}} или {{domxref('validityState.rangeUnderflow','rangeUnderflow')}}, {{domxref('validityState.stepMismatch','stepMismatch')}}, {{domxref('validityState.tooLong','tooLong')}} или {{domxref('validityState.tooShort','tooShort')}}, {{domxref('validityState.typeMismatch','typeMismatch')}}, {{domxref('validityState.valueMissing','valueMissing')}}, или {{domxref('validityState.customError','customError')}}.
+> [!NOTE]
+> Существует ошибки, которые не позволяют отправлять форму, в частности {{domxref('validityState.badInput', 'badInput')}}, {{domxref('validityState.patternMismatch','patternMismatch')}}, {{domxref('validityState.rangeOverflow','rangeOverflow')}} или {{domxref('validityState.rangeUnderflow','rangeUnderflow')}}, {{domxref('validityState.stepMismatch','stepMismatch')}}, {{domxref('validityState.tooLong','tooLong')}} или {{domxref('validityState.tooShort','tooShort')}}, {{domxref('validityState.typeMismatch','typeMismatch')}}, {{domxref('validityState.valueMissing','valueMissing')}}, или {{domxref('validityState.customError','customError')}}.
 
 ## Примеры встроенной валидации форм
 
@@ -131,13 +133,15 @@ input:valid {
 
 {{EmbedLiveSample("The_required_attribute", "100%", 80)}}
 
-> **Примечание:** Рабочий пример можно найти на GitHub по адресу [fruit-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html) (отдельно можно найти [исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-required.html).)
+> [!NOTE]
+> Рабочий пример можно найти на GitHub по адресу [fruit-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html) (отдельно можно найти [исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-required.html).)
 
 Попробуйте отправить форму без введения значения. Обратите внимание, что не валидное поле получает фокус, появляется сообщение об ошибке ("Заполните это поле") и блокируется отправка формы.
 
 Наличие атрибута `required` у любого элемента, который его поддерживает, означает, что элемент соответствует CSS-псевдоклассу {{cssxref(':required')}}, независимо от того, имеет он значение или нет. Если элемент {{HTMLElement("input")}} не содержит значение, он будет соответствовать псевдоклассу {{cssxref(':invalid')}}.
 
-> **Примечание:** Для повышения удобства взаимодействия указывайте пользователям, какие поля являются обязательными. К тому же, этого требует руководство по обеспечению [доступности](/ru/docs/Learn/Accessibility) WCAG. Требуйте обязательного ввода только тех данных, которые вам действительно нужны: например, так ли важно знать пол или должность пользователя?
+> [!NOTE]
+> Для повышения удобства взаимодействия указывайте пользователям, какие поля являются обязательными. К тому же, этого требует руководство по обеспечению [доступности](/ru/docs/Learn/Accessibility) WCAG. Требуйте обязательного ввода только тех данных, которые вам действительно нужны: например, так ли важно знать пол или должность пользователя?
 
 ### Валидация с помощью регулярного выражения
 
@@ -178,7 +182,8 @@ input:valid {
 
 {{EmbedLiveSample("Validating_against_a_regular_expression", "100%", 80)}}
 
-> **Примечание:** Рабочий пример можно найти на GitHub по адресу [fruit-pattern.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-pattern.html) ([исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-pattern.html).)
+> [!NOTE]
+> Рабочий пример можно найти на GitHub по адресу [fruit-pattern.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-pattern.html) ([исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-pattern.html).)
 
 В этом примере элемент {{HTMLElement("input")}} принимает одно из четырёх возможных значений: строку "banana", "Banana", "cherry", или "Cherry". Регулярные выражения чувствительны к регистру, но с помощью шаблона "Aa", вложенного в квадратные скобки, мы сделали поддержку написания слова как с большой, так и с маленькой буквы.
 
@@ -186,9 +191,11 @@ input:valid {
 
 Если не пустое значение элемента {{HTMLElement("input")}} не соответствует шаблону регулярного выражения, `input` будет соответствовать псевдоклассу {{cssxref(':invalid')}}.
 
-> **Примечание:** Некоторым типам элементов {{HTMLElement("input")}} для валидации с помощью регулярного выражения не требуется атрибут [`pattern`](/ru/docs/Web/HTML/Attributes/pattern). Например, поле с типом `email` валидирует значение по шаблону одного email-адреса или, если присутствует атрибут [`multiple`](/ru/docs/Web/HTML/Attributes/multiple), шаблону списка email-адресов, разделённых запятыми.
+> [!NOTE]
+> Некоторым типам элементов {{HTMLElement("input")}} для валидации с помощью регулярного выражения не требуется атрибут [`pattern`](/ru/docs/Web/HTML/Attributes/pattern). Например, поле с типом `email` валидирует значение по шаблону одного email-адреса или, если присутствует атрибут [`multiple`](/ru/docs/Web/HTML/Attributes/multiple), шаблону списка email-адресов, разделённых запятыми.
 
-> **Примечание:** Элемент {{HTMLElement("textarea")}} не поддерживает атрибут [`pattern`](/ru/docs/Web/HTML/Attributes/pattern).
+> [!NOTE]
+> Элемент {{HTMLElement("textarea")}} не поддерживает атрибут [`pattern`](/ru/docs/Web/HTML/Attributes/pattern).
 
 ### Ограничение длины вводимых значений
 
@@ -247,7 +254,8 @@ div {
 
 {{EmbedLiveSample("Constraining_the_values_of_your_entries", "100%", 100)}}
 
-> **Примечание:** Рабочий пример можно найти на GitHub по адресу [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) ([исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-length.html).)
+> [!NOTE]
+> Рабочий пример можно найти на GitHub по адресу [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) ([исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-length.html).)
 
 > **Примечание:** `<input type="number">` (и другие типы, такие как `range` и `date`) могут также принимать атрибут [`step`](/ru/docs/Web/HTML/Attributes/step), который задаёт шаг увеличения или уменьшения значения при использовании кнопок вверх и вниз. В примере выше мы явно не указывали атрибут `step`, поэтому он получает значение по умолчанию, равное `1`. Это значит, что дробные числа, такие как 3.2, будут не валидными.
 
@@ -341,7 +349,8 @@ input:focus:invalid {
 
 В статье [Атрибуты валидации](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation#validation-related_attributes) можно найти полный список атрибутов, которые можно использовать для ограничения допустимых значений ввода и типов полей `input`, которые их поддерживают.
 
-> **Примечание:** Рабочий пример можно найти на GitHub по адресу [full-example.html](https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html) ([исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/full-example.html).)
+> [!NOTE]
+> Рабочий пример можно найти на GitHub по адресу [full-example.html](https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html) ([исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/full-example.html).)
 
 ## Валидация форм с помощью JavaScript
 
@@ -455,7 +464,8 @@ email.addEventListener("input", function (event) {
 
 Мы хотим показывать сообщение об ошибке внутри элемента `<span>`. Данному элементу задан атрибут [`aria-live`](/ru/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), чтобы гарантировать, что наше кастомное сообщение об ошибке будет доступно всем, включая пользователей скринридеров.
 
-> **Примечание:** Ключевым моментом здесь является то, что добавление к форме атрибута `novalidate` отключает отображение встроенных сообщений об ошибке и позволяет вместо этого добавлять в DOM кастомные сообщения.
+> [!NOTE]
+> Ключевым моментом здесь является то, что добавление к форме атрибута `novalidate` отключает отображение встроенных сообщений об ошибке и позволяет вместо этого добавлять в DOM кастомные сообщения.
 
 Перейдём к базовому CSS, чтобы немного улучшить внешний вид формы и обеспечить визуальную обратную связь при введении не валидных данных:
 
@@ -579,11 +589,13 @@ function showError() {
 
 {{EmbedGHLiveSample("learning-area/html/forms/form-validation/detailed-custom-validation.html", '100%', 150)}}
 
-> **Примечание:** Рабочий пример можно найти на GitHub по адресу [detailed-custom-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/detailed-custom-validation.html) (отдельно можно найти [исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/detailed-custom-validation.html).)
+> [!NOTE]
+> Рабочий пример можно найти на GitHub по адресу [detailed-custom-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/detailed-custom-validation.html) (отдельно можно найти [исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/detailed-custom-validation.html).)
 
 Constraint Validation API явяется мощным инструментом валидации форм, позволяющим получить контроль над пользовательским интерфейсом, существенно превосходящий возможности HTML и CSS.
 
-> **Примечание:** Для получения дополнительной информации смотрите руководства [Constraint validation guide](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation) и [Constraint Validation API](/ru/docs/Web/API/Constraint_validation).
+> [!NOTE]
+> Для получения дополнительной информации смотрите руководства [Constraint validation guide](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation) и [Constraint Validation API](/ru/docs/Web/API/Constraint_validation).
 
 ### Проверка форм без встроенного API
 

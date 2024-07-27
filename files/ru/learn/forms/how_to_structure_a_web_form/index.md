@@ -51,7 +51,8 @@ slug: Learn/Forms/How_to_structure_a_web_form
 </form>
 ```
 
-> **Примечание:** вы можете найти этот пример в [fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) ([также посмотрите на результат](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)).
+> [!NOTE]
+> Вы можете найти этот пример в [fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) ([также посмотрите на результат](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)).
 
 Читая эту форму, экранный диктор произнесёт "Fruit juice size small" для первого элемента, "Fruit juice size medium" - для второго, "Fruit juice size large" - для третьего.
 
@@ -100,7 +101,8 @@ slug: Learn/Forms/How_to_structure_a_web_form
 </form>
 ```
 
-> **Примечание:** вы можете посмотреть этот пример тут [checkbox-label.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/checkbox-label.html) ([также можно посмотреть код вживую](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
+> [!NOTE]
+> Вы можете посмотреть этот пример тут [checkbox-label.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/checkbox-label.html) ([также можно посмотреть код вживую](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
 
 ### Несколько лейблов
 
@@ -142,9 +144,11 @@ slug: Learn/Forms/How_to_structure_a_web_form
 - Второй пример немного лучше — лейбл будет прочитан вместе с текстовым полем и будет звучать как "name star name edit text", однако тексты-подсказки всё ещё разделены. Это всё ещё немного сбивает с толку, но на этот раз ситуация немного лучше, потому что с текстовое поле связано с текстом-подсказкой.
 - Третий пример — лучший, так как весь лейбл будет связан с текстовым полем и озвучен целиком, а при чтении текст будет звучать как "name star edit text".
 
-> **Примечание:** В зависимости от программы для чтения с экрана результаты могут немного отличаться. В данной статье для тестирования использовался VoiceOver (NVDA ведёт себя аналогично). Также мы были бы рады, если бы вы поделились своим опытом.
+> [!NOTE]
+> В зависимости от программы для чтения с экрана результаты могут немного отличаться. В данной статье для тестирования использовался VoiceOver (NVDA ведёт себя аналогично). Также мы были бы рады, если бы вы поделились своим опытом.
 
-> **Примечание:** вы можете найти этот пример на GitHub [required-labels.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html) ([также можно посмотреть вживую](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). Запускайте пример, закомментировав остальные, иначе скриридеры не смогут правильно распознать контент, если у вас будет несколько лейблов и несколько текстовых полей с одинаковым ID!
+> [!NOTE]
+> Вы можете найти этот пример на GitHub [required-labels.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html) ([также можно посмотреть вживую](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). Запускайте пример, закомментировав остальные, иначе скриридеры не смогут правильно распознать контент, если у вас будет несколько лейблов и несколько текстовых полей с одинаковым ID!
 
 ## Часто используемые с формами HTML-структуры
 

@@ -23,7 +23,8 @@ HTML формы могут декларативно отправлять [HTTP](
 
 Объект {{domxref("XMLHttpRequest")}} (XHR) DOM может создавать HTTP-запросы, отправлять их, и получать их результат. Исторически, {{domxref("XMLHttpRequest")}} был разработан для получения и отправки [XML](/ru/docs/XML) в качестве формата обмена, который со временем был заменён на [JSON](/ru/docs/JSON). Но ни XML, ни JSON не вписываются в кодировку запроса данных формы. Данные формы (`application/x-www-form-urlencoded`) состоят из списка пар ключ/значение в кодировке URL. Для передачи бинарных данных, HTTP-запрос преобразуется в `multipart/form-data`.
 
-> **Примечание:** Сейчас [Fetch API](/ru/docs/Web/API/Fetch_API) часто используется вместо XHR — это современная, обновлённая версия XHR, которая работает в похожем стиле, но имеет несколько преимуществ. Большая часть XHR-кода, которую вы увидите в этой статье можно заменить на Fetch.
+> [!NOTE]
+> Сейчас [Fetch API](/ru/docs/Web/API/Fetch_API) часто используется вместо XHR — это современная, обновлённая версия XHR, которая работает в похожем стиле, но имеет несколько преимуществ. Большая часть XHR-кода, которую вы увидите в этой статье можно заменить на Fetch.
 
 Если вы управляете фронтендом (кодом, который выполняется в браузере) и бэкендом (кодом, который выполняется на стороне сервера), вы можете отправлять JSON/XML и обрабатывать их как хотите.
 
@@ -105,7 +106,8 @@ btn.addEventListener("click", function () {
 
 {{EmbedLiveSample("Создание_XMLHttpRequest_вручную", "100%", 50)}}
 
-> **Примечание:** This use of {{domxref("XMLHttpRequest")}} is subject to the {{glossary('same-origin policy')}} if you want to send data to a third party web site. For cross-origin requests, you'll need [CORS and HTTP access control](/ru/docs/HTTP/Access_control_CORS).
+> [!NOTE]
+> This use of {{domxref("XMLHttpRequest")}} is subject to the {{glossary('same-origin policy')}} if you want to send data to a third party web site. For cross-origin requests, you'll need [CORS and HTTP access control](/ru/docs/HTTP/Access_control_CORS).
 
 ### Using XMLHttpRequest and the FormData object
 

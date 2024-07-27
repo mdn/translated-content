@@ -41,7 +41,8 @@ window.addEventListener("keyup", handleKeyUp, true);
 
 where `handleKeyDown` and `handleKeyUp` are the functions implementing the controls about the `keydown` and `keyup` events.
 
-> **Примечание:** Have a look at the [Events reference](/ru/docs/Web/Reference/Events) and {{domxref("KeyboardEvent")}} guide to find out more about keyboard events.
+> [!NOTE]
+> Have a look at the [Events reference](/ru/docs/Web/Reference/Events) and {{domxref("KeyboardEvent")}} guide to find out more about keyboard events.
 
 #### Mouse
 
@@ -64,13 +65,15 @@ element.addEventListener("touchmove", handleMove, false);
 
 where `element` is the DOM element you want to register the touch events on.
 
-> **Примечание:** For further information about what you can do with touch events, please read our [touch events guide](/ru/docs/Web/Guide/Events/Touch_events).
+> [!NOTE]
+> For further information about what you can do with touch events, please read our [touch events guide](/ru/docs/Web/Guide/Events/Touch_events).
 
 #### Pointer Events
 
 When dealing with devices that incorporate multiple forms of input, like mouse, finger touch and pen input, it might be hard to develop a solution that works for all these different control mechanisms. [Pointer Events](http://www.w3.org/TR/pointerevents/) help developers more easily manage events across devices by normalizing the handling of each one. A pointer can be any point of contact on the screen made by a mouse cursor, pen, touch (including multi-touch), or other pointing input device. The events for handling generic pointer input look a lot like those for mouse: `pointerdown`, `pointermove`, `pointerup`, `pointerover`, `pointerout`, etc.
 
-> **Примечание:** Pointer Events are not widely supported yet, but a [pointer.js polyfill](https://github.com/mozilla/pointer.js) is available on Mozilla Github.
+> [!NOTE]
+> Pointer Events are not widely supported yet, but a [pointer.js polyfill](https://github.com/mozilla/pointer.js) is available on Mozilla Github.
 
 ### Implement controls
 
@@ -84,7 +87,8 @@ This is the code to request pointer lock on an `element`:
 element.requestPointerLock();
 ```
 
-> **Примечание:** For a full tutorial and reference, read our {{domxref("Pointer_Lock_API")}} page.
+> [!NOTE]
+> For a full tutorial and reference, read our {{domxref("Pointer_Lock_API")}} page.
 
 #### Screen Orientation
 
@@ -92,7 +96,8 @@ When screen orientation matters for your application, you can read the screen or
 
 Orientation data can be retrieved through the {{domxref("screen.orientation")}} attribute or through the [`orientation`](/ru/docs/Web/Guide/CSS/Media_queries#orientation) media feature. When `screen.orientation` changes, the {{domxref("screen.orientationchange")}} event is fired on the screen object. Locking the screen orientation is made possible by invoking the {{domxref("screen.lockOrientation")}} method, while the {{domxref("screen.unlockOrientation")}} method removes all the previous screen locks that have been set.
 
-> **Примечание:** More information about the Screen Orientation API can be found in [Managing screen orientation](/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
+> [!NOTE]
+> More information about the Screen Orientation API can be found in [Managing screen orientation](/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
 
 #### Fullscreen
 
@@ -111,7 +116,8 @@ if (elem.requestFullscreen) {
 }
 ```
 
-> **Примечание:** To find more out about adding fullscreen functionality your application, read our documentation about [using fullscreen mode](/ru/docs/Web/Guide/API/DOM/Using_full_screen_mode).
+> [!NOTE]
+> To find more out about adding fullscreen functionality your application, read our documentation about [using fullscreen mode](/ru/docs/Web/Guide/API/DOM/Using_full_screen_mode).
 
 #### Drag & Drop
 
@@ -132,7 +138,8 @@ in which we:
 - Set the [`draggable`](/ru/docs/Web/HTML/Global_attributes#draggable) attribute to true on the element that you wish to make draggable
 - Add a listener for the [`dragstart`](/ru/docs/Web/Events/dragstart) event and set the drag data within this listener
 
-> **Примечание:** You can find more information in the [MDN Drag & Drop documentation](/ru/docs/Web/Guide/HTML/Drag_and_drop).
+> [!NOTE]
+> You can find more information in the [MDN Drag & Drop documentation](/ru/docs/Web/Guide/HTML/Drag_and_drop).
 
 #### contentEditable
 
@@ -142,7 +149,8 @@ In open web apps any DOM element can be made directly editable using the [`conte
 <div contenteditable="true">This text can be edited by the user.</div>
 ```
 
-> **Примечание:** Compatibility information, examples and other resources can be found in the [Content Editable guide](/ru/docs/Web/Guide/HTML/Content_Editable).
+> [!NOTE]
+> Compatibility information, examples and other resources can be found in the [Content Editable guide](/ru/docs/Web/Guide/HTML/Content_Editable).
 
 ## Examples
 
