@@ -65,7 +65,8 @@ content mypackage location/ contentaccessible=yes
 
 Cette manipulation ne devrait pas être nécessaire la plupart du temps, mais elle existe toutefois pour les rares cas où elle reste indispensable. Notez qu'il n'est pas exclu que Firefox avertisse l'utilisateur de cette utilisation du paramètre `contentaccessible`, étant donné qu'il constitue un risque potentiel de sécurité.
 
-> **Note :** Firefox 2 ne gérant pas le paramètre contentaccessible (la ligne le contenant sera entièrement ignorée), si vous voulez que votre module reste compatible avec Firefox 2 et Firefox 3, ajoutez plutôt quelque chose comme ceci&nbsp;:
+> [!NOTE]
+> Firefox 2 ne gérant pas le paramètre contentaccessible (la ligne le contenant sera entièrement ignorée), si vous voulez que votre module reste compatible avec Firefox 2 et Firefox 3, ajoutez plutôt quelque chose comme ceci&nbsp;:
 >
 > ```
 > content mypackage location/

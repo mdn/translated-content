@@ -7,7 +7,8 @@ Cette page constitue un index des pages de référence couvrant l'ensemble des a
 
 Les attributs ARIA permettent de modifier les états et les propriétés d'un élément dans l'arbre d'accessibilité.
 
-> **Note :** ARIA modifie uniquement l'arbre d'accessibilité, modifiant ainsi la façon dont les outils d'assistance présentent le contenu aux personnes qui les utilisent. ARIA ne modifie en rien les fonctionnalités ou le comportement d'un élément. Lorsqu'on utilise des éléments HTML en dehors de leur sémantique et de leurs fonctionnalités prévues, il faudra utiliser JavaScript pour gérer le comportement, le focus et les états ARIA.
+> [!NOTE]
+> ARIA modifie uniquement l'arbre d'accessibilité, modifiant ainsi la façon dont les outils d'assistance présentent le contenu aux personnes qui les utilisent. ARIA ne modifie en rien les fonctionnalités ou le comportement d'un élément. Lorsqu'on utilise des éléments HTML en dehors de leur sémantique et de leurs fonctionnalités prévues, il faudra utiliser JavaScript pour gérer le comportement, le focus et les états ARIA.
 
 ## Types d'attribut ARIA
 

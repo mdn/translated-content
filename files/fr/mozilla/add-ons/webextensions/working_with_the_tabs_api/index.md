@@ -17,7 +17,8 @@ Dans cet article, nous allons regarder :
 
 Nous concluons ensuite en examinant d'autres fonctionnalités diverses offertes par l'API.
 
-> **Note :** Certaines fonctionnalités de l'API d'onglet sont couvert ailleurs. Voici les méthodes que vous pouvez utiliser pour manipuler le contenu de l'onglet avec des scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, et {{WebExtAPIRef("tabs.executeScript")}}). Si vous voulez plus d'informations sur ces méthodes, reportez-vous à l'article [scripts de contenu](/fr/Add-ons/WebExtensions/Content_scripts) et le guide pratique [modifier une page web](/fr/Add-ons/WebExtensions/Modify_a_web_page).
+> [!NOTE]
+> Certaines fonctionnalités de l'API d'onglet sont couvert ailleurs. Voici les méthodes que vous pouvez utiliser pour manipuler le contenu de l'onglet avec des scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, et {{WebExtAPIRef("tabs.executeScript")}}). Si vous voulez plus d'informations sur ces méthodes, reportez-vous à l'article [scripts de contenu](/fr/Add-ons/WebExtensions/Content_scripts) et le guide pratique [modifier une page web](/fr/Add-ons/WebExtensions/Modify_a_web_page).
 
 ## Permissions et l'API Tabs
 
@@ -76,7 +77,7 @@ Voici le [manifest.json](https://github.com/mdn/webextensions-examples/blob/mast
 }
 ```
 
-> **Note :**
+> [!NOTE]
 >
 > - **tabs.html est défini comme `default_popup` dans `browser_action`**. C'est affiché chaque fois que l'utilisateur clique sur l'icône de la barre d'outils de l'extension.
 > - **Les permissions incluent des onglets.** Ceci est nécessaire pour prendre en charge la fonction de liste d'onglets, car l'extension lit le titre des onglets à afficher dans la fenêtre contextuelle.
@@ -243,7 +244,7 @@ Après avoir recueilli des informations sur les onglets, vous voudrez probableme
 - Mettre à jour l'URL d'un onglet — accéderefficacement à une nouvelle page — ({{WebExtAPIRef("tabs.update")}}).
 - Rechargez la page de l'onglet ({{WebExtAPIRef("tabs.reload")}}).
 
-> **Note :**
+> [!NOTE]
 >
 > Ces fonctions nécessitent toutes l'ID (ou les ID) de l'onglet qu'elles manipulent :
 >

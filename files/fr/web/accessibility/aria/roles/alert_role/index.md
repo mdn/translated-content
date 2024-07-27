@@ -21,7 +21,8 @@ Le rôle `alert` doit uniquement être utilisé pour le contenu texte et pas pou
 
 Le rôle `alert` est à ajouter au nœud contenant le message d'alerte, **il ne doit pas** être ajouté à l'élément qui a déclenché l'alerte. Les alertes sont [des régions dynamiques assertives](/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Utiliser `role="alert"` sera équivalent à définir [`aria-live="assertive"`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-live) et [`aria-atomic="true"`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-atomic). Ces régions n'ayant pas besoin du focus, il n'a pas à être géré et aucune interaction utilisateur ne doit être requise.
 
-> **Attention :** Étant donné sa nature intrusive, le rôle `alert` doit être utilisé avec parcimonie et uniquement pour les situations où l'attention de la personne doit être sollicitée.
+> [!WARNING]
+> Étant donné sa nature intrusive, le rôle `alert` doit être utilisé avec parcimonie et uniquement pour les situations où l'attention de la personne doit être sollicitée.
 
 Le rôle [`alert`](https://www.w3.org/TR/wai-aria-1.1/#alert) est l'un des cinq rôles associés aux [régions dynamiques](/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Les modifications dynamiques moins urgentes doivent utiliser une méthode moins agressive, par exemple en incluant `aria-live="polite"` ou en utilisant un autre rôle de région dynamique comme [`status`](/fr/docs/Web/Accessibility/ARIA/Roles/status_role). Si la personne doit pouvoir fermer l'alerte, on utilisera plutôt le rôle [`alertdialog`](/fr/docs/Web/Accessibility/ARIA/Roles/alertdialog_role).
 

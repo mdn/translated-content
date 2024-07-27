@@ -55,7 +55,8 @@ function fetchVideo() {
 }
 ```
 
-> **Note :** Lorsque `abort()` est appelé, la réponse `fetch()` rejette avec une erreur `AbortError`.
+> [!NOTE]
+> Lorsque `abort()` est appelé, la réponse `fetch()` rejette avec une erreur `AbortError`.
 
 vous pouvez trouver un exemple de travail complet sur GitHub — voir [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) ([voir cas d'usage concret](https://mdn.github.io/dom-examples/abort-api/)).
 

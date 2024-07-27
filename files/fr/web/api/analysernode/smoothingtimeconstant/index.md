@@ -11,7 +11,8 @@ La valeur est `0.8` par défaut; elle doit être comprise entre `0` et `1`. Lors
 
 En termes techniques, on applique une [fenêtre de Blackman](http://webaudio.github.io/web-audio-api/#blackman-window) pour lisser les valeurs dans le temps. La valeur par défaut convient à la plupart des cas.
 
-> **Note :** Si la valeur n'est pas comprise entre 0 et 1, une exception `INDEX_SIZE_ERR` est levée.
+> [!NOTE]
+> Si la valeur n'est pas comprise entre 0 et 1, une exception `INDEX_SIZE_ERR` est levée.
 
 ## Syntaxe
 

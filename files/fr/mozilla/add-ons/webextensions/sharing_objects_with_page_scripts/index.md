@@ -5,9 +5,11 @@ slug: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
 
 {{AddonSidebar}}
 
-> **Note :** Les techniques décrites dans cette section sont uniquement disponibles dans Firefox, et seulement à partir de Firefox 49
+> [!NOTE]
+> Les techniques décrites dans cette section sont uniquement disponibles dans Firefox, et seulement à partir de Firefox 49
 
-> **Attention :** En tant que développeur d'extensions, vous devez considérer que les scripts s'exécutant sur des pages Web arbitraires sont des codes hostiles dont le but est de voler les informations personnelles de l'utilisateur, d'endommager leur ordinateur ou de les attaquer d'une autre manière.
+> [!WARNING]
+> En tant que développeur d'extensions, vous devez considérer que les scripts s'exécutant sur des pages Web arbitraires sont des codes hostiles dont le but est de voler les informations personnelles de l'utilisateur, d'endommager leur ordinateur ou de les attaquer d'une autre manière.
 >
 > L'isolation entre les scripts de contenu et les scripts chargés par les pages Web a pour but de rendre plus difficile la tâche des pages Web hostiles.
 >

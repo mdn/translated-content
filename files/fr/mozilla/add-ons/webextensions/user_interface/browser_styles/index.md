@@ -16,7 +16,8 @@ Si cela est inclus et défini sur `true`, votre document obtiendra une ou plusie
 
 Lorsque vous envisagez d'utiliser le `browser_style: true`, vous devez tester votre extension avec différents thèmes (intégrés ou AMO) pour vous assurer que l'interface d'extension se comporte comme vous l'attendez..
 
-> **Attention :** Quand `browser_style: true` est inclus dans le manifest de votre extension web, la sélection de texte dans l'interface utilisateur de votre extension est désactivée sauf dans les contrôles de saisie. Si cela pose un problème, incluez plutôt browser_style:false.
+> [!WARNING]
+> Quand `browser_style: true` est inclus dans le manifest de votre extension web, la sélection de texte dans l'interface utilisateur de votre extension est désactivée sauf dans les contrôles de saisie. Si cela pose un problème, incluez plutôt browser_style:false.
 
 > **Note :** **Google Chrome** et **Opera** utilisent `chrome_style` au lieu de `browser_style`, donc si vous souhaitez les prendre en charge, vous devez ajouter les deux clés.
 
@@ -98,7 +99,8 @@ La plupart des styles sont automatiquement appliqués, mais certains éléments 
   </tbody>
 </table>
 
-> **Note :** Voir le [bug Firefox 1465256](https://bugzil.la/1465256) pour la suppression de cette exigence inutile.
+> [!NOTE]
+> Voir le [bug Firefox 1465256](https://bugzil.la/1465256) pour la suppression de cette exigence inutile.
 
 ## Compatibilité des navigateurs
 
@@ -106,7 +108,8 @@ La plupart des styles sont automatiquement appliqués, mais certains éléments 
 
 ## Composants du panneau Firefox
 
-> **Attention :** Cette fonctionnalité est non standard et ne fonctionne que dans Firefox.
+> [!WARNING]
+> Cette fonctionnalité est non standard et ne fonctionne que dans Firefox.
 
 La feuille de style `chrome://browser/content/extension.css` contient également les styles des composants du panneau Firefox.
 

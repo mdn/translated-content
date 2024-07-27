@@ -9,7 +9,8 @@ La propriété **`maxDecibels`** de l'objet {{ domxref("AnalyserNode") }} est un
 
 Sa valeur par défaut est `-30`.
 
-> **Note :** Si une valeur supérieure à `AnalyserNode.maxDecibels` est indiquée, une erreur `INDEX_SIZE_ERR` est levée.
+> [!NOTE]
+> Si une valeur supérieure à `AnalyserNode.maxDecibels` est indiquée, une erreur `INDEX_SIZE_ERR` est levée.
 
 ## Syntaxe
 

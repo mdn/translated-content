@@ -13,7 +13,8 @@ Tout comme les scripts habituellement chargés par les pages web classiques, les
 
 Les scripts de contenu ne peuvent accéder qu'à [un sous-ensemble des API WebExtension](<#API WebExtensions>), mais ils peuvent [communiquer avec les scripts d'arrière-plan](#communication_background) grâce à un système de messages et ainsi accéder indirectement aux API WebExtension.
 
-> **Note :** que les scripts de contenu sont bloqués sur les domaines suivants :
+> [!NOTE]
+> Que les scripts de contenu sont bloqués sur les domaines suivants :
 >
 > - accounts-static.cdn.mozilla.net
 > - accounts.firefox.com
@@ -35,7 +36,8 @@ Les scripts de contenu ne peuvent accéder qu'à [un sous-ensemble des API WebEx
 >
 > Because these restrictions include addons.mozilla.org, users may attempt to use your extension immediately after installation—only to find that it doesn't work! You may want to add an appropriate warning, or an [onboarding page](/fr/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices) to move users away from addons.mozilla.org.
 
-> **Note :** Les valeurs ajoutées à la portée globale d'un script de contenu avec `var foo` ou `window.foo = "bar"` peuvent disparaître à cause du bogue [1408996](https://bugzilla.mozilla.org/show_bug.cgi?id=1408996).
+> [!NOTE]
+> Les valeurs ajoutées à la portée globale d'un script de contenu avec `var foo` ou `window.foo = "bar"` peuvent disparaître à cause du bogue [1408996](https://bugzilla.mozilla.org/show_bug.cgi?id=1408996).
 
 ## Charger des scripts de contenu
 
@@ -132,7 +134,8 @@ Si un script de contenu veut utiliser une bibliothèque JavaScript, alors la bib
 ]
 ```
 
-> **Note :** Firefox _fournis_ certaines API qui permettent aux scripts de contenu d'accéder aux objets JavaScript créés par les scripts de page et d'exposer leurs propres objets JavaScript aux scripts de page.
+> [!NOTE]
+> Firefox _fournis_ certaines API qui permettent aux scripts de contenu d'accéder aux objets JavaScript créés par les scripts de page et d'exposer leurs propres objets JavaScript aux scripts de page.
 >
 > Voir [Partage d'objets avec des scripts de page](/fr/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts) pour plus de détails.
 
@@ -402,7 +405,8 @@ window.addEventListener("message", function (event) {
 
 Pour un exemple complet et fonctionnel, [visitez la page de démo sur Github](https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html) et suivez les instructions.
 
-> **Attention :** Notez que vous devez être très prudent lorsque vous interagissez avec du contenu Web non fiable de cette manière. Les extensions sont du code privilégié qui peut avoir de puissantes capacités et les pages Web hostiles peuvent facilement les amener à accéder à ces capacités.
+> [!WARNING]
+> Notez que vous devez être très prudent lorsque vous interagissez avec du contenu Web non fiable de cette manière. Les extensions sont du code privilégié qui peut avoir de puissantes capacités et les pages Web hostiles peuvent facilement les amener à accéder à ces capacités.
 >
 > Pour donner un exemple trivial, supposons que le code du script de contenu qui reçoit le message ressemble à ceci&nbsp;:
 >
@@ -483,7 +487,8 @@ Dans le script de la page, window.y: undefined
 
 La même chose s'applique pour [`setTimeout()`](/fr/docs/Web/API/WindowTimers/setTimeout), [`setInterval()`](/fr/docs/Web/API/WindowTimers/setInterval), et [`Function()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function).
 
-> **Attention :** Lorsque vous exécutez du code dans le contexte de la page, l'avertissement précédent reste nécessaire : l'environnement de la page est contrôlé par des pages web potentiellement malveillantes qui peuvent redéfinir les objets avec lesquels vous interagissez&nbsp;:
+> [!WARNING]
+> Lorsque vous exécutez du code dans le contexte de la page, l'avertissement précédent reste nécessaire : l'environnement de la page est contrôlé par des pages web potentiellement malveillantes qui peuvent redéfinir les objets avec lesquels vous interagissez&nbsp;:
 >
 > ```js
 > // page.js redéfinit console.log

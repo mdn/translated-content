@@ -17,7 +17,8 @@ Le rôle `article` indique qu'une section d'une page pourrait tout à fait être
 
 Dans l'exemple qui précède, on a deux articles côte à côte sur une même page qui pourraient partager la même structure et être liés l'un à l'autre.
 
-> **Note :** Plutôt qu'un élément `<div>` avec un rôle `article`, on utilisera plutôt un élément [`<article>`](/fr/docs/Web/HTML/Element/article). **On privilégiera toujours les éléments natifs s'ils sont disponibles.**
+> [!NOTE]
+> Plutôt qu'un élément `<div>` avec un rôle `article`, on utilisera plutôt un élément [`<article>`](/fr/docs/Web/HTML/Element/article). **On privilégiera toujours les éléments natifs s'ils sont disponibles.**
 
 Pour l'exemple qui précède, mieux vaut ne pas utiliser `role="article"` mais privilégier l'élément `<article>`.
 

@@ -13,7 +13,8 @@ Avec les WebExtensions, les paramètres sont généralement stockés en utilisan
 - Écrire un script, inclus depuis le fichier HTML, qui alimente les paramètres depuis le stockage et met à jour les paramètres stockés quand l'utilisateur les change.
 - Renseigner le chemin du fichier HTML come clé de [`options_ui`](/fr/Add-ons/WebExtensions/manifest.json/options_ui) dans manifest.json. Ainsi, le document HTML sera affiché dans le gestionnaire d'extension, aux cotés des nom et description de l'extension.
 
-> **Note :** Vous pouvez aussi ouvrir cette page automatiquement en utilisant la fonction [`runtime.openOptionsPage()`](/fr/Add-ons/WebExtensions/API/runtime/openOptionsPage).
+> [!NOTE]
+> Vous pouvez aussi ouvrir cette page automatiquement en utilisant la fonction [`runtime.openOptionsPage()`](/fr/Add-ons/WebExtensions/API/runtime/openOptionsPage).
 
 ## Une WebExtension simple
 
@@ -146,11 +147,13 @@ Cela fait deux choses :
 
 Vous pouvez stocker les valeurs des paramètres dans le stockage local à la place si vous pensez que le stockage local est préférable pour votre extension.
 
-> **Note :** L'implémentation de `storage.sync` dans Firefox repose sur l'ID du module complémentaire. Si vous utilisez `storage.sync`, vous devez définir un ID pour votre extension à l'aide de la clé manifest.json des [`applications`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) comme indiqué dans l'exemple de manifeste ci-dessus.
+> [!NOTE]
+> L'implémentation de `storage.sync` dans Firefox repose sur l'ID du module complémentaire. Si vous utilisez `storage.sync`, vous devez définir un ID pour votre extension à l'aide de la clé manifest.json des [`applications`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) comme indiqué dans l'exemple de manifeste ci-dessus.
 
 Finalement, mettez à jour "borderify.js" pour lire la couleur de la bordure depuis le stockage :
 
-> **Attention :** A cause d'un bug dans [browser.storage.local.get()](/fr/Add-ons/WebExtensions/API/storage/StorageArea/get) dans Firefox pour les versions précédant la 52, le code qui suit ne fonctionnera pas. Pour le faire fonctionner pour les versions de Firefox avant la 52, les deux occurrences d'`item.color` dans `onGot()` doivent être changer pour `item[0].color`.
+> [!WARNING]
+> A cause d'un bug dans [browser.storage.local.get()](/fr/Add-ons/WebExtensions/API/storage/StorageArea/get) dans Firefox pour les versions précédant la 52, le code qui suit ne fonctionnera pas. Pour le faire fonctionner pour les versions de Firefox avant la 52, les deux occurrences d'`item.color` dans `onGot()` doivent être changer pour `item[0].color`.
 
 ```js
 function onError(error) {

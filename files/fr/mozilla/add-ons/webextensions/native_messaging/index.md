@@ -84,7 +84,8 @@ Par exemple, voici un manifeste pour l'application native "ping_pong" :
 
 Ceci autorise l'application dont l'ID est « ping_pong\@example.org » à se connecter, en passant le nom « ping_pong » comme paramètre à la fonction de l'API {{WebExtAPIRef("runtime")}} concernée. L'application, elle‐même se trouve dans le fichier « /path/to/native‐messaging/app/ping_pong.py ».
 
-> **Note :** Pour Windows dans l'exemple ci‐dessus, l'application native est un script Python. Il peut être compliqué d'amener Windows à faire fonctionner correctement des scripts Python, une méthode alternative est de fournir un fichier .bat, et de l'indiquer dans le manifest :
+> [!NOTE]
+> Pour Windows dans l'exemple ci‐dessus, l'application native est un script Python. Il peut être compliqué d'amener Windows à faire fonctionner correctement des scripts Python, une méthode alternative est de fournir un fichier .bat, et de l'indiquer dans le manifest :
 >
 > ```json
 > {
@@ -123,7 +124,8 @@ L'application native passe deux arguments lorsqu'elle démarre :
 - le chemin complet du manifest de l'application
 - (nouveau dans Firefox 55) l'ID (tel qu'indiqué dans la clé du manifest.json de [browser_specific_settings](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)) of the add-on that started it.
 
-> **Note :** Chrome gère différemment les arguments passés :
+> [!NOTE]
+> Chrome gère différemment les arguments passés :
 >
 > - Sous Linux et Mac, Chrome passe un argument, l'origine de l'extension qui l'a lancé sous la forme : `chrome-extension://[extensionID]`. Ceci permet à l'application d'identifier l'extension.
 > - Sous Windows, Chrome passe deux arguments : le premier est l'origine de l'extension, et le second est une poignée à la fenêtre native Chrome qui a lancé l'application.

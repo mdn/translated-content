@@ -1508,7 +1508,7 @@ Cela modifie également l'avertissement de la console : si la mise à niveau ré
 
 [Feature-Policy](/fr/docs/Web/HTTP/Feature_Policy) est un en-tête HTTP qui permet de choisir l'activation, la désactivation ou certaines des fonctionnalités et API dans le navigateur. Cet en-tête est similaire au CSP mais permet de contrôler des fonctionnalités plutôt que des traits liés à la sécurité.
 
-> **Note :**
+> [!NOTE]
 >
 > L'en-tête `Feature-Policy` a été renommé en `Permissions-Policy` dans la spécification. Cet article sera mis à jour afin de refléter ce changement.
 

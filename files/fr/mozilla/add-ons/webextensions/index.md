@@ -18,7 +18,8 @@ La technologie d'extensions Firefox est, en grande partie, compatible avec l'[AP
 - Flux de travail pour Firefox
   - : Découvrez comment créer et publier des extensions pour Firefox : plongez dans le fonctionnement des outils de développement, de la publication, de la distribution, et du portage avec [l'atelier des extensions Firefox](https://extensionworkshop.com/).
 
-> **Note :** Si vous avez des idées, des questions ou si vous avez besoin d'aide, vous pouvez nous contacter sur [le forum communautaire](https://discourse.mozilla.org/c/add-ons) ou sur [le salon Add-ons](https://matrix.to/#/!CuzZVoCbeoDHsxMCVJ:mozilla.org?via=mozilla.org&via=matrix.org&via=humanoids.be) sur [Matrix](https://wiki.mozilla.org/Matrix).
+> [!NOTE]
+> Si vous avez des idées, des questions ou si vous avez besoin d'aide, vous pouvez nous contacter sur [le forum communautaire](https://discourse.mozilla.org/c/add-ons) ou sur [le salon Add-ons](https://matrix.to/#/!CuzZVoCbeoDHsxMCVJ:mozilla.org?via=mozilla.org&via=matrix.org&via=humanoids.be) sur [Matrix](https://wiki.mozilla.org/Matrix).
 
 ## Premiers pas
 
