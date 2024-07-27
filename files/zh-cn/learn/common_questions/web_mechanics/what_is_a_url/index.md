@@ -14,8 +14,8 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        你首先需要知道<a href="/zh-CN/docs/Learn/How_the_Internet_works">
-          互联网是如何工作的</a
+        你首先需要知道<a href="/zh-CN/docs/Learn/How_the_Internet_works"
+          >互联网是如何工作的</a
         >、<a href="/zh-CN/docs/Learn/Common_questions/What_is_a_web_server"
           >什么是 Web 服务器</a
         >，以及
