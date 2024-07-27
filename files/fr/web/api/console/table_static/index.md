@@ -15,7 +15,8 @@ La fonction affiche `data` sous la forme d'un tableau. Chaque élément du table
 
 La première colonne dans le tableau sera intitulée `(index)`. Si `data` est un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)), alors les valeurs de cette colonne seront les indices du tableau JavaScript. Si `data` est un objet, ce seront les noms des propriétés qui seront affichés dans cette colonne `(index)`.
 
-> **Note :** Dans Firefox, `console.table()` limite l'affichage aux 1000 premières lignes.
+> [!NOTE]
+> Dans Firefox, `console.table()` limite l'affichage aux 1000 premières lignes.
 
 {{AvailableInWorkers}}
 

@@ -113,7 +113,8 @@ function positionPanner() {
 }
 ```
 
-> **Note :** In terms of working out what position values to apply to the listener and panner, to make the sound appropriate to what the visuals are doing on screen, there is quite a bit of math involved, but you will soon get used to it with a bit of experimentation.
+> [!NOTE]
+> In terms of working out what position values to apply to the listener and panner, to make the sound appropriate to what the visuals are doing on screen, there is quite a bit of math involved, but you will soon get used to it with a bit of experimentation.
 
 ## Spécifications
 

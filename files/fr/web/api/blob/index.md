@@ -11,9 +11,11 @@ Pour construire un `Blob` à partir d'objets qui ne sont pas des blobs ou à par
 
 Les API qui acceptent des objets `Blob` sont également listées sur la documentation de {{domxref("File")}}.
 
-> **Note :** La méthode `slice()` utilisait auparavant un deuxième argument qui indiquait le nombre d'octets à copier dans le nouveau blob. Si on utilisait un couple de valeur `début + longueur` qui dépassait la taille du blob source, le blob qui était renvoyé contenait les données à partir de l'indice de début et jusuq'à la fin du blob.
+> [!NOTE]
+> La méthode `slice()` utilisait auparavant un deuxième argument qui indiquait le nombre d'octets à copier dans le nouveau blob. Si on utilisait un couple de valeur `début + longueur` qui dépassait la taille du blob source, le blob qui était renvoyé contenait les données à partir de l'indice de début et jusuq'à la fin du blob.
 
-> **Note :** La méthode `slice()` doit être utilisée avec certains préfixes sur certaines versions de navigateurs : `blob.mozSlice()` pour Firefox 12 et antérieur, `blob.webkitSlice()` dans Safari. Un ancienne version de `slice()` sans préfixes avait une sémantique différente et est désormais obsolète. La prise en charge de `blob.mozSlice()` a été abandonnée avec Firefox 30.
+> [!NOTE]
+> La méthode `slice()` doit être utilisée avec certains préfixes sur certaines versions de navigateurs : `blob.mozSlice()` pour Firefox 12 et antérieur, `blob.webkitSlice()` dans Safari. Un ancienne version de `slice()` sans préfixes avait une sémantique différente et est désormais obsolète. La prise en charge de `blob.mozSlice()` a été abandonnée avec Firefox 30.
 
 ## Constructeur
 

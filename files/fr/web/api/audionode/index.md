@@ -15,7 +15,8 @@ Un `AudioNode` a des entrées et sorties, chacune avec un certain nombre de _can
 
 Plusieurs noeuds peuvent être reliés dans un _graphe de traitement_. Un tel graphe est contenu dans un {{domxref("AudioContext")}}. Chaque `AudioNode` fait partie d'exactement un contexte. Les noeuds de traitement héritent des propriétés et méthodse d'`AudioNode`, mais définissent aussi leurs propres fonctionnalités par dessus. Pour plus de détails, voir les pages individuelles liées sur la page d'accueil [Web Audio API](/fr/docs/Web/API/Web_Audio_API).
 
-> **Note :** Un `AudioNode` peut être la cible d'évènements, et implémente donc l'interface {{domxref("EventTarget")}}.
+> [!NOTE]
+> Un `AudioNode` peut être la cible d'évènements, et implémente donc l'interface {{domxref("EventTarget")}}.
 
 ## Propriétés
 

@@ -124,7 +124,8 @@ Le point central de rotation est toujours l'origine de la toile. Pour changer le
 
 Dans cet exemple, nous utiliserons la méthode `rotate ()` pour faire d'abord tourner un rectangle à partir de l'origine du canevas, puis du centre du rectangle lui-même à l'aide de `translate ()`.
 
-> **Note :** Les angles sont en radians, pas en degrés. Pour convertir en degrés, nous utilisons : `radians = (Math.PI/180)*degrees`.
+> [!NOTE]
+> Les angles sont en radians, pas en degrés. Pour convertir en degrés, nous utilisons : `radians = (Math.PI/180)*degrees`.
 
 ```js
 function draw() {

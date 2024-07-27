@@ -11,11 +11,14 @@ Une origine peut avoir plusieurs objets nommés `Cache`. Vous êtes responsable 
 
 Vous êtes également responsable de la purge périodique des entrées du cache. Chaque navigateur a une limite stricte sur la quantité de mémoire cache qu'une origine donnée peut utiliser. Les estimations de l'utilisation du quota de cache sont disponibles via le lien {{domxref("StorageEstimate")}} API. Le navigateur fait de son mieux pour gérer l'espace disque, mais il peut supprimer le stockage en cache d'une origine. Le navigateur supprime généralement toutes les données d'une origine ou aucune des données d'une origine. Veillez à nommer les caches et à n'utiliser les caches qu'à partir de la version du script sur laquelle ils peuvent fonctionner en toute sécurité. Pour plus d'informations, voir [Suppression des anciens caches](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers#Supprimer_les_anciens_caches).
 
-> **Note :** Les implémentations initiales du cache (dans Blink et Gecko) résolvent les engagements {{domxref("Cache.add()")}}, {{domxref("Cache.addAll()")}}, et {{domxref("Cache.put()")}} lorsque le corps de la réponse est entièrement écrit sur le stockage. Des versions plus récentes de la spécification précisent que le navigateur peut résoudre la promesse dès que l'entrée est enregistrée dans la base de données, même si le corps de réponse est encore en cours d'écriture.
+> [!NOTE]
+> Les implémentations initiales du cache (dans Blink et Gecko) résolvent les engagements {{domxref("Cache.add()")}}, {{domxref("Cache.addAll()")}}, et {{domxref("Cache.put()")}} lorsque le corps de la réponse est entièrement écrit sur le stockage. Des versions plus récentes de la spécification précisent que le navigateur peut résoudre la promesse dès que l'entrée est enregistrée dans la base de données, même si le corps de réponse est encore en cours d'écriture.
 
-> **Note :** L'algorithme des correspondances de clés est dépendant de la valeur de l'[en-tête VARY](https://www.fastly.com/blog/best-practices-using-vary-header). Ainsi, pour faire correspondre une nouvelle clé, il faut examiner à la fois la clé et la valeur des entrées dans le Cache.
+> [!NOTE]
+> L'algorithme des correspondances de clés est dépendant de la valeur de l'[en-tête VARY](https://www.fastly.com/blog/best-practices-using-vary-header). Ainsi, pour faire correspondre une nouvelle clé, il faut examiner à la fois la clé et la valeur des entrées dans le Cache.
 
-> **Note :** L'API de mise en cache n'honore pas les en-têtes de mise en cache HTTP.
+> [!NOTE]
+> L'API de mise en cache n'honore pas les en-têtes de mise en cache HTTP.
 
 ## Méthodes
 
@@ -44,7 +47,8 @@ Le code gère les exceptions déclenchées par l'opération de {{domxref("Global
 
 Cet extrait de code illustre également une bonne pratique pour versionner les caches utilisés par le service worker. Bien qu'il y ait seulement un cache dans cet exemple, la même approche peut être utilisée pour des caches multiples. Il associe un identifiant court avec un nom de cache versionné et spécifique. Le code supprime aussi tous les caches qui ne sont pas nommés dans `CURRENT_CACHES`.
 
-> **Note :** In Chrome, visit chrome://inspect/#service-workers and click on the "inspect" link below the registered service worker to view logging statements for the various actions the [service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) script is performing.
+> [!NOTE]
+> In Chrome, visit chrome://inspect/#service-workers and click on the "inspect" link below the registered service worker to view logging statements for the various actions the [service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) script is performing.
 
 ```js
 var CACHE_VERSION = 1;

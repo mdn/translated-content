@@ -11,7 +11,8 @@ La méthode **`console.warn()`** affiche un message d'avertissement dans la cons
 
 {{AvailableInWorkers}}
 
-> **Note :** Dans Chrome et Firefox, les avertissements sont indiqués par un triangle avec un point d'exclamation.
+> [!NOTE]
+> Dans Chrome et Firefox, les avertissements sont indiqués par un triangle avec un point d'exclamation.
 
 ## Syntaxe
 

@@ -61,7 +61,8 @@ function setView() {
 }
 ```
 
-> **Note :** Voir notre [positionsensorvrdevice demo](https://github.com/mdn/webvr-tests/blob/gh-pages/positionsensorvrdevice/index.html) pour le code complet.
+> [!NOTE]
+> Voir notre [positionsensorvrdevice demo](https://github.com/mdn/webvr-tests/blob/gh-pages/positionsensorvrdevice/index.html) pour le code complet.
 
 ## Spécifications
 

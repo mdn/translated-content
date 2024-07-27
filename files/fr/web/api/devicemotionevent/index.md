@@ -9,7 +9,8 @@ slug: Web/API/DeviceMotionEvent
 
 `DeviceMotionEvent` fournit aux développeurs Web des informations sur la vitesse des changements de position et d'orientation de l'appareil.
 
-> **Attention :** Actuellement, Firefox et Chrome ne gèrent pas les coordonnées de la même manière. Faites attention à cela lorsque vous les utilisez.
+> [!WARNING]
+> Actuellement, Firefox et Chrome ne gèrent pas les coordonnées de la même manière. Faites attention à cela lorsque vous les utilisez.
 
 ## Constructeur
 
