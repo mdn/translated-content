@@ -156,8 +156,6 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Globa
 
     > [!NOTE]
     >
-    > >
-    >
     > - Lorsque le document intégré possède la même origine que la page principale, il est **fortement déconseillé** d'employer `allow-scripts` et `allow-same-origin` simultanément, car cela permet de retirer l'attribut `sandbox` via un programme, c'est donc aussi sûr que de ne pas utiliser l'attribut `sandbox`.
     > - La mise en bac à sable (_sandboxing_) est d'une aide minime si un attaquant peut faire en sorte qu'un contenu potentiellement hostile soit affiché dans le navigateur de l'utilisateur en dehors d'un _iframe_ sous sandbox. Aussi, il est recommandé de diffuser le contenu depuis un domaine dédié séparé, afin de limiter les éventuels dommages.
     > - L'attribut `sandbox` n'est pas pris en charge par Internet Explorer 9 et les versions antérieures.

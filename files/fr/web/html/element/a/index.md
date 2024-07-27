@@ -25,8 +25,6 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
     > [!NOTE]
     >
-    > >
-    >
     > - `download` ne fonctionne que pour [les URLs de même origine](/fr/docs/Web/Security/Same-origin_policy), ou les schémas `blob:` et `data:`.
     > - Si l'en-tête `Content-Disposition` comporte des informations différentes de celles de l'attribut `download`, le comportement résultant peut différer :
     >

@@ -94,8 +94,6 @@ Les attributs suivants sont dépréciés et ne doivent pas être utilisés. Ils 
 
     > [!NOTE]
     >
-    > >
-    >
     > - Pour obtenir le même effet que les valeurs `left`, `center`, `right` ou `justify` :
     >
     >   - N'essayez pas de définir la propriété [`text-align`](/fr/docs/Web/CSS/text-align) sur un sélecteur donnant un élément `<col>`. Comme les éléments [`<td>`](/fr/docs/Web/HTML/Element/td) ne sont pas des descendants de l'élément `<col>`, ils n'en hériteront pas.
@@ -122,8 +120,6 @@ Les attributs suivants sont dépréciés et ne doivent pas être utilisés. Ils 
     - and `top`, placera le texte aussi près du haut de la cellule que possible.
 
     > [!NOTE]
-    >
-    > >
     >
     > - N'essayez pas de définir la propriété [`vertical-align`](/fr/docs/Web/CSS/vertical-align) sur un sélecteur donnant un élément `<col>`. Comme les éléments [`<td>`](/fr/docs/Web/HTML/Element/td) ne sont pas des descendants de l'élément `<col>`, ils n'en hériteront pas.
     > - Si le tableau n'utilise pas d'attribut [`colspan`](/fr/docs/Web/HTML/Element/td#attr-colspan), utilisez le sélecteur CSS `td:nth-child(an+b)` où a est le nombre total de colonnes du tableau et b la position ordinale de la colonne dans le tableau. Ce n'est qu'après ce sélecteur que la propriété `vertical-align` peut être utilisée.

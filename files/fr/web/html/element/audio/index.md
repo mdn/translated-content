@@ -61,8 +61,6 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
     > [!NOTE]
     >
-    > >
-    >
     > - L'attribut `autoplay` a la priorité sur `preload`. Si `autoplay` est spécifié, le navigateur devrait évidemment commencer à télécharger l'audio pour le lire.
     > - La spécification n'oblige pas le navigateur à suivre la valeur de cet attribut ; il s'agit d'une simple indication.
 

@@ -114,8 +114,6 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
     > [!NOTE]
     >
-    > >
-    >
     > - En HTML4, la valeur de cet attribut était une liste de descripteurs de médias ([des types ou des groupes de média](/fr/docs/Web/CSS/@media)) séparés par des espaces, par exemple `print` `screen` `aural` `braille`. HTML5 étend cet attribut à l'ensemble [des requêtes média](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries) qui forment un surensemble des valeurs autorisées en HTML 4.
     > - Les navigateurs qui ne prennent pas en charge [les requêtes média CSS3](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries) ne reconnaîtront pas nécessairement les liens adéquats et il faut donc toujours fournir des liens de recours.
 
@@ -139,8 +137,6 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
     - une liste de tailles, séparées par des espaces, dont chacune est de la forme `<largeur en pixels>x<hauteur en pixels>` ou `<largeur en pixels>X<hauteur en pixels>`. Pour chacune de ces dimensions, il doit exister une image correspondante dans la ressource.
 
     > [!NOTE]
-    >
-    > >
     >
     > - La plupart des format d'icône permettent simplement de stocker une seule icône, c'est pour cela que, la plupart du temps, [`sizes`](/fr/docs/Web/HTML/Global_attributes#sizes) ne contient qu'un seul élément.
     > - Safari sur iOS ne prend pas en charge cet attribut mais utilise des types de lien non-standards pour définir l'icône utilisé dans la barre du site ou pour le lancer : `apple-touch-icon` et `apple-touch-startup-icon`.
