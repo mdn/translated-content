@@ -11,13 +11,15 @@ Au fur et à mesure que les normes [CSS](/fr/docs/Web/CSS) évoluent, de nouvell
 
 Chaque page de référence des propriétés CSS suit la même structure. Cela permet au lectorat de trouver plus facilement les informations, surtout lorsqu'il est familiarisé avec le format standard des pages de référence.
 
-> **Note :** La documentation de nouvelles propriétés CSS doit d'abord avoir lieu en anglais avant de pouvoir traduire le nouveau contenu en français. L'organisation du contenu de MDN ne permet pas de créer du contenu en français si celui-ci n'existe pas déjà en anglais.
+> [!NOTE]
+> La documentation de nouvelles propriétés CSS doit d'abord avoir lieu en anglais avant de pouvoir traduire le nouveau contenu en français. L'organisation du contenu de MDN ne permet pas de créer du contenu en français si celui-ci n'existe pas déjà en anglais.
 
 ## Étape 1 - Déterminer la propriété à documenter
 
 Tout d'abord, vous devez déterminer la propriété CSS que vous souhaitez documenter. Vous avez peut-être remarqué qu'une page est manquante, ou vous avez peut-être vu des contenus manquants signalés dans notre [liste de problèmes du dépôt anglophone `mdn/content`](https://github.com/mdn/content/issues). Pour obtenir des détails sur la propriété CSS, vous devrez trouver une spécification pertinente (par exemple, une [spécification du W3C](https://www.w3.org/Style/CSS/) ou un rapport de bogue concernant une propriété non standard utilisée dans des moteurs de rendu tels que Gecko ou Blink).
 
-> **Note :** Lorsque vous utilisez une spécification du W3C, utilisez toujours la version **brouillon d'éditeur** (<i lang="en">Editor's draft</i>) (notez la bannière rouge sur le côté gauche) et non une version publiée (par exemple, <i lang="en">Working Draft</i>). La version en <i lang="en">Editor's Draft</i> est toujours plus proche de la version finale&nbsp;!
+> [!NOTE]
+> Lorsque vous utilisez une spécification du W3C, utilisez toujours la version **brouillon d'éditeur** (<i lang="en">Editor's draft</i>) (notez la bannière rouge sur le côté gauche) et non une version publiée (par exemple, <i lang="en">Working Draft</i>). La version en <i lang="en">Editor's Draft</i> est toujours plus proche de la version finale&nbsp;!
 
 Si l'implémentation et la spécification divergent, n'hésitez pas à le mentionner dans le bug d'implémentation. L'une des situations suivantes est possible&nbsp;:
 
@@ -37,6 +39,7 @@ Lorsque vous créez une page de référence, vous devez ajouter des exemples. Po
 
 ## Étape 4 - Faire réviser le contenu
 
-> **Note :** Si l'anglais n'est pas votre langue maternelle ou que vous ne l'utilisez pas couramment, n'hésitez pas à demander une relecture en français via le canal [#l10n-fr](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org) pour assurer la clarté de votre contribution.
+> [!NOTE]
+> Si l'anglais n'est pas votre langue maternelle ou que vous ne l'utilisez pas couramment, n'hésitez pas à demander une relecture en français via le canal [#l10n-fr](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org) pour assurer la clarté de votre contribution.
 
 Après avoir créé la page de la propriété, soumettez-la en tant que [<i lang="en">Pull Request</i>](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request). Un membre de notre équipe de révision sera automatiquement désigné pour réviser votre page.

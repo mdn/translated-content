@@ -122,7 +122,7 @@ Vous pouvez voir ce code en action par exemple dans notre [dernier téléchargem
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
 >

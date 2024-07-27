@@ -23,7 +23,7 @@ Un `ElementsPanel` représente l'inspecteur HTML/CSS dans la devtools du navigat
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
 

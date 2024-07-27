@@ -9,7 +9,8 @@ Utilisez l'API `historique` pour interargir avec l'historique du navigateur.
 
 Si vous recherchez des informations sur l'historique de session du navigateur, consultez l'[interface historique](/fr/docs/Web/API/History).
 
-> **Note :** Les téléchargements sont traités comme des objets [`HistoryItem`](/fr/Add-ons/WebExtensions/API/history/HistoryItem). Par conséquent, des événements tels que [`history.onVisited`](/fr/Add-ons/WebExtensions/API/history/onVisited) seront également déclenchés pour les téléchargements.
+> [!NOTE]
+> Les téléchargements sont traités comme des objets [`HistoryItem`](/fr/Add-ons/WebExtensions/API/history/HistoryItem). Par conséquent, des événements tels que [`history.onVisited`](/fr/Add-ons/WebExtensions/API/history/onVisited) seront également déclenchés pour les téléchargements.
 
 L'historique du navigateur est un enregistrement chronologique des pages que l'utilisateur a visitées. l'API d'historique vous permet de :
 
@@ -64,7 +65,7 @@ Pour utiliser cette API, une extension doit demander la [permission](/fr/Add-ons
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/extensions/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
 >

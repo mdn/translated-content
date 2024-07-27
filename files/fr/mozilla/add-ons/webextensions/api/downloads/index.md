@@ -78,7 +78,7 @@ Pour utiliser cette API, vous devez disposer de l' [API permission](/fr/Add-ons/
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
 >
