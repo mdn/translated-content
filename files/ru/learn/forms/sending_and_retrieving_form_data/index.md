@@ -144,7 +144,7 @@ say=Hi&to=Mom
 
 #### Просмотр HTTP-запросов
 
-HTTP-запросы никогда не отображаются пользователю (если вы хотите их видеть, вам нужно использовать такие инструменты, как [Firefox Network Monitor](/ru/docs/Tools/Network_Monitor) или [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)). Например, данные формы можно увидеть на вкладке Сеть (Network) в Chrome следующим образом (после отправки формы):
+HTTP-запросы никогда не отображаются пользователю (если вы хотите их видеть, вам нужно использовать такие инструменты, как [Firefox Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) или [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)). Например, данные формы можно увидеть на вкладке Сеть (Network) в Chrome следующим образом (после отправки формы):
 
 1. Нажмите F12
 2. Выберите Network

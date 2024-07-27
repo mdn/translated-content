@@ -52,7 +52,7 @@ slug: Learn/Forms/Form_validation
 - [`minlength`](/ru/docs/Web/HTML/Attributes/minlength) и [`maxlength`](/ru/docs/Web/HTML/Attributes/maxlength): Задаёт минимальную и максимальную длину текстовых данных (строк)
 - [`min`](/ru/docs/Web/HTML/Attributes/min) и [`max`](/ru/docs/Web/HTML/Attributes/max): Задаёт минимальное и максимальное значение для поля, расчитанного на числовой тип данных
 - `type`: Определяет тип данных, на который рассчитано поле: число, email-адрес или какой-то другой предустановленный тип
-- [`pattern`](/ru/docs/Web/HTML/Attributes/pattern): С помощью [регулярного выражения](/ru/docs/Web/JavaScript/Guide/Regular_Expressions), определяет шаблон, которому должны соответствовать вводимые данные.
+- [`pattern`](/ru/docs/Web/HTML/Attributes/pattern): С помощью [регулярного выражения](/ru/docs/Web/JavaScript/Guide/Regular_expressions), определяет шаблон, которому должны соответствовать вводимые данные.
 
 Если данные, введённые в поле формы, соответствуют правилам перечисленных выше атрибутов, они считаются валидными, если нет — не валидными
 
@@ -145,7 +145,7 @@ input:valid {
 
 ### Валидация с помощью регулярного выражения
 
-Ещё одной полезной функцией валидации является атрибут [`pattern`](/ru/docs/Web/HTML/Attributes/pattern), который в виде значения принимает [Регулярное выражение](/ru/docs/Web/JavaScript/Guide/Regular_Expressions). Регулярное выражение (regex) — это шаблон, который может быть использован для сопоставления набора символов в текстовой строке, поэтому они идеально подходят для валидации формы и используются для множества других целей в JavaScript.
+Ещё одной полезной функцией валидации является атрибут [`pattern`](/ru/docs/Web/HTML/Attributes/pattern), который в виде значения принимает [Регулярное выражение](/ru/docs/Web/JavaScript/Guide/Regular_expressions). Регулярное выражение (regex) — это шаблон, который может быть использован для сопоставления набора символов в текстовой строке, поэтому они идеально подходят для валидации формы и используются для множества других целей в JavaScript.
 
 Регулярные выражения достаточно сложны, и мы не будем подробно рассматривать эту тему в данной статье. Ниже приведены несколько примеров, чтобы дать вам представление о том, как они работают.
 
@@ -156,7 +156,7 @@ input:valid {
 - `a|b` — Соответствует символу `a` или `b`.
 - `abc|xyz` — Соответствует в точности `abc` или в точности `xyz` (но не `abcxyz` или `a` или `y`, и так далее).
 
-Есть еще много возможностей, которые мы не упомянули. Полный список со множеством примеров можно найти в документации по [Регулярным выражениям](/ru/docs/Web/JavaScript/Guide/Regular_Expressions)
+Есть еще много возможностей, которые мы не упомянули. Полный список со множеством примеров можно найти в документации по [Регулярным выражениям](/ru/docs/Web/JavaScript/Guide/Regular_expressions)
 
 Давайте рассмотрим пример. Добавьте в атрибут [`pattern`](/ru/docs/Web/HTML/Attributes/pattern) следующий шаблон:
 
@@ -347,7 +347,7 @@ input:focus:invalid {
 
 {{EmbedLiveSample("Full_example", "100%", 420)}}
 
-В статье [Атрибуты валидации](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation#validation-related_attributes) можно найти полный список атрибутов, которые можно использовать для ограничения допустимых значений ввода и типов полей `input`, которые их поддерживают.
+В статье [Атрибуты валидации](/ru/docs/Web/HTML/Constraint_validation#validation-related_attributes) можно найти полный список атрибутов, которые можно использовать для ограничения допустимых значений ввода и типов полей `input`, которые их поддерживают.
 
 > [!NOTE]
 > Рабочий пример можно найти на GitHub по адресу [full-example.html](https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html) ([исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/full-example.html).)
@@ -358,7 +358,7 @@ input:focus:invalid {
 
 ### Constraint Validation API
 
-Большинство браузеров поддерживают [Constraint Validation API](/ru/docs/Web/API/Constraint_validation), который состоит из набора свойств и методов, доступных на DOM-интерфейсах следующих элементов форм:
+Большинство браузеров поддерживают [Constraint Validation API](/ru/docs/Learn/Forms/Form_validation), который состоит из набора свойств и методов, доступных на DOM-интерфейсах следующих элементов форм:
 
 - [`HTMLButtonElement`](/ru/docs/Web/API/HTMLButtonElement) (представляет элемент [`<button>`](/ru/docs/Web/HTML/Element/button))
 - [`HTMLFieldSetElement`](/ru/docs/Web/API/HTMLFieldSetElement) (представляет элемент [`<fieldset>`](/ru/docs/Web/HTML/Element/fieldset))
@@ -399,7 +399,7 @@ input:focus:invalid {
 
 ![Пример сообщения об ошибке на англоязычной странице в браузере Firefox с настроенным французским языком](error-firefox-win7.png)
 
-Настройка таких сообщений об ошибках является одной из наиболее распространённых причин использования [Constraint Validation API](/ru/docs/Web/API/Constraint_validation). Давайте рассмотрим простой пример, как это делается.
+Настройка таких сообщений об ошибках является одной из наиболее распространённых причин использования [Constraint Validation API](/ru/docs/Learn/Forms/Form_validation). Давайте рассмотрим простой пример, как это делается.
 
 Начнём с простого HTML (Не стесняйтесь поместить это в пустой HTML-файл. Вы можете взять за основу свежую копию [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html), если хотите):
 
@@ -595,7 +595,7 @@ function showError() {
 Constraint Validation API явяется мощным инструментом валидации форм, позволяющим получить контроль над пользовательским интерфейсом, существенно превосходящий возможности HTML и CSS.
 
 > [!NOTE]
-> Для получения дополнительной информации смотрите руководства [Constraint validation guide](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation) и [Constraint Validation API](/ru/docs/Web/API/Constraint_validation).
+> Для получения дополнительной информации смотрите руководства [Constraint validation guide](/ru/docs/Web/HTML/Constraint_validation) и [Constraint Validation API](/ru/docs/Learn/Forms/Form_validation).
 
 ### Проверка форм без встроенного API
 
