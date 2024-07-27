@@ -2,15 +2,15 @@
 title: EventTarget
 slug: Web/API/EventTarget
 l10n:
-  sourceCommit: 049632675ccb83fe2e257c43071d366d3f80ee2b
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`EventTarget`** インターフェイスは、イベントを受け取ることや、リスナーを持つことができるオブジェクトが実装します。
 言い換えると、イベントのターゲットはすべて、このインターフェイスに関する 3 つのメソッドを実装しています。
 
-{{domxref("Element")}} とその子、{{domxref("Document")}}、{{domxref("Window")}} は、最も一般的なイベントターゲットですが、他のオブジェクトも、例えば {{domxref("XMLHttpRequest")}}、{{domxref("AudioNode")}}、{{domxref("AudioContext")}} などもイベントターゲットになります。
+{{domxref("Element")}} とその子、{{domxref("Document")}}、{{domxref("Window")}} は、最も一般的なイベントターゲットですが、他のオブジェクト、例えば {{domxref("IDBRequest")}}、{{domxref("AudioNode")}}、{{domxref("AudioContext")}} などもイベントターゲットになります。
 
 多くのイベントターゲット (要素、文書、ウィンドウを含む) は、[イベントハンドラー](/ja/docs/Web/Events/Event_handlers)を設定するのに `onイベント名` プロパティや属性を使用することもできます。
 

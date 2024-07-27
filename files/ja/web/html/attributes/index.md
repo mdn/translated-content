@@ -1,8 +1,9 @@
 ---
 title: HTML 属性リファレンス
+short-title: 属性
 slug: Web/HTML/Attributes
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: bf671984cfef2f7c6419571d834a146c5424ac10
 ---
 
 {{HTMLSidebar("Attributes")}}
@@ -750,21 +751,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>最小値の上限を示します。</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/ja/docs/Web/HTML/Element/html#manifest">manifest</a></code>
-        {{deprecated_inline}}
-      </td>
-      <td>{{ HTMLElement("html") }}</td>
-      <td>
-        この文書のキャッシュマニフェストの URL を指定します。
-        <div class="note">
-          <p>
-            <strong>メモ:</strong> この属性は廃止されており、代わりに <a href="/ja/docs/Web/Manifest"><code>&#x3C;link rel="manifest"></code></a> を使用してください。
-          </p>
-        </div>
-      </td>
     </tr>
     <tr>
       <td>

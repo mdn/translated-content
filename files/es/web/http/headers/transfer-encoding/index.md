@@ -3,6 +3,8 @@ title: Transfer-Encoding
 slug: Web/HTTP/Headers/Transfer-Encoding
 ---
 
+{{HTTPSidebar}}
+
 El encabezado Transfer-Encoding especifica la forma de codificación utilizada para transferir de forma segura el {{Glossary("Payload body", "cuerpo del payload")}} al usuario.
 
 > **Nota:** [HTTP/2](https://wikipedia.org/wiki/HTTP/2) no admite el mecanismo de codificación de transferencia fragmentada de HTTP 1.1, ya que proporciona sus propios mecanismos, más eficientes, para la transmisión de datos.

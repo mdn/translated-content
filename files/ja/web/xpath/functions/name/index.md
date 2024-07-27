@@ -3,7 +3,7 @@ title: name
 slug: Web/XPath/Functions/name
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `name` 関数は、与えられたノード集合内の最初のノードの QName を表す文字列を返します。
 

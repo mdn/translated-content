@@ -22,7 +22,7 @@ console.log(typeof null); // "object"
 - [JavaScript のデータ型](/ja/docs/Web/JavaScript/Data_structures)
 - JavaScript のグローバルオブジェクト: [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null)
 - [ヌルポインタ](https://ja.wikipedia.org/wiki/ヌルポインタ)（ウィキペディア）
-- **[用語集](/ja/docs/Glossary)**
+- **関連用語**
 
   - {{Glossary("JavaScript")}}
   - {{Glossary("string", "文字列")}}

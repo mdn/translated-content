@@ -15,4 +15,5 @@ slug: Glossary/Serializable_object
 
 所有的基本类型都是可以被序列化的。但并非所有的对象都是可序列化对象。可以被序列化的对象在[结构化克隆算法 > 支持的类型](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#支持的类型)中列出。
 
-> **备注：** 可序列化对象在 [Web IDL 文件](https://github.com/w3c/webref/tree/main/ed/idl)中使用属性 `[Serializable]` 标记。
+> [!NOTE]
+> 可序列化对象在 [Web IDL 文件](https://github.com/w3c/webref/tree/main/ed/idl)中使用属性 `[Serializable]` 标记。

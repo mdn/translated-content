@@ -2,7 +2,7 @@
 title: 跨浏览器测试介绍
 slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+  sourceCommit: f7856d2fbfadb97180aa651ba6a03820643ea6ec
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -80,7 +80,8 @@ l10n:
 
 你应该列出这些潜在的问题。
 
-> **备注：** 你可在 MDN（就是本网站）找到浏览器对不同技术特性的支持情况的信息。你还可以查阅 [caniuse.com](https://caniuse.com/)，以了解更多有用的详细信息。
+> [!NOTE]
+> 你可在 MDN（就是本网站）找到浏览器对不同技术特性的支持情况的信息。你还可以查阅 [caniuse.com](https://caniuse.com/)，以了解更多有用的详细信息。
 
 一旦你们就这些细节达成共识，你就可以开始开发网站了。
 
@@ -154,7 +155,6 @@ l10n:
 重申一遍，如果你发现浏览器的程序错误，你应该报告它们：
 
 - [Firefox Bugzilla](https://bugzilla.mozilla.org/)
-- [EdgeHTML issue tracker](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)
 - [Safari](https://bugs.webkit.org/)
 - [Chrome](https://bugs.chromium.org/p/chromium/issues/list)
 - [Opera](https://bugs.opera.com/wizard/desktop)

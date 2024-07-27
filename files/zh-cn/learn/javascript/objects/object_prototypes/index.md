@@ -74,7 +74,8 @@ myObject.toString(); // "[object Object]"
 
 JavaScript 中所有的对象都有一个内置属性，称为它的 **prototype**（原型）。它本身是一个对象，故原型对象也会有它自己的原型，逐渐构成了**原型链**。原型链终止于拥有 `null` 作为其原型的对象上。
 
-> **备注：** 指向对象原型的属性并**不**是 `prototype`。它的名字不是标准的，但实际上所有浏览器都使用 [`__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)。访问对象原型的标准方法是 {{jsxref("Object/getPrototypeOf", "Object.getPrototypeOf()")}}。
+> [!NOTE]
+> 指向对象原型的属性并**不**是 `prototype`。它的名字不是标准的，但实际上所有浏览器都使用 [`__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)。访问对象原型的标准方法是 {{jsxref("Object/getPrototypeOf", "Object.getPrototypeOf()")}}。
 
 当你试图访问一个对象的属性时：如果在对象本身中找不到该属性，就会在原型中搜索该属性。如果仍然找不到该属性，那么就搜索原型的原型，以此类推，直到找到该属性，或者到达链的末端，在这种情况下，返回 `undefined`。
 
@@ -215,7 +216,8 @@ console.log(Object.hasOwn(irma, "name")); // true
 console.log(Object.hasOwn(irma, "greet")); // false
 ```
 
-> **备注：** 你也可以在这里使用非静态方法 {{jsxref("Object/hasOwnProperty", "Object.hasOwnProperty()")}}，但我们推荐尽可能使用 `Object.hasOwn()` 方法。
+> [!NOTE]
+> 你也可以在这里使用非静态方法 {{jsxref("Object/hasOwnProperty", "Object.hasOwnProperty()")}}，但我们推荐尽可能使用 `Object.hasOwn()` 方法。
 
 ## 原型与继承
 

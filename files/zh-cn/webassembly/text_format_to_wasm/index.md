@@ -7,7 +7,8 @@ slug: WebAssembly/Text_format_to_Wasm
 
 WebAssembly 有一个基于 S-表达式的文本表示形式，设计为在文本编辑器，浏览器开发人员工具等中暴露的一个中间形式。本文解释了它是如何工作的一些内容以及如何使用可用的工具把文本格式文件转换为.wasm 汇编格式文件。
 
-> **备注：** 文本格式文件通常被保存为.wat 扩展名；有时.wast 也被使用，它是说文件包含了额外的测试命令（断言等）并且它们不需要转换到.wasm 中。
+> [!NOTE]
+> 文本格式文件通常被保存为.wat 扩展名；有时.wast 也被使用，它是说文件包含了额外的测试命令（断言等）并且它们不需要转换到.wasm 中。
 
 ## 初识文本格式
 
@@ -40,7 +41,8 @@ WebAssembly 函数 exported_func 是被导出供我们的环境（比如，使�
 
 该命令会把 wasm 输出到一个叫做 simple.wasm 的文件，该文件包含了.wasm 汇编代码。
 
-> **备注：** 你可以使用 wasm2wat 工具把汇编代码转换为文本表示；例如，wasm2wat simple.wasm -o text.wat。
+> [!NOTE]
+> 你可以使用 wasm2wat 工具把汇编代码转换为文本表示；例如，wasm2wat simple.wasm -o text.wat。
 
 ## 查看汇编输出
 

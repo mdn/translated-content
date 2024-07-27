@@ -9,7 +9,7 @@ slug: Glossary/FPS
 
 映画では一般に、フレームレートは 24fps です。フレームレートが低くても大丈夫なのは、被写体ぶれで錯覚が発生するためです。コンピューターの画面上を動く場合は被写体ぶれはありません (被写体ぶれのある画像[スプライト](/ja/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS)を動かしている場合を除いて)。
 
-1. [Glossary](/ja/docs/Glossary)
+1. 関連用語:
 
    1. {{glossary("FPS")}}
 

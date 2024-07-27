@@ -62,6 +62,8 @@
 | ---------------------- | ------------ | ------------------ | --------------------------------------------------------------------------- |
 | Accessibility concerns | 无障碍考虑   |                    | https://github.com/mdn/translated-content/issues/11456                      |
 | Active learning        | 动手练习     |                    | https://github.com/mdn/translated-content/pull/12696#discussion_r1164859935 |
+| Associated interfaces  | 相关接口     |                    |                                                                             |
+| Associated roles       | 相关角色     |                    |                                                                             |
 | Browser compatibility  | 浏览器兼容性 |                    |                                                                             |
 | Conclusion             | 总结         |                    | https://github.com/mdn/translated-content/pull/13329#discussion_r1199677894 |
 | Examples               | 示例         |                    |                                                                             |
