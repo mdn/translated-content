@@ -7,7 +7,8 @@ slug: Web/API/AudioListener/forwardY
 
 {{ domxref("AudioListener") }} 接口的 `forwardY` 只读属性是一个 {{domxref("AudioParam")}}，表示定义监听者指向的前进方向的方向向量的 y 值。
 
-> **备注：** 当与 {{domxref("PannerNode")}} 一起使用时，如果 {{domxref("PannerNode.panningModel", "panningModel")}} 设置为 equalpower，则参数为 _a-rate_；否则为 _k-rate_。
+> [!NOTE]
+> 当与 {{domxref("PannerNode")}} 一起使用时，如果 {{domxref("PannerNode.panningModel", "panningModel")}} 设置为 equalpower，则参数为 _a-rate_；否则为 _k-rate_。
 
 ## 值
 

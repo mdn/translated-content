@@ -98,7 +98,8 @@ Node 本身并不支持其他常见的 web 开发任务。如果需要进行一�
 
 虽然 Express 本身是极简风格的，但是开发人员通过创建各类兼容的中间件包解决了几乎所有的 web 开发问题。这些库可以实现 cookie、会话、用户登录、URL 参数、`POST` 数据、安全头等功能。可在 [Express 中间件](https://www.expressjs.com.cn/resources/middleware.html) 网页中找到由 Express 团队维护的中间件软件包列表（还有一张流行的第三方软件包列表）。
 
-> **备注：** 这种灵活性是一把双刃剑。虽然有一些中间件包可以解决几乎所有问题或需求，但是挑选合适的包有时也会成为一个挑战。这里构建应用没有“不二法门”，Internet 上许多示例也不是最优的，或者只展示了开发 web 应用所需工作的冰山一角。
+> [!NOTE]
+> 这种灵活性是一把双刃剑。虽然有一些中间件包可以解决几乎所有问题或需求，但是挑选合适的包有时也会成为一个挑战。这里构建应用没有“不二法门”，Internet 上许多示例也不是最优的，或者只展示了开发 web 应用所需工作的冰山一角。
 
 ## Node 和 Express 从哪儿来？
 
@@ -136,7 +137,8 @@ Express 是高度包容的。几乎可以将任何兼容的中间件以任意顺
 
 首先来看 Express 的 [Hello World](https://www.expressjs.com.cn/starter/hello-world.html) 的示例（下文将逐行讨论）。
 
-> **备注：** 如果你已经安装了 Node 和 Express（或者你已经按照 [下一节](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment) 中的说明安装好了），可以将此代码保存为 **app.js**，并通过在 bash 中这样运行它：
+> [!NOTE]
+> 如果你已经安装了 Node 和 Express（或者你已经按照 [下一节](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment) 中的说明安装好了），可以将此代码保存为 **app.js**，并通过在 bash 中这样运行它：
 >
 > ```bash
 > node ./app.js
@@ -174,7 +176,8 @@ const app = express();
 
 还可以创建自定义模块，并用相同的方法导入。
 
-> **备注：** 你一定会有自建模块的**需求**，因为这可以让代码管理更有序。单文件应用是很难理解和维护的。使用模块还有助于管理名字空间，因为在使用模块时只会导入模块中显式导出的变量。
+> [!NOTE]
+> 你一定会有自建模块的**需求**，因为这可以让代码管理更有序。单文件应用是很难理解和维护的。使用模块还有助于管理名字空间，因为在使用模块时只会导入模块中显式导出的变量。
 
 为了让对象暴露于模块之外，只需把它们设置为 `exports` 对象的附加属性即可。例如，下面的 **square.js** 模块就是一个导出了 `area()` 和 `perimeter()` 方法的文件：
 
@@ -195,7 +198,8 @@ const square = require("./square");
 console.log("边长为 4 的正方形面积为 " + square.area(4));
 ```
 
-> **备注：** 为模块指定绝对路径（或模块的名字，见最初的示例）也是可行的。
+> [!NOTE]
+> 为模块指定绝对路径（或模块的名字，见最初的示例）也是可行的。
 
 一次赋值不仅能构建一个单一的属性，还能构建一个完整的对象，可以像下面这样把对象赋值给 `module.exports`（也可以让 `exports` 对象直接作为一个构造器或另一个函数）：
 
@@ -210,7 +214,8 @@ module.exports = {
 };
 ```
 
-> **备注：** 在一个既定的模块内，可以把 `exports` 想象成 `module.exports` 的 [快捷方式](https://nodejs.cn/api/modules.html#modules_exports_shortcut)。`exports` 本质上就是在模块初始化前为 `module.exports` 的值进行初始化的一个变量。这个值是对一个对象（这里是空对象）的引用。这意味着 `exports` 与 `module.exports` 引用了同一个对象，也意味着如果为 `exports` 赋其他值不会影响到 `module.exports`。
+> [!NOTE]
+> 在一个既定的模块内，可以把 `exports` 想象成 `module.exports` 的 [快捷方式](https://nodejs.cn/api/modules.html#modules_exports_shortcut)。`exports` 本质上就是在模块初始化前为 `module.exports` 的值进行初始化的一个变量。这个值是对一个对象（这里是空对象）的引用。这意味着 `exports` 与 `module.exports` 引用了同一个对象，也意味着如果为 `exports` 赋其他值不会影响到 `module.exports`。
 
 更多信息请参阅 [模块](https://nodejs.cn/api/modules.html)（Node API 文档）。
 
@@ -236,9 +241,11 @@ console.log("第二");
 
 有多种方法可以让一个异步 API 通知当前应用它已执行完毕。最常用的是在调用异步 API 时注册一个回调函数，在 API 操作结束后将“回调”之。这也是上面的代码所使用的方法。
 
-> **备注：** 如果有一系列独立的异步操作必须按顺序执行，那么使用回调可能会非常“混乱”，因为这会导致多级嵌套回调。人们通常把这个问题叫做“回调地狱”。缓解这个问题有以下办法：良好的编码实践（参考 <http://callbackhell.com/>）、使用 [async](https://www.npmjs.com/package/async) 等模块、迁移至 ES6 并使用 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 等特性。
+> [!NOTE]
+> 如果有一系列独立的异步操作必须按顺序执行，那么使用回调可能会非常“混乱”，因为这会导致多级嵌套回调。人们通常把这个问题叫做“回调地狱”。缓解这个问题有以下办法：良好的编码实践（参考 <http://callbackhell.com/>）、使用 [async](https://www.npmjs.com/package/async) 等模块、迁移至 ES6 并使用 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 等特性。
 
-> **备注：** Node 和 Express 有一个一般性约定，即：使用“错误优先”回调。这个约定要求回调函数的第一个参数是错误值，而后续的参数包含成功数据。以下博文很好的解释了这个方法的有效性：[以 Node.js 之名：理解错误优先回调](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/)（fredkschott.com 英文文章）
+> [!NOTE]
+> Node 和 Express 有一个一般性约定，即：使用“错误优先”回调。这个约定要求回调函数的第一个参数是错误值，而后续的参数包含成功数据。以下博文很好的解释了这个方法的有效性：[以 Node.js 之名：理解错误优先回调](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/)（fredkschott.com 英文文章）
 
 ### 创建路由处理器（Route handler）
 
@@ -252,7 +259,8 @@ app.get("/", (req, res) => {
 
 回调函数将请求和响应对象作为参数。该函数直接调用响应的 `send()` 以返回字符串“Hello World!”。有 [许多其他响应方法](https://www.expressjs.com.cn/guide/routing.html#response-methods) 可以结束请求/响应周期，例如，通过调用 `res.json()` 来发送 JSON 响应、调用 `res.sendFile()` 来发送文件。
 
-> **备注：** 虽然回调函数的参数命名没有限制，但是当调用回调时，第一个参数将始终是请求，第二个参数将始终是响应。合理的命名它们，在回调体中使用的对象将更容易识别。
+> [!NOTE]
+> 虽然回调函数的参数命名没有限制，但是当调用回调时，第一个参数将始终是请求，第二个参数将始终是响应。合理的命名它们，在回调体中使用的对象将更容易识别。
 
 **Express 应用**对象还提供了为其他所有 HTTP 动词定义路由处理器的方法，大多数处理器的使用方式完全一致：
 
@@ -290,7 +298,8 @@ router.get("/about", (req, res) => {
 module.exports = router;
 ```
 
-> **备注：** 向 `Router` 对象添加路由就像向之前为 `app` 对象添加路由一样。
+> [!NOTE]
+> 向 `Router` 对象添加路由就像向之前为 `app` 对象添加路由一样。
 
 首先 `require()` 路由模块（**wiki.js**），然后在 Express 应用中调用 `use()` 把 `Router` 添加到中间件处理路径中，就可以在主应用中使用这个模块中的路由处理器了。路由路径有两条：`/wiki` 和 `/wiki/about/`。
 
@@ -306,7 +315,8 @@ app.use("/wiki", wiki);
 
 中间件在 Express 应用中得到了广泛使用，从提供错误处理静态文件、到压缩 HTTP 响应等等。路由函数可以通过向 HTTP 客户端返回一些响应来结束 HTTP“请求 - 响应”周期，而中间件函数*通常是*对请求或响应执行某些操作，然后调用“栈”里的下一个函数，可能是其他中间件或路由处理器。中间件的调用顺序由应用开发者决定。
 
-> **备注：** 中间件可以执行任何操作，运行任何代码，更改请求和响应对象，也可以**结束“请求 - 响应”周期**。如果它没有结束循环，则必须调用 `next()` 将控制传递给下一个中间件函数（否则请求将成为悬挂请求）。
+> [!NOTE]
+> 中间件可以执行任何操作，运行任何代码，更改请求和响应对象，也可以**结束“请求 - 响应”周期**。如果它没有结束循环，则必须调用 `next()` 将控制传递给下一个中间件函数（否则请求将成为悬挂请求）。
 
 大多数应用会使用**第三方**中间件来简化常见的 web 开发任务，比如 cookie、会话、用户身份验证、访问请求 `POST` 和 JSON 数据，日志记录等。参见 [Express 团队维护的中间件包列表](https://www.expressjs.com.cn/resources/middleware.html)（包含受欢迎的第三方包）。NPM 有提供其他 Express 包。
 
@@ -326,11 +336,12 @@ app.use(logger('dev'));
 ...
 ```
 
-> **备注：** 中间件和路由函数是按声明顺序调用的。一些中间件的引入顺序很重要（例如，如果会话中间件依赖于 cookie 中间件，则必须先添加 cookie 处理器）。绝大多数情况下要先调用中间件后设置路由，否则路由处理器将无法访问中间件的功能。
+> [!NOTE]
+> 中间件和路由函数是按声明顺序调用的。一些中间件的引入顺序很重要（例如，如果会话中间件依赖于 cookie 中间件，则必须先添加 cookie 处理器）。绝大多数情况下要先调用中间件后设置路由，否则路由处理器将无法访问中间件的功能。
 
 可以自己编写中间件函数，这是基本技能（仅仅为了创建错误处理代码也需要）。中间件函数和路由处理回调之间的**唯一**区别是：中间件函数有第三个参数 `next`，在中间件不会结束请求周期时应调用这个 `next`（它包含中间件函数调用后应调用的**下一个**函数）。
 
-可以使用 `app.use()` 或 `app.add()` 将一个中间件函数添加至处理链中，这取决于中间件是应用于所有响应的，还是应用于特定 HTTP 动词（`GET`，`POST`等）响应的。可以为两种情况指定相同的路由，但在调用 `app.use()` 时路由可以省略。
+你可以使用 `app.use()` 将中间件函数添加到*所有响应*的处理链中，或者是对特定的 HTTP 动词使用关联方法：`app.get()`、`app.post()` 等。虽然在调用 `app.use()` 时路由是可选的，但两种情况都是以相同方式去指定路由的。
 
 下面的示例显示了如何使用这两种方法添加中间件功能，以及是否使用路由。
 
@@ -356,7 +367,8 @@ app.get("/", a_middleware_function);
 app.listen(3000);
 ```
 
-> **备注：** 上面代码中单独声明了中间件函数，并把它设置为回调。之前是把路由处理函数在使用时声明为回调。在 JavaScript 中，两种方法都可行。
+> [!NOTE]
+> 上面代码中单独声明了中间件函数，并把它设置为回调。之前是把路由处理函数在使用时声明为回调。在 JavaScript 中，两种方法都可行。
 
 请参阅 Express 文档中关于 [使用](https://www.expressjs.com.cn/guide/using-middleware.html) 和 [开发](https://www.expressjs.com.cn/guide/writing-middleware.html) Express 中间件的内容。
 
@@ -415,9 +427,11 @@ app.use((err, req, res, next) => {
 
 Express 内建了错误处理机制，可以协助处理 app 中没有被处理的错误。默认的错误处理中间件函数在中间件函数栈的末尾。如果一个错误传递给 `next()` 而没有用错误处理器来处理它，内建处理机制将启动，栈跟踪的错误将回写给客户端。
 
-> **备注：** 生产环境中不保留栈跟踪轨迹。可将环境变量 `NODE_ENV` 设置为 `'production'` 来运行所需的生产环境。
+> [!NOTE]
+> 生产环境中不保留栈跟踪轨迹。可将环境变量 `NODE_ENV` 设置为 `'production'` 来运行所需的生产环境。
 
-> **备注：** HTTP 404 和其他“错误”状态码不作为错误处理。可使用中间件来自行处理这些状态。更多信息请参阅 Express 文档 [FAQ](https://www.expressjs.com.cn/starter/faq.html#如何处理-404-响应)。
+> [!NOTE]
+> HTTP 404 和其他“错误”状态码不作为错误处理。可使用中间件来自行处理这些状态。更多信息请参阅 Express 文档 [FAQ](https://www.expressjs.com.cn/starter/faq.html#如何处理-404-响应)。
 
 更多信息请参阅 Express 文档 [错误处理](https://www.expressjs.com.cn/guide/error-handling.html)。
 

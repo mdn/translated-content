@@ -88,7 +88,7 @@ const testDivs = Array.prototype.filter.call(
       const testTarget = parentDOM.getElementsByClassName("test")[0]; // 求める最初の要素
       console.log(testTarget); // <p class="test">hello world 2</p>
     </script>
-</body>
+  </body>
 </html>
 ```
 

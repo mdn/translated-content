@@ -92,8 +92,8 @@ var args = [...arguments];
   - : 指向参数所属的当前执行的函数。
 - [`arguments.length`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/length)
   - : 传递给函数的参数数量。
-- [`arguments[@@iterator]`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
-  - : 返回一个新的 {{jsxref("Array/@@iterator", "Array 迭代器", "", 0)}}对象，该对象包含参数中每个索引的值。
+- [`arguments[Symbol.iterator]`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/Symbol.iterator)
+  - : 返回一个新的[数组迭代器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)对象，该对象包含参数中每个索引的值。
 
 ## 示例
 

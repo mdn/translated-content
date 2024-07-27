@@ -22,7 +22,7 @@ slug: Glossary/Method
 
 <!---->
 
-- [MDN Web Docs 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("function", "関数")}}
   - {{Glossary("object","オブジェクト")}}
