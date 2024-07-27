@@ -298,7 +298,8 @@ th {
 
 {{EmbedLiveSample("Result")}}
 
-> **メモ:** GitHub では [simple-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/simple-table.html) としても見つけることができます ([こちらも参照してください](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html))。
+> [!NOTE]
+> GitHub では [simple-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/simple-table.html) としても見つけることができます ([こちらも参照してください](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html))。
 
 ## \<th> 要素による見出しの追加
 
@@ -369,13 +370,15 @@ th {
 2. 表の見出しを視覚的にも意味的にも見出しとして認識させるには、**[`<th>`](/ja/docs/Web/HTML/Element/th)** 要素を使用します ('th' は 'table header' を表します)。これは `<td>` とまったく同じように機能しますが、通常のセルではなく見出しを表す点が異なります。HTML を開き、表の見出しを囲む全ての `<td>` 要素を `<th>` 要素に変更してください。
 3. HTML を保存してブラウザーにロードすると、見出しが見出しらしく見えます。
 
-> **メモ:** 完成した例は GitHub の [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table-fixed.html) にあります ([こちらもご覧ください](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html))。
+> [!NOTE]
+> 完成した例は GitHub の [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table-fixed.html) にあります ([こちらもご覧ください](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html))。
 
 ### なぜ見出しは便利なのか
 
 私たちはすでにこの質問に部分的に答えました。見出しがはっきり目立つと、探しているデータを見つけやすく、デザインは一般的に見栄えがよくなります。
 
-> **メモ:** 表の見出しには既定のスタイルがいくつかあります。表に独自のスタイルを追加しなくても、目立つように太字で中央に配置されています。
+> [!NOTE]
+> 表の見出しには既定のスタイルがいくつかあります。表に独自のスタイルを追加しなくても、目立つように太字で中央に配置されています。
 
 表見出しには、`scope` 属性 (次の記事で学ぶことになります) とともに、追加の利点もあります。それらを使用すると、各見出しを同じ行または列のすべてのデータに関連付けることで、表をよりアクセスしやすくすることができます。これにより、スクリーンリーダーはデータの行全体または列全体を一度に読み取ることができます。これは非常に便利です。
 
@@ -437,7 +440,8 @@ th {
 3. 最後に、`rowspan` を使用して "Horse" と "Chicken" を 2 行にまたがるようにします。
 4. 改善を確認するには、ブラウザーでコードを保存して開きます。
 
-> **メモ:** 完成した例は GitHub の [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/animals-table-fixed.html) にあります ([こちらもご覧ください](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html))。
+> [!NOTE]
+> 完成した例は GitHub の [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/animals-table-fixed.html) にあります ([こちらもご覧ください](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html))。
 
 ## 列への共通のスタイル設定
 
@@ -446,7 +450,8 @@ th {
 先に進む前に、この記事で最後に紹介する機能があります。
 HTML では、データの列全体のスタイル情報を 1 か所にまとめて定義することができます — **[`<col>`](/ja/docs/Web/HTML/Element/col)** 要素と **[`<colgroup>`](/ja/docs/Web/HTML/Element/colgroup)** 要素です。列にスタイルを指定するのは少々面倒で非効率的な場合があるためです。列内の `<td>` や `<th>` ごとにスタイル情報を指定するか、{{cssxref(":nth-child")}} などの複雑なセレクターを使用する必要があります。
 
-> **メモ:** このような列ののスタイル設定は、[いくつかのプロパティに制限されます](https://www.w3.org/TR/CSS22/tables.html#columns)。[`border`](/ja/docs/Web/CSS/border)、[`background`](/ja/docs/Web/CSS/background)、[`width`](/ja/docs/Web/CSS/width)、[`visibility`](/ja/docs/Web/CSS/visibility) です。他のプロパティを設定するには、列内のすべての `<td>` や `<th>` にスタイルを設定するか、{{cssxref(":nth-child")}} のような複雑なセレクターを使用する必要があります。
+> [!NOTE]
+> このような列ののスタイル設定は、[いくつかのプロパティに制限されます](https://www.w3.org/TR/CSS22/tables.html#columns)。[`border`](/ja/docs/Web/CSS/border)、[`background`](/ja/docs/Web/CSS/background)、[`width`](/ja/docs/Web/CSS/width)、[`visibility`](/ja/docs/Web/CSS/visibility) です。他のプロパティを設定するには、列内のすべての `<td>` や `<th>` にスタイルを設定するか、{{cssxref(":nth-child")}} のような複雑なセレクターを使用する必要があります。
 
 次の簡単な例を見てください。
 
@@ -521,7 +526,8 @@ th {
 
 `colspan` や `rowspan` と同じように、`span` はスタイルを適用したい列の数を指定する単位なしの数値を取ります。
 
-> **メモ:** 表、列、およびその列の表セルがすべて別個のスタイル設定である場合、セルに適用されたスタイルは表の上に描画される列スタイルの上に描画されます。これは、表のレイヤーが最初にレンダリングされ、次に列のレイヤーがレンダリングされ、[セルのレイヤーが他のすべての表のレイヤーの最上位にレンダリングされる](/ja/docs/Web/HTML/Element/table#table_layers_and_transparency)ためです。
+> [!NOTE]
+> 表、列、およびその列の表セルがすべて別個のスタイル設定である場合、セルに適用されたスタイルは表の上に描画される列スタイルの上に描画されます。これは、表のレイヤーが最初にレンダリングされ、次に列のレイヤーがレンダリングされ、[セルのレイヤーが他のすべての表のレイヤーの最上位にレンダリングされる](/ja/docs/Web/HTML/Element/table#table_layers_and_transparency)ためです。
 
 ### アクティブラーニング: colgroup と col
 
