@@ -32,7 +32,9 @@ slug: Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs1.html", '100%', 400)}}
 
-> **标注：** [下载此任务的初始代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/oojs/oojs1-download.html)，以便在你自己的编辑器或在线编辑器中尝试。
+> [!CALLOUT]
+>
+> [下载此任务的初始代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/oojs/oojs1-download.html)，以便在你自己的编辑器或在线编辑器中尝试。
 
 ## 面向对象的 Javascript 2
 
@@ -44,7 +46,9 @@ slug: Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs2.html", '100%', 400)}}
 
-> **标注：** [下载此任务的初始代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/oojs/oojs2-download.html)，以便在你自己的编辑器或在线编辑器中尝试。
+> [!CALLOUT]
+>
+> [下载此任务的初始代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/oojs/oojs2-download.html)，以便在你自己的编辑器或在线编辑器中尝试。
 
 ## 评估或进一步帮助
 
