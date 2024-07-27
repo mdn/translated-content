@@ -18,7 +18,8 @@ slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 
 `color` 可以是表示 CSS 颜色值的字符串，渐变对象或者图案对象。我们迟些再回头探讨渐变和图案对象。默认情况下，线条和填充颜色都是黑色（CSS 颜色值 `#000000`）。
 
-> **备注：** 一旦你设置了 `strokeStyle` 或者 `fillStyle` 的值，那么这个新值就会成为新绘制的图形的默认值。如果你要给每个图形上不同的颜色，你需要重新设置 `fillStyle` 或 `strokeStyle` 的值。
+> [!NOTE]
+> 一旦你设置了 `strokeStyle` 或者 `fillStyle` 的值，那么这个新值就会成为新绘制的图形的默认值。如果你要给每个图形上不同的颜色，你需要重新设置 `fillStyle` 或 `strokeStyle` 的值。
 
 你输入的应该是符合 [CSS3 颜色值标准](https://www.w3.org/TR/css-color-3/) 的有效字符串。下面的例子都表示同一种颜色。
 
@@ -253,7 +254,8 @@ draw();
 
 要解决这个问题，你必须对路径施以更加精确的控制。已知粗 1.0 的线条会在路径两边各延伸半像素，那么像第三幅图那样绘制从 (3.5,1) 到 (3.5,5) 的线条，其边缘正好落在像素边界，填充出来就是准确的宽为 1.0 的线条。
 
-> **备注：** 在这个竖线的例子中，其 Y 坐标刚好落在网格线上，否则端点上同样会出现半渲染的像素点（但还要注意，这种行为的表现取决于当前的 lineCap 风格，它默认为 butt；你可能希望通过将 lineCap 样式设置为 square 正方形，来得到与奇数宽度线的半像素坐标相一致的笔画，这样，端点轮廓的外边框将被自动扩展以完全覆盖整个像素格）。
+> [!NOTE]
+> 在这个竖线的例子中，其 Y 坐标刚好落在网格线上，否则端点上同样会出现半渲染的像素点（但还要注意，这种行为的表现取决于当前的 lineCap 风格，它默认为 butt；你可能希望通过将 lineCap 样式设置为 square 正方形，来得到与奇数宽度线的半像素坐标相一致的笔画，这样，端点轮廓的外边框将被自动扩展以完全覆盖整个像素格）。
 >
 > 还请注意，只有路径的起点和终点受此影响：如果一个路径是通过 closePath() 来封闭的，它是没有起点和终点的；相反的情况下，路径上的所有端点都与上一个点相连，下一段路径使用当前的 lineJoin 设置（默认为 miter），如果相连路径是水平和/或垂直的话，会导致相连路径的外轮廓根据相交点自动延伸，因此渲染出的路径轮廓会覆盖整个像素格。接下来的两个小节将展示这些额外的行样式。
 
@@ -585,7 +587,8 @@ draw();
 - {{domxref("CanvasRenderingContext2D.createPattern", "createPattern(image, type)")}}
   - : 该方法接受两个参数。Image 可以是一个 `Image` 对象的引用，或者另一个 canvas 对象。`Type` 必须是下面的字符串值之一：`repeat`，`repeat-x`，`repeat-y` 和 `no-repeat`。
 
-> **备注：** 用 canvas 对象作为 `Image` 参数在 Firefox 1.5 (Gecko 1.8) 中是无效的。
+> [!NOTE]
+> 用 canvas 对象作为 `Image` 参数在 Firefox 1.5 (Gecko 1.8) 中是无效的。
 
 图案的应用跟渐变很类似的，创建出一个 pattern 之后，赋给 `fillStyle` 或 `strokeStyle` 属性即可。
 
@@ -595,7 +598,8 @@ img.src = "someimage.png";
 var ptrn = ctx.createPattern(img, "repeat");
 ```
 
-> **备注：** 与 drawImage 有点不同，你需要确认 image 对象已经装载完毕，否则图案可能效果不对的。
+> [!NOTE]
+> 与 drawImage 有点不同，你需要确认 image 对象已经装载完毕，否则图案可能效果不对的。
 
 ### `createPattern` 的示例
 
