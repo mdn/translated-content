@@ -2,7 +2,7 @@
 title: <meter>：HTML 标量元素
 slug: Web/HTML/Element/meter
 l10n:
-  sourceCommit: cbbbca4667ecb798dc86c1b8306d5ab87ad4a68b
+  sourceCommit: 9c09b183a5ce844a75c2f22e909d03f71ca329fc
 ---
 
 {{HTMLSidebar}}
@@ -19,7 +19,8 @@ l10n:
 
   - : 当前数值。如果指定了最小值和最大值（`min` 属性和 `max` 属性），则必须介于这两个值之间。如果未指定或格式错误，则值为 `0`。如果指定的值不在 `min` 属性和 `max` 属性给定的范围内，则该值等于范围的最近端。
 
-    > **备注：** 除非 `value` 属性介于 `0` 和 `1` 之间（包括 0 和 1），否则 `min` 和 `max` 属性应定义范围，以便 `value` 属性的值在该范围内。
+    > > [!NOTE]
+    > 除非 `value` 属性介于 `0` 和 `1` 之间（包括 0 和 1），否则 `min` 和 `max` 属性应定义范围，以便 `value` 属性的值在该范围内。
 
 - [`min`](/zh-CN/docs/Web/HTML/Attributes/min)
   - : 测量范围的下限。如果指定，该值必须小于最大值（`max` 属性）。如果未指定，则最小值为 `0`。
