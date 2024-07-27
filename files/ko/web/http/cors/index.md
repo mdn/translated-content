@@ -5,31 +5,27 @@ slug: Web/HTTP/CORS
 
 {{HTTPSidebar}}
 
-**교차 출처 리소스 공유**(Cross-Origin Resource Sharing, {{Glossary("CORS")}})는 추가 {{Glossary("HTTP")}} 헤더를 사용하여, 한 {{glossary("origin", "출처")}}에서 실행 중인 웹 애플리케이션이 다른 출처의 선택한 자원에 접근할 수 있는 권한을 부여하도록 브라우저에 알려주는 체제입니다. 웹 애플리케이션은 리소스가 자신의 출처(도메인, 프로토콜, 포트)와 다를 때 교차 출처 HTTP 요청을 실행합니다.
+**교차 출처 리소스 공유**(Cross-Origin Resource Sharing, {{Glossary("CORS")}})는 브라우저가 자신의 출처가 아닌 다른 어떤 {{glossary("origin", "출처")}}(도메인, 스킴 혹은 포트)로부터 자원을 로딩하는 것을 허용할 수 있도록 서버가 허가하는 {{Glossary("HTTP")}} 헤더 기반 메커니즘입니다. CORS는 또한 브라우저가 교차 출처 리소스를 호스팅하는 서버로 실제 요청을 허가할 것인지 확인하기 위해 보내는 "프리플라이트" 요청 메커니즘에 의존합니다. 이 프리플라이트 요청에서 브라우저는 실제 요청에서 사용할 HTTP 메소드와 헤더들에 대한 정보가 표시된 헤더에 담아 보냅니다.
 
-교차 출처 요청의 예시: `https://domain-a.com`의 프론트 엔드 JavaScript 코드가 {{domxref("XMLHttpRequest")}}를 사용하여 `https://domain-b.com/data.json`을 요청하는 경우.
+교차 출처 요청의 예시: https://domain-a.com에서 제공되는 프론트엔드 JavaScript 코드가 {{domxref("Window/fetch", "fetch()")}}를 사용하여 https://domain-b.com/data.json에 요청하는 경우.
 
-보안 상의 이유로, 브라우저는 스크립트에서 시작한 교차 출처 HTTP 요청을 제한합니다. 예를 들어, `XMLHttpRequest`와 [Fetch API](/ko/docs/Web/API/Fetch_API)는 [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)을 따릅니다. 즉, 이 API를 사용하는 웹 애플리케이션은 자신의 출처와 동일한 리소스만 불러올 수 있으며, 다른 출처의 리소스를 불러오려면 그 출처에서 올바른 CORS 헤더를 포함한 응답을 반환해야 합니다.![](cors_principle.png)
+보안 상의 이유로, 브라우저는 스크립트에서 시작한 교차 출처 HTTP 요청을 제한합니다. 예를 들어, `fetch()`와 {{domxref("XMLHttpRequest")}}는 [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)을 따릅니다. 이는 이러한 API를 사용하는 웹 애플리케이션이 애플리케이션이 로드된 동일한 출처에서만 리소스를 요청할 수 있으며, 다른 출처의 응답에 올바른 CORS 헤더가 포함되어 있지 않는 한 그렇지 못하다는 것을 의미합니다.
 
-CORS 체제는 브라우저와 서버 간의 안전한 교차 출처 요청 및 데이터 전송을 지원합니다. 최신 브라우저는 `XMLHttpRequest` 또는 [Fetch](/ko/docs/Web/API/Fetch_API)와 같은 API에서 CORS를 사용하여 교차 출처 HTTP 요청의 위험을 완화합니다.
+![Diagrammatic representation of CORS mechanism](cors_principle.png)
 
-## 이 글은 누가 읽어야 하나요?
+CORS 메커니즘은 브라우저와 서버 간의 안전한 교차 출처 요청 및 데이터 전송을 지원합니다. 브라우저는 교차 출처 HTTP 요청의 위험을 완화하기 위해 `fetch()`나 `XMLHttpRequest` 같은 API에서 CORS를 사용합니다.
 
-모든 사람이요, 진짜로.
+## 어떤 요청이 CORS를 사용합니까?
 
-명확히 말하자면, 이 글은 **웹 관리자**, **서버 개발자** 그리고 **프론트엔드 개발자**를 위한 것입니다. 최신 브라우저는 헤더와 정책 집행을 포함한 클라이언트 측 교차 출처 공유를 처리합니다. 그러나 CORS 표준에 맞춘다는 것은 서버에서도 새로운 요청과 응답 헤더를 처리해야 한다는 것입니다. 서버 개발자에게는 [(PHP 코드 조각과 함께 하는) 서버 관점의 교차 출처 공유](/ko/docs/Web/HTTP/CORS)를 다루고 있는 다른 글로 보충하면 도움이 될 것입니다.
+이 [교차 출처 공유 표준](https://fetch.spec.whatwg.org/#http-cors-protocol)은 다음과 같은 경우에 교차 출처 HTTP 요청을 가능하게 합니다.
 
-## 어떤 요청이 CORS를 사용하나요?
-
-[교차 출처 공유 표준](https://fetch.spec.whatwg.org/#http-cors-protocol)은 다음과 같은 경우에 사이트간 HTTP 요청을 허용합니다.
-
-- 위에서 논의한 바와 같이, {{domxref("XMLHttpRequest")}}와 [Fetch API](/ko/docs/Web/API/Fetch_API) 호출.
-- 웹 폰트(CSS 내 `@font-face`에서 교차 도메인 폰트 사용 시), [so that servers can deploy TrueType fonts that can only be cross-site loaded and used by web sites that are permitted to do so.](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
+- 위에서 언급한 `fetch()` 또는 `XMLHttpRequest`의 호출.
+- 웹 폰트(CSS 내 `@font-face`에서 교차 도메인 폰트 사용 시), [서버가 교차 출처로만 로드될 수 있고 허가된 웹사이트에서만 사용할 수 있는 TrueType 폰트를 배포할 수 있게 합니다.](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
 - [WebGL 텍스쳐](/ko/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 - {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}}를 사용해 캔버스에 그린 이미지/비디오 프레임.
 - [이미지로부터 추출하는 CSS Shapes.](/ko/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
 
-이 글은 교차 출처 리소스 공유에 대한 일반적인 논의이며 필요한 HTTP 헤더에 대한 내용도 포함하고 있습니다.
+교차 출처 리소스 공유에 대한 일반적인 글이며 필요한 HTTP 헤더에 대한 논의도 포함하고 있습니다.
 
 ## 기능적 개요
 
