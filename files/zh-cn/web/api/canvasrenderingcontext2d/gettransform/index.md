@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.getTransform()`** 方法用于获取当前被应用到上下文的转换矩阵。
+Canvas 2D API 的 **`CanvasRenderingContext2D.getTransform()`** 方法用于获取当前被应用到上下文的变换矩阵。
 
 ## 语法
 
@@ -23,7 +23,11 @@ getTransform()
 
 一个 {{domxref("DOMMatrix")}} 对象。
 
-转换矩阵被这样描述： <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
+变换矩阵的描述如下：
+
+<!-- prettier-ignore-start -->
+<math display="block"><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a & c & e \\ b & d & f \\ 0 & 0 & 1 \end{array} \right]</annotation></semantics></math>
+<!-- prettier-ignore-end -->
 
 > [!NOTE]
 > 返回的对象不是实时的，所以更新它不会影响当前的转换矩阵，同时更新当前的转换矩阵不会影响已经返回的 `DOMMatrix`。
