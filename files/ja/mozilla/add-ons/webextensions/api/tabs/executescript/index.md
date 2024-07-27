@@ -134,7 +134,8 @@ executing.then(onExecuted, onError);
 
 {{Compat}}
 
-> **メモ:** この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) API に基づいています。このドキュメントは [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) における Chromium のコードに基づいています。
+> [!NOTE]
+> この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) API に基づいています。このドキュメントは [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) における Chromium のコードに基づいています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
