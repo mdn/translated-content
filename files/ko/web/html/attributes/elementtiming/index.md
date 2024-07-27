@@ -21,7 +21,7 @@ DOM에서의 해당 특성은 {{domxref("Element.elementTiming")}}로 반영됩�
 <img alt="alt" src="img.jpg" elementtiming="label for element" />
 ```
 
-관찰하고 싶은 요소로 좋은 후보들은 다음과 같습니다:
+관찰하고 싶은 요소로 좋은 후보들은 다음과 같습니다.
 
 - 기사에 대한 주요 이미지
 - 블로그 게시물 제목
