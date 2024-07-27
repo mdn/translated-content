@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
 La méthode **`indexOf()`** renvoie le premier indice pour lequel on trouve un élément donné dans un tableau. Si l'élément cherché n'est pas présent dans le tableau, la méthode renverra -1.
 
-> **Note :** pour la méthode associée aux chaînes de caractères, voir la page {{jsxref("String.prototype.indexOf()")}}.
+> [!NOTE]
+> Pour la méthode associée aux chaînes de caractères, voir la page {{jsxref("String.prototype.indexOf()")}}.
 
 {{EmbedInteractiveExample("pages/js/array-indexof.html")}}
 

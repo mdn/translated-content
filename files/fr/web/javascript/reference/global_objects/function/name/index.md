@@ -9,7 +9,8 @@ La propriété **`function.name`** est une propriété en lecture seule qui renv
 
 {{EmbedInteractiveExample("pages/js/function-name.html")}}{{js_property_attributes(0,0,1)}}
 
-> **Note :** Dans les implémentations non-standards antérieures à ES2015, l'attribut `configurable` valait `false`.
+> [!NOTE]
+> Dans les implémentations non-standards antérieures à ES2015, l'attribut `configurable` valait `false`.
 
 ## Exemples
 

@@ -11,7 +11,8 @@ La propriété **`arguments.callee`** contient la fonction en cours d'exécution
 
 `callee` est une propriété de l'objet `arguments`. Elle peut être utilisée afin de faire référence à la fonction en cours d'exécution à l'intérieur de cette fonction. Cette propriété peut etre utile lorsqu'on ne connait pas le nom de la fonction (fonction anonyme par exemple).
 
-> **Attention :** En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), ECMAScript 5 interdit la fonction `arguments.callee()`. Éviter de l'utiliser en utilisant un nom de fonction dans les expressions ou en utilisant une déclaration de fonction où la fonction s'appelle elle-même.
+> [!WARNING]
+> En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), ECMAScript 5 interdit la fonction `arguments.callee()`. Éviter de l'utiliser en utilisant un nom de fonction dans les expressions ou en utilisant une déclaration de fonction où la fonction s'appelle elle-même.
 
 ### Pourquoi `arguments.callee` a-t-il été retiré du mode strict ES5 ?
 

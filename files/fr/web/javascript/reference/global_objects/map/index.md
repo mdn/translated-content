@@ -315,7 +315,8 @@ console.log(clone.get(1)); // un
 console.log(original === clone); // false. Utile pour une comparaison superficielle
 ```
 
-> **Note :** La donnée contenue dans la `Map` n'est pas clonée.
+> [!NOTE]
+> La donnée contenue dans la `Map` n'est pas clonée.
 
 Il est également possible de fusionner deux `Map` en conservant le critère d'unicité sur les clés&nbsp;:
 

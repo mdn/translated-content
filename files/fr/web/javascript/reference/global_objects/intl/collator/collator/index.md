@@ -25,7 +25,8 @@ new Intl.Collator(locales, options);
 
     Les clés d'extension Unicode suivantes sont autorisées&nbsp;:
 
-    > **Note :** Ces clés peuvent généralement être paramétrées avec l'argument `options` (voir ci-après), lorsque ces clés sont indiquées dans les deux paramètres c'est `options` qui a la priorité.
+    > [!NOTE]
+    > Ces clés peuvent généralement être paramétrées avec l'argument `options` (voir ci-après), lorsque ces clés sont indiquées dans les deux paramètres c'est `options` qui a la priorité.
 
     - `co`
       - : Les variantes de collation pour certaines locales. Les valeurs possibles sont&nbsp;:
@@ -45,7 +46,8 @@ new Intl.Collator(locales, options);
         - `trad`
         - `unihan`
         - `zhuyin`
-          > **Note :** Cette option peut également être définie via la propriété "`collation`" du paramètre `options`.
+          > [!NOTE]
+          > Cette option peut également être définie via la propriété "`collation`" du paramètre `options`.
     - `kn`
       - : Indique si une collation numérique devrait être utilisée (par exemple pour avoir "1" < "2" < "10"). Les valeurs possibles sont "`true`" et "`false`". Cette option peut également être indiquée via la propriété "`numeric`" du paramètre `options`.
     - `kf`
@@ -77,13 +79,15 @@ new Intl.Collator(locales, options);
 
       - : Indique si une collation numérique devrait être utilisée (afin d'avoir par exemple "1" < "2" < "10"). Les valeurs possibles sont `true` et `false`&nbsp;; la valeur par défaut est `false`.
 
-        > **Note :** Cette option peut également être définie via la clé d'extension Unicode `kn`&nbsp;; si des valeurs sont fournies aux deux endroits, c'est la propriété d'`options` qui a la priorité.
+        > [!NOTE]
+        > Cette option peut également être définie via la clé d'extension Unicode `kn`&nbsp;; si des valeurs sont fournies aux deux endroits, c'est la propriété d'`options` qui a la priorité.
 
     - `caseFirst`
 
       - : Indique si les majuscules ou les minuscules devraient être triées en premières. Les valeurs possibles sont "`upper`", "`lower`", ou "`false`" (qui utilisent la valeur par défaut de la locale).
 
-        > **Note :** Cette option peut également être définie via la clé d'extension Unicode `kf`&nbsp;; si des valeurs sont fournies aux deux endroits, c'est la propriété d'`options` qui a la priorité.
+        > [!NOTE]
+        > Cette option peut également être définie via la clé d'extension Unicode `kf`&nbsp;; si des valeurs sont fournies aux deux endroits, c'est la propriété d'`options` qui a la priorité.
 
     - `collation`
       - : Les variantes de collations pour certaines locales. Les valeurs possibles sont&nbsp;:
@@ -103,7 +107,8 @@ new Intl.Collator(locales, options);
         - `trad`
         - `unihan`
         - `zhuyin`
-          > **Note :** Cette option peut également être définie via la clé d'extension Unicode `co`&nbsp;; si des valeurs sont fournies aux deux endroits, c'est la propriété d'`options` qui a la priorité.
+          > [!NOTE]
+          > Cette option peut également être définie via la clé d'extension Unicode `co`&nbsp;; si des valeurs sont fournies aux deux endroits, c'est la propriété d'`options` qui a la priorité.
 
 ## Exemples
 

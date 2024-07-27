@@ -149,7 +149,8 @@ Aussi, mieux vaut ne pas comparer un résultat fourni par `toLocaleString()` ave
 // false pour IE et Edge
 ```
 
-> **Note :** Voir aussi [ce fil StackOverflow](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results) pour plus de détails et d'exemples.
+> [!NOTE]
+> Voir aussi [ce fil StackOverflow](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results) pour plus de détails et d'exemples.
 
 ## Spécifications
 

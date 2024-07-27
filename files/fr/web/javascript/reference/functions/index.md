@@ -172,7 +172,8 @@ param => expression
 
 ### Le constructeur `Function`
 
-> **Note :** L'utilisation du constructeur `Function` afin de créer des fonction n'est pas recommandée. En effet, il utilise une chaîne pour former le corps de la fonction et cela peut empêcher certaines optimisations du moteur JavaScript ainsi que provoquer d'autres problèmes.
+> [!NOTE]
+> L'utilisation du constructeur `Function` afin de créer des fonction n'est pas recommandée. En effet, il utilise une chaîne pour former le corps de la fonction et cela peut empêcher certaines optimisations du moteur JavaScript ainsi que provoquer d'autres problèmes.
 
 Comme tous les autres objets, les objets {{jsxref("Function")}} peuvent être créés grâce à l'opérateur `new` :
 
@@ -191,7 +192,8 @@ L'invocation du constructeur `Function` en tant que fonction (sans utiliser l'op
 
 > **Note :** `GeneratorFunction` n'est pas un objet global mais pourrait être obtenu à partir de l'instance de la fonction génératrice (voir la page {{jsxref("GeneratorFunction")}} pour plus de détails).
 
-> **Note :** Le constructeur `GeneratorFunction` ne doit pas être utilisé pour créer des fonctions. En effet, il utilise une chaîne pour former le corps de la fonction et cela peut empêcher certaines optimisations du moteur JavaScript ainsi que provoquer d'autres problèmes.
+> [!NOTE]
+> Le constructeur `GeneratorFunction` ne doit pas être utilisé pour créer des fonctions. En effet, il utilise une chaîne pour former le corps de la fonction et cela peut empêcher certaines optimisations du moteur JavaScript ainsi que provoquer d'autres problèmes.
 
 Comme pour tous les autres objets, les objets {{jsxref("GeneratorFunction")}} peuvent être créés grâce à l'opérateur `new` :
 
@@ -606,7 +608,8 @@ Si le script est changé et que la condition devient « `if (1)` », la fonction
 
 Bien que cette fonction ressemble à une déclaration de fonction, il s'agit en fait d'une expression (ou instruction) de fonction, car celle-ci est imbriquée au sein d'une autre instruction. (Consulter le paragraphe précédent pour une explication à ce sujet).
 
-> **Note :** À la différence de [SpiderMonkey](/fr/docs/SpiderMonkey), certains moteurs JavaScript traîtent incorrectement les expressions de fonction avec un nom comme des définitions de fonction. Cela conduirait à la définition de la fonction `zero` et ce même avec la condition `if` valant faux. Une façon plus sûre de définir des fonctions de manière conditionnelle est de définir la fonction et de l'assigner à une variable :
+> [!NOTE]
+> À la différence de [SpiderMonkey](/fr/docs/SpiderMonkey), certains moteurs JavaScript traîtent incorrectement les expressions de fonction avec un nom comme des définitions de fonction. Cela conduirait à la définition de la fonction `zero` et ce même avec la condition `if` valant faux. Une façon plus sûre de définir des fonctions de manière conditionnelle est de définir la fonction et de l'assigner à une variable :
 >
 > ```js
 > if (0) {

@@ -46,7 +46,8 @@ var copie = Object.assign({}, obj);
 console.log(copie); // {a: 1}
 ```
 
-> **Note :** Attention, pour un clone réel (_deep clone_), il faudra utiliser d'autres méthodes car `Object.assign()` ne copie que les valeurs des propriétés depuis l'objet source, il ne recopie pas intégralement une nouvelle propriété. Si la valeur est une référence à un objet, il copiera uniquement la référence.
+> [!NOTE]
+> Attention, pour un clone réel (_deep clone_), il faudra utiliser d'autres méthodes car `Object.assign()` ne copie que les valeurs des propriétés depuis l'objet source, il ne recopie pas intégralement une nouvelle propriété. Si la valeur est une référence à un objet, il copiera uniquement la référence.
 
 ### Fusionner des objets
 

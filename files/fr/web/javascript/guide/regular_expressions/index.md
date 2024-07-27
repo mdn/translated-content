@@ -631,7 +631,8 @@ function escapeRegExp(string) {
 
 Le marqueur `g` situé en fin d'expression permet d'effectuer une recherche globale, qui parcoure toute la chaîne et renvoie l'ensemble des correspondances trouvées (voir [Utiliser les marqueurs](#recherches_flag) ci-après).
 
-> **Note :** Voir la page sur la méthode [`String.replace`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/replace) pour plus d'informations.
+> [!NOTE]
+> Voir la page sur la méthode [`String.replace`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/replace) pour plus d'informations.
 
 ### Utiliser les parenthèses
 

@@ -31,7 +31,8 @@ Le tableau trié (le tri est effectué sur le tableau courant qui est modifié, 
 
 Si le paramètre `fonctionComparaison` n'est pas fourni, les éléments qui ne valent pas `undefined` sont triés en les convertissant en chaines de caractères et en comparant ces chaines selon l'ordre des points de code Unicode. Par exemple, "banane" sera trié avant "cerise", mais "Cerise" arrivera avant "banane" à cause de la majuscule (les majuscules arrivent avant dans la liste). Dans un tri numérique, 9 sera trié avant 80, mais comme ces nombres sont convertis en chaînes de caractères, "80" arrive avant "9" selon l'ordre des unités de code UTF-16. Les éléments valant `undefined` sont placés à la fin du tableau.
 
-> **Note :** En UTF-16, les caractères Unicode situés après `\uFFFF` sont encodés avec deux unités de code _surrogates_ sur l'intervalle `\uD800` - `\uDFFF`. Pour comparer les chaînes de caractères entre elles, ce sont les unités de code séparées qui sont prises en compte. Ainsi, le caractère formé par la paire _surrogate_ `\uD655 \uDE55` sera trié avant le caractère `\uFF3A`.
+> [!NOTE]
+> En UTF-16, les caractères Unicode situés après `\uFFFF` sont encodés avec deux unités de code _surrogates_ sur l'intervalle `\uD800` - `\uDFFF`. Pour comparer les chaînes de caractères entre elles, ce sont les unités de code séparées qui sont prises en compte. Ainsi, le caractère formé par la paire _surrogate_ `\uD655 \uDE55` sera trié avant le caractère `\uFF3A`.
 
 Si le paramètre `fonctionComparaison` est fourni, les éléments du tableau (qui ne valent pas `undefined`) sont triés selon la valeur de retour de la fonction de comparaison. Si `a` et `b` sont deux éléments à comparer, alors&nbsp;:
 
@@ -259,7 +260,8 @@ var result = mapped.map(function (e) {
 });
 ```
 
-> **Note :** Une bibliothèque _open source_ utilise cette approche : [`mapsort`](https://null.house/open-source/mapsort).
+> [!NOTE]
+> Une bibliothèque _open source_ utilise cette approche : [`mapsort`](https://null.house/open-source/mapsort).
 
 ## Spécifications
 

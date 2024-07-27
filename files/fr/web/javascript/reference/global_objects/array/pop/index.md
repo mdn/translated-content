@@ -27,7 +27,8 @@ La méthode `pop()` supprime le dernier élément d'un tableau et retourne cette
 
 Si vous appelez `pop()` sur un tableau vide, il renverra la valeur {{jsxref("undefined")}}.
 
-> **Note :** La méthode {{jsxref("Array.prototype.shift()")}} possède un comportement analogue mais retire le _premier_ élément du tableau.
+> [!NOTE]
+> La méthode {{jsxref("Array.prototype.shift()")}} possède un comportement analogue mais retire le _premier_ élément du tableau.
 
 ## Exemples
 

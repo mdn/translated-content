@@ -56,7 +56,8 @@ Intl.supportedValuesOf("calendar").forEach(function (calendar) {
 });
 ```
 
-> **Note :** Le tableau renvoyé pour les calendriers contiendra toujours la valeur "gregory" (calendrier grégorien).
+> [!NOTE]
+> Le tableau renvoyé pour les calendriers contiendra toujours la valeur "gregory" (calendrier grégorien).
 
 Les autres valeurs peuvent être obtenues de la même façon&nbsp;:
 

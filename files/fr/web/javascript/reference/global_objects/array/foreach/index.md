@@ -54,7 +54,8 @@ L'ensemble des éléments traités par `forEach` est défini avant le premier ap
 
 `forEach()` ne modifie pas le tableau sur lequel elle est appelée, en revanche, la fonction de retour (_callback_) utilisée peut modifier le tableau.
 
-> **Note :** Il n'existe aucun moyen d'arrêter une boucle `forEach` en dehors de lever une exception. Si vous avez besoin d'arrêter la boucle, étudiez plutôt :
+> [!NOTE]
+> Il n'existe aucun moyen d'arrêter une boucle `forEach` en dehors de lever une exception. Si vous avez besoin d'arrêter la boucle, étudiez plutôt :
 >
 > - Une boucle [`for`](/fr/docs/Web/JavaScript/Reference/Instructions/for) classique
 > - Une boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Instructions/for...in) ou [`for...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of)
@@ -95,7 +96,8 @@ items.forEach(function (item) {
 
 ### Afficher le contenu d'un tableau
 
-> **Note :** Pour afficher le contenu d'un tableau, on pourra utiliser [`console.table()`](/fr/docs/Web/API/Console/table) qui met en forme les éléments du tableau. L'exemple suivant est laissé à titre d'illustration pour `forEach()`.
+> [!NOTE]
+> Pour afficher le contenu d'un tableau, on pourra utiliser [`console.table()`](/fr/docs/Web/API/Console/table) qui met en forme les éléments du tableau. L'exemple suivant est laissé à titre d'illustration pour `forEach()`.
 
 Le code suivant affiche une ligne pour chaque élément du tableau :
 
@@ -134,9 +136,11 @@ console.log(obj.compte); // 3
 console.log(obj.somme); // 16
 ```
 
-> **Note :** Le paramètre pour `this` est passé à la méthode `forEach()`, à chaque appel du callback, celui-ci sera utilisé comme valeur pour `this`.
+> [!NOTE]
+> Le paramètre pour `this` est passé à la méthode `forEach()`, à chaque appel du callback, celui-ci sera utilisé comme valeur pour `this`.
 
-> **Note :** Si la fonction passée en argument est [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées), il n'est pas nécessaire d'ajouter le paramètre `this` car les fonctions fléchées utilisent le [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) fourni par le contexte lexical.
+> [!NOTE]
+> Si la fonction passée en argument est [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées), il n'est pas nécessaire d'ajouter le paramètre `this` car les fonctions fléchées utilisent le [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) fourni par le contexte lexical.
 
 ### Stopper une boucle
 

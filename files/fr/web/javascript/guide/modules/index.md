@@ -29,7 +29,8 @@ Pour illustrer le fonctionnement des modules, nous avons créé [un ensemble d'e
 
 Ces opérations sont assez simples, mais nous les avons choisies pour nous concentrer plutôt sur le fonctionnement des modules.
 
-> **Note :** Si vous souhaitez télécharger les exemples et les exécuter en local, vous devrez utiliser un serveur web local.
+> [!NOTE]
+> Si vous souhaitez télécharger les exemples et les exécuter en local, vous devrez utiliser un serveur web local.
 
 ## Structure de l'exemple
 
@@ -43,7 +44,8 @@ modules/
     square.js
 ```
 
-> **Note :** Tous les exemples de ce guide suivent la même structure.
+> [!NOTE]
+> Tous les exemples de ce guide suivent la même structure.
 
 Le répertoire dédié aux modules contient deux modules&nbsp;:
 
@@ -135,7 +137,8 @@ devient&nbsp;:
 
 Vous pouvez voir ces lignes dans [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js).
 
-> **Note :** Pour certains systèmes de module, on peut omettre l'extension de fichier et le point (c'est-à-dire qu'on peut écrire `'/modules/square'`). Cela ne fonctionne pas pour les modules JavaScript !
+> [!NOTE]
+> Pour certains systèmes de module, on peut omettre l'extension de fichier et le point (c'est-à-dire qu'on peut écrire `'/modules/square'`). Cela ne fonctionne pas pour les modules JavaScript !
 
 Une fois les fonctionnalités importées dans le script, vous pouvez utiliser les valeurs dans votre script. Dans `main.js`, après les lignes d'import, on trouvera&nbsp;:
 
@@ -148,7 +151,8 @@ reportArea(square1.length, reportList);
 reportPerimeter(square1.length, reportList);
 ```
 
-> **Note :** Bien que les fonctionnalités importées soient disponibles dans le fichier, ce ne sont que des vues en lecture seule pour les fonctionnalités exportées. On ne peut pas changer la variable importée, mais on peut toujours modifier ses propriétés (à la façon dont les variables sont gérées avec `const`). De plus, ces fonctionnalités sont importées avec des liaisons dynamiques, ce qui signifie que leur valeur peut changer, même si on ne peut pas modifier la liaison (à la différence de `const`).
+> [!NOTE]
+> Bien que les fonctionnalités importées soient disponibles dans le fichier, ce ne sont que des vues en lecture seule pour les fonctionnalités exportées. On ne peut pas changer la variable importée, mais on peut toujours modifier ses propriétés (à la façon dont les variables sont gérées avec `const`). De plus, ces fonctionnalités sont importées avec des liaisons dynamiques, ce qui signifie que leur valeur peut changer, même si on ne peut pas modifier la liaison (à la différence de `const`).
 
 ## Charger le module via le document HTML
 
@@ -214,7 +218,8 @@ On voit ici aussi l'absence d'accolade, car il n'y a qu'un seul export par défa
 import { default as randomSquare } from "./modules/square.js";
 ```
 
-> **Note :** Pour en savoir plus sur le renommage des objets exportés, voir ci-après [Renommage des imports et des exports](#renommage_des_imports_et_des_exports).
+> [!NOTE]
+> Pour en savoir plus sur le renommage des objets exportés, voir ci-après [Renommage des imports et des exports](#renommage_des_imports_et_des_exports).
 
 ## Gestion des conflits de nommage
 
@@ -440,7 +445,8 @@ export { Circle } from "./shapes/circle.js";
 
 On récupère ainsi l'ensemble des exports de chaque module et on les rend disponibles via `shapes.js`.
 
-> **Note :** Cette notation ne permet que de rediriger les exports via le fichier. Les objets importés/exportés n'existent pas vraiment dans `shapes.js` et on ne peut donc pas écrire de code _utile_ qui les manipule.
+> [!NOTE]
+> Cette notation ne permet que de rediriger les exports via le fichier. Les objets importés/exportés n'existent pas vraiment dans `shapes.js` et on ne peut donc pas écrire de code _utile_ qui les manipule.
 
 Dans le fichier `main.js`, on pourra alors remplacer&nbsp;:
 

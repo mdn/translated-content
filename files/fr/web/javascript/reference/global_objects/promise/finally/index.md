@@ -39,7 +39,8 @@ La méthode `finally` est similaire à l'utilisation de la forme `.then(onFinall
   - À la différence de `Promise.resolve(2).then(() => {}, () => {})` qui sera résolue avec la valeur {{jsxref("undefined")}}, `Promise.resolve(2).finally(() => {})` sera résolue avec la valeur `2`.
   - De même, à la différence de `Promise.reject(3).then(() => {}, () => {})` qui sera résolue avec la valeur `undefined`, `Promise.reject(3).finally(() => {})` sera rejetée avec `3`.
 
-> **Note :** Toutefois, on notera qu'utiliser `throw` (ou que renvoyer une promesse rompue) dans le _callback_ `finally` rejettera la promesse avec l'exception indiquée dans l'appel à `throw`.
+> [!NOTE]
+> Toutefois, on notera qu'utiliser `throw` (ou que renvoyer une promesse rompue) dans le _callback_ `finally` rejettera la promesse avec l'exception indiquée dans l'appel à `throw`.
 
 ## Exemples
 

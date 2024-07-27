@@ -5,7 +5,8 @@ slug: Web/JavaScript/Reference/Classes/Public_class_fields
 
 {{JsSidebar("Classes")}}{{SeeCompatTable}}
 
-> **Note :** Cette page décrit des fonctionnalités expérimentales.
+> [!NOTE]
+> Cette page décrit des fonctionnalités expérimentales.
 >
 > Les déclarations de champs, tant publics que privés, sont [une fonctionnalité expérimentale (étape 3)](https://github.com/tc39/proposal-class-fields) proposée au [TC39](https://tc39.github.io/beta/), le comité des standards JavaScript.
 >

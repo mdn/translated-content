@@ -19,7 +19,8 @@ ReferenceError: "x" is not defined
 
 Une variable qui n'existe pas est référencée quelque part. Cette variable doit être déclarée ou il faut vérifier qu'elle est disponible dans le script concerné ou dans la portée utilisée.
 
-> **Note :** Lors du chargement d'une bibliothèque comme jQuery, assurez-vous de bien charger la bibliothèque avant d'accéder aux variables comme `$`. La balise {{HTMLElement("script")}} utilisée pour charger la bibliothèque doit être présente avant le code qui l'utilise.
+> [!NOTE]
+> Lors du chargement d'une bibliothèque comme jQuery, assurez-vous de bien charger la bibliothèque avant d'accéder aux variables comme `$`. La balise {{HTMLElement("script")}} utilisée pour charger la bibliothèque doit être présente avant le code qui l'utilise.
 
 ## Exemples
 
