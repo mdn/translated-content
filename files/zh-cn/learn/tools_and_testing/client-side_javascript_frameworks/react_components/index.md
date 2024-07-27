@@ -89,7 +89,8 @@ export default function Todo() {
 }
 ```
 
-> **备注：** 组件必须返回一些东西。如果你试图渲染一个不返回任何东西的组件，React 会在浏览器中提示出现错误。
+> [!NOTE]
+> 组件必须返回一些东西。如果你试图渲染一个不返回任何东西的组件，React 会在浏览器中提示出现错误。
 
 到现在为止，我们的 `Todo` 组件已经完成，我们可以使用它了。在 `App.js` 中，在文件顶部添加以下代码，导入 `Todo` 组件：
 
@@ -378,7 +379,8 @@ function FilterButton(props) {
 export default FilterButton;
 ```
 
-> **备注：** 你可能会注意到，我们在这里犯了和第一次在 `<Todo />` 组件中同样的错误，即每个按钮将是相同的。没关系！我们将在以后修复这个组件，具体在 [Back to the filter buttons](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons)。
+> [!NOTE]
+> 你可能会注意到，我们在这里犯了和第一次在 `<Todo />` 组件中同样的错误，即每个按钮将是相同的。没关系！我们将在以后修复这个组件，具体在 [Back to the filter buttons](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons)。
 
 ## 导入所有组件
 
