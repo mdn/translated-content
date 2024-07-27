@@ -1,6 +1,7 @@
 ---
 title: Function.prototype[@@hasInstance]()
-slug: Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance
+slug: Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance
+original_slug: Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance
 l10n:
   sourceCommit: 0891bd2199fabb1ec00dfe4765019d54f21d965c
 ---

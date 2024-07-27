@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype[@@iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
+slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator
+original_slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
 ---
 
 {{JSRef}}

@@ -1,6 +1,7 @@
 ---
 title: Map[@@species]
-slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
+slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.species
+original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 l10n:
   sourceCommit: bf81c9ed7de8cfd94cf1fc7f77e23b987f753a8b
 ---

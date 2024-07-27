@@ -1,6 +1,7 @@
 ---
 title: Array.prototype[@@unscopables]
-slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
+slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables
+original_slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 l10n:
   sourceCommit: 34a34bee83fb4accf073ebc0c8cfc8eff956dc9b
 ---

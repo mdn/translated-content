@@ -1,6 +1,7 @@
 ---
 title: String.prototype[@@iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
+slug: Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator
+original_slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
