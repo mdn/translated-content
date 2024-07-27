@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、 [CSS における継承の制御](/ja/docs/Learn/CSS/Building_blocks/Selectors)の全般的なプロパティ値を理解しているかどうかを評価することです。
 
-> **メモ:** このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターで解決策を試すことができます。
+> [!NOTE]
+> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターで解決策を試すことができます。
 >
 > もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 
@@ -25,7 +26,7 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/cascade/cascade.html", '100%', 700)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/cascade/cascade-download.html)しましょう。
 
@@ -41,6 +42,6 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/cascade/cascadelayer.html", '100%', 700)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/cascade/cascadelayer-download.html)しましょう。
