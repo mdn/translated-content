@@ -14,7 +14,7 @@ l10n:
 ## 参见
 
 - [无障碍富互联网应用（ARIA）](/zh-CN/docs/Web/Accessibility/ARIA)
-- W3C 上的 [Web 无障碍倡议（WAI）](https://www.w3.org/WAI/)
+- [W3C Web 无障碍倡议（WAI）](https://www.w3.org/WAI/)
 - [无障碍富互联网应用（WAI-ARIA）](https://w3c.github.io/aria/)
 - [ARIA 创作实践指南（APG）](https://www.w3.org/WAI/ARIA/apg/)
 - [无障碍](/zh-CN/docs/Web/Accessibility)
