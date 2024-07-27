@@ -69,7 +69,8 @@ Web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
 
 ![文档对象模型的树状结构表示：顶部节点是 doctype 和 HTML 元素。HTML 的子节点包括 head 和 body。每个子元素都是一个分支。所有的文本，甚至是空白处，也都被显示出来](dom-screenshot.png)
 
-> **备注：** 这个 DOM 树状图是用 Ian Hickson 的[在线 DOM 查看器](https://software.hixie.ch/utilities/js/live-dom-viewer/)生成的。
+> [!NOTE]
+> 这个 DOM 树状图是用 Ian Hickson 的[在线 DOM 查看器](https://software.hixie.ch/utilities/js/live-dom-viewer/)生成的。
 
 树上的每个条目都被称为**节点**。你可以在上图中看到，一些节点代表元素（标识为 `HTML`、`HEAD`、`META` 等），另一些代表文本（标识为 `#text`）。还有[其他类型的节点](/zh-CN/docs/Web/API/Node/nodeType)，但这些是你会遇到的主要类型。
 
@@ -215,7 +216,8 @@ linkPara.parentNode.removeChild(linkPara);
    </p>
    ```
 
-> **备注：** 请注意，CSS 样式的 JavaScript 属性版本是用{{Glossary("camel_case", "小驼峰命名法")}}书写的，而 CSS 版本采用连字符（{{Glossary("kebab_case", "烤串命名法")}}）（例如，`backgroundColor` 对 `background-color`）。确保你不要把这些混为一谈，否则将无法工作。
+> [!NOTE]
+> 请注意，CSS 样式的 JavaScript 属性版本是用{{Glossary("camel_case", "小驼峰命名法")}}书写的，而 CSS 版本采用连字符（{{Glossary("kebab_case", "烤串命名法")}}）（例如，`backgroundColor` 对 `background-color`）。确保你不要把这些混为一谈，否则将无法工作。
 
 还有一种在你的文档上动态操作样式的常见方法，我们现在就来看看。
 
@@ -248,7 +250,8 @@ linkPara.parentNode.removeChild(linkPara);
 
 在接下来的几节中我们将看看 DOM API 一些更实际的用途。
 
-> **备注：** 你可以在 GitHub 上找到我们的 [dom-example.html 的完成版](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example-manipulated.html)演示（[也可以看看它的在线运行版本](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)）。
+> [!NOTE]
+> 你可以在 GitHub 上找到我们的 [dom-example.html 的完成版](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example-manipulated.html)演示（[也可以看看它的在线运行版本](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)）。
 
 ## 动手练习：一个动态的购物单
 
@@ -276,7 +279,8 @@ linkPara.parentNode.removeChild(linkPara);
 10. 为删除按钮绑定事件处理程序。当点击按钮时，删除它所在的整个列表元素（`<li>...</li>`）。
 11. 最后，使用 [`focus()`](/zh-CN/docs/Web/API/HTMLElement/focus) 方法聚焦输入框准备输入下一个购物项。
 
-> **备注：** 如果你卡住了，请查看[完成的购物清单](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html)（[查看其在线版本](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html)）。
+> [!NOTE]
+> 如果你卡住了，请查看[完成的购物清单](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html)（[查看其在线版本](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html)）。
 
 ## 总结
 

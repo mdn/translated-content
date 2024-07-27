@@ -13,7 +13,8 @@ slug: Web/API/BaseAudioContext/listener
 
 ## 示例
 
-> **备注：** 如果需要完整的音频空间化例子，可以查看 [panner-node](https://github.com/mdn/webaudio-examples/tree/main/panner-node) 演示。
+> [!NOTE]
+> 如果需要完整的音频空间化例子，可以查看 [panner-node](https://github.com/mdn/webaudio-examples/tree/main/panner-node) 演示。
 
 ```js
 const audioCtx = new AudioContext();

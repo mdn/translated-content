@@ -48,7 +48,8 @@ My cat is very grumpy
 2. 属性的名称，并接上一个等号。
 3. 由引号所包围的属性值。
 
-> **备注：** 不包含 ASCII 空格（以及 `"` `'` `` ` `` `=` `<` `>`）的简单属性值可以不使用引号，但是建议将所有属性值用引号括起来，这样的代码一致性更佳，更易于阅读。
+> [!NOTE]
+> 不包含 ASCII 空格（以及 `"` `'` `` ` `` `=` `<` `>`）的简单属性值可以不使用引号，但是建议将所有属性值用引号括起来，这样的代码一致性更佳，更易于阅读。
 
 ### 嵌套元素
 
@@ -125,7 +126,8 @@ My cat is very grumpy
 
 可以试着为图像编写一些更好的 `alt` 文本。
 
-> **备注：** 更多信息请参阅 [无障碍访问](/zh-CN/docs/learn/Accessibility)。
+> [!NOTE]
+> 更多信息请参阅 [无障碍访问](/zh-CN/docs/learn/Accessibility)。
 
 ## 标记文本
 
@@ -144,7 +146,8 @@ My cat is very grumpy
 
 可以尝试在 {{htmlelement("img")}} 元素上面添加一个合适的标题。
 
-> **备注：** 你可以看到第一级标题是有隐式的主题样式。不要使用标题元素来加大、加粗字体，因为标题对于 [无障碍访问](/zh-CN/docs/learn/Accessibility) 和 [搜索引擎优化](/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#为什么我们需要结构化？) 等问题非常有意义。要保持页面结构清晰，标题整洁，不要发生标题级别跳跃。
+> [!NOTE]
+> 你可以看到第一级标题是有隐式的主题样式。不要使用标题元素来加大、加粗字体，因为标题对于 [无障碍访问](/zh-CN/docs/learn/Accessibility) 和 [搜索引擎优化](/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#为什么我们需要结构化？) 等问题非常有意义。要保持页面结构清晰，标题整洁，不要发生标题级别跳跃。
 
 ### 段落（Paragraph）
 

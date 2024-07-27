@@ -57,7 +57,7 @@ mask-border-slice: unset;
 
 切片过程总共创建九个区域：四个角、四条边和一个中间区域。四条切片线从各自的边上设置一定的距离，控制区域的大小。
 
-[![由 border-image 或 border-image-slice 属性定义的九个区域](border-image-slice.png)](border-image-slice.png)
+![由 border-image 或 border-image-slice 属性定义的九个区域](border-image-slice.png)
 
 - 1-4 区为边角区域。每个区域只使用一次，以形成最终边框图像的边角。
 - 5-8 区为边缘区域。这些区域会在最终边框图像中进行[重复、缩放或其他修改](/zh-CN/docs/Web/CSS/mask-border-repeat)，以匹配元素的尺寸。
