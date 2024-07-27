@@ -176,7 +176,8 @@ foo.bar = "baz";
 
 除非你紧接着使用 `obj = obj`，否则 Svelte 不会更新对 `obj.foo.bar` 的引用。这是因为 Svelte 无法跟踪对象引用，所以我们必须通过执行赋值操作，来明确告诉它 `obj` 已经改变了。
 
-> **备注：** 如果 `foo` 是顶级变量，你可以使用以下响应式语句轻松地告诉 Svelte 在 `foo` 更改时更新 `obj`：`$: foo, obj = obj`。通过这样做，我们将 `foo` 定义为依赖项，每当它更改时，Svelte 将运行 `obj = obj`。
+> [!NOTE]
+> 如果 `foo` 是顶级变量，你可以使用以下响应式语句轻松地告诉 Svelte 在 `foo` 更改时更新 `obj`：`$: foo, obj = obj`。通过这样做，我们将 `foo` 定义为依赖项，每当它更改时，Svelte 将运行 `obj = obj`。
 
 在我们的 `checkAllTodos()` 函数中，当我们运行：
 
@@ -219,7 +220,8 @@ const checkAllTodos = (completed) => {
 
 在这种情况下，我们使用 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 方法，它返回的结果是通过对数组中每个项执行给定的函数而生成的新数组。该函数使用[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)返回每个待办事项的副本，并相应地更新了每个副本的 `completed` 属性。这个解决方案的额外好处是返回了具有新对象的新数组，从而完全避免了对原始 `todos` 数组的修改。
 
-> **备注：** Svelte 允许我们指定不同的选项来影响编译器的工作方式。 `<svelte:options immutable={true}/>` 选项告诉编译器你承诺不会修改任何对象。这允许它以更加激进的方式检查值是否已更改，并生成更简单和更高性能的代码。有关 `<svelte:options>` 的更多信息，请参阅 [Svelte 选项文档](https://svelte.dev/docs/special-elements#svelte-options)。
+> [!NOTE]
+> Svelte 允许我们指定不同的选项来影响编译器的工作方式。 `<svelte:options immutable={true}/>` 选项告诉编译器你承诺不会修改任何对象。这允许它以更加激进的方式检查值是否已更改，并生成更简单和更高性能的代码。有关 `<svelte:options>` 的更多信息，请参阅 [Svelte 选项文档](https://svelte.dev/docs/special-elements#svelte-options)。
 
 所有这些解决方案都涉及赋值操作，其中更新的变量位于等式的左侧。这些技术中的任何一种都将使 Svelte 注意到我们的 `todos` 数组已被修改。
 
@@ -464,7 +466,8 @@ const checkAllTodos = (completed) => {
 
 6. 再次打开你的应用程序，你将看到 `<input>` 字段在页面加载时获得焦点。
 
-> **备注：** 你可以查看 Svelte 文档中的其他[生命周期函数](https://svelte.dev/docs/svelte)，并在[交互式教程](https://learn.svelte.dev/tutorial/onmount)中看到它们的实际应用。
+> [!NOTE]
+> 你可以查看 Svelte 文档中的其他[生命周期函数](https://svelte.dev/docs/svelte)，并在[交互式教程](https://learn.svelte.dev/tutorial/onmount)中看到它们的实际应用。
 
 ## 使用 `tick()` 函数等待 DOM 更新
 
@@ -534,7 +537,8 @@ function onEdit() {
 
 3. 如果现在尝试，你将看到一切都按预期工作。
 
-> **备注：** 要查看另一个使用 `tick()` 的示例，请访问 [Svelte 教程](https://learn.svelte.dev/tutorial/tick)。
+> [!NOTE]
+> 要查看另一个使用 `tick()` 的示例，请访问 [Svelte 教程](https://learn.svelte.dev/tutorial/tick)。
 
 ## 使用 `use:action` 指令为 HTML 元素添加功能
 
@@ -548,7 +552,8 @@ node.addEventListener("focus", (event) => node.select());
 
 为了避免内存泄漏，我们还应该在节点销毁时调用 [`removeEventListener()`](/zh-CN/docs/Web/API/EventTarget/removeEventListener) 函数。
 
-> **备注：** 所有这些只是标准的 WebAPI 功能；这里没有任何内容是特定于 Svelte 的。
+> [!NOTE]
+> 所有这些只是标准的 WebAPI 功能；这里没有任何内容是特定于 Svelte 的。
 
 我们可以在我们的 `Todo` 组件中实现所有这些，每当我们将 `<input>` 添加或从 DOM 中移除时都必须执行这些操作。但是，我们必须非常小心，应当在节点添加到 DOM 后添加事件监听器，并在节点从 DOM 中移除之前删除监听器。此外，我们的解决方案不太可重用。
 
@@ -713,7 +718,8 @@ node.addEventListener("focus", (event) => node.select());
 
 6. 回去并再次尝试你的应用程序。此时，每当*编辑*按钮添加到 DOM 中时，`focusEditButton` action 就会执行，但只有当 `editButtonPressed` 标志为 `true` 时，它才会将焦点移到按钮上。
 
-> **备注：** 在这里，我们只是初步介绍了 action 的功能。action 还可以具有响应式参数，并且 Svelte 允许我们检测这些参数的任何更改。因此，我们可以添加与 Svelte 响应式系统良好集成的功能。如果想更详细地了解 action，请考虑查看 [Svelte 互动教程](https://learn.svelte.dev/tutorial/actions)或 [Svelte `use:action` 文档](https://svelte.dev/docs/element-directives#use-action)。
+> [!NOTE]
+> 在这里，我们只是初步介绍了 action 的功能。action 还可以具有响应式参数，并且 Svelte 允许我们检测这些参数的任何更改。因此，我们可以添加与 Svelte 响应式系统良好集成的功能。如果想更详细地了解 action，请考虑查看 [Svelte 互动教程](https://learn.svelte.dev/tutorial/actions)或 [Svelte `use:action` 文档](https://svelte.dev/docs/element-directives#use-action)。
 
 ## 组件绑定：使用 `bind:this={component}` 指令暴露组件方法和变量
 
@@ -841,7 +847,8 @@ node.addEventListener("focus", (event) => node.select());
 
 5. 回到你的应用程序。现在，如果删除任何待办事项，状态标题将获得焦点。突出显示待办事项数量的变化，无论是对于视觉用户还是对于屏幕阅读器用户都很有用。
 
-> **备注：** 你可能想知道为什么需要为组件绑定声明一个新变量。为什么不能直接调用 `TodosStatus.focus()`？这是因为应用可能同时有多个 `TodosStatus` 实例，因此需要引用特定实例的方法。这就是为什么需要指定变量来绑定特定实例。
+> [!NOTE]
+> 你可能想知道为什么需要为组件绑定声明一个新变量。为什么不能直接调用 `TodosStatus.focus()`？这是因为应用可能同时有多个 `TodosStatus` 实例，因此需要引用特定实例的方法。这就是为什么需要指定变量来绑定特定实例。
 
 ## 到目前为止的代码
 

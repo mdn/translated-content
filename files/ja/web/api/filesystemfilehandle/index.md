@@ -81,7 +81,7 @@ async function writeFile(fileHandle, contents) {
 
 - 同期式のファイルアクセスハンドルを作成します。
 - ファイルのサイズを取得し、格納用の {{jsxref("ArrayBuffer")}} を作成します。
-- ファイルの内容をそのバッファに読み込みます。
+- ファイルの内容をそのバッファーに読み込みます。
 - メッセージをエンコードし、ファイルの終端に書き込みます。
 - 変更をディスクに保存し、アクセスハンドルを閉じます。
 
@@ -98,7 +98,7 @@ onmessage = async (e) => {
 
   // ファイルのサイズを取得する
   const fileSize = accessHandle.getSize();
-  // ファイルの内容をバッファに読み込む
+  // ファイルの内容をバッファーに読み込む
   const buffer = new DataView(new ArrayBuffer(fileSize));
   const readBuffer = accessHandle.read(buffer, { at: 0 });
 

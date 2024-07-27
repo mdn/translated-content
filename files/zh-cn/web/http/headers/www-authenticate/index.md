@@ -7,7 +7,8 @@ slug: Web/HTTP/Headers/WWW-Authenticate
 
 HTTP **`WWW-Authenticate`** 响应标头定义了 [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Authentication)的方法（“质询”），它用于获取特定资源的访问权限。
 
-> **备注：** 该标头是[通用的 HTTP 认证框架](/zh-CN/docs/Web/HTTP/Authentication#通用的_http_认证框架)的一部分，可用于多种[身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)。每个“质询”都列出了服务器支持的方案以及为该方案类型添加的额外参数。
+> [!NOTE]
+> 该标头是[通用的 HTTP 认证框架](/zh-CN/docs/Web/HTTP/Authentication#通用的_http_认证框架)的一部分，可用于多种[身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)。每个“质询”都列出了服务器支持的方案以及为该方案类型添加的额外参数。
 
 使用 [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Authentication)的服务器将以 {{HTTPStatus("401")}} `Unauthorized` 响应去响应受保护资源的请求。该响应必须包含至少一个 `WWW-Authenticate` 标头和至少一个{{Glossary("challenge","质询")}}，以指示使用哪些身份验证方案访问资源（以及每个特定方案的任意额外的数据）。
 
@@ -70,7 +71,8 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 
   - : [身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)。一些更常见的类型是（不区分大小写）：[`Basic`](/zh-CN/docs/Web/HTTP/Authentication#basic_验证方案)、`Digest`、`Negotiate` 和 `AWS4-HMAC-SHA256`。
 
-    > **备注：** 更多信息和选项，请参见 [HTTP 身份验证 > 身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)
+    > [!NOTE]
+    > 更多信息和选项，请参见 [HTTP 身份验证 > 身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)
 
 - **realm=**\<realm> {{optional_inline}}
   - : 描述受保护区域的字符串。realm 允许服务器对它受保护的区域进行区分（如果允许支持这种划分方案），并通知用户需要哪个特定的用户名/密码。如果未指定 realm，客户端通常会显示格式化的主机名。
@@ -127,11 +129,13 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 
 对于 `"Basic"` 身份验证，凭据的构造方式是，首先将用户名和密码与冒号组合（`aladdin:opensesame`），然后将结果字符串编码为 [`base64`](/zh-CN/docs/Glossary/Base64)（`YWxhZGRpbjpvcGVuc2VzYW1l`）。
 
-> **备注：** 有关如何配置 Apache 或 Nginx 服务器以使用 HTTP 基本身份验证密码保护你站点的示例，另请参阅 [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Authentication)。
+> [!NOTE]
+> 有关如何配置 Apache 或 Nginx 服务器以使用 HTTP 基本身份验证密码保护你站点的示例，另请参阅 [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Authentication)。
 
 ### 使用 SHA-256 和 MD5 的 Digest 身份验证
 
-> **备注：** 该示例取自 {{RFC("7616")}}“HTTP Digest Access Authentication”（在规范中的其他示例，展示了 `SHA-512`、`charset` 和 `userhash` 的使用）。
+> [!NOTE]
+> 该示例取自 {{RFC("7616")}}“HTTP Digest Access Authentication”（在规范中的其他示例，展示了 `SHA-512`、`charset` 和 `userhash` 的使用）。
 
 客户端试图访问“`http://www.example.org/dir/index.html`”处的文档，该文档受到 digest 身份验证的保护。这个文档的用户名是“Mufsas”，并且它的密码是“Circle of Life”（注意，每个单词之间的单个空格）。
 
