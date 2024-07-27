@@ -59,7 +59,8 @@ Dans le [forum d'apprentissage du MDN](https://discourse.mozilla.org/c/mdn/learn
       4. Si la personne est loin d'avoir trouvé une solution, soyez gentil et encourageant et essayez de lui donner quelques indices sur la direction à prendre. Donnez-lui une autre chance d'essayer de faire mieux.
       5. Si vous avez besoin d'aide pour quoi que ce soit, demandez de l'aide dans le salon de discussion [MDN Web Docs](https://chat.mozilla.org/#/room/#mdn:mozilla.org) sur [Matrix](https://wiki.mozilla.org/Matrix).
 
-> **Attention :** Avant tout, soyez patient, amical et aimable. N'oubliez pas que la plupart de ces personnes sont des débutants.
+> [!WARNING]
+> Avant tout, soyez patient, amical et aimable. N'oubliez pas que la plupart de ces personnes sont des débutants.
 
 ## Structure de l'espace d'apprentissage MDN
 

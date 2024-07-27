@@ -56,13 +56,15 @@ D'une certaine manière, la totalité de ce module concerne l'accessibilité —
 
 Cela dit, cet article couvrira les problèmes en navigateur croisé et de test entourant les personnes avec des handicaps, et comment ils utilisent le Web. Nous avons déjà parlé des autres domaines comme le [responsive design](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS#Les_problèmes_de_responsive_design) et la [performance](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Les_problèmes_de_performance) à d'autres endroits dans ce module.
 
-> **Note :** Comme beaucoup de choses dans le développement web, l'accessibilité ne concerne pas la totale réussite ou échec ; l'accessibilité à 100% est quasiment impossible à atteindre pour tous les contenus, spécialement quand les sites deviennent plus complexes. Il s'agit plutôt de faire un effort pour rendre votre contenu accessible au plus grand nombre de personnes possible, avec du code de prévention, et se tenir aux meilleures pratiques.
+> [!NOTE]
+> Comme beaucoup de choses dans le développement web, l'accessibilité ne concerne pas la totale réussite ou échec ; l'accessibilité à 100% est quasiment impossible à atteindre pour tous les contenus, spécialement quand les sites deviennent plus complexes. Il s'agit plutôt de faire un effort pour rendre votre contenu accessible au plus grand nombre de personnes possible, avec du code de prévention, et se tenir aux meilleures pratiques.
 
 ## Problèmes d'accessibilité courants
 
 Dans cette section nous détaillerons certains des problèmes principaux qui se manifestent autour de l'accessibilité, liée à des technologies spécifiques, avec les bonnes pratiques à adopter, et quelques tests rapides que vous pouvez faire pour voir si vos sites vont dans le bon sens.
 
-> **Note :** L'accessibilité est moralement la bonne chose à faire, est bonne pour les affaires (nombre élevé d'utilisateurs handicapés, utilisateurs sur des appareils mobiles, etc. représentent un segment du marché signifiant), mais c'est aussi illégal dans de nombreuses régions de la planète de ne pas rendre les propriétés du web accessibles aux personnes avec des handicaps. Pour plus d'informations, lisez [Accessibility guidlines and the law](/fr/docs/Learn/Accessibility/What_is_accessibility#Accessibility_guidelines_and_the_law).
+> [!NOTE]
+> L'accessibilité est moralement la bonne chose à faire, est bonne pour les affaires (nombre élevé d'utilisateurs handicapés, utilisateurs sur des appareils mobiles, etc. représentent un segment du marché signifiant), mais c'est aussi illégal dans de nombreuses régions de la planète de ne pas rendre les propriétés du web accessibles aux personnes avec des handicaps. Pour plus d'informations, lisez [Accessibility guidlines and the law](/fr/docs/Learn/Accessibility/What_is_accessibility#Accessibility_guidelines_and_the_law).
 
 ### HTML
 
@@ -135,7 +137,8 @@ Notez que différents navigateurs peuvent avoir différentes options de contrôl
 - Firefox pour Max ne tabule pas par défaut. Pour l'activer, vous devez aller dans _Préférences_ > _Avancées_ > _Général_, puis décochez "Toujours utiliser les curseurs pour naviguer dans une page". Ensuite, vous devez ouvrir les Préférences Système de votre Mac, puis sélectionnez le boutons radio _Tous les contrôles_.
 - Safari ne vous permet pas de naviguer avec tab par défaut ; pour l'activer, vous devez ouvrir les _Préférences_ de Safari, allez dans Avancées, et cochez la case à cocher _Presser tab pour mettre en avant chaque item sur une page web_.
 
-> **Attention :** Vous devez jouer ce genre de test sur toutes les pages que vous écrivez — assurez-vous que la fonctionnalité peut être accessible par le clavier.
+> [!WARNING]
+> Vous devez jouer ce genre de test sur toutes les pages que vous écrivez — assurez-vous que la fonctionnalité peut être accessible par le clavier.
 
 Cet exemple souligne l'importance de l'utilisation de la sémantique correcte d'élément pour le travail correct. C'est possible de styler _n'importe quel_ élément pour qu'il ressemble à un lien ou un bouton avec le CSS, et de le faire se comporter comme un lien ou un bouton avec JavaScript, mais ils ne seront toujours pas des liens ou des boutons, et vous perdrez beaucoup de l'accessibilité que ces éléments vous fournissent pour rien. Donc ne le faîte pas si vous pouvez l'éviter.
 
@@ -154,7 +157,8 @@ select:focus {
 }
 ```
 
-> **Note :** Si vous décidez de retirer le style focus par défaut en utilisant du CSS, assurez-vous de le remplacer par autre chose qui s'accorde au mieux avec votre design — c'est un outil d'accessibilité de grande valeur, qui ne doit pas être supprimé.
+> [!NOTE]
+> Si vous décidez de retirer le style focus par défaut en utilisant du CSS, assurez-vous de le remplacer par autre chose qui s'accorde au mieux avec votre design — c'est un outil d'accessibilité de grande valeur, qui ne doit pas être supprimé.
 
 #### Intégrer l'accessibilité clavier
 
@@ -175,13 +179,15 @@ Parfois ça n'est pas possible d'éviter la perte de l'accessibilité clavier. V
 
    Ici nous ajoutons un listener à l'objet `document` pour détecter quand une touche a été appuyée sur le clavier. Nous vérifions quelle touche a été pressée avec la propriété d'évènement d'objet [keyCode](/fr/docs/Web/API/KeyboardEvent/keyCode) ; si c'est le code de la touche qui retourne Entrée/Retour, on exécute la fonction stockée dans le `onclick` du bouton en utilisant `document.activeElement.onclick()`. [`activeElement`](/fr/docs/Web/API/Document/activeElement) nous donne l'élément courant qui est focalisé sur la page.
 
-> **Note :** Cette technique ne fonctionnera que si vous configurer vos propres gestionnaires d'évènement avec les propriétés de gestion d'évènement (par ex. `onclick`). `addEventListener` ne fonctionnera pas. C'est beaucoup de prises de tête pour construire la fonctionnalité de retour. Et il y a d'autres problèmes rattachés avec. Vaut mieux commencer par utiliser les bons éléments pour leurs buts initiaux.
+> [!NOTE]
+> Cette technique ne fonctionnera que si vous configurer vos propres gestionnaires d'évènement avec les propriétés de gestion d'évènement (par ex. `onclick`). `addEventListener` ne fonctionnera pas. C'est beaucoup de prises de tête pour construire la fonctionnalité de retour. Et il y a d'autres problèmes rattachés avec. Vaut mieux commencer par utiliser les bons éléments pour leurs buts initiaux.
 
 #### Les textes alternatifs
 
 Les textes alternatifs sont très importants pour l'accessibilité — si une personne a un trouble visuel ou auditif qui l'empêche de voir ou d'entendre un contenu, alors c'est un problème. Le texte alternatif le plus simple disponible est le modeste attribut `alt`, que nous devrions inclure dans toutes les images qui contiennent un contenu pertinent. Il peut contenir une description de l'image qui transmet clairement son sens et son contenu sur la page, pour être récupéré par un lecteur d'écran et lu à l'utilisateur.
 
-> **Note :** Pour plus d'informations, lisez [Text alternatives](/fr/docs/Learn/Accessibility/HTML#Text_alternatives).
+> [!NOTE]
+> Pour plus d'informations, lisez [Text alternatives](/fr/docs/Learn/Accessibility/HTML#Text_alternatives).
 
 L'oubli de texte alt peut être testé de bien des façons, par exemple en utilisant [les outils d'audit](#les_outils_daudit) d'accessibilité.
 
@@ -195,13 +201,15 @@ La solution pour les textes de type lien c'est que les personnes utilisant des l
 
 Le suivant sur notre liste, l'élément de formulaire {{htmlelement("label")}} est une des fonctionnalités centrales qui nous permet de rendre les formulaires accessibles. Le problème avec les formulaires c'est que vous avez besoin de libellés pour dire quelle donnée doit être entrée dans chaque champs du formulaire. Chaque libellé doit être inclus dans un {{htmlelement("label")}} pour le relier clairement à son champs partenaire (chaque valeur de l'attribut `for` de `<label>` doit aller avec la valeur de l'`id` de l'élément du formulaire), et cela aura du sens même si le code source n'est pas totalement logique (ce qui pour être tout à fait juste devrait être fait).
 
-> **Note :** Lisez [Meaningful text labels](/fr/docs/Learn/Accessibility/HTML#Meaningful_text_labels), pour plus d'information à propos des textes de type lien et les libellés des formulaires.
+> [!NOTE]
+> Lisez [Meaningful text labels](/fr/docs/Learn/Accessibility/HTML#Meaningful_text_labels), pour plus d'information à propos des textes de type lien et les libellés des formulaires.
 
 Pour terminer, un mot rapide sur les tableaux de données. Un tableau de données basique peut être écrit avec des indications très simples (voir `bad-table.html` [en direct](http://mdn.github.io/learning-area/accessibility/html/bad-table.html), et [la source](https://github.com/mdn/learning-area/blob/master/accessibility/html/bad-table.html)), mais il y a des problèmes — il n'y a aucun moyen pour un utilisateur de lecteur d'écran d'associer des lignes ou des colonnes ensembles comme un groupe de données — pour faire cela vous devez connaître les lignes d'en-têtes, et si elles se dirigent en lignes, colonnes, etc. Cela ne peut être fait qu'en visuel pour un tel tableau.
 
 Si vous regardez plutôt notre exemple `punk-band-complete.html` ([direct](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html), [source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-complete.html)), vous pouvez voir plusieurs aides à l'accessibilité en place, comme les entêtes de tableau ({{htmlelement("th")}} et les attributs `scope`), l'élément {{htmlelement("caption")}}, etc.
 
-> **Note :** Lisez [Accessible data tables](/fr/docs/Learn/Accessibility/HTML#Accessible_data_tables), pour plus d'information à propos des tableaux accessibles.
+> [!NOTE]
+> Lisez [Accessible data tables](/fr/docs/Learn/Accessibility/HTML#Accessible_data_tables), pour plus d'information à propos des tableaux accessibles.
 
 ### CSS
 
@@ -219,7 +227,8 @@ Lorsque vous choisissez une palette de couleurs pour votre site web, vous devez 
 
 Une autre astuce est de ne pas compter sur une couleur seule pour les indications/informations, comme ça ne sera pas bon pour ceux qui ne peuvent pas voir la couleur. Plutôt que de marquer en rouge les champs requis d'un formulaire, par exemple, marquez-les avec un astérisque et en rouge.
 
-> **Note :** un contraste élevé permettra également à toute personnes utilisant un smartphone ou une tablette avec un écran brillant de mieux lire les pages dans un environnement lumineux, comme avec la lumière du soleil.
+> [!NOTE]
+> Un contraste élevé permettra également à toute personnes utilisant un smartphone ou une tablette avec un écran brillant de mieux lire les pages dans un environnement lumineux, comme avec la lumière du soleil.
 
 #### Cacher du contenu
 
@@ -301,7 +310,8 @@ Observons un exemple, en utilisant Tenon.
 
 Il y a également des options que vous pouvez examiner (voir le lien _Show Options_ vers le haut de la page), ainsi qu'une API pour utiliser Tenon comme un programme.
 
-> **Note :** De tels outils ne sont pas suffisant pour résoudre tous vos problèmes d'accessibilité en tant que tel. Vous devrez les combiner, savoir et expérience, test utilisateur, etc. pour vous faire une image exacte.
+> [!NOTE]
+> De tels outils ne sont pas suffisant pour résoudre tous vos problèmes d'accessibilité en tant que tel. Vous devrez les combiner, savoir et expérience, test utilisateur, etc. pour vous faire une image exacte.
 
 ### Les outils d'automatisation
 
@@ -336,7 +346,8 @@ VoiceOver (VO) est gratuit avec votre Mac/iPhone/iPad, donc c'est utile pour tes
 
 Pour le démarrer, pressez Cmd + Fn + F5. Si vous n'avez jamais utilisé VO auparavant, vous obtiendrez un écran de bienvenue où vous pouvez choisir de démarrer VO ou de ne pas le démarrer, et vous parcourrez un tutoriel utile pour apprendre à comment l'utiliser. Pour l'arrêter, pressez Cmd + Fn + F5 à nouveau.
 
-> **Note :** Vous devriez parcourir le tutoriel au moins une fois — il est vraiment très utile pour en apprendre à propos de VO.
+> [!NOTE]
+> Vous devriez parcourir le tutoriel au moins une fois — il est vraiment très utile pour en apprendre à propos de VO.
 
 Lorsque VO est démarré, l'affichage ressemblera à peu près à cela, mais vous verrez une boîte noire en bas à gauche de l'écran qui contient l'information sur quoi est-ce que VO est actuellement sélectionné. La sélection courante sera également mise en avant, avec une bordure noire — cette mise en avant est connue comme le **curseur VO**.
 
@@ -492,7 +503,8 @@ NVDA sera maintenant actif sur votre ordinateur.
 
 Pour utiliser NVDA, vous aller beaucoup utiliser le "modificateur NVDA" — c'est une touche que vous devez presser en plus de l'actuel raccourci NVDA pour qu'elles fonctionnent. Utiliser un modificateur comme celui-ci est courant avec les lecteurs d'écran, pour leur permettre de garder leurs propres commandes en évitant d'entrer en conflit avec d'autres commandes. Dans le cas de NVDA, le modificateur peut aussi être Insert (par défaut), ou VerrMaj (peut être choisi en cochant la première case à cocher dans la boîte de dialogue de bienvenue avant d'appuyer sur _OK_).
 
-> **Note :** NVDA est plus subtile que VoiceOver en termes de comment il met en valeur là où il est et qu'est-ce qu'il fait. Lorsque vous défilez à travers des rubriques, listes, etc. les éléments que vous sélectionnez seront généralement mis à avant avec un contour subtile, mais ça n'est pas toujours le cas pour toutes les choses. Si vous vous retrouvez complètement perdu, vous pouvez appuyer sur Ctrl + F5 pour rafraîchir la page courante et recommencer en haut de la page.
+> [!NOTE]
+> NVDA est plus subtile que VoiceOver en termes de comment il met en valeur là où il est et qu'est-ce qu'il fait. Lorsque vous défilez à travers des rubriques, listes, etc. les éléments que vous sélectionnez seront généralement mis à avant avec un contour subtile, mais ça n'est pas toujours le cas pour toutes les choses. Si vous vous retrouvez complètement perdu, vous pouvez appuyer sur Ctrl + F5 pour rafraîchir la page courante et recommencer en haut de la page.
 
 NVDA a beaucoup de commandes clavier, et nous n'allons pas toutes les lister ici. Les principales dont vous aurez besoin pour tester une page web sont dans le tableau suivant. Dans les raccourcis clavier, "NVDA" veut dire "le modificateur NVDA".
 

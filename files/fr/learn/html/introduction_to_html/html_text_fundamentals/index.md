@@ -1001,7 +1001,8 @@ Voici la meilleure règle d'or : il est probablement approprié d'utiliser `<b>`
 - {{HTMLElement('b')}} s'utilise pour transmettre un sens traditionnellement véhiculé avec les caractères en gras&nbsp;: des mots‑clés, des noms de produits, une phrase liminaire…
 - {{HTMLElement('u')}} s'utilise pour transmettre un sens traditionnellement véhiculé avec le soulignement&nbsp;: noms propres, mauvaise orthographe...
 
-> **Note :** Un petit avertissement à propos du soulignement : **les gens associent fortement soulignement et hyperliens**. Par conséquent, sur le Web, il est préférable de ne souligner que les liens. N'utilisez l'élément `<u>` que s'il est sémantiquement approprié, mais envisagez d'utiliser les CSS pour remplacer le soulignement par défaut par quelque chose de plus approprié sur le Web. L'exemple ci-dessous illustre comment cela peut être fait.
+> [!NOTE]
+> Un petit avertissement à propos du soulignement : **les gens associent fortement soulignement et hyperliens**. Par conséquent, sur le Web, il est préférable de ne souligner que les liens. N'utilisez l'élément `<u>` que s'il est sémantiquement approprié, mais envisagez d'utiliser les CSS pour remplacer le soulignement par défaut par quelque chose de plus approprié sur le Web. L'exemple ci-dessous illustre comment cela peut être fait.
 
 ```html
 <!-- noms scientifiques -->

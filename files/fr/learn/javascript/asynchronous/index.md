@@ -7,7 +7,7 @@ slug: Learn/JavaScript/Asynchronous
 
 Dans ce module, nous examinons le [JavaScript](/fr/docs/Glossary/JavaScript) [asynchrone](/fr/docs/Glossary/Asynchronous), pourquoi il est important et comment il peut être utilisé afin de gérer efficacement les opérations potentiellement bloquantes telles que la récupération de ressources sur un serveur.
 
-> **Remarque :**
+> [!CALLOUT]
 >
 > #### Vous cherchez à devenir développeuse ou développeur web front-end&nbsp;?
 >
@@ -19,7 +19,8 @@ Dans ce module, nous examinons le [JavaScript](/fr/docs/Glossary/JavaScript) [as
 
 Le JavaScript asynchrone est un sujet assez avancé, et il vous est conseillé de travailler sur les modules [Premiers pas en JavaScript](/fr/docs/Learn/JavaScript/First_steps) et [Blocs de construction de JavaScript](/fr/docs/Learn/JavaScript/Building_blocks) avant d'attaquer cette leçon.
 
-> **Note :** Si vous travaillez sur un ordinateur/tablette/autre appareil où vous n'avez pas la possibilité de créer vos propres fichiers, vous pouvez essayer (la plupart) des exemples de code dans un programme de codage en ligne tel que [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com).
+> [!NOTE]
+> Si vous travaillez sur un ordinateur/tablette/autre appareil où vous n'avez pas la possibilité de créer vos propres fichiers, vous pouvez essayer (la plupart) des exemples de code dans un programme de codage en ligne tel que [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com).
 
 ## Guides
 

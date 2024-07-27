@@ -157,7 +157,8 @@ Voici quelques explications sur la fonction `addEventListener()` qui a été ajo
 - L'instruction `if` affiche un message d'erreur si la valeur saisie n'est pas un nombre. La condition vérifie si l'expression `isNaN(nombre)` retourne `true`. La fonction [`isNaN()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/isNaN) teste si la valeur `nombre` n'est pas un nombre&nbsp;: si c'est le cas, elle retourne `true`, et sinon, elle retourne `false`.
 - Si la condition retourne `false`, la valeur `nombre` est un nombre et la fonction affiche une phrase à l'intérieur du paragraphe qui indique le carré de la valeur, son cube et sa factorielle. Pour cela, la fonction appelle les fonctions `carre()`, `cube()`, et `factorielle()` pour calculer les valeurs requises.
 
-> **Note :** Si vous rencontrez des difficultés pour faire fonctionner cet exemple, vous pouvez vérifier le code en le comparant à [la version finale (en anglais) sur GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library-finished.html) (vous pouvez également voir [la démo en anglais](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)).
+> [!NOTE]
+> Si vous rencontrez des difficultés pour faire fonctionner cet exemple, vous pouvez vérifier le code en le comparant à [la version finale (en anglais) sur GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library-finished.html) (vous pouvez également voir [la démo en anglais](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)).
 
 ## À votre tour&nbsp;!
 

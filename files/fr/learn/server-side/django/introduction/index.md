@@ -69,7 +69,8 @@ Django vous aide à écrire une application qui est:
 
 Django a continué à se développer et à s'améliorer, depuis sa première sortie (1.0) en Septembre 2008 jusqu'à la version 2.0 récemment sortie (2017). Chaque sortie a ajouté son lot de nouvelles fonctionnalités et de corrections de bugs, allant du support de nouveaux types de bases de données, de moteurs de templates et de cache, à l'addition de fonctions et de classes de vues 'génériques' (qui réduisent la quantité de code que doivent écrire les développeurs pour tout un tas de tâches de programmation).
 
-> **Note :** Consultez les [notes de publication](https://docs.djangoproject.com/en/1.10/releases/) sur le site web de Django pour voir les changements apportés dans les versions récentes, ainsi que tout le travail accompli pour améliorer Django.
+> [!NOTE]
+> Consultez les [notes de publication](https://docs.djangoproject.com/en/1.10/releases/) sur le site web de Django pour voir les changements apportés dans les versions récentes, ainsi que tout le travail accompli pour améliorer Django.
 
 Désormais, Django est un projet open-source collaboratif florissant, avec plusieurs milliers d'utilisateurs et de contributeurs. Bien que plusieurs fonctionnalités reflètent encore ses origines, Django a évolué en un framework versatile capable de développer n'importe quel type de site web.
 
@@ -104,7 +105,8 @@ Les applications web Django regroupent généralement le code qui gère chacune 
 - **Modèles :** Les modèles sont des objets Python, qui définissent la structure des données d'une application, et fournissent des mécanismes de gestion (ajout, modification, suppression) et requêtent les enregistrements d'une base de données.
 - **Templates:** Un template est un fichier texte qui définit la structure ou la mise en page d'un fichier (comme une page HTML), avec des balises utilisées pour représenter le contenu. Une _vue_ peut créer une page HTML en dynamique en utilisant un template HTML, en la peuplant avec les données d'un _modèle_. Un template peut-être utilisé pour définir la structure de n'importe quel type de fichier; il n'est pas obligatoire que ce dernier soit un HTML !
 
-> **Note :** Django mentionne cette organisation sous le nom d'architecture "Modèle Vue Template". Elle a plusieurs similarités avec l'architecture [Modèle Vue Contrôleur](/fr/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture).
+> [!NOTE]
+> Django mentionne cette organisation sous le nom d'architecture "Modèle Vue Template". Elle a plusieurs similarités avec l'architecture [Modèle Vue Contrôleur](/fr/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture).
 
 Les sections ci-dessous vous donneront une idée de ce à quoi ressemble ces différentes parties d'une application Django (nous verrons plus de détails plus tard dans le jeu, une fois que nous aurons configuré l'environnement de développement).
 
@@ -146,7 +148,8 @@ def index(request):
     return HttpResponse('Hello from Django!')
 ```
 
-> **Note :** Un peu de Python :
+> [!NOTE]
+> Un peu de Python :
 >
 > - Les [modules Python](https://docs.python.org/3/tutorial/modules.html) sont des librairies de fonctions, stockés dans des fichiers séparés que l'on peut vouloir utiliser dans notre code. Ici, nous importons l'objet `HttpResponse` du module `django.http` pour qu'on puisse l'utiliser dans notre vue : `from django.http import HttpResponse` . Il y a d'autres façons d'importer quelques objets (ou tous les objets) d'un module.
 > - Les fonctions sont déclarées en utilisant le mot-clé `def` comme indiqué ci-dessus, avec des paramètres nommés listés entre parenthèses après le nom de la fonction; la ligne se termine ensuite par deux points. Notez que les lignes suivantes sont **indentées**. L'indentation est importante, car elle spécifie que les lignes de code sont contenues dans un bloc particulier (l'indentation obligatoire est un élément clé de Python, et une des raisons pour lesquelles le code Python est si simple à lire).
@@ -176,7 +179,8 @@ class Team(models.Model):
     team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
 ```
 
-> **Note :** Un peu de Python :
+> [!NOTE]
+> Un peu de Python :
 >
 > - Python supporte la "programmation orientée-objet", un type de programmation où l'on organise notre code en objets, ce qui inclut les données et fonctions liées qui agiront sur les données. Les objets peuvent être hérités/étendus/dérivés d'autres objets, ce qui permet à ces objets de partager un comportement commun. En Python, on utilise le mot-clé `class` pour définir le "squelette" d'un objet. On peut créer plusieurs _instances_ spécifiques de ce type d'objet d'après le modèle d'une classe.
 >

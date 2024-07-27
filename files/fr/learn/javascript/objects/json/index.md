@@ -38,7 +38,8 @@ Le JavaScript Object Notation (JSON) est un format standard utilisé pour repré
 
 Le JSON se présente sous la forme d'une chaîne de caractères —utile lorsque vous souhaitez transmettre les données sur un réseau. Il a donc besoin d'être converti en un objet JavaScript natif lorsque vous souhaitez accéder aux données. Ce n'est pas vraiment un souci puisque le JavaScript fournit un objet global [JSON](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON) disposant des méthodes pour assurer la conversion entre les deux.
 
-> **Note :** Convertir une chaîne de caractères en un objet natif se nomme **analyse syntaxique (parsage)** tandis que le contraire porte le nom de la **linéarisation (stringification)**.
+> [!NOTE]
+> Convertir une chaîne de caractères en un objet natif se nomme **analyse syntaxique (parsage)** tandis que le contraire porte le nom de la **linéarisation (stringification)**.
 
 Un objet JSON peut être stocké dans son propre fichier qui se présente simplement sous la forme d'un fichier texte avec l'extension `.json` et le {{glossary("MIME type")}} `application/json`.
 
@@ -105,7 +106,8 @@ superHeroes["members"][1]["powers"][2];
 4. À l'intérieur de cet objet, nous souhaitons accéder à la propriété `powers`, donc, nous utilisons `["powers"]`.
 5. Enfin, à l'intérieur de cette propriété `powers` nous trouvons un nouveau tableau qui contient les super pouvoirs de ce héros. Nous désirons obtenir le troisième, donc nous tapons `[2]`.
 
-> **Note :** L'objet JSON vu ci-dessus est disponible au sein d'une variable dans notre exemple [JSONTest.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html)). Essayez de le charger et d'accéder aux données en utilisant la console Javascript de votre navigateur.
+> [!NOTE]
+> L'objet JSON vu ci-dessus est disponible au sein d'une variable dans notre exemple [JSONTest.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html)). Essayez de le charger et d'accéder aux données en utilisant la console Javascript de votre navigateur.
 
 ### Des tableaux en tant que JSON
 
@@ -286,9 +288,11 @@ Maintenant, on utilise une [boucle for](/fr/docs/Apprendre/JavaScript/Building_b
 5. Utiliser une autre boucle `for` pour parcourir les super-pouvoirs du héros actuel — créer pour chacun d'entre eux un élément `<li>`, y placer le super-pouvoir et placer le `listItem` dans l'élément `<ul>` (`myList`) en utilisant `appendChild()`.
 6. Pour finir, on ajoute `<h2>`, les `<p>`s et `<ul>` à `<article>` (`myArticle`), et on ajoute `<article>` à `<section>`. L'ordre d'ajout est important, c'est l'ordre dans lequel les éléments seront affichés dans le HTML.
 
-> **Note :** Si vous ne parvenez pas à faire fonctionner l'exemple, consultez notre code source [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) (ou regardez-le [en action](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html).)
+> [!NOTE]
+> Si vous ne parvenez pas à faire fonctionner l'exemple, consultez notre code source [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) (ou regardez-le [en action](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html).)
 
-> **Note :** Si vous comprenez difficilement la notation avec un point/une accolade utilisée pour accéder au JSON, ouvrez le fichier [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) dans un nouvel onglet ou dans votre éditeur de texte et consultez-le pendant la lecture de notre code Javascript. Vous pouvez également vous reporter à notre article [Les bases du JavaScript orienté objet](/fr/docs/Learn/JavaScript/Objects/Basics) pour obtenir plus de détails sur la notation avec un point et avec une accolade.
+> [!NOTE]
+> Si vous comprenez difficilement la notation avec un point/une accolade utilisée pour accéder au JSON, ouvrez le fichier [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) dans un nouvel onglet ou dans votre éditeur de texte et consultez-le pendant la lecture de notre code Javascript. Vous pouvez également vous reporter à notre article [Les bases du JavaScript orienté objet](/fr/docs/Learn/JavaScript/Objects/Basics) pour obtenir plus de détails sur la notation avec un point et avec une accolade.
 
 ## Conversion entre objets et textes
 

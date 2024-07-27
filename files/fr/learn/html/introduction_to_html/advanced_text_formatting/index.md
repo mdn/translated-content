@@ -484,7 +484,8 @@ Nous utilisons l'HTML pour structurer nos documents web.
 
 Je pense que le R. Green l'a fait dans la cuisine avec une tronçonneuse.
 
-> **Note :** Il existe un autre élément, {{htmlelement("acronym")}}, faisant fondamentalement la même chose que `<abbr>`, destiné spécifiquement aux acronymes plutôt qu'aux abréviations. Il est cependant tombé en désuétude — il n'était pas aussi bien pris en charge dans les navigateurs que \<abbr> et sa fonction était si ressemblante qu'on a considéré inutile d'avoir les deux. Il suffit d'utiliser \<abbr> à la place.
+> [!NOTE]
+> Il existe un autre élément, {{htmlelement("acronym")}}, faisant fondamentalement la même chose que `<abbr>`, destiné spécifiquement aux acronymes plutôt qu'aux abréviations. Il est cependant tombé en désuétude — il n'était pas aussi bien pris en charge dans les navigateurs que \<abbr> et sa fonction était si ressemblante qu'on a considéré inutile d'avoir les deux. Il suffit d'utiliser \<abbr> à la place.
 
 ### Apprentissage actif&nbsp;: marquer une abréviation
 

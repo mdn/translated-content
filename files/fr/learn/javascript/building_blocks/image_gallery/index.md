@@ -32,7 +32,8 @@ Pour réaliser cette évaluation, vous devez récupérer le fichier [ZIP](https:
 
 Vous pouvez également utiliser un site comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour effectuer votre évalution. Vous pouvez copier le code HTML,CSS et JavaScript dans l'un de ces éditeurs en ligne. Si l'éditeur en ligne que vous utilisez ne dispose pas de panneaux JavaScript/CSS séparés, n'hésitez pas à utiliser les éléments `<script>`/`<style>` dans la page HTML.
 
-> **Note :** Si vous êtes bloqué, demandez-nous de l'aide — voir la section [Évaluation ou aide supplémentaire](#évaluation_ou_aide_supplémentaire) au bas de cette page.
+> [!NOTE]
+> Si vous êtes bloqué, demandez-nous de l'aide — voir la section [Évaluation ou aide supplémentaire](#évaluation_ou_aide_supplémentaire) au bas de cette page.
 
 ## Résumé du projet
 

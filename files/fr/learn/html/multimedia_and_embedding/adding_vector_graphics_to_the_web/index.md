@@ -22,7 +22,8 @@ Les graphiques vectoriels sont utiles dans de nombreuses circonstances. Ils sont
   </tbody>
 </table>
 
-> **Note :** Cet article n'a pas pour objectif de vous enseigner SVG. Nous verrons à quoi sert ce format et comment ajouter des images SVG aux pages web.
+> [!NOTE]
+> Cet article n'a pas pour objectif de vous enseigner SVG. Nous verrons à quoi sert ce format et comment ajouter des images SVG aux pages web.
 
 ## Qu'est-ce qu'une image vectorielle&nbsp;?
 
@@ -41,7 +42,8 @@ La différence s'accentue lorsqu'on zoome sur la page. L'image PNG devient de pl
 
 ![Les deux étoiles qu'on a zoomées, celle de droite est nette et celle de gauche est pixelisée/floue.](raster-vector-zoomed.png)
 
-> **Note :** Les deux images affichées ci-dessus sont des PNG qui illustrent le rendu des deux étoiles (l'une en SVG, l'autre en PNG) à des niveaux de zoom différent. N'hésitez surtout pas à aller sur [`vector-versus-raster.html`](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) pour voir l'exemple en direct&nbsp;!
+> [!NOTE]
+> Les deux images affichées ci-dessus sont des PNG qui illustrent le rendu des deux étoiles (l'une en SVG, l'autre en PNG) à des niveaux de zoom différent. N'hésitez surtout pas à aller sur [`vector-versus-raster.html`](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) pour voir l'exemple en direct&nbsp;!
 
 De plus, les fichiers des images vectorielles sont plus légers que les équivalents matriciels. En effet, ils n'ont qu'à contenir quelques déclarations de chemins/formes avec des algorithmes plutôt que des informations spécifiques pour tous les pixels.
 

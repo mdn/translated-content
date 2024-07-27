@@ -87,7 +87,8 @@ export default function Todo() {
 }
 ```
 
-> **Note :** Les composants doivent toujours retourner quelque chose. Si, à un moment donné, vous essayez de rendre un composant qui ne renvoie rien, React affichera une erreur dans votre navigateur.
+> [!NOTE]
+> Les composants doivent toujours retourner quelque chose. Si, à un moment donné, vous essayez de rendre un composant qui ne renvoie rien, React affichera une erreur dans votre navigateur.
 
 Notre composant `Todo` est terminé, du moins pour l'instant&nbsp;nous pouvons maintenant l'utiliser. Dans `App.js`, ajoutez la ligne suivante en haut du fichier pour importer `Todo`&nbsp;:
 
@@ -249,7 +250,8 @@ root.render(
 
 Ce tableau est maintenant disponible pour le composant App en tant que `props.tasks`. Vous pouvez utiliser `console.table()` pour en inspecter le contenu.
 
-> **Note :** Les noms de constantes `TOUT_EN_MAJUSCULES` n'ont pas de signification particulière en JavaScript. Il s'agit d'une convention qui indique que «&nbsp;cette donnée ne changera jamais après avoir été définie ici&nbsp;».
+> [!NOTE]
+> Les noms de constantes `TOUT_EN_MAJUSCULES` n'ont pas de signification particulière en JavaScript. Il s'agit d'une convention qui indique que «&nbsp;cette donnée ne changera jamais après avoir été définie ici&nbsp;».
 
 ## Effectuer le rendu en itérant
 
@@ -385,7 +387,8 @@ function FilterButton(props) {
 export default FilterButton;
 ```
 
-> **Note :** Vous remarquerez peut-être que nous faisons ici la même erreur que pour le composant `<Todo />`, en ce sens que chaque bouton sera le même. Ce n'est pas grave&nbsp;! Nous allons corriger ce composant plus tard, dans la section [Revenons aux boutons de filtrage](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons).
+> [!NOTE]
+> Vous remarquerez peut-être que nous faisons ici la même erreur que pour le composant `<Todo />`, en ce sens que chaque bouton sera le même. Ce n'est pas grave&nbsp;! Nous allons corriger ce composant plus tard, dans la section [Revenons aux boutons de filtrage](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons).
 
 ## Importation de tous nos composants
 

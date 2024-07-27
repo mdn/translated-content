@@ -243,7 +243,8 @@ Cela fonctionne à la perfection. Vous pouvez échapper d'autres caractères de 
    response;
    ```
 
-> **Note :** Quand vous entrez une chaîne dans votre code, entre guillemets simples ou doubles, on l'appelle **chaîne littérale**.
+> [!NOTE]
+> Quand vous entrez une chaîne dans votre code, entre guillemets simples ou doubles, on l'appelle **chaîne littérale**.
 
 ### Concaténation dans un contexte
 
