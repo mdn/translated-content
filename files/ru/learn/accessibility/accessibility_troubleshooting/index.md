@@ -35,7 +35,8 @@ The text is difficult to read because of the current color scheme. Can you do a 
 2. Can you update the article text to make it easier for screenreader users to navigate?
 3. The navigation menu part of the site (wrapped in `<div class="nav"></div>`) could be made more accessible by putting it in a proper HTML5 semantic element. Which one should it be updated to? Make the update.
 
-> **Примечание:** You'll need to update the CSS rule selectors that style the tags to their proper equivalents for the semantic headings. Once you add paragraph elements, you'll notice the styling looking better.
+> [!NOTE]
+> You'll need to update the CSS rule selectors that style the tags to their proper equivalents for the semantic headings. Once you add paragraph elements, you'll notice the styling looking better.
 
 ### The images
 
