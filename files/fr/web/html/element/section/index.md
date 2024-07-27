@@ -11,7 +11,8 @@ L'élément HTML **`<section>`** représente une section générique d'un docume
 
 Ainsi, un menu de navigation devrait être délimité par un élément {{htmlelement("nav")}} mais une liste de résultat de recherche, qui ne dispose pas d'élément spécifique pour être représentée, pourrait être englobée dans un élément `<section>`.
 
-> **Note :** Si le contenu de l'élément devrait être considéré comme un fragment indépendant (qui puisse être séparée du reste du contenu), l'élément {{HTMLElement("article")}} sera plus pertinent.
+> [!NOTE]
+> Si le contenu de l'élément devrait être considéré comme un fragment indépendant (qui puisse être séparée du reste du contenu), l'élément {{HTMLElement("article")}} sera plus pertinent.
 
 ## Attributs
 

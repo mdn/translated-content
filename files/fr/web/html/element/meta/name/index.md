@@ -15,7 +15,7 @@ La spécification HTML définit les noms de métadonnées standard suivants&nbsp
 
   - : Le nom de l'application qui s'exécute sur la page web.
 
-    > **Note :**
+    > [!NOTE]
     >
     > - Les navigateurs peuvent utiliser cette information pour identifier l'application. Cette métadonnée est différente de celle fournie par [`<title>`](/fr/docs/Web/HTML/Element/title) qui comprend généralement le nom de l'application, mais qui peut aussi contenir le nom du document ou un état.
     > - Les pages web simples ne devraient pas utiliser `application-name`.
@@ -70,7 +70,7 @@ La spécification HTML définit les noms de métadonnées standard suivants&nbsp
       </tbody>
     </table>
 
-    > **Note :**
+    > [!NOTE]
     >
     > - L'insertion dynamique d'un élément `<meta name="referrer">` (en utilisant [`document.write()`](/fr/docs/Web/API/Document/write) ou [`appendChild()`](/fr/docs/Web/API/Node/appendChild)) rendra imprévisible le comportement du référent.
     > - Lorsque plusieurs règles contradictoires sont définies, c'est la règle `no-referrer` qui est appliquée.
@@ -196,7 +196,7 @@ Désactiver la possibilité de zoomer en utilisant `user-scalable` avec la valeu
     | `noimageindex` | Demande à ce que cette page n'apparaisse pas comme page référente d'une image indexée.        | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag)                                                                                                                                                                    |
     | `nocache`      | Synonyme de `noarchive`.                                                                      | [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240)                                                                                                                                                          |
 
-  > **Note :**
+  > [!NOTE]
   >
   > - Ces règles ne sont pas contraignantes dans l'absolu. Seuls les robots suivants les bonnes pratiques les respecteront. Il ne faut pas s'attendre à ce qu'un acteur malveillant les suive.
   > - Le robot doit avoir accès à la page afin de lire ces règles. Pour éviter une consommation de bande passante, utilisez un fichier [`robots.txt`](/fr/docs/Glossary/Robots.txt).

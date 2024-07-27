@@ -15,7 +15,8 @@ Les valeurs autorisées pour cet attribut sont :
 - `rtl` : qui signifie _right to left_ (droite à gauche), utilisé pour les langages écrits de droite à gauche (comme l'arabe par exemple)
 - `auto` : qui délègue la décision à l'agent utilisateur. L'algorithme utilisé est relativement simple : le contenu textuel est analysé et lorsque le premier caractère possédant une direction « forte » est rencontré, cette direction est prise pour l'ensemble de l'élément.
 
-> **Note :** Cet attribut est obligatoire pour l'élément {{HTMLElement("bdo")}}, pour lequel l'attribut a une sémantique différente.
+> [!NOTE]
+> Cet attribut est obligatoire pour l'élément {{HTMLElement("bdo")}}, pour lequel l'attribut a une sémantique différente.
 >
 > - La valeur de l'attribut n'est pas héritée par l'élément {{HTMLElement("bdi")}}. S'il n'est pas défini, la valeur par défaut sera `auto`.
 > - Cet attribut peut être surchargé par les propriétés CSS {{cssxref("direction")}} et {{cssxref("unicode-bidi")}}, (qui sont appliquées si une page CSS est active et que l'élément courant prend en charge ces propriétés).

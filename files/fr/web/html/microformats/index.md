@@ -126,7 +126,8 @@ Cela fournira le JSON suivant :
 }
 ```
 
-> **Note :** Le h-card imbriqué récupère des valeurs implicites pour `name` et `url`.
+> [!NOTE]
+> Le h-card imbriqué récupère des valeurs implicites pour `name` et `url`.
 
 ### h-entry
 

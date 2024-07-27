@@ -10,7 +10,8 @@ L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`translate`** e
 - `"yes"` (ou une chaîne vide), qui indique que l'élément devrait être traduit lorsque la page est localisée ;
 - `"no"`, qui indique que l'élément ne doit pas être traduit.
 
-> **Note :** Bien que la prise en charge de cet attribut ne soit pas homogène pour les navigateurs, celui-ci est pris en compte par les outils de traduction automatique (Google Translate par exemple) et les outils de traduction utilisés par les traducteurs. Aussi, cet attribut doit être utilisé par les auteurs web afin d'indiquer correctement le contenu qui ne devrait pas être traduit.
+> [!NOTE]
+> Bien que la prise en charge de cet attribut ne soit pas homogène pour les navigateurs, celui-ci est pris en compte par les outils de traduction automatique (Google Translate par exemple) et les outils de traduction utilisés par les traducteurs. Aussi, cet attribut doit être utilisé par les auteurs web afin d'indiquer correctement le contenu qui ne devrait pas être traduit.
 
 ## Exemples
 

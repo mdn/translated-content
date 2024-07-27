@@ -35,7 +35,8 @@ Vous pouvez aussi configurer le serveur pour autoriser tous les domaines à acc�
 Access-Control-Allow-Origin: *
 ```
 
-> **Attention :** Autoriser n'importe quel site à accéder à une API privée est une mauvaise idée.
+> [!WARNING]
+> Autoriser n'importe quel site à accéder à une API privée est une mauvaise idée.
 
 Pour autoriser n'importe quel site à faire des requêtes CORS _sans_ utiliser le caractère générique `*` (par exemple, pour fournir des authentifiants), votre serveur doit lire la valeur de l'en-tête `Origin` de la requête et l'utiliser dans `Access-Control-Allow-Origin`, tout en ajoutant un en-tête `Vary: Origin` pour indiquer que certains en-têtes sont définis dynamiquement selon leur origine.
 

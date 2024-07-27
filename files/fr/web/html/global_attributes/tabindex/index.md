@@ -13,19 +13,23 @@ Cet attribut peut prendre l'une des valeurs suivantes :
 
 - Une valeur négative : l'élément peut capturer le focus mais ne peut pas être atteint via la navigation au clavier ;
 
-  > **Note :** Cette valeur peut être utile lorsqu'on a un contenu situé en dehors de l'écran qui doit apparaître lors d'un évènement donné. Il ne sera pas possible d'y passer le focus au clavier mais on pourra le faire avec [la méthode `focus()`](/fr/docs/Web/API/HTMLElement/focus).
+  > [!NOTE]
+  > Cette valeur peut être utile lorsqu'on a un contenu situé en dehors de l'écran qui doit apparaître lors d'un évènement donné. Il ne sera pas possible d'y passer le focus au clavier mais on pourra le faire avec [la méthode `focus()`](/fr/docs/Web/API/HTMLElement/focus).
 
 - `0` : l'élément peut capturer le focus et être atteint via la navigation au clavier, cependant son ordre relatif est défini par la plateforme, généralement selon l'ordre des éléments du DOM ;
 
-  > **Attention :** Le positionnement CSS n'aura pas d'impact sur le `taborder`. Le positionnement n'a qu'un impact visuel, l'ordre des tabulations correspond à l'ordre du DOM.
+  > [!WARNING]
+  > Le positionnement CSS n'aura pas d'impact sur le `taborder`. Le positionnement n'a qu'un impact visuel, l'ordre des tabulations correspond à l'ordre du DOM.
 
 - Une valeur positive : l'élément peut capturer le focus et peut être atteint via la navigation au clavier, l'ordre relatif dans la navigation est défini par la valeur de l'attribut. Les navigations seront parcourues dans l'ordre croissant.
 
-  > **Attention :** Il n'est pas recommandé de fournir des valeurs positives pour les éléments car cela peut être source de confusion, notamment pour les personnes qui utilisent des technologies d'assistance. Il est préférable d'organiser les éléments dans un ordre correct au niveau du DOM.
+  > [!WARNING]
+  > Il n'est pas recommandé de fournir des valeurs positives pour les éléments car cela peut être source de confusion, notamment pour les personnes qui utilisent des technologies d'assistance. Il est préférable d'organiser les éléments dans un ordre correct au niveau du DOM.
 
 Si on utilise l'attribut `tabindex` sur un élément {{HTMLElement("div")}}, on ne pourra pas naviguer dans le contenu de cet élément avec les flèches du clavier, sauf si `tabindex` est également utilisé sur le contenu. Pour observer ce comportement, vous pouvez utiliser [cet exemple JSFiddle](https://jsfiddle.net/jainakshay/0b2q4Lgv/).
 
-> **Note :** La valeur maximale pour `tabindex` est fixée à 32767 par HTML4. Sa valeur par défaut est 0 pour les éléments qui peuvent recevoir le focus et -1 pour les autres.
+> [!NOTE]
+> La valeur maximale pour `tabindex` est fixée à 32767 par HTML4. Sa valeur par défaut est 0 pour les éléments qui peuvent recevoir le focus et -1 pour les autres.
 
 ## Exemples
 

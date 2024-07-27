@@ -9,7 +9,8 @@ L'en-tête HTTP de la requête **`Accept-Charset`** indique le jeu de caractère
 
 Si le serveur ne peut servir aucun jeu de caractères correspondant, il peut théoriquement renvoyer un code d'erreur {{HTTPStatus ("406")}} (non acceptable). Cependant, pour une meilleure expérience utilisateur, cela est rarement fait et le moyen le plus courant consiste à ignorer l'en-tête `Accept-Charset` dans ce cas.
 
-> **Note :** Dans les premières versions de HTTP / 1.1, un jeu de caractères par défaut (ISO-8859-1) était défini. Ce n'est plus le cas et maintenant chaque type de contenu peut avoir sa propre valeur par défaut.
+> [!NOTE]
+> Dans les premières versions de HTTP / 1.1, un jeu de caractères par défaut (ISO-8859-1) était défini. Ce n'est plus le cas et maintenant chaque type de contenu peut avoir sa propre valeur par défaut.
 
 <table class="properties">
   <tbody>

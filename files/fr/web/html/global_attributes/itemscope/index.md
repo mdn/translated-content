@@ -177,7 +177,8 @@ Directions: <br>
   </tbody>
 </table>
 
-> **Note :** Pour extraire des micro-données d'un document HTML, vous pouvez utiliser [l'outil d'extraction de Google pour les micro-données.](https://developers.google.com/structured-data/testing-tool/) Vous pouvez par exemple utiliser le document HTML précédent.
+> [!NOTE]
+> Pour extraire des micro-données d'un document HTML, vous pouvez utiliser [l'outil d'extraction de Google pour les micro-données.](https://developers.google.com/structured-data/testing-tool/) Vous pouvez par exemple utiliser le document HTML précédent.
 
 ## Spécifications
 

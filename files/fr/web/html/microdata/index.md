@@ -14,7 +14,8 @@ Les microdonnées sont des groupes de paires nom-valeur. Ces groupes sont appel�
 
 Google et les autres moteurs de recherches participent au vocabulaire défini par [schema.org](https://schema.org/) pour structurer les données. Ce vocabulaire définit un ensemble standard de types et de noms de propriétés. Par exemple [`MusicEvent`](https://schema.org/MusicEvent) indique un événement musical dont les propriétés [`startDate`](https://schema.org/startDate) et [`location`](https://schema.org/location) utilisées pour définir les détails du concert. Dans ce cas, l'URL [`https://schema.org/MusicEvent`](https://schema.org/MusicEvent) sera l'URL utilisée pour l'attribut `itemtype` et les propriétés `startDate` et `location` seront les propriétés utilisées, définies par [`https://schema.org/MusicEvent`](https://schema.org/MusicEvent).
 
-> **Note :** Pour en savoir plus sur les attributs `itemtype`, consultez le site <http://schema.org/Thing>.
+> [!NOTE]
+> Pour en savoir plus sur les attributs `itemtype`, consultez le site <http://schema.org/Thing>.
 
 Les vocabulaires de microdonnées fournissent la sémantique ou la signification d'un élément. Les développeurs Web peuvent concevoir un vocabulaire personnalisé ou utiliser des vocabulaires disponibles sur le Web, tels que le vocabulaire largement utilisé [schema.org](http://schema.org). Une collection de vocabulaires de balisage couramment utilisés est fournie par Schema.org.
 
@@ -143,7 +144,8 @@ Dans certains cas, les moteurs de recherche couvrent un public régional. Certai
 
 {{EmbedLiveSample("HTML", "", "100")}}
 
-> **Note :** Un outil pratique pour extraire les structures de microdonnées du HTML est l'[outil de test des données structurées](https://developers.google.com/search/docs/guides/intro-structured-data) de Google. Essayez-le sur le HTML présenté ci-dessus.
+> [!NOTE]
+> Un outil pratique pour extraire les structures de microdonnées du HTML est l'[outil de test des données structurées](https://developers.google.com/search/docs/guides/intro-structured-data) de Google. Essayez-le sur le HTML présenté ci-dessus.
 
 ## Compatibilité des navigateurs
 

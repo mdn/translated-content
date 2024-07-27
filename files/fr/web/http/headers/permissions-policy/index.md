@@ -5,7 +5,8 @@ slug: Web/HTTP/Headers/Permissions-Policy
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-> **Attention :** Cet en-tête a maintenant été renommé `Permissions-Policy` dans la spécification, et cet article sera mis à jour pour refléter ce changement.
+> [!WARNING]
+> Cet en-tête a maintenant été renommé `Permissions-Policy` dans la spécification, et cet article sera mis à jour pour refléter ce changement.
 
 L'en-tête HTTP **`Feature-Policy`** fournit un mécanisme pour permettre ou interdire l'utilisation de fonctionnalités du navigateur pour le document courant et le contenu que ce dernier embarquerait via des éléments [`<iframe>`](/fr/docs/Web/HTML/Element/iframe).
 
@@ -40,7 +41,8 @@ Feature-Policy: <directive> <allowlist>
     - `'self'`&nbsp;: La fonctionnalité sera autorisée dans ce document et pour tous les contextes de navigation imbriqués de la même origine. La fonctionnalité n'est pas autorisée pour les contextes de navigation d'autres origines.
     - `'src'`&nbsp;: Pour l'attribut `allow` d'une <i lang="en">iframe</i> uniquement. La fonctionnalité sera autorisée pour cette <i lang="en">iframe</i> uniquement si le document qui y est chargé provient de la même origine que celle indiquée par l'attribut [`src`](/fr/docs/Web/HTML/Element/iframe#attributs) de l'élément HTML.
 
-      > **Note :** L'origine `'src'` est uniquement utilisée pour la liste `allow` d'une <i lang="en">iframe</i>. Pour ces éléments, il s'agit de la valeur par défaut pour `allowlist`.
+      > [!NOTE]
+      > L'origine `'src'` est uniquement utilisée pour la liste `allow` d'une <i lang="en">iframe</i>. Pour ces éléments, il s'agit de la valeur par défaut pour `allowlist`.
 
     - `'none'`&nbsp;: La fonctionnalité est désactivée pour le document (niveau le plus haut) et les contextes de navigation imbriqués.
     - `<origin(s)>`&nbsp;: La fonctionnalité est autorisée pour des origines distinctes (par exemple, `https://example.com`). Lorsqu'on indique plusieurs origines, celles-ci doivent être séparées par un espace.

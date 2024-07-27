@@ -122,7 +122,8 @@ L'élément HTML **`<ol>`** représente une liste ordonnée. Les éléments d'un
 
     Le type spécifié est utilisé pour l'ensemble de la liste, sauf si un attribut différent [`type`](/fr/docs/Web/HTML/Element/li#attr-type) est utilisé sur un élément [`<li>`](/fr/docs/Web/HTML/Element/li) fermé.
 
-    > **Note :** À moins que le type du numéro de la liste n'ait de l'importance (comme dans les documents juridiques ou techniques où les éléments sont référencés par leur numéro/lettre), utilisez plutôt la propriété CSS [`list-style-type`](/fr/docs/Web/CSS/list-style-type).
+    > [!NOTE]
+    > À moins que le type du numéro de la liste n'ait de l'importance (comme dans les documents juridiques ou techniques où les éléments sont référencés par leur numéro/lettre), utilisez plutôt la propriété CSS [`list-style-type`](/fr/docs/Web/CSS/list-style-type).
 
 ## Note d'utilisation
 

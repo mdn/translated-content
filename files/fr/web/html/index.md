@@ -24,7 +24,7 @@ Les articles suivants fournissent des éléments de référence utiles au dével
 - Référence HTML
   - : Dans notre [référence exhaustive](/fr/docs/Web/HTML/Reference), vous trouverez le détail de chaque élément et attribut constituant HTML.
 
-> **Remarque :**
+> [!CALLOUT]
 >
 > #### Vous cherchez à devenir un développeur web front-end ?
 >

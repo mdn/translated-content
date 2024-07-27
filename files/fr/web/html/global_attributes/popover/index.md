@@ -24,7 +24,8 @@ Ce qui suit affichera un bouton qui ouvrira un élément se superposant par-dess
 <div popover id="my-popover">Bonjour tout le monde !</div>
 ```
 
-> **Note :** Voir [la page listant des exemples d'utilisation de l'API <i lang="en">Popover</i>](https://mdn.github.io/dom-examples/popover-api/) pour accéder à l'ensemble des exemples MDN sur ce sujet.
+> [!NOTE]
+> Voir [la page listant des exemples d'utilisation de l'API <i lang="en">Popover</i>](https://mdn.github.io/dom-examples/popover-api/) pour accéder à l'ensemble des exemples MDN sur ce sujet.
 
 ## Spécifications
 

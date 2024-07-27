@@ -75,7 +75,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 
     Cet attribut étant déprécié, on utilisera la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align) à la place.
 
-    > **Note :** Le comportement de la propriété `text-align` équivalent à `align="char"` n'est pas implémenté par les navigateurs à l'heure actuelle. Voir [le tableau de compatibilité des navigateurs `text-align`](/fr/docs/Web/CSS/text-align#browser_compatibility) à propos de l'alignement basé sur les une valeur `<string>`.
+    > [!NOTE]
+    > Le comportement de la propriété `text-align` équivalent à `align="char"` n'est pas implémenté par les navigateurs à l'heure actuelle. Voir [le tableau de compatibilité des navigateurs `text-align`](/fr/docs/Web/CSS/text-align#browser_compatibility) à propos de l'alignement basé sur les une valeur `<string>`.
 
 - `bgcolor` {{Deprecated_inline}}
 

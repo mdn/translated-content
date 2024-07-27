@@ -43,11 +43,14 @@ Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulte
 
   - : Un attribut booléen qui indique que la vidéo doit automatiquement être lancée dès qu'elle peut être jouée sans être arrêtée par le chargement des données.
 
-    > **Note :** la lecture automatique peut être source de nuisance pour les utilisateurs. Mieux vaut l'éviter lorsque c'est possible ou proposer à l'utilisateur de choisir cette option. Cette valeur peut être utile lors de la création de vidéos dont la source sera définie _a posteriori_.
+    > [!NOTE]
+    > La lecture automatique peut être source de nuisance pour les utilisateurs. Mieux vaut l'éviter lorsque c'est possible ou proposer à l'utilisateur de choisir cette option. Cette valeur peut être utile lors de la création de vidéos dont la source sera définie _a posteriori_.
 
-    > **Note :** Cet attribut est un attribut booléen et indiquer `autoplay="false"` ne suffira pas à retirer la lecture automatique. Pour ce faire, il faut complètement retirer l'attribut.
+    > [!NOTE]
+    > Cet attribut est un attribut booléen et indiquer `autoplay="false"` ne suffira pas à retirer la lecture automatique. Pour ce faire, il faut complètement retirer l'attribut.
 
-    > **Note :** Pour certains navigateurs (ex. Chrome 70), l'attribut `autoplay` ne fonctionne pas si aucun attribut `mute` n'est présent.
+    > [!NOTE]
+    > Pour certains navigateurs (ex. Chrome 70), l'attribut `autoplay` ne fonctionne pas si aucun attribut `mute` n'est présent.
 
 - `buffered`
   - : Un attribut qui peut être lu afin de déterminer l'intervalle temporel mis en mémoire tampon. Cet attribut contient un objet {{domxref("TimeRanges")}}.
@@ -93,7 +96,7 @@ Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulte
 
     La valeur par défaut peut être différente selon le navigateur. La spécification conseille d'utiliser la valeur `metadata`.
 
-    > **Note :**
+    > [!NOTE]
     >
     > - L'attribut `autoplay` a la priorité sur `preload`. Si `autoplay` est défini, le navigateur doit nécessairement télécharger la vidéo pour la lancer.
     > - Cet attribut est simplement une indication, la spécification ne force pas le navigateur à respecter la valeur de cet attribut.

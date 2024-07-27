@@ -48,7 +48,8 @@ L'en-tête `Accept` est défini par le navigateur (ou tout autre agent utilisate
 
 ### L'en-tête `Accept-CH` {{experimental_inline}}
 
-> **Note :** Cet en-tête fait partie de la technologie **expérimentale** des _indications client_ (<i lang="en">client hints</i>). La prise en charge initiale est arrivée avec Chrome 46 et celle de la valeur `Device-Memory` avec Chrome 61.
+> [!NOTE]
+> Cet en-tête fait partie de la technologie **expérimentale** des _indications client_ (<i lang="en">client hints</i>). La prise en charge initiale est arrivée avec Chrome 46 et celle de la valeur `Device-Memory` avec Chrome 61.
 
 L'en-tête expérimental [`Accept-CH`](/fr/docs/Web/HTTP/Headers/Accept-CH) expose les données de configuration que le serveur peut utiliser afin de déterminer une réponse appropriée. Les valeurs valides sont&nbsp;:
 
@@ -60,7 +61,8 @@ L'en-tête expérimental [`Accept-CH`](/fr/docs/Web/HTTP/Headers/Accept-CH) expo
 
 ### L'en-tête `Accept-CH-Lifetime` {{experimental_inline}}
 
-> **Note :** Cet en-tête fait partie de la technologie **expérimentale** des _indications client_ (<i lang="en">client hints</i>) et est uniquement disponible pour Chrome, à partir de Chrome 61.
+> [!NOTE]
+> Cet en-tête fait partie de la technologie **expérimentale** des _indications client_ (<i lang="en">client hints</i>) et est uniquement disponible pour Chrome, à partir de Chrome 61.
 
 L'en-tête [`Accept-CH-Lifetime`](/fr/docs/Web/HTTP/Headers/Accept-CH-Lifetime) est utilisé de concert avec la valeur `Device-Memory` de l'en-tête `Accept-CH` et indique la durée pendant laquelle l'appareil devrait partager sa quantité de mémoire vive. La valeur est exprimée en millisecondes et est optionnelle.
 
@@ -81,7 +83,8 @@ En raison de [l'entropie croissante déduite de la configuration](https://www.ef
 
 ### L'en-tête `User-Agent`
 
-> **Note :** Bien qu'il existe certains cas d'usage légitimes pour cet en-tête afin de sélectionner du contenu, [il s'agit d'une mauvaise pratique](/fr/docs/Web/HTTP/Browser_detection_using_the_user_agent) quand il s'agit de déterminer les fonctionnalités prises en charge ou non par l'agent utilisateur.
+> [!NOTE]
+> Bien qu'il existe certains cas d'usage légitimes pour cet en-tête afin de sélectionner du contenu, [il s'agit d'une mauvaise pratique](/fr/docs/Web/HTTP/Browser_detection_using_the_user_agent) quand il s'agit de déterminer les fonctionnalités prises en charge ou non par l'agent utilisateur.
 
 L'en-tête [`User-Agent`](/fr/docs/Web/HTTP/Headers/User-Agent) identifie le navigateur qui envoie la requête. Cette chaîne de caractères peut contenir une liste de _jetons produits_ et de _commentaires_ séparés par des espaces.
 
