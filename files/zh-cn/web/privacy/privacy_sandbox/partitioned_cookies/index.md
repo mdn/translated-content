@@ -32,7 +32,8 @@ l10n:
 Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 ```
 
-> **备注：** 分区 cookie 必须与 `Secure` 一同设置。此外，建议在设置分区 cookie 时使用 `__Host` 前缀，以将它们绑定到主机名而不是可注册的域名。
+> [!NOTE]
+> 分区 cookie 必须与 `Secure` 一同设置。此外，建议在设置分区 cookie 时使用 `__Host` 前缀，以将它们绑定到主机名而不是可注册的域名。
 
 如果设置了 `Partitioned`，cookie 将使用两个键进行存储，即主机键和一个新的**分区键**。分区键基于向设置 cookie 的 URL 端点发出请求时浏览器访问的顶级 URL 的方案（scheme）和 {{Glossary("eTLD", "eTLD +1")}}。
 
@@ -42,7 +43,8 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 2. 存储 cookie 的键现在为 `{("https://site-a.example"), ("3rd-party.example")}`。
 3. 当用户访问 `https://site-b.example`，该站点也嵌入了 `https://3rd-party.example`，因为分区键不一致，所以新嵌入的实例不再能够访问前一页面设置的 cookie。
 
-> **备注：** CHIPS 类似于 Firefox 实现的[状态分区机制](/zh-CN/docs/Web/Privacy/State_Partitioning)。不同之处在于，状态分区将 cookie 存储和检索分区到每个顶级站点的单独的 cookie 存储空间中，而没有在需要时可以选择启用第三方 cookie 的机制。随着浏览器开始逐步淘汰第三方 cookie 的使用，当开发人员开始处理此更改时，仍然需要允许第三方 cookie 的有效和非跟踪的使用。
+> [!NOTE]
+> CHIPS 类似于 Firefox 实现的[状态分区机制](/zh-CN/docs/Web/Privacy/State_Partitioning)。不同之处在于，状态分区将 cookie 存储和检索分区到每个顶级站点的单独的 cookie 存储空间中，而没有在需要时可以选择启用第三方 cookie 的机制。随着浏览器开始逐步淘汰第三方 cookie 的使用，当开发人员开始处理此更改时，仍然需要允许第三方 cookie 的有效和非跟踪的使用。
 
 ## 有效的第三方嵌入场景
 
