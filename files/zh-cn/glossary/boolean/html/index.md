@@ -2,7 +2,7 @@
 title: 布尔属性（HTML）
 slug: Glossary/Boolean/HTML
 l10n:
-  sourceCommit: 26635ef6b1a40e538501bd81fdcf98725e14e6ea
+  sourceCommit: 9409e72722add6d1c4baeaf7b262c9b0985c0bcf
 ---
 
 {{GlossarySidebar}}
