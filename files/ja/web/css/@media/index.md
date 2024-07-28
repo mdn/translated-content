@@ -7,7 +7,8 @@ slug: Web/CSS/@media
 
 **`@media`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、1 つまたは複数の[メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)の結果に基づいて、スタイルシートの一部を適用するために使用することができます。これによってメディアクエリーを指定し、そのメディアクエリーがコンテンツの使用される端末に一致する場合にのみ、文書に CSS のブロックを適用することができます。
 
-> **メモ:** JavaScript では、 `@media` を使用して作成されたルールは、 CSS オブジェクトモデルの {{domxref("CSSMediaRule")}} インターフェイスによってアクセスすることができます。
+> [!NOTE]
+> JavaScript では、 `@media` を使用して作成されたルールは、 CSS オブジェクトモデルの {{domxref("CSSMediaRule")}} インターフェイスによってアクセスすることができます。
 
 {{EmbedInteractiveExample("pages/tabbed/at-rule-media.html", "tabbed-standard")}}
 
@@ -51,7 +52,8 @@ slug: Web/CSS/@media
 - `speech`
   - : 音声合成向けのものです。
 
-> **メモ:** CSS2.1 および [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) では、その他のメディア種別 (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`) が定義されていましたが、これらは [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) で非推奨となったため、使用すべきではありません。
+> [!NOTE]
+> CSS2.1 および [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) では、その他のメディア種別 (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`) が定義されていましたが、これらは [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) で非推奨となったため、使用すべきではありません。
 > `aural` タイプは `speech` に置き換えられましたが、これも同様です。
 
 ### メディア特性
@@ -145,7 +147,8 @@ _論理演算子_ `not`, `and`, `only` を使うと、複雑なメディアク�
     カンマで区切られたクエリーのリストの中にある場合は、適用された特定のクエリーのみを反転します。
     `not` 演算子を使用する場合は、メディア種別*も*指定しなければなりません。
 
-    > **メモ:** レベル 3 では、個々のメディア特性式を否定するために `not` キーワードを使用することはできず、メディアクエリー全体のみを否定することしかできません。
+    > [!NOTE]
+    > レベル 3 では、個々のメディア特性式を否定するために `not` キーワードを使用することはできず、メディアクエリー全体のみを否定することしかできません。
 
 - `only`
   - : クエリー全体が一致する場合にのみスタイルを適用します。
