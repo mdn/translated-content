@@ -74,7 +74,7 @@ browser.browsingData.removeFormData({}).then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
 >
