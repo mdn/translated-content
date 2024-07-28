@@ -68,7 +68,8 @@ Linear gradients change along a straight line. To insert one, you create a {{SVG
  <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
 ```
 
-> **備註：** 你也可以在漸變中使用`xlink:href`屬性，它可以將一個漸變的屬性和 stop 節點，引入到另一個漸變中。在下面的例子裡，我們就不需要在 Gradient2 裡重新創建許多 stop 節點。
+> [!NOTE]
+> 你也可以在漸變中使用`xlink:href`屬性，它可以將一個漸變的屬性和 stop 節點，引入到另一個漸變中。在下面的例子裡，我們就不需要在 Gradient2 裡重新創建許多 stop 節點。
 >
 > ```xml
 >  <linearGradient id="Gradient1">
