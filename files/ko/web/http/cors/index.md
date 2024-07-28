@@ -37,13 +37,15 @@ CORS 실패는 오류를 발생시키지만, 보안상의 이유로 오류에 �
 
 ## 접근 제어 시나리오 예제
 
-교차 출처 리소스 공유가 동작하는 방식을 보여주는 세 가지 시나리오를 제시하겠습니다. 모든 예제는 지원하는 브라우저에서 교차 출처 요청을 생성할 수 있는 {{domxref("XMLHttpRequest")}}를 사용합니다.
-
-서버 관점의 교차 출처 리소스 공유에 대한 논의는 (PHP 코드와 함께 하는) [서버 사이드 접근 제어 (CORS)](/ko/docs/Web/HTTP/CORS) 문서에서 확인할 수 있습니다.
+교차 출처 리소스 공유가 동작하는 방식을 보여주는 세 가지 시나리오를 제시하겠습니다. 모든 예제는 지원하는 브라우저에서 교차 출처 요청을 생성할 수 있는 {{domxref("Window/fetch", "fetch()")}}를 사용합니다.
 
 ### 단순 요청(Simple requests)
 
-일부요청은 [CORS preflight](/ko/docs/Glossary/Preflight_request) 를 트리거하지 않습니다. `Fetch` 명세(CORS를 정의한)는 이 용어를 사용하지 않지만, 이 기사에서는 "simple requests"라고 하겠습니다. "simple requests"는 **다음 조건을 모두 충족하는 요청입니다:**
+일부 요청은 CORS 사전 요청을 트리거하지 않습니다. 이러한 요청은 구식 [CORS 사양](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology)에서는 "단순 요청"이라고 불렸으나, 현재 CORS 정의하는 [Fetch 사양](https://fetch.spec.whatwg.org/)에서는 이 용어를 사용하지 않습니다.
+
+이러한 동기는 HTML 4.0의 <form> 요소(교차 사이트 fetch()와 XMLHttpRequest보다 이전에 존재한 요소)가 어떤 출처로든 단순 요청을 제출할 수 있다는 것입니다. 따라서 서버 쓰기를 수행하는 모든 사람은 이미 사이트 간 요청 위조(Cross Site Request Forgery, CSRF)로부터 보호하고 있어야 합니다. 이러한 가정 하에서, CSRF의 위협은 폼 제출의 위협과 다르지 않기 때문에 서버는 폼 제출처럼 보이는 요청을 받기 위해 사전 요청에 응답하는 옵트-인(opt-in)을 할 필요가 없습니다. 그러나 서버는 여전히 Access-Control-Allow-Origin을 사용하여 스크립트와 응답을 공유하도록 옵트-인 해야 합니다.
+
+ 단순 요청은 다음 조건을 모두 충족하는 요청입니다:
 
 - 다음 중 하나의 메서드
 
@@ -51,50 +53,51 @@ CORS 실패는 오류를 발생시키지만, 보안상의 이유로 오류에 �
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
-- 유저 에이전트가 자동으로 설정 한 헤더 (예를들어, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}}, [Fetch 명세에서 "forbidden header name"으로 정의한 헤더](https://fetch.spec.whatwg.org/#forbidden-header-name))외에, 수동으로 설정할 수 있는 헤더는 오직 [Fetch 명세에서 "CORS-safelisted request-header"로 정의한 헤더](https://fetch.spec.whatwg.org/#cors-safelisted-request-header) 뿐입니다.
+- 유저 에이전트가 자동으로 설정한 헤더(예를들어, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}}, [Fetch 명세에서 "forbidden header name"으로 정의한 헤더](https://fetch.spec.whatwg.org/#forbidden-header-name)) 외에, 수동으로 설정할 수 있는 헤더는 오직 [Fetch 명세에서 "CORS-safelisted request-header"로 정의한 헤더](https://fetch.spec.whatwg.org/#cors-safelisted-request-header) 뿐입니다.
 
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
   - {{HTTPHeader("Content-Type")}} (아래의 추가 요구 사항에 유의하세요.)
+  - {{HTTPHeader("Range")}} (오직 [단순 범위 헤더 값](https://fetch.spec.whatwg.org/#simple-range-header-value), 예를 들어 `bytes=256-` 혹은 `bytes=127-255`)
 
-- {{HTTPHeader("Content-Type")}} 헤더는 다음의 값들만 허용됩니다.
+- {{HTTPHeader("Content-Type")}} 헤더에 지정된 {{Glossary("MIME type","미디어 타입")}}에 대해 허용된 타입/서브타입 조합은 다음과 같습니다.
 
   - `application/x-www-form-urlencoded`
   - `multipart/form-data`
   - `text/plain`
 
-- 요청에 사용된 {{domxref("XMLHttpRequestUpload")}} 객체에는 이벤트 리스너가 등록되어 있지 않습니다. 이들은 {{domxref("XMLHttpRequest.upload")}} 프로퍼티를 사용하여 접근합니다..
+- 요청이 {{domxref("XMLHttpRequest")}} 객체를 사용하여 이루어진 경우, 요청에 사용된 {{domxref("XMLHttpRequest.upload")}} 속성에 의해 반환된 객체에 이벤트 리스너가 등록되지 않습니다. 즉, {{domxref("XMLHttpRequest")}} 인스턴스 `xhr`이 있다면 업로드를 모니터링하기 위한 이벤트 리스너를 추가하는 `xhr.upload.addEventListener()`를 호출하는 코드가 존재하지 않는다는 것입니다.
 - 요청에 {{domxref("ReadableStream")}} 객체가 사용되지 않습니다.
 
-> **참고:** 이는 웹 컨텐츠가 이미 발행할 수 있는 것과 동일한 종류의 cross-site 요청입니다. 서버가 적절한 헤더를 전송하지 않으면 요청자에게 응답 데이터가 공개되지 않습니다. 따라서 cross-site 요청 위조를 방지하는 사이트는 HTTP 접근 제어를 두려워 할 만한 부분이 없습니다.
-
-> **참고:** **주의:** WebKit Nightly 와 Safari Technology Preview 는 {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}} 헤더에서 허용되는 값에 대한 추가 제약이 있습니다. 이러한 헤더 중 하나에 "nonstandard" 값이 존재하면, WebKit/Safari 는 더이상 요청을 "simple request"로 간주하지 않습니다. 다음 Webkit 버그 외에 WebKit/Safari 가 "nonstandard" 으로 간주하는 값은 문서화되어 있지 않습니다.
+> **참고:**
+> WebKit Nightly 와 Safari Technology Preview 는 Accept, Accept-Language, Content-Language 헤더에 허용되는 값에 추가적인 제약을 가합니다. 이러한 헤더 중 하나라도 "비표준" 값을 갖는 경우, WebKit/Safari 는 해당 요청을 "단순 요청"으로 간주하지 않습니다. WebKit/Safari에서 어떤 값을 "비표준"으로 간주하는지는 다음의 WebKit 버그 외에는 문서화되어 있지 않습니다:
 >
 > - [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178)
 > - [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)
 > - [Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363)
 >
-> 이 부분은 명세가 아니기 때문에 다른 브라우저에는 이러한 추가 제한 사항이 없습니다.
+> 이 부분은 CORS 명세가 아니기 때문에 다른 브라우저에는 이러한 추가 제한 사항이 없습니다.
 
-예를들어, `https://foo.example` 의 웹 컨텐츠가 `https://bar.other` 도메인의 컨텐츠를 호출하길 원합니다. `foo.example`에 배포된 JavaScript에는 아래와 같은 코드가 사용될 수 있습니다.
+예를 들어 `https://foo.example`의 웹 콘텐츠가 `https://bar.other` 도메인에서 JSON 콘텐츠를 가져오고자 한다고 가정해봅시다. 이러한 종류의 코드는 `foo.example`에 배포된 JavaScript에서 사용될 수 있습니다.
 
+```js
+const fetchPromise = fetch("https://bar.other");
+
+fetchPromise
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+  });
 ```
-const xhr = new XMLHttpRequest();
-const url = 'https://bar.other/resources/public-data/';
 
-xhr.open('GET', url);
-xhr.onreadystatechange = someHandler;
-xhr.send();
-```
+이 작업은 클라이언트와 서버 간의 간단한 교환을 수행하며, 권한 처리를 위해 CORS 헤더를 사용합니다.
 
-클라이언트와 서버간에 간단한 통신을 하고, CORS 헤더를 사용하여 권한을 처리합니다.
+![Diagram of simple CORS GET request](https://mdn.github.io/shared-assets/images/diagrams/http/cors/simple-request.svg)
 
-![](simple-req-updated.png)
+이 경우 브라우저가 서버로 보내는 내용을 살펴보겠습니다.
 
-이 경우 브라우저가 서버로 전송하는 내용을 살펴보고, 서버의 응답을 확인합니다.
-
-```
+```http
 GET /resources/public-data/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
@@ -105,9 +108,11 @@ Connection: keep-alive
 Origin: https://foo.example
 ```
 
-요청 헤더의 {{HTTPHeader("Origin")}}을 보면, `https://foo.example`로부터 요청이 왔다는 것을 알 수 있습니다.
+주목할 요청 헤더는 {{HTTPHeader("Origin")}}으로, 요청이 https://foo.example에서 왔음을 나타냅니다.
 
-```
+이제 서버가 어떻게 응답하는지 살펴보겠습니다.
+
+```http
 HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 00:23:53 GMT
 Server: Apache/2
@@ -120,15 +125,22 @@ Content-Type: application/xml
 […XML Data…]
 ```
 
-서버는 이에 대한 응답으로 {{HTTPHeader("Access-Control-Allow-Origin")}} 헤더를 다시 전송합니다. 가장 간단한 접근 제어 프로토콜은 {{HTTPHeader("Origin")}} 헤더와 {{HTTPHeader("Access-Control-Allow-Origin")}} 을 사용하는 것입니다. 이 경우 서버는 `Access-Control-Allow-Origin: *`, 으로 응답해야 하며, 이는 **모든** 도메인에서 접근할 수 있음을 의미합니다. `https://bar.other` 의 리소스 소유자가 _오직_ `https://foo.example` 의 요청만 리소스에 대한 접근을 허용하려는 경우 다음을 전송합니다.
+서버는 {{HTTPHeader("Access-Control-Allow-Origin")}} 헤더에 **모든** 출처에서 해당 리소스에 접근할 수 있음을 의미하는 `Access-Control-Allow-Origin: *` 을 반환합니다.
 
+```http
+Access-Control-Allow-Origin: *
 ```
+
+이 {{HTTPHeader("Origin")}} 및 {{HTTPHeader("Access-Control-Allow-Origin")}} 헤더 패턴은 접근 제어 프로토콜의 가장 간단한 사용법입니다. 만약 `https://bar.other` 의 리소스 소유자가 해당 리소스의 접근을 오직 `https://foo.example` 출처에서 오는 요청(즉, `https://foo.example` 이외의 도메인에서는 교차 출처 방식으로 해당 리소스에 접근할 수 없음)으로만 제한하길 원한다면 다음과 같이 응답을 보낼 것입니다.
+
+```http
 Access-Control-Allow-Origin: https://foo.example
 ```
 
-이제 `https://foo.example` 이외의 도메인은 cross-site 방식으로 리소스에 접근할 수 없습니다. 리소스에 대한 접근을 허용하려면, `Access-Control-Allow-Origin` 헤더에는 요청의 `Origin` 헤더에서 전송된 값이 포함되어야 합니다.
+> **참고:**
+> [자격 증명](#requests_with_credentials)이 포함된 요청에 응답할 때, 서버는 Access-Control-Allow-Origin 헤더의 값으로 "*" 와일드카드를 지정하는 대신, 특정 출처를 **반드시** 지정해야 합니다.
 
-### 프리플라이트 요청
+### 프리플라이트 요청(Preflighted requests)
 
 "preflighted" request는 위에서 논의한 ["simple requests"](/ko/docs/Web/HTTP/CORS#단순_요청simple_requests) 와는 달리, 먼저 {{HTTPMethod("OPTIONS")}} 메서드를 통해 다른 도메인의 리소스로 HTTP 요청을 보내 실제 요청이 전송하기에 안전한지 확인합니다. cross-origin 요청은 유저 데이터에 영향을 줄 수 있기 때문에 이와같이 미리 전송(preflighted)합니다.
 
