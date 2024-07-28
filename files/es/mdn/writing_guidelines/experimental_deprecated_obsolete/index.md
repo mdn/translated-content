@@ -21,7 +21,8 @@ Para una tecnología marcada como **experimental**, se aplican una o más de las
 - Solo se admite a través de cambios de configuración como preferencias o parámetros, independientemente del número de motores de renderizado admitidos.
 - Es probable que su especificación definitiva cambie significativamente en formas incompatibles con versiones anteriores (es decir, puede romper el código existente que se basa en la característica).
 
-> **Nota:** Una función que solo se publica en un motor de renderizado se sigue considerando experimental, incluso si está disponible en compilaciones de vista previa de otros motores de renderizado (o estableciendo una preferencia o indicador).
+> [!NOTE]
+> Una función que solo se publica en un motor de renderizado se sigue considerando experimental, incluso si está disponible en compilaciones de vista previa de otros motores de renderizado (o estableciendo una preferencia o indicador).
 
 El estado **experimental** de una tecnología puede caducar si se cumple una o más de las siguientes condiciones:
 
@@ -47,7 +48,8 @@ Para más información en la definición de **desaprobado**, vea la [la bandera 
 En MDN Web Docs, el término **obsoleto** se usaba históricamente para indicar una API o tecnología que ya no solo ya no se recomienda, sino que ya no se implementa en los navegadores.
 Debido a que la distinción entre **obsoleto** y **desaprobado** no es muy útil, ya no usamos el término **obsoleto** en MDN Web Docs.
 
-> **Nota:** Si te encuentras con algún caso de **obsoleto**, debes eliminarlo o reemplazarlo con el término **desaprobado**.
+> [!NOTE]
+> Si te encuentras con algún caso de **obsoleto**, debes eliminarlo o reemplazarlo con el término **desaprobado**.
 
 ## Pautas para eliminar contenido
 
@@ -55,7 +57,8 @@ A veces, durante el desarrollo de una nueva especificación o en el transcurso d
 
 Aquí hay algunas pautas para ayudarlo a decidir qué hacer cuando se elimina algo de la especificación.
 
-> **Nota:** A los efectos de esta discusión, la palabra "elemento" se utiliza para referirse a cualquier cosa que pueda ser parte de una especificación: un elemento o un atributo de un elemento, una interfaz o cualquier método individual, una propiedad u otro miembro de una interfaz, y así sucesivamente.
+> [!NOTE]
+> A los efectos de esta discusión, la palabra "elemento" se utiliza para referirse a cualquier cosa que pueda ser parte de una especificación: un elemento o un atributo de un elemento, una interfaz o cualquier método individual, una propiedad u otro miembro de una interfaz, y así sucesivamente.
 
 ### Si el elemento nunca se implementó
 
@@ -115,6 +118,7 @@ A veces, pero rara vez, puede haber un conflicto entre diferentes versiones de e
 En tales casos, considere cuál es la realidad, es decir, considere qué están haciendo realmente los navegadores y escriba una nota "importante" para resumir ese último estado.
 Por ejemplo, a partir de enero de 2019, el atributo global [`inputmode`](/es/docs/Web/HTML/Global_attributes/inputmode) tiene un conflicto, que se resumió así: <!--este ejemplo de advertencia de conflicto de especificaciones ya no existe en esa página. no pude encontrar ningún otro ejemplo-->
 
-> **Advertencia:** Conflicto de especificación: La especificación WHATWG enumera [`inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode) y los navegadores modernos están trabajando para soportarlo.
+> [!WARNING]
+> Conflicto de especificación: La especificación WHATWG enumera [`inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode) y los navegadores modernos están trabajando para soportarlo.
 > La [especificación HTML 5.2 del W3C](https://html.spec.whatwg.org/multipage/index.html#contents), sin embargo, ya no la enumera (es decir, la marca como obsoleta).
 > Debe considerar la definición de WHATWG como correcta, hasta que se llegue a un consenso.

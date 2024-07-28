@@ -45,7 +45,8 @@ setValidity(flags, message, anchor)
     - `customError`
       - : 論理値で、この要素の {{domxref('HTMLObjectElement.setCustomValidity', 'setCustomValidity()')}} メソッドを呼び出すことで、要素のカスタム有効性メッセージが空でない文字列に設定されたかどうかを示します。
 
-    > **メモ:** すべてのフラグを `false` に設定し、この要素がすべての制約の検証に合格したことを示すには、空のオブジェクト `{}` を渡してください。この場合、 `message` も渡す必要はありません。
+    > [!NOTE]
+    > すべてのフラグを `false` に設定し、この要素がすべての制約の検証に合格したことを示すには、空のオブジェクト `{}` を渡してください。この場合、 `message` も渡す必要はありません。
 
 - `message` {{Optional_Inline}}
   - : `flags` が `true` の場合に設定されるメッセージを含む文字列。すべての `flags` が `false` の場合のみ、この引数はオプションとなります。

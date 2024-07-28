@@ -32,9 +32,11 @@ Todas las lecciones y las diferentes versiones del [famoso juego MDN](http://bre
 
 Empezar con JavaScript puro es la mejor forma de adquirir un conocimiento sólido sobre desarrollo de juegos. Después, puedes escoger cualquier entorno de desarrollo (framework) que te guste y usarlo para tus proyectos. Los frameworks son simplemente herramientas construidas con el lenguaje JavaScript; por tanto aunque planees trabajar con ellas, es bueno aprender primero sobre el mismo lenguaje para saber exactamente qué es lo que hay por debajo. Los frameworks aceleran el tiempo de desarrollo y ayudan a tener en cuenta las partes aburridas del juego, pero si algo no funciona como esperas, siempre puedes intentar depurarlo o simplemente escribir tu solución en JavaScript puro.
 
-> **Nota:** Si estás interesado en aprender sobre el desarrollo de juegos en 2D usando una entorno de desarrollo, consulta esta serie homóloga, [famoso juego 2D usando Phaser](/es/docs/Games/Workflows/2D_breakout_game_Phaser).
+> [!NOTE]
+> Si estás interesado en aprender sobre el desarrollo de juegos en 2D usando una entorno de desarrollo, consulta esta serie homóloga, [famoso juego 2D usando Phaser](/es/docs/Games/Workflows/2D_breakout_game_Phaser).
 
-> **Nota:** Esta serie de artículos puede usarse como material para talleres prácticos de desarrollo de juegos. También puedes hacer uso del [kit de contenido canvas Gamedev](/es/docs/) basado en este tutorial si quieres dar una charla sobre desarrollo de juegos en general.
+> [!NOTE]
+> Esta serie de artículos puede usarse como material para talleres prácticos de desarrollo de juegos. También puedes hacer uso del [kit de contenido canvas Gamedev](/es/docs/) basado en este tutorial si quieres dar una charla sobre desarrollo de juegos en general.
 
 ## Siguientes pasos
 

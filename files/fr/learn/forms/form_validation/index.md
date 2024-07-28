@@ -190,9 +190,11 @@ Dans cet exemple, l'élément {{HTMLElement("input")}} accepte l'une des deux va
 
 Maintenant, essayez de changer la valeur à l'intérieur de l'attribut `pattern` suivant certains exemples vus plus haut et regardez comment les valeurs entrées en sont affectées pour rester valides. Écrivez vos propres textes et voyez comment vous vous en sortez ! Restez dans le domaine des fruits dans la mesure du possible, afin que vos exemples aient du sens !
 
-> **Note :** Certains types d'éléments {{HTMLElement("input")}} n'ont pas besoin d'un attribut [`pattern`](/fr/docs/Web/HTML/Element/input#pattern) pour être validés. Spécifier le type `email`, par exemple, valide la valeur saisie par rapport à une expression régulière correspondant à une adresse e‑mail bien formée (ou une liste d'adresses e‑mail séparées par des virgules si elle possède l'attribut [`multiple`](/fr/docs/Web/HTML/Element/input#multiple). Comme autre exemple, les champs de type `url` vont automatiquement nécessiter une URL correctement formée.
+> [!NOTE]
+> Certains types d'éléments {{HTMLElement("input")}} n'ont pas besoin d'un attribut [`pattern`](/fr/docs/Web/HTML/Element/input#pattern) pour être validés. Spécifier le type `email`, par exemple, valide la valeur saisie par rapport à une expression régulière correspondant à une adresse e‑mail bien formée (ou une liste d'adresses e‑mail séparées par des virgules si elle possède l'attribut [`multiple`](/fr/docs/Web/HTML/Element/input#multiple). Comme autre exemple, les champs de type `url` vont automatiquement nécessiter une URL correctement formée.
 
-> **Note :** L'élément {{HTMLElement("textarea")}} ne prend pas en charge l'attribut [`pattern`](/fr/docs/Web/HTML/Element/input#pattern).
+> [!NOTE]
+> L'élément {{HTMLElement("textarea")}} ne prend pas en charge l'attribut [`pattern`](/fr/docs/Web/HTML/Element/input#pattern).
 
 ### Limitation de la taille des entrées
 

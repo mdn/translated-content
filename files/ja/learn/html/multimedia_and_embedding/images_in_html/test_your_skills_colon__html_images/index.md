@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、あなたが[画像と HTML への埋め込み](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)を行う方法を理解しているかどうかを評価することです。
 
-> **メモ:** このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
+> [!NOTE]
+> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
 >
 > もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 
@@ -25,7 +26,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images1.html", '100%', 700)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images1-download.html)しましょう。
 
@@ -37,7 +38,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images2.html", '100%', 1000)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images2-download.html)しましょう。
 
@@ -49,6 +50,6 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images3.html", '100%', 1000)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images3-download.html)しましょう。

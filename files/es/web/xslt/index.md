@@ -49,4 +49,5 @@ Actualmente, XSLT es muy usado en la edición web, generando páginas HTML o XHT
 - Temas relacionados
   - : [XML](/es/XML), [XPath](/es/XPath), [XSL](/es/XSL).
 
-> **Nota:** Esta descripción de XSLT ha sido obtenida del [Artículo sobre XSLT en la Wikipedia (es)](http://es.wikipedia.org/wiki/XSLT).
+> [!NOTE]
+> Esta descripción de XSLT ha sido obtenida del [Artículo sobre XSLT en la Wikipedia (es)](http://es.wikipedia.org/wiki/XSLT).

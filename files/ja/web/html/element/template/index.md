@@ -26,11 +26,13 @@ l10n:
 
       - : 内部シャドウルート DOM を JavaScript から隠します。
 
-    > **メモ:** HTML パーサーは、この属性が設定されているノードの最初の `<template>` に対して、DOM に {{domxref("ShadowRoot")}} オブジェクトを作成します。
+    > [!NOTE]
+    > HTML パーサーは、この属性が設定されているノードの最初の `<template>` に対して、DOM に {{domxref("ShadowRoot")}} オブジェクトを作成します。
     > この属性が設定されていない場合、または許可された値が設定されていない場合、あるいは `ShadowRoot` が既に同じ親に宣言的に作成されている場合は、{{domxref("HTMLTemplateElement")}} が作成されます。
     > {{domxref("HTMLTemplateElement")}} は、{{domxref("HTMLTemplateElement.shadowRootMode")}} を設定したりすることで、解釈後にシャドウルートに変更することはできません。
 
-    > **メモ:** 古いチュートリアルや例では、Chrome 90-110 で対応していた非標準の `shadowroot` 属性が見つかるかもしれません。この属性は削除され、標準の `shadowrootmode` 属性に置き換えられています。
+    > [!NOTE]
+    > 古いチュートリアルや例では、Chrome 90-110 で対応していた非標準の `shadowroot` 属性が見つかるかもしれません。この属性は削除され、標準の `shadowrootmode` 属性に置き換えられています。
 
 - `shadowrootclonable`
 

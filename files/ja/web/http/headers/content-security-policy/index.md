@@ -42,7 +42,8 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
   - : [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)と、{{HTMLElement("frame")}} や {{HTMLElement("iframe")}} のような要素によって読み込まれる入れ子の閲覧コンテキストのための有効なソースを定義します。
 
-    > **警告:** 複合した閲覧コンテキストやワーカーを制御するには、 **`child-src`** の代わりに、それぞれ {{CSP("frame-src")}} および {{CSP("worker-src")}} を使用してください。
+    > [!WARNING]
+    > 複合した閲覧コンテキストやワーカーを制御するには、 **`child-src`** の代わりに、それぞれ {{CSP("frame-src")}} および {{CSP("worker-src")}} を使用してください。
 
 - {{CSP("connect-src")}}
   - : スクリプトインターフェイスによって読み込まれる URL を制限します。

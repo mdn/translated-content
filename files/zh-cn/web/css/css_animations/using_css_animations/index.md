@@ -46,7 +46,8 @@ slug: Web/CSS/CSS_animations/Using_CSS_animations
 
 ## 示例
 
-> **备注：** 这里的示例没有在 CSS 动画属性上使用任何前缀，Webkit 内核浏览器或者早期版本浏览器可能需要前缀，下面的实例包含了`-webkit-`前缀。
+> [!NOTE]
+> 这里的示例没有在 CSS 动画属性上使用任何前缀，Webkit 内核浏览器或者早期版本浏览器可能需要前缀，下面的实例包含了`-webkit-`前缀。
 
 ### 文本滑过浏览器窗口
 

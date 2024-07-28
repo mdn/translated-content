@@ -76,7 +76,8 @@ void (function () {
 </a>
 ```
 
-> **备注：** 利用 `javascript:` 伪协议来执行 JavaScript 代码是不推荐的，推荐的做法是为链接元素绑定事件。
+> [!NOTE]
+> 利用 `javascript:` 伪协议来执行 JavaScript 代码是不推荐的，推荐的做法是为链接元素绑定事件。
 
 ### 在箭头函数中避免泄漏
 

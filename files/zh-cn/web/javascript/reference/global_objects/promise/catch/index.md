@@ -64,7 +64,8 @@ Promise.resolve().catch(function XXX() {});
 
 因为 `catch()` 只是单纯的调用了 `then()`，它支持子类化。
 
-> **备注：** 下面的示例抛出了 [`Error`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error) 的实例。与同步的 [`throw`](/zh-CN/docs/Web/JavaScript/Reference/Statements/throw) 语句一样，这被认为是一种良好的实践；否则，执行捕获的部分将不得不对参数进行检查，以查看它是字符串还是错误，并且你可能会丢失有用的信息，例如堆栈跟踪。
+> [!NOTE]
+> 下面的示例抛出了 [`Error`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error) 的实例。与同步的 [`throw`](/zh-CN/docs/Web/JavaScript/Reference/Statements/throw) 语句一样，这被认为是一种良好的实践；否则，执行捕获的部分将不得不对参数进行检查，以查看它是字符串还是错误，并且你可能会丢失有用的信息，例如堆栈跟踪。
 
 ## 示例
 

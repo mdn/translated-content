@@ -32,7 +32,8 @@ l10n:
 
 ![Tab 1 が選択されています。 'Tab 2' と 'Tab 3' は他の 2 種類のタブです。選択されたタブのコンテンツだけが表示されます。タブが選択されると、タブの文字色が黒から白に、背景色がオレンジレッドからサドルブラウンに変わります。](tabbed-info-box.png)
 
-> **メモ:** 完成した例は、[info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) でライブで確認できます（[ソースコード](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)）。 記事のこのセクションで何を構築するのかを理解するために、ぜひチェックしてください。
+> [!NOTE]
+> 完成した例は、[info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) でライブで確認できます（[ソースコード](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)）。 記事のこのセクションで何を構築するのかを理解するために、ぜひチェックしてください。
 
 「別々のタブを別々のウェブページとして作成し、タブをクリックして別々のページに移動させて同様の効果を生み出すだけでよいのではないでしょうか？」と考えるかもしれません。 このコードならもっと簡単なものになりますが、実際には個々の「ページ」ビューは実際には新しくロードされたウェブページになるため、ビュー間で情報を保存し、この機能をより大きな UI デザインに統合するのは難しくなります。
 
@@ -133,7 +134,8 @@ body {
 }
 ```
 
-> **メモ:** この例では、チェーンの先頭に `.info-box` を持つ子孫セレクターを使用しています。 これは、他のコンテンツがすでに含まれているページに、ページの他の部分に適用されているスタイルを妨げることなく、この機能を挿入できるようにするためです。
+> [!NOTE]
+> この例では、チェーンの先頭に `.info-box` を持つ子孫セレクターを使用しています。 これは、他のコンテンツがすでに含まれているページに、ページの他の部分に適用されているスタイルを妨げることなく、この機能を挿入できるようにするためです。
 
 次に、水平方向のタブのスタイルを設定します。 リスト項目は、一列に並ぶようにすべて左にフロートさせ、行頭記号（bullet）を取り除くために {{cssxref("list-style-type")}} を `none` に設定し、{{cssxref("width")}} を `150px` に設定しているので、それらは情報ボックス全体にうまく収まります。 {{htmlelement("a")}} 要素は {{cssxref("display")}}`: inline-block` に設定されているので、一列に並んでいてもスタイル可能で、他のさまざまなプロパティを使用して、タブボタンに適したスタイルになっています。
 
@@ -254,7 +256,8 @@ function setTabHandler(tab, tabPos) {
 
 ![Info-box は 3 つのタブを持つコンテナーで、最初のタブが選択され、最初のタブのコンテンツのみが表示されます。固定位置が指定されました。インフォボックスはウィンドウの左上隅に位置指定され、幅は 452 ピクセルです。ウィンドウの残りの右半分は、偽コンテンツのコンテナーが占めています。偽コンテンツのコンテナーはウィンドウよりも高く、スクロール可能です。ページがスクロールされると、情報ボックスは画面の同じ位置に固定されたまま、右側のコンテナーは移動します。](fixed-info-box.png)
 
-> **メモ:** 完成した例は、[fixed-info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) でライブで確認できます（[ソースコード](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/fixed-info-box.html)）。 記事のこのセクションで何を構築するのかを理解するために、ぜひチェックしてください。
+> [!NOTE]
+> 完成した例は、[fixed-info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) でライブで確認できます（[ソースコード](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/fixed-info-box.html)）。 記事のこのセクションで何を構築するのかを理解するために、ぜひチェックしてください。
 
 出発点として、記事の最初のセクションで完成させた例を使用するか、Github リポジトリーから [info-box.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html) のローカルコピーを作成することができます。
 
@@ -292,7 +295,8 @@ function setTabHandler(tab, tabPos) {
 </section>
 ```
 
-> **メモ:** お好みにより、偽のコンテンツを本物のコンテンツに変更してもかまいません。
+> [!NOTE]
+> お好みにより、偽のコンテンツを本物のコンテンツに変更してもかまいません。
 
 ### 既存の CSS への変更
 
@@ -335,7 +339,8 @@ function setTabHandler(tab, tabPos) {
 
 ![画面の左 60% に空白の画面、右 40% 幅のパネルに情報が表示されます。右上には「疑問符」のアイコン。この「疑問符」アイコンを押すと、パネルが画面にスライドして表示されます。](hidden-sliding-panel.png)
 
-> **メモ:** 完成した例は、[hidden-info-panel.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) でライブで確認できます（[ソースコード](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel.html)）。 記事のこのセクションで何を構築するのかを理解するために、ぜひチェックしてください。
+> [!NOTE]
+> 完成した例は、[hidden-info-panel.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) でライブで確認できます（[ソースコード](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel.html)）。 記事のこのセクションで何を構築するのかを理解するために、ぜひチェックしてください。
 
 まず始めに、Github リポジトリーから [hidden-info-panel-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel-start.html) のローカルコピーを作成します。 これは前の例から続いていないので、新鮮な出発点ファイルが必要です。 ファイル内の HTML を見てみましょう。
 
@@ -351,7 +356,8 @@ function setTabHandler(tab, tabPos) {
 
 {{htmlelement("label")}} 要素と {{htmlelement("input")}} 要素から始めましょう — `<label>` 要素は通常、アクセシビリティの目的でテキストラベルをフォーム要素に関連付けるために使用します（スクリーンリーダーのユーザーが、どの説明がどのフォーム要素に対応しているかを確認できるようにします）。 ここでは、`for` 属性と `id` 属性を使用して `<input>` チェックボックスに関連付けられています。
 
-> **メモ:** 情報アイコンとして機能するために、HTML に特別な疑問符文字を入れました。 これは、パネルを表示/非表示にするために押されるボタンを表します。
+> [!NOTE]
+> 情報アイコンとして機能するために、HTML に特別な疑問符文字を入れました。 これは、パネルを表示/非表示にするために押されるボタンを表します。
 
 ここでは、これらの要素を少し異なる目的で使用します — `<label>` 要素のもう 1 つの便利な副作用は、チェックボックス自体だけでなく、チェックボックスのラベルをクリックしてチェックボックスをチェックできることです。 これはよく知られた[チェックボックスハック](https://css-tricks.com/the-checkbox-hack/)（英語）をもたらしました。 それはボタンを切り替えることによって要素を制御する JavaScript フリーの方法を提供します。 制御する要素は、他の 2 つに続く {{htmlelement("aside")}} 要素です（簡潔にするために、上記のコードリストからそのコンテンツを省略しました）。
 

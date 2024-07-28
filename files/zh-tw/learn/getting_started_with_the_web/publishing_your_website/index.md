@@ -63,11 +63,13 @@ slug: Learn/Getting_started_with_the_web/Publishing_your_website
    另外，請勾選 _Initialize this repository with a README_ 後點選 _Create repository_。![](github-create-repo.png)
 4. 之後，把網站內容拖曳到 repository 目錄，並勾選 _Commit changes_。
 
-   > **備註：** 請確定目錄內有 _index.html_ 檔案。
+   > [!NOTE]
+   > 請確定目錄內有 _index.html_ 檔案。
 
 5. 現在讓瀏覽器連到 _username_.github.io 來看看你的網站。例如你的用戶名字是 _chrisdavidmills_，就連到 [chrisdavidmills.github.io](http://chrisdavidmills.github.io/)。
 
-   > **備註：** 讓網站上線需要一點時間。如果網站沒有馬上運行，稍等一段時間後再試一次。
+   > [!NOTE]
+   > 讓網站上線需要一點時間。如果網站沒有馬上運行，稍等一段時間後再試一次。
 
 想多理解的話，請參考 [GitHub Pages Help](https://help.github.com/categories/github-pages-basics/).
 
