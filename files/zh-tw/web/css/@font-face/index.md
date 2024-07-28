@@ -88,7 +88,8 @@ You can specify a font on the user's local computer by name using the `local()` 
 
 - In Gecko, web fonts are subject to the same domain restriction (font files must be on the same domain as the page using them), unless [HTTP access controls](/zh-TW/docs/HTTP_access_control) are used to relax this restriction.
 
-  > **備註：** Because there are no defined MIME types for TrueType, OpenType, and Web Open File Format (WOFF) fonts, the MIME type of the file specified is not considered.
+  > [!NOTE]
+  > Because there are no defined MIME types for TrueType, OpenType, and Web Open File Format (WOFF) fonts, the MIME type of the file specified is not considered.
 
 - When Gecko displays a page that uses web fonts, it initially displays text using the best CSS fallback font available on the user's computer while it waits for the web font to finish downloading. As each web font finishes downloading, Gecko updates the text that uses that font. This allows the user to read the text on the page more quickly.
 
