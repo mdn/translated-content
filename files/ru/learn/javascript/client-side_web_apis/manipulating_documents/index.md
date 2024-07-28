@@ -56,7 +56,8 @@ DOM, с другой стороны, выглядит так:
 
 ![](dom-screenshot.png)
 
-> **Примечание:** . Эта диаграмма дерева DOM была создана с использованием [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/) Яна Хиксона.
+> [!NOTE]
+> Эта диаграмма дерева DOM была создана с использованием [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/) Яна Хиксона.
 
 Вы можете видеть здесь, что каждый элемент и бит текста в документе имеют свою собственную запись в дереве - каждый из них называется **узлом** (**node)**. Вы также столкнётесь с различными терминами, используемыми для описания типа узла, и их положением в дереве относительно друг друга:
 
@@ -196,7 +197,8 @@ linkPara.parentNode.removeChild(linkPara);
    </p>
    ```
 
-> **Примечание:** Примечание: Обратите внимание на то, как версии свойств JavaScript стилей CSS пишутся в нижнем регистре верблюжьего стиля (lower camel case), в то время как версии свойств стилей CSS используют дефисы (например, `backgroundColor` и `background-color`). Убедитесь, что вы не перепутали их, иначе это не сработает.
+> [!NOTE]
+> Обратите внимание на то, как версии свойств JavaScript стилей CSS пишутся в нижнем регистре верблюжьего стиля (lower camel case), в то время как версии свойств стилей CSS используют дефисы (например, `backgroundColor` и `background-color`). Убедитесь, что вы не перепутали их, иначе это не сработает.
 
 Существует ещё один распространённый способ динамического управления стилями вашего документа, который мы рассмотрим сейчас.
 
@@ -229,7 +231,8 @@ linkPara.parentNode.removeChild(linkPara);
 
 В следующих параграфах мы рассмотрим ещё несколько практических применений DOM API.
 
-> **Примечание:** Примечание. Вы можете найти наш пример [finished version of the dom-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example-manipulated.html) на GitHub ([см. также live](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)).
+> [!NOTE]
+> Вы можете найти наш пример [finished version of the dom-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example-manipulated.html) на GitHub ([см. также live](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)).
 
 ## Активное обучение: Получение полезной информации из объекта Window
 
@@ -266,7 +269,8 @@ linkPara.parentNode.removeChild(linkPara);
    };
    ```
 
-> **Примечание:** . Если у вас возникла проблема, посмотрите на наш [законченный пример изменения размера окна](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/window-resize-example-finished.html) ([см. также live](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/window-resize-example-finished.html)).
+> [!NOTE]
+> Если у вас возникла проблема, посмотрите на наш [законченный пример изменения размера окна](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/window-resize-example-finished.html) ([см. также live](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/window-resize-example-finished.html)).
 
 ## Активное обучение: динамический список покупок
 
@@ -294,7 +298,8 @@ linkPara.parentNode.removeChild(linkPara);
 10. Прикрепите обработчик события к кнопке удаления, чтобы при щелчке удалял весь элемент списка, внутри которого он находится.
 11. Наконец, используйте метод [`focus()`](/ru/docs/Web/API/HTMLElement/focus), чтобы сфокусировать входной элемент, готовый для входа в следующий элемент списка покупок.
 
-> **Примечание:** Примечание: Если у вас возникла действительно сложная проблема, взгляните на наши примеры [finished shopping list](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list-finished.html) ([see it running live also](http://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html).)
+> [!NOTE]
+> Если у вас возникла действительно сложная проблема, взгляните на наши примеры [finished shopping list](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list-finished.html) ([see it running live also](http://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html).)
 
 ## Краткая информация
 

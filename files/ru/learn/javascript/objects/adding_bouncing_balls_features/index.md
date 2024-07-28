@@ -17,7 +17,8 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 Для выполнения упражнения вы можете использовать сайт [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/). Вы можете вставлять HTML, CSS и JavaScript-код в один из этих онлайн-редакторов. Если ваш онлайн-редактор не поддерживает раздельные панели для редактирования JavaScript/CSS кода, то вы можете встроить код в HTML с помощью тегов `<script>`/`<style>`.
 
-> **Примечание:** . Если у вас что-то не получается — попросите о помощи. Более подробная информация находится в секции [Assessment or further help](#assessment_or_further_help) в конце этой страницы.
+> [!NOTE]
+> Если у вас что-то не получается — попросите о помощи. Более подробная информация находится в секции [Assessment or further help](#assessment_or_further_help) в конце этой страницы.
 
 ## Краткое описание проекта
 

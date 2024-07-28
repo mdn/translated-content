@@ -272,7 +272,8 @@ Ball.prototype.update = function () {
 
 3. Сохраните и обновите демо снова, и вы увидите, как ваши мячи меняют цвет, когда они сталкиваются!
 
-> **Примечание:** . Если вам не удаётся заставить этот пример работать, попробуйте сравнить код JavaScript с нашей [готовой версией](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (также смотрите, как он работает [в прямом эфире](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
+> [!NOTE]
+> Если вам не удаётся заставить этот пример работать, попробуйте сравнить код JavaScript с нашей [готовой версией](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (также смотрите, как он работает [в прямом эфире](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
 
 ## Резюме
 

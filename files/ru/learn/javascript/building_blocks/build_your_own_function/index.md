@@ -23,13 +23,15 @@ alert("This is a message");
 
 Функция `alert` ограничена: вы можете изменить текст сообщения, но не получится изменить его стиль, например, цвет, значок или что-то ещё. Создадим сообщение, более интересное по стилю.
 
-> **Примечание:** Этот пример будет работать во всех современных браузерах, но стиль может выглядеть немного смешным в более старых браузерах. Мы рекомендуем вам выполнять это упражнение в современном браузере, таком как Firefox, Opera или Chrome.
+> [!NOTE]
+> Этот пример будет работать во всех современных браузерах, но стиль может выглядеть немного смешным в более старых браузерах. Мы рекомендуем вам выполнять это упражнение в современном браузере, таком как Firefox, Opera или Chrome.
 
 ## Основная функция
 
 Для начала давайте соберём основную функцию.
 
-> **Примечание:** Для согласований имён функций нужно следовать тем же правилам, что и [правила именования переменных](/ru/docs/Learn/JavaScript/Первые_шаги/Variables#Правила_именования_переменных). Отличить имена функций от имён переменных просто: после имён функций указываются круглые скобки, а после имён переменных их нет.
+> [!NOTE]
+> Для согласований имён функций нужно следовать тем же правилам, что и [правила именования переменных](/ru/docs/Learn/JavaScript/Первые_шаги/Variables#Правила_именования_переменных). Отличить имена функций от имён переменных просто: после имён функций указываются круглые скобки, а после имён переменных их нет.
 
 1. Откройте файл [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html) и скопируйте его себе на компьютер. Код HTML в нем предельно прост: body содержит только одну кнопку. Также здесь представлен базовый CSS для создания настраиваемого окна сообщений и пустой элемент {{htmlelement ("script")}} для размещения нашего JavaScript.
 2. Затем добавьте строку внутри элемента `<script>`:
@@ -214,7 +216,8 @@ btn.onclick = displayMessage();
 
 1. Для начала, загрузите значки, необходимые для этого упражнения ([warning](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/warning.png) и [chat](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/chat.png) \[тут чёрные иконки на чёрном фоне... тролли на GitHub]) из GitHub. Сохраните их в новой папке `icons` в том же месте, что и ваш HTML-файл.
 
-   > **Примечание:** иконки [warning](https://www.iconfinder.com/icons/1031466/alarm_alert_error_warning_icon) и [chat](https://www.iconfinder.com/icons/1031441/chat_message_text_icon) были найдены на [iconfinder.com](https://www.iconfinder.com/), и разработаны [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr). Спасибо! (Фактические страницы значков были перемещены или удалены.)
+   > [!NOTE]
+   > Иконки были найдены на [iconfinder.com](https://www.iconfinder.com/), и разработаны [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr). Спасибо! (Фактические страницы значков были перемещены или удалены.)
 
 2. Затем найдите CSS внутри вашего HTML-файла. Мы сделаем несколько изменений, чтобы освободить место для иконок. Во-первых, обновите ширину `.msgBox`:
 
@@ -267,7 +270,8 @@ btn.onclick = displayMessage();
 
    Вот, насколько полезной становится наша (теперь не очень) маленькая функция.
 
-> **Примечание:** Если у вас возникли проблемы с запуском примера, не стесняйтесь проверять свой код на готовой версии [GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html) (см. также [в режиме реального времени](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html)) или обратитесь к нам за помощью.
+> [!NOTE]
+> Если у вас возникли проблемы с запуском примера, не стесняйтесь проверять свой код на готовой версии [GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html) (см. также [в режиме реального времени](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html)) или обратитесь к нам за помощью.
 
 ## Вывод
 
