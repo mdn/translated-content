@@ -47,7 +47,8 @@ new RTCPeerConnection(configuration);
         1 つの接続で使用される資格情報は 1 つだけですが、複数のアルゴリズムに資格情報を提供することで、状況によっては接続に成功する確率が向上する場合があります。
         詳しくは、[資格情報の使用](#資格情報の使用)を参照してください。
 
-        > **メモ:** この構成オプションは、最初に指定した後は変更できません。いったん資格情報が設定されると、今後 {{domxref("RTCPeerConnection.setConfiguration()")}} を呼び出す際には、このプロパティは無視されます。
+        > [!NOTE]
+        > この構成オプションは、最初に指定した後は変更できません。いったん資格情報が設定されると、今後 {{domxref("RTCPeerConnection.setConfiguration()")}} を呼び出す際には、このプロパティは無視されます。
 
     - `iceCandidatePoolSize` {{optional_inline}}
 
@@ -55,7 +56,8 @@ new RTCPeerConnection(configuration);
         既定値は 0 （候補の先読みをしない）です。
         接続を試みる前に ICE エージェントに ICE 候補のフェッチを開始させ、 {{domxref("RTCPeerConnection.setLocalDescription()")}} が呼ばれたときにすでに検査できるようにすると、よりすばやく接続できるようになる場合があります。
 
-        > **メモ:** ICE 候補者プールのサイズを変更すると、ICE の収集が開始されるきっかけとなる場合があります。
+        > [!NOTE]
+        > ICE 候補者プールのサイズを変更すると、ICE の収集が開始されるきっかけとなる場合があります。
 
     - `iceServers` {{optional_inline}}
       - : ICE エージェントが使用するサーバーを記述した {{domxref("RTCIceServer")}} オブジェクトの配列です。
