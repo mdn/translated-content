@@ -52,7 +52,8 @@ verify(algorithm, key, signature, data)
 
 ## 例
 
-> **メモ:** GitHub 上の[動作例を試す](https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html)ことができます。
+> [!NOTE]
+> GitHub 上の[動作例を試す](https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html)ことができます。
 
 ### RSASSA-PKCS1-v1_5
 
