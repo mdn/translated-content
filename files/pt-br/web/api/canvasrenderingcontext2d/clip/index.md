@@ -100,7 +100,8 @@ window.addEventListener("load", drawCanvas);
 
 {{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-> **Nota:** Tenha consciência de que o `clip()` só funciona com formas adicionadas ao caminho; ele não funciona com uma forma primitiva, como retângulos criados com {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}. Nesse caso você teria que usar {{domxref("CanvasRenderingContext2D.rect()","rect()")}} para desenhar um caminho de forma retângular para ser recortado.
+> [!NOTE]
+> Tenha consciência de que o `clip()` só funciona com formas adicionadas ao caminho; ele não funciona com uma forma primitiva, como retângulos criados com {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}. Nesse caso você teria que usar {{domxref("CanvasRenderingContext2D.rect()","rect()")}} para desenhar um caminho de forma retângular para ser recortado.
 
 ## Especificações
 
