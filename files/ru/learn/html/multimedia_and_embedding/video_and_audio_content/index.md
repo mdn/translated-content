@@ -169,7 +169,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 ![A simple audio player with a play button, timer, volume control, and progress bar](audio-player.png)
 
 > [!NOTE]
-> Примечание: вы можете запустить [аудио-демо](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) в Github (см. также [исходный код аудиоплеера](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
+> Вы можете запустить [аудио-демо](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) в Github (см. также [исходный код аудиоплеера](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
 
 Он занимает меньше места, чем видеоплеер, поскольку нет визуального компонента - вам просто нужно отображать элементы управления для воспроизведения звука. Другие отличия от видео HTML5 заключаются в следующем:
 
