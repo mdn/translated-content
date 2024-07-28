@@ -5,7 +5,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
 
 {{JSRef}}
 
-> **Aviso:** Esta funcionalidade está depreciada em favor da definição de setters usando a [sintaxe de inicialização de objeto](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer) ou a API {{jsxref("Object.defineProperty()")}}.
+> [!WARNING]
+> Esta funcionalidade está depreciada em favor da definição de setters usando a [sintaxe de inicialização de objeto](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer) ou a API {{jsxref("Object.defineProperty()")}}.
 >
 > Entretando, como ele é largamente implementado e usado na Web, é bem improvável que os navegadores vão parar de implementá-lo.
 

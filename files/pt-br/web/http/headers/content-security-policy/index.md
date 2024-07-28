@@ -40,7 +40,8 @@ Diretivas de busca (_Fetch directives_) controlam as localizações dos quais ce
 
   - : Define uma origem válida para [web workers](/pt-BR/docs/Web/API/Web_Workers_API) e contextos aninhados de navegação carregados usando elementos como {{HTMLElement("frame")}} e {{HTMLElement("iframe")}}.
 
-    > **Aviso:** Ao invés de **`child-src`**, os autores que querem regular contextos de navegação aninhadas e trabalhores devem usar as diretivas {{CSP("frame-src")}} e {{CSP("worker-src")}}, respectivamente.
+    > [!WARNING]
+    > Ao invés de **`child-src`**, os autores que querem regular contextos de navegação aninhadas e trabalhores devem usar as diretivas {{CSP("frame-src")}} e {{CSP("worker-src")}}, respectivamente.
 
 - {{CSP("connect-src")}}
   - : Restringe a URL que pode ser carregada usando interfaces de script.
@@ -60,7 +61,8 @@ Diretivas de busca (_Fetch directives_) controlam as localizações dos quais ce
 
   - : Especifica origens válidas para os elementos {{HTMLElement("object")}}, {{HTMLElement("embed")}}, e {{HTMLElement("applet")}}.
 
-    > **Nota:** Elementos controlados por `object-src` sejam talvez considerados elementos HTML legados e não estão recebendo novas funcionalidades padrão (como os atributos de segurança `sandbox` ou `allow` para `<iframe>`). Sendo assim é **recomendado** restringir o uso desta diretiva (e.g. colocar explicitamente `object-src 'none'` se possível).
+    > [!NOTE]
+    > Elementos controlados por `object-src` sejam talvez considerados elementos HTML legados e não estão recebendo novas funcionalidades padrão (como os atributos de segurança `sandbox` ou `allow` para `<iframe>`). Sendo assim é **recomendado** restringir o uso desta diretiva (e.g. colocar explicitamente `object-src 'none'` se possível).
 
 - {{CSP("prefetch-src")}}{{experimental_inline}}
   - : Especifica origens válidas para serem pré-carregadas ou pré-renderizadas.
@@ -115,7 +117,8 @@ Diretivas de Relatório controlam o processo de reportar as violações CSP. Vej
 
   - : Instrui ao agente de usuário para reportar tentativas de violaçnao de Política de Segurança de Conteúdo. Esses relatórios de violação consistem de documentos {{Glossary("JSON")}} enviados por requisição HTTP `POST` para uma URI especificada.
 
-    > **Aviso:** Apesar da diretiva {{CSP("report-to")}} tem a inteção de trocar a diretiva depreciada **`report-uri`**, {{CSP("report-to")}} não é suportado na maioria dos navegadores ainda. Então para compatibilidade com os navegadores atuais enquanto adiciona a compatibilidade com {{CSP("report-to")}}, você pode especificar ambos **`report-uri`** e {{CSP("report-to")}}:
+    > [!WARNING]
+    > Apesar da diretiva {{CSP("report-to")}} tem a inteção de trocar a diretiva depreciada **`report-uri`**, {{CSP("report-to")}} não é suportado na maioria dos navegadores ainda. Então para compatibilidade com os navegadores atuais enquanto adiciona a compatibilidade com {{CSP("report-to")}}, você pode especificar ambos **`report-uri`** e {{CSP("report-to")}}:
     >
     > ```
     > Content-Security-Policy: ...; report-uri https://endpoint.example.com; report-to groupname

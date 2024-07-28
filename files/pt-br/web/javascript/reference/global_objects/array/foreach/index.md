@@ -51,7 +51,8 @@ O intervalo dos elementos processados por `forEach()` é determinado antes da pr
 
 `forEach()` executa a a função `callback` uma vez para cada elemento do array – diferentemente de {{jsxref("Array.prototype.map()", "map()")}} ou {{jsxref("Array.prototype.reduce()", "reduce()")}}, ele sempre retorna o valor {{jsxref("undefined")}} e não é encadeável. O caso de uso típico é alterar o array no final do loop.
 
-> **Nota:** A única maneira de parar ou interromper um loop `forEach()` é disparando uma exceção. Se você precisa desse recurso, o método `forEach()` é a ferramenta errada. Você estará mais bem servido com um loop simples nesse caso. Se estiver testando o array de elementos para um predicado e precisar de um valor de retorno Boleano, você pode usar {{jsxref("Array.prototype.every()", "every()")}} ou {{jsxref("Array.prototype.some()", "some()")}}. Se estiverem disponíveis, os novos métodos {{jsxref("Array.prototype.find()", "find()")}} e {{jsxref("Array.prototype.findIndex()", "findIndex()")}} também podem ser usados para terminação antecipada em predicados verdadeiros.
+> [!NOTE]
+> A única maneira de parar ou interromper um loop `forEach()` é disparando uma exceção. Se você precisa desse recurso, o método `forEach()` é a ferramenta errada. Você estará mais bem servido com um loop simples nesse caso. Se estiver testando o array de elementos para um predicado e precisar de um valor de retorno Boleano, você pode usar {{jsxref("Array.prototype.every()", "every()")}} ou {{jsxref("Array.prototype.some()", "some()")}}. Se estiverem disponíveis, os novos métodos {{jsxref("Array.prototype.find()", "find()")}} e {{jsxref("Array.prototype.findIndex()", "findIndex()")}} também podem ser usados para terminação antecipada em predicados verdadeiros.
 
 ## Exemplos
 

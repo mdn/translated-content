@@ -74,7 +74,8 @@ Este é o valor padrão para um arquivo binario. Como é um arquivo binário des
 
 Este é o valor padrão para arquivos de texto. Mesmo se realmente significa arquivo textual desconhecido, os navegadores assumem que eles podem exibi-lo.
 
-> **Nota:** Note que `text/plain` não significa qualquer tipo de dados textuais. Se eles esperam um tipo específico de dados textuais, eles provavelmente não consideram uma correspondência. Especificamente se eles baixarem um arquivo `text/plain` de um elemento {{HTMLElement ("link")}} declarando arquivos CSS, eles não o reconhecerão como arquivos CSS válidos se forem apresentados com `text/plain`.
+> [!NOTE]
+> Note que `text/plain` não significa qualquer tipo de dados textuais. Se eles esperam um tipo específico de dados textuais, eles provavelmente não consideram uma correspondência. Especificamente se eles baixarem um arquivo `text/plain` de um elemento {{HTMLElement ("link")}} declarando arquivos CSS, eles não o reconhecerão como arquivos CSS válidos se forem apresentados com `text/plain`.
 > O CSS mime tipo `text/css` deve ser usado.
 
 ### `text/css`

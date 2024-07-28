@@ -28,7 +28,8 @@ Objetos `Function` criados com o construtor `Function` são _parseados_ quando a
 
 Todos os argumentos passados para a função são tratados como os nomes dos indetificadores dos parâmetros na função a ser criada, na mesma ordem na qual eles foram passados.
 
-> **Nota:** Funções criadas com o construtor `Function não criam closures` para o seu contexto de criação; elas sempre são criadas no escopo global. Quando executadas, elas terão acesso apenas às suas variáveis locais ou globais, não terão acesso às variáveis do escopo na qual o construtor `Function` foi chamado. Isto é diferente de usar {{jsxref("Global_Objects/eval", "eval")}} com o código de uma expressão de função.
+> [!NOTE]
+> Funções criadas com o construtor `Function não criam closures` para o seu contexto de criação; elas sempre são criadas no escopo global. Quando executadas, elas terão acesso apenas às suas variáveis locais ou globais, não terão acesso às variáveis do escopo na qual o construtor `Function` foi chamado. Isto é diferente de usar {{jsxref("Global_Objects/eval", "eval")}} com o código de uma expressão de função.
 
 Invocar o construtor `Function` como uma função (sem usar o operador `new`) tem o mesmo efeito de chamá-la como um construtor.
 

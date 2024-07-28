@@ -42,7 +42,8 @@ The {{HTTPHeader("Accept")}} header is defined by the browser, or any other user
 
 ### The `Accept-CH` header {{experimental_inline}}
 
-> **Nota:** This is part of an **experimental** technology called _Client Hints_. Initial support is in Chrome 46 or later. The Device-Memory value is in Chrome 61 or later.
+> [!NOTE]
+> This is part of an **experimental** technology called _Client Hints_. Initial support is in Chrome 46 or later. The Device-Memory value is in Chrome 61 or later.
 
 The experimental {{HTTPHeader("Accept-CH")}} lists configuration data that can be used by the server to select an appropriate response. Valid values are:
 
@@ -61,7 +62,8 @@ With UTF-8 now being well-supported, being the preferred way of encoding charact
 
 ### The `Accept-CH-Lifetime` header
 
-> **Nota:** This is part of an **experimental** technology called _Client Hints_ and is only available in Chrome 61 or later.
+> [!NOTE]
+> This is part of an **experimental** technology called _Client Hints_ and is only available in Chrome 61 or later.
 
 The {{HTTPHeader("Accept-CH-Lifetime")}} header is used with the `Device-Memory` value of the `Accept-CH` header and indicates the amount of time the device should opt-in to sharing the amount of device memory with the server. The value is given in miliseconds and it's use is optional.
 
@@ -82,7 +84,8 @@ Due to the [configuration-based entropy](https://www.eff.org/deeplinks/2010/01/p
 
 ### The `User-Agent` header
 
-> **Nota:** Though there are legitimate uses of this header for selecting content, [it is considered bad practice](/pt-BR/docs/Web/HTTP/Browser_detection_using_the_user_agent) to rely on it to define what features are supported by the user agent.
+> [!NOTE]
+> Though there are legitimate uses of this header for selecting content, [it is considered bad practice](/pt-BR/docs/Web/HTTP/Browser_detection_using_the_user_agent) to rely on it to define what features are supported by the user agent.
 
 The {{HTTPHeader("User-Agent")}} header identifies the browser sending the request. This string may contain a space-separated list of _product tokens_ and _comments_.
 

@@ -27,7 +27,8 @@ Para o melhor desempenho de um site, é ideal comprimir o máximo possível, man
 
 Algoritmos de compressão com perdas geralmente são mais eficientes que os sem perdas.
 
-> **Nota:** Como a compressão funciona melhor em tipos específicos de arquivos, ela geralmente não fornece nada mais ao comprimir o mesmo arquivo uma segunda vez. Na verdade, isso geralmente é contraproducente, pois o custo da sobrecarga (algoritmos geralmente precisam de um dicionário que some ao tamanho inicial) pode ser maior do que o ganho extra na compressão, resultando em um arquivo maior. Não use as duas técnicas a seguir para arquivos em um formato comprimido.
+> [!NOTE]
+> Como a compressão funciona melhor em tipos específicos de arquivos, ela geralmente não fornece nada mais ao comprimir o mesmo arquivo uma segunda vez. Na verdade, isso geralmente é contraproducente, pois o custo da sobrecarga (algoritmos geralmente precisam de um dicionário que some ao tamanho inicial) pode ser maior do que o ganho extra na compressão, resultando em um arquivo maior. Não use as duas técnicas a seguir para arquivos em um formato comprimido.
 
 ## Compressão de ponta a ponta
 

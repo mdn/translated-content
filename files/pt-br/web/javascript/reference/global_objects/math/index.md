@@ -32,7 +32,8 @@ Ao contrário de outros objetos globais, `Math` não é um construtor. Todas as 
 
 ## Métodos
 
-> **Nota:** Note que as funções trigonométricas (sin(), cos(), tan(), asin(), acos(), atan(), atan2()) recebem ou retornam ângulos em radianos. Divida por (`Math.PI/180`) para converter radianos em graus, ou multiplique por esse valor para fazer a conversão inversa.
+> [!NOTE]
+> Note que as funções trigonométricas (sin(), cos(), tan(), asin(), acos(), atan(), atan2()) recebem ou retornam ângulos em radianos. Divida por (`Math.PI/180`) para converter radianos em graus, ou multiplique por esse valor para fazer a conversão inversa.
 
 - {{jsxref("Global_Objects/Math/abs", "Math.abs(x)")}}
 

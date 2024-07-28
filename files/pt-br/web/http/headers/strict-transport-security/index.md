@@ -45,7 +45,8 @@ Se um site aceitar uma conexão por meio de HTTP e redirecionar para HTTPS, os v
 
 O cabeçalho HTTP Strict Transport Security informa ao navegador que ele nunca deve carregar um site usando HTTP e deve converter automaticamente todas as tentativas de acessar o site usando HTTP para solicitações HTTPS.
 
-> **Nota:** O cabeçalho `Strict-Transport-Security` é **ignorado** pelo navegador quando seu site é acessado usando HTTP; isso ocorre porque um invasor pode interceptar conexões HTTP e injetar o cabeçalho ou removê-lo. Quando seu site é acessado por HTTPS sem erros de certificado, o navegador sabe que seu site é capaz de HTTPS e honrará o `Strict-Transport-Security`cabeçalho.
+> [!NOTE]
+> O cabeçalho `Strict-Transport-Security` é **ignorado** pelo navegador quando seu site é acessado usando HTTP; isso ocorre porque um invasor pode interceptar conexões HTTP e injetar o cabeçalho ou removê-lo. Quando seu site é acessado por HTTPS sem erros de certificado, o navegador sabe que seu site é capaz de HTTPS e honrará o `Strict-Transport-Security`cabeçalho.
 
 ### Um cenário de exemplo
 

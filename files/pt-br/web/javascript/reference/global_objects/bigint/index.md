@@ -95,7 +95,8 @@ bigN * -1n
 
 O operador `/` também funciona com o esperado com números inteiros. No entanto, desde que esses sejam `BigInt`s e não `BigDecimal`s, essa operação vai arredondar para 0, o que significa que não vai retornar qualquer valor fracional.
 
-> **Aviso:** Uma operação com um resultado fracional será arredondado com `BigInt.`
+> [!WARNING]
+> Uma operação com um resultado fracional será arredondado com `BigInt.`
 
 ```js
 const expected = 4n / 2n;

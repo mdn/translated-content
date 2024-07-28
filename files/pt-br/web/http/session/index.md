@@ -20,7 +20,8 @@ Em protocolos cliente-servidor é o cliente quem estabelece as conexões. Abrir 
 Usando o protocolo TCP, a porta padrão para um servidor HTTP em um computador é a porta 80, porém outras portas podem ser utilizadas, como a 8000 ou 8080.
 A URL da página a se requisitar contém o nome do domínio e o número da porta, embora este último pode ser omitido caso a porta seja a 80. Leia [Identificando recursos na Web](/pt-BR/docs/Web/HTTP/Basico_sobre_HTTP/Identifying_resources_on_the_Web) para mais informações.
 
-> **Nota:** O modelo cliente-servidor não permite o servidor enviar dados ao cliente sem uma requisição explícita. Para contornar esse problema, os desenvolvedores Web usam várias técnicas: executar ping no servidor periodicamente por meio das APIs {{domxref ("XMLHTTPRequest")}}, {{domxref ("Fetch")}}, usando a [WebSockets API](/pt-BR/docs/WebSockets) ou protocolos semelhantes.
+> [!NOTE]
+> O modelo cliente-servidor não permite o servidor enviar dados ao cliente sem uma requisição explícita. Para contornar esse problema, os desenvolvedores Web usam várias técnicas: executar ping no servidor periodicamente por meio das APIs {{domxref ("XMLHTTPRequest")}}, {{domxref ("Fetch")}}, usando a [WebSockets API](/pt-BR/docs/WebSockets) ou protocolos semelhantes.
 
 ## Enviando uma requisição de cliente
 

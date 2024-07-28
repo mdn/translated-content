@@ -5,7 +5,8 @@ slug: Web/HTTP/Headers/Warning
 
 {{HTTPSidebar}}
 
-> **Nota:** O cabeçalho `Warning` será depreciado em breve; veja [Warning (https://github.com/httpwg/http-core/issues/139)](https://github.com/httpwg/http-core/issues/139) e [Warning: header & stale-while-revalidate (https://github.com/whatwg/fetch/issues/913)](https://github.com/whatwg/fetch/issues/913) para mais detalhes.
+> [!NOTE]
+> O cabeçalho `Warning` será depreciado em breve; veja [Warning (https://github.com/httpwg/http-core/issues/139)](https://github.com/httpwg/http-core/issues/139) e [Warning: header & stale-while-revalidate (https://github.com/whatwg/fetch/issues/913)](https://github.com/whatwg/fetch/issues/913) para mais detalhes.
 
 O cabeçalho geral HTTP **`Warning`** contém informação sobre possíveis problemas com o status da mensagem. Mais de um cabeçalho `Warning` pode aparecer na resposta.
 

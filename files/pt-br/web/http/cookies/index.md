@@ -18,7 +18,8 @@ Cookies são usados principalmente para três propósitos:
 
 Os cookies eram usados para armazenamento geral no lado do cliente. Embora isso fosse aceitável quando eram a única forma de armazenar dados no cliente, atualmente é recomendável utilizar APIs de armazenamento mais modernas. Os cookies são enviados em todas as requisições, por isso podem prejudicar a performance (especialmente em conexões móveis). APIs modernas de armazenamento no cliente são [Web storage API](/pt-BR/docs/Web/API/Web_Storage_API) (`localStorage` e `sessionStorage`) e [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API).
 
-> **Nota:** Para visualizar os cookies armazenados (e outros armazenamentos que uma página web pode usar), pode-se habilitar o [Storage Inspector](/pt-BR/docs/Tools/Storage_Inspector) nas Ferramentas de Desenvolvimento e selecionar o item **Cookies** na árvore de armazenamento.
+> [!NOTE]
+> Para visualizar os cookies armazenados (e outros armazenamentos que uma página web pode usar), pode-se habilitar o [Storage Inspector](/pt-BR/docs/Tools/Storage_Inspector) nas Ferramentas de Desenvolvimento e selecionar o item **Cookies** na árvore de armazenamento.
 
 ## Criando cookies
 
@@ -34,7 +35,8 @@ Set-Cookie: <cookie-name>=<cookie-value>
 
 Este cabeçalho de servidor informa ao cliente para armazenar um cookie.
 
-> **Nota:** Eis as formas de utilização do cabeçalho `Set-Cookie` em várias aplicações de servidor:- [PHP](https://secure.php.net/manual/en/function.setcookie.php)
+> [!NOTE]
+> Eis as formas de utilização do cabeçalho `Set-Cookie` em várias aplicações de servidor:- [PHP](https://secure.php.net/manual/en/function.setcookie.php)
 >
 > - [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value)
 > - [Python](https://docs.python.org/3/library/http.cookies.html)
@@ -69,7 +71,8 @@ Ao invés de expirar quando o cliente fecha, _cookies permanentes_ expiram em um
 Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 ```
 
-> **Nota:** Quando uma data de expiração é configurada, o tempo e a data são relativas ao cliente no qual o cookie está configurado, não ao servidor.
+> [!NOTE]
+> Quando uma data de expiração é configurada, o tempo e a data são relativas ao cliente no qual o cookie está configurado, não ao servidor.
 
 ### Cookies `Secure` e `HttpOnly`
 
@@ -135,7 +138,8 @@ Consulte as questões de segurança na seção [Segurança](/pt-BR/docs/Web/HTTP
 
 ## Segurança
 
-> **Nota:** Informações confidenciais ou restritas nunca devem ser transmitidas via cookies HTTP, já que todo o mecanismo é intrinsecamente inseguro.
+> [!NOTE]
+> Informações confidenciais ou restritas nunca devem ser transmitidas via cookies HTTP, já que todo o mecanismo é intrinsecamente inseguro.
 
 ### Sequestro de sessões e XSS
 

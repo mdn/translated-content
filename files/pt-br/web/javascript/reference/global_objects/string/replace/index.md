@@ -120,7 +120,8 @@ console.log(newstr);
 // retorna "Twas the night before Christmas..."
 ```
 
-> **Nota:** Veja [este guia](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) para maiores explicações as sobre expressões regulares.
+> [!NOTE]
+> Veja [este guia](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) para maiores explicações as sobre expressões regulares.
 
 ### Usando `global` e `ignore` com `replace()`
 

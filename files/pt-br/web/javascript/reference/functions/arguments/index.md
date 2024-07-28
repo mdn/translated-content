@@ -39,7 +39,8 @@ var args = [].slice.call(arguments);
 var args = Array.from(arguments);
 ```
 
-> **Aviso:** Usar slice nos argumentos impedem otimizações em alguns motores JavaScript (V8 por exemplo - [mais informações](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments)). Se você precisar, tente construir um novo array iterando através dos argumentos do objeto. Uma alternativa seria usar o construtor do `Array` como uma função:
+> [!WARNING]
+> Usar slice nos argumentos impedem otimizações em alguns motores JavaScript (V8 por exemplo - [mais informações](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments)). Se você precisar, tente construir um novo array iterando através dos argumentos do objeto. Uma alternativa seria usar o construtor do `Array` como uma função:
 >
 > ```js
 > var args =
