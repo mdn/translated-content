@@ -90,7 +90,8 @@ var sPrettyXML = XML(oSerializer.serializeToString(doc)).toXMLString();
 
 들여쓰기는 두 번 스페이스가 들어간 것과 같게 되어 있습니다. 좀 더 효율적인 코드를 작성하거나 들여쓰기 문자열을 임의로 설정하고 싶다면 {{ domxref("treeWalker") }}를 사용하십시오.
 
-> **참고:** E4X `toXMLString` 메소드를 쓴다면, **CDATA 요소가 없어지거나**, 요소 안에 담긴 텍스트만 남을 수 있습니다. 그러므로 만약 XML 내에 CDATA 요소가 들어 있다면, 위에 나온 메소드는 그다지 유용하지 않을 수도 있습니다.
+> [!NOTE]
+> E4X `toXMLString` 메소드를 쓴다면, **CDATA 요소가 없어지거나**, 요소 안에 담긴 텍스트만 남을 수 있습니다. 그러므로 만약 XML 내에 CDATA 요소가 들어 있다면, 위에 나온 메소드는 그다지 유용하지 않을 수도 있습니다.
 
 ```xml
 <content><![CDATA[This is the content]]></content>
