@@ -2,7 +2,7 @@
 title: コマンドライン短期集中講座
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
 l10n:
-  sourceCommit: dfedc6e2f59e7072a9ced35ce4049a906438d74c
+  sourceCommit: 11a08e7da75bfb0b3e606eb26a9a0ad9301a1be5
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
@@ -12,13 +12,13 @@ l10n:
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件：</th>
+      <th scope="row">前提条件:</th>
       <td>
         主要な <a href="/ja/docs/Learn/HTML">HTML</a>、<a href="/ja/docs/Learn/CSS">CSS</a>、と <a href="/ja/docs/Learn/JavaScript">JavaScript</a> 言語
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目的:</th>
       <td>
         端末／コマンドラインとは何か、学ぶべき基本的なコマンドは何か、新しいコマンドラインツールをインストールする方法を理解します。
       </td>
@@ -212,7 +212,7 @@ ls -l
 重要なものを誤って削除しないように、以下のコマンド例をガイダンスとして使用して、どこかに作成したテストディレクトリーでそれらを試してみてください。
 
 - `mkdir` — これにより、現在のディレクトリー内に新しいディレクトリーが作成され、コマンド名の後に指定した名前が付けられます。たとえば、 `mkdir my-awesome-website` は `my-awesome-website` という名前の新しいディレクトリーを作成します。
-- `rmdir` — 指定されたディレクトリーを削除しますが、それが空の場合のみです。たとえば、 `rmdir my-awesome-website` は上で作成したディレクトリーを削除します。空ではないディレクトリーを削除したい場合 (およびそこに含まれるすべてのものも削除したい場合)、`-r` オプション (再帰的) を使用できますが、これは危険です。ディレクトリーは永久に失われるため、後でディレクトリー内に必要なものがないことを確認してください。
+- `rmdir` — 指定されたディレクトリーを削除しますが、それが空の場合のみです。たとえば、 `rmdir my-awesome-website` は上で作成したディレクトリーを削除します。空ではないディレクトリーを削除したい場合 (およびそこに含まれるすべてのものも削除したい場合)、代わりに `rm -r` を使用することができますが、これは危険です。ディレクトリーは永久に失われるため、後でディレクトリー内に必要なものがないことを確認してください。
 - `touch` — 現在のディレクトリー内に新しい空のファイルを作成します。たとえば、`touch mdn-example.md` は `mdn-example.md` という新しい空のファイルを作成します。
 - `mv` — 最初に指定されたファイルの場所から 2 番目に指定されたファイルの場所にファイルを移動します。たとえば、 `mv mdn-example.md mdn-example.txt` (場所はファイルパスとして書き込まれます)。このコマンドは、`mdn-example.md` 現在のディレクトリーにあるファイルに `mdn-example.txt` 現在のディレクトリーに。技術的にはファイルは移動されていますが、実用的な観点から見ると、このコマンドは実際にはファイルの名前を変更しています。
 - `cp` — 使い方は `mv` と似ていますが、`cp` は指定された最初の場所と 2 番目に指定された場所にファイルのコピーを作成します。たとえば、`cp mdn-example.txt mdn-example.txt.bak` は、`mdn-example.txt.bak` という名前の `mdn-example.txt` のコピーを作成します (もちろん、必要に応じて別の名前にすることもできます）。
@@ -277,7 +277,7 @@ ls | wc -l
 curl https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 ```
 
-ページが ([/Web/API/fetch](/ja/docs/Web/API/fetch) に) リダイレクトされているため、出力は得られません。
+ページが ([/Web/API/fetch](/ja/docs/Web/API/Window/fetch) に) リダイレクトされているため、出力は得られません。
 `-L` フラグを使用してリダイレクトに従うように `curl` に明示的に指示する必要があります。
 
 また `curl` の `-I` フラグを使用して `developer.mozilla.org` が返すヘッダーを見て、 `curl` の出力を `grep` にパイプすることにより、端末に送信されるすべてのロケーションリダイレクトを出力します。(「 location」という単語を含むすべての行を返すように `grep` に依頼します)。
@@ -368,10 +368,10 @@ Prettier のできること:
 
 この記事では、[Prettier インストールガイド](https://prettier.io/docs/en/install.html) で提案されているように、Prettier をローカルにインストールします。
 
-ノードをインストールしたら端末を開き、次のコマンドを実行して Prettier をインストールします。
+ノードをインストールしたら端末を開き、次のコマンドを実行して Prettier をインストールします（`--save-dev` が何をするかは、次の記事で説明します）。
 
 ```bash
-npm install prettier
+npm install --save-dev prettier
 ```
 
 [npx](https://docs.npmjs.com/cli/commands/npx) ツールを使用して、ファイルをローカルで実行できるようになりました。
