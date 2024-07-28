@@ -254,25 +254,24 @@ Content-Type: text/plain
 
 #### 플리플라이트 요청과 리다이렉트
 
-모든 브라우저가 preflighted request 후 리다이렉트를 지원하지는 않습니다. preflighted request 후 리다이렉트가 발생하면 일부 브라우저는 다음과 같은 오류 메시지를 띄웁니다.
+현재 모든 브라우저가 프리플라이트 요청 후 리디렉션을 따르는 것을 현재 지원하지 않습니다. 프리플라이트 요청 후 리다이렉트가 발생하면 일부 브라우저는 다음과 같은 오류 메시지를 띄웁니다.
 
-> 요청이 'https\://example.com/foo'로 리다이렉트 되었으며, preflight가 필요한 cross-origin 요청은 허용되지 않습니다.
+> 요청이 `https://example.com/foo` 로 리디렉션되었습니다. 이는 프리플라이트 요청이 필요한 교차 출처 요청에 대해 허용되지 않습니다.
+> 요청은 프리플라이트 요청이 필요합니다. 이는 교차 출처 리디렉트를 허용되지 않습니다.
 
-> 요청에 preflight가 필요합니다. preflight는 cross-origin 리다이렉트를 허용하지 않습니다.
+CORS 프로토콜은 원래 그러한 동작(리다이렉트)을 필요했지만, [이후 더 이상 필요하지 않도록 변경되었습니다](https://github.com/whatwg/fetch/commit/0d9a4db8bc02251cc9e391543bb3c1322fb882f2). 그러나 모든 브라우저가 변경 사항을 구현하지는 않았기 때문에, 따라서 원래 필요했었던 동작(리다이렉트)이 여전히 보입니다.
 
-CORS 프로토콜은 본래 그 동작(리다이렉트)이 필요했지만, [이후 더 이상 필요하지 않도록 변경되었습니다](https://github.com/whatwg/fetch/commit/0d9a4db8bc02251cc9e391543bb3c1322fb882f2). 그러나 모든 브라우저가 변경 사항을 구현하지는 않았기 때문에, 본래의 필요한 동작은 여전히 나타납니다.
+브라우저가 명세를 따라잡을 때까지 다음 중 하나 또는 둘 다 수행하여 이 제한을 해결할 수 있습니다.
 
-브라우저가 명세를 따라잡을 때 까지 다음 중 하나 혹은 둘 다를 수행하여 이 제한을 해결할 수 있습니다.
+- 프리플라이트 요청을 피하거나 리디렉션을 피하기 위해(혹은 둘 다) 서버 측 동작을 변경
+- 요청을 프리플라이트 요청을 발생시키지 않는 [단순 요청](#simple_requests)으로 변경
 
-- preflight 리다이렉트를 방지하기 위해 서버측 동작을 변경
-- preflight를 발생시키지 않는 [simple request](#simple_requests) 가 되도록 요청을 변경
+위 방법이 가능하지 않은 경우 다른 방법도 있습니다.
 
-이것이 가능하지 않은 경우 다른 방법도 있습니다.
-
-1. Fetch API를 통해 {{domxref("Response.url")}} 이나 {{domxref("XMLHttpRequest.responseURL")}}를 사용하여 [simple request](#simple_requests) 를 작성합니다. 이 simple request를 이용하여 실제 preflighted request가 끝나는 URL을 판별하세요.
+1. 실제 프리플라이트 요청이 도달할 URL 을 판별하기 위해 Fetch API 의 {{domxref("Response.url")}} 또는 {{domxref("XMLHttpRequest.responseURL")}}을 사용해 [단순 요청](#simple_requests)을 만듭니다.
 2. 첫 번째 단계에서 `Response.url` 혹은 `XMLHttpRequest.responseURL` 로부터 얻은 URL을 사용하여 또 다른 요청(실제 요청)을 만듭니다.
 
-그러나 요청에 `Authorization` 헤더가 있기 때문에 preflight를 트리거하는 요청일 경우에, 위의 단계를 사용하여 제한을 제거할 수 없습니다. 또한 요청이 있는 서버를 제어하지 않으면 문제를 해결할 수 없습니다.
+그러나 요청에 `Authorization` 헤더가 포함되어 있어 프리플라이트 요청을 트리거 한 요청이라면 위 단계를 통해 이 제한을 우회할 수 없습니다. 그리고 요청이 이뤄지는 서버에 대한 제어가 없다면 전혀 우회할 수 없습니다.
 
 ### 자격 증명을 포함한 요청
 
