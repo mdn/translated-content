@@ -15,7 +15,7 @@ slug: Web/API/Element/scrollTop
 
 Safari 通过将`scrollTop`更新到最大滚动位置之外来响应过度滚动（除非禁用默认的“反弹”效果，例如将{{cssxref("overscroll-behavior")}}设置为`none`），而 Chrome 和 Firefox 则不会。例如，在 Safari 浏览器上，当元素已经位于顶部时继续向上滚动，`scrollTop`可能会变为负值。
 
-通过设置scrollTop属性，可以让元素在垂直方向滚动到指定位置，和使用{{domxref("Element.scroll()")}}设置`behavior: "auto"`效果一致。
+通过设置 scrollTop 属性，可以让元素在垂直方向滚动到指定位置，和使用{{domxref("Element.scroll()")}}设置`behavior: "auto"`效果一致。
 
 ## 例子
 
