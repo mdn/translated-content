@@ -9,7 +9,8 @@ l10n:
 
 **`HashChangeEvent()`** コンストラクターは、新しい {{domxref("HashChangeEvent")}} オブジェクトを生成します。これは {{domxref("window")}} オブジェクトで URL のフラグメントが変更されたときに発行される {{domxref("Window/hashchange_event", "hashchange")}} イベントで使用されます。
 
-> **メモ:** ウェブ開発者は通常このコンストラクターを呼び出す必要はありません。ブラウザーは {{domxref("Window/hashchange_event", "hashchange")}} イベントを発行するときにこれらのオブジェクトを自分で作成するからです。
+> [!NOTE]
+> ウェブ開発者は通常このコンストラクターを呼び出す必要はありません。ブラウザーは {{domxref("Window/hashchange_event", "hashchange")}} イベントを発行するときにこれらのオブジェクトを自分で作成するからです。
 
 ## 構文
 

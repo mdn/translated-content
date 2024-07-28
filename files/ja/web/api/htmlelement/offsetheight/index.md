@@ -13,7 +13,8 @@ l10n:
 
 （例えば、要素またはその祖先のいずれかで `style.display` を `"none"` に設定することにより）要素が非表示の場合は、`0` が返されます。
 
-> **メモ:** このプロパティは、値を整数に丸めます。 小数値が必要な場合は、{{ domxref("element.getBoundingClientRect()") }} を使用してください。
+> [!NOTE]
+> このプロパティは、値を整数に丸めます。 小数値が必要な場合は、{{ domxref("element.getBoundingClientRect()") }} を使用してください。
 
 ## 値
 

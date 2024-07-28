@@ -29,7 +29,8 @@ requestDevice(descriptor)
     - `requiredLimits` {{optional_inline}}
       - : 返される {{domxref("GPUDevice")}} が対応することを要求する制限を表すプロパティが格納されたオブジェクトです。`GPUAdapter` がこれらの制限を提供できない場合は、`requestDevice()` の呼び出しは失敗します。それぞれのキーは {{domxref("GPUSupportedLimits")}} のメンバーである名前でなければなりません。値が指定されない場合のデフォルトは空のオブジェクトです。
 
-> **メモ:** 下層のハードウェアが対応している場合でも、すべての機能と制限が対応しているすべてのブラウザーの WebGPU で利用可能なわけではありません。詳しくは、{{domxref("GPUAdapter.features", "features")}} および {{domxref("GPUAdapter.limits", "limits")}} のページを参照してください。
+> [!NOTE]
+> 下層のハードウェアが対応している場合でも、すべての機能と制限が対応しているすべてのブラウザーの WebGPU で利用可能なわけではありません。詳しくは、{{domxref("GPUAdapter.features", "features")}} および {{domxref("GPUAdapter.limits", "limits")}} のページを参照してください。
 
 ### 返値
 
