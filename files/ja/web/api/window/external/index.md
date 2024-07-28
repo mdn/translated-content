@@ -1,5 +1,5 @@
 ---
-title: Window: external プロパティ
+title: "Window: external プロパティ"
 slug: Web/API/Window/external
 l10n:
   sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
