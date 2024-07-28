@@ -134,9 +134,11 @@ slug: Learn/JavaScript/First_steps/Math
   </tbody>
 </table>
 
-> **备注：** 你以后有时候会看到参与算术计算的数字被称为 操作数 ({{Glossary("Operand", "operands")}})。
+> [!NOTE]
+> 你以后有时候会看到参与算术计算的数字被称为 操作数 ({{Glossary("Operand", "operands")}})。
 
-> **备注：** 有时你可能会看到使用较旧的 {{jsxref("Math.pow()")}} 方法表达的指数，该方法的工作方式非常相似。例如，在 `Math.pow(7, 3)` 中，`7` 是基数，`3` 是指数，因此表达式的结果是 `343`。 `Math.pow(7, 3)` 相当于 `7 ** 3`。
+> [!NOTE]
+> 有时你可能会看到使用较旧的 {{jsxref("Math.pow()")}} 方法表达的指数，该方法的工作方式非常相似。例如，在 `Math.pow(7, 3)` 中，`7` 是基数，`3` 是指数，因此表达式的结果是 `343`。 `Math.pow(7, 3)` 相当于 `7 ** 3`。
 
 我们可能不需要教你如何做基础数学，但我们想测试你对所涉及的语法的理解。尝试将下面的示例输入到[开发者工具 JavaScript 控制台](/zh-CN/docs/Learn/Discover_browser_developer_tools)中。
 
@@ -190,7 +192,8 @@ num2 + num1 / 8 + 2;
 
 尝试看看。
 
-> **备注：** 注意：可以在[表达式和运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#运算符优先级)中找到所有 JavaScript 运算符的完整列表及其优先级。
+> [!NOTE]
+> 注意：可以在[表达式和运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#运算符优先级)中找到所有 JavaScript 运算符的完整列表及其优先级。
 
 ## 自增和自减运算符
 
@@ -200,7 +203,8 @@ num2 + num1 / 8 + 2;
 guessCount++;
 ```
 
-> **备注：** 它们最常用于[循环](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration)中，你将在以后的课程中了解。例如，假设你想循环查看价格表，并为每个价格增加销售税。你可以使用循环依次查看每个值，并在每种情况下进行必要的计算，以添加销售税。当需要时，增量器用于移动到下一个值。我们实际上提供了一个简单的例子，显示了如何完成——[在线查看效果](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html)，并[查看源代码](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/maths/loop.html)，看看是否可以发现增量器！我们稍后将会详细介绍循环。
+> [!NOTE]
+> 它们最常用于[循环](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration)中，你将在以后的课程中了解。例如，假设你想循环查看价格表，并为每个价格增加销售税。你可以使用循环依次查看每个值，并在每种情况下进行必要的计算，以添加销售税。当需要时，增量器用于移动到下一个值。我们实际上提供了一个简单的例子，显示了如何完成——[在线查看效果](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html)，并[查看源代码](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/maths/loop.html)，看看是否可以发现增量器！我们稍后将会详细介绍循环。
 
 我们来试试看你们的控制台。首先，请注意，你不能将这些直接应用于一个数字，这可能看起来很奇怪，但是我们为变量赋值一个新的更新值，而不是对该值进行操作。以下将返回错误：
 
@@ -229,7 +233,8 @@ num2--;
 num2;
 ```
 
-> **备注：** 你可以使浏览器以其他方式进行操作 - 递增/递减变量，然后返回值 - 将操作符放在变量的开头，而不是结束。再次尝试上面的例子，但这次使用 `++num1` 和 `--num2`。
+> [!NOTE]
+> 你可以使浏览器以其他方式进行操作 - 递增/递减变量，然后返回值 - 将操作符放在变量的开头，而不是结束。再次尝试上面的例子，但这次使用 `++num1` 和 `--num2`。
 
 ## 赋值运算符
 
@@ -260,7 +265,8 @@ let y = 4; // y 包含值 4
 x *= y; // x 现在包含值 12
 ```
 
-> **备注：** 虽然有很多可用的[赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#Assignment_operators)，但是这些是你现在应该学习的基本的一类。
+> [!NOTE]
+> 虽然有很多可用的[赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#Assignment_operators)，但是这些是你现在应该学习的基本的一类。
 
 ## 主动学习：调整画布框的大小
 
@@ -294,7 +300,8 @@ x *= y; // x 现在包含值 12
 | <=     | 小于或等于 | 测试左值是否小于或等于右值。   | `3 <= 2`      |
 | >=     | 大于或等于 | 测试左值是否大于或等于正确值。 | `5 >= 4`      |
 
-> **备注：** 你可能会看到有些人在他们的代码中使用`==`和`!=`来判断相等和不相等，这些都是 JavaScript 中的有效运算符，但它们与`===`/`!==`不同，前者测试值是否相同，但是数据类型可能不同，而后者的严格版本测试值和数据类型是否相同。严格的版本往往导致更少的错误，所以我们建议你使用这些严格的版本。
+> [!NOTE]
+> 你可能会看到有些人在他们的代码中使用`==`和`!=`来判断相等和不相等，这些都是 JavaScript 中的有效运算符，但它们与`===`/`!==`不同，前者测试值是否相同，但是数据类型可能不同，而后者的严格版本测试值和数据类型是否相同。严格的版本往往导致更少的错误，所以我们建议你使用这些严格的版本。
 
 如果你尝试在控制台中输入这些值，你将看到它们都返回 `true`/`false` 值 - 我们在上一篇文章中提到的那些布尔值。这些是非常有用的，因为它们允许我们在我们的代码中做出决定 - 每次我们想要选择某种类型时，都会使用这些代码，例如：
 
@@ -333,7 +340,8 @@ function updateBtn() {
 
 你可以在 updateBtn（）函数内看到正在使用的等号运算符。在这种情况下，我们不会测试两个数学表达式是否具有相同的值 - 我们正在测试一个按钮的文本内容是否包含某个字符串 - 但它仍然是工作原理。如果按钮当前为“启动机器（start machine）”，则将其标签更改为“停止机器（stop machine）”，并根据需要更新标签。如果按钮上写着“停机”时被按下，我们将显示回原来的内容。
 
-> **备注：** 这种在两个状态之间来回交换的行为通常被称为**切换**。它在一个状态和另一个状态之间切换 - 点亮，熄灭等
+> [!NOTE]
+> 这种在两个状态之间来回交换的行为通常被称为**切换**。它在一个状态和另一个状态之间切换 - 点亮，熄灭等
 
 ## 总结
 
@@ -341,6 +349,7 @@ function updateBtn() {
 
 在下一篇文章中，我们将探讨文本，以及 JavaScript 如何让我们操纵它。
 
-> **备注：** 如果你喜欢数学，并希望阅读更多关于它如何在 JavaScript 中实现的，那么你可以在 MDN's main JavaScript 部分读到更多关于它的内容。对于学习[数字与日期](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates)和[表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#运算符优先级)来说，那是一个不错的地方。
+> [!NOTE]
+> 如果你喜欢数学，并希望阅读更多关于它如何在 JavaScript 中实现的，那么你可以在 MDN's main JavaScript 部分读到更多关于它的内容。对于学习[数字与日期](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates)和[表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#运算符优先级)来说，那是一个不错的地方。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}

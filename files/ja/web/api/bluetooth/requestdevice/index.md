@@ -102,7 +102,8 @@ requestDevice(options)
 そのため、要求されるサービスをリストアップすることが重要です。
 具体的な例としては、[`name`](#name) だけでフィルターをかける場合は、[`optionalServices`](#optionalservices) で必要なサービスを指定する必要があります。
 
-> **メモ:** たとえ `options` 引数が技術的にはオプションであっても、結果を返すためには `filters` に値を設定するか、`acceptAllDevices` に `true` を設定する必要があります。
+> [!NOTE]
+> たとえ `options` 引数が技術的にはオプションであっても、結果を返すためには `filters` に値を設定するか、`acceptAllDevices` に `true` を設定する必要があります。
 
 ### 返値
 

@@ -299,7 +299,8 @@ Object.prototype.valueOf = function (...args) {
 };
 ```
 
-> **警告：** 修改任何内置构造函数的 `prototype` 属性被认为是一种不好的做法，可能会影响向前兼容性。
+> [!WARNING]
+> 修改任何内置构造函数的 `prototype` 属性被认为是一种不好的做法，可能会影响向前兼容性。
 
 你可以阅读更多关于原型的内容，参见[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。
 

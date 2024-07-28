@@ -109,7 +109,8 @@ En el ejemplo siguiente hemos diseñado algunas entradas de texto con CSS: puede
 
 {{EmbedGHLiveSample("css-examples/learn/images/form.html", '100%', 1000)}}
 
-> **Advertencia:** Al cambiar el estilo de los elementos de formulario debes asegurarte de que para el usuario sigue siendo obvio que se trata de elementos de formulario. Podrías crear una entrada de formulario sin bordes y un fondo que sea casi indistinguible del contenido que lo rodea, pero esto haría que sea muy difícil de reconocer y completar.
+> [!WARNING]
+> Al cambiar el estilo de los elementos de formulario debes asegurarte de que para el usuario sigue siendo obvio que se trata de elementos de formulario. Podrías crear una entrada de formulario sin bordes y un fondo que sea casi indistinguible del contenido que lo rodea, pero esto haría que sea muy difícil de reconocer y completar.
 
 Como se explica en los artículos sobre [el diseño de formularios](/es/docs/Learn/HTML/Forms/Styling_HTML_forms) en la parte HTML de esta web, el sistema operativo presenta muchos de los tipos de entrada más complejos y son inaccesibles para el diseño. Por lo tanto, siempre debes suponer que los formularios se verán de manera bastante diferentes para los distintos visitantes, y deberás probar los formularios complejos en diversos navegadores.
 
@@ -175,7 +176,8 @@ textarea {
 }
 ```
 
-> **Nota:** Muchos desarrolladores utilizan las hojas de estilo de normalización para crear un conjunto de estilos de línea base para usar en todos los proyectos. Por lo general, estas hojas hacen cosas similares a las que acabamos de describir y garantizan que cualquier cosa que pueda ser diferente en distintos navegadores tenga establecido un valor por defecto coherente antes de que tú hagas tu propio trabajo con el CSS. Aunque ya no son tan importantes como lo eran antes, porque los navegadores suelen ser más homogéneos que en el pasado. Sin embargo, si deseas ver un ejemplo, consulta [Normalize.css](http://necolas.github.io/normalize.css/), que es una hoja de estilo muy popular que muchos proyectos utilizan como base.
+> [!NOTE]
+> Muchos desarrolladores utilizan las hojas de estilo de normalización para crear un conjunto de estilos de línea base para usar en todos los proyectos. Por lo general, estas hojas hacen cosas similares a las que acabamos de describir y garantizan que cualquier cosa que pueda ser diferente en distintos navegadores tenga establecido un valor por defecto coherente antes de que tú hagas tu propio trabajo con el CSS. Aunque ya no son tan importantes como lo eran antes, porque los navegadores suelen ser más homogéneos que en el pasado. Sin embargo, si deseas ver un ejemplo, consulta [Normalize.css](http://necolas.github.io/normalize.css/), que es una hoja de estilo muy popular que muchos proyectos utilizan como base.
 
 Para obtener más información sobre los formularios de estilo, echa un vistazo a los dos artículos en la sección HTML de estas guías.
 

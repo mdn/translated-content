@@ -192,7 +192,8 @@ Vue のおかげで、 UI を構築するために独自の関数を作成する
 
 このモジュールに含まれるフレームワークはそれぞれ大規模で活発なコミュニティを持っているので、それぞれのフレームワークのエコシステムは開発者の経験を向上させるツールを提供します。これらのツールによって、テスト(アプリケーションがあるべきように動作することを保証する) や lint (コードがエラーフリーでスタイルが一貫していることを保証する)のようなものを簡単に追加できます。
 
-> **メモ:** ウェブツールのコンセプトについてもっと詳しく知りたい方は、[クライアントサイドツールの概要](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)をご覧ください。
+> [!NOTE]
+> ウェブツールのコンセプトについてもっと詳しく知りたい方は、[クライアントサイドツールの概要](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)をご覧ください。
 
 ### コンパートメント化
 
@@ -263,7 +264,8 @@ JavaScript とブラウザーのネイティブ機能を使用してルーター
 | Vue       | モダン (IE9+ in Vue 2)              | HTML-based    | HTML-based, JSX, Pug   | [公式ドキュメント](https://cli.vuejs.org/guide/browser-compatibility.html)         |
 | Ember     | モダン (IE9+ in Ember version 2.18) | Handlebars    | Handlebars, TypeScript | [公式ドキュメント](https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/) |
 
-> **メモ:** 「HTML-based」と説明した DSL には正式な名前がありません。これらは実際には真の DSL ではありませんが、非標準の HTML であるため、強調する価値があると考えられます。
+> [!NOTE]
+> 「HTML-based」と説明した DSL には正式な名前がありません。これらは実際には真の DSL ではありませんが、非標準の HTML であるため、強調する価値があると考えられます。
 
 ### フレームワークには強力なコミュニティがありますか？
 
@@ -297,7 +299,8 @@ Vue チームは [Vue を他の一般的なフレームワークと徹底的に�
 
 このモジュールで説明されているフレームワークはすべて、クライアントサイドのレンダリングだけでなくサーバーサイドのレンダリングもサポートしています。 React については [Next.js](https://nextjs.org/) 、Vue については [Nuxt](https://nuxtjs.com/)（はい、わかりにくいです、いいえ、これらのプロジェクトは関係ありません!）、 Ember の場合は [FastBoot](https://github.com/ember-fastboot/ember-cli-fastboot)、 Angular の場合は [Angular Universal](https://angular.io/guide/universal) をチェックしてください。
 
-> **メモ:** SSR ソリューションの中にはコミュニティによって作成および保守されているものもありますが、フレームワークの保守者によって提供される「公式」ソリューションもあります。
+> [!NOTE]
+> SSR ソリューションの中にはコミュニティによって作成および保守されているものもありますが、フレームワークの保守者によって提供される「公式」ソリューションもあります。
 
 ### 静的サイトジェネレーター
 

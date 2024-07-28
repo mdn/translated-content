@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、あなたが[ウェブフォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)の記事を理解したかどうかを評価することです。
 
-> **メモ:** このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
+> [!NOTE]
+> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
 >
 > もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 
@@ -21,6 +22,6 @@ l10n:
 2. その上で、入力フィールドとボタンに一貫性のある素敵なスタイル設定を追加してください。
 3. 何らかのレイアウト技術を使用して、入力フィールドとラベルがきれいに並ぶようにします。
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の開始点をダウンロード](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/styling-basics/styling-basics1-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。

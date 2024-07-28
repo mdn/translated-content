@@ -19,11 +19,12 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロードする](https://github.com/mdn/css-examples/blob/main/css-cookbook/breadcrumb-navigation--download.html)
 
-> **メモ:** 上の例では、複合セレクターを使用して、最後以外のすべての `li` の前にコンテンツを挿入しています。これは、最初の要素を除くすべての `li` 要素を対象とする複合セレクターを使用しても実現できます。
+> [!NOTE]
+> 上の例では、複合セレクターを使用して、最後以外のすべての `li` の前にコンテンツを挿入しています。これは、最初の要素を除くすべての `li` 要素を対象とする複合セレクターを使用しても実現できます。
 >
 > ```css
 > .breadcrumb li:not(:first-child)::before {

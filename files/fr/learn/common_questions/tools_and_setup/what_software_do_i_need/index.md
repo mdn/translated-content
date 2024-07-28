@@ -268,7 +268,8 @@ Voici une capture d'écran d'un éditeur de texte en ligne&nbsp;:
 
 Lorsque votre site web est peaufiné, testé et est prêt à être publié, vous devrez téléverser (<i lang="en">uploader</i> en anglais) vos fichiers vers votre serveur web (pour l'achat de l'espace serveur, voir l'article [combien ça coûte de publier quelque chose sur le Web&nbsp;?](/fr/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)). Une fois que vous disposez d'un serveur via votre fournisseur, celui-ci vous enverra les informations d'accès FTP (pour _File Transfer Protocol_ ou protocole de transfert de fichiers), souvent en donnant une URL SFTP, un nom d'utilisateur, un mot de passe et d'autres informations nécessaires à la connexion au serveur. Sachez toutefois que le FTP est une technique vieillissante et que de nouveaux systèmes commencent à devenir populaires, comme [RSync](https://en.wikipedia.org/wiki/Rsync) et [Git/Github](https://help.github.com/articles/using-a-custom-domain-with-github-pages).
 
-> **Note :** FTP est par nature non sécurisé. Vous devez toujours vous assurer que votre fournisseur d'hébergement vous autorise à vous connecter de manière sécurisée, c'est-à-dire via SFTP (_Secure_ FTP) ou via RSync avec SSH.
+> [!NOTE]
+> FTP est par nature non sécurisé. Vous devez toujours vous assurer que votre fournisseur d'hébergement vous autorise à vous connecter de manière sécurisée, c'est-à-dire via SFTP (_Secure_ FTP) ou via RSync avec SSH.
 
 Le téléversement des fichiers vers un serveur web est une étape importante dans la publication d'un site web et nous la décrivons beaucoup plus en détails [dans un article à part](/fr/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server). Voyons tout de même une liste de clients FTP basiques&nbsp;:
 

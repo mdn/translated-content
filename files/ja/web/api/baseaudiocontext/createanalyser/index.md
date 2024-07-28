@@ -12,7 +12,8 @@ l10n:
 
 > **メモ:** {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}} コンストラクターが {{domxref("AnalyserNode")}} を生成するのに推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
 
-> **メモ:** このノードの詳しい説明は、 {{domxref("AnalyserNode")}} のページを参照してください。
+> [!NOTE]
+> このノードの詳しい説明は、 {{domxref("AnalyserNode")}} のページを参照してください。
 
 ## 構文
 

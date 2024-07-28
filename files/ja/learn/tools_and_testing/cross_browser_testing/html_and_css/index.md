@@ -45,7 +45,8 @@ HTML/CSS に起因するブラウザー間のエラーを減らす方法を見�
 
 基本的には、HTML と CSS のコードが整形式で、構文エラーがないかどうかをチェックすることです。
 
-> **メモ:** CSS と HTML に関する一般的な問題の 1 つは、異なる CSS ルールが互いに矛盾が生じるときに発生します。 サードパーティのコードを使用している場合、これは特に問題になる可能性があります。たとえば、CSS フレームワークを使用して、それが使用しているクラス名の 1 つが別の目的ですでに使用されているものと衝突しているとします。 または、ある種のサードパーティ API (たとえば広告バナーの生成) によって生成された HTML に、すでに別の目的で使用されているクラス名または ID が含まれていることもあります。これが起こらないようにするには、最初に使用しているツールを調べて、それらを中心にコードを設計する必要があります。また、「名前空間付き」 CSS も価値があります。ウィジェットがある場合は、それが明確なクラスを持っていることを確認してから、このクラスでウィジェット内の要素を選択するセレクターを起動します。そうすれば競合は起こりにくくなります。例えば、 `.audio-player ul a` です。
+> [!NOTE]
+> CSS と HTML に関する一般的な問題の 1 つは、異なる CSS ルールが互いに矛盾が生じるときに発生します。 サードパーティのコードを使用している場合、これは特に問題になる可能性があります。たとえば、CSS フレームワークを使用して、それが使用しているクラス名の 1 つが別の目的ですでに使用されているものと衝突しているとします。 または、ある種のサードパーティ API (たとえば広告バナーの生成) によって生成された HTML に、すでに別の目的で使用されているクラス名または ID が含まれていることもあります。これが起こらないようにするには、最初に使用しているツールを調べて、それらを中心にコードを設計する必要があります。また、「名前空間付き」 CSS も価値があります。ウィジェットがある場合は、それが明確なクラスを持っていることを確認してから、このクラスでウィジェット内の要素を選択するセレクターを起動します。そうすれば競合は起こりにくくなります。例えば、 `.audio-player ul a` です。
 
 ### 検証
 
@@ -75,7 +76,8 @@ CSS にも同様の話があります — プロパティ名が正しくつづ�
 
 ほとんどのブラウザーに使用されている開発者ツールは、主に CSS のエラーを発見するための有益なツールも備えています。
 
-> **メモ:** ブラウザーが不正な形式のマークアップを自動的に修正しようとするため、 HTML エラーは開発ツールではそれほど簡単には表示されない傾向があります。 W3C バリデーターは HTML エラーを取得するための最良の方法です — 上の[検証](#検証)をご覧ください。
+> [!NOTE]
+> ブラウザーが不正な形式のマークアップを自動的に修正しようとするため、 HTML エラーは開発ツールではそれほど簡単には表示されない傾向があります。 W3C バリデーターは HTML エラーを取得するための最良の方法です — 上の[検証](#検証)をご覧ください。
 
 例えば、Firefox の CSSインスペクターでは、適用されていない CSS 宣言が警告の三角形とともに反転して表示されます。警告の三角形にカーソルを合わせると、説明的なエラーメッセージが提供されます。
 
@@ -141,7 +143,8 @@ HTML の [`<video>`](/ja/docs/Web/HTML/Element/video), [`<audio>`](/ja/docs/Web/
 
 {{EmbedGHLiveSample("learning-area/tools-testing/cross-browser-testing/html-css/forms-test", '100%', 150)}}
 
-> **メモ:** GitHub で [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) として実行することもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html)も参照してください）。
+> [!NOTE]
+> GitHub で [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) として実行することもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html)も参照してください）。
 
 例を表示すると、データを入力しようとして、 UI 機能が動作しているのがわかります。動的キーボードを備えた端末では、型専用のキーパッドが表示されます。対応していないブラウザーでは、入力は通常のテキスト入力に既定され、ユーザーは正しい情報を入力することができます。
 
@@ -153,7 +156,8 @@ CSS は間違いなく HTML よりも代替性に優れています。ブラウ�
 
 ![角丸、インセットシャドウ、ドロップシャドウの赤い錠剤型ボタン](blingy-button.png)
 
-> **メモ:** GitHub で [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) として実行することもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)も参照してください）。
+> [!NOTE]
+> GitHub で [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) として実行することもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)も参照してください）。
 
 ボタンにはスタイル設定をする宣言がいくつもありますが、最も興味深いのは以下の 2 つです。
 

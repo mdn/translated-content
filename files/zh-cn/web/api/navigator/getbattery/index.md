@@ -11,7 +11,8 @@ l10n:
 
 自 Chrome 103 起，{{domxref("Battery Status API", "", "", "nocode")}} 的 `Navigator.getBattery()` 方法只在严格上下文中暴露。
 
-> **备注：** 对该特性的访问可由 {{HTTPHeader("Permissions-Policy")}} 的 {{HTTPHeader("Permissions-Policy/battery","battery")}} 指令控制。
+> [!NOTE]
+> 对该特性的访问可由 {{HTTPHeader("Permissions-Policy")}} 的 {{HTTPHeader("Permissions-Policy/battery","battery")}} 指令控制。
 
 ## 语法
 
