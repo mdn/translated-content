@@ -43,9 +43,9 @@ CORS 실패는 오류를 발생시키지만, 보안상의 이유로 오류에 �
 
 일부 요청은 CORS 사전 요청을 트리거하지 않습니다. 이러한 요청은 구식 [CORS 사양](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology)에서는 "단순 요청"이라고 불렸으나, 현재 CORS 정의하는 [Fetch 사양](https://fetch.spec.whatwg.org/)에서는 이 용어를 사용하지 않습니다.
 
-이러한 동기는 HTML 4.0의 <form> 요소(교차 사이트 fetch()와 XMLHttpRequest보다 이전에 존재한 요소)가 어떤 출처로든 단순 요청을 제출할 수 있다는 것입니다. 따라서 서버 쓰기를 수행하는 모든 사람은 이미 사이트 간 요청 위조(Cross Site Request Forgery, CSRF)로부터 보호하고 있어야 합니다. 이러한 가정 하에서, CSRF의 위협은 폼 제출의 위협과 다르지 않기 때문에 서버는 폼 제출처럼 보이는 요청을 받기 위해 사전 요청에 응답하는 옵트-인(opt-in)을 할 필요가 없습니다. 그러나 서버는 여전히 Access-Control-Allow-Origin을 사용하여 스크립트와 응답을 공유하도록 옵트-인 해야 합니다.
+이러한 동기는 HTML 4.0의 {{HTMLElement("form")}} 요소(교차 사이트 {{domxref("Window/fetch", "fetch()")}} 와 {{domxref("XMLHttpRequest")}}) 보다 이전에 존재한 요소)가 어떤 출처로든 단순 요청을 제출할 수 있다는 것입니다. 따라서 서버 쓰기를 수행하는 모든 사람은 이미 {{Glossary("CSRF", "사이트 간 요청 위조(Cross Site Request Forgery, CSRF)")}}로부터 보호하고 있어야 합니다. 이러한 가정 하에서, CSRF의 위협은 폼 제출의 위협과 다르지 않기 때문에 서버는 폼 제출처럼 보이는 요청을 받기 위해 사전 요청에 응답하는 옵트-인(opt-in)을 할 필요가 없습니다. 그러나 서버는 여전히 {{HTTPHeader("Access-Control-Allow-Origin")}} 을 사용하여 스크립트와 응답을 공유하도록 옵트-인 해야 합니다.
 
- 단순 요청은 다음 조건을 모두 충족하는 요청입니다:
+단순 요청은 다음 조건을 모두 충족하는 요청입니다.
 
 - 다음 중 하나의 메서드
 
@@ -137,34 +137,41 @@ Access-Control-Allow-Origin: *
 Access-Control-Allow-Origin: https://foo.example
 ```
 
-> **참고:**
-> [자격 증명](#requests_with_credentials)이 포함된 요청에 응답할 때, 서버는 Access-Control-Allow-Origin 헤더의 값으로 "*" 와일드카드를 지정하는 대신, 특정 출처를 **반드시** 지정해야 합니다.
+> **참고:** [자격 증명](#requests_with_credentials)이 포함된 요청에 응답할 때, 서버는 Access-Control-Allow-Origin 헤더의 값으로 "\*" 와일드카드를 지정하는 대신 특정 출처를 **반드시** 지정해야 합니다.
 
 ### 프리플라이트 요청(Preflighted requests)
 
-"preflighted" request는 위에서 논의한 ["simple requests"](/ko/docs/Web/HTTP/CORS#단순_요청simple_requests) 와는 달리, 먼저 {{HTTPMethod("OPTIONS")}} 메서드를 통해 다른 도메인의 리소스로 HTTP 요청을 보내 실제 요청이 전송하기에 안전한지 확인합니다. cross-origin 요청은 유저 데이터에 영향을 줄 수 있기 때문에 이와같이 미리 전송(preflighted)합니다.
+[단순 요청](#simple_requests)과 달리 "사전 요청(preflighted)" 요청의 경우 실제 요청을 보내는 것이 안전한지 판단하기 위해 브라우저가 먼저 {{HTTPMethod("OPTIONS")}} 메서드를 사용해 다른 출처의 리소스에 HTTP 요청을 보냅니다. 이러한 교차 출처 요청은 사용자 데이터에 영향을 미칠 수 있기 때문에 사전에 전송됩니다.
 
-다음은 preflighted 할 요청의 예제입니다.
+다음은 사전 요청이 필요한 요청의 예시입니다.
 
+```js
+const fetchPromise = fetch("https://bar.other/doc", {
+  method: "POST",
+  mode: "cors",
+  headers: {
+    "Content-Type": "text/xml",
+    "X-PINGOTHER": "pingpong",
+  },
+  body: "<person><name>Arun</name></person>",
+});
+
+fetchPromise.then((response) => {
+  console.log(response.status);
+});
 ```
-const xhr = new XMLHttpRequest();
-xhr.open('POST', 'https://bar.other/resources/post-here/');
-xhr.setRequestHeader('X-PINGOTHER', 'pingpong');
-xhr.setRequestHeader('Content-Type', 'application/xml');
-xhr.onreadystatechange = handler;
-xhr.send('<person><name>Arun</name></person>');
-```
 
-위의 예제는 `POST` 요청과 함께 함께 보낼 XML body를 만듭니다. 또한 비표준 HTTP `X-PINGOTHER` 요청 헤더가 설정됩니다. 이러한 헤더는 HTTP/1.1의 일부가 아니지만 일반적으로 웹 응용 프로그램에 유용합니다. Content-Type 이 `application/xml`이고, 사용자 정의 헤더가 설정되었기 때문에 이 요청은 preflighted 처리됩니다.
+위 예제는 `POST` 요청과 함께 보낼 XML 바디를 만듭니다. 또한, 비표준 HTTP `X-PINGOTHER` 요청 헤더가 설정됩니다. 이러한 헤더는 HTTP/1.1의 일부가 아니지만 일반적으로 웹 애플리케이션에 유용합니다. 요청이 `Content-Type` 헤더에 `text/xml` 을 사용하고, 사용자 지정 헤더가 설정되어 있기 때문에 이 요청은 사전 요청됩니다.
 
-![](preflight_correct.png)
+![Diagram of a request that is preflighted](https://mdn.github.io/shared-assets/images/diagrams/http/cors/preflight-correct.svg)
 
-(참고: 아래 설명 된 것처럼 실제 `POST` 요청에는 `Access-Control-Request-*` 헤더가 포함되지 않습니다. `OPTIONS` 요청에만 필요합니다.)
+> **참고:**
+> 아래 설명한 바와 같이 실제 `POST` 요청에는 `Access-Control-Request-*` 헤더가 포함되지 않습니다. 이 헤더들은 오직 `OPTIONS` 요청에만 필요합니다.
 
-클라이언트와 서버간의 완전한 통신을 살펴보겠습니다. 첫 번째 통신은 *preflight request/response*입니다.
+클라이언트와 서버 간의 전체 통신을 살펴보겠습니다. 첫 번째 통신은 프리플라이트 요청/응답입니다.
 
-```
-OPTIONS /resources/post-here/ HTTP/1.1
+```http
+OPTIONS /doc HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -173,8 +180,7 @@ Accept-Encoding: gzip,deflate
 Connection: keep-alive
 Origin: https://foo.example
 Access-Control-Request-Method: POST
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type
-
+Access-Control-Request-Headers: content-type,x-pingother
 
 HTTP/1.1 204 No Content
 Date: Mon, 01 Dec 2008 01:15:39 GMT
@@ -188,10 +194,34 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 ```
 
-preflight request가 완료되면 실제 요청을 전송합니다.
+위 첫 번째 블록은 {{HTTPMethod("OPTIONS")}} 메서드를 사용한 프리플라이트 요청을 나타냅니다. 브라우저는 위 JavaScript 코드 스니펫(snippet)에서 사용한 요청 파라미터를 기준으로 사전 요청이 필요하다고 결정합니다. 이 사전 요청을 통해 서버는 실제 요청 파라미터로 요청을 보내는 것이 적절한지 응답할 수 있습니다. OPTIONS 는 서버로부터 추가 정보를 얻기 위해 사용되는 HTTP/1.1 메서드이며 리소스를 변경할 수 없는 {{Glossary("Safe/HTTP", "안전한")}} 메서드입니다. OPTIONS 요청과 함께 두 개의 다른 요청 헤더가 전송됩니다.
 
+```http
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: content-type,x-pingother
 ```
-POST /resources/post-here/ HTTP/1.1
+
+{{HTTPHeader("Access-Control-Request-Method")}} 헤더는 프리플라이트 요청의 일부로써 서버에게 실제 요청이 전송될 때 `POST` 요청 메서드를 사용할 것임을 알립니다. {{HTTPHeader("Access-Control-Request-Headers")}} 헤더는 실제 요청이 전송될 때 사용자 정의 헤더 `X-PINGOTHER` 와 `Content-Type` 를 사용할 것임을 서버에게 알립니다. 이제 서버는 이러한 조건 하에서 요청을 수락할 수 있는지 여부를 결정할 기회를 갖게 됩니다.
+
+위 두 번째 블록은 서버가 반환하는 응답으로, 요청 메서드(`POST`)와 요청 헤더(`X-PINGOTHER`)가 허용된다는 것을 나타냅니다. 이어지는 내용을 자세히 살펴보겠습니다.
+
+```http
+Access-Control-Allow-Origin: https://foo.example
+Access-Control-Allow-Methods: POST, GET, OPTIONS
+Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
+Access-Control-Max-Age: 86400
+```
+
+서버는 `Access-Control-Allow-Origin: https://foo.example` 헤더로 응답하여 요청을 보낸 출처 도메인만 접근 가능하도록 제한합니다. 또한 `Access-Control-Allow-Methods` 헤더로 응답하여 `POST` 와 `GET` 메서드가 해당 리소스를 요청하는 데 유효한 메서드임을 나타냅니다(이 헤더는 {{HTTPHeader("Allow")}} 응답 헤더와 유사하지만, 접근 제어 맥락 내에서 엄격하게 사용됩니다).
+
+서버는 또한 `Access-Control-Allow-Headers` 헤더에 "`X-PINGOTHER, Content-Type`" 값을 설정하여 보내 이 헤더들이 실제 요청에 사용할 수 있는 허용된 헤더임을 확인해줍니다. `Access-Control-Allow-Methods` 와 마찬가지로 `Access-Control-Allow-Headers` 는 허용 가능한 헤더의 쉼표로 구분합니다.
+
+마지막으로, {{HTTPHeader("Access-Control-Max-Age")}} 는 또 다른 프리플라이트 요청을 보내지 않도록 프리플라이트 요청에 대한 응답을 얼마나 오래동안 캐시할 수 있는지 초 단위 시간 값을 제공합니다. 기본 값은 5초입니다. 현재 최대 캐시 시간은 86400초(= 24시간)입니다. 각 브라우저는 `Access-Control-Max-Age` 가 이를 초과할 때 우선되는 [최대 내부 값](/ko/docs/Web/HTTP/Headers/Access-Control-Max-Age)을 가집니다.
+
+프리플라이트 요청이 한번 완료되면 실제 요청이 전송됩니다.
+
+```http
+POST /doc HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -208,7 +238,6 @@ Cache-Control: no-cache
 
 <person><name>Arun</name></person>
 
-
 HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 01:15:40 GMT
 Server: Apache/2
@@ -220,34 +249,10 @@ Keep-Alive: timeout=2, max=99
 Connection: Keep-Alive
 Content-Type: text/plain
 
-[Some GZIP'd payload]
+[Some XML payload]
 ```
 
-첫 번째 예제의 1 - 10 행은 {{HTTPMethod("OPTIONS")}} 메서드를 사용한 preflight request를 나타냅니다. 브라우저는 위의 JavaScript 코드 스니펫이 사용중인 요청 파라미터를 기반으로 전송해야 합니다. 그렇게 해야 서버가 실제 요청 파라미터로 요청을 보낼 수 있는지 여부에 응답할 수 있습니다. OPTIONS는 서버에서 추가 정보를 판별하는데 사용하는 HTTP/1.1 메서드입니다. 또한 {{Glossary("safe")}} 메서드이기 때문에, 리소스를 변경하는데 사용할 수 없습니다. OPTIONS 요청과 함께 두 개의 다른 요청 헤더가 전송됩니다. (10, 11행)
-
-```
-Access-Control-Request-Method: POST
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type
-```
-
-{{HTTPHeader("Access-Control-Request-Method")}} 헤더는 preflight request의 일부로, 실제 요청을 전송할 때 `POST` 메서드로 전송된다는 것을 알려줍니다. {{HTTPHeader("Access-Control-Request-Headers")}} 헤더는 실제 요청을 전송 할 때 `X-PINGOTHER` 와 `Content-Type` 사용자 정의 헤더와 함께 전송된다는 것을 서버에 알려줍니다. 이제 서버는 이러한 상황에서 요청을 수락할지 결정할 수 있습니다.
-
-위의 13 - 22 행은 서버가 요청 메서드와 (`POST`) 요청 헤더를 (`X-PINGOTHER`) 받을 수 있음을 나타내는 응답입니다. 특히 16 - 19행을 살펴보겠습니다.
-
-```
-Access-Control-Allow-Origin: https://foo.example
-Access-Control-Allow-Methods: POST, GET, OPTIONS
-Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
-Access-Control-Max-Age: 86400
-```
-
-서버는 `Access-Control-Allow-Methods` 로 응답하고 `POST` 와 `GET` 이 리소스를 쿼리하는데 유용한 메서드라고 가르쳐줍니다. 이 헤더는 {{HTTPHeader("Allow")}} 응답 헤더와 유사하지만, 접근 제어 컨텍스트 내에서 엄격하게 사용됩니다.
-
-또한 `Access-Control-Allow-Headers` 의 값을 "`X-PINGOTHER, Content-Type`" 으로 전송하여 실제 요청에 헤더를 사용할 수 있음을 확인합니다. `Access-Control-Allow-Methods`와 마찬가지로 `Access-Control-Allow-Headers` 는 쉼표로 구분된 허용 가능한 헤더 목록입니다.
-
-마지막으로{{HTTPHeader("Access-Control-Max-Age")}}는 다른 preflight request를 보내지 않고, preflight request에 대한 응답을 캐시할 수 있는 시간(초)을 제공합니다. 위의 코드는 86400 초(24시간) 입니다. 각 브라우저의 [최대 캐싱 시간](/ko/docs/Web/HTTP/Headers/Access-Control-Max-Age)은 `Access-Control-Max-Age` 가 클수록 우선순위가 높습니다.
-
-#### Preflighted requests 와 리다이렉트
+#### 플리플라이트 요청과 리다이렉트
 
 모든 브라우저가 preflighted request 후 리다이렉트를 지원하지는 않습니다. preflighted request 후 리다이렉트가 발생하면 일부 브라우저는 다음과 같은 오류 메시지를 띄웁니다.
 
