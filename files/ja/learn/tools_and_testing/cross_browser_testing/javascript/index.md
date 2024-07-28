@@ -2,7 +2,7 @@
 title: よくある JavaScript の問題の扱い
 slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 l10n:
-  sourceCommit: e8d495591fefeb3c0c484b989cc155b84b50bb57
+  sourceCommit: 11a08e7da75bfb0b3e606eb26a9a0ad9301a1be5
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -23,7 +23,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">目的:</th>
       <td>
         一般的な JavaScript のブラウザー間の問題を診断し、適切なツールやテクニックを使用して修正することができること。
       </td>
@@ -126,7 +126,7 @@ function showHeroes(jsonObj) {
 }
 ```
 
-すなわち、 `jsonObj` （期待通り、 [JSON オブジェクト](/ja/docs/Learn/JavaScript/Objects/JSON)であるはずです）を使用しようとすると、すぐにコードが崩れてしまいます。これは、外部の `.json` ファイルから、以下の {{domxref("fetch()")}} 呼び出しを使用して取得することになっています。
+すなわち、 `jsonObj` （期待通り、 [JSON オブジェクト](/ja/docs/Learn/JavaScript/Objects/JSON)であるはずです）を使用しようとすると、すぐにコードが崩れてしまいます。これは、外部の `.json` ファイルから、以下の {{domxref("Window/fetch", "fetch()")}} 呼び出しを使用して取得することになっています。
 
 ```js
 const requestURL =
@@ -236,12 +236,12 @@ Firefoxでは、デバッガータブは次のようになります。
 
 ### 最新の JavaScript/API 機能の使用
 
-[前回の記事](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#older_browsers_not_supporting_modern_features)では、言語の性質上、 HTML や CSS のエラーや認識できない機能を処理する方法について説明しました。しかし JavaScript は HTML や CSS ほど寛容ではありません。 JavaScript エンジンが間違いや認識されない構文に遭遇した場合、例えば対応していない新しい機能が使われた場合など、多くの場合エラーになります。
+[前回の記事](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)では、言語の性質上、 HTML や CSS のエラーや認識できない機能を処理する方法について説明しました。しかし JavaScript は HTML や CSS ほど寛容ではありません。 JavaScript エンジンが間違いや認識されない構文に遭遇した場合、例えば対応していない新しい機能が使われた場合など、多くの場合エラーになります。
 
 新機能への対応にはいくつか戦略がありますが、最も一般的なものを見てみましょう。
 
 > [!NOTE]
-> もちろん、必要に応じて組み合わせることもできます。例えば、ある機能が対応しているかどうかを判断するために機能検出を使用することができます。対応していない場合は、ポリフィルや ライブラリーを読み込むコードを実行して、対応していない部分を処理することができます。
+> これらの戦略は別個のものとして存在するのではなく、必要に応じて組み合わせることができます。例えば、ある機能が対応しているかどうかを判断するために機能検出を使用することができます。対応していない場合は、ポリフィルやライブラリーを読み込むコードを実行して、対応していない部分を処理することができます。
 
 #### 機能検出
 
@@ -321,7 +321,7 @@ JavaScript ライブラリーには、いくつかの主な種類がある傾向
    });
    ```
 
-5. [フェッチ](/ja/docs/Web/API/fetch)に対応していないブラウザーで読み込んでも、花の画像が現れるはずです。
+5. [フェッチ](/ja/docs/Web/API/Window/fetch)に対応していないブラウザーで読み込んでも、花の画像が現れるはずです。
    ![Fetch basic example という見出しと紫の花の写真](fetch-image.jpg)
 
 > [!NOTE]
@@ -354,7 +354,7 @@ function browserSupportsAllFeatures() {
 }
 ```
 
-ここでは、[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) オブジェクトと [`fetch()`](/ja/docs/Web/API/fetch) 関数がブラウザーで存在するかどうかをテストしています。両方が存在する場合、関数は `true` を返します。もし関数が `false` を返したら、条件分岐の2つ目の部分のコードを実行します。これは `loadScript()` と呼ばれる関数を実行し、ポリフィルをページに読み込み、読み込み完了後に `main()` を実行します。 `loadScript()` は次のようになります。
+ここでは、[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) オブジェクトと [`fetch()`](/ja/docs/Web/API/Window/fetch) 関数がブラウザーで存在するかどうかをテストしています。両方が存在する場合、関数は `true` を返します。もし関数が `false` を返したら、条件分岐の2つ目の部分のコードを実行します。これは `loadScript()` と呼ばれる関数を実行し、ポリフィルをページに読み込み、読み込み完了後に `main()` を実行します。 `loadScript()` は次のようになります。
 
 ```js
 function loadScript(src, done) {
@@ -402,7 +402,7 @@ Aaron Andersen による [History of the browser user-agent string](https://weba
 - Chrome/Opera/Safari は `webkitObject` を使用
 - Microsoft は `msObject` を使用
 
-これは [violent-theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) （[ソースコード](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin) を参照）から抜粋した例で、[キャンバス API](/ja/docs/Web/API/Canvas_API) と [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) を組み合わせて、楽しい（そしてうるさい）描画ツールを作っています。
+こちらは[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) を使用する例です。
 
 ```js
 const AudioContext = window.AudioContext || window.webkitAudioContext;
