@@ -69,7 +69,7 @@ slug: Web/SVG/Tutorial/Gradients
 ```
 
 > [!NOTE]
-> 你也可以在渐变上使用`xlink:href 属性。如果`使用了该属性时，一个渐变的属性和颜色中值（stop）可以被另一个渐变包含引用。在下例中，你就不需要在 Grandient2 中重新创建全部的颜色中值（stop）。
+> 你也可以在渐变上使用 `href` 属性。如果使用了该属性时，一个渐变的属性和颜色中值（stop）可以被另一个渐变包含引用。在下例中，你就不需要在 Grandient2 中重新创建全部的颜色中值（stop）。
 >
 > ```html
 > <linearGradient id="Gradient1">
