@@ -11,7 +11,8 @@ La propiedad `Element.innerHTML` devuelve o establece la sintaxis HTML describie
 
 Al establecerse se reemplaza la sintaxis HTML del elemento por la nueva.
 
-> **Nota:** Si un nodo tiene un texto secundario que incluye los caracteres `(&), (<),` o `(>)`, `innerHTML` devuelve estos caracteres como \&amp, \&lt y \&gt respectivamente. Use {{ domxref("Node.textContent") }} para conseguir una copia correcta del contenido de estos nodos de texto.
+> [!NOTE]
+> Si un nodo tiene un texto secundario que incluye los caracteres `(&), (<),` o `(>)`, `innerHTML` devuelve estos caracteres como \&amp, \&lt y \&gt respectivamente. Use {{ domxref("Node.textContent") }} para conseguir una copia correcta del contenido de estos nodos de texto.
 
 Para **insertar el código HTML** en el documento en lugar de cambiar el contenido de un elemento, use el método [insertAdjacentHTML().](/es/docs/Web/API/Element/insertAdjacentHTML)
 
@@ -63,7 +64,8 @@ document.documentElement.innerHTML =
   "<pre>" + document.documentElement.innerHTML.replace(/</g, "&lt;") + "</pre>";
 ```
 
-> **Nota:** Esta propiedad fue inicialmente implementada por navegadores web, y luego especificada por el WHATWG y el W3C en HTML5. Implementaciones antiguas no la implementarán exactamente igual. Por ejemplo, cuando el texto es ingresado en una caja de **texto multilinea (elemento `textarea`)**, Internet Explorer cambiará el valor de la propiedad `innerHTML` del **elemento `textarea`**, mientras que los navegadores Gecko no lo hacen.
+> [!NOTE]
+> Esta propiedad fue inicialmente implementada por navegadores web, y luego especificada por el WHATWG y el W3C en HTML5. Implementaciones antiguas no la implementarán exactamente igual. Por ejemplo, cuando el texto es ingresado en una caja de **texto multilinea (elemento `textarea`)**, Internet Explorer cambiará el valor de la propiedad `innerHTML` del **elemento `textarea`**, mientras que los navegadores Gecko no lo hacen.
 
 ### Consideración de seguridad
 
