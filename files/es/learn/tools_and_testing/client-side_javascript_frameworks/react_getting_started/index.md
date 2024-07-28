@@ -81,7 +81,8 @@ const header = (
 );
 ```
 
-> **Nota:** Los paréntesis en el fragmento anterior no son exclusivos de JSX y no tienen ningún efecto en la aplicación. Son una señal para ti (y tu computadora) de que las múltiples líneas de código que contiene forman parte de una misma expresión. También podríamos escribir la expresión del encabezado de esta manera:
+> [!NOTE]
+> Los paréntesis en el fragmento anterior no son exclusivos de JSX y no tienen ningún efecto en la aplicación. Son una señal para ti (y tu computadora) de que las múltiples líneas de código que contiene forman parte de una misma expresión. También podríamos escribir la expresión del encabezado de esta manera:
 >
 > ```jsx
 > const header = (
@@ -146,7 +147,8 @@ Esto crea una carpeta `moz-todo-react`, y hace varias cosas dentro de la misma:
 - Crea una estructura de archivos y carpetas que definen la arquitectura básica de la aplicación.
 - Inicializa la carpeta como un repositorio de git, si tienes git instalado en tu computadora.
 
-> **Nota:** si tienes instalado el administrador de paquetes yarn, create-react-app lo usará por defecto en lugar de npm. Si tienes ambos administradores de paquetes instalados y quieres, explícitamente, usar npm, puedes agregar el indicador `--use-npm` cuando ejecutes create-react-app:
+> [!NOTE]
+> Si tienes instalado el administrador de paquetes yarn, create-react-app lo usará por defecto en lugar de npm. Si tienes ambos administradores de paquetes instalados y quieres, explícitamente, usar npm, puedes agregar el indicador `--use-npm` cuando ejecutes create-react-app:
 >
 > ```bash
 > npx create-react-app moz-todo-react --use-npm
@@ -325,7 +327,8 @@ En la línea 7, se invoca la función `ReactDOM.render()` de React con dos argum
 
 Todo esto le indica a React que queremos renderizar nuestra aplicación React con el componente `App` como raíz, o primer componente.
 
-> **Nota:** En JSX, los componentes de React y los elementos HTML deben tener, obligatoriamente, barras diagonales de cierre. Escribir solo `<App>` o solo `<img>` provocará un error.
+> [!NOTE]
+> En JSX, los componentes de React y los elementos HTML deben tener, obligatoriamente, barras diagonales de cierre. Escribir solo `<App>` o solo `<img>` provocará un error.
 
 Los [Service workers](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers) son interesantes piezas de código que ayudan al rendimiento de las aplicaciones y permiten que las funciones de tus aplicaciones web funcionen sin conexión, pero estas no están dentro del alcance de este artículo. Puedes eliminar la línea 5, así como las líneas 9 a 12.
 
