@@ -11,7 +11,8 @@ l10n:
 
 {{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}
 
-> **メモ:** 通常、フォームにリセットボタンを配置するべきではありません。このようなボタンは便利なものではなく、間違ってボタンをクリックしてしまったユーザーをイライラさせる可能性が高くなります（[送信ボタン](/ja/docs/Web/HTML/Element/input/submit)をクリックしようとしているときにクリックしてしまうことが多いです）。
+> [!NOTE]
+> 通常、フォームにリセットボタンを配置するべきではありません。このようなボタンは便利なものではなく、間違ってボタンをクリックしてしまったユーザーをイライラさせる可能性が高くなります（[送信ボタン](/ja/docs/Web/HTML/Element/input/submit)をクリックしようとしているときにクリックしてしまうことが多いです）。
 
 ## 値
 
@@ -93,7 +94,8 @@ l10n:
 
 実行時に `disabled` を `true` または `false` に設定することで、ボタンを有効化したり無効化したりすることができます。 JavaScript では、これは `btn.disabled = true` や `btn.disabled = false` のようになります。
 
-> **メモ:** ボタンの有効化や無効化についてのより詳しい情報は、 [`<input type="button">`](/ja/docs/Web/HTML/Element/input/button#ボタンの無効化と有効化) のページを参照してください。
+> [!NOTE]
+> ボタンの有効化や無効化についてのより詳しい情報は、 [`<input type="button">`](/ja/docs/Web/HTML/Element/input/button#ボタンの無効化と有効化) のページを参照してください。
 
 ## 検証
 

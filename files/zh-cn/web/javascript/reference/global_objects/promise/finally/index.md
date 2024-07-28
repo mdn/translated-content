@@ -40,11 +40,13 @@ finally(onFinally)
   - 与 `Promise.resolve(2).then(() => 77, () => {})` 不同，它返回一个最终会兑现为值 `77` 的 promise，而 `Promise.resolve(2).finally(() => 77)` 返回一个最终兑现为值 `2` 的 promise。
   - 类似地，与 `Promise.reject(3).then(() => {}, () => 88)` 不同，它返回一个最终兑现为值 `88` 的 promise，而 `Promise.reject(3).finally(() => 88)` 返回一个最终以原因 `3` 拒绝的 promise。
 
-> **备注：** 在 `finally` 回调函数中抛出错误（或返回被拒绝的 promise）仍会导致返回的 promise 被拒绝。例如，`Promise.reject(3).finally(() => { throw 99; })` 和 `Promise.reject(3).finally(() => Promise.reject(99))` 都以理由 `99` 拒绝返回的 promise。
+> [!NOTE]
+> 在 `finally` 回调函数中抛出错误（或返回被拒绝的 promise）仍会导致返回的 promise 被拒绝。例如，`Promise.reject(3).finally(() => { throw 99; })` 和 `Promise.reject(3).finally(() => Promise.reject(99))` 都以理由 `99` 拒绝返回的 promise。
 
 与 {{jsxref("Promise/catch", "catch()")}} 一样，`finally()` 在内部调用其调用对象上的 `then` 方法。如果 `onFinally` 不是函数，则调用 `then()` 时使用 `onFinally` 同时作为两个参数——对于 {{jsxref("Promise.prototype.then()")}}，这意味着没有附加有效的处理器。否则，`then()` 被调用时会使用两个内部创建的函数，其行为如下：
 
-> **警告：** 这只是为了演示，而不是一个 polyfill。
+> [!WARNING]
+> 这只是为了演示，而不是一个 polyfill。
 
 ```js
 promise.then(

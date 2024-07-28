@@ -36,7 +36,8 @@ l10n:
 また、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターを使用することもできます。
 これらのオンラインエディターのいずれかに HTML を貼り付けて CSS を入力してください。
 
-> **メモ:** もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
+> [!NOTE]
+> もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 
 ## プロジェクトの概要
 

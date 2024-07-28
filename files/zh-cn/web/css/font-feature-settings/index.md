@@ -29,7 +29,8 @@ font-feature-settings: initial;
 font-feature-settings: unset;
 ```
 
-> **备注：** Web 开发者应该尽可能的使用类似 {{cssxref("font-variant")}} 这样的短标记属性或者相关的速记标识属性等，类似 {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}} or {{cssxref("font-variant-position")}}.
+> [!NOTE]
+> Web 开发者应该尽可能的使用类似 {{cssxref("font-variant")}} 这样的短标记属性或者相关的速记标识属性等，类似 {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}} or {{cssxref("font-variant-position")}}.
 >
 > 该属性是一个比较偏底层的功能接口，用于解决由于没有其他方法去访问和设置 OpenType 字体某些特性而无法解决一些特殊功能需求。
 >
