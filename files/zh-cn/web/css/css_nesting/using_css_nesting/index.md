@@ -9,15 +9,15 @@ l10n:
 
 [CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting)模块允许你将你的样式表写的更加容易阅读、更加模块化，而且更加容易维护。因为你不再需要重复选择器，文件同样也可以被压缩。
 
-CSS 嵌套不同于如 [Sass](https://sass-lang.com/) 等的 CSS 预处理器的一点是，它是被浏览器直接分析的，而不是先经由一个预处理器所处理。而且在 CSS 嵌套中，[`&` 嵌套选择器的优先级](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)类似于 {{cssxref(':is',':is()')}} 函数；它的优先级由它所在的选择器列表当中优先级最高的选择器决定。
+CSS 嵌套不同于如 [Sass](https://sass-lang.com/) 等的 CSS 预处理器的一点是，它是被浏览器直接解析的，而不是先经由 CSS 预处理器的预编译。而且在 CSS 嵌套中，[`&` 嵌套选择器的优先级](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)类似于 {{cssxref(':is',':is()')}} 函数；它的优先级由它所关联的选择器列表当中优先级最高的选择器决定。
 
 这个指南展示各种嵌套 CSS 的方法。
 
-## 后代选择器
+## 子选择器
 
-你可以使用 CSS 嵌套来创建一个祖先的后代选择器，这可以用来选择特定祖先的子元素。[`&` 嵌套选择器](/zh-CN/docs/Web/CSS/Nesting_selector)是可选的。
+你可以使用 CSS 嵌套来创建一个父级的子选择器，这可以用来选择特定父元素的子元素。可以选择使用[`&` 嵌套选择器](/zh-CN/docs/Web/CSS/Nesting_selector)来实现。
 
-有几个特定环境可以使得嵌套选择器变得很必要或者有用：
+有几个特定环境可以使得 `&` 嵌套选择器变得很必要或者有用：
 
 - 在连接选择器时，如[组合选择器](#组合选择器)或[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)。
 - 为了向后兼容。
@@ -26,26 +26,26 @@ CSS 嵌套不同于如 [Sass](https://sass-lang.com/) 等的 CSS 预处理器的
 ```css
 /* 不使用嵌套选择器 */
 parent {
-  /* 祖先样式 */
+  /* 父样式 */
   child {
-    /* 祖先后代的样式 */
+    /* 父级的子样式 */
   }
 }
 
 /* 使用嵌套选择器 */
 parent {
-  /* 祖先样式 */
+  /* 父样式 */
   & child {
-    /* 祖先后代的样式 */
+    /* 父级的子样式 */
   }
 }
 
-/* 浏览器均会把以上两个样式表分析为 */
+/* 浏览器均会把以上两个样式表解析为 */
 parent {
-  /* 祖先样式 */
+  /* 父样式 */
 }
 parent child {
-  /* 祖先后代的样式 */
+  /* 父级的子样式 */
 }
 ```
 
@@ -61,10 +61,10 @@ parent child {
 
 ```html-nolint
 <form>
-  <label for="name">Name:
+  <label for="name">姓名：
     <input type="text" id="name" />
   </label>
-  <label for="email">email:</label>
+  <label for="email">邮箱：</label>
   <input type="text" id="email" />
 </form>
 ```
@@ -98,7 +98,7 @@ label {
 
 ##### 结果
 
-{{EmbedLiveSample('Without_nesting_selector','100%','120')}}
+{{EmbedLiveSample('不使用嵌套选择器','100%','120')}}
 
 #### 使用嵌套选择器
 
@@ -106,10 +106,10 @@ label {
 
 ```html-nolint
 <form>
-  <label for="name">Name:
+  <label for="name">姓名：
     <input type="text" id="name" />
   </label>
-  <label for="email">email:</label>
+  <label for="email">邮箱：</label>
   <input type="text" id="email" />
 </form>
 ```
@@ -143,7 +143,7 @@ label {
 
 ##### 结果
 
-{{EmbedLiveSample('With_nesting_selector','100%','120')}}
+{{EmbedLiveSample('使用嵌套选择器','100%','120')}}
 
 ## 关系选择器
 
@@ -153,7 +153,7 @@ label {
 
 #### 嵌套邻接兄弟选择器
 
-在这个示例中，我们使用 CSS 嵌套，将每个 `<h2>` 后的第一个段落使用[邻接兄弟选择器 (`+`)](/zh-CN/docs/Web/CSS/Next-sibling_combinator) 选中。
+在这个示例中，我们使用 CSS 嵌套，将每个 `<h2>` 后的第一个段落使用[邻接兄弟选择器（`+`）](/zh-CN/docs/Web/CSS/Next-sibling_combinator)选中。
 
 ##### HTML
 
@@ -187,11 +187,11 @@ h2 {
 
 ##### 结果
 
-{{EmbedLiveSample('Nesting_the_sibling_combinator','100%','135')}}
+{{EmbedLiveSample('嵌套邻接兄弟选择器','100%','135')}}
 
 ## 组合选择器
 
-在嵌套 CSS 中使用[组合选择器](/zh-CN/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)时，你**必须**使用 `&` 嵌套选择器，因为浏览器会自动在不使用 `&` 嵌套选择器的选择器之间添加空格（也就是[后代选择器](/zh-CN/docs/Web/CSS/Descendant_combinator)）。
+在嵌套 CSS 中使用[组合选择器](/zh-CN/docs/Web/CSS/CSS_selectors/Selector_structure#组合选择器)时，你**必须**使用 `&` 嵌套选择器，因为浏览器会自动在不使用 `&` 嵌套选择器的选择器之间添加空格。
 
 为了选择一个带有 `class="a b"` 的元素，你必须使用 `&` 嵌套选择器，否则空格将会拆散这个组合选择器。
 
@@ -220,7 +220,7 @@ h2 {
 
 ### 示例
 
-#### 嵌套和关系选择器
+#### 嵌套和组合选择器
 
 在这个示例中，我们使用 `&` 嵌套选择器来创建组合选择器，为带有多个类的元素添加样式。
 
@@ -245,7 +245,7 @@ h2 {
 
 ##### CSS
 
-使用{{cssxref('CSS_flexible_box_layout', '弹性盒子布局')}}将 `.notices` 变为一个列。
+使用[弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)将 `.notices` 变为一个列。
 
 ```css
 .notices {
@@ -257,7 +257,7 @@ h2 {
 }
 ```
 
-在下列 CSS 中，我们使用嵌套创建带 `&` 和不带 `&` 的组合选择器。顶级选择器为带有 `class="notice"` 的元素定义基本样式。接下来，我们使用 `&` 嵌套选择器分别为带有 `class="notice warning"` 和 `class="notice success"` 的元素创建组合选择器。另外，不明确使用 `&` 创建组合选择器的例子可以参考 `.notice .notice-heading::before`。
+在下列 CSS 中，我们使用嵌套创建带 `&` 和不带 `&` 的组合选择器。顶层选择器为带有 `class="notice"` 的元素定义基本样式。接下来，我们使用 `&` 嵌套选择器分别为带有 `class="notice warning"` 和 `class="notice success"` 的元素创建组合选择器。另外，不显式使用 `&` 创建组合选择器的例子可以参考 `.notice .notice-heading::before`。
 
 ```css
 .notice {
@@ -297,13 +297,13 @@ h2 {
 
 ##### 结果
 
-{{EmbedLiveSample('Nesting_and_compound_selectors','100%', '455')}}
+{{EmbedLiveSample('嵌套和组合选择器','100%', '455')}}
 
 ## 后附嵌套选择器
 
 `&` 嵌套选择器也可以添加到一个选择器的后方。这将起到反转上下文的效果。
 
-例如，我们有一个子元素，当祖先元素被设定不同的类时想让它变化，则这个选择器就会很有用：
+例如，我们有一个子元素，当父元素被设定不同的类时想让它变化，则这个选择器就会很有用：
 
 ```html
 <div>
@@ -384,7 +384,7 @@ h2 {
 
 ##### 结果
 
-{{EmbedLiveSample('Appending_nesting_selector','100%','250')}}
+{{EmbedLiveSample('后附嵌套选择器_2','100%','250')}}
 
 ## 拼接（是不可能的）
 
@@ -400,9 +400,9 @@ h2 {
 }
 ```
 
-> **警告：** 这在 CSS 嵌套中是不可能的：当不使用[组合器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)时，嵌套选择器将被当作一个[类型选择器](/zh-CN/docs/Web/CSS/Type_selectors)。允许拼接会使得这个规则无效。
+> **警告：** 这在 CSS 嵌套中是不可能的：当不使用[组合器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)时，嵌套选择器将被当作[类型选择器](/zh-CN/docs/Web/CSS/Type_selectors)。允许拼接会使得这个规则无效。
 
-在[组合选择器](/zh-CN/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)中，类型选择器必须是第一位。`&Element`（一个[类型选择器](/zh-CN/docs/Web/CSS/Type_selectors)）会使得这个选择器和整个样式块无效。因为类型选择器必须是第一位，所以这个组合选择器必须写成 `Element&`。
+在[组合选择器](/zh-CN/docs/Web/CSS/CSS_selectors/Selector_structure#组合选择器)中，类型选择器必须是第一位。`&Element`（一个[类型选择器](/zh-CN/docs/Web/CSS/Type_selectors)）会使得这个选择器和整个样式块无效。因为类型选择器必须是第一位，所以这个组合选择器必须写成 `Element&`。
 
 ```css
 .my-class {
@@ -410,18 +410,18 @@ h2 {
   }
 }
 
-/* 浏览器将其分析成为一个组合选择器 */
+/* 浏览器将其解析为组合选择器 */
 .my-class {
 }
 element.my-class {
 }
 ```
 
-## 无效的嵌套
+## 无效的嵌套样式规则
 
-如果一个嵌套 CSS 规则无效，那么所有其包含的样式都将被忽略。这不影响其祖先及其后面的规则。
+如果一个嵌套 CSS 规则无效，那么所有其包含的样式都将被忽略。这不影响其父级及其后面的规则。
 
-在这个示例中，有一个无效选择器（`%` 在选择器中是无效的）。这个选择器下的规则都将被忽略，但是后续的规则并不会。
+在这个示例中，有一个无效选择器（`%` 字符在选择器中是无效的）。这个选择器下的规则都将被忽略，但是后续有效的规则并不会。
 
 ```css
 .parent {
@@ -439,5 +439,5 @@ element.my-class {
 
 - [CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting)模块
 - [`&` 嵌套选择器](/zh-CN/docs/Web/CSS/Nesting_selector)
-- [嵌套 at-rules](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
+- [嵌套 at 规则](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
 - [嵌套与优先级](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)

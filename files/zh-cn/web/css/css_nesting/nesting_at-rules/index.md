@@ -1,5 +1,5 @@
 ---
-title: CSS at-rule 嵌套
+title: CSS at 规则嵌套
 slug: Web/CSS/CSS_nesting/Nesting_at-rules
 l10n:
   sourceCommit: 4b6b77bc36496c88dcbe477ec46da678a85d8e6e
@@ -7,9 +7,9 @@ l10n:
 
 {{CSSRef}}
 
-任何包含样式规则的 [at-rule](/zh-CN/docs/Web/CSS/At-rule) 都可以使用 CSS 嵌套被嵌入另一个规则中。嵌套在 at-rule 中的规则从距离他们最近的祖先规则中获得选择器定义。属性可以直接被写在一个嵌套的 at-rule 中，就像被一个 `& {...}` 块所包含。
+使用 CSS 嵌套可以将任何包含样式规则的 [at 规则](/zh-CN/docs/Web/CSS/At-rule)嵌入到另一个规则中。嵌套在 at 规则中的规则从距离它们最近的祖先规则中获得选择器定义。属性可以直接被包含到一个嵌套的 at 规则中，就像被一个 `& {...}` 块所包含的那样。
 
-## 可以被嵌套的 at-rule
+## 可以被嵌套的 at 规则
 
 - {{cssxref('@media')}}
 - {{cssxref('@supports')}}
@@ -19,9 +19,9 @@ l10n:
 
 ## 示例
 
-### 嵌套 `@media` at-rule
+### 嵌套 `@media` at 规则
 
-在这个示例中，我们有三个 CSS 块。第一个块展示一般的 at-rule 嵌套。第二个是浏览器分析嵌套块的一个中间过程的展示。第三个块是不使用嵌套的等价表述。
+在这个示例中，我们有三个 CSS 块。第一个块展示一般的 at 规则嵌套。第二个是浏览器解析嵌套块的一个中间过程的展示。第三个块是不使用嵌套的等价表述。
 
 #### 嵌套 CSS
 
@@ -61,11 +61,11 @@ l10n:
 }
 ```
 
-### 多重 `@media` at-rule 嵌套
+### 多重 `@media` at 规则嵌套
 
-At-rule 也可以被其他 at-rule 所嵌套。下面就是一个示例，以及如何不使用嵌套进行重写。
+At 规则也可以被其他 at 规则所嵌套。下面就是一个示例，以及如何不使用嵌套进行重写。
 
-#### 嵌套 at-rule
+#### 嵌套 at 规则
 
 ```css
 .foo {
@@ -97,13 +97,13 @@ At-rule 也可以被其他 at-rule 所嵌套。下面就是一个示例，以及
 }
 ```
 
-### 嵌套层（`@layer`）
+### 嵌套级联层（`@layer`）
 
-[级联层](/zh-CN/docs/Web/CSS/@layer)也可以被嵌套以[创建内部层](/zh-CN/docs/Web/CSS/@layer#嵌套层)。嵌套层之间使用 `.`（一个点）连接。
+[级联层](/zh-CN/docs/Web/CSS/@layer)也可以被嵌套以[创建子层](/zh-CN/docs/Web/CSS/@layer#嵌套层)。嵌套层之间使用 `.`（点号）连接。
 
-#### 定义祖先层和内部层
+#### 定义父层和子层
 
-我们通过定义有名级联层开始，在使用它们以前，不添加任何样式定义。
+我们通过定义具名级联层开始，在使用它们以前，不定义任何样式。
 
 ```css
 @layer base {
@@ -149,4 +149,4 @@ At-rule 也可以被其他 at-rule 所嵌套。下面就是一个示例，以及
 - [`&` 嵌套选择器](/zh-CN/docs/Web/CSS/Nesting_selector)
 - [使用 CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
 - [嵌套与优先级](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
-- [嵌套容器查询](/zh-CN/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#nested_queries)
+- [嵌套容器查询](/zh-CN/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#嵌套查询)

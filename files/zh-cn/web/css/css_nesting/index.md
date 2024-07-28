@@ -9,9 +9,9 @@ l10n:
 
 **CSS 嵌套**模块定义了嵌套选择器的语法。它提供将一个样式规则嵌套至另一个规则内的能力，其中被嵌套规则的选择器将相对于其父规则的选择器。
 
-CSS 嵌套不同于如 [Sass](https://sass-lang.com/) 等的 CSS 预处理器的一点是，它是被浏览器直接分析的，而不是先经由一个预处理器所处理。
+CSS 嵌套不同于如 [Sass](https://sass-lang.com/) 等的 CSS 预处理器的一点是，它是被浏览器直接解析的，而不是先经由 CSS 预处理器的预编译。
 
-CSS 嵌套帮助增强 CSS 的可读性、模块化程度和可维护性。它也可帮助减小 CSS 文件大小，从而减少用户下载的数据量。
+CSS 嵌套帮助增强 CSS 样式表的可读性、模块化程度和可维护性。它也可帮助减小 CSS 文件大小，从而减少用户下载的数据量。
 
 ## 参考
 
@@ -23,8 +23,8 @@ CSS 嵌套帮助增强 CSS 的可读性、模块化程度和可维护性。它�
 
 - [使用 CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
   - : 解释如何使用 CSS 嵌套。
-- [CSS at-rule 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
-  - : 解释如何嵌套 CSS at-rule。
+- [CSS at 规则嵌套](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
+  - : 解释如何嵌套 CSS at 规则。
 - [CSS 嵌套与优先级](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
   - : 解释嵌套 CSS 时出现的优先级差异。
 
@@ -41,5 +41,5 @@ CSS 嵌套帮助增强 CSS 的可读性、模块化程度和可维护性。它�
 ## 参见
 
 - [优先级](/zh-CN/docs/Web/CSS/Specificity)
-- [CSS 层叠与继承](/zh-CN/docs/Web/CSS/CSS_cascade)
-- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)
+- [CSS 层叠与继承模块](/zh-CN/docs/Web/CSS/CSS_cascade)
+- [CSS 选择器模块](/zh-CN/docs/Web/CSS/CSS_selectors)
