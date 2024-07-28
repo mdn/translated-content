@@ -13,7 +13,8 @@ slug: Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-> **メモ:** ソースコードは [Github](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) にあります。また実際の[動画](http://iandevlin.github.io/mdn/video-player-with-captions/)も見ることもできます。
+> [!NOTE]
+> ソースコードは [Github](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) にあります。また実際の[動画](http://iandevlin.github.io/mdn/video-player-with-captions/)も見ることもできます。
 
 ## HTML5 と動画のキャプション
 
@@ -298,7 +299,8 @@ Then this specific 'voice' will be stylable like so:
 }
 ```
 
-> **メモ:** Some of the styling of cues with ::cue currently works on Chrome, Opera, and Safari, but not yet on Firefox.
+> [!NOTE]
+> Some of the styling of cues with ::cue currently works on Chrome, Opera, and Safari, but not yet on Firefox.
 
 ## ブラウザーの互換性
 
@@ -308,7 +310,8 @@ Then this specific 'voice' will be stylable like so:
 
 Internet Explorer 10+ subtitles are enabled by default, and the default controls contain a button and a menu that offers the same functionality as the menu we just built. The `default` attribute is also supported.
 
-> **メモ:** IE will completely ignore WebVTT files unless you define the MIME type. This can easily be done by adding an `.htaccess` file to an appropriate directory that contains `AddType text/vtt .vtt`.
+> [!NOTE]
+> IE will completely ignore WebVTT files unless you define the MIME type. This can easily be done by adding an `.htaccess` file to an appropriate directory that contains `AddType text/vtt .vtt`.
 
 ### Safari
 
@@ -345,4 +348,5 @@ If, after reading through this article you decide that you can't be bothered to 
 - [Radiant Media Player](https://www.radiantmediaplayer.com)
   - : Supports multi-languages WebVTT closed captions
 
-> **メモ:** You can find an excellent list of HTML5 Video Players and their current "state" at [HTML5 Video Player Comparison](http://praegnanz.de/html5video/).
+> [!NOTE]
+> You can find an excellent list of HTML5 Video Players and their current "state" at [HTML5 Video Player Comparison](http://praegnanz.de/html5video/).
