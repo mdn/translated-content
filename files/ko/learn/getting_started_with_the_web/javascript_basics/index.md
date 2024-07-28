@@ -56,7 +56,8 @@ JavaScript를 이용하여 본문 제목 텍스트를 "Hello world!"로 변경�
 
 그 다음, `myHeading` 변수의 `{{domxref("Node.textContent", "textContent")}}` 프로퍼티의 값(본문 제목의 컨텐츠를 나타내는 것)을 "Hello world!"로 설정했습니다.
 
-> **참고:** 위에서 사용한 두 기능은 모두 문서를 조작(manipulate)할 때 사용하는 [문서 객체 모델(Document Object Model;DOM) API](/ko/docs/Web/API/Document_Object_Model)의 일부입니다.
+> [!NOTE]
+> 위에서 사용한 두 기능은 모두 문서를 조작(manipulate)할 때 사용하는 [문서 객체 모델(Document Object Model;DOM) API](/ko/docs/Web/API/Document_Object_Model)의 일부입니다.
 
 ## 언어 기본 특강
 
@@ -72,11 +73,14 @@ JavaScript를 이용하여 본문 제목 텍스트를 "Hello world!"로 변경�
 let myVariable;
 ```
 
-> **참고:** 한 줄의 끝에 있는 세미콜론은 문(statement)의 끝을 나타냅니다; 한 줄에 있는 여러 문을 분리할 필요가 있을 때에만 반드시 필요합니다. 하지만, 어떤 사람은 각 문의 끝에 세미콜론을 넣는 것이 좋은 습관이라 믿습니다. 언제 세미콜론을 넣고 언제 넣으면 안되는지에 대한 다른 규칙이 있습니다 — 자세한 사항은 [JavaScript의 세미콜론 안내(Your Guide to Semicolons in JavaScript)](http://news.codecademy.com/your-guide-to-semicolons-in-javascript/)를 참고하세요.
+> [!NOTE]
+> 한 줄의 끝에 있는 세미콜론은 문(statement)의 끝을 나타냅니다; 한 줄에 있는 여러 문을 분리할 필요가 있을 때에만 반드시 필요합니다. 하지만, 어떤 사람은 각 문의 끝에 세미콜론을 넣는 것이 좋은 습관이라 믿습니다. 언제 세미콜론을 넣고 언제 넣으면 안되는지에 대한 다른 규칙이 있습니다 — 자세한 사항은 [JavaScript의 세미콜론 안내(Your Guide to Semicolons in JavaScript)](http://news.codecademy.com/your-guide-to-semicolons-in-javascript/)를 참고하세요.
 
-> **참고:** 거의 모든 이름을 변수 이름으로 사용할 수 있지만, 몇 가지 제한이 있습니다 ([변수 이름 규칙에 관한 글](http://www.codelifter.com/main/tips/tip_020.shtml) 을 보세요). 변수 이름에 대해 확신이 없다면, [변수명 체크하기(check your variable name)](https://mothereff.in/js-variables)에서 적절한 변수명인지 확인해 볼 수 있습니다.
+> [!NOTE]
+> 거의 모든 이름을 변수 이름으로 사용할 수 있지만, 몇 가지 제한이 있습니다 ([변수 이름 규칙에 관한 글](http://www.codelifter.com/main/tips/tip_020.shtml) 을 보세요). 변수 이름에 대해 확신이 없다면, [변수명 체크하기(check your variable name)](https://mothereff.in/js-variables)에서 적절한 변수명인지 확인해 볼 수 있습니다.
 
-> **참고:** JavaScript는 대소문자를 구분합니다 — `myVariable`은 `myvariable`과는 다른 변수입니다. 만약 코드에 문제가 생겼다면, 대소문자를 확인해보세요!
+> [!NOTE]
+> JavaScript는 대소문자를 구분합니다 — `myVariable`은 `myvariable`과는 다른 변수입니다. 만약 코드에 문제가 생겼다면, 대소문자를 확인해보세요!
 
 > **참고:** `var` 와 `let` 의 차이에 대한 자세한 사항은 [The difference between var and let](/ko/docs/Learn/JavaScript/First_steps/Variables#The_difference_between_var_and_let)를 참고하세요.
 
@@ -147,7 +151,8 @@ CSS에서 했던 것처럼 JavaScript 코드 안에 주석을 넣을 수 있습�
 
 살펴볼 연산자가 더 많이 있지만, 지금은 이것으로 충분합니다. 연산자에 대한 완전한 리스트는 [표현식과 연산자](/ko/docs/Web/JavaScript/Reference/Operators)에서 확인해보세요.
 
-> **참고:** 계산을 수행할 때 자료형이 섞이게 되면 이상한 결과를 불러올 수 있으므로, 변수를 올바르게 참조해 예상하는 결과를 얻을 수 있게 주의해야 합니다. 예를 들어 `"35" + "25"`를 콘솔에 입력해 보세요. 왜 예상한 결과를 얻을 수 없을까요? 인용부호가 숫자를 문자열로 변경하였고, 숫자를 더하는 대신에 문자열을 붙인 결과를 얻습니다. `35 + 25`를 입력한다면, 올바른 결과를 얻을 것입니다.
+> [!NOTE]
+> 계산을 수행할 때 자료형이 섞이게 되면 이상한 결과를 불러올 수 있으므로, 변수를 올바르게 참조해 예상하는 결과를 얻을 수 있게 주의해야 합니다. 예를 들어 `"35" + "25"`를 콘솔에 입력해 보세요. 왜 예상한 결과를 얻을 수 없을까요? 인용부호가 숫자를 문자열로 변경하였고, 숫자를 더하는 대신에 문자열을 붙인 결과를 얻습니다. `35 + 25`를 입력한다면, 올바른 결과를 얻을 것입니다.
 
 ### 조건문
 

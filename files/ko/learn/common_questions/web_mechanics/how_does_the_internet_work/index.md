@@ -47,7 +47,8 @@ slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
 
 두 개의 컴퓨터가 통신이 필요할 때, 우리는 다른 컴퓨터와 물리적으로 (보통 [이더넷 케이블](http://en.wikipedia.org/wiki/Ethernet_crossover_cable)) 또는 무선으로 (예를 들어, [WiFi](http://en.wikipedia.org/wiki/WiFi) 나 [Bluetooth](http://en.wikipedia.org/wiki/Bluetooth) 시스템) 연결되어야 합니다. 모든 현대 컴퓨터들은 이러한 연결 중 하나를 이용하여 연결을 지속할 수 있습니다.
 
-> **참고:** 이 글의 나머지 부분에서는 유선 케이블에 대해서만 이야기 하지만 무선 네트워크도 동일한 방식입니다.
+> [!NOTE]
+> 이 글의 나머지 부분에서는 유선 케이블에 대해서만 이야기 하지만 무선 네트워크도 동일한 방식입니다.
 
 ![Two computers linked together](internet-schema-1.png)
 

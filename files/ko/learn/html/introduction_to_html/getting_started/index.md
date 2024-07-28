@@ -44,7 +44,8 @@ My cat is very grumpy
 <p>My cat is very grumpy</p>
 ```
 
-> **참고:** HTML 요소는 대소문자를 구분하지 않습니다. 그 말은 {{htmlelement("title")}} 요소는 `<title>`, `<TITLE>`, `<Title>`, `<TiTlE>` 들과 같이 사용할 수 있습니다. 하지만 대게는 가독성과 기타 이유때문에 소문자로 작성합니다.
+> [!NOTE]
+> HTML 요소는 대소문자를 구분하지 않습니다. 그 말은 {{htmlelement("title")}} 요소는 `<title>`, `<TITLE>`, `<Title>`, `<TiTlE>` 들과 같이 사용할 수 있습니다. 하지만 대게는 가독성과 기타 이유때문에 소문자로 작성합니다.
 
 ## HTML 요소(Element)의 구조
 
@@ -230,9 +231,11 @@ HTML에는 두가지 종류의 요소(Element) 가 있습니다. 블록 레벨 �
 
 {{ EmbedLiveSample('Block_versus_inline_elements', 700, 200, "", "") }}
 
-> **참고:** HTML5에서 요소 분류를 재정의 했습니다: [Element content categories](http://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories). 이러한 정의는 이전의 정의보다 더 정확하고 덜 모호하지만, "블록"과 "인라인"보다 이해하기 훨씬 더 복잡하기 때문에, 이 주제 내내 이 정의들을 고수할 것입니다.
+> [!NOTE]
+> HTML5에서 요소 분류를 재정의 했습니다: [Element content categories](http://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories). 이러한 정의는 이전의 정의보다 더 정확하고 덜 모호하지만, "블록"과 "인라인"보다 이해하기 훨씬 더 복잡하기 때문에, 이 주제 내내 이 정의들을 고수할 것입니다.
 
-> **참고:** 이 주제에서 사용되는 "블럭(block)"과 "인라인(inline)"의 뜻은 [the types of CSS boxes](/ko/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes)에서 사용하고 있는 같은 단어와 혼돈하면 안 됩니다. 기본적으로는 상관관계가 있지만 CSS 표시 유형을 변경해도 요소의 범주는 변경되지 않으며 요소가 포함할 수 있는 요소와 요소가 포함될 수 있는 요소에는 영향을 주지 않는다. HTML5가 이러한 용어들을 삭제했던 이유 중 하나는 이러한 다소 흔한 혼란을 막기 위해서였다.
+> [!NOTE]
+> 이 주제에서 사용되는 "블럭(block)"과 "인라인(inline)"의 뜻은 [the types of CSS boxes](/ko/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes)에서 사용하고 있는 같은 단어와 혼돈하면 안 됩니다. 기본적으로는 상관관계가 있지만 CSS 표시 유형을 변경해도 요소의 범주는 변경되지 않으며 요소가 포함할 수 있는 요소와 요소가 포함될 수 있는 요소에는 영향을 주지 않는다. HTML5가 이러한 용어들을 삭제했던 이유 중 하나는 이러한 다소 흔한 혼란을 막기 위해서였다.
 
 > **참고:** [Block-level elements](/ko/docs/Web/HTML/Block-level_elements)문서와 [Inline elements](/ko/docs/Web/HTML/Inline_elements)문서를 참고하면 블럭과 인라인 요소에 대한 유용한 내용을 찾을 수 있습니다.
 
@@ -249,7 +252,8 @@ HTML에는 두가지 종류의 요소(Element) 가 있습니다. 블록 레벨 �
 
 {{ EmbedLiveSample('Empty_elements', 700, 300, "", "", "hide-codepen-jsfiddle") }}
 
-> **참고:** 빈 요소는 가끔 Void 요소로 불리기도 합니다.
+> [!NOTE]
+> 빈 요소는 가끔 Void 요소로 불리기도 합니다.
 
 ## 속성(Attributes)
 
@@ -526,7 +530,8 @@ That wraps up the basics of individual HTML elements, but they aren't very usefu
 3. 코드를 새 텍스트 파일에 붙여 넣습니다.
 4. 파일을 `index.html`로 저장하십시오.
 
-> **참고:** 기본 HTML 템플릿은 [MDN Learning Area Github repo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) 에서도 찾을 수 있습니다.
+> [!NOTE]
+> 기본 HTML 템플릿은 [MDN Learning Area Github repo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) 에서도 찾을 수 있습니다.
 
 이제 웹 브라우저에서 이 파일을 열어 렌더링 된 코드의 모양을 확인할 수 있습니다. 코드를 편집하고 브라우저를 새로 고침하여 결과를 확인하십시오. 첫 페이지는 다음과 같습니다.
 
@@ -721,7 +726,8 @@ HTML에서 문자 `<`,`>`, `"`및 `&`는 특수 문자입니다. 이들은 HTML 
 
 {{ EmbedLiveSample('Entity_references_Including_special_characters_in_HTML', 700, 200, "", "", "hide-codepen-jsfiddle") }}
 
-> **참고:** HTML의 [문자 인코딩이 UTF-8로 설정](/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Specifying_your_document's_character_encoding)되어 있기 때문에 최신 브라우저는 실제 기호를 잘 처리하므로 다른 기호에 대해서는 엔티티 참조를 사용할 필요가 없습니다.
+> [!NOTE]
+> HTML의 [문자 인코딩이 UTF-8로 설정](/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Specifying_your_document's_character_encoding)되어 있기 때문에 최신 브라우저는 실제 기호를 잘 처리하므로 다른 기호에 대해서는 엔티티 참조를 사용할 필요가 없습니다.
 
 ## HTML 주석
 
@@ -745,6 +751,7 @@ HTML 기본 사항을 둘러 보셨기를 바랍니다.
 
 이 글을 읽고나면 HTML의 모양과 기본 수준에서 작동하는 방식을 이해해야합니다. 또한 몇 가지 요소와 속성을 작성할 수 있어야합니다. 이 모듈의 후속 기사에서는 여기에 소개 된 주제 중 일부에 대해 더 설명하고 언어의 다른 개념을 제시합니다.
 
-> **참고:** HTML에 대해 더 배우기 시작하면 CSS (Cascading Style Sheets)의 기본 사항을 배우십시오. [CSS](/ko/docs/Learn/CSS)는 웹 페이지의 스타일을 지정하는데 사용되는 언어입니다. (예 : 글꼴 또는 색상 변경 또는 페이지 레이아웃 변경) HTML과 CSS는 곧 발견 될 것입니다.
+> [!NOTE]
+> HTML에 대해 더 배우기 시작하면 CSS (Cascading Style Sheets)의 기본 사항을 배우십시오. [CSS](/ko/docs/Learn/CSS)는 웹 페이지의 스타일을 지정하는데 사용되는 언어입니다. (예 : 글꼴 또는 색상 변경 또는 페이지 레이아웃 변경) HTML과 CSS는 곧 발견 될 것입니다.
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}

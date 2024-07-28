@@ -27,7 +27,8 @@ l10n:
   </tbody>
 </table>
 
-> **참고:** 이 글에서는 SVG가 무엇인지, 웹 페이지에 추가하는 방법만 설명합니다.
+> [!NOTE]
+> 이 글에서는 SVG가 무엇인지, 웹 페이지에 추가하는 방법만 설명합니다.
 
 ## 벡터 그래픽이란 무엇인가요?
 
@@ -44,7 +45,8 @@ l10n:
 
 ![두 개의 별 이미지 확대, 하나는 선명하고 다른 하나는 흐릿함](raster-vector-zoomed.png)
 
-> **참고:** 위의 이미지는 모두 PNG이며, 각각의 경우 왼쪽 별은 래스터 이미지를 나타내고 오른쪽 별은 벡터 이미지를 나타냅니다. 다시 한 번 [벡터 대 래스터.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) 데모로 이동하여 실제 예시를 확인하세요!
+> [!NOTE]
+> 위의 이미지는 모두 PNG이며, 각각의 경우 왼쪽 별은 래스터 이미지를 나타내고 오른쪽 별은 벡터 이미지를 나타냅니다. 다시 한 번 [벡터 대 래스터.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) 데모로 이동하여 실제 예시를 확인하세요!
 
 또한 벡터 이미지 파일은 이미지의 모든 픽셀에 대한 정보를 개별적으로 저장하는 대신 몇 가지 알고리즘만 저장하면 되기 때문에 래스터 이미지 파일보다 훨씬 가볍습니다.
 
@@ -84,7 +86,8 @@ SVG에는 지금까지 설명한 것 외에도 몇 가지 추가적인 이점이
 
 래스터 그래픽은 위에서 설명한 이유로 사진과 같은 복잡한 정밀 이미지에 더 적합할 수 있습니다.
 
-> **참고:** Inkscape에서 파일을 일반 SVG로 저장하면 공간을 절약할 수 있습니다. 또한 [웹용 SVG를 준비하는 방법을 설명하는 이 문서](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html)를 참조하세요.
+> [!NOTE]
+> Inkscape에서 파일을 일반 SVG로 저장하면 공간을 절약할 수 있습니다. 또한 [웹용 SVG를 준비하는 방법을 설명하는 이 문서](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html)를 참조하세요.
 
 ## 페이지에 SVG 추가하기
 

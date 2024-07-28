@@ -57,7 +57,8 @@ l10n:
 2. 테이블에 맞는 적절한 캡션을 추가하세요.
 3. 코드를 저장하고 브라우저에서 열어보세요.
 
-> **참고:** 우리의 버전을 GitHub에서 찾을 수 있습니다. [timetable-caption.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/timetable-caption.html) ([라이브 보기](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
+> [!NOTE]
+> 우리의 버전을 GitHub에서 찾을 수 있습니다. [timetable-caption.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/timetable-caption.html) ([라이브 보기](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
 
 ## \<thead>, \<tfoot> 및 \<tbody> 요소를 사용해서 구조를 추가하기
 
@@ -97,13 +98,15 @@ l10n:
 
 7. 저장하고 새로 고침하면 결과를 확인할 수 있습니다. `<tbody>`와 `<tfoot>` 요소가 없었다면, 동일한 스타일링을 적용하기 위해 훨씬 복잡한 선택자와 규칙을 작성해야 했을 것입니다.
 
-> **참고:** 당신이 아직 CSS를 완전히 이해한 것으로 예상하지 않습니다. CSS 학습을 통해 더 많은 것을 배우게 될 것입니다. ([CSS 소개](/ko/docs/Learn/CSS/First_steps)는 시작하기에 좋은 장소입니다. 또한 [테이블 스타일링](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)에 관한 문서도 있습니다.)
+> [!NOTE]
+> 당신이 아직 CSS를 완전히 이해한 것으로 예상하지 않습니다. CSS 학습을 통해 더 많은 것을 배우게 될 것입니다. ([CSS 소개](/ko/docs/Learn/CSS/First_steps)는 시작하기에 좋은 장소입니다. 또한 [테이블 스타일링](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)에 관한 문서도 있습니다.)
 
 완성된 테이블은 다음과 같아야 합니다.
 
 {{ EmbedGHLiveSample('learning-area/html/tables/advanced/spending-record-finished.html', '100%', 400) }}
 
-> **참고:** GitHub에서 또한 확인할 수 있습니다. [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html).
+> [!NOTE]
+> GitHub에서 또한 확인할 수 있습니다. [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html).
 
 ## 중첩 테이블
 
@@ -298,7 +301,8 @@ th {
 </tbody>
 ```
 
-> **참고:** 이 방법은 헤더와 데이터 셀 사이의 매우 정확한 연관성을 만들지만, **많은** 마크업을 사용하며 오류를 남길 여지가 없습니다. `scope` 접근 방식은 대부분의 표에 대해 충분합니다.
+> [!NOTE]
+> 이 방법은 헤더와 데이터 셀 사이의 매우 정확한 연관성을 만들지만, **많은** 마크업을 사용하며 오류를 남길 여지가 없습니다. `scope` 접근 방식은 대부분의 표에 대해 충분합니다.
 
 ### 능동적으로 학습하기: scope와 headers로 놀아보기
 
@@ -306,7 +310,8 @@ th {
 2. 이제 `scope` 속성을 추가하여 이 표를 더 적절하게 만들어 보세요.
 3. 마지막으로, 시작 파일을 또 다른 복사본으로 만들고, 이번에는 `id`와 `headers` 속성을 사용하여 표를 더 접근성 있게 만들어 보세요.
 
-> **참고:** 당신의 완성된 내용을 우리의 마지막 예제와 비교해 보세요. [items-sold-scope.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-scope.html) ([라이브 보기](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) 및 [items-sold-headers.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-headers.html)를 참고하세요. ([라이브 보기](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
+> [!NOTE]
+> 당신의 완성된 내용을 우리의 마지막 예제와 비교해 보세요. [items-sold-scope.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-scope.html) ([라이브 보기](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) 및 [items-sold-headers.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-headers.html)를 참고하세요. ([라이브 보기](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 
 ## 요약
 

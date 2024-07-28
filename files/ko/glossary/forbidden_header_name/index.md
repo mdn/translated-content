@@ -36,7 +36,8 @@ l10n:
 - {{HTTPHeader("Upgrade")}}
 - {{HTTPHeader("Via")}}
 
-> **참고:** 위 목록에 없는 {{HTTPHeader("User-Agent")}} 헤더는 금지됐었으나 [명세](https://fetch.spec.whatwg.org/#terminology-headers)에 따라 (금지된 헤더 이름 목록 참조(Firefox 43에서 구현됨))이제 사용할 수 있습니다. 따라서 Fetch API [`Headers`](/ko/docs/Web/API/Headers) 객체나 `XMLHttpRequest`의 [`setRequestHeader()`](/ko/docs/Web/API/XMLHttpRequest/setRequestHeader) 메서드로 설정 가능합니다. 그러나 Chrome은 Fetch 요청에서 `User-Agent` 헤더를 조용하게 제거하고 있습니다. [Chromium bug 571722](https://crbug.com/571722)를 참고하세요.
+> [!NOTE]
+> 위 목록에 없는 {{HTTPHeader("User-Agent")}} 헤더는 금지됐었으나 [명세](https://fetch.spec.whatwg.org/#terminology-headers)에 따라 (금지된 헤더 이름 목록 참조(Firefox 43에서 구현됨))이제 사용할 수 있습니다. 따라서 Fetch API [`Headers`](/ko/docs/Web/API/Headers) 객체나 `XMLHttpRequest`의 [`setRequestHeader()`](/ko/docs/Web/API/XMLHttpRequest/setRequestHeader) 메서드로 설정 가능합니다. 그러나 Chrome은 Fetch 요청에서 `User-Agent` 헤더를 조용하게 제거하고 있습니다. [Chromium bug 571722](https://crbug.com/571722)를 참고하세요.
 
 ## 같이 보기
 

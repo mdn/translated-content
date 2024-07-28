@@ -25,4 +25,5 @@ l10n:
 모든 객체가 직렬화 가능한 객체는 아닙니다.
 직렬화할 수 있는 객체는 [The structured clone algorithm > Supported types](/ko/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types)에 나열되어 있습니다.
 
-> **참고:** 직렬화 가능 객체는 [웹 IDL 파일](https://github.com/w3c/webref/tree/main/ed/idl)에 `[Serializable]` 속성으로 마크업되어 있습니다.
+> [!NOTE]
+> 직렬화 가능 객체는 [웹 IDL 파일](https://github.com/w3c/webref/tree/main/ed/idl)에 `[Serializable]` 속성으로 마크업되어 있습니다.

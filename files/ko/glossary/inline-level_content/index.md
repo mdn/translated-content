@@ -13,7 +13,8 @@ CSS에서, 인라인 레이아웃에 참여하는 콘텐츠를 **인라인 수�
 
 ![inline layout](inline_layout.png)
 
-> **참고:** HTML(**Hypertext Markup Language**)의 요소는 역사적으로 "블록 레벨" 요소와 "인라인" 요소로 분류됐습니다. 프리젠테이션 특성으로서, 이것은 이제 CSS에 의해 지정됩니다.
+> [!NOTE]
+> HTML(**Hypertext Markup Language**)의 요소는 역사적으로 "블록 레벨" 요소와 "인라인" 요소로 분류됐습니다. 프리젠테이션 특성으로서, 이것은 이제 CSS에 의해 지정됩니다.
 
 ## 예제
 

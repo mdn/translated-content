@@ -10,7 +10,8 @@ l10n:
 
 [Fetch API](/ko/docs/Web/API/Fetch_API)는 네트워크 통신을 포함한 리소스 취득을 위한 인터페이스가 정의되어 있습니다. {{domxref("XMLHttpRequest")}}와 같은 비슷한 API가 존재합니다만, 새로운 Fetch API는 좀더 강력하고 유연한 조작이 가능합니다. 이 글에서는 Fetch API의 기본 개념을 설명합니다.
 
-> **참고:** 이 문서는 수시로 갱신됩니다. 더 자세한 설명이 필요하다고 생각하시는 Fetch 개념이 있으시면 [MDN Web Docs 채팅](/ko/docs/MDN/Community/Communication_channels#채팅)에서 문의해 주세요.
+> [!NOTE]
+> 이 문서는 수시로 갱신됩니다. 더 자세한 설명이 필요하다고 생각하시는 Fetch 개념이 있으시면 [MDN Web Docs 채팅](/ko/docs/MDN/Community/Communication_channels#채팅)에서 문의해 주세요.
 
 ## 훑어보기
 

@@ -13,9 +13,11 @@ CSS에서, 블록 레이아웃에 속하는 콘텐츠를 **블록 레벨 콘텐�
 
 **HTML**(Hypertext Markup Language)의 요소는 역사적으로 "블록 레벨" 요소와 ["인라인" 요소](/ko/docs/Web/HTML/Inline_elements)로 분류됐습니다. 기본적으로 블록 레벨 요소는 부모 요소의 전체 공간을 차지하여 "블록"을 만듭니다. 이 글에서 자세한 설명을 읽을 수 있습니다.
 
-> **참고:** 둘러싸는 블록의 [`writing-mode`](/ko/docs/Web/CSS/writing-mode)이 [기본값](/ko/docs/Web/CSS/writing-mode#formal_definition) 이외의 값으로 설정되면, 위의 블록 레이아웃 동작이 변경됩니다.
+> [!NOTE]
+> 둘러싸는 블록의 [`writing-mode`](/ko/docs/Web/CSS/writing-mode)이 [기본값](/ko/docs/Web/CSS/writing-mode#formal_definition) 이외의 값으로 설정되면, 위의 블록 레이아웃 동작이 변경됩니다.
 
-> **참고:** HTML (_HyperText Markup Language_) 요소는 역사적으로 "블록 레벨" 요소 또는 "인라인" 요소로 분류되었습니다. 프레젠테이션 특성으로 인해, 이제는 CSS에 의해 지정됩니다.
+> [!NOTE]
+> HTML (_HyperText Markup Language_) 요소는 역사적으로 "블록 레벨" 요소 또는 "인라인" 요소로 분류되었습니다. 프레젠테이션 특성으로 인해, 이제는 CSS에 의해 지정됩니다.
 
 ## 예제
 

@@ -387,7 +387,8 @@ CSS로 컴파일되면 최종 스타일시트에 다음과 같은 CSS를 얻게 
 @use "foundation";
 ```
 
-> **참고:** Sass를 시도해보는 간단한 방법은 [CodePen](https://codepen.io)을 사용하는 것입니다. 펜의 설정에서 CSS에 대한 Sass를 활성화할 수 있고, 그런 다음 CodePen은 일반 CSS가 적용된 결과 웹페이지를 볼 수 있도록 Sass 파서를 실행해줍니다. 때때로 CSS 튜토리얼에서는 CodePen 데모에서 일반 CSS보다 Sass를 사용한 경우가 있으므로, 이에 대해 약간 알고 있는 것이 편리합니다.
+> [!NOTE]
+> Sass를 시도해보는 간단한 방법은 [CodePen](https://codepen.io)을 사용하는 것입니다. 펜의 설정에서 CSS에 대한 Sass를 활성화할 수 있고, 그런 다음 CodePen은 일반 CSS가 적용된 결과 웹페이지를 볼 수 있도록 Sass 파서를 실행해줍니다. 때때로 CSS 튜토리얼에서는 CodePen 데모에서 일반 CSS보다 Sass를 사용한 경우가 있으므로, 이에 대해 약간 알고 있는 것이 편리합니다.
 
 #### 최적화를 위한 후처리
 

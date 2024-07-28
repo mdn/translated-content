@@ -11,7 +11,7 @@ slug: Learn/Accessibility
 
 이 문서를 최대한 활용하려면 최소한 [HTML](/ko/docs/Learn/HTML), [CSS](/ko/docs/Learn/CSS) 및 [JavaScript](/ko/docs/Learn/JavaScript) 항목 중 처음 두 문서를 통해 작업하거나 또는 접근성 문서와 관련된 기술을 통해 개선해 나가는것이 좋습니다.
 
-> **참고:**
+> [!NOTE]
 >
 > 당신은 당신이 당신의 자신의 파일을 생성 할 수 있는 기능이 없는 컴퓨터 / 태블릿 / 다른 장치에서 작업하는 경우, 당신은 [JSBin](https://jsbin.com/) 또는 [Glitch](https://glitch.com/) 같은 온라인 코딩 프로그램에서 코드 예제의 대부분을 테스트 할 수 있습니다.
 

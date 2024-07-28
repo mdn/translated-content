@@ -102,7 +102,8 @@ if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","395")}}
 
-> **참고:** 공이 벽에 부딪힐 때마다 공의 색을 무작위로 변화시켜보세요.
+> [!NOTE]
+> 공이 벽에 부딪힐 때마다 공의 색을 무작위로 변화시켜보세요.
 
 ## 다음 단계
 
