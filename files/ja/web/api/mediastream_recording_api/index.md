@@ -25,7 +25,8 @@ MediaStream 収録 API は、{{domxref("MediaRecorder")}} という 1 つの主�
 6. ソースメディアの再生が停止すると、録画は自動的に停止します。
 7. {{domxref("MediaRecorder.stop()")}} を呼び出すことで、いつでも録画を停止できます。
 
-> **メモ:** 収録されたメディアのスライスを含む個々の {{domxref("Blob")}} は、必ずしも個別に再生できるわけではありません。 再生する前にメディアを組み立て直す必要があります。
+> [!NOTE]
+> 収録されたメディアのスライスを含む個々の {{domxref("Blob")}} は、必ずしも個別に再生できるわけではありません。 再生する前にメディアを組み立て直す必要があります。
 
 収録中に問題が発生した場合は、 {{domxref("MediaRecorder/error_event", "error")}} イベントが `MediaRecorder` に送られます。 {{domxref("MediaRecorder.error_event", "onerror")}} イベントハンドラーを設定することで `error` イベントを監視できます。
 

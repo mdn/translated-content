@@ -10,7 +10,8 @@ l10n:
 
 **`movementY`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、直前の {{domxref("Element/mousemove_event", "mousemove")}} イベントとこのイベントのマウスポインターの Y 座標の差を示します。このプロパティの値は `currentEvent.movementY = currentEvent.screenY - previousEvent.screenY` のように計算されます。
 
-> **警告:** ブラウザーは `movementY` と {{domxref("MouseEvent.screenY", "screenY")}} に[仕様で定義されているものとは異なる単位を使用します](https://github.com/w3c/pointerlock/issues/42)。ブラウザーとオペレーティングシステムによって、 `movementY` の単位は物理ピクセルであったり、論理ピクセルであったり、 CSS ピクセルであったりします。
+> [!WARNING]
+> ブラウザーは `movementY` と {{domxref("MouseEvent.screenY", "screenY")}} に[仕様で定義されているものとは異なる単位を使用します](https://github.com/w3c/pointerlock/issues/42)。ブラウザーとオペレーティングシステムによって、 `movementY` の単位は物理ピクセルであったり、論理ピクセルであったり、 CSS ピクセルであったりします。
 
 ## 値
 

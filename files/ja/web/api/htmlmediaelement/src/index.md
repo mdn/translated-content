@@ -9,7 +9,8 @@ l10n:
 
 **`HTMLMediaElement.src`** プロパティは、 HTML のメディア要素の `src` 属性の値を反映します。これは、要素で使用するメディアリソースの URL を示します。
 
-> **メモ:** この要素が現在実際に使用しているメディアリソースの URL を知る最善の方法は、{{domxref("HTMLMediaElement.currentSrc", "currentSrc")}} 属性の値を調べることです。 これは、（{{HTMLElement("source")}} 要素を表す）{{domxref("HTMLSourceElement")}} で提供されるリストからの最良または優先メディアリソースの選択も考慮されます。
+> [!NOTE]
+> この要素が現在実際に使用しているメディアリソースの URL を知る最善の方法は、{{domxref("HTMLMediaElement.currentSrc", "currentSrc")}} 属性の値を調べることです。 これは、（{{HTMLElement("source")}} 要素を表す）{{domxref("HTMLSourceElement")}} で提供されるリストからの最良または優先メディアリソースの選択も考慮されます。
 
 ## 値
 

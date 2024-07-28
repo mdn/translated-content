@@ -11,7 +11,8 @@ l10n:
 
 このオブジェクトは {{domxref("MediaStream")}}、{{domxref("MediaSource")}}、{{domxref("Blob")}} や（Blob から派生している） {{domxref("File")}} です。
 
-> **メモ:** 2020 年 3 月現在、 Safari のみが `srcObject` に対して完全に、すなわち `MediaSource`、`MediaStream`、`Blob`、`File` のオブジェクトを値にすることに対応しています。他のブラウザーは `MediaStream` に対応しています。他のブラウザーが追いつくまで、代替として {{domxref("URL.createObjectURL()")}} を使用して URL を作成し、それを {{domxref("HTMLMediaElement.src")}} に代入するようにしてください（以下の例を参照してください）。さらに、バージョン 108 の Chromium は、専用ワーカーの `MediaSource` オブジェクトを、そのオブジェクトの（ワーカーから転送された） {{domxref("MediaSourceHandle")}} インスタンスを `srcObject` に割り当てることで装着することに対応しています。
+> [!NOTE]
+> 2020 年 3 月現在、 Safari のみが `srcObject` に対して完全に、すなわち `MediaSource`、`MediaStream`、`Blob`、`File` のオブジェクトを値にすることに対応しています。他のブラウザーは `MediaStream` に対応しています。他のブラウザーが追いつくまで、代替として {{domxref("URL.createObjectURL()")}} を使用して URL を作成し、それを {{domxref("HTMLMediaElement.src")}} に代入するようにしてください（以下の例を参照してください）。さらに、バージョン 108 の Chromium は、専用ワーカーの `MediaSource` オブジェクトを、そのオブジェクトの（ワーカーから転送された） {{domxref("MediaSourceHandle")}} インスタンスを `srcObject` に割り当てることで装着することに対応しています。
 
 ## 値
 
