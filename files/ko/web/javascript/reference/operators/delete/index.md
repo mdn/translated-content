@@ -1,8 +1,6 @@
 ---
 title: delete 연산자
 slug: Web/JavaScript/Reference/Operators/delete
-page-type: javascript-operator
-browser-compat: javascript.operators.delete
 ---
 
 {{jsSidebar("Operators")}}
