@@ -3,12 +3,12 @@ title: "HTMLMediaElement: mediaGroup プロパティ"
 short-title: mediaGroup
 slug: Web/API/HTMLMediaElement/mediaGroup
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: 8beb479c558d4220932721e61b6a334d5b5c274a
 ---
 
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-**`HTMLMediaElement.mediaGroup`** プロパティは HTML の [`mediaGroup`](/ja/docs/Web/HTML/Element/video#mediagroup) 属性を反映し、所属する要素のグループの名前を示します。メディア要素のグループは、共通の `controller` を共有します。
+**`HTMLMediaElement.mediaGroup`** プロパティは HTML の `mediagroup` 属性を反映し、所属する要素のグループの名前を示します。メディア要素のグループは、共通の `controller` を共有します。
 
 ## 値
 
@@ -24,4 +24,4 @@ l10n:
 
 ## 関連情報
 
-- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.mediaGroup` プロパティを定義していたインターフェイス
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.mediaGroup` プロパティを定義しているインターフェイス
