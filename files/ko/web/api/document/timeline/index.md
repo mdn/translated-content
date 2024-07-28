@@ -15,7 +15,8 @@ l10n:
 이 타임라인은 {{domxref("Performance.timeOrigin")}} 이후 시간을 밀리초 단위로 연산합니다.
 원점 이전의 시간은 타임라인에서 고려하지 않으며 이 경우 {{domxref("AnimationTimeline.currentTime","currentTime")}}은 `null`입니다.
 
-> **참고:** 문서 타임라인은 비활성 문서 ({{domxref("Document")}} 가 {{domxref("Window")}}, {{htmlelement("iframe")}}, 혹은 {{htmlelement("frame")}} 과 연결되지 않은 문서)일 경우 비활성화 됩니다.
+> [!NOTE]
+> 문서 타임라인은 비활성 문서 ({{domxref("Document")}} 가 {{domxref("Window")}}, {{htmlelement("iframe")}}, 혹은 {{htmlelement("frame")}} 과 연결되지 않은 문서)일 경우 비활성화 됩니다.
 
 ## 값
 

@@ -44,7 +44,8 @@ A key difference between the {{domxref("DataTransfer")}} and {{domxref("DataTran
 
 {{domxref("DataTransfer")}}와 {{domxref("DataTransferItem")}}의 가장 중요한 차이점은 전자는 드래그 아이템의 데이터에 접근하기 위해 동기 메소드인 {{domxref("DataTransfer.getData","getData()")}}를 사용하는데 반해, 후자는 비동기 메소드인 {{domxref("DataTransferItem.getAsString","getAsString()")}}를 사용한다는 점입니다.
 
-> **참고:** 참고: {{domxref("DragEvent")}} and {{domxref("DataTransfer")}}는 여러 데스크탑 브라우저에서 폭넓게 지원하고 있습니다. 하지만 {{domxref("DataTransferItem")}}와 {{domxref("DataTransferItemList")}}는 제한적으로 사용 가능합니다. 드래그 앤 드롭의 상호 운용성에 대한 더 많은 정보를 찾아보기 위해 [Interoperability](#interoperability)를 보십시오.
+> [!NOTE]
+> 참고: {{domxref("DragEvent")}} and {{domxref("DataTransfer")}}는 여러 데스크탑 브라우저에서 폭넓게 지원하고 있습니다. 하지만 {{domxref("DataTransferItem")}}와 {{domxref("DataTransferItemList")}}는 제한적으로 사용 가능합니다. 드래그 앤 드롭의 상호 운용성에 대한 더 많은 정보를 찾아보기 위해 [Interoperability](#interoperability)를 보십시오.
 
 ### Gecko 한정 인터페이스
 
