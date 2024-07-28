@@ -77,7 +77,8 @@ console.log(document.fonts.check("12px i-dont-exist"));
 // true: 一致するフォントは存在しないフォント
 ```
 
-> **メモ:** この状況で Chrome は不正に `false` を返します。これは攻撃者がブラウザーがどのシステムフォントを保有しているかを簡単にテストできるため、[フィンガープリンティング](/ja/docs/Glossary/Fingerprinting)を容易にする可能性があるためです。
+> [!NOTE]
+> この状況で Chrome は不正に `false` を返します。これは攻撃者がブラウザーがどのシステムフォントを保有しているかを簡単にテストできるため、[フィンガープリンティング](/ja/docs/Glossary/Fingerprinting)を容易にする可能性があるためです。
 
 ### システムフォントと読み込まれていないフォント
 
