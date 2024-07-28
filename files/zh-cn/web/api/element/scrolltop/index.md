@@ -13,7 +13,7 @@ slug: Web/API/Element/scrollTop
 
 如果元素可以从初始包含块向上滚动，则`scrollTop`可能为负。例如，如果元素的{{cssxref("flex direction")}}是`column-reverse`，并且内容向上增长，那么当滚动条位于其最底部位置（在滚动内容的开始处）时，`scrollTop`为`0`，然后当您向内容末尾滚动时，scrallTop 逐渐变负。
 
-Safari通过将`scrollTop`更新到最大滚动位置之外来响应过度滚动（除非禁用默认的“反弹”效果，例如将{{cssxref("overscroll-behavior")}}设置为`none`），而Chrome和Firefox则不会。例如，在Safari浏览器上，当元素已经位于顶部时继续向上滚动，`scrollTop`可能会变为负值。
+Safari 通过将`scrollTop`更新到最大滚动位置之外来响应过度滚动（除非禁用默认的“反弹”效果，例如将{{cssxref("overscroll-behavior")}}设置为`none`），而 Chrome 和 Firefox 则不会。例如，在 Safari 浏览器上，当元素已经位于顶部时继续向上滚动，`scrollTop`可能会变为负值。
 
 通过设置scrollTop属性，可以让元素在垂直方向滚动到指定位置，和使用{{domxref("Element.scroll()")}}设置`behavior: "auto"`效果一致。
 
