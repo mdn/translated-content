@@ -35,7 +35,8 @@ l10n:
 - {{cssxref("min-width")}}
 - {{cssxref("width")}}
 
-> **メモ:** CSS ボックスサイズ指定モジュールでは、まだ実装されていない `min-intrinsic-sizing` プロパティを導入しています。
+> [!NOTE]
+> CSS ボックスサイズ指定モジュールでは、まだ実装されていない `min-intrinsic-sizing` プロパティを導入しています。
 
 ### データ型と値
 
@@ -45,7 +46,8 @@ l10n:
 - {{cssxref("fit-content")}} 値
 - {{cssxref("fit-content_function", "fit-content()")}} 関数
 
-> **メモ:** CSS ボックスサイズ指定モジュールでは、ボックスサイズ指定プロパティにまだ実装されていないサイズ指定値として、`stretch` と `contain` キーワードを導入しています。
+> [!NOTE]
+> CSS ボックスサイズ指定モジュールでは、ボックスサイズ指定プロパティにまだ実装されていないサイズ指定値として、`stretch` と `contain` キーワードを導入しています。
 
 ### 関数
 
