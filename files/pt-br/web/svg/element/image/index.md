@@ -11,7 +11,8 @@ The only image formats SVG software must support are [JPEG](/pt-BR/docs/Glossary
 
 SVG files displayed with `<image>` are [treated as an image](/pt-BR/docs/Web/SVG/SVG_as_an_Image): external resources aren't loaded, [:visited](/pt-BR/docs/Web/CSS/:visited) styles [aren't applied](/pt-BR/docs/Web/CSS/Privacy_and_the_:visited_selector), and they cannot be interactive. To include dynamic SVG elements, try [\<use>](/pt-BR/docs/Web/SVG/Element/use) with an external URL. To include SVG files and run scripts inside them, try [\<object>](/pt-BR/docs/Web/HTML/Element/object) inside of [\<foreignObject>](/pt-BR/docs/Web/SVG/Element/foreignObject).
 
-> **Nota:** The HTML spec defines `<image>` as a synonym for [\<img>](/pt-BR/docs/Web/HTML/Element/img) while parsing HTML. This specific element and its behavior only apply inside SVG documents or [inline SVG](/pt-BR/docs/SVG_In_HTML_Introduction).
+> [!NOTE]
+> The HTML spec defines `<image>` as a synonym for [\<img>](/pt-BR/docs/Web/HTML/Element/img) while parsing HTML. This specific element and its behavior only apply inside SVG documents or [inline SVG](/pt-BR/docs/SVG_In_HTML_Introduction).
 
 ## Usage context
 
