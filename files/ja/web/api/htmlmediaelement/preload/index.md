@@ -27,7 +27,7 @@ l10n:
 
 ## 例
 
-```html
+```html-nolint
 <video
   id="el"
   controls
