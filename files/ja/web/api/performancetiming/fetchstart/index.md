@@ -7,7 +7,8 @@ l10n:
 
 {{APIRef("Performance API")}}{{Deprecated_Header}}
 
-> **警告:** このプロパティのこのインターフェイスは [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete) で非推奨になりました。かわりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
+> [!WARNING]
+> このプロパティのこのインターフェイスは [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete) で非推奨になりました。かわりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
 
 レガシーな読み取り専用プロパティ **`PerformanceTiming.fetchStart`** は、ブラウザーが HTTP 要求により文書を読み込む準備ができた時刻を UNIX エポックからのミリ秒で表す `unsigned long long` 値を返します。この時刻は、任意のアプリケーションキャッシュをチェックする _前_ です。
 

@@ -7,7 +7,8 @@ slug: WebAssembly/JavaScript_interface/Table
 
 **`WebAssembly.Table()`** オブジェクトは JavaScript のラッパーオブジェクトであり、関数の参照を格納する WebAssembly Table を表す配列風の構造を持っています。 JavaScript や WebAssembly のコードで作成されたテーブルは、 JavaScript と WebAssembly の両方からアクセスでき、変更もできます。
 
-> **メモ:** 現在、テーブルには関数の参照のみが格納できますが、将来的に拡張される予定です。
+> [!NOTE]
+> 現在、テーブルには関数の参照のみが格納できますが、将来的に拡張される予定です。
 
 ## コンストラクター
 

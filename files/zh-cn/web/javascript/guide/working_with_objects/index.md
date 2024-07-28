@@ -534,7 +534,8 @@ fruit == fruitbear; // return false
 fruit === fruitbear; // return false
 ```
 
-> **备注：** "===" 运算符用来检查数值是否相等：1 === "1"返回 false，而 1 == "1" 返回 true
+> [!NOTE]
+> "===" 运算符用来检查数值是否相等：1 === "1"返回 false，而 1 == "1" 返回 true
 
 ```js
 // 两个变量，同一个对象

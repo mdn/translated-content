@@ -383,7 +383,8 @@ console.log(clone.get(1)); // one
 console.log(original === clone); // false. 浅比较 不为同一个对象的引用
 ```
 
-> **备注：** 请记住，*数据本身*未被克隆。
+> [!NOTE]
+> 请记住，*数据本身*未被克隆。
 
 `Map` 对象间可以进行合并，但是会保持键的唯一性。
 

@@ -106,7 +106,8 @@ Django 的表單處理使用了我們在以前的教程中學到的所有相同�
 
 Django 提供了許多工具和方法來幫助你完成上述任務。 最基本的是 `Form`類，它簡化了表單 HTML 的生成和數據清除/驗證的過程。 在下一節中，我們將使用頁面的實際示例描述表單如何工作，以使圖書館員可以續訂書籍。
 
-> **備註：** 當我們討論 Django 的更多「高級」表單框架類時，了解`Form`的使用方式將對你有所幫助。
+> [!NOTE]
+> 當我們討論 Django 的更多「高級」表單框架類時，了解`Form`的使用方式將對你有所幫助。
 
 ## 使用表單和功能視圖續訂表單
 
@@ -183,7 +184,8 @@ There are two important things to note. The first is that we get our data using 
 
 The second point is that if a value falls outside our range we raise a `ValidationError`, specifying the error text that we want to display in the form if an invalid value is entered. The example above also wraps this text in one of [Django's translation functions](https://docs.djangoproject.com/en/2.0/topics/i18n/translation/) `ugettext_lazy()` (imported as `_()`), which is good practice if you want to translate your site later.
 
-> **備註：** There are numerious other methods and examples for validating forms in [Form and field validation](https://docs.djangoproject.com/en/2.0/ref/forms/validation/) (Django docs). For example, in cases where you have multiple fields that depend on each other, you can override the [Form.clean()](https://docs.djangoproject.com/en/2.0/ref/forms/api/#django.forms.Form.clean) function and again raise a `ValidationError`.
+> [!NOTE]
+> There are numerious other methods and examples for validating forms in [Form and field validation](https://docs.djangoproject.com/en/2.0/ref/forms/validation/) (Django docs). For example, in cases where you have multiple fields that depend on each other, you can override the [Form.clean()](https://docs.djangoproject.com/en/2.0/ref/forms/api/#django.forms.Form.clean) function and again raise a `ValidationError`.
 
 That's all we need for the form in this example!
 
@@ -203,7 +205,8 @@ urlpatterns += [
 
 The URL configuration will redirect URLs with the format **/catalog/book/_\<bookinstance id>_/renew/** to the function named `renew_book_librarian()` in **views.py**, and send the `BookInstance` id as the parameter named `pk`. The pattern only matches if `pk` is a correctly formatted `uuid`.
 
-> **備註：** We can name our captured URL data "`pk`" anything we like, because we have complete control over the view function (we're not using a generic detail view class that expects parameters with a certain name). However `pk`, short for "primary key", is a reasonable convention to use!
+> [!NOTE]
+> We can name our captured URL data "`pk`" anything we like, because we have complete control over the view function (we're not using a generic detail view class that expects parameters with a certain name). However `pk`, short for "primary key", is a reasonable convention to use!
 
 ### View
 
@@ -296,7 +299,8 @@ If the form is not valid we call `render()` again, but this time the form value 
 
 If the form is valid, then we can start to use the data, accessing it through the `form.cleaned_data` attribute (e.g. `data = form.cleaned_data['renewal_date']`). Here we just save the data into the `due_back` value of the associated `BookInstance` object.
 
-> **警告：** While you can also access the form data directly through the request (for example `request.POST['renewal_date']` or `request.GET['renewal_date']` (if using a GET request) this is NOT recommended. The cleaned data is sanitised, validated, and converted into Python-friendly types.
+> [!WARNING]
+> While you can also access the form data directly through the request (for example `request.POST['renewal_date']` or `request.GET['renewal_date']` (if using a GET request) this is NOT recommended. The cleaned data is sanitised, validated, and converted into Python-friendly types.
 
 The final step in the form-handling part of the view is to redirect to another page, usually a "success" page. In this case we use `HttpResponseRedirect` and `reverse()` to redirect to the view named `'all-borrowed'` (this was created as the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/zh-TW/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself)). If you didn't create that page consider redirecting to the home page at URL '/').
 
@@ -371,7 +375,8 @@ Most of this will be completely familiar from previous tutorials. We extend the 
 
 The form code is relatively simple. First we declare the `form` tags, specifying where the form is to be submitted (`action`) and the `method` for submitting the data (in this case an "HTTP POST") — if you recall the [HTML Forms](#HTML_forms) overview at the top of the page, an empty `action` as shown, means that the form data will be posted back to the current URL of the page (which is what we want!). Inside the tags we define the `submit` input, which a user can press to submit the data. The `{% csrf_token %}` added just inside the form tags is part of Django's cross-site forgery protection.
 
-> **備註：** Add the `{% csrf_token %}` to every Django template you create that uses `POST` to submit data. This will reduce the chance of forms being hijacked by malicious users.
+> [!NOTE]
+> Add the `{% csrf_token %}` to every Django template you create that uses `POST` to submit data. This will reduce the chance of forms being hijacked by malicious users.
 
 All that's left is the `\{{form}}` template variable, which we passed to the template in the context dictionary. Perhaps unsurprisingly, when used as shown this provides the default rendering of all the form fields, including their labels, widgets, and help text — the rendering is as shown below:
 
@@ -393,7 +398,8 @@ All that's left is the `\{{form}}` template variable, which we passed to the tem
 </tr>
 ```
 
-> **備註：** It is perhaps not obvious because we only have one field, but by default every field is defined in its own table row (which is why the variable is inside `table` tags above). This same rendering is provided if you reference the template variable `\{{ form.as_table }}`.
+> [!NOTE]
+> It is perhaps not obvious because we only have one field, but by default every field is defined in its own table row (which is why the variable is inside `table` tags above). This same rendering is provided if you reference the template variable `\{{ form.as_table }}`.
 
 If you were to enter an invalid date, you'd additionally get a list of the errors rendered in the page (shown in bold below).
 
@@ -440,7 +446,8 @@ If you accepted the "challenge" in [Django Tutorial Part 8: User authentication 
 {% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>{% endif %}
 ```
 
-> **備註：** Remember that your test login will need to have the permission "`catalog.can_mark_returned`" in order to access the renew book page (perhaps use your superuser account).
+> [!NOTE]
+> Remember that your test login will need to have the permission "`catalog.can_mark_returned`" in order to access the renew book page (perhaps use your superuser account).
 
 You can alternatively manually construct a test URL like this — `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/` (a valid bookinstance id can be obtained by navigating to a book detail page in your library, and copying the `id` field).
 
@@ -476,7 +483,8 @@ class RenewBookModelForm(ModelForm):
         fields = ['due_back',]
 ```
 
-> **備註：** This might not look like all that much simpler than just using a `Form` (and it isn't in this case, because we just have one field). However if you have a lot of fields, it can reduce the amount of code quite significantly!
+> [!NOTE]
+> This might not look like all that much simpler than just using a `Form` (and it isn't in this case, because we just have one field). However if you have a lot of fields, it can reduce the amount of code quite significantly!
 
 The rest of the information comes from the model field definitions (e.g. labels, widgets, help text, error messages). If these aren't quite right, then we can override them in our `class Meta`, specifying a dictionary containing the field to change and its new value. For example, in this form we might want a label for our field of "_Renewal date_" (rather than the default based on the field name: _Due date_), and we also want our help text to be specific to this use case. The `Meta` below shows you how to override these fields, and you can similarly set `widgets` and `error_messages` if the defaults aren't sufficient.
 
@@ -522,7 +530,8 @@ The class `RenewBookModelForm` below is now functionally equivalent to our origi
 
 The form handling algorithm we used in our function view example above represents an extremely common pattern in form editing views. Django abstracts much of this "boilerplate" for you, by creating [generic editing views](https://docs.djangoproject.com/en/2.0/ref/class-based-views/generic-editing/) for creating, editing, and deleting views based on models. Not only do these handle the "view" behaviour, but they automatically create the form class (a `ModelForm`) for you from the model.
 
-> **備註：** In addition to the editing views described here, there is also a [FormView](https://docs.djangoproject.com/en/2.0/ref/class-based-views/generic-editing/#formview) class, which lies somewhere between our function view and the other generic views in terms of "flexibility" vs "coding effort". Using `FormView` you still need to create your `Form`, but you don't have to implement all of the standard form-handling pattern. Instead you just have to provide an implementation of the function that will be called once the submitted is known to be be valid.
+> [!NOTE]
+> In addition to the editing views described here, there is also a [FormView](https://docs.djangoproject.com/en/2.0/ref/class-based-views/generic-editing/#formview) class, which lies somewhere between our function view and the other generic views in terms of "flexibility" vs "coding effort". Using `FormView` you still need to create your `Form`, but you don't have to implement all of the standard form-handling pattern. Instead you just have to provide an implementation of the function that will be called once the submitted is known to be be valid.
 
 In this section we're going to use generic editing views to create pages to add functionality to create, edit, and delete `Author` records from our library — effectively providing a basic reimplementation of parts of the Admin site (this could be useful if you need to offer admin functionality in a more flexible way that can be provided by the admin site).
 
@@ -612,7 +621,8 @@ There is nothing particularly new here! You can see that the views are classes, 
 
 The author create, update, and delete pages are now ready to test (we won't bother hooking them into the site sidebar in this case, although you can do so if you wish).
 
-> **備註：** Observant users will have noticed that we didn't do anything to prevent unauthorised users from accessing the pages! We leave that as an exercise for you (hint: you could use the `PermissionRequiredMixin` and either create a new permission or reuse our `can_mark_returned` permission).
+> [!NOTE]
+> Observant users will have noticed that we didn't do anything to prevent unauthorised users from accessing the pages! We leave that as an exercise for you (hint: you could use the `PermissionRequiredMixin` and either create a new permission or reuse our `can_mark_returned` permission).
 
 ### Testing the page
 

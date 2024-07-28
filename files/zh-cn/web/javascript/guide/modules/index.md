@@ -25,7 +25,8 @@ JavaScript 程序本来很小——在早期，它们大多被用来执行独立
 
 这的确有点简单，但是保持足够简单能够清晰地演示模块。
 
-> **备注：** 如果你想去下载这个例子在本地运行，你需要通过本地 web 服务器去运行。
+> [!NOTE]
+> 如果你想去下载这个例子在本地运行，你需要通过本地 web 服务器去运行。
 
 ## 基本的示例文件的结构
 
@@ -39,7 +40,8 @@ modules/
     square.js
 ```
 
-> **备注：** 在这个指南的全部示例项目的文件结构是基本相同的；需要熟悉上面的内容
+> [!NOTE]
+> 在这个指南的全部示例项目的文件结构是基本相同的；需要熟悉上面的内容
 
 modules 目录下的两个模块的描述如下：
 
@@ -55,7 +57,8 @@ modules 目录下的两个模块的描述如下：
   - `reportArea()` — 在给定长度的情况下，将正方形区域写入特定报告列表。
   - `reportPerimeter()` — 在给定长度的情况下，将正方形的周长写入特定的报告列表。
 
-> **备注：** 在原生 JavaScript 模块中，扩展名 `.mjs` 非常重要，因为使用 MIME-type 为 `javascript/esm` 来导入文件（其他的 JavaScript 兼容 MIME-type 像 `application/javascript` 也可以），它避免了严格的 MIME 类型检查错误，像 "The server responded with a non-JavaScript MIME type"。除此之外，`.mjs` 的扩展名很明了（比如这个就是一个模块，而不是一个传统 JavaScript 文件），还能够和其他工具互相适用。看这个 [Google's note for further details](https://v8.dev/features/modules#mjs)。
+> [!NOTE]
+> 在原生 JavaScript 模块中，扩展名 `.mjs` 非常重要，因为使用 MIME-type 为 `javascript/esm` 来导入文件（其他的 JavaScript 兼容 MIME-type 像 `application/javascript` 也可以），它避免了严格的 MIME 类型检查错误，像 "The server responded with a non-JavaScript MIME type"。除此之外，`.mjs` 的扩展名很明了（比如这个就是一个模块，而不是一个传统 JavaScript 文件），还能够和其他工具互相适用。看这个 [Google's note for further details](https://v8.dev/features/modules#mjs)。
 
 ## `.mjs` 与 `.js`
 
@@ -133,7 +136,8 @@ import { name, draw, reportArea, reportPerimeter } from '/js-examples/modules/ba
 
 你可以在 [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js) 中看到这些。
 
-> **备注：** 在一些模块系统中你可以忽略文件扩展名（比如 `'/model/squre'`）。这在原生 JavaScript 模块系统中不工作。~~此外，记住你需要包含最前面的正斜杠。~~ （修订版 1889482）
+> [!NOTE]
+> 在一些模块系统中你可以忽略文件扩展名（比如 `'/model/squre'`）。这在原生 JavaScript 模块系统中不工作。~~此外，记住你需要包含最前面的正斜杠。~~ （修订版 1889482）
 
 因为你导入了这些功能到你的脚本文件，你可以像定义在相同的文件中的一样去使用它。下面展示的是在 `main.js` 中的 import 语句下面的内容。
 
@@ -160,7 +164,8 @@ reportPerimeter(square1.length, reportList);
 
 你只能在模块内部使用 `import` 和`export` 语句；不是普通脚本文件。
 
-> **备注：** 你还可以将模块导入内部脚本，只要包含 `type="module"`，例如 `<script type="module"> //include script here </script>`。
+> [!NOTE]
+> 你还可以将模块导入内部脚本，只要包含 `type="module"`，例如 `<script type="module"> //include script here </script>`。
 
 ## 其他模块与标准脚本的不同
 
@@ -203,7 +208,8 @@ import randomSquare from "./modules/square.js";
 import { default as randomSquare } from "./modules/square.js";
 ```
 
-> **备注：** 重命名导出项的 as 语法在下面的 [重命名导出与导入](#重命名导出与导入) 部分中进行了说明。
+> [!NOTE]
+> 重命名导出项的 as 语法在下面的 [重命名导出与导入](#重命名导出与导入) 部分中进行了说明。
 
 ## 避免命名冲突
 
@@ -392,7 +398,8 @@ export * from "x.js";
 export { name } from "x.js";
 ```
 
-> **备注：** 这实际上是导入后跟导出的简写，即“我导入模块 `x.js`，然后重新导出部分或全部导出”。
+> [!NOTE]
+> 这实际上是导入后跟导出的简写，即“我导入模块 `x.js`，然后重新导出部分或全部导出”。
 
 有关示例，请参阅我们的 [module-aggregation](https://github.com/mdn/js-examples/tree/main/module-examples/module-aggregation)。在这个例子中（基于我们之前的类示例），我们有一个名为 `shapes.js` 的额外模块，它将 `circle.js`，`square.js` 和 `riangle.mjs` 中的所有功能聚合在一起。我们还将子模块移动到名为 shapes 的 modules 目录中的子目录中。所以模块结构现在是这样的：
 
@@ -422,7 +429,8 @@ export { Circle } from "/js-examples/modules/module-aggregation/modules/shapes/c
 
 它们从各个子模块中获取导出，并有效地从 `shapes.js` 模块中获取它们。
 
-> **备注：** 即使 `shapes.js` 文件位于 modules 目录中，我们仍然需要相对于模块根目录编写这些 URL，因此需要 `/modules/`。这是使用 JavaScript 模块时混淆的常见原因。
+> [!NOTE]
+> 即使 `shapes.js` 文件位于 modules 目录中，我们仍然需要相对于模块根目录编写这些 URL，因此需要 `/modules/`。这是使用 JavaScript 模块时混淆的常见原因。
 
 > **备注：** `shapes.js` 中引用的导出基本上通过文件重定向，并且实际上并不存在，因此你将无法在同一文件中编写任何有用的相关代码。
 

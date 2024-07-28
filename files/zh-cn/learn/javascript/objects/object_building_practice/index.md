@@ -425,7 +425,8 @@ Ball.prototype.update = function () {
 
 3. 保存文件，刷新浏览器，你就会看到小球在撞击时会变色！
 
-> **备注：** 如果示例无法顺利执行，可参考我们的 [最终版本](https://github.com/roy-tian/learning-area/tree/master/javascript/oojs/bouncing-balls)，或者 [在线试用](https://roy-tian.github.io/learning-area/javascript/oojs/bouncing-balls/)。
+> [!NOTE]
+> 如果示例无法顺利执行，可参考我们的 [最终版本](https://github.com/roy-tian/learning-area/tree/master/javascript/oojs/bouncing-balls)，或者 [在线试用](https://roy-tian.github.io/learning-area/javascript/oojs/bouncing-balls/)。
 
 ## 概要
 

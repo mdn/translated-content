@@ -42,7 +42,8 @@ function mouseMoveHandler(e) {
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/vt7y5hcp/","","395")}}
 
-> **メモ:** パドル動作の境界を調節して、Canvasの両端でもパドルの半分ではなく全体が見えるようにしてください。
+> [!NOTE]
+> パドル動作の境界を調節して、Canvasの両端でもパドルの半分ではなく全体が見えるようにしてください。
 
 ## 次のステップ
 

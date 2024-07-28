@@ -7,7 +7,8 @@ slug: Mozilla/Firefox/Releases/83
 
 このページでは、開発者に影響する Firefox 83 の変更点をまとめています。Firefox 83 は、2020 年 11 月 17 日にリリースされました。
 
-> **メモ:** Mozilla hacks の [Firefox 83 is upon us](https://hacks.mozilla.org/2020/11/firefox-83-is-upon-us/) もご覧ください。
+> [!NOTE]
+> Mozilla hacks の [Firefox 83 is upon us](https://hacks.mozilla.org/2020/11/firefox-83-is-upon-us/) もご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 
