@@ -61,7 +61,8 @@ console.log(Rectangulo.name);
 // output: "Rectangulo2"
 ```
 
-> **Nota:** Las **expresiones** de clase están sujetas a las mismas restricciones de elevación que se describen en la sección [Class declarations](#class_declarations).
+> [!NOTE]
+> Las **expresiones** de clase están sujetas a las mismas restricciones de elevación que se describen en la sección [Class declarations](#class_declarations).
 
 ## Cuerpo de la clase y definición de métodos
 
