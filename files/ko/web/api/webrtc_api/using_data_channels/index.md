@@ -7,7 +7,8 @@ slug: Web/API/WebRTC_API/Using_data_channels
 
 {{domxref("RTCPeerConnection")}} 인터페이스를 사용하여 WebRTC Peerconnction을 연결하면 이제 두 Peer간의 커넥션을 통하여 미디어 데이터를 주고 받을수 있게됩니다. 그뿐아니라 WebRTC로 할수 있는 일은 더 있습니다. 이 가이드에서 우리는 peer connection에 데이터 채널을 추가하는 방법과 임의의 데이터, 즉 우리가 원하는 어떠한 포멧의 데이터들을 안전하게 주고 받는 방법을 배우게 될 것 입니다.
 
-> **참고:** 모든 WebRTC 컴포넌트들은 암호화를 사용하게 되어 있기 때문에 `RTCDataChannel`을 이용하는 어떤 데이터 전송도 자동적으로 Datagram Transport Layer Security (**DTLS**)을 사용하여 암호화 됩니다. 자세한 내용은 [Security](#security) 를 참고하십시오.
+> [!NOTE]
+> 모든 WebRTC 컴포넌트들은 암호화를 사용하게 되어 있기 때문에 `RTCDataChannel`을 이용하는 어떤 데이터 전송도 자동적으로 Datagram Transport Layer Security (**DTLS**)을 사용하여 암호화 됩니다. 자세한 내용은 [Security](#security) 를 참고하십시오.
 
 ## 데이터 채널 만들기
 

@@ -84,7 +84,8 @@ function clone(objectToBeCloned) {
 }
 ```
 
-> **참고:** 이 알고리즘은 실제로 [`RegExp`](/en/JavaScript/Reference/Global_Objects/RegExp), [`Array`](/en/JavaScript/Reference/Global_Objects/Array), 와 [`Date`](/en/JavaScript/Reference/Global_Objects/Date)스페셜 객체들을 구현했습니다. 필요에 따라서 다른 특수한 케이스들을 구현할 수 있습니다.
+> [!NOTE]
+> 이 알고리즘은 실제로 [`RegExp`](/en/JavaScript/Reference/Global_Objects/RegExp), [`Array`](/en/JavaScript/Reference/Global_Objects/Array), 와 [`Date`](/en/JavaScript/Reference/Global_Objects/Date)스페셜 객체들을 구현했습니다. 필요에 따라서 다른 특수한 케이스들을 구현할 수 있습니다.
 
 ## See also
 

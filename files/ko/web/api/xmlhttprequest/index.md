@@ -44,7 +44,8 @@ slug: Web/API/XMLHttpRequest
 
   - : HTTP 서버가 반환한 응답 문자열을 담은 `string`을 반환합니다. {{domxref("XMLHttpRequest.status")}}와 달리, `statusText`는 "`OK`"와 같은 응답 상태 메시지의 전문을 반환합니다
 
-    > **참고:** HTTP/1.1의 상태 텍스트와 같이 프로토콜 버전과 응답의 이유를 알릴 방법이 HTTP/2 명세에는 없습니다. ({{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}})
+    > [!NOTE]
+    > HTTP/1.1의 상태 텍스트와 같이 프로토콜 버전과 응답의 이유를 알릴 방법이 HTTP/2 명세에는 없습니다. ({{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}})
 
 - {{domxref("XMLHttpRequest.timeout")}}
   - : 요청을 자동으로 종료하기 전에 대기할 시간을 나타내는 밀리초 단위 값입니다.

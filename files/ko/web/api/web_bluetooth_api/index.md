@@ -9,7 +9,8 @@ l10n:
 
 Web Bluetooth API는 블루투스 저에너지 주변 장비와 연결하고 상호 작용할 수 있는 기능을 제공합니다.
 
-> **참고:** 이 API는 [웹 워커](/ko/docs/Web/API/Web_Workers_API)에서는 사용할 수 없습니다. ({{domxref("WorkerNavigator")}}를 통해 노출되지 않음).
+> [!NOTE]
+> 이 API는 [웹 워커](/ko/docs/Web/API/Web_Workers_API)에서는 사용할 수 없습니다. ({{domxref("WorkerNavigator")}}를 통해 노출되지 않음).
 
 ## 인터페이스
 
