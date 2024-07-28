@@ -51,7 +51,8 @@ fetch(resource, options)
       - : リクエストに追加したいヘッダーで、 {{domxref("Headers")}} オブジェクトまたは {{jsxref("String")}} 値を持つオブジェクトリテラルで指定してください。
         なお、[一部の名前は禁止されています](/ja/docs/Glossary/Forbidden_header_name)。
 
-        > **メモ:** HTTP の [`Authorization`](/ja/docs/Web/HTTP/Headers/Authorization) ヘッダーがリクエストに追加される場合がありますが、そのリクエストがオリジン間でリダイレクトされた場合は削除されます。
+        > [!NOTE]
+        > HTTP の [`Authorization`](/ja/docs/Web/HTTP/Headers/Authorization) ヘッダーがリクエストに追加される場合がありますが、そのリクエストがオリジン間でリダイレクトされた場合は削除されます。
 
     - `body`
       - : リクエストに追加したい本体です。これには {{domxref("Blob")}}, {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, 文字列オブジェクトまたはリテラル、 {{domxref("ReadableStream")}} オブジェクトなどが使用できます。これは最新の利用可能状況で、まだ実験的なものです。[互換性情報](/ja/docs/Web/API/Request#ブラウザーの互換性)を調べて、あなたがこれを使用できるかどうかを確認してください。メソッドが `GET` や `HEAD` の場合は使用できないので注意してください。
@@ -69,7 +70,8 @@ fetch(resource, options)
 
           - : ブラウザーに、同一オリジンおよびオリジン間リクエストの両方に資格情報を記載し、レスポンスで送り返された資格情報を常に使用するように指示します。
 
-            > **メモ:** 資格情報は単純な、そして「最終的な」オリジン間リクエストに記載することができますが、 [CORS プリフライトリクエスト](/ja/docs/Web/HTTP/CORS#preflight_requests_and_credentials)には記載されるべきではありません。
+            > [!NOTE]
+            > 資格情報は単純な、そして「最終的な」オリジン間リクエストに記載することができますが、 [CORS プリフライトリクエスト](/ja/docs/Web/HTTP/CORS#preflight_requests_and_credentials)には記載されるべきではありません。
 
     - `cache`
       - : 文字列で、このリクエストがブラウザーの [HTTP キャッシュ](/ja/docs/Web/HTTP/Caching)にどう作用するかを示します。利用可能な値は `default`, `no-store`, `reload`, `no-cache`, `force-cache`, `only-if-cached` で、 {{domxref("Request")}} オブジェクトの {{domxref("Request/cache", "cache")}} プロパティの記事に記述されています。
