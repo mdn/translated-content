@@ -61,7 +61,8 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **참고:** 이 예제에서 [`Math.round()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/round)를 사용하고 싶을 수 있지만, 이렇게 하면 난수가 고르게 분포하지 않게 되므로 필요에 맞지 않을 수 있습니다.
+> [!NOTE]
+> 이 예제에서 [`Math.round()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/round)를 사용하고 싶을 수 있지만, 이렇게 하면 난수가 고르게 분포하지 않게 되므로 필요에 맞지 않을 수 있습니다.
 
 ### 두 수를 포함하는 두 수 사이의 정수 난수 생성하기
 

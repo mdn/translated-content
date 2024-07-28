@@ -7,7 +7,8 @@ l10n:
 
 {{JSRef}} {{Deprecated_Header}}
 
-> **참고:** 이 기능은 {{jsxref("Object.getOwnPropertyDescriptor()")}} API 사용을 선호하기 때문에 더 이상 사용되지 않습니다. 이 메서드의 동작은 웹 호환성을 위해서만 명시되며 모든 플랫폼에서 구현할 필요는 없습니다. 모든 곳에서 작동하지 않을 수도 있습니다.
+> [!NOTE]
+> 이 기능은 {{jsxref("Object.getOwnPropertyDescriptor()")}} API 사용을 선호하기 때문에 더 이상 사용되지 않습니다. 이 메서드의 동작은 웹 호환성을 위해서만 명시되며 모든 플랫폼에서 구현할 필요는 없습니다. 모든 곳에서 작동하지 않을 수도 있습니다.
 
 {{jsxref("Object")}} 인스턴스의 **`__lookupGetter__()`** 메서드는 지정된 속성에 접근자로 바인딩된 함수를 반환합니다.
 

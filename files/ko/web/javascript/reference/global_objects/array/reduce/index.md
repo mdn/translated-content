@@ -286,7 +286,8 @@ var allbooks = friends.reduce(
 
 ### 배열의 중복 항목 제거
 
-> **참고:** 참고: {{jsxref("Set")}}과 {{jsxref("Array.from()")}}을 사용할 수 있는 환경이라면, `let orderedArray = Array.from(new Set(myArray));`를 사용해 중복 요소를 제거할 수도 있습니다.
+> [!NOTE]
+> 참고: {{jsxref("Set")}}과 {{jsxref("Array.from()")}}을 사용할 수 있는 환경이라면, `let orderedArray = Array.from(new Set(myArray));`를 사용해 중복 요소를 제거할 수도 있습니다.
 
 ```js
 let arr = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];

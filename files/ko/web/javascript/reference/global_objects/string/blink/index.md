@@ -9,7 +9,8 @@ l10n:
 
 {{jsxref("String")}} 값의 **`blink()`** 메서드는 `<blink>`요소(`<blink>str</blink>`)에 해당 문자열을 집어넣은 문자열을 생성하여 해당 문자열을 깜빡이게 만듭니다.
 
-> **참고:** 모든 [HTML 래퍼 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)는 더 이상 사용되지 않으며 호환성 목적으로만 표준화되었습니다.
+> [!NOTE]
+> 모든 [HTML 래퍼 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)는 더 이상 사용되지 않으며 호환성 목적으로만 표준화되었습니다.
 > `blink()`의 경우에선 `<blink>` 요소 자체는 모던 브라우저에서 제거되었으며, 깜빡이는 텍스트는 여러 접근성 표준에서 눈살을 찌푸리게 합니다. 어떤 방식으로든 이 요소를 사용을 피하시기 바랍니다.
 
 ## 구문

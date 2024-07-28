@@ -52,7 +52,8 @@ findIndex(callbackFn, thisArg)
 
 - `callbackFn`에 의해 배열의 아직 방문하지 않은 요소가 변경되었다면, `callbackFn`에 전달된 값은 해당 요소가 방문되는 시점의 값이 됩니다. [삭제된](/ko/docs/Web/JavaScript/Reference/Operators/delete) 요소는 `undefined`인 것처럼 방문됩니다.
 
-> **경고:** 위에서 설명한 종류의 동시 수정은 종종 이해하기 어려운 코드로 이어지며, 일반적으로 피해야 합니다(특별한 경우를 제외하고).
+> [!WARNING]
+> 위에서 설명한 종류의 동시 수정은 종종 이해하기 어려운 코드로 이어지며, 일반적으로 피해야 합니다(특별한 경우를 제외하고).
 
 `findIndex()` 메서드는 [일반적](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)입니다. `length` 속성과 정수 키 속성을 가진 `this` 값을 기대합니다.
 

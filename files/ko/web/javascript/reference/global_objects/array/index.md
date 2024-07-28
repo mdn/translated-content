@@ -379,7 +379,8 @@ f("a", "b"); // 'a+b'
 
 이 구획은 JavaScript에서 흔히 사용되는 배열 연산에 대한 몇 가지 예제를 제공합니다.
 
-> **참고:** 배열의 기초가 아직 익숙하지 않다면, 먼저 [JavaScript 첫걸음: 배열](/ko/docs/Learn/JavaScript/First_steps/Arrays)을 읽어보세요. 이곳은 [배열이 무엇인지](/ko/docs/Learn/JavaScript/First_steps/Arrays#배열이란) 설명하고 일반적인 배열 연산에 대한 다른 예제를 포함하고 있습니다.
+> [!NOTE]
+> 배열의 기초가 아직 익숙하지 않다면, 먼저 [JavaScript 첫걸음: 배열](/ko/docs/Learn/JavaScript/First_steps/Arrays)을 읽어보세요. 이곳은 [배열이 무엇인지](/ko/docs/Learn/JavaScript/First_steps/Arrays#배열이란) 설명하고 일반적인 배열 연산에 대한 다른 예제를 포함하고 있습니다.
 
 ### 배열 만들기
 
