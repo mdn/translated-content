@@ -53,7 +53,8 @@ El lector de pantalla TalkBack está integrado en el sistema operativo Android.
 
 Para activarlo, seleccione Configuración> Accesibilidad> TalkBack, y luego presione el interruptor deslizante para activarlo. Siga las indicaciones adicionales en pantalla que le presenten.
 
-> **Nota:** las versiones anteriores de TalkBack están activadas de formas [formas ligeramente distintas.](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback)
+> [!NOTE]
+> Las versiones anteriores de TalkBack están activadas de formas [formas ligeramente distintas.](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback)
 
 Cuando TalkBack esté activado, los controles básicos de su dispositivo Android serán un poco diferentes. Por ejemplo:
 
@@ -113,7 +114,8 @@ Por ejemplo, con TalkBack activado:
 7. Pulse dos veces para seleccionarlo. Ahora podrá desplazarse hacia la izquierda y hacia la derecha para moverse entre encabezados y puntos de referencia de ARIA.
 8. Para volver al modo predeterminado, ingrese nuevamente al menú de contexto local deslizando hacia arriba y a la derecha, seleccione "Predeterminado", y luego toque dos veces para activar.
 
-> **Nota:** consulte [Empezar en Android con TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en&ref_topic=3529932) para obtener una documentación más completa.
+> [!NOTE]
+> Consulte [Empezar en Android con TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en&ref_topic=3529932) para obtener una documentación más completa.
 
 ### iOS VoiceOver
 
@@ -172,7 +174,8 @@ Vamos a hacer una prueba a navegar con VoiceOver:
 
 7. Seleccionar encabezados. Ahora podrá desplazarse hacia arriba y hacia abajo para moverse entre los encabezados de la página.
 
-> **Nota:** Para obtener una referencia más completa que cubra los gestos de VoiceOver disponibles y otros consejos sobre las pruebas de accesibilidad en iOS, consulte [Probar la accesibilidad en su dispositivo con VoiceOver](https://developer.apple.com/library/content/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html#//apple_ref/doc/uid/TP40012619-CH3).
+> [!NOTE]
+> Para obtener una referencia más completa que cubra los gestos de VoiceOver disponibles y otros consejos sobre las pruebas de accesibilidad en iOS, consulte [Probar la accesibilidad en su dispositivo con VoiceOver](https://developer.apple.com/library/content/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html#//apple_ref/doc/uid/TP40012619-CH3).
 
 ## Mecanismos de control
 
@@ -209,7 +212,8 @@ panel.ontouchend = stopMove;
 
 Hemos proporcionado un ejemplo sencillo que muestra cómo usar el mouse y los eventos táctiles juntos [multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/multi-control-box-drag.html) ([ver ejemplo en vivo](https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html)).
 
-> **Nota:** También puede ver ejemplos totalmente funcionales que muestran cómo implementar diferentes mecanismos de control en [Implementando mecanismos de control de juego.](/es/docs/Games/Techniques/Control_mechanisms)
+> [!NOTE]
+> También puede ver ejemplos totalmente funcionales que muestran cómo implementar diferentes mecanismos de control en [Implementando mecanismos de control de juego.](/es/docs/Games/Techniques/Control_mechanisms)
 
 ## Diseño de respuesta
 
@@ -221,7 +225,8 @@ En particular, los problemas más comunes que deben abordarse para dispositivos 
 - Conservando tamaños de imagen descargados. En general, los dispositivos de pantalla pequeña no necesitarán imágenes tan grandes como sus contrapartes de escritorio, y es más probable que estén en conexiones de red lentas. Por lo tanto, es aconsejable servir imágenes más pequeñas para dispositivos de pantalla estrecha, según corresponda. Puede manejar esto [técnicas de imagenes de respuesta](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 - Pensando en altas resoluciones. Muchos dispositivos móviles tienen pantallas de alta resolución y, por lo tanto, necesitan imágenes de mayor resolución para que la pantalla pueda seguir luciendo nítida y nítida. Nuevamente, puede servir imágenes según corresponda utilizando técnicas de imágenes sensibles. Además, muchos requisitos de imagen se pueden cumplir con el formato de imágenes vectoriales SVG, que es compatible con todos los navegadores actuales. SVG tiene un tamaño de archivo pequeño y se mantendrá nítido independientemente del tamaño que se muestre (consulte [Agregar gráficos vectoriales a la web](/es/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) para obtener más detalles).
 
-> **Nota:** No proporcionaremos una discusión completa de las técnicas de diseño receptivo aquí, ya que están cubiertas en otros lugares alrededor de MDN (vea los enlaces anteriores).
+> [!NOTE]
+> No proporcionaremos una discusión completa de las técnicas de diseño receptivo aquí, ya que están cubiertas en otros lugares alrededor de MDN (vea los enlaces anteriores).
 
 ### Consideraciones específicas para móviles
 
