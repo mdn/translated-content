@@ -11,7 +11,8 @@ La interfaz **`IDBDatabase`** de la API de IndexedDB (Base de datos indexada) pr
 
 {{AvailableInWorkers}}
 
-> **Nota:** Todo lo que haces en IndexedDB siempre sucede en el contexto de una [transacción](/es/docs/Web/API/IndexedDB_API/Basic_Terminology#transaction), que representa interacciones con datos en la base de datos. Todos los objetos en IndexedDB, incluidos los almacenes de objetos, los índices y los cursores, están vinculados a una transacción en particular. Por lo tanto, no puede ejecutar comandos, acceder a datos o abrir nada fuera de una transacción.
+> [!NOTE]
+> Todo lo que haces en IndexedDB siempre sucede en el contexto de una [transacción](/es/docs/Web/API/IndexedDB_API/Basic_Terminology#transaction), que representa interacciones con datos en la base de datos. Todos los objetos en IndexedDB, incluidos los almacenes de objetos, los índices y los cursores, están vinculados a una transacción en particular. Por lo tanto, no puede ejecutar comandos, acceder a datos o abrir nada fuera de una transacción.
 
 {{InheritanceDiagram}}
 

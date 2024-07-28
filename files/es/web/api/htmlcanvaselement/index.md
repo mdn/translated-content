@@ -34,7 +34,8 @@ _Herada métodos de la interfaz padre,_ _{{domxref("HTMLElement")}}._
 
   - : Retorna un objeto {{domxref("File")}} representando una imagen contenida en el canvas; este archivo es del tipo memory-based, con su nombre especificado. Si el tipo no se especifica, el tipo usado por defecto es `image/png`.
 
-    > **Nota:** Sólo puede ser invocado desde Chrome.
+    > [!NOTE]
+    > Sólo puede ser invocado desde Chrome.
 
 ## Especificaciones
 
