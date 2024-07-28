@@ -9,7 +9,7 @@ l10n:
 
 HTTP {{HTTPHeader("Permissions-Policy")}} 标头的 `battery` 指令控制当前文档是否被允许通过 {{DOMxRef("BatteryManager")}} 接口收集设备的电池信息，该接口通过 {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} 获得。
 
-具体来说，如果定义的策略阻止使用此特性，{{domxref("Navigator.getBattery", "getBattery()")}} 调用将返回一个 {{jsxref("Promise")}}，该 Promise 会因 `NotAllowedError` 类型的 {{domxref("DOMException")}} 被拒绝。
+具体来说，如果定义的策略阻止使用此特性，{{domxref("Navigator.getBattery", "getBattery()")}} 调用返回的 {{jsxref("Promise")}} 会以 `NotAllowedError` 类型的 {{domxref("DOMException")}} 被拒绝。
 
 ## 语法
 
