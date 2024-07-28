@@ -226,7 +226,8 @@ const mergedObj = { ...obj1, ...obj2 };
 // { foo: "baz", x: 42, y: 13 }
 ```
 
-> **警告：** 请注意，{{jsxref("Object.assign()")}} 会触发 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)，而展开语法不会！
+> [!WARNING]
+> 请注意，{{jsxref("Object.assign()")}} 会触发 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)，而展开语法不会！
 
 ### 原型 setter
 
