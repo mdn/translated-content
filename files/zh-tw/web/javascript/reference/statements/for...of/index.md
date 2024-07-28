@@ -49,7 +49,8 @@ for (let value of iterable) {
 // 31
 ```
 
-> **備註：** 每次迭代都會創建一個新的變數。在迴圈主體內重新賦值不會影響可迭代物件（在本例中是一個陣列）中的原始值。
+> [!NOTE]
+> 每次迭代都會創建一個新的變數。在迴圈主體內重新賦值不會影響可迭代物件（在本例中是一個陣列）中的原始值。
 
 你可以使用[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)指派多個局部變數，或者使用屬性訪問子（如 `for (x.y of iterable)`）賦值給物件屬性。
 
