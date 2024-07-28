@@ -86,7 +86,8 @@ Para fazer isso:
 
 5. Por padrão, isso executará o conteúdo do diretório em um servidor web local, na porta 8000. Você pode ir para esse servidor acessando a URL `localhost:8000` no seu navegador web. Aqui você verá o conteúdo do diretório listado — clique no arquivo HTML que você deseja executar.
 
-> **Nota:** Se você já tiver algo em execução na porta 8000, você poderá escolher outra porta executando o comando do servidor seguido por um número de porta alternativo, por exemplo `python3 -m http.server 7800` (Python 3.x) ou `python -m SimpleHTTPServer 7800` (Python 2.x). Você pode acessar seu conteúdo em `localhost:7800`.
+> [!NOTE]
+> Se você já tiver algo em execução na porta 8000, você poderá escolher outra porta executando o comando do servidor seguido por um número de porta alternativo, por exemplo `python3 -m http.server 7800` (Python 3.x) ou `python -m SimpleHTTPServer 7800` (Python 2.x). Você pode acessar seu conteúdo em `localhost:7800`.
 
 ## Executando linguagens do lado do servidor localmente
 
