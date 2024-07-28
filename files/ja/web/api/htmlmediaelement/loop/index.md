@@ -31,4 +31,4 @@ obj.loop = true; // true
 
 ## 関連情報
 
-- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.loop` プロパティを定義していたインターフェイス
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.loop` プロパティを定義しているインターフェイス
