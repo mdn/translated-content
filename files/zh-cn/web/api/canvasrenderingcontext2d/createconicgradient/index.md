@@ -2,16 +2,17 @@
 title: CanvasRenderingContext2D：createConicGradient() 方法
 slug: Web/API/CanvasRenderingContext2D/createConicGradient
 l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+  sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
 ---
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.createConicGradient()`** 方法用于创建一个围绕指定坐标点的锥形渐变。
+Canvas 2D API 的 **`CanvasRenderingContext2D.createConicGradient()`** 方法围绕指定坐标点创建渐变。
 
 此方法返回一个锥形 {{domxref("CanvasGradient")}}。要将渐变应用于形状，必须首先将其赋值给 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 或 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} 属性。
 
-> **备注：** 渐变坐标是全局的，即相对于当前坐标空间。应用于形状时，坐标不是相对于形状的坐标。
+> [!NOTE]
+> 渐变坐标是全局的，即相对于当前坐标空间。应用于形状时，坐标不是相对于形状的坐标。
 
 ## 语法
 
@@ -37,7 +38,7 @@ createConicGradient(startAngle, x, y)
 
 ### 使用锥形渐变填充矩形
 
-这个例子使用 `createConicGradient()` 方法初始化一个锥形渐变。在中心坐标周围创建了五个颜色停止点。最后，将渐变赋值给画布上下文，并用其填充了一个矩形。
+这个例子使用 `createConicGradient()` 方法初始化一个锥形渐变。在中心坐标周围创建五个色标。最后，将渐变赋值给画布上下文，并将其渲染到一个填充矩形中。
 
 #### HTML
 
@@ -56,7 +57,7 @@ const ctx = canvas.getContext("2d");
 // 中心位置为 100, 100
 const gradient = ctx.createConicGradient(0, 100, 100);
 
-// 添加五个颜色停止点
+// 添加五个色标
 gradient.addColorStop(0, "red");
 gradient.addColorStop(0.25, "orange");
 gradient.addColorStop(0.5, "yellow");
