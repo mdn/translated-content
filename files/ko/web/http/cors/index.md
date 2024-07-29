@@ -5,15 +5,15 @@ slug: Web/HTTP/CORS
 
 {{HTTPSidebar}}
 
-**교차 출처 리소스 공유**(Cross-Origin Resource Sharing, {{Glossary("CORS")}})는 브라우저가 자신의 출처가 아닌 다른 어떤 {{glossary("origin", "출처")}}(도메인, 스킴 혹은 포트)로부터 자원을 로딩하는 것을 허용할 수 있도록 서버가 허가하는 {{Glossary("HTTP")}} 헤더 기반 메커니즘입니다. CORS는 또한 브라우저가 교차 출처 리소스를 호스팅하는 서버로 실제 요청을 허가할 것인지 확인하기 위해 보내는 "프리플라이트" 요청 메커니즘에 의존합니다. 이 프리플라이트 요청에서 브라우저는 실제 요청에서 사용할 HTTP 메서드와 헤더들에 대한 정보가 표시된 헤더에 담아 보냅니다.
+**교차 출처 리소스 공유**(Cross-Origin Resource Sharing, {{Glossary("CORS")}})는 브라우저가 자신의 출처가 아닌 다른 어떤 {{glossary("origin", "출처")}}(도메인, 스킴 혹은 포트)로부터 자원을 로딩하는 것을 허용하도록 서버가 허가 해주는 {{Glossary("HTTP")}} 헤더 기반 메커니즘입니다. 또한 CORS 는 교차 출처 리소스를 호스팅하는 서버가 실제 요청을 허가할 것인지 확인하기 위해 브라우저가 보내는 "프리플라이트" 요청 메커니즘에 의존합니다. 이 프리플라이트 요청에서 브라우저는 실제 요청에서 사용할 HTTP 메서드와 헤더들에 대한 정보가 표시된 헤더에 담아 보냅니다.
 
-교차 출처 요청의 예시: https://domain-a.com에서 제공되는 프론트엔드 JavaScript 코드가 {{domxref("Window/fetch", "fetch()")}}를 사용하여 https://domain-b.com/data.json에 요청하는 경우.
+교차 출처 요청의 예시: `https://domain-a.com` 에서 제공되는 프론트엔드 JavaScript 코드가 {{domxref("Window/fetch", "fetch()")}}를 사용하여 `https://domain-b.com/data.json` 에 요청하는 경우.
 
-보안 상의 이유로, 브라우저는 스크립트에서 시작한 교차 출처 HTTP 요청을 제한합니다. 예를 들어, `fetch()`와 {{domxref("XMLHttpRequest")}}는 [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)을 따릅니다. 이는 이러한 API를 사용하는 웹 애플리케이션이 애플리케이션이 로드된 동일한 출처에서만 리소스를 요청할 수 있으며, 다른 출처의 응답에 올바른 CORS 헤더가 포함되어 있지 않는 한 그렇지 못하다는 것을 의미합니다.
+보안 상의 이유로 브라우저는 스크립트에서 시작한 교차 출처 HTTP 요청을 제한합니다. 예를 들어, `fetch()` 와 {{domxref("XMLHttpRequest")}} 는 [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)을 따릅니다. 이는 이러한 API를 사용하는 웹 애플리케이션이 애플리케이션이 로드된 동일한 출처에서만 리소스를 요청할 수 있으며, 다른 출처의 응답에 올바른 CORS 헤더가 포함되어 있지 않는 한 그렇지 못하다는 것을 의미합니다.
 
 ![Diagrammatic representation of CORS mechanism](cors_principle.png)
 
-CORS 메커니즘은 브라우저와 서버 간의 안전한 교차 출처 요청 및 데이터 전송을 지원합니다. 브라우저는 교차 출처 HTTP 요청의 위험을 완화하기 위해 `fetch()`나 `XMLHttpRequest` 같은 API에서 CORS를 사용합니다.
+CORS 메커니즘은 브라우저와 서버 간의 안전한 교차 출처 요청 및 데이터 전송을 지원합니다. 브라우저는 교차 출처 HTTP 요청의 위험을 완화하기 위해 `fetch()` 나 `XMLHttpRequest` 같은 API에서 CORS를 사용합니다.
 
 ## 어떤 요청이 CORS를 사용합니까?
 
@@ -29,7 +29,7 @@ CORS 메커니즘은 브라우저와 서버 간의 안전한 교차 출처 요�
 
 ## 기능적 개요
 
-교차 출처 리소스 공유 표준은 웹 브라우저에서 해당 정보를 읽는 것이 허용된 출처를 서버에서 설명할 수 있는 새로운 [HTTP 헤더](/ko/docs/Web/HTTP/Headers)를 추가함으로써 동작합니다. 추가적으로, 서버 데이터에 부수 효과(side effect)를 일으킬 수 있는 HTTP 요청 방법(특히 {{HTTPMethod("GET")}} 이외의 HTTP 메서드 또는 특정 [MIME 타입](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types)을 사용하는 {{HTTPMethod("POST")}})에 대해서, CORS 명세는 브라우저가 HTTP {{HTTPMethod("OPTIONS")}} 메서드로 서버에서 지원하는 메서드들을 요구하는 요청을 "프리플라이트(사전 전달)"한 다음, 서버로부터 "승인"을 받은 후 실제 요청을 보내도록 지시합니다. 또한 서버는 요청과 함께 "자격 증명"(예를 들어 [쿠키](/ko/docs/Web/HTTP/Cookies) 및 [HTTP 인증](/ko/docs/Web/HTTP/Authentication))을 전송해야 하는지 여부를 클라이언트에게 알릴 수 있습니다.
+교차 출처 리소스 공유 표준은 서버가 웹 브라우저에서 해당 정보를 읽는 것이 허용된 출처를 설명할 수 있도록 새로운 [HTTP 헤더](/ko/docs/Web/HTTP/Headers)를 추가함으로써 동작합니다. 추가적으로, 서버 데이터에 부수 효과(side effect)를 일으킬 수 있는 HTTP 요청 방법(특히 {{HTTPMethod("GET")}} 이외의 HTTP 메서드 또는 특정 [MIME 타입](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types)을 사용하는 {{HTTPMethod("POST")}})에 대해서, CORS 명세는 브라우저가 HTTP {{HTTPMethod("OPTIONS")}} 메서드로 서버에서 지원하는 메서드들을 요구하는 요청을 "프리플라이트(사전 전달)"한 다음, 서버로부터 "승인"을 받은 후 실제 요청을 보내도록 지시합니다. 또한 서버는 요청과 함께 "자격 증명"(예를 들어 [쿠키](/ko/docs/Web/HTTP/Cookies) 및 [HTTP 인증](/ko/docs/Web/HTTP/Authentication))을 전송해야 하는지 여부를 클라이언트에게 알릴 수 있습니다.
 
 CORS 실패는 오류를 발생시키지만, 보안상의 이유로 오류에 대한 세부 사항은 JavaScript에 제공되지 않습니다. 코드가 알 수 있는 것은 오류가 발생했다는 것뿐입니다. 무엇이 구체적으로 잘못되었는지를 확인하려면 브라우저의 콘솔에서 세부 사항을 살펴봐야 합니다.
 
@@ -43,7 +43,7 @@ CORS 실패는 오류를 발생시키지만, 보안상의 이유로 오류에 �
 
 일부 요청은 CORS 사전 요청을 트리거하지 않습니다. 이러한 요청은 구식 [CORS 사양](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology)에서는 "단순 요청"이라고 불렸으나, 현재 CORS 정의하는 [Fetch 사양](https://fetch.spec.whatwg.org/)에서는 이 용어를 사용하지 않습니다.
 
-이러한 동기는 HTML 4.0의 {{HTMLElement("form")}} 요소(교차 사이트 {{domxref("Window/fetch", "fetch()")}} 와 {{domxref("XMLHttpRequest")}}) 보다 이전에 존재한 요소)가 어떤 출처로든 단순 요청을 제출할 수 있다는 것입니다. 따라서 서버 쓰기를 수행하는 모든 사람은 이미 {{Glossary("CSRF", "사이트 간 요청 위조(Cross Site Request Forgery, CSRF)")}}로부터 보호하고 있어야 합니다. 이러한 가정 하에서, CSRF의 위협은 폼 제출의 위협과 다르지 않기 때문에 서버는 폼 제출처럼 보이는 요청을 받기 위해 사전 요청에 응답하는 옵트-인(opt-in)을 할 필요가 없습니다. 그러나 서버는 여전히 {{HTTPHeader("Access-Control-Allow-Origin")}} 을 사용하여 스크립트와 응답을 공유하도록 옵트-인 해야 합니다.
+이러한 동기는 HTML 4.0의 {{HTMLElement("form")}} 요소(교차 사이트 {{domxref("Window/fetch", "fetch()")}} 와 {{domxref("XMLHttpRequest")}} 보다 이전에 존재한 요소)가 어떤 출처로든 단순 요청을 제출할 수 있다는 것입니다. 따라서 서버 쓰기를 수행하는 모든 사람은 이미 {{Glossary("CSRF", "사이트 간 요청 위조(Cross Site Request Forgery, CSRF)")}}로부터 보호하고 있어야 합니다. 이러한 가정 하에서, CSRF 의 위협은 폼 제출의 위협과 다르지 않기 때문에 서버는 폼 제출처럼 보이는 요청을 받기 위해 사전 요청에 응답하는 옵트-인(opt-in)을 할 필요가 없습니다. 그러나 서버는 여전히 {{HTTPHeader("Access-Control-Allow-Origin")}} 을 사용하여 스크립트와 응답을 공유하도록 옵트-인 해야 합니다.
 
 단순 요청은 다음 조건을 모두 충족하는 요청입니다.
 
@@ -70,8 +70,7 @@ CORS 실패는 오류를 발생시키지만, 보안상의 이유로 오류에 �
 - 요청이 {{domxref("XMLHttpRequest")}} 객체를 사용하여 이루어진 경우, 요청에 사용된 {{domxref("XMLHttpRequest.upload")}} 속성에 의해 반환된 객체에 이벤트 리스너가 등록되지 않습니다. 즉, {{domxref("XMLHttpRequest")}} 인스턴스 `xhr`이 있다면 업로드를 모니터링하기 위한 이벤트 리스너를 추가하는 `xhr.upload.addEventListener()`를 호출하는 코드가 존재하지 않는다는 것입니다.
 - 요청에 {{domxref("ReadableStream")}} 객체가 사용되지 않습니다.
 
-> **참고:**
-> WebKit Nightly 와 Safari Technology Preview 는 Accept, Accept-Language, Content-Language 헤더에 허용되는 값에 추가적인 제약을 가합니다. 이러한 헤더 중 하나라도 "비표준" 값을 갖는 경우, WebKit/Safari 는 해당 요청을 "단순 요청"으로 간주하지 않습니다. WebKit/Safari에서 어떤 값을 "비표준"으로 간주하는지는 다음의 WebKit 버그 외에는 문서화되어 있지 않습니다:
+> **참고:** WebKit Nightly 와 Safari Technology Preview 는 Accept, Accept-Language, Content-Language 헤더에 허용되는 값에 추가적인 제약을 가합니다. 이러한 헤더 중 하나라도 "비표준" 값을 갖는 경우, WebKit/Safari 는 해당 요청을 "단순 요청"으로 간주하지 않습니다. WebKit/Safari 에서 어떤 값을 "비표준"으로 간주하는지는 다음의 WebKit 버그 외에는 문서화되어 있지 않습니다:
 >
 > - [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178)
 > - [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)
@@ -108,7 +107,7 @@ Connection: keep-alive
 Origin: https://foo.example
 ```
 
-주목할 요청 헤더는 {{HTTPHeader("Origin")}}으로, 요청이 https://foo.example에서 왔음을 나타냅니다.
+주목할 요청 헤더는 {{HTTPHeader("Origin")}}으로, 요청이 `https://foo.example` 에서 왔음을 나타냅니다.
 
 이제 서버가 어떻게 응답하는지 살펴보겠습니다.
 
@@ -141,7 +140,7 @@ Access-Control-Allow-Origin: https://foo.example
 
 ### 프리플라이트 요청(Preflighted requests)
 
-[단순 요청](#simple_requests)과 달리 "사전 요청(preflighted)" 요청의 경우 실제 요청을 보내는 것이 안전한지 판단하기 위해 브라우저가 먼저 {{HTTPMethod("OPTIONS")}} 메서드를 사용해 다른 출처의 리소스에 HTTP 요청을 보냅니다. 이러한 교차 출처 요청은 사용자 데이터에 영향을 미칠 수 있기 때문에 사전에 전송됩니다.
+[단순 요청](#simple_requests)과 달리 "사전 전송(preflighted)" 요청의 경우 실제 요청을 보내는 것이 안전한지 판단하기 위해 브라우저가 먼저 {{HTTPMethod("OPTIONS")}} 메서드를 사용해 다른 출처의 리소스에 HTTP 요청을 보냅니다. 이러한 교차 출처 요청은 사용자 데이터에 영향을 미칠 수 있기 때문에 사전에 전송됩니다.
 
 다음은 사전 요청이 필요한 요청의 예시입니다.
 
