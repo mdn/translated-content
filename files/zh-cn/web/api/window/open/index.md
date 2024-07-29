@@ -38,7 +38,8 @@ open(url, target, windowFeatures)
 
         如果未启用 `popup`，也没有声明窗口特性，则新的浏览上下文将是一个标签页。
 
-        > **备注：** 在 `windowFeatures` 参数中指定除 `noopener` 或 `noreferrer` 以外的任何特性，也会产生请求弹出窗口的效果。
+        > [!NOTE]
+        > 在 `windowFeatures` 参数中指定除 `noopener` 或 `noreferrer` 以外的任何特性，也会产生请求弹出窗口的效果。
 
         要启用该特性，可以不指定 `popup` 值，或将其设置为 `yes`、`1` 或 `true`。
 
@@ -93,7 +94,8 @@ window.open("https://www.mozilla.org/", "mozillaTab");
 
 另外，下面的示例演示了如何使用 `popup` 特性打开弹出窗口。
 
-> **警告：** 现代浏览器已内置弹出窗口阻止程序，将弹出窗口的打开限制在直接响应用户输入的情况下。在点击之外打开的弹出窗口可能会显示通知，让用户选择启用或放弃。
+> [!WARNING]
+> 现代浏览器已内置弹出窗口阻止程序，将弹出窗口的打开限制在直接响应用户输入的情况下。在点击之外打开的弹出窗口可能会显示通知，让用户选择启用或放弃。
 
 ```js
 window.open("https://www.mozilla.org/", "mozillaWindow", "popup");
@@ -156,7 +158,8 @@ link.addEventListener(
 
 上述代码解决了一些与链接打开弹出窗口有关的可用性问题。代码中的 `event.preventDefault()` 的目的是取消链接的默认操作：如果执行了 `click` 的事件监听器，则无需执行链接的默认操作。但如果用户的浏览器禁用或不支持 JavaScript，则会忽略 `click` 的事件监听器，浏览器会在名称为 `"WikipediaWindowName"` 的目标框架或窗口中加载引用的资源。如果没有名称为 `"WikipediaWindowName"` 的框架或窗口，浏览器将创建一个新窗口并将其命名为 `"WikipediaWindowName"`。
 
-> **备注：** 有关 `target` 属性的更多细节，请参阅 [`<a>`](/zh-CN/docs/Web/HTML/Element/a#target) 或 [`<form>`](/zh-CN/docs/Web/HTML/Element/form#target)。
+> [!NOTE]
+> 有关 `target` 属性的更多细节，请参阅 [`<a>`](/zh-CN/docs/Web/HTML/Element/a#target) 或 [`<form>`](/zh-CN/docs/Web/HTML/Element/form#target)。
 
 ### 复用已有窗口，避免 `target="_blank"`
 
