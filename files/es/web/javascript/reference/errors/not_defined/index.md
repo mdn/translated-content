@@ -17,7 +17,8 @@ ReferenceError: "x" no está definida.
 
 Hay una variable no existente que está siendo referida en algún lugar. Esta variable necesita ser declarada o se debe comprobar su disponibilidad en el {{Glossary("ámbito")}} actual del script.
 
-> **Nota:** Cuando una librería es cargada (como por ejemplo jQuery) asegúrese de que se haya cargado antes de intentar acceder a sus variables, como por ejemplo "$". Ponga la etiqueta {{HTMLElement("script")}}, que carga la librería antes del código que la utiliza.
+> [!NOTE]
+> Cuando una librería es cargada (como por ejemplo jQuery) asegúrese de que se haya cargado antes de intentar acceder a sus variables, como por ejemplo "$". Ponga la etiqueta {{HTMLElement("script")}}, que carga la librería antes del código que la utiliza.
 
 ## Ejemplo
 

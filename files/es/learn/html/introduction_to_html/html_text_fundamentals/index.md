@@ -991,7 +991,8 @@ Esta es la regla de oro: el uso de `<b>`, `<i>` o `<u>` resulta adecuado cuando 
 - {{HTMLElement('b')}} se usa para transmitir el significado que tradicionalmente transmite la negrita: palabras clave, nombres de productos, frases principales...
 - {{HTMLElement('u')}} se usa para transmitir el significado que tradicionalmente conlleva el subrayado: nombres propios, errores ortográficos...
 
-> **Nota:** Una observación prudente acerca del subrayado: **La gente suele asociar estrechamente el subrayado con los hipervínculos.** Por ello en la web es mejor reservar el subrayado para los enlaces. Utiliza el elemento {{HTMLElement('u')}} cuando resulte apropiado semánticamente, pero considera usar CSS para cambiar el subrayado predeterminado por algo más adecuado en la web. El siguiente ejemplo ilustra cómo lo puedes hacer.
+> [!NOTE]
+> Una observación prudente acerca del subrayado: **La gente suele asociar estrechamente el subrayado con los hipervínculos.** Por ello en la web es mejor reservar el subrayado para los enlaces. Utiliza el elemento {{HTMLElement('u')}} cuando resulte apropiado semánticamente, pero considera usar CSS para cambiar el subrayado predeterminado por algo más adecuado en la web. El siguiente ejemplo ilustra cómo lo puedes hacer.
 
 ```html
 <!-- nombres científicos -->

@@ -1347,6 +1347,7 @@
 /ja/docs/Glossary/Reference	/ja/docs/Glossary/Object_reference
 /ja/docs/Glossary/Rendering_engine	/ja/docs/Glossary/Engine/Rendering
 /ja/docs/Glossary/Round_Trip_Time_(RTT)	/ja/docs/Glossary/Round_Trip_Time
+/ja/docs/Glossary/Routers	/ja/docs/Glossary/Router
 /ja/docs/Glossary/SSL_Glossary	/ja/docs/Glossary/SSL
 /ja/docs/Glossary/Scrollport	/ja/docs/Glossary/Scroll_container
 /ja/docs/Glossary/Second-level_Domain	/ja/docs/Glossary/SLD
@@ -1363,7 +1364,7 @@
 /ja/docs/Glossary/ドメイン	/ja/docs/Glossary/Domain
 /ja/docs/Glossary/ネームスペース	/ja/docs/Glossary/Namespace
 /ja/docs/Glossary/ファイアウォール	/ja/docs/Glossary/Firewall
-/ja/docs/Glossary/ルーター	/ja/docs/Glossary/Routers
+/ja/docs/Glossary/ルーター	/ja/docs/Glossary/Router
 /ja/docs/HTML	/ja/docs/Web/HTML
 /ja/docs/HTML/Attributes	/ja/docs/Web/HTML/Attributes
 /ja/docs/HTML/Block-level_elements	/ja/docs/Glossary/Block-level_content

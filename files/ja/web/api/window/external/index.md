@@ -6,7 +6,8 @@ original_slug: Web/API/Window/sidebar
 
 {{APIRef}} {{Deprecated_Header}}
 
-> **警告:** この [`window.external`](/ja/docs/Web/API/Window/external) プロパティの Firefox だけの標準外のエイリアスは[削除](#ブラウザーの互換性)されました。
+> [!WARNING]
+> この [`window.external`](/ja/docs/Web/API/Window/external) プロパティの Firefox だけの標準外のエイリアスは[削除](#ブラウザーの互換性)されました。
 
 ブラウザーにアドオンを登録するためのいくつかのメソッドを含むサイドバーオブジェクトを返します。
 

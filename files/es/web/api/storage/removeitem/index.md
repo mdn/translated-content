@@ -48,7 +48,8 @@ function populateSessionStorage() {
 }
 ```
 
-> **Nota:** Para ver esto en un ejemplo real, vea nuestra [Demo de Web Storage](https://github.com/mdn/web-storage-demo).
+> [!NOTE]
+> Para ver esto en un ejemplo real, vea nuestra [Demo de Web Storage](https://github.com/mdn/web-storage-demo).
 
 ## Especificaciones
 

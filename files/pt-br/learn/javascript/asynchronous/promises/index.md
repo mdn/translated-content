@@ -29,7 +29,8 @@ Com uma API baseada em promises, a função assíncrona inicia a operação e re
 
 ## Usando a API fetch()
 
-> **Nota:** Neste artigo, vamos explorar promises copiando exemplos de código desta página dentro do console Javascript do seu navegador. Para configurar isso:
+> [!NOTE]
+> Neste artigo, vamos explorar promises copiando exemplos de código desta página dentro do console Javascript do seu navegador. Para configurar isso:
 >
 > 1. abra o navegador e visite <https://example.org>
 > 2. nesta aba, abra o console Javascript nas [ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools)
