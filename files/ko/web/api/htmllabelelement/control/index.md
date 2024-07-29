@@ -18,7 +18,8 @@ l10n:
 {{domxref("HTMLElement")}} 파생 객체는 {{HTMLElement("label")}} 이 연관되어 있는 컨트롤을 나타내거나,
 라벨이 단독 사용된 경우에는 `null` 입니다.
 
-> **참고:** 만일 속성이 값을 가지고, {{domxref("HTMLLabelElement.htmlFor")}} 도 값이 있다면,
+> [!NOTE]
+> 만일 속성이 값을 가지고, {{domxref("HTMLLabelElement.htmlFor")}} 도 값이 있다면,
 > {{domxref("HTMLLabelElement.htmlFor")}} 은 반드시 동일한 컨트롤을 참조해야 합니다.
 
 ## 명세서
