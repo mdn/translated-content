@@ -40,7 +40,8 @@ fetch("simple.wasm")
   .then((mod) => worker.postMessage(mod));
 ```
 
-> **Примечание:** Вероятно, вы захотите использовать {{jsxref("WebAssembly.compileStreaming()")}} в большинстве случаев, поскольку он более эффективен, чем `compile()`.
+> [!NOTE]
+> Вероятно, вы захотите использовать [`WebAssembly.compileStreaming()`](/ru/docs/WebAssembly/JavaScript_interface/compileStreaming_static) в большинстве случаев, поскольку он более эффективен, чем `compile()`.
 
 ## Характеристики
 

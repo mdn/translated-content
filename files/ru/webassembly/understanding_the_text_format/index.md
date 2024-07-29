@@ -7,7 +7,8 @@ slug: WebAssembly/Understanding_the_text_format
 
 Чтобы люди могли читать и редактировать код WebAssembly, существует текстовое представление двоичного формата wasm. Это промежуточная форма, предназначенная для отображения в текстовых редакторах, средствах разработки браузеров и т. д. В этой статье объясняется, как работает этот текстовый формат с точки зрения синтаксиса, как он связан с байт-кодом, который он представляет и оболочками объектов wasm в JavaScript.
 
-> **Примечание:** Ознакомление с данной статьёй может оказаться излишним, если вы веб-разработчик, который просто хочет загрузить модуль wasm на страницу и использовать его в своём коде (см. [Использование WebAssembly JavaScript API](/ru/docs/WebAssembly/Using_the_JavaScript_API)). Эта статья будет наиболее полезной, если вы хотите написать несколько модулей wasm для оптимизации производительности вашей библиотеки JavaScript или создать свой собственный компилятор WebAssembly.
+> [!NOTE]
+> Ознакомление с данной статьёй может оказаться излишним, если вы веб-разработчик, который просто хочет загрузить модуль wasm на страницу и использовать его в своём коде (см. [Использование WebAssembly JavaScript API](/ru/docs/WebAssembly/Using_the_JavaScript_API)). Эта статья будет наиболее полезной, если вы хотите написать несколько модулей wasm для оптимизации производительности вашей библиотеки JavaScript или создать свой собственный компилятор WebAssembly.
 
 ## S-выражения
 
@@ -176,7 +177,8 @@ WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
 });
 ```
 
-> **Примечание:** вы можете найти этот пример на GitHub в файле [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html) (смотрите также это [вживую](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). Также смотрите {{jsxref("WebAssembly.instantiateStreaming()")}} для получения более подробной информации о функции создания экземпляра модуля.
+> [!NOTE]
+> Этот пример можно найти на GitHub в файле [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html) (смотрите также это [вживую](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). Также смотрите {{jsxref("WebAssembly.instantiateStreaming()")}} для получения более подробной информации о функции создания экземпляра модуля.
 
 ## Изучение основ
 
@@ -196,7 +198,8 @@ WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
     i32.add))
 ```
 
-> **Примечание:** Инструкция `i32.const` создаёт 32-разрядное целое число и помещает его в стек. Вы можете поменять `i32` на любой другой доступный тип данных и изменить значение на любое другое (здесь мы установили значение `42`).
+> [!NOTE]
+> Инструкция `i32.const` создаёт 32-разрядное целое число и помещает его в стек. Вы можете поменять `i32` на любой другой доступный тип данных и изменить значение на любое другое (здесь мы установили значение `42`).
 
 В этом примере обратите внимание на секцию объявления экспорта `(export “getAnswerPlus1”)`, которая находится сразу после объявления второй функции `func`. Это сокращённый способ объявления, совмещённый с именем функции, которую мы хотим экспортировать.
 
@@ -214,7 +217,8 @@ WebAssembly.instantiateStreaming(fetch("call.wasm")).then((obj) => {
 });
 ```
 
-> **Примечание:** вы можете найти этот пример на GitHub как [call.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/call.html) (смотрите также [вживую](https://mdn.github.io/webassembly-examples/understanding-text-format/call.html)). Ещё посмотрите [wasm-utils.js](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) для метода `fetchAndInstantiate()`.
+> [!NOTE]
+> Этот пример можно найти на GitHub в [call.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/call.html) (смотрите также [вживую](https://mdn.github.io/webassembly-examples/understanding-text-format/call.html)). Ещё посмотрите [wasm-utils.js](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) для метода `fetchAndInstantiate()`.
 
 ### Импорт функций из JavaScript
 
@@ -254,7 +258,8 @@ WebAssembly.instantiateStreaming(fetch("logger.wasm"), importObject).then(
 );
 ```
 
-> **Примечание:** Этот пример можно найти на GitHub в файле [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html) (смотрите также [вживую](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html)).
+> [!NOTE]
+> Этот пример можно найти на GitHub в файле [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html) (смотрите также [вживую](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html)).
 
 ### Определение глобальных переменных WebAssembly
 
@@ -333,7 +338,8 @@ function consoleLogString(offset, length) {
     call $log))
 ```
 
-> **Примечание:** Обратите внимание, что двойная точка с запятой (`;;`) позволяет оставлять комментарии в файлах WebAssembly.
+> [!NOTE]
+> Обратите внимание, что двойная точка с запятой (`;;`) позволяет оставлять комментарии в файлах WebAssembly.
 
 Теперь из JavaScript мы можем создать и передать объект памяти размером в 1 страницу. Результатом работы этого кода будет вывод "Hi" в консоль:
 
@@ -349,7 +355,8 @@ WebAssembly.instantiateStreaming(fetch("logger2.wasm"), importObject).then(
 );
 ```
 
-> **Примечание:** вы можете найти полный исходный код на GitHub в файле [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html) (также смотрите это [вживую](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)).
+> [!NOTE]
+> Этот пример можно найти на GitHub в файле [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html) (также смотрите это [вживую](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)).
 
 ### Таблицы WebAssembly
 
@@ -388,7 +395,8 @@ WebAssembly.instantiateStreaming(fetch("logger2.wasm"), importObject).then(
 - Секция `elem` - это список функций, на которые ссылается таблица, в том порядке, в котором они указаны. Здесь можно перечислить любое количество функций, включая их дубликаты.
 - Значение `(i32.const 0)` внутри секции `elem` является смещением - его необходимо объявить в начале секции и указать, по какому индексу в таблице ссылок начинают заполняться ссылки на функции. Здесь мы указали 0, а размер таблицы указали как 2 (см. выше), поэтому мы можем заполнить две ссылки на индексы 0 и 1. Если бы мы захотели записать наши ссылки со смещением в 1, то нам нужно было бы написать `(i32.const 1)`, а размер таблицы должен был быть равен 3.
 
-> **Примечание:** Неинициализированным элементам присваивается значение вызова по умолчанию.
+> [!NOTE]
+> Неинициализированным элементам присваивается значение вызова по умолчанию.
 
 В JavaScript эквивалентный код для создания такого экземпляра таблицы ссылок будет выглядеть примерно так:
 
@@ -466,9 +474,11 @@ WebAssembly.instantiateStreaming(fetch("wasm-table.wasm")).then((obj) => {
 });
 ```
 
-> **Примечание:** Этот пример можно найти на GitHub в файле [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html) (смотрите это также [вживую](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html))
+> [!NOTE]
+> Этот пример можно найти на GitHub в файле [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html) (смотрите это также [вживую](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html))
 
-> **Примечание:** Как и в случае с памятью, таблицы также можно создавать из кода JavaScript (см. [`WebAssembly.Table()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table)).
+> [!NOTE]
+> Как и в случае с памятью, таблицы также можно создавать из кода JavaScript (см. [`WebAssembly.Table()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table)).
 
 ### Изменяющиеся таблицы и динамическое связывание
 
@@ -517,7 +527,8 @@ WebAssembly.instantiateStreaming(fetch("wasm-table.wasm")).then((obj) => {
 4. В последней части функции создаётся константа со значением `0`, затем вызывается функция с этим индексом (`0`) из таблицы. Это будет функция `shared0func` модуля `shared0.wat`, которая ранее была размещена там с помощью секции `elem`.
 5. При вызове shared0func загружает число `42`, которые мы сохранили в памяти, с помощью ранее указанной инструкции `i32.store` в модуле `shared1.wat`.
 
-> **Примечание:** Вышеприведённые выражения неявно извлекают значения из стека, но вместо этого вы можете объявить их явно в вызовах инструкций, например:
+> [!NOTE]
+> Вышеприведённые выражения неявно извлекают значения из стека, но вместо этого вы можете объявить их явно в вызовах инструкций, например:
 >
 > ```
 > (i32.store (i32.const 0) (i32.const 42))
@@ -544,7 +555,8 @@ Promise.all([
 
 Каждый из компилируемых модулей может импортировать общие объекты памяти и таблицы. Таким образом, они могут совместно использовать одну и ту же линейную память и таблицу ссылок.
 
-> **Примечание:** Этот пример можно найти на GitHub в файле [shared-address-space.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/shared-address-space.html) (смотрите это также [вживую](https://mdn.github.io/webassembly-examples/understanding-text-format/shared-address-space.html)).
+> [!NOTE]
+> Этот пример можно найти на GitHub в файле [shared-address-space.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/shared-address-space.html) (смотрите это также [вживую](https://mdn.github.io/webassembly-examples/understanding-text-format/shared-address-space.html)).
 
 ## Резюме
 
