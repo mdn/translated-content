@@ -39,7 +39,7 @@ closePath()
 
 #### JavaScript
 
-三角形的三个角分别位于 (20, 140), (120, 10), 和 (220, 140)。
+三角形的三个角分别位于 (20, 140)、(120, 10) 和 (220, 140)。
 
 ```js
 const canvas = document.getElementById("canvas");
@@ -47,9 +47,9 @@ const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.moveTo(20, 140); // 将笔移到左下角
-ctx.lineTo(120, 10); // 到达顶部角
-ctx.lineTo(220, 140); // 到达右下角
-ctx.closePath(); // 连接到左下角
+ctx.lineTo(120, 10); // 连线到顶角
+ctx.lineTo(220, 140); // 连线到右下角
+ctx.closePath(); // 连线到左下角
 ctx.stroke();
 ```
 
