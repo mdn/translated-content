@@ -7,7 +7,8 @@ slug: Web/API/Element/innerHTML
 
 La propriété **`Element.innerHTML`** de {{domxref("Element")}} récupère ou définit la syntaxe HTML décrivant les descendants de l'élément.
 
-> **Note :** Si un nœud {{HTMLElement("div")}}, {{HTMLElement("span")}}, ou {{HTMLElement("noembed")}} a un sous-nœud de type texte contenant les caractères `(&), (<),` ou `(>)`, `innerHTML` renverra à la place les chaînes suivantes : `"&amp;"`, `"&lt;"` et `"&gt;"` respectivement. Utilisez {{domxref("Node.textContent")}} pour obtenir une copie exacte du contenu de ces nœuds.
+> [!NOTE]
+> Si un nœud {{HTMLElement("div")}}, {{HTMLElement("span")}}, ou {{HTMLElement("noembed")}} a un sous-nœud de type texte contenant les caractères `(&), (<),` ou `(>)`, `innerHTML` renverra à la place les chaînes suivantes : `"&amp;"`, `"&lt;"` et `"&gt;"` respectivement. Utilisez {{domxref("Node.textContent")}} pour obtenir une copie exacte du contenu de ces nœuds.
 
 Pour insérer le HTML dans le document, plutôt que de remplacer le contenu d'un élément, utilisez la méthode {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
 
@@ -44,7 +45,8 @@ let contents = myElement.innerHTML;
 
 Cela vous permet de regarder le balisage HTML des nœuds de contenu de l'élément.
 
-> **Note :** Le fragment HTML ou XML renvoyé est généré en fonction du contenu actuel de l'élément. Il est donc probable que le balisage et la mise en forme du fragment renvoyé ne correspondent pas au balisage de la page d'origine.
+> [!NOTE]
+> Le fragment HTML ou XML renvoyé est généré en fonction du contenu actuel de l'élément. Il est donc probable que le balisage et la mise en forme du fragment renvoyé ne correspondent pas au balisage de la page d'origine.
 
 ### Remplacement du contenu d'un élément
 
@@ -97,7 +99,8 @@ el.innerHTML = name; // affiche l'alerte
 
 Pour cette raison, il est recommandé de ne pas utiliser `innerHTML` pour insérer du texte brut ; à la place, utilisez {{domxref("Node.textContent")}}. Cela n'analyse pas le contenu passé en HTML, mais l'insère à la place en tant que texte brut.
 
-> **Attention :** Si votre projet est soumis à une vérification de sécurité, l'utilisation de `innerHTML` entraînera probablement le rejet de votre code. Par exemple, si vous utilisez `innerHTML` dans une extension de navigateur et soumettez l'extension à addons.mozilla.org, elle ne passera pas le processus de révision automatique.
+> [!WARNING]
+> Si votre projet est soumis à une vérification de sécurité, l'utilisation de `innerHTML` entraînera probablement le rejet de votre code. Par exemple, si vous utilisez `innerHTML` dans une extension de navigateur et soumettez l'extension à addons.mozilla.org, elle ne passera pas le processus de révision automatique.
 
 ## Exemple
 

@@ -11,7 +11,8 @@ La propriété **`background-origin`** détermine l'origine de l'arrière-plan [
 
 Attention, `background-origin` est ignorée lorsque [`background-attachment`](/fr/docs/Web/CSS/background-attachment) vaut `fixed`.
 
-> **Note :** Cette propriété est rattachée à la propriété raccourcie [`background`](/fr/docs/Web/CSS/background). Aussi, si on a une déclaration `background-origin` avant la propriété raccourcie et que cette dernière ne définit pas la valeur de l'origine, ce sera la valeur initiale par défaut qui sera prise en compte pour `background-origin`.
+> [!NOTE]
+> Cette propriété est rattachée à la propriété raccourcie [`background`](/fr/docs/Web/CSS/background). Aussi, si on a une déclaration `background-origin` avant la propriété raccourcie et que cette dernière ne définit pas la valeur de l'origine, ce sera la valeur initiale par défaut qui sera prise en compte pour `background-origin`.
 
 ## Syntaxe
 
@@ -100,7 +101,8 @@ Dans cet exemple, la boîte possède une bordure épaisse en pointillés. Le pre
       rgba(131, 58, 180, 1) 0%,
       rgba(253, 29, 29, 0.6) 60%,
       rgba(252, 176, 69, 1) 100%
-    ), radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 28%);
+    ),
+    radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 28%);
   border: 20px dashed black;
   padding: 20px;
   width: 400px;

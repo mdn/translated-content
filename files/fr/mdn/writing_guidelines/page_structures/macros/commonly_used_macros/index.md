@@ -13,7 +13,8 @@ Voir la page [Autres macros](/fr/docs/MDN/Structures/Macros/Other) pour plus d'i
 
 MDN fournit plusieurs macros pour former des liens entre les pages de référence, le glossaire, etc.
 
-> **Attention :** Toutes les macros de lien devraient être remplacées dans le contenu en français par des liens écrit en Markdown. En effet, on souhaite réduire l'utilisation des macros «&nbsp;simples&nbsp;» qui peuvent être facilement remplacées par du HTML/Markdown.
+> [!WARNING]
+> Toutes les macros de lien devraient être remplacées dans le contenu en français par des liens écrit en Markdown. En effet, on souhaite réduire l'utilisation des macros «&nbsp;simples&nbsp;» qui peuvent être facilement remplacées par du HTML/Markdown.
 
 ### Liens vers le glossaire
 
@@ -22,7 +23,8 @@ La macro [`Glossary`](https://github.com/mdn/yari/blob/main/kumascript/macros/Gl
 1. Le nom du terme (par exemple `"HTML"`)&nbsp;: `\{{Glossary("HTML")}}`
 2. Un paramètre optionnel indiquant le texte à afficher à la place du terme&nbsp;: `\{{Glossary("CSS", "Cascading Style Sheets")}}`
 
-> **Attention :** Pour remplacer cette macro, on écrira plutôt&nbsp;: `[le texte à afficher](/fr/docs/Glossary/MonTerme)`.
+> [!WARNING]
+> Pour remplacer cette macro, on écrira plutôt&nbsp;: `[le texte à afficher](/fr/docs/Glossary/MonTerme)`.
 
 ### Liens vers des pages de référence
 

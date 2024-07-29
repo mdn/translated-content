@@ -2,7 +2,7 @@
 title: Firefox 124 for developers
 slug: Mozilla/Firefox/Releases/124
 l10n:
-  sourceCommit: 4c8b53d6a760f60f7d3d7a7704d35f1c7b8f5693
+  sourceCommit: 08ef601955d7fc92a9a4c6d6c047854b5aef723d
 ---
 
 {{FirefoxSidebar}}
@@ -11,10 +11,17 @@ l10n:
 
 ## ウェブ開発者向けの変更点一覧
 
+### HTML
+
+変更なし。
+
 ### CSS
 
-- [`content-visibility`](/ja/docs/Web/CSS/content-visibility) CSS プロパティの値 `auto` をデフォルトで有効にしました。これは、[ユーザーとの関連性](/ja/docs/Web/CSS/CSS_containment#relevant_to_the_user) がない場合にコンテンツのレンダリングを省くことを可能にします。([Firefox bug 1874874](https://bugzil.la/1874874))
 - {{cssxref("text-wrap")}} プロパティがショートハンドプロパティに転換されて、{{cssxref("text-wrap-mode")}} および {{cssxref("text-wrap-style")}} の構成要素プロパティを包括するようになりました。([Firefox bug 1758391](https://bugzil.la/1758391))
+
+### JavaScript
+
+変更なし。
 
 ### SVG
 
@@ -60,7 +67,7 @@ l10n:
 - **拡張可能な `SharedArrayBuffer`:** `javascript.options.experimental.sharedarraybuffer_growable`。
 
   {{jsxref("SharedArrayBuffer.prototype.grow()")}} メソッドを使用して {{jsxref("SharedArrayBuffer")}} を拡張できるようになりました。
-  バッファーで許可される最大サイズは、[`SharedArrayBuffer()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer#maxbytelength) の `options.maxByteLength` パラメーターで設定します。
+  バッファーで許可される最大サイズは、[`SharedArrayBuffer()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer#maxbytelength) の `options.maxByteLength` 引数で設定します。
   {{jsxref("SharedArrayBuffer.prototype.growable")}} および {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}} プロパティはそれぞれバッファーが拡張可能であるか、および許可される最大サイズを表します。
   ([Firefox bug 1842773](https://bugzil.la/1842773))
 

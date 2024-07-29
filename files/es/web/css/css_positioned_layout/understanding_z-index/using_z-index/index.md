@@ -3,6 +3,8 @@ title: Agregando z-index
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index
 ---
 
+{{CSSRef}}
+
 « [CSS](/es/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index)
 
 ### Agregando {{ cssxref("z-index") }}
@@ -11,7 +13,7 @@ El primer ejemplo, [Apilando sin z-index](/es/docs/Web/CSS/CSS_Positioning/enten
 
 Esta propiedad es asignada con un valor entero (positivo o negativo), el cuál representa la posición del elemento en el eje-Z. Si no estás familiarizado con el eje-Z, imagina que la página tiene muchas capas una encima de la otra. Cada capa es numerada. Una capa con un número mayor es renderizada encima de las capas con números menores.
 
-> **Advertencia:** z-index solo tiene efecto si un elemento es [posicionado](/es/CSS/position).
+> **Advertencia:** `z-index` solo tiene efecto si un elemento es [posicionado](/es/CSS/position).
 
 - _bottom: el más lejano al observador_
 - ...
@@ -25,7 +27,7 @@ Esta propiedad es asignada con un valor entero (positivo o negativo), el cuál r
 - ...
 - _top: el más cercano al observador_
 
-> **Nota:**
+> [!NOTE]
 >
 > - Cuando la propiedad z-index no ha sido especificada, los elementos son renderizados en la capa de renderizado por defecto 0 (cero).
 > - Si varios elementos comparten el mismo valor z-index (_i.e._ están situados en la misma capa), las reglas de apilamiento explicadas en la sección [Apilando sin z-index](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Stacking_without_z-index) son aplicadas.

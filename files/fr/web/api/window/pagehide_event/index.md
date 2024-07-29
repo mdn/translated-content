@@ -3,6 +3,8 @@ title: pagehide
 slug: Web/API/Window/pagehide_event
 ---
 
+{{APIRef("HTML DOM")}}
+
 L'évènement `pagehide` est émis lorsqu'une entrée dans un historique de session est sur le point d'être quittée.
 
 ## Informations générales

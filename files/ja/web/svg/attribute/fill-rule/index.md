@@ -2,14 +2,15 @@
 title: fill-rule
 slug: Web/SVG/Attribute/fill-rule
 l10n:
-  sourceCommit: 4c45276e195ba339f038ffbfdb3de7ab65424ed5
+  sourceCommit: cd840e78b6027a391fe1f11b745564cf3ebfb8e7
 ---
 
 {{SVGRef}}
 
 **`fill-rule`** 属性はプレゼンテーション属性で、図形の内部を決定するために使用するアルゴリズムを定義します。
 
-> **メモ:** プレゼンテーション属性なので、 `fill-rule` は CSS プロパティとして使用することができます。
+> [!NOTE]
+> プレゼンテーション属性なので、 `fill-rule` は CSS プロパティとして使用することができます。
 
 この属性は以下の SVG 要素で使用することができます。
 

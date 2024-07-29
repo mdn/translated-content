@@ -562,7 +562,7 @@
     "modified": "2020-02-27T00:27:23.047Z",
     "contributors": ["iigmir"]
   },
-  "Glossary/Routers": {
+  "Glossary/Router": {
     "modified": "2020-02-27T00:38:00.019Z",
     "contributors": ["iigmir"]
   },
@@ -2371,6 +2371,10 @@
     "modified": "2019-03-18T21:45:25.421Z",
     "contributors": ["laneser"]
   },
+  "Web/API/Window/requestAnimationFrame": {
+    "modified": "2020-10-15T21:24:54.235Z",
+    "contributors": ["t7yang", "Ekanan", "North", "foxbrush"]
+  },
   "Web/API/Window/sessionStorage": {
     "modified": "2020-10-15T21:58:23.409Z",
     "contributors": ["iigmir", "EyiLee", "EricPing"]
@@ -2426,10 +2430,6 @@
   "Web/API/setInterval": {
     "modified": "2020-10-15T22:29:07.467Z",
     "contributors": ["chrischi0922s"]
-  },
-  "Web/API/window/requestAnimationFrame": {
-    "modified": "2020-10-15T21:24:54.235Z",
-    "contributors": ["t7yang", "Ekanan", "North", "foxbrush"]
   },
   "Web/Accessibility": {
     "modified": "2019-09-11T08:39:45.699Z",
@@ -2674,10 +2674,6 @@
   "Web/CSS/width": {
     "modified": "2020-10-15T22:01:32.599Z",
     "contributors": ["yutzuch"]
-  },
-  "Web/Demos": {
-    "modified": "2019-03-23T22:08:13.863Z",
-    "contributors": ["h223449961", "tigercosmos"]
   },
   "Web/Events": {
     "modified": "2019-11-28T04:54:28.795Z",
@@ -3444,7 +3440,7 @@
       "lizlux"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@iterator": {
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator": {
     "modified": "2020-10-15T22:02:20.291Z",
     "contributors": ["jackblackevo"]
   },
@@ -4085,10 +4081,6 @@
   "Web/Security/Mixed_content": {
     "modified": "2019-03-23T23:04:08.690Z",
     "contributors": ["jackblackevo", "iigmir", "a780201", "wildsky", "Asheesh"]
-  },
-  "Web/Security/Mixed_content/How_to_fix_website_with_mixed_content": {
-    "modified": "2019-03-23T23:04:13.940Z",
-    "contributors": ["jackblackevo", "iigmir", "wildsky"]
   },
   "Web/Security/Same-origin_policy": {
     "modified": "2020-09-01T23:06:58.364Z",

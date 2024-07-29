@@ -41,7 +41,7 @@ new Map([iterable])
 - `Map.length`
   - : `length`屬性的值為 0
     要計算 `Map` 中有多少元素，可以使用 {{jsxref("Map.prototype.size")}}。
-- {{jsxref("Map.@@species", "get Map[@@species]")}}
+- [`Map[Symbol.species]`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
   - : 用於創建派生物件的構造函數。
 - {{jsxref("Map.prototype")}}
   - : 表示 `Map` 構造函數的原型，允許對所有的 `Map` 物件添加屬性
@@ -52,8 +52,8 @@ new Map([iterable])
 
 ### 屬性
 
-- `Map.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Map"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Map.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`Symbol.toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Map"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("Map.prototype.size")}}
   - : Returns the number of key/value pairs in the `Map` object.
 
@@ -71,7 +71,7 @@ new Map([iterable])
   - : Returns a boolean indicating whether a value has been associated with the passed key in the `Map` object or not.
 - {{jsxref("Map.prototype.set()")}}
   - : Sets the value for the passed key in the `Map` object. Returns the `Map` object.
-- {{jsxref("Map/@@iterator", "Map.prototype[@@iterator]()")}}
+- [`Map.prototype[Symbol.iterator]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
   - : Returns a new Iterator object that contains a two-member array of `[key, value]` for each element in the `Map` object in insertion order.
 - {{jsxref("Map.prototype.keys()")}}
   - : Returns a new Iterator object that contains the keys for each element in the `Map` object in insertion order.

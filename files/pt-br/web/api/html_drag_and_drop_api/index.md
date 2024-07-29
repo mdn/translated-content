@@ -217,7 +217,7 @@ Como podem ser visto no [DataTransferItem interface's Browser Compatibility tabl
 
 - [Copiando e movendo elementos com a interface `DataTransfer`](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html)
 - [Copiando e movendo elementos com a interface `DataTransferListItem`](http://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
-- Arrastando e soltando arquivos; Apenas para o Firefox: <http://jsfiddle.net/9C2EF/>
+- Arrastando e soltando arquivos; Apenas para o Firefox: <https://jsfiddle.net/9C2EF/>
 - Arrastando e soltando arquivos; Todos os navegadores: [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
 
 ## Veja também

@@ -3,7 +3,9 @@ title: Document.createTreeWalker()
 slug: Web/API/Document/createTreeWalker
 ---
 
-{{ApiRef("Document")}}Вызов метода **`Document.createTreeWalker()`** возвращает новый объект класса {{domxref("TreeWalker")}}.
+{{APIRef("Document")}}
+
+Вызов метода **`Document.createTreeWalker()`** возвращает новый объект класса {{domxref("TreeWalker")}}.
 
 ## Синтаксис
 

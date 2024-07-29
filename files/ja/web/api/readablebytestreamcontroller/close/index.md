@@ -3,16 +3,17 @@ title: "ReadableByteStreamController: close() メソッド"
 short-title: close()
 slug: Web/API/ReadableByteStreamController/close
 l10n:
-  sourceCommit: dcce943de1c2fa0f6a82de3c90bc98285f27ed6f
+  sourceCommit: d8b4431bfde42f1bc195239ea1f378d763f8163e
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 **`close()`** は {{domxref("ReadableByteStreamController")}} インターフェイスのメソッドで、関連するストリームを閉じます。
 
 これは、そのデータソースが使い果たされたとき/完全に完了したときに、基盤ソースによって呼び出される可能性があります。
 
-> **メモ:** リーダーは、以前にキューに入れられたチャンクをストリームから読み取ることができますが、それらを読み取ってしまうとストリームは閉じられます。
+> [!NOTE]
+> リーダーは、以前にキューに入れられたチャンクをストリームから読み取ることができますが、それらを読み取ってしまうとストリームは閉じられます。
 > しかし、 `close()` が呼び出されたときに、未処理で部分的に書き込まれた {{domxref("ReadableByteStreamController.byobRequest","byobRequest")}} がある場合、ストリームはエラーになります。
 
 ## 構文

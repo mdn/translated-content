@@ -157,7 +157,7 @@ class Rectangle {
 
 另外，如上面例子所示，聲明字段可以不用設定默認值。
 
-想知道更多資訊，可參閱 {{jsxref("Classes/Public_class_fields", "public class fields", "", "true")}}。
+想知道更多資訊，可參閱 {{jsxref("Classes/Public_class_fields", "public class fields", "", 1)}}。
 
 #### 宣告私有欄位
 
@@ -178,11 +178,12 @@ class Rectangle {
 
 通過宣告這些在類別以外不可見的東西，你可以確保類別的使用者不會倚賴類別的內部結構，畢竟一個類別的內部結構可能會隨著版本的更新而有所變化。
 
-> **備註：** 私有欄位只能在建立類別時事先宣告。
+> [!NOTE]
+> 私有欄位只能在建立類別時事先宣告。
 
 私有欄位不像普通欄位一樣，可以在類別宣告完後才建立。
 
-想知道更多資訊，可參閱 {{jsxref("Classes/Private_properties", "private class features", "", "true")}}。
+想知道更多資訊，可參閱 {{jsxref("Classes/Private_properties", "private class features", "", 1)}}。
 
 ### 裝箱、原型方法及靜態方法
 

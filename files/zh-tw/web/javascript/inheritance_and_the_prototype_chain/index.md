@@ -19,7 +19,8 @@ JavaScript 是個沒有實做 `class` 關鍵字的動態語言，所以會對那
 
 JavaScript 物件是一「包」動態的屬性（也就是**它自己**的屬性）並擁有一個原型物件的鏈結，當物件試圖存取一個物件的屬性時，其不僅會尋找該物件，也會尋找該物件的原型、原型的原型……直到找到相符合的屬性，或是到達原型鏈的尾端。
 
-> **備註：** 遵照 ECMAScript 標準的 `someObject.[[Prototype]]` 標記，用於指派 `someObject` 的原型。從 ECMAScript 2015 開始， `[[Prototype]]` 使用 {{jsxref("Object.getPrototypeOf()")}} 與 {{jsxref("Object.setPrototypeOf()")}} 這兩個訪問器（accessors）訪問，等同於非標準，但各大瀏覽器已實做的 `__proto__` 屬性。
+> [!NOTE]
+> 遵照 ECMAScript 標準的 `someObject.[[Prototype]]` 標記，用於指派 `someObject` 的原型。從 ECMAScript 2015 開始， `[[Prototype]]` 使用 {{jsxref("Object.getPrototypeOf()")}} 與 {{jsxref("Object.setPrototypeOf()")}} 這兩個訪問器（accessors）訪問，等同於非標準，但各大瀏覽器已實做的 `__proto__` 屬性。
 >
 > 不要把 `someObject.[[Prototype]]` 與函式屬性 `func.prototype` 混淆了。它在函式被用作建構子的時候，指定 `[[Prototype]]` 要分派到所有由給定函式建立的物件實例（instance）。**`Object.prototype`** 屬性代表了原型屬性 {{jsxref("Object")}}。
 

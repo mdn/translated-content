@@ -20,7 +20,7 @@ Firefox 36 は、米国時間 2015 年 2 月 24 日にリリースされまし�
 - リモートでボックスモデルのハイライト表示が動作
 - [プロファイラの "呼び出しツリーを反転" オプション](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html#inverting-the-call-tree)
 - [コンソールで DOM Promise を調査](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#type-specific-rich-output)
-- [インスペクタで "貼り付け" 方法を追加](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#element-popup-menu-2)
+- [インスペクターで "貼り付け" 方法を追加](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#element-popup-menu-2)
 
 [Firefox 35 から Firefox 36 の間に解決した開発ツール関連のバグ一覧](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2014-11-28&chfield=resolution&query_format=advanced&chfieldfrom=2014-10-13&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=11736454)
 
@@ -42,7 +42,7 @@ Firefox 36 は、米国時間 2015 年 2 月 24 日にリリースされまし�
 ### HTML
 
 - [`<meta name="referrer">`](/ja/docs/Web/HTML/Element/meta) をサポートしました ([Firefox バグ 704320](https://bugzil.la/704320))。
-- Firefox では {{HTMLElement("input")}} 要素の [`accept`](/ja/docs/Web/HTML/Element/input#accept) 属性で指定したフィルタが未知の値、すなわち未知の MIME タイプや不正な形式の値でない限り、常にデフォルトで選択されるようになりました。以前は `image/*`、`video/*`、`audio/*` が指定された場合に限り、デフォルトで選択されていました ([Firefox バグ 826185](https://bugzil.la/826185))。
+- Firefox では {{HTMLElement("input")}} 要素の [`accept`](/ja/docs/Web/HTML/Element/input#accept) 属性で指定したフィルターが未知の値、すなわち未知の MIME タイプや不正な形式の値でない限り、常にデフォルトで選択されるようになりました。以前は `image/*`、`video/*`、`audio/*` が指定された場合に限り、デフォルトで選択されていました ([Firefox バグ 826185](https://bugzil.la/826185))。
 
 ### JavaScript
 
@@ -83,7 +83,7 @@ Firefox 36 は、米国時間 2015 年 2 月 24 日にリリースされまし�
 - EME 関連の {{domxref("Navigator.requestMediaKeySystemAccess()")}} メソッドおよび {{domxref("MediaKeySystemAccess")}} をサポートしました ([Firefox バグ 1095257](https://bugzil.la/1095257))。
 - セッション中で EME 関連の CDM が鍵情報を変更したときに、{{domxref("MediaKeySession/keystatuseschange_event", "keyschange")}} イベントが発生するようになりました ([Firefox バグ 1081755](https://bugzil.la/1081755))。
 - バーチャルリアリティデバイスを、設定項目 `dom.vr.enabled` の元で実験的にサポートしました。既定では無効です ([Firefox バグ 1036604](https://bugzil.la/1036604))。
-- 仕様書に基づき {{domxref("RTCPeerConnection.onsignalingstatechange")}} に関連づけられた関数は、イベントをパラメータとして受け取るようになりました ([Firefox バグ 1075133](https://bugzil.la/1075133))。
+- 仕様書に基づき {{domxref("RTCPeerConnection.onsignalingstatechange")}} に関連づけられた関数は、イベントを引数として受け取るようになりました ([Firefox バグ 1075133](https://bugzil.la/1075133))。
 - Web Animations の実験的な実装を続けています。メソッド {{domxref("Animation/play", "AnimationPlayer.play()")}}、{{domxref("Animation/pause", "AnimationPlayer.pause()")}} ([Firefox バグ 1070745](https://bugzil.la/1070745)) および {{domxref("AnimationPlayer.playState")}} ([Firefox バグ 1037321](https://bugzil.la/1037321)) をサポートしました。
 - 非標準の `DOMRequest` インターフェイスが `DOMRequest.then()` メソッドを持つようになりました ([Firefox バグ 839838](https://bugzil.la/839838))。
 - CSSOM View のスクロール動作を制御するメソッドである {{domxref("Element.scroll()")}}、{{domxref("Element.scrollTo()")}}、{{domxref("Element.scrollBy()")}}、{{domxref("Element.scrollIntoView()")}} を実装または拡張しました ([Firefox バグ 1045754](https://bugzil.la/1045754) および [Firefox バグ 1087559](https://bugzil.la/1087559))。

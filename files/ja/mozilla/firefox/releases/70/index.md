@@ -48,7 +48,7 @@ Firefox 70 は、米国時間 2019 年 10 月 22 日 にリリースされまし
 
 - {{cssxref("display")}} プロパティが、内部表示種別と外部表示種別を表す 2 つのキーワードを受け入れるようになりました ([Firefox バグ 1038294](https://bugzil.la/1038294)、[Firefox バグ 1105868](https://bugzil.la/1105868)、[Firefox バグ 1557825](https://bugzil.la/1557825))。
 - {{cssxref("font-size")}} プロパティが新しいキーワード `xxx-large` を受け入れるようになりました ([Firefox バグ 1553545](https://bugzil.la/1553545))。
-- ロジックとパフォーマンスの都合で、{{cssxref(":visited")}} 疑似クラスが {{htmlelement("link")}} 要素にマッチしないようになりました ([Firefox バグ 1572246](https://bugzil.la/1572246)、理由について詳しくは [Intent to ship: Make \<link> elements always unvisited](https://groups.google.com/forum/#!msg/mozilla.dev.platform/1NP6oJzK6zg/ftAz_TajAAAJ) および [\[selectors\] :link and \<link>](https://github.com/w3c/csswg-drafts/issues/3817) をご覧ください)。
+- ロジックとパフォーマンスの都合で、{{cssxref(":visited")}} 擬似クラスが {{htmlelement("link")}} 要素にマッチしないようになりました ([Firefox バグ 1572246](https://bugzil.la/1572246)、理由について詳しくは [Intent to ship: Make \<link> elements always unvisited](https://groups.google.com/forum/#!msg/mozilla.dev.platform/1NP6oJzK6zg/ftAz_TajAAAJ) および [\[selectors\] :link and \<link>](https://github.com/w3c/csswg-drafts/issues/3817) をご覧ください)。
 - {{cssxref("quotes")}} プロパティで値 `auto` をサポートしました ([Firefox バグ 1421938](https://bugzil.la/1421938))。
 - パフォーマンスを向上させるため、{{htmlelement("style")}} 要素内のスタイルシートを再使用のためキャッシュするようになりました ([Firefox バグ 1480146](https://bugzil.la/1480146))。現在、`@import` 規則を持つスタイルシートは含まれませんので注意してください。
 - `<ratio>` 型の値として `<number>/<number>` や 1 つの `<number>` を受け入れるようになりました ([Firefox バグ 1565562](https://bugzil.la/1565562))。
@@ -103,7 +103,7 @@ Firefox 70 は、米国時間 2019 年 10 月 22 日 にリリースされまし
 
 #### Canvas と WebGL
 
-- {{domxref("CanvasRenderingContext2D.getTransform()")}} と、引数として行列の個々の要素を表す複数のパラメータに代わり matrix オブジェクトを受け入れる {{domxref("CanvasRenderingContext2D.setTransform()")}} の新しい派生形をサポートしました ([Firefox バグ 928150](https://bugzil.la/928150))。
+- {{domxref("CanvasRenderingContext2D.getTransform()")}} と、引数として行列の個々の要素を表す複数の引数に代わり matrix オブジェクトを受け入れる {{domxref("CanvasRenderingContext2D.setTransform()")}} の新しい派生形をサポートしました ([Firefox バグ 928150](https://bugzil.la/928150))。
 
 ### HTTP
 

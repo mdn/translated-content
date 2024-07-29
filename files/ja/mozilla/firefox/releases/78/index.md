@@ -34,8 +34,8 @@ Mozilla hacks の記事「[New in Firefox 78: DevTools improvements, new regex e
 
 ### CSS
 
-- {{CSSxRef(":is", ":is()")}} および {{CSSxRef(":where", ":where()")}} 疑似クラスをデフォルトで有効にしました ([Firefox バグ 1632646](https://bugzil.la/1632646))。
-- {{CSSxRef(":read-only")}} および {{CSSxRef(":read-write")}} 疑似クラスを、接頭辞なしでサポートしました ([Firefox バグ 312971](https://bugzil.la/312971))。
+- {{CSSxRef(":is", ":is()")}} および {{CSSxRef(":where", ":where()")}} 擬似クラスをデフォルトで有効にしました ([Firefox バグ 1632646](https://bugzil.la/1632646))。
+- {{CSSxRef(":read-only")}} および {{CSSxRef(":read-write")}} 擬似クラスを、接頭辞なしでサポートしました ([Firefox バグ 312971](https://bugzil.la/312971))。
 
   - また `:read-write` のスタイルが、無効化した [`<input>`](/ja/docs/Web/HTML/Element/input) および [`<textarea>`](/ja/docs/Web/HTML/Element/textarea) 要素に適用されないようになりました。これは [HTML 仕様書](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-read-write) に違反していました ([Firefox バグ 888884](https://bugzil.la/888884))。
 
@@ -70,7 +70,7 @@ Mozilla hacks の記事「[New in Firefox 78: DevTools improvements, new regex e
 ### WebAssembly
 
 - [Wasm Multi-value](https://hacks.mozilla.org/2019/11/multi-value-all-the-wasm/) をサポートしました。WebAssembly の関数が複数の値を返したり、命令シーケンスが複数のスタックの値を使用および生成したりすることが可能になりました ([Firefox バグ 1628321](https://bugzil.la/1628321))。
-- WebAssembly で、[`BigInt`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt) を使用して JavaScript から 64-bit 整数の関数パラメーター (i64) をインポートおよびエクスポートできるようになりました ([Firefox バグ 1608770](https://bugzil.la/1608770))。
+- WebAssembly で、[`BigInt`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt) を使用して JavaScript から 64-bit 整数の関数引数 (i64) をインポートおよびエクスポートできるようになりました ([Firefox バグ 1608770](https://bugzil.la/1608770))。
 
 ### TLS 1.0 および 1.1 の廃止
 

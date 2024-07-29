@@ -27,7 +27,7 @@ l10n:
 
 - [JavaScript のデータ型](/ja/docs/Web/JavaScript/Data_structures)
 - Wikipedia の [プリミティブ型](https://ja.wikipedia.org/wiki/プリミティブ型) の記事
-- [用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("JavaScript")}}
   - {{Glossary("string", "文字列")}}

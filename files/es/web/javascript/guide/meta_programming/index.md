@@ -33,7 +33,7 @@ Hay ejemplos adicionales disponibles en la página de referencia {{jsxref("Proxy
 
 Los siguientes términos se utilizan cuando se habla de la funcionalidad de los proxies.
 
-- {{jsxref("Global_Objects/Proxy/handler","handler","","true")}}
+- {{jsxref("Global_Objects/Proxy/handler","handler","",1)}}
   - : Objeto marcador de posición que contiene trampas.
 - traps
   - : Los métodos que proporcionan acceso a la propiedad. (Esto es análogo al concepto de _trampas_ en los sistemas operativos).

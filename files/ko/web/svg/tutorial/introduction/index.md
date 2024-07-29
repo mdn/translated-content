@@ -3,7 +3,7 @@ title: 소개
 slug: Web/SVG/Tutorial/Introduction
 ---
 
-{{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
 
 ![Mozilla dino logo](dino.svg)
 

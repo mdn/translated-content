@@ -3,6 +3,8 @@ title: 印刷
 slug: Web/CSS/CSS_media_queries/Printing
 ---
 
+{{CSSRef}}
+
 コンテンツを印刷するときに、ウェブサイトまたはアプリケーションで使い勝手を向上させたい場合があります。考えられるシナリオはいくつかあります。
 
 - 紙の大きさと形状を生かしてレイアウトを調整したい
@@ -121,7 +123,8 @@ slug: Web/CSS/CSS_media_queries/Printing
 </html>
 ```
 
-> **メモ:** 古いバージョン Internet Explorer は、非表示の {{HTMLElement("iframe")}} の印刷することができません。
+> [!NOTE]
+> 古いバージョン Internet Explorer は、非表示の {{HTMLElement("iframe")}} の印刷することができません。
 
 ## 関連情報
 

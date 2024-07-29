@@ -3,6 +3,8 @@ title: Apprendre à utiliser CSS pour résoudre des problèmes
 slug: Learn/CSS/Howto
 ---
 
+{{LearnSidebar}}
+
 Les liens suivants pointent vers des solutions aux problèmes courants que vous devrez résoudre avec CSS.
 
 ## Scénarios fréquents

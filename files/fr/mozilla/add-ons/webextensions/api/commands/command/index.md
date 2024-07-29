@@ -26,6 +26,6 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/extensions/commands).

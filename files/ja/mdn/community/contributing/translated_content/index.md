@@ -2,7 +2,7 @@
 title: MDN Web Docs のローカライズ
 slug: MDN/Community/Contributing/Translated_content
 l10n:
-  sourceCommit: c7f070e3ea133365dc9bba78c88dde17aab4f066
+  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
 {{MDNSidebar}}
@@ -41,8 +41,8 @@ l10n:
 
 ### 韓国語 (`ko`)
 
-- ディスカッション: [Discord (`#korean`)](/discord), [Kakao Talk (`#MDN Korea`)](https://open.kakao.com/o/gdfG288c)
-- 現在の貢献者: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [pje1740](https://github.com/pje1740), [wisedog](https://github.com/wisedog), [swimjiy](https://github.com/swimjiy), [jho2301](https://github.com/jho2301), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
+- ディスカッション: [Discord (`#korean`)](/discord), [Google Groups (`yari-content-ko`)](https://groups.google.com/g/yari-content-ko)
+- 現在の貢献者: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [wisedog](https://github.com/wisedog), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
 
 ### ロシア語 (`ru`)
 
@@ -51,7 +51,7 @@ l10n:
 
 ### スペイン語 (`es`)
 
-- ディスカッション: [Matrix (`#mdn-l10n-es`)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj)
+- ディスカッション: [Matrix (`#mdn-l10n-es`)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
 - 現在の管理者: [JuanVqz](https://github.com/JuanVqz), [davbrito](https://github.com/davbrito), [Graywolf9](https://github.com/Graywolf9), [Vallejoanderson](https://github.com/Vallejoanderson), [marcelozarate](https://github.com/marcelozarate), [Jalkhov](https://github.com/Jalkhov)
 
 ## 関連情報

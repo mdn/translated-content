@@ -1,15 +1,17 @@
 ---
-title: Flex コンテナ
+title: Flex Container (フレックスコンテナー)
 slug: Glossary/Flex_Container
+l10n:
+  sourceCommit: 3c5185e55298c2ca14e4e63913a50bb81e3c5609
 ---
 
 {{GlossarySidebar}}
 
-{{glossary("Flexbox")}} レイアウトは親要素の `display` プロパティの値に `flex` または `inline-flex` を指定することで定義されます。この親要素が**「flex コンテナ」**となり、その子要素が 「flex アイテム」({{glossary("flex item")}}) となります。
+{{glossary("Flexbox", "フレックスボックス")}}レイアウトは、`flex` または `inline-flex` を親要素の `display` プロパティの値に使用することで定義されます。この要素は**フレックスコンテナー**となり、その子要素それぞれは{{glossary("flex item", "フレックスアイテム")}}となります。
 
-値に `flex` を指定すると、この要素はブロックレベルの flex コンテナとなり、`inline-flex` を指定すると、インラインレベルの flex コンテナとなります。これらの指定は、その要素に対する**「flex 整形文脈 (flex formatting context)」**を作成します。Flex 整形文脈は、フロートがコンテナに侵入せず、コンテナのマージンがアイテムのマージンによって相殺されないという点で、ブロック整形文脈と同様のものです。
+値に `flex` を指定すると、この要素はブロックレベルのフレックスコンテナーとなり、`inline-flex` を指定すると、インラインレベルのフレックスコンテナーとなります。これらの指定は、その要素に対する**フレックス整形コンテキスト**を作成します。これはブロック整形コンテキストと、不動要素がコンテナーの中に侵入せず、コンテナーのマージンがアイテムのマージンとの間で相殺されないという点で似ています。
 
-## 関連項目
+## 関連情報
 
 ### プロパティリファレンス
 
@@ -23,6 +25,7 @@ slug: Glossary/Flex_Container
 
 ### 参考文献
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS フレックスボックスガイド: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- CSS フレックスボックスガイド: _[フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)_
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+- [CSS flexbox inspector: Examine flexbox layouts](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html)

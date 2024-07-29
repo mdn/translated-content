@@ -3,7 +3,7 @@ title: Document.querySelectorAll()
 slug: Web/API/Document/querySelectorAll
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
 Метод **`querySelectorAll()`** {{domxref("Document")}} возвращает статический (не динамический) {{domxref("NodeList")}}, содержащий все найденные элементы документа, которые соответствуют указанному селектору.
 

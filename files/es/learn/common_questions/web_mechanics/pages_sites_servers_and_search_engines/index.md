@@ -3,6 +3,8 @@ title: ¿Cuál es la diferencia entre la página web, el sitio web, el servidor 
 slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 En este artículo se describen varios conceptos referidos a la web: Páginas web, sitios web, servidores web, y motores de búsqueda. Estos términos con frecuencia son confundidos por recién llegados a la web, o son incorrectamente usados. ¡Vamos a aprender qué significa cada uno!
 
 <table>
@@ -68,7 +70,8 @@ Una **página web** es un simple documento que puede ser mostrado por un {{Gloss
 - _scripts_ — que agrega interactividad a la página
 - _medios_ — imágenes, sonidos, y vídeos.
 
-> **Nota:** Los buscadores pueden mostrar distintos tipos de documentos, como archivos {{Glossary("PDF")}} o imágenes. Pero el término **página web** específicamente hace referencia a documentos HTML. Para los demás, usaremos sólo el termino **document**(documento).
+> [!NOTE]
+> Los buscadores pueden mostrar distintos tipos de documentos, como archivos {{Glossary("PDF")}} o imágenes. Pero el término **página web** específicamente hace referencia a documentos HTML. Para los demás, usaremos sólo el termino **document**(documento).
 
 Todas las páginas web disponibles en la red son accesibles mediante una dirección única. Para acceder a una página, simplemente escribe su direcciones en la barra de búsqueda de tu navegador:
 

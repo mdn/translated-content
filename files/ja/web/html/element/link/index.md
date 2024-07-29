@@ -2,7 +2,7 @@
 title: "<link>: 外部リソースへのリンク要素"
 slug: Web/HTML/Element/link
 l10n:
-  sourceCommit: dd0bad5bc3ac640307eee5f5689dd436c287b7f4
+  sourceCommit: e651c702e7a16093ca5a615f74fde1d9ef234508
 ---
 
 {{HTMLSidebar}}
@@ -30,7 +30,7 @@ l10n:
 
 ```html
 <link
-  rel="apple-touch-icon-precomposed"
+  rel="apple-touch-icon"
   sizes="114x114"
   href="apple-icon-114.png"
   type="image/png" />
@@ -59,7 +59,7 @@ l10n:
   crossorigin="anonymous" />
 ```
 
-`rel` が `preload` の値であることは、ブラウザーがこのリソースを先読みすることを指示しており (詳しくは [rel="preload" によるコンテンツの先読み](/ja/docs/Web/HTML/Attributes/rel/preload)を参照)、 `as` 属性がコンテンツが読み込まれるされる特定のクラスを示します。
+`rel` が `preload` の値であることは、ブラウザーがこのリソースを先読みすることを指示しており (詳しくは [`rel="preload"`](/ja/docs/Web/HTML/Attributes/rel/preload)を参照)、 `as` 属性がコンテンツが読み込まれるされる特定のクラスを示します。
 `crossorigin` 属性はリソースが {{Glossary("CORS")}} リクエストによって読み込まれるかどうかを示します。
 
 その他の使い方のメモです。
@@ -76,8 +76,9 @@ l10n:
 
 - `as`
 
-  - : この属性は、 `rel="preload"` または `rel="prefetch"` を `<link>` 要素に設定した場合に限り使用されます。
+  - : この属性は、 [`rel="preload"`](/ja/docs/Web/HTML/Attributes/rel/preload) を `<link>` 要素に設定した場合に必要となり、また [`rel="modulepreload"`](/ja/docs/Web/HTML/Attributes/rel/modulepreload) を設定した場合はオプションですが、それ以外は使用すべきではありません。
     これは `<link>` によって読み込まれるコンテンツのタイプを指定する属性であり、リクエストの照合、正しい[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)の適用、正しい {{HTTPHeader("Accept")}} リクエストヘッダーの設定のために必要です。
+
     さらに、 `rel="preload"` はこれをリクエストの優先度付の信号として使用します。下記の表はこの属性に有効な値と、適用先の要素またはリソースの一覧です。
 
     <table class="standard-table">
@@ -104,16 +105,23 @@ l10n:
           <td>fetch</td>
           <td>
             <p>fetch, XHR</p>
-            <div class=" note">
+            <div class="notecard note">
               <p>
-                <strong>Note:</strong> この値では <code>&#x3C;link></code> に crossorigin 属性が付いたものが必要です。
+                <strong>Note:</strong> この値では <code>&#x3C;link></code> に crossorigin 属性をつける必要があります。<a href="/ja/docs/Web/HTML/Attributes/rel/preload#cors_を使用した取得">CORS を使用した取得</a>を 参照してください。
               </p>
             </div>
           </td>
         </tr>
         <tr>
           <td>font</td>
-          <td>CSS @font-face</td>
+          <td>
+            <p>CSS @font-face</p>
+            <div class="notecard note">
+              <p>
+                <strong>Note:</strong> この値では <code>&#x3C;link></code> に crossorigin 属性をつける必要があります。<a href="/ja/docs/Web/HTML/Attributes/rel/preload#cors_を使用した取得">CORS を使用した取得</a>を 参照してください。
+              </p>
+            </div>
+          </td>
         </tr>
         <tr>
           <td>image</td>
@@ -153,6 +161,11 @@ l10n:
       </tbody>
     </table>
 
+- `blocking` {{Experimental_Inline}}
+
+  - : この属性は、外部リソースの取得時に特定の処理をブロックすることを明示的に示します。これは `rel` 属性に `expect` または `stylesheet` キーワードが格納されている場合にのみ使用しなければなりません。ブロックする演算子は、下記のブロックトークンをスペース区切りで列挙したものでなければなりません。
+    - `render`: 画面へのコンテンツの描画がブロックされます。
+
 - `crossorigin`
 
   - : [列挙型](/ja/docs/Glossary/Enumerated)の属性で、関連リソースを取得する際に {{Glossary("CORS")}} を使用しなければならないかを示します。
@@ -168,13 +181,13 @@ l10n:
     この属性が存在しない場合、リソースは {{Glossary("CORS")}} リクエストなしで (`Origin` HTTP ヘッダーを送信せずに) 取得され、汚染されない使用が妨げられます。これが無効な場合、列挙型のキーワード **anonymous** が指定されたものとして扱われます。
     それ以上の情報は [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin) を参照してください。
 
-- `disabled` {{Non-standard_Inline}}
+- `disabled`
 
   - : `rel="stylesheet"` の場合のみ、 `disabled` は論理属性であり、指定されたスタイルシートを読み込んで文書に適用するかどうかを示します。 `disabled` が HTML に読み込み時点で指定されていた場合、そのスタイルシートはページ読み込み処理の間に読み込まれません。代わりに、そのスタイルシートは `disabled` 属性が `false` に変更されたか削除された場合にオンデマンドで読み込まれます。
 
     DOM から `disabled` プロパティの値を変更すると、そのスタイルシートを文書の {{domxref("Document.styleSheets")}} の一覧から削除します。
 
-- `fetchpriority` {{Experimental_Inline}}
+- `fetchpriority`
 
   - : 先読みされたリソースを取得する際に使用する相対的な優先度のヒントを 提供します。使用できる値は次の通りです。
 
@@ -196,21 +209,17 @@ l10n:
   - : `rel="preload"` および `as="image"` において、 `imagesizes` 属性は、`img` 要素によって使用される適切なリソースを、その `srcset` および `sizes` 属性に対応する値で先読みすることを示す [sizes 属性](https://html.spec.whatwg.org/multipage/images.html#sizes-attribute)です。
 - `imagesrcset`
   - : `rel="preload"` および `as="image"` において、 `imagesrcset` 属性は `img` 要素によって使用される適切なリソースを、その `srcset` および `sizes` 属性に対応する値で先読みすることを示す [sourceset 属性](https://html.spec.whatwg.org/multipage/images.html#srcset-attribute)です。
-- `integrity` {{Experimental_Inline}}
-  - : この属性は、取得したリソースが予期せぬ改ざんを受けずに提供されたかを、ユーザーエージェントが検証するために使用できるメタデータである、ブラウザーに取得させたリソース (ファイル) の暗号学的ハッシュを BASE64 でエンコードしたデータを含みます。[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)をご覧ください。
+- `integrity`
+  - : インラインメタデータを格納します。ブラウザーに取得するよう指示するリソース (ファイル) の、base64 エンコードされた暗号化ハッシュです。
+    ブラウザーはこれを使用して、取得したリソースが予期せぬ操作なしに配信されたことを確認することができます。
+    この属性は、`rel` 属性が `stylesheet`、`preload`、`modulepreload` を指定した場合にのみ指定する必要があります。
+    [サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)を参照してください。
 - `media`
 
-  - : この属性は、リンク先のリソースが適用されるメディアを指定します。この値は[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)でなければなりません。この属性は主に外部のスタイルシートから、実行中のデバイスに最適なものをユーザーエージェントが選択できるようにリンクするときに役立ちます。
+  - : この属性は、リンク先のリソースが適用されるメディアを指定します。この値は[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)でなければなりません。
+    この属性は主に外部のスタイルシートから、実行中のデバイスに最適なものをユーザーエージェントが選択できるようにリンクするときに役立ちます。
 
-    > **メモ:**
-    >
-    > - HTML 4 では、単純なホワイトスペースで区切られたメディアリテラルのリストのみ記述できます。これは[メディア種別とグループ](/ja/docs/Web/CSS/@media) で、`print`, `screen`, `aural`, `braille` などの使用可能な値が定義されています。
-    >   HTML5 ではこれがあらゆる[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)に拡張され、 HTML 4 で使用できる値の上位互換となっています。
-    > - [CSS3 メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)に対応していないブラウザーは、リンクを適切に理解するとは限りません。 HTML 4 で定義されたメディアクエリーのセットに制限されるので、フォールバックリンクを設定することを忘れないでください。
-
-- `prefetch` {{secureContext_inline}} {{experimental_inline}}
-  - : この属性は、おそらく次のナビゲーション先で必要でありユーザーエージェントが取得すべきであるリソースを特定します。これは将来リソースがリクエストされたときに、ユーザーエージェントが早く応答することを可能にします。
-- `referrerpolicy` {{Experimental_Inline}}
+- `referrerpolicy`
 
   - : リソースを読み込む際にどのリファラーを使用するかを示す文字列です。
 
@@ -222,14 +231,15 @@ l10n:
 
 - `rel`
   - : この属性は現在の文書に対する、リンクされた文書の関係を示します。属性値は、空白で区切られた[リンク種別の値](/ja/docs/Web/HTML/Attributes/rel)のリストでなければなりません。
-- `sizes` {{Experimental_Inline}}
+- `sizes`
 
   - : この属性は、リソースに含まれる映像メディア向けのアイコンのサイズを定義します。これは、 [`rel`](#rel) の値が `icon` または Apple の `apple-touch-icon` のような標準外の種別が含まれている場合にのみ指定することができます。以下の値を指定できます。
 
     - `any`: `image/svg+xml` のようなベクター画像であるため、どのようなサイズにも調整可能であることを示します。
     - ホワイトスペースで区切られたサイズのリスト。サイズはそれぞれ `<幅のピクセル数>x<高さのピクセル数>` または `<幅のピクセル数>X<高さのピクセル数>` という形式です。それぞれのサイズがリソースに含まれていることが必要です。
 
-    > **メモ:** ほとんどのアイコン形式は 1 個のアイコンのみ保存可能です。よってほとんどの場合、 [`sizes`](#sizes) 属性はエントリーが 1 個だけになります。
+    > [!NOTE]
+    > ほとんどのアイコン形式は 1 個のアイコンのみ保存可能です。よってほとんどの場合、 [`sizes`](#sizes) 属性はエントリーが 1 個だけになります。
     > アップルの ICN はもちろん、マイクロソフトの ICO 形式も使用できます。 ICO の方が一般的であり、複数ブラウザーの対応 (特に IE の古いバージョン) が重要である場合はこの形式を使用してください。
 
 - `title`
@@ -238,9 +248,6 @@ l10n:
   - : この属性は、リンク先コンテンツの種類を定義します。この属性の値は **text/html** や **text/css** などの MIME タイプにします。
     この属性の一般的な使用法は、参照されるスタイルシートのタイプ（**text/css** など）の定義ですが、 CSS はウェブ上の唯一のスタイルシート言語であるため、`type` 属性を省略できるばかりでなく、それが実際に推奨される習慣になっています。
     また `rel="preload"` リンク種別で、ブラウザーが対応するファイルタイプのみダウンロードさせるためにも使用します。
-- `blocking` {{Experimental_Inline}}
-  - : この属性は、外部リソースの読み取り時に特定の処理をブロックすべきであることを明示的に示します。ブロックされる操作は、下記のブロック属性をスペースで区切った一覧でなければなりません。
-    - `render`: 画面に描画するコンテンツがブロックされます。
 
 ### 標準外の属性
 
@@ -260,7 +267,8 @@ l10n:
   - : この属性は、リンク先のリソースの文字エンコーディングを定義します。この値は {{rfc(2045)}} で定義されている文字セットの、スペースまたはカンマで区切られたリストです。
     既定値は `iso-8859-1` です。
 
-    > **メモ:** この廃止された属性と同じ効果を生み出すためには、リンク先のリソースで HTTP の {{HTTPHeader("Content-Type")}} ヘッダーを使用してください。
+    > [!NOTE]
+    > この廃止された属性と同じ効果を生み出すためには、リンク先のリソースで HTTP の {{HTTPHeader("Content-Type")}} ヘッダーを使用してください。
 
 - `rev` {{deprecated_inline}}
 
@@ -268,7 +276,8 @@ l10n:
     従って、この属性は `rel` 属性の値と比べたときに逆向きの関係を定義します。
     この属性向けの[リンク種別の値](/ja/docs/Web/HTML/Attributes/rel)は、[`rel`](#rel) 向けの値と似ています。
 
-    > **メモ:** 代わりに、逆の意味の[リンク種別の値](/ja/docs/Web/HTML/Attributes/rel)を与えた [`rel`](#rel) 属性を使用してください。例えば `made` は `author` に置き換えます。また、この属性は「リビジョン」 (revision) を表すものではないので、バージョン番号を指定してはいけませんが、残念ながらいくつものサイトでそのように使用されています。
+    > [!NOTE]
+    > 代わりに、逆の意味の[リンク種別の値](/ja/docs/Web/HTML/Attributes/rel)を与えた [`rel`](#rel) 属性を使用してください。例えば `made` は `author` に置き換えます。また、この属性は「リビジョン」 (revision) を表すものではないので、バージョン番号を指定してはいけませんが、残念ながらいくつものサイトでそのように使用されています。
 
 ## 例
 
@@ -299,19 +308,13 @@ l10n:
 
 ```html
 <!-- 高解像度ディスプレイの第 3 世代 iPad -->
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="144x144"
-  href="favicon144.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="favicon144.png" />
 <!-- 高解像度ディスプレイの iPhone -->
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="114x114"
-  href="favicon114.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="favicon114.png" />
 <!-- 第 1、第 2 世代の iPad: -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="favicon72.png" />
 <!-- 高解像度でない iPhone, iPod Touch, Android 2.1 以降の端末 -->
-<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
+<link rel="apple-touch-icon" href="favicon57.png" />
 <!-- 基本的なファビコン -->
 <link rel="icon" href="favicon32.png" />
 ```
@@ -338,8 +341,10 @@ l10n:
 `load` イベントの発生を確認することで、スタイルシートが読み込まれた時を判断できます。同様に `error` イベントを確認することで、スタイルシートを処理する際のエラー発生を検出できます。
 
 ```html
+<link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet" />
+
 <script>
-  const stylesheet = document.querySelector("#my-stylesheet");
+  const stylesheet = document.getElementById("my-stylesheet");
 
   stylesheet.onload = () => {
     // Do something interesting; the sheet has been loaded
@@ -349,8 +354,6 @@ l10n:
     console.log("An error occurred loading the stylesheet!");
   };
 </script>
-
-<link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet" />
 ```
 
 > **メモ:** `load` イベントはスタイルシートとスタイルシートがインポートするすべてのコンテンツの読み込みと解析が行われた後、スタイルシートがコンテンツに適用される直前に発生します。
@@ -365,7 +368,7 @@ l10n:
 指定すると、リソースが取り込まれるまでページのレンダリングがブロックされます。
 
 ```html
-<link blocking="render" href="critical-font.woff2" as="font" />
+<link blocking="render" rel="stylesheet" href="example.css" crossorigin />
 ```
 
 ## 技術的概要
@@ -387,7 +390,7 @@ l10n:
     </tr>
     <tr>
       <th>タグの省略</th>
-      <td>空要素であるため開始タグは必須であり、終了タグは置いてはいけません。</td>
+      <td>開始タグは必須であり、終了タグを置いてはいけません。</td>
     </tr>
     <tr>
       <th>許可されている親要素</th>
@@ -422,3 +425,4 @@ l10n:
 ## 関連情報
 
 - HTTP の {{HTTPHeader("Link")}} ヘッダー
+- [The `integrity` attribute](https://150daysofhtml.com/book/day010/) (150daysofhtml.com, 2021)

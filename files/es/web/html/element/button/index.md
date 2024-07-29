@@ -3,6 +3,8 @@ title: button
 slug: Web/HTML/Element/button
 ---
 
+{{HTMLSidebar}}
+
 ## Definición
 
 **button** = botón.
@@ -372,6 +374,7 @@ Más información (en inglés):
 
 ---
 
-> **Nota:** Estamos ampliando este documento, posiblemente contenga carencias y defectos. ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> Estamos ampliando este documento, posiblemente contenga carencias y defectos. ¡Estamos en obras!... disculpen las molestias.
 >
 > ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta [MDC:Como ayudar](/es/docs/Project:Como_ayudar).

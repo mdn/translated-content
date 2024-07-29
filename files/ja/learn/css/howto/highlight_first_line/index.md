@@ -21,7 +21,8 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/howto/highlight_first_line.html", '100%', 750)}}
 
-> **メモ:** すべての擬似要素はこのように動作します。それらは、文書内に要素を挿入したかのように振る舞いますが、実行時に表示されるコンテンツに基づいて動的にそうします。
+> [!NOTE]
+> すべての擬似要素はこのように動作します。それらは、文書内に要素を挿入したかのように振る舞いますが、実行時に表示されるコンテンツに基づいて動的にそうします。
 
 ## 擬似要素と他のセレクターの組み合わせ
 
@@ -29,7 +30,8 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/howto/highlight_first_line2.html", '100%', 700)}}
 
-> **メモ:** 擬似要素を[複雑セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複雑セレクター)または[複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複合セレクター)で他のセレクターと組み合わせた場合、擬似要素はセレクターの中で、他のすべての要素の後に置かなければなりません。
+> [!NOTE]
+> 擬似要素を[複雑セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複雑セレクター)または[複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複合セレクター)で他のセレクターと組み合わせた場合、擬似要素はセレクターの中で、他のすべての要素の後に置かなければなりません。
 
 ## 関連情報
 

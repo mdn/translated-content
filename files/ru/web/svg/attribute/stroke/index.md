@@ -3,6 +3,8 @@ title: stroke
 slug: Web/SVG/Attribute/stroke
 ---
 
+{{SVGRef}}
+
 « [SVG Attribute reference home](/en/SVG/Attribute)
 
 Атрибут обводки определяет цвет контура в данном графическом элементе. Значение по умолчанию для атрибута обводки — **None**.

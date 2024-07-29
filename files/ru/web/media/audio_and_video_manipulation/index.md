@@ -3,7 +3,7 @@ title: Обработка аудио и видео
 slug: Web/Media/Audio_and_video_manipulation
 ---
 
-Веб-технологии примечательны тем, что они позволяют использовать различные инструменты в совокупности. Например, можно проводить манипуляции над имеющимися в браузере аудио и видео потоками с помощью {{htmlelement("canvas")}}, [WebGL](/ru/docs/Web/WebGL) или [Web Audio API](/ru/docs/Web/API/Web_Audio_API): напрямую изменять аудио и видео, т.е. добавлять эффекты к аудио (реверберацию, компрессор), или к видео (фильтры ч/б, сепия и т.д.). В этой статье рассказывается о том, как это сделать.
+Веб-технологии примечательны тем, что они позволяют использовать различные инструменты в совокупности. Например, можно проводить манипуляции над имеющимися в браузере аудио и видео потоками с помощью {{htmlelement("canvas")}}, [WebGL](/ru/docs/Web/API/WebGL_API) или [Web Audio API](/ru/docs/Web/API/Web_Audio_API): напрямую изменять аудио и видео, т.е. добавлять эффекты к аудио (реверберацию, компрессор), или к видео (фильтры ч/б, сепия и т.д.). В этой статье рассказывается о том, как это сделать.
 
 > **Примечание:** **Далее** ещё в процессе перевода.
 
@@ -115,11 +115,11 @@ processor.doLoad();
 
 This is a pretty simple example showing how to manipulate video frames using a canvas. For efficiency, you should consider using {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} instead of `setTimeout()` when running on browsers that support it.
 
-> **Примечание:** Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](/ru/docs/Web/HTTP/Access_control_CORS) on your video server.
+> **Примечание:** Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](/ru/docs/Web/HTTP/CORS) on your video server.
 
 ### Видео и WebGL
 
-[WebGL](/ru/docs/Web/WebGL) is a powerful API that uses canvas to draw hardware-accelerated 3D or 2D scenes. You can combine WebGL and the {{htmlelement("video")}} element to create video textures, which means you can put video inside 3D scenes.
+[WebGL](/ru/docs/Web/API/WebGL_API) is a powerful API that uses canvas to draw hardware-accelerated 3D or 2D scenes. You can combine WebGL and the {{htmlelement("video")}} element to create video textures, which means you can put video inside 3D scenes.
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
@@ -191,7 +191,7 @@ window.addEventListener("load", setPlaybackRate);
 
 {{ EmbedLiveSample('Playable_code', 700, 425) }}
 
-> **Примечание:** Попробуйте запустить [этот пример](http://jsbin.com/qomuvefu/2/edit).
+> **Примечание:** Попробуйте запустить [этот пример](https://jsbin.com/qomuvefu/2/edit).
 
 ## Обработка аудио
 
@@ -293,7 +293,7 @@ window.addEventListener("load", setFilter);
 
 {{ EmbedLiveSample('Playable_code_2', 700, 425) }}
 
-> **Примечание:** unless you have [CORS](/ru/docs/Web/HTTP/Access_control_CORS) enabled, to avoid security issues your video should be on the same domain as your code.
+> **Примечание:** unless you have [CORS](/ru/docs/Web/HTTP/CORS) enabled, to avoid security issues your video should be on the same domain as your code.
 
 #### Типичные для аудио фильтры
 
@@ -367,19 +367,19 @@ Libraries currently exist for the following formats :
 
 - [Various Web Audio API (and other) examples](https://github.com/mdn/)
 - [THREE.js Video Cube example](https://github.com/chrisdavidmills/threejs-video-cube)
-- [Convolution Effects in Real-Time](http://chromium.googlecode.com/svn/trunk/samples/audio/convolution-effects.html)
+- [Convolution Effects in Real-Time](https://chromium.googlecode.com/svn/trunk/samples/audio/convolution-effects.html)
 
 ## Смотрите также
 
 ### Tutorials
 
-- [Manipulating Video Using Canvas](/ru/docs/Web/HTML/Manipulating_video_using_canvas)
-- [HTML5 playbackRate explained](/en-US/Apps/Build/Manipulating_media/HTML5_playbackRate_explained)
+- [Manipulating Video Using Canvas](/ru/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
+- [HTML5 playbackRate explained](/ru/docs/Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained)
 - [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web audio spatialisation basics](/ru/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)
-- [Using Video frames as a WebGL Texture](/ru/docs/Web/WebGL/Animating_textures_in_WebGL#Using_the_video_frames_as_a_texture) (You can also the [THREE.js](http://threejs.org) WebGL library (and others) to [achieve this effect](http://stemkoski.github.io/Three.js/Video.html))
-- [Animating Textures in WebGL](/ru/docs/Web/WebGL/Animating_textures_in_WebGL)
-- [Developing Game Audio with the Web Audio API (Room effects and filters)](http://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room)
+- [Web audio spatialisation basics](/ru/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Using Video frames as a WebGL Texture](/ru/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#using_the_video_frames_as_a_texture) (You can also the [THREE.js](https://threejs.org) WebGL library (and others) to [achieve this effect](http://stemkoski.github.io/Three.js/Video.html))
+- [Animating Textures in WebGL](/ru/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
+- [Developing Game Audio with the Web Audio API (Room effects and filters)](https://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room)
 
 ### Reference
 
@@ -388,7 +388,7 @@ Libraries currently exist for the following formats :
 - The {{htmlelement("canvas")}} element
 - [Web Audio API](/ru/docs/Web/API/Web_Audio_API)
 - [AudioContext](/ru/docs/Web/API/AudioContext)
-- More info on [Spatial Audio](/ru/docs/Web/API/AudioContext.createPanner)
+- More info on [Spatial Audio](/ru/docs/Web/API/BaseAudioContext/createPanner)
 - [Web media technologies](/ru/docs/Web/Media)
 
 {{QuickLinksWithSubpages("/ru/docs/Web/Apps/Fundamentals/")}}

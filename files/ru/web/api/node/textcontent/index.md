@@ -3,9 +3,7 @@ title: Node.textContent
 slug: Web/API/Node/textContent
 ---
 
-{{ApiRef}}
-
-## Аннотация
+{{APIRef("DOM")}}
 
 Позволяет задавать или получать текстовое содержимое элемента и его потомков.
 

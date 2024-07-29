@@ -9,7 +9,8 @@ l10n:
 
 **`<strike>`** [HTML](/zh-CN/docs/Web/HTML) 元素在文本上添加删除线（水平线）。
 
-> **警告：** 该元素在 HTML 4 和 XHTML 1 中已被弃用，并且在 [HTML 动态标准](https://html.spec.whatwg.org/multipage/obsolete.html#strike)被弃用。如果语义合适，即表示*已删除*的内容，请使用 {{HTMLElement("del")}} 来代替。在所有其他情况下，请使用 {{HTMLElement("s")}}。
+> [!WARNING]
+> 该元素在 HTML 4 和 XHTML 1 中已被弃用，并且在 [HTML 动态标准](https://html.spec.whatwg.org/multipage/obsolete.html#strike)被弃用。如果语义合适，即表示*已删除*的内容，请使用 {{HTMLElement("del")}} 来代替。在所有其他情况下，请使用 {{HTMLElement("s")}}。
 
 ## 属性
 

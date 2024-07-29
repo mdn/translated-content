@@ -3,6 +3,8 @@ title: canvas
 slug: Web/HTML/Element/canvas
 ---
 
+{{HTMLSidebar}}
+
 El elemento HTML _canvas_ (\<canvas>) se puede utilizar para dibujar gráficos a través de secuencias de comandos (por lo general [JavaScript](/en/JavaScript) ). Por ejemplo, puede usarse para dibujar gráficos, hacer composiciones de fotos o incluso realizar animaciones.
 
 Las aplicaciones de Mozilla adquirieron la compatibilidad con `<canvas>` a partir de Gecko 1.8 (es decir, [Firefox 1.5](/en/Firefox_1.5_for_developers) ). El elemento fue originalmente introducido por Apple en el OS X [Dashboard](http://www.apple.com/macosx/features/dashboard/) y Safari. Internet Explorer, antes de la versión 9.0 beta, no admite de forma nativa `<canvas>` , pero una página puede de hecho añadir la compatibilidad mediante la inclusión de un script del proyecto [Explorer Canvas](http://excanvas.sourceforge.net/) de Google. Opera 9 también es compatible con `<canvas>` .
@@ -24,7 +26,8 @@ Para más artículos sobre canvas, consulta la [página del tema canvas](/es/HTM
 - `height`
   - : La altura del espacio de coordenadas en píxeles CSS. El valor predeterminado es 150.
 
-> **Nota:** el tamaño del lienzo mostrado se puede cambiar con una hoja de estilo. La imagen se escala durante la representación para adaptarse al tamaño que se le ha aplicado estilo .
+> [!NOTE]
+> El tamaño del lienzo mostrado se puede cambiar con una hoja de estilo. La imagen se escala durante la representación para adaptarse al tamaño que se le ha aplicado estilo .
 
 ## Interfaz DOM
 

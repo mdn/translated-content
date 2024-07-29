@@ -93,7 +93,8 @@ En el ejemplo siguiente hemos especificado tres elementos de flotación `<div>` 
 
 {{ EmbedLiveSample('Example1', '100%', '200') }}
 
-> **Nota:** La propiedad {{cssxref ("clear")}} tampoco tiene efecto una vez que el elemento al que se le aplica se convierte en un elemento de cuadrícula, por lo que podrías tener una compaginación con un pie `clear`, que luego pase a ser un elemento de compaginación en cuadrícula.
+> [!NOTE]
+> La propiedad {{cssxref ("clear")}} tampoco tiene efecto una vez que el elemento al que se le aplica se convierte en un elemento de cuadrícula, por lo que podrías tener una compaginación con un pie `clear`, que luego pase a ser un elemento de compaginación en cuadrícula.
 
 ### Métodos de soluciones alternativas
 

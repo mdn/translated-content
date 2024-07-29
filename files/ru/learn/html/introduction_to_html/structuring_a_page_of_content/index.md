@@ -19,7 +19,7 @@ slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 - CSS для стилизации вашей разметки.
 - Изображения, которые используются на странице.
 
-Создайте пример на вашем локальном компьютере или, альтернативно, используйте сайт, например [JSBin](http://jsbin.com/) или [Thimble](https://thimble.mozilla.org/) для исследования.
+Создайте пример на вашем локальном компьютере или, альтернативно, используйте сайт, например [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/) для исследования.
 
 ## Краткое описание проекта
 

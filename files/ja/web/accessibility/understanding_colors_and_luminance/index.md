@@ -126,11 +126,12 @@ RGBはCRTを使用することを反映したハードウェア指向のもの�
 
 しかし、アクセシビリティに関する標準と規格の作成は、特に色のコントラスト比に適用される sRGB 色空間を主に使用しています。
 
-> **メモ:** 今日、ウェブコンテンツを表示するために使用されているほとんどすべてのシステムは、 sRGB エンコード方式を想定しています。コンテンツの処理と表示に別の色空間を使用することがわかっていない限り、作成者は sRGB 色空間を使用して評価する必要があります。他にも色空間を用いる場合は、[最小コントラスト比](https://webaim.org/articles/contrast/#sc143)の原則を適用してください。
+> [!NOTE]
+> 今日、ウェブコンテンツを表示するために使用されているほとんどすべてのシステムは、 sRGB エンコード方式を想定しています。コンテンツの処理と表示に別の色空間を使用することがわかっていない限り、作成者は sRGB 色空間を使用して評価する必要があります。他にも色空間を用いる場合は、[最小コントラスト比](https://webaim.org/articles/contrast/#sc143)の原則を適用してください。
 
 ### 色値の問い合わせ
 
-{{domxref('Window.getComputedStyle()')}} メソッドは、 RGB 10 進参照スケールを使用するか、 `color(srgb...)` によって値を返します。例えば、 `Window.getComputedStyle()` を `<div>` に `background-color: #ff0000` を設定したものに対して呼び出すと、背景色の計算値を `rgb(255 0 0)` — RGB 10 進参照として返します。しかし、[相対色を使用する](/ja/docs/Web/CSS/CSS_colors/Relative_colors)（例えば `background-color: rgb(from blue 255 0 0)` の）場合、`Window.getComputedStyle()` を呼び出すと、計算された背景色が `color(srgb 1 0 0)` として返されます。コンピュータのハードウェアに関連しているため、 `Window.getComputedStyle()` は人間の目がどのように色を知覚するかではなく、 RGB の観点から色を測定します。
+{{domxref('Window.getComputedStyle()')}} メソッドは、 RGB 10 進参照スケールを使用するか、 `color(srgb...)` によって値を返します。例えば、 `Window.getComputedStyle()` を `<div>` に `background-color: #ff0000` を設定したものに対して呼び出すと、背景色の計算値を `rgb(255 0 0)` — RGB 10 進参照として返します。しかし、[相対色を使用する](/ja/docs/Web/CSS/CSS_colors/Relative_colors)（例えば `background-color: rgb(from blue 255 0 0)` の）場合、`Window.getComputedStyle()` を呼び出すと、計算された背景色が `color(srgb 1 0 0)` として返されます。コンピューターのハードウェアに関連しているため、 `Window.getComputedStyle()` は人間の目がどのように色を知覚するかではなく、 RGB の観点から色を測定します。
 
 ### 赤緑色覚障碍
 

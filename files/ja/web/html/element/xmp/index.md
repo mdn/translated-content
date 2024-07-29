@@ -2,7 +2,7 @@
 title: <xmp>
 slug: Web/HTML/Element/xmp
 l10n:
-  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
+  sourceCommit: 91ce00bce8168b0cbd35773f33ba660eba9d5180
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}
@@ -11,7 +11,8 @@ l10n:
 
 **`<xmp>`** は [HTML](/ja/docs/Web/HTML) の要素で、その開始タグから終了タグまでの間のタグを HTML として解釈せず、等幅フォントでレンダリングします。 HTML2 仕様書では、これを 1 行当たり 80 文字を表示するのに充分な幅でレンダリングするよう推奨しています。
 
-> **メモ:** この要素は使用しないでください。
+> [!NOTE]
+> この要素は使用しないでください。
 >
 > - HTML3.2 から非推奨要素となっており、また一貫した実装も存在しません。そして HTML5 の言語からは完全に削除されています。
 > - 代わりに {{HTMLElement("pre")}} 要素か、意味的に適切であれば {{HTMLElement("code")}} 要素を使用してください。なお、マークアップとして解釈されないようにするには、 '`<`' の文字を '`&lt;`' としてエスケープする必要があります。

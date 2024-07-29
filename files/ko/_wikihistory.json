@@ -2691,11 +2691,11 @@
       "dakeshi"
     ]
   },
-  "Web/API/Document_object_model/Locating_DOM_elements_using_selectors": {
+  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
     "modified": "2019-05-29T17:36:17.250Z",
     "contributors": ["jswisher", "alattalatta"]
   },
-  "Web/API/Document_object_model/Using_the_Document_Object_Model": {
+  "Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
     "modified": "2020-03-10T10:48:51.010Z",
     "contributors": ["kimploo"]
   },
@@ -2926,10 +2926,6 @@
   "Web/API/Fetch_API": {
     "modified": "2020-10-15T21:59:47.472Z",
     "contributors": ["alattalatta", "ggihwa", "jennybehan", "gw1021", "BANIP"]
-  },
-  "Web/API/Fetch_API/Basic_concepts": {
-    "modified": "2019-03-18T21:45:15.491Z",
-    "contributors": ["BANIP"]
   },
   "Web/API/Fetch_API/Using_Fetch": {
     "modified": "2020-10-15T22:00:18.673Z",
@@ -4416,6 +4412,10 @@
     "modified": "2020-02-01T07:17:19.974Z",
     "contributors": ["alattalatta"]
   },
+  "Web/API/Window/crypto": {
+    "modified": "2020-10-15T21:40:03.517Z",
+    "contributors": ["alattalatta", "hoony"]
+  },
   "Web/API/Window/customElements": {
     "modified": "2020-10-15T22:26:45.848Z",
     "contributors": ["alattalatta"]
@@ -4537,6 +4537,10 @@
     "modified": "2020-10-15T21:39:32.282Z",
     "contributors": ["alattalatta", "Parcovia", "."]
   },
+  "Web/API/Window/requestAnimationFrame": {
+    "modified": "2020-10-15T22:05:43.676Z",
+    "contributors": ["cs09g", "Snark"]
+  },
   "Web/API/Window/requestIdleCallback": {
     "modified": "2020-10-15T22:01:12.462Z",
     "contributors": ["alattalatta", "jeonnoej"]
@@ -4649,17 +4653,9 @@
     "modified": "2019-11-21T00:57:37.403Z",
     "contributors": ["wbamberg", "chrisdavidmills", "teoli", "Netaras"]
   },
-  "Web/API/crypto_property": {
-    "modified": "2020-10-15T21:40:03.517Z",
-    "contributors": ["alattalatta", "hoony"]
-  },
   "Web/API/setTimeout": {
     "modified": "2019-03-23T22:22:22.449Z",
     "contributors": ["DevJang", "TroyTae"]
-  },
-  "Web/API/window/requestAnimationFrame": {
-    "modified": "2020-10-15T22:05:43.676Z",
-    "contributors": ["cs09g", "Snark"]
   },
   "Web/Accessibility": {
     "modified": "2019-09-09T14:15:43.285Z",
@@ -4714,10 +4710,6 @@
   "Web/CSS/-webkit-line-clamp": {
     "modified": "2020-10-15T22:25:56.637Z",
     "contributors": ["alattalatta"]
-  },
-  "Web/CSS/-webkit-overflow-scrolling": {
-    "modified": "2020-10-15T21:37:39.290Z",
-    "contributors": ["alattalatta", "epicsaga"]
   },
   "Web/CSS/::after": {
     "modified": "2020-10-15T21:37:38.967Z",
@@ -7911,7 +7903,7 @@
     "modified": "2020-03-12T19:44:32.792Z",
     "contributors": ["magnoliaa"]
   },
-  "Web/JavaScript/Reference/Errors/Deprecated_octal": {
+  "Web/JavaScript/Reference/Errors/Deprecated_octal_literal": {
     "modified": "2020-03-12T19:48:30.330Z",
     "contributors": ["magnoliaa"]
   },
@@ -7979,10 +7971,6 @@
     "modified": "2020-03-12T19:47:45.484Z",
     "contributors": ["Olivia_J"]
   },
-  "Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement": {
-    "modified": "2020-03-12T19:46:46.133Z",
-    "contributors": ["magnoliaa"]
-  },
   "Web/JavaScript/Reference/Errors/More_arguments_needed": {
     "modified": "2020-03-12T19:48:33.843Z",
     "contributors": ["magnoliaa"]
@@ -8041,10 +8029,6 @@
   },
   "Web/JavaScript/Reference/Errors/Undeclared_var": {
     "modified": "2020-03-12T19:44:33.741Z",
-    "contributors": ["magnoliaa"]
-  },
-  "Web/JavaScript/Reference/Errors/Undefined_prop": {
-    "modified": "2020-03-12T19:44:33.728Z",
     "contributors": ["magnoliaa"]
   },
   "Web/JavaScript/Reference/Errors/Unexpected_token": {
@@ -8107,7 +8091,7 @@
     "modified": "2020-10-15T21:38:47.452Z",
     "contributors": ["alattalatta", "Netaras", "tmxkwkfgka"]
   },
-  "Web/JavaScript/Reference/Functions/arguments/@@iterator": {
+  "Web/JavaScript/Reference/Functions/arguments/Symbol.iterator": {
     "modified": "2020-10-15T22:12:01.387Z",
     "contributors": ["alattalatta", "vividhee"]
   },
@@ -8165,21 +8149,21 @@
       "Aeuiop"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@iterator": {
-    "modified": "2020-10-15T21:43:02.789Z",
-    "contributors": ["alattalatta", "KisukPark", "hwangtan", "."]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@species": {
-    "modified": "2020-10-15T21:50:41.909Z",
-    "contributors": ["alattalatta", "KisukPark", "imskojs"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@unscopables": {
-    "modified": "2020-10-15T21:50:41.776Z",
-    "contributors": ["alattalatta", "zziuni", "imskojs"]
-  },
   "Web/JavaScript/Reference/Global_Objects/Array/Array": {
     "modified": "2020-10-15T22:26:58.481Z",
     "contributors": ["alattalatta"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator": {
+    "modified": "2020-10-15T21:43:02.789Z",
+    "contributors": ["alattalatta", "KisukPark", "hwangtan", "."]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.species": {
+    "modified": "2020-10-15T21:50:41.909Z",
+    "contributors": ["alattalatta", "KisukPark", "imskojs"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables": {
+    "modified": "2020-10-15T21:50:41.776Z",
+    "contributors": ["alattalatta", "zziuni", "imskojs"]
   },
   "Web/JavaScript/Reference/Global_Objects/Array/concat": {
     "modified": "2020-10-15T21:38:49.144Z",
@@ -9603,13 +9587,13 @@
     "modified": "2019-06-18T04:56:00.166Z",
     "contributors": ["kooljay82", "Netaras", "Khai96_"]
   },
-  "Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator": {
-    "modified": "2019-03-23T22:30:48.269Z",
-    "contributors": ["Netaras"]
-  },
   "Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT": {
     "modified": "2020-10-15T21:47:35.788Z",
     "contributors": ["alattalatta", "Netaras"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator": {
+    "modified": "2019-03-23T22:30:48.269Z",
+    "contributors": ["Netaras"]
   },
   "Web/JavaScript/Reference/Global_Objects/TypedArray/buffer": {
     "modified": "2019-03-23T22:30:15.273Z",
@@ -10762,6 +10746,10 @@
     "modified": "2019-01-17T02:54:48.050Z",
     "contributors": ["wbamberg", "zziuni"]
   },
+  "conflicting/Web/API/Fetch_API/Using_Fetch_c0ca150deec7d78cb1d4462e8542019b": {
+    "modified": "2019-03-18T21:45:15.491Z",
+    "contributors": ["BANIP"]
+  },
   "conflicting/Web/API/XSLTProcessor": {
     "modified": "2019-03-23T23:42:13.222Z",
     "contributors": ["chrisdavidmills", "teoli", "Sebuls"]
@@ -10807,6 +10795,10 @@
     "modified": "2020-03-12T19:44:24.834Z",
     "contributors": ["magnoliaa"]
   },
+  "conflicting/Web/JavaScript/Reference/Errors/Unexpected_token": {
+    "modified": "2020-03-12T19:46:46.133Z",
+    "contributors": ["magnoliaa"]
+  },
   "orphaned/Learn/Front-end_web_developer": {
     "modified": "2020-09-26T16:42:10.726Z",
     "contributors": ["DeadIntegral"]
@@ -10819,9 +10811,17 @@
     "modified": "2019-03-23T23:26:46.443Z",
     "contributors": ["yunji_koh"]
   },
+  "orphaned/Web/CSS/-webkit-overflow-scrolling": {
+    "modified": "2020-10-15T21:37:39.290Z",
+    "contributors": ["alattalatta", "epicsaga"]
+  },
   "orphaned/Web/HTML/Element/applet": {
     "modified": "2019-03-23T22:50:49.180Z",
     "contributors": ["Basix"]
+  },
+  "orphaned/Web/JavaScript/Reference/Errors/Undefined_prop": {
+    "modified": "2020-03-12T19:44:33.728Z",
+    "contributors": ["magnoliaa"]
   },
   "orphaned/Web/SVG/Element/altGlyph": {
     "modified": "2020-10-15T21:40:13.413Z",

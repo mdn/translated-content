@@ -3,7 +3,7 @@ title: Document.createComment()
 slug: Web/API/Document/createComment
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
 ## Основное
 

@@ -3,7 +3,7 @@ title: PushManager.subscribe()
 slug: Web/API/PushManager/subscribe
 ---
 
-{{SeeCompatTable}}{{ApiRef("Push API")}}
+{{APIRef("Push API")}} {{SecureContext_Header}} {{AvailableInWorkers}}
 
 Метод **`subscribe()`** интерфейса {{domxref("PushManager")}} позволяет осуществлять подписку на push-уведомления.
 

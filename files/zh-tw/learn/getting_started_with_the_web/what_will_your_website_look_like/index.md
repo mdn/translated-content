@@ -17,7 +17,8 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 2. **你對某個主題所提供的資訊到哪種程度？**寫個標題加上幾段文字，或是在網頁上加個圖片。
 3. 簡單的問：**你網站的外觀為何？**背景顏色？哪種字型比較合適？一般字型？卡通化的字型？又粗又大的字體？還是要纖細淡化的文字呢？
 
-> **備註：** 複雜專案就需要更詳細的建構指南，包含所用的顏色、字型、物件之間的留白空間、適合的書寫風格，等等。這些要素有時會統整為設計指南或品牌手冊，你可參閱〈[Firefox OS Guidelines](https://www.mozilla.org/en-US/styleguide/products/firefox-os/)〉進一步了解。
+> [!NOTE]
+> 複雜專案就需要更詳細的建構指南，包含所用的顏色、字型、物件之間的留白空間、適合的書寫風格，等等。這些要素有時會統整為設計指南或品牌手冊，你可參閱〈[Firefox OS Guidelines](https://www.mozilla.org/en-US/styleguide/products/firefox-os/)〉進一步了解。
 
 ## 從頭設計
 
@@ -25,7 +26,8 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 
 ![](website-drawing-scan.png)
 
-> **備註：** 即便是實際的複雜網站，設計團隊也都會先在紙上勾勒草圖，再接著透過圖檔編輯器或 Web 技術弄出數位版的草稿。
+> [!NOTE]
+> 即便是實際的複雜網站，設計團隊也都會先在紙上勾勒草圖，再接著透過圖檔編輯器或 Web 技術弄出數位版的草稿。
 >
 > Web 團隊往往編制了圖像設計師與{{Glossary("UX", "使用者經驗")}} (User Experience；UX) 設計師各 1 名。圖像設計師當然是負責整合網站的視覺效果；較屬抽象角色的 UX 設計師則要確定使用者與網站的互動方式。
 
@@ -53,7 +55,8 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 
 ![](updated-google-images.png)
 
-> **備註：** 在網路上可找到的大多數圖片，包含 Google 圖片服務在內，都已註冊了著作權。為了避免自己可能違反著作權法，你可以透過 Google 的授權篩選功能。只要點擊「**搜尋工具**」再找到「**使用權限**」即可：
+> [!NOTE]
+> 在網路上可找到的大多數圖片，包含 Google 圖片服務在內，都已註冊了著作權。為了避免自己可能違反著作權法，你可以透過 Google 的授權篩選功能。只要點擊「**搜尋工具**」再找到「**使用權限**」即可：
 >
 > ![](updated-google-images-licensing.png)
 

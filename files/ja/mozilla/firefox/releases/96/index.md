@@ -49,7 +49,7 @@ slug: Mozilla/Firefox/Releases/96
 
 #### DOM
 
-- {{domxref("IntersectionObserver.IntersectionObserver()","IntersectionObserver()")}} コンストラクターが、関連づけられたパラメーターオプションで空文字列が渡された場合に、例外を発生させるのに代わって既定値 `rootMargin` を設定するようになりました ([Firefox バグ 1738791](https://bugzil.la/1738791))。
+- {{domxref("IntersectionObserver.IntersectionObserver()","IntersectionObserver()")}} コンストラクターが、関連づけられた引数オプションで空文字列が渡された場合に、例外を発生させるのに代わって既定値 `rootMargin` を設定するようになりました ([Firefox バグ 1738791](https://bugzil.la/1738791))。
 
 #### Media、WebRTC、Web Audio
 

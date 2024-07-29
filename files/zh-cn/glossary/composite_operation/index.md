@@ -2,7 +2,7 @@
 title: 复合操作
 slug: Glossary/Composite_operation
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
 {{GlossarySidebar}}
@@ -15,7 +15,8 @@ l10n:
 - **add**：效果值加到基础值上。
 - **accumulate**：效果值与基础值相结合。
 
-> **备注：** CSS 中的合成操作仅适用于动画。
+> [!NOTE]
+> CSS 中的合成操作仅适用于动画。
 
 ## 参见
 

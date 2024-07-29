@@ -3,6 +3,8 @@ title: Introducción a XML
 slug: Web/XML/XML_introduction
 ---
 
+{{QuickLinksWithSubpages("/es/docs/Web/XML")}}
+
 XML es un lenguaje de marcado similar a HTML. Significa Extensible Markup Language (Lenguaje de Marcado Extensible) y es una especificación de [W3C](https://www.w3.org/TR/xml/) como lenguaje de marcado de propósito general. Esto significa que, a diferencia de otros lenguajes de marcado, XML no está predefinido, por lo que debes definir tus propias etiquetas. El propósito principal del lenguaje es compartir datos a través de diferentes sistemas, como Internet.
 
 Hay muchos lenguajes basados en XML; Algunos ejemplos son [XHTML](/es/docs/XHTML), [MathML](/es/docs/Web/MathML), [SVG](/es/docs/Web/SVG), [XUL](/es/docs/Mozilla/Tech/XUL), [XBL](/es/docs/XBL), [RSS](/es/docs/Archive/RSS), y [RDF](/es/docs/RDF). También puedes crear uno propio.
@@ -35,7 +37,8 @@ Ahora veamos una versión correcta del mismo documento:
 
 Para ser válido, un documento XML necesita cumplir ciertas reglas de semántica que son generalmente definidas en un esquema XML o en una **[Definición de Tipo de Documento](/es/docs/Glossary/DTD)** (DTD). Un documento que contiene una etiqueta no definida es inválido. Por ejemplo, si nunca definimos la etiqueta `<warning>`, el documento anterior no sería válido.
 
-> **Nota:** La mayoría de los navegadores ofrecen un depurador que puede identificar documentos XML mal formados.
+> [!NOTE]
+> La mayoría de los navegadores ofrecen un depurador que puede identificar documentos XML mal formados.
 
 ## Entidades
 
