@@ -123,7 +123,8 @@ div:nth-of-type(2) {
 
 你有没有注意到我们在宽度的表示上都用的是百分比——这是一个很好的策略，这创建了一个**流动布局（liquid layout），**能够适应不同的屏幕大小，在小一些的屏幕上也能使列保持一样的比例。试一试自己来调整浏览器窗口的宽度，这是响应式网页非常有价值的一个工具。
 
-> **备注：** 你可以在 [0_two-column-layout.html](https://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) 实时查看这个实例（另见[源代码](https://github.com/mdn/learning-area/blob/main/css/css-layout/floats/0_two-column-layout.html)）。
+> [!NOTE]
+> 你可以在 [0_two-column-layout.html](https://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) 实时查看这个实例（另见[源代码](https://github.com/mdn/learning-area/blob/main/css/css-layout/floats/0_two-column-layout.html)）。
 
 ## 创建简单的传统网格框架
 
@@ -212,7 +213,8 @@ body {
 
 单个列的最上面一行现在铺开成为了一个排列整齐的网格。
 
-> **备注：** 我们也已经让每列变成亮红色，这样你就能准确看到每列占据了多少空间。
+> [!NOTE]
+> 我们也已经让每列变成亮红色，这样你就能准确看到每列占据了多少空间。
 
 如果我们想让布局容器横跨多列，必须要给它设置特殊的类，来适应列的数量的{{cssxref("width")}} 值（加上间隔的值）。我们需要新建额外的类来允许横跨 2-12 列。每个宽度是将该列数的列宽加上间隔宽度相加的结果，这些宽度总是比列数少一个。
 
@@ -259,7 +261,8 @@ body {
 
 创建了这些类以后，我们可以在网格上布局不同宽度的列。试试保存并在你的浏览器上加载这个页面，来查看效果。
 
-> **备注：** 如果你在让上面的示例实现的时候正遇到麻烦，尝试将它和我们在 GitHub 上的[完成版](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid-finished.html)进行比较（再[看下实时的示例](http://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html)）。
+> [!NOTE]
+> 如果你在让上面的示例实现的时候正遇到麻烦，尝试将它和我们在 GitHub 上的[完成版](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid-finished.html)进行比较（再[看下实时的示例](http://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html)）。
 
 试试修改这些类，甚至添加、删除一些容器，来看看你能怎么改变这个布局。例如，你可以把第二行写成这样：
 
@@ -374,7 +377,8 @@ body {
 
 现在保存你的代码，从浏览器里加载它，尝试改变视口长度——你应该可以看到网格完美地适配了。
 
-> **备注：**如果你在让上面的示例实现的时候正遇到困难，试着把它和我们[GitHub 上的完成版](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid.html)比较（另[见实时的示例](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html)）。
+> [!NOTE]
+> 如果你在让上面的示例实现的时候正遇到困难，试着把它和我们[GitHub 上的完成版](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid.html)比较（另[见实时的示例](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html)）。
 
 ### 使用 calc() 函数的更简单计算
 
@@ -426,9 +430,11 @@ body {
 }
 ```
 
-> **备注：** 你能在 [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-calc.html) 里看到我们的完成版（另[见实时版](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)）。
+> [!NOTE]
+> 你能在 [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-calc.html) 里看到我们的完成版（另[见实时版](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)）。
 
-> **备注：**如果你不能让这个正常工作，可能是你的浏览器不支持`calc()`函数，尽管各浏览器对它的支持相当好——远至 IE9 那样老。
+> [!NOTE]
+> 如果你不能让这个正常工作，可能是你的浏览器不支持`calc()`函数，尽管各浏览器对它的支持相当好——远至 IE9 那样老。
 
 ### 语义 vs.“无语义”网格系统
 
@@ -442,7 +448,8 @@ body {
 }
 ```
 
-> **备注：** 如果你要用预处理工具，如[Sass](http://sass-lang.com/)，你可以建立一个简单的类（mixin）以插入那个值。
+> [!NOTE]
+> 如果你要用预处理工具，如[Sass](http://sass-lang.com/)，你可以建立一个简单的类（mixin）以插入那个值。
 
 ### 在我们的网格里启用偏移容器
 
@@ -480,13 +487,15 @@ body {
 <div class="col span5 offset-by-one">14</div>
 ```
 
-> **备注：** 注意你需要别让横跨多列的列太多，给偏移留点空间！
+> [!NOTE]
+> 注意你需要别让横跨多列的列太多，给偏移留点空间！
 
 试着载入，刷新来查看区别，或者查看我们的[fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-offset.html)示例（另见[实时](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html)示例）。完成的示例应该看起来像这样：
 
 ![](offset-grid-finished.png)
 
-> **备注：** 作为额外练习，你能实现一个 `offset-by-two` 类吗？
+> [!NOTE]
+> 作为额外练习，你能实现一个 `offset-by-two` 类吗？
 
 ### 浮动网格的限制
 
@@ -637,7 +646,8 @@ Skeleton 不仅包含了网格系统，它还包含了用于排版和其他能�
 
 试着保存你的 HTML，在你的浏览器里面载入，看下效果。
 
-> **备注：** 如果你在实现这个示例的时候遇到麻烦，试着拿它和我们的[html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton-finished.html)文件进行比较（另见[实时运行版](https://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)）。
+> [!NOTE]
+> 如果你在实现这个示例的时候遇到麻烦，试着拿它和我们的[html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton-finished.html)文件进行比较（另见[实时运行版](https://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)）。
 
 如果你看下 skeleton.css 文件的内容，你能理解这是如何实现的。例如，Skeleton 有下面的定义内容，用于样式化加入了“three colomns”类的元素。
 

@@ -33,11 +33,12 @@ l10n:
 
 あるいは、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのサイトを使って評価することもできます。 HTML を貼り付けて CSS をこれらのオンラインエディターのいずれかに入力し、[この URL](https://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png) を使用して背景画像を指定することができます。
 
-> **メモ:** 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> [!NOTE]
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## プロジェクトの概要
 
-架空のコミュニティカレッジのホームページ用の生の HTML と、ページを 2 列のレイアウトに装飾し、その他の基本的な装飾をする CSS が提供されています。 CSS ファイルの最後にあるコメントの下に CSS の追加部分を書いて、あなたが行った部分に簡単に印を付けることができるようにします。 一部のセレクタがくどくても心配しないで、この場合は見逃してください。
+架空のコミュニティカレッジのホームページ用の生の HTML と、ページを 2 列のレイアウトに装飾し、その他の基本的な装飾をする CSS が提供されています。 CSS ファイルの最後にあるコメントの下に CSS の追加部分を書いて、あなたが行った部分に簡単に印を付けることができるようにします。 一部のセレクターがくどくても心配しないで、この場合は見逃してください。
 
 フォント
 

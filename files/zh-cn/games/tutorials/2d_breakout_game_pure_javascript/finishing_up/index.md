@@ -98,7 +98,8 @@ requestAnimationFrame(draw);
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/dfh2tpu1/","","395")}}
 
-> **备注：** 试着改变生命的数目和球从球板上反弹的角度。
+> [!NOTE]
+> 试着改变生命的数目和球从球板上反弹的角度。
 
 ## 游戏结束——暂时看来！
 

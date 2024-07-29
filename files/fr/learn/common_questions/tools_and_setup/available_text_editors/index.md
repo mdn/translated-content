@@ -43,7 +43,8 @@ Voici quelques questions qui peuvent vous aider à choisir :
 
 Nous n'avons pas évoqué le prix. Bien entendu, cela a également son importance. Cependant, il faut garder à l'esprit qu'il n'y a pas nécessairement de lien entre le coût d'un outil et la richesse de ses fonctionnalités. Un éditeur de texte étant un outil de base pour le développement, il est très probable que vous trouviez un éditeur de texte gratuit qui réponde tout à fait à vos besoins.
 
-> **Note :** Le développement web est un domaine principalement anglophone, vous trouverez de nombreuses documentations également en français mais soyez conscient-es que la plupart des informations autour de certains logiciels seront en anglais sur le Web.
+> [!NOTE]
+> Le développement web est un domaine principalement anglophone, vous trouverez de nombreuses documentations également en français mais soyez conscient-es que la plupart des informations autour de certains logiciels seront en anglais sur le Web.
 
 Voici un tableau de quelques éditeurs de texte connus :
 

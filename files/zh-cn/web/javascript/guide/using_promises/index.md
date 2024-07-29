@@ -60,7 +60,8 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 第二个 promise（`promise2`）不仅表示 `doSomething()` 函数的完成，也代表了你传入的 `successCallback` 或者 `failureCallback` 的完成，这两个函数也可以是返回 Promise 对象的异步函数。这样的话，在 `promise2` 上新增的排在该 promise 后面的回调函数会通过 `successCallback` 或 `failureCallback` 返回。
 
-> **备注：** 如果你想要一个可以操作的示例，你可以使用下面的模板来创建任何返回 Promise 的函数：
+> [!NOTE]
+> 如果你想要一个可以操作的示例，你可以使用下面的模板来创建任何返回 Promise 的函数：
 >
 > ```js
 > function doSomething() {
@@ -105,7 +106,8 @@ doSomething()
   .catch(failureCallback);
 ```
 
-> **备注：** 箭头函数表达式可以有[隐式返回值](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions#函数体)；所以，`() => x` 是 `() => { return x; }` 的简写。
+> [!NOTE]
+> 箭头函数表达式可以有[隐式返回值](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions#函数体)；所以，`() => x` 是 `() => { return x; }` 的简写。
 
 `doSomethingElse` 和 `doThirdThing` 可以返回任何值——如果它们返回的是 Promise，那么会首先等待这个 Promise 的敲定，然后下一个回调函数会接收到它的兑现值，而不是 Promise 本身。在 `then` 回调中始终返回 Promise 是非常重要的，即使 Promise 总是兑现为 `undefined`。如果上一个处理器启动了一个 Promise 但并没有返回它，那么就没有办法再追踪它的敲定状态了，这个 Promise 就是“漂浮”的。
 
@@ -204,7 +206,8 @@ async function logIngredients() {
 
 `async`/`await` 基于 promise，例如，`doSomething()` 与之前的函数相同，因此从 promise 到 `async`/`await` 所需的重构工作微乎其微。有关 `async`/`await` 语法的更多信息，请参阅[异步函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)和 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 参考。
 
-> **备注：** async/await 的并发语义与普通 Promise 链相同。异步函数中的 `await` 不会停止整个程序，只会停止依赖其值的部分，因此在 `await` 挂起时，其他异步任务仍可运行。
+> [!NOTE]
+> async/await 的并发语义与普通 Promise 链相同。异步函数中的 `await` 不会停止整个程序，只会停止依赖其值的部分，因此在 `await` 挂起时，其他异步任务仍可运行。
 
 ## 错误处理
 
@@ -286,7 +289,8 @@ async function main() {
 }
 ```
 
-> **备注：** 如果没有复杂的错误处理，则很可能不需要嵌套的 `then` 处理器。相反，可以使用扁平链，将错误处理逻辑放在最后。
+> [!NOTE]
+> 如果没有复杂的错误处理，则很可能不需要嵌套的 `then` 处理器。相反，可以使用扁平链，将错误处理逻辑放在最后。
 
 ### Catch 的后续链式操作
 
@@ -319,7 +323,8 @@ new Promise((resolve, reject) => {
 执行「这个」，无论前面发生了什么
 ```
 
-> **备注：** 并没有输出“执行「这个」”，因为在第一个 `then()` 中的 `throw` 语句导致其被拒绝。
+> [!NOTE]
+> 并没有输出“执行「这个」”，因为在第一个 `then()` 中的 `throw` 语句导致其被拒绝。
 
 在 `async`/`await` 中，这段代码看起来像这样：
 

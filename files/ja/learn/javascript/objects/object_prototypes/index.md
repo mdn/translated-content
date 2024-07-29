@@ -75,7 +75,8 @@ myObject.toString(); // "[object Object]"
 
 JavaScript ですべてのオブジェクトは、その**プロトタイプ**と呼ばれる組み込みプロパティを持っています。プロトタイプはそれ自体がオブジェクトなので、プロトタイプは自分自身でプロトタイプを持ち、**プロトタイプチェーン**と呼ばれるものを持ちます。自分自身でプロトタイプに`null`を持つプロトタイプに到達すると、その連鎖は終わります。
 
-> **メモ:** オブジェクトのプロトタイプを指し示すプロパティは `prototype` という名前では**ありません**。その名前は標準ではありませんが、実際にはすべてのブラウザーが [`__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) を使用しています。オブジェクトのプロトタイプにアクセスする標準的な方法は {{jsxref("Object/getPrototypeOf", "Object.getPrototypeOf()")}} メソッドです。
+> [!NOTE]
+> オブジェクトのプロトタイプを指し示すプロパティは `prototype` という名前では**ありません**。その名前は標準ではありませんが、実際にはすべてのブラウザーが [`__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) を使用しています。オブジェクトのプロトタイプにアクセスする標準的な方法は {{jsxref("Object/getPrototypeOf", "Object.getPrototypeOf()")}} メソッドです。
 
 オブジェクトのプロパティにアクセスしようとしたとき、オブジェクト自身にプロパティが見つからない場合は、プロトタイプを検索してプロパティを探します。それでもプロパティが見つからない場合は、プロトタイプのプロトタイプが検索され、プロパティが得られるか、チェーンの終わりに達するか、その場合は `undefined` を返すまで、そのような具合に繰り返します。
 
@@ -216,7 +217,8 @@ console.log(Object.hasOwn(irma, "name")); // true
 console.log(Object.hasOwn(irma, "greet")); // false
 ```
 
-> **メモ:** ここでは静的でない {{jsxref("Object/hasOwnProperty", "Object.hasOwnProperty()")}} メソッドを用いることもできますが、できれば `Object.hasOwn()` を用いることをお勧めします。
+> [!NOTE]
+> ここでは静的でない {{jsxref("Object/hasOwnProperty", "Object.hasOwnProperty()")}} メソッドを用いることもできますが、できれば `Object.hasOwn()` を用いることをお勧めします。
 
 ## プロトタイプと継承
 

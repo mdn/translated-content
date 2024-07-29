@@ -31,7 +31,7 @@ slug: Mozilla/Firefox/Releases/81
 
 #### 廃止
 
-- 非標準の {{CSSxRef("::-moz-focus-outer")}} [疑似要素](/ja/docs/Web/CSS/Pseudo-elements) を削除しました ([Firefox バグ 1655859](https://bugzil.la/1655859))。
+- 非標準の {{CSSxRef("::-moz-focus-outer")}} [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) を削除しました ([Firefox バグ 1655859](https://bugzil.la/1655859))。
 
 ### JavaScript
 

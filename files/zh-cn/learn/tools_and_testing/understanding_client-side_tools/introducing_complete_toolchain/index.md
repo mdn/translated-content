@@ -27,7 +27,8 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_comple
 
 实际上，工具和使用方法的组合是无限的，本文和下一篇文章中介绍的只是使用特定工具的*一种*方式。
 
-> **备注：** 也值得重申的是，并非所有这些工具都需要在命令行上运行。许多当今的代码编辑器（如 VS Code 和 Atom）都通过插件支持*许多*工具的集成。
+> [!NOTE]
+> 也值得重申的是，并非所有这些工具都需要在命令行上运行。许多当今的代码编辑器（如 VS Code 和 Atom）都通过插件支持*许多*工具的集成。
 
 ## 介绍我们的学习案例
 
@@ -105,7 +106,8 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_comple
 
 我们将使用 npm 安装我们的工具，我们已经在第二章中介绍了它。你应该已经安装了 Node.js 和 npm，但如果没有，请[参考该部分](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#添加工具)。
 
-> **备注：** 虽然不清楚具体的安装过程，但安装 npm 时还会安装一个名为 npx 的补充工具。我们稍后将使用 npx 来帮助运行作为项目本地依赖项安装的工具。
+> [!NOTE]
+> 虽然不清楚具体的安装过程，但安装 npm 时还会安装一个名为 npx 的补充工具。我们稍后将使用 npx 来帮助运行作为项目本地依赖项安装的工具。
 
 npm 将用于安装我们工具链的后续部分。接下来，我们将安装 git 来帮助进行修订控制和代码管理。
 
@@ -149,7 +151,8 @@ npm install prettier -g
 prettier --write ./src/index.html
 ```
 
-> **备注：** 在上面的命令中，我使用了 Prettier 的 `--write` 选项。这对 Prettier 意味着“如果我的代码格式有任何问题，请继续修复它们，然后保存我的文件”。这对于我们的开发过程来说很好，但是我们也可以只使用 `prettier` 而不使用选项，它将仅检查文件。检查文件（而不保存它）对于运行在发布之前的检查（例如“不要发布任何未经适当格式化的代码”）非常有用。
+> [!NOTE]
+> 在上面的命令中，我使用了 Prettier 的 `--write` 选项。这对 Prettier 意味着“如果我的代码格式有任何问题，请继续修复它们，然后保存我的文件”。这对于我们的开发过程来说很好，但是我们也可以只使用 `prettier` 而不使用选项，它将仅检查文件。检查文件（而不保存它）对于运行在发布之前的检查（例如“不要发布任何未经适当格式化的代码”）非常有用。
 
 对每个文件运行初始命令可能很繁琐，有一个单一的命令来为我们执行此操作将非常有用（我们的代码检查工具也是如此）。
 
@@ -159,7 +162,8 @@ prettier --write ./src/index.html
 - 使用特殊的“git 钩子”在提交之前测试代码是否已格式化。
 - 使用代码编辑器插件在每次保存文件时运行 Prettier 命令。
 
-> **备注：** 什么是 git 钩子？Git（而不是 GitHub）提供了一种系统，可以让我们将预操作和后操作附加到我们使用 git 执行的任务（例如提交代码）。尽管 git 钩子可能有点过于复杂（在笔者看来），但是一旦它们配置就绪，就可以非常强大。如果你有兴趣使用钩子，[Husky](https://github.com/typicode/husky) 是使用钩子的一个很方便的途径。
+> [!NOTE]
+> 什么是 git 钩子？Git（而不是 GitHub）提供了一种系统，可以让我们将预操作和后操作附加到我们使用 git 执行的任务（例如提交代码）。尽管 git 钩子可能有点过于复杂（在笔者看来），但是一旦它们配置就绪，就可以非常强大。如果你有兴趣使用钩子，[Husky](https://github.com/typicode/husky) 是使用钩子的一个很方便的途径。
 
 对于 VS Code，一个有用的扩展是 [Esben Petersen 编写的 Prettier Code Formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)，它允许 VSCode 在保存时自动格式化代码。这意味着我们正在开发的项目中的任何文件都会得到合适的格式化，包括 HTML、CSS、JavaScript、JSON、markdown 等。编辑器所需的只是启用“保存时格式化”。
 
@@ -193,7 +197,8 @@ ESLint 通过 npm 安装，根据第二章中的讨论，你可以选择在本�
 ✖ 3 problems (3 errors, 0 warnings)
 ```
 
-> **备注：** 我们将在下一节安装 ESLint；暂时不要担心这个。
+> [!NOTE]
+> 我们将在下一节安装 ESLint；暂时不要担心这个。
 
 与其他工具一样，代码编辑器集成支持通常对 ESLint 有好处，并且可能更有用，因为它可以在出现问题时向我们提供实时反馈：
 
@@ -255,7 +260,8 @@ ESLint 通过 npm 安装，根据第二章中的讨论，你可以选择在本�
 
 我们已经准备好了项目文件。这就是我们现在需要做的全部内容！
 
-> **备注：** 要在本地上设置项目，请转到解压缩文件夹的根目录，在该位置打开终端，并在终端中执行 `npm install` 命令。这将安装在 `package.json` 文件中提到的所有项目依赖项。
+> [!NOTE]
+> 要在本地上设置项目，请转到解压缩文件夹的根目录，在该位置打开终端，并在终端中执行 `npm install` 命令。这将安装在 `package.json` 文件中提到的所有项目依赖项。
 
 #### 安装我们的工具
 
@@ -417,7 +423,8 @@ npm install --save-dev parcel-bundler
 
    Parcel 还安装了我们将在代码中使用的依赖项，包括 react、react-dom、react-async-hook、date-fns 和 format-number。因此，这第一次运行将比 Parcel 的典型运行时间更长。
 
-   > **备注：** 如果你在此项目上运行 Parcel 并遇到像 `Error: ENOENT: no such file or directory` 这样的错误，请使用 <kbd>Ctrl</kbd> + <kbd>C</kbd> 停止该进程，然后尝试重新运行它。
+   > [!NOTE]
+   > 如果你在此项目上运行 Parcel 并遇到像 `Error: ENOENT: no such file or directory` 这样的错误，请使用 <kbd>Ctrl</kbd> + <kbd>C</kbd> 停止该进程，然后尝试重新运行它。
 
    服务器现在正在输出的 URL 上运行（在本例中为 localhost:1234）。
 

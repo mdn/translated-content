@@ -49,7 +49,8 @@ Si quisiéramos que el texto se mantuviera solo, podríamos especificar que es u
 <p>Mi gato es muy gruñón</p>
 ```
 
-> **Nota:** Las etiquetas en HTML no distinguen entre mayúsculas y minúsculas. Esto significa que se pueden escribir en mayúsculas o minúsculas. Por ejemplo, una etiqueta {{htmlelement ("title")}} podría escribirse como `<title>`, `<TITLE>`, `<Title>`, `<TiTlE>`, etc., y funcionará. Sin embargo, es una buena práctica escribir todas las etiquetas en minúsculas para mayor coherencia y legibilidad.
+> [!NOTE]
+> Las etiquetas en HTML no distinguen entre mayúsculas y minúsculas. Esto significa que se pueden escribir en mayúsculas o minúsculas. Por ejemplo, una etiqueta {{htmlelement ("title")}} podría escribirse como `<title>`, `<TITLE>`, `<Title>`, `<TiTlE>`, etc., y funcionará. Sin embargo, es una buena práctica escribir todas las etiquetas en minúsculas para mayor coherencia y legibilidad.
 
 ## Anatomía de un elemento HTML
 
@@ -229,7 +230,8 @@ Esto daría como resultado lo siguiente:
 
 {{ EmbedLiveSample('elementos_vacíos', 700, 300, "", "") }}
 
-> **Nota:** En HTML, no es necesario añadir un `/` al final de la etiqueta de un elemento vacío, por ejemplo: `<img src="images/cat.jpg" alt="cat" />`. Sin embargo, también es una sintaxis válida, y puede hacerlo cuando desee que su HTML sea XML válido.
+> [!NOTE]
+> En HTML, no es necesario añadir un `/` al final de la etiqueta de un elemento vacío, por ejemplo: `<img src="images/cat.jpg" alt="cat" />`. Sin embargo, también es una sintaxis válida, y puede hacerlo cuando desee que su HTML sea XML válido.
 
 ## Atributos
 
@@ -518,7 +520,8 @@ Si quieres experimentar con escribir algo de HTML en tu ordenador local, puedes:
 3. Pega el código en el nuevo archivo de texto.
 4. Guarde el archivo como `index.html`.
 
-> **Nota:** También puedes encontrar esta plantilla HTML básica en el [repositorio de GitHub del área de aprendizaje de MDN](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
+> [!NOTE]
+> También puedes encontrar esta plantilla HTML básica en el [repositorio de GitHub del área de aprendizaje de MDN](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
 
 Ahora puede abrir este archivo en un navegador web para ver cómo se ve el código renderizado. Edita el código y actualiza el navegador para ver cuál es el resultado. Inicialmente, la página se ve así:
 
@@ -688,7 +691,8 @@ Echemos un vistazo a cómo el navegador representa los dos párrafos anteriores 
 
 {{ EmbedLiveSample('Whitespace_in_HTML', 700, 100) }}
 
-> **Nota:** El acceso a [innerHTML](/es/docs/Web/API/Element/innerHTML) de los elementos de JavaScript mantendrá intacto todo el espacio en blanco.
+> [!NOTE]
+> El acceso a [innerHTML](/es/docs/Web/API/Element/innerHTML) de los elementos de JavaScript mantendrá intacto todo el espacio en blanco.
 > Esto puede arrojar resultados inesperados si el navegador recorta el espacio en blanco.
 
 ```js
@@ -731,7 +735,8 @@ En la salida en vivo a continuación, puede ver que el primer párrafo ha salido
 
 {{ EmbedLiveSample('Entity_references_Including_special_characters_in_HTML', 700, 200, "", "") }}
 
-> **Nota:** No es necesario usar referencias de entidad para ningún otro símbolo, ya que los navegadores modernos manejarán bien los símbolos reales siempre que la [codificación de caracteres de tu HTML esté configurada en UTF-8](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_documents_character_encoding).
+> [!NOTE]
+> No es necesario usar referencias de entidad para ningún otro símbolo, ya que los navegadores modernos manejarán bien los símbolos reales siempre que la [codificación de caracteres de tu HTML esté configurada en UTF-8](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_documents_character_encoding).
 
 ## Comentarios en HTML
 

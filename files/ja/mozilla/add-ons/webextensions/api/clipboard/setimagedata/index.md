@@ -67,4 +67,5 @@ fetch(browser.runtime.getURL("image.png"))
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.clipboard`](https://developer.chrome.com/docs/extensions/reference/clipboard/) API をベースにしています。
+> [!NOTE]
+> この API は Chromium の [`chrome.clipboard`](https://developer.chrome.com/docs/extensions/reference/clipboard/) API をベースにしています。

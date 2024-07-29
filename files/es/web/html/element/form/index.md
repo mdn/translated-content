@@ -27,7 +27,8 @@ Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/e
 
   - : Una lista separada por comas de los tipos de contenido que el servidor acepta.
 
-    > **Nota:** este atributo ha sido removido en HTML5 y no debe ser usado. En su lugar, usar el atributo **[accept](/es/HTML/Element/Input#attr-accept)** del elemento específico {{ HTMLElement("input") }}.
+    > [!NOTE]
+    > Eeste atributo ha sido removido en HTML5 y no debe ser usado. En su lugar, usar el atributo **[accept](/es/HTML/Element/Input#attr-accept)** del elemento específico {{ HTMLElement("input") }}.
 
 - `accept-charset`
 
@@ -44,7 +45,8 @@ Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/e
     - `off`: El usuario debe ingresar explicitamente cada valor dentro de cada campo por cada uso, o el documento provee su propio método de autocompletado; el navegador no autocompleta las entradas.
     - `on`: El navegador puede completar automáticamente valores basados en lo que el usuario ha ingresado durante entradas previas al formulario.
 
-    > **Nota:** si se establece `autocomplete` a un valor de `off` en un formulario porque el documento provee su propio auto-completado entonces también se debería establecer `autocomplete` al valor `off` para cada uno de los elementos de formulario `input` que el documento pueda autocompletar [Notas para Google Chrome](#notas_para_google_chrome).
+    > [!NOTE]
+    > Si se establece `autocomplete` a un valor de `off` en un formulario porque el documento provee su propio auto-completado entonces también se debería establecer `autocomplete` al valor `off` para cada uno de los elementos de formulario `input` que el documento pueda autocompletar [Notas para Google Chrome](#notas_para_google_chrome).
 
 - `enctype`
 

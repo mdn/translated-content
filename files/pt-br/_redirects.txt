@@ -99,7 +99,7 @@
 /pt-BR/docs/DOM/Document.querySelectorAll	/pt-BR/docs/Web/API/Document/querySelectorAll
 /pt-BR/docs/DOM/Referencia_do_DOM	/pt-BR/docs/Web/API/Document_Object_Model
 /pt-BR/docs/DOM/Referencia_do_DOM/Examples	/pt-BR/docs/Web/API/Document_Object_Model/Examples
-/pt-BR/docs/DOM/Referencia_do_DOM/How_to_create_a_DOM_tree	/pt-BR/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree
+/pt-BR/docs/DOM/Referencia_do_DOM/How_to_create_a_DOM_tree	/pt-BR/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /pt-BR/docs/DOM/Referencia_do_DOM/Introdução	/pt-BR/docs/Web/API/Document_Object_Model/Introduction
 /pt-BR/docs/DOM/Referencia_do_DOM/Whitespace_in_the_DOM	/pt-BR/docs/Web/API/Document_Object_Model/Whitespace
 /pt-BR/docs/DOM/XMLHttpRequest	/pt-BR/docs/Web/API/XMLHttpRequest
@@ -559,6 +559,7 @@
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/activeElement	/pt-BR/docs/Web/API/Document/activeElement
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/pt-BR/docs/Web/API/Document/elementFromPoint
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/getSelection	/pt-BR/docs/Web/API/Document/getSelection
+/pt-BR/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/pt-BR/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /pt-BR/docs/Web/API/DocumentoXML	/pt-BR/docs/Web/API/XMLDocument
 /pt-BR/docs/Web/API/Element.addEventListener	/pt-BR/docs/Web/API/EventTarget/addEventListener
 /pt-BR/docs/Web/API/Element.getAttribute	/pt-BR/docs/Web/API/Element/getAttribute
@@ -568,10 +569,13 @@
 /pt-BR/docs/Web/API/Element.removeAttribute	/pt-BR/docs/Web/API/Element/removeAttribute
 /pt-BR/docs/Web/API/Element/accessKey	/pt-BR/docs/Web/API/HTMLElement/accessKey
 /pt-BR/docs/Web/API/Element/addEventListener	/pt-BR/docs/Web/API/EventTarget/addEventListener
-/pt-BR/docs/Web/API/Event/Comparativo_entre_Event_Targets	/pt-BR/docs/Web/API/Event/Comparison_of_Event_Targets
+/pt-BR/docs/Web/API/Event/Comparativo_entre_Event_Targets	/pt-BR/docs/Learn/JavaScript/Building_blocks/Event_bubbling
+/pt-BR/docs/Web/API/Event/Comparison_of_Event_Targets	/pt-BR/docs/Learn/JavaScript/Building_blocks/Event_bubbling
 /pt-BR/docs/Web/API/EventListener	/pt-BR/docs/conflicting/Web/API/EventTarget/addEventListener
 /pt-BR/docs/Web/API/EventSource/onerror	/pt-BR/docs/Web/API/EventSource/error_event
-/pt-BR/docs/Web/API/Fetch_API/Uso_de_busca_Cross-global	/pt-BR/docs/Web/API/Fetch_API/Cross-global_fetch_usage
+/pt-BR/docs/Web/API/Fetch_API/Basic_concepts	/pt-BR/docs/conflicting/Web/API/Fetch_API/Using_Fetch
+/pt-BR/docs/Web/API/Fetch_API/Cross-global_fetch_usage	/pt-BR/docs/conflicting/Web/API/Fetch_API/Using_Fetch_76a0f6f382ec36bfa1bf0b4e0ef87c0c
+/pt-BR/docs/Web/API/Fetch_API/Uso_de_busca_Cross-global	/pt-BR/docs/conflicting/Web/API/Fetch_API/Using_Fetch_76a0f6f382ec36bfa1bf0b4e0ef87c0c
 /pt-BR/docs/Web/API/FileReader/onload	/pt-BR/docs/Web/API/FileReader/load_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onabort	/pt-BR/docs/conflicting/Web/API/HTMLMediaElement/abort_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onblur	/pt-BR/docs/Web/API/Window/blur_event
@@ -627,11 +631,11 @@
 /pt-BR/docs/Web/API/Window/DOMContentLoaded_event	/pt-BR/docs/Web/API/Document/DOMContentLoaded_event
 /pt-BR/docs/Web/API/Window/Window.localStorage	/pt-BR/docs/Web/API/Window/localStorage
 /pt-BR/docs/Web/API/Window/openDialog	/pt-BR/docs/conflicting/Web/API/Window
-/pt-BR/docs/Web/API/WindowBase64/atob	/pt-BR/docs/Web/API/atob
+/pt-BR/docs/Web/API/WindowBase64/atob	/pt-BR/docs/Web/API/Window/atob
 /pt-BR/docs/Web/API/WindowEventHandlers/onhashchange	/pt-BR/docs/Web/API/Window/hashchange_event
 /pt-BR/docs/Web/API/WindowEventHandlers/onpopstate	/pt-BR/docs/conflicting/Web/API/Window/popstate_event
 /pt-BR/docs/Web/API/WindowEventHandlers/onstorage	/pt-BR/docs/Web/API/Window/storage_event
-/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/atob	/pt-BR/docs/Web/API/atob
+/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/atob	/pt-BR/docs/Web/API/Window/atob
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/pt-BR/docs/Web/API/clearTimeout
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/pt-BR/docs/Web/API/fetch
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/pt-BR/docs/Web/API/setInterval
@@ -643,6 +647,7 @@
 /pt-BR/docs/Web/API/XMLHttpRequest/Usando_XMLHttpRequest	/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /pt-BR/docs/Web/API/XMLHttpRequest/onreadystatechange	/pt-BR/docs/Web/API/XMLHttpRequest/readystatechange_event
+/pt-BR/docs/Web/API/atob	/pt-BR/docs/Web/API/Window/atob
 /pt-BR/docs/Web/API/console/assert	/pt-BR/docs/Web/API/console/assert_static
 /pt-BR/docs/Web/API/console/clear	/pt-BR/docs/Web/API/console/clear_static
 /pt-BR/docs/Web/API/console/count	/pt-BR/docs/Web/API/console/count_static
@@ -679,6 +684,7 @@
 /pt-BR/docs/Web/Acessibilidade/Entendendo_WCAG	/pt-BR/docs/Web/Accessibility/Understanding_WCAG
 /pt-BR/docs/Web/Apps/Progressive/Introdução	/pt-BR/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /pt-BR/docs/Web/CSS/-moz-box-ordinal-group	/pt-BR/docs/Web/CSS/box-ordinal-group
+/pt-BR/docs/Web/CSS/-webkit-overflow-scrolling	/pt-BR/docs/orphaned/Web/CSS/-webkit-overflow-scrolling
 /pt-BR/docs/Web/CSS/CSS_Animations/Usando_animações_CSS	/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations
 /pt-BR/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 /pt-BR/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
@@ -734,7 +740,8 @@
 /pt-BR/docs/Web/CSS/valor_inicial	/pt-BR/docs/Web/CSS/initial_value
 /pt-BR/docs/Web/CSS/var()	/pt-BR/docs/Web/CSS/var
 /pt-BR/docs/Web/CSS/word-wrap	/pt-BR/docs/Web/CSS/overflow-wrap
-/pt-BR/docs/Web/Demos_of_open_web_technologies	/pt-BR/docs/Web/Demos
+/pt-BR/docs/Web/Demos	/pt-BR/docs/orphaned/Web/Demos
+/pt-BR/docs/Web/Demos_of_open_web_technologies	/pt-BR/docs/orphaned/Web/Demos
 /pt-BR/docs/Web/Events/DOMContentLoaded	/pt-BR/docs/Web/API/Document/DOMContentLoaded_event
 /pt-BR/docs/Web/Events/abort	/pt-BR/docs/Web/API/HTMLMediaElement/abort_event
 /pt-BR/docs/Web/Events/beforeunload	/pt-BR/docs/Web/API/Window/beforeunload_event
@@ -814,6 +821,7 @@
 /pt-BR/docs/Web/HTTP/Controle_Acesso_CORS	/pt-BR/docs/Web/HTTP/CORS
 /pt-BR/docs/Web/HTTP/Gerenciamento_de_Conexão_em_HTTP_1.x	/pt-BR/docs/Web/HTTP/Connection_management_in_HTTP_1.x
 /pt-BR/docs/Web/HTTP/HTTP	/pt-BR/docs/Web/HTTP/Caching
+/pt-BR/docs/Web/HTTP/Headers/Accept-CH-Lifetime	/pt-BR/docs/orphaned/Web/HTTP/Headers/Accept-CH-Lifetime
 /pt-BR/docs/Web/HTTP/Headers/Conexão	/pt-BR/docs/Web/HTTP/Headers/Connection
 /pt-BR/docs/Web/HTTP/Headers/Cookie2	/pt-BR/docs/conflicting/Web/HTTP/Headers/Cookie
 /pt-BR/docs/Web/HTTP/Headers/Expira	/pt-BR/docs/Web/HTTP/Headers/Expires
@@ -894,6 +902,8 @@
 /pt-BR/docs/Web/SVG/Element/animateColor	/pt-BR/docs/conflicting/Web/SVG/Element/animate
 /pt-BR/docs/Web/SVG/Element/texto	/pt-BR/docs/Web/SVG/Element/text
 /pt-BR/docs/Web/SVG/Intensivo_de_Namespaces	/pt-BR/docs/Web/SVG/Namespaces_Crash_Course
+/pt-BR/docs/Web/Security/Securing_your_site	/pt-BR/docs/Web/Security/Practical_implementation_guides
+/pt-BR/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/pt-BR/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /pt-BR/docs/Web/Tutoriais	/pt-BR/docs/Web/Tutorials
 /pt-BR/docs/Web/WebGL	/pt-BR/docs/Web/API/WebGL_API
 /pt-BR/docs/Web/Web_Components	/pt-BR/docs/Web/API/Web_components

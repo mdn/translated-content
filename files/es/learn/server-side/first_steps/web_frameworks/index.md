@@ -150,7 +150,8 @@ Los frameworks web proporcionan con frecuencia un mecanismo para facilitar la ge
 
 Por ejemplo, el sistema de plantillas de Django te permite especificar variables usando una sintaxis de "llaves dobles" (ej. `\{{ variable_name }}`), que serán reemplazadas por valores pasados desde la función de visualización cuando la página sea renderizada. El sistema de plantillas también proporciona soporte para expresiones (con la sintaxis: `{% expression %}`), que permite a las plantillas realizar operaciones simples como iterar sobre la lista de valores pasados a la misma.
 
-> **Nota:** Muchos otros sistemas de plantillas usan una sintaxis similar, ej.: Jinja2 (Python), Handlebars (JavaScript), Moustache (JavaScript), etc.
+> [!NOTE]
+> Muchos otros sistemas de plantillas usan una sintaxis similar, ej.: Jinja2 (Python), Handlebars (JavaScript), Moustache (JavaScript), etc.
 
 El fragmento de código de abajo muestra como hacer este trabajo. Continuando el ejemplo del "equipo más joven" de la sección anterior, la "view" pasa a la plantilla HTML una variable tipo lista llamada `youngest_teams`. Dentro del esqueleto HTML tenemos una expresión que primero comprueba que la variable `youngest_teams` existe, y luego itera sobre ella en un bucle `for`. En cada iteración la plantilla presenta en pantalla el valor del `team_name` del equipo de uno de los elementos de la lista.
 
@@ -198,7 +199,8 @@ Hay muchos otros posibles factores, incluyendo licenciamiento, si el framework e
 
 Si eres un completo principiante en la programación probablemente escogerás tu framework basándote en la "facilidad de aprendizaje". Además de la "facilidad de uso" del lenguaje mismo, la alta calidad de la documentación/tutoriales y una comunidad activa que ayuda a nuevos usuarios son tus recursos más valiosos. Nosotros hemos escogido [Django](https://www.djangoproject.com/) (Python) y [Express](http://expressjs.com/) (Node/JavaScript) para escribir nuestros ejemplos de más adelante en el curso, principalmente porque son fáciles de aprender y tienen un buen soporte.
 
-> **Nota:** Vayamos a los sitios principales de [Django](https://www.djangoproject.com/) (Python) y [Express](http://expressjs.com/) (Node/JavaScript) y comprobemos su documentación y su comunidad.
+> [!NOTE]
+> Vayamos a los sitios principales de [Django](https://www.djangoproject.com/) (Python) y [Express](http://expressjs.com/) (Node/JavaScript) y comprobemos su documentación y su comunidad.
 >
 > 1. Navega a los sitios principales (enlazados abajo)
 >    - Pincha en los enlaces de los menus de Documentación (cosas que se llaman como "Documentación, Guía, Referencia API, Primeros Pasos".
@@ -215,7 +217,8 @@ Avancemos ahora, y debatamos unos pocos frameworks web específicos de lado serv
 
 Los frameworks de lado servidor de más abajo representan unos pocos de los más populares disponibles en el momento de escribir este artículo. Todos ellos tienen todo lo que necesitas para ser productivo — son de código abierto, están bajo desarrollo activo, tienen comunidades entusiastas creando documentación y ayudando a los usuarios en paneles de debate, y se usan en un gran número de sitios web de perfil alto. Hay muchos otros frameworks de lado servidor fantásticos que puedes descubrir usando una búsqueda básica en internet.
 
-> **Nota:** ¡Las descripciones vienen (parcialmente) de los sitios web de los frameworks!
+> [!NOTE]
+> ¡Las descripciones vienen (parcialmente) de los sitios web de los frameworks!
 
 ### Django (Python)
 

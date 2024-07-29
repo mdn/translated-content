@@ -66,7 +66,8 @@ Promise.resolve().catch(function XXX() {});
 
 `catch()` は `then()` を呼び出すだけなので、サブクラス化に対応しています。
 
-> **メモ:** 下記の例では、[`Error`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error) のインスタンスを例外として発生させています。同期 [`throw`](/ja/docs/Web/JavaScript/Reference/Statements/throw) 文と同様、これは良い習慣と考えられています。さもなければ、捕捉を行う部分は引数が文字列かエラーかを調べる必要があり、スタックトレースのような貴重な情報を失う可能性があります。
+> [!NOTE]
+> 下記の例では、[`Error`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error) のインスタンスを例外として発生させています。同期 [`throw`](/ja/docs/Web/JavaScript/Reference/Statements/throw) 文と同様、これは良い習慣と考えられています。さもなければ、捕捉を行う部分は引数が文字列かエラーかを調べる必要があり、スタックトレースのような貴重な情報を失う可能性があります。
 
 ## 例
 
