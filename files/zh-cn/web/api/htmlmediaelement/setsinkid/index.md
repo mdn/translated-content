@@ -1,5 +1,5 @@
 ---
-title: "HTMLMediaElement: setSinkId() method"
+title: HTMLMediaElement：setSinkId() 方法
 slug: Web/API/HTMLMediaElement/setSinkId
 l10n:
   sourceCommit: 32f666e453bdb8c93d305075453b6e304cae94de
@@ -45,8 +45,7 @@ setSinkId(sinkId)
 
 ## 示例
 
-以下示例展示了如何从 {{domxref("MediaDevices.enumerateDevices()")}} 返回的设备数组中选择一个音频输出设备，并将其设置为音频的输出目标。
-请注意，`enumerateDevices()` 的结果仅包括无需用户权限或已经授予权限的设备。
+以下示例展示了如何从 {{domxref("MediaDevices.enumerateDevices()")}} 返回的设备数组中选择一个音频输出设备，并将其设置为音频的输出目标。请注意，`enumerateDevices()` 的结果仅包括无需用户权限或已经授予权限的设备。
 
 ```js
 const devices = await navigator.mediaDevices.enumerateDevices();
