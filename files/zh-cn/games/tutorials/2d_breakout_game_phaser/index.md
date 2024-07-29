@@ -40,7 +40,8 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 
 在那之后，你就能随意挑选框架并用在你的项目中;我们选择了 Phaser 这个稳定优越的框架，它有着好的支持和社区环境以及大量优秀的插件。框架加速了开发并能帮你管理无趣的部分，让你专注于有意思的事务。然而，框架也有不好的地方，所以当一些意想不到的事情发生了或者想实现一些框架没有提供的功能时，你就将需要原生的 JavaScript 知识了。
 
-> **备注：** 本系列文章可用作实际游戏开发的材料。如果你想要使用 Phaser 讨论游戏开发，你还可以使用基于本教程的 [Gamedev Phaser 内容套件](https://github.com/end3r/Gamedev-Phaser-Content-Kit).
+> [!NOTE]
+> 本系列文章可用作实际游戏开发的材料。如果你想要使用 Phaser 讨论游戏开发，你还可以使用基于本教程的 [Gamedev Phaser 内容套件](https://github.com/end3r/Gamedev-Phaser-Content-Kit).
 
 ## Next steps
 

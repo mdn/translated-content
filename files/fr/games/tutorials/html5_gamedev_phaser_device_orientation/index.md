@@ -82,7 +82,8 @@ La ligne ci-dessus va initialiser l'instance de Phaser - les arguments sont la l
 
 La chose importante à retenir est que le framework met en place des méthodes utiles pour accélérer beaucoup de choses comme la manipulation d'images ou la gestion des éléments, ce qui serait beaucoup plus difficile à faire manuellement.
 
-> **Note :** Vous pouvez lire l'article [Building Monster Wants Candy](http://gamedevelopment.tutsplus.com/tutorials/getting-started-with-phaser-building-monster-wants-candy--cms-21723) pour une introduction approfondie aux fonctions et méthodes de base de Phaser.
+> [!NOTE]
+> Vous pouvez lire l'article [Building Monster Wants Candy](http://gamedevelopment.tutsplus.com/tutorials/getting-started-with-phaser-building-monster-wants-candy--cms-21723) pour une introduction approfondie aux fonctions et méthodes de base de Phaser.
 
 Retour aux états du jeu : la ligne ci-dessous ajoute un nouvel état appelé Boot au jeu :
 
@@ -322,7 +323,8 @@ Plus l'appareil est incliné, plus la force appliquée à la balle et sa véloci
 
 ![](cyber-orb-flame-orientation.png)
 
-> **Note :** Pour en savoir plus sur l'implémentation de l'orientation du périphérique et sur le code brut, lisez [Gardez-le au niveau : en réponse aux changements d'orientation du périphérique](/fr/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes).
+> [!NOTE]
+> Pour en savoir plus sur l'implémentation de l'orientation du périphérique et sur le code brut, lisez [Gardez-le au niveau : en réponse aux changements d'orientation du périphérique](/fr/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes).
 
 ### Ajout du trou
 

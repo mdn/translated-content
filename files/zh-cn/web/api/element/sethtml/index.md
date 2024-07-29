@@ -11,7 +11,8 @@ l10n:
 
 解析过程会删除 HTML 字符串中的对于当前元素上下文无效的任何元素，而清理则会删除任何不安全或不需要的元素、属性或者注释。默认的 `Sanitizer()` 配置会默认删除 XSS 相关的输入，包括 {{HTMLElement("script")}} 标签、自定义元素和注释。可以使用 {{domxref("Sanitizer.Sanitizer","Sanitizer()")}} 构造函数的选项来自定义清理器配置。
 
-> **备注：** 如果字符串必须在之后的时间点插入到 DOM 中，例如目标元素尚不可用，则应使用 {{domxref("Sanitizer.sanitizeFor()")}} 代替此方法。
+> [!NOTE]
+> 如果字符串必须在之后的时间点插入到 DOM 中，例如目标元素尚不可用，则应使用 {{domxref("Sanitizer.sanitizeFor()")}} 代替此方法。
 
 ## 语法
 
@@ -54,7 +55,8 @@ document
 // 结果（字符串）：“abc  def”
 ```
 
-> **备注：** 该示例使用默认的清理器。{{domxref("Sanitizer/Sanitizer","Sanitizer")}} 构造函数用于配置清理器选项。
+> [!NOTE]
+> 该示例使用默认的清理器。{{domxref("Sanitizer/Sanitizer","Sanitizer")}} 构造函数用于配置清理器选项。
 
 ## 规范
 

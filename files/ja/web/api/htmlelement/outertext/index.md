@@ -24,7 +24,8 @@ l10n:
 
 この例では、 `outerText` と `innerText` をセッターとして使用した場合の根本的な違いを強調しています（ゲッターで使用した場合は同じです）。
 
-> **メモ:** この例は [What is the difference between innerText and outerText?](https://stackoverflow.com/questions/18481382/what-is-the-difference-between-innertext-and-outertext/18481435#18481435) (Stack overflow) の記事で [codingintrigue](https://stackoverflow.com/users/571194/codingintrigue) が作成し、 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) のライセンスで配布されているものを変更したものです。
+> [!NOTE]
+> この例は [What is the difference between innerText and outerText?](https://stackoverflow.com/questions/18481382/what-is-the-difference-between-innertext-and-outertext/18481435#18481435) (Stack overflow) の記事で [codingintrigue](https://stackoverflow.com/users/571194/codingintrigue) が作成し、 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) のライセンスで配布されているものを変更したものです。
 
 以下のような HTML が入っているページがあるとします。
 

@@ -9,7 +9,8 @@ l10n:
 
 {{domxref("URL")}} 接口的 **`port`** 属性是一个表示 URL 端口号的字符串。
 
-> **备注：** 如果传递给 [`URL()`](/zh-CN/docs/Web/API/URL/URL) 构造函数的输入字符串不包含显式端口号（例如 `https://localhost`），或者包含的端口号是与输入字符串的协议部分对应的默认端口号（例如 `https://localhost:443`），那么在构造函数返回的 [`URL`](/zh-CN/docs/Web/API/URL) 对象中，端口属性的值将为空字符串：`''`。
+> [!NOTE]
+> 如果传递给 [`URL()`](/zh-CN/docs/Web/API/URL/URL) 构造函数的输入字符串不包含显式端口号（例如 `https://localhost`），或者包含的端口号是与输入字符串的协议部分对应的默认端口号（例如 `https://localhost:443`），那么在构造函数返回的 [`URL`](/zh-CN/docs/Web/API/URL) 对象中，端口属性的值将为空字符串：`''`。
 
 ## 值
 

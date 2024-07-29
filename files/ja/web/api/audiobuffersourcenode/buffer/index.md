@@ -18,7 +18,8 @@ l10n:
 
 ## 例
 
-> **メモ:** 動作する完全な例は、[このコードをライブ実行](https://mdn.github.io/webaudio-examples/audio-buffer/)または[ソースを閲覧](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html)してください。
+> [!NOTE]
+> 動作する完全な例は、[このコードをライブ実行](https://mdn.github.io/webaudio-examples/audio-buffer/)または[ソースを閲覧](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html)してください。
 
 ```js
 const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);

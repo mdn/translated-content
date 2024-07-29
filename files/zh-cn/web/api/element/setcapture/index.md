@@ -9,7 +9,8 @@ l10n:
 
 在处理 mousedown 事件的期间调用此方法以将所有的鼠标事件的目标都设置为该元素，直到释放鼠标按钮或者调用 {{domxref("document.releaseCapture()")}}。
 
-> **警告：** 这个接口从未得到过很好的跨浏览器支持，你也许应使用 {{domxref("element.setPointerCapture")}}（来自指针事件 API）代替。
+> [!WARNING]
+> 这个接口从未得到过很好的跨浏览器支持，你也许应使用 {{domxref("element.setPointerCapture")}}（来自指针事件 API）代替。
 
 ## 语法
 

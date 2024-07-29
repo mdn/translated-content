@@ -41,7 +41,8 @@ Para entender mejor la situación, esta es la jerarquía del contexto de apilami
 
 Este problema puede ser evitado al remover la superposición entre menus de diferentes niveles, o usando valores z-index individuales (y diferentes) asignados a través del selector id en lugar de un selector de clase, o aplanando la jerarquía HTML.
 
-> **Nota:** En el código fuente vas a ver que los menus de segundo y tercer nivel están hechos de varios DIVs contenidos en un contenedor con posición absoluta. Esto es útil para agrupar y posicionarlos todos a la vez.
+> [!NOTE]
+> En el código fuente vas a ver que los menus de segundo y tercer nivel están hechos de varios DIVs contenidos en un contenedor con posición absoluta. Esto es útil para agrupar y posicionarlos todos a la vez.
 
 ### Código fuente de ejemplo
 

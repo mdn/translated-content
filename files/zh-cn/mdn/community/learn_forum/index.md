@@ -58,7 +58,8 @@ slug: MDN/Community/Learn_forum
       4. 如果这个人没有真正接近一个可行的解决方案，要善意地鼓励他们，并尝试给他们一些线索，告诉他们应该往什么方向走。再给他们一次机会，让他们尝试做得更好。
       5. 如果你需要任何帮助，请在 [Matrix](https://wiki.mozilla.org/Matrix) 上的 [MDN Web 文档聊天室](https://chat.mozilla.org/#/room/#mdn:mozilla.org)寻求帮助。
 
-> **备注：** 最重要的是：要有耐心，要友好，要善良。记住，这些人中的大多数都是初学者。
+> [!NOTE]
+> 最重要的是：要有耐心，要友好，要善良。记住，这些人中的大多数都是初学者。
 
 ## MDN 学习区的结构
 

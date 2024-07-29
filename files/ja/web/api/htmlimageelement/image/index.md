@@ -10,7 +10,8 @@ l10n:
 
 **`Image()`** コンストラクターは、新しい {{DOMxRef("HTMLImageElement")}} インスタンスを作成します。機能的には {{DOMxRef("Document.createElement()", "document.createElement('img')")}} と同等です。
 
-> **メモ:** この関数を CSS の [`image()`](/ja/docs/Web/CSS/image/image) 関数と混同しないでください。
+> [!NOTE]
+> この関数を CSS の [`image()`](/ja/docs/Web/CSS/image/image) 関数と混同しないでください。
 
 ## 構文
 

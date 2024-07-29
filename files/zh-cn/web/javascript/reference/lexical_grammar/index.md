@@ -120,13 +120,27 @@ console.log("Hello world");
 
 JavaScript 的解释器会把它视为普通注释——只有当脚本直接在 shell 中运行时，它对 shell 才有语义意义。
 
-> **警告：** 如果你想让脚本直接在 shell 环境中运行，请用不含 [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) 的 UTF-8 编码。虽然 BOM 不会对在浏览器中运行的代码造成任何问题——在 UTF-8 解码过程中，分析源文本之前，BOM 就已经被剥离了——但如果前面有一个 BOM 字符，Unix/Linux shell 就不会识别该注释。
+> [!WARNING]
+> 如果你想让脚本直接在 shell 环境中运行，请用不含 [BOM](https://zh.wikipedia.org/wiki/端序記號) 的 UTF-8 编码。虽然 BOM 不会对在浏览器中运行的代码造成任何问题——在 UTF-8 解码过程中，分析源文本之前，BOM 就已经被剥离了——但如果前面有一个 BOM 字符，Unix/Linux shell 就不会识别该注释。
 
 你只能使用 `#!` 注释样式以指定 JavaScript 解释器。在所有其他情况下，只需使用 `//` 注释（或多行注释）。
 
 ## 关键字
 
-### ECMAScript 6 中的保留关键字
+*关键字*是 JavaScript 中看起来像标识符但又具有特殊含义的标记。例如，在函数声明之前的 [`async`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function) 关键字表示该函数是异步的。
+
+一些关键字是*保留的*，这意味着它们不能被用作变量声明、函数声明等的标识符。它们通常被称为*保留字*。下面提供了[这些保留字的列表](#保留字)。并不是所有的关键字都是保留的——例如，`async` 可以在任何地方用作标识符。一些关键字只是*在上下文中保留*——例如，`await` 只在异步函数体内保留，`let` 只在严格模式代码中，或 `const` 和 `let` 声明中保留。
+
+标识符总是通过*字符串值*进行比较，所以转义序列会被解释。例如，这也是一个语法错误：
+
+```js-nolint example-bad
+const els\u{65} = 1;
+// `els\u{65}` 编码的标识符与 `else` 相同
+```
+
+### 保留字
+
+这些关键字不能在 JavaScript 源码中的任何地方用作变量、函数、类等的标识符。
 
 - {{jsxref("Statements/break", "break")}}
 - {{jsxref("Statements/switch", "case")}}
@@ -135,12 +149,13 @@ JavaScript 的解释器会把它视为普通注释——只有当脚本直接在
 - {{jsxref("Statements/const", "const")}}
 - {{jsxref("Statements/continue", "continue")}}
 - {{jsxref("Statements/debugger", "debugger")}}
-- {{jsxref("Statements/default", "default")}}
+- {{jsxref("Statements/switch", "default")}}
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Statements/do...while", "do")}}
 - {{jsxref("Statements/if...else", "else")}}
 - {{jsxref("Statements/export", "export")}}
-- {{jsxref("Statements/class", "extends")}}
+- [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends)
+- [`false`](#布尔字面量)
 - {{jsxref("Statements/try...catch", "finally")}}
 - {{jsxref("Statements/for", "for")}}
 - {{jsxref("Statements/function", "function")}}
@@ -149,18 +164,19 @@ JavaScript 的解释器会把它视为普通注释——只有当脚本直接在
 - {{jsxref("Operators/in", "in")}}
 - {{jsxref("Operators/instanceof", "instanceof")}}
 - {{jsxref("Operators/new", "new")}}
+- {{jsxref("Operators/null", "null")}}
 - {{jsxref("Statements/return", "return")}}
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Statements/switch", "switch")}}
 - {{jsxref("Operators/this", "this")}}
 - {{jsxref("Statements/throw", "throw")}}
+- [`true`](#布尔字面量)
 - {{jsxref("Statements/try...catch", "try")}}
 - {{jsxref("Operators/typeof", "typeof")}}
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Operators/void", "void")}}
 - {{jsxref("Statements/while", "while")}}
 - {{jsxref("Statements/with", "with")}}
-- {{jsxref("Operators/yield", "yield")}}
 
 ### 未来保留关键字
 
