@@ -36,7 +36,8 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 1. 请分别在你的文本编辑器和浏览器中打开刚下载的文件。
 2. 先试玩游戏，你会发现在点击“确定”按钮时，游戏并没有响应。
 
-> **备注：** 你可能还在为修复你自己版本的游戏头疼，但我们仍然希望你先用我们的版本来完成这一节，这样你才能学到本节中的技术。然后再去修复自己的游戏也不晚。
+> [!NOTE]
+> 你可能还在为修复你自己版本的游戏头疼，但我们仍然希望你先用我们的版本来完成这一节，这样你才能学到本节中的技术。然后再去修复自己的游戏也不晚。
 
 首先查看开发者控制台，看是否存在语法错误，然后尝试修复。详见下文。
 
@@ -65,7 +66,8 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 4. 出错信息显示“guessSubmit.addeventListener 不是一个函数”，说明这里可能存在拼写错误。如果你不确定某语法的拼写是否正确，可以到 MDN 上去查找，目前最简便的方法就是去你喜欢的搜索引擎搜索“MDN + 语言*特性”。就本文当前内容你可以点击*：[`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener)。
 5. 因此这里错误显然是我们把函数名写错造成的。请记住，JavaScript 区分大小写，所以任何轻微的不同或大小写问题都会导致出错。将 `addeventListener` 改为 `addEventListener` 便可解决。
 
-> **备注：** 更多信息请参考 [类型错误：“x”不是一个函数](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_a_function)。
+> [!NOTE]
+> 更多信息请参考 [类型错误：“x”不是一个函数](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_a_function)。
 
 ### 语法错误：第二轮
 
@@ -75,7 +77,8 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 
    > **备注：** [`Null`](/zh-CN/docs/Glossary/Null)是一个特殊值，意思是“什么也没有”，或者“没有值”。这表示 `lowOrHi` 已声明并初始化，但没有任何有意义的值，可以说：它没有类型没有值。
 
-   > **备注：** 这条错误没有在页面加载时立即发生，是因为它发生在函数内部（`checkGuess() { ... }`块中）。函数内部的代码运行于一个外部代码相互独立的域内，后面函数的文章中将更详细地讲解。此时此刻，只有当代码运行至 86 行并调用 `checkGuess()` 函数时，代码才会抛出出错信息。
+   > [!NOTE]
+   > 这条错误没有在页面加载时立即发生，是因为它发生在函数内部（`checkGuess() { ... }`块中）。函数内部的代码运行于一个外部代码相互独立的域内，后面函数的文章中将更详细地讲解。此时此刻，只有当代码运行至 86 行并调用 `checkGuess()` 函数时，代码才会抛出出错信息。
 
 4. 请观察第 78 行代码：
 
@@ -107,7 +110,8 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 9. 这里我们需要一个类选择器，它应以一个点开头（`.`），但被传递到第 48 行的`querySelector()`方法中的选择器没有点。这可能是问题所在！尝试将第 48 行中的 `lowOrHi` 改成 `.lowOrHi`。
 10. 再次保存并刷新，此时 `console.log()` 语句应该返回我们想要的 `<p>` 元素。终于把错误搞定了！此时你可以把 `console.log()` 一行删除，或保留它以便随后参考。选择权在你。
 
-> **备注：** 此错误的更多详细信息请参阅：[类型错误：“x”（不）是“y”](/zh-CN/docs/Web/JavaScript/Reference/Errors/Unexpected_type)。
+> [!NOTE]
+> 此错误的更多详细信息请参阅：[类型错误：“x”（不）是“y”](/zh-CN/docs/Web/JavaScript/Reference/Errors/Unexpected_type)。
 
 ### 语法错误：第三轮
 
@@ -173,24 +177,6 @@ Math.floor(Math.random() * 100) + 1;
 
 代码中还会遇到其他常见错误。本节将指出其中的大部分。
 
-### SyntaxError: missing ; before statement<br>（语法错误：语句缺少分号）
-
-这个错误通常意味着你漏写了一行代码最后的分号，但是此类错误有时候会更加隐蔽。例如如果我们把 `checkGuess()` 函数中的这一行 :
-
-```js
-let userGuess = Number(guessField.value);
-```
-
-改成
-
-```js
-let userGuess === Number(guessField.value);
-```
-
-将抛出一个错误。因为系统认为你在做其他事情。请不要把赋值运算符（`=`，为一个变量赋值）和严格等于运算符（`===`，比较两个值是否相等，返回 `true`/`false`）弄混淆。
-
-> **备注：** 此错误的更多详细信息请参考 [SyntaxError: missing ; before statement](/zh-CN/docs/Web/JavaScript/Reference/Statements) 。
-
 ### 不管输入什么程序总说“你猜对了！”
 
 这是混淆赋值和严格等于运算符的又一症状。例如我们把 `checkGuess()` 里的：
@@ -207,13 +193,14 @@ if (userGuess = randomNumber) {
 
 因为条件永远返回 `true`，使得程序报告你猜对了。小心哦！
 
-### SyntaxError: missing ) after argument list<br>（语法错误：参数表末尾缺少括号）
+### SyntaxError: missing ) after argument list
 
 这个很简单。通常意味着函数/方法调用后的结束括号忘写了。
 
-> **备注：** 有关此错误的更多详细信息请参考： [SyntaxError: missing ) after argument list](/zh-CN/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list)。
+> [!NOTE]
+> 有关此错误的更多详细信息请参考： [SyntaxError: missing ) after argument list](/zh-CN/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list)。
 
-### SyntaxError: missing : after property id<br>（语法错误：属性 ID 后缺少冒号）
+### SyntaxError: missing : after property id
 
 JavaScript 对象的形式有错时通常会导致此类错误，如果把
 
@@ -229,21 +216,18 @@ function checkGuess( {
 
 浏览器会认为我们试图将函数的内容当作参数传回函数。写圆括号时要小心！
 
-### SystaxError: missing } after function body<br>（语法错误：函数体末尾缺少花括号）
+### SystaxError: missing } after function body
 
 这个简单。通常意味着函数或条件结构中丢失了一个花括号。如果我们将 `checkGuess()` 函数末尾的花括号删除，就会得到这个错误。
 
-### SyntaxError: expected expression, got '_string_'<br>（语法错误：得到一个 '_string_' 而非表达式）
-
-或者
-
-### SyntaxError: unterminated string literal<br>（语法错误：字符串字面量未正常结束）
+### SyntaxError: expected expression, got '_string_' 或 SyntaxError: string literal contains an unescaped line break
 
 这个错误通常意味着字符串两端的引号漏写了一个。如果你漏写了字符串开始的引号，将得到第一条出错信息，这里的 '_string'_ 将被替换为浏览器发现的意外字符。如果漏写了末尾的引号将得到第二条。
 
 对于所有的这些错误，想想我们在实例中是如何逐步解决的。错误出现时，转到错误所在的行观察是否能发现问题所在。记住，错误不一定在那一行，错误的原因也可能和我们在上面所说的不同！
 
-> **备注：** 有关这些错误的更多详细信息请参考：[SyntaxError: Unexpected token](/zh-CN/docs/Web/JavaScript/Reference/Errors/Unexpected_token) 以及 [SyntaxError: unterminated string literal](/zh-CN/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal)。
+> [!NOTE]
+> 有关这些错误的更多详细信息请参考：[SyntaxError: Unexpected token](/zh-CN/docs/Web/JavaScript/Reference/Errors/Unexpected_token) 以及 [SyntaxError: string literal contains an unescaped line break](/zh-CN/docs/Web/JavaScript/Reference/Errors/String_literal_EOL)。
 
 ## 小结
 

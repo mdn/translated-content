@@ -84,7 +84,8 @@ if (compraRealizada === true) {
 
 La variable `compraRealizada` escrita en este código dará siempre como resultado un retorno de valor `false`, lo cuál significa una desilusión para nuestro pobre hijo. Depende de nosotros proporcionar un mecanismo para que el padre cambie el valor de la variable `compraRealizada` a `true` si el niño realizó la compra.
 
-> **Nota:** Podrás ver una versión más completa de [este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html) (también podrás verlo [corriendo en vivo.](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html))
+> [!NOTE]
+> Podrás ver una versión más completa de [este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html) (también podrás verlo [corriendo en vivo.](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html))
 
 ### else if
 
@@ -139,7 +140,8 @@ function establecerClima() {
 3. Cuando la función es ejecutada, primero establecemos la variable `eleccion` con el valor obtenido del elemento `<select>.` Luego usamos una declaración condicinal para mostrar distintos textos dentro del párrafo {{htmlelement("p")}} dependiendo del valor de la variable `eleccion`. Note como todas las condicinales son probadas en los bloques `else if() {...}` , a excepción del primero, el cual es probado en el primer bloque `if() {...}`.
 4. La ultima elección, dentro del bloque `else {...}`, es básicamente el "último recurso" como opción— El código dentro de este bloque se ejecutará si nunguna de las condiciones es `true`. En este caso, sirve para vaciar el contenido del párrafo si nada ha sido seleccionado, por ejemplo, si el usuario decide elegir de nuevo "--Haga una elección--" mostrado al inicio.
 
-> **Nota:** Puedes encontrar [este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) (También podrás verlo [correr en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html).)
+> [!NOTE]
+> Puedes encontrar [este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) (También podrás verlo [correr en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html).)
 
 ### Una nota en los operadores de comparación
 
@@ -149,7 +151,8 @@ Los operadores de comparación son usados para probar las condiciones dentro de 
 - `<` y `>` — prueba si un valor es menor o mayor que otro.
 - `<=` y `>=` — prueba si un valor es menor e igual o mayor e igual que otro.
 
-> **Nota:** Revisa el material en los enlaces previos para refrescar la memoria en estos temas.
+> [!NOTE]
+> Revisa el material en los enlaces previos para refrescar la memoria en estos temas.
 
 Queremos hacer una mención especial al probar los valores (`true`/`false`) , y un patrón común que te encontrarás una y otra vez. Cualquier valor que no sea `false`, `undefined`, `null`, `0`, `NaN`, o una cadena vacía string (`''`) realmente retorna el valor `true` cuando es probada como una declaración condicional, por lo tanto puedes simplemente usar el nombre de una variable para probar si es `true`, o si al menos existe (i.e. no está definido.) Por ejemplo:
 
@@ -304,7 +307,8 @@ Aquí tenemos:
 6. Como muchos otros casos, los que quieras.
 7. La palabra clave `default`, seguido exactamente del mismo patrón de código que en los casos anteriores , excepto que el valor predeterminado no tiene opciónes después de él, y no es necesario que se use `break` porque no hay nada que ejecutar después de este bloque de todas formas. Esta es la opción predeterminada o por defecto que se ejecuta si ninguna de las opciones coincide.
 
-> **Nota:** No tiene que incluir la sección `default`; se puede omitir con seguridad si no hay posibilidades de que la expresión termine igualando un valor desconocido. Sin embargo, si existe la posibilidad de que esto ocurra, debe incluirlo para evitar casos desconocidos o comportamientos extraños en tu código.
+> [!NOTE]
+> No tiene que incluir la sección `default`; se puede omitir con seguridad si no hay posibilidades de que la expresión termine igualando un valor desconocido. Sin embargo, si existe la posibilidad de que esto ocurra, debe incluirlo para evitar casos desconocidos o comportamientos extraños en tu código.
 
 ### Un ejemplo con switch
 
@@ -355,7 +359,8 @@ function setWeather() {
 }
 ```
 
-> **Nota:** Tambien puedes[encontrar este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (tambien puedes verlo [en ejecución aquí](https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html).)
+> [!NOTE]
+> Tambien puedes[encontrar este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (tambien puedes verlo [en ejecución aquí](https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html).)
 
 ## Operador Ternario
 
@@ -412,7 +417,8 @@ Aquí tenemos un elemento {{htmlelement('select')}} para elegir un tema (blanco 
 
 Finalmente, también tenemos un detector de eventos [onchange](/es/docs/conflicting/Web/API/HTMLElement/change_event) que sirve para ejecutar una función que contiene un operador ternario. Comienza con una condición de prueba — `select.value === 'black'`. Si esto devuelve `true`, ejecutamos la función `update()` con parámetros de blanco y negro, lo que significa que terminamos con un color de fondo negro y un color de texto blanco. Si devuelve `false`, ejecutamos las función `update()` con parámetros de blanco y negro, lo que significa que el color del sitio está invertido.
 
-> **Nota:** También puedes [encontrar este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (y verlo [en ejecución aquí](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html).)
+> [!NOTE]
+> También puedes [encontrar este ejemplo en GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (y verlo [en ejecución aquí](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html).)
 
 ## Aprendizaje activo: Un calendario simple
 

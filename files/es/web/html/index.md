@@ -24,7 +24,7 @@ Los siguientes artículos pueden ayudarte a obtener más información sobre HTML
 - Referencia HTML
   - : En nuestra extensa sección [referencia HTML](/es/docs/Web/HTML/Referencia) encontrarás los detalles sobre cada elemento y atributo en HTML.
 
-> **Observación:**
+> [!CALLOUT]
 >
 > ### ¿Quieres transformarte en un desarrollador de la interfaz de usuario web?
 >

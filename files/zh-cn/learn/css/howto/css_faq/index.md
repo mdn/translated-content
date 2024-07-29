@@ -62,7 +62,8 @@ HTML 元素可以拥有一个 `id` 和（或）`class` 属性。`id` 属性为�
 - 类名可以让你同时为多个元素赋予样式，减少样式表的大小，避免了为每一个 id 选择器撰写同样的样式信息。越小的样式表带来的性能体验也就越好。
 - 类名选择器比 id 选择器的[优先级](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#优先级)更低，所以可以很方便地覆盖它们。
 
-> **备注：** 参见 [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)，以了解详情。
+> [!NOTE]
+> 参见 [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)，以了解详情。
 
 ## 我如何还原属性的默认值？
 
@@ -263,9 +264,11 @@ div {
 text-stroke: 4px navy;
 ```
 
-> **备注：** 为更深层次了解处理前缀属性，请参阅[跨浏览器测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)模块的[处理常见的 HTML 和 CSS 问题——处理 CSS 前缀](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#处理_css_前缀)。
+> [!NOTE]
+> 为更深层次了解处理前缀属性，请参阅[跨浏览器测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)模块的[处理常见的 HTML 和 CSS 问题——处理 CSS 前缀](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#处理_css_前缀)。
 
-> **备注：** 请参阅 [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)和 [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)，以了解浏览器前缀 CSS 属性的列表。
+> [!NOTE]
+> 请参阅 [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)和 [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)，以了解浏览器前缀 CSS 属性的列表。
 
 ## z-index 属性与定位有什么关系？
 
@@ -273,4 +276,5 @@ z-index 属性指定了元素的栈序。
 
 具有较高 z-index/栈序的元素总是渲染于具有较低 z-index/栈序的元素之前。z-index 只会在有着指定 position（`position:absolute`、`position:relative` 或 `position:fixed`）的元素上工作。
 
-> **备注：** 请参阅[定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)文章，特别是[介绍 z-index](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning#介绍_z-index) 部分来深入学习。
+> [!NOTE]
+> 请参阅[定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)文章，特别是[介绍 z-index](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning#介绍_z-index) 部分来深入学习。

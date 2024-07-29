@@ -17,7 +17,8 @@ slug: Web/API/Headers
 
 一个实现了`Headers` 的对象可以直接用于 {{jsxref("Statements/for...of", "for...of")}} 结构中，而不是 {{domxref('Headers.entries()', 'entries()')}}: `for (var p of myHeaders)` 等价于 `for (var p of myHeaders.entries())`.
 
-> **备注：** 你可以通过阅读我们的 [HTTP headers](/zh-CN/docs/Web/HTTP/Headers)参考找到更多关于可用 headers 的信息。
+> [!NOTE]
+> 你可以通过阅读我们的 [HTTP headers](/zh-CN/docs/Web/HTTP/Headers)参考找到更多关于可用 headers 的信息。
 
 ## 构造函数
 
@@ -43,9 +44,11 @@ slug: Web/API/Headers
 - {{domxref("Headers.values()")}}
   - : 以{{jsxref("Iteration_protocols", "迭代器")}}的形式返回 Headers 对象中所有存在的 header 的值。
 
-> **备注：** 值得注意的是，在 header 已存在或者有多个值的状态下{{domxref("Headers.set()")}} 和 {{domxref("Headers.append()")}}的使用有如下区别，{{domxref("Headers.set()")}} 将会用新的值覆盖已存在的值，但是{{domxref("Headers.append()")}}会将新的值添加到已存在的值的队列末尾。请参相关词条内的示例代码。
+> [!NOTE]
+> 值得注意的是，在 header 已存在或者有多个值的状态下{{domxref("Headers.set()")}} 和 {{domxref("Headers.append()")}}的使用有如下区别，{{domxref("Headers.set()")}} 将会用新的值覆盖已存在的值，但是{{domxref("Headers.append()")}}会将新的值添加到已存在的值的队列末尾。请参相关词条内的示例代码。
 
-> **备注：** 如果你尝试传入名称不是[有效的 HTTP 标头名称](https://fetch.spec.whatwg.org/#concept-header-name)的引用，则所有 Headers 方法都将引发 `TypeError`。如果标头具有不可变的 {{Glossary("Guard")}}，则突变操作会引发 `TypeError`。在任何其他失败情况下，它们都会无声地失败。
+> [!NOTE]
+> 如果你尝试传入名称不是[有效的 HTTP 标头名称](https://fetch.spec.whatwg.org/#concept-header-name)的引用，则所有 Headers 方法都将引发 `TypeError`。如果标头具有不可变的 {{Glossary("Guard")}}，则突变操作会引发 `TypeError`。在任何其他失败情况下，它们都会无声地失败。
 
 ### Obsolete methods
 

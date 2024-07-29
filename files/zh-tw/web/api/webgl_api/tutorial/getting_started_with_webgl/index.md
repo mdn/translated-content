@@ -23,7 +23,8 @@ slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 
 ### 準備 WebGL 背景資料
 
-> **備註：** 背景資料為 Context 翻譯而來
+> [!NOTE]
+> 背景資料為 Context 翻譯而來
 
 在下面的 JavaScript 程式碼，當指令完成讀取後會執行 `main()` 函式。目的是為了設定 WebGL 背景資料並且開始渲染內容。
 

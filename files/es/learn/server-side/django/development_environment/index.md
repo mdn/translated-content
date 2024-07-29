@@ -53,7 +53,8 @@ Django es extremadamente flexible en términos de cómo y dónde puede instalars
 
 Cada una de estas opciones requieren configuraciones y puesta en marcha ligeramente diferentes. Las siguientes subsecciones explican algunas de tus opciones. En el resto del artículo te mostraremos como ajustar Django en un pequeño número de sistemas operativos, y se supondrá ese ajuste a lo largo del resto del módulo.
 
-> **Nota:** La documentación oficial de Django cubre otras posibles opciones de instalación. Enlazamos a los [documentos apropiados más abajo](#furtherreading).
+> [!NOTE]
+> La documentación oficial de Django cubre otras posibles opciones de instalación. Enlazamos a los [documentos apropiados más abajo](#furtherreading).
 
 #### ¿Qué sistemas operativos están soportados?
 
@@ -69,7 +70,8 @@ Django se ejecuta por encima de Python, y puede uarse tanto con Python 2 o con P
 - Python 3 es una actualización de Python 2 que, aunque similar, es más consistente y fácil de usar. Python 3 también es el futuro de Python, y continúa su evolución.
 - También es posible soportar ambas versiones usando bibliotecas (ej. [six](http://pythonhosted.org/six/)), aunque no sin un esfuerzo adicional de desarrollo.
 
-> **Nota:** Historicamente Python 2 era la única elección realista, porque muy pocas bibliotecas de terceros estaban disponibles para Python 3. La tendencia actual es que la mayoría de paquetes nuevos y populares del [Python Package Index](https://pypi.python.org/pypi) (PyPi) soporten ambas versiones de Python. Aunque todavía haya muchos paquetes que sólo están disponibles para Python 2, elegir Python 3 es actualmente una opción muy popular.
+> [!NOTE]
+> Historicamente Python 2 era la única elección realista, porque muy pocas bibliotecas de terceros estaban disponibles para Python 3. La tendencia actual es que la mayoría de paquetes nuevos y populares del [Python Package Index](https://pypi.python.org/pypi) (PyPi) soporten ambas versiones de Python. Aunque todavía haya muchos paquetes que sólo están disponibles para Python 2, elegir Python 3 es actualmente una opción muy popular.
 
 Te recomendamos que uses la última versión de Python 3 a menos que el sitio dependa de bibliotecas de terceros que sólo están disponibles para Python 2.
 
@@ -91,13 +93,15 @@ Django soporta cuatro bases de datos importantes (PostgreSQL, MySQL, Oracle y SQ
 
 Durante este artículo (y la mayoría de este módulo) usaremos la base de datos _SQLite_, que almacena sus datos en un fichero. SQLite está pensado para ser usado como base ligera y no puede soportar un alto nivel de concurrencia. Es sin embargo una excelente elección para aplicaciones que son principalmente de sólo lectura.
 
-> **Nota:** Django está configurado para usar SQLite por defecto cuando comienzas tu proyecto de sitio web usando las herramientas estándard (_django-admin_). Es una gran elección cuando estás empezando porque no requiere configuración o puesta en marcha adicional.
+> [!NOTE]
+> Django está configurado para usar SQLite por defecto cuando comienzas tu proyecto de sitio web usando las herramientas estándard (_django-admin_). Es una gran elección cuando estás empezando porque no requiere configuración o puesta en marcha adicional.
 
 #### ¿Instalar Python en un entorno de sistema o virtual?
 
 Cuando instalas Python3 obtienes un único entorno global que es compartido con todo el código Python3. Si bien puedes instalar los paquetes que te gusten en el entorno, sólo puedes instalar al mismo tiempo una versión en particular de cada paquete.
 
-> **Nota:** Las aplicaciones Python instaladas en el entorno global pueden entrar en conflicto potencialmente unas con otras (ej. si dependen de diferentes versiones del mismo paquete).
+> [!NOTE]
+> Las aplicaciones Python instaladas en el entorno global pueden entrar en conflicto potencialmente unas con otras (ej. si dependen de diferentes versiones del mismo paquete).
 
 Si instalas Django dentro del entorno por defecto/global sólo podrás apuntar a una sóla versión de Django en la computadora. Esto puede ser un problema si quieres crear nuevos sitios (usando la última versión de Django) pero manteniendo los sitios web que dependen de versiones más antiguas.
 
@@ -111,7 +115,8 @@ Para poder usar Django tendrás que instalar Python en tu sistema operativo. Si 
 
 Esta sección explica brevemente como puedes comprobar qué versiones de Python están presentes, e instalar nuevas versiones cuando lo necesites, en Ubuntu Linux 16.04, Mac OS X, y Windows 10.
 
-> **Nota:** Dependiendo de tu plataforma, podrías también ser capaz de instalar Python/pip desde la propia aplicación de gestión de paquetes de tu sistema o vía otros mecanismos. Para la mayoría de las plataformas puedes descargar los ficheros de instalación requeridos desde <https://www.python.org/downloads/> e instalarlos usando el método apropiado específico de la plataforma.
+> [!NOTE]
+> Dependiendo de tu plataforma, podrías también ser capaz de instalar Python/pip desde la propia aplicación de gestión de paquetes de tu sistema o vía otros mecanismos. Para la mayoría de las plataformas puedes descargar los ficheros de instalación requeridos desde <https://www.python.org/downloads/> e instalarlos usando el método apropiado específico de la plataforma.
 
 ### Ubuntu 16.04
 
@@ -183,7 +188,8 @@ El instalador de Windows incorpora _pip3_ (el gestor de paquetes de Python) por 
 pip3 list
 ```
 
-> **Nota:** El instalador debería poner en marcha todo lo que necesitas para que el comando de arriba funcione. Si por el contrario obtienes un mensaje de que Python no puede ser encontrado, puede que necesites añadirlo al path de tu sistema.
+> [!NOTE]
+> El instalador debería poner en marcha todo lo que necesitas para que el comando de arriba funcione. Si por el contrario obtienes un mensaje de que Python no puede ser encontrado, puede que necesites añadirlo al path de tu sistema.
 
 ## Uso de Django dentro de un entorno virtual de Python
 
@@ -293,7 +299,8 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get
 
 Una vez que estás dentro del entorno virutal puedes instalar Django e iniciar el desarrollo.
 
-> **Nota:** De ahora en adelante en este artículo (y por ende en el módulo) asume por favor que todos los comandos se ejecutan en un entorno virtual Python como el que acabamos de poner en marcha arriba.
+> [!NOTE]
+> De ahora en adelante en este artículo (y por ende en el módulo) asume por favor que todos los comandos se ejecutan en un entorno virtual Python como el que acabamos de poner en marcha arriba.
 
 ### Uso de un entorno virtual
 
@@ -324,9 +331,11 @@ py -3 -m django --version
  1.11.7
 ```
 
-> **Nota:** En Windows se lanzan scripts _Python 3_ añadiendo como prefijo del comando con `py -3`, mientras que en Linux/Mac OSX, el comando es `python3`.
+> [!NOTE]
+> En Windows se lanzan scripts _Python 3_ añadiendo como prefijo del comando con `py -3`, mientras que en Linux/Mac OSX, el comando es `python3`.
 
-> **Advertencia:** El resto de este **modulo** usa, para invocar Python 3, el comando _Linux_ (`python3`) . Si estás trabajando en _Windows_ simplemente reemplazar este prefijo con: `py -3`
+> [!WARNING]
+> El resto de este **modulo** usa, para invocar Python 3, el comando _Linux_ (`python3`) . Si estás trabajando en _Windows_ simplemente reemplazar este prefijo con: `py -3`
 
 ## Comprobación de tu instalación
 
@@ -361,7 +370,8 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
-> **Nota:** El comando anterior muestra el comando Linux/Mac OS X. En este punto ¡puedes ignorar las advertencias sobre "13 unapplied migration(s)"!
+> [!NOTE]
+> El comando anterior muestra el comando Linux/Mac OS X. En este punto ¡puedes ignorar las advertencias sobre "13 unapplied migration(s)"!
 
 Una vez que tengas funcionando el servidor puedes ver el sitio navegando a la siguiente URL en tu explorador web local : `http://127.0.0.1:8000/`. Deberías ver un sitio parecido a este:
 

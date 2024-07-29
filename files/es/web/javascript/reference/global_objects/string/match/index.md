@@ -90,7 +90,8 @@ console.log(matches);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
 ```
 
-> **Nota:** Véase también {{jsxref("String.prototype.matchAll()")}} y [Búsqueda avanzada con banderas](/es/docs/Web/JavaScript/Guide/Regular_Expressions#búsqueda_avanzada_con_banderas).
+> [!NOTE]
+> Véase también {{jsxref("String.prototype.matchAll()")}} y [Búsqueda avanzada con banderas](/es/docs/Web/JavaScript/Guide/Regular_Expressions#búsqueda_avanzada_con_banderas).
 
 ### Uso de grupos de captura con nombre
 

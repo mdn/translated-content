@@ -30,8 +30,8 @@ l10n:
 - 最新の仕様の変更を反映して、CSS Variables の接頭辞 `var-` を `--` に変更しました ([Firefox バグ 985838](https://bugzil.la/985838))。
 - {{cssxref("hyphens")}} プロパティでポーランド語のハイフネーション規則をサポートしました ([Firefox バグ 987668](https://bugzil.la/987668))。
 - 韓国語のカウンタスタイルで、10,000 の倍数に不要なホワイトスペースがある問題を修正しました ([Firefox バグ 985186](https://bugzil.la/985186))。
-- 親の :before 疑似要素が存在して overflow が auto である場合に、CSS opacity のトランジションが機能しない問題を修正しました ([Firefox バグ 990340](https://bugzil.la/990340))。
-- `::-moz-math-stretchy` 疑似要素を削除しました ([Firefox バグ 1000879](https://bugzil.la/1000879))。
+- 親の :before 擬似要素が存在して overflow が auto である場合に、CSS opacity のトランジションが機能しない問題を修正しました ([Firefox バグ 990340](https://bugzil.la/990340))。
+- `::-moz-math-stretchy` 擬似要素を削除しました ([Firefox バグ 1000879](https://bugzil.la/1000879))。
 
 ### HTML
 

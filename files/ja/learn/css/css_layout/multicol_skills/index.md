@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、[CSS 段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)を、{{CSSxRef("column-count")}}、{{CSSxRef("column-width")}}、{{CSSxRef("column-gap")}}、{{CSSxRef("column-span")}}、{{CSSxRef("column-rule")}} プロパティや値を含めて理解しているかどうかを評価することです。今までに学んだ素材の様々な要素を使用する、 3 つの小さな課題を行っていただきます。
 
-> **メモ:** 以下の対話型エディターで取り組むことができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業したほうが便利な場合もあります。
+> [!NOTE]
+> 以下の対話型エディターで取り組むことができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業したほうが便利な場合もあります。
 >
 > 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
@@ -25,7 +26,7 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/multicol/multicol1.html", '100%', 1000)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/multicol/multicol1-download.html)しましょう。
 
@@ -41,7 +42,7 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/multicol/multicol2.html", '100%', 1000)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/multicol/multicol2-download.html)しましょう。
 
@@ -55,6 +56,6 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/multicol/multicol3.html", '100%', 1000)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/multicol/multicol3-download.html)しましょう。

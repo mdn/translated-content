@@ -11,7 +11,8 @@ Los tipos de dato `<porcentaje>` de [CSS](/en/CSS) representan un valor en forma
 
 Varias propriedades de longitud usan porcentajes, tales como `width, margin` y `padding`. Los porcentajes tambien se pueden ver en `font-size`, donde el tamaño del texto esta directamente relacionado al tamaño de su elemento padre.
 
-> **Nota:** Solo los valores calculados son heredados. Entonces, incluso si un valor porcentual es usado en en la propiedad padre, un valor real, como una anchura en pixeles para un valor `<length>,`sera accesible en la propiedad heredada, no el valor porcentual.
+> [!NOTE]
+> Solo los valores calculados son heredados. Entonces, incluso si un valor porcentual es usado en en la propiedad padre, un valor real, como una anchura en pixeles para un valor `<length>,`sera accesible en la propiedad heredada, no el valor porcentual.
 
 ## Interpolación
 

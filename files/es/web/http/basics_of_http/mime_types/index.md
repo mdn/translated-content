@@ -67,7 +67,8 @@ Este es el valor predeterminado para un archivo binario. Como realmente signific
 
 Este es el valor predeterminado para los archivos de texto. Incluso si realmente significa un archivo textual desconocido, los navegadores asumen que pueden mostrarlo.
 
-> **Nota:** Tenga en cuenta que `text/plain` no significa _cualquier tipo de datos textuales_. Si esperan un tipo específico de datos textuales, probablemente no lo considerarán una coincidencia. Específicamente, si descargan un archivo de texto sin formato `text/plain` de un elemento {{HTMLElement("link")}} que declara archivos CSS, no lo reconocerán como un archivo CSS válido si se presenta con `text/plain`. Se debe usar el tipo MIME CSS `text/css`.
+> [!NOTE]
+> Tenga en cuenta que `text/plain` no significa _cualquier tipo de datos textuales_. Si esperan un tipo específico de datos textuales, probablemente no lo considerarán una coincidencia. Específicamente, si descargan un archivo de texto sin formato `text/plain` de un elemento {{HTMLElement("link")}} que declara archivos CSS, no lo reconocerán como un archivo CSS válido si se presenta con `text/plain`. Se debe usar el tipo MIME CSS `text/css`.
 
 ### `text/css`
 

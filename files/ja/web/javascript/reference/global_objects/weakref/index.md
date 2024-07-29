@@ -51,7 +51,8 @@ l10n:
 
   - : インスタンスオブジェクトを作成したコンストラクター関数です。 `WeakRef` インスタンスの場合、初期値は {{jsxref("WeakRef/WeakRef", "WeakRef")}} コンストラクターです。
 
-    > **メモ:** このプロパティは仕様上 "normative optional" とされており、適合性のある実装では `constructor` プロパティを公開しないことを意味しています。これにより、任意のコードが `WeakRef` コンストラクターを取得し、ガベージコレクションを監視することができなくなります。しかし、主要なエンジンはすべて既定では公開しています。
+    > [!NOTE]
+    > このプロパティは仕様上 "normative optional" とされており、適合性のある実装では `constructor` プロパティを公開しないことを意味しています。これにより、任意のコードが `WeakRef` コンストラクターを取得し、ガベージコレクションを監視することができなくなります。しかし、主要なエンジンはすべて既定では公開しています。
 
 - `WeakRef.prototype[@@toStringTag]`
   - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"WeakRef"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。

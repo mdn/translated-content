@@ -9,7 +9,8 @@ slug: Web/CSS/fit-content
 
 `fit-content` 属性可以用于设置元素的 {{cssxref("width")}}、{{cssxref("height")}}、{{cssxref("min-width")}}、{{cssxref("min-height")}}、{{cssxref("max-width")}} 和 {{cssxref("max-height")}}，此时最大和最小尺寸将基于元素的内容尺寸计算。
 
-> **备注：** CSS 尺寸规范另外还定义了 {{cssxref("fit-content()", "fit-content()")}} 函数。本页详细介绍了该关键字的用法。
+> [!NOTE]
+> CSS 尺寸规范另外还定义了 {{cssxref("fit-content()", "fit-content()")}} 函数。本页详细介绍了该关键字的用法。
 
 ## 语法
 

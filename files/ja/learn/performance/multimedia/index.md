@@ -33,7 +33,8 @@ l10n:
   </tbody>
 </table>
 
-> **メモ:** これは、ウェブ上でのマルチメディア配信を最適化するための高レベルな入門書であり、一般的な原則とテクニックに応じたものです。より詳細なガイドについては、 <https://web.dev/learn/images> を参照してください。
+> [!NOTE]
+> これは、ウェブ上でのマルチメディア配信を最適化するための高レベルな入門書であり、一般的な原則とテクニックに応じたものです。より詳細なガイドについては、 <https://web.dev/learn/images> を参照してください。
 
 ## なぜマルチメディアを最適化するのか
 
@@ -61,7 +62,8 @@ l10n:
 
 最適なファイル形式は、通常、画像の性格によって異なります。
 
-> **メモ:** 画像の種類に関する一般的な情報は、[画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Formats/Image_types)を参照してください。
+> [!NOTE]
+> 画像の種類に関する一般的な情報は、[画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Formats/Image_types)を参照してください。
 
 [SVG](/ja/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) 形式は、色が少なく、写真のようにリアルでない画像に適しています。この場合、ソースがベクターグラフィック形式で利用できることが必要です。そのような画像がビットマップとしてしか存在しない場合は、[PNG](/ja/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) が予備のフォーマットとして選ばれます。この種類のモチーフの例としては、ロゴ、イラスト、図表、アイコンなどがあります（メモ: SVG はアイコンフォントよりもはるかに優れています！）。どちらの形式も透過に対応しています。
 
@@ -79,7 +81,8 @@ SVGを最適化するための良いオンラインツールとしては、[SVGO
 
 - [WebP](/ja/docs/Web/Media/Formats/Image_types#webp_画像) — 画像とアニメーション画像の両方に最適な選択肢です。WebP は PNG や JPEG よりもはるかに優れた圧縮率を持ち、より高い色深度、アニメーションフレーム、透過率などに対応しています（ただし、プログレッシブ表示には対応していません）。macOS デスクトップ Big Sur の Safari 14 以前を除く、主要なブラウザーで対応しています。
 
-  > **メモ:** Apple が [Safari 14 で WebP の対応を発表](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174)しているにもかかわらず、 Safari のバージョン 16.0 より前では、 macOS の 11/Big Sur より前のデスクトップ版では正常に `.webp 画像が表示されなせん、 iOS 14 の Safari では `.webp` 画像が正しく表示されます。
+  > [!NOTE]
+  > Apple が [Safari 14 で WebP の対応を発表](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174)しているにもかかわらず、 Safari のバージョン 16.0 より前では、 macOS の 11/Big Sur より前のデスクトップ版では正常に `.webp 画像が表示されなせん、 iOS 14 の Safari では `.webp` 画像が正しく表示されます。
 
 - [AVIF](/ja/docs/Web/Media/Formats/Image_types#avif_画像) — 高性能でロイヤリティフリーの画像形式であるため、画像とアニメーション画像の両方に適しています（WebP よりもさらに効率的ですが、対応はそれほど広くありません）。これで Chrome、Opera、Firefox で対応しています。[以前の画像形式を AVIF に変換するオンラインツール](https://avif.io/)も参照してください。
 - **JPEG2000** — かつては JPEG の後継とされていましたが、Safari でのみ対応しています。プログレッシブ表示にも対応していません。
