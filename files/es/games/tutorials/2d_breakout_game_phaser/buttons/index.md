@@ -58,7 +58,8 @@ Los parámetros del método `button()` son los siguientes:
 - Una referencia a `this` para especificar el contexto de ejecución.
 - Los marcos que usaremos para los eventos _over_, _out_ and _down_.
 
-> **Nota:** El evento over es igual al hover, out es cuando el puntero se mueve fuera del botón y down cuando el botón es presionado.
+> [!NOTE]
+> El evento over es igual al hover, out es cuando el puntero se mueve fuera del botón y down cuando el botón es presionado.
 
 Ahora necesitamos definir la función `startGame()` referenciada en el siguiente código:
 

@@ -12,7 +12,7 @@ l10n:
 
 > **メモ:** 実際には `load` イベントは、{{domxref("HTMLBodyElement#event_handlers", "HTMLBodyElement")}} においては、 {{domxref("Window/load_event", "window.onload")}} イベントの別名です。従って、`load` イベントは `<body>` 要素においては、その文書のすべてのリソースが読み込まれたかエラーになったときに、一度だけ発生します。しかし、わかりやすくするために、イベントハンドラーは `HTMLBodyElement` ではなく、`window` オブジェクトに直接取り付けることが推奨されます。
 
-このイベtのはキャンセル不可で、バブリングしません。
+このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 

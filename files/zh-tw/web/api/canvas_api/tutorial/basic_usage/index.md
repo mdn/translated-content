@@ -15,7 +15,8 @@ Let's start this tutorial by looking at the {{HTMLElement("canvas")}} {{Glossary
 
 首先，先來看看 {{HTMLElement("canvas")}}，它看起來有點像 {{HTMLElement("img")}} 元素，其中的差異點在於 `<canvas>` 沒有 `src` 和 `alt` 屬性，`<canvas>` 只有 [`width`](/zh-TW/docs/Web/HTML/Element/canvas#width) 與 [`height`](/zh-TW/docs/Web/HTML/Element/canvas#height) 這兩個屬性，這兩個屬性皆為非必須、能透過 [DOM](/zh-TW/docs/DOM) 屬性設定；若是沒有設定 `width` 和 `height` 屬性，畫布寬預設值為 **300 pixels**、高預設值為 **150 pixels**，我們可以用 [CSS](/zh-TW/docs/Web/CSS) 強制設定元素尺寸，但當渲染時，影像會縮放以符合元素的尺寸。
 
-> **備註：** 如果繪圖結果看起來有些扭曲，可以改試著用\<canvas>自身的 width 和 height 屬性而不要用 CSS 來設定寬高。
+> [!NOTE]
+> 如果繪圖結果看起來有些扭曲，可以改試著用\<canvas>自身的 width 和 height 屬性而不要用 CSS 來設定寬高。
 
 幾乎所有 HTML 元素都有 id 屬性，\<canvas>也不例外，為了方便於程式碼腳本找到需要的\<canvas>，每次都設定 id 是一項不錯的作法。
 
@@ -43,7 +44,8 @@ Let's start this tutorial by looking at the {{HTMLElement("canvas")}} {{Glossary
 
 不像{{HTMLElement("img")}}元素，{{HTMLElement("canvas")}}元素必須要有\</canvas>結束標籤。
 
-> **備註：** 縱使早期 Apple 的 Safari 瀏覽器不需要結束標籤，但是基於規範，這是必須的，所以，為了相容性考量，應該要有結束標籤。Safari 2.0 以前的版本會同時解析 canvas 以及替代內容，除非我們用 CSS 去遮蓋內容，不過幸運的是，現在已經沒有甚麼人在用這些舊版 Safari。
+> [!NOTE]
+> 縱使早期 Apple 的 Safari 瀏覽器不需要結束標籤，但是基於規範，這是必須的，所以，為了相容性考量，應該要有結束標籤。Safari 2.0 以前的版本會同時解析 canvas 以及替代內容，除非我們用 CSS 去遮蓋內容，不過幸運的是，現在已經沒有甚麼人在用這些舊版 Safari。
 
 如果不需要錯誤替代內容，簡單的\<canvas id="foo" ...>\</canvas>便可以完全相容於所有支援的瀏覽器。
 

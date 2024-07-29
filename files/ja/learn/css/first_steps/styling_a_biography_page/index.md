@@ -31,7 +31,8 @@ l10n:
 
 下のライブエディターで試すこともできますし、[開始点ファイルをダウンロード](https://github.com/mdn/css-examples/blob/main/learn/getting-started/biog-download.html/)して自分のエディターで作業することもできます。これは、 HTML と開始点の CSS （文書内の見出し）の両方を含む単一のページです。できれば、この CSS を別のファイルに移し、ローカルコンピューターで例を作成するときにリンクしてください。
 
-> **メモ:** このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターで解決策を試すことができます。
+> [!NOTE]
+> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターで解決策を試すことができます。
 >
 > もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 

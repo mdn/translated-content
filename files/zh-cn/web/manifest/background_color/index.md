@@ -22,7 +22,8 @@ slug: Web/Manifest/background_color
 
 因此，`background_color` 应与 {{cssxref("background-color")}} 网站样式表中的 CSS 属性匹配，以在启动 Web 应用程序和加载网站内容之间进行平滑过渡。
 
-> **备注：** 该 `background_color` 成员仅用于在从网络或存储介质加载主样式表时改善用户体验。当渐进式 Web 应用程序样式表可用时，用户代理不会将 {{cssxref("background-color")}} 用作 CSS 属性。
+> [!NOTE]
+> 该 `background_color` 成员仅用于在从网络或存储介质加载主样式表时改善用户体验。当渐进式 Web 应用程序样式表可用时，用户代理不会将 {{cssxref("background-color")}} 用作 CSS 属性。
 
 ## 实例
 

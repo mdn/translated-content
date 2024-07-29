@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、 [CSS で HTML の表をスタイル設定](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)する方法を理解しているかどうかを評価することです。
 
-> **メモ:** このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
+> [!NOTE]
+> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
 >
 > もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 
@@ -36,6 +37,6 @@ l10n:
 
 - 表のレイアウトをもう少し予測しやすいものにするにはどうしたらよいでしょうか。既定では表の段組みがどのようにサイズ調整されているか、そしてこの動作を見出しの幅に応じて列のサイズを調整するように変更する方法を考えてみましょう。
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/images/form-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。

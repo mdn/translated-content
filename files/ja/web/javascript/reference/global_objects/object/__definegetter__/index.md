@@ -7,7 +7,8 @@ l10n:
 
 {{JSRef}}{{Deprecated_Header}}
 
-> **メモ:** この機能は非推奨となり、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)は[オブジェクト初期化子の構文](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)または {{jsxref("Object.defineProperty()")}} API を使用して定義する方法に置き換えられました。このメソッドの動作はウェブの互換性だけのために仕様化されたものであり、どのプラットフォームでも実装することを要求されているわけではありません。どこでも動作するとは限りません。
+> [!NOTE]
+> この機能は非推奨となり、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)は[オブジェクト初期化子の構文](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)または {{jsxref("Object.defineProperty()")}} API を使用して定義する方法に置き換えられました。このメソッドの動作はウェブの互換性だけのために仕様化されたものであり、どのプラットフォームでも実装することを要求されているわけではありません。どこでも動作するとは限りません。
 
 **`__defineGetter__()`** は {{jsxref("Object")}} インスタンスのメソッドで、オブジェクトのプロパティと関数を結び付け、そのプロパティが参照されるときに呼び出されるようにします。
 

@@ -81,7 +81,7 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 ### SVG
 
 - [`pathLength`](/ja/docs/Web/SVG/Attribute/pathLength) 属性がサポートされました。
-- [`data:` URL](/ja/docs/data_URIs) から読み込まれたパターン、グラデーション、フィルタが適切に動作するようになりました。
+- [`data:` URL](/ja/docs/data_URIs) から読み込まれたパターン、グラデーション、フィルターが適切に動作するようになりました。
 
 ### MathML
 
@@ -113,7 +113,8 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 
 Firefox 6 へアドオンを対応させるために必要な作業の概要は [アドオンの Firefox 6 対応](/ja/docs/Firefox/Updating_add-ons_for_Firefox_6) をご覧ください。
 
-> **メモ:** Firefox 6 では、従来のメジャーリリースと同様に、バイナリーコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリーインターフェイス](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
+> [!NOTE]
+> Firefox 6 では、従来のメジャーリリースと同様に、バイナリーコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリーインターフェイス](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
 
 ### JavaScript コードモジュール
 

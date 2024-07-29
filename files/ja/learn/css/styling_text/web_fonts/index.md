@@ -96,7 +96,8 @@ html {
 
 いずれの場合も、フォントパッケージを展開します（ウェブフォントは通常、フォントファイルとライセンス情報を含む ZIP ファイルで配布されます）。 パッケージの中に複数のフォントファイルを見つけるかもしれません — 例えば、thin（細字）、medium（中字）、bold（太字）、italic（イタリック）、thin italic（細字イタリック）など、利用可能なさまざまな異形（variant）を持つファミリーとして配布されるフォントがあります。 この例では、それぞれの選択に対して 1 つのフォントファイルを使用することを考慮してください。
 
-> **メモ:** 右側の列の "Find fonts"（フォントの検索）セクションで、さまざまな tags（タグ）や classifications（分類）をクリックして表示された選択肢を絞り込むことができます。 （訳注：残念なことに現在のところ日本語フォントはないようです。）
+> [!NOTE]
+> 右側の列の "Find fonts"（フォントの検索）セクションで、さまざまな tags（タグ）や classifications（分類）をクリックして表示された選択肢を絞り込むことができます。 （訳注：残念なことに現在のところ日本語フォントはないようです。）
 
 ### 必要なコードの生成
 
@@ -153,7 +154,8 @@ html {
 
 ![ウェブフォントによるアクティブラーニングの演習の完成デザイン。このページには 2 つの見出しと 3 つの段落があります。ページには、異なるフォントと異なるサイズのテキストが含まれています。](web-font-example.png)
 
-> **メモ:** これがうまくいかない場合は、自分のバージョンと完成したファイルとを比較してみてください。 [web-font-finished.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.html) と [web-font-finished.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.css) を見てください。 [GitHub からコードをダウンロード](https://github.com/mdn/learning-area/tree/main/css/styling-text/web-fonts)するか、[完成した例をライブ実行](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html)することができます。
+> [!NOTE]
+> これがうまくいかない場合は、自分のバージョンと完成したファイルとを比較してみてください。 [web-font-finished.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.html) と [web-font-finished.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.css) を見てください。 [GitHub からコードをダウンロード](https://github.com/mdn/learning-area/tree/main/css/styling-text/web-fonts)するか、[完成した例をライブ実行](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html)することができます。
 
 ## オンラインフォントサービスの使用
 
@@ -168,7 +170,8 @@ html {
 5. 表示された画面で、最初に表示された HTML コードの行をコピーして、それを HTML ファイルの先頭に貼り付ける必要があります。 フォントを CSS で使用する前にインポートされるように、既存の {{htmlelement("link")}} 要素の上に配置します。
 6. 次に、カスタムフォントを HTML に適用するために、リストされている CSS 宣言を必要に応じて CSS にコピーする必要があります。
 
-> **メモ:** 自分の作品を私たちの作品と比べてみる必要がある場合は、完成版を [google-font.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.html) および [google-font.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.css) で見ることができます（[ライブで見る](https://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)）。
+> [!NOTE]
+> 自分の作品を私たちの作品と比べてみる必要がある場合は、完成版を [google-font.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.html) および [google-font.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.css) で見ることができます（[ライブで見る](https://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)）。
 
 ## @font-face の詳細
 
@@ -191,7 +194,8 @@ Fontsquirrel によって生成された `@font-face` 構文を調べてみま�
 - `src`: これらの行は CSS にインポートされるフォントファイルへのパス（`url` 部分）と各フォントファイルの形式（`format` 部分）を指定します。 どの場合も後者の部分はオプションですが、ブラウザーが使用できるフォントをすばやく見つけることができるため、宣言すると有益です。複数の宣言をカンマで区切ってリストすることができます。ブラウザーはそれらを検索し、最初に理解できるとわかったものを使用します。従って、先に WOFF2 のようなより新しくより良い形式を置き、そして後に TTF のようなより古くあまり良くない形式を置くのが最善です。
 - {{cssxref("font-weight")}}/{{cssxref("font-style")}}: これらの行はフォントの太さ、およびイタリックかどうかを指定します。 同じフォントの複数の太さをインポートする場合は、フォントファミリーのすべての異なるメンバーに異なる名前を付けるのではなく、それらの太さ/スタイルを指定して、異なる値の {{cssxref("font-weight")}}/{{cssxref("font-style")}} を使用することができます。 [@font-face tip: define font-weight and font-style to keep your CSS simple](https://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/)（英語）によって Roger Johansson が何をすべきかをより詳細に示しています。
 
-> **メモ:** ウェブフォントに特定の {{cssxref("font-variant")}} および {{cssxref("font-stretch")}} の値を指定することもできます。 新しいブラウザーでは、{{cssxref("@font-face/unicode-range", "unicode-range")}} の値でウェブフォントで使用する特定の文字範囲を指定することもできます。対応しているブラウザーでは、ページに指定した文字が含まれている場合にのみフォントがダウンロードされるため、不要なダウンロードを省くことができます。Drew McLellan による [Creating Custom Font Stacks with Unicode-Range](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/)（英語）は、これをどのように利用するかについていくつかの役に立つアイデアを提供します。
+> [!NOTE]
+> ウェブフォントに特定の {{cssxref("font-variant")}} および {{cssxref("font-stretch")}} の値を指定することもできます。 新しいブラウザーでは、{{cssxref("@font-face/unicode-range", "unicode-range")}} の値でウェブフォントで使用する特定の文字範囲を指定することもできます。対応しているブラウザーでは、ページに指定した文字が含まれている場合にのみフォントがダウンロードされるため、不要なダウンロードを省くことができます。Drew McLellan による [Creating Custom Font Stacks with Unicode-Range](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/)（英語）は、これをどのように利用するかについていくつかの役に立つアイデアを提供します。
 
 ## 可変フォント
 

@@ -7,7 +7,8 @@ slug: Web/CSS/text-decoration-skip
 
 **`text-decoration-skip`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に影響する要素の内容に対するテキスト装飾のどの部分をスキップする必要があるかを設定します。これは要素によって描かれたテキスト装飾の行、および祖先によって描かれたすべてのテキスト装飾を制御します。
 
-> **メモ:** 他の多くのブラウザーでは、より単純な {{cssxref("text-decoration-skip-ink")}} プロパティへの対応に集中しています。
+> [!NOTE]
+> 他の多くのブラウザーでは、より単純な {{cssxref("text-decoration-skip-ink")}} プロパティへの対応に集中しています。
 
 ```css
 /* キーワード値 */
