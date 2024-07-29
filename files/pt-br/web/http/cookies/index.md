@@ -34,7 +34,8 @@ Set-Cookie: <cookie-name>=<cookie-value>
 
 Este cabeçalho de servidor informa ao cliente para armazenar um cookie.
 
-> **Nota:** Eis as formas de utilização do cabeçalho `Set-Cookie` em várias aplicações de servidor: [PHP](https://secure.php.net/manual/en/function.setcookie.php), [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value), [Python](https://docs.python.org/3/library/http.cookies.html), [Ruby on Rails](http://api.rubyonrails.org/classes/ActionDispatch/Cookies.html)
+> [!NOTE]
+> Eis as formas de utilização do cabeçalho `Set-Cookie` em várias aplicações de servidor: [PHP](https://secure.php.net/manual/en/function.setcookie.php), [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value), [Python](https://docs.python.org/3/library/http.cookies.html), [Ruby on Rails](http://api.rubyonrails.org/classes/ActionDispatch/Cookies.html)
 
 ```
 HTTP/1.0 200 OK
