@@ -8,7 +8,7 @@ l10n:
 {{LearnSidebar}}
 {{PreviousMenu("Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
 
-이 과정을 학습했다면 현재 CSS 레이아웃을 만들고 이전 CSS로 작업하기 위해 알아야 할 기본 사항을 이미 다루었을 것입니다. 이 작업에서는 다양한 기법을 사용하여 간단한 웹 페이지 레이아웃을 개발하는 방식으로 지식을 테스트할 것입니다.
+이 과정을 학습했다면 현재 CSS 레이아웃을 만들고 이전 CSS로 작업하기 위해 알아야 할 기본 사항을 이미 다루었을 것입니다. 이 과제는 다양한 기법을 사용하여 간단한 웹 페이지 레이아웃을 개발하는 방식으로 지식을 테스트할 것입니다.
 
 <table>
   <tbody>
