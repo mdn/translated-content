@@ -1,6 +1,6 @@
 ---
 title: Routers
-slug: Glossary/Routers
+slug: Glossary/Router
 ---
 
 {{GlossarySidebar}}
