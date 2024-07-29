@@ -77,9 +77,6 @@ exampleSocket.send("Here's some text that the server is urgently awaiting!");
 
 你可以把数据作为字符串，{{ domxref("Blob") }}，或者[`ArrayBuffer`](/zh-CN/JavaScript_typed_arrays/ArrayBuffer)来发送。
 
-> [!NOTE]
-> 在版本 11 之前，Firefox 只支持以字符串的形式发送数据。
-
 因为连接的建立是异步的，而且容易失败，所以不能保证刚创建 WebSocket 对象时使用 `send()` 方法会成功。我们至少可以确定企图在链接建立起来之后立马发送数据，可以通过注册 `onopen` 事件处理器解决：
 
 ```js

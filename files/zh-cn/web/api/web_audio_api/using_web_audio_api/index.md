@@ -359,9 +359,6 @@ gainNode.connect(audioCtx.destination);
 
 ![](voice-change-o-matic-graph.png)你也可以链接多个节点到一个节点，比如说你想要混合多个音频源在一起，就让它们都通过一个效果节点，比如 gain node。
 
-> [!NOTE]
-> Firefox32 以上版本已有完整的 firefox 开发者工具包括 [Web Audio Editor](/zh-CN/docs/Tools/Web_Audio_Editor), 一个对测试 web audio 表的 bug 非常有用的东西。
-
 ### 播放音乐及设置音调
 
 现在 audio 节点图已经建立，我们可以设置属性值及调用音频节点的方法来调节想要的音效。在这个简单的例子，我们可以设置特殊的音调，以赫兹为单位，设置为特殊类型，以及指示音乐播放：
