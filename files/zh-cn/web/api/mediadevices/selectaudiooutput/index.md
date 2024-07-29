@@ -1,5 +1,5 @@
 ---
-title: "MediaDevices: selectAudioOutput() method"
+title: MediaDevices：selectAudioOutput() 方法
 slug: Web/API/MediaDevices/selectAudioOutput
 l10n:
   sourceCommit: 5a5f3d3cbbfabf138aa9f0d3e2c8fce4a168f5cc
@@ -43,7 +43,7 @@ selectAudioOutput(options)
 ### 异常
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : 如果使用[`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)来阻止使用音频输出（此外不会显示用于选择音频输出的弹出窗口），或者用户关闭选择提示而没有选择设备时，会返回此错误。
+  - : 如果使用 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)来阻止使用音频输出（此外不会显示用于选择音频输出的弹出窗口），或者用户关闭选择提示而没有选择设备时，会返回此错误。
 - `NotFoundError` {{domxref("DOMException")}}
   - : 如果没有可用的音频输出设备，则会返回此错误。
 - `InvalidStateError` {{domxref("DOMException")}}
