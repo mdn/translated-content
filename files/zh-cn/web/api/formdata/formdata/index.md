@@ -52,7 +52,8 @@ formData.append("username", "Chris");
 </form>
 ```
 
-> **备注：** 所有的输入元素都需要有 **name** 属性，否则无法访问到值。
+> [!NOTE]
+> 所有的输入元素都需要有 **name** 属性，否则无法访问到值。
 
 ```js
 var myForm = document.getElementById("myForm");

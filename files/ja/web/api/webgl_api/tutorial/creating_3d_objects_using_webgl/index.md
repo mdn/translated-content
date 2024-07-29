@@ -15,7 +15,8 @@ l10n:
 
 始めに `initBuffers()` のコードを更新して、立方体の頂点の位置を示すバッファーを構築しましょう。この方法は平面の正方形を作る場合と同じですが、頂点が 24 個（1 面につき 4 個）ありますので、コードは多少長くなります。
 
-> **メモ:** "init-buffers.js" モジュールの `initPositionBuffer()` 関数で、 `positions` 宣言を次のコードに置き換えてください。
+> [!NOTE]
+> "init-buffers.js" モジュールの `initPositionBuffer()` 関数で、 `positions` 宣言を次のコードに置き換えてください。
 
 ```js
 const positions = [
@@ -41,7 +42,8 @@ const positions = [
 
 頂点に z 成分を追加したので、 `vertexPosition` 属性の `numComponents` を 3 に更新する必要があります。
 
-> **メモ:** "draw-scene.js" モジュールの `setPositionAttribute()` 関数で、定数 `numComponents` を `2` から `3` に変更しましょう。
+> [!NOTE]
+> "draw-scene.js" モジュールの `setPositionAttribute()` 関数で、定数 `numComponents` を `2` から `3` に変更しましょう。
 
 ```js
 const numComponents = 3;
@@ -51,7 +53,8 @@ const numComponents = 3;
 
 24 個の座標それぞれについて、色の配列を作成しなければなりません。このコードでは始めに各面の色を定義します。次にループを用いてこれらの配列を各頂点の色情報に変換しています。
 
-> **メモ:** "init-buffers.js" モジュールの `initColorBuffer()` 関数で、 `colors` 宣言を次のコードに置き換えましょう。
+> [!NOTE]
+> "init-buffers.js" モジュールの `initColorBuffer()` 関数で、 `colors` 宣言を次のコードに置き換えましょう。
 
 ```js
 const faceColors = [
@@ -78,7 +81,8 @@ for (var j = 0; j < faceColors.length; ++j) {
 
 頂点の配列が生成されたら、要素の配列を構築する必要があります。
 
-> **メモ:** "init-buffer.js" モジュールに以下の関数を追加しましょう。
+> [!NOTE]
+> "init-buffer.js" モジュールに以下の関数を追加しましょう。
 
 ```js
 function initIndexBuffer(gl) {
@@ -144,7 +148,8 @@ function initIndexBuffer(gl) {
 
 次に、この新しい関数を `initBuffers()` から呼び出して、作成したバッファー を返す必要があります。
 
-> **メモ:** "init-buffers.js" モジュールの `initBuffers()` 関数の終わりに以下のコードを追加し、既存の `return` 文を置き換えましょう。
+> [!NOTE]
+> "init-buffers.js" モジュールの `initBuffers()` 関数の終わりに以下のコードを追加し、既存の `return` 文を置き換えましょう。
 
 ```js
 const indexBuffer = initIndexBuffer(gl);
@@ -167,7 +172,8 @@ return {
 gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, buffers.indices);
 ```
 
-> **メモ:** "draw-scene.js" モジュールの `drawScene()` 関数で、 2 つの `gl.uniformMatrix4fv` 呼び出しの後で、 `gl.drawArrays()` 行を含むブロックを以下のブロックに置き換えましょう。
+> [!NOTE]
+> "draw-scene.js" モジュールの `drawScene()` 関数で、 2 つの `gl.uniformMatrix4fv` 呼び出しの後で、 `gl.drawArrays()` 行を含むブロックを以下のブロックに置き換えましょう。
 
 ```js
 {
@@ -182,13 +188,15 @@ gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, buffers.indices);
 
 最後に、変数 `squareRotation` を `cubeRotation` に置き換えて、 x 軸周りの 2 つ目の回転を追加してみましょう。
 
-> **メモ:** "webgl-demo.js" ファイルの始めには、 `squareRotation` 宣言を次の行に置き換えましょう。
+> [!NOTE]
+> "webgl-demo.js" ファイルの始めには、 `squareRotation` 宣言を次の行に置き換えましょう。
 
 ```js
 let cubeRotation = 0.0;
 ```
 
-> **メモ:** 関数 `drawScene()` の宣言で、 `squareRotation` を `cubeRotation` に置き換えましょう。
+> [!NOTE]
+> 関数 `drawScene()` の宣言で、 `squareRotation` を `cubeRotation` に置き換えましょう。
 
 ```js-nolint
 function drawScene(gl, programInfo, buffers, cubeRotation) {

@@ -7,7 +7,8 @@ slug: Web/API/Animation/finished
 
 La propiedad de solo-lectura de `Animation.finished` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve un {{jsxref("Promise")}} que se resuelve una vez que la animación a terminado de reproducirse.
 
-> **Nota:** Una vez que la reproducción de la animación abandona el estado `finished` (es decir, la reproducción se está ejecutando otra vez), Un nuevo `Promise` es creado para esta propiedad. El nuevo `Promise` será resuelto cuando se haya completado la actual secuencia de la animación.
+> [!NOTE]
+> Una vez que la reproducción de la animación abandona el estado `finished` (es decir, la reproducción se está ejecutando otra vez), Un nuevo `Promise` es creado para esta propiedad. El nuevo `Promise` será resuelto cuando se haya completado la actual secuencia de la animación.
 
 ## Sintaxis
 

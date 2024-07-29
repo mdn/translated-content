@@ -19,7 +19,8 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_
 var ball;
 ```
 
-> **备注：** 为了本教程，我们将使用全局变量。**本教程的目的是教导 Phaser 特定的游戏开发方法，而不是主观的最佳方法。**
+> [!NOTE]
+> 为了本教程，我们将使用全局变量。**本教程的目的是教导 Phaser 特定的游戏开发方法，而不是主观的最佳方法。**
 
 ## 加载球精灵
 

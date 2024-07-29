@@ -9,7 +9,8 @@ l10n:
 
 **`filter`** 属性は、　{{SVGElement("filter")}}　要素で定義したフィルター効果を指定します。
 
-> **メモ:** プレゼンテーション属性として、 `filter` は CSS プロパティとして使用することができます。詳しい情報は {{cssxref("filter", "CSS の filter")}} を参照してください。
+> [!NOTE]
+> プレゼンテーション属性として、 `filter` は CSS プロパティとして使用することができます。詳しい情報は {{cssxref("filter", "CSS の filter")}} を参照してください。
 
 プレゼンテーション属性として、任意の要素に適用することができますが、効果があるのは[コンテナー要素](/ja/docs/Web/SVG/Element#コンテナー要素)（{{SVGElement("defs")}} 要素以外を除く）、すべての[グラフィック要素](/ja/docs/Web/SVG/Element#グラフィック要素)、および {{SVGElement("use")}} 要素のみです。
 

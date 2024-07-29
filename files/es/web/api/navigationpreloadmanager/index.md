@@ -95,7 +95,8 @@ addEventListener("fetch", (event) => {
 El navegador envía el encabezado HTTP {{HTTPHeader("Service-Worker-Navigation-Preload")}} con solicitudes de precarga, con un valor de directiva predeterminado en `true`.
 Esto permite a los servidores diferenciar entre solicitudes de recuperación normales y precargadas, y enviar diferentes respuestas en cada caso si es necesario.
 
-> **Nota:** Si la respuesta de la precarga y las operaciones normales de recuperación pueden ser diferentes, entonces el servidor debe establecer `Vary: Service-Worker-Navigation-Preload` para garantizar que las diferentes respuestas se almacenen en caché.
+> [!NOTE]
+> Si la respuesta de la precarga y las operaciones normales de recuperación pueden ser diferentes, entonces el servidor debe establecer `Vary: Service-Worker-Navigation-Preload` para garantizar que las diferentes respuestas se almacenen en caché.
 
 El valor del encabezado se puede cambiar a cualquier otro valor de cadena usando {{domxref("NavigationPreloadManager.setHeaderValue()")}} para proporcionar contexto adicional para la operación de precarga.
 Por ejemplo, puedes establecer el valor en el ID de tu recurso almacenado en caché más reciente, de modo que el servidor no devuelva ningún recurso a menos que realmente se necesite.

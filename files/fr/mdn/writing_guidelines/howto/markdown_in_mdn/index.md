@@ -195,7 +195,8 @@ Le bloc de code peut contenir d'autres éléments de type bloc.
 #### Note
 
 ```md
-> **Note :** Voici comment écrire une note.
+> [!NOTE]
+> Voici comment écrire une note.
 >
 > Elle peut avoir plusieurs lignes.
 ```
@@ -211,14 +212,16 @@ Cela produira le HTML suivant&nbsp;:
 
 Ce HTML sera affiché comme une boîte mise en valeur&nbsp;:
 
-> **Note :** Voici comment écrire une note.
+> [!NOTE]
+> Voici comment écrire une note.
 >
 > Elle peut avoir plusieurs lignes.
 
 #### Avertissements
 
 ```md
-> **Attention :** Voici comment écrire un avertissement.
+> [!WARNING]
+> Voici comment écrire un avertissement.
 >
 > Il peut avoir plusieurs paragraphes.
 ```
@@ -234,7 +237,8 @@ Cela produira le HTML suivant&nbsp;:
 
 Ce HTML sera affiché comme une boîte mise en valeur&nbsp;:
 
-> **Attention :** Voici comment écrire un avertissement.
+> [!WARNING]
+> Voici comment écrire un avertissement.
 >
 > Il peut avoir plusieurs paragraphes.
 
@@ -257,7 +261,7 @@ Cela produira le HTML suivant&nbsp;:
 
 Ce HTML sera affiché comme une remarque&nbsp;:
 
-> **Remarque :**
+> [!CALLOUT]
 >
 > **Voici comment écrire un encadré.**
 >
@@ -272,7 +276,8 @@ Les locales sont stockées dans [Yari (dépôt GitHub en anglais)](https://githu
 Par exemple, si nous voulons utiliser «&nbsp;Warnung&nbsp;» pour «&nbsp;Warning&nbsp;» en allemand, alors dans la page allemande nous écririons&nbsp;:
 
 ```md
-> **Warnung:** So schreibt man eine Warnung.
+> [!WARNING]
+> So schreibt man eine Warnung.
 ```
 
 Et cela produira&nbsp;:
@@ -288,7 +293,8 @@ Et cela produira&nbsp;:
 Cet exemple contient un bloc de code.
 
 ````md
-> **Note :** Voici comment écrire une note.
+> [!NOTE]
+> Voici comment écrire une note.
 >
 > Elle peut contenir des blocs de code.
 >
@@ -312,7 +318,8 @@ Cela produira le HTML suivant&nbsp;:
 
 Ce HTML sera affiché comme un bloc de code&nbsp;:
 
-> **Note :** Voici comment écrire une note.
+> [!NOTE]
+> Voici comment écrire une note.
 >
 > Elle peut contenir des blocs de code.
 >

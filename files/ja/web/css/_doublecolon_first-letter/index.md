@@ -17,7 +17,8 @@ l10n:
 - 言語によっては常に一緒に大文字化される連字があります。例えばオランダ語の `IJ` などです。この場合、連字の両方の文字が `::first-letter` 擬似要素で選択されます。
 - {{ cssxref("::before") }} 擬似要素と {{ cssxref("content") }} プロパティの組み合わせにより、要素の先頭にテキストが挿入されることがあります。この場合、 `::first-letter` は生成されたこのコンテンツの最初の文字に一致します。
 
-> **メモ:** CSS では[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を見分けやすくするために、 `::first-letter` の表記法（二重コロン付き）が導入されました。後方互換性のため、ブラウザーは以前に導入された `:first-letter` も受け付けます。
+> [!NOTE]
+> CSS では[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を見分けやすくするために、 `::first-letter` の表記法（二重コロン付き）が導入されました。後方互換性のため、ブラウザーは以前に導入された `:first-letter` も受け付けます。
 >
 > オランダ語の `IJ` のような連字に対するブラウザーの対応は貧弱です。下記の互換性一覧表で、現在の対応状況を確認してください。
 

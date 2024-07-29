@@ -26,7 +26,7 @@ slug: Glossary/Navigation_directive
 
 - {{HTTPHeader("Content-Security-Policy")}}
 
-1. [用語集](/ja/docs/Glossary)
+1. 関連用語:
 
    1. {{Glossary("CSP")}}
    2. {{Glossary("Fetch directive", "フェッチディレクティブ")}}

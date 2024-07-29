@@ -9,7 +9,8 @@ l10n:
 
 **`offset`** は {{domxref("VREyeParameters")}} インターフェイスの読み取り専用プロパティで、は、ユーザーの目と目の間の中心点から目の中心までのオフセットを表します。単位はメートルです。
 
-> **メモ:** このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 この値は、ユーザーの瞳孔間距離（IPD）の半分で あるべきですが、指定された目のヘッドセットの中心点からレンズの中心点までの距離を表してもかまいません。
 
@@ -17,7 +18,8 @@ l10n:
 
 ユーザーの目と目の間の中心点から目の中心までのオフセットをメートル単位で記述したベクトルを表す {{jsxref("Float32Array")}} です。
 
-> **メモ:** 左目の値は負の値、右目の値は正の値になります。
+> [!NOTE]
+> 左目の値は負の値、右目の値は正の値になります。
 
 ## 例
 

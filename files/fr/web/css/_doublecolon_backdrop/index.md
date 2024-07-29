@@ -17,7 +17,8 @@ dialog::backdrop {
 }
 ```
 
-> **Note :** L'élément `::backdrop` peut être utilisé comme un arrière-plan/masque pour l'élément afin de cacher le document en-dessous lorsque l'élément est affiché en plein écran selon la spécification.
+> [!NOTE]
+> L'élément `::backdrop` peut être utilisé comme un arrière-plan/masque pour l'élément afin de cacher le document en-dessous lorsque l'élément est affiché en plein écran selon la spécification.
 
 Ce pseudo-élément n'hérite d'aucun autre élément et aucun autre élément n'hérite de ce pseudo-élément. Aucune restriction ne s'applique pour les propriétés qui peuvent être appliquées à ce pseudo-élément.
 

@@ -69,7 +69,8 @@ Sin embargo, las cajas también tienen un tipo de visualización _interna_, que 
 
 Sin embargo, podemos cambiar el tipo de visualización interna utilizando valores de `display`, como `flex`. Si en un elemento establecemos `display: flex;`, el tipo de visualización externa es de tipo bloque (`block`), pero el tipo de visualización interna cambia a flexible (`flex`). Cualquier elemento que sea hijo directo de esta caja pasará a comportarse como un elemento de tipo flex, de acuerdo con las reglas que se establecen en la especificación de [Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox), tema que veremos más adelante.
 
-> **Nota:** Para obtener más información acerca de los valores de visualización y el modo como funcionan las cajas en las disposiciones en bloque y en línea, echa un vistazo a la guía [Disposiciones en bloque y en línea](/es/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow) de MDN.
+> [!NOTE]
+> Para obtener más información acerca de los valores de visualización y el modo como funcionan las cajas en las disposiciones en bloque y en línea, echa un vistazo a la guía [Disposiciones en bloque y en línea](/es/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow) de MDN.
 
 A medida que vayas aprendiendo más detalles sobre el diseño CSS, te irás encontrando con el valor `flex` y con otros valores internos que puedan presentar tus cajas, por ejemplo, [`grid`](/es/docs/Learn/CSS/CSS_layout/Grids).
 
@@ -136,7 +137,8 @@ El espacio que ocupa nuestra caja usando el modelo de cajas estándar será en r
 
 ![Mostrar el tamaño de la caja cuando se usa el modelo de cajas estándar.](standard-box-model.png)
 
-> **Nota:** El margen no se cuenta para el tamaño real de la caja; por supuesto, afecta al espacio total que la caja ocupa en la página, pero solo al espacio de fuera de la caja. El área de la caja se termina en el borde, no se extiende hasta el margen.
+> [!NOTE]
+> El margen no se cuenta para el tamaño real de la caja; por supuesto, afecta al espacio total que la caja ocupa en la página, pero solo al espacio de fuera de la caja. El área de la caja se termina en el borde, no se extiende hasta el margen.
 
 ### El modelo de cajas CSS alternativo
 
@@ -165,7 +167,8 @@ html {
 }
 ```
 
-> **Nota:** Un dato curioso es que Internet Explorer usaba por defecto el modelo de cajas alternativo, y no disponía de ningún mecanismo para cambiarlo.
+> [!NOTE]
+> Un dato curioso es que Internet Explorer usaba por defecto el modelo de cajas alternativo, y no disponía de ningún mecanismo para cambiarlo.
 
 ## Jugar con los modelos de cajas
 
@@ -175,7 +178,8 @@ En el ejemplo siguiente puedes ver dos cajas. Ambas tienen una clase `.box`, lo 
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/box-models.html", '100%', 1000)}}
 
-> **Nota:** Puedes encontrar la solución [aquí](https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-box-model).
+> [!NOTE]
+> Puedes encontrar la solución [aquí](https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-box-model).
 
 ### Utilizar las DevTools del navegador para ver el modelo de cajas
 

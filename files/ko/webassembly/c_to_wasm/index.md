@@ -42,7 +42,7 @@ Emscripten SDK를 설치하기 위해, 아래 설명을 참고하세요.
    }
    ```
 
-2. Emscripten 컴파일 환경에 접속하는 데 사용한 terminal을 통ㅇ해 hello.c 파일과 동일한 폴더로 이동한 후 다음 명령을 실행하세요.
+2. Emscripten 컴파일 환경에 접속하는 데 사용한 terminal을 통해 hello.c 파일과 동일한 폴더로 이동한 후 다음 명령을 실행하세요.
 
    ```bash
    emcc hello.c -o hello.html
