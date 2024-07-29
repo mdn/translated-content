@@ -42,7 +42,7 @@ obj.src = "https://example.com/blahblah.mp4";
 
 {{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 

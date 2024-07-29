@@ -27,7 +27,7 @@ throw e;
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Error.fileName")}}
+{{Compat}}
 
 ## 関連情報
 

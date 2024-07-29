@@ -59,7 +59,7 @@ Los usuarios nuevos deberían notar que escribir en mayúsculas 'Id' en el nombr
 
 A diferencia de otros métodos similares, getElementById sólo está disponible como un método del objeto global document, y no se encuentra disponible como un método en todos los objetos del DOM. Como los valores ID deben ser únicos a traves del documento, no existe necesidad para versiones "locales" de la función.
 
-## Ejemplo
+### Ejemplo
 
 ```html
 <!doctype html>

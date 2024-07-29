@@ -9,7 +9,8 @@ l10n:
 
 **`reason`** は {{domxref("VRDisplayEvent")}} インターフェイスの読み取り専用プロパティで、イベントが発生した理由を人間可読な形で返します。
 
-> **メモ:** このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 ## 値
 
@@ -23,9 +24,11 @@ l10n:
 ## 例
 
 ```js
-window.addEventListener('vrdisplaypresentchange', (e) => {
-    console.log(`Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`);
-  })
+window.addEventListener("vrdisplaypresentchange", (e) => {
+  console.log(
+    `Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`,
+  );
+});
 ```
 
 ## 仕様書
@@ -40,5 +43,4 @@ window.addEventListener('vrdisplaypresentchange', (e) => {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームが提供するデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

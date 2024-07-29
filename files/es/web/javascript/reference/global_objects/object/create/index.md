@@ -215,7 +215,7 @@ function ShowProperties(b) {
 }
 ```
 
-_Resultados no tan simples: (especialmente si la captura silenciosa de errores había ocultado los mensajes de error)_
+_Resultados no tan simples: (especialmente si la captura silenciosa de errores había ocultado los mensajes de error)._
 
 ```js
 ob={}; ob.po=oco; ob.pn=ocn; // crear un objeto compuesto usando los objetos de prueba de arriba como valores de propiedad
@@ -227,7 +227,7 @@ ob={}; ob.po=oco; ob.pn=ocn; // crear un objeto compuesto usando los objetos de 
 Tenga en cuenta que solo se muestra la primera propiedad.
 ```
 
-_(Pero si se crea el mismo objeto simplemente en un orden diferente, al menos en algunas implementaciones ...)_
+(_Pero si se crea el mismo objeto simplemente en un orden diferente, al menos en algunas implementaciones ..._)
 
 ```js
 ob={}; ob.pn=ocn; ob.po=oco; // cree el mismo objeto compuesto nuevamente, pero cree las mismas propiedades en un orden diferente
@@ -306,7 +306,7 @@ ocn = Object.create(null); // create "null" object (same as before)
 Object.setPrototypeOf(ocn, Object.prototype); // set new object's prototype to the "generic" object (NOT standard-object)
 ```
 
-_(In addition to all the string-related functions shown above, this also adds:)_
+(_In addition to all the string-related functions shown above, this also adds:_)
 
 ```js
 > ocn.valueOf() // shows {}

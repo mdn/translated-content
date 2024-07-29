@@ -3,7 +3,7 @@ title: sidebarAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Définit l'icône de la barre latérale.
 
@@ -123,6 +123,6 @@ browser.browserAction.onClicked.addListener(toggle);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).

@@ -3,7 +3,7 @@ title: topSites.get()
 slug: Mozilla/Add-ons/WebExtensions/API/topSites/get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient un tableau contenant des informations sur les pages que l'utilisateur a visitées souvent et récemment.
 
@@ -96,7 +96,7 @@ gettingTopSites.then(logTopSites, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.topSites`](https://developer.chrome.com/extensions/topSites).
 

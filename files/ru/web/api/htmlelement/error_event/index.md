@@ -3,6 +3,8 @@ title: error
 slug: Web/API/HTMLElement/error_event
 ---
 
+{{APIRef}}
+
 Событие `error` возникает, когда произошла какая-либо ошибка. Точные обстоятельства могут быть различными, потому что события с этим именем используются множеством различных API.
 
 ## Общая информация
@@ -34,8 +36,6 @@ slug: Web/API/HTMLElement/error_event
 ### Для MediaStream Recording событий
 
 Эти события типа {{domxref("MediaRecorderErrorEvent")}}.
-
-{{page("/en-US/docs/Web/API/MediaRecorderErrorEvent", "Properties")}}
 
 ## Смотрите также
 

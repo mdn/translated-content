@@ -23,7 +23,8 @@ l10n:
 
   - : 論理属性です。この属性が指定された場合、データの読み込みが完了し、再生可能な状態になった時点で即座にコンテンツの再生が始まります。
 
-    > **メモ:** 自動的に音声 (あるいは音声トラックを含む動画) を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。自動再生機能が必須である場合は、オプトイン (ユーザーが明示的に有効化することを求める) にするべきです。ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。正しい自動再生の使い方についての追加情報は [autoplay ガイド](/ja/docs/Web/Media/Autoplay_guide)を参照してください。</div>
+    > [!NOTE]
+    > 自動的に音声 (あるいは音声トラックを含む動画) を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。自動再生機能が必須である場合は、オプトイン (ユーザーが明示的に有効化することを求める) にするべきです。ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。正しい自動再生の使い方についての追加情報は [autoplay ガイド](/ja/docs/Web/Media/Autoplay_guide)を参照してください。</div>
 
     動画の自動再生を無効にするために `autoplay="false"` を指定しても機能しません。 `<video>` タグにこの属性があれば、動画が自動的に再生されます。自動再生を無効にするには、属性を完全に取り除くことが必要です。
 
@@ -75,11 +76,11 @@ l10n:
     - `none`: 動画を事前に読み込むべきではないことを示します。
     - `metadata`: 動画のメタデータ (例えば、長さ) を読み込みます。
     - `auto`: ユーザーが動画ファイルを使用しないと思われる場合でも、ファイル全体をダウンロードしてよいことを示します。
-    - *空文字列*: これは `auto` 値と同義です。
+    - _空文字列_: これは `auto` 値と同義です。
 
     既定値はブラウザーごとに異なります。仕様書では `metadata` を設定するよう助言しています。
 
-    > **メモ:**
+    > [!NOTE]
     >
     > - `autoplay` 属性は `preload` より優先します。`autoplay` を指定すると、言うまでもなくブラウザーは動画を再生するためにダウンロードを始めなければなりません。
     > - 仕様書は、ブラウザーがこの属性の値に従うことを強制していません。これは単なるヒントです。
@@ -261,7 +262,10 @@ l10n:
   <source src="myVideo.webm" type="video/webm" />
   <source src="myVideo.mp4" type="video/mp4" />
   <p>
-    このブラウザーは HTML の動画に対応していません。代わりに<a href="myVideo.mp4">動画へのリンク</a>があります。
+    このブラウザーは HTML の動画に対応していません。代わりに<a
+      href="myVideo.mp4"
+      >動画へのリンク</a
+    >があります。
   </p>
 </video>
 ```
@@ -287,7 +291,7 @@ HTML の `<video>` の使用について一般的な良い情報源として、[
 
 ### トラックの追加と削除の検出
 
- `<video>` 要素でトラックが追加されたり削除されたりしたことを検出するには、 {{domxref("VideoTrackList/addtrack_event", "addtrack")}} および {{domxref("VideoTrackList/removetrack_event", "removetrack")}} イベント利用することができます。しかし、これらのイベントは `<video>` 要素自身に直接送信されるわけではありません。代わりに、 `<video>` の {{domxref("HTMLMediaElement")}} 内にある、要素に追加されたトラックの種類に対応するトラックリストオブジェクトに送信されます。
+`<video>` 要素でトラックが追加されたり削除されたりしたことを検出するには、 {{domxref("VideoTrackList/addtrack_event", "addtrack")}} および {{domxref("VideoTrackList/removetrack_event", "removetrack")}} イベント利用することができます。しかし、これらのイベントは `<video>` 要素自身に直接送信されるわけではありません。代わりに、 `<video>` の {{domxref("HTMLMediaElement")}} 内にある、要素に追加されたトラックの種類に対応するトラックリストオブジェクトに送信されます。
 
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : メディア要素の音声トラックのすべてを含む {{domxref("AudioTrackList")}} です。 `addtrack` のリスナーをこのオブジェクトに追加すると、新しい音声トラックが要素に追加された時に通知を受け取ることができます。
@@ -351,7 +355,10 @@ AddType video/webm .webm
   src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
   poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
   width="620">
-  恐れ入りますが、このブラウザーは埋め込み動画に対応していません。しかし、<a href="https://archive.org/details/BigBuckBunny_124">ダウンロード</a>してお好きな動画プレイヤーで見ることはできます。
+  恐れ入りますが、このブラウザーは埋め込み動画に対応していません。しかし、<a
+    href="https://archive.org/details/BigBuckBunny_124"
+    >ダウンロード</a
+  >してお好きな動画プレイヤーで見ることはできます。
 </video>
 ```
 
@@ -385,7 +392,10 @@ AddType video/webm .webm
     src="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
     type="video/mp4" />
 
-  恐れ入りますが、このブラウザーは埋め込み動画に対応していません。しかし、<a href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4">MP4 をダウンロード</a>してお好きな動画プレイヤーで見ることはできます。
+  恐れ入りますが、このブラウザーは埋め込み動画に対応していません。しかし、<a
+    href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
+    >MP4 をダウンロード</a
+  >してお好きな動画プレイヤーで見ることはできます。
 </video>
 ```
 

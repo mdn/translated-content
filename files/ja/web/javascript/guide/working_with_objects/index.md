@@ -30,7 +30,7 @@ myCar.model = "Mustang";
 myCar.year = 1969;
 ```
 
-上記の例は、**[オブジェクト初期化子](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#Object_initializers)**を使用して作成することもできます。オブジェクト初期化子は、中括弧 (`{}`) で囲まれたオブジェクトのプロパティ名と関連する値の 0 個以上のペアをカンマで区切ったリストです。
+上記の例は、**[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)**を使用して作成することもできます。オブジェクト初期化子は、中括弧 (`{}`) で囲まれたオブジェクトのプロパティ名と関連する値の 0 個以上のペアをカンマで区切ったリストです。
 
 ```js
 var myCar = {
@@ -40,7 +40,7 @@ var myCar = {
 };
 ```
 
-オブジェクトに割り当てられていないプロパティは {{jsxref("undefined")}} です ({{jsxref("null")}} ではありません)。
+オブジェクトに割り当てられていないプロパティは {{jsxref("undefined")}} です ([`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) ではありません)。
 
 ```js
 myCar.color; // undefined
@@ -143,7 +143,7 @@ function listAllProperties(o) {
 
 ## 新しいオブジェクトの作成
 
-JavaScript には数多くの定義済みオブジェクトがあります。さらに、独自のオブジェクトを定義できます。オブジェクトは{{jsxref("Operators/Object_initializer","オブジェクト初期化子","","true")}}を使って作成することができます。他にも、まずコンストラクター関数を作り、その関数を `new` 演算子との組み合わせで呼び出すことでオブジェクトをインスタンス化することもできます。
+JavaScript には数多くの定義済みオブジェクトがあります。さらに、独自のオブジェクトを定義できます。オブジェクトは{{jsxref("Operators/Object_initializer","オブジェクト初期化子","",1)}}を使って作成することができます。他にも、まずコンストラクター関数を作り、その関数を `new` 演算子との組み合わせで呼び出すことでオブジェクトをインスタンス化することもできます。
 
 ### オブジェクト初期化子の使用
 

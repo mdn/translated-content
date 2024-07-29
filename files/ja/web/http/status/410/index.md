@@ -9,7 +9,8 @@ HyperText Transfer Protocol (HTTP) の **`410 Gone`** クライエントエラ�
 
 この状態が一時的なものか永久なのか分からない場合は、代わりに {{HTTPStatus(404)}} ステータスコードを使用してください。
 
-> **メモ:** 410 レスポンスは既定でキャッシュ可能です。
+> [!NOTE]
+> 410 レスポンスは既定でキャッシュ可能です。
 
 ## ステータス
 
@@ -27,7 +28,7 @@ HyperText Transfer Protocol (HTTP) の **`410 Gone`** クライエントエラ�
 
 以下に示す情報は、 MDN の GitHub から取得したものです。 (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.410")}}
+{{Compat}}
 
 ## 関連情報
 

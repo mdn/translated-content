@@ -67,7 +67,9 @@ slug: Web/CSS/@counter-style
 - {{cssxref("speak-as")}}
   - : 定义如何在语音识别器中读出计数器样式，比如屏幕阅读器。例如基于该描述符的值，标记符号的值可以作为有序列表的数字或者字幕作为无序列表的音频提示读出。
 
-## 例子
+## 示例
+
+### 使用 counter-style 指定符号
 
 ```css
 @counter-style circled-alpha {
@@ -77,7 +79,7 @@ slug: Web/CSS/@counter-style
 }
 ```
 
-上面的 counter style 规则在列表中可以如下使用：
+上面的计数器样式规则在列表中可以如下使用：
 
 ```css
 .items {
@@ -85,24 +87,28 @@ slug: Web/CSS/@counter-style
 }
 ```
 
-会产生如下列表：
+上面的代码将产生以下结果：
 
-Ⓐ One
-Ⓑ Two
-Ⓒ Three
-Ⓓ Four
-Ⓔ FIve
-....
-...
-Ⓨ Twenty Five
-Ⓩ Twenty Six
+```html hidden
+<ol class="items">
+  <li>一</li>
+  <li>二</li>
+  <li>三</li>
+  <li>四</li>
+  <li>五</li>
+</ol>
+<p>...</p>
+<ol class="items" start="25">
+  <li>二十五</li>
+  <li>二十六</li>
+  <li>二十七</li>
+  <li>二十八</li>
+</ol>
+```
 
-27 Twenty Seven
-28 Twenty Eight
-29 Twenty Nine
-30 Thirty
+{{EmbedLiveSample('使用 counter-style 指定符号', '', '300')}}
 
-查看更多例子 [demo page](https://mdn.github.io/css-counter-style-demo/).
+在[示例页面](https://mdn.github.io/css-examples/counter-style-demo/)上查看更多例子。
 
 ## 规范
 

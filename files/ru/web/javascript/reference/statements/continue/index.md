@@ -109,7 +109,7 @@ checkiandj: while (i < 4) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

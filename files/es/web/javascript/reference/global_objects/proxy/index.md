@@ -422,7 +422,7 @@ var docCookies = new Proxy(docCookies, {
     return oTarget.setItem(sKey, vValue);
   },
   deleteProperty: function (oTarget, sKey) {
-    if (!sKey in oTarget) {
+    if ((!sKey) in oTarget) {
       return false;
     }
     return oTarget.removeItem(sKey);

@@ -3,7 +3,7 @@ title: contentScripts.register()
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 このメソッドは一つ以上の content scripts を登録するときに使用します。
 
@@ -19,7 +19,7 @@ var registering = browser.contentScripts.register(
 );
 ```
 
-### パラメーター
+### 引数
 
 - `contentScriptOptions`
 
@@ -57,7 +57,7 @@ var registering = browser.contentScripts.register(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.contentScripts.register", 10)}}
+{{Compat}}
 
 ## 例
 

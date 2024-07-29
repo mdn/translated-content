@@ -62,7 +62,7 @@ if (!String.prototype.padStart) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

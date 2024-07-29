@@ -41,8 +41,8 @@ new PromiseRejectionEvent(type, options)
 
 ```js
 let myRejectionEvent = new PromiseRejectionEvent("unhandledrejection", {
-  promise : myPromise,
-  reason : "My house is on fire"
+  promise: myPromise,
+  reason: "My house is on fire",
 });
 ```
 

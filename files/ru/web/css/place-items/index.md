@@ -19,7 +19,7 @@ slug: Web/CSS/place-items
 ## Синтаксис
 
 ```css
-/* Значения в виде ключевых слов */
+/* Ключевые слова */
 place-items: center;
 place-items: normal start;
 
@@ -299,7 +299,7 @@ values.addEventListener("change", function (evt) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -60,13 +60,11 @@ Bitwise XORing any number `x` with `0` yields `x`.
 
 ## Especificações
 
-| Specification                                                                   |
-| ------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#prod-BitwiseXORExpression', 'Bitwise XOR expression')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.bitwise_xor")}}
+{{Compat}}
 
 ## Leia também
 

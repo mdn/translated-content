@@ -3,7 +3,7 @@ title: Math.imul()
 slug: Web/JavaScript/Reference/Global_Objects/Math/imul
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Сводка
 

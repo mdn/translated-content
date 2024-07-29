@@ -3,7 +3,7 @@ title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -39,11 +39,7 @@ Math.sin(Math.PI / 2); // 1
 
 ## Спецификации
 
-| Спецификация                                        | Статус             | Комментарии                                            |
-| --------------------------------------------------- | ------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                             | {{Spec2('ES1')}}   | Изначальное определение. Реализована в JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.16', 'Math.sin')}} | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-math.sin', 'Math.sin')}}    | {{Spec2('ES6')}}   |                                                        |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

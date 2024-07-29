@@ -218,13 +218,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
 
 ## Совместимость с браузерами
 
-### WebGL 1
-
-{{Compat("api.WebGLRenderingContext", 0)}}
-
-### WebGL 2
-
-{{Compat("api.WebGL2RenderingContext", 0)}}
+{{Compat}}
 
 ### Замечания по Gecko
 

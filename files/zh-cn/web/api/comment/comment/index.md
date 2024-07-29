@@ -1,23 +1,33 @@
 ---
-title: Comment()
+title: Comment：Comment() 构造函数
 slug: Web/API/Comment/Comment
+l10n:
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{ApiRef("DOM")}}{{seeCompatTable}}
+{{ApiRef("DOM")}}
 
-构造函数 **`Comment()`** 创建一个 {{domxref("Comment")}} 对象并返回，这个对象以可选的 {{domxref("DOMString")}} 参数作为它的文本内容。
+**`Comment()`** 构造函数返回一个新创建的 {{domxref("Comment")}} 对象，其文本内容为可选参数中给出的字符串。
 
 ## 语法
 
+```js-nolint
+new Comment()
+new Comment(aString)
 ```
-comment1 = new Comment(); // Create an empty comment
-comment2 = new Comment("This is a comment");
-```
+
+### 参数
+
+- `aString` {{optional_inline}}
+
+### 返回值
+
+一个新的包含 `aString`（如果没有给出参数，则为空字符串）的注释（{{domxref("Comment")}}）。
 
 ## 示例
 
 ```js
-var comment = new Comment("Test");
+let comment = new Comment("测试");
 ```
 
 ## 规范
@@ -28,8 +38,7 @@ var comment = new Comment("Test");
 
 {{Compat}}
 
-> **备注：** 对于不支持本构造函数的浏览器， {{domxref("Document.createComment()")}} 或许可以使用。
+## 参见
 
-## 相关文档
-
-- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)
+- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model)
+- {{domxref("Document.createComment()")}} 是此构造函数的一个过时替代方案。

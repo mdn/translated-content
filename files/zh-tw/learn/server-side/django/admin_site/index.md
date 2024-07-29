@@ -31,9 +31,9 @@ slug: Learn/Server-side/Django/Admin_site
 
 ## 概覽
 
-Django 管理應用程序可以使用您的模型，自動構建可用於創建，查看，更新和刪除記錄的網站區域。這可以在開發過程中，節省大量的時間，從而很容易測試您的模型，並了解您是否擁有正確的數據。根據網站的類型，管理應用程序也可用於管理生產中的數據。 Django 項目建議僅用於內部數據管理（即僅供管理員或組織內部人員使用），因為以模型為中心的方法，不一定是所有用戶最好的界面，並且暴露了大量不必要的關於模型的細節。
+Django 管理應用程序可以使用你的模型，自動構建可用於創建，查看，更新和刪除記錄的網站區域。這可以在開發過程中，節省大量的時間，從而很容易測試你的模型，並了解你是否擁有正確的數據。根據網站的類型，管理應用程序也可用於管理生產中的數據。 Django 項目建議僅用於內部數據管理（即僅供管理員或組織內部人員使用），因為以模型為中心的方法，不一定是所有用戶最好的界面，並且暴露了大量不必要的關於模型的細節。
 
-創建基礎項目時，自動完成所有的配置文件，包含您的網站中的管理應用程序在內（有關所需實際依賴關係的信息，如有需要請看 [Django docs here](https://docs.djangoproject.com/en/2.0/ref/contrib/admin/))。其結果是，要將模型添加到管理應用程序，你必須做的，僅僅是註冊他們。在本文末尾，我們將簡要介紹，如何進一步配置管理區域，以更好地顯示我們的模型數據。
+創建基礎項目時，自動完成所有的配置文件，包含你的網站中的管理應用程序在內（有關所需實際依賴關係的信息，如有需要請看 [Django docs here](https://docs.djangoproject.com/en/2.0/ref/contrib/admin/))。其結果是，要將模型添加到管理應用程序，你必須做的，僅僅是註冊他們。在本文末尾，我們將簡要介紹，如何進一步配置管理區域，以更好地顯示我們的模型數據。
 
 註冊模型後，我們將展示，如何創建一個新的 「超級用戶」，登錄到該網站，並創建一些書籍，作者，書籍實例和書籍類別。這些將有助於測試我們將在下一個教程中，開始創建的視圖和模板。
 
@@ -58,7 +58,8 @@ admin.site.register(Genre)
 admin.site.register(BookInstance)
 ```
 
-> **備註：** 如果你在上一章節最後有接受挑戰並建立一個書本的「語言模型」 ([查看模型教學文章](/zh-TW/docs/Learn/Server-side/Django/Models))，你必需也要導入並註冊該模型！
+> [!NOTE]
+> 如果你在上一章節最後有接受挑戰並建立一個書本的「語言模型」 ([查看模型教學文章](/zh-TW/docs/Learn/Server-side/Django/Models))，你必需也要導入並註冊該模型！
 
 這是**註冊模型**最簡單的方式。
 
@@ -94,7 +95,8 @@ python3 manage.py runserver
 
 ![Admin Site - Book Add](admin_book_add.png)
 
-> **備註：** 在這邊我們希望你花點時間在你的 app 中新增一些書本、作者和書及類型(例如：奇幻等)。請確保每位作者與每種書籍類型都分別關聯了一本以上的書(這在文章稍後的實作的時候，會讓你的列表與細節視圖更加豐富有趣)。
+> [!NOTE]
+> 在這邊我們希望你花點時間在你的 app 中新增一些書本、作者和書及類型(例如：奇幻等)。請確保每位作者與每種書籍類型都分別關聯了一本以上的書(這在文章稍後的實作的時候，會讓你的列表與細節視圖更加豐富有趣)。
 
 當你新增完書本後，點擊上方書籤的 **Home** 連結回到主要管理頁面，接著點擊 **Books** 連結來展示目前的書本清單(你也可以點及其他連結看看其他模型的列表)，現在你已經加了幾本書，畫面應該會與下方截圖類似，你可以看到下方陳列了每本書的標題，這是我們在上一篇文章所提到的 Book 模型中的 `__str__()` 方法所回傳的值。
 
@@ -210,7 +212,8 @@ class BookAdmin(admin.ModelAdmin):
 
 很不幸地，我們無法直接在 `list_display` 中指定「書籍類別」(genre field)字段，因為它是一個 `ManyToManyField` (多對多字段)，因為如果這樣做會造成很大的資料庫讀寫「成本」，所以 Django 會預防這樣的狀況發生，因此，取而代之，我們將定義一個 `display_genre` 函式以「字串」形式得到書籍類別。(下方有定義此函式)
 
-> **備註：** Getting the `genre` may not be a good idea here, because of the "cost" of the database operation. We're showing you how because calling functions in your models can be very useful for other reasons — for example to add a _Delete_ link next to every item in the list.
+> [!NOTE]
+> Getting the `genre` may not be a good idea here, because of the "cost" of the database operation. We're showing you how because calling functions in your models can be very useful for other reasons — for example to add a _Delete_ link next to every item in the list.
 
 將以下程式碼添加到`Book`模型（**models.py**）。 這會從`genre`記錄的的頭三個值（如果有的話）創建一個字符串, 和創建一個在管理者網站中出現的`short_description`標題。
 
@@ -222,13 +225,14 @@ class BookAdmin(admin.ModelAdmin):
     display_genre.short_description = 'Genre'
 ```
 
-保存模型並更新管理員後，打開您的網站並轉到「Books」列表頁面； 您應該會看到類似以下的書籍清單：
+保存模型並更新管理員後，打開你的網站並轉到「Books」列表頁面； 你應該會看到類似以下的書籍清單：
 
 ![Admin Site - Improved Book List](admin_improved_book_list.png)
 
 `Genre` 模型(如果定義了語言模型，則還有 `Language` 模型）都有一個欄位，因此沒有必要為它們創建其他模型以顯示欄位。
 
-> **備註：** 更新 `BookInstance` 模型列表用來顯示狀態和預期的返回日期是有價值的。 我們在本文結尾處添加了一個挑戰！
+> [!NOTE]
+> 更新 `BookInstance` 模型列表用來顯示狀態和預期的返回日期是有價值的。 我們在本文結尾處添加了一個挑戰！
 
 ### 加入列表過濾器 (List Filter)
 
@@ -245,9 +249,9 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 ### 組織詳細視圖佈局
 
-默認情況下，局部視圖按照模型中聲明的順序垂直排列所有字段。 您可以更改聲明的順序，顯示（或排除）哪些字段，使用分段來組織資訊，水平顯示還是垂直顯示字段，甚至管理表單中使用哪些編輯小部件。
+默認情況下，局部視圖按照模型中聲明的順序垂直排列所有字段。 你可以更改聲明的順序，顯示（或排除）哪些字段，使用分段來組織資訊，水平顯示還是垂直顯示字段，甚至管理表單中使用哪些編輯小部件。
 
-> **備註：** _LocalLibrary_ 模型相對簡單，因此我們無須更改佈局。 但我們仍然會進行一些更改，向您展示如何進行。
+> **備註：** _LocalLibrary_ 模型相對簡單，因此我們無須更改佈局。 但我們仍然會進行一些更改，向你展示如何進行。
 
 #### 控制那些欄位顯示並佈置
 
@@ -259,13 +263,14 @@ class AuthorAdmin(admin.ModelAdmin):
     fields = ['first_name', 'last_name', ('date_of_birth', 'date_of_death')]
 ```
 
-`fields` 屬性僅按順序列出了要在表單上顯示的那些欄位。 默認情況下，字段是垂直顯示的，但是如果您進一步將它們分組到一個元組中，它們將水平顯示（如上面的「日期」字段中所示）。
+`fields` 屬性僅按順序列出了要在表單上顯示的那些欄位。 默認情況下，字段是垂直顯示的，但是如果你進一步將它們分組到一個元組中，它們將水平顯示（如上面的「日期」字段中所示）。
 
-在您的網站上，轉到作者詳細信息視圖-現在應如下所示：
+在你的網站上，轉到作者詳細信息視圖-現在應如下所示：
 
 ![Admin Site - Improved Author Detail](admin_improved_author_detail.png)
 
-> **備註：** 您還可以使用 `exclude` 屬性來聲明要從表單中排除的屬性列表（將顯示模型中的所有其他屬性）。
+> [!NOTE]
+> 你還可以使用 `exclude` 屬性來聲明要從表單中排除的屬性列表（將顯示模型中的所有其他屬性）。
 
 #### Sectioning the detail view
 
@@ -316,18 +321,19 @@ Now navigate to a view for a `Book` in your website — at the bottom you should
 
 In this case all we've done is declare our tabular inline class, which just adds all fields from the _inlined_ model. You can specify all sorts of additional information for the layout, including the fields to display, their order, whether they are read only or not, etc. (see [TabularInline](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline) for more information).
 
-> **備註：** There are some painful limits in this functionality! In the screenshot above we have three existing book instances, followed by three placeholders for new book instances (which look very similar!). It would be better to have NO spare book instances by default and just add them with the **Add another Book instance** link, or to be able to just list the `BookInstance`s as non-readable links from here. The first option can be done by setting the `extra` attribute to 0 in `BooksInstanceInline` model, try it by yourself.
+> [!NOTE]
+> There are some painful limits in this functionality! In the screenshot above we have three existing book instances, followed by three placeholders for new book instances (which look very similar!). It would be better to have NO spare book instances by default and just add them with the **Add another Book instance** link, or to be able to just list the `BookInstance`s as non-readable links from here. The first option can be done by setting the `extra` attribute to 0 in `BooksInstanceInline` model, try it by yourself.
 
 ## 自我挑戰
 
-在本節中我們學到了很多東西，所以現在該您嘗試一些事情了。
+在本節中我們學到了很多東西，所以現在該你嘗試一些事情了。
 
 1. 對於 `BookInstance` 列表視圖(list view)，添加代碼以顯示 `books`，`status`，`due back date` 和 `id`（而不是默認的 `__str__()` 文本）。
 2. 使用與`Book/BookInstance`相同的方法將`Book`項目的內聯列表添加到`Author` 的詳細視圖(detail view)中。
 
 ## 小結
 
-就是這樣！ 您現在已經了解瞭如何以最簡單和改進的形式設置管理者網站，如何創建超級用戶，以及如何瀏覽管理者網站，查看，刪除和更新記錄。 在此過程中，您已經創建了許多 Books，BookInstances，Genres 和 Authors，一旦我們創建了自己的 view 和 templates，便可以列出和顯示這些記錄。
+就是這樣！ 你現在已經了解瞭如何以最簡單和改進的形式設置管理者網站，如何創建超級用戶，以及如何瀏覽管理者網站，查看，刪除和更新記錄。 在此過程中，你已經創建了許多 Books，BookInstances，Genres 和 Authors，一旦我們創建了自己的 view 和 templates，便可以列出和顯示這些記錄。
 
 ## 延伸閱讀
 

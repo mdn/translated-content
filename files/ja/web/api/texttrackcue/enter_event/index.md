@@ -14,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('enter', (event) => { })
+addEventListener("enter", (event) => {});
 
-onenter = (event) => { }
+onenter = (event) => {};
 ```
 
 ## イベント型
@@ -28,8 +28,8 @@ onenter = (event) => { }
 以下の例では、`cue1` がアクティブキューになったときにコンソールに表示します。
 
 ```js
-cue1.addEventListener('enter', (event) => {
-  console.log('Cue 1 has displayed');
+cue1.addEventListener("enter", (event) => {
+  console.log("Cue 1 has displayed");
 });
 ```
 

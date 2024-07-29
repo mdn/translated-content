@@ -111,13 +111,11 @@ grid-template-columns: unset;
 
 ## Especificações
 
-| Especificação                                                                        | Status                 | Comentário        |
-| ------------------------------------------------------------------------------------ | ---------------------- | ----------------- |
-| {{SpecName("CSS3 Grid", "#propdef-grid-template-columns", "grid-template-columns")}} | {{Spec2("CSS3 Grid")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.grid-template-columns")}}
+{{Compat}}
 
 ## Leia Mais
 

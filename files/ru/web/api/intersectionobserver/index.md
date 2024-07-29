@@ -49,15 +49,15 @@ var intersectionObserver = new IntersectionObserver(function (entries) {
 intersectionObserver.observe(document.querySelector(".scrollerFooter"));
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref('MutationObserver')}}
 - {{domxref('PerformanceObserver')}}

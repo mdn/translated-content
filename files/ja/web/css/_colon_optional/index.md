@@ -14,6 +14,8 @@ input:optional {
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-optional.html", "tabbed-standard")}}
+
 この擬似クラスは。フォームを送信するにあたって必須ではない入力欄にスタイルを適用するのに便利です。
 
 > **メモ:** {{cssxref(":required")}} 擬似クラスは<em>必須</em>のフォーム欄を選択します。

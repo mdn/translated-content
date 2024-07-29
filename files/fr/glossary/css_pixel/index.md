@@ -3,6 +3,8 @@ title: Pixel CSS
 slug: Glossary/CSS_pixel
 ---
 
+{{GlossarySidebar}}
+
 Le **pixel CSS** — désigné dans {{Glossary("CSS")}} avec le suffixe `px` — est une unité de longueur qui correspond approximativement à la largeur ou à la hauteur d'un point unique qui peut être vu confortablement par l'œil humain sans effort mais par ailleurs aussi petit que possible. Par définition, il s'agit de la taille physique d'un seul pixel à une densité de pixels de 96 DPI, situé à une longueur de bras des yeux du spectateur.
 
 Cette définition, bien sûr, laisse beaucoup de marge de manœuvre, car les termes "être vu confortablement" et "à une longueur de bras" sont imprécis et varient d'une personne à l'autre. Lorsqu'un utilisateur est assis à un bureau devant un desktop, l'écran est généralement beaucoup plus éloigné de ses yeux que lorsqu'il est sur un téléphone portable, par exemple.

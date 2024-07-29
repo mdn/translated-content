@@ -25,7 +25,8 @@ JavaScript 程序本来很小——在早期，它们大多被用来执行独立
 
 这的确有点简单，但是保持足够简单能够清晰地演示模块。
 
-> **备注：** 如果你想去下载这个例子在本地运行，你需要通过本地 web 服务器去运行。
+> [!NOTE]
+> 如果你想去下载这个例子在本地运行，你需要通过本地 web 服务器去运行。
 
 ## 基本的示例文件的结构
 
@@ -39,7 +40,8 @@ modules/
     square.js
 ```
 
-> **备注：** 在这个指南的全部示例项目的文件结构是基本相同的；需要熟悉上面的内容
+> [!NOTE]
+> 在这个指南的全部示例项目的文件结构是基本相同的；需要熟悉上面的内容
 
 modules 目录下的两个模块的描述如下：
 
@@ -55,7 +57,8 @@ modules 目录下的两个模块的描述如下：
   - `reportArea()` — 在给定长度的情况下，将正方形区域写入特定报告列表。
   - `reportPerimeter()` — 在给定长度的情况下，将正方形的周长写入特定的报告列表。
 
-> **备注：** 在原生 JavaScript 模块中，扩展名 `.mjs` 非常重要，因为使用 MIME-type 为 `javascript/esm` 来导入文件（其他的 JavaScript 兼容 MIME-type 像 `application/javascript` 也可以），它避免了严格的 MIME 类型检查错误，像 "The server responded with a non-JavaScript MIME type"。除此之外，`.mjs` 的扩展名很明了（比如这个就是一个模块，而不是一个传统 JavaScript 文件），还能够和其他工具互相适用。看这个 [Google's note for further details](https://v8.dev/features/modules#mjs)。
+> [!NOTE]
+> 在原生 JavaScript 模块中，扩展名 `.mjs` 非常重要，因为使用 MIME-type 为 `javascript/esm` 来导入文件（其他的 JavaScript 兼容 MIME-type 像 `application/javascript` 也可以），它避免了严格的 MIME 类型检查错误，像 "The server responded with a non-JavaScript MIME type"。除此之外，`.mjs` 的扩展名很明了（比如这个就是一个模块，而不是一个传统 JavaScript 文件），还能够和其他工具互相适用。看这个 [Google's note for further details](https://v8.dev/features/modules#mjs)。
 
 ## `.mjs` 与 `.js`
 
@@ -133,7 +136,8 @@ import { name, draw, reportArea, reportPerimeter } from '/js-examples/modules/ba
 
 你可以在 [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js) 中看到这些。
 
-> **备注：** 在一些模块系统中你可以忽略文件扩展名（比如 `'/model/squre'`）。这在原生 JavaScript 模块系统中不工作。~~此外，记住你需要包含最前面的正斜杠。~~ （修订版 1889482）
+> [!NOTE]
+> 在一些模块系统中你可以忽略文件扩展名（比如 `'/model/squre'`）。这在原生 JavaScript 模块系统中不工作。~~此外，记住你需要包含最前面的正斜杠。~~ （修订版 1889482）
 
 因为你导入了这些功能到你的脚本文件，你可以像定义在相同的文件中的一样去使用它。下面展示的是在 `main.js` 中的 import 语句下面的内容。
 
@@ -160,7 +164,8 @@ reportPerimeter(square1.length, reportList);
 
 你只能在模块内部使用 `import` 和`export` 语句；不是普通脚本文件。
 
-> **备注：** 你还可以将模块导入内部脚本，只要包含 `type="module"`，例如 `<script type="module"> //include script here </script>`。
+> [!NOTE]
+> 你还可以将模块导入内部脚本，只要包含 `type="module"`，例如 `<script type="module"> //include script here </script>`。
 
 ## 其他模块与标准脚本的不同
 
@@ -175,7 +180,7 @@ reportPerimeter(square1.length, reportList);
 
 还有一种导出类型叫做 **default export** —- 这样可以很容易地使模块提供默认功能，并且还可以帮助 JavaScript 模块与现有的 CommonJS 和 AMD 模块系统进行互操作（正如 [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) by Jason Orendorff 的模块中所解释的那样；搜索“默认导出”）。
 
-看个例子来解释它如何工作。在我们的基本模块 `square.js` 中，您可以找到一个名为 `randomSquare()` 的函数，它创建一个具有随机颜色，大小和位置的正方形。我们想作为默认导出，所以在文件的底部我们这样写：
+看个例子来解释它如何工作。在我们的基本模块 `square.js` 中，你可以找到一个名为 `randomSquare()` 的函数，它创建一个具有随机颜色，大小和位置的正方形。我们想作为默认导出，所以在文件的底部我们这样写：
 
 ```js
 export default randomSquare;
@@ -203,7 +208,8 @@ import randomSquare from "./modules/square.js";
 import { default as randomSquare } from "./modules/square.js";
 ```
 
-> **备注：** 重命名导出项的 as 语法在下面的 [重命名导出与导入](#重命名导出与导入) 部分中进行了说明。
+> [!NOTE]
+> 重命名导出项的 as 语法在下面的 [重命名导出与导入](#重命名导出与导入) 部分中进行了说明。
 
 ## 避免命名冲突
 
@@ -277,7 +283,7 @@ import {
 } from "./modules/triangle.js";
 ```
 
-请注意，您可以在模块文件中解决问题，例如
+请注意，你可以在模块文件中解决问题，例如
 
 ```js
 // in square.js
@@ -299,7 +305,7 @@ import {
 } from "/js-examples/modules/renaming/modules/square.js";
 ```
 
-它也会起作用。你使用什么样的风格取决于你，但是单独保留模块代码并在导入中进行更改可能更有意义。当您从没有任何控制权的第三方模块导入时，这尤其有意义。
+它也会起作用。你使用什么样的风格取决于你，但是单独保留模块代码并在导入中进行更改可能更有意义。当你从没有任何控制权的第三方模块导入时，这尤其有意义。
 
 ## 创建模块对象
 
@@ -332,7 +338,7 @@ import * as Circle from "./modules/circle.js";
 import * as Triangle from "./modules/triangle.js";
 ```
 
-在每种情况下，您现在可以访问指定对象名称下面的模块导入。
+在每种情况下，你现在可以访问指定对象名称下面的模块导入。
 
 ```js
 let square1 = Square.draw(myCanvas.ctx, 50, 50, 100, "blue");
@@ -340,11 +346,11 @@ Square.reportArea(square1.length, reportList);
 Square.reportPerimeter(square1.length, reportList);
 ```
 
-因此，您现在可以像以前一样编写代码（只要您在需要时包含对象名称），并且导入更加整洁。
+因此，你现在可以像以前一样编写代码（只要你在需要时包含对象名称），并且导入更加整洁。
 
 ## 模块与类（class）
 
-正如我们之前提到的那样，您还可以导出和导入类；这是避免代码冲突的另一种选择，如果您已经以面向对象的方式编写了模块代码，那么它尤其有用。
+正如我们之前提到的那样，你还可以导出和导入类；这是避免代码冲突的另一种选择，如果你已经以面向对象的方式编写了模块代码，那么它尤其有用。
 
 你可以在我们的 [classes](https://github.com/mdn/js-examples/tree/main/module-examples/classes) 目录中看到使用 ES 类重写的形状绘制模块的示例。例如，[`square.js`](https://github.com/mdn/js-examples/blob/main/module-examples/classes/modules/square.js) 文件现在包含单个类中的所有功能：
 
@@ -385,14 +391,15 @@ square1.reportPerimeter();
 
 ## 合并模块
 
-有时你会想要将模块聚合在一起。您可能有多个级别的依赖项，您希望简化事物，将多个子模块组合到一个父模块中。这可以使用父模块中以下表单的导出语法：
+有时你会想要将模块聚合在一起。你可能有多个级别的依赖项，你希望简化事物，将多个子模块组合到一个父模块中。这可以使用父模块中以下表单的导出语法：
 
 ```js
 export * from "x.js";
 export { name } from "x.js";
 ```
 
-> **备注：** 这实际上是导入后跟导出的简写，即“我导入模块 `x.js`，然后重新导出部分或全部导出”。
+> [!NOTE]
+> 这实际上是导入后跟导出的简写，即“我导入模块 `x.js`，然后重新导出部分或全部导出”。
 
 有关示例，请参阅我们的 [module-aggregation](https://github.com/mdn/js-examples/tree/main/module-examples/module-aggregation)。在这个例子中（基于我们之前的类示例），我们有一个名为 `shapes.js` 的额外模块，它将 `circle.js`，`square.js` 和 `riangle.mjs` 中的所有功能聚合在一起。我们还将子模块移动到名为 shapes 的 modules 目录中的子目录中。所以模块结构现在是这样的：
 
@@ -422,9 +429,10 @@ export { Circle } from "/js-examples/modules/module-aggregation/modules/shapes/c
 
 它们从各个子模块中获取导出，并有效地从 `shapes.js` 模块中获取它们。
 
-> **备注：** 即使 `shapes.js` 文件位于 modules 目录中，我们仍然需要相对于模块根目录编写这些 URL，因此需要 `/modules/`。这是使用 JavaScript 模块时混淆的常见原因。
+> [!NOTE]
+> 即使 `shapes.js` 文件位于 modules 目录中，我们仍然需要相对于模块根目录编写这些 URL，因此需要 `/modules/`。这是使用 JavaScript 模块时混淆的常见原因。
 
-> **备注：** `shapes.js` 中引用的导出基本上通过文件重定向，并且实际上并不存在，因此您将无法在同一文件中编写任何有用的相关代码。
+> **备注：** `shapes.js` 中引用的导出基本上通过文件重定向，并且实际上并不存在，因此你将无法在同一文件中编写任何有用的相关代码。
 
 所以现在在 `main.js` 文件中，我们可以通过替换来访问所有三个模块类
 
@@ -442,9 +450,9 @@ import { Square, Circle, Triangle } from "./modules/shapes.js";
 
 ## 动态加载模块
 
-浏览器中可用的 JavaScript 模块功能的最新部分是动态模块加载。这允许您仅在需要时动态加载模块，而不必预先加载所有模块。这有一些明显的性能优势；让我们继续阅读，看看它是如何工作的。
+浏览器中可用的 JavaScript 模块功能的最新部分是动态模块加载。这允许你仅在需要时动态加载模块，而不必预先加载所有模块。这有一些明显的性能优势；让我们继续阅读，看看它是如何工作的。
 
-这个新功能允许您将 `import()` 作为函数调用，将其作为参数传递给模块的路径。它返回一个 [promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，它用一个模块对象来实现（参见[创建模块对象](#创建模块对象)），让你可以访问该对象的导出，例如
+这个新功能允许你将 `import()` 作为函数调用，将模块的路径作为参数传递。它返回一个 [promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，它用一个模块对象来实现（参见[创建模块对象](#创建模块对象)），让你可以访问该对象的导出，例如
 
 ```js
 import("/modules/mymodule.js").then((module) => {

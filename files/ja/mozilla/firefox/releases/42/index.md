@@ -45,7 +45,7 @@ l10n:
 
 - [`id`](/ja/docs/Web/HTML/Element/img#id) を伴う画像が、{{domxref("Window")}} インターフェイスのプロパティのリストに入らないようになりました。`<img id="login">` は `window.login` としてアクセスできません。この動作は Firefox 26 で導入しており、その後変更された仕様書に合致させるために削除しました ([Firefox バグ 959992](https://bugzil.la/959992))。
 - {{domxref('MouseEvent.offsetX')}} および {{domxref('MouseEvent.offsetY')}} を追加しました ([Firefox バグ 69787](https://bugzil.la/69787))。
-- {{domxref("HTMLInputElement")}} インターフェイスを、ディレクトリのアップロードを扱うよう実験的に拡張しました ([Firefox バグ 1164310](https://bugzil.la/1164310))。以下 4 つのメンバーは、設定項目 `dom.input.dirpicker` を `true` に設定すると使用できます。
+- {{domxref("HTMLInputElement")}} インターフェイスを、ディレクトリーのアップロードを扱うよう実験的に拡張しました ([Firefox バグ 1164310](https://bugzil.la/1164310))。以下 4 つのメンバーは、設定項目 `dom.input.dirpicker` を `true` に設定すると使用できます。
 
   - {{domxref("HTMLInputElement.directory")}}
   - {{domxref("HTMLInputElement.isFilesAndDirectoriesSupported")}}
@@ -73,7 +73,7 @@ l10n:
 
 #### Web Components
 
-[シャドウ DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) の実験的な実装を変更しました。
+[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) の実験的な実装を変更しました。
 
 - {{domxref('ShadowRoot')}} で {{domxref('Node.cloneNode()')}} を実行しようとすると、`DataCloneError` 例外が発生します ([Firefox バグ 1176757](https://bugzil.la/1176757))。
 - {{domxref('ShadowRoot')}} を引数として {{domxref('Document.importNode()')}} を実行すると、`NotSupportedError` の {{domxref("DOMException")}} が発生します ([Firefox バグ 1177914](https://bugzil.la/1177914))。
@@ -98,7 +98,7 @@ l10n:
 
 - {{domxref('IDBCursorWithValue')}} インターフェイスが[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用可能になりました ([Firefox バグ 1188115](https://bugzil.la/1188115))。
 - [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)が発したエラーイベントがバブリングしないようになりました ([Firefox バグ 1188141](https://bugzil.la/1188141))。
-- [Media Source Extensions](/ja/docs/Web/API/Media_Source_Extensions_API) (MSE) がホワイトリストに記載されたサイトだけでなく、すべての Web サイトで有効になりました ([Firefox バグ 1185611](https://bugzil.la/1185611))。
+- [Media Source Extensions](/ja/docs/Web/API/Media_Source_Extensions_API) (MSE) がホワイトリストに記載されたサイトだけでなく、すべてのウェブサイトで有効になりました ([Firefox バグ 1185611](https://bugzil.la/1185611))。
 - 非標準かつ非推奨である `Window.mozRequestAnimationFrame()` を削除しました ([Firefox バグ 909154](https://bugzil.la/909154))。代わりに、標準の {{domxref('Window.requestAnimationFrame()')}} を使用してください。
 - 音声合成 (text-to-speech) を Windows 向けのデスクトップ版 Firefox に実装しました。ただし、`about:config` の `media.webspeech.synth.enabled` フラグで無効化しています ([Firefox バグ 1003457](https://bugzil.la/1003457))。詳しくは[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) をご覧ください。
 
@@ -116,7 +116,7 @@ _変更なし。_
 
 ## HTTP
 
-- Firefox 41 まで、HTTP/2 レスポンスに含まれる未定義または無効な疑似ヘッダフィールドを、誤って受け入れていました。これが修正され、Firefox 42 より受け入れる疑似ヘッダフィールドは仕様書に従い _:status_ のみになります。独自のフィールドを含むレスポンスヘッダは、異常なものであると判断します ([Firefox バグ 1136727](https://bugzil.la/1136727))。
+- Firefox 41 まで、HTTP/2 レスポンスに含まれる未定義または無効な擬似ヘッダーフィールドを、誤って受け入れていました。これが修正され、Firefox 42 より受け入れる擬似ヘッダーフィールドは仕様書に従い _:status_ のみになります。独自のフィールドを含むレスポンスヘッダーは、異常なものであると判断します ([Firefox バグ 1136727](https://bugzil.la/1136727))。
 
 ## ネットワーク
 

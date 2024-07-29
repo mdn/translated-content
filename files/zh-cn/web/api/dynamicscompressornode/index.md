@@ -39,7 +39,7 @@ slug: Web/API/DynamicsCompressorNode
 
 ## 属性
 
-_由父类 {{domxref("AudioNode")}} 派生_
+_由父类 {{domxref("AudioNode")}} 派生。_
 
 - {{domxref("DynamicsCompressorNode.threshold")}} {{readonlyInline}}
   - : [比例系数](/zh-CN/docs/DOM/AudioParam#k-rate) {{domxref("AudioParam")}} 型。分贝高于此值时，将会进行压缩。

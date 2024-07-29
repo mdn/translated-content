@@ -1,8 +1,9 @@
 ---
 title: "HTMLCanvasElement: toDataURL() メソッド"
+short-title: toDataURL()
 slug: Web/API/HTMLCanvasElement/toDataURL
 l10n:
-  sourceCommit: b0870830e4c02596ca6c501f8f8b468a917eafc2
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("Canvas API")}}
@@ -29,7 +30,7 @@ toDataURL(type, encoderOptions)
 
 - `type` {{optional_inline}}
   - : 文字列で、画像形式を表します。
-  既定の形式は `image/png` です。この形式は、指定された形式に対応していない場合にも使用されます。
+    既定の形式は `image/png` です。この形式は、指定された形式に対応していない場合にも使用されます。
 - `encoderOptions` {{optional_inline}}
   - : `0` から `1` の間の数値であり、作成する画像が非可逆圧縮（`image/jpeg` や `image/webp` など）であった場合の画像品質を示します。
     このオプションが指定されなかったり、許可されている範囲外の数値であったりした場合は、ユーザーエージェントは既定の品質値を使用します。

@@ -2,14 +2,15 @@
 title: transform
 slug: Web/SVG/Attribute/transform
 l10n:
-  sourceCommit: dc86333db6b97ee7fed053f76f6d0a6ecec763e9
+  sourceCommit: 193ee88d26a8ab4dea8f8b70464167edccee92e1
 ---
 
 {{SVGRef}}
 
-**`transform`** 属性は、要素とその要素の子に適用される変換定義のリストを定義します。
+**`transform`** 属性は、要素とその要素の子に適用される座標変換定義のリストを定義します。
 
-> **メモ:** SVG2 では、 `transform` はプレゼンテーション属性であり、 CSS プロパティとして使用することができます。ただし、 CSS プロパティとこの属性との間には構文の違いがあるので注意が必要です。その場合に使用する具体的な構文については、 CSS プロパティの {{cssxref('transform')}} のドキュメントを参照してください。
+> [!NOTE]
+> SVG2 では、 `transform` はプレゼンテーション属性であり、 CSS プロパティとして使用することができます。ただし、 CSS プロパティとこの属性との間には構文の違いがあるので注意が必要です。その場合に使用する具体的な構文については、 CSS プロパティの {{cssxref('transform')}} のドキュメントを参照してください。
 
 この属性はすべての SVG 要素で使用できます。
 
@@ -39,7 +40,7 @@ svg {
       d="M 10,30 A 20,20 0,0,1 50,30 A 20,20 0,0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 z" />
   </g>
 
-  <use xlink:href="#heart" fill="none" stroke="red" />
+  <use href="#heart" fill="none" stroke="red" />
 </svg>
 ```
 
@@ -52,7 +53,7 @@ SVG 1.1 では、 {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('c
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">Value</th>
+      <th scope="row">値</th>
       <td>
         <strong
           ><a href="/ja/docs/Web/SVG/Content_type#transform-list"
@@ -62,25 +63,30 @@ SVG 1.1 では、 {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('c
       </td>
     </tr>
     <tr>
-      <th scope="row">Default value</th>
+      <th scope="row">既定値</th>
       <td><em>none</em></td>
     </tr>
     <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
+      <th scope="row">アニメーション</th>
+      <td>可</td>
     </tr>
   </tbody>
 </table>
 
-## 変換関数
+## 座標変換関数
 
 以下の変換関数は、 `transform` 属性の `<transform-list>` で使用することができます。
 
-> **警告:** 仕様書によれば、 CSS の[変換関数](/ja/docs/Web/CSS/transform-function)も使用することができます。しかし、互換性は保証されていません。
+> [!WARNING]
+> 仕様書によれば、 CSS の[座標変換関数](/ja/docs/Web/CSS/transform-function)も使用することができます。しかし、互換性は保証されていません。
 
 ### matrix
 
-`matrix(<a> <b> <c> <d> <e> <f>)` 変換関数は、6 つの値の変換行列の形式で変形を指定します。 `matrix(a,b,c,d,e,f)` は次の変換行列を適用することと等価です。 <math display="block"><semantics><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\begin{pmatrix} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix}</annotation></semantics></math> これは、前の座標系から新しい座標系への座標の写像を次の行列の等式によって行うものです。<math display="block"><semantics><mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><annotation encoding="TeX"> \begin{pmatrix} x*{\mathrm{newCoordSys}} \\ y*{\mathrm{newCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix} \begin{pmatrix} x\_{\mathrm{prevCoordSys}} \\ y\_{\mathrm{prevCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a x\_{\mathrm{prevCoordSys}} + c y\_{\mathrm{prevCoordSys}} + e \\ b x\_{\mathrm{prevCoordSys}} + d y\_{\mathrm{prevCoordSys}} + f \\ 1 \end{pmatrix}</annotation></semantics></math>
+`matrix(<a> <b> <c> <d> <e> <f>)` 変換関数は、6 つの値の変換行列の形式で変形を指定します。 `matrix(a,b,c,d,e,f)` は次の変換行列を適用することと等価です。
+
+<math display="block">
+  <semantics><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\begin{pmatrix} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix}</annotation></semantics></math> これは、前の座標系から新しい座標系への座標の写像を次の行列の等式によって行うものです。<math display="block"><semantics><mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><annotation encoding="TeX"> \begin{pmatrix} x_{\mathrm{newCoordSys}} \\ y_{\mathrm{newCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix} \begin{pmatrix} x_{\mathrm{prevCoordSys}} \\ y_{\mathrm{prevCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a x_{\mathrm{prevCoordSys}} + c y_{\mathrm{prevCoordSys}} + e \\ b x_{\mathrm{prevCoordSys}} + d y_{\mathrm{prevCoordSys}} + f \\ 1 \end{pmatrix}</annotation></semantics>
+</math>
 
 #### 例
 

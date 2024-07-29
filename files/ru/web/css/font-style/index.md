@@ -35,7 +35,11 @@ font-style: unset;
 - `oblique`
   - : Выделяет шрифт который классифицирован как `oblique`. Если не доступна косая версия шрифта, взамен используется `italic` классификация. Если не одна версия не доступна, то стиль симулируется искусственно.
 
-### Formal syntax
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
@@ -65,16 +69,10 @@ font-style: unset;
 
 {{ EmbedLiveSample('Font_styles') }}
 
-## Specifications
+## Спецификации
 
-| Specification                                                         | Status                  | Comment            |
-| --------------------------------------------------------------------- | ----------------------- | ------------------ |
-| {{SpecName('CSS3 Fonts', '#font-style-prop', 'font-style')}}          | {{Spec2('CSS3 Fonts')}} | No change          |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-style', 'font-style')}} | {{Spec2('CSS2.1')}}     | No change          |
-| {{SpecName('CSS1', '#font-style', 'font-style')}}                     | {{Spec2('CSS1')}}       | Initial definition |
+{{Specifications}}
 
-{{cssinfo}}
-
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

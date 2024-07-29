@@ -29,7 +29,7 @@ slug: Web/SVG/Element/feComponentTransfer
 
 ## DOM 接口
 
-该元素实现了[`SVGFEComponentTransferElement`](/zh-CN/DOM/SVGFEComponentTransferElement)接口。
+该元素实现了 [`SVGFEComponentTransferElement`](/zh-CN/DOM/SVGFEComponentTransferElement) 接口。
 
 ## 示例
 

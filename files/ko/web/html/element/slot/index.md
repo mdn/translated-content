@@ -61,7 +61,7 @@ slug: Web/HTML/Element/slot
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("name")}}
+- `name`
   - : 슬롯의 이름.
 
 ## 예제

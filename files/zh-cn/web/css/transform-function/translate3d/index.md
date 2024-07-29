@@ -9,7 +9,7 @@ slug: Web/CSS/transform-function/translate3d
 
 ## 语法
 
-```
+```css
 translate3d(tx, ty, tz)
 ```
 
@@ -85,7 +85,7 @@ p {
 }
 ```
 
-### 结果
+#### 结果
 
 {{EmbedLiveSample("单轴变化示例","100%","250")}}
 
@@ -114,7 +114,7 @@ p {
 }
 ```
 
-### 结果
+#### 结果
 
 {{EmbedLiveSample("z 轴与 x 轴变化","100%","250")}}
 

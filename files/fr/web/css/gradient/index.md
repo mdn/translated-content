@@ -127,7 +127,7 @@ body {
 
 ### Dégradé conique
 
-Les couleurs de transitions s'appliquent progressivement autour d'un cercle. Un tel dégradé est généré avec la fonction {{cssref("conic-gradient","conic-gradient()")}}.
+Les couleurs de transitions s'appliquent progressivement autour d'un cercle. Un tel dégradé est généré avec la fonction [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient).
 
 ```html hidden
 <div class="conic-gradient">Conic gradient</div>

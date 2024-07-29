@@ -3,6 +3,8 @@ title: 나의 웹사이트를 설계하기 위해서는?
 slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 이 글은 모든 프로젝트에서 중요한 첫 단계 - 프로젝트를 통해 달성하고 싶은 것을 정의하기 - 를 다룬다.
 
 <table class="learn-box standard-table">
@@ -88,7 +90,7 @@ _아직 가능한 능동 학습이 없다. [기여를 고민해보라](/ko/docs/
 
 이제 우리가 달성하고 싶은 것을 알고 있으므로, 그 목표들을 실행가능한 단계로 바꿀 시간입니다.
 
-긴 설명을 하기 보다는 이 표로 우리의 예제를 돌아봅시다:
+긴 설명을 하기 보다는 이 표로 우리의 예제를 돌아봅시다.
 
 <table class="standard-table">
   <thead>

@@ -9,7 +9,8 @@ HyperText Transfer Protocol (HTTP) の **`503 Service Unavailable`** サーバ�
 
 一般的な原因は、サーバーがメンテナンス中のために停止していることや、過負荷状態になっていることです。このレスポンスは、一時的な条件に使用する必要があり、 {{HTTPHeader("Retry-After")}} HTTP ヘッダーには、もし可能であれば、サービスの復旧に要する予想時間を含めるべきです。
 
-> **メモ:** このレスポンスと共に、問題を分かりやすく説明するページを送信する必要があります。
+> [!NOTE]
+> このレスポンスと共に、問題を分かりやすく説明するページを送信する必要があります。
 
 503 のステータスはしばしば一時的な状態であり、レスポンスは頻繁にキャッシュされるべきではないため、このレスポンスと共に送信されるキャッシュ関連のヘッダーは注意する必要があります。
 
@@ -29,7 +30,7 @@ HyperText Transfer Protocol (HTTP) の **`503 Service Unavailable`** サーバ�
 
 以下に示す情報は、 MDN の GitHub から取得したものです。 (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.503")}}
+{{Compat}}
 
 ## 関連情報
 

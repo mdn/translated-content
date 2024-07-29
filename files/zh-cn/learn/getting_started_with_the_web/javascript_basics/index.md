@@ -17,9 +17,9 @@ JavaScript 的应用场合极其广泛，简单到幻灯片、照片库、浮动
 
 JavaScript 相当简洁，却非常灵活。开发者们基于 JavaScript 核心编写了大量实用工具，可以使 开发工作事半功倍。其中包括：
 
-- 浏览器应用程序接口（{{Glossary("API","API")}}）—— 浏览器内置的 API 提供了丰富的功能，比如：动态创建 HTML 和设置 CSS 样式、从用户的摄像头采集处理视频流、生成 3D 图像与音频样本等等。
-- 第三方 API —— 让开发者可以在自己的站点中整合其他内容提供者（Twitter、Facebook 等）提供的功能。
-- 第三方框架和库 —— 用来快速构建网站和应用。
+- 浏览器应用程序接口（{{Glossary("API","API")}}）——浏览器内置的 API 提供了丰富的功能，比如：动态创建 HTML 和设置 CSS 样式、从用户的摄像头采集处理视频流、生成 3D 图像与音频样本等等。
+- 第三方 API——让开发者可以在自己的站点中整合其他内容提供者（Twitter、Facebook 等）提供的功能。
+- 第三方框架和库——用来快速构建网站和应用。
 
 本节是一篇 JavaScript 简介，因此这个阶段不会对 JavaScript 语言和上述工具做过多的介绍。之后可以到 [JavaScript 学习区](/zh-CN/docs/Learn/JavaScript) 和 MDN 的其他地方学习更多细节。
 
@@ -27,11 +27,12 @@ JavaScript 相当简洁，却非常灵活。开发者们基于 JavaScript 核心
 
 ## “Hello World!”示例
 
-读到这里你一定很激动，诚然 —— JavaScript 是最振奋人心的 Web 技术之一，而且在娴熟驾驭之后，你的网站在功能和创新力上将达到一个新的维度。
+读到这里你一定很激动，诚然——JavaScript 是最振奋人心的 Web 技术之一，而且在娴熟驾驭之后，你的网站在功能和创新力上将达到一个新的维度。
 
 然而，JavaScript 比 HTML 和 CSS 学习起来更加复杂一点，所以必须一步一个脚印地学习。首先，来看看如何在页面中添加一些基本的 JavaScript 脚本来建造一个“Hello world!”示例（[一切始于 Hello World](https://zh.wikipedia.org/wiki/Hello_World)）。
 
-> **警告：** 如果你没有完成之前的课程实践，可下载 [上一章节示例的压缩包](https://github.com/roy-tian/learning-area/raw/master/extras/getting-started-web/beginner-html-site-styled.zip) 并在本地解压作出发点。
+> [!WARNING]
+> 如果你没有完成之前的课程实践，可下载 [上一章节示例的压缩包](https://github.com/roy-tian/learning-area/raw/master/extras/getting-started-web/beginner-html-site-styled.zip) 并在本地解压作出发点。
 
 1. 首先，打开你的测试站点，创建一个名为 `scripts` 的文件夹。然后在其中创建一个名为 main.js 的文件。
 2. 下一步，在 `index.html` 文件\</body> 标签前的新行添加以下代码。
@@ -50,7 +51,8 @@ JavaScript 相当简洁，却非常灵活。开发者们基于 JavaScript 核心
 
 5. 最后，保存 HTML 和 JavaScript 文件，用浏览器打开 `index.html`。可以看到如下内容：![](hello-world.png)
 
-> **备注：** 我们将 {{htmlelement("script")}} 放在 HTML 文件的底部附近的原因是浏览器会按照代码在文件中的顺序加载 HTML。如果先加载的 JavaScript 期望修改其下方的 HTML，那么它可能由于 HTML 尚未被加载而失效。因此，将 JavaScript 代码放在 HTML 页面的底部附近通常是最好的策略。
+> [!NOTE]
+> 我们将 {{htmlelement("script")}} 放在 HTML 文件的底部附近的原因是浏览器会按照代码在文件中的顺序加载 HTML。如果先加载的 JavaScript 期望修改其下方的 HTML，那么它可能由于 HTML 尚未被加载而失效。因此，将 JavaScript 代码放在 HTML 页面的底部附近通常是最好的策略。
 
 ### 发生了什么？
 
@@ -58,13 +60,15 @@ JavaScript 把页面的标题改成了“Hello world!” 。首先用 {{domxref(
 
 之后，把 `myHeading` 变量的属性 {{domxref("Node.textContent", "textContent")}} （标题内容）修改为“Hello world!” 。
 
-> **备注：** 上面用到的两个函数都来自 [文档对象模型 (DOM) API](/zh-CN/docs/Web/API/Document_Object_Model)，均用于控制文档。
+> [!NOTE]
+> 上面用到的两个函数都来自 [文档对象模型 (DOM) API](/zh-CN/docs/Web/API/Document_Object_Model)，均用于控制文档。
 
 ## JavaScript 快速入门
 
 我们来学习一些 JavaScript 的核心特性，从而更好地理解它的运行机制。学习这些知识很有意义，因为这些原理普遍适用于所有编程语言，掌握好它们，可以做到融会贯通。
 
-> **警告：** 学习本节时，请尝试将示例代码输入到 JavaScript 控制台里看看会发生什么。JavaScript 控制台的更多信息请查看 [浏览器开发者工具](/zh-CN/Learn/Discover_browser_developer_tools)。
+> [!WARNING]
+> 学习本节时，请尝试将示例代码输入到 JavaScript 控制台里看看会发生什么。JavaScript 控制台的更多信息请查看 [浏览器开发者工具](/zh-CN/Learn/Discover_browser_developer_tools)。
 
 ### 变量（Variable）
 
@@ -74,13 +78,17 @@ JavaScript 把页面的标题改成了“Hello world!” 。首先用 {{domxref(
 let myVariable;
 ```
 
-> **备注：** 行末的分号表示当前语句结束，不过只有在单行内需要分割多条语句时，这个分号才是必须的。然而，一些人认为每条语句末尾加分号是一种好的风格。分号使用规则的更多细节请参阅 [JavaScript 分号使用指南](http://news.codecademy.com/your-guide-to-semicolons-in-javascript/)（英文页面）。
+> [!NOTE]
+> 行末的分号表示当前语句结束，不过只有在单行内需要分割多条语句时，这个分号才是必须的。然而，一些人认为每条语句末尾加分号是一种好的风格。分号使用规则的更多细节请参阅 [JavaScript 分号使用指南](http://news.codecademy.com/your-guide-to-semicolons-in-javascript/)（英文页面）。
 
-> **备注：** 几乎任何内容都可以作为变量名，但还是有一些限制（请参阅 [变量命名规则](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_Types#变量)）。如果你不确定，还可以 [验证变量名](https://mothereff.in/js-variables) 是否有效。
+> [!NOTE]
+> 几乎任何内容都可以作为变量名，但还是有一些限制（请参阅 [变量命名规则](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_Types#变量)）。如果你不确定，还可以 [验证变量名](https://mothereff.in/js-variables) 是否有效。
 
-> **备注：** JavaScript 对大小写敏感，`myVariable` 和 `myvariable` 是不同的。如果代码出现问题了，先检查一下大小写！
+> [!NOTE]
+> JavaScript 对大小写敏感，`myVariable` 和 `myvariable` 是不同的。如果代码出现问题了，先检查一下大小写！
 
-> **备注：** 想要了解更多关于 `var` 和 `let` 的不同点，可以参阅 [var 与 let 的区别](/zh-CN/docs/Learn/JavaScript/First_steps/Variables#var_与_let_的区别)。
+> [!NOTE]
+> 想要了解更多关于 `var` 和 `let` 的不同点，可以参阅 [var 与 let 的区别](/zh-CN/docs/Learn/JavaScript/First_steps/Variables#var_与_let_的区别)。
 
 变量定义后可以进行赋值：
 
@@ -183,7 +191,8 @@ myVariable = '韩梅梅';
 
 {{Glossary("Operator","运算符")}} 是一类数学符号，可以根据两个值（或变量）产生结果。以下表格中介绍了一些最简单的运算符，可以在浏览器控制台里尝试一下后面的示例。
 
-> **备注：** 这里说“根据**两个**值（或变量）产生结果”是不严谨的，计算两个变量的运算符称为“二元运算符”，还有一元运算符和三元运算符，下表中的“取非”就是一元运算符。
+> [!NOTE]
+> 这里说“根据**两个**值（或变量）产生结果”是不严谨的，计算两个变量的运算符称为“二元运算符”，还有一元运算符和三元运算符，下表中的“取非”就是一元运算符。
 
 <table>
   <thead>
@@ -257,7 +266,8 @@ myVariable = '韩梅梅';
 
 运算符种类远不止这些，不过目前上表已经够用了。完整列表请参阅 [表达式和运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators)。
 
-> **备注：** 不同类型数据之间的计算可能出现奇怪的结果，因此必须正确引用变量，才能得出预期结果。比如在控制台输入 `"35" + "25"`，为什么不能得到 `60`？因为引号将数字转换成了字符串，所以结果是连接两个字符串而不是把两个数字相加。输入 `35 + 25` 才能得到正确结果。
+> [!NOTE]
+> 不同类型数据之间的计算可能出现奇怪的结果，因此必须正确引用变量，才能得出预期结果。比如在控制台输入 `"35" + "25"`，为什么不能得到 `60`？因为引号将数字转换成了字符串，所以结果是连接两个字符串而不是把两个数字相加。输入 `35 + 25` 才能得到正确结果。
 
 ### 条件语句
 
@@ -266,7 +276,7 @@ myVariable = '韩梅梅';
 ```js
 let iceCream = "chocolate";
 if (iceCream === "chocolate") {
-  alert("我最喜欢巧克力冰激淋了。");
+  alert("我最喜欢巧克力冰淇淋了。");
 } else {
   alert("但是巧克力才是我的最爱呀……");
 }

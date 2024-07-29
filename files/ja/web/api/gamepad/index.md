@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Gamepad API")}}{{SecureContext_Header}}
 
- **`Gamepad`** は[ゲームパッド API](/ja/docs/Web/API/Gamepad_API) のインターフェイスで、それぞれのゲームパッドやその他のコントローラーを定義し、ボタン押下や軸位置や ID といった情報にアクセスできるようにします。
+**`Gamepad`** は[ゲームパッド API](/ja/docs/Web/API/Gamepad_API) のインターフェイスで、それぞれのゲームパッドやその他のコントローラーを定義し、ボタン押下や軸位置や ID といった情報にアクセスできるようにします。
 
 Gamepad オブジェクトを取得する方法は 2 つあります。 {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} または {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} イベントの `gamepad` プロパティか、 {{domxref("Navigator.getGamepads()")}} から返される配列の任意の位置から取得します。
 

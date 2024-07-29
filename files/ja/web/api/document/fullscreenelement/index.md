@@ -1,8 +1,9 @@
 ---
-title: Document.fullscreenElement
+title: "Document: fullscreenElement プロパティ"
+short-title: fullscreenElement
 slug: Web/API/Document/fullscreenElement
 l10n:
-  sourceCommit: 23aea0fbb04893c64890c89a634250283e2beb71
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{ApiRef("Fullscreen API")}}

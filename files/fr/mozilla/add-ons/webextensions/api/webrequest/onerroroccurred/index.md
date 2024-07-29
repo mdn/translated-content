@@ -3,7 +3,7 @@ title: webRequest.onErrorOccurred
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onErrorOccurred
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Utilisé lorsqu'une demande n'a pas pu être traitée en raison d'une erreur : par exemple, un manque de connectivité Internet.
 

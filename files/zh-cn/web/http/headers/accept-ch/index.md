@@ -1,40 +1,60 @@
 ---
 title: Accept-CH
 slug: Web/HTTP/Headers/Accept-CH
+l10n:
+  sourceCommit: aa6e900e44ed7e9c3612b98abdb51cb4ab4d99e1
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
+{{HTTPSidebar}}{{securecontext_header}}
 
-**`Accept-CH`** 头由服务器设置，以指定客户端应在后续请求中应包含哪些客户端 [Client Hints](/zh-CN/docs/Glossary/Client_hints) 提示头。
+**`Accept-CH`** 标头由服务器设置，以指定客户端应在后续请求中应包含哪些客户端[客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)提示标头。
 
-| Header type                           | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | ?                               |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">标头类型</th>
+      <td>{{Glossary("Response header", "响应标头")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("CORS-safelisted response header", "列入 CORS 白名单的请求标头")}}
+      </th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
 
-> **备注：** [Client Hints](/zh-CN/docs/Glossary/Client_hints) 只能在安全源（通过 TLS）上访问。所有安全的请求都应该持久化 Accept-CH 和 Accept-CH-Lifetime 头，以确保 [Client Hints](/zh-CN/docs/Glossary/Client_hints) 可靠地发送。
+> [!NOTE]
+> 客户端提示只能在安全源（通过 TLS）上访问。所有安全的请求都应该持久化 `Accept-CH` 标头，以确保客户端提示可靠地发送。
 
 ## 语法
 
-```plain
-Accept-CH: <list of client hints>
+```http
+Accept-CH: <comma separated list of client hint headers>
 ```
 
-## 例子
+## 示例
 
-```plain
-Accept-CH: DPR, Viewport-Width
-Accept-CH: Width
-Accept-CH-Lifetime: 86400
-Vary: DPR, Viewport-Width, Width
+```http
+Accept-CH: Viewport-Width, Width
+Vary: Viewport-Width, Width
 ```
 
-> **备注：** 牢记要根据所接受的 Client Hints [更改响应](/zh-CN/docs/Glossary/Client_hints#Varying_Client_Hints)。
+> [!NOTE]
+> 请牢记要根据所接受的客户端提示[更改响应](/zh-CN/docs/Web/HTTP/Client_hints#缓存和客户端提示)。
+
+## 规范
+
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
-- {{HTTPHeader("Accept-CH-Lifetime")}}
 - {{HTTPHeader("Vary")}}

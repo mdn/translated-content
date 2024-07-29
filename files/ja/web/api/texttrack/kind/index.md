@@ -29,7 +29,7 @@ l10n:
 以下の例では、以下の例では `kind` の値がコンソールに表示されます。
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 console.log(track.kind);

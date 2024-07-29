@@ -27,12 +27,12 @@ slug: Web/CSS/CSS_compositing_and_blending
 
 ### `background-blend-mode` プロパティ
 
-{{Compat("css.properties.background-blend-mode")}}
+{{Compat}}
 
 ### `isolation` プロパティ
 
-{{Compat("css.properties.isolation")}}
+{{Compat}}
 
 ### `mix-blend-mode` プロパティ
 
-{{Compat("css.properties.mix-blend-mode")}}
+{{Compat}}

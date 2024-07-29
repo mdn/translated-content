@@ -44,7 +44,8 @@ Al principio, la web solo era texto y resultaba más bien aburrido. Afortunadame
 
 Para poner una imagen simple en una página web, utilizamos el elemento {{htmlelement("img")}}. Se trata de un elemento vacío (lo que significa que no contiene texto o etiqueta de cierre) que requiere de por lo menos de un atributo para ser utilizado: `src` (a veces denominado por su nombre completo, _source_). El atributo `src` contiene una ruta que apunta a la imagen que quieres poner en la página, que puede ser una URL relativa o absoluta, de la misma forma que el elemento {{htmlelement("a")}} contiene los valores del atributo `href`.
 
-> **Nota:** Deberías leer [Inicio rápido a las URL y rutas](/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks#Un_primer_acercamiento_a_URL_y_referencias) para refrescar tu memoria sobre URL relativas y absolutas antes de continuar.
+> [!NOTE]
+> Deberías leer [Inicio rápido a las URL y rutas](/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks#Un_primer_acercamiento_a_URL_y_referencias) para refrescar tu memoria sobre URL relativas y absolutas antes de continuar.
 
 Por ejemplo, si tu imagen se llama `dinosaur.jpg`, y está en el mismo directorio que tu página HTML, deberás incrustar la imagen de la siguiente manera:
 
@@ -60,7 +61,8 @@ Si la imagen estaba en el subdirectorio `images`, que estaba en el mismo directo
 
 y así sucesivamente.
 
-> **Nota:** Los motores de búsqueda también leen los nombres de archivo de imagen y esto cuenta para el SEO. Por lo tanto, dale a tu imagen un nombre descriptivo; `dinosaur.jpg` es mejor que `img835.png`.
+> [!NOTE]
+> Los motores de búsqueda también leen los nombres de archivo de imagen y esto cuenta para el SEO. Por lo tanto, dale a tu imagen un nombre descriptivo; `dinosaur.jpg` es mejor que `img835.png`.
 
 Puedes incrustar la imagen usando la URL absoluta, por ejemplo:
 
@@ -70,7 +72,8 @@ Puedes incrustar la imagen usando la URL absoluta, por ejemplo:
 
 Pero esto no tiene sentido, solo hace que el navegador trabaje más buscando la dirección IP desde el servidor DNS cada vez, etc. Casi siempre mantendrás las imágenes para tu sitio web en el mismo servidor de tu HTML.
 
-> **Advertencia:** La mayoría de imágenes tienen derechos de autor. **No** muestres una imagen en tu página web a menos que:
+> [!WARNING]
+> La mayoría de imágenes tienen derechos de autor. **No** muestres una imagen en tu página web a menos que:
 >
 > 1. seas dueño de la imagen,
 > 2. tengas permiso escrito explícito del dueño de la imagen o
@@ -82,9 +85,11 @@ Nuestro código anterior debería darnos el resultado siguiente:
 
 ![A basic image of a dinosaur, embedded in a browser, with Images in HTML written above it](basic-image.png)
 
-> **Nota:** Los elementos como {{htmlelement("img")}} y {{htmlelement("video")}} a veces se denominan **elementos reemplazados**. Esto se debe a que el tamaño y el contenido del elemento se especifican en un recurso externo (como un archivo de imagen o video), no en el contenido del elemento en sí.
+> [!NOTE]
+> Los elementos como {{htmlelement("img")}} y {{htmlelement("video")}} a veces se denominan **elementos reemplazados**. Esto se debe a que el tamaño y el contenido del elemento se especifican en un recurso externo (como un archivo de imagen o video), no en el contenido del elemento en sí.
 
-> **Nota:** Puedes encontrar el ejemplo terminado de esta sección [en Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) (consulta también el [código fuente](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)).
+> [!NOTE]
+> Puedes encontrar el ejemplo terminado de esta sección [en Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) (consulta también el [código fuente](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)).
 
 ### Texto alternativo
 
@@ -118,7 +123,8 @@ La forma más fácil de probar el texto `alt` es escribir mal el nombre de archi
 
 En el fondo, la clave es ofrecer una experiencia usable, incluso cuando las imágenes no puedan verse. Esto asegura que ningún usuario pierda ninguna parte del contenido. Desactiva las imágenes en tu navegador y observa cómo se ven las cosas. Te darás cuenta de lo útil que resulta el texto alternativo cuando no es posible ver la imagen.
 
-> **Nota:** Consulta nuestra guía de [texto alternativo](/es/docs/Learn/Accessibility/HTML#Alternativas_de_texto) para obtener más información.
+> [!NOTE]
+> Consulta nuestra guía de [texto alternativo](/es/docs/Learn/Accessibility/HTML#Alternativas_de_texto) para obtener más información.
 
 ### Anchura y altura
 
@@ -141,7 +147,8 @@ Hacerlo así es bueno porque la página se carga con mayor rapidez y fluidez.
 
 Sin embargo, no deberías alterar el tamaño de tus imágenes utilizando atributos HTML. Las imágenes podrían verse granulosas y borrosas si estableces un tamaño demasiado grande; o bien demasiado pequeñas, y se desperdiciaría ancho de banda descargando una imagen que no se ajusta a las necesidades del usuario. La imagen también podría quedar distorsionada, si no mantienes la [proporción de aspecto](https://es.wikipedia.org/wiki/Relaci%C3%B3n_de_aspecto) correcta. Deberías utilizar un editor de imágenes, para dar a tu imagen el tamaño adecuado, antes de colocarla en tu página web.
 
-> **Nota:** Si tienes que alterar el tamaño de una imagen es mejor usar [CSS](/es/docs/Learn/CSS).
+> [!NOTE]
+> Si tienes que alterar el tamaño de una imagen es mejor usar [CSS](/es/docs/Learn/CSS).
 
 ### Título de imágenes
 
@@ -349,7 +356,8 @@ Una solución mejor es utilizar los elementos HTML5 {{htmlelement("figure")}} y 
 
 El elemento {{htmlelement("figcaption")}} dice al navegador, o a alguna tecnología de apoyo, que el texto que contiene describe la imagen que está contenida en el elemento {{htmlelement("figure")}}.
 
-> **Nota:** Desde el punto de vista de la accesibilidad, los pies de imagen y el texto alternativo [`alt`](/es/docs/Web/HTML/Element/img#alt) cumplen funciones diferentes. Los pies de imagen benefician incluso a quien puede ver la imagen, mientras que el texto [`alt`](/es/docs/Web/HTML/Element/img#alt) proporciona la misma función en una imagen ausente. Por tanto, los subtítulos y el texto `alt` no deberían decir lo mismo, porque ambos aparecen si la imagen no se muestra. Desactiva las imágenes en tu navegador y observa el resultado.
+> [!NOTE]
+> Desde el punto de vista de la accesibilidad, los pies de imagen y el texto alternativo [`alt`](/es/docs/Web/HTML/Element/img#alt) cumplen funciones diferentes. Los pies de imagen benefician incluso a quien puede ver la imagen, mientras que el texto [`alt`](/es/docs/Web/HTML/Element/img#alt) proporciona la misma función en una imagen ausente. Por tanto, los subtítulos y el texto `alt` no deberían decir lo mismo, porque ambos aparecen si la imagen no se muestra. Desactiva las imágenes en tu navegador y observa el resultado.
 
 El elemento _figure_ no ha de contener una imagen necesariamente. Es una unidad de contenido independiente que:
 
@@ -511,7 +519,8 @@ La imagen resultante, podría decirse que es más fácil de posicionar y control
 
 En resumen: si una imagen tiene significado en términos del contenido de tu página, entonces deberías usar una imagen HTML. Si la imagen es puramente decorativa, deberías usar imágenes de fondo CSS.
 
-> **Nota:** Aprenderás mucho más sobre las [imágenes de fondo CSS](/es/docs/Learn/CSS/Building_blocks/Fondos_y_bordes) en nuestro apartado [CSS](/es/docs/Learn/CSS).
+> [!NOTE]
+> Aprenderás mucho más sobre las [imágenes de fondo CSS](/es/docs/Learn/CSS/Building_blocks/Fondos_y_bordes) en nuestro apartado [CSS](/es/docs/Learn/CSS).
 
 Esto es todo por ahora. Hemos expuesto en detalle los conceptos relativos a imágenes y subtítulos de imagen. En el próximo artículo, subiremos un nivel para insertar vídeo y audio en páginas web con HTML.
 

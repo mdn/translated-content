@@ -25,7 +25,7 @@ slug: Web/SVG/Element/rect
 
 - [条件処理属性](/ja/Web/SVG/Attribute#ConditionalProcessing) »
 - [コア属性](/ja/Web/SVG/Attribute#Core) »
-- [グラフィカルイベント属性](/ja/Web/SVG/Attribute#GraphicalEvent) »
+- [グラフィックイベント属性](/ja/Web/SVG/Attribute#GraphicalEvent) »
 - [プレゼンテーション属性](/ja/Web/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
@@ -55,7 +55,7 @@ slug: Web/SVG/Element/rect
 
 ## ブラウザー互換性
 
-{{Compat("svg.elements.rect")}}
+{{Compat}}
 
 ## 関連情報
 

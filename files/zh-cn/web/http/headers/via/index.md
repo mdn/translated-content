@@ -46,7 +46,7 @@ Via: 1.0 fred, 1.1 p.example.net
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("X-Forwarded-For")}}
 - [Heroku 的代理库 Vegur](https://github.com/heroku/vegur)

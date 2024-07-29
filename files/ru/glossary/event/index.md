@@ -3,6 +3,8 @@ title: Событие
 slug: Glossary/Event
 ---
 
+{{GlossarySidebar}}
+
 События - это сгенерированные [DOM](/ru/docs/Glossary/DOM)-элементами свойства, которыми можно манипулировать с помощью Javascript-кода.
 
 ## Подробнее

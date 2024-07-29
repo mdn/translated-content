@@ -340,10 +340,7 @@ aGeneratorObject[Symbol.iterator]() === aGeneratorObject;
 
 ## Especificações
 
-| Especificação                                          | Status               | Comentário         |
-| ------------------------------------------------------ | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-iteration', 'Iteration')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-iteration', 'Iteration')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Veja também
 

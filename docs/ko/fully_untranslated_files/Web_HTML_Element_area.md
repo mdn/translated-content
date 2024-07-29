@@ -68,11 +68,11 @@ slug: Web/HTML/Element/area
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("alt")}}
+- `alt`
 
   - : 이미지를 출력하지 않는 브라우저에서 대신 표시할 대안 텍스트입니다. 텍스트의 내용은 대안 텍스트 없이 이미지만 표시할 때와 동일한 수준의 선택지를 나타낼 수 있어야 합니다. [`href`](/ko/docs/Web/HTML/Element/area#href) 특성이 존재할 경우 필수 사항입니다.
 
-- {{htmlattrdef("coords")}}
+- `coords`
 
   - : 핫스팟 영역을 지정하는 일련의 좌표입니다. 값의 수와 의미는 `shape` 특성의 값에 따라 달라집니다.
 
@@ -82,19 +82,19 @@ slug: Web/HTML/Element/area
 
     값의 단위는 CSS 픽셀입니다.
 
-- {{htmlattrdef("download")}}
+- `download`
 
 특성이 존재할 경우, 이 하이퍼링크는 리소스 다운로드 용도로 사용하는 것을 의도했음을 나타냅니다. {{htmlelement("a")}}의 [`download`](/ko/docs/Web/HTML/Element/a#download) 특성 설명에서 전체 설명을 볼 수 있습니다.</dl>
 
-- {{htmlattrdef("href")}}
+- `href`
   - : `<area>` 하이퍼링크의 대상입니다. 유효한 URL이야 합니다. 생략할 경우, 이 `<area>` 요소는 하이퍼링크를 나타내지 않습니다.
-- {{htmlattrdef("hreflang")}}
+- `hreflang`
   - : 연결한 리소스의 언어를 나타냅니다. 가능한 값은 [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt)에 따릅니다. [`href`](/ko/docs/Web/HTML/Element/area#href) 특성이 존재할 때만 사용하세요.
-- {{htmlattrdef("ping")}}
+- `ping`
 
   - : 하이퍼링크를 따라갈 때, 백그라운드에서 브라우저가 {{HTTPMethod("POST")}} 요청을 본문 `PING`으로 전송할 URL의 목록입니다. 공백으로 구분하며 주로 추적용으로 사용합니다.
 
-- {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}
+- `referrerpolicy` {{experimental_inline}}
 
   - : A string indicating which referrer to use when fetching the resource:
 
@@ -104,13 +104,13 @@ slug: Web/HTML/Element/area
     - "origin-when-cross-origin" meaning that navigations to other origins will be limited to the scheme, the host and the port, while navigations on the same origin will include the referrer's path.
     - `"unsafe-url"` meaning that the referrer will include the origin and the path (but not the fragment, password, or username). This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.
 
-- {{htmlattrdef("rel")}}
+- `rel`
   - : For anchors containing the **href** attribute, this attribute specifies the relationship of the target object to the link object. The value is a comma-separated list of [link types values](/ko/docs/Web/HTML/Link_types). The values and their semantics will be registered by some authority that might have meaning to the document author. The default relationship, if no other is given, is void. Use this attribute only if the **href** attribute is present.
-- {{htmlattrdef("shape")}}
+- `shape`
 
   - : 관련된 핫 스폿의 모양. The specifications for HTML 5 and HTML 4 define the values `rect`, which defines a rectangular region; `circle`, which defines a circular region; `poly`, which defines a polygon; and `default`, which indicates the entire region beyond any defined shapes. Many browsers, notably Internet Explorer 4 and higher, support `circ`, `polygon`, and `rectangle` as valid values for **shape**; these values are {{Non-standard_inline}}.
 
-- {{htmlattrdef("target")}}
+- `target`
 
   - : 이 속성은 링크된 리소스가 어디에 표시될지 지정합니다. HTML4에서 이것은 프레임의 이름이나 키워드가 될수 있습니다. HTML5에서는, 브라우징 컨텍스트(탭,윈도우,인라인 프레임)의 이름이나 키워드가 될수 있습니다. 다음 키워드들은 특별한 의미를 가지고 있습니다.
 
@@ -123,21 +123,21 @@ slug: Web/HTML/Element/area
 
 ### Deprecated attributes
 
-- {{htmlattrdef("name")}} {{deprecated_inline}}
+- `name` {{deprecated_inline}}
 
 Define a names for the clickable area so that it can be scripted by older browsers.
 
-- {{htmlattrdef("nohref")}} {{deprecated_inline}}
+- `nohref` {{deprecated_inline}}
 
 Indicates that no hyperlink exists for the associated area.
 
 > **Note:** Since HTML5, omitting the `href` attribute is sufficient.
 
-- {{htmlattrdef("tabindex")}} {{deprecated_inline}}
+- `tabindex` {{deprecated_inline}}
 
 A numeric value specifying the position of the defined area in the browser tabbing order. This attribute is global in HTML5.
 
-- {{htmlattrdef("type")}} {{deprecated_inline}}
+- `type` {{deprecated_inline}}
 
 No effect. Browsers ignore it. (The W3C 5.3 fork of the HTML specification defines it as valid, but [the canonical HTML specification](https://html.spec.whatwg.org/multipage/#the-area-element) doesn't, and it has no effect in any user agents.)
 

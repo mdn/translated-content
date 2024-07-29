@@ -3,7 +3,9 @@ title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers("window_and_worker_except_service")}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 `XMLHttpRequest` это API, который предоставляет клиенту функциональность для обмена данными между клиентом и сервером. Данный API предоставляет простой способ получения данных по ссылке без перезагрузки страницы. Это позволяет обновлять только часть веб-страницы не прерывая пользователя. `XMLHttpRequest используется в AJAX запросах и особенно в single-page приложениях.`
 
@@ -15,7 +17,7 @@ XMLHttpRequest изначально был разработан Microsoft и п�
 var myRequest = new XMLHttpRequest();
 ```
 
-более детальное описание создание объекта, можно увидеть в разделе [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest).
+более детальное описание создание объекта, можно увидеть в разделе [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
 
 ## Список методов объекта
 
@@ -716,7 +718,7 @@ When using System XHR via the `mozSystem` property, for example for Firefox OS a
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - MDN articles about XMLHttpRequest:
 

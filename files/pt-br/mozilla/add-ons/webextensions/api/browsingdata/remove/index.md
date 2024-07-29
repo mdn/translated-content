@@ -3,7 +3,7 @@ title: browsingData.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Remove o dado de navegação especificado.
 

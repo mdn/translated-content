@@ -3,7 +3,7 @@ title: Extension pages
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Vous pouvez inclure des pages HTML dans votre extension sous la forme de formulaires, d'aide ou tout autre contenu dont votre extension a besoin.
 

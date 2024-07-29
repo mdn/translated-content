@@ -34,8 +34,6 @@ if (tOLeft > 5) {
 }
 ```
 
-### Exemple
-
 Comme noté plus haut, cet exemple montre une «&nbsp;longue&nbsp;» phrase qui déborde dans un div avec une bordure bleue, et une boîte rouge dont on pourrait croire qu'elle décrit les limites du span.
 
 ![](offsetleft.jpg)

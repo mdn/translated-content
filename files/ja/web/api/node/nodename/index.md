@@ -40,8 +40,7 @@ l10n:
 こちらは HTML です。
 <div id="d1">Hello world</div>
 <!-- コメントの例 -->
-テキスト<span>テキスト</span>
-テキスト<br/>
+テキスト<span>テキスト</span> テキスト<br />
 <svg height="20" width="20">
   <circle cx="10" cy="10" r="5" stroke="black" stroke-width="1" fill="red" />
 </svg>

@@ -14,9 +14,9 @@ l10n:
 {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を使うか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener('inputreport', (event) => { });
+addEventListener("inputreport", (event) => {});
 
-oninputreport = (event) => { };
+oninputreport = (event) => {};
 ```
 
 ## イベント型

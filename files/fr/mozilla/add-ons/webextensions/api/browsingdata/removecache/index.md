@@ -3,7 +3,7 @@ title: browsingData.removeCache()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Effacer le cache du navigateur.
 
@@ -50,7 +50,7 @@ browser.browsingData.removeCache({}).then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
 >

@@ -67,7 +67,7 @@ var int16 = new Int16Array(iterable);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Int16Array.Int16Array")}}
+{{Compat}}
 
 ### 互換性メモ
 

@@ -23,22 +23,22 @@ For further examples, see [The native form widgets: Drop-down content](/ko/docs/
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("autocomplete")}}
+- `autocomplete`
   - : {{glossary("user agent", "사용자 에이전트")}}의 자동완성 기능을 지원하는 {{domxref("DOMString")}}. 가능한 값의 전체 목록과, 자동완성의 상세 사용법은 [HTML `autocomplete` 특성](/ko/docs/Web/HTML/Attributes/autocomplete) 문서를 참고하세요.
-- {{htmlattrdef("autofocus")}}
+- `autofocus`
   - : 지정한 경우, 페이지를 불러왔을 때 자동으로 포커스를 부여합니다. 문서 내에서 하나의 양식 요소만 `autofocus` 특성을 가질 수 있습니다.
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : 지정한 경우, 사용자와 `<select>` 요소의 모든 상호작용을 막습니다. 지정하지 않은 경우에도 {{htmlelement("fieldset")}} 등 부모 요소의 `disabled` 특성을 상속하므로 비활성 상태가 될 수 있습니다.
-- {{htmlattrdef("form")}}
+- `form`
   - : `<select>`와 연결할 {{HTMLElement("form")}} 요소("양식 소유자"). 같은 문서에 존재하는 `<form>` 요소의 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성 값을 사용해야 합니다. `form` 특성을 지정하지 않았으나 조상 중 `<form>` 요소가 존재하면 해당 `<form>`과 연결됩니다.
   - : `form` 특성을 사용하면 `<select>`를 `<form>` 요소에 넣지 않고도 연결할 수 있고, 조상 중 `<form>`이 있더라도 소유자를 재정의할 수 있습니다.
-- {{htmlattrdef("multiple")}}
+- `multiple`
   - : 지정한 경우, 메뉴에서 다수의 옵션을 선택할 수 있습니다. 지정하지 않은 경우 하나만 선택 가능합니다. 대부분의 브라우저는 `multiple` 특성이 존재하면 드롭다운 메뉴 대신 스크롤 가능한 목록 상자를 보여줍니다.
-- {{htmlattrdef("name")}}
+- `name`
   - : 컨트롤의 이름.
-- {{htmlattrdef("required")}}
+- `required`
   - : 옵션 중 값으로 비어있지 않은 문자열을 값으로 하는 항목을 반드시 선택해야 함을 나타냅니다.
-- {{htmlattrdef("size")}}
+- `size`
   - : `<select>`를 (`multiple` 특성 사용 등의 이유로) 스크롤 가능한 목록 상자로 표현할 때 지정한 경우, 목록에서 한 번에 볼 수 있는 옵션 줄 수를 나타냅니다. 브라우저가 `<select>` 요소를 반드시 스크롤 가능한 목록 상자로 표현해야 하는 것은 아닙니다. 기본값은 0입니다.
 
 > **참고:** HTML5 명세에 따르면 `size`의 기본값은 1이어야 합니다. 그러나 실제로 기본값을 1로 적용하면 일부 웹 사이트가 망가지는 것으로 밝혀졌으며 어떠한 브라우저도 기본값으로 1을 사용하지 않습니다. Mozilla도 당분간 Firefox의 기본값을 0으로 유지하기로 결정했습니다.

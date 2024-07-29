@@ -1,23 +1,29 @@
 ---
 title: 409 Conflict
 slug: Web/HTTP/Status/409
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`409 Conflict`** 表示請求與伺服器目前狀態衝突
+HTTP **`409 Conflict`** 回應狀態碼表示請求與目標資源的當前狀態存在衝突。
 
-衝突通常發生於 {{HTTPMethod("PUT")}} 請求。如上傳一個已經有舊版本存在於伺服器的檔案而導致版本控制衝突時，會回復一個 409 錯誤。
+衝突最有可能發生在對 {{HTTPMethod("PUT")}} 請求的回應中。例如在上傳比伺服器上現有檔案更舊的檔案時，可能會收到 409 回應，導致版本控制衝突。
 
 ## 狀態
 
-```plain
+```http
 409 Conflict
 ```
 
 ## 規範
 
 {{Specifications}}
+
+## 瀏覽器相容性
+
+{{Compat}}
 
 ## 參見
 

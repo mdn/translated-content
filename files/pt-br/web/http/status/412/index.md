@@ -23,7 +23,7 @@ O código de resposta de erro de cliente HTTP **`412 Precondition Failed`** indi
 
 A informação abaixo foi retirada do GitHub da MDN (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.412")}}
+{{Compat}}
 
 ## Veja também
 

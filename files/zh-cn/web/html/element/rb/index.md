@@ -92,7 +92,8 @@ body {
 
 {{EmbedLiveSample("不支持 ruby", "100%", 60)}}
 
-> **备注：** 有关更多示例，请参阅有关{{HTMLElement("ruby")}}元素的文章。
+> [!NOTE]
+> 有关更多示例，请参阅有关{{HTMLElement("ruby")}}元素的文章。
 
 ## 规范
 
@@ -102,7 +103,7 @@ body {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{HTMLElement("ruby")}}
 - {{HTMLElement("rt")}}

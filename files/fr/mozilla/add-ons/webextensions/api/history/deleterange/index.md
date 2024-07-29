@@ -3,7 +3,7 @@ title: history.deleteRange()
 slug: Mozilla/Add-ons/WebExtensions/API/history/deleteRange
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Supprime toutes les visites aux pages que l'utilisateur a effectuées pendant la période donnée. Si cela supprime toutes les visites effectuées sur une page donnée, alors la page n'apparaîtra plus dans l'historique du navigateur et {{WebExtAPIRef("history.onVisitRemoved")}} se déclenchera pour cela.
 

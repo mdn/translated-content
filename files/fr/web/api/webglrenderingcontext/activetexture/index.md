@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext/activeTexture
 
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.activeTexture()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) indique quelle unité de texture doit être rendue active.
+La méthode **`WebGLRenderingContext.activeTexture()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) indique quelle unité de texture doit être rendue active.
 
 ## Syntaxe
 

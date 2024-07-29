@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/Match_patterns
 
 {{AddonSidebar}}
 
-Шаблоны совпадения - являются способом обозначения необходимых групп URL. Они используются в нескольких местах в WebExtensions API, главным образом для объявления какие веб-страницы должны загружать [встраиваемые скрипты](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) и по каким URL необходимо ожидать событий из [`webRequest`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) API.
+Шаблоны совпадения - являются способом обозначения необходимых групп URL. Они используются в нескольких местах в WebExtension API, главным образом для объявления какие веб-страницы должны загружать [встраиваемые скрипты](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) и по каким URL необходимо ожидать событий из [`webRequest`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) API.
 
 API, которое использует шаблоны совпадения, обычно принимает их списками, и выполняет соответствующие действия, если URL имеет совпадение с одним из шаблонов. Например, взгляните на [`content_scripts`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) ключ в manifest.json.
 
@@ -88,8 +88,6 @@ _Хост_ не обязателен, если _схема_ задана, как
 | `*://*`                   | Пустой путь: должно быть переписано, как "`*://*/*`".                  |
 | `file://*`                | Пустой путь: должно быть переписано, как "`file:///*`".                |
 
-## Browser compatibility
-
-### scheme
+## Совместимость с браузерами
 
 {{Compat}}

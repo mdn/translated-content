@@ -3,7 +3,7 @@ title: 子组合器
 slug: Web/CSS/Child_combinator
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 **子组合器**（`>`）被放在两个 CSS 选择器之间。它只匹配那些被第二个选择器匹配的元素，这些元素是被第一个选择器匹配的元素的直接子元素。
 

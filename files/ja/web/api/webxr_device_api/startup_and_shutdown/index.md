@@ -33,7 +33,7 @@ WebXR 仕様を設計しているチームは、WebXR API をサポートして�
 
 #### WebXR API エミュレーター拡張機能
 
-[Mozilla WebXR チーム](https://mixedreality.mozilla.org/)は、WebXR API をエミュレートし、HTC Vive、Oculus Go、Oculus Quest、Samsung Gear、Google Cardboard などの互換性のあるさまざまなデバイスをシミュレートする、Firefox と Chrome の両方と互換性のある [WebXR API Emulator](https://blog.mozvr.com/webxr-emulator-extension/) ブラウザー拡張機能を作成しました。 拡張機能を配置すると、ヘッドセットと任意のハンドコントローラーの位置と向き、およびコントローラーのボタンを制御できる開発者ツールパネルを開くことができます。
+Mozilla WebXR チームは、WebXR API をエミュレートし、HTC Vive、Oculus Go、Oculus Quest、Samsung Gear、Google Cardboard などの互換性のあるさまざまなデバイスをシミュレートする、Firefox と Chrome の両方と互換性のある [WebXR API Emulator](https://blog.mozvr.com/webxr-emulator-extension/) ブラウザー拡張機能を作成しました。 拡張機能を配置すると、ヘッドセットと任意のハンドコントローラーの位置と向き、およびコントローラーのボタンを制御できる開発者ツールパネルを開くことができます。
 
 ##### エミュレーターの使用
 
@@ -76,7 +76,7 @@ let webxrPolyfill = null;
 function getXR(usePolyfill) {
   let tempXR;
 
-  switch(usePolyfill) {
+  switch (usePolyfill) {
     case "if-needed":
       tempXR = navigator.xr;
       if (!tempXR) {
@@ -97,7 +97,7 @@ function getXR(usePolyfill) {
   return tempXR;
 }
 
-const xr = getXR("no");  // ネイティブの XRSystem オブジェクトを取得
+const xr = getXR("no"); // ネイティブの XRSystem オブジェクトを取得
 const xr = getXR("yes"); // 常にポリフィルから XRSystem を返す
 const xr = getXR("if-needed"); // navigator.xr がない場合にのみポリフィルを使用
 ```
@@ -155,7 +155,7 @@ async function createImmersiveSession(xr) {
   try {
     session = await xr.requestSession("immersive-vr");
     return session;
-  } catch(error) {
+  } catch (error) {
     throw error;
   }
 }
@@ -173,10 +173,10 @@ async function createImmersiveSession(xr) {
 async function createImmersiveSession(xr) {
   try {
     session = await xr.requestSession("immersive-vr", {
-      requiredFeatures: [ "unbounded" ]
+      requiredFeatures: ["unbounded"],
     });
     return session;
-  } catch(error) {
+  } catch (error) {
     throw error;
   }
 }
@@ -188,10 +188,10 @@ async function createImmersiveSession(xr) {
 async function createInlineSession(xr) {
   try {
     session = await xr.requestSession("inline", {
-      optionalFeatures: [ "local" ]
+      optionalFeatures: ["local"],
     });
     return session;
-  } catch(error) {
+  } catch (error) {
     throw error;
   }
 }
@@ -235,15 +235,20 @@ async function runSession(session) {
   // WebGL の構成を完了する
 
   worldData.session.updateRenderState({
-    baseLayer: new XRWebGLLayer(worldData.session, gl)
+    baseLayer: new XRWebGLLayer(worldData.session, gl),
   });
 
   // シーンのレンダリングを開始します
 
   referenceSpace = await worldData.session.requestReferenceSpace("unbounded");
   worldData.referenceSpace = referenceSpace.getOffsetReferenceSpace(
-        new XRRigidTransform(worldData.playerSpawnPosition, worldData.playerSpawnOrientation));
-  worldData.animationFrameRequestID = worldData.session.requestAnimationFrame(onDrawFrame);
+    new XRRigidTransform(
+      worldData.playerSpawnPosition,
+      worldData.playerSpawnOrientation,
+    ),
+  );
+  worldData.animationFrameRequestID =
+    worldData.session.requestAnimationFrame(onDrawFrame);
 
   return worldData;
 }
@@ -259,7 +264,8 @@ async function runSession(session) {
 
 この時点で、`XRSession` 自体が完全に構成されているため、レンダリングを開始できます。 まず、その世界の座標が記述される参照空間が必要です。 `XRSession` の {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}} メソッドを呼び出すことにより、セッションの初期参照空間を取得できます。 `requestReferenceSpace()` を呼び出すときに、必要な参照空間のタイプの名前を指定します。 この場合、`unbounded` です。 ニーズに応じて、`local` または `viewer` を簡単に指定できます。
 
-> **メモ:** ニーズに合った適切な参照空間を選択する方法を理解するには、[WebXR の幾何学と参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)の[参照空間タイプの選択](/ja/docs/Web/API/WebXR_Device_API/Geometry#Selecting_the_reference_space_type)を参照してください。
+> [!NOTE]
+> ニーズに合った適切な参照空間を選択する方法を理解するには、[WebXR の幾何学と参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)の[参照空間タイプの選択](/ja/docs/Web/API/WebXR_Device_API/Geometry#Selecting_the_reference_space_type)を参照してください。
 
 `requestReferenceSpace()` によって返される参照空間は、原点 (0, 0, 0) を空間の中心に配置します。 これは素晴らしいことです — プレイヤーの視点が世界の正確な中心から始まる場合は。 しかし、ほとんどの場合、そうではありません。 その場合は、最初の参照空間で {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} を呼び出して、(0, 0, 0) がビューアーの位置に配置されるように[座標系をオフセット](/ja/docs/Web/API/WebXR_Device_API/Geometry#Establishing_the_reference_space)し、同様に顔を望ましい方向にシフトする*新しい*参照空間を作成します。 `getOffsetReferenceSpace()` への入力値は、デフォルトの世界座標で指定されたプレーヤーの位置と方向をカプセル化する {{domxref("XRRigidTransform")}} です。
 
@@ -283,7 +289,7 @@ WebXR セッションの過程で、セッションの状態の変化を示す�
 
 ```js
 session.onvisibilitychange = (event) => {
-  switch(event.session.visibilityState) {
+  switch (event.session.visibilityState) {
     case "hidden":
       myFrameRate = 10;
       break;

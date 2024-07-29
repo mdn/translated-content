@@ -23,13 +23,14 @@ slug: Web/HTML/Element/fieldset
 
   - : 元素分组的名称
 
-    > **备注：** fieldset 的标题由第一个 {{HTMLElement("legend")}} 子元素确定。
+    > [!NOTE]
+    > fieldset 的标题由第一个 {{HTMLElement("legend")}} 子元素确定。
 
 ## 使用 CSS 样式
 
 `<fieldset>` 有几种特别的样式方案。
 
-它的 {{cssxref("display")}} 值默认为 `block`，因此建立了一个[块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)。如果将 `<fieldset>` 的 `display` 值设置为行内级别，则会表现为 `inline-block`，否则会表现为 `block`。默认情况下 `<fieldset>` 会有 `2px` `groove` 的边界围绕着内容，还有一个默认的小的内边距，还有 {{cssxref("min-inline-size", "min-inline-size: min-content")}} 。
+它的 {{cssxref("display")}} 值默认为 `block`，因此建立了一个[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)。如果将 `<fieldset>` 的 `display` 值设置为行内级别，则会表现为 `inline-block`，否则会表现为 `block`。默认情况下 `<fieldset>` 会有 `2px` `groove` 的边界围绕着内容，还有一个默认的小的内边距，还有 {{cssxref("min-inline-size", "min-inline-size: min-content")}} 。
 
 如果其中有 {{htmlelement("legend")}} 元素，会放在块级框起始处的边界上。`<legend>` 的宽度会根据内容尽量收缩（shrink-wrap），同时也建立了一个格式化上下文。`display` 值会块级化（例如 `display: inline` 表现为 `block`）。
 
@@ -37,7 +38,8 @@ slug: Web/HTML/Element/fieldset
 
 你可以以任意方式自行设置 `<fieldset>` 和 `<legend>` 的样式以配合你的页面设计。
 
-> **备注：** 截至这篇文章发出为止，Microsoft Edge 和 Google Chrome 不能在 {{HTMLElement("fieldset")}} 中使用 [flexbox](/zh-CN/docs/Glossary/Flexbox) 和 [grid](/zh-CN/docs/Web/CSS/CSS_grid_layout) 布局。[这个 GitHub issue](https://github.com/w3c/csswg-drafts/issues/321) 跟踪了这个 bug。
+> [!NOTE]
+> 截至这篇文章发出为止，Microsoft Edge 和 Google Chrome 不能在 {{HTMLElement("fieldset")}} 中使用 [flexbox](/zh-CN/docs/Glossary/Flexbox) 和 [grid](/zh-CN/docs/Web/CSS/CSS_grid_layout) 布局。[这个 GitHub issue](https://github.com/w3c/csswg-drafts/issues/321) 跟踪了这个 bug。
 
 ## 示例
 
@@ -93,7 +95,7 @@ slug: Web/HTML/Element/fieldset
   </tr>
   <tr>
    <th scope="row">标签省略</th>
-   <td>{{no_tag_omission}}</td>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>

@@ -53,7 +53,7 @@ myPeerConnection.createOffer().then(myPeerConnection.setLocalDescription);
 이전 버전의 문서에서는 콜백 기반의 함수를 찾을 수 있습니다. 콜백 함수는 지원이 중단되었고, 추후에 삭제 될 예정이기 때문에 **사용하지 않도록 강력히 권장**하고 있습니다. 이미 콜백 함수를 사용 중이라면, {{jsxref("Promise")}} 기반인 `setLocalDescription()`를 대신 사용하도록 업데이트 해야합니다. 기존 코드 업데이트에 도움을 주기 위해, 아래에서는 이전 버전의 `setLocalDescription()`에 대한 매개 변수를 설명합니다.
 
 - `successCallback` {{deprecated_inline}}
-  - : 설명 값이 성공적으로 설정되면 입력 매개 변수 없이 호출되는 자바스크립트 {{jsxref("Function")}}입니다. 여기서, offer가 시그널링 서버를 통해서 원격 유저에게 전송 될 수 있습니다.
+  - : 설명 값이 성공적으로 설정되면 입력 매개 변수 없이 호출되는 JavaScript {{jsxref("Function")}}입니다. 여기서, offer가 시그널링 서버를 통해서 원격 유저에게 전송 될 수 있습니다.
 - `errorCallback` {{deprecated_inline}}
   - : 설명 값이 설정이 불가능할 때에 호출되어 `RTCPeerConnectionErrorCallback` 서명을 확인하는 함수입니다. 여기에는 요청이 왜 실패했는지를 설명하는 {{domxref("DOMException")}} 객체를 전달합니다.
 

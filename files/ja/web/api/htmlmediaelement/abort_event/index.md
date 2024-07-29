@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('abort', (event) => {});
+addEventListener("abort", (event) => {});
 
-onabort = (event) => { };
+onabort = (event) => {};
 ```
 
 ## イベント型
@@ -28,16 +28,16 @@ onabort = (event) => { };
 ## 例
 
 ```js
-const video = document.querySelector('video');
-const videoSrc = 'https://example.org/path/to/video.webm';
+const video = document.querySelector("video");
+const videoSrc = "https://example.org/path/to/video.webm";
 
-video.addEventListener('abort', () => {
+video.addEventListener("abort", () => {
   console.log(`Abort loading: ${videoSrc}`);
 });
 
-const source = document.createElement('source');
-source.setAttribute('src', videoSrc);
-source.setAttribute('type', 'video/webm');
+const source = document.createElement("source");
+source.setAttribute("src", videoSrc);
+source.setAttribute("type", "video/webm");
 
 video.appendChild(source);
 ```

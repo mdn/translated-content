@@ -35,7 +35,7 @@ uint16.buffer; // ArrayBuffer { byteLength: 8 }
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("TypedArray")}}

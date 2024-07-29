@@ -78,7 +78,8 @@ bigN * -1n
 
 `/` 操作符对于整数的运算也没问题。可是因为这些变量是 `BigInt` 而不是 `BigDecimal` ，该操作符结果会向零取整，也就是说不会返回小数部分。
 
-> **警告：** 当使用 `BigInt` 时，带小数的运算会被取整。
+> [!WARNING]
+> 当使用 `BigInt` 时，带小数的运算会被取整。
 
 ```js
 const expected = 4n / 2n;
@@ -251,16 +252,14 @@ nthPrime(20n);
 // ↪ 73n
 ```
 
-## 标准
+## 规范
 
-| 标准                                                          | 状态      |
-| ------------------------------------------------------------- | --------- |
-| [BigInt](https://tc39.es/proposal-bigint/#sec-bigint-objects) | 第 4 阶段 |
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{JSxRef("Number")}}

@@ -14,7 +14,8 @@ slug: Mozilla/Firefox/Experimental_features
 
 実験的な機能は、 [Firefox 設定エディター](https://support.mozilla.org/ja/kb/about-config-editor-firefox) (Firefox のアドレスバーに `about:config` と入力) を使って、以下に示す関連する*設定*を変更することで、有効または無効にすることができます。
 
-> **メモ:** 編集者の方へ - これらの表に機能を追加する際には、リンク `[Firefox バグ <number>](https://bugzil.la/<number>)` を使って関連するバグへのリンクを含めるようにしてください。
+> [!NOTE]
+> 編集者の方へ - これらの表に機能を追加する際には、リンク `[Firefox バグ <number>](https://bugzil.la/<number>)` を使って関連するバグへのリンクを含めるようにしてください。
 
 ## HTML
 
@@ -345,7 +346,7 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 
 ### グリッド: メイソンリーレイアウト
 
-グリッドレイアウトをベースにした[メイソンスタイルレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout)を追加しました。メイソンリーレイアウトスタイルレイアウトは、一方の軸がメイソンリーレイアウトスタイル、もう一方の軸が通常のグリッドレイアウトです。これにより、開発者は Pinterest のようなギャラリースタイルのレイアウトを簡単に作成できるようになります。詳しくは [Firefox バグ 1607954](https://bugzil.la/1607954) を参照してください。
+グリッドレイアウトをベースにした[メイソンスタイルレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)を追加しました。メイソンリーレイアウトスタイルレイアウトは、一方の軸がメイソンリーレイアウトスタイル、もう一方の軸が通常のグリッドレイアウトです。これにより、開発者は Pinterest のようなギャラリースタイルのレイアウトを簡単に作成できるようになります。詳しくは [Firefox バグ 1607954](https://bugzil.la/1607954) を参照してください。
 
 <table>
   <thead>
@@ -731,7 +732,7 @@ jsxref("Array.prototype.groupBy()")}} と {{jsxref("Array.prototype.groupByToMap
 
 非同期の SourceBuffer の追加と削除
 
-これにより、メディアソースバッファを追加および削除するためのプロミスベースのメソッド {{domxref("SourceBuffer.appendBufferAsync", "appendBufferAsync()")}} および {{domxref("SourceBuffer.removeAsync", "removeAsync()")}} が {{domxref("SourceBuffer")}} インターフェイスに追加されます。詳細については、 [Firefox バグ 1280613](https://bugzil.la/1280613) および [Firefox バグ 778617](https://bugzil.la/778617) を参照してください。
+これにより、メディアソースバッファーを追加および削除するためのプロミスベースのメソッド {{domxref("SourceBuffer.appendBufferAsync", "appendBufferAsync()")}} および {{domxref("SourceBuffer.removeAsync", "removeAsync()")}} が {{domxref("SourceBuffer")}} インターフェイスに追加されます。詳細については、 [Firefox バグ 1280613](https://bugzil.la/1280613) および [Firefox バグ 778617](https://bugzil.la/778617) を参照してください。
 
 <table>
   <thead>
@@ -1226,7 +1227,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 #### Document の autoplayPolicy プロパティ
 
-{{domxref("document")}} の {{domxref("Document.autoplayPolicy", "autoplayPolicy")}} プロパティは、 (メディア要素の {{domxref("HTMLMediaElement.autoplay", "autoplay")}} プロパティを使用するか、または JavaScript コードから再生を開始させようとする) メディアの自動再生のリクエストをブラウザーがどのように処理するかを示す文字列を返します。この API の仕様はまだ作成中です。この値は、ユーザーが何をしているか、ユーザーの好み、およびブラウザ全体の状態に応じて、時間とともに変化します。想定される値としては、 `allowed` (自動再生は現在許可されている)、 `allowed-muted` (自動再生は許可されているが、音声がないかミュートされている場合のみ)、`disallowed` (自動再生は現在許可されていない) などがあります。詳細は、 [Firefox バグ 1506289](https://bugzil.la/1506289) を参照してください。
+{{domxref("document")}} の {{domxref("Document.autoplayPolicy", "autoplayPolicy")}} プロパティは、 (メディア要素の {{domxref("HTMLMediaElement.autoplay", "autoplay")}} プロパティを使用するか、または JavaScript コードから再生を開始させようとする) メディアの自動再生のリクエストをブラウザーがどのように処理するかを示す文字列を返します。この API の仕様はまだ作成中です。この値は、ユーザーが何をしているか、ユーザーの好み、およびブラウザー全体の状態に応じて、時間とともに変化します。想定される値としては、 `allowed` (自動再生は現在許可されている)、 `allowed-muted` (自動再生は許可されているが、音声がないかミュートされている場合のみ)、`disallowed` (自動再生は現在許可されていない) などがあります。詳細は、 [Firefox バグ 1506289](https://bugzil.la/1506289) を参照してください。
 
 <table>
   <thead>
@@ -1705,7 +1706,8 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 [`Clear-Site-Data`](/ja/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP レスポンスヘッダーの `cache` ディレクティブは、リクエストしているウェブサイトのブラウザーキャッシュをクリアします。
 
-> **メモ:** これは元々既定で有効でしたが、バージョン 9 4で優先順位が付けられました ([Firefox バグ 1729291](https://bugzil.la/1729291))。
+> [!NOTE]
+> これは元々既定で有効でしたが、バージョン 9 4で優先順位が付けられました ([Firefox バグ 1729291](https://bugzil.la/1729291))。
 
 <table>
   <thead>

@@ -112,7 +112,7 @@ Uma vez que o CSS tenha sido especificado, então se torna útil para nós, em t
 
 A seguir, é apresentado o gráfico de dados compat para propriedade CSS [`font-family`](/pt-BR/docs/Web/CSS/font-family).
 
-{{Compat("css.properties.font-family")}}
+{{Compat}}
 
 ## A seguir
 

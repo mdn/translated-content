@@ -35,7 +35,8 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 
 ## React 教學
 
-> **備註：** 最近一次測試成功的 React 教學在 2020 年五月。版本為 React/ReactDOM 16.13.1 與 create-react-app 3.4.1。
+> [!NOTE]
+> 最近一次測試成功的 React 教學在 2020 年五月。版本為 React/ReactDOM 16.13.1 與 create-react-app 3.4.1。
 >
 > 如果想看看最新的程式，可以從我們的 [todo-react repository](https://github.com/mdn/todo-react) 或互動性的 <https://mdn.github.io/todo-react-build/> 看。
 
@@ -56,7 +57,8 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 
 ## Ember 教學
 
-> **備註：** 最近一次測試成功的 Ember 教學在 2020 年五月。版本為 Ember/Ember CLI 3.18.0。
+> [!NOTE]
+> 最近一次測試成功的 Ember 教學在 2020 年五月。版本為 Ember/Ember CLI 3.18.0。
 >
 > 如果想看看最新的程式，可以從我們的 [ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc) 或互動性的 <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> 看。注意：部分功能沒有放在教學裡面。
 
@@ -75,7 +77,8 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 
 ## Vue 教學
 
-> **備註：** 最近一次測試成功的 Vue 教學在 2020 年五月。版本為 Vue 2.6.11。
+> [!NOTE]
+> 最近一次測試成功的 Vue 教學在 2020 年五月。版本為 Vue 2.6.11。
 >
 > 如果想看看最新的程式，可以從我們的 [todo-vue repository](https://github.com/mdn/todo-vue) 或互動性的 <https://mdn.github.io/todo-vue/dist/> 看。
 
@@ -100,7 +103,8 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 
 ## Svelte 教學
 
-> **備註：** Svelte tutorials last tested in August 2020, with Svelte 3.24.1.
+> [!NOTE]
+> Svelte tutorials last tested in August 2020, with Svelte 3.24.1.
 >
 > If you need to check your code against our version, you can find a finished version of the sample Svelte app code as it should be after each article, in our [mdn-svelte-tutorial](https://github.com/opensas/mdn-svelte-tutorial) repo. For a running live version, see our Svelte REPL at <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>.
 
@@ -123,18 +127,19 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 
 ## Angular 教學
 
-> **備註：** Angular 教學的最後測試時間為 2021 年四月，使用 Angular CLI（NG）11.2.5。
+> [!NOTE]
+> Angular 教學的最後測試時間為 2021 年四月，使用 Angular CLI（NG）11.2.5。
 >
-> 如果您需要根據我們的版本檢查程式碼，可以在 [angular-to-do-example](https://github.com/kapunahelewong/angular-to-do-example/tree/main/src) 上找到範例程式碼的最終版本。
+> 如果你需要根據我們的版本檢查程式碼，可以在 [angular-to-do-example](https://github.com/kapunahelewong/angular-to-do-example/tree/main/src) 上找到範例程式碼的最終版本。
 
 - [1. Angular 新手入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
   - : 在本文中，我們將會探索 Angular 所提供的功能、安裝必備工具、建立範例應用程式，並進一步瞭解 Angular 的基本架構。
 - [2. 開始開發我們的 Angular 待辦事項應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - : 此刻，我們已準備好使用 Angular 來創建我們的待辦事項應用程式。完成後的應用程式將具有顯示待辦項目列表，並包含編輯、刪除與新增項目等功能。在本篇中，您將學到應用程式的結構，以及建立一個可顯示待辦項目的基礎列表。
+  - : 此刻，我們已準備好使用 Angular 來創建我們的待辦事項應用程式。完成後的應用程式將具有顯示待辦項目列表，並包含編輯、刪除與新增項目等功能。在本篇中，你將學到應用程式的結構，以及建立一個可顯示待辦項目的基礎列表。
 - [3. 使用樣式點綴我們的 Angular 應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
   - : 現在，我們已經建立了基本的應用程式結構，並加入了內容，接著我們就要來對應用程式進行樣式的調整，透過本篇文章來學習如何使用樣式點綴我們的 Angular 應用程式。
 - [4. 建立一個項目元件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - : 元件為您提供了一種組織應用程式的方式。本篇文章將引導您建立一個元件，來處理待辦列表中的各個待辦項目，並增加標示完成、編輯以及刪除的功能。在本篇也將介紹 Angular 事件模型
+  - : 元件為你提供了一種組織應用程式的方式。本篇文章將引導你建立一個元件，來處理待辦列表中的各個待辦項目，並增加標示完成、編輯以及刪除的功能。在本篇也將介紹 Angular 事件模型
 - [5. 過濾待辦事項](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
   - : 現在，讓我們繼續增加功能，以允許用戶過濾待辦項目，以便他們可以查看進行中、已完成或所有待辦項目。
 - [6. 構建 Angular 應用程序和更多資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
@@ -151,4 +156,4 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 
 先講一下：我們選什麼框架**並不是**因為他們最棒，而是因為我們認同他們：這些框架在較吻合以上的考量要點。
 
-我們以本來希望在一開始包含更多框架，但最後決定先發布，之後再追加其它教學，而非延後。如果屬意的框架沒放進去、而你也想幫忙的話，來和我們聊聊吧！透過 [Matrix](https://wiki.mozilla.org/Matrix)、[Discourse](https://discourse.mozilla.org/c/mdn)、或 [mdn-admins list](mailto:mdn-admins@mozilla.org) 與我們聯繫。
+我們以本來希望在一開始包含更多框架，但最後決定先發布，之後再追加其它教學，而非延後。如果屬意的框架沒放進去而你也想幫忙的話，請隨時[與我們聯繫](/zh-TW/docs/MDN/Community/Communication_channels)。

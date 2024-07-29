@@ -14,6 +14,8 @@ input:required {
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-required.html", "tabbed-standard")}}
+
 この擬似クラスは、フォームを送信する前に有効なデータを持っている必要がある入力欄を強調表示するのに便利です。
 
 > **メモ:** {{cssxref(":optional")}} 擬似クラスは*省略可能*なフォーム欄を選択します。

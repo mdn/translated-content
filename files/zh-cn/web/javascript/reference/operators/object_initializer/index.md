@@ -129,7 +129,7 @@ const a = { x: 1, x: 2 };
 console.log(a); // {x: 2}
 ```
 
-在 ES2015 之后，任何地方都允许重复属性名出现，也包括[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#duplicate_property_names)。你也可以在[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)中使用重复的属性名。唯一的例外是[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields)，在整个类中它必须是唯一的。
+在 ES2015 之后，任何地方都允许重复属性名出现，也包括[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#duplicate_property_names)。你也可以在[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)中使用重复的属性名。唯一的例外是[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)，在整个类中它必须是唯一的。
 
 ### 方法定义
 
@@ -226,7 +226,8 @@ const mergedObj = { ...obj1, ...obj2 };
 // { foo: "baz", x: 42, y: 13 }
 ```
 
-> **警告：** 请注意，{{jsxref("Object.assign()")}} 会触发 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)，而展开语法不会！
+> [!WARNING]
+> 请注意，{{jsxref("Object.assign()")}} 会触发 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)，而展开语法不会！
 
 ### 原型 setter
 

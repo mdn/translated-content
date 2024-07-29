@@ -87,7 +87,7 @@ O exemplo acima pode rodar com uma máscara aplicadaa ele.
 
 ### Exemplo: Clipping
 
-Esse exemplo demonstra como usar SVG to recortar conteúdo HTML. Esse exemplo demonstra como usar SVG para recortar conteúdo HTML. Quando você ver a [demonstração](/@api/deki/files/3214/=clipdemo.xhtml), não irá notar que as áreas quentes para links são recortes.
+Esse exemplo demonstra como usar SVG to recortar conteúdo HTML. Esse exemplo demonstra como usar SVG para recortar conteúdo HTML. Quando você ver a [demonstração](clipdemo.xhtml), não irá notar que as áreas quentes para links são recortes.
 
 ```html
 <p class="target" style="background:lime;">
@@ -234,7 +234,7 @@ Por exemplo, se seu CSS está em um arquivo com nome `default.css`, esse pode pa
 
 O SVG é importado do arquivo com nome `resources.svg`, usando o clip-path com o ID c1.
 
-**Veja também**
+## Veja também
 
 - [SVG](/pt-BR/docs/SVG)
 - [SVG Effects for HTML Content](http://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (blog post)

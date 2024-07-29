@@ -1,7 +1,11 @@
 ---
-title: URL とは？
+title: URL とは何か
 slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
+l10n:
+  sourceCommit: 7505786a447886f6940cef629208457e21f8f2a1
 ---
+
+{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 この記事では URL (Uniform Resource Locator) について説明し、その内容と構造を説明します。
 
@@ -10,7 +14,7 @@ slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        <a href="/ja/docs/Learn/Common_questions/How_does_the_Internet_work">インターネットはどのように動くのか</a>、<a href="/ja/docs/Learn/Common_questions/What_is_a_web_server">ウェブサーバーとは</a>、<a href="/ja/docs/Learn/Common_questions/What_are_hyperlinks">ウェブ上のリンクの背後にある概念</a>を知っておく必要があります。
+        <a href="/ja/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work">インターネットはどのように動くのか</a>、<a href="/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server">ウェブサーバーとは</a>、<a href="/ja/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks">ウェブ上のリンクの背後にある概念</a>を知っておく必要があります。
       </td>
     </tr>
     <tr>
@@ -22,29 +26,31 @@ slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
 
 ## 概要
 
-{{Glossary("Hypertext", "ハイパーテキスト")}}や {{Glossary("HTTP")}} とともに、 **_URL_** はウェブの重要な概念の一つです。{{Glossary("Browser", "ブラウザー")}}がウェブ上の公開されたリソースを取得するために使用する仕組みです。
+**URL** (Uniform Resource Locator) とは、インターネット上の固有のリソースのアドレスのことです。これは{{Glossary("Browser", "ブラウザー")}}が HTML ページや CSS 文書、画像などの公開すべきリソースを取得するために用いる重要な仕組みの一つです。
 
-**URL** は _Uniform Resource Locator_ の略です。 URL はウェブ上の特定の一意のリソースのアドレスにすぎません。理論的には、それぞれ有効な URL は一意のリソースを指しています。そのようなリソースは HTML ページ、 CSS 文書、画像などである可能性があります。実際には一部例外もあります。最も一般的なものは、もはや存在しないリソースや移動したリソースを指す URL です。 URL で表されるリソースと URL 自体はウェブサーバーによって処理されるため、ウェブサーバーの所有者がそのリソースとその関連 URL を慎重に管理する必要があります。
+理論的には、それぞれ有効な URL は一意のリソースを指しています。実際には一部例外もあります。最も一般的なものは、もはや存在しないリソースや移動したリソースを指す URL です。 URL で表されるリソースと URL 自体はウェブサーバーによって処理されるため、ウェブサーバーの所有者がそのリソースとその関連 URL を慎重に管理する必要があります。
 
 ## 基本: URL の解剖
 
 URL の例を次に示します
 
-```
+```plain
 https://developer.mozilla.org
 https://developer.mozilla.org/ja/docs/Learn/
 https://developer.mozilla.org/ja/search?q=URL
 ```
 
-これらの URL のいずれかをブラウザーのアドレスバーに入力して、関連するページ（リソース）をロードするように指示することができます。
+これらの URL のいずれかをブラウザーのアドレスバーに入力することで、関連するリソースを読み込むように指示することができ、これら 3 つの場合はすべてウェブページです。
 
 URL はさまざまな部分で構成されていますが、必須のものと任意のものもあります。次の URL を使用して最も重要な部分を見てみましょう（下記の節で詳細を提供しています）。
 
-![full URL](mdn-url-all.png)
+![完全 URL](mdn-url-all.png)
 
-> **メモ:** URL を通常の郵便の住所として考えることもできます。スキーム (_scheme_) は利用したい郵便サービス、ドメイン名 (_domain name_) は市町村、ポート番号 (_port_) は郵便番号のようなもの、パス (_path_) は郵便物を届けるべき建物、引数 (_parameters_) はその建物の部屋番号など追加情報、アンカー (_anchor_) は実際の宛先人物を表します。
+> [!NOTE]
+> URL を通常の郵便の住所として考えることもできます。スキーム (_scheme_) は利用したい郵便サービス、ドメイン名 (_domain name_) は市町村、ポート番号 (_port_) は郵便番号のようなもの、パス (_path_) は郵便物を届けるべき建物、引数 (_parameters_) はその建物の部屋番号など追加情報、アンカー (_anchor_) は実際の宛先人物を表します。
 
-> **メモ:** URL に関しては[いくつかの追加の部分と追加のルール](https://ja.wikipedia.org/wiki/Uniform_Resource_Locator)がありますが、これらは普通のユーザーとウェブ開発者には関係ありません。気にしないでください。これを知る必要はありませんし、 URL のすべての機能を使用する必要もありません。
+> [!NOTE]
+> URL に関しては[いくつかの追加の部分と追加のルール](https://ja.wikipedia.org/wiki/Uniform_Resource_Locator)がありますが、これらは普通のユーザーとウェブ開発者には関係ありません。気にしないでください。これを知る必要はありませんし、 URL のすべての機能を使用する必要もありません。
 
 ## スキーム
 
@@ -58,10 +64,11 @@ URL の最初の部分は**スキーム**で、ブラウザーがリソースを
 
 次に**オーソリティ**が続きます。これはスキームから `://` の文字パターンで区切られます。オーソリティがある場合は、**ドメイン**（例えば `www.example.com`）と**ポート番号** (`80`) がコロン区切りで含まれます。
 
-- ドメインは、どのウェブサーバーを要求しているのかを示します。通常はドメイン名ですが、 {{Glossary("IP address", "IP アドレス")}}を使うこともあります（ただし、これは利便性に欠けるので稀です）。
+- ドメインは、どのウェブサーバーを要求しているのかを示します。通常は[ドメイン名](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)ですが、 {{Glossary("IP address", "IP アドレス")}}を使うこともあります（ただし、これは利便性に欠けるので稀です）。
 - ポートは、ウェブサーバー上のリソースにアクセスするために使用される技術的な「門」 を示します。ウェブサーバーが HTTP プロトコルの標準ポート（HTTP は 80、 HTTPS は 443）を使用してリソースへのアクセスを許可している場合は、通常、この項目は省略されます。それ以外の場合は必須です。
 
-> **メモ:** スキームとオーソリティの間の区切り文字は `://` です。コロンはスキームと URL の次の部分を分離し、 `//` は URL の次の部分がオーソリティであることを示します。
+> [!NOTE]
+> スキームとオーソリティの間の区切り文字は `://` です。コロンはスキームと URL の次の部分を分離し、 `//` は URL の次の部分がオーソリティであることを示します。
 >
 > オーソリティを使用しない URL の一例として、メールクライアント (`mailto:foobar`) があります。これはスキームを含んでいますが、オーソリティ部分を使用していません。したがって、コロンの後には 2 つのスラッシュがなく、スキームとメールアドレスの間の区切り文字としてのみ機能します。
 
@@ -94,7 +101,8 @@ URL の最初の部分は**スキーム**で、ブラウザーがリソースを
 - 画像（{{HTMLElement("img")}} 要素による）、動画（{{HTMLElement("video")}} 要素による）、音声と音楽（{{HTMLElement("audio")}} 要素による）などのメディアを表示する
 - {{HTMLElement("iframe")}} 要素により、他の HTML 文書を表示する
 
-> **メモ:** URL を指定してページの一部としてリソースを読み込む際（`<script>`, `<audio>`, `<img>`, `<video>` を使用する場合など）は、 HTTP と HTTPS の URL のみを使用してください。いくつかの例外はあります（注目すべきは `data:` です。[データ URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) を参照してください）。たとえば FTP を使用しても、安全になることはなく、多くのブラウザーでは対応していません。
+> [!NOTE]
+> URL を指定してページの一部としてリソースを読み込む際（`<script>`, `<audio>`, `<img>`, `<video>` を使用する場合など）は、 HTTP と HTTPS の URL のみを使用してください。いくつかの例外はあります（注目すべきは `data:` です。[データ URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) を参照してください）。たとえば FTP を使用しても、安全になることはなく、多くのブラウザーでは対応していません。
 
 {{Glossary("CSS")}} や {{Glossary("JavaScript")}} などの他の技術は、URL を広範囲に使用し、真にウェブの中核です。
 
@@ -133,7 +141,7 @@ HTML ページ内など、文書内で URL が使用されている場合は状�
         <pre>/ja/docs/Learn</pre>
         <p>
           これは、 HTML 文書内の絶対 URL の最も一般的な使用例です。ブラウザーは、その URL をホストしている文書を読み込むために使用されたものと同じプロトコルおよび同じドメイン名を使用します。
-          **メモ:**
+          <strong>メモ:</strong>
           <em>
             プロトコルを省略せずにドメイン名だけ省略することはできません。
           </em>
@@ -164,7 +172,7 @@ HTML ページ内など、文書内で URL が使用されている場合は状�
       <td>
         <pre>../CSS/display</pre>
         <p>
-          この場合、 UNIX ファイルシステムの世界から継承された `../` の表記規則を使用して、ブラウザーにあるディレクトリーの上に移動したいことを伝えます。つまり、次の URL にアクセスしようとします。<br>
+          この場合、 UNIX ファイルシステムの世界から継承された <code>../</code> の表記規則を使用して、ブラウザーにあるディレクトリーの上に移動したいことを伝えます。つまり、次の URL にアクセスしようとします。<br>
           https://developer.mozilla.org/ja/docs/Learn/../CSS/display<br>
           これは、次のように単純化することができます。<br>
           https://developer.mozilla.org/ja/docs/CSS/display

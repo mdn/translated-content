@@ -64,4 +64,4 @@ slug: Web/SVG/Element/switch
 
 ## ブラウザーの互換性
 
-{{Compat("svg.elements.switch")}}
+{{Compat}}

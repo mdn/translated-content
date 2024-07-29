@@ -11,7 +11,7 @@ Web 应用程序清单是被称为[渐进式 Web 应用程序 (PWA)](/zh-CN/docs
 
 ## 部署一个 manifest
 
-Web 应用程序清单部署在您的 HTML 页面中，使用在你的文件的头部的一个链接标记：
+Web 应用程序清单部署在你的 HTML 页面中，使用在你的文件的头部的一个链接标记：
 
 ```html
 <link rel="manifest" href="/manifest.json" />
@@ -81,7 +81,8 @@ Web 应用程序清单部署在您的 HTML 页面中，使用在你的文件的�
 "background_color": "red"
 ```
 
-> **备注：** background_color 只是在 web 应用程序加载时提高用户体验，而当 web 应用程序的样式表可用时，不能替代作为背景颜色使用。
+> [!NOTE]
+> background_color 只是在 web 应用程序加载时提高用户体验，而当 web 应用程序的样式表可用时，不能替代作为背景颜色使用。
 
 ### `description`
 
@@ -107,7 +108,8 @@ Web 应用程序清单部署在您的 HTML 页面中，使用在你的文件的�
 - `rtl` (由右到左)
 - `auto` (由浏览器自动判断。
 
-> **备注：** 当省略时，默认为 auto
+> [!NOTE]
+> 当省略时，默认为 auto
 
 ### `display`
 
@@ -126,7 +128,8 @@ Web 应用程序清单部署在您的 HTML 页面中，使用在你的文件的�
 | `minimal-ui` | 该应用程序将看起来像一个独立的应用程序，但会有浏览器地址栏。样式因浏览器而异。                                                                                                         | `browser`    |
 | `browser`    | 该应用程序在传统的浏览器标签或新窗口中打开，具体实现取决于浏览器和平台。这是默认的设置。                                                                                               | (None)       |
 
-> **备注：** 您可以使用显示模式媒体功能，根据[显示模式](/zh-CN/docs/Web/CSS/@media/display-mode)选择性地将 CSS 应用到您的应用程序。这可用于在从 URL 启动网站和从桌面图标启动网站之间提供一致的用户体验。
+> [!NOTE]
+> 你可以使用显示模式媒体功能，根据[显示模式](/zh-CN/docs/Web/CSS/@media/display-mode)选择性地将 CSS 应用到你的应用程序。这可用于在从 URL 启动网站和从桌面图标启动网站之间提供一致的用户体验。
 
 ### `icons`
 
@@ -205,7 +208,8 @@ Web 应用程序清单部署在您的 HTML 页面中，使用在你的文件的�
 "prefer_related_applications": false
 ```
 
-> **备注：** 如果省略，默认设置为 `false`.
+> [!NOTE]
+> 如果省略，默认设置为 `false`.
 
 ### `related_applications`
 

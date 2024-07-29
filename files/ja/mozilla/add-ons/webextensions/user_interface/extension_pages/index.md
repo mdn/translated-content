@@ -3,7 +3,7 @@ title: 拡張機能ページ
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 拡張機能には、フォーム、ヘルプ、その他拡張機能が必要とするコンテンツを提供するために、 HTML ページを設置することができます。
 
@@ -28,7 +28,7 @@ HTML ファイルと関連づけられた CSS や JavaScript ファイルを拡�
 
 拡張ページを表示する際に 2 つの選択肢があります。それは、 {{WebExtAPIRef("windows.create()")}} と {{WebExtAPIRef("tabs.create()")}} です。
 
-`windows.create()` を使うと、例えば、HTML ファイルを分離パネル（アドレスバー、ブックマークバーなどといったブラウザ UI がないウィンドウ）開くことができ、ダイアログのような使い勝手を実現することができます。
+`windows.create()` を使うと、例えば、HTML ファイルを分離パネル（アドレスバー、ブックマークバーなどといったブラウザー UI がないウィンドウ）開くことができ、ダイアログのような使い勝手を実現することができます。
 
 ```js
 let createData = {

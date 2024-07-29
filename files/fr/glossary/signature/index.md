@@ -3,6 +3,8 @@ title: Signature
 slug: Glossary/Signature
 ---
 
+{{GlossarySidebar}}
+
 Le terme **signature** peut avoir plusieurs significations selon le contexte. Il peut s'agir de :
 
 {{GlossaryDisambiguation}}

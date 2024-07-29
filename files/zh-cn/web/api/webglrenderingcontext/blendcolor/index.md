@@ -51,7 +51,7 @@ gl.getParameter(gl.BLEND_COLOR);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.blendEquation()")}}
 - {{domxref("WebGLRenderingContext.blendFunc()")}}

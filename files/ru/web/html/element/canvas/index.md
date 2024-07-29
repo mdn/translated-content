@@ -3,6 +3,8 @@ title: <canvas>
 slug: Web/HTML/Element/canvas
 ---
 
+{{HTMLSidebar}}
+
 **HTML `<canvas>` Элемент** может быть использован для отрисовки графики через скрипты (обычно используется [JavaScript](/ru/docs/Web/JavaScript)). Например, его можно использовать для отрисовки графиков, делать композиции фото или даже выполнять анимации. Вы можете (и должны) дать альтернативное содержание внутри блока `<canvas>`. Этот контент будет рендерится в обоих браузерах, в старых которые не поддерживают canvas и в браузерах с отключённым JavaScript.
 
 Больше статей о canvas [canvas topic page](/ru/docs/Web/API/Canvas_API).
@@ -18,11 +20,11 @@ slug: Web/HTML/Element/canvas
 
 Этот элемент включает [global attributes](/ru/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("height")}}
+- `height`
   - : Высота в координатном пространстве в CSS пикселях. По умолчанию 150.
-- {{htmlattrdef("moz-opaque")}} {{non-standard_inline}}
+- `moz-opaque` {{non-standard_inline}}
   - : Дай холсту знать будет ли фактором или нет полупрозрачность. Если холст знает что нет полупрозрачности, производительность рисования может быть оптимизирована.
-- {{htmlattrdef("width")}}
+- `width`
   - : Ширина в координатном пространстве в CSS пикселях. По умолчанию 300.
 
 ## Описание
@@ -53,7 +55,7 @@ slug: Web/HTML/Element/canvas
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -64,5 +66,3 @@ slug: Web/HTML/Element/canvas
 - [Canvas cheat sheet](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
 - [Canvas-related demos](/en-US/demos/tag/tech:canvas)
 - [Canvas introduction by Apple](https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)
-
-{{HTMLSidebar}}

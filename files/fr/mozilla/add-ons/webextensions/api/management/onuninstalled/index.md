@@ -3,7 +3,7 @@ title: management.onUninstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onUninstalled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Action quand une extension est désinstallée.
 

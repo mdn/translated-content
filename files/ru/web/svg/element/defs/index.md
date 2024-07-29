@@ -15,23 +15,6 @@ SVG позволяет задавать графические объекты д
 
 {{svginfo}}
 
-## Атрибуты
-
-### Глобальные атрибуты
-
-- [Conditional processing attributes](/ru/docs/Web/SVG/Attribute#Conditional_processing_attributes)
-- [Core attributes](/ru/docs/Web/SVG/Attribute#Core_attributes)
-- [Graphical event attributes](/ru/docs/Web/SVG/Attribute#Graphical_event_attributes)
-- [Presentation attributes](/ru/docs/Web/SVG/Attribute#Presentation_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
-- {{SVGAttr("transform")}}
-
-### Специфичные атрибуты
-
-_Нет_
-
 ## Интерфейс DOM
 
 Элемент реализует интерфейс {{domxref("SVGDefsElement")}}.
@@ -58,7 +41,7 @@ _Нет_
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

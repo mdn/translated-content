@@ -14,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使うか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('show', (event) => { });
+addEventListener("show", (event) => {});
 
-onshow = (event) => { };
+onshow = (event) => {};
 ```
 
 ## イベント型

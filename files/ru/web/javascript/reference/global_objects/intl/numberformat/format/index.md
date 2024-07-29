@@ -3,7 +3,7 @@ title: Intl.NumberFormat.prototype.format
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 ---
 
-{{JSRef("Global_Objects", "NumberFormat", "Intl,Collator,DateTimeFormat")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -51,9 +51,7 @@ console.log(formatted.join("; "));
 
 ## Спецификации
 
-| Спецификация                                                                    | Статус                  | Комментарии              |
-| ------------------------------------------------------------------------------- | ----------------------- | ------------------------ |
-| {{SpecName('ES Int 1.0', '#sec-11.3.2', 'Intl.NumberFormat.prototype.format')}} | {{Spec2('ES Int 1.0')}} | Изначальное определение. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

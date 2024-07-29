@@ -67,7 +67,7 @@ Symbol.for("mdn.bar");
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Symbol.for")}}
+{{Compat}}
 
 ## 関連情報
 

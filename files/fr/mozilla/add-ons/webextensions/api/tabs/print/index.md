@@ -3,7 +3,7 @@ title: tabs.print()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/print
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Appelez cette fonction pour imprimer le contenu de l'onglet actif. Si cette fonction est appelée, l'utilisateur recevra la boîte de dialogue d'impression de la plate-forme sous-jacente et aura la possibilité de modifier les paramètres d'impression, puis d'imprimer l'onglet actuellement actif.
 

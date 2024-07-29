@@ -71,7 +71,7 @@ Math.log1p(-2); // NaN
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.log1p")}}
+{{Compat}}
 
 ## 関連情報
 

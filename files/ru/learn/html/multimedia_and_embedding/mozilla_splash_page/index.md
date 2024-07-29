@@ -17,7 +17,8 @@ slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 
 Сохраните изображения из папки [originals](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/mdn-splash-page-start/originals) тем же способом; возможно вы захотите сохранить их в другой папке пока не обработаете (некоторые из них) с помощью графического редактора.
 
-> **Примечание:** Приведённый для примера HTML файл содержит довольно много CSS для стилизации страницы. Вам не нужно изменять CSS, только HTML внутри {{htmlelement("body")}} элемента — пока вы используете корректную разметку, CSS будет придавать правильный внешний вид.
+> [!NOTE]
+> Приведённый для примера HTML файл содержит довольно много CSS для стилизации страницы. Вам не нужно изменять CSS, только HTML внутри {{htmlelement("body")}} элемента — пока вы используете корректную разметку, CSS будет придавать правильный внешний вид.
 
 ## Описание проекта
 
@@ -37,7 +38,8 @@ slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 
 Затем создайте фоновую версию `red-panda.jpg` шириной 1200px и портретную версию шириной 600px, которая показывает панду более крупным планом. Снова назовите их разумно, чтобы легко распознавать их. Сохраните обе копии внутри той же папки, что и `index.html`.
 
-> **Примечание:** Следует обрабатывать JPG и PNG изображения, чтобы делать их как можно меньше по весу, при сохранении хорошего вида. [tinypng.com](https://tinypng.com/) - отличный сервис для этого.
+> [!NOTE]
+> Следует обрабатывать JPG и PNG изображения, чтобы делать их как можно меньше по весу, при сохранении хорошего вида. [tinypng.com](https://tinypng.com/) - отличный сервис для этого.
 
 ### Добавление логотипа в шапку
 
@@ -55,7 +57,8 @@ slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 
 Убедитесь, что вы использовали изображения, соответствующие ссылкам.
 
-> **Примечание:** Для проверки правильности работы `srcset`/`sizes` , вам нужно загрузить ваш сайт на сервер (используйте [Github pages](/ru/docs/Learn/Common_questions/Using_Github_pages) - простое и бесплатное решение). Затем вы сможете проверить правильность их работы используя инструменты разработчика в браузере, как описано в [Responsive images: useful developer tools](/en-US/Learn/HTML/Multimedia_and_embedding/Responsive_images#Useful_developer_tools).
+> [!NOTE]
+> Для проверки правильности работы `srcset`/`sizes` , вам нужно загрузить ваш сайт на сервер (используйте [Github pages](/ru/docs/Learn/Common_questions/Using_Github_pages) - простое и бесплатное решение). Затем вы сможете проверить правильность их работы используя инструменты разработчика в браузере, как описано в [Responsive images: useful developer tools](/en-US/Learn/HTML/Multimedia_and_embedding/Responsive_images#Useful_developer_tools).
 
 ### Искусственно изменённая красная панда
 
@@ -74,12 +77,3 @@ slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 Если вы выполняете это задание как часть организованного курса вам следует передать вашу работу учителю/наставнику для оценки. Если вы обучаетесь самостоятельно, то вы легко можете получить отметку [в ветке форума этого упражнения](https://discourse.mozilla.org/t/mozilla-splash-page-assessment/24679), либо в IRC канале [#mdn](irc://irc.mozilla.org/mdn) на [Mozilla IRC](https://wiki.mozilla.org/IRC). Сначала попробуйте выполнить упражнение - жульничеством ничего не добиться!
 
 {{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
-
-## В этом модуле
-
-- [Изображения в HTML](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Видео и аудио контент](/ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [От \<object> до \<iframe> — другие технологии встраивания](/ru/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Добавление векторной графики в Web](/ru/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Отзывчивые изображения](/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Сайт-визитка Mozilla](/ru/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

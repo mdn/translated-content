@@ -118,15 +118,15 @@ pc.onicecandidate = (ev) => {
 };
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [WebRTC API](/ru/docs/Web/API/WebRTC_API)
 - [Signaling and video calling](/ru/docs/Web/API/WebRTC_API/Signaling_and_video_calling)

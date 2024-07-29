@@ -1,17 +1,21 @@
 ---
-title: Image()
+title: "HTMLImageElement: Image() コンストラクター"
+short-title: Image()
 slug: Web/API/HTMLImageElement/Image
+l10n:
+  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
 {{APIRef("HTML DOM")}}
 
 **`Image()`** コンストラクターは、新しい {{DOMxRef("HTMLImageElement")}} インスタンスを作成します。機能的には {{DOMxRef("Document.createElement()", "document.createElement('img')")}} と同等です。
 
-> **メモ:** この関数を CSS の [`image()`](</ja/docs/Web/CSS/image/image>) 関数と混同しないでください。
+> [!NOTE]
+> この関数を CSS の [`image()`](/ja/docs/Web/CSS/image/image) 関数と混同しないでください。
 
 ## 構文
 
-```js
+```js-nolint
 new Image()
 new Image(width)
 new Image(width, height)
@@ -31,15 +35,15 @@ new Image(width, height)
 ## 例
 
 ```js
-var myImage = new Image(100, 200);
-myImage.src = 'picture.jpg';
+const myImage = new Image(100, 200);
+myImage.src = "picture.jpg";
 document.body.appendChild(myImage);
 ```
 
 これは、 {{HTMLElement("body")}} の中で次のような HTML タグを定義するのと同じです。
 
 ```html
-<img width="100" height="200" src="picture.jpg">
+<img width="100" height="200" src="picture.jpg" />
 ```
 
 ## 仕様書

@@ -80,10 +80,8 @@ text-decoration-style: unset;
 
 ## Especificações
 
-| Specification                                                                             | Status                              | Comment                                                                                    |
-| ----------------------------------------------------------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------ |
-| {{ SpecName('CSS3 Text Decoration', '#text-decoration-style', 'text-decoration-style') }} | {{ Spec2('CSS3 Text Decoration') }} | Initial definition. The {{cssxref("text-decoration")}} property wasn't a shorthand before. |
+{{Specifications}}
 
 ## Browser compatíveis
 
-{{Compat("css.properties.text-decoration-style")}}
+{{Compat}}

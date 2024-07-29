@@ -132,11 +132,11 @@ Cache-Control: no-cache, no-store, must-revalidate
 Cache-Control: public, max-age=31536000
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -24,16 +24,16 @@ slug: Web/CSS/CSS_conditional_rules
 
 ### `@document` ルール
 
-{{Compat("css.at-rules.document")}}
+{{Compat}}
 
 ### `@import` ルール
 
-{{Compat("css.at-rules.import")}}
+{{Compat}}
 
 ### `@media` ルール
 
-{{Compat("css.at-rules.media")}}
+{{Compat}}
 
 ### `@supports` ルール
 
-{{Compat("css.at-rules.supports")}}
+{{Compat}}

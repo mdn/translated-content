@@ -40,7 +40,7 @@ Embo is purely for the convenira o propósito desta tag seja meramente a conveni
 
 ## Compatibilidade de navegadores
 
-{{Compat("html.elements.acronym")}}
+{{Compat}}
 
 ## Ver também
 

@@ -3,7 +3,7 @@ title: getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/getAll
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obient toutes les commandes pour l'exécution que vous avez enregistré à l'aide d'une des [`commandes` clef du manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
 
@@ -44,7 +44,7 @@ getCommands.then(logCommands);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/extensions/commands).
 >

@@ -1,8 +1,9 @@
 ---
-title: CSSRule.type
+title: "CSSRule: type プロパティ"
+short-title: type
 slug: Web/API/CSSRule/type
 l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
 {{APIRef("CSSOM")}}{{Deprecated_header}}

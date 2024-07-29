@@ -219,7 +219,7 @@ l10n:
         </ul>
         <p>
           なお、 <code>:</code>, <code>-</code>,
-          <code>@</code>, などの一部の文字は、エスケープされたときにもエスケープされていないときにも、特別な意味を持たないことに注意してください。正規表現では <code>\:</code>, <code>\-</code>, <code>\@</code> のようなエスケープシーケンスは、エスケープされていないリテラル文字と同じになります。しかし、<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags">unicode フラグ</a>を持つ正規表現では、これらは <em>invalid identity escape</em> エラーが発生します。これは、<code>p</code>や<code>k</code>のような新しいエスケープシーケンスを使用する既存のコードとの後方互換性を確保するために行われます。
+          <code>@</code>, などの一部の文字は、エスケープされたときにもエスケープされていないときにも、特別な意味を持たないことに注意してください。正規表現では <code>\:</code>, <code>\-</code>, <code>\@</code> のようなエスケープシーケンスは、エスケープされていないリテラル文字と同じになります。しかし、<a href="/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索">unicode フラグ</a>を持つ正規表現では、これらは <em>invalid identity escape</em> エラーが発生します。これは、<code>p</code>や<code>k</code>のような新しいエスケープシーケンスを使用する既存のコードとの後方互換性を確保するために行われます。
         </p>
         <div class="notecard note">
           <p>
@@ -471,7 +471,8 @@ l10n:
 
 [数量詞](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)は、一致する文字や表現の数を示します。
 
-> **メモ:** 以下の表の中で、*アイテム*は単一の文字だけでなく、[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)、[Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)、[グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)を示すこともあります。
+> [!NOTE]
+> 以下の表の中で、*アイテム*は単一の文字だけでなく、[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)、[Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)、[グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)を示すこともあります。
 
 <table class="standard-table">
   <thead>
@@ -615,4 +616,5 @@ l10n:
 - `UnicodePropertyValue`
   - : 下記の「値」の節に掲載されているトークンの 1 つです。多くの値には、別名や短縮形があります（例えば `General_Category` プロパティの値 `Decimal_Number` は `Nd`, `digit`, `Decimal_Number` と書くことができます）。ほとんどの値では、 `UnicodePropertyName` の部分と等号を省略することができます。 `UnicodePropertyName` を指定した場合、その値は指定されたプロパティの種類に対応するものでなければなりません。
 
-> **メモ:** 利用できるプロパティと値は膨大であるため、ここでは網羅的に記述することはせず、様々な例を提供することにします。
+> [!NOTE]
+> 利用できるプロパティと値は膨大であるため、ここでは網羅的に記述することはせず、様々な例を提供することにします。

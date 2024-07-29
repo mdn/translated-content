@@ -1,6 +1,8 @@
 ---
 title: 문자열 다루기 — 문자열
 slug: Learn/JavaScript/First_steps/Strings
+l10n:
+  sourceCommit: f3b6afa6ec60508dceeec4fd299ec4ba3995c0c2
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
@@ -25,178 +27,230 @@ slug: Learn/JavaScript/First_steps/Strings
 
 ## 단어의 힘
 
-단어는 인간이 커뮤니케이션 함에 있어 커다란 하나의 부분이라고 할 수 있기에 매우 중요합니다. 웹은 사람들이 정보를 교환하고 공유할 수 있도록 설계된 텍스트 기반의 매체이므로, 웹에 표시되는 단어를 제어하는 것이 유용합니다. {{glossary ( "HTML")}}은 텍스트에 구조와 의미를 제공하며, {{glossary ( "CSS")}}는 텍스트에 스타일(일종의 디자인)을 적용할 수 있게 해주며, JavaScript는 문자열을 조작하기 위한 여러 가지 기능 (텍스트 레이블을 표시하고 용어를 원하는 순서로 정렬하는) 등 다양한 작업을 수행할 수 있습니다.
+단어는 인간이 커뮤니케이션 함에 있어 커다란 하나의 부분이라고 할 수 있기에 매우 중요합니다. 웹은 사람들이 정보를 교환하고 공유할 수 있도록 설계된 텍스트 기반의 매체이므로, 웹에 표시되는 단어를 제어하는 것이 유용합니다. {{glossary("HTML")}}은 텍스트에 구조와 의미를 부여하고, {{glossary("CSS")}}는 텍스트의 스타일을 정밀하게 지정할 수 있게 해주며, JavaScript에는 문자열 조작, 사용자 지정 환영 메시지 및 프롬프트 생성, 필요할 때 올바른 텍스트 레이블 표시, 원하는 순서로 용어 정렬 등을 위한 다양한 기능이 포함되어 있습니다.
 
 지금까지 우리가 여러분에게 보여 줬던 거의 모든 프로그램은 문자열 조작과 관련이 있습니다.
 
-## 문자열 — 기초
+## 문자열 선언하기
 
-문자열은 숫자와 유사하게 다루어지지만, 더 깊게 파고들면 눈에 띄는 차이점을 발견하기 시작할 것입니다. 먼저 몇 가지 기본 라인을 콘솔에 입력하여 우리와 친숙하게 만드는 것으로 시작하겠습니다. [이 링크](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html)를 통해 다른 탭이나 창에서 열 수 있고, [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 사용할 수도 있습니다).
+문자열은 언뜻 보기에는 숫자와 비슷하게 다루어지지만, 자세히 살펴보면 몇 가지 눈에 띄는 차이점을 발견할 수 있습니다. [브라우저 개발자 콘솔](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)에 몇 가지 기본 행을 입력하여 익숙해지는 것부터 시작해 보겠습니다.
 
-### 문자열 만들기
+먼저 다음 줄을 입력합니다.
 
-1. 먼저 아래의 명령어를 입력하세요.
-
-   ```js
-   var string = "The revolution will not be televised.";
-   string;
-   ```
-
-   숫자에서 했던 것과 같게, 우리는 변수를 선언하고, 문자열을 초기화 하고, 값을 반환합니다. 차이점은 오직 숫자 대신 문자열을 넣었고, 문자열 값을 따옴표로 감싸주었습니다.
-
-2. 따옴표를 빼거나 잘못쓰면 에러가 뜰 것입니다. 아래의 코드를 입력해 보세요.
-
-   ```js example-bad
-   var badString = This is a test;
-   var badString = 'This is a test;
-   var badString = This is a test';
-   ```
-
-   따옴표로 감싸져 있지 않은 텍스트는 변수 이름, 속성 이름, 예약어와 유사하다고 가정하기 때문에 이러한 코드는 작동하지 않습니다. 만약 브라우저가 찾을 수 없다면 에러가 발생할 것입니다. (e.g. "missing ; before statement"). 만약 브라우저가 문자열이 시작하는 곳은 볼 수 있지만, 끝나는 곳을 찾지 못하면 에러를 던집니다.("unterminated string literal"). 만약 당신의 프로그램이 에러를 계속 만들어낸다면, 다시 돌아가 당신의 문자열에 빠진 따옴표가 없는지 찾아보십시오.
-
-3. 다음의 코드는 당신이 변수 `string` 을 선언했다면 작동할 것입니다. 아래의 코드를 입력해보세요 :
-
-   ```js
-   var badString = string;
-   badString;
-   ```
-
-   `badString` 은 이제 `string` 과 같은 값으로 설정되었습니다.
-
-### 따옴표 vs 쌍따옴표
-
-1. 자바스크립트에서는 따옴표와 쌍따옴표가 모두 허용됩니다. 다음의 코드는 문제 없이 작동할 것입니다.
-
-   ```js
-   var sgl = "Single quotes.";
-   var dbl = "Double quotes";
-   sgl;
-   dbl;
-   ```
-
-2. 따옴표와 쌍따옴표는 차이점이 거의 없어, 편한대로 사용할 수 있습니다. 하지만 당신은 문자열을 감싸는데 한 종류의 따옴표만 사용해야 되며 그렇지 않으면 에러가 발생합니다. 아래의 코드를 실행해 보세요.
-
-   ```js example-bad
-   var badQuotes = 'What on earth?";
-   ```
-
-3. 브라우저는 다른종류의 따옴표가 감싸고 있어 문자열이 아직 끝나지 않았다고 생각합니다. 예를 들어, 아래 두 가지 모두 괜찮습니다.
-
-   ```js
-   var sglDbl = 'Would you eat a "fish supper"?';
-   var dblSgl = "I'm feeling blue.";
-   sglDbl;
-   dblSgl;
-   ```
-
-4. 하지만, 당신은 같은 종류의 따옴표를 문자열에 포함시킬 수 없습니다. 브라우저는 어느 따옴표가 문자열이 끝났다는 것을 알리는지 혼돈하게 됩니다. 따라서 다음의 코드는 에러가 발생합니다.
-
-   ```js example-bad
-   var bigmouth = 'I've got no right to take my place...';
-   ```
-
-   이는 우리를 다음 문단으로 이끌어 줍니다.
-
-### 문자열 이스케이프 문자
-
-직전의 문제의 코드를 해결하기 위해, 우리는 따옴표를 이스케이프 문자로 만들어야 합니다. 이스케이프 문자란 어떤 한 문자를 코드가 아닌 문자열로 만들어주는 문자입니다. 자바스크립트에서는 역슬래시 ( \ )를 문자 바로 앞에 작성함으로써 코드가 아닌 문자열로 인식하게 합니다.
-
-```js-nolint example-good
-var bigmouth = 'I\'ve got no right to take my place...';
-console.log(bigmouth);
+```js
+const string = "The revolution will not be televised.";
+console.log(string);
 ```
 
-이것은 에러가 일어나지 않습니다. 당신은 `\"` 와 같게도 사용할 수 있습니다. 자세한 사항은 [이스케이프 표기법](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation)을 참고하십시오
+숫자와 마찬가지로 변수를 선언하고 문자열 값으로 초기화한 다음 값을 반환합니다. 여기서 유일한 차이점은 문자열을 작성할 때 값을 따옴표로 묶어야 한다는 점입니다.
 
-## 문자열 연결하기
+이 작업을 수행하지 않거나 따옴표 중 하나를 누락하면 오류가 발생합니다. 다음 줄을 입력해 보세요.
 
-1. 'Concatenate'는 '결합' 을 의미하는 프로프래밍 단어입니다. 자바스크립트에서 문자열을 함께 결합하려면 숫자를 더할 때 사용하는 것과 동일한 더하기 (+) 연산자를 사용하지만 이 상황에서는 다른 작업을 수행합니다. 콘솔에 예를 들어 보겠습니다.
+```js example-bad
+const badString1 = This is a test;
+const badString2 = 'This is a test;
+const badString3 = This is a test';
+```
 
-   ```js
-   var one = "Hello, ";
-   var two = "how are you?";
-   var joined = one + two;
-   joined;
-   ```
+따옴표로 묶이지 않은 텍스트는 변수 이름, 속성 이름, 예약어 등으로 간주되므로 이러한 줄은 작동하지 않습니다. 브라우저에서 찾을 수 없는 경우 오류가 발생합니다(예: "누락됨; before 문"). 두 번째 따옴표로 표시된 것처럼 브라우저가 문자열이 시작되는 위치는 알 수 있지만 문자열의 끝을 찾을 수 없는 경우 오류("종료되지 않은 문자열 리터럴")가 발생합니다. 프로그램에서 이러한 오류가 발생하면 돌아가서 모든 문자열을 확인하여 따옴표가 누락되지 않았는지 확인하세요.
 
-   변수 `joined` 의 값은 "Hello, how are you?" 입니다.
+이전에 변수 문자열을 정의한 경우 다음이 작동하므로 지금 시도해 보세요.
 
-2. 마지막 예에서는, 그저 두 개의 문자열을 결합했을 뿐이지만 각 문자열 사이에 +를 포함하기만 하면 원하는 만큼의 문자열을 결합할 수 있습니다. 다음을 시도해 보십시오.
+```js
+const badString = string;
+console.log(badString);
+```
 
-   ```js
-   var multiple = one + one + one + one + two;
-   multiple;
-   ```
+`badString` 은 이제 `string` 과 같은 값으로 설정되었습니다.
 
-3. 또한 변수와 실제 문자열을 혼합하여 사용할 수도 있습니다. 다음을 시도해 보십시오.
+### 따옴표, 쌍따옴표, 백틱
 
-   ```js
-   var response = one + "I am fine — " + two;
-   response;
-   ```
+JavaScript에서는 따옴표(`'`), 쌍따옴표(`"`) 또는 백틱(`` ` ``)을 선택하여 문자열을 감싸을 수 있습니다. 다음 모두 사용할 수 있습니다.
 
-<div class="note"><p><strong>참고</strong>: 만약 코드에 따옴표나 쌍따옴표로 묶인 문자열을 입력하면 <strong>문자열 리터럴</strong> (string literal) 이라 불립니다.</p></div>
+```js-nolint
+const single = 'Single quotes';
+const double = "Double quotes";
+const backtick = `Backtick`;
 
-### 문자열의 연결
+console.log(single);
+console.log(double);
+console.log(backtick);
+```
 
-실제 작업에 사용되는 연결 방법에 대해 살펴보겠습니다. 이 과정에 앞부분의 예는 다음과 같습니다.
+문자열의 시작과 끝에 같은 문자를 사용해야 하며 그렇지 않으면 오류가 발생합니다.
+
+```js-nolint example-bad
+const badQuotes = 'This is not allowed!";
+```
+
+따옴표를 사용하여 선언한 문자열과 쌍따옴표를 사용하여 선언한 문자열은 동일하며 어떤 스타일을 사용할지는 개인 취향에 따라 다르지만, 한 가지 스타일을 선택하여 코드에서 일관되게 사용하는 것이 좋습니다.
+
+백틱을 사용하여 선언된 문자열은 [템플릿 리터럴](/ko/docs/Web/JavaScript/Reference/Template_literals)이라고 하는 특수한 종류의 문자열입니다. 템플릿 리터럴은 대부분의 경우 일반 문자열과 비슷하지만 몇 가지 특별한 속성이 있습니다.
+
+- [JavaScript 삽입](#embedding_javascript)을 할 수 있습니다.
+- [여러 줄](#multiline_strings)로 템플릿 리터럴을 선언할 수 있습니다.
+
+## JavaScript 삽입
+
+템플릿 리터럴 내에서 JavaScript 변수나 표현식을 `${ }`로 감싸면 결과가 문자열에 포함됩니다.
+
+```js
+const name = "Chris";
+const greeting = `Hello, ${name}`;
+console.log(greeting); // "Hello, Chris"
+```
+
+동일한 기법을 사용하여 두 변수를 결합할 수 있습니다.
+
+```js
+const one = "Hello, ";
+const two = "how are you?";
+const joined = `${one}${two}`;
+console.log(joined); // "Hello, how are you?"
+```
+
+이렇게 문자열을 서로 연결하는 것을 연결이라고 합니다.
+
+## 컨텍스트에서 연결
+
+연결이 실제로 어떻게 사용되는지 살펴보겠습니다.
 
 ```html
 <button>Press me</button>
+<div id="greeting"></div>
 ```
 
 ```js
-var button = document.querySelector("button");
+const button = document.querySelector("button");
 
-button.onclick = function () {
-  var name = prompt("What is your name?");
-  alert("Hello " + name + ", nice to see you!");
-};
+function greet() {
+  const name = prompt("What is your name?");
+  const greeting = document.querySelector("#greeting");
+  greeting.textContent = `Hello ${name}, nice to see you!`;
+}
+
+button.addEventListener("click", greet);
 ```
 
-{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Concatenation_in_context', '100%', 50) }}
 
-여기서 우리는 {{domxref("Window.prompt()", "Window.prompt()")}} 를 4번째 줄에 쓰는데, 그것은 팝업 대화 상자를 통해 질문에 응답하도록 요청한 다음 지정된 변수 내에 입력하는 텍스트를 저장합니다 — 이 경우에는 `name` 에 저장합니다. 우리는{{domxref("Window.alert()", "Window.alert()")}} 을 5번째 줄에 사용하여 두 개의 문자열 리터럴 및 변수의 값이 포함된 다른 팝업을 표시합니다.
+여기서는 팝업 대화 상자를 통해 사용자에게 질문에 대한 답변을 요청한 다음 입력한 텍스트를 지정된 변수(이 경우 이름)에 저장하는 {{domxref("window.prompt()", "window.prompt()")}} 함수를 사용하고 있습니다. 그런 다음 일반 인사말 메시지에 `name`을 삽입하는 문자열을 표시합니다.
 
-### 숫자 vs 문자열
+### "+"를 이용한 연결
 
-1. 그러면 문자열과 숫자를 추가 (또는 연결) 하면 어떻게 될까요? 콘솔에서 사용해 보겠습니다.
+템플릿 리터럴에만 `${}`를 사용할 수 있으며 일반 문자열에는 사용할 수 없습니다. `+`연산자를 사용하여 일반 문자열을 연결할 수 있습니다.
 
-   ```js
-   "Front " + 242;
-   ```
+```js
+const greeting = "Hello";
+const name = "Chris";
+console.log(greeting + ", " + name); // "Hello, Chris"
+```
 
-   이 경우 오류가 발생할 것으로 예상할 수 있지만 잘 작동합니다. 숫자로 문자열을 나타내려는 것은 말이 안되지만 숫자를 문자열로 표현하는 것은 의미가 있습니다. 그래서 브라우저는 숫자를 문자열로 변환하고 두 문자열을 서로 연결시킵니다.
+하지만 템플릿 리터럴을 사용하면 일반적으로 더 읽기 쉬운 코드를 얻을 수 있습니다.
 
-2. 숫자 두 개로도 연결할 수 있습니다 — 따옴표로 감싸면 숫자를 강제로 문자열로 만들 수 있습니다. 아래 코드를 실행해보세요(아래 코드에서 변수가 숫자인지 문자열인지를 확인하기 위해 `typeof` 연산자를 사용합니다.):
+### 문자열에 표현식 포함
 
-   ```js
-   var myDate = "19" + "67";
-   typeof myDate;
-   ```
+템플릿 리터럴에 변수뿐만 아니라 JavaScript 표현식도 포함할 수 있으며, 그 결과도 결과에 포함됩니다.
 
-3. 만약 코드에 문자열로 바꾸고 싶은 숫자형 변수가 있지만 변수 자체의 값을 바꾸고 싶지 않거나 숫자로 바꾸고 싶은 문자열 변수가 있지만 변수 자체의 값을 바꾸고 싶지 않으면 아래와 같은 생성자를 사용할 수 있습니다:
+```js
+const song = "Fight the Youth";
+const score = 9;
+const highestScore = 10;
+const output = `I like the song ${song}. I gave it a score of ${
+  (score / highestScore) * 100
+}%.`;
+console.log(output); // "I like the song Fight the Youth. I gave it a score of 90%."
+```
 
-   - {{jsxref("Number")}} 객체는 가능하면 어떠한 입력값이건 숫자로 바꿉니다. 다음 코드를 실행해보세요:
+## 여러줄 문자열
 
-     ```js
-     var myString = "123";
-     var myNum = Number(myString);
-     typeof myNum;
-     ```
+템플릿 리터럴은 소스 코드의 줄 바꿈을 존중하므로 다음과 같이 여러 줄에 걸쳐 있는 문자열을 작성할 수 있습니다.
 
-   - 반면, 모든 숫자는 [`toString()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 이라는 함수를 가지고 있습니다. 이 함수는 숫자를 동등한 문자열로 변환합니다. 다음 코드를 실행해보세요:
+```js
+const newline = `One day you finally knew
+what you had to do, and began,`;
+console.log(newline);
 
-     ```js
-     var myNum = 123;
-     var myString = myNum.toString();
-     typeof myString;
-     ```
+/*
+One day you finally knew
+what you had to do, and began,
+*/
+```
 
-   이 생성자들은 어떤 상황에서는 정말 유용할 수 있습니다. 예를 들어, 만약 어떤 사용자가 숫자를 텍스트 필드 폼에 입력하면, 그 입력 값은 문자열일 것입니다. 하지만 만약 여러분이 이 숫자를 어떤 값에다 더하고 싶다면, 이 입력 값을 숫자로 변환해야 합니다. 이 경우 `Number()` 에 이 값을 넘겨줘서 이 문제를 해결할 수 있습니다.우리는 이미 [Number Guessing Game, in line 61](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L61) 에서 이를 사용한 적이 있습니다.
+일반 문자열을 사용하여 동일한 출력을 얻으려면 문자열에 줄 바꿈 문자(`\n`)를 포함해야 합니다.
+
+```js
+const newline = "One day you finally knew\nwhat you had to do, and began,";
+console.log(newline);
+
+/*
+One day you finally knew
+what you had to do, and began,
+*/
+```
+
+고급 기능에 대한 더 많은 예제와 자세한 내용은 [템플릿 리터럴](/ko/docs/Web/JavaScript/Reference/Template_literals) 참조 페이지를 참조하세요.
+
+## 문자열에 따옴표 포함
+
+문자열의 시작과 끝을 표시하기 위해 따옴표를 사용하는데, 문자열에 실제 따옴표를 포함하려면 어떻게 해야 할까요? 이것이 작동하지 않는다는 것을 알고 있습니다.
+
+```js-nolint example-bad
+const badQuotes = "She said "I think so!"";
+```
+
+한 가지 일반적인 옵션은 다른 문자 중 하나를 사용하여 문자열을 선언하는 것입니다.
+
+```js-nolint
+const goodQuotes1 = 'She said "I think so!"';
+const goodQuotes2 = `She said "I'm not going in there!"`;
+```
+
+또 다른 옵션은 문제가 있는 따옴표를 이스케이프하는 것입니다. 문자를 이스케이프 처리한다는 것은 문자가 코드의 일부가 아닌 텍스트로 인식되도록 문자에 어떤 조치를 취한다는 뜻입니다. JavaScript에서는 문자 바로 앞에 백슬래시를 넣어 이 작업을 수행합니다. 이렇게 해보세요.
+
+```js-nolint
+const bigmouth = 'I\'ve got no right to take my place…';
+console.log(bigmouth);
+```
+
+동일한 기법을 사용하여 다른 특수 문자를 삽입할 수 있습니다. 자세한 내용은 [이스케이프 시퀀스](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#escape_sequences)를 참조하세요.
+
+## 숫자 vs. 문자열
+
+문자열과 숫자를 연결하려고 하면 어떻게 될까요? 콘솔에서 시도해 봅시다.
+
+```js
+const name = "Front ";
+const number = 242;
+console.log(`${name}${number}`); // "Front 242"
+```
+
+이 경우 오류가 반환될 것으로 예상할 수 있지만 정상적으로 작동합니다. 숫자를 문자열로 표시하는 방법은 상당히 잘 정의되어 있으므로 브라우저는 숫자를 문자열로 자동 변환하고 두 문자열을 연결합니다.
+
+문자열로 변환하려는 숫자 변수가 있거나 숫자로 변환하려는 문자열 변수가 있는 경우 다음 두 가지 구문을 사용할 수 있습니다.
+
+- {{jsxref("Number/Number", "Number()")}} 함수는 전달된 모든 것을 숫자로 변환할 수 있는 경우 숫자로 변환합니다. 다음을 시도해 보세요:
+
+  ```js
+  const myString = "123";
+  const myNum = Number(myString);
+  console.log(typeof myNum);
+  // number
+  ```
+
+- 반대로 {{jsxref("String/String", "String()")}} 함수는 인수를 문자열로 변환합니다. 이렇게 해보세요.
+
+  ```js
+  const myNum2 = 123;
+  const myString2 = String(myNum2);
+  console.log(typeof myString2);
+  // string
+  ```
+
+이러한 구조는 일부 상황에서 매우 유용할 수 있습니다. 예를 들어 사용자가 양식의 텍스트 필드에 숫자를 입력하면 문자열이 됩니다. 하지만 이 숫자를 무언가에 추가하려면 숫자여야 하므로 Number()를 통해 숫자를 전달하여 처리할 수 있습니다. [숫자 맞추기 게임의 59번째 줄](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L59)에서 정확히 이 작업을 수행했습니다.
 
 ## 마치며
 
-여기까지 자바스크립트에서 다루는 문자열의 기본이었습니다. 다음 글에서는 자바스크립트에서 문자열에 사용할 수 있는 기본 제공 메소드를 조작하는 방법에 대해 알아보겠습니다.
+지금까지 JavaScript에서 다루는 문자열의 기본에 대해 알아봤습니다. 다음 글에서는 이를 바탕으로 JavaScript에서 문자열에 사용할 수 있는 몇 가지 기본 제공 메서드와 이를 사용하여 문자열을 원하는 형태로 조작하는 방법을 살펴보겠습니다.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}

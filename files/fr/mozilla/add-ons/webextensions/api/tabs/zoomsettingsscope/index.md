@@ -3,7 +3,7 @@ title: tabs.ZoomSettingsScope
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettingsScope
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Définit si les changements de zoom persisteront pour l'origine de la page ou ne prendront effet que dans cet onglet. La valeur par défaut est à `per-origin` lorsque {{WebExtAPIRef("tabs.zoomSettingsMode")}} est "automatique", et est toujours `per-tab`.
 
@@ -22,7 +22,7 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >

@@ -26,4 +26,4 @@ var mySyncEvent = new SyncEvent(type, init)
 
 ## ブラウザーの互換性
 
-{{Compat("api.SyncEvent.SyncEvent")}}
+{{Compat}}

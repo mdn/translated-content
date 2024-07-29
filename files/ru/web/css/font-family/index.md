@@ -193,8 +193,8 @@ font-family:
 
 {{Compat}}
 
-\[1] `system-ui` в данный момент не реализовано, смотри {{bug(1226042)}}.
+\[1] `system-ui` в данный момент не реализовано, смотри [Firefox bug 1226042](https://bugzil.la/1226042).
 
 \[2] `system-ui` реализовано в Safari ([wkbug.com/151493](https://bugs.webkit.org/show_bug.cgi?id=151493)), возможно будет выпущено в ближайшем времени.
 
-\[3] префиксный алиас `-apple-system` поддерживается в Safari, начиная с OS X 10.11 и iOS 9, а также в Firefox 43 на macOS ({{bug(1201318)}}).
+\[3] префиксный алиас `-apple-system` поддерживается в Safari, начиная с OS X 10.11 и iOS 9, а также в Firefox 43 на macOS ([Firefox bug 1201318](https://bugzil.la/1201318)).

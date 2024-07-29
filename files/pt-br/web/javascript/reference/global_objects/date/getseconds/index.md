@@ -32,18 +32,13 @@ var seconds = Xmas95.getSeconds();
 console.log(seconds); // 30
 ```
 
-## Espeficicações
+## Especificações
 
-| Specification                                                                          | Status               | Comment                                            |
-| -------------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                    | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.22', 'Date.prototype.getSeconds')}}                   | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.getseconds', 'Date.prototype.getSeconds')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-date.prototype.getseconds', 'Date.prototype.getSeconds')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getSeconds")}}
+{{Compat}}
 
 ## Veja também
 

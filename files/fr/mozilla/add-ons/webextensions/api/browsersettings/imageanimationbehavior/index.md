@@ -3,7 +3,7 @@ title: browserSettings.imageAnimationBehavior
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/imageAnimationBehavior
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour modifier la façon dont le navigateur traite les images animées, telles que les GIF.
 

@@ -1,6 +1,8 @@
 ---
 title: text-shadow
 slug: Web/CSS/text-shadow
+l10n:
+  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
 {{CSSRef}}
@@ -32,6 +34,7 @@ text-shadow: 5px 10px;
 text-shadow: inherit;
 text-shadow: initial;
 text-shadow: revert;
+text-shadow: revert-layer;
 text-shadow: unset;
 ```
 
@@ -60,9 +63,9 @@ text-shadow: unset;
 
 {{csssyntax}}
 
-## Examples
+## 例
 
-<h3 id="Simple_shadow">単純な影</h3>
+### 単純な影
 
 ```css
 .red-text-shadow {
@@ -79,7 +82,7 @@ text-shadow: unset;
 
 {{EmbedLiveSample('Simple_shadow', '660px', '90px')}}
 
-<h3 id="Multiple_shadows">複数の影</h3>
+### 複数の影
 
 ```css
 .white-text-with-blue-shadow {
@@ -111,12 +114,10 @@ text-shadow: unset;
 
 {{Compat}}
 
-### Quantum CSS のメモ
-
-- Gecko には {{cssxref("transition")}} にバグがあり、色が指定された `text-shadow` から色が指定されていない `text-shadow` へのトランジションが動作しません ([Firefox バグ 726550](https://bugzil.la/726550))。これは Firefox の新しいパラレル CSS エンジン ([Quantum CSS](https://wiki.mozilla.org/Quantum) または [Stylo](https://wiki.mozilla.org/Quantum/Stylo) とも呼ばれ、 Firefox 57 でリリースされる予定です) で修正されています。
-
 ## 関連情報
 
-- {{cssxref("box-shadow")}}
-- {{cssxref("&lt;color&gt;")}} データ型 (影の色を指定するため)
+- {{cssxref("&lt;color&gt;")}} データ型（影の色を指定するため）
 - [CSS を使った HTML の要素への色の適用](/ja/docs/Web/HTML/Applying_color)
+- {{cssxref("box-shadow")}}
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+- [Applying color to HTML elements using CSS](/ja/docs/Web/CSS/CSS_colors/Applying_color)

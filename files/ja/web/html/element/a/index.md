@@ -29,7 +29,7 @@ l10n:
 
     - 値を定義すると、ファイル名として提案します。 `/` および `\` はアンダースコアに変換されます。ファイルシステムがファイル名に禁止している文字は他にもあるかもしれませんので、ブラウザーは必要に応じてファイル名を調整します。
 
-    > **メモ:**
+    > [!NOTE]
     >
     > - `download` は[同一オリジンの URL](/ja/docs/Web/Security/Same-origin_policy) と、 `blob:`、 `data:` の各スキームでのみ動作します。
     > - ブラウザーがダウンロードをどのように扱うかは、ブラウザー、ユーザーの設定、その他の要因によって異なります。ダウンロードを開始する前にユーザーにプロンプトが表示されたり、ファイルが自動的に保存されたり、外部のアプリケーションまたはブラウザー自体で自動的に開いたりすることがあります。
@@ -46,6 +46,7 @@ l10n:
     - メディアファイルの一部を示すメディアフラグメント
     - 電話番号を示す `tel:` URL
     - メールアドレスを示す `mailto:` URL
+    - SMS テキストメッセージを示す `sms:` URL
     - ウェブブラウザーがその他の URL スキームに対応していない可能性がある場合、ウェブサイトは [`registerProtocolHandler()`](/ja/docs/Web/API/Navigator/registerProtocolHandler) を使用することができます。
 
 - `hreflang`
@@ -69,7 +70,7 @@ l10n:
   - : リンク先の URL との関係を示す、空白で区切られたリンク種別のリストです。
 - `target`
 
-  - : リンク先の URL を表示する場所、*閲覧コンテキスト*（タブ、ウィンドウ、{{HTMLElement("iframe")}}）の名前で指定します。以下のキーワードは URL の読み込み先について特別な意味を持ちます。
+  - : リンク先の URL を表示する場所、_閲覧コンテキスト_（タブ、ウィンドウ、{{HTMLElement("iframe")}}）の名前で指定します。以下のキーワードは URL の読み込み先について特別な意味を持ちます。
 
     - `_self`: 現在の閲覧コンテキストです。（既定値）
     - `_blank`: ふつうは新しいタブですが、新しいウィンドウを使用するようにブラウザーを設定できます。
@@ -87,7 +88,8 @@ l10n:
 
   - : リンク先 URL の{{Glossary("character encoding", "文字エンコーディング")}}のヒントでした。
 
-    > **メモ:** この属性は廃止されており、**ページ作者が使用すべきではありません**。リンク先の URL で HTTP の {{HTTPHeader("Content-Type")}} ヘッダーを使用してください。
+    > [!NOTE]
+    > この属性は廃止されており、**ページ作者が使用すべきではありません**。リンク先の URL で HTTP の {{HTTPHeader("Content-Type")}} ヘッダーを使用してください。
 
 - `coords` {{Deprecated_Inline}}
   - : [`shape` 属性](#shape)とともに使用されます。カンマ区切りの座標のリストです。
@@ -95,7 +97,8 @@ l10n:
 
   - : ページ内のリンク先の場所を定義するアンカーで必要でした。 HTML 4.01 では、値がまったく同じであれば `id` 属性と `name` 属性を `<a>` 要素内で同時に使用できました。
 
-    > **メモ:** 代わりにグローバル属性の [`id`](/ja/docs/Web/HTML/Global_attributes#id) を使用してください。
+    > [!NOTE]
+    > 代わりにグローバル属性の [`id`](/ja/docs/Web/HTML/Global_attributes#id) を使用してください。
 
 - `rev` {{Deprecated_Inline}}
   - : この属性は、逆方向のリンクを指定します。 [`rel` 属性](#rel)と逆の関係を定義していました。これはとても紛らわしいため、非推奨になりました。
@@ -103,7 +106,8 @@ l10n:
 
   - : イメージマップ内のハイパーリンクの領域の形状です。
 
-    > **メモ:** イメージマップについては {{HTMLElement("area")}} 要素を使用してください。
+    > [!NOTE]
+    > イメージマップについては {{HTMLElement("area")}} 要素を使用してください。
 
 ## 例
 
@@ -112,7 +116,7 @@ l10n:
 #### HTML
 
 ```html
-<a href="https://www.mozilla.com"> Mozilla </a>
+<a href="https://www.mozilla.com">Mozilla</a>
 ```
 
 #### 結果
@@ -231,6 +235,7 @@ a {
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 c.fillStyle = "hotpink";
+let isDrawing;
 
 function draw(x, y) {
   if (isDrawing) {
@@ -242,7 +247,7 @@ function draw(x, y) {
 }
 
 canvas.addEventListener("mousemove", (event) =>
-  draw(event.offsetX, event.offsetY)
+  draw(event.offsetX, event.offsetY),
 );
 canvas.addEventListener("mousedown", () => (isDrawing = true));
 canvas.addEventListener("mouseup", () => (isDrawing = false));
@@ -251,7 +256,7 @@ document
   .querySelector("a")
   .addEventListener(
     "click",
-    (event) => (event.target.href = canvas.toDataURL())
+    (event) => (event.target.href = canvas.toDataURL()),
   );
 ```
 
@@ -326,7 +331,7 @@ document
 #### HTML 以外のリソースへのリンク
 
 ```html
-<a href="2017-annual-report.ppt"> 2017 年次レポート (PowerPoint) </a>
+<a href="2017-annual-report.ppt">2017 年次レポート (PowerPoint)</a>
 ```
 
 リンクの動作を示すためにアイコンを使用する場合は、[alt テキスト](/ja/docs/Web/HTML/Element/img#alt)を確実に入れてください。
@@ -362,8 +367,8 @@ document
 
   <header>…</header>
 
-  <main id="content"></main>
   <!-- スキップリンクがたどり着く位置 -->
+  <main id="content"></main>
 </body>
 ```
 
@@ -462,9 +467,6 @@ document
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
-          >記述コンテンツ</a
-        >を受け入れるすべての要素、または
         <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素、ただし他の <code>&#x3C;a></code> 要素でないもの。
@@ -475,8 +477,7 @@ document
       <td>
         <a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> （<code>href</code> 属性がある場合）、
         それ以外は
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a
-        >
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>
     <tr>

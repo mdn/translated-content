@@ -39,7 +39,7 @@ Location: http://www.example.org/index.asp
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.301")}}
+{{Compat}}
 
 ## Veja também
 

@@ -9,7 +9,7 @@ slug: Web/SVG
 
 **可缩放矢量图形**（**Scalable Vector Graphics，SVG**）基于 [XML](/zh-CN/docs/Web/XML) 标记语言，用于描述二维的[矢量图形](https://zh.wikipedia.org/wiki/矢量图形)。
 
-作为一个基于文本的开放网络标准，SVG 能够优雅而简洁地渲染不同大小的图形，并和[CSS](/zh-CN/docs/Learn/CSS)、[DOM](/zh-CN/docs/Web/API/Document_Object_Model)、[JavaScript](/zh-CN/docs/Web/JavaScript) 和 [SMIL](/zh-CN/docs/Web/SVG/SVG_animation_with_SMIL) 等其他网络标准无缝衔接。本质上，SVG 相对于图像，就好比 [HTML](/zh-CN/docs/Web/HTML) 相对于文本。
+作为一个基于文本的开放网络标准，SVG 能够优雅而简洁地渲染不同大小的图形，并和 [CSS](/zh-CN/docs/Learn/CSS)、[DOM](/zh-CN/docs/Web/API/Document_Object_Model)、[JavaScript](/zh-CN/docs/Web/JavaScript) 和 [SMIL](/zh-CN/docs/Web/SVG/SVG_animation_with_SMIL) 等其他网络标准无缝衔接。本质上，SVG 相对于图像，就好比 [HTML](/zh-CN/docs/Web/HTML) 相对于文本。
 
 SVG 图像及其相关行为被定义于 [XML](/zh-CN/docs/Web/XML/XML_Introduction) 文本文件之中，这意味着可以对它们进行搜索、索引、编写脚本以及压缩。此外，这也意味着可以使用任何文本编辑器和绘图软件来创建和编辑它们。
 

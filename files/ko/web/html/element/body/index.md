@@ -76,61 +76,61 @@ slug: Web/HTML/Element/body
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("alink")}} {{deprecated_inline}}
+- `alink` {{deprecated_inline}}
   - : 선택한 하이퍼텍스트 링크의 색. _이 방법은 적합하지 않습니다. CSS {{cssxref("color")}} 속성과 {{cssxref(":active")}}의 조합을 대신 사용하세요._
-- {{htmlattrdef("background")}} {{deprecated_inline}}
+- `background` {{deprecated_inline}}
   - : 배경 이미지의 URI. _이 방법은 적합하지 않습니다. CSS {{cssxref("background")}} 속성을 대신 적용하세요._
-- {{htmlattrdef("bgcolor")}} {{deprecated_inline}}
+- `bgcolor` {{deprecated_inline}}
   - : 배경색. _이 방법은 적합하지 않습니다. CSS {{cssxref("background-color")}} 속성을 대신 적용하세요._
-- {{htmlattrdef("bottommargin")}} {{deprecated_inline}}
+- `bottommargin` {{deprecated_inline}}
   - : 아래쪽 여백. _이 방법은 적합하지 않습니다. CSS {{cssxref("margin-bottom")}} 속성을 대신 적용하세요._
-- {{htmlattrdef("leftmargin")}} {{deprecated_inline}}
+- `leftmargin` {{deprecated_inline}}
   - : 왼쪽 여백. _이 방법은 적합하지 않습니다. CSS {{cssxref("margin-left")}} 속성을 대신 적용하세요._
-- {{htmlattrdef("link")}} {{deprecated_inline}}
+- `link` {{deprecated_inline}}
   - : 방문하지 않은 하이퍼텍스트 링크의 색. _이 방법은 적합하지 않습니다. CSS {{cssxref("color")}} 속성과 {{cssxref(":link")}}의 조합을 대신 사용하세요._
-- {{htmlattrdef("onafterprint")}}
+- `onafterprint`
   - : 사용자가 문서를 출력한 뒤 호출할 함수.
-- {{htmlattrdef("onbeforeprint")}}
+- `onbeforeprint`
   - : 사용자가 문서 출력을 요청했을 때 호출할 함수.
-- {{htmlattrdef("onbeforeunload")}}
+- `onbeforeunload`
   - : 문서를 처분unload하기 직전에 호출할 함수.
-- {{htmlattrdef("onblur")}}
+- `onblur`
   - : 문서가 포커스를 상실했을 때 호출할 함수.
-- {{htmlattrdef("onerror")}}
+- `onerror`
   - : 문서를 제대로 불러오지 못했을 때 호출할 함수.
-- {{htmlattrdef("onfocus")}}
+- `onfocus`
   - : 문서가 포커스를 받을 때 호출할 함수.
-- {{htmlattrdef("onhashchange")}}
+- `onhashchange`
   - : 문서의 현재 주소 중 Fragment identifier part(해시(`'#'`) 문자로 시작)가 변경됐을 때 호출할 함수.
-- {{htmlattrdef("onlanguagechange")}} {{experimental_inline}}
+- `onlanguagechange` {{experimental_inline}}
   - : 선호 언어 변경 시 호출할 함수.
-- {{htmlattrdef("onload")}}
+- `onload`
   - : 문서를 다 불러왔을 때 호출할 함수.
-- {{htmlattrdef("onmessage")}}
+- `onmessage`
   - : 문서가 메시지를 받았을 때 호출할 함수.
-- {{htmlattrdef("onoffline")}}
+- `onoffline`
   - : 네트워크 연결이 실패했을 때 호출할 함수.
-- {{htmlattrdef("ononline")}}
+- `ononline`
   - : 네트워크 연결을 복구했을 때 호출할 함수.
-- {{htmlattrdef("onpopstate")}}
+- `onpopstate`
   - : 사용자가 세션 기록을 따라 이동했을 때 호출할 함수.
-- {{htmlattrdef("onredo")}}
+- `onredo`
   - : 사용자가 되돌리기 변경 기록(undo transaction history)에서 다시 이후로 이동했을 때 호출할 함수.
-- {{htmlattrdef("onresize")}}
+- `onresize`
   - : 문서의 크기가 바뀔 때 호출할 함수.
-- {{htmlattrdef("onstorage")}}
+- `onstorage`
   - : 저장 영역이 변경되었을 때 호출할 함수.
-- {{htmlattrdef("onundo")}}
+- `onundo`
   - : 사용자가 되돌리기 변경 기록(undo transaction history)에서 이전으로 이동했을 때 호출할 함수.
-- {{htmlattrdef("onunload")}}
+- `onunload`
   - : 문서를 처분(unload) 중일 때 호출할 함수.
-- {{htmlattrdef("rightmargin")}} {{deprecated_inline}}
+- `rightmargin` {{deprecated_inline}}
   - : 오른쪽 여백. _이 방법은 적합하지 않습니다. CSS {{cssxref("margin-right")}} 속성을 대신 적용하세요._
-- {{htmlattrdef("text")}} {{deprecated_inline}}
+- `text` {{deprecated_inline}}
   - : 글자의 전경색. _이 방법은 적합하지 않습니다. CSS {{cssxref("color")}} 속성을 대신 적용하세요._
-- {{htmlattrdef("topmargin")}} {{deprecated_inline}}
+- `topmargin` {{deprecated_inline}}
   - : 위쪽 여백. _이 방법은 적합하지 않습니다. CSS {{cssxref("margin-top")}} 속성을 대신 적용하세요._
-- {{htmlattrdef("vlink")}} {{deprecated_inline}}
+- `vlink` {{deprecated_inline}}
   - : 방문했던 하이퍼텍스트 링크의 색. _이 방법은 적합하지 않습니다. CSS {{cssxref("color")}} 속성과 {{cssxref(":visited")}}의 조합을 대신 사용하세요._
 
 ## 예제

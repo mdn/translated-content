@@ -3,7 +3,7 @@ title: tabs.TAB_ID_NONE
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/TAB_ID_NONE
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Une valeur d'ID spéciale donnée aux onglets qui ne sont pas des onglets du navigateur (par exemple, des onglets dans les fenêtres devtools).
 
@@ -13,7 +13,7 @@ Une valeur d'ID spéciale donnée aux onglets qui ne sont pas des onglets du nav
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#property-TAB_ID_NONE). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >

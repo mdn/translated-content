@@ -3,7 +3,7 @@ title: String.prototype.strike()
 slug: Web/JavaScript/Reference/Global_Objects/String/strike
 ---
 
-{{JSRef("Objetos_globales", "String")}}
+{{JSRef}}
 
 {{deprecated_header}}
 

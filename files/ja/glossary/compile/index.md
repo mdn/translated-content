@@ -1,23 +1,25 @@
 ---
 title: Compile (コンパイル)
 slug: Glossary/Compile
+l10n:
+  sourceCommit: 06fb3fd5a4967ea68a766f318d08fd9d1bd46e9d
 ---
 
-コンパイルとは、特定の{{Glossary("computer programming", "プログラミング言語")}}を用いて記述されたコンピュータープログラムを他の言語 (普通はコンピューターが実行できるバイナリ言語) を用いて記述された同じプログラムに形を変えることである。コンパイラーはこのタスクを実行するソフトウェアです。時々、このタスクは "アセンブル" や "ビルド" とも呼ばれて、典型的には単なるコンパイルの完了以上のことを示します。例えば、あるバイナリーフォーマットにパッケージするなど。
+{{GlossarySidebar}}
 
-通常、コンパイラーは C や{{Glossary("Java")}} のように人間が理解しやすい高級言語をアセンブリのような CPU が理解できる機械語に変換します。TypeScript を {{Glossary("JavaScript")}} にコンパイルするような、同レベル間の言語を翻訳するコンパイラーはトランスパイラやクロスコンパイラーと呼ばれます。これらはプロダクティビティツールと考えられています。
+**コンパイル**とは、指定された{{Glossary("computer programming", "言語")}}で書かれたコンピュータープログラムを、別の形式や言語の一連の命令に変換する作業のことです。**コンパイラー**は、その作業を実行するコンピュータープログラムのことです。
 
-ほとんどのコンパイラーは、ahead-of-time (AOT) か just-in-time (JIT) で動きます。プログラマーは、たいていコマンドラインか使用している {{Glossary("IDE")}} から AOT コンパイラーを起動します。最も有名なコンパイラーである "gcc" はその一例です。
-JIT コンパイラーはたいてい透過的であり、性能のために使用されます。例えばブラウザーの場合、Firefox の [SpiderMonkey](/ja/docs/Mozilla/Projects/SpiderMonkey) JavaScript エンジンは組み込み JIT コンパイラーを持っています。これは、ウェブサイトを閲覧中にウェブサイトの JavaScript がより速く実行できるように機械語のコードにコンパイルします。[WebAssembly](/ja/docs/WebAssembly) のようなプロジェクトはこれをより良く行えるようにします。
+通常、コンパイラーは [C++](https://ja.wikipedia.org/wiki/C++)、[Rust](<https://ja.wikipedia.org/wiki/Rust_(プログラミング言語)>)、[Java](https://ja.wikipedia.org/wiki/Java) などの高級言語で書かれたコードを実行可能な（実行可能な）コード、いわゆる**バイナリーコード**や**機械語**に変換します。例えば、[WebAssembly](/ja/docs/WebAssembly) は実行可能なバイナリコードという形で、[C++、Rust、C#、Go、Swift、その他いくつかの言語で書かれたコードからコンパイルし](https://webassembly.org/getting-started/developers-guide/)、任意のウェブページ上で実行することができ、ほとんどの機能に現行ブラウザーが対応しています（[ブラウザー互換性表](/ja/docs/WebAssembly#ブラウザーの互換性)を参照）。
 
-## さらに学ぶ
+ほとんどのコンパイラーは、AOT (ahead-of-time) コンパイルまたは JIT (just-in-time) コンパイルを行います。
 
-### 一般的な知識
+GNU の `gcc` コンパイラーは AOT コンパイラーの有名な例です。AOT コンパイラーは通常、シェル環境のコマンドラインから（端末やコンソールから）、あるいは {{Glossary("IDE")}} 内で呼び出されます。
 
-- [コンパイラ](https://ja.wikipedia.org/wiki/コンパイラ) (Wikipedia)
-- [GNU Compiler Collection (GCC)](https://gcc.gnu.org)
+JIT コンパイラーは通常、直接呼び出されるのではなく、パフォーマンスを向上させる目的で、ソフトウェアのランタイムに内部的に組み込まれています。例えば、主要なブラウザーはすべて、JIT コンパイラーを内蔵した JavaScript エンジンを使用しています。
 
-### 学習資料
+コンパイラーは、例えば TypeScript から {{Glossary("JavaScript")}} へのように、より高いレベルの言語間で翻訳することもあり、この場合はよく**トランスパイラー** (transpiler) と呼ばれます。
 
-- [Base CS Introduction on Compilers](https://medium.com/basecs/a-deeper-inspection-into-compilation-and-interpretation-d98952ebc842)
-- [A big list of learning material on StackOverflow](http://stackoverflow.com/a/1672/133203)
+## 関連情報
+
+- [コンパイラ](https://ja.wikipedia.org/wiki/コンパイラ)（ウィキペディア）
+- [WebAssembly](/ja/docs/WebAssembly)

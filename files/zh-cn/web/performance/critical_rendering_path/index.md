@@ -3,7 +3,9 @@ title: 关键渲染路径
 slug: Web/Performance/Critical_rendering_path
 ---
 
-**关键渲染路径**是浏览器将 HTML，CSS 和 JavaScript 转换为屏幕上的像素所经历的步骤序列。优化关键渲染路径可提高渲染性能。关键渲染路径包含了 [文档对象模型](/zh-CN/docs/Web/API/Document_Object_Model)(DOM)，[CSS 对象模型](/zh-CN/docs/Web/API/CSS_Object_Model) (CSSOM)，渲染树和布局。
+{{QuickLinksWithSubPages("Web/Performance")}}
+
+**关键渲染路径**是浏览器将 HTML，CSS 和 JavaScript 转换为屏幕上的像素所经历的步骤序列。优化关键渲染路径可提高渲染性能。关键渲染路径包含了[文档对象模型](/zh-CN/docs/Web/API/Document_Object_Model)（DOM）、[CSS 对象模型](/zh-CN/docs/Web/API/CSS_Object_Model)（CSSOM）、渲染树和布局。
 
 在解析 HTML 时会创建文档对象模型。HTML 可以请求 JavaScript，而 JavaScript 反过来，又可以更改 DOM。HTML 包含或请求样式，依次来构建 CSS 对象模型。浏览器引擎将两者结合起来以创建渲染树。布局确定页面上所有内容的大小和位置。确定布局后，将像素绘制到屏幕上。
 
@@ -17,7 +19,7 @@ Web 性能包含了服务器请求和响应、加载、执行脚本、渲染、�
 
 ### 文档对象模型
 
-DOM 构建是增量的。HTML 响应变成令牌（token），令牌变成节点，而节点又变成 DOM 树。单个 DOM 节点以 startTag 令牌开始，以 endTag 令牌结束。节点包含有关 HTML 元素的所有相关信息。该信息是使用令牌描述的。节点根据令牌层次结构连接到 DOM 树中。如果另一组 startTag 和 endTag 令牌位于一组 startTag 和 endTag 之间，则您在节点内有一个节点，这就是我们定义 DOM 树层次结构的方式。
+DOM 构建是增量的。HTML 响应变成令牌（token），令牌变成节点，而节点又变成 DOM 树。单个 DOM 节点以 startTag 令牌开始，以 endTag 令牌结束。节点包含有关 HTML 元素的所有相关信息。该信息是使用令牌描述的。节点根据令牌层次结构连接到 DOM 树中。如果另一组 startTag 和 endTag 令牌位于一组 startTag 和 endTag 之间，则你在节点内有一个节点，这就是我们定义 DOM 树层次结构的方式。
 
 节点数量越多，关键渲染路径中的后续事件将花费的时间就越长。测一下吧！几个额外的节点不会有什么区别，但“DIV 癖”（divitis）可能会导致问题。
 
@@ -35,7 +37,7 @@ CSS 有其自身的规则集合用来定义标识。注意 CSS 中的 C 代表�
 
 渲染树包括了内容和样式：DOM 和 CSSOM 树结合为渲染树。为了构造渲染树，浏览器检查每个节点，从 DOM 树的根节点开始，并且决定哪些 CSS 规则被添加。
 
-渲染树只包含了可见内容。头部（通常）不包含任何可见信息，因此不会被包含在渲染树种。如果有元素上有 `display: none;`，它本身和其后代都不会出现在渲染树中。
+渲染树只包含了可见内容。头部（通常）不包含任何可见信息，因此不会被包含在渲染树中。如果有元素上有 `display: none;`，它本身和其后代都不会出现在渲染树中。
 
 ### 布局
 

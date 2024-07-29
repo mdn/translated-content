@@ -1,7 +1,11 @@
 ---
 title: Property (CSS)
 slug: Glossary/Property/CSS
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
+
+{{GlossarySidebar}}
 
 **CSS 특성**은 연관된 값이 어떻게 브라우저가 요소를 표시하는지 한 측면을 정의하는 특성(색상처럼)입니다.
 

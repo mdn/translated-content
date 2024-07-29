@@ -49,7 +49,11 @@ line-height: unset;
 - [`<процентное соотношение>`]()
   - : Относительно размера шрифта самого элемента.Relative to the font size of the element itself. The computed value is this {{cssxref("&lt;percentage&gt;")}} multiplied by the element's computed font size. **Percentage** values may produce unexpected results (see the second example below).
 
-### Формальный синтаксис
+## Формальное определение
+
+{{cssinfo}}
+
+## Формальный синтаксис
 
 {{csssyntax}}
 
@@ -132,20 +136,14 @@ h1 {
 
 {{EmbedLiveSample('Prefer_unitless_numbers_for_line-height_values', 600, 200)}}
 
-## Specifications
+## Спецификации
 
-| Specification                                                             | Status                        | Comment                              |
-| ------------------------------------------------------------------------- | ----------------------------- | ------------------------------------ |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'line-height')}}        | {{Spec2('CSS3 Transitions')}} | Defines `line-height` as animatable. |
-| {{SpecName('CSS2.1', 'visudet.html#propdef-line-height', 'line-height')}} | {{Spec2('CSS2.1')}}           | No change.                           |
-| {{SpecName('CSS1', '#line-height', 'line-height')}}                       | {{Spec2('CSS1')}}             | Initial definition.                  |
+{{Specifications}}
 
-{{cssinfo}}
-
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{Cssxref("font")}}, {{Cssxref("font-size")}}

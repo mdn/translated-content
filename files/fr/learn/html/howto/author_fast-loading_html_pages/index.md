@@ -3,6 +3,8 @@ title: Astuces de création de pages HTML à affichage rapide
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 ---
 
+{{QuickLinksWithSubpages("/fr/docs/Learn/HTML/Howto")}}
+
 C'est connu, les internautes sont de grands impatients, ils veulent des résultats immédiats, avec des gros titres et des réponses courtes et efficaces.
 Une page web optimisé prévoit non seulement un site plus réactif, mais aussi de réduire la charge sur vos serveurs Web et votre connexion Internet. Cela peut être crucial pour les gros sites ou des sites qui ont un pic de trafic dans des circonstances exceptionnelles (telles que les Unes des journaux fracassantes). De plus, Google en tient compte pour son classement.
 
@@ -99,7 +101,6 @@ Notez, cependant, que beaucoup de conseils énumérés dans cette page sont des 
 - [Livre&nbsp;: "Speed Up Your Site" par Andy King](http://www.websiteoptimization.com/)
 - [Site Optimization Tutorial (WebMonkey)](http://webmonkey.wired.com/webmonkey/design/site_building/tutorials/tutorial2.html) (en anglais)
 - [Best Practices for Speeding Up Your Web Site](https://developer.yahoo.com/performance/rules.html) (en anglais)
+- Document d'information d'origine:
 
-**Document d'information d'origine**
-
-- <https://developer.mozilla.org/en/Tips_for_Authoring_Fast-loading_HTML_Pages>
+  - [Astuces de création de pages HTML à affichage rapide](/fr/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)

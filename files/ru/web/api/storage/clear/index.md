@@ -41,7 +41,7 @@ function populateStorage() {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

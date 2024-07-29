@@ -9,13 +9,7 @@ Los elementos {{HTMLElement("input")}} del tipo «**`color`**» proporciona un e
 
 La presentación del elemento puede variar considerablamente entre navegadores y plataformas: podría ser un campo de entrada sencillo que valida automáticamente que la entrada esté en el formato adecuado, o podría lanzar un selector de colores estándar de la plataforma, o incluso podría abrir una ventana de colores personalizada.
 
-## Ejemplo
-
-```html
-<input type="color" />
-```
-
-{{EmbedLiveSample("summary_example1", 700, 30)}}
+{{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}
 
 | **[Value](#value)**             | Una {{domxref("DOMString")}} de siete caracteres que especifica un {{cssxref("&lt;color&gt;")}} en notación hexadecimal en minúsculas |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -28,7 +22,8 @@ La presentación del elemento puede variar considerablamente entre navegadores y
 
 El [`value`](/es/docs/Web/HTML/Element/input#value) de un elemento {{HTMLElement("input")}} del tipo «`color`» es siempre una {{domxref("DOMString")}} que contiene una cadena de siete caracteres en la que se especifica un color RGB de manera hexadecimal. Aunque es posible introducir el color tanto en mayúsculas como en minúsculas, este se almacena en minúsculas. El valor nunca presenta otra forma y nunca está vacío.
 
-> **Nota:** definir el valor a cualquier cosa que no sea un color válido, totalmente opaco y contenido dentro del espacio RGB _en notación hexadecimal_ causará que el valor se establezca a «`#000000`». En particular, no es posible utilizar los nombres de colores estandarizados de CSS ni cualquier sintaxis de función CSS para definir el valor. Esto tiene sentido si se tiene en cuenta que HTML y CSS son lenguajes y especificaciones independientes. Por otra parte, no se admiten los colores que incluyan un canal alfa; definir un color en la notación hexadecimal de nueve caracteres (p. ej., `#009900aa`) también provocará que el valor se establezca a «`#000000`».
+> [!NOTE]
+> Definir el valor a cualquier cosa que no sea un color válido, totalmente opaco y contenido dentro del espacio RGB _en notación hexadecimal_ causará que el valor se establezca a «`#000000`». En particular, no es posible utilizar los nombres de colores estandarizados de CSS ni cualquier sintaxis de función CSS para definir el valor. Esto tiene sentido si se tiene en cuenta que HTML y CSS son lenguajes y especificaciones independientes. Por otra parte, no se admiten los colores que incluyan un canal alfa; definir un color en la notación hexadecimal de nueve caracteres (p. ej., `#009900aa`) también provocará que el valor se establezca a «`#000000`».
 
 ## Uso de las entradas de color
 
@@ -42,7 +37,7 @@ Puede actualizar el ejemplo simple anterior para definir un valor predeterminado
 <input type="color" value="#ff0000" />
 ```
 
-{{EmbedLiveSample("Providing_a_default_color", 700, 30)}}
+{{EmbedLiveSample("Proporcionar un color predeterminado", 700, 30)}}
 
 Si no especifica un valor, se utilizará «`#000000`», negro, de manera predeterminada. El valor debe especificarse en la notación hexadecimal de siete caracteres; esto es, el carácter «#» seguido de dos dígitos para representar el rojo, el verde y el azul: «`#rrggbb`». Si utiliza colores especificados en cualquier otro formato (como los nombres de colores CSS o las funciones cromáticas de CSS como `rgb()` o `rgba()`), deberá convertirlos en valores hexadecimales antes de definir `value`.
 
@@ -161,7 +156,7 @@ Esto define el color de cada uno de los bloques {{HTMLElement("p")}} de manera q
 
 El resultado final es el siguiente:
 
-{{EmbedLiveSample("Example", 700, 200)}}
+{{EmbedLiveSample("Ejemplo", 700, 200)}}
 
 ## Especificaciones
 

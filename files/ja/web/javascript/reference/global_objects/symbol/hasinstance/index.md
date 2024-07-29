@@ -54,7 +54,7 @@ console.log(Animal[Symbol.hasInstance](cat)); // true
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Symbol.hasInstance")}}
+{{Compat}}
 
 ## 関連情報
 

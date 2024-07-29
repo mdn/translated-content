@@ -36,7 +36,8 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 
 Это потому, что визуальные эффекты — это ещё не самое главное. Мы используем цвет и размер шрифта для привлечения внимания посетителей к наиболее полезным частям содержимого, такого как навигационное меню или связанные ссылки, но что насчёт людей со слабым зрением, к примеру, для которых концепция "розового" и "большого шрифта" не будет полезной?
 
-> **Примечание:** Люди с дальтонизмом составляют около [8% мирового населения](http://www.color-blindness.com/2006/04/28/colorblind-population/). Слепые и слабовидящие люди составляют примерно 4-5% населения мира (в 2012 году в мире было [285 миллионов таких людей](https://en.wikipedia.org/wiki/Visual_impairment), а общая численность населения составляла [около 7 миллиардов](https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg)).
+> [!NOTE]
+> Люди с дальтонизмом составляют около [8% мирового населения](http://www.color-blindness.com/2006/04/28/colorblind-population/). Слепые и слабовидящие люди составляют примерно 4-5% населения мира (в 2012 году в мире было [285 миллионов таких людей](https://en.wikipedia.org/wiki/Visual_impairment), а общая численность населения составляла [около 7 миллиардов](https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg)).
 
 В своём HTML-коде вы можете размечать разделы содержимого сайта на основе их _функциональности_ — использовать элементы, которые представляют разделы контента, описанные выше, а вспомогательные технологии, такие как программы чтения с экрана, смогут распознавать эти элементы и помогать в таких задачах, как "найти основную навигацию" или "найти основное содержимое". Как мы упоминали ранее в ходе курса, существует ряд [последствий неиспользования правильной структуры элементов и семантики для правильной работы.](/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Why_do_we_need_structure)
 
@@ -272,7 +273,8 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 
 Применить наш метод к своему сайту. О чем он будет?
 
-> **Примечание:** Сохраните свой код, он вам ещё понадобится.
+> [!NOTE]
+> Сохраните свой код, он вам ещё понадобится.
 
 ## Заключение
 
@@ -283,15 +285,3 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 - [Using HTML sections and outlines](/ru/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines): Продвинутый справочник по семантическим элементам и алгоритму выделения разделов (outline algorithm) в HTML5.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
-
-## В этом модуле
-
-- [Начало работы с HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B)
-- [Что такое заголовок? Метаданные в HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/The_head_metadata_in_HTML)
-- [Основы редактирования текста в HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/HTML_text_fundamentals)
-- [Создание гиперссылок](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B3%D0%B8%D0%BF%D0%B5%D1%80%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA)
-- [Углублённое форматирование текста](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Advanced_text_formatting)
-- [Структура документа и веб-сайта](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0_%D0%B8_%D0%B2%D0%B5%D0%B1-%D1%81%D0%B0%D0%B9%D1%82%D0%B0)
-- [Отладка HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Debugging_HTML)
-- [Разметка письма](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Marking_up_a_letter)
-- [Структурируем страницу](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Structuring_a_page_of_content)

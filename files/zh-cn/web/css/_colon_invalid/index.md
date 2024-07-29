@@ -85,7 +85,7 @@ input:required:invalid {
 
 ### 展示分阶段的表单部分
 
-在这个例子中，我们使用 `:invalid` 以及[通用兄弟选择器](/zh-CN/docs/Web/CSS/General_sibling_combinator)（`~`）来分阶段地展示一个表单，使得表单最初只显示第一个完成的项目，当用户完成每一个项目时，表单会显示下一个项目。当整个表单完成后，用户可以提交它。
+在这个例子中，我们使用 `:invalid` 以及[后续兄弟选择器](/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator)（`~`）来分阶段地展示一个表单，使得表单最初只显示第一个完成的项目，当用户完成每一个项目时，表单会显示下一个项目。当整个表单完成后，用户可以提交它。
 
 #### HTML
 

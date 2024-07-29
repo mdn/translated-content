@@ -31,7 +31,8 @@ Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/A
 
 {{EmbedLiveSample("Exemples","100%","100%")}}
 
-> **Note :** Voir la page sur {{HTMLElement("form")}} pour d'autres exemples qui utilisent `<legend>`.
+> [!NOTE]
+> Voir la page sur {{HTMLElement("form")}} pour d'autres exemples qui utilisent `<legend>`.
 
 ## Résumé technique
 
@@ -90,5 +91,5 @@ Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/A
 
 ## Voir aussi
 
-- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("option")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.
+- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("option")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.
 - [ARIA : le rôle `form`](/fr/docs/Web/Accessibility/ARIA/Roles/Form_Role)

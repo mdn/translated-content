@@ -3,7 +3,7 @@ title: permissions.request()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/request
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Demandez l'ensemble des permissions répertoriées dans l'objet {{WebExtAPIRef("permissions.Permissions")}}.
 

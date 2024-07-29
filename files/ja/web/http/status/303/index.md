@@ -21,7 +21,7 @@ HyperText Transfer Protocol (HTTP) の **`303 See Other`** リダイレクトス
 
 ## ブラウザーの互換性
 
-{{Compat("http.status.303")}}
+{{Compat}}
 
 ## 関連情報
 

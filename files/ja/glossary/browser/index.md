@@ -3,6 +3,8 @@ title: Browser (ブラウザー)
 slug: Glossary/Browser
 ---
 
+{{GlossarySidebar}}
+
 **ウェブブラウザー**または**ブラウザー**は、{{Glossary("World Wide Web","ウェブ")}}からページを取得して表示するプログラムで、ユーザーが{{Glossary("hyperlink","ハイパーリンク")}}を通して更に他のページへアクセスできます。ブラウザーは{{Glossary("user agent","ユーザーエージェント")}}の最もなじみ深い形です。
 
 ## 詳細情報
@@ -14,7 +16,7 @@ slug: Glossary/Browser
 - [Microsoft Edge](https://www.microsoft.com/ja-JP/edge)
 - [Opera ブラウザー](https://www.opera.com/)
 
-1. [MDN Web Docs 用語集](/ja/docs/Glossary)
+1. 関連用語:
 
    1. {{Glossary("user agent", "ユーザーエージェント")}}
 

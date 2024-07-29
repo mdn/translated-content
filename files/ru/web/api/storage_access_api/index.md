@@ -3,7 +3,7 @@ title: Storage Access API
 slug: Web/API/Storage_Access_API
 ---
 
-{{DefaultAPISidebar("Storage Access API")}}{{seecompattable}}
+{{DefaultAPISidebar("Storage Access API")}}
 
 The Storage Access API provides a way for embedded, cross-origin content to gain unrestricted access to storage that it would normally only have access to in a first-party context (we refer to this as an origin's _first-party_ storage). The API provides methods that allow embedded resources to check whether they currently have access to their first-party storage, and to request access to their first-party storage from the user agent.
 
@@ -17,7 +17,7 @@ These cookie blocking policies are known to break embedded cross-origin content 
 
 The Storage Access API is intended to solve this problem; embedded cross-origin content can request unrestricted access to its first-party storage on a site-by-site basis via the {{domxref("Document.requestStorageAccess()")}} method, and check whether it already has access via the {{domxref("Document.hasStorageAccess()")}} method.
 
-In addition, sandboxed {{htmlelement("iframe")}}s cannot be granted storage access by default for security reasons. The API therefore also adds the `allow-storage-access-by-user-activation` [sandbox token](/ru/docs/Web/HTML/Element/iframe#attr-sandbox). The embedding website needs to add this to allow storage access requests to be successful, along with `allow-scripts` and `allow-same-origin` to allow it to call the API, and execute in an origin that can have cookies:
+In addition, sandboxed {{htmlelement("iframe")}}s cannot be granted storage access by default for security reasons. The API therefore also adds the `allow-storage-access-by-user-activation` [sandbox token](/ru/docs/Web/HTML/Element/iframe#sandbox). The embedding website needs to add this to allow storage access requests to be successful, along with `allow-scripts` and `allow-same-origin` to allow it to call the API, and execute in an origin that can have cookies:
 
 ```html
 <iframe
@@ -70,11 +70,9 @@ API методы реализованы в интерфейсе {{domxref("Docum
 
 API на стадии обсуждения — стандартизация не начата. Сейчас вы можете ознакомиться с подробной спецификацией API в блоге Apple [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) и [WHATWG HTML issue 3338 — Proposal: Storage Access API](https://github.com/whatwg/html/issues/3338).
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
-{{Compat("api.Document.hasStorageAccess")}}
-
-{{Compat("api.Document.requestStorageAccess")}}
+{{Compat}}
 
 ## Смотрите также
 

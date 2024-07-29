@@ -170,7 +170,7 @@ function updateAll(event) {
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

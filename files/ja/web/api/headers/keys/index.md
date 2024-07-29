@@ -9,7 +9,8 @@ l10n:
 
 **`Headers.keys()`** メソッドは、このオブジェクトに含まれるすべてのキーを読み取ることができる{{jsxref("Iteration_protocols", 'イテレーター', '', 1)}}オブジェクトを返します。キーは文字列です。です。
 
-> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
+> [!NOTE]
+> このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
 ## 構文
 
@@ -30,12 +31,12 @@ keys()
 ```js
 // テスト用の Headers オブジェクトを作成
 const myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.append('Vary', 'Accept-Language');
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.append("Vary", "Accept-Language");
 
 // キーを表示
 for (const key of myHeaders.keys()) {
-   console.log(key);
+  console.log(key);
 }
 ```
 

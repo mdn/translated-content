@@ -3,7 +3,7 @@ title: management.onEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onEnabled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'auditeur de l'événement appelé lorsque l'événement `enabled` est déclenché, indiquant qu'un add-on est maintenant activé.
 

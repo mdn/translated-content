@@ -33,7 +33,8 @@ browser.runtime.getManifest().version;
 
 下記のブロックには一般的な manifest keys の基本文法を示します。
 
-> **メモ:** これはコピー・ペーストできるような使われ方のつもりではないのに注意してください: どのキーが必要かは開発している拡張機能に依存します。
+> [!NOTE]
+> これはコピー・ペーストできるような使われ方のつもりではないのに注意してください: どのキーが必要かは開発している拡張機能に依存します。
 
 完全な例は [Example extensions](/ja/docs/Mozilla/Add-ons/WebExtensions/Examples) を見てください。
 
@@ -114,4 +115,4 @@ browser.runtime.getManifest().version;
 
 マニフェストキーとサブキーのすべてを見るには、[完全な manifest.json ブラウザー互換テーブルを見てください。](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
 
-{{Compat("webextensions.manifest")}}
+{{Compat}}

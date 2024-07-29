@@ -3,6 +3,8 @@ title: Synchrone
 slug: Glossary/Synchronous
 ---
 
+{{GlossarySidebar}}
+
 _Synchrone_ fait référence à une communication en temps réel pendant laquelle chaque partie reçoit les messages (et, si nécessaire, les traite et y répond) dès que possible après qu'ils aient été envoyés.
 
 Un exemple humain est le téléphone : au cours d'un appel téléphonique vous avez tendance à répondre à la personne immédiatement.

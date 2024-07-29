@@ -3,6 +3,8 @@ title: CORS
 slug: Glossary/CORS
 ---
 
+{{GlossarySidebar}}
+
 CORS (Partage de ressource cross-origin) est un mécanisme qui consiste à transmettre des [entêtes HTTP](/fr/docs/HTTP/Headers) qui déterminent s'il faut ou non bloquer les requêtes à des ressources restreintes sur une page web qui se trouve sur un domaine externe au domaine dont la ressource est originaire.
 
 La [politique de sécurité de même origine](/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript) interdit les requêtes d'origines différentes par défaut et ce pour des raisons de sécurité.

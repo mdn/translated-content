@@ -10,7 +10,7 @@ HTML 优雅明了，但要是出了错，你会不会一头雾水呢，本节将
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         阅读并理解
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
@@ -55,7 +55,8 @@ HTML 并不像 Rust 那么难以理解，浏览器并不会将 HTML 编译成其
 
 HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行的，这意味着即使出现语法错误浏览器依然会继续运行。浏览器通常都有内建规则来解析书写错误的标记，所以即使与预期不符，页面仍可显示出来。当然，是存在隐患的。
 
-> **备注：** HTML 之所以以宽松的方式进行解析，是因为 Web 创建的初心就是：人人可发布内容，不去纠结代码语法。如果 Web 以严格的风格起步，也许就不会像今天这样流行了。
+> [!NOTE]
+> HTML 之所以以宽松的方式进行解析，是因为 Web 创建的初心就是：人人可发布内容，不去纠结代码语法。如果 Web 以严格的风格起步，也许就不会像今天这样流行了。
 
 ### 主动学习：研究宽容的代码风格
 
@@ -83,7 +84,7 @@ HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行
 
    - {{htmlelement("p","段落（Paragraph）")}} 和 {{htmlelement("li","列表项（list item）")}} 元素没有结束标签。但是由于元素的结束和另一个的开始很容易推断出来，因此上图中并没有太严重的渲染错误。
    - 第一个 {{htmlelement("strong")}} 元素没有结束标签。这就严重了，因为该元素结束的位置难以确定。事实上所有剩余文本都加粗了。
-   - 一下嵌套有问题：`<strong>重点（strong）<em>重点强调（strongly emphasised）？</strong>这又是什么鬼？</em>`。浏览器很难做出正确解释，理由同上。
+   - 以下嵌套有问题：`<strong>重点（strong）<em>重点强调（strongly emphasised）？</strong>这又是什么鬼？</em>`。浏览器很难做出正确解释，理由同上。
    - [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性缺少了一个双引号。从而导致了一个最严重的问题：整个链接完全没有渲染出来。
 
 5. 下面暂时忽略源代码中的标记，先看一下浏览器渲染出的标记。打开浏览器的开发者工具。如果不太熟悉，请先阅读 [浏览器开发工具概览](/zh-CN/docs/Learn/Discover_browser_developer_tools)。
@@ -147,7 +148,8 @@ HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行
   来看一个示例：<a href="https://www.mozilla.org/>Mozilla 主页链接</a> ↩ </ul>↩ </body>↩</html>
   ```
 
-  > **备注：** 属性缺少结束引号会导致元素无法闭合。因为文档所有剩余部分（直到文档某处出现一个引号）都将被解析为属性的内容。
+  > [!NOTE]
+  > 属性缺少结束引号会导致元素无法闭合。因为文档所有剩余部分（直到文档某处出现一个引号）都将被解析为属性的内容。
 
 - Unclosed element `ul`（未闭合元素 `ul`）：这个意义不大，因为 {{htmlelement("ul")}} 已经正确闭合了。出现这个错误是因为 {{htmlelement("a")}} 元素没有右引号而没有闭合。
 

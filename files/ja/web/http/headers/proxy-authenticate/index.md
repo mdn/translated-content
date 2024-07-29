@@ -56,7 +56,7 @@ Proxy-Authenticate: Basic realm="Access to the internal site"
 
 ## ブラウザーの対応
 
-{{Compat("http.headers.Proxy-Authenticate")}}
+{{Compat}}
 
 ## 関連情報
 

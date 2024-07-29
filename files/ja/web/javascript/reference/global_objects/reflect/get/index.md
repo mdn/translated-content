@@ -76,7 +76,7 @@ Reflect.get(obj, "foo", y); // "3bar"
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Reflect.get")}}
+{{Compat}}
 
 ## 関連情報
 

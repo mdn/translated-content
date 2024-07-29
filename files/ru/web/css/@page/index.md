@@ -57,7 +57,7 @@ slug: Web/CSS/@page
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

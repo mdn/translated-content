@@ -83,7 +83,7 @@ var uint16 = new Uint16Array(iterable);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Uint16Array.Uint16Array")}}
+{{Compat}}
 
 ## 関連情報
 

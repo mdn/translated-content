@@ -114,14 +114,11 @@ p1.then(function (value) {
 
 ## Especificações
 
-| Especificação                                                                      | Status               | Comentário                              |
-| ---------------------------------------------------------------------------------- | -------------------- | --------------------------------------- |
-| {{SpecName('ES6', '#sec-promise.prototype.catch', 'Promise.prototype.catch')}}     | {{Spec2('ES6')}}     | Initial definition in an ECMA standard. |
-| {{SpecName('ESDraft', '#sec-promise.prototype.catch', 'Promise.prototype.catch')}} | {{Spec2('ESDraft')}} |                                         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Promise.catch")}}
+{{Compat}}
 
 ## Veja também
 

@@ -20,10 +20,14 @@ l10n:
 この例では、{{domxref("PointerEvent")}} インターフェイスの {{domxref("PointerEvent.width","width")}} プロパティと {{domxref("PointerEvent.height","height")}} プロパティを使用して接触面積を計算する方法を示します。
 
 ```js
-target.addEventListener("pointerdown", (ev) => {
-   // 接触面積を計算する
-   const area = ev.width * ev.height;
- }, false);
+target.addEventListener(
+  "pointerdown",
+  (ev) => {
+    // 接触面積を計算する
+    const area = ev.width * ev.height;
+  },
+  false,
+);
 ```
 
 ## 仕様書

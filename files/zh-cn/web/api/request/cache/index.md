@@ -35,7 +35,7 @@ A `RequestCache` value. The available values are:
   - 如果有匹配项，不管是新匹配项还是旧匹配项，都将从缓存中返回。
   - 如果没有匹配，浏览器将发出正常请求，并使用下载的资源更新缓存。
 
-- `only-if-cached` — 浏览器在其 HTTP 缓存中寻找匹配的请求。
+- `only-if-cached` — 浏览器在其 HTTP 缓存中寻找匹配的请求。{{experimental_inline}}
 
   - 如果有匹配项 (新的或旧的)，则从缓存中返回。
   - 如果没有匹配，浏览器将返回一个错误。

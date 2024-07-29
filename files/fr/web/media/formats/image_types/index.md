@@ -873,7 +873,7 @@ Le JPEG est en fait un format de données pour les photos compressées, plutôt 
     <tr>
       <th scope="row">Compression</th>
       <td>
-        Sans perte; sur la base de la
+        Avec perte; sur la base de la
         <a
           href="https://fr.wikipedia.org/wiki/Transformée_en_cosinus_discrète"
           >transformée en cosinus discrète</a
@@ -891,7 +891,7 @@ Le JPEG est en fait un format de données pour les photos compressées, plutôt 
 
 ### PNG (Portable Network Graphics)
 
-Le [PNG](/fr/docs/Glossary/PNG) (prononcé "**png**") utilise une compression sans perte ou avec perte afin de fournir une compression plus efficace, et prend en charge des profondeurs de couleurs plus élevées que [GIF](#gif), ainsi qu'une transparence alpha complète.
+Le format d'image [PNG](/fr/docs/Glossary/PNG) utilise une compression sans perte, prend en charge des profondeurs de couleurs plus élevées que le [GIF](#gif), est plus efficace, et prend complètement en charge la transparence alpha.
 
 Le format PNG est largement soutenu, tous les principaux navigateurs offrant une prise en charge complète de ses fonctionnalités. Internet Explorer, qui a introduit le support PNG dans les versions 4-5, ne l'a pas entièrement pris en charge avant IE 9, et a connu de nombreux bogues tristement célèbres pendant de nombreuses années, y compris dans l'Internet Explorer 6, autrefois omniprésent. Cela a ralenti l'adoption de la PNG, mais elle est maintenant couramment utilisée, surtout lorsqu'il faut reproduire avec précision l'image source.
 

@@ -39,8 +39,6 @@ min-height: unset;
   - : 定义 `min-height` 为一个相对于父容器高度的百分数。
 - `auto`
   - : 浏览器将通过计算为指定元素选择一个 `min-height` 值。
-- `none`
-  - : 不限制盒容器的尺寸。
 - `max-content`
   - : The intrinsic preferred `min-height`.
 - `min-content`

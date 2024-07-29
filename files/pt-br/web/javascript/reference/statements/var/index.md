@@ -162,17 +162,13 @@ console.log(x, z); // 3 5
 console.log(typeof y); // indefinido já que y é uma variável local da função a
 ```
 
-## Especificação
+## Especificações
 
-| Specification                                                        | Status             | Comment                                            |
-| -------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition                                               | Standard           | Primeira definição. Implementada no JavaScript 1.0 |
-| {{SpecName('ES5.1', '#sec-12.2', 'var statement')}}                  | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-variable-statement', 'variable statement')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.var")}}
+{{Compat}}
 
 ## Veja também
 

@@ -55,4 +55,4 @@ slug: Web/CSS/CSS_motion_path
 
 ## offset プロパティ
 
-{{Compat("css.properties.offset-path")}}
+{{Compat}}

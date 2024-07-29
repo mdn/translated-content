@@ -3,7 +3,7 @@ title: webRequest.CertificateInfo
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/CertificateInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet décrivant un seul [certificat X.509](https://tools.ietf.org/html/rfc5280).
 

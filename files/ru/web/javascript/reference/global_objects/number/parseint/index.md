@@ -3,7 +3,7 @@ title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 ---
 
-{{JSRef("Global_Objects", "Number")}}
+{{JSRef}}
 
 ## Сводка
 

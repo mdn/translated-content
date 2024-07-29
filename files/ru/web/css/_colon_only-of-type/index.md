@@ -55,7 +55,7 @@ main :only-of-type {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

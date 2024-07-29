@@ -164,7 +164,7 @@ This routine is pretty simplistic given the basic nature of the scene in this ex
 
 Once that's done, we create a JavaScript array containing the coordinates for each vertex of the square. This is then converted into an array of WebGL floats and passed into the `gl` object's `bufferData()` method to establish the vertices for the object.
 
-## Desenhando a cena
+## Renderizando a cena
 
 Once the shaders are established and the object constructed, we can actually render the scene. Since we're not animating anything in this example, our `drawScene()` function is very simple. It uses a few utility routines we'll cover shortly.
 
@@ -188,9 +188,9 @@ The first step is to clear the context to our background color; then we establis
 
 Then we establish the position of the square by loading the identity position and translating away from the camera by 6 units. After that, we bind the square's vertex buffer to the context, configure it, and draw the object by calling the `drawArrays()` method.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2) | [Open this demo on a new page](http://mdn.github.io/webgl-examples/tutorial/sample2/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)
 
 ## Operações úteis da Matrix
 

@@ -3,10 +3,10 @@ title: "HTMLImageElement: fetchPriority プロパティ"
 short-title: fetchPriority
 slug: Web/API/HTMLImageElement/fetchPriority
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: f8b524a5fbdedf04ed5d3bac2200c33c5eda8148
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 **`fetchPriority`** は {{domxref("HTMLImageElement")}} インターフェイスのプロパティで、ブラウザーが他の画像と比較して、画像の取得をどのように優先させるべきかというヒントを表します。
 
@@ -21,7 +21,7 @@ l10n:
 - `auto`
   - : 既定のモード。取得の優先順位がないことを示します。ユーザーにとって最適なものをブラウザーが決定します。
 
-`fetchPriority` プロパティを使用すると、画像の取得の優先順位を高くしたり低くしたりすることができます。これは {{HTMLElement("img")}} 要素に適用すると、読み込み処理の早い段階でユーザの操作にとって「重要」な画像を通知するのに役立ちます。
+`fetchPriority` プロパティを使用すると、画像の取得の優先順位を高くしたり低くしたりすることができます。これは {{HTMLElement("img")}} 要素に適用すると、読み込み処理の早い段階でユーザーの操作にとって「重要」な画像を通知するのに役立ちます。
 
 リソースの読み込みに対するヒントの効果はブラウザーに依存するため、複数のブラウザーエンジンで試すようにしてください。
 
@@ -42,3 +42,8 @@ img.src = "img/logo.png";
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("HTMLLinkElement.fetchPriority")}}
+- {{domxref("HTMLScriptElement.fetchPriority")}}

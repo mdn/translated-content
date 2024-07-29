@@ -9,21 +9,21 @@ Web Component 是一套不同的技术，允许你创建可重用的定制元素
 
 ## 概念和使用
 
-作为开发者，我们都知道尽可能多的重用代码是一个好主意。这对于自定义标记结构来说通常不是那么容易 — 想想复杂的 HTML（以及相关的样式和脚本），有时您不得不写代码来呈现自定义 UI 控件，并且如果您不小心的话，多次使用它们会使您的页面变得一团糟。
+作为开发者，我们都知道尽可能多的重用代码是一个好主意。这对于自定义标记结构来说通常不是那么容易 — 想想复杂的 HTML（以及相关的样式和脚本），有时你不得不写代码来呈现自定义 UI 控件，并且如果你不小心的话，多次使用它们会使你的页面变得一团糟。
 
 Web Components 旨在解决这些问题 — 它由三项主要技术组成，它们可以一起使用来创建封装功能的定制元素，可以在你喜欢的任何地方重用，不必担心代码冲突。
 
-- **Custom element（自定义元素）**：一组 JavaScript API，允许您定义 custom elements 及其行为，然后可以在您的用户界面中按照需要使用它们。
-- **Shadow DOM（影子 DOM）**：一组 JavaScript API，用于将封装的“影子”DOM 树附加到元素（与主文档 DOM 分开呈现）并控制其关联的功能。通过这种方式，您可以保持元素的功能私有，这样它们就可以被脚本化和样式化，而不用担心与文档的其他部分发生冲突。
-- **HTML template（HTML 模板）：** {{HTMLElement("template")}} 和 {{HTMLElement("slot")}} 元素使您可以编写不在呈现页面中显示的标记模板。然后它们可以作为自定义元素结构的基础被多次重用。
+- **Custom element（自定义元素）**：一组 JavaScript API，允许你定义 custom elements 及其行为，然后可以在你的用户界面中按照需要使用它们。
+- **Shadow DOM（影子 DOM）**：一组 JavaScript API，用于将封装的“影子”DOM 树附加到元素（与主文档 DOM 分开呈现）并控制其关联的功能。通过这种方式，你可以保持元素的功能私有，这样它们就可以被脚本化和样式化，而不用担心与文档的其他部分发生冲突。
+- **HTML template（HTML 模板）：** {{HTMLElement("template")}} 和 {{HTMLElement("slot")}} 元素使你可以编写不在呈现页面中显示的标记模板。然后它们可以作为自定义元素结构的基础被多次重用。
 
 实现 web component 的基本方法通常如下所示：
 
 1. 创建一个类或函数来指定 web 组件的功能，如果使用类，请使用 ECMAScript 2015 的类语法 (参阅[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)获取更多信息)。
-2. 使用 {{domxref("CustomElementRegistry.define()")}} 方法注册您的新自定义元素，并向其传递要定义的元素名称、指定元素功能的类、以及可选的其所继承自的元素。
+2. 使用 {{domxref("CustomElementRegistry.define()")}} 方法注册你的新自定义元素，并向其传递要定义的元素名称、指定元素功能的类、以及可选的其所继承自的元素。
 3. 如果需要的话，使用 {{domxref("Element.attachShadow()")}} 方法将一个 shadow DOM 附加到自定义元素上。使用通常的 DOM 方法向 shadow DOM 中添加子元素、事件监听器等等。
-4. 如果需要的话，使用 {{htmlelement("template")}} 和 {{htmlelement("slot")}} 定义一个 HTML 模板。再次使用常规 DOM 方法克隆模板并将其附加到您的 shadow DOM 中。
-5. 在页面任何您喜欢的位置使用自定义元素，就像使用常规 HTML 元素那样。
+4. 如果需要的话，使用 {{htmlelement("template")}} 和 {{htmlelement("slot")}} 定义一个 HTML 模板。再次使用常规 DOM 方法克隆模板并将其附加到你的 shadow DOM 中。
+5. 在页面任何你喜欢的位置使用自定义元素，就像使用常规 HTML 元素那样。
 
 ## 教程
 
@@ -53,13 +53,13 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
 - 创建自定义内置元素的扩展
   - : 定义了以下扩展：
     - [`is`](/zh-CN/docs/Web/HTML/Global_attributes/is) 全局 HTML 属性：允许你指定标准 HTML 元素像定义的内置元素一样工作。
-    - {{domxref("Document.createElement()")}} 方法的“is”选项：允许您创建一个标准 HTML 元素的实例，表现得像一个给定的已注册的自定义内置元素。
+    - {{domxref("Document.createElement()")}} 方法的“is”选项：允许你创建一个标准 HTML 元素的实例，表现得像一个给定的已注册的自定义内置元素。
 - CSS 伪类
   - : 与自定义元素特别相关的伪类：
     - {{cssxref(":defined")}}：匹配任何已定义的元素，包括内置元素和使用 `CustomElementRegistry.define()` 定义的自定义元素。
     - {{cssxref(":host")}}：选择 [shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 的 shadow host，内容是它内部使用的 CSS（containing the CSS it is used inside）。
-    - {{cssxref(":host()")}}：选择 [shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 的 shadow host，内容是它内部使用的 CSS（这样您可以从 shadow DOM 内部选择自定义元素）— 但只匹配给定方法的选择器的 shadow host 元素。
-    - {{cssxref(":host-context", ":host-context()")}}：选择 [shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 的 shadow host，内容是它内部使用的 CSS（这样您可以从 shadow DOM 内部选择自定义元素）— 但只匹配给定方法的选择器匹配元素的子 shadow host 元素。
+    - {{cssxref(":host()")}}：选择 [shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 的 shadow host，内容是它内部使用的 CSS（这样你可以从 shadow DOM 内部选择自定义元素）— 但只匹配给定方法的选择器的 shadow host 元素。
+    - {{cssxref(":host-context", ":host-context()")}}：选择 [shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 的 shadow host，内容是它内部使用的 CSS（这样你可以从 shadow DOM 内部选择自定义元素）— 但只匹配给定方法的选择器匹配元素的子 shadow host 元素。
 
 ### Shadow DOM
 

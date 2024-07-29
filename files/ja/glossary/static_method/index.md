@@ -3,6 +3,8 @@ title: Static method (静的メソッド)
 slug: Glossary/Static_method
 ---
 
+{{GlossarySidebar}}
+
 静的メソッド (または _静的関数_) とは、{{Glossary("method","メソッド")}}のうち{{Glossary("object","オブジェクト")}}のメンバーとして定義されているものの、コンストラクターで生成されたオブジェクトインスタンスからではなく、API のオブジェクトコンストラクターから直接アクセスできるものです。
 
 [Web API](/ja/docs/Web/API) では、静的メソッドはインターフェイスで定義されているものの、先にその型のオブジェクトのインスタンス化をせずに呼び出すことができます。
@@ -33,7 +35,7 @@ myNotification.close();
 
    1. [static](/ja/docs/Web/JavaScript/Reference/Classes/static)
 
-3. [MDN Web Docs 用語集](/ja/docs/Glossary)
+3. 関連用語:
 
    1. {{Glossary("Object", "オブジェクト")}}
    2. {{Glossary("Method", "メソッド")}}

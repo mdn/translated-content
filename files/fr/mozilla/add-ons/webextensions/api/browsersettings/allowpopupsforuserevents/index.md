@@ -3,7 +3,7 @@ title: browserSettings.allowPopupsForUserEvents
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/allowPopupsForUserEvents
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut etre utilisé pour activer ou désactiver la capacité des pages web d'ouvrir des popups en réponse aux actions de l'utilisateur.
 

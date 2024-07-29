@@ -68,7 +68,7 @@ function onMessage(e) {
 
 ## ブラウザの実装状況
 
-{{Compat("api.MessagePort")}}
+{{Compat}}
 
 ## 関連情報
 

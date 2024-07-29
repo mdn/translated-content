@@ -3,7 +3,7 @@ title: management.onInstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onInstalled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Action quand une extension est installée.
 

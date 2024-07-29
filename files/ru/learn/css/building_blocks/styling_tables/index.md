@@ -83,7 +83,7 @@ slug: Learn/CSS/Building_blocks/Styling_tables
 Первое что нам нужно это разобраться с отступами/разметкой, так как по умолчанию стилизация таблцы выглядит неразборчиво! Сделаем это, добавив CSS в ваш `style.css` файл:
 
 ```css
-/* spacing */
+/* Отступы */
 
 table {
   table-layout: fixed;
@@ -146,7 +146,7 @@ td {
 Затем добавьте следующий CSS в ваш `style.css` файл, ниже предыдущего кода:
 
 ```css
-/* typography */
+/* Типографика */
 
 html {
   font-family: "helvetica neue", helvetica, arial, sans-serif;
@@ -189,17 +189,22 @@ tfoot th {
 
 И наконец-то графика и цвета! Наша таблица заполнена тем что имеет отношение к панкам, поэтому нам нужно придать ей яркий впечатляющий вид. Не беспокойтесь, вам не обязательно делать таблицу слишком кричащей — вы можете выбрать что-то более утончённое и со вкусом.
 
-Следующий шаг это добавить следующий CSS в ваш `style.css` файл в самом низу:
+Начнём с добавления в конец файла `style.css` следующего CSS:
 
-```
-thead, tfoot {
+```css
+/* Графика и цвета */
+
+thead,
+tfoot {
   background: url(leopardskin.jpg);
   color: white;
   text-shadow: 1px 1px 1px black;
 }
 
-thead th, tfoot th, tfoot td {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+thead th,
+tfoot th,
+tfoot td {
+  background: linear-gradient(to bottom, rgb(0 0 0 / 10%), rgb(0 0 0 / 50%));
   border: 3px solid purple;
 }
 ```
@@ -215,6 +220,8 @@ thead th, tfoot th, tfoot td {
 Мы хотели бы посвятить целый раздел, чтобы показать вам как реализовать **полосы зебры** — чередующиеся цветные строки которые упрощают чтение разных строк в вашей таблице. Добавим следующий CSS в ваш `style.css` файл:
 
 ```css
+/* Полосатая зебра */
+
 tbody tr:nth-child(odd) {
   background-color: #ff33cc;
 }
@@ -247,6 +254,8 @@ table {
 Последнее что мы сделаем с нашей таблицей это стилизация заголовка. Для этого добавим следующие строки в наш файл `style.css`:
 
 ```css
+/* Заголовок */
+
 caption {
   font-family: "Rock Salt", cursive;
   padding: 20px;

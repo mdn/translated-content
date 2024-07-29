@@ -16,9 +16,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('seeked', (event) => {});
+addEventListener("seeked", (event) => {});
 
-onseeked = (event) => { };
+onseeked = (event) => {};
 ```
 
 ## イベント型
@@ -32,20 +32,20 @@ onseeked = (event) => { };
 `addEventListener()` を使用する場合
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('seeked', (event) => {
-  console.log('動画が探していた再生位置を見つけました。');
+video.addEventListener("seeked", (event) => {
+  console.log("動画が探していた再生位置を見つけました。");
 });
 ```
 
 `onseeked` イベントハンドラープロパティを使用する場合
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onseeked = (event) => {
-  console.log('動画が探していた再生位置を見つけました。');
+  console.log("動画が探していた再生位置を見つけました。");
 };
 ```
 

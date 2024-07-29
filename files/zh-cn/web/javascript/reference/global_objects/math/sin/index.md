@@ -3,7 +3,7 @@ title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## 概述
 
@@ -45,7 +45,7 @@ Math.sin(Math.PI / 2); // 1
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Math.acos()")}}
 - {{jsxref("Math.asin()")}}

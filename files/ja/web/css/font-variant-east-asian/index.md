@@ -27,6 +27,8 @@ font-variant-east-asian: revert;
 font-variant-east-asian: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/font-variant-east-asian.html")}}
+
 ## 構文
 
 ### 値

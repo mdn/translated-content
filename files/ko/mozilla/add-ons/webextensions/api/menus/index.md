@@ -7,9 +7,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/menus
 
 브라우저의 메뉴 시스템에 항목을 추가한다.
 
-이 API는 크롬의 ["contextMenus"](https://developer.chrome.com/extensions/contextMenus) API를 모델로 했다. 크롬 확장앱이 브라우저의 콘텍스트 메뉴에 항목을 추가하는 API인데, 파이어폭스의 `browser.menus` API는 여기에 몇 가지 특징을 더했다.
+이 API는 크롬의 ["contextMenus"](https://developer.chrome.com/extensions/contextMenus) API를 모델로 했다. 크롬 확장앱이 브라우저의 콘텍스트 메뉴에 항목을 추가하는 API인데, Firefox의 `browser.menus` API는 여기에 몇 가지 특징을 더했다.
 
-파이어폭스 55 이전에 이 API의 원래 이름은 `contextMenus`였고, 지금도 이 이름은 별명으로 유지되므로 다른 브라우저에서도 동작하는 코드를 작성한다면 `contextMenus`를 사용할 수 있다.
+Firefox 55 이전에 이 API의 원래 이름은 `contextMenus`였고, 지금도 이 이름은 별명으로 유지되므로 다른 브라우저에서도 동작하는 코드를 작성한다면 `contextMenus`를 사용할 수 있다.
 
 이 API를 사용하려면 '`menus`' [권한](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)이 필요하다. `menus` 대신에 `contextMenus`를 사용해도 된다. `contextMenus`를 사용했으면 API도 `browser.contextMenus`를 써야 한다.
 
@@ -152,7 +152,7 @@ browser.menus.create(
 
 ## 브라우저 호환성
 
-{{ Compat("webextensions.api.menus", 1, "true") }}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

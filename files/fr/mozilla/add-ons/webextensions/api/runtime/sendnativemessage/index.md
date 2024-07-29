@@ -3,7 +3,7 @@ title: runtime.sendNativeMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Envoie un seul message d'une extension à une application native.
 

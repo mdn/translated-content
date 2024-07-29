@@ -42,7 +42,7 @@ slug: Web/CSS/CSS_animations
 
 ### `animation` プロパティ
 
-{{Compat("css.properties.animation")}}
+{{Compat}}
 
 ## 関連情報
 

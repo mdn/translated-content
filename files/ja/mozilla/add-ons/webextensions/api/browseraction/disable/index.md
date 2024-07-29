@@ -3,9 +3,9 @@ title: browserAction.disable()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/disable
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-タブに対してブラウザアクションを無効にします。つまり、タブがアクティブな時クリックされなくなります。
+タブに対してブラウザーアクションを無効にします。つまり、タブがアクティブな時クリックされなくなります。
 
 ## 書式
 
@@ -15,18 +15,18 @@ browser.browserAction.disable(
 );
 ```
 
-### パラメータ
+### パラメーター
 
 - `tabId`{{optional_inline}}
-  - : `integer`. ブラウザアクションを無効にしたいタブの ID です。
+  - : `integer`. ブラウザーアクションを無効にしたいタブの ID です。
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.browserAction.disable")}}
+{{Compat}}
 
 ## 例
 
-クリックされたときブラウザアクションを無効にし、新しいタブが開かれる毎回再度有効にします:
+クリックされたときブラウザーアクションを無効にし、新しいタブが開かれる毎回再度有効にします:
 
 ```js
 browser.tabs.onCreated.addListener(() => {
@@ -38,7 +38,7 @@ browser.browserAction.onClicked.addListener(() => {
 });
 ```
 
-アクティブなタブにだけブラウザアクションを無効にします:
+アクティブなタブにだけブラウザーアクションを無効にします:
 
 ```js
 browser.browserAction.onClicked.addListener((tab) => {
@@ -48,7 +48,8 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 {{WebExtExamples}}
 
-> **メモ:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#method-disable) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#method-disable) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

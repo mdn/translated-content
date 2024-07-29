@@ -128,7 +128,7 @@ Anteriormente no curso, nós fizemos você digitar alguns comandos simples de Ja
 
 Nesse ponto, o jogo deve rodar normalmente, porém depois de jogá-lo algumas vezes você irá notar que o número "aleatório" que você tem que adivinhar é sempre igual a 1. Definitivamente não é como queremos que o jogo funcione!
 
-Há sem dúvida um problema na lógica do jogo em algum lugar — o jogo não está retornando nenhum erro;simplesmente não está funcionando corretamente.
+Há sem dúvida um problema na lógica do jogo em algum lugar — o jogo não está retornando nenhum erro; simplesmente não está funcionando corretamente.
 
 1. Procure pela variável `numeroAleatorio`, e as linhas onde o número aleatório é definido primeiro. A instância que armazena o número aleatório que queremos adivinhar no começo do jogo deve estar na linha 44 ou próximo a ela:
 

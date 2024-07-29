@@ -27,7 +27,7 @@ slug: Web/API/TouchList
 
 {{Specifications}}
 
-## Доступность в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -120,7 +120,7 @@ document.addEventListener("visibilitychange", async () => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.WakeLock")}}
+{{Compat}}
 
 ## 関連情報
 

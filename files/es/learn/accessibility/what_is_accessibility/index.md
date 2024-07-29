@@ -42,7 +42,8 @@ Crear sitios web accesibles nos beneficia a todos:
 
 Las personas con discapacidad son tan diversas como las personas sin discapacidad, y también lo son sus discapacidades. La clave está en pensar más allá de tu ordenador y en cómo utilizas la web y empezar a aprender acerca de cómo otros la utilizan. _Tú no eres tus usuarios_. A continuación explicaremos los principales tipos de discapacidad que vamos a considerar, junto con las herramientas especiales que se utilizan para acceder al contenido web (conocidas como **tecnologías de apoyo** o **AT**, de _assistive technologies_).
 
-> **Nota:** La hoja informativa sobre [discapacidad y salud](https://www.who.int/es/news-room/fact-sheets/detail/disability-and-health) de la Organización Mundial de la Salud establece que «Más de mil millones de personas, aproximadamente el 15% de la población mundial, tienen alguna forma de discapacidad» y «Entre 110 millones y 190 millones de adultos tienen dificultades funcionales significativas».
+> [!NOTE]
+> La hoja informativa sobre [discapacidad y salud](https://www.who.int/es/news-room/fact-sheets/detail/disability-and-health) de la Organización Mundial de la Salud establece que «Más de mil millones de personas, aproximadamente el 15% de la población mundial, tienen alguna forma de discapacidad» y «Entre 110 millones y 190 millones de adultos tienen dificultades funcionales significativas».
 
 ### Personas con discapacidad visual
 
@@ -50,7 +51,7 @@ Las personas con discapacidad visual son aquellas con ceguera, poca visión o da
 
 - Productos comerciales de pago, como [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows) y [Dolphin Screen Reader](https://yourdolphin.com/screenreader) (Windows).
 - Productos gratuitos, como [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (Chrome, Windows y Mac OS X) y [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
-- Productos integrados en el sistema operativo, como [VoiceOver](https://www.apple.com/accessibility/mac/vision/) (MacOS, iPadOS, IOS), [Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started) (Microsoft Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (en Chrome OS) y [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
+- Productos integrados en el sistema operativo, como [VoiceOver](https://www.apple.com/accessibility/mac/vision/) (MacOS, iPadOS, IOS), [Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started) (Microsoft Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (en ChromeOS) y [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
 Familiarizarse con los lectores de pantalla puede ser útil, así como configurar un lector de pantalla y jugar con él para aprender cómo funciona. Consulta nuestra [guía de lectores de pantalla de prueba para la navegación cruzada](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders) para obtener más detalles sobre su uso. El vídeo siguiente proporciona un breve ejemplo de cómo es esta experiencia.
 
@@ -124,7 +125,8 @@ Por otro lado, si trabajas en un sitio web de una galería que muestra obras de 
 
 Para demostrar que te importa y que has pensado en la accesibilidad, publica una declaración de accesibilidad en la página web que explique tu política de accesibilidad y los pasos realizados para hacer que el sitio web sea accesible. Si alguien se queja de que tiene un problema de accesibilidad: inicia un diálogo con ellos, se empático y toma las medidas razonables para tratar de solucionar el problema.
 
-> **Nota:** Nuestro artículo sobre [Cómo afrontar los problemas de accesibilidad más comunes](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility) expone los detalles de accesibilidad que es necesario tener más en cuenta.
+> [!NOTE]
+> Nuestro artículo sobre [Cómo afrontar los problemas de accesibilidad más comunes](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility) expone los detalles de accesibilidad que es necesario tener más en cuenta.
 
 En resumen:
 

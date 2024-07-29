@@ -55,7 +55,7 @@ Via: 1.0 fred, 1.1 p.example.net
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Via")}}
+{{Compat}}
 
 ## Veja também
 

@@ -3,7 +3,7 @@ title: notifications.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/getAll
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient toutes les notifications actuellement actives créées par l'extension.
 

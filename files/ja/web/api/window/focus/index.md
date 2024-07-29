@@ -10,7 +10,7 @@ slug: Web/API/Window/focus
 ## 構文
 
 ```js
-focus()
+focus();
 ```
 
 ### 引数
@@ -24,7 +24,9 @@ focus()
 ## 例
 
 ```js
-if (clicked) { window.focus(); }
+if (clicked) {
+  window.focus();
+}
 ```
 
 ## 仕様書

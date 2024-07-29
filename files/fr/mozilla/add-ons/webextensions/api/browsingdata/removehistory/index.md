@@ -3,7 +3,7 @@ title: browsingData.removeHistory()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeHistory
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Efface l'enregistrement des pages Web que l'utilisateur a visité (historique de navigation).
 
@@ -75,7 +75,7 @@ browser.browsingData.removeHistory({}).then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
 >

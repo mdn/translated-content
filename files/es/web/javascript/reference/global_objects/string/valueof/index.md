@@ -3,7 +3,7 @@ title: String.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
 ---
 
-{{JSRef("Objetos_globales", "String")}}
+{{JSRef}}
 
 ## Resumen
 
@@ -12,7 +12,7 @@ The **`valueOf()`** método devuelve el valor primitivo de un objeto String.
 ## Sintaxis
 
 ```
-caneda.valueOf()
+cadena.valueOf()
 ```
 
 ## Descripción

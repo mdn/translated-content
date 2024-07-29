@@ -3,7 +3,7 @@ title: "-moz-force-broken-image-icon"
 slug: Web/CSS/-moz-force-broken-image-icon
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{CSSRef}}{{Non-standard_header}}
 
 **`-moz-force-broken-image-icon`** は拡張 CSS プロパティで、壊れた画像に `alt` 属性が付いていても、壊れた画像のアイコンを強制的に表示することができます。
 
@@ -14,7 +14,8 @@ slug: Web/CSS/-moz-force-broken-image-icon
 - {{cssxref("&lt;integer&gt;")}}
   - : プロパティの値に `1` を指定した場合、その画像が {{HTMLElement("img", "`alt`", "#attr-alt")}} 属性を持っていたとしても、壊れた画像アイコンが表示されます。`0` を指定した場合、通常通り `alt` 属性のみが表示されます。
 
-> **メモ:** プロパティの値に `1` を指定した場合もなお、 `alt` 属性は壊れた画像アイコンの隣に同時に表示されます。
+> [!NOTE]
+> プロパティの値に `1` を指定した場合もなお、 `alt` 属性は壊れた画像アイコンの隣に同時に表示されます。
 
 ## 公式定義
 

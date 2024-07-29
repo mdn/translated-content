@@ -7,11 +7,13 @@ slug: Web/API/VRFrameData/rightProjectionMatrix
 
 **`rightProjectionMatrix`** は {{domxref("VRFrameData")}} インタフェースの読み取り専用プロパティで、 4 行 4 列の行列を表す {{jsxref("Float32Array")}} を返します。この行列は、右目の描画に利用される射影を表します。
 
-> **メモ:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!NOTE]
+> このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 この値は、 WebGL の {{domxref("WebGLRenderingContext.uniformMatrix", "uniformMatrix4fv")}} 関数へ直接渡されるでしょう。
 
-> **警告:** アプリケーションは、この行列を改変せずに使用することを強く薦めます。描画時にこの射影行列の使用に失敗すると、表現されたフレームは歪んだり、正しく揃わなかったりし、その結果として、様々な度合いのユーザの不快感を生みます。
+> [!WARNING]
+> アプリケーションは、この行列を改変せずに使用することを強く薦めます。描画時にこの射影行列の使用に失敗すると、表現されたフレームは歪んだり、正しく揃わなかったりし、その結果として、様々な度合いのユーザの不快感を生みます。
 
 ## 値
 
@@ -19,8 +21,7 @@ slug: Web/API/VRFrameData/rightProjectionMatrix
 
 ## 例
 
-例については [`VRDisplay.getFrameData()`](/ja/docs/Web/API/VRDisplay/getFrameData#例
-) を参照してください。
+例については [`VRDisplay.getFrameData()`](/ja/docs/Web/API/VRDisplay/getFrameData#例) を参照してください。
 
 ## 仕様書
 
@@ -34,5 +35,4 @@ slug: Web/API/VRFrameData/rightProjectionMatrix
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

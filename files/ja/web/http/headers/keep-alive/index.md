@@ -7,7 +7,8 @@ slug: Web/HTTP/Headers/Keep-Alive
 
 **`Keep-Alive`** 一般ヘッダーは、送信者が接続の仕組みや、タイムアウト値と最大リクエスト数の設定に使用される可能性があることをヒントとすることができます。
 
-> **メモ:** このヘッダーが意味を持つためには、 {{HTTPHeader("Connection")}} ヘッダーを "keep-alive" に設定する必要があります。
+> [!NOTE]
+> このヘッダーが意味を持つためには、 {{HTTPHeader("Connection")}} ヘッダーを "keep-alive" に設定する必要があります。
 
 > **警告:** {{HTTPHeader("Connection")}} や {{HTTPHeader("Keep-Alive")}} などの接続固有のヘッダーフィールドは [HTTP/2 では禁止されています](https://tools.ietf.org/html/rfc7540#section-8.1.2.2)。 Chrome と Firefox は HTTP/2 レスポンスでこれらを無視しますが、 Safari は HTTP/2 仕様の要件に準拠しており、これらを含むレスポンスは読み込まれません。
 
@@ -69,7 +70,7 @@ Server: Apache
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Keep-Alive")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -43,7 +43,7 @@ Este elemento implementa a interface [`HTMLElement`](/pt-BR/DOM/element).
 
 ## Compatibilidade
 
-{{Compat("html.elements.nav")}}
+{{Compat}}
 
 ## Veja também
 

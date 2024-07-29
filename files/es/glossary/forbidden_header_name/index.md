@@ -3,6 +3,8 @@ title: Nombre de encabezado prohibido
 slug: Glossary/Forbidden_header_name
 ---
 
+{{GlossarySidebar}}
+
 Un nombre de encabezado prohibido es un nombre de [encabezado HTTP](/es/docs/Web/HTTP/Headers) que no se puede modificar mediante programación; específicamente, un nombre de encabezado de HTTP **solicitud** HTTP.
 
 Contrasta con el {{Glossary("Forbidden response header name")}}.
@@ -34,4 +36,5 @@ Los nombres de encabezado prohibidos comienzan con `Proxy-` or `Sec-`, o se comp
 - `Upgrade`
 - `Via`
 
-> **Nota:** El encabezado `User-Agent` ya no está prohibido, [según la especificación](https://fetch.spec.whatwg.org/#terminology-headers) — vea la lista de nombres prohibidos de encabezado (esta fue implementada en Firefox 43), por lo que ahora puede establecerse en un objecto Fetch {{domxref("Headers")}}, a través de XHR {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}, etc.
+> [!NOTE]
+> El encabezado `User-Agent` ya no está prohibido, [según la especificación](https://fetch.spec.whatwg.org/#terminology-headers) — vea la lista de nombres prohibidos de encabezado (esta fue implementada en Firefox 43), por lo que ahora puede establecerse en un objecto Fetch {{domxref("Headers")}}, a través de XHR {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}, etc.

@@ -3,6 +3,8 @@ title: Guides ARIA
 slug: Web/Accessibility/ARIA/ARIA_Guides
 ---
 
+{{AccessibilitySidebar}}
+
 **ARIA** (Accessible Rich Internet Applications ou Applications Internet riches accessibles) défini une manière de rendre le web plus accessible pour les personnes en situation de handicap. Les quelques principes suivant permettent de s'assurer d'une meilleure accessibilité :
 
 - Traiter les erreurs dans les formulaires

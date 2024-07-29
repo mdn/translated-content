@@ -29,7 +29,8 @@ Number(value)
 
 `Number` が関数として呼び出された場合、[引数を数値プリミティブに変換します](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)。[長整数 (BigInt)](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt) は数値へ変換されます。値が変換できない場合は、{{jsxref("NaN")}} を返します。
 
-> **警告:** コンストラクターとして `Number` を使用することはほとんどないはずです。
+> [!WARNING]
+> コンストラクターとして `Number` を使用することはほとんどないはずです。
 
 ## 例
 

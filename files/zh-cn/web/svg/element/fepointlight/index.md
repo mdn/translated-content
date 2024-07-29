@@ -25,7 +25,7 @@ slug: Web/SVG/Element/fePointLight
 
 ## DOM 接口
 
-该元素实现了[`SVGFEPointLightElement`](/zh-CN/DOM/SVGFEPointLightElement)接口。
+该元素实现了 [`SVGFEPointLightElement`](/zh-CN/DOM/SVGFEPointLightElement) 接口。
 
 ## 参见
 

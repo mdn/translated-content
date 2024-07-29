@@ -24,7 +24,7 @@ WebAssembly 被設計來與 JavaScript 協同工作 —— 藉由 WebAssembly �
 - [從現有的 C 模組編譯為 WebAssembly](/zh-TW/docs/WebAssembly/existing_C_to_wasm)
   - : WebAssembly 核心的使用案例是期望能讓開發者在 Web 環境中使用現存 C 的生態環境。
 - [將 Rust 程式碼編譯為 WebAssembly](/zh-TW/docs/WebAssembly/Rust_to_wasm)
-  - : 你可以將 Rust 編譯為 WebAssembly！本教程將帶您了解將 Rust 項目編譯為 wasm 並在現有的 Web 應用程序中使用它所需的所有知識。
+  - : 你可以將 Rust 編譯為 WebAssembly！本教程將帶你了解將 Rust 項目編譯為 wasm 並在現有的 Web 應用程序中使用它所需的所有知識。
 - [載入並運行 WebAssembly 程式碼](/zh-TW/docs/WebAssembly/Loading_and_running)
   - : 本文介紹如何透過把 [Fetch](/zh-TW/docs/Web/API/Fetch_API) 或 [XHR](/zh-TW/docs/Web/API/XMLHttpRequest) API 與 [WebAssembly JavaScript](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) API 結合起來、編譯及實例化 .wasm 文件。
 - [使用 WebAssembly 的 JavaScript API](/zh-TW/docs/WebAssembly/Using_the_JavaScript_API)
@@ -38,8 +38,10 @@ WebAssembly 被設計來與 JavaScript 協同工作 —— 藉由 WebAssembly �
 
 ## API 參考
 
-- [WebAssembly control flow](/zh-TW/docs/WebAssembly/Reference/Control_flow)
-  - : Reference documentation for the set of WebAssembly control-flow operators.
+- [WebAssembly 參考指令](/zh-TW/docs/WebAssembly/Reference)
+  - : WebAssembly 運算子相關的說明文件，內含互動式範例。
+- [WebAssembly JavaScript 介面](/zh-TW/docs/WebAssembly/JavaScript_interface)
+  - : 該物件充當所有與 WebAssembly 相關的功能的命名空間。
 - {{jsxref("Global_objects/WebAssembly", "WebAssembly")}}
   - : This object acts as the namespace for all WebAssembly related functionality.
 - {{jsxref("Global_objects/WebAssembly/Global", "WebAssembly.Global()")}}
@@ -70,14 +72,10 @@ WebAssembly 被設計來與 JavaScript 協同工作 —— 藉由 WebAssembly �
 
 {{Specifications}}
 
-## 瀏覽器相容性
-
-{{Compat}}
-
 ## 參見
 
 - [WebAssembly on Mozilla Research](https://research.mozilla.org/)
 - [webassembly.org](https://webassembly.org/)
 - [WebAssembly articles on Mozilla Hacks blog](https://hacks.mozilla.org/category/webassembly/)
 - [W3C WebAssembly Community Group](https://www.w3.org/community/webassembly/)
-- [Emscripting a C Library to Wasm](https://web.dev/emscripting-a-c-library/)
+- [將 C 程式庫編寫至 Wasm](https://web.dev/articles/emscripting-a-c-library)

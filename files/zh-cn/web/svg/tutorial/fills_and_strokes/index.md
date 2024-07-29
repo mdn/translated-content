@@ -22,7 +22,8 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 此外，在 SVG 中你可以分别定义填充色和边框色的不透明度，属性`fill-opacity`控制填充色的不透明度，属性`stroke-opacity`控制描边的不透明度。
 
-> **备注：** FireFox 3+ 支持 rgba 值，并且能够提供同样的效果，但是为了在其他浏览器中保持兼容，最好将它和填充/描边的不透明度分开使用。如果同时指定了 rgba 值和填充/描边不透明度，它们将都被调用。
+> [!NOTE]
+> FireFox 3+ 支持 rgba 值，并且能够提供同样的效果，但是为了在其他浏览器中保持兼容，最好将它和填充/描边的不透明度分开使用。如果同时指定了 rgba 值和填充/描边不透明度，它们将都被调用。
 
 ### 描边
 
@@ -129,7 +130,7 @@ CSS 可以利用 style 属性插入到元素的行间：
 
 你最好读一下 CSS 教程以便掌握它，一些可以在 HTML 里使用的 CSS，在 svg 里可能无法正常工作，比如`before`和`after`伪类。所以这里需要一点经验。
 
-你也可以定义一个外部的样式表，但是要符合[normal XML-stylesheet syntax](http://www.w3.org/TR/xml-stylesheet/)的 CSS 规则：
+你也可以定义一个外部的样式表，但是要符合[常规 XML 样式表语法](http://www.w3.org/TR/xml-stylesheet/)的 CSS 规则：
 
 ```xml
 <?xml version="1.0" standalone="no"?>

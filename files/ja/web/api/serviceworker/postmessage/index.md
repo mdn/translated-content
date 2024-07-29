@@ -37,7 +37,8 @@ postMessage(message, transfer)
 
     移譲可能なオブジェクトとは、{{jsxref("ArrayBuffer")}}、{{domxref("MessagePort")}}、{{domxref("ImageBitmap")}} などのクラスのインスタンスであり、移譲可能なオブジェクトです。`transfer` の値として、`null` は受け入れられません。
 
-> **メモ:** パラメータ `options` と `transfer` は、同時に使用することはできません。
+> [!NOTE]
+> パラメータ `options` と `transfer` は、同時に使用することはできません。
 
 ### 返値
 
@@ -65,10 +66,10 @@ navigator.serviceWorker.ready.then((registration) => {
 メッセージを受信するために、`service-worker.js` のサービスワーカーは、そのグローバルスコープで {{domxref("ServiceWorkerGlobalScope.message_event", "message")}} イベントを待ち受けする必要があります。
 
 ```js
-// これは `service-worker.s`` になる
-addEventListener("message", (event) =>
+// これは `service-worker.js` に記述する必要があります
+addEventListener("message", (event) => {
   console.log(`Message received: ${event.data}`);
-);
+});
 ```
 
 サービスワーカーは、{{domxref("Client.postMessage()", "postMessage()")}} メソッドを用いてメインスレッドにメッセージを送り返すことができることに注意してください。これを受け取るには、メインスレッドは {{domxref("ServiceWorkerContainer.message_event", "message")}} オブジェクトの {{domxref("ServiceWorkerContainer")}} イベントを待ち受けする必要があります。

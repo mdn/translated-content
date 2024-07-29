@@ -26,4 +26,4 @@ slug: Glossary/SVG
 ### 技術資訊
 
 - [MDN 的 SVG 文件](/zh-TW/docs/Web/SVG)
-- [最新的 SVG 規範](http://www.w3.org/TR/SVG/)
+- [最新的 SVG 規範](https://www.w3.org/TR/SVG/)

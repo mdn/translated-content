@@ -1,17 +1,18 @@
 ---
-title: MessageEvent.source
+title: "MessageEvent: source プロパティ"
+short-title: source
 slug: Web/API/MessageEvent/source
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`source`** は {{domxref("MessageEvent")}} インターフェイスの読み取り専用プロパティで、メッセージ送信者を表す `MessageEventSource` （{{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} オブジェクトのいずれか）です。
+**`source`** は {{domxref("MessageEvent")}} インターフェイスの読み取り専用プロパティで、メッセージ送信者を表す `MessageEventSource` （{{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} オブジェクトのいずれか）です。
 
 ## 値
 
-メッセージ送信者を表す `MessageEventSource` （{{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} オブジェクトのいずれか）です。
+メッセージ送信者を表す `MessageEventSource` （{{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} オブジェクトのいずれか）です。
 
 ## 例
 

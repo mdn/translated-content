@@ -62,7 +62,7 @@ Content-Range: bytes 4590-7999/8000
 
 ## ブラウザーの互換性
 
-{{Compat("http.status.206")}}
+{{Compat}}
 
 ## 関連情報
 

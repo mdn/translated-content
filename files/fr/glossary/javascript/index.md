@@ -3,6 +3,8 @@ title: JavaScript
 slug: Glossary/JavaScript
 ---
 
+{{GlossarySidebar}}
+
 JavaScript (JS) est un langage de programmation principalement utilisé côté client pour générer des pages web dynamiquement, mais également côté {{Glossary("Server","serveur")}}, depuis l'arrivée de [Node JS](https://nodejs.org/fr/).
 
 Ne pas confondre JavaScript avec [Java](<https://fr.wikipedia.org/wiki/Java_(langage)>). "Java" et "JavaScript" sont des marques commerciales ou des marques déposées d'Oracle aux États-Unis et dans d'autres pays. Cependant, les deux langages de programmation ont une syntaxe, une sémantique et des utilisations très différentes.

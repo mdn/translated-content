@@ -24,7 +24,8 @@ slug: Web/HTTP/Headers/Device-Memory
   </tbody>
 </table>
 
-> **メモ:** クライアントヒントには、安全なオリジン（TLS 経由）でのみアクセスできます。 サーバーは、{{HTTPHeader("Accept-CH")}} および {{HTTPHeader("Accept-CH-Lifetime")}} のレスポンスヘッダーを送信することによって、クライアントから `Device-Memory` ヘッダーを受信することを選択する必要があります。
+> [!NOTE]
+> クライアントヒントには、安全なオリジン（TLS 経由）でのみアクセスできます。 サーバーは、{{HTTPHeader("Accept-CH")}} および {{HTTPHeader("Accept-CH-Lifetime")}} のレスポンスヘッダーを送信することによって、クライアントから `Device-Memory` ヘッダーを受信することを選択する必要があります。
 
 ## 構文
 
@@ -55,7 +56,7 @@ Device-Memory: 1
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Device-Memory")}}
+{{Compat}}
 
 ## 関連情報
 

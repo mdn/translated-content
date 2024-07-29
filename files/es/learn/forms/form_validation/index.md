@@ -31,7 +31,7 @@ Antes de enviar datos al servidor, es importante asegurarse de que se completan 
 
 La validación en el lado del cliente es una verificación inicial y una característica importante para garantizar una buena experiencia de usuario; mediante la detección de datos no válidos en el lado del cliente, el usuario puede corregirlos de inmediato. Si el servidor lo recibe y, a continuación, lo rechaza; se produce un retraso considerable en la comunicación entre el servidor y el cliente que insta al usuario a corregir sus datos.
 
-Sin embargo, ¡la validación en el lado del cliente _no debe considerarse_ una medida de seguridad exhaustiva! Tus aplicaciones siempre deben realizar comprobaciones de seguridad de los datos enviados por el formulario _en el lado del servidor_, **así como también** en el lado del cliente, porque la validación en el lado del cliente es demasiado fácil de evitar, por lo que los usuarios malintencionados pueden enviar fácilmente datos incorrectos a tu servidor. Lee [Seguridad en los sitios web](/es/docs/Learn/Server-side/Primeros_pasos/seguridad_sitios_web) para ver qué _podría_ suceder. Cómo implementar la validación en el lado del servidor está fuera del alcance de este módulo, pero debes tenerlo en cuenta.
+Sin embargo, ¡la validación en el lado del cliente _no debe considerarse_ una medida de seguridad exhaustiva! Tus aplicaciones siempre deben realizar comprobaciones de seguridad de los datos enviados por el formulario _en el lado del servidor_, **así como también** en el lado del cliente, porque la validación en el lado del cliente es demasiado fácil de evitar, por lo que los usuarios malintencionados pueden enviar fácilmente datos incorrectos a tu servidor. Lee [Seguridad en los sitios web](/es/docs/Learn/Server-side/First_steps/Website_security) para ver qué _podría_ suceder. Cómo implementar la validación en el lado del servidor está fuera del alcance de este módulo, pero debes tenerlo en cuenta.
 
 ## ¿Qué es la validación de formularios?
 
@@ -50,9 +50,10 @@ Queremos que completar formularios web sea lo más fácil posible. Entonces, ¿p
 
 - **Queremos obtener los datos correctos en el formato correcto.** Nuestras aplicaciones no funcionarán correctamente si los datos de nuestros usuarios se almacenan en el formato incorrecto, son incorrectos o se omiten por completo.
 - **Queremos proteger los datos de nuestros usuarios**. Obligar a nuestros usuarios a introducir contraseñas seguras facilita proteger la información de su cuenta.
-- **Queremos protegernos a nosotros mismo**. Hay muchas formas en que los usuarios maliciosos puedan usar mal los formularios desprotegidos y dañar la aplicación (consulta [Seguridad del sitio web](/es/docs/Learn/Server-side/Primeros_pasos/seguridad_sitios_web)).
+- **Queremos protegernos a nosotros mismo**. Hay muchas formas en que los usuarios maliciosos puedan usar mal los formularios desprotegidos y dañar la aplicación (consulta [Seguridad del sitio web](/es/docs/Learn/Server-side/First_steps/Website_security)).
 
-> **Advertencia:** No confíes nunca en los datos que se pasan al servidor desde el cliente. Incluso si tu formulario se valida correctamente y evita la introducción de datos con formato incorrecto en el lado del cliente, un usuario malintencionado puede alterar la petición de red.
+> [!WARNING]
+> No confíes nunca en los datos que se pasan al servidor desde el cliente. Incluso si tu formulario se valida correctamente y evita la introducción de datos con formato incorrecto en el lado del cliente, un usuario malintencionado puede alterar la petición de red.
 
 ## Diferentes tipos de validación en el lado del cliente
 
@@ -69,7 +70,7 @@ Una de las características más importantes de los [controles de formulario de 
 - [`minlength`](/es/docs/Web/HTML/Attributes/minlength) y [`maxlength`](/es/docs/Web/HTML/Attributes/maxlength): Especifican la longitud mínima y máxima de los datos de texto (cadenas).
 - [`min`](/es/docs/Web/HTML/Attributes/min) y [`max`](/es/docs/Web/HTML/Attributes/max): Especifican los valores mínimo y máximo de los tipos de entrada numéricos.
 - `type`: Especifica si los datos deben ser un número, una dirección de correo electrónico o algún otro tipo de preajuste específico.
-- [`pattern`](/es/docs/Web/HTML/Attributes/pattern): Especifica una [expresión regular](/es/docs/Web/JavaScript/Guide/Regular_Expressions) que define un patrón que los datos que se introduzcan deben seguir.
+- [`pattern`](/es/docs/Web/HTML/Attributes/pattern): Especifica una [expresión regular](/es/docs/Web/JavaScript/Guide/Regular_expressions) que define un patrón que los datos que se introduzcan deben seguir.
 
 Si los datos que se introducen en un campo de formulario siguen todas las reglas que especifican los atributos anteriores, se consideran válidos. Si no, se consideran no válidos.
 
@@ -83,7 +84,8 @@ Cuando un elemento no es válido, se cumplen los aspectos siguientes:
 - El elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS, y a veces con otras pseudoclases de interfaz de usuario (UI) –por ejemplo, {{cssxref(":out-of-range")}}– dependiendo del error, que te permite aplicar un estilo específico a elementos no válidos.
 - Si el usuario intenta enviar los datos, el navegador bloquea el formulario y muestra un mensaje de error.
 
-> **Nota:** Hay varios errores que evitan que el formulario se envíe, incluidos {{domxref('validityState.badInput', 'badInput')}}, {{domxref('validityState.patternMismatch','patternMismatch')}}, {{domxref('validityState.rangeOverflow','rangeOverflow')}} o {{domxref('validityState.rangeUnderflow','rangeUnderflow')}}, {{domxref('validityState.stepMismatch','stepMismatch')}}, {{domxref('validityState.tooLong','tooLong')}} o {{domxref('validityState.tooShort','tooShort')}}, {{domxref('validityState.typeMismatch','typeMismatch')}}, {{domxref('validityState.valueMissing','valueMissing')}} o {{domxref('validityState.customError','customError')}}.
+> [!NOTE]
+> Hay varios errores que evitan que el formulario se envíe, incluidos {{domxref('validityState.badInput', 'badInput')}}, {{domxref('validityState.patternMismatch','patternMismatch')}}, {{domxref('validityState.rangeOverflow','rangeOverflow')}} o {{domxref('validityState.rangeUnderflow','rangeUnderflow')}}, {{domxref('validityState.stepMismatch','stepMismatch')}}, {{domxref('validityState.tooLong','tooLong')}} o {{domxref('validityState.tooShort','tooShort')}}, {{domxref('validityState.typeMismatch','typeMismatch')}}, {{domxref('validityState.valueMissing','valueMissing')}} o {{domxref('validityState.customError','customError')}}.
 
 ## Ejemplos de validación de formularios incorporados
 
@@ -149,17 +151,19 @@ Este CSS da un borde discontinuo rojo cuando la entrada no es válida, y un bord
 
 {{EmbedLiveSample("El_atributo_required", "100%", 80)}}
 
-> **Nota:** Puedes encontrar este ejemplo en vivo en GitHub como [fruit-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html) (consulta también el [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-required.html)).
+> [!NOTE]
+> Puedes encontrar este ejemplo en vivo en GitHub como [fruit-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html) (consulta también el [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-required.html)).
 
 Intenta enviar el formulario sin introducir ningún valor. Observa que la entrada no válida recibe el cursor, aparece un mensaje de error predeterminado («Complete este campo») y el formulario no se puede enviar.
 
 La presencia del atributo `required` en cualquier elemento que admite este atributo significa que el elemento coincide con la pseudoclase {{cssxref(':required')}}, tenga o no un valor. Si en el elemento {{HTMLElement("input")}} no se ha introducido ningún valor, `input` coincidirá con la pseudoclase {{cssxref(':invalid')}}.
 
-> **Nota:** Para una buena experiencia de usuario, indica al usuario que campos de formulario se requieren. No solo es una buena experiencia de usuario, sino que lo exigen las pautas de [accesibilidad](/es/docs/Learn/Accessibility) de WCAG. Además, solo requiere que los usuarios introduzcan los datos que realmente necesitas: Por ejemplo, ¿por qué realmente necesitas saber el género o el tratamiento de alguien?
+> [!NOTE]
+> Para una buena experiencia de usuario, indica al usuario que campos de formulario se requieren. No solo es una buena experiencia de usuario, sino que lo exigen las pautas de [accesibilidad](/es/docs/Learn/Accessibility) de WCAG. Además, solo requiere que los usuarios introduzcan los datos que realmente necesitas: Por ejemplo, ¿por qué realmente necesitas saber el género o el tratamiento de alguien?
 
 ### Validación de una expresión regular
 
-Otra característica útil de validación es el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern), que espera una [expresión regular](/es/docs/Web/JavaScript/Guide/Regular_Expressions) como valor. Una expresión regular (_regex_) es un patrón que se puede usar para establecer combinaciones de caracteres en cadenas de texto, por lo que las expresiones regulares son ideales para la validación de formularios y sirven para una gran variedad de otros usos en JavaScript.
+Otra característica útil de validación es el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern), que espera una [expresión regular](/es/docs/Web/JavaScript/Guide/Regular_expressions) como valor. Una expresión regular (_regex_) es un patrón que se puede usar para establecer combinaciones de caracteres en cadenas de texto, por lo que las expresiones regulares son ideales para la validación de formularios y sirven para una gran variedad de otros usos en JavaScript.
 
 Las expresiones regulares son bastante complejas y no vamos a exponerlas exhaustivamente en este artículo. A continuación hay algunos ejemplos para que te hagas una idea de cómo funcionan.
 
@@ -170,7 +174,7 @@ Las expresiones regulares son bastante complejas y no vamos a exponerlas exhaust
 - `a|b`: coincide con un carácter que es `a` o `b`.
 - `abc|xyz`: coincide exactamente con `abc` o `xyz` (pero no con `abcxyz` `a` o `y`, y así sucesivamente).
 
-Hay muchas más posibilidades que no exponemos aquí. Para obtener una lista completa y muchos ejemplos, consulta nuestro documento de [expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions).
+Hay muchas más posibilidades que no exponemos aquí. Para obtener una lista completa y muchos ejemplos, consulta nuestro documento de [expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions).
 
 Implementemos un ejemplo. Actualiza tu HTML para añadir un atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern) como este:
 
@@ -196,7 +200,8 @@ Esto nos da la siguiente actualización; pruébalo:
 
 {{EmbedLiveSample("Validación de una expresión regular", "100%", 80)}}
 
-> **Nota:** Puedes encontrar este ejemplo en vivo en GitHub como [fruit-pattern.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-pattern.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-pattern.html)).
+> [!NOTE]
+> Puedes encontrar este ejemplo en vivo en GitHub como [fruit-pattern.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-pattern.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-pattern.html)).
 
 En este ejemplo, el elemento {{HTMLElement("input")}} acepta uno de los cuatro valores posibles: las cadenas «plátano», «Plátano», «cereza» o «Cereza». Las expresiones regulares distinguen entre mayúsculas y minúsculas, pero hemos hecho que admita versiones en mayúsculas y minúsculas utilizando un patrón «Aa» adicional anidado dentro de corchetes.
 
@@ -204,9 +209,11 @@ En este punto, intenta cambiar el valor dentro del atributo [`pattern`](/es/docs
 
 Si un valor no vacío de {{HTMLElement("input")}} no coincide con el patrón de la expresión regular, `input` coincidirá con la pseudoclase {{cssxref(':invalid')}}.
 
-> **Nota:** Algunos tipos de elementos {{HTMLElement ("input")}} no necesitan validar una expresión regular con el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern). Especificar el tipo de correo electrónico (`email`), por ejemplo, valida el valor de las entradas con un patrón de dirección de correo electrónico bien formado o un patrón que coincida con una lista de direcciones de correo electrónico separadas por comas si tiene el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple).
+> [!NOTE]
+> Algunos tipos de elementos {{HTMLElement ("input")}} no necesitan validar una expresión regular con el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern). Especificar el tipo de correo electrónico (`email`), por ejemplo, valida el valor de las entradas con un patrón de dirección de correo electrónico bien formado o un patrón que coincida con una lista de direcciones de correo electrónico separadas por comas si tiene el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple).
 
-> **Nota:** El elemento {{HTMLElement("textarea")}} no admite el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern).
+> [!NOTE]
+> El elemento {{HTMLElement("textarea")}} no admite el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern).
 
 ### Restringir la longitud de tus entradas
 
@@ -265,7 +272,8 @@ Aquí está el ejemplo que se ejecuta en vivo:
 
 {{EmbedLiveSample("Restringir_los_valores_de_tus_entradas", "100%", 100)}}
 
-> **Nota:** Puedes encontrar este ejemplo en vivo en GitHub como [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-length.html)).
+> [!NOTE]
+> Puedes encontrar este ejemplo en vivo en GitHub como [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-length.html)).
 
 > **Nota:** `<input type="number">` (y otros tipos, como `range` y `date`) también pueden tomar un atributo [`step`](/es/docs/Web/HTML/Attributes/step), que especifica en qué incremento aumenta o disminuye el valor cuando se utilizan los controles de entrada (como el botones numéricos arriba y abajo). En el ejemplo anterior no hemos incluido un atributo `step`, por lo que el valor predeterminado es `1`. Esto significa que los valores de coma flotante, como 3.2, también se mostrarán como no válidos.
 
@@ -359,7 +367,8 @@ Esto se traduce de la siguiente manera:
 
 Consulta [Atributos relacionados con la validación](/es/docs/HTML/HTML5/Validacion_de_restricciones#Atributos_relacionados_con_validaciones) para obtener una lista completa de los atributos que se pueden usar para restringir los valores de entrada y los tipos de entrada que los admiten.
 
-> **Nota:** Puedes encontrar este ejemplo en vivo en GitHub como [full-example.html](https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/full-example.html)).
+> [!NOTE]
+> Puedes encontrar este ejemplo en vivo en GitHub como [full-example.html](https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/full-example.html)).
 
 ## Validar formularios utilizando JavaScript
 
@@ -446,7 +455,8 @@ Puedes probarlo a continuación:
 
 {{EmbedGHLiveSample("learning-area/html/forms/form-validation/custom-error-message.html", '100%', 80)}}
 
-> **Nota:** Puede encontrar este ejemplo vivo en GitHub como [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) (véase también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/custom-error-message.html)).
+> [!NOTE]
+> Puede encontrar este ejemplo vivo en GitHub como [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) (véase también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/custom-error-message.html)).
 
 #### Un ejemplo más detallado
 
@@ -469,11 +479,12 @@ En primer lugar, el código HTML. Una vez más, siéntete libre de construir est
 
 Este sencillo formulario usa el atributo [`novalidate`](/es/docs/Web/HTML/Attributes/novalidate) para desactivar la validación automática del navegador; esto permite que nuestra secuencia de comandos tome control sobre la validación. Sin embargo, esto no deshabilita la compatibilidad para la API de validación de restricciones ni la aplicación de pseudoclases de CSS como {{cssxref(":valid")}}, etc. Eso significa que, aunque el navegador no verifica automáticamente la validez del formulario antes de enviar los datos, puedes hacerlo tú mismo y diseñar el formulario en consecuencia.
 
-Nuestra entrada para validar es [`<input type="email">`](/es/docs/Web/HTML/Elemento/input/email), que es obligatoria y tiene una longitud mínima (`minlength`) de 8 caracteres. Vamos a verificar esto con nuestro propio código para que muestre un mensaje de error personalizado para cada elemento.
+Nuestra entrada para validar es [`<input type="email">`](/es/docs/Web/HTML/Element/input/email), que es obligatoria y tiene una longitud mínima (`minlength`) de 8 caracteres. Vamos a verificar esto con nuestro propio código para que muestre un mensaje de error personalizado para cada elemento.
 
 Nuestro objetivo es mostrar los mensajes de error dentro de un elemento `<span>`. El atributo [`aria-live`](/es/docs/Accessibility/ARIA/ARIA_Live_Regions) se establece en ese `<span>` para asegurar que todo el mundo podrá ver nuestro mensaje de error personalizado, incluidos los usuarios de lectores de pantalla.
 
-> **Nota:** Un punto clave a tener en cuenta es que establecer el atributo `novalidate` en el formulario impide que el formulario muestre sus propios cuadros de diálogo de error, y nos permite mostrar los mensajes de error personalizados en el DOM de la manera que nosotros elijamos.
+> [!NOTE]
+> Un punto clave a tener en cuenta es que establecer el atributo `novalidate` en el formulario impide que el formulario muestre sus propios cuadros de diálogo de error, y nos permite mostrar los mensajes de error personalizados en el DOM de la manera que nosotros elijamos.
 
 Ahora aplicaremos algo de CSS básico para mejorar ligeramente el aspecto del formulario y proporcionar algunos comentarios visuales cuando los datos de entrada no sean válidos:
 
@@ -600,15 +611,17 @@ Este es el resultado:
 
 {{EmbedGHLiveSample("learning-area/html/forms/form-validation/detailed-custom-validation.html", '100%', 150)}}
 
-> **Nota:** Puedes encontrar este ejemplo en vivo en GitHub como [detailed-custom-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/detailed-custom-validation.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/detailed-custom-validation.html)).
+> [!NOTE]
+> Puedes encontrar este ejemplo en vivo en GitHub como [detailed-custom-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/detailed-custom-validation.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/detailed-custom-validation.html)).
 
 La API de validación de restricciones te proporciona una herramienta poderosa para manejar la validación de formularios, y te permite tener un control enorme sobre la interfaz de usuario más allá de lo que puedas hacer solo con HTML y CSS.
 
-> **Nota:** Para obtener más información, consulta nuestra [guía de validación de restricciones](/es/docs/HTML/HTML5/Validacion_de_restricciones) y la referencia de [API de validación de restricciones](/es/docs/Web/API/Constraint_validation).
+> [!NOTE]
+> Para obtener más información, consulta nuestra [guía de validación de restricciones](/es/docs/HTML/HTML5/Validacion_de_restricciones) y la referencia de [API de validación de restricciones](/es/docs/Web/API/Constraint_validation).
 
 ### Validar formularios sin una API incorporada
 
-En algunos casos, como la compatibilidad heredada del navegador o los [controles personalizados](/es/docs/Learn/HTML/Forms/como_crear_widgets_de_formularios_personalizados), no podrás o no querrás usar la API de validación de restricciones. Todavía puedes usar JavaScript para validar tu formulario, pero vas a tener que escribirlo.
+En algunos casos, como la compatibilidad heredada del navegador o los [controles personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls), no podrás o no querrás usar la API de validación de restricciones. Todavía puedes usar JavaScript para validar tu formulario, pero vas a tener que escribirlo.
 
 Antes de validar el formulario, hazte estas preguntas:
 
@@ -620,10 +633,10 @@ Antes de validar el formulario, hazte estas preguntas:
 
   - : Para reducir la frustración del usuario, es muy importante proporcionar tanta información útil como sea posible para guiarlo a fin de que corrija sus entradas de datos. Debes ofrecer sugerencias por adelantado para que sepan lo que se espera de ellos, así como mensajes de error claros. Si deseas profundizar en los requisitos de interfaz de usuario para la validación de formularios, aquí hay algunos artículos útiles que debes leer:
 
-    - SmashingMagazine: [Form-Field Validation: The Errors-Only Approach](http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/) \[Validación de campo de formulario: El enfoque de solo errores]
-    - SmashingMagazine: [Web Form Validation: Best Practices and Tutorials](http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/) \[Validación de formularios web: Buenas prácticas y tutoriales]
-    - Six Revision: [Best Practices for Hints and Validation in Web Forms](http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/) \[Buenas prácticas para sugerencias y validación de formularios web]
-    - A List Apart: [Inline Validation in Web Forms](http://www.alistapart.com/articles/inline-validation-in-web-forms/) \[Validación en línea de formularios web]
+    - SmashingMagazine: [Validación de campo de formulario: El enfoque de solo errores](http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/)
+    - SmashingMagazine: [Validación de formularios web: Buenas prácticas y tutoriales](http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/)
+    - Six Revision: [Buenas prácticas para sugerencias y validación de formularios web](http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/)
+    - A List Apart: [Validación en línea de formularios web](https://www.alistapart.com/articles/inline-validation-in-web-forms/)
 
 #### Un ejemplo que no usa la API de validación de restricciones
 
@@ -768,7 +781,7 @@ addEvent(form, "submit", function () {
 
   if (!test) {
     email.className = "invalid";
-    error.innerHTML = "I expect an e-mail, darling!";
+    error.innerHTML = "Espero un correo electrónico, querido!";
     error.className = "error active";
 
     // Algunos navegadores antiguos no son compatibles con el método event.preventDefault ()
@@ -785,9 +798,7 @@ El resultado es el siguiente:
 
 {{EmbedLiveSample("Validar_formularios_sin_una_API_incorporada", "100%", 130)}}
 
-Como puedes ver, no es tan difícil construir un sistema de validación por tu cuenta. La parte difícil es hacer que sea lo suficientemente genérico para que se pueda usar en diferentes plataformas y en cualquier forma. Hay muchas bibliotecas de archivos disponibles para realizar la validación de formularios, como por ejemplo [Validate.js](http://rickharrison.github.com/validate.js/)
-
-.
+Como puedes ver, no es tan difícil construir un sistema de validación por tu cuenta. La parte difícil es hacer que sea lo suficientemente genérico para que se pueda usar en diferentes plataformas y en cualquier forma. Hay muchas bibliotecas de archivos disponibles para realizar la validación de formularios, como por ejemplo [Validate.js](http://rickharrison.github.com/validate.js/).
 
 ## Prueba tus habilidades!
 

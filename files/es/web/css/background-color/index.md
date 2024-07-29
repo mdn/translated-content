@@ -3,6 +3,8 @@ title: background-color
 slug: Web/CSS/background-color
 ---
 
+{{CSSRef}}
+
 ### Resumen
 
 `Background-color` es un propiedad de CSS que define el color de fondo de un elemento, puede ser el valor de un color o la palabra clave `transparent`.
@@ -65,30 +67,13 @@ background-color: color | transparent | inherit
 
 {{EmbedLiveSample("Ejemplos","200","150")}}
 
-### Notas
-
-(Add links to good colour reference sites here.)
-
 ### Especificaciones
 
-- [CSS 1 (en)](http://www.w3.org/TR/CSS1#background-color)
-- [CSS 2.1 (en)](http://www.w3.org/TR/CSS21/colors.html#propdef-background-color)
-- [CSS 3 (en)](http://www.w3.org/TR/2005/WD-css3-background-20050216/#background-color)
+{{Specifications}}
 
-### Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
-TBD: This may be removed in favour of a centralized compatibility chart.
-
-| Navegador           | soporta background-color |
-| ------------------- | ------------------------ |
-| Internet Explorer 6 | parcialmente             |
-| Internet Explorer 7 | parcialmente             |
-| Firefox 1.5         | Sí                       |
-| Firefox 2           | Sí                       |
-| Opera 8.5           | parcialmente             |
-| Opera 9             | parcialmente             |
-| Konqueror 3.5       | Sí                       |
-| Safari 2            | Sí                       |
+{{Compat}}
 
 ### Ver también
 

@@ -59,7 +59,7 @@ Content-Range: bytes 200-1000/67589
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Range")}}
+{{Compat}}
 
 ## Veja também
 

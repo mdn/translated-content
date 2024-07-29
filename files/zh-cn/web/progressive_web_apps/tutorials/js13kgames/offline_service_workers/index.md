@@ -11,13 +11,13 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
 
 Service Worker 是浏览器和网络之间的虚拟代理。它们终于解决了前端开发人员多年来一直在努力解决的一些问题，其中最值得关注的是，解决了如何正确缓存网站资源并使其在离线时可用的问题。
 
-Service Worker 运行在一个与页面 JavaScript 主线程独立的线程上，并且无权访问 DOM 结构。这引入了一种与传统 Web 编程不同的方式：它的 API 是非阻塞的，并且可以在不同的上下文之间发送和接收信息。您可分配给 Service Worker 一些任务，并通过基于 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的方法在任务完成时收到结果。
+Service Worker 运行在一个与页面 JavaScript 主线程独立的线程上，并且无权访问 DOM 结构。这引入了一种与传统 Web 编程不同的方式：它的 API 是非阻塞的，并且可以在不同的上下文之间发送和接收信息。你可分配给 Service Worker 一些任务，并通过基于 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的方法在任务完成时收到结果。
 
 它不仅仅提供离线功能，还可以做包括处理通知、在单独的线程上执行繁重的计算等事务。Service workers 非常强大，因为他们可以控制网络请求、修改网络请求、返回缓存的自定义响应，或者合成响应。
 
 ### 安全
 
-因为它们非常强大，所以 Service Worker 只能在安全的上下文中执行（即 HTTPS）。如果您想在将代码推送到生产环境之前先进行实验，则可以始终在本地主机上进行测试或设置 GitHub Pages，这两者都支持 HTTPS。
+因为它们非常强大，所以 Service Worker 只能在安全的上下文中执行（即 HTTPS）。如果你想在将代码推送到生产环境之前先进行实验，则可以始终在本地主机上进行测试或设置 GitHub Pages，这两者都支持 HTTPS。
 
 ## 离线优先
 

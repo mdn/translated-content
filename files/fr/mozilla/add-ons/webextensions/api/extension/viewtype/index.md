@@ -3,7 +3,7 @@ title: extension.ViewType
 slug: Mozilla/Add-ons/WebExtensions/API/extension/ViewType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type de vue de l'extension.
 

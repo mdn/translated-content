@@ -18,7 +18,7 @@ flex-shrink используется вместе со свойствами flex
 flex-shrink: 2;
 flex-shrink: 0.6;
 
-/* Глобальное значение */
+/* Глобальные значения */
 flex-shrink: inherit;
 flex-shrink: initial;
 flex-shrink: unset;

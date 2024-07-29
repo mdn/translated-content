@@ -56,7 +56,7 @@ Pragma: no-cache
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Pragma")}}
+{{Compat}}
 
 ## Veja também
 

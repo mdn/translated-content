@@ -30,7 +30,7 @@ Nos casos em que um elemento interativo não tem um nome acessível, ou um nome 
 
 A maior parte do conteúdo tem um nome acessível gerado a partir do conteúdo de texto de seu elemento de encapsulamento imediato. Nomes acessíveis também podem ser criados por certos atributos ou elementos associados.
 
-Por padrão, o nome acessível de um botão é o conteúdo entre as tags {{HTMLElement('button')}} de abertura e fechamento, o nome acessível de uma imagem é o conteúdo de seu [`alt`](/pt-BR/docs/Web /HTML/Element/img#attr-alt) e o nome acessível de uma entrada de formulário é o conteúdo do elemento {{HTMLElement('label')}} associado.
+Por padrão, o nome acessível de um botão é o conteúdo entre as tags {{HTMLElement('button')}} de abertura e fechamento, o nome acessível de uma imagem é o conteúdo de seu [`alt`](/pt-BR/docs/Web /HTML/Element/img#alt) e o nome acessível de uma entrada de formulário é o conteúdo do elemento {{HTMLElement('label')}} associado.
 
 Se nenhuma dessas opções estiver disponível, ou se o nome acessível padrão não for apropriado, use o atributo `aria-label` para definir o nome acessível de um elemento.
 

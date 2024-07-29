@@ -24,7 +24,8 @@ slug: Web/HTTP/Headers/DPR
   </tbody>
 </table>
 
-> **メモ:** クライアントヒントには、安全なオリジン（TLS 経由）でのみアクセスできます。 サーバーは、{{HTTPHeader("Accept-CH")}} および {{HTTPHeader("Accept-CH-Lifetime")}} のレスポンスヘッダーを送信することによって、クライアントから `DPR` ヘッダーを受信することを選択する必要があります。
+> [!NOTE]
+> クライアントヒントには、安全なオリジン（TLS 経由）でのみアクセスできます。 サーバーは、{{HTTPHeader("Accept-CH")}} および {{HTTPHeader("Accept-CH-Lifetime")}} のレスポンスヘッダーを送信することによって、クライアントから `DPR` ヘッダーを受信することを選択する必要があります。
 
 ## 構文
 
@@ -49,7 +50,7 @@ DPR: 1.0
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.DPR")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -23,4 +23,4 @@ var variable = CSSVariableReferenceValue.variable;
 
 ## ブラウザーの対応
 
-{{Compat("api.CSSVariableReferenceValue.fallback")}}
+{{Compat}}

@@ -3,7 +3,7 @@ title: document.createElement
 slug: Web/API/Document/createElement
 ---
 
-{{ ApiRef() }}
+{{APIRef("DOM")}}
 
 ### Общая информация
 
@@ -56,7 +56,7 @@ function addElement() {
 
 Для создания элементов с заданным пространством имён используйте метод [createElementNS](/ru/DOM/document.createElementNS).
 
-Реализация `createElement` в Gecko не соответствует DOM спецификации для XUL и XHTML документов: `localName` и `namespaceURI` не устанавливаются в `null` в созданном документе. Смотрите {{ Bug(280692) }} для подробностей.
+Реализация `createElement` в Gecko не соответствует DOM спецификации для XUL и XHTML документов: `localName` и `namespaceURI` не устанавливаются в `null` в созданном документе. Смотрите [Firefox bug 280692](https://bugzil.la/280692) для подробностей.
 
 Для обратной совместимости с предыдущими версиями спецификации пользовательских элементов некоторые браузеры позволяют передавать здесь строку вместо объекта, где значением строки является имя тега пользовательского элемента.
 
@@ -67,3 +67,12 @@ function addElement() {
 ## Совместимость с браузерами
 
 {{Compat}}
+
+## Смотрите также
+
+- {{domxref("Node.removeChild()")}}
+- {{domxref("Node.replaceChild()")}}
+- {{domxref("Node.appendChild()")}}
+- {{domxref("Node.insertBefore()")}}
+- {{domxref("Node.hasChildNodes()")}}
+- {{domxref("document.createElementNS()")}}

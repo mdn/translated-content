@@ -14,7 +14,8 @@ l10n:
 
 右クリックイベントが（イベントの {{domxref("Event.preventDefault", "preventDefault()")}} メソッドを呼び出して）無効化されていない場合は、対象となる要素で `contextmenu` イベントが発行されます。
 
-> **メモ:** Firefox における例外: <kbd>Shift</kbd> キーを押しながら右クリックすると、`contextmenu` イベントが発生せずにコンテキストメニューが表示されます。
+> [!NOTE]
+> Firefox における例外: <kbd>Shift</kbd> キーを押しながら右クリックすると、`contextmenu` イベントが発生せずにコンテキストメニューが表示されます。
 
 ## 構文
 
@@ -43,9 +44,9 @@ _親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承
 - {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
   - : このマウスイベントが発行されたときに押されていたボタンです（もしあれば）。
 - {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
-  - : マウスポインターのローカル座標（DOM コンテンツ）における X 座標です。
+  - : [ビューポート座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#ビューポート)におけるマウスポインターの X 座標です。
 - {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
-  - : マウスポインターのローカル座標（DOM コンテンツ）における Y 座標です。
+  - : [ビューポート座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#ビューポート)におけるマウスポインターの Y 座標です。
 - {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
   - : このマウスイベントが発行されたときに <kbd>control</kbd> キーが押されていた場合は `true` を返します。
 - {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
@@ -69,9 +70,9 @@ _親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承
 - {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
   - : もしあれば、イベントの副ターゲットです。
 - {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
-  - : グローバル（画面）座標におけるマウスポインターの X 座標です。
+  - : [スクリーン座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#スクリーン)におけるマウスポインターの X 座標です。
 - {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
-  - : グローバル（画面）座標におけるマウスポインターの Y 座標です。
+  - : [スクリーン座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#スクリーン)におけるマウスポインターの Y 座標です。
 - {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
   - : このマウスイベントが発行されたときに <kbd>shift</kbd> キーが押されていた場合は `true` を返します。
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
@@ -90,7 +91,8 @@ _親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承
 
 この例では、最初の段落で `contextmenu` イベントが発行されたときに、`preventDefault()` を使って `contextmenu` イベントの既定のアクションをキャンセルしています。その結果、第 1 段落は右クリックしても何も起こらず、第 2 段落にはブラウザーが提供する標準的なコンテキストメニューが表示されることになります。
 
-> **メモ:** Firefox では、<kbd>Shift</kbd> キーを押しながら右クリックすると、`contextmenu` イベントが発生せずにコンテキストメニューが表示されます。そのため、イベントをキャンセルしてもコンテキストメニューの表示を止めることはできません。
+> [!NOTE]
+> Firefox では、<kbd>Shift</kbd> キーを押しながら右クリックすると、`contextmenu` イベントが発生せずにコンテキストメニューが表示されます。そのため、イベントをキャンセルしてもコンテキストメニューの表示を止めることはできません。
 
 ### HTML
 

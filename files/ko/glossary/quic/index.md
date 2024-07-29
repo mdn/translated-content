@@ -1,29 +1,21 @@
 ---
 title: QUIC
 slug: Glossary/QUIC
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-**Quick UDP Internet Connection** 또는 **QUIC**은 UDP 상에 구현된 실험적인 다중 전송 프로토콜로 TCP 및 웹 애플리케이션 전송을 개선하기 위한 방법을 위해 Google에서 실험적으로 개발하였습니다.
+{{GlossarySidebar}}
 
-TCP는 많은 운영 체제 커널에 내장되어 있기 때문에 변경사항을 실험하고 수정을 구현하는 것에 시간이 많이드는 과정이기에, QUIC을 만들어 개발자는 더 빠르게 실험을 할 수 있고, 새로운 것을 시도할 수 있게 되었습니다.
+**QUIC**은 UDP 상에 구현된 다중 전송 프로토콜입니다. HTTP/3의 전송 계층으로 {{Glossary("TCP")}} 대신 사용됩니다.
 
-QUIC은 HTTP/2의 의미론적 지원을 위해 설계되었습니다. 멀티플랙싱, 흐름 제어, 보안 및 혼잡 제어를 제공해줍니다.
+QUIC는 HTTP 연결에 대해 보다 빠른 설정과 낮은 대기 시간을 제공하도록 설계되었습니다.
 
-QUIC의 중요한 기능입니다.
+- TCP에서는, 초기 TCP 핸드셰이크 뒤에 선택적으로 TLS 핸드셰이크가 따라옵니다. 이는 데이터가 전송되기 전에 완료되어야 합니다. 이제 TLS 거의 어디에나 존재하므로, QUIC는 TLS 핸드셰이크를 초기 QUIC 핸드셰이크에 통합하여 설정 중에 교환해야 하는 메시지 수를 줄입니다.
 
-- 연결 설정 시간 단축
-- 혼잡 제어 개선
-- Head of Line Blocking 없는 멀티플렉싱
-- 전달 오류 수정
-- 연결 마이그레이션
-
-현재는 QUIC를 지원하는 브라우저와 서버는 그리 많지 않습니다.
-
-### 리소스
-
-- [Chromium Projects Documentation](https://www.chromium.org/quic)
-- [IETF Draft](https://datatracker.ietf.org/doc/html/draft-tsvwg-quic-protocol-02)
+- HTTP/2는 다중화 프로토콜로, 여러 개의 동시 HTTP 트랜잭션을 허용합니다. 그러나 트랜잭션은 단일 TCP 연결을 통해 다중화됩니다. 즉, TCP 계층에서의 패킷 손실 및 후속 재전송으로 인해 모든 트랜잭션이 차단될 수 있습니다. QUIC는 UDP를 통해 실행하고 각 스트림에 대해 별도로 패킷 손실 감지 및 재전송을 구현하여 이를 방지합니다. 즉, 패킷 손실은 패킷이 손실된 특정 스트림만 차단한다는 의미입니다.
 
 ## 같이 보기
 
-- [HTTP/2](/ko/docs/Glossary/HTTP_2)
+- {{rfc("9000", "the QUIC 명세")}}
+- {{rfc("9114", "the HTTP/3 명세")}}

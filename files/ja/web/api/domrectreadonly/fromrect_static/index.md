@@ -1,6 +1,9 @@
 ---
-title: DOMRectReadOnly.fromRect()
+title: "DOMRectReadOnly: fromRect() 静的メソッド"
+short-title: fromRect()
 slug: Web/API/DOMRectReadOnly/fromRect_static
+l10n:
+  sourceCommit: a0f6bf6f7d148f368f6965255058df1ed1f43839
 ---
 
 {{APIRef("Geometry Interfaces")}}
@@ -9,9 +12,9 @@ slug: Web/API/DOMRectReadOnly/fromRect_static
 
 ## 構文
 
-```js
-fromRect();
-fromRect(rectangle);
+```js-nolint
+DOMRectReadOnly.fromRect()
+DOMRectReadOnly.fromRect(rectangle)
 ```
 
 ### 引数

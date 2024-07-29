@@ -3,7 +3,7 @@ title: downloads.show()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/show
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`show()`** de l'API {{WebExtAPIRef("downloads")}} affiche le fichier téléchargé dans son dossier contenant dans le gestionnaire de fichiers de la plate-forme sous-jacente.
 

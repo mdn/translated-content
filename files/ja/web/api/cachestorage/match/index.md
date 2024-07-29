@@ -1,15 +1,16 @@
 ---
-title: CacheStorage.match()
+title: "CacheStorage: match() メソッド"
+short-title: match()
 slug: Web/API/CacheStorage/match
 l10n:
-  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
+  sourceCommit: 2e327846966abb10de0b1c9bedc584caab71ec97
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 **`match()`** は {{domxref("CacheStorage")}} インターフェイスのメソッドで、所与の {{domxref("Request")}} または URL 文字列が保存された {{domxref("Response")}} のキーであるかどうかをチェックします。 このメソッドは、{{domxref("Response")}} の {{jsxref("Promise")}}、または一致するものが見つからない場合に `undefined` に解決される {{jsxref("Promise")}} を返します。
 
-`CacheStorage` には、グローバルな {{domxref("caches")}} プロパティを介してアクセスできます。
+`CacheStorage` には、ウィンドウの {{domxref("Window.caches")}} プロパティまたはワーカーの {{domxref("WorkerGlobalScope.caches")}} を介してアクセスできます。
 
 `Cache` オブジェクトは作成順に検索されます。
 
@@ -94,4 +95,4 @@ self.addEventListener("fetch", (event) => {
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} および {{domxref("WorkerGlobalScope.caches")}}

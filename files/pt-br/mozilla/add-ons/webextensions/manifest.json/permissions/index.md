@@ -174,4 +174,4 @@ Solicita ambas as permissões anteriores.
 
 ## Compatibilidade com navegadores
 
-{{Compat("webextensions.manifest.permissions")}}
+{{Compat}}

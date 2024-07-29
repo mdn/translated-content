@@ -23,7 +23,7 @@ svg {
 <svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
   <!--
   Circle 元素将始终拦截鼠标事件。
-  为了改变较底部的的 rect 元素的颜色，
+  为了改变较底部的 rect 元素的颜色，
   你需要点击 rect 元素在圆外的部分
   -->
   <rect x="0" y="0" height="10" width="10" fill="black" />

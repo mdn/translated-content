@@ -48,26 +48,30 @@ slug: Web/API/Permissions_API/Using_the_Permissions_API
 
 ```js
 function handlePermission() {
-  navigator.permissions.query({name:'geolocation'}).then(function(result) {
-    if (result.state == 'granted') {
+  navigator.permissions.query({ name: "geolocation" }).then(function (result) {
+    if (result.state == "granted") {
       report(result.state);
-      geoBtn.style.display = 'none';
-    } else if (result.state == 'prompt') {
+      geoBtn.style.display = "none";
+    } else if (result.state == "prompt") {
       report(result.state);
-      geoBtn.style.display = 'none';
-      navigator.geolocation.getCurrentPosition(revealPosition,positionDenied,geoSettings);
-    } else if (result.state == 'denied') {
+      geoBtn.style.display = "none";
+      navigator.geolocation.getCurrentPosition(
+        revealPosition,
+        positionDenied,
+        geoSettings,
+      );
+    } else if (result.state == "denied") {
       report(result.state);
-      geoBtn.style.display = 'inline';
+      geoBtn.style.display = "inline";
     }
-    result.onchange = function() {
+    result.onchange = function () {
       report(result.state);
-    }
+    };
   });
 }
 
 function report(state) {
-  console.log('Permission ' + state);
+  console.log("Permission " + state);
 }
 
 handlePermission();
@@ -99,7 +103,8 @@ function revokePermission() {
 }
 ```
 
-> **メモ:** Firefox 51 以降、[Web Applications Security Working Group](https://www.w3.org/2011/webappsec/) で設計が問題になっているため、`revoke()` 関数はデフォルトで無効になっています。 設定 `dom.permissions.revoke.enable` を `true` に設定することで再度有効にすることができます。
+> [!NOTE]
+> Firefox 51 以降、[Web Applications Security Working Group](https://www.w3.org/2011/webappsec/) で設計が問題になっているため、`revoke()` 関数はデフォルトで無効になっています。 設定 `dom.permissions.revoke.enable` を `true` に設定することで再度有効にすることができます。
 
 ### パーミッションの状態の変更への対応
 

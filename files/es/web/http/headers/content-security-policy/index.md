@@ -40,7 +40,8 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
   - : Define los origenes válidos para [web workers](/es/docs/Web/API/Web_Workers_API) y contextos de navegación anidados cargados usando elementos como {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
 
-    > **Advertencia:** En lugar de **`child-src`**, los autores quienes deseen regular los contextos de navegación anidados y "workers" deberían usar las directivas {{CSP("frame-src")}} y {{CSP("worker-src")}}, respectivamente.
+    > [!WARNING]
+    > En lugar de **`child-src`**, los autores quienes deseen regular los contextos de navegación anidados y "workers" deberían usar las directivas {{CSP("frame-src")}} y {{CSP("worker-src")}}, respectivamente.
 
 - {{CSP("connect-src")}}
   - : Restringe las URLs que pueden ser cargados usando scripts.
@@ -58,7 +59,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
   - : Especifica origenes válidos para carga de archivos usando elementos como {{HTMLElement("audio")}} , {{HTMLElement("video")}} y {{HTMLElement("track")}}.
 - {{CSP("object-src")}}
 
-  - : Specifies valid sources for the {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and {{HTMLElement("applet")}} elements.
+  - : Specifies valid sources for the {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements.
 
     Elements controlled by `object-src` are perhaps coincidentally considered legacy HTML elements and aren't recieving new standardized features (such as the security attributes `sandbox` or `allow` for `<iframe>`). Therefore it is **recommended** to restrict this fetch-directive (e.g. explicitly set `object-src 'none'` if possible).
 
@@ -93,7 +94,7 @@ Navigation directives govern to which location a user can navigate to or submit 
 - {{CSP("form-action")}}
   - : Restricts the URLs which can be used as the target of a form submissions from a given context.
 - {{CSP("frame-ancestors")}}
-  - : Specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or {{HTMLElement("applet")}}.
+  - : Specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, or {{HTMLElement("embed")}}.
 - {{CSP("navigate-to")}} {{experimental_inline}}
   - : Restricts the URLs to which a document can navigate by any means (a, form, window\.location, window\.open, etc.)
 
@@ -105,7 +106,8 @@ Reporting directives control the reporting process of CSP violations. See also t
 
   - : Instructs the user agent to report attempts to violate the Content Security Policy. These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI.
 
-    > **Advertencia:** Though the {{CSP("report-to")}} directive is intended to replace the deprecated **`report-uri`** directive, {{CSP("report-to")}} isn't supported in most browsers yet. So for compatibility with current browsers while also adding forward compatibility when browsers get {{CSP("report-to")}} support, you can specify both **`report-uri`** and {{CSP("report-to")}}:
+    > [!WARNING]
+    > Though the {{CSP("report-to")}} directive is intended to replace the deprecated **`report-uri`** directive, {{CSP("report-to")}} isn't supported in most browsers yet. So for compatibility with current browsers while also adding forward compatibility when browsers get {{CSP("report-to")}} support, you can specify both **`report-uri`** and {{CSP("report-to")}}:
     >
     > ```
     > Content-Security-Policy: ...; report-uri https://endpoint.example.com; report-to groupname

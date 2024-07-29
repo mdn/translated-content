@@ -80,7 +80,7 @@ Math.sign(); // NaN
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.sign")}}
+{{Compat}}
 
 ## 関連情報
 

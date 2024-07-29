@@ -3,7 +3,7 @@ title: notifications.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onShown
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé immédiatement après l'affichage d'une notification.
 

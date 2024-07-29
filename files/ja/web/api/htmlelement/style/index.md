@@ -17,7 +17,8 @@ l10n:
 
 スタイル宣言は、`elt.style.color = null` のように、`null` または空文字列を設定することでリセットされます。
 
-> **メモ:** CSS プロパティ名は以下のルールで JavaScript の識別子に変換されます。
+> [!NOTE]
+> CSS プロパティ名は以下のルールで JavaScript の識別子に変換されます。
 >
 > - プロパティが 1 語で構成されている場合は、そのままの形になります。`height` はそのまま（小文字で）残ります。
 > - プロパティがダッシュ区切りで複数の単語から構成されている場合は、ダッシュが削除されて _キャメルケース_ へと変換されます。`background-attachment` は `backgroundAttachment` となります。
@@ -36,7 +37,7 @@ l10n:
 次のコードスニペットは、要素の `style` プロパティで取得した値と、HTML 属性で設定された一連のスタイルの関係を示します。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <body style="font-weight:bold">
     <div style="border-top: 1px solid blue; color:red" id="elt">

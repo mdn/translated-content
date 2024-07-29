@@ -41,11 +41,11 @@ text-overflow: unset;
 ### 値
 
 - `clip`
-  - : このプロパティの既定値です。このキーワード値は[コンテンツ領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)の末端でテキストを切り取るので、文字の途中で切り取る可能性があります。文字と文字の間で切り取るには、対象のブラウザーが `text-overflow` の空文字列に対応していれば、 `text-overflow: '';` を指定することができます。
+  - : このプロパティの既定値です。このキーワード値は[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)の末端でテキストを切り取るので、文字の途中で切り取る可能性があります。文字と文字の間で切り取るには、対象のブラウザーが `text-overflow` の空文字列に対応していれば、 `text-overflow: '';` を指定することができます。
 - `ellipsis`
-  - : このキーワード値は、切り取られたテキストを表現するために省略記号 (`'…'`, `U+2026 HORIZONTAL ELLIPSIS`) を表示します。省略記号は[コンテンツ領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)内に表示され、表示テキストのサイズを更に狭めます。省略記号を表示する場所がなければ、切り取られます。
+  - : このキーワード値は、切り取られたテキストを表現するために省略記号 (`'…'`, `U+2026 HORIZONTAL ELLIPSIS`) を表示します。省略記号は[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)内に表示され、表示テキストのサイズを更に狭めます。省略記号を表示する場所がなければ、切り取られます。
 - `<string>` {{experimental_inline}}
-  - : クリップされたテキストを表すために使われる {{cssxref("&lt;string&gt;")}} です。この文字列は[コンテンツ領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)内に表示され、表示テキストのサイズをさらに狭めます。この文字列自身を表示する場所がなければ、切り取られます。
+  - : クリップされたテキストを表すために使われる {{cssxref("&lt;string&gt;")}} です。この文字列は[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)内に表示され、表示テキストのサイズをさらに狭めます。この文字列自身を表示する場所がなければ、切り取られます。
 - `fade` {{experimental_inline}}
   - : このキーワードはあふれたインラインコンテンツを切り取り、行ボックスの端付近にフェードアウト効果を適用して、端が完全に透明になるようにします。
 - `fade( <length> | <percentage> )` {{experimental_inline}}

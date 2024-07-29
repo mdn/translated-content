@@ -111,7 +111,8 @@ l10n:
 | Safari     | 32,767 pixels | 32,767 pixels | 268,435,456 pixels (つまり 16,384 x 16,384) |
 | IE         | 8,192 pixels  | 8,192 pixels  | ?                                           |
 
-> **メモ:** 寸法や面積の最大値を超えると、キャンバスが使用できなくなります。 — 描画コマンドが動作しなくなります。
+> [!NOTE]
+> 寸法や面積の最大値を超えると、キャンバスが使用できなくなります。 — 描画コマンドが動作しなくなります。
 
 ## 例
 
@@ -130,9 +131,9 @@ l10n:
 それから JavaScript コード内で {{domxref("HTMLCanvasElement.getContext()")}} を呼び出して描画コンテキストを取得し、キャンバス上に描画を開始します。
 
 ```js
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 ```
 

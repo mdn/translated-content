@@ -67,7 +67,7 @@ var float64 = new Float64Array(iterable);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Float64Array.Float64Array")}}
+{{Compat}}
 
 ### 互換性ノート
 

@@ -132,7 +132,7 @@ if (!Array.prototype.findIndex) {
 }
 ```
 
-如果您需要相容過時的不支援 [`Object.defineProperty`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 的 JavaScript 引擎，最好不要使用 polyfill 來填充 `Array.prototype` 方法，因為無法使它們成為不可枚舉的（non-enumerable）屬性。
+如果你需要相容過時的不支援 [`Object.defineProperty`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 的 JavaScript 引擎，最好不要使用 polyfill 來填充 `Array.prototype` 方法，因為無法使它們成為不可枚舉的（non-enumerable）屬性。
 
 ## 規範
 

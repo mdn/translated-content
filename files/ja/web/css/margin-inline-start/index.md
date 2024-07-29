@@ -1,6 +1,8 @@
 ---
 title: margin-inline-start
 slug: Web/CSS/margin-inline-start
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
 {{CSSRef}}
@@ -24,6 +26,7 @@ margin-inline-start: auto;
 margin-inline-start: inherit;
 margin-inline-start: initial;
 margin-inline-start: revert;
+margin-inline-start: revert-layer;
 margin-inline-start: unset;
 ```
 
@@ -43,7 +46,7 @@ margin-inline-start: unset;
 
 ## 例
 
-<h3 id="Setting_inline_start_margin">インライン方向の先頭側のマージンの設定</h3>
+### インライン方向の先頭側のマージンの設定
 
 #### HTML
 
@@ -71,7 +74,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_inline_start_margin", 140, 140)}}
+{{EmbedLiveSample("インライン方向の先頭側のマージンの設定", 140, 140)}}
 
 ## 仕様書
 
@@ -83,6 +86,7 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - {{cssxref("margin-inline-end")}}
 - 対応づけ先の物理的なプロパティ: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

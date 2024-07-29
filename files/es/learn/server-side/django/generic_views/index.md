@@ -78,16 +78,17 @@ class BookListView(generic.ListView):
 
 ¡Eso es todo! La vista genérica consultará a la base de datos para obtener todos los registros del modelo especificado (`Book`) y renderizará una plantilla ubicada en **/locallibrary/catalog/templates/catalog/book_list.html** (que crearemos más abajo). Dentro de la plantilla puedes acceder a la lista de libros mediante la variable de plantilla llamada `object_list` O `book_list` (esto es, genéricamente, "`nombre_del_modelo_list`").
 
-> **Nota:** Esta ruta complicada para la ubicación de la plantilla no es un error de digitación — las vistas genéricas buscan plantillas en `/application_name/the_model_name_list.html` (`catalog/book_list.html` en este caso) dentro del directorio de la aplicación `/application_name/templates/` (`/catalog/templates/`).
+> [!NOTE]
+> Esta ruta complicada para la ubicación de la plantilla no es un error de digitación — las vistas genéricas buscan plantillas en `/application_name/the_model_name_list.html` (`catalog/book_list.html` en este caso) dentro del directorio de la aplicación `/application_name/templates/` (`/catalog/templates/`).
 
 Puedes añadir atributos para cambiar el comportamiento por defecto de arriba. Por ejemplo, puedes especificar otro archivo de plantilla si necesitas tener múltiples vistas que usen el mismo modelo, o puedes querer usar un nombre diferente de variable de plantilla si `book_list` no resulta intuitivo para tu caso particular de uso de plantilla. Posiblemente la variación más útil es cambiar/filtrar el conjunto de resultados que se devuelve, así, en lugar de listar todos los libros podrías listar los 5 libros más leídos por otros usuarios.
 
 ```python
 class BookListView(generic.ListView):
     model = Book
-    context_object_name = 'my_book_list'   # your own name for the list as a template variable
-    queryset = Book.objects.filter(title__icontains='war')[:5] # Get 5 books containing the title war
-    template_name = 'books/my_arbitrary_template_name_list.html'  # Specify your own template name/location
+    context_object_name = 'my_book_list'   # su propio nombre para la lista como variable de plantilla
+    queryset = Book.objects.filter(title__icontains='war')[:5] # Consigue 5 libros que contengan el título de guerra.
+    template_name = 'books/my_arbitrary_template_name_list.html'  # Especifique su propio nombre/ubicación de plantilla
 ```
 
 #### Sobreescribiendo métodos en vistas basadas en clases
@@ -101,7 +102,7 @@ class BookListView(generic.ListView):
     model = Book
 
     def get_queryset(self):
-        return Book.objects.filter(title__icontains='war')[:5] # Get 5 books containing the title war
+        return Book.objects.filter(title__icontains='war')[:5] # Consigue 5 libros que contengan el título de guerra.
 ```
 
 Podríamos también sobreescribir `get_context_data()` con el objeto de pasar variables de contexto adicionales a la plantilla (ej. la lista de libros se pasa por defecto). El fragmento de abajo muestra cómo añadir una variable llamada "some_data" al contexto (la misma estaría entonces disponible como una variable de plantilla).
@@ -111,10 +112,10 @@ class BookListView(generic.ListView):
     model = Book
 
     def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
+        # Llame primero a la implementación base para obtener un contexto.
         context = super(BookListView, self).get_context_data(**kwargs)
-        # Get the blog from id and add it to the context
-        context['some_data'] = 'This is just some data'
+        # Obtenga el blog del id y agréguelo al contexto.
+        context['some_data'] = 'Estos son solo algunos datos'
         return context
 ```
 
@@ -124,7 +125,8 @@ Cuando se hace esto es importante seguir este patrón:
 - Luego añadir tu nueva información de contexto.
 - Luego devolver el nuevo contexto (actualizado).
 
-> **Nota:** Revisa [Built-in class-based generic views](https://docs.djangoproject.com/en/1.10/topics/class-based-views/generic-display/) (Django docs) para muchos más ejemplos de lo que puedes hacer.
+> [!NOTE]
+> Revisa [Vistas genéricas integradas basadas en clases](https://docs.djangoproject.com/en/1.10/topics/class-based-views/generic-display/) (documentación de Django) para muchos más ejemplos de lo que puedes hacer.
 
 ### Creando la plantilla de Vista de Lista
 
@@ -136,7 +138,7 @@ Las plantillas para las vistas genéricas son como cualquier otra plantilla (si 
 {% extends "base_generic.html" %}
 
 {% block content %}
-    <h1>Book List</h1>
+    <h1>Lista de libros</h1>
 
     {% if book_list %}
     <ul>
@@ -149,7 +151,7 @@ Las plantillas para las vistas genéricas son como cualquier otra plantilla (si 
 
     </ul>
     {% else %}
-      <p>There are no books in the library.</p>
+      <p>No hay libros en la biblioteca.</p>
     {% endif %}
 {% endblock %}
 ```
@@ -162,13 +164,13 @@ Usamos las etiquetas de plantilla [`if`](https://docs.djangoproject.com/en/1.10/
 
 ```django
 {% if book_list %}
-  <!-- code here to list the books -->
+  <!-- código aquí para listar los libros -->
 {% else %}
-  <p>There are no books in the library.</p>
+  <p>No hay libros en la biblioteca.</p>
 {% endif %}
 ```
 
-La condicional de arriba solo revisa un caso, pero puedes revisar condiciones adicionales usando la etiqueta de plantilla `elif` (ej. `{% elif var2 %}`). Para mayor información sobre operadores condicionales mira: [if](https://docs.djangoproject.com/en/1.10/ref/templates/builtins/#if), [ifequal/ifnotequal](https://docs.djangoproject.com/en/1.10/ref/templates/builtins/#ifequal-and-ifnotequal), y [ifchanged](https://docs.djangoproject.com/en/1.10/ref/templates/builtins/#ifchanged) en [Built-in template tags and filters](https://docs.djangoproject.com/en/1.10/ref/templates/builtins) (Django Docs).
+La condicional de arriba solo revisa un caso, pero puedes revisar condiciones adicionales usando la etiqueta de plantilla `elif` (ej. `{% elif var2 %}`). Para mayor información sobre operadores condicionales mira: [if](https://docs.djangoproject.com/en/1.10/ref/templates/builtins/#if), [ifequal/ifnotequal](https://docs.djangoproject.com/en/1.10/ref/templates/builtins/#ifequal-and-ifnotequal), y [ifchanged](https://docs.djangoproject.com/en/1.10/ref/templates/builtins/#ifchanged) en [Etiquetas y filtros de plantilla integrados](https://docs.djangoproject.com/en/1.10/ref/templates/builtins) (Django Docs).
 
 #### Lazos For
 
@@ -176,7 +178,7 @@ La plantilla usa las etiquetas de plantilla [for](https://docs.djangoproject.com
 
 ```django
 {% for book in book_list %}
-  <li> <!-- code here get information from each book item --> </li>
+  <li> <!-- código aquí obtener información de cada elemento del libro --> </li>
 {% endfor %}
 ```
 
@@ -194,16 +196,17 @@ Accedemos a los _campos_ del registro del libro asociado usando la "notación de
 
 También podemos invocar _funciones_ en el modelo desde dentro de nuestra plantilla — en este caso invocamos a `book.get_absolute_url()` para obtener una URL que se podría usar para desplegar la página de detalle relacionada. Esto funciona siempre y cuando la función no tenga ningún argumento (¡no hay forma de enviar argumentos!).
 
-> **Nota:** Debemos tener cuidado de los "efectos secundarios" al invocar funciones en las plantillas. Aquí solo obtenemos una URL para desplegar, pero una función puede hacer casi cualquier cosa — ¡no quisieramos borrar nuestra base de datos (por ejemplo) solo por renderizar nuestra plantilla!
+> [!NOTE]
+> Debemos tener cuidado de los "efectos secundarios" al invocar funciones en las plantillas. Aquí solo obtenemos una URL para desplegar, pero una función puede hacer casi cualquier cosa — ¡no quisieramos borrar nuestra base de datos (por ejemplo) solo por renderizar nuestra plantilla!
 
 #### Actualizar la plantilla base
 
-Abre la plantilla base (**/locallibrary/catalog/templates/_base_generic.html_**) e inserta **{% url 'books' %}** en el enlace URL para **All books**, como se muestra abajo. Esto habilitará el enlace en todas las páginas (podemos ubicar esto exitosamente en su lugar ahora que hemos creado el mapeo url "books").
+Abre la plantilla base (**/locallibrary/catalog/templates/_base_generic.html_**) e inserta **{% url 'books' %}** en el enlace URL para **Todos los libros**, como se muestra abajo. Esto habilitará el enlace en todas las páginas (podemos ubicar esto exitosamente en su lugar ahora que hemos creado el mapeo url "books").
 
 ```python
-<li><a href="{% url 'index' %}">Home</a></li>
-<li><a href="{% url 'books' %}">All books</a></li>
-<li><a href="">All authors</a></li>
+<li><a href="{% url 'index' %}">Inicio</a></li>
+<li><a href="{% url 'books' %}">Todos los libros</a></li>
+<li><a href="">Todos los autores</a></li>
 ```
 
 ### ¿Cómo se ve?
@@ -233,13 +236,16 @@ Opcionalmente puedes añadir al nombre de la variable una [etiqueta](https://doc
 
 En este caso utilizamos `'<int:pk>'` para capturar el id del libro, que debe ser una cadena con un formato especial y pasarlo a la vista como un parámetro llamado `pk` (abreviatura de primary key). Este es el id que se está utilizando para almacenar el libro de forma única en la base de datos, tal y como se define en el Modelo de Libros.
 
-> **Nota:** Como ya se discutió antes, nuestra URL coincidente es en realidad `catalog/book/<digits>` (como estamos en la aplicación **catalog**, se asume `/catalog/`).
+> [!NOTE]
+> Como ya se discutió antes, nuestra URL coincidente es en realidad `catalog/book/<digits>` (como estamos en la aplicación **catalog**, se asume `/catalog/`).
 
-> **Advertencia:** La vista de detalle genérica basada en clases _espera_ que se le envíe un parámetro llamado pk. Si estás escribiendo tu propia vista de función, puedes usar el nombre de parámetro que quieras, o incluso enviar la información como un argumento sin nombre.
+> [!WARNING]
+> La vista de detalle genérica basada en clases _espera_ que se le envíe un parámetro llamado pk. Si estás escribiendo tu propia vista de función, puedes usar el nombre de parámetro que quieras, o incluso enviar la información como un argumento sin nombre.
 
 #### Introducción avanzada a path/expresiones regulares
 
-> **Nota:** No necesitarás esta sección para completar el tutorial. La proporcionamos porque conocer esta opción es probable que sea útil en tu futuro centrado en Django.
+> [!NOTE]
+> No necesitarás esta sección para completar el tutorial. La proporcionamos porque conocer esta opción es probable que sea útil en tu futuro centrado en Django.
 
 La combinación de patrones proporcionada por `path()` es simple y útil para los casos (muy comunes) en los que sólo desea capturar _cualquier_ cadena o entero. Si necesita un filtrado más refinado (por ejemplo, filtrar sólo cadenas que tengan un cierto número de caracteres) puede utilizar el método [re_path()](https://docs.djangoproject.com/en/4.0/ref/urls/#django.urls.re_path).
 
@@ -409,7 +415,8 @@ Consideremos algunos ejemplos reales de patrones:
 
 Puedes capturar múltiples patrones en una sola comparación, y por tanto codificar bastantes datos diferentes en una URL.
 
-> **Nota:** Como reto, considera cómo podrías codificar una url para listar todos los libros publicados en un año, mes y día en particular, y la RE que podría usarse para la comparación.
+> [!NOTE]
+> Como reto, considera cómo podrías codificar una url para listar todos los libros publicados en un año, mes y día en particular, y la RE que podría usarse para la comparación.
 
 #### Enviado opciones adicionales en tus mapeos URL
 
@@ -421,7 +428,8 @@ Por ejemplo, en base al path mostrado a continuación, para una petición a `/my
 path('myurl/<fish>', views.my_view, {'my_template_name': 'some_path'}, name='aurl'),
 ```
 
-> **Nota:** Tanto las opciones extra como los patrones capturados con nombre se envían a la vista como argumentos _con nombre_. Si usas el **mismo nombre** tanto para un patrón capturado como para una opción extra, solo el valor del patrón capturado será enviado a la vista (el valor especificado para la opción extra será eliminado).
+> [!NOTE]
+> Tanto las opciones extra como los patrones capturados con nombre se envían a la vista como argumentos _con nombre_. Si usas el **mismo nombre** tanto para un patrón capturado como para una opción extra, solo el valor del patrón capturado será enviado a la vista (el valor especificado para la opción extra será eliminado).
 
 ### Vista (basada en clases)
 
@@ -472,27 +480,28 @@ Crea el archivo HTML **/locallibrary/catalog/templates/catalog/book_detail.html*
 {% block content %}
   <h1>Title: \{{ book.title }}</h1>
 
-  <p><strong>Author:</strong> <a href="">\{{ book.author }}</a></p> <!-- author detail link not yet defined -->
-  <p><strong>Summary:</strong> \{{ book.summary }}</p>
+  <p><strong>Autor:</strong> <a href="">\{{ book.author }}</a></p> <!-- enlace de detalle del autor aún no definido -->
+  <p><strong>Resumen:</strong> \{{ book.summary }}</p>
   <p><strong>ISBN:</strong> \{{ book.isbn }}</p>
-  <p><strong>Language:</strong> \{{ book.language }}</p>
-  <p><strong>Genre:</strong> {% for genre in book.genre.all %} \{{ genre }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+  <p><strong>Idioma:</strong> \{{ book.language }}</p>
+  <p><strong>Genero:</strong> {% for genre in book.genre.all %} \{{ genre }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
 
   <div style="margin-left:20px;margin-top:20px">
-    <h4>Copies</h4>
+    <h4>Copias</h4>
 
     {% for copy in book.bookinstance_set.all %}
     <hr>
     <p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">\{{ copy.get_status_display }}</p>
-    {% if copy.status != 'a' %}<p><strong>Due to be returned:</strong> \{{copy.due_back}}</p>{% endif %}
-    <p><strong>Imprint:</strong> \{{copy.imprint}}</p>
+    {% if copy.status != 'a' %}<p><strong>Pendiente de devolución:</strong> \{{copy.due_back}}</p>{% endif %}
+    <p><strong>Imprimir:</strong> \{{copy.imprint}}</p>
     <p class="text-muted"><strong>Id:</strong> \{{copy.id}}</p>
     {% endfor %}
   </div>
 {% endblock %}
 ```
 
-> **Nota:** El enlace `author` en la plantilla de arriba tiene una URL vacía porque no hemos creado aún una página de detalle de autor. Una vez que esta exista, deberías actualizar la URL así:
+> [!NOTE]
+> El enlace `author` en la plantilla de arriba tiene una URL vacía porque no hemos creado aún una página de detalle de autor. Una vez que esta exista, deberías actualizar la URL así:
 >
 > ```django
 >  <a href="{% url 'author-detail' book.author.pk %}"><strong>\{{ book.author }}</strong></a>
@@ -515,7 +524,8 @@ Lo interesante que no hemos visto previamente es la función `book.bookinstance_
 
 Este método es necesario porque has declarado un campo `ForeignKey` (uno-a-muchos) únicamente en la lado "uno" de la relación. Como no haces nada para declarar la relación en el otro modelo ("muchos"), este no tiene ningún campo para obtener el conjunto de registros asociados. Para superar este problema, Django construye una función apropiadamente llamada "búsqueda reversa" que puedes usar. El nombre de la función se construye convirtiendo a minúsculas el nombre del modelo donde la `ForeignKey` fue declarada, seguido por `_set` (así, la función creada en `Book` es `bookinstance_set()`).
 
-> **Nota:** Aquí usamos `all()` para obtener todos los registros (la opción por defecto). A pesar de que puedes usar el método `filter()` para obtener un subconjunto de registros en el código, no puedes hacerlo directamente en las plantillas porque no puedes especificar argumentos para las funciones.
+> [!NOTE]
+> Aquí usamos `all()` para obtener todos los registros (la opción por defecto). A pesar de que puedes usar el método `filter()` para obtener un subconjunto de registros en el código, no puedes hacerlo directamente en las plantillas porque no puedes especificar argumentos para las funciones.
 >
 > Ten también cuidado de que si no defines un orden (en tu vista o modelo basado en clases), verás errores arrojados por el servidor de dearrollo como este:
 >
@@ -560,15 +570,16 @@ Este método es necesario porque has declarado un campo `ForeignKey` (uno-a-much
 
 En este punto deberíamos haber creado todo lo necesario para desplegar tanto la lista de libros como las páginas de detalles de libros. Ejecuta el servidor (`python3 manage.py runserver`) y dirígete en tu navegador a `http://127.0.0.1:8000/`.
 
-> **Advertencia:** No hagas click aún en ningún enlace de autor o de detalles de autores — ¡los crearás en el reto!
+> [!WARNING]
+> No hagas click aún en ningún enlace de autor o de detalles de autores — ¡los crearás en el reto!
 
-Haz click en el enlace **All books** para desplegar la lista de libros.
+Haz click en el enlace **Todos los libros** para desplegar la lista de libros.
 
-![Book List Page](book_list_page_no_pagination.png)
+![Página de lista de libros](book_list_page_no_pagination.png)
 
 Luego haz click en un enlace a uno de tus libros. Si todo está correcto, deberías ver algo como la siguiente pantalla.
 
-![Book Detail Page](book_detail_page_no_pagination.png)
+![Página de detalles del libro](book_detail_page_no_pagination.png)
 
 ## Paginación
 
@@ -602,13 +613,13 @@ Abre **/locallibrary/catalog/templates/_base_generic.html_** y copia el siguient
       <div class="pagination">
           <span class="page-links">
               {% if page_obj.has_previous %}
-                  <a href="\{{ request.path }}?page=\{{ page_obj.previous_page_number }}">previous</a>
+                  <a href="\{{ request.path }}?page=\{{ page_obj.previous_page_number }}">anterior</a>
               {% endif %}
               <span class="page-current">
                   Page \{{ page_obj.number }} of \{{ page_obj.paginator.num_pages }}.
               </span>
               {% if page_obj.has_next %}
-                  <a href="\{{ request.path }}?page=\{{ page_obj.next_page_number }}">next</a>
+                  <a href="\{{ request.path }}?page=\{{ page_obj.next_page_number }}">siguiente</a>
               {% endif %}
           </span>
       </div>
@@ -628,7 +639,7 @@ La captura de pantalla de abajo muestra cómo se ve la paginación — si no has
 
 Los enlaces de paginación se muestran en la parte de abajo, con enlaces de next/previous desplegados dependiendo de en qué página estés
 
-![Book List Page - paginated](book_list_paginated.png)
+![Página de lista de libros - paginada](book_list_paginated.png)
 
 ## Rétate a tí mismo
 
@@ -639,20 +650,20 @@ El reto en este artículo es crear las vistas de lista y detalle para autores, q
 
 El código requerido para los mapeadores URL y las vistas debería ser virtualmente idéntico a las vistas de lista y detalle para `Book` que creamos arriba. Las plantillas serán diferentes, pero tendrán un comportamiento similar.
 
-> **Nota:**
+> [!NOTE]
 >
-> - Una vez que has creado el mapeador URL para la página de lista de autores, necesitarás también actualizar el enlace **All authors** en la plantilla base. Sigue el [mismo proceso](#Update_the_base_template) que hicimos cuando actualizamos el enlace **All books**.
-> - Una vez que has creado el mapeador URL para la página de detalle de autores, deberías también actualizar la [plantilla de vista de detalle de libros](#Creating_the_Detail_View_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) de modo que el enlace de autor apunte a tu nueva página de detalle de autor (en lugar de ser una URL vacía). La línea cambiará para añadir la etiqueta de plantilla que se muestra en negrita abajo.
+> - Una vez que has creado el mapeador URL para la página de lista de autores, necesitarás también actualizar el enlace **Todos los autores** en la plantilla base. Sigue el [mismo proceso](#update_the_base_template) que hicimos cuando actualizamos el enlace **Todos los libros**.
+> - Una vez que has creado el mapeador URL para la página de detalle de autores, deberías también actualizar la [plantilla de vista de detalle de libros](#creating_the_detail_view_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) de modo que el enlace de autor apunte a tu nueva página de detalle de autor (en lugar de ser una URL vacía). La línea cambiará para añadir la etiqueta de plantilla que se muestra en negrita abajo.
 >
 > ```django
-> <p><strong>Author:</strong> <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a></p>
+> <p><strong>Autor:</strong> <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a></p>
 > ```
 
 Cuando termines, tus páginas deberían lucir similares a las capturas de pantalla de abajo.
 
-![Author List Page](author_list_page_no_pagination.png)
+![Página de lista de autores](author_list_page_no_pagination.png)
 
-![Author Detail Page](author_detail_page_no_pagination.png)
+![Página de detalles del autor](author_detail_page_no_pagination.png)
 
 ## Resumen
 
@@ -664,10 +675,10 @@ En los siguientes artículos extenderemos esta biblioteca para añadir soporte p
 
 ## Mira también
 
-- [Vistas genéricas basadas en clases incluídas](https://docs.djangoproject.com/en/1.10/topics/class-based-views/generic-display/) (Django docs)
-- [Vistas genéricas de despliegue](https://docs.djangoproject.com/en/1.10/ref/class-based-views/generic-display/) (Django docs)
-- [Introducción a las vistas basadas en clases](https://docs.djangoproject.com/en/1.10/topics/class-based-views/intro/) (Django docs)
-- [Etiquetas de plantilla y filtros incluídos](https://docs.djangoproject.com/en/1.10/ref/templates/builtins) (Django docs).
-- [Paginación](https://docs.djangoproject.com/en/1.10/topics/pagination/) (Django docs)
+- [Vistas genéricas basadas en clases incluídas](https://docs.djangoproject.com/en/1.10/topics/class-based-views/generic-display/) (documentación de Django)
+- [Vistas genéricas de despliegue](https://docs.djangoproject.com/en/1.10/ref/class-based-views/generic-display/) (documentación de Django)
+- [Introducción a las vistas basadas en clases](https://docs.djangoproject.com/en/1.10/topics/class-based-views/intro/) (documentación de Django)
+- [Etiquetas de plantilla y filtros incluídos](https://docs.djangoproject.com/en/1.10/ref/templates/builtins) (documentación de Django).
+- [Paginación](https://docs.djangoproject.com/en/1.10/topics/pagination/) (documentación de Django)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}

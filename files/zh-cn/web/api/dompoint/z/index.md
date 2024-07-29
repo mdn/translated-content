@@ -25,6 +25,6 @@ var zPos = DOMPoint.z;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - 其他坐标属性：{{domxref("DOMPoint.x", "x")}}， {{domxref("DOMPoint.y", "y")}}，透视值 {{domxref("DOMPoint.w", "w")}}。

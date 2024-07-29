@@ -54,13 +54,11 @@ document.getElementById("#oIdDoElemento").style.color = "red";
 
 ## Especificações
 
-| Specification                                                                            |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.fontcolor', 'String.prototype.fontcolor')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.fontcolor")}}
+{{Compat}}
 
 ## Veja também
 

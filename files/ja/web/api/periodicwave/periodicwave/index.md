@@ -23,15 +23,15 @@ new PeriodicWave(context, options)
 - `options` {{optional_inline}}
 
   - : `PeriodicWave` に持たせるプロパティを定義する
-      [`PeriodicWaveOptions`](https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveOptions)
-      の辞書オブジェクトです。(辞書 [PeriodicWaveConstraints](https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveConstraints) で定義されるオプションも継承しています)
+    [`PeriodicWaveOptions`](https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveOptions)
+    の辞書オブジェクトです。(辞書 [PeriodicWaveConstraints](https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveConstraints) で定義されるオプションも継承しています)
 
     - `real`
       - : 波形を作るための余弦 (コサイン) の項を格納した {{jsxref("Float32Array")}} です。
-          ({{domxref("BaseAudioContext.createPeriodicWave")}} の引数 `real` に相当します)
+        ({{domxref("BaseAudioContext.createPeriodicWave")}} の引数 `real` に相当します)
     - `imag`
       - : 波形を作るための正弦 (サイン) の項を格納した {{jsxref("Float32Array")}} です。
-          ({{domxref("BaseAudioContext.createPeriodicWave")}} の引数 `imag` に相当します)
+        ({{domxref("BaseAudioContext.createPeriodicWave")}} の引数 `imag` に相当します)
     - `channelCount`
       - : ノードへの入力の[アップミキシングとダウンミキシング](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#%E3%82%A2%E3%83%83%E3%83%97%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0%E3%81%A8%E3%83%80%E3%82%A6%E3%83%B3%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0)を行う際に何個のチャンネルを用いるかを決めるために用いる整数です。(詳しくは {{domxref("AudioNode.channelCount")}} を参照してください) 利用法と正確な定義は `channelCountMode` の値によります。
     - `channelCountMode`

@@ -49,7 +49,7 @@ console.log(Array.from(str.matchAll(numbers)));
 
 ## ブラウザー実装状況
 
-{{Compat("javascript.builtins.Symbol.matchAll")}}
+{{Compat}}
 
 ## 関連情報
 

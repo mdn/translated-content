@@ -5,6 +5,8 @@ l10n:
   sourceCommit: a4d73f3e2a41b98e26f8f39af143338ad4900bd5
 ---
 
+{{GlossarySidebar}}
+
 **IDL** (_Interface Description Language_、インターフェイス記述言語) は、特定のプログラミング言語とは別にオブジェクトのインターフェイスを指定するために使用される汎用言語です。
 
 ## コンテンツ属性と IDL 属性

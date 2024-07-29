@@ -86,7 +86,7 @@ input::placeholder {
 
 Текст placeholder с высоким цветовым контрастом может быть воспринят как введённые данные. Текст placeholder исчезает, когда пользователь вводит что-либо в {{htmlelement("input")}} элемент. Эти обстоятельства могут помешать заполнить правильно форму, особенно людям с когнитивными проблемами.
 
-Другой подход к представлению информации placeholder заключается в том, чтобы расположить её вне формы ввода в непосредственной близости от неё, а затем использовать [`aria-describedby`](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) для программного связывания {{HTMLElement("input")}} элемента с подсказкой.
+Другой подход к представлению информации placeholder заключается в том, чтобы расположить её вне формы ввода в непосредственной близости от неё, а затем использовать [`aria-describedby`](/ru/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) для программного связывания {{HTMLElement("input")}} элемента с подсказкой.
 
 В таком случае содержимое подсказки будет доступно даже в том случае, если что-то введено в форму. Большинство скринридеров используют `aria-describedby` для чтения подсказок после того, как будет прочитан текст метки формы. Пользователь может отключить эту функцию, если дополнительная информация окажется ему ненужной.
 
@@ -106,7 +106,7 @@ input::placeholder {
 
 Текст placeholder будет отображаться с теми же стилями, что и введённый пользователем текст при работе в [режиме высокой контрастности Windows](/ru/docs/Web/CSS/-ms-high-contrast). Это вызовет затруднения с определением того какой текст был введён, а какой является placeholder.
 
-- [Greg Whitworth — How to use -ms-high-contrast](http://www.gwhitworth.com/blog/2017/04/how-to-use-ms-high-contrast)
+- [Greg Whitworth — How to use -ms-high-contrast](https://www.gwhitworth.com/blog/2017/04/how-to-use-ms-high-contrast)
 
 ### Метки
 
@@ -127,4 +127,4 @@ Placeholder не является заменой элемента {{htmlelement(
 
 - Псевдокласс {{cssxref(":placeholder-shown")}}, который позволяет применять стили к элементу с **активным** placeholder.
 - Связанные HTML-элементы: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- [HTML-формы](/ru/docs/Learn/HTML/Forms)
+- [HTML-формы](/ru/docs/Learn/Forms)

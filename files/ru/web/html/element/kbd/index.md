@@ -3,7 +3,9 @@ title: "<kbd>: Элемент ввода с клавиатуры"
 slug: Web/HTML/Element/kbd
 ---
 
-**HTML-элемент ввода с клавиатуры** (**`<kbd>`**) указывает на то, что текст внутри элемента описывает пользовательский ввод с клавиатуры, голосовой ввод или ввод с использованием любого другого типа устройств ввода текста. По общему соглашению, {{Glossary("user agent")}} использует моноширинный шрифт для отображения содержимого элемента `<kbd>` по умолчанию, хотя это и не указывается HTML стандартом явно.
+{{HTMLSidebar}}
+
+HTML-элемент **`<kbd>`** указывает на то, что текст внутри элемента описывает пользовательский ввод с клавиатуры, голосовой ввод или ввод с использованием любого другого типа устройств ввода текста. По общему соглашению, {{Glossary("user agent")}} использует моноширинный шрифт для отображения содержимого элемента `<kbd>` по умолчанию, хотя это и не указывается HTML стандартом явно.
 
 `<kbd>` можно использовать в различных комбинациях с {{HTMLElement("samp")}} (Sample Output) элементом для отображения различных форм ввода с клавиатуры или ввода, базирующегося на визуальных сигналах.
 
@@ -155,20 +157,14 @@ The output from this HTML looks like this:
 
 {{EmbedLiveSample("Representing_onscreen_input_options", 650, 120)}}
 
-## Specifications
+## Спецификации
 
-| Specification                                                                         | Status                   | Comment                                                                         |
-| ------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-kbd-element', '&lt;kbd&gt;')}}          | {{Spec2('HTML WHATWG')}} |                                                                                 |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-kbd-element', '&lt;kbd&gt;')}} | {{Spec2('HTML5 W3C')}}   | Expanded to include any user input, like voice input and individual keystrokes. |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;kbd&gt;')}}                   | {{Spec2('HTML4.01')}}    |                                                                                 |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{htmlelement("code")}}
-
-{{HTMLSidebar}}

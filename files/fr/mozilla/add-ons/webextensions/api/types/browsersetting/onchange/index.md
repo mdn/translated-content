@@ -3,7 +3,7 @@ title: onChange
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'événement `BrowserSetting.onChanged` est déclenché lorsque le paramètre est modifié.
 
@@ -71,7 +71,7 @@ Les événement ont trois fonctions :
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/extensions/types).
 >

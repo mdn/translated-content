@@ -9,7 +9,8 @@ RTCDataChannel 接口代表在两者之间建立了一个双向数据通道的�
 
 可以用 {{domxref("RTCDataChannel.createDataChannel()")}} 或者在现有的 {{domxref("RTCPeerConnection")}} 上用 {{domxref("RTCDataChannelEvent")}} 类型的 {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} 事件接收，创建出 RTCDataChannel 类型的对象。
 
-> **备注：** 这个 API 在 Gecko 中被称作 DataChannel 而不是标准的'RTCDataChannel'。
+> [!NOTE]
+> 这个 API 在 Gecko 中被称作 DataChannel 而不是标准的'RTCDataChannel'。
 
 ## 属性
 
@@ -63,7 +64,7 @@ RTCDataChannel 接口代表在两者之间建立了一个双向数据通道的�
 - {{domxref("RTCDataChannel.send()")}}
   - : 将参数中的数据通过 channel 发送。这个数据可以是{{domxref("DOMString")}}, {{domxref("Blob")}}, {{domxref("ArrayBuffer")}}或者是 {{domxref("ArrayBufferView")}}类型。
 
-## Example
+## 示例
 
 ```js
 var pc = new RTCPeerConnection();
@@ -82,14 +83,14 @@ dc.onclose = function () {
 };
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)

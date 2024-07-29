@@ -39,7 +39,9 @@ console.log(+y);
 +true; // 1
 +false; // 0
 +null; // 0
-+function(val){ return val }; // NaN
++function (val) {
+  return val;
+}; // NaN
 +1n; // BigInt 値は数値に変換できないためエラーになります
 ```
 

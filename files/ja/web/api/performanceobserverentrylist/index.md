@@ -7,7 +7,8 @@ slug: Web/API/PerformanceObserverEntryList
 
 **`PerformanceObserverEntryList`** インターフェイスは、{{domxref("PerformanceObserver.observe","observe()")}} メソッドを介して明示的に*監視された* {{domxref("PerformanceEntry","パフォーマンスイベント", '', 'true')}} のリストです。
 
-> **メモ:** このインターフェイスは {{domxref("Window")}} と {{domxref("Worker")}} に公開されています。
+> [!NOTE]
+> このインターフェイスは {{domxref("Window")}} と {{domxref("Worker")}} に公開されています。
 
 ## メソッド
 
@@ -38,4 +39,4 @@ var observe_all = new PerformanceObserver(function(list, obs) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceObserverEntryList")}}
+{{Compat}}

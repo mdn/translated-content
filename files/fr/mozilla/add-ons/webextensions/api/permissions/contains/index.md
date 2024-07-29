@@ -3,7 +3,7 @@ title: permissions.contains()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/contains
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Vérifiez si l'extension a les permissions listées dans l'objet {{WebExtAPIRef("permissions.Permissions")}}.
 

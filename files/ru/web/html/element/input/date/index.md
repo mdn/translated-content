@@ -63,21 +63,25 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 | [`min`](#min)   | Минимально возможная дата для установки                                                          |
 | [`step`](#step) | Шаг (в днях), с которым будет изменяться дата при нажатии кнопок вниз или вверх данного элемента |
 
-### {{htmlattrdef("max")}}
+### `max`
 
 Максимально возможная дата для установки. Если [`value`](/ru/docs/Web/HTML/Element/input#value) является более поздней датой, чем дата, указанная в атрибуте [`max`](#max), элемент отобразит ошибку при помощи [constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation). Если в атрибуте `max` указано значение, не удовлетворяющее формату `yyyy-MM-dd`, значит элемент не будет иметь максимальной даты.
 
 В атрибуте `max` должна быть указана строка с датой, которая больше или равна дате, указанной в атрибуте `min`.
 
-### {{htmlattrdef("min")}}
+### `min`
 
 Минимально возможная дата для установки. Если [`value`](/ru/docs/Web/HTML/Element/input#value) является более ранней датой, чем дата, указанная в атрибуте [`min`](#min), элемент отобразит ошибку при помощи [constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation). Если в атрибуте `min` указано значение, не удовлетворяющее формату `yyyy-MM-dd`, значит элемент не будет иметь минимальной даты.
 
 В атрибуте `min` должна быть указана строка с датой, которая меньше или равна дате, указанной в атрибуте `max`.
 
-### {{htmlattrdef("step")}}
+### `step`
 
-{{page("/ru/docs/Web/HTML/Element/input/number", "step-include")}}
+Атрибут `step` — это число, указывающее уровень точности, которому должно соответствовать значение, или особое значение `any`, которое описано ниже. Допустимы только значения, соответствующие основанию ([`min`](#min), если указано, [`value`](/ru/docs/Web/HTML/Element/input#value) в противном случае или любое подходящее значение по умолчанию, если не указано ни то, ни другое).
+
+Строковое значение `any` означает, что пошаговое изменение не подразумевается и разрешены любые значения (за исключением других ограничений, таких как [`min`](#min) and [`max`](#max)).
+
+> **Примечание:** Когда введённые пользователем данные не соответствуют пошаговой конфигурации, {{Glossary("user agent", "агент пользователя")}} может использовать округление до ближайшего допустимого значения, предпочитая числа в положительном направлении, когда есть два одинаково близких варианта.
 
 Для полей ввода `date` значение `step` задаётся в днях; и является количеством миллисекунд, равное 86 400 000 умножить на значение `step` (получаемое числовое значение хранится в миллисекундах). Стандартное значение `step` равно 1, что означает 1 день.
 
@@ -467,18 +471,15 @@ daySelect.onchange = function () {
 
 > **Примечание:** Remember that some years have 53 weeks in them (see [Weeks per year](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))! You'll need to take this into consideration when developing production apps.
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                 | Status                   | Comments |
-| --------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('HTML WHATWG', 'forms.html#date-state-(type=date)', '&lt;input type="date"&gt;')}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'forms.html#date-state-(type=date)', '&lt;input type="date"&gt;')}}   | {{Spec2('HTML5 W3C')}}   |          |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [Date and Time picker tutorial](/ru/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker)

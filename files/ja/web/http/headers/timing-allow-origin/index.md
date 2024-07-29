@@ -58,7 +58,7 @@ Timing-Allow-Origin: https://developer.mozilla.org
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Timing-Allow-Origin")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -17,19 +17,20 @@ Reason: CORS header 'Access-Control-Allow-Origin' missing
 
 サーバーを自分で制御できる場合は、要求しているサイトのオリジンを `Access-Control-Allow-Origin` ヘッダーの値に追加して、アクセスが許可されているドメインの一覧に追加してください。
 
-例えば、 `https://amazing.site` のサイトが CORS を使用したリソースにアクセスできるよう許可するためには、ヘッダーを以下のようにしてください。
+例えば、 `https://example.com` のサイトが CORS を使用したリソースにアクセスできるよう許可するためには、ヘッダーを以下のようにしてください。
 
-```
-Access-Control-Allow-Origin: https://amazing.site
+```http
+Access-Control-Allow-Origin: https://example.com
 ```
 
 `*` を使用することで、あらゆるサイトにアクセスを許可するようサイトを構成することもできます。これは公開 API にのみ使用してください。非公開の API には `*` を使用するべきではなく、代わりに具体的なドメインやドメインの一覧を設定してください。加えて、ワイルドカードは [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) 属性が `anonymous` に設定された要求にのみ動作し、リクエストでは Cookie のような資格情報の送信を抑制します。
 
-```
+```http
 Access-Control-Allow-Origin: *
 ```
 
-> **警告:** ワイルドカードを使用して、非公開の API へのアクセスをすべてのサイトに許可することは、悪い考えです。
+> [!WARNING]
+> ワイルドカードを使用して、非公開の API へのアクセスをすべてのサイトに許可することは、悪い考えです。
 
 何らかのサイトが CORS リクエストを `*` ワイルドカードを使用すること*なく* (たとえば資格情報を有効にする場合) 利用できるようにするには、サーバーにリクエストの `Origin` ヘッダーの値を読み取り、その値を `Access-Control-Allow-Origin` に設定することに加えて、一部のヘッダーがオリジンに応じて動的に設定されることを示すために `Vary: Origin` ヘッダーを設定する必要があります。
 

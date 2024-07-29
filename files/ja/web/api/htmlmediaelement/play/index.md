@@ -34,7 +34,7 @@ play()
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : ユーザーエージェント（ブラウザー）またはオペレーティングシステムが、現在のコンテキストまたは状況においてメディアの再生を許可しない場合に提供されます。
-  ブラウザーは、例えば[許可ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) のため、ユーザーが明示的に "play" ボタンをクリックしてメディア再生を始めるように要求することがあります。
+    ブラウザーは、例えば[許可ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) のため、ユーザーが明示的に "play" ボタンをクリックしてメディア再生を始めるように要求することがあります。
 - `NotSupportedError` {{domxref("DOMException")}}
   - : メディアソース（例えば {{domxref("MediaStream")}}, {{domxref("MediaSource")}}, {{domxref("Blob")}}, または {{domxref("File")}} として指定可能）が、対応しているメディア形式を表していない場合に提供されます。
 

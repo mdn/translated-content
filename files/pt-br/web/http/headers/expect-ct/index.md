@@ -84,4 +84,4 @@ Versões do Chrome são desenvolvidas para parar execução de políticas de `Ex
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Expect-CT")}}
+{{Compat}}

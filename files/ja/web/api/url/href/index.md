@@ -19,9 +19,7 @@ l10n:
 ## 例
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/ja/docs/Web/API/URL/href",
-);
+const url = new URL("https://developer.mozilla.org/ja/docs/Web/API/URL/href");
 console.log(url.href); // 'https://developer.mozilla.org/ja/docs/Web/API/URL/href' とログ出力
 ```
 

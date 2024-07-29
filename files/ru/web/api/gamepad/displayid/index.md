@@ -41,7 +41,6 @@ window.addEventListener("gamepadconnected", function (e) {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — демосцены, материалы, доступные для скачивания и другие материалы команды the Mozilla VR team.
+- [WebVR API](/ru/docs/Web/API/WebVR_API)

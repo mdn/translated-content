@@ -29,7 +29,7 @@ slug: Web/HTML/Element/figcaption
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

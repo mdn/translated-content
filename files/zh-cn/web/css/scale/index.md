@@ -3,7 +3,7 @@ title: scale
 slug: Web/CSS/scale
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 CSS 属性 **`scale`** 允许你可以分别且独立地指定 CSS 属性 {{CSSxRef("transform")}} 缩放的比例。这更好地映射到典型的 UI（用户界面）用法中，并免去了在指定变换值时必须记住变换函数的精确顺序的麻烦。
 

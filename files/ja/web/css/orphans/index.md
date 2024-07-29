@@ -12,7 +12,7 @@ slug: Web/CSS/orphans
 orphans: 2;
 orphans: 3;
 
-/* Global values */
+/* グローバル値 */
 orphans: inherit;
 orphans: initial;
 orphans: revert;
@@ -42,7 +42,7 @@ orphans: unset;
 
 #### HTML
 
-```html
+```html-nolint
 <div>
   <p>これは幾らかのテキストを含む最初の段落です。</p>
   <p>

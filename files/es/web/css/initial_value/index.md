@@ -3,6 +3,8 @@ title: Valor inicial
 slug: Web/CSS/initial_value
 ---
 
+{{CSSRef}}
+
 << [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)
 
 ### Resumen

@@ -95,7 +95,7 @@ simple-custom:defined {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

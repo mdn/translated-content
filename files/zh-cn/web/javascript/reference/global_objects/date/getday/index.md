@@ -32,7 +32,8 @@ var weekday = Xmas95.getDay();
 console.log(weekday); // 1
 ```
 
-> **备注：** 如果需要，可以使用{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}与一个额外的`options` 参数，从而返回这天的全称（如`"Monday"`）.使用此方法，结果会更加国际化：
+> [!NOTE]
+> 如果需要，可以使用{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}与一个额外的`options` 参数，从而返回这天的全称（如`"Monday"`）.使用此方法，结果会更加国际化：
 >
 > ```js
 > var options = { weekday: "long" };
@@ -50,7 +51,7 @@ console.log(weekday); // 1
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCDate()")}}
 - {{jsxref("Date.prototype.getUTCDay()")}}

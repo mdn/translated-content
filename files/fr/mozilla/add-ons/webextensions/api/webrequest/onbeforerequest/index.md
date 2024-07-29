@@ -3,7 +3,7 @@ title: webRequest.onBeforeRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Cet événement est déclenché lorsqu'une demande est sur le point d'être faite et avant que les en-têtes ne soient disponibles. C'est un bon endroit pour écouter si vous voulez annuler ou rediriger la demande.
 

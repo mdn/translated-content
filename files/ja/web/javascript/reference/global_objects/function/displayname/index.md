@@ -83,7 +83,7 @@ console.log(object.someMethod.displayName); // "someMethod (123)"
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Function.displayName")}}
+{{Compat}}
 
 ## 関連情報
 

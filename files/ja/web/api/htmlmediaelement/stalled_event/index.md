@@ -16,9 +16,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('stalled', (event) => {});
+addEventListener("stalled", (event) => {});
 
-onstalled = (event) => { };
+onstalled = (event) => {};
 ```
 
 ## イベント型
@@ -32,20 +32,20 @@ onstalled = (event) => { };
 `addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('stalled', (event) => {
-  console.log('データのフェッチに失敗しました。');
+video.addEventListener("stalled", (event) => {
+  console.log("データのフェッチに失敗しました。");
 });
 ```
 
 `onstalled` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onstalled = (event) => {
-  console.log('データのフェッチに失敗しました。');
+  console.log("データのフェッチに失敗しました。");
 };
 ```
 

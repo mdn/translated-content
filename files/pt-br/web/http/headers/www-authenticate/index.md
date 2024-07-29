@@ -58,7 +58,7 @@ Veja também [autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication) para exe
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.WWW-Authenticate")}}
+{{Compat}}
 
 ## Veja também
 

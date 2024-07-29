@@ -62,7 +62,8 @@ reduce(callbackFn, initialValue)
 - 对已访问索引的更改不会导致再次在这些元素上调用 `callbackFn`。
 - 如果数组中一个现有的、尚未访问的元素被 `callbackFn` 更改，则它传递给 `callbackFn` 的值将是该元素被修改后的值。被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)的元素则不会被访问。
 
-> **警告：** 上述类型的并发修改经常导致难以理解的代码，通常应避免（特殊情况除外）。
+> [!WARNING]
+> 上述类型的并发修改经常导致难以理解的代码，通常应避免（特殊情况除外）。
 
 `reduce()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
@@ -256,7 +257,8 @@ console.log(allbooks);
 
 ### 数组去重
 
-> **备注：** 可以使用 {{jsxref("Set")}} 和 {{jsxref("Array.from()")}} 来实现相同的效果，如 `const arrayWithNoDuplicates = Array.from(new Set(myArray))`，并且性能更好。
+> [!NOTE]
+> 可以使用 {{jsxref("Set")}} 和 {{jsxref("Array.from()")}} 来实现相同的效果，如 `const arrayWithNoDuplicates = Array.from(new Set(myArray))`，并且性能更好。
 
 ```js
 const myArray = ["a", "b", "a", "b", "c", "e", "e", "c", "d", "d", "d", "d"];
@@ -294,9 +296,9 @@ console.log(doubledPositiveNumbers); // [12, 4]
 /**
  * 链接一系列 Promise 处理程序。
  *
- * @param {array} arr ——一个 Promise 处理程序列表，每个处理程序接收前一个处理程序解决的结果并返回另一个 Promise。
- * @param {*} input ——开始调用 Promise 链的初始值
- * @return {Object} ——由一系列 Promise 链接而成的 Promise
+ * @param {array} arr——一个 Promise 处理程序列表，每个处理程序接收前一个处理程序解决的结果并返回另一个 Promise。
+ * @param {*} input——开始调用 Promise 链的初始值
+ * @return {Object}——由一系列 Promise 链接而成的 Promise
  */
 function runPromiseInSequence(arr, input) {
   return arr.reduce(

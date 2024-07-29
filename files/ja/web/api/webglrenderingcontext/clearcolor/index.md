@@ -49,7 +49,7 @@ gl.getParameter(gl.COLOR_CLEAR_VALUE);
 
 ## ブラウザーの対応
 
-{{Compat("api.WebGLRenderingContext.clearColor")}}
+{{Compat}}
 
 ## 関連項目
 

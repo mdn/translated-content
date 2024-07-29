@@ -35,13 +35,14 @@ startRendering()
 
 この時点で、別の音声コンテキストを作成し、その中に {{domxref("AudioBufferSourceNode")}} を作成し、そのバッファーをプロミス `AudioBuffer` と等しくなるように設定します。これは単純な標準音声グラフの一部として再生されます。
 
-> **メモ:** 動作する例については、 [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) を GitHub リポジトリーで参照してください（[ソースコード](https://github.com/mdn/webaudio-examples)も参照）。
+> [!NOTE]
+> 動作する例については、 [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) を GitHub リポジトリーで参照してください（[ソースコード](https://github.com/mdn/webaudio-examples)も参照）。
 
 ```js
 // define online and offline audio context
 
 const audioCtx = new AudioContext();
-const offlineCtx = new OfflineAudioContext(2,44100*40,44100);
+const offlineCtx = new OfflineAudioContext(2, 44100 * 40, 44100);
 
 source = offlineCtx.createBufferSource();
 
@@ -51,9 +52,9 @@ source = offlineCtx.createBufferSource();
 function getData() {
   request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
+  request.open("GET", "viper.ogg", true);
 
-  request.responseType = 'arraybuffer';
+  request.responseType = "arraybuffer";
 
   request.onload = () => {
     const audioData = request.response;
@@ -64,23 +65,26 @@ function getData() {
       source.connect(offlineCtx.destination);
       source.start();
       //source.loop = true;
-      offlineCtx.startRendering().then((renderedBuffer) => {
-        console.log('Rendering completed successfully');
-        const offlineAudioCtx = new AudioContext()
-        const song = offlineAudioCtx.createBufferSource();
-        song.buffer = renderedBuffer;
+      offlineCtx
+        .startRendering()
+        .then((renderedBuffer) => {
+          console.log("Rendering completed successfully");
+          const offlineAudioCtx = new AudioContext();
+          const song = offlineAudioCtx.createBufferSource();
+          song.buffer = renderedBuffer;
 
-        song.connect(offlineAudioCtx.destination);
+          song.connect(offlineAudioCtx.destination);
 
-        play.onclick = () => {
-          song.start();
-        }
-      }).catch((err) => {
+          play.onclick = () => {
+            song.start();
+          };
+        })
+        .catch((err) => {
           console.error(`Rendering failed: ${err}`);
           // Note: The promise should reject when startRendering is called a second time on an OfflineAudioContext
-      });
+        });
     });
-  }
+  };
 
   request.send();
 }

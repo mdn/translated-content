@@ -10,7 +10,7 @@ slug: Learn/CSS/First_steps/What_is_CSS
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机知识，<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
@@ -41,17 +41,18 @@ slug: Learn/CSS/First_steps/What_is_CSS
 
 前文提到过，CSS 是用来指定文档如何展示给用户的一门语言——如网页的样式、布局、等等。
 
-一份**文档**是由标记语言组织起来的文本文件 —— {{Glossary("HTML")}} 是最常见的标记语言，但你可能也听说过其他可标记语言，如 {{Glossary("SVG")}} 或 {{Glossary("XML")}}。
+一份**文档**是由标记语言组织起来的文本文件——{{Glossary("HTML")}} 是最常见的标记语言，但你可能也听说过其他可标记语言，如 {{Glossary("SVG")}} 或 {{Glossary("XML")}}。
 
-**展示**一份文档给用户实际上是将文档变成用户可用的文件。{{Glossary("browser","Browsers")}}：如 {{Glossary("Mozilla Firefox","Firefox")}}，{{Glossary("Google Chrome","Chrome")}}, 或 {{Glossary("Microsoft Edge","Edge")}}，都可以将文档在电脑屏幕、投影仪或打印机等设备上进行可视化。
+**展示**一份文档给用户实际上是将文档变成用户可用的文件。{{Glossary("browser","浏览器")}}：如 {{Glossary("Mozilla Firefox","Firefox")}}、{{Glossary("Google Chrome","Chrome")}} 或 {{Glossary("Microsoft Edge","Edge")}}，都可以将文档在电脑屏幕、投影仪或打印机等设备上进行可视化。
 
-> **备注：** 浏览器有时候也被称为 {{Glossary("User agent","user agent")}}，大致可以当这个程序是一个存在于计算机系统中的人。当我们讨论 CSS 时，浏览器是 User agent 的主要形式，然而它并不是唯一的一个。还有其他可用的 user agents — 像是那些可以把 HTML 和 CSS 文档转换为可以打印的 PDF 文档的软件。
+> [!NOTE]
+> 浏览器有时候也被称为 {{Glossary("User agent","user agent")}}，大致可以当这个程序是一个存在于计算机系统中的人。当我们讨论 CSS 时，浏览器是 User agent 的主要形式，然而它并不是唯一的一个。还有其他可用的 user agents — 像是那些可以把 HTML 和 CSS 文档转换为可以打印的 PDF 文档的软件。
 
-CSS 可以用于给文档添加样式 —— 比如改变标题和链接的[颜色](/zh-CN/docs/Web/CSS/color_value)及[大小](/zh-CN/docs/Web/CSS/font-size)。它也可用于创建布局 —— 比如将一个单列文本变成包含主要内容区域和存放相关信息的侧边栏区域的[布局](/zh-CN/docs/Web/CSS/Layout_cookbook/Column_layouts)。它甚至还可以用来做一些特效，比如[动画](/zh-CN/docs/Web/CSS/CSS_animations)。查看本段内容中所给出的特定案例。
+CSS 可以用于给文档添加样式——比如改变标题和链接的[颜色](/zh-CN/docs/Web/CSS/color_value)及[大小](/zh-CN/docs/Web/CSS/font-size)。它也可用于创建布局——比如将一个单列文本变成包含主要内容区域和存放相关信息的侧边栏区域的[布局](/zh-CN/docs/Web/CSS/Layout_cookbook/Column_layouts)。它甚至还可以用来做一些特效，比如[动画](/zh-CN/docs/Web/CSS/CSS_animations)。查看本段内容中所给出的特定案例。
 
 ## CSS 语法
 
-CSS 是一门基于规则的语言 —— 你能定义用于你的网页中特定元素样式的一组规则。比如“我希望页面中的主标题是红色的大字”
+CSS 是一门基于规则的语言——你能定义用于你的网页中特定元素样式的一组规则。比如“我希望页面中的主标题是红色的大字”
 
 下面这段代码使用非常简单的 CSS 规则实现了之前提到的效果：
 
@@ -83,7 +84,8 @@ p {
 
 你会发现你已经很快掌握了一些属性的值，但是属性可以接受的值远不止这些。在 MDN 上每个属性都有单独的页面，不论你是忘记了某个属性，还是想要知道一个属性还能接受什么其他的值，这些页面都可以帮助你。
 
-> **备注：** 在 MDN 上的 [CSS 参考](/zh-CN/docs/Web/CSS/Reference)页面列举了所有的 CSS 属性页面（同时也包括其他的 CSS 特性）。另外，当你想要寻找一个 CSS 特性的更多内容时，多使用你的搜索引擎来搜索“mdn _css-feature-name_”。例如，搜索“mdn color”和“mdn font-size”！
+> [!NOTE]
+> 在 MDN 上的 [CSS 参考](/zh-CN/docs/Web/CSS/Reference)页面列举了所有的 CSS 属性页面（同时也包括其他的 CSS 特性）。另外，当你想要寻找一个 CSS 特性的更多内容时，多使用你的搜索引擎来搜索“mdn _css-feature-name_”。例如，搜索“mdn color”和“mdn font-size”！
 
 ## CSS 模块
 

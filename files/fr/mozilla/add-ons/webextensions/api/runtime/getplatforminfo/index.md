@@ -3,7 +3,7 @@ title: runtime.getPlatformInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getPlatformInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Renvoies des informations sur la plate-forme actuelle. Ceci ne peut être appelé que dans le contexte du script d'arrière-plan.
 

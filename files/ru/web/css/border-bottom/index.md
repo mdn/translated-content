@@ -87,19 +87,15 @@ div {
 
 {{EmbedLiveSample('Applying_a_bottom_border')}}
 
-## Specifications
+## Спецификации
 
-| Specification                                                               | Status                        | Comment                                                                                                         |
-| --------------------------------------------------------------------------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#propdef-border-bottom', 'border-bottom')}} | {{Spec2('CSS3 Backgrounds')}} | No direct changes, though the modification of values for the {{cssxref("border-bottom-color")}} do apply to it. |
-| {{SpecName('CSS2.1', 'box.html#propdef-border-bottom', 'border-bottom')}}   | {{Spec2('CSS2.1')}}           | No significant changes.                                                                                         |
-| {{SpecName('CSS1', '#border-bottom', 'border-bottom')}}                     | {{Spec2('CSS1')}}             | Initial definition                                                                                              |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [`border`](/ru/docs/Web/CSS/border)
 - [`border-block`](/ru/docs/Web/CSS/border-block)

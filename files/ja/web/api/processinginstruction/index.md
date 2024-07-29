@@ -13,7 +13,8 @@ l10n:
 
 処理命令は [XML 宣言](/ja/docs/Web/XML/XML_introduction#xml_declaration)とは異なることがあります。
 
-> **メモ:** ユーザー定義の処理命令は "`xml`" で始めることはできません。 `xml` 接頭辞を持つ処理命令のターゲット名は、 XML 仕様書によって特定の標準的な用途のために予約されているからです（例えば、 `<?xml-stylesheet ?>` などを見てください）。
+> [!NOTE]
+> ユーザー定義の処理命令は "`xml`" で始めることはできません。 `xml` 接頭辞を持つ処理命令のターゲット名は、 XML 仕様書によって特定の標準的な用途のために予約されているからです（例えば、 `<?xml-stylesheet ?>` などを見てください）。
 
 例えば、次のようなものです。
 
@@ -30,6 +31,7 @@ l10n:
 _このインターフェイスは親インターフェイスである {{domxref("CharacterData")}}, {{domxref("Node")}}, {{domxref("EventTarget")}} からプロパティを継承しています。_
 
 - {{domxref("ProcessingInstruction.sheet")}} {{ReadOnlyInline}}
+
   - : 存在すれば、関連付けられた {{domxref("StyleSheet")}} オブジェクトを返します。なければ `null` を返します。
 
 - {{domxref("ProcessingInstruction.target")}} {{ReadOnlyInline}}

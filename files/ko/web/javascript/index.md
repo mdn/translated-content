@@ -58,7 +58,7 @@ JavaScript를 배우고 싶지만 JavaScript이나 프로그래밍에 대한 이
 
 - [클라이언트 측 JavaScript 프레임워크 이해](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
   - : JavaScript 프레임워크는 현대 프런트 엔드 웹 개발의 필수 부분으로, 개발자에게 확장 가능한 상호작용형 웹 응용 프로그램을 구축하기위한 입증된 도구를 제공합니다. 이 과정에서는 오늘날 가장 인기있는 일부 프레임워크를 다루는 자습서 시리즈로 이동하기 전에 클라이언트 측 프레임워크가 작동하는 방식과 도구 집합에 맞는 방식에 대한 기본적인 배경 지식을 제공합니다.
-- [자바스크립트 개요](/ko/docs/Web/JavaScript/Language_Overview)
+- [JavaScript 개요](/ko/docs/Web/JavaScript/Language_Overview)
   - : 다른 프로그래밍 언어에서 넘어 온 사람들이 빨리 배울 수 있는 JavaScript의 기본 구문과 의미 체계에 대한 개요입니다.
 - [JavaScript 데이터 구조](/ko/docs/Web/JavaScript/Data_structures)
   - : JavaScript에서 이용 가능한 데이터 구조 개요입니다.

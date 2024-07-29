@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`<samp>`** は [HTML](/ja/docs/Web/HTML) の要素で、コンピュータープログラムからのサンプル出力を表すインラインのテキストを収めるために使用されます。内容は普通、ブラウザーの既定の等幅フォント（[Courier](https://ja.wikipedia.org/wiki/Courier_(書体)) や Lucida Console など）を使用して表示されます。
+**`<samp>`** は [HTML](/ja/docs/Web/HTML) の要素で、コンピュータープログラムからのサンプル出力を表すインラインのテキストを収めるために使用されます。内容は普通、ブラウザーの既定の等幅フォント（[Courier](<https://ja.wikipedia.org/wiki/Courier_(書体)>) や Lucida Console など）を使用して表示されます。
 
 {{EmbedInteractiveExample("pages/tabbed/samp.html", "tabbed-shorter")}}
 
@@ -27,7 +27,8 @@ samp {
 }
 ```
 
-> **メモ:** ウェブサイトや JavaScript コードによって生成された出力を含めるコンテナーとして提供する要素が必要な場合は、代わりに {{HTMLElement("output")}} 要素を使用してください。
+> [!NOTE]
+> ウェブサイトや JavaScript コードによって生成された出力を含めるコンテナーとして提供する要素が必要な場合は、代わりに {{HTMLElement("output")}} 要素を使用してください。
 
 ## 例
 

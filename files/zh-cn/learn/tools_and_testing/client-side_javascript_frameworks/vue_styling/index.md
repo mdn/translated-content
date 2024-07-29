@@ -10,7 +10,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling
 <table>
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
@@ -30,7 +30,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>了解有关设置 Vue 组件样式的信息。</td>
     </tr>
   </tbody>

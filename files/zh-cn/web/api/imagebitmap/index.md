@@ -27,7 +27,7 @@ slug: Web/API/ImageBitmap
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("ImageBitmapFactories.createImageBitmap()")}}
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}

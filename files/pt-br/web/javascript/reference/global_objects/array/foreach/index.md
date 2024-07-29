@@ -168,15 +168,11 @@ if (!Array.prototype.forEach) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.forEach")}}
+{{Compat}}
 
-## Specifications
+## Especificações
 
-| Especificação                                                                      | Status               | Comentário                                         |
-| ---------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.18', 'Array.prototype.forEach')}}                 | {{Spec2('ES5.1')}}   | Definição inicial. Implementado no JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.foreach', 'Array.prototype.forEach')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-array.prototype.foreach', 'Array.prototype.forEach')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Veja também
 

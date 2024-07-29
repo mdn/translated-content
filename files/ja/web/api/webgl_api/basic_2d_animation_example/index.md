@@ -203,7 +203,8 @@ function buildShaderProgram(shaderInfo) {
 
 次に、指定されたシェーダーのリスト内の各シェーダーに対して、`compileShader()` 関数を呼び出してコンパイルし、ビルドするシェーダー関数の ID とタイプを渡します。前述のように、これらの各オブジェクトには、シェーダーコードが存在する `<script>` 要素の ID とシェーダーのタイプが含まれます。コンパイルされたシェーダーは、{{domxref("WebGLRenderingContext.attachShader", "gl.attachShader()")}} へ渡すことでシェーダープログラムにアタッチされます。
 
-> **メモ:** 実際には、ここよりさらに一歩進んで、`<script>` 要素の `type` 属性の値を見て、シェーダーのタイプを判断できます。
+> [!NOTE]
+> 実際には、ここよりさらに一歩進んで、`<script>` 要素の `type` 属性の値を見て、シェーダーのタイプを判断できます。
 
 すべてのシェーダーがコンパイルされると、{{domxref("WebGLRenderingContext.linkProgram", "gl.linkProgram()")}} を使用してプログラムがリンクされます。
 
@@ -227,7 +228,7 @@ function compileShader(id, type) {
     console.log(
       `Error compiling ${
         type === gl.VERTEX_SHADER ? "vertex" : "fragment"
-      } shader:`
+      } shader:`,
     );
     console.log(gl.getShaderInfoLog(shader));
   }
@@ -278,7 +279,7 @@ function animateScene() {
     gl.FLOAT,
     false,
     0,
-    0
+    0,
   );
 
   gl.drawArrays(gl.TRIANGLES, 0, vertexCount);

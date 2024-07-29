@@ -3,7 +3,7 @@ title: Date.prototype.setUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`setUTCDate()`** 方法就是根据全球时间设置特定 date 对象的日期。
 

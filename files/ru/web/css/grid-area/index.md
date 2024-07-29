@@ -3,10 +3,12 @@ title: grid-area
 slug: Web/CSS/grid-area
 ---
 
+{{CSSRef}}
+
 CSS-свойство `grid-area` - это [сокращённая форма записи](/ru/docs/Web/CSS/Shorthand_properties) для свойств {{cssxref("grid-row-start")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-row-end")}} и {{cssxref("grid-column-end")}}. Определяет размер и местоположение грид-элемента в пределах {{glossary("grid rows", "grid row")}}. Задаёт края {{glossary("grid areas", "грид-области")}} грид-элемента.
 
 ```css
-/* Ключевые слова в качестве значений */
+/* Ключевые слова */
 grid-area: auto;
 grid-area: auto / auto;
 grid-area: auto / auto / auto;
@@ -98,17 +100,15 @@ grid-area: unset;
 
 {{EmbedLiveSample("Example", "100%", "150px")}}
 
-## Specifications
+## Спецификации
 
-| Specification                                                | Status                 | Comment            |
-| ------------------------------------------------------------ | ---------------------- | ------------------ |
-| {{SpecName("CSS3 Grid", "#propdef-grid-area", "grid-area")}} | {{Spec2("CSS3 Grid")}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - Related CSS properties: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-template-areas")}}
 - Grid Layout Guide: _[Grid template areas](/ru/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_

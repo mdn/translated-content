@@ -41,4 +41,4 @@ if (navigator.storage && navigator.storage.persist)
 
 ## ブラウザーの互換性
 
-{{Compat("api.StorageManager.persist")}}
+{{Compat}}

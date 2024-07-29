@@ -7,7 +7,8 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_
 
 假设我们的任务是在 React 中创建一个概念验证——一个允许用户添加、编辑和删除他们想做的任务的应用程序，并且在不删除任务的情况下将其标记为完成。这篇文章将引导你完成基本的 `App` 组件结构和样式，为以后添加的单个组件定义和交互性做好准备。
 
-> **备注：** 如果你需要对照我们的版本检查你的代码，你可以在我们的 [todo-react 仓库](https://github.com/mdn/todo-react) 中找到一个完成版本的 React 应用代码。关于运行中的实时版本，参见 <https://mdn.github.io/todo-react-build/>.
+> [!NOTE]
+> 如果你需要对照我们的版本检查你的代码，你可以在我们的 [todo-react 仓库](https://github.com/mdn/todo-react) 中找到一个完成版本的 React 应用代码。关于运行中的实时版本，参见 <https://mdn.github.io/todo-react-build/>.
 
 <table>
   <tbody>
@@ -231,7 +232,7 @@ function App(props) {
 <label className="todo-label" htmlFor="todo-0"> Eat </label>
 ```
 
-`<input/ >` 标签中的 `defaultChecked` 属性告诉 React 最初要检查这个复选框。如果我们像在普通的 HTML 中那样使用 `checked`，React 会在浏览器控制台中记录一些与处理复选框事件有关的警告，这是我们不想要的。现在不用太担心这个问题——我们将在以后使用事件的时候讨论这个问题。
+`<input />` 标签中的 `defaultChecked` 属性告诉 React 最初要检查这个复选框。如果我们像在普通的 HTML 中那样使用 `checked`，React 会在浏览器控制台中记录一些与处理复选框事件有关的警告，这是我们不想要的。现在不用太担心这个问题——我们将在以后使用事件的时候讨论这个问题。
 
 `htmlFor` 属性对应于 HTML 中使用的 `for` 属性。因为 `for` 是一个保留词，我们不能在 JSX 中使用 `for` 作为属性，所以 React 使用 `htmlFor` 代替。
 

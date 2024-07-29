@@ -1,99 +1,114 @@
 ---
-title: 调整列表缩进
+title: 使列表缩进一致
 slug: Web/CSS/CSS_lists/Consistent_list_indentation
+l10n:
+  sourceCommit: f79a491594ebb5634949ed31b26155973a39166e
 ---
 
 {{CSSRef}}
 
-对列表最常见的样式修改之一是改变缩进距离，即列表项向右侧移动的距离。令人沮丧的是，缩进在一个浏览器中的表现常常与其他浏览器中的效果不尽相同。例如，如果声明列表的左边距为 0，在 IE 浏览器中生效，但是在基于 Gecko 引擎的浏览器中却不起作用。本文将帮助你理解这些可能发生的问题，以及如何避免这些问题的产生。
+最常见的列表样式更改之一是缩进距离的改变，即列表项向右推移的距离。这往往会导致挫败感，因为在一种浏览器中有效的样式在另一种浏览器中往往没有相同的效果。例如，如果你声明列表没有左侧边距，那么它们在基于 Gecko 的浏览器中就会顽固地保持原位。本文将帮助你了解可能出现的问题以及如何避免这些问题。
 
-为了弄明白这是为什么，以及如何避免这些问题发生，有必要研究一下列表结构的具体细节。
+要了解为什么会出现这种情况，更重要的是如何完全避免问题，我们有必要研究一下列表构造的细节。
 
-### 创建一个列表
+## 创建一个列表
 
-首先，来看一个简单，单独的列表项目。该列表项目没有标记符号（或称之为“着重号”），并且没有被列表包裹起来。如下图图 1 所示，单独的列表项是无效的，简单且没有任何装饰。
+首先，来看一个简单，单独的列表项目。该列表项目没有标记符号（或称之为“着重号”），本身也不是列表的一部分。如下图图 1 所示，简单而朴素。
 
-![Figure 1](consistent-list-indentation-figure1.gif)
+![图 1](consistent-list-indentation-figure1.gif)
 
-红色的虚线边框代表列表项目内容区域的外边界。记住，从这一点上看，这个列表项目没有内边距和边框。如果我们再添加两个列表项目，我们得到下面的结果，如图 2 所示。
+红色虚线边框代表列表项内容区域的外部边界。请记住，此时列表项没有任何填充或边框。如果我们再添加两个列表项，结果如图 2 所示。
 
-![Figure 2](consistent-list-indentation-figure2.gif)
+![图 2](consistent-list-indentation-figure2.gif)
 
-现在我们在外面加上父元素；这个例子中，我们使用一个无序列表 (i.e., `<ul>`)。根据 CSS 盒子模型，列表项目的盒子必须显示在其父元素的内容区域里。因为这里的父元素既没有 padding 也没有 margin，所以我们得到下面的结果，如图 3 所示。
+现在，我们用一个父元素来封装它们；在本例中，我们将用一个无序列表（即 `<ul>`）来封装它们。根据 CSS 盒模型，列表项的框必须显示在父元素的内容区域内。由于父元素还没有内边距（padding）或外边距（margin），因此我们会看到图 3 所示的情况。
 
-![Figure 3](consistent-list-indentation-figure3.gif)
+![图 3](consistent-list-indentation-figure3.gif)
 
-这里，蓝色的虚线边框表示 \<ul> 元素内容区域的边缘。因为我们没有给 \<ul> 元素添加内边距，所以它的内容的包裹层紧贴在三个列表项外。
+在这里，蓝色虚线边框向我们显示了 `<ul>` 元素内容区域的边缘。因为我们没有给 `<ul>` 元素添加内边距，所以它的内容的包裹层紧贴在三个列表项外。
 
 现在我们来添加列表项目标记，由于这是一个无序列表，我们添加传统的实心圆“着重标记”，如下图图 4 所示。
 
-![Figure 4](consistent-list-indentation-figure4.gif)
+![图 4](consistent-list-indentation-figure4.gif)
 
-可以看到，这些标记符号在\<ul>内容区域的外面，但这无关紧要。重要的是，这些标记被放到主要的\<li>元素盒子外面了。它们有点像列表项目的附件，在\<li>的内容区域外游荡，但依然依附于\<li>。
+从外观上看，标记位于 `<ul>` 内容区域之外，但这并不是最重要的部分。关键是标记要放在 `<li>` 元素而不是 `<ul>` 元素的“首要盒子”外。它们有点像列表项的附属物，悬挂在 `<li>` 内容区域之外，但仍与 `<li>` 相连。
 
-这就是为什么在除了 IE 浏览器以外的所有浏览器上，标记符号都被放在\<li>元素的边框外，假设列表项位置的值为外部"outside"。如果该值被改为内部"inside"，则标记符号会被放到\<li>的内容区域里面，像是放在\<li>最开头的内联盒子一样。
+这就是为什么在每一个现代浏览器中，标记都会被置于为 `<li>` 元素设置的任何边框之外，前提是 `list-style-position` 的值为 `outside`。如果改为 `inside`，那么标记就会出现在 `<li>` 的内容中，就像放在 `<li>` 开头的行内框一样。
 
-### 二次缩进
+## 二次缩进
 
-So how will all this appear in a document? At the moment, we have a situation analogous to these styles:
+那么，所有组成部分将如何出现在文档中呢？目前，我们的情况与这些样式类似：
 
-```
-ul, li {margin-left: 0; padding-left: 0;}
-```
-
-If we dropped this list into a document as-is, there would be no apparent indentation and the markers would be in danger of falling off the left edge of the browser window.
-
-In order to avoid this and get some indentation, there are really only three options available to browser implementors.
-
-1. Give each `<li>` element a left margin.
-2. Give the `<ul>` element a left margin.
-3. Give the `<ul>` element some left padding.
-
-As it turns out, nobody seems to have used the first option. The second option was taken by Internet Explorer for Windows and Macintosh, and Opera. The third was adopted by Gecko, and by extension all the browsers that embed it.
-
-Let's look at the two approaches for a moment. In Internet Explorer and Opera, the lists are indented by setting a left margin of 40 pixels on the `<ul>` element. If we apply a background color to the `<ul>` element and leave the list item and `<ul>` borders in place, we get the result shown in Figure 5.
-
-![Figure 5](consistent-list-indentation-figure5.gif)
-
-Gecko, on the other hand, sets a left _padding_ of 40 pixels for the `<ul>` element, so given the exact same styles as were used to produce Figure 5, loading the example into a Gecko-based browser gives us Figure 6.
-
-![Figure 6](consistent-list-indentation-figure6.gif)
-
-As we can see, the markers remain attached to the `<li>` elements, no matter where they are. The difference is entirely in how the `<ul>` is styled. We can only see the difference if we try to set a background or border on the `<ul>` element.
-
-### Finding Consistency
-
-Boil it all down, and what we're left with is this: if you want consistent rendering of lists between Gecko, Internet Explorer, and Opera, you need to set **both** the left margin and left padding of the `<ul>` element. We can ignore `<li>` altogether for these purposes. If you want to reproduce the default display in Netscape 6.x, you write:
-
-```
-ul {margin-left: 0; padding-left: 40px;}
+```css
+ul,
+li {
+  margin-left: 0;
+  padding-left: 0;
+}
 ```
 
-If you're more interested in following the Internet Explorer/Opera model, then:
+如果我们把这个列表原封不动地放到文档中，就不会有明显的缩进，标记也会有从浏览器窗口左边缘垮散的危险。
 
+要避免这种情况并获得一定的缩进，浏览器实现者只有三种选择。
+
+1. 给予每个 `<li>` 元素左外边距。
+2. 给予 `<ul>` 元素左外边距。
+3. 给予 `<ul>` 元素左内边距。
+
+事实证明，似乎没有人使用过第一个选项。第二个选项被 Opera 采用。Firefox 浏览器采用了第三种方案。
+
+让我们先来看看这两种方法。在 Opera 中，通过在 `<ul>` 元素上设置 40 像素的左边距来缩进列表。如果我们对 `<ul>` 元素应用背景色，并保留列表项和 `<ul>` 的边框，就会得到图 5 所示的结果。
+
+![图 5](consistent-list-indentation-figure5.gif)
+
+另一方面，Gecko 为 `<ul>` 元素设置了 40 像素的左*内边距*，因此，如果使用与制作图 5 完全相同的样式，将示例加载到基于 Gecko 的浏览器中，就会得到图 6。
+
+![图 6](consistent-list-indentation-figure6.gif)
+
+正如我们所看到的，无论标记位于何处，它们都会与 `<li>` 元素相连。两者的区别完全在于 `<ul>` 的样式。只有当我们尝试在 `<ul>` 元素上设置背景或边框时，才能看到其中的区别。
+
+## 寻求一致
+
+综上所述，我们可以得出这样的结论：如果希望在 Gecko 和 Opera 之间一致地呈现列表，需要**同时**设置 `<ul>` 元素的左外边距和左内边距。为此，我们可以完全忽略 `<li>`。如果你想重现 Netscape 6.x 中的默认显示方式，可以这样写：
+
+```css
+ul {
+  margin-left: 0;
+  padding-left: 40px;
+}
 ```
-ul {margin-left: 40px; padding-left: 0;}
+
+如果对 Opera 采用的模式更感兴趣，那么这样写：
+
+```css
+ul {
+  margin-left: 40px;
+  padding-left: 0;
+}
 ```
 
-Of course, you can fill in your own preferred values. Set both to `1.25em`, if you like — there's no reason why you have to stick with pixel-based indentation. If you want to reset lists to have no indentation, then you still have to zero out both padding and margin:
+当然，也可以填写自己喜欢的值。如果你喜欢，可以将两者都设置为 `1.25em`——没有理由一定要使用基于像素的缩进。如果你想将列表重置为无缩进，那么仍需将外边距和内边距都清零：
 
+```css
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
 ```
-ul {margin-left: 0; padding-left: 0;}
-```
 
-Remember, though, that in so doing, you'll have the bullets hanging outside the list and its parent element. If the parent is the `body`, there's a strong chance your bullets will be completely outside the browser window, and thus will not be visible.
+但请记住，这样做会使着重符号挂在列表及其父元素之外。如果父元素是 `body`，那么着重号就很有可能完全位于浏览器窗口之外，从而不可见。
 
-### 结论
+## 结论
 
-In the end, we can see that none of the browsers mentioned in this article is right or wrong about how they lay out lists. They use different default styles, and that's where the problems creep in. By making sure you style both the left padding and left margin of lists, you can find much greater cross-browser consistency in your list indentation.
+最后，我们可以发现，本文中提到的浏览器在列表布局方面都没有对错之分。它们使用不同的默认样式，这就是问题所在。如果能确保同时为列表的左内边距和左外边距设置样式，那么列表缩进的跨浏览器一致性就会大大提高。
 
-### 建议
+## 建议
 
-- 在你调整列表的缩进的时候，务必确认同时设置了 padding 和 margin.
+- 在你调整列表的缩进的时候，务必确认同时设置了内外边距。
 
-### 原始文档信息
+## 原始文档信息
 
-- Author(s): Eric A. Meyer, Netscape Communications
-- Last Updated Date: Published 30 Aug 2002
-- Copyright Information: Copyright © 2001-2003 Netscape. All rights reserved.
-- Note: This reprinted article was originally part of the DevEdge site.
+- 作者：Eric A. Meyer, Netscape Communications
+- 上次更新于：2002 年 8 月 30 日
+- 版权信息：2001-2003 Netscape © 版权所有。保留所有权利。
+- 备注：这篇转载文章最初是 DevEdge 网站的一部分。

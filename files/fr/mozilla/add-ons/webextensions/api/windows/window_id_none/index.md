@@ -3,7 +3,7 @@ title: windows.WINDOW_ID_NONE
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WINDOW_ID_NONE
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La valeur `windowId` que représente l'absence d'une fenêtre du navigateur.
 

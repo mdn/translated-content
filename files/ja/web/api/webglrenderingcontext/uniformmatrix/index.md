@@ -33,7 +33,7 @@ WebGLRenderingContext.uniformMatrix4fv(location, transpose, value);
 ## 例
 
 ```js
-gl.uniformMatrix2fv(loc, false, [2,1, 2,2]);
+gl.uniformMatrix2fv(loc, false, [2, 1, 2, 2]);
 ```
 
 ## 仕様策定状況
@@ -42,7 +42,7 @@ gl.uniformMatrix2fv(loc, false, [2,1, 2,2]);
 
 ## ブラウザーの対応
 
-{{Compat("api.WebGLRenderingContext.uniformMatrix2fv")}}
+{{Compat}}
 
 ## 関連項目
 

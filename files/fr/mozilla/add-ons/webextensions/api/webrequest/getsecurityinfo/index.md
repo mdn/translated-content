@@ -3,7 +3,7 @@ title: webRequest.getSecurityInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Utilisez cette fonction pour obtenir des informations détaillées sur la connexion [TLS](/fr/docs/Glossaire/TLS) associée à une demande particulière..
 

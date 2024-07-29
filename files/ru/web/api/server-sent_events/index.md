@@ -24,11 +24,11 @@ slug: Web/API/Server-sent_events
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 ### Tools
 

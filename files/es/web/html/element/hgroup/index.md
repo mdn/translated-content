@@ -3,6 +3,8 @@ title: hgroup
 slug: Web/HTML/Element/hgroup
 ---
 
+{{HTMLSidebar}}
+
 ## Resumen
 
 El _elemento de grupo de cabeceras HTML_ (\<hgroup>) representa el encabezado de una sección. Define un solo título que participa de [la estructura del documento](/en/Sections_and_Outlines_of_an_HTML5_document) como el encabezado de la sección implícita o explícita a la que pertenece.
@@ -27,7 +29,8 @@ Este elemento no tiene más atributos que los [atributos globales](/en/HTML/Glob
 
 ## Notas de uso
 
-> **Nota:** Si bien el elemento `<hgroup>` se eliminó de la especificación HTML5 (W3C), todavía se mantiene en la versión WHATWG de HTML. De todos modos, está parcialmente implementado en la mayoría de los navegadores, por lo que es improbable que desaparezca.
+> [!NOTE]
+> Si bien el elemento `<hgroup>` se eliminó de la especificación HTML5 (W3C), todavía se mantiene en la versión WHATWG de HTML. De todos modos, está parcialmente implementado en la mayoría de los navegadores, por lo que es improbable que desaparezca.
 > Sin embargo, dado que el propósito principal del elemento `<hgroup>` es afectar cómo [el algoritmo de generación de esquemas de documento](/es/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm) muestra los encabezados, pero **dicho algoritmo no ha sido implementado por ningún navegador**, la semántica de `<hgroup>` es por el momento solo teórica.
 > La especificación HTML5 (W3C) aconseja entonces cómo maquetar [subtítulos, títulos alternativos y lemas](https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements) sin utilizar `<hgroup>`.
 

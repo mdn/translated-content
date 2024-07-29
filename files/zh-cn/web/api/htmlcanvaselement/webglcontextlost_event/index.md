@@ -30,7 +30,7 @@ slug: Web/API/HTMLCanvasElement/webglcontextlost_event
 
 ## 例子
 
-在 {{domxref("WEBGL_lose_context")}} 扩展的帮助下，您可以模拟 `webglcontextlost` 事件：
+在 {{domxref("WEBGL_lose_context")}} 扩展的帮助下，你可以模拟 `webglcontextlost` 事件：
 
 ```js
 const canvas = document.getElementById("canvas");

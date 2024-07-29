@@ -35,9 +35,6 @@ slug: Web/CSS/CSS_Types
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("&lt;url&gt;")}}
 
-## Спецификация
+## Спецификации
 
-| Specification                 | Status                     | Comment             |
-| ----------------------------- | -------------------------- | ------------------- |
-| {{ SpecName('CSS4 Values') }} | {{ Spec2('CSS4 Values') }} |                     |
-| {{ SpecName('CSS3 Values') }} | {{ Spec2('CSS3 Values') }} | Initial definition. |
+{{Specifications}}

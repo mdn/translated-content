@@ -3,7 +3,7 @@ title: runtime.Port
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/Port
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet `Port` represente une extrémité d'une connexion entre deux contextes spécifiques, qui peut-être utilisée pour échanger des messages.
 

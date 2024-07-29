@@ -32,7 +32,7 @@ dataview2.byteOffset; // 3 (as specified when constructing the DataView)
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.DataView.byteOffset")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -145,7 +145,7 @@ Um exemplo de [como usar a funcionalidade](https://codepen.io/chrisdavidmills/fu
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.execCommand")}}
+{{Compat}}
 
 ## Veja também
 

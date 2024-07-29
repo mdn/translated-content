@@ -68,8 +68,6 @@ slug: Web/CSS/CSS_flexible_box_layout
   - : 常见的设计模式是典型的 flexbox 用例。
 - [用弹性盒子进行 Web 应用布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Using_flexbox_to_lay_out_web_applications)
   - : 讲解在 Web 应用的特定环境下如何应用弹性盒子。
-- [Flexbox 的向后兼容性](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox)
-  - : Flexbox 的浏览器状况，互操作性问题以及支持的旧浏览器和规范版本
 
 ## 规范
 

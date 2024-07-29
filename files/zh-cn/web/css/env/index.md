@@ -13,10 +13,8 @@ slug: Web/CSS/env
 
 ```css
 body {
-  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px) env(
-      safe-area-inset-bottom,
-      20px
-    ) env(safe-area-inset-left, 20px);
+  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px)
+    env(safe-area-inset-bottom, 20px) env(safe-area-inset-left, 20px);
 }
 ```
 
@@ -53,7 +51,7 @@ env(safe-area-inset-left, 1.4rem);
 
 ## 示例
 
-下面的示例使用`env()`的第二个可选参数，如果环境变量不可用，该参数可让您设置备用值
+下面的示例使用`env()`的第二个可选参数，如果环境变量不可用，该参数可让你设置备用值
 
 ```html
 <p>
@@ -69,10 +67,8 @@ env(safe-area-inset-left, 1.4rem);
 p {
   width: 300px;
   border: 2px solid red;
-  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px) env(
-      safe-area-inset-bottom,
-      50px
-    ) env(SAFE-AREA-INSET-LEFT, 50px);
+  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px)
+    env(safe-area-inset-bottom, 50px) env(SAFE-AREA-INSET-LEFT, 50px);
 }
 ```
 

@@ -21,6 +21,10 @@ _`WorkerNavigator` インターフェイスは何もプロパティを継承し�
   - : ブラウザー のバージョンを文字列で返します。このプロパティが正しい値を返すことに頼らないでください。
 - {{DOMxRef("WorkerNavigator.connection")}} {{ReadOnlyInline}}
   - : 端末のネットワーク接続に関する情報を格納した {{DOMxRef("NetworkInformation")}} オブジェクトを提供します。
+- {{domxref("WorkerNavigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : ユーザーの情報の共有や販売への同意状況を表す論理値を返します。
+- {{domxref("WorkerNavigator.gpu")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 現在のワーカーコンテキスト用の {{domxref("GPU")}} オブジェクトを返します。{{domxref("WebGPU_API", "WebGPU API", "", "nocode")}} のエントリーポイントです。
 - {{DOMxRef("WorkerNavigator.hardwareConcurrency")}} {{ReadOnlyInline}}
   - : 利用可能な論理プロセッサーコアの数を返します。
 - {{DOMxRef("WorkerNavigator.language")}} {{ReadOnlyInline}}
@@ -29,6 +33,8 @@ _`WorkerNavigator` インターフェイスは何もプロパティを継承し�
   - : ユーザーが知っている言語を、環境設定の順に文字列の配列で返します。
 - {{DOMxRef("WorkerNavigator.locks")}} {{ReadOnlyInline}}
   - : 新しい {{DOMxRef("LockManager")}} オブジェクトをリクエストしたり、既存の {{DOMxRef('Lock')}} オブジェクトを問い合わせるためのメソッドを提供する `Lock` オブジェクトを返します。
+- {{DOMxRef("WorkerNavigator.mediaCapabilities")}} {{ReadOnlyInline}}
+  - : 指定の形式のデコードおよびエンコードの能力と、出力の能力に関する情報を参照可能にする {{domxref("MediaCapabilities")}} オブジェクトを返します。
 - {{DOMxRef("WorkerNavigator.onLine")}} {{ReadOnlyInline}}
   - : ブラウザーがオンラインであるかどうかを示す論理値を返します。
 - {{DOMxRef("WorkerNavigator.permissions")}} {{Experimental_Inline}} {{ReadOnlyInline}}

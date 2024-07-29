@@ -3,7 +3,7 @@ title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 Метод **`Object.getOwnPropertySymbols()`** возвращает массив всех символьных свойств, найденных непосредственно на переданном объекте.
 

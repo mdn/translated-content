@@ -35,4 +35,4 @@ WebSockets é uma tecnologia avançada que torna possível abrir uma sessão de 
 
 ## Navegadores Compatíveis
 
-{{Compat("api.WebSocket")}}
+{{Compat}}

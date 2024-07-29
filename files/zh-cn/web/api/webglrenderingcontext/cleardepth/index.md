@@ -45,7 +45,7 @@ gl.getParameter(gl.DEPTH_CLEAR_VALUE);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.clear()")}}
 - {{domxref("WebGLRenderingContext.clearColor()")}}

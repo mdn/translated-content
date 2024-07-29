@@ -1,13 +1,15 @@
 ---
 title: <resolution>
 slug: Web/CSS/resolution
+l10n:
+  sourceCommit: c45e2107d7d23c2155f59849a7240f2fa5f096c4
 ---
 
 {{CSSRef}}
 
-**`<resolution>`** は [CSS](/ja/docs/Web/CSS) の [データ型](/ja/docs/Web/CSS/CSS_Types) で、[メディアクエリ](/ja/docs/Web/CSS/Media_Queries)の [resolution](/ja/docs/Web/CSS/@media/resolution) で使われ、出力端末のピクセル密度である、解像度を表します。
+**`<resolution>`** は [CSS](/ja/docs/Web/CSS) の [データ型](/ja/docs/Web/CSS/CSS_Types) で、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)の[解像度](/ja/docs/Web/CSS/@media/resolution)を記述するのに使われ、出力機器のピクセル密度である解像度を表します。
 
-画面では、長さは物理的な値ではなく、 <em>CSS</em> のインチ、センチメートル、またはピクセルと関連づけられます。
+画面では、長さは物理的な値ではなく、 _CSS_ のインチ、センチメートル、またはピクセルと関連づけられます。
 
 ## 構文
 
@@ -20,23 +22,38 @@ slug: Web/CSS/resolution
 - `dpcm`
   - : [センチメートルあたりのドット数](https://en.wikipedia.org/wiki/Dots_per_inch) を表します。1 インチは 2.54 cm なので、`1dpcm ≈ 2.54dpi` です。
 - `dppx`
-  - : ピクセル (`[px](/ja/docs/Web/CSS/length#px)`) あたりのドット数を表します。CSS の `in` と CSS の `px` の比率は 1:96 で固定なので、`1dppx` は `96dpi` と同じです。これは {{cssxref("image-resolution")}} で定義される、CSS の画像の既定の解像度に一致します。
+  - : ピクセル ([`px`](/ja/docs/Web/CSS/length#px)) あたりのドット数を表します。CSS の `in` と CSS の `px` の比率は 1:96 で固定なので、`1dppx` は `96dpi` と同じです。これは {{cssxref("image-resolution")}} で定義される、CSS の画像の既定の解像度に一致します。
 - `x`
   - : `dppx` の別名です。
 
-> **メモ:** 仮に値 `0` に対しすべての単位が同じ解像度を表すとしても、単位を省略してはいけません。言い換えると `0` は無効で、`0dpi`、`0dpcm`、`0dppx` のどれも表しません。
+> [!NOTE]
+> 仮に値 `0` に対しすべての単位が同じ解像度を表すとしても、単位を省略してはいけません。言い換えると `0` は無効で、`0dpi`、`0dpcm`、`0dppx` のどれも表しません。
 
 ## 例
 
 ### メディアクエリーで使用する
 
 ```css
-@media print and (min-resolution: 300dpi) { ... }
+@media print and (min-resolution: 300dpi) {
+  /* … */
+}
+
+@media (resolution: 120dpcm) {
+  /* … */
+}
+
+@media (min-resolution: 2dppx) {
+  /* … */
+}
+
+@media (resolution: 1x) {
+  /* … */
+}
 ```
 
 ### 有効な解像度
 
-```
+```plain example-good
 96dpi
 50.82dpcm
 3dppx
@@ -62,4 +79,4 @@ ten dpi    数値は10進数しか使えません。
 
 - [resolution](/ja/docs/Web/CSS/@media/resolution) メディア特性
 - {{cssxref("image-resolution")}} プロパティ
-- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)

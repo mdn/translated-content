@@ -3,6 +3,8 @@ title: Media Source Extensions のためのアセットのトランスコード
 slug: Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE
 ---
 
+{{DefaultAPISidebar("Media Source Extensions")}}
+
 Media Source Extensions を使用する場合、アセットをストリーミングする前に調整する必要がある可能性があります。 この記事では、要件を説明し、アセットを適切にエンコードするために使用できるツールチェーンを示します。
 
 ## 入門
@@ -40,8 +42,8 @@ MSE を使用する場合、次のツールが必要です。
 ブラウザーが特定のコンテナをサポートしているかどうかを確認するには、次のように MIME タイプの文字列を {{domxref("MediaSource.isTypeSupported")}} メソッドに渡します。
 
 ```js
-MediaSource.isTypeSupported('audio/mp3'); // false
-MediaSource.isTypeSupported('video/mp4'); // true
+MediaSource.isTypeSupported("audio/mp3"); // false
+MediaSource.isTypeSupported("video/mp4"); // true
 MediaSource.isTypeSupported('video/mp4; codecs="avc1.4D4028, mp4a.40.2"'); // true
 ```
 

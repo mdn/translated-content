@@ -29,15 +29,13 @@ slug: Web/CSS/@property/initial-value
 
 对于设定的`syntax`，具有正确值的字符串。
 
-## 标准定义
+## 形式定义
 
 {{cssinfo}}
 
-## 标准语法
+## 形式语法
 
-```css
 {{csssyntax}}
-```
 
 ## 实例
 
@@ -64,12 +62,6 @@ window.CSS.registerProperty({
 });
 ```
 
-## 标准语法
-
-```css
-{{csssyntax}}
-```
-
 ## 规范
 
 {{Specifications}}
@@ -78,7 +70,7 @@ window.CSS.registerProperty({
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [CSS 属性与值 API](/zh-CN/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS 绘图 API](/zh-CN/docs/Web/API/CSS_Painting_API)

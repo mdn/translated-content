@@ -36,7 +36,7 @@ MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 �
 
 ## JavaScript
 
-- [자바스크립트 학습영역](/ko/docs/Learn/JavaScript)
+- [JavaScript 학습영역](/ko/docs/Learn/JavaScript)
 
   - : 당신이 완전한 초보자이든 기술을 다시 배우고 싶든, 이 문서가 출발점이 될 수 있습니다.
 

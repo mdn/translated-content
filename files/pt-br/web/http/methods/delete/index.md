@@ -78,7 +78,7 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.methods.DELETE")}}
+{{Compat}}
 
 ## Veja também
 

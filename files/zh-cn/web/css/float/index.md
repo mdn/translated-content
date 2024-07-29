@@ -30,7 +30,8 @@ slug: Web/CSS/float
 | `inline-grid`        | `grid`      |
 | _other_              | _unchanged_ |
 
-> **备注：** 如果要在 JavaScript 中把 `float` 属性当作 {{domxref("HTMLElement.style")}} 对象的一个成员来操作，那么在旧版本的浏览器中，你必须拼写成 `cssFloat`。另外还要注意到在 Internet Explorer 8 和更老的 IE 当中，要使用 `styleFloat` 属性。这是 DOM 驼峰命名和 CSS 所用的连字符分隔命名法对应关系中的一个特例（这是因为在 JavaScript 中“float”是一个保留字，因为同样的原因，“class”被改成了“className” 、`<label>` 的“for”被改成了“htmlFor”）。
+> [!NOTE]
+> 如果要在 JavaScript 中把 `float` 属性当作 {{domxref("HTMLElement.style")}} 对象的一个成员来操作，那么在旧版本的浏览器中，你必须拼写成 `cssFloat`。另外还要注意到在 Internet Explorer 8 和更老的 IE 当中，要使用 `styleFloat` 属性。这是 DOM 驼峰命名和 CSS 所用的连字符分隔命名法对应关系中的一个特例（这是因为在 JavaScript 中“float”是一个保留字，因为同样的原因，“class”被改成了“className” 、`<label>` 的“for”被改成了“htmlFor”）。
 
 ## 语法
 
@@ -144,5 +145,5 @@ div {
 
 ## 参见
 
-- [块级格式化上下文（Block formatting context）](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)
+- [区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
 - 使用 {{cssxref("clear")}} 强制元素移至浮动元素下方。

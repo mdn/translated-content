@@ -21,4 +21,4 @@ slug: Web/CSS/CSS_namespaces
 
 ### `@namespace` ルール
 
-{{Compat("css.at-rules.namespace")}}
+{{Compat}}

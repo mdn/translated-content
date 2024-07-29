@@ -15,11 +15,11 @@ slug: Web/HTML/Element/fieldset
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : 지정한 경우, 모든 자손 컨트롤을 비활성화합니다. 비활성 컨트롤은 편집할 수 없고, {{htmlelement("form")}}을 제출할 때 데이터에 포함되지 않습니다. 마우스 클릭, 포커스 등 브라우저 이벤트도 모두 받지 않습니다. 브라우저는 비활성 컨트롤을 주로 회색으로 표시합니다. 단, {{htmlelement("legend")}} 안의 양식 요소는 비활성 상태로 전환되지 않습니다.
-- {{htmlattrdef("form")}}
+- `form`
   - : `<fieldset>` 요소와 연결할 {{htmlelement("form")}} 요소("양식 소유자")의 [`id`](/ko/docs/Web/HTML/Global_attributes#id). `<fieldset>`이 해당 `<form>` 안에 위치하지 않아도 연결할 수 있습니다.
-- {{htmlattrdef("name")}}
+- `name`
 
   - : 그룹과 연관지을 이름.
 

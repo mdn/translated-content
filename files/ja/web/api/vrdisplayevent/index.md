@@ -9,7 +9,8 @@ l10n:
 
 **`VRDisplayEvent`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のインターフェイスで、 WebVR 関連イベントのイベントオブジェクトを表します（[WebVR ウインドウ拡張機能のリスト](/ja/docs/Web/API/WebVR_API#window)を参照）。
 
-> **メモ:** このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 ## コンストラクター
 
@@ -28,9 +29,11 @@ _`VRDisplayEvent` は、親オブジェクトである {{domxref("Event")}} か�
 ## 例
 
 ```js
-window.addEventListener('vrdisplaypresentchange', (e) => {
-  console.log(`Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`);
-})
+window.addEventListener("vrdisplaypresentchange", (e) => {
+  console.log(
+    `Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`,
+  );
+});
 ```
 
 ## 仕様書
@@ -45,5 +48,4 @@ window.addEventListener('vrdisplaypresentchange', (e) => {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームが提供するデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

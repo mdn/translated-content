@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocal
 
 À partir d'une locale ou d'un tableau de locales **`Intl.DateTimeFormat.supportedLocalesOf()`** renvoie un tableau qui contient les locales supportées pour le formatage des dates et des heures qui ne nécessitent pas d'avoir recours à la locale par défaut de l'environnement.
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-supportedlocalesof.html")}}
+{{EmbedInteractiveExample("pages/js/intl-datetimeformat-supportedlocalesof.html")}}
 
 ## Syntaxe
 

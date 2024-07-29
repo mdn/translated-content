@@ -56,7 +56,7 @@ function inputChange(e) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.GlobalEventHandlers.onclick")}}
+{{Compat}}
 
 ## Veja também
 

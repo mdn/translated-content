@@ -3,7 +3,7 @@ title: tabs.Tab
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type **`tabs.Tab`** contient des informations sur un onglet. Cela donne accès à des informations sur le contenu de l'onglet, la taille du contenu, les états spéciaux ou les restrictions en vigueur, etc.
 
@@ -80,7 +80,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium.
 >

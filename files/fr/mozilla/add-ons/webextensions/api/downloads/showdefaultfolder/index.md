@@ -3,7 +3,7 @@ title: downloads.showDefaultFolder()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/showDefaultFolder
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`showDefaultFolder()`** de l'API {{WebExtAPIRef("downloads")}} ouvre le dossier de téléchargement par défaut dans le gestionnaire de fichiers de la plateforme.
 

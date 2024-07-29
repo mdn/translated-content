@@ -1,11 +1,12 @@
 ---
 title: "ProgressEvent: total プロパティ"
+short-title: total
 slug: Web/API/ProgressEvent/total
 l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`ProgressEvent.total`** は読み取り専用のプロパティであり、 64 ビット符号なし整数値で、処理または転送されるデータの全体の大きさを示します。 HTTP 通信の場合は、これはメッセージの本文の大きさ (`Content-Length`) であり、ヘッダーやその他のオーバーヘッドは含みません。
 

@@ -3,7 +3,7 @@ title: transition-property
 slug: Web/CSS/transition-property
 ---
 
-{{CSSRef("CSS Transitions")}}
+{{CSSRef}}
 
 La propiedad CSS **`transition-property`** se usa para definir los nombres de las propiedades CSS en las que el efecto de la transición debe aplicarse.
 
@@ -29,7 +29,8 @@ transition-property: initial;
 transition-property: unset;
 ```
 
-> **Nota:** El [conjunto de propiedades que puede ser animado](/es/docs/Web/CSS/CSS_animated_properties) está sujeto a cambios. Por lo tanto deberías evitar incluir en la lista cualquiera de las propiedades que actualmente no puede animarse, aunque algún día pudieran, ya que podría causar resultados inesperados.
+> [!NOTE]
+> El [conjunto de propiedades que puede ser animado](/es/docs/Web/CSS/CSS_animated_properties) está sujeto a cambios. Por lo tanto deberías evitar incluir en la lista cualquiera de las propiedades que actualmente no puede animarse, aunque algún día pudieran, ya que podría causar resultados inesperados.
 
 Si se especifica una propiedad abreviada (por ejemplo , {{cssxref("background")}}) todas sus subpropiedades que soporten animación serán animadas.
 

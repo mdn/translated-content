@@ -3,7 +3,7 @@ title: extension.isAllowedIncognitoAccess()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedIncognitoAccess
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Vérifiez si l'extension est autorisée à accéder aux onglets ouverts en mode "navigation privée".
 

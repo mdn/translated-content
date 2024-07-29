@@ -43,7 +43,7 @@ slug: Web/SVG/Element/g
 
 ### Atributos Específicos
 
-_No hay atributos específicos_
+_No hay atributos específicos._
 
 ## Interfaz DOM
 

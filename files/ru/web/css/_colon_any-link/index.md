@@ -51,7 +51,7 @@ a:-webkit-any-link {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

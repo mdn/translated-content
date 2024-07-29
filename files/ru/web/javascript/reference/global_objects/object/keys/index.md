@@ -3,7 +3,7 @@ title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 ## Сводка
 

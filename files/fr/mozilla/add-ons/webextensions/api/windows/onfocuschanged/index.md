@@ -3,7 +3,7 @@ title: windows.onFocusChanged
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onFocusChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Attiré lorsque la fenêtre actuellement change. Sera {{WebExtAPIRef('windows.WINDOW_ID_NONE')}} si toutes les fenêtres du navigateur ont perdu le focus.
 

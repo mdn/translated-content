@@ -33,7 +33,7 @@ Puede tener un número ilimitado de cursores al mismo tiempo. Siempre se obtiene
 ## Propiedades
 
 - {{domxref("IDBCursor.source")}} {{readonlyInline}}
-  - : Devuelve {{domxref("IDBObjectStore")}} o {{domxref("IDBIndex")}}} que el cursor está iterando. Esta función nunca devuelve nulo o lanza una excepción, incluso si el cursor está siendo iterado, ha iterado más allá de su final, o su transacción no está activa.
+  - : Devuelve {{domxref("IDBObjectStore")}} o {{domxref("IDBIndex")}} que el cursor está iterando. Esta función nunca devuelve nulo o lanza una excepción, incluso si el cursor está siendo iterado, ha iterado más allá de su final, o su transacción no está activa.
 - {{domxref("IDBCursor.direction")}} {{readonlyInline}}
   - : Devuelve la dirección de desplazamiento del cursor. Ver [Constants](#const_next) para valores posibles.
 - {{domxref("IDBCursor.key")}} {{readonlyInline}}
@@ -45,7 +45,8 @@ Puede tener un número ilimitado de cursores al mismo tiempo. Siempre se obtiene
 
 {{ deprecated_header(13) }}
 
-> **Advertencia:** These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ([Error 891944 en Firefox](https://bugzil.la/891944))
+> [!WARNING]
+> These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ([Error 891944 en Firefox](https://bugzil.la/891944))
 
 - `NEXT`: `"next"` : The cursor shows all records, including duplicates. It starts at the lower bound of the key range and moves upwards (monotonically increasing in the order of keys).
 - `NEXTUNIQUE` : `"nextunique"` : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the lower bound of the key range and moves upwards.

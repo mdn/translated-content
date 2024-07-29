@@ -40,18 +40,14 @@ var buf1 = new ArrayBuffer(8);
 var buf2 = buf1.slice(0);
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                              | Status                   | Comment                                 |
-| ------------------------------------------------------------------------------------------ | ------------------------ | --------------------------------------- |
-| {{SpecName('Typed Array')}}                                                                | {{Spec2('Typed Array')}} | Superseded by EMCAScript 6.             |
-| {{SpecName('ES6', '#sec-arraybuffer.prototype.slice', 'ArrayBuffer.prototype.slice')}}     | {{Spec2('ES6')}}         | Initial definition in an ECMA standard. |
-| {{SpecName('ESDraft', '#sec-arraybuffer.prototype.slice', 'ArrayBuffer.prototype.slice')}} | {{Spec2('ESDraft')}}     |                                         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("ArrayBuffer")}}

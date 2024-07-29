@@ -92,17 +92,15 @@ TypeError: replaceAll must be called with a global RegExp
 ("aa..cc");
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                              |
-| ------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.replaceall', 'String.prototype.replaceAll')}} |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("String.prototype.replace", "String.prototype.replace()")}}
 - {{jsxref("String.prototype.match", "String.prototype.match()")}}

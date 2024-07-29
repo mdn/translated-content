@@ -1,17 +1,18 @@
 ---
-title: AudioContext.getOutputTimestamp()
+title: "AudioContext: getOutputTimestamp() メソッド"
+short-title: getOutputTimestamp()
 slug: Web/API/AudioContext/getOutputTimestamp
 l10n:
-  sourceCommit: 31d64df1a8632a2a539e5b16451c6efd7e002d68
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
 {{APIRef("Web Audio API")}}
 
-{{domxref("AudioContext")}} インターフェイスの **`getOutputTimestamp()`** メソッドは、現在の音声コンテキストに関係する 2 個の音声タイムスタンプが格納された新しい `AudioTimestamp` オブジェクトを返します。
+**`getOutputTimestamp()`** は {{domxref("AudioContext")}} インターフェイスのメソッドで、現在の音声コンテキストに関係する 2 つの音声タイムスタンプが格納された新しい `AudioTimestamp` オブジェクトを返します。
 
-2 個の値とは、以下のものです。
+2 つの値とは、以下のものです。
 
-- `AudioTimestamp.contextTime`: コンテキストの {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}} で用いられるのと同じ単位と始点の、現在音声出力デバイスで出力されているサンプルフレームの時刻 (すなわち、出力音声ストリームの位置) です。
+- `AudioTimestamp.contextTime`: コンテキストの {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}} で用いられるのと同じ単位と始点の、現在音声出力デバイスで出力されているサンプルフレームの時刻（すなわち、出力音声ストリームの位置）です。
   基本的には、これは音声コンテキストが最初に作られてからの時間です。
 - `AudioTimestamp.performanceTime`: {{domxref("performance.now()")}} で用いられるのと同じ単位と始点の、`contextTime` の値に対応するサンプルフレームが音声出力デバイスで出力される時刻の推定値です。これは、音声コンテキストを含む文章が最初に描画されてからの時間です。
 

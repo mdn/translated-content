@@ -115,4 +115,4 @@ Os seguintes elementos podem utilizar o atributo `class`:
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.attributes.style.class")}}
+{{Compat}}

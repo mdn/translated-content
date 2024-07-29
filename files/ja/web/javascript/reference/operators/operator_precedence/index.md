@@ -484,7 +484,7 @@ a?.b.c; // 最初に `a` を評価し、 `a` が `null` または `undefined` �
     <tr>
       <td>3</td>
       <td>
-        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">条件（三項）演算子</a>
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator">条件（三項）演算子</a>
       </td>
       <td>右から左</td>
       <td><code>… ? … : …</code></td>
@@ -492,7 +492,7 @@ a?.b.c; // 最初に `a` を評価し、 `a` が `null` または `undefined` �
     <tr>
       <td rowspan="18">2</td>
       <td rowspan="16">
-        <a href="/ja/docs/Web/JavaScript/Reference/Operators#assignment_operators">代入</a>
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators#代入演算子">代入</a>
       </td>
       <td rowspan="16">右から左</td>
       <td><code>… = …</code></td>
@@ -554,7 +554,7 @@ a?.b.c; // 最初に `a` を評価し、 `a` が `null` または `undefined` �
     <tr>
       <td>1</td>
       <td>
-        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Comma_Operator">カンマ / シーケンス</a>
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Comma_operator">カンマ / シーケンス</a>
       </td>
       <td>左から右</td>
       <td><code>… , …</code></td>

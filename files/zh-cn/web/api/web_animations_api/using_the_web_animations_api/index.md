@@ -5,7 +5,7 @@ slug: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 
 {{DefaultAPISidebar("Web Animations")}}
 
-web 动画 API 可以让我们用 JavaScript 写动画并且控制动画。本文将通过有趣的 demo 和教学，以有趣的方式开启您对这片爱丽丝仙境的探索。
+web 动画 API 可以让我们用 JavaScript 写动画并且控制动画。本文将通过有趣的 demo 和教学，以有趣的方式开启你对这片爱丽丝仙境的探索。
 
 ## 认识 Web 动画 API
 
@@ -23,9 +23,9 @@ web 动画 API 可以让我们用 JavaScript 写动画并且控制动画。本�
 
 ### The CSS version
 
-这是一个用 CSS 写的滚动动画，显示爱丽丝落下通向仙境的兔子洞 (see the full [code on Codepen](http://codepen.io/rachelnabors/pen/QyOqqW)):
+这是一个用 CSS 写的滚动动画，显示爱丽丝落下通向仙境的兔子洞 (see the full [code on Codepen](https://codepen.io/rachelnabors/pen/QyOqqW)):
 
-[![Alice Tumbling down the rabbit's hole.](tumbling-alice_optimized.gif)](http://codepen.io/rachelnabors/pen/rxpmJL)
+[![Alice Tumbling down the rabbit's hole.](tumbling-alice_optimized.gif)](https://codepen.io/rachelnabors/pen/rxpmJL)
 
 请注意背景的移动，爱丽丝的旋转，以及她的颜色偏移变化。本教程我们将仅仅关注爱丽丝。这是控制爱丽丝动画的简化的 CSS：
 
@@ -67,11 +67,11 @@ var aliceTumbling = [
 ];
 ```
 
-这里我们使用一个包含多个对象的数组。每个对象代表原始 CSS 中的一个键。然而，与 CSS 不同，Web 动画 API 不需要明确地告知每个键出现的动画的百分比。它将根据您给出的按键数量自动将动画划分为相等的部分。这意味着具有三个键的关键帧对象将通过动画的每个循环的方式播放中间键，除非另有说明。
+这里我们使用一个包含多个对象的数组。每个对象代表原始 CSS 中的一个键。然而，与 CSS 不同，Web 动画 API 不需要明确地告知每个键出现的动画的百分比。它将根据你给出的按键数量自动将动画划分为相等的部分。这意味着具有三个键的关键帧对象将通过动画的每个循环的方式播放中间键，除非另有说明。
 
 当我们想要明确地设置一个键与其他键的偏移量时，我们可以直接在对象中指定一个偏移量，并与逗号分隔。在上面的例子中，为了确保爱丽丝的颜色变化为 30％而不是 50％，我们给它的偏移量为 0.3。
 
-必须至少指定两个关键帧（表示动画序列的开始和结束状态）.如果您的关键帧列表只有一个条目，{{domxref("Element.animate()")}} 将抛出不支持的异常报错。
+必须至少指定两个关键帧（表示动画序列的开始和结束状态）.如果你的关键帧列表只有一个条目，{{domxref("Element.animate()")}} 将抛出不支持的异常报错。
 
 所以要回顾一下，除非你指定一个键上的偏移量，否则键的默认值是等间隔的。方便吗？
 
@@ -91,7 +91,8 @@ var aliceTiming = {
 - 一个，持续时间是毫秒，而不是秒 - 3000 不是 3 秒.。像{{domxref("WindowTimers.setTimeout()")}} 和{{domxref("Window.requestAnimationFrame()")}}, Web 动画 API 只支持毫秒。
 - The other thing you'll notice is that it's `iterations`, not `iteration-count`.
 
-> **备注：** CSS 动画中使用的属性值与 Web 动画中使用的属性值存在一些小的差异。比如，Web 动画中不能使用字符串“infinite”，而是使用 Javascript 的关键字 Infinity。以及我们用 `easing` 来代替`timing-function`。我们不必在这列出`easing`的值，因为不像在 CSS 动画里，默认的"[animation-timing-function](/zh-CN/docs/Web/CSS/animation-timing-function)"是`ease`。页面动画 API 的默认 easing 是`linear`— 而这就是我们想要的。
+> [!NOTE]
+> CSS 动画中使用的属性值与 Web 动画中使用的属性值存在一些小的差异。比如，Web 动画中不能使用字符串“infinite”，而是使用 Javascript 的关键字 Infinity。以及我们用 `easing` 来代替`timing-function`。我们不必在这列出`easing`的值，因为不像在 CSS 动画里，默认的"[animation-timing-function](/zh-CN/docs/Web/CSS/animation-timing-function)"是`ease`。页面动画 API 的默认 easing 是`linear`— 而这就是我们想要的。
 
 #### 整合这些特性
 
@@ -101,7 +102,7 @@ var aliceTiming = {
 document.getElementById("alice").animate(aliceTumbling, aliceTiming);
 ```
 
-And boom: the animation starts playing (see the finished [version on Codepen](http://codepen.io/rachelnabors/pen/rxpmJL)).
+And boom: the animation starts playing (see the finished [version on Codepen](https://codepen.io/rachelnabors/pen/rxpmJL)).
 
 可以在可以使用 CSS 动画化的任何 DOM 元素上调用 animate() 方法。它可以用几种方式写成。我们可以直接像这样传递他们的值，而不需要为关键帧和时间属性创建对象：
 
@@ -134,9 +135,9 @@ document.getElementById("alice").animate(
 
 ## 使用 play()，pause()，reverse() 和 playbackRate 控制播放
 
-虽然我们可以使用 Web 动画 API 编写 CSS 动画，其中 API 真正派上用场的是操纵动画的播放。Web 动画 API 提供了一些控制播放的有用方法。让我们来看看在 Growing / Shrinking Alice 游戏中暂停和播放动画（请查看 Codepen 的完整代码 [full code on Codepen](http://codepen.io/rachelnabors/pen/PNYGZQ)）：
+虽然我们可以使用 Web 动画 API 编写 CSS 动画，其中 API 真正派上用场的是操纵动画的播放。Web 动画 API 提供了一些控制播放的有用方法。让我们来看看在 Growing / Shrinking Alice 游戏中暂停和播放动画（请查看 Codepen 的完整代码 [full code on Codepen](https://codepen.io/rachelnabors/pen/PNYGZQ)）：
 
-[![Playing the growing and shrinking game with Alice.](growing-shrinking_article_optimized.gif)](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)
+[![Playing the growing and shrinking game with Alice.](growing-shrinking_article_optimized.gif)](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)
 
 在这个游戏中，爱丽丝有一个动画，使她从小到大，我们通过一个瓶子和一个蛋糕控制。这两个都有自己的动画。
 
@@ -234,7 +235,7 @@ document.addEventListener("click", goFaster);
 document.addEventListener("touchstart", goFaster);
 ```
 
-背景元素还具有播放时间，当您点击或点击时，它们会受到影响。当 Alice 和 Red Queen 跑两倍的时候会发生什么？当你让他们放慢时会发生什么？
+背景元素还具有播放时间，当你点击或点击时，它们会受到影响。当 Alice 和 Red Queen 跑两倍的时候会发生什么？当你让他们放慢时会发生什么？
 
 ## 获取动画信息
 
@@ -246,9 +247,9 @@ document.getAnimations().forEach(function (animation) {
 });
 ```
 
-使用 Web 动画 API，您需要更改的只是一个小的属性！
+使用 Web 动画 API，你需要更改的只是一个小的属性！
 
-另一件与 CSS 动画有关的难点就是创建依赖于其他动画提供的值。例如，在“成长和收缩爱丽丝”游戏的例子中，您可能会注意到蛋糕的持续时间有些奇怪：
+另一件与 CSS 动画有关的难点就是创建依赖于其他动画提供的值。例如，在“成长和收缩爱丽丝”游戏的例子中，你可能会注意到蛋糕的持续时间有些奇怪：
 
 ```js
 duration: aliceChange.effect.timing.duration / 2;
@@ -359,14 +360,15 @@ aliceChange.onfinish = endGame;
 
 Prefer promises? The Web Animations API also specifies two promises: [`onfinish`](/zh-CN/docs/Web/API/Animation/onfinish) and [`oncancel`](/zh-CN/docs/Web/API/Animation/oncancel).
 
-> **备注：** These promises are not fully supported as of this writing.
+> [!NOTE]
+> These promises are not fully supported as of this writing.
 
 ## 结论
 
-这些是 Web 动画 API 的基本功能，其中大部分功能已在最新版本的 Firefox 和 Chrome 中得到支持。到目前为止，您应该准备好在浏览器中“跳下兔子洞”，动画制作动画实验！如果您正在使用 API 并要共享，请尝试使用#WAAPI 主题标签。我们将会观看并且将编写更多的教程来涵盖更多的功能，支持传播！
+这些是 Web 动画 API 的基本功能，其中大部分功能已在最新版本的 Firefox 和 Chrome 中得到支持。到目前为止，你应该准备好在浏览器中“跳下兔子洞”，动画制作动画实验！如果你正在使用 API 并要共享，请尝试使用#WAAPI 主题标签。我们将会观看并且将编写更多的教程来涵盖更多的功能，支持传播！
 
 ## See also
 
-- The [full suite of Alice in Wonderland demos](http://codepen.io/collection/bpEza/) on CodePen for you to play with, fork, and share
+- The [full suite of Alice in Wonderland demos](https://codepen.io/collection/bpEza/) on CodePen for you to play with, fork, and share
 - [Animating like you just don’t care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) — a great article to read that explains more on the background of the Web Animations API, and why it is more performant than other web animation methods
 - [web-animations-js](https://github.com/web-animations/web-animations-js) — the Web Animations API polyfill

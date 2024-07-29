@@ -3,6 +3,8 @@ title: Web media technologies
 slug: Web/Media
 ---
 
+{{QuickLinksWithSubpages("/zh-TW/docs/Web/Media")}}
+
 這些年來，網頁來表達，創作及運用視訊及音訊以至其他媒介的能力不斷上升。今時今日存在了 大量可供運用的 API 及 HTML 元件，DOM 介面，及其他不止於 發揮傳統效果，還能與其他網頁層面的技術產生協同效應和真實地令人深刻銘記 的特效。本文列出不同的 APIs 和連結其詳細資料的超連結，希望你能認為這些資訊能幫你盡快純熟這些技術。
 
 ## References
@@ -18,7 +20,7 @@ slug: Web/Media
 
 ### APIs
 
-- [Media Capture and Streams API](/zh-TW/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/zh-TW/docs/Web/API/Media_Capture_and_Streams_API)
   - : 這是一個參考資料，關於串流，記錄，管控媒體資料，無論是本地的，透過網路的。這些包括本地的攝錄機及來捕流視訊，音效或圖像的麥克風。
 - [Web Audio API](/zh-TW/docs/Web/API/Web_Audio_API)
   - : 你可以藉由此 API 產出、篩選及操作即時的聲音或是預先錄製好的材料，然後將音效送至`<audio>`元件、影音串流或是儲存起來。

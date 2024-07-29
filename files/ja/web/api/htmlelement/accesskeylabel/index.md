@@ -34,7 +34,9 @@ btn.onclick = () => {
 ### HTML
 
 ```html
-<button accesskey="h" title="キャプション" id="btn1">マウスを当ててください</button>
+<button accesskey="h" title="キャプション" id="btn1">
+  マウスを当ててください
+</button>
 ```
 
 ### 結果

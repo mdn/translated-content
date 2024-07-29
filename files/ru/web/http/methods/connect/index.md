@@ -60,11 +60,11 @@ Host: server.example.com:80
 Proxy-Authorization: basic aGVsbG86d29ybGQ=
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

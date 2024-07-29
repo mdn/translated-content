@@ -9,6 +9,8 @@ slug: Web/SVG/Attribute/dur
 
 Пять элементов используют данный атрибут: {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, и {{SVGElement("set")}}
 
+## Пример
+
 ```css hidden
 html,
 body,
@@ -40,7 +42,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample("topExample", "220", "150")}}
+{{EmbedLiveSample("Пример", 220, 150)}}
 
 ## Примечания к использованию
 

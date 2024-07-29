@@ -3,6 +3,8 @@ title: Conception web adaptative
 slug: Glossary/Responsive_web_design
 ---
 
+{{GlossarySidebar}}
+
 **Conception web adaptative** _(Responsive Web Design_ (**RWD**)) est un concept de développement web concentré sur l'aspect et le comportement optimaux des sites sur tous les appareils informatiques personnels, du bureau au mobile.
 
 ## Voir aussi

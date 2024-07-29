@@ -22,7 +22,8 @@ Este elemento posee los [atributos globales](/es/docs/Web/HTML/Global_attributes
   - : Si está establecido el elemento no se puede seleccionar. A menudo los navegadores ponen en gris el elemento y de esa manera no recibirá ningún evento de navegación como clicks de ratón o eventos relacionados con la obtención del foco. Si este atributo no está definido el elemento puede ser aún deshabilitado si uno de sus ancestros es un elemento {{HTMLElement("optgroup")}} deshabilitado.
 - `label`
   - : Este atributo es el texto para la etiqueta que determina el significado de la opción. Si el atributo **`label`** no está definidio su valor será el texto del contenido del elemento
-    > **Nota:** El atributo **label** está diseñado para contener una etiqueta corta que se usará típicamente en un menú jerárquico. El **`atributo value`** describe una etiqueta más larga para ser usada, por ejemplo, cerca de un radio button
+    > [!NOTE]
+    > El atributo **label** está diseñado para contener una etiqueta corta que se usará típicamente en un menú jerárquico. El **`atributo value`** describe una etiqueta más larga para ser usada, por ejemplo, cerca de un radio button
 - `selected`
   - : Si está presente, este atributo booleano indica si esta opción es la inicialmente seleccionada. Si el elemento `<option>` es descendiente de un elemento {{HTMLElement("select")}} cuyo atributo [`multiple`](/es/docs/Web/HTML/Element/select#multiple) no esté definidio únicamente un sólo `<option>` de este elemento {{HTMLElement("select")}} puede tener este atributo **selected** attribute.
 - `value`
@@ -42,4 +43,4 @@ Ver los ejemplos {{HTMLElement("select")}}.
 
 ## Ver también
 
-- Otros elementos relacionados con formularios: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+- Otros elementos relacionados con formularios: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.

@@ -15,10 +15,14 @@ slug: Web/API/TreeWalker/root
 
 ```js
 var treeWalker = document.createTreeWalker(
-    document.body, // root として document.body を指定している
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body, // root として document.body を指定している
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 root = treeWalker.root; // document.body が返却される
 ```

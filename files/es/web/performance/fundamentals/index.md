@@ -3,6 +3,8 @@ title: Performance fundamentals
 slug: Web/Performance/Fundamentals
 ---
 
+{{QuickLinksWithSubPages("Web/Performance")}}
+
 Performance significa eficiencia. En el contexto de Open Web Apps, este documento explica en general qué es performance, cómo la plataforma del navegador ayuda a mejorarlo y qué herramientas y procesos puede usar para probarlo y mejorarlo.
 
 ## ¿Qué es performance?
@@ -29,7 +31,8 @@ La velocidad de cuadros es importante como una métrica de "calidad de servicio"
 
 El cerebro entonces infiere que el moviemiento se "actualiza" de manera fluida y continua. (Las luces estroboscópicas son divertidas porque dan la vuelta al revés, lo que confunde al cerebro el cual reacciona generando adrenalina y altos niveles de estrés). En una pantalla de computadora, una mayor tasa de cuadros simplemente hace una imitación más fiel de la realidad.
 
-> **Nota:** Los seres humanos generalmente no pueden percibir diferencias en la frecuencia de cuadros por encima de 60Hz. Es por eso que las pantallas electrónicas más modernas están diseñadas para actualizarse a esa velocidad. Una televisión probablemente se ve entrecortada y poco realista para un colibrí, por ejemplo.
+> [!NOTE]
+> Los seres humanos generalmente no pueden percibir diferencias en la frecuencia de cuadros por encima de 60Hz. Es por eso que las pantallas electrónicas más modernas están diseñadas para actualizarse a esa velocidad. Una televisión probablemente se ve entrecortada y poco realista para un colibrí, por ejemplo.
 
 ### Uso de la memoria
 
@@ -57,7 +60,8 @@ HTML y CSS aumentan en gran medida la productividad, a veces a expensas de la fr
 
 The `canvas` element offers a pixel buffer directly for developers to draw on. This gives developers pixel-level control over rendering and precise control of framerate, but now the developers need to deal with multiple resolutions and orientations, right-to-left languages, and so forth. Developers draw to canvases using either a familiar 2D drawing API, or WebGL, a "close to the metal" binding that mostly follows OpenGL ES 2.0.
 
-> **Nota:** Firefox OS is optimized for apps built with Web technologies: [HTML](/es/docs/Web/HTML), [CSS](/es/docs/Web/CSS), [JavaScript](/es/docs/Web/JavaScript), and so on. Except for a handful of basic system services, all code that runs in Firefox OS comes from Web apps and the Gecko engine. Even the OS window manager is written in HTML, CSS, and JavaScript. Because the core operating system and applications are built with same Web technologies, it's critical how those technologies perform. There's no "escape hatch". This greatly benefits developers because now third-party apps benefit from all the OS's own optimizations. There's no "magic performance sauce" available only to preinstalled code. See [Firefox OS performance testing](/es/Apps/Developing/Performance/Firefox_OS_performance_testing) for more details relevant to Firefox OS.
+> [!NOTE]
+> Firefox OS is optimized for apps built with Web technologies: [HTML](/es/docs/Web/HTML), [CSS](/es/docs/Web/CSS), [JavaScript](/es/docs/Web/JavaScript), and so on. Except for a handful of basic system services, all code that runs in Firefox OS comes from Web apps and the Gecko engine. Even the OS window manager is written in HTML, CSS, and JavaScript. Because the core operating system and applications are built with same Web technologies, it's critical how those technologies perform. There's no "escape hatch". This greatly benefits developers because now third-party apps benefit from all the OS's own optimizations. There's no "magic performance sauce" available only to preinstalled code. See [Firefox OS performance testing](/es/Apps/Developing/Performance/Firefox_OS_performance_testing) for more details relevant to Firefox OS.
 
 ### Gecko rendering
 
@@ -69,7 +73,8 @@ Fully static content is the exception rather than the rule for rich applications
 
 An app's startup performance matters just as much as its runtime performance. Gecko is optimized to load a wide variety of content efficiently: the entire Web! Many years of improvements targeting this content, like parallel HTML parsing, intelligent scheduling of reflows and image decoding, clever layout algorithms, etc., translate just as well to improving Web applications on Firefox.
 
-> **Nota:** See [Firefox OS performance testing](/es/Apps/Developing/Performance/Firefox_OS_performance_testing) for more information about Firefox OS specifics that help to further improve startup performance.
+> [!NOTE]
+> See [Firefox OS performance testing](/es/Apps/Developing/Performance/Firefox_OS_performance_testing) for more information about Firefox OS specifics that help to further improve startup performance.
 
 ## Application performance
 
@@ -101,11 +106,13 @@ The Web platform is highly dynamic. JavaScript is a dynamically-typed language, 
 
 Another problem that can delay startup is idle time, caused by waiting for responses to requests (like database loads). To avoid this problem, applications should issue requests as early as possible in startup (this is called "front-loading"). Then when the data is needed later, hopefully it's already available and the application doesn't have to wait.
 
-> **Nota:** For much more information on improving startup performance, read [Optimizing startup performance](/es/Apps/Developing/Performance/Optimizing_startup_performance).
+> [!NOTE]
+> For much more information on improving startup performance, read [Optimizing startup performance](/es/Apps/Developing/Performance/Optimizing_startup_performance).
 
 On the same note, notice that locally-cached, static resources can be loaded much faster than dynamic data fetched over high-latency, low-bandwidth mobile networks. Network requests should never be on the critical path to early application startup. Caching resources locally is also the only way applications can be used offline, and for standard Open Web Apps, at the moment this requires use of HTML5 [AppCache](/es/docs/HTML/Using_the_application_cache).
 
-> **Nota:** Firefox OS allows applications to cache resources by being installed as applications, either being "packaged" in a compressed ZIP file or "hosted" through HTML5 [AppCache](/es/docs/HTML/Using_the_application_cache). How to choose between these options for a particular type of application is beyond the scope of this document, but in general application packages provide optimal load performance; AppCache is slower. Installable apps will hopefully be coming to other platforms soon!
+> [!NOTE]
+> Firefox OS allows applications to cache resources by being installed as applications, either being "packaged" in a compressed ZIP file or "hosted" through HTML5 [AppCache](/es/docs/HTML/Using_the_application_cache). How to choose between these options for a particular type of application is beyond the scope of this document, but in general application packages provide optimal load performance; AppCache is slower. Installable apps will hopefully be coming to other platforms soon!
 
 ### Framerate
 
@@ -130,7 +137,8 @@ Modern CPUs can enter a lower-power mode when mostly idle. Applications that con
 
 When applications are sent to the background, a [`visibilitychange`](/es/docs/Web/Reference/Events/visibilitychange) event is fired on their documents. This event is a developer's friend; applications should listen for it. Applications that drop as many loaded resources as possible when sent to the background use less memory and are less likely discarded, in the case of Firefox OS (see the note below). This in turn means they "start up" faster (since they are already running) and have better UPP.
 
-> **Nota:** As mentioned above, Firefox OS tries to keep as many applications running simultaneously as it can, but does have to discard applications sometimes, usually when the device runs out of memory. To find out more about how Firefox OS manages memory usage and kills apps when out of memory issues are encountered, read [Debugging out of memory errors on Firefox OS](/es/Firefox_OS/Debugging/Debugging_OOMs).
+> [!NOTE]
+> As mentioned above, Firefox OS tries to keep as many applications running simultaneously as it can, but does have to discard applications sometimes, usually when the device runs out of memory. To find out more about how Firefox OS manages memory usage and kills apps when out of memory issues are encountered, read [Debugging out of memory errors on Firefox OS](/es/Firefox_OS/Debugging/Debugging_OOMs).
 
 ### Specific coding tips for application performance
 
@@ -150,7 +158,8 @@ Instead of tweaking absolute positioning and fiddling with all that math yoursel
 
 In addition, transforms give you capabilities you might not otherwise have. Not only can you translate elements in 2D space, but you can transform in three dimensions, skew and rotate, and so forth. Paul Irish has an [in-depth analysis of the benefits of `translate()`](http://paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/) from a performance point of view. In general, however, you have the same benefits you get from using CSS animations: you use the right tool for the job and leave the optimization to the browser. You also use an easily extensible way of positioning elements — something that needs a lot of extra code if you simulate translation with `top` and `left` positioning. Another bonus is that this is just like working in a `canvas` element.
 
-> **Nota:** You may need to attach a `translateZ(0.1)` transform if you wish to get hardware acceleration on your CSS animations, depending on platform. As noted above, this can improve performance, but can also have memory consumption issues. What you do in this regard is up to you — do some testing and find out what's best for your particular app.
+> [!NOTE]
+> You may need to attach a `translateZ(0.1)` transform if you wish to get hardware acceleration on your CSS animations, depending on platform. As noted above, this can improve performance, but can also have memory consumption issues. What you do in this regard is up to you — do some testing and find out what's best for your particular app.
 
 #### Use `requestAnimationFrame()` instead of `setInterval()`
 
@@ -182,7 +191,8 @@ The [Built-in Gecko Profiler](/es/docs/Performance/Profiling_with_the_Built-in_P
 
 ![A built-in Gecko profiler windows showing a lot of network information.](gecko-profiler.png)
 
-> **Nota:** You can use these tools with the Android browser by running Firefox and enabling [remote debugging](/es/docs/Tools/Remote_Debugging).
+> [!NOTE]
+> You can use these tools with the Android browser by running Firefox and enabling [remote debugging](/es/docs/Tools/Remote_Debugging).
 
 In particular, making dozens or hundreds of network requests takes longer in mobile browsers. Rendering large images and CSS gradients can also take longer. Simply downloading large files can take longer, even over a fast network, because mobile hardware is sometimes too slow to take advantage of all the available bandwidth. For useful general tips on mobile Web performance, have a look at Maximiliano Firtman's [Mobile Web High Performance](http://www.slideshare.net/firt/mobile-web-high-performance) talk.
 

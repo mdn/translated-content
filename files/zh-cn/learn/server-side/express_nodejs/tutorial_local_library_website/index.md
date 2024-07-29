@@ -10,7 +10,7 @@ slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         阅读
         <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction"
@@ -63,7 +63,8 @@ slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 
 如果实在进行不下去，可以参考 [Github](https://github.com/mdn/express-locallibrary-tutorial) 上的完整版本。
 
-> **备注：** 本教程中的代码，已在特定版本（项目的 [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json) 所列版本）的 node、Express 及其他模组的环境下通过测试。
+> [!NOTE]
+> 本教程中的代码，已在特定版本（项目的 [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json) 所列版本）的 node、Express 及其他模组的环境下通过测试。
 
 ## 总结
 

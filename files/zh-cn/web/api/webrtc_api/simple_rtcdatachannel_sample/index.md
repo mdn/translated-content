@@ -5,7 +5,7 @@ slug: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 
 {{DefaultAPISidebar("WebRTC")}}
 
-{{domxref("RTCDataChannel")}} 接口是 [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API) 的一个功能，可以让您在两个对等体之间打开一个通道，您可以通过该通道发送和接收任意数据。API 有意地类似于 [WebSocket API](/zh-CN/docs/Web/API/WebSocket_API)，因此可以为每个 API 使用相同的编程模型。
+{{domxref("RTCDataChannel")}} 接口是 [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API) 的一个功能，可以让你在两个对等体之间打开一个通道，你可以通过该通道发送和接收任意数据。API 有意地类似于 [WebSocket API](/zh-CN/docs/Web/API/WebSocket_API)，因此可以为每个 API 使用相同的编程模型。
 
 在本示例中，我们会在一个页面内建立 一条 {{domxref("RTCDataChannel")}} 连接。这个场景是为了演示如何连接两个 Peer，实际场景并不常见。在本示例中解释了协商和建立连接的过程，定位和连接另外一台主机的场景在另外的一个示例中。
 
@@ -88,7 +88,8 @@ function startup() {
 
 当用户点击 "Connect" 按钮， `connectPeers()` 方法被调用。下面将逐一分析该方法中的细节。
 
-> **备注：** 尽管参与连接的两端都在同一页面，我们将启动连接的一端称为 "local" 端，另一端称为 "remote" 端。
+> [!NOTE]
+> 尽管参与连接的两端都在同一页面，我们将启动连接的一端称为 "local" 端，另一端称为 "remote" 端。
 
 #### 建立本地节点
 
@@ -117,7 +118,8 @@ remoteConnection.ondatachannel = receiveChannelCallback;
 
 下一步为每个连接建立 ICE 候选侦听处理，当连接的一方出现新的 ICE 候选时该侦听逻辑将被调用以告知连接的另一方此消息。
 
-> **备注：** 在现实场景，当参与连接的两节点运行于不同的上下文，建立连接的过程或稍微复杂些，每一次双方通过调用{{domxref("RTCPeerConnection.addIceCandidate()")}}，提出连接方式的建议 (例如：UDP,、中继 UDP、TCP 之类的) ，双方来回往复直到达成一致。本文既然不涉及现实网络环境，因此我们假定双方接受首次连接建议。
+> [!NOTE]
+> 在现实场景，当参与连接的两节点运行于不同的上下文，建立连接的过程或稍微复杂些，每一次双方通过调用{{domxref("RTCPeerConnection.addIceCandidate()")}}，提出连接方式的建议 (例如：UDP,、中继 UDP、TCP 之类的) ，双方来回往复直到达成一致。本文既然不涉及现实网络环境，因此我们假定双方接受首次连接建议。
 
 ```js
 localConnection.onicecandidate = (e) =>
@@ -156,11 +158,12 @@ localConnection
 2. 如果该 offer 成功建立，我们将上述字节块传递给 local 连接的 {{domxref("RTCPeerConnection.setLocalDescription()")}} 方法。用于配置 local 端的连接。
 3. 下一步通过调用`remoteConnection.`{{domxref("RTCPeerConnection.setRemoteDescription()")}}，告知 remote 节点上述描述，将 local 节点连接到到远程。现在 `remoteConnection` 了解正在建立的连接。
 4. 该是 remote 节点回应的时刻了。remote 节点调用 {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} 方法予以回应。该方法生成一个 SDP 二进制块，用于描述 remote 节点愿意并且有能力建立的连接。这样的连接配置是两端均可以支持可选项的结合。
-5. 应答建立之后，通过调用{{domxref("RTCPeerConnection.setLocalDescription()")}}传入 remoteConnection。该调用完成了 remote 端连接的建立 (对于对端的 remote 节点而言，是它的 local 端。这种叙述容易使人困惑，但是看多了您就习惯了。
+5. 应答建立之后，通过调用{{domxref("RTCPeerConnection.setLocalDescription()")}}传入 remoteConnection。该调用完成了 remote 端连接的建立 (对于对端的 remote 节点而言，是它的 local 端。这种叙述容易使人困惑，但是看多了你就习惯了。
 6. 最终，通过调用 localConnection 的{{domxref("RTCPeerConnection.setRemoteDescription()")}}方法，本地连接的远端描述被设置为指向 remote 节点。
 7. `catch()` 调用一个用于处理任何异常的逻辑。
 
-> **备注：** 再次申明，上述处理过程并非针对现实世界的实现，在正常环境下，建立连接的两端的机器，运行两块不同的代码，用于交互和协商连接过程。
+> [!NOTE]
+> 再次申明，上述处理过程并非针对现实世界的实现，在正常环境下，建立连接的两端的机器，运行两块不同的代码，用于交互和协商连接过程。
 
 #### 对成功的对等连接的处理
 
@@ -252,7 +255,7 @@ function sendMessage() {
 }
 ```
 
-首先，待发送的消息文本从文本输入框的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value)属性获得，之后该文本通过调用 {{domxref("RTCDataChannel.send", "sendChannel.send()")}}发送到 remote 节点。都搞定了！余下的只是些用户体验糖 ——清空并聚焦文本输入框，以便用户可以立即开始下一条消息的输入。
+首先，待发送的消息文本从文本输入框的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value)属性获得，之后该文本通过调用 {{domxref("RTCDataChannel.send", "sendChannel.send()")}}发送到 remote 节点。都搞定了！余下的只是些用户体验糖——清空并聚焦文本输入框，以便用户可以立即开始下一条消息的输入。
 
 ### 接收消息
 

@@ -13,7 +13,8 @@ l10n:
 
 この節では、決済リクエスト API を使用して決済を行うための基本的な方法を詳しく説明します。
 
-> **メモ:** この節のコードスニペットは、[Feature detect support デモ](https://github.com/mdn/dom-examples/blob/main/payment-request/feature-detect-support.html)から引用しています。
+> [!NOTE]
+> この節のコードスニペットは、[Feature detect support デモ](https://github.com/mdn/dom-examples/blob/main/payment-request/feature-detect-support.html)から引用しています。
 
 ### 新しい決済リクエストオブジェクトの作成
 
@@ -28,7 +29,7 @@ l10n:
 ```js
 const request = new PaymentRequest(
   buildSupportedPaymentMethodData(),
-  buildShoppingCartDetails()
+  buildShoppingCartDetails(),
 );
 ```
 
@@ -92,7 +93,7 @@ new PaymentRequest(buildSupportedPaymentMethodData(), {
       // Real payment request
       const request = new PaymentRequest(
         buildSupportedPaymentMethodData(),
-        checkoutObject
+        checkoutObject,
       );
       request.show().then((paymentResponse) => {
         // Here we would process the payment.
@@ -117,7 +118,7 @@ const checkoutButton = document.getElementById("checkout-button");
 if (window.PaymentRequest) {
   let request = new PaymentRequest(
     buildSupportedPaymentMethodNames(),
-    buildShoppingCartDetails()
+    buildShoppingCartDetails(),
   );
   checkoutButton.addEventListener("click", () => {
     request
@@ -136,13 +137,14 @@ if (window.PaymentRequest) {
     // called only once per instance.
     request = new PaymentRequest(
       buildSupportedPaymentMethodNames(),
-      buildShoppingCartDetails()
+      buildShoppingCartDetails(),
     );
   });
 }
 ```
 
-> **メモ:** コードの全体は、[Feature detect support デモ](https://mdn.github.io/dom-examples/payment-request/feature-detect-support.html)を参照してください。
+> [!NOTE]
+> コードの全体は、[Feature detect support デモ](https://mdn.github.io/dom-examples/payment-request/feature-detect-support.html)を参照してください。
 
 ## ユーザーが決済できるかを調べる
 
@@ -160,7 +162,7 @@ checkoutButton.innerText = "Loading…";
 if (window.PaymentRequest) {
   const request = new PaymentRequest(
     buildSupportedPaymentMethodNames(),
-    buildShoppingCartDetails()
+    buildShoppingCartDetails(),
   );
   request
     .canMakePayment()
@@ -178,7 +180,8 @@ if (window.PaymentRequest) {
 }
 ```
 
-> **メモ:** コードの全体は、[Customizing the payment button デモ](https://mdn.github.io/dom-examples/payment-request/customize-button-can-make-payment.html)を参照してください。
+> [!NOTE]
+> コードの全体は、[Customizing the payment button デモ](https://mdn.github.io/dom-examples/payment-request/customize-button-can-make-payment.html)を参照してください。
 
 ### 価格がすべて判明する前に調べる
 
@@ -241,7 +244,8 @@ function onServerCheckoutDetailsRetrieved(checkoutObject) {
 }
 ```
 
-> **メモ:** コードの全体は、[Checking user can make payments before prices are known デモ](https://mdn.github.io/dom-examples/payment-request/check-user-can-make-payment.html)を参照してください。
+> [!NOTE]
+> コードの全体は、[Checking user can make payments before prices are known デモ](https://mdn.github.io/dom-examples/payment-request/check-user-can-make-payment.html)を参照してください。
 
 ## ユーザーがアプリを持っていない場合に、決済アプリを推薦する
 
@@ -253,7 +257,7 @@ function onServerCheckoutDetailsRetrieved(checkoutObject) {
 checkoutButton.addEventListener("click", () => {
   const request = new PaymentRequest(
     buildSupportedPaymentMethodData(),
-    buildShoppingCartDetails()
+    buildShoppingCartDetails(),
   );
   request
     .show()
@@ -277,7 +281,8 @@ checkoutButton.addEventListener("click", () => {
 });
 ```
 
-> **メモ:** コードの全体は、[Recommending a payment app when user has no apps デモ](https://mdn.github.io/dom-examples/payment-request/recommend-payment-app.html)を参照してください。
+> [!NOTE]
+> コードの全体は、[Recommending a payment app when user has no apps デモ](https://mdn.github.io/dom-examples/payment-request/recommend-payment-app.html)を参照してください。
 
 ## 決済成功後の追加ユーザーインターフェイスの表示
 
@@ -300,7 +305,8 @@ request
   });
 ```
 
-> **メモ:** コードの全体は、[Show additional user interface after successful payment デモ](https://mdn.github.io/dom-examples/payment-request/show-additional-ui-after-payment.html)を参照してください。
+> [!NOTE]
+> コードの全体は、[Show additional user interface after successful payment デモ](https://mdn.github.io/dom-examples/payment-request/show-additional-ui-after-payment.html)を参照してください。
 
 ## トランザクションの事前承認
 
@@ -311,7 +317,7 @@ request
 ```js
 const paymentRequest = new PaymentRequest(
   [{ supportedMethods: "https://example.com/preauth" }],
-  details
+  details,
 );
 
 // Send `CanMakePayment` event to the payment handler.
@@ -342,7 +348,8 @@ self.addEventListener("canmakepayment", (evt) => {
 
 この決済ハンドラーは、`https://example.com/preauth` のスコープでサービスワーカーの中に常駐させる必要があります。
 
-> **メモ:** コードの全体は、[Pre-authorizing transactions デモ](https://mdn.github.io/dom-examples/payment-request/pre-authorize-transaction.html)を参照してください。
+> [!NOTE]
+> コードの全体は、[Pre-authorizing transactions デモ](https://mdn.github.io/dom-examples/payment-request/pre-authorize-transaction.html)を参照してください。
 
 ## 関連情報
 

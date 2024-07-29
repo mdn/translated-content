@@ -22,7 +22,7 @@ const anchors = document.getElementsByTagName("a");
 for (const anchor of anchors) {
   const list = anchor.relList;
   console.log(
-    `relList に ${list.length} 個のリンク種別がある新しいアンカーノードが見つかりました。`
+    `relList に ${list.length} 個のリンク種別がある新しいアンカーノードが見つかりました。`,
   );
   list.forEach((relValue) => {
     console.log(relValue);

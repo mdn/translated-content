@@ -3,6 +3,8 @@ title: XSLT
 slug: Web/XSLT
 ---
 
+{{XsltSidebar}}
+
 **[Tutorial XSLT (en)](http://www.w3schools.com/xsl/)**
 Este tutorial enseña como usar XSLT para transformar documentos XML en otros formatos.
 
@@ -47,4 +49,5 @@ Actualmente, XSLT es muy usado en la edición web, generando páginas HTML o XHT
 - Temas relacionados
   - : [XML](/es/XML), [XPath](/es/XPath), [XSL](/es/XSL).
 
-> **Nota:** Esta descripción de XSLT ha sido obtenida del [Artículo sobre XSLT en la Wikipedia (es)](http://es.wikipedia.org/wiki/XSLT).
+> [!NOTE]
+> Esta descripción de XSLT ha sido obtenida del [Artículo sobre XSLT en la Wikipedia (es)](http://es.wikipedia.org/wiki/XSLT).

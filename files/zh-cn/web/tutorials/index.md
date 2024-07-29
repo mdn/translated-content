@@ -3,7 +3,9 @@ title: 教程
 slug: Web/Tutorials
 ---
 
-> **警告：** 本页面上的链接通向各式各样的入门指导和培训教材。不管你是仅仅开始入门、学过些基础或者是个网站开发老手，你都能在这里找到有用的资源加以绝佳的练习。这些资源都来自卓有远见的公司和乐于接受开放标准网站开发人员。这是网站开发的绝佳练习而且使用一种开放内容授权，比如[知识共享许可协议](https://www.mozilla.org/foundation/licensing/website-content.html)来提供并允许进行翻译。
+本页面上的链接通向各式各样的入门指导和培训教材。不管你是仅仅开始入门、学过些基础或者是个网站开发老手，你都能在这里找到有用的资源加以绝佳的练习。
+
+这些资源都来自卓有远见的公司和乐于接受开放标准网站开发人员。这是网站开发的绝佳练习而且使用一种开放内容授权，比如[知识共享许可协议](https://www.mozilla.org/foundation/licensing/website-content.html)来提供并允许进行翻译。
 
 ## 对于学习 Web 的新手
 
@@ -27,7 +29,7 @@ slug: Web/Tutorials
 ### 高级课程
 
 - [编写出能够快速加载 HTML 页面的小贴士](/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)
-  - : 优化网页，以减少您的 Web 服务器上的负载和网络连接和为游客提供一个响应迅速的网站。
+  - : 优化网页，以减少你的 Web 服务器上的负载和网络连接和为游客提供一个响应迅速的网站。
 - [HTML5 入门](http://www.html5rocks.com/tutorials/)_（HTML5 Rocks）_
   - : 通过指南来指导使用 HTML5 特征来写代码。
 - [HTML5 语法](http://www.alistapart.com/articles/semanticsinhtml5/) _(分开的列表)_
@@ -85,7 +87,7 @@ slug: Web/Tutorials
 ### 初级课程
 
 - [CSS 入门](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)
-  - : 这个教程向您介绍层叠样式表（CSS），通过具体的实例引导你熟悉基本的 CSS 功能，你可以试着在自己电脑上练习这些实例。
+  - : 这个教程向你介绍层叠样式表（CSS），通过具体的实例引导你熟悉基本的 CSS 功能，你可以试着在自己电脑上练习这些实例。
 - [CSS 类选择器](http://en.wikiversity.org/wiki/Web_Design/CSS_Classes) (来自维基大学)
   - : 在 CSS 里类是什么？
 - [外部 CSS](http://en.wikiversity.org/wiki/Web_Design/External_CSS) (来自维基大学)

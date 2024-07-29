@@ -25,27 +25,27 @@ slug: Mozilla/Firefox/Releases/43
 
 ### CSS
 
-- Удалён префикс CSS-свойства {{Cssxref("hyphens")}} ({{bug(953408)}}).
-- CCS свойство {{cssxref("font")}} теперь поддерживает указание {{cssxref("font-stretch")}} {{bug(1057680)}}).
-- Псевдокласс {{cssxref(":fullscreen")}} теперь выбирает весь стек элементов с дисплея в полноэкранном режиме, а не только элементы высшего уровня ({{bug(1199522)}}).
-- Устаревшие свойства SVG {{cssxref("writing-mode")}}, `lr`, `lr-tb`, `rl`, `tb`, and `tb-rl`, добавлены в CSS как алиасы стандартных CSS-свойств ({{bug(1205787)}}).
+- Удалён префикс CSS-свойства {{Cssxref("hyphens")}} ([Firefox bug 953408](https://bugzil.la/953408)).
+- CCS свойство {{cssxref("font")}} теперь поддерживает указание {{cssxref("font-stretch")}} [Firefox bug 1057680](https://bugzil.la/1057680)).
+- Псевдокласс {{cssxref(":fullscreen")}} теперь выбирает весь стек элементов с дисплея в полноэкранном режиме, а не только элементы высшего уровня ([Firefox bug 1199522](https://bugzil.la/1199522)).
+- Устаревшие свойства SVG {{cssxref("writing-mode")}}, `lr`, `lr-tb`, `rl`, `tb`, and `tb-rl`, добавлены в CSS как алиасы стандартных CSS-свойств ([Firefox bug 1205787](https://bugzil.la/1205787)).
 
 ### HTML
 
-- Для тега {{htmlelement("img")}} с изображением формата ICO содержащего несколько кадров (анимированного), разрешение изображения будет равным разрешению самого большого кадра, а не самого малого {{bug(1201796)}}.
-- Значение области просмотра документа (viewport) (определённого с помощью тега `<meta name="viewport>`) можно динамически изменять с помощью JavaScript ({{bug(976616)}}).
+- Для тега {{htmlelement("img")}} с изображением формата ICO содержащего несколько кадров (анимированного), разрешение изображения будет равным разрешению самого большого кадра, а не самого малого [Firefox bug 1201796](https://bugzil.la/1201796).
+- Значение области просмотра документа (viewport) (определённого с помощью тега `<meta name="viewport>`) можно динамически изменять с помощью JavaScript ([Firefox bug 976616](https://bugzil.la/976616)).
 
 ### JavaScript
 
 #### Новые API
 
-- Новые методы ES2016 {{jsxref("Array.prototype.includes()")}} и {{jsxref("TypedArray.prototype.includes()")}} доступны по умолчанию ({{bug(1070767)}}).
+- Новые методы ES2016 {{jsxref("Array.prototype.includes()")}} и {{jsxref("TypedArray.prototype.includes()")}} доступны по умолчанию ([Firefox bug 1070767](https://bugzil.la/1070767)).
 
 #### Изменения связанные с объектом `arguments`
 
-- Более полное соответствие спецификации ES2015, [стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions) больше не содержат свой собственный встроенный объект `arguments`. Объект `arguments` теперь прикреплён лексически (наследуется от внешней функции). В большинстве случаев, [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters) лучшая альтернатива `(...args) => args[i]`, смотри {{bug(889158)}}.
-- Объект [arguments](/ru/docs/Web/JavaScript/Reference/Functions/arguments) теперь разрешается использовать вместе с [остаточными параметрами](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters) ({{bug(1133298)}}).
-- Теперь, объект map [`arguments`](/ru/docs/Web/JavaScript/Reference/Functions/arguments) в нестрогих функциях доступен только если функция не содержит другие [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters), или [параметры по умолчанию или](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters)[destructured parameters](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ({{bug(1175394)}}).
+- Более полное соответствие спецификации ES2015, [стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions) больше не содержат свой собственный встроенный объект `arguments`. Объект `arguments` теперь прикреплён лексически (наследуется от внешней функции). В большинстве случаев, [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters) лучшая альтернатива `(...args) => args[i]`, смотри [Firefox bug 889158](https://bugzil.la/889158).
+- Объект [arguments](/ru/docs/Web/JavaScript/Reference/Functions/arguments) теперь разрешается использовать вместе с [остаточными параметрами](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters) ([Firefox bug 1133298](https://bugzil.la/1133298)).
+- Теперь, объект map [`arguments`](/ru/docs/Web/JavaScript/Reference/Functions/arguments) в нестрогих функциях доступен только если функция не содержит другие [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters), или [параметры по умолчанию или](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters)[destructured parameters](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ([Firefox bug 1175394](https://bugzil.la/1175394)).
 
 ### Interfaces/APIs/DOM
 
@@ -55,30 +55,30 @@ _Без изменений._
 
 #### IndexedDB
 
-- Добавлена [сортировка с учётом локали](/ru/docs/Web/API/IndexedDB_API/Using_IndexedDB#Locale-aware_sorting), которая позволяет создавать индексы учитывающие локаль. Эти индексы потом могут быть использованы чтобы отсортировать данные с учётом правил локали. ({{bug(871846)}}). Это не стандартная функция и доступна только в Firefox.
+- Добавлена [сортировка с учётом локали](/ru/docs/Web/API/IndexedDB_API/Using_IndexedDB#Locale-aware_sorting), которая позволяет создавать индексы учитывающие локаль. Эти индексы потом могут быть использованы чтобы отсортировать данные с учётом правил локали. ([Firefox bug 871846](https://bugzil.la/871846)). Это не стандартная функция и доступна только в Firefox.
 
 #### Service Workers
 
-- Согласно спецификации, если {{domxref("ExtendableEvent.waitUntil()")}} был вызван вне обработчика {{domxref("ExtendableEvent")}}, Firefox выбросит `InvalidStateError`; также несколько подряд идущих вызовов {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} теперь будут помещены в стек, и результирующие промисы будут добавлены в [extend lifetime promises](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises) ({{bug(1180274)}}).
-- Реализованы методы {{domxref("PushMessageData")}} ({{bug(1149195)}}).
+- Согласно спецификации, если {{domxref("ExtendableEvent.waitUntil()")}} был вызван вне обработчика {{domxref("ExtendableEvent")}}, Firefox выбросит `InvalidStateError`; также несколько подряд идущих вызовов {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} теперь будут помещены в стек, и результирующие промисы будут добавлены в [extend lifetime promises](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises) ([Firefox bug 1180274](https://bugzil.la/1180274)).
+- Реализованы методы {{domxref("PushMessageData")}} ([Firefox bug 1149195](https://bugzil.la/1149195)).
 
 #### WebRTC
 
-- Метод {{domxref("HTMLCanvasElement.captureStream()")}} активирован в Firefox по умолчанию ({{bug(1177276)}}).
+- Метод {{domxref("HTMLCanvasElement.captureStream()")}} активирован в Firefox по умолчанию ([Firefox bug 1177276](https://bugzil.la/1177276)).
 
 #### Разное
 
-- [Battery Status API](/ru/docs/Web/API/Battery_Status_API) теперь использует новый синтаксис промисов для {{domxref("Navigator.getBattery()")}}, так как это описано в последней версии спецификации ({{bug(1050749)}}).
-- Заголовок `User-Agent` более не в списке {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} и теперь может быть установлен в объект [Fetch](/ru/docs/Web/API/Fetch_API) {{domxref("Headers")}}, через XHR {{domxref("XMLHttpRequest.setRequestHeader()")}},… ({{bug(1188932)}}).
-- Конструктор {{domxref("MediaRecorder.MediaRecorder()")}} теперь принимает дополнительно необязательный параметр типа словарь (dictionary), который позволяет вам устанавливать произвольный битрейт для записываемого аудио/видео ({{bug("1161276")}}).
-- Реализован интерфейс {{domxref("PerformanceObserver")}}, из [Performance Timeline API](/ru/docs/Web/API/Performance_Timeline_API) ({{bug(1165796)}}).
-- Добавлены дополнительно два интерфейса в [Frame Timing API](/ru/docs/Web/API/Frame_Timing_API), {{domxref("PerformanceRenderTiming")}} и {{domxref("PerformanceCompositeTiming")}} ({{bug(1191178)}}).
-- Реализована современная версия [Screen Orientation API](/ru/docs/Web/API/Screen_Orientation_API): доступны беспрефиксные интерфейсы {{domxref("Screen.orientation")}} и {{domxref("ScreenOrientation")}} ({{bug("1131470")}}). Не стандартные {{domxref("Screen.mozOrientation")}}, {{domxref("Screen.onmozorientationchange")}}, {{domxref("Screen.mozLockOrientation()")}}, и {{domxref("Screen.mozUnlockOrientation()")}} будут удалены в будущем.
-- В Линукс, как и в Windows, {{domxref("Event.timeStamp")}} теперь возвращает {domxref("DOMHighResTimeStamp")}} ({{bug(1026803)}}).
-- Экспериментальная поддержка {{domxref("Selection")}} событий {{event("selectionchange")}} и {{event("selectstart")}}, а также добавлены {{domxref("Document.onselectionchange")}} и {{domxref("GlobalEventHandlers.onselectstart")}} свойства для обработчиков событий ({{bug(571294)}}). Событие `selectionchange` теперь возникает на {{domxref("Document")}} если связано с объектом `Selection`, или в особом случае {{domxref("HTMLInputElement")}} или {{domxref("HTMLTextAreaElement")}} ({{bug(1196479)}}). Это свойство контролируется с помощью настройки `dom.select_events.enabled`, которое по умолчанию имеет значение `false`, за исключением Firefox Nightly.
-- Поддержка {{domxref("MouseEvent.offsetX")}} и {{domxref("MouseEvent.offsetY")}} доступна по умолчанию в Android версии Firefox и Firefox OS ({{bug(1204841)}}).
-- Удалён метод {{domxref("HTMLCanvasElement.mozFetchAsStream()")}} ({{bug(1206030)}}).
-- Конструктор {{domxref("Request.Request", "Request()")}} а также {{domxref("Window.fetch", "fetch()")}} теперь выбросит исключение {{jsxref("TypeError")}} если будет использовано в URL которое содержит параметры с именами username и password ({{bug(1195820)}}).
+- [Battery Status API](/ru/docs/Web/API/Battery_Status_API) теперь использует новый синтаксис промисов для {{domxref("Navigator.getBattery()")}}, так как это описано в последней версии спецификации ([Firefox bug 1050749](https://bugzil.la/1050749)).
+- Заголовок `User-Agent` более не в списке {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} и теперь может быть установлен в объект [Fetch](/ru/docs/Web/API/Fetch_API) {{domxref("Headers")}}, через XHR {{domxref("XMLHttpRequest.setRequestHeader()")}},… ([Firefox bug 1188932](https://bugzil.la/1188932)).
+- Конструктор {{domxref("MediaRecorder.MediaRecorder()")}} теперь принимает дополнительно необязательный параметр типа словарь (dictionary), который позволяет вам устанавливать произвольный битрейт для записываемого аудио/видео ([Firefox bug 1161276](https://bugzil.la/1161276)).
+- Реализован интерфейс {{domxref("PerformanceObserver")}}, из [Performance Timeline API](/ru/docs/Web/API/Performance_Timeline_API) ([Firefox bug 1165796](https://bugzil.la/1165796)).
+- Добавлены дополнительно два интерфейса в [Frame Timing API](/ru/docs/Web/API/Frame_Timing_API), {{domxref("PerformanceRenderTiming")}} и {{domxref("PerformanceCompositeTiming")}} ([Firefox bug 1191178](https://bugzil.la/1191178)).
+- Реализована современная версия [Screen Orientation API](/ru/docs/Web/API/Screen_Orientation_API): доступны беспрефиксные интерфейсы {{domxref("Screen.orientation")}} и {{domxref("ScreenOrientation")}} ([Firefox bug 1131470](https://bugzil.la/1131470)). Не стандартные {{domxref("Screen.mozOrientation")}}, {{domxref("Screen.onmozorientationchange")}}, {{domxref("Screen.mozLockOrientation()")}}, и {{domxref("Screen.mozUnlockOrientation()")}} будут удалены в будущем.
+- В Линукс, как и в Windows, {{domxref("Event.timeStamp")}} теперь возвращает {domxref("DOMHighResTimeStamp")}} ([Firefox bug 1026803](https://bugzil.la/1026803)).
+- Экспериментальная поддержка {{domxref("Selection")}} событий {{event("selectionchange")}} и {{event("selectstart")}}, а также добавлены {{domxref("Document.onselectionchange")}} и {{domxref("GlobalEventHandlers.onselectstart")}} свойства для обработчиков событий ([Firefox bug 571294](https://bugzil.la/571294)). Событие `selectionchange` теперь возникает на {{domxref("Document")}} если связано с объектом `Selection`, или в особом случае {{domxref("HTMLInputElement")}} или {{domxref("HTMLTextAreaElement")}} ([Firefox bug 1196479](https://bugzil.la/1196479)). Это свойство контролируется с помощью настройки `dom.select_events.enabled`, которое по умолчанию имеет значение `false`, за исключением Firefox Nightly.
+- Поддержка {{domxref("MouseEvent.offsetX")}} и {{domxref("MouseEvent.offsetY")}} доступна по умолчанию в Android версии Firefox и Firefox OS ([Firefox bug 1204841](https://bugzil.la/1204841)).
+- Удалён метод {{domxref("HTMLCanvasElement.mozFetchAsStream()")}} ([Firefox bug 1206030](https://bugzil.la/1206030)).
+- Конструктор {{domxref("Request.Request", "Request()")}} а также {{domxref("Window.fetch", "fetch()")}} теперь выбросит исключение {{jsxref("TypeError")}} если будет использовано в URL которое содержит параметры с именами username и password ([Firefox bug 1195820](https://bugzil.la/1195820)).
 
 ### MathML
 
@@ -102,9 +102,9 @@ _Без изменений._
 
 ## Безопасность
 
-- Доступ к Web Storage (i.e. `localStorage` и `sessionStorage`) из других IFrame-мов запрещён если у пользователя [заблокированы куки из сторонних сервисов (других веб-сайтов)](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) ({{bug("536509")}}).
-- Белый список удалён из Nightly и Aurora/Dev Edition браузеров ({{bug(1201023)}}). Также запланировано удаление из Beta и Release версий в следующей версии (Firefox 44).
-- Реализована целостность ресурсов для {{htmlelement("script")}} и {{htmlelement("link")}} которые ведут к файлам стилей ({{bug("992096")}}).
+- Доступ к Web Storage (i.e. `localStorage` и `sessionStorage`) из других IFrame-мов запрещён если у пользователя [заблокированы куки из сторонних сервисов (других веб-сайтов)](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) ([Firefox bug 536509](https://bugzil.la/536509)).
+- Белый список удалён из Nightly и Aurora/Dev Edition браузеров ([Firefox bug 1201023](https://bugzil.la/1201023)). Также запланировано удаление из Beta и Release версий в следующей версии (Firefox 44).
+- Реализована целостность ресурсов для {{htmlelement("script")}} и {{htmlelement("link")}} которые ведут к файлам стилей ([Firefox bug 992096](https://bugzil.la/992096)).
 
 ## Изменения для разработчиков дополнений и разработчиков Mozilla
 

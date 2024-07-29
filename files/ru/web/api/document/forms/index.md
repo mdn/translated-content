@@ -88,7 +88,7 @@ var selectFormElement = document.forms[index].elements[index];
 
 {{Specifications}}
 
-## Браузерная поддержка
+## Совместимость с браузерами
 
 {{Compat}}
 

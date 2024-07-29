@@ -45,7 +45,7 @@ DPR: 1.0
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.DPR")}}
+{{Compat}}
 
 ## Veja também
 

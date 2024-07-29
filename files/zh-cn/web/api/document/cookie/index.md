@@ -38,7 +38,8 @@ document.cookie = newCookie;
 
 - cookie 的值字符串可以用[encodeURIComponent()](/zh-CN/docs/JavaScript/Reference/Global_Objects/encodeURIComponent)来保证它不包含任何逗号、分号或空格 (cookie 值中禁止使用这些值).
 
-> **备注：** 在 Gecko 6.0 前，被引号括起的路径的引号会被当做路径的一部分，而不是被当做定界符。现在已被修复。
+> [!NOTE]
+> 在 Gecko 6.0 前，被引号括起的路径的引号会被当做路径的一部分，而不是被当做定界符。现在已被修复。
 
 ## 示例
 
@@ -80,7 +81,7 @@ if (document.cookie.replace(/(?:(?:^|.*;\s*)someCookieName\s*\=\s*([^;]*).*$)|^.
 
 ## 一个小框架：一个完整支持 unicode 的 cookie 读取/写入器
 
-作为一个格式化过的字符串，cookie 的值有时很难被自然地处理。下面的库的目的是通过定义一个和[`Storage 对象`](/zh-CN/docs/Web/Guide/API/DOM/Storage#Storage)部分`一致的`对象（docCookies），简化`document.cookie` 的获取方法。它提供完全的 Unicode 支持。
+作为一个格式化过的字符串，cookie 的值有时很难被自然地处理。下面的库的目的是通过定义一个和 [`Storage` 对象](/zh-CN/docs/Web/API/Storage)部分一致的对象（docCookies），简化 `document.cookie` 的获取方法。它提供完全的 Unicode 支持。
 
 ```js
 /*\
@@ -180,7 +181,8 @@ var docCookies = {
 };
 ```
 
-> **备注：** 对于永久 cookie 我们用了`Fri, 31 Dec 9999 23:59:59 GMT`作为过期日。如果你不想使用这个日期，可使用*[世界末日](http://en.wikipedia.org/wiki/Year_2038_problem)*`Tue, 19 Jan 2038 03:14:07 GMT，`它是 32 位带符号整数能表示从 1 January 1970 00:00:00 UTC 开始的最大秒长 (即`01111111111111111111111111111111`, 是 `new Date(0x7fffffff * 1e3)`).
+> [!NOTE]
+> 对于永久 cookie 我们用了`Fri, 31 Dec 9999 23:59:59 GMT`作为过期日。如果你不想使用这个日期，可使用*[世界末日](http://en.wikipedia.org/wiki/Year_2038_problem)*`Tue, 19 Jan 2038 03:14:07 GMT，`它是 32 位带符号整数能表示从 1 January 1970 00:00:00 UTC 开始的最大秒长 (即`01111111111111111111111111111111`, 是 `new Date(0x7fffffff * 1e3)`).
 
 ### 写入 cookie
 
@@ -328,7 +330,7 @@ Web 应用程序通常使用 cookies 来标识用户身份及他们的登录会�
 
 - 从 Firefox 2 起，有更好的客户端存储机制用以替代 cookie - [WHATWG DOM Storage](/zh-CN/docs/DOM/Storage).
 - 你可以通过更新一个 cookie 的过期时间为 0 来删除一个 cookie。
-- 请注意，更多/更大的 cookies 意味着每个请求都要包含更繁重的数据传输。如果您只是需要存储些 "client-only" 的数据，那么郑重建议您使用 [WHATWG DOM Storage](/zh-CN/docs/DOM/Storage).
+- 请注意，更多/更大的 cookies 意味着每个请求都要包含更繁重的数据传输。如果你只是需要存储些 "client-only" 的数据，那么郑重建议你使用 [WHATWG DOM Storage](/zh-CN/docs/DOM/Storage).
 
 ## 规范
 

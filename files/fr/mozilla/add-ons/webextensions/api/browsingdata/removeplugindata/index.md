@@ -3,7 +3,7 @@ title: browsingData.removePluginData()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removePluginData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Efface les données stockées par les plugins du navigateur.
 
@@ -75,7 +75,7 @@ browser.browsingData.removePluginData({}).then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
 >

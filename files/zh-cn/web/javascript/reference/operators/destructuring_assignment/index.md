@@ -106,7 +106,8 @@ const obj = { a: 1, b: 2 };
 // The properties `a` and `b` are assigned to properties of `numbers`
 ```
 
-> **备注：** 当使用对象文字解构赋值而不带声明时，在赋值语句周围必须添加括号 `( ... )`。
+> [!NOTE]
+> 当使用对象文字解构赋值而不带声明时，在赋值语句周围必须添加括号 `( ... )`。
 >
 > `{ a, b } = { a: 1, b: 2 }` 不是有效的独立语法，因为左侧的 `{a, b}` 被视为块而不是对象字面量。但是，`({ a, b } = { a: 1, b: 2 })` 是有效的，`const { a, b } = { a: 1， b: 2 }` 也是有效的。
 >
@@ -157,8 +158,8 @@ console.log(others2); // [2, 3]
 
 剩余属性必须是模式中的最后一个，并且不能有尾随逗号。
 
-```js example-bad
-const [a, ...b] = [1, 2, 3];
+```js-nolint example-bad
+const [a, ...b,] = [1, 2, 3];
 
 // SyntaxError: rest element may not have a trailing comma
 // Always consider using rest operator as the last element

@@ -1,19 +1,16 @@
 ---
-title: CanvasRenderingContext2D.textBaseline
+title: "CanvasRenderingContext2D: textBaseline プロパティ"
+short-title: textBaseline
 slug: Web/API/CanvasRenderingContext2D/textBaseline
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
 
 **`CanvasRenderingContext2D.textBaseline`** はキャンバス 2D API のプロパティで、テキストを描画するときに用いられる現在のテキストのベースライン（基準線）を指定します。
 
-## 構文
-
-```js
-ctx.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
-```
-
-### オプション
+## 値
 
 指定可能な値は次の通りです。
 
@@ -47,27 +44,81 @@ ctx.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographi
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-const baselines = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom'];
-ctx.font = '36px serif';
-ctx.strokeStyle = 'red';
+const baselines = [
+  "top",
+  "hanging",
+  "middle",
+  "alphabetic",
+  "ideographic",
+  "bottom",
+];
+ctx.font = "36px serif";
+ctx.strokeStyle = "red";
 
-baselines.forEach(function (baseline, index) {
+baselines.forEach((baseline, index) => {
   ctx.textBaseline = baseline;
   const y = 75 + index * 75;
   ctx.beginPath();
   ctx.moveTo(0, y + 0.5);
   ctx.lineTo(550, y + 0.5);
   ctx.stroke();
-  ctx.fillText('Abcdefghijklmnop (' + baseline + ')', 0, y);
+  ctx.fillText(`Abcdefghijklmnop (${baseline})`, 0, y);
 });
 ```
 
 #### 結果
 
 {{ EmbedLiveSample('Comparison_of_property_values', 700, 550) }}
+
+### 同じ行におけるプロパティの比較
+
+前回の例と同様に、この例でもさまざまな `textBaseline` プロパティの値を示しますが、この例ではすべて同じ行に水平に並べて、それぞれの違いがわかりやすいようにしています。
+
+#### HTML
+
+```html
+<canvas id="canvas" width="724" height="160"></canvas>
+```
+
+#### JavaScript
+
+```js
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+const baselines = [
+  "top",
+  "hanging",
+  "middle",
+  "alphabetic",
+  "ideographic",
+  "bottom",
+];
+ctx.font = "20px serif";
+ctx.strokeStyle = "red";
+
+ctx.beginPath();
+ctx.moveTo(0, 100);
+ctx.lineTo(840, 100);
+ctx.moveTo(0, 55);
+ctx.stroke();
+
+baselines.forEach((baseline, index) => {
+  ctx.save();
+  ctx.textBaseline = baseline;
+  let x = index * 120 + 10;
+  ctx.fillText("Abcdefghijk", x, 100);
+  ctx.restore();
+  ctx.fillText(baseline, x + 5, 50);
+});
+```
+
+#### 結果
+
+{{ EmbedLiveSample('同じ行におけるプロパティの比較', 900, 200) }}
 
 ## 仕様書
 

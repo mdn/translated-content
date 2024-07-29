@@ -5,13 +5,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/size
 
 {{JSRef}}
 
-**`size`** 是可访问属性，返回 {{jsxref("Map")}} 对象的成员数量。
+{{jsxref("Map")}} 实例的 **`size`** 访问器属性返回此 map 中元素的数量。
 
 {{EmbedInteractiveExample("pages/js/map-prototype-size.html")}}
 
 ## 描述
 
-`size` 属性的值是一个整数，表示 `Map` 对象有多少个键值对。`size` 是只读属性，用 set 方法修改 `size` 返回 `undefined`，即不能改变它的值。
+`size` 的值是一个整数，表示 `Map` 对象有多少个键值对。`size` 的设置访问器函数是 `undefined`；你无法更改此属性的值。
 
 ## 示例
 

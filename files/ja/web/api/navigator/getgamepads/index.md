@@ -52,5 +52,5 @@ window.addEventListener("gamepadconnected", (e) => {
 
 ## 関連情報
 
-- [ゲームパッド API の使用](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
-- [ゲームパッド API](/en-US/docs/Web/API/Gamepad_API)
+- [ゲームパッド API の使用](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+- [ゲームパッド API](/ja/docs/Web/API/Gamepad_API)

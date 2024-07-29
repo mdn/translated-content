@@ -37,14 +37,11 @@ Object.keys(Array.prototype[Symbol.unscopables]);
 
 ## Especificações
 
-| Especificação                                                                                   | Status               | Comentário          |
-| ----------------------------------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype-@@unscopables', 'Array.prototype[@@unscopables]')}}  | {{Spec2('ES2015')}}  | Initial definition. |
-| {{SpecName('ESDraft', '#sec-array.prototype-@@unscopables', 'Array.prototype[@@unscopables]')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.@@unscopables")}}
+{{Compat}}
 
 ## Veja também
 

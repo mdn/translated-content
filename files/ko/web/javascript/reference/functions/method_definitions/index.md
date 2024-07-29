@@ -118,10 +118,10 @@ var bar = {
 
 console.log(bar.foo0()); // 0
 console.log(bar.foo1()); // 1
-console.log(bar.foo2()); // 2</pre>
+console.log(bar.foo2()); // 2
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

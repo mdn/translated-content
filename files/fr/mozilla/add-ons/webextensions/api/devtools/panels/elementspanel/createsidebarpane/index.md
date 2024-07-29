@@ -3,7 +3,7 @@ title: devtools.panels.ElementsPanel.createSidebarPane()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Ajoute un nouveau volet à la barre latérale dans l'inspecteur HTML / CSS.
 

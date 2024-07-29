@@ -11,7 +11,8 @@ slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Цель:   | Изучить как встроить SVG (векторное) изображение на веб-страницу.                                                                                                           |
 
-> **Примечание:** Данная статья не научит вас векторной графике, а даст понимание что это и как её использовать в веб-документах.
+> [!NOTE]
+> Данная статья не научит вас векторной графике, а даст понимание что это и как её использовать в веб-документах.
 
 ## Что такое векторная графика?
 
@@ -28,7 +29,8 @@ slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 
 ![Two star images zoomed in, one crisp and the other blurry](raster-vector-zoomed.png)
 
-> **Примечание:** Оба изображения сверху имеют формат PNG — слева показано растровое изображение, справа условно показано векторное изображение. Напоминаем, что пример с реальными растровым и векторными изображениями находится по ссылке: [vector-versus-raster.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) !
+> [!NOTE]
+> Оба изображения сверху имеют формат PNG — слева показано растровое изображение, справа условно показано векторное изображение. Напоминаем, что пример с реальными растровым и векторными изображениями находится по ссылке: [vector-versus-raster.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) !
 
 Более того, файлы векторных изображений намного меньше растровых, т.к. в них содержится алгоритмы построения вместо информации о каждом пикселе.
 
@@ -69,7 +71,8 @@ slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 
 В целом, растровая графика лучше подходит для сложных изображений, например, фотографий.
 
-> **Примечание:** В приложении Inkscape сохраняйте файлы как Plain SVG, для экономии места. Также, пожалуйста перейдите на [статью, описывающую как подготовить SVG изображение для веб-документа.](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html)
+> [!NOTE]
+> В приложении Inkscape сохраняйте файлы как Plain SVG, для экономии места. Также, пожалуйста перейдите на [статью, описывающую как подготовить SVG изображение для веб-документа.](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html)
 
 ## Добавление SVG на страницы
 
@@ -320,12 +323,3 @@ textarea.onkeyup = function () {
 - [How to scale SVGs](https://css-tricks.com/scale-svg/) (it's not as simple as raster graphics!)
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
-
-## В этом модуле
-
-- [Изображения в HTML](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Видео и аудио контент](/ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [От \<object> до \<iframe> — другие способы встраивать контент](/ru/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Добавление векторной графики](/ru/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Адаптивные изображения](/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Задание: страница о Mozilla](/ru/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

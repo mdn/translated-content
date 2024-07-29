@@ -221,7 +221,7 @@ console.log(deleteWords);
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

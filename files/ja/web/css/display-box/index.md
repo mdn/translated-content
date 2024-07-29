@@ -1,6 +1,8 @@
 ---
 title: <display-box>
 slug: Web/CSS/display-box
+l10n:
+  sourceCommit: 66944f622b6b51bc9c24bebbbea242138d910600
 ---
 
 {{CSSRef}}
@@ -25,8 +27,12 @@ slug: Web/CSS/display-box
 
 多くのブラウザーの現在の実装では、[アクセシビリティツリー](/ja/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)から `display` の値が `contents` である要素を削除します。これにより、その要素は — また、一部の版のブラウザーではその子孫要素も — 読み上げ技術で読み上げられなくなります。これは [CSSWG 仕様書](https://drafts.csswg.org/css-display/#the-display-properties)によれば、正しくない動作です。
 
-- [More accessible markup with display: contents | Hidde de Vries](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)
+- [More accessible markup with display: contents | Hidde de Vries](https://hidde.blog/more-accessible-markup-with-display-contents/)
 - [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+
+## 形式文法
+
+{{csssyntax}}
 
 ## 例
 
@@ -89,9 +95,7 @@ p.secret {
 
 ## ブラウザーの互換性
 
-### contents の対応
-
-{{Compat("css.properties.display.contents", 10)}}
+{{Compat}}
 
 ## 関連情報
 
@@ -104,4 +108,4 @@ p.secret {
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
 - [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
-- [More accessible markup with display: contents — hiddedevries.nl](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)
+- [More accessible markup with display: contents — hiddedevries.nl](https://hidde.blog/more-accessible-markup-with-display-contents/)

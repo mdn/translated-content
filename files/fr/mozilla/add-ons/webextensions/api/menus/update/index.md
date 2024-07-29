@@ -3,7 +3,7 @@ title: menus.update()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Met à jour un élément de menu précédemment créé.
 

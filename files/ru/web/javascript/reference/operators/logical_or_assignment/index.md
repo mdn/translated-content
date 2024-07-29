@@ -61,7 +61,7 @@ document.getElementById("lyrics").textContent ||= "Нет слов.";
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

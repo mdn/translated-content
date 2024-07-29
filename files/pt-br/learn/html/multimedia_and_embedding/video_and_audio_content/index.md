@@ -311,7 +311,7 @@ Para um bônus adicional, você pode tentar pesquisar faixas de texto e descobri
 
 ## Resumo
 
-E isso é um tudo; esperamos que você tenha se divertido brincando com vídeo e áudio em páginas da web! No próximo artigo, veremos outras maneiras de incorporar conteúdo na Web, usando tecnologias como {{htmlelement ("iframe")}}} e {{htmlelement ("object")}}.
+E isso é um tudo; esperamos que você tenha se divertido brincando com vídeo e áudio em páginas da web! No próximo artigo, veremos outras maneiras de incorporar conteúdo na Web, usando tecnologias como {{htmlelement ("iframe")}} e {{htmlelement ("object")}}.
 
 ## Ver também
 

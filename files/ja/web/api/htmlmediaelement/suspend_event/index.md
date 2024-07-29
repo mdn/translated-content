@@ -16,9 +16,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('suspend', (event) => {});
+addEventListener("suspend", (event) => {});
 
-onsuspend = (event) => { };
+onsuspend = (event) => {};
 ```
 
 ## イベント型
@@ -32,20 +32,20 @@ onsuspend = (event) => { };
 `addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('suspend', (event) => {
-  console.log('データの読み込みが中断されました。');
+video.addEventListener("suspend", (event) => {
+  console.log("データの読み込みが中断されました。");
 });
 ```
 
 `onsuspend` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onsuspend = (event) => {
-  console.log('データの読み込みが中断されました。');
+  console.log("データの読み込みが中断されました。");
 };
 ```
 

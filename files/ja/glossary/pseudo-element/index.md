@@ -1,12 +1,14 @@
 ---
-title: Pseudo-element
+title: Pseudo-element (擬似要素)
 slug: Glossary/Pseudo-element
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-CSS では**擬似要素**セレクターを使うことで、選択すべき特定の HTML 要素がない状況でも、ドキュメントのコンテンツの一部に、スタイルを適用できます。例えば、各段落の最初の文字を、それぞれの要素の中に置いていくのではなく、`p`{{ Cssxref("::first-letter") }} で、それらのすべてに、スタイルを指定することができます。
+{{GlossarySidebar}}
 
-## 関連項目
+CSS では**擬似要素**セレクターを使うことで、選択すべき特定の HTML 要素がない状況でも、文書コンテンツの一部にスタイルを適用できます。例えば、各段落の最初の文字を、それぞれの要素の中に置いていくのではなく、`p`{{ Cssxref("::first-letter") }} で、それらのすべてに、スタイルを指定することができます。
 
-### 技術リファレンス
+## 関連情報
 
-- [Pseudo-elements（疑似要素）](/ja/docs/Web/CSS/Pseudo-elements)
+- [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)

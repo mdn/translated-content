@@ -45,7 +45,7 @@ interface BluetoothRemoteGATTServer {
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

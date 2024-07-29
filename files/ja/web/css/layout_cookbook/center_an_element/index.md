@@ -17,7 +17,7 @@ slug: Web/CSS/Layout_cookbook/Center_an_element
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html)
 
@@ -33,11 +33,11 @@ slug: Web/CSS/Layout_cookbook/Center_an_element
 
 #### align-items
 
-{{Compat("css.properties.align-items")}}
+{{Compat}}
 
 #### justify-content
 
-{{Compat("css.properties.justify-content")}}
+{{Compat}}
 
 ## MDN の関連資料
 

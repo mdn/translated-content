@@ -60,6 +60,6 @@ _No change._
 
 - [Site Compatibility for Firefox 31](/zh-CN/docs/Mozilla/Firefox/Releases/31/Site_Compatibility)
 
-### Older versions
+### 更早期的版本
 
-{{Firefox_for_developers('30')}}
+{{Firefox_for_developers}}

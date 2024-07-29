@@ -3,14 +3,14 @@ title: 我该怎样开始设计我的网站？
 slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
 
 这篇文章介绍了所有项目最重要的第一步：确定你想要做什么
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>无</td>
     </tr>
     <tr>
@@ -34,7 +34,7 @@ slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
 
 ## 自主学习
 
-_暂时还没有相关内容 [Please, consider contributing](/zh-CN/docs/MDN/Getting_started)._
+_暂时还没有相关内容，[请考虑贡献一篇](/zh-CN/docs/MDN/Community/Contributing/Getting_started)。_
 
 ## 深入探索
 
@@ -44,7 +44,8 @@ _暂时还没有相关内容 [Please, consider contributing](/zh-CN/docs/MDN/Get
 
 和朋友们讨论讨论你的想法是一个好的开始，但是光这样还不够。你需要安静地坐下来好好捋一捋你的想法，为了能有一个清晰的思路关于如何实现你的想法。想要做到这些，你只需要一支笔和一张纸并回答下面这些问题。
 
-> **备注：** 有数不清的方法来实现你的想法，这里就不一一列举了。（不单独写本书不足以说明它）我们这里只采用一些简单的方法来处理专业人士所谓的 [项目想法](<http://en.wikipedia.org/wiki/Ideation_(idea_generation)>), [项目计划](http://en.wikipedia.org/wiki/Project_planning)和[项目管理](http://en.wikipedia.org/wiki/Project_management)。
+> [!NOTE]
+> 有数不清的方法来实现你的想法，这里就不一一列举了。（不单独写本书不足以说明它）我们这里只采用一些简单的方法来处理专业人士所谓的 [项目想法](<http://en.wikipedia.org/wiki/Ideation_(idea_generation)>), [项目计划](http://en.wikipedia.org/wiki/Project_planning)和[项目管理](http://en.wikipedia.org/wiki/Project_management)。
 
 ### 我到底想完成什么？
 

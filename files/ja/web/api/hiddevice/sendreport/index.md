@@ -45,7 +45,9 @@ await device.sendReport(0x01, new Uint8Array(enableVibrationData));
 
 // 次に、Joy-Con デバイスを鳴らすコマンドを送信します。
 // 実際のバイト列はサンプル中にあります。
-const rumbleData = [ /* … */ ];
+const rumbleData = [
+  /* … */
+];
 await device.sendReport(0x10, new Uint8Array(rumbleData));
 ```
 

@@ -38,4 +38,4 @@ slug: Web/CSS/display-listitem
 
 ### `Поддержка list-item`
 
-{{Compat("css.properties.display.list-item", 10)}}
+{{Compat}}

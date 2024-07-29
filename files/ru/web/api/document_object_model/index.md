@@ -3,6 +3,8 @@ title: Руководство по DOM
 slug: Web/API/Document_Object_Model
 ---
 
+{{DefaultAPISidebar("DOM")}}
+
 **Объектная Модель Документа (_DOM_)** является программным интерфейсом для HTML, XML и SVG документов. Это обеспечивает структурированное представление документа (дерева), и определяет способ, по которому структура может быть доступна для программы, для изменения структуры документа, его стиля и содержания. DOM обеспечивает представление документа в виде структурированной группы узлов и объектов, которые имеют свойства и методы. По сути, она связывает веб -страницы со скриптами или языками программирования.
 
 DOM чаще всего используется в JavaScript, но не является его частью, поэтому иногда с DOM работают в других языках.
@@ -106,7 +108,6 @@ DOM чаще всего используется в JavaScript, но не явл
 - {{domxref("HTMLIFrameElement")}}
 - {{domxref("HTMLImageElement")}}
 - {{domxref("HTMLInputElement")}}
-- {{domxref("HTMLKeygenElement")}}
 - {{domxref("HTMLLabelElement")}}
 - {{domxref("HTMLLegendElement")}}
 - {{domxref("HTMLLIElement")}}
@@ -167,7 +168,6 @@ DOM чаще всего используется в JavaScript, но не явл
 
 ### Устаревшие HTML интерфейсы
 
-- {{domxref("HTMLBaseFontElement")}}
 - {{domxref("HTMLIsIndexElement")}}
 
 ## SVG интерфейсы

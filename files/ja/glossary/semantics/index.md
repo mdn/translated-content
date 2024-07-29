@@ -3,6 +3,8 @@ title: Semantics (セマンティクス)
 slug: Glossary/Semantics
 ---
 
+{{GlossarySidebar}}
+
 プログラミングでは、**セマンティクス**とは、コードの断片の*意味*を指します。たとえば、「JavaScript でその行を実行すると、どのような効果があるのか？」、「その HTML 要素には、どのような目的や役割があるのか？」 (「どのように見えるのか？」ではなく)。
 
 ## JavaScript でのセマンティクス
@@ -71,7 +73,7 @@ HTML は既定の表示スタイルに基づくのではなく、入力される
 
 <!---->
 
-- [MDN 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("SEO")}}
 

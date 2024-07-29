@@ -39,7 +39,8 @@ slug: Learn/Accessibility/What_is_accessibility
 
 身心障礙者和非身心障礙者一樣多元，他們的障別也是如此。重點是，不要光用自己使用電腦和 web 的角度去思考這件事：_你並不是無障礙網頁的用戶_。下文將解釋應當考慮的障別，還有他們訪問 web 內容的特殊工具（通常稱作 **assistive technologies**、**AT**、**輔助工具**、**輔具**）。
 
-> **備註：** 世界衛生組織的[殘疾與健康](http://www.who.int/mediacentre/factsheets/fs352/zh/)指出「超過 10 億人，約佔世界人口的 15%，患有某種形式的殘疾。」、且「1.1 億至 1.9 億成年人有很嚴重的功能性障礙。」。
+> [!NOTE]
+> 世界衛生組織的[殘疾與健康](http://www.who.int/mediacentre/factsheets/fs352/zh/)指出「超過 10 億人，約佔世界人口的 15%，患有某種形式的殘疾。」、且「1.1 億至 1.9 億成年人有很嚴重的功能性障礙。」。
 
 ### 視覺障礙
 
@@ -47,7 +48,7 @@ slug: Learn/Accessibility/What_is_accessibility
 
 - 有些是商業軟體，例如 [JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS)（Windows）和 [Window Eyes](http://www.gwmicro.com/window-eyes/)（Windows）。
 - 也有些是自由軟體，例如 [NVDA](http://www.nvaccess.org/)（Windows）、[ChromeVox](http://www.chromevox.com/)（Chrome、Windows、Mac OS X）、[Orca](https://wiki.gnome.org/Projects/Orca)（Linux）
-- 還有些是系統內建，例如 [VoiceOver](http://www.apple.com/accessibility/osx/voiceover/)（Mac OS X 與 iOS）、[Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)（Microsoft Windows）、[ChromeVox](http://www.chromevox.com/)（Chrome OS）、[TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback)（Android）。
+- 還有些是系統內建，例如 [VoiceOver](https://www.apple.com/accessibility/osx/voiceover/)（Mac OS X 與 iOS）、[Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)（Microsoft Windows）、[ChromeVox](http://www.chromevox.com/)（ChromeOS）、[TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback)（Android）。
 
 熟悉螢幕閱讀器是個好主意；你得設定好螢幕閱讀器、還要會使用它，以理解其工作原理。請參見[cross browser testing screen readers guide](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)以深入理解。以下影片提供了簡單的體驗。
 
@@ -96,7 +97,8 @@ slug: Learn/Accessibility/What_is_accessibility
 
 康乃爾大學 [2014 年的殘疾報告](http://www.disabilitystatistics.org/StatusReports/2014-PDF/2014-StatusReport_US.pdf)顯示，2014 年美國 21 歲至 64 歲的人中，有 4.5% 的人有認知障礙。
 
-> **備註：** WebAIM 的[認知頁面](http://webaim.org/articles/cognitive/)提供了更多資訊，值得一讀
+> [!NOTE]
+> WebAIM 的[認知頁面](https://webaim.org/articles/cognitive/)提供了更多資訊，值得一讀
 
 ## 專案引入無障礙
 
@@ -124,7 +126,8 @@ slug: Learn/Accessibility/What_is_accessibility
 
 為了表明你對無障礙網頁的關心，請在你的網站上發佈無障礙網頁聲明，並詳細說明你為無障礙網頁做了哪些事情、採取了哪些步驟。如果有人抱怨你的網站存在無障礙問題，請他們回報給你們，並嘗試解決。
 
-> **備註：** 我們的 [Handling common accessibility problems article](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility) 包含了應該進行詳細測試的無障礙網頁規範。
+> [!NOTE]
+> 我們的 [Handling common accessibility problems article](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility) 包含了應該進行詳細測試的無障礙網頁規範。
 
 總而言之：
 

@@ -3,6 +3,8 @@ title: 使用 web 和 XML 開發來使用 DOM
 slug: Web/API/Document_Object_Model/Examples
 ---
 
+{{DefaultAPISidebar("DOM")}}
+
 本章介紹了使用 DOM 進行 Web 以及 XML 開發的一些長範例。只要可能，在例子就會使用通用的 JavaScript Web API 、技巧以及模式來操作文檔對象（the document object）。
 
 ## 範例一：高度和寬度
@@ -49,14 +51,16 @@ slug: Web/API/Document_Object_Model/Examples
   <body onload="init();">
     <p>
       Image 1: no height, width, or style
-      <img id="image1" src="http://www.mozilla.org/images/mozilla-banner.gif" />
+      <img
+        id="image1"
+        src="https://www.mozilla.org/images/mozilla-banner.gif" />
     </p>
 
     <p>
       Image 2: height="50", width="500", but no style
       <img
         id="image2"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         height="50"
         width="500" />
     </p>
@@ -65,7 +69,7 @@ slug: Web/API/Document_Object_Model/Examples
       Image 3: no height, width, but style="height: 50px; width: 500px;"
       <img
         id="image3"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         style="height: 50px; width: 500px;" />
     </p>
 
@@ -411,10 +415,3 @@ DOM HTMLTableElement 介面提供了一些方便的方法用於創建和操作�
 - 表格的{{domxref("element.innerHTML","innerHTML")}}屬性絕不應該被用來修改表，雖然你可以用它來寫一個完整的表格或細格中的內容。
 - 如果用 DOM 核心方法 {{domxref("document.createElement")}} 和 {{domxref("Node.appendChild")}} 來建立表格的行和細格，IE 會要求它們附加到一個 tbody 元素，而其它瀏覽器允許它們附加到一個 table 元素（行會被添加到最後的 tbody 元素）。
 - [表格介面](/zh-TW/docs/Web/API/HTMLTableElement#Methods)還有一些可用於創建和修改的表格的便利方法。
-
-## Subnav
-
-- [DOM Reference](/zh-TW/docs/Web/API/Document_Object_Model)
-- [Introduction to the DOM](/zh-TW/docs/Web/API/Document_Object_Model/Introduction)
-- [Events and the DOM](/zh-TW/docs/Web/API/Document_Object_Model/Events)
-- [Examples](/zh-TW/docs/Web/API/Document_Object_Model/Examples)

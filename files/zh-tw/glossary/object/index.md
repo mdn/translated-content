@@ -13,4 +13,4 @@ slug: Glossary/Object
 
 - 維基百科上的[物件導向程式設計](https://zh.wikipedia.org/wiki/物件導向程式設計)
 - [JavaScript 參考文件](/zh-TW/docs/Web/JavaScript/Reference)裡的{{jsxref("Object")}}
-- [Object data structures in JavaScript](/zh-TW/docs/Web/JavaScript/Data_structures#Objects)
+- [Object data structures in JavaScript](/zh-TW/docs/Web/JavaScript/Data_structures#objects)

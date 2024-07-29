@@ -156,12 +156,6 @@ justifyContent.addEventListener("change", function (evt) {
 
 ## Совместимость с браузерами
 
-### Поддержка в Flex разметке
-
-{{Compat}}
-
-### Поддержка в Grid разметке
-
 {{Compat}}
 
 ## Смотрите также

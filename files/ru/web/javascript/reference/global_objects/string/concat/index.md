@@ -3,7 +3,7 @@ title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -43,11 +43,7 @@ console.log(hello.concat("Кевин", ", удачного дня."));
 
 ## Спецификации
 
-| Спецификация                                                                   | Статус             | Комментарии                                            |
-| ------------------------------------------------------------------------------ | ------------------ | ------------------------------------------------------ |
-| ECMAScript 3-е издание.                                                        | Стандарт           | Изначальное определение. Реализована в JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.6', 'String.prototype.concat')}}              | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-string.prototype.concat', 'String.prototype.concat')}} | {{Spec2('ES6')}}   |                                                        |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

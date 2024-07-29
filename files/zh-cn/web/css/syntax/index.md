@@ -30,7 +30,8 @@ CSS 的核心功能是将 CSS 属性设定为特定的值。一个属性与值�
 
 ![css syntax - declarations block.png](declaration-block.png)
 
-> **备注：** 声明块的内容—开始与结束大括号之间的声明，可以放在 HTML [`style`](/zh-CN/HTML/Global_attributes#attr-style) 特性里。
+> [!NOTE]
+> 声明块的内容—开始与结束大括号之间的声明，可以放在 HTML [`style`](/zh-CN/HTML/Global_attributes#attr-style) 特性里。
 
 ## CSS 规则
 

@@ -14,7 +14,8 @@ slug: Web/CSS/computed_value
 
 しかしながら、いくつかのプロパティ (`width`, `margin-right`, `text-indent`, `top` など、レイアウトの定義に必要ものに対する割合が相対的なもの) でパーセント値で指定された値はパーセント値で計算された値に変わります。さらに、 `line-height` に指定された単位なしの値は、指定された計算値になります。これらの計算値に残った相対的な値は、[使用値](/ja/docs/Web/CSS/used_value)が定義された場合、絶対値になります。
 
-> **メモ:** DOM の {{domxref("Window.getComputedStyle", "getComputedStyle()")}} API は[解決値](/ja/docs/Web/CSS/resolved_value)を返しますが、これはプロパティによって[計算値](/ja/docs/Web/CSS/computed_value)であるか[使用値](/ja/docs/Web/CSS/used_value)であるかが変わります。
+> [!NOTE]
+> DOM の {{domxref("Window.getComputedStyle", "getComputedStyle()")}} API は[解決値](/ja/docs/Web/CSS/resolved_value)を返しますが、これはプロパティによって[計算値](/ja/docs/Web/CSS/computed_value)であるか[使用値](/ja/docs/Web/CSS/used_value)であるかが変わります。
 
 ## 仕様書
 
@@ -28,11 +29,11 @@ slug: Web/CSS/computed_value
   - [アットルール](/ja/docs/Web/CSS/At-rule)
   - [コメント](/ja/docs/Web/CSS/Comments)
   - [詳細度](/ja/docs/Web/CSS/Specificity)
-  - [継承](/ja/docs/Web/CSS/inheritance)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [継承](/ja/docs/Web/CSS/Inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
   - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
-  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
     - [初期値](/ja/docs/Web/CSS/initial_value)
     - [使用値](/ja/docs/Web/CSS/used_value)

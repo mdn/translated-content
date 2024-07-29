@@ -3,6 +3,8 @@ title: XHTML
 slug: Glossary/XHTML
 ---
 
+{{GlossarySidebar}}
+
 O [HTML](/pt-BR/docs/HTML) pode ser transferido através da internet para o navegador usando duas sintaxes: sintaxe HTML e sintaxe [XML](/pt-BR/docs/XML), também conhecido como XHTML.
 
 ## HTML5 e HTML/XHTML

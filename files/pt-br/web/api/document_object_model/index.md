@@ -108,7 +108,6 @@ Um objeto `HTMLDocument` também da acesso á vários recursos de navegadores co
 - {{domxref("HTMLIFrameElement")}}
 - {{domxref("HTMLImageElement")}}
 - {{domxref("HTMLInputElement")}}
-- {{domxref("HTMLKeygenElement")}}
 - {{domxref("HTMLLabelElement")}}
 - {{domxref("HTMLLegendElement")}}
 - {{domxref("HTMLLIElement")}}
@@ -169,7 +168,6 @@ Um objeto `HTMLDocument` também da acesso á vários recursos de navegadores co
 
 ### Obsoleto HTML interfaces
 
-- {{domxref("HTMLBaseFontElement")}}
 - {{domxref("HTMLIsIndexElement")}}
 
 ## SVG interfaces

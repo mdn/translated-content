@@ -5,7 +5,8 @@ slug: Web/API/Window/showModalDialog
 
 {{deprecated_header}}{{APIRef}}
 
-> **警告:** この機能は削除されました。ウェブサイトやアプリケーションを修正してください。
+> [!WARNING]
+> この機能は削除されました。ウェブサイトやアプリケーションを修正してください。
 >
 > このメソッドは Chrome 43 および Firefox 56 で削除されました。
 
@@ -14,9 +15,9 @@ slug: Web/API/Window/showModalDialog
 ## 構文
 
 ```js
-showModalDialog(uri)
-showModalDialog(uri, arguments)
-showModalDialog(uri, arguments, options)
+showModalDialog(uri);
+showModalDialog(uri, arguments);
+showModalDialog(uri, arguments, options);
 ```
 
 ### 引数
@@ -79,11 +80,12 @@ showModalDialog(uri, arguments, options)
   </tbody>
 </table>
 
-> **メモ:** Firefox は、`dialogHide`、`edge`、`status`、および、`unadorned` 引数を実装していません。
+> [!NOTE]
+> Firefox は、`dialogHide`、`edge`、`status`、および、`unadorned` 引数を実装していません。
 
 ### 返値
 
- `uri` で指定した文書で設定された `returnValue` プロパティを保持します。
+`uri` で指定した文書で設定された `returnValue` プロパティを保持します。
 
 ## メモ
 

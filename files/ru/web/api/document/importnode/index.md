@@ -47,15 +47,15 @@ Nodes from external documents should be cloned using [`document.importNode()`](/
 
 Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for improved future compatibility.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("document.adoptNode()")}}
 - {{domxref("Node.appendChild()")}}

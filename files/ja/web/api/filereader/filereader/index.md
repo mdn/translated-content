@@ -1,13 +1,14 @@
 ---
-title: FileReader()
+title: "FileReader: FileReader() コンストラクター"
+short-title: FileReader()
 slug: Web/API/FileReader/FileReader
 l10n:
-  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
+  sourceCommit: e43bfd9b4a6c363a4ba7ef6ffa64c09b38fd111b
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-**`FileReader()`** コンストラクターは、新しい FileReader を作成します。
+**`FileReader()`** コンストラクターは、新しい `FileReader` を作成します。
 
 `FileReader` の使用方法の詳細については、[ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)を参照してください。
 
@@ -23,7 +24,7 @@ new FileReader()
 
 ## 例
 
-次のコードスニペットは、`FileReader()` コンストラクタを使用した [`FileReader`](/ja/docs/Web/API/FileReader) オブジェクトの作成と、その後のオブジェクトの使用法を示しています。
+次のコードスニペットは、{{domxref("FileReader")}} オブジェクトを `FileReader()` コンストラクターで作成し、引き続きそのオブジェクトを使用する方法を示しています。
 
 ```js
 function printFile(file) {

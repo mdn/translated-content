@@ -3,7 +3,7 @@ title: runtime.onMessageExternal
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal
 ---
 
-{{AddonSidebar()}}Utilisez cet événement pour écouter les messages d'une autre extension.
+{{AddonSidebar}}Utilisez cet événement pour écouter les messages d'une autre extension.
 
 Pour envoyer un message qui sera reçu par le module d'écoute `onMessageExternal`, utilisez {{WebExtAPIRef("runtime.sendMessage()")}}, en transmettant l'ID du destinataire dans le paramètre `extensionId`.
 

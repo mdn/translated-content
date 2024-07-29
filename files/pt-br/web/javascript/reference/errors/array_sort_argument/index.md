@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Errors/Array_sort_argument
 
 {{jsSidebar("Errors")}}
 
-A exceção JavaScript "invalid Array.prototype.sort argument" ocorre quando o argumento de {{jsxref("Array.prototype.sort()")}}}} não é {{{jsxref("undefined")}} ou uma função que compara os seus operandos.
+A exceção JavaScript "invalid Array.prototype.sort argument" ocorre quando o argumento de {{jsxref("Array.prototype.sort()")}} não é {{jsxref("undefined")}} ou uma função que compara os seus operandos.
 
 ## Mensagem
 
@@ -21,7 +21,7 @@ TypeError: Array.prototype.sort requires the comparator argument to be a functio
 
 ## O que ocorreu de errado?
 
-Espera-se que o argumento de {{jsxref("Array.prototype.sort()")}}}} seja {{{jsxref("undefined")}} ou uma função que compare os seus operandos.
+Espera-se que o argumento de {{jsxref("Array.prototype.sort()")}} seja {{jsxref("undefined")}} ou uma função que compare os seus operandos.
 
 ## Exemplos
 

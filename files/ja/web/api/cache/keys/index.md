@@ -1,8 +1,9 @@
 ---
-title: Cache.keys()
+title: "Cache: keys() メソッド"
+short-title: keys()
 slug: Web/API/Cache/keys
 l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef("Service Workers API")}}
@@ -11,7 +12,8 @@ l10n:
 
 リクエストは、挿入されたのと同じ順序で返されます。
 
-> **メモ:** レスポンスに `VARY` ヘッダーが設定されている場合、URL が重複しているがヘッダーが異なるリクエストを返すことができます。
+> [!NOTE]
+> レスポンスに `VARY` ヘッダーが設定されている場合、URL が重複しているがヘッダーが異なるリクエストを返すことができます。
 
 ## 構文
 

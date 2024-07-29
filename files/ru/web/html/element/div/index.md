@@ -75,7 +75,7 @@ slug: Web/HTML/Element/div
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

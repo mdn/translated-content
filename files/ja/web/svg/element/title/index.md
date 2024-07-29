@@ -1,53 +1,58 @@
 ---
-title: title
+title: <title> — SVG アクセシブル名要素
 slug: Web/SVG/Element/title
+l10n:
+  sourceCommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
 ---
 
 {{SVGRef}}
 
-SVG における各コンテナ要素またはグラフィックス要素の描画は、説明がテキストのみの文字列を含む **`<title>`** 要素を供給することができます。文書フラグメントが SVG 視覚メディアとしてレンダリングされるとき、`<title>` 要素は、グラフィックスの一部としてはレンダリングされません。しかし、一部のユーザーエージェントは、例えば、ツールチップとして `<title>`要素を表示するかもしれません。 `<title>` 要素を表示するが `path` 要素または他のグラフィックス要素を表示しない、視覚と聴覚の両方の代替プレゼンテーションが可能です。`<title>` 要素は一般に SVG 文書のアクセシビリティを向上させます。
+**`<title>`** 要素は、SVG の[コンテナー要素](/ja/docs/Web/SVG/Element#コンテナー要素)または[グラフィック要素](/ja/docs/Web/SVG/Element#グラフィック要素)のアクセシブルな短いテキストの説明を提供します。
 
-一般に、`<title>` 要素は その `<title>` 要素の親の最初の子にするべきです。 `<title>`が実際にその `<title>` の親の最初の子要素である場合、ツールチップを表示するためにタイトルを使用する実装のみが表示することに注意してください。
+`<title>` 要素内のテキストはグラフィックの一部としてレンダリングされませんが、ブラウザーは通常ツールチップとして表示します。要素が可視テキストで記述されている場合、 `<title>` 要素を使用するのではなく、 [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 属性でそのテキストを参照することが推奨されます。
 
-## 利用可能な場所
-
-{{svginfo}}
-
-## 属性
-
-### グローバル属性
-
-- [コア属性](/ja/docs/Web/SVG/Attribute#Core_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### 専用属性
-
-_この要素には専用属性はありません。_
-
-## DOM インターフェイス
-
-この要素は {{domxref("SVGTitleElement")}} インターフェイスを実装します。
+> [!NOTE]
+> SVG 1.1 との後方互換性のため、 `<title>` 要素は親の最初の子要素であるべきです。
 
 ## 例
 
-```xml
-<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
-  <g>
-    <title>SVG Title Demo example</title>
-    <rect x="10" y="10" width="200" height="50"
-    style="fill:none; stroke:blue; stroke-width:1px"/>
-  </g>
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="5" cy="5" r="4">
+    <title>これは円です</title>
+  </circle>
+
+  <rect x="11" y="1" width="8" height="8">
+    <title>これは四角形です</title>
+  </rect>
 </svg>
 ```
 
-## 仕様
+{{EmbedLiveSample('Example', 150, '100%')}}
+
+## 属性
+
+この要素はグローバル属性のみがあります。
+
+## 使用コンテキスト
+
+{{svginfo}}
+
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
-{{Compat("svg.elements.title")}}
+{{Compat}}
 
 ## 関連情報
 

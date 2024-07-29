@@ -10,7 +10,7 @@ slug: Web/HTML/Element/meta/name/theme-color
 ## 例
 
 ```html
-<meta name="theme-color" content="#4285f4">
+<meta name="theme-color" content="#4285f4" />
 ```
 
 次の画像は、上記の {{htmlelement("meta")}} 要素が、 Android モバイル端末上で動作する Chrome で表示された文書に与える影響を示しています。
@@ -21,8 +21,11 @@ _画像の出典: [Icons & Browser Colors](https://developers.google.com/web/fun
 [`media`](/ja/docs/Web/HTML/Element/meta#media) 属性で、メディア種別やクエリーを指定することができ、メディアの条件が真である場合にのみ、色が設定されます。例えば、以下のようになります。
 
 ```html
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+<meta
+  name="theme-color"
+  media="(prefers-color-scheme: light)"
+  content="white" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
 ```
 
 ## 仕様書

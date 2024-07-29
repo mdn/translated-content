@@ -1,13 +1,14 @@
 ---
-title: IDBDatabase.deleteObjectStore()
+title: "IDBDatabase: deleteObjectStore() メソッド"
+short-title: deleteObjectStore()
 slug: Web/API/IDBDatabase/deleteObjectStore
 l10n:
-  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{ APIRef("IndexedDB") }}
 
-{{domxref("IDBDatabase")}} インターフェイスの **`deleteObjectStore()`** メソッドは、対象のオブジェクトストアを参照するすべてのインデックスとともに、接続しているデータベースにある指定の名前のオブジェクトストアを削除します。
+**`deleteObjectStore()`** は {{domxref("IDBDatabase")}} インターフェイスのメソッドで、対象のオブジェクトストアを参照するすべてのインデックスとともに、接続しているデータベースにある指定の名前のオブジェクトストアを削除します。
 
 {{ domxref("IDBDatabase.createObjectStore") }} と同様に、このメソッドは [`versionchange`](/ja/docs/Web/API/IDBTransaction#version_change) トランザクション内で _のみ_ 呼び出すことができます。
 
@@ -26,14 +27,14 @@ deleteObjectStore(name)
 
 ### 返値
 
-なし ({{jsxref("undefined")}})
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : メソッドが `versionchange` トランザクションコールバックから呼び出されたのでないとき投げられます。
+  - : このメソッドが `versionchange` トランザクションのコールバックとして呼び出されなかった場合に発生します。
 - `TransactionInactiveError` {{domxref("DOMException")}}
-  - : 存在しないデータベース (たとえば、削除されたか取り除かれた) に対して要求したとき投げられます。
+  - : 存在しないソースデータベースに対してリクエストが行われた場合に発生します（例えば、データベースが削除された場合など）。
 - `NotFoundError` {{domxref("DOMException")}}
   - : 存在しないオブジェクトストアを削除しようとしたとき投げられます。
 

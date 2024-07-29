@@ -25,7 +25,7 @@ O código de erro HTTP **`502 Bad Gateway`** retornado pelo servidor indica que 
 
 As informações mostradas acima foram extraídas do GitHub do MDN (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.502")}}
+{{Compat}}
 
 ## Veja também
 

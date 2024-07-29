@@ -77,7 +77,7 @@ numbers.map(function (num) {
 
 ### 函数与已有属性重名
 
-当您在创建类时，可能会存在某个属性和某个方法的名称相同，当您在调用该函数时，编译器会认为该函数不存在。
+当你在创建类时，可能会存在某个属性和某个方法的名称相同，当你在调用该函数时，编译器会认为该函数不存在。
 
 ```js example-bad
 var Dog = function () {
@@ -117,7 +117,7 @@ myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }
 
 ### 使用括号进行乘法运算
 
-在数学中，您可以将 2 × (3 + 5) 写为 2\*(3 + 5) 或者省略为 2(3 + 5).
+在数学中，你可以将 2 × (3 + 5) 写为 2\*(3 + 5) 或者省略为 2(3 + 5).
 
 使用后者时将会抛出错误：
 
@@ -127,7 +127,7 @@ alert("2 x (3 + 5) is " + String(sixteen));
 //Uncaught TypeError: 2 is not a function
 ```
 
-您可以添加乘法运算符 `*` 来改正代码：
+你可以添加乘法运算符 `*` 来改正代码：
 
 ```js example-good
 const sixteen = 2 * (3 + 5);

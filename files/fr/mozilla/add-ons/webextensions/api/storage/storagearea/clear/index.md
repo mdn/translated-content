@@ -3,7 +3,7 @@ title: StorageArea.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/clear
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Supprime tous les éléments de la zone de stockage.
 
@@ -46,7 +46,7 @@ clearStorage.then(onCleared, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/extensions/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
 >

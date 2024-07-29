@@ -1,8 +1,9 @@
 ---
-title: WebSocket()
+title: "WebSocket: WebSocket() コンストラクター"
+short-title: WebSocket()
 slug: Web/API/WebSocket/WebSocket
 l10n:
-  sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331
+  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
 {{APIRef("Web Sockets API")}}

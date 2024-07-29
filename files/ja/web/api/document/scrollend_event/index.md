@@ -1,12 +1,12 @@
 ---
 title: "Document: scrollend イベント"
+short-title: scrollend
 slug: Web/API/Document/scrollend_event
 l10n:
-  sourceCommit: ad11fa09cfe07fbce82de0457daa8c5ac243b748
+  sourceCommit: 458eb9af74287fd15ef8ba9f4ba9aa3423c4cac3
 ---
 
 {{APIRef}}
-{{SeeCompatTable}}
 
 **`scrollend`** イベントは、文書のビューのスクロールが完了した時に発生します。
 スクロールが完了したと見なされるのは、スクロール位置に保留中の更新値がなくなり、かつユーザーがジェスチャーを完了したときです。

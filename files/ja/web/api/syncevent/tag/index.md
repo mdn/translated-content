@@ -23,4 +23,4 @@ var tag = SyncEvent.tag
 
 ## ブラウザー実装状況
 
-{{Compat("api.SyncEvent.tag")}}
+{{Compat}}

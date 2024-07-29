@@ -3,7 +3,7 @@ title: cookies.CookieStore
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type `CookieStore` de l'API {{WebExtAPIRef("cookies")}} représente un cookie store dans le navigateur.
 
@@ -52,7 +52,7 @@ browser.cookies.getAllCookieStores().then((stores) => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/extensions/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
 >

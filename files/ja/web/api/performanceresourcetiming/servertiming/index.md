@@ -39,7 +39,7 @@ const observer = new PerformanceObserver((list) => {
 });
 
 ["navigation", "resource"].forEach((type) =>
-  observer.observe({ type, buffered: true })
+  observer.observe({ type, buffered: true }),
 );
 ```
 
@@ -48,7 +48,7 @@ const observer = new PerformanceObserver((list) => {
 ```js
 for (const entryType of ["navigation", "resource"]) {
   for (const { name: url, serverTiming } of performance.getEntriesByType(
-    entryType
+    entryType,
   )) {
     if (serverTiming) {
       for (const { name, duration } of serverTiming) {

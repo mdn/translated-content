@@ -61,7 +61,7 @@ Para usar esta API você deve ter a [permissão de API](/pt-BR/Add-ons/WebExtens
 
 ## Compatibilidade com navegadores
 
-{{Compat("webextensions.api.browsingData", 2)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

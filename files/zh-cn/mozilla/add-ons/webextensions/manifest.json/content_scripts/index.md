@@ -166,7 +166,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
       <td>
         <p>
           此选项指定在<a href="#js">“js”键</a
-          >中的脚本何时被注入。您可以使用下列的三个字符串之一，每个字符串都代表加载文档过程中的不同状态。状态直接对应于{{domxref("Document/readyState", "Document.readyState")}}：
+          >中的脚本何时被注入。你可以使用下列的三个字符串之一，每个字符串都代表加载文档过程中的不同状态。状态直接对应于{{domxref("Document/readyState", "Document.readyState")}}：
         </p>
         <ul>
           <li>
@@ -219,7 +219,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 
 Firefox 自 48 版本开始支持 globs
 
-glob 只是一个可以包含通配符的字符串。有两种类型的通配符，您可以在一个 glob 中组合使用它们：
+glob 只是一个可以包含通配符的字符串。有两种类型的通配符，你可以在一个 glob 中组合使用它们：
 
 - "\*" 匹配零个或多个字符
 - "?" 匹配一个字符

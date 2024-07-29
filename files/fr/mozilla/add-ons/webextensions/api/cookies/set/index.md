@@ -3,7 +3,7 @@ title: cookies.set()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/set
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La méthode **`set()`** de l'API {{WebExtAPIRef("cookies")}} définit un cookie contenant des données précises de cookie. Cette méthode équivaut à l'émission d'un en-tête HTTP `Set-Cookie` lors d'une requête à une URL donnée.
 
@@ -73,7 +73,7 @@ function setCookie(tabs) {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/extensions/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
 >

@@ -50,7 +50,7 @@ Content-Type: text/html
 
 以下に示す情報は、 MDN の GitHub から取得したものです。 (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.451")}}
+{{Compat}}
 
 ## 関連情報
 

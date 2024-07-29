@@ -5,7 +5,7 @@ slug: Web/CSS/named-color
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) **`<named-color>`** 为颜色名——如 `red`、`blue`、`black` 或 `lightseagreen`。`<named-color>` 在语法上为 {{CSSXref("&lt;ident&gt;")}}。
+[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) **`<named-color>`** 为颜色名——如 `red`、`blue`、`black` 或 `lightseagreen`。`<named-color>` 在语法上为 [`<ident>`](/zh-CN/docs/Web/CSS/ident)。
 
 在可使用 {{CSSXref("&lt;color&gt;")}} 的任意位置均可使用 `<named-color>` 值。
 
@@ -21,7 +21,7 @@ color: transparent;
 
 ### 取值
 
-具名颜色由标准颜色，以及关键字 [`transparent`](#transparent) 和 {{CSSXref("&lt;color&gt;", "currentcolor", "#currentcolor_keyword")}} 所构成。
+命名颜色包含标准颜色、[`transparent`](#transparent) 和 [`currentcolor`](/zh-CN/docs/Web/CSS/color_value#currentcolor_keyword) 关键字。
 
 #### 标准颜色
 
@@ -881,17 +881,17 @@ color: transparent;
   </tbody>
 </table>
 
-起初在 [CSS 第 1 级](https://www.w3.org/TR/REC-CSS1/#color-units)中仅定义了 16 种基本颜色，在 [CSS 第 2 级](https://www.w3.org/TR/CSS2/syndata.html#value-def-color)中添加了 `orange`。Web 设计师认为这些颜色太少，于是浏览器厂商根据 X11 颜色名为颜色添加了大量名字。这些名字先后在 [SVG 1.0](https://www.w3.org/TR/2001/REC-SVG-20010904/) 和 [CSS 颜色第 3 级](https://www.w3.org/TR/css-color-3/#svg-color)中获得标准化、正式定义和一致性（某些名字的不同拼写现为别名）。这些颜色名被称为*扩展性颜色关键字*、*X11 颜色*或 _SVG 颜色_。
+起初在 [CSS 第 1 级](https://www.w3.org/TR/REC-CSS1/#color-units)中仅定义了 16 种基本颜色，在 [CSS 第 2 级](https://www.w3.org/TR/CSS2/syndata.html#value-def-color)中添加了 `orange`。Web 设计师认为这些颜色太少，于是浏览器厂商根据 X11 颜色名为颜色添加了大量名字。这些名字先后在 [SVG 1.0](https://www.w3.org/TR/2001/REC-SVG-20010904/) 和 [CSS 颜色第 3 级](https://www.w3.org/TR/css-color-3/#svg-color)中获得标准化、正式定义和一致性（某些名字的不同拼写现为别名）。这些名字称为*扩展性颜色关键字*、*X11 颜色*或 _SVG 颜色_。
 
 为纪念 [web 先驱 Eric Meyer](https://meyerweb.com/eric/thoughts/2014/06/19/rebeccapurple/)，在 [CSS 颜色第 4 级](https://www.w3.org/TR/css-color-4/#named-colors)中添加了又一种颜色 `rebeccapurple`。
 
 ### transparent
 
-`transparent` 关键字表示完全透明的颜色。此颜色的元素后的背景完全可见。严格而言，`transparent` 为 `rgba(0,0,0,0)` 的缩写。
+`transparent` 关键字表示完全透明的颜色。此颜色的元素后的背景完全可见。技术上，`transparent` 为 `rgba(0,0,0,0)` 的缩写。
 
 为防止意外行为（如在 {{CSSXref("gradient")}} 中），目前的 CSS 规范称应在[预乘 alpha 颜色空间](https://www.w3.org/TR/css-color-4/#interpolation-alpha)中计算 `transparent`。然而注意旧浏览器可能将其视为 alpha 值为 `0` 的黑色。
 
-`transparent` 关键字在 CSS 第 2 级（修订 1）中并非真正的颜色，而是可在两个 CSS 属性——{{CSSXref("background")}} 和 {{CSSXref("border")}}——上代替常规 `<color>` 值使用的特殊关键字。添加此关键字主要是为了允许开发者改写继承的实在颜色。随着 alpha 通道在 CSS 颜色第 3 级中的到来，`transparent` 被重定义为真正的颜色。现在在可使用 {{CSSXref("&lt;color&gt;")}} 值的任意位置均可使用此关键字。
+`transparent` 关键字在 CSS 第 2 级（修订 1）中并非真正的颜色，而是可在两个 CSS 属性——{{CSSXref("background")}} 和 {{CSSXref("border")}}——上代替常规 `<color>` 值使用的特殊关键字。添加此关键字主要是为了允许开发者覆盖继承的纯色。随着 alpha 通道在 CSS 颜色第 3 级中的到来，`transparent` 被重定义为真正的颜色。现在在可使用 {{CSSXref("&lt;color&gt;")}} 值的任意位置均可使用此关键字。
 
 ## 描述
 
@@ -915,7 +915,7 @@ color: transparent;
 
 ## 示例
 
-### 使用具名颜色
+### 使用命名颜色
 
 #### HTML
 
@@ -959,7 +959,7 @@ color: transparent;
 
 #### 结果
 
-{{EmbedLiveSample("使用具名颜色")}}
+{{EmbedLiveSample("使用命名颜色")}}
 
 ## 规范
 
@@ -971,4 +971,4 @@ color: transparent;
 
 ## 参见
 
-- {{CSSXref("&lt;color&gt;")}}——`<named-color>` 为此数据类型定义的构成部分
+- [`<color>`](/zh-CN/docs/Web/CSS/color_value)——`<named-color>` 为此数据类型定义的构成部分

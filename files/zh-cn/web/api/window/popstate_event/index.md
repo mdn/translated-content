@@ -9,7 +9,8 @@ slug: Web/API/Window/popstate_event
 
 每当激活同一文档中不同的历史记录条目时，`popstate` 事件就会在对应的 `window` 对象上触发。如果当前处于激活状态的历史记录条目是由 `history.pushState()` 方法创建的或者是由 `history.replaceState()` 方法修改的，则 `popstate` 事件的 `state` 属性包含了这个历史记录条目的 `state` 对象的一个拷贝。
 
-> **备注：** 调用 `history.pushState()` 或者 `history.replaceState()` 不会触发 `popstate` 事件。`popstate` 事件只会在浏览器某些行为下触发，比如点击后退按钮（或者在 JavaScript 中调用 `history.back()` 方法）。即，在同一文档的两个历史记录条目之间导航会触发该事件。
+> [!NOTE]
+> 调用 `history.pushState()` 或者 `history.replaceState()` 不会触发 `popstate` 事件。`popstate` 事件只会在浏览器某些行为下触发，比如点击后退按钮（或者在 JavaScript 中调用 `history.back()` 方法）。即，在同一文档的两个历史记录条目之间导航会触发该事件。
 
 ## 语法
 
@@ -55,4 +56,3 @@ history.go(2); // 弹出 "location: http://example.com/example.html?page=3, stat
 
 - {{domxref("window.history")}}
 - [Manipulating the browser history](/zh-CN/docs/Web/API/History_API)
-- [Ajax 导航示例](/zh-CN/docs/Web/API/History_API/Example)

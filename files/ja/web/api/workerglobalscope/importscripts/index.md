@@ -1,5 +1,6 @@
 ---
-title: WorkerGlobalScope.importScripts()
+title: "WorkerGlobalScope: importScripts() メソッド"
+short-title: importScripts()
 slug: Web/API/WorkerGlobalScope/importScripts
 l10n:
   sourceCommit: 2c732b2ab1969d6ae887b865b11ba27de225f291
@@ -14,12 +15,13 @@ l10n:
 ```js-nolint
 importScripts(path0)
 importScripts(path0, path1)
-importScripts(path0, path1, /* … ,*/ pathN)
+importScripts(path0, path1, /* …, */ pathN)
 ```
 
 ### 引数
 
-文字列のカンマ区切りのリストで、インポートされるスクリプトを表します。これらは _HTML 文書のベース URL_ からの相対パスです。
+- `pathN`
+  - : 文字列値で、インポートするスクリプトの URL を表します。URLは絶対または相対です。相対 URL の場合は、HTML 文書のベース URL からの相対 URL となります。
 
 ### 返値
 
@@ -35,7 +37,7 @@ importScripts(path0, path1, /* … ,*/ pathN)
 `foo.js` という別のスクリプトに書かれた機能を worker.js の中で使いたい場合は、次の行でインポートすることができます。
 
 ```js
-importScripts('foo.js');
+importScripts("foo.js");
 ```
 
 `importScripts()` と `self.importScripts()` は実質的に同じです。 — 両方とも `importScripts()` をワーカーの内部スコープの中から呼び出すことを表します。

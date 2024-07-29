@@ -19,6 +19,8 @@ li:nth-child(2) {
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-child.html", "tabbed-shorter")}}
+
 ## 構文
 
 `:nth-child()` 擬似クラスは、引数を 1 つ指定し、リストの子要素を要素の位置で選択するためのパターンを記述します。要素の位置は 1 から始まります。

@@ -9,11 +9,11 @@ slug: Web/JavaScript/Guide/Introduction
 
 ## 在開始前需具備之能力
 
-本手冊假設您具有以下基本背景：
+本手冊假設你具有以下基本背景：
 
 - 對網際網路及全球資訊網有大致上的了解
 - 對 HTML(HyperText Markup Language )語法理解至一定程度
-- 有寫過程式的經驗，若您是完全的新手，可嘗試在主頁上有關[JavaScript](/zh-TW/docs/Web/JavaScript)的教程。
+- 有寫過程式的經驗，若你是完全的新手，可嘗試在主頁上有關[JavaScript](/zh-TW/docs/Web/JavaScript)的教程。
 
 ## 什麼是 JavaScript？
 
@@ -125,7 +125,8 @@ ECMAScript 規格（ECMA-262）在 Netscape 和 Ecma International 的密切合�
   </tbody>
 </table>
 
-> **備註：** ECMA-262 第 2 版是由已修正錯誤的第 1 版並加上些微的更動構成。現今由 Ecma International 的 TC39 工作組（TC39 Working Group）所發行的版本是 ECMAScript 5.1 版
+> [!NOTE]
+> ECMA-262 第 2 版是由已修正錯誤的第 1 版並加上些微的更動構成。現今由 Ecma International 的 TC39 工作組（TC39 Working Group）所發行的版本是 ECMAScript 5.1 版
 
 [JavaScript Reference](/zh-TW/docs/JavaScript/Reference) 指出了哪些 JavaScript 的特性是相容於 ECMAScript 的。
 

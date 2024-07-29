@@ -520,18 +520,15 @@ daySelect.onchange = function () {
 };
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                                    | Status                   | Comments |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('HTML WHATWG', 'forms.html#local-date-and-time-state-(type=datetime-local)', '&lt;input type="datetime-local"&gt;')}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'forms.html##local-date-and-time-state-(type=datetime-local)', '&lt;input type="datetime-local"&gt;')}}  | {{Spec2('HTML5 W3C')}}   |          |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [Date and Time picker tutorial](/ru/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker)

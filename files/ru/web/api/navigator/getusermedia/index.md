@@ -42,10 +42,6 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
 
 {{domxref("undefined")}}.
 
-### Ошибки
-
-{{page("/en-US/docs/Web/API/MediaDevices/getUserMedia", "Errors")}}
-
 ## Примеры
 
 ### Width and height (Ширина и высота)
@@ -104,7 +100,7 @@ if (navigator.getUserMedia) {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("MediaDevices.getUserMedia()")}} that replaces this deprecated method.
 - [WebRTC](/ru/docs/WebRTC) - the introductory page to the API

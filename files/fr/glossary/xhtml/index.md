@@ -3,6 +3,8 @@ title: XHTML
 slug: Glossary/XHTML
 ---
 
+{{GlossarySidebar}}
+
 [HTML](/fr/docs/Web/HTML) peut voyager sur le réseau vers un navigateur soit en syntaxe HTML soit en syntaxe XML appelée XHTML.
 
 ## HTML5 et HTML/XHTML

@@ -35,8 +35,6 @@ O elemento `animateTransform` anima a transformação de um atributo em um eleme
 </svg>
 ```
 
-**Resultado**
-
 {{ EmbedLiveSample('Exemplo','120','120') }}
 
 ## Atributos

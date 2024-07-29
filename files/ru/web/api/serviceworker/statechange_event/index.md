@@ -57,6 +57,6 @@ navigator.serviceWorker.register(..).then(function(swr) {
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}

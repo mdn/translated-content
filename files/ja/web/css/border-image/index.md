@@ -1,6 +1,8 @@
 ---
 title: border-image
 slug: Web/CSS/border-image
+l10n:
+  sourceCommit: 41ad12d12544ea08825f7c0405061cd83190e18a
 ---
 
 {{CSSRef}}
@@ -9,7 +11,8 @@ slug: Web/CSS/border-image
 
 {{EmbedInteractiveExample("pages/css/border-image.html")}}
 
-> **メモ:** 境界画像の読み込みに失敗したときのために、 {{cssxref("border-style")}} を指定してください。仕様では厳密には要求されていませんが、{{cssxref("border-style")}} が `none` または {{cssxref("border-width")}} が `0` の場合、境界画像を描画しないブラウザーもあります。
+> [!NOTE]
+> 境界画像の読み込みに失敗したときのために、 {{cssxref("border-style")}} を指定してください。仕様では厳密には要求されていませんが、{{cssxref("border-style")}} が `none` または {{cssxref("border-width")}} が `0` の場合、境界画像を描画しないブラウザーもあります。
 
 ## 構成要素のプロパティ
 
@@ -40,6 +43,7 @@ border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
 border-image: inherit;
 border-image: initial;
 border-image: revert;
+border-image: revert-layer;
 border-image: unset;
 ```
 
@@ -64,7 +68,7 @@ border-image: unset;
 
 支援技術は境界画像を解釈することができません。画像にページ全体の目的を理解するために重要な情報が含まれている場合は、文書内に意味的に記述したほうがいいでしょう。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
+- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
 - [Understanding Success Criterion 1.1.1 | Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## 公式定義
@@ -77,7 +81,7 @@ border-image: unset;
 
 ## 例
 
-<h3 id="Bitmap">ビットマップ</h3>
+### ビットマップ
 
 この例では、要素の境界にダイヤモンド模様を適用します。 source の画像は、縦と横にダイヤモンドが 3 つずつ並んだ 81 × 81 ピクセルの ".png" ファイルです。
 
@@ -101,7 +105,8 @@ border-image: unset;
   margin: 30px;
   padding: 10px;
 
-  border-image: url("border.png") 27 / 36px 28px 18px 8px / 18px 14px 9px 4px round;
+  border-image: url("border.png") 27 / 36px 28px 18px 8px / 18px 14px 9px 4px
+    round;
 }
 ```
 
@@ -109,7 +114,7 @@ border-image: unset;
 
 {{EmbedLiveSample('Bitmap', '100%', 200)}}
 
-<h3 id="Gradient">グラデーション</h3>
+### グラデーション
 
 #### HTML
 
@@ -130,7 +135,7 @@ border-image: unset;
 
 #### 結果
 
-{{EmbedLiveSample('Gradient')}}
+{{EmbedLiveSample('グラデーション')}}
 
 ## 仕様書
 
@@ -146,5 +151,5 @@ border-image: unset;
 - {{cssxref("outline")}}
 - {{cssxref("box-shadow")}}
 - {{cssxref("background-image")}}
-- {{cssxref("url()", "url()")}} 関数
-- グラデーション関数: {{CSSxRef("gradient/conic-gradient()", "conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}}, {{CSSxRef("gradient/linear-gradient()", "linear-gradient()")}}, {{CSSxRef("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient()", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}
+- {{cssxref("url", "url()")}} 関数
+- グラデーション関数: {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}

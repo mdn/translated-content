@@ -7,7 +7,8 @@ slug: Web/API/FileSystemDirectoryEntry
 
 [文件和目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API) 的 **`FileSystemDirectoryEntry`** 接口表示文件系统中的目录。它提供了方法，使其能够访问和操作目录中的文件，以及访问目录中的条目。
 
-> **备注：** 由于这是个非标准的 API，它的规范当前并没有在标准进程中，重要的是要记住，并不是所有浏览器都实现了他，并且实现它的浏览器可能仅仅实现了一小部分。更多细节请查看 [Browser compatibility](#browser_compatibility) 。
+> [!NOTE]
+> 由于这是个非标准的 API，它的规范当前并没有在标准进程中，重要的是要记住，并不是所有浏览器都实现了他，并且实现它的浏览器可能仅仅实现了一小部分。更多细节请查看 [Browser compatibility](#browser_compatibility) 。
 
 ## 基本概念
 
@@ -69,7 +70,7 @@ window.requestFileSystem(TEMPORARY, 1024*1024 /*1MB*/, onFs, onError);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [文件和目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
 - [文件系统 API 简介](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)

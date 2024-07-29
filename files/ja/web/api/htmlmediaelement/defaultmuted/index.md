@@ -16,7 +16,7 @@ l10n:
 ## 例
 
 ```js
-const videoEle = document.createElement('video');
+const videoEle = document.createElement("video");
 videoEle.defaultMuted = true;
 console.log(videoEle.outerHTML); // <video muted=""></video>
 ```

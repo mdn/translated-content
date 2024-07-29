@@ -3,7 +3,7 @@ title: <dialog>
 slug: Web/HTML/Element/dialog
 ---
 
-{{SeeCompatTable}}
+{{HTMLSidebar}}
 
 **HTML-элемент `<dialog>`** определяет диалоговое окно или другой интерактивный элемент, такой как инспектор или окно. Элементы `<form>` могут интегрироваться с диалогом с помощью указания атрибута `method="dialog"`. Когда отправляется такая форма, диалог закрывается с returnValue равным value нажатой кнопки submit.
 
@@ -20,7 +20,7 @@ slug: Web/HTML/Element/dialog
 
 Этот элемент включает в себя [общие атрибуты](/ru/docs/Web/HTML/Общие_атрибуты). Атрибут `tabindex` не должен использоваться с `<dialog>` элементом.
 
-- {{htmlattrdef("open")}}
+- `open`
   - : Этот атрибут сообщает о том, что диалог активен и доступен для взаимодействия. Когда атрибут open не установлен, диалог не должен быть видим для пользователя.
 
 ## Примеры
@@ -129,7 +129,7 @@ slug: Web/HTML/Element/dialog
 
 {{Specifications}}
 
-## Совместимость в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -138,5 +138,3 @@ slug: Web/HTML/Element/dialog
 - Событие {{event("close")}}
 - Событие {{event("cancel")}}
 - [HTML forms guide](/ru/docs/Web/Guide/HTML/Forms).
-
-{{HTMLSidebar}}

@@ -63,7 +63,7 @@ Com a API `browserAction você pode`:
 
 ## Compatibilidade com navegadores
 
-{{Compat("webextensions.api.browserAction")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

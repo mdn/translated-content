@@ -357,13 +357,3 @@ blob:http://localhost:7800/9b75250e-5279-e249-884f-d03eb1fd84f4
 - [Программирование веб-сайта на стороне сервера](/ru/docs/Learn/Server-side)
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## В этом модуле
-
-- [Введение в web API](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Манипулирование документами](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Получение данных с сервера](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Сторонние API](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Рисование графики](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Видео и аудио API](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Клиентское хранилище](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

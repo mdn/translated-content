@@ -57,7 +57,7 @@ document.getElementById("example").innerHTML = result;
 
 {{Specifications}}
 
-## Поддержка в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

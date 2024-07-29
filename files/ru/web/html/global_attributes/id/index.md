@@ -19,7 +19,7 @@ slug: Web/HTML/Global_attributes/id
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

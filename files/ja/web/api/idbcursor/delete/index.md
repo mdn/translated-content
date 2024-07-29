@@ -46,29 +46,31 @@ delete()
 
 ```js
 function deleteResult() {
-  list.textContent = '';
-  const transaction = db.transaction(['rushAlbumList'], 'readwrite');
-  const objectStore = transaction.objectStore('rushAlbumList');
+  list.textContent = "";
+  const transaction = db.transaction(["rushAlbumList"], "readwrite");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      if (cursor.value.albumTitle === 'Grace under pressure') {
+      if (cursor.value.albumTitle === "Grace under pressure") {
         const request = cursor.delete();
         request.onsuccess = () => {
-          console.log('Deleted that mediocre album from 1984. Even Power windows is better.');
+          console.log(
+            "Deleted that mediocre album from 1984. Even Power windows is better.",
+          );
         };
       } else {
-        const listItem = document.createElement('li');
+        const listItem = document.createElement("li");
         listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
         list.appendChild(listItem);
       }
       cursor.continue();
     } else {
-      console.log('エントリーを表示しました。');
+      console.log("エントリーを表示しました。");
     }
   };
-};
+}
 ```
 
 ## 仕様書

@@ -25,7 +25,7 @@ slug: Web/CSS/@font-face/font-display
 ## Синтаксис
 
 ```css
-/* Значения свойства */
+/* Ключевые слова */
 font-display: auto;
 font-display: block;
 font-display: swap;
@@ -68,6 +68,6 @@ font-display: optional;
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

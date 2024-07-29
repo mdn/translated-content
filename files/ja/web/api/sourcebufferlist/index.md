@@ -40,7 +40,7 @@ _親インターフェイスである {{domxref("EventTarget")}} からメソッ
 
 ## ブラウザーの互換性
 
-{{Compat("api.SourceBufferList")}}
+{{Compat}}
 
 ## 関連情報
 

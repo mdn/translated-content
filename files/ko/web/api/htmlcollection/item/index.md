@@ -26,7 +26,7 @@ var element = HTMLCollection.item(index);
 
 ## 참고사항
 
-`item()` 메소드는 `HTMLCollection`으로부터 순서가 매겨진 하나의 요소를 반환합니다. 자바스크립트에서, `HTMLCollection`을 배열처럼 다루는건 아주 쉽습니다. 아래의 [예시](#example)를 보세요.
+`item()` 메소드는 `HTMLCollection`으로부터 순서가 매겨진 하나의 요소를 반환합니다. JavaScript에서, `HTMLCollection`을 배열처럼 다루는건 아주 쉽습니다. 아래의 [예시](#example)를 보세요.
 
 ## Example
 

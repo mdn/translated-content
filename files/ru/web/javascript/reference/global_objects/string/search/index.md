@@ -3,7 +3,7 @@ title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}}
 
 ## Сводка
 

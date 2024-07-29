@@ -3,6 +3,8 @@ title: WebSocket을 이용하여 클라이언트 애플리케이션 작성하기
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 ---
 
+{{DefaultAPISidebar("WebSockets API")}}
+
 WebSocket은 ws 프로토콜을 기반으로 클라이언트와 서버 사이에 지속적인 완전 양방향 연결 스트림을 만들어 주는 기술입니다. 일반적인 웹소켓 클라이언트는 사용자의 브라우저일 것이지만, 그렇다고 해서 이 프로토콜이 플랫폼에 종속적이지는 않습니다.
 
 > **참고:** 우리에게는 작동하는 chat/server 시스템 예제 코드 조각이 있습니다. 이는 우리의 인프라가 WebSocket 예제들을 제대로 호스팅할 수 있는 환경이 되면 공유할 것입니다.
@@ -74,7 +76,7 @@ exampleSocket.send("Here's some text that the server is urgently awaiting!");
 
 보낼 수 있는 데이터는 String , {{ domxref("Blob") }}, 또는 `ArrayBuffer` 입니다.
 
-> **참고:** 버전 11 아래의 파이어폭스는 String 데이터 전송만을 지원합니다.
+> **참고:** 버전 11 아래의 Firefox는 String 데이터 전송만을 지원합니다.
 
 연결을 맺는것은 비동기 작업이고 실패하기 쉬운 작업이기 때문에, WebSocket 오브젝트를 생성하자마자 `send()` 로 데이터 전송을 시도하는것은 성공하지 않을 가능성이 있습니다. 우리는 연결이 수립된 이후에만 데이터를 전송하도록 하기 위해 `onopen` 핸들러를 정의하고, 이 위에서 작업합니다.
 
@@ -173,7 +175,7 @@ exampleSocket.onmessage = function (event) {
 };
 ```
 
-여기서 우리는 [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON/parse) 를 통해 JSON 오브젝트를 자바스크립트 오브젝트로 변환합니다. 그 다음 콘텐츠에 따라 분기하고 처리하는 로직을 가집니다.
+여기서 우리는 [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON/parse) 를 통해 JSON 오브젝트를 JavaScript 오브젝트로 변환합니다. 그 다음 콘텐츠에 따라 분기하고 처리하는 로직을 가집니다.
 
 ### Text data format
 
@@ -191,4 +193,4 @@ exampleSocket.close();
 
 ## 보안에 대한 고려 사항
 
-웹소켓은 혼합된 연결 환경에서 이용되어서는안됩니다. 예를들어 HTTPS를 이용해 로드된 페이지에서 non-secure 웹소켓 연결을 수립하는것(또는 반대) 처럼 말입니다. 몇몇 브라우저들은 이를 강제로 금지하고 있습니다. 파이어폭스 버전 8이상도 이를 금지합니다.
+웹소켓은 혼합된 연결 환경에서 이용되어서는안됩니다. 예를들어 HTTPS를 이용해 로드된 페이지에서 non-secure 웹소켓 연결을 수립하는것(또는 반대) 처럼 말입니다. 몇몇 브라우저들은 이를 강제로 금지하고 있습니다. Firefox 버전 8이상도 이를 금지합니다.

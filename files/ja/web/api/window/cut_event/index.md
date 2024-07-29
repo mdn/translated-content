@@ -33,8 +33,8 @@ slug: Web/API/Window/cut_event
 ## 例
 
 ```js
-window.addEventListener('cut', (event) => {
-    console.log('cut action initiated')
+window.addEventListener("cut", (event) => {
+  console.log("cut action initiated");
 });
 ```
 

@@ -35,17 +35,17 @@ slug: Learn/CSS/CSS_layout/Positioning
 
 HTML 요소에 적용될 수 있는 여러 가지 유형의 위치잡기가 존재합니다. 어떤 요소상에 특정 유형의 위치잡기가 활성화되도록 하기 위해 {{cssxref("position")}} 속성을 사용합니다.
 
-### 정적 위치잡기
+## 정적 위치잡기
 
 정적 위치잡기는 모든 요소에 주어지는 기본값입니다. 즉, "요소를 문서 레이아웃 대열상에 일반 위치에 배치하라는 것으로 여기서 특별한 것은 없습니다."
 
-이를 입증한다거나, 이어질 섹션에서 다룰 예제를 설정하려면 먼저 HTML상에 두 번째 {{htmlelement("p")}} 요소에 `positioned`라는 클래스를 추가하십시오:
+이를 입증한다거나, 이어질 섹션에서 다룰 예제를 설정하려면 먼저 HTML상에 두 번째 {{htmlelement("p")}} 요소에 `positioned`라는 클래스를 추가하십시오.
 
 ```html
 <p class="positioned">...</p>
 ```
 
-이제 다음과 같은 규칙을 당신의 CSS 하단에 추가하십시요:
+이제 다음과 같은 규칙을 당신의 CSS 하단에 추가하십시오.
 
 ```css
 .positioned {
@@ -58,7 +58,7 @@ HTML 요소에 적용될 수 있는 여러 가지 유형의 위치잡기가 존�
 
 > **참고:** **주석**: 이 시점에 예제의 실제 구현 장면을 [`1_static-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html)에서 볼 수 있습니다.([소스 코드는 여기서 보세요](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)).
 
-### 상대 위치잡기
+## 상대 위치잡기
 
 상대 위치잡기는 우리가 살펴 첫 번째 위치 유형입니다. 이것은 정적 위치 결정과 매우 유사합니다. 단, 일단 정상 레이아웃 대열상에 위치잡기할 요소가 자리를 잡고나면 페이지의 다른 요소와 중첩되는 것을 포함하여 최종 위치를 수정할 수 있습니다. 당신의 코드에 있는 `position` 선언을 업데이트하십시요.
 
@@ -70,16 +70,16 @@ position: relative;
 
 ### 상하 좌우 위치잡기 소개
 
-{{cssxref("top")}}, {{cssxref("bottom")}}와 {{cssxref("left")}}, and {{cssxref("right")}}는 {{cssxref("position")}}과 나란히 사용되어 기준 위치에 비례해 정확한 위치잡기를 지정한다. 이를 시험하려면 다음 선언문을 CSS `.positioned` 규칙에 추가하십시오:
+{{cssxref("top")}}, {{cssxref("bottom")}}와 {{cssxref("left")}}, and {{cssxref("right")}}는 {{cssxref("position")}}과 나란히 사용되어 기준 위치에 비례해 정확한 위치잡기를 지정한다. 이를 시험하려면 다음 선언문을 CSS `.positioned` 규칙에 추가하십시오.
 
-```
+```css
 top: 30px;
 left: 30px;
 ```
 
 > **참고:** 이러한 속성의 값은 당신이 논리적으로 예상할 수 있는 모든 [단위](/ko/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)를 취할 수 있습니다. 예로 pixels, mm, rems, % 등이 해당한다.
 
-이제 저장하고 새로고침하면 다음과 같은 내용의 결과를 얻을 것입니다:
+이제 저장하고 새로고침하면 다음과 같은 내용의 결과를 얻을 것입니다.
 
 ```html hidden
 <h1>상대 위치잡기</h1>
@@ -143,15 +143,15 @@ span {
 
 > **참고:** 이 시점에 예제의 실제 구현 장면을 [`2_relative-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html)에서 확인할 수 있습니다([소스 코드 보기](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html)).
 
-### 절대 위치잡기
+## 절대 위치잡기
 
 절대적인 위치 결정은 매우 다른 결과를 가져옵니다. 당신의 소스 코드에 다음과 같이 위치 선언을 변경해 보겠습니다.
 
-```
+```css
 position: absolute;
 ```
 
-지금 저장한 다음에 새로고침하면 다음과 같은 것이 확인되어야 합니다:
+지금 저장한 다음에 새로고침하면 다음과 같은 것이 확인되어야 합니다.
 
 ```html hidden
 <h1>절대 위치잡기</h1>
@@ -227,9 +227,9 @@ span {
 
 조상 요소가 명시적으로 정의된 위치 속성을 가지고 있지 않으면 초깃값으로 모든 조상 요소에 정적 위치가 부여됩니다. 그에 따른 결과, 절대적 위치잡기한 요소는 **initial containing block**에 포함되게 됩니다. 초기 콘테이너 블록은 브라우저 뷰포트 크기의 용적을 가지며, 자신도 {{htmlelement("html")}} 요소를 포함하는 블록입니다. 간단히 말해서, 절대적 위치잡기한 요소는 {{htmlelement("html")}} 요소의 외부에 포함되어 초기 뷰포트 기준과 비례한 곳에 위치하게 됩니다.
 
-위치잡기한 요소는 HTML 소스의 {{htmlelement("body")}} 안에 중첩되지만 최종 레이아웃에서는 페이지의 가장자리 상단과 왼쪽에서 30px 떨어져 있습니다. 우리는 요소의 절대적 위치잡기에서 어떤 요소에 비례해 위치잡기할지 기준이 되는 **positioning context**(위치잡기 상황)을 변경할 수 있습니다. 이것은 조상 요소 중 하나를 기준으로 위치잡기 설정이 이뤄집니다. 다시말해 요소의 내부에 중첩된 요소 중 하나가 기준이 됩니다(내부에 중첩되지 않은 요소를 기준삼아 비례적으로 위치시킬 수 없습니다). 이를 증명하기 위해 다음과 같은 선언을 `body` 규칙에 추가하십시요:
+위치잡기한 요소는 HTML 소스의 {{htmlelement("body")}} 안에 중첩되지만 최종 레이아웃에서는 페이지의 가장자리 상단과 왼쪽에서 30px 떨어져 있습니다. 우리는 요소의 절대적 위치잡기에서 어떤 요소에 비례해 위치잡기할지 기준이 되는 **positioning context**(위치잡기 상황)을 변경할 수 있습니다. 이것은 조상 요소 중 하나를 기준으로 위치잡기 설정이 이뤄집니다. 다시말해 요소의 내부에 중첩된 요소 중 하나가 기준이 됩니다(내부에 중첩되지 않은 요소를 기준삼아 비례적으로 위치시킬 수 없습니다). 이를 증명하기 위해 다음과 같은 선언을 `body` 규칙에 추가하십시오.
 
-```
+```css
 position: relative;
 ```
 
@@ -304,7 +304,7 @@ span {
 
 다음을 CSS에 추가해 첫 단락도 절대적 위치잡기 대상으로 만들어 봅시다.
 
-```
+```css
 p:nth-of-type(1) {
   position: absolute;
   background: lime;
@@ -321,7 +321,7 @@ p:nth-of-type(1) {
 
 스택 순서를 변경하려면 다음 선언을 `p:nth-of-type(1)` rule: 규칙에 추가하십시오.
 
-```
+```css
 z-index: 1;
 ```
 
@@ -398,15 +398,15 @@ z-인덱스는 단위가 없는 인덱스 값만 허용한다는 점에 유의�
 
 > **참고:** 이 시점에 예제의 실제 구현 장면을 [`5_z-index.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html)에서 볼 수 있습니다([소스 코드 보기](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html)).
 
-### 고정 위치잡기
+## 고정 위치잡기
 
 이제 고정 위치잡기를 살펴보자. 이것은 절대 위치잡기와 정확히 같은 방식으로 작동합니다.단 한 가지 핵심 차이점이 있습니다. 절대 위치잡기는 {{htmlelement("html")}} 요소나 가까운 조상 요소를 기준으로 비례해 요소를 고정시키지만, 고정 위치잡기는 브라우저 뷰 포트 자체를 기준으로 비례해 요소를 고정합니다. 즉, 탐색 메뉴가 계속 자리를 지키는 것과 같이 제자리에 고정된 유용한 사용자 인터페이스 항목을 생성할 수 있습니다.
 
 우리가 무슨 얘기를 하는지 보여주기 위해 간단한 예를 들어봅시다. 먼저 CSS에서 기존 `p:nth-of-type(1)`과 `.positioned` 규칙을 삭제합니다.
 
-이제 `position: relative;` 선언을 지우고, 다음과 같이 고정 높이를 추가하는 규칙을 `body` 규칙에 업데이트합니다:
+이제 `position: relative;` 선언을 지우고, 다음과 같이 고정 높이를 추가하는 규칙을 `body` 규칙에 업데이트합니다.
 
-```
+```css
 body {
   width: 500px;
   height: 1400px;
@@ -416,7 +416,7 @@ body {
 
 이제 우리는 {{htmlelement("h1")}} 요소에 `position: fixed;`를 부여하고, 그걸 뷰 포트의 상단 중앙에 놓게 합니다. 다음 규칙을 CSS에 추가하세요.
 
-```
+```css
 h1 {
   position: fixed;
   top: 0;
@@ -429,15 +429,15 @@ h1 {
 
 화면 상단에 고정시키려면 `top: 0;`이 요구됩니다. 그런 다음 제목에 콘텐츠 열과 동일한 너비를 부여하고 콘텐츠를 중앙에 놓기 위해 오래됐지만, 신뢰감을 주는 `margin: 0 auto;`를 사용합니다. 그런 다음 제목에 흰색 배경과 패딩을 부여해 제목 아래에 내용이 보이지 않도록 합니다.
 
-지금 저장하고 새로고침하면 제목이 고정되는 사소하지만, 재미난 효과를 볼 수 있으며, 스크롤 막대를 위로 올리면 콘텐츠가 드러나고 아래로 내리면 제목 밑으로 콘텐츠가 사라지는 것처럼 보입니다. 하지만 우리는 이것을 더 개선할 수 있습니다. 현재 일부 콘텐츠가 시작부터 제목에 밑에 깔려있는 부분 말입니다. 위치잡기한 제목이 문서 대열상에서 모습을 드러내지 않기 때문입니다. 그래서 나머지 콘텐츠가 맨 위로 이동했습니다. 우리는 올라간 것을 조금 아래로 이동시켜야 합니다. 우리는 그걸 첫 번째 단락에 최상위 여백을 설정해서 달성할 수 있습니다. 지금 다음 내용을 추가하세요:
+지금 저장하고 새로고침하면 제목이 고정되는 사소하지만, 재미난 효과를 볼 수 있으며, 스크롤 막대를 위로 올리면 콘텐츠가 드러나고 아래로 내리면 제목 밑으로 콘텐츠가 사라지는 것처럼 보입니다. 하지만 우리는 이것을 더 개선할 수 있습니다. 현재 일부 콘텐츠가 시작부터 제목에 밑에 깔려있는 부분 말입니다. 위치잡기한 제목이 문서 대열상에서 모습을 드러내지 않기 때문입니다. 그래서 나머지 콘텐츠가 맨 위로 이동했습니다. 우리는 올라간 것을 조금 아래로 이동시켜야 합니다. 우리는 그걸 첫 번째 단락에 최상위 여백을 설정해서 달성할 수 있습니다. 지금 다음 내용을 추가하세요.
 
-```
+```css
 p:nth-of-type(1) {
   margin-top: 60px;
 }
 ```
 
-당신은 이제 완성된 예제를 볼 수 있어야 합니다:
+당신은 이제 완성된 예제를 볼 수 있어야 합니다.
 
 ```html hidden
 <h1>고정 위치잡기</h1>
@@ -503,9 +503,13 @@ p:nth-of-type(1) {
 
 > **참고:** 당신은 이 시점에 예제의 실제 구현 장면을 [`6_fixed-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html)에서 볼 수 있습니다 ([소스 코드는 여기서 보세요](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html)).
 
-### position: sticky
+## 흡착 위치잡기
 
-이용할 수 있는 `position: sticky`라고 불리우는 또 다른 위치잡기 값이 있습니다. 이것은 다른 위치잡기보다 다소 새로운 것입니다. 이것은 기본적으로 상대 위치잡기와 고정 위치잡기가 혼합된 하이브리드로서, 위치잡기 요소가 특정 임계점에(예로 뷰포트의 상단으로부터 10px) 스크롤될 때까지 상대 위치잡기처럼 행동할 수 있다가 그 뒤에 위치가 고정됩니다. 예를 들어, 탐색 막대가 특정 지점까지 페이지와 함께 스크롤한 다음 페이지 상단에 흡착되도록 사용할 수 있습니다.
+이용할 수 있는 `position: sticky`라고 불리우는 또 다른 위치잡기 값이 있습니다. 이것은 다른 위치잡기보다 다소 새로운 것입니다. 이것은 기본적으로 상대 위치잡기와 고정 위치잡기가 혼합된 하이브리드로서, 위치잡기 요소가 특정 임계점에(예로 뷰포트의 상단으로부터 10px) 스크롤될 때까지 상대 위치잡기처럼 행동할 수 있다가 그 뒤에 위치가 고정됩니다.
+
+### 기본 예제
+
+예를 들어 흡착 위치잡기는 탐색 막대가 특정 지점까지 페이지와 함께 스크롤한 다음 페이지 상단에 흡착되도록 사용할 수 있습니다.
 
 ```html hidden
 <h1>흡착 위치잡기</h1>
@@ -570,9 +574,11 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('흡착_1', '100%', 200) }}
+{{ EmbedLiveSample('기본_예제', '100%', 200) }}
 
-`position: sticky`의 일반적 사용례기도 하고 흥미로운 사용례는 스크롤링하다 제목에 도달하면 서로 다른 제목이 페이지의 맨 위에 흡착되는 색인 페이지를 만드는 것입니다. 이런 사례에 대한 마크업은 다음과 같은 모습일 수 있습니다:
+### 색인 스크롤링
+
+`position: sticky`의 일반적 사용례기도 하고 흥미로운 사용례는 스크롤링하다 제목에 도달하면 서로 다른 제목이 페이지의 맨 위에 흡착되는 색인 페이지를 만드는 것입니다. 이런 사례에 대한 마크업은 다음과 같은 모습일 수 있습니다.
 
 ```html
 <h1>흡착 위치잡기</h1>
@@ -626,16 +632,6 @@ body {
   height: 1400px;
   margin: 0 auto;
 }
-
-dt {
-  background-color: black;
-  color: white;
-  padding: 10px;
-  position: sticky;
-  top: 0;
-  left: 0;
-  margin: 1em 0;
-}
 ```
 
 ```html hidden
@@ -670,7 +666,7 @@ dt {
 </dl>
 ```
 
-{{ EmbedLiveSample('흡착_2', '100%', 200) }}
+{{ EmbedLiveSample('색인_스크롤링', '100%', 200) }}
 
 > **참고:** 당신은 이 시점에 예제의 실제 구현 장면을 [`7_sticky-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html)에서 볼 수 있습니다([소스 코드는 여기서 보세요](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html)).
 

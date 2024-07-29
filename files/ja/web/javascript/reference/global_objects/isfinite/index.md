@@ -56,7 +56,7 @@ isFinite("0"); // true が返される、より堅牢性の高い
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.isFinite")}}
+{{Compat}}
 
 ## 関連情報
 

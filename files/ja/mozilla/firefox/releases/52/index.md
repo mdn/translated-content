@@ -14,7 +14,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 ### 開発者ツール
 
 - [UA の選択やネットワークの調整など、レスポンシブデザインモードを全面的に改良しました。](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)
-- [アニメーションインスペクターで、タイミング関数を表示するようになりました。](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html)
+- [アニメーションインスペクターで、イージング関数を表示するようになりました。](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html)
 - [インスペクターに CSS グリッドの調査機能を搭載しました。](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 - [about:debugging で Service Worker の状態を表示するようになりました。](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#service-worker-state)
 - [インスペクターで、選択した要素を簡単に強調表示できるようになりました。](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#element-rule)
@@ -57,7 +57,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 #### CSS グリッド
 
-- [CSS グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout) を実装しました。
+- [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout) を実装しました。
 
 #### 変更および削除
 
@@ -84,7 +84,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 - [配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#assigning_the_rest_of_an_array_to_a_variable) で、trailing comma を持つ rest parameters を使用した場合に {{jsxref("SyntaxError")}} が発生するようになりました ([Firefox バグ 1041341](https://bugzil.la/1041341))。
 - [オブジェクトの分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) で、`__proto__` プロパティの重複が可能になりました ([Firefox バグ 1204024](https://bugzil.la/1204024))。
-- {{jsxref("Array.prototype.toLocaleString()")}} を、Intl API のパラメーター "`locales`" および "`options`" をサポートするように再実装しました ([Firefox バグ 1130636](https://bugzil.la/1130636))。
+- {{jsxref("Array.prototype.toLocaleString()")}} を、Intl API の引数 "`locales`" および "`options`" をサポートするように再実装しました ([Firefox バグ 1130636](https://bugzil.la/1130636))。
 - {{jsxref("TypedArray")}} コンストラクターで、新しい typed array を生成するため [iterable](/ja/docs/Web/JavaScript/Reference/Iteration_protocols) を受け入れるようになりました ([Firefox バグ 1232266](https://bugzil.la/1232266))。
 - {{jsxref("TypedArray.from()")}}、{{jsxref("TypedArray.of()")}}、{{jsxref("TypedArray.prototype.filter()")}}、{{jsxref("TypedArray.prototype.map()")}}、{{jsxref("TypedArray.prototype.slice()")}}、{{jsxref("TypedArray.prototype.subarray()")}} が、値 `this` が有効な Typed Array のコンストラクターであることを要求するようになりました ([Firefox バグ 1122396](https://bugzil.la/1122396))。
 - 非標準の {{jsxref("ArrayBuffer.slice()")}} メソッド ({{jsxref("ArrayBuffer.prototype.slice()")}} ではありません) が非推奨になり、使用すると警告が発生します ([Firefox バグ 1316913](https://bugzil.la/1316913))。
@@ -108,7 +108,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 - `loadstart` および `loadend` イベントが {{htmlelement("img")}} 要素で発生するようになりました ([Firefox バグ 1264769](https://bugzil.la/1264769)。
 - [Notifications API](/ja/docs/Web/API/Notifications_API) の {{domxref("Notification.requireInteraction")}} を実装しました ([Firefox バグ 862395](https://bugzil.la/862395))。
 - {{domxref("Window.open()")}} メソッドで、`noopener` [ウィンドウ機能特性](/ja/docs/Web/API/Window/open#window_functionality_features) が使用可能になりました ([Firefox バグ 1267339](https://bugzil.la/1267339))。これは、`rel="noopener"` [リンクタイプ](/ja/docs/Web/HTML/Link_types) の機能を反映します。
-- [Web Components API](/ja/docs/Web/Web_Components) の {{domxref("CustomElementRegistry.get()")}} メソッドを実装しました ([Firefox バグ 1275838](https://bugzil.la/1275838))。
+- [Web Components API](/ja/docs/Web/API/Web_components) の {{domxref("CustomElementRegistry.get()")}} メソッドを実装しました ([Firefox バグ 1275838](https://bugzil.la/1275838))。
 - [Pointer Event](/ja/docs/Web/API/Pointer_events) の {{domxref("PointerEvent.width","width")}} および {{domxref("PointerEvent.height","height")}} プロパティのデフォルト値が 1 になりました ([Firefox バグ 1304315](https://bugzil.la/1304315))。
 - [最新の仕様書](https://wicg.github.io/entries-api/) における変更点を含むように、[File and Directory Entries API](/ja/docs/Web/API/File_and_Directory_Entries_API) を更新しました (詳しくは [Firefox バグ 1284987](https://bugzil.la/1284987) をご覧ください)。
 - {{domxref("UIEvent")}} で定義されていた {{domxref("Event.cancelBubble", "cancelBubble")}} プロパティが、 {{domxref("Event")}} インターフェイスで定義するようになりました。詳しくは [Firefox バグ 1298970](https://bugzil.la/1298970) をご覧ください。

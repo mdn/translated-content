@@ -57,7 +57,7 @@ console.log(formatted.join("; "));
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
 - {{jsxref("Number.prototype.toLocaleString()")}}

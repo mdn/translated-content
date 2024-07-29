@@ -7,7 +7,8 @@ slug: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 
 HTML 拖放支持拖动各种类型的数据，包括纯文本，URL，HTML 代码，文件等。该文档描述了拖放常见数据类型的最佳做法。
 
-> **警告：** 本文档中包含一个**moz**前缀的所有方法和属性 (如**mozSetDataAt()**) 是 Gecko 的具体接口。这些接口仅适用于基于 Gecko 的浏览器。
+> [!WARNING]
+> 本文档中包含一个**moz**前缀的所有方法和属性 (如**mozSetDataAt()**) 是 Gecko 的具体接口。这些接口仅适用于基于 Gecko 的浏览器。
 
 ## 拖动文字
 
@@ -42,7 +43,7 @@ To drag multiple links, you can also separate each link with a linebreak. A line
 For example:
 
 ```
-http://www.mozilla.org
+https://www.mozilla.org
 #A second link
 http://www.example.com
 ```
@@ -58,7 +59,7 @@ var url = event.dataTransfer.getData("URL");
 You may also see data using the Mozilla specific type `text/x-moz-url`. If it appears, it should be used before the `text/uri-list` type. It holds the URL of the link followed by the title of the link, separated by a linebreak. For example:
 
 ```
-http://www.mozilla.org
+https://www.mozilla.org
 Mozilla
 http://www.example.com
 Example

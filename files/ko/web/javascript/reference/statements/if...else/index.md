@@ -29,7 +29,7 @@ slug: Web/JavaScript/Reference/Statements/if...else
 ## 설명
 
 다중의 if...else 문은 else if 절을 만들기 위해 중첩될 수 있다.
-자바스크립트에서는 elseif (하나의 단어) 키워드가 존재하지 않는다.
+JavaScript에서는 elseif (하나의 단어) 키워드가 존재하지 않는다.
 
 ```js
     if (조건1)
@@ -90,7 +90,7 @@ if (cipher_char === from_char) {
 
 ### `else if` 사용하기
 
-자바스크립트에는 elseif 구문이 없다. 그러나, else if 를 사용할 수 있다.
+JavaScript에는 elseif 구문이 없다. 그러나, else if 를 사용할 수 있다.
 
 ```js
 if (x > 5) {

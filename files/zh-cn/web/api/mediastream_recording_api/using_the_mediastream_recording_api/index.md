@@ -47,7 +47,8 @@ header {
 }
 ```
 
-> **备注：** 现在的浏览器对[calc()](/zh-CN/docs/Web/CSS/calc)有着良好的支持，即使是像 IE9 那样的浏览器也可以。
+> [!NOTE]
+> 现在的浏览器对[calc()](/zh-CN/docs/Web/CSS/calc)有着良好的支持，即使是像 IE9 那样的浏览器也可以。
 
 ### 用于显示/隐藏的复选框
 
@@ -146,11 +147,12 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 - 成功回调：一旦成功完成`getUserMedia`调用，此代码就会运行。
 - 错误/失败回调：如果`getUserMedia`调用由于任何原因而失败，则代码将运行。
 
-> **备注：** 下面的所有代码都放在`getUserMedia`成功回调中。
+> [!NOTE]
+> 下面的所有代码都放在`getUserMedia`成功回调中。
 
 ## 捕获媒体流
 
-一旦`getUserMedia`成功创建了媒体流，您可以使用 MediaRecorder() 构造函数创建一个新的媒体记录器实例，并直接传递该媒体流流。这是使用 MediaRecorder API 的入口点。现在，可以使用浏览器的默认编码格式将流捕获到[Blob](/zh-CN/docs/Web/API/Blob)。
+一旦`getUserMedia`成功创建了媒体流，你可以使用 MediaRecorder() 构造函数创建一个新的媒体记录器实例，并直接传递该媒体流流。这是使用 MediaRecorder API 的入口点。现在，可以使用浏览器的默认编码格式将流捕获到[Blob](/zh-CN/docs/Web/API/Blob)。
 
 ```js
 var mediaRecorder = new MediaRecorder(stream);

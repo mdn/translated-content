@@ -1,7 +1,11 @@
 ---
-title: ウェブサイトが正しく動作することをどうやって確認する？
+title: ウェブサイトが正しく動作することを確認するには
 slug: Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly
+l10n:
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
+
+{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 この記事では、ウェブサイトのさまざまなトラブルシューティングの手順と、これらの問題を解決するための基本的な操作について説明します。
 
@@ -11,7 +15,7 @@ slug: Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_work
       <th scope="row">前提条件:</th>
       <td>
         <a
-          href="/ja/docs/Learn/Common_questions/Upload_files_to_a_web_server"
+          href="/ja/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server"
           >ウェブサーバーにファイルをアップロードする</a
         >方法を知っている必要があります。
       </td>
@@ -33,7 +37,7 @@ slug: Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_work
 
 ## アクティブラーニング
 
-_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Contribute/Getting_started)。_
+_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Community/Contributing/Getting_started)。_
 
 ## より深く掘り下げる
 
@@ -45,13 +49,13 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 個人的なウェブサイト `http://demozilla.examplehostingprovider.net/` を見てみましょう。予想していた画像ではありません。
 
-![Oops, the 'unicorn' image is missing](image-missing.png)
+![おっと、「ユニコーン」の画像がありません。](image-missing.png)
 
 Firefox のネットワークツール (**ツール ➤ ウェブ開発者 ➤ ネットワーク**) を開き、ページを再読み込みします。
 
-![The image has a 404 error](error404.png)
+![404 エラーのある画像](error404.png)
 
-一番下に「404」という問題があります。「404」は「リソースが見つかりません」という意味です。そのため、画像が表示されなかったのです。
+一番下に "404" という問題があります。 "404" は「リソースが見つからない」という意味です。そのため、画像が表示されなかったのです。
 
 #### HTTP ステータス
 
@@ -78,17 +82,17 @@ Firefox のネットワークツール (**ツール ➤ ウェブ開発者 ➤ �
 
 では何が悪かったのでしょうか？
 
-![Le list of images in our project](demozilla-images-list.png)
+![プロジェクト内の画像の一覧](demozilla-images-list.png)
 
-一見、依頼した画像は正しい場所にあるように見えますが、ネットワークツールは「404」を報告しました。それは、 HTML のコードにタイプミスがあったことが判明しました。 `unicorn_pic.png`ではなく、 `unicorn_pics.png`です。そこで、コードエディターで画像の `src` 属性を変更し、タイプミスを修正してください。
+一見、依頼した画像は正しい場所にあるように見えますが、ネットワークツールは "404" を報告しました。それは、 HTML のコードにタイプミスがあったことが判明しました。 `unicorn_pic.png`ではなく、 `unicorn_pics.png` です。そこで、コードエディターで画像の `src` 属性を変更し、タイプミスを修正してください。
 
-![Deleting the 's'](code-correct.png)
+!['s' を削除します。](code-correct.png)
 
-保存して[サーバーにプッシュし](/ja/docs/Learn/Common_questions/Upload_files_to_a_web_server)、ブラウザーでページを再読み込みします。
+保存して[サーバーにプッシュし](/ja/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)、ブラウザーでページを再読み込みします。
 
-![The image loads correctly in the browser](image-corrected.png)
+![画像はブラウザーで正しく読み込まれます。](image-corrected.png)
 
-そこに行きます！ {{Glossary("HTTP")}} ステータスをもう一度見てみましょう。
+ほら、ありました。 {{Glossary("HTTP")}} ステータスをもう一度見てみましょう。
 
 - `/` と `unicorn_pic.png` が **200** の場合は、ページと画像の再読み込みに成功したことを意味します。
 - `basic.css` の **304** は、このファイルが最後のリクエスト以降変更されていないことを意味します。したがって、ブラウザーは新しいコピーを受信するのではなく、キャッシュ内のファイルを使用できます。
@@ -103,7 +107,7 @@ Firefox のネットワークツール (**ツール ➤ ウェブ開発者 ➤ �
 
 `http://demozilla.examplehostingprovider.net/` と入力したいのですが、入力が速すぎて「l」を忘れていました。
 
-![Address unreachable](cannot-find-server.png)
+![アドレスに到達できない](cannot-find-server.png)
 
 アドレスが見つかりません。確かに。
 
@@ -117,9 +121,9 @@ Firefox のネットワークツール (**ツール ➤ ウェブ開発者 ➤ �
 
 コンソールを開き (**ツール ➤ ウェブ開発者 ➤ ウェブコンソール**)、ページを再読み込みします。
 
-![A Javascript error is shown in the Console](js-error.png)
+![JavaScript エラーがコンソールに表示されます。](js-error.png)
 
-この例では、エラーが何かを（非常に明確に）学び、それを修正することができます（[別の一連](/ja/docs/Learn/JavaScript)の記事で JavaScript について説明します）。
+この例では、エラーが何かを（非常に明確に）知り、修正することができます（[別の一連](/ja/docs/Learn/JavaScript)の記事で JavaScript について説明します）。
 
 ### その他の事項を確認する
 
@@ -127,7 +131,7 @@ Firefox のネットワークツール (**ツール ➤ ウェブ開発者 ➤ �
 
 #### パフォーマンスはどうですか？
 
-ページの読み込みは十分速いですか？ [WebPageTest.org](http://www.webpagetest.org/) のようなリソースや [YSlow](https://github.com/marcelduran/yslow) のようなブラウザーアドオンをしようすることで、いくつか興味深いことが分かります。
+ページの読み込みは十分速いですか？ [WebPageTest.org](https://www.webpagetest.org/) のようなリソースや [YSlow](https://github.com/marcelduran/yslow) のようなブラウザーアドオンをしようすることで、いくつか興味深いことが分かります。
 
 ![Yslow diagnostics](yslow-diagnostics.png)
 
@@ -137,7 +141,7 @@ Firefox のネットワークツール (**ツール ➤ ウェブ開発者 ➤ �
 
 `ping` は指定したドメイン名をテストし、サーバーが応答しているかどうかを知らせる便利なシェルツールです。
 
-```
+```plain
 $ ping mozilla.org
 PING mozilla.org (63.245.215.20): 56 data bytes
 64 bytes from 63.245.215.20: icmp_seq=0 ttl=44 time=148.741 ms
@@ -150,7 +154,7 @@ PING mozilla.org (63.245.215.20): 56 data bytes
 round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
 ```
 
-便利なキーボードショートカット、すなわち **Ctrl+C** を覚えておいてください。Ctrl+C はランタイムに「割り込み」信号を送り、停止するように伝えます。ランタイムを停止しないと、`ping` は サーバーに無期限に ping を実行します。
+便利なキーボードショートカット、すなわち **Ctrl+C** を覚えておいてください。 Ctrl+C はランタイムに「割り込み」信号を送り、停止するように伝えます。ランタイムを停止しないと、`ping` は サーバーに無期限に ping を実行します。
 
 ### 簡単なチェックリスト
 
@@ -162,5 +166,5 @@ round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
 
 おめでとうございます、ウェブサイトは誰もが訪れることができるようになっています。それは大きな成果です。これで、さまざまなテーマに深く掘り下げていくことができます。
 
-- 人々は世界中からあなたのウェブサイトに来ることができるので、あなたはそれを[誰にでもアクセス可能](/ja/docs/Learn/Common_questions/What_is_accessibility)にすることを考慮すべきです。
+- 人々は世界中からあなたのウェブサイトに来ることができるので、あなたはそれを[誰にでもアクセス可能](/ja/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility)にすることを考慮すべきです。
 - ウェブサイトのデザインは少し荒すぎますか？ [CSS についてもっと学ぶ](/ja/docs/Learn/CSS/First_steps/How_CSS_works)時が来ました。

@@ -3,7 +3,7 @@ title: Date.prototype.setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`setSeconds()`** 方法根据本地时间设置一个日期对象的秒数。
 
@@ -51,7 +51,7 @@ theBigDay.setSeconds(30);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getSeconds()")}}
 - {{jsxref("Date.prototype.setUTCSeconds()")}}

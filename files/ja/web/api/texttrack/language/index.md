@@ -20,7 +20,7 @@ l10n:
 以下の例では、 `language` の値がコンソールに表示されます。
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en-US");
 track.mode = "showing";
 console.log(track.language);

@@ -40,7 +40,7 @@ recognition.onresult = function (event) {
 
 ## ブラウザーの実装状況
 
-{{Compat("api.SpeechRecognitionAlternative")}}
+{{Compat}}
 
 ### Firefox OS の許可設定
 

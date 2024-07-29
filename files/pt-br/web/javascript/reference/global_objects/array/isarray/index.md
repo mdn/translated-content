@@ -3,7 +3,7 @@ title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Sumário
 
@@ -62,14 +62,11 @@ if (!Array.isArray) {
 
 ## Especificações
 
-| Especificação                                              | Status             | Comentário                                           |
-| ---------------------------------------------------------- | ------------------ | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.3.2', 'Array.isArray')}}    | {{Spec2('ES5.1')}} | Definição Inicial. Implementado em JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-array.isarray', 'Array.isArray')}} | {{Spec2('ES6')}}   |                                                      |
+{{Specifications}}
 
 ## Compatibilidade com o Browser
 
-{{Compat("javascript.builtins.Array.isArray")}}
+{{Compat}}
 
 ## Veja Também
 

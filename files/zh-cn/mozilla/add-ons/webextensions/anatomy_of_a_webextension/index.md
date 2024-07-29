@@ -47,7 +47,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 与此同时，你也可以先引入一个后台页面，再在后台页面中引入脚本。这样做能为后台脚本添加 ES 6 模块支持，算是一个优势。
 
-**manifest.json**
+manifest.json 的内容如下：
 
 ```json
 // manifest.json
@@ -57,7 +57,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 }
 ```
 
-**background-page.html**
+background-page.html 的内容如下：
 
 ```html
 <!doctype html>
@@ -83,7 +83,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 #### 跨域访问
 
-后台脚本可以向任何拥有[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#%E4%B8%BB%E6%9C%BA%E6%9D%83%E9%99%90)的主机发送 XHR 请求。
+后台脚本可以向任何拥有[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)的主机发送 XHR 请求。
 
 #### 网页内容
 
@@ -97,7 +97,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 ## 侧边栏，弹出窗口，选项页面
 
-您的扩展程序可以包含各种用户界面组件，其内容通过 HTML 文件来定义：
+你的扩展程序可以包含各种用户界面组件，其内容通过 HTML 文件来定义：
 
 - [侧边栏](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)是一个面板，它被显示在浏览器窗口左侧，就在网页旁边。
 - [弹出窗口](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)是一个对话框，可以在用户单击[工具栏按钮](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action)或[地址栏按钮](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)时显示该对话框。
@@ -109,7 +109,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 ## 扩展页面
 
-您也可以在扩展中包含 HTML 文档，这些文档不附加到某个预定义的用户界面组件。与您可能为侧边栏，弹出窗口或选项页面提供的文档不同，它们在 manifest.json 中没有条目。但是，他们也可以像在后台脚本那样拥有一样的权限去使用 WebExtension API。
+你也可以在扩展中包含 HTML 文档，这些文档不附加到某个预定义的用户界面组件。与你可能为侧边栏，弹出窗口或选项页面提供的文档不同，它们在 manifest.json 中没有条目。但是，他们也可以像在后台脚本那样拥有一样的权限去使用 WebExtension API。
 
 你通常可以使用 {{WebExtAPIRef("windows.create()")}} 或 {{WebExtAPIRef("tabs.create()")}}加载一个页面。
 

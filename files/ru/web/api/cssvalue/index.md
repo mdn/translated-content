@@ -22,15 +22,15 @@ slug: Web/API/CSSValue
     | `CSS_PRIMITIVE_VALUE` | The value is a primitive value and an instance of the {{domxref("CSSPrimitiveValue")}} interface can be obtained by using binding-specific casting methods on this instance of the `CSSValue` interface. |
     | `CSS_VALUE_LIST`      | The value is a `CSSValue` list and an instance of the {{domxref("CSSValueList")}} interface can be obtained by using binding-specific casting methods on this instance of the `CSSValue` interface.      |
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("CSSPrimitiveValue")}}
 - {{domxref("CSSValueList")}}

@@ -1,8 +1,9 @@
 ---
-title: CSSPropertyRule.name
+title: "CSSPropertyRule: name プロパティ"
+short-title: name
 slug: Web/API/CSSPropertyRule/name
 l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{APIRef("CSS Properties and Values API")}}
@@ -11,7 +12,7 @@ l10n:
 
 ## 値
 
-A string.
+文字列です。
 
 ## 例
 

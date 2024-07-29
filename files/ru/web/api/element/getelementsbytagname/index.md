@@ -39,6 +39,6 @@ for (var i = 0; i < cells.length; i++) {
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}

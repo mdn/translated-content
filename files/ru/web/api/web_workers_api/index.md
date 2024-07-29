@@ -24,7 +24,7 @@ Worker (работник, воркер) - это объект созданный
 - Воркеры в Chrome - это воркеры специального типа Firefox, которые вы можете использовать, если вы разрабатываете надстройки и хотите использовать воркеры в расширениях и иметь доступ к js-ctypes в вашем воркере. Смотрите также {{domxref("ChromeWorker")}}.
 - [Audio Workers](/ru/docs/Web/API/Web_Audio_API#Audio_Workers)(аудио воркеры) обеспечивают возможность прямой обработки аудиозаписей в рамках веб-контекста воркера.
 
-> **Примечание:** В соответствии с [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), события ошибок воркеров не должны "всплывать" (смотрите {{bug(1188141)}}. Такое поведение было реализовано в Firefox 42.
+> **Примечание:** В соответствии с [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), события ошибок воркеров не должны "всплывать" (смотрите [Firefox bug 1188141](https://bugzil.la/1188141). Такое поведение было реализовано в Firefox 42.
 
 ## Интерфейсы Web воркера
 

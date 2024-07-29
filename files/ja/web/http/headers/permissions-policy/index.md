@@ -35,7 +35,7 @@ Permissions-Policy: <directive> <allowlist>
   - : 許可リストは、以下の値のうち 1 つ以上を取るオリジンの空白区切りのリストです。
 
     - `*`: この機能は、この文書と、含まれるすべての閲覧コンテキスト (iframe) でオリジンに関係なく許可されます。
-    - `()`: (空の許可リスト): この機能は最上位および含まれる閲覧コンテキストで向こうになります。
+    - `()`: (空の許可リスト): この機能は最上位および含まれる閲覧コンテキストで無効になります。
     - `self`: この機能は、この文書と、含まれるすべての閲覧コンテキスト (iframe) のうち、同じオリジンのものに許可されます。
     - `src`: (iframe の `allow` 属性のみ) この iframe に読み込まれた文書が iframe の {{HTMLElement('iframe','src','#Attributes')}} 属性の URL と同じオリジンから来ている限り、この機能はこの iframe で許可されます。
 
@@ -47,7 +47,8 @@ Permissions-Policy: <directive> <allowlist>
 
     機能はそれぞれ、既定の許可リストを持つよう定義されています。
 
-    > **メモ:** ディレクティブにはデフォルトの allowlist があり、 `Permissions-Policy` HTTP ヘッダーでは常に `*`, `self` または `none` になります。これらは個々の[ディレクティブのリファレンスページ](#ディレクティブ)で指定されています。 `<iframe>` の `allow` 属性では、デフォルトの動作は常に `src` です。
+    > [!NOTE]
+    > ディレクティブにはデフォルトの allowlist があり、 `Permissions-Policy` HTTP ヘッダーでは常に `*`, `self` または `none` になります。これらは個々の[ディレクティブのリファレンスページ](#ディレクティブ)で指定されています。 `<iframe>` の `allow` 属性では、デフォルトの動作は常に `src` です。
 
 ブラウザーがサポートしている場合、許可リストで複数の異なるサブドメインを明示的に指定する代わりに許可ポリシーのオリジンにワイルドカードを含めることができます。
 
@@ -63,7 +64,7 @@ Permissions-Policy: <directive> <allowlist>
 ("https://example.com" "https://*.example.com")
 ```
 
-> **Note:** `"https://*.example.com"` は `"https://example.com"` とは別のオリジンになります。
+> **メモ:** `"https://*.example.com"` は `"https://example.com"` とは別のオリジンになります。
 
 ## ディレクティブ
 

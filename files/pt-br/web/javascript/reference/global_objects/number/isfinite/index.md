@@ -54,14 +54,11 @@ Number.isFinite =
 
 ## Especificações
 
-| Specification                                                       | Status               | Comment             |
-| ------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-number.isfinite', 'Number.isInteger')}}     | {{Spec2('ES6')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-number.isfinite', 'Number.isInteger')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.isFinite")}}
+{{Compat}}
 
 ## Veja também
 

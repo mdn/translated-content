@@ -7,11 +7,13 @@ l10n:
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-> **メモ:** このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 **`hasExternalDisplay`** は {{domxref("VRDisplayCapabilities")}} インターフェイスの読み取り専用プロパティで、VR ディスプレイがこの端末の主ディスプレイから分離しているどうかを示す論理値を返します。
 
-> **メモ:** 表示中の VR コンテンツがその端末の他のコンテンツを隠してしまう場合 `false` を返します。この場合、アプリは VR コンテンツのミラーリングしようとしたり、 VR ではない UI を更新しようとすべきではありません。こうしたコンテンツは表示されないからです。
+> [!NOTE]
+> 表示中の VR コンテンツがその端末の他のコンテンツを隠してしまう場合 `false` を返します。この場合、アプリは VR コンテンツのミラーリングしようとしたり、 VR ではない UI を更新しようとすべきではありません。こうしたコンテンツは表示されないからです。
 
 ## 値
 
@@ -33,5 +35,4 @@ l10n:
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームが提供するデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

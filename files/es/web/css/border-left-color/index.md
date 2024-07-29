@@ -3,6 +3,8 @@ title: border-left-color
 slug: Web/CSS/border-left-color
 ---
 
+{{CSSRef}}
+
 ### Resumen
 
 `border-left-color` pone el color del borde izquierdo de un elemento,con el valor de el color en hexadecimal o con palabras clave, como azul, verde, rojo `transparente`.
@@ -11,7 +13,7 @@ slug: Web/CSS/border-left-color
 - Se aplica a : todos los elementos
 - {{ Xref_cssinherited() }}: no
 - Porcentajes: N/A
-- Media: {{ Xref_cssvisual() }}
+- Media: {{cssxref("Media/Visual", "visual")}}
 - {{ Xref_csscomputed() }}: cuando son tomados de la propiedad 'color',los valores computarizados de 'color'; de otra manera como sean especificados.
 
 ### Sintaxis

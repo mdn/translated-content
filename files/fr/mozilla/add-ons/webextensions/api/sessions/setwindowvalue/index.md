@@ -3,7 +3,7 @@ title: sessions.setWindowValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/setWindowValue
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Stocke une paire clé / valeur à associer à une fenêtre donnée. Vous pouvez ensuite récupérer cette valeur en utilisant {{WebExtAPIRef("sessions.getWindowValue")}}.
 

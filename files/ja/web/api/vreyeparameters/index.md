@@ -9,11 +9,13 @@ l10n:
 
 **`VREyeParameters`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のインターフェイスで、指定した目のためにシーンを正しくレンダリングするためのすべての情報（視界の情報を含む）を表します。
 
-> **メモ:** このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 このインターフェイスは {{domxref("VRDisplay.getEyeParameters()")}} メソッドを通じてアクセスできます。
 
-> **警告:** このインターフェイスは、ビューおよび投影行列を計算するために使用すべきではありません。ハードウェアの互換性を可能な限り確保するために、{{domxref("VRFrameData")}} で指定された行列を使用してください。
+> [!WARNING]
+> このインターフェイスは、ビューおよび投影行列を計算するために使用すべきではありません。ハードウェアの互換性を可能な限り確保するために、{{domxref("VRFrameData")}} で指定された行列を使用してください。
 
 ## インスタンスプロパティ
 
@@ -32,17 +34,17 @@ l10n:
 navigator.getVRDisplays().then((displays) => {
   // If a display is available, use it to present the scene
   vrDisplay = displays[0];
-  console.log('Display found');
+  console.log("Display found");
   // Starting the presentation when the button is clicked:
   //   It can only be called in response to a user gesture
-  btn.addEventListener('click', () => {
+  btn.addEventListener("click", () => {
     vrDisplay.requestPresent([{ source: canvas }]).then(() => {
-      console.log('Presenting to WebVR display');
+      console.log("Presenting to WebVR display");
 
       // Set the canvas size to the size of the vrDisplay viewport
 
-      const leftEye = vrDisplay.getEyeParameters('left');
-      const rightEye = vrDisplay.getEyeParameters('right');
+      const leftEye = vrDisplay.getEyeParameters("left");
+      const rightEye = vrDisplay.getEyeParameters("right");
 
       canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
       canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);
@@ -65,5 +67,4 @@ navigator.getVRDisplays().then((displays) => {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームが提供するデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

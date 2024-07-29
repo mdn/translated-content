@@ -45,7 +45,7 @@ O elemento `g` é um recipiente utilizado para agrupar objetos. Transformações
 
 ### Atributos específicos
 
-_There is no specific attributes_
+_There is no specific attributes._
 
 ## Interface DOM
 
@@ -53,4 +53,4 @@ Este elemento implementa a interface do [`SVGGElement`](/pt-BR/docs/DOM/SVGGElem
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.g")}}
+{{Compat}}

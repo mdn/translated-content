@@ -3,7 +3,7 @@ title: devtools.panels.ExtensionSidebarPane.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onShown
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsque le volet latéral devient visible suite à un changement d'utilisateur.
 

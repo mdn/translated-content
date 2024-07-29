@@ -19,7 +19,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 var score = 0;
 ```
 
-您还需要一个 `drawScore()` 函数来创建和更新分数显示。在 `collisionDetection()` 函数之后添加以下内容：
+你还需要一个 `drawScore()` 函数来创建和更新分数显示。在 `collisionDetection()` 函数之后添加以下内容：
 
 ```js
 function drawScore() {
@@ -99,10 +99,11 @@ function collisionDetection() {
 
 {{JSFiddleEmbed("https://jsfiddle.net/yumetodo/2m74vr9r/1/","","395")}}
 
-> **备注：** 在每一个砖头击破后添加更多的分数，打印出收集到的点数在游戏结束警告框中。
+> [!NOTE]
+> 在每一个砖头击破后添加更多的分数，打印出收集到的点数在游戏结束警告框中。
 
 ## 下一节
 
-游戏到这一步看起来相当不错。在下一课中，您将通过添加鼠标控件来扩大游戏的吸引力：[Mouse controls](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch/Mouse_controls).。
+游戏到这一步看起来相当不错。在下一课中，你将通过添加鼠标控件来扩大游戏的吸引力：[Mouse controls](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch/Mouse_controls).。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}

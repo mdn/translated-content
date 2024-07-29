@@ -24,7 +24,7 @@ l10n:
 ### JavaScript
 
 - {{jsxref("Array.fromAsync()")}} 静的メソッドをサポートしました。
-  このメソッドは [非同期反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols)、[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)、あるいは [配列のような](/ja/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) オブジェクトから、新たにシャローコピーした `Array` のインスタンスを非同期に返します ([Firefox bug 1795816](https://bugzil.la/1795816))。
+  このメソッドは [非同期反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)、[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)、あるいは [配列のような](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い) オブジェクトから、新たにシャローコピーした `Array` のインスタンスを非同期に返します ([Firefox bug 1795816](https://bugzil.la/1795816))。
 - `Array` および `TypedArray` メソッドで [`Array.toReversed()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed)、[`Array.toSorted()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted)、[`Array.toSpliced()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced)、[`Array.with()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/with)、[`TypedArrays.toReversed()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toReversed)、[`TypedArrays.toSorted()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toSorted)、[`TypedArrays.with()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/with) をサポートしました。
   これらのメソッドは、シャローコピーされた要素を持つ新しい配列を返します (`to` 接頭辞がつかない似た名前のメソッドは、配列の要素を直接変更します) ([Firefox bug 1811057](https://bugzil.la/1811057))。
 
@@ -44,7 +44,7 @@ l10n:
 - [`URL.canParse()`](/ja/docs/Web/API/URL/canParse_static) 静的メソッドを使用して、絶対 URL または相対 URL とベース URL の解析や検証が可能になりました。
   これは `try...catch` ブロックや例外処理で構築するよりも高速かつ簡単に、URL が有効であるかを確認する手段を提供します ([Firefox bug 1823354](https://bugzil.la/1823354))。
 - [`URLSearchParams.has()`](/ja/docs/Web/API/URLSearchParams/has) および [`URLSearchParams.delete()`](/ja/docs/Web/API/URLSearchParams/delete) メソッドで、省略可能な引数 `value` をサポートしました。
-  これは `name` および `value` の両方で検索パラメーターとマッチングさせることができ、同じ名前で複数の検索パラメーターを持つクエリー文字列を操作できます ([Firefox bug 1831587](https://bugzil.la/1831587))。
+  これは `name` および `value` の両方で検索引数と照合させることができ、同じ名前で複数の検索引数を持つクエリー文字列を操作できます ([Firefox bug 1831587](https://bugzil.la/1831587))。
 
 #### 廃止
 

@@ -3,7 +3,7 @@ title: webRequest.onResponseStarted
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onResponseStarted
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsque le premier octet du corps de réponse est reçu.
 

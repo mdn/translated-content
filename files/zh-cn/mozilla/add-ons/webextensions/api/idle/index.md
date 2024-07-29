@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/idle
 
 找出用户系统何时处于空闲，锁定或活动状态。
 
-要使用此 API，您需要具有“空闲”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
+要使用此 API，你需要具有“空闲”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
 ## 类型
 

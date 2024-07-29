@@ -21,7 +21,7 @@ SVG 的 {{ SVGElement("image") }} 元素允许在一个 SVG 对象内部呈现�
 </svg>
 ```
 
-这里有一些重要的事情需要注意（引用自[W3 规范文档](http://www.w3.org/TR/SVG/struct.html#ImageElement)）：
+这里有一些重要的事情需要注意（引用自 [W3 规范文档](http://www.w3.org/TR/SVG/struct.html#ImageElement)）：
 
 - 如果你没有设置 x 属性或 y 属性，它们自动被设置为 0。
 - 如果你没有设置 height 属性或 width 属性，它们自动被设置为 0。

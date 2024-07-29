@@ -3,7 +3,7 @@ title: sidebarAction.ImageDataType
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/ImageDataType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Données de pixel pour une image. Doit être un objet [`ImageData`](/fr/docs/Web/API/ImageData) (par exemple, à partir d'un élément {{htmlelement("canvas")}}).
 

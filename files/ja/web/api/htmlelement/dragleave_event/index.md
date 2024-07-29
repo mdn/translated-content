@@ -83,14 +83,14 @@ body {
 
 ```js
 const target = document.getElementById("droptarget");
-target.addEventListener("dragenter", event => {
+target.addEventListener("dragenter", (event) => {
   // ドラッグ可能な要素がドロップ先に入ったときに、ドロップ先の候補を強調表示する。
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.add("dragover");
   }
 });
 
-target.addEventListener("dragleave", event => {
+target.addEventListener("dragleave", (event) => {
   // ドラッグ可能な要素がドロップ先から離れたときに、ドロップ先の候補の背景をリセットする
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.remove("dragover");

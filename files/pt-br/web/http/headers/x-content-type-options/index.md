@@ -45,13 +45,11 @@ X-Content-Type-Options: nosniff
 
 ## Especificações
 
-| Especificação                                                                                | Status             | Comentário        |
-| -------------------------------------------------------------------------------------------- | ------------------ | ----------------- |
-| {{SpecName("Fetch", "#x-content-type-options-header", "X-Content-Type-Options definition")}} | {{Spec2("Fetch")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.X-Content-Type-Options")}}
+{{Compat}}
 
 ## Veja também
 

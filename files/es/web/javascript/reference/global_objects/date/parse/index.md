@@ -3,7 +3,7 @@ title: Date.parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 ---
 
-{{JSRef("Objetos_globales", "Date")}}
+{{JSRef}}
 
 ## Resumen
 

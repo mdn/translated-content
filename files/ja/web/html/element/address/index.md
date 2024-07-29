@@ -32,8 +32,11 @@ l10n:
 ```html
 <address>
   作者の連絡先は
-  <a href="http://www.somedomain.com/contact"> www.somedomain.com</a> です。<br />
-  バグを発見した場合は<a href="mailto:webmaster@somedomain.com">ウェブマスターへご連絡ください</a>。<br />
+  <a href="http://www.somedomain.com/contact"> www.somedomain.com</a>
+  です。<br />
+  バグを発見した場合は<a href="mailto:webmaster@somedomain.com"
+    >ウェブマスターへご連絡ください</a
+  >。<br />
   住所は下記の通りです。<br />
   Mozilla Foundation<br />
   331 E Evelyn Ave<br />

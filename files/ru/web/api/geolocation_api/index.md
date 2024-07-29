@@ -42,10 +42,6 @@ API геолокации может быть вызвано через {{domxref
 - {{domxref("PositionOptions")}}
   - : Предоставляет объект, содержащий опции, которые можно передать как параметр в {{domxref("Geolocation.getCurrentPosition()")}} и {{domxref("Geolocation.watchPosition()")}}.
 
-## Примеры
-
-{{page("/ru/docs/Web/API/Geolocation_API/Using","Examples")}}
-
 ## Спецификации
 
 {{Specifications}}

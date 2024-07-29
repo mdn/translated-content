@@ -27,7 +27,8 @@ canMakePayment()
 
 {{domxref('PaymentRequest.PaymentRequest()','PaymentRequest')}} コンストラクターを使用してリクエストをインスタンス化する際に、ユーザーエージェントが提供した決済手段のいずれかに対応していれば `true` に解決する {{jsxref("Promise")}} を論理値に変換します．決済を処理できない場合、プロミスは `false` の値を受け取ります。
 
-> **メモ:** これを何度も呼び出すと、ブラウザーは返されるプロミスを `DOMException` で拒否するかもしれません。
+> [!NOTE]
+> これを何度も呼び出すと、ブラウザーは返されるプロミスを `DOMException` で拒否するかもしれません。
 
 ## 例
 
@@ -47,7 +48,7 @@ async function initPaymentRequest() {
 
   const supportsApplePay = new PaymentRequest(
     [{ supportedMethods: "https://apple.com/apple-pay" }],
-    details
+    details,
   ).canMakePayment();
 
   // Supports Apple Pay?
@@ -59,7 +60,7 @@ async function initPaymentRequest() {
   // Otherwise, let's see if we can use Example Pay
   const supportsExamplePay = await new PaymentRequest(
     [{ supportedMethods: "https://example.com/pay" }],
-    details
+    details,
   ).canMakePayment();
 
   if (supportsExamplePay) {

@@ -3,7 +3,7 @@ title: Date.prototype.getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`getUTCDate()`** 方法以世界时为标准，返回一个指定的日期对象为一个月中的第几天
 
@@ -42,7 +42,7 @@ var day = today.getUTCDate();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getDate()")}}
 - {{jsxref("Date.prototype.getUTCDay()")}}

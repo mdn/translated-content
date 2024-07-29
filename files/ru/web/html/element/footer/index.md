@@ -44,7 +44,7 @@ slug: Web/HTML/Element/footer
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

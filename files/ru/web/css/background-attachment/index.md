@@ -14,7 +14,7 @@ slug: Web/CSS/background-attachment
 ## Синтаксис
 
 ```css
-/* Ключевые значения */
+/* Ключевые слова */
 background-attachment: scroll;
 background-attachment: fixed;
 background-attachment: local;
@@ -107,7 +107,7 @@ p {
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

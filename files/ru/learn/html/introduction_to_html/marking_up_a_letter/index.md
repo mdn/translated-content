@@ -13,7 +13,7 @@ slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 
 ## Отправная точка
 
-Для начала задания, вы должны [скачать текст](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt), который вам надо отформатировать, и [CSS стиль](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt), который вы должны подключить к вашему HTML. Создайте .html файл используя текстовый редактор, которым вы пользуетесь (или воспользуйтесь онлайн редакторами, таким как [JSBin](http://jsbin.com/) или [Thimble](https://thimble.mozilla.org/)).
+Для начала задания, вы должны [скачать текст](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt), который вам надо отформатировать, и [CSS стиль](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt), который вы должны подключить к вашему HTML. Создайте .html файл используя текстовый редактор, которым вы пользуетесь (или воспользуйтесь онлайн редакторами, такими как [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/)).
 
 ## Описание проекта
 
@@ -60,15 +60,3 @@ slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 Если вам дали это задание на каком-то курсе, просто передайте свою страницу для проверки преподавателю. Если вы учитесь сами, обратитесь на [форум, в тему этого задания](https://discourse.mozilla.org/t/marking-up-a-letter-assignment/24676), или по тегу [#mdn](irc://irc.mozilla.org/mdn) в нашем IRC-канале ([Mozilla IRC](https://wiki.mozilla.org/IRC)). Сделайте это задание сами — вам некого обманывать, кроме себя самого.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}
-
-## В этом модуле
-
-- [Начало работы с HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B)
-- [Что такое заголовок? Метаданные в HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/The_head_metadata_in_HTML)
-- [Основы редактирования текста в HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/HTML_text_fundamentals)
-- [Создание гиперссылок](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B3%D0%B8%D0%BF%D0%B5%D1%80%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA)
-- [Углублённое форматирование текста](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Advanced_text_formatting)
-- [Структура документа и веб-сайта](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0_%D0%B8_%D0%B2%D0%B5%D0%B1-%D1%81%D0%B0%D0%B9%D1%82%D0%B0)
-- [Отладка HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Debugging_HTML)
-- [Разметка письма](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Marking_up_a_letter)
-- [Структурируем страницу](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Structuring_a_page_of_content)

@@ -69,7 +69,7 @@ var uintc8 = new Uint8ClampedArray(iterable);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Uint8ClampedArray.Uint8ClampedArray")}}
+{{Compat}}
 
 ### 互換性メモ
 

@@ -70,7 +70,7 @@ Range: bytes=0-499, -500
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Range")}}
+{{Compat}}
 
 ## 関連情報
 

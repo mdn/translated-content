@@ -9,7 +9,8 @@ l10n:
 
 以下は、ドラッグ & ドロップ操作が行われる時の各段階についての解説です。
 
-> **メモ:** この文書で記述されているドラッグ操作は {{domxref("DataTransfer")}} インターフェイスを使用します。この文書では {{domxref("DataTransferItem")}} インターフェイスや {{domxref("DataTransferItemList")}} インターフェイスは説明*しません*。
+> [!NOTE]
+> この文書で記述されているドラッグ操作は {{domxref("DataTransfer")}} インターフェイスを使用します。この文書では {{domxref("DataTransferItem")}} インターフェイスや {{domxref("DataTransferItemList")}} インターフェイスは説明*しません*。
 
 ## draggable 属性
 
@@ -33,7 +34,7 @@ HTML では、画像、リンク、選択範囲の上での既定の動作を除
 const draggableElement = document.querySelector('p[draggable="true"]');
 
 draggableElement.addEventListener("dragstart", (event) =>
-  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます")
+  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます"),
 );
 ```
 
@@ -41,7 +42,8 @@ draggableElement.addEventListener("dragstart", (event) =>
 
 [`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) 属性は画像やリンクを含めてあらゆる要素に設定できます。ただし、画像とリンクについてだけは既定値が `true`となっていますので、実際にこれらの要素で使う場合は、要素をドラッグできないようにするために [`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) 属性に `false` を設定するという場合がほとんどでしょう。
 
-> **メモ:** 要素がドラッグ可能になった場合、文字列やその要素に含まれている他の要素が、マウスによるクリックやドラッグなどの通常の操作では選択する事ができなくなることに注意してください。ユーザーが文字列を選択するには、通常の操作の代わりに、 <kbd>Alt</kbd> キーを押しながらマウスで選択するか、キーボードで操作を行う必要があります。
+> [!NOTE]
+> 要素がドラッグ可能になった場合、文字列やその要素に含まれている他の要素が、マウスによるクリックやドラッグなどの通常の操作では選択する事ができなくなることに注意してください。ユーザーが文字列を選択するには、通常の操作の代わりに、 <kbd>Alt</kbd> キーを押しながらマウスで選択するか、キーボードで操作を行う必要があります。
 
 ## ドラッグ操作の開始
 
@@ -54,7 +56,7 @@ draggableElement.addEventListener("dragstart", (event) =>
 ```js
 const draggableElement = document.querySelector('p[draggable="true"]');
 draggableElement.addEventListener("dragstart", (event) =>
-  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます")
+  event.dataTransfer.setData("text/plain", "このテキストはドラッグができます"),
 );
 ```
 
@@ -307,7 +309,7 @@ function doDrop(event) {
     "text/plain",
   ];
   const types = event.dataTransfer.types.filter((type) =>
-    supportedTypes.includes(type)
+    supportedTypes.includes(type),
   );
   if (types.length) {
     const data = event.dataTransfer.getData(types[0]);

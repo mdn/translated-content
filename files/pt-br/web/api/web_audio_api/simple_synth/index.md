@@ -526,7 +526,7 @@ Então conseguimos o tipo de forma de onda para usar ao checar o valor do contro
 
 A frequência do oscilador é colocada no valor especificado no paramêtro `freq` ao colocar o valor dos objetos {{domxref("Oscillator.frequency")}} {{domxref("AudioParam")}} . Então, enfim, o oscilador é iniciado e começa a produzir sons ao chamar o método {{domxref("AudioScheduledSourceNode.start()")}} .
 
-#### Tocando um tom
+#### Tocando uma nota
 
 Quando o evento {{event("mousedown")}} ou {{domxref("mouseover")}} ocorre em uma tecla, queremos que toque a nota correspondente. A função `notePressed()` é usada como o modificador de eventos para esses eventos.
 

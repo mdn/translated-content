@@ -5,9 +5,9 @@ slug: WebAssembly/Understanding_the_text_format
 
 {{WebAssemblySidebar}}
 
-사람이 WebAssembly를 읽고 편집 할 수 있게하려면 wasm 이진 형식의 텍스트 표현이 있어야합니다. 이것은 텍스트 편집기, 브라우저 개발자 도구 등에서 노출되도록 고안된 중간 양식입니다.이 장에서는 원시 구문과 텍스트 형식이 나타내는 기본 바이트 코드와 관련하여 Text format이 작동하는 방식과 자바 스크립트에서 wasm을 나타내는 객체 래퍼에 대해 설명합니다.
+사람이 WebAssembly를 읽고 편집 할 수 있게하려면 wasm 이진 형식의 텍스트 표현이 있어야합니다. 이것은 텍스트 편집기, 브라우저 개발자 도구 등에서 노출되도록 고안된 중간 양식입니다.이 장에서는 원시 구문과 텍스트 형식이 나타내는 기본 바이트 코드와 관련하여 Text format이 작동하는 방식과 JavaScript에서 wasm을 나타내는 객체 래퍼에 대해 설명합니다.
 
-> **참고:** 여기서 다루는 내용은 여러분이 웹어셈블리를 자바스크립트에 바로 불러오는 이전의 방법보다 훨씬 어렵습니다.([웹어셈블리를 자바스크립트 API에 사용하기](/ko/docs/WebAssembly/Using_the_JavaScript_API) 참고), 하지만 여기서 배우는 내용을 통해 웹어셈블리 모듈을 작성해보면, 자바스크립트 라이브러리의 성능을 향상시킬수 있는 방법을 찾거나, 직접 웹어셈블리 컴파일러를 작성하는데 도움이 될 것입니다.
+> **참고:** 여기서 다루는 내용은 여러분이 웹어셈블리를 JavaScript에 바로 불러오는 이전의 방법보다 훨씬 어렵습니다.([웹어셈블리를 JavaScript API에 사용하기](/ko/docs/WebAssembly/Using_the_JavaScript_API) 참고), 하지만 여기서 배우는 내용을 통해 웹어셈블리 모듈을 작성해보면, JavaScript 라이브러리의 성능을 향상시킬수 있는 방법을 찾거나, 직접 웹어셈블리 컴파일러를 작성하는데 도움이 될 것입니다.
 
 ## S-expressions
 
@@ -49,7 +49,7 @@ webassembly 모듈의 모든 코드는 다음과 같은 의사 코드 구조를 
 ```
 
 - **명칭**(**signature**)은 함수에서 (인자를)받고 (반환 값)반환하는 형식을 정의합니다.
-- **지역인수**(**locals**)는 자바스크립트의 변수 같지만, 명시적으로 형식을 정의합니다.
+- **지역인수**(**locals**)는 JavaScript의 변수 같지만, 명시적으로 형식을 정의합니다.
 - **본문**(**body**)은 저수준 정의를 일렬로 나열한 목록입니다.
 
 좀 다르게 보여도 다른 언어의 함수와 비슷합니다.
@@ -218,7 +218,7 @@ WebAssembly.instantiateStreaming(fetch("call.wasm")).then((obj) => {
 
 > **참고:** 이 예제는 GitHub에서 [call.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/call.html)로 찾을 수 있습니다 ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/call.html)).
 
-### 자바스크립트에 함수 가져오기
+### JavaScript에 함수 가져오기
 
 우리는 이미 JavaScript에서 WebAssembly 함수를 호출하는 것을 보았습니다. 그러나 JavaScript 함수를 호출하는 WebAssembly는 어떻습니까? WebAssembly에는 실제로 JavaScript에 대한 기본 지식이 없지만 JavaScript 또는 Wasm 함수를 사용할 수있는 함수를 가져 오는 일반적인 방법이 있습니다. 예제를 살펴 보겠습니다.
 

@@ -55,7 +55,7 @@ slug: Web/SVG/Element/a
 
 ## DOM 接口
 
-该元素实现了[`SVGAElement`](/zh-CN/docs/DOM/SVGAElement)接口。
+该元素实现了 [`SVGAElement`](/zh-CN/docs/DOM/SVGAElement) 接口。
 
 ## 浏览器兼容性
 

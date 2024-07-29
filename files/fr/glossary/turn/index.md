@@ -3,6 +3,8 @@ title: TURN
 slug: Glossary/TURN
 ---
 
+{{GlossarySidebar}}
+
 **TURN** (Traversal Using Relays around NAT) est un {{Glossary("protocol","protocole")}} permettant à un ordinateur de recevoir et d'envoyer des données malgré l'utilisation de {{glossary("NAT", "translation d'adresse réseau")}} (NAT) ou le fait d'être derrière un pare-feu.
 
 ## Voir aussi

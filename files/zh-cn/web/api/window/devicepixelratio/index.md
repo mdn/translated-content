@@ -9,7 +9,7 @@ slug: Web/API/Window/devicePixelRatio
 
 当处理标准显示器与 HiDPI 或 Retina 显示器之间的差异时，这很有用，后者使用更多的屏幕像素绘制相同的对象，从而获得更清晰的图像。
 
-您可以使用{{domxref("Window.matchMedia", "window.matchMedia()")}} 检查`devicePixelRatio`的值是否发生更改（例如，如果用户将窗口拖动到带有 不同的像素密度）。请参阅[下面的例子](#监视屏幕分辨率或缩放级别的更改)。
+你可以使用{{domxref("Window.matchMedia", "window.matchMedia()")}} 检查`devicePixelRatio`的值是否发生更改（例如，如果用户将窗口拖动到带有 不同的像素密度）。请参阅[下面的例子](#监视屏幕分辨率或缩放级别的更改)。
 
 ## 语法
 
@@ -88,7 +88,7 @@ const updatePixelRatio = () => {
 
 updatePixelRatio();
 
-matchMedia(mqString).addListener(updatePixelRatio);
+matchMedia(mqString).addEventListener("change", updatePixelRatio);
 ```
 
 字符串`mqString`设置为媒体查询本身。媒体查询以`(resolution: 1dppx)`（对于标准显示）或`(resolution: 2dppx)`（对于 Retina / HiDPI 显示）开始，检查当前显示分辨率是否与每个像素`px`的实际设备像素点匹配。

@@ -1,6 +1,8 @@
 ---
 title: text-combine-upright
 slug: Web/CSS/text-combine-upright
+l10n:
+  sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
 ---
 
 {{CSSRef}}
@@ -8,6 +10,10 @@ slug: Web/CSS/text-combine-upright
 **`text-combine-upright`** は [CSS](/ja/docs/Web/CSS) のプロパティで、一文字分の空間に挿入する文字の組み合わせを設定します。組み合わせたテキストが 1em の幅より広い場合、ユーザーエージェントはコンテンツを 1em の幅に収めなければなりません。合成結果は、レイアウトおよび装飾においてグリフ一文字として扱われます。このプロパティは、縦書きモードでのみ効果があります。
 
 これは、日本語の縦中横、中国語の <i lang="zh-CN">直書橫向</i> として知られる効果をもたらすために使用されます。
+
+{{EmbedInteractiveExample("pages/css/text-combine-upright.html")}}
+
+## 構文
 
 ```css
 /* キーワード値 */
@@ -22,10 +28,9 @@ text-combine-upright: digits 4; /* 4 桁までの数字を垂直テキスト内�
 text-combine-upright: inherit;
 text-combine-upright: initial;
 text-combine-upright: revert;
+text-combine-upright: revert-layer;
 text-combine-upright: unset;
 ```
-
-## 構文
 
 ### 値
 
@@ -46,31 +51,7 @@ text-combine-upright: unset;
 
 ## 例
 
-### digits
-
-digits 値は、数字の桁を組み合わせる際に all の値よりもマークアップが少なくてすみますが、対応しているブラウザーはあまり多くありません。
-
-#### HTML
-
-```html
-<p lang="ja" class="exampleText">平成20年4月16日に</p>
-```
-
-#### CSS
-
-```css
-.exampleText {
-  writing-mode: vertical-lr;
-  text-combine-upright: digits 2;
-  font: 36px serif;
-}
-```
-
-#### 結果
-
-{{EmbedLiveSample("Digits", 100, 350, "tate-chu-yoko.png")}}
-
-### all
+### 横書きテキストでの 'all' の使用
 
 all の値は、水平テキストにするすべての部分にマークアップする必要があります。現在、これは digits 値よりも多くのブラウザーが対応しています。
 
@@ -99,7 +80,7 @@ html {
 
 #### 結果
 
-{{EmbedLiveSample("All", 250, 300, "text-combine-upright-all.png")}}
+{{EmbedLiveSample('横書きテキストでの "all" の使用', 250, 200)}}
 
 ## 仕様書
 

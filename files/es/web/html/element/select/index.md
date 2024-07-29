@@ -34,7 +34,8 @@ Este elemento incluye [global attributes](/es/docs/Web/HTML/Global_attributes).
 - `size`
   - : Si el control se presenta como una lista con scroll en caja, este atributo representa el numero de filas que la list tendrá visible la primera vez. Los navegadores no están requeridos a presentar un elemento select como una lista con escroll en caja. El valor por defecto es cero.
 
-> **Nota:** De acuerdo con las especificaciones de HTML5, el tamaño por defecto debe ser 1; sin embargo, en la práctica, esto hace que se rompan algunas páginas webs, y ningun otro navegador actualmente hace esto, así que Mozilla ha optado por continuar usando 0 desde que empezó con Firefox.
+> [!NOTE]
+> De acuerdo con las especificaciones de HTML5, el tamaño por defecto debe ser 1; sin embargo, en la práctica, esto hace que se rompan algunas páginas webs, y ningun otro navegador actualmente hace esto, así que Mozilla ha optado por continuar usando 0 desde que empezó con Firefox.
 
 ## DOM Interface
 
@@ -71,6 +72,6 @@ El siguiente ejemplo muestra como simular una lista con opciones editables, pero
 
 ## Ver también
 
-- Otros elementos relacionados de formularios: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+- Otros elementos relacionados de formularios: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 
 {{HTMLSidebar}}

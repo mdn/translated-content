@@ -25,7 +25,8 @@ JavaScript では、命令は{{Glossary("Statement", "文")}} (statement) と呼
 
 文が単独の行で書かれている場合、文の後にセミコロンは必要ではありません。しかし、行の中に複数の文が必要な場合は、セミコロンで区切る*必要*があります。
 
-> **メモ:** ECMAScript も文末に自動的にセミコロンを挿入するルールがあります ([ASI](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#自動セミコロン挿入))。（詳しくは、JavaScript の [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar)についての詳細なリファレンスを参照してください。）
+> [!NOTE]
+> ECMAScript も文末に自動的にセミコロンを挿入するルールがあります ([ASI](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#自動セミコロン挿入))。（詳しくは、JavaScript の [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar)についての詳細なリファレンスを参照してください。）
 
 必須ではないとしても、文の後に常にセミコロンを記述することをお勧めします。これによって、コード中にバグが発生する機会を減らすことができます。
 
@@ -57,7 +58,8 @@ JavaScript のソーステキストは左から右にスキャンされ、_ト�
 
 コメントはホワイトスペースのように扱われ、スクリプトの実行から除外されます。
 
-> **メモ:** 一部の JavaScript ファイルの先頭で、`#!/usr/bin/env node` のような第三の種類のコメントを見かけることもあるかもしれません。
+> [!NOTE]
+> 一部の JavaScript ファイルの先頭で、`#!/usr/bin/env node` のような第三の種類のコメントを見かけることもあるかもしれません。
 >
 > これは**ハッシュバンコメント**構文と呼ばれ、スクリプトの実行に使用したい特定の JavaScript エンジンへのパスを指定するのに使用される特殊なコメントです。詳しくは[ハッシュバンコメント](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#ハッシュバンコメント)を参照してください。
 
@@ -299,7 +301,8 @@ z = "37" + 7; // "377"
 
 `parseInt` は整数のみを返すので、小数は切り捨てられます。
 
-> **メモ:** さらに、`parseInt` を使う最も良い方法は、常に基数を引数に含めるようにすることです。基数の引数は使用されている*基数*法を指定するのに使われます。
+> [!NOTE]
+> さらに、`parseInt` を使う最も良い方法は、常に基数を引数に含めるようにすることです。基数の引数は使用されている*基数*法を指定するのに使われます。
 
 ```js
 parseInt("101", 2); // 5
@@ -307,9 +310,9 @@ parseInt("101", 2); // 5
 
 文字列から数値を取り出す代替手段は、`+` (単項プラス) 演算子を使う方法です。
 
-```js
-'1.1' + '1.1'; // '1.11.1'
-(+'1.1') + (+'1.1'); // 2.2
+```js-nolint
+"1.1" + "1.1"; // "1.11.1"
+(+"1.1") + (+"1.1"); // 2.2
 // 注: 括弧は明確さのために追加したもので、必須ではありません
 ```
 
@@ -336,7 +339,8 @@ const coffees = ["French Roast", "Colombian", "Kona"];
 
 最上位のスクリプト内でリテラルを用いて配列を作成した場合、JavaScript は配列リテラルを含む式を評価するたびに配列を解釈します。さらに関数内で使用されたリテラルは、関数が呼び出されるたびに生成されます。
 
-> **メモ:** 配列リテラルは `Array` オブジェクトを生成します。`Array` オブジェクトの詳細は {{jsxref("Array")}} と[インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)をご覧ください。
+> [!NOTE]
+> 配列リテラルは `Array` オブジェクトを生成します。`Array` オブジェクトの詳細は {{jsxref("Array")}} と[インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)をご覧ください。
 
 #### 配列リテラルでの余分なカンマ
 
@@ -397,7 +401,8 @@ const myList = ["home", /* 空 */, "school", /* 空 */, ];
 
 論理型は 2 つのリテラル値、`true` と `false` があります。
 
-> **メモ:** プリミティブの論理型である `true` や `false` と、{{jsxref("Boolean")}} オブジェクトの `true` や `false` という値とを混同してはいけません。
+> [!NOTE]
+> プリミティブの論理型である `true` や `false` と、{{jsxref("Boolean")}} オブジェクトの `true` や `false` という値とを混同してはいけません。
 >
 > Boolean オブジェクトは、プリミティブの論理型のラッパーです。詳細は {{jsxref("Boolean")}} を参照してください。
 
@@ -458,7 +463,8 @@ JavaScript で数値リテラルには、様々な形の整数リテラルと、
 
 オブジェクトリテラルとは、プロパティ名とそれに関連付けられたオブジェクトの値との 0 個以上の組が波括弧 (`{}`) で囲まれたもので作られたリストです。
 
-> **警告:** オブジェクトリテラルを文の先頭で使わないようにしてください。 `{` がブロックの始まりと解釈されるため、エラー（または予期せぬ動作）を引き起こすことになります。
+> [!WARNING]
+> オブジェクトリテラルを文の先頭で使わないようにしてください。 `{` がブロックの始まりと解釈されるため、エラー（または予期せぬ動作）を引き起こすことになります。
 
 以下にオブジェクトリテラルの例を示します。`car` オブジェクトの最初の要素には `myCar` プロパティが定義され、新規文字列 `"Saturn"` が割り当てられています。2 番目の要素、`getCar` プロパティには関数 `(carTypes("Honda"))`; によって呼び出された結果が即座に割り当てられます。3 番目の要素、`special` プロパティには既存の変数 (`sales`) が使われています。
 
@@ -541,7 +547,7 @@ const re = /ab+c/;
 
 以下が文字列リテラルの例です。
 
-```js
+```js-nolint
 'foo';
 "bar";
 '1234';
@@ -572,7 +578,8 @@ console.log("Joyo's cat".length); // この場合は 10 が出力される。
  quoted strings cannot.`;
 
 // 文字列補完
-const name = 'Lev', time = 'today';
+const name = "Lev",
+  time = "today";
 `Hello ${name}, how are you ${time}?`;
 ```
 
@@ -708,7 +715,7 @@ console.log(str); // この文字列は複数行にわたって分解されま�
 - [制御フローとエラー処理](/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - [ループと反復処理](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [関数](/ja/docs/Web/JavaScript/Guide/Functions)
-- [式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
 次章では、制御フローの構造とエラー処理について見ていきます。
 

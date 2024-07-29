@@ -31,7 +31,7 @@ Proxy-Authenticate: Basic realm="Access to internal site"
 
 ## ブラウザー互換性
 
-{{Compat("http.status.407")}}
+{{Compat}}
 
 ## 参照
 

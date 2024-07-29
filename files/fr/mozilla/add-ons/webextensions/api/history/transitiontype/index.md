@@ -3,7 +3,7 @@ title: history.TransitionType
 slug: Mozilla/Add-ons/WebExtensions/API/history/TransitionType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Ceci décrit comment le navigateur a navigué vers une page particulière. Par exemple, "lien" signifie que le navigateur a navigué vers la page parce que l'utilisateur a cliqué sur un lien
 

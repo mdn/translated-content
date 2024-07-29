@@ -19,7 +19,8 @@ mask-image: linear-gradient(rgba(0, 0, 0, 1), transparent);
 mask-image: image(url(mask.png), skyblue);
 
 /* 多个属性值 */
-mask-image: image(url(mask.png), skyblue), linear-gradient(rgba(0, 0, 0, 1), transparent);
+mask-image: image(url(mask.png), skyblue),
+  linear-gradient(rgba(0, 0, 0, 1), transparent);
 
 /* 全局属性值 */
 mask-image: inherit;
@@ -65,4 +66,4 @@ mask-image: unset;
 ## 参见
 
 - [CSS 中的裁剪和遮罩](https://css-tricks.com/clipping-masking-css/)
-- [使用 CSS 的 mask-image 属性对图像应用效果](https://web.dev/css-masking/)
+- [使用 CSS 的 mask-image 属性对图像应用效果](https://web.dev/articles/css-masking)

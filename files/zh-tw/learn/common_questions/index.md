@@ -19,7 +19,7 @@ slug: Learn/Common_questions
   - : 結合 {{Glossary("Hypertext")}} 與 {{Glossary("HTTP")}}，URL 是最重要的網路概念之一。它是被 {{Glossary("Browser","browsers")}} 用來獲取發佈到網路的任何資源的機制。
 - [網域名稱是什麼？](/zh-TW/docs/Learn/Common_questions/What_is_a_domain_name)
   - : 網域名稱是網際網路基礎架構中關鍵的一部份，它提供指向網際網路上可被找到的網路伺服器一個可被人讀懂的地址。
-- [網路伺服器是什麼？](/zh-TW/docs/Learn/Common_questions/What_is_a_web_server)
+- [網路伺服器是什麼？](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
   - : 「網路伺服器」指能橫跨網路將網站提供給用戶端的硬體或軟體——或是軟硬體結合。這篇文章探討網路伺服器怎麼運作，以及為何它很重要。
 - [超連結是什麼？](/zh-TW/docs/Learn/Common_questions/What_are_hyperlinks)
   - : 這篇文章中，我們會學到超連結是什麼，以及為何它很重要。
@@ -44,9 +44,9 @@ slug: Learn/Common_questions
   - : 這篇文章示範如何透過 [FTP](/zh-TW/docs/Glossary/FTP) 工具將你的網站發佈到網路上——這是將網站放到線上，讓別人可從他們的電腦存取的常見方式之一。
 - [如何使用 GitHub 頁面？](/zh-TW/docs/Learn/Common_questions/Using_GitHub_Pages)
   - : 這篇文章提供如何透過 Github 頁面發佈內容的基礎指南。
-- [如何在 Google App Engine 上架設網站？](/zh-TW/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine)
+- [如何在 Google App Engine 上架設網站？](/zh-TW/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine)
   - : 想找個地方架設你的網站嗎？這是一篇手把手教你在 Google App Engine 上架設網站的指南。
-- [為網站除錯及改良效能需要什麼工具？](/zh-TW/docs/Tools/Performance)
+- [為網站除錯及改良效能需要什麼工具？](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
   - : 本系列文章教你如何用 Firefox 開發者工具來除錯與改良網站效能，將會運用工具來檢視記憶體使用量、JavaScript Call Tree、被渲染的 DOM 節點數及其它東西。
 
 ## 設計與網頁親和力

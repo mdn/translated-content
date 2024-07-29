@@ -33,7 +33,7 @@ l10n:
 <p id="source">
   <style>
     #source {
-       color: red;
+      color: red;
     }
     #text {
       text-transform: uppercase;

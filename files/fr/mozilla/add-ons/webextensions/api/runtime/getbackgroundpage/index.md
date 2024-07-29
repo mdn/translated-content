@@ -3,7 +3,7 @@ title: runtime.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Récupère l'objet [`Window`](/fr/docs/Web/API/Window) pour la page d'arrière-plan qui s'exécute dans l'extension en cours.
 

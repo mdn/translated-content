@@ -33,6 +33,6 @@ padding-bottom
 
 `clientTop` 首次出现于 MS IE DHTML 对象模型中。
 
-## 相关链接
+## 参见
 
 - [MSDN: Measuring Element Dimension and Location](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)

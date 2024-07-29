@@ -56,7 +56,7 @@ Location: /index.html
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Location")}}
+{{Compat}}
 
 ## Veja também
 

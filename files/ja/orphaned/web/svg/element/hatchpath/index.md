@@ -53,7 +53,7 @@ slug: orphaned/Web/SVG/Element/hatchpath
 
 ## ブラウザーの互換性
 
-{{Compat("svg.elements.hatchpath")}}
+{{Compat}}
 
 ## 関連情報
 

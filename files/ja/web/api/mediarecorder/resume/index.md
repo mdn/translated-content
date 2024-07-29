@@ -45,7 +45,7 @@ pause.onclick = () => {
     mediaRecorder.resume();
     // 記録を再開
   }
-}
+};
 ```
 
 ## 仕様書

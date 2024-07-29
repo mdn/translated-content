@@ -39,7 +39,8 @@ new Promise((resolveOuter) => {
 
 此 Promise 在创建时已经被解决（因为 `resolveOuter` 是同步调用的），但它是用另一个 Promise 解决的，因此在内部 Promise 兑现的 1 秒之后才会*被兑现*。在实践中，“解决”过程通常是在幕后完成的，不可观察，只有其兑现或拒绝是可观察的。
 
-> **备注：** 其他几种语言也有一些机制来实现惰性求值和延迟计算，它们也称之为“promise”，例如 Scheme。在 JavaScript 中，Promise 代表已经在进行中的进程，而且可以通过回调函数实现链式调用。如果你想要实现惰性求值，考虑使用不带参数的函数，例如 `f = () => expression` 来创建惰性求值表达式，然后使用 `f()` 立即求值。
+> [!NOTE]
+> 其他几种语言也有一些机制来实现惰性求值和延迟计算，它们也称之为“promise”，例如 Scheme。在 JavaScript 中，Promise 代表已经在进行中的进程，而且可以通过回调函数实现链式调用。如果你想要实现惰性求值，考虑使用不带参数的函数，例如 `f = () => expression` 来创建惰性求值表达式，然后使用 `f()` 立即求值。
 
 ### Promise 的链式调用
 
@@ -62,7 +63,7 @@ myPromise
 
 即使 `.then()` 缺少返回 Promise 对象的回调函数，处理程序仍会继续到链的下一个链式调用。因此，在最终的 `.catch()` 之前，可以安全地省略每个链式调用中处理*已拒绝*状态的回调函数。
 
-在每个 `.then()` 中处理被拒绝的 Promise 对于 Promise 链的下游有重要的影响。有时候别无选择，因为有的错误必须立即被处理。在这种情况下，必须抛出某种类型的错误以维护链中的错误状态。另一方面，在没有迫切需要的情况下，最好将错误处理留到最后一个 `.catch()` 语句。`.catch()` 其实就是一个没有为 Promise 时的回调函数留出空位的 `.then()`。
+在每个 `.then()` 中处理被拒绝的 Promise 对于 Promise 链的下游有重要的影响。有时候别无选择，因为有的错误必须立即被处理。在这种情况下，必须抛出某种类型的错误以维护链中的错误状态。另一方面，在没有迫切需要的情况下，最好将错误处理留到最后一个 `.catch()` 语句。`.catch()` 其实就是一个没有为 Promise 兑现时的回调函数留出空位的 `.then()`。
 
 ```js
 myPromise
@@ -88,7 +89,8 @@ myPromise
   });
 ```
 
-> **备注：** 为了更快的执行，最好将所有同步操作都放在一个处理程序中，否则如果将它们拆分为多个处理程序，执行所有处理程序将需要几个时钟周期。
+> [!NOTE]
+> 为了更快的执行，最好将所有同步操作都放在一个处理程序中，否则如果将它们拆分为多个处理程序，执行所有处理程序将需要几个时钟周期。
 
 一个 Promise 的终止条件决定了链中下一个 Promise 的“已敲定”状态。“已兑现”状态表示 Promise 成功完成，而“已拒绝”状态表示 Promise 执行失败。链中每个已兑现的 Promise 的返回值会传递给下一个 `.then()`，而已拒绝的 Promise 会把失败原因传递给链中下一个拒绝处理函数。
 
@@ -172,7 +174,7 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
 
 ## 静态属性
 
-- {{jsxref("Promise/@@species", "Promise[@@species]")}}
+- [`Promise[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species)
   - : 返回用于构造从 Promise 方法返回值的构造函数。
 
 ## 静态方法
@@ -199,8 +201,8 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
 
 - {{jsxref("Object/constructor", "Promise.prototype.constructor")}}
   - : 创建实例对象的构造函数。对于 `Promise` 实例，初始值为 {{jsxref("Promise/Promise", "Promise")}} 构造函数。
-- `Promise.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串 `"Promise"`。该属性用于 {{jsxref("Object.prototype.toString()")}}。
+- `Promise.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串 `"Promise"`。该属性用于 {{jsxref("Object.prototype.toString()")}}。
 
 ## 实例方法
 
@@ -431,7 +433,8 @@ btn.addEventListener("click", testPromise);
 
 在上面的示例中，`<iframe>` 仅在现有设置对象被追踪时才会被更新。这是因为在不追踪的情况下，我们可能会使用错误的环境发送消息。
 
-> **备注：** 目前，Firefox 完全实现了现有领域追踪，Chrome 和 Safari 仅部分实现。
+> [!NOTE]
+> 目前，Firefox 完全实现了现有领域追踪，Chrome 和 Safari 仅部分实现。
 
 ## 规范
 
@@ -446,5 +449,5 @@ btn.addEventListener("click", testPromise);
 - [`core-js` 中 `Promise` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-promise)
 - [使用 promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
 - [Promises/A+ 规范](https://promisesaplus.com/)
-- [JavaScript Promises：简介](https://web.dev/promises/)
+- [JavaScript Promise：简介](https://web.dev/articles/promises)
 - [Domenic Denicola：回调、Promise 和协程——JavaScript 中的异步编程模式](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)

@@ -258,7 +258,7 @@ ls | wc -l
 
 Comme `ls` affiche chaque fichier ou répertoire sur une nouvelle ligne, on obtient bien le compte des répertoires et des fichiers.
 
-Comment ça marche ? Le comportement général des outils de ligne de commande (unix) consiste à afficher du texte dans le terminal (ce qu'on appelle aussi "imprimer sur la sortie standard (standard input)" ou `STDOUT`). Un bon nombre de commandes peuvent aussi lire du contenu à partir d'un flux d'entrée (appelé "entrée standard (standard input)" ou `STDIN`).
+Comment ça marche ? Le comportement général des outils de ligne de commande (unix) consiste à afficher du texte dans le terminal (ce qu'on appelle aussi "imprimer sur la sortie standard (standard output)" ou `STDOUT`). Un bon nombre de commandes peuvent aussi lire du contenu à partir d'un flux d'entrée (appelé "entrée standard (standard input)" ou `STDIN`).
 
 L'opérateur pipe peut _connecter_ ces entrées et sorties, ce qui nous permet de construire des opérations de plus en plus complexes selon nos besoins — la sortie d'une commande devient l'entrée de la commande suivante. Dans le cas présent, `ls` enverrait normalement sa sortie sur `STDOUT`, mais au lieu de cela la sortie de `ls` est passée par un pipe à `wc`, qui la prend en entrée, compte ses lignes et imprime ce décompte sur `STDOUT`.
 

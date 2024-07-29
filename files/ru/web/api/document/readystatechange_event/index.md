@@ -3,7 +3,7 @@ title: readystatechange
 slug: Web/API/Document/readystatechange_event
 ---
 
-{{ApiRef}}
+{{APIRef}}
 
 Событие `readystatechange` срабатывает, когда изменяется атрибут документа [`readyState`](/ru/docs/DOM/document.readyState).
 
@@ -47,9 +47,9 @@ document.onreadystatechange = function () {
 };
 ```
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
-Данное событие давно поддерживается Internet Explorer и может быть использовано в качестве альтернативы событию [`DOMContentLoaded`](/ru/docs/Web/Events/DOMContentLoaded) (см. примечание \[2] в разделе [Поддержка браузерами](/ru/docs/Web/Events/DOMContentLoaded#Поддержка_браузерами)).
+{{Compat}}
 
 ## Связанные события
 

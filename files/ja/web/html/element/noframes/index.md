@@ -24,7 +24,7 @@ l10n:
 この例には、 2 つのフレームを持つフレームセットがあります。加えて、 `<noframes>` を使用して{{Glossary("user agent","ユーザーエージェント")}}がフレームに対応していない場合には説明メッセージを表示します。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <!-- Document metadata goes here -->

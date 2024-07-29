@@ -33,7 +33,7 @@ slug: Web/SVG/Element/feMorphology
 
 ## 例
 
-<h3 id="Filtering_SVG_content">SVG コンテンツのフィルタリング</h3>
+### SVG コンテンツのフィルタリング
 
 #### SVG
 
@@ -68,9 +68,9 @@ text {
 }
 ```
 
-{{EmbedLiveSample("Filtering_SVG_content", 340, 180)}}
+{{EmbedLiveSample("SVG コンテンツのフィルタリング", 340, 180)}}
 
-<h3 id="Filtering_HTML_content">HTML コンテンツのフィルタリング</h3>
+### HTML コンテンツのフィルタリング
 
 #### SVG
 
@@ -107,7 +107,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample("Filtering_HTML_content", 340, 180)}}
+{{EmbedLiveSample("HTML コンテンツのフィルタリング", 340, 180)}}
 
 ## 仕様書
 

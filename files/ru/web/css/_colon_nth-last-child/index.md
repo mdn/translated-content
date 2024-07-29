@@ -74,7 +74,7 @@ tr:nth-last-child(-n + 3) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

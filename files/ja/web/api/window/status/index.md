@@ -10,7 +10,8 @@ slug: Web/API/Window/status
 ## 構文
 
 ```js
-window.status = string; var value = window.status;
+window.status = string;
+var value = window.status;
 ```
 
 ## 仕様書

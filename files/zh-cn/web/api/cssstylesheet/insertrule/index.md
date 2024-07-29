@@ -7,7 +7,8 @@ slug: Web/API/CSSStyleSheet/insertRule
 
 **`CSSStyleSheet.insertRule()`** 方法用来给当前样式表插入新的样式规则（[CSS rule](/zh-CN/docs/Web/API/CSSRule)），并且包含一些[限制](#限制)。
 
-> **备注：** 尽管 `insertRule()` 是 {{domxref("CSSStyleSheet")}} 的一个方法，但它实际插入的地方是 `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` 的内部 {{domxref("CSSRuleList")}}。
+> [!NOTE]
+> 尽管 `insertRule()` 是 {{domxref("CSSStyleSheet")}} 的一个方法，但它实际插入的地方是 `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` 的内部 {{domxref("CSSRuleList")}}。
 
 ## 语法
 
@@ -21,8 +22,8 @@ stylesheet.insertRule(rule [, index])
 
   - : 一个包含了将要插入的规则的 {{domxref("DOMString")}}。规则字符串必须包含的内容取决于它的类型：
 
-    - **[rule-sets](/zh-CN/docs/Web/CSS/Syntax#CSS_statements) 类型**（普通带有选择器的规则）**，**需要[选择器](/zh-CN/docs/Web/Guide/CSS/Getting_Started/Selectors)和样式声明；
-    - **[at-rules](/zh-CN/docs/Web/CSS/At-rule) 类型**（以 `@` 开头的规则，如 `@import, @media` 等）**，**需要 at-identifier 和规则内容。
+    - **[rule-set](/zh-CN/docs/Web/CSS/Syntax#css_语句) 类型**（普通带有选择器的规则），需要[选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)和样式声明；
+    - **[at-rule](/zh-CN/docs/Web/CSS/At-rule) 类型**（以 `@` 开头的规则，如 `@import, @media` 等），需要 at-identifier 和规则内容。
 
 - `index` {{optional_inline}}
   - : 一个小于或等于 `stylesheet.cssRules.length` 的正整数，表示新插入的规则在`{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` 中的位置。默认值是 `0`。（在过去的实现中，这个参数是必需的，详情参见[浏览器兼容性](#浏览器兼容性)。）
@@ -164,7 +165,7 @@ function addStylesheetRules(decls) {
 
 另外注意非标准的 [`removeRule()`](http://www.quirksmode.org/dom/w3c_css.html#change) 和 [`.rules`](http://www.quirksmode.org/dom/w3c_css.html#access) 方法分别用 {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} 和{{domxref("CSSStyleSheet",".cssRules")}} 代替。
 
-## 相关链接
+## 参见
 
 - {{domxref("CSSStyleSheet.deleteRule")}}
 - [Cross-Browser CSS-rules ordering (CSS1)](http://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority)

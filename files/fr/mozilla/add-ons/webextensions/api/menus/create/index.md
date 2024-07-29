@@ -3,7 +3,7 @@ title: menus.create()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Crée un nouvel élément de menu, avec un objet d'options définissant les propriétés de l'élément.
 

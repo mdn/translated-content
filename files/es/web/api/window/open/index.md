@@ -409,7 +409,7 @@ The purpose is to warn users in advance of context changes to minimize confusion
 
 When extreme changes in context are explicitly identified before they occur, then the users can determine if they wish to proceed or so they can be prepared for the change: not only they will not be confused or feel disoriented, but more experienced users can better decide how to open such links (in a new window or not, in the same window, in a new tab or not, in "background" or not).
 
-**References**
+**References:**
 
 - "If your link spawns a new window, or causes another windows to 'pop up' on your display, or move the focus of the system to a new FRAME or Window, then the nice thing to do is to tell the user that something like that will happen." [World Wide Web Consortium Accessibility Initiative regarding popups](http://www.w3.org/WAI/wcag-curric/sam77-0.htm)
 - "Use link titles to provide users with a preview of where each link will take them, before they have clicked on it." [Ten Good Deeds in Web Design](http://www.useit.com/alertbox/991003.html), Jakob Nielsen, October 1999

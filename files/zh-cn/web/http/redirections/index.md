@@ -1,6 +1,8 @@
 ---
 title: HTTP 的重定向
 slug: Web/HTTP/Redirections
+l10n:
+  sourceCommit: f2f16cd329788046c2ee97097377d7529983c742
 ---
 
 {{HTTPSidebar}}
@@ -18,7 +20,7 @@ slug: Web/HTTP/Redirections
 
 浏览器在接收到重定向时，它们会立刻加载 `Location` 标头中提供的新 URL。除了额外的往返操作中会有一小部分性能损失之外，重定向操作对于用户来说是不可见的。
 
-![初始请求从客户端发送到服务器。服务器以 301:moved permanently 响应，并带有重定向的 URL。客户端对服务器返回的新 URL 发出 GET 请求，服务端返回 200 OK 响应。](httpredirect.png)
+![初始请求从客户端发送到服务器。服务器以 301:moved permanently 响应，并带有重定向的 URL。客户端对服务器返回的新 URL 发出 GET 请求，服务端返回 200 OK 响应。](httpredirect.svg)
 
 不同类型的重定向映射可以划分为三个类别：
 
@@ -122,7 +124,8 @@ window.location = "https://example.com/";
 
 你并不想因此而使旧链接失效，因为它们会为你带来宝贵的用户并且帮助优化你的 SEO，所以需要建立从旧链接到新链接的重定向映射。
 
-> **备注：** 即便是这项技术可以同样应用于内部链接，但是应该尽量避免内部重定向映射。重定向机制会带来相当大的性能开销（额外的 HTTP 请求）。所以如果你可以通过修复链接来避免的话，那么就应该将其修复。
+> [!NOTE]
+> 即便是这项技术可以同样应用于内部链接，但是应该尽量避免内部重定向映射。重定向机制会带来相当大的性能开销（额外的 HTTP 请求）。所以如果你可以通过修复链接来避免的话，那么就应该将其修复。
 
 ### 对于不安全请求的临时响应
 
@@ -134,7 +137,7 @@ window.location = "https://example.com/";
 
 ### 对于耗时请求的临时响应
 
-一些请求的处理会需要比较长的时间，比如有时候 {{HTTPHeader("DELETE")}} 请求会被安排为稍后处理。在这种情况下，会返回一个 {{HTTPStatus("303")}}（See Other）重定向响应，该响应链接到一个页面，表示请求的操作已经被列入计划，并且最终会通知用户操作的进展情况，或者允许用户将其取消。
+一些请求的处理会需要比较长的时间，比如有时候 {{HTTPMethod("DELETE")}} 请求会被安排为稍后处理。在这种情况下，会返回一个 {{HTTPStatus("303")}}（See Other）重定向响应，该响应链接到一个页面，表示请求的操作已经被列入计划，并且最终会通知用户操作的进展情况，或者允许用户将其取消。
 
 ## 在通用服务器中配置重定向
 
@@ -144,7 +147,7 @@ window.location = "https://example.com/";
 
 [mod_alias](https://httpd.apache.org/docs/current/mod/mod_alias.html) 模块提供了 `Redirect` 和 `Redirect_Match` 两种指令来设置 {{HTTPStatus("302")}} 响应（默认值）：
 
-```xml
+```apacheconf
 <VirtualHost *:443>
   ServerName example.com
   Redirect / https://www.example.com
@@ -155,15 +158,15 @@ URL `https://example.com/` 会被重定向至 `https://www.example.com/`，URL �
 
 `Redirect_Match` 指令的功能与之类似，不同之处在于它可以通过[正则表达式](/zh-CN/docs/Glossary/Regular_expression)来指定一批受影响的 URL：
 
-```plain
-RedirectMatch ^/images/(.*)$ http://images.example.com/$1
+```apacheconf
+RedirectMatch ^/images/(.*)$ https://images.example.com/$1
 ```
 
 位于 `images/` 文件夹下的所有文档都会被重定向至新的域名。
 
 如果你不想要临时重定向，可以使用额外参数（要么使用的 HTTP 状态代码，要么设置 `permanetn` 关键字）来设置不同的重定向：
 
-```plain
+```apacheconf
 Redirect permanent / https://www.example.com
 # …acts the same as:
 Redirect 301 / https://www.example.com
@@ -175,7 +178,7 @@ Redirect 301 / https://www.example.com
 
 在 Nginx 中，你可以创建一个服务器模块来进行重定向设置：
 
-```plain
+```nginx
 server {
   listen 80;
   server_name example.com;
@@ -185,9 +188,9 @@ server {
 
 要将重定向应用于目录或者仅是部分页面，请使用 `rewrite` 指令：
 
-```plain
-rewrite ^/images/(.*)$ http://images.example.com/$1 redirect;
-rewrite ^/images/(.*)$ http://images.example.com/$1 permanent;
+```nginx
+rewrite ^/images/(.*)$ https://images.example.com/$1 redirect;
+rewrite ^/images/(.*)$ https://images.example.com/$1 permanent;
 ```
 
 ### IIS
@@ -206,7 +209,7 @@ rewrite ^/images/(.*)$ http://images.example.com/$1 permanent;
 
 而 Chrome 则会呈现如下信息：
 
-> 该网页将您重定向的次数过多。
+> 该网页将你重定向的次数过多。
 
 无论哪个场景，用户对此都无能为力（除非客户端发生突变，比如说缓存或者 Cookie 不匹配）。
 

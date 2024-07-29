@@ -7,7 +7,7 @@ slug: Web/CSS/transition
 
 ## Summary
 
-**`transition`** [CSS](/en/CSS)속성은 {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }} 과 {{ cssxref("transition-delay") }}를 위한 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다. 이 속성으로 엘리먼트의 두 가지 상태 사이에 변화를 줄 수 있습니다. 엘리먼트의 각 상태는 [가상 클래스](/ko/docs/Web/CSS/Pseudo-classes) 를 사용해 정의된 {{cssxref(":hover")}} 이나 {{cssxref(":active")}} 또는 자바스크립트를 사용해 동적으로 만들어진 것들입니다.
+**`transition`** [CSS](/en/CSS)속성은 {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }} 과 {{ cssxref("transition-delay") }}를 위한 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다. 이 속성으로 엘리먼트의 두 가지 상태 사이에 변화를 줄 수 있습니다. 엘리먼트의 각 상태는 [가상 클래스](/ko/docs/Web/CSS/Pseudo-classes) 를 사용해 정의된 {{cssxref(":hover")}} 이나 {{cssxref(":active")}} 또는 JavaScript를 사용해 동적으로 만들어진 것들입니다.
 
 {{cssinfo}}
 

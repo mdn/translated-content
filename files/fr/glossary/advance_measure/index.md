@@ -1,7 +1,11 @@
 ---
 title: Chasse
 slug: Glossary/Advance_measure
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
+
+{{GlossarySidebar}}
 
 La **chasse** (ou **avance**) est l'espace total occupé par le glyphe, horizontalement ou verticalement, selon la direction d'écriture actuelle. Elle est égale à la distance parcourue par le curseur, placé directement devant puis décalé derrière le caractère.
 
@@ -10,3 +14,5 @@ Ce terme est utilisé dans la définition d'un certain nombre d'unités de longu
 ## Voir aussi
 
 - [`<length>`](/fr/docs/Web/CSS/length)
+- [Guide : Valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [API TextMetrics](/fr/docs/Web/API/TextMetrics)

@@ -19,7 +19,7 @@ window.stop()
 
 ```html
 <script>
-stop();
+  stop();
 </script>
 
 <p>このパラグラフは読み込まれないでしょう。</p>

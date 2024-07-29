@@ -3,7 +3,7 @@ title: Event.bubbles
 slug: Web/API/Event/bubbles
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}} {{AvailableInWorkers}}
 
 ### Описание
 
@@ -19,11 +19,7 @@ event.bubbles;
 
 Возвращает булево значение `true`, если событие является всплывающим внутри DOM.
 
-### Пример
-
-```js
-var bool = event.bubbles;
-```
+### Значение
 
 `bool` содержит `true` или `false` в зависимости от того, может событие быть всплывающим внутри DOM или нет
 

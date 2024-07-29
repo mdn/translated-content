@@ -3,7 +3,7 @@ title: sidebarAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient le titre de la barre latérale.
 

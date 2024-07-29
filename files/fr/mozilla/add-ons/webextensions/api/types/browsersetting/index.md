@@ -3,7 +3,7 @@ title: BrowserSetting
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un `BrowserSetting` est un objet représentant un paramètre de navigateur.
 
@@ -31,7 +31,7 @@ Notez que si cet objet est basé sur le type [ChromeSetting](https://developer.c
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/extensions/types).
 

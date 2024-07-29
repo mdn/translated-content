@@ -3,7 +3,7 @@ title: omnibox.SuggestResult
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/SuggestResult
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type **`omnibox.SuggestResult`** définit une suggestion unique que l'extension peut ajouter à la liste déroulante de la barre d'adresse.
 

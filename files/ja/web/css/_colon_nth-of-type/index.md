@@ -15,6 +15,8 @@ p:nth-of-type(4n) {
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-of-type.html", "tabbed-shorter")}}
+
 ## 構文
 
 `nth-of-type` 擬似クラスは、要素を選択する最後から数えるパターンを表す引数を 1 つ取ります。
@@ -71,7 +73,8 @@ p.fancy:nth-of-type(2n + 1) {
 
 {{EmbedLiveSample('Basic_example', 250, 250)}}
 
-> **メモ:** このセレクターを使用して n 番目のクラスを選択する方法はありません。このセレクターは、一致するリストを作成する際に型だけを見ます。しかし、上の例のように `:nth-of-type` の位置**と**クラスに基づいて要素に CSS を適用することができます。
+> [!NOTE]
+> このセレクターを使用して n 番目のクラスを選択する方法はありません。このセレクターは、一致するリストを作成する際に型だけを見ます。しかし、上の例のように `:nth-of-type` の位置**と**クラスに基づいて要素に CSS を適用することができます。
 
 ## 仕様書
 

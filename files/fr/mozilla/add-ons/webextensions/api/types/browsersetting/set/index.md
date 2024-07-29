@@ -3,7 +3,7 @@ title: set()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Utilisez `BrowserSetting.set()` pour modifier le paramètre du navigateur vers une nouvelle valeur.
 
@@ -71,7 +71,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/extensions/types).
 >

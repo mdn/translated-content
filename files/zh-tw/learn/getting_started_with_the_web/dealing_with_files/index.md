@@ -5,7 +5,7 @@ slug: Learn/Getting_started_with_the_web/Dealing_with_files
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 
-一個網站會包含許多檔案: 文字內容、程式碼、樣式表、影音內容......等。每當你建立一個網站時，你需要將這些檔案在你的電腦上合理架構好。以確保它們能夠互相溝通，並讓內容正常顯示。然後你接著才能[將你的網站發佈上線](/zh-TW/Learn/Getting_started_with_the_web/Publishing_your_website)。本篇文章將探討你應該注意的一些議題，以便讓你能夠為你的網站設定好合理的檔案架構。
+一個網站會包含許多檔案: 文字內容、程式碼、樣式表、影音內容......等。每當你建立一個網站時，你需要將這些檔案在你的電腦上合理架構好。以確保它們能夠互相溝通，並讓內容正常顯示。然後你接著才能[將你的網站發佈上線](/zh-TW/docs/Learn/Getting_started_with_the_web/Publishing_your_website)。本篇文章將探討你應該注意的一些議題，以便讓你能夠為你的網站設定好合理的檔案架構。
 
 ## 你的網站在哪裡?
 
@@ -32,11 +32,12 @@ slug: Learn/Getting_started_with_the_web/Dealing_with_files
 3. **`styles` folder**: 這個資料夾包含了能夠設計你的網站的 CSS 碼(例如：設定文字與背景顏色)，建立一個資料夾命名為 `styles`，並將它存到 `test-site` 這個資料夾下。
 4. **`scripts` folder**: 這個資料將包含能夠使網站具有互動性的 JavaScript 程式碼。(例如：按下按鈕後會載入資料)。建立一個資料夾命名`scripts` ，並將它存到 `test-site` 這個資料夾下。
 
-> **備註：** 在 Windows 的電腦上，你可能在設定副檔名上會遇到一些困難。因為 Windows 預設會將已知的檔案類型名稱隱藏。一般來說你可以將這項設定關掉，只需要去檔案總管，選擇「資料夾選項」並取消選取「隱藏已知檔案類型的副檔名」，並點選 **OK** 。有關不同版本的 Windows 的設定方法，請利用搜尋引擎搜尋。
+> [!NOTE]
+> 在 Windows 的電腦上，你可能在設定副檔名上會遇到一些困難。因為 Windows 預設會將已知的檔案類型名稱隱藏。一般來說你可以將這項設定關掉，只需要去檔案總管，選擇「資料夾選項」並取消選取「隱藏已知檔案類型的副檔名」，並點選 **OK** 。有關不同版本的 Windows 的設定方法，請利用搜尋引擎搜尋。
 
 ## 檔案路徑
 
-要讓一個檔案能夠與另一個檔案"溝通"，你需要提供一個他們之間的相對檔案路徑以讓檔案能夠找到另一個檔案在哪裡。為了要展示，我們將插入一小段的 HTML 到我們的 `index.html` 檔案中，並且讓它顯示你在 ["What will your website look like?"](/zh-TW/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like) 這篇文章中所選的圖片。
+要讓一個檔案能夠與另一個檔案"溝通"，你需要提供一個他們之間的相對檔案路徑以讓檔案能夠找到另一個檔案在哪裡。為了要展示，我們將插入一小段的 HTML 到我們的 `index.html` 檔案中，並且讓它顯示你在 ["What will your website look like?"](/zh-TW/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like) 這篇文章中所選的圖片。
 
 1. 複製你選的圖片並放到 `images` 資料夾中。
 2. 打開你的 `index.html`，並複製貼上下面這段 code。先別擔心這些 code 代表什麼意思，我們會在後面的時候講解它們代表的意義。
@@ -69,7 +70,8 @@ slug: Learn/Getting_started_with_the_web/Dealing_with_files
 
 至此，你已經知道目前需要知道的了。
 
-> **備註：** Windows 的檔案系統會傾向使用反斜線(\\)，而非斜線(/)。例如 `C:\windows`. 這並沒有關係，即使你是在 Windows 上開發網站，你仍然應該在程式碼中使用斜線(/)。
+> [!NOTE]
+> Windows 的檔案系統會傾向使用反斜線(\\)，而非斜線(/)。例如 `C:\windows`. 這並沒有關係，即使你是在 Windows 上開發網站，你仍然應該在程式碼中使用斜線(/)。
 
 ## 還有什麼需要被完成的?
 

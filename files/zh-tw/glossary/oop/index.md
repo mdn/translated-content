@@ -12,4 +12,4 @@ slug: Glossary/OOP
 ## 相關文章
 
 - 維基百科上的 [物件導向程式設計](https://zh.wikipedia.org/wiki/物件導向程式設計)
-- [Introduction to object-oriented JavaScript](/zh-TW/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
+- [Introduction to object-oriented JavaScript](/zh-TW/docs/Learn/JavaScript/Objects)

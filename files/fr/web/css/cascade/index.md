@@ -85,7 +85,7 @@ Avant de voir le rôle des couches dans la cascade, voyons un exemple impliquant
 
 Pour cet exemple, nous aurons une feuille de style provenant de l'agent utilisateur, deux pour le site, une feuille de style de l'utilisatrice ou de l'utilisateur, et des styles en incise dans le HTML&nbsp;:
 
-**Feuille de style de l'agent utilisateur**
+**Feuille de style de l'agent utilisateur:**
 
 ```css
 li {
@@ -93,7 +93,7 @@ li {
 }
 ```
 
-**Feuille de style du site 1**
+**Feuille de style du site 1:**
 
 ```css
 li {
@@ -101,7 +101,7 @@ li {
 } /* Une règle de réinitialisation */
 ```
 
-**Feuille de style du site 2**
+**Feuille de style du site 2:**
 
 ```css
 @media screen {
@@ -123,7 +123,7 @@ li {
 }
 ```
 
-**Feuille de style de l'utilisatrice ou de l'utilisateur**
+**Feuille de style de l'utilisatrice ou de l'utilisateur:**
 
 ```css
 .specific {
@@ -131,7 +131,7 @@ li {
 }
 ```
 
-**HTML**
+**HTML:**
 
 ```html
 <ul>

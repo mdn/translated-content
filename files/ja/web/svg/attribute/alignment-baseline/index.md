@@ -7,7 +7,8 @@ slug: Web/SVG/Attribute/alignment-baseline
 
 **`alignment-baseline`** 属性は、要素が親要素に対して配置される方法を指定します。このプロパティは、要素と親要素の対応するベースラインのどれを揃えるかを指定します。例えば、ローマ字のテキストでフォントサイズが変わった場合でも、アルファベットのベースラインを一定にすることが可能になります。既定値は `alignment-baseline` プロパティの計算値と同じ名前の値となります。
 
-> **メモ:** プレゼンテーション属性として、 `alignment-baseline` は CSS プロパティとして使用することができます。
+> [!NOTE]
+> プレゼンテーション属性として、 `alignment-baseline` は CSS プロパティとして使用することができます。
 
 プレゼンテーション属性として、あらゆる要素に適用できますが、効果があるのは {{SVGElement("tspan")}}, {{SVGElement("tref")}}, {{SVGElement("altGlyph")}}, and {{SVGElement("textPath")}} の 4 つの属性のみです。
 
@@ -50,7 +51,8 @@ slug: Web/SVG/Attribute/alignment-baseline
 
   - : The alignment-point of the object being aligned is aligned with the "text-before-edge" baseline of the parent text content element.
 
-    > **メモ:** This keyword may be mapped to `text-top`.
+    > [!NOTE]
+    > This keyword may be mapped to `text-top`.
 
 - `middle`
   - : Aligns the vertical midpoint of the box with the baseline of the parent box plus half the x-height of the parent.
@@ -64,7 +66,8 @@ slug: Web/SVG/Attribute/alignment-baseline
 
   - : The alignment-point of the object being aligned is aligned with the "text-after-edge" baseline of the parent text content element.
 
-    > **メモ:** This keyword may be mapped to `text-bottom`.
+    > [!NOTE]
+    > This keyword may be mapped to `text-bottom`.
 
 - `ideographic`
   - : Matches the box's ideographic character face under-side baseline to that of its parent.
@@ -132,7 +135,7 @@ SVG 2 introduces some changes to the definition of this property. In particular:
 
 ## ブラウザーの互換性
 
-{{Compat("svg.attributes.presentation.alignment-baseline")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -19,9 +19,11 @@ Pour une lecture automatique audio plus passive, par exemple une musique de fond
 
 Pour faire primer l'audio de cette façon, nous voulons en jouer une partie ; pour cette raison, il est utile d'inclure un moment de silence à la fin de votre échantillon audio. Ce silence signifiera que nous pouvons maintenant utiliser JavaScript pour lire ce fichier à des points arbitraires.
 
-> **Note :** Jouer une partie de votre fichier au volume zéro pourrait également fonctionner si le navigateur vous permet de changer le volume (voir ci-dessous). Notez également que la lecture et la mise en pause immédiate de votre audio ne garantissent pas qu'un petit morceau d'audio ne sera pas lu.
+> [!NOTE]
+> Jouer une partie de votre fichier au volume zéro pourrait également fonctionner si le navigateur vous permet de changer le volume (voir ci-dessous). Notez également que la lecture et la mise en pause immédiate de votre audio ne garantissent pas qu'un petit morceau d'audio ne sera pas lu.
 
-> **Note :** L'ajout d'une application Web sur votre écran d'accueil mobile peut changer ses capacités. Dans le cas d'une lecture automatique sur iOS, cela semble être le cas actuellement. Si possible, vous devriez essayer votre code sur plusieurs appareils et platesformes pour voir comment cela fonctionne.
+> [!NOTE]
+> L'ajout d'une application Web sur votre écran d'accueil mobile peut changer ses capacités. Dans le cas d'une lecture automatique sur iOS, cela semble être le cas actuellement. Si possible, vous devriez essayer votre code sur plusieurs appareils et platesformes pour voir comment cela fonctionne.
 
 ### Volume
 
@@ -31,7 +33,8 @@ Le contrôle du volume programmé peut être désactivé dans les navigateurs mo
 
 Probablement comme une tentative d'atténuation de l'utilisation des données du réseau mobile, nous trouvons souvent que la mise en mémoire tampon est désactivée avant que la lecture n'ait été lancée. La mise en mémoire tampon est le processus par lequel le navigateur télécharge le média à l'avance, ce que nous devons souvent faire pour assurer une lecture fluide.
 
-> **Note :** À bien des égards, le concept de mise en mémoire tampon est obsolète. Tant que les demandes de plage d'octets sont acceptées (ce qui est le comportement par défaut), nous devrions pouvoir sauter à un point spécifique de l'audio sans avoir à télécharger le contenu précédent. Cependant, le préchargement est toujours utile; sans cela, il faudrait toujours avoir une certaine communication client-serveur avant de commencer à jouer.
+> [!NOTE]
+> À bien des égards, le concept de mise en mémoire tampon est obsolète. Tant que les demandes de plage d'octets sont acceptées (ce qui est le comportement par défaut), nous devrions pouvoir sauter à un point spécifique de l'audio sans avoir à télécharger le contenu précédent. Cependant, le préchargement est toujours utile; sans cela, il faudrait toujours avoir une certaine communication client-serveur avant de commencer à jouer.
 
 ### Lecture audio simultanée
 
@@ -115,13 +118,17 @@ Voici un tableau qui montre quelles plateformes mobiles prennent en charge les f
   </tbody>
 </table>
 
-> **Note :** Safari 7 a des problèmes à jouer si vous essayez de démarrer tous les morceaux audio simultanément. Si vous échelonnez la lecture, vous aurez peut-être un certain succès.
+> [!NOTE]
+> Safari 7 a des problèmes à jouer si vous essayez de démarrer tous les morceaux audio simultanément. Si vous échelonnez la lecture, vous aurez peut-être un certain succès.
 
-> **Note :** La lecture audio simultanée est testée à l'aide de notre [exemple de test audio simultané](http://jsfiddle.net/dmkyaq0r/), avec lequel nous essayons de lire trois morceaux en même temps en utilisant l'API audio standard.
+> [!NOTE]
+> La lecture audio simultanée est testée à l'aide de notre [exemple de test audio simultané](https://jsfiddle.net/dmkyaq0r/), avec lequel nous essayons de lire trois morceaux en même temps en utilisant l'API audio standard.
 
-> **Note :** La fonctionnalité de lecture automatique simple est testée avec notre [exemp;e test lecture automatique](http://jsfiddle.net/vpdspp2b/).
+> [!NOTE]
+> La fonctionnalité de lecture automatique simple est testée avec notre [exemp;e test lecture automatique](https://jsfiddle.net/vpdspp2b/).
 
-> **Note :** La variabilité du volume est testée avec notre [exemple test volume](http://jsfiddle.net/7ta12vw4/).
+> [!NOTE]
+> La variabilité du volume est testée avec notre [exemple test volume](https://jsfiddle.net/7ta12vw4/).
 
 ## Solutions de contournement pour mobile
 
@@ -190,11 +197,14 @@ myAudio.addEventListener(
 );
 ```
 
-> **Note :** Vous pouvez [essayer notre lecteur de sprite audio](http://jsfiddle.net/59vwaame/) sur JSFiddle.
+> [!NOTE]
+> Vous pouvez [essayer notre lecteur de sprite audio](https://jsfiddle.net/59vwaame/) sur JSFiddle.
 
-> **Note :** Sur mobile nous pouvons avoir besoin de déclencher ce code à partir d'un événement initié par l'utilisateur, tel qu'un bouton de démarrage pressé, comme décrit ci-dessus.
+> [!NOTE]
+> Sur mobile nous pouvons avoir besoin de déclencher ce code à partir d'un événement initié par l'utilisateur, tel qu'un bouton de démarrage pressé, comme décrit ci-dessus.
 
-> **Note :** Attention aux débits binaires. L'encodage de votre audio à des débits binaires inférieurs signifie des tailles de fichier plus petites, mais une précision de recherche plus faible.
+> [!NOTE]
+> Attention aux débits binaires. L'encodage de votre audio à des débits binaires inférieurs signifie des tailles de fichier plus petites, mais une précision de recherche plus faible.
 
 ## Musique de fond
 
@@ -208,7 +218,8 @@ Maintenant qu'il est supporté dans tous les navigateurs modernes à l'exception
 
 Une stratégie inter-navigateurs envisageable serait de fournir un son basique à l'aide de l'élément standard {{HTMLElement ("audio")}} et, là où cela est pris en charge, d'améliorer l'expérience en utilisant l'API Web Audio.
 
-> **Note :** De manière significative, iOS Safari prend désormais en charge l'API Web Audio, ce qui signifie qu'il est désormais possible d'écrire des jeux Web avec de l'audio de qualité native pour iOS.
+> [!NOTE]
+> De manière significative, iOS Safari prend désormais en charge l'API Web Audio, ce qui signifie qu'il est désormais possible d'écrire des jeux Web avec de l'audio de qualité native pour iOS.
 
 Comme l'API Web Audio permet un timing et un contrôle précis de la lecture audio, nous pouvons l'utiliser pour jouer des échantillons à des moments spécifiques, ce qui est un aspect immersif crucial du jeu. Vous voulez que ces explosions soient **accompagnées** par un boom tonitruant, pas **l'un après les autres**, après tout.
 
@@ -296,7 +307,8 @@ for (var i = 0, len = tracks.length; i < len; i++) {
 }
 ```
 
-> **Note :** Vous pouvez essayer notre [démo multipiste API Web Audio](http://jsfiddle.net/c87z11jj/1/) sur JSFiddle.
+> [!NOTE]
+> Vous pouvez essayer notre [démo multipiste API Web Audio](https://jsfiddle.net/c87z11jj/1/) sur JSFiddle.
 
 Regardons maintenant le code. Nous créons d'abord un nouveau {{domxref ("AudioContext")}} et créons une fonction `(playTrack ())` qui charge et commence à jouer une piste.
 
@@ -312,7 +324,8 @@ Si le second paramètre de `start ()` — the offset (_le décalage_) — est nu
 
 Dans le contexte de votre monde de jeu, vous pouvez avoir des boucles et des échantillons qui sont joués dans différentes circonstances, et il peut être utile de pouvoir les synchroniser avec d'autres pistes pour une expérience plus transparente.
 
-> **Note :** Cet exemple n'attend pas la fin du battement avant d'introduire le morceau suivant; nous pourrions le faire si nous connaissions le BPM (battement par minute) des pistes.
+> [!NOTE]
+> Cet exemple n'attend pas la fin du battement avant d'introduire le morceau suivant; nous pourrions le faire si nous connaissions le BPM (battement par minute) des pistes.
 
 Vous pouvez trouver que l'introduction d'une nouvelle piste sonne plus naturelle si elle entre dans le battement, la mesure ou la phrase, selon l'unité que vous voulez pour votre musique de fond.
 
@@ -333,9 +346,11 @@ if (offset == 0) {
 }
 ```
 
-> **Note :** Ici, vous pouvez [essayer notre code calculateur d'attente](http://jsfiddle.net/c87z11jj/2/) , sur JSFiddle (synchronisé à la mesure).
+> [!NOTE]
+> Ici, vous pouvez [essayer notre code calculateur d'attente](https://jsfiddle.net/c87z11jj/2/) , sur JSFiddle (synchronisé à la mesure).
 
-> **Note :** Si le premier paramètre est 0 ou inférieur au contexte `currentTime`, la musique commence immédiatement.
+> [!NOTE]
+> Si le premier paramètre est 0 ou inférieur au contexte `currentTime`, la musique commence immédiatement.
 
 ### Audio positionnel
 
@@ -351,7 +366,8 @@ Nous pouvons relier :
 
 Ceci est particulièrement utile dans un environnement tridimensionnel rendu en utilisant [WebGL](/fr/docs/Web/API/WebGL_API), avec lequel l'API Web Audio permet d'associer l'audio aux objets et aux points de vue .
 
-> **Note :** Voir [Web Audio API Spatialization Basics](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) _(Bases de la spacialisation de l'API Web Audio)_ pour plus de détails.
+> [!NOTE]
+> Voir [Web Audio API Spatialization Basics](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) _(Bases de la spacialisation de l'API Web Audio)_ pour plus de détails.
 
 ## Voir aussi
 

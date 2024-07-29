@@ -3,7 +3,7 @@ title: idle.queryState()
 slug: Mozilla/Add-ons/WebExtensions/API/idle/queryState
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Renvoie `"locked"` si le système est vérouillé, `"inactif"` si l'utilisation n'a généré aucune entrée pendant un nombre de secondes spécifié, ou `"actif"` dans le cas contraire.
 

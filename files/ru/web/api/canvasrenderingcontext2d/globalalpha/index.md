@@ -89,11 +89,11 @@ for (let i = 0; i < 7; i++) {
 
 {{EmbedLiveSample("Наложение_прозрачных_фигур", "180", "180", "canvas_globalalpha.png")}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

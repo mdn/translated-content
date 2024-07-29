@@ -487,10 +487,6 @@ For {{SVGElement('view')}}, `preserveAspectRatio` indicates if a uniform scaling
 | Default value | `xMidYMid` `meet`            |
 | Animatable    | Yes                          |
 
-## Specification
+## Especificações
 
-| Specification                                                                                      | Status                   | Comment            |
-| -------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName("Filters 1.0", "#element-attrdef-feimage-preserveaspectratio", "preserveAspectRatio")}} | {{Spec2('Filters 1.0')}} |                    |
-| {{SpecName("SVG2", "coords.html#PreserveAspectRatioAttribute", "preserveAspectRatio")}}            | {{Spec2("SVG2")}}        |                    |
-| {{SpecName("SVG1.1", "coords.html#PreserveAspectRatioAttribute", "preserveAspectRatio")}}          | {{Spec2("SVG1.1")}}      | Initial definition |
+{{Specifications}}

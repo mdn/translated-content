@@ -5,7 +5,7 @@ slug: Web/API/WebGLBuffer
 
 {{APIRef("WebGL")}}
 
-L'interface **WebGLBuffer** fait partie de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) et représente un objet tampon opaque stockant des données telles que des sommets ou des couleurs.
+L'interface **WebGLBuffer** fait partie de l'[API WebGL](/fr/docs/Web/API/WebGL_API) et représente un objet tampon opaque stockant des données telles que des sommets ou des couleurs.
 
 ## Description
 

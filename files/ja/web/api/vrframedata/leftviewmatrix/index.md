@@ -7,11 +7,13 @@ slug: Web/API/VRFrameData/leftViewMatrix
 
 **`leftViewMatrix`** は {{domxref("VRFrameData")}} インターフェイスの読み取り専用プロパティで、 4 行 4 列の行列を表す {{jsxref("Float32Array")}} を返します。この行列は、左目の描画に利用されるビュー変換を表します。
 
-> **メモ:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!NOTE]
+> このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 この値は、 WebGL の {{domxref("WebGLRenderingContext.uniformMatrix", "uniformMatrix4fv")}} 関数へ直接渡されるでしょう。
 
-> **警告:** 描画時にアプリケーションがこの行列を使用することを強く薦めます。
+> [!WARNING]
+> 描画時にアプリケーションがこの行列を使用することを強く薦めます。
 
 ## 値
 
@@ -19,8 +21,7 @@ slug: Web/API/VRFrameData/leftViewMatrix
 
 ## 例
 
-例については [`VRDisplay.getFrameData()`](/ja/docs/Web/API/VRDisplay/getFrameData#例
-) を参照してください。
+例については [`VRDisplay.getFrameData()`](/ja/docs/Web/API/VRDisplay/getFrameData#例) を参照してください。
 
 ## 仕様書
 
@@ -34,5 +35,4 @@ slug: Web/API/VRFrameData/leftViewMatrix
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

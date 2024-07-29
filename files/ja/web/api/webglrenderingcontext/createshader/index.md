@@ -1,36 +1,43 @@
 ---
-title: WebGLRenderingContext.createShader()
+title: "WebGLRenderingContext: createShader() メソッド"
+short-title: createShader()
 slug: Web/API/WebGLRenderingContext/createShader
+l10n:
+  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/ja/docs/Web/API/WebGL_API) の **WebGLRenderingContext.createShader()** メソッドは、{{domxref("WebGLShader")}} を作成します。それからさらに、 {{domxref("WebGLRenderingContext.shaderSource()")}} と {{domxref("WebGLRenderingContext.compileShader()")}} を用いて設定できます。
+{{domxref("WebGLRenderingContext")}} の **`createShader()`** は [WebGL API](/ja/docs/Web/API/WebGL_API) のメソッドで、 {{domxref("WebGLShader")}} を作成します。それからさらに、 {{domxref("WebGLRenderingContext.shaderSource()")}} と {{domxref("WebGLRenderingContext.compileShader()")}} を用いて設定できます。
 
 ## 構文
 
-```
-WebGLShader gl.createShader(type);
+```js-nolint
+createShader(type)
 ```
 
 ### 引数
 
 - `type`
-  - : `gl.VERTEX_SHADER` と `gl.FRAGMENT_SHADER` のどちらか
+  - : `gl.VERTEX_SHADER` と `gl.FRAGMENT_SHADER` のどちらかです。
+
+### 返値
+
+新しい ({{domxref("WebGLShader")}}) です。
 
 ## 例
 
-用例については {{domxref("WebGLShader")}} を参照してください。
+例については {{domxref("WebGLShader")}} を参照してください。
 
-## 仕様策定状況
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-{{Compat("api.WebGLRenderingContext.createShader")}}
+{{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("WebGLProgram")}}
 - {{domxref("WebGLShader")}}

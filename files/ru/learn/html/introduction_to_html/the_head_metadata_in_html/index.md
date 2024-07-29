@@ -90,7 +90,8 @@ slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 
 ![a web page containing English and Japanese characters, with the character encoding set to latin. The Japanese characters don't display correctly](bad-encoding.png)
 
-> **Примечание:** Некоторые браузеры (например, Chrome) автоматически исправляют неправильную кодировку, поэтому, в зависимости от используемого вами браузера, вы можете не увидеть эту проблему. Несмотря на это вам всё равно необходимо указывать кодировку UTF-8 для вашей страницы, чтобы избежать возможных проблем в других браузерах.
+> [!NOTE]
+> Некоторые браузеры (например, Chrome) автоматически исправляют неправильную кодировку, поэтому, в зависимости от используемого вами браузера, вы можете не увидеть эту проблему. Несмотря на это вам всё равно необходимо указывать кодировку UTF-8 для вашей страницы, чтобы избежать возможных проблем в других браузерах.
 
 ### Активное изучение: экспериментируем с символьными кодировками
 
@@ -143,9 +144,11 @@ slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 
 ![Результат поиска в Google](updated_search_result__ru.jpg)
 
-> **Примечание:** Google также показывает важные страницы MDN под ссылкой на главную страницу. Такие ссылки называются sitelinks, и их можно настроить через [Google Search Console](http://www.google.com/webmasters/tools/), чтобы пользователи могли сразу перейти к ним со страницы поиска.
+> [!NOTE]
+> Google также показывает важные страницы MDN под ссылкой на главную страницу. Такие ссылки называются sitelinks, и их можно настроить через [Google Search Console](http://www.google.com/webmasters/tools/), чтобы пользователи могли сразу перейти к ним со страницы поиска.
 
-> **Примечание:** Многие типы `<meta>` больше не используются. Так, поисковые системы больше не используют данные из элемента `<meta type="keywords" content="ваши, ключевые, слова, введите, здесь">`, в котором указывали ключевые слова, по которым можно найти страницу: спамеры засовывали туда все слова, какие могли придумать, чтобы их сайты почаще появлялись в поиске.
+> [!NOTE]
+> Многие типы `<meta>` больше не используются. Так, поисковые системы больше не используют данные из элемента `<meta type="keywords" content="ваши, ключевые, слова, введите, здесь">`, в котором указывали ключевые слова, по которым можно найти страницу: спамеры засовывали туда все слова, какие могли придумать, чтобы их сайты почаще появлялись в поиске.
 
 ### Другие виды метаданных
 
@@ -252,7 +255,8 @@ slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 - JavaScript добавил на страницу пустой список. При нажатии на красную область появляется окно, в которое можно ввести текст нового пункта списка. При нажатии на кнопку OK пункт добавляется на страницу. Текст существующих пунктов списка можно редактировать, нажимая на них.
 - CSS покрасил фон зелёным и увеличил размер шрифта, а также стилизовал элементы, добавленные JavaScript. Красный прямоугольник и рамка вокруг списка — тоже его рук дело.
 
-> **Примечание:** Если вам никак не удаётся подключить CSS или JS, посмотрите на наш готовый пример — страницу [css-and-js.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html).
+> [!NOTE]
+> Если вам никак не удаётся подключить CSS или JS, посмотрите на наш готовый пример — страницу [css-and-js.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html).
 
 ## Основной язык HTML страницы
 
@@ -281,15 +285,3 @@ slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 На этом заканчивается наш беглый обзор по HTML-блоку head — с его помощью вы можете делать гораздо больше, но исчерпывающий обзор будет скучным и запутанным на этом этапе, мы же сейчас хотели дать вам представление о самых распространённых вещах, которые вы можете там найти! В следующей статье мы рассмотрим основы разметки текста в HTML.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
-
-## В этом модуле
-
-- [Начало работы с HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B)
-- [Что такое заголовок? Метаданные в HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/The_head_metadata_in_HTML)
-- [Основы редактирования текста в HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/HTML_text_fundamentals)
-- [Создание гиперссылок](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B3%D0%B8%D0%BF%D0%B5%D1%80%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA)
-- [Углублённое форматирование текста](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Advanced_text_formatting)
-- [Структура документа и веб-сайта](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0_%D0%B8_%D0%B2%D0%B5%D0%B1-%D1%81%D0%B0%D0%B9%D1%82%D0%B0)
-- [Отладка HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Debugging_HTML)
-- [Разметка письма](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Marking_up_a_letter)
-- [Структурируем страницу](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Structuring_a_page_of_content)

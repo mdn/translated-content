@@ -9,7 +9,7 @@ slug: Web/API/ServiceWorkerContainer/register
 
 如果成功，一个服务工作者注册将提供的脚本 URL 与一个范围进行关联，后者用于导航匹配。如果该方法无法返回一个 `ServiceWorkerRegistration`，则返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
-您可以从受控页无条件调用此方法，即，您不需要首先检查是否有一个有效的注册。
+你可以从受控页无条件调用此方法，即，你不需要首先检查是否有一个有效的注册。
 
 ## 语法
 

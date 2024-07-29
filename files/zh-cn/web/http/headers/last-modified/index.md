@@ -51,7 +51,7 @@ Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("If-Modified-Since")}}
 - {{HTTPHeader("If-Unmodified-Since")}}

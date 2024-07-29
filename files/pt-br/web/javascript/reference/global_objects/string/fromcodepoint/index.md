@@ -128,13 +128,11 @@ if (!String.fromCodePoint) {
 
 ## Especificações
 
-| Specification                                                            | Status           | Comment             |
-| ------------------------------------------------------------------------ | ---------------- | ------------------- |
-| {{SpecName('ES6', '#sec-string.fromcodepoint', 'String.fromCodePoint')}} | {{Spec2('ES6')}} | Initial definition. |
+{{Specifications}}
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.fromCodePoint")}}
+{{Compat}}
 
 ## Veja também
 

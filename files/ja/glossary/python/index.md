@@ -3,6 +3,8 @@ title: Python
 slug: Glossary/Python
 ---
 
+{{GlossarySidebar}}
+
 **Python**は、一般目的の高水準プログラミング言語です。複数のパラダイムを採用しており、手続型、オブジェクト指向、いくらか関数型プログラミングの構造に対応しています。
 
 Python は、 ABC と呼ばれている別な言語の後継として、 Guido van Rossum によって 1985 年から 1990 年の間に開発され、現在ではウェブ開発、他のアプリケーションのスクリプト言語、実際のアプリケーション構築など、広い分野で使用されています。
@@ -17,7 +19,7 @@ Python は OSI に承認されたオープンソースライセンスのもと�
    4. [AlphaCodingSkills Python Tutorial](https://www.alphacodingskills.com/python/python-tutorial.php)
    5. MDN の [Django Web Framework (Python)](/ja/docs/Learn/Server-side/Django)
 
-2. [MDN Web Docs 用語集](/ja/docs/Glossary)
+2. 関連用語:
 
    1. {{Glossary("Java")}}
    2. {{Glossary("JavaScript")}}

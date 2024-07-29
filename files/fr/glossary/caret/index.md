@@ -3,6 +3,8 @@ title: Curseur "caret"
 slug: Glossary/Caret
 ---
 
+{{GlossarySidebar}}
+
 Un curseur (_"caret"_ parfois appelé "curseur de texte") est un indicateur affiché sur l'écran pour indiquer où la saisie de texte sera insérée. La plupart des interfaces utilisateur représentent le curseur à l'aide d'une fine ligne verticale ou d'une boîte de taille de caractère qui clignote, mais cela peut varier. Ce point dans le texte est appelé le point d'insertion. Le mot anglais "_caret_" différencie le point d'insertion du texte du curseur (_cursor_) de la souris.
 
 Sur le web, un curseur "_caret_" est utilisé pour représenter le point d'insertion dans les éléments {{HTMLElement("input")}} et {{HTMLElement("textarea")}}, ainsi que tous les éléments dont l'attribut [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable) est défini, permettant ainsi au contenu de l'élément d'être édité par l'utilisateur.

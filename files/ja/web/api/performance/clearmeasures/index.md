@@ -1,44 +1,39 @@
 ---
-title: performance.clearMeasures()
+title: "Performance: clearMeasures() メソッド"
+short-title: clearMeasures()
 slug: Web/API/Performance/clearMeasures
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("User Timing API")}}
+{{APIRef("Performance API")}}
 
-**`clearMeasures()`** メソッドは、ブラウザーのパフォーマンスエントリーバッファーから*名前付きメジャー*を削除します。このメソッドが引数なしで呼び出された場合、{{domxref("PerformanceEntry.entryType","エントリー種別", "", 1)}}が "`measure`" の{{domxref("PerformanceEntry","パフォーマンスエントリー", "", 1)}}がすべてパフォーマンスエントリーバッファーから削除されます。
-
-{{AvailableInWorkers}}
+**`clearMeasures()`** メソッドは、すべての、または特定の {{domxref("PerformanceMeasure")}} オブジェクトを、ブラウザーのパフォーマンスタイムラインから除去します。
 
 ## 構文
 
-```js
-performance.clearMeasures();
-performance.clearMeasures(name);
+```js-nolint
+clearMeasures()
+clearMeasures(name)
 ```
 
 ### 引数
 
-- name {{optional_inline}}
-  - : タイムスタンプの名前を表す {{domxref("DOMString")}} です。 この引数を省略すると、{{domxref("PerformanceEntry.entryType","エントリー種別", "", 1)}}が "`measure`" であるすべての{{domxref("PerformanceEntry","パフォーマンスエントリー", "", 1)}}が削除されます。
+- `name` {{optional_inline}}
+  - : 文字列で、 {{domxref("PerformanceMeasure")}} オブジェクトの{{domxref("PerformanceEntry.name", "名前", "", 1)}}を表します。この引数を省略すると、 {{domxref("PerformanceEntry.entryType","entryType")}} が "`measure`" であるすべての項目が除去されます。
 
 ### 返値
 
-- void
-  - :
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
-次の例は、`clearMeasures()` メソッドの両方の使用方法を示しています。
+### 測定値を除去
+
+パフォーマンス測定値をすべて、あるいは特定の項目だけを消去するには、次のように `clearMeasures()` メソッドを使用します。
 
 ```js
-// Create a small helper to show how many PerformanceMeasure entries there are.
-function logMeasureCount() {
-  console.log(
-    "Found this many entries: " + performance.getEntriesByType("measure").length
-  );
-}
-
-// Create a bunch of measures.
+// 測定値の束を作成
 performance.measure("from navigation");
 performance.mark("a");
 performance.measure("from mark a", "a");
@@ -47,15 +42,15 @@ performance.measure("from mark a", "a");
 performance.mark("b");
 performance.measure("between a and b", "a", "b");
 
-logMeasureCount() // "Found this many entries: 5"
+logMeasureCount(); // "Found this many entries: 5"
 
-// Delete just the "from navigation" PerformanceMeasure entries.
+// "from navigation" PerformanceMeasure 項目のみを削除
 performance.clearMeasures("from navigation");
-logMeasureCount() // "Found this many entries: 3"
+logMeasureCount(); // "Found this many entries: 3"
 
-// Delete all of the PerformanceMeasure entries.
+// すべての PerformanceMeasure 項目を削除
 performance.clearMeasures();
-logMeasureCount() // "Found this many entries: 0"
+logMeasureCount(); // "Found this many entries: 0"
 ```
 
 ## 仕様書
@@ -65,3 +60,7 @@ logMeasureCount() // "Found this many entries: 0"
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("PerformanceMeasure")}}

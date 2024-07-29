@@ -3,7 +3,7 @@ title: get()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La méthode `BrowserSetting.get()` obtient la valeur actuelle du paramètre du navigateur et une énumération indiquant comment la valeur du paramètre est actuellement controléee..
 
@@ -72,7 +72,7 @@ getting.then((got) => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/extensions/types).
 >

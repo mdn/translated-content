@@ -89,7 +89,7 @@ SVG 文本还可以应用样式。
 
 ## DOM 接口
 
-该元素实现了[`SVGTextElement`](/zh-CN/DOM/SVGTextElement)接口。
+该元素实现了 [`SVGTextElement`](/zh-CN/DOM/SVGTextElement) 接口。
 
 ## 浏览器兼容性
 

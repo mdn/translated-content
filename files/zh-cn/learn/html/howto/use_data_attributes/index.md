@@ -58,7 +58,7 @@ article[data-columns="4"] {
 }
 ```
 
-你可以在这个[JSBin](http://jsbin.com/ujiday/2/edit) 里看到全部演示。
+你可以在这个[JSBin](https://jsbin.com/ujiday/2/edit) 里看到全部演示。
 
 Data 属性同样可以存储不断变化的信息，比如游戏的得分。使用 CSS 选择器与 JavaScript 去访问可以让你得到花俏的效果，这里你并不需要用常规的编写方案来编写代码。有关使用生成内容和 CSS 转换（[JSBin 示例](https://jsbin.com/atawaz/3/edit)）的示例，请参阅此[视频](https://www.youtube.com/watch?v=On_WyUB1gOk)。
 
@@ -68,7 +68,7 @@ Data 属性同样可以存储不断变化的信息，比如游戏的得分。使
 
 不要在 data attribute 里储存需要显示及访问的内容，因为一些其他的技术可能访问不到它们。另外爬虫不能将 data attribute 的值编入索引中。
 
-IE 的支持度及显示效果是最主要讨论的问题。IE11+支持这个标准，但所有更早期的版本都不支持[dataset](http://caniuse.com/#feat=dataset)。为了支持 IE10 及以下的版本，你必须使用{{domxref("Element.getAttribute", "getAttribute()")}} 来访问。另外，[读取 data-attributes 的行为](http://jsperf.com/data-dataset)相比 JS 存储数据会慢。使用 dataset 会比使用 getAttribute() 读取数据来得慢。
+IE 的支持度及显示效果是最主要讨论的问题。IE11+ 支持这个标准，但所有更早期的版本都不支持 [dataset](http://caniuse.com/#feat=dataset)。为了支持 IE10 及以下的版本，你必须使用 {{domxref("Element.getAttribute", "getAttribute()")}} 来访问。另外，[读取 data-attributes 的行为](http://jsperf.com/data-dataset)相比 JS 存储数据会慢。使用 dataset 会比使用 getAttribute() 读取数据来得慢。
 
 尽管如此，对于那些与元素相关的数据，这依然是一个很好的解决方案。
 

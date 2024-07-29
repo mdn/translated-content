@@ -12,11 +12,12 @@ slug: Web/API/Navigator/registerProtocolHandler
 ## 構文
 
 ```js
-registerProtocolHandler(scheme, url)
-registerProtocolHandler(scheme, url, title)
+registerProtocolHandler(scheme, url);
+registerProtocolHandler(scheme, url, title);
 ```
 
-> **メモ:** 非推奨の `title` 引数が付いたものは、互換性のために推奨されます（下記の引数情報を参照してください）。
+> [!NOTE]
+> 非推奨の `title` 引数が付いたものは、互換性のために推奨されます（下記の引数情報を参照してください）。
 
 ### 引数
 
@@ -30,14 +31,16 @@ registerProtocolHandler(scheme, url, title)
   - : ハンドラーの URL を指定する文字列。
     **この URL には `%s` を含める必要があり**、これは取り扱う URL を[エスケープした](/ja/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)もので置き換得られるプレイスホルダーとして扱われます。
 
-    > **メモ:** ハンドラーの URL は `https` スキームを使用する必要があります。古いブラウザーは `http` にも対応しています。
+    > [!NOTE]
+    > ハンドラーの URL は `https` スキームを使用する必要があります。古いブラウザーは `http` にも対応しています。
 
 - `title` {{deprecated_inline}}
 
   - : ハンドラーを表す人間が読めるタイトル文字列です。
     **これはユーザーに表示されます**。例えば、「このサイトで [スキーム] のリンクを扱うことを許可しますか？」と尋ねたり、ブラウザーの設定で登録されたハンドラーの一覧に表示されたりします。
 
-    > **メモ:** タイトルはなりすましの懸念から仕様から削除されました。
+    > [!NOTE]
+    > タイトルはなりすましの懸念から仕様から削除されました。
     > しかし `title` は一部のブラウザーが**まだ必要としている**ため、設定する必要があります（[下記の互換性一覧表](#ブラウザーの互換性)をご覧ください）。
     > 更新された仕様に対応しているブラウザーはほとんどの場合、タイトルを受け付けますが、無視します。
 
@@ -48,6 +51,7 @@ registerProtocolHandler(scheme, url, title)
 ### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
+
   - : ユーザーエージェントが登録をブロックしました。
     以下のような場合に起こる可能性があります。
 
@@ -105,9 +109,11 @@ registerProtocolHandler(scheme, url, title)
 ウェブアプリケーションが `burgers.example.com` にある場合、次のようにして `web+burger:` リンクを処理するプロトコルハンドラーを登録することができます。
 
 ```js
-navigator.registerProtocolHandler("web+burger",
-                                  "https://burgers.example.com/?burger=%s",
-                                  "Burger handler"); // 最後の title 引数は互換性のために入れている
+navigator.registerProtocolHandler(
+  "web+burger",
+  "https://burgers.example.com/?burger=%s",
+  "Burger handler",
+); // 最後の title 引数は互換性のために入れている
 ```
 
 これは、 `web+burger:` リンクがアクセスしたバーガーの URL を `%s` プレースホルダーに挿入し、ユーザーをサイトに誘導するハンドラーを作成します。

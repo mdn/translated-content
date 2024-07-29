@@ -3,7 +3,7 @@ title: Date.prototype.setUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -35,11 +35,7 @@ theBigDay.setUTCDate(20);
 
 ## Спецификации
 
-| Спецификация                                                                       | Статус             | Комментарии                                            |
-| ---------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                            | Стандарт           | Изначальное определение. Реализована в JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.37', 'Date.prototype.setUTCDate')}}               | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-date.prototype.setutcdate', 'Date.prototype.setUTCDate')}} | {{Spec2('ES6')}}   |                                                        |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

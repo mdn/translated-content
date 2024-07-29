@@ -1,5 +1,5 @@
 ---
-title: Типы данных JavaScript и структуры данных
+title: Типы и структуры данных JavaScript
 slug: Web/JavaScript/Data_structures
 ---
 
@@ -161,9 +161,7 @@ Infinity
 
 [Массив](/ru/docs/JavaScript/Reference/Global_Objects/Array) — это обычный объект с дополнительной связью между целочисленными ключами его свойств и специальным свойством length. Вдобавок ко всему, массивы наследуют `Array.prototype`, предоставляющий исчерпывающий набор методов для манипуляции массивами. Например, метод [`indexOf`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) (служит для поиска значения в массиве), [`push`](/ru/docs/JavaScript/Reference/Global_Objects/Array/push) (добавляет элемент в конец массива) и т. д. Всё это делает массив идеальным кандидатом для представления списков и перечислений.
 
-[Типизированный массив](/ru/docs/Web/JavaScript/Typed_arrays) является новинкой ECMAScript Edition 6 и является массивоподобным представлением для лежащего в его основе бинарного буфера памяти. Следующая таблица поможет вам найти соответствующие типы языка C:
-
-{{page("/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "Объекты_TypedArray", "", 0, 3)}}
+[Типизированные массивы](/ru/docs/Web/JavaScript/Typed_arrays) являются подобными массивам представлениями наборов бинарных данных и предлагают множество методов, семантика которых аналогична аналогам массива. "Типизированный массив" это общий термин для ряда структур данных, включая `Int8Array`, `Float32Array` и т.д. Подробнее о них можно узнать в руководстве о [типизированных массивах](/ru/docs/Web/JavaScript/Guide/Typed_arrays). Типизированные массивы часто используются вместе с {{jsxref("ArrayBuffer")}} и {{jsxref("DataView")}}.
 
 ### Коллекции: Maps, Sets, WeakMaps, WeakSets
 

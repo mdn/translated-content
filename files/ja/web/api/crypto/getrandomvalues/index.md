@@ -1,6 +1,9 @@
 ---
-title: Crypto.getRandomValues()
+title: "Crypto: getRandomValues() メソッド"
+short-title: getRandomValues()
 slug: Web/API/Crypto/getRandomValues
+l10n:
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{APIRef("Web Crypto API")}}
@@ -15,8 +18,8 @@ slug: Web/API/Crypto/getRandomValues
 
 ## 構文
 
-```js
-getRandomValues(typedArray);
+```js-nolint
+getRandomValues(typedArray)
 ```
 
 ### 引数
@@ -65,6 +68,6 @@ for (const num of array) {
 
 ## 関連情報
 
-- [Web Crypto API](/ja/docs/Web/API/Web_Crypto_API)
-- {{domxref("Crypto")}} オブジェクトを取得する {{domxref("Window.crypto")}}。
+- [ウェブ暗号 API](/ja/docs/Web/API/Web_Crypto_API)
+- {{domxref("Crypto")}} オブジェクトを取得する {{domxref("crypto_property", "crypto")}}。
 - {{jsxref("Math.random")}} 暗号学的に安全ではない乱数値。

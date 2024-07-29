@@ -3,7 +3,7 @@ title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
 ---
 
-{{JSRef("Objetos_globales", "JSON")}}
+{{JSRef}}
 
 ## Resumen
 

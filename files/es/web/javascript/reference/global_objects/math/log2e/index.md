@@ -3,7 +3,7 @@ title: Math.LOG2E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
 ---
 
-{{JSRef("Objetos_globales", "Math")}}
+{{JSRef}}
 
 ## Resumen
 

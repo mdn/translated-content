@@ -3,7 +3,7 @@ title: history.search()
 slug: Mozilla/Add-ons/WebExtensions/API/history/search
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Recherche dans l'historique du navigateur les objets {{WebExtAPIRef("history.HistoryItem")}} correspondant aux critères donnés.
 

@@ -1,26 +1,29 @@
 ---
 title: fit-content
 slug: Web/CSS/fit-content
+l10n:
+  sourceCommit: 1e2b9ed58707ed56026e8a159b6aeb06e96bd104
 ---
 
 {{CSSRef}}
 
-**`fit-content`** は `fit-content(stretch)` として動作します。実際には、ボックスは利用可能な空間を使用しますが、{{cssxref("max-content")}} 以上にはならないことを意味します。
+**`fit-content`** は `fit-content(stretch)` として動作します。実際には、ボックスは利用可能な空間を使用しますが、　{{cssxref("max-content")}} 以上にはならないことを意味します。
 
 {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}}, {{cssxref("max-height")}} のレイアウトされたボックスの大きさとして使用される場合、最大寸法と最小寸法は、コンテンツの寸法を参照します。
 
-> **メモ:** CSS Sizing の仕様では、{{cssxref("fit-content()", "fit-content()")}} という関数も定義されています。このページではキーワード版について詳しく説明します。
+> [!NOTE]
+> CSS Sizing の仕様書では、 {{cssxref("fit-content_function", "fit-content()")}} という関数も定義されています。このページではキーワード版について詳しく説明します。
 
 ## 構文
 
 ```css
-width: fit-content
-block-size: fit-content
+width: fit-content;
+block-size: fit-content;
 ```
 
 ## 例
 
-<h3 id="Using_fit-content_for_box_sizing">fit-content を使用してボックスの大きさを指定</h3>
+### fit-content を使用してボックスの大きさを指定
 
 #### HTML
 
@@ -45,7 +48,6 @@ block-size: fit-content
 }
 
 .item {
-  width: -moz-fit-content;
   width: fit-content;
   background-color: #8ca0ff;
   padding: 5px;
@@ -55,15 +57,13 @@ block-size: fit-content
 
 #### 結果
 
-{{EmbedLiveSample("Using_fit-content_for_box_sizing", "100%", 200)}}
+{{EmbedLiveSample("fit-content を使用してボックスの大きさを指定", "100%", 200)}}
 
 ## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
-
-### width (および他の大きさのプロパティ) での対応
 
 {{Compat}}
 

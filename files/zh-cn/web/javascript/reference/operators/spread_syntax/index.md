@@ -146,7 +146,7 @@ var arr2 = [3, 4, 5];
 var arr3 = [...arr1, ...arr2];
 ```
 
-{{jsxref("Array.unshift")}} 方法常用于在数组的开头插入新元素/数组. 不使用展开语法，示例如下：
+{{jsxref("Array.unshift")}} 方法常用于在数组的开头插入新元素/数组。不使用展开语法，示例如下：
 
 ```js
 var arr1 = [0, 1, 2];
@@ -223,6 +223,8 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)（Rest Parameters 也使用' `...` '）
+- [剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)
+- [剩余属性](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#剩余属性)
+- {{jsxref("Function.prototype.apply()")}}

@@ -43,7 +43,7 @@ JavaScript 源代码经常被组合和压缩，以便能更高效地从服务器
 //# sourceMappingURL=http://example.com/path/to/your/sourcemap.map
 ```
 
-或者，您也可以为 JavaScript 文件设置 header，以避免添加注释：
+或者，你也可以为 JavaScript 文件设置 header，以避免添加注释：
 
 ```js example-good
 X-SourceMap: /path/to/file.js.map

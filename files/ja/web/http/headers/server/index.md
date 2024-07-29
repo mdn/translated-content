@@ -53,7 +53,7 @@ Server: Apache/2.4.1 (Unix)
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Server")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -3,7 +3,7 @@ title: Заливка и обводка
 slug: Web/SVG/Tutorial/Fills_and_Strokes
 ---
 
-{{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
 
 Есть несколько способов раскрасить фигуры SVG (в т.ч. с указанием атрибутов объекта), используя инлайн-CSS, встроенную CSS-секцию, или внешний файл CSS. Большая часть SVG, которую вы встретите в интернете, использует встроенный CSS, однако преимущества и недостатки есть у каждого типа.
 
@@ -26,7 +26,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 Кроме цветовых свойств обводки, есть несколько атрибутов, управляющих способом обводки.
 
-![](/@api/deki/files/355/=SVG_Stroke_Linecap_Example.png)
+![](svg_stroke_linecap_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -49,7 +49,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 Используйте `stroke-linejoin`, чтобы определить, как соединять обводку двух сегментов линии.
 
-![](/@api/deki/files/356/=SVG_Stroke_Linejoin_Example.png)
+![](svg_stroke_linejoin_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -73,7 +73,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 Наконец, вы можете использовать пунктирные линии в обводке, определив атрибут `stroke-dasharray`.
 
-![](/@api/deki/files/354/=SVG_Stroke_Dasharray_Example.png)
+![](svg_stroke_dasharray_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>

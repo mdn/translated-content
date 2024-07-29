@@ -3,7 +3,7 @@ title: windows.getCurrent()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getCurrent
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient la fenêtre actuelle du navigateur, en passant ses détails dans un rappel.
 

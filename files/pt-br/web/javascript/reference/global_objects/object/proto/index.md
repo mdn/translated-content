@@ -104,7 +104,7 @@ A propriedade `__proto__` é simplesmente uma propriedade acessora {{jsxref("Obj
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.proto")}}
+{{Compat}}
 
 ## Notas de compatibilidade
 

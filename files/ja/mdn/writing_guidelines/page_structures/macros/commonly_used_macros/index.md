@@ -2,7 +2,7 @@
 title: よく使われるマクロ
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 l10n:
-  sourceCommit: d3cdafcdb4d22e5c55771501e7c80451a96aa032
+  sourceCommit: 614bf89612683e1837c846b7d9485061ebd281a6
 ---
 
 {{MDNSidebar}}
@@ -16,7 +16,7 @@ l10n:
 
 MDN では、リファレンスページや用語集などへのリンクを簡単に作成するためのリンクマクロを多数提供しています。
 
-リンクマクロは、簡潔で翻訳に適しているため、通常の HTML リンクよりも推奨されます。
+リンクマクロは、簡潔で翻訳に適しているため、通常の Markdown リンクよりも推奨されます。
 例えば、マクロを使って作成された用語集やリファレンスのリンクは、翻訳する必要がありません。 他のロケールでは、自動的に正しいバージョンのファイルへリンクされます。
 
 ### 用語集へのリンク
@@ -179,9 +179,9 @@ MDN の特定の参照領域（JavaScript、CSS、HTML 要素、SVG など）の
 用法: `\{{Optional_Inline}}` または `\{{ReadOnlyInline}}` です。
 例:
 
-- `isCustomObject`{{ReadOnlyInline}}
+- `isCustomObject` {{ReadOnlyInline}}
   - : `true` の場合、オブジェクトはカスタムオブジェクトであることを示します。
-- `parameterX`{{Optional_Inline}}
+- `parameterX` {{optional_inline}}
   - : ごにょごにょごにょ...
 
 ## 状態と互換性についての表示
@@ -230,29 +230,49 @@ MDN の特定の参照領域（JavaScript、CSS、HTML 要素、SVG など）の
 
 ### ページまたはセクションのヘッダーを示すインジケーター
 
-これらのテンプレートが示すのは、上記の対応するインラインマークと同じものです。テンプレートはリファレンスページのメインページタイトルの (または、パンくずリストがあるならばその) 直下に置きます。ページ内のセクションをマークアップすることもできます。
+これらのテンプレートが示すのは、上記の対応するインラインマークと同じものです。テンプレートはリファレンスページのメインページタイトルの (または、パンくずリストがあるならばその) 直下に置きます。
+ページ内のセクションをマークアップすることもできます。
 
 - [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs): `\{{Non-standard_Header}}` {{Non-standard_Header}}
 - [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) は[実験的な機能](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)のドキュメントのページに使用してください。
   例: `\{{SeeCompatTable}}` {{SeeCompatTable}}
 - [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
 - [`secureContext_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/secureContext_header.ejs).
-  インターフェイスページ、 API 概要ページ、 API エントリーポイント（例: `navigator.xyz`）などのメインページで使用するべきですが、通常メソッドやプロパティページなどのサブページでは使用するべきではありません。
+  インターフェイスページ、 API 概要ページ、 API エントリーポイント（例: `navigator.xyz`）などのメインページで使用が、通常メソッドやプロパティページなどのサブページでは使用するべきではありません。
   例: `\{{SecureContext_Header}}` {{SecureContext_Header}}
 
-### ウェブワーカーで使用できる機能であることを示す
+#### ウェブワーカーで使用できる機能であることを示す
 
 [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) マクロは、その機能が[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)のコンテキストで有効であることを示すためのローカライズされた注釈ボックスを挿入するのに使われます。
 引数 `notservice` を使用すると、ある機能がサービスワーカー以外のウェブワーカーで動作することを示すことができます。
 
-#### 構文
+##### 構文
 
 ```plain
 \{{AvailableInWorkers}}
 \{{AvailableInWorkers("notservice")}}
 ```
 
-#### 例
+##### 例
 
 {{AvailableInWorkers}}
 {{AvailableInWorkers("notservice")}}
+
+## ブラウザーの互換性と仕様書のマクロ
+
+以下のマクロはすべてのリファレンスページに記載されていますが、すべてのページ型でも対応しています。
+
+- `\{{Compat}}` / `\{{Compat(&lt;feature>)}}` / `\{{Compat(&lt;feature>, &lt;depth>)}}`
+
+  - : 引数として渡した機能の [互換性一覧表](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) を生成します。引数が指定されていない場合、フロントマターで `browser-compat` によって定義された機能が既定で指定されます。オプションの depth 引数は、どの程度の深さのサブ機能を表に追加するかを設定します。省略した場合は、既定で 1 となり、BCD から最初のレベルのサブ機能のデータのみが掲載されるという意味になります。
+
+- `\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`
+  - : 引数で指定した機能の仕様を掲載します。引数が渡されなかった場合、掲載される仕様書は、フロントマターに `spec_urls` の値が存在する場合はその値によって定義され、存在しない場合はフロントマターの `browser-compat` によって定義されたブラウザー互換性データに掲載されている仕様によって定義されます。仕様書は外部リンクとしてレンダリングされます。
+
+## 関連情報
+
+- [サイドバーマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
+- [ページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types#ページテンプレート)
+- [ページコンポーネント](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)
+- [機能状態マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status)
+- [マクロの一覧](https://github.com/mdn/yari/tree/main/kumascript/macros) (GitHub)

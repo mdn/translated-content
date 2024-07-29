@@ -58,7 +58,7 @@ Se chamar `document.write()` incorporada em uma tag HTML `<script>` embutida, en
 
 > **Nota:** `document.write` e {{domxref("document.writeln")}} [não funcionam em documentos XHTML](/pt-BR/docs/Archive/Web/Writing_JavaScript_for_HTML) (você receberá o erro "Operation is not supported" \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] no console de erros). Isso acontece ao abrir um arquivo local com a extensão .xhtml ou em qualquer documento exibido com um MIME type `application/xhtml+xml` {{Glossary("MIME type")}}. Mais informações disponíveis em [W3C XHTML FAQ](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
 
-> **Nota:** `document.write` em [deferred](/pt-BR/docs/Web/HTML/Element/script#attr-defer) ou [asynchronous](/pt-BR/docs/Web/HTML/Element/script#attr-async) scripts será ignorado, e você receberá uma mensagem como "A call to `document.write()` from an asynchronously-loaded external script was ignored" no console de erros.
+> **Nota:** `document.write` em [deferred](/pt-BR/docs/Web/HTML/Element/script#defer) ou [asynchronous](/pt-BR/docs/Web/HTML/Element/script#async) scripts será ignorado, e você receberá uma mensagem como "A call to `document.write()` from an asynchronously-loaded external script was ignored" no console de erros.
 
 > **Nota:** Somente no Edge, chamando `document.write` mais de uma vez em {{HTMLElement("iframe")}} causa o erro "SCRIPT70: Permission denied".
 

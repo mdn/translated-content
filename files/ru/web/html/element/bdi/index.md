@@ -3,6 +3,8 @@ title: <bdi>
 slug: Web/HTML/Element/bdi
 ---
 
+{{HTMLSidebar}}
+
 ## Описание
 
 **HTML-элемент `<bdi>`** (_bidirectional isolation_, или изоляция двунаправленности \[текста]) изолирует от окружающего текста текстовый фрагмент, направление в котором может отличаться от направления окружающего текста (но не обязательно отличается).
@@ -35,20 +37,15 @@ Like all other HTML elements, this element has the [global attributes](/ru/docs/
 
 This arabic word REDLOHECALP_CIBARA is automatically displayed right-to-left.
 
-## Specifications
+## Спецификации
 
-| Specification                                                                           | Status                   | Comment |
-| --------------------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-bdi-element', '&lt;bdi&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'the-bdi-element.html#the-bdi-element', '&lt;bdi&gt;')}}        | {{Spec2('HTML5 W3C')}}   |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - Related HTML element: {{HTMLElement("bdo")}}
 - Related HTML properties: {{cssxref("direction")}}, {{cssxref("unicode-bidi")}}
-
-{{HTMLSidebar}}

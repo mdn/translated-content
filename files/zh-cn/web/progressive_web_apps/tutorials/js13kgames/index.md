@@ -53,13 +53,13 @@ PWA 赋予了我们创建同时拥有以上两种优势的应用的能力。
 
 像 [couponmoto](https://www.couponmoto.com/) 这样的早期新兴创业公司也开始使用 PWA 来推动更多的消费者参与，这表明 PWA 可以帮助小公司和大公司更有效地（重新）吸引用户。
 
-您可以查看 [pwa.rocks](https://pwa.rocks/) 上的列表以获取更多示例。特别值得一提的是 [hnpwa.com](https://hnpwa.com/)，它列出了 Hacker News 网站的示例实现（而不是随处可见的 TodoMVC 应用程序），您可以在其中看到各种前端框架的使用。
+你可以查看 [pwa.rocks](https://pwa.rocks/) 上的列表以获取更多示例。特别值得一提的是 [hnpwa.com](https://hnpwa.com/)，它列出了 Hacker News 网站的示例实现（而不是随处可见的 TodoMVC 应用程序），你可以在其中看到各种前端框架的使用。
 
-您甚至可以使用 [PWABuilder](https://www.pwabuilder.com/) 网站在线生成 PWA。
+你甚至可以使用 [PWABuilder](https://www.pwabuilder.com/) 网站在线生成 PWA。
 
 对于 Service Worker 和消息推送，请务必查看 [Service Worker 手册](https://github.com/mdn/serviceworker-cookbook/)。这是一个在现代站点中使用 Service Worker 的方法集合。
 
-PWA 非常值得一试，您可以自己查看它是否适用于您的应用程序。
+PWA 非常值得一试，你可以自己查看它是否适用于你的应用程序。
 
 ## 浏览器支持
 
@@ -69,13 +69,13 @@ PWA 所需的关键要素是 [Service Worker](/zh-CN/docs/Web/API/Service_Worker
 
 至于其他功能，像是[推送通知](/zh-CN/docs/Web/API/Push_API)、[通知功能](/zh-CN/docs/Web/API/Notifications_API)和[添加至主屏](/zh-CN/docs/Web/AppsProgressive_web_apps/Progressive/Guides/Making_PWAs_installable)功能也得到了广泛的支持。目前，Safari 对 [Web App Manifest](/zh-CN/docs/Web/Manifest) 和添加至主屏的支持有限，并且不支持 Web 推送通知。但是，其他主流浏览器都支持这里的所有功能。
 
-其中一些 API 是实验性的，文档仍在草稿中，但是 Flipkart 和 AliExpress 这样的成功案例应该也能说服您尝试在 Web 应用程序中实现一些 PWA 功能。
+其中一些 API 是实验性的，文档仍在草稿中，但是 Flipkart 和 AliExpress 这样的成功案例应该也能说服你尝试在 Web 应用程序中实现一些 PWA 功能。
 
-最重要的是，您应该遵循渐进增强理念：在客户端支持它们的情况下使用提供此类增强功能的技术，但如果客户端不支持，则仍然提供应用程序的基本功能。这样，应用对每个人都可用，但使用现代浏览器的人能更多地从 PWA 功能中受益。
+最重要的是，你应该遵循渐进增强理念：在客户端支持它们的情况下使用提供此类增强功能的技术，但如果客户端不支持，则仍然提供应用程序的基本功能。这样，应用对每个人都可用，但使用现代浏览器的人能更多地从 PWA 功能中受益。
 
 ## 一个示例应用程序
 
-在本系列文章中，我们将研究一个超级简单网站的源代码，该网站列出了 [js13kGames 2017](http://2017.js13kgames.com/) 竞赛中提交给 [A-Frame category](http://js13kgames.com/aframe) 的游戏的相关信息。您不必考虑网站上的实际内容，这里主要是学习如何在您自己的项目中使用 PWA 功能。
+在本系列文章中，我们将研究一个超级简单网站的源代码，该网站列出了 [js13kGames 2017](http://2017.js13kgames.com/) 竞赛中提交给 [A-Frame category](http://js13kgames.com/aframe) 的游戏的相关信息。你不必考虑网站上的实际内容，这里主要是学习如何在你自己的项目中使用 PWA 功能。
 
 你可以在 [mdn.github.io/pwa-examples/js13kpwa](https://mdn.github.io/pwa-examples/js13kpwa/) 找到在线版本（另请[参阅源代码](https://github.com/mdn/pwa-examples/tree/main/js13kpwa)），我们将在接下来的几篇文章中对其进行详细解释。
 

@@ -3,7 +3,7 @@ title: runtime.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Envoie un simple message aux écouteurs d'événement dans votre extension ou une extension différente.
 

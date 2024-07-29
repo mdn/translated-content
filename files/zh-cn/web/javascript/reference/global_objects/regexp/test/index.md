@@ -79,7 +79,7 @@ regex.test("foo"); // false
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- 在[JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)章节
+- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)章节
 - {{jsxref("RegExp")}}

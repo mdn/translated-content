@@ -3,6 +3,8 @@ title: Updating extensions for Firefox 3.1
 slug: Mozilla/Firefox/Releases/3.5/Updating_extensions
 ---
 
+{{FirefoxSidebar}}
+
 この記事は、自分の拡張機能を Firefox 3.1 で正しく動作するよう更新しようとしている拡張機能開発者のために役立つ情報を提供します。
 
 ## 更新の基本
@@ -13,7 +15,7 @@ slug: Mozilla/Firefox/Releases/3.5/Updating_extensions
 
 まずはじめに、拡張機能の `install.rdf` ファイルを編集して、(Firefox 3.1 beta 2 でテストを行っている場合は) `maxVersion` を 3.1b2 に更新し、それに合わせて `version` を上げましょう。
 
-Firefox のプロファイルを新規作成し、テストが常用のプロファイルに影響しないようにします。 Firefox が含まれるディレクトリに移動して、以下のコマンドを実行します。
+Firefox のプロファイルを新規作成し、テストが常用のプロファイルに影響しないようにします。 Firefox が含まれるディレクトリーに移動して、以下のコマンドを実行します。
 
 ```
 firefox -createProfile testBeta2
@@ -105,13 +107,13 @@ if (typeof JSON == "undefined") {
 
 JSON がネイティブサポートされていない場合は JSON.jsm JavaScript モジュールをインポートして、そのモジュールによって提供されているメソッドをネイティブ JSON で使われているものにマッピングします。これによって、同じ呼び出しが可能になります。
 
-また、`nsIJSON` インタフェースを直接利用することでも、この問題を回避できます。
+また、`nsIJSON` インターフェイスを直接利用することでも、この問題を回避できます。
 
 ## クローム登録に関する変更
 
-Firefox 3.1 では、リモートのクロームを利用可能にするセキュリティホールが修正されています。 これは、`chrome.manifest` ファイルに Web サイトを参照するリソースが含まれているすべてのアドオンに影響します。
+Firefox 3.1 では、リモートのクロームを利用可能にするセキュリティホールが修正されています。 これは、`chrome.manifest` ファイルにウェブサイトを参照するリソースが含まれているすべてのアドオンに影響します。
 
-この問題は [Firefox バグ 466582](https://bugzil.la/466582) で詳しく説明されています。`nsIProtocolHandler` インタフェースに追加された新しいフラグ `URI_IS_LOCAL_RESOURCE` によって、そのプロトコルがクロームとして登録しても安全であることを示すことができます。 独自のプロトコルハンドラを作成し、それを `chrome.manifest` 内で登録しようとするアドオンは、正しく動作するようにこのフラグを追加する必要があります。
+この問題は [Firefox バグ 466582](https://bugzil.la/466582) で詳しく説明されています。`nsIProtocolHandler` インターフェイスに追加された新しいフラグ `URI_IS_LOCAL_RESOURCE` によって、そのプロトコルがクロームとして登録しても安全であることを示すことができます。 独自のプロトコルハンドラーを作成し、それを `chrome.manifest` 内で登録しようとするアドオンは、正しく動作するようにこのフラグを追加する必要があります。
 
 ## カスタマイズ可能なツールバー
 

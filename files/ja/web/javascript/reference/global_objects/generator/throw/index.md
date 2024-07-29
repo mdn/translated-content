@@ -63,7 +63,7 @@ g.throw(new Error("Something went wrong"));
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Generator.throw")}}
+{{Compat}}
 
 ## 関連情報
 

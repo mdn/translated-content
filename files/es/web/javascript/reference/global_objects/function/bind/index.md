@@ -3,7 +3,7 @@ title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 ---
 
-{{JSRef("Global_Objects", "Function")}}
+{{JSRef}}
 
 ## Resumen
 

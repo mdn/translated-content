@@ -27,7 +27,7 @@ Edge 的 `week` 控制更加精细，使用滚动的滚轮打开星期和年的�
   </tr>
   <tr>
    <td><strong>事件</strong></td>
-   <td>{{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}}</td>
+   <td>{{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("Element/input_event", "input")}}</td>
   </tr>
   <tr>
    <td><strong>支持的常用属性</strong></td>
@@ -90,7 +90,8 @@ weekControl.value = "2017-W45";
 
 布尔属性值，如果存在，说明此字段不能由用户编辑。然而，其 `value` 值仍然可以通过 JavaScript 代码直接设置 {{domxref("HTMLInputElement")}} 的 `value` 属性来改变。
 
-> **备注：** 由于只读字段不可以拥有值，`required` 不会对指定了 `readonly` 属性的字段起作用。
+> [!NOTE]
+> 由于只读字段不可以拥有值，`required` 不会对指定了 `readonly` 属性的字段起作用。
 
 ### step
 
@@ -98,7 +99,8 @@ weekControl.value = "2017-W45";
 
 字符串值 `any` 意味着不使用步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#max) 之外）。
 
-> **备注：** 当用户输入的数据不符合步进配置时，{{Glossary("user agent", "用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
+> [!NOTE]
+> 当用户输入的数据不符合步进配置时，{{Glossary("user agent", "用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
 
 对于 `week` 输入，`step` 的值以周为单位，比例因子为 604,800,000（因为基础数值以毫秒为单位）。`step` 的默认值为 1，表示 1 周。默认的步进基数是 -259,200,000，这是 1970 年第一周的开始（`"1970-W01"`）。
 
@@ -125,7 +127,7 @@ _目前，尚不清楚当与 `week` 输入一起使用时，`"any"` 的值对 `s
 
 ### 控制输入框大小
 
-`<input type="week">` 不支持诸如 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 的表单大小属性。您必须依靠 [CSS](/zh-CN/docs/Web/CSS) 来确定大小。
+`<input type="week">` 不支持诸如 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 的表单大小属性。你必须依靠 [CSS](/zh-CN/docs/Web/CSS) 来确定大小。
 
 ### 使用 step 属性
 
@@ -137,7 +139,7 @@ _目前，尚不清楚当与 `week` 输入一起使用时，`"any"` 的值对 `s
 
 ### 设置最大和最小星期
 
-您可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性来限制用户可以选择的有效周数。在以下示例中，我们设置了可供选择的最小值 `Week 01, 2017` 和最大值 `Week 52, 2017`：
+你可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性来限制用户可以选择的有效周数。在以下示例中，我们设置了可供选择的最小值 `Week 01, 2017` 和最大值 `Week 52, 2017`：
 
 ```html
 <form>
@@ -182,7 +184,7 @@ input:valid + span::after {
 
 ### 使星期值成为必需值
 
-另外，你可以使用 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性来强制填写星期。因此，如果您尝试提交空白的星期字段，则支持的浏览器将显示错误。
+另外，你可以使用 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性来强制填写星期。因此，如果你尝试提交空白的星期字段，则支持的浏览器将显示错误。
 
 让我们看一个例子；在这里，我们设置了最小和最大星期，并令该字段必填：
 
@@ -205,7 +207,7 @@ input:valid + span::after {
 </form>
 ```
 
-如果您尝试提交不带任何值的表单，浏览器将显示错误。现在尝试使用示例：
+如果你尝试提交不带任何值的表单，浏览器将显示错误。现在尝试使用示例：
 
 {{EmbedLiveSample('使星期值成为必需值', 600, 120)}}
 
@@ -213,7 +215,8 @@ input:valid + span::after {
 
 ![The week form control has two dashes where the week number should be. A popup with a yellow warning symbol and a 'Please fill out this field' is emanating from the two dashes, which are highlighted in blue, the same blue as the input's focus ring.](week-validation-chrome.png)
 
-> **警告：** HTML 表单验证*不能*代替脚本来确保输入的数据采用正确的格式。对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了，甚至也可以完全绕开 HTML 并将数据直接提交到服务器。如果服务器端代码无法验证其接收到的数据，则在提交格式不正确的（或太大，类型错误……）的数据时，灾难可能会发生。
+> [!WARNING]
+> HTML 表单验证*不能*代替脚本来确保输入的数据采用正确的格式。对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了，甚至也可以完全绕开 HTML 并将数据直接提交到服务器。如果服务器端代码无法验证其接收到的数据，则在提交格式不正确的（或太大，类型错误……）的数据时，灾难可能会发生。
 
 ## 处理浏览器支持
 
@@ -348,7 +351,8 @@ function populateWeeks() {
 }
 ```
 
-> **备注：** 请记住，有些年份有 53 周（请参阅[每年的周数](https://zh.wikipedia.org/wiki/ISO週日曆#每年的星期))！在开发生产应用程序时，需要考虑到这一点。
+> [!NOTE]
+> 请记住，有些年份有 53 周（请参阅[每年的周数](https://zh.wikipedia.org/wiki/ISO週日曆#每年的星期))！在开发生产应用程序时，需要考虑到这一点。
 
 ## 规范
 

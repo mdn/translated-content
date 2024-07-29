@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise
 
 **`Promise`** 物件代表一個即將完成、或失敗的非同步操作，以及它所產生的值。
 
-> **備註：** 此條目為介紹 Promise 建構式。要瞭解 Promise 相關使用方式，請先參考[使用 Promise](/zh-TW/docs/Web/JavaScript/Guide/Using_promises)。Promise 建構式主要用於包裹尚未支援 Promise 的函式。
+> [!NOTE]
+> 此條目為介紹 Promise 建構式。要瞭解 Promise 相關使用方式，請先參考[使用 Promise](/zh-TW/docs/Web/JavaScript/Guide/Using_promises)。Promise 建構式主要用於包裹尚未支援 Promise 的函式。
 
 {{EmbedInteractiveExample("pages/js/promise-constructor.html")}}
 
@@ -39,9 +40,11 @@ new Promise( /* executor */ function(resolve, reject) { ... } );
 
 ![](https://cdn.rawgit.com/Vectaio/a76330b025baf9bcdf07cb46e5a9ef9e/raw/26c4213a93dee1c39611dcd0ec12625811b20a26/js-promise.svg)
 
-> **備註：** 許多其他語言擁有機制用來惰性求值（lazy evaluation）及延遲（deferring）運算，它們也被稱作「promises」 — e.g. Scheme. 然而在 JavaScript 中 Promises 代表那些（已經）發生中（happening）的程序，它們可以繫結回呼函式。若您要找的是惰性求值表示式，考慮不帶參數的 [arrow function](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)：`f = () => expression` 來建立惰性求值表示式，並透過 `f()` 進行求值.
+> [!NOTE]
+> 許多其他語言擁有機制用來惰性求值（lazy evaluation）及延遲（deferring）運算，它們也被稱作「promises」 — e.g. Scheme. 然而在 JavaScript 中 Promises 代表那些（已經）發生中（happening）的程序，它們可以繫結回呼函式。若你要找的是惰性求值表示式，考慮不帶參數的 [arrow function](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)：`f = () => expression` 來建立惰性求值表示式，並透過 `f()` 進行求值.
 
-> **備註：** 一個被實現或拒絕，但不處於 pending 的 promise 被稱作被解決（settled）。您也會見到使用解決（resolved）一詞來描述 promises — 這代表 promises 被實現（fulfilled）了。[States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) 這篇文章包含了更多 promises 的專有名詞。
+> [!NOTE]
+> 一個被實現或拒絕，但不處於 pending 的 promise 被稱作被解決（settled）。你也會見到使用解決（resolved）一詞來描述 promises — 這代表 promises 被實現（fulfilled）了。[States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) 這篇文章包含了更多 promises 的專有名詞。
 
 ## 屬性
 
@@ -59,14 +62,14 @@ new Promise( /* executor */ function(resolve, reject) { ... } );
 - {{jsxref("Promise.reject", "Promise.reject(reason)")}}
   - : 回傳一個以失敗訊息拒絕的 `promise`。
 - {{jsxref("Promise.resolve", "Promise.resolve(value)")}}
-  - : 回傳一個以 value 實現的 `promise`。若該值為 thenable (i.e. 具有 `then` 方法)，回傳的 promise 將跟隨（follow）之，採用她的最終狀態； 在其他情形回傳的 promise 將以 value 被實現。一般來說，當您不知道 value 是否為 promise，使用 {{jsxref("Promise.resolve", "Promise.resolve(value)")}}，將回傳值以 promise 作處理。
+  - : 回傳一個以 value 實現的 `promise`。若該值為 thenable (i.e. 具有 `then` 方法)，回傳的 promise 將跟隨（follow）之，採用她的最終狀態； 在其他情形回傳的 promise 將以 value 被實現。一般來說，當你不知道 value 是否為 promise，使用 {{jsxref("Promise.resolve", "Promise.resolve(value)")}}，將回傳值以 promise 作處理。
 
 ## `Promise` 原型
 
 ### 屬性
 
-- `Promise.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Promise"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Promise.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`Symbol.toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Promise"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ### 方法
 
@@ -115,14 +118,14 @@ function myAsyncFunction(url) {
 let myFirstPromise = new Promise((resolve, reject) => {
   // 當非同步作業成功時，呼叫 resolve(...),而失敗時則呼叫 reject(...)。
   // 在這個例子中，使用 setTimeout(...) 來模擬非同步程式碼。
-  // 在實務中，您將可能使用像是 XHR 或者一個 HTML5 API.
+  // 在實務中，你將可能使用像是 XHR 或者一個 HTML5 API.
   setTimeout(function () {
     resolve("Success!"); // Yay！非常順利！
   }, 250);
 });
 
 myFirstPromise.then((successMessage) => {
-  // successMessage 是任何您由上方 resolve(...) 傳入的東西。
+  // successMessage 是任何你由上方 resolve(...) 傳入的東西。
   // 在此僅作為成功訊息，但是它不一定是字串。
   console.log("Yay! " + successMessage);
 });
@@ -211,7 +214,7 @@ if ("Promise" in window) {
 }
 ```
 
-這個範例從點擊按鈕開始。您的瀏覽器需要支援 Promise。在短時間內點擊按鈕許多次，您甚至將看到不同的 promises 一個接一個地被實現。
+這個範例從點擊按鈕開始。你的瀏覽器需要支援 Promise。在短時間內點擊按鈕許多次，你甚至將看到不同的 promises 一個接一個地被實現。
 
 {{EmbedLiveSample("進階範例", "500", "200")}}
 

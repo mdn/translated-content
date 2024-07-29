@@ -2,7 +2,7 @@
 title: 画像を歪ませずにボックスを埋めるには
 slug: Learn/CSS/Howto/Fill_a_box_with_an_image
 l10n:
-  sourceCommit: d3cdafcdb4d22e5c55771501e7c80451a96aa032
+  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
 {{LearnSidebar}}

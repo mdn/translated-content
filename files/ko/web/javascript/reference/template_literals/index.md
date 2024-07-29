@@ -83,8 +83,8 @@ var classes = "header";
 classes += isLargeScreen()
   ? ""
   : item.isCollapsed
-  ? " icon-expander"
-  : " icon-collapser";
+    ? " icon-expander"
+    : " icon-collapser";
 ```
 
 ES2015에서 중첩(nesting)없이 템플릿 리터럴 사용한 경우:

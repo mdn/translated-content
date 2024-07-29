@@ -19,7 +19,7 @@ O mecânismo CORS suporta requisições seguras do tipo _cross-origin e_ transfe
 
 Todos, realmente.
 
-Este artigo destina-se a administradores da Web, desenvolvedores de servidores e desenvolvedores front-end. Os navegadores modernos lidam com os componentes do lado cliente em compartilhamento entre origens, incluindo cabeçalhos e aplicação de políticas. Mas esse novo padrão significa que os servidores precisam lidar com novos cabeçalhos de requisição e resposta. Outro artigo para desenvolvedores de servidores que discutem [compartilhamento _cross-origin_ a partir de uma perspectiva de servidor (com fragmentos de código PHP)](/en-US/docs/Web/HTTP/Server-Side_Access_Control), pode ser uma leitura complementar.
+Este artigo destina-se a administradores da Web, desenvolvedores de servidores e desenvolvedores front-end. Os navegadores modernos lidam com os componentes do lado cliente em compartilhamento entre origens, incluindo cabeçalhos e aplicação de políticas. Mas esse novo padrão significa que os servidores precisam lidar com novos cabeçalhos de requisição e resposta. Outro artigo para desenvolvedores de servidores que discutem [compartilhamento _cross-origin_ a partir de uma perspectiva de servidor (com fragmentos de código PHP)](/pt-BR/docs/Web/HTTP/CORS), pode ser uma leitura complementar.
 
 ## Quais solicitações usam o CORS?
 
@@ -50,7 +50,7 @@ Uma discussão sobre _Cross-Origin Resource Sharing_ a partir da perspectiva do 
 
 ### Requisições simples
 
-Algumas requisições não acionam um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Access_control_CORS#Preflighted_requests). Essas são denominadas neste artigo como "requisições simples" (_simple request_), embora a especificação {{SpecName('Fetch')}} (que define CORS) não utilize esse termo. Uma requisição que não aciona um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Access_control_CORS#Preflighted_requests) — denominada "requisição simples" — é uma que **atende todas as seguintes condições**:
+Algumas requisições não acionam um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Access_control_CORS#Preflighted_requests). Essas são denominadas neste artigo como "requisições simples" (_simple request_), embora a especificação [Fetch](https://fetch.spec.whatwg.org/) (que define CORS) não utilize esse termo. Uma requisição que não aciona um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Access_control_CORS#Preflighted_requests) — denominada "requisição simples" — é uma que **atende todas as seguintes condições**:
 
 - Os únicos métodos permitidos são:
 
@@ -492,13 +492,11 @@ Examples of this usage can be [found above](#Preflighted_requests).
 
 ## Especificações
 
-| Specification                                   | Status             | Comment                                                                          |
-| ----------------------------------------------- | ------------------ | -------------------------------------------------------------------------------- |
-| {{SpecName('Fetch', '#cors-protocol', 'CORS')}} | {{Spec2('Fetch')}} | New definition; supplants [W3C CORS](https://www.w3.org/TR/cors/) specification. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ### Notas de compatibilidade
 

@@ -1,6 +1,8 @@
 ---
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
+l10n:
+  sourceCommit: ef30b142b03870b8ca70919f1a65a96736898c3a
 ---
 
 {{JSRef}}
@@ -11,15 +13,51 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 
 `Set` オブジェクトは値のコレクションです。 `Set` に**重複する値は格納出来ません**。 `Set` 内の値はコレクション内で一意になります。 `Set` はその要素について挿入順で反復処理を行うことができます。挿入順は、各要素が [`add`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/add) メソッドによって正常に `Set` に挿入された順番に対応します。
 
-仕様書では `Set` の実装について「平均アクセス時間がコレクション内の要素数に対して線形以下」であることが要求されています。したがって、計算量が O(N) よりも優れていれば、内部的にはハッシュテーブル（ O(1) ルックアップ)、探索木（　O(log(N) ルックアップ)、その他のデータ構造として表現することが可能です。
+仕様書では `Set` の実装について「平均アクセス時間がコレクション内の要素数に対して線形探索以下」であることが要求されています。したがって、計算量が O(N) よりも優れている限り、内部的にはハッシュ表（ルックアップは O(1)）、探索木（ルックアップは O(log(N))）、または他のデータ構造として表すことができます。
 
 ### 値の等価性
 
-値の等値性は、[Same-value-zero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムに基づいています。(以前は [Same-value](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#object.is_を使用した同値等価性) を使用しており、0 と -0 は異なるものとして扱われていました。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)の "Key equality for -0 and 0" を参照してください。) つまり、 `NaN` は `NaN` と同じとみなされ (例え `NaN !== NaN` であっても)、それ以外の値は `===` 演算子の挙動に従って等しいとみなされます。
+値の等値性は、 [SameValueZero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムに基づいています。（以前は [SameValue](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#object.is_を使用した同値等価性) を使用しており、0 と -0 は異なるものとして扱われていました。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)の "Key equality for -0 and 0" を参照してください。）つまり、 {{jsxref("NaN")}} は `NaN` と同じとみなされ（例え `NaN !== NaN` であっても）、それ以外の値は `===` 演算子の挙動に従って等しいとみなされます。
 
-### 性能
+### パフォーマンス
 
-`Set` の [`has`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/has) メソッドは、値が `Set` オブジェクト内にあるかどうかをチェックします。これは、以前に `Set` オブジェクトに追加された要素のほとんどを確認するよりも平均すると高速なアプローチを使用します。特に、 `Array` オブジェクトの `length` が `Set` オブジェクトの `size` と等しい場合、平均して [`Array.prototype.includes`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) メソッドより速くなります。
+[`has`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/has) メソッドは、値が `Set` 内にあるかどうかをチェックします。これは、以前に `Set` に追加された要素のほとんどを確認するよりも平均すると高速なアプローチを使用します。特に、 `Array` オブジェクトの `length` が `Set` オブジェクトの `size` と等しい場合、平均して [`Array.prototype.includes`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) メソッドより速くなります。
+
+### Set 風のブラウザー API
+
+ブラウザーの **`Set` 風オブジェクト**（または「集合風オブジェクト」）とは、[ウェブ API](/ja/docs/Web/API) の中で多くの点で `Set` のように動作するインターフェイスです。
+
+`Set` のように、要素はオブジェクトに追加した順番に反復処理することができます。
+`Set` 風オブジェクトと `Set` には、名前と動作が同じプロパティとメソッドもあります。
+しかし Set とは異なり、各アイテムには特定の定義済みの型しか使用できません。
+
+許可されている型には仕様書の IDL 定義に設定されています。
+例えば、 {{domxref("GPUSupportedFeatures")}} は `Set` 風オブジェクトですが、キーと値として文字列を使用する必要があります。
+これは下記の仕様 IDL で定義されています。
+
+```webidl
+interface GPUSupportedFeatures {
+  readonly setlike<DOMString>;
+};
+```
+
+`Set` 風オブジェクトは、読み取り専用か読み書き可能かのどちらかです（上記の IDL で `readonly` キーワードを確認してください。
+
+- 読み取り専用の `Set` 風オブジェクトには [`size`](#set.prototype.size) プロパティがあり、 [`entries()`](#set.prototype.entries), [`forEach()`](#set.prototype.foreach), [`has()`](#set.prototype.has), [`keys()`](#set.prototype.keys), [`values()`](#set.prototype.values), [`@@iterator`](#set.prototypeiterator) の各メソッドがあります。
+- 読み書き可能な `Set` 風オブジェクトには、それに加えて [`clear()`](#set.prototype.clear), [`delete()`](#set.prototype.delete), [`add()`](#set.prototype.add) の各メソッドがあります。
+
+メソッドとプロパティは `Set` の等価なエンティティと同じ動作をしますが、項目のの型に制限があります。
+
+以下のものが、読み取り専用の `Set` 風ブラウザーオブジェクトの例です。
+
+- {{domxref("GPUSupportedFeatures")}}
+- {{domxref("XRAnchorSet")}}
+
+以下のものが、読み書き可能な `Set` 風ブラウザーオブジェクトの例です。
+
+- {{domxref("CustomStateSet")}}
+- {{domxref("FontFaceSet")}}
+- {{domxref("Highlight")}}
 
 ## コンストラクター
 
@@ -28,40 +66,40 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 
 ## 静的プロパティ
 
-- {{jsxref("Set.@@species", "get Set[@@species]")}}
+- {{jsxref("Set/@@species", "Set[@@species]")}}
   - : 派生オブジェクトを生成するために使用されるコンストラクター関数です。
 
 ## インスタンスプロパティ
 
-- `Set.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列の `"Set"` です。 このプロパティは {{jsxref("Object.prototype.toString()")}} で利用されます。
+これらのプロパティは `Set.prototype` で定義されており、すべての `Set` インスタンスから共有されます。
+
+- {{jsxref("Object/constructor", "Set.prototype.constructor")}}
+  - : このインスタンスオブジェクトを生成したコンストラクター関数です。 `Set` インスタンスの場合、初期値は {{jsxref("Set/Set", "Set")}} コンストラクターです。
 - {{jsxref("Set.prototype.size")}}
   - : `Set` オブジェクト内の値の数を返します。
+- `Set.prototype[@@toStringTag]`
+  - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列の `"Set"` です。 このプロパティは {{jsxref("Object.prototype.toString()")}} で利用されます。
 
 ## インスタンスメソッド
 
-- {{jsxref("Set.add", "Set.prototype.add(<var>value</var>)")}}
-  - : `value` を `Set` オブジェクトに追加します。`Set` オブジェクトを返します。
+- {{jsxref("Set.prototype.add()")}}
+  - : `Set` オブジェクト内に同じ値を持つ要素がまだ存在しなかった場合、指定した値を持つ新しい要素を `Set` オブジェクトに挿入します。
 - {{jsxref("Set.prototype.clear()")}}
   - : すべての要素を `Set` オブジェクトから取り除きます。
-- {{jsxref("Set.delete", "Set.prototype.delete(<var>value</var>)")}}
+- {{jsxref("Set.prototype.delete()")}}
   - : `value` に関連した要素を取り除き、要素の削除に成功したかどうかを示す論理値を返します。 `Set.prototype.has(value)` はその後は `false` を返します。
-- {{jsxref("Set.has", "Set.prototype.has(<var>value</var>)")}}
+- {{jsxref("Set.prototype.entries()")}}
+  - : `Set` オブジェクト内の各要素を **`[value, value]` の配列**の形で挿入順で返す、新しいイテレーターオブジェクトを返します。これは {{jsxref("Map")}} オブジェクトと似ていますが、それぞれの項目の _key_ が `Set` では _value_ と同じになります。
+- {{jsxref("Set.prototype.forEach()")}}
+  - : `Set` オブジェクト内に存在する各値に対して、挿入順に一度ずつ `callbackFn` を呼びます。`thisArg` 引数が指定された場合、それぞれの `callbackFn` の呼び出しにおいて `this` の値として使用されます。
+- {{jsxref("Set.prototype.has()")}}
   - : `Set` オブジェクト内に引数で与えられた値をもつ要素が存在するかどうかを示す論理値を返します。
-- {{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}
-  - : `Set` オブジェクト内の各要素の**値**を挿入順に返す、新しいイテレーターオブジェクトを返します。
-- {{jsxref("Set.prototype.values()")}}
-  - : `Set` オブジェクト内の各要素の**値**を挿入順に返す、新しいイテレーターオブジェクトを返します。
 - {{jsxref("Set.prototype.keys()")}}
   - : {{jsxref("Set.prototype.values()")}} の別名です。
-- {{jsxref("Set.prototype.entries()")}}
-
-  - : `Set` オブジェクト内の各要素を **`[value, value]` の配列**の形で挿入順で返す、新しいイテレーターオブジェクトを返します。
-
-    これは {{jsxref("Map")}} オブジェクトと似ていますが、それぞれの項目の _key_ が `set` では _value_ と同じになります。
-
-- {{jsxref("Set.forEach", "Set.prototype.forEach(<var>callbackFn</var>[, <var>thisArg</var>])")}}
-  - : `Set` オブジェクト内に存在する各値に対して、挿入順に一度ずつ `callbackFn` を呼びます。`thisArg` 引数が指定された場合、それぞれの `callbackFn` の呼び出しにおいて `this` の値として使用されます。
+- {{jsxref("Set.prototype.values()")}}
+  - : `Set` オブジェクト内の各要素の**値**を挿入順に返す、新しいイテレーターオブジェクトを返します。
+- [`Set.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)
+  - : `Set` オブジェクト内の各要素の**値**を挿入順に返す、新しいイテレーターオブジェクトを返します。
 
 ## 例
 
@@ -70,10 +108,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 ```js
 const mySet1 = new Set();
 
-mySet1.add(1); // Set [ 1 ]
-mySet1.add(5); // Set [ 1, 5 ]
-mySet1.add(5); // Set [ 1, 5 ]
-mySet1.add("some text"); // Set [ 1, 5, 'some text' ]
+mySet1.add(1); // Set(1) { 1 }
+mySet1.add(5); // Set(2) { 1, 5 }
+mySet1.add(5); // Set(2) { 1, 5 }
+mySet1.add("some text"); // Set(3) { 1, 5, 'some text' }
 const o = { a: 1, b: 2 };
 mySet1.add(o);
 
@@ -100,44 +138,52 @@ console.log(mySet1); // Set(5) { 1, "some text", {…}, {…}, 5 }
 
 ### Set の反復処理
 
+挿入順に要素を訪問する集合に対する反復処理です。
+
 ```js
-// セット内のアイテムを反復処理
-// アイテムのログ出力順: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of mySet1) console.log(item)
+for (const item of mySet1) {
+  console.log(item);
+}
+// 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
-// アイテムのログ出力順: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of mySet1.keys()) console.log(item)
+for (const item of mySet1.keys()) {
+  console.log(item);
+}
+// 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
-// アイテムのログ出力順: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of mySet1.values()) console.log(item)
+for (const item of mySet1.values()) {
+  console.log(item);
+}
+// 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
-// アイテムのログ出力順: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-// （ここではキーと値は同じ）
-for (let [key, value] of mySet1.entries()) console.log(key)
+// ここではキーと値は同じ
+for (const [key, value] of mySet1.entries()) {
+  console.log(key);
+}
+// 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
 // Set オブジェクトを Array オブジェクトに Array.from で変換
-const myArr = Array.from(mySet1) // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}]
+const myArr = Array.from(mySet1); // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5]
 
 // HTML 文書内であれば以下のものも動作する
-mySet1.add(document.body)
-mySet1.has(document.querySelector('body')) // true
+mySet1.add(document.body);
+mySet1.has(document.querySelector("body")); // true
 
 // Set と Array の間の変換
-const mySet2 = new Set([1, 2, 3, 4])
-mySet2.size                    // 4
-[...mySet2]                    // [1, 2, 3, 4]
+const mySet2 = new Set([1, 2, 3, 4]);
+console.log(mySet2.size); // 4
+console.log([...mySet2]); // [1, 2, 3, 4]
 
 // 交差する様子をシミュレートすることができる
-const intersection = new Set([...mySet1].filter(x => mySet2.has(x)))
+const intersection = new Set([...mySet1].filter((x) => mySet2.has(x)));
 
 // 差をシミュレートすることができる
-const difference = new Set([...mySet1].filter(x => !mySet2.has(x)))
+const difference = new Set([...mySet1].filter((x) => !mySet2.has(x)));
 
 // セット内の項目を forEach() で反復処理
-mySet2.forEach(function(value) {
-  console.log(value)
-})
-
+mySet2.forEach((value) => {
+  console.log(value);
+});
 // 1
 // 2
 // 3
@@ -148,7 +194,7 @@ mySet2.forEach(function(value) {
 
 ```js
 function isSuperset(set, subset) {
-  for (let elem of subset) {
+  for (const elem of subset) {
     if (!set.has(elem)) {
       return false;
     }
@@ -157,16 +203,16 @@ function isSuperset(set, subset) {
 }
 
 function union(setA, setB) {
-  let _union = new Set(setA);
-  for (let elem of setB) {
+  const _union = new Set(setA);
+  for (const elem of setB) {
     _union.add(elem);
   }
   return _union;
 }
 
 function intersection(setA, setB) {
-  let _intersection = new Set();
-  for (let elem of setB) {
+  const _intersection = new Set();
+  for (const elem of setB) {
     if (setA.has(elem)) {
       _intersection.add(elem);
     }
@@ -175,8 +221,8 @@ function intersection(setA, setB) {
 }
 
 function symmetricDifference(setA, setB) {
-  let _difference = new Set(setA);
-  for (let elem of setB) {
+  const _difference = new Set(setA);
+  for (const elem of setB) {
     if (_difference.has(elem)) {
       _difference.delete(elem);
     } else {
@@ -187,8 +233,8 @@ function symmetricDifference(setA, setB) {
 }
 
 function difference(setA, setB) {
-  let _difference = new Set(setA);
-  for (let elem of setB) {
+  const _difference = new Set(setA);
+  for (const elem of setB) {
     _difference.delete(elem);
   }
   return _difference;
@@ -206,13 +252,13 @@ symmetricDifference(setA, setC); // returns Set {1, 2, 5, 6}
 difference(setA, setC); // returns Set {1, 2}
 ```
 
-### Array オブジェクトとの関係
+### 配列との関係
 
 ```js
-let myArray = ["value1", "value2", "value3"];
+const myArray = ["value1", "value2", "value3"];
 
 // 通常の Set コンストラクターを使用して、 Array を Set に変換
-let mySet = new Set(myArray);
+const mySet = new Set(myArray);
 
 mySet.has("value1"); // returns true
 
@@ -235,7 +281,7 @@ console.log([...new Set(numbers)]);
 ### 文字列との関係
 
 ```js
-let text = "India";
+const text = "India";
 
 const mySet = new Set(text); // Set(5) {'I', 'n', 'd', 'i', 'a'}
 mySet.size; // 5
@@ -248,12 +294,10 @@ new Set("firefox"); // Set(6) { "f", "i", "r", "e", "o", "x" }
 ### Set を使用して、リスト中の値の一意性を保証
 
 ```js
-const array = Array.from(document.querySelectorAll("[id]")).map(function (e) {
-  return e.id;
-});
+const array = Array.from(document.querySelectorAll("[id]")).map((e) => e.id);
 
 const set = new Set(array);
-console.assert(set.size == array.length);
+console.assert(set.size === array.length);
 ```
 
 ## 仕様書

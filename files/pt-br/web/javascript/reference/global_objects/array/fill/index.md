@@ -96,13 +96,11 @@ if (!Array.prototype.fill) {
 
 ## Especificações
 
-| Especificação                                                            | Status           | Comentário         |
-| ------------------------------------------------------------------------ | ---------------- | ------------------ |
-| {{SpecName('ES6', '#sec-array.prototype.fill', 'Array.prototype.fill')}} | {{Spec2('ES6')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.fill")}}
+{{Compat}}
 
 \[1] Começando com Chrome 36, isto era disponível com uma mudança nas preferencias. Em chrome://flags, ativar a entrada "Enable Experimental JavaScript".
 

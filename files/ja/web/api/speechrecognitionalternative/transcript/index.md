@@ -1,80 +1,50 @@
 ---
-title: SpeechRecognitionAlternative.transcript
+title: "SpeechRecognitionAlternative: transcript プロパティ"
+short-title: transcript
 slug: Web/API/SpeechRecognitionAlternative/transcript
+l10n:
+  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+{{APIRef("Web Speech API")}}
 
-{{domxref("SpeechRecognitionResult")}} インターフェースの **`transcript`** 読み取り専用プロパティは、認識したワードの記録を含む文字列を返します。
+**`transcript`** は {{domxref("SpeechRecognitionResult")}} インターフェイスの読み取り専用プロパティで、認識した語の記録を含む文字列を返します。
 
-連続認識において、連続した {{domxref("SpeechRecognitionResult")}} の連結がセッションの適切な記録を生成するように、必要に応じて先頭または末尾の空白が含まれます。
+連続認識において、連続した {{domxref("SpeechRecognitionResult")}} の連結がセッションの適切な記録を生成するように、必要に応じて先頭または末尾にホワイトスペースが含まれます。
 
-## 構文
+## 値
 
-```
-var myTranscript = speechRecognitionAlternativeInstance.transcript;
-```
-
-### 戻り値
-
-{{domxref("DOMString")}}。
+文字列です。
 
 ## 例
 
-このコードは、[Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) から抜き出しています。
+このコードは、 [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) から抜き出しています。
 
 ```js
-recognition.onresult = function (event) {
+recognition.onresult = (event) => {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
   // The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
   // It has a getter so it can be accessed like an array
   // The first [0] returns the SpeechRecognitionResult at position 0.
-  // Each SpeechRecognitionResult object contains SpeechRecognitionAlternative objects that contain individual results.
+  // Each SpeechRecognitionResult object contains SpeechRecognitionAlternative objects
+  // that contain individual results.
   // These also have getters so they can be accessed like arrays.
   // The second [0] returns the SpeechRecognitionAlternative at position 0.
   // We then return the transcript property of the SpeechRecognitionAlternative object
-  var color = event.results[0][0].transcript;
-  diagnostic.textContent = "Result received: " + color + ".";
+  const color = event.results[0][0].transcript;
+  diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
 };
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("api.SpeechRecognitionAlternative.transcript")}}
+{{Compat}}
 
-- \[1] Chrome では、SpeechRecognitionare インターフェースにプレフィックスが必要です。そのため、インターフェース名に `webkitSpeechRecognition` のようなプレフィックスが必要です; また、認識を動作させるには、Web サーバ上から提供する必要があります。
-- \[2]&#x20;
+## 関連情報
 
-  about:config
-
-  &#x20;の `media.webspeech.recognition.enable` フラグで有効にできますが、現在の音声認識はデスクトップ版の Firefox では機能しません - 必要な内部権限が整理されればすぐに適切に公開されます。
-
-### Firefox OS 許可
-
-アプリで音声認識を使用するには、[manifest](/ja/docs/Web/Apps/Build/Manifest) で次の許可が必要です:
-
-```json
-"permissions": {
-  "audio-capture" : {
-    "description" : "Audio capture"
-  },
-  "speech-recognition" : {
-    "description" : "Speech recognition"
-  }
-}
-```
-
-特権アプリも必要なため、次のものも含める必要があります。
-
-```json
-  "type": "privileged"
-```
-
-## 関連項目
-
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)

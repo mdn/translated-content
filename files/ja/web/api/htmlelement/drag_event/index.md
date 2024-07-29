@@ -106,7 +106,7 @@ target.addEventListener(
     // ドロップできるように既定の動作を停止
     event.preventDefault();
   },
-  false
+  false,
 );
 
 target.addEventListener("dragenter", (event) => {
@@ -136,7 +136,7 @@ target.addEventListener("drop", (event) => {
 
 #### 結果
 
-{{EmbedLiveSample('Drag and drop example')}}
+{{EmbedLiveSample('ドラッグ＆ドロップの例')}}
 
 ## 仕様書
 

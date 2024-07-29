@@ -1,11 +1,11 @@
 ---
-title: 存儲您需要的資訊 - 變數
+title: 存儲你需要的資訊 - 變數
 slug: Learn/JavaScript/First_steps/Variables
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 
-閱讀完最後幾篇文章之後，您現在應該知道 JavaScript 是什麼，它可以為您做什麼，如何將它與其他 Web 技術一起使用，以及它的主要功能從高層看起來如何。 在本文中，我們將深入了解真正的基礎知識，了解如何使用 JavaScript 的大多數基本構建塊 - 變數。
+閱讀完最後幾篇文章之後，你現在應該知道 JavaScript 是什麼，它可以為你做什麼，如何將它與其他 Web 技術一起使用，以及它的主要功能從高層看起來如何。 在本文中，我們將深入了解真正的基礎知識，了解如何使用 JavaScript 的大多數基本構建塊 - 變數。
 
 <table class="learn-box">
   <tbody>
@@ -20,9 +20,9 @@ slug: Learn/JavaScript/First_steps/Variables
   </tbody>
 </table>
 
-## 您需要的工具
+## 你需要的工具
 
-在此篇文章中，您將被要求輸入程式碼行來測試您對內容的理解。如果您使用的是網頁瀏覽器，最適合輸入代碼的地方便是 JavaScript 主控台, (請參閱[什麼是瀏覽器開發工具](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)這篇文章以取得更多關於此工具的資訊).
+在此篇文章中，你將被要求輸入程式碼行來測試你對內容的理解。如果你使用的是網頁瀏覽器，最適合輸入代碼的地方便是 JavaScript 主控台, (請參閱[什麼是瀏覽器開發工具](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)這篇文章以取得更多關於此工具的資訊).
 
 ## 什麼是變量／變數 (variable) ？
 
@@ -67,11 +67,12 @@ if (name === 'Adam') {
 
 你可能暫時還沒有完全理解這些代碼和語法，但是你應該能夠理解到 — 如果我們沒有變量，我們就不得不寫大量的代碼去檢查輸入的名字，然後顯示相應名稱的消息 。這樣做顯然是低效率（雖然例子中只有 5 種選擇，但代碼卻相對地長）和不可行的 — 你沒有辦法列舉出所有可能的名字。
 
-使用變量才是明智的。隨著您對 JavaScript 越來越了解，您會開始習慣使用變量。
+使用變量才是明智的。隨著你對 JavaScript 越來越了解，你會開始習慣使用變量。
 
 變量的另一個特性就是它們能夠存儲任何的東西 — 不只是字符串和數字。變量可以存儲更複雜的數據，甚至是函數。你將在後續的內容中體驗到這些用法。
 
-> **備註：** 變量是用來儲存數值的，而變量和數值是兩個不同的概念。變量不是數值本身，它們僅僅是一個用於儲存數值的容器。你可以把變量想像成一個個用來裝東西的紙皮箱。
+> [!NOTE]
+> 變量是用來儲存數值的，而變量和數值是兩個不同的概念。變量不是數值本身，它們僅僅是一個用於儲存數值的容器。你可以把變量想像成一個個用來裝東西的紙皮箱。
 
 ![](boxes.png)
 
@@ -84,9 +85,10 @@ let myName;
 let myAge;
 ```
 
-在這裡我們定義了兩個變量 `myName` 和 `myAge`。那麼現在嘗試輸入這些代碼到你的瀏覽器終端。之後，嘗試使用您自己選擇的名稱來創建一兩個變量。
+在這裡我們定義了兩個變量 `myName` 和 `myAge`。那麼現在嘗試輸入這些代碼到你的瀏覽器終端。之後，嘗試使用你自己選擇的名稱來創建一兩個變量。
 
-> **備註：** 在 JavaScript 中，所有代碼指令都會以分號結尾（ `;`）－ 如果忘記加分號，你的單行代碼可能正常執行，但是在執行多行代碼的時候就可能出錯。所以，最好是養成主動以分號作為代碼結尾的習慣。
+> [!NOTE]
+> 在 JavaScript 中，所有代碼指令都會以分號結尾（ `;`）－ 如果忘記加分號，你的單行代碼可能正常執行，但是在執行多行代碼的時候就可能出錯。所以，最好是養成主動以分號作為代碼結尾的習慣。
 
 你可以輸入變量的名稱，來驗證這個變量的數值是否在執行環境（execution environment）中已經存在。例如，
 
@@ -101,7 +103,8 @@ myAge;
 scoobyDoo;
 ```
 
-> **備註：** 千萬不要把兩個概念弄混淆了，「一個變量**存在，但是沒有數值**」和「一個變量**並不存在**」— 他們完全是兩回事。在前面你看到的盒子的類比中，不存在意味著沒有可以存放變量的「盒子」。沒有定義的值意味著**有**一個「盒子」，但是它裡面沒有任何數值。
+> [!NOTE]
+> 千萬不要把兩個概念弄混淆了，「一個變量**存在，但是沒有數值**」和「一個變量**並不存在**」— 他們完全是兩回事。在前面你看到的盒子的類比中，不存在意味著沒有可以存放變量的「盒子」。沒有定義的值意味著**有**一個「盒子」，但是它裡面沒有任何數值。
 
 ## 初始化變量 (Initializing a variable)
 
@@ -149,7 +152,8 @@ logName();
 var myName;
 ```
 
-> **備註：** This won't work when typing individual lines into a JavaScript console, just when running multiple lines of JavaScript in a web document.
+> [!NOTE]
+> This won't work when typing individual lines into a JavaScript console, just when running multiple lines of JavaScript in a web document.
 
 This works because of **hoisting** — read [var hoisting](/zh-TW/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) for more detail on the subject.
 
@@ -180,7 +184,8 @@ Again, this is a sensible language decision. There is no reason to redeclare var
 
 For these reasons and more, we recommend that you use `let` as much as possible in your code, rather than `var`. There is no reason to use `var`, unless you need to support old versions of Internet Explorer with your code (it doesn't support `let` until version 11; the modern Windows Edge browser supports `let` just fine).
 
-> **備註：** We are currently in the process of updating the course to use `let` rather than `var`. Bear with us!
+> [!NOTE]
+> We are currently in the process of updating the course to use `let` rather than `var`. Bear with us!
 
 ## Updating a variable
 
@@ -203,7 +208,8 @@ You can call a variable pretty much anything you like, but there are limitations
 - Variables are case sensitive — so `myage` is a different variable to `myAge`.
 - One last point — you also need to avoid using JavaScript reserved words as your variable names — by this, we mean the words that make up the actual syntax of JavaScript! So, you can't use words like `var`, `function`, `let`, and `for` as variable names. Browsers will recognize them as different code items, and so you'll get errors.
 
-> **備註：** You can find a fairly complete list of reserved keywords to avoid at [Lexical grammar — keywords](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords).
+> [!NOTE]
+> You can find a fairly complete list of reserved keywords to avoid at [Lexical grammar — keywords](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords).
 
 良好的命名範例：
 
@@ -300,7 +306,7 @@ You'll learn a lot more about arrays in [a future article](/zh-TW/docs/Learn/Jav
 
 ### Objects 物件
 
-在編程中，物件是對真實生活物件進行建模的代碼結構。 您可以擁有一個代表停車場的簡單物件，其中包含有關其寬度和長度的信息，或者您可以擁有一個代表一個人的物件，並用物件紀錄其姓名、身高、體重、慣用語言，如何跟他打招呼等的資訊。
+在編程中，物件是對真實生活物件進行建模的代碼結構。 你可以擁有一個代表停車場的簡單物件，其中包含有關其寬度和長度的信息，或者你可以擁有一個代表一個人的物件，並用物件紀錄其姓名、身高、體重、慣用語言，如何跟他打招呼等的資訊。
 
 請試著在你的 console 中輸入以下指令：
 

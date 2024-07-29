@@ -19,7 +19,7 @@ var str = channel.postMessage(object);
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

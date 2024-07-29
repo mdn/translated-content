@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSS Properties and Values API")}}
 
-**`CSSPropertyRule`** は {{domxref('CSS_Properties_and_Values_API','CSS プロパティと値 API','',' ')}} のインターフェイスで、 CSS の {{cssxref("@property")}} ルールを表します。
+**`CSSPropertyRule`** は [CSS プロパティと値 API](/ja/docs/Web/API/CSS_Properties_and_Values_API) のインターフェイスで、 CSS の {{cssxref("@property")}} ルールを表します。
 
 {{InheritanceDiagram}}
 

@@ -17,11 +17,11 @@ selectElt.setCustomValidity(string);
 
 - _Строка_ {{domxref("DOMString")}} содержащая сообщение об ошибке.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

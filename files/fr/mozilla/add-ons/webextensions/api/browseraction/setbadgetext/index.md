@@ -3,7 +3,7 @@ title: browserAction.setBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Définit le texte du badge pour l'action du navigateur. Le badge est affiché en haut de l'icône.
 
@@ -65,7 +65,7 @@ browser.browserAction.onClicked.addListener(increment);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
 >

@@ -1,33 +1,33 @@
 ---
-title: document.currentScript
+title: Document：currentScript 属性
 slug: Web/API/Document/currentScript
+l10n:
+  sourceCommit: e633202a8cda3c340a0510c27f3902f743275140
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
-**`Document.currentScript`** 属性返回当前正在运行的脚本所属的 {{HTMLElement("script")}} 元素。调用此属性的脚本[不能是 JavaScript 模块](https://github.com/whatwg/html/issues/997)，模块应当使用 {{JSxRef("Statements/import%2Emeta", "import.meta")}} 对象。
+**`Document.currentScript`** 属性返回当前正在处理其脚本（并且该脚本[不是 JavaScript 模块](https://github.com/whatwg/html/issues/997)）的 {{HTMLElement("script")}} 元素。（对于模块，请改用 [`import.meta`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import.meta)）。
 
-值得注意的是，如果当前正在执行的代码是被其他代码作为回调函数或者事件处理函数调用的，那么 `currentScript` 属性不会指向任何 {{HTMLElement("script")}} 元素，而是会返回 `null`。这个属性只在脚本被解析后首次运行时有效。
+值得注意的是，如果脚本中的代码是作为回调或事件处理器调用的，则不会引用 {{HTMLElement("script")}} 元素；它只会在最初处理时引用该元素。
 
-## 语法
+## 值
 
-```plain
-var curScriptElement = document.currentScript;
-```
+{{domxref("HTMLScriptElement")}} 或 null。
 
 ## 示例
 
-下例演示了如何检测当前正在执行脚本的 {{HTMLElement("script")}} 元素是否是以异步模式执行的。
+此示例检查脚本是否正在异步执行：
 
 ```js
 if (document.currentScript.async) {
-  console.log("Executing asynchronously");
+  console.log("异步执行");
 } else {
-  console.log("Executing synchronously");
+  console.log("同步执行");
 }
 ```
 
-[View Live Examples](/samples/html/currentScript.html)
+[查看在线示例](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## 规范
 
@@ -37,9 +37,9 @@ if (document.currentScript.async) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{JSxRef("Statements/import%2Emeta", "import.meta")}}
+- [`import.meta`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import.meta)
 - {{HTMLElement("script")}}
-- {{DOMxRef("document.onafterscriptexecute")}}
-- {{DOMxRef("document.onbeforescriptexecute")}}
+- {{DOMxRef("document.afterscriptexecute_event")}}
+- {{DOMxRef("document.beforescriptexecute_event")}}

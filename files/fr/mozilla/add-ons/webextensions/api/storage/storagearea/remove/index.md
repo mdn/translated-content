@@ -3,7 +3,7 @@ title: StorageArea.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Supprime un ou plusieurs éléments de la zone de stockage.
 
@@ -51,7 +51,7 @@ removeKitten.then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/extensions/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
 >

@@ -3,7 +3,9 @@ title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers("window_and_worker_except_service")}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 `XMLHttpRequest` é um objeto que fornece funcionalidade ao cliente para transferir dados entre um cliente e um servidor. Ele fornece uma maneira fácil de recuperar dados de um URL sem ter que fazer uma atualização de página inteira. Isso permite que uma página da Web atualize apenas uma parte do conteúdo sem interromper o que o usuário esteja fazendo. XMLHttpRequest é usado constantemente na programação de [AJAX](/pt-BR/docs/AJAX).
 
@@ -16,22 +18,6 @@ var myRequest = new XMLHttpRequest();
 ```
 
 Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpRequest](/pt-BR/DOM/XMLHttpRequest/Using_XMLHttpRequest).
-
-## Métodos
-
-| `XMLHttpRequest(JSObject objParameters);`                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `void abort();`                                                                                                                                             |
-| `DOMString getAllResponseHeaders();`                                                                                                                        |
-| `DOMString? getResponseHeader(DOMString header);`                                                                                                           |
-| `void open(DOMString method, DOMString url, optional boolean async, optional DOMString? user, optional DOMString? password);`                               |
-| `void overrideMimeType(DOMString mime);`                                                                                                                    |
-| `void send();` `void send(ArrayBuffer data);` `void send(Blob data);` `void send(Document data);` `void send(DOMString? data);` `void send(FormData data);` |
-| `void setRequestHeader(DOMString header, DOMString value);`                                                                                                 |
-| Métodos não-padrão                                                                                                                                          |
-| `[noscript] void init(in nsIPrincipal principal, in nsIScriptContext scriptContext, in nsPIDOMWindow ownerWindow);`                                         |
-| `[noscript] void openRequest(in AUTF8String method, in AUTF8String url, in boolean async, in AString user, in AString password);`                           |
-| `void sendAsBinary(in DOMString body);`                                                                                                                     |
 
 ## Propriedades
 

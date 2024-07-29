@@ -3,7 +3,7 @@ title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
 
-{{JSRef("Global_Objects", "RegExp")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -713,16 +713,6 @@ var re = new RegExp("\\w+");
 ## Методы
 
 Глобальный объект `RegExp` не имеет собственных методов, однако, он наследует некоторые методы через цепочку прототипов.
-
-## Экземпляры регулярного выражения
-
-### Свойства
-
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype', 'Properties')}}
-
-### Методы
-
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype', 'Methods')}}
 
 ## Примеры
 

@@ -17,7 +17,7 @@ var MyClass = class [className] [extends] {
 
 ## Описание
 
-Class expression имеет схожий синтаксис с {{jsxref("Statements/class", "class declaration (statement)", "", "true")}}. Однако в class expression можно опустить имя класса ("binding identifier"), что не допустимо с {{jsxref("Statements/class", "class declaration", "", "true")}}. Также class expression позволяет повторно объявить уже существующий класс и это **не приведёт к ошибке типа**, как при использовании {{jsxref("Statements/class", "class declaration", "", "true")}}. Свойство конструктора является опциональным. Результатом вызова оператора {{jsxref("Operators/typeof", "typeof")}} на классах, сгенерированных при помощи class expression, всегда будет "function".
+Class expression имеет схожий синтаксис с {{jsxref("Statements/class", "class declaration (statement)", "", 1)}}. Однако в class expression можно опустить имя класса ("binding identifier"), что не допустимо с {{jsxref("Statements/class", "class declaration", "", 1)}}. Также class expression позволяет повторно объявить уже существующий класс и это **не приведёт к ошибке типа**, как при использовании {{jsxref("Statements/class", "class declaration", "", 1)}}. Свойство конструктора является опциональным. Результатом вызова оператора {{jsxref("Operators/typeof", "typeof")}} на классах, сгенерированных при помощи class expression, всегда будет "function".
 
 Так же, как и при использовании class declaration, тело класса у class expression будет исполняться в {{jsxref("Strict_mode", "строгом режиме", "", 1)}}.
 
@@ -70,14 +70,11 @@ NamedFoo.name; // ReferenceError: NamedFoo is not defined
 Foo.name; // "NamedFoo"
 ```
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                           | Статус               | Комментарий                |
-| ---------------------------------------------------------------------- | -------------------- | -------------------------- |
-| {{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}     | {{Spec2('ES6')}}     | Первоначальное определение |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                            |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

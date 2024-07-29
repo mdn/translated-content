@@ -89,7 +89,7 @@ console.log(result); // false
 
 ## Совместимость с браузерами
 
-{{Compat("javascript.builtins.Proxy.handler.deleteProperty")}}
+{{Compat}}
 
 ## Смотрите также
 

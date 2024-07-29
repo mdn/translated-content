@@ -3,6 +3,8 @@ title: ¿Qué es un nombre de dominio?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 En este artículo discutiremos acerca de los nombres de los dominios: qué son, cómo se estructuran y cómo conseguir uno.
 
 <table>
@@ -15,7 +17,7 @@ En este artículo discutiremos acerca de los nombres de los dominios: qué son, 
           >cómo funciona Internet</a
         >
         y entender
-        <a href="/en-US/Learn/Understanding_URLs">qué son las URLs</a>.
+        <a href="/es/Learn/Understanding_URLs">qué son las URLs</a>.
       </td>
     </tr>
     <tr>
@@ -32,7 +34,7 @@ En este artículo discutiremos acerca de los nombres de los dominios: qué son, 
 
 Los nombres de dominio son una parte clave de la infraestructura de internet. Proporcionan una dirección legible para cualquier servidor web disponible en Internet.
 
-Cualquier computadora conectada a Internet puede ser alcanzada a partir de una dirección {{Glossary("IP")}} pública, la cual puede estar formada por 32 bits para el protocolo IPv4 (por lo general se escribe con 4 números separados por puntos entre el 0 y 255, por ejemplo, `173.194.121.32`) o por 128 bits para la versión IPv6 (formada por 8 grupos de 4 números hexadecimales separados por dos puntos, ejemplo `2027:0da8:8b73:0000:0000:8a2e:0370:1337`). Las computadoras pueden manejar estas direcciones fácilmente, pero las personas pasan trabajo para saber de quien es el servidor o que servicio ofrece, ya que un número por sí solo no dice mucho. Además las direcciones IP son difíciles de recordar y pueden cambiarse en cualquier momento. Para resolver estos problemas se usan direcciones que las personas pueden leer, que son intuitivas, fáciles de recordar y dicen mucho sobre el servicio web que ofrecen, se denominan nombres de dominio.
+Cualquier computadora conectada a Internet puede ser alcanzada a partir de una dirección {{Glossary("IP_Address","IP")}} pública, la cual puede estar formada por 32 bits para el protocolo IPv4 (por lo general se escribe con 4 números separados por puntos entre el 0 y 255, por ejemplo, `173.194.121.32`) o por 128 bits para la versión IPv6 (formada por 8 grupos de 4 números hexadecimales separados por dos puntos, ejemplo `2027:0da8:8b73:0000:0000:8a2e:0370:1337`). Las computadoras pueden manejar estas direcciones fácilmente, pero las personas pasan trabajo para saber de quien es el servidor o que servicio ofrece, ya que un número por sí solo no dice mucho. Además las direcciones IP son difíciles de recordar y pueden cambiarse en cualquier momento. Para resolver estos problemas se usan direcciones que las personas pueden leer, que son intuitivas, fáciles de recordar y dicen mucho sobre el servicio web que ofrecen, se denominan nombres de dominio.
 
 ## Ánalisis del tema
 
@@ -40,7 +42,7 @@ Cualquier computadora conectada a Internet puede ser alcanzada a partir de una d
 
 Un nombre de dominio tiene una estructura simple formada por varias partes (puede tener solamente una parte, dos, tres,...), separadas por puntos y **se leen de derecha a izquierda**:
 
-![Anatomy of the MDN domain name](structure.png)
+![Anatomía del nombre de dominio MDN](structure.png)
 
 Cada una de estas partes provee información específica sobre el nombre de dominio completo.
 
@@ -66,7 +68,8 @@ No se puede "comprar un nombre de dominio". Se paga por el derecho de usar un no
 
 Las compañías llamadas registradores utilizan los registros de nombres de dominio para realizar un seguimiento de la información técnica y administrativa que lo conecta con su nombre de dominio.
 
-> **Nota:** Para algunos nombres de dominio pudiera no ser un registrador quien esté a cargo de mantener el seguimiento. Por ejemplo, cada nombre de dominio bajo `.fire` es manejado por Amazon.
+> [!NOTE]
+> Para algunos nombres de dominio pudiera no ser un registrador quien esté a cargo de mantener el seguimiento. Por ejemplo, cada nombre de dominio bajo `.fire` es manejado por Amazon.
 
 #### Encontrar un nombre de dominio disponible
 
@@ -120,13 +123,15 @@ El proceso es bastante sencillo:
 3. Rellenar el formulario con todos los detalles requeridos. Asegúrese de no haber escrito incorrectamente el nombre de dominio deseado. ¡Una vez que esté pagado, es muy tarde!.
 4. El registrador te permitirá conocer cuando un nombre de dominio esté correctamente registrado. Dentro de unas pocas horas, todos los servidores DNS habrán recibido su información de DNS.
 
-> **Nota:** En este proceso se le pide su dirección real. Asegúrese de escribirla correctamente, ya que en algunos países los registradores pueden verse obligados a cerrar el dominio si no pueden proporcionar una dirección válida.
+> [!NOTE]
+> En este proceso se le pide su dirección real. Asegúrese de escribirla correctamente, ya que en algunos países los registradores pueden verse obligados a cerrar el dominio si no pueden proporcionar una dirección válida.
 
 #### Actualización de DNS
 
 Las bases de datos DNS son almacenadas en cada servidor DNS del mundo, y todos ellos hacen referencia a unos pocos denominados "servidores de nombre autoritario" o "servidores DNS de primer nivel". Cuando su registrador crea o actualiza alguna información para un dominio dado, la información tiene que ser actualizada en cada base de datos DNS. Cada servidor DNS que conoce sobre un dominio dado almacena la información por algún tiempo antes de que sea automáticamente invalidada y luego actualizada ( el servidor DNS consulta un servidor autoritario nuevamente). De esta manera, a los servidores DNS que conocen este nombre de dominio les toma algún tiempo poner la información al día.
 
-> **Nota:** Este tiempo es amenudo llamado **tiempo de propagación**. Sin embargo, este término no es preciso puesto que la actualizaciónn no se está propagando en sí (primer nivel → nivel inferior). Los servidores DNS consultados por su computadora (nivel inferior) son los que obtienen la información del servidor autoritario(primer nivel) cuando lo necesitan.
+> [!NOTE]
+> Este tiempo es amenudo llamado **tiempo de propagación**. Sin embargo, este término no es preciso puesto que la actualizaciónn no se está propagando en sí (primer nivel → nivel inferior). Los servidores DNS consultados por su computadora (nivel inferior) son los que obtienen la información del servidor autoritario(primer nivel) cuando lo necesitan.
 
 ### ¿Cómo funciona una petición DNS?
 
@@ -137,7 +142,7 @@ Como ya hemos visto, cuando usted quiere visualizar una página web en su navega
 3. Si la computadora no sabe qué IP está detrás del nombre `mozilla.org`, hay que pedírselo a un servidor DNS, cuyo trabajo es precisamente decirle a la computadora cuál es la dirección IP de cada nombre de dominio registrado.
 4. Ahora que la computadora conoce la dirección IP requerida, su navegador puede gestionar contenidos con el servidor web.
 
-![Explanation of the steps needed to obtain the result to a DNS request](2014-10-dns-request2.png)
+![Explicación de los pasos necesarios para obtener el resultado de una solicitud DNS](2014-10-dns-request2.png)
 
 ## Próximos pasos
 

@@ -3,7 +3,7 @@ title: devtools.inspectedWindow.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/reload
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Recharge la fenêtre à laquelle les devtools sont attachés.
 
@@ -49,7 +49,7 @@ reloadButton.addEventListener("click", () => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools`](https://developer.chrome.com/extensions/devtools).
 >

@@ -3,15 +3,16 @@ title: Map.groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
-> **备注：** 在某些浏览器的某些版本中，此方法被实现为 `Array.prototype.groupToMap()` 方法。由于 web 兼容性问题，它现在以静态方法实现。参见[浏览器兼容性表格](#浏览器兼容性)以获取更多信息。
+> [!NOTE]
+> 在某些浏览器的某些版本中，此方法被实现为 `Array.prototype.groupToMap()` 方法。由于 web 兼容性问题，它现在以静态方法实现。参见[浏览器兼容性表格](#浏览器兼容性)以获取更多信息。
 
 **`Map.groupBy()`** 静态方法使用提供的回调函数返回的值对给定可迭代对象中的元素进行分组。最终返回的 {{jsxref("Map")}} 使用测试函数返回的唯一值作为键，可用于获取每个组中的元素组成的数组。
 
 该方法主要用于对与对象相关的元素进行分组，特别是当该对象可能随时间而变化时。如果对象不变，你可以使用字符串表示它，并使用 {{jsxref("Object.groupBy()")}} 分组元素。
 
-<!-- {{EmbedInteractiveExample("pages/js/array-groupbytomap.html")}} -->
+{{EmbedInteractiveExample("pages/js/map-groupby.html", "shorter")}}
 
 ## 语法
 
@@ -38,11 +39,12 @@ Map.groupBy(items, callbackFn)
 
 `Map.groupBy()` 为可迭代对象中的每个元素调用一次提供的 `callbackFn` 函数。该回调函数应返回一个值，用以表示相关元素的分组。`callbackFn` 返回的值会被用作 `Map.groupBy()` 返回的 {{jsxref("Map")}} 的键。每个键都有一个相关联的数组，其中包含回调函数返回相同值的所有元素。
 
-返回的 {{jsxref("Map")}} 中的元素和原始数组中的元素相同（不是{{glossary("deep copy","深拷贝")}}）。更改元素的内部结构将反映在原始数组和返回的 {{jsxref("Map")}} 中。
+返回的 {{jsxref("Map")}} 中的元素和原始可迭代对象中的元素相同（不是{{glossary("deep copy","深拷贝")}}）。更改元素的内部结构将反映在原始可迭代对象和返回的 {{jsxref("Map")}} 中。
 
 当你需要分组与特定对象相关的信息时，此方法非常有用。因为即使对象被修改，它仍将作为返回的 `Map` 的键继续工作。如果你改为为对象创建字符串表示形式，并在 {{jsxref("Object.groupBy()")}} 中将其用作分组键，则必须在对象改变时维护原始对象和其表示之间的映射。
 
-> **备注：** 要访问返回的 `Map` 中的分组，必须使用最初用作 `Map` 键的相同对象（尽管你可以修改其属性）。你不能使用另一个恰好具有相同名称和属性的对象。
+> [!NOTE]
+> 要访问返回的 `Map` 中的分组，必须使用最初用作 `Map` 键的相同对象（尽管你可以修改其属性）。你不能使用另一个恰好具有相同名称和属性的对象。
 
 `Map.groupBy` 不会读取 `this` 值。它可以在任何对象上调用，并返回一个新的 {{jsxref("Map")}} 实例。
 

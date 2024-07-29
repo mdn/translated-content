@@ -9,9 +9,9 @@ slug: Mozilla/Firefox/Releases/25
 
 ### CSS
 
-- 新增了 {{cssxref("background-attachment")}} 属性值 `local` ([Firefox bug 483446](https://bugzil.la/483446)).
-- 新增了一个 Mozilla 私有的媒体查询属性：[`-moz-os-version`](/zh-CN/docs/Web/Guide/CSS/Media_queries#-moz-os-version), 目前该属性只支持 Windows ([Firefox bug 810399](https://bugzil.la/810399)).
-- 实现了新的 {{cssxref("-moz-osx-font-smoothing")}} CSS 属性 ([Firefox bug 857142](https://bugzil.la/857142))
+- 新增了 {{cssxref("background-attachment")}} 属性值 `local`（[Firefox bug 483446](https://bugzil.la/483446)）。
+- 新增了一个 Mozilla 私有的媒体查询属性：[`-moz-os-version`](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-os-version)，目前该属性只支持 Windows（[Firefox bug 810399](https://bugzil.la/810399)）。
+- 实现了新的 {{cssxref("-moz-osx-font-smoothing")}} CSS 属性（[Firefox bug 857142](https://bugzil.la/857142)）
 
 ### HTML
 
@@ -27,7 +27,7 @@ slug: Mozilla/Firefox/Releases/25
 - 实现了 `Map.prototype.forEach()` 和 `Set.prototype.forEach()` 方法 ([Firefox bug 866847](https://bugzil.la/866847))
 - 实现了更多的数学函数：`Math.log10()`, `Math.log2()`, `Math.log1p()`, `Math.expm1()`, `Math.cosh()`, `Math.sinh()`, `Math.tanh()`, `Math.acosh()`, `Math.asinh()`, `Math.atanh()`, `Math.hypot()`, `Math.trunc()`, `Math.sign()` 以及 `Math.cbrt()` ([Firefox bug 894026](https://bugzil.la/894026)).
 - 实现了八进制整数字面量写法 (比如`0o777`) 和二进制整数字面量写法 (比如`0b111`) ([Firefox bug 717379](https://bugzil.la/717379)).
-- 实现了 ECMAScript 国际化 API —— ECMA 402 ([Firefox bug 853301](https://bugzil.la/853301))
+- 实现了 ECMAScript 国际化 API——ECMA 402（[Firefox bug 853301](https://bugzil.la/853301)）
 
 ### DOM
 
@@ -46,10 +46,10 @@ slug: Mozilla/Firefox/Releases/25
 
 ### SVG
 
-## 相关链接
+## 参见
 
 - [Firefox 25 网站兼容性](/zh-CN/docs/Mozilla/Firefox/Releases/25/Site_Compatibility)
 
-### 更早版本
+### 更早期的版本
 
-{{Firefox_for_developers('24')}}
+{{Firefox_for_developers}}

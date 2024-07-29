@@ -1,6 +1,8 @@
 ---
 title: <shape>
 slug: Web/CSS/shape
+l10n:
+  sourceCommit: 69f92b8a249a9da025a5b12d98aafd84d417c8d9
 ---
 
 {{CSSRef}}{{deprecated_header}}
@@ -21,20 +23,20 @@ rect(top, right, bottom, left)
 
 ### 値
 
-![](rect.png)
+![下記に記述されているように、上、右、下、左を示すグラフ。これらは長方形の図形を定義します。左上の角は、上と左の値で定義します。右下隅は下と右の値で定義します。](rect.png)
 
 - _top_
-  - : {{cssxref("&lt;length&gt;")}} で、この要素のボックスの上の境界から、矩形の上端までのオフセットを表します。
+  - : {{cssxref("length")}} で、この要素のボックスの上の境界から、矩形の上端までのオフセットを表します。
 - _right_
-  - : {{cssxref("&lt;length&gt;")}} で、この要素のボックスの左の境界から、矩形の右端までのオフセットを表します。
+  - : {{cssxref("length")}} で、この要素のボックスの左の境界から、矩形の右端までのオフセットを表します。
 - _bottom_
-  - : {{cssxref("&lt;length&gt;")}} で、この要素のボックスの上の境界から、矩形の下端までのオフセットを表します。
+  - : {{cssxref("length")}} で、この要素のボックスの上の境界から、矩形の下端までのオフセットを表します。
 - _left_
-  - : {{cssxref("&lt;length&gt;")}} で、この要素のボックスの左の境界から、矩形の左端までのオフセットを表します。
+  - : {{cssxref("length")}} で、この要素のボックスの左の境界から、矩形の左端までのオフセットを表します。
 
 ## 補間
 
-アニメーションの際には、`<shape>` データ型の値は、`top`、`right`、`bottom`、`left` の各要素に補間され、それぞれが実数の浮動小数点数として扱われます。補間の速度は、アニメーションに関連する[タイミング関数](/ja/docs/Web/CSS/easing-function)によって決定されます。
+アニメーションの際には、`<shape>` データ型の値は、`top`、`right`、`bottom`、`left` の各要素に補間され、それぞれが実数の浮動小数点数として扱われます。補間の速度は、アニメーションに関連する[イージング関数](/ja/docs/Web/CSS/easing-function)によって決定されます。
 
 ## 例
 
@@ -56,5 +58,4 @@ img.clip04 {
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{Cssxref("clip")}}
-- [`-moz-image-rect()`](/ja/docs/Web/CSS/-moz-image-rect) 関数は `rect()` と同様の座標を使います
+- 関連する CSS プロパティ: {{ cssxref("clip") }}

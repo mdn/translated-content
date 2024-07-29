@@ -27,7 +27,8 @@ slug: Learn/CSS/Styling_text/Typesetting_a_homepage
 - 获取本次练习的 [HTML](https://github.com/mdn/learning-area/blob/main/css/styling-text/typesetting-a-homepage-start/index.html) 和 [CSS](https://github.com/mdn/learning-area/blob/main/css/styling-text/typesetting-a-homepage-start/style.css) 文件以及提供的 [external link icon](https://github.com/mdn/learning-area/blob/main/css/styling-text/typesetting-a-homepage-start/external-link-52.png)。
 - 在本地计算机中拷贝一份上述文件。
 
-> **备注：** 或者，你可以使用像 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 的网站完成你的测评。你可以把 HTML 和 CSS 粘贴到在线编辑器中，并使用[this URL](http://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png)指定背景图像。如果你使用的在线编辑器没有单独的 CSS 面板，你可以将其放在 HTML 文件的\<style>元素中。
+> [!NOTE]
+> 或者，你可以使用像 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 的网站完成你的测评。你可以把 HTML 和 CSS 粘贴到在线编辑器中，并使用[this URL](http://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png)指定背景图像。如果你使用的在线编辑器没有单独的 CSS 面板，你可以将其放在 HTML 文件的\<style>元素中。
 
 ## 项目简介
 
@@ -35,7 +36,7 @@ slug: Learn/CSS/Styling_text/Typesetting_a_homepage
 
 字体：
 
-- 首先，下载一些免费的字体。因为这是一所大学，字体应该严肃，正式，给人信任的感觉 —— 主体使用 serif 字体，对标题结合使用 sans-serif 或者 slab serif 会是不错的选择。
+- 首先，下载一些免费的字体。因为这是一所大学，字体应该严肃，正式，给人信任的感觉——主体使用 serif 字体，对标题结合使用 sans-serif 或者 slab serif 会是不错的选择。
 - 使用合适的服务对着两种字体生成无死角的`@font-face`代码。
 - 将你的 body 字体应用到 body，heading 字体应用到 heading。
 

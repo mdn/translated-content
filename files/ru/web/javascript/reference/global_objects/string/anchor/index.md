@@ -3,7 +3,7 @@ title: String.prototype.anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
 ---
 
-{{JSRef("Global_Objects", "String")}} {{deprecated_header}}
+{{JSRef}} {{deprecated_header}}
 
 ## Сводка
 

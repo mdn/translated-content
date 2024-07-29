@@ -3,7 +3,7 @@ title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Resumo
 
@@ -38,7 +38,7 @@ array.splice(indice) // SpiderMonkey/Firefox extension
 
 Uma lista contendo os elementos removidos. Se apenas um elemento é removido, por exemplo, uma lista contendo apenas um elemento é retornada. Se nenhum elemento é removido, uma lista vazia é retornada.
 
-**Descrição**
+## Descrição
 
 Se você especificar um número diferente de elementos a inserir comparado ao número de elementos que você está removendo, a lista terá um tamanho diferente no final da execução.
 
@@ -79,15 +79,11 @@ removed = myFish.splice(3, Number.MAX_VALUE);
 
 ## Especificações
 
-| Especificação                                                                | Status             | Comentário                                        |
-| ---------------------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
-| ECMAScript 3rd Edition                                                       | Padrão             | Definição inicial. Implementado no JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-15.4.4.12', 'Array.prototype.splice')}}            | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-array.prototype.splice', 'Array.prototype.splice')}} | {{Spec2('ES6')}}   |                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.splice")}}
+{{Compat}}
 
 ## Veja Também
 

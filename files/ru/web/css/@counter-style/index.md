@@ -119,9 +119,7 @@ Checkout more examples on the [demo page](https://mdn.github.io/css-counter-styl
 
 ## Спецификации
 
-| Спецификация                                                                    | Статус                           | Комментарий                |
-| ------------------------------------------------------------------------------- | -------------------------------- | -------------------------- |
-| {{SpecName('CSS3 Counter Styles', '#the-counter-style-rule', 'counter-style')}} | {{Spec2('CSS3 Counter Styles')}} | Первоначальное определение |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

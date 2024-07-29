@@ -32,7 +32,8 @@ slug: Learn/Getting_started_with_the_web/Dealing_with_files
 3. **Папка `styles`**: Эта папка будет содержать CSS код, используемый для стилизации вашего контента (например, настройка текста и цвета фона). Создайте папку с именем `styles` внутри вашей папки `test-site`.
 4. **Папка `scripts`**: Эта папка будет содержать весь JavaScript-код, используемый для добавления интерактивных функций на вашем сайте (например, кнопки которые загружают данные при клике). Создайте папку с именем `scripts` внутри вашей папки `test-site`.
 
-> **Примечание:** На компьютерах под управлением Windows у вас могут возникнуть проблемы с отображением имён файлов, поскольку у Windows есть опция **Скрывать расширения для известных типов файлов**, включённая по умолчанию. Обычно вы можете отключить её, перейдя в проводник, выбрать вариант **Свойства папки...** и снять флажок **Скрывать расширения для зарегистрированных типов файлов**, затем щёлкнуть **OK**. Для получения более точной информации, охватывающей вашу версию Windows, вы можете произвести поиск в Интернете.
+> [!NOTE]
+> На компьютерах под управлением Windows у вас могут возникнуть проблемы с отображением имён файлов, поскольку у Windows есть опция **Скрывать расширения для известных типов файлов**, включённая по умолчанию. Обычно вы можете отключить её, перейдя в проводник, выбрать вариант **Свойства папки...** и снять флажок **Скрывать расширения для зарегистрированных типов файлов**, затем щёлкнуть **OK**. Для получения более точной информации, охватывающей вашу версию Windows, вы можете произвести поиск в Интернете.
 
 ## Файловые пути
 
@@ -69,7 +70,8 @@ slug: Learn/Getting_started_with_the_web/Dealing_with_files
 
 На данный момент это все, что вам нужно знать
 
-> **Примечание:** Файловая система Windows стремится использовать обратный слеш (backslash), а не косую черту (forwardslash), например `C:\windows`. Это не имеет значения, даже если вы разрабатываете веб-сайт на Windows, вы всё равно должны использовать обычные слеши в вашем коде.
+> [!NOTE]
+> Файловая система Windows стремится использовать обратный слеш (backslash), а не косую черту (forwardslash), например `C:\windows`. Это не имеет значения, даже если вы разрабатываете веб-сайт на Windows, вы всё равно должны использовать обычные слеши в вашем коде.
 
 ## Что должно быть сделано?
 
@@ -78,14 +80,3 @@ slug: Learn/Getting_started_with_the_web/Dealing_with_files
 ![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](file-structure.png)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
-
-## В этом модуле
-
-- [Установка базового программного обеспечения](/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F)
-- [Каким должен быть ваш веб-сайт?](/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Работа с файлами](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [Основы HTML](/ru/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [Основы CSS](/ru/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [Основы JavaScript](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Публикация вашего веб-сайта](/ru/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Как работает Веб](/ru/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

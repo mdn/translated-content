@@ -3,7 +3,7 @@ title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 Метод **`forEach()`** выполняет указанную функцию один раз для каждого элемента в массиве.
 

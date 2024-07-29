@@ -3,6 +3,8 @@ title: Utiliser les pages GitHub
 slug: Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 [GitHub](https://github.com/) est un site de partage de code, sur lequel on peut publier des projets dont le code est géré avec le système de gestion de version [Git](http://git-scm.com/)**.** Par défaut, le système est _open source_, ce qui signifie que tout le monde peut consulter le code, l'utiliser pour apprendre ou l'améliorer et collaborer aux projets. Vous pouvez donc participer à d'autres projets ou, à l'inverse, des personnes peuvent collaborer à vos projets ! Dans cet article, nous verrons comment publier du contenu sur le web en utilisant les « pages GitHub » (aussi appelées _gh-pages_) qui sont une des fonctionnalités de GitHub.
 
 ## Publier du contenu
@@ -15,7 +17,8 @@ GitHub est un outil très populaire et important à l'heure actuelle. Git est [u
 2. Ensuite, [inscrivez-vous sur GitHub](https://github.com/join). La procédure est plutôt simple.
 3. Une fois inscrit, connectez vous à [github.com](https://github.com) avec votre nom d'utilisateur et votre mot de passe.
 
-> **Note :** Attention, le site GitHub existe uniquement en anglais. Bien que les étapes mentionnées ici soient relativement simples, il est préférable d'avoir quelques bases d'anglais afin de poursuivre sereinement (nul besoin de connaître Shakespeare ;)). Si vous n'êtes pas à l'aise, rassurez-vous, il existe de nombreux tutoriels en français sur le Web.
+> [!NOTE]
+> Attention, le site GitHub existe uniquement en anglais. Bien que les étapes mentionnées ici soient relativement simples, il est préférable d'avoir quelques bases d'anglais afin de poursuivre sereinement (nul besoin de connaître Shakespeare ;)). Si vous n'êtes pas à l'aise, rassurez-vous, il existe de nombreux tutoriels en français sur le Web.
 
 ### Préparer le code afin de l'envoyer vers GitHub
 
@@ -41,7 +44,8 @@ La meilleure façon d'envoyer votre code sur GitHub est d'utiliser l'interface e
 
 ![Interface en ligne de commande](commande.png)
 
-> **Note :** Il existe également des [interfaces graphiques pour Git](http://git-scm.com/downloads/guis) qui permettent de faire la même chose. N'hésitez pas à les utiliser si vous ne vous sentez pas à l'aise avec la ligne de commande.
+> [!NOTE]
+> Il existe également des [interfaces graphiques pour Git](http://git-scm.com/downloads/guis) qui permettent de faire la même chose. N'hésitez pas à les utiliser si vous ne vous sentez pas à l'aise avec la ligne de commande.
 
 Chaque système d'exploitation possède sa propre interface en ligne de commande :
 
@@ -85,7 +89,8 @@ La ligne de commande peut sembler un peu effrayante au début mais ne vous inqui
    ![](repo-site.png)
 5. Utilisez votre navigateur préféré pour visiter cette URL. Voici votre site ! Partagez le lien avec vos amis pour leur montrer :)
 
-> **Note :** Si vous êtes bloqué-e, n'hésitez pas à utiliser [la page d'aide GitHub sur les pages GitHub](https://pages.github.com/) qui est une excellente ressource (en anglais).
+> [!NOTE]
+> Si vous êtes bloqué-e, n'hésitez pas à utiliser [la page d'aide GitHub sur les pages GitHub](https://pages.github.com/) qui est une excellente ressource (en anglais).
 
 ### Aller plus loin avec Git et GitHub
 

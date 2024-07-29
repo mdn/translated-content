@@ -3,7 +3,7 @@ title: String.prototype.small()
 slug: Web/JavaScript/Reference/Global_Objects/String/small
 ---
 
-{{JSRef("Global_Objects", "String")}} {{deprecated_header}}
+{{JSRef}} {{deprecated_header}}
 
 ## Сводка
 
@@ -41,9 +41,7 @@ document.getElementById("yourElemId").style.fontSize = "0.7em";
 
 ## Спецификации
 
-| Спецификация                                                                 | Статус           | Комментарии                                                                                                                                                 |
-| ---------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.small', 'String.prototype.small')}} | {{Spec2('ES6')}} | Изначальное определение. Реализована в JavaScript 1.0. Определена в (нормативном) Приложении B по Дополнительным возможностям ECMAScript для веб-браузеров. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

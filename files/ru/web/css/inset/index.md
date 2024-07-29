@@ -3,11 +3,14 @@ title: inset
 slug: Web/CSS/inset
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 Свойство [CSS](/ru/docs/Web/CSS) **`inset`** определяет логический блок и встроенные начальное и конечное смещения элемента, которые отображают физическое смещение, зависящее от способа записи, направления и ориентации текста. Оно соответствует свойствам {{cssxref("top")}} и {{cssxref("bottom")}}, или {{cssxref("right")}} и {{cssxref("left")}}, в зависимости от значений, определённых для {{cssxref("writing-mode")}}, {{cssxref("direction")}}, и {{cssxref("text-orientation")}}.
 
 ```css
+/* Ключевые слова */
+inset: auto;
+
 /* <length> значения */
 inset: 3px 10px 3px 10px;
 inset: 2.4em 3em 3em 3em;
@@ -15,9 +18,6 @@ inset: 10px; /* значение применяется ко всем сторо
 
 /* <percentage> от ширины или высоты внешнего блока */
 inset: 10% 5% 5% 5%;
-
-/* Ключевое значение */
-inset: auto;
 
 /* Глобальные значения */
 inset: inherit;
@@ -66,11 +66,11 @@ div {
 
 {{EmbedLiveSample("Пример", 140, 140)}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузера
+## Совместимость с браузерами
 
 {{Compat}}
 

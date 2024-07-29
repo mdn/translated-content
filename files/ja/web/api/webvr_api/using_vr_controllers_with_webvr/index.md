@@ -9,7 +9,8 @@ l10n:
 
 多くの WebVR ハードウェアは、ヘッドセットとゲームパッドがセットになっています。WebVR アプリにおいては、ヘッドセットとゲームパッドは[ゲームパッド API](/ja/docs/Web/API/Gamepad_API)を通じて接続されます。中でも、[ゲームパッド拡張 API](/ja/docs/Web/API/Gamepad_API#experimental_gamepad_extensions) は、ゲームパッドの状態([controller pose](/ja/docs/Web/API/GamepadPose))、触覚アクチュエータ([haptic actuators](/ja/docs/Web/API/GamepadHapticActuator))などの情報を取得します。この記事では、その基礎となる部分を解説します。
 
-> **メモ:** WebVR API は [WebXR API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として批准されることはなく、ごく少数のブラウザーでしか既定で実装・有効化されず、少数の端末しか対応していませんでした。
+> [!NOTE]
+> WebVR API は [WebXR API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として批准されることはなく、ごく少数のブラウザーでしか既定で実装・有効化されず、少数の端末しか対応していませんでした。
 
 ## WebVR API
 
@@ -46,10 +47,11 @@ VR ハードウェアに付随するゲームパッドには、２つの種類�
 let initialRun = true;
 
 if (navigator.getVRDisplays && navigator.getGamepads) {
-  info.textContent = 'WebVR API and Gamepad API supported.'
+  info.textContent = "WebVR API and Gamepad API supported.";
   reportDisplays();
 } else {
-  info.textContent = 'WebVR API and/or Gamepad API not supported by this browser.'
+  info.textContent =
+    "WebVR API and/or Gamepad API not supported by this browser.";
 }
 ```
 
@@ -62,8 +64,9 @@ function reportDisplays() {
     displays.forEach((display, i) => {
       const cap = display.capabilities;
       // cap is a VRDisplayCapabilities object
-      const listItem = document.createElement('li');
-      listItem.innerHTML = `<strong>Display ${i + 1}</strong><br>` +
+      const listItem = document.createElement("li");
+      listItem.innerHTML =
+        `<strong>Display ${i + 1}</strong><br>` +
         `VR Display ID: ${display.displayId}<br>` +
         `VR Display Name: ${display.displayName}<br>` +
         `Display can present content: ${cap.canPresent}<br>` +
@@ -90,20 +93,21 @@ function reportDisplays() {
 
 ```js
 function reportGamepads() {
-    const gamepads = navigator.getGamepads();
-    console.log(`${gamepads.length} controllers`);
-    for (const gp of gamepads) {
-        const listItem = document.createElement('li');
-        listItem.classList = 'gamepad';
-        listItem.innerHTML = `<strong>Gamepad ${gp.index}</strong> (${gp.id})<br>` +
-          `Associated with VR Display ID: ${gp.displayId}<br>` +
-          `Gamepad associated with which hand: ${gp.hand}<br>` +
-          `Available haptic actuators: ${gp.hapticActuators.length}<br>` +
-          `Gamepad can return position info: ${gp.pose.hasPosition}<br>` +
-          `Gamepad can return orientation info: ${gp.pose.hasOrientation}`;
-        list.appendChild(listItem);
-    }
-    initialRun = false;
+  const gamepads = navigator.getGamepads();
+  console.log(`${gamepads.length} controllers`);
+  for (const gp of gamepads) {
+    const listItem = document.createElement("li");
+    listItem.classList = "gamepad";
+    listItem.innerHTML =
+      `<strong>Gamepad ${gp.index}</strong> (${gp.id})<br>` +
+      `Associated with VR Display ID: ${gp.displayId}<br>` +
+      `Gamepad associated with which hand: ${gp.hand}<br>` +
+      `Available haptic actuators: ${gp.hapticActuators.length}<br>` +
+      `Gamepad can return position info: ${gp.pose.hasPosition}<br>` +
+      `Gamepad can return orientation info: ${gp.pose.hasOrientation}`;
+    list.appendChild(listItem);
+  }
+  initialRun = false;
 }
 ```
 
@@ -127,7 +131,7 @@ function reportGamepads() {
 
 ```js
 function removeGamepads() {
-  const gpLi = document.querySelectorAll('.gamepad');
+  const gpLi = document.querySelectorAll(".gamepad");
   for (let i = 0; i < gpLi.length; i++) {
     list.removeChild(gpLi[i]);
   }
@@ -140,14 +144,14 @@ function removeGamepads() {
 `removeGamepads()` は、ゲームパッドが接続または切断されるたびに、以下のイベントハンドラーで実行されます。
 
 ```js
-window.addEventListener('gamepadconnected', (e) => {
+window.addEventListener("gamepadconnected", (e) => {
   info.textContent = `Gamepad ${e.gamepad.index} connected.`;
   if (!initialRun) {
     setTimeout(removeGamepads, 1000);
   }
 });
 
-window.addEventListener('gamepaddisconnected', (e) => {
+window.addEventListener("gamepaddisconnected", (e) => {
   info.textContent = `Gamepad ${e.gamepad.index} disconnected.`;
   setTimeout(removeGamepads, 1000);
 });
@@ -192,22 +196,14 @@ if (gp) {
 ```js
 if (gp && gpPose.hasPosition) {
   mvTranslate([
-    0.0 + (curPos[0] * 15) - (curOrient[1] * 15),
-    0.0 + (curPos[1] * 15) + (curOrient[0] * 15),
-    -15.0 + (curPos[2] * 25)
+    0.0 + curPos[0] * 15 - curOrient[1] * 15,
+    0.0 + curPos[1] * 15 + curOrient[0] * 15,
+    -15.0 + curPos[2] * 25,
   ]);
 } else if (gp) {
-  mvTranslate([
-    0.0 + (curOrient[1] * 15),
-    0.0 + (curOrient[0] * 15),
-    -15.0
-  ]);
+  mvTranslate([0.0 + curOrient[1] * 15, 0.0 + curOrient[0] * 15, -15.0]);
 } else {
-  mvTranslate([
-    0.0,
-    0.0,
-    -15.0
-  ]);
+  mvTranslate([0.0, 0.0, -15.0]);
 }
 ```
 
@@ -223,26 +219,31 @@ if (gp && gpPose.hasPosition) {
 function displayPoseStats(pose) {
   const pos = pose.position;
 
-  const formatCoords = ([x, y, z]) => `x ${x.toFixed(3)}, y ${y.toFixed(3)}, z ${z.toFixed(3)}`;
+  const formatCoords = ([x, y, z]) =>
+    `x ${x.toFixed(3)}, y ${y.toFixed(3)}, z ${z.toFixed(3)}`;
 
   posStats.textContent = pose.hasPosition
     ? `Position: ${formatCoords(pose.position)}`
-    : 'Position not reported';
+    : "Position not reported";
 
   orientStats.textContent = pose.hasOrientation
     ? `Orientation: ${formatCoords(pose.orientation)}`
-    : 'Orientation not reported';
+    : "Orientation not reported";
 
-  linVelStats.textContent = `Linear velocity: ${formatCoords(pose.linearVelocity)}`;
-  angVelStats.textContent = `Angular velocity: ${formatCoords(pose.angularVelocity)}`;
+  linVelStats.textContent = `Linear velocity: ${formatCoords(
+    pose.linearVelocity,
+  )}`;
+  angVelStats.textContent = `Angular velocity: ${formatCoords(
+    pose.angularVelocity,
+  )}`;
 
   linAccStats.textContent = pose.linearAcceleration
     ? `Linear acceleration: ${formatCoords(pose.linearAcceleration)}`
-    : 'Linear acceleration not reported';
+    : "Linear acceleration not reported";
 
   angAccStats.textContent = pose.angularAcceleration
     ? `Angular acceleration: ${formatCoords(pose.angularAcceleration)}`
-    : 'Angular acceleration not reported';
+    : "Angular acceleration not reported";
 }
 ```
 

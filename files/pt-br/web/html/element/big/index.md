@@ -65,7 +65,7 @@ This element implements the {{domxref('HTMLElement')}} interface.
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.big")}}
+{{Compat}}
 
 ## See also
 

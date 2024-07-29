@@ -3,7 +3,7 @@ title: extension.onRequest
 slug: Mozilla/Add-ons/WebExtensions/API/extension/onRequest
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 > **Attention :** Ceci n'est pas implémenté dans Firefox car il est obsolète depuis Chrome 33. Veuillez utiliser [runtime.onMessageExternal](/fr/Add-ons/WebExtensions/API/runtime/onMessageExternal) à la place.
 

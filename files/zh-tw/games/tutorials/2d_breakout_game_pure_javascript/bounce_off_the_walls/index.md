@@ -80,7 +80,7 @@ if (y + dy > canvas.height || y + dy < 0) {
 
 ![](ball-in-wall.png)
 
-這是因為我們計算的牆壁和球的中心的碰撞點，而我們應該做它的圓周。球應該反彈後，如果接觸牆，而不是當它已經在牆上的一半，所以讓我們調整我們的陳述有點包括。更新您添加到的最後一個代碼：
+這是因為我們計算的牆壁和球的中心的碰撞點，而我們應該做它的圓周。球應該反彈後，如果接觸牆，而不是當它已經在牆上的一半，所以讓我們調整我們的陳述有點包括。更新你添加到的最後一個代碼：
 
 ```js
 if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
@@ -99,7 +99,8 @@ if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","370")}}
 
-> **備註：** 每次球撞到牆上時嘗試改變球的顏色為隨機的顏色。
+> [!NOTE]
+> 每次球撞到牆上時嘗試改變球的顏色為隨機的顏色。
 
 ## 下一步
 

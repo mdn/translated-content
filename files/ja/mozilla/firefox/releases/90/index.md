@@ -7,13 +7,14 @@ slug: Mozilla/Firefox/Releases/90
 
 このページでは、開発者に影響する Firefox 90 の変更点をまとめています。Firefox 90 は、米国時間 2021 年 7 月 13 日にリリースされました。
 
-> **メモ:** Mozilla Hacks の [Getting lively with Firefox 90](https://hacks.mozilla.org/2021/07/getting-lively-with-firefox-90/) もご覧ください。
+> [!NOTE]
+> Mozilla Hacks の [Getting lively with Firefox 90](https://hacks.mozilla.org/2021/07/getting-lively-with-firefox-90/) もご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
-- 応答ビューで [Web フォントのプレビュー](/ja/docs/Tools/Network_Monitor/request_details#response_tab) を表示するようになりました ([Firefox バグ 872078](https://bugzil.la/872078))。
+- 応答ビューで [ウェブフォントのプレビュー](/ja/docs/Tools/Network_Monitor/request_details#response_tab) を表示するようになりました ([Firefox バグ 872078](https://bugzil.la/872078))。
 
 ### HTML
 

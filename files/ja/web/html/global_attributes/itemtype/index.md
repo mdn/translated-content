@@ -129,7 +129,8 @@ Google などの主要な検索エンジンは、構造化データのために 
   </tbody>
 </table>
 
-> **メモ:** HTML からマイクロデータを抽出するのに手軽なツールとして、 Google の[構造化データテストツール](https://developers.google.com/search/docs/advanced/structured-data)があります。こちらの HTML で試してみてください。
+> [!NOTE]
+> HTML からマイクロデータを抽出するのに手軽なツールとして、 Google の[構造化データテストツール](https://developers.google.com/search/docs/advanced/structured-data)があります。こちらの HTML で試してみてください。
 
 #### HTML
 
@@ -164,7 +165,8 @@ Google などの主要な検索エンジンは、構造化データのために 
       <meta itemprop="priceCurrency" content="USD" />
       <span itemprop="price">Sale price: $119.99<br /></span>
       (Sale ends
-      <time itemprop="priceValidUntil" datetime="2020-11-05"> 5 November!</time>)<br />
+      <time itemprop="priceValidUntil" datetime="2020-11-05"> 5 November!</time
+      >)<br />
       Available from:
       <span
         itemprop="seller"

@@ -3,6 +3,8 @@ title: GIF
 slug: Glossary/GIF
 ---
 
+{{GlossarySidebar}}
+
 GIF (Graphics Interchange Format)は、可逆圧縮とアニメーションに使える画像フォーマットです。GIF は 1 ピクセル毎 8 ビットまでと、24 ビットの色領域から最大 256 色まで扱えます。
 
 ## 詳細

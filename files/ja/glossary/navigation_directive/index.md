@@ -3,6 +3,8 @@ title: Navigation directive (ナビゲーションディレクティブ)
 slug: Glossary/Navigation_directive
 ---
 
+{{GlossarySidebar}}
+
 **{{Glossary("CSP")}} のナビゲーションディレクティブ**は {{HTTPHeader("Content-Security-Policy")}} ヘッダーで使用され、たとえば、ユーザーがどの場所に移動したり、フォームを送信したりすることができるかを管理します。
 
 ナビゲーションディレクティブは {{CSP("default-src")}} ディレクティブで代替されません。
@@ -24,7 +26,7 @@ slug: Glossary/Navigation_directive
 
 - {{HTTPHeader("Content-Security-Policy")}}
 
-1. [用語集](/ja/docs/Glossary)
+1. 関連用語:
 
    1. {{Glossary("CSP")}}
    2. {{Glossary("Fetch directive", "フェッチディレクティブ")}}

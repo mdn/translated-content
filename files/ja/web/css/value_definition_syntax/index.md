@@ -103,7 +103,8 @@ bold && <length>
 - `bold`。どちらの成分も出現しなければなりません。
 - `bold 1em bold`。どちらの成分も 1 度だけ出現しなければなりません。
 
-> **メモ:** 並列は二重アンパサンドより優先されます。例えば `bold thin && <length>` は `[ bold thin ] && <length>` と同じ意味です。これは `bold thin <length>` や `<length> bold thin` を含みますが、`bold <length> thin` は含みません。
+> [!NOTE]
+> 並列は二重アンパサンドより優先されます。例えば `bold thin && <length>` は `[ bold thin ] && <length>` と同じ意味です。これは `bold thin <length>` や `<length> bold thin` を含みますが、`bold <length> thin` は含みません。
 
 ### 二重バー
 
@@ -124,7 +125,8 @@ bold && <length>
 - `blue yellow`。各成分は最大で 1 回だけ出現できます。
 - `bold`。どの対象の値もこのキーワードを使えません。
 
-> **メモ:** 二重アンパサンドは二重バーより優先されます。例えば `bold || thin && <length>` は `bold || [ thin && <length> ]` と同じ意味です。 `bold`, `thin <length>`, `bold thin <length>`, `thin <length> bold` を含みますが、`<length> bold thin` は 含みません。 bold を省略しないのなら、`thin && <length>` 成分全体よりも前か後ろに置く必要があるからです。
+> [!NOTE]
+> 二重アンパサンドは二重バーより優先されます。例えば `bold || thin && <length>` は `bold || [ thin && <length> ]` と同じ意味です。 `bold`, `thin <length>`, `bold thin <length>`, `thin <length> bold` を含みますが、`<length> bold thin` は 含みません。 bold を省略しないのなら、`thin && <length>` 成分全体よりも前か後ろに置く必要があるからです。
 
 ### 単一バー
 
@@ -150,7 +152,8 @@ bold && <length>
 - `center 3%`。各成分は 1 つだけ存在しなければなりません。
 - `3em 4.5em`。成分は最大で 1 回だけ存在できます。
 
-> **メモ:** 二重バーは単一バーより優先されます。例えば `bold | thin || <length>` は `bold | [ thin || <length> ]` と同じ意味です。`bold`, `thin`, `<length>`, `<length> thin`, や `thin <length>` を含みますが、`bold <length>` は含みません。`|` 結合子の両側それぞれから 1 つだけ対象が存在できるからです。
+> [!NOTE]
+> 二重バーは単一バーより優先されます。例えば `bold | thin || <length>` は `bold | [ thin || <length> ]` と同じ意味です。`bold`, `thin`, `<length>`, `<length> thin`, や `thin <length>` を含みますが、`bold <length>` は含みません。`|` 結合子の両側それぞれから 1 つだけ対象が存在できるからです。
 
 ## 成分値の乗算子
 
@@ -384,11 +387,11 @@ bold smaller#
   - [アットルール](/ja/docs/Web/CSS/At-rule)
   - [コメント](/ja/docs/Web/CSS/Comments)
   - [詳細度](/ja/docs/Web/CSS/Specificity)
-  - [継承](/ja/docs/Web/CSS/inheritance)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [継承](/ja/docs/Web/CSS/Inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
   - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
-  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
     - [初期値](/ja/docs/Web/CSS/initial_value)
     - [計算値](/ja/docs/Web/CSS/computed_value)

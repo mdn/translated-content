@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext/texParameter
 
 {{APIRef("WebGL")}}
 
-Les méthodes **`WebGLRenderingContext.texParameter[fi]()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) définissent les paramètres de texture.
+Les méthodes **`WebGLRenderingContext.texParameter[fi]()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) définissent les paramètres de texture.
 
 ## Syntaxe
 

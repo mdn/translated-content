@@ -40,6 +40,6 @@ Therefore `background_color` should match the {{cssxref("background-color")}} CS
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}

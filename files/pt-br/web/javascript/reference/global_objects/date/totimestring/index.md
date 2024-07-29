@@ -38,13 +38,11 @@ console.log(d.toTimeString()); // 14:39:07 GMT-0600 (PDT)
 
 ## Especificações
 
-| Especificação                                                                              |
-| ------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.totimestring', 'Date.prototype.toTimeString')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.toTimeString")}}
+{{Compat}}
 
 ## Veja também
 

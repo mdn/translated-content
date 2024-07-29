@@ -3,7 +3,7 @@ title: Window.confirm()
 slug: Web/API/Window/confirm
 ---
 
-{{ApiRef("Window")}}
+{{APIRef("Window")}}
 
 Метод **`Window.confirm()`** отображает диалоговое окно, которое содержит две кнопки (OK и Cancel), а так же опциональное (необязательное) текстовое сообщение.
 
@@ -26,7 +26,7 @@ if (window.confirm("Do you really want to leave?")) {
 
 Результат:
 
-![firefox confirm](firefoxcomfirmdialog_zpsf00ec381.png)
+![firefox confirm](firefox_confirm_dialog.png)
 
 ## Примечания
 

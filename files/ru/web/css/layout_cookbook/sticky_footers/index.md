@@ -38,24 +38,6 @@ If you need compatibility with browsers that do not support Grid Layout you can 
 
 The flexbox example starts out in the same way, but we use `display:flex` rather than `display:grid` on the `.wrapper`; we also set `flex-direction` to `column`. Then we set our main content to `flex-grow: 1` and the other two elements to `flex-shrink: 0` — this prevents them from shrinking smaller when content fills the main area.
 
-## Browser compatibility
-
-#### grid-template-rows
-
-{{Compat("css.properties.grid-template-rows")}}
-
-#### flex-direction
-
-{{Compat("css.properties.flex-direction")}}
-
-#### flex-grow
-
-{{Compat("css.properties.flex-grow")}}
-
-#### flex-shrink
-
-{{Compat("css.properties.flex-shrink")}}
-
 ## Resources on MDN
 
 - [Basic concepts of Grid Layout](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)

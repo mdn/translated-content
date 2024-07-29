@@ -16,5 +16,5 @@ slug: Glossary/Property/JavaScript
 
 ### 基本知識
 
-- 維基百科的 [Property (programming)](<https://zh.wikipedia.org/wiki/Property_(programming)>)
-- [JavaScript 物件導向介紹](/zh-TW/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
+- 維基百科的[屬性（編程）](<https://zh.wikipedia.org/wiki/属性_(编程)>)
+- [JavaScript 物件導向介紹](/zh-TW/docs/Learn/JavaScript/Objects)

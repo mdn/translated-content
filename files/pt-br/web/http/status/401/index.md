@@ -33,7 +33,7 @@ WWW-Authenticate: Basic realm="Acesso intermediário ao site"
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.401")}}
+{{Compat}}
 
 ## Veja também
 

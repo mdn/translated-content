@@ -411,11 +411,3 @@ window.addEventListener("load", drawOutput);
 В плане стилизации списки сравнительно легко освоить, как только вы освоите несколько связанных базовых принципов и специфичные свойства. В следующей статье мы перейдём к методам стилизации ссылок.
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
-
-## В этом модуле
-
-- [Основы стилизации текста и шрифта](/ru/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Стилизация списков](/ru/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Стилизация ссылок](/ru/docs/Learn/CSS/Styling_text/Styling_links)
-- [Веб-шрифты](/ru/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Вёрстка домашней страницы общественной школы](/ru/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

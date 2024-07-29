@@ -36,7 +36,7 @@ new Option(text, value, defaultSelected, selected)
 ### 単に新しい選択肢を追加する
 
 ```js
- /* 以下の HTML があるとする
+/* 以下の HTML があるとする
 <select id='s'>
 
 </select>

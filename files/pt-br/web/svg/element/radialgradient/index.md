@@ -44,7 +44,7 @@ Este elemento implementa a interface do [`SVGRadialGradientElement`](/pt-BR/DOM/
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.radialGradient")}}
+{{Compat}}
 
 ## Relacionado
 

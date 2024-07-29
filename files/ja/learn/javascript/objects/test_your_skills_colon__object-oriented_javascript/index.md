@@ -9,11 +9,13 @@ l10n:
 
 このスキルテストの目的は、[JavaScript でのクラス](/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)の記事を理解できたかどうかを評価することです。
 
-> **メモ:** 下記のインタラクティブエディターで解答を試すことができますが、コードをダウンロードして、[CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/) などのオンラインツールを使用して作業すると便利です。
+> [!NOTE]
+> 下記のインタラクティブエディターで解答を試すことができますが、コードをダウンロードして、[CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/) などのオンラインツールを使用して作業すると便利です。
 >
 > もし行き詰まった場合は、このページの下にある「評価とさらなる支援」(#評価とさらなる支援)の節を参照して、私たちに支援を要求してください。
 
-> **メモ:** 下記の例では、コードにエラーがある場合、ページ上の結果パネルに出力されるので、答え合わせをするのに役立ちます（ダウンロードした場合には、ブラウザーの JavaScript コンソールに出力されます）。
+> [!NOTE]
+> 下記の例では、コードにエラーがある場合、ページ上の結果パネルに出力されるので、答え合わせをするのに役立ちます（ダウンロードした場合には、ブラウザーの JavaScript コンソールに出力されます）。
 
 ## OOJS 1
 
@@ -23,16 +25,16 @@ l10n:
 
 - このクラスにコンストラクターを追加しましょう。コンストラクターは `name`, `sides`, `sideLength` プロパティを引数に取り、初期化します。
 - このクラスに新しいメソッド `calcPerimeter()` を追加しましょう。このメソッドは、外周の長さ（図形の外縁の長さ）を計算し、その結果をコンソールにログ出力します。
-- `Shape` クラスの新しいインスタンス `square` を作成しましょう。名前に `square`、 `side` に `4`、 `sideLength` に `5` を指定しましょう。
+- `Shape` クラスの新しいインスタンス `square` を作成しましょう。名前に `square`、 `sides` に `4`、 `sideLength` に `5` を指定しましょう。
 - このインスタンスに対して `calcPerimeter()` メソッドを呼び出して、計算結果が期待通りにブラウザーコンソールにログ出力されるかどうかを確認しましょう。
-- 新しい `Shape` のインスタンスとして `triangle` を作成しましょう。名前は `triangle`、`side` は `3`、`sideLength` は `3` とします。
+- 新しい `Shape` のインスタンスとして `triangle` を作成しましょう。名前は `triangle`、`sides` は `3`、`sideLength` は `3` とします。
 - triangle.calcPerimeter()`を呼び出して、問題なく動作することを確認しましょう。
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs1.html", '100%', 400)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分自身でエディターやオンラインエディターで作業する場合は、[この作業の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/oojs/oojs1-download.html)しましょう。
 
@@ -46,7 +48,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs2.html", '100%', 400)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分自身でエディターやオンラインエディターで作業する場合は、[この作業の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/oojs/oojs2-download.html)しましょう。
 

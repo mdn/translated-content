@@ -80,7 +80,7 @@ Pré-busca forçada de nomes de host pode ser útil, por exemplo, na página ini
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.X-DNS-Prefetch-Control")}}
+{{Compat}}
 
 ## Veja também
 

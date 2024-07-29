@@ -3,7 +3,7 @@ title: StorageArea.set()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 저장소 영역에 하나 이상의 항목을 저장하거나, 있는 항목을 고친다.
 

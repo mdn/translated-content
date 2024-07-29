@@ -14,9 +14,9 @@ l10n:
 イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使うか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener('disconnect', (event) => { })
+addEventListener("disconnect", (event) => {});
 
-ondisconnect = (event) => { }
+ondisconnect = (event) => {};
 ```
 
 ## イベント型
@@ -37,7 +37,7 @@ _以下のプロパティに加え、親の {{domxref("Event")}} インターフ
 この例では、デバイスの切断を監視するためにイベントリスナーを登録します。切断時、デバイス名が {{domxref("HIDDevice.productName")}} を用いてコンソールに出力されます。
 
 ```js
-navigator.hid.addEventListener('disconnect', ({device}) => {
+navigator.hid.addEventListener("disconnect", ({ device }) => {
   console.log(`HID disconnected: ${device.productName}`);
 });
 ```

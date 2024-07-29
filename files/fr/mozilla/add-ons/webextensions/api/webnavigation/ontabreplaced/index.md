@@ -3,7 +3,7 @@ title: webNavigation.onTabReplaced
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onTabReplaced
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsque le contenu de l'onglet est remplacé par un onglet différent (généralement précédemment pré-rendu).
 
@@ -65,7 +65,7 @@ browser.webNavigation.onTabReplaced.addListener(logOnTabReplaced);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation#event-onTabReplaced) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 >

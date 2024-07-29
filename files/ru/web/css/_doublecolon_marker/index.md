@@ -56,17 +56,14 @@ ul li::marker {
 
 {{EmbedLiveSample('Examples')}}
 
-## Specifications
+## Спецификации
 
-| Specification                                                      | Status                            | Comment                |
-| ------------------------------------------------------------------ | --------------------------------- | ---------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#marker-pseudo', '::marker')}} | {{Spec2('CSS4 Pseudo-Elements')}} | No significant change. |
-| {{SpecName('CSS3 Lists', '#marker-pseudo', '::marker')}}           | {{Spec2('CSS3 Lists')}}           | Initial definition.    |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - HTML-элементы, у которые есть маркеры списка по умолчанию: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("summary")}}

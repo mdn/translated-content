@@ -3,7 +3,7 @@ title: menus.OnClickData
 slug: Mozilla/Add-ons/WebExtensions/API/menus/OnClickData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Informations transmises à l'écouteur d'événement {{WebExtAPIRef("menus.onClicked")}} lorsque vous cliquez sur un élément de menu.
 

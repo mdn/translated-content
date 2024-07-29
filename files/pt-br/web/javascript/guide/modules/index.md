@@ -21,11 +21,11 @@ O uso de módulos JavaScript nativos depende do{{JSxRef("Statements/import", "im
 
 ### importa
 
-{{Compat("javascript.statements.import")}}
+{{Compat}}
 
 ### exporta
 
-{{Compat("javascript.statements.export")}}
+{{Compat}}
 
 ## Apresentando um exemplo
 

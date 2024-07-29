@@ -74,7 +74,7 @@ slug: Web/SVG/Element/svg
 
 ## DOM 接口
 
-该元素实现了[`SVGSVGElement`](/zh-CN/docs/DOM/SVGSVGElement) 接口。
+该元素实现了 [`SVGSVGElement`](/zh-CN/docs/DOM/SVGSVGElement) 接口。
 
 ## 浏览器兼容性
 

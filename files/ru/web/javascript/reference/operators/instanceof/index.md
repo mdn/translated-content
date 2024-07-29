@@ -120,7 +120,7 @@ var b = mycar instanceof Object; // возвращает true
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

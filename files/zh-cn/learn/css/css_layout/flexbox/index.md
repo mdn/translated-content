@@ -91,7 +91,8 @@ flex-direction: column;
 
 你会看到，这会将那些元素设置为列布局，就像我们添加这些 CSS 之前。在继续之前，请从示例中删除此规则。
 
-> **备注：** 你还可以使用 `row-reverse` 和 `column-reverse` 值反向排列 flex 项。用这些值试试看吧！
+> [!NOTE]
+> 你还可以使用 `row-reverse` 和 `column-reverse` 值反向排列 flex 项。用这些值试试看吧！
 
 ## 换行
 
@@ -338,7 +339,7 @@ button {
 
 我们在[跨浏览器测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)模块中讨论了克服跨浏览器支持问题的策略。
 
-## 测试你的技能
+## 技能测试
 
 我们在文章里面覆盖了很多内容，但你是否能记住最重要的知识？在你继续学习前，你可以进行[测试](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox_skills)来验证你是否掌握了这些知识。
 

@@ -75,7 +75,7 @@ slug: Learn/CSS/CSS_layout/Floats
 </p>
 ```
 
-现在将以下 CSS 应用到您的 HTML 中（使用 {{htmlelement("style")}} 元素或 {{htmlelement("link")}} 到单独的 `.css` 文件——由你选择）：
+现在将以下 CSS 应用到你的 HTML 中（使用 {{htmlelement("style")}} 元素或 {{htmlelement("link")}} 到单独的 `.css` 文件——由你选择）：
 
 ```css
 body {
@@ -147,7 +147,7 @@ body {
 }
 ```
 
-现在，如果您保存和刷新，你会看到类似下面的东西：
+现在，如果你保存和刷新，你会看到类似下面的东西：
 
 {{EmbedLiveSample('使盒子浮动起来', '100%', 500)}}
 
@@ -657,9 +657,9 @@ body {
 
 {{EmbedLiveSample('display_flow-root', '100%', 600)}}
 
-## 纸上得来终觉浅！
+## 技能测试！
 
-你已经读完了这一篇文章，但是你还记得几成呢？在继续阅读之前你可以在这里找到一些测试来检验一下：[测试你的技能：浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats_skills).
+你已经读完了这一篇文章，但是你还记得几成呢？在继续阅读之前你可以在这里找到一些测试来检验一下：[技能测试：浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats_skills)。
 
 ## 总结
 

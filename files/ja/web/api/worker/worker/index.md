@@ -9,13 +9,14 @@ l10n:
 
 **`Worker()`** コンストラクターは、指定された URL で指定されたスクリプトを実行する {{domxref("Worker")}} オブジェクトを作成します。このスクリプトは [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)に従わなければいけません。
 
-> **メモ:** data URL が 同一オリジンであるかどうかについては、ブラウザーベンダーの間で合意されていません。 Firefox 10 以降のリリースでは data URL を受け入れますが、すべてのブラウザーでそうなるとは限りません。
+> [!NOTE]
+> data URL が 同一オリジンであるかどうかについては、ブラウザーベンダーの間で合意されていません。 Firefox 10 以降のリリースでは data URL を受け入れますが、すべてのブラウザーでそうなるとは限りません。
 
 ## 構文
 
 ```js
-new Worker(aURL)
-new Worker(aURL, options)
+new Worker(aURL);
+new Worker(aURL, options);
 ```
 
 ### 引数
@@ -47,12 +48,12 @@ new Worker(aURL, options)
 次のコードスニペットは `Worker()` コンストラクターを使って {{domxref("Worker")}} オブジェクトを作成し、続いてそのオブジェクトの使い方を表しています。
 
 ```js
-const myWorker = new Worker('worker.js');
+const myWorker = new Worker("worker.js");
 
 first.onchange = () => {
   myWorker.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 ```
 
 完全な例を見るには、[基本的な専用ワーカーの例](https://github.com/mdn/simple-web-worker)（[専用ワーカーを実行](https://mdn.github.io/simple-web-worker/)）を参照してください。

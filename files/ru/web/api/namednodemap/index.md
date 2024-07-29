@@ -37,14 +37,14 @@ slug: Web/API/NamedNodeMap
 - {{domxref("NamedNodeMap.removeNamedItemNS()")}}
   - : Удаляет {{domxref ("Attr")}}, идентифицированный данным пространством имён и связанным локальным именем.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("Element.attributes")}}

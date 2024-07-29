@@ -23,11 +23,11 @@ slug: Web/API/ImageBitmap
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
-## Полезные ссылки
+## Смотрите также
 
 - {{domxref("ImageBitmapFactories.createImageBitmap()")}}
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}

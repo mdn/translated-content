@@ -13,15 +13,15 @@ slug: Web/HTML/Element/audio
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("autoplay")}}
+- `autoplay`
 
   - : 지정한 경우, 전체 오디오 파일의 다운로드를 기다리지 않고 가능한 빠른 시점에 재생을 시작합니다.
 
     > **참고:** 오디오 및 오디오를 가진 비디오를 자동으로 재생하는 사이트는 사용자 경험에 악영향을 끼칠 수 있으므로 피해야 합니다. 반드시 자동 재생을 제공해야 한다면 사용자의 명시적인 동의를 얻어야 하도록 해야 합니다. 그러나, 미디어 소스가 사용자의 선택에 의해 나중에 정해지는 경우라면 자동 재생이 유용할 수 있습니다. [자동 재생 안내서](/ko/docs/Web/Media/Autoplay_guide)를 방문하고 추가 정보와 적절한 사용법을 알아보세요.
 
-- {{htmlattrdef("controls")}}
+- `controls`
   - : 지정한 경우 오디오 재생, 볼륨, 탐색, 일시 정지 컨트롤을 브라우저에서 제공합니다.
-- {{htmlattrdef("crossorigin")}}
+- `crossorigin`
 
   - : CORS를 사용해 지정한 오디오 파일을 가져올지 나타내는 열거형 특성. [교차 출처 활성화 리소스](/ko/docs/Web/HTML/CORS_enabled_image)는 {{HTMLElement("canvas")}} 요소에 사용해도 캔버스를 "오염"시키지 않습니다. 가능한 값은 다음과 같습니다.
 
@@ -32,25 +32,25 @@ slug: Web/HTML/Element/audio
 
     특성이 존재하지 않으면 리소스를 CORS 요청 없이(`Origin:` HTTP 헤더 없이) 가져오므로, {{htmlelement("canvas")}}를 오염시키게 됩니다. 유효하지 않은 값의 경우 anonymous 키워드를 사용한 것으로 간주합니다.
 
-- {{htmlattrdef("currentTime")}}
+- `currentTime`
 
   - : Reading `currentTime` returns a double-precision floating-point value indicating the current playback position, in seconds, of the audio. If the audio's metadata isn't available yet—thereby preventing you from knowing the media's start time or duration—`currentTime` instead indicates, and can be used to change, the time at which playback will begin. Otherwise, setting `currentTime` sets the current playback position to the given time and seeks the media to that position if the media is currently loaded.
 
     If the audio is being streamed, it's possible that the {{Glossary("user agent")}} may not be able to obtain some parts of the resource if that data has expired from the media buffer. Other audio may have a media timeline that doesn't start at 0 seconds, so setting `currentTime` to a time before that would fail. For example, if the audio's media timeline starts at 12 hours, setting `currentTime` to 3600 would be an attempt to set the current playback position well before the beginning of the media, and would fail. The {{domxref("HTMLMediaElement.getStartDate", "getStartDate()")}} method can be used to determine the beginning point of the media timeline's reference frame.
 
-- {{htmlattrdef("disableRemotePlayback")}} {{experimental_inline}}
+- `disableRemotePlayback` {{experimental_inline}}
 
   - : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc). See [this proposed specification](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute) for more information.
 
     > **참고:** In Safari, you can use [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) as a fallback.
 
-- {{htmlattrdef("duration")}} {{ReadOnlyInline}}
+- `duration` {{ReadOnlyInline}}
   - : A double-precision floating-point value which indicates the duration (total length) of the audio in seconds, on the media's timeline. If no media is present on the element, or the media is not valid, the returned value is `NaN`. If the media has no known end (such as for live streams of unknown duration, web radio, media incoming from [WebRTC](/ko/docs/Web/API/WebRTC_API), and so forth), this value is `+Infinity`.
-- {{htmlattrdef("loop")}}
+- `loop`
   - : A Boolean attribute: if specified, the audio player will automatically seek back to the start upon reaching the end of the audio.
-- {{htmlattrdef("muted")}}
+- `muted`
   - : A Boolean attribute that indicates whether the audio will be initially silenced. Its default value is `false`.
-- {{htmlattrdef("preload")}}
+- `preload`
 
   - : This enumerated attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience. It may have one of the following values:
 
@@ -65,7 +65,7 @@ slug: Web/HTML/Element/audio
     >
     > - The browser is not forced by the specification to follow the value of this attribute; it is a mere hint.
 
-- {{htmlattrdef("src")}}
+- `src`
   - : The URL of the audio to embed. This is subject to [HTTP access controls](/ko/docs/HTTP_access_control). This is optional; you may instead use the {{htmlelement("source")}} element within the audio block to specify the audio to embed.
 
 Time offsets are specified as float values indicating the number of seconds to offset.

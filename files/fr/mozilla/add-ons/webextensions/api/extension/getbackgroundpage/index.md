@@ -3,7 +3,7 @@ title: extension.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Alias de {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
 

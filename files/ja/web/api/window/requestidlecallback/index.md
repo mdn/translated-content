@@ -31,7 +31,7 @@ var handle = window.requestIdleCallback(callback[, options])
 
     - `timeout`：`timeout` に正の値が指定され、かつコールバックがその値の期間（ミリ秒）内に実行されていない場合、コールバックは次のアイドル期間に実行されます。それがパフォーマンスに悪影響があったとしても、それを加味することはありません。
 
-## Example
+## 例
 
 [Cooperative Scheduling of Background Tasks API](/ja/docs/Web/API/Background_Tasks_API)の記事で、[例を一式](/ja/docs/Web/API/Background_Tasks_API#Example)紹介しています。
 
@@ -41,7 +41,7 @@ var handle = window.requestIdleCallback(callback[, options])
 
 ## ブラウザ互換性
 
-{{Compat("api.Window.requestIdleCallback")}}
+{{Compat}}
 
 ## 関連情報
 

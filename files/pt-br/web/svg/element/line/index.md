@@ -49,7 +49,7 @@ Este elemento implementa a interface do [`SVGLineElement`](/pt-BR/DOM/SVGLineEle
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.line")}}
+{{Compat}}
 
 ## Relacionado
 

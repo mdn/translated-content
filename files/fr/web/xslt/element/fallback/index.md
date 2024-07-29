@@ -3,7 +3,7 @@ title: fallback
 slug: Web/XSLT/Element/fallback
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:fallback>` définit le modèle à utiliser si un élément d'extension donné (ou, éventuellement, une nouvelle version) n'est pas supporté.
 

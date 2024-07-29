@@ -152,8 +152,8 @@ A tabela abaixo fornece uma lista completa dos caracteres especiais que podem se
           Equivalente a {0,}
         </p>
         <p>
-          Por exemplo, <code>/bo*/</code> acha uma correspondência para 'boooo'
-          em "Scoob doo" e 'b' em "A bird warbled", mas nenhuma em "A goat
+          Por exemplo, <code>/bo*/</code> acha uma correspondência para 'boo'
+          em "boolean" e 'b' em "A bird warbled", mas nenhuma em "A goat
           grunted".
         </p>
       </td>

@@ -3,6 +3,8 @@ title: Objet
 slug: Glossary/Object
 ---
 
+{{GlossarySidebar}}
+
 Un [Objet](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object) est une structure contenant des données et des instructions en rapport avec ces données. Un Objet correspond parfois à des choses du monde réel, par exemple à une `voiture` ou à une `piste` dans un jeu vidéo de course. {{glossary("JavaScript")}}, Java, C++, Python et Ruby sont des exemples de langages de {{glossary("OOP","programmation orientée objet")}}.
 
 ## Voir aussi

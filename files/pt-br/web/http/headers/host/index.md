@@ -51,7 +51,7 @@ Host: developer.mozilla.org
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Host")}}
+{{Compat}}
 
 ## See also
 

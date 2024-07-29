@@ -1,15 +1,31 @@
 ---
 title: fill-opacity
 slug: Web/SVG/Attribute/fill-opacity
+l10n:
+  sourceCommit: 5f7c22deaa74973658257aeaa012ac2ec0be87ae
 ---
 
 {{SVGRef}}
 
 **`fill-opacity`** 属性は、図形に適用されるペイントサーバー(_色_, _勾配_, _パターン_, 等)の不透明度を定義するプレゼンテーション属性です。
 
-> **メモ:** プレゼンテーション属性としての`fill-opacity`CSS プロパティに適用できます。
+> [!NOTE]
+> プレゼンテーション属性としての`fill-opacity`CSS プロパティに適用できます。
 
-プレゼンテーション属性として、任意の要素に適用可能ですが、次の 11 個の要素のみで効果があります: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
+この属性は次の SVG 要素で使用できます。
+
+- {{SVGElement('circle')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
+
+## 例
 
 ```css hidden
 html,
@@ -35,21 +51,41 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', '100%', 150)}}
+{{EmbedLiveSample("Example", '100%', 150)}}
 
 ## 使用上の注意
 
-| 値                 | `[0-1]` \| **[\<percentage>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------------ | ------------------------------------------------------------------- |
-| 規定値             | `1`                                                                 |
-| アニメーション可否 | はい                                                                |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <code>[0-1]</code> |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">規定値</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-> **メモ:** SVG2 では、`fill-opacity`への割合値を導入していますが、状況としてはこれはまだ広く対応されているわけではありません(_以下の[ブラウザ実装状況](#Browser_Compatibility)を参照_)。最良の実装としては、不透明度を`[0-1]`の範囲の値として指定することです。
-
-## ブラウザー実装状況
-
-{{Compat("svg.attributes.presentation.fill-opacity")}}
+> [!NOTE]
+> SVG2 では、`fill-opacity`への割合値を導入していますが、状況としてはこれはまだ広く対応されているわけではありません(_以下の[ブラウザー実装状況](#ブラウザー実装状況)を参照_)。最良の実装としては、不透明度を`[0-1]`の範囲の値として指定することです。
 
 ## 仕様
 
 {{Specifications}}
+
+## ブラウザー実装状況
+
+{{Compat}}

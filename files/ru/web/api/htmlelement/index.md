@@ -75,11 +75,11 @@ _Наследует свойства родителя, {{domxref("Element")}}, �
 Most events properties, of the form `onXYZ`, are defined on the {{domxref("GlobalEventHandlers")}} or {{domxref("TouchEventHandlers")}}, implemented by `HTMLElement`. A few more are specific to `HTMLElement`.
 
 - {{ domxref("HTMLElement.oncopy") }} {{ non-standard_inline() }}
-  - : Returns the event handling code for the `copy` event ({{bug("280959")}}).
+  - : Returns the event handling code for the `copy` event ([Firefox bug 280959](https://bugzil.la/280959)).
 - {{ domxref("HTMLElement.oncut") }} {{ non-standard_inline() }}
-  - : Returns the event handling code for the `cut` event ({{bug("280959")}}).
+  - : Returns the event handling code for the `cut` event ([Firefox bug 280959](https://bugzil.la/280959)).
 - {{ domxref("HTMLElement.onpaste") }} {{ non-standard_inline() }}
-  - : Returns the event handling code for the `paste` event ({{bug("280959")}}).
+  - : Returns the event handling code for the `paste` event ([Firefox bug 280959](https://bugzil.la/280959)).
 - {{domxref("TouchEventHandlers.ontouchstart")}} {{non-standard_inline}}
   - : Returns the event handling code for the {{event("touchstart")}} event.
 - {{domxref("TouchEventHandlers.ontouchend")}} {{non-standard_inline}}
@@ -106,14 +106,14 @@ _Inherits methods from its parent, {{domxref("Element")}}._
 - {{domxref("HTMLElement.forceSpellCheck()")}} {{experimental_inline}}
   - : Makes the spell checker runs on the element.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("Element")}}

@@ -88,7 +88,7 @@ el.innerHTML = name; // harmless in this case
 
 이것은 [cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) 공격처럼 보일 수 있지만, 결과는 무해합니다. HTML5 는 `innerHTML` 과 함께 삽입된 {{HTMLElement("script")}} 태그가 [실행되지 않도록](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0) 지정합니다.
 
-그러나 {{HTMLElement("script")}} 요소를 사용하지 않고, 자바스크립트를 실행하는 방법이 있으므로, `innerHTML` 을 사용하여 제어할 수 없는 문자열을 설정할 때 마다 여전히 보안위험이 있습니다. 예를들어:
+그러나 {{HTMLElement("script")}} 요소를 사용하지 않고, JavaScript를 실행하는 방법이 있으므로, `innerHTML` 을 사용하여 제어할 수 없는 문자열을 설정할 때 마다 여전히 보안위험이 있습니다. 예를들어:
 
 ```js
 const name = "<img src='x' onerror='alert(1)'>";

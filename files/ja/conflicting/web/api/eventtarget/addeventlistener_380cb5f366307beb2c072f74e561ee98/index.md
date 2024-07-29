@@ -4,11 +4,12 @@ slug: conflicting/Web/API/EventTarget/addEventListener_380cb5f366307beb2c072f74e
 original_slug: Web/API/EventListener
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}
 
 **`EventListener`** インターフェイスは、{{domxref("EventTarget")}} オブジェクトによってディスパッチされたイベントを処理できるオブジェクトを表します。
 
-> **メモ:** レガシーコンテンツとの互換性が必要なため、`EventListener` は、関数、`handleEvent()` メソッドをもつオブジェクト両方を受け入れます。
+> [!NOTE]
+> レガシーコンテンツとの互換性が必要なため、`EventListener` は、関数、`handleEvent()` メソッドをもつオブジェクト両方を受け入れます。
 > これを以下の [例](#例) に示します。
 
 ## プロパティ

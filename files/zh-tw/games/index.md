@@ -15,7 +15,8 @@ slug: Games
 
 我們也涵蓋了參考的章節，你可以從那裡找到遊戲開發最需要用到的一些 API。
 
-> **備註：** 建立遊戲會需要用上一些 web 的核心技術，如 HTML、CSS、JavaScript。[學習專區](/zh-TW/docs/Learn)會是個很好的學習區域。
+> [!NOTE]
+> 建立遊戲會需要用上一些 web 的核心技術，如 HTML、CSS、JavaScript。[學習專區](/zh-TW/docs/Learn)會是個很好的學習區域。
 
 ## 從原生到 Web
 
@@ -51,7 +52,7 @@ slug: Games
   - : Tutorials and articles about game development in general.
 - [HTML5 Gamedev Starter](http://html5devstarter.enclavegames.com/)
   - : Starter for the new game developers, a curated list of links to various, useful resources around the web.
-- [js13kGames](http://js13kgames.com/)
+- [js13kGames](https://js13kgames.com/)
   - : JavaScript coding competition for HTML5 game developers with the file size limit set to 13 kilobytes. All the submitted games are available in a readable form on GitHub.
 - [Mozilla Hacks blog](https://hacks.mozilla.org/category/games/)
   - : Games category on the Mozilla Hacks blog containing interesting gamedev related articles.

@@ -3,7 +3,7 @@ title: Object.isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 ## Сводка
 

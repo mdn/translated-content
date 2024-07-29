@@ -3,7 +3,7 @@ title: GlobalEventHandlers.ondragstart
 slug: Web/API/HTMLElement/dragstart_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{APIRef}}
 
 {{domxref("GlobalEventHandlers","global event handler")}} для события {{event("dragstart")}}.
 
@@ -80,7 +80,7 @@ function dragover_handler(ev) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

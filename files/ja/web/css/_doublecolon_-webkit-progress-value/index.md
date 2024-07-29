@@ -11,7 +11,7 @@ slug: Web/CSS/::-webkit-progress-value
 
 ## 構文
 
-```css
+```css-nolint
 ::-webkit-progress-value {}
 ```
 

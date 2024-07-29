@@ -3,7 +3,7 @@ title: bookmarks.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onRemoved
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'un signet ou un dossier est supprimé. Lorsqu'un dossier est supprimé de manière récursive, une seule notification est envoyée pour le dossier et aucune pour son contenu.
 
@@ -73,7 +73,7 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
 >

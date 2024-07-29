@@ -11,13 +11,13 @@ slug: Learn/Server-side/Django/development_environment
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         知道如何在你开发所用的计算机操作系统中，打开终端/命令行和安装软件包。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>在你的计算机中运行 Django（1.10）开发环境。</td>
     </tr>
   </tbody>
@@ -25,11 +25,11 @@ slug: Learn/Server-side/Django/development_environment
 
 ## Django 开发环境概述
 
-Django 使你可以轻松配置自己的电脑，以便开始开发网络应用。本节解释您可以从开发环境中获得什么，并提供一些设置和配置选项的概述。本文的其余部分介绍了在**Ubuntu**，**Mac** OSX 和**Windows**上安装 Django 开发环境的 **推荐方法**，以及如何测试。
+Django 使你可以轻松配置自己的电脑，以便开始开发网络应用。本节解释你可以从开发环境中获得什么，并提供一些设置和配置选项的概述。本文的其余部分介绍了在**Ubuntu**，**Mac** OSX 和**Windows**上安装 Django 开发环境的 **推荐方法**，以及如何测试。
 
 ### 什么是 Django 开发环境？
 
-开发环境是本地计算机上的 Django 安装，在将 Django 应用程序部署到生产环境之前，您可以使用它来开发和测试 Django 应用程序。
+开发环境是本地计算机上的 Django 安装，在将 Django 应用程序部署到生产环境之前，你可以使用它来开发和测试 Django 应用程序。
 
 Django 本身提供的主要工具是一组用于创建和使用 Django 项目的 Python 脚本，以及可在你电脑的 web 浏览器中测试本地 Django web 应用（在你的计算机，而不是在外部的 web 服务器）。
 
@@ -46,7 +46,8 @@ Django 在安装和配置方面非常灵活。Django 可以：
 
 每个选项都需要略微不同的配置和设置。以下小节解释了你的一些选择。在本文的其余部分中，我们将介绍 Django 在几个操作系统上的设置，并且在本教程的剩余模块中将假设你已进行该设置。
 
-> **备注：** 其他可能的安装选项在官方 Django 文档中介绍。[相应文件 点击这里](#furtherreading).
+> [!NOTE]
+> 其他可能的安装选项在官方 Django 文档中介绍。[相应文件 点击这里](#furtherreading).
 
 #### 支持哪些操作系统？
 
@@ -62,7 +63,8 @@ Django web 应用程序能运行在几乎任何可以运行 Python3 的计算机
 
 我们建议你使用最新版本的 Python 3，除非该站点依赖于仅适用于 Python 2 的第三方库。本文将介绍如何为 Python 3 安装环境（Python 2 的等效设置将非常相似）。
 
-> **备注：** Python 2.7 无法用于当前的 Django 发行版本（Django 1.11.x 系列是最后支持 Python 2.7 的版本）。
+> [!NOTE]
+> Python 2.7 无法用于当前的 Django 发行版本（Django 1.11.x 系列是最后支持 Python 2.7 的版本）。
 
 #### 我们在哪里下载 Django?
 
@@ -80,13 +82,15 @@ Django 支持四个主要数据库（PostgreSQL，MySQL，Oracle 和 SQLite）�
 
 对于本文（和本模块的大部分），我们将使用将数据存储在文件中的 SQLite 数据库。SQLite 旨在用作轻量级数据库，不能支持高并发。然而，这确实是只读的应用程序的绝佳选择。
 
-> **备注：** 当你使用标准工具（django-admin）启动你的网站项目时，Django 将默认使用 SQLite。用来入门时，这是一个很好的选择，因为它不需要额外的配置和设置。
+> [!NOTE]
+> 当你使用标准工具（django-admin）启动你的网站项目时，Django 将默认使用 SQLite。用来入门时，这是一个很好的选择，因为它不需要额外的配置和设置。
 
 #### 安装本机系统还是 Python 虚拟环境中？
 
 当你安装 Python3 时，将获得一个由所有 Python3 代码共享的全局环境。虽然你可以在该环境中安装任何你喜欢的 Python 包，但是每次只能安装每个包的一个特定版本。
 
-> **备注：** 安装到全局环境的 Python 应用程序可能会相互冲突（例如如果它们依赖于同一包的不同版本）。
+> [!NOTE]
+> 安装到全局环境的 Python 应用程序可能会相互冲突（例如如果它们依赖于同一包的不同版本）。
 
 如果你把 Django 安装到默认/全局环境中，那么在该计算机上将只能定位到 Django 的一个版本。如果你想创建新的网站 (使用最新版本的 Django)，同时仍然维护依赖旧版本的网站，这可能是个问题。
 
@@ -100,7 +104,8 @@ Django 支持四个主要数据库（PostgreSQL，MySQL，Oracle 和 SQLite）�
 
 本节简要介绍了如何检查有哪些版本的 Python，并根据需要安装适用于 **Ubuntu Linux 16.04,macOS, and Windows 10**的新版本。
 
-> **备注：** 根据你的平台，您还可以从操作系统自己的软件包管理器或其他机制安装 Python / pip。对于大多数平台，您可以从<https://www.python.org/downloads/>下载所需的安装文件，并使用该平台特定的方法进行安装。
+> [!NOTE]
+> 根据你的平台，你还可以从操作系统自己的软件包管理器或其他机制安装 Python / pip。对于大多数平台，你可以从<https://www.python.org/downloads/>下载所需的安装文件，并使用该平台特定的方法进行安装。
 
 ### Ubuntu 18.04
 
@@ -173,7 +178,8 @@ Windows 安装程序默认包含 pip3 (Python 包管理器)。同样在命令提
 pip3 list
 ```
 
-> **备注：** 安装包应该已把运行上述命令所需的一切设置完成。但如果你得到的消息是找不到 Python，那么你可能忘记将 Python 添加到系统路径中了。你可以通过再次运行安装包，选择"Modify"，并在下一页面中勾选 "Add Python to environment variables"来修复这个问题。
+> [!NOTE]
+> 安装包应该已把运行上述命令所需的一切设置完成。但如果你得到的消息是找不到 Python，那么你可能忘记将 Python 添加到系统路径中了。你可以通过再次运行安装包，选择"Modify"，并在下一页面中勾选 "Add Python to environment variables"来修复这个问题。
 
 ## 在 Python 虚拟环境中使用 Django
 
@@ -201,7 +207,7 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **备注：** `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS`变量指向 Python3 的常规安装位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`脚本的一般安装位置。如果您在测试时发现*virtualenv*无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。
+> **备注：** `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS`变量指向 Python3 的常规安装位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`脚本的一般安装位置。如果你在测试时发现*virtualenv*无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。
 >
 > 你可以使用`which virtualenvwrapper.sh` 和 `which python3`命令为你的系统找到正确的安装位置。
 
@@ -243,7 +249,7 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **备注：** `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS`变量指向 Python3 的常规安装位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`脚本的一般安装位置。如果您在测试时发现*virtualenv*无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。
+> **备注：** `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS`变量指向 Python3 的常规安装位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`脚本的一般安装位置。如果你在测试时发现*virtualenv*无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。
 >
 > 例如，在 macOS 上的一个安装测试中，启动文件中必须有以下几行代码：
 >
@@ -258,7 +264,8 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 此处使用和 Ubuntu 相同的代码行，但是启动文件是主目录中叫做 **.bash_profile** 的隐藏文件。
 
-> **备注：** 如果找不到 **.bash_profile** 进行编辑，也可以使用 nano 在终端中打开它，命令看起来类似于：
+> [!NOTE]
+> 如果找不到 **.bash_profile** 进行编辑，也可以使用 nano 在终端中打开它，命令看起来类似于：
 >
 > ```bash
 > cd ~  # Navigate to my home directory
@@ -303,11 +310,12 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get
 
 现在你已进入虚拟环境，可以进行 Django 安装并开始开发。
 
-> **备注：** 从现在开始，在本文 (实际上是该模块) 中，请假定所有命令都在类似于我们上面设置的 Python 虚拟环境中运行。
+> [!NOTE]
+> 从现在开始，在本文 (实际上是该模块) 中，请假定所有命令都在类似于我们上面设置的 Python 虚拟环境中运行。
 
 ### 使用一个虚拟环境
 
-您应该知道一些其他有用的命令 (在工具的文档中还有更多，但这些是您将经常使用的命令)：
+你应该知道一些其他有用的命令 (在工具的文档中还有更多，但这些是你将经常使用的命令)：
 
 - `deactivate` —退出当前的 Python 虚拟环境
 - `workon` — 列出可用的所有虚拟环境
@@ -322,7 +330,7 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get
 pip3 install django
 ```
 
-您可以通过运行以下命令来测试 Django 是否安装（这只是用来测试 Python 是否可以找到 Django 模块）：
+你可以通过运行以下命令来测试 Django 是否安装（这只是用来测试 Python 是否可以找到 Django 模块）：
 
 ```bash
 # Linux/macOS
@@ -334,26 +342,28 @@ py -3 -m django --version
     1.10.10
 ```
 
-> **备注：** 如果上面的 Windows 命令没有显示 django 模块，请尝试：
+> [!NOTE]
+> 如果上面的 Windows 命令没有显示 django 模块，请尝试：
 >
 > ```bash
 > python -m django --version
 > ```
 >
-> 在 Windows 中，Python 3 脚本是通过在命令前面加上`py -3`来启动的，尽管该脚本可能会因您的特定安装而有所不同。如果遇到命令问题，请尝试省略`-3`修饰符。在 Linux /macOS 中，命令是 python3。
+> 在 Windows 中，Python 3 脚本是通过在命令前面加上`py -3`来启动的，尽管该脚本可能会因你的特定安装而有所不同。如果遇到命令问题，请尝试省略`-3`修饰符。在 Linux /macOS 中，命令是 python3。
 
-> **警告：** 本模块的其余部分使用 Linux 命令来调用 Python 3（`python3`）。如果您在 Windows 上工作，只需将此前缀替换为： `py -3`
+> [!WARNING]
+> 本模块的其余部分使用 Linux 命令来调用 Python 3（`python3`）。如果你在 Windows 上工作，只需将此前缀替换为： `py -3`
 
 ## 测试你的安装
 
-上面的测试工作并不是很有趣。一个更有趣的测试是创建一个框架项目并查看它的工作情况。要做到这一点，先在你的命令提示符/终端导航到你想存储你**Django**应用程序的位置。为您的测试站点创建一个文件夹并进入其中。
+上面的测试工作并不是很有趣。一个更有趣的测试是创建一个框架项目并查看它的工作情况。要做到这一点，先在你的命令提示符/终端导航到你想存储你**Django**应用程序的位置。为你的测试站点创建一个文件夹并进入其中。
 
 ```bash
 mkdir django_test
 cd django_test
 ```
 
-然后，您可以像所展示的一样使用 django-admin 工具创建一个名为“_mytestsite_”的新框架站点。创建网站后，您可以 CD 到此文件夹，并将在其中找到管理项目的主要脚本，名为**manage.py**。
+然后，你可以像所展示的一样使用 django-admin 工具创建一个名为“_mytestsite_”的新框架站点。创建网站后，你可以 CD 到此文件夹，并将在其中找到管理项目的主要脚本，名为**manage.py**。
 
 ```bash
 django-admin startproject mytestsite
@@ -377,9 +387,10 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
-> **备注：** 上面的命令显示了 Linux /macOS 命令。您可以忽略关于“15 unapplied migration(s)”的警告！
+> [!NOTE]
+> 上面的命令显示了 Linux /macOS 命令。你可以忽略关于“15 unapplied migration(s)”的警告！
 
-一旦服务器运行，您可以通过本地 Web 浏览器打开`http://127.0.0.1:8000/`来查看该站点。你应该看到一个如下所示的网站：
+一旦服务器运行，你可以通过本地 Web 浏览器打开`http://127.0.0.1:8000/`来查看该站点。你应该看到一个如下所示的网站：
 
 ![The home page of the skeleton Django app.](django_skeleton_app_homepage_django_4_0.png)
 
@@ -387,7 +398,7 @@ Quit the server with CONTROL-C.
 
 现在，你的计算机中已经启动并运行了一个 Django 开发环境。
 
-在测试部分，您还简要地了解了如何使用`django-admin startproject`创建一个新的 Django 网站，并使用开发 web 服务器 (`python3 manager .py runserver`) 在浏览器中运行它。在下一篇文章中，我们将对此过程进行扩展，构建一个简单但完整的 web 应用程序。
+在测试部分，你还简要地了解了如何使用`django-admin startproject`创建一个新的 Django 网站，并使用开发 web 服务器 (`python3 manager .py runserver`) 在浏览器中运行它。在下一篇文章中，我们将对此过程进行扩展，构建一个简单但完整的 web 应用程序。
 
 ## 看看瞧瞧
 

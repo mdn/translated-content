@@ -3,7 +3,7 @@ title: webNavigation.onCommitted
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCommitted
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'une navigation est validée. Au moins une partie du nouveau document a été reçue du serveur et le navigateur a décidé de passer au nouveau document.
 
@@ -52,7 +52,7 @@ Les événements ont trois fonctions :
 - `processId`
   - : `integer`. L'ID du processus dans lequel cet onglet est rendu.
 - `frameId`
-  - : `integer`. Frame dans lequel la navigation aura lieu. 0 indique que la navigation se déroule dans le contexte de navigation de niveau supérieur de l'onglet, et non dans un [iframe](/frS/docs/Web/HTML/Element/iframe) imbriqué. A positive value indicates that navigation happens in a nested iframe. Les ID de frame sont uniques pour un onglet et un processus donnés.
+  - : `integer`. Frame dans lequel la navigation aura lieu. 0 indique que la navigation se déroule dans le contexte de navigation de niveau supérieur de l'onglet, et non dans un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué. A positive value indicates that navigation happens in a nested iframe. Les ID de frame sont uniques pour un onglet et un processus donnés.
 - `parentFrameId`
   - : `integer`. ID du parent de cette image. Réglez à -1 s'il s'agit d'un cadre de niveau supérieur.
 - `timeStamp`
@@ -86,7 +86,7 @@ browser.webNavigation.onCommitted.addListener(logOnCommitted, filter);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
 >

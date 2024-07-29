@@ -3,6 +3,8 @@ title: Firefox 58 for developers
 slug: Mozilla/Firefox/Releases/58
 ---
 
+{{FirefoxSidebar}}
+
 Firefox 58 は、米国時間 2018 年 1 月 23 日にリリースされました。このページでは、開発者に影響する Firefox 58 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -97,7 +99,7 @@ _変更なし。_
 
 ### CSS
 
-- Mozilla 独自仕様である以下の system metric 疑似クラスが、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1396066](https://bugzil.la/1396066)):
+- Mozilla 独自仕様である以下の system metric 擬似クラスが、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1396066](https://bugzil.la/1396066)):
 
   - {{Cssxref(":-moz-system-metric(images-in-menus)")}}
   - {{Cssxref(":-moz-system-metric(mac-graphite-theme)")}}
@@ -131,12 +133,12 @@ _変更なし。_
   - [`-moz-windows-glass`](/ja/docs/Web/CSS/@media/-moz-windows-glass)
   - [`-moz-windows-theme`](/ja/docs/Web/CSS/@media/-moz-windows-theme)
 
-- Mozilla 独自仕様である `:-moz-styleeditor-transitioning` 疑似クラスが、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1396099](https://bugzil.la/1396099))。
+- Mozilla 独自仕様である `:-moz-styleeditor-transitioning` 擬似クラスが、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1396099](https://bugzil.la/1396099))。
 
 ### JavaScript
 
 - 非標準の {{jsxref("Date.prototype.toLocaleFormat()")}} メソッドを削除しました ([Firefox バグ 818634](https://bugzil.la/818634))。詳細および移行方法について、[Warning: Date.prototype.toLocaleFormat is deprecated](/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat) をご覧ください。
-- 非標準および非推奨の {{jsxref("Object.prototype.watch()")}} および {{jsxref("Object.prototype.unwatch", "unwatch()")}} メソッドを削除しました。今後は動作しません ([Firefox バグ 638054](https://bugzil.la/638054))。代わりに [setters および getters](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) または [proxy](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy) の使用を検討してください。
+- 非標準および非推奨の {{jsxref("Object.prototype.watch()")}} および {{jsxref("Object.prototype.unwatch", "unwatch()")}} メソッドを削除しました。今後は動作しません ([Firefox バグ 638054](https://bugzil.la/638054))。代わりに [setters および getters](/ja/docs/Web/JavaScript/Guide/Working_with_objects#ゲッターとセッターの定義) または [proxy](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy) の使用を検討してください。
 - [レガシーイテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol)、[`StopIteration`](/ja/docs/Archive/Web/StopIteration) オブジェクト、[レガシージェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)、非標準の {{jsxref("Function.prototype.isGenerator()")}} メソッドを削除しました。代わりに ES2015 の [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols) や、標準準拠の [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators) を使用してください ([Firefox バグ 1083482](https://bugzil.la/1083482), [Firefox バグ 1413867](https://bugzil.la/1413867), [Firefox バグ 1119777](https://bugzil.la/1119777))。
 - 非標準の [配列内包](/ja/docs/Web/JavaScript/Reference/Operators/Array_comprehensions) および [ジェネレーター内包](/ja/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions) を削除しました ([Firefox バグ 1414340](https://bugzil.la/1414340))。
 
@@ -185,7 +187,7 @@ _変更なし。_
 
 - webRequest
 
-  - [webRequest.onBeforeRequest](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) が "frameAncestors" パラメーターを持つようになりました
+  - [webRequest.onBeforeRequest](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) が "frameAncestors" 引数を持つようになりました
 
 ## 関連情報
 

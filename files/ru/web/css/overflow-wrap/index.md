@@ -123,19 +123,15 @@ p {
 
 {{ EmbedLiveSample('Сравнение_overflow-wrap_word-break_и_hyphens', '100%', 260) }}
 
-## Specifications
+## Спецификации
 
-| Specification                                                          | Status                   | Comment            |
-| ---------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{ SpecName('CSS3 Text', '#propdef-overflow-wrap', 'overflow-wrap') }} | {{ Spec2('CSS3 Text') }} | Initial definition |
+{{Specifications}}
 
-{{cssinfo}}
-
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{cssxref("word-break")}}
 - {{cssxref("hyphens")}}

@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies
 
 {{AddonSidebar}}
 
-Позволяет WebExtensions получить и установить куки ,а также сообщить об их изменении.
+Позволяет расширениям получать и устанавливать куки, а также сообщать об их изменении.
 
 Для использования этого API,вам нужно предоставить доступ [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) в вашем файле [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json),а также [host permissions](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) для тех сайтов чьи куки вам нужны для доступа.Смотрите [cookie Permissions](/en-US/Add-ons/WebExtensions/API/cookies#Permissions).
 
@@ -71,19 +71,13 @@ In order to use this API, an add-on must specify the "cookies" [API permission](
 
     - Read or write a secure or non-secure cookie for `www.example.com` with any path.
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
-
-### Edge incompatibilities
-
-Promises are not supported in Edge. Use callbacks instead.
 
 {{WebExtExamples("h2")}}
 
 > **Примечание:** Это API основано на API Chromium [`chrome.cookies`](https://developer.chrome.com/extensions/cookies). Эта документация основана на [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) из кода Chromium.
->
-> Информация о совместимости Microsoft Edge предоставлена корпорацией Microsoft и включена здесь под лицензией Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

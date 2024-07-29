@@ -84,14 +84,14 @@ inputForm.onsubmit = function (event) {
 };
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Web Speech API](/ru/docs/Web/API/Web_Speech_API)

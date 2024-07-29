@@ -47,13 +47,11 @@ Device-Memory: 1
 
 ## Especificações
 
-| Especificação                                                                         | Status                     | Comentário         |
-| ------------------------------------------------------------------------------------- | -------------------------- | ------------------ |
-| {{SpecName("Device Memory","#sec-device-memory-client-hint-header","Device-Memory")}} | {{Spec2('Device Memory')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Device-Memory")}}
+{{Compat}}
 
 ## Veja também
 

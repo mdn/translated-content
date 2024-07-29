@@ -51,7 +51,7 @@ dataview.getUint32(1); // 0
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}

@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
 **`indexOf()`** 方法會回傳給定元素於陣列中第一個被找到之索引，若不存在於陣列中則回傳 -1。
 
-> **備註：** 若是調用字串的方法，請參閱 {{jsxref("String.prototype.indexOf()")}}。
+> [!NOTE]
+> 若是調用字串的方法，請參閱 {{jsxref("String.prototype.indexOf()")}}。
 
 {{EmbedInteractiveExample("pages/js/array-indexof.html")}}
 
@@ -62,7 +63,7 @@ console.log(indices);
 // [0, 2, 4]
 ```
 
-### 尋找元素是否存在於陣列中，若沒有則加入到陣列裡。
+### 尋找元素是否存在於陣列中，若沒有則加入到陣列裡
 
 ```js
 function updateVegetablesCollection(veggies, veggie) {

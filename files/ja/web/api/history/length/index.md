@@ -1,6 +1,9 @@
 ---
-title: History.length
+title: "History: length プロパティ"
+short-title: length
 slug: Web/API/History/length
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("History API")}}
@@ -9,11 +12,9 @@ slug: Web/API/History/length
 
 例えば、新しいタブに読み込まれたページでは、このプロパティは `1` を返します。
 
-## 構文
+## 値
 
-```js
-const length = history.length
-```
+数値です。
 
 ## 仕様書
 

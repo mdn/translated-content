@@ -1,17 +1,19 @@
 ---
-title: MediaStream Image Capture API
+title: MediaStream 画像キャプチャ API
 slug: Web/API/MediaStream_Image_Capture_API
+l10n:
+  sourceCommit: 2ba2c0efbdf0c34b1da02203e4e84b571c883629
 ---
 
 {{DefaultAPISidebar("Image Capture API")}}{{SeeCompatTable}}
 
-**MediaStream Image Capture API** は、写真デバイスから画像やビデオをキャプチャするための API です。データをキャプチャするだけでなく、画像サイズ、赤目軽減、フラッシュの有無、現在の設定などのデバイス機能に関する情報を取得することもできます。逆に、API では、デバイスが許可する制限内で機能を設定できます。
+**MediaStream 画像キャプチャ API** は、映像デバイスから画像や動画をキャプチャするための API です。データをキャプチャするだけでなく、画像サイズ、赤目軽減、フラッシュの有無、現在の設定などのデバイスの機能に関する情報を取得することもできます。逆に、API では、デバイスが許可する制限内で機能を設定できます。
 
-## MediaStream image capture の概念と使用方法
+## MediaStream 画像キャプチャの概念と使用方法
 
-画像またはビデオストリームを検索するプロセスは、以下のように行われます。サンプルコードは、[Chrome の Image Capture の例](https://googlechrome.github.io/samples/image-capture/)を基にしています。
+画像または映像ストリームを検索するプロセスは、以下のように行われます。サンプルコードは、 [Chrome の画像キャプチャの例](https://googlechrome.github.io/samples/image-capture/)を基にしています。
 
-まず、{{domxref("MediaDevices.getUserMedia()")}} を呼び出してデバイスへの参照を取得します。`getUserMedia()` メソッドではより詳細な機能を要求できますが、以下の例では単に利用可能な任意のビデオデバイスを要求しています。このメソッドは、{{domxref("MediaStream")}} オブジェクトで解決する {{jsxref("Promise")}} を返します。
+まず、{{domxref("MediaDevices.getUserMedia()")}} を呼び出してデバイスへの参照を取得します。`getUserMedia()` メソッドではより詳細な機能を要求できますが、以下の例では単に利用可能な任意の映像デバイスを要求しています。このメソッドは、{{domxref("MediaStream")}} オブジェクトで解決する {{jsxref("Promise")}} を返します。
 
 ```js
 navigator.mediaDevices.getUserMedia({ video: true }).then((mediaStream) => {
@@ -45,10 +47,8 @@ let imageCapture = new ImageCapture(track);
 
 ## インターフェイス
 
-- {{domxref("ImageCapture")}}
-  - : 有効な {{domxref("MediaStreamTrack")}} を通じて参照される写真デバイスから画像をキャプチャするためのインターフェイス。
-- {{domxref("PhotoCapabilities")}}
-  - : 接続されている写真デバイスに利用可能な設定オプションを提供します。{{domxref("ImageCapture.getPhotoCapabilities", "ImageCapture.getPhotoCapabilities()")}} を呼び出して `PhotoCapabilities` オブジェクトを取得します。
+- {{domxref("ImageCapture")}} {{Experimental_Inline}}
+  - : 有効な {{domxref("MediaStreamTrack")}} を通じて参照される映像デバイスから画像をキャプチャするためのインターフェイスです。
 
 ## 仕様書
 
@@ -56,13 +56,7 @@ let imageCapture = new ImageCapture(track);
 
 ## ブラウザーの互換性
 
-### `ImageCapture`
-
-{{Compat("api.ImageCapture")}}
-
-### `PhotoCapabilities`
-
-{{Compat("api.PhotoCapabilities")}}
+{{Compat}}
 
 ## 関連情報
 

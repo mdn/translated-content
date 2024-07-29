@@ -3,7 +3,7 @@ title: management.uninstallSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Désinstalle l'appel de l'extension.
 

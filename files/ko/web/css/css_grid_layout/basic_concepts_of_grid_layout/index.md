@@ -3,6 +3,8 @@ title: Basic concepts of grid layout
 slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 ---
 
+{{CSSRef}}
+
 [CSS 그리드 레이아웃(Grid Layout)](/ko/docs/Web/CSS/CSS_Grid_Layout)은 CSS에 2차원의 그리드 시스템을 도입했습니다. 그리드는 주요 페이지 영역을 설계하거나 작은 사용자 인터페이스 요소를 배치하는 데 사용할 수 있습니다. 이 문서에서는 CSS 그리드 레이아웃 및 CSS 그리드 레이아웃 레벨 1 명세서에 포함된 새로운 기술 용어를 소개합니다. 이번 개요에 소개된 기능은 나머지 안내 문서에서 자세히 설명합니다.
 
 ## 그리드가 무엇인가요?
@@ -442,7 +444,7 @@ CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용
 
 {{ EmbedLiveSample('라인을_이용한_아이템_배치', '230', '420') }}
 
-파이어폭스 개발자 도구에 있는 [Grid Inspector](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)를 사용하면 아이템이 그리드 라인에 어떻게 배치되어 있는지 이해하기 훨씬 쉽다는 점도 잊지 마십시오.
+Firefox 개발자 도구에 있는 [Grid Inspector](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)를 사용하면 아이템이 그리드 라인에 어떻게 배치되어 있는지 이해하기 훨씬 쉽다는 점도 잊지 마십시오.
 
 ## 그리드 셀
 

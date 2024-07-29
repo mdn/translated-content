@@ -22,7 +22,7 @@ slug: Web/CSS/::grammar-error
 
 ## 構文
 
-```css
+```css-nolint
 ::grammar-error {}
 ```
 

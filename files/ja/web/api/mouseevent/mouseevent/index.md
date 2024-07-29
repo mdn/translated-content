@@ -1,8 +1,9 @@
 ---
-title: MouseEvent()
+title: "MouseEvent: MouseEvent() コンストラクター"
+short-title: MouseEvent()
 slug: Web/API/MouseEvent/MouseEvent
 l10n:
-  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("UI Events")}}

@@ -27,7 +27,7 @@ _This interface inherits the methods of {{domxref("HTMLElement")}}._
 
 This feature is no longer defined by any standards.
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

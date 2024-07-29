@@ -21,7 +21,8 @@ evtSource.onerror = function () {
 };
 ```
 
-> **备注：** 你可以在 Github 上查看这个完整例子： [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!NOTE]
+> 你可以在 Github 上查看这个完整例子： [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
 ## 规范
 
@@ -31,6 +32,6 @@ evtSource.onerror = function () {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("EventSource")}}

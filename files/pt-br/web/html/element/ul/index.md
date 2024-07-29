@@ -56,13 +56,13 @@ Não há nenhuma limitação para a profundidade e a imbricação das listas def
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{ htmlattrdef("compact") }}{{ Deprecated_inline() }}
+- `compact`{{ Deprecated_inline() }}
 
   - : Este atributo booleano sugere que a lista será processada em um modelo compacto. A interpretação deste atributo depende do perfil de navegação (_user agent_) e não funciona em todos os navegadores.
 
     > **Note:** **Nota de utilização:** Não aplique este atributo, que foi preterido - o elemento {{ HTMLElement("ul") }} deve ser definido utilizando-se a folha de estilos [CSS](/pt-BR/CSS). Para dar um efeito similar ao atributo compacto, a propriedade [line-height](/pt-BR/CSS/line-height) (espaçamento), da [CSS](/pt-BR/CSS), pode ser utilizada com um valor de 80%.
 
-- {{ htmlattrdef("type") }}{{ Deprecated_inline() }}
+- `type`{{ Deprecated_inline() }}
 
   - : Usados para estabelecer o tipo de marcador da lista. Os valores definidos durante a [HTML3.2](/pt-BR/HTML3.2) e a versão de transição de [HTML 4.0/4.01](/pt-BR/HTML4.01), são:
 

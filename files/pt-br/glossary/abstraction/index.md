@@ -3,6 +3,8 @@ title: Abstração
 slug: Glossary/Abstraction
 ---
 
+{{GlossarySidebar}}
+
 Abstração em {{Glossary("programação de computadores")}} é uma forma de reduzir a complexidade e tornar o projeto e a implementação mais eficientes em sistemas complexos de software. Ela esconde a complexidade técnica de um sistema por trás de uma {{Glossary("API", "APIs")}} mais simples.
 
 ## Saiba mais

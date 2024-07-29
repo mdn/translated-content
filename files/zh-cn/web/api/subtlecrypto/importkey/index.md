@@ -85,7 +85,7 @@ PrivateKeyInfo ::= SEQUENCE {
 
 `importKey()` 方法期望接收一个包含 [DER 编码](https://luca.ntop.org/Teaching/Appunti/asn1.html)的 `PrivateKeyInfo` 的 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 对象。DER 是一组将 ASN.1 结构编码为二进制格式的规则。
 
-你最有可能遇到的此类对象的格式为 [PEM 格式](ttps://zh.wikipedia.org/wiki/Pem格式)。PEM 格式是一种使用 ASCII 编码二进制数据的方法。它由头部、尾部和中间 [base64 编码](/zh-CN/docs/Glossary/Base64) 的二进制数据组成。PEM 编码的 `PrivateKeyInfo` 类似于这样：
+你最有可能遇到的此类对象的格式为 [PEM 格式](https://zh.wikipedia.org/wiki/Pem格式)。PEM 格式是一种使用 ASCII 编码二进制数据的方法。它由头部、尾部和中间 [base64 编码](/zh-CN/docs/Glossary/Base64)的二进制数据组成。PEM 编码的 `PrivateKeyInfo` 类似于这样：
 
 ```plain
 -----BEGIN PRIVATE KEY-----
@@ -98,8 +98,8 @@ ml2FIkoovZh/8yeTKmjUMb804g6OmjUc9vVojCRV0YdaSmYkkJMJbLg=
 
 要将其转换为你可以传递给 `importKey()` 的格式，你需要做两件事：
 
-- 头部和尾部之间的部分使用 [`window.atob()`](/zh-CN/docs/Web/API/atob) 进行 base64 解码。
-- 将生成的字符串转换为 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)。
+- 头部和尾部之间的部分使用 {{domxref("Window.atob()")}} 进行 base64 解码。
+- 将生成的字符串转换为 {{jsxref("ArrayBuffer")}}。
 
 请参阅[示例](#示例)部分，以获得更具体的指导。
 
@@ -117,7 +117,7 @@ SubjectPublicKeyInfo  ::=  SEQUENCE  {
 
 类似于 [PKCS #8](#pkcs_8)，`importKey()` 方法期望接收一个包含 [DER 编码](https://luca.ntop.org/Teaching/Appunti/asn1.html)的 `SubjectPublicKeyInfo` 的 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 对象。
 
-同样地，你最有可能遇到的此类对象的格式为 [PEM 格式](ttps://zh.wikipedia.org/wiki/Pem格式)。PEM 编码的 `SubjectPublicKeyInfo` 类似于这样：
+同样地，你最有可能遇到的此类对象的格式为 [PEM 格式](https://zh.wikipedia.org/wiki/Pem格式)。PEM 编码的 `SubjectPublicKeyInfo` 类似于这样：
 
 ```plain
 -----BEGIN PUBLIC KEY-----
@@ -133,8 +133,8 @@ gQIDAQAB
 
 与 [PKCS #8](#pkcs_8) 一样，你可以传递给 `importKey()` 的格式，你需要做两件事：
 
-- 头部和尾部之间的部分使用 [`window.atob()`](/zh-CN/docs/Web/API/atob) 进行 base64 解码。
-- 将生成的字符串转换为 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)。
+- 头部和尾部之间的部分使用 {{domxref("Window.atob()")}} 进行 base64 解码。
+- 将生成的字符串转换为 {{jsxref("ArrayBuffer")}}。
 
 请参阅[示例](#示例)部分，以获得更具体的指导。
 
@@ -160,7 +160,8 @@ JSON Web Key 看起来像这样（这是一个椭圆曲线算法的私钥）：
 
 ## 示例
 
-> **备注：** 你可以在 Github 上[尝试可用的示例](https://mdn.github.io/dom-examples/web-crypto/import-key/index.html)。
+> [!NOTE]
+> 你可以在 Github 上[尝试可用的示例](https://mdn.github.io/dom-examples/web-crypto/import-key/index.html)。
 
 ### 导入 Raw 格式的密钥
 

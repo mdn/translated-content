@@ -217,7 +217,7 @@ urlpatterns = [
 ]
 ```
 
-_book-detail URL 패턴은 우리가 원하는 책의 id를 캡처하기 위해 특별한 구문을 사용합니다. 구문은 간단합니다: 꺾쇠 괄호는_ 캡처하는 URL의 일부를 정의하고 뷰가 캡처 된 데이터에 액세스하는 데 사용할 수있는 변수의 이름을 지정합니다. _예를 들어,_ **\<something>**은 패턴을 캡처해서 "something"이라는 변수에 데이터를 담아 전달합니다. 우리는 선택적으로 변수 이름 앞에 데이터 형식 (int, str, slug, uuid, path)을 정의하는 [converter specification](https://docs.djangoproject.com/en/2.0/topics/http/urls/#path-converters)을 사용할 수 있습니다.
+_book-detail URL 패턴은 우리가 원하는 책의 id를 캡처하기 위해 특별한 구문을 사용합니다. 구문은 간단합니다: 꺾쇠 괄호는_ 캡처하는 URL의 일부를 정의하고 뷰가 캡처 된 데이터에 액세스하는 데 사용할 수있는 변수의 이름을 지정합니다. _예를 들어,_ **\<something>** 은 패턴을 캡처해서 "something"이라는 변수에 데이터를 담아 전달합니다. 우리는 선택적으로 변수 이름 앞에 데이터 형식 (int, str, slug, uuid, path)을 정의하는 [converter specification](https://docs.djangoproject.com/en/2.0/topics/http/urls/#path-converters)을 사용할 수 있습니다.
 
 여기에서 우리는 book id을 캡쳐하기 위해 `'<uuid:pk>'` 라는 특별히 포맷화된 문자열을 활용할 것입니다. 그리고 `pk` (primary key의 단축어)라는 이름의 파라미터로서 뷰로 넘겨줄 것입니다. This is the id that is being used to store the book uniquely in the database, as defined in the Book Model.
 

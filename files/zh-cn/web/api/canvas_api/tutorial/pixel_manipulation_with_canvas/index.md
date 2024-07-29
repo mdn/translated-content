@@ -66,7 +66,8 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 这个方法会返回一个 `ImageData` 对象，它代表了画布区域的对象数据，此画布的四个角落分别表示为 (`left`, `top`), (`left + width`, `top`), (`left`, `top + height`), 以及 (`left + width`, `top + height`) 四个点。这些坐标点被设定为画布坐标空间元素。
 
-> **备注：** 任何在画布以外的元素都会被返回成一个透明黑的 `ImageData` 对象。
+> [!NOTE]
+> 任何在画布以外的元素都会被返回成一个透明黑的 `ImageData` 对象。
 
 这个方法也会在文章[用画布操作视频](/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)中展示。
 
@@ -362,12 +363,12 @@ function draw(img) {
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
   - : 创建一个 JPG 图片。你可以有选择地提供从 0 到 1 的品质量，1 表示最好品质，0 基本不被辨析但有比较小的文件大小。
 
-当你从画布中生成了一个数据链接，例如，你可以将它用于任何{{HTMLElement("image")}}元素，或者将它放在一个有 download 属性的超链接里用于保存到本地。
+当你从画布中生成了一个数据链接，例如，你可以将它用于任何 {{HTMLElement("image")}} 元素，或者将它放在一个有 download 属性的超链接里用于保存到本地。
 
-你也可以从画布中创建一个{{domxref("Blob")}}对像。
+你也可以从画布创建一个 {{domxref("Blob")}} 对象。
 
 - {{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(callback, type, encoderOptions)")}}
-  - : 这个创建了一个在画布中的代表图片的 `Blob` 对像。
+  - : 这个创建了一个在画布中的代表图片的 `Blob` 对象。
 
 ## 参见
 

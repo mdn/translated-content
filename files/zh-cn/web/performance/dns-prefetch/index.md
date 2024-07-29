@@ -9,9 +9,9 @@ slug: Web/Performance/dns-prefetch
 
 ## 为什么要使用 dns-prefetch？
 
-当浏览器从（第三方）服务器请求资源时，必须先将该[跨源](/zh-CN/docs/Web/HTTP/CORS)域名解析为 IP 地址，然后浏览器才能发出请求。此过程称为 DNS 解析。DNS 缓存可以帮助减少此延迟，而 DNS 解析可以导致请求增加明显的延迟。对于打开了与许多第三方的连接的网站，此延迟可能会大大降低加载性能。
+当浏览器从（第三方）服务器请求资源时，必须先将该[跨源](/zh-CN/docs/Web/HTTP/CORS)域名解析为 IP 地址，然后浏览器才能发出请求。此过程称为 DNS 解析。虽然 DNS 缓存可以帮助减少此延迟，但 DNS 解析可能会给请求增加明显的延迟。对于打开了与许多第三方的连接的网站，此延迟可能会大大降低加载性能。
 
-`dns-prefetch` 可帮助开发人员掩盖 DNS 解析延迟。[HTML `<link>` 元素](/zh-CN/docs/Web/HTML/Element/link)通过 `dns-prefetch` 的 [`rel` 属性](/zh-CN/docs/Web/HTML/Attributes/rel)值提供此功能。然后在 [href 属性](/zh-CN/docs/Web/HTML/Attributes)中指明要[跨源](/zh-CN/docs/Web/HTTP/CORS)的域名：
+`dns-prefetch` 可帮助开发人员掩盖 DNS 解析延迟。[HTML `<link>` 元素](/zh-CN/docs/Web/HTML/Element/link)通过设置 [`rel` 属性](/zh-CN/docs/Web/HTML/Attributes/rel)值为 `dns-prefetch` 提供此功能。然后在 [href 属性](/zh-CN/docs/Web/HTML/Attributes)中指明要[跨源](/zh-CN/docs/Web/HTTP/CORS)的域名：
 
 ## 语法
 
@@ -56,7 +56,8 @@ Link: <https://fonts.googleapis.com/>; rel=dns-prefetch
 <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
 ```
 
-> **备注：** 如果页面需要建立与许多第三方域的连接，则将它们预先连接会适得其反。`preconnect` 提示最好仅用于最关键的连接。对于其他的连接，只需使用 `<link rel="dns-prefetch">` 即可节省第一步——DNS 查询——的时间。
+> [!NOTE]
+> 如果页面需要建立与许多第三方域的连接，则将它们预先连接会适得其反。`preconnect` 提示最好仅用于最关键的连接。对于其他的连接，只需使用 `<link rel="dns-prefetch">` 即可节省第一步——DNS 查询——的时间。
 
 配对这些提示的逻辑是因为对 dns-prefetch 的支持比对预连接的支持要好。不支持预连接的浏览器仍然可以通过回退到 dns-prefetch 来获得更多好处。由于这是 HTML 特性，因此容错性很强。如果不支持的浏览器遇到 dns-prefetch 提示（或任何其他资源提示），则网站不会中断，只是不会获得它提供的好处。
 

@@ -1,11 +1,17 @@
 ---
 title: text-emphasis-style
 slug: Web/CSS/text-emphasis-style
+l10n:
+  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
 {{CSSRef}}
 
 **`text-emphasis-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点の表示を設定します。設定やリセットに一括指定の {{cssxref("text-emphasis")}} を使用することもできます。
+
+{{EmbedInteractiveExample("pages/css/text-emphasis-style.html")}}
+
+## 構文
 
 ```css
 /* 初期値 */
@@ -32,10 +38,9 @@ text-emphasis-style: open sesame;
 text-emphasis-style: inherit;
 text-emphasis-style: initial;
 text-emphasis-style: revert;
+text-emphasis-style: revert-layer;
 text-emphasis-style: unset;
 ```
-
-## 構文
 
 ### 値
 
@@ -66,7 +71,7 @@ text-emphasis-style: unset;
 
 {{csssyntax}}
 
-## Examples
+## 例
 
 ### 基本的な例
 

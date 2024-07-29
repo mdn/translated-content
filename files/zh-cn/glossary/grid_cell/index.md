@@ -1,13 +1,15 @@
 ---
-title: Grid Cell
+title: 网格单元
 slug: Glossary/Grid_Cell
+l10n:
+  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
 {{GlossarySidebar}}
 
-在[Grid 布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)中，**网络单元格**是 CSS 网格中的最小单元。它是四条{{glossary("grid lines","网格线")}}之间的空间，概念上非常像表格单元格。
+在 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)中，**网格单元**（grid cell）是 CSS 网格中的最小单元。它是四条{{glossary("grid lines","网格线")}}之间的空间，概念上非常像表格单元格。
 
-![Diagram showing an individual cell on the grid.](1_grid_cell.png)
+![显示一个网格中单独一个单元格的图片](1_grid_cell.png)
 
 如果不使用网格布局提供的方法去放置网格容器的项目，这些项目将通过自动布局算法被放置到每个网格单元格中。将创建额外的行或列{{glossary("grid tracks", "轨道")}}以创建足够的单元格来保存所有项目。
 
@@ -55,7 +57,7 @@ slug: Glossary/Grid_Cell
 
 {{ EmbedLiveSample('示例', '300', '280') }}
 
-## 了解更多
+## 参见
 
 ### 属性参考
 
@@ -66,5 +68,5 @@ slug: Glossary/Grid_Cell
 
 ### 扩展阅读
 
-- CSS Grid Layout Guide: _[Basic concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
-- [Definition of Grid Cells in the CSS Grid Layout specification](https://drafts.csswg.org/css-grid/#grid-track-concept)
+- CSS 网格布局指南：_[网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
+- CSS 网格布局规范中[网格单元格的定义](https://drafts.csswg.org/css-grid/#grid-track-concept)

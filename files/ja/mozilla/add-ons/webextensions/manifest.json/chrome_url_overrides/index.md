@@ -52,4 +52,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.chrome_url_overrides")}}
+{{Compat}}

@@ -10,7 +10,7 @@ slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         完成本章之前的全部课程，特别是
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/文件和网站结构"
@@ -33,7 +33,7 @@ slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 - 给标记添加样式的 CSS 文件。
 - 页面中使用的图片。
 
-可在电脑上创建示例，也可以用 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 等网站来完成测验。
+可在电脑上创建示例，也可以用 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 等网站来完成测验。
 
 ## 项目简介
 

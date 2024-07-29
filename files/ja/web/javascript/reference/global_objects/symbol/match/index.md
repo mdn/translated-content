@@ -43,7 +43,7 @@ re[Symbol.match] = false;
 
 ## ブラウザー実装状況
 
-{{Compat("javascript.builtins.Symbol.match")}}
+{{Compat}}
 
 ## 関連情報
 

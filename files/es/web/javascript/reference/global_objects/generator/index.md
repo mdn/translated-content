@@ -23,7 +23,7 @@ var g = gen(); // "Generator { }"
 
 ## Métodos de instanciación
 
-_Tambien hereda propiedades de {{JSxRef("Iterator")}}_
+_Tambien hereda propiedades de {{JSxRef("Iterator")}}._
 
 - {{jsxref("Generator.prototype.next()")}}
   - : Retorna el valor ofrecido por la expresión {{jsxref("Operators/yield", "yield")}}
@@ -34,7 +34,7 @@ _Tambien hereda propiedades de {{JSxRef("Iterator")}}_
 
 ## Propiedades
 
-_Tambien hereda propiedades de {{JSxRef("Iterator")}}_
+_Tambien hereda propiedades de {{JSxRef("Iterator")}}._
 
 - `Generator.prototype.constructor`
 

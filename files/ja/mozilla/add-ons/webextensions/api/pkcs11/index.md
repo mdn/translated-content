@@ -33,4 +33,4 @@ For details about the manifest file's contents and location, see [Native manifes
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.pkcs11", 1, 1)}} {{WebExtExamples("h2")}}
+{{Compat}} {{WebExtExamples("h2")}}

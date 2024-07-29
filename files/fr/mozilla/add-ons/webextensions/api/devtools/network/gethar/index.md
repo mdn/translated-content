@@ -3,7 +3,7 @@ title: devtools.network.getHAR()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtenez un [journal HAR](http://www.softwareishard.com/blog/har-12-spec/#log) pour la page chargée dans l'onglet en cours.
 
@@ -45,7 +45,7 @@ logRequestsButton.addEventListener("click", logRequests);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools.network`](https://developer.chrome.com/extensions/devtools_network).
 

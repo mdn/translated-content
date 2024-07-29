@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index
 
 {{CSSRef}}
 
-通常情况下，[HTML](/zh-CN/docs/Glossary/HTML)页面可以被认为是二维的，因为文本，图像和其他元素被排列在页面上而不重叠。在这种情况下，只有一个渲染进程，所有元素都知道其他元素所占用的空间。 {{cssxref("z-index")}}属性可让你在渲染内容时调整对象分层的顺序。
+通常情况下，[HTML](/zh-CN/docs/Glossary/HTML) 页面可以被认为是二维的，因为文本，图像和其他元素被排列在页面上而不重叠。在这种情况下，只有一个渲染进程，所有元素都知道其他元素所占用的空间。{{cssxref("z-index")}} 属性可让你在渲染内容时调整对象分层的顺序。
 
 > _在 CSS 2.1 中，所有的盒模型元素都处于三维坐标系中。除了我们常用的横坐标和纵坐标，盒模型元素还可以沿着“z 轴”层叠摆放，当他们相互覆盖时，z 轴顺序就变得十分重要。_
 
@@ -17,13 +17,13 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index
 
 本文将通过一些简单的例子来解释这些规则。
 
-1. [Stacking without z-index](/zh-CN/docs/Web/Guide/CSS/Understanding_z-index/Stacking_without_z-index) : 默认的摆放规则，即不含有 z-index 属性时
-2. [Stacking and float](/zh-CN/CSS/Understanding_z-index/Stacking_floating_elements) : 浮动元素的处理方式
-3. [Adding z-index](/zh-CN/CSS/Understanding_z-index/Using_z-index) : 使用 z-index 来改变堆放顺序
-4. [The stacking context](/zh-CN/CSS/Understanding_z-index/Stacking_context) : 内容堆放注意事项
-5. [Stacking context example 1](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1) : 在两层元素的第二层上使用 z-index
-6. [Stacking context example 2](/zh-CN/docs/Web/Guide/CSS/Understanding_z-index/Stacking_context_example_2) : 在两层元素的所有层上使用 z-index
-7. [Stacking context example 3](/zh-CN/docs/Web/Guide/CSS/Understanding_z-index/Stacking_context_example_3) : 在三层元素的第二层上使用 z-index
+1. [不含 z-index 的堆叠](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index)：默认的摆放规则，即不含有 z-index 属性时
+2. [层叠与浮动](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements)：浮动元素的处理方式
+3. [添加 z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index)：使用 z-index 来改变堆放顺序
+4. [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)：内容堆放注意事项
+5. [堆叠上下文示例 1](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1)：在两层元素的第二层上使用 z-index
+6. [堆叠上下文示例 2](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2)：在两层元素的所有层上使用 z-index
+7. [堆叠上下文示例 3](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3)：在三层元素的第二层上使用 z-index
 
 ## 原始文档信息
 

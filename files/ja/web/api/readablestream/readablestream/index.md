@@ -1,8 +1,9 @@
 ---
-title: ReadableStream()
+title: "ReadableStream: ReadableStream() コンストラクター"
+short-title: ReadableStream()
 slug: Web/API/ReadableStream/ReadableStream
 l10n:
-  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
+  sourceCommit: d0ba214db1913215e8fac13bc2d66013b148d50a
 ---
 
 {{APIRef("Streams")}}
@@ -25,11 +26,11 @@ new ReadableStream(underlyingSource, queuingStrategy)
 
   - : 構築されたストリームのインスタンスの動作を定義するメソッドとプロパティを含むオブジェクト。 `underlyingSource` には次のものを含めることができます。
 
-    - `start`(controller) {{optional_inline}}
+    - `start` (controller) {{optional_inline}}
       - : これは、オブジェクトが構築されるとすぐに呼び出されるメソッドです。 このメソッドの内容は開発者が定義し、ストリームのソースへのアクセスを取得し、ストリーム機能を設定するために必要な他のすべての操作を行う必要があります。 このプロセスを非同期で実行する場合、成功または失敗を通知するプロミスを返すことができます。このメソッドに渡される `controller` 引数は、 {{domxref("ReadableStreamDefaultController")}} または {{domxref("ReadableByteStreamController")}} を `type` プロパティの値に応じて指定します。開発者はこれを使用して、セットアップ中にストリームを制御できます。
-    - `pull`(controller) {{optional_inline}}
-      - : このメソッドは、開発者が定義し、ストリームの内部にあるチャンクのキューがいっぱいになっていない場合、最高水準点に達するまで繰り返し呼び出されます。 `pull()` がプロミスを返す場合、そのプロミスが満たされるまで再び呼び出されません。プロミスが拒否された場合、ストリームはエラーになります。このメソッドに渡される `controller` 引数は、 {{domxref("ReadableStreamDefaultController")}} または {{domxref("ReadableByteStreamController")}} を `type` プロパティの値に応じて指定します。開発者はこれを使用して、より多くのチャンクが読み取られるようストリームを制御できます。
-    - `cancel`(reason) {{optional_inline}}
+    - `pull` (controller) {{optional_inline}}
+      - : このメソッドは、開発者が定義し、ストリームの内部にあるチャンクのキューがいっぱいになっていない場合、最高水準点に達するまで繰り返し呼び出されます。 `pull()` がプロミスを返す場合、そのプロミスが満たされるまで再び呼び出されません。プロミスが拒否された場合、ストリームはエラーになります。このメソッドに渡される `controller` 引数は、 {{domxref("ReadableStreamDefaultController")}} または {{domxref("ReadableByteStreamController")}} を `type` プロパティの値に応じて指定します。開発者はこれを使用して、より多くのチャンクが読み取られるようストリームを制御できます。この関数は `start()` が完全に終了するまで呼び出されません。さらに、この関数は少なくとも一つのチャンクがキューに入れられるか、BYOB リクエストが履行された場合にのみ繰り返し呼び出されます。
+    - `cancel` (reason) {{optional_inline}}
       - : このメソッドは、開発者が定義し、ストリームがキャンセルされることをアプリが通知した場合に呼び出されます（例えば、{{domxref("ReadableStream.cancel()")}} が呼び出された場合）。 内容は、ストリームのソースへのアクセスを解放するために必要なことを行う必要があります。 このプロセスが非同期の場合、成功または失敗を通知するプロミスを返すことができます。 `reason` 引数には、ストリームがキャンセルされた理由を説明する文字列が含まれています。
     - `type` {{optional_inline}}
       - : このプロパティは、どの種類の読み取り可能なストリームが処理されるかを制御します。 `"bytes"` に設定された値が含まれている場合、渡されるコントローラーオブジェクトは、 BYOB （独自のバッファーを持ち込む）/バイトストリームを処理できる {{domxref("ReadableByteStreamController")}} になります。 含まれていない場合、渡されるコントローラーは {{domxref("ReadableStreamDefaultController")}} になります。
@@ -50,7 +51,8 @@ new ReadableStream(underlyingSource, queuingStrategy)
     - `size(chunk)`
       - : 引数 `chunk` を含むメソッド — これは、各チャンクに使用するサイズをバイト単位で示します。
 
-    > **メモ:** 独自のカスタム `queuingStrategy` を定義するか、このオブジェクト値に {{domxref("ByteLengthQueuingStrategy")}} または {{domxref("CountQueuingStrategy")}} のインスタンスを使用できます。 `queuingStrategy` が指定されていない場合、使用される既定値は、最高水準点が 1 の `CountQueuingStrategy` と同じです。
+    > [!NOTE]
+    > 独自のカスタム `queuingStrategy` を定義するか、このオブジェクト値に {{domxref("ByteLengthQueuingStrategy")}} または {{domxref("CountQueuingStrategy")}} のインスタンスを使用できます。 `queuingStrategy` が指定されていない場合、使用される既定値は、最高水準点が 1 の `CountQueuingStrategy` と同じです。
 
 ### 返値
 
@@ -77,16 +79,16 @@ const stream = new ReadableStream({
       controller.enqueue(string);
 
       // それを画面に表示
-      let listItem = document.createElement('li');
+      let listItem = document.createElement("li");
       listItem.textContent = string;
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener('click', () => {
+    button.addEventListener("click", () => {
       clearInterval(interval);
       fetchStream();
       controller.close();
-    })
+    });
   },
   pull(controller) {
     // この例では実際には pull は必要ありません
@@ -95,7 +97,7 @@ const stream = new ReadableStream({
     // リーダーがキャンセルされた場合に呼び出されるため、
     // 文字列の生成を停止する必要があります
     clearInterval(interval);
-  }
+  },
 });
 ```
 
@@ -106,3 +108,10 @@ const stream = new ReadableStream({
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("ReadableStream")}}
+- {{domxref("ReadableByteStreamController")}}
+- {{domxref("ReadableStreamDefaultController")}}
+- [読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)

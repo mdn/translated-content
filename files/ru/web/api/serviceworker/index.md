@@ -71,7 +71,7 @@ if ("serviceWorker" in navigator) {
 
 {{Specifications}}
 
-## Поддержка
+## Совместимость с браузерами
 
 {{Compat}}
 

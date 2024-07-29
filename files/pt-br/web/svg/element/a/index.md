@@ -112,13 +112,10 @@ svg|a:active {
 
 {{svginfo}}
 
-## Specifications
+## Especificações
 
-| Specification                                             | Status              | Comment                                                             |
-| --------------------------------------------------------- | ------------------- | ------------------------------------------------------------------- |
-| {{SpecName("SVG2", "linking.html#Links", "&lt;a&gt;")}}   | {{Spec2("SVG2")}}   | Replaced {{SVGAttr("xlink:href")}} attribute by {{SVGAttr("href")}} |
-| {{SpecName("SVG1.1", "linking.html#Links", "&lt;a&gt;")}} | {{Spec2("SVG1.1")}} | Initial definition                                                  |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.a")}}
+{{Compat}}

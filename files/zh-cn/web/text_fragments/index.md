@@ -63,7 +63,8 @@ https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
   Document-Policy: force-load-at-top
   ```
 
-> **备注：** 如果提供的文本片段与链接文档中的任何文本不匹配，或者浏览器不支持文本片段，整个文本片段将被忽略，而链接到文档的顶部。
+> [!NOTE]
+> 如果提供的文本片段与链接文档中的任何文本不匹配，或者浏览器不支持文本片段，整个文本片段将被忽略，而链接到文档的顶部。
 
 ## 示例
 
@@ -168,4 +169,4 @@ items: [
 
 ## 参见
 
-- [大胆地链接以前没有人链接过的地方：文本片段](https://web.dev/text-fragments/)
+- [大胆地链接以前没有人链接过的地方：文本片段](https://web.dev/articles/text-fragments)

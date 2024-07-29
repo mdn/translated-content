@@ -37,7 +37,7 @@ linkRef.target ='_blank';
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

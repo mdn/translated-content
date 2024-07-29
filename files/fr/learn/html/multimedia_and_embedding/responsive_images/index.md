@@ -167,7 +167,7 @@ Revenons à notre exemple initial du fichier [not-responsive.html](https://mdn.g
   alt="Chris debout tenant sa fille Elva dans ses bras" />
 ```
 
-Arrangeons cela avec [`<picture>`](/fr/docs/Web/HTML/Element/picture)}&nbsp;! Comme pour `<vidéo>` et `<audio>`, l'élément `<picture>` est une enveloppe conteneur de plusieurs éléments [`<source>`](/fr/docs/Web/HTML/Element/Source)}&nbsp;; ces éléments indiquent plusieurs sources différentes entre lesquelles le navigateur peut choisir&nbsp;; ils sont suivis du très important élément [`<img>`](/fr/docs/Web/HTML/Element/Img)}. Le code dans [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) ressemblera à&nbsp;:
+Arrangeons cela avec [`<picture>`](/fr/docs/Web/HTML/Element/picture)&nbsp;! Comme pour `<vidéo>` et `<audio>`, l'élément `<picture>` est une enveloppe conteneur de plusieurs éléments [`<source>`](/fr/docs/Web/HTML/Element/Source)&nbsp;; ces éléments indiquent plusieurs sources différentes entre lesquelles le navigateur peut choisir&nbsp;; ils sont suivis du très important élément [`<img>`](/fr/docs/Web/HTML/Element/Img). Le code dans [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) ressemblera à&nbsp;:
 
 ```html
 <picture>
@@ -191,7 +191,7 @@ Ce code nous permet d'afficher une image adaptée à la fois sur un écran large
 
 ### Pourquoi ne peut-on pas réaliser cela avec le CSS ou du JavaScript&nbsp;?
 
-Lorsque le navigateur commence à charger une page, il commence à télécharger (précharger) toutes les images avant que l'analyseur principal n'ait commencé à charger et à interpréter le CSS et le JavaScript de la page. Cette technique est utile, car elle permet de réduire de 20 % en moyenne le temps de chargement des pages. Cependant, elle n'est d'aucune aide pour les images adaptatives, d'où la nécessité de mettre en œuvre des solutions comme `srcset`. Vous ne pourriez pas, par exemple, charger l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img)}, puis détecter la largeur de fenêtre avec JavaScript et changer dynamiquement l'image source pour une image plus petite si désiré. À ce moment-là, l'image originale aurait déjà été chargée, et vous chargeriez en plus la petite image, ce qui est encore pire en termes d'image adaptative.
+Lorsque le navigateur commence à charger une page, il commence à télécharger (précharger) toutes les images avant que l'analyseur principal n'ait commencé à charger et à interpréter le CSS et le JavaScript de la page. Cette technique est utile, car elle permet de réduire de 20 % en moyenne le temps de chargement des pages. Cependant, elle n'est d'aucune aide pour les images adaptatives, d'où la nécessité de mettre en œuvre des solutions comme `srcset`. Vous ne pourriez pas, par exemple, charger l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img), puis détecter la largeur de fenêtre avec JavaScript et changer dynamiquement l'image source pour une image plus petite si désiré. À ce moment-là, l'image originale aurait déjà été chargée, et vous chargeriez en plus la petite image, ce qui est encore pire en termes d'image adaptative.
 
 ### Utilisez largement les formats d'image modernes
 

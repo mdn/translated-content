@@ -1,34 +1,46 @@
 ---
 title: Server
 slug: Web/HTTP/Headers/Server
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-**`Server`** 標頭描述處理請求的伺服器軟體資訊：也就是產生回應的伺服器資訊。
+**`Server`** 標頭描述了處理請求的原始伺服器（即生成回應的伺服器）所使用的軟體。
 
-> **警告：** 請避免 Server 值的資訊過度冗長與詳盡，因為它們可能會洩漏實做細節、讓攻擊者容易找到已知安全漏洞並利用之。
+> [!WARNING]
+> 避免過於詳細的 `Server` 值，因為它們可能會暴露信息，使攻擊者更容易利用已知的安全漏洞。
 
-| 標頭類型                              | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | 否                              |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">標頭類型</th>
+      <td>{{Glossary("Response header", "回應標頭")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 語法
 
-```plain
+```http
 Server: <product>
 ```
 
 ## 指令
 
 - \<product>
-  - : 處理請求的軟體（或組件）名。語法通常與 {{HTTPHeader('User-Agent')}} 相似。
+  - : 處理請求的軟體或產品的名稱。通常格式類似於 {{HTTPHeader('User-Agent')}}。
 
-How much detail to include is an interesting balance to strike; exposing the OS version is probably a bad idea, as mentioned in the earlier warning about overly-detailed values. However, exposed Apache versions helped browsers work around a bug those versions had with {{HTTPHeader('Content-Encoding')}} combined with {{HTTPHeader('Range')}}.
+包含多少細節是一個值得平衡的問題；暴露作業系統版本可能是個壞主意，如前面關於過於詳細的值的警告所述。然而，暴露 Apache 版本幫助瀏覽器解決了這些版本中與 {{HTTPHeader('Content-Encoding')}} 和 {{HTTPHeader('Range')}} 結合使用的錯誤。
 
-## 示例
+## 範例
 
-```plain
+```http
 Server: Apache/2.4.1 (Unix)
 ```
 

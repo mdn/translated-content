@@ -5,7 +5,7 @@ slug: Web/API/FontFace
 
 {{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}
 
-**`FontFace`** 接口表示一个可用的字体。它允许您控制字体的源文件，作为外部资源的 URL 或缓冲区; 它还允许您控制字体的加载时间和字体当前的状态。
+**`FontFace`** 接口表示一个可用的字体。它允许你控制字体的源文件，作为外部资源的 URL 或缓冲区; 它还允许你控制字体的加载时间和字体当前的状态。
 
 ## Constructor
 
@@ -31,21 +31,21 @@ _这个接口不继承任何属性。_
 - {{domxref("FontFace.featureSettings")}}
   - : 这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体的 _features_ 属性，相当于 {{cssxref("@font-face/feature-settings", "feature-settings")}} 。
 - {{domxref("FontFace.status")}} {{readonlyinline}}
-  - : 返回一个表示字体当前状态的可枚举值，它可能是下列之一： `"unloaded"`, `"loading"`, `"loaded"`, `"error"`。
+  - : 返回一个表示字体当前状态的可枚举值，它可能是下列之一：`"unloaded"`、`"loading"`、`"loaded"`、`"error"`。
 - {{domxref("FontFace.loaded")}} {{readonlyinline}}
-  - : 当字体完全加载或加载失败时返回该 `FontFace` 的{{domxref("Promise")}} 。
+  - : 当字体完全加载或加载失败时返回该 `FontFace` 的 {{domxref("Promise")}}。
 
-## Methods
+## 方法
 
-_这个接口不继承任何方法_
+_这个接口不继承任何方法。_
 
 - {{domxref("FontFace.load()")}}
-  - : 加载该字体，返回该字体完全加载或加载失败时的{{domxref("Promise")}} 。
+  - : 加载该字体，返回该字体完全加载或加载失败时的 {{domxref("Promise")}}。
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}

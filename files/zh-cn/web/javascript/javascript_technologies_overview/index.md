@@ -144,7 +144,7 @@ JavaScript shell 允许你快速测试代码片段或 JavaScript 代码，而无
 - [JSFiddle](https://jsfiddle.net/)
   - : 编辑 JavaScript、CSS 和 HTML 并获得实时结果。使用外置资源，并同你的团队在线合作。
 - [Plunker](https://plnkr.co/)
-  - : Plunker 是一个在线社区，用于创建、协作和共享您的 Web 开发创意。编辑您的 JavaScript、CSS 和 HTML 文件并获取实时结果和文件结构。
+  - : Plunker 是一个在线社区，用于创建、协作和共享你的 Web 开发创意。编辑你的 JavaScript、CSS 和 HTML 文件并获取实时结果和文件结构。
 - [JSBin](https://jsbin.com/)
   - : JS Bin 是一个开源的协作式的 web 开发调试工具。
 - [Codepen](https://codepen.io/)

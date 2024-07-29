@@ -3,7 +3,7 @@ title: 関数
 slug: Web/JavaScript/Guide/Functions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
 
 関数は、 JavaScript の基本的な構成要素のひとつです。 JavaScript の関数は、プロシージャに似ています。 — タスクを実行したり値を計算したりする一連の文ですが、プロシージャが関数として認められるためには、何らかの入力を受け取り、入力と出力の間に何らかの明白な関係がある出力を返す必要があります。関数を使用するには、呼び出したいスコープのどこかで関数を定義する必要があります。
 
@@ -118,7 +118,7 @@ if (num === 0) {
 
 これまで説明してきた関数の定義に加えて、{{jsxref("Function")}} コンストラクターを、{{jsxref("Global_Objects/eval", "eval()")}} のような文字列からの関数作成に用いることができます。
 
-**メソッド**は、オブジェクトのプロパティである関数のことです。オブジェクトとメソッドについて詳しくは、「[オブジェクトを利用する](/ja/docs/Web/JavaScript/Guide/Working_with_Objects)」の章をご覧ください。
+**メソッド**は、オブジェクトのプロパティである関数のことです。オブジェクトとメソッドについて詳しくは、「[オブジェクトを利用する](/ja/docs/Web/JavaScript/Guide/Working_with_objects)」の章をご覧ください。
 
 ## 関数の呼び出し
 
@@ -144,7 +144,8 @@ function square(n) {
 
 関数のスコープは自身が宣言された関数内、あるいは最上位で宣言されたのであればプログラム全体になります。
 
-> **メモ:** この動作は、上記の構文 (すなわち `function funcName(){}`) を用いて関数を定義したときに限ることに注意してください。次のコードは動作しません。
+> [!NOTE]
+> この動作は、上記の構文 (すなわち `function funcName(){}`) を用いて関数を定義したときに限ることに注意してください。次のコードは動作しません。
 >
 > これは、関数の巻き上げが*関数式*ではなく*関数宣言*でしか機能しないことを意味しています。
 >
@@ -156,7 +157,7 @@ function square(n) {
 > };
 > ```
 
-関数の引数は、文字列や数値に限られてはいません。オブジェクト全体を関数に渡すこともできます。`show_props` 関数 ([オブジェクトを利用する](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties)の章で定義) は、オブジェクトを引数にとる関数の例です。
+関数の引数は、文字列や数値に限られてはいません。オブジェクト全体を関数に渡すこともできます。`show_props` 関数 ([オブジェクトを利用する](/ja/docs/Web/JavaScript/Guide/Working_with_objects#オブジェクトとプロパティ)の章で定義) は、オブジェクトを引数にとる関数の例です。
 
 関数はその関数自身を呼び出すこともできます。例えば、ここに階乗を計算する関数を示します。
 
@@ -484,7 +485,8 @@ var getCode = (function () {
 getCode(); // シークレットコードを返す
 ```
 
-> **メモ:** クロージャを使用する際に注意すべき落とし穴がいくつかあります。
+> [!NOTE]
+> クロージャを使用する際に注意すべき落とし穴がいくつかあります。
 >
 > 取り囲まれている関数で外部スコープの変数と同じ名前の変数を定義した場合、外部スコープにある変数を再び参照する方法がなくなります。 (プログラムが内部スコープを終了するまで、内部スコープ変数は外部変数を「上書き」します。)
 >
@@ -539,7 +541,8 @@ myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 ```
 
-> **メモ:** 変数 `arguments` は「配列風の変数」であり、配列ではありません。添字が数値であることと `length` プロパティがあることで、配列風となってはいます。しかし、配列操作のメソッドのすべてを持っているわけではありません。
+> [!NOTE]
+> 変数 `arguments` は「配列風の変数」であり、配列ではありません。添字が数値であることと `length` プロパティがあることで、配列風となってはいます。しかし、配列操作のメソッドのすべてを持っているわけではありません。
 
 さらなる情報については、JavaScript リファレンスの {{jsxref("Function")}} オブジェクトをご覧ください。
 
@@ -679,7 +682,7 @@ JavaScript には、定義済みの最上位関数がいくつかあります。
 - {{jsxref("Global_Objects/eval", "eval()")}}
   - : **`eval()`** メソッドは文字列として書き表された JavaScript のコードを評価します。
 - {{jsxref("Global_Objects/uneval", "uneval()")}}
-  - : **`uneval()`** メソッドは{{jsxref("Object","オブジェクト","","true")}}のソースコードを表す文字列を生成します。
+  - : **`uneval()`** メソッドは{{jsxref("Object","オブジェクト","",1)}}のソースコードを表す文字列を生成します。
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
   - : このグローバル関数 **`isFinite()`** は渡された値が有限数であるかを判定します。必要であれば、引数は初めに数値へと変換されます。
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
@@ -701,4 +704,4 @@ JavaScript には、定義済みの最上位関数がいくつかあります。
 - {{jsxref("Global_Objects/unescape", "unescape()")}}
   - : 非推奨の **`unescape()`** メソッドはある文字列中の 16 進数によるエスケープシーケンスを、それが表す所定の文字に置換した新しい文字列を計算します。エスケープシーケンスは {{jsxref("Global_Objects/escape", "escape")}} といった関数によって提供されているかもしれません。 `unescape()` は非推奨なので、代わりに {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} または {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} を使用してください。
 
-{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

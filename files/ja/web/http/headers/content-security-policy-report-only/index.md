@@ -127,7 +127,7 @@ As you can see, the report includes the full path to the violating resource in `
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Content-Security-Policy-Report-Only")}}
+{{Compat}}
 
 ## 関連情報
 

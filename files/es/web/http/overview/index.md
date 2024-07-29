@@ -5,13 +5,15 @@ slug: Web/HTTP/Overview
 
 {{HTTPSidebar}}
 
-HTTP, de sus siglas en inglés: "Hypertext Transfer Protocol", es el nombre de un protocolo el cual nos permite realizar una petición de datos y recursos, como pueden ser documentos {{glossary("HTML")}}. Es la base de cualquier intercambio de datos en la Web, y un protocolo de estructura cliente-servidor, esto quiere decir que una petición de datos es iniciada por el elemento que recibirá los datos (el cliente), normalmente un navegador Web. Así, una página web completa resulta de la unión de distintos sub-documentos recibidos, como, por ejemplo: un documento que especifique el estilo de maquetación de la página web ({{glossary("CSS")}}), el texto, las imágenes, vídeos, scripts, etc...
+HTTP, de sus siglas en inglés: "Hypertext Transfer Protocol", es el nombre de un {{glossary("protocol", "protocolo")}} el cual nos permite realizar una petición de datos y recursos, como pueden ser documentos HTML. Es la base de cualquier intercambio de datos en la Web, y un protocolo de estructura cliente-servidor, esto quiere decir que una petición de datos es iniciada por el elemento que recibirá los datos (el cliente), normalmente un navegador Web. Así, una página web completa resulta de la unión de distintos sub-documentos recibidos, como, por ejemplo: un documento que especifique el estilo de maquetación de la página web ({{glossary("CSS")}}), el texto, las imágenes, vídeos, scripts, etc...
 
-![A Web document is the composition of different resources](fetching_a_page.png)
+![Un único documento web compuesto por múltiples recursos de diferentes servidores.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/fetching-a-page.svg)
 
 Clientes y servidores se comunican intercambiando mensajes individuales (en contraposición a las comunicaciones que utilizan flujos continuos de datos). Los mensajes que envía el cliente, normalmente un navegador Web, se llaman _peticiones_, y los mensajes enviados por el servidor se llaman _respuestas_.
 
-![HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.](http-layers.png)Diseñado a principios de la década de 1990, {{glossary("HTTP")}} es un protocolo ampliable, que ha ido evolucionando con el tiempo. Es lo que se conoce como un protocolo de la capa de aplicación, y se transmite sobre el protocolo {{glossary("TCP")}}, o el protocolo encriptado {{glossary("TLS")}}, aunque teóricamente podría usarse cualquier otro protocolo fiable. Gracias a que es un protocolo capaz de ampliarse, se usa no solo para transmitir documentos de hipertexto ({{glossary("HTML")}}), si no que además, se usa para transmitir imágenes o vídeos, o enviar datos o contenido a los servidores, como en el caso de los formularios de datos. {{glossary("HTTP")}} puede incluso ser utilizado para transmitir partes de documentos, y actualizar páginas Web en el acto.
+![HTTP como protocolo de capa de aplicación, por encima de TCP (capa de transporte) e IP (capa de red) y por debajo de la capa de presentación.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-layers.svg)
+
+Diseñado a principios de la década de 1990, {{glossary("HTTP")}} es un protocolo ampliable, que ha ido evolucionando con el tiempo. Es lo que se conoce como un protocolo de la capa de aplicación, y se transmite sobre el protocolo {{glossary("TCP")}}, o el protocolo encriptado {{glossary("TLS")}}, aunque teóricamente podría usarse cualquier otro protocolo fiable. Gracias a que es un protocolo capaz de ampliarse, se usa no solo para transmitir documentos de hipertexto ({{glossary("HTML")}}), si no que además, se usa para transmitir imágenes o vídeos, o enviar datos o contenido a los servidores, como en el caso de los formularios de datos. {{glossary("HTTP")}} puede incluso ser utilizado para transmitir partes de documentos, y actualizar páginas Web en el acto.
 
 ## Arquitectura de los sistemas basados en HTTP
 
@@ -19,7 +21,7 @@ Clientes y servidores se comunican intercambiando mensajes individuales (en cont
 
 Cada petición individual se envía a un servidor, el cuál la gestiona y responde. Entre cada _petición_ y _respuesta_, hay varios intermediarios, normalmente denominados {{glossary("Proxy_server", "proxies")}}, los cuales realizan distintas funciones, como: gateways o {{glossary("Cache", "caches")}}.
 
-![Client server chain](client-server-chain.png)
+![Una solicitud HTTP de un cliente reenviada por varios servidores proxy a un servidor y una respuesta que toma la misma ruta de regreso al cliente.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/client-server-chain.svg)
 
 En realidad, hay más elementos intermedios, entre un navegador y el servidor que gestiona su petición: hay otros tipos de dispositivos: como _routers_, _modems_ ... Es gracias a la arquitectura en capas de la Web, que estos intermediarios, son transparentes al navegador y al servidor, ya que {{glossary("HTTP")}} se apoya en los protocolos de red y transporte. {{glossary("HTTP")}} es un protocolo de aplicación, y por tanto se apoya sobre los anteriores. Aunque para diagnosticar problemas en redes de comunicación, las capas inferiores son irrelevantes para la definición del protocolo {{glossary("HTTP")}} .
 
@@ -130,11 +132,11 @@ Existen dos tipos de mensajes HTTP: peticiones y respuestas, cada uno sigue su p
 
 Un ejemplo de petición HTTP:
 
-![A basic HTTP request](http_request.png)
+![Descripción general de una solicitud GET HTTP con encabezados](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-request.svg)
 
 Una petición de HTTP, está formado por los siguientes campos:
 
-- Un [método](/es/docs/Web/HTTP/Methods) HTTP, normalmente pueden ser un verbo, como: {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} o un nombre como: {{HTTPMethod("OPTIONS")}} o {{HTTPMethod("HEAD")}}, que defina la operación que el cliente quiera realizar. El objetivo de un cliente, suele ser una petición de recursos, usando GET, o presentar un valor de un [formulario HTML](/es/docs/Web/Guide/HTML/Forms), usando POST, aunque en otras ocasiones puede hacer otros tipos de peticiones.
+- Un [método](/es/docs/Web/HTTP/Methods) HTTP, normalmente pueden ser un verbo, como: {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} o un nombre como: {{HTTPMethod("OPTIONS")}} o {{HTTPMethod("HEAD")}}, que defina la operación que el cliente quiera realizar. El objetivo de un cliente, suele ser una petición de recursos, usando GET, o presentar un valor de un [formulario HTML](/es/docs/Learn/Forms), usando POST, aunque en otras ocasiones puede hacer otros tipos de peticiones.
 - La dirección del recurso pedido; la URL del recurso, sin los elementos obvios por el contexto, como pueden ser: sin el {{glossary("protocol","protocolo")}} (`http://`), el {{glossary("domain","dominio")}} (aquí `developer.mozilla.org`), o el {{glossary("port","puerto")}} TCP (aquí el 80).
 - La versión del protocolo HTTP.
 - Cabeceras HTTP opcionales, que pueden aportar información adicional a los servidores.
@@ -144,9 +146,9 @@ Una petición de HTTP, está formado por los siguientes campos:
 
 Un ejemplo de repuesta:
 
-![](http_response.png)
+![Descripción general de una respuesta HTTP '200 OK' a una solicitud GET, incluidos los encabezados de respuesta.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-response.svg)
 
-Las respuestas están formadas por los siguentes campos:
+Las respuestas están formadas por los siguientes campos:
 
 - La versión del protocolo HTTP que están usando.
 - Un código de estado, indicando si la petición ha sido exitosa, o no, y debido a que.
@@ -156,6 +158,6 @@ Las respuestas están formadas por los siguentes campos:
 
 ## Conclusión
 
-El protocólo HTTP es un protocolo ampliable y fácil de usar. Su estructura cliente-servidor, junto con la capacidad para usar cabeceras, permite a este protocolo evolucionar con las nuevas y futuras aplicaciones en Internet.
+El protocolo HTTP es un protocolo ampliable y fácil de usar. Su estructura cliente-servidor, junto con la capacidad para usar cabeceras, permite a este protocolo evolucionar con las nuevas y futuras aplicaciones en Internet.
 
-Aunque la versión del protocolo HTTP/2 añade algo de complejidad, al utilizar un formato en binario, esto aumenta su rendimiento, y la estructura y semantica de los mensajes es la misma desde la versión HTTP/1.0. El flujo de comunicaciones en una sesión es sencillo y puede ser fácilmente estudiado e investigado con un simple [monitor de mensajes HTTP](/es/docs/Tools/Network_Monitor).
+Aunque la versión del protocolo HTTP/2 añade algo de complejidad, al utilizar un formato en binario, esto aumenta su rendimiento, y la estructura y semantica de los mensajes es la misma desde la versión HTTP/1.0. El flujo de comunicaciones en una sesión es sencillo y puede ser fácilmente estudiado e investigado con un simple [monitor de mensajes HTTP](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).

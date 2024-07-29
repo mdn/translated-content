@@ -94,13 +94,14 @@ Produz este resultado:
 
 ## Especificações
 
-| Specification                                                                   | Status              | Comment |
-| ------------------------------------------------------------------------------- | ------------------- | ------- |
-| {{SpecName('CSS2.1', 'generate.html#generate.html#counters', 'counter-reset')}} | {{Spec2('CSS2.1')}} |         |
+{{Specifications}}
 
 ## Veja mais
 
-- [counter-reset](/pt-BR/docs/CSS/counter-reset)
-- [counter-increment](/pt-BR/docs/CSS/counter-increment)
-
-_There is an additional example available at [http://www.mezzoblue.com/archives/20.../counter_intu/](http://www.mezzoblue.com/archives/2006/11/01/counter_intu/). This blog entry was posted on November 01, 2006, but appears to be accurate._
+- {{cssxref("contain")}}
+- {{cssxref("counter-reset")}}
+- {{cssxref("counter-set")}}
+- {{cssxref("counter-increment")}}
+- {{cssxref("@counter-style")}}
+- [CSS counter styles](/pt-BR/docs/Web/CSS/CSS_counter_styles) module
+- [CSS lists and counters](/pt-BR/docs/Web/CSS/CSS_lists) module

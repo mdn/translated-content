@@ -3,6 +3,8 @@ title: Fonction de rappel (callback)
 slug: Glossary/Callback_function
 ---
 
+{{GlossarySidebar}}
+
 Une fonction de rappel (aussi appelée _callback_ en anglais) est une fonction passée dans une autre fonction en tant qu'argument, qui est ensuite invoquée à l'intérieur de la fonction externe pour accomplir une sorte de routine ou d'action.
 
 Voici un rapide exemple :

@@ -1,8 +1,9 @@
 ---
 title: "ServiceWorkerGlobalScope: pushsubscriptionchange イベント"
+short-title: pushsubscriptionchange
 slug: Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Push API")}}
@@ -33,7 +34,8 @@ onpushsubscriptionchange = (event) => {};
 
 サービスワーカーとアプリサーバー間で加入情報を同期するのに別の方法を使用することを検討するか、 `fetch()` を使用するコードが、データ交換の試行が失敗した場合を処理するのに十分堅牢であることを確認してください。
 
-> **メモ:** この仕様書の早期の草稿では、このイベントは {{domxref("PushSubscription")}} が期限切れになった時に送信されるよう定義されていました。
+> [!NOTE]
+> この仕様書の早期の草稿では、このイベントは {{domxref("PushSubscription")}} が期限切れになった時に送信されるよう定義されていました。
 
 ## 例
 

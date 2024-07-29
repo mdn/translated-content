@@ -20,11 +20,12 @@ privacy API を使うには、"privacy" [API パーミッション](/ja/Add-ons/
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.privacy", 10, 1)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **メモ:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/extensions/privacy) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/extensions/privacy) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

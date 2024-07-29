@@ -15,7 +15,8 @@ slug: Learn/HTML/Tables/Structuring_planet_data
 
 Для того, чтобы начать аттестацию, скопируйте [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/blank-template.html), [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/minimal-table.css), и [planets-data.txt](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/planets-data.txt) в новую директорию на вашем компьютере.
 
-> **Примечание:** В качестве альтернативы, вы можете использовать такие сайты, как [JSBin](https://jsbin.com/) или [Glitch](https://glitch.com/), чтобы пройти аттестацию. Вы можете вставлять HTML, CSS и JavaScript в один из этих онлайн редакторов. Если используемый вами онлайн редактор не имеет отдельных JavaScript/CSS панелей, не стесняйтесь вставлять `<script>`/`<style>` элементы в HTML страницу.
+> [!NOTE]
+> В качестве альтернативы, вы можете использовать такие сайты, как [JSBin](https://jsbin.com/) или [Glitch](https://glitch.com/), чтобы пройти аттестацию. Вы можете вставлять HTML, CSS и JavaScript в один из этих онлайн редакторов. Если используемый вами онлайн редактор не имеет отдельных JavaScript/CSS панелей, не стесняйтесь вставлять `<script>`/`<style>` элементы в HTML страницу.
 
 ## Краткое описание проекта
 
@@ -58,9 +59,3 @@ slug: Learn/HTML/Tables/Structuring_planet_data
    - Ссылка на актуальную задачу или страницу оценки, чтобы мы могли найти вопрос, с которым вам нужно помочь.
 
 {{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
-
-## В этом модуле
-
-- [HTML table basics](/ru/docs/Learn/HTML/Tables/Basics)
-- [HTML table advanced features and accessibility](/ru/docs/Learn/HTML/Tables/Advanced)
-- [Structuring planet data](/ru/docs/Learn/HTML/Tables/Structuring_planet_data)

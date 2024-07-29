@@ -2,7 +2,7 @@
 title: ポップオーバー API の使用
 slug: Web/API/Popover_API/Using
 l10n:
-  sourceCommit: bb6092c4230b69c2eceae6910af68c73955cae1c
+  sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
 ---
 
 {{DefaultAPISidebar("Popover API")}}
@@ -11,13 +11,14 @@ l10n:
 
 ## 宣言的なポップオーバーの作成
 
-最も単純な形では、ポップオーバーのコンテンツを含むHTML要素に [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) 属性を追加すれば、ポップオーバーが作成されます。また、ポップオーバーとそのコントロールを関連付けるために `id` が必要です。
+最も単純な形では、ポップオーバーのコンテンツを含む HTML 要素に [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) 属性を追加すれば、ポップオーバーが作成されます。また、ポップオーバーとそのコントロールを関連付けるために `id` が必要です。
 
 ```html
 <div id="mypopover" popover>ポップオーバーコンテンツ</div>
 ```
 
-> **メモ:** 値なしで `popover` 属性を追加すると、 `popover="auto"` を設定するのと同じになります。
+> [!NOTE]
+> 値なしで `popover` 属性を追加すると、 `popover="auto"` を設定するのと同じになります。
 
 この属性を追加すると、{{cssxref("display", "display: none")}} をその要素に設定することで、ページ読み込み時に非表示にすることができます。ポップオーバーの表示・非表示を切り替えるには、いくつかの制御ボタンを追加する必要があります。{{htmlelement("button")}}（または {{htmlelement("input")}} の `type="button"`）に [`popovertarget`](/ja/docs/Web/HTML/Element/button#popovertarget) 属性を、制御するポップオーバーの ID を値として設定することすることにより、ポップオーバー制御ボタンに設定することができます。
 
@@ -28,7 +29,7 @@ l10n:
 
 既定では、ボタンはトグルボタンになっています。繰り返し押すと、ポップオーバーの表示と非表示が切り替わります。
 
-この動作を変更したい場合は、[`popovertargetaction`](/ja/docs/Web/HTML/Element/button#popovertargetaction) 属性を使用します - これは `"hide"`、`"show"`、`"toggle"` の何れかの値を取ります。例えば、表示ボタンと非表示ボタンを別個に作成するには、次のようにします。
+この動作を変更したい場合は、 [`popovertargetaction`](/ja/docs/Web/HTML/Element/button#popovertargetaction) 属性を使用します - これは `"hide"`、`"show"`、`"toggle"` の何れかの値を取ります。例えば、表示ボタンと非表示ボタンを別個に作成するには、次のようにします。
 
 ```html
 <button popovertarget="mypopover" popovertargetaction="show">
@@ -50,8 +51,9 @@ l10n:
 
 上記のように、ポップオーバー要素に `popover` または `popover="auto"` が設定されている場合、その要素は**自動状態** (auto state) であると言います。自動状態について注意すべき重要な動作が 2 つあります。
 
-- ポップオーバーは「簡単に解除する」("light dismissed") ことができます。これは、ポップオーバーの外側をクリックするか、<kbd>Esc</kbd> キーを押すことによって、ポップオーバーを閉じることができるという意味です。
-- 通常、一度に表示できるポップオーバーは 1 つだけです。すでに 1 つのポップオーバーが表示されているとき に 2つ目を表示すると、最初のポップオーバーが閉じてしまいます。このルールの例外は、入れ子のオートポップオーバーがある場合です。詳しくは、[入れ子のポップオーバー](#入れ子のポップオーバー)の節を参照してください。
+- ポップオーバーは「簡単に解除する」("light dismissed") ことができます。これは、ポップオーバーの外側をクリックすることによって、ポップオーバーを閉じることができるという意味です。
+- ポップオーバーは、 <kbd>Esc</kbd> キーを押すなど、ブラウザー依存の仕組みを使って閉じることもできます。
+- 通常、一度に表示できるポップオーバーは 1 つだけです。すでに 1 つのポップオーバーが表示されているとき に 2 つ目を表示すると、最初のポップオーバーが閉じてしまいます。このルールの例外は、入れ子のオートポップオーバーがある場合です。詳しくは、[入れ子のポップオーバー](#入れ子のポップオーバー)の節を参照してください。
 
 > **メモ:** `popover="auto"` ポップオーバーは、文書内の他の要素で {{domxref("HTMLDialogElement.showModal()")}} や {{domxref("Element.requestFullscreen()")}} の呼び出しが成功した場合にも閉じます。しかし、これらのメソッドを表示されているポップオーバーに対して呼び出すと失敗することに留意してください。しかし、現在表示されていない `popover` 属性を持つ要素に対してこれらのメソッドを呼び出すことはできます。
 
@@ -152,7 +154,7 @@ JavaScript のポップオーバーのプロパティ、機能検出、`togglePo
 
 ## タイマーによるポップオーバーの自動解除
 
-もう一つ、JavaScript でよくあるパターンが、一定の時刻が経過すると自動的にポップオーバーを解除することです。例えば、一度に複数のアクション（例えば複数のファイルのアップロードなど）があり、それぞれのアクションが成功または失敗したときに通知を示す「トースト」通知のシステムを作成したい場合があります。この場合、手動ポップオーバーを使用して、複数のアクションを同時に示し、{{domxref("setTimeout")}} を使用して解除できるようにしたいとします。このようなポップオーバーを処理する関数は次のようなものです。
+もう一つ、JavaScript でよくあるパターンが、一定の時刻が経過すると自動的にポップオーバーを解除することです。例えば、一度に複数のアクション（例えば複数のファイルのアップロードなど）があり、それぞれのアクションが成功または失敗したときに通知を示す「トースト」通知のシステムを作成したい場合があります。この場合、手動ポップオーバーを使用して、複数のアクションを同時に示し、{{domxref("setTimeout()")}} を使用して解除できるようにしたいとします。このようなポップオーバーを処理する関数は次のようなものです。
 
 ```js
 function makeToast(result) {
@@ -300,4 +302,214 @@ function moveToastsUp() {
 
 これがどのように描画されるかという考えについては、[ポップオーバーの背景をぼかす例](https://mdn.github.io/dom-examples/popover-api/blur-background/)（[source](https://github.com/mdn/dom-examples/tree/main/popover-api/blur-background)）を参照してください。
 
-最後にアニメーションについてですが、多くの人がポップオーバーの表示と非表示をアニメーションで表現したいと思うでしょうから、特に触れる必要があります。。現状では、ポップオーバーをアニメーションで実現するためには、[CSS の動作のいくつかの更新](https://open-ui.org/components/popover.research.explainer/#animation-of-popovers)が必要です。特に、`display: none` から移行する際に、要素のアニメーションを可能にします。ポップオーバーにアニメーションが利用できるようになったら、すぐにこの記事を更新します。
+## ポップオーバーのアニメーション
+
+ポップオーバーは{{glossary("top layer", "最上位レイヤー")}}と[アクセシビリティツリー](/ja/docs/Web/Performance/How_browsers_work#building_the_accessibility_tree)から除去されたり追加されたりするだけでなく、非表示時には `display: none;`、表示時には `display: block;` に設定されます。したがって、ポップオーバーをアニメーションさせるには、 {{cssxref("display")}} プロパティをアニメーション可能にする必要があります。[対応しているブラウザー](/ja/docs/Web/CSS/display#ブラウザーの互換性)では、`display` を[離散アニメーション型](/ja/docs/Web/CSS/CSS_animated_properties#離散)の変形でアニメーションさせます。具体的には、ブラウザーはアニメーションの再生時間全体にわたってコンテンツを表示させるように、 `none` と `display` の他の値を切り替えます。例えば、次のようになります。
+
+- `display` を `none` から `block` （または他の表示可能な `display` 値）にアニメーションさせる場合、値はアニメーション時間の `0%` で `block` に切り替わり、ずっと表示されます。
+- `display` を `block` （または他の表示可能な `display` 値）から `none` にアニメーションさせる場合、値はアニメーション時間の `100%` で `none` に切り替わり、ずっと表示されます。
+
+> **メモ:** [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)を使用してアニメーションを行う場合、上記の動作を有効にするには [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) を設定する必要があります。 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)でアニメーションさせる場合、既定では上記の動作が利用できます。
+
+### ポップオーバーのトランジション
+
+CSSのトランジションでポップオーバーをアニメーションさせる場合、以下の機能が必要です。
+
+- {{CSSxRef("@starting-style")}} アットルール
+  - : ポップオーバーが最初に表示されたときにトランジションさせたい、ポップオーバーに設定するプロパティの開始値のセットを提供します。これは予期しない動作を避けるために必要です。既定では、 CSS のトランジションは可視要素でプロパティがある値から別の値に変更されたときのみ発生します。要素の最初のスタイル更新時や `display` 型が `none` から別の型に変更されたときには発生しません。
+- {{CSSxRef("display")}} プロパティ
+  - : トランジションのリストに `display` を追加して、ポップオーバーがトランジションの再生時間の間、`display: block` （または他の表示可能な `display` 値）として残り、他のトランジションが確実に表示されるようにします。
+- {{CSSxRef("overlay")}} プロパティ
+  - : トランジションのリストに `overlay` を記述して、最上位レイヤーからのポップオーバーの除去をトランジションが完全に完了するまで確実に延期し、トランジションが確実に表示されるようにします。
+- {{cssxref("transition-behavior")}} プロパティ
+  - : `transition-behavior:allow-discrete` を `display` と `overlay` のトランジション（または一括指定の {{cssxref("transition")}}）に設定し、既定ではアニメーション不可能なこれら 2 つのプロパティの離散トランジションを有効にします。
+
+この例がどのように見えるものか、見ていきましょう。
+
+#### HTML
+
+この HTML では、 {{htmlelement("div")}} 要素がポップオーバーになるよう、グローバル属性の [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) で宣言されており、 {{htmlelement("button")}} 要素をポップオーバーの表示コントロールとして指定されています。
+
+```html-nolint
+<button popovertarget="mypopover">ポップオーバーを表示</button>
+<div popover="auto" id="mypopover">ポップオーバーです。アニメーションします。</div>
+```
+
+#### CSS
+
+トランジションさせたいポップオーバーのプロパティは、 [`opacity`](/ja/docs/Web/CSS/opacity) と [`transform`](/ja/docs/Web/CSS/transform) の 2 つです。ポップオーバーが水平方向に拡大または縮小しながらフェードインまたはフェードアウトするようにします。これを実現するために、これらのプロパティの開始状態をポップオーバー要素の非表示状態（`[popover]` [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)で選択）に設定し、終了状態をポップオーバーの表示状態（[`:popover-open`](/ja/docs/Web/CSS/:popover-open) 擬似クラスで選択）に設定します。また、 [`transition`](/ja/docs/Web/CSS/transition) プロパティを使用して、ポップオーバーが表示されたり非表示になったりするときにアニメーションするプロパティとアニメーションの再生時間を定義します。
+
+```css
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ポップオーバー自体のトランジション */
+
+[popover]:popover-open {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+[popover] {
+  font-size: 1.2rem;
+  padding: 10px;
+
+  /* 消滅アニメーションの最終状態 */
+  opacity: 0;
+  transform: scaleX(0);
+
+  transition:
+    opacity 0.7s,
+    transform 0.7s,
+    overlay 0.7s allow-discrete,
+    display 0.7s allow-discrete;
+  /* transition: all 0.7s allow-discrete;
+  と同等 */
+}
+
+/* 詳細度が同じなので、効果を得るには [popover]:popover-open ルールの
+後でなければならない。 */
+@starting-style {
+  [popover]:popover-open {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+}
+
+/* ポップオーバーの背景のトランジション */
+
+[popover]::backdrop {
+  background-color: rgb(0 0 0 / 0%);
+  transition:
+    display 0.7s allow-discrete,
+    overlay 0.7s allow-discrete,
+    background-color 0.7s;
+  /* transition: all 0.7s allow-discrete;
+  と同等 */
+}
+
+[popover]:popover-open::backdrop {
+  background-color: rgb(0 0 0 / 25%);
+}
+
+/* 入れ子セレクター (&) は擬似要素を表すことができないので、
+この出現スタイルルールは入れ子にできない */
+
+@starting-style {
+  [popover]:popover-open::backdrop {
+    background-color: rgb(0 0 0 / 0%);
+  }
+}
+```
+
+前に説明したとおり、次のことを行う必要があります。
+
+- 開始状態の `transition` を `@starting-style` ブロック内に設定します。
+- トランジションする要素のリストに `display` を追加し、ポップオーバーの出現・消滅アニメーションを通じて、アニメーションする要素が見える（`display: block` に設定する）ようにしました。これがなければ、終了アニメーションは表示されません。結果的に、ポップオーバーはただ消えてしまいます。
+- トランジションする要素のリストに `overlay` を追加し、アニメーションが完了するまで最上位レイヤーからの要素の除去が延期されるようにします。この効果は、このような基本的なアニメーションでは気にならないかもしれませんが、より複雑なケースでは、このプロパティを省略すると、トランジションの完了前に要素がオーバーレイから除去されてしまう可能性があります。
+- 上記のトランジションの両方のプロパティに `allow-discrete` を設定し、[離散トランジション](/ja/docs/Web/CSS/CSS_animated_properties#離散)ができるようにします。
+
+また、開くためのポップオーバーの背後に現れる [`::backdrop`](/ja/docs/Web/CSS/::backdrop) にトランジションを記述子、暗くなるアニメーションを指定していることに注意してください。
+
+#### 結果
+
+このコードは次のように表示されます。
+
+{{ EmbedLiveSample("Transitioning a popover", "100%", "200") }}
+
+> [!NOTE]
+> ポップオーバーは表示されるたびに `display: none` から `display: block` に変わるので、項目がトランジションするたびに `@starting-style` スタイルから `[popover]:popover-open` スタイルにトランジションします。ポップオーバーが閉じられたとき、 `[popover]:popover-open` 状態から既定の `[popover]` 状態にトランジションします。
+>
+> このような場合、出現時と消滅時のスタイル設定を異なる形にすることが可能です。このことの証明については、[開始スタイルを使用する場合のデモ](/ja/docs/Web/CSS/@starting-style#開始スタイルを使用する場合のデモ)の例を参照してください。
+
+### ポップオーバーのキーフレームアニメーション
+
+CSSキーフレームアニメーションでポップオーバーをアニメーションさせる場合、いくつか注意すべき違いがあります。
+
+- `@starting-style` を提供するのではなく、キーフレームに "to" と "from" の `display` 値を記述します。
+- 離散アニメーションを明示的に有効にすることはありません。キーフレーム内に `allow-discrete` に相当するものはありません。
+- キーフレーム内で `overlay` を設定する必要もありません。`display` アニメーションはポップオーバーの表示から非表示までのアニメーションを処理します。
+
+例を参照してください。
+
+#### HTML
+
+HTML には、ポップオーバーとして宣言された {{htmlelement("div")}} 要素と、ポップオーバーの表示コントロールとして指定された {{htmlelement("button")}} 要素があります。
+
+```html-nolint
+<button popovertarget="mypopover">ポップオーバーを表示</button>
+<div popover="auto" id="mypopover">ポップオーバーです。アニメーションします。</div>
+```
+
+#### CSS
+
+必要な出現アニメーションと消滅アニメーションを指定するキーフレームを定義し、背景は出現アニメーションのみを定義します。背景がフェードアウトするアニメーションは不可能であることに注意してください - 背景はポップオーバーが閉じられたときに DOM から即座に除去されるため、アニメーションするものはありません。
+
+```css
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+[popover] {
+  font-size: 1.2rem;
+  padding: 10px;
+  animation: fade-out 0.7s ease-out;
+}
+
+[popover]:popover-open {
+  animation: fade-in 0.7s ease-out;
+}
+
+[popover]:popover-open::backdrop {
+  animation: backdrop-fade-in 0.7s ease-out forwards;
+}
+
+/* アニメーションのキーフレーム */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: scaleX(1);
+    /* display はアニメーションが終了するまでポップオーバーを
+    表示し続けるために必要 */
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scaleX(0);
+    /* display: none はここでは必須ではない。閉じたポップオーバーの
+    既定値であるため。ただし、ここでは動作を明確化するために入れている */
+    display: none;
+  }
+}
+
+@keyframes backdrop-fade-in {
+  0% {
+    background-color: rgb(0 0 0 / 0%);
+  }
+
+  100% {
+    background-color: rgb(0 0 0 / 25%);
+  }
+}
+```
+
+#### 結果
+
+このコードは次のように表示されます。
+
+{{ EmbedLiveSample("A popover keyframe animation", "100%", "200") }}

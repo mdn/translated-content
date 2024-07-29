@@ -7,6 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 Метод **`Object.assign()`** используется для копирования значений всех собственных перечисляемых свойств из одного или более исходных объектов в целевой объект. После копирования он возвращает целевой объект.
 
+{{EmbedInteractiveExample("pages/js/object-assign.html")}}
+
 ## Синтаксис
 
 ```

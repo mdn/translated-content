@@ -119,14 +119,11 @@ Como você pode ver, o relatório inclui o caminho completo para o recurso viola
 
 ## Especificações
 
-| Especificação           | Status               | Comentário         |
-| ----------------------- | -------------------- | ------------------ |
-| {{specName("CSP 3.0")}} | {{Spec2('CSP 3.0')}} | Sem alterações.    |
-| {{specName("CSP 1.1")}} | {{Spec2('CSP 1.1')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Security-Policy-Report-Only")}}
+{{Compat}}
 
 ## Veja também
 

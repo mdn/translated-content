@@ -38,7 +38,7 @@ canvas.addEventListener(
     console.log(e);
     // redrawCanvas() などを呼び出す
   },
-  false
+  false,
 );
 ```
 

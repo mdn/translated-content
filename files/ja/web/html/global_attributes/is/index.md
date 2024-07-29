@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`is`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、標準の HTML 要素が定義されたカスタム組み込み要素のように振る舞うよう指定することができます（詳しくは[カスタム要素の使用](/ja/docs/Web/Web_Components/Using_custom_elements)を参照してください）。
+**`is`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、標準の HTML 要素が定義されたカスタム組み込み要素のように振る舞うよう指定することができます（詳しくは[カスタム要素の使用](/ja/docs/Web/API/Web_components/Using_custom_elements)を参照してください）。
 
 この属性は、指定されたカスタム要素名が現在の文書で正常に[定義され](/ja/docs/Web/API/CustomElementRegistry/define)、適用されている要素型が拡張されている場合にのみ使用します。
 

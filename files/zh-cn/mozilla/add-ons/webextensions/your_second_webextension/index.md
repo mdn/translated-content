@@ -311,7 +311,7 @@ browser.tabs
   .catch(reportExecuteScriptError);
 ```
 
-从 96 行开始。只要弹出窗加载完，popup scrpit 就会使用 [`browser.tabs.executeScript()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API 在活跃标签页执行 content script。如果执行 content scrpit 成功，content script 会在页面中一直保持，直到标签被关闭或者用户导航到其他页面。
+从 96 行开始。只要弹出窗加载完，popup script 就会使用 [`browser.tabs.executeScript()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API 在活跃标签页执行 content script。如果执行 content script 成功，content script 会在页面中一直保持，直到标签被关闭或者用户导航到其他页面。
 
 `browser.tabs.executeScript()`调用失败的常见原因是你不能在所有页面执行 content scripts。例如，你不能在特权浏览器页面执行，像 about:debugging，你也不能在[addons.mozilla.org](https://addons.mozilla.org/)域执行。如果调用失败，`reportExecuteScriptError()`会隐藏`"popup-content"` `<div>`，并展示`"error-content"` `<div>`, 然后打印一个错误到[控制台](/zh-CN/Add-ons/WebExtensions/Debugging)。
 

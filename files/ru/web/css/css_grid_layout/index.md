@@ -3,6 +3,8 @@ title: CSS Grid Layout
 slug: Web/CSS/CSS_grid_layout
 ---
 
+{{CSSRef}}
+
 **CSS Grid Layout** отлично подходит для того, чтобы разделить страницу на основные области или определить взаимосвязь размера, позиционирования и уровня между частями контента, состоящего из HTML примитивов.
 
 Как и таблицы (\<table>), grid layout позволяет выравнивать элементы в столбцы и строки. Тем не менее, с помощью CSS grid работать с элементами гораздо проще, чем с таблицами. Например, дочерние элементы grid-контейнера могут наслаиваться друг на друга как и другие элементы при помощи CSS.
@@ -145,8 +147,4 @@ slug: Web/CSS/CSS_grid_layout
 
 ## Спецификации
 
-| Specification              | Status                  | Comment                                                                                   |
-| -------------------------- | ----------------------- | ----------------------------------------------------------------------------------------- |
-| {{SpecName("CSS Grid 3")}} | {{Spec2("CSS Grid 3")}} | Adds [masonry](/ru/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout).                          |
-| {{SpecName("CSS Grid 2")}} | {{Spec2("CSS Grid 2")}} | Added [subgrids](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#subgrid). |
-| {{SpecName("CSS3 Grid")}}  | {{Spec2("CSS3 Grid")}}  | Initial definition.                                                                       |
+{{Specifications}}

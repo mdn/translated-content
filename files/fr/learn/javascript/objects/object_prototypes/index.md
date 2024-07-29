@@ -127,7 +127,7 @@ Nous avons vu précédemment que la méthode [`Object.create()`](/fr/docs/Web/Ja
 2. En réalité `create()` se contente de créer un nouvel objet à partir d'un prototype spécifique. Dans cet exemple, `personne2` est créé à partir de `personne1` qui agit en tant que prototype. Vous pouvez le vérifier via&nbsp;:
 
    ```js
-   person2.__proto__;
+   personne2.__proto__;
    ```
 
 Cela renverra l'objet `personne1`.

@@ -35,7 +35,7 @@ console.log("football".replace(new CustomReplacer("foo")));
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Symbol.replace")}}
+{{Compat}}
 
 ## 関連情報
 

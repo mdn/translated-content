@@ -3,11 +3,9 @@ title: image-orientation
 slug: Web/CSS/image-orientation
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-## 概述
-
-`CSS 属性 image-orientation` 用来修正某些图片的预设方向。
+CSS 属性 **`image-orientation`** 用来修正某些图片的预设方向。
 
 > **备注：**
 >
@@ -52,6 +50,6 @@ image-orientation: inherit
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- 其他和图片相关的 CSS 属性：{{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.
+- 其他和图片相关的 CSS 属性：{{cssxref("image-rendering")}}、{{cssxref("image-resolution")}}。

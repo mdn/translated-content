@@ -58,7 +58,7 @@ slug: Web/SVG/Element/circle
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

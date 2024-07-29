@@ -2,7 +2,7 @@
 title: <input type="date">
 slug: Web/HTML/Element/input/date
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
 ---
 
 {{HTMLSidebar}}
@@ -27,7 +27,8 @@ l10n:
 
 {{EmbedLiveSample('Value', 600, 40)}}
 
-> **メモ:** 表示される日付の書式は実際の `value` とは異なります。 — 表示される日付はユーザーのブラウザーに設定されたロケールに基づいた書式になりますが、解釈される `value` は常に `yyyy-mm-dd` の書式です。
+> [!NOTE]
+> 表示される日付の書式は実際の `value` とは異なります。 — 表示される日付はユーザーのブラウザーに設定されたロケールに基づいた書式になりますが、解釈される `value` は常に `yyyy-mm-dd` の書式です。
 
 JavaScript での日付値を取得したり設定したりするには、次のように {{domxref("HTMLInputElement")}} の `value` および `valueAsNumber` プロパティで行うことができます。
 
@@ -58,11 +59,12 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 ### step
 
-`step` 属性は値を吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値（指定されていれば [`min`](#min)、そうでなければ [`value`](/ja/docs/Web/HTML/Element/input#value)、どちらも提供されていなければ適切な既定値）に等しい値のみが妥当となります。
+`step` 属性は値が遵守する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値（指定されていれば [`min`](#min)、そうでなければ [`value`](/ja/docs/Web/HTML/Element/input#value)、どちらも提供されていなければ適切な既定値）に等しい値のみが有効となります。
 
-文字列値の `any` は刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
+文字列値の `any` は刻みがないことを意味し、（[`min`](#min) や [`max`](#max) のようなほかの制約を除けば）どの値でも許可されます。
 
-> **メモ:** ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
+> [!NOTE]
+> ユーザーによって入力されたデータが step 設定に従っていない場合、{{Glossary("user agent", "ユーザーエージェント")}}は最も近い有効な値に丸める可能性があり、同じ距離の値が 2 つあった場合は、正の方向の値を優先します。
 
 `date` 入力欄では、 `step` の値は日単位で指定します。また、 86,400,000 に `step` を乗じた値に等しいミリ秒数として扱われます（数値はミリ秒単位であるため）。 `step` の既定値は `1` であり、 1 日を表します。
 
@@ -99,7 +101,8 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 ```html
 <form>
-  <label>希望するパーティーの日を選んでください。
+  <label
+    >希望するパーティーの日を選んでください。
     <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
   </label>
 </form>
@@ -169,7 +172,8 @@ input:valid + span::after {
 }
 ```
 
-> **警告:** クライアント側のフォーム検証は、サーバー上の検証の代用にはなりません。誰かが HTML を改変したり、 HTML を完全にバイパスしてサーバーに直接データを送信したりすることは簡単です。サーバーが受信したデータの検証に失敗した場合、不適切な形式のデータ、大きすぎるデータ、誤った種類のデータなどに遭遇すると、障害が発生するおそれがあります。
+> [!WARNING]
+> クライアント側のフォーム検証は、サーバー上の検証の代用にはなりません。誰かが HTML を改変したり、 HTML を完全にバイパスしてサーバーに直接データを送信したりすることは簡単です。サーバーが受信したデータの検証に失敗した場合、不適切な形式のデータ、大きすぎるデータ、誤った種類のデータなどに遭遇すると、障害が発生するおそれがあります。
 
 ## ブラウザーの互換性の扱い
 
@@ -188,7 +192,8 @@ input:valid + span::after {
 
 ```html
 <form>
-  <label>誕生日を入力してください。
+  <label
+    >誕生日を入力してください。
     <input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}" />
     <span class="validity"></span>
   </label>
@@ -239,7 +244,7 @@ HTML は次のようになります。
 <form>
   <div class="nativeDatePicker">
     <label for="bday">誕生日を入力してください。</label>
-    <input type="date" id="bday" name="bday">
+    <input type="date" id="bday" name="bday" />
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">誕生日を入力してください。</p>
@@ -266,8 +271,7 @@ HTML は次のようになります。
       <label for="month">月</label>
     </span>
     <span>
-      <select id="day" name="day">
-      </select>
+      <select id="day" name="day"></select>
       <label for="day">日</label>
     </span>
   </div>
@@ -343,22 +347,12 @@ function populateDays(month) {
   let dayNum;
 
   // 31 日か 30 日か？
-  if (
-    [
-      "1",
-      "3",
-      "5",
-      "7",
-      "8",
-      "10",
-      "12",
-    ].includes(month)
-  ) {
+  if (["1", "3", "5", "7", "8", "10", "12"].includes(month)) {
     dayNum = 31;
   } else if (["4", "6", "9", "11"].includes(month)) {
     dayNum = 30;
   } else {
-  // 2 月の場合は、閏年かどうかを計算する
+    // 2 月の場合は、閏年かどうかを計算する
     const year = yearSelect.value;
     const isLeap = new Date(year, 1, 29).getMonth() === 1;
     dayNum = isLeap ? 29 : 28;
@@ -428,7 +422,8 @@ daySelect.onchange = () => {
 };
 ```
 
-> **メモ:** 53 週ある年もあることを忘れないでください（[年あたりの週数](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)を参照）。商品のアプリを開発するときはこれを念頭に置いておく必要があります。
+> [!NOTE]
+> 53 週ある年もあることを忘れないでください（[年あたりの週数](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)を参照）。商品のアプリを開発するときはこれを念頭に置いておく必要があります。
 
 ## 技術的概要
 
@@ -443,7 +438,7 @@ daySelect.onchange = () => {
     <tr>
       <td><strong>イベント</strong></td>
       <td>
-        {{domxref("HTMLElement/change_event", "change")}} および {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("HTMLElement/change_event", "change")}} および {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>

@@ -3,7 +3,7 @@ title: pageAction.hide()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/hide
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Masque l'action de page pour un onglet donné.
 

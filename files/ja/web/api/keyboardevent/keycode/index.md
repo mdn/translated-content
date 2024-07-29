@@ -1,8 +1,9 @@
 ---
-title: KeyboardEvent.keyCode
+title: "KeyboardEvent: keyCode プロパティ"
+short-title: keyCode
 slug: Web/API/KeyboardEvent/keyCode
 l10n:
-  sourceCommit: ff3545b816d9a945d3793ecc330a3b6cbdc59c1c
+  sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
 ---
 
 {{APIRef("UI Events")}}{{Deprecated_Header}}
@@ -18,25 +19,29 @@ l10n:
 ## 例
 
 ```js
-window.addEventListener("keydown", (event) => {
-  if (event.defaultPrevented) {
-    return; // 既定のアクションがキャンセルされている場合は何もしないようにします。
-  }
+window.addEventListener(
+  "keydown",
+  (event) => {
+    if (event.defaultPrevented) {
+      return; // 既定のアクションがキャンセルされている場合は何もしないようにします。
+    }
 
-  let handled = false;
-  if (event.key !== undefined) {
-    // KeyboardEvent.key でイベントを処理し、handled を true に設定します。
-    handled = true;
-  } else if (event.keyCode !== undefined) {
-    // KeyboardEvent.keyCode でイベントを処理し、handled を true に設定します。
-    handled = true;
-  }
+    let handled = false;
+    if (event.key !== undefined) {
+      // KeyboardEvent.key でイベントを処理し、handled を true に設定します。
+      handled = true;
+    } else if (event.keyCode !== undefined) {
+      // KeyboardEvent.keyCode でイベントを処理し、handled を true に設定します。
+      handled = true;
+    }
 
-  if (handled) {
-    // イベントが処理された場合、"ダブルアクション" を抑制する
-    event.preventDefault();
-  }
-}, true);
+    if (handled) {
+      // イベントが処理された場合、"ダブルアクション" を抑制する
+      event.preventDefault();
+    }
+  },
+  true,
+);
 ```
 
 ## 仕様書
@@ -57,7 +62,7 @@ IE はネイティブの仮想キーコードの値を `KeyboardEvent.keyCode` �
 
 Google Chrome、Chromium、Safari は入力された文字から値を決定する必要があります。入力文字が US キーボードレイアウトで入力できる場合、 US キーボードレイアウトの `keyCode` 値を使用します。
 
-Firefox は、キーによって入力可能な ASCII 文字から `keyCode` 値を取得します。 shift 修飾子や ASCII 対応キーボードレイアウトであった場合も含みます。詳しくは以下のルールを参照してください。
+Firefox は、キーによって入力可能な {{Glossary("ASCII")}} 文字から `keyCode` 値を取得します。 shift 修飾子や ASCII 対応キーボードレイアウトであった場合も含みます。詳しくは以下のルールを参照してください。
 
 1. システムが Windows で、押されたキーのネイティブキーコードが a-z または 0-9 であることを示す場合、そのキーコードを使用します。
 2. システムが Mac で、押されたキーのネイティブキーコードが 0-9 である場合、そのキーコードを使用します。
@@ -1143,7 +1148,7 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x11 (17)</code></td>
     </tr>
     <tr>
-      <th scope="row"><code>"OSLeft"</code></th>
+      <th scope="row"><code>"MetaLeft"</code></th>
       <td><code>0x5B (91)</code></td>
       <td><code>0x5B (91)</code></td>
       <td><code>0x5B (91)</code></td>
@@ -1154,7 +1159,7 @@ Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規
       <td><code>0x5B (91)</code></td>
     </tr>
     <tr>
-      <th scope="row"><code>"OSRight"</code></th>
+      <th scope="row"><code>"MetaRight"</code></th>
       <td><code>0x5C (92)</code></td>
       <td><code>0x5C (92)</code></td>
       <td><code>0x5D (93)</code>⚠️</td>
@@ -3272,4 +3277,4 @@ Windows では、仮想キーコードのいくつかの値は、 OEM の特定�
 
 Gecko 21 （および 15 より古いバージョン）では、OEM 固有のキー値は Windows 上でのみ keyCode 属性で利用可能です。そのため、通常のウェブアプリケーションでは使用できません。それらはイントラネットのアプリケーション、または同様の状況においてのみ使用されます。
 
-詳しくは MSDN の "[Manufacturer-specific Virtual-Key Codes (Windows CE 5.0)](https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa452679(v=msdn.10))" を参照してください。
+詳しくは MSDN の "[Manufacturer-specific Virtual-Key Codes (Windows CE 5.0)](<https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa452679(v=msdn.10)>)" を参照してください。

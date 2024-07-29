@@ -58,7 +58,8 @@ Sec-Fetch-Dest: xslt
 
 ## 指令
 
-> **备注：** 这些指令对应于 {{domxref("Request.destination")}} 返回的值。
+> [!NOTE]
+> 这些指令对应于 {{domxref("Request.destination")}} 返回的值。
 
 - `audio`
   - : 目标是音频数据。这可能源自 HTML {{HTMLElement("audio")}} 标签。
@@ -129,5 +130,5 @@ Sec-Fetch-Site: cross-site
   - {{HTTPHeader("Sec-Fetch-Site")}}
   - {{HTTPHeader("Sec-Fetch-User")}}
 
-- [使用 Fetch 元数据使你的资源免受 Web 攻击](https://web.dev/fetch-metadata/) (web.dev)
+- [使用 Fetch 元数据使你的资源免受 Web 攻击](https://web.dev/articles/fetch-metadata) (web.dev)
 - [Fetch 元数据请求标头 playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)

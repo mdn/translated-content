@@ -8,10 +8,10 @@ slug: Games/Introduction_to_HTML5_Game_Development
 ## 优点
 
 1. 使用 HTML5 构建的游戏可以在智能手机，平板电脑，个人电脑和智能电视上工作。
-2. 通过网络以及其他媒体广告宣传您的游戏。
+2. 通过网络以及其他媒体广告宣传你的游戏。
 3. 付款。收取你想要的，并使用任何你喜欢的付款处理服务。
 4. 随时更新游戏。
-5. 收集您自己的分析！
+5. 收集你自己的分析！
 6. 更密切地与客户联系。
 7. 玩家可随时随地玩游戏。
 
@@ -38,7 +38,7 @@ slug: Games/Introduction_to_HTML5_Game_Development
 - [IndexedDB](/zh-CN/docs/IndexedDB)
   - : 将用户数据存储在他们自己的计算机或设备上。
 - [JavaScript](/zh-CN/docs/JavaScript)
-  - : 快速的网页编程语言为您的游戏编写代码。轻松移植您现有的游戏 [Emscripten](https://github.com/kripken/emscripten/wiki) 或 [Asm.js](http://asmjs.org/spec/latest/)
+  - : 快速的网页编程语言为你的游戏编写代码。轻松移植你现有的游戏 [Emscripten](https://github.com/kripken/emscripten/wiki) 或 [Asm.js](http://asmjs.org/spec/latest/)。
 - [Pointer Lock API](/zh-CN/docs/WebAPI/Pointer_Lock)
   - : 在游戏界面中锁定鼠标或其他指针设备。
 - [SVG](/zh-CN/docs/SVG) (Scalable Vector Graphics)
@@ -54,8 +54,8 @@ slug: Games/Introduction_to_HTML5_Game_Development
 - [WebRTC](/zh-CN/docs/WebRTC)
   - : 实时通讯控制音频和视频数据，包括电话会议，并在两个用户之间来回传送其他应用数据，如聊天。
 - [WebSockets](/zh-CN/docs/WebSockets)
-  - : 将您的应用程序或站点连接到一个服务器以实时传输数据。适合多人游戏动作，聊天服务等。
+  - : 将你的应用程序或站点连接到一个服务器以实时传输数据。适合多人游戏动作，聊天服务等。
 - [Web Workers](/zh-CN/docs/DOM/Using_web_workers)
   - : 生成后台线程为多核处理器运行自己的 JavaScript 代码。
 - [XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest) and [File API](/zh-CN/docs/DOM/File_API)
-  - : 从一个 Web 服务器发送和接收任何您想要的数据，如下载新的游戏级别和艺术品，以便来回传送非实时游戏状态信息。
+  - : 从一个 Web 服务器发送和接收任何你想要的数据，如下载新的游戏级别和艺术品，以便来回传送非实时游戏状态信息。

@@ -76,7 +76,7 @@ usedOptions.useGrouping; // true
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Intl.NumberFormat.resolvedOptions")}}
+{{Compat}}
 
 ## 関連情報
 

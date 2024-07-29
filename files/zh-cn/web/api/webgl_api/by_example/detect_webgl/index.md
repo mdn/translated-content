@@ -13,7 +13,7 @@ slug: Web/API/WebGL_API/By_example/Detect_WebGL
 
 在第一个例子中，我们将检查浏览器是否支持{{Glossary("WebGL")}}。为此，我们将尝试从{{domxref("HTMLCanvasElement","canvas")}}元素获取{{domxref("WebGLRenderingContext","WebGL 渲染的上下文","",1)}} 。{{domxref("WebGLRenderingContext","WebGL 渲染的上下文", "", 1)}}是一个接口，通过它你可以设置和查询绘图器的状态，发送数据到 WebGL，执行绘制命令。
 
-在单个上下文接口中保存绘图器的状态并不是{{Glossary("WebGL")}}独有的。这在其他绘图技术里也是存在的{{Glossary("API")}},比如{{domxref("CanvasRenderingContext2D","2D 渲染上下文的 canvas", "", 1)}}。然而，您可以调整的属性和变量对于每个{{Glossary("API")}}来说都是不同的。
+在单个上下文接口中保存绘图器的状态并不是{{Glossary("WebGL")}}独有的。这在其他绘图技术里也是存在的{{Glossary("API")}},比如{{domxref("CanvasRenderingContext2D","2D 渲染上下文的 canvas", "", 1)}}。然而，你可以调整的属性和变量对于每个{{Glossary("API")}}来说都是不同的。
 
 ```html
 <p>[ Here would go the result of WebGL feature detection ]</p>

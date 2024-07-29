@@ -1,19 +1,15 @@
 ---
-title: Navigator.keyboard
+title: Navigator：keyboard 属性
 slug: Web/API/Navigator/keyboard
+l10n:
+  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{SeeCompatTable}}{{APIRef("Keyboard API")}}
+{{SeeCompatTable}}{{APIRef("Keyboard API")}}{{SecureContext_Header}}
 
-The **`keyboard`** read-only property of the {{domxref("navigator")}} interface returns a {{domxref('Keyboard')}} object which provides access to functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
+{{domxref("Navigator")}} 接口的只读属性 **`keyboard`** 返回一个 {{domxref('Keyboard')}} 对象，通过该对象可访问检索键盘布局映射和切换捕捉物理键盘按键的函数。
 
-## 语法
-
-```plain
-var keyboard = navigator.keyboard
-```
-
-### Value
+## 值
 
 一个 {{domxref('Keyboard')}} 对象。
 

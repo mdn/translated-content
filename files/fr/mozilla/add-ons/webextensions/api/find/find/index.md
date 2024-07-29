@@ -3,7 +3,7 @@ title: find.find()
 slug: Mozilla/Add-ons/WebExtensions/API/find/find
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Recherche du texte dans un onglet.
 

@@ -3,14 +3,15 @@ title: "FormData: has() メソッド"
 short-title: has()
 slug: Web/API/FormData/has
 l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`has()`** は {{domxref("FormData")}} インターフェイスのメソッドで、`FormData` オブジェクトに指定されたキーがあるかどうかを返します。
 
-> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
+> [!NOTE]
+> このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
 ## 構文
 
@@ -47,5 +48,5 @@ formData.has("username"); // true を返す
 
 ## 関連情報
 
-- [FormData オブジェクトの使用](/ja/docs/Web/API/FormData/Using_FormData_Objects)
+- [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

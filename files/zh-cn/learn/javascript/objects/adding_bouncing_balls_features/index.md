@@ -10,7 +10,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>请确保完整学习本章所有内容后再开始测验。</td>
     </tr>
     <tr>
@@ -24,7 +24,8 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 请先下载 [index.html](https://github.com/roy-tian/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html)、[style.css](https://github.com/roy-tian/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css) 和 [main.js](https://github.com/roy-tian/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js) 三个文件。
 
-> **备注：** 也可以使用 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 这样的网站来进行测验。你可以选择其中一个将 HTML，CSS 和 JavaScript 粘贴过去。如果你的版本没有单独的 JavaScript / CSS 板块，可以把它们嵌入 HTML 页面内的 `<script>`/`<style>` 元素。
+> [!NOTE]
+> 也可以使用 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 这样的网站来进行测验。你可以选择其中一个将 HTML，CSS 和 JavaScript 粘贴过去。如果你的版本没有单独的 JavaScript / CSS 板块，可以把它们嵌入 HTML 页面内的 `<script>`/`<style>` 元素。
 
 ## 项目简介
 
@@ -314,7 +315,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 `draw()`, `update()`, 和`collisionDetect()` 方法定义应保持不变。
 
-你还需要为 `new Ball() { ... }` 构造器添加第五个参数—— `exists`，且值为 `true`。
+你还需要为 `new Ball() { ... }` 构造器添加第五个参数——`exists`，且值为 `true`。
 
 到这里，尝试重新加载代码（运行程序），程序以及重新设计的对象都应该像之前那样工作。
 
@@ -328,8 +329,8 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 它还应该定义自己的一些属性，如：
 
-- `color` —— `'white'`
-- `size` —— `10`
+- `color`——`'white'`
+- `size`——`10`
 
 再次记得给你的 `EvilCircle()` 构造器的传递的参数中定义你继承的属性，并且给`prototype` 和 `constructor` 属性设置适当的值。
 
@@ -346,7 +347,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 #### `checkBounds()`
 
-这个方法和 `Ball()` 的 `update()` 函数做相同的事情—— 查看恶魔圈是否将要超出屏幕的边界，并且禁止它超出。同样，你可以直接复制 `Ball.prototype.update` 的定义，但是你需要做一些修改：
+这个方法和 `Ball()` 的 `update()` 函数做相同的事情——查看恶魔圈是否将要超出屏幕的边界，并且禁止它超出。同样，你可以直接复制 `Ball.prototype.update` 的定义，但是你需要做一些修改：
 
 - 删除最后两行 — 我们不想要在每一帧中自动的更新恶魔圈的位置，因为我们会以下面所述的方式移动它。
 - 在 `if()` 语句中，如果检测为真（即小恶魔圈超出边界），我们不需要更新 `velX`/`velY`；取而代之的是，我们想要修改 `x`/`y` 的值，使恶魔圈稍微地弹回屏幕。增加或减去（根据实际判断）恶魔圈 `size` 的值即可实现。
@@ -376,9 +377,11 @@ window.onkeydown = (e) => {
 
 所以当一个按键按下时，事件对象的 [key](/zh-CN/docs/Web/API/KeyboardEvent/key) 属性 就可以请求到按下的按键值。如果是代码中那四个指定的键值之一，那么恶魔圈将会左右上下的移动。
 
-> **警告：** 英文页面中使用了事件对象的 [keyCode](/zh-CN/docs/Web/API/KeyboardEvent/keyCode) 属性，不推荐在新代码中使用该属性，应使用标准 [key](/zh-CN/docs/Web/API/KeyboardEvent/key) 属性代替。（详见介绍页面）
+> [!WARNING]
+> 英文页面中使用了事件对象的 [keyCode](/zh-CN/docs/Web/API/KeyboardEvent/keyCode) 属性，不推荐在新代码中使用该属性，应使用标准 [key](/zh-CN/docs/Web/API/KeyboardEvent/key) 属性代替。（详见介绍页面）
 
-> **备注：** 这里的 `window.onkeydown` 用一个 [箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 代替了英文页面中的匿名函数，从而无需 `var _this = this`。
+> [!NOTE]
+> 这里的 `window.onkeydown` 用一个 [箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 代替了英文页面中的匿名函数，从而无需 `var _this = this`。
 
 #### `collisionDetect()`
 
@@ -426,6 +429,6 @@ window.onkeydown = (e) => {
 
 ## 评定
 
-如果你将此评估作为有组织的课程的一部分，你可以将你的成果交给您的老师/导师进行评分。如果你是自学的，通过在 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)，或者在 [Mozilla IRC](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) IRC 频道上申请，你可以十分容易地得到评分指南。首先先尝试这个练习，作弊不会有任何收获。
+如果你将此评估作为有组织的课程的一部分，你可以将你的成果交给你的老师/导师进行评分。如果你是自学的，通过在 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)，或者在 [Mozilla IRC](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) IRC 频道上申请，你可以十分容易地得到评分指南。首先先尝试这个练习，作弊不会有任何收获。
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}

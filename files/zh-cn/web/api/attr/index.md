@@ -5,115 +5,47 @@ slug: Web/API/Attr
 
 {{APIRef("DOM")}}
 
-该类型使用对象来表示一个 DOM 元素的属性。在大多数 DOM 方法中，你可能会直接通过字符串的方式获取属性值（例如{{domxref("Element.getAttribute()")}}），但是一些函数（例如{{domxref("Element.getAttributeNode()")}}）或通过迭代器访问时则返回`Attr`类型。
+**`Attr`** 接口将一个元素的属性（attribute）表示为一个对象。在大多数情况下，你可以直接以字符串形式检索属性值（例如 {{domxref("Element.getAttribute()")}}），但某些函数（例如 {{domxref("Element.getAttributeNode()")}}）或迭代方法则返回 `Attr` 实例。
 
 {{InheritanceDiagram}}
 
-> **警告：** 从 Gecko 7.0 开始，控制台会输出这些方法和属性将会被移除的警告信息。你应该对代码进行相应的修正。点击[废弃的属性和方法](#废弃的属性和方法)查看完整的列表。
+`Attr` 对象的核心思想是将*名称*和*值*关联起来。属性也可能属于一个*命名空间*，在这种情况下，它还有一个表示命名空间的 URI，以及一个作为命名空间的缩写的前缀。
 
-> **警告：** 在 [DOM4\[REC\]](https://www.w3.org/standards/history/dom) 中，为了规范化 Attr 的实现，它不再继承自{{domxref("Node")}}。在目前 [DOM4.1\[WD\]](https://www.w3.org/standards/history/dom41) 中又有变动，因此不建议使用 Attr 对象上有关{{domxref("Node")}}的属性和方法。
+当该名称忽略最终的命名空间前缀时，则认为该名称是*本地的*；当该名称包含命名空间的前缀时，则认为该名称是被*限定的*，如果存在前缀，则将其通过冒号（`:`）与本地名分隔。一共有三种情况：属性不在命名空间中、属性在命名空间中但没有定义前缀、属性在命名空间中且定义了前缀：
 
-## 属性
+| 属性     | 命名空间名    | 命名空间前缀 | 属性的本地名 | 属性的限定名  |
+| -------- | ------------- | ------------ | ------------ | ------------- |
+| `myAttr` | _无_          | _无_         | `myAttr`     | `myAttr`      |
+| `myAttr` | `mynamespace` | _无_         | `myAttr`     | `myAttr`      |
+| `myAttr` | `mynamespace` | `myns`       | `myAttr`     | `myns:myAttr` |
 
-- {{domxref("Attr.name", "name")}} {{readOnlyInline}}
-  - : 该属性的名称
-- {{domxref("Attr.namespaceURI", "namespaceURI")}} {{readOnlyInline}}
-  - : 表示该属性的命名空间 URI{{domxref("DOMString")}}，如果该元素不在命名空间中，则返回 null。
-- {{domxref("Attr.localName", "localName")}} {{readOnlyInline}}
-  - : 表示该属性的命名空间限定的本地名称{{domxref("DOMString")}}。
-- {{domxref("Attr.prefix", "prefix")}} {{readOnlyInline}}
-  - : 表示该属性的命名空间前缀{{domxref("DOMString")}}，如果没有前缀指定则返回 null。
+> [!NOTE]
+> 该接口仅表示 {{domxref("Element")}} 树中存在的属性（attribute），无论是 SVG、HTML 还是 MathML 元素。它不表示与此类元素相关的接口的*属性*（property），例如 {{HTMLElement("table")}} 元素的 {{domxref("HTMLTableElement")}}。（有关元素属性（attribute）及其如何*反射*到接口属性（property）的更多信息，请参见{{Glossary("Attribute", "这篇文章")}}。）
+
+## 实例属性
+
+_此接口还从其父接口 {{domxref("Node")}}、{{domxref("EventTarget")}} 基础属性。_
+
+- {{domxref("Attr.localName", "localName")}} {{ReadOnlyInline}}
+  - : 一个表示属性限定名的本地部分的字符串。
+- {{domxref("Attr.name", "name")}} {{ReadOnlyInline}}
+  - : 该属性的*限定名*。如果该属性不在命名空间中，则其与 {{domxref("Attr.localName", "localName")}} 属性相同。
+- {{domxref("Attr.namespaceURI", "namespaceURI")}} {{ReadOnlyInline}}
+  - : 一个表示该属性的命名空间 URI 的字符串，如果没有命名空间，则返回 `null`。
 - {{domxref("Attr.ownerElement", "ownerElement")}} {{readOnlyInline}}
-
-  - : 该属性所附属的元素节点。
-
-    > **备注：** **注意：** DOM Level 4 移除了这个方法。由于当你从{{domxref("Element")}}中获得`Attr`对象时，你应已知相关的元素。
-    > 在某些场景下并一定能够得到相关的元素，比如通过{{domxref("Document.evaluate")}}返回的 Attr 对象，最新的 DOM 草案再次引入该属性。
-    >
-    > Gecko 从 Gecko 7.0 开始会输出一个废弃的提示信息。该提示信息在 Gecko 49.0 再次被删除。
-
-- {{domxref("Attr.specified", "specified")}} {{readOnlyInline}}
-  - : 该属性将返回`真`。如果这个属性你在源代码或者在脚本中明确指定的话，它总是返回真。否则它是由文档的 DTD 默认定义的，将总是返回`假`。
+  - : 该属性所附属的{{domxref("Element", "元素", "", 1)}}。
+- {{domxref("Attr.prefix", "prefix")}} {{ReadOnlyInline}}
+  - : 一个表示该属性的命名空间前缀的字符串，如果命名空间没有前缀或没有指定命名空间则返回 `null`。
+- {{domxref("Attr.specified", "specified")}} {{ReadOnlyInline}} {{deprecated_inline}}
+  - : 该属性总是返回 `true`。
 - {{domxref("Attr.value", "value")}}
-  - : 属性的值
+  - : 属性的值，其为一个可以通过接口属性进行设置和获取的字符串。
 
-> **备注：** **注意：** DOM Level 3 定义`namespaceURI`, `localName`和`prefix`为{{domxref("Node")}}接口。在 DOM4 中被移至`Attr`。
->
-> Chrome 46.0 版本以上、Firefox 48.0 版本以上实现了该改动。
+## 实例方法
 
-## 废弃的属性和方法
+_此接口无具体方法，但继承了其父接口 {{domxref("Node")}}、{{domxref("EventTarget")}} 的方法。_
 
-这些属性已经被废弃，可以使用合适的属性替代。
-
-- `attributes`
-  - : 当前该属性总是返回 `NULL`
-- `childNodes` {{Deprecated_Inline}}
-  - : 当前该属性总是返回一个空的 {{domxref("NodeList")}}.
-- `firstChild` {{Deprecated_Inline}}
-  - : `当前该属性总是返回 NULL`
-- `isId` {{readOnlyInline}}
-  - : 表明该属性是否一个“ID 属性”。“ID 属性”的值在整个 DOM 文档中应当是唯一。在 HTML DOM 文档中属性“id”是一个 ID 属性，也是唯一一个 ID 属性；但是在 XML 文档中可以定义其他 ID 属性。一个属性是否是唯一的，通常由{{Glossary("DTD")}}或其他文档模式描述文件决定。
-- `lastChild`
-  - : `当前该属性总是返回 NULL`
-- `nextSibling`
-  - : `当前该属性总是返回 NULL`
-- `nodeName`
-  - : 使用{{domxref("Attr.name")}}来代替
-- `nodeType`
-  - : `当前该属性总是返回`2，表示`ATTRIBUTE_NODE`
-- `nodeValue`
-  - : 使用{{domxref("Attr.value")}}来代替
-- `ownerDocument`
-  - : 这个属性本不应当在这里被使用，所以应该无须担心其演变
-- `parentNode`
-  - : `当前该属性总是返回 NULL`
-- `previousSibling`
-  - : `当前该属性总是返回 NULL`
-- `schemaTypeInfo` {{Deprecated_Inline}} {{readOnlyInline}}
-  - : 当前属性的类型信息。然而当加载完文档完或调用{{domxref("Document.normalizeDocument")}}后，这个被认定为绝对正确的包含在节点内的类型信息，会因为节点的移动而变得不可信。
-- `specified`
-  - : `当前该属性总是返回 true`
-- `textContent`
-  - : 使用{{domxref("Attr.value")}}来代替
-
-这些方法已经被废弃：
-
-- `appendChild()` {{Deprecated_Inline}}
-  - : 通过编辑{{domxref("Attr.value")}}属性来实现相同的效果
-- `cloneNode()`
-  - : 这个方法本不应当在这里被使用，所以无须担心其演变
-- `createAttribute()`
-  - : 使用{{domxref("Element.setAttribute()")}}来代替
-- `createAttributeNS()`
-  - : 使用{{domxref("Element.setAttributeNS()")}}来代替
-- `getAttributeNode()`
-  - : 使用{{domxref("Element.getAttribute()")}}来代替
-- `getAttributeNodeNS()`
-  - : 使用{{domxref("Element.getAttributeNS()")}}来代替
-- `hasAttributes()` {{Deprecated_Inline}}
-  - : `当前该方法总是返回`false.
-- `hasChildNodes()`
-  - : `当前该方法总是返回`false.
-- `insertBefore()`
-  - : 通过编辑{{domxref("Attr.value")}}来实现相同效果
-- `isSupported()`
-  - : 这个方法本不应当被在这里使用，所以无须担心其演变
-- `isEqualNode()`
-  - : 这个方法本不应当被在这里使用，所以无须担心其演变
-- `normalize()`
-  - : 这个方法本不应当被在这里使用，所以无须担心其演变
-- `removeAttributeNode()`
-  - : 使用{{domxref("Element.removeAttribute()")}}来代替
-- `removeChild()` {{Deprecated_Inline}}
-  - : 通过编辑{{domxref("Attr.value")}}来实现相同效果
-- `replaceChild()` {{Deprecated_Inline}}
-  - : 通过编辑{{domxref("Attr.value")}}来实现相同效果
-- `setAttributeNode()`
-  - : 使用{{domxref("Element.setAttribute()")}}来代替
-- `setAttributeNodeNS()`
-  - : 使用{{domxref("Element.setAttributeNS()")}}来代替
-
-## 规格
+## 规范
 
 {{Specifications}}
 
@@ -121,7 +53,6 @@ slug: Web/API/Attr
 
 {{Compat}}
 
-## 参考
+## 参见
 
-- [Document Object Model Core level 3: Interface Attr](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-637646024)
-- [Document Object Model 4: Interface Attr](http://www.w3.org/TR/dom/#interface-attr)
+- 其他的节点有 {{domxref("CDATASection")}}、{{domxref("CharacterData")}}、{{domxref("Comment")}}、{{domxref("Document")}}、{{domxref("Element")}}、{{domxref("ProcessingInstruction")}} 和 {{domxref("Text")}}。

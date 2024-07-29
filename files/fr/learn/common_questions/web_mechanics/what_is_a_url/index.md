@@ -3,6 +3,8 @@ title: Comprendre les URL et leur structure
 slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Cet article aborde les _Uniform Resource Locators_ (URL) en expliquant leur rôle et leur structure.
 
 <table class="standard-table">
@@ -71,7 +73,8 @@ http://www.exemple.com:80/chemin/vers/monfichier.html?clé1=valeur1&clé2=valeur
 - ![Anchor](ancre_6.png)
   - : `#QuelquePartDansLeDocument` correspond à une ancre, celle-ci désigne un endroit donné de la ressource. Une ancre représente, en quelque sorte, un marque-page à l'intérieur de la ressource. Ajouter une ancre à une URL permet au navigateur d'afficher la ressource à l'endroit de ce marque page. Pour un document HTML, par exemple, le navigateur défilera la page jusqu'au niveau de l'ancre. Pour un document audio ou vidéo, le navigateur ira se placer à l'instant représenté par l'ancre. On notera également que la partie de l'URL située après le # n'est jamais envoyée au serveur avec la requête.
 
-> **Note :** Il existe [d'autres fragments et d'autres règles](http://en.wikipedia.org/wiki/Uniform_Resource_Locator) pour les URL mais ceux-ci ne sont pas pertinent pour le développement web et ne sont pas nécessaires pour pouvoir construire des URL tout à fait fonctionnelles.
+> [!NOTE]
+> Il existe [d'autres fragments et d'autres règles](http://en.wikipedia.org/wiki/Uniform_Resource_Locator) pour les URL mais ceux-ci ne sont pas pertinent pour le développement web et ne sont pas nécessaires pour pouvoir construire des URL tout à fait fonctionnelles.
 
 On peut comparer les URL avec les adresses postales : le _protocole_ représente le service postal qu'on souhaite utiliser, le _nom de domaine_ correspond à la ville et le _port_ au code postal, le _chemin_ indique le bâtiment où la lettre doit être acheminée et les _paramètres_ pourraient indique le numéro de l'appartement, enfin l'_ancre_ désigne la personne à laquelle la lettre est adressée.
 

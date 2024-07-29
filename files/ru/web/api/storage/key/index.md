@@ -48,7 +48,7 @@ for (var i = 0; i < localStorage.length; i++) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

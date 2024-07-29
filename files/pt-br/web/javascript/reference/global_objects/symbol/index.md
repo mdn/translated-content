@@ -3,7 +3,7 @@ title: Símbolo
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
 ---
 
-{{JSRef("Global_Objects", "Symbol")}}
+{{JSRef}}
 
 ## Sumário
 
@@ -173,13 +173,11 @@ obj[Object(sym)]; // still 1
 
 ## Especificações
 
-| Specification                                           | Status              | Comment            |
-| ------------------------------------------------------- | ------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-symbol-objects', 'Symbol')}} | {{Spec2('ES2015')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol")}}
+{{Compat}}
 
 ## Veja também
 

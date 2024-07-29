@@ -93,7 +93,7 @@ slug: Learn/CSS/Styling_text/Styling_lists
 </dl>
 ```
 
-지금 라이브 예제로 이동하여 [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 사용하여 목록 요소를 조사하면, 몇 가지 스타일 기본값을 알 수 있습니다.:
+지금 라이브 예제로 이동하여 [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 사용하여 목록 요소를 조사하면, 몇 가지 스타일 기본값을 알 수 있습니다.
 
 - {{htmlelement("ul")}} 및 {{htmlelement("ol")}} 요소의 위쪽 및 아래쪽 {{cssxref("margin")}}은 `16px`(`1em`)이고 {{cssxref("padding-left")}}은 `40px`(`2.5em`)입니다.
 - 목록 항목({{htmlelement("li")}} 요소)에는 간격에 대한 기본값이 설정되어 있지 않습니다.
@@ -262,7 +262,7 @@ ul {
 
 ### start
 
-{{htmlattrxref("start","ol")}} 속성을 사용하면 1이 아닌 숫자부터 카운트하는 목록을 시작할 수 있습니다. 예시는 다음과 같습니다.
+[`start`](/ko/docs/Web/HTML/Element/ol#start) 속성을 사용하면 1이 아닌 숫자부터 카운트하는 목록을 시작할 수 있습니다. 예시는 다음과 같습니다.
 
 ```html
 <ol start="4">
@@ -281,7 +281,7 @@ ul {
 
 ### reversed
 
-{{htmlattrxref("reversed","ol")}} 속성은 목록을 위로 카운트하는 대신 카운트 다운을 시작합니다. 예시는 다음과 같습니다.
+[`reversed`](/ko/docs/Web/HTML/Element/ol#reversed) 속성은 목록을 위로 카운트하는 대신 카운트 다운을 시작합니다. 예시는 다음과 같습니다.
 
 ```html
 <ol start="4" reversed>
@@ -302,7 +302,7 @@ ul {
 
 ### value
 
-{{htmlattrxref("value","ol")}} 속성을 사용하면 목록 항목을 특정 숫자 값으로 설정할 수 있습니다. 예시는 다음과 같습니다.
+[`value`](/ko/docs/Web/HTML/Element/ol#value) 속성을 사용하면 목록 항목을 특정 숫자 값으로 설정할 수 있습니다. 예시는 다음과 같습니다.
 
 ```html
 <ol>

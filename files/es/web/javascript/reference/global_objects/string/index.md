@@ -250,7 +250,7 @@ Ambos métodos anteriores dan como resultado cadenas idénticas.
 - {{jsxref("String.prototype.big()")}}
   - : {{HTMLElement("big")}}
 - {{jsxref("String.prototype.blink()")}}
-  - : {{HTMLElement("blink")}}
+  - : `<blink>`
 - {{jsxref("String.prototype.bold()")}}
   - : {{HTMLElement("b")}}
 - {{jsxref("String.prototype.fixed()")}}

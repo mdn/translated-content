@@ -20,7 +20,8 @@ lookupPrefix(namespace)
 
 - `namespace`
   - : 接頭辞を検索するための名前空間の入った文字列です。
-    > **メモ:** この引数は省略可能ではありませんが、 `null` に設定することはできます。
+    > [!NOTE]
+    > この引数は省略可能ではありませんが、 `null` に設定することはできます。
 
 ### 返値
 
@@ -59,14 +60,14 @@ button.addEventListener("click", () => {
   const result = document.getElementsByTagName("output");
   result[0].value = aHtmlElt.lookupPrefix("http://www.w3.org/2000/svg"); // true
   result[1].value = aHtmlElt.lookupPrefix(
-    "http://www.w3.org/XML/1998/namespace"
+    "http://www.w3.org/XML/1998/namespace",
   ); // false
   result[2].value = aHtmlElt.lookupPrefix("http://www.w3.org/TR/html4/"); // true
   result[3].value = aHtmlElt.lookupPrefix("https://www.w3.org/1999/xlink"); // false
   result[4].value = aSvgElt.lookupPrefix("http://www.w3.org/2000/svg"); // true
   result[5].value = aSvgElt.lookupPrefix("https://www.w3.org/1999/xlink"); // true
   result[6].value = aSvgElt.lookupPrefix(
-    "http://www.w3.org/XML/1998/namespace"
+    "http://www.w3.org/XML/1998/namespace",
   ); // false
 });
 ```

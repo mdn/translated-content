@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities
 
 contextual identities の操作: contextual identities を一覧、作成、削除、更新します。
 
-"Contextual identities"は「コンテナ」とも言われ、ブラウザーの機能で、ユーザーがウェブブラウズしている時に複数の ID を想定し、そこでも ID 同時の分離を維持したいアイデアを指します。例えば、ユーザーが「仕事の ID」と「個人の ID」を分けたいと考えて、これら 2 つのコンテキストで cookies を共有したくない場合など。
+"Contextual identities"は「コンテナー」とも言われ、ブラウザーの機能で、ユーザーがウェブブラウズしている時に複数の ID を想定し、そこでも ID 同時の分離を維持したいアイデアを指します。例えば、ユーザーが「仕事の ID」と「個人の ID」を分けたいと考えて、これら 2 つのコンテキストで cookies を共有したくない場合など。
 
 contextual identities 機能により、各コンテキスト ID は名前、色、及びアイコンを持ちます。新規タブが ID にアサインされ、名前、アイコン、色がアドレスバーに出現します。内部的には、各 ID が他のタブには共有されない自分の cookie ストアを持ちます。
 
@@ -52,6 +52,6 @@ Contextual identities は現在その他のブラウザーではサポートさ�
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.contextualIdentities")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}

@@ -54,7 +54,7 @@ start(timeslice)
 record.onclick = () => {
   mediaRecorder.start();
   console.log("収録を開始しました。");
-}
+};
 ```
 
 ## 仕様書

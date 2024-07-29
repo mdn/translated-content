@@ -3,7 +3,7 @@ title: tabs.TabStatus
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/TabStatus
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Indique si l'onglet a terminé le chargement.
 
@@ -17,7 +17,7 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont : `"loading
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >

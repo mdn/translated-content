@@ -22,7 +22,7 @@ slug: Web/CSS/::spelling-error
 
 ## 構文
 
-```css
+```css-nolint
 ::spelling-error {}
 ```
 

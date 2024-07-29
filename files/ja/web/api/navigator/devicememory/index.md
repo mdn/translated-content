@@ -1,19 +1,16 @@
 ---
-title: Navigator.deviceMemory
+title: "Navigator: deviceMemory プロパティ"
+short-title: deviceMemory
 slug: Web/API/Navigator/deviceMemory
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("Device Memory")}}{{securecontext_header}}{{SeeCompatTable}}
 
 **`deviceMemory`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、端末のおよそのメモリ量をギガバイト単位で返します。
 
-報告される値は、フィンガープリントを抑制するために概数になっています。この値は、最も近い 2 の累乗に切り捨て、その値を 1024 で割ることによって概算されています。その後、メモリーが非常に少ない、または非常に多い端末の所有者のプライバシーを保護するため、下限と上限の範囲内に丸められます。
-
-## 構文
-
-```js
-memoryAmount = navigator.deviceMemory;
-```
+報告される値は、[フィンガープリント](/ja/docs/Glossary/Fingerprinting)を抑制するために概数になっています。この値は、最も近い 2 の累乗に切り捨て、その値を 1024 で割ることによって概算されています。その後、メモリーが非常に少ない、または非常に多い端末の所有者のプライバシーを保護するため、下限と上限の範囲内に丸められます。
 
 ### 値
 

@@ -3,6 +3,8 @@ title: Public-key cryptography (公開鍵暗号)
 slug: Glossary/Public-key_cryptography
 ---
 
+{{GlossarySidebar}}
+
 公開鍵暗号 — または*非対称暗号* — は、対となる鍵による暗号システムです。一方の鍵によって行われた変換は、もう一方の鍵によってしか元に戻せません。一方の鍵 (_秘密鍵_) は秘匿しておき、もう一方の鍵は公開します。
 
 デジタル署名で使用する場合、署名の生成に秘密鍵が使用され、検証に公開鍵が使用されます。つまり、誰でも署名を検証することができますが、対応する秘密鍵の所有者のみが署名を生成することができます。
@@ -13,7 +15,7 @@ slug: Glossary/Public-key_cryptography
 
 よく使われる公開鍵暗号システムには、 RSA (署名と暗号化の両方)、 DSA (署名用)、 Diffie-Hellman (鍵の合意用) などがあります。
 
-- [MDN 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("Symmetric-key cryptography", "共通鍵暗号")}}
 

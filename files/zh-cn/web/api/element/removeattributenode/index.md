@@ -1,40 +1,62 @@
 ---
-title: Element.removeAttributeNode()
+title: Element：removeAttributeNode() 方法
 slug: Web/API/Element/removeAttributeNode
+l10n:
+  sourceCommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}
 
-`removeAttributeNode` 从当前的 element(元素节点) 删除指定的属性
+{{domxref("Element")}} 接口的 **`removeAttributeNode()`** 方法从元素中移除指定的属性（{{domxref("Attr")}}）节点。
 
-## Syntax
+如果你不想在移除属性节点之前检查它是否存在，那么可以改用 {{domxref("Element.removeAttribute()")}} 方法。
 
-```plain
-removedAttr = element.removeAttributeNode(attributeNode)
+## 语法
+
+```js-nolint
+removeAttributeNode(attributeNode)
 ```
 
-- `attributeNode` 是需要被删除的 Attr 节点。
-- `removedAttr` 是被删除了的 Attr 节点。
+### 参数
 
-## 例如
+- `attributeNode`
+  - : 要从元素中删除的属性节点。
 
-```plain
-// <div id="top" align="center" />
-var d = document.getElementById("top");
-// getAttributeNode 返回指定元素的指定属性，返回值是 Attr 节点类型
-var d_align = d.getAttributeNode("align");
+### 返回值
+
+移除的属性节点。
+
+### 异常
+
+- `NotFoundError` {{DOMxRef("DOMException")}}
+  - : 若元素的属性列表中不包含指定属性节点，则抛出该异常。
+
+## 示例
+
+```js
+// 给定：<div id="top" align="center" />
+const d = document.getElementById("top");
+const d_align = d.getAttributeNode("align");
 d.removeAttributeNode(d_align);
-//  现在 align 被删除了：<div id="top" />
+// 现在 align 已被删除：<div id="top" />
 ```
 
-## 注意
+## 备注
 
-如果删除有默认值的属性，相当于将属性值替换为默认值。属性只有在具有同样的命名空间、本地名称以及原始前缀时，才会在被删除的时候替换为默认值。
+如果删除有默认值的属性，则会立刻用具有默认值的属性替换。在适用时，替换的属性具有相同的命名空间 URI、本地名称以及原始前缀。
 
-不像 setAttributeNode 和 setAttributeNodeNS 配对使用那样，需要知道要替换哪个现有属性。removeAttributeNode 没有那样的要求，也没有 removeAttributeNodeNS。removeAttributeNode 可以删除命名空间以及非命名空间的属性。
-
-{{ DOMAttributeMethods() }}
+并没有 `removeAttributeNodeNS` 方法；`removeAttributeNode` 方法可以删除命名空间限定属性和非命名空间限定属性。
 
 ## 规范
 
-[DOM Level 2 Core: removeAttributeNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-D589198) ([DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttributeNode) 里面的介绍)
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{domxref("Document.createAttribute()")}}
+- {{domxref("Element.getAttributeNode()")}}
+- {{domxref("Element.setAttributeNode()")}}

@@ -14,7 +14,8 @@ l10n:
 
 `appendChild()` は、新しく追加されたノードを返します。また、子が {{domxref("DocumentFragment")}} であれば、空になったフラグメントを返します。
 
-> **メモ:** このメソッドとは異なり、 {{domxref("Element.append()")}} メソッドは複数の引数や文字列の追加に対応しています。ノードが要素であった場合は、こちらを使用することができます。
+> [!NOTE]
+> このメソッドとは異なり、 {{domxref("Element.append()")}} メソッドは複数の引数や文字列の追加に対応しています。ノードが要素であった場合は、こちらを使用することができます。
 
 ## 構文
 
@@ -42,7 +43,7 @@ appendChild(aChild)
     - 現在のノードが {{domxref("Text")}} であり、親ノードが {{domxref("Document")}} になる場合。
     - 現在のノードが {{domxref("DocumentType")}} であり、その親が {{domxref("Document")}} にならない場合。 _doctype_ は常に _document_ の直下になければならないからです。
     - このノードの親が {{domxref("Document")}} で `aChild` が {{domxref("DocumentFragment")}} であり、複数の {{domxref("Element")}} の子、または {{domxref("Text")}} の子がある場合。
-    -`aChild` を挿入すると {{domxref("Document")}} の子の {{domxref("Element")}} が複数になる場合。
+    - `aChild` を挿入すると {{domxref("Document")}} の子の {{domxref("Element")}} が複数になる場合。
 
 ## 解説
 

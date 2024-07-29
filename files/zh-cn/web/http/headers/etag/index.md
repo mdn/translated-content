@@ -36,7 +36,7 @@ ETag: W/"0815"
 
 ### 避免“空中碰撞”
 
-在`ETag`和 {{HTTPHeader("If-Match")}} 头部的帮助下，您可以检测到"空中碰撞"的编辑冲突。
+在`ETag`和 {{HTTPHeader("If-Match")}} 头部的帮助下，你可以检测到"空中碰撞"的编辑冲突。
 
 例如，当编辑 MDN 时，当前的 wiki 内容被散列，并在响应中放入`Etag`：
 
@@ -70,7 +70,7 @@ If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}

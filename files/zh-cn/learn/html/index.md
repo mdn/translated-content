@@ -7,14 +7,6 @@ slug: Learn/HTML
 
 为了创建一个网站，你需要了解 {{Glossary('HTML')}}——一项用于定义网页结构的基本技术。HTML 用于标识你的网页内容是应该被解析为段落、列表、头部、链接、图像、多媒体播放器、表单或是其他众多可用的元素之一，亦或是你定义的新元素。
 
-> **标注：**
->
-> #### 想要成为一名前端工程师？
->
-> 我们汇总了一门课程，其中包含你实现成为前端工程师目标所需要的所有基本信息。
->
-> [**从这儿开始**](/zh-CN/docs/Learn/Front-end_web_developer)
-
 ## 须知
 
 在开始这个主题的学习之前，你至少要基本熟悉使用电脑和被动地使用网络（即单纯地查看内容）。你应该设置好一个基础的工作环境，详细参照[安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)，并且理解如何新建和管理文件，详细参照[文件处理](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)——这两者都在 [web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)的零基础模块里。

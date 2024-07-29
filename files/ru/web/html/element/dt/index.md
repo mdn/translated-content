@@ -31,7 +31,7 @@ slug: Web/HTML/Element/dt
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

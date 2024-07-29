@@ -3,7 +3,7 @@ title: webRequest.UploadData
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/UploadData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Contient les données téléchargées dans une requête URL..
 

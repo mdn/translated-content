@@ -47,7 +47,7 @@ Math.sin(Math.PI / 2); // 1
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.sin")}}
+{{Compat}}
 
 ## 関連情報
 

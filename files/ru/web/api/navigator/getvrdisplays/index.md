@@ -1,31 +1,31 @@
 ---
-title: Navigator.getVRDisplays()
+title: "Navigator: метод getVRDisplays()"
 slug: Web/API/Navigator/getVRDisplays
+l10n:
+  sourceCommit: d558b37cc2a66f5a888f3b95902e64444047c052
 ---
 
-{{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-Метод **`getVRDisplays()`** интерфейса {{domxref("Navigator")}} возвращает объект типа [Promise](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise), из которого можно получить массив объектов типа {{domxref("VRDisplay")}}, являющихся отображением любого доступного из подключённых к компьютеру VR устройств.
+Метод **`getVRDisplays()`** интерфейса {{domxref("Navigator")}} возвращает промис, из которого можно получить массив объектов {{domxref("VRDisplay")}}, представляющие доступные VR-устройства, подключенные к компьютеру.
 
 ## Синтаксис
 
-```
-navigator.getVRDisplays().then(function(displays) {
-  //Тут можно что-то сделать с доступными VR устройствами
-});
+```js-nolint
+getVRDisplays()
 ```
 
 ### Параметры
 
-Нет.
+Отсутствуют.
 
 ### Возвращаемое значение
 
-Объект типа Promise, содержащий в случае успешного выполнения массив объектов {{domxref("VRDisplay")}}.
+Промис, который будет содержать массив объектов {{domxref("VRDisplay")}}.
 
 ## Примеры
 
-{{page("/Web/API/VRDisplay", "Examples")}}
+Смотрите примеры использования в [`VRDisplay`](/ru/docs/Web/API/VRDisplay#examples).
 
 ## Спецификации
 
@@ -37,5 +37,4 @@ navigator.getVRDisplays().then(function(displays) {
 
 ## Смотрите также
 
-- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/ru/docs/Web/API/WebVR_API)

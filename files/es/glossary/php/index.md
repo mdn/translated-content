@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
 ---
 
+{{GlossarySidebar}}
+
 PHP (una inicialización recursiva para PHP: preprocesador de hipertexto) es un lenguaje de script de código abierto del lado del servidor que puede integrarse en HTML para crear aplicaciones web y sitios web dinámicos.
 
 ## Ejemplos
@@ -51,7 +53,6 @@ PHP (una inicialización recursiva para PHP: preprocesador de hipertexto) es un 
 - [PHP](https://es.wikipedia.org/wiki/PHP) en Wikipedia
 - [Programación PHP](https://en.wikibooks.org/wiki/PHP_Programming) en Wikibooks
 - [Glosario de documentos web de MDN](/es/docs/Glossary)
-
   - {{Glossary("Java")}}
   - {{Glossary("JavaScript")}}
   - {{Glossary("Python")}}

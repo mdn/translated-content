@@ -114,7 +114,7 @@ Não faz parte de nenhum padrão.
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.toSource")}}
+{{Compat}}
 
 ## Veja também
 

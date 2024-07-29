@@ -84,10 +84,8 @@ When using `scrollbar-color` property with specific color values, authors should
 
 ## Especificações
 
-| Specification                                                         | Status                      | Comment             |
-| --------------------------------------------------------------------- | --------------------------- | ------------------- |
-| {{SpecName("CSS Scrollbars", "#scrollbar-color", "scrollbar-color")}} | {{Spec2("CSS Scrollbars")}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.scrollbar-color")}}
+{{Compat}}

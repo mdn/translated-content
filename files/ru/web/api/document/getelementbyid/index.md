@@ -3,7 +3,7 @@ title: document.getElementById()
 slug: Web/API/Document/getElementById
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
 Возвращает ссылку на элемент по его идентификатору ([ID](/ru/docs/DOM/element.id)); идентификатор является строкой, которая может быть использована для идентификации элемента; она может быть определена при помощи атрибута `id` в HTML или из скрипта.
 

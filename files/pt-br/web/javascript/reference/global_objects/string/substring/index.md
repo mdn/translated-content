@@ -3,7 +3,7 @@ title: String.prototype.substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}}
 
 ## Resumo
 
@@ -153,15 +153,11 @@ O código acima serve como um exemplo para operações com substring. Se você p
 
 ## Especificações
 
-| Especificação                                                                        | Status             | Comentário                     |
-| ------------------------------------------------------------------------------------ | ------------------ | ------------------------------ |
-| ECMAScript 1st Edition.                                                              | Standard           | Implementado no JavaScript 1.0 |
-| {{SpecName('ES5.1', '#sec-15.5.4.15', 'String.prototype.substring')}}                | {{Spec2('ES5.1')}} |                                |
-| {{SpecName('ES6', '#sec-string.prototype.substring', 'String.prototype.substring')}} | {{Spec2('ES6')}}   |                                |
+{{Specifications}}
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.substring")}}
+{{Compat}}
 
 ## Veja também
 

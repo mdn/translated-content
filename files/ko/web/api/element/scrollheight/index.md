@@ -21,18 +21,6 @@ var intElemScrollHeight = element.scrollHeight;
 
 *intElemScrollHeight*은 요소 `scrollHeight`의 픽셀 값을 저장하는 정수형 변수입니다.
 
-## 예제
-
-padding-top
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-padding-bottom
-
-**Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
-
 ## 문제와 해결책
 
 ### 요소를 끝까지 스크롤했는지 판별하기

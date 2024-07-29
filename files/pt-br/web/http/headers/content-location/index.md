@@ -122,7 +122,7 @@ Content-Location: /meus-recibos/38
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Location")}}
+{{Compat}}
 
 ## Veja também
 

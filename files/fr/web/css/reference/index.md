@@ -78,9 +78,9 @@ Les sélecteurs simples sont des sélecteurs fondamentaux. Ce sont les sélecteu
 
 Les combinateurs sont des sélecteurs qui établissent une relation entre deux sélecteurs ou plus, tel que "A est un enfant de B" ou "A est adjacent à B".
 
-- [Combinateur de voisin direct](/fr/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
+- [Combinateur de voisin direct](/fr/docs/Web/CSS/Next-sibling_combinator) `A + B`
   - : Indique que les éléments sélectionnés par `A` et par `B` ont le même parent et que celui sélectionné par `B` suit immédiatement celui sélectionné par `A`.
-- [Combinateur de voisin général](/fr/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+- [Combinateur de voisin général](/fr/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - : Indique que les éléments sélectionnés par `A` et par `B` ont le même parent et que celui sélectionné par `B` suit celui sélectionné par `A`, mais pas nécessairement immédiatement après lui.
 - [Combinateur d'enfant](/fr/docs/Web/CSS/Child_combinator) `A > B`
   - : Indique que l'élément sélectionné par `B` est un enfant direct de l'élément sélectionné par `A`.

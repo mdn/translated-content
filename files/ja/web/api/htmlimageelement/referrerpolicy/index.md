@@ -9,7 +9,7 @@ l10n:
 {{APIRef("HTML DOM")}}
 
 **`HTMLImageElement.referrerPolicy`** プロパティは、
- HTML の {{HTMLElement("img")}} 要素の [`referrerpolicy`](/ja/docs/Web/HTML/Element/img#referrerpolicy) 属性を反映し、リソースの取得時に送信されるリファラーを定義します。
+HTML の {{HTMLElement("img")}} 要素の [`referrerpolicy`](/ja/docs/Web/HTML/Element/img#referrerpolicy) 属性を反映し、リソースの取得時に送信されるリファラーを定義します。
 
 ## 値
 

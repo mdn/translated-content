@@ -35,7 +35,7 @@ calculateCircumference(1); // 6.283185307179586
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.PI")}}
+{{Compat}}
 
 ## 関連情報
 

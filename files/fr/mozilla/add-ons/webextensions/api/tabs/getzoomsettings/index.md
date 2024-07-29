@@ -3,7 +3,7 @@ title: tabs.getZoomSettings()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getZoomSettings
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient les paramètres de zoom actuels pour un onglet spécifié.
 
@@ -49,7 +49,7 @@ gettingZoomSettings.then(onGot, onError);
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >

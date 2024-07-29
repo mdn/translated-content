@@ -45,7 +45,7 @@ console.log(obj2 + ""); // "true"    -- желаемый тип (hint) - "defaul
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

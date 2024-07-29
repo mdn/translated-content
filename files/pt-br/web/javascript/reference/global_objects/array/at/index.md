@@ -53,7 +53,7 @@ console.log(item2); // 'orange'
 
 ### Comparando métodos
 
-Este exemplo compara a diferentes maneiras de selecionar o penúltimo item de um {{jsxref('Array')}}.
+Este exemplo compara as diferentes maneiras de selecionar o penúltimo item de um {{jsxref('Array')}}.
 Todos os métodos abaixos são válidos, mas este exemplo destaca a sucintez e legibilidade do método `at()`.
 
 ```js

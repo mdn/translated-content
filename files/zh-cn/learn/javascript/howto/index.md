@@ -56,7 +56,7 @@ myFunction();
 
 还要记住，当你向一个函数外部返回一个值时，JavaScript 解释器会退出这个函数——在 return 语句之后，不会执行任何代码。
 
-事实上，如果您在返回语句之后有代码，某些浏览器（如 Firefox）会在开发人员控制台中显示出一条错误消息。Firefox 在返回语句后会给你“无法运行到的代码”的提示。
+事实上，如果你在返回语句之后有代码，某些浏览器（如 Firefox）会在开发人员控制台中显示出一条错误消息。Firefox 在返回语句后会给你“无法运行到的代码”的提示。
 
 ### 对象标记法与正常赋值
 
@@ -196,8 +196,8 @@ const myObject = {
 - [我该使用什么样的机制将事件代码添加到我的网页上？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#我该使用哪种机制？)
 - [什么是事件对象，如何使用它？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件对象)
 - [如何防止默认事件行为？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#阻止默认行为)
-- [事件如何在嵌套元素中触发？（事件传递及其相关内容——事件冒泡及捕获）](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件冒泡及捕获)
-- [什么是事件委托，它如何工作？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件委托)
+- [事件如何在嵌套元素中触发？（事件传递及其相关内容——事件冒泡及捕获）](/zh-CN/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+- [什么是事件委托，它如何工作？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Event_bubbling#事件委托)
 
 ### 面向对象的 JavaScript
 

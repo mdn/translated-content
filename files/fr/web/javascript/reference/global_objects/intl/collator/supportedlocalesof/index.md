@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
 
 La méthode **`Intl.Collator.supportedLocalesOf()`** renvoie, parmi les locales fournies, un tableau contenant les locales supportées et qui ne nécessitent pas d'utiliser la locale par défaut de l'environnement.
 
-{{EmbedInteractiveExample("pages/js/intl-collator-prototype-supportedlocalesof.html")}}
+{{EmbedInteractiveExample("pages/js/intl-collator-supportedlocalesof.html")}}
 
 ## Syntaxe
 

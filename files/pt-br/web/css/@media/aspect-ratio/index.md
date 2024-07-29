@@ -84,13 +84,10 @@ h.onchange = h.oninput = function () {
 
 {{ EmbedLiveSample('_Exemplo', '300px', '400px') }}
 
-## Specificações
+## Especificações
 
-| Specification                                                       | Status                          | Comment             |
-| ------------------------------------------------------------------- | ------------------------------- | ------------------- |
-| {{SpecName('CSS4 Media Queries', '#aspect-ratio', 'aspect-ratio')}} | {{Spec2('CSS4 Media Queries')}} | No change.          |
-| {{SpecName('CSS3 Media Queries', '#aspect-ratio', 'aspect-ratio')}} | {{Spec2('CSS3 Media Queries')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.at-rules.media.aspect-ratio")}}
+{{Compat}}

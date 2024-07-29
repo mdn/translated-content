@@ -3,7 +3,7 @@ title: pageAction.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 ページアクションのアイコンがクリックされたときに発火します。ページアクションがポップアップを持っているならこのイベントは発火しません。
 
@@ -28,7 +28,7 @@ browser.pageAction.onClicked.hasListener(listener);
 
 ## addListener の書式
 
-### パラメータ
+### パラメーター
 
 - `callback`
 
@@ -39,11 +39,11 @@ browser.pageAction.onClicked.hasListener(listener);
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.pageAction.onClicked")}}
+{{Compat}}
 
 ## 例
 
-ユーザがページアクションをクリックしたとき、それを隠し、アクティブタブを"<http://chilloutandwatchsomecatgifs.com/>"に誘導します:
+ユーザーがページアクションをクリックしたとき、それを隠し、アクティブタブを"<http://chilloutandwatchsomecatgifs.com/>"に誘導します:
 
 ```js
 var CATGIFS = "http://chilloutandwatchsomecatgifs.com/";
@@ -58,7 +58,8 @@ browser.pageAction.onClicked.addListener(function () {});
 
 {{WebExtExamples}}
 
-> **メモ:** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction#event-onClicked) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction#event-onClicked) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

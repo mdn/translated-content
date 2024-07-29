@@ -67,7 +67,7 @@ function getBaseLog(x, y) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.log")}}
+{{Compat}}
 
 ## 関連情報
 

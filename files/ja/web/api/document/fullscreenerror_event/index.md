@@ -1,8 +1,9 @@
 ---
 title: "Document: fullscreenerror イベント"
+short-title: fullscreenerror
 slug: Web/API/Document/fullscreenerror_event
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef}}
@@ -35,7 +36,7 @@ onfullscreenerror = (event) => {};
 const requestor = document.querySelector("div");
 
 function handleError(event) {
-  console.error("an error occurred changing into fullscreen");
+  console.error("全画面モードへの移行時にエラーが発生しました");
   console.log(event);
 }
 

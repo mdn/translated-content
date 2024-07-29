@@ -1,91 +1,74 @@
 ---
-title: AudioContext.createMediaStreamSource()
+title: "AudioContext: createMediaStreamSource() メソッド"
+short-title: createMediaStreamSource()
 slug: Web/API/AudioContext/createMediaStreamSource
+l10n:
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
 {{ APIRef("Web Audio API") }}
 
-インターフェースの`createMediaStreamSource()`メソッドは、指定のメディアストリームから(言い換えると{{ domxref("navigator.getUserMedia") }}インスタンスから){{ domxref("MediaStreamAudioSourceNode") }}オブジェクトを生成します。ここからの音声は再生や編集ができます。
+`createMediaStreamSource()` は {{ domxref("AudioContext") }} インターフェイスのメソッドで、指定のメディアストリームから（言い換えると {{ domxref("navigator.getUserMedia") }} インスタンスから） {{ domxref("MediaStreamAudioSourceNode") }} オブジェクトを生成します。ここからの音声は再生や編集ができます。
 
-メディアストリームオーディオソースノードの詳細は{{ domxref("MediaStreamAudioSourceNode") }}のページを参照してください。
+メディアストリームの音声ソースノードの詳細は{{ domxref("MediaStreamAudioSourceNode") }}のページを参照してください。
 
 ## 構文
 
-```js
-var audioCtx = new AudioContext();
-var source = audioCtx.createMediaStreamSource(stream);
+```js-nolint
+createMediaStreamSource(stream)
 ```
 
 ### 引数
 
-- stream
-  - : 操作のためにオーディオグラフに加えたい{{domxref("MediaStream")}}オブジェクト。
+- `stream`
+  - : 操作のために音声グラフに加えたい {{domxref("MediaStream")}} オブジェクト。
 
-### 戻り値
+### 返値
 
-{{domxref("MediaStreamAudioSourceNode")}}
+指定したソースストリームから取得したメディアを持つ音声ノードを表す新しい {{domxref("MediaStreamAudioSourceNode")}} オブジェクトです。
 
 ## 例
 
-この例では、メディア(音声+映像)ストリームを{{ domxref("navigator.getUserMedia") }}から獲得し、それを{{ htmlelement("video") }}要素に渡し、映像は再生しますが音声は再生しないようにします。音声は{{ domxref("MediaStreamAudioSourceNode") }}に渡します。次に、音声をローパスフィルタ{{ domxref("BiquadFilterNode") }}(低音を強めるように働きます)に渡し、そして{{domxref("AudioDestinationNode") }}に渡します。
+この例では、メディア（音声＋映像）ストリームを {{ domxref("navigator.getUserMedia") }} から獲得し、それを {{ htmlelement("video") }} 要素に渡し、映像は再生しますが音声は再生しないようにします。音声は {{ domxref("MediaStreamAudioSourceNode") }} に渡します。次に、音声をローパスフィルター {{ domxref("BiquadFilterNode") }} （低音を強めるように働きます）に渡し、そして {{domxref("AudioDestinationNode") }} に渡します。
 
-{{ htmlelement("video") }}要素の下のスライダーはローパスフィルタの増幅量を操作します—スライダーで値を大きくすると、より低音が強くなります!
+{{ htmlelement("video") }} 要素の下のスライダーはローパスフィルターの増幅量を操作します—スライダーで値を大きくすると、より低音が強くなります。
 
 > **メモ:** [この例の実行](http://mdn.github.io/stream-source-buffer/)と[ソースの閲覧](https://github.com/mdn/stream-source-buffer)もできます。
 
 ```js
-// プレフィックスが必要な場合を考慮して、getUserMediaはブラウザのバージョンごとに分ける
-
-navigator.getUserMedia =
-  navigator.getUserMedia ||
-  navigator.webkitGetUserMedia ||
-  navigator.mozGetUserMedia ||
-  navigator.msGetUserMedia;
-
-// 他の変数を定義する
-
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var myAudio = document.querySelector("audio");
-var pre = document.querySelector("pre");
-var video = document.querySelector("video");
-var myScript = document.querySelector("script");
-var range = document.querySelector("input");
-
-// マウスポインタのY座標と、画面の高さを格納する変数を定義する
-var CurY;
-var HEIGHT = window.innerHeight;
+const pre = document.querySelector("pre");
+const video = document.querySelector("video");
+const myScript = document.querySelector("script");
+const range = document.querySelector("input");
 
 // getUserMediaのブロック - ストリームを得る
 // MediaStreamAudioSourceNodeに渡す
 // 映像はvideo要素に出力する
 
-if (navigator.getUserMedia) {
+if (navigator.mediaDevices) {
   console.log("getUserMedia supported.");
-  navigator.getUserMedia(
-    // 制約: このアプリで音声と映像を有効にする
-    {
-      audio: true,
-      video: true,
-    },
-
-    // 成功時のコールバック
-    function (stream) {
-      video.src = (window.URL && window.URL.createObjectURL(stream)) || stream;
-      video.onloadedmetadata = function (e) {
+  navigator.mediaDevices
+    .getUserMedia({ audio: true, video: true })
+    .then((stream) => {
+      video.srcObject = stream;
+      video.onloadedmetadata = (e) => {
         video.play();
-        video.muted = "true";
+        video.muted = true;
       };
 
-      // MediaStreamAudioSourceNodeを生成し、それにHTMLMediaElementを渡す
-      var source = audioCtx.createMediaStreamSource(stream);
+      // MediaStreamAudioSourceNode を生成し、
+      // それに HTMLMediaElement を渡す
+      const audioCtx = new AudioContext();
+      const source = audioCtx.createMediaStreamSource(stream);
 
       // 二次フィルターを生成する
-      var biquadFilter = audioCtx.createBiquadFilter();
+      const biquadFilter = audioCtx.createBiquadFilter();
       biquadFilter.type = "lowshelf";
       biquadFilter.frequency.value = 1000;
       biquadFilter.gain.value = range.value;
 
-      // AudioBufferSourceNodeをgainNodeに、そしてgainNodeをdestinationに接続する
+      // AudioBufferSourceNode を gainNode に、
+      // そして gainNode を destination に接続する
       // これでマウスを動かすことで音楽のボリュームを調整することができる
       source.connect(biquadFilter);
       biquadFilter.connect(audioCtx.destination);
@@ -93,35 +76,32 @@ if (navigator.getUserMedia) {
       // マウスが動いたとき新しい座標を得る
       // そして増幅量を更新する
 
-      range.oninput = function () {
+      range.oninput = () => {
         biquadFilter.gain.value = range.value;
       };
-    },
-
-    // エラー時のフィードバック
-    function (err) {
-      console.log("The following gUM error occured: " + err);
-    },
-  );
+    })
+    .catch((err) => {
+      console.log(`The following gUM error occurred: ${err}`);
+    });
 } else {
   console.log("getUserMedia not supported on your browser!");
 }
 
-// pre要素にスクリプトを書き出す
+// pre 要素にスクリプトを書き出す
 
 pre.innerHTML = myScript.innerHTML;
 ```
 
-> **メモ:** `createMediaStreamSource()`の呼び出しによるメディアストリームの音声は、再び`AudioContext`の処理グラフに入ります。よって、ストリームの再生/停止は、まだメディア API とプレイヤーの操作で行えます。
+> **メモ:** `createMediaStreamSource()` を呼び出した結果、メディアストリームからの音声再生は {{domxref("AudioContext")}} の処理グラフに再ルーティングされます。そのため、ストリームの再生/一時停止は、メディア要素 API とプレーヤーコントロールを通して行うことができます。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
-{{Compat("api.AudioContext.createMediaStreamSource")}}
+{{Compat}}
 
-## 参考
+## 関連情報
 
-- [Using the Web Audio API](/ja/docs/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

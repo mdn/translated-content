@@ -73,7 +73,7 @@ Tk: N
 
 ## ブラウザーの対応
 
-{{Compat("http.headers.Tk")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -5,7 +5,7 @@ slug: Web/CSS/var
 
 {{CSSRef}}
 
-**`var()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-cn/docs/Web/CSS/CSS_Functions)可以插入一个[自定义属性](/zh-CN/docs/Web/CSS/--*)（有时也被称为“CSS 变量”）的值，用来代替非自定义属性中值的任何部分。
+**`var()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions)可以插入一个[自定义属性](/zh-CN/docs/Web/CSS/--*)（有时也被称为“CSS 变量”）的值，用来代替非自定义属性中值的任何部分。
 
 {{EmbedInteractiveExample("pages/css/var.html")}}
 
@@ -17,7 +17,8 @@ slug: Web/CSS/var
 
 {{csssyntax}}
 
-> **备注：** 自定义属性的回退值允许使用逗号。例如，`var(--foo, red, blue)` 将 `red, blue` 同时指定为回退值；即是说任何在第一个逗号之后到函数结尾前的值都会被考虑为回退值。
+> [!NOTE]
+> 自定义属性的回退值允许使用逗号。例如，`var(--foo, red, blue)` 将 `red, blue` 同时指定为回退值；即是说任何在第一个逗号之后到函数结尾前的值都会被考虑为回退值。
 
 ### 值
 

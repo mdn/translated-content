@@ -43,15 +43,13 @@ Muitas vezes é conveniente usar a propriedade abreviada {{cssxref("animation")}
 
 Veja [CSS animations](/pt-BR/docs/CSS/CSS_animations) para exemplos.
 
-## Especificação
+## Especificações
 
-| Especificação                                                          | Status                       | Comentário         |
-| ---------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('CSS3 Animations', '#animation-delay', 'animation-delay')}} | {{Spec2('CSS3 Animations')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com os browsers
 
-{{Compat("css.properties.animation-delay")}}
+{{Compat}}
 
 ## Veja também
 

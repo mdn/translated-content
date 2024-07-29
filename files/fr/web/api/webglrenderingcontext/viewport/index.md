@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext/viewport
 
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.viewport()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) définit le viewport, qui indique la transformation affine de x et de y, de coordonnées d'appareil normalisées en coordonnées de fenêtre.
+La méthode **`WebGLRenderingContext.viewport()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) définit le viewport, qui indique la transformation affine de x et de y, de coordonnées d'appareil normalisées en coordonnées de fenêtre.
 
 ## Syntaxe
 

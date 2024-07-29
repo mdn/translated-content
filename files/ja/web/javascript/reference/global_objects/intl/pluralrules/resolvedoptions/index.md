@@ -7,6 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
 
 **`Intl.PluralRules.prototype.resolvedOptions()`** メソッドは、この {{jsxref("Intl.PluralRules")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
+{{EmbedInteractiveExample("pages/js/intl-pluralrules-prototype-resolvedoptions.html")}}
+
 ## 構文
 
 ```js

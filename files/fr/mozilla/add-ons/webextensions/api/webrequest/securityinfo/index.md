@@ -3,7 +3,7 @@ title: webRequest.SecurityInfo
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/SecurityInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Objet décrivant les propriétés de sécurité d'une requête Web particulière. Un objet de ce type est retourné depuis l'API {{WebExtAPIRef("webRequest.getSecurityInfo()")}}.
 

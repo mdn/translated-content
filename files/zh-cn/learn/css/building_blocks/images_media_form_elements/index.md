@@ -10,7 +10,7 @@ slug: Learn/CSS/Building_blocks/Images_media_form_elements
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         计算机基础知识、<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
@@ -103,7 +103,8 @@ HTML5 还包含了允许 Web 开发者指定必填区域的特性，甚至还能
 
 {{EmbedGHLiveSample("css-examples/learn/images/form.html", '100%', 1000)}}
 
-> **警告：** 你应该谨慎改变表单样式，确保用户仍然能轻松辨认表单元素。原则上，你可以创建一个没有边框和背景的，几乎无法与周围的内容区分开来的输入表单，但这会使辨认和填写变得非常困难。
+> [!WARNING]
+> 你应该谨慎改变表单样式，确保用户仍然能轻松辨认表单元素。原则上，你可以创建一个没有边框和背景的，几乎无法与周围的内容区分开来的输入表单，但这会使辨认和填写变得非常困难。
 
 正如在本教程的 HTML 部分的[样式化表单](/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms)里解释的那样，许多更加复杂的输入类型是由操作系统渲染的，无法进行样式化。因而你应该总是留意到表单在不同的用户看来差异很大，并在许多浏览器上测试复杂的表单。
 
@@ -169,16 +170,17 @@ textarea {
 }
 ```
 
-> **备注：** 通用样式表被许多开发者用作所有项目的一系列基础样式，典型就是那些做了和以上提到相似的事情的那些，在你开始自己的 CSS 作业前，它确保了跨浏览器的任何事情都被默认设定为统一样式。它们不像以往那么重要了，因为浏览器显著地要比以往更加统一。但是，如果你想要看一个例子，可以看看这个[Normalize.css](http://necolas.github.io/normalize.css/)，它被许多项目用作基础，是非常流行的样式表。
+> [!NOTE]
+> 通用样式表被许多开发者用作所有项目的一系列基础样式，典型就是那些做了和以上提到相似的事情的那些，在你开始自己的 CSS 作业前，它确保了跨浏览器的任何事情都被默认设定为统一样式。它们不像以往那么重要了，因为浏览器显著地要比以往更加统一。但是，如果你想要看一个例子，可以看看这个[Normalize.css](http://necolas.github.io/normalize.css/)，它被许多项目用作基础，是非常流行的样式表。
 
 至于样式化表单的更加深入的信息，可以看下这些教程的 HTML 一节的这两篇文章：
 
 - [Styling HTML Forms](/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms)
 - [Advanced Styling for HTML Forms](/zh-CN/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
 
-## 测试你的技能
+## 技能测试
 
-我们在本文中介绍了很多内容，但是您记住最重要的内容了么？在继续之前，您可以通过一些其他测试来验证您是否真正学习到了这些知识，参见[技能测试](/zh-CN/docs/Learn/CSS/Building_blocks/Images_tasks)
+我们在本文中介绍了很多内容，但是你记住最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试](/zh-CN/docs/Learn/CSS/Building_blocks/Images_tasks)
 
 ## 小结
 

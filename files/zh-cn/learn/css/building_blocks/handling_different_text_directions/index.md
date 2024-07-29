@@ -12,7 +12,7 @@ slug: Learn/CSS/Building_blocks/Handling_different_text_directions
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         计算机基础知识，基本软件（参见<a
           href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"

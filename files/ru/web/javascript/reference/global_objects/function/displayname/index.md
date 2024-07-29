@@ -3,7 +3,7 @@ title: Function.displayName
 slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
 ---
 
-{{JSRef("Global_Objects", "Function")}} {{Non-standard_header}}
+{{JSRef}} {{Non-standard_header}}
 
 ## Сводка
 

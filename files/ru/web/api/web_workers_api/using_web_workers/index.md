@@ -144,7 +144,7 @@ importScripts("foo.js", "bar.js"); /* imports two scripts */
 
 > **Примечание:** Если разделяемый worker может быть доступен из нескольких контекстов просмотра, то все они должны иметь одно и то же происхождение (одни и те же протокол, хост и порт).
 
-> **Примечание:**В Firefox разделяемый worker не может быть использован совместно документами в приватном и неприватном окне ({{bug(1177621)}}).
+> **Примечание:**В Firefox разделяемый worker не может быть использован совместно документами в приватном и неприватном окне ([Firefox bug 1177621](https://bugzil.la/1177621)).
 
 ### Создание разделяемого worker-а
 
@@ -801,13 +801,9 @@ Worker устанавливает свойство `onmessage` для функц
 
 {{Specifications}}
 
-## Совместимость с браузерами
-
-{{Compat}}
-
 ## Смотрите также
 
-- [`Worker`](/ru/docs/Web/API/Worker) интерфейс
-- [`SharedWorker`](/ru/docs/Web/API/SharedWorker) интерфейс
-- [Функции доступные для worker-ов](/ru/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
-- [Продвинутые концепции и примеры](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)
+- Интерфейс [`Worker`](/ru/docs/Web/API/Worker)
+- Интерфейс [`SharedWorker`](/ru/docs/Web/API/SharedWorker)
+- [Доступные для воркеров функции](/ru/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
+- Интерфейс [`OffscreenCanvas`](/ru/docs/Web/API/OffscreenCanvas)

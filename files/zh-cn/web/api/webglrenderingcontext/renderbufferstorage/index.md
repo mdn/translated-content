@@ -106,7 +106,7 @@ gl.renderbufferStorage(gl.RENDERBUFFER, gl.RGBA4, 256, 256);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
 - {{domxref("WebGLRenderingContext.createRenderbuffer()")}}

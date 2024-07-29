@@ -2,7 +2,7 @@
 title: Firefox 116 for developers
 slug: Mozilla/Firefox/Releases/116
 l10n:
-  sourceCommit: 1d477db7a926b2648d0449de97e19689e3ccacab
+  sourceCommit: 7a81d16fadbe5cbee1ad2f8d0ddccda846f4034c
 ---
 
 {{FirefoxSidebar}}
@@ -50,7 +50,7 @@ l10n:
 
 - [Audio Output Devices API](/ja/docs/Web/API/Audio_Output_Devices_API) を、Android を除くすべてのプラットフォームでサポートしました。
   この API は、ウェブアプリケーションがブラウザーや OS が既定で使用すべきデバイスでなく、許可された Bluetooth ヘッドセット、スピーカーフォン、あるいは他のデバイスへ音声出力をリダイレクトすることを可能にします。
-  影響を受ける API には {{domxref("MediaDevices.selectAudioOutput()")}}、{{domxref("MediaDevices.enumerateDevices()")}}、[`HTMLMediaElement.setSinkId()`](/ja/docs/Web/API/HTMLMediaElement/setSinkId)、[`HTMLMediaElement.sinkId`](/ja/docs/Web/API/HTMLMediaElement/sinkId) および [`Permissions-Policy: speaker-selection`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) 許可ポリシーが含まれます [Firefox bug 1498512](https://bugzil.la/1498512")。
+  影響を受ける API には {{domxref("MediaDevices.selectAudioOutput()")}}、{{domxref("MediaDevices.enumerateDevices()")}}、[`HTMLMediaElement.setSinkId()`](/ja/docs/Web/API/HTMLMediaElement/setSinkId)、[`HTMLMediaElement.sinkId`](/ja/docs/Web/API/HTMLMediaElement/sinkId) および [`Permissions-Policy: speaker-selection`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) 許可ポリシーが含まれます ([Firefox bug 1498512](https://bugzil.la/1498512))。
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 

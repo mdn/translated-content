@@ -101,4 +101,4 @@ _无变化。_
 
 ## 更早期的版本
 
-{{Firefox_for_developers(65)}}
+{{Firefox_for_developers}}
