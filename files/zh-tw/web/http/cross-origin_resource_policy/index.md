@@ -17,7 +17,7 @@ CORP 是超越預設的{{Glossary("same-origin policy", "同源政策")}}的另�
 
 ## 使用方式
 
-> **備註：** 由於 [Chrome 中的錯誤](https://crbug.com/1074261)，設置 Cross-Origin-Resource-Policy 可能會破壞 PDF 渲染，導致訪客無法閱讀部分 PDF 的後續頁面。在生產環境中使用此標頭時請謹慎。
+> **備註：** 由於 [Chrome 中的錯誤](https://bugs.chromium.org/p/chromium/issues/detail?id%3D1074261)，設置 Cross-Origin-Resource-Policy 可能會破壞 PDF 渲染，導致訪客無法閱讀部分 PDF 的後續頁面。在生產環境中使用此標頭時請謹慎。
 
 Web 應用程式通過 {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP 回應標頭設置跨來源資源政策，該標頭接受下方三個值之一：
 
@@ -25,7 +25,7 @@ Web 應用程式通過 {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP 回�
 
   - : 只有來自同一[_站點_](/zh-TW/docs/Glossary/Site)的請求可以讀取資源。
 
-    > **警告：** 這比{{Glossary("origin", "來源")}}的安全性要低。檢查兩個來源是否為同一站點的[演算法](https://html.spec.whatwg.org/multipage/origin.html#same-site)在 HTML 標準中定義，涉及檢查*可註冊域*。
+    > **警告：** 這比{{Glossary("origin", "來源")}}的安全性要低。檢查兩個來源是否為同一站點的[演算法](https://html.spec.whatwg.org/multipage/browsers.html#same-site)在 HTML 標準中定義，涉及檢查*可註冊域*。
 
 - `same-origin`
   - : 只有來自相同[_來源_](/zh-TW/docs/Glossary/Origin)（即方案 + 主機 + 通訊埠）的請求可以讀取資源。

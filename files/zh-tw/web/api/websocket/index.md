@@ -105,7 +105,7 @@ void send(
 ## 參見
 
 - [製作 WebSocket 客戶端應用程式](/zh_tw/WebSockets/Writing_WebSocket_client_applications)
-- [HTML5: WebSockets](http://dev.w3.org/html5/websockets/)
+- [HTML5: WebSockets](https://websockets.spec.whatwg.org/)
 
 ## 瀏覽器兼容
 

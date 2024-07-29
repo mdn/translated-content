@@ -38,7 +38,7 @@ window.addEventListener("load", function () {
 });
 ```
 
-> **備註：** Chrome 不允許於載入事件中呼叫 [`Notification.requestPermission()`](/zh-TW/docs/Web/API/Notification.requestPermission) (參閱 [issue 274284](https://code.google.com/p/chromium/issues/detail?id=274284))。
+> **備註：** Chrome 不允許於載入事件中呼叫 [`Notification.requestPermission()`](/zh-TW/docs/Web/API/Notification.requestPermission) (參閱 [issue 274284](https://bugs.chromium.org/p/chromium/issues/detail?id%3D274284))。
 
 ### 已安裝的 Apps
 

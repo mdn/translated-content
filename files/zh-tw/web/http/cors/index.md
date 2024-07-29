@@ -74,9 +74,9 @@ CORS 失敗會導致錯誤，但出於安全原因，關於錯誤的具體訊息
 
 > **備註：** WebKit Nightly 和 Safari Technology Preview 對 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}} 和 {{HTTPHeader("Content-Language")}} 標頭中的值施加了額外的限制。如果這些標頭中的任何一個具有「非標準」值，WebKit/Safari 不會認為該請求是「簡單請求」。WebKit/Safari 認為「非標準」的值未在文檔中說明，除了以下 WebKit bug：
 >
-> - [對於非標準的 CORS 安全列表請求標頭 Accept、Accept-Language 和 Content-Language 要求進行預檢](https://webkit.org/b/165178)
-> - [允許在簡單 CORS 請求中 Accept、Accept-Language 和 Content-Language 標頭中包含逗號](https://webkit.org/b/165566)
-> - [在簡單 CORS 請求中對 Accept 標頭值使用黑名單模型](https://webkit.org/b/166363)
+> - [對於非標準的 CORS 安全列表請求標頭 Accept、Accept-Language 和 Content-Language 要求進行預檢](https://bugs.webkit.org/show_bug.cgi?id%3D165178)
+> - [允許在簡單 CORS 請求中 Accept、Accept-Language 和 Content-Language 標頭中包含逗號](https://bugs.webkit.org/show_bug.cgi?id%3D165566)
+> - [在簡單 CORS 請求中對 Accept 標頭值使用黑名單模型](https://bugs.webkit.org/show_bug.cgi?id%3D166363)
 >
 > 沒有其他瀏覽器實施這些額外的限制，因為它們不屬於該規範。
 
@@ -338,7 +338,7 @@ CORS 預檢請求絕不能包含憑證。預檢請求的*回應*必須指定 `Ac
 
 > **備註：** 一些企業身份驗證服務要求在預檢請求中發送 TLS 用戶端憑證，這違反了[Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) 規範。
 >
-> Firefox 87 允許通過將偏好設置 `network.cors_preflight.allow_client_cert` 設為 `true` 來啟用這種不合規行為（[Firefox bug 1511151](https://bugzil.la/1511151)）。基於 Chromium 的瀏覽器目前在 CORS 預檢請求中總是發送 TLS 用戶端憑證（[Chrome bug 775438](https://crbug.com/775438)）。
+> Firefox 87 允許通過將偏好設置 `network.cors_preflight.allow_client_cert` 設為 `true` 來啟用這種不合規行為（[Firefox bug 1511151](https://bugzilla.mozilla.org/show_bug.cgi?id%3D1511151)）。基於 Chromium 的瀏覽器目前在 CORS 預檢請求中總是發送 TLS 用戶端憑證（[Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id%3D775438)）。
 
 #### 憑證請求與通配符
 

@@ -177,7 +177,7 @@ Firefox 會在焦點位於按鈕上時添加一個小虛點邊框。這個邊框
 
 ### 點擊和焦點
 
-在大多數瀏覽器中，單擊 {{HTMLElement("button")}} 或 {{HTMLElement("input")}} 按鈕類型會導致其（默認情況下）獲得焦點，但是根據瀏覽器和操作系統，這是不同的。大多數瀏覽器確實會將焦點設置在單擊的按鈕上，但是 [Safari 由於設計原因不會這樣做](https://webkit.org/b/22261)。
+在大多數瀏覽器中，單擊 {{HTMLElement("button")}} 或 {{HTMLElement("input")}} 按鈕類型會導致其（默認情況下）獲得焦點，但是根據瀏覽器和操作系統，這是不同的。大多數瀏覽器確實會將焦點設置在單擊的按鈕上，但是 [Safari 由於設計原因不會這樣做](https://bugs.webkit.org/show_bug.cgi?id%3D22261)。
 
 ## 技術摘要
 

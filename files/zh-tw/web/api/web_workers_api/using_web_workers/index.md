@@ -27,7 +27,7 @@ dedicated worker 只能被產生它的檔案存取，下面我們先介紹簡單
 
 ### 偵測 Worker 功能
 
-為了向下相容、避免錯誤，最好是確保 worker 存在後再取用之 ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)):
+為了向下相容、避免錯誤，最好是確保 worker 存在後再取用之 ([main.js](https://github.com/mdn/simple-web-worker/blob/main/main.js)):
 
 ```js
 if (window.Worker) {
@@ -39,7 +39,7 @@ if (window.Worker) {
 
 ### 產生 dedicated worker
 
-只要呼叫 {{domxref("Worker.Worker", "Worker()")}} 建構子，傳入 JS 檔案的 URI，便可以生成一個 worker 執行緒 ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)):
+只要呼叫 {{domxref("Worker.Worker", "Worker()")}} 建構子，傳入 JS 檔案的 URI，便可以生成一個 worker 執行緒 ([main.js](https://github.com/mdn/simple-web-worker/blob/main/main.js)):
 
 ```js hidden
 var myWorker = new Worker("worker.js");
@@ -47,7 +47,7 @@ var myWorker = new Worker("worker.js");
 
 ### 和 dedicated worker 發送訊息
 
-{{domxref("Worker.postMessage", "postMessage()")}} 方法以及 {{domxref("Worker.onmessage", "onmessage")}} 事件處理器就是和 worker 發送訊息的關鍵 ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)):
+{{domxref("Worker.postMessage", "postMessage()")}} 方法以及 {{domxref("Worker.onmessage", "onmessage")}} 事件處理器就是和 worker 發送訊息的關鍵 ([main.js](https://github.com/mdn/simple-web-worker/blob/main/main.js)):
 
 ```js
 first.onchange = function () {
@@ -63,7 +63,7 @@ second.onchange = function () {
 
 範例中有兩個 {{htmlelement("input")}} 元素，first 和 second，當元素值改變時，我們會利用 postMessage() 方法告訴 worker 改變的值 (這邊用陣列，也可以用其他類別)。
 
-然後在 worker 裡我們從 `onmessage` 接收訊息 ([worker.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/worker.js)):
+然後在 worker 裡我們從 `onmessage` 接收訊息 ([worker.js](https://github.com/mdn/simple-web-worker/blob/main/worker.js)):
 
 ```js
 onmessage = function (e) {
@@ -148,11 +148,11 @@ shared worker 能夠被多個程式腳本存取，縱使跨越不同 window、if
 
 > **備註：** 所有的瀏覽環境都必需共享相同的來源（相同 protocol, host 和 port），shared worker 才能讓不同瀏覽環境存取。
 
-> **備註：** 在 Firefox，shared worker 無法在一般和隱私模式間共享（[Firefox bug 1177621](https://bugzil.la/1177621)）。
+> **備註：** 在 Firefox，shared worker 無法在一般和隱私模式間共享（[Firefox bug 1177621](https://bugzilla.mozilla.org/show_bug.cgi?id%3D1177621)）。
 
 ### 產生 shared worker
 
-和 dedicated worker 做法差不多，只是用另一個 SharedWorker 建構子來產生 shared worker，見 [index.html](https://github.com/mdn/simple-shared-worker/blob/gh-pages/index.html) 和 [index2.html](http://mdn.github.io/simple-shared-worker/index2.html):
+和 dedicated worker 做法差不多，只是用另一個 SharedWorker 建構子來產生 shared worker，見 [index.html](https://github.com/mdn/simple-shared-worker/blob/main/index.html) 和 [index2.html](http://mdn.github.io/simple-shared-worker/index2.html):
 
 ```js
 var myWorker = new SharedWorker("worker.js");
@@ -160,7 +160,7 @@ var myWorker = new SharedWorker("worker.js");
 
 相當不 一樣的是和 shared worker 溝通必須要透過 port 物件，其實 dedicated worker 也是如此，只不過一切是在背景後自動完成。
 
-開啟 port 連線一是在 onmessage 事件下背景完成，二是藉由主動呼叫 start() 好開始傳送訊息。範例 [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) 以及 [worker.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js) 因為註冊了 onmessage 事件，所以其實可以省略呼叫 start()，然而若是 message 事件是經由 `addEventListener()註冊，那麼便需要呼叫 start() 了。`
+開啟 port 連線一是在 onmessage 事件下背景完成，二是藉由主動呼叫 start() 好開始傳送訊息。範例 [multiply.js](https://github.com/mdn/simple-shared-worker/blob/main/multiply.js) 以及 [worker.js](https://github.com/mdn/simple-shared-worker/blob/main/worker.js) 因為註冊了 onmessage 事件，所以其實可以省略呼叫 start()，然而若是 message 事件是經由 `addEventListener()註冊，那麼便需要呼叫 start() 了。`
 
 當使用 start() 開啟 port 連線，那麼雙向溝通便需要主執行緒和 worker 兩端都呼叫 start()。
 
@@ -174,7 +174,7 @@ port.start(); // called in worker thread, assuming the port variable references 
 
 ### 和 shared worker 發送訊息
 
-如同前面，現在可以呼叫 `postMessage()` 發送訊息，只不過這次需要透過 port 物件 (一樣請參考 [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) 和 [square.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js)):
+如同前面，現在可以呼叫 `postMessage()` 發送訊息，只不過這次需要透過 port 物件 (一樣請參考 [multiply.js](https://github.com/mdn/simple-shared-worker/blob/main/multiply.js) 和 [square.js](https://github.com/mdn/simple-shared-worker/blob/main/square.js)):
 
 ```js
 squareNumber.onchange = function () {
@@ -183,7 +183,7 @@ squareNumber.onchange = function () {
 };
 ```
 
-worker 方面也增加了一些程式碼 ([worker.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js)):
+worker 方面也增加了一些程式碼 ([worker.js](https://github.com/mdn/simple-shared-worker/blob/main/worker.js)):
 
 ```js
 onconnect = function (e) {
@@ -202,7 +202,7 @@ onconnect = function (e) {
 
 取得 port 之後，我們註冊 port 上的 onmessage 事件，當有訊息進來便取回資料進行運算後回傳回去；註冊 onmessage 事件的同時也自動建立連線，所以說不需要呼叫 start() 了。
 
-最後在主執行緒端，我們同樣由 onmessage 事件取回回傳過來的訊息 (一樣請參考 [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) 和 [square.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js)):
+最後在主執行緒端，我們同樣由 onmessage 事件取回回傳過來的訊息 (一樣請參考 [multiply.js](https://github.com/mdn/simple-shared-worker/blob/main/multiply.js) 和 [square.js](https://github.com/mdn/simple-shared-worker/blob/main/square.js)):
 
 ```js
 myWorker.port.onmessage = function (e) {
