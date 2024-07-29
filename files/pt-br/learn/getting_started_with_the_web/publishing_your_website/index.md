@@ -65,11 +65,13 @@ Agora vamos mostrar como publicar seu site facilmente por meio das páginas do G
 4. ![](github-create-repo.png)
 5. Arraste e solte o conteúdo da pasta do site no seu repositório e clique em _Commit changes_ (confirmar alterações).
 
-   > **Nota:** Nota: Certifique-se que sua pasta possui um arquivo `index.html`.
+   > [!NOTE]
+   > Nota: Certifique-se que sua pasta possui um arquivo `index.html`.
 
 6. Navegue em seu navegador até _username_.github.io para ver seu site online. Por exemplo, para o usuário _chrisdavidmills_, vá para [_chrisdavidmills_.github.io](http://chrisdavidmills.github.io/).
 
-> **Nota:** Nota: Pode levar alguns minutos para seu site ficar online. Se ele não funcionar imediatamente, talvez seja necessário aguardar alguns minutos e tentar novamente.
+> [!NOTE]
+> Nota: Pode levar alguns minutos para seu site ficar online. Se ele não funcionar imediatamente, talvez seja necessário aguardar alguns minutos e tentar novamente.
 
 Para aprender mais, consulte a [Ajuda do Github Pages](https://help.github.com/en/categories/github-pages-basics) (em inglês).
 

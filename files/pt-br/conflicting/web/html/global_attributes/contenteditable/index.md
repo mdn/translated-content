@@ -22,7 +22,8 @@ Conteúdo editável é totalmente compatível com os seguintes browsers.
 
 Ainda não é suportato pelo Opera Mini.
 
-> **Nota:** \*A maioria dos elementos HTML não suporta esta funcionalidade
+> [!NOTE]
+> \*A maioria dos elementos HTML não suporta esta funcionalidade
 
 ## Como isso funciona?
 
