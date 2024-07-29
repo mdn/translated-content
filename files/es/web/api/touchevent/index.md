@@ -37,7 +37,8 @@ _Esta interfaz hereda propiedades de sus padres {{domxref("UIEvent")}} y {{domxr
 
 Hay varios tipos de eventos que pueden ser disparados (activados) para indicar que han ocurrido cambios relacionados con el contacto. Puede determinar cuál de estos ha ocurrido mirando la propiedad {{domxref ("event.type", "TouchEvent.type")}} del evento.
 
-> **Nota:** Es importante observar que en muchos casos, Los eventos táctiles y de mouse se envían (para permitir que el código no táctil específico aún interactúe con el usuario). Si usa eventos táctiles, debe llamar a {{domxref ("event.preventDefault ()")}} para evitar que también se envíe el evento del mouse.
+> [!NOTE]
+> Es importante observar que en muchos casos, Los eventos táctiles y de mouse se envían (para permitir que el código no táctil específico aún interactúe con el usuario). Si usa eventos táctiles, debe llamar a {{domxref ("event.preventDefault ()")}} para evitar que también se envíe el evento del mouse.
 
 ### [`touchstart`](/es/docs/Web/Reference/Events/touchstart)
 
@@ -57,7 +58,8 @@ Sent when the user moves a touch point along the surface. The event's target is 
 
 This event is also sent if the values of the radius, rotation angle, or force attributes of a touch point change.
 
-> **Nota:** The rate at which `touchmove` events is sent is browser-specific, and may also vary depending on the capability of the user's hardware. You must not rely on a specific granularity of these events.
+> [!NOTE]
+> The rate at which `touchmove` events is sent is browser-specific, and may also vary depending on the capability of the user's hardware. You must not rely on a specific granularity of these events.
 
 ### [`touchcancel`](/es/docs/Web/Reference/Events/touchcancel)
 

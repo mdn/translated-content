@@ -30,7 +30,8 @@ Con las cosas que has aprendido en las últimas lecciones, puedes darle formato 
 
 Puedes trabajar en el editor en vivo más abajo, o puedes descargar el punto de partida para trabajar con tu propio editor. Esta es una página HTML, con el inicio del CSS en el `<head>` del documento. Si prefieres, puedes mover este CSS a un archivo separado cuando crees el ejemplo en tu computador. Alternativamente, puedes usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
 
-> **Nota:** Si te atascas, pide ayuda — mira la sección [Evaluación o ayuda adicional](#Evaluación_o_ayuda_adicional) al final de esta página.
+> [!NOTE]
+> Si te atascas, pide ayuda — mira la sección [Evaluación o ayuda adicional](#Evaluación_o_ayuda_adicional) al final de esta página.
 
 ## Trabajando con CSS
 

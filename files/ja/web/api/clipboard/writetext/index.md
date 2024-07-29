@@ -6,7 +6,7 @@ slug: Web/API/Clipboard/writeText
 {{APIRef("Clipboard API")}}
 
 {{domxref("Clipboard")}} インターフェイスの **`writeText()`**
-メソッドは、指定されたテキスト文字列をシステムのクリップボードの書き込みます。テキストは {{domxref("Clipboard.read", "read()")}} または {{domxref("Clipboard.readText", "readText()")}} を使って読み戻すことができます。
+メソッドは、指定されたテキスト文字列をシステムのクリップボードに書き込みます。テキストは {{domxref("Clipboard.read", "read()")}} または {{domxref("Clipboard.readText", "readText()")}} を使って読み戻すことができます。
 
 [権限 API](/ja/docs/Web/API/Permissions_API) の `"clipboard-write"` 権限は、ページがアクティブなタブにあるときに自動的に付与されます。
 

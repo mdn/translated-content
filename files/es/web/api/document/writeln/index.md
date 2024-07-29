@@ -7,7 +7,8 @@ slug: Web/API/Document/writeln
 
 Escribe una cadena de texto en el documento, seguida de una nueva línea.
 
-> **Nota:** Dado que `document.writeln` (al igual que `document.write)` escribe directo al hilo (`stream`) de un documento, la llamada a `document.write` en un documento ya cargado automáticamente ejecuta `document.open`, [lo cual limpiará todo el contenido del documento en cuestión](/es/docs/Web/API/document.open#Notes).
+> [!NOTE]
+> Dado que `document.writeln` (al igual que `document.write)` escribe directo al hilo (`stream`) de un documento, la llamada a `document.write` en un documento ya cargado automáticamente ejecuta `document.open`, [lo cual limpiará todo el contenido del documento en cuestión](/es/docs/Web/API/document.open#Notes).
 
 ## Sintaxis
 

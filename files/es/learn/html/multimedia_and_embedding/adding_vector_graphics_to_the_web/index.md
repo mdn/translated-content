@@ -29,7 +29,8 @@ Los gráficos vectoriales son muy útiles en muchas circunstancias — tienen ta
   </tbody>
 </table>
 
-> **Nota:** Este artículo no tiene la intención de enseñarte SVG; solo mostrarte qué es, y cómo agregarlo a las páginas web.
+> [!NOTE]
+> Este artículo no tiene la intención de enseñarte SVG; solo mostrarte qué es, y cómo agregarlo a las páginas web.
 
 ## ¿Qué son los gráficos vectoriales?
 
@@ -46,7 +47,8 @@ La diferencia se hace evidente cuando amplía la página — la imagen PNG se pi
 
 ![Two star images zoomed in, one crisp and the other blurry](raster-vector-zoomed.png)
 
-> **Nota:** Las imágenes de arriba son en realidad todos PNG, con la estrella de la izquierda en cada caso representando una imagen rasterizada y la estrella de la derecha representando una imagen vectorial. Nuevamente, vaya a la demostración de vector-versus-raster.html para ver un ejemplo real.
+> [!NOTE]
+> Las imágenes de arriba son en realidad todos PNG, con la estrella de la izquierda en cada caso representando una imagen rasterizada y la estrella de la derecha representando una imagen vectorial. Nuevamente, vaya a la demostración de vector-versus-raster.html para ver un ejemplo real.
 
 Además, los archivos de imágenes vectoriales son mucho más ligeros que sus equivalentes ráster, porque solo necesitan contener un puñado de algoritmos, en lugar de información sobre cada píxel de la imagen individualmente.
 
@@ -87,7 +89,8 @@ Entonces, ¿por qué alguien querría usar gráficos rasterizados sobre SVG? Bue
 
 Los gráficos rasterizados son posiblemente mejores para imágenes de precisión complejas, como fotos, por las razones descritas anteriormente.
 
-> **Nota:** En Inkscape, guarde sus archivos como SVG simple para ahorrar espacio. Además, consulte este artículo que describe [cómo preparar SVGs para la web](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html).
+> [!NOTE]
+> En Inkscape, guarde sus archivos como SVG simple para ahorrar espacio. Además, consulte este artículo que describe [cómo preparar SVGs para la web](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html).
 
 ## Agregar SVG a sus páginas
 

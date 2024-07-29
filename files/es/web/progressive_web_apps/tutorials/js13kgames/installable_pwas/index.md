@@ -18,7 +18,8 @@ Para que el sitio web sea instalable, necesitas lo siguiente:
 - Un icono para representar la aplicación en el dispositivo.
 - Un [servicio worker](/es/docs/Web/API/Service_Worker_API) registrado para permitir que la aplicación funcione sin conexión (actualmente, esto solo lo requiere Chrome para Android)
 
-> **Nota:** Actualmente, solo los navegadores basados en Chromium tal como Chrome, Edge y Samsung Internet requieren el servicio _worker_. Si desarrollas tu aplicación con Firefox, ten en cuenta que necesitarás un servicio _worker_ para que sea compatible con los navegadores basados en Chromium.
+> [!NOTE]
+> Actualmente, solo los navegadores basados en Chromium tal como Chrome, Edge y Samsung Internet requieren el servicio _worker_. Si desarrollas tu aplicación con Firefox, ten en cuenta que necesitarás un servicio _worker_ para que sea compatible con los navegadores basados en Chromium.
 
 ### El archivo de manifiesto
 
@@ -32,7 +33,8 @@ El archivo `js13kpwa.webmanifest` de la aplicación web [js13kPWA](https://mdn.g
 <link rel="manifest" href="js13kpwa.webmanifest" />
 ```
 
-> **Nota:** Hay algunos tipos comunes de archivos de manifiesto que se han utilizado en el pasado: `manifest.webapp` era popular en los manifiestos de aplicaciones de Firefox OS, y muchos usan `manifest.json` para manifestar aplicaciones web ya que el contenido está organizado en una estructura JSON. Sin embargo, el formato de archivo `.webmanifest` se menciona explícitamente en la [especificación del manifiesto W3C](https://w3c.github.io/manifest/), por lo tanto ese es el que usaremos aquí.
+> [!NOTE]
+> Hay algunos tipos comunes de archivos de manifiesto que se han utilizado en el pasado: `manifest.webapp` era popular en los manifiestos de aplicaciones de Firefox OS, y muchos usan `manifest.json` para manifestar aplicaciones web ya que el contenido está organizado en una estructura JSON. Sin embargo, el formato de archivo `.webmanifest` se menciona explícitamente en la [especificación del manifiesto W3C](https://w3c.github.io/manifest/), por lo tanto ese es el que usaremos aquí.
 
 El contenido del archivo se ve así:
 

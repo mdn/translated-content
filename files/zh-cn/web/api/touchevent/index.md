@@ -37,7 +37,8 @@ _{{ domxref("TouchEvent") }}的属性继承了 {{domxref("UIEvent")}} 和 {{domx
 
 为了区别触摸相关的状态改变，存在多种类型的触摸事件。可以通过检查触摸事件的 {{ domxref("event.type", "TouchEvent.type") }} 属性来确定当前事件属于哪种类型
 
-> **备注：** 在很多情况下，触摸事件和鼠标事件会同时被触发（目的是让没有对触摸设备优化的代码仍然可以在触摸设备上正常工作）。如果你使用了触摸事件，可以调用 {{ domxref("event.preventDefault()") }} 来阻止鼠标事件被触发。
+> [!NOTE]
+> 在很多情况下，触摸事件和鼠标事件会同时被触发（目的是让没有对触摸设备优化的代码仍然可以在触摸设备上正常工作）。如果你使用了触摸事件，可以调用 {{ domxref("event.preventDefault()") }} 来阻止鼠标事件被触发。
 
 ### {{domxref("Element/touchstart_event", "touchstart")}}
 
@@ -57,7 +58,8 @@ _{{ domxref("TouchEvent") }}的属性继承了 {{domxref("UIEvent")}} 和 {{domx
 
 当触点的半径、旋转角度以及压力大小发生变化时，也将触发此事件。
 
-> **备注：** 不同浏览器上 `touchmove` 事件的触发频率并不相同。这个触发频率还和硬件设备的性能有关。因此决不能让程序的运作依赖于某个特定的触发频率。
+> [!NOTE]
+> 不同浏览器上 `touchmove` 事件的触发频率并不相同。这个触发频率还和硬件设备的性能有关。因此决不能让程序的运作依赖于某个特定的触发频率。
 
 ### {{domxref("Element/touchcancel_event", "touchcancel")}}
 

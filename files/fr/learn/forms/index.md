@@ -9,7 +9,7 @@ l10n:
 
 Ce module contient un ensemble d'article pour acquérir les notions fondamentales relatives aux formulaires web. Les formulaires web sont un outil puissant pour l'interaction avec les utilisatrices et utilisateurs. On les utilise généralement pour collecter des données saisies ou pour permettre le contrôle de l'interface. Toutefois, pour des raisons historiques et techniques, il n'est pas évident de les utiliser avec tout leur potentiel. Dans les articles indiqués ci-après, nous aborderons les concepts essentiels des formulaires web&nbsp;: leur structure HTML, la mise en forme des contrôles des formulaires, la validation des données, et l'envoi de données au serveur.
 
-> **Remarque :**
+> [!CALLOUT]
 >
 > #### Vous souhaitez devenir développeuse ou développeur <i lang="en">front-end</i>&nbsp;?
 >
@@ -25,7 +25,8 @@ Pour maîtriser les formulaires, connaître le HTML ne sera pas suffisant. Il fa
 
 Le paragraphe précédent permet de comprendre pourquoi nous avons créé un module à part entière pour les formulaires (plutôt que de distiller le contenu sur les formulaires dans les sections sur HTML, CSS, et JavaScript). En effet, les éléments relatifs aux formulaires sont plus complexes que les autres éléments HTML et nécessite de travailler de concert avec des techniques basées sur CSS et ou JavaScript pour en tirer le meilleur parti.
 
-> **Note :** Si vous travaillez sur un appareil (que ce soit un ordinateur, une tablette ou autre) où vous ne pouvez pas créer vos propres fichiers, vous pouvez essayer la plupart des exemples de code fournis dans ces articles dans des outils en ligne comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!NOTE]
+> Si vous travaillez sur un appareil (que ce soit un ordinateur, une tablette ou autre) où vous ne pouvez pas créer vos propres fichiers, vous pouvez essayer la plupart des exemples de code fournis dans ces articles dans des outils en ligne comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guides introductifs
 

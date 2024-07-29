@@ -99,7 +99,8 @@ Found abb. Next match starts at 3
 Found ab. Next match starts at 9
 ```
 
-> **警告：** 以下情况会导致匹配变成一个无限循环！
+> [!WARNING]
+> 以下情况会导致匹配变成一个无限循环！
 >
 > - 不要把正则表达式字面量（或者 {{jsxref("RegExp")}} 构造函数）放在 `while` 条件表达式里。由于每次迭代时 {{jsxref("RegExp.lastIndex", "lastIndex")}} 的属性都被重置。
 > - 请确保设置了[全局（`g`）标志位](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#通过标志进行高级搜索)，否则 `lastIndex` 不会被更新。
