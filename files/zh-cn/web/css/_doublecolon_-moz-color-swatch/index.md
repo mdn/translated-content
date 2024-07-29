@@ -9,7 +9,8 @@ l10n:
 
 **`::-moz-color-swatch`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是用于表示在 `type="color"` 的 {{HTMLElement("input")}} 中选择的颜色的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)。
 
-> **备注：** 除了 `<input type="color">` 以外，使用 `::-moz-color-swatch` 不会匹配任何内容，也没有任何效果。
+> [!NOTE]
+> 除了 `<input type="color">` 以外，使用 `::-moz-color-swatch` 不会匹配任何内容，也没有任何效果。
 
 ## 语法
 

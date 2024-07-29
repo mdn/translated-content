@@ -57,7 +57,7 @@ Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 2)); // 要素あり
 // TypeError: 要素を含む配列バッファービューは凍結できない
 ```
 
-なお、標準の 3 つのプロパティ (`buf.byteLength`, `buf.byteOffset, `buf.buffer`) は読み取り専用ですので（{{jsxref("ArrayBuffer")}} または {{jsxref("SharedArrayBuffer")}} の場合）、これらのプロパティを凍結しようとする理由はありません。
+なお、標準の 3 つのプロパティ (`buf.byteLength`, `buf.byteOffset`, `buf.buffer`) は読み取り専用ですので（{{jsxref("ArrayBuffer")}} または {{jsxref("SharedArrayBuffer")}} の場合）、これらのプロパティを凍結しようとする理由はありません。
 
 {{jsxref("Object.seal()")}} とは異なり、 `Object.freeze()` によって凍結されたオブジェクトの既存のプロパティは不変となり、データプロパティには代入できなくなります。
 

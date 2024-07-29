@@ -29,7 +29,8 @@ worker.postMessage(uInt8Array, [uInt8Array.buffer]);
 console.log(uInt8Array.byteLength); // 0
 ```
 
-> **备注：** 像 {{jsxref("Int32Array")}} 和 {{jsxref("Uint8Array")}} 等[类型化数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)是{{Glossary("serializable object","可序列化的")}}，但是不能转移。然而，它们的底层缓冲区是一个 {{jsxref("ArrayBuffer")}}，它是一个可转移对象。我们可以在数据参数中发送 `uInt8Array.buffer`，但是不能在传输数组中发送 `uInt8Array`。
+> [!NOTE]
+> 像 {{jsxref("Int32Array")}} 和 {{jsxref("Uint8Array")}} 等[类型化数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)是{{Glossary("serializable object","可序列化的")}}，但是不能转移。然而，它们的底层缓冲区是一个 {{jsxref("ArrayBuffer")}}，它是一个可转移对象。我们可以在数据参数中发送 `uInt8Array.buffer`，但是不能在传输数组中发送 `uInt8Array`。
 
 ### 在进行克隆操作时转移
 
@@ -73,7 +74,8 @@ console.log(original.byteLength); // 0
 
 在各自对象的兼容性信息中，如果拥有 `transferable` 子特性，浏览器的支持应该被展示（示例请参阅 [`RTCDataChannel`](/zh-CN/docs/Web/API/RTCDataChannel#浏览器兼容性)）。在撰写本文时，并非所有可转移对象都已更新此信息。
 
-> **备注：** 可转移的对象在 [Web IDL 文件](https://github.com/w3c/webref/tree/main/ed/idl)中用属性 `[Transferable]` 标记。
+> [!NOTE]
+> 可转移的对象在 [Web IDL 文件](https://github.com/w3c/webref/tree/main/ed/idl)中用属性 `[Transferable]` 标记。
 
 ## 参见
 

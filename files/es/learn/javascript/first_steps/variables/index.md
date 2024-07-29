@@ -62,7 +62,8 @@ Las variables simplemente tienen sentido y, a medida que aprendas más sobre Jav
 
 Otra cosa especial acerca de las variables es que pueden contener casi cualquier cosa, no solo cadenas y números. Las variables también pueden contener datos complejos e incluso funciones completas para hacer cosas asombrosas. Aprenderás más sobre esto a medida que avances.
 
-> **Nota:** Decimos que las variables contienen valores. Ésta es una importante distinción que debemos reconocer. Las variables no son los valores en sí mismos; son contenedores de valores. Puedes pensar en ellas como pequeñas cajas de cartón en las que puedes guardar cosas.
+> [!NOTE]
+> Decimos que las variables contienen valores. Ésta es una importante distinción que debemos reconocer. Las variables no son los valores en sí mismos; son contenedores de valores. Puedes pensar en ellas como pequeñas cajas de cartón en las que puedes guardar cosas.
 
 ![](boxes.png)
 
@@ -77,7 +78,8 @@ let myAge;
 
 Aquí estamos creando dos variables llamadas `myName` y `myAge`. Intenta escribir estas líneas en la consola de tu navegador web. Después de eso, intenta crear una variable (o dos) eligiendo tú su nombre.
 
-> **Nota:** En JavaScript, todas las instrucciones en el código deben terminar con un punto y coma (`;`) — tu código puede funcionar correctamente para líneas individuales, pero probablemente no lo hará cuando estés escribiendo varias líneas de código juntas. Trata de adquirir el hábito de incluirlo.
+> [!NOTE]
+> En JavaScript, todas las instrucciones en el código deben terminar con un punto y coma (`;`) — tu código puede funcionar correctamente para líneas individuales, pero probablemente no lo hará cuando estés escribiendo varias líneas de código juntas. Trata de adquirir el hábito de incluirlo.
 
 Puedes probar si estos valores existen ahora en el entorno de ejecución escribiendo solo el nombre de la variable, p. ej.
 
@@ -92,7 +94,8 @@ Actualmente no tienen ningún valor; son contenedores vacíos. Cuando ingreses l
 scoobyDoo;
 ```
 
-> **Nota:** No confundas una variable que existe pero no tiene un valor definido, con una variable que no existe en absoluto — son cosas muy diferentes. En la analogía de cajas que viste arriba, no existir significaría que no hay una caja (variable) para guardar un valor. Ningún valor definido significaría que HAY una caja, pero no tiene ningún valor dentro de ella.
+> [!NOTE]
+> No confundas una variable que existe pero no tiene un valor definido, con una variable que no existe en absoluto — son cosas muy diferentes. En la analogía de cajas que viste arriba, no existir significaría que no hay una caja (variable) para guardar un valor. Ningún valor definido significaría que HAY una caja, pero no tiene ningún valor dentro de ella.
 
 ## Iniciar una variable
 
@@ -140,7 +143,8 @@ logName();
 var myName;
 ```
 
-> **Nota:** Esto no funcionará al escribir líneas individuales en una consola de JavaScript, solo cuando se ejecutan varias líneas de JavaScript en un documento web.
+> [!NOTE]
+> Esto no funcionará al escribir líneas individuales en una consola de JavaScript, solo cuando se ejecutan varias líneas de JavaScript en un documento web.
 
 Esto funciona debido a la **elevación** — lee {{jsxref("Sentencias/var", "Elevación de variables", "#Elevación_de_variables")}} para obtener más detalles sobre el tema.
 
@@ -192,7 +196,8 @@ Puedes llamar a una variable prácticamente como quieras, pero existen limitacio
 - Las variables distinguen entre mayúsculas y minúsculas — por lo tanto `myage` es una variable diferente de `myAge`.
 - Un último punto: también debes evitar el uso de palabras reservadas de JavaScript como nombres de variables — con esto, nos referimos a las palabras que componen la sintaxis real de JavaScript. Por lo tanto, no puedes usar palabras como `var`, `function`, `let` y `for` como nombres de variables. Los navegadores las reconocen como elementos de código diferentes, por lo que obtendrás errores.
 
-> **Nota:** Puedes encontrar una lista bastante completa de palabras clave reservadas que debes evitar en {{jsxref("Gramática_léxica", "Gramática léxica — Palabras clave", "#Palabras_clave")}}.
+> [!NOTE]
+> Puedes encontrar una lista bastante completa de palabras clave reservadas que debes evitar en {{jsxref("Gramática_léxica", "Gramática léxica — Palabras clave", "#Palabras_clave")}}.
 
 Ejemplos de buenos nombres:
 

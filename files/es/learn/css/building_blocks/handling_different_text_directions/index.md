@@ -124,7 +124,8 @@ Por ejemplo, puedes hacer que una imagen flote a la izquierda para hacer que el 
 
 Aquí también estamos usando valores lógicos de margen para asegurar que el margen está en el sitio correcto sin importar que modo de escritura es.
 
-> **Nota:** Actualmente, solo Firefox soporta valores relativos de flujo para `float`. Si estás usando **Google Chrome** o **Microsoft Edge**, deberías ver que la imagen no flota.
+> [!NOTE]
+> Actualmente, solo Firefox soporta valores relativos de flujo para `float`. Si estás usando **Google Chrome** o **Microsoft Edge**, deberías ver que la imagen no flota.
 
 ### ¿Debería usar propiedades físicas o lógicas?
 

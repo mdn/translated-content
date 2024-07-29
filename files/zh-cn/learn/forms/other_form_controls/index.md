@@ -51,7 +51,8 @@ slug: Learn/Forms/Other_form_controls
 
 ![The default, focused, and disabled 'textarea' element in Firefox 71 and Safari 13 on Mac OSX and Edge 18, Yandex 14, Firefox and Chrome on Windows 10.](textarea_basic.png)
 
-> **备注：** 你可以在该系列的第一篇文章中整理的例子中找到一个稍微有趣的文本区域使用的[示例](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)（[顺便看看源代码](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html)）。
+> [!NOTE]
+> 你可以在该系列的第一篇文章中整理的例子中找到一个稍微有趣的文本区域使用的[示例](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)（[顺便看看源代码](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html)）。
 
 ### 控制多行渲染
 
@@ -80,7 +81,8 @@ slug: Learn/Forms/Other_form_controls
 
 下拉菜单是一种简单地让用户从许多不同选项中进行选择的控件，不占用用户界面太多空间。HTML 有两种下拉内容：一种是**选择框**、另外一种是**自动补全框**。这两种情况下的交互是相同的——一旦被激活，浏览器就会显示可供用户选择的值的列表。
 
-> **备注：** 你可以在 GitHub 的 [drop-down-content.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/drop-down-content.html) 上找到所有下拉框类型的例子（[也可以看看在线演示](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html)）。
+> [!NOTE]
+> 你可以在 GitHub 的 [drop-down-content.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/drop-down-content.html) 上找到所有下拉框类型的例子（[也可以看看在线演示](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html)）。
 
 ### 选择框
 
@@ -160,9 +162,11 @@ slug: Learn/Forms/Other_form_controls
 
 {{EmbedLiveSample("多选选择框", 120, 120)}}
 
-> **备注：** 在多选选择框的情况下，你会注意到选择框不再以下拉内容的形式显示数值——相反，所有的值都会一次性显示在一个列表中，可选的 [`size`](/zh-CN/docs/Web/HTML/Attributes/size) 属性决定了控件的高度。
+> [!NOTE]
+> 在多选选择框的情况下，你会注意到选择框不再以下拉内容的形式显示数值——相反，所有的值都会一次性显示在一个列表中，可选的 [`size`](/zh-CN/docs/Web/HTML/Attributes/size) 属性决定了控件的高度。
 
-> **备注：** 任何支持 {{HTMLElement("select")}} 元素的浏览器也支持 [`multiple`](/zh-CN/docs/Web/HTML/Element/select#multiple) 属性。
+> [!NOTE]
+> 任何支持 {{HTMLElement("select")}} 元素的浏览器也支持 [`multiple`](/zh-CN/docs/Web/HTML/Element/select#multiple) 属性。
 
 ### 自动补全框
 
@@ -240,7 +244,8 @@ slug: Learn/Forms/Other_form_controls
 
 还有一些其他的表单功能，不像我们已经提到的那样明显，但在某些情况下仍然有用，所以我们认为值得给它们一个简单的提及。
 
-> **备注：** 你可以在 GitHub 上找到本节的例子，如 [other-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/other-examples.html)（[也可以看看在线演示](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)）。
+> [!NOTE]
+> 你可以在 GitHub 上找到本节的例子，如 [other-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/other-examples.html)（[也可以看看在线演示](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)）。
 
 ### 计量器和进度条
 

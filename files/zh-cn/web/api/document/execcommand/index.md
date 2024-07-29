@@ -19,7 +19,8 @@ bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 一个 {{jsxref('Boolean')}} ，如果是 `false` 则表示操作不被支持或未被启用。
 
-> **备注：** 在调用一个命令前，不要尝试使用返回值去校验浏览器的兼容性
+> [!NOTE]
+> 在调用一个命令前，不要尝试使用返回值去校验浏览器的兼容性
 
 ### 参数
 

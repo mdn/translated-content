@@ -13,7 +13,8 @@ URL 的生命周期与其创建时所在窗口的 {{domxref("document")}} 绑定
 
 要释放对象 URL，请调用 {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}}。
 
-> **备注：** 此特性在 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 中*不*可用，因为它有可能导致内存泄漏。
+> [!NOTE]
+> 此特性在 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 中*不*可用，因为它有可能导致内存泄漏。
 
 ## 语法
 
@@ -46,7 +47,8 @@ URL.createObjectURL(object)
 
 在较早版本的媒体源规范中，需要为 {{domxref("MediaStream")}} 创建一个对象 URL 才能将流附加到 {{HTMLElement("video")}} 元素。这已不再必要，浏览器正在逐步取消对此的支持。
 
-> **警告：** 如果你还有依赖于 {{domxref("URL.createObjectURL_static", "createObjectURL()")}} 将流附加到媒体元素的代码，你需要更新代码并将 {{domxref("HTMLMediaElement.srcObject", "srcObject")}} 设置为 `MediaStream`。
+> [!WARNING]
+> 如果你还有依赖于 {{domxref("URL.createObjectURL_static", "createObjectURL()")}} 将流附加到媒体元素的代码，你需要更新代码并将 {{domxref("HTMLMediaElement.srcObject", "srcObject")}} 设置为 `MediaStream`。
 
 ## 规范
 

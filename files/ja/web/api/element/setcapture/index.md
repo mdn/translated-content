@@ -10,7 +10,8 @@ l10n:
 
 mousedown イベントの処理中にこのメソッドを呼び出すと、マウスボタンが離されるか {{domxref("document.releaseCapture()")}} が呼び出されるまで、この要素にすべてのマウスイベントを捕捉します。
 
-> **警告:** このインターフェイスにはブラウザー間の対応がほとんどありませんでした。おそらくお探しのものは {{domxref("element.setPointerCapture")}} （ポインターイベント API）でしょう。
+> [!WARNING]
+> このインターフェイスにはブラウザー間の対応がほとんどありませんでした。おそらくお探しのものは {{domxref("element.setPointerCapture")}} （ポインターイベント API）でしょう。
 
 ## 構文
 

@@ -100,7 +100,8 @@ Asegúrese de contar con suficiente {{Glossary("Ancho de banda", "ancho de banda
 
 Los proveedores de alojamiento te cobran de acuerdo a cuánto {{Glossary("Ancho de banda", "ancho de banda")}} consume tu sitio web. . Esto depende de cuántas personaas, y robots de rastreo Web, accedan a tu contenido durante un tiempo dado, y cuánto espacio en el servidor tu contenido ocupa. Esta es la razón por la cual las personas usualmente almacenan sus videos en servicios dedicadostales como Youtube, Dailymotion, y Vimeo. Por ejemplo, tu proveedor puede tener un plan que incluye hasta varios miles de visitantes por díam por un uso "razonable". Sea cuidadoso, puesto que puede variar mucho de un servidor de alojamiento a otro. Como regla de oro, reconozca que el servicio de alojamiento confiable, pagado y personal puede costar alrededor de 10 a 15 dólares al mes.
 
-> **Nota:** Note que que no existe el ancho de banda "ilimitado". Si consumes una enorme cantidad de ancho de banda, espere pagar una enorme cantidad de dinero.
+> [!NOTE]
+> Note que que no existe el ancho de banda "ilimitado". Si consumes una enorme cantidad de ancho de banda, espere pagar una enorme cantidad de dinero.
 
 ### Nombre de dominio
 

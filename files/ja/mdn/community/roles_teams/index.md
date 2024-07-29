@@ -110,7 +110,8 @@ What info needs to be retained? Should we use the term 'partner maintainer' or i
 - 自分のプロジェクトに月 16 時間以上作業することに同意していること。
 - 2 ヶ月に 1 度開催されるコミュニティミーティングに参加している。
 
-> **メモ:** この役割にふさわしいと思う人がいれば、[メンテナーを推薦](#メンテナーを推薦)することができます。
+> [!NOTE]
+> この役割にふさわしいと思う人がいれば、[メンテナーを推薦](#メンテナーを推薦)することができます。
 
 **権限:**
 
@@ -121,7 +122,8 @@ What info needs to be retained? Should we use the term 'partner maintainer' or i
 オーナーは、ユーザーと [GitHub チーム](https://github.com/orgs/mdn/teams)の管理、[MDN 組織](https://github.com/mdn)内のリポジトリーへのアクセスの管理、リポジトリー設定の管理、本番環境への展開など、幅広い権限を持ちます。
 オーナーは、他の協力者ロールのすべての要件に拘束されます。
 
-> **メモ:** オーナーの役割は、現在は Mozilla スタッフに限定されています。
+> [!NOTE]
+> オーナーの役割は、現在は Mozilla スタッフに限定されています。
 
 **要件:**
 

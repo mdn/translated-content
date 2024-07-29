@@ -1420,6 +1420,10 @@
     "modified": "2020-07-20T16:29:20.448Z",
     "contributors": ["eziotristao", "gabriel_cadu", "artphil", "greysonf"]
   },
+  "Learn/JavaScript/Building_blocks/Event_bubbling": {
+    "modified": "2019-11-03T21:25:56.066Z",
+    "contributors": ["rayonnunes"]
+  },
   "Learn/JavaScript/Building_blocks/Events": {
     "modified": "2020-07-16T22:31:39.504Z",
     "contributors": [
@@ -2991,10 +2995,6 @@
     "modified": "2019-03-23T23:01:39.950Z",
     "contributors": ["ralfting", "gregori", "juliocarneiro", "fscholz"]
   },
-  "Web/API/Event/Comparison_of_Event_Targets": {
-    "modified": "2019-11-03T21:25:56.066Z",
-    "contributors": ["rayonnunes"]
-  },
   "Web/API/Event/Event": {
     "modified": "2020-10-15T21:42:53.584Z",
     "contributors": ["fscholz", "juliocarneiro"]
@@ -3087,14 +3087,6 @@
   "Web/API/Fetch_API": {
     "modified": "2020-10-15T21:42:57.080Z",
     "contributors": ["mateusvelleda", "BrunoLucas", "fapbatista", "tcelestino"]
-  },
-  "Web/API/Fetch_API/Basic_concepts": {
-    "modified": "2020-02-17T13:24:31.887Z",
-    "contributors": ["diezan", "LincePotiguara"]
-  },
-  "Web/API/Fetch_API/Cross-global_fetch_usage": {
-    "modified": "2019-03-18T20:48:56.041Z",
-    "contributors": ["matluz"]
   },
   "Web/API/Fetch_API/Using_Fetch": {
     "modified": "2020-10-15T21:51:06.123Z",
@@ -4329,16 +4321,6 @@
   "Web/CSS/--*": {
     "modified": "2019-03-23T22:04:16.687Z",
     "contributors": ["filipetorres"]
-  },
-  "Web/CSS/-webkit-overflow-scrolling": {
-    "modified": "2019-03-23T22:49:05.514Z",
-    "contributors": [
-      "teoli",
-      "otaviogui",
-      "rafaelcavalcante",
-      "fcard",
-      "alexanmtz"
-    ]
   },
   "Web/CSS/-webkit-text-security": {
     "modified": "2020-07-18T11:21:00.057Z",
@@ -10523,6 +10505,14 @@
     "modified": "2019-03-23T22:20:33.890Z",
     "contributors": ["cezaraugusto"]
   },
+  "conflicting/Web/API/Fetch_API/Using_Fetch": {
+    "modified": "2020-02-17T13:24:31.887Z",
+    "contributors": ["diezan", "LincePotiguara"]
+  },
+  "conflicting/Web/API/Fetch_API/Using_Fetch_76a0f6f382ec36bfa1bf0b4e0ef87c0c": {
+    "modified": "2019-03-18T20:48:56.041Z",
+    "contributors": ["matluz"]
+  },
   "conflicting/Web/API/Geolocation/getCurrentPosition": {
     "modified": "2019-03-23T22:47:40.708Z",
     "contributors": ["victorkurauchi"]
@@ -11223,6 +11213,16 @@
   "orphaned/Web/CSS/-moz-context-properties": {
     "modified": "2020-10-15T22:12:51.330Z",
     "contributors": ["dekxside"]
+  },
+  "orphaned/Web/CSS/-webkit-overflow-scrolling": {
+    "modified": "2019-03-23T22:49:05.514Z",
+    "contributors": [
+      "teoli",
+      "otaviogui",
+      "rafaelcavalcante",
+      "fcard",
+      "alexanmtz"
+    ]
   },
   "orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support": {
     "modified": "2019-03-18T21:31:28.635Z",

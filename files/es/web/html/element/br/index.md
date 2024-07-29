@@ -23,7 +23,8 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 - `clear` {{Deprecated_Inline}}
   - : Indica donde empieza la siguiente línea después del salto.
 
-> **Nota:** Este atributo está obsoleto en HTML5 y **no debe utilizarse por los autores**. En su lugar utiliza la propiedad {{CSSxref('clear')}} de CSS.
+> [!NOTE]
+> Este atributo está obsoleto en HTML5 y **no debe utilizarse por los autores**. En su lugar utiliza la propiedad {{CSSxref('clear')}} de CSS.
 
 ## Ejemplo
 

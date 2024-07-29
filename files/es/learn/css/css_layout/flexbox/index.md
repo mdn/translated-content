@@ -92,7 +92,8 @@ flex-direction: column;
 
 Observa que esto vuelve a colocar los elementos en una disposición en columna, al igual que antes de añadir cualquier CSS. Antes de continuar, elimina esta declaración de tu ejemplo.
 
-> **Nota:** También puedes compaginar elementos flexibles en una dirección inversa utilizando los valores `row-reverse` y `column-reverse`. ¡Experimenta también con estos valores!
+> [!NOTE]
+> También puedes compaginar elementos flexibles en una dirección inversa utilizando los valores `row-reverse` y `column-reverse`. ¡Experimenta también con estos valores!
 
 ## Delimitar
 
