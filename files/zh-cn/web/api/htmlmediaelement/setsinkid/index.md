@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Audio Output Devices API")}}{{securecontext_header}}
 
-{{domxref("HTMLMediaElement")}} 的 **`setSinkId()`** 方法设置要用于音频输出的设备 ID，并返回一个 {{jsxref("Promise")}}。
+{{domxref("HTMLMediaElement")}} 接口的 **`setSinkId()`** 方法设置要用于音频输出的设备 ID，并返回一个 {{jsxref("Promise")}}。
 
 只有当应用程序被允许使用指定的设备时，此方法才有效。有关更多信息，请参阅下面的[安全要求](#安全要求)。
 
