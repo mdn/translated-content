@@ -46,7 +46,8 @@ l10n:
 {{HTMLElement("input/month", "month")}}、{{HTMLElement("input/week", "week")}}、{{HTMLElement("input/date", "date")}}、{{HTMLElement("input/time", "time")}}、{{HTMLElement("input/datetime-local", "datetime-local")}} の各型は、日付や時刻を便利に選択できるようなインターフェイスを表示することができます。
 あらかじめ定義された値をそこに示すことで、ユーザーはすばやく制御値を満たすことができます。
 
-> **メモ:** type に対応していない場合、単純なテキストフィールドを作成する `text` 型が代わりに使用されます。このフィールドは推奨値を正しく認識し、ドロップダウンメニューでユーザーに表示します。
+> [!NOTE]
+> type に対応していない場合、単純なテキストフィールドを作成する `text` 型が代わりに使用されます。このフィールドは推奨値を正しく認識し、ドロップダウンメニューでユーザーに表示します。
 
 ```html
 <input type="time" list="popularHours" />

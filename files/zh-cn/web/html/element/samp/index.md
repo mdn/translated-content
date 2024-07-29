@@ -40,7 +40,8 @@ slug: Web/HTML/Element/samp
 
 该元素实现了 [`HTMLElement`](/zh-CN/DOM/element) 接口。
 
-> **备注：** 基于 Gecko 1.9.2 及以上，Firefox 还为该元素实现了[HTMLSpanElement](/zh-CN/DOM/span) 接口。
+> [!NOTE]
+> 基于 Gecko 1.9.2 及以上，Firefox 还为该元素实现了[HTMLSpanElement](/zh-CN/DOM/span) 接口。
 
 ## 示例
 

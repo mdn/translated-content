@@ -45,7 +45,8 @@ _`Element` hérite des propriétés de son interface parente : [`Node`](/fr/docs
 
   - : L'URI pour l'espace de noms de l'élément ou `null` s'il n'y en a pas.
 
-    > **Note :** Pour Firefox 3.5 et les versions antérieures, les éléments HTML ne sont pas situés dans un espace de noms. Dans les versions ultérieures, les éléments HTML s'inscrivent dans l'espace de noms [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) tant pour les arbres HTML que XML.
+    > [!NOTE]
+    > Pour Firefox 3.5 et les versions antérieures, les éléments HTML ne sont pas situés dans un espace de noms. Dans les versions ultérieures, les éléments HTML s'inscrivent dans l'espace de noms [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) tant pour les arbres HTML que XML.
 
 - [`Element.nextElementSibling`](/fr/docs/Web/API/Element/nextElementSibling) {{readOnlyInline}}
   - : Un objet `Element` qui représente l'élément qui suit immédiatement l'élément courant dans l'arbre ou `null` si l'élément courant n'a pas de voisin.

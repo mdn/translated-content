@@ -5,7 +5,8 @@ slug: Web/API/KeyboardEvent/initKeyEvent
 
 {{APIRef("UI Events")}}
 
-> **警告：** 不要再使用这个方法，而是使用 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} 构造函数。
+> [!WARNING]
+> 不要再使用这个方法，而是使用 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} 构造函数。
 >
 > 该方法已从 DOM 规范中删除，并且不受任何现代浏览器支持。Firefox 从版本 93 开始默认通过首选项（`dom.keyboardevent.init_key_event.enabled`）隐藏此方法，并计划很快移除它。
 

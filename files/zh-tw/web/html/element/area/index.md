@@ -61,7 +61,8 @@ slug: Web/HTML/Element/area
 
     只有在 [`href`](#href) 屬性存在時才使用此屬性。
 
-    > **備註：** 在 `<area>` 元素上設置 `target="_blank"` 將隱式提供與設置 [`rel="noopener"`](/zh-TW/docs/Web/HTML/Attributes/rel/noopener) 相同的 `rel` 行為，該行為不設置 `window.opener`。有關支援狀態，請參見[瀏覽器相容性](#瀏覽器相容性)。
+    > [!NOTE]
+    > 在 `<area>` 元素上設置 `target="_blank"` 將隱式提供與設置 [`rel="noopener"`](/zh-TW/docs/Web/HTML/Attributes/rel/noopener) 相同的 `rel` 行為，該行為不設置 `window.opener`。有關支援狀態，請參見[瀏覽器相容性](#瀏覽器相容性)。
 
 ## 範例
 

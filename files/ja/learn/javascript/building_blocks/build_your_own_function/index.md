@@ -43,13 +43,15 @@ alert("これはメッセージです");
 
 `alert` 関数には制限があります。メッセージを変更することはできますが、色やアイコンなど、それ以外の部分を簡単には変えられません。もっと楽しくできるやつを作りましょう。
 
-> **メモ:** この例はすべての現行ブラウザーで問題なく動作するはずですが、少し古いブラウザーではスタイル設定が少しおかしく見えるかもしれません。この実習は Firefox、Opera、Chrome のような現行ブラウザーで行うことをお勧めします。
+> [!NOTE]
+> この例はすべての現行ブラウザーで問題なく動作するはずですが、少し古いブラウザーではスタイル設定が少しおかしく見えるかもしれません。この実習は Firefox、Opera、Chrome のような現行ブラウザーで行うことをお勧めします。
 
 ## 基本的な関数
 
 最初に、基本的な関数を組み立てていきましょう。
 
-> **メモ:** 関数に名前を付ける方針としては、[変数の名前付けのルール](/ja/docs/Learn/JavaScript/First_steps/Variables#変数の名前付けのルール)と同じルールに従うべきです。問題はありません、すぐに見分けがつくからです。関数ならすぐ後に括弧が付きますが、変数には付きません。
+> [!NOTE]
+> 関数に名前を付ける方針としては、[変数の名前付けのルール](/ja/docs/Learn/JavaScript/First_steps/Variables#変数の名前付けのルール)と同じルールに従うべきです。問題はありません、すぐに見分けがつくからです。関数ならすぐ後に括弧が付きますが、変数には付きません。
 
 1. [function-start.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-start.html) ファイルにアクセスして、ローカルコピーを作成するところから始めます。HTML は単純です。 body にはボタン一つしかありません。特製メッセージボックス用の基本的な CSS スタイルと、JavaScript を追加していく用の空の {{htmlelement("script")}} 要素が含まれています。
 2. 次に、`<script>` 要素の中に以下を追加して下さい。
@@ -287,7 +289,8 @@ btn.addEventListener("click", displayMessage());
 
    （今はそうでもないですが）小さな機能がどれほど有益なものになりつつあるか、おわかりいただけると思います。
 
-> **メモ:** サンプルをうまく動作させることができない場合は、コードを [GitHub の完成バージョン](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html)と比較して（[ライブで確認](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html)してください）チェックしてください。もしくは私たちにヘルプを依頼してください。
+> [!NOTE]
+> サンプルをうまく動作させることができない場合は、コードを [GitHub の完成バージョン](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html)と比較して（[ライブで確認](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html)してください）チェックしてください。もしくは私たちにヘルプを依頼してください。
 
 ## スキルテスト
 

@@ -15,7 +15,8 @@ slug: Web/JavaScript/Reference/Strict_mode
 
 參考 [過渡到嚴格模式](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)，如果你希望將你的程式碼在 JavaScript 語法嚴格、語法受限下執行。
 
-> **備註：** Sometimes, you'll see the default, non-strict, mode referred to as "sloppy mode". This isn't an official term, but be aware of it, just in case.
+> [!NOTE]
+> Sometimes, you'll see the default, non-strict, mode referred to as "sloppy mode". This isn't an official term, but be aware of it, just in case.
 
 ## 用法
 
@@ -107,7 +108,8 @@ delete Object.prototype; // throws a TypeError
 
 Fourth, strict mode prior to Gecko 34 requires that all properties named in an object literal be unique. Normal code may duplicate property names, with the last one determining the property's value. But since only the last one does anything, the duplication is simply a vector for bugs, if the code is modified to change the property value other than by changing the last instance. Duplicate property names are a syntax error in strict mode:
 
-> **備註：** This is no longer the case in ECMAScript 2015 ([Firefox bug 1041128](https://bugzil.la/1041128)).
+> [!NOTE]
+> This is no longer the case in ECMAScript 2015 ([Firefox bug 1041128](https://bugzil.la/1041128)).
 
 ```js
 "use strict";

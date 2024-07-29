@@ -136,7 +136,8 @@ request.onupgradeneeded = function (event) {
 
 資料庫版本是 unsigned long long 的數字，所以能夠非常長。
 
-> **警告：** 請注意這也意味著版本不能為浮點數，否則小數點部分將會無條件捨去，而交易也可能不會開始，upgradeneeded 事件也不會觸發。不要像以下例子以 2.4 作版本:
+> [!WARNING]
+> 請注意這也意味著版本不能為浮點數，否則小數點部分將會無條件捨去，而交易也可能不會開始，upgradeneeded 事件也不會觸發。不要像以下例子以 2.4 作版本:
 >
 > ```js
 > var request = indexedDB.open("MyTestDatabase", 2.4); // don't do this, as the version will be rounded to 2
@@ -363,7 +364,8 @@ objectStore.openCursor().onsuccess = function (event) {
 };
 ```
 
-> **警告：** 以下範例不是 IndexedDB 標準!
+> [!WARNING]
+> 以下範例不是 IndexedDB 標準!
 
 Mozilla 瀏覽器自己做了一個 getAll()方法來方便一次取得所有 cursor 下的資料值，這個方法相當方便，不過請小心未來它有可能會消失。以下程式碼的效果和上面的一樣:
 
@@ -1236,7 +1238,8 @@ input {
 
 - [A simple TODO list using HTML5 IndexedDB](http://www.html5rocks.com/tutorials/indexeddb/todo/).
 
-  > **備註：** 請注意此教學範例用到的已經廢棄的`setVersion()`方法。
+  > [!NOTE]
+  > 請注意此教學範例用到的已經廢棄的`setVersion()`方法。
 
 - [Databinding UI Elements with IndexedDB](http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
 

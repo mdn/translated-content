@@ -102,7 +102,8 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 This method returns an `ImageData` object representing the pixel data for the area of the canvas whose corners are represented by the points (`left`, `top`), (`left+width`, `top`), (`left`, `top+height`), and (`left+width`, `top+height`). The coordinates are specified in canvas coordinate space units.
 
-> **Nota:** Any pixels outside the canvas are returned as transparent black in the resulting `ImageData` object.
+> [!NOTE]
+> Any pixels outside the canvas are returned as transparent black in the resulting `ImageData` object.
 
 This method is also demonstrated in the article [Manipulating video using canvas](/es/docs/Web/API/Canvas_API/Manipulating_video_using_canvas).
 

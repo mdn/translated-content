@@ -3,7 +3,7 @@ title: "Document: prerenderingchange イベント"
 short-title: prerenderingchange
 slug: Web/API/Document/prerenderingchange_event
 l10n:
-  sourceCommit: c99ff93a1b71e7d664509fdd3e0c168920be967a
+  sourceCommit: 922c2b0f37e2f13887c50efe47e62bc23d94c3aa
 ---
 
 {{ APIRef("Speculation Rules API") }}{{seecompattable}}
@@ -38,7 +38,8 @@ if (document.prerendering) {
 }
 ```
 
-> **メモ:** 事前レンダリングが完了するまで遅らせたいアクティビティの種類については、[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) ランディングページ、特に[安全でない投機的読み込み条件](/ja/docs/Web/API/Speculation_Rules_API#安全でない投機的読み込み条件)の節を参照してください。
+> [!NOTE]
+> 事前レンダリングが完了するまで遅らせたいアクティビティの種類については、[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) ランディングページ、特に[安全でない投機的読み込み条件](/ja/docs/Web/API/Speculation_Rules_API#安全でない投機的読み込み条件)の節を参照してください。
 
 ## 仕様書
 

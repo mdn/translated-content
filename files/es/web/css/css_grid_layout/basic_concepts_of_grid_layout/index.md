@@ -429,7 +429,8 @@ Las canaletas o callejones entre las celdas de la cuadrícula se pueden crear us
 }
 ```
 
-> **Nota:** Los navegadores más antigüos tienen {{cssxref("column-gap")}}, {{cssxref("row-gap")}} y {{cssxref("gap")}} prefijadas con el prefijo `grid-` como {{cssxref("grid-column-gap")}}, {{cssxref("grid-row-gap")}} y {{cssxref("grid-gap")}} respectivamente.
+> [!NOTE]
+> Los navegadores más antigüos tienen {{cssxref("column-gap")}}, {{cssxref("row-gap")}} y {{cssxref("gap")}} prefijadas con el prefijo `grid-` como {{cssxref("grid-column-gap")}}, {{cssxref("grid-row-gap")}} y {{cssxref("grid-gap")}} respectivamente.
 
 ```html
 <div class="wrapper">
@@ -542,7 +543,8 @@ En este caso, la cuadrícula anidada no tiene ninguna relación con el padre. Co
 
 En la especificación de grid de nivel 1 hay una característica llamada _subgrid_ que nos permitiría crear cuadrículas anidadas que usan la definición de la vía de la cuadrícula padre.
 
-> **Nota:** Las Subgrids aún no están implementadas en ningún navegador y la especificación está sujeta a cambio.
+> [!NOTE]
+> Las Subgrids aún no están implementadas en ningún navegador y la especificación está sujeta a cambio.
 
 En la especificación actual, editaríamos el ejemplo de cuadrícula anidada arriba para usar `display: subgrid` en lugar de `display: grid`, y luego eliminar la definición de vía. La cuadrícula anidada utilizará las vías de la cuadrícula principal para posicionar los elementos.
 

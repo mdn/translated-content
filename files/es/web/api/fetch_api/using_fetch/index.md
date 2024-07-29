@@ -26,7 +26,8 @@ Aquí estamos recuperando un archivo JSON a través de red e imprimiendo en la c
 
 Esto es, por supuesto, una respuesta HTTP no el archivo JSON. Para extraer el contenido en el cuerpo del JSON desde la respuesta, usamos el método {{domxref("Body.json","json()")}} (definido en el [mixin](https://es.wikipedia.org/wiki/Mixin) de {{domxref("Body")}}, el cual está implementado por los objetos {{domxref("Request")}} y {{domxref("Response")}}).
 
-> **Nota:** El mixin de `Body` tambien tiene metodos parecidos para extraer otros tipos de contenido del cuerpo. Vease [Body](#body) para más información.
+> [!NOTE]
+> El mixin de `Body` tambien tiene metodos parecidos para extraer otros tipos de contenido del cuerpo. Vease [Body](#body) para más información.
 
 Las peticiones de Fetch son controladas por la directiva de `connect-src` de [Content Security Policy](/es/docs/Security/CSP/CSP_policy_directives) en vez de la directiva de los recursos que se han devuelto.
 
@@ -124,7 +125,8 @@ var anotherRequest = new Request(myRequest, myInit);
 
 Esto es muy útil ya que el cuerpo de las solicitudes y respuestas son de un sólo uso. Haciendo una copia como esta te permite utilizar la petición/respuesta de nuevo, y al mismo tiempo, si lo deseas, modificar las opciones de `init`. La copia debe estar hecha antes de la lectura del \<body>, y leyendo el \<body> en la copia, se marcará como leido en la petición original.
 
-> **Nota:** Existe también un método {{domxref("Request.clone","clone()")}} que crea una copia. Este tiene una semántica ligeramente distinta al otro método de copia — el primero fallará si el cuerpo de la petición anterior ya ha sido leído (lo mismo para copiar una respuesta), mientras que `clone()` no.
+> [!NOTE]
+> Existe también un método {{domxref("Request.clone","clone()")}} que crea una copia. Este tiene una semántica ligeramente distinta al otro método de copia — el primero fallará si el cuerpo de la petición anterior ya ha sido leído (lo mismo para copiar una respuesta), mientras que `clone()` no.
 
 ### Enviar una petición con credenciales incluido
 
@@ -271,7 +273,8 @@ Los valores posibles de guarda (guard) son:
 - `response`: Guarda para una cabecera obetenida desde un respuesta ({{domxref("Response.headers")}}).
 - `immutable`: Mayormente utilizado para ServiceWorkers, produce un objeto headers de solo lectura.
 
-> **Nota:** No se debería añadir o establecer una petición a un objeto headers _guardado_ con la cabecera `Content-Length`. De igual manera, insertar `Set-Cookie` en la respuesta de la cabecera no esta permitido: ServiceWorkers no estan autorizados a establecer cookies a través de respuestas sintéticas.
+> [!NOTE]
+> No se debería añadir o establecer una petición a un objeto headers _guardado_ con la cabecera `Content-Length`. De igual manera, insertar `Set-Cookie` en la respuesta de la cabecera no esta permitido: ServiceWorkers no estan autorizados a establecer cookies a través de respuestas sintéticas.
 
 ## Objetos Response
 
@@ -299,7 +302,8 @@ addEventListener("fetch", function (event) {
 
 El constructor {{domxref("Response.Response","Response()")}} toma dos argurmentos opcionales, un cuerpo para la respuesta y un objeto init (similar al que acepta {{domxref("Request.Request","Request()")}}).
 
-> **Nota:** El método estático {{domxref("Response.error","error()")}} simplemente devuelve un error en la respuesta. De igual manera que {{domxref("Response.redirect","redirect()")}} devuelve una respuesta que resulta en un redirección a una URL especificada. Estos son solo relevantes tambien a ServiceWorkers.
+> [!NOTE]
+> El método estático {{domxref("Response.error","error()")}} simplemente devuelve un error en la respuesta. De igual manera que {{domxref("Response.redirect","redirect()")}} devuelve una respuesta que resulta en un redirección a una URL especificada. Estos son solo relevantes tambien a ServiceWorkers.
 
 ## Body
 

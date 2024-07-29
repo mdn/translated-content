@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、CSS の {{CSSxRef("position")}} プロパティと値を使用した [CSS の位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)を理解しているかどうかを評価することです。今までに学んだ素材の様々な要素を使用する、2 つの小さな課題を行っていただきます。
 
-> **メモ:** 以下の対話型エディターで取り組むことができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業したほうが便利な場合もあります。
+> [!NOTE]
+> 以下の対話型エディターで取り組むことができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業したほうが便利な場合もあります。
 >
 > 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
@@ -29,7 +30,7 @@ l10n:
 
 - 追加課題として、 target をテキストの下に表示するように変更できますか？
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/position/position1-download.html)しましょう。
 
@@ -43,7 +44,7 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/position/position2.html", '100%', 1300)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/position/position2-download.html)しましょう。
 

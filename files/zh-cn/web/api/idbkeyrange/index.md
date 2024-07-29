@@ -70,7 +70,8 @@ slug: Web/API/IDBKeyRange
 
 以下示例用以说明该如果使用键范围。在此我们将 `keyRangeValue` 声明为 A ～ F 之间的范围。我们打开一个事务 (使用 {{domxref("IDBTransaction")}}) 和一个对象存储，并用 {{domxref("IDBObjectStore.openCursor")}}打开一个游标，其中`keyRangeValue`是一个可选的键范围值，指定之后游标将只检索键在该范围内的记录。这里的键范围包括了“A”和“F”，因为我们还没声明键范围为开放边界。如果我们使用 `IDBKeyRange.bound("A", "F", true, true);`，那么这个键范围将不包括“A”和“F”，只包含它们之间的值。
 
-> **备注：** For a more complete example allowing you to experiment with key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) repo ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/)).
+> [!NOTE]
+> For a more complete example allowing you to experiment with key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) repo ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/)).
 
 ```js
 function displayData() {

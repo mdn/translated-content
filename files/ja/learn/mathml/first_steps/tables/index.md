@@ -214,7 +214,8 @@ MathML の表形式要素は [HTML 表](/ja/docs/Learn/HTML/Tables)要素と似�
 
 {{ EmbedLiveSample('allowing_cells_to_span_multiple_rows_and_columns', 700, 200, "", "") }}
 
-> **メモ:** 歴史的な理由から、列をまたがるための MathML 属性は `colspan` ではなく `columnspan` と呼ばれています。
+> [!NOTE]
+> 歴史的な理由から、列をまたがるための MathML 属性は `colspan` ではなく `columnspan` と呼ばれています。
 
 ## 高度なレイアウトの使用法
 

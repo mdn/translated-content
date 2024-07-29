@@ -7,7 +7,8 @@ l10n:
 
 {{JSRef}} {{deprecated_header}}
 
-> **メモ:** グローバルに最後の一致状態を公開する `RegExp` の静的プロパティは、すべて非推奨です。詳しくは[非推奨の RegExp 機能](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)を参照してください。
+> [!NOTE]
+> グローバルに最後の一致状態を公開する `RegExp` の静的プロパティは、すべて非推奨です。詳しくは[非推奨の RegExp 機能](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)を参照してください。
 
 **`RegExp.rightContext`** は静的アクセサープロパティで、最新の一致に続く部分文字列が入ります。`RegExp["$'"]` はこのプロパティの別名です。
 

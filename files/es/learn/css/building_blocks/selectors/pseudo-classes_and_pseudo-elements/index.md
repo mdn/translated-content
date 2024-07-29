@@ -62,7 +62,8 @@ Todas las pseudoclases se comportan del mismo modo. Seleccionan un fragmento del
 - [`:only-child`](/es/docs/Web/CSS/:only-child)
 - [`:invalid`](/es/docs/Web/CSS/:invalid)
 
-> **Nota:** Es válido escribir pseudoclases y pseudoelementos sin que les preceda un selector de elemento. En el ejemplo anterior, podría escribirse `:first-child` y la regla se aplicaríaa cualquier elemento que sea el primer hijo de un elemento `<article>`, no solo un párrafo primer hijo. `:first-child` equivale a `*:first-child`. Pero normalmente se quiere más control y hay que ser más específico.
+> [!NOTE]
+> Es válido escribir pseudoclases y pseudoelementos sin que les preceda un selector de elemento. En el ejemplo anterior, podría escribirse `:first-child` y la regla se aplicaríaa cualquier elemento que sea el primer hijo de un elemento `<article>`, no solo un párrafo primer hijo. `:first-child` equivale a `*:first-child`. Pero normalmente se quiere más control y hay que ser más específico.
 
 ### Pseudoclases de acción de usuario
 
@@ -81,7 +82,8 @@ Los pseudoelementos se comportan de manera similar. Sin embargo, actúan como si
 ::pseudo-element-name
 ```
 
-> **Nota:** Algunos de los primeros pseudoelementos utilizaban la sintaxis de un solo signo de dos puntos, así que puede ser que en ocasiones los veas escritos de esta forma en algún código o ejemplo. Los navegadores modernos leen tanto los pseudoelementos con la sintaxis de los dos puntos simple como la de los dos puntos doble para garantizar la compatibilidad retrospectiva.
+> [!NOTE]
+> Algunos de los primeros pseudoelementos utilizaban la sintaxis de un solo signo de dos puntos, así que puede ser que en ocasiones los veas escritos de esta forma en algún código o ejemplo. Los navegadores modernos leen tanto los pseudoelementos con la sintaxis de los dos puntos simple como la de los dos puntos doble para garantizar la compatibilidad retrospectiva.
 
 Por ejemplo, si deseas seleccionar la primera línea de un párrafo simplemente puedes delimitarlo con el elemento `<span>` y utilizar un selector de elementos. Sin embargo, fallará si el número de palabras que has delimitado resulta ser más largo o más corto que el ancho del elemento padre. Ya que normalmente no sabemos cuántas palabras caben en una línea porque esto cambia con el ancho de la pantalla o con los cambios de tamaño de la letra, no es posible hacer esto introduciendo solo HTML.
 
