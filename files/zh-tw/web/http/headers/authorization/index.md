@@ -13,7 +13,8 @@ HTTP **`Authorization`** 請求標頭可以用來提供憑證，以便用戶代�
 
 這個標頭會在跨源重定向中被刪除。
 
-> **備註：** 此標頭是[通用 HTTP 身份驗證框架](/zh-TW/docs/Web/HTTP/Authentication#通用_HTTP_身份驗證框架)的一部分。它可以與多種[身份驗證方案](/zh-TW/docs/Web/HTTP/Authentication#身份驗證方案)一起使用。
+> [!NOTE]
+> 此標頭是[通用 HTTP 身份驗證框架](/zh-TW/docs/Web/HTTP/Authentication#通用_HTTP_身份驗證框架)的一部分。它可以與多種[身份驗證方案](/zh-TW/docs/Web/HTTP/Authentication#身份驗證方案)一起使用。
 
 <table class="properties">
   <tbody>
@@ -61,7 +62,8 @@ Authorization: Digest username=<username>,
 
   - : 定義如何編碼憑證的[身份驗證方案](/zh-TW/docs/Web/HTTP/Authentication#身份驗證方案)。一些更常見的類型（不區分大小寫）包括：[`Basic`](/zh-TW/docs/Web/HTTP/Authentication#基本身份驗證方案)、`Digest`、`Negotiate` 和 `AWS4-HMAC-SHA256`。
 
-    > **備註：** 有關更多訊息/選項，請參見 [HTTP Authentication > Authentication schemes](/zh-TW/docs/Web/HTTP/Authentication#身份驗證方案)
+    > [!NOTE]
+    > 有關更多訊息/選項，請參見 [HTTP Authentication > Authentication schemes](/zh-TW/docs/Web/HTTP/Authentication#身份驗證方案)
 
 除了 `<auth-scheme>` 之外，其餘指令是特定於每個[身份驗證方案](/zh-TW/docs/Web/HTTP/Authentication#身份驗證方案)的。一般來說，你需要檢查相關的規範（以下列出了一小部分方案的關鍵字）。
 
@@ -71,7 +73,8 @@ Authorization: Digest username=<username>,
 
   - : 根據指定方案編碼的憑證。
 
-    > **備註：** 有關編碼演算法的訊息，請參見以下範例：在 {{HTTPHeader("WWW-Authenticate")}} 中，在 [HTTP Authentication](/zh-TW/docs/Web/HTTP/Authentication) 中，以及在相關規範中。
+    > [!NOTE]
+    > 有關編碼演算法的訊息，請參見以下範例：在 {{HTTPHeader("WWW-Authenticate")}} 中，在 [HTTP Authentication](/zh-TW/docs/Web/HTTP/Authentication) 中，以及在相關規範中。
 
 ### 摘要
 
