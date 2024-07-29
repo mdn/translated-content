@@ -1,5 +1,5 @@
 ---
-title: "HTMLMediaElement: sinkId property"
+title: HTMLMediaElement：sinkId 属性
 slug: Web/API/HTMLMediaElement/sinkId
 l10n:
   sourceCommit: 5a5f3d3cbbfabf138aa9f0d3e2c8fce4a168f5cc
