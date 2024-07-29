@@ -1,6 +1,7 @@
 ---
 title: Array.prototype[@@unscopables]
-slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
+slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables
+original_slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 ---
 
 {{JSRef}}A propriedade de símbolo **`@@unscopable`** contém nomes de propriedades que não foram incluídos no padrão ECMAScript antes da versão ES2015. Essas propriedades são excluídas do statement bindings [`with`](/pt-BR/docs/Web/JavaScript/Reference/Statements/with).

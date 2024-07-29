@@ -1,6 +1,7 @@
 ---
 title: get Map[@@species]
-slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
+slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.species
+original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 ---
 
 {{JSRef}}
