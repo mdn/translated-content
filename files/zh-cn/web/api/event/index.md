@@ -15,7 +15,8 @@ l10n:
 
 很多 DOM 元素可以被设计接收 (或者监听) 这些事件，并且执行代码去响应（或者处理）它们。通过 [`EventTarget.addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 方法可以将事件处理器绑定到不同的 [HTML 元素](/zh-CN/docs/Web/HTML/Element)上（比如 `<button>`、`<div>`、`<span>` 等等）。这种方式基本替换了老版本中使用 HTML [事件处理器属性](/zh-CN/docs/Web/HTML/Global_attributes)的方式。此外，在正确添加后，还可以使用 [`removeEventListener()`](/zh-CN/docs/Web/API/EventTarget/removeEventListener) 方法移除这些事件处理器。
 
-> **备注：** 一个元素可以绑定多个事件处理器，甚至是对于完全相同的事件。尤其是相互独立的代码模块出于不同的目的附加事件处理器。（比如，一个网页同时有着广告模块和统计模块同时监听视频播放。）
+> [!NOTE]
+> 一个元素可以绑定多个事件处理器，甚至是对于完全相同的事件。尤其是相互独立的代码模块出于不同的目的附加事件处理器。（比如，一个网页同时有着广告模块和统计模块同时监听视频播放。）
 
 当有很多嵌套的元素，每个元素都有着自己的事件处理器，事件处理过程会变得非常复杂。尤其当一个父元素和子元素绑定完全相同的事件时，因为结构上的重叠，事件在技术层面发生在两个元素中，触发的顺序取决于每个处理器的[事件冒泡](/zh-CN/docs/Learn/JavaScript/Building_blocks/Event_bubbling)的设置。
 
