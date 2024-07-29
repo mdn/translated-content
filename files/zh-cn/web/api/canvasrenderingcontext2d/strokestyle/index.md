@@ -27,7 +27,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.strokeStyle`** 属性指定用于�
 
 ### 更改形状的描边颜色
 
-此实例为一个矩形应用蓝色的描边颜色。
+此示例为一个矩形应用蓝色的描边颜色。
 
 #### HTML
 
