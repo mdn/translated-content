@@ -9,7 +9,8 @@ slug: Web/API/Push_API
 
 ## Push 的概念及用法
 
-> **警告：** 在实现 PushManager 订阅时，请确保你的应用程序免受 CSRF/XSRF（跨站请求伪造）问题。参见以下的文章以了解更多信息：
+> [!WARNING]
+> 在实现 PushManager 订阅时，请确保你的应用程序免受 CSRF/XSRF（跨站请求伪造）问题。参见以下的文章以了解更多信息：
 >
 > - [跨站请求伪造（CSRF）预防清单](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
 > - [防止 CSRF 和 XSRF 攻击](https://blog.codinghorror.com/preventing-csrf-and-xsrf-attacks/)

@@ -129,7 +129,8 @@ footer a {
 
 しかし、 `:where()` 内のセレクターは詳細度が 0 なので、オレンジ色のフッターリンクは単純セレクターによって上書きされます。
 
-> **メモ:** この例は GitHub からも見ることができます。 [is-where](https://mdn.github.io/css-examples/is-where/) を参照してください。
+> [!NOTE]
+> この例は GitHub からも見ることができます。 [is-where](https://mdn.github.io/css-examples/is-where/) を参照してください。
 
 {{EmbedLiveSample('Examples', '100%', 600)}}
 

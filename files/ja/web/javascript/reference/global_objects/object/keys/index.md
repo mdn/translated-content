@@ -78,7 +78,8 @@ console.log(Object.keys("foo")); // ['0', '1', '2']
 console.log(Object.keys(100)); // []
 ```
 
-> **メモ:** ES5 では、 `Object.keys()` にオブジェクト以外を渡すと {{jsxref("TypeError")}} が発生していました。
+> [!NOTE]
+> ES5 では、 `Object.keys()` にオブジェクト以外を渡すと {{jsxref("TypeError")}} が発生していました。
 
 ## 仕様書
 

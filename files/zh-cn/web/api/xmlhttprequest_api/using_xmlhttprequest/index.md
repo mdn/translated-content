@@ -24,7 +24,8 @@ oReq.send();
 
 通过 `XMLHttpRequest` 生成的请求可以有两种方式来获取数据，异步模式或同步模式。请求的类型是由这个 `XMLHttpRequest` 对象的 [open()](/zh-CN/docs/Web/API/XMLHttpRequest/open) 方法的第三个参数`async`的值决定的。如果该参数的值为 `false`，则该 `XMLHttpRequest`请求以同步模式进行，否则该过程将以异步模式完成。这两种类型请求的详细讨论和指南可以在[同步和异步请求](/zh-CN/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests)页找到。
 
-> **备注：** 由于对用户体验的负面影响，从 Gecko 30.0 版本开始，在主线程上的同步请求已经被弃用。
+> [!NOTE]
+> 由于对用户体验的负面影响，从 Gecko 30.0 版本开始，在主线程上的同步请求已经被弃用。
 
 > **备注：** `XMLHttpRequest` 构造函数并不仅限于 XML 文档。它之所以使用“XML”开头是因为在它诞生之时，原先用于异步数据交换的主要格式便是 XML。
 
@@ -41,7 +42,8 @@ W3C 规范定义了 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()
 3. 使用 [XMLSerializer](/zh-CN/docs/Web/API/XMLSerializer) 把 DOM 树序列化成字符串或文件。
 4. 如果你预先知道 XML 文档的内容，你可以使用 [RegExp](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。如果你用 `RegExp` 扫描时受到换行符的影响，你也许想要删除所有的换行符。然而，这种方法是"最后手段"，因为如果 XML 代码发生轻微变化，该方法将可能失败。
 
-> **备注：** 在 W3C [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) 规范中允许 HTML 通过 XMLHttpRequest.responseXML 属性进行解析。更多详细内容请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 。本条注意已在英文原文中更新。
+> [!NOTE]
+> 在 W3C [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) 规范中允许 HTML 通过 XMLHttpRequest.responseXML 属性进行解析。更多详细内容请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 。本条注意已在英文原文中更新。
 
 > **备注：** `XMLHttpRequest` 现在可以使用 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性解释 HTML。请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 这篇文章了解相关用法。
 
@@ -131,7 +133,8 @@ function transferCanceled(evt) {
 
 第 3-6 行为多种事件添加了事件监听，这些事件在使用 `XMLHttpRequest` 执行数据传输时被发出。
 
-> **备注：** 你需要在请求调用 `open()` 之前添加事件监听。否则 `progress` 事件将不会被触发。
+> [!NOTE]
+> 你需要在请求调用 `open()` 之前添加事件监听。否则 `progress` 事件将不会被触发。
 
 在上一个例子中，progress 事件被指定由 `updateProgress()` 函数处理，并接收到传输的总字节数和已经传输的字节数，它们分别在事件对象的 `total` 和 `loaded` 属性里。但是如果 `lengthComputable` 属性的值是 false，那么意味着总字节数是未知并且 total 的值为零。
 
@@ -148,11 +151,14 @@ oReq.upload.addEventListener("abort", transferCanceled);
 oReq.open();
 ```
 
-> **备注：** progress 事件在使用 `file:` 协议的情况下是无效的。
+> [!NOTE]
+> progress 事件在使用 `file:` 协议的情况下是无效的。
 
-> **备注：** 从 Gecko 9.0 开始，进度事件现在可以依托于每一个传入的数据块，包括进度事件被触发前在已经接受了最后一个数据包且连接已经被关闭的情况下接收到的最后一个块。这种情况下，当该数据包的 load 事件发生时 progress 事件会被自动触发。这使你可以只关注 progress 事件就可以可靠的监测进度。
+> [!NOTE]
+> 从 Gecko 9.0 开始，进度事件现在可以依托于每一个传入的数据块，包括进度事件被触发前在已经接受了最后一个数据包且连接已经被关闭的情况下接收到的最后一个块。这种情况下，当该数据包的 load 事件发生时 progress 事件会被自动触发。这使你可以只关注 progress 事件就可以可靠的监测进度。
 
-> **备注：** 在 Gecko 12.0 中，当 `responseType` 为 "moz-blob" 时，如果你的 progress 事件被触发，则响应的值是一个包含了接收到的数据的 {{domxref("Blob")}} 。
+> [!NOTE]
+> 在 Gecko 12.0 中，当 `responseType` 为 "moz-blob" 时，如果你的 progress 事件被触发，则响应的值是一个包含了接收到的数据的 {{domxref("Blob")}} 。
 
 使用 `loadend` 事件可以侦测到所有的三种加载结束条件（`abort`、`load`，或 `error`）：
 
@@ -606,11 +612,14 @@ print_r($_FILES);
 AJAXSubmit(myForm);
 ```
 
-> **备注：** 该框架使用 {{domxref("FileReader")}} API 进行文件的上传。这是一个较新的 API 并且还未在 IE9 及以下版本的浏览器中实现。因此，使用 AJAX 上传仍是一项**实验性的技术**。如果你不需要上传 二进制文件，该框架在大多数浏览器中运行良好。
+> [!NOTE]
+> 该框架使用 {{domxref("FileReader")}} API 进行文件的上传。这是一个较新的 API 并且还未在 IE9 及以下版本的浏览器中实现。因此，使用 AJAX 上传仍是一项**实验性的技术**。如果你不需要上传 二进制文件，该框架在大多数浏览器中运行良好。
 
-> **备注：** 发送二进制内容的最佳途径是通过 {{jsxref("ArrayBuffer", "ArrayBuffers")}} 或 {{domxref("Blob", "Blobs")}} 结合 {{domxref("XMLHttpRequest.send()", "send()")}} 方法甚至 `FileReader` API 的 {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} 方法。但是，自从该脚本的目的变成处理 [可字符串化](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) 的原始数据以来，我们使用 {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} 方法结合 `FileReader` API 的 {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} 方法。同样地，上述脚本仅当你处理小文件时行之有效。如果不打算上传二进制内容，就考虑使用 `FormData` API 来替代。
+> [!NOTE]
+> 发送二进制内容的最佳途径是通过 {{jsxref("ArrayBuffer", "ArrayBuffers")}} 或 {{domxref("Blob", "Blobs")}} 结合 {{domxref("XMLHttpRequest.send()", "send()")}} 方法甚至 `FileReader` API 的 {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} 方法。但是，自从该脚本的目的变成处理 [可字符串化](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) 的原始数据以来，我们使用 {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} 方法结合 `FileReader` API 的 {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} 方法。同样地，上述脚本仅当你处理小文件时行之有效。如果不打算上传二进制内容，就考虑使用 `FormData` API 来替代。
 
-> **备注：** 非标准的 `sendAsBinary` 方法从 Gecko 31 开始将会废弃并且会很快被移除。标准方法 `send(Blob data)` 将会取而代之。
+> [!NOTE]
+> 非标准的 `sendAsBinary` 方法从 Gecko 31 开始将会废弃并且会很快被移除。标准方法 `send(Blob data)` 将会取而代之。
 
 ### 使用 FormData 对象
 
@@ -782,7 +791,8 @@ AJAXSubmit(myForm);
 </html>
 ```
 
-> **备注：** 如之前所述，{{domxref("FormData")}} 对象并不是 [可字符串化 (stringifiable)](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) 的对象。如果你想要字符串化一个提交数据，请使用这个 [早期的纯 AJAX 例子](#A_little_vanilla_framework). 同时也要注意，尽管这个例子中有一些 `file` {{ HTMLElement("input") }} 字段，**但当你通过** `FormData` API 提交一个表格时，也无须使用 {{domxref("FileReader")}} API: 文件被自动加载并上传。
+> [!NOTE]
+> 如之前所述，{{domxref("FormData")}} 对象并不是 [可字符串化 (stringifiable)](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) 的对象。如果你想要字符串化一个提交数据，请使用这个 [早期的纯 AJAX 例子](#A_little_vanilla_framework). 同时也要注意，尽管这个例子中有一些 `file` {{ HTMLElement("input") }} 字段，**但当你通过** `FormData` API 提交一个表格时，也无须使用 {{domxref("FileReader")}} API: 文件被自动加载并上传。
 
 ## 获取最后修改日期
 

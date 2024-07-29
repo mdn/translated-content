@@ -7,7 +7,8 @@ slug: Web/SVG/Element/animateMotion
 
 SVG の **`<animateMotion>`** 要素は、ある要素がモーションパスに沿って移動する方法を定義します。
 
-> **メモ:** 既存のパスを再利用するには、 `<animateMotion>` 要素内の {{SVGElement("mpath")}} 要素を {{SVGAttr("path")}} 属性の代わりに使用する必要があります。
+> [!NOTE]
+> 既存のパスを再利用するには、 `<animateMotion>` 要素内の {{SVGElement("mpath")}} 要素を {{SVGAttr("path")}} 属性の代わりに使用する必要があります。
 
 ```css hidden
 html,

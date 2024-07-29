@@ -9,7 +9,8 @@ Esta página enumera las páginas de referencia que cubren todos los atributos d
 
 Los atributos <abbr>ARIA</abbr> permiten modificar los estados y las propiedades de un elemento tal como se define en el árbol d
 
-> **Nota:** ARIA solo modifica el árbol de accesibilidad, modificando cómo la tecnología de asistencia presenta el contenido a sus usuarios. ARIA no cambia nada sobre la función o el comportamiento de un elemento. Cuando no use elementos HTML semánticos para su propósito previsto y funcionalidad predeterminada, debe usar JavaScript para administrar el comportamiento, el enfoque y los estados ARIA.
+> [!NOTE]
+> ARIA solo modifica el árbol de accesibilidad, modificando cómo la tecnología de asistencia presenta el contenido a sus usuarios. ARIA no cambia nada sobre la función o el comportamiento de un elemento. Cuando no use elementos HTML semánticos para su propósito previsto y funcionalidad predeterminada, debe usar JavaScript para administrar el comportamiento, el enfoque y los estados ARIA.
 
 ## Tipos de atributos ARIA
 

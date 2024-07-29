@@ -43,15 +43,18 @@ Estos dos enfoques tendían a dar como resultado un sitio web que se veía mejor
 
 ![Un diseño de página con dos columnas encogidas en una ventana gráfica del tamaño de un teléfono móvil.](mdn-rwd-liquid.png)
 
-> **Nota:** Observa este [ejemplo](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html) y su [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html) de un diseño líquido sencillo. Amplía o reduce la ventana del navegador y observa cómo cambia su aspecto en diferentes tamaños.
+> [!NOTE]
+> Observa este [ejemplo](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html) y su [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html) de un diseño líquido sencillo. Amplía o reduce la ventana del navegador y observa cómo cambia su aspecto en diferentes tamaños.
 
 El sitio de ancho fijo se arriesgaba a una barra de desplazamiento horizontal en pantallas que eran más pequeñas que el ancho del sitio (como se ve a continuación), y a un gran espacio en blanco en los bordes del diseño en las pantallas que eran más grandes.
 
 ![Un diseño con una barra de desplazamiento horizontal en una ventana de teléfono móvil.](mdn-rwd-fixed.png)
 
-> **Nota:** Observa este [ejemplo](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html) y su [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html) de un diseño sencillo con un ancho fijo. Nuevamente, cambia el tamaño de la ventana del navegador y observa el resultado.
+> [!NOTE]
+> Observa este [ejemplo](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html) y su [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html) de un diseño sencillo con un ancho fijo. Nuevamente, cambia el tamaño de la ventana del navegador y observa el resultado.
 
-> **Nota:** Las capturas de pantalla anteriores se han tomado usando el [modo de diseño responsivo](/es/docs/Tools/Responsive_Design_View) de las herramientas DevTools de Firefox.
+> [!NOTE]
+> Las capturas de pantalla anteriores se han tomado usando el [modo de diseño responsivo](/es/docs/Tools/Responsive_Design_View) de las herramientas DevTools de Firefox.
 
 A medida que la web móvil comenzó a hacerse realidad con los primeros teléfonos con funciones, las empresas que deseaban adoptar los dispositivos móviles solían crear una versión especial de su sitio web para dispositivo móvil, con una URL diferente (a menudo algo así como _m.example.com_ o _example.mobi_). Esto significaba que había que desarrollar y actualizar dos versiones independientes del sitio web.
 
@@ -125,7 +128,8 @@ En pantallas más anchas se pasa a dos columnas:
 
 ![Una vista de un dispositivo de escritorio con un diseño a dos columnas.](mdn-rwd-desktop.png)
 
-> **Nota:** Puedes encontrar el [ejemplo en vivo](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html) y el [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html) de este ejemplo en GitHub.
+> [!NOTE]
+> Puedes encontrar el [ejemplo en vivo](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html) y el [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html) de este ejemplo en GitHub.
 
 ## Tecnologías modernas de diseño de páginas web
 
@@ -165,7 +169,8 @@ En el ejemplo siguiente, los elementos flexibles ocupan cada uno la misma cantid
 }
 ```
 
-> **Nota:** Como ejemplo, hemos reconstruido el anterior diseño de página responsivo sencillo, esta vez usando Flexbox. Puedes ver que ya no necesitamos usar valores de porcentaje extraños para calcular el tamaño de las columnas: [ejemplo](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html).
+> [!NOTE]
+> Como ejemplo, hemos reconstruido el anterior diseño de página responsivo sencillo, esta vez usando Flexbox. Puedes ver que ya no necesitamos usar valores de porcentaje extraños para calcular el tamaño de las columnas: [ejemplo](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html).
 
 ### Cuadrículas CSS
 
@@ -178,7 +183,8 @@ En el diseño de cuadrículas con CSS, la unidad `fr` permite la distribución d
 }
 ```
 
-> **Nota:** La versión del diseño de página en cuadrícula es aún más simple, ya que podemos definir las columnas en .wrapper: [ejemplo](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html), [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html).
+> [!NOTE]
+> La versión del diseño de página en cuadrícula es aún más simple, ya que podemos definir las columnas en .wrapper: [ejemplo](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html), [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html).
 
 ## Imágenes responsivas
 
@@ -230,7 +236,8 @@ Sin embargo, en las versiones de escritorio vemos un tamaño de título de encab
 
 ![Un diseño en dos columnas con un título grande.](mdn-rwd-font-desktop.png)
 
-> **Nota:** Observa este ejemplo en: [ejemplo](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
+> [!NOTE]
+> Observa este ejemplo en: [ejemplo](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
 
 Como muestra este enfoque sobre la tipografía, no es necesario restringir las consultas a medios a cambiar solo el diseño de página. Se pueden usar para ajustar cualquier elemento y hacerlo más útil o atractivo según los diversos tamaños de pantalla.
 
@@ -256,7 +263,8 @@ h1 {
 
 Esto significa que necesitamos especificar el tamaño de letra para el título de encabezado una sola vez, en lugar de configurarlo para dispositivos móviles y redefinirlo en las consultas a medios. Luego, el tipo de letra aumenta gradualmente a medida que aumenta el tamaño de la ventana gráfica.
 
-> **Nota:** Observa un ejemplo en: [ejemplo](https://mdn.github.io/css-examples/learn/rwd/type-vw.html), [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-vw.html).
+> [!NOTE]
+> Observa un ejemplo en: [ejemplo](https://mdn.github.io/css-examples/learn/rwd/type-vw.html), [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-vw.html).
 
 ## La metaetiqueta viewport
 

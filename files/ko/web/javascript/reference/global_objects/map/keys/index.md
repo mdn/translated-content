@@ -2,12 +2,12 @@
 title: Map.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Map/keys
 l10n:
-  sourceCommit: ab97df6ce8865569507bcfc884206a1ed297a690
+  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
 {{JSRef}}
 
-**`keys()`** 메서드는 배열에서 각 인덱스의 키를 포함하는 새로운 [맵 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator) 객체를 반환합니다.
+{{jsxref("Map")}} 인스턴스의 **`keys()`** 메서드는 맵에서 각 요소의 키를 삽입 순서대로 가지는 새로운 [맵 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator) 객체를 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-keys.html")}}
 
@@ -16,6 +16,10 @@ l10n:
 ```js-nolint
 keys()
 ```
+
+### 매개변수
+
+없음.
 
 ### 반환 값
 

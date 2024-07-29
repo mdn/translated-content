@@ -8,7 +8,8 @@ original_slug: Web/API/GlobalEventHandlers/onclick
 
 La propiedad **onclick** devuelve el manejador del evento `click` del elemento actual.
 
-> **Nota:** Cuando uses el evento `click` para ejecutar algo, considera agregar la misma acción al evento `keydown`, para permitirle el uso a personas que no usan mouse o pantalla táctil.
+> [!NOTE]
+> Cuando uses el evento `click` para ejecutar algo, considera agregar la misma acción al evento `keydown`, para permitirle el uso a personas que no usan mouse o pantalla táctil.
 
 ## Sintaxis
 

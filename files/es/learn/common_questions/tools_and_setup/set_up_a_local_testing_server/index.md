@@ -62,7 +62,8 @@ Para hacer esto:
    python -V
    ```
 
-   > **Nota:** La v del ejemplo en mayuscula (V)
+   > [!NOTE]
+   > La v del ejemplo en mayuscula (V)
 
 3. Esto debe retornar un número de versión. Si esto esta bien, navega al directorio que contiene tu ejemplo, usando el comando `cd`.
 
@@ -85,7 +86,8 @@ Para hacer esto:
 
 5. Por defecto, se ejecutará el contenido del directorio en un servidor web local, en el puerto 8000. puedes ir a este servidor yendo a la URL `localhost:8000` en tu navegador web. Aquí verá el contenido del directorio listado - haga clic en el archivo HTML que desea ejecutar.
 
-> **Nota:** si ya tienes corriendo algo en el puerto 8000, puedes escoger otro puerto corriendo el siguiente comando de servidor por un número de puerto alternativo, por ejemplo `python -m SimpleHTTPServer 7800`. Puedes acceder a tu contenido en el `localhost:7800`.
+> [!NOTE]
+> Si ya tienes corriendo algo en el puerto 8000, puedes escoger otro puerto corriendo el siguiente comando de servidor por un número de puerto alternativo, por ejemplo `python -m SimpleHTTPServer 7800`. Puedes acceder a tu contenido en el `localhost:7800`.
 
 ## Ejecución de lenguajes del lado del servidor localmente
 

@@ -38,7 +38,8 @@ let myRules = document.styleSheets[0].cssRules;
 console.log(myRules[0].style); // a CSSStyleDeclaration representing the declarations on the h1.
 ```
 
-> **メモ:** 宣言ブロックは、中括弧内に現れるスタイルルールの一部で、実際にスタイル定義を提供する部分です（セレクターについては、中括弧の前に来る部分）。
+> [!NOTE]
+> 宣言ブロックは、中括弧内に現れるスタイルルールの一部で、実際にスタイル定義を提供する部分です（セレクターについては、中括弧の前に来る部分）。
 
 ## 仕様書
 

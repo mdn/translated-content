@@ -70,7 +70,8 @@ l10n:
 
 当你继续详细学习 CSS 布局时，将会遇到 [`flex`](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox) 以及盒子可以具有的其他各种内部值，例如 [`grid`](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)。
 
-> **备注：** 想要了解更多有关显示值以及盒子在区块和行内布局中的工作原理，请参阅[常规流中的区块和行内布局](/zh-CN/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)。
+> [!NOTE]
+> 想要了解更多有关显示值以及盒子在区块和行内布局中的工作原理，请参阅[常规流中的区块和行内布局](/zh-CN/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)。
 
 ## 不同显示类型的例子
 
@@ -135,7 +136,8 @@ CSS 中组成一个区块盒子需要：
 
 ![显示使用标准盒模型时的盒子尺寸](standard-box-model.png)
 
-> **备注：** 外边距不计入盒子的实际大小——当然，它影响盒子在页面上所占的总空间，但只影响盒子外的空间。盒子的面积止于边框，不会延伸到外边距中。
+> [!NOTE]
+> 外边距不计入盒子的实际大小——当然，它影响盒子在页面上所占的总空间，但只影响盒子外的空间。盒子的面积止于边框，不会延伸到外边距中。
 
 ### CSS 替代盒模型
 
@@ -191,7 +193,8 @@ html {
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/box-models.html", '100%', 1100)}}
 
-> **备注：** 在[这里](https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-box-model)查看该任务的解答。
+> [!NOTE]
+> 在[这里](https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-box-model)查看该任务的解答。
 
 ### 使用浏览器开发者工具来查看盒模型
 

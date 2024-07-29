@@ -176,7 +176,8 @@ Modernizr.load({
 
 Modernizr 团队按照惯例维护着[一个优秀的 polyfill 列表](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills)，按需使用即可。
 
-> **备注：** Modernizr 还有其他很棒的功能可以帮助你处理非侵入式 JavaScript 和优雅降级的技术。请阅读 [Modernizr 文档](https://modernizr.com/docs/)。
+> [!NOTE]
+> Modernizr 还有其他很棒的功能可以帮助你处理非侵入式 JavaScript 和优雅降级的技术。请阅读 [Modernizr 文档](https://modernizr.com/docs/)。
 
 ### 注意性能
 

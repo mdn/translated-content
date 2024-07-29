@@ -42,7 +42,7 @@ Firefox 36 は、米国時間 2015 年 2 月 24 日にリリースされまし�
 ### HTML
 
 - [`<meta name="referrer">`](/ja/docs/Web/HTML/Element/meta) をサポートしました ([Firefox バグ 704320](https://bugzil.la/704320))。
-- Firefox では {{HTMLElement("input")}} 要素の [`accept`](/ja/docs/Web/HTML/Element/input#accept) 属性で指定したフィルタが未知の値、すなわち未知の MIME タイプや不正な形式の値でない限り、常にデフォルトで選択されるようになりました。以前は `image/*`、`video/*`、`audio/*` が指定された場合に限り、デフォルトで選択されていました ([Firefox バグ 826185](https://bugzil.la/826185))。
+- Firefox では {{HTMLElement("input")}} 要素の [`accept`](/ja/docs/Web/HTML/Element/input#accept) 属性で指定したフィルターが未知の値、すなわち未知の MIME タイプや不正な形式の値でない限り、常にデフォルトで選択されるようになりました。以前は `image/*`、`video/*`、`audio/*` が指定された場合に限り、デフォルトで選択されていました ([Firefox バグ 826185](https://bugzil.la/826185))。
 
 ### JavaScript
 

@@ -100,7 +100,8 @@ console.log(42 / -0); // -Infinity
 
 虽然 number 在概念上是一个“数学的值”，并且总是隐式的编码为浮点类型，但是 JavaScript 提供了[位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#位运算符)。当应用位运算符时，number 首先转换为 32 位整数。
 
-> **备注：** 尽管位运算符*可以*使用[位掩码](https://zh.wikipedia.org/wiki/掩码)来表示单个数值中的几个布尔值，但通常这不是一个好的做法。JavaScript 提供了表示一组布尔值的其他方法（如布尔数组，或将布尔值分配给命名属性的对象）。位掩码也往往会使代码更难读取、理解和维护。
+> [!NOTE]
+> 尽管位运算符*可以*使用[位掩码](https://zh.wikipedia.org/wiki/掩码)来表示单个数值中的几个布尔值，但通常这不是一个好的做法。JavaScript 提供了表示一组布尔值的其他方法（如布尔数组，或将布尔值分配给命名属性的对象）。位掩码也往往会使代码更难读取、理解和维护。
 
 可能有必要在非常受限的环境中使用此类技术，例如在试图应对本地存储的限制时，或在极端情况下（例如当网络上的每个位计数时）。只有当这项技术是优化尺寸的最后一项措施时，才应考虑这项技术。
 
@@ -177,7 +178,8 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 
 将键与两个访问器函数（`get` 和 `set`）相关联，以获取或者存储值。
 
-> **备注：** 重要的是，意识到它是访问器*属性*——而不是访问器*方法*。我们可以将函数作为值来提供给 JavaScript 对象的访问器，使得对象表现得像一个类——但这并不能使该对象成为类。
+> [!NOTE]
+> 重要的是，意识到它是访问器*属性*——而不是访问器*方法*。我们可以将函数作为值来提供给 JavaScript 对象的访问器，使得对象表现得像一个类——但这并不能使该对象成为类。
 
 一个访问器属性有着以下的特性：
 
@@ -236,17 +238,17 @@ JavaScript 有一个内置对象的标准库。请阅读[参考页面](/zh-CN/do
 - [`+`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition) 运算符——如果运算对象是字符串，执行字符串串联；否则，执行数值相加。
 - [`==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality) 运算符——如果一个运算对象是原始值，而另一个运算对象是对象（object），则该对象将转换为没有首选类型的原始值。
 
-如果值已经是原始值，则此操作不会进行任何转换。对象将依次调用它的 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（将 `default` 作为 hint 值）、`valueOf()` 和 `toString()` 方法，将其转换为原始值。注意，原始值转换会在 `toString()` 方法之前调用 `valueOf()` 方法，这与[数字类型强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)的行为相似，但与[字符串类型强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)不同。
+如果值已经是原始值，则此操作不会进行任何转换。对象将依次调用它的 [`[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（将 `default` 作为 hint 值）、`valueOf()` 和 `toString()` 方法，将其转换为原始值。注意，原始值转换会在 `toString()` 方法之前调用 `valueOf()` 方法，这与[数字类型强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)的行为相似，但与[字符串类型强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)不同。
 
-`[@@toPrimitive]()` 方法，如果存在，则必须返回原始值——返回对象，会导致 {{jsxref("TypeError")}}。对于 `valueOf()` 和 `toString()`，如果其中一个返回对象，则忽略其返回值，从而使用另一个的返回值；如果两者都不存在，或者两者都没有返回一个原始值，则抛出 {{jsxref("TypeError")}}。例如，以下代码：
+`[Symbol.toPrimitive]()` 方法，如果存在，则必须返回原始值——返回对象，会导致 {{jsxref("TypeError")}}。对于 `valueOf()` 和 `toString()`，如果其中一个返回对象，则忽略其返回值，从而使用另一个的返回值；如果两者都不存在，或者两者都没有返回一个原始值，则抛出 {{jsxref("TypeError")}}。例如，以下代码：
 
 ```js
 console.log({} + []); // "[object Object]"
 ```
 
-`{}` 和 `[]` 都没有 `[@@toPrimitive]()` 方法。`{}` 和 `[]` 都从 {{jsxref("Object.prototype.valueOf")}} 继承 `valueOf()`，其返回对象自身。因为返回值是一个对象，因此它被忽略。因此，调用 `toString()` 方法。[`{}.toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 返回 `"[object Object]"`，而 [`[].toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) 返回 `""`，因此这个结果是它们的串联：`"[object Object]"`。
+`{}` 和 `[]` 都没有 `[Symbol.toPrimitive]()` 方法。`{}` 和 `[]` 都从 {{jsxref("Object.prototype.valueOf")}} 继承 `valueOf()`，其返回对象自身。因为返回值是一个对象，因此它被忽略。因此，调用 `toString()` 方法。[`{}.toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 返回 `"[object Object]"`，而 [`[].toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) 返回 `""`，因此这个结果是它们的串联：`"[object Object]"`。
 
-在强制转换为任意的原始类型时，`[@@toPrimitive]()` 方法总是优先调用。原始值的强制转换的行为通常与 number 类型的强制转换类似，因为优先调用了 `valueOf()`；然而，有着自定义 `[@@toPrimitive]()` 方法的对象可以选择返回任意的原始值。{{jsxref("Date")}} 和 {{jsxref("Symbol")}} 对象是唯一重写 `[@@toPrimitive]()` 方法的对象。[`Date.prototype[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive) 将 `"string"` 视为 `"default"` hint，而 [`Symbol.prototype[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive) 忽略 hint 并始终返回一个 symbol。
+在强制转换为任意的原始类型时，`[Symbol.toPrimitive]()` 方法总是优先调用。原始值的强制转换的行为通常与 number 类型的强制转换类似，因为优先调用了 `valueOf()`；然而，有着自定义 `[Symbol.toPrimitive]()` 方法的对象可以选择返回任意的原始值。{{jsxref("Date")}} 和 {{jsxref("Symbol")}} 对象是唯一重写 `[Symbol.toPrimitive]()` 方法的对象。[`Date.prototype[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) 将 `"string"` 视为 `"default"` hint，而 [`Symbol.prototype[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive) 忽略 hint 并始终返回一个 symbol。
 
 ### 数字类型强制转换
 
@@ -260,11 +262,11 @@ console.log({} + []); // "[object Object]"
 
 你可能已经注意到，有三种不同的路径可以将对象转换为原始值：
 
-- [原始值强制转换](#原始值强制转换)：`[@@toPrimitive]("default")` → `valueOf()` → `toString()`
-- [数字类型强制转换](#数字类型强制转换)、[number 类型强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)、[BigInt 类型强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt#转化)：`[@@toPrimitive]("number")` → `valueOf()` → `toString()`
-- [字符串类型强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)：`[@@toPrimitive]("string")` → `toString()` → `valueOf()`
+- [原始值强制转换](#原始值强制转换)：`[Symbol.toPrimitive]("default")` → `valueOf()` → `toString()`
+- [数字类型强制转换](#数字类型强制转换)、[number 类型强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)、[BigInt 类型强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt#转化)：`[Symbol.toPrimitive]("number")` → `valueOf()` → `toString()`
+- [字符串类型强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)：`[Symbol.toPrimitive]("string")` → `toString()` → `valueOf()`
 
-在所有情况下，`[@@toPrimitive]()` 如果存在，必须可调用并返回原始值，而如果它们不可调用或返回对象，`valueOf` 或 `toString` 将被忽略。在过程结束时，如果成功，结果保证是原始值。然后，由此产生的原始值会进一步强制类型转换，具体取决于上下文。
+在所有情况下，`[Symbol.toPrimitive]()` 如果存在，必须可调用并返回原始值，而如果它们不可调用或返回对象，`valueOf` 或 `toString` 将被忽略。在过程结束时，如果成功，结果保证是原始值。然后，由此产生的原始值会进一步强制类型转换，具体取决于上下文。
 
 ## 参见
 

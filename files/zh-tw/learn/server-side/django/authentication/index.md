@@ -29,7 +29,8 @@ slug: Learn/Server-side/Django/Authentication
 
 Django 提供認證和授權（「permission」）系統，該系統建立在[上一教程](/zh-TW/docs/Learn/Server-side/Django/Sessions)中討論的會話框架的基礎上。透過它可以驗證用戶憑證並定義個別用戶能夠執行的操作。該框架包括用於 `Users` 和 `Groups` 的內置模型（一般常用來一次性套用權限於一群用戶上的方式），用於指定用戶是否可以執行任務的權限/旗標，用於登入用戶的表單和視圖，以及 查看用於限制內容的工具。
 
-> **備註：** 從 Django 角度而言，身份驗證系統需要做到非常通用，因此不提供其他網頁身份驗證系統中提供的某些功能。需要解決一些常見問題的話可以透過第三方軟件包。例如，限制登錄嘗試和透過第三方進行身份驗證（例如 OAuth）。
+> [!NOTE]
+> 從 Django 角度而言，身份驗證系統需要做到非常通用，因此不提供其他網頁身份驗證系統中提供的某些功能。需要解決一些常見問題的話可以透過第三方軟件包。例如，限制登錄嘗試和透過第三方進行身份驗證（例如 OAuth）。
 
 在本教程中，我們將會展示如何在[本地圖書館](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)網站中啟用用戶身份驗證，並建立自己的登入和登出頁面，為模型添加權限以及控制對頁面的訪問。我們將根據身份驗證/權限顯示為用戶或是圖書館員設計的已借出書籍列表。
 
@@ -41,7 +42,8 @@ Django 提供認證和授權（「permission」）系統，該系統建立在[�
 
 當我們[創建框架網站](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)時（在教程 2 中），身份驗證已自動啟用，因此你此時無需執行任何其他操作。
 
-> **備註：** 當我們使用 `django-admin startproject` 命令創建應用程序時，所有必要的配置都為我們完成了。用戶和模型權限的數據庫表是在我們首次調用 `python manage.py migrate` 時創建的。
+> [!NOTE]
+> 當我們使用 `django-admin startproject` 命令創建應用程序時，所有必要的配置都為我們完成了。用戶和模型權限的數據庫表是在我們首次調用 `python manage.py migrate` 時創建的。
 
 該配置是在項目文件（**locallibrary/locallibrary/settings.py**）的 `INSTALLED_APPS` 和 `MIDDLEWARE` 部分中設置的，如下所示：
 
@@ -64,7 +66,8 @@ MIDDLEWARE = [
 
 當我們在教程 4 中查看 [Django 管理站](/zh-TW/docs/Learn/Server-side/Django/Admin_site)點時，你已經創建了第一個用戶（這是一個超級用戶，使用命令 `python manage.py createsuperuser` 創建）。我們的超級用戶已經通過身份驗證，並且具有所有權限，因此我們需要創建一個測試用戶來代表普通站點用戶。我們將使用管理站點來創建本地圖書館組和網站登錄名，因為這是最快的方法之一。
 
-> **備註：** 你還可以通過編程方式創建用戶，如下所示。例如，如果要開發一個界面以允許用戶創建自己的登錄名，則必須這樣做（你不應授予用戶訪問管理站點的權限）。
+> [!NOTE]
+> 你還可以通過編程方式創建用戶，如下所示。例如，如果要開發一個界面以允許用戶創建自己的登錄名，則必須這樣做（你不應授予用戶訪問管理站點的權限）。
 >
 > ```python
 > from django.contrib.auth.models import User
@@ -104,7 +107,8 @@ MIDDLEWARE = [
 
 就是這樣而已！ 現在，你將擁有一個「普通庫成員」帳戶，你將可以使用該帳戶進行測試（一旦我們實現了頁面以使其能夠登錄）。
 
-> **備註：** 你應該嘗試創建另一個庫成員用戶。另外，為圖書館員創建一個組，並為其添加用戶！
+> [!NOTE]
+> 你應該嘗試創建另一個庫成員用戶。另外，為圖書館員創建一個組，並為其添加用戶！
 
 ## Setting up your authentication views
 
@@ -112,9 +116,11 @@ Django 提供了創建身份驗證頁面所需的幾乎所有內容，以處理�
 
 在本節中，我們顯示如何將默認系統集成到本地圖書館網站中並創建模板。我們將它們放在主項目 URL 中。
 
-> **備註：** 你不必使用任何代碼，但是你可能想要使用它，因為它使事情變得容易得多。如果你更改用戶模型（一個高級主題！），幾乎可以肯定需要更改表單處理代碼，但是即使如此，你仍然可以使用庫存視圖功能。
+> [!NOTE]
+> 你不必使用任何代碼，但是你可能想要使用它，因為它使事情變得容易得多。如果你更改用戶模型（一個高級主題！），幾乎可以肯定需要更改表單處理代碼，但是即使如此，你仍然可以使用庫存視圖功能。
 
-> **備註：** 在這種情況下，我們可以合理地將身份驗證頁面（包括 URL 和模板）放入目錄應用程序中。但是，如果我們有多個應用程序，最好將這種共享的登錄行為分開，並使其在整個站點中都可用，這就是我們在此處顯示的內容！
+> [!NOTE]
+> 在這種情況下，我們可以合理地將身份驗證頁面（包括 URL 和模板）放入目錄應用程序中。但是，如果我們有多個應用程序，最好將這種共享的登錄行為分開，並使其在整個站點中都可用，這就是我們在此處顯示的內容！
 
 ### Project URLs
 
@@ -129,7 +135,8 @@ urlpatterns += [
 
 導航到 `http://127.0.0.1:8000/accounts/` URL（注意尾隨斜杠！），然後 Django 將顯示一個錯誤，指出找不到此 URL，並列出了它嘗試的所有 URL。從中你可以看到將起作用的 URL，例如：
 
-> **備註：** 使用上述方法會在方括號中添加以下網址，這些網址可用於反轉網址映射。你無需執行其他任何操作-上面的 url 映射會自動映射以下提到的 URL。
+> [!NOTE]
+> 使用上述方法會在方括號中添加以下網址，這些網址可用於反轉網址映射。你無需執行其他任何操作-上面的 url 映射會自動映射以下提到的 URL。
 >
 > ```python
 > accounts/ login/ [name='login']
@@ -157,7 +164,8 @@ Exception Value:    registration/login.html
 
 對於這個網站，我們將 HTML 頁面放在 **templates/registration/** 目錄中。此目錄應位於你的項目根目錄中，即與 **catalog** 和 **locallibrary** 文件夾相同的目錄中）。請立即創建這些文件夾。
 
-> **備註：** Your folder structure should now look like the below:
+> [!NOTE]
+> Your folder structure should now look like the below:
 > locallibrary (django project folder)
 > |\_catalog
 > |\_locallibrary
@@ -177,7 +185,8 @@ TEMPLATES = [
 
 ### Login template
 
-> **警告：** 本文提供的身份驗證模板是 Django 演示登錄模板的非常基本/稍作修改的版本。你可能需要自定義它們以供自己使用！
+> [!WARNING]
+> 本文提供的身份驗證模板是 Django 演示登錄模板的非常基本/稍作修改的版本。你可能需要自定義它們以供自己使用！
 
 創建一個名為 **/locallibrary/templates/registration/login.html** 的新 HTML 文件。為其提供以下內容：
 
@@ -361,7 +370,8 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 你可以通過登錄頁面中的鏈接測試密碼重置功能。**請注意，Django 只會將重置電子郵件發送到已經存儲在其數據庫中的地址（用戶）！**
 
-> **備註：** 密碼重設系統要求你的網站支持電子郵件，這不在本文的討論範圍之內，因此該部分尚無法使用。要進行測試，請將以下行放在 settings.py 文件的末尾。這將記錄發送到控制台的所有電子郵件（因此你可以從控制台複製密碼重置鏈接）。
+> [!NOTE]
+> 密碼重設系統要求你的網站支持電子郵件，這不在本文的討論範圍之內，因此該部分尚無法使用。要進行測試，請將以下行放在 settings.py 文件的末尾。這將記錄發送到控制台的所有電子郵件（因此你可以從控制台複製密碼重置鏈接）。
 >
 > ```python
 > EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -399,7 +409,8 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 我們使用 `url` 模板標記和相應 URL 配置的名稱來創建登錄和註銷鏈接 URL。還要注意我們如何將 `?next=\{{request.path}}` 附加到 URL 的末尾。這是在鏈接的 URL 的末尾添加一個 URL 參數，其中包含當前頁面的地址（URL）。用戶成功登錄/註銷後，視圖將使用此 `next` 值將用戶重定向到他們首先單擊 login/logout 鏈接的頁面。
 
-> **備註：** 試試看！如果你在主頁上，然後單擊側欄中的「Login/Logout」，那麼在操作完成後，你應該回到同一頁面。
+> [!NOTE]
+> 試試看！如果你在主頁上，然後單擊側欄中的「Login/Logout」，那麼在操作完成後，你應該回到同一頁面。
 
 ### 在視圖中測試
 
@@ -413,7 +424,8 @@ def my_view(request):
     ...
 ```
 
-> **備註：** 你可以通過在 `request.user.is_authenticated` 上進行測試來手動執行相同的操作，但是裝飾器要方便得多！
+> [!NOTE]
+> 你可以通過在 `request.user.is_authenticated` 上進行測試來手動執行相同的操作，但是裝飾器要方便得多！
 
 同樣，在基於類的視圖中限制對登錄用戶的訪問權限的最簡單方法是從 `LoginRequiredMixin` 派生。你需要首先在父類列表中，在主視圖類之前聲明此混合。
 
@@ -474,7 +486,8 @@ def is_overdue(self):
     return False
 ```
 
-> **備註：** 在進行比較之前，我們首先要驗證 `due_back`是否為空。空的 `due_back` 字段將導致 Django 拋出錯誤而不是顯示頁面：空值不可比。這不是我們希望用戶體驗的東西！
+> [!NOTE]
+> 在進行比較之前，我們首先要驗證 `due_back`是否為空。空的 `due_back` 字段將導致 Django 拋出錯誤而不是顯示頁面：空值不可比。這不是我們希望用戶體驗的東西！
 
 現在，我們已經更新了模型，我們需要在項目上進行新的遷移，然後應用這些遷移：
 
@@ -507,7 +520,8 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 現在可以將書借給特定用戶了，然後借出許多 `BookInstance` 記錄。將他們的 `borrowed` 字段設置為測試用戶，`status` 為「借用」，並設置將來和將來的到期日。
 
-> **備註：** 我們不會詳細說明該過程，因為你已經知道如何使用管理網站！
+> [!NOTE]
+> 我們不會詳細說明該過程，因為你已經知道如何使用管理網站！
 
 ### On loan view
 
@@ -667,7 +681,8 @@ class MyView(PermissionRequiredMixin, View):
 
 你應該能夠遵循與其他視圖相同的模式。主要區別在於你只需要將視圖限制為圖書館員即可。你可以根據用戶是否是工作人員來執行此操作（函數裝飾器：`staff_member_required`，模板變量：`user.is_staff`），但是我們建議你改用 `can_mark_returned` 權限和 `PermissionRequiredMixin`，如上一節所述。
 
-> **警告：** 請記住不要將你的超級用戶用於基於權限的測試（即使尚未定義權限，權限檢查也始終對超級用戶返回 true！）。而是創建一個圖書管理員用戶，並添加所需的功能。
+> [!WARNING]
+> 請記住不要將你的超級用戶用於基於權限的測試（即使尚未定義權限，權限檢查也始終對超級用戶返回 true！）。而是創建一個圖書管理員用戶，並添加所需的功能。
 
 完成後，你的頁面應類似於以下屏幕截圖。![All borrowed books, restricted to librarian](library_borrowed_all.png)
 

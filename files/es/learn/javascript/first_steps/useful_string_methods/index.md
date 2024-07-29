@@ -195,7 +195,8 @@ El largo de "mozilla" es 7, pero es porque el contador comienza en 0, la posici�
 
    Esto devuelve "zilla" — debido a que la posición del caracter de 2 es la letra z, y como no incluiste un segundo parámetro, la subcadena que que se devolvío fué el resto de los caracteres de la cadena.
 
-> **Nota:** El segundo parámetro de `slice()` es opcional: si no lo incluyes, el corte termina al final de la cadena original. Hay otras opciones también; estudia la página {{jsxref("String.prototype.slice()", "slice()")}} para ver que mas puedes averiguar.
+> [!NOTE]
+> El segundo parámetro de `slice()` es opcional: si no lo incluyes, el corte termina al final de la cadena original. Hay otras opciones también; estudia la página {{jsxref("String.prototype.slice()", "slice()")}} para ver que mas puedes averiguar.
 
 ### Cambiando todo a mayúscula o minúscula
 
@@ -392,7 +393,8 @@ En este ejercicio tenemos los nombres de las ciudades del Reino Unido, Pero las 
 3. Usando esta última variable como una subcadena, reemplaza la primera letra de la cadena en minúscula con la subcadena en mayúscula. Almacena el resultado de este procedimiento de reemplazo en otra nueva variable.
 4. Cambia el valor de la variable `result` a igual al resultado final. en vez de `input`.
 
-> **Nota:** Una pista — los parámetros de los métodos de cadena no tienen que ser literales de cadenas; también pueden ser variables, o incluso variables con un método invocados en ellas.
+> [!NOTE]
+> Una pista — los parámetros de los métodos de cadena no tienen que ser literales de cadenas; también pueden ser variables, o incluso variables con un método invocados en ellas.
 
 ```html hidden
 <h2>Salida en vivo</h2>

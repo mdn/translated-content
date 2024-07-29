@@ -60,13 +60,17 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 
 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 是 W3C 编写的规范，定义了一组可用于其他元素的 HTML 特性，用于提供额外的语义化以及改善缺乏的无障碍。以下是规范中三个主要的特性：
 
-- **角色** — 这定义了元素是干什么的。许多「标志性的角色」，其实重复了 HTML5 的结构元素的语义价值。例如 `role="navigation"` ({{htmlelement("nav")}}) 或者 `role="complementary"` ({{htmlelement("aside")}})，这也有一些描述其他页面结构的（角色），例如 `role="banner"`, `role="search"`, `role="tabgroup"`, `role="tab"` 等等。我们通常能从 UI 层面找到它们。
-- **属性** — 我们能通过定义一些属性给元素，让他们具备更多的语义。例如： `aria-required="true"` 意味着元素在表单上是必填的。然而 `aria-labelledby="label"` 允许你在元素上设置一个 ID，用于[`labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)引用作为屏幕阅读器指定的 label 内容，多个也可以。当然，下面这个代码是不行的： `<label for="input">` 。举个例子：你可以用 `aria-labelledby` 指定包含在 a 标签中的 key 描述{{htmlelement("div")}} 是多个 table 表格的 label，或者将它指定为 img 标签的 alt 内容 — 而无需重复在每一个 img 里头定义。如果迷糊了，你可以在这里看到例子： [Text alternatives](/zh-CN/docs/Learn/Accessibility/HTML?document_saved=true#Text_alternatives).
-- **状态** —用于表达元素当前的条件的特殊属性，例如 `aria-disabled="true"`，屏幕阅读器就会这个表单禁止输入。状态和属性的差异之处就是：属性在应用的生命周期中不会改变，而状态可以，通常我们用编程的方法改变它，例如 Javascript。
+- [角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
+  - : 这定义了元素是干什么的。许多「标志性的角色」，其实重复了 HTML5 的结构元素的语义价值。例如 `role="navigation"` ({{htmlelement("nav")}}) 或者 `role="complementary"` ({{htmlelement("aside")}})，这也有一些描述其他页面结构的（角色），例如 `role="banner"`, `role="search"`, `role="tabgroup"`, `role="tab"` 等等。我们通常能从 UI 层面找到它们。
+- 属性
+  - : 定义元素的属性，使元素具备额外的含义或语义。例如，`aria-required="true"` 指定表单输入元素需要被填写才能有效，而 `aria-labelledby="label"` 允许你在元素上设置一个 ID，用于在页面中的其他地方（包括多个元素）引用其作为标签，`<label for="input">` 不可能做到这一点。举个例子：你可以用 `aria-labelledby` 指定在 {{htmlelement("div")}} 中包含的关键描述是多个表格单元的标签，或者将它指定为图像的替代文本——为图像替代文本指定额外信息，而无需在每一个 `alt` 属性中重复。你可以在[替代文本](/zh-CN/docs/Learn/Accessibility/HTML#替代文本)中查看示例。
+- 状态
+  - : 用于表达元素当前的条件的特殊属性，例如 `aria-disabled="true"`，屏幕阅读器就会这个表单禁止输入。状态和属性的差异之处就是：属性在应用的生命周期中不会改变，而状态可以，通常我们用编程的方法改变它，例如 JavaScript。
 
-关于 WAI-ARIA 属性重要的一点是它不会对 web 页面有任何影响，除了让更多的信息从浏览器暴露给 accessibility APIs (无障碍 API)，这也是屏幕阅读器这一类软件的信息源。WAI-ARIA 不会影响网页的结构，以及 DOM 等等，尽管这些属性可用于作为 css 选择器。
+关于 WAI-ARIA 属性重要的一点是它不会对 web 页面有任何影响，除了让更多的信息从浏览器暴露给无障碍 API，这也是屏幕阅读器这一类软件的信息源。WAI-ARIA 不会影响网页的结构，以及 DOM 等等，尽管这些属性可用于作为 css 选择器。
 
-> **备注：** 关于 ARIA 的角色和他的用法，如需了解更多信息，尽在 WAI-ARIA 规范，查看 [角色定义](https://www.w3.org/TR/wai-aria-1.1/#role_definitions)
+> [!NOTE]
+> 关于 ARIA 的角色和他的用法，如需了解更多信息，尽在 WAI-ARIA 规范，查看 [角色定义](https://www.w3.org/TR/wai-aria-1.1/#role_definitions)
 >
 > 规范同时也包含了属性和状态的一个列表，链接有更多详尽信息：[查看 属性和状态的定义（所有的 aria-\* 属性）](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def)
 
@@ -86,7 +90,8 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 
 我们目的不是详细介绍所有的 WAI-ARIA 特性，以及它大部分支持的细节。相反，介绍最主要的 WAI-ARIA 功能。我们没有提到的任何支持细节，你可以假定该特性得到了良好的支持。我们将清楚地介绍例外情况。
 
-> **备注：** 一些 JavaScript 库支持 WAI-ARIA，意味着生成 UI 界面时，例如复杂的表单控件，他们会添加 ARIA 属性来优化它的无障碍特性。如果你再找一些第三方 JavaScript 解决方案来进行快速的 UI 开发，当你做选择的时候，必须重视 UI 小部件的无障碍。一个良好的例子就是 jQuery UI (请看 [About jQuery UI: Deep accessibility support](https://jqueryui.com/about/#deep-accessibility-support)), [ExtJS](https://www.sencha.com/products/extjs/) 还有 [Dojo/Dijit](https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html)。
+> [!NOTE]
+> 一些 JavaScript 库支持 WAI-ARIA，意味着生成 UI 界面时，例如复杂的表单控件，他们会添加 ARIA 属性来优化它的无障碍特性。如果你再找一些第三方 JavaScript 解决方案来进行快速的 UI 开发，当你做选择的时候，必须重视 UI 小部件的无障碍。一个良好的例子就是 jQuery UI (请看 [About jQuery UI: Deep accessibility support](https://jqueryui.com/about/#deep-accessibility-support)), [ExtJS](https://www.sencha.com/products/extjs/) 还有 [Dojo/Dijit](https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html)。
 
 ### 何时你应使用 WAI-ARIA?
 
@@ -101,7 +106,8 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 
 **但还是要重申：当你需要的时候再使用无障碍特性！**
 
-> **备注：** 另外，请尝试确保你的真实用户来测试你的网站：普通人，使用屏幕阅读器的用户，使用键盘导航的人。他们会提供你更多的见解。
+> [!NOTE]
+> 另外，请尝试确保你的真实用户来测试你的网站：普通人，使用屏幕阅读器的用户，使用键盘导航的人。他们会提供你更多的见解。
 
 ## 实用的 WAI-ARIA 实现
 
@@ -233,7 +239,8 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 这会让你的屏幕阅读器在更新时可以读取内容。
 
-> **备注：** 当你用 `file://` 协议头来发 `XMLHttpRequest` 大部分浏览器会抛出 security exception。所以你可能要设置一个 web 服务器来作为请求源，例如，[使用 GitHub](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)，或者设置一个本地服务器 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
+> [!NOTE]
+> 当你用 `file://` 协议头来发 `XMLHttpRequest` 大部分浏览器会抛出 security exception。所以你可能要设置一个 web 服务器来作为请求源，例如，[使用 GitHub](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)，或者设置一个本地服务器 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
 
 这里有一个附加的考虑——只读取更新的文本位。如果我们总是读出标题可能会很好，这样用户就可以记住正在读出的内容。为了能做到这个，我们增加了 [`aria-atomic`](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) 给 section。再次更新 `<section>`，像这样：
 
@@ -243,7 +250,8 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 这个 `aria-atomic="true"` 属性告诉屏幕阅读器去读取整个元素的内容作为一个原子单位，而不是里头某个字符串更新了。
 
-> **备注：** 你可在此完成此例子 [aria-live.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-live.html) ([在线 demo](http://mdn.github.io/learning-area/accessibility/aria/aria-live.html)).
+> [!NOTE]
+> 你可在此完成此例子 [aria-live.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-live.html) ([在线 demo](http://mdn.github.io/learning-area/accessibility/aria/aria-live.html)).
 
 > **备注：** [`aria-relevant`](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant) 属性对于控制更新实时区域时读取的内容也非常有用。例如，你读取内容添加或删除。
 
@@ -308,7 +316,8 @@ var intervalID = window.setInterval(showQuote, 10000);
      aria-required="true" />
    ```
 
-> **备注：** 你可以在这里看这个在线完成的例子 [form-validation-updated.html](http://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html).
+> [!NOTE]
+> 你可以在这里看这个在线完成的例子 [form-validation-updated.html](http://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html).
 
 除了经典的 {{htmlelement("label")}} 元素之外，WAI-ARIA 还支持一些高级表单标注技术。我们已经讨论过使用 [`aria-label`](https://www.w3.org/TR/wai-aria-1.1/#aria-label) 属性来提供标签，我们不希望标签对于有视力的用户是可见的（参见上面的 [路牌/地标（Signposts/Landmarks）](#路牌地标_（signpostslandmarks）) 部分）。还有一些其他标签技术使用其他属性，例如 [`aria-labelledby`](https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby) ，如果你想将非\<label>元素指定为标签或标签多个表单输入具有相同的标签，并且 [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby)，如果你想关联 带有表单输入的其他信息，并将其读出。请查阅文章获得更多细节： [WebAIM's Advanced Form Labeling article](http://webaim.org/techniques/forms/advanced)
 
@@ -357,7 +366,8 @@ function toggleMusician(bool) {
 
 这时候再用屏幕阅读器，这次你会听到短语“Click me!, button”——舒服了。
 
-> **备注：** 别忘了无论如何用正确的语义化元素是最佳选择。如果你想创建一个按钮，你可用 {{htmlelement("button")}} 元素，你应该用 {{htmlelement("button")}} 元素！
+> [!NOTE]
+> 别忘了无论如何用正确的语义化元素是最佳选择。如果你想创建一个按钮，你可用 {{htmlelement("button")}} 元素，你应该用 {{htmlelement("button")}} 元素！
 
 #### 通过复杂的小部件做引导用户
 
@@ -406,7 +416,8 @@ function toggleMusician(bool) {
 </div>
 ```
 
-> **备注：** 这里最明显的变化是我们删除了最初在示例中出现的链接，并且只使用了列表项作为选项卡——这样做是因为它使屏幕阅读器用户不那么容易混淆（链接并不会跳转，它们只更改视图），它允许大小修改/位置变化一类的特性更好地工作——当这些被放在链接上时，浏览器始终报告“1 of 1”，而不是“1 of 3”、“2 of 3”等。
+> [!NOTE]
+> 这里最明显的变化是我们删除了最初在示例中出现的链接，并且只使用了列表项作为选项卡——这样做是因为它使屏幕阅读器用户不那么容易混淆（链接并不会跳转，它们只更改视图），它允许大小修改/位置变化一类的特性更好地工作——当这些被放在链接上时，浏览器始终报告“1 of 1”，而不是“1 of 3”、“2 of 3”等。
 
 以下刚刚用上的新特性：
 
@@ -419,7 +430,8 @@ function toggleMusician(bool) {
 
 在我们的测试中，这个新结构确实有助于改善整体情况。这些选项卡现在被识别为选项卡（例如，屏幕阅读器说出「选项卡」），所选选项卡由“选择”表示，并使用选项卡名称读出，屏幕阅读器还会告诉你当前所在的选项卡编号。此外，由于`aria-hidden` 设置（只有非隐藏的选项卡有 `aria-hidden="false"` 设置），非隐藏内容是唯一可以向下导航的内容，这意味着所选内容更容易找到。
 
-> **备注：** 如果你有不想让屏幕阅读器读出来的东西，你可以给它一个 `aria-hidden="true"` 属性。
+> [!NOTE]
+> 如果你有不想让屏幕阅读器读出来的东西，你可以给它一个 `aria-hidden="true"` 属性。
 
 ## 总结
 
