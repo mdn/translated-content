@@ -2,14 +2,14 @@
 title: MediaDevices：selectAudioOutput() 方法
 slug: Web/API/MediaDevices/selectAudioOutput
 l10n:
-  sourceCommit: 5a5f3d3cbbfabf138aa9f0d3e2c8fce4a168f5cc
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
 {{APIRef("Audio Output Devices API")}}{{securecontext_header}}{{SeeCompatTable}}
 
-[Audio Output Devices API](/zh-CN/docs/Web/API/Audio_Output_Devices_API) 的 **`MediaDevices.selectAudioOutput()`** 方法会提示用户选择一个音频输出设备，例如扬声器或耳机。如果用户选择了设备，该方法会授予用户权限，使选定的设备成为音频输出的目标。
+{{domxref("MediaDevices")}} 接口的 **`selectAudioOutput()`** 方法会提示用户选择一个音频输出设备，例如扬声器或耳机。如果用户选择了设备，该方法会授予用户权限，使选定的设备成为音频输出的目标。
 
-选择设备后，如果该设备可用，可以使用 {{domxref("MediaDevices.enumerateDevices()")}} 列出它，并使用 {{domxref("HTMLMediaElement.setSinkId()")}} 设置为音频输出目标。
+选择设备后，如果该设备可用，可以使用 {{domxref("MediaDevices.enumerateDevices()")}} 列出它，并使用 {{domxref("HTMLMediaElement.setSinkId()")}} 将其设置为音频输出目标。
 
 成功时，返回的 {{jsxref("Promise")}} 会兑现一个描述所选设备的 {{domxref("MediaDeviceInfo")}} 对象。
 
@@ -43,27 +43,26 @@ selectAudioOutput(options)
 ### 异常
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : 如果使用 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)来阻止使用音频输出（此外不会显示用于选择音频输出的弹出窗口），或者用户关闭选择提示而没有选择设备时，会返回此错误。
+  - : 如果使用 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)来阻止使用音频输出（此外不会显示用于选择音频输出的弹出窗口），或者用户关闭选择提示而没有选择设备时，则会返回此错误。
 - `NotFoundError` {{domxref("DOMException")}}
   - : 如果没有可用的音频输出设备，则会返回此错误。
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : 如果没有发生[短暂激活](/zh-CN/docs/Web/Security/User_activation)（你必须从某种 UI 事件中触发它）。
+  - : 如果没有发生{{Glossary("transient activation", "瞬态激活")}}（你必须从某种 UI 事件中触发它），则会返回此错误。
 
-## 安全性要求
+## 安全要求
 
-访问此 API 受以下约束：
+对此 API 的访问受以下约束：
 
 - 方法必须在[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中调用。
-- 需要[短暂用户激活](/zh-CN/docs/Web/Security/User_activation)。
-  用户必须与页面或 UI 元素进行交互，才能使用此功能。
+- 需要[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)。
+  用户必须与页面或 UI 元素进行交互，才能使用此特性。
 - 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)的控制。
 
-权限状态可以通过 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 的 {{domxref("Permissions.query", "navigator.permissions.query()")}} 方法进行查询，传递一个带有 `speaker-selection` 权限的权限描述符。
+权限状态可以通过 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 的 {{domxref("Permissions.query", "navigator.permissions.query()")}} 方法进行查询（传递一个带有 `speaker-selection` 权限的权限描述符）。
 
 ## 示例
 
-以下是使用 `selectAudioOutput()` 的示例，它在按钮点击时触发。
-它会输出所选的 {{domxref("MediaDeviceInfo.deviceId", "device IDs", "", "nocode")}} 和标签（如果可用），或者错误消息。
+以下是使用 `selectAudioOutput()` 的示例，它在按钮点击时触发。它会输出所选的{{domxref("MediaDeviceInfo.deviceId", "设备 ID", "", "nocode")}} 和标签（如果可用），或者错误消息。
 
 ```js
 document.querySelector("#myButton").addEventListener("click", () => {
