@@ -2,7 +2,7 @@
 title: 使用 CSS 嵌套
 slug: Web/CSS/CSS_nesting/Using_CSS_nesting
 l10n:
-  sourceCommit: c8f8d139207c796a49390614fbe4e65a8ab9bfac
+  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
 {{CSSRef}}
@@ -53,7 +53,8 @@ parent child {
 
 在这个示例中，一个没有使用 `&` 嵌套选择器，另一个使用了。在 `<label>` 内部的 `<input>` 被赋予了和紧邻 `<label>` 的 `<input>` 不同的样式。这个示例展示了省略 `&` 嵌套选择器的影响。
 
-> **备注：** 这个示例演示了实现原版和现行嵌套规范的浏览器的不同输出。Chrome 和 Safari 实现了 2023 年 8 月前的原版规范，其要求使用 `&` 嵌套选择器。如果你的浏览器支持现行规范，那么这两个示例的输出将会和第二个示例一致。
+> [!NOTE]
+> 这个示例演示了实现原版和现行嵌套规范的浏览器的不同输出。Chrome 和 Safari 实现了 2023 年 8 月前的原版规范，其要求使用 `&` 嵌套选择器。如果你的浏览器支持现行规范，那么这两个示例的输出将会和第二个示例一致。
 
 #### 不使用嵌套选择器
 
@@ -400,7 +401,8 @@ h2 {
 }
 ```
 
-> **警告：** 这在 CSS 嵌套中是不可能的：当不使用[组合器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)时，嵌套选择器将被当作[类型选择器](/zh-CN/docs/Web/CSS/Type_selectors)。允许拼接会使得这个规则无效。
+> [!WARNING]
+> 这在 CSS 嵌套中是不可能的：当不使用[组合器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)时，嵌套选择器将被当作[类型选择器](/zh-CN/docs/Web/CSS/Type_selectors)。允许拼接会使得这个规则无效。
 
 在[组合选择器](/zh-CN/docs/Web/CSS/CSS_selectors/Selector_structure#组合选择器)中，类型选择器必须是第一位。`&Element`（一个[类型选择器](/zh-CN/docs/Web/CSS/Type_selectors)）会使得这个选择器和整个样式块无效。因为类型选择器必须是第一位，所以这个组合选择器必须写成 `Element&`。
 
