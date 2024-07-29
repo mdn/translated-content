@@ -13,7 +13,7 @@ Clientes e servidores se comunicam trocando mensagens individuais (ao contrário
 
 ![HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-layers.svg)
 
-Projetado no início da década de 1990, o protocolo HTTP é extensível e evoluiu ao longo do tempo. Atua na camada de aplicação e é enviado sobre o protocolo{{glossary ("TCP")}}, ou em uma conexão TCP criptografada com {{glossary ("TLS")}}, embora qualquer protocolo de transporte confiável possa, teoricamente, ser usado. Devido à sua extensibilidade, ele é usado não só para buscar documentos de hipertexto, mas também imagens e vídeos ou publicar conteúdo em servidores, como nos resultados de formulário HTML (veja os elementos {{HTMLElement("html")}} e {{HTMLElement("form")}}). O HTTP também pode ser usado para buscar partes de documentos para atualizar páginas da Web sob demanda.
+Projetado no início da década de 1990, o protocolo HTTP é extensível e evoluiu ao longo do tempo. Atua na camada de aplicação e é enviado sobre o protocolo {{glossary ("TCP")}}, ou em uma conexão TCP criptografada com {{glossary ("TLS")}}, embora qualquer protocolo de transporte confiável possa, teoricamente, ser usado. Devido à sua extensibilidade, ele é usado não só para buscar documentos de hipertexto, mas também imagens e vídeos ou publicar conteúdo em servidores, como nos resultados de formulário HTML (veja os elementos {{HTMLElement("html")}} e {{HTMLElement("form")}}). O HTTP também pode ser usado para buscar partes de documentos para atualizar páginas da Web sob demanda.
 
 ## Componentes de sistemas baseados em HTTP
 
