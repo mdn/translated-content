@@ -1,6 +1,7 @@
 ---
 title: Map.prototype[@@iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
+slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator
+original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 ---
 
 {{JSRef}}

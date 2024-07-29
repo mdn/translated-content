@@ -3959,6 +3959,10 @@
     "modified": "2019-03-23T22:34:58.265Z",
     "contributors": ["macalha"]
   },
+  "Web/API/Window/fetch": {
+    "modified": "2019-03-23T22:06:21.567Z",
+    "contributors": ["dowgssss"]
+  },
   "Web/API/Window/focus_event": {
     "modified": "2019-03-23T22:26:20.214Z",
     "contributors": ["tmoraes"]
@@ -4228,10 +4232,6 @@
   "Web/API/console/warn_static": {
     "modified": "2019-03-18T21:45:25.881Z",
     "contributors": ["raduq"]
-  },
-  "Web/API/fetch": {
-    "modified": "2019-03-23T22:06:21.567Z",
-    "contributors": ["dowgssss"]
   },
   "Web/API/setInterval": {
     "modified": "2020-10-15T22:16:56.864Z",
@@ -6499,10 +6499,6 @@
     "modified": "2020-10-15T22:18:39.285Z",
     "contributors": ["pedrochaves", "luan0ap"]
   },
-  "Web/HTTP/Headers/Large-Allocation": {
-    "modified": "2020-10-15T22:31:49.734Z",
-    "contributors": ["FernandoKGA"]
-  },
   "Web/HTTP/Headers/Last-Modified": {
     "modified": "2020-10-15T21:56:35.716Z",
     "contributors": ["cesarvn2010"]
@@ -7550,6 +7546,10 @@
     "modified": "2020-03-12T19:44:07.787Z",
     "contributors": ["gidaltilopes", "raduq"]
   },
+  "Web/JavaScript/Reference/Errors/String_literal_EOL": {
+    "modified": "2020-03-12T19:45:00.554Z",
+    "contributors": ["pratosnaweb"]
+  },
   "Web/JavaScript/Reference/Errors/Too_much_recursion": {
     "modified": "2020-03-12T19:49:13.727Z",
     "contributors": ["umpierrefp"]
@@ -7557,10 +7557,6 @@
   "Web/JavaScript/Reference/Errors/Undeclared_var": {
     "modified": "2020-03-12T19:44:41.988Z",
     "contributors": ["tmoraes"]
-  },
-  "Web/JavaScript/Reference/Errors/Undefined_prop": {
-    "modified": "2020-03-12T19:49:23.239Z",
-    "contributors": ["ViniciusMatias"]
   },
   "Web/JavaScript/Reference/Errors/Unexpected_token": {
     "modified": "2020-03-12T19:46:47.848Z",
@@ -7578,10 +7574,6 @@
   "Web/JavaScript/Reference/Errors/Unnamed_function_statement": {
     "modified": "2020-03-12T19:47:57.308Z",
     "contributors": ["LucianoCalsolari", "re-andrade1987"]
-  },
-  "Web/JavaScript/Reference/Errors/Unterminated_string_literal": {
-    "modified": "2020-03-12T19:45:00.554Z",
-    "contributors": ["pratosnaweb"]
   },
   "Web/JavaScript/Reference/Functions": {
     "modified": "2020-10-20T11:16:27.457Z",
@@ -7699,11 +7691,11 @@
       "Sheppy"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@iterator": {
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator": {
     "modified": "2019-03-23T22:35:56.703Z",
     "contributors": ["jjmars"]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@unscopables": {
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables": {
     "modified": "2020-10-15T22:03:58.150Z",
     "contributors": ["Filipe-Souza", "marciioluucas"]
   },
@@ -8072,7 +8064,7 @@
       "BargaoRobalo"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive": {
+  "Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive": {
     "modified": "2020-10-15T22:34:13.518Z",
     "contributors": ["FernandoKGA"]
   },
@@ -9081,7 +9073,7 @@
       "fscholz"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/@@iterator": {
+  "Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator": {
     "modified": "2020-10-16T00:11:07.868Z",
     "contributors": ["ricardo.passos.cr", "vmardss"]
   },
@@ -11346,6 +11338,10 @@
     "modified": "2020-10-15T22:26:09.466Z",
     "contributors": ["FernandoKGA"]
   },
+  "orphaned/Web/HTTP/Headers/Large-Allocation": {
+    "modified": "2020-10-15T22:31:49.734Z",
+    "contributors": ["FernandoKGA"]
+  },
   "orphaned/Web/HTTP/Headers/Set-Cookie/SameSite": {
     "modified": "2020-10-15T22:31:49.288Z",
     "contributors": ["ooVictorFranco"]
@@ -11361,6 +11357,10 @@
   "orphaned/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated": {
     "modified": "2020-03-12T19:46:42.577Z",
     "contributors": ["thiagosaife"]
+  },
+  "orphaned/Web/JavaScript/Reference/Errors/Undefined_prop": {
+    "modified": "2020-03-12T19:49:23.239Z",
+    "contributors": ["ViniciusMatias"]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype": {
     "modified": "2019-03-23T23:05:21.611Z",
