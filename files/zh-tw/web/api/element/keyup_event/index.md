@@ -10,7 +10,7 @@ slug: Web/API/Element/keyup_event
 ## 基本資料
 
 - 詳述
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-keyup)
+  - : [DOM L3](https://www.w3.org/TR/uievents/#event-type-keyup)
 - 介面
   - : [KeyboardEvent](/zh-TW/docs/DOM/KeyboardEvent)
 - Bubbles

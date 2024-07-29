@@ -28,7 +28,7 @@ These values describe which phase the event flow is currently being evaluated.
 | {{domxref("Event.AT_TARGET")}} {{readonlyinline}}       | 2   | The event has arrived at {{domxref("EventTarget", "the event's target", "", 1)}}. Event listeners registered for this phase are called at this time. If {{domxref("Event.bubbles")}} is false, processing the event is finished after this phase is complete.                                                                                                                                                                                          |
 | {{domxref("Event.BUBBLING_PHASE")}} {{readonlyinline}}  | 3   | The event is propagating back up through the target's ancestors in reverse order, starting with the parent, and eventually reaching the containing {{domxref("Window")}}. This is known as bubbling, and occurs only if {{domxref("Event.bubbles")}} is `true`. {{domxref("EventListener", "Event listeners", "", 1)}} registered for this phase are triggered during this process.                                                                    |
 
-For more details, see [section 3.1, Event dispatch and DOM event flow](http://www.w3.org/TR/DOM-Level-3-Events/#event-flow), of the DOM Level 3 Events specification.
+For more details, see [section 3.1, Event dispatch and DOM event flow](https://www.w3.org/TR/uievents/#event-flow), of the DOM Level 3 Events specification.
 
 ## 範例
 

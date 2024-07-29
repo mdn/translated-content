@@ -58,7 +58,7 @@ var el = document.querySelector(".myclass");
 
 ## 規格文件
 
-- [Selectors API](http://www.w3.org/TR/selectors-api/)
+- [Selectors API](https://www.w3.org/TR/selectors-api/)
 
 ## 詳見
 

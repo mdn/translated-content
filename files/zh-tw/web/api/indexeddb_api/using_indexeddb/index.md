@@ -237,7 +237,7 @@ request.onupgradeneeded = function (event) {
 };
 ```
 
-關於資料鍵產生器細節，請參考["W3C Key Generators"](http://www.w3.org/TR/IndexedDB/#key-generator-concept)。
+關於資料鍵產生器細節，請參考["W3C Key Generators"](https://www.w3.org/TR/IndexedDB/#key-generator-concept)。
 
 ## 新增和刪除資料
 
@@ -513,7 +513,7 @@ function useDatabase(db) {
 
 ## 安全性
 
-IndexedDB 遵守[同源政策](/zh-TW/docs/Web/JavaScript/Same_origin_policy_for_JavaScript)，所以它綁定創建它的來源網站，其他來源網站無法存取。就像對載入 {{ HTMLElement("frame") }} 和 {{ HTMLElement("iframe") }} 網頁的第三方 cookie 所設下的安全性和隱私權考量限制，IndexedDB 無法在載入 {{ HTMLElement("frame") }} 和 {{ HTMLElement("iframe") }} 網頁上運作，詳情請見 [Firefox bug 595307](https://bugzil.la/595307)。
+IndexedDB 遵守[同源政策](/zh-TW/docs/Web/JavaScript/Same_origin_policy_for_JavaScript)，所以它綁定創建它的來源網站，其他來源網站無法存取。就像對載入 {{ HTMLElement("frame") }} 和 {{ HTMLElement("iframe") }} 網頁的第三方 cookie 所設下的安全性和隱私權考量限制，IndexedDB 無法在載入 {{ HTMLElement("frame") }} 和 {{ HTMLElement("iframe") }} 網頁上運作，詳情請見 [Firefox bug 595307](https://bugzilla.mozilla.org/show_bug.cgi?id%3D595307)。
 
 ## 瀏覽器關閉風險
 
@@ -523,7 +523,7 @@ IndexedDB 遵守[同源政策](/zh-TW/docs/Web/JavaScript/Same_origin_policy_for
 
 第二、永遠不要在 unload 事件中執行資料庫交易，因為如果 unload 事件是觸發在瀏覽器關閉下，任何資料庫交易都不會發生，或許，瀏覽器(或分頁)打開時讀取資料庫，更新資料庫當使用者編輯資料，當瀏覽器(或分頁)關閉時儲存資料這樣的做法比較直覺，不過資料庫的操作是非同步進行地，所以瀏覽器關閉的執行會在資料庫操作前發生，進而中斷後續非同步的資料庫交易，所以在 unload 事件中執行資料庫交易是行不通地。
 
-事實上不論瀏覽器是否正常關閉，都沒有任何方法保證 IndexedDB 交易能夠順利完成，請見 [Firefox bug 870645](https://bugzil.la/870645)。
+事實上不論瀏覽器是否正常關閉，都沒有任何方法保證 IndexedDB 交易能夠順利完成，請見 [Firefox bug 870645](https://bugzilla.mozilla.org/show_bug.cgi?id%3D870645)。
 
 ## 完整 IndexedDB 範例
 
@@ -1094,7 +1094,7 @@ input {
     if (typeof store == "undefined")
       store = getObjectStore(DB_STORE_NAME, "readwrite");
 
-    // As per spec http://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
+    // As per spec https://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
     // the result of the Object Store Deletion Operation algorithm is
     // undefined, so it's not possible to know if some records were actually
     // deleted by looking at the request result.
@@ -1229,20 +1229,20 @@ input {
 參照
 
 - [IndexedDB API Reference](/zh-TW/IndexedDB)
-- [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
+- [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
 - [Using IndexedDB in chrome](/zh-TW/docs/IndexedDB/Using_IndexedDB_in_chrome)
 
 相關教學
 
-- [A simple TODO list using HTML5 IndexedDB](http://www.html5rocks.com/tutorials/indexeddb/todo/).
+- [A simple TODO list using HTML5 IndexedDB](https://www.html5rocks.com/tutorials/indexeddb/todo/).
 
   > **備註：** 請注意此教學範例用到的已經廢棄的`setVersion()`方法。
 
-- [Databinding UI Elements with IndexedDB](http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
+- [Databinding UI Elements with IndexedDB](https://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
 
 相關文章
 
-- [IndexedDB — The Store in Your Browser](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
+- [IndexedDB — The Store in Your Browser](<https://learn.microsoft.com/en-us/previous-versions/msdn10/gg679063(v%3Dmsdn.10)>)
 
 Firefox
 

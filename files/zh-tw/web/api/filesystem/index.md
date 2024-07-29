@@ -38,4 +38,4 @@ This API has no official W3C or WHATWG specification.
 - [File and Directory Entries API](/zh-TW/docs/Web/API/File_and_Directory_Entries_API)
 - [Introduction to the File System API](/zh-TW/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemEntry")}}, {{domxref("FileSystemFileEntry")}}, and {{domxref("FileSystemDirectoryEntry")}}
-- MSDN 文章: [WebKitFileSystem object](https://msdn.microsoft.com/library/mt732564)
+- MSDN 文章: [WebKitFileSystem object](https://developer.mozilla.org/en-US/docs/Web/API/FileSystem)

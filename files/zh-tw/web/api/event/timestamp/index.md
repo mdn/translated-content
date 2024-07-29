@@ -48,4 +48,4 @@ var number = event.timeStamp;
 
 ## 詳細資料
 
-- [timestamp](http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-timeStamp)
+- [timestamp](https://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-timeStamp)
