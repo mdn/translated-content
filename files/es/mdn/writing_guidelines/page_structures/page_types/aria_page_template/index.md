@@ -66,7 +66,8 @@ Incluya una descripción completa del atributo o rol.
 - Cambio de valores de atributos
   - : Explicación de cada uno
 
-> **Nota:** Incluye una nota sobre alternativas semánticas al uso de este rol o atributo. La primera regla de uso de ARIA es que puedes usar una función nativa con la semántica y el comportamiento que requieres ya incorporados, en lugar de reutilizar un elemento y **agregar** un rol, estado o propiedad de ARIA para hacerlo accesible, y luego hacerlo. Luego publique todos los detalles en la sección de mejores prácticas a continuación.
+> [!NOTE]
+> Incluye una nota sobre alternativas semánticas al uso de este rol o atributo. La primera regla de uso de ARIA es que puedes usar una función nativa con la semántica y el comportamiento que requieres ya incorporados, en lugar de reutilizar un elemento y **agregar** un rol, estado o propiedad de ARIA para hacerlo accesible, y luego hacerlo. Luego publique todos los detalles en la sección de mejores prácticas a continuación.
 
 ## Ejemplos
 
@@ -78,7 +79,8 @@ Cada ejemplo debe tener un encabezado H3 (`###`) que nombre el ejemplo. El encab
 
 Consulta nuestra guía sobre cómo añadir [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
 
-> **Nota:** A veces querrás enlazar a ejemplos dados en otra página.
+> [!NOTE]
+> A veces querrás enlazar a ejemplos dados en otra página.
 >
 > **Escenario 1:** Si tiene algunos ejemplos en esta página y algunos ejemplos más en otra página:
 >

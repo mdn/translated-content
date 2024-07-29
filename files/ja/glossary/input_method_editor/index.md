@@ -15,6 +15,6 @@ slug: Glossary/Input_method_editor
 
    1. [インプットメソッド](https://ja.wikipedia.org/wiki/インプットメソッド)
 
-2. [用語集](/ja/docs/Glossary)
+2. 関連用語:
 
    1. {{Glossary("I18N", "国際化対応")}}

@@ -1,17 +1,18 @@
 ---
-title: Document.URL
+title: "Document: URL プロパティ"
+short-title: URL
 slug: Web/API/Document/URL
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
 
-{{domxref("Document")}} インターフェイスの **`URL`** プロパティは読取専用で、文書の位置を文字列で返します。
+**`URL`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、文書の位置を文字列で返します。
 
-## 構文
+## 値
 
-```js
-const url = document.URL;
-```
+この文書の URL が入った文字列です。
 
 ## 例
 
@@ -26,13 +27,13 @@ document.getElementById("url").textContent = document.URL;
 ```html
 <p id="urlText">
   URL:<br />
-  <span id="url">URL goes here</span>
+  <span id="url">URL がここに表示されます</span>
 </p>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example", "100%", 100)}}
+{{EmbedLiveSample("Examples", "100%", 100)}}
 
 ## 仕様書
 

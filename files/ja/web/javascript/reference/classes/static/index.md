@@ -9,7 +9,8 @@ slug: Web/JavaScript/Reference/Classes/static
 
 静的メソッドは多くの場合、オブジェクトの生成や複製を行う関数などのユーティリティ関数です。静的プロパティはキャッシュ、固定的な構成、その他の各インスタンスに複製する必要のないデータです。
 
-> **メモ:** クラスの文脈において、 MDN Web Docs のコンテンツではプロパティと[フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)という用語を同等のものとして使用しています。
+> [!NOTE]
+> クラスの文脈において、 MDN Web Docs のコンテンツではプロパティと[フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)という用語を同等のものとして使用しています。
 
 {{EmbedInteractiveExample("pages/js/classes-static.html", "taller")}}
 
@@ -86,7 +87,8 @@ console.log(SubClassWithStaticField.subStaticField); // "基底クラスの静�
 
 静的フィールド初期化子と[静的初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)は、 1 つずつ評価されます。フィールド初期化子は、それより上のフィールド値を参照することはできますが、それより下のフィールド値を参照することはできません。静的メソッドはすべて事前に追加され、アクセスすることができますが、初期化されるフィールドより下のフィールドを参照している場合、呼び出すと期待した動作をしないことがあります。
 
-> **メモ:** これは[プライベート静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえそのプライベートフィールドが下で宣言されていたとしても、 {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
+> [!NOTE]
+> これは[プライベート静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえそのプライベートフィールドが下で宣言されていたとしても、 {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
 
 ## 例
 

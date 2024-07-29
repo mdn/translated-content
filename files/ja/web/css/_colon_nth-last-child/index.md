@@ -17,7 +17,8 @@ slug: Web/CSS/:nth-last-child
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-last-child.html", "tabbed-shorter")}}
 
-> **メモ:** この擬似クラスは、最初から後に向けてではなく*最後*から前に向けて数えるという点を除けば、本質的に {{Cssxref(":nth-child")}} と同じです。
+> [!NOTE]
+> この擬似クラスは、最初から後に向けてではなく*最後*から前に向けて数えるという点を除けば、本質的に {{Cssxref(":nth-child")}} と同じです。
 
 ## 構文
 

@@ -47,7 +47,8 @@ DBOpenRequest.onsuccess = function (event) {
 };
 ```
 
-> **Note :** Pour un exemple fonctionnel complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!NOTE]
+> Pour un exemple fonctionnel complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 

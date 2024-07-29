@@ -41,7 +41,8 @@ for (var i = 0; i < ps.length; i++) {
 document.body.addEventListener("click", hide, false);
 ```
 
-> **Note :** La valeur de `event.currentTarget` est **uniquement** disponible lorsque l'évènement est géré. Ainsi, on ne pourra pas observer la valeur de `currentTarget` _a posteriori_ (ex. si on a stocké la valeur d'`event` dans une variable lors de la gestion de l'évènement puis qu'on utilise celle-ci plus tard, `event.currentTarget` aura la valeur `null`).
+> [!NOTE]
+> La valeur de `event.currentTarget` est **uniquement** disponible lorsque l'évènement est géré. Ainsi, on ne pourra pas observer la valeur de `currentTarget` _a posteriori_ (ex. si on a stocké la valeur d'`event` dans une variable lors de la gestion de l'évènement puis qu'on utilise celle-ci plus tard, `event.currentTarget` aura la valeur `null`).
 
 ## Spécifications
 

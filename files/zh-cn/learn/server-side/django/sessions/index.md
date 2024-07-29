@@ -67,7 +67,8 @@ MIDDLEWARE = [
 
 下面的代码片段，显示了如何使用与当前会话（浏览器）关联的密钥“`my_car`”来获取，设置和删除某些数据。
 
-> **备注：** 关于 Django 的一个好处是，你不需要考虑在你的视图中，将会话与当前请求联系起来的机制。如果我们在视图中，使用下面的片段，我们就知道有关`my_car`的信息，仅与发送当前请求的浏览器相关联。
+> [!NOTE]
+> 关于 Django 的一个好处是，你不需要考虑在你的视图中，将会话与当前请求联系起来的机制。如果我们在视图中，使用下面的片段，我们就知道有关`my_car`的信息，仅与发送当前请求的浏览器相关联。
 
 ```python
 # Get a session value by its key (e.g. 'my_car'), raising a KeyError if the key is not present
@@ -104,7 +105,8 @@ request.session['my_car']['wheels'] = 'alloy'
 request.session.modified = True
 ```
 
-> **备注：** 你可以通过将`SESSION_SAVE_EVERY_REQUEST = True`添加到项目设置（**locallibrary/locallibrary/settings.py**），以更改站点行为，站点将在每个请求上更新数据库/发送 cookie。
+> [!NOTE]
+> 你可以通过将`SESSION_SAVE_EVERY_REQUEST = True`添加到项目设置（**locallibrary/locallibrary/settings.py**），以更改站点行为，站点将在每个请求上更新数据库/发送 cookie。
 
 ## 简单的例子 - 获取访问次数
 
@@ -133,7 +135,8 @@ def index(request):
 
 这里，我们首先得到'`num_visits`'会话密钥的值，如果之前没有设置，则将值设置为 0。每次收到请求时，我们都会递增该值，并将其存回会话中（下次用户访问该页面时）。然后将`num_visits`变量，传递给上下文变量中的模板。
 
-> **备注：** 我们也可能会测试浏览器中是否支持 cookie（请参阅[如何使用会话](https://docs.djangoproject.com/en/2.0/topics/http/sessions/)作为示例），或设计我们的 UI，以便无论 cookie 是否受支持都无关紧要。
+> [!NOTE]
+> 我们也可能会测试浏览器中是否支持 cookie（请参阅[如何使用会话](https://docs.djangoproject.com/en/2.0/topics/http/sessions/)作为示例），或设计我们的 UI，以便无论 cookie 是否受支持都无关紧要。
 
 将以下区块底部那一行，添加到主 HTML 模板（**/locallibrary/catalog/templates/index.html**）的“动态内容”部分底部，以显示上下文变量：
 

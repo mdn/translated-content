@@ -10,7 +10,8 @@ l10n:
 
 **`toString()`** は {{domxref("URLSearchParams")}} インターフェイスのメソッドで、URL での使用に適したクエリー文字列を返します。
 
-> **メモ:** このメソッドは、疑問符のないクエリー文字列を返します。これは、それを含む [window.location.search](/ja/docs/Web/API/HTMLAnchorElement/search) とは異なります。
+> [!NOTE]
+> このメソッドは、疑問符のないクエリー文字列を返します。これは、それを含む [window.location.search](/ja/docs/Web/API/HTMLAnchorElement/search) とは異なります。
 
 {{availableinworkers}}
 

@@ -14,7 +14,8 @@ new Number(value)
 Number(value)
 ```
 
-> **备注：** 调用 `Number()` 时可以使用或不使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，但是效果不同。详见[返回值](#返回值)部分。
+> [!NOTE]
+> 调用 `Number()` 时可以使用或不使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，但是效果不同。详见[返回值](#返回值)部分。
 
 ### 参数
 
@@ -27,7 +28,8 @@ Number(value)
 
 当 `Number` 作为普通函数调用时，它[将参数强制转换为数字原始值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)。[BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 被转换为数字。如果值不能转换，则返回 {{jsxref("NaN")}}。
 
-> **警告：** 你会发现你很少会使用 `Number` 作为构造函数。
+> [!WARNING]
+> 你会发现你很少会使用 `Number` 作为构造函数。
 
 ## 示例
 

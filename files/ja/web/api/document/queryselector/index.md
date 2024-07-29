@@ -1,15 +1,17 @@
 ---
 title: "Document: querySelector() メソッド"
+short-title: querySelector()
 slug: Web/API/Document/querySelector
 l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+  sourceCommit: e099e74fe5c09c46f0dfe044894692721a713d29
 ---
 
 {{ApiRef("DOM")}}
 
 {{domxref("Document")}} の **`querySelector()`** メソッドは、指定されたセレクターまたはセレクター群に一致する、文書内の最初の {{domxref("Element")}} を返します。一致するものが見つからない場合は `null` を返します。
 
-> **メモ:** 照合処理は、文書マークアップにおける最初の要素を経由して文書ノードの深さ優先前順走査 (depth-first pre-order traversal) を使用して実行され、子ノードのカウント順で順次ノードを反復して行われます。
+> [!NOTE]
+> 照合処理は、文書マークアップにおける最初の要素を経由して文書ノードの深さ優先前順走査 (depth-first pre-order traversal) を使用して実行され、子ノードのカウント順で順次ノードを反復して行われます。
 
 ## 構文
 
@@ -20,13 +22,14 @@ querySelector(selectors)
 ### 引数
 
 - `selectors`
-  - : 文字列で、照合する 1 つ以上のセレクターを設定します。この文字列は妥当な CSS セレクターでなければなりません。そうでない場合は `SyntaxError` が発生します。セレクターとその管理の方法の詳細について、[セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)を参照してください。
+  - : 文字列で、照合する 1 つ以上のセレクターを設定します。この文字列は妥当な CSS セレクターでなければなりません。そうでない場合は `SyntaxError` が発生します。セレクターとその管理の方法の詳細について、[セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)を参照してください。
 
-> **メモ:** 標準の CSS 構文に含まれない文字は、バックスラッシュ文字を使ってエスケープしなければなりません。 JavaScript でもバックスラッシュによるエスケープが使われているため、これらの文字を使った文字列リテラルを記述する際は、特に注意する必要があります。詳細は[特殊文字のエスケープ](#特殊文字のエスケープ)を参照してください。
+> [!NOTE]
+> 標準の CSS 構文に含まれない文字は、バックスラッシュ文字を使ってエスケープしなければなりません。 JavaScript でもバックスラッシュによるエスケープが使われているため、これらの文字を使った文字列リテラルを記述する際は、特に注意する必要があります。詳細は[特殊文字のエスケープ](#特殊文字のエスケープ)を参照してください。
 
 ### 返値
 
-{{domxref("Element")}} オブジェクトで、文書内で指定された [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)に最初に一致する要素を示すオブジェクト、もしくは、一致する要素がない場合は `null` を返します。
+{{domxref("Element")}} オブジェクトで、文書内で指定された [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)に最初に一致する要素を示すオブジェクト、もしくは、一致する要素がない場合は `null` を返します。
 
 指定されたセレクターに一致するすべての要素のリストが必要な場合は、代わりに {{domxref("Document.querySelectorAll", "querySelectorAll()")}} を使用してください。
 
@@ -102,7 +105,7 @@ const el = document.querySelector(
 
 ## 関連情報
 
-- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - {{domxref("Element.querySelector()")}}
 - {{domxref("Document.querySelectorAll()")}}
 - {{domxref("Element.querySelectorAll()")}}

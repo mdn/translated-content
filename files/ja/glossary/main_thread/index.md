@@ -15,6 +15,6 @@ slug: Glossary/Main_thread
    2. [Web worker API](/ja/docs/Web/API/Web_Workers_API)
    3. [Service worker API](/ja/docs/Web/API/Service_Worker_API)
 
-2. [用語集](/ja/docs/Glossary)
+2. 関連用語:
 
    1. {{Glossary("Thread", "スレッド")}}

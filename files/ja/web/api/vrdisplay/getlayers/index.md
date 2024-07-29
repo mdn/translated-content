@@ -7,7 +7,8 @@ slug: Web/API/VRDisplay/getLayers
 
 **`getLayers()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、 `VRDisplay` が現在表示しているレイヤーを返します。
 
-> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!NOTE]
+> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ## 構文
 

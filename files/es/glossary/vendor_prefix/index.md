@@ -7,7 +7,8 @@ slug: Glossary/Vendor_Prefix
 
 Los proveedores de navegadores a veces agregan prefijos a las propiedades de CSS experimentales o no estándar y las API de JavaScript, por lo que los desarrolladores pueden experimentar con nuevas ideas mientras que, en teoría, evitan que se confíe en sus experimentos y luego rompan el código de los desarrolladores web durante el proceso de estandarización. Los desarrolladores deben esperar para incluir la propiedad sin prefijar hasta que se estandarice el comportamiento del navegador.
 
-> **Nota:** Los proveedores de navegadores están trabajando para dejar de usar los prefijos de proveedores para funciones experimentales. Los desarrolladores web los han estado utilizando en sitios web de producción, a pesar de su naturaleza experimental. Esto ha hecho que sea más difícil para los proveedores de navegadores garantizar la compatibilidad y trabajar en nuevas características; También ha sido perjudicial para los navegadores más pequeños que terminan obligados a agregar prefijos de otros navegadores para cargar sitios web populares.
+> [!NOTE]
+> Los proveedores de navegadores están trabajando para dejar de usar los prefijos de proveedores para funciones experimentales. Los desarrolladores web los han estado utilizando en sitios web de producción, a pesar de su naturaleza experimental. Esto ha hecho que sea más difícil para los proveedores de navegadores garantizar la compatibilidad y trabajar en nuevas características; También ha sido perjudicial para los navegadores más pequeños que terminan obligados a agregar prefijos de otros navegadores para cargar sitios web populares.
 >
 > Últimamente, la tendencia es agregar características experimentales detrás de las banderas o preferencias controladas por el usuario, y crear especificaciones más pequeñas que puedan alcanzar un estado estable mucho más rápidamente.
 

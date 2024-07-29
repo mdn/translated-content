@@ -113,7 +113,8 @@ Chaque `@counter-style` est identifié par un nom et possède un ensemble de des
 
 {{EmbedLiveSample('')}}
 
-> **Note :** Une page d'exemple avec plus de variables est disponible ici&nbsp;: <https://mdn.github.io/css-examples/counter-style-demo/>.
+> [!NOTE]
+> Une page d'exemple avec plus de variables est disponible ici&nbsp;: <https://mdn.github.io/css-examples/counter-style-demo/>.
 
 ## Spécifications
 

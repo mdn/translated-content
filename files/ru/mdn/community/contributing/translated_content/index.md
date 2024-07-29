@@ -24,7 +24,7 @@ slug: MDN/Community/Contributing/Translated_content
 
 ### Испанский (`es`)
 
-- Обсуждения: [Matrix (`#mdn-l10n-es`)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj)
+- Обсуждения: [Matrix (`#mdn-l10n-es`)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
 - Активные участники: [JuanVqz](https://github.com/JuanVqz), [davbrito](https://github.com/davbrito), [Graywolf9](https://github.com/Graywolf9), [Vallejoanderson](https://github.com/Vallejoanderson), [marcelozarate](https://github.com/marcelozarate), [Jalkhov](https://github.com/Jalkhov)
 
 ### Китайский (`zh-CN`, `zh-TW`)
@@ -34,8 +34,8 @@ slug: MDN/Community/Contributing/Translated_content
 
 ### Корейский (`ko`)
 
-- Обсуждения: [Discord (`#korean`)](/discord), [Kakao Talk (`#MDN Korea`)](https://open.kakao.com/o/gdfG288c)
-- Активные участники: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [pje1740](https://github.com/pje1740), [wisedog](https://github.com/wisedog), [swimjiy](https://github.com/swimjiy), [jho2301](https://github.com/jho2301), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
+- Обсуждения: [Discord (`#korean`)](/discord), [Google Groups (`yari-content-ko`)](https://groups.google.com/g/yari-content-ko)
+- Активные участники: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [wisedog](https://github.com/wisedog), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
 
 ### Русский (`ru`)
 

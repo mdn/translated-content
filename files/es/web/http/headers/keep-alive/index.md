@@ -7,7 +7,8 @@ slug: Web/HTTP/Headers/Keep-Alive
 
 El encabezado **`Keep-Alive`** permite al remitente indicar como será la forma de conexión, se puede establecer un tiempo de espera y una cantidad máxima de solicitudes.
 
-> **Nota:** El encabezado {{HTTPHeader("Connection")}} se tiene que establecer en "keep-alive" para que este encabezado tenga sentido. Además, {{HTTPHeader("Connection")}} y {{HTTPHeader("Keep-Alive")}} son ignorados en HTTP/2; la administración de la conexión se realiza mediante otros mecanismos.
+> [!NOTE]
+> El encabezado {{HTTPHeader("Connection")}} se tiene que establecer en "keep-alive" para que este encabezado tenga sentido. Además, {{HTTPHeader("Connection")}} y {{HTTPHeader("Keep-Alive")}} son ignorados en HTTP/2; la administración de la conexión se realiza mediante otros mecanismos.
 
 | Header type                           | {{Glossary("General header")}} |
 | ------------------------------------- | ------------------------------ |

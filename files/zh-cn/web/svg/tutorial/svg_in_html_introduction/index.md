@@ -68,7 +68,8 @@ slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 - 相同的脚本同时操作了 HTML 和 SVG
 - 该文档完全符合标准
 
-> **备注：** 如果需要给一个内嵌的 SVG 元素通过 DOM 方法添加一个有外链的图片，我们需要使用 `setAttributeNS` 来设置外链地址 `href`. 示例如下：
+> [!NOTE]
+> 如果需要给一个内嵌的 SVG 元素通过 DOM 方法添加一个有外链的图片，我们需要使用 `setAttributeNS` 来设置外链地址 `href`. 示例如下：
 >
 > ```js
 > var img = document.createElementNS("http://www.w3.org/2000/svg", "image");

@@ -39,7 +39,8 @@ new Promise((resolveOuter) => {
 
 此 Promise 在创建时已经被解决（因为 `resolveOuter` 是同步调用的），但它是用另一个 Promise 解决的，因此在内部 Promise 兑现的 1 秒之后才会*被兑现*。在实践中，“解决”过程通常是在幕后完成的，不可观察，只有其兑现或拒绝是可观察的。
 
-> **备注：** 其他几种语言也有一些机制来实现惰性求值和延迟计算，它们也称之为“promise”，例如 Scheme。在 JavaScript 中，Promise 代表已经在进行中的进程，而且可以通过回调函数实现链式调用。如果你想要实现惰性求值，考虑使用不带参数的函数，例如 `f = () => expression` 来创建惰性求值表达式，然后使用 `f()` 立即求值。
+> [!NOTE]
+> 其他几种语言也有一些机制来实现惰性求值和延迟计算，它们也称之为“promise”，例如 Scheme。在 JavaScript 中，Promise 代表已经在进行中的进程，而且可以通过回调函数实现链式调用。如果你想要实现惰性求值，考虑使用不带参数的函数，例如 `f = () => expression` 来创建惰性求值表达式，然后使用 `f()` 立即求值。
 
 ### Promise 的链式调用
 
@@ -88,7 +89,8 @@ myPromise
   });
 ```
 
-> **备注：** 为了更快的执行，最好将所有同步操作都放在一个处理程序中，否则如果将它们拆分为多个处理程序，执行所有处理程序将需要几个时钟周期。
+> [!NOTE]
+> 为了更快的执行，最好将所有同步操作都放在一个处理程序中，否则如果将它们拆分为多个处理程序，执行所有处理程序将需要几个时钟周期。
 
 一个 Promise 的终止条件决定了链中下一个 Promise 的“已敲定”状态。“已兑现”状态表示 Promise 成功完成，而“已拒绝”状态表示 Promise 执行失败。链中每个已兑现的 Promise 的返回值会传递给下一个 `.then()`，而已拒绝的 Promise 会把失败原因传递给链中下一个拒绝处理函数。
 
@@ -172,7 +174,7 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
 
 ## 静态属性
 
-- {{jsxref("Promise/@@species", "Promise[@@species]")}}
+- [`Promise[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species)
   - : 返回用于构造从 Promise 方法返回值的构造函数。
 
 ## 静态方法
@@ -199,8 +201,8 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
 
 - {{jsxref("Object/constructor", "Promise.prototype.constructor")}}
   - : 创建实例对象的构造函数。对于 `Promise` 实例，初始值为 {{jsxref("Promise/Promise", "Promise")}} 构造函数。
-- `Promise.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串 `"Promise"`。该属性用于 {{jsxref("Object.prototype.toString()")}}。
+- `Promise.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串 `"Promise"`。该属性用于 {{jsxref("Object.prototype.toString()")}}。
 
 ## 实例方法
 
@@ -431,7 +433,8 @@ btn.addEventListener("click", testPromise);
 
 在上面的示例中，`<iframe>` 仅在现有设置对象被追踪时才会被更新。这是因为在不追踪的情况下，我们可能会使用错误的环境发送消息。
 
-> **备注：** 目前，Firefox 完全实现了现有领域追踪，Chrome 和 Safari 仅部分实现。
+> [!NOTE]
+> 目前，Firefox 完全实现了现有领域追踪，Chrome 和 Safari 仅部分实现。
 
 ## 规范
 

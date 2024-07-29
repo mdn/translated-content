@@ -52,7 +52,8 @@ Queremos que completar formularios web sea lo más fácil posible. Entonces, ¿p
 - **Queremos proteger los datos de nuestros usuarios**. Obligar a nuestros usuarios a introducir contraseñas seguras facilita proteger la información de su cuenta.
 - **Queremos protegernos a nosotros mismo**. Hay muchas formas en que los usuarios maliciosos puedan usar mal los formularios desprotegidos y dañar la aplicación (consulta [Seguridad del sitio web](/es/docs/Learn/Server-side/First_steps/Website_security)).
 
-> **Advertencia:** No confíes nunca en los datos que se pasan al servidor desde el cliente. Incluso si tu formulario se valida correctamente y evita la introducción de datos con formato incorrecto en el lado del cliente, un usuario malintencionado puede alterar la petición de red.
+> [!WARNING]
+> No confíes nunca en los datos que se pasan al servidor desde el cliente. Incluso si tu formulario se valida correctamente y evita la introducción de datos con formato incorrecto en el lado del cliente, un usuario malintencionado puede alterar la petición de red.
 
 ## Diferentes tipos de validación en el lado del cliente
 
@@ -83,7 +84,8 @@ Cuando un elemento no es válido, se cumplen los aspectos siguientes:
 - El elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS, y a veces con otras pseudoclases de interfaz de usuario (UI) –por ejemplo, {{cssxref(":out-of-range")}}– dependiendo del error, que te permite aplicar un estilo específico a elementos no válidos.
 - Si el usuario intenta enviar los datos, el navegador bloquea el formulario y muestra un mensaje de error.
 
-> **Nota:** Hay varios errores que evitan que el formulario se envíe, incluidos {{domxref('validityState.badInput', 'badInput')}}, {{domxref('validityState.patternMismatch','patternMismatch')}}, {{domxref('validityState.rangeOverflow','rangeOverflow')}} o {{domxref('validityState.rangeUnderflow','rangeUnderflow')}}, {{domxref('validityState.stepMismatch','stepMismatch')}}, {{domxref('validityState.tooLong','tooLong')}} o {{domxref('validityState.tooShort','tooShort')}}, {{domxref('validityState.typeMismatch','typeMismatch')}}, {{domxref('validityState.valueMissing','valueMissing')}} o {{domxref('validityState.customError','customError')}}.
+> [!NOTE]
+> Hay varios errores que evitan que el formulario se envíe, incluidos {{domxref('validityState.badInput', 'badInput')}}, {{domxref('validityState.patternMismatch','patternMismatch')}}, {{domxref('validityState.rangeOverflow','rangeOverflow')}} o {{domxref('validityState.rangeUnderflow','rangeUnderflow')}}, {{domxref('validityState.stepMismatch','stepMismatch')}}, {{domxref('validityState.tooLong','tooLong')}} o {{domxref('validityState.tooShort','tooShort')}}, {{domxref('validityState.typeMismatch','typeMismatch')}}, {{domxref('validityState.valueMissing','valueMissing')}} o {{domxref('validityState.customError','customError')}}.
 
 ## Ejemplos de validación de formularios incorporados
 
@@ -149,13 +151,15 @@ Este CSS da un borde discontinuo rojo cuando la entrada no es válida, y un bord
 
 {{EmbedLiveSample("El_atributo_required", "100%", 80)}}
 
-> **Nota:** Puedes encontrar este ejemplo en vivo en GitHub como [fruit-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html) (consulta también el [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-required.html)).
+> [!NOTE]
+> Puedes encontrar este ejemplo en vivo en GitHub como [fruit-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html) (consulta también el [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-required.html)).
 
 Intenta enviar el formulario sin introducir ningún valor. Observa que la entrada no válida recibe el cursor, aparece un mensaje de error predeterminado («Complete este campo») y el formulario no se puede enviar.
 
 La presencia del atributo `required` en cualquier elemento que admite este atributo significa que el elemento coincide con la pseudoclase {{cssxref(':required')}}, tenga o no un valor. Si en el elemento {{HTMLElement("input")}} no se ha introducido ningún valor, `input` coincidirá con la pseudoclase {{cssxref(':invalid')}}.
 
-> **Nota:** Para una buena experiencia de usuario, indica al usuario que campos de formulario se requieren. No solo es una buena experiencia de usuario, sino que lo exigen las pautas de [accesibilidad](/es/docs/Learn/Accessibility) de WCAG. Además, solo requiere que los usuarios introduzcan los datos que realmente necesitas: Por ejemplo, ¿por qué realmente necesitas saber el género o el tratamiento de alguien?
+> [!NOTE]
+> Para una buena experiencia de usuario, indica al usuario que campos de formulario se requieren. No solo es una buena experiencia de usuario, sino que lo exigen las pautas de [accesibilidad](/es/docs/Learn/Accessibility) de WCAG. Además, solo requiere que los usuarios introduzcan los datos que realmente necesitas: Por ejemplo, ¿por qué realmente necesitas saber el género o el tratamiento de alguien?
 
 ### Validación de una expresión regular
 
@@ -196,7 +200,8 @@ Esto nos da la siguiente actualización; pruébalo:
 
 {{EmbedLiveSample("Validación de una expresión regular", "100%", 80)}}
 
-> **Nota:** Puedes encontrar este ejemplo en vivo en GitHub como [fruit-pattern.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-pattern.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-pattern.html)).
+> [!NOTE]
+> Puedes encontrar este ejemplo en vivo en GitHub como [fruit-pattern.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-pattern.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-pattern.html)).
 
 En este ejemplo, el elemento {{HTMLElement("input")}} acepta uno de los cuatro valores posibles: las cadenas «plátano», «Plátano», «cereza» o «Cereza». Las expresiones regulares distinguen entre mayúsculas y minúsculas, pero hemos hecho que admita versiones en mayúsculas y minúsculas utilizando un patrón «Aa» adicional anidado dentro de corchetes.
 
@@ -204,9 +209,11 @@ En este punto, intenta cambiar el valor dentro del atributo [`pattern`](/es/docs
 
 Si un valor no vacío de {{HTMLElement("input")}} no coincide con el patrón de la expresión regular, `input` coincidirá con la pseudoclase {{cssxref(':invalid')}}.
 
-> **Nota:** Algunos tipos de elementos {{HTMLElement ("input")}} no necesitan validar una expresión regular con el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern). Especificar el tipo de correo electrónico (`email`), por ejemplo, valida el valor de las entradas con un patrón de dirección de correo electrónico bien formado o un patrón que coincida con una lista de direcciones de correo electrónico separadas por comas si tiene el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple).
+> [!NOTE]
+> Algunos tipos de elementos {{HTMLElement ("input")}} no necesitan validar una expresión regular con el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern). Especificar el tipo de correo electrónico (`email`), por ejemplo, valida el valor de las entradas con un patrón de dirección de correo electrónico bien formado o un patrón que coincida con una lista de direcciones de correo electrónico separadas por comas si tiene el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple).
 
-> **Nota:** El elemento {{HTMLElement("textarea")}} no admite el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern).
+> [!NOTE]
+> El elemento {{HTMLElement("textarea")}} no admite el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern).
 
 ### Restringir la longitud de tus entradas
 
@@ -265,7 +272,8 @@ Aquí está el ejemplo que se ejecuta en vivo:
 
 {{EmbedLiveSample("Restringir_los_valores_de_tus_entradas", "100%", 100)}}
 
-> **Nota:** Puedes encontrar este ejemplo en vivo en GitHub como [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-length.html)).
+> [!NOTE]
+> Puedes encontrar este ejemplo en vivo en GitHub como [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-length.html)).
 
 > **Nota:** `<input type="number">` (y otros tipos, como `range` y `date`) también pueden tomar un atributo [`step`](/es/docs/Web/HTML/Attributes/step), que especifica en qué incremento aumenta o disminuye el valor cuando se utilizan los controles de entrada (como el botones numéricos arriba y abajo). En el ejemplo anterior no hemos incluido un atributo `step`, por lo que el valor predeterminado es `1`. Esto significa que los valores de coma flotante, como 3.2, también se mostrarán como no válidos.
 
@@ -359,7 +367,8 @@ Esto se traduce de la siguiente manera:
 
 Consulta [Atributos relacionados con la validación](/es/docs/HTML/HTML5/Validacion_de_restricciones#Atributos_relacionados_con_validaciones) para obtener una lista completa de los atributos que se pueden usar para restringir los valores de entrada y los tipos de entrada que los admiten.
 
-> **Nota:** Puedes encontrar este ejemplo en vivo en GitHub como [full-example.html](https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/full-example.html)).
+> [!NOTE]
+> Puedes encontrar este ejemplo en vivo en GitHub como [full-example.html](https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/full-example.html)).
 
 ## Validar formularios utilizando JavaScript
 
@@ -446,7 +455,8 @@ Puedes probarlo a continuación:
 
 {{EmbedGHLiveSample("learning-area/html/forms/form-validation/custom-error-message.html", '100%', 80)}}
 
-> **Nota:** Puede encontrar este ejemplo vivo en GitHub como [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) (véase también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/custom-error-message.html)).
+> [!NOTE]
+> Puede encontrar este ejemplo vivo en GitHub como [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) (véase también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/custom-error-message.html)).
 
 #### Un ejemplo más detallado
 
@@ -473,7 +483,8 @@ Nuestra entrada para validar es [`<input type="email">`](/es/docs/Web/HTML/Eleme
 
 Nuestro objetivo es mostrar los mensajes de error dentro de un elemento `<span>`. El atributo [`aria-live`](/es/docs/Accessibility/ARIA/ARIA_Live_Regions) se establece en ese `<span>` para asegurar que todo el mundo podrá ver nuestro mensaje de error personalizado, incluidos los usuarios de lectores de pantalla.
 
-> **Nota:** Un punto clave a tener en cuenta es que establecer el atributo `novalidate` en el formulario impide que el formulario muestre sus propios cuadros de diálogo de error, y nos permite mostrar los mensajes de error personalizados en el DOM de la manera que nosotros elijamos.
+> [!NOTE]
+> Un punto clave a tener en cuenta es que establecer el atributo `novalidate` en el formulario impide que el formulario muestre sus propios cuadros de diálogo de error, y nos permite mostrar los mensajes de error personalizados en el DOM de la manera que nosotros elijamos.
 
 Ahora aplicaremos algo de CSS básico para mejorar ligeramente el aspecto del formulario y proporcionar algunos comentarios visuales cuando los datos de entrada no sean válidos:
 
@@ -600,11 +611,13 @@ Este es el resultado:
 
 {{EmbedGHLiveSample("learning-area/html/forms/form-validation/detailed-custom-validation.html", '100%', 150)}}
 
-> **Nota:** Puedes encontrar este ejemplo en vivo en GitHub como [detailed-custom-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/detailed-custom-validation.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/detailed-custom-validation.html)).
+> [!NOTE]
+> Puedes encontrar este ejemplo en vivo en GitHub como [detailed-custom-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/detailed-custom-validation.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/detailed-custom-validation.html)).
 
 La API de validación de restricciones te proporciona una herramienta poderosa para manejar la validación de formularios, y te permite tener un control enorme sobre la interfaz de usuario más allá de lo que puedas hacer solo con HTML y CSS.
 
-> **Nota:** Para obtener más información, consulta nuestra [guía de validación de restricciones](/es/docs/HTML/HTML5/Validacion_de_restricciones) y la referencia de [API de validación de restricciones](/es/docs/Web/API/Constraint_validation).
+> [!NOTE]
+> Para obtener más información, consulta nuestra [guía de validación de restricciones](/es/docs/HTML/HTML5/Validacion_de_restricciones) y la referencia de [API de validación de restricciones](/es/docs/Web/API/Constraint_validation).
 
 ### Validar formularios sin una API incorporada
 

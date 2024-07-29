@@ -11,7 +11,8 @@ HTTP **`304 Not Modified`** 重新導向回應碼表示無需重新傳送所請�
 
 回應不得包含主體，並且必須包括與等效的 {{HTTPStatus("200")}} `OK` 回應中會發送的標頭：{{HTTPHeader("Cache-Control")}}、{{HTTPHeader("Content-Location")}}、{{HTTPHeader("Date")}}、{{HTTPHeader("ETag")}}、{{HTTPHeader("Expires")}} 和 {{HTTPHeader("Vary")}}。
 
-> **備註：** 許多[開發者工具的「網路」面板](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)會創建多餘的請求，導致出現 `304` 回應，這樣開發人員就可以查看對本地緩存的訪問。
+> [!NOTE]
+> 許多[開發者工具的「網路」面板](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)會創建多餘的請求，導致出現 `304` 回應，這樣開發人員就可以查看對本地緩存的訪問。
 
 ## 狀態
 
