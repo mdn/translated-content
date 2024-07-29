@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Audio Output Devices API")}}{{securecontext_header}}
 
-{{domxref("HTMLMediaElement")}} 的 **`sinkId`** 只读属性，返回一个作为播放音频输出的设备唯一 ID 的字符串。
+{{domxref("HTMLMediaElement")}} 接口的 **`sinkId`** 只读属性，返回一个作为播放音频输出的设备唯一 ID 的字符串。
 
 这个 ID 应该是从 {{domxref("MediaDevices.enumerateDevices()")}} 返回的 {{domxref("MediaDeviceInfo.deviceId")}} 值之一、`id-multimedia` 或 `id-communications`。如果正在使用用户代理的默认设备，它会返回一个空字符串。
 
