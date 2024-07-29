@@ -7,7 +7,8 @@ slug: Web/API/CSS_Font_Loading_API
 
 CSS 字体加载 API 为你提供了动态加载字体资源的事件和接口。
 
-> **备注：** 此特性在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中可用。（你可通过 `self.fonts` 访问 {{domxref('FontFaceSet')}}）。
+> [!NOTE]
+> 此特性在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中可用。（你可通过 `self.fonts` 访问 {{domxref('FontFaceSet')}}）。
 
 ## 概念和用法
 
@@ -33,7 +34,8 @@ const font = new FontFace("myfont", "url(myfont.woff)", {
 });
 ```
 
-> **备注：** 与 `@font-face` 一样，一些描述符表示期望的字体属性并用于字体匹配，而其他描述符为设置、定义生成的字体的属性。例如，将 `style` 设置为“斜体”表示文件包含斜体字体，将由开发者指定一个符合此条件的文件。
+> [!NOTE]
+> 与 `@font-face` 一样，一些描述符表示期望的字体属性并用于字体匹配，而其他描述符为设置、定义生成的字体的属性。例如，将 `style` 设置为“斜体”表示文件包含斜体字体，将由开发者指定一个符合此条件的文件。
 
 对于*二进制*字体，如果字体定义有效并且成功加载会把 {{domxref('FontFace.status')}} 设置为 `loaded`，否则会设置为 `failed`。对于 URL 字体，字体有效，且未被加载时 `FontFace.status` 会被设置为 `unloaded`，若字体无效则设置为 `failed`。
 

@@ -3,10 +3,10 @@ title: "ElementInternals: form プロパティ"
 short-title: form
 slug: Web/API/ElementInternals/form
 l10n:
-  sourceCommit: 86215eff9beccf2e069be9109347ad830cc5e9c4
+  sourceCommit: ce10da0e9d23d241b175d8d68bf93507734b7c48
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Web Components")}}
 
 **`form`** は {{domxref("ElementInternals")}} インターフェイスの読み取り専用プロパティで、この要素に関連付けられた {{domxref("HTMLFormElement")}} を返します。
 

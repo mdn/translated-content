@@ -11,7 +11,8 @@ El **elemento HTML `<base>`** especifica la dirección URL base que se utilizar�
 
 La dirección URL base de un documento puede ser consultado a partir de una secuencia de comandos con {{domxref('document.baseURI')}}.
 
-> **Nota:** Si se especifican varios elementos \<base>, se utilizá sólo la primera sección **href** y el primer valor **target**; los demás son ignorados.
+> [!NOTE]
+> Si se especifican varios elementos \<base>, se utilizá sólo la primera sección **href** y el primer valor **target**; los demás son ignorados.
 
 <table class="properties">
   <tbody>

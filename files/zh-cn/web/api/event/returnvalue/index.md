@@ -7,7 +7,8 @@ slug: Web/API/Event/returnValue
 
 **`Event.returnValue`** 属性表示该事件的默认操作是否已被阻止。默认情况下，它被设置为 `true`，即允许进行默认操作。将该属性设置为 `false` 即可阻止默认操作。
 
-> **备注：** While `returnValue` has been adopted into the DOM standard, it is present primarily to support existing code. You should use {{DOMxRef("Event.preventDefault", "preventDefault()")}}, and {{domxref("Event.defaultPrevented", "defaultPrevented")}} instead of this historical property.
+> [!NOTE]
+> While `returnValue` has been adopted into the DOM standard, it is present primarily to support existing code. You should use {{DOMxRef("Event.preventDefault", "preventDefault()")}}, and {{domxref("Event.defaultPrevented", "defaultPrevented")}} instead of this historical property.
 
 ## 语法
 

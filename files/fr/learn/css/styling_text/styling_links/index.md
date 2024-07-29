@@ -72,7 +72,8 @@ p {
 
 {{ EmbedLiveSample('', '100%', 120) }}
 
-> **Note :** Tous les liens dans les exemples de cette page sont de faux liens : un # (hash, ou signe dièse) est mis à la place de l'URL réelle. En effet, si des liens réels étaient inclus, un simple clic sur ceux-ci cassererait les exemples (vous vous retrouveriez avec une erreur, ou une page chargée dans l'exemple intégré de laquelle vous ne pourriez pas revenir) ; # ne redirige que vers la page actuelle.
+> [!NOTE]
+> Tous les liens dans les exemples de cette page sont de faux liens : un # (hash, ou signe dièse) est mis à la place de l'URL réelle. En effet, si des liens réels étaient inclus, un simple clic sur ceux-ci cassererait les exemples (vous vous retrouveriez avec une erreur, ou une page chargée dans l'exemple intégré de laquelle vous ne pourriez pas revenir) ; # ne redirige que vers la page actuelle.
 
 Vous remarquerez quelques petites choses en explorant les styles par défaut :
 
@@ -107,7 +108,8 @@ Les styles par défaut peuvent être désactivés/modifiés en utilisant les pro
 - {{cssxref ("cursor")}} pour le style du pointeur de la souris — vous ne devriez pas le désactiver, à moins d'avoir une très bonne raison ;
 - {{cssxref ("outline")}} pour le contour du texte (un contour est similaire à une bordure, la seule différence étant que la bordure occupe de l'espace dans la boîte et non un contour, elle se trouve juste au-dessus du Contexte) ; le contour est une aide utile à l'accessibilité, alors réfléchissez bien avant de la désactiver ; vous devriez au moins dupliquer aussi les styles affectés à l'état link hover sur l'état de focalisation.
 
-> **Note :** Vous n'êtes pas limité aux propriétés ci-dessus pour mettre en forme vos liens ; vous êtes libre d'utiliser les propriétés que vous aimez. Essayez seulement de ne pas devenir trop fou !
+> [!NOTE]
+> Vous n'êtes pas limité aux propriétés ci-dessus pour mettre en forme vos liens ; vous êtes libre d'utiliser les propriétés que vous aimez. Essayez seulement de ne pas devenir trop fou !
 
 ### Mise en forme de quelques liens
 
@@ -384,7 +386,8 @@ Un dernier mot : comment avons-nous sélectionné uniquement les liens externes 
 
 Alors voilà, essayez de revoir la section d'apprentissage actif ci-dessus et d'explorer cette nouvelle technique !
 
-> **Note :** Ne vous inquiétez pas si vous n'êtes pas encore familier avec les [arrières-plans](/fr/docs/Learn/CSS/Building_blocks) et le [design adaptif _(responsive web design)_](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design) ; ceux-ci sont expliqués par ailleurs.
+> [!NOTE]
+> Ne vous inquiétez pas si vous n'êtes pas encore familier avec les [arrières-plans](/fr/docs/Learn/CSS/Building_blocks) et le [design adaptif _(responsive web design)_](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design) ; ceux-ci sont expliqués par ailleurs.
 
 ## Mise en forme de liens comme des boutons
 
@@ -468,7 +471,8 @@ Expliquons ce qui se passe ici, en nous concentrant sur les parties les plus int
   - Maintenant, passons au dimensionnement ; nous voulons remplir toute la largeur de l'{{htmlelement("ul")}}, laisser une petite marge entre chaque bouton (mais sans espace sur le bord droit), et nous avons 5 boutons pour accueillir tout cela, qui doit avoir la même taille ; pour ce faire, nous définissons la {{cssxref ("width")}} à 19,5%, et la {{cssxref ("margin-right")}} à 0,625% ; vous remarquerez que toute cette largeur s'élève à 100,625%, ce qui ferait que le dernier bouton déborde sur l'`<ul>` et passe à la ligne suivante ; cependant, nous le ramenons à 100%, en utilisant la règle suivante, qui sélectionne seulement le dernier `<a>` dans la liste, et en supprime la marge ; terminé !
   - Les trois dernières déclarations sont assez simples et ne sont principalement présentes qu'à des fins esthétiques ; nous centrons le texte à l'intérieur de chaque lien, nous définissons {{cssxref("line-height")}} à 3 pour donner un peu de hauteur aux boutons (ce qui a aussi l'avantage de centrer le texte verticalement) et nous définissons la couleur du texte à noir.
 
-> **Note :** Vous avez peut-être remarqué que les éléments de la liste dans le HTML sont tous placés sur la même ligne ; cela est dû au fait que les espaces/sauts de ligne entre les éléments inline block créent des espaces sur la page, tout comme des espaces entre les mots, et que de tels espaces casseraient la disposition de notre menu de navigation horizontale ; nous avons donc supprimé les espaces ; vous pouvez trouver plus d'informations (et de solutions) à propos de ce problème sur [Fighting the space between inline block elements](https://css-tricks.com/fighting-the-space-between-inline-block-elements/).
+> [!NOTE]
+> Vous avez peut-être remarqué que les éléments de la liste dans le HTML sont tous placés sur la même ligne ; cela est dû au fait que les espaces/sauts de ligne entre les éléments inline block créent des espaces sur la page, tout comme des espaces entre les mots, et que de tels espaces casseraient la disposition de notre menu de navigation horizontale ; nous avons donc supprimé les espaces ; vous pouvez trouver plus d'informations (et de solutions) à propos de ce problème sur [Fighting the space between inline block elements](https://css-tricks.com/fighting-the-space-between-inline-block-elements/).
 
 ## Résumé
 

@@ -11,7 +11,8 @@ slug: Web/JavaScript/Language_overview
 
 几个月后，Microsoft 随 IE 3 发布推出了一个与之基本兼容的语言 JScript。又过了几个月，Netscape 将 JavaScript 提交至 [Ecma International](http://www.ecma-international.org)（一个欧洲标准化组织），{{Glossary("ECMAScript")}} 标准第一版便在 1997 年诞生了，随后在 1999 年以 [ECMAScript 第三版](http://www.ecma-international.org/publications/standards/Ecma-262.htm)的形式进行了更新，从那之后这个标准没有发生过大的改动。由于委员会在语言特性的讨论上发生分歧，ECMAScript 第四版尚未推出便被废除，但随后于 2009 年 12 月发布的 ECMAScript 第五版引入了第四版草案加入的许多特性。第六版标准已经于 2015 年 6 月发布。
 
-> **备注：** 由于这种用法更常见，从这里开始，我们将使用 JavaScript 来指代 ECMAScript。
+> [!NOTE]
+> 由于这种用法更常见，从这里开始，我们将使用 JavaScript 来指代 ECMAScript。
 
 与大多数编程语言不同，JavaScript 没有输入或输出的概念。它是一个在宿主环境（host environment）下运行的脚本语言，任何与外界沟通的机制都是由宿主环境提供的。浏览器是最常见的宿主环境，但在非常多的其他程序中也包含 JavaScript 解释器，如 Adobe Acrobat、Adobe Photoshop、SVG 图像、Yahoo！的 Widget 引擎，[Node.js](http://nodejs.org) 之类的服务器端环境，NoSQL 数据库（如开源的 [Apache CouchDB](http://couchdb.apache.org)）、嵌入式计算机，以及包括 [GNOME](http://www.gnome.org)（注：GNU/Linux 上最流行的 GUI 之一）在内的桌面环境等等。
 
@@ -482,11 +483,13 @@ obj.for = "Simon"; // 语法错误，因为 for 是一个预留关键字
 obj["for"] = "Simon"; // 工作正常
 ```
 
-> **备注：** 从 ECMAScript 5 开始，预留关键字可以作为对象的属性名（reserved words may be used as object property names "in the buff"）。这意味着当定义对象字面量时不需要用双引号了。参见 ES5 [Spec](http://es5.github.io/#x7.6.1).
+> [!NOTE]
+> 从 ECMAScript 5 开始，预留关键字可以作为对象的属性名（reserved words may be used as object property names "in the buff"）。这意味着当定义对象字面量时不需要用双引号了。参见 ES5 [Spec](http://es5.github.io/#x7.6.1).
 
 关于对象和原型的详情参见： [Object.prototype](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype). 解释对象原型和对象原型链可以参见：[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。
 
-> **备注：** 从 ECMAScript 2015 开始，对象键可以在创建时使用括号表示法由变量定义。{\[phoneType]: 12345} 可以用来替换 `var userPhone = {}; userPhone[phoneType] = 12345` .
+> [!NOTE]
+> 从 ECMAScript 2015 开始，对象键可以在创建时使用括号表示法由变量定义。{\[phoneType]: 12345} 可以用来替换 `var userPhone = {}; userPhone[phoneType] = 12345` .
 
 ## 数组
 
@@ -648,7 +651,8 @@ function avg(...args) {
 avg(2, 3, 4, 5); // 3.5
 ```
 
-> **备注：** 在上面这段代码中，所有被传入该函数的参数都被变量 **args** 所持有。需要注意的是，无论“剩余参数操作符”被放置到函数声明的哪里，它都会把除了自己之前的所有参数存储起来。比如函数：function avg(**firstValue**, ...args) 会把传入函数的第一个值存入 **firstValue**，其他的参数存入 **args**。虽然这是一个很有用的语言特性，却也会带来新的问题。`avg()` 函数只接受逗号分开的参数列表——但是如果你想要获取一个数组的平均值怎么办？一种方法是将函数按照如下方式重写：
+> [!NOTE]
+> 在上面这段代码中，所有被传入该函数的参数都被变量 **args** 所持有。需要注意的是，无论“剩余参数操作符”被放置到函数声明的哪里，它都会把除了自己之前的所有参数存储起来。比如函数：function avg(**firstValue**, ...args) 会把传入函数的第一个值存入 **firstValue**，其他的参数存入 **args**。虽然这是一个很有用的语言特性，却也会带来新的问题。`avg()` 函数只接受逗号分开的参数列表——但是如果你想要获取一个数组的平均值怎么办？一种方法是将函数按照如下方式重写：
 
 ```js
 function avgArray(arr) {
@@ -669,7 +673,8 @@ avg.apply(null, [2, 3, 4, 5]); // 3.5
 
 传给 `apply()` 的第二个参数是一个数组，它将被当作 `avg()` 的参数列表使用，至于第一个参数 `null`，我们将在后面讨论。这也正说明了一个事实——函数也是对象。
 
-> **备注：** 通过使用[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)，你也可以获得同样的效果。比如说：`avg(...numbers)`
+> [!NOTE]
+> 通过使用[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)，你也可以获得同样的效果。比如说：`avg(...numbers)`
 
 JavaScript 允许你创建匿名函数：
 
@@ -735,7 +740,8 @@ var charsInBody = (function counter(elm) {
 
 ## 自定义对象
 
-> **备注：** 关于 JavaScript 中面向对象编程更详细的信息，请参考 [JavaScript 面向对象简介](/zh-CN/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)。
+> [!NOTE]
+> 关于 JavaScript 中面向对象编程更详细的信息，请参考 [JavaScript 面向对象简介](/zh-CN/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)。
 
 在经典的面向对象语言中，对象是指数据和在这些数据上进行的操作的集合。与 C++ 和 Java 不同，JavaScript 是一种基于原型的编程语言，并没有 class 语句，而是把函数用作类。那么让我们来定义一个人名对象，这个对象包括人的姓和名两个域（field）。名字的表示有两种方法：“名 姓（First Last）”或“姓，名（Last, First）”。使用我们前面讨论过的函数和对象概念，可以像这样完成定义：
 

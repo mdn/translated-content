@@ -9,7 +9,8 @@ l10n:
 
 **`scope`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、サービスワーカー登録の一意の識別子を返します。 サービスワーカーは、 {{domxref("ServiceWorker")}} を登録する文書と同じオリジンにある必要があります。
 
-> **メモ:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
+> [!NOTE]
+> この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
 
 ## 値
 

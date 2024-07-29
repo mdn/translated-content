@@ -216,7 +216,8 @@ function takepicture() {
 
 然后，如果宽度和高度都是非零（意味着至少有潜在有效的图像数据），我们将画布的宽度和高度设置为与捕获帧的宽度和高度相匹配，然后调用 {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} 将视频的当前帧绘制到上下文中，用帧图像填充整个画布。
 
-> **备注：** 这可以利用 {{domxref("HTMLVideoElement")}} 接口看起来像任何接受 {{domxref("HTMLImageElement")}} 作为参数的 API 的 `HTMLImageElement`，将视频的当前帧渲染为图像的内容。
+> [!NOTE]
+> 这可以利用 {{domxref("HTMLVideoElement")}} 接口看起来像任何接受 {{domxref("HTMLImageElement")}} 作为参数的 API 的 `HTMLImageElement`，将视频的当前帧渲染为图像的内容。
 
 一旦画布包含捕获的图像，我们通过调用它的 {{domxref("HTMLCanvasElement.toDataURL()")}} 将它转换为 PNG 格式; 最后，我们调用 {{domxref("Element.setAttribute", "photo.setAttribute()")}} 来使我们捕获的静态框显示图像。
 

@@ -57,7 +57,8 @@ field.addEventListener("change", function () {
 });
 ```
 
-> **備註：** 完整的範例可參考這篇文章: [Using the Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)。
+> [!NOTE]
+> 完整的範例可參考這篇文章: [Using the Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)。
 
 ## 規格
 

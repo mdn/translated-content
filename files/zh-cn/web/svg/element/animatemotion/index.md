@@ -7,7 +7,8 @@ slug: Web/SVG/Element/animateMotion
 
 `<animateMotion>` 元素定义了一个元素如何沿着运动路径进行移动。
 
-> **备注：** 为了复用一个已经定义的路径，就有必要使用一个 {{SVGElement("mpath")}} 元素嵌入到 `<animateMotion>` 中，而不是使用 {{SVGAttr("path")}}。
+> [!NOTE]
+> 为了复用一个已经定义的路径，就有必要使用一个 {{SVGElement("mpath")}} 元素嵌入到 `<animateMotion>` 中，而不是使用 {{SVGAttr("path")}}。
 
 ## 示例
 

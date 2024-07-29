@@ -45,7 +45,8 @@ fill(value, start, end)
 
 `fill()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值有一个 `length` 属性。虽然字符串也是类似数组的，但这个方法不适合应用于它们，因为字符串是不可变的。
 
-> **备注：** 在一个空数组（`length = 0`）上使用 `Array.prototype.fill()` 不会对其进行修改，因为数组没有要修改的内容。要在声明一个数组时使用 `Array.prototype.fill()`，请确保数组的 `length` 不为零。[参见示例](#使用_fill_填充空数组)。
+> [!NOTE]
+> 在一个空数组（`length = 0`）上使用 `Array.prototype.fill()` 不会对其进行修改，因为数组没有要修改的内容。要在声明一个数组时使用 `Array.prototype.fill()`，请确保数组的 `length` 不为零。[参见示例](#使用_fill_填充空数组)。
 
 ## 示例
 

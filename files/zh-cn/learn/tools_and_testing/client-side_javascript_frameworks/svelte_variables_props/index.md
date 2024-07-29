@@ -253,7 +253,8 @@ let completedTodos = todos.filter((todo) => todo.completed).length;
 
 可以通过在前面加上 `$:` 前缀，告诉 Svelte 我们希望 `totalTodos` 和 `completedTodos` 等变量具有响应性。Svelte 将生成代码以在它们依赖的数据发生变化时自动更新它们。
 
-> **备注：** Svelte 使用 `$:` [JavaScript 标记语句语法](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)来标记响应性语句。就像用于声明属性的 `export` 关键字一样，这可能看起来有点陌生。但这是 Svelte 利用有效的 JavaScript 语法并赋予其新用途的另一个例子——在这种情况下，意味着“每当任何引用的值发生变化时，就会重新执行此代码”。一旦习惯了，你就无法回头了。
+> [!NOTE]
+> Svelte 使用 `$:` [JavaScript 标记语句语法](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)来标记响应性语句。就像用于声明属性的 `export` 关键字一样，这可能看起来有点陌生。但这是 Svelte 利用有效的 JavaScript 语法并赋予其新用途的另一个例子——在这种情况下，意味着“每当任何引用的值发生变化时，就会重新执行此代码”。一旦习惯了，你就无法回头了。
 
 更新 `src/components/Todos.svelte` 中的 `totalTodos` 和 `completedTodos` 变量定义，如下：
 
@@ -307,7 +308,8 @@ $: completedTodos = todos.filter((todo) => todo.completed).length;
    $: console.log("newTodoName: ", newTodoName);
    ```
 
-   > **备注：** 你可能已经注意到，响应式语句不仅限于变量声明。你可以在 `$:` 符号后面放上*任何* JavaScript 语句。
+   > [!NOTE]
+   > 你可能已经注意到，响应式语句不仅限于变量声明。你可以在 `$:` 符号后面放上*任何* JavaScript 语句。
 
 4. 现在试着回到 `localhost:5042`，按下 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> 打开浏览器控制台，并在输入框中输入一些内容。你应该能看到你的输入被记录下来。此时，你可以根据需要删除响应式 `console.log()`。
 5. 接下来，我们将创建一个函数来添加新的待办事项——`addTodo()`——它会将一个新的 `todo` 对象添加到 `todos` 数组中。将此函数添加到 `src/components/Todos.svelte` 的 `<script>` 区块的底部：
@@ -319,7 +321,8 @@ $: completedTodos = todos.filter((todo) => todo.completed).length;
    }
    ```
 
-   > **备注：** 目前我们为每个待办事项都指定相同的 `id`，不用担心，我们会尽快解决这个问题。
+   > [!NOTE]
+   > 目前我们为每个待办事项都指定相同的 `id`，不用担心，我们会尽快解决这个问题。
 
 6. 现在我们要更新我们的 HTML，以便在表单提交时调用 `addTodo()`。更新添加 NewTodo 的起始标签如下：
 
@@ -333,7 +336,8 @@ $: completedTodos = todos.filter((todo) => todo.completed).length;
 
    要解决这个问题，只需要将 `todos = todos` 添加到 `addTodo()` 函数的末尾，但在函数末尾包含它似乎很奇怪。相反，我们将移除 `push()` 方法并使用[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)来达到相同的结果：我们将为 `todos` 数组指定一个等于 `todos` 数组加上新对象的数值。
 
-   > **备注：** 数组（`Array`）有几个修改操作：[`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push)、[`pop()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)、[`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)、[`shift()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)、[`unshift()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)、[`reverse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) 和 [`sort()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)。使用它们常常会导致难以追踪的副作用和错误。通过使用展开语法而不是 `push()`，我们可以避免改变数组本身，这被认为是一种良好的做法。
+   > [!NOTE]
+   > 数组（`Array`）有几个修改操作：[`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push)、[`pop()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)、[`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)、[`shift()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)、[`unshift()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)、[`reverse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) 和 [`sort()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)。使用它们常常会导致难以追踪的副作用和错误。通过使用展开语法而不是 `push()`，我们可以避免改变数组本身，这被认为是一种良好的做法。
 
    更新你的 `addTodo()` 函数如下：
 
@@ -361,7 +365,8 @@ $: completedTodos = todos.filter((todo) => todo.completed).length;
    }
    ```
 
-   > **备注：** 如你所见，响应式陈述不仅限于单行。以下代码也可以生效，但可读性较差：`$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
+   > [!NOTE]
+   > 如你所见，响应式陈述不仅限于单行。以下代码也可以生效，但可读性较差：`$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
 
 2. Svelte 是如何做到这一点的？编译器会解析整个响应式语句并检测到它依赖于 `totalTodos` 变量和 `todos` 数组。所以每当它们中任何一个被修改时，都会重新评估代码并相应地更新 `newTodoId`。
 
@@ -420,7 +425,8 @@ $: completedTodos = todos.filter((todo) => todo.completed).length;
 
    我们通过将 `btn__primary` 类应用于筛选器按钮来显示当前使用的筛选器。为了有条件地将样式类应用于元素上，我们使用 `class:name={value}` 指令。如果值表达式的计算结果为真，那么类名将被应用。你可以将许多不同条件的指令放在同一个元素上。所以当我们写为 `class:btn__primary={filter === 'all'}` 时，如果筛选器（filter）变量的值等于 `'all'`，Svelte 将会应用 `btn__primary` 类。
 
-   > **备注：** Svelte 提供了一个便利的快捷方式，允许我们在类与变量名称相同时，可以将 `<div class:active={active}>` 缩短为 `<div class:active>`。
+   > [!NOTE]
+   > Svelte 提供了一个便利的快捷方式，允许我们在类与变量名称相同时，可以将 `<div class:active={active}>` 缩短为 `<div class:active>`。
 
    `aria-pressed={filter === 'all'}` 也是类似的情况：当在大括号之间传入的 JavaScript 表达式的计算结果为真值时，`aria-pressed` 属性将被加入到按钮上。
 
@@ -437,7 +443,8 @@ $: completedTodos = todos.filter((todo) => todo.completed).length;
 
    在分析我们的代码后，Svelte 检测到我们的 `filterTodos()` 函数依赖于变量 `filter` 和 `todos`。而就像嵌入在标记中的任何其他动态表达式一样，每当这些依赖发生变化时，DOM 都会相应地更新。所以每当 `filter` 或 `todos` 发生变化时，`filterTodos()` 函数将会重新评估并更新循环内的项目。
 
-> **备注：** 响应式有时会很棘手。Svelte 将 `filter` 识别为依赖，是因为我们在 `filterTodos(filter, todo)` 表达式中引用它。而 `filter` 是一个顶层变量，所以我们可能会想把它从辅助函数参数（params）中删除，然后像这样调用它：`filterTodos(todo)`。这虽然能够工作，但现在 Svelte 将无法发现 `{#each filterTodos(todos) }` 依赖于 `filter` 并且当过滤器变更时，过滤后的待办事项列表不会再被更新。切记 Svelte 会分析我们的代码以找出依赖关系，所以最好明确解释它，而不是依赖于顶层变量的可见性。此外，让我们的代码清晰并明确地解释它正在使用的信息是一个很好的做法。
+> [!NOTE]
+> 响应式有时会很棘手。Svelte 将 `filter` 识别为依赖，是因为我们在 `filterTodos(filter, todo)` 表达式中引用它。而 `filter` 是一个顶层变量，所以我们可能会想把它从辅助函数参数（params）中删除，然后像这样调用它：`filterTodos(todo)`。这虽然能够工作，但现在 Svelte 将无法发现 `{#each filterTodos(todos) }` 依赖于 `filter` 并且当过滤器变更时，过滤后的待办事项列表不会再被更新。切记 Svelte 会分析我们的代码以找出依赖关系，所以最好明确解释它，而不是依赖于顶层变量的可见性。此外，让我们的代码清晰并明确地解释它正在使用的信息是一个很好的做法。
 
 ## 到目前为止的代码
 
