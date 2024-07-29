@@ -50,7 +50,8 @@ const s = Boolean(myString); // initial value of true
 
 最后，不要在应该使用基本类型布尔值的地方使用 `Boolean` 对象。
 
-> **备注：** 当将非标准属性 [`document.all`](/zh-CN/docs/Web/API/Document#属性) 用作此构造函数的参数时，结果是值为 `false` 的布尔对象。此属性是旧的、非标准的属性，不应使用。
+> [!NOTE]
+> 当将非标准属性 [`document.all`](/zh-CN/docs/Web/API/Document#属性) 用作此构造函数的参数时，结果是值为 `false` 的布尔对象。此属性是旧的、非标准的属性，不应使用。
 
 当使用非严格相等（`==`）来比较一个对象和布尔原始值时，最重要的是需要弄明白最终比较的是什么。请看一下的示例：
 

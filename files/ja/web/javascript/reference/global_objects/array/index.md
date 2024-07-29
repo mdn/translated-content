@@ -379,7 +379,8 @@ f("a", "b"); // 'a+b'
 
 この節では、 JavaScript で一般的な配列操作の例をいくつか紹介します。
 
-> **メモ:** まだ配列の基本に慣れていない場合は、最初に [JavaScript の第一歩: 配列](/ja/docs/Learn/JavaScript/First_steps/Arrays) の[配列とは何かの説明](/ja/docs/Learn/JavaScript/First_steps/Arrays#配列とは何か)、およびよくある配列の操作の他の例を読んでみてください。
+> [!NOTE]
+> まだ配列の基本に慣れていない場合は、最初に [JavaScript の第一歩: 配列](/ja/docs/Learn/JavaScript/First_steps/Arrays) の[配列とは何かの説明](/ja/docs/Learn/JavaScript/First_steps/Arrays#配列とは何か)、およびよくある配列の操作の他の例を読んでみてください。
 
 ### 配列の作成
 

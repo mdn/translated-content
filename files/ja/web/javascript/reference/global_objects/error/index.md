@@ -17,10 +17,10 @@ l10n:
 
 ### エラーの型
 
-JavaScript には、一般的な `Error` コンストラクターの他に、中核となる他のエラーコンストラクターがあります。クライアント側の例外については、[例外処理文](/ja/docs/Web/JavaScript/Guide/Web/JavaScript/Guide/Control_flow_and_error_handling#例外処理文)を参照してください。
+JavaScript には、一般的な `Error` コンストラクターの他に、中核となる他のエラーコンストラクターがあります。クライアント側の例外については、[例外処理文](/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#例外処理文)を参照してください。
 
 - {{jsxref("EvalError")}}
-  - : グローバル関数 {{jsxref("eval", "eval()")}} に関して発生するエラーを表すインスタンスを生成します。
+  - : グローバル関数 {{jsxref("Global_Objects/eval", "eval()")}} に関して発生するエラーを表すインスタンスを生成します。
 - {{jsxref("RangeError")}}
   - : 数値変数または引数が、その有効範囲外である場合に発生するエラーを表すインスタンスを生成します。
 - {{jsxref("ReferenceError")}}
@@ -116,10 +116,10 @@ try {
 
 ### 類似するエラーと区別する
 
-コードブロックは異なる対処が必要な理由で失敗するにも関わらず、非常によく似たエラー（つまり、同じ型やメッセージ）を投げることがしばしばあります。
+異なる対処が必要な原因で失敗するにもかかわらず、コードブロックが非常によく似たエラー（すなわち同じ型やメッセージ）を投げることがあります。
 
-あなたが発生した元々のエラーを管理していない場合、エラーを捕捉して、より詳細なメッセージを持つ新しい `Error` オブジェクトを発生させることが一つの選択肢となります。
-元のエラーは新しい `Error` のコンストラクターの [`options`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/Error#options) パラメーターの `cause` プロパティに渡すべきです。これによって、上位の try/catch ブロックが元のエラーとスタックトレースが利用できることを保証します。
+発生した元のエラーが管理下にない場合、エラーを捕捉してより詳細なメッセージを持つ新しい `Error` オブジェクトを投げることが一つの選択肢となります。
+元のエラーは新しい `Error` のコンストラクターの [`options`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/Error#options) パラメーターの `cause` プロパティに渡すべきです。これによって、上位の try/catch ブロックが元のエラーとスタックトレースを利用できることを保証します。
 
 以下の例は、似たエラーで失敗する 2 つのメソッドを示しています（`doFailSomeWay()` と `doFailAnotherWay()`）:
 
@@ -151,9 +151,10 @@ try {
 }
 ```
 
-> **メモ:** もしあなたがライブラリを制作している場合、利用者にエラーメッセージをパースするようお願いするかわりに、発生したエラーの微妙な差を区別するためにエラーの cause を使用すべきです。例については [Error の cause ページ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause) をご覧ください。
+> [!NOTE]
+> もしあなたがライブラリを制作しているなら、利用者にエラーメッセージをパースするようお願いするよりも発生したエラーを区別するために Error の cause を使用すべきです。例については [Error の cause ページ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause) をご覧ください。
 
-サブクラスのコンストラクターが `super()` を呼び出すときに `options` パラメーターを渡すと、[独自のエラー型](#独自のエラー型)も `cause` プロパティを利用できます。基底クラスのコンストラクター `Error()` は `options.cause` を読み取って、新しいエラーのインスタンスに `cause` プロパティを定義します。
+サブクラスのコンストラクターが `super()` を呼び出すときに `options` パラメーターを渡せば、[独自のエラー型](#独自のエラー型)も `cause` プロパティを利用できます。基底クラスのコンストラクター `Error()` は `options.cause` を読み取って、新しいエラーのインスタンスに `cause` プロパティを定義します。
 
 ```js
 class MyError extends Error {
@@ -173,9 +174,10 @@ console.log(new MyError("test", { cause: new Error("cause") }).cause);
 
 StackOverflow の突っ込んだ議論、 ["What's a good way to extend Error in JavaScript?"](http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) も参照してください。
 
-> **警告**: 組み込みのサブクラス化は、ES6 より古いコードに確実にトランスパイルできるわけではありません。なぜなら {{jsxref("Reflect.construct()")}} を使わずに特定の `new.target` を持つ基底クラスを構築する手段がないためです。[追加の設定](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend)を行うか、コンストラクターの最後で手動で {{jsxref("Object/setPrototypeOf", "Object.setPrototypeOf(this, CustomError.prototype)")}} を呼ぶ必要があります。そうしないと、構築されたインスタンスは `CustomError` のインスタンスになりません。詳しくは [the TypeScript FAQ](https://github.com/microsoft/TypeScript/wiki/FAQ#why-doesnt-extending-built-ins-like-error-array-and-map-work) をご覧ください。
+> **警告**: 組み込みのサブクラス化は、ES6 より古いコードに確実にトランスパイルできるわけではありません。なぜなら、 {{jsxref("Reflect.construct()")}} を使わずに特定の `new.target` を持つ基底クラスを構築する手段がないためです。[追加の設定](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend)を行うか、コンストラクターの最後で {{jsxref("Object/setPrototypeOf", "Object.setPrototypeOf(this, CustomError.prototype)")}} を手動で呼ぶ必要があります。そうしないと、構築されたインスタンスは `CustomError` のインスタンスになりません。詳しくは [the TypeScript FAQ](https://github.com/microsoft/TypeScript/wiki/FAQ#why-doesnt-extending-built-ins-like-error-array-and-map-work) をご覧ください。
 
-> **メモ:** ES2015 クラスを使用した場合、一部のブラウザはスタックトレース上に `CustomError` コンストラクターを含めます。
+> [!NOTE]
+> ES2015 クラスを使用した場合、一部のブラウザはスタックトレース上に `CustomError` コンストラクターを含めます。
 
 ```js
 class CustomError extends Error {

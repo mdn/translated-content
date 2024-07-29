@@ -1,5 +1,5 @@
 ---
-title: 你的第一个拓展
+title: 你的第一个扩展
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
 

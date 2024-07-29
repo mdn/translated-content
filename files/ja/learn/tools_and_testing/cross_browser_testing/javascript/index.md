@@ -66,7 +66,7 @@ if (window.XMLHttpRequest) {
 - [this](/ja/docs/Web/JavaScript/Reference/Operators/this) が、どのスコープに適用されるのか、したがってその値が意図通りなのかが混乱しています。 ["this" とは何か](/ja/docs/Learn/JavaScript/Objects/Basics#this_とは何か)で軽く紹介されています。[これ](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143)のような例も勉強してください。この例では、 `this` スコープを別な変数に保存し、その変数を入れ子関数で使用する典型的なパターンを示しているので、正しい `this` スコープに機能を適用していることを確認できます。
 - グローバル変数で反復処理するループ内で関数を誤って使用する（より一般的には「スコープを間違える」）。
 
-> **注目:**
+> [!CALLOUT]
 > 例えば、 [bad-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html) （[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/bad-for-loop.html)を参照）では、 `var` で定義した変数を使って10回の反復処理をループし、そのたびに段落を作成して [onclick](/ja/docs/Web/API/Element/click_event) イベントハンドラーを追加しています。クリックされると、それぞれにその番号（作成した時点での `i` の値）を格納したアラートメッセージが表示されるようにします。なぜなら、 `for` ループはネストされた関数を呼び出す前にすべての反復処理を行うからです。
 >
 > 最も簡単な解決策は、反復処理変数を `var` の代わりに `let` で宣言することです。動作するバージョンについては [good-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html) （[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/good-for-loop.html)も参照）を参照してください。
@@ -105,7 +105,8 @@ npm install -g jshint
 
 これらのツールを [Gulp](https://gulpjs.com/) や [Webpack](https://webpack.github.io/) のようなタスクランナー/ビルドツールと使用して、開発中に JavaScript を自動的に検証することもできます。（後の記事で[テストツールを自動化するタスクランナーの使用](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#using_a_task_runner_to_automate_testing_tools)を参照してください） ESLint のオプションについては [ESLint integrations](https://eslint.org/docs/user-guide/integrations) を参照してください。 JSHint は Grunt ですぐに対応しており、他にも [Webpack 用の JSHint loader](https://github.com/webpack-contrib/jshint-loader) などの統合があります。
 
-> **メモ:** ESLint は JSHint よりも設定や構成が少し面倒ですが、より強力です。
+> [!NOTE]
+> ESLint は JSHint よりも設定や構成が少し面倒ですが、より強力です。
 
 ### ブラウザーの開発者ツール
 
@@ -179,7 +180,8 @@ fetch(requestURL).then((response) => {
 
 残念ながら、まだ同じエラーが出ています。ブラウザー開発者ツールのより洗練された機能、 Firefox でいうところの [JavaScript デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)を使って、この問題を調査してみましょう。
 
-> **メモ:** 他のブラウザーでも似たツールが利用できます。 Chrome の[ソースタブ](https://developer.chrome.com/docs/devtools/#sources)、 Safari の Debugger （[Safari Web Development Tools](https://developer.apple.com/safari/tools/)を参照）などです。
+> [!NOTE]
+> 他のブラウザーでも似たツールが利用できます。 Chrome の[ソースタブ](https://developer.chrome.com/docs/devtools/#sources)、 Safari の Debugger （[Safari Web Development Tools](https://developer.apple.com/safari/tools/)を参照）などです。
 
 Firefoxでは、デバッガータブは次のようになります。
 
@@ -208,7 +210,8 @@ Firefoxでは、デバッガータブは次のようになります。
 
 あなた自身でこの問題を解決してみてください。まずは {{domxref("Response")}} オブジェクトのドキュメントをご覧ください。もし行き詰まったら、 <https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-fixed> に修正されたソースコードがあります。
 
-> **メモ:** デバッガーのタブには、例えば条件付きブレークポイントやウォッチ式など、ここでは指定し ていない他にも有益な機能がたくさんあります。より多くの情報については、[デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)ページを参照してください。
+> [!NOTE]
+> デバッガーのタブには、例えば条件付きブレークポイントやウォッチ式など、ここでは指定し ていない他にも有益な機能がたくさんあります。より多くの情報については、[デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)ページを参照してください。
 
 ### パフォーマンスの問題
 
@@ -219,7 +222,8 @@ Firefoxでは、デバッガータブは次のようになります。
 - API を使用する場合、使用していないときは API 機能を必ずオフにしてください。 API 呼び出しによっては処理能力を実に高く消費することがあります。例えば、動画ストリームを表示させる場合、それが見えないときは必ずオフにしてください。 Geolocation の呼び出しを繰り返し使用して端末の位置を追跡する場合は、ユーザーが使用するのを止めたときにオフにするようにしてください。
 - アニメーションは実にパフォーマンスコストがかかります。多くの JavaScript ライブラリーは JavaScript でプログラムされたアニメーション機能を提供していますが、 JavaScript よりも [CSSアニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations) (または新進の [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)) のようなブラウザーネイティブ機能でアニメーションを行う方が、はるかにコストパフォーマンスが高いです。 Brian Birtles の [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) を読むと、アニメーションにコストがかかる理由や、アニメーションのパフォーマンスを向上させるためのヒント、ウェブアニメーションAPIに関する情報など、実に有益な理論が書かれています。
 
-> **メモ:** Addy Osmani の [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/) には、 JavaScript のパフォーマンスを向上させるための多くの詳細と優れたヒントが格納されています。
+> [!NOTE]
+> Addy Osmani の [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/) には、 JavaScript のパフォーマンスを向上させるための多くの詳細と優れたヒントが格納されています。
 
 ## ブラウザー間の JavaScript の問題
 
@@ -236,7 +240,8 @@ Firefoxでは、デバッガータブは次のようになります。
 
 新機能への対応にはいくつか戦略がありますが、最も一般的なものを見てみましょう。
 
-> **メモ:** もちろん、必要に応じて組み合わせることもできます。例えば、ある機能が対応しているかどうかを判断するために機能検出を使用することができます。対応していない場合は、ポリフィルや ライブラリーを読み込むコードを実行して、対応していない部分を処理することができます。
+> [!NOTE]
+> もちろん、必要に応じて組み合わせることもできます。例えば、ある機能が対応しているかどうかを判断するために機能検出を使用することができます。対応していない場合は、ポリフィルや ライブラリーを読み込むコードを実行して、対応していない部分を処理することができます。
 
 #### 機能検出
 
@@ -264,7 +269,8 @@ CSS 機能が対応している場合にスタイルを適用したい場合は�
 
 最後に、機能検出を**ブラウザー検出**（具体的にどのブラウザーがサイトにアクセスしているかを検出すること）と混同しないでください。これはひどい行為なので、まったくお勧めできません。詳細は後述の[ブラウザー検出をしない](#ブラウザー検出をしない)を参照してください。
 
-> **メモ:** 機能検出については、このモジュールの後の方で、専用の記事で詳しく述べます。
+> [!NOTE]
+> 機能検出については、このモジュールの後の方で、専用の記事で詳しく述べます。
 
 #### ライブラリー
 
@@ -283,7 +289,8 @@ JavaScript ライブラリーには、いくつかの主な種類がある傾向
 
 基本的なレベルでのライブラリーの使い方は、ライブラリーのファイル（JavaScript、場合によっては CSS やその他の依存関係も）をダウンロードし、ページに添付する（例えば {{htmlelement("script")}} 要素で）ことです。しかし、このようなライブラリーには、 [Bower](https://bower.io/) コンポーネントとしてインストールしたり、 [Webpack](https://webpack.github.io/) モジュールバンドラーに依存関係として記載するなど、他にも多くの使用方法があります。より詳細な情報については、ライブラリーの個別のインストールページを読む必要があります。
 
-> **メモ:** JavaScript のフレームワークである [Ember](https://emberjs.com/) や [Angular](https://angularjs.org/) もウェブ上で見かけます。ライブラリーは個々の問題を解決したり、既存のウェブサイトに取り込んだりするのに多いのに対し、フレームワークは複雑なウェブアプリケーションを開発するための完全なソリューションという傾向があります。
+> [!NOTE]
+> JavaScript のフレームワークである [Ember](https://emberjs.com/) や [Angular](https://angularjs.org/) もウェブ上で見かけます。ライブラリーは個々の問題を解決したり、既存のウェブサイトに取り込んだりするのに多いのに対し、フレームワークは複雑なウェブアプリケーションを開発するための完全なソリューションという傾向があります。
 
 #### ポリフィル
 
@@ -317,9 +324,11 @@ JavaScript ライブラリーには、いくつかの主な種類がある傾向
 5. [フェッチ](/ja/docs/Web/API/fetch)に対応していないブラウザーで読み込んでも、花の画像が現れるはずです。
    ![Fetch basic example という見出しと紫の花の写真](fetch-image.jpg)
 
-> **メモ:** 完成版は [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) にあります（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)も参照してください）。
+> [!NOTE]
+> 完成版は [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) にあります（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)も参照してください）。
 
-> **メモ:** 繰り返しになりますが、これから出会う様々なポリフィルを使用する方法はたくさんあります - それぞれのポリフィルのドキュメントを参照してください。
+> [!NOTE]
+> 繰り返しになりますが、これから出会う様々なポリフィルを使用する方法はたくさんあります - それぞれのポリフィルのドキュメントを参照してください。
 
 「なぜポリフィルは必要がなくても、常にコードを読み込むべきなのか」と思うかもしれません。これは良い点です。サイトが複雑になり、より多くのライブラリーやポリフィルなどを使用するようになると、多くの余分なコードを読み込むようになり、特に性能の低い端末ではパフォーマンスに影響を及ぼし始める可能性があります。必要なファイルだけを読み込むのが意味あることです。
 
@@ -371,7 +380,8 @@ function loadScript(src, done) {
 
 最新の JavaScript の機能を使用したい人のために人気が出てきているもう一つのオプションは、最近の ECMAScript の機能を使用するコードを、古いブラウザーで作業するバージョンに変換することです。
 
-> **メモ:** これは「トランスパイル」と呼ばれます。（C コードで言うような）コンピューターで実行するためにコードを低レベルにコンパイルするのではなく、同じような抽象度で存在する構文に変更することで、同じように使用することができますが、状況は少し異なります（この場合、 JavaScript のある種類を別の種類に変換します）。
+> [!NOTE]
+> これは「トランスパイル」と呼ばれます。（C コードで言うような）コンピューターで実行するためにコードを低レベルにコンパイルするのではなく、同じような抽象度で存在する構文に変更することで、同じように使用することができますが、状況は少し異なります（この場合、 JavaScript のある種類を別の種類に変換します）。
 
 よく使われるトランスパイラーは [Babel.js](https://babeljs.io/) ですが、他にもあります。
 

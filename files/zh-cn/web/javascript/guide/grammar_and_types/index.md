@@ -23,7 +23,8 @@ var Früh = "foobar";
 
 如果一条语句独占一行的话，那么分号是可以省略的。（译者注：并不建议这么做。）但如果一行中有多条语句，那么这些语句必须以分号分开。
 
-> **备注：** ECMAScript 规定了在语句的末尾自动插入分号（[ASI](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全)）。（如果想要了解更多信息，请参阅 JavaScript [词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar) 。）
+> [!NOTE]
+> ECMAScript 规定了在语句的末尾自动插入分号（[ASI](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全)）。（如果想要了解更多信息，请参阅 JavaScript [词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar) 。）
 
 虽然不是必需的，但是在一条语句的末尾加上分号是一个很好的习惯。这个习惯可以大大减少代码中产生 bug 的可能性。
 
@@ -45,7 +46,8 @@ Javascript 源码从左往右被扫描并转换成一系列由 token、控制字
 
 在代码执行过程中，注释将被自动跳过（不执行）。
 
-> **备注：** 你可能会在一些 JavaScript 脚本中见到像这样 `#!/usr/bin/env node` 的第三种注释
+> [!NOTE]
+> 你可能会在一些 JavaScript 脚本中见到像这样 `#!/usr/bin/env node` 的第三种注释
 >
 > 这种注释我们称为**hashbang 注释**，这种注释被用来指定执行 JaveScript 脚本的引擎的路径，查看这篇文章来了解更详细的信息：[Hashbang 注释](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#hashbang_注释)
 
@@ -380,7 +382,8 @@ console.log(a.length); // 1
 console.log(a[0]); // 3
 ```
 
-> **备注：** 这里的数组字面值也是一种对象初始化器。参考[对象初始化器的使用](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#使用对象初始化器)。
+> [!NOTE]
+> 这里的数组字面值也是一种对象初始化器。参考[对象初始化器的使用](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#使用对象初始化器)。
 
 若在顶层（全局）脚本里用字面值创建数组，JavaScript 语言将会在每次对包含该数组字面值的表达式求值时解释该数组。另一方面，在函数中使用的数组，将在每次调用函数时都会被创建一次。
 
@@ -398,7 +401,8 @@ var fish = ["Lion", , "Angel"];
 
 如果你在元素列表的尾部添加了一个逗号，它将会被忽略。在下面的例子中，数组的长度是 3，并不存在 myList\[3] 这个元素。元素列表中其他所有的逗号都表示一个新元素（的开始）。
 
-> **备注：** 尾部的逗号在早期版本的浏览器中会产生错误，因而编程时的最佳实践方式就是移除它们。
+> [!NOTE]
+> 尾部的逗号在早期版本的浏览器中会产生错误，因而编程时的最佳实践方式就是移除它们。
 
 ```js
 var myList = ["home", , "school"];
@@ -480,7 +484,8 @@ JavaScript 数字字面量包括多种基数的整数字面量和以 10 为基�
 
 对象字面值是封闭在花括号对（{}）中的一个对象的零个或多个“属性名—值”对的（元素）列表。
 
-> **警告：** 你不能在一条语句的开头就使用对象字面值，这将导致错误或产生超出预料的行为，因为此时左花括号（{）会被认为是一个语句块的起始符号。
+> [!WARNING]
+> 你不能在一条语句的开头就使用对象字面值，这将导致错误或产生超出预料的行为，因为此时左花括号（{）会被认为是一个语句块的起始符号。
 
 以下是一个对象字面值的例子。对象`car`的第一个元素（译注：即一个属性/值对）定义了属性 `myCar`；第二个元素，属性 `getCar`，引用了一个函数调用（即 CarTypes("Honda")）；第三个元素，属性 `special`，使用了一个已有的变量（即 Sales）。
 

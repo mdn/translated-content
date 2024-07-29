@@ -33,7 +33,8 @@ slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 以下部分向你展示如何調用應用程序生成器，並提供關於視圖或 CSS 的不同選項的一些解釋。我們還將解釋骨架網站的結構。最後，我們將展示如何運行網站，來驗證它是否有效。
 
-> **備註：** Express Application Generator 並非 Express 應用程序的唯一生成器，生成的項目不是構建文件和目錄的唯一可行方式。然而，生成的網站具有易於擴展和理解的模塊化結構。有關最小 Express 應用程序的信息，請參閱 [Hello world](https://expressjs.com/en/starter/hello-world.html) 示例（Express docs）。
+> [!NOTE]
+> Express Application Generator 並非 Express 應用程序的唯一生成器，生成的項目不是構建文件和目錄的唯一可行方式。然而，生成的網站具有易於擴展和理解的模塊化結構。有關最小 Express 應用程序的信息，請參閱 [Hello world](https://expressjs.com/en/starter/hello-world.html) 示例（Express docs）。
 
 ## 使用應用產生器
 
@@ -72,13 +73,15 @@ express
 
 你還可以使用`--view`選擇視圖（模板）引擎，並且/或者使用`--css`選擇 CSS 生成引擎。
 
-> **備註：** 選擇模板引擎的其他選項（例如 `--hogan`, `--ejs`, `--hbs`等）已被棄用。請用 `--view` (或 `-v`)!
+> [!NOTE]
+> 選擇模板引擎的其他選項（例如 `--hogan`, `--ejs`, `--hbs`等）已被棄用。請用 `--view` (或 `-v`)!
 
 ### 我應該用哪個視圖引擎?
 
 Express Application Generator 允許你配置許多流行的視圖/模板引擎，包括 [EJS](https://www.npmjs.com/package/ejs), [Hbs](http://github.com/donpark/hbs), [Pug](https://pugjs.org/api/getting-started.html) (Jade), [Twig](https://www.npmjs.com/package/twig), 和 [Vash](https://www.npmjs.com/package/vash)，但如果你沒有指定視圖選項，它會默認選擇 Jade。 Express 本身也可以支持大量其他模板語言，是「[開箱即可使用](https://github.com/expressjs/express/wiki#template-engines)」的。
 
-> **備註：** 如果要使用生成器不支持的模板引擎，請參閱[在 Express 中使用模板引擎（Express 文檔）](https://expressjs.com/en/guide/using-template-engines.html)，並參閱目標視圖引擎的文檔。
+> [!NOTE]
+> 如果要使用生成器不支持的模板引擎，請參閱[在 Express 中使用模板引擎（Express 文檔）](https://expressjs.com/en/guide/using-template-engines.html)，並參閱目標視圖引擎的文檔。
 
 一般來說，你應該選擇一種「可以提供你所需的所有功能」的模板引擎，
 並使你能夠儘早提高生產力 - 換句話說，就像你選擇其他組件一樣！比較模板引擎時需要考慮的一些事項如下：
@@ -97,7 +100,8 @@ Express Application Generator 允許你配置許多流行的視圖/模板引擎�
   - 支持異步操作和流媒體。
   - 可以在客戶端和服務器上使用。如果可以在客戶端上使用模板引擎，則允許提供數據，並有可能在客戶端完成所有渲染，或大部分渲染。
 
-> **備註：** 互聯網上有許多資源，可幫助你比較不同的視圖/模板引擎選擇！
+> [!NOTE]
+> 互聯網上有許多資源，可幫助你比較不同的視圖/模板引擎選擇！
 
 對於這個項目，我們將使用 [Pug](https://pugjs.org/api/getting-started.html) 模板引擎（這是最近更名的 Jade 引擎），因為這是最流行的 Express / JavaScript 模板語言之一，並且應用發生器支持開箱即用。
 
@@ -105,7 +109,8 @@ Express Application Generator 允許你配置許多流行的視圖/模板引擎�
 
 Express 應用生成器允許你創建一個項目，並配置最常見的 CSS 樣式表引擎：[LESS](http://lesscss.org/), [SASS](http://sass-lang.com/), [Compass](http://compass-style.org/), [Stylus](http://stylus-lang.com/)。
 
-> **備註：** CSS 有一些限制，使某些任務變得困難。 CSS 樣式表引擎允許你使用更強大的語法來定義你的 CSS，然後將定義編譯為純粹的舊式 CSS，以供瀏覽器使用。
+> [!NOTE]
+> CSS 有一些限制，使某些任務變得困難。 CSS 樣式表引擎允許你使用更強大的語法來定義你的 CSS，然後將定義編譯為純粹的舊式 CSS，以供瀏覽器使用。
 
 與模板引擎一樣，你應該使用樣式表引擎，這樣可以讓你的團隊獲得最高生產力。對於這個項目，我們將使用普通的 CSS（默認值），因為我們的 CSS 要求不夠複雜，沒有必要使用其他任何東西。
 
@@ -187,7 +192,8 @@ express express-locallibrary-tutorial --view=pug
 
 你有一個能工作的 Express 應用了，讓它在 `http://localhost:3000/` 服務。
 
-> **備註：** 你也可以使用 `npm start` 命令啟動應用程序。如下圖所示，指定 DEBUG 變量可啟用控制台日誌記錄/調試。例如，當你訪問上面的頁面時，你會看到像這樣的調試輸出：
+> [!NOTE]
+> 你也可以使用 `npm start` 命令啟動應用程序。如下圖所示，指定 DEBUG 變量可啟用控制台日誌記錄/調試。例如，當你訪問上面的頁面時，你會看到像這樣的調試輸出：
 >
 > ```bash
 > >SET DEBUG=express-locallibrary-tutorial:* & npm start
@@ -242,7 +248,8 @@ npm install --save-dev nodemon
   DEBUG=express-locallibrary-tutorial:* npm run devstart
   ```
 
-> **備註：** 現在，如果你編輯項目中的任何文件，服務器將重新啟動（或者你可以隨時在命令提示符下，鍵入`rs`來重新啟動它）。你仍需要重新加載瀏覽器，以刷新頁面。
+> [!NOTE]
+> 現在，如果你編輯項目中的任何文件，服務器將重新啟動（或者你可以隨時在命令提示符下，鍵入`rs`來重新啟動它）。你仍需要重新加載瀏覽器，以刷新頁面。
 >
 > 我們現在必須調用「`npm run <scriptname>`」而不是 `npm start`，因為「start」實際上是映射到指定腳本的 NPM 命令。我們可以在啟動腳本中替換該命令，但我們只想在開發期間使用 nodemon，因此創建新的腳本命令是有意義的。
 
@@ -372,7 +379,8 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 ```
 
-> **備註：** 此時我們剛剛導入了模塊；我們還沒有真正使用過它的路由（在文件的更下方一點將使用到路由）。
+> [!NOTE]
+> 此時我們剛剛導入了模塊；我們還沒有真正使用過它的路由（在文件的更下方一點將使用到路由）。
 
 接下來，我們使用導入的 express 模塊 ，創建應用程序 `app` 對象，然後使用它來設置視圖（模板）引擎。引擎的設置有兩個部分。首先我們設置 '`views`' 值，來指定模板將被存儲的文件夾（在這種情況下是子文件夾 **/views**）。然後我們設置 '`view engine`' 的值，來指定模板庫（在本例中為 「pug」 ）。
 
@@ -403,7 +411,8 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 ```
 
-> **備註：** 上面指定的路徑 ('/' and '`/users`')，被視為定義在導入文件中的路由前綴。因此，例如，如果導入的用戶模塊 **users**為`/profile`定義了路由，則可以在 `/users/profile`中訪問該路由。我們將在後面的文章中，詳細討論路由。
+> [!NOTE]
+> 上面指定的路徑 ('/' and '`/users`')，被視為定義在導入文件中的路由前綴。因此，例如，如果導入的用戶模塊 **users**為`/profile`定義了路由，則可以在 `/users/profile`中訪問該路由。我們將在後面的文章中，詳細討論路由。
 
 文件中的最後一個中間件，為錯誤和 HTTP 404 響應添加了處理程序方法。
 
@@ -451,7 +460,8 @@ module.exports = router;
 
 該路由定義了一個回調，只要檢測到具有正確模式的 HTTP `GET` 請求，就會調用該回調。匹配模式是模塊導入時指定的路由（'`/users`'），加上（'`/`'）文件中定義的任何內容。換句話說，當收到`/users/`的 URL 時，將使用此路由。
 
-> **備註：** 嘗試運行帶有 node 的服務器，並在瀏覽器中訪問以下 URL: <http://localhost:3000/users/>。你應該看到一條消息：'respond with a resource'。
+> [!NOTE]
+> 嘗試運行帶有 node 的服務器，並在瀏覽器中訪問以下 URL: <http://localhost:3000/users/>。你應該看到一條消息：'respond with a resource'。
 
 上面有趣的事情是，回調函數有第三個參數 '`next`'，因此是一個中間件函數，而不是簡單的路由回調。雖然代碼當前不使用 `next` 參數，但如果要在'`/`'根路由路徑中，添加多個路由處理程序，將來可能會有用。
 

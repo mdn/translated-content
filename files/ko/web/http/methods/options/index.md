@@ -58,7 +58,7 @@ curl -X OPTIONS https://example.org -i
 그럼 응답은 허용된 메서드를 가지고 있는 {{HTTPHeader("Allow")}} 헤더가 있습니다.
 
 ```http
-HTTP/1.1 200 No Content
+HTTP/1.1 204 No Content
 Allow: OPTIONS, GET, HEAD, POST
 Cache-Control: max-age=604800
 Date: Thu, 13 Oct 2016 11:45:00 GMT
@@ -96,7 +96,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
   - : 위 권한은 86,400초(1일) 동안 캐시될 수 있습니다.
 
 ```http
-HTTP/1.1 200 No Content
+HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 01:15:39 GMT
 Server: Apache/2.0.61 (Unix)
 Access-Control-Allow-Origin: https://foo.example

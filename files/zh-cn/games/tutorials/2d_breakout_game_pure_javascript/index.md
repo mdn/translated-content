@@ -32,9 +32,11 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 
 对于实现一个网页游戏而言，最好的方式是从纯 JavaScirpt 着手，那样可以让我们建立更坚实的基础。之后你可以在你的项目中选择你喜欢的框架。框架也只是用 JavaScript 语言实现的工具；如果你想要在项目中使用框架，你必须先了解语言本身。框架可以帮你提高开发效率并生成一些基础的内容；但是如果没有达到你的预期，你只能慢慢调试或者使用原生 JavaScript 去实现解决方案。
 
-> **备注：** 如果你对使用第三方游戏资源库开发 2d 网页游戏感兴趣，可以参考本系列教程的 [2D breakout game using Phaser](/zh-CN/docs/Games/Workflows/2D_breakout_game_Phaser).
+> [!NOTE]
+> 如果你对使用第三方游戏资源库开发 2d 网页游戏感兴趣，可以参考本系列教程的 [2D breakout game using Phaser](/zh-CN/docs/Games/Workflows/2D_breakout_game_Phaser).
 
-> **备注：** 本系列教程可以用作游戏开发工作室的素材资源。如果你想探讨普通的游戏开发，你可以利用[Gamedev Canvas Content Kit](https://github.com/end3r/Gamedev-Canvas-Content-Kit)以及本教程的内容。
+> [!NOTE]
+> 本系列教程可以用作游戏开发工作室的素材资源。如果你想探讨普通的游戏开发，你可以利用[Gamedev Canvas Content Kit](https://github.com/end3r/Gamedev-Canvas-Content-Kit)以及本教程的内容。
 
 ## 下一步
 

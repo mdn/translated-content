@@ -29,9 +29,9 @@ search(regexp)
 
 ## 描述
 
-`String.prototype.search()` 方法的实现非常简单——它只是将该字符串作为调用实参拥有的 `Symbol.search` 方法的第一个参数。实际的实现来自于 [`RegExp.prototype[@@search]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)。
+`String.prototype.search()` 方法的实现非常简单——它只是将该字符串作为调用实参拥有的 `Symbol.search` 方法的第一个参数。实际的实现来自于 [`RegExp.prototype[Symbol.search]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)。
 
-`regexp` 的 `g` 标志对 `search()` 方法的结果没有影响，搜索总是以正则表达式的 `lastIndex` 为 0 进行。有关 `search()` 方法行为的更多信息，请参阅 [`RegExp.prototype[@@search]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)。
+`regexp` 的 `g` 标志对 `search()` 方法的结果没有影响，搜索总是以正则表达式的 `lastIndex` 为 0 进行。有关 `search()` 方法行为的更多信息，请参阅 [`RegExp.prototype[Symbol.search]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)。
 
 当你想知道字符串中是否存在某个模式，并且*还*想知道它在字符串中的索引时，可以使用 `search()` 方法。
 
@@ -66,4 +66,4 @@ console.log(str.search(reDot)); // 返回 -1，找不到点符号“.”
 - [在 JavaScript 中使用正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec()")}}
-- [`RegExp.prototype[@@search]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
+- [`RegExp.prototype[Symbol.search]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)

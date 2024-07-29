@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、あなたが[基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)の記事を理解したかどうかを評価することです。
 
-> **メモ:** このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
+> [!NOTE]
+> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
 >
 > もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 
@@ -25,7 +26,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/basic-controls/basic-controls1.html", '100%', 700)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の開始点をダウンロード](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/basic-controls/basic-controls1-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
 
@@ -42,7 +43,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/basic-controls/basic-controls2.html", '100%', 700)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の開始点をダウンロード](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/basic-controls/basic-controls2-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
 
@@ -58,6 +59,6 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/basic-controls/basic-controls3.html", '100%', 700)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の開始点をダウンロード](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/basic-controls/basic-controls3-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。

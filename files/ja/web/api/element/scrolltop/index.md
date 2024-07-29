@@ -20,7 +20,8 @@ l10n:
 
 `scrollTop` がルート要素（`<html>` 要素）に対して使用されると、ウィンドウの `scrollY` が返されます。[これは `scrollTop` の特例です](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-scrolltop)。
 
-> **警告:** 画面の拡大縮小を使用するシステムでは、`scrollTop` が小数になることがあります。
+> [!WARNING]
+> 画面の拡大縮小を使用するシステムでは、`scrollTop` が小数になることがあります。
 
 ## 値
 

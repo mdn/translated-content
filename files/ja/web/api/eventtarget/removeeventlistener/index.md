@@ -1,11 +1,12 @@
 ---
 title: "EventTarget: removeEventListener() メソッド"
+short-title: removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
 l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`removeEventListener()`** は {{domxref("EventTarget")}} インターフェイスのメソッドで、以前に {{domxref("EventTarget.addEventListener()")}} で登録されたイベントリスナーを取り外します。
 取り外されるイベントリスナーはイベントの型、イベントリスナー関数そのもの、照合プロセスに影響を与えるさまざまな任意のオプションを使用して識別します。
@@ -90,7 +91,7 @@ element.removeEventListener("mousedown", handleMouseDown, false); // 成功
 element.removeEventListener("mousedown", handleMouseDown, true); // 失敗
 ```
 
-この点については、いくつかのブラウザのリリースで一貫性がないことに注意してください。特に理由がない限り、`addEventListener()` の呼び出しで使用したのと同じ値を `removeEventListener()` の呼び出しでも使用することが賢明でしょう。
+この点については、いくつかのブラウザーのリリースで一貫性がないことに注意してください。特に理由がない限り、`addEventListener()` の呼び出しで使用したのと同じ値を `removeEventListener()` の呼び出しでも使用することが賢明でしょう。
 
 ## 例
 

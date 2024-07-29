@@ -9,9 +9,11 @@ l10n:
 
 **クリップボード API** は、クリップボードのコマンド (切り取り、コピー、貼り付け) に応答する機能や、システムクリップボードの非同期の読み取りや書き込みを行う機能を提供します。
 
-> **メモ:** クリップボードにアクセスするには、非推奨の {{domxref("document.execCommand()")}} メソッドよりもこの API を優先して使用してください。
+> [!NOTE]
+> クリップボードにアクセスするには、非推奨の {{domxref("document.execCommand()")}} メソッドよりもこの API を優先して使用してください。
 
-> **メモ:** この API は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)では利用できません。（{{domxref("WorkerNavigator")}} に公開されていません）。
+> [!NOTE]
+> この API は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)では利用できません。（{{domxref("WorkerNavigator")}} に公開されていません）。
 
 ## 概念と使用法
 
