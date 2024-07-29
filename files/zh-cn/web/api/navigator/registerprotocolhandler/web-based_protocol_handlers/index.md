@@ -37,7 +37,8 @@ navigator.registerProtocolHandler(
 
 ![Screenshot of a prompt that reads: Add Burger handler (google.co.uk) as an application for burger links. An Add Application button is next to the text.](protocolregister.png)
 
-> **备注：** 试图执行登记或注册时，当前网页必须与提供的 URL 模板在相同的域，否则将会失败。例如，`http://example.com/homepage.html` 可以为 `http://example.com/handle_mailto/%s` 注册一个协议处理程序，但 `http://example.org/handle_mailto/%s` 不可以。
+> [!NOTE]
+> 试图执行登记或注册时，当前网页必须与提供的 URL 模板在相同的域，否则将会失败。例如，`http://example.com/homepage.html` 可以为 `http://example.com/handle_mailto/%s` 注册一个协议处理程序，但 `http://example.org/handle_mailto/%s` 不可以。
 
 多次注册相同的协议处理程序会弹出不同的通知，表明协议处理器已经注册。因此，发起一个注册协议处理程序的请求，之后检查是否注册是一个很好的方法。比如下面的例子：
 
@@ -90,7 +91,8 @@ http://starkravingfinkle.org/projects/wph/handler.php?value=fake:this%20is%20fak
 
 服务端代码可以提取查询字符串的参数，执行所需的操作。
 
-> **备注：** 服务端代码会接收到 href 的**全部**内容。这意味着服务端代码必须解析出数据中的协议。
+> [!NOTE]
+> 服务端代码会接收到 href 的**全部**内容。这意味着服务端代码必须解析出数据中的协议。
 
 ### Example
 

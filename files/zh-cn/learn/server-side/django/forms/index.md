@@ -104,7 +104,8 @@ Django 的表单处理，使用了我们在之前的教程中，学到的所有�
 
 Django 提供了许多工具和方法，来帮助你完成上述任务。最基本的是 `Form` 类，它简化了表单 HTML 和数据清理/验证的生成。在下一节中，我们将描述表单如何使用页面的实际示例，来允许图书馆员更新书本籍。
 
-> **备注：** 在我们讨论 Django 更“高级”的表单框架类时，了解 `Form` 的使用方式，将对你有所帮助。
+> [!NOTE]
+> 在我们讨论 Django 更“高级”的表单框架类时，了解 `Form` 的使用方式，将对你有所帮助。
 
 ## 续借表单 - 使用表单和功能视图
 
@@ -183,7 +184,8 @@ class RenewBookForm(forms.Form):
 
 第二点是，如果某个值超出了我们的范围，我们会引发`ValidationError`，指定在输入无效值时，我们要在表单中显示的错误文本。上面的例子，也将这个文本包含在 [Django 的翻译函数](https://docs.djangoproject.com/zh-hans/2.0/topics/i18n/translation/)`ugettext_lazy()`中（导入为 `_()`），如果你想在稍后翻译你的网站，这是一个很好的做法。
 
-> **备注：** 在[表单和字段验证](https://docs.djangoproject.com/zh-hans/2.0/ref/forms/validation/)（Django docs）中验证表单还有其他很多方法和示例。例如，如果你有多个相互依赖的字段，则可以覆盖[Form.clean()](https://docs.djangoproject.com/en/2.0/ref/forms/api/#django.forms.Form.clean) 函数并再次引发`ValidationError`。
+> [!NOTE]
+> 在[表单和字段验证](https://docs.djangoproject.com/zh-hans/2.0/ref/forms/validation/)（Django docs）中验证表单还有其他很多方法和示例。例如，如果你有多个相互依赖的字段，则可以覆盖[Form.clean()](https://docs.djangoproject.com/en/2.0/ref/forms/api/#django.forms.Form.clean) 函数并再次引发`ValidationError`。
 
 这就是我们在这个例子中，对表单所需要了解的全部内容！
 
@@ -203,7 +205,8 @@ urlpatterns += [
 
 URL 配置会将格式为 **/catalog/book/\<bookinstance id>/renew/** 的 URL，重定向到 **views.py** 中，名为`renew_book_librarian()` 的函数，并将`BookInstance` id 作为名为 `pk`的参数发送。只有 `pk`是正确格式化的 `uuid`，该模式才会匹配。
 
-> **备注：** 我们可以将捕获的 URL 数据，命名为“`pk`”，因为我们可以完全控制视图函数（我们不使用需要具有特定名称的参数的通用详细视图类）。然而，`pk`，“主键”primary key 的缩写，是一个合理的惯例！
+> [!NOTE]
+> 我们可以将捕获的 URL 数据，命名为“`pk`”，因为我们可以完全控制视图函数（我们不使用需要具有特定名称的参数的通用详细视图类）。然而，`pk`，“主键”primary key 的缩写，是一个合理的惯例！
 
 ### 视图
 
@@ -296,7 +299,8 @@ def renew_book_librarian(request, pk):
 
 如果表单有效，那么我们可以开始使用数据，通过 `form.cleaned_data`属性访问它（例如 `data = form.cleaned_data['renewal_date']`）。这里我们只将数据保存到关联的`BookInstance` 对象的`due_back` 值中。
 
-> **警告：** 虽然你也可以通过请求直接访问表单数据（例如`request.POST['renewal_date']` 或 `request.GET['renewal_date']`（如果使用 GET 请求），但不建议这样做。清理后的数据是无害的、验证过的、并转换为 Python 友好类型。
+> [!WARNING]
+> 虽然你也可以通过请求直接访问表单数据（例如`request.POST['renewal_date']` 或 `request.GET['renewal_date']`（如果使用 GET 请求），但不建议这样做。清理后的数据是无害的、验证过的、并转换为 Python 友好类型。
 
 视图的表单处理部分的最后一步，是重定向到另一个页面，通常是“成功”页面。在这种情况下，我们使用 `HttpResponseRedirect` 和 `reverse()` ，重定向到名为'`all-borrowed`'的视图（这是在 [Django 教程第 8 部分中创建的“挑战”：用户身份验证和权限](/zh-CN/docs/learn/Server-side/Django/Authentication#Challenge_yourself)）。如果你没有创建该页面，请考虑重定向到 URL'/'处的主页。
 
@@ -370,7 +374,8 @@ def renew_book_librarian(request, pk):
 
 表单代码相对简单。首先，我们声明表单标签，指定表单的提交位置（`action`）和提交数据的方法（在本例中为“HTTP POST”） - 如果你回想一下页面顶部的 HTML 表单概述，如图所示的空`action` ，意味着表单数据将被发布回页面的当前 URL（这是我们想要的！）。在标签内部，我们定义了`submit` 提交输入，用户可以按这个输入来提交数据。在表单标签内添加的`{% csrf_token %}` ，是 Django 跨站点伪造保护的一部分。
 
-> **备注：** 将`{% csrf_token %}` 添加到你创建的每个使用 `POST` 提交数据的 Django 模板中。这将减少恶意用户劫持表单的可能性。
+> [!NOTE]
+> 将`{% csrf_token %}` 添加到你创建的每个使用 `POST` 提交数据的 Django 模板中。这将减少恶意用户劫持表单的可能性。
 
 剩下的就是 `\{{form}}`模板变量，我们将其传递给上下文字典中的模板。也许不出所料，当如图所示使用时，它提供了所有表单字段的默认呈现，包括它们的标签、小部件、和帮助文本 - 呈现如下所示：
 
@@ -392,7 +397,8 @@ def renew_book_librarian(request, pk):
 </tr>
 ```
 
-> **备注：** 它可能并不明显，因为我们只有一个字段，但默认情况下，每个字段都在其自己的表格行中定义（这就是变量在上面的`table` 表格标记内部的原因）。如果你引用模板变量`\{{ form.as_table }}`，会提供相同的渲染。
+> [!NOTE]
+> 它可能并不明显，因为我们只有一个字段，但默认情况下，每个字段都在其自己的表格行中定义（这就是变量在上面的`table` 表格标记内部的原因）。如果你引用模板变量`\{{ form.as_table }}`，会提供相同的渲染。
 
 如果你输入无效日期，你还会获得页面中呈现的错误列表（下面以**粗体**显示）。
 
@@ -441,7 +447,8 @@ def renew_book_librarian(request, pk):
 {% endif %}
 ```
 
-> **备注：** 请记住，你的测试登录需要具有“`catalog.can_mark_returned`”权限，才能访问续借书本页面（可能使用你的超级用户帐户）。
+> [!NOTE]
+> 请记住，你的测试登录需要具有“`catalog.can_mark_returned`”权限，才能访问续借书本页面（可能使用你的超级用户帐户）。
 
 你也可以手动构建这样的测试 URL - `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/` （可以通过导航到图书馆中的书本详细信息页面，获取有效的 bookinstance id，并复制`id` 字段）。
 
@@ -477,7 +484,8 @@ class RenewBookModelForm(ModelForm):
         fields = ['due_back',]
 ```
 
-> **备注：** 这可能看起来不像使用`Form` 那么简单（在这种情况下不是这样，因为我们只有一个字段）。但是，如果你有很多字段，它可以显着减少代码量！
+> [!NOTE]
+> 这可能看起来不像使用`Form` 那么简单（在这种情况下不是这样，因为我们只有一个字段）。但是，如果你有很多字段，它可以显着减少代码量！
 
 其余信息来自模型字段的定义（例如标签、小部件、帮助文本、错误消息）。如果这些不太正确，那么我们可以在 `Meta`类中覆盖它们，指定包含要更改的字段、及其新值的字典。例如，在这种形式中，我们可能需要“更新日期”_Renewal date_ 字段的标签（而不是基于字段名称的默认值：截止日期 _Due date_），并且我们还希望我们的帮助文本，特定于此用例。下面的`Meta` 显示了如何覆盖这些字段，如果默认值不够，你可以类似地方式设置`widgets` 窗口小部件和`error_messages` 。
 
@@ -523,7 +531,8 @@ class RenewBookModelForm(ModelForm):
 
 我们在上面的函数视图示例中，使用的表单处理算法，表示表单编辑视图中非常常见的模式。Django 通过创建基于模型创建、编辑和删除视图的[通用编辑视图](https://docs.djangoproject.com/zh-hans/2.0/ref/class-based-views/generic-editing/)，为你抽象出大部分“样板”。这些不仅处理“视图”行为，而且它们会自动从模型中为你创建表单类（`ModelForm`）。
 
-> **备注：** 除了这里描述的编辑视图之外，还有一个 [FormView](https://docs.djangoproject.com/zh-hans/2.0/ref/class-based-views/generic-editing/#formview)类，它位于我们的函数视图，和其他通用视图之间的“灵活性”与“编码工作”之间。使用 `FormView` ，你仍然需要创建表单，但不必实现所有标准表单处理模式。相反，你只需提供一个函数的实现，一旦知道提交有效，就会调用该函数。
+> [!NOTE]
+> 除了这里描述的编辑视图之外，还有一个 [FormView](https://docs.djangoproject.com/zh-hans/2.0/ref/class-based-views/generic-editing/#formview)类，它位于我们的函数视图，和其他通用视图之间的“灵活性”与“编码工作”之间。使用 `FormView` ，你仍然需要创建表单，但不必实现所有标准表单处理模式。相反，你只需提供一个函数的实现，一旦知道提交有效，就会调用该函数。
 
 在本节中，我们将使用通用编辑视图，来创建页面，以添加从我们的库中创建、编辑和删除`Author` 作者记录的功能 - 有效地提供管理站点一部分的基本重新实现（这可能很有用，如果你需要比管理站点能提供的、更加灵活的管理功能）。
 
@@ -611,7 +620,8 @@ urlpatterns += [
 
 作者的创建，更新和删除页面，现在已准备好进行测试（在这种情况下，我们不会将它们连接到站点侧栏，尽管如果你愿意，也可以这样做）。
 
-> **备注：** 敏锐的用户会注意到，我们没有采取任何措施，来防止未经授权的用户访问这些页面！我们将其作为练习留给你（提示：你可以使用`PermissionRequiredMixin` ，并创建新权限，或重用我们的`can_mark_returned`权限）。
+> [!NOTE]
+> 敏锐的用户会注意到，我们没有采取任何措施，来防止未经授权的用户访问这些页面！我们将其作为练习留给你（提示：你可以使用`PermissionRequiredMixin` ，并创建新权限，或重用我们的`can_mark_returned`权限）。
 
 ### 测试页面
 

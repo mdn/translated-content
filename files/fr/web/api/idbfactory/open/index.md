@@ -37,9 +37,11 @@ var IDBOpenDBRequest = indexedDB.open(nom, version);
 
   - : Dans Gecko, à partir de [la version 26](/fr/Firefox/Releases/26), il est possible de passer en paramètre un objet `options` non standard, qui contienne le numéro de version de la base de données (équivalent donc au paramètre `version` définit ci-avant), et également une valeur `storage` qui décrit si on souhaite utiliser un stockage permanent (avec la valeur `persistent`) ou un stockage temporaire (avec la valeur `temporary`).
 
-    > **Attention :** l'attribut `storage` est déprécié et sera prochainement retiré de Gecko. Vous devriez utiliser {{domxref("StorageManager.persist()")}} à la place pour obtenir un stockage persistant.
+    > [!WARNING]
+    > L'attribut `storage` est déprécié et sera prochainement retiré de Gecko. Vous devriez utiliser {{domxref("StorageManager.persist()")}} à la place pour obtenir un stockage persistant.
 
-> **Note :** Vous pouvez consulter l'article [les limites de stockage du navigateur et les critères d'éviction](/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria) pour en savoir plus sur les différents types de stockage disponibles et la façon dont Firefox gère les données côté client.
+> [!NOTE]
+> Vous pouvez consulter l'article [les limites de stockage du navigateur et les critères d'éviction](/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria) pour en savoir plus sur les différents types de stockage disponibles et la façon dont Firefox gère les données côté client.
 
 ### Valeur de retour
 

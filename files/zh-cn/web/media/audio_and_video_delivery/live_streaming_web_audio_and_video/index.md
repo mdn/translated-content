@@ -43,7 +43,8 @@ slug: Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 
 ### RTSP
 
-> **备注：** 实时流协议 (RTSP) 控制媒体在两端传输的会话，且同时使用实时传输协议 (RTP) 和实时控制协议 (RTCP) 来传输媒体流。将 RTP 与 RTCP 结合使用可以实现自适应流。目前大部分浏览器还无法原生支持，但请留意 [Firefox OS 1.3 支持 RTSP](https://www.mozilla.org/en-US/firefox/os/notes/1.3/)。
+> [!NOTE]
+> 实时流协议 (RTSP) 控制媒体在两端传输的会话，且同时使用实时传输协议 (RTP) 和实时控制协议 (RTCP) 来传输媒体流。将 RTP 与 RTCP 结合使用可以实现自适应流。目前大部分浏览器还无法原生支持，但请留意 [Firefox OS 1.3 支持 RTSP](https://www.mozilla.org/en-US/firefox/os/notes/1.3/)。
 >
 > 某些厂商实现了专有的传输协议，类似 RealNetworks 以及他们的真实数据传输 (RDT)。
 
@@ -51,7 +52,8 @@ slug: Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 
 RTSP 2.0 目前处于开发阶段，并且无法向后兼容 RTSP 1.0。
 
-> **警告：** 虽然 {{ htmlelement("audio") }} 与 {{ htmlelement("video") }} 标签与协议无关，但是目前没有浏览器可以在无插件的情况下支持除了 HTTP 外的协议，尽管这种局面可能会有所转变，但除了 HTTP 以外的协议可能会被防火墙或代理服务器拦截。
+> [!WARNING]
+> 虽然 {{ htmlelement("audio") }} 与 {{ htmlelement("video") }} 标签与协议无关，但是目前没有浏览器可以在无插件的情况下支持除了 HTTP 外的协议，尽管这种局面可能会有所转变，但除了 HTTP 以外的协议可能会被防火墙或代理服务器拦截。
 
 ## 使用流式协议
 
@@ -71,19 +73,22 @@ RTSP 2.0 目前处于开发阶段，并且无法向后兼容 RTSP 1.0。
 
 比如，[在卸载 MSE 解码器后，你可以通过 JavaScript 实现 MPEG-DASH](https://web.archive.org/web/20170504035455/https://msopentech.com/blog/2014/01/03/streaming_video_player/).
 
-> **备注：** 时移是在直播流发生后使用实时流的过程。
+> [!NOTE]
+> 时移是在直播流发生后使用实时流的过程。
 
 ## 视频流文件格式
 
 一些基于 HTTP 的实时流视频格式开始得到跨浏览器支持。
 
-> **备注：** 你可以通过 [设置自适应流媒体源](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources) 找到在 web 中使用的 HLS 和 MPEG-DASH 的编码指南。
+> [!NOTE]
+> 你可以通过 [设置自适应流媒体源](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources) 找到在 web 中使用的 HLS 和 MPEG-DASH 的编码指南。
 
 ### MPEG-DASH
 
 DASH 意即基于 HTTP 的动态自适应流，最近已经被 Chrome、以及运行在 Window 8.1 的 IE 11 浏览器所支持。它依赖于媒体源扩展 (MSE)，这些扩展被[DASH.js](https://github.com/Dash-Industry-Forum/dash.js/)之类的 JavaScript 库所使用。这种方式允许我们通过 XHR 下载视频流的数据块，并且将它“添加”到 {{ htmlelement("video") }}元素正在播放的流中。正因如此，如果我们检测到网络缓慢，我们可以从下一段开始请求低质量（较小）的数据块。这种技术也允许添加广告片段到流中。
 
-> **备注：** 你也可以 [将 MPEG-DASH 自适应流式系统与 WebM 一起使用](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification).
+> [!NOTE]
+> 你也可以 [将 MPEG-DASH 自适应流式系统与 WebM 一起使用](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification).
 
 ### HLS
 
@@ -129,13 +134,15 @@ Opus 是一个无版权的开放格式，针对不同类型文件使用不同的
 
 目前，Opus 被桌面端和移动端的 Firefox 以及桌面端的 Chrome 和 Opera 浏览器所支持。
 
-> **备注：** 对于浏览器端实现 WebRTC 功能来说，[Opus 是必须要用到的格式](https://datatracker.ietf.org/doc/html/draft-ietf-rtcweb-audio-05)。
+> [!NOTE]
+> 对于浏览器端实现 WebRTC 功能来说，[Opus 是必须要用到的格式](https://datatracker.ietf.org/doc/html/draft-ietf-rtcweb-audio-05)。
 
 ### MP3, AAC, Ogg Vorbis
 
 大部分通用的音频格式能够通过特殊的服务端技术进行传输。
 
-> **备注：** 相对于视频来说，音频没有键帧，可能更容易通过非流式格式来传输。
+> [!NOTE]
+> 相对于视频来说，音频没有键帧，可能更容易通过非流式格式来传输。
 
 ## 服务端流式技术
 
@@ -159,7 +166,8 @@ GStreamer 的插件如 [souphttpclientsink](https://gstreamer.freedesktop.org/da
 
 [Icecast](https://www.icecast.org/) 服务是一种针对流式媒体的开源技术。它由 [Xiph.org Foundation](https://www.xiph.org/) 进行维护，通过 SHOUTcast 协议来传输 Ogg Vorbis/Theora 以及 MP3 和 AAC 格式。
 
-> **备注：** SHOUTcast 和 Icecast 是最流行的已确立的技术之一，但也有 [更多流媒体系统可用](https://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers).
+> [!NOTE]
+> SHOUTcast 和 Icecast 是最流行的已确立的技术之一，但也有 [更多流媒体系统可用](https://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers).
 
 ### 流式服务
 

@@ -15,7 +15,8 @@ Django は、Python で書かれた高機能なサーバーサイドウェブフ
 
 プログラミングの概念と [Python](/ja/docs/Glossary/Python) に関する一般的な知識はあるとよいですが、主要概念を理解していることは必須ではありません。
 
-> **メモ:** Python は、初心者が読んで理解しやすい最も簡単なプログラミング言語の 1 つです。つまり、このモジュールをより理解したいのであれば、インターネット上の多数の無料の書籍やチュートリアルがあなたを助けてくれます。（新しいプログラマーは python.org wiki の [Python for Non Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) ページをチェックすると良いでしょう。）
+> [!NOTE]
+> Python は、初心者が読んで理解しやすい最も簡単なプログラミング言語の 1 つです。つまり、このモジュールをより理解したいのであれば、インターネット上の多数の無料の書籍やチュートリアルがあなたを助けてくれます。（新しいプログラマーは python.org wiki の [Python for Non Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) ページをチェックすると良いでしょう。）
 
 ## ガイド
 

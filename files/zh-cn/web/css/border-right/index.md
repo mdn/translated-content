@@ -13,7 +13,8 @@ border-right: 2px dotted;
 border-right: medium dashed green;
 ```
 
-> **备注：** 和 CSS 所有的缩写属性一样，border-`right` 总是会设置该缩写属性所包含的全部属性值，即使开发者并没有一一指定这些值。CSS 缩写属性会给没有被定义的属性一个默认的属性值。那就意味着下面这个例子......
+> [!NOTE]
+> 和 CSS 所有的缩写属性一样，border-`right` 总是会设置该缩写属性所包含的全部属性值，即使开发者并没有一一指定这些值。CSS 缩写属性会给没有被定义的属性一个默认的属性值。那就意味着下面这个例子......
 >
 > ```css
 > border-right-style: dotted;

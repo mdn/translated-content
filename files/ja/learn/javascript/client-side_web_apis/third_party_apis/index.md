@@ -40,7 +40,8 @@ l10n:
 
 [Simple Mapquest API の例](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/mapquest)を参考に、サードパーティ API とブラウザー API の違いを説明します。
 
-> **メモ:** 一度に[すべてのコード例を取得](/ja/docs/Learn#コード例の入手)したいかもしれませんが、その場合は、それぞれの節で必要な例ファイルをリポジトリーから検索すればよいでしょう。
+> [!NOTE]
+> 一度に[すべてのコード例を取得](/ja/docs/Learn#コード例の入手)したいかもしれませんが、その場合は、それぞれの節で必要な例ファイルをリポジトリーから検索すればよいでしょう。
 
 ### サードパーティのサーバーにある
 
@@ -80,7 +81,8 @@ const map = L.mapquest.map("map", {
 
 これが、Mapquest API が単純な地図を描くために必要なすべての情報です。接続しているサーバーは、表示されている地域の正しい地図タイルを表示するなど、複雑なものをすべて処理します。
 
-> **メモ:** API の中には、機能へのアクセスをわずかに異なる方法で処理するものがあり、開発者はデータを取得するために特定の URL パターンに対して HTTP リクエストを行う必要があります。これらは [RESTful API と呼ばれ、後で例が出てきます](#restful_api_—_nytimes)。
+> [!NOTE]
+> API の中には、機能へのアクセスをわずかに異なる方法で処理するものがあり、開発者はデータを取得するために特定の URL パターンに対して HTTP リクエストを行う必要があります。これらは [RESTful API と呼ばれ、後で例が出てきます](#restful_api_—_nytimes)。
 
 ### 通常は API キーが必要です
 
@@ -96,7 +98,8 @@ L.mapquest.key = "YOUR-API-KEY-HERE";
 
 この行では、アプリケーションで使用する API キーまたは開発者キーを指定します。アプリケーションの開発者は、キーを取得して API の機能へのアクセス許可を得るためにコードに含める必要があります。この例では、プレースホルダーを用意しました。
 
-> **メモ:** 独自の例を作成するときは、プレースホルダーの代わりに独自の API キーを使用します。
+> [!NOTE]
+> 独自の例を作成するときは、プレースホルダーの代わりに独自の API キーを使用します。
 
 他の API では、少し異なる方法でキーを含める必要があるかもしれませんが、ほとんどのパターンは比較的似ています。
 
@@ -164,7 +167,8 @@ L.marker([53.480759, -2.242631], {
 
 ドキュメントに記載されているその他のオプションを試してみて、何ができるか見てみましょう。Mapquest には、道案内や検索など、かなり高度な機能があります。
 
-> **メモ:** サンプルがうまく動作しない場合は、[完成版](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/finished/script.js)のコードをチェックしてみてください。
+> [!NOTE]
+> サンプルがうまく動作しない場合は、[完成版](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/finished/script.js)のコードをチェックしてみてください。
 
 ## RESTful API — NYTimes
 
@@ -249,9 +253,11 @@ L.marker([53.480759, -2.242631], {
 https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=YOUR-API-KEY-HERE&page=0&q=cats&fq=document_type:("article")&begin_date=20170301&end_date=20170312
 ```
 
-> **メモ:** どのような URL 引数を含めることができるかについての詳細は、[NYTimes developer docs](https://developer.nytimes.com/) を参照してください。
+> [!NOTE]
+> どのような URL 引数を含めることができるかについての詳細は、[NYTimes developer docs](https://developer.nytimes.com/) を参照してください。
 
-> **メモ:** この例では初歩的なフォームデータの検証を行っています — 検索語フィールドは、フォームを送信する前に入力しなければなりません (`required` 属性を使用して達成されます)。日付フィールドには `pattern` 属性が指定されており、値が 8 個の数字 (`pattern="[0-9]{8}"`) で構成されていないと送信されません。これらがどのように機能するかについての詳細は[フォームデータ検証](/ja/docs/Learn/Forms/Form_validation)を参照してください。
+> [!NOTE]
+> この例では初歩的なフォームデータの検証を行っています — 検索語フィールドは、フォームを送信する前に入力しなければなりません (`required` 属性を使用して達成されます)。日付フィールドには `pattern` 属性が指定されており、値が 8 個の数字 (`pattern="[0-9]{8}"`) で構成されていないと送信されません。これらがどのように機能するかについての詳細は[フォームデータ検証](/ja/docs/Learn/Forms/Form_validation)を参照してください。
 
 ### API からデータを要求する
 
@@ -371,7 +377,8 @@ function displayResults(json) {
 
    2 番目の関数は逆の方法でほぼ正確に同じように動作しますが、`pageNumber` がすでに 0 ではないことを確認するという余分なステップを踏まなければなりません — もしフェッチリクエストがマイナスの `page` 引数で実行された場合、エラーを引き起こす可能性があります。もし `pageNumber` がすでに 0 であれば、処理能力を無駄にしないように、単に関数から [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) します（すでに最初のページにいるのであれば、同じ結果を再び読み込む必要はありません）。
 
-> **メモ:** 完成した [NYTimes API のサンプルコードは GitHub で見ることができます](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/index.html) （[ライブ動作はこちら](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/)）。
+> [!NOTE]
+> 完成した [NYTimes API のサンプルコードは GitHub で見ることができます](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/index.html) （[ライブ動作はこちら](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/)）。
 
 ## YouTube の例
 

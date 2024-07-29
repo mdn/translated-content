@@ -9,7 +9,8 @@ La méthode **`clear()`** de l'interface {{domxref("IDBObjectStore")}} fait une 
 
 Vider un magasin d'objet consiste à supprimer tous les enregistrements et les entrées des index de ce magasin d'objet.
 
-> **Note :** La méthode clear() ne remet pas à zero le compteur du génerateur de clé s'il y en à un.
+> [!NOTE]
+> La méthode clear() ne remet pas à zero le compteur du génerateur de clé s'il y en à un.
 
 {{AvailableInWorkers}}
 
@@ -81,7 +82,8 @@ function clearData() {
 }
 ```
 
-> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!NOTE]
+> Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 

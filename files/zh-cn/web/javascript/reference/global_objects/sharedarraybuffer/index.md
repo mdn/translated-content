@@ -93,7 +93,7 @@ WebAssembly Thread 提案还定义了一套新的[原子](https://github.com/Web
 
 ## 静态属性
 
-- {{jsxref("SharedArrayBuffer/@@species", "SharedArrayBuffer[@@species]")}}
+- [`SharedArrayBuffer[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Symbol.species)
   - : 返回用于构造 `SharedArrayBuffer` 方法返回值的构造函数。
 
 ## 实例属性
@@ -108,8 +108,8 @@ WebAssembly Thread 提案还定义了一套新的[原子](https://github.com/Web
   - : 只读。如果当前 `SharedArrayBuffer` 可以增大，则返回 `true`，否则返回 `false`。
 - {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}}
   - : 当前 `SharedArrayBuffer` 可以增大的最大长度，只读，以字节为单位。在构造数组时确定且无法更改。
-- `SharedArrayBuffer.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"SharedArrayBuffer"`。它被用于 {{jsxref("Object.prototype.toString()")}}。
+- `SharedArrayBuffer.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"SharedArrayBuffer"`。它被用于 {{jsxref("Object.prototype.toString()")}}。
 
 ## 实例方法
 

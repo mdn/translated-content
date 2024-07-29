@@ -7,7 +7,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 
 El Módulo de Caja Flexible, comúnmente llamado flexbox, fue diseñado como un modelo unidimensional de layout, y como un método que pueda ayudar a distribuir el espacio entre los ítems de una interfaz y mejorar las capacidades de alineación. Este artículo hace un repaso de las principales características de flexbox, las que exploraremos con mayor detalle en el resto de estas guías.
 
-Cuando describimos a flexbox como unidimensional destacamos el hecho que flexbox maneja el layout en una sola dimensión a la vez — ya sea como fila o como columna. Esto contrasta con el modelo bidimensional del [Grid Layout de CSS](/es/docs/Web/CSS/CSS_Grid_Layout), el cual controla columnas y filas a la vez.
+Cuando describimos a flexbox como unidimensional destacamos el hecho que flexbox maneja el layout en una sola dimensión a la vez — ya sea como fila o como columna. Esto contrasta con el modelo bidimensional del [Grid Layout de CSS](/es/docs/Web/CSS/CSS_grid_layout), el cual controla columnas y filas a la vez.
 
 Los dos ejes de flexbox
 
@@ -24,21 +24,21 @@ El eje principal está definido por `flex-direction`, que posee cuatro posibles 
 
 Si elegimos `row` o `row-reverse`, el eje principal correrá a lo largo de la fila según la **dirección de la línea** .
 
-![If flex-direction is set to row the main axis runs along the row in the inline direction.](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox/basics1.png)
+![If flex-direction is set to row the main axis runs along the row in the inline direction.](basics1.svg)
 
 Al elegir `column` o `column-reverse` el eje principal correrá desde el borde superior de la página hasta el final — según la **dirección del bloque**.
 
-![If flex-direction is set to column the main axis runs in the block direction.](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox/basics2.png)
+![If flex-direction is set to column the main axis runs in the block direction.](basics2.svg)
 
 ### El eje cruzado
 
 El eje cruzado va perpendicular al eje principal, y por lo tanto si `flex-direction` (del eje principal) es `row` o `row-reverse` el eje cruzado irá por las columnas.
 
-![If flex-direction is set to row then the cross axis runs in the block direction.](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox/basics3.png)
+![If flex-direction is set to row then the cross axis runs in the block direction.](basics3.svg)
 
 Si el eje principal es `column` o `column-reverse` entonces el eje cruzado corre a lo largo de las filas.
 
-![If flex-direction is set to column then the cross axis runs in the inline direction.](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox/basics4.png)
+![If flex-direction is set to column then the cross axis runs in the inline direction.](basics4.svg)
 
 Entender cuál eje es cuál es importante cuando empezamos a mirar la alineación y justificación flexible de los ítems; flexbox posee propiedades que permiten alinear y justificar el contenido sobre un eje o el otro.
 
@@ -50,11 +50,11 @@ Puede leer más acerca de la relación que hay entre flexbox y la especificació
 
 Si `flex-direction` es `row` y estoy trabajando en español, entonces el margen inicial del eje principal quedará a la izquierda, y el margen final a la derecha.
 
-![Working in English the start edge is on the left.](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox/basics5.png)
+![Working in English the start edge is on the left.](basics5.svg)
 
 Si fuera a trabajar en árabe, entonces el margen inicial de mi eje principal quedaría a la derecha y el margen final a la izquierda.
 
-![The start edge in a RTL language is on the right.](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox/basics6.png)
+![The start edge in a RTL language is on the right.](basics6.svg)
 
 En ambos casos el margen inicial del eje cruzado estará en el extremo superior del contenedor flex y el margen final en el extremo inferior, ya que ambos idiomas tiene un modo de escritura horizontal.
 
@@ -117,7 +117,7 @@ Antes de darle sentido a estas propiedades debemos considerar el concepto de **e
 
 Si tenemos tres ítems con un ancho de 100 pixeles en un contenedor de 500 pixeles de ancho, entonces el espacio que se necesita para colocar nuestros ítems es de 300 pixeles. Esto deja 200 pixeles de espacio disponible. Si no cambiamos los valores iniciales entonces flexbox colocará ese espacio después del último ítem.
 
-![This flex container has available space after laying out the items.](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox/basics7.png)
+![This flex container has available space after laying out the items.](basics7.svg)
 
 Si en cambio quisiéramos que los ítems crecieran para llenar ese espacio, entonces necesitaremos un método para distribuir el espacio sobrante entre los ítems. Es justo lo que harán las propiedades `flex` que aplicaremos a dichos ítems.
 
@@ -141,7 +141,8 @@ Así como la propiedad `flex-grow` se encarga de añadir espacio sobre el eje pr
 
 El tamaño mínimo del ítem tendrá que ser considerado cuando se determine un valor de contracción que pueda funcionar, esto significa que flex-shrink tiene el potencial de comportarse menos consistentemente que flex-grow . Por lo tanto, haremos una revisión más detallada de cómo este algoritmo trabaja en el artículo Controlling Ratios de los ítems sobre el eje principal.
 
-> **Nota:** Nótese que los valores de `flex-grow` y `flex-shrink` son proporciones. Típicamente si pusiéramos todos los ítems flex: `1 1 200px` y luego quisiéramos que un ítem creciera al doble, deberíamos ponerlo con flex: `2 1 200px`. Aunque igualmente podemos colocar flex: `10 1 200px` y flex: `20 1 200px` si quisiéramos.
+> [!NOTE]
+> Nótese que los valores de `flex-grow` y `flex-shrink` son proporciones. Típicamente si pusiéramos todos los ítems flex: `1 1 200px` y luego quisiéramos que un ítem creciera al doble, deberíamos ponerlo con flex: `2 1 200px`. Aunque igualmente podemos colocar flex: `10 1 200px` y flex: `20 1 200px` si quisiéramos.
 
 ### Valores abreviados para las propiedades flex
 

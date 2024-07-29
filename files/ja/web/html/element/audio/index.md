@@ -23,7 +23,8 @@ l10n:
 
   - : 論理属性。指定された場合、音声ファイル全体のダウンロードの完了を待たずに、再生可能な状態になった時点で即座にコンテンツの再生が始まります。
 
-    > **メモ:** 自動的に音声 (あるいは音声トラックを含む動画) を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。自動再生機能が必須である場合は、オプトイン (ユーザーが明示的に有効化することを求める) にするべきです。ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。[自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)には autoplay の正しい使い方についての追加情報があります。
+    > [!NOTE]
+    > 自動的に音声 (あるいは音声トラックを含む動画) を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。自動再生機能が必須である場合は、オプトイン (ユーザーが明示的に有効化することを求める) にするべきです。ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。[自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)には autoplay の正しい使い方についての追加情報があります。
 
 - `controls`
 
@@ -50,7 +51,8 @@ l10n:
 
   - : 論理属性で、有線 (HDMI, DVI, など) や無線技術 (Miracast, Chromecast, DLNA, AirPlay, など) で接続された機器のリモート再生機能を無効にするために使用します。詳しくは[この提案中の仕様書](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute)をご覧ください。
 
-    > **メモ:** Safari では、代替として [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) を使用することができます。
+    > [!NOTE]
+    > Safari では、代替として [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) を使用することができます。
 
 - `loop`
   - : 論理型の属性です。指定された場合、音声プレイヤーは音声の末尾に達すると、自動的に先頭に戻ります。
@@ -67,7 +69,7 @@ l10n:
 
     既定値はブラウザーによって異なります。仕様書では `metadata` にするよう助言しています。
 
-    > **メモ:**
+    > [!NOTE]
     >
     > - `autoplay` 属性は `preload` より優先します。`autoplay` を指定すると、言うまでもなくブラウザーは音声を再生するためにダウンロードを始めなければなりません。
     > - 仕様書は、ブラウザーがこの属性の値に従うことを強制していません。これは単なるヒントです。

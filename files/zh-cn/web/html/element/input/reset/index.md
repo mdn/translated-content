@@ -9,7 +9,8 @@ slug: Web/HTML/Element/input/reset
 
 {{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}
 
-> **备注：** 你应该尽量避免在表单中包含重置按钮。它们很少具有实用性，事实上更有可能使用户因误点而感到沮丧（通常是在尝试单击[提交](/zh-CN/docs/Web/HTML/Element/Input/submit)按钮时）。
+> [!NOTE]
+> 你应该尽量避免在表单中包含重置按钮。它们很少具有实用性，事实上更有可能使用户因误点而感到沮丧（通常是在尝试单击[提交](/zh-CN/docs/Web/HTML/Element/Input/submit)按钮时）。
 
 <table class="properties">
  <tbody>
@@ -120,7 +121,8 @@ slug: Web/HTML/Element/input/reset
 
 你可以在运行时通过简单地将 `disable` 设置为 `true` 或 `false` 来启用和禁用按钮。在 JavaScript 中，使用 `btn.disabled = true` 或 `btn.disabled = false`。
 
-> **备注：** 有关启用和禁用按钮的更多概念，请参见 [`<input type="button">`](/zh-CN/docs/Web/HTML/Element/input/button#启用与禁用按钮) 页面。
+> [!NOTE]
+> 有关启用和禁用按钮的更多概念，请参见 [`<input type="button">`](/zh-CN/docs/Web/HTML/Element/input/button#启用与禁用按钮) 页面。
 
 ## 验证
 

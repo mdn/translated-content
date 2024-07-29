@@ -144,7 +144,8 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_text
 
 繪製文字使用`font`屬性指定的文字樣式，對齊則使用`textAlign`屬性，而指定基線則使用`textBaseline`. 填充文字當前使用`fillStyle`，而`strokeStyle`則被忽略
 
-> **備註：** 這個方法在 Gecko 1.9.1 (Firefox 3.5)時引進，且是 HTML 5 標準的一部分.
+> [!NOTE]
+> 這個方法在 Gecko 1.9.1 (Firefox 3.5)時引進，且是 HTML 5 標準的一部分.
 
 ```plain
 void fillText(
@@ -176,7 +177,8 @@ ctx.fillText("Sample String", 10, 50);
 
 測量文字。返回一個物件包含了寬度，像素值，所指定的文字會以當前的文字樣式繪製。
 
-> **備註：** 這個方法在 Gecko 1.9.1 (Firefox 3.5) 引進，且是 HTML 5 標準的一部分。
+> [!NOTE]
+> 這個方法在 Gecko 1.9.1 (Firefox 3.5) 引進，且是 HTML 5 標準的一部分。
 
 ```plain
 nsIDOMTextMetrics measureText(
@@ -199,7 +201,8 @@ nsIDOMTextMetrics measureText(
 
 繪製文字使用由`mozTextStyle`屬性的文字樣式。文本當前的填充顏色被用來當做文字顏色。
 
-> **備註：** 這個方法已經不被建議使用,請使用正式的 HTML 5 方法 `fillText()` and `strokeText()`.
+> [!NOTE]
+> 這個方法已經不被建議使用,請使用正式的 HTML 5 方法 `fillText()` and `strokeText()`.
 
 ```plain
 void mozDrawText(
@@ -228,7 +231,8 @@ ctx.mozDrawText("Sample String");
 
 返回寬度，像素值，指定文字
 
-> **備註：** 這個方法已經已宣告棄用，請使用正式的 HTML 5 方法`measureText()`.
+> [!NOTE]
+> 這個方法已經已宣告棄用，請使用正式的 HTML 5 方法`measureText()`.
 
 ```plain
 float mozMeasureText(
@@ -310,7 +314,8 @@ void mozTextAlongPath(
 
 繪製文字使用`font`屬性指定的文字樣式，對齊則使用`textAlign`屬性，而指定基線則使用`textBaseline`. 當前使用`strokeStyle`來建立文字外框。
 
-> **備註：** 這個方法在 Gecko 1.9.1 (Firefox 3.5)時引進，且是 HTML 5 標準的一部分。
+> [!NOTE]
+> 這個方法在 Gecko 1.9.1 (Firefox 3.5)時引進，且是 HTML 5 標準的一部分。
 
 ```plain
 void strokeText(

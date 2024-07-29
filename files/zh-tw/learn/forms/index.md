@@ -48,7 +48,8 @@ slug: Learn/Forms
 | {{HTMLElement("select")}}   | {{domxref("HTMLSelectElement")}}   | 在`選擇`元素代表呈現一個選項菜單的控制。                                                                                                              |
 | {{HTMLElement("textarea")}} | {{domxref("HTMLTextAreaElement")}} | 該 `textarea` 的元素代表多行純文本編輯控制。                                                                                                          |
 
-> **備註：** 所有的表單元素，因為所有的 HTML 元素，支持 {{domxref("HTMLElement")}} DOM 接口。
+> [!NOTE]
+> 所有的表單元素，因為所有的 HTML 元素，支持 {{domxref("HTMLElement")}} DOM 接口。
 
 ### HTML 屬性
 

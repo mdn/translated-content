@@ -99,7 +99,8 @@ function collisionDetection() {
 
 {{JSFiddleEmbed("https://jsfiddle.net/yumetodo/2m74vr9r/1/","","395")}}
 
-> **备注：** 在每一个砖头击破后添加更多的分数，打印出收集到的点数在游戏结束警告框中。
+> [!NOTE]
+> 在每一个砖头击破后添加更多的分数，打印出收集到的点数在游戏结束警告框中。
 
 ## 下一节
 

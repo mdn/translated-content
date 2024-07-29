@@ -11,7 +11,8 @@ l10n:
 
 {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}}, {{cssxref("max-height")}} のレイアウトされたボックスの大きさとして使用される場合、最大寸法と最小寸法は、コンテンツの寸法を参照します。
 
-> **メモ:** CSS Sizing の仕様書では、 {{cssxref("fit-content_function", "fit-content()")}} という関数も定義されています。このページではキーワード版について詳しく説明します。
+> [!NOTE]
+> CSS Sizing の仕様書では、 {{cssxref("fit-content_function", "fit-content()")}} という関数も定義されています。このページではキーワード版について詳しく説明します。
 
 ## 構文
 
@@ -56,7 +57,7 @@ block-size: fit-content;
 
 #### 結果
 
-{{EmbedLiveSample("Using_fit-content_for_box_sizing", "100%", 200)}}
+{{EmbedLiveSample("fit-content を使用してボックスの大きさを指定", "100%", 200)}}
 
 ## 仕様書
 
