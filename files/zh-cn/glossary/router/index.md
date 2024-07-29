@@ -1,6 +1,7 @@
 ---
 title: 路由器
-slug: Glossary/Routers
+slug: Glossary/Router
+original_slug: Glossary/Routers
 l10n:
   sourceCommit: 4ece9c7cb7312506455e34bac94898ed0b6362d8
 ---
