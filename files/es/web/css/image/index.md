@@ -34,7 +34,8 @@ El tamaño concreto del objeto es calculado usando los siguientes algoritmos:
 
 Las imágenes pueden ser usadas en numerosas propiedades CSS, como {{cssxref("background-image")}}, {{cssxref("border-image")}}, {{cssxref("content")}}, {{cssxref("list-style-image")}} o {{cssxref("cursor")}}.
 
-> **Nota:** No todos los navegadores soportan algun tipo de imagen o alguna propiedad. Vea la sección de [compatibilidad de navegadores](#Compatibilidad_de_navegadores) para una lista detallada.
+> [!NOTE]
+> No todos los navegadores soportan algun tipo de imagen o alguna propiedad. Vea la sección de [compatibilidad de navegadores](#Compatibilidad_de_navegadores) para una lista detallada.
 
 ## Sintáxis
 

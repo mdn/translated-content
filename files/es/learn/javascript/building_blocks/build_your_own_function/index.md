@@ -23,13 +23,15 @@ La función `alert` tiene un argumento — el string que se muestra en la alerta
 
 La función `alert` es limitada: pueder cambiar el mensaje, pero no puedes cambiar de manera sencilla nada más, como el color, icono o cualquier otra cosa. Construiremos uno que resultará ser más divertido.
 
-> **Nota:** Este ejemplo debería funcionar bien en todos los navegadores modernos, pero el estilo puede parecer un poco divertido en los navegadores un poco más antiguos. Te recomendamos que hagas este ejercicio en un navegador moderno como Firefox, Opera o Chrome.
+> [!NOTE]
+> Este ejemplo debería funcionar bien en todos los navegadores modernos, pero el estilo puede parecer un poco divertido en los navegadores un poco más antiguos. Te recomendamos que hagas este ejercicio en un navegador moderno como Firefox, Opera o Chrome.
 
 ## La función básica
 
 Para empezar, vamos a poner juntos una función básica.
 
-> **Nota:** Para las convenciones de nombres de las funciones, debes seguir las mismas reglas que [convecion de nombres de variables](/es/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules). Esto está bien, ya que puede distinguirlos: los nombres de las funciones aparecen entre paréntesis después de ellos y las variables no.
+> [!NOTE]
+> Para las convenciones de nombres de las funciones, debes seguir las mismas reglas que [convecion de nombres de variables](/es/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules). Esto está bien, ya que puede distinguirlos: los nombres de las funciones aparecen entre paréntesis después de ellos y las variables no.
 
 1. Comience accediendo al archivo [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html) y haciendo una copia local. Verás que el HTML es simple — el body unicamente tiene un botón. También hemos propocionado algunos estilos básicos de CSS para customizar el mensaje y un elemento {{htmlelement("script")}} vacío para poner nuestro JavaScript dentro.
 2. Luego añade lo siguiente dentro del elemento `<script>`:
@@ -212,7 +214,8 @@ En el siguiente parámetro. Este va a implicar un poco más de trabajo: lo confi
 
 1. En primer lugar, descargue los iconos necesarios para este ejercicio ([warning](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/warning.png) y [chat](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/chat.png)) de GitHub. Guárdalos en una nueva carpeta llamada `icons` en la misma localización que tu HTML.
 
-   > **Nota:** los iconos [warning](https://www.iconfinder.com/icons/1031466/alarm_alert_error_warning_icon) y [chat](https://www.iconfinder.com/icons/1031441/chat_message_text_icon) que se encuentran en iconfinder.com, han sido diseñados por [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr). Gracias!
+   > [!NOTE]
+   > Los iconos [warning](https://www.iconfinder.com/icons/1031466/alarm_alert_error_warning_icon) y [chat](https://www.iconfinder.com/icons/1031441/chat_message_text_icon) que se encuentran en iconfinder.com, han sido diseñados por [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr). Gracias!
 
 2. A continuación, encuentra el CSS dentro de tu archivo HTML. Haremos algunos cambios para dar paso a los iconos. Primero, actualiza el ancho de .msgBox desde:
 
@@ -264,7 +267,8 @@ En el siguiente parámetro. Este va a implicar un poco más de trabajo: lo confi
 
    Puedes ver cuán útil se está volviendo nuestra (ahora no tan) poca función.
 
-> **Nota:** Si estas teniendo problemas con el ejemplo, sientente libre para coger el ejemplo para trabajar con él, [finished version on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html) ([see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html) también), o pídenos ayuda.
+> [!NOTE]
+> Si estas teniendo problemas con el ejemplo, sientente libre para coger el ejemplo para trabajar con él, [finished version on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html) ([see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html) también), o pídenos ayuda.
 
 ## Conclusión
 

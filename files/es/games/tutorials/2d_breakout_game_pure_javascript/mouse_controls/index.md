@@ -44,7 +44,8 @@ Aquí tienes el código para comparar:
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/L3gngab5/","","320")}}
 
-> **Nota:** ajusta los límites del movimiento de la pala para que siempre se vea la pala completa (ahora sólo se ve media en los laterales).
+> [!NOTE]
+> Ajusta los límites del movimiento de la pala para que siempre se vea la pala completa (ahora sólo se ve media en los laterales).
 
 ## Pasos siguientes
 

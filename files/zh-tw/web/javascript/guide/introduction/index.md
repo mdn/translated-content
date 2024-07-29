@@ -125,7 +125,8 @@ ECMAScript 規格（ECMA-262）在 Netscape 和 Ecma International 的密切合�
   </tbody>
 </table>
 
-> **備註：** ECMA-262 第 2 版是由已修正錯誤的第 1 版並加上些微的更動構成。現今由 Ecma International 的 TC39 工作組（TC39 Working Group）所發行的版本是 ECMAScript 5.1 版
+> [!NOTE]
+> ECMA-262 第 2 版是由已修正錯誤的第 1 版並加上些微的更動構成。現今由 Ecma International 的 TC39 工作組（TC39 Working Group）所發行的版本是 ECMAScript 5.1 版
 
 [JavaScript Reference](/zh-TW/docs/JavaScript/Reference) 指出了哪些 JavaScript 的特性是相容於 ECMAScript 的。
 
