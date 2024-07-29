@@ -45,7 +45,7 @@ MDN ドキュメントには多くのガイドがあります。この記事は�
   - : [`FormData`](/ja/docs/Web/API/FormData) オブジェクトは、{{domxref("Window/fetch", "fetch()")}} を使用して送信するためのキーと値のペアのセットを収集可能にします。本来はフォームデータの送信に使用することを想定していましたが、キーのついたデータを伝送するためにフォームとは独立して使用することもできます。伝送されるデータは、フォームのエンコードタイプが "multipart/form-data" に設定されている場合に、`submit()` メソッドで送信する際に使用するデータと同じ形式です。
 - [プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps#core_pwa_guides)
   - : プログレッシブウェブアプリ (PWA) は、現行のウェブ API と従来のプログレッシブエンハンスメント戦略を使用して、クロスプラットフォームのウェブアプリケーションを作成します。このアプリはあらゆる場所で動作し、ネイティブアプリと同じユーザー使い勝手の利点をもたらすいくつかの機能を提供します。この一連のガイドでは、PWA について知っておく必要があるすべてを教えます。
-- [XML の構文解析とシリアライズ](/ja/docs/Parsing_and_serializing_XML)
+- [XML の構文解析とシリアライズ](/ja/docs/Web/XML/Parsing_and_serializing_XML)
   - : ウェブプラットフォーム上での XML の構文解析やシリアライズには複数の方法があり、それぞれ長所と短所があります。
 
 ## パフォーマンス
@@ -62,7 +62,7 @@ MDN ドキュメントには多くのガイドがあります。この記事は�
 
 - [可変フォントガイド](/ja/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
   - : デザインに可変フォントを使用する方法を見つけましょう。
-- [Web Open Font Format (WOFF)](/ja/docs/Web/Guide/WOFF)
+- [Web Open Font Format (WOFF)](/ja/docs/Web/CSS/CSS_fonts/WOFF)
   - : WOFF (Web Open Font Format) はウェブ上で誰もが使えるフリーのフォントファイルフォーマットです。
 
 ## ユーザーインターフェイス開発
