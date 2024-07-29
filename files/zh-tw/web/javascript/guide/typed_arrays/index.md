@@ -139,7 +139,7 @@ var amountDueView = new Float32Array(buffer, 20, 1);
 
 舉例來說，可以用 `amountDueView[0]` 存取 amountDue。
 
-> **備註：** C 結構的 [data structure alignment](http://en.wikipedia.org/wiki/Data_structure_alignment) 是與使用平台有關，須小心這些填充上的差異。
+> **備註：** C 結構的 [data structure alignment](https://en.wikipedia.org/wiki/Data_structure_alignment) 是與使用平台有關，須小心這些填充上的差異。
 
 ### Conversion to normal arrays
 
@@ -157,5 +157,5 @@ normalArray.constructor === Array;
 - [Getting `ArrayBuffer`s or typed arrays from _Base64_-encoded strings](/zh-TW/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
 - [`StringView` – a C-like representation of strings based on typed arrays](/zh-TW/docs/Code_snippets/StringView)
 - [Faster Canvas Pixel Manipulation with Typed Arrays](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays)
-- [Typed Arrays: Binary Data in the Browser](http://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
+- [Typed Arrays: Binary Data in the Browser](https://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
 - {{Glossary("Endianness")}}

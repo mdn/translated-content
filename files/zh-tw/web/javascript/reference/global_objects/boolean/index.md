@@ -117,4 +117,4 @@ var bObjProto = new Boolean({});
 
 - {{jsxref("Boolean.prototype")}}
 - {{Glossary("Boolean")}}
-- [Boolean data type (Wikipedia)](http://en.wikipedia.org/wiki/Boolean_data_type)
+- [Boolean data type (Wikipedia)](https://en.wikipedia.org/wiki/Boolean_data_type)
