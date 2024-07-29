@@ -35,7 +35,7 @@ slug: Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 - z 轴垂直屏幕表面或键盘，远离屏幕的方向为正。
 
 > [!NOTE]
-> 注意：对于手机或平台而言，这里的设备方向总是相对于屏幕的标准方向，大部分是“竖屏”方向。而对于笔记本电脑来说，设备方向是相对于键盘的。如果你想检测设备方向变化来进行补偿调整，你可以使用 orientationchange 事件。
+> 对于手机或平台而言，这里的设备方向总是相对于屏幕的标准方向，大部分是“竖屏”方向。而对于笔记本电脑来说，设备方向是相对于键盘的。如果你想检测设备方向变化来进行补偿调整，你可以使用 orientationchange 事件。
 
 ## 旋转 (Rotation)
 
