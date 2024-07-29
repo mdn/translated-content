@@ -3,7 +3,7 @@ title: "HTMLLabelElement: control 속성"
 short-title: control
 slug: Web/API/HTMLLabelElement/control
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
 {{APIRef("HTML DOM")}}
