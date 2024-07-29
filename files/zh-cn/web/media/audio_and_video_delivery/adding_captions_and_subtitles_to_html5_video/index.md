@@ -21,7 +21,7 @@ slug: Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_
 
 ### 原文字幕（caption）和翻译字幕（subtitle）
 
-[原文字幕和翻译字幕不是一回事](https://web.archive.org/web/20160117160743/http://screenfont.ca/learn/)：它们的受众明显不同，传达的信息也不同，如果你不确定它们有什么区别，建议你阅读一下。然而，它们在技术上的实现方式是相同的，所以本文的材料将适用于这两种情况。
+[原文字幕和翻译字幕不是一回事](https://web.archive.org/web/20160117160743/http:/screenfont.ca/learn/)：它们的受众明显不同，传达的信息也不同，如果你不确定它们有什么区别，建议你阅读一下。然而，它们在技术上的实现方式是相同的，所以本文的材料将适用于这两种情况。
 
 在本文中，我们将把显示的文字轨道称为字幕，因为它们的内容是针对难以理解电影语言的健听人士，而不是聋人或重听人士。
 
@@ -302,7 +302,7 @@ WebVTT 的一个不太为人所知和支持的功能是通过 [CSS 扩展](https
 
 ## 浏览器兼容性
 
-[浏览器对 WebVTT 和 `<track>` 元素的支持](http://caniuse.com/webvtt)相当好，尽管有些浏览器在实现上略有不同。
+[浏览器对 WebVTT 和 `<track>` 元素的支持](https://caniuse.com/webvtt)相当好，尽管有些浏览器在实现上略有不同。
 
 ### Safari
 

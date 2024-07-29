@@ -1051,11 +1051,11 @@ WebM 于 2010 年首次推出，现已得到广泛支持。符合要求的 WebM 
 | [ISO/IEC 14496-1](https://www.iso.org/standard/55688.html)（MPEG-4 Part 1：系统）                                                 | 定义了原始 MPEG-4（MP4）容器格式                                                          |
 | {{RFC(3533)}}                                                                                                                     | 定义了 OGG 容器格式                                                                       |
 | {{RFC(5334)}}                                                                                                                     | 定义了 OGG 媒体类型和文件扩展名                                                           |
-| [QuickTime 文件格式规范](https://developer.apple.com/library/archive/documentation/QuickTime/QTFF/QTFFPreface/qtffPreface.html)   | 定义了 QuickTime movie（MOV）格式                                                         |
-| [多媒体程序接口和数据定义 1.0 版本](https://web.archive.org/web/20090417165828/http://www.kk.iij4u.or.jp/~kondo/wave/mpidata.txt) | 最接近官方 WAVE 规范的产品                                                                |
-| [资源交换文件格式](https://docs.microsoft.com/zh-cn/windows/desktop/xaudio2/resource-interchange-file-format--riff-)（WAV 使用）  | 定义了 RIFF 格式，WAVE 文件是 RIFF 的一种形式                                             |
+| [QuickTime 文件格式规范](https://developer.apple.com/documentation/quicktime-file-format)   | 定义了 QuickTime movie（MOV）格式                                                         |
+| [多媒体程序接口和数据定义 1.0 版本](https://web.archive.org/web/20090417165828/http:/www.kk.iij4u.or.jp/~kondo/wave/mpidata.txt) | 最接近官方 WAVE 规范的产品                                                                |
+| [资源交换文件格式](https://learn.microsoft.com/zh-cn/windows/win32/xaudio2/resource-interchange-file-format--riff-)（WAV 使用）  | 定义了 RIFF 格式，WAVE 文件是 RIFF 的一种形式                                             |
 | [WebM 容器指南](https://www.webmproject.org/docs/container/)                                                                      | 为 WebM 适配 Matroska 的指南                                                              |
-| [Matroska 规范](https://matroska.org/technical/specs/index.html)                                                                  | 作为 WebM 基础的 Matroska 容器格式规范                                                    |
+| [Matroska 规范](https://matroska.org/technical/elements.html)                                                                  | 作为 WebM 基础的 Matroska 容器格式规范                                                    |
 | [WebM 字节流格式](https://w3c.github.io/media-source/webm-byte-stream-format.html)                                                | 与[媒体源扩展](/zh-CN/docs/Web/API/Media_Source_Extensions_API)一起使用的 WebM 字节流格式 |
 
 ## 浏览器兼容性

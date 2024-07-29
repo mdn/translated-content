@@ -148,7 +148,7 @@ slug: Web/Media/Formats/Image_types
 
 > **备注：** 每种图像格式的缩写可链接到有关该格式的较长描述、其功能和详细的浏览器兼容性信息（包括哪些版本引入了支持以及后来可能引入的特定特殊功能）。
 
-> **备注：** Safari 11.1 新增了使用视频格式替代 gif 动画的功能，而其他浏览器没有添加这方面的支持。详见 [Chromium bug](https://crbug.com/791658) 和 [Firefox bug](https://bugzil.la/895131) 以了解更多信息。
+> **备注：** Safari 11.1 新增了使用视频格式替代 gif 动画的功能，而其他浏览器没有添加这方面的支持。详见 [Chromium bug](https://bugs.chromium.org/p/chromium/issues/detail?id%3D791658) 和 [Firefox bug](https://bugzilla.mozilla.org/show_bug.cgi?id%3D895131) 以了解更多信息。
 
 ## 图像文件类型详介
 
@@ -160,7 +160,7 @@ slug: Web/Media/Formats/Image_types
 
 APNG 是 Mozilla 首次推出的一种文件格式，它扩展了 [PNG](#png（便携式网络图形）) 标准，增加了对动画图像的支持。在概念上，APNG 与已经使用了几十年的动画 GIF 格式相似，但 APNG 的功能更强，它支持多种[颜色深度](https://zh.wikipedia.org/wiki/色彩深度)，而动画 GIF 只支持 8 位[索引颜色](https://zh.wikipedia.org/wiki/索引顏色)。
 
-APNG 适用于无需与其他活动或音轨同步的基本动画，如进度指示器、活动[加载器](https://en.wikipedia.org/wiki/throbber)和其他动画序列。例如，APNG 是苹果 iMessage 应用程序（和 iOS 上的“信息”应用程序）[创建动画贴纸时支持的格式之一](https://developer.apple.com/stickers/)。它们也常用于 web 浏览器用户界面的动画部分。
+APNG 适用于无需与其他活动或音轨同步的基本动画，如进度指示器、活动[加载器](https://en.wikipedia.org/wiki/Throbber)和其他动画序列。例如，APNG 是苹果 iMessage 应用程序（和 iOS 上的“信息”应用程序）[创建动画贴纸时支持的格式之一](https://developer.apple.com/imessage/)。它们也常用于 web 浏览器用户界面的动画部分。
 
 <table class="standard-table">
   <tbody>
@@ -455,7 +455,7 @@ BMP 理论上支持多种内部数据表示。最简单也是最常用的 BMP �
 
 1987 年，CompuServe 在线服务提供商推出了 **[GIF](https://zh.wikipedia.org/wiki/GIF)**（**图像互换格式**）图像文件格式，为其服务的所有成员提供一种可使用的压缩图形格式。GIF 使用 [Lempel-Ziv-Welch](https://zh.wikipedia.org/wiki/LZW)（LZW）算法对 8 位索引彩色图形进行无损压缩。GIF 和 [XBM](#xbm_x_window_系统位图文件) 是 {{Glossary("HTML")}} 最早支持的两种图形格式之一。
 
-GIF 中的每个像素都由一个 8 位值表示，作为 24 位颜色（红、绿、蓝各 8 位）调色板的索引。颜色表的长度总是 2 的幂次（即每个调色板有 2、4、8、16、32、64 或 256 个条目）。要模拟 255 或 256 色以上的颜色，一般使用[抖动](<https://zh.wikipedia.org/wiki/抖動_(數位訊號處理)>)。[技术上可以](https://gif.ski/)对多个图像块进行平铺，每个图像块都有自己的调色板，以创建真彩色图像，但在实践中很少这样做。
+GIF 中的每个像素都由一个 8 位值表示，作为 24 位颜色（红、绿、蓝各 8 位）调色板的索引。颜色表的长度总是 2 的幂次（即每个调色板有 2、4、8、16、32、64 或 256 个条目）。要模拟 255 或 256 色以上的颜色，一般使用[抖动](<https://zh.wikipedia.org/wiki/抖動_(數位訊號處理>)>)。[技术上可以](https://gif.ski/)对多个图像块进行平铺，每个图像块都有自己的调色板，以创建真彩色图像，但在实践中很少这样做。
 
 像素是不透明的，除非特定的颜色指数被指定为透明，在这种情况下，染上该值的像素是完全透明的。
 

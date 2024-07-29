@@ -28,7 +28,7 @@ WCAG 2.1 是最新且最相关的无障碍标准。使用 WCAG 2.1 可以帮助�
 
 ### 什么是 WCAG 2.1？
 
-WCAG 2.1 于 2018 年 6 月 5 日作为官方建议书发布。欧盟于 2018 年 9 月将 WCAG 2.1 作为数字无障碍标准。W3C 发布了一份有关[欧洲地区采用 WCAG 2.1](https://www.w3.org/blog/2018/09/wcag-2-1-adoption-in-europe/) 的新闻稿。
+WCAG 2.1 于 2018 年 6 月 5 日作为官方建议书发布。欧盟于 2018 年 9 月将 WCAG 2.1 作为数字无障碍标准。W3C 发布了一份有关[欧洲地区采用 WCAG 2.1](https://www.w3.org/blog/2018/wcag-2-1-adoption-in-europe/) 的新闻稿。
 
 WCAG 2.1 包括：
 
