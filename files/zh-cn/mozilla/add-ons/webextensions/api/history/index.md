@@ -7,7 +7,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/history
 
 使用 `history` API 与浏览器历史记录进行交互。
 
-> **备注：** 下载也被当做一个 [`HistoryItem`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem) 对象。因此，[`history.onVisited`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited)等事件也会被下载所触发。
+> [!NOTE]
+> 下载也被当做一个 [`HistoryItem`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem) 对象。因此，[`history.onVisited`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited)等事件也会被下载所触发。
 
 浏览器历史记录是对用户所访问的页面按时间顺序进行的记录和保存。history API 可以帮你实现以下功能：
 
@@ -62,7 +63,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/history
 
 {{WebExtExamples("h2")}}
 
-> **备注：** 该 API 基于 Chromium 的[`chrome.history`](https://developer.chrome.com/extensions/history) API。该文档由 Chromium 代码中的[`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json)衍生而来。
+> [!NOTE]
+> 该 API 基于 Chromium 的[`chrome.history`](https://developer.chrome.com/extensions/history) API。该文档由 Chromium 代码中的[`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json)衍生而来。
 >
 > 微软 Edge 兼容性数据由微软公司提供并包含在如下证书中——Creative Commons Attribution 3.0 United States License.
 

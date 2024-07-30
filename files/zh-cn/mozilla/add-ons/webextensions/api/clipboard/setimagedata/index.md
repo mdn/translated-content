@@ -67,4 +67,5 @@ fetch(browser.runtime.getURL("image.png"))
 
 {{WebExtExamples}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.com/docs/extensions/reference/clipboard/) API。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.com/docs/extensions/reference/clipboard/) API。
