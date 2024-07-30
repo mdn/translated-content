@@ -1,19 +1,21 @@
 ---
-title: PIパラメータ
+title: PI パラメーター
 slug: Web/XSLT/PI_Parameters
+l10n:
+  sourceCommit: 857c6f9e7f1a847e7d3466b0d047159f7b345991
 ---
 
 {{XsltSidebar}}
 
 ### 概要
 
-XSLT は実行時にパラメータをスタイルシートに渡すという概念をサポートしています。これによりしばらくの間は JavaScript で [XSLTProcessor](/ja/docs/Web/API/XSLTProcessor) を使用することが可能です。しかし、 `<?xml-stylesheet?>` 処理命令（PI）を使用するときは、パラメータを提供する方法がありませんでした。
+XSLT は実行時にパラメーターをスタイルシートに渡すという概念に対応しています。これにより当面は JavaScript で {{domxref("XSLTProcessor")}} を使用することが可能です。しかし、 `<?xml-stylesheet?>` 処理命令 (PI) を使用するときは、パラメーターを提供する方法がありませんでした。
 
-これを解決するために 2 つの新しい PI 、つまり `<?xslt-param?>` および `<?xslt-param-namespace?>` が [Firefox 2](/ja/docs/XSLT/en/Firefox_2) (詳細については[Supported versions](#supported_versions)を参照) で実装されています。どちらの PI にも、`xml-stylesheet` PI と同じ方法で「擬似属性」を含めることができます。
+これを解決するために 2 つの新しい PI 、つまり `<?xslt-param?>` および `<?xslt-param-namespace?>` が [Firefox 2](/ja/docs/Mozilla/Firefox/Releases/2)（詳細については[対応バージョン](#対応バージョン)を参照）で実装されています。どちらの PI にも、`xml-stylesheet` PI と同じ方法で「擬似属性」を含めることができます。
 
-次のドキュメントは "color" と "size" の 2 つのパラメータをスタイルシート "style.xsl" に渡します。
+次のドキュメントは "color" と "size" の 2 つのパラメーターをスタイルシート "style.xsl" に渡します。
 
-```
+```xml
 <?xslt-param name="color" value="blue"?>
 <?xslt-param name="size" select="2"?>
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
@@ -23,59 +25,59 @@ XSLT は実行時にパラメータをスタイルシートに渡すという概
 
 ### 処理の指示
 
-`xslt-param` および `xslt-param-namespace` PI の属性は、[xml-stylesheet](http://www.w3.org/TR/xml-stylesheet/) で定義されている規則を使用して解析されます。認識できない属性はすべて無視する必要があります。属性の解析は、 `xml-stylesheet` の構文に従う限り、認識できない属性が存在するせいで失敗してはなりません。
+`xslt-param` および `xslt-param-namespace` PI の属性は、[xml-stylesheet](https://www.w3.org/TR/xml-stylesheet/) で定義されている規則を使用して解析されます。認識できない属性はすべて無視する必要があります。属性の解析は、 `xml-stylesheet` の構文に従う限り、認識できない属性が存在するせいで失敗してはなりません。
 
 `xslt-param` と `xslt-param-namespace` PI の両方はドキュメントのプロローグ、つまり最初の要素タグの前になければなりません。プロローグ内のすべての PI は、`xml-stylesheet` PI の前後に発生する必要があります。
 
-複数の `xml-stylesheet` PI がある場合、パラメータはすべてのスタイルシートに適用され、その結果すべてのスタイルシートが XSLT 仕様に従って単一のスタイルシートにインポートされます。複数の `xml-stylesheet` XSLT PI は現在 Firefox ではサポートされていません。
+複数の `xml-stylesheet` PI がある場合、パラメーターはすべてのスタイルシートに適用され、その結果すべてのスタイルシートが XSLT 仕様に従って単一のスタイルシートにインポートされます。複数の `xml-stylesheet` XSLT PI は現在 Firefox では対応していません。
 
 #### xslt-param
 
 `xslt-param` PI は 4 つの属性をサポートしています。
 
-- name
-  - : パラメータ名のローカル名部分。属性の構文チェックは行われませんが、有効な [NCName](http://www.w3.org/TR/REC-xml-names/#NT-NCName) でない場合は、スタイルシートのどのパラメータにも一致しません。
-- namespace
-  - : パラメータ名の名前空間。属性の構文チェックは行われません。
-- value
-  - : パラメータの文字列値を格納します。属性の値はパラメータの値として使用されます。データ型は常に最適です。
-- select
-  - : パラメータの [XPath](/ja/docs/XPath) 式。属性の値は XPath 式として解析されます。式を評価した結果はパラメータの値として使用されます。
+- `name`
+  - : パラメーター名のローカル名部分。属性の構文チェックは行われませんが、有効な [NCName](https://www.w3.org/TR/REC-xml-names/#NT-NCName) でない場合は、スタイルシートのどのパラメーターにも一致しません。
+- `namespace`
+  - : パラメーター名の名前空間。属性の構文チェックは行われません。
+- `value`
+  - : パラメーターの文字列値を格納します。属性の値はパラメーターの値として使用されます。データ型は常に最適です。
+- `select`
+  - : パラメーターの [XPath](/ja/docs/Web/XPath) 式。属性の値は XPath 式として解析されます。式を評価した結果はパラメーターの値として使用されます。
 
-**name** 属性がないか空の場合、PI は無視されます。
+`name` 属性がないか空の場合、PI は無視されます。
 
-**namespace** 属性がないか空の場合、null 名前空間が使用されます。
+`namespace` 属性がないか空の場合、null 名前空間が使用されます。
 
-スタイルシートに存在しない (またはスタイルシート内の変数である) パラメータ名を指定するのはエラーではありません。PI は単に無視されます。
+スタイルシートに存在しない (またはスタイルシート内の変数である) パラメーター名を指定するのはエラーではありません。PI は単に無視されます。
 
-**value** と **select** の両方が存在する場合、または **value** も **select** も存在しない場合、PI は無視されます。
+`value` と `select` の両方が存在する場合、または `value` も `select` も存在しない場合、PI は無視されます。
 
 `value="..."` はアポストロフィと引用文字の両方を含むことができるので、厳密には `select="'...'"` と等しくないことに注意してください。
 
 ##### 例
 
-パラメータ 'color' を文字列 'red' に設定します。
+パラメーター 'color' を文字列 'red' に設定します。
 
-```
+```xml
 <?xslt-param name="color" value="red"?>
 ```
 
-パラメータ 'columns' を 2 に設定します。
+パラメーター 'columns' を 2 に設定します。
 
-```
+```xml
 <?xslt-param name="columns" select="2"?>
 ```
 
-パラメータ 'books' を null 名前空間のすべての `<book>` 要素を含むノードセットに設定します。
+パラメーター 'books' を null 名前空間のすべての `<book>` 要素を含むノードセットに設定します。
 
-```
+```xml
 <?xslt-param name="books" select="//book"?>
 ```
 
-パラメータ 'show-toc' を真偽値 `true` に設定します。
+パラメーター 'show-toc' を真偽値 `true` に設定します。
 
-```
- <?xslt-param name="show-toc" select="true()"?>
+```xml
+<?xslt-param name="show-toc" select="true()"?>
 ```
 
 ##### select 属性コンテキスト
@@ -86,7 +88,7 @@ XSLT は実行時にパラメータをスタイルシートに渡すという概
 - コンテキストポジションは、スタイルシートを実行する際に使用される初期カレントノードリスト内のコンテキストノードの位置です
 - コンテキストサイズは、スタイルシートを実行する際に使用される初期の現在のノードリストのサイズです
 - 変数はありません
-- 関数ライブラリは標準の XPath 関数ライブラリです。
+- 関数ライブラリーは標準の XPath 関数ライブラリーです。
 - 名前空間宣言は `xslt-param-namespace` PI によって決まります。以下を参照してください
 
 **select** 属性が解析または実行に失敗した場合、PI は無視されます (特に、**value** 属性に戻ることはありません)。
@@ -100,9 +102,9 @@ XSLT は実行時にパラメータをスタイルシートに渡すという概
 - namespace
   - : 接頭辞がマップされる名前空間
 
-`xslt-param-namespace` PI は、それに続くすべての xslt-params の select 属性の式に影響します。 これは、xslt-param-namespace と xslt-param PI の間にコメントや他の PI などの他のノードがある場合でも適用されます。
+`xslt-param-namespace` PI は、それに続くすべての `xslt-param` の select 属性の式に影響します。 これは、`xslt-param-namespace` と `xslt-param` PI の間にコメントや他の PI などの他のノードがある場合でも適用されます。
 
-複数の PI が同じプレフィックスを使用するのはエラーではなく、新しい PI はすべてプレフィックスがマップする名前空間を変更するだけです。
+複数の PI が同じ接頭辞を使用するのはエラーではなく、新しい PI はすべて接頭辞がマップする名前空間を変更するだけです。
 
 **接頭辞**がないか、空もしくは無効な NCName と等しい場合、PI は無視されます。
 
@@ -110,19 +112,19 @@ XSLT は実行時にパラメータをスタイルシートに渡すという概
 
 ##### 例
 
-パラメータ 'books' を 'http\://www\.example.org/myNamespace' 名前空間のすべての `<book>` 要素を含むノードセットに設定します。
+パラメーター 'books' を 'http\://www\.example.org/myNamespace' 名前空間のすべての `<book>` 要素を含むノードセットに設定します。
 
-```
+```xml
 <?xslt-param-namespace prefix="my" namespace="http://www.example.org/myNamespace"?>
 <?xslt-param name="books" select="//my:book"?>
 ```
 
-### サポート対象バージョン
+### 対応バージョン
 
-Firefox 2.0.0.1 以降でサポートされています。**value** 属性は Firefox 2 ではサポートされていますが、2.0 リリースの一部の式では **select** 属性がクラッシュします。
+Firefox 2.0.0.1 以降で対応しています。**value** 属性は Firefox 2 では対応していますが、2.0 リリースの一部の式では **select** 属性がクラッシュします。
 
 ### 可能性のある将来の開発
 
 式に XSLT 関数を許可する必要がありますか？ `document()` は役に立ちそうですが、`generate-id()` が同じ文書に対して同じ文字列を生成しなければならない不変条件を維持するのは難しいようです。
 
-XSLT スタイルシートで URL パラメータをクエリするとどうなりますか？ 例えば、それらを指定された \<xsl:param>に渡します。
+XSLT スタイルシートで URL パラメーターをクエリーするとどうなりますか？ 例えば、それらを指定された \<xsl:param>に渡します。
