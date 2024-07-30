@@ -2,7 +2,7 @@
 title: 异步
 slug: Glossary/Asynchronous
 l10n:
-  sourceCommit: 0c79cdfe93f2af272fb058db30c5d6f0a37c3263
+  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
 {{GlossarySidebar}}
