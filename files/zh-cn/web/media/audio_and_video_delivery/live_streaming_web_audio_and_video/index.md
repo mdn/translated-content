@@ -43,7 +43,7 @@ slug: Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 
 ### RTSP
 
-> **备注：** 实时流协议 (RTSP) 控制媒体在两端传输的会话，且同时使用实时传输协议 (RTP) 和实时控制协议 (RTCP) 来传输媒体流。将 RTP 与 RTCP 结合使用可以实现自适应流。目前大部分浏览器还无法原生支持，但请留意 [Firefox OS 1.3 支持 RTSP](https://developer.mozilla.org/Firefox_OS/Releases/1.3)。
+> **备注：** 实时流协议 (RTSP) 控制媒体在两端传输的会话，且同时使用实时传输协议 (RTP) 和实时控制协议 (RTCP) 来传输媒体流。将 RTP 与 RTCP 结合使用可以实现自适应流。目前大部分浏览器还无法原生支持，但请留意 [Firefox OS 1.3 支持 RTSP](/Firefox_OS/Releases/1.3)。
 >
 > 某些厂商实现了专有的传输协议，类似 RealNetworks 以及他们的真实数据传输 (RDT)。
 
