@@ -10,7 +10,8 @@ l10n:
 
 **`adoptedStyleSheets`** は {{domxref("Document")}} インターフェイスのプロパティで、この文書で使用する構築されたスタイルシートの配列を設定するために使用します。
 
-> **メモ:** 構築されたスタイルシートとは、[`CSSStyleSheet()` コンストラクター](/ja/docs/Web/API/CSSStyleSheet/CSSStyleSheet)を用いてプログラムで作成されたスタイルシートのことです（ユーザーエージェントがスクリプトからスタイルシートをインポートしたり、{{HTMLElement('style')}} や {{CSSXref('@import')}} を使用してインポートしたり、{{HTMLElement('link')}} でリンクしたりする場合に作成されるスタイルシートとは異なります）。
+> [!NOTE]
+> 構築されたスタイルシートとは、[`CSSStyleSheet()` コンストラクター](/ja/docs/Web/API/CSSStyleSheet/CSSStyleSheet)を用いてプログラムで作成されたスタイルシートのことです（ユーザーエージェントがスクリプトからスタイルシートをインポートしたり、{{HTMLElement('style')}} や {{CSSXref('@import')}} を使用してインポートしたり、{{HTMLElement('link')}} でリンクしたりする場合に作成されるスタイルシートとは異なります）。
 
 このスタイルシートは、[`ShadowRoot.adoptedStyleSheets`](/ja/docs/Web/API/ShadowRoot/adoptedStyleSheets) プロパティを使用して、1 つ以上の {{domxref("ShadowRoot")}} インスタンスと共有することもできます。
 このスタイルシートを変更すると、それを採用しているすべてのオブジェクトに影響します。

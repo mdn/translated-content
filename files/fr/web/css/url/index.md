@@ -9,7 +9,8 @@ La fonction [CSS](/fr/docs/Web/CSS) **`url()`** est utilisée afin d'inclure un 
 
 La notation fonctionnelle `url()` correspond au type de donnée CSS `<url>`.
 
-> **Note :** Il y a une différence entre un URI et une URL. Un URI identifie une ressource. Une URL est un type d'URI qui décrit _l'emplacement_ d'une ressource. Un URI peut être une URL ou un nom (URN) d'une ressource.
+> [!NOTE]
+> Il y a une différence entre un URI et une URL. Un URI identifie une ressource. Une URL est un type d'URI qui décrit _l'emplacement_ d'une ressource. Un URI peut être une URL ou un nom (URN) d'une ressource.
 >
 > Pour la spécification CSS de niveau 1, la notation fonctionnelle `url()` ne décrivaient que des URL au sens strict. Pour la spécification CSS de niveau 2, la définition de `url()` a été étendue afin de décrire n'importe quel URI (que ce soit une URL ou un URN). Cela a été une source de confusion, car `url()` pouvait être utilisée pour créer un type de données `<uri>`. Cette évolution était non seulement étrange mais aussi superflue, car les URN ne sont quasiment jamais utilisées dans du CSS réel. Pour éviter cette confusion, la spécification CSS de niveau 3 est revenue à la définition initiale. Aujourd'hui, `url()` ne manipule que des vraies `<url>`.
 

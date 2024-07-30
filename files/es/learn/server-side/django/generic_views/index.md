@@ -78,7 +78,8 @@ class BookListView(generic.ListView):
 
 ¡Eso es todo! La vista genérica consultará a la base de datos para obtener todos los registros del modelo especificado (`Book`) y renderizará una plantilla ubicada en **/locallibrary/catalog/templates/catalog/book_list.html** (que crearemos más abajo). Dentro de la plantilla puedes acceder a la lista de libros mediante la variable de plantilla llamada `object_list` O `book_list` (esto es, genéricamente, "`nombre_del_modelo_list`").
 
-> **Nota:** Esta ruta complicada para la ubicación de la plantilla no es un error de digitación — las vistas genéricas buscan plantillas en `/application_name/the_model_name_list.html` (`catalog/book_list.html` en este caso) dentro del directorio de la aplicación `/application_name/templates/` (`/catalog/templates/`).
+> [!NOTE]
+> Esta ruta complicada para la ubicación de la plantilla no es un error de digitación — las vistas genéricas buscan plantillas en `/application_name/the_model_name_list.html` (`catalog/book_list.html` en este caso) dentro del directorio de la aplicación `/application_name/templates/` (`/catalog/templates/`).
 
 Puedes añadir atributos para cambiar el comportamiento por defecto de arriba. Por ejemplo, puedes especificar otro archivo de plantilla si necesitas tener múltiples vistas que usen el mismo modelo, o puedes querer usar un nombre diferente de variable de plantilla si `book_list` no resulta intuitivo para tu caso particular de uso de plantilla. Posiblemente la variación más útil es cambiar/filtrar el conjunto de resultados que se devuelve, así, en lugar de listar todos los libros podrías listar los 5 libros más leídos por otros usuarios.
 
@@ -124,7 +125,8 @@ Cuando se hace esto es importante seguir este patrón:
 - Luego añadir tu nueva información de contexto.
 - Luego devolver el nuevo contexto (actualizado).
 
-> **Nota:** Revisa [Vistas genéricas integradas basadas en clases](https://docs.djangoproject.com/en/1.10/topics/class-based-views/generic-display/) (documentación de Django) para muchos más ejemplos de lo que puedes hacer.
+> [!NOTE]
+> Revisa [Vistas genéricas integradas basadas en clases](https://docs.djangoproject.com/en/1.10/topics/class-based-views/generic-display/) (documentación de Django) para muchos más ejemplos de lo que puedes hacer.
 
 ### Creando la plantilla de Vista de Lista
 
@@ -194,7 +196,8 @@ Accedemos a los _campos_ del registro del libro asociado usando la "notación de
 
 También podemos invocar _funciones_ en el modelo desde dentro de nuestra plantilla — en este caso invocamos a `book.get_absolute_url()` para obtener una URL que se podría usar para desplegar la página de detalle relacionada. Esto funciona siempre y cuando la función no tenga ningún argumento (¡no hay forma de enviar argumentos!).
 
-> **Nota:** Debemos tener cuidado de los "efectos secundarios" al invocar funciones en las plantillas. Aquí solo obtenemos una URL para desplegar, pero una función puede hacer casi cualquier cosa — ¡no quisieramos borrar nuestra base de datos (por ejemplo) solo por renderizar nuestra plantilla!
+> [!NOTE]
+> Debemos tener cuidado de los "efectos secundarios" al invocar funciones en las plantillas. Aquí solo obtenemos una URL para desplegar, pero una función puede hacer casi cualquier cosa — ¡no quisieramos borrar nuestra base de datos (por ejemplo) solo por renderizar nuestra plantilla!
 
 #### Actualizar la plantilla base
 
@@ -233,13 +236,16 @@ Opcionalmente puedes añadir al nombre de la variable una [etiqueta](https://doc
 
 En este caso utilizamos `'<int:pk>'` para capturar el id del libro, que debe ser una cadena con un formato especial y pasarlo a la vista como un parámetro llamado `pk` (abreviatura de primary key). Este es el id que se está utilizando para almacenar el libro de forma única en la base de datos, tal y como se define en el Modelo de Libros.
 
-> **Nota:** Como ya se discutió antes, nuestra URL coincidente es en realidad `catalog/book/<digits>` (como estamos en la aplicación **catalog**, se asume `/catalog/`).
+> [!NOTE]
+> Como ya se discutió antes, nuestra URL coincidente es en realidad `catalog/book/<digits>` (como estamos en la aplicación **catalog**, se asume `/catalog/`).
 
-> **Advertencia:** La vista de detalle genérica basada en clases _espera_ que se le envíe un parámetro llamado pk. Si estás escribiendo tu propia vista de función, puedes usar el nombre de parámetro que quieras, o incluso enviar la información como un argumento sin nombre.
+> [!WARNING]
+> La vista de detalle genérica basada en clases _espera_ que se le envíe un parámetro llamado pk. Si estás escribiendo tu propia vista de función, puedes usar el nombre de parámetro que quieras, o incluso enviar la información como un argumento sin nombre.
 
 #### Introducción avanzada a path/expresiones regulares
 
-> **Nota:** No necesitarás esta sección para completar el tutorial. La proporcionamos porque conocer esta opción es probable que sea útil en tu futuro centrado en Django.
+> [!NOTE]
+> No necesitarás esta sección para completar el tutorial. La proporcionamos porque conocer esta opción es probable que sea útil en tu futuro centrado en Django.
 
 La combinación de patrones proporcionada por `path()` es simple y útil para los casos (muy comunes) en los que sólo desea capturar _cualquier_ cadena o entero. Si necesita un filtrado más refinado (por ejemplo, filtrar sólo cadenas que tengan un cierto número de caracteres) puede utilizar el método [re_path()](https://docs.djangoproject.com/en/4.0/ref/urls/#django.urls.re_path).
 
@@ -409,7 +415,8 @@ Consideremos algunos ejemplos reales de patrones:
 
 Puedes capturar múltiples patrones en una sola comparación, y por tanto codificar bastantes datos diferentes en una URL.
 
-> **Nota:** Como reto, considera cómo podrías codificar una url para listar todos los libros publicados en un año, mes y día en particular, y la RE que podría usarse para la comparación.
+> [!NOTE]
+> Como reto, considera cómo podrías codificar una url para listar todos los libros publicados en un año, mes y día en particular, y la RE que podría usarse para la comparación.
 
 #### Enviado opciones adicionales en tus mapeos URL
 
@@ -421,7 +428,8 @@ Por ejemplo, en base al path mostrado a continuación, para una petición a `/my
 path('myurl/<fish>', views.my_view, {'my_template_name': 'some_path'}, name='aurl'),
 ```
 
-> **Nota:** Tanto las opciones extra como los patrones capturados con nombre se envían a la vista como argumentos _con nombre_. Si usas el **mismo nombre** tanto para un patrón capturado como para una opción extra, solo el valor del patrón capturado será enviado a la vista (el valor especificado para la opción extra será eliminado).
+> [!NOTE]
+> Tanto las opciones extra como los patrones capturados con nombre se envían a la vista como argumentos _con nombre_. Si usas el **mismo nombre** tanto para un patrón capturado como para una opción extra, solo el valor del patrón capturado será enviado a la vista (el valor especificado para la opción extra será eliminado).
 
 ### Vista (basada en clases)
 
@@ -492,7 +500,8 @@ Crea el archivo HTML **/locallibrary/catalog/templates/catalog/book_detail.html*
 {% endblock %}
 ```
 
-> **Nota:** El enlace `author` en la plantilla de arriba tiene una URL vacía porque no hemos creado aún una página de detalle de autor. Una vez que esta exista, deberías actualizar la URL así:
+> [!NOTE]
+> El enlace `author` en la plantilla de arriba tiene una URL vacía porque no hemos creado aún una página de detalle de autor. Una vez que esta exista, deberías actualizar la URL así:
 >
 > ```django
 >  <a href="{% url 'author-detail' book.author.pk %}"><strong>\{{ book.author }}</strong></a>
@@ -515,7 +524,8 @@ Lo interesante que no hemos visto previamente es la función `book.bookinstance_
 
 Este método es necesario porque has declarado un campo `ForeignKey` (uno-a-muchos) únicamente en la lado "uno" de la relación. Como no haces nada para declarar la relación en el otro modelo ("muchos"), este no tiene ningún campo para obtener el conjunto de registros asociados. Para superar este problema, Django construye una función apropiadamente llamada "búsqueda reversa" que puedes usar. El nombre de la función se construye convirtiendo a minúsculas el nombre del modelo donde la `ForeignKey` fue declarada, seguido por `_set` (así, la función creada en `Book` es `bookinstance_set()`).
 
-> **Nota:** Aquí usamos `all()` para obtener todos los registros (la opción por defecto). A pesar de que puedes usar el método `filter()` para obtener un subconjunto de registros en el código, no puedes hacerlo directamente en las plantillas porque no puedes especificar argumentos para las funciones.
+> [!NOTE]
+> Aquí usamos `all()` para obtener todos los registros (la opción por defecto). A pesar de que puedes usar el método `filter()` para obtener un subconjunto de registros en el código, no puedes hacerlo directamente en las plantillas porque no puedes especificar argumentos para las funciones.
 >
 > Ten también cuidado de que si no defines un orden (en tu vista o modelo basado en clases), verás errores arrojados por el servidor de dearrollo como este:
 >
@@ -560,7 +570,8 @@ Este método es necesario porque has declarado un campo `ForeignKey` (uno-a-much
 
 En este punto deberíamos haber creado todo lo necesario para desplegar tanto la lista de libros como las páginas de detalles de libros. Ejecuta el servidor (`python3 manage.py runserver`) y dirígete en tu navegador a `http://127.0.0.1:8000/`.
 
-> **Advertencia:** No hagas click aún en ningún enlace de autor o de detalles de autores — ¡los crearás en el reto!
+> [!WARNING]
+> No hagas click aún en ningún enlace de autor o de detalles de autores — ¡los crearás en el reto!
 
 Haz click en el enlace **Todos los libros** para desplegar la lista de libros.
 
@@ -639,7 +650,7 @@ El reto en este artículo es crear las vistas de lista y detalle para autores, q
 
 El código requerido para los mapeadores URL y las vistas debería ser virtualmente idéntico a las vistas de lista y detalle para `Book` que creamos arriba. Las plantillas serán diferentes, pero tendrán un comportamiento similar.
 
-> **Nota:**
+> [!NOTE]
 >
 > - Una vez que has creado el mapeador URL para la página de lista de autores, necesitarás también actualizar el enlace **Todos los autores** en la plantilla base. Sigue el [mismo proceso](#update_the_base_template) que hicimos cuando actualizamos el enlace **Todos los libros**.
 > - Una vez que has creado el mapeador URL para la página de detalle de autores, deberías también actualizar la [plantilla de vista de detalle de libros](#creating_the_detail_view_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) de modo que el enlace de autor apunte a tu nueva página de detalle de autor (en lugar de ser una URL vacía). La línea cambiará para añadir la etiqueta de plantilla que se muestra en negrita abajo.

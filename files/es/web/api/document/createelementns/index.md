@@ -73,7 +73,8 @@ El código siguiente crea un elemento \<div> nuevo en el namespace [XHTML](/es/d
 </page>
 ```
 
-> **Nota:** El ejemplo dado arriba usa script en linea lo cúal no es recomendable en documentos XHTML. Este ejemplo en particular es un documento XUL con XHTML embedido, de cualquier forma la recomendación aplica.
+> [!NOTE]
+> El ejemplo dado arriba usa script en linea lo cúal no es recomendable en documentos XHTML. Este ejemplo en particular es un documento XUL con XHTML embedido, de cualquier forma la recomendación aplica.
 
 ## Especificaciones
 

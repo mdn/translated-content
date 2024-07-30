@@ -9,7 +9,8 @@ l10n:
 
 `aria-checked` 属性指示复选框、单选按钮和其他小部件的当前“已选中”状态。
 
-> **备注：** 在可能的情况下，请使用带有 `type="checkbox"` 和 `type="radio"` 的 HTML {{htmlelement("input")}} 元素，因为它们具有内置语义，并且不需要 ARIA 属性。
+> [!NOTE]
+> 在可能的情况下，请使用带有 `type="checkbox"` 和 `type="radio"` 的 HTML {{htmlelement("input")}} 元素，因为它们具有内置语义，并且不需要 ARIA 属性。
 
 ## 描述
 

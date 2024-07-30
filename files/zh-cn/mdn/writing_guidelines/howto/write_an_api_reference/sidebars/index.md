@@ -73,9 +73,11 @@ l10n:
 5. `"events"`——该值是一个数组，其中应包含属于 API 而定义它的接口又*不*属于该 API 的事件的*标题*（属于 API 的接口（`interfaces`）中的事件会被默认记录）。如果有大量的事件，你可能需要考虑只列出最受欢迎的事件，或者将它们放在列表的前面。例如，`"Document: selectionchange"` 属于 [Selection API](/zh-CN/docs/Web/API/Selection_API)，但 `Document` 并不属于，所以我们将该事件添加到数组中，[Selection API](/zh-CN/docs/Web/API/Selection_API) 主题会链接到该事件。
 6. `"guides"`——该值是一个字符串数组，其中的每一个都是涉及解释如何使用该 API 的指南的主题。这些字符串包含了指南 URL 在语言路径之后的部分：即，指南 URL 的 `/docs/...` 部分。例如，要链接到位于 `https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch` 的主题“使用 Fetch”，指南数组中需要包含“/docs/Web/API/Fetch_API/Using_Fetch”。
 7. `"dictionaries"`——该值是一个字符串数组，其中列出了 API 的所有字典。通常，只有被多个属性或方法使用的字典才应该在此列出，除非它们具有特殊意义或可能需要从多个页面引用。“CryptoKeyPair”会创建如下链接：[https://developer.mozilla.org/zh-CN/docs/Web/API/CryptoKeyPair](/zh-CN/docs/Web/API/CryptoKeyPair)。
-   > **备注：** MDN 正在逐步停止单独记录字典。在可能的情况下，这里现在描述的是使用了它们的对象。
+   > [!NOTE]
+   > MDN 正在逐步停止单独记录字典。在可能的情况下，这里现在描述的是使用了它们的对象。
 8. `"types"`——该值是一个数组，其中包含 API 定义的 typedef 和枚举类型。你可以选择只列出那些特别重要的或被多个页面所引用的类型，以便保持列表的简洁。
-   > **备注：** MDN 正在逐步停止单独记录 typedef。在可能的情况下，这里现在描述的是使用了它们的值。
+   > [!NOTE]
+   > MDN 正在逐步停止单独记录 typedef。在可能的情况下，这里现在描述的是使用了它们的值。
 9. `"callbacks"`——该值是一个数组，其中包含 API 定义的所有回调类型的列表。你可能会发现即使是在包含回调类型的 API 上，也根本不需要使用这个组别，因为它们通常不适合单独记录。
 
 ## 侧边栏使用的标签

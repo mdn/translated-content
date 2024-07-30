@@ -1,11 +1,14 @@
 ---
-title: AbortSignal.abort()
+title: "AbortSignal: abort() 静的メソッド"
+short-title: abort()
 slug: Web/API/AbortSignal/abort_static
+l10n:
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-静的な **`AbortSignal.abort()`** メソッドは、既に中止と設定されている（かつ {{domxref("AbortSignal/abort_event", "abort")}} イベントが発生していない） {{domxref("AbortSignal") }} を返します。
+**`AbortSignal.abort()`** は静的メソッドで、既に中止と設定されている（かつ {{domxref("AbortSignal/abort_event", "abort")}} イベントが発生していない） {{domxref("AbortSignal")}} を返します。
 
 これは、以下のコードの一連で行うものです。
 
@@ -17,13 +20,14 @@ return controller.signal;
 
 これは、例えば、フェッチメソッドの中止ロジックを実行するために渡される可能性があります （つまり、意図したフェッチ処理が開始されていなくても中止ロジックが実行されるように コードが構成されていることがあります）。
 
-> **メモ:** このメソッドは {{JSxRef("Promise.reject")}} と同じような目的を持っています。
+> [!NOTE]
+> このメソッドは {{JSxRef("Promise.reject")}} と同じような目的を持っています。
 
 ## 構文
 
 ```js-nolint
-abort()
-abort(reason)
+AbortSignal.abort()
+AbortSignal.abort(reason)
 ```
 
 ### 引数

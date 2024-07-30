@@ -13,7 +13,8 @@ Un problema primordial del que los usuarios de la web han adolecido durante año
 
 El intento anterior, _AppCache_, parecía ser una buena idea porque te permitía especificar activos para almacenar en caché con mucha facilidad. Sin embargo, hizo muchas suposiciones sobre lo que estabas tratando de hacer y luego se rompió horriblemente cuando tu aplicación no siguió exactamente esas suposiciones. Lee el documento de Jake Archibald (desafortunadamente mal titulado pero bien escrito) [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag/) para obtener más detalles.
 
-> **Nota:** A partir de Firefox 84, se eliminó _AppCache_ ([Error 1619673 en Firefox](https://bugzil.la/1619673)). También se ha [eliminado](https://bugs.chromium.org/p/chromium/issues/detail?id=582750) de Chromium 95 y está obsoleto en Safari.
+> [!NOTE]
+> A partir de Firefox 84, se eliminó _AppCache_ ([Error 1619673 en Firefox](https://bugzil.la/1619673)). También se ha [eliminado](https://bugs.chromium.org/p/chromium/issues/detail?id=582750) de Chromium 95 y está obsoleto en Safari.
 
 El _service worker_ finalmente debería solucionar estos problemas. La sintaxis del _service worker_ es más compleja que la de _AppCache_, pero la compensación es que puedes usar JavaScript para controlar su comportamiento implícito en _AppCache_ con un buen grado de fina granularidad, lo que te permite manejar este problema y muchos más. Al usar un _service worker_, puedes configurar fácilmente una aplicación para usar activos almacenados en caché primero, proporcionando así una experiencia predeterminada incluso cuando estás desconectado, antes de obtener más datos de la red (comúnmente conocido como [Primero sin conexión](https://offlinefirst.org/)). Esto ya está disponible con las aplicaciones nativas, que es una de las principales razones por las que las aplicaciones nativas a menudo se eligen en lugar de las aplicaciones web.
 
@@ -84,9 +85,11 @@ Esto registra un _service worker_, que se ejecuta en un contexto de trabajador y
 
 Un solo _service worker_ puede controlar muchas páginas. Cada vez que se carga una página dentro de su alcance, el _service worker_ se instala en esa página y opera en ella. Por lo tanto, ten en cuenta que debes tener cuidado con las variables globales en el script del _service worker_: cada página no tiene su propio trabajador único.
 
-> **Nota:** Tu _service worker_ funciona como un servidor proxy, lo que te permite modificar solicitudes y respuestas, reemplazarlas con elementos de su propio caché y más.
+> [!NOTE]
+> Tu _service worker_ funciona como un servidor proxy, lo que te permite modificar solicitudes y respuestas, reemplazarlas con elementos de su propio caché y más.
 
-> **Nota:** Una gran cosa acerca del _service worker_ es que si usas la detección de funciones como se muestra arriba, los navegadores que no son compatibles con los _service workers_ pueden usar tu aplicación en línea de la manera normal esperada. Además, si usas _AppCache_ y <abbr title="ServiceWorker">SW</abbr> en una página, los navegadores que no admiten <abbr title="ServiceWorker">SW</abbr> pero sí _AppCache_ lo usarán, y los navegadores que admiten ambos ignorarán _AppCache_ y dejarán que <abbr title="ServiceWorker">SW</abbr> tome el control.
+> [!NOTE]
+> Una gran cosa acerca del _service worker_ es que si usas la detección de funciones como se muestra arriba, los navegadores que no son compatibles con los _service workers_ pueden usar tu aplicación en línea de la manera normal esperada. Además, si usas _AppCache_ y <abbr title="ServiceWorker">SW</abbr> en una página, los navegadores que no admiten <abbr title="ServiceWorker">SW</abbr> pero sí _AppCache_ lo usarán, y los navegadores que admiten ambos ignorarán _AppCache_ y dejarán que <abbr title="ServiceWorker">SW</abbr> tome el control.
 
 #### ¿Por qué mi service worker no se registra?
 
@@ -505,7 +508,8 @@ Firefox también ha comenzado a implementar algunas herramientas útiles relacio
 - Al realizar pruebas, puedes sortear la restricción de HTTPS marcando la opción "Habilitar _service worker_ a través de HTTP (cuando la caja de herramientas está abierta)" en la [Configuración de herramientas de desarrollo de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/settings/index.html).
 - El botón "Olvidar", disponible en las opciones de personalización de Firefox, se puede usar para borrar los _service workers_ y sus cachés ([Error 1252998 en Firefox](https://bugzil.la/1252998)).
 
-> **Nota:** Puedes servir tu aplicación desde `http://localhost` (por ejemplo, usando `me@localhost:/my/app$ python -m SimpleHTTPServer`) para el desarrollo local. Ve [Consideraciones de seguridad](https://www.w3.org/TR/service-workers/#security-considerations)
+> [!NOTE]
+> Puedes servir tu aplicación desde `http://localhost` (por ejemplo, usando `me@localhost:/my/app$ python -m SimpleHTTPServer`) para el desarrollo local. Ve [Consideraciones de seguridad](https://www.w3.org/TR/service-workers/#security-considerations)
 
 ## Véase también
 

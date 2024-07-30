@@ -166,7 +166,8 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 - if 文で、数値でないものが入力された場合にエラーメッセージを表示します。この条件は、式 `isNaN(num)` が `true` を返すかどうかチェックします。 [`isNaN()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/isNaN) 関数は `num` が数値でないかどうかを検査します。数値でない場合は `true` を返し、そうであれば `false` を返します。
 - もしこの条件が `false` を返した場合、`num` の値は数値であり、関数が段落要素内に数値の二乗、三乗、階乗の値を示す文を表示します。この文では `squared()`、`cubed()`、`factorial()` の各関数を呼び出し、必要な値を計算します。
 
-> **メモ:** もしサンプルがうまく動作しない場合は、[GitHub 上の完成版](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library-finished.html)と比較などしてみてください（[ライブ実行でも確認](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)できます）。またはお問い合わせください。
+> [!NOTE]
+> もしサンプルがうまく動作しない場合は、[GitHub 上の完成版](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library-finished.html)と比較などしてみてください（[ライブ実行でも確認](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)できます）。またはお問い合わせください。
 
 ## あなたの番
 

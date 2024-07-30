@@ -3,7 +3,7 @@ title: "Document: parseHTMLUnsafe() 静的メソッド"
 short-title: parseHTMLUnsafe()
 slug: Web/API/Document/parseHTMLUnsafe_static
 l10n:
-  sourceCommit: dd3048a4eb74a53395c9a2015baefaa46ef77a56
+  sourceCommit: 3c386c36f6f1d177ae2ed400668f21ea2ada5db3
 ---
 
 {{APIRef("DOM")}}

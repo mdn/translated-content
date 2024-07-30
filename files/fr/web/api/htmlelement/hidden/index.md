@@ -21,7 +21,8 @@ Des cas inappropriés d'utilisation comprennent :
 - le fait de cacher des panneaux dans une boîte de dialogue à onglets ;
 - le fait de cacher du contenu dans une présentation tout en ayant l'intention qu'il soit visible dans d'autres.
 
-> **Note :** Des éléments qui ne sont pas `hidden` ne doivent pas faire référence à des éléments qui le sont.
+> [!NOTE]
+> Des éléments qui ne sont pas `hidden` ne doivent pas faire référence à des éléments qui le sont.
 
 ## Syntaxe
 

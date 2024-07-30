@@ -30,7 +30,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/commands
 
 {{Compat}} {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/extensions/commands).
 >

@@ -20,7 +20,8 @@ Cookie は主に、以下の 3 つの用途で使用されます。
 
 Cookie は、クライアント側の汎用的な記憶領域として使用されたことがあります。これは他にクライアントへデータを保存する手段がなかった頃は合理的でしたが、現在では新しいストレージ API を使用することが推奨されています。 Cookie はすべてのリクエストで送信されるので、（特にモバイルデータ通信で）性能を悪化させる可能性があります。クライアントストレージ向けの新しい API として、[ウェブストレージ API](/ja/docs/Web/API/Web_Storage_API) (`localStorage` および `sessionStorage`) と [IndexedDB](/ja/docs/Web/API/IndexedDB_API) があります。
 
-> **メモ:** 保存された Cookie (およびウェブページが使用できる他のストレージ) を確認するには、開発ツールの[ストレージインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)を有効化して、ストレージのツリーで Cookie を選択してください。
+> [!NOTE]
+> 保存された Cookie (およびウェブページが使用できる他のストレージ) を確認するには、開発ツールの[ストレージインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)を有効化して、ストレージのツリーで Cookie を選択してください。
 
 ## Cookie の作成
 
@@ -53,7 +54,8 @@ Host: www.example.org
 Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 ```
 
-> **メモ:** 様々なサーバー側アプリケーションにおける `Set-Cookie` ヘッダーの使い方を紹介します。
+> [!NOTE]
+> 様々なサーバー側アプリケーションにおける `Set-Cookie` ヘッダーの使い方を紹介します。
 >
 > - [PHP](https://www.php.net/manual/ja/function.setcookie.php)
 > - [Node.JS](https://nodejs.org/dist/latest-v14.x/docs/api/http.html#http_response_setheader_name_value)
@@ -156,7 +158,8 @@ Cookie の仕組みの設計では、 Cookie が安全なオリジンに設定�
 
 これらの接頭辞が付いていて、制約に適合していない Cookie は、送られてもブラウザーが拒否します。これにより、仮にサブドメインで接頭辞の付いた Cookie を作成した場合、サブドメインに限定されるか、完全に無視されるかします。アプリケーションサーバーは、ユーザーが認証されているか、あるいは CSRF トークンが正しいかどうかを判断するときに、特定の Cookie 名をチェックするだけなので、これはセッションの固定化に対する防御手段として効果的に機能します。
 
-> **メモ:** アプリケーションサーバ上では、ウェブアプリケーションは接頭辞を含む完全な Cookie 名をチェック*しなければなりません*。—ユーザーエージェントは、リクエストの {{HTTPHeader("Cookie")}} ヘッダーを送信する前に Cookie から接頭辞を削除*しません*。
+> [!NOTE]
+> アプリケーションサーバ上では、ウェブアプリケーションは接頭辞を含む完全な Cookie 名をチェック*しなければなりません*。—ユーザーエージェントは、リクエストの {{HTTPHeader("Cookie")}} ヘッダーを送信する前に Cookie から接頭辞を削除*しません*。
 
 Cookie の接頭辞とブラウザー対応の現在の状態については、 [Set-Cookie リファレンス記事の接頭辞の節](/ja/docs/Web/HTTP/Headers/Set-Cookie#クッキーの接頭辞)を参照してください。
 
@@ -177,7 +180,8 @@ JavaScript で生成された Cookie は `HttpOnly` フラグを含むことが�
 
 ## セキュリティ
 
-> **メモ:** 情報を Cookie に保存するときは、すべての Cookie の値がエンドユーザーから見え、変更できることを理解しておいてください。アプリケーションによっては、サーバー側で検索される不透明な識別子を使用するか、 JSON ウェブトークンのような代替の認証/機密性メカニズムを調べたほうが良いかもしれません。
+> [!NOTE]
+> 情報を Cookie に保存するときは、すべての Cookie の値がエンドユーザーから見え、変更できることを理解しておいてください。アプリケーションによっては、サーバー側で検索される不透明な識別子を使用するか、 JSON ウェブトークンのような代替の認証/機密性メカニズムを調べたほうが良いかもしれません。
 
 Cookie への攻撃を緩和する方法には次のようなものがあります。
 

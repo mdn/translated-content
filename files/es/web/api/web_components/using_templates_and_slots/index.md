@@ -75,7 +75,8 @@ Ahora podemos usarlo simplemente agregándolo a nuestro documento HTML:
 <my-paragraph></my-paragraph>
 ```
 
-> **Nota:** Las plantillas están bien soportadas en los navegadores: la API del Shadow DOM es compatible por defecto con Firefox (version 63 en adelante), Chrome, Opera y Safari, Edge está trabajando en una implementación.
+> [!NOTE]
+> Las plantillas están bien soportadas en los navegadores: la API del Shadow DOM es compatible por defecto con Firefox (version 63 en adelante), Chrome, Opera y Safari, Edge está trabajando en una implementación.
 
 ## Añadiendo flexibilidad con el elemento \<slot>
 
@@ -110,9 +111,11 @@ o
 </my-paragraph>
 ```
 
-> **Nota:** Los elementos que pueden ser insertados en los slots son conocidos como {{domxref("Slotable")}}; cuando un elemento ha sido insertado en un slot, se dice que fue _eslotado_ por su término en inglés _slotted._
+> [!NOTE]
+> Los elementos que pueden ser insertados en los slots son conocidos como {{domxref("Slotable")}}; cuando un elemento ha sido insertado en un slot, se dice que fue _eslotado_ por su término en inglés _slotted._
 
-> **Nota:** Un {{HTMLElement("slot")}} sin nombre se rellenará con todos los nodos secundarios de nivel superior del elemento personalizado que no tengan el atributo [`slot`](/es/docs/Web/HTML/Global_attributes#slot). Esto incluye nodos de texto.
+> [!NOTE]
+> Un {{HTMLElement("slot")}} sin nombre se rellenará con todos los nodos secundarios de nivel superior del elemento personalizado que no tengan el atributo [`slot`](/es/docs/Web/HTML/Global_attributes#slot). Esto incluye nodos de texto.
 
 Y eso es todo nuestro ejemplo sencillo. Si quieres jugar con él un poco más, puedes encontrarlo en [GitHub](https://github.com/mdn/web-components-examples/tree/master/simple-template) (también puedes [verlo en vivo](https://mdn.github.io/web-components-examples/simple-template/)).
 
@@ -129,7 +132,8 @@ Observa que es técnicamente posible usar el elemento {{HTMLElement("slot")}} si
 
 Además, incluso si no está renderizado, el propósito del contenedor como plantilla debería ser semánticamente más claro cuando se usa el elemento {{HTMLElement("template")}}. Además, el elemento {{HTMLElement("template")}} puede tener elementos agregados directamente a él, como {{HTMLElement("td")}}, que desaparecerían al añadirse a un {{HTMLElement ("div")}}.
 
-> **Nota:** Puedes encontrar el ejemplo completo en [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details)(también lo puedes[ver en vivo](https://github.com/mdn/web-components-examples/tree/master/element-details))
+> [!NOTE]
+> Puedes encontrar el ejemplo completo en [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details)(también lo puedes[ver en vivo](https://github.com/mdn/web-components-examples/tree/master/element-details))
 
 ### Creando una plantilla con algunos elementos \<slot>
 

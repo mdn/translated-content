@@ -27,7 +27,8 @@ canMakePayment()
 
 {{domxref('PaymentRequest.PaymentRequest()','PaymentRequest')}} コンストラクターを使用してリクエストをインスタンス化する際に、ユーザーエージェントが提供した決済手段のいずれかに対応していれば `true` に解決する {{jsxref("Promise")}} を論理値に変換します．決済を処理できない場合、プロミスは `false` の値を受け取ります。
 
-> **メモ:** これを何度も呼び出すと、ブラウザーは返されるプロミスを `DOMException` で拒否するかもしれません。
+> [!NOTE]
+> これを何度も呼び出すと、ブラウザーは返されるプロミスを `DOMException` で拒否するかもしれません。
 
 ## 例
 

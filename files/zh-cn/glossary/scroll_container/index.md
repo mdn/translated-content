@@ -1,6 +1,8 @@
 ---
 title: 滚动容器
 slug: Glossary/Scroll_container
+l10n:
+  sourceCommit: dfad9eccce7c2f11c195003ec1cbd7b0fd9db577
 ---
 
 {{GlossarySidebar}}

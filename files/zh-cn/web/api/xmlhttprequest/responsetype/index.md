@@ -36,7 +36,8 @@ XMLHttpRequest.responseType = type;
 - `"ms-stream"` {{non-standard_inline}}
   - : {{DOMxRef("XMLHttpRequest.response", "response")}} 是流式下载的一部分；此响应类型仅允许用于下载请求，并且仅受 Internet Explorer 支持。
 
-> **备注：** 将 `responseType` 设置为特定值时，作者应确保服务器实际发送的响应与该格式兼容。如果服务器返回的数据与设置的 `responseType` 不兼容，则 {{DOMxRef("XMLHttpRequest.response", "response")}} 的值将为`null` .
+> [!NOTE]
+> 将 `responseType` 设置为特定值时，作者应确保服务器实际发送的响应与该格式兼容。如果服务器返回的数据与设置的 `responseType` 不兼容，则 {{DOMxRef("XMLHttpRequest.response", "response")}} 的值将为`null` .
 
 ### 异常
 

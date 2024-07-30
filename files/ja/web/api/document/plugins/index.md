@@ -10,7 +10,8 @@ l10n:
 
 **`plugins`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、現在の文書内にある {{HTMLElement("embed")}} 要素を表す 1 つ以上の {{domxref("HTMLEmbedElement")}} を含んだ {{domxref("HTMLCollection")}} オブジェクトを返します。
 
-> **メモ:** インストールされているプラグインの一覧には、このメソッドでなく [Navigator.plugins](/ja/docs/Web/API/Navigator/plugins) を使用してください。
+> [!NOTE]
+> インストールされているプラグインの一覧には、このメソッドでなく [Navigator.plugins](/ja/docs/Web/API/Navigator/plugins) を使用してください。
 
 ## 値
 
