@@ -20,7 +20,8 @@ similar). Uma promessa {{domxref("fetch()")}} _não_ rejeita erros HTTP (`404`, 
 
 O método `fetch()` é controlado pela diretiva `connect-src` da [Content Security Policy](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy) em vez da diretiva dos recursos que está recuperando.
 
-> **Note:** Os parâmetros do método `fetch()` são idênticos
+> [!NOTE]
+> Os parâmetros do método `fetch()` são idênticos
 > aos do construtor {{domxref("Request.Request","Request()")}}.
 
 ## Sintaxe
@@ -71,7 +72,8 @@ const fetchResponsePromise = fetch(resource [, init])
 
           - : Diz aos navegadores para incluir credenciais em ambas requisições `same-origin` e `cross-origin`, e sempre use as credenciais enviadas de volta nas respostas.
 
-            > **Note:** As credenciais podem ser incluídas em requisições cross-origin simples e "finais", mas não devem ser incluídas em [requisições de comprovação de CORS](/pt-BR/docs/Web/HTTP/CORS#preflight_requests_and_credentials).
+            > [!NOTE]
+            > As credenciais podem ser incluídas em requisições cross-origin simples e "finais", mas não devem ser incluídas em [requisições de comprovação de CORS](/pt-BR/docs/Web/HTTP/CORS#preflight_requests_and_credentials).
 
     - `cache`
       - : Uma string indicando como a requisição vai interagir com o [cache HTTP](/pt-BR/docs/Web/HTTP/Caching) do navegador. Os valores possíveis, `default`, `no-store`, `reload`, `no-cache`, `force-cache`, e `only-if-cached`, estão documentados no artigo para a propriedade {{domxref("Request/cache", "cache")}} do objeto {{domxref("Request")}}.
