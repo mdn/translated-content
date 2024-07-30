@@ -148,7 +148,7 @@ slug: Web/Media/Formats/Image_types
 
 > **备注：** 每种图像格式的缩写可链接到有关该格式的较长描述、其功能和详细的浏览器兼容性信息（包括哪些版本引入了支持以及后来可能引入的特定特殊功能）。
 
-> **备注：** Safari 11.1 新增了使用视频格式替代 gif 动画的功能，而其他浏览器没有添加这方面的支持。详见 [Chromium bug](https://bugs.chromium.org/p/chromium/issues/detail?id%3D791658) 和 [Firefox bug](https://bugzilla.mozilla.org/show_bug.cgi?id%3D895131) 以了解更多信息。
+> **备注：** Safari 11.1 新增了使用视频格式替代 gif 动画的功能，而其他浏览器没有添加这方面的支持。详见 [Chromium bug](https://crbug.com/791658) 和 [Firefox bug](https://bugzil.la/895131) 以了解更多信息。
 
 ## 图像文件类型详介
 
