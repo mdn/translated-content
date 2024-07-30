@@ -2,12 +2,12 @@
 title: Map.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Map/values
 l10n:
-  sourceCommit: ab97df6ce8865569507bcfc884206a1ed297a690
+  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
 {{JSRef}}
 
-**`values()`** 메서드는 배열의 각 아이템의 값을 순회하는 새로운 [맵 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator) 객체를 반환합니다.
+{{jsxref("Map")}} 인스턴스의 **`values()`** 메서드는 맵의 각 아이템의 값을 삽입 순서대로 순회하는 새로운 [맵 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator) 객체를 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-values.html")}}
 
@@ -16,6 +16,10 @@ l10n:
 ```js-nolint
 values()
 ```
+
+### 매개변수
+
+없음.
 
 ### 반환 값
 

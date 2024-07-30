@@ -50,13 +50,15 @@ l10n:
 
 也就是说，本文将涵盖跨浏览器和有关残疾人的测试问题以及他们如何使用 Web。我们在本模块的其他地方已经讨论过别的领域，例如[响应式设计问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#响应式设计问题)和[性能](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#性能问题)。
 
-> **备注：** 如同 Web 开发的许多方面一样，无障碍并非可以用 100% 的成功或失败来定义；实际上，对于所有内容来说，要达到完全的无障碍几乎是不可能的，特别是当网站变得越来越复杂。我们所做的，更多是采取防御性编程，并遵守最佳实践，以确保尽可能多的人能够访问到尽可能多的内容。
+> [!NOTE]
+> 如同 Web 开发的许多方面一样，无障碍并非可以用 100% 的成功或失败来定义；实际上，对于所有内容来说，要达到完全的无障碍几乎是不可能的，特别是当网站变得越来越复杂。我们所做的，更多是采取防御性编程，并遵守最佳实践，以确保尽可能多的人能够访问到尽可能多的内容。
 
 ## 常见无障碍问题
 
 在本节中，我们将围绕 Web 无障碍，详细介绍与特定技术相关的一些主要问题、要遵循的最佳实践，以及可以进行的一些快速测试，以查看你的网站是否朝着正确的方向发展。
 
-> **备注：** 无障碍在道德上是正确的事情，对企业也有好处（残疾用户，移动用户等构成了重要的细分市场），并且在世界许多地方，提供出来的网络媒体资源无法为残疾人服务也是违法的。阅读[无障碍指南和法律](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#无障碍指南和法律)获取更多相关信息。
+> [!NOTE]
+> 无障碍在道德上是正确的事情，对企业也有好处（残疾用户，移动用户等构成了重要的细分市场），并且在世界许多地方，提供出来的网络媒体资源无法为残疾人服务也是违法的。阅读[无障碍指南和法律](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#无障碍指南和法律)获取更多相关信息。
 
 ### HTML
 
@@ -114,7 +116,8 @@ HTML 语义化的关键在于使用标题和段落结构来组织你的内容；
 
 ![三个按钮的截图，展示了交互式原生元素的默认行为示例。第三个按钮用蓝色边框突出显示，表示其聚焦状态。](button-focused-unfocused.png)
 
-> **备注：** 在 Firefox 中，你还可以启用一个叠加层来显示页面的标签顺序。有关更多信息，请参见：[Accessibility Inspector > Show web page tabbing order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order)。
+> [!NOTE]
+> 在 Firefox 中，你还可以启用一个叠加层来显示页面的标签顺序。有关更多信息，请参见：[Accessibility Inspector > Show web page tabbing order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order)。
 
 然后你可以按 Enter/Return 键来跟随聚焦的链接或按下按钮（我们已经包含了一些 JavaScript 来使按钮显示一条消息），或开始输入以在文本输入框中输入文本（其他表单元素有不同的控制方式，例如 {{htmlelement("select")}} 元素可以使用向上和向下箭头键显示和循环其选项）。
 
@@ -122,7 +125,8 @@ HTML 语义化的关键在于使用标题和段落结构来组织你的内容；
 
 - 默认情况下，Safari 浏览器在 Mac 上不能通过 Tab 键在各个链接间切换。要激活这项功能，请打开*系统偏好设置*，滚动至*键盘*选项，并开启*使用 Tab 键移动焦点*。如果你使用的是较旧版本的 macOS，请查阅 Apple 的 macOS 用户指南中的[使用键盘来代替鼠标操作 Mac](https://support.apple.com/zh-cn/guide/mac-help/mchlp1399/mac)一节。
 
-> **警告：** 你应该对你编写的任何新页面执行此类测试/审查——确保功能可通过键盘访问，并且 Tab 浏览顺序遵守贯穿文档的合理导航路径。
+> [!WARNING]
+> 你应该对你编写的任何新页面执行此类测试/审查——确保功能可通过键盘访问，并且 Tab 浏览顺序遵守贯穿文档的合理导航路径。
 
 这个例子强调了使用正确的语义元素来执行适当任务的重要性。你可以用 CSS 设计任何元素，使其看起来像链接或按钮，并用 JavaScript 让它们的行为类似于链接或按钮，但实际上它们并不是真正的链接或按钮。这样做，你会失去这些元素本身就提供的许多无障碍特性，而且这些特性是免费的。因此，如果可能的话，你应该避免这样做。
 
@@ -141,7 +145,8 @@ select:focus {
 }
 ```
 
-> **备注：** 如果你决定使用 CSS 移除默认焦点样式，请确保用其他更适合你的设计的东西替换它——这是一个非常有价值的无障碍工具，不应该被删除。
+> [!NOTE]
+> 如果你决定使用 CSS 移除默认焦点样式，请确保用其他更适合你的设计的东西替换它——这是一个非常有价值的无障碍工具，不应该被删除。
 
 #### 构建键盘无障碍性
 
@@ -162,13 +167,15 @@ select:focus {
 
    这里我们给 `document` 对象添加了一个监听器，用于检测何时在键盘上按下按钮。我们通过事件对象的 [`code`](/zh-CN/docs/Web/API/KeyboardEvent/code) 属性检查按下了哪个按钮；如果它是与 Return/Enter 匹配的键码，我们将使用 `document.activeElement.onclick()` 运行存储在按钮的 `onclick` 处理程序中的函数。[`activeElement`](/zh-CN/docs/Web/API/Document/activeElement) 为我们提供了当前页面上获得焦点的元素。
 
-> **备注：** 此技术只有在你通过事件处理器属性（例如 `onclick`）设置原始事件处理器的情况下才有效。`addEventListener` 不会起作用。这会给构建功能带来许多额外的困难，并且很可能会引入其他问题。最好的办法是为每个任务使用正确的元素。
+> [!NOTE]
+> 此技术只有在你通过事件处理器属性（例如 `onclick`）设置原始事件处理器的情况下才有效。`addEventListener` 不会起作用。这会给构建功能带来许多额外的困难，并且很可能会引入其他问题。最好的办法是为每个任务使用正确的元素。
 
 #### 替代文本
 
 替代文本对无障碍性至关重要——对于视觉或听觉障碍者来说，如果无法看到或听到某些内容，这将是一个障碍。最简单且常用的文本替代方法是使用 `alt` 属性，我们应在所有包含关键内容的图像上使用该属性。它应包含能够在页面上成功传达图像意义和内容的描述，并能被屏幕阅读器读取，从而朗读给用户听。
 
-> **备注：** 更多信息请阅读[替代文本](/zh-CN/docs/Learn/Accessibility/HTML#替代文本)。
+> [!NOTE]
+> 更多信息请阅读[替代文本](/zh-CN/docs/Learn/Accessibility/HTML#替代文本)。
 
 可以通过多种方法来测试缺少的替代文本，例如，使用无障碍[审计工具](#审计工具)。
 
@@ -182,13 +189,15 @@ select:focus {
 
 接下来是表单中的 {{htmlelement("label")}} 元素，这是确保表单无障碍的关键特性之一。表单的挑战在于，你需要标签来指明每个表单输入应该输入的数据。每个标签都应该包含在 {{htmlelement("label")}} 中，并且与其对应的表单输入明确关联（每个 `<label>` 的 `for` 属性值需要与表单元素的 `id` 值相匹配），即使源代码的顺序并不完全合理（尽管它应该是合理的）。
 
-> **备注：** 有关链接文本和表单标签的更多信息，请参阅[有意义的文本标签](/zh-CN/docs/Learn/Accessibility/HTML#有意义的文本标签)。
+> [!NOTE]
+> 有关链接文本和表单标签的更多信息，请参阅[有意义的文本标签](/zh-CN/docs/Learn/Accessibility/HTML#有意义的文本标签)。
 
 最后，让我们简要讨论一下数据表格。使用非常简单的标记，你可以编写基本的数据表格（参见 `bad-table.html` 的[在线演示](https://mdn.github.io/learning-area/accessibility/html/bad-table.html)和[源代码](https://github.com/mdn/learning-area/blob/main/accessibility/html/bad-table.html)），但这样做会有问题——屏幕阅读器用户无法将行或列作为数据分组——为此，你需要标明哪些是标题行，以及它们是用于标题行还是标题列等。这样的表格只能通过视觉方式来识别。
 
 相反，如果你查看我们的 `punk-bands-complete.html` 示例（[在线演示](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html)，[源代码](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html)），你会发现这里使用了一些辅助功能，如表头（{{htmlelement("th")}} 和 `scope` 属性）、{{htmlelement("caption")}} 元素等。
 
-> **备注：** 有关无障碍数据表格的更多信息，请参阅[无障碍数据表格](/zh-CN/docs/Learn/Accessibility/HTML#无障碍数据表格)。
+> [!NOTE]
+> 有关无障碍数据表格的更多信息，请参阅[无障碍数据表格](/zh-CN/docs/Learn/Accessibility/HTML#无障碍数据表格)。
 
 ### CSS
 
@@ -206,7 +215,8 @@ CSS 虽然提供的基本无障碍特性不如 HTML 多，但如果使用不当�
 
 另一个建议是不要仅依赖颜色来传达标记或信息，因为这对于色盲人士来说不太友好。例如，不应仅将必填的表单字段标记为红色，而应同时使用星号和红色来标记它们。
 
-> **备注：** 高对比度也有助于在明亮环境下（如直射日光）使用反光屏幕设备（如智能手机或平板电脑）的用户更好地阅读页面。
+> [!NOTE]
+> 高对比度也有助于在明亮环境下（如直射日光）使用反光屏幕设备（如智能手机或平板电脑）的用户更好地阅读页面。
 
 #### 隐藏内容
 
@@ -218,7 +228,8 @@ CSS 虽然提供的基本无障碍特性不如 HTML 多，但如果使用不当�
 
 另一方面，你不应使用 {{cssxref("visibility")}}`:hidden` 或 {{cssxref("display")}}`:none`，因为它们确实会使内容对屏幕阅读器隐藏。当然，除非你有充分的理由希望这些内容对屏幕阅读器保持不可见。
 
-> **备注：** 关于[仅对屏幕阅读器用户隐藏的内容](https://webaim.org/techniques/css/invisiblecontent/)，有更多有用的细节可以参考。
+> [!NOTE]
+> 关于[仅对屏幕阅读器用户隐藏的内容](https://webaim.org/techniques/css/invisiblecontent/)，有更多有用的细节可以参考。
 
 ### JavaScript
 
@@ -231,7 +242,8 @@ CSS 虽然提供的基本无障碍特性不如 HTML 多，但如果使用不当�
 - 提供客户端表单验证，它可以快速地提醒用户表单输入的问题，无需等待服务器检查数据。如果没有可用的 JavaScript，表单仍然可以工作，但验证可能会更慢。
 - 为 HTML `<video>` 提供自定义控件，使其对仅使用键盘的用户无障碍（如我们之前所说，大多数浏览器中的默认浏览器控件不可通过键盘访问）。
 
-> **备注：** WebAIM 的[无障碍 JavaScript](https://webaim.org/techniques/javascript/) 提供了一些关于无障碍 JavaScript 方面值得考虑的有用细节。
+> [!NOTE]
+> WebAIM 的[无障碍 JavaScript](https://webaim.org/techniques/javascript/) 提供了一些关于无障碍 JavaScript 方面值得考虑的有用细节。
 
 更复杂的 JavaScript 实现可能会引起无障碍性问题——你需要尽力而为。例如，对于使用 [WebGL](/zh-CN/docs/Glossary/WebGL) 编写的复杂 3D 游戏，期望其对盲人用户实现 100% 的无障碍是不现实的。但是，你可以实施[键盘控制](/zh-CN/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)，以便非鼠标用户也能使用，并且调整配色方案，确保色觉缺陷者也能够辨识。
 
@@ -283,7 +295,8 @@ CSS 虽然提供的基本无障碍特性不如 HTML 多，但如果使用不当�
 2. 在页面顶部的文本输入框中输入我们的 [`bad-semantics.html`](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html) 示例的 URL。然后按下回车键或点击输入框右侧的箭头。
 3. 该网站会响应并指出无障碍性问题。点击显示的图标可以查看 Wave 评估识别出的每个问题的详细信息。
 
-> **备注：** 仅靠这些工具并不能解决所有无障碍性问题。你还需要结合这些工具、相关知识和经验、用户测试等，才能获得全面的了解。
+> [!NOTE]
+> 仅靠这些工具并不能解决所有无障碍性问题。你还需要结合这些工具、相关知识和经验、用户测试等，才能获得全面的了解。
 
 ### 自动化工具
 
@@ -310,7 +323,8 @@ aXe 也可以通过 `npm` 安装，并且能够与任务运行器如 [Grunt](htt
 
 接下来我们通过测试一些屏幕阅读器，以便你能够大致了解它们是如何工作的，以及如何进行测试。
 
-> **备注：** WebAIM 的[兼容屏幕阅读器的设计](https://webaim.org/techniques/screenreader/)提供了一些关于屏幕阅读器的使用和适配的信息。另外，[屏幕阅读器用户调查 #9 的结果](https://webaim.org/projects/screenreadersurvey9/#used)也展示了一些关于屏幕阅读器使用的有趣统计数据。
+> [!NOTE]
+> WebAIM 的[兼容屏幕阅读器的设计](https://webaim.org/techniques/screenreader/)提供了一些关于屏幕阅读器的使用和适配的信息。另外，[屏幕阅读器用户调查 #9 的结果](https://webaim.org/projects/screenreadersurvey9/#used)也展示了一些关于屏幕阅读器使用的有趣统计数据。
 
 #### VoiceOver
 
@@ -318,7 +332,8 @@ VoiceOver（VO）免费内置于你的 Mac/iPhone/iPad 中，所以如果你使�
 
 要启动它，请按 Cmd + F5。如果你之前未曾使用过 VO，你会看到一个欢迎界面，在那里你可以选择是否激活 VO，并运行一个相当实用的教程来学习如何使用它。要关闭它，请再次按 Cmd + F5。
 
-> **备注：** 强烈建议至少学习一次教程——这是学习 VO 的极佳方式。
+> [!NOTE]
+> 强烈建议至少学习一次教程——这是学习 VO 的极佳方式。
 
 当 VO 激活时，显示屏幕外观大体相同，但你会在屏幕左下角看到一个黑色方框，里面显示了 VO 当前选中的信息。当前选中的内容也会被一个黑色边框围住且高亮显示——这个高亮被称为 **VO 光标**。
 
@@ -442,7 +457,8 @@ NVDA 将在你的计算机上运行。
 
 使用 NVDA 时，你会频繁使用“NVDA 修饰键”——这是一个特殊的键，除了 NVDA 的键盘快捷键之外，你还需要同时按下它以激活功能。使用修饰键是屏幕阅读器的常见做法，以避免其命令与其他软件命令冲突。对于 NVDA 来说，修饰键可以是 Insert 键（默认设置），或者是 CapsLock 键（你可以在 NVDA 欢迎界面中勾选第一个复选框来选择，操作需在点击 _OK_ 之前完成）。
 
-> **备注：** NVDA 在标识位置和其执行的操作方面比 VoiceOver 更加细腻。当你通过标题、列表等内容滚动时，所选项目通常会以微妙的边框进行高亮显示，但并不是所有元素都会这样。如果你感到方向迷失，可以按 Ctrl + F5 刷新当前页面，然后从页面顶部重新开始导航。
+> [!NOTE]
+> NVDA 在标识位置和其执行的操作方面比 VoiceOver 更加细腻。当你通过标题、列表等内容滚动时，所选项目通常会以微妙的边框进行高亮显示，但并不是所有元素都会这样。如果你感到方向迷失，可以按 Ctrl + F5 刷新当前页面，然后从页面顶部重新开始导航。
 
 NVDA 拥有众多键盘命令，这里不会全部列举。以下表格中列出了你在 web 页面测试中可能需要使用的一些基础命令。在键盘快捷键说明中，“NVDA”代表“NVDA 修饰键”。
 

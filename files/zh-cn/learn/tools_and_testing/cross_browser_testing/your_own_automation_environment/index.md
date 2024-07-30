@@ -40,7 +40,8 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environm
 
 我们将使用 Node.js 来编写和运行 Selenium 测试用例。Node.js 是一个前端开发者都很熟悉，并且容易上手的开发环境。
 
-> **备注：** 如果你需要了解在其他服务器端环境下使用 WebDriver 的方式，也可以点击[支持 Selenium 的平台](https://www.selenium.dev/downloads/)来获取更多有用的链接。
+> [!NOTE]
+> 如果你需要了解在其他服务器端环境下使用 WebDriver 的方式，也可以点击[支持 Selenium 的平台](https://www.selenium.dev/downloads/)来获取更多有用的链接。
 
 ### 在 Node 下建立 Selenium
 
@@ -51,7 +52,8 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environm
    npm install selenium-webdriver
    ```
 
-> **备注：** 即使你已经安装过 selenium-webdriver 并下载了浏览器驱动，我们仍然建议你按照步骤再来一遍，确保所有东西都是最新的。
+> [!NOTE]
+> 即使你已经安装过 selenium-webdriver 并下载了浏览器驱动，我们仍然建议你按照步骤再来一遍，确保所有东西都是最新的。
 
 接下来，你需要下载相应的驱动，使 WebDriver 能控制你需要测试的浏览器。在 [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver)（第一部分的表格）页面查看如何下载。显然，有些浏览器是操作系统特定的，我们将坚持使用 Firefox 和 Chrome，因为它们可以在所有主要的操作系统上使用。
 
@@ -59,7 +61,8 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environm
 2. 将它们解压到相当容易浏览的地方，比如你的主用户目录的根部。
 3. 把 `chromedriver` 和 `geckodriver` 驱动的目录添加到你的系统 `PATH` 变量，这应该是从你的硬盘根目录开始的一个绝对路径。举个例子，如果我们使用的是一个 macOS 机器，用户名为 bob, 我们把驱动放到了用户的根目录下，那这个路径就是 `/Users/bob`。
 
-> **备注：** 重申一下，添加到 `PATH` 的路径是到包含驱动的那一级目录，而不是驱动目录自身！这是一个常犯的错误。
+> [!NOTE]
+> 重申一下，添加到 `PATH` 的路径是到包含驱动的那一级目录，而不是驱动目录自身！这是一个常犯的错误。
 
 在 macOS 或大多数 Linux 系统中设置 `PATH` 变量的操作如下：
 
@@ -235,7 +238,8 @@ const driver = new webdriver.Builder().forBrowser("firefox").build();
 driver.get("http://www.google.com");
 ```
 
-> **备注：** 可以查看 [WebDriver class reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html) 了解这一部分提到内容的详情。
+> [!NOTE]
+> 可以查看 [WebDriver class reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html) 了解这一部分提到内容的详情。
 
 你可以使用包含 `file://` 的 URL 来指向需要测试的本地文件：
 
@@ -367,7 +371,8 @@ driver.sleep(2000).then(() => {
 
 WebDriver 等待 2 秒然后填充表单的文本框。接下来我们使用 `getAttribute()` 获取它的 `value` 属性值，并对它进行测试（如是否为空），最后将测试结果打印出来。
 
-> **备注：** 还有一个方法叫 [`wait()`](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait), 它是在一定的时间内对某个条件进行反复测试，然后再继续执行代码，它也使用了 [util 库](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html)，其中定义了使用 `wait()` 的常见条件。
+> [!NOTE]
+> 还有一个方法叫 [`wait()`](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait), 它是在一定的时间内对某个条件进行反复测试，然后再继续执行代码，它也使用了 [util 库](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html)，其中定义了使用 `wait()` 的常见条件。
 
 ### 使用后关闭驱动
 
@@ -492,9 +497,11 @@ driver.quit();
 
    你可以检索网络、命令、异常和 Selenium 日志，用于你测试构建中的每个测试。你还会发现你的 Selenium 脚本执行的视频记录。
 
-> **备注：** LambdaTest 自动测试仪表板上的 _HELP_ 按钮将为你提供大量的信息，帮助你开始使用 LambdaTest 自动化。你也可以关注我们关于[在 Node JS 中运行第一个 Selenium 脚本](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/)的文档。
+> [!NOTE]
+> LambdaTest 自动测试仪表板上的 _HELP_ 按钮将为你提供大量的信息，帮助你开始使用 LambdaTest 自动化。你也可以关注我们关于[在 Node JS 中运行第一个 Selenium 脚本](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/)的文档。
 
-> **备注：** 如果你不想手写测试的 capability 对象，你可以用 [Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) 来生成它们。
+> [!NOTE]
+> 如果你不想手写测试的 capability 对象，你可以用 [Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) 来生成它们。
 
 #### 编程填充 LambdaTest 的测试详情
 
@@ -578,9 +585,11 @@ driver.quit();
 
 点击测试链接，会打开一个播放记录了测试视频的屏幕和在测试过程中相关的日志详情。
 
-> **备注：** Browserstack 自动化仪表盘的 _Resources_ 菜单选项上提供了许多运行自动化测试的有用信息。查看[使用 Node JS 编写自动化测试的文档](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs)获取相关信息，研究一下使用 BrowserStack 可以帮你做到哪些事情。
+> [!NOTE]
+> Browserstack 自动化仪表盘的 _Resources_ 菜单选项上提供了许多运行自动化测试的有用信息。查看[使用 Node JS 编写自动化测试的文档](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs)获取相关信息，研究一下使用 BrowserStack 可以帮你做到哪些事情。
 
-> **备注：** 如果你不想自己写测试用例，可以使用文档中嵌入的生成器，参见[运行你的首个测试](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs#run-your-first-test)）。
+> [!NOTE]
+> 如果你不想自己写测试用例，可以使用文档中嵌入的生成器，参见[运行你的首个测试](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs#run-your-first-test)）。
 
 #### 编程填充 BrowserStack 的测试详情
 
@@ -710,9 +719,11 @@ driver.quit();
 5. 现在访问你的 [Sauce Labs 自动化测试仪表盘](https://app.saucelabs.com/dashboard/tests) 页面，会看到列出的测试; 同样你也可以看到视频、截屏和其他类似的数据。
    ![Sauce Labs 自动化测试](sauce_labs_automated_test.png)
 
-> **备注：** Sauce Labs 的[平台配置器](https://saucelabs.com/platform/platform-configurator#/)是一个有用的工具，可以根据你想测试的浏览器或操作系统，生成 capability 对象，以反馈给你的驱动实例。
+> [!NOTE]
+> Sauce Labs 的[平台配置器](https://saucelabs.com/platform/platform-configurator#/)是一个有用的工具，可以根据你想测试的浏览器或操作系统，生成 capability 对象，以反馈给你的驱动实例。
 
-> **备注：** 你可以查看[使用 Selenium 进行 Web 自动化测试](https://docs.saucelabs.com/web-apps/automated-testing/selenium/)和[实时 Selenium Node.js 测试](https://docs.saucelabs.com/web-apps/automated-testing/selenium/sample-scripts/#nodejs)获取更多关于 Sauce Labs 和 Selenium 测试的有用信息。
+> [!NOTE]
+> 你可以查看[使用 Selenium 进行 Web 自动化测试](https://docs.saucelabs.com/web-apps/automated-testing/selenium/)和[实时 Selenium Node.js 测试](https://docs.saucelabs.com/web-apps/automated-testing/selenium/sample-scripts/#nodejs)获取更多关于 Sauce Labs 和 Selenium 测试的有用信息。
 
 #### 编程填充 Sauce Labs 的测试详情
 
@@ -829,7 +840,8 @@ driver.quit();
 - [集成 Jenkins 的 LambdaTest](https://www.lambdatest.com/support/docs/jenkins-with-lambdatest/)
 - [集成 Travis CI 的 Sauce Labs](https://docs.travis-ci.com/user/sauce-connect/)
 
-> **备注：** 如果你希望用**无代码自动化**进行持续测试，那么你可以使用 [Endtest](https://endtest.io) 或 [TestingBot](https://testingbot.com)。
+> [!NOTE]
+> 如果你希望用**无代码自动化**进行持续测试，那么你可以使用 [Endtest](https://endtest.io) 或 [TestingBot](https://testingbot.com)。
 
 ## 总结
 

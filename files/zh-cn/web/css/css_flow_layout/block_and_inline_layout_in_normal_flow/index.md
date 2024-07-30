@@ -55,7 +55,8 @@ slug: Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow
 
 你可以在我们的文章《[掌握外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)》中阅读更多关于这一部分的内容。
 
-> **备注：** 如果不确定是否发生了外边距折叠，你可以使用浏览器的开发人员工具查看盒模型。准确的外边距值可以帮助你判断是否有外边距折叠发生。
+> [!NOTE]
+> 如果不确定是否发生了外边距折叠，你可以使用浏览器的开发人员工具查看盒模型。准确的外边距值可以帮助你判断是否有外边距折叠发生。
 >
 > ![](box-model.png)
 

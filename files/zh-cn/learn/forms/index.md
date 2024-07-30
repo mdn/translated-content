@@ -15,7 +15,8 @@ slug: Learn/Forms
 
 以上内容明确地说明了为什么我们将 web 表单独立放在一个模块中，而不是将其与 HTML、CSS 和 JavaScript 这些模块放在一起——表单元素比绝大多数其他的 HTML 元素都要复杂，并且它们还需要与相关的 CSS 和 JavaScript 技术紧密集合才能充分利用它们。
 
-> **备注：** 如果你正在使用一个无法创建自己的文件的计算机、平板电脑或其他设备，那么你可以尝试（大多数）在线编码程序中的代码示例，例如 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/)。
+> [!NOTE]
+> 如果你正在使用一个无法创建自己的文件的计算机、平板电脑或其他设备，那么你可以尝试（大多数）在线编码程序中的代码示例，例如 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/)。
 
 ## 基本指南
 

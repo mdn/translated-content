@@ -82,7 +82,8 @@ T
 
 - {{CSSxRef("::target-text")}} {{Experimental_Inline}}
 
-> **メモ:** ブラウザーは元の 4 つの擬似要素、 `::before`、`::after`、`::first-line`、`::first-letter` のみで単一コロンの構文に対応しています。
+> [!NOTE]
+> ブラウザーは元の 4 つの擬似要素、 `::before`、`::after`、`::first-line`、`::first-letter` のみで単一コロンの構文に対応しています。
 
 ## 仕様書
 

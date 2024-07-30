@@ -255,7 +255,8 @@ Isso deve resultar em uma tabela que vai parecer com algo assim:
 | ------------------------ | --------------------- | -------------------- | --------------------- |
 | Second row, first cell.  | Cell 2.               | Cell 3.              | Cell 4.               |
 
-> **Nota:** Você também pode encontrar esse código no GitHub em [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) ([veja ao vivo também](http://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
+> [!NOTE]
+> Você também pode encontrar esse código no GitHub em [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) ([veja ao vivo também](http://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
 
 ## Adicionar cabeçalhos com o elemento \<th>
 
@@ -320,13 +321,15 @@ Vamos tentar melhorar essa tabela.
 2. Para reconhecer os cabeçalhos de uma tabela como cabeçalhos, tanto visualmente como semanticamente, podemos usar o elemento **[`<th>`](/pt-BR/docs/Web/HTML/Element/th)** ('th' significa 'cabeçalho da tabela'). Ele funciona da mesma maneira que um `<td>`, exceto que denota um cabeçalho, e não uma célula normal. Abra o arquivo HTML, e mude todos os elementos `<td>` que envolvem os cabeçalhos das tabelas para o elemento `<th>`.
 3. Salve o HTML e abra em um navegador, e veja que os cabeçalhos agora se parecem mais com cabeçalhos.
 
-> **Nota:** Encontre esse exemplo pronto em [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) no GitHub ([veja ao vivo também](http://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
+> [!NOTE]
+> Encontre esse exemplo pronto em [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) no GitHub ([veja ao vivo também](http://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
 
 ### Por que os cabeçalhos são úteis?
 
 Já respondemos parcialmente essa pergunta - fica mais fácil encontrar os dados que estamos procurando quando o cabeçalho se destaca claramente, e o design simplesmente aparece mais bonito.
 
-> **Nota:** Cabeçalhos de tabelas têm alguns estilos padronizados — eles são fortes e centralizados mesmo que você não use nenhum estilo para a tabela, para ajudar a destacá-los.
+> [!NOTE]
+> Cabeçalhos de tabelas têm alguns estilos padronizados — eles são fortes e centralizados mesmo que você não use nenhum estilo para a tabela, para ajudar a destacá-los.
 
 Cabeçalhos de tabelas também têm um benefício extra - juntamente com o atributo `scope` (que vamos aprender no próximo artigo), eles permitem tornar as tabelas mais acessíveis associando cada cabeçalho com todos os dados em uma mesma linha ou coluna. Leitores de tela podem então ler em voz alta uma coluna ou linha inteira de dados de uma vez só, o que é muito mais útil.
 
@@ -384,13 +387,15 @@ Vamos usar `colspan` e `rowspan` para melhorar essa tabela.
 3. Por fim, use `rowspan` para fazer "Horse" e "Chicken" se estender por duas linhas.
 4. Salve e abra o código em um navegador para ver a melhoria.
 
-> **Nota:** Encontre o exemplo pronto em [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) no GitHub ([veja ao vivo também](http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
+> [!NOTE]
+> Encontre o exemplo pronto em [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) no GitHub ([veja ao vivo também](http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
 ## Provendo estilos comuns para colunas
 
 Existe uma última característica da qual vamos falar nesse artigo, antes de prosseguir. HTML tem um método de definir informação de estilo para uma coluna inteira de dados de uma só vez — o elemento **[`<col>`](/pt-BR/docs/Web/HTML/Element/col)** e **[`<colgroup>`](/pt-BR/docs/Web/HTML/Element/colgroup)**. Eles existem por que pode ser um pouco entediante e ineficiente ter de especificar o estilo de colunas - temos de especificar as informações de estilo para _cada_ `<td>` ou `<th>` da coluna, ou usar um seletor complexo como o {{cssxref(":nth-child()")}}.
 
-> **Nota:** Estilizar colunas dessa maneira está [limitada para umas poucas propriedades](https://www.w3.org/TR/CSS22/tables.html#columns): [`border`](/pt-BR/docs/Web/CSS/border), [`background`](/pt-BR/docs/Web/CSS/background), [`width`](/pt-BR/docs/Web/CSS/width), e [`visibility`](/pt-BR/docs/Web/CSS/visibility). Para ajustar outras propriedades devemos aplicar o estilo para cada `<td>` ou `<th>` da coluna, ou usar um seletor complexo como um {{cssxref(":nth-child()")}}.
+> [!NOTE]
+> Estilizar colunas dessa maneira está [limitada para umas poucas propriedades](https://www.w3.org/TR/CSS22/tables.html#columns): [`border`](/pt-BR/docs/Web/CSS/border), [`background`](/pt-BR/docs/Web/CSS/background), [`width`](/pt-BR/docs/Web/CSS/width), e [`visibility`](/pt-BR/docs/Web/CSS/visibility). Para ajustar outras propriedades devemos aplicar o estilo para cada `<td>` ou `<th>` da coluna, ou usar um seletor complexo como um {{cssxref(":nth-child()")}}.
 
 Veja o simples exemplo a seguir:
 

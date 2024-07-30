@@ -68,7 +68,8 @@ Note here how the HTML is displayed in the exact order in which it appears in th
 
 The elements that appear one below the other are described as _block_ elements, in contrast to _inline_ elements, which appear one beside the other, like the individual words in a paragraph.
 
-> **Nota:** The direction in which block element contents are laid out is described as the Block Direction. The Block Direction runs vertically in a language such as English, which has a horizontal writing mode. It would run horizontally in any language with a Vertical Writing Mode, such as Japanese. The corresponding Inline Direction is the direction in which inline contents (such as a sentence) would run.
+> [!NOTE]
+> The direction in which block element contents are laid out is described as the Block Direction. The Block Direction runs vertically in a language such as English, which has a horizontal writing mode. It would run horizontally in any language with a Vertical Writing Mode, such as Japanese. The corresponding Inline Direction is the direction in which inline contents (such as a sentence) would run.
 
 When you use CSS to create a layout, you are moving the elements away from the normal flow, but for many of the elements on your page the normal flow will create exactly the layout you need. This is why starting with a well-structured HTML document is so important, as you can then work with the way things are laid out by default rather than fighting against it.
 
@@ -160,7 +161,8 @@ As a simple example of this, we can add the {{cssxref("flex")}} property to all 
 
 {{ EmbedLiveSample('Flex_2', '300', '200') }}
 
-> **Nota:** This has been a very short introduction to what is possible in Flexbox, to find out more, see our [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox) article.
+> [!NOTE]
+> This has been a very short introduction to what is possible in Flexbox, to find out more, see our [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox) article.
 
 ## Grid Layout
 
@@ -250,7 +252,8 @@ Once you have a grid, you can explicitly place your items on it, rather than rel
 
 {{ EmbedLiveSample('Grid_2', '300', '330') }}
 
-> **Nota:** These two examples are just a small part of the power of Grid layout; to find out more see our [Grid Layout](/pt-BR/docs/Learn/CSS/CSS_layout/Grids) article.
+> [!NOTE]
+> These two examples are just a small part of the power of Grid layout; to find out more see our [Grid Layout](/pt-BR/docs/Learn/CSS/CSS_layout/Grids) article.
 
 The rest of this guide covers other layout methods, which are less important for the main layout structures of your page but can still help you achieve specific tasks. By understanding the nature of each layout task, you will soon find that when you look at a particular component of your design the type of layout best suited to it will often be clear.
 
@@ -316,7 +319,8 @@ p {
 
 {{ EmbedLiveSample('Float_1', '100%', 600) }}
 
-> **Nota:** Floats are fully explained in our lesson on the [float and clear](/pt-BR/docs/Learn/CSS/CSS_layout/Floats) properties. Prior to techniques such as Flexbox and Grid Layout floats were used as a method of creating column layouts. You may still come across these methods on the web; we will cover these in the lesson on [legacy layout methods](/pt-BR/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
+> [!NOTE]
+> Floats are fully explained in our lesson on the [float and clear](/pt-BR/docs/Learn/CSS/CSS_layout/Floats) properties. Prior to techniques such as Flexbox and Grid Layout floats were used as a method of creating column layouts. You may still come across these methods on the web; we will cover these in the lesson on [legacy layout methods](/pt-BR/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
 
 ## Positioning techniques
 
@@ -619,7 +623,8 @@ body {
 
 {{ EmbedLiveSample('Sticky_1', '100%', 200) }}
 
-> **Nota:** to find more out about positioning, see our [Positioning](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning) article.
+> [!NOTE]
+> to find more out about positioning, see our [Positioning](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning) article.
 
 ## Table layout
 

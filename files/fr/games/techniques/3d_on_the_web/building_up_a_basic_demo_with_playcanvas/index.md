@@ -19,7 +19,8 @@ PlayCanvas a publié quelques démos populaires présentant ses fonctionnalités
 
 ![](playcanvas-demos.png)
 
-> **Note :** Consultez la liste des [démos](https://playcanvas.com/explore) pour trouver plus d'exemples.
+> [!NOTE]
+> Consultez la liste des [démos](https://playcanvas.com/explore) pour trouver plus d'exemples.
 
 ## Moteur vs Éditeur
 

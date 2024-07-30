@@ -18,7 +18,8 @@ CSS スタイルシートで使用される画像をプログラムで生成す�
 
 ![ヘッダーの左下 3 分の 2 に「My Cool Header」と書かれたテキストと黄色の背景画像ブロック。](mycoolheader.png)
 
-> **メモ:** この記事の例全体の完全なソースは [https://github.com/mdn/dom-examples/tree/main/css-painting](https://github.com/mdn/dom-examples/tree/main/css-painting) にあり、例は [https://mdn.github.io/dom-examples/css-painting/](https://mdn.github.io/dom-examples/css-painting/) でライブで実行できます。
+> [!NOTE]
+> この記事の例全体の完全なソースは [https://github.com/mdn/dom-examples/tree/main/css-painting](https://github.com/mdn/dom-examples/tree/main/css-painting) にあり、例は [https://mdn.github.io/dom-examples/css-painting/](https://mdn.github.io/dom-examples/css-painting/) でライブで実行できます。
 
 ## CSS 描画ワークレット
 
@@ -421,7 +422,8 @@ CSS.paintWorklet.addModule("header-highlight.js");
 
 ## 引数を渡す
 
-> **メモ:** 次の例は、Chrome または Edge では `about://flags` にアクセスして、Experimental Web Platform features フラグを有効にする必要があります。
+> [!NOTE]
+> 次の例は、Chrome または Edge では `about://flags` にアクセスして、Experimental Web Platform features フラグを有効にする必要があります。
 
 CSS 描画 API を使用すると、カスタムプロパティや通常のプロパティにアクセスできるだけでなく、カスタム引数を `paint()` 関数に渡すこともできます。
 

@@ -77,7 +77,8 @@ const header = (
 );
 ```
 
-> **Nota:** Os parenteses no recorte de código anterior não são exclusivos ao JSX e não têm nenhum efeito na sua aplicação. Eles estão lá para sinalizar para você (e seu computador) que as múltiplas linhas de código dentro do mesmo são parte da mesma expressão. Você poderia muito bem escrever a expressão do cabeçalho do seguinte jeito:
+> [!NOTE]
+> Os parenteses no recorte de código anterior não são exclusivos ao JSX e não têm nenhum efeito na sua aplicação. Eles estão lá para sinalizar para você (e seu computador) que as múltiplas linhas de código dentro do mesmo são parte da mesma expressão. Você poderia muito bem escrever a expressão do cabeçalho do seguinte jeito:
 >
 > ```js
 > const header = (
@@ -142,7 +143,8 @@ Isto criará a pasta `moz-todo-react`, e também faz mais algumas coisas dentro 
 - Cria a estrutura de arquivos e pastas que define a arquitetura básica do aplicativo.
 - Inicializa o diretório como um _repositório git_, se você tem o _git_ instalado em seu computador.
 
-> **Nota:** Se você tem o gerenciador de pacotes _Yarn_ instalado, _create-react-app_ vai utilizá-lo por padrão em vez de utilizar o _npm_. Se você tem ambos gerenciadores de pacotes instalados e explicitamente quer utilizar o NPM, você pode adicionar a opção `--use-npm` quando você executar o _create-react-app_:
+> [!NOTE]
+> Se você tem o gerenciador de pacotes _Yarn_ instalado, _create-react-app_ vai utilizá-lo por padrão em vez de utilizar o _npm_. Se você tem ambos gerenciadores de pacotes instalados e explicitamente quer utilizar o NPM, você pode adicionar a opção `--use-npm` quando você executar o _create-react-app_:
 >
 > ```bash
 > npx create-react-app moz-todo-react --use-npm
@@ -321,7 +323,8 @@ A linha 7 invoca a função `ReactDOM.render()` com dois argumentos:
 
 Tudo isso diz para o React que nós queremos renderizar nossa aplicação React como o componente `App` como a raíz do app, ou o primeiro componente.
 
-> **Nota:** No JSX, componentes React e elementos HTML precisam ter barras de fechamento. Escrever apenas `<App>` ou apenas `<img>` irá causar um erro.
+> [!NOTE]
+> No JSX, componentes React e elementos HTML precisam ter barras de fechamento. Escrever apenas `<App>` ou apenas `<img>` irá causar um erro.
 
 [Service Workers](/pt-BR/docs/Web/API/Service_Worker_API/Using_Service_Workers) são pedaços interessantes de código que ajudam na perfomance da aplicação e permitem a utilização de características de aplicações Web modernas, como o funcionamento _offline_, porém estes não estão no escopo deste artigo. Você pode deletar a linha 5, como também as linhas 9 até a 12.
 

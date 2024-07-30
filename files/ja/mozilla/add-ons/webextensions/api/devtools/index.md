@@ -24,7 +24,8 @@ l10n:
 
 {{Compat}}
 
-> **メモ:** この API は Chromium の [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv2/devtools/) API に基づいています。
+> [!NOTE]
+> この API は Chromium の [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv2/devtools/) API に基づいています。
 >
 > Microsoft Edge の互換性データは、 Microsoft Corporation によって提供され、 Creative Commons Attribution 3.0 United States License の下でここに記載されています。
 
