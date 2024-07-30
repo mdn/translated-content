@@ -38,7 +38,7 @@ new Intl.DisplayNames(locales, options)
         - `"none"`
           - : `undefined`을 반환합니다.
     - `languageDisplay` {{optional_inline}}
-      - : How language names should be displayed. Only usable along with `type: "language"`. 가능한 값은 다음과 같습니다.
+      - : 언어가 표시되어야 할 방법입니다. `type: "language"`와 함께 할때만 사용 가능합니다. 가능한 값은 다음과 같습니다.
         - `"dialect"` (default)
           - : 특수 지역 방언은 고유한 이름을 사용하여 표시합니다. 예: `"nl-BE"`는 `"플랑드르어"`로 표시됩니다.
         - `"standard"`
