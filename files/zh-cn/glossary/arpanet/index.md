@@ -11,7 +11,7 @@ l10n:
 
 ## 参见
 
+- 维基百科上的[高级研究计划局网络](https://zh.wikipedia.org/wiki/ARPANET)
 - 相关术语：
   - {{Glossary("arpa", ".arpa")}}
   - {{Glossary("TCP")}}
-- 维基百科上的[高级研究计划局网络](https://zh.wikipedia.org/wiki/ARPANET)
