@@ -2,7 +2,7 @@
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: a4675b9077ae32f989c7ecac94f454db2653c4fc
 ---
 
 {{JSRef}}
@@ -30,7 +30,7 @@ promiseInstance.catch(onRejected)
 
 ## 설명
 
-`catch` 메서드는 프로미스 구성에서 오류 처리에 사용됩니다. {{jsxref("Promise")}}를 반환하기 때문에, 자매 메서드인 {{jsxref("Promise/then", "then()")}}과 같은 방식으로 체이닝할 수 있습니다.
+`catch` 메서드는 프로미스 구성에서 오류 처리에 사용됩니다. {{jsxref("Promise")}}를 반환하기 때문에, 자매 메서드인 {{jsxref("Promise/then", "then()")}}과 같은 방식으로 [체이닝할 수 있습니다](/ko/docs/Web/JavaScript/Guide/Using_promises#chaining_after_a_catch).
 
 프로미스가 거부되고, 호출할 거부 핸들러가 없는 경우(핸들러는 {{jsxref("Promise/then", "then()")}}, `catch()`, 또는 {{jsxref("Promise/finally", "finally()")}}를 통해 연결될 수 있습니다), 거부 이벤트는 호스트에 의해 표면화됩니다. 브라우저에서는 이로 인해 [`unhandledrejection`](/ko/docs/Web/API/Window/unhandledrejection_event) 이벤트가 발생합니다. 이미 처리되지 않은 거부 이벤트를 발생시킨 거부된 프로미스에 핸들러가 연결되면, 다른 [`rejectionhandled`](/ko/docs/Web/API/Window/rejectionhandled_event) 이벤트가 발생합니다.
 
@@ -126,7 +126,7 @@ const p2 = new Promise((resolve, reject) => {
 });
 
 p2.catch((e) => {
-  console.error(e); // This is never called
+  console.error(e); // 절대 호출 안됨
 });
 ```
 
