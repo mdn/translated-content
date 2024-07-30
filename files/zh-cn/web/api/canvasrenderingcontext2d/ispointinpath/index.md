@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.isPointInPath()`** 方法用于判断在当前路径中是否包含指定点。
+Canvas 2D API 的 **`CanvasRenderingContext2D.isPointInPath()`** 方法用于判断当前路径中是否包含指定点。
 
 ## 语法
 
@@ -48,7 +48,7 @@ isPointInPath(path, x, y, fillRule)
 
 ```html
 <canvas id="canvas"></canvas>
-<p>In path: <code id="result">false</code></p>
+<p>在路径内：<code id="result">否</code></p>
 ```
 
 #### JavaScript
@@ -60,7 +60,7 @@ const result = document.getElementById("result");
 
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
-result.innerText = ctx.isPointInPath(30, 70);
+result.innerText = ctx.isPointInPath(30, 70) ? "是" : "否";
 ```
 
 #### 结果
@@ -69,7 +69,7 @@ result.innerText = ctx.isPointInPath(30, 70);
 
 ### 检查特定路径中的点
 
-这个例子在鼠标移动时检测光标是否在一个圆形的 `Path2D` 路径内。如果是，圆形变为绿色，否则为红色。
+此示例在鼠标移动时检测光标是否在一个圆形的 `Path2D` 路径内。如果是，圆形变为绿色，否则为红色。
 
 #### HTML
 
@@ -83,15 +83,15 @@ result.innerText = ctx.isPointInPath(30, 70);
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-// 创建圆形路径
+// 创建圆形
 const circle = new Path2D();
 circle.arc(150, 75, 50, 0, 2 * Math.PI);
 ctx.fillStyle = "red";
 ctx.fill(circle);
 
-// 监听鼠标移动事件
+// 监听鼠标移动
 canvas.addEventListener("mousemove", (event) => {
-  // 检查鼠标位置是否在圆形路径内
+  // 检查鼠标位置是否在圆形内
   const isPointInPath = ctx.isPointInPath(circle, event.offsetX, event.offsetY);
   ctx.fillStyle = isPointInPath ? "green" : "red";
 
