@@ -52,12 +52,8 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 最後に `ResultObject` が持つ instance メンバーにアクセスして、エクスポートされた関数を実行しています。
 
-<<<<<<< Updated upstream
 > [!NOTE]
-> これを動作するようにするには、サーバが `.wasm` ファイルを `application/wasm` の MIME タイプで返す必要があります。
-=======
-> **メモ:** これを動作するようにするには、サーバーが `.wasm` ファイルを `application/wasm` の MIME タイプで返す必要があります。
->>>>>>> Stashed changes
+> これを動作するようにするには、サーバーが `.wasm` ファイルを `application/wasm` の MIME タイプで返す必要があります。
 
 ## 仕様書
 
