@@ -82,13 +82,15 @@ El atributo `placeholder` es una cadena de texto que proporciona una pista corta
 
 Si el controlador de contenido tiene una direccionalidad ({{Glossary("LTR")}} o {{Glossary("RTL")}}), pero necesitas presentar el marcador de posición en la direccionalidad opuesta, puedes usar el algoritmo bidireccional para formatear caracteres Unicode para sobreescribir la direccionalidad del marcador de posición; véase [Cómo usar los controles Unicode para texto bidireccional](https://www.w3.org/International/questions/qa-bidi-unicode-controls) para más información.
 
-> **Nota:** Evita usar el atributo `placeholder` si puedes. No es semánticamente útil como otras formas de explicar tu formulario, y puede causar problemas técnicos imprevisto con tu contenido. Véase [Marcadores y parámetros de ejemplo](/es/docs/Web/HTML/Element/input#marcadores_y_parámetros_de_ejemplo) para más información.
+> [!NOTE]
+> Evita usar el atributo `placeholder` si puedes. No es semánticamente útil como otras formas de explicar tu formulario, y puede causar problemas técnicos imprevisto con tu contenido. Véase [Marcadores y parámetros de ejemplo](/es/docs/Web/HTML/Element/input#marcadores_y_parámetros_de_ejemplo) para más información.
 
 ### `readonly`
 
 Un atributo booleano el cual, si está presente, expresa que este campo no puede ser editado por el usuario. Este `value` puede todavía cambiarse con JavaScript directamente estableciendo la propiedad {{domxref("HTMLInputElement")}} `value`.
 
-> **Nota:** A causa de que una entrada de solo lectura no puede tener un valor, `required` no tiene ningún efecto en entradas con el atributo `readonly`.
+> [!NOTE]
+> A causa de que una entrada de solo lectura no puede tener un valor, `required` no tiene ningún efecto en entradas con el atributo `readonly`.
 
 ### `step`
 
@@ -96,7 +98,8 @@ El atributo `step` es un número que especifica la granularidad a la que debe ad
 
 Un valor de cadena `any` significa que ningún escalonado es implicado, y cualquier valor es permitido (salvo otras restricciones, tales como [`min`](#min) and [`max`](#max)).
 
-> **Nota:** Cuando los datos ingresados por el usuario no se adhieran a la configuración de escalonado, el _{{Glossary("user agent","user-agent")}}_ puede redondear al valor válido más cercano, prefiriendo números en la dirección positiva cuando hayan dos opciones igualmente cercanas.
+> [!NOTE]
+> Cuando los datos ingresados por el usuario no se adhieran a la configuración de escalonado, el _{{Glossary("user agent","user-agent")}}_ puede redondear al valor válido más cercano, prefiriendo números en la dirección positiva cuando hayan dos opciones igualmente cercanas.
 
 El valor por omisión para entradas `number` es `1`, permitiendo solo ingresar números enteros, _a menos que_ la base del escalonado no sea un entero.
 
@@ -110,9 +113,11 @@ La entrada de tipo `number` solo debe usarse para números incrementales, especi
 
 Los elementos `<input type="number">` pueden ayudar a simplificar tu trabajo cuando construyes la interfaz de usuario y la lógica para introducir números en un formulario. Cuando creas una entrada con el valor de `type` adecuado, `number`, consigues validación automática de que el texto introducido es un número y usualmente un conjunto de botones arriba/abajo para incrementar o disminuir el valor.
 
-> **Advertencia:** Ten en mente que, lógicamente, no deberías poder ingresar otros caracteres que no sean números dentro de una entrada numérica. Parece haber algo de desacuerdo acerca de esto entre navegadores; ver [Error 1398528 en Firefox](https://bugzil.la/1398528).
+> [!WARNING]
+> Ten en mente que, lógicamente, no deberías poder ingresar otros caracteres que no sean números dentro de una entrada numérica. Parece haber algo de desacuerdo acerca de esto entre navegadores; ver [Error 1398528 en Firefox](https://bugzil.la/1398528).
 
-> **Nota:** Un usuario puede jugar con tu HTML tras bambalinas, así que tu sitio _no debe_ usar validación simple del lado del cliente para ningún fin de seguridad. Tú _debes_ verificar en el lado del servidor cualquier transacción en la cual el valor provisto pueda tener alguna implicación de seguridad de cualquier tipo.
+> [!NOTE]
+> Un usuario puede jugar con tu HTML tras bambalinas, así que tu sitio _no debe_ usar validación simple del lado del cliente para ningún fin de seguridad. Tú _debes_ verificar en el lado del servidor cualquier transacción en la cual el valor provisto pueda tener alguna implicación de seguridad de cualquier tipo.
 
 Los navegadores de móviles ayudan más con la experiencia de usuario mostrando un teclado especial mejor adaptado para ingresar números cuando el usuario intenta ingresar un valor.
 
@@ -129,7 +134,8 @@ En su forma más básica, una entrada numérica puede ser implementada así:
 
 Una entrada numérica es considerada válida cuando está vacía y cuando un único número es ingresado, pero en cualquier otro caso es inválida. Si el atributo [`required`](/es/docs/Web/HTML/Element/input#required) es usado, la entrada ya no es considerada válida cuando está vacía.
 
-> **Nota:** Cualquier número es un valor aceptable, en la medida de que sea un [número de coma flotante válido](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number), es decir, que no sea [NaN](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN) o [Infinity](/es/docs/Web/JavaScript/Reference/Global_Objects/Infinity).
+> [!NOTE]
+> Cualquier número es un valor aceptable, en la medida de que sea un [número de coma flotante válido](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number), es decir, que no sea [NaN](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN) o [Infinity](/es/docs/Web/JavaScript/Reference/Global_Objects/Infinity).
 
 ### Marcadores de posición (Placeholders)
 
@@ -283,7 +289,8 @@ Aquí utilizamos las pseudoclases {{cssxref(":invalid")}} y {{cssxref(":valid")}
 
 Lo colocamos en un elemento separado `<span>` para mayor flexibilidad. Algunos navegadores no muestran contenido generado muy eficientemente en algunos tipos o entradas de formulario. (Lee, por ejemplo, la sección sobre [validación `<input type="date">`](/es/docs/Web/HTML/Element/input/date#validation)).
 
-> **Advertencia:** ¡La validación de formularios HTML _no_ es subtituye la validación del lado del servidor que asegura que los datos estén en el formato apropiado!
+> [!WARNING]
+> ¡La validación de formularios HTML _no_ es subtituye la validación del lado del servidor que asegura que los datos estén en el formato apropiado!
 >
 > Es demasiado fácil para alguien hacer ajustes al HTML que le permitan evitar la validación o removerla completamente. También es posible para alguien evadir tu HTML y enviar los datos directamente a tu servidor.
 >
@@ -417,7 +424,8 @@ Después de declarar unas pocas variables, un manejador de eventos es agregado a
 
 (Fíjate que aquí no estamos convirtiendo de aquí para allá entre metros y pies/pulgadas, lo que probablemente haría una aplicación web en la vida real.)
 
-> **Nota:** Cuando el usuario haga clic en el botón, el atributo `required` de la(s) entradas que estemos ocultando son removidos, y vaciará `value`. Así nos aseguramos que el formulario puede ser enviado si ambos conjuntos de entradas no están llenas. También asegura que el formulario no enviará datos que el usuario no quiere.
+> [!NOTE]
+> Cuando el usuario haga clic en el botón, el atributo `required` de la(s) entradas que estemos ocultando son removidos, y vaciará `value`. Así nos aseguramos que el formulario puede ser enviado si ambos conjuntos de entradas no están llenas. También asegura que el formulario no enviará datos que el usuario no quiere.
 >
 > ¡Si no hiciera eso, tendrías que llenar ambos pies/pulgadas **y** metros para enviar el formulario!
 

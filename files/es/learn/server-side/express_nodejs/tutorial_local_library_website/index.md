@@ -72,7 +72,8 @@ A medida que avance, le proporcionaremos los fragmentos de codigo adecuado para 
 
 Si aun asi sigues atasaco, puedes encontrar la version completamente desarrollada del sitio web [en Github aqui](https://github.com/mdn/express-locallibrary-tutorial).
 
-> **Nota:** Las versiones especificas de node, Express, y los otros modulos con los que se probó esta documentación estan enumeradas en el projecto [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json).
+> [!NOTE]
+> Las versiones especificas de node, Express, y los otros modulos con los que se probó esta documentación estan enumeradas en el projecto [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json).
 
 ## Resumen
 

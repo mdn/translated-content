@@ -68,7 +68,8 @@ var myNumber = Math.random();
 
 ...nós usamos uma função!
 
-> **Nota:** Fique a vontade para inserir essas linhas no console JavaScript do navegador para refamiliarizar-se com suas funcionalidades, se necessário.
+> [!NOTE]
+> Fique a vontade para inserir essas linhas no console JavaScript do navegador para refamiliarizar-se com suas funcionalidades, se necessário.
 
 A linguagem JavaScript tem muitas funções embutidas que o permitem fazer coisas úteis sem que você mesmo tenha que escrever aquele código. De fato, alguns dos códigos que você está chamando quando você **invoca** (uma palavra rebuscada para rodar, ou executar) uma função embutida de navegador não poderia ser escrita em JavaScript — muitas dessa funções são chamadas a partes de código base do navegador, que é escrita grandemente em linguages de sistema de baixo nível como C++, não linguagem Web como JavaScript.
 
@@ -208,7 +209,8 @@ myButton.onclick = function () {
 
 Algumas funções requerem **parâmetros** a ser especificado quando você está invocando-os — esses são valores que precisam ser inclusos dentro dos parênteses da função, o que é necessário para fazer seu trabalho apropriado.
 
-> **Nota:** Parâmetros algumas vezes são chamados de argumentos, propriedades, ou até atributos.
+> [!NOTE]
+> Parâmetros algumas vezes são chamados de argumentos, propriedades, ou até atributos.
 
 Como um exemplo, a função embutida de navegador [Math.random()](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/random) não requer nenhum parâmetro. Quando chamada, ela sempre retorna um número aleatório entre 0 e 1:
 
@@ -223,7 +225,8 @@ var myText = "I am a string";
 var newString = myText.replace("string", "sausage");
 ```
 
-> **Nota:** Quando você precisa especificar multiplos parâmetros, eles são separados por vígulas.
+> [!NOTE]
+> Quando você precisa especificar multiplos parâmetros, eles são separados por vígulas.
 
 Nota-se também que algumas vezes os parâmetros são opcionais — você não tem que especificá-los. Se você não o faz, a função geralmente adota algum tipo de comportamento padrão. Como exemplo, a função [join()](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join) tem parâmetro opcional:
 
@@ -274,7 +277,8 @@ function greeting() {
 
 Ambas as funções que você quer chamar são chamadas `greeting()`, mas você só pode acessar o arquivo `second.js` da função `greeting()` — Ele é aplicado no HTML depois no código fonte, então suas variáveis e funções sobrescrevem as de `first.js`.
 
-> **Nota:** Você pode ver este exemplo [rodando no GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (veja também [o código fonte](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)).
+> [!NOTE]
+> Você pode ver este exemplo [rodando no GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (veja também [o código fonte](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)).
 
 Manter parte de seus código trancada em funções evita tais problemas, e é considerado boa prática.
 
@@ -376,9 +380,11 @@ Vamos observar um exemplo real para mostrar escopo.
 
    Desta vez as chamadas de `a()` e `b()` retornaram o irritante erro "[ReferenceError: z is not defined](/pt-BR/docs/Web/JavaScript/Reference/Errors/Not_defined)" — isto porque a chamada de `output()` e as variáveis que eles estão tentando imprimir não estão definidas dentro do mesmo escopo das funções — as variáveis são efetivamente invisíveis aquelas chamadas de função.
 
-> **Nota:** As mesmas regras de escopo não se aplicam a laços (ex.: `for() { ... }`) e blocos condicionais (ex.: `if() { ... }`) — eles parecem muito semelhantes, mas eles não são a mesma coisa! Tome cuidado para não confudir-se.
+> [!NOTE]
+> As mesmas regras de escopo não se aplicam a laços (ex.: `for() { ... }`) e blocos condicionais (ex.: `if() { ... }`) — eles parecem muito semelhantes, mas eles não são a mesma coisa! Tome cuidado para não confudir-se.
 
-> **Nota:** O erro [ReferenceError: "x" is not defined](/pt-BR/docs/Web/JavaScript/Reference/Errors/Not_defined) é um dos mais comuns que você encontrará. Se você receber este erro e tem certeza que definiu a variável em questão, cheque em que escopo ela está.
+> [!NOTE]
+> O erro [ReferenceError: "x" is not defined](/pt-BR/docs/Web/JavaScript/Reference/Errors/Not_defined) é um dos mais comuns que você encontrará. Se você receber este erro e tem certeza que definiu a variável em questão, cheque em que escopo ela está.
 
 ### Funções dentro de funções
 
