@@ -39,7 +39,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 
 {{WebExtExamples}}
 
-> **備註：** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage#property-local) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage#property-local) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

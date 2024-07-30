@@ -104,7 +104,8 @@ Algumas tarefas comuns no desenvolvimento web não são suportadas diretamente p
 
 O _Express_ é bastante minimalista, no entanto, os desenvolvedores têm liberdade para criar pacotes de middleware específicos com o objetivo de resolver problemas específicos que surgem no desenvolvimento de uma aplicação. Há bibliotecas para trabalhar com cookies, sessões, login de usuários, parâmetros de URL, dados em requisições POST, cabeçalho de segurança e tantos outros. Você pode achar uma lista de pacotes de middleware mantidos pela equipe Express em [Express Middleware](http://expressjs.com/en/resources/middleware.html) (juntamente com uma lista de pacotes populares desenvolvidos por terceiros).
 
-> **Nota:** Essa flexibilidade do Express é uma espada de dois gumes. Há pacotes de middleware para resolver quase qualquer problema ou requisito ao longo do desenvolvimento, mas utilizar os pacotes corretos para cada situação às vezes se torna um grande desafio. Não há "caminho certo" para estruturar um aplicativo. Muitos exemplos que você encontra na Internet não são bons ou mostram apenas uma pequena parte do que você precisa fazer para desenvolver uma aplicação web.
+> [!NOTE]
+> Essa flexibilidade do Express é uma espada de dois gumes. Há pacotes de middleware para resolver quase qualquer problema ou requisito ao longo do desenvolvimento, mas utilizar os pacotes corretos para cada situação às vezes se torna um grande desafio. Não há "caminho certo" para estruturar um aplicativo. Muitos exemplos que você encontra na Internet não são bons ou mostram apenas uma pequena parte do que você precisa fazer para desenvolver uma aplicação web.
 
 ## De onde o Node e o Express vieram?
 
@@ -198,7 +199,8 @@ var square = require("./square"); // Chamamos o arquivo utilizando o require()
 console.log("The area of a square with a width of 4 is " + square.area(4));
 ```
 
-> **Nota:** Você também pode especificar um caminho absoluto para o módulo (ou um nome, como fizemos inicialmente).
+> [!NOTE]
+> Você também pode especificar um caminho absoluto para o módulo (ou um nome, como fizemos inicialmente).
 
 Se você deseja exportar um objeto completo em uma atribuição, em vez de criar uma propriedade de cada vez, atribua ao module.exports como mostrado abaixo (você também pode fazer isso para tornar a raiz do objeto exporter um construtor ou outra função):
 
@@ -290,7 +292,8 @@ router.get("/about", function (req, res) {
 module.exports = router;
 ```
 
-> **Nota:** Adicionar rotas ao objeto `Router` é como adicionar rotas ao objeto `app` (como mostrado anteriormente).
+> [!NOTE]
+> Adicionar rotas ao objeto `Router` é como adicionar rotas ao objeto `app` (como mostrado anteriormente).
 
 Para usar o roteador em nosso arquivo de aplicativo principal, então, `require()` o módulo de rota (**wiki.js**) e depois `use()` no aplicativo Express para adicionar o Router ao caminho de gerenciamento de middleware. As duas rotas serão acessíveis a partir de `/wiki/` e `/wiki/about/`.
 
@@ -306,7 +309,8 @@ Vamos mostrar-lhe muito mais sobre trabalhar com rotas e, em particular, sobre o
 
 O Middleware é usado extensivamente em aplicativos Express para que as tarefas ofereçam arquivos estáticos ao tratamento de erros, a comprensão de respostas HTTP. Enquanto as funções de rota terminam o ciclo de solicitação-resposta HTTP, retornando alguma resposta ao cliente HTTP, as funções de middleware normalmente executam alguma operação na solicitação ou resposta e, em seguida, ligue para a próxima função na "pilha", que pode ser mais um middleware ou uma rota manipuladora. A ordem em que o middleware é chamado depende do desenvolvedor do aplicativo.
 
-> **Nota:** O middleware pode executar qualquer operação, executar qualquer código, fazer alterações no objeto de solicitação e resposta, e também pode encerrar o ciclo de solicitação-resposta. Se não terminar o ciclo, ele deve chamar o `next()` para passar o controle para a próxima função de middleware (ou a solicitação ficará pendurada).
+> [!NOTE]
+> O middleware pode executar qualquer operação, executar qualquer código, fazer alterações no objeto de solicitação e resposta, e também pode encerrar o ciclo de solicitação-resposta. Se não terminar o ciclo, ele deve chamar o `next()` para passar o controle para a próxima função de middleware (ou a solicitação ficará pendurada).
 
 A maioria dos aplicativos usará middleware de terceiros para simplificar tarefas comuns de desenvolvimento web, como trabalhar com cookies, sessões, autenticação de usuários, acessar dados `POST` e JSON, log, etc. Você pode encontrar uma [lista de pacotes de middleware](http://expressjs.com/en/resources/middleware.html) mantidos pela equipe Express (que também inclui outros pacotes populares de terceiros). Outros pacotes Express estão disponíveis no gerenciador de pacotes do NPM.
 
@@ -326,7 +330,8 @@ app.use(logger('dev'));
 ...
 ```
 
-> **Nota:** O middleware e as funções de roteamento são chamadas na ordem em que são declaradas. Para alguns middleware, a ordem é importante (por exemplo, se o middleware de sessão depende do middleware de cookies, então o manipulador de cookies deve ser adicionado primeiro). É quase sempre o caso em que o middleware é chamado antes de definir rotas, ou seus manipuladores de rotas não terão acesso à funcionalidade adicionada pelo seu middleware.
+> [!NOTE]
+> O middleware e as funções de roteamento são chamadas na ordem em que são declaradas. Para alguns middleware, a ordem é importante (por exemplo, se o middleware de sessão depende do middleware de cookies, então o manipulador de cookies deve ser adicionado primeiro). É quase sempre o caso em que o middleware é chamado antes de definir rotas, ou seus manipuladores de rotas não terão acesso à funcionalidade adicionada pelo seu middleware.
 
 Você pode escrever suas próprias funções de middleware. É provável que você tenha que fazê-lo (somente para criar código de manipulação de erro). A única diferença entre uma função de middleware e um retorno de chamada de manipulador de rotas é que as funções de middleware têm um terceiro argumento `next`, que as funções de middleware devem chamar se não completam o ciclo de solicitação (quando a função de middleware é chamada, isso contém a próxima função que deve ser chamado).
 
@@ -415,9 +420,11 @@ Isso pode retornar qualquer conteúdo exigido, mas deve ser chamado depois de to
 
 Express vem com um manipulador de erros embutido, que cuida de todos os erros que podem ser encontrados no aplicativo. Essa função de middleware de gerenciamento de erros padrão é adicionada no final da pilha de funções do middleware. Se você passar um erro para `next()` e você não lidar com isso em um manipulador de erro, ele será tratado pelo manipulador de erros incorporado; o erro será gravado no cliente com o rastreamento da pilha.
 
-> **Nota:** O rastreamento da pilha não está incluído no ambiente de produção. Para executá-lo no modo de produção, você precisa configurar a variável de ambiente `NODE_ENV` para `'production'`.
+> [!NOTE]
+> O rastreamento da pilha não está incluído no ambiente de produção. Para executá-lo no modo de produção, você precisa configurar a variável de ambiente `NODE_ENV` para `'production'`.
 
-> **Nota:** HTTP404 e outros códigos de status de "erro" não são tratados como erros. Se você quiser lidar com isso, você pode adicionar uma função de middleware para fazê-lo. Para mais informações, consulte as [FAQ](http://expressjs.com/en/starter/faq.html#how-do-i-handle-404-responses).
+> [!NOTE]
+> HTTP404 e outros códigos de status de "erro" não são tratados como erros. Se você quiser lidar com isso, você pode adicionar uma função de middleware para fazê-lo. Para mais informações, consulte as [FAQ](http://expressjs.com/en/starter/faq.html#how-do-i-handle-404-responses).
 
 Para obter mais informações, consulte [Gerenciamento de erros](http://expressjs.com/en/guide/error-handling.html) (Express docs).
 

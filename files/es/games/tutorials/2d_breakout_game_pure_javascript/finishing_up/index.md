@@ -92,7 +92,8 @@ Ya hemos terminado. ¡La versión final del juego está lista para publicar!
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/9temh0ta/","","320")}}
 
-> **Nota:** cambia el número de vidas y el ángulo de la trayectoria de la bola cuando golpea la paleta.
+> [!NOTE]
+> Cambia el número de vidas y el ángulo de la trayectoria de la bola cuando golpea la paleta.
 
 ## Game over - de momento!
 

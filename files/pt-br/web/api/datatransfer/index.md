@@ -93,7 +93,8 @@ Guarda uma lista dos tipos de formato dos dados que estão armazenados para o pr
 
 O estado do cursor de drag. Isto é usado principalmente para controlar o cursor durante a guia de drag.
 
-> **Nota:** Esse método está atualmente implementado somento no Windows.
+> [!NOTE]
+> Esse método está atualmente implementado somento no Windows.
 
 #### Valores possíveis
 
@@ -102,25 +103,29 @@ O estado do cursor de drag. Isto é usado principalmente para controlar o cursor
 - `default`
   - : Utiliza o comportamento padrão Gecko, que é definir o cursor para uma seta durante a operação de arrastar.
 
-> **Nota:** Se você especificar qualquer valor diferente de "default", "auto" é assumido.
+> [!NOTE]
+> Se você especificar qualquer valor diferente de "default", "auto" é assumido.
 
 ### mozItemCount
 
 O número de ítens sendo arrastados.
 
-> **Nota:** Essa propriedade é específica Gecko.
+> [!NOTE]
+> Essa propriedade é específica Gecko.
 
 ### mozSourceNode
 
 O {{ domxref("Node") }} sobre o qual o cursor do mouse estava localizado quando o botão foi pressionado para iniciar a operação de arrastar. O valor é `null` para drags externos ou se o elmento não pode acessar o node.
 
-> **Nota:** Essa propriedade é específica Gecko.
+> [!NOTE]
+> Essa propriedade é específica Gecko.
 
 ### mozUserCancelled
 
 Essa propriedade é aplicada apenas no evento `dragend`, e é `true` se o usuário cancelar a operação de arrastar pressionando escape (esc). Será `false` em qualquer outro caso, incluindo se a operação de arrastar falhar por algum motivo, por exemplo devido a ação de soltar em um local inválido.
 
-> **Nota:** Essa propriedade é específica Gecko.
+> [!NOTE]
+> Essa propriedade é específica Gecko.
 
 ## Methods
 
@@ -222,7 +227,8 @@ If the last format for the item is removed, the entire item is removed, reducing
 
 If the `format` list is empty, then the data associated with all formats is removed. If the format is not found, then this method has no effect.
 
-> **Nota:** This method is Gecko-specific.
+> [!NOTE]
+> This method is Gecko-specific.
 
 ```
  void mozClearDataAt(
@@ -242,7 +248,8 @@ If the `format` list is empty, then the data associated with all formats is remo
 
 Retrieves the data associated with the given format for an item at the specified index, or null if it does not exist. The index should be in the range from zero to the number of items minus one.
 
-> **Nota:** This method is Gecko-specific.
+> [!NOTE]
+> This method is Gecko-specific.
 
 ```
  nsIVariant mozGetDataAt(
@@ -266,7 +273,8 @@ Data should be added in order of preference, with the most specific format added
 
 The data should be either a string, a primitive boolean or number type (which will be converted into a string) or an `nsISupports`.
 
-> **Nota:** This method is Gecko-specific.
+> [!NOTE]
+> This method is Gecko-specific.
 
 ```
  void mozSetDataAt(
@@ -289,7 +297,8 @@ The data should be either a string, a primitive boolean or number type (which wi
 
 Holds a list of the format types of the data that is stored for an item at the specified index. If the index is not in the range from 0 to the number of items minus one, an empty string list is returned.
 
-> **Nota:** This method is Gecko-specific.
+> [!NOTE]
+> This method is Gecko-specific.
 
 ```
  nsIVariant mozTypesAt(

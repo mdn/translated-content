@@ -37,7 +37,8 @@ El sitio de evaluación terminado debe tener este aspecto:
 
 Verá algunas diferencias/problemas con la visualización del estado inicial de la evaluación — esto se debe principalmente a las diferencias en el marcado, que a su vez causan algunos problemas de estilo, ya que el CSS no se aplica correctamente. No se preocupe, ¡estará solucionando estos problemas en las próximas secciones!
 
-> **Nota:** Si se queda atorado, pídanos ayuda — consulta la sección [Evaluación o más ayuda](/es/docs/Learn/Accessibility/Accessibility_troubleshooting#Assessment_or_further_help) en la parte inferior de esta página.
+> [!NOTE]
+> Si se queda atorado, pídanos ayuda — consulta la sección [Evaluación o más ayuda](/es/docs/Learn/Accessibility/Accessibility_troubleshooting#Assessment_or_further_help) en la parte inferior de esta página.
 
 ## Resumen del proyecto
 
@@ -53,7 +54,8 @@ El texto es difícil de leer debido al esquema de color actual. ¿Puede realizar
 2. ¿Puede actualizar el texto del artículo para facilitar la navegación de los usuarios del lector de pantalla?
 3. La parte del menú de navegación del sitio (limitada por `<div class="nav"></div>`) podría ser más accesible poniéndolo en un elemento semántico HTML5 adecuado. ¿A cuál debería actualizarse? Realice la actualización.
 
-> **Nota:** Tendrá que actualizar los selectores de reglas CSS que estilan las etiquetas a sus equivalentes adecuados para los encabezados semánticos. Una vez que agregue elementos de párrafo, notará que el estilo se ve mejor.
+> [!NOTE]
+> Tendrá que actualizar los selectores de reglas CSS que estilan las etiquetas a sus equivalentes adecuados para los encabezados semánticos. Una vez que agregue elementos de párrafo, notará que el estilo se ve mejor.
 
 ### Las imágenes
 

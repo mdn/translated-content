@@ -33,7 +33,8 @@ A segurança efetiva do site requer um esforço de design em todo o site: em sua
 
 O restante deste artigo fornece mais detalhes sobre algumas ameaças comuns e algumas das etapas simples que você pode executar para proteger seu site.
 
-> **Nota:** Este é um tópico introdutório projetado para ajudá-lo a começar a pensar na segurança do site, mas não é exaustivo.
+> [!NOTE]
+> Este é um tópico introdutório projetado para ajudá-lo a começar a pensar na segurança do site, mas não é exaustivo.
 
 ## Ameaças à segurança do site
 
@@ -43,7 +44,8 @@ Esta seção lista apenas algumas das ameaças mais comuns do site e como elas s
 
 XSS é um termo usado para descrever uma classe de ataques que permitem que um invasor injete scripts do lado do cliente _através_ do site nos navegadores de outros usuários. Como o código injetado chega ao navegador a partir do site, o código é _confiável_ e pode fazer coisas como enviar o cookie de autorização do site do usuário ao invasor. Quando o invasor possui o cookie, ele pode fazer login em um site como se fosse o usuário e fazer tudo que o usário pode, como acessar os detalhes do cartão de crédito, ver detalhes do contato ou alterar senhas.
 
-> **Nota:** As vulnerabilidades XSS têm sido historicamente mais comuns do que qualquer outro tipo de ameaça à segurança.
+> [!NOTE]
+> As vulnerabilidades XSS têm sido historicamente mais comuns do que qualquer outro tipo de ameaça à segurança.
 
 As vulnerabilidades do XSS são divididas em _refletidas_ e _persistentes_, de acordo como o site retorna os scripts injetados para um navegador.
 
@@ -78,7 +80,8 @@ A instrução modificada cria uma instrução SQL válida que exclui a tabela de
 
 Para evitar esse tipo de ataque, você deve garantir que os dados do usuário passados para uma consulta SQL não possam alterar a natureza da consulta. Uma maneira de fazer isso é utilizar '[escape](https://pt.wikipedia.org/wiki/Caractere_de_escape)' em todos os caracteres na entrada do usuário que tenham um significado especial no SQL.
 
-> **Nota:** A instrução SQL trata o caractere **'** como o início e o final de uma cadeia de caracteres literal. Ao colocar uma barra invertida na frente desse caractere (**\\'**), "escapamos" do símbolo e dizemos ao SQL para tratá-lo como um caractere (apenas uma parte da string).
+> [!NOTE]
+> A instrução SQL trata o caractere **'** como o início e o final de uma cadeia de caracteres literal. Ao colocar uma barra invertida na frente desse caractere (**\\'**), "escapamos" do símbolo e dizemos ao SQL para tratá-lo como um caractere (apenas uma parte da string).
 
 Na declaração a seguir, escapamos o caractere **'**. O SQL agora interpretará o nome como toda a string em negrito (que é um nome muito estranho, mas não prejudicial).
 
@@ -88,7 +91,8 @@ SELECT * FROM usarios WHERE name = 'a\';DROP TABLE usuarios; SELECT * FROM useri
 
 _Frameworks web_ geralmente cuidam do caractere que está escapando para você. O Django, por exemplo, garante que todos os dados do usuário passados para os conjuntos de consultas (consultas de modelo) sejam escapados.
 
-> **Nota:** Esta seção baseia-se fortemente nas informações da [Wikipedia](https://en.wikipedia.org/wiki/SQL_injection).
+> [!NOTE]
+> Esta seção baseia-se fortemente nas informações da [Wikipedia](https://en.wikipedia.org/wiki/SQL_injection).
 
 ### Cross-Site Request Forgery (CSRF)
 
@@ -100,7 +104,8 @@ Se um usuário clicar no botão enviar, uma solicitação HTTP `POST` será envi
 
 O resultado é que qualquer usuário que clicar no botão _Enviar_ enquanto estiver conectado ao site de negociação fará a transação. John fica rico.
 
-> **Nota:** O truque aqui é que John não precisa ter acesso aos cookies do usuário (ou credenciais de acesso). O navegador do usuário armazena essas informações e as inclui automaticamente em todas as solicitações ao servidor associado.
+> [!NOTE]
+> O truque aqui é que John não precisa ter acesso aos cookies do usuário (ou credenciais de acesso). O navegador do usuário armazena essas informações e as inclui automaticamente em todas as solicitações ao servidor associado.
 
 Uma maneira de impedir esse tipo de ataque é o servidor exigir que as solicitações `POST` incluam um segredo gerado pelo site específico do usuário. O segredo seria fornecido pelo servidor ao enviar o formulário da web usado para fazer transferências. Essa abordagem impede John de criar seu próprio formulário, uma vez que ele precisaria conhecer o segredo que o servidor está fornecendo ao usuário. Mesmo se descobrisse o segredo e criasse um formulário para um usuário específico, ele não seria mais capaz de usar o mesmo formulário para atacar todos os usuários.
 
@@ -122,7 +127,8 @@ Para obter uma lista abrangente das ameaças à segurança do site, consulte [Ca
 
 Quase todas as explorações de segurança nas seções anteriores são bem-sucedidas quando a aplicação web confia nos dados do navegador. Tudo o que você fizer para melhorar a segurança do seu site, você deve limpar todos os dados originados pelo usuário antes de serem exibidos no navegador, usados em consultas SQL ou passados para um sistema operacional ou para uma chamada do sistema de arquivos.
 
-> **Aviso:** Importante: A lição mais importante que você pode aprender sobre segurança do site é nunca confiar nos dados do navegador. Isso inclui, mas não se limita a dados nos parâmetros de URL de solicitações `GET`, `POST`, cabeçalhos HTTP, cookies e arquivos enviados por usuários. Sempre verifique e limpe todos os dados recebidos. Sempre assuma o pior.
+> [!WARNING]
+> Importante: A lição mais importante que você pode aprender sobre segurança do site é nunca confiar nos dados do navegador. Isso inclui, mas não se limita a dados nos parâmetros de URL de solicitações `GET`, `POST`, cabeçalhos HTTP, cookies e arquivos enviados por usuários. Sempre verifique e limpe todos os dados recebidos. Sempre assuma o pior.
 
 Uma série de outras etapas concretas que você pode executar são:
 

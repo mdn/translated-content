@@ -50,7 +50,8 @@ insertAdjacentElement(position, element)
 <!-- afterend -->
 ```
 
-> **备注：** 只有当节点处于 DOM 树中且有一个父元素时 `beforebegin` 和 `afterend` 才会生效。
+> [!NOTE]
+> 只有当节点处于 DOM 树中且有一个父元素时 `beforebegin` 和 `afterend` 才会生效。
 
 ## 示例
 

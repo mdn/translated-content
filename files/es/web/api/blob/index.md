@@ -28,7 +28,8 @@ Una forma fácil de construir un `Blob` es invocando el constructor {{domxref("B
 - {{domxref("Blob.slice()")}}
   - : `Regresa un nuevo objeto Blob` conteniendo los datos de un rango específico de bytes del origen del `Blob`.
 
-> **Nota:** Esté consciente que el método `slice()` posee prefijos propios del fabricante en algunos exploradores y versiones: `blob.mozSlice()` para Firefox 12 e inferior y `blob.webkitSlice()` en Safari. Una versión anterior del método `slice()`, sin prefijos del fabricante, tenía diferente semántica, y se encuentra obsoleto. El soporte para `blob.mozSlice()` ha sido eliminado a partir de Firefox 30.
+> [!NOTE]
+> Esté consciente que el método `slice()` posee prefijos propios del fabricante en algunos exploradores y versiones: `blob.mozSlice()` para Firefox 12 e inferior y `blob.webkitSlice()` en Safari. Una versión anterior del método `slice()`, sin prefijos del fabricante, tenía diferente semántica, y se encuentra obsoleto. El soporte para `blob.mozSlice()` ha sido eliminado a partir de Firefox 30.
 
 ## Ejemplos
 
@@ -50,7 +51,8 @@ oBuilder.append(aFileParts[0]);
 var oMyBlob = oBuilder.getBlob("text/xml"); // the blob
 ```
 
-> **Advertencia:** La interfaz {{ domxref("BlobBuilder") }} ofrece otra manera de crear `Blob`, pero se encuentra ahora obsoleta y no debería volverse a utilizar.
+> [!WARNING]
+> La interfaz {{ domxref("BlobBuilder") }} ofrece otra manera de crear `Blob`, pero se encuentra ahora obsoleta y no debería volverse a utilizar.
 
 ### Ejemplo para crear una URL en un arreglo tipado utilizando un blob
 

@@ -85,7 +85,8 @@ Puedes añadir propiedades usando las DevTools. ¿Te has dado cuenta de que quiz
 
 ![La ventana DevTools, que añade una propiedad nueva a las reglas, con el autocompletado para font-open](inspecting3-font-size.png)
 
-> **Nota:** También hay otras funciones útiles en la vista de reglas; por ejemplo, las declaraciones con valores no válidos están tachadas. Puedes obtener más información en [Examinar y editar CSS](/es/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS).
+> [!NOTE]
+> También hay otras funciones útiles en la vista de reglas; por ejemplo, las declaraciones con valores no válidos están tachadas. Puedes obtener más información en [Examinar y editar CSS](/es/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS).
 
 ## Comprender el modelo de cajas
 
@@ -101,7 +102,8 @@ El elemento con una clase `box2` usa `border-box`, por lo que aquí el área de 
 
 ![La ventana de diseño de DevTools](inspecting4-box-model.png)
 
-> **Nota:** Descubre más en [Examinar e inspeccionar el modelo de cajas](/es/docs/Tools/Page_Inspector/How_to/Examinar_y_editar_el_modelo_de_cajasmodel).
+> [!NOTE]
+> Descubre más en [Examinar e inspeccionar el modelo de cajas](/es/docs/Tools/Page_Inspector/How_to/Examinar_y_editar_el_modelo_de_cajasmodel).
 
 ## Resolver problemas de especificidad
 
