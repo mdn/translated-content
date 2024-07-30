@@ -1,11 +1,13 @@
 ---
 title: Netscape XSLT/XPath リファレンス
 slug: Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
+l10n:
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
 
 {{XsltSidebar}}
 
-次のリストは W3C の XSLT 1.0 勧告と、XPath 勧告に適したセクションの要素、axes、関数にアルファベット順に注釈をつけたものです。XSLT プロセッサの開発は進行中です。また、機能の拡張と共にこのドキュメントも更新されます。
+次のリストは W3C の XSLT 1.0 勧告と、XPath 勧告に適したセクションの要素、axes、関数にアルファベット順に注釈をつけたものです。XSLT プロセッサーの開発は進行中です。また、機能の拡張と共にこのドキュメントも更新されます。
 
 ### 要素
 
