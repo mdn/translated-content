@@ -1,5 +1,5 @@
 ---
-title: Logical properties for sizing
+title: 크기 조절에 관한 논리적 속성
 slug: Web/CSS/CSS_logical_properties_and_values/Sizing
 l10n:
   sourceCommit: 86cec43154e2d0652933b14fe411ad052b6beb03
@@ -36,7 +36,7 @@ l10n:
 
 ## 최소 너비와 최소 높이에 관한 예제
 
-{{CSSxRef("min-width")}} 와 {{CSSxRef("min-height")}} 를 위한 매핑 {{CSSxRef("min-inline-size")}} 와 {{CSSxRef("min-block-size")}} 도 존재합니다. 이들은 `inline-size` 와 `block-size` 속성과 동일하게 동작하지만, 최소 크기가 아닌 고정된 크기를 설정합니다.
+{{CSSxRef("min-width")}} 와 {{CSSxRef("min-height")}} 를 위한 매핑 {{CSSxRef("min-inline-size")}} 와 {{CSSxRef("min-block-size")}} 도 존재합니다. 이들은 `inline-size` 와 `block-size` 속성과 동일하게 동작하지만, 고정된 크기가 아닌 최소 크기를 설정합니다.
 
 아래 예제에서 `vertical-rl` 로 변경하여 첫번째 예시에 어떤 영향을 미치는지 확인해 보세요. 첫번째 예시에는 `min-height` 가 사용되었고, 두번째 예시에서는 `min-block-size` 이 사용되었습니다.
 
