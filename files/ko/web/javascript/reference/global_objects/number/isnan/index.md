@@ -20,7 +20,7 @@ Number.isNaN(value)
 ### 매개변수
 
 - `value`
-  - : The value to be tested for {{jsxref("NaN")}}.
+  - : {{jsxref("NaN")}} 일지 검증할 값.
 
 ### 반환 값
 
