@@ -141,7 +141,8 @@ Arithmetic operators are the basic operators that we use to do sums:
 > [!NOTE]
 > You'll sometimes see numbers involved in sums referred to as {{Glossary("Operand", "operands")}}.
 
-**備註：** You may sometimes see exponents expressed using the older {{jsxref("Math.pow()")}} method, which works in a very similar way. For example, in `Math.pow(7, 3)`, `7` is the base and `3` is the exponent, so the result of the expression is `343`. `Math.pow(7, 3)` is equivalent to `7**3`.
+> [!NOTE]
+> You may sometimes see exponents expressed using the older {{jsxref("Math.pow()")}} method, which works in a very similar way. For example, in `Math.pow(7, 3)`, `7` is the base and `3` is the exponent, so the result of the expression is `343`. `Math.pow(7, 3)` is equivalent to `7**3`.
 
 We probably don't need to teach you how to do basic math, but we would like to test your understanding of the syntax involved. Try entering the examples below into your [developer tools JavaScript console](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools), or use the simple built in console seen earlier if you'd prefer, to familiarize yourself with the syntax.
 

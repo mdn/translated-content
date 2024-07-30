@@ -67,7 +67,8 @@ grid-template-columns: unset;
 
   - : 如果该网格轨道为最大时，该属性等同于 `<max-content>`，为最小时，则等同于 `<min-content>`。
 
-    **备注：** 网格轨道大小为 `auto`（且只有为 `auto`）时，才可以被属性 {{cssxref("align-content")}} 和 {{cssxref("justify-content")}} 拉伸。
+    > [!NOTE]
+    > 网格轨道大小为 `auto`（且只有为 `auto`）时，才可以被属性 {{cssxref("align-content")}} 和 {{cssxref("justify-content")}} 拉伸。
 
 - {{cssxref("fit-content", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}
   - : 相当于公式 `min(max-content, max(auto, argument))`，类似于 `auto` 的计算（即 `minmax(auto, max-content)`），除了网格轨道大小值是确定下来的，否则该值都大于 `auto` 的最小值。

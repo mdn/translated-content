@@ -1077,7 +1077,9 @@ nameInput.addEventListener("invalid", () => {
 
 > [!NOTE]
 > 始终在客户端和服务器端验证输入约束。约束验证并不能消除在*服务器端*进行验证的必要性。无效的值仍然可以由旧的浏览器或坏的行为者发送。
-> **备注：** Firefox 在许多版本中支持一个专有的错误属性——`x-moz-errormessage`，它允许你以类似的方式设置自定义错误信息。从第 66 版开始，这个属性已被移除（见[Firefox bug 1513890](https://bugzil.la/1513890)）。
+
+> [!NOTE]
+> Firefox 在许多版本中支持一个专有的错误属性——`x-moz-errormessage`，它允许你以类似的方式设置自定义错误信息。从第 66 版开始，这个属性已被移除（见[Firefox bug 1513890](https://bugzil.la/1513890)）。
 
 ### 本地化
 
