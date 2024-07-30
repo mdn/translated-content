@@ -9,9 +9,11 @@ slug: Web/API/XMLHttpRequest/withCredentials
 
 此外，这个标志还用于指示何时在响应中忽略 cookie。默认值是 `false`。除非在发送 `XMLHttpRequest` 请求之前，将 `withCredentials` 设置为 `true`，否则来自不同域的 `XMLHttpRequest` 响应无法为自己的域设置 cookie 值。而通过设置 `withCredentials` 为 true 获得第三方 cookie，仍将遵循同源策略，因此请求的脚本无法通过 [document.cookie](/zh-CN/docs/Web/API/Document/cookie) 或者响应标头访问。
 
-> **备注：** 永远不会影响到同源请求。
+> [!NOTE]
+> 永远不会影响到同源请求。
 
-> **备注：** 不同域下的 `XmlHttpRequest` 响应，不论其 `Access-Control-` 标头设置什么值，都无法为它自身站点设置 Cookie 值，除非它在请求之前将 `withCredentials` 设为 true。
+> [!NOTE]
+> 不同域下的 `XmlHttpRequest` 响应，不论其 `Access-Control-` 标头设置什么值，都无法为它自身站点设置 Cookie 值，除非它在请求之前将 `withCredentials` 设为 true。
 
 ## 值
 

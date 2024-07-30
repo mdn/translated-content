@@ -65,7 +65,8 @@ O resultado disso deve ser algo assim:
 
 Então, esta única declaração nos dá tudo que precisamos — incrivel, certo? Nós temos um layout de múltiplas com tamanhos iguais, e todas as colunas tem a mesma altura. Isto porque o valor padrão dado aos flex items (os filhos do flex container) são configurados para resolver problemas comuns, como este. Voltaremos a este assunto depois.
 
-> **Nota:** Você pode definir também ao {{cssxref("display")}} o valor `inline-flex` se quiser colocar os items em linha como flexible boxes.
+> [!NOTE]
+> Você pode definir também ao {{cssxref("display")}} o valor `inline-flex` se quiser colocar os items em linha como flexible boxes.
 
 ## Um aparte no modelo _flex_
 
@@ -92,7 +93,8 @@ flex-direction: column;
 
 Você verá que isso organiza os elementos no layout de coluna, assim como eles estavam antes de adicionarmos qualquer regra CSS. Antes de você seguir, remova essa declaração do seu exemplo.
 
-> **Nota:** Você também pode arranjar itens flexíveis em direção reversa usando os valores `row-reverse` e `column-reverse`. Experimente usar esses valores no seu exemplo também!
+> [!NOTE]
+> Você também pode arranjar itens flexíveis em direção reversa usando os valores `row-reverse` e `column-reverse`. Experimente usar esses valores no seu exemplo também!
 
 ## Embrulhamento
 
@@ -199,7 +201,8 @@ div {
 
 Atualize a página e você verá que os botões estão agora bem arranjados no centro, horizontalmente e verticalmente. Fizemos isso através de duas novas propriedades.
 
-> **Nota:** Nesse exemplo, o eixo principal é representado horizontalmente e o eixo transversal é o vertical.
+> [!NOTE]
+> Nesse exemplo, o eixo principal é representado horizontalmente e o eixo transversal é o vertical.
 
 {{cssxref("align-items")}} controla onde os elementos _flex_ ficam no eixo transversal:
 

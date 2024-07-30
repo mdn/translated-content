@@ -7,7 +7,8 @@ slug: Learn/CSS/Building_blocks/Tables_tasks
 
 此任务的目的是为了帮助你检测在[样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)课程中学到的技巧的理解。
 
-> **备注：** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+> [!NOTE]
+> You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
 > If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
@@ -26,7 +27,8 @@ slug: Learn/CSS/Building_blocks/Tables_tasks
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/tables/table.html", '100%', 1000)}}
 
-> **备注：** For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/tables/table-download.html) to work in your own editor or in an online editor.
+> [!NOTE]
+> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/tables/table-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

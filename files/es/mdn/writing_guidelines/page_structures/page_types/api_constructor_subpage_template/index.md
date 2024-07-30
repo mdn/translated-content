@@ -115,7 +115,8 @@ Cada ejemplo debe tener un encabezado H3 que nombre el ejemplo. El encabezado de
 
 Consulte nuestra guía sobre cómo agregar [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
 
-> **Nota:** A veces querrá enlazar a ejemplos dados en otra página.
+> [!NOTE]
+> A veces querrá enlazar a ejemplos dados en otra página.
 >
 > **Escenario 1:** Si tiene algunos ejemplos en esta página y algunos más en otra página:
 >

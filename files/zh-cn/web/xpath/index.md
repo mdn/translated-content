@@ -11,7 +11,8 @@ XPath 主要用于 [XSLT](/zh-CN/docs/Web/XSLT)，但也可以作为一种更强
 
 XPath 使用路径标识符（类似于 URL）通过层级结构来导航 XML 文档。它使用非 XML 语法，使得它可被用于 URI 和 XML 属性值。
 
-> **备注：** XPath 的浏览器支持差别很大；它在 Firefox 中得到来相当不错的支持（尽管没有计划进一步改进的计划），而其他浏览器则较小程度地实现了它（如果支持的话）。如果你需要 polyfill，你可以考虑使用 [js-xpath](https://sourceforge.net/projects/js-xpath/files/js-xpath/1.0.0/xpath.js/download) 或 [wicked-good-xpath](https://github.com/google/wicked-good-xpath)。
+> [!NOTE]
+> XPath 的浏览器支持差别很大；它在 Firefox 中得到来相当不错的支持（尽管没有计划进一步改进的计划），而其他浏览器则较小程度地实现了它（如果支持的话）。如果你需要 polyfill，你可以考虑使用 [js-xpath](https://sourceforge.net/projects/js-xpath/files/js-xpath/1.0.0/xpath.js/download) 或 [wicked-good-xpath](https://github.com/google/wicked-good-xpath)。
 
 ## 文档
 

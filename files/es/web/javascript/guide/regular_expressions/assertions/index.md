@@ -63,7 +63,8 @@ La siguiente sección también está duplicada en {{JSxRef("../Guide/Regular_Exp
 
 ### Otras aserciones
 
-> **Nota:** El caracter `?` también se puede utilizar como cuantificador.
+> [!NOTE]
+> El caracter `?` también se puede utilizar como cuantificador.
 
 | Caracteres | Significado                                                                                                                                                                                                                                                                                                                                |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

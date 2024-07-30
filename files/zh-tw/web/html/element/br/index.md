@@ -11,7 +11,8 @@ slug: Web/HTML/Element/br
 
 如上例所示，每當我們希望文字換行時，都會包含一個 `<br>` 元素。 `<br>` 後的文本將重新開始於文本塊的下一行的開頭。
 
-> **備註：** 不要使用 `<br>` 創建段落之間的邊距；將它們包裝在 {{htmlelement("p")}} 元素中，並使用 [CSS](/zh-TW/docs/Web/CSS) 的 {{cssxref('margin')}} 屬性來控制它們的大小。
+> [!NOTE]
+> 不要使用 `<br>` 創建段落之間的邊距；將它們包裝在 {{htmlelement("p")}} 元素中，並使用 [CSS](/zh-TW/docs/Web/CSS) 的 {{cssxref('margin')}} 屬性來控制它們的大小。
 
 ## 屬性
 

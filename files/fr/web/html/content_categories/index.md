@@ -13,7 +13,8 @@ Il y a trois types différents de catégories de contenu :
 - Les catégories de contenu relatives aux formulaires qui décrivent les règles de contenu partagées par les éléments en lien avec les formulaires ;
 - Les catégories de contenu spécifiques qui décrivent des catégories plus rares et qui s'appliquent à peu d'éléments, parfois dans un contexte particulier
 
-> **Note :** un discours plus détaillé sur ces catégories de contenu et de leurs fonctionnalités comparatives dépasse le cadre de cet article ; pour en savoir plus, vous pouvez lire les [parties correspondantes de la spécification HTML](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content) (en).
+> [!NOTE]
+> Un discours plus détaillé sur ces catégories de contenu et de leurs fonctionnalités comparatives dépasse le cadre de cet article ; pour en savoir plus, vous pouvez lire les [parties correspondantes de la spécification HTML](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content) (en).
 
 ![](content_categories_venn.png)
 
@@ -42,7 +43,8 @@ Les éléments appartenant à cette catégorie sont ceux créant une nouvelle [s
 
 Les éléments appartenant à cette catégorie sont les éléments {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} et {{HTMLElement("section")}}.
 
-> **Note :** Il ne faut pas confondre ce modèle de contenu avec la catégorie de [racine de sectionnement](/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document#Racines_de_sectionnement) qui isole un contenu par rapport à la structure (ou plan) principale.
+> [!NOTE]
+> Il ne faut pas confondre ce modèle de contenu avec la catégorie de [racine de sectionnement](/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document#Racines_de_sectionnement) qui isole un contenu par rapport à la structure (ou plan) principale.
 
 ### Contenu de titre
 
@@ -50,7 +52,8 @@ Le contenu de titre définit le titre d'une section, qu'elle soit marquée par u
 
 Les éléments appartenant à cette catégorie sont {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}} et {{HTMLElement("hgroup")}}.
 
-> **Note :** Bien qu'il soit probable qu'un élément {{HTMLElement("header")}} comporte du contenu de titre, il n'est pas lui-même un contenu de titre.
+> [!NOTE]
+> Bien qu'il soit probable qu'un élément {{HTMLElement("header")}} comporte du contenu de titre, il n'est pas lui-même un contenu de titre.
 
 > **Note :** {{HTMLElement("hgroup")}} est supprimé du document recommandé par W3C.
 

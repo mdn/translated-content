@@ -5,7 +5,8 @@ slug: Web/SVG/Element/cursor
 
 {{SVGRef}}{{Deprecated_Header}}
 
-> **备注：** 尽量使用 CSS 中的 {{cssxref("cursor")}} 属性来替换该属性。
+> [!NOTE]
+> 尽量使用 CSS 中的 {{cssxref("cursor")}} 属性来替换该属性。
 
 `cursor`元素可以用来定义独立于平台的自定义指针。要想定义独立于平台的指针，建议先创建一个 PNG 图象，然后定义一个引用该 PNG 图像的`cursor`元素，并在图像内部标识指针头（亦即，热点）的精确位置。
 

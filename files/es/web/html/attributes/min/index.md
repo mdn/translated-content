@@ -23,7 +23,8 @@ Si `any` no se establece explícitamente, los valores válidos para el `número`
 | {{HTMLElement("input/number", "number")}}                 | [number](/es/docs/Web/CSS/number) | `<input type="number" min="0" step="5" max="100">`     |
 | {{HTMLElement("input/range", "range")}}                   | [number](/es/docs/Web/CSS/number) | `<input type="range" min="60" step="5" max="100">`     |
 
-> **Nota:** Cuando los datos ingresados por el usuario no se adhieren al valor mínimo establecido, el valor se considera inválido en la restricción de validación y coincidirá con la pseudoclase `:invalid`
+> [!NOTE]
+> Cuando los datos ingresados por el usuario no se adhieren al valor mínimo establecido, el valor se considera inválido en la restricción de validación y coincidirá con la pseudoclase `:invalid`
 
 Consulta [Validación del lado del cliente](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation) y {{DOMxRef("ValidityState.rangeUnderflow", "rangeUnderflow")}} para más información.
 

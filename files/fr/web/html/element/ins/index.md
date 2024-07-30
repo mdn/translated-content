@@ -7,7 +7,8 @@ slug: Web/HTML/Element/ins
 
 L'élément HTML **`<ins>`** représente un fragment de texte qui a été ajouté dans un document.
 
-> **Note :** À l'inverse, on pourra utiliser l'élément {{HTMLElement("del")}} afin de représenter un fragment de texte supprimé.
+> [!NOTE]
+> À l'inverse, on pourra utiliser l'élément {{HTMLElement("del")}} afin de représenter un fragment de texte supprimé.
 
 {{EmbedInteractiveExample("pages/tabbed/ins.html", "tabbed-standard")}}
 

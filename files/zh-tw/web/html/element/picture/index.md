@@ -43,7 +43,8 @@ slug: Web/HTML/Element/picture
 
 你可以使用 {{cssxref("object-position")}} 屬性來在元素的 frame 內調整圖片位置，也可以用 {{cssxref("object-fit")}} 屬性控制圖片在 frame 內如何調整大小。
 
-> **備註：** 在子元素 `<img>` 上使用這些屬性，而不是 `<picture>` 元素.
+> [!NOTE]
+> 在子元素 `<img>` 上使用這些屬性，而不是 `<picture>` 元素.
 
 ## 範例
 

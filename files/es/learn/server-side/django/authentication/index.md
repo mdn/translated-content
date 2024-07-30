@@ -32,7 +32,8 @@ En este tutorial mostraremos cómo permitir a los usuarios iniciar sesión en tu
 
 Django proporciona un sistema de autenticación y autorización ("permisos"), construido sobre el framework de sesión discutido en el [tutorial anterior](/es/docs/Learn/Server-side/Django/Sessions), que le permite verificar credenciales de usuario y definir que acciones puede realizar cada usuario. El framework incluye modelos para `Users` y `Groups` (una forma genérica de aplicar permisos a más de un usuario a la vez), permisos/indicadores (permissions/flags) que designan si un usuario puede realizar una tarea, formularios y vistas para iniciar sesión en los usuarios, y view tools para restringir el contenido.
 
-> **Nota:** Según Django el sistema de autenticación pretende ser muy genérico, y, por lo tanto, no proporciona algunas características proporcinadas en otros sistemas de autenticación web. Las soluciones para algunos problemas están disponibles como paquetes de terceros. Por ejemplo, regulación de intentos de inicio de sesión y autenticación frente a terceros (por ej. OAuth).
+> [!NOTE]
+> Según Django el sistema de autenticación pretende ser muy genérico, y, por lo tanto, no proporciona algunas características proporcinadas en otros sistemas de autenticación web. Las soluciones para algunos problemas están disponibles como paquetes de terceros. Por ejemplo, regulación de intentos de inicio de sesión y autenticación frente a terceros (por ej. OAuth).
 
 En este tutorial mostraremos cómo habilitar la autenticación de usuarios en el sitio web [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website), crear tus propias páginas de login y logout, añadir permisos a tus modelos, y controlar el acceso a las páginas. Usaremos la autenticación/permisos para desplegar listas de libros que han sido solicitados tanto por los usuarios como por los bibliotecarios.
 
@@ -44,7 +45,8 @@ Te mostraremos también cómo crear permisos, y revisar el estado de login y per
 
 La autenticación fue habilitada automáticamente cuando [creamos el sitio web esqueleto](/es/docs/Learn/Server-side/Django/skeleton_website) (en el tutorial 2), así que no necesitas hacer nada más en este punto.
 
-> **Nota:** Toda la configuración necesaria fue hecha por nosotros cuando creamos la aplicación usando el comando `django-admin startproject`. Las tablas de base de datos para los usuarios y permisos de modelo fueron creados la primera vez que ejecutamos `python manage.py migrate`.
+> [!NOTE]
+> Toda la configuración necesaria fue hecha por nosotros cuando creamos la aplicación usando el comando `django-admin startproject`. Las tablas de base de datos para los usuarios y permisos de modelo fueron creados la primera vez que ejecutamos `python manage.py migrate`.
 
 La configuración se establece en las secciones `INSTALLED_APPS` y `MIDDLEWARE` del archivo del proyecto (**locallibrary/locallibrary/settings.py**), como se muestra abajo:
 
@@ -67,7 +69,8 @@ MIDDLEWARE = [
 
 Ya creaste tu primer usuario cuando revisamos el [sitio de administración de Django](/es/docs/Learn/Server-side/Django/Admin_site) en el tutorial 4 (fue un superusuario, creado con el comando `python manage.py createsuperuser`). Nuestro superusuario ya está autenticado y tiene todos los permisos, así que necesitaremos crear un usuario de prueba que represente un usuario normal del sitio. Estaremos usando el sitio de administración para crear los grupos y logins de nuestro sitio web _BibliotecaLocal_, ya que es una de las formas más rápidas de hacerlo.
 
-> **Nota:** Puedes también crear usuarios mediante programación, como se muestra abajo. Tendrías que hacerlo, por ejemplo, si estuvieras desarrollando una interfaz para permitir a los usuarios crear sus propios logins (no deberías dar a los usuarios acceso al sito de administración).
+> [!NOTE]
+> Puedes también crear usuarios mediante programación, como se muestra abajo. Tendrías que hacerlo, por ejemplo, si estuvieras desarrollando una interfaz para permitir a los usuarios crear sus propios logins (no deberías dar a los usuarios acceso al sito de administración).
 >
 > ```python
 > from django.contrib.auth.models import User
@@ -109,7 +112,8 @@ Ahora vamos a crear un usuario:
 
 ¡Esta hecho! Ahora tienes la cuenta de un miembro normal de la libreria, el cual estara disponible para ser usado en tus pruebas (una vez que hayamos implementado las paginas para permitirles iniciar sesion).
 
-> **Nota:** Deberias intentar crear otro usuario miembro de _library._ Al igual que un grupo para los bibliotecarios _"Librarians",_ ¡y agregar usuarios a este tambien!
+> [!NOTE]
+> Deberias intentar crear otro usuario miembro de _library._ Al igual que un grupo para los bibliotecarios _"Librarians",_ ¡y agregar usuarios a este tambien!
 
 ## Configurando nuestras vistas de autenticación
 
@@ -117,9 +121,11 @@ Django provee todo lo necesario para crear las páginas de autenticación para m
 
 En esta sección, mostramos cómo integrar el sistema por defecto en el sitio web de _BibliotecaLocal_ y crear plantillas "templates". Las incluiremos en las URLs principales del proyecto.
 
-> **Nota:** No tienes que usar nada de este código, pero es probable que quieras hacerlo porque hace las cosas mucho más fáciles. Seguramente necesitará cambiar el código de manejo de formularios si cambia su modelo de usuario (¡un tema avanzado!) pero aun asi, todavía podrá usar las funciones de vista de stock.
+> [!NOTE]
+> No tienes que usar nada de este código, pero es probable que quieras hacerlo porque hace las cosas mucho más fáciles. Seguramente necesitará cambiar el código de manejo de formularios si cambia su modelo de usuario (¡un tema avanzado!) pero aun asi, todavía podrá usar las funciones de vista de stock.
 
-> **Nota:** En este caso podríamos razonablemente poner las páginas de autenticación, incluyendo las direcciones URL y plantillas, dentro de nuestra aplicación de catálogo. Sin embargo, si tuviéramos varias aplicaciones, sería mejor separar este comportamiento de inicio de sesión compartido y tenerlo disponible en todo el sitio, ¡así que eso es lo que hemos mostrado aquí!
+> [!NOTE]
+> En este caso podríamos razonablemente poner las páginas de autenticación, incluyendo las direcciones URL y plantillas, dentro de nuestra aplicación de catálogo. Sin embargo, si tuviéramos varias aplicaciones, sería mejor separar este comportamiento de inicio de sesión compartido y tenerlo disponible en todo el sitio, ¡así que eso es lo que hemos mostrado aquí!
 
 ### URL's del proyecto
 
@@ -134,7 +140,8 @@ urlpatterns += [
 
 Navega hasta la URL `http://127.0.0.1:8000/accounts/` (¡Nota la barra inclinada hacia adelante!) y Django mostrara un error, diciendo que no puede encontrar esta URL, y listando todas las URL's que ha intentado. Aqui puedes ver las URL's que funcionaran, por ejemplo:
 
-> **Nota:** Usando el metodo anterior, añade las siguientes URL's con sus respectivos nombres entre corchetes, los cuales pueden ser usados para revertir "reverse" el mapeado de las URL's. No necesitas implementar nada mas, el anterior mapeado de URL's asigna automaticamente las mencionadas URL's.
+> [!NOTE]
+> Usando el metodo anterior, añade las siguientes URL's con sus respectivos nombres entre corchetes, los cuales pueden ser usados para revertir "reverse" el mapeado de las URL's. No necesitas implementar nada mas, el anterior mapeado de URL's asigna automaticamente las mencionadas URL's.
 >
 > ```python
 > accounts/ login/ [name='login']
@@ -162,7 +169,8 @@ Las URL's (y vistas "views" implicitas) que recien hemos añadido esperan encont
 
 Para este sitio pondremos nuestra pagina HTML en el directorio **"templates/registration/".** Este directorio debera estar en el directorio raiz de tu proyecto, es decir, el mismo directorio de las carpetas donde estan **catalog** y **locallibrary**. Por favor ahora crea las carpetas "templates" y dentro de esta "registration".
 
-> **Nota:** Su estructura de carpetas ahora debería verse como la siguiente:
+> [!NOTE]
+> Su estructura de carpetas ahora debería verse como la siguiente:
 >
 > ```
 > locallibrary (django project folder)
@@ -194,7 +202,8 @@ Actualiza la seccion de TEMPLATES con la linea 'DIRS' como se muestra a continua
 
 ### Plantilla inicio de sesión "login"
 
-> **Advertencia:** Las plantillas de autenticacion provista en este articulo son versiones muy basicas y ligeramete modificadas de las plantillas de inicio de sesion de demostracion de Django. ¡Necesitas personalizarlos para tus propios usos!
+> [!WARNING]
+> Las plantillas de autenticacion provista en este articulo son versiones muy basicas y ligeramete modificadas de las plantillas de inicio de sesion de demostracion de Django. ¡Necesitas personalizarlos para tus propios usos!
 
 Crea un nuevo archivo HTML llamado /**locallibrary/templates/registration/login.html**. suministrado en el siguiente contenido :
 
@@ -383,7 +392,8 @@ Puedes probar las nuevas páginas de autenticación intentando iniciar sesión y
 
 Serás capaz de probar la funcionalidad de reinicio de contraseña desde el enlace de la página de inicio de sesión. **¡Ten cuidado con el hecho de que Django solamente enviará correos de reinicio a las direcciones (usuarios) que ya están almacenadas en la base de datos!**
 
-> **Nota:** El sistema de reinicio de contraseña requiere que tu sitio web soporte envío de correo, que está más allá del ámbito de este artículo, por lo que esta parte **no funcionará todavía**. Para permitir el testeo, establece la siguiente línea al final de tu fichero settings.py. Esto registra en la consola cualquier envío de correo electrónico (y así puedes copiar el enlace de reinicio de contraseña desde dicha consola).
+> [!NOTE]
+> El sistema de reinicio de contraseña requiere que tu sitio web soporte envío de correo, que está más allá del ámbito de este artículo, por lo que esta parte **no funcionará todavía**. Para permitir el testeo, establece la siguiente línea al final de tu fichero settings.py. Esto registra en la consola cualquier envío de correo electrónico (y así puedes copiar el enlace de reinicio de contraseña desde dicha consola).
 >
 > ```python
 > EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -421,7 +431,8 @@ Como puedes ver, usamos las etiquetas de plantilla `if`-`else`-`endif` para cond
 
 Creamos los enlaces URLs del inicio y del cierre de sesión usando la etiqueta de plantilla `url` y los nombres de las respectivas configuraciones de las URL. Nótese también cómo hemos añadido `?next=\{{request.path}}` al final de las URLs. Lo que esto hace es añadir el párametro URL next que contiene la dirección (URL) de la página _actual_, al final de la URL enlazada. Después de que el usuario haya iniciado o cerrado sesión con éxito, las vistas usarán el valor de este "`next`" para redirigir al usuario de vuelta a la página donde pincharon primeramente el enlace de inicio/cierre de sesión.
 
-> **Nota:** ¡Pruébalo! Si estás en la página de inicio y pinchas en la barra lateral "sidebar", después de que la operación se complete deberías acabar de vuelta en la misma página.
+> [!NOTE]
+> ¡Pruébalo! Si estás en la página de inicio y pinchas en la barra lateral "sidebar", después de que la operación se complete deberías acabar de vuelta en la misma página.
 
 ### Probando en vistas
 
@@ -435,7 +446,8 @@ def my_view(request):
     ...
 ```
 
-> **Nota:** ¡Tú puedes hacer el mismo tipo de cosas manualmente probando con `request.user.is_authenticated`, pero el decorador es mucho más conveniente!
+> [!NOTE]
+> ¡Tú puedes hacer el mismo tipo de cosas manualmente probando con `request.user.is_authenticated`, pero el decorador es mucho más conveniente!
 
 De manera similar, la forma más fácil de restringir el acceso a los usuarios que han iniciado sesión en tus vistas basadas en clases es extender de `LoginRequiredMixin`. Necesitas declarar primeramente este `mixin` en la lista de super clases, antes de la clase de vista principal.
 
@@ -490,7 +502,8 @@ def is_overdue(self):
     return False
 ```
 
-> **Nota:** Primeramente verificamos si la fecha `due_back` está vacía antes de realizar una comparación. Un campo vacío `due_back` provocaría a Django arrojar un error en lugar de mostrar la página: los valores vacíos no son comparables. ¡Esto no es algo que queramos para la experiencia de nuestros usuarios!
+> [!NOTE]
+> Primeramente verificamos si la fecha `due_back` está vacía antes de realizar una comparación. Un campo vacío `due_back` provocaría a Django arrojar un error en lugar de mostrar la página: los valores vacíos no son comparables. ¡Esto no es algo que queramos para la experiencia de nuestros usuarios!
 
 Ahora que hemos actualizado nuestros modelos, necesitaremos hacer migraciones actuales en el proyecto y entonces aplicar esas migraciones:
 
@@ -523,7 +536,8 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 Ahora que es posible alquilar libros a un usuario específico, ve y alquila un número de registros `BookInstance`. Establece su campo `borrowed` a tu usuario de prueba, establece el `status` "On loan" (en alquiler) y establece fechas de vencimiento tanto en el futuro como en el pasado.
 
-> **Nota:** No escribiremos el proceso, porque ¡ya sabes cómo usar el sitio de Administrador!
+> [!NOTE]
+> No escribiremos el proceso, porque ¡ya sabes cómo usar el sitio de Administrador!
 
 ### Vista en alquiler
 
@@ -683,7 +697,8 @@ Anteriormente en este artículo te mostramos cómo crear una página para el usu
 
 Deberías ser capaz de seguir el mismo patrón que el de la otra vista. La principal diferencia es que necesitarás restringir la vista a solamente los bibliotecarios. Podrías hacer esto basándote en si es un miembro de los empleados (decorador de función: `staff_member_required`, variable de plantilla: `user.is_staff`) pero nosotros te recomendamos que en su lugar uses el permiso `can_mark_returned` y `PermissionRequiredMixin`, como se describe en la sección anterior.
 
-> **Advertencia:** Recuerda no usar tu súper usuario para pruebas basadas en permisos (la comprobación de permisos siempre devuelve cierto para súper usuarios, ¡incluso si un permiso no ha sido definido todavía!). En su lugar, crea un usuario bibliotecario, y añade entonces la capacidad requerida.
+> [!WARNING]
+> Recuerda no usar tu súper usuario para pruebas basadas en permisos (la comprobación de permisos siempre devuelve cierto para súper usuarios, ¡incluso si un permiso no ha sido definido todavía!). En su lugar, crea un usuario bibliotecario, y añade entonces la capacidad requerida.
 
 Cuando hayas terminado, tu página debería verse algo parecida a la captura de pantalla de abajo.
 

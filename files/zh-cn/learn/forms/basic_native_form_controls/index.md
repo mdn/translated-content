@@ -20,20 +20,23 @@ slug: Learn/Forms/Basic_native_form_controls
  </tbody>
 </table>
 
-> **备注：** widget 在本页面中被统一翻译为部件，但在其他地方可能也被译为组件。
+> [!NOTE]
+> widget 在本页面中被统一翻译为部件，但在其他地方可能也被译为组件。
 
 你可能已经遇见过了一些表单元素，包括：{{HTMLelement('form')}}、{{HTMLelement('fieldset')}}、{{HTMLelement('legend')}}、{{HTMLelement('textarea')}}、{{HTMLelement('label')}}、{{HTMLelement('button')}} 和 {{HTMLelement('input')}}。这篇文章提到了：
 
 - 常见的输入（input）类型元素：{{HTMLelement('input/button', 'button')}}、{{HTMLelement('input/checkbox', 'checkbox')}}、{{HTMLelement('input/file', 'file')}}、{{HTMLelement('input/hidden', 'hidden')}}、{{HTMLelement('input/image', 'image')}}、{{HTMLelement('input/password', 'password')}}、{{HTMLelement('input/radio', 'radio')}}、{{HTMLelement('input/reset', 'reset')}}、{{HTMLelement('input/submit', 'submit')}} 和 {{HTMLelement('input/text', 'text')}}。
 - 所有表单部件共有的一些属性。
 
-> **备注：** 本文中讨论的大多数特性都在浏览器中得到了广泛的支持，但并非所有表单部件都受浏览器支持。我们在接下来的两篇文章中提到了 HTML5 带来的新的表单部件。如果你想要更准确的细节，你应该参考我们的 [HTML 表单元素参考](/zh-CN/docs/Web/HTML/Element#forms)，特别是我们的种类繁多的 [\<input> 类型](/zh-CN/docs/Web/HTML/Element/Input)参考。
+> [!NOTE]
+> 本文中讨论的大多数特性都在浏览器中得到了广泛的支持，但并非所有表单部件都受浏览器支持。我们在接下来的两篇文章中提到了 HTML5 带来的新的表单部件。如果你想要更准确的细节，你应该参考我们的 [HTML 表单元素参考](/zh-CN/docs/Web/HTML/Element#forms)，特别是我们的种类繁多的 [\<input> 类型](/zh-CN/docs/Web/HTML/Element/Input)参考。
 
 ## 文本输入框
 
 文本{{htmlelement("input", "输入")}}框是最基本的表单小部件。这是一种非常方便的方式，可以让用户输入任何类型的数据。我们已经看到过几个简单的例子。
 
-> **备注：** HTML 表单文本字段是简单的纯文本输入控件。这意味着你不能将它们用作富文本编辑（粗体、斜体等）。你遇到的所有富文本编辑器都是使用 HTML、CSS 和 JavaScript 所创建的自定义小部件。
+> [!NOTE]
+> HTML 表单文本字段是简单的纯文本输入控件。这意味着你不能将它们用作富文本编辑（粗体、斜体等）。你遇到的所有富文本编辑器都是使用 HTML、CSS 和 JavaScript 所创建的自定义小部件。
 
 所有文本框都有一些通用规范：
 
@@ -48,7 +51,8 @@ slug: Learn/Forms/Basic_native_form_controls
 
 使用 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性值被设置为 `text` 的 {{HTMLElement("input")}} 元素创建一个单行文本框（同样的，如果你不提供 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性，该属性将被默认设置为 `text`）。在你指定的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性的值在浏览器中是未知的情况下（比如你指定 `type="date"`，但是浏览器不支持原生日期选择器），属性值也将会回落到 `text`。
 
-> **备注：** 你可以在 Github 上的 [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/single-line-text-fields.html) 找到所有单行文本框类型（你也可以直接看[预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)）。
+> [!NOTE]
+> 你可以在 Github 上的 [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/single-line-text-fields.html) 找到所有单行文本框类型（你也可以直接看[预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)）。
 
 这是一个基本的单行文本框示例：
 
@@ -62,7 +66,8 @@ _以下截图现实了 macOS 上的 Firefox 71 和 Safair 以及 Windows 10 上�
 
 ![Screenshot of the disabled attribute and default :focus styles on a text input in Firefox, Safari, Chrome and Edge.](disabled.png)
 
-> **备注：** HTML5 通过为 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性增加特殊值增强了基本单行文本框。这些值仍然将 {{HTMLElement("input")}} 元素转换为单行文本框，但它们为字段添加了一些额外的约束和特性。例如，URL 和 数值类型的约束，我们将会在下一篇文章中介绍：[HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)。
+> [!NOTE]
+> HTML5 通过为 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性增加特殊值增强了基本单行文本框。这些值仍然将 {{HTMLElement("input")}} 元素转换为单行文本框，但它们为字段添加了一些额外的约束和特性。例如，URL 和 数值类型的约束，我们将会在下一篇文章中介绍：[HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)。
 
 #### 密码框
 
@@ -96,7 +101,8 @@ HTML5 中添加了其他的文本输入类型，如：{{HTMLElement("input/searc
 
 值得注意的是，这些小部件与其他表单小部件不一样。对于大多数表单部件，一旦表单提交，所有具有 [`name`](/zh-CN/docs/Web/HTML/Element/Input#name) 属性的小部件都会被发送，即使没有任何值被填。对于可选中项，只有在勾选时才发送它们的值。如果他们没有被勾选，就不会发送任何东西，甚至连他们的名字也没有。而在它们被勾选且没有提供值（value）时，将会发送名字和缺省值 `on`。
 
-> **备注：** 你可以在 Github 上看到 [checkable-items.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html)（你也可以直接看[预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)）。
+> [!NOTE]
+> 你可以在 Github 上看到 [checkable-items.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html)（你也可以直接看[预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)）。
 
 为了获得最大的可用性和无障碍（无障碍），建议你在 {{htmlelement("fieldset")}} 中包围每个相关项目的列表，并使用 {{htmlelement("legend")}} 提供对列表的全面描述。每个单独的 {{htmlelement("label")}}/{{htmlelement("input")}} 元素都应该包含在它自己的列表项中（或者类似的）。正如在下方示例中显示的。
 
@@ -139,7 +145,8 @@ _以下截图显示了 macOS 上的 Firefox 71 和 Safair 13 以及 Windows 10 �
 
 ![Default, focused and disabled Checkboxes in Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10](checkboxes.png)
 
-> **备注：** 任何带有 [`checked`](/zh-CN/docs/Web/HTML/Element/Input/checkbox#attr-checked) 属性的复选框和单选按钮在加载时都会匹配 {{cssxref(':default')}} 伪类，即使它们后面不再被选中。任何当前被选中的元素，都会匹配 {{cssxref(':checked')}} 伪类。
+> [!NOTE]
+> 任何带有 [`checked`](/zh-CN/docs/Web/HTML/Element/Input/checkbox#attr-checked) 属性的复选框和单选按钮在加载时都会匹配 {{cssxref(':default')}} 伪类，即使它们后面不再被选中。任何当前被选中的元素，都会匹配 {{cssxref(':checked')}} 伪类。
 
 由于复选框的开关特性，其被认为是一种切换按钮，许多开发者和设计人员覆盖了默认的复选框样式，以使其看起来像是一个切换开关的按钮。你可以在[这里看到一个示例](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/)（参见[源码](https://github.com/mdn/learning-area/blob/main/html/forms/toggle-switch-example/index.html)）。
 
@@ -192,7 +199,8 @@ _以下截图显示了 macOS 上的 Firefox 71 和 Safair 13 以及 Windows 10 �
 
 > **备注：** `image` input 类型同样被渲染为一个按钮。我们将在后面提到。
 
-> **备注：** 你可以在 Github 上看到 [button-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/button-examples.html)（你也可以直接看[预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html)）。
+> [!NOTE]
+> 你可以在 Github 上看到 [button-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/button-examples.html)（你也可以直接看[预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html)）。
 
 下面，你可以看到每一种与 `<button>` 对应类型等价的 `<input>` 类型的示例。
 

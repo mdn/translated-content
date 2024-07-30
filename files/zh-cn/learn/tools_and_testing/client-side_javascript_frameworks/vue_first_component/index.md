@@ -7,7 +7,8 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
 
 现在是时候深入了解 Vue，并创建我们自己的自定义组件了--我们将从创建一个组件来表示待办事项列表中的每个项目开始。在这一过程中，我们将学习一些重要的概念，例如在其他组件中调用组件，通过道具向它们传递数据，以及保存数据状态。
 
-> **备注：** 如果你需要根据我们的版本检查你的代码，你可以在我们的 [todo-vue](https://github.com/mdn/todo-vue) 仓库找到中找到示例 Vue 程序代码的完成版本。有关运行中的实时版本，请参见 <https://mdn.github.io/todo-vue/>。
+> [!NOTE]
+> 如果你需要根据我们的版本检查你的代码，你可以在我们的 [todo-vue](https://github.com/mdn/todo-vue) 仓库找到中找到示例 Vue 程序代码的完成版本。有关运行中的实时版本，请参见 <https://mdn.github.io/todo-vue/>。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -138,7 +139,8 @@ export default {
 - 第一种方式是，以字符串数组的方式列出 props，数组中的每个实体对应一个 prop 名称。
 - 第二种方法是将 props 定义为一个对象，每个 key 对应于 prop 名称。将 props 列为对象允许你指定默认值，将 props 标记为 required，执行基本的对象类型 (特别是 JavaScript 基本类型) ，并执行简单的 prop 校验。
 
-> **备注：** 注意：prop 验证只能在 development 模式下进行，所以你不能在生产环境中严格依赖它。此外，prop 验证函数在组件实例创建之前被调用，因此它们不能访问组件状态 (或其他 props)。
+> [!NOTE]
+> 注意：prop 验证只能在 development 模式下进行，所以你不能在生产环境中严格依赖它。此外，prop 验证函数在组件实例创建之前被调用，因此它们不能访问组件状态 (或其他 props)。
 
 针对 ToDoItem 组件，我们将使用对象注册法。
 
@@ -231,7 +233,8 @@ data() {
 
 你可以使用 `this` 从内部数据访问组件的 props 和其他属性，如所你料。我们很快就会看到一个示例。
 
-> **备注：** 由于 `this` 在箭头函数中的工作方式（绑定到父级的上下文），如果使用箭头函数，你将无法从内部 `data` 访问任何必要的属性。因此，不要对 `data` 属性使用箭头函数。
+> [!NOTE]
+> 由于 `this` 在箭头函数中的工作方式（绑定到父级的上下文），如果使用箭头函数，你将无法从内部 `data` 访问任何必要的属性。因此，不要对 `data` 属性使用箭头函数。
 
 因此，让我们向 `ToDoItem` 组件添加一个 `data` 属性。这将返回一个包含单个属性的对象，即我们将调用 `isDone`，其值为 `this.done`。
 
@@ -302,7 +305,8 @@ v-bind:attribute="expression"
 npm install --save lodash.uniqueid
 ```
 
-> **备注：** 如果你更喜欢 yarn，则可以改用 `yarn add lodash.uniqueid`。
+> [!NOTE]
+> 如果你更喜欢 yarn，则可以改用 `yarn add lodash.uniqueid`。
 
 现在，我们可以将此包导入我们的 `ToDoItem` 组件中。在 `ToDoItem.vue` 的 `<script>` 元素的顶部添加以下行：
 

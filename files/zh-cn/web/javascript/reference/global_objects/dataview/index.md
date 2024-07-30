@@ -72,8 +72,8 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 
 ## 实例属性
 
-- `DataView.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串 `"DataView"`。该属性用于 {{jsxref("Object.prototype.toString()")}}。
+- `DataView.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串 `"DataView"`。该属性用于 {{jsxref("Object.prototype.toString()")}}。
 - {{jsxref("DataView.prototype.buffer")}}
   - : {{jsxref("ArrayBuffer")}} 是引用该缓冲区的视图。在构造时会被固定，因此该属性**只读**。
 - {{jsxref("DataView.prototype.byteLength")}}

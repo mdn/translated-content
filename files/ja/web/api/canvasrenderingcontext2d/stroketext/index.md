@@ -11,7 +11,8 @@ l10n:
 
 このメソッドは現在のパスを変更することなく、直接キャンバスに描画を行います。その後の {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} や {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} には影響を与えません。
 
-> **メモ:** 輪郭線のみを描くのではなく、テキスト文字を塗りつぶすのであれば {{domxref('CanvasRenderingContext2D.fillText()', 'fillText()')}} メソッドを使用してください。
+> [!NOTE]
+> 輪郭線のみを描くのではなく、テキスト文字を塗りつぶすのであれば {{domxref('CanvasRenderingContext2D.fillText()', 'fillText()')}} メソッドを使用してください。
 
 ## 構文
 

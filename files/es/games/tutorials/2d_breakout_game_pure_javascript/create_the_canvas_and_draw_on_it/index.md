@@ -105,7 +105,8 @@ Aquí está el código fuente completo de la primera lección, ejecutándose en 
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","370")}}
 
-> **Nota:** cambia el tamaño y el color de las figuras.
+> [!NOTE]
+> Cambia el tamaño y el color de las figuras.
 
 ## Pasos siguientes
 
