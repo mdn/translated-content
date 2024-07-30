@@ -166,8 +166,7 @@ fetchPromise.then((response) => {
 
 ![Diagram of a request that is preflighted](https://mdn.github.io/shared-assets/images/diagrams/http/cors/preflight-correct.svg)
 
-> **참고:**
-> 아래 설명한 바와 같이 실제 `POST` 요청에는 `Access-Control-Request-*` 헤더가 포함되지 않습니다. 이 헤더들은 오직 `OPTIONS` 요청에만 필요합니다.
+> **참고:** 아래 설명한 바와 같이 실제 `POST` 요청에는 `Access-Control-Request-*` 헤더가 포함되지 않습니다. 이 헤더들은 오직 `OPTIONS` 요청에만 필요합니다.
 
 클라이언트와 서버 간의 전체 통신을 살펴보겠습니다. 첫 번째 통신은 사전 요청과 그에 대한 응답입니다.
 
@@ -276,31 +275,32 @@ CORS 프로토콜은 원래 그러한 동작(리다이렉트)을 필요했지만
 
 ### 자격 증명을 포함한 요청
 
-{{domxref("XMLHttpRequest")}} 혹은 [Fetch](/ko/docs/Web/API/Fetch_API) 를 사용할 때 CORS 에 의해 드러나는 가장 흥미로운 기능은 "credentialed" requests 입니다. credentialed requests는 [HTTP cookies](/ko/docs/Web/HTTP/Cookies) 와 HTTP Authentication 정보를 인식합니다. 기본적으로 cross-site `XMLHttpRequest` 나 [Fetch](/ko/docs/Web/API/Fetch_API) 호출에서 브라우저는 자격 증명을 보내지 **않습니다.** `XMLHttpRequest` 객체나 {{domxref("Request")}} 생성자가 호출될 때 특정 플래그를 설정해야 합니다.
+> **참고:** 다른 도메인으로 자격 증명 요청을 할 때, 서드파티 쿠키 정책이 여전히 적용됩니다. 이 정책은 서버와 클라이언트에서 설명된 모든 설정과 관계없이 항상 적용됩니다.
 
-이 예제에서 원래 `http://foo.example` 에서 불러온 컨텐츠는 쿠키를 설정하는 `http://bar.other` 리소스에 simple GET request를 작성합니다. foo.example의 내용은 다음과 같은 JavaScript를 포함할 수 있습니다.
+{{domxref("Window/fetch", "fetch()")}} 혹은 {{domxref("XMLHttpRequest")}} 와 CORS 을 통해 제공된 가장 흥미로운 기능은 [HTTP 쿠키](/ko/docs/Web/HTTP/Cookies)와 HTTP 인증 정보를 인식하는 "자격 증명이 포함된" 요청을 할 수 있다는 것입니다. 기본적으로 교차 출처 `fetch()` 또는 `XMLHttpRequest` 호출에서는 브라우저가 자격 증명을 전송하지 **않습니다.**
 
+`fetch()` 요청에 자격 증명을 포함하려면, [`credentials`](/ko/docs/Web/API/RequestInit#credentials) 옵션을 `"include"` 로 설정하십시오.
+
+`XMLHttpRequest` 요청에 자격 증명을 포함하려면, {{domxref("XMLHttpRequest.withCredentials")}} 속성을 `true` 로 설정하십시오.
+
+이 예시에서 `https://foo.example` 에서 로드된 콘텐츠는 `https://bar.other` 의 리소스에 쿠키가 포함된 GET 메서드 단순 요청을 보냅니다. foo.example 의 콘텐츠는 다음과 같은 JavaScript 코드를 포함할 수 있습니다.
+
+```js
+const url = "https://bar.other/resources/credentialed-content/";
+
+const request = new Request(url, { credentials: "include" });
+
+const fetchPromise = fetch(request);
+fetchPromise.then((response) => console.log(response));
 ```
-const invocation = new XMLHttpRequest();
-const url = 'https://bar.other/resources/credentialed-content/';
 
-function callOtherDomain() {
-  if (invocation) {
-    invocation.open('GET', url, true);
-    invocation.withCredentials = true;
-    invocation.onreadystatechange = handler;
-    invocation.send();
-  }
-}
-```
+이 코드는 {{domxref("Request")}} 객체를 생성하고, 생성자에서 `credentials` 옵션을 `"include"` 로 설정한 다음 이 요청을 `fetch()` 에 전달합니다. 이는 `GET` 메서드 단순 요청이기 때문에 사전 요청이 수행되지 않지만, 브라우저는 {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` 헤더가 없는 응답을 **거부**하고, 호출한 웹 콘텐츠에 응답을 제공하지 **않습니다.**
 
-7행은 쿠키와 함께 호출하기위한 {{domxref("XMLHttpRequest")}} 의 플래그를 보여줍니다. 이 플래그는 `withCredentials` 라고 불리며 부울 값을 갖습니다. 기본적으로 호출은 쿠키 없이 이루어집니다. 이것은 simple `GET` request이기 때문에 preflighted 되지 않습니다. 그러나 브라우저는 {{HTTPHeader("Access-Control-Allow-Credentials")}}: `true` 헤더가 없는 응답을 **거부합니다**. 따라서 호출된 웹 컨텐츠에 응답을 제공하지 **않습니다.**
+![Diagram of a simple GET request with Access-Control-Allow-Credentials](https://mdn.github.io/shared-assets/images/diagrams/http/cors/include-credentials.svg)
 
-![](cred-req-updated.png)
+다음은 클라이언트와 서버 간의 샘플 교환입니다.
 
-클라이언트와 서버간의 통신 예제는 다음과 같습니다.
-
-```
+```http
 GET /resources/credentialed-content/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
@@ -311,7 +311,6 @@ Connection: keep-alive
 Referer: https://foo.example/examples/credential.html
 Origin: https://foo.example
 Cookie: pageAccess=2
-
 
 HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 01:34:52 GMT
@@ -331,7 +330,7 @@ Content-Type: text/plain
 [text/plain payload]
 ```
 
-10행에는 `https://bar.other`의 컨텐츠를 대상으로 하는 쿠키가 포함되어 있습니다. 하지만 17행의 {{HTTPHeader("Access-Control-Allow-Credentials")}}: `true` 로 응답하지 않으면, 응답은 무시되고 웹 컨텐츠는 제공되지 않습니다.
+비록 요청의 `Cookie` 헤더가 `https://bar.other` 을 위한 쿠키를 포함하고 있지만, 이 예에서 설명한 것처럼 bar.other 가 {{HTTPHeader("Access-Control-Allow-Credentials")}} 헤더에 `true` 값을 포함하여 응답하지 않으면, 응답은 무시되고 웹 콘텐츠에 제공되지 않습니다.
 
 #### 실행 전 요청 및 자격 증명
 
