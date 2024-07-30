@@ -7,13 +7,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 
 ## Сводка
 
-Константа **`Number.MAX_SAFE_INTEGER`** представляет максимальное безопасное целочисленное значение в JavaScript (`253 - 1`).
+Константа **`Number.MAX_SAFE_INTEGER`** представляет максимальное безопасное целочисленное значение в JavaScript (2<sup>53</sup> – 1).
 
 {{js_property_attributes(0, 0, 0)}}
 
 ## Описание
 
-Константа `MAX_SAFE_INTEGER` имеет значение `9007199254740991`. Смысл этого числа в том, что в JavaScript используется [формат чисел с плавающей запятой двойной точности](https://ru.wikipedia.org/wiki/Число_двойной_точности), как определено в стандарте [IEEE 754](https://ru.wikipedia.org/wiki/IEEE_754), а он может безопасно представлять числа только в диапазоне от `-(253 - 1)` до `253 - 1`.
+Константа `MAX_SAFE_INTEGER` имеет значение `9007199254740991`. Смысл этого числа в том, что в JavaScript используется [формат чисел с плавающей запятой двойной точности](https://ru.wikipedia.org/wiki/Число_двойной_точности), как определено в стандарте [IEEE 754](https://ru.wikipedia.org/wiki/IEEE_754), а он может безопасно представлять числа только в диапазоне от -(2<sup>53</sup> – 1) до 2<sup>53</sup> – 1.
 
 Поскольку `MAX_SAFE_INTEGER` является статическим свойством объекта {{jsxref("Global_Objects/Number", "Number")}}, вы всегда должны использовать его как `Number.MAX_SAFE_INTEGER`, а не как свойство созданного вами объекта {{jsxref("Global_Objects/Number", "Number")}}.
 
