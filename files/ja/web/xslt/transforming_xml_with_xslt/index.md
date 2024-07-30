@@ -65,19 +65,19 @@ l10n:
 
 [軸](/ja/docs/Web/XPath/Axes)
 
-- [ancestor](/ja/docs/Web/XPath/Axes/ancestor)
-- [ancestor-or-self](/ja/docs/Web/XPath/Axes/ancestor-or-self)
-- [attribute](/ja/docs/Web/XPath/Axes/attribute)
-- [child](/ja/docs/Web/XPath/Axes/child)
-- [descendant](/ja/docs/Web/XPath/Axes/descendant)
-- [descendant-or-self](/ja/docs/Web/XPath/Axes/descendant-or-self)
-- [following](/ja/docs/Web/XPath/Axes/following)
-- [following-sibling](/ja/docs/Web/XPath/Axes/following-sibling)
-- [namespace](/ja/docs/Web/XPath/Axes/namespace) _(未対応)_
-- [parent](/ja/docs/Web/XPath/Axes/parent)
-- [preceding](/ja/docs/Web/XPath/Axes/preceding)
-- [preceding-sibling](/ja/docs/Web/XPath/Axes/preceding-sibling)
-- [self](/ja/docs/Web/XPath/Axes/self)
+- [ancestor](/ja/docs/Web/XPath/Axes#ancestor)
+- [ancestor-or-self](/ja/docs/Web/XPath/Axes#ancestor-or-self)
+- [attribute](/ja/docs/Web/XPath/Axes#attribute)
+- [child](/ja/docs/Web/XPath/Axes#child)
+- [descendant](/ja/docs/Web/XPath/Axes#descendant)
+- [descendant-or-self](/ja/docs/Web/XPath/Axes#descendant-or-self)
+- [following](/ja/docs/Web/XPath/Axes#following)
+- [following-sibling](/ja/docs/Web/XPath/Axes#following-sibling)
+- [namespace](/ja/docs/Web/XPath/Axes#namespace) _(未対応)_
+- [parent](/ja/docs/Web/XPath/Axes#parent)
+- [preceding](/ja/docs/Web/XPath/Axes#preceding)
+- [preceding-sibling](/ja/docs/Web/XPath/Axes#preceding-sibling)
+- [self](/ja/docs/Web/XPath/Axes#self)
 
 ### 関数
 
@@ -120,9 +120,9 @@ l10n:
 - [true()](/ja/docs/Web/XPath/Functions/true) _(対応済み)_
 - [unparsed-entity-url()](/ja/docs/Web/XPath/Functions/unparsed-entity-url) _(not 対応済み)_
 
-## さらなる読み物
+## 参考文献
 
-[さらなる読み物](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading)
+[参考文献](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading)
 
 - [書籍](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#書籍)
 - [デジタル](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#デジタル)
