@@ -1058,7 +1058,6 @@ WebM 于 2010 年首次推出，现已得到广泛支持。符合要求的 WebM 
 | [Matroska 规范](https://matroska.org/technical/elements.html)                                                                    | 作为 WebM 基础的 Matroska 容器格式规范                                                    |
 | [WebM 字节流格式](https://w3c.github.io/media-source/webm-byte-stream-format.html)                                               | 与[媒体源扩展](/zh-CN/docs/Web/API/Media_Source_Extensions_API)一起使用的 WebM 字节流格式 |
 
-
 ## 浏览器兼容性
 
 <table class="standard-table">
