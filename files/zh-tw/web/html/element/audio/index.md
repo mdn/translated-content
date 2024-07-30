@@ -68,7 +68,7 @@ slug: Web/HTML/Element/audio
 
     默認值對於每個瀏覽器是不同的。規範建議將其設置為 `metadata`。
 
-    > **備註：**
+    > [!NOTE]
     >
     > - `autoplay` 屬性優先於 `preload`。如果指定了 `autoplay`，瀏覽器顯然需要開始下載音訊以進行播放。
     > - 規範並不強制要求瀏覽器遵循此屬性的值；它僅僅是一個提示。
