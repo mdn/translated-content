@@ -332,13 +332,15 @@ Content-Type: text/plain
 
 비록 요청의 `Cookie` 헤더가 `https://bar.other` 을 위한 쿠키를 포함하고 있지만, 이 예에서 설명한 것처럼 bar.other 가 {{HTTPHeader("Access-Control-Allow-Credentials")}} 헤더에 `true` 값을 포함하여 응답하지 않으면, 응답은 무시되고 웹 콘텐츠에 제공되지 않습니다.
 
-#### 실행 전 요청 및 자격 증명
+#### 사전 요청과 자격 증명
 
-CORS 실행 전 요청에는 자격 증명이 포함되지 않아야 합니다. 실행 전 요청에 대한 *응답*은 `Access-Control-Allow-Credentials: true`를 지정하여 자격 증명으로 실제 요청을 수행할 수 있음을 나타내야 합니다.
+CORS 사전 요청에는 자격 증명이 절대로 포함되지 않아야 합니다. 사전 요청에 대한 응답은 실제 요청이 자격 증명과 함께 수행될 수 있음을 나타내기 위해 `Access-Control-Allow-Credentials: true` 를 명시해야 합니다.
 
-> **참고:** #### 참고일부 엔터프라이즈 인증 서비스는 `cors-protocol-and-credentials` 사양을 위반하여 실행 전 요청에서 TLS 클라이언트 인증서를 보내도록 요구합니다.Firefox 87에서는 기본 설정을 지정하여 이 비준수 동작을 활성화할 수 있습니다: `network.cors_preflight.allow_client_cert`을 `true`로 설정 ([Firefox bug 1511151](https://bugzil.la/1511151)). Chromium 기반 브라우저는 현재 항상 CORS 실행 전 요청에서 TLS 클라이언트 인증서를 보냅니다([Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438)).
+> **참고:** 알부 기업 인증 서비스는 사전 요청할 때 TLS 클라이언트 인증서을 보내는 것을 요청합니다. 이는 [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) 사양에 어긋나는 동작입니다.
+>
+> 파이어폭스(Firefox)87 는 `network.cors_preflight.allow_client_cert` 을 `true` 으로 설정하여 이 비표준 동작을 활성화하는 것을 허용합니다.([Firefox bug 1511151](https://bugzil.la/1511151)) 현재 Chromium 기반 브라우저는 CORS 사전 요청에서 항상 TLS 클라이언트 인증서를 전송합니다 ([Chrome bug 775438](https://crbug.com/775438)).
 
-#### 자격증명 요청 및 와일드카드(Credentialed requests and wildcards)
+#### 자격 증명이 포함된 요청과 와일드카드
 
 자격 증명 요청에 응답할 때 서버는 **반드시** "`*`" 와일드카드를 지정하는 대신 `Access-Control-Allow-Origin` 헤더 값에 출처를 지정해야 합니다.
 
