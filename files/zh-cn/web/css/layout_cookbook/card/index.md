@@ -21,7 +21,7 @@ slug: Web/CSS/Layout_cookbook/Card
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/card.html", '100%', 1720)}}
 
-> **标注：**
+> [!CALLOUT]
 >
 > [下载这个示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/card--download.html)
 

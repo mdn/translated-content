@@ -17,7 +17,7 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
 
-> **标注：**
+> [!CALLOUT]
 >
 > [下载这份示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/breadcrumb-navigation--download.html)
 

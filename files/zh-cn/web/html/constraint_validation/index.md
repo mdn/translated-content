@@ -252,7 +252,7 @@ slug: Web/HTML/Constraint_validation
 
 调用 `checkValidity()` 也被称为约束的*静态*验证，调用 `reportValidity()` 也被称为约束的*交互*认证。
 
-> **备注：**
+> [!NOTE]
 >
 > - 如果 {{ HTMLElement("form") }} 元素上设置了 [`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate) 属性，则不发生约束验证交互。
 > - 在 [`HTMLFormElement`](/zh-CN/docs/Web/API/HTMLFormElement) 接口上调用 `submit()` 方法并不触发约束条件验证。换句话说，即使表单数据不满足约束条件，该方法也会将其发送到服务器。在提交按钮上调用 `click()` 方法来代替。
