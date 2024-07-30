@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**无障碍名称**（Accessible Name）是用户界面元素的名字：它是一段关联了一个可以通过一个与之相关的标签向用户提供辅助技术 HTML 元素的文本。
+**无障碍名称**（Accessible Name）是用户界面元素的名称：它是与 HTML 元素相关联的文本，可为辅助技术用户提供该元素的标签。
 
 无障碍名称能表达元素的目的，帮助用户理解这个元素是干什么用的、怎么用的。一般来说，在一个页面之中，各元素的无障碍名称应该是独一无二的。这可以帮助用户分辨元素、认出他们所希望与之交互的元素。
 
@@ -34,9 +34,9 @@ l10n:
 - [学习无障碍](/zh-CN/docs/Learn/Accessibility)
 - 维基百科的 [Web 无障碍](https://zh.wikipedia.org/wiki/网站无障碍)
 - [Web Accessibility In Mind](https://webaim.org/)
-- [无障碍富互联网应用（ARIA）](/zh-CN/docs/Learn/Accessibility/ARIA)
-- [Web 无障碍倡议（WAI）](https://www.w3.org/WAI/)
-- [WAI-ARIA 推荐](https://w3c.github.io/aria/)
+- [ARIA](/zh-CN/docs/Learn/Accessibility/ARIA)
+- [W3C Web 无障碍倡议（WAI）](https://www.w3.org/WAI/)
+- [无障碍富互联网应用（WAI-ARIA）](https://w3c.github.io/aria/)
 - 相关术语：
   - {{Glossary("Accessibility", "无障碍")}}
   - {{Glossary("Accessibility tree", "无障碍树")}}
