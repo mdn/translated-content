@@ -25,7 +25,7 @@ SVG 是一種向量圖形格式。向量圖形可縮可放，圖形完全不會�
 
 SVG 可和 HTML、CSS 及 JavaScript 一同運作。使用 SVG 增強普通 HTML 頁面或 web 應用程式。
 
-- Google [Maps](https://maps.google.com/maps) (路徑圖) & [Docs](https://accounts.google.com/v3/signin/identifier?continue%3Dhttps://docs.google.com/%26emr%3D1%26followup%3Dhttps://docs.google.com/%26ifkv%3DAdF4I77M6CvoEwGDxYJ4gdbfgRnDmUPHPE7KT5ImM3SZ2zGsqC7hQsNyhkmflQHhps2DJEHGY0CAUw%26osid%3D1%26passive%3D1209600%26flowName%3DWebLiteSignIn%26flowEntry%3DServiceLogin%26dsh%3DS1329244543:1722256809600726) (試算表繪圖)
+- Google [Maps](https://maps.google.com/maps) (路徑圖) & [Docs](https://docs.google.com) (試算表繪圖)
 - [SVG 泡沫選單](http://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml)
 
 ## 工具
@@ -49,8 +49,7 @@ SVG 可和 HTML、CSS 及 JavaScript 一同運作。使用 SVG 增強普通 HTML
 
 - [Tetris](https://www.croczilla.com:443/svg/samples/svgtetris/svgtetris.svg), [Yet Another SVG Tetris](https://www.codedread.com/yastframe.php) & [Connect 4](http://www.treebuilder.de/svg/connect4.svg)
 - [Find the State](https://blogs.opera.com/news/) game
-- [US popuplation map](https://www.carto.net/papers/svg/us_population/index.html) & [Germany
-  population chart](https://www.destatis.de/error_path/400.html?al_req_id%3DZqeNvnz3jREhDwW4QYG1LQAAAtU)
+- [US popuplation map](https://www.carto.net/papers/svg/us_population/index.html)
 - [3D box](http://www.treebuilder.de/default.asp?file=441875.xml) & [3D boxes](http://www.treebuilder.de/default.asp?file=206524.xml)
 - [SVG+DOM based drawing tool](http://www.amaltas.org/svgapp)
 
