@@ -239,7 +239,6 @@ if ("Promise" in window) {
 - [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
 - [Jake Archibald: JavaScript Promises: There and Back Again](https://www.html5rocks.com/en/tutorials/es6/promises/)
 - [Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/slideshow/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript/9953720)
-- [Matt Greer: JavaScript Promises ... In Wicked Detail](https://suygiamthinhluc.vn/%2A)
 - [Forbes Lindesay: promisejs.org](https://www.promisejs.org/)
 - [Nolan Lawson: We have a problem with promises — Common mistakes with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
 - [Promise polyfill](https://github.com/stefanpenner/es6-promise)
