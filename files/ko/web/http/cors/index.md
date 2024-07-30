@@ -1,11 +1,13 @@
 ---
 title: 교차 출처 리소스 공유 (CORS)
 slug: Web/HTTP/CORS
+l10n:
+  sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
 ---
 
 {{HTTPSidebar}}
 
-**교차 출처 리소스 공유**(Cross-Origin Resource Sharing, {{Glossary("CORS")}})는 브라우저가 자신의 출처가 아닌 다른 어떤 {{glossary("origin", "출처")}}(도메인, 스킴 혹은 포트)로부터 자원을 로딩하는 것을 허용하도록 서버가 허가 해주는 {{Glossary("HTTP")}} 헤더 기반 메커니즘입니다. 또한 CORS 는 교차 출처 리소스를 호스팅하는 서버가 실제 요청을 허가할 것인지 확인하기 위해 브라우저가 보내는 "프리플라이트" 요청 메커니즘에 의존합니다. 이 프리플라이트 요청에서 브라우저는 실제 요청에서 사용할 HTTP 메서드와 헤더들에 대한 정보가 표시된 헤더에 담아 보냅니다.
+**교차 출처 리소스 공유**(Cross-Origin Resource Sharing, {{Glossary("CORS")}})는 브라우저가 자신의 출처가 아닌 다른 어떤 {{glossary("origin", "출처")}}(도메인, 스킴 혹은 포트)로부터 자원을 로딩하는 것을 허용하도록 서버가 허가 해주는 {{Glossary("HTTP")}} 헤더 기반 메커니즘입니다. 또한 CORS 는 교차 출처 리소스를 호스팅하는 서버가 실제 요청을 허가할 것인지 확인하기 위해 브라우저가 보내는 "사전 요청(프리플라이트, Preflight)" 메커니즘에 의존합니다. 이 사전 요청에서 브라우저는 실제 요청에서 사용할 HTTP 메서드와 헤더들에 대한 정보가 표시된 헤더에 담아 보냅니다.
 
 교차 출처 요청의 예시: `https://domain-a.com` 에서 제공되는 프론트엔드 JavaScript 코드가 {{domxref("Window/fetch", "fetch()")}}를 사용하여 `https://domain-b.com/data.json` 에 요청하는 경우.
 
@@ -29,7 +31,7 @@ CORS 메커니즘은 브라우저와 서버 간의 안전한 교차 출처 요�
 
 ## 기능적 개요
 
-교차 출처 리소스 공유 표준은 서버가 웹 브라우저에서 해당 정보를 읽는 것이 허용된 출처를 설명할 수 있도록 새로운 [HTTP 헤더](/ko/docs/Web/HTTP/Headers)를 추가함으로써 동작합니다. 추가적으로, 서버 데이터에 부수 효과(side effect)를 일으킬 수 있는 HTTP 요청 방법(특히 {{HTTPMethod("GET")}} 이외의 HTTP 메서드 또는 특정 [MIME 타입](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types)을 사용하는 {{HTTPMethod("POST")}})에 대해서, CORS 명세는 브라우저가 HTTP {{HTTPMethod("OPTIONS")}} 메서드로 서버에서 지원하는 메서드들을 요구하는 요청을 "프리플라이트(사전 전달)"한 다음, 서버로부터 "승인"을 받은 후 실제 요청을 보내도록 지시합니다. 또한 서버는 요청과 함께 "자격 증명"(예를 들어 [쿠키](/ko/docs/Web/HTTP/Cookies) 및 [HTTP 인증](/ko/docs/Web/HTTP/Authentication))을 전송해야 하는지 여부를 클라이언트에게 알릴 수 있습니다.
+교차 출처 리소스 공유 표준은 서버가 웹 브라우저에서 해당 정보를 읽는 것이 허용된 출처를 설명할 수 있도록 새로운 [HTTP 헤더](/ko/docs/Web/HTTP/Headers)를 추가함으로써 동작합니다. 추가적으로, 서버 데이터에 부수 효과(side effect)를 일으킬 수 있는 HTTP 요청 방법(특히 {{HTTPMethod("GET")}} 이외의 HTTP 메서드 또는 특정 [MIME 타입](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types)을 사용하는 {{HTTPMethod("POST")}})에 대해서, CORS 명세는 브라우저가 HTTP {{HTTPMethod("OPTIONS")}} 메서드로 서버에서 지원하는 메서드들을 요구하는 요청을 "사전 전달(프리플라이트)"한 다음, 서버로부터 "승인"을 받은 후 실제 요청을 보내도록 지시합니다. 또한 서버는 요청과 함께 "자격 증명"(예를 들어 [쿠키](/ko/docs/Web/HTTP/Cookies) 및 [HTTP 인증](/ko/docs/Web/HTTP/Authentication))을 전송해야 하는지 여부를 클라이언트에게 알릴 수 있습니다.
 
 CORS 실패는 오류를 발생시키지만, 보안상의 이유로 오류에 대한 세부 사항은 JavaScript에 제공되지 않습니다. 코드가 알 수 있는 것은 오류가 발생했다는 것뿐입니다. 무엇이 구체적으로 잘못되었는지를 확인하려면 브라우저의 콘솔에서 세부 사항을 살펴봐야 합니다.
 
@@ -107,7 +109,7 @@ Connection: keep-alive
 Origin: https://foo.example
 ```
 
-주목할 요청 헤더는 {{HTTPHeader("Origin")}}으로, 요청이 `https://foo.example` 에서 왔음을 나타냅니다.
+주목할 요청 헤더는 {{HTTPHeader("Origin")}} 으로, 요청이 `https://foo.example` 에서 왔음을 나타냅니다.
 
 이제 서버가 어떻게 응답하는지 살펴보겠습니다.
 
@@ -138,7 +140,7 @@ Access-Control-Allow-Origin: https://foo.example
 
 > **참고:** [자격 증명](#requests_with_credentials)이 포함된 요청에 응답할 때, 서버는 Access-Control-Allow-Origin 헤더의 값으로 "\*" 와일드카드를 지정하는 대신 특정 출처를 **반드시** 지정해야 합니다.
 
-### 프리플라이트 요청(Preflighted requests)
+### 사전 요청(Preflighted requests)
 
 [단순 요청](#simple_requests)과 달리 "사전 전송(preflighted)" 요청의 경우 실제 요청을 보내는 것이 안전한지 판단하기 위해 브라우저가 먼저 {{HTTPMethod("OPTIONS")}} 메서드를 사용해 다른 출처의 리소스에 HTTP 요청을 보냅니다. 이러한 교차 출처 요청은 사용자 데이터에 영향을 미칠 수 있기 때문에 사전에 전송됩니다.
 
@@ -167,7 +169,7 @@ fetchPromise.then((response) => {
 > **참고:**
 > 아래 설명한 바와 같이 실제 `POST` 요청에는 `Access-Control-Request-*` 헤더가 포함되지 않습니다. 이 헤더들은 오직 `OPTIONS` 요청에만 필요합니다.
 
-클라이언트와 서버 간의 전체 통신을 살펴보겠습니다. 첫 번째 통신은 프리플라이트 요청/응답입니다.
+클라이언트와 서버 간의 전체 통신을 살펴보겠습니다. 첫 번째 통신은 사전 요청과 그에 대한 응답입니다.
 
 ```http
 OPTIONS /doc HTTP/1.1
@@ -193,14 +195,14 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 ```
 
-위 첫 번째 블록은 {{HTTPMethod("OPTIONS")}} 메서드를 사용한 프리플라이트 요청을 나타냅니다. 브라우저는 위 JavaScript 코드 스니펫(snippet)에서 사용한 요청 파라미터를 기준으로 사전 요청이 필요하다고 결정합니다. 이 사전 요청을 통해 서버는 실제 요청 파라미터로 요청을 보내는 것이 적절한지 응답할 수 있습니다. OPTIONS 는 서버로부터 추가 정보를 얻기 위해 사용되는 HTTP/1.1 메서드이며 리소스를 변경할 수 없는 {{Glossary("Safe/HTTP", "안전한")}} 메서드입니다. OPTIONS 요청과 함께 두 개의 다른 요청 헤더가 전송됩니다.
+위 첫 번째 블록은 {{HTTPMethod("OPTIONS")}} 메서드를 사용한 사전 요청을 나타냅니다. 브라우저는 위 JavaScript 코드 스니펫(snippet)에서 사용한 요청 파라미터를 기준으로 사전 요청이 필요하다고 결정합니다. 이 사전 요청을 통해 서버는 실제 요청 파라미터로 요청을 보내는 것이 적절한지 응답할 수 있습니다. OPTIONS 는 서버로부터 추가 정보를 얻기 위해 사용되는 HTTP/1.1 메서드이며 리소스를 변경할 수 없는 {{Glossary("Safe/HTTP", "안전한")}} 메서드입니다. OPTIONS 요청과 함께 두 개의 다른 요청 헤더가 전송됩니다.
 
 ```http
 Access-Control-Request-Method: POST
 Access-Control-Request-Headers: content-type,x-pingother
 ```
 
-{{HTTPHeader("Access-Control-Request-Method")}} 헤더는 프리플라이트 요청의 일부로써 서버에게 실제 요청이 전송될 때 `POST` 요청 메서드를 사용할 것임을 알립니다. {{HTTPHeader("Access-Control-Request-Headers")}} 헤더는 실제 요청이 전송될 때 사용자 정의 헤더 `X-PINGOTHER` 와 `Content-Type` 를 사용할 것임을 서버에게 알립니다. 이제 서버는 이러한 조건 하에서 요청을 수락할 수 있는지 여부를 결정할 기회를 갖게 됩니다.
+{{HTTPHeader("Access-Control-Request-Method")}} 헤더는 사전 요청의 일부로써 서버에게 실제 요청이 전송될 때 `POST` 요청 메서드를 사용할 것임을 알립니다. {{HTTPHeader("Access-Control-Request-Headers")}} 헤더는 실제 요청이 전송될 때 사용자 정의 헤더 `X-PINGOTHER` 와 `Content-Type` 를 사용할 것임을 서버에게 알립니다. 이제 서버는 이러한 조건 하에서 요청을 수락할 수 있는지 여부를 결정할 기회를 갖게 됩니다.
 
 위 두 번째 블록은 서버가 반환하는 응답으로, 요청 메서드(`POST`)와 요청 헤더(`X-PINGOTHER`)가 허용된다는 것을 나타냅니다. 이어지는 내용을 자세히 살펴보겠습니다.
 
@@ -215,9 +217,9 @@ Access-Control-Max-Age: 86400
 
 서버는 또한 `Access-Control-Allow-Headers` 헤더에 "`X-PINGOTHER, Content-Type`" 값을 설정하여 보내 이 헤더들이 실제 요청에 사용할 수 있는 허용된 헤더임을 확인해줍니다. `Access-Control-Allow-Methods` 와 마찬가지로 `Access-Control-Allow-Headers` 는 허용 가능한 헤더의 쉼표로 구분합니다.
 
-마지막으로, {{HTTPHeader("Access-Control-Max-Age")}} 는 또 다른 프리플라이트 요청을 보내지 않도록 프리플라이트 요청에 대한 응답을 얼마나 오래동안 캐시할 수 있는지 초 단위 시간 값을 제공합니다. 기본 값은 5초입니다. 현재 최대 캐시 시간은 86400초(= 24시간)입니다. 각 브라우저는 `Access-Control-Max-Age` 가 이를 초과할 때 우선되는 [최대 내부 값](/ko/docs/Web/HTTP/Headers/Access-Control-Max-Age)을 가집니다.
+마지막으로, {{HTTPHeader("Access-Control-Max-Age")}} 는 또 다른 사전 요청을 보내지 않도록 사전 요청에 대한 응답을 얼마나 오래동안 캐시할 수 있는지 초 단위 시간 값을 제공합니다. 기본 값은 5초입니다. 현재 최대 캐시 시간은 86400초(= 24시간)입니다. 각 브라우저는 `Access-Control-Max-Age` 가 이를 초과할 때 우선되는 [최대 내부 값](/ko/docs/Web/HTTP/Headers/Access-Control-Max-Age)을 가집니다.
 
-프리플라이트 요청이 한번 완료되면 실제 요청이 전송됩니다.
+사전 요청이 한번 완료되면 실제 요청이 전송됩니다.
 
 ```http
 POST /doc HTTP/1.1
@@ -251,26 +253,26 @@ Content-Type: text/plain
 [Some XML payload]
 ```
 
-#### 플리플라이트 요청과 리다이렉트
+#### 사전 요청과 리다이렉트
 
-현재 모든 브라우저가 프리플라이트 요청 후 리디렉션을 따르는 것을 현재 지원하지 않습니다. 프리플라이트 요청 후 리다이렉트가 발생하면 일부 브라우저는 다음과 같은 오류 메시지를 띄웁니다.
+현재 모든 브라우저가 사전 요청 후 리디렉션하는 것을 지원하지 않습니다. 사전 요청 후 리다이렉트가 발생하면 일부 브라우저는 다음과 같은 오류 메시지를 띄웁니다.
 
-> 요청이 `https://example.com/foo` 로 리디렉션되었습니다. 이는 프리플라이트 요청이 필요한 교차 출처 요청에 대해 허용되지 않습니다.
-> 요청은 프리플라이트 요청이 필요합니다. 이는 교차 출처 리디렉트를 허용되지 않습니다.
+> 요청이 `https://example.com/foo` 로 리디렉션되었습니다. 이는 사전 요청이 필요한 교차 출처 요청에 대해 허용되지 않습니다.
+> 요청은 사전 요청이 필요합니다. 이는 교차 출처 리디렉트를 허용되지 않습니다.
 
 CORS 프로토콜은 원래 그러한 동작(리다이렉트)을 필요했지만, [이후 더 이상 필요하지 않도록 변경되었습니다](https://github.com/whatwg/fetch/commit/0d9a4db8bc02251cc9e391543bb3c1322fb882f2). 그러나 모든 브라우저가 변경 사항을 구현하지는 않았기 때문에, 따라서 원래 필요했었던 동작(리다이렉트)이 여전히 보입니다.
 
 브라우저가 명세를 따라잡을 때까지 다음 중 하나 또는 둘 다 수행하여 이 제한을 해결할 수 있습니다.
 
-- 프리플라이트 요청을 피하거나 리디렉션을 피하기 위해(혹은 둘 다) 서버 측 동작을 변경
-- 요청을 프리플라이트 요청을 발생시키지 않는 [단순 요청](#simple_requests)으로 변경
+- 사전 요청을 피하거나 리디렉션을 피하기 위해(혹은 둘 다) 서버 측 동작을 변경
+- 사전 요청을 발생시키지 않는 [단순 요청](#simple_requests)으로 변경
 
 위 방법이 가능하지 않은 경우 다른 방법도 있습니다.
 
-1. 실제 프리플라이트 요청이 도달할 URL 을 판별하기 위해 Fetch API 의 {{domxref("Response.url")}} 또는 {{domxref("XMLHttpRequest.responseURL")}}을 사용해 [단순 요청](#simple_requests)을 만듭니다.
+1. 실제 사전 요청이 도달할 URL 을 판별하기 위해 Fetch API 의 {{domxref("Response.url")}} 또는 {{domxref("XMLHttpRequest.responseURL")}}을 사용해 [단순 요청](#simple_requests)을 만듭니다.
 2. 첫 번째 단계에서 `Response.url` 혹은 `XMLHttpRequest.responseURL` 로부터 얻은 URL을 사용하여 또 다른 요청(실제 요청)을 만듭니다.
 
-그러나 요청에 `Authorization` 헤더가 포함되어 있어 프리플라이트 요청을 트리거 한 요청이라면 위 단계를 통해 이 제한을 우회할 수 없습니다. 그리고 요청이 이뤄지는 서버에 대한 제어가 없다면 전혀 우회할 수 없습니다.
+그러나 `Authorization` 헤더가 포함되어 있어 사전 요청을 트리거 한 요청이라면 위 단계를 통해 이 제한을 우회할 수 없습니다. 그리고 요청이 이뤄지는 서버에 대한 제어가 없다면 전혀 우회할 수 없습니다.
 
 ### 자격 증명을 포함한 요청
 
