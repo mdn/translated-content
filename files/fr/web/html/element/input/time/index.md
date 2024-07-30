@@ -144,7 +144,8 @@ Lorsqu'un formulaire contenant un champ `time` est envoyé, la valeur est encod�
 
 En complément des attributs communs à l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/Input), les champs de type `time` gèrent les attributs suivants.
 
-> **Note :** À la différence d'autres types de donnée, les valeurs pour les heures sont sur un domaine **périodique**. Cela signifie qu'une fois la valeur maximale dépassée, on revient à la valeur minimale (autrement dit, on fait le tour de l'horloge). Ainsi, si on indique `min` avec la valeur `14:00` et `max` avec la valeur `2:00`, cela signifie que les valeurs autorisées sont comprises entre 2 heures de l'après-midi et jusqu'à 2 heures du matin le jour suivant. Pour plus de détails, voir la section [avoir un minimum et un maximum autour de minuit](#avoir_un_minimum_et_un_maximum_autour_de_minuit).
+> [!NOTE]
+> À la différence d'autres types de donnée, les valeurs pour les heures sont sur un domaine **périodique**. Cela signifie qu'une fois la valeur maximale dépassée, on revient à la valeur minimale (autrement dit, on fait le tour de l'horloge). Ainsi, si on indique `min` avec la valeur `14:00` et `max` avec la valeur `2:00`, cela signifie que les valeurs autorisées sont comprises entre 2 heures de l'après-midi et jusqu'à 2 heures du matin le jour suivant. Pour plus de détails, voir la section [avoir un minimum et un maximum autour de minuit](#avoir_un_minimum_et_un_maximum_autour_de_minuit).
 
 ### `list`
 
@@ -162,7 +163,8 @@ Une chaîne de caractères, au format `hh:mm`, qui indique l'heure la plus tôt 
 
 Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité par l'utilisatrice ou l'utilisateur. La valeur de l'attribut `value` peut, toutefois, être modifiée avec du code JavaScript qui modifierait la valeur de la propriété `value` sur l'objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
-> **Note :** Puisqu'un champ en lecture seule ne peut pas avoir de valeur, `required` n'a pas d'effet sur les champs qui ont également `readonly` présent.
+> [!NOTE]
+> Puisqu'un champ en lecture seule ne peut pas avoir de valeur, `required` n'a pas d'effet sur les champs qui ont également `readonly` présent.
 
 ### `step`
 
@@ -170,7 +172,8 @@ L'attribut `step` est un nombre qui définit la granularité à laquelle la vale
 
 Si cet attribut utilise la chaîne de caractère `any`, cela signifie qu'il n'y a aucune contrainte d'incrément et que toute valeur est autorisée (sous réserve de respecter les autres contraintes, comme celles indiquées par [`min`](#min) et [`max`](#max)).
 
-> **Note :** Lorsque les données saisies dans le contrôle ne respectent pas l'incrément, [l'agent utilisateur](/fr/docs/Glossary/User_agent) pourra arrondir à la valeur valide la plus proche, en privilégiant les nombres les plus grands si les deux options valides environnantes sont à égale distance.
+> [!NOTE]
+> Lorsque les données saisies dans le contrôle ne respectent pas l'incrément, [l'agent utilisateur](/fr/docs/Glossary/User_agent) pourra arrondir à la valeur valide la plus proche, en privilégiant les nombres les plus grands si les deux options valides environnantes sont à égale distance.
 
 Pour les champs de type `time`, la valeur de l'attribut `step` est exprimée en secondes (avec un facteur de multiplication de `1000` puisque la valeur numérique sous-jacente est exprimée en millisecondes). Par défaut, la valeur de l'incrément est `60`, ce qui correspond à 1 minute.
 
@@ -199,7 +202,8 @@ Dans sa forme la plus simple, `<input type="time">` n'est accompagné que d'un �
 
 L'attribut [`step`](/fr/docs/Web/HTML/Element/Input#attr-step) peut être utilisé afin de faire varier l'incrément de temps lorsqu'on passe d'une valeur à la suivante ou à la précédente. Attention toutefois, cela n'est pas pris en charge ou homogène parmi les différents navigateurs.
 
-> **Note :** L'effet de cette propriété peut être étrange selon les navigateurs, elle n'est donc pas complètement fiable.
+> [!NOTE]
+> L'effet de cette propriété peut être étrange selon les navigateurs, elle n'est donc pas complètement fiable.
 
 La valeur de cet attribut est un entier exprimant le nombre de secondes à incrémenter. Si on choisit une valeur inférieure à 60 secondes (c'est-à-dire 1 minute), le contrôle `time` affichera alors une troisième section pour les secondes après les heures et les minutes&nbsp;:
 
@@ -218,7 +222,8 @@ Pour Firefox, il n'y a pas de flèches et `step` n'est pas utilisé. Toutefois, 
 
 Cet attribut ne semble pas avoir d'effet pour Edge.
 
-> **Note :** L'utilisation de `step` semble causer des problèmes de validation (voir la section qui suit).
+> [!NOTE]
+> L'utilisation de `step` semble causer des problèmes de validation (voir la section qui suit).
 
 ## Validation
 
@@ -325,7 +330,8 @@ Si vous essayez de soumettre le formulaire sans avoir saisi de valeur (ou avec u
 
 {{EmbedLiveSample('', 600, 120)}}
 
-> **Attention :** Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
+> [!WARNING]
+> Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
 
 ## Gérer la prise en charge des navigateurs
 

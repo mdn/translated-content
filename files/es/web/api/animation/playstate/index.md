@@ -7,7 +7,8 @@ slug: Web/API/Animation/playState
 
 La propiedad `Animation.playState` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve y establece un valor enumerado que describe el estado de reproducción de una animación.
 
-> **Nota:** Esta propiedad es de solo lectura para las Animaciones y Transiciones en CSS.
+> [!NOTE]
+> Esta propiedad es de solo lectura para las Animaciones y Transiciones en CSS.
 
 ## Sintaxis
 

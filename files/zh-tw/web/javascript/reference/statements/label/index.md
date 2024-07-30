@@ -9,7 +9,8 @@ slug: Web/JavaScript/Reference/Statements/label
 
 {{EmbedInteractiveExample("pages/js/statement-label.html")}}
 
-> **備註：** 標記的迴圈或程式碼區塊非常罕見。通常可以使用函式呼叫而不是使用迴圈跳轉。
+> [!NOTE]
+> 標記的迴圈或程式碼區塊非常罕見。通常可以使用函式呼叫而不是使用迴圈跳轉。
 
 ## 語法
 

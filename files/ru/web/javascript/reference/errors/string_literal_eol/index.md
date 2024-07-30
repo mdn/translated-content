@@ -1,20 +1,20 @@
 ---
-title: "SyntaxError: unterminated string literal"
+title: "SyntaxError: string literal contains an unescaped line break"
 slug: Web/JavaScript/Reference/Errors/String_literal_EOL
-original_slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 l10n:
-  sourceCommit: d71b141d2d18b96639547856714df19cefacfebf
+  sourceCommit: bd401d0045851cd5c7c145c3acdeabe5062059f5
 ---
 
 {{jsSidebar("Errors")}}
 
-Ошибка JavaScript «незавершённый строковый литерал» возникает, когда где-то встречается незавершённый [строковый литерал](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#строковый_литерал). Строковые литералы должны быть заключены в одинарные (`'`) или двойные (`"`)) кавычки.
+Ошибка JavaScript «строковый литерал содержит неэкранированный перенос строки» возникает, когда где-то встречается незавершённый [строковый литерал](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#строковый_литерал). Строковые литералы должны быть заключены в одинарные (`'`) или двойные (`"`)) кавычки и не могут разбиваться на несколько строк.
 
 ## Сообщение
 
 ```plain
-SyntaxError: Unterminated string constant (Edge)
-SyntaxError: unterminated string literal (Firefox)
+SyntaxError: Invalid or unexpected token (V8-based)
+SyntaxError: '' string literal contains an unescaped line break (Firefox)
+SyntaxError: Unexpected EOF (Safari)
 ```
 
 ## Тип ошибки

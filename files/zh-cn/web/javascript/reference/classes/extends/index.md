@@ -120,7 +120,8 @@ console.log(new ChildClass()); // TypeError: Derived constructors may only retur
 
 ### 子类化内置类
 
-> **警告：** 标准委员会目前的立场是，以前版本规范中的内置类的子类化机制设计过度，对性能和安全性造成了不可忽视的影响。新的内置方法较少考虑子类，引擎实现者正在[研究是否要删除某些子类机制](https://github.com/tc39/proposal-rm-builtin-subclassing)。在增强内置类时，请考虑使用组合而非继承。
+> [!WARNING]
+> 标准委员会目前的立场是，以前版本规范中的内置类的子类化机制设计过度，对性能和安全性造成了不可忽视的影响。新的内置方法较少考虑子类，引擎实现者正在[研究是否要删除某些子类机制](https://github.com/tc39/proposal-rm-builtin-subclassing)。在增强内置类时，请考虑使用组合而非继承。
 
 下面是扩展类时可能会遇到的一些问题：
 

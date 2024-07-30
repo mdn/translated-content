@@ -9,7 +9,8 @@ l10n:
 
 **`OfflineAudioCompletionEvent()`** は[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) のコンストラクターで、新しい {{domxref("OfflineAudioCompletionEvent")}} オブジェクトを生成します。
 
-> **メモ:** 一般的にコンストラクターを手動で使用することはないでしょう。
+> [!NOTE]
+> 一般的にコンストラクターを手動で使用することはないでしょう。
 > `OfflineAudioCompletionEvent` イベントは、古い理由のため {{domxref("OfflineAudioContext")}} インスタンスに配信されます。
 
 ## 構文

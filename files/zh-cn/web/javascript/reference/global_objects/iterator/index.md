@@ -28,7 +28,8 @@ l10n:
 
 ### 迭代器辅助方法
 
-> **备注：** 这些方法是*迭代器*辅助方法，而不是*可迭代对象*辅助方法，因为可迭代对象的唯一要求就是具有 `[Symbol.iterator]()` 方法，因此它们没有共享的原型来安装这些方法。
+> [!NOTE]
+> 这些方法是*迭代器*辅助方法，而不是*可迭代对象*辅助方法，因为可迭代对象的唯一要求就是具有 `[Symbol.iterator]()` 方法，因此它们没有共享的原型来安装这些方法。
 
 `Iterator` 类本身提供了一些使用迭代器的辅助方法。例如，你可能想做以下事情：
 
@@ -136,7 +137,8 @@ const myIterator = Iterator.from({
 
   - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"Iterator"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
 
-    > **备注：** 与大多数内置类的 `[Symbol.toStringTag]` 不同，出于 web 兼容性原因，`Iterator.prototype[Symbol.toStringTag]` 是可写的。
+    > [!NOTE]
+    > 与大多数内置类的 `[Symbol.toStringTag]` 不同，出于 web 兼容性原因，`Iterator.prototype[Symbol.toStringTag]` 是可写的。
 
 ## 实例方法
 

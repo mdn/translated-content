@@ -114,7 +114,8 @@ input[type="search"] {
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-search.html", '100%', 200)}}
 
-> **メモ:** 検索フィールドでは、Edge と Chrome で入力がフォーカスされないときに "x" の削除アイコンが消えるが、Safari では残ることに気づくこともあるでしょう。CSS で消すには、`input[type="search"]::-webkit-search-cancel-button { display: none; }`を使用できますが、フォーカス時のアイコンも取り除き、見た目が元に戻らないようです。
+> [!NOTE]
+> 検索フィールドでは、Edge と Chrome で入力がフォーカスされないときに "x" の削除アイコンが消えるが、Safari では残ることに気づくこともあるでしょう。CSS で消すには、`input[type="search"]::-webkit-search-cancel-button { display: none; }`を使用できますが、フォーカス時のアイコンも取り除き、見た目が元に戻らないようです。
 
 ### チェックボックスとラジオボタンのスタイル設定
 
@@ -320,7 +321,8 @@ button {
 }
 ```
 
-> **メモ:** 多数のブラウザーで同時にこの例をテストしたい場合、[ライブ版をここで見つけてください](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html) ([ソースコードも見てください](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/ugly-controls.html))。
+> [!NOTE]
+> 多数のブラウザーで同時にこの例をテストしたい場合、[ライブ版をここで見つけてください](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html) ([ソースコードも見てください](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/ugly-controls.html))。
 >
 > また JavaScript をページに追加してコントロール自身の下にあるファイルピッカー自身で選択されたファイルを一覧しているのを心に留めておいてください。これは [`<input type="file">`](/ja/docs/Web/HTML/Element/input/file#例) リファレンスページの例を簡単にしたバージョンです。
 
@@ -424,7 +426,8 @@ select {
 
 しかし、コントロールの内部部品（日付をピックアップするのに使うポップアップカレンダー、値を増減するスピナーなど）はまったくスタイル設定できず、 `appearance: none;` を使ってもスタイルを除去できません。スタイル設定を完全に制御する必要がある場合は、カスタムコントロールを生成するライブラリーを使うか、自分で作らなければなりません。
 
-> **メモ:** ここでも[`<input type="number">`](/ja/docs/Web/HTML/Element/input/number) は触れる価値があります、これもまた、値を増加/減少させるために使用することができるスピナーがあるので、同じ問題に悩まされる可能性があります。しかし、 `number` 型の場合、収集するデータはより単純で、代わりに `tel` 入力型を使用するのも簡単です。これは `text` のような外観ですが、タッチキーボードを搭載した機器ではテンキーを表示することができます。
+> [!NOTE]
+> ここでも[`<input type="number">`](/ja/docs/Web/HTML/Element/input/number) は触れる価値があります、これもまた、値を増加/減少させるために使用することができるスピナーがあるので、同じ問題に悩まされる可能性があります。しかし、 `number` 型の場合、収集するデータはより単純で、代わりに `tel` 入力型を使用するのも簡単です。これは `text` のような外観ですが、タッチキーボードを搭載した機器ではテンキーを表示することができます。
 
 ### Range 入力型
 

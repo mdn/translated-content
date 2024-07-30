@@ -51,7 +51,8 @@ some(callbackFn, thisArg)
 - 既に処理したインデックスを変更しても、 `callbackFn` が再度呼び出されることはありません。
 - まだ処理していない既存の配列要素が `callbackFn` によって変更された場合、`callbackFn` に渡される値はその要素が取得された時点での値になります。[削除](/ja/docs/Web/JavaScript/Reference/Operators/delete)された要素は処理されません。
 
-> **警告:** 上記のように進行中の配列に対して変更を行うと、理解しにくいコードになることが多いので、（特別な場合を除いて）避けるのが一般的です。
+> [!WARNING]
+> 上記のように進行中の配列に対して変更を行うと、理解しにくいコードになることが多いので、（特別な場合を除いて）避けるのが一般的です。
 
 `some()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 

@@ -61,7 +61,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/sessions
 
 {{WebExtExamples("h2")}}
 
-> **メモ:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/extensions/sessions) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/extensions/sessions) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

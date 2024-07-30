@@ -53,7 +53,8 @@ div.menu-bar li:hover > ul {
 
 ## 索引
 
-> **メモ:** この索引でのプロパティ名は、CSS 標準の名前と異なる JavaScript の名前は含んでいません。
+> [!NOTE]
+> この索引でのプロパティ名は、CSS 標準の名前と異なる JavaScript の名前は含んでいません。
 
 {{CSS_Ref}}
 

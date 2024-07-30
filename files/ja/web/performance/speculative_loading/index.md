@@ -21,7 +21,8 @@ l10n:
 - **事前レンダリング (Prerendering)** はさらに段階を踏み、要求されたときに表示させるコンテンツを実際にレンダリングしておきます。これが行われる方法によっては、古いページから新しいページへ即座に移動することができます。
 - **事前接続 (Preconnecting)** は、接続ハンドシェイク（すなわち、DNS + TCP + TLS）の一部またはすべてを事前に実行しておくすることで、指定されたオリジンからの将来の読み込みを高速化するためのものです。
 
-> **メモ:** 上記の説明は高水準で一般的なものです。ブラウザーが先読みや事前レンダリングを実現するために正確に何を行うかは、用いる機能によって異なります。より正確な機能の説明は、下記の[投機的読み込み機能](#投機的読み込み機能)の節で提供されています。
+> [!NOTE]
+> 上記の説明は高水準で一般的なものです。ブラウザーが先読みや事前レンダリングを実現するために正確に何を行うかは、用いる機能によって異なります。より正確な機能の説明は、下記の[投機的読み込み機能](#投機的読み込み機能)の節で提供されています。
 
 ## 投機的読み込みはどのように実現するのか
 
@@ -65,7 +66,8 @@ Link: <https://example.com>; rel="preconnect"
 <link rel="dns-prefetch" href="https://example.com" />
 ```
 
-> **メモ:** 詳しくは [dns-prefetch の使用](/ja/docs/Web/Performance/dns-prefetch)を参照してください。
+> [!NOTE]
+> 詳しくは [dns-prefetch の使用](/ja/docs/Web/Performance/dns-prefetch)を参照してください。
 
 ### `<link rel="preload">`
 
@@ -146,7 +148,8 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 
 ### `<link rel="prerender">` {{deprecated_inline}}{{non-standard_inline}}
 
-> **メモ:** この技術は Chrome でしか利用できませんでしたが、非推奨になりました。代わりに[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) を使用しましょう。
+> [!NOTE]
+> この技術は Chrome でしか利用できませんでしたが、非推奨になりました。代わりに[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) を使用しましょう。
 
 [`<link rel="prerender">`](/ja/docs/Web/HTML/Attributes/rel/prerender) は、ユーザーが次のナビゲーションのために対象とするリソースを必要とするかもしれないというヒントをブラウザーに提供します。 `prerender` は同じサイト内での将来のナビゲーションのために使用され、複数ページアプリケーション (MPA) では意味がありますが、単一ページアプリケーション (SPA) では意味がありません。
 

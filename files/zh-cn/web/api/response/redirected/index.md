@@ -7,7 +7,8 @@ slug: Web/API/Response/redirected
 
 {{domxref("Response")}} 接口中只读的 **`redirected`** 属性表明该响应是否为一个重定向的请求的结果。
 
-> **备注：** 依赖 **`redirected`** 过滤重定向很容易导致虚假的重定向阻止你的内容像预期一样生效。因此，当调用 {{domxref("GlobalFetch.fetch", "fetch()")}} 时你应该进行过滤操作。详见下面 [禁用重定向](#禁用重定向) 的例子。
+> [!NOTE]
+> 依赖 **`redirected`** 过滤重定向很容易导致虚假的重定向阻止你的内容像预期一样生效。因此，当调用 {{domxref("GlobalFetch.fetch", "fetch()")}} 时你应该进行过滤操作。详见下面 [禁用重定向](#禁用重定向) 的例子。
 
 ## 语法
 

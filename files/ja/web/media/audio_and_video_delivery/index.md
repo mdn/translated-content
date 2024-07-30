@@ -34,7 +34,8 @@ slug: Web/Media/Audio_and_video_delivery
 
 上記のコードでは、スムーズな再生のために、できるだけ多くの音声を先読みさせようとする音声プレイヤーを作成しています。
 
-> **メモ:** モバイルブラウザーによっては、 `preload` 属性が無視される場合があります。
+> [!NOTE]
+> モバイルブラウザーによっては、 `preload` 属性が無視される場合があります。
 
 詳しい情報は、[クロスブラウザーの音声の基本（HTML Audio の詳細）](/ja/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#html5_audio_in_detail)
 
@@ -89,7 +90,8 @@ myAudio.play();
 
 ブラウザーで対応している音声ファイルの種類に応じて音声のソースを設定し、 5 秒後に再生ヘッドを設定して再生を試みます。
 
-> **メモ:** 再生は、ユーザー主導のイベントによって発行されない限り、ほとんどのブラウザーで無視されます。
+> [!NOTE]
+> 再生は、ユーザー主導のイベントによって発行されない限り、ほとんどのブラウザーで無視されます。
 
 また、 {{ htmlelement("audio") }} 要素に base64 エンコードされた WAV ファイルを与えて、その場で音声を生成することも可能です。
 
@@ -237,7 +239,8 @@ EME の主な使用方法の一つは、ブラウザーに DRM ([Digital Rights 
 
 アダプティブストリーミングに使用される主な形式は、 [HLS](/ja/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video#hls) と [MPEG-DASH](/ja/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video#mpeg-dash) です。 MSE は DASH を保有することを念頭に置いて設計されています。 MSE は [ISOBMFF](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html) と [M2TS](https://en.wikipedia.org/wiki/M2ts) に従ってバイトストリームを定義します（DASH はどちらにも対応しており、 HLS は後者に対応しています）。一般的に言って、標準規格に関心があり、柔軟性を求めている場合、あるいはほとんどの現代のブラウザーに対応したい場合は、DASH を使用した方がよいかもしれません。
 
-> **メモ:** 現在、Safari は DASH に対応していませんが、OSX Yosemite でリリースされる予定の新しいバージョンの Safari では dash.js が動作する予定です。
+> [!NOTE]
+> 現在、Safari は DASH に対応していませんが、OSX Yosemite でリリースされる予定の新しいバージョンの Safari では dash.js が動作する予定です。
 
 DASH も、メディアファイルの前処理や分割が不要な単純なオンデマンドプロファイルを含む、多くのプロファイルを提供しています。また、メディアを HLS と DASH の両方に変換してくれるクラウドベースのサービスも数多くあります。
 
@@ -519,7 +522,8 @@ lastsource.addEventListener(
 - [メディアレコーダー API で音声を簡単に取り込む](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
   - : メディアレコーダー API を使用して、メディアストリームを直接収録する基本的な方法について説明します。
 
-> **メモ:** Firefox OS バージョン 1.3 以降では、ストリーミング動画配信のための [RTSP](https://ja.wikipedia.org/wiki/Real_Time_Streaming_Protocol) プロトコルに対応しています。古いバージョンのための代替手段は、代替コンテンツを提供するために Gecko に適した形式 (WebM など) とともに `<video>` を使用することでしょう。これに関するより多くの情報は、随時公開される予定です。
+> [!NOTE]
+> Firefox OS バージョン 1.3 以降では、ストリーミング動画配信のための [RTSP](https://ja.wikipedia.org/wiki/Real_Time_Streaming_Protocol) プロトコルに対応しています。古いバージョンのための代替手段は、代替コンテンツを提供するために Gecko に適した形式 (WebM など) とともに `<video>` を使用することでしょう。これに関するより多くの情報は、随時公開される予定です。
 
 ## 関連情報
 

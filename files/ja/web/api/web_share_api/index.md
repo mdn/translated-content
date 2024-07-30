@@ -11,9 +11,11 @@ l10n:
 
 {{securecontext_header}}
 
-> **メモ:** この API は [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API) では利用できません（{{domxref("WorkerNavigator")}} からは公開されていません）。
+> [!NOTE]
+> この API は [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API) では利用できません（{{domxref("WorkerNavigator")}} からは公開されていません）。
 
-> **メモ:** この API を[ウェブ共有ターゲット API](/ja/docs/Web/Manifest/share_target) と混同しないでください。こちらはウェブサイトに自分自身が共有ターゲットであることを示させるものです。
+> [!NOTE]
+> この API を[ウェブ共有ターゲット API](/ja/docs/Web/Manifest/share_target) と混同しないでください。こちらはウェブサイトに自分自身が共有ターゲットであることを示させるものです。
 
 ## 概念と用途
 

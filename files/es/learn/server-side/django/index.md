@@ -13,7 +13,8 @@ Antes de comenzar este módulo no es necesario tener ningún conocimiento de Dja
 
 Se recomienda un conocimiento general de los conceptos de programación y [Python](/es/docs/Glossary/Python), pero no es esencial para entender los conceptos básicos
 
-> **Nota:** Python es uno de los lenguajes de programación más fáciles de leer y entender para los principiantes. Dicho esto, si desea comprender mejor este módulo, hay numerosos libros y tutoriales gratuitos disponibles en Internet (los nuevos programadores pueden querer ver la página de [Python for Non Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) en el wiki de python.org.
+> [!NOTE]
+> Python es uno de los lenguajes de programación más fáciles de leer y entender para los principiantes. Dicho esto, si desea comprender mejor este módulo, hay numerosos libros y tutoriales gratuitos disponibles en Internet (los nuevos programadores pueden querer ver la página de [Python for Non Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) en el wiki de python.org.
 
 ## Guías
 

@@ -108,7 +108,8 @@ typeof null === "object"; // 自從有 JavaScript 開始就是這樣了
 
 這個問題已計畫[在下一版 ECMAScript 予以修正](http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null) (會以 opt-in 方式提供). 屆時它將會做出如 `typeof null === 'null'` 的正確回傳結果。
 
-> **備註：** 此修正計畫已被拒絕
+> [!NOTE]
+> 此修正計畫已被拒絕
 
 ### 正規表示式 (Regular expressions)
 
@@ -125,7 +126,8 @@ typeof /s/ === "object"; // Firefox 5+ ...    // 符合 ECMAScript 5.1
 
 在 IE 6, 7 和 8, `typeof alert === 'object'`
 
-> **備註：** 這並不怪異。這是實情。在許多較舊的 IE 中, 主機端物件的確是物件, 而非函數
+> [!NOTE]
+> 這並不怪異。這是實情。在許多較舊的 IE 中, 主機端物件的確是物件, 而非函數
 
 ## 規範
 

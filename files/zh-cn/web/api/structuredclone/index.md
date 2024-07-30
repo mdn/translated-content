@@ -55,7 +55,8 @@ console.assert(clone.itself === clone); // and the circular reference is preserv
 使用可选参数 `transfer` 里的值，可以使[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)（仅）被传递，不被克隆。
 传输导致原始对象（里的属性）无法继续使用。
 
-> **备注：** 一个可能有用的场景是在保存 buffer 之前先异步的校验里面的数据。为了避免 buffer 在保存之前有其他修改，你可以先克隆这个 buffer 然后校验数据。为了防止意外的错误引用，在传输数据时，任何修改 buffer 的尝试都会失败。
+> [!NOTE]
+> 一个可能有用的场景是在保存 buffer 之前先异步的校验里面的数据。为了避免 buffer 在保存之前有其他修改，你可以先克隆这个 buffer 然后校验数据。为了防止意外的错误引用，在传输数据时，任何修改 buffer 的尝试都会失败。
 
 以下演示了如何把一个数组的属性转义到新对象。
 返回结果时，原始对象里的 `uInt8Array.buffer` 会被清除掉。

@@ -34,7 +34,8 @@ l10n:
 
 `ElementInternals` インターフェイスには以下のプロパティもあります。
 
-> **メモ:** これらは、カスタム要素に既定のアクセシビリティ上の意味を定義できるようにするために取り込まれています。これらは作者が定義した属性によって上書きされる可能性がありますが、作者が属性を削除したり追加しなかったりした場合でも、既定の意味が保持されるようにします。詳しくは、 [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object) を参照してください。
+> [!NOTE]
+> これらは、カスタム要素に既定のアクセシビリティ上の意味を定義できるようにするために取り込まれています。これらは作者が定義した属性によって上書きされる可能性がありますが、作者が属性を削除したり追加しなかったりした場合でも、既定の意味が保持されるようにします。詳しくは、 [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object) を参照してください。
 
 - {{domxref("ElementInternals.ariaAtomic")}}
   - : [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) 属性を反映した文字列で、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)属性で定義された変更通知に基づいて、支援技術が変更された領域のすべてを提示するか、一部のみを提示するかを示します。

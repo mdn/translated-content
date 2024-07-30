@@ -23,7 +23,8 @@ var constraints = MediaStreamTrack.getConstraints();
 
 指示使用{{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}最近设置的网站或应用程序的可约束属性的{{domxref('MediaTrackConstraints')}}对象。返回对象中的属性按照与设置时相同的顺序列出，并且未包含未由网站或应用专门设置的属性。
 
-> **备注：** 返回的一组约束条件不一定描述媒体的实际状态; 如果任何约束无法满足，它们仍然包含在网站代码最初设置的返回对象中。要获得所有可约束属性的当前活动设置，你应该调用{{domxref("MediaStreamTrack.getSettings", "getSettings()")}}。
+> [!NOTE]
+> 返回的一组约束条件不一定描述媒体的实际状态; 如果任何约束无法满足，它们仍然包含在网站代码最初设置的返回对象中。要获得所有可约束属性的当前活动设置，你应该调用{{domxref("MediaStreamTrack.getSettings", "getSettings()")}}。
 
 ## 例
 

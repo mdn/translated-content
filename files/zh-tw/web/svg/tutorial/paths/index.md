@@ -173,7 +173,8 @@ T x y (or t dx dy)
 
 This shortcut looks at the previous control point you used and infers a new one from it. This means that after your first control point, you can make fairly complex shapes by specifying only end points.
 
-> **備註：** This only works if the previous command was a Q or a T command. If it is not, then the control point is assumed to be the same as the previous point, and you'll only draw lines.
+> [!NOTE]
+> This only works if the previous command was a Q or a T command. If it is not, then the control point is assumed to be the same as the previous point, and you'll only draw lines.
 
 ![Shortcut_Quadratic_Bezier_with_grid.png](shortcut_quadratic_b%C3%A9zier_with_grid.png)
 

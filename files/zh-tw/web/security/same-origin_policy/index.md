@@ -35,7 +35,8 @@ document.domain = "company.com";
 
 任何變更 document.domain 行為，包括 document.domain = document.domain 都會導致埠號重置為 null，因此無法只藉由執行 document.domain = "company.com" 讓 company.com:8080 和 company.com 互動，必須兩邊都重新設定好讓埠號都一致重置為 null。
 
-> **備註：** 為了讓子網域可以安全的存取其母網域，我們需要一起改變子、母網域的 document.domain 為相同值，即使只是將母網域設回原始值也是必要，否則將會導致許可權錯誤 (Permission Error)。
+> [!NOTE]
+> 為了讓子網域可以安全的存取其母網域，我們需要一起改變子、母網域的 document.domain 為相同值，即使只是將母網域設回原始值也是必要，否則將會導致許可權錯誤 (Permission Error)。
 
 ## 跨來源網路存取
 
