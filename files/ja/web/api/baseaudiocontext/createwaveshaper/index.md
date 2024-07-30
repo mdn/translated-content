@@ -31,7 +31,8 @@ createWaveShaper()
 以下の例では、 AudioContext を使用して波形整形ノードを作成する基本的な使い方を示しています。
 もっと完全な応用例や情報については、 [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) の[デモ](https://mdn.github.io/webaudio-examples/voice-change-o-matic/)を参照してください（関連コードは [app.js の 108-193 行目](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193)を参照してください）。
 
-> **メモ:** シグモイド関数は、その自然な特性から、歪みカーブとしてよく使われます。例えば、その S 字形状は、より滑らかなサウンドを作り出すのに役立ちます。 [Stack Overflow](https://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion) に、以下のような歪み曲線のコードが掲載されていました。
+> [!NOTE]
+> シグモイド関数は、その自然な特性から、歪みカーブとしてよく使われます。例えば、その S 字形状は、より滑らかなサウンドを作り出すのに役立ちます。 [Stack Overflow](https://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion) に、以下のような歪み曲線のコードが掲載されていました。
 
 ```js
 const audioCtx = new AudioContext();

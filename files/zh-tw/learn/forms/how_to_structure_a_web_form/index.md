@@ -32,7 +32,8 @@ slug: Learn/Forms/How_to_structure_a_web_form
 
 我們之前就講過這件事了。
 
-> **警告：** 絕對不能在表單裡面再嵌入表單。這會讓表單行為變得難以理解，所以是一個壞主意。
+> [!WARNING]
+> 絕對不能在表單裡面再嵌入表單。這會讓表單行為變得難以理解，所以是一個壞主意。
 
 你可以從表單外面控制 {{HTMLElement("form")}} 。這麼做的話，除非使用 [`form`](/zh-TW/docs/Web/HTML/Attributes/form) 將其與表單關聯，否則該操作預設上和任何表單無關。引入此功能是為了可以在即使該操作未嵌在表單中，其依舊能顯式地將操作與表單綁定。
 
@@ -66,7 +67,8 @@ slug: Learn/Forms/How_to_structure_a_web_form
 </form>
 ```
 
-> **備註：** 你可以在[fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) 觀察範例（[或著觀察這個動態互動](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)）。
+> [!NOTE]
+> 你可以在[fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) 觀察範例（[或著觀察這個動態互動](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)）。
 
 在閱讀表單時，螢幕報讀器會針對第一個小部件組，說出「Fruit juice size small」、接著針對第二個小部件組，說出「Fruit juice size medium」、第三個則是「Fruit juice size large」。
 
@@ -115,7 +117,8 @@ slug: Learn/Forms/How_to_structure_a_web_form
 </form>
 ```
 
-> **備註：** 你可以在 [checkbox-label.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/checkbox-label.html) 觀察示例（[這裡有展示版本！](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)）
+> [!NOTE]
+> 你可以在 [checkbox-label.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/checkbox-label.html) 觀察示例（[這裡有展示版本！](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)）
 
 ### 多個標籤
 
@@ -163,9 +166,11 @@ The above variants increase in effectiveness as you go through them:
 - In the second example, things are a bit clearer — the label read out along with the input is "name star name edit text required", and the labels are still read out separately. Things are still a bit confusing, but it's a bit better this time because the `<input>` has a label associated with it.
 - The third example is best — the actual label is read out all together, and the label read out with the input is "name required edit text".
 
-> **備註：** You might get slightly different results, depending on your screenreader. This was tested in VoiceOver (and NVDA behaves similarly). We'd love to hear about your experiences too.
+> [!NOTE]
+> You might get slightly different results, depending on your screenreader. This was tested in VoiceOver (and NVDA behaves similarly). We'd love to hear about your experiences too.
 
-> **備註：** You can find this example on GitHub as [required-labels.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). don't test the example with 2 or 3 of the versions uncommented — screenreaders will definitely get confused if you have multiple labels AND multiple inputs with the same ID!
+> [!NOTE]
+> You can find this example on GitHub as [required-labels.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). don't test the example with 2 or 3 of the versions uncommented — screenreaders will definitely get confused if you have multiple labels AND multiple inputs with the same ID!
 
 ## 建立表單所常用的 HTML 結構
 

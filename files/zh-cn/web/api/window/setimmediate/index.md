@@ -7,8 +7,6 @@ slug: Web/API/Window/setImmediate
 
 该方法用来把一些需要长时间运行的操作放在一个回调函数里，在浏览器完成后面的其他语句后，就立刻执行这个回调函数。
 
-> **备注：** 该方法可能不会被批准成为标准，目前只有最新版本的 Internet Explorer 和 Node.js 0.10+ 实现了该方法。它遇到了 [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201)(Firefox) 和[Webkit](http://code.google.com/p/chromium/issues/detail?id=146172) (Google/Apple) 的阻力。
-
 ## 语法
 
 ```js

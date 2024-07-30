@@ -10,7 +10,8 @@ l10n:
 
 通常来说，一个网页获取新的数据通常需要发送一个请求到服务器，也就是向服务器请求的页面。使用服务器发送事件，服务器可以随时向我们的 Web 页面推送数据和信息。这些被推送进来的信息可以在这个页面上以[_事件_](/zh-CN/docs/Web/API/Event)*+数据*的形式来处理。
 
-> **备注：** Firefox 不能在 service worker 正常支持服务器发送事件（但支持在 Dedicated Worker 和 Shared Worker 中使用）。参见 [Firefox bug 1681218](https://bugzil.la/1681218)。
+> [!NOTE]
+> Firefox 不能在 service worker 正常支持服务器发送事件（但支持在 Dedicated Worker 和 Shared Worker 中使用）。参见 [Firefox bug 1681218](https://bugzil.la/1681218)。
 
 ## 概念与使用
 

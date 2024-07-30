@@ -43,7 +43,8 @@ GitHub 是一个非常重要和有用的社区，值得参与其中，Git/GitHub
 
 ![已打开终端/命令提示符。尚未输入任何命令。](command-line.png)
 
-> **备注：** 你也可以考虑使用 [Git 图形用户界面](https://git-scm.com/downloads/guis)来执行相同的工作，如果你不熟悉命令行。
+> [!NOTE]
+> 你也可以考虑使用 [Git 图形用户界面](https://git-scm.com/downloads/guis)来执行相同的工作，如果你不熟悉命令行。
 
 每个操作系统都附带有一个命令行工具：
 

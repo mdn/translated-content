@@ -46,7 +46,8 @@ JavaScript Object Notation (JSON) é um formato baseado em texto padrão para re
 
 O JSON existe como uma string — útil quando você deseja transmitir dados por uma rede. Ele precisa ser convertido em um objeto JavaScript nativo quando você quiser acessar os dados. Isso não é um grande problema — o JavaScript fornece um objeto [JSON](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON) global que possui métodos disponíveis para conversão entre os dois.
 
-> **Nota:** Converter uma string em um objeto nativo é chamado de análise, enquanto a conversão de um objeto nativo em uma string para que possa ser transmitida pela rede é chamada de _stringification_.
+> [!NOTE]
+> Converter uma string em um objeto nativo é chamado de análise, enquanto a conversão de um objeto nativo em uma string para que possa ser transmitida pela rede é chamada de _stringification_.
 
 Um objeto JSON pode ser armazenado em seu próprio arquivo, que é basicamente apenas um arquivo de texto com uma extensão de `.json`, e um {{glossary("MIME type")}} de `application/json`.
 
@@ -114,7 +115,8 @@ superHeroes["members"][1]["powers"][2];
 5. Dentro da propriedade `powers` está um array contendo os superpoderes do herói selecionado. Nós queremos o terceiro, então nós usamos
    `[2]`.
 
-> **Nota:** Nota: Nós fizemos o JSON visto acima disponível dentro de uma variável em nosso exemplo JSONTest.html (veja o código fonte). Tente carregar isso e depois acessar os dados dentro da variável pelo console JavaScript do seu navegador.
+> [!NOTE]
+> Nota: Nós fizemos o JSON visto acima disponível dentro de uma variável em nosso exemplo JSONTest.html (veja o código fonte). Tente carregar isso e depois acessar os dados dentro da variável pelo console JavaScript do seu navegador.
 
 ### Matrizes como JSON
 
@@ -296,9 +298,11 @@ Em seguida, usamos um [loop for](/pt-BR/docs/Learn/JavaScript/Building_blocks/Lo
 5. Usamos outro loop `for` para percorrer os superpoderes do herói atual — para cada um criamos um elemento `<li>` colocamos o super poder dentro dele e colocamos o `listItem` dentro do elemento `<ul>` (`myList`) usando `appendChild()`.
 6. A última coisa que fizemos foi acrescentar os `<h2>`, `<p>`s, e `<ul>` dentro do `<article>` (`myArticle`), depois acrescentar o `<article>` dentro do `<section>`. A ordem em que as coisas são anexadas é importante, pois essa é a ordem em que elas serão exibidas dentro do HTML.
 
-> **Nota:** Se você está com problemas pegue um exemplo para trabalhar, tente nosso código fonte [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) (veja isso [ao vivo](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) também.)
+> [!NOTE]
+> Se você está com problemas pegue um exemplo para trabalhar, tente nosso código fonte [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) (veja isso [ao vivo](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) também.)
 
-> **Nota:** Se você está tendo problemas para seguir a notação ponto / colchete que estamos usando para acessar o objeto JavaScript, pode ajudar a abrir o arquivo [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) em outra guia ou em seu editor de texto, e consultá-lo enquanto observa nosso JavaScript. Você também pode consultar o artigo sobre conceitos [O básico de objetos JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Basics) para obter mais informações sobre a notação de pontos e colchetes.
+> [!NOTE]
+> Se você está tendo problemas para seguir a notação ponto / colchete que estamos usando para acessar o objeto JavaScript, pode ajudar a abrir o arquivo [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) em outra guia ou em seu editor de texto, e consultá-lo enquanto observa nosso JavaScript. Você também pode consultar o artigo sobre conceitos [O básico de objetos JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Basics) para obter mais informações sobre a notação de pontos e colchetes.
 
 ## Conversão entre objetos e texto
 

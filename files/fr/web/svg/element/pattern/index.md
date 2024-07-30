@@ -52,7 +52,8 @@ svg {
 
   - : Cet attribut définit le système de coordonnées pour le contenu de {{SVGElement("pattern")}}. _Type de valeur_ : `userSpaceOnUse`|`objectBoundingBox`; _Valeur par défaut_ : `userSpaceOnUse`; _Animable_: **yes**
 
-    > **Note :** Cet attribut n'a pas d'effet si l'attribut `viewBox` est définit sur l'élément `<pattern>`.
+    > [!NOTE]
+    > Cet attribut n'a pas d'effet si l'attribut `viewBox` est définit sur l'élément `<pattern>`.
 
 - {{SVGAttr("patternTransform")}}
   - : Cet attribut contient la définition d'une transformation optionnelle supplémentaire du système de coordonnées du motif vers celui de la cible. _Type de valeur_ : **[\<transform-list>](/fr/docs/Web/SVG/Content_type#Transform-list)**; _Valeur par défaut_ : _none_; _Animatable_: **yes**
@@ -73,7 +74,8 @@ svg {
   - : Cet attribut référence un patron de motif qui fournit des valeurs par défaut pour les attributs du `<pattern>`.
     _Type de valeur_ : [**\<URL>**](/fr/docs/Web/SVG/Content_type#URL); _Valeur par défaut_ : _none_; _Animable_: **yes**
 
-    > **Note :** Pour les navigateurs implémentant `href`, si à la fois `href` et `xlink:href` sont définis, `xlink:href` sera ignoré et seulement `href` sera utilisé.
+    > [!NOTE]
+    > Pour les navigateurs implémentant `href`, si à la fois `href` et `xlink:href` sont définis, `xlink:href` sera ignoré et seulement `href` sera utilisé.
 
 - {{SVGAttr("y")}}
   - : Cet attribut détermine le déplacement en coordonnée y du motif de mosaïque. _Type de valeur_ : [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_ : `0`; _Animable_: **yes**

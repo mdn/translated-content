@@ -159,7 +159,8 @@ Promise.resolve(thenable).then((v) => {
 });
 ```
 
-> **警告：** 不要在一个解决为自身的 thenable 对象上调用 `Promise.resolve()`。这将导致无限递归，因为它试图展平一个无限嵌套的 Promise。
+> [!WARNING]
+> 不要在一个解决为自身的 thenable 对象上调用 `Promise.resolve()`。这将导致无限递归，因为它试图展平一个无限嵌套的 Promise。
 
 ```js example-bad
 const thenable = {

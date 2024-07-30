@@ -286,7 +286,8 @@ Ball.prototype.update = function () {
 
 3. 儲存並重新整理之後，就能看到球體在碰撞時變更其色彩了！
 
-> **備註：** 如果你無法讓此範例順利運作，可比較我們的[最後版本](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (另可參閱[實際執行情形](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html))。
+> [!NOTE]
+> 如果你無法讓此範例順利運作，可比較我們的[最後版本](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (另可參閱[實際執行情形](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html))。
 
 ## 摘要
 

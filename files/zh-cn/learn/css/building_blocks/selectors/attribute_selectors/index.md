@@ -112,7 +112,8 @@ slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/attribute-case.html", '100%', 800)}}
 
-> **备注：**此外还有一个更加新的`s`值，它会强制在上下文的匹配正常为大小写不敏感的时候，强行要求匹配时大小写敏感。不过，在浏览器中它不太受支持，而且在上下文为 HTML 时也没啥用。
+> [!NOTE]
+> 此外还有一个更加新的`s`值，它会强制在上下文的匹配正常为大小写不敏感的时候，强行要求匹配时大小写敏感。不过，在浏览器中它不太受支持，而且在上下文为 HTML 时也没啥用。
 
 ## 接下来……
 

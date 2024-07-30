@@ -22,7 +22,8 @@ En JavaScript, il existe deux fonctions utilisées pour encoder et décoder des 
 
 L'algorithme utilisé par `atob()` et `btoa()` est défini dans la section 4 de [la RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648).
 
-> **Note :** La méthode `btoa()` s'attend à recevoir des données binaires et il émettra une erreur si la chaîne en paramètre contient n'importe lequel caractère dont la représentation UTF-16 occupe plus d'un octet.
+> [!NOTE]
+> La méthode `btoa()` s'attend à recevoir des données binaires et il émettra une erreur si la chaîne en paramètre contient n'importe lequel caractère dont la représentation UTF-16 occupe plus d'un octet.
 
 ## Augmentation de la taille lors de l'encodage
 
@@ -74,7 +75,8 @@ UnicodeDecodeB64("JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"); // "✓ à la mode
 
 ### Seconde solution&nbsp;: réécrire `atob()` et `btoa()` en utilisant des tableaux typés (`TypedArray`) et UTF-8
 
-> **Note :** Le code suivant peut également être utilisé pour obtenir un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) depuis une chaîne en base64 et vice-versa ([voir ci-après](#annexe_décoder_une_chaîne_en_base64_en_un_objet_uint8array_ou_arraybuffer)).
+> [!NOTE]
+> Le code suivant peut également être utilisé pour obtenir un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) depuis une chaîne en base64 et vice-versa ([voir ci-après](#annexe_décoder_une_chaîne_en_base64_en_un_objet_uint8array_ou_arraybuffer)).
 
 ```js
 "use strict";
@@ -326,7 +328,8 @@ var monBuffer = base64DecToArr(
 alert(monBuffer.byteLength);
 ```
 
-> **Note :** La fonction `base64DecToArr(sBase64[, nTailleBloc])` renvoie un [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) d'octets. Si vous souhaitez utiliser un tampon mémoire de 16 bits, 32 bits, 64 bits pour les données brutes, utilisez l'argument `nTailleBloc`, qui représente le nombre d'octets dont la propriété `uint8Array.buffer.bytesLength` doit être un multiple&nbsp;:
+> [!NOTE]
+> La fonction `base64DecToArr(sBase64[, nTailleBloc])` renvoie un [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) d'octets. Si vous souhaitez utiliser un tampon mémoire de 16 bits, 32 bits, 64 bits pour les données brutes, utilisez l'argument `nTailleBloc`, qui représente le nombre d'octets dont la propriété `uint8Array.buffer.bytesLength` doit être un multiple&nbsp;:
 >
 > - `1` ou pas de paramètre pour l'ASCII (chaque caractère dans la chaîne est considéré comme un octet de donnée binaire)
 > - `2` pour les chaînes UTF-16

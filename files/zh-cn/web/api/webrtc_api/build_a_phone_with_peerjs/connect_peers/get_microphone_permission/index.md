@@ -34,7 +34,8 @@ l10n:
    - `window.localAudio.srcObject = stream` 将 ID 为 `localAudio` 的 [`<audio>` 元素](/zh-CN/docs/Web/HTML/Element/audio)的 `src` 属性设置为由 promise 返回的 `MediaStream`，以便它会播放我们的流。
    - `window.localAudio.autoplay = true` 将 `<audio>` 元素的 `autoplay` 属性设置为 true，以便音频自动播放。
 
-   > **警告：** 如果你在网上进行了一些调查，可能会发现 [`navigator.getUserMedia`](/zh-CN/docs/Web/API/Navigator/getUserMedia) 并认为你可以使用它而不是 `navigator.mediaDevices.getUserMedia`。你是错误的。前者是一个已弃用的方法，它需要回调以及约束作为参数。后者使用 promise，因此你不需要使用回调。
+   > [!WARNING]
+   > 如果你在网上进行了一些调查，可能会发现 [`navigator.getUserMedia`](/zh-CN/docs/Web/API/Navigator/getUserMedia) 并认为你可以使用它而不是 `navigator.mediaDevices.getUserMedia`。你是错误的。前者是一个已弃用的方法，它需要回调以及约束作为参数。后者使用 promise，因此你不需要使用回调。
 
 2. 通过在代码底部添加以下行来尝试调用你的 `getLocalStream` 函数：
 

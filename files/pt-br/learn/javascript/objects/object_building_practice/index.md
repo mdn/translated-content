@@ -295,7 +295,8 @@ Agora, para um pouco de diversão, vamos adicionar alguma detecção de colisão
 
 3. Salve e atualize a demonstração novamente, e você verá suas bolas mudando de cor quando colidirem!
 
-> **Nota:** If you have trouble getting this example to work, try comparing your JavaScript code against our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (also see it [running live](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
+> [!NOTE]
+> If you have trouble getting this example to work, try comparing your JavaScript code against our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (also see it [running live](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
 
 ## Sumário
 

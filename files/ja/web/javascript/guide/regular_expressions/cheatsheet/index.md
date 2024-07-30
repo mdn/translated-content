@@ -471,7 +471,8 @@ l10n:
 
 [数量詞](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)は、一致する文字や表現の数を示します。
 
-> **メモ:** 以下の表の中で、*アイテム*は単一の文字だけでなく、[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)、[Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)、[グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)を示すこともあります。
+> [!NOTE]
+> 以下の表の中で、*アイテム*は単一の文字だけでなく、[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)、[Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)、[グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)を示すこともあります。
 
 <table class="standard-table">
   <thead>
@@ -615,4 +616,5 @@ l10n:
 - `UnicodePropertyValue`
   - : 下記の「値」の節に掲載されているトークンの 1 つです。多くの値には、別名や短縮形があります（例えば `General_Category` プロパティの値 `Decimal_Number` は `Nd`, `digit`, `Decimal_Number` と書くことができます）。ほとんどの値では、 `UnicodePropertyName` の部分と等号を省略することができます。 `UnicodePropertyName` を指定した場合、その値は指定されたプロパティの種類に対応するものでなければなりません。
 
-> **メモ:** 利用できるプロパティと値は膨大であるため、ここでは網羅的に記述することはせず、様々な例を提供することにします。
+> [!NOTE]
+> 利用できるプロパティと値は膨大であるため、ここでは網羅的に記述することはせず、様々な例を提供することにします。

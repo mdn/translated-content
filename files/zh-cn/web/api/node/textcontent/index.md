@@ -26,7 +26,8 @@ someOtherNode.textContent = string;
 
 - 如果节点是一个 {{domxref("document")}}，或者一个 [DOCTYPE](/zh-CN/docs/Glossary/Doctype) ，则 `textContent` 返回 `null`。
 
-  > **备注：** 如果你要获取整个文档的文本以及 [CDATA data](/zh-CN/docs/Web/API/CDATASection) ，可以使用 `document.documentElement.textContent`。
+  > [!NOTE]
+  > 如果你要获取整个文档的文本以及 [CDATA data](/zh-CN/docs/Web/API/CDATASection) ，可以使用 `document.documentElement.textContent`。
 
 - 如果节点是个 [CDATA section](/zh-CN/docs/Web/API/CDATASection)、注释、[processing instruction](/zh-CN/docs/Web/API/ProcessingInstruction) 或者 [text node](/zh-CN/docs/Web/API/Document/createTextNode)，`textContent` 返回节点内部的文本内容，例如 {{domxref("Node.nodeValue")}}。
 - 对于其他节点类型，`textContent` 将所有子节点的 `textContent` 合并后返回，除了注释和 processing instructions。（如果该节点没有子节点的话，返回一个空字符串。）

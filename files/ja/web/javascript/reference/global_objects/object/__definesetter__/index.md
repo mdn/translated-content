@@ -7,7 +7,8 @@ l10n:
 
 {{JSRef}}{{Deprecated_Header}}
 
-> **メモ:** この機能は非推奨となり、[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)は[オブジェクト初期化子の構文](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)または {{jsxref("Object.defineProperty()")}} API を使用して定義する方法に置き換えられました。このメソッドの動作はウェブの互換性だけのために仕様化されたものであり、どのプラットフォームでも実装することを要求されているわけではありません。どこでも動作するとは限りません。
+> [!NOTE]
+> この機能は非推奨となり、[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)は[オブジェクト初期化子の構文](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)または {{jsxref("Object.defineProperty()")}} API を使用して定義する方法に置き換えられました。このメソッドの動作はウェブの互換性だけのために仕様化されたものであり、どのプラットフォームでも実装することを要求されているわけではありません。どこでも動作するとは限りません。
 
 **`__defineSetter__()`** は {{jsxref("Object")}} インスタンスのメソッドで、オブジェクトのプロパティと関数を結び付け、そのプロパティを設定しようとすると呼び出されるようにします。
 
