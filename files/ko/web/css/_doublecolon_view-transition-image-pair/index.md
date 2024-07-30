@@ -34,7 +34,7 @@ l10n:
 }
 ```
 
-`<pt-name-selector>`  는 다음 값들을 가질 수 있습니다.
+`<pt-name-selector>` 는 다음 값들을 가질 수 있습니다.
 
 - `*`
   - : 의사 요소를 모든 뷰 전환 그룹에 대해 일치하도록 합니다.
@@ -59,7 +59,7 @@ l10n:
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - [뷰 전환 API](/ko/docs/Web/API/View_Transitions_API)
 - [뷰 전환 API와 부드럽고 간단한 트랜지션](https://developer.chrome.com/docs/web-platform/view-transitions/)
