@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("TypedArray")}} 인스턴스의 **`toSorted()`** 메서드는 {{jsxref("TypedArray/sort", "sort()")}} 메서드의 [복사](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods)버전입니다. 이 메서드는 오름 차순으로 정렬된 요소를 가지는 새로운 형식화 배열을 반환합니다. 기본적으로는 문자열 대신 값을 산술적으로 정렬한다는 점 외에는 이 메서드는 {{jsxref("Array.prototype.toSorted()")}}와 같은 알고리즘을 가지고 있습니다.
+{{jsxref("TypedArray")}} 인스턴스의 **`toSorted()`** 메서드는 {{jsxref("TypedArray/sort", "sort()")}} 메서드의 [복사](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods)버전입니다. 이 메서드는 오름차순으로 정렬된 요소를 가지는 새로운 형식화 배열을 반환합니다. 기본적으로는 문자열 대신 값을 산술적으로 정렬한다는 점 외에는 이 메서드는 {{jsxref("Array.prototype.toSorted()")}}와 같은 알고리즘을 가지고 있습니다.
 
 ## 구문
 
