@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Lexical_grammar
 
 控制字元是用來控制對文本的解釋，但無法被顯示出來。
 
-| 編碼位置 | 名稱           | 縮寫    | 說明                                                                                                                            |
-| -------- | -------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| 編碼位置 | 名稱           | 縮寫    | 說明                                                                                                                             |
+| -------- | -------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | `U+200C` | 零寬不連字     | \<ZWNJ> | 放置在兩個字元之間來避免在某些語言中這兩個字元被當成連字 ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_non-joiner))      |
 | `U+200D` | 零寬連字       | \<ZWJ>  | 放置在兩個通常不會發生連字的字元中間在某些語言 來讓他們成為連字 ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_joiner))   |
 | `U+FEFF` | 位元組順序記號 | \<BOM>  | 出現在腳本的開頭，用來標記此腳本是否為 Unicode 還有文本的位元組順序 ([Wikipedia](https://en.wikipedia.org/wiki/Byte_order_mark)) |
@@ -25,10 +25,10 @@ slug: Web/JavaScript/Reference/Lexical_grammar
 | -------- | --------------------- | ------- | ------------------------------------------------------------------------------------------------------------ | -------- |
 | U+0009   | 定位字元              | \<HT>   | 橫向定位字元                                                                                                 | \t       |
 | U+000B   | 縱向定位字元          | \<VT>   | 縱向定位字元                                                                                                 | \v       |
-| U+000C   | 換頁字元              | \<FF>   | 控制換頁字元 ([Wikipedia](https://en.wikipedia.org/wiki/Page_break#Form_feed))                                | \f       |
+| U+000C   | 換頁字元              | \<FF>   | 控制換頁字元 ([Wikipedia](https://en.wikipedia.org/wiki/Page_break#Form_feed))                               | \f       |
 | U+0020   | 空格                  | \<SP>   | 一般的空白字元                                                                                               |          |
 | U+00A0   | 不中斷空格            | \<NBSP> | 一般的空白字元，但禁止自動換行或合併多個空白 ([Wikipedia](https://en.wikipedia.org/wiki/Non-breaking_space)) |          |
-| 其他     | 其他 Unicode 空白字元 | \<USP>  | [Wikipedia](<https://en.wikipedia.org/wiki/Space_(punctuation)#Spaces_in_Unicode>)                          |          |
+| 其他     | 其他 Unicode 空白字元 | \<USP>  | [Wikipedia](<https://en.wikipedia.org/wiki/Space_(punctuation)#Spaces_in_Unicode>)                           |          |
 
 ## 行終止字元
 
@@ -234,7 +234,7 @@ false
 0777 // 被解析成八進制, 十進制值為 511
 ```
 
-數值的實體語法可以可以以零 (`0`) 為首再街上其他十進制數字。然而一但零後面的的數字都小於 8 時，這個數值會被解讀成八進制數字，這個行為不會丟出例外，請參閱 [Firefox bug 957513](https://bugzilla.mozilla.org/show_bug.cgi?id%3D957513)。也請參閱 [`parseInt()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix)。
+數值的實體語法可以可以以零 (`0`) 為首再街上其他十進制數字。然而一但零後面的的數字都小於 8 時，這個數值會被解讀成八進制數字，這個行為不會丟出例外，請參閱 [Firefox bug 957513](https://bugzil.la/957513)。也請參閱 [`parseInt()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix)。
 
 #### 二進制
 
