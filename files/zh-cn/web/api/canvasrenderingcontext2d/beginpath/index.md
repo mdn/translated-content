@@ -2,14 +2,15 @@
 title: CanvasRenderingContext2D：beginPath() 方法
 slug: Web/API/CanvasRenderingContext2D/beginPath
 l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+  sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
 ---
 
 {{APIRef}}
 
 Canvas 2D API 的 **`CanvasRenderingContext2D.beginPath()`** 方法用于通过清空子路径列表开始一个新路径。当你想创建一个新的路径时，调用此方法。
 
-> **备注：** 要创建一个新的子路径，即与当前画布状态匹配的路径，可以使用 {{domxref("CanvasRenderingContext2D.moveTo()")}}。
+> [!NOTE]
+> 要创建一个新的子路径，即与当前画布状态匹配的路径，可以使用 {{domxref("CanvasRenderingContext2D.moveTo()")}}。
 
 ## 语法
 
@@ -29,7 +30,7 @@ beginPath()
 
 ### 创建不同的路径
 
-这是一段受用 `beginPath` 方法的简单的代码片段。
+此示例创建了两条都只包含一条线的路径。
 
 #### HTML
 
