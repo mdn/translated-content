@@ -1,5 +1,5 @@
 ---
-title: "ReferenceError: reference to undefined property \"x\""
+title: 'ReferenceError: reference to undefined property "x"'
 slug: orphaned/Web/JavaScript/Reference/Errors/Undefined_prop
 original_slug: Web/JavaScript/Reference/Errors/Undefined_prop
 ---
