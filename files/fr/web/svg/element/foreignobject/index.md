@@ -66,7 +66,8 @@ svg {
   - : Cet attribut détermine la coordonnée y du rectangle.
     _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `0`; _Animation_: **oui**
 
-> **Note :** À partir de SVG2 `x`, `y`, `width`, et `height` sont des _Propriétés Géometriques_, ce qui signifie que ces attributs peuvent également être utilisés comme des propriétés CSS pour cet élément.
+> [!NOTE]
+> À partir de SVG2 `x`, `y`, `width`, et `height` sont des _Propriétés Géometriques_, ce qui signifie que ces attributs peuvent également être utilisés comme des propriétés CSS pour cet élément.
 
 ### Attributs globaux
 

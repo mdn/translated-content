@@ -24,7 +24,8 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_examp
 
     - DIV #4 (z-index 10)
 
-> **备注：** 值得记住的是，通常 HTML 的层次结构和层叠上下文的层次结构是不同的。在层叠上下文的层次结构中，没有创建层叠上下文的元素同其父级处于一个层叠上下文。
+> [!NOTE]
+> 值得记住的是，通常 HTML 的层次结构和层叠上下文的层次结构是不同的。在层叠上下文的层次结构中，没有创建层叠上下文的元素同其父级处于一个层叠上下文。
 
 ### 示例源码
 

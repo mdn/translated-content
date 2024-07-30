@@ -15,7 +15,8 @@ Cada página de referencia de propiedades CSS sigue la misma estructura. Esto ay
 
 Primero, deberá averiguar la propiedad CSS que desea documentar. Es posible que haya notado que falta una página o que haya visto contenido faltante informado en nuestra [lista de problemas](https://github.com/mdn/content/issues) del contenido principal o en nuestra [lista de problemas](https://github.com/mdn/translated-content/issues) del contenido traducido. Para obtener detalles sobre la propiedad CSS, deberá encontrar una especificación relevante para ella (por ejemplo, una [especificación W3C](https://www.w3.org/Style/CSS/), o un informe de error para una propiedad no estándar utilizada en motores de renderizado como Gecko o Blink).
 
-> **Nota:** Cuando utilice una especificación W3C, utilice siempre el **Borrador del editor** (observe el cartel rojo en el lado izquierdo) y no una versión publicada (p. ej., Borrador de trabajo). ¡El borrador del editor siempre está más cerca de la versión final!
+> [!NOTE]
+> Cuando utilice una especificación W3C, utilice siempre el **Borrador del editor** (observe el cartel rojo en el lado izquierdo) y no una versión publicada (p. ej., Borrador de trabajo). ¡El borrador del editor siempre está más cerca de la versión final!
 
 Si la implementación y la especificación difieren, no dude en mencionarlo en el error de implementación. Una de las siguientes situaciones es posible:
 

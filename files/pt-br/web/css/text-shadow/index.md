@@ -48,7 +48,8 @@ text-shadow: unset;
 
   - : Opcional. Pode ser especificado tanto antes quanto depois dos valores de deslocamento. Se a cor não é especificada, uma cor UA-chosen será usada.
 
-    > **Nota:** Se voce quer garantir a consistência entre os navegadores, especifique explicitamente uma cor.
+    > [!NOTE]
+    > Se voce quer garantir a consistência entre os navegadores, especifique explicitamente uma cor.
 
 - \<offset-x> \<offset-y>
   - : Obrigatório. These `<length>` values specify the shadow's offset from the text. `<offset-x>` specifies the horizontal distance; a negative value places the shadow to the left of the text. `<offset-y>` specifies the vertical distance; a negative value places the shadow above the text. If both values are `0`, then the shadow is placed behind the text (and may generate a blur effect when `<blur-radius>` is set).

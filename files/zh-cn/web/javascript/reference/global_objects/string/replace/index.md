@@ -74,7 +74,8 @@ replace(pattern, replacement)
 
 你可以将第二个参数指定为函数。在这种情况下，匹配完成后将调用该函数。函数的结果（返回值）将用作替换字符串。
 
-> **备注：** 上述特殊替换模式*不*适用于替换器函数返回的字符串。
+> [!NOTE]
+> 上述特殊替换模式*不*适用于替换器函数返回的字符串。
 
 该函数具有以下签名：
 
@@ -126,7 +127,8 @@ console.log(newstr); // Twas the night before Christmas...
 
 这将打印 `'Twas the night before Christmas...'`。
 
-> **备注：** 有关正则表达式的更多解释，请参阅[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。
+> [!NOTE]
+> 有关正则表达式的更多解释，请参阅[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。
 
 ### 在 replace() 中使用 global 和 ignoreCase 标志
 

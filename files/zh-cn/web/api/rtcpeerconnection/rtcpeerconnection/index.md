@@ -39,13 +39,15 @@ new RTCPeerConnection(configuration)
 
       - : 一个由 {{domxref("RTCCertificate")}} 对象组成的{{jsxref("Array", "数组", "", 1)}}，用于连接的身份验证。如果未指定该属性，则会为每一个 {{domxref("RTCPeerConnection")}} 实例自动创建一组证书。尽管一个给定的连接只使用一个证书，但提供多个证书可以支持多种算法，从而提高某些情况下的连接成功的机率。参见[使用证书](#使用证书)以了解更多信息。
 
-        > **备注：** 此配置选项在首次指定后便不能更改；一旦设置了证书，此属性将在之后调用 {{domxref("RTCPeerConnection.setConfiguration()")}} 时被忽略。
+        > [!NOTE]
+        > 此配置选项在首次指定后便不能更改；一旦设置了证书，此属性将在之后调用 {{domxref("RTCPeerConnection.setConfiguration()")}} 时被忽略。
 
     - `iceCandidatePoolSize` {{optional_inline}}
 
       - : 一个无符号 16 位整数，其指定了预获取的 ICE 候选池的大小。其默认值为 0（表示不会发生候选的预获取）。你可能会发现，在某些情况下，通过在尝试建立连接前允许 ICE 代理预获取 ICE 候选，可以更快地建立连接，以在调用 {{domxref("RTCPeerConnection.setLocalDescription()")}} 时，已可以检查连接。
 
-        > **备注：** 改变 ICD 候选池的大小可能会触发 ICE 收集的开始。
+        > [!NOTE]
+        > 改变 ICD 候选池的大小可能会触发 ICE 收集的开始。
 
     - `iceServers` {{optional_inline}}
       - : 一个由 {{domxref("RTCIceServer")}} 对象组成的数组，每个对象描述一个可能被 ICE 代理使用的服务器；这些通常是 STUN 或 TURN 服务器。如果未指定，则将在没有可用的 STUN 或 TURN 服务器的情况下进行连接尝试，这将连接限制为本地对等点。

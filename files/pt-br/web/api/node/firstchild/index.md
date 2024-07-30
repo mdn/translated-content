@@ -38,7 +38,8 @@ Este exemplo demonstra o uso do firstChild e como os espaços em branco "whitesp
 
 No exemplo acima, o console.log() deverá exibir '#text' porque o nó de texto inserido mantém espaços em branco 'whitespace' entre a tag \<p id="para-01"> e a tag \<span>. Qualquer espaço em branco poderá causar '#text'.
 
-> **Nota:** "Tabs" também podem causar esse comportamento.
+> [!NOTE]
+> "Tabs" também podem causar esse comportamento.
 
 Se os espaços em branco for removidos do código, o '#text' não será mais considerado e a tag \<span> se tornará o primeiro filho firstChild do parágrafo, conforme exemplo abaixo.
 

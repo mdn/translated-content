@@ -7,7 +7,7 @@ slug: Web/HTML/Element/img
 
 El elemento de imagen HTML **`<img>`** representa una imagen en el documento.
 
-> **Nota:**
+> [!NOTE]
 > Los navegadores no siempre muestran la imagen a la que el elemento hace referencia. Es el caso de los navegadores no gráficos (incluyendo aquellos usados por personas con problemas de visión), sí el usuario elige no mostrar la imagen, o sí el navegador es incapaz de mostrarla porque no es válida o [soportada](/es/docs/Web/HTML/Elemento/img#Supported_image_formats). En ese caso, el navegador la reemplazará con el texto definido en el atributo `alt`.
 
 <table class="properties">
@@ -67,7 +67,8 @@ Este elemento incluye atributos globales.
 
   - : Este atributo define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un [formato no soportado](/es/docs/Web/HTML/Elemento/img#Supported_image_formats) o si la imagen aún no se ha descargado.
 
-    > **Nota:** Omitir este atributo indica que la imagen es una parte clave del contenido, y no tiene equivalencia textual. Establecer este atributo como cadena vacía indica que la imagen no es una parte clave del contenido; los navegadores no gráficos pueden omitirlo.
+    > [!NOTE]
+    > Omitir este atributo indica que la imagen es una parte clave del contenido, y no tiene equivalencia textual. Establecer este atributo como cadena vacía indica que la imagen no es una parte clave del contenido; los navegadores no gráficos pueden omitirlo.
 
 - `border` {{deprecated_inline}}
 
@@ -92,7 +93,8 @@ Este elemento incluye atributos globales.
 
   - : Este atributo boleano indica que la imagen es parte del mapa del lado del servidor. Así que, se envían las coordenadas precisas de un clic.
 
-    > **Nota:** Este atributo está permitido solo si el elemento `<img>` es descendiente de un elemento {{htmlelement("a")}} con un atributo [`href`](/es/docs/Web/HTML/Element/a#href) válido.
+    > [!NOTE]
+    > Este atributo está permitido solo si el elemento `<img>` es descendiente de un elemento {{htmlelement("a")}} con un atributo [`href`](/es/docs/Web/HTML/Element/a#href) válido.
 
 - `longdesc`
   - : La URL como descripción de una imagen mostrada, complementa al texto de `alt`.
@@ -141,7 +143,8 @@ Este elemento incluye atributos globales.
 
   - : La URL parcial (empezando con '#') de un [mapa de imagea](/es/docs/HTML/Element/map) asociado a un elemento.
 
-    > **Nota:** No puedes usar este atributo si el elemento `<img>` es descendiente de un elemento {{htmlelement("a")}} o {{HTMLElement("button")}}.
+    > [!NOTE]
+    > No puedes usar este atributo si el elemento `<img>` es descendiente de un elemento {{htmlelement("a")}} o {{HTMLElement("button")}}.
 
 - `vspace` {{deprecated_inline}}
   - : El número de píxeles de espacio blanco insertado sobre y bajo la imagen.
@@ -159,7 +162,7 @@ El estándar de HTML no ofrece una lista de formatos de imagen soportados, de mo
 - [BMP ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
 - [PNG ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
 
-> **Nota:**
+> [!NOTE]
 > Soporte para formato [XBM](http://en.wikipedia.org/wiki/X_BitMap) fue eliminado en Gecko 1.9.2.
 
 ## Interacción con CSS

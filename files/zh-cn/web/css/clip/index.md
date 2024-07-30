@@ -9,7 +9,8 @@ slug: Web/CSS/clip
 
 `clip` 属性定义了元素的哪一部分是可见的。`clip` 属性只适用于 {{ cssxref("position","position:absolute") }} 的元素。
 
-> **警告：** 这个属性已被废弃。建议使用 {{cssxref("clip-path")}} 。
+> [!WARNING]
+> 这个属性已被废弃。建议使用 {{cssxref("clip-path")}} 。
 
 {{cssinfo}}
 

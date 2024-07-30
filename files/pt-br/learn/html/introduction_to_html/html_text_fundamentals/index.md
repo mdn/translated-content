@@ -1002,7 +1002,8 @@ Aqui está a melhor regra geral: provavelmente é apropriado usar `<b>`, `<i>` o
 - {{htmlelement("b")}} é usado para transmitir um significado tradicionalmente transmitido por negrito: palavras-chave, nomes de produtos, sentença principal...
 - {{htmlelement("u")}} é usado para transmitir um significado tradicionalmente transmitido pelo sublinhado: nome próprio, erro de ortografia...
 
-> **Nota:** Um aviso amável sobre o sublinhado: **as pessoas associam fortemente o sublinhado com hiperlinks**. Portanto, na Web, é melhor sublinhar apenas os links. Use o elemento `<u>` quando for semanticamente apropriado, mas considere usar o CSS para alterar o sublinhado padrão para algo mais apropriado na Web. O exemplo abaixo ilustra como isso pode ser feito.
+> [!NOTE]
+> Um aviso amável sobre o sublinhado: **as pessoas associam fortemente o sublinhado com hiperlinks**. Portanto, na Web, é melhor sublinhar apenas os links. Use o elemento `<u>` quando for semanticamente apropriado, mas considere usar o CSS para alterar o sublinhado padrão para algo mais apropriado na Web. O exemplo abaixo ilustra como isso pode ser feito.
 
 ```html
 <!-- nomes científicos -->

@@ -7,7 +7,8 @@ slug: Web/SVG/Element/radialGradient
 
 L'élément SVG **`<radialGradient>`** permet de définir des dégradés radiaux qui peuvent être appliqués aux éléments de remplissage ou de contour des éléments graphiques.
 
-> **Note :** Il ne faut pas confondre cet élément avec la fonction CSS [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient). En effet, les dégradés CSS s'appliquent uniquement aux éléments HTML, là où les dégradés SVG s'appliquent uniquement aux éléments SVG.
+> [!NOTE]
+> Il ne faut pas confondre cet élément avec la fonction CSS [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient). En effet, les dégradés CSS s'appliquent uniquement aux éléments HTML, là où les dégradés SVG s'appliquent uniquement aux éléments SVG.
 
 ## Exemple
 

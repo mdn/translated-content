@@ -88,7 +88,8 @@ Isso é bastante direto. Pegamos referências de todos os elementos da página q
 
 Quando o usuário clica no botão "Conectar", o método `connectPeers()` é chamado. Para que fique mais claro, iremos quebrar o código em mais partes, e analisar um pouco de cada vez.
 
-> **Nota:** Mesmo que ambas as extremidades da nossa conexão estejam na mesma página, vamos nos referir ao ponto que inicia a conexão como "local", e ao outro como sendo o "remoto".
+> [!NOTE]
+> Mesmo que ambas as extremidades da nossa conexão estejam na mesma página, vamos nos referir ao ponto que inicia a conexão como "local", e ao outro como sendo o "remoto".
 
 #### Configurando o ponto local (local peer)
 
@@ -117,7 +118,8 @@ O ponto remoto está configurado de forma semelhante, exceto que não precisamos
 
 O próximo passo é configurar cada conexão com os ouvintes do ICE que serão chamados quando houver um novo candidato ICE para comunicar com o outro lado.
 
-> **Nota:** Em um cenário do mundo real em que os dois pares não estão sendo executados no mesmo contexto, o processo é um pouco mais complexo; Cada lado fornece, um de cada vez, um sugestão sobre como conectar (por exemplo, UDP, UDP com um relay, TCP, etc.) chamando {{domxref("RTCPeerConnection.addIceCandidate()")}}, e eles vão de um lado para outro até chegarem a um acordo. Mas aqui, acabamos de aceitar a primeira oferta de cada lado, uma vez que não existe uma rede real envolvida.
+> [!NOTE]
+> Em um cenário do mundo real em que os dois pares não estão sendo executados no mesmo contexto, o processo é um pouco mais complexo; Cada lado fornece, um de cada vez, um sugestão sobre como conectar (por exemplo, UDP, UDP com um relay, TCP, etc.) chamando {{domxref("RTCPeerConnection.addIceCandidate()")}}, e eles vão de um lado para outro até chegarem a um acordo. Mas aqui, acabamos de aceitar a primeira oferta de cada lado, uma vez que não existe uma rede real envolvida.
 
 ```js
 localConnection.onicecandidate = (e) =>
@@ -160,7 +162,8 @@ Vamos passar por isto linha por linha e decifrar o que significa.
 6. Finalmente, a descrição local das conexões remotas está configurada para se referir ao ponto remoto, chamando localConnection's {{domxref("RTCPeerConnection.setRemoteDescription()")}}.
 7. O `catch()` chama uma rotina que lida com os erros que ocorrem.
 
-> **Nota:** Mais uma vez, esse processo não é uma implementação do mundo real; No uso normal, há dois pedaços de código executados em duas máquinas, interagindo e negociando a conexão.
+> [!NOTE]
+> Mais uma vez, esse processo não é uma implementação do mundo real; No uso normal, há dois pedaços de código executados em duas máquinas, interagindo e negociando a conexão.
 
 #### Manipulação da conexão de pares bem sucedida
 

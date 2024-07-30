@@ -9,7 +9,8 @@ l10n:
 
 {{domxref("Document")}} 的 **`applets`** 属性返回一个空的 {{domxref("HTMLCollection")}}。保留该属性只是出于兼容性考虑；在旧版本的浏览器中，它会返回文档中的小应用程序列表。
 
-> **备注：** 所有浏览器都取消了对 `<applet>` 元素的支持。因此调用 `document.applets` 总是返回空的集合。
+> [!NOTE]
+> 所有浏览器都取消了对 `<applet>` 元素的支持。因此调用 `document.applets` 总是返回空的集合。
 
 ## 值
 

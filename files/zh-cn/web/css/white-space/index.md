@@ -14,7 +14,8 @@ CSS **`white-space`** 属性用于设置如何处理元素内的{{Glossary("whit
 - 空白字符是否[合并](#合并空白字符)，以及如何合并。
 - 是否换行，以及如何换行。
 
-> **备注：** 要使单词可以在*其内部*被截断，请使用 {{CSSxRef("overflow-wrap")}}、{{CSSxRef("word-break")}} 或 {{CSSxRef("hyphens")}} 代替。
+> [!NOTE]
+> 要使单词可以在*其内部*被截断，请使用 {{CSSxRef("overflow-wrap")}}、{{CSSxRef("word-break")}} 或 {{CSSxRef("hyphens")}} 代替。
 
 ## 语法
 

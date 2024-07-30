@@ -167,7 +167,8 @@ for (const numOrPromise of generator()) {
 // 4
 ```
 
-> **备注：** 请注意，如果同步生成器生成了一个被拒绝的 promise，那么在使用 `for await...of` 进行处理时会抛出异常，并且**不会调用**生成器内部的 `finally` 块。如果你需要使用 `try/finally` 来释放一些已分配的资源，这可能是不可取的。
+> [!NOTE]
+> 请注意，如果同步生成器生成了一个被拒绝的 promise，那么在使用 `for await...of` 进行处理时会抛出异常，并且**不会调用**生成器内部的 `finally` 块。如果你需要使用 `try/finally` 来释放一些已分配的资源，这可能是不可取的。
 
 ```js
 function* generatorWithRejectedPromises() {

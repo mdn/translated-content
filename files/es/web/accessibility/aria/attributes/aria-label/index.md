@@ -15,7 +15,8 @@ string
 
 ### Posibles efectos sobre los agentes de usuario y la tecnología de asistencia
 
-> **Nota:** Las opiniones pueden diferir en cómo la tecnología asistencial debe manejar esta técnica. La información proporcionada más arriba es una de esas opiniones y por lo tanto no normativa.
+> [!NOTE]
+> Las opiniones pueden diferir en cómo la tecnología asistencial debe manejar esta técnica. La información proporcionada más arriba es una de esas opiniones y por lo tanto no normativa.
 
 ## Ejemplos
 

@@ -16,7 +16,7 @@ l10n:
 
 只要 `identity;q=0` 或 `*;q=0` 指令未明確禁止表示無編碼的 `identity` 值，伺服器就不得返回 {{HTTPStatus("406")}} `Not Acceptable` 錯誤。
 
-> **備註：**
+> [!NOTE]
 >
 > - IANA 註冊表維護[官方內容編碼列表](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding)。
 > - `bzip` 和 `bzip2` 編碼是非標準的，但在某些情況下可能會使用，包括對舊版的支援。

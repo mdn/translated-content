@@ -41,7 +41,8 @@ OPFS がユーザーから見えるファイルシステムと異なる点をま
 
 メインスレッドから OPFS にアクセスする場合は、非同期の {{jsxref("Promise")}} ベースの API を使用します。ファイル（{{domxref("FileSystemFileHandle")}}）とディレクトリー（{{domxref("FileSystemDirectoryHandle")}}）のハンドルにアクセスするには、 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} と {{domxref("FileSystemDirectoryHandle.getDirectoryHandle()")}} をそれぞれ、 OPFS ルート（および作成された子ディレクトリー）を表す {{domxref("FileSystemDirectoryHandle")}} オブジェクト上で呼び出します。
 
-> **メモ:** 上記のメソッドに `{ create: true }` を渡すと、ファイルやフォルダー内が存在しない場合に作成されます。
+> [!NOTE]
+> 上記のメソッドに `{ create: true }` を渡すと、ファイルやフォルダー内が存在しない場合に作成されます。
 
 ```js
 // ファイルとフォルダー内の階層を作成
@@ -122,7 +123,8 @@ for await (let name of directoryHandle.keys()) {
 
 同期的にファイルにアクセスするには、 {{domxref("FileSystemFileHandle.createSyncAccessHandle()")}} を通常の {{domxref("FileSystemFileHandle")}} に対して呼び出します。
 
-> **メモ:** 名前に "Sync" とあるにもかかわらず、`createSyncAccessHandle()` メソッド自体は非同期です。
+> [!NOTE]
+> 名前に "Sync" とあるにもかかわらず、`createSyncAccessHandle()` メソッド自体は非同期です。
 
 ```js
 const opfsRoot = await navigator.storage.getDirectory();

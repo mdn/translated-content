@@ -17,7 +17,8 @@ l10n:
 - 有些语言的数字符总是一起大写，如荷兰语中的 `IJ`。在这种情况下，数字的两个字母都应与 `::first-letter` 伪元素匹配。
 - {{ cssxref("::before") }} 伪元素和 {{ cssxref("content") }} 属性的组合可能会在元素开头注入一些文本。在这种情况下，`::first-letter` 将匹配生成内容的第一个字母。
 
-> **备注：** CSS 引入了 `::first-letter` 符号（带两个冒号），以区分[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)。为了向后兼容，浏览器也接受早先引入的 `:first-letter`。
+> [!NOTE]
+> CSS 引入了 `::first-letter` 符号（带两个冒号），以区分[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)。为了向后兼容，浏览器也接受早先引入的 `:first-letter`。
 >
 > 浏览器对荷兰语中 `IJ` 等数字字符的支持较差。请查看下面的兼容性表，以了解当前的支持情况。
 
@@ -117,7 +118,8 @@ p::first-letter {
 
 在此示例中，我们使用 `::first-letter` 伪元素来设置 SVG {{SVGElement("text")}} 元素中第一个字母的样式。
 
-> **备注：** 在撰写本文时，此功能已获得[有限支持](#浏览器兼容性)。
+> [!NOTE]
+> 在撰写本文时，此功能已获得[有限支持](#浏览器兼容性)。
 
 #### HTML
 

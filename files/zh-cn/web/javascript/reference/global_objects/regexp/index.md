@@ -206,7 +206,8 @@ var url = "http://xxx.domain.com";
 console.log(/[^.]+/.exec(url)[0].substr(7)); // logs "xxx"
 ```
 
-> **备注：** 使用浏览器内建的[URL API](/zh-CN/docs/Web/API/URL_API)而非正则表达式来解析 URL 是更好的做法
+> [!NOTE]
+> 使用浏览器内建的[URL API](/zh-CN/docs/Web/API/URL_API)而非正则表达式来解析 URL 是更好的做法
 
 ## 规范
 
