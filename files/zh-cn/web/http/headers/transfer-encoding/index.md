@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**`Transfer-Encoding`** 标头指明了将{{Glossary("Payload body","有效负载体")}}安全传递给用户所采用的编码形式。
+**`Transfer-Encoding`** 标头指明了将{{Glossary("Payload body","有效负载体")}}安全传输给用户所采用的编码形式。
 
 > **备注：** [HTTP/2](https://zh.wikipedia.org/wiki/HTTP/2) 禁止使用除 HTTP/2 特有的 `"trailers"` 以外的所有 Transfer-Encoding 标头。HTTP 2 提供了比分块传输更有效的数据流机制，并禁止使用该标头。在 HTTP/2 中使用该标头可能会导致特定的 `protocol error`，因为 HTTP/2 协议禁止使用该标头。
 
@@ -51,7 +51,7 @@ Transfer-Encoding: gzip, chunked
 - `deflate`
   - : 采用 [zlib](http://zh.wikipedia.org/wiki/Zlib) 结构（于 [RFC 1950](http://tools.ietf.org/html/rfc1950) 定义）和 [_deflate_](https://zh.wikipedia.org/wiki/Deflate) 压缩算法（于 [RFC 1951](http://tools.ietf.org/html/rfc1952) 定义）。
 - `gzip`
-  - : 表示采用 [Lempel-Ziv coding](https://zh.wikipedia.org/wiki/LZ77与LZ78#LZ77)（LZ77）压缩算法，以及 32 位 CRC 校验的编码方式。这个编码方式最初由 UNIX 平台上的 _gzip_ 程序采用。处于兼容性的考虑，HTTP/1.1 标准提议支持这种编码方式的服务器应该识别作为别名的 `x-gzip` 指令。
+  - : 表示采用 [Lempel-Ziv coding](https://zh.wikipedia.org/wiki/LZ77与LZ78#LZ77)（LZ77）压缩算法，以及 32 位 CRC 校验的编码方式。这个编码方式最初由 UNIX 平台上的 _gzip_ 程序采用。出于兼容性的考虑，HTTP/1.1 标准提议支持这种编码方式的服务器应该识别作为别名的 `x-gzip` 指令。
 
 ## 示例
 
