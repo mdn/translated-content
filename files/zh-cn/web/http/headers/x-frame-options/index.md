@@ -46,7 +46,8 @@ X-Frame-Options: SAMEORIGIN
 
 ## 示例
 
-> **备注：** 使用 {{HTMLElement("meta")}} 标签来设置 `X-Frame-Options` 是无效的！例如 `<meta http-equiv="X-Frame-Options" content="deny">` 没有任何效果。不要这样用！只有当像下面示例那样设置 HTTP 头 `X-Frame-Options` 才会生效。
+> [!NOTE]
+> 使用 {{HTMLElement("meta")}} 标签来设置 `X-Frame-Options` 是无效的！例如 `<meta http-equiv="X-Frame-Options" content="deny">` 没有任何效果。不要这样用！只有当像下面示例那样设置 HTTP 头 `X-Frame-Options` 才会生效。
 
 ### 配置 Apache
 

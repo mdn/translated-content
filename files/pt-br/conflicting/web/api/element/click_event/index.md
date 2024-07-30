@@ -9,7 +9,8 @@ A propriedade **`onclick`** do mixin {{domxref("GlobalEventHandlers")}} é o {{e
 
 O evento `click` acontece quando o usuário clica em um elemento. É disparado após os eventos {{event("mousedown")}} e{{event("mouseup")}} na respectiva ordem.
 
-> **Nota:** Ao usar o evento `click` para disparar uma ação, considere também adicionar essa mesma ação ao evento {{event("keydown")}}, para permitir o uso dessa mesma ação a pessoas que não usam um mouse ou uma touchscreen.
+> [!NOTE]
+> Ao usar o evento `click` para disparar uma ação, considere também adicionar essa mesma ação ao evento {{event("keydown")}}, para permitir o uso dessa mesma ação a pessoas que não usam um mouse ou uma touchscreen.
 
 ## Sintaxe
 

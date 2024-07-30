@@ -7,7 +7,8 @@ slug: Web/API/Element/mousewheel_event
 
 *过时*且*非标准*的 `mousewheel` 事件在{{ domxref("Element", "元素", "", 1) }}上异步触发，以在操作鼠标滚轮或类似设备时提供更新。`mousewheel` 事件从未成为任何标准的一部分，虽然它被多个浏览器实现，但 Firefox 从未实现过该事件。
 
-> **备注：** 请改用标准的 `wheel` 事件，而不是这个过时的事件。
+> [!NOTE]
+> 请改用标准的 `wheel` 事件，而不是这个过时的事件。
 
 ## 语法
 
@@ -67,7 +68,8 @@ _该接口继承了其祖先接口 {{DOMxRef("MouseEvent")}}、{{DOMxRef("UIEven
 
 {{domxref("UIEvent/detail", "detail")}} 属性的值始终为零，除了 Opera 之外。Opera 使用 `detail` 属性与仅适用于 Firefox 的 {{domxref("Element.DOMMouseScroll_event", "DOMMouseScroll")}} 事件的 `detail` 值类似，该值表示以行为单位的滚动距离，负值表示滚动向底部或右侧移动，正值表示向顶部或左侧滚动。
 
-> **备注：** 在 macOS 上，滚动距离（以及 `detail` 的值）是根据加速滚动距离计算的。
+> [!NOTE]
+> 在 macOS 上，滚动距离（以及 `detail` 的值）是根据加速滚动距离计算的。
 
 ## wheelDelta、wheelDeltaX 和 wheelDeltaY 的值
 

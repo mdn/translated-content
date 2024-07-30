@@ -34,7 +34,8 @@ browser-compat: api.Ink
 Una página que tiene un banner generalmente también tendrá metadatos de página "complementarios".
 Por ejemplo, una página que tiene `\{{SeeCompatTable}}` generalmente también debe tener el estado `experimental` agregado (como se muestra arriba) para garantizar que tenga los íconos apropiados en el menú lateral.
 
-> **Nota:** Las macros de banner no _dependen_ de los metadatos, pero sí lo hacen algunos otros contenidos insertados con macros.
+> [!NOTE]
+> Las macros de banner no _dependen_ de los metadatos, pero sí lo hacen algunos otros contenidos insertados con macros.
 > Por ejemplo, la macro `\{{Compat}}` depende del valor de metadatos `browser-compat`.
 
 ## Qué banners pueden/deben agregarse
@@ -50,4 +51,5 @@ En resumen:
   También agregue `status` de `non-standard` en los metadatos de la página.
 - `\{{SecureContext_Header}}`: Esto genera un banner de **Contexto seguro** que indica que la tecnología solo está disponible en un [contexto seguro](/es/docs/Web/Security/Secure_Contexts).
 
-> **Nota:** Los metadatos `page-type`, `status` y `browser-compat` solo son utilizados en el contenido en Inglés.
+> [!NOTE]
+> Los metadatos `page-type`, `status` y `browser-compat` solo son utilizados en el contenido en Inglés.

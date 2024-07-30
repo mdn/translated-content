@@ -107,7 +107,8 @@ var var2 = 4;
 | [小于 Less than](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_operator) (`<`)                              | 左边的操作数小于右边的操作数返回 true                                                                                                                 | `var1 < var2 "2" < 12`               |
 | [小于等于 Less than or equal](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_or_equal_operator) (`<=`)       | 左边的操作数小于或等于右边的操作数返回 true                                                                                                           | `var1 <= var2 var2 <= 5`             |
 
-> **备注：** （**=>**）不是运算符，而是[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)的标记符号。
+> [!NOTE]
+> （**=>**）不是运算符，而是[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)的标记符号。
 
 ### 算术运算符
 

@@ -64,7 +64,7 @@ if (window.XMLHttpRequest) {
 - 对 [this](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的困惑，表现在它适用于什么作用域，它的值是否是你所期望的。你可以阅读[“this”的含义](/zh-CN/docs/Learn/JavaScript/Objects/Basics#“this”的含义)，它做了一点浅显的介绍；你还应该研究像[这样](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143)的例子，它显示了一个典型的模式，即把 `this` 作用域保存到一个单独的变量中，然后在嵌套函数中使用这个变量，这样你就可以确定能够把功能应用到正确的 `this` 作用域。
 - 在使用全局变量进行迭代的循环中不正确地使用函数（更普遍的是“弄错作用域”）。
 
-> **标注：**
+> [!CALLOUT]
 > 例如，在 [bad-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html) 中（见[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/bad-for-loop.html)），我们使用一个用 `var` 定义的变量循环了 10 次，每次都创建一个段落并给它添加 [onclick](/zh-CN/docs/Web/API/Element/click_event) 事件处理器。当点击时，我们希望每个段落都能显示一个包含其编号（创建时的 `i` 值）的警告信息。但是，它们都报告 `i` 为 11，因为 `for` 循环在调用嵌套函数之前就完成了所有的迭代。
 >
 > 最简单的解决方案是用 `let` 而不是 `var` 来声明迭代变量，这样与函数相关的 `i` 的值对每个迭代都是唯一的。请参阅 [good-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html)（也可以参阅[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/good-for-loop.html)）以查看能正常工作的版本。
@@ -103,7 +103,8 @@ npm install -g jshint
 
 你也可以将这些工具与任务运行器/构建工具（如 [Gulp](https://gulpjs.com/) 或 [Webpack](https://webpack.github.io/)）一起使用，以便在开发过程中自动对你的 JavaScript 进行 lint。（见后面文章中的[使用任务运行器来自动测试工具](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#使用任务运行器作为自动化测试工具)。）关于 ESLint 选项，请参见 [ESLint 集成](https://eslint.org/docs/user-guide/integrations)；Grunt 开箱即支持 JSHint，并且还有其他可用的集成，例如 [Webpack 的 JSHint 加载器](https://github.com/webpack-contrib/jshint-loader)。
 
-> **备注：** 尽管 ESLint 的安装和配置过程比起 JSHint 更繁琐，但是它也更强大。
+> [!NOTE]
+> 尽管 ESLint 的安装和配置过程比起 JSHint 更繁琐，但是它也更强大。
 
 ### 浏览器开发者工具
 
@@ -177,7 +178,8 @@ fetch(requestURL).then((response) => {
 
 不幸的是，我们仍然有同样的错误，问题并没有消失。现在让我们使用浏览器开发工具的一个更复杂的特性来调查一下这个问题，它在 Firefox 中被称为 [JavaScript 调试器](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)。
 
-> **备注：** 其他浏览器中也有类似的工具；Chrome 中的[来源面板](https://developer.chrome.com/docs/devtools/#sources)、Safari 中的调试器（见 [Safari Web 开发工具](https://developer.apple.com/safari/tools/)）等。
+> [!NOTE]
+> 其他浏览器中也有类似的工具；Chrome 中的[来源面板](https://developer.chrome.com/docs/devtools/#sources)、Safari 中的调试器（见 [Safari Web 开发工具](https://developer.apple.com/safari/tools/)）等。
 
 在 Firefox 中，调试器标签页大致如图所示：
 
@@ -206,7 +208,8 @@ fetch(requestURL).then((response) => {
 
 我们希望你自己尝试修复这个问题。作为起点，请查看 {{domxref("Response")}} 对象的文档。如果遇到困难，可以在 <https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-fixed> 找到修复后的源代码。
 
-> **备注：** 调试器标签页还有许多其他有用的特性，我们没有在这里讨论，比如条件断点和观察表达式。更多信息，请参见[调试器](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)页面。
+> [!NOTE]
+> 调试器标签页还有许多其他有用的特性，我们没有在这里讨论，比如条件断点和观察表达式。更多信息，请参见[调试器](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)页面。
 
 ### 性能问题
 
@@ -217,7 +220,8 @@ fetch(requestURL).then((response) => {
 - 使用 API 时，请确保在不需要时关闭 API 特性；因为某些 API 调用在处理能力方面可能非常耗费资源。例如，在显示视频流时，如果视频不在视线范围内，请确保关闭它。在使用重复调用的地理位置 API 跟踪设备位置时，如果用户不再需要，也应及时关闭。
 - 动画可能会对性能造成重大影响。尽管许多 JavaScript 库提供了由 JavaScript 控制的动画功能，但使用浏览器原生特性（如 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)或新兴的 [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)）执行动画通常更高效。建议阅读 Brian Birtles 的文章[使用 Element.animate 制作不重要的动画](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/)，了解动画成本高昂的原因、提升动画性能的技巧，以及 Web 动画 API 的相关信息。
 
-> **备注：** 阿迪—奥斯曼尼的[编写快速、内存效率高的 JavaScript 代码](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/)包含了大量细节和一些有助于提高 JavaScript 性能的出色建议。
+> [!NOTE]
+> 阿迪—奥斯曼尼的[编写快速、内存效率高的 JavaScript 代码](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/)包含了大量细节和一些有助于提高 JavaScript 性能的出色建议。
 
 ## 跨浏览器 JavaScript 问题
 
@@ -234,7 +238,8 @@ fetch(requestURL).then((response) => {
 
 有几种处理新特性支持的策略可以探索，让我们来探讨一下最常见的几种。
 
-> **备注：** 这些策略并不是相互独立的——当然，你可以根据需要将它们结合使用。例如，你可以使用特性检测来确定是否支持某项特性；如果不支持，你可以运行代码来加载 polyfill 或库来处理缺乏支持的情况。
+> [!NOTE]
+> 这些策略并不是相互独立的——当然，你可以根据需要将它们结合使用。例如，你可以使用特性检测来确定是否支持某项特性；如果不支持，你可以运行代码来加载 polyfill 或库来处理缺乏支持的情况。
 
 #### 特性检测
 
@@ -260,7 +265,8 @@ if ("geolocation" in navigator) {
 
 最后一点，不要将特性检测与**浏览器嗅探**（检测访问站点的特定浏览器）混淆——这是一种应该被全面反对的做法。有关更多详细信息，请参见后文的[不要嗅探浏览器](#不要嗅探浏览器)。
 
-> **备注：** 特性检测将在本模块的专门文章中详细介绍。
+> [!NOTE]
+> 特性检测将在本模块的专门文章中详细介绍。
 
 #### 库
 
@@ -278,7 +284,8 @@ JavaScript 库往往有几个主要的种类（有些库包含其中的一个以
 
 库的基本用法往往包括下载库的文件（JavaScript，可能还有一些 CSS 或其他依赖项）并将其附加到你的页面上（例如通过 {{htmlelement("script")}} 元素），尽管这些库通常还有许多其他用法选择，例如将其作为 [Bower](https://bower.io/) 组件安装，或通过 [Webpack](https://webpack.github.io/) 模块捆绑器将其作为依赖项。你需要阅读这些库的单独安装页面以获得更多信息。
 
-> **备注：** 你也会在 web 上遇到一些 JavaScript 框架，比如 [Ember](https://emberjs.com/) 和 [Angular](https://angularjs.org/)。库通常可用于解决个别问题并放入现有网站中，而框架则更倾向于开发复杂 web 应用的完整解决方案。
+> [!NOTE]
+> 你也会在 web 上遇到一些 JavaScript 框架，比如 [Ember](https://emberjs.com/) 和 [Angular](https://angularjs.org/)。库通常可用于解决个别问题并放入现有网站中，而框架则更倾向于开发复杂 web 应用的完整解决方案。
 
 #### Polyfill
 
@@ -312,9 +319,11 @@ Polyfill 也由第三方的 JavaScript 文件组成，你可以把它们放到�
 5. 即使你在不支持 [Fetch](/zh-CN/docs/Web/API/fetch) 的浏览器中加载它，你仍然能够看到花的图像——这不是很酷吗？
    ![一个 fetch 基本示例的标题，配一张紫色花朵的照片](fetch-image.jpg)
 
-> **备注：** 你可以在 [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) 找到我们的完成版（也请看[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)）。
+> [!NOTE]
+> 你可以在 [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) 找到我们的完成版（也请看[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)）。
 
-> **备注：** 在此重申，polyfill 有许多种方法可以利用——具体请查阅每个 polyfill 单独的文档。
+> [!NOTE]
+> 在此重申，polyfill 有许多种方法可以利用——具体请查阅每个 polyfill 单独的文档。
 
 你可能会问：“为什么我们要加载 polyfill 代码，即便在不需要的时候？”这是一个合理的疑问。随着网站变得更加复杂，开始引入更多的库和 polyfill，你可能会加载大量不必要的代码。这会影响网站性能，尤其是在性能较低的设备上。因此，只有在需要时才加载相应的文件是明智的。
 
@@ -366,7 +375,8 @@ function loadScript(src, done) {
 
 对于那些想要使用现代 JavaScript 特性的开发者来说，另一个选择是将采用 ECMAScript 6/ECMAScript 2015 特性的代码转换成能够在旧版浏览器上运行的版本。
 
-> **备注：** 这个过程被称为“转译”。这并不是将代码编译到更低级别以便在计算机上运行（像 C 语言代码那样）；而是将代码转换为另一种同等抽象级别的语法，使其可以以类似的方式运行，尽管细节上有所不同（在这个例子中，是将一种 JavaScript 风格转换为另一种风格）。
+> [!NOTE]
+> 这个过程被称为“转译”。这并不是将代码编译到更低级别以便在计算机上运行（像 C 语言代码那样）；而是将代码转换为另一种同等抽象级别的语法，使其可以以类似的方式运行，尽管细节上有所不同（在这个例子中，是将一种 JavaScript 风格转换为另一种风格）。
 
 [Babel.js](https://babeljs.io/) 是一种常见的转译器，但还有其他转译器。
 

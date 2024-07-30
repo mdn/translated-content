@@ -122,7 +122,8 @@ Compara tu código con este:
 
 {{JSFiddleEmbed("https://jsfiddle.net/kundan333/myd4vbwg/2/","","320")}}
 
-> **Nota:** Prueba a cambiar el número de bloques por fila o columna, o sus posiciones (utiliza las variables que definiste al principio de este capítulo).
+> [!NOTE]
+> Prueba a cambiar el número de bloques por fila o columna, o sus posiciones (utiliza las variables que definiste al principio de este capítulo).
 
 ## Pasos siguientes
 

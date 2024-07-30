@@ -103,7 +103,8 @@ function revokePermission() {
 }
 ```
 
-> **メモ:** Firefox 51 以降、[Web Applications Security Working Group](https://www.w3.org/2011/webappsec/) で設計が問題になっているため、`revoke()` 関数はデフォルトで無効になっています。 設定 `dom.permissions.revoke.enable` を `true` に設定することで再度有効にすることができます。
+> [!NOTE]
+> Firefox 51 以降、[Web Applications Security Working Group](https://www.w3.org/2011/webappsec/) で設計が問題になっているため、`revoke()` 関数はデフォルトで無効になっています。 設定 `dom.permissions.revoke.enable` を `true` に設定することで再度有効にすることができます。
 
 ### パーミッションの状態の変更への対応
 

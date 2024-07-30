@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/String/sup
 
 {{jsxref("String")}} 值的 **`sup()`** 方法创建一个 {{HTMLElement("sup")}} 元素字符串，其中嵌入了调用的字符串（`<sup>str</sup>`）中，这会导致该字符串显示为上标。
 
-> **备注：** 所有 [HTML 包装器方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法) 均已弃用，仅出于兼容性目的而进行标准化。请改用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)，例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)。
+> [!NOTE]
+> 所有 [HTML 包装器方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法) 均已弃用，仅出于兼容性目的而进行标准化。请改用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)，例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)。
 
 ## 语法
 

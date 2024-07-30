@@ -40,7 +40,7 @@ l10n:
 - [EXSLT support](/ja/docs/Web/EXSLT)
   - : Firefox 3 は、 [XSLT](/ja/docs/Web/XSLT) の拡張となる [EXSLT](/ja/docs/Web/EXSLT) の実質的なサブセットのサポートを提供します。
 - [Firefox 3 での SVG の改良](/ja/docs/Mozilla/Firefox/Releases/3/SVG_improvements)
-  - : Firefox 3 での SVG サポートは、24 を超える新しいフィルタ、いくつかの新しい要素と属性、そして、その他の改良を含み、大幅に強化されました。
+  - : Firefox 3 での SVG サポートは、24 を超える新しいフィルター、いくつかの新しい要素と属性、そして、その他の改良を含み、大幅に強化されました。
 - [アニメーション PNG グラフィック](/ja/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics)
   - : Firefox 3 は、アニメーション PNG (APNG) 画像形式をサポートしています。
 

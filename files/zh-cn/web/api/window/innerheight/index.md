@@ -9,8 +9,6 @@ slug: Web/API/Window/innerHeight
 
 浏览器窗口的视口（viewport）高度（以像素为单位）；如果有水平滚动条，也包括滚动条高度。
 
-> **备注：** If you use `nsIDOMWindowUtils.setCSSViewport()` to set the virtual window size for page layout purposes, the value returned by this property corresponds to the viewport height set using that method.
-
 ## 语法
 
 ```

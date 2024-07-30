@@ -7,7 +7,8 @@ slug: Web/API/DeviceMotionEvent
 
 `DeviceMotionEvent` 为 web 开发者提供了关于设备的位置和方向的改变速度的信息。
 
-> **警告：** 目前，Firefox 和 Chrome 处理坐标的方式不同。使用时要多加注意。
+> [!WARNING]
+> 目前，Firefox 和 Chrome 处理坐标的方式不同。使用时要多加注意。
 
 ## 构造函数
 

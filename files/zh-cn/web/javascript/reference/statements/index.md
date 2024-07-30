@@ -133,7 +133,8 @@ if (condition)
 label: const a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
 ```
 
-> **备注：** 有一种遗留语法允许[函数声明具有标签](/zh-CN/docs/Web/JavaScript/Reference/Statements/label#标记函数声明)，但它只是为了与 web 现实兼容而进行了标准化。
+> [!NOTE]
+> 有一种遗留语法允许[函数声明具有标签](/zh-CN/docs/Web/JavaScript/Reference/Statements/label#标记函数声明)，但它只是为了与 web 现实兼容而进行了标准化。
 
 为了解决这个问题，你可以将声明括在大括号中——这使其成为[块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)的一部分。
 

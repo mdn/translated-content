@@ -165,7 +165,8 @@ Puedes entonces acceder a elementos individuales en el arreglo mediante la notac
    // shopping ahora devolverá [ "tahini", "milk", "cheese", "hummus", "noodles" ]
    ```
 
-   > **Nota:** Lo dijimos antes, pero solo como recordatorio — ¡ las computadoras comienzan a contar desde 0!
+   > [!NOTE]
+   > Lo dijimos antes, pero solo como recordatorio — ¡ las computadoras comienzan a contar desde 0!
 
 3. Ten en cuenta que un arreglo dentro de otro arreglo se llama arrelog multidimensional o matriz. Puedes acceder a los elementos de un arreglo que estén dentro de otro, encadenando dos pares de corchetes. Por ejemplo, para acceder a uno de los elementos dentro de la matriz, que a su vez, es el tercer elemento dentro de la matriz `random` (ver sección anterior), podríamos hacer algo como esto:
 
@@ -207,7 +208,8 @@ En esta sección veremos algunos métodos bastante útiles relacionados con matr
 
 A menudo se te presentarán algunos datos brutos contenidos en una cadena larga y grande, y es posible que desees separar los elementos útiles de una forma más conveniente y luego hacerle cosas, como mostrarlos en una tabla de datos. Para hacer esto, podemos usar el método {{jsxref("String.prototype.split()","split()")}}. En su forma más simple, esto toma un único parámetro, el caracter que quieres separar de la cadena, y devuelve las subcadenas entre el separador como elementos en un arreglo.
 
-> **Nota:** Bien, esto es técnicamente un método de cadena, no un método de arreglo, pero lo hemos incluido con las matrices, ya que va bien aquí.
+> [!NOTE]
+> Bien, esto es técnicamente un método de cadena, no un método de arreglo, pero lo hemos incluido con las matrices, ya que va bien aquí.
 
 1. Vamos a jugar con esto, para ver como funciona. Primero, crea una cadena en tu consola:
 
@@ -485,7 +487,8 @@ Un buen uso para los métodos de arreglo como {{jsxref("Array.prototype.push()",
 
 En este ejemplo vamos a mostrar un uso mucho más simple — aquí te daremos un sitio de búsqueda falso, con un cuadro de búsqueda. La idea es que cuando los términos se ingresan en un cuadro de búsqueda, se muetren el top 5 de términos de búsqueda previos en la lista. Cuando el número de términos supera el 5, el último término comienza a borrarse cada vez que agregas un nuevo término a la parte superior, por lo que siempre se muestran los 5 términos anteriores.
 
-> **Nota:** En una aplicación de búsqueda real, probablemente puedas hacer clic en los términos de búsqueda anteriores para volver a los términos de búsqueda anteriores y ¡se motrarán los resultados de búsqueda reales! Solamente lo mantendremos simple por ahora.
+> [!NOTE]
+> En una aplicación de búsqueda real, probablemente puedas hacer clic en los términos de búsqueda anteriores para volver a los términos de búsqueda anteriores y ¡se motrarán los resultados de búsqueda reales! Solamente lo mantendremos simple por ahora.
 
 Para completar la aplicación necesitamos:
 

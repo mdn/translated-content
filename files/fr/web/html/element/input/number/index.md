@@ -11,7 +11,8 @@ Le navigateur peut agrémenter le contrôle avec des flèches afin d'incrémente
 
 {{EmbedInteractiveExample("pages/tabbed/input-number.html", "tabbed-shorter")}}
 
-> **Note :** Si un navigateur ne prend pas en charge le type `number`, le contrôle affiché sera le contrôle standard pour la saisie d'un texte (cf. [`text`](/fr/docs/Web/HTML/Element/Input/text)).
+> [!NOTE]
+> Si un navigateur ne prend pas en charge le type `number`, le contrôle affiché sera le contrôle standard pour la saisie d'un texte (cf. [`text`](/fr/docs/Web/HTML/Element/Input/text)).
 
 <table class="properties">
   <tbody>
@@ -75,13 +76,15 @@ L'attribut `placeholder` est une chaîne de caractères fournissant une courte i
 
 Si le contenu du contrôle respecte une directionnalité donnée ([LTR](/fr/docs/Glossary/ltr) ou [RTL](/fr/docs/Glossary/rtl)) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode — voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel (en anglais)](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus de détails.
 
-> **Note :** On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire et car il peut causer certains problèmes avec le contenu. Voir [Utilisation de libellés](/fr/docs/Web/HTML/Element/Input#utilisation_de_libellés) pour plus d'informations.
+> [!NOTE]
+> On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire et car il peut causer certains problèmes avec le contenu. Voir [Utilisation de libellés](/fr/docs/Web/HTML/Element/Input#utilisation_de_libellés) pour plus d'informations.
 
 ### `readonly`
 
 Un attribut booléen qui, lorsqu'il est présent, indique que le champ ne peut pas être édité par l'utilisatrice ou l'utilisateur. Toutefois, la valeur de l'attribut `value` peut toujours être modifiée via du code JavaScript, qui définirait la propriété `value` rattachée à [l'interface `HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
-> **Note :** Un champ en lecture seule pouvant ne pas avoir de valeur, l'attribut `required` n'aura pas d'effet si l'attribut `readonly` est également présent.
+> [!NOTE]
+> Un champ en lecture seule pouvant ne pas avoir de valeur, l'attribut `required` n'aura pas d'effet si l'attribut `readonly` est également présent.
 
 ### `step`
 
@@ -89,7 +92,8 @@ L'attribut `step` est un nombre qui définit la granularité de la valeur ou le 
 
 Lorsque la chaîne de caractères `any` est utilisée, cela indique qu'aucun incrément spécifique n'est défini et que toute valeur (comprise entre `min` et `max`) est valide.
 
-> **Note :** Lorsque les données saisies par l'utilisatrice ou l'utilisateur ne correspondent pas à l'incrément indiqué, l'agent utilisateur pourra arrondir à la valeur valide la plus proche (en choisissant les nombres les plus grands lorsque deux sont équidistants).
+> [!NOTE]
+> Lorsque les données saisies par l'utilisatrice ou l'utilisateur ne correspondent pas à l'incrément indiqué, l'agent utilisateur pourra arrondir à la valeur valide la plus proche (en choisissant les nombres les plus grands lorsque deux sont équidistants).
 
 Pour les champs de type `number`, l'incrément par défaut est 1 et ne permet donc que de saisir des entiers si la valeur de base est entière. Ainsi, si on a `min` qui vaut -10 et `value` qui vaut 1.5, si on a `step` qui vaut 1, seules les valeurs 1.5, 2.5, 3.5,…, -0.5, -1.5, -2.5,… seront valides.
 
@@ -97,9 +101,11 @@ Pour les champs de type `number`, l'incrément par défaut est 1 et ne permet do
 
 Les éléments `<input type="number">` simplifient la saisie de valeurs numériques dans un formulaire. Lorsqu'on crée un tel contrôle, des mécanismes de validation automatiques sont appliqués afin de vérifier que le texte saisi est bien un nombre. Généralement un contrôle de saisie numérique inclura des boutons avec des curseurs pour augmenter/réduire la valeur.
 
-> **Attention :** On notera qu'une utilisatrice ou un utilisateur peut toujours saisir des valeurs qui ne sont pas numériques dans de tels champs (par exemple avec un navigateur de bureau). Toutefois, ce comportement semble différer selon les navigateurs (voir [le bug 1398528](https://bugzilla.mozilla.org/show_bug.cgi?id=1398528)).
+> [!WARNING]
+> On notera qu'une utilisatrice ou un utilisateur peut toujours saisir des valeurs qui ne sont pas numériques dans de tels champs (par exemple avec un navigateur de bureau). Toutefois, ce comportement semble différer selon les navigateurs (voir [le bug 1398528](https://bugzilla.mozilla.org/show_bug.cgi?id=1398528)).
 
-> **Note :** Il est important de rappeler qu'une utilisatrice ou un utilisateur peut tout à fait modifier le code HTML qui est utilisé. Le site ne doit donc pas se reposer sur les mécanismes de validation qui existent côté client pour considérer qu'une valeur est saine. Pour des raisons de contrôle et de sécurité, les valeurs envoyées via un formulaire doivent être vérifiées côté serveur.
+> [!NOTE]
+> Il est important de rappeler qu'une utilisatrice ou un utilisateur peut tout à fait modifier le code HTML qui est utilisé. Le site ne doit donc pas se reposer sur les mécanismes de validation qui existent côté client pour considérer qu'une valeur est saine. Pour des raisons de contrôle et de sécurité, les valeurs envoyées via un formulaire doivent être vérifiées côté serveur.
 
 De plus, les navigateurs mobiles peuvent adapter leur ergonomie en affichant un clavier adapté à la saisie de valeur numérique lorsque l'utilisatrice ou l'utilisateur appuie sur un tel contrôle.
 
@@ -116,7 +122,8 @@ Dans sa forme la plus simple, on peut implémenter un contrôle de saisie numér
 
 Un contrôle de saisie numérique considère que la valeur est valide si elle est vide ou quand un nombre est saisi. Dans les autres cas, la valeur est considérée invalide. Si l'attribut [`required`](/fr/docs/Web/HTML/Element/Input#attr-required) est utilisé, la valeur vide n'est plus considérée valide.
 
-> **Note :** N'importe quel nombre est valide tant que c'est un nombre qui peut être représenté [comme un nombre à virgule flottante](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number) (autrement dit, un nombre qui n'est pas [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) ou [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity)).
+> [!NOTE]
+> N'importe quel nombre est valide tant que c'est un nombre qui peut être représenté [comme un nombre à virgule flottante](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number) (autrement dit, un nombre qui n'est pas [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) ou [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity)).
 
 ### Indicateurs de saisie — <i lang="en">placeholders</i>
 
@@ -268,7 +275,8 @@ input:valid + span:after {
 
 Ici, on a utilisé les pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:valid`](/fr/docs/Web/CSS/:valid) afin d'afficher une icône selon le cas, à côté de l'élément [`<span>`](/fr/docs/Web/HTML/Element/span) adjacent. On utilise un élément `<span>` séparé pour plus de flexibilité&nbsp;: certains navigateurs n'affichent pas le contenu généré par les pseudo-classes pour certains types de contrôle (cf. [`<input type="date">`](/fr/docs/Web/HTML/Element/input/date#validation)).
 
-> **Attention :** la validation des données des formulaires par le navigateur (côté client) doit toujours être complétée d'une validation des données côté serveur (l'utilisatrice ou l'utilisateur peut toujours modifier le HTML et envoyer les données au serveur).
+> [!WARNING]
+> La validation des données des formulaires par le navigateur (côté client) doit toujours être complétée d'une validation des données côté serveur (l'utilisatrice ou l'utilisateur peut toujours modifier le HTML et envoyer les données au serveur).
 
 ### Utilisation d'un motif de validation
 
@@ -392,7 +400,8 @@ switchBtn.addEventListener("click", function () {
 
 Après avoir déclaré quelques variables, on ajoute un gestionnaire d'évènements au bouton afin de gérer le changement d'unités. Lors de ce changement, on modifiera la classe du bouton et l'étiquette associée et on mettra à jour les valeurs affichées lorsque l'utilisatrice ou l'utilisateur appuie sur le bouton. On notera qu'il n'y a pas de mécanisme de conversion entre les mètres et les pieds (ce qui serait vraisemblablement implémenté dans une application réelle).
 
-> **Note :** Lorsqu'on clique sur le bouton, on retire l'attribut `required` du champ de saisie masqué et on vide l'attribut `value` afin de pouvoir envoyer le formulaire si un des deux champs n'est pas renseigné.
+> [!NOTE]
+> Lorsqu'on clique sur le bouton, on retire l'attribut `required` du champ de saisie masqué et on vide l'attribut `value` afin de pouvoir envoyer le formulaire si un des deux champs n'est pas renseigné.
 
 ## Spécifications
 

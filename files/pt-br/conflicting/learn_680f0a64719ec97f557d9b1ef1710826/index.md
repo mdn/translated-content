@@ -8,7 +8,8 @@ Se você está apenas começando com o desenvolvimento Web ou expandindo seus ho
 
 Para outro conjunto (sobreposto) de links sobre recursos de aprendizado, consulte as [páginas de aprendizado](/pt-BR/docs/) do MDN.
 
-> **Nota:** Os recursos recomendados nesta página estão sujeitos à alterações
+> [!NOTE]
+> Os recursos recomendados nesta página estão sujeitos à alterações
 
 ## Tópicos da documentação
 

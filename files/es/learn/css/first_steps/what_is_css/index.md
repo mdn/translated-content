@@ -48,7 +48,8 @@ Un **documento** suele ser un archivo de texto estructurado con un lenguaje de m
 
 **Presentar** un documento a un usuario significa convertirlo en un formulario que el público pueda utilizar. Los {{Glossary("Navegador", "navegadores")}}, como por ejemplo {{Glossary("Mozilla Firefox", "Firefox")}}, {{Glossary("Google Chrome", "Chrome")}} o {{Glossary("Microsoft Edge", "Edge")}}, están diseñados para presentar documentos visualmente en una pantalla de ordenador, un proyector o una impresora.
 
-> **Nota:** Un navegador también recibe el nombre de {{Glossary("Agente de usuario", "agente de usuario")}}, que consiste en un programa informático que representa a una persona dentro del sistema. Los navegadores son el modelo principal de agente de usuario en el que pensamos cuando hablamos de CSS, pero no son el único. Hay otros documentos de usuario disponibles, como los que convierten documentos HTML y CSS en PDF para imprimir.
+> [!NOTE]
+> Un navegador también recibe el nombre de {{Glossary("Agente de usuario", "agente de usuario")}}, que consiste en un programa informático que representa a una persona dentro del sistema. Los navegadores son el modelo principal de agente de usuario en el que pensamos cuando hablamos de CSS, pero no son el único. Hay otros documentos de usuario disponibles, como los que convierten documentos HTML y CSS en PDF para imprimir.
 
 El CSS se puede usar para estilos de texto muy básicos como, por ejemplo, cambiar el [color](/es/docs/Web/CSS/color_value) y el [tamaño](/es/docs/Web/CSS/font-size) de los encabezados y los enlaces. Se puede utilizar para crear un diseño, como podría ser [convertir una columna de texto en una composición](/es/docs/Web/CSS/Layout_cookbook/Column_layouts) con un área de contenido principal y una barra lateral para información relacionada. Incluso se puede usar para crear efectos de [animación](/es/docs/Web/CSS/CSS_Animations). Echa un vistazo a los enlaces de este párrafo para ver ejemplos específicos.
 
@@ -86,7 +87,8 @@ p {
 
 Algunos valores se aprenden rápidamente, mientras que otros deberán buscarse. Las páginas de propiedades individuales que hay en el proyecto MDN proporcionan una forma rápida de buscar propiedades y sus valores en caso de olvidarlos o desear saber qué más se puede usar como valor.
 
-> **Nota:** Puedes encontrar enlaces a todas las páginas de las propiedades CSS (junto con otras características CSS) enumeradas en la [referencia CSS](/es/docs/Web/CSS/Referencia_CSS) del proyecto MDN. Alternativamente, deberías acostumbrarte a buscar «mdn _css-feature-name_» en tu motor de búsqueda favorito siempre que necesites obtener más información sobre una función CSS. Por ejemplo, intenta buscar «mdn color» y «mdn font-size».
+> [!NOTE]
+> Puedes encontrar enlaces a todas las páginas de las propiedades CSS (junto con otras características CSS) enumeradas en la [referencia CSS](/es/docs/Web/CSS/Referencia_CSS) del proyecto MDN. Alternativamente, deberías acostumbrarte a buscar «mdn _css-feature-name_» en tu motor de búsqueda favorito siempre que necesites obtener más información sobre una función CSS. Por ejemplo, intenta buscar «mdn color» y «mdn font-size».
 
 ## Módulos CSS
 

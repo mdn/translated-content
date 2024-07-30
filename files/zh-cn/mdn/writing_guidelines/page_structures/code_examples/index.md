@@ -7,7 +7,8 @@ slug: MDN/Writing_guidelines/Page_structures/Code_examples
 
 在 MDN 上，你会看到整个页面中有许多代码示例插入，以展示 web 平台功能的使用。本文讨论了在页面中添加代码示例的不同机制，以及你应该使用哪些机制和何时使用。
 
-> **备注：** 如果你想了解 MDN 文章中出现的代码的风格和提示，而不是包含代码的不同方式，请参见我们的[代码风格指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)。
+> [!NOTE]
+> 如果你想了解 MDN 文章中出现的代码的风格和提示，而不是包含代码的不同方式，请参见我们的[代码风格指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)。
 
 ## 都有哪些类型的代码示例可用？
 

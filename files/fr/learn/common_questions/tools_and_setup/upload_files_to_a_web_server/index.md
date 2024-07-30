@@ -50,7 +50,8 @@ _Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette secti
 
 Il existe de nombreux clients FTP. Dans cette démonstration, nous utiliserons FireFTP. Celui-ci est simple à installer avec Firefox car [c'est un module complémentaire](https://addons.mozilla.org/firefox/addon/fireftp/).
 
-> **Note :** Il existe de nombreuses autres options, voir [les outils de publications : les clients FTP](/fr/Apprendre/How_much_does_it_cost#Publishing_tools.3A_FTP_client) pour plus d'informations.
+> [!NOTE]
+> Il existe de nombreuses autres options, voir [les outils de publications : les clients FTP](/fr/Apprendre/How_much_does_it_cost#Publishing_tools.3A_FTP_client) pour plus d'informations.
 
 Pour ouvrir FireFTP dans un nouvel onglet de Firefox, il existe deux méthodes :
 
@@ -84,7 +85,8 @@ Tout d'abord, jetons un coup d'œil à `http://demozilla.hebergeurexemple.net/` 
 
 ![Our demozilla personal website, seen in a browser: it's empty](demozilla-empty.png)
 
-> **Note :** Selon l'hébergeur que vous avez choisi, vous pourriez ici voir une page avec un texte ressemblant à « Ce site web est hébergé par \[Nom de l'hébergeur] ».
+> [!NOTE]
+> Selon l'hébergeur que vous avez choisi, vous pourriez ici voir une page avec un texte ressemblant à « Ce site web est hébergé par \[Nom de l'hébergeur] ».
 
 Pour connecter votre client FTP au serveur distant, cliquez sur le bouton _« Créer un compte »_ de FireFTP, puis remplissez les informations telles qu'elles vous ont été fournies par votre hébergeur :
 

@@ -21,7 +21,8 @@ evtSource.onopen = function () {
 };
 ```
 
-> **Note :** Vous pouvez trouver un exemple complet sur GitHub — voir [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!NOTE]
+> Vous pouvez trouver un exemple complet sur GitHub — voir [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
 ## Spécifications
 

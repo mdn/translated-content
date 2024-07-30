@@ -84,7 +84,8 @@ knotBBox.containsPoint(point);
 knotBbox.intersectsBox(otherBox);
 ```
 
-> **メモ:** これは、`Box3` が別のものを _完全に_ 包んでいるかどうかをチェックする `Box3.containsBox` メソッドとは異なります。
+> [!NOTE]
+> これは、`Box3` が別のものを _完全に_ 包んでいるかどうかをチェックする `Box3.containsBox` メソッドとは異なります。
 
 #### `Sphere` 対 `Sphere`
 

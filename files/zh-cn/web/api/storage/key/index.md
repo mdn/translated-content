@@ -42,7 +42,8 @@ for (let i = 0; i < localStorage.length; i++) {
 }
 ```
 
-> **备注：** 有关实际运行的例子，详见 [Web Storage 演示](https://mdn.github.io/dom-examples/web-storage/)。
+> [!NOTE]
+> 有关实际运行的例子，详见 [Web Storage 演示](https://mdn.github.io/dom-examples/web-storage/)。
 
 ## 规范
 

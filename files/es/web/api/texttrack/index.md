@@ -36,7 +36,8 @@ _Esta interfaz también hereda propiedades de {{domxref("EventTarget")}}._
 
 _Esta interfaz también hereda métodos de {{domxref("EventTarget")}}._
 
-> **Nota:** La interfaz {{domxref("TextTrackCue")}} es una clase abstracta que se utiliza como padre para otras interfaces de señales como {{domxref("VTTCue")}}. Por lo tanto, al agregar o eliminar una señal, estará pasando uno de los tipos de señales que heredan de `TextTrackCue`.
+> [!NOTE]
+> La interfaz {{domxref("TextTrackCue")}} es una clase abstracta que se utiliza como padre para otras interfaces de señales como {{domxref("VTTCue")}}. Por lo tanto, al agregar o eliminar una señal, estará pasando uno de los tipos de señales que heredan de `TextTrackCue`.
 
 - {{domxref("TextTrack.addCue()")}}
   - : Agrega una señal (especificada como un objeto {{domxref("TextTrackCue")}}) a la lista de señales de la pista.

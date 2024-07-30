@@ -7,7 +7,8 @@ slug: Learn/CSS/CSS_layout/Flexbox_skills
 
 Le but de cette tâche est de vous faire travailler avec Flexbox et de démontrer votre compréhension du comportement des éléments flexibles. Vous trouverez ci-dessous quatre modèles de conception courants que vous pourriez utiliser pour créer avec Flexbox, votre tâche est de les construire.
 
-> **Note :** Vous pouvez tester des solutions dans les éditeurs interactifs ci-dessous ou, si vous le préférez, sur un site comme [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/).
+> [!NOTE]
+> Vous pouvez tester des solutions dans les éditeurs interactifs ci-dessous ou, si vous le préférez, sur un site comme [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/).
 >
 > N'hésitez pas à nous contacter si vous avez besoin d'aide — voir la section [Évaluation ou aide supplémentaire](#évaluation_ou_aide_supplémentaire) au bas de cette page.
 
@@ -21,7 +22,8 @@ Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nb
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox1.html", '100%', 700)}}
 
-> **Remarque :** Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (1re mise en page)](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox1-download.html).
+> [!CALLOUT]
+> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (1re mise en page)](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox1-download.html).
 
 ## Disposition flexible 2
 
@@ -37,7 +39,8 @@ Questions supplémentaires&nbsp;:
 
 - Pouvez-vous maintenant faire en sorte que le premier article soit deux fois plus grand que les autres&nbsp;?
 
-> **Remarque :** Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (2e mise en page)](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox2-download.html).
+> [!CALLOUT]
+> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (2e mise en page)](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox2-download.html).
 
 ## Disposition flexible 3
 
@@ -49,7 +52,8 @@ Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nb
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox3.html", '100%', 800)}}
 
-> **Remarque :** Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (3e mise en page)](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox3-download.html).
+> [!CALLOUT]
+> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (3e mise en page)](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox3-download.html).
 
 ## Disposition flexible 4
 
@@ -61,7 +65,8 @@ Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nb
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox4.html", '100%', 800)}}
 
-> **Remarque :** Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox4-download.html).
+> [!CALLOUT]
+> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox4-download.html).
 
 ## Évaluation ou aide supplémentaire
 

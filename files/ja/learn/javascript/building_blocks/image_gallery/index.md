@@ -32,7 +32,8 @@ JavaScript の基本的な構成要素を見てきたところで、これから
 
 別の方法として、オンラインエディターを使用することもできます。例えば、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などです。
 
-> **メモ:** もし行き詰まったら、私たちの[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> [!NOTE]
+> もし行き詰まったら、私たちの[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## プロジェクト概要
 
