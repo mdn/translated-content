@@ -204,5 +204,5 @@ node --expose-gc --inspect index.js
 ## 參見
 
 - [IBM article on "Memory leak patterns in JavaScript" (2007)](https://developer.ibm.com/technologies/web-development/)
-- [Kangax article on how to register event handler and avoid memory leaks (2010)](<https://learn.microsoft.com/en-us/previous-versions/msdn10/ff728624(v%3Dmsdn.10)>)
+- [Kangax article on how to register event handler and avoid memory leaks (2010)](<https://learn.microsoft.com/en-us/previous-versions/msdn10/ff728624(v=msdn.10)>)
 - [Performance](/zh-TW/docs/Mozilla/Performance)

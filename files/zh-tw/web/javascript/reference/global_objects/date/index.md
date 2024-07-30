@@ -184,4 +184,4 @@ yourFunctionReturn = printElapsedTime(yourFunction);
 
 \[1] 一些瀏覽器在解析日期時間會發生問題： [3/14/2012 blog from danvk Comparing FF/IE/Chrome on Parsing Date Strings](https://dygraphs.com/date-formats.html)
 
-\[2] [ISO8601 Date Format is not supported](<https://learn.microsoft.com/en-us/>).aspx>) in Internet Explorer 8, and other version can have [issues when parsing dates](https://dygraphs.com/date-formats.html)
+\[2] [ISO8601 Date Format is not supported](<https://msdn.microsoft.com/en-us//library/ie/ff743760(v=vs.94).aspx>) in Internet Explorer 8, and other version can have [issues when parsing dates](https://dygraphs.com/date-formats.html)

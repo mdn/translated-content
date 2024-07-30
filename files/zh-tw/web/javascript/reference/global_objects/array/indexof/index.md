@@ -212,7 +212,7 @@ if (!Array.prototype.indexOf) {
 
 ## 相容性備註
 
-- Starting with Firefox 47, this method will no longer return `-0`. For example, `[0].indexOf(0, -0)` will now always return `+0` ([Firefox bug 1242043](https://bugzilla.mozilla.org/show_bug.cgi?id%3D1242043)).
+- Starting with Firefox 47, this method will no longer return `-0`. For example, `[0].indexOf(0, -0)` will now always return `+0` ([Firefox bug 1242043](https://bugzil.la/1242043)).
 
 ## 參見
 

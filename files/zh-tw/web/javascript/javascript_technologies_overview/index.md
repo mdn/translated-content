@@ -53,12 +53,12 @@ HTML 的規格書也定義了在文件上的一些限制；例如，他要求所
 
 ## 其他重要的 API
 
-- setTimeout 和 setInterval 函數首次納入 HTML 標準中的 [Window](https://html.spec.whatwg.org/multipage//#window) 介面
+- setTimeout 和 setInterval 函數首次納入 HTML 標準中的 [Window](https://html.spec.whatwg.org/multipage/#window) 介面
 - [XMLHttpRequest](https://xhr.spec.whatwg.org/)：允許傳送非同步 HTTP 請求的 API。
 - [CSS Object Model](https://drafts.csswg.org/cssom/)：CSSOM 用來將 CSS 的規則轉換為物件。
 - [WebWorkers](https://html.spec.whatwg.org/multipage/workers.html)：允許平行計算的 API。
 - [WebSockets](https://html.spec.whatwg.org/multipage/#network)：允許低階雙向溝通的 API。
-- [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext)：canvas 元素的繪圖 API。
+- [Canvas 2D Context](https://html.spec.whatwg.org/multipage/#2dcontext)：canvas 元素的繪圖 API。
 
 ## Shell
 
