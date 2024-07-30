@@ -71,7 +71,7 @@ RTSP 2.0 目前处于开发阶段，并且无法向后兼容 RTSP 1.0。
 
 [Media Source Extensions](https://w3c.github.io/media-source/) 是一个 W3C 的工作草案，计划用来扩展 {{ domxref("HTMLMediaElement") }} 使其支持使用 JavaScript 来生成用于播放的媒体流。使用 JavaScript 来生成流对于自适应流和时移实时流来说非常好用。
 
-比如，[在卸载 MSE 解码器后，你可以通过 JavaScript 实现 MPEG-DASH](https://web.archive.org/web/20170504035455/https:/msopentech.com/blog/2014/01/03/streaming_video_player/).
+比如，[在卸载 MSE 解码器后，你可以通过 JavaScript 实现 MPEG-DASH](https://web.archive.org/web/20170504035455/https://msopentech.com/blog/2014/01/03/streaming_video_player/).
 
 > [!NOTE]
 > 时移是在直播流发生后使用实时流的过程。
