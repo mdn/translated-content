@@ -18,9 +18,9 @@ moveTo(x, y)
 ### 参数
 
 - `x`
-  - : 点的 x 轴。
+  - : 点的 x 轴（横）坐标。
 - `y`
-  - : 点的 y 轴。
+  - : 点的 y 轴（纵）坐标。
 
 ### 返回值
 
@@ -30,7 +30,7 @@ moveTo(x, y)
 
 ### 绘制多条子路径
 
-这个例子使用了 `moveTo()` 方法在单个路径中创建了两个子路径。然后，这两个子路径通过单个 `stroke()` 方法调用进行渲染。
+此示例使用 `moveTo()` 方法在单个路径中创建了两条子路径。然后，这两条子路径通过单个 `stroke()` 方法调用进行渲染。
 
 ```html
 <canvas id="canvas"></canvas>
@@ -45,9 +45,9 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.moveTo(50, 50); // 开始第一个子路径
+ctx.moveTo(50, 50); // 开始第一条子路径
 ctx.lineTo(200, 50);
-ctx.moveTo(50, 90); // 开始第二个子路径
+ctx.moveTo(50, 90); // 开始第二条子路径
 ctx.lineTo(280, 120);
 ctx.stroke();
 ```
