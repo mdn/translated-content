@@ -63,7 +63,8 @@ O elemento **HTML `<meta>` **define qualquer informação de metadados que não 
 
 Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-> **Nota:** o atributo global [`name`](/pt-BR/docs/Web/HTML/Element/meta#name) tem um significado específico para o elemento {{HTMLElement("meta")}}, e o atributo [`itemprop`](/pt-BR/docs/Web/HTML/Element/meta#itemprop) não deve ser definido no mesmo elemento`<meta>` que tem algum desses atributos existentes: [`name`](/pt-BR/docs/Web/HTML/Element/meta#name), [`http-equiv`](/pt-BR/docs/Web/HTML/Element/meta#http-equiv) ou [`charset`](/pt-BR/docs/Web/HTML/Element/meta#charset).
+> [!NOTE]
+> o atributo global [`name`](/pt-BR/docs/Web/HTML/Element/meta#name) tem um significado específico para o elemento {{HTMLElement("meta")}}, e o atributo [`itemprop`](/pt-BR/docs/Web/HTML/Element/meta#itemprop) não deve ser definido no mesmo elemento`<meta>` que tem algum desses atributos existentes: [`name`](/pt-BR/docs/Web/HTML/Element/meta#name), [`http-equiv`](/pt-BR/docs/Web/HTML/Element/meta#http-equiv) ou [`charset`](/pt-BR/docs/Web/HTML/Element/meta#charset).
 
 - `charset`
 
@@ -75,7 +76,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     - Autores não devem usar CESU-8, UTF-7, BOCU-1 e SCSU, also falling in that category and not intended to be used on the web. Cross-scripting attacks with some of these encodings have been documented.
     - Autores não devem usar UTF-32 pois nem todos algorítimos de codificação HTML5 conseguem distingui-lo do UTF-16.
 
-    > **Nota:**
+    > [!NOTE]
+    >
+    > >
     >
     > - O conjunto de caracteres declarado deve corresponder ao da página. Não há motivo válido para declarar um conjunto de caracteres imprecisos.
     > - Esse elemento {{HTMLElement ("meta")}} deve estar dentro do elemento {{HTMLElement ("head")}} e dentro dos primeiros 1024 bytes da página, pois alguns navegadores só olham para esses primeiros bytes antes de escolher um caractere definido para a página.
@@ -93,7 +96,8 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
       - : este pragma define a linguagem default da página
 
-        > **Nota:** não use este pragma, ele esta obsoleto. use o atributo global `lang` no {{HTMLElement("html")}} ao invés deste.
+        > [!NOTE]
+        > não use este pragma, ele esta obsoleto. use o atributo global `lang` no {{HTMLElement("html")}} ao invés deste.
 
     - `"Content-Security-Policy"`
       - : Este valor permite os administradores do web site definam uma [política de conteúdo](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives) para a página atual. Com algumas exceções, politicas de conteúdo envolvem especificar origens de servidores e endpoints de scripts permitidos, isso ajuda na defesa de cross-server scripting attacks.
@@ -101,7 +105,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
       - : Esse atributo define o [MIME type](/pt-BR/docs/MIME) e o conjunto de caracteres do documento. Isso segue a mesma sintaxe como o HTTP `content-type` entity-header field, mas isto esta dentro de um elemento HTML, a maioria dos valores não é possível. Sendo assim a sintaxe válida para este conteúdo é a literal string '`text/html`' eventualmente seguido por estes caracteres com a seguinte sintaxe: '`; charset=`_`IANAcharset`_' onde `IANAcharset` é o _MIME preferido nome para um conjunto de caracteres como_ [definido pela IANA.](https://www.iana.org/assignments/character-sets)
 
-        > **Nota:**
+        > [!NOTE]
+        >
+        > >
         >
         > - Nao use esta pragma ela esta obsoleta. use [`charset`](/pt-BR/docs/Web/HTML/Element/meta#charset) atributo {{HTMLElement("meta")}} element instead.
         > - como o {{HTMLElement("meta")}} pode nao ser usado para mudar o tipo de documento no XHTML, ou em um documento de HTML5 seguindo uma syntax de XHTML, nunca marque MIME type para um XHTML MIME type desta forma. isso sera incoerente.
@@ -120,7 +126,8 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
       - : este pragma define um [cookie](/pt-BR/docs/cookie) para a página. este conteúdo deve seguir a sintaxe definida em [IETF HTTP Cookie Specification](https://tools.ietf.org/html/draft-ietf-httpstate-cookie-14).
 
-        > **Nota:** não use este pragma está obsoleto. Use HTTP header set-cookie instead.
+        > [!NOTE]
+        > não use este pragma está obsoleto. Use HTTP header set-cookie instead.
 
 - `name`
 
@@ -129,7 +136,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     - `application-name`, define o nome da aplicação que esta rodando na página;
 
-      > **Nota:**
+      > [!NOTE]
+      >
+      > >
       >
       > - Browsers podem usar isso para identificar a aplicação. isso é diferente do elemento {{HTMLElement("title")}}, que geralmente constituí no nome da aplicação, mas também contém informações específicas como o nome do documento ou status;
       > - Webpages simples não deveriam definir application-name meta.
@@ -147,9 +156,11 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
       | `origin-when-crossorigin`    | Envia uma URL completa (sem parâmetros) ao executar uma solicitação de mesma origem, mas envie apenas a origem do documento para outros casos.                                                            |
       | `unsafe-URL`                 | Envia um URL completo (sem parâmetros) ao executar uma solicitação de mesma origem ou origem cruzada.                                                                                                     |
 
-      > **Nota:** alguns browsers suportam keywords `always`, `default`, e `never` para referenciar. estes valores estão descontinuados.
+      > [!NOTE]
+      > alguns browsers suportam keywords `always`, `default`, e `never` para referenciar. estes valores estão descontinuados.
 
-      > **Nota:** dinamicamente inseridos `<meta name="referrer">` (por document.write ou appendChild) cria um nao-determinismo quando isso vem para enviar referências ou não. Note também quando muitas politicas conflitantes são definidas, o No-referrer politia é aplicada.
+      > [!NOTE]
+      > dinamicamente inseridos `<meta name="referrer">` (por document.write ou appendChild) cria um nao-determinismo quando isso vem para enviar referências ou não. Note também quando muitas politicas conflitantes são definidas, o No-referrer politia é aplicada.
 
     o atributo também pode ter um valor retirado de uma extensa lista definida em [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtensions). Embora nenhum tenha sido formalmente aceito ainda, alguns nomes comumente usados estão entre as propostas:
 
@@ -170,7 +181,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
       | `noimageindex` | previne esta página de aparecer como referencia de alguma imagem indexada                                                                              | [Google](https://www.google.com/support/webmasters/bin/answer.py?hl=en&answer=79812)                                                                                                                                                                                                                                                                         |
       | `nocache`      | sinônimo de `noarchive`                                                                                                                                | [Bing](https://www.bing.com/toolbox/blogs/webmaster/archive/2008/06/03/robots-exclusion-protocol-joining-together-to-provide-better-documentation.aspx)                                                                                                                                                                                                      |
 
-      > **Nota:**
+      > [!NOTE]
+      >
+      > >
       >
       > - Somente robôs cooperativos seguirão as regras definidas pelo nome do robô. Não espere manter as colheitadeiras de e-mail à distância com isso.
       > - O robô ainda precisa acessar a página para ler o valor meta. Se você quiser mantê-los sob controle, por exemplo, para evitar o consumo de largura de banda, use um arquivo robots.txt (ou em complemento).
@@ -193,7 +206,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
       | `minimum-scale` | um numero positivo entre `0.0` e `10.0`                 | define o valor mínimo do zoom; deve ser menor ou igual ao `maximum-scale` ou o comportamento sera indeterminado                                                           |
       | `user-scalable` | um valor booleano (`yes` ou `no`)                       | se setado `no`, o usuário não poderá usar zoom na página. o valor padrão é `yes`.                                                                                         |
 
-      > **Nota:**
+      > [!NOTE]
+      >
+      > >
       >
       > - Embora não seja padronizado, esse atributo é usado por diferentes navegadores móveis, como o Safari Mobile, o Firefox para celular ou o Opera Mobile.
       > - Os valores padrão podem mudar de um dispositivo e navegador para outro.
@@ -203,7 +218,8 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : Este atributo define o esquema no qual os metadados são descritos. Um esquema é um contexto que leva às interpretações corretas dos [`content`](/pt-BR/docs/Web/HTML/Element/meta#content) valores, como um formato.
 
-    > **Nota:** Não use este atributo pois esta obsoleto.Não há substituto para isso, pois não houve uso real para isso. Omitir completamente.
+    > [!NOTE]
+    > Não use este atributo pois esta obsoleto.Não há substituto para isso, pois não houve uso real para isso. Omitir completamente.
 
 ## Notes
 

@@ -250,7 +250,8 @@ El tema de las abreviaturas y acrónimos puede ser un tanto lioso. En castellano
 
 ---
 
-> **Nota:** Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
 >
 > ¿Quieres participar en su elaboración? Para saber como hacerlo consulta MDC:Como ayudar.
 

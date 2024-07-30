@@ -71,7 +71,8 @@ UnicodeDecodeB64("JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"); // "✓ à la mode
 
 ### Solution #2 – rewriting `atob()` and `btoa()` using `TypedArray`s and UTF-8
 
-> **Note:** The following code is also useful to get an [ArrayBuffer](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) from a Base64 string and/or vice versa ([see below](#appendix_decode_a_base64_string_to_uint8array_or_arraybuffer)).
+> [!NOTE]
+> The following code is also useful to get an [ArrayBuffer](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) from a Base64 string and/or vice versa ([see below](#appendix_decode_a_base64_string_to_uint8array_or_arraybuffer)).
 
 ```js
 "use strict";
@@ -325,7 +326,8 @@ const myBuffer = base64DecToArr(
 alert(myBuffer.byteLength);
 ```
 
-> **Note:** A função `base64DecToArr(sBase64[, nBlocksSize])` retorna
+> [!NOTE]
+> A função `base64DecToArr(sBase64[, nBlocksSize])` retorna
 > um [uint8Array](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) de bytes.
 > Se o seu objetivo é construir um buffer de dados brutos de 16 bits / 32 bits / 64 bits,
 > use o argumento `nBlocksSize`,

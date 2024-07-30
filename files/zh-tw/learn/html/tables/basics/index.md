@@ -280,7 +280,8 @@ th {
 
 {{EmbedLiveSample("結果")}}
 
-> **備註：** 你也可以在 GitHub 上看到 [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) ([see it live also](http://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
+> [!NOTE]
+> 你也可以在 GitHub 上看到 [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) ([see it live also](http://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
 
 ## 用 \<th> 加上標頭元素
 
@@ -354,13 +355,15 @@ th {
    繼續修改你的 HTML 將所有外圍的 `<td>` 元素變成 `<th>` 元素。
 3. 儲存你的 HTML 並在瀏覽器上執行，現在你應該可以看到標頭應有的樣子。
 
-> **備註：** 你可以在 GitHub 上的[dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html)找到我們寫好的完整的範例([直接看看長怎樣](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
+> [!NOTE]
+> 你可以在 GitHub 上的[dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html)找到我們寫好的完整的範例([直接看看長怎樣](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
 
 ### 標頭為什麼實用?
 
 我們已經部分解答了這個問題 — 當有標頭清楚標示時，它能更簡單的使你找到資料並讓整體設計看起來更完整。
 
-> **備註：** 表格標頭有具備預設樣式 — 粗體並置中，即使你不加上你自己的表格樣式，他們仍然能被凸顯。
+> [!NOTE]
+> 表格標頭有具備預設樣式 — 粗體並置中，即使你不加上你自己的表格樣式，他們仍然能被凸顯。
 
 表格標頭還有一個額外的好處 — 伴隨著 `作用域(scope)` 屬性 (我們將會在下一個章節中學到)，當要連結每個標頭而所有資料都在同一列或欄時，這能允許表格使用起來更無障礙。並且，螢幕閱讀器能一次性讀出完整一列或一欄的資料，這是非常實用的。
 
@@ -422,7 +425,8 @@ th {
 3. 最後, 使用 `rowspan` 來讓 "Horse" and "Chicken" 合併橫跨兩列。
 4. 儲存並在瀏覽器上檢視你改善後的程式碼。
 
-> **備註：** 你可以在 GitHub 上的 [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) 找到我們寫好的完整的範例 ([see it live also](http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
+> [!NOTE]
+> 你可以在 GitHub 上的 [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) 找到我們寫好的完整的範例 ([see it live also](http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
 ## Providing common styling to columns
 
@@ -430,7 +434,8 @@ th {
 
 在我們繼續下去前，我們將要告訴你這節文章最後一個重點。HTML 有一個一次定義一整欄樣式資訊的方法 — **[`<col>`](/zh-TW/docs/Web/HTML/Element/col)** **[`<colgroup>`](/zh-TW/docs/Web/HTML/Element/colgroup)** 元素。These exist because it can be a bit annoying and inefficient having to specify styling on columns — you generally have to specify your styling information on _every_ `<td>` or `<th>` in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.
 
-> **備註：** Styling columns like this is [limited to a few properties](https://www.w3.org/TR/CSS22/tables.html#columns): [`border`](/zh-TW/docs/Web/CSS/border), [`background`](/zh-TW/docs/Web/CSS/background), [`width`](/zh-TW/docs/Web/CSS/width), and [`visibility`](/zh-TW/docs/Web/CSS/visibility). To set other properties you'll have to either style every `<td>` or `<th>` in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.
+> [!NOTE]
+> Styling columns like this is [limited to a few properties](https://www.w3.org/TR/CSS22/tables.html#columns): [`border`](/zh-TW/docs/Web/CSS/border), [`background`](/zh-TW/docs/Web/CSS/background), [`width`](/zh-TW/docs/Web/CSS/width), and [`visibility`](/zh-TW/docs/Web/CSS/visibility). To set other properties you'll have to either style every `<td>` or `<th>` in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.
 
 Take the following simple example:
 

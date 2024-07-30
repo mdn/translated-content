@@ -78,13 +78,15 @@ Para criar uma camada usando caminhos (regiões ou _paths_) é necessário algun
 
 O primeiro passo para criar um caminho é chamar o `beginPath()`. Internamente, caminhos são armazenados como uma lista de sub-caminhos (linhas, arcos, etc.) que juntos formam uma forma (_shape_). Sempre que esse método é chamado, a lista é redefinida e podemos começar a desenhar novas formas.
 
-> **Nota:** Quando o caminho atual está vazio, assim como imediatamente depois de chamar `beginPath()`, ou em uma tela recém-criada, o primeiro comando de construção de caminho é sempre tratado como um `moveTo()`, independentemente do que ele seja realmente. Por essa razão, você quase sempre vai precisar definir especificamente sua posição inicial após redefinir um caminho.
+> [!NOTE]
+> Quando o caminho atual está vazio, assim como imediatamente depois de chamar `beginPath()`, ou em uma tela recém-criada, o primeiro comando de construção de caminho é sempre tratado como um `moveTo()`, independentemente do que ele seja realmente. Por essa razão, você quase sempre vai precisar definir especificamente sua posição inicial após redefinir um caminho.
 
 A segunda etapa é chamar os métodos que realmente especificam os caminhos a serem desenhados. Vamos ver isso em breve.
 
 O terceiro, e um passo opcional, é chamar `closePath()`. Este método tenta fechar a forma desenhando uma linha reta do ponto atual para o início. Se a forma (_shape_) já foi fechada ou existe apenas um ponto na lista, esta função não faz nada.
 
-> **Nota:** Quando você chama `fill()`, todas as formas abertas são fechadas automaticamente, assim você não precisa chamar `closePath()`. Isso **não acontece** quando você chamar `stroke()`.
+> [!NOTE]
+> Quando você chama `fill()`, todas as formas abertas são fechadas automaticamente, assim você não precisa chamar `closePath()`. Isso **não acontece** quando você chamar `stroke()`.
 
 ### Desenhando um triângulo
 
@@ -161,7 +163,8 @@ O resultado aparece como:
 
 Se você não gosta de ver linhas conectadas, você pode remover as linhas que chamam a função `moveTo()`.
 
-> **Nota:** Para aprender mais sobre a função `arc()`, veja sobre [Arcos](#arcos).
+> [!NOTE]
+> Para aprender mais sobre a função `arc()`, veja sobre [Arcos](#arcos).
 
 ### Linhas
 
@@ -223,7 +226,8 @@ Para desenhar arcos, nós usamos os métodos `arc()` ou `arcTo()`.
 
 Vamos dar uma olhada mais detalhada sobre o método `arc`, que tem seis parâmetros: `x` e `y` são as coordenadas do centro do círculo em que o arco deve ser desenhado. `radius` é o raio. Os parâmetros `startAngle` e `endAngle` definem os pontos inicial e final do arco em radianos, ao longo da curva do círculo. Estes são medidos a partir do eixo `x`. O parâmetro `anticlockwise` é um valor Booleano que, quando verdadeiro, desenha o arco no sentido anti-horário; Caso contrário, o arco é desenhado no sentido horário.
 
-> **Nota:** Os ângulos na função `arc` são medidos em radianos, não em graus. Para converter graus em radianos você pode usar a seguinte expressão JavaScript: `radians = (Math.PI/180)*degrees`.
+> [!NOTE]
+> Os ângulos na função `arc` são medidos em radianos, não em graus. Para converter graus em radianos você pode usar a seguinte expressão JavaScript: `radians = (Math.PI/180)*degrees`.
 
 O exemplo a seguir é um pouco mais complexo do que os que vimos anteriormente. Ele desenha 12 arcos diferentes, todos com diferentes ângulos e preenchimentos.
 
@@ -233,7 +237,8 @@ As coordenadas `x` e `y` devem ser suficientemente claras. O parâmetros `radius
 
 A manipulação do parâmetro `clockwise` faz com que a primeira e terceira linhas sejam desenhadas como arcos no sentido horário, e a segunda e quarta linhas como arcos no sentido anti-horário. Finalmente, a instrução `if` faz com que a metade superior dos arcos não sejam preenchidos e a metade inferior dos arcos sejam.
 
-> **Nota:** Este exemplo requer um canvas um pouco maior que as outras desta página: 150 x 200 pixels.
+> [!NOTE]
+> Este exemplo requer um canvas um pouco maior que as outras desta página: 150 x 200 pixels.
 
 ```html hidden
 <html>

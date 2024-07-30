@@ -11,7 +11,8 @@ l10n:
 
 > **备注：** {{domxref("Blob.text()")}} 方法是一种较新的基于 Promise 的 API，用于将文件读取为文本。
 
-> **备注：** 该方法将整个文件的内容加载到内存中，不适合大文件。对于大文件，首选使用 {{domxref("FileReader.readAsArrayBuffer", "readAsArrayBuffer()")}}。
+> [!NOTE]
+> 该方法将整个文件的内容加载到内存中，不适合大文件。对于大文件，首选使用 {{domxref("FileReader.readAsArrayBuffer", "readAsArrayBuffer()")}}。
 
 ## 语法
 

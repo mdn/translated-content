@@ -87,7 +87,8 @@ block content
 
 ![Author Detail Page - Express Local Library site](locallibary_express_author_detail.png)
 
-> **備註：** 作者的出生與死亡日期的外觀很醜！我們將在本文最後的自我挑戰處理它。
+> [!NOTE]
+> 作者的出生與死亡日期的外觀很醜！我們將在本文最後的自我挑戰處理它。
 
 ## 下一步
 

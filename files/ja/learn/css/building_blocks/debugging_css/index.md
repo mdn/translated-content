@@ -86,7 +86,8 @@ HTML の右側にある[ルールビュー](https://firefox-source-docs.mozilla.
 
 ![開発者ツールパネル、新しいプロパティをルールに追加し、フォントのオートコンプリートを開く](inspecting3-font-size.png)
 
-> **メモ:** ルールビューには他にも便利な機能があります。**たとえば**、無効な値の宣言には**取り消し線が引か**れています。詳しくは、[CSS の確認と編集](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html)をご覧ください。
+> [!NOTE]
+> ルールビューには他にも便利な機能があります。**たとえば**、無効な値の宣言には**取り消し線が引か**れています。詳しくは、[CSS の確認と編集](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html)をご覧ください。
 
 ## ボックスモデルについて
 
@@ -102,7 +103,8 @@ HTML の右側にある[ルールビュー](https://firefox-source-docs.mozilla.
 
 ![開発ツールのレイアウトセクション](inspecting4-box-model.png)
 
-> **メモ:** 詳細については、[ボックスモデルの調査と検査](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html)をご覧ください。
+> [!NOTE]
+> 詳細については、[ボックスモデルの調査と検査](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html)をご覧ください。
 
 ## 詳細度に関する問題の解決
 

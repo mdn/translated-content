@@ -187,7 +187,7 @@ JavaScript에서의 객체는 속성의 컬렉션으로 볼 수 있습니다. [�
 접근자 속성은 다음과 같은 특성을 가집니다.
 
 - `get`
-  - : 값에 대한 get 접근이 수행될 따마다 속성 값을 검색하기 위해 비어 있는 인수 목록으로 호출되는 함수입니다. [getters](/ko/docs/Web/JavaScript/Reference/Functions/get)를 참고하세요. `undefined`일 수 있습니다.
+  - : 값에 대한 get 접근이 수행될 때마다 속성 값을 검색하기 위해 비어 있는 인수 목록으로 호출되는 함수입니다. [getters](/ko/docs/Web/JavaScript/Reference/Functions/get)를 참고하세요. `undefined`일 수 있습니다.
 - `set`
   - : 할당된 값을 포함하는 인수로 호출되는 함수입니다. 지정된 속성을 변경하려고 시도할 때마다 실행됩니다. [setters](/ko/docs/Web/JavaScript/Reference/Functions/set)도 참고하세요. `undefined`일 수 있습니다.
 - `enumerable`

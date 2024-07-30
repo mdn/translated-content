@@ -138,7 +138,8 @@ footer a {
 
 然而，`:where()` 中的选择器的优先级是 0，所以橘色的页脚链接将被我们的简单选择器覆盖。
 
-> **备注：** 你也可以在 GitHub 上找到这个示例；参见 [is-where](https://mdn.github.io/css-examples/is-where/)。
+> [!NOTE]
+> 你也可以在 GitHub 上找到这个示例；参见 [is-where](https://mdn.github.io/css-examples/is-where/)。
 
 {{EmbedLiveSample('示例', '100%', 600)}}
 

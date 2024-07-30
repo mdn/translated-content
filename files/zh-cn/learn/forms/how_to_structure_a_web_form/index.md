@@ -34,11 +34,13 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;你可�
 
 我们早在之前的文章中就遇见过它了。
 
-> **备注：** 严格禁止在一个表单内嵌套另一个表单。嵌套会使表单的行为不可预知，而这取决于正在使用的浏览器。
+> [!NOTE]
+> 严格禁止在一个表单内嵌套另一个表单。嵌套会使表单的行为不可预知，而这取决于正在使用的浏览器。
 
 请注意，在{{HTMLElement("form")}}元素之外使用表单小部件是可以的，但是如果你这样做了，那么表单小部件与任何表单都没有任何关系。这样的小部件可以在表单之外使用，但是你应该对于这些小部件有特别的计划，因为它们自己什么也不做。你将不得不使用 JavaScript 定制他们的行为。
 
-> **备注：** HTML5 在 HTML 表单元素中引入`form`属性。它让你显式地将元素与表单绑定在一起，即使元素不在{{ HTMLElement("form") }}中。不幸的是，就目前而言，跨浏览器对这个特性的实现还不足以使用。
+> [!NOTE]
+> HTML5 在 HTML 表单元素中引入`form`属性。它让你显式地将元素与表单绑定在一起，即使元素不在{{ HTMLElement("form") }}中。不幸的是，就目前而言，跨浏览器对这个特性的实现还不足以使用。
 
 ## \<fieldset> 和 \<legend> 元素
 
@@ -68,7 +70,8 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;你可�
 </form>
 ```
 
-> **备注：** 你可以在 [fieldset-legend.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/fieldset-legend.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)) 看到该例。
+> [!NOTE]
+> 你可以在 [fieldset-legend.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/fieldset-legend.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)) 看到该例。
 
 当阅读上述表格时，屏幕阅读器将会读第一个小部件“Fruit juice size small”，“Fruit juice size medium”为第二个，“Fruit juice size large”为第三个。
 
@@ -117,7 +120,8 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;你可�
 </form>
 ```
 
-> **备注：** 你可以在 [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)) 看到该例。
+> [!NOTE]
+> 你可以在 [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)) 看到该例。
 
 ### 多个标签
 
@@ -157,9 +161,11 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;你可�
 - 在第二个例子中，事情变得清晰一点了——标签和输入一起，读出的是“name star name edit text”，但标签仍然是单独读出的。这还是有点令人困惑，但这次还是稍微好一点了，因为`input`和`label`联系起来了。
 - 第三个例子是最好的——标签是一起读出的，标签和输入读出的是“name star edit text”。
 
-> **备注：** 你可能会得到一些不同的结果，这取决于你的屏幕阅读器。这是在 VoiceOver 上测试的（NVDA 的行为也类似）。我们也乐于听听你的试验结果。
+> [!NOTE]
+> 你可能会得到一些不同的结果，这取决于你的屏幕阅读器。这是在 VoiceOver 上测试的（NVDA 的行为也类似）。我们也乐于听听你的试验结果。
 
-> **备注：** 你可以在 GitHub 上看到 [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html)（你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)）。不要运行 2 个或 3 个未注释版本的示例——如果你有多个标签和多个输入相同的 ID，那么屏幕阅读器肯定会感到困惑！
+> [!NOTE]
+> 你可以在 GitHub 上看到 [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html)（你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)）。不要运行 2 个或 3 个未注释版本的示例——如果你有多个标签和多个输入相同的 ID，那么屏幕阅读器肯定会感到困惑！
 
 ## 用于表单的通用 HTML 结构
 

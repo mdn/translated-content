@@ -63,7 +63,8 @@ var myNumber = Math.random();
 
 ……我們其實當在使用函數。
 
-> **備註：** 若有需要，你可以瀏覽器的 JavaScript 主控台中輸入以上指令碼，藉此重新熟悉這些功能。
+> [!NOTE]
+> 若有需要，你可以瀏覽器的 JavaScript 主控台中輸入以上指令碼，藉此重新熟悉這些功能。
 
 JavaScript 語言有很多內建函數，讓你不用重覆寫所有程式碼就能做很多事。事實上，在你執行瀏覽器的內建函數時，你呼叫到的某些程式碼並不能用 JavaScript 來寫——很多這種函數是在部分呼叫瀏覽器背景語言，大多是由 C++ 這種低階系統語言寫成，而非 JavaScript 這種網際網路語言。
 
@@ -202,7 +203,8 @@ myButton.onclick = function () {
 
 Some functions require **parameters** to be specified when you are invoking them — these are values that need to be included inside the function parentheses, which it needs to do its job properly.
 
-> **備註：** Parameters are sometimes called arguments, properties, or even attributes.
+> [!NOTE]
+> Parameters are sometimes called arguments, properties, or even attributes.
 
 As an example, the browser's built-in [Math.random()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/random) function doesn't require any parameters. When called, it always returns a random number between 0 and 1:
 
@@ -217,7 +219,8 @@ var myText = "I am a string";
 var newString = myText.replace("string", "sausage");
 ```
 
-> **備註：** When you need to specify multiple parameters, they are separated by commas.
+> [!NOTE]
+> When you need to specify multiple parameters, they are separated by commas.
 
 It should also be noted that sometimes parameters are optional — you don't have to specify them. If you don't, the function will generally adopt some kind of default behavior. As an example, the array [join()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/join) function's parameter is optional:
 
@@ -268,7 +271,8 @@ function greeting() {
 
 Both functions you want to call are called `greeting()`, but you can only ever access the `second.js` file's `greeting()` function — it is applied to the HTML later on in the source code, so its variable and function overwrite the ones in `first.js`.
 
-> **備註：** You can see this example [running live on GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (see also the [source code](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)).
+> [!NOTE]
+> You can see this example [running live on GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (see also the [source code](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)).
 
 Keeping parts of your code locked away in functions avoids such problems, and is considered best practice.
 
@@ -370,9 +374,11 @@ Let's look at a real example to demonstrate scoping.
 
    This time the `a()` and `b()` calls will both return that annoying "[ReferenceError: z is not defined](/zh-TW/docs/Web/JavaScript/Reference/Errors/Not_defined)" error — this is because the `output()` calls and the variables they are trying to print are not defined inside the same function scopes — the variables are effectively invisible to those function calls.
 
-> **備註：** The same scoping rules do not apply to loop (e.g. `for() { ... }`) and conditional blocks (e.g. `if() { ... }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
+> [!NOTE]
+> The same scoping rules do not apply to loop (e.g. `for() { ... }`) and conditional blocks (e.g. `if() { ... }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
 
-> **備註：** The [ReferenceError: "x" is not defined](/zh-TW/docs/Web/JavaScript/Reference/Errors/Not_defined) error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.
+> [!NOTE]
+> The [ReferenceError: "x" is not defined](/zh-TW/docs/Web/JavaScript/Reference/Errors/Not_defined) error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.
 
 ### 函數裡的函數
 

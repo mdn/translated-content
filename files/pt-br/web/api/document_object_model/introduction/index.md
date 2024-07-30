@@ -82,7 +82,8 @@ Outro exemplo. Esta função cria um novo elemento H1, adiciona texto a esse ele
 
 Esta referência tenta descrever os vários objetos e tipos em termos simples. Mas há vários tipos de dados diferentes sendo transmitidos pela API que você deve conhecer.
 
-> **Nota:** Como a grande maioria do código que usa o DOM gira em torno da manipulação de documentos HTML, é comum sempre se referir aos nós no DOM como **elementos**, pois em um documento HTML, cada nó é um elemento. Apesar de não ser estritamente precisa, a documentação que você encontrará no MDN frequentemente fará a mesma coisa, por causa de quão comum é essa suposição.
+> [!NOTE]
+> Como a grande maioria do código que usa o DOM gira em torno da manipulação de documentos HTML, é comum sempre se referir aos nós no DOM como **elementos**, pois em um documento HTML, cada nó é um elemento. Apesar de não ser estritamente precisa, a documentação que você encontrará no MDN frequentemente fará a mesma coisa, por causa de quão comum é essa suposição.
 
 A tabela a seguir descreve brevemente esses tipos de dados.
 

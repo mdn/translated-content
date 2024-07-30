@@ -49,7 +49,8 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-sid
 
 クライアント側とサーバー側のストレージが一緒に使用されることがよくあります。例えば、音楽ファイル（ウェブゲームや音楽プレーヤーアプリケーションで使用できる）を一括してダウンロードし、クライアント側のデータベースに格納し、必要に応じて再生できるようにすることができます。ユーザーが音楽ファイルをダウンロードするのは最初だけで、その後でアクセスした場合はデータベースから取得することになります。
 
-> **メモ:** クライアント側ストレージ API を使用して格納できるデータの量には上限があります（おそらく個々の API ごとと、総量の両方）。正確な上限はブラウザーによって異なり、またユーザーの設定に基づく可能性もあります。詳細な情報は[ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)を参照してください。
+> [!NOTE]
+> クライアント側ストレージ API を使用して格納できるデータの量には上限があります（おそらく個々の API ごとと、総量の両方）。正確な上限はブラウザーによって異なり、またユーザーの設定に基づく可能性もあります。詳細な情報は[ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)を参照してください。
 
 ### 古い流儀: クッキー
 
@@ -236,7 +237,8 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-sid
 
 > **メモ:** [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)のところには、探究するにはほんの少しだけ更に複雑な別の例もあります。
 
-> **メモ:** 完成版のソースのうち `<script src="index.js" defer></script>` という行では、`defer` 属性により、ページを読み込み終わるまでは {{htmlelement("script")}} 要素の中身を実行しないように指定しています。
+> [!NOTE]
+> 完成版のソースのうち `<script src="index.js" defer></script>` という行では、`defer` 属性により、ページを読み込み終わるまでは {{htmlelement("script")}} 要素の中身を実行しないように指定しています。
 
 ## 複雑なデータを保存する — IndexedDB
 
@@ -289,7 +291,8 @@ IndexedDB API の詳細については、[IndexedDB の使用](/ja/docs/Web/API/
 
    IndexedDB でこれを扱うには、リクエストオブジェクトを作成します（これは好きなように名付けることができます。ここでは `openRequest` と名付けているので、何のためのオブジェクトかは明らかでしょう）。そして、リクエストが完全に完了したり、失敗したりしたときにコードを実行するために、イベントハンドラーを使用します。
 
-   > **メモ:** バージョン番号は重要です。もし、データベースをアップグレードしたい場合（例えば、テーブル構造を変更するなど）、バージョンを上げ、 `upgradeneeded` ハンドラー（下記参照）の内部で異なるスキーマを指定するなどして、コードを再度実行する必要があります。このチュートリアルでは、データベースのアップグレードについては触れません。
+   > [!NOTE]
+   > バージョン番号は重要です。もし、データベースをアップグレードしたい場合（例えば、テーブル構造を変更するなど）、バージョンを上げ、 `upgradeneeded` ハンドラー（下記参照）の内部で異なるスキーマを指定するなどして、コードを再度実行する必要があります。このチュートリアルでは、データベースのアップグレードについては触れません。
 
 3. 前回追加した部分のすぐ下に、次のイベントハンドラーを追加してください。
 
@@ -692,7 +695,8 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-> **メモ:** 指定された `sw.js` ファイルへのパスは、コードを含む JavaScript ファイルではなく、サイトのオリジンからの相対パスです。サービスワーカーは `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js` にあります。オリジンは `https://mdn.github.io` なので、指定されたパスは `/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js` である必要があります。もし、この例を自分自身でホスティングしたい場合は、これを適宜変更する必要があります。これはかなり紛らわしいですが、セキュリティ上の理由からこのように作業する必要があるのです。
+> [!NOTE]
+> 指定された `sw.js` ファイルへのパスは、コードを含む JavaScript ファイルではなく、サイトのオリジンからの相対パスです。サービスワーカーは `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js` にあります。オリジンは `https://mdn.github.io` なので、指定されたパスは `/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js` である必要があります。もし、この例を自分自身でホスティングしたい場合は、これを適宜変更する必要があります。これはかなり紛らわしいですが、セキュリティ上の理由からこのように作業する必要があるのです。
 
 #### サービスワーカーのインストール
 

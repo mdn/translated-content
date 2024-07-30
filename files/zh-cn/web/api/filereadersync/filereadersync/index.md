@@ -30,7 +30,8 @@ function readFile(blob) {
 }
 ```
 
-> **备注：** 此代码段必须在 {{domxref("Worker")}} 内部使用，因为同步接口不能在主线程上使用。
+> [!NOTE]
+> 此代码段必须在 {{domxref("Worker")}} 内部使用，因为同步接口不能在主线程上使用。
 
 ## 规范
 

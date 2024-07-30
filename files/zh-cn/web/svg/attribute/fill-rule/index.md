@@ -7,7 +7,8 @@ slug: Web/SVG/Attribute/fill-rule
 
 **`fill-rule`** 是一个表现属性，它定义了用来确定一个多边形内部区域的算法。
 
-> **备注：** 作为一个表现属性，fill-rule 可以被用于 CSS。
+> [!NOTE]
+> 作为一个表现属性，fill-rule 可以被用于 CSS。
 
 作为一个表现属性，它可以被应用于任何元素，但只会在以下元素中有效：
 

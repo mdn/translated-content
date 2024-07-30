@@ -1,41 +1,86 @@
 ---
-title: リンクの装飾
+title: リンクのスタイル設定
 slug: Learn/CSS/Styling_text/Styling_links
+l10n:
+  sourceCommit: 68da45a87043a9d1bb33db8ae8c4b5393fc1c501
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
-[リンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)を装飾するときは、擬似クラスを使用してリンク状態を効果的に装飾する方法と、ナビゲーションメニューやタブなどの一般的なさまざまなインターフェイス機能で使用するためのリンクの装飾方法を理解することが重要です。 この記事では、これらすべてのトピックを見ていきます。
+[リンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)をスタイル設定するときは、擬似クラスを使用してリンク状態を効果的にスタイル設定する方法を理解することが重要です。 また、ナビゲーションメニューやタブなどの一般的なさまざまなインターフェイス機能で使用するためのリンクのスタイル設定方法を理解することが重要です。 この記事では、これらすべてのトピックを見ていきます。
 
-| 前提知識: | 基本的なコンピューターリテラシー、HTML の基本（[HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)を学ぶ）、CSS の基本（[CSS 入門](/ja/docs/Learn/CSS/Introduction_to_CSS)を学ぶ）、[CSS のテキストとフォントの基礎](/ja/docs/Learn/CSS/Styling_text/Fundamentals)。 |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 学習目標: | リンク状態を装飾する方法と、ナビゲーションメニューのような一般的な UI 機能でリンクを効果的に使用する方法を学ぶこと。                                                                                                                                                   |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提知識:</th>
+      <td>
+        HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+          >HTML 入門</a
+        >を学ぶ）、CSS の基本（<a href="/ja/docs/Learn/CSS/First_steps"
+          >CSS 入門</a
+        >を学ぶ）、<a href="/ja/docs/Learn/CSS/Styling_text/Fundamentals"
+          >CSS のテキストとフォントの基礎</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目的:</th>
+      <td>
+        リンクの状態をスタイル設定する方法と、ナビゲーションメニューのような一般的な UI 機能でリンクを効果的に使用する方法を学ぶこと。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## いくつかのリンクを見てみましょう
 
-[ハイパーリンクの作成](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)のベストプラクティスに従って、HTML がリンクをどのように実装するかを調べました。 この記事では、この知識を基にして、リンクの装飾のためのベストプラクティスを示します。
+[ハイパーリンクの作成](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)のベストプラクティスに従って、HTML がリンクをどのように実装するかを調べました。 この記事では、この知識を基にして、リンクのスタイル設定のためのベストプラクティスを示します。
 
 ### リンク状態
 
-最初に理解するべきことはリンク状態の概念です。リンクが存在できる様々な状態のことで、それらは異なる[疑似クラス](/ja/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements)を使って装飾することができます。
+最初に理解するべきことはリンク状態の概念です。リンクが存在できる様々な状態のことで、それらは様々な[擬似クラス](/ja/docs/Learn/CSS/Building_blocks/Selectors#擬似クラス)を使ってスタイル設定することができます。
 
-- **リンク（未訪問）**: リンクが他のどの状態にもない場合に、リンクが属するデフォルトの状態。 これは、{{cssxref(":link")}} 疑似クラスを使用して特に装飾できます。
-- **訪問済み**: 既に訪問済み（ブラウザーの履歴に存在する）のリンクで、{{cssxref(":visited")}} 擬似クラスを使用して装飾します。
-- **ホバー**: リンクにユーザーのマウスポインタが合わせられているときのリンクで、{{cssxref(":hover")}} 疑似クラスを使用して装飾します。
+- **リンク**: リンク先があるリンク（つまり、単なる名前付きアンカーではないもの）で、{{cssxref(":link")}} 擬似クラスを使用してスタイル設定します。
+- **訪問済み**: 既に訪問済みの（ブラウザーの履歴に存在する）リンクで、{{cssxref(":visited")}} 擬似クラスを使用してスタイル設定します。
+- **ホバー**: リンクにユーザーのマウスポインターが合わせられているときのリンクで、{{cssxref(":hover")}} 擬似クラスを使用してスタイル設定します。
 - **フォーカス**: フォーカスしたときのリンク（例えば、
 
   <kbd>Tab</kbd>
 
-  &#x20;キーなどを使用してキーボードユーザーによって移動してきたか、{{domxref("HTMLElement.focus()")}} を使用してプログラムでフォーカスした） — これは {{cssxref(":focus")}} 擬似クラスを使用して装飾します。
+  キーなどを使用してキーボードユーザーによって移動してきたか、{{domxref("HTMLElement.focus()")}} を使用してプログラムでフォーカスした）。これは {{cssxref(":focus")}} 擬似クラスを使用してスタイル設定します。
 
-- **アクティブ**: アクティブ化している（例えばクリックされている）ときのリンクで、{{cssxref(":active")}} 疑似クラスを使用して装飾します。
+- **アクティブ**: アクティブ化している（例えばクリックされている）ときのリンクで、{{cssxref(":active")}} 擬似クラスを使用してスタイル設定します。
 
-### デフォルトの装飾
+### 既定のスタイル
 
-次の例は、リンクがデフォルトでどのようにふるまうかを示しています（CSS は、テキストをより見やすくするために、単にテキストを拡大して中央に配置しています）。
+下記の例は、既定ではリンクがどのように見え、どのように動作するかを示しています。ただし、CSS はテキストをより目立たせるために拡大し、中央に配置しています。この例では、既定のスタイル設定の見た目や 動作と、より多くの CSS スタイルが適用されているこのページの他のリンクの見た目や 動作を比較することができます。
+
+- リンクには下線が引かれています。
+- 未訪問のリンクは青になります。
+- 訪問済みのリンクは紫になります。
+- リンクにポインターを当てると、マウスポインターが小さな手のアイコンに変わります。
+- フォーカスされたリンクには輪郭線が表示されます。このページのリンクはキーボードでタブキーを押すことでフォーカスできるはずです。（Mac の場合、
+
+  <kbd>option</kbd>
+
+  \+
+
+  <kbd>tab</kbd>
+
+  を使用するか、[Full Keyboard Access: All controls](https://support.apple.com/en-us/guide/mac-help/mchlp1399/mac) オプションを、
+
+  <kbd>Ctrl</kbd>
+
+  \+
+
+  <kbd>F7</kbd>
+
+  を押して有効にする必要があります。
+
+- アクティブなリンクは赤です。クリック時にマウスボタンを押しっぱなしにしてみてください。
 
 ```html
-<p><a href="#">A simple link</a></p>
+<p><a href="#">単純なリンク</a></p>
 ```
 
 ```css
@@ -45,50 +90,30 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Default_styles', '100%', 120) }}
+{{ EmbedLiveSample('Default_styles', '100%', 130) }}
 
-> **メモ:** このページの例にあるリンクはすべて偽のリンクです — `#`（ハッシュまたはポンド記号）が実際の URL の代わりに配置されています。 これは、実際のリンクが含まれている場合、それらをクリックすると例が壊れる可能性があるためです（エラーが発生したり、ロードしたページから埋め込まれた例に戻ることができません）。 `#` は現在のページにリンクしているだけです。
+> [!NOTE]
+> このページのリンク例はすべて、それぞれのウィンドウの一番上にリンクしています。 空のフラグメント（`href="#"`）を使用しているのは、単純な例を作成し、それぞれの {{HTMLElement("iframe")}} に格納されているライブサンプルが壊れないようにするためです。
 
-デフォルトの装飾を調べていくうちに、次のようないくつかのことに気付くでしょう。
+興味深いことに、これらの既定のスタイルは、1990 年代半ばのブラウザーの初期の頃のものとほぼ同じです。 これは、ユーザーがこの動作を知っており、予期するようになったためです。リンクのスタイルが異なると、多くの人が混乱してしまうでしょう。 これは、リンクのスタイルを設定してはいけないという意味ではなく、予想される動作から大きく外れてはいけないということです。 少なくとも次のことをするべきです。
 
-- リンクには下線が引かれています。
-- 未訪問のリンクは青です。
-- 訪問済みのリンクは紫色です。
-- リンクにホバーすると、マウスポインタが小さな手のアイコンに変わります。
-- フォーカスのあるリンクの周囲にはアウトラインがあります —&#x20;
+- 下線をリンクのみに使用し、他のものには使用しないようにします。リンクに下線を付けたくない場合は、少なくとも他の方法でリンクを目立たせてしてください。
+- ホバー/フォーカスしたときに何らかの方法で反応するようにし、アクティブ化したときには少し異なる方法で反応するようにしてください。
 
-  <kbd>Tab</kbd>
+既定のスタイルは、次の CSS プロパティを使用してオフにしたり変更したりできます。
 
-  &#x20;キーを押すと、キーボードでこのページのリンクにフォーカスを合わせることができます（Mac では、これが機能する前に&#x20;
+- {{cssxref("color")}} でテキストの色を設定します。
+- {{cssxref("cursor")}} でマウスポインターのスタイルを設定します。よっぽどの理由がない限り、これはオフにしないでください。
+- {{cssxref("outline")}} でテキストの輪郭線を設定します。輪郭線を境界線に似ていますが、唯一の違いは、境界線はボックス内の空間を占めるのに対し、輪郭線は空間を占めずに背景の上に置かれるだけという点です。輪郭線はアクセシビリティの向上に役立つので、他の方法でリンクがフォーカスされたことを表さない限り、除去しないでください。
 
-  <kbd>Ctrl</kbd>
+> [!NOTE]
+> リンクのスタイルは上記のプロパティに限定されているいるわけではありません。好きなプロパティを自由に使用できます。
 
-  &#x20;\+&#x20;
+### リンクのスタイル設定
 
-  <kbd>F7</kbd>
+既定の状態を少し詳しく見てきたので、典型的なリンクのスタイル設定のセットを見てみましょう。
 
-  &#x20;を押して*フルキーボードアクセス: すべてのコントロール*オプションを有効にする必要があるかもしれません）。
-
-- アクティブなリンクは赤です（リンクをクリックしながらマウスボタンを押したままにしてみてください）。
-
-興味深いことに、これらのデフォルトの装飾は、1990 年代半ばのブラウザーの初期の頃のものとほぼ同じです。 これは、ユーザーがこのふるまいを知っており、予期するようになったためです — リンクの装飾が異なると、多くの人が混乱してしまうでしょう。 これは、リンクの装飾を設定してはいけないという意味ではなく、予想されるふるまいから大きく外れてはいけないということです。 少なくとも次のことをするべきです。
-
-- リンクには下線を使用しますが、他のものには使用しません。 リンクに下線を付けたくない場合は、少なくとも他の方法でリンクをハイライトしてください。
-- ホバー/フォーカスしたときに何らかの方法で反応するようにし、アクティブ化したときには少し異なる方法で反応するようにします。
-
-デフォルトの装飾は、次の CSS プロパティを使用してオフにしたり変更したりできます。
-
-- テキストの色は {{cssxref("color")}} です。
-- マウスポインタのスタイルは {{cssxref("cursor")}} です — 非常に良い理由がない限り、これをオフにしないでください。
-- テキストのアウトラインは {{cssxref("outline")}} です（アウトラインは境界線に似ていますが、唯一の違いは、境界線はボックス内のスペースを占めますが、アウトラインは占めずに背景の上にあるだけだということです）。 このアウトラインは、アクセシビリティを向上させるのに役立つので、オフにする前に慎重に検討してください。 フォーカス状態でリンクホバー状態に与えられた装飾を少なくとも 2 倍にするべきです。
-
-> **メモ:** リンクの装飾は上記のプロパティに制限されているわけではありません — 好きなプロパティを自由に使用できます。 夢中になりすぎないようにしてください！
-
-### いくつかのリンクを装飾する
-
-デフォルトの状態を少し詳しく見てきたので、典型的なリンクの装飾のセットを見てみましょう。
-
-まず始めに、空の規則セットを書き出します。
+まず始めに、空のルールセットを書き出します。
 
 ```css
 a {
@@ -110,9 +135,9 @@ a:active {
 }
 ```
 
-リンクのスタイルは互いに重なっているため、この順序は重要です。 例えば、最初の規則の装飾は、それ以降のすべての規則に適用され、リンクがアクティブになっているときは、ホバーもしています。 これらを間違った順序で並べると、物事は適切に機能しません。 順番を覚えておくには、**L**o**V**e **F**ears **HA**te のようなニーモニックを使用してみてください。
+この順番が重要です。リンクのスタイルは互いに重ねて構築されるからです。例えば、最初のルールのスタイルは、それ以降のすべてのルールに適用され、リンクがアクティブになっているときは、ホバーもしています。これらを間違った順序で並べると、適切に機能しません。 順番を覚えておくには、**L**o**V**e **F**ears **HA**te のような語呂合わせを使用してみてください。
 
-それでは、これを適切に装飾するための情報を追加しましょう。
+それでは、これを適切にスタイル設定するための情報を追加しましょう。
 
 ```css
 body {
@@ -127,81 +152,72 @@ p {
 }
 
 a {
-  outline: none;
-  text-decoration: none;
-  padding: 2px 1px 0;
+  outline-color: transparent;
 }
 
 a:link {
-  color: #265301;
+  color: #6900ff;
 }
 
 a:visited {
-  color: #437a16;
+  color: #a5c300;
 }
 
 a:focus {
-  border-bottom: 1px solid;
+  text-decoration: none;
   background: #bae498;
 }
 
 a:hover {
-  border-bottom: 1px solid;
+  text-decoration: none;
   background: #cdfeaa;
 }
 
 a:active {
-  background: #265301;
+  background: #6900ff;
   color: #cdfeaa;
 }
 ```
 
 CSS を適用するためのサンプル HTML も提供します。
 
-```html
+```html-nolint
 <p>
-  There are several browsers available, such as <a href="#">Mozilla Firefox</a>,
-  <a href="#">Google Chrome</a>, and <a href="#">Microsoft Edge</a>.
+  <a href="#">Mozilla Firefox</a>、<a href="#">Google Chrome</a>、<a href="#">Microsoft Edge</a> など、利用できるブラウザーが複数あります。
 </p>
 ```
 
 2 つをまとめると、この結果が得られます。
 
-{{ EmbedLiveSample('Styling_some_links', '100%', 150) }}
+{{ EmbedLiveSample('Styling_some_links', '100%', 200) }}
 
-それでは、ここで何をしたでしょうか？ これは確かにデフォルトの装飾とは異なるように見えますが、それでもユーザーに何が起こっているのかを知るための十分な身近な経験を提供します。
+では、ここでは何が行われたのでしょうか？確かにこれは既定のスタイル設定とは異なって見えますが、それでもユーザーが何が起こっているのか分かりやすい慣れ親しんだ使い勝手を提供しています。
 
-- 最初の 2 つの規則は、この説明にとってそれほど興味深いものではありません。
-- 3 番目の規則は `a` セレクタを使ってデフォルトのテキストのアンダーラインとフォーカスのアウトライン（とにかくブラウザーによって異なります）を取り除き、各リンクに少量のパディングを追加します — これらすべては後で明らかになります。
-- 次に、`a:link` セレクタと `a:visited` セレクタを使用して、未訪問リンクと訪問済みリンクに 2 つのカラーバリエーションを設定して区別します。
-- 次の 2 つの規則では、`a:focus` と `a:hover` を使用して、フォーカスされたリンクとホバーされたリンクを異なる背景色に設定し、さらにリンクを目立たせるために下線を使用します。 ここで注意すべき 2 つの点があります。
+- 最初の 2 つのルールは、この場ではさほど興味深いものではありません。
+- 3 番目のルールは `a` セレクターを使って既定のテキストの下線とフォーカスの輪郭線（ブラウザーによって異なります）を取り除きます。
+- 次に、`a:link` セレクターと `a:visited` セレクターを使用して、未訪問リンクと訪問済みリンクに 2 つのカラーバリエーションを設定して区別できるようにします。
+- 次の 2 つのルールでは、`a:focus` と `a:hover` を使用して、フォーカスされたリンクとホバーされたリンクを異なる背景色に設定し、さらにリンクを目立たせるために下線を使用します。
+- 最後に、`a:active` は、リンクがアクティブになっている間に反転色にするために使用され、重要なことが起こっていることが分かりやすくします。
 
-  - 下線は {{cssxref("text-decoration")}} ではなく、 {{cssxref("border-bottom")}} を使用して作成されています — 前者よりも後者の方が装飾オプションが優れていて、少し下に描かれるので下線が引かれている単語のディセンダ（例えば、g と y で x より下に出ている部分）を横切ることがないため、一部の人々はこれを好みます。
-  - {{cssxref("border-bottom")}} の値は、色を指定せずに `1px solid` として設定しています。 こうすると、境界線は要素のテキストと同じ色になります。 これは、テキストがそれぞれ異なる色であるような場合に役立ちます。
+### アクティブラーニング: 自分のリンクをスタイル設定する
 
-- 最後に、`a:active` は、リンクがアクティブになっている間に反転配色を与えるために使用され、重要なことが起こっていることを明確にします！
+このアクティブラーニングセッションでは、空のルールセットに自分で宣言を追加して、リンクを本当にかっこよく見せてください。 想像力を駆使して、ワイルドに。上記の例と同じように、よりかっこよく機能的なものを思いつくことができると確信しています。
 
-### 能動的学習: あなた自身のリンクを装飾する
-
-この能動的学習セッションでは、空の規則のセットにあなた自身の宣言を追加してリンクを本当にかっこよく見せてください。 想像力を駆使して、ワイルドに。 上記の例と同じように、よりかっこよく機能的なものを思いつくことができると確信しています。
-
-間違えた場合は、_Reset_ ボタンを使用していつでもリセットできます。 本当に立ち往生してしまったら、上に示した例を挿入するために _Show solution_ ボタンを押してください。
+間違えた場合は、<kbd>リセット</kbd>ボタンを使用していつでもリセットできます。 本当に立ち往生してしまったら、上に示した例を挿入するために<kbd>答えを表示</kbd>ボタンを押してください。
 
 ```html hidden
 <div
   class="body-wrapper"
   style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
-  <h2>HTML Input</h2>
+  <h2>HTML 入力</h2>
   <textarea
     id="code"
     class="html-input"
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-<p>There are several browsers available, such as <a href="#">Mozilla
- Firefox</a>, <a href="#">Google Chrome</a>, and
-<a href="#">Microsoft Edge</a>.</p></textarea
-  >
+<p><a href="#">Mozilla Firefox</a>、<a href="#">Google Chrome</a>、<a href="#">Microsoft Edge</a> など、利用できるブラウザーが複数あります。</p>
+  </textarea>
 
-  <h2>CSS Input</h2>
+  <h2>CSS 入力</h2>
   <textarea
     id="code"
     class="css-input"
@@ -228,10 +244,10 @@ a:hover {
 
 a:active {
 
-}</textarea
-  >
+}
+  </textarea>
 
-  <h2>Output</h2>
+  <h2>出力</h2>
   <div
     class="output"
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
@@ -239,28 +255,28 @@ a:active {
     <input
       id="reset"
       type="button"
-      value="Reset"
+      value="リセット"
       style="margin: 10px 10px 0 0;" />
     <input
       id="solution"
       type="button"
-      value="Show solution"
+      value="答えを表示"
       style="margin: 10px 0 0 10px;" />
   </div>
 </div>
 ```
 
 ```js hidden
-var htmlInput = document.querySelector(".html-input");
-var cssInput = document.querySelector(".css-input");
-var reset = document.getElementById("reset");
-var htmlCode = htmlInput.value;
-var cssCode = cssInput.value;
-var output = document.querySelector(".output");
-var solution = document.getElementById("solution");
+const htmlInput = document.querySelector(".html-input");
+const cssInput = document.querySelector(".css-input");
+const reset = document.getElementById("reset");
+const htmlCode = htmlInput.value;
+const cssCode = cssInput.value;
+const output = document.querySelector(".output");
+const solution = document.getElementById("solution");
 
-var styleElem = document.createElement("style");
-var headElem = document.querySelector("head");
+const styleElem = document.createElement("style");
+const headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -268,16 +284,48 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function () {
+reset.addEventListener("click", () => {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();
 });
 
-solution.addEventListener("click", function () {
+solution.addEventListener("click", () => {
   htmlInput.value = htmlCode;
-  cssInput.value =
-    "p {\n  font-size: 1.2rem;\n  font-family: sans-serif;\n  line-height: 1.4;\n}\n\na {\n  outline: none;\n  text-decoration: none;\n  padding: 2px 1px 0;\n}\n\na:link {\n  color: #265301;\n}\n\na:visited {\n  color: #437A16;\n}\n\na:focus {\n  border-bottom: 1px solid;\n  background: #BAE498;\n}\n\na:hover {\n  border-bottom: 1px solid;\n  background: #CDFEAA;\n}\n\na:active {\n  background: #265301;\n  color: #CDFEAA;\n}";
+  cssInput.value = `p {
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+a {
+  outline-color: transparent;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+a:link {
+  color: #265301;
+}
+
+a:visited {
+  color: #437A16;
+}
+
+a:focus {
+  border-bottom: 1px solid;
+  background: #BAE498;
+}
+
+a:hover {
+  border-bottom: 1px solid;
+  background: #CDFEAA;
+}
+
+a:active {
+  background: #265301;
+  color: #CDFEAA;
+}`;
   drawOutput();
 });
 
@@ -286,19 +334,17 @@ cssInput.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 800) }}
+{{ EmbedLiveSample('Active_learning_Style_your_own_links', 700, 800) }}
 
 ## リンクにアイコンを含める
 
-一般的なやり方は、リンクがどの種類のコンテンツを指しているかに関するより多くの標識を提供するためにリンクにアイコンを含めることです。 外部リンク（他のサイトにつながるリンク）にアイコンを追加する、本当に簡単な例を見てみましょう。 このようなアイコンは、通常、ボックスから出る小さな矢印のように見えます — この例では、[icons8.com からの素晴らしい例](https://icons8.jp/icon/741/external-link)を使います。
+リンクにアイコンを表記することで、リンク先がどのようなコンテンツであるかをより分かりやすく提供するのが一般的です。実に単純な例ですが、外部リンク（他のサイトにつながるリンク）にアイコンを追加する例を見てみましょう。このようなアイコンは、通常、箱から小さな矢印が出ているように見えます。この例では、[icons8.com からの外部リンクアイコン](https://icons8.jp/icon/741/external-link)を使用します。
 
-欲しい効果が得られる HTML と CSS を見てみましょう。 まず、装飾する簡単な HTML です。
+欲しい効果が得られる HTML と CSS を見てみましょう。 まず、スタイル設定する簡単な HTML です。
 
-```html
+```html-nolint
 <p>
-  For more information on the weather, visit our <a href="#">weather page</a>,
-  look at <a href="http://#">weather on Wikipedia</a>, or check out
-  <a href="http://#">weather on Extreme Science</a>.
+  天気に関する詳しい情報は、<a href="#">天気のページ</a>に行くか、<a href="https://ja.wikipedia.org/">ウィキペディアの天気</a>を見るか、<a href="https://www.nationalgeographic.org/topics/resource-library-weather/">ナショナルジオグラフィックの天気</a>を調べてみてください。
 </p>
 ```
 
@@ -311,70 +357,46 @@ body {
   font-family: sans-serif;
 }
 
-p {
-  line-height: 1.4;
-}
+a[href^="http"]::after {
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.25em;
 
-a {
-  outline: none;
-  text-decoration: none;
-  padding: 2px 1px 0;
-}
-
-a:link {
-  color: blue;
-}
-
-a:visited {
-  color: purple;
-}
-
-a:focus,
-a:hover {
-  border-bottom: 1px solid;
-}
-
-a:active {
-  color: red;
-}
-
-a[href*="http"] {
-  background: url("external-link-52.png") no-repeat 100% 0;
-  background-size: 16px 16px;
-  padding-right: 19px;
+  background-size: 100%;
+  background-image: url("external-link-52.png");
 }
 ```
 
 {{ EmbedLiveSample('Including_icons_on_links', '100%', 150) }}
 
-それでは、ここで何が起こっているのでしょうか？ これまで見てきたのと同じ情報なので、CSS の大部分はスキップします。 しかし最後の規則は興味深いです — ここでは前回の記事の[リストアイテムのカスタム行頭記号](/ja/docs/Learn/CSS/Styling_text/Styling_lists#Using_a_custom_bullet_image)を処理したのと同じ方法で外部リンクにカスタム背景画像を挿入しています — 今回は個々のプロパティの代わりに {{cssxref("background")}} の一括指定を使用します。 挿入したい画像へのパスを設定し、`no-repeat` を指定してコピーを 1 つだけ挿入するようにしてから、テキストコンテンツの右側へ 100%、上から 0 ピクセルの位置を指定します。
+それでは、ここで何が起こっているのでしょうか？ これまで見てきたのと同じ情報なので、CSS の大部分はスキップします。 しかし最後のルールは興味深いもので、{{cssxref("::after")}} 擬似要素を使用しています。`0.8rem x 0.8rem` の擬似要素が、アンカーテキストの後にインライングロックとして置かれています。アイコンは擬似要素の {{cssxref("background")}} として描画されます。
 
-また、{{cssxref("background-size")}} を使用して、背景画像を表示するサイズを指定します。 レスポンシブウェブデザインの目的に合わせて、アイコンを大きくしておいて、このようにサイズを変更すると便利です。 ただし、これは IE 9 以降でのみ機能するため、これらの古いブラウザーをサポートする必要がある場合は、画像のサイズを変更しておいて、それをそのまま挿入する必要があります。
+ここでは[相対的な単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#相対長の単位)である `em` を使用しています。アイコンのサイズはアンカーのテキストサイズに比例します。アンカーのテキストサイズが変更された場合、アイコンのサイズもそれに応じて調整されます。
 
-最後に、背景画像を表示するスペースを確保するためにリンクに {{cssxref("padding-right")}} を設定しているので、テキストと重なっていません。
+最後の一言です。どのように外部リンクだけを選択したのでしょうか？ [HTML のリンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)を適切に記述しているのなら、絶対 URL を使用しているのは外部リンクだけであるはずです。自分のサイトの他の部分にリンクするには（最初のリンクのように）相対リンクを使用したほうが効率的です。"http" というテキストは（2 番目と 3 番目のリンクのように）外部リンクにのみ現れるので、これを[属性セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors#属性セレクター)で選択できます。`a[href^="http"]` は {{htmlelement("a")}} 要素のうち、[`href`](/ja/docs/Web/HTML/Element/a#href) 属性が "http" で始まるものに限り選択します。
 
-最後の一言 — どのように外部リンクだけを選択したのでしょうか？ あなたが[HTML リンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)を適切に記述しているのなら、外部リンクには絶対 URL のみを使用しているはずです — 自分のサイトの他の部分にリンクするには（最初のリンクのように）相対リンクを使用するほうが効率的です。 したがって、テキスト "http" は（2 番目と 3 番目のリンクのように）外部リンクにのみ現れ、これを[属性セレクタ](/ja/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors)で選択できます。 `a[href*="http"]` は {{htmlelement("a")}} 要素を選択しますが、"http" を含む値を持つ [`href`](/ja/docs/Web/HTML/Element/a#href) 属性がある場合に限ります。
+以上です。上のアクティブラーニングの節を再検討して、この新しいテクニックを試してみてください！
 
-それでは、これで全部です — 上の能動的学習セクションを再検討して、この新しいテクニックを試してみてください！
+> **メモ:** [背景](/ja/docs/Learn/CSS/Building_blocks)や[レスポンシブウェブデザイン](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)にまだ慣れていなくても心配しないでください。 これらは他の場所で説明します。
 
-> **メモ:** [背景](/ja/docs/Learn/CSS/Styling_boxes)や[レスポンシブウェブデザイン](/ja/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks)にまだ慣れていなくても心配しないでください。 これらは他の場所で説明されています。
+## リンクをボタンとしてスタイル設定
 
-## ボタンとしてのリンクの装飾
+この記事でこれまで説明してきたツールは、他にも使用することができます。例えば、ホバーのような状態は、リンクだけでなく、多くの異なる要素をスタイル設定するために使用することができます。段落やリストアイテムなどのホバー状態をスタイル設定することができます。
 
-この記事でこれまでに説明したツールは、他の方法でも使用できます。 例えば、ホバーのような状態は、リンクだけでなく、さまざまな要素を装飾するために使用できます — 段落、リスト項目、またはその他のもののホバー状態を装飾することができます。
+さらに、状況によっては、リンクはボタンのような外見になったり動作したりするようスタイル設定することが一般的です。ウェブサイトのナビゲーションメニューは、一連のリンクとしてマークアップすることができ、これはユーザーにサイトの他の一部へのアクセスを提供する一連のコントロールボタンやタブのように見えるようにスタイル設定することができます。それでは、その方法を探ってみましょう。
 
-さらに、リンクは特定の状況下ではボタンのように見えて、そうふるまうように装飾されているのが普通です — ウェブサイトのナビゲーションメニューは通常リンクを含むリストとしてマークアップれており、ユーザーがサイトの他の部分にアクセスできるようにする一連のコントロールボタンやタブのように簡単にスタイル設定できます。 その方法を探りましょう。
-
-まず、いくつかの HTML です。
+まず、いくらかの HTML です。
 
 ```html
-<ul>
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Pizza</a></li>
-  <li><a href="#">Music</a></li>
-  <li><a href="#">Wombats</a></li>
-  <li><a href="#">Finland</a></li>
-</ul>
+<nav class="container">
+  <a href="#">Home</a>
+  <a href="#">Pizza</a>
+  <a href="#">Music</a>
+  <a href="#">Wombats</a>
+  <a href="#">Finland</a>
+</nav>
 ```
 
 そして CSS です。
@@ -386,34 +408,25 @@ html {
   font-family: sans-serif;
 }
 
-ul {
-  padding: 0;
-  width: 100%;
-}
-
-li {
-  display: inline;
+.container {
+  display: flex;
+  gap: 0.625%;
 }
 
 a {
-  outline: none;
+  flex: 1;
   text-decoration: none;
-  display: inline-block;
-  width: 19.5%;
-  margin-right: 0.625%;
+  outline-color: transparent;
   text-align: center;
   line-height: 3;
   color: black;
 }
 
-li:last-child a {
-  margin-right: 0;
-}
-
 a:link,
 a:visited,
 a:focus {
-  background: yellow;
+  background: palegoldenrod;
+  color: black;
 }
 
 a:hover {
@@ -421,36 +434,29 @@ a:hover {
 }
 
 a:active {
-  background: red;
+  background: darkred;
   color: white;
 }
 ```
 
 これにより、次のような結果が得られます。
 
-{{ EmbedLiveSample('Styling_links_as_buttons', '100%', 100) }}
+{{ EmbedLiveSample('Styling_links_as_buttons', '100%', 120) }}
 
-最も興味深い部分に焦点を当てて、ここで何が起こっているのかを説明しましょう。
+HTML では、{{HTMLElement("nav")}} 要素に `"container"` クラスをつけたものを定義しています。`<nav>` には複数のリンクを含んでいます。
 
-- 2 番目の規則は、{{htmlelement("ul")}} 要素からデフォルトの {{cssxref("padding")}} を削除し、その幅を外側のコンテナ（この場合は {{htmlelement("body")}}）の 100% になるように設定します。
-- {{htmlelement("li")}} 要素は通常デフォルトでブロックです（復習のために [CSS ボックスの種類](/ja/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes)を参照してください）。 つまり、要素はそれぞれ自身のラインに配置されます。 この場合、水平方向のリンクのリストを作成しているので、3 番目の規則で {{cssxref("display")}} プロパティを `inline` に設定します。 これにより、リスト項目は互いに同じラインに配置されます — それらはインライン要素のようにふるまいます。
-- {{htmlelement("a")}} 要素を装飾する 4 番目の規則は、ここで最も複雑です。 ステップバイステップで進みましょう。
+CSS には、コンテナーとそこに含まれるリンクのスタイル設定が記述されています。
 
-  - 前の例と同様に、デフォルトの {{cssxref("text-decoration")}} と {{cssxref("outline")}} をオフにすることから始めます — 見た目を損なうものは欲しくありません。
-  - 次に、{{cssxref("display")}} を `inline-block` に設定します — {{htmlelement("a")}} 要素はデフォルトではインラインですが、ブロックのように、要素を自身のラインからこぼさずに、サイズを変更できるようにしたいのです。 `inline-block` はこれを可能にします。
-  - これからサイズを設定します！ {{htmlelement("ul")}} の全幅を埋め、各ボタンの間には少しマージンを残して（ただし、右端には隙間はありません）、5 つのボタンを配置します。 それらはすべて同じサイズでなければなりません。 これを行うには、{{cssxref("width")}} を 19.5% に設定し、{{cssxref("margin-right")}} を 0.625% に設定します。この幅の合計が 100.625% になることに気付くでしょう。 これは最後のボタンが `<ul>` をオーバーフローさせ、次のラインに落ちることになります。 ただし、次の規則を使用してリストの最後の `<a>` のみを選択し、そこからマージンを削除して、100% に戻します。 これで完了です！
-  - 最後の 3 つの宣言は非常に単純で、主に見た目を目的としています。 各リンク内のテキストを中央揃えにし、ボタンの高さ設定するために {{cssxref("line-height")}} を 3 に設定し（テキストを垂直方向に中央揃えする利点もあります）、テキストの色を黒に設定します。
-
-> **メモ:** HTML 内のリスト項目がすべて一行に記述されていることに気付いたかもしれません。インラインブロック要素間のスペースや改行は、単語間のスペースと同様にページにスペースを作成します。 そして、そのようなスペースは水平ナビゲーションメニューのレイアウトを壊すでしょう。だからスペースを取り除きました。この問題（と、その解決方法）についての詳細は、[インラインブロック要素間のスペースの戦い](https://css-tricks.com/fighting-the-space-between-inline-block-elements/)（英語）で見つけることができます。
-
-## あなたのスキルをテストしてみてください!
-
-あなたはこの記事の最後に到達し、すでに私たちのアクティブラーニングのセクションでいくつかのスキルテストを行いましたが、今後の最も重要な情報を覚えていますか？この情報を保持しているかどうかを確認するためのアセスメントがモジュールの最後にあります。[コミュニティスクールのホームページの組版](/ja/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)を参照してください。
-
-この評価ではこのモジュールで説明されているすべての知識をテストしますので、次に進む前に次の記事を読んだほうがいいかもしれません。
+- 2 番目のルールは次のように指定しています。
+  - コンテナーは[フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)です。その中に含まれるアイテムは、この場合はリンクが、フレックスアイテムになります。
+  - フレックスアイテム間の溝は、コンテナーの幅の `0.625%` です。
+- 3 番目のルールはリンクをスタイル設定しています。
+  - 最初の宣言である `flex: 1` は、アイテムの幅が調整されることを表しますので、コンテナーの利用可能な空間をすべて使用します。
+  - 次に、既定の {{cssxref("text-decoration")}} および {{cssxref("outline")}} を無効にしています。外見を邪魔されたくありませんので。
+  - 最後の 3 つの宣言は、それぞれのリンク内のテキストを中央に配置すること、{{cssxref("line-height")}} を 3 に設定してボタンに高さを与えること（これはテキストを上下中央に配置するという利点もあります）、そしてテキストの色を黒に設定することです。
 
 ## まとめ
 
-この記事が、リンクについて知っておく必要があるすべての情報を提供してくれることを願っています — 今のところは！ テキストの装飾モジュールの最後の記事では、ウェブサイトでのカスタムフォントの使用方法や、ウェブフォントの使用方法について詳しく説明しています。
+この記事が、リンクについて知っておく必要があるすべての情報を提供してくれることを願っています — 今のところは！ テキストのスタイル設定モジュールの最後の記事では、ウェブサイトでの[カスタムフォント](/ja/docs/Learn/CSS/Styling_text/Web_fonts)（またの名をウェブフォント）の使用方法について詳しく説明しています。
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}

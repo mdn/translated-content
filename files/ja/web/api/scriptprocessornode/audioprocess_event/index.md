@@ -9,7 +9,8 @@ l10n:
 
 {{domxref("ScriptProcessorNode")}} インターフェイスの `audioprocess` イベントは、スクリプトプロセッサーの入力バッファーが処理される準備ができた時発火します。
 
-> **メモ:** この機能は [AudioWorklets](/ja/docs/Web/API/AudioWorklet) および {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
+> [!NOTE]
+> この機能は [AudioWorklets](/ja/docs/Web/API/AudioWorklet) および {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
 
 このイベントはキャンセル不可で、バブルしません。
 

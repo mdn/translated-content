@@ -34,7 +34,8 @@ console.log(d.toString()); // logs Wed Jun 28 1993 14:39:07 GMT-0600 (PDT)
 console.log(d.toDateString()); // logs Wed Jun 28 1993
 ```
 
-> **Nota:** Los meses son 0-indexados cuando son utilizados como parámetros de {{jsxref("Date")}} (Siendo así, el cero (0) corresponde a Enero y el once (11) a Diciembre).
+> [!NOTE]
+> Los meses son 0-indexados cuando son utilizados como parámetros de {{jsxref("Date")}} (Siendo así, el cero (0) corresponde a Enero y el once (11) a Diciembre).
 
 ## Especificaciones
 

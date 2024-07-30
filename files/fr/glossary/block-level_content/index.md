@@ -9,7 +9,8 @@ Les éléments HTML (**Hypertext Markup Language**) étaient historiquement cat�
 
 Les navigateurs affichent généralement un élément de type bloc avec une nouvelle ligne avant et après l'élément. Vous pouvez les visualiser comme une pile de boîtes.
 
-> **Note :** Un élément de bloc commence toujours sur une nouvelle ligne et prend toute la largeur disponible (autrement dit, il s'étend le plus possible vers la droite et vers la gauche).
+> [!NOTE]
+> Un élément de bloc commence toujours sur une nouvelle ligne et prend toute la largeur disponible (autrement dit, il s'étend le plus possible vers la droite et vers la gauche).
 
 ## Éléments de type bloc
 

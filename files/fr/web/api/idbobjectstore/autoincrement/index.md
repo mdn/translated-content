@@ -7,7 +7,8 @@ slug: Web/API/IDBObjectStore/autoIncrement
 
 La propriété **`autoIncrement`** de l'interface {{domxref("IDBObjectStore")}} renvoie la position du drapeau d'incrémentation automatique du magasin d'objet {{domxref("IDBObjectStore","relié")}}.
 
-> **Note :** Chaque magasin d'objets à son conteur d'incrémentation automatique.
+> [!NOTE]
+> Chaque magasin d'objets à son conteur d'incrémentation automatique.
 
 {{AvailableInWorkers}}
 
@@ -90,7 +91,8 @@ function addData() {
 }
 ```
 
-> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!NOTE]
+> Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 

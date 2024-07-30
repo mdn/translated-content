@@ -324,7 +324,8 @@ L'attribut [`reversed`](/fr/docs/Web/HTML/Element/ol#attr-reversed) inverse la n
 
 {{ EmbedLiveSample('', '100%', 150) }}
 
-> **Note :** S'il existe plus d'éléments dans une liste inversée que la valeur de l'attribut `start`, la numérotation continuera à zéro, puis à des valeurs négatives.
+> [!NOTE]
+> S'il existe plus d'éléments dans une liste inversée que la valeur de l'attribut `start`, la numérotation continuera à zéro, puis à des valeurs négatives.
 
 ### Valeurs individualisées
 
@@ -351,7 +352,8 @@ L'attribut [`value`](/fr/docs/Web/HTML/Element/ol#attr-value) vous permet de num
 
 {{ EmbedLiveSample('', '100%', 150) }}
 
-> **Note :** Même si vous utilisez une propriété [`list-style-type`](/fr/docs/Web/CSS/list-style-type) avec des caractères non‑numériques, vous devez toujours utiliser les valeurs numériques équivalentes avec l'attribut `value`.
+> [!NOTE]
+> Même si vous utilisez une propriété [`list-style-type`](/fr/docs/Web/CSS/list-style-type) avec des caractères non‑numériques, vous devez toujours utiliser les valeurs numériques équivalentes avec l'attribut `value`.
 
 ## Apprentissage actif&nbsp;: définir le style d'une liste imbriquée
 

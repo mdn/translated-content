@@ -1,18 +1,20 @@
 ---
 title: CanvasRenderingContext2D：fillText() 方法
-short-title: fillText()
 slug: Web/API/CanvasRenderingContext2D/fillText
+l10n:
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("CanvasRenderingContext2D")}} 对象的方法 **`fillText()`** 是 Canvas 2D API 的一部分，它在指定的坐标上绘制文本字符串，并使用当前的 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 对其进行填充。存在一个可选参数，其指定了渲染文本的最大宽度，{{Glossary("user agent","用户代理")}}将通过压缩文本或使用较小的字体大小来实现。
+Canvas 2D API 的 {{domxref("CanvasRenderingContext2D")}} 对象的方法 **`fillText()`** 用于在指定的坐标上绘制文本字符串，并使用当前的 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 对其进行填充。存在一个可选参数，其指定了渲染文本的最大宽度，{{Glossary("user agent","用户代理")}}将通过压缩文本或使用较小的字体大小来实现。
 
 此方法会直接绘制到画布上，而不会修改当前路径，因此任何后续的 {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} 或 {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} 调用都不会对其产生影响。
 
 文本根据 {{domxref("CanvasRenderingContext2D.font", "font")}}、{{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}、{{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}} 和 {{domxref("CanvasRenderingContext2D.direction", "direction")}} 属性所定义的字体和文本布局来渲染。
 
-> **备注：** 如果需要绘制字符串中字符的轮廓，需要调用其上下文的 {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} 方法。
+> [!NOTE]
+> 如果需要绘制字符串中字符的轮廓，需要调用其上下文的 {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} 方法。
 
 ## 语法
 
@@ -44,7 +46,7 @@ fillText(text, x, y, maxWidth)
 
 #### HTML
 
-首先，我们需要一个画布来绘图。这段代码将创建一个宽 400 像素，宽 150 像素的背景。
+首先，我们需要一个画布来绘图。这段代码将创建一个宽 400 像素，高 150 像素的背景。
 
 ```html
 <canvas id="canvas" width="400" height="150"></canvas>
