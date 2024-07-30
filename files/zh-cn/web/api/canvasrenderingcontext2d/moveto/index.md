@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.moveTo()`** 方法用于将一个新的子路径的起始点移动到 `(x，y)` 坐标。
+Canvas 2D API 的 **`CanvasRenderingContext2D.moveTo()`** 方法用于在给定的 `(x，y)` 坐标处开始一个新的子路径。
 
 ## 语法
 
