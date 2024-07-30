@@ -11,7 +11,8 @@ slug: Mozilla/Firefox/Experimental_features
 
 可以使用 [Firefox 配置编辑器](https://support.mozilla.org/zh-CN/kb/about-config-editor-firefox)（在 Firefox 地址栏中输入 `about:config`）通过修改下面列出的相关首选项来启用或禁用实验特性。
 
-> **备注：** 对编者的信息——当在这些表格添加特性时，请尝试使用 `[Firefox bug <number>](https://bugzil.la/<number>)` 包含指向相关 bug 的链接。
+> [!NOTE]
+> 对编者的信息——当在这些表格添加特性时，请尝试使用 `[Firefox bug <number>](https://bugzil.la/<number>)` 包含指向相关 bug 的链接。
 
 ## HTML
 
@@ -2326,7 +2327,8 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
 
 [`Clear-Site-Data`](/zh-CN/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP 响应标头 `cache` 指令会清除请求网站的浏览器缓存。
 
-> **备注：** 这原本在默认情况下是启用的，但在版本 94（[Firefox bug 1729291](https://bugzil.la/1729291)）中被置于首选项之后。
+> [!NOTE]
+> 这原本在默认情况下是启用的，但在版本 94（[Firefox bug 1729291](https://bugzil.la/1729291)）中被置于首选项之后。
 
 <table>
   <thead>
