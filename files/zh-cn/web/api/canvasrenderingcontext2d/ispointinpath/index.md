@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.isPointInPath()`** 方法用于判断在当前路径中是否包含检测点。
+Canvas 2D API 的 **`CanvasRenderingContext2D.isPointInPath()`** 方法用于判断在当前路径中是否包含指定点。
 
 ## 语法
 
@@ -36,13 +36,13 @@ isPointInPath(path, x, y, fillRule)
 ### 返回值
 
 - {{jsxref("Boolean")}}
-  - : 一个 Boolean 值，当检测点包含在当前或指定的路径内，返回 `true`；否则返回 `false`。
+  - : 一个布尔值，若指定点包含在当前或指定的路径内，返回 `true`；否则返回 `false`。
 
 ## 示例
 
 ### 检查当前路径中的点
 
-这示例使用 `isPointInPath` 方法检查某点是否在当前的路径内。
+此示例使用 `isPointInPath` 方法检查某点是否在当前的路径内。
 
 #### HTML
 
