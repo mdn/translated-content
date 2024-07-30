@@ -43,17 +43,17 @@ slug: WebAssembly/JavaScript_interface
 - {{jsxref("WebAssembly.instantiateStreaming()")}}
   - : ソースのストリームから直接 WebAssembly モジュールをコンパイル、インスタンス化し、 `Module` と、その最初の `Instance` を返します。
 - {{jsxref("WebAssembly.compile()")}}
-  - : {{jsxref("WebAssembly.Module")}} を用いて WebAssembly バイナリコードからコンパイルします。インスタンス化は別ステップとして分離されます。
+  - : {{jsxref("WebAssembly.Module")}} を用いて WebAssembly バイナリーコードからコンパイルします。インスタンス化は別ステップとして分離されます。
 - {{jsxref("WebAssembly.compileStreaming()")}}
   - : ソースのストリームから直接 {{jsxref("WebAssembly.Module")}} にコンパイルします。インスタンス化は別ステップとして分離されます。
 - {{jsxref("WebAssembly.validate()")}}
-  - : WebAssembly バイナリコードの型付き配列を検証し、バイト列が有効な WebAssembly コードか (`true`) 否か (`false`) を返します。
+  - : WebAssembly バイナリーコードの型付き配列を検証し、バイト列が有効な WebAssembly コードか (`true`) 否か (`false`) を返します。
 
 ## 例
 
 ## .wasm モジュールを読み込み、コンパイルし、インスタンス化する
 
-次の例 (GitHub 上の [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) のデモと、[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)も参照) は、基礎となるソースから .wasm モジュールを直接ストリーミングし、コンパイルしてインスタンス化し、 `ResultObject` で履行されるプロミスを返します。 `instantiateStreaming()` 関数は [`Response`](/ja/docs/Web/API/Response) オブジェクトのプロミスを受け付けるので、 [`fetch()`](/ja/docs/Web/API/fetch) の呼び出し結果を直接渡すと、履行されたときにレスポンスを関数に渡すことができます。
+次の例 (GitHub 上の [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) のデモと、[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)も参照) は、基礎となるソースから .wasm モジュールを直接ストリーミングし、コンパイルしてインスタンス化し、 `ResultObject` で履行されるプロミスを返します。 `instantiateStreaming()` 関数は [`Response`](/ja/docs/Web/API/Response) オブジェクトのプロミスを受け付けるので、 [`fetch()`](/ja/docs/Web/API/Window/fetch) の呼び出し結果を直接渡すと、履行されたときにレスポンスを関数に渡すことができます。
 
 ```js
 var importObject = { imports: { imported_func: (arg) => console.log(arg) } };

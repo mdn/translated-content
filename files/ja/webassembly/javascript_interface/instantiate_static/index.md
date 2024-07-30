@@ -7,7 +7,7 @@ slug: WebAssembly/JavaScript_interface/instantiate_static
 
 **`WebAssembly.instantiate()`** 関数は WebAssembly コードをコンパイルおよびインスタンス化することができます。この関数は 2 つのオーバーロードを持ちます。
 
-- 第一のオーバーロードは、 [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays) または {{jsxref("ArrayBuffer")}} で表現された WebAssembly バイナリコードを受け取り、そして、コンパイルとインスタンス化の両方を 1 ステップで行います。返された `Promise` は解決時にコンパイルされた {{jsxref("WebAssembly.Module")}} と最初の {{jsxref("WebAssembly.Instance")}} を渡します。
+- 第一のオーバーロードは、 [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays) または {{jsxref("ArrayBuffer")}} で表現された WebAssembly バイナリーコードを受け取り、そして、コンパイルとインスタンス化の両方を 1 ステップで行います。返された `Promise` は解決時にコンパイルされた {{jsxref("WebAssembly.Module")}} と最初の {{jsxref("WebAssembly.Instance")}} を渡します。
 - 第二のオーバーロードは、すでにコンパイルされた {{jsxref("WebAssembly.Module")}} を受け取り、解決時にその `Module` の `Instance` を渡す `Promise` を返します。このオーバーロードは、すでに `Module` がコンパイル済みの場合に有用です。
 
 > [!WARNING]
@@ -15,7 +15,7 @@ slug: WebAssembly/JavaScript_interface/instantiate_static
 
 ## 構文
 
-### 第一のオーバーロード — wasm バイナリコード
+### 第一のオーバーロード — wasm バイナリーコード
 
 ```
 Promise<ResultObject> WebAssembly.instantiate(bufferSource, importObject);

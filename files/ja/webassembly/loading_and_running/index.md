@@ -23,7 +23,7 @@ WebAssembly は `<script type='module'>` または `import` 文とまだ統合�
 
 [Fetch](/ja/docs/Web/API/Fetch_API) はネットワークリソースを取得するための便利で新しい API です。
 
-wasm モジュールをフェッチする最も簡単で効率的な方法は、新しい [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/instantiateStreaming) メソッドを使用することです。このメソッドは最初の引数として `fetch()` を呼び出すことができ、1 つのステップでフェッチ、モジュールをインスタンス化し、サーバからストリームされる生のバイトコードにアクセスします。
+wasm モジュールをフェッチする最も簡単で効率的な方法は、新しい [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/instantiateStreaming) メソッドを使用することです。このメソッドは最初の引数として `fetch()` を呼び出すことができ、1 つのステップでフェッチ、モジュールをインスタンス化し、サーバーからストリームされる生のバイトコードにアクセスします。
 
 ```js
 WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
