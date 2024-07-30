@@ -103,7 +103,8 @@ importScripts("foo.js");
 console.log(navigator);
 ```
 
-> **メモ:** ワーカースクリプトのグローバルスコープは、実行しているワーカーのグローバルスコープ（{{domxref("DedicatedWorkerGlobalScope")}} やその他）と、 `WorkerGlobalScope` からメソッドやプロパティなどを継承しているすべてのワーカーのグローバルスコープで有効であるため、上記のように親オブジェクトを指定しなくとも実行できます。
+> [!NOTE]
+> ワーカースクリプトのグローバルスコープは、実行しているワーカーのグローバルスコープ（{{domxref("DedicatedWorkerGlobalScope")}} やその他）と、 `WorkerGlobalScope` からメソッドやプロパティなどを継承しているすべてのワーカーのグローバルスコープで有効であるため、上記のように親オブジェクトを指定しなくとも実行できます。
 
 ## 仕様書
 

@@ -7,7 +7,8 @@ slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics
 
 El objetivo de esta prueba de habilidad es evaluar si has comprendido el artículo [Fundamentos de texto en HTML](/es/docs/Learn/HTML/Introduccion_a_HTML/texto).
 
-> **Nota:** Puedes intentar resolverlo en los editores interactivos de más abajo, sin embargo puede ser muy úytil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
+> [!NOTE]
+> Puedes intentar resolverlo en los editores interactivos de más abajo, sin embargo puede ser muy úytil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
 >
 > Si te atascas, entonces pídenos ayuda — busca en la sección [Assessment or further help](#assessment_or_further_help) al final de esta página.
 

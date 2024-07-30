@@ -115,7 +115,8 @@ processor.doLoad();
 
 你还可通过在源 `<video>` 元素中采用 {{cssxref("filter-function/grayscale", "grayscale()")}} CSS 功能以达到同样的效果。
 
-> **备注：** 由于存在潜在安全问题，如果你的视频和代码处在不同域，你需要在视频服务器上启用 [CORS（跨源资源共享）](/zh-CN/docs/Web/HTTP/CORS)。
+> [!NOTE]
+> 由于存在潜在安全问题，如果你的视频和代码处在不同域，你需要在视频服务器上启用 [CORS（跨源资源共享）](/zh-CN/docs/Web/HTTP/CORS)。
 
 ### 视频与 WebGL
 
@@ -123,7 +124,8 @@ processor.doLoad();
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-> **备注：** 你可在 [GitHub 上找到演示的源代码](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8)（[查看在线演示](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)）。
+> [!NOTE]
+> 你可在 [GitHub 上找到演示的源代码](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8)（[查看在线演示](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)）。
 
 ### 播放速度
 
@@ -193,7 +195,8 @@ window.addEventListener("load", setPlaybackRate);
 
 {{ EmbedLiveSample('可编辑示例', 700, 450) }}
 
-> **备注：** 尝试在线的 [playbackRate 示例](https://jsbin.com/qomuvefu/2/edit)。
+> [!NOTE]
+> 尝试在线的 [playbackRate 示例](https://jsbin.com/qomuvefu/2/edit)。
 
 ## 音频处理
 
@@ -297,7 +300,8 @@ window.addEventListener("load", setFilter);
 
 {{ EmbedLiveSample('可编辑示例_2', 700, 450) }}
 
-> **备注：** 除非你启用了 [CORS](/zh-CN/docs/Web/HTTP/CORS)，否则，为避免安全问题，你的视频应与你的代码处于同一个域中。
+> [!NOTE]
+> 除非你启用了 [CORS](/zh-CN/docs/Web/HTTP/CORS)，否则，为避免安全问题，你的视频应与你的代码处于同一个域中。
 
 #### 常用音频滤镜
 
@@ -312,7 +316,8 @@ window.addEventListener("load", setFilter);
 - 陷波（Notch）：允许所有频率的信号通过，但一组频率除外。
 - 全通（All Pass）：允许所有频率的信号通过，但改变个频率之间的相位关系。
 
-> **备注：** 参见 {{domxref("BiquadFilterNode")}} 以了解详情。
+> [!NOTE]
+> 参见 {{domxref("BiquadFilterNode")}} 以了解详情。
 
 ### 卷积和脉冲
 
@@ -350,7 +355,8 @@ source.start(0);
 context.listener.setPosition(0, 0, 0);
 ```
 
-> **备注：** 你可以在 [GitHub 仓库中找到示例](https://github.com/mdn/webaudio-examples/tree/master/panner-node)（也可以[查看在线演示](https://mdn.github.io/webaudio-examples/panner-node/)）。
+> [!NOTE]
+> 你可以在 [GitHub 仓库中找到示例](https://github.com/mdn/webaudio-examples/tree/master/panner-node)（也可以[查看在线演示](https://mdn.github.io/webaudio-examples/panner-node/)）。
 
 ### JavaScript 编解码器
 
@@ -365,7 +371,8 @@ context.listener.setPosition(0, 0, 0);
 - Opus：[Opus.js](https://github.com/audiocogs/opus.js)
 - Vorbis：[vorbis.js](https://github.com/audiocogs/vorbis.js)
 
-> **备注：** 你可以在 Audiocogs [尝试一些演示](http://audiocogs.org/codecs/)；Audiocogs 还提供了一个框架——[Aurora.js](http://audiocogs.org/codecs/)，旨在帮助你使用 JavaScript 创建自己的编解码器。
+> [!NOTE]
+> 你可以在 Audiocogs [尝试一些演示](http://audiocogs.org/codecs/)；Audiocogs 还提供了一个框架——[Aurora.js](http://audiocogs.org/codecs/)，旨在帮助你使用 JavaScript 创建自己的编解码器。
 
 ## 示例
 

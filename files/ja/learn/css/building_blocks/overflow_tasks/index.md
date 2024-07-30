@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、 [CSS のオーバーフローとその管理方法](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)方法を理解しているかどうかを評価することです。
 
-> **メモ:** このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
+> [!NOTE]
+> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
 >
 > もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 
@@ -23,7 +24,7 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/overflow/overflow-scroll.html", '100%', 1000)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/overflow/overflow-scroll-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
 
@@ -39,6 +40,6 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/overflow/overflow-hidden.html", '100%', 1200)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/overflow/overflow-hidden-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。

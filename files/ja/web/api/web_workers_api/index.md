@@ -46,7 +46,8 @@ l10n:
 
 ### 利用可能な Web API
 
-> **メモ:** 掲載されている API が特定のバージョンのプラットフォームで対応している場合、一般的にウェブワーカーでも利用可能とみなされます。また、 <https://worker-playground.glitch.me/> を使用して特定のオブジェクト/関数の 対応をテストすることもできます。
+> [!NOTE]
+> 掲載されている API が特定のバージョンのプラットフォームで対応している場合、一般的にウェブワーカーでも利用可能とみなされます。また、 <https://worker-playground.glitch.me/> を使用して特定のオブジェクト/関数の 対応をテストすることもできます。
 
 ワーカーで利用可能な Web APIは、{{domxref("Barcode_Detection_API","バーコード検出 API", "", 1)}}、{{domxref("Broadcast_Channel_API","放送チャンネル API", "", 1)}}、{{domxref("Cache", "キャッシュ API", "", 1)}}、{{domxref("Channel_Messaging_API", "チャンネルメッセージ API", "", 1)}}、{{domxref("Console API", "コンソール API", "", 1)}}, [ウェブ暗号化 API](/ja/docs/Web/API/Web_Crypto_API) ({{domxref("Crypto")}})、{{domxref("CustomEvent")}}、{{domxref("Encoding_API", "エンコーディング API", "", 1)}} ({{domxref("TextEncoder")}}、{{domxref("TextDecoder")}}、など）、{{domxref("Fetch_API", "フェッチ API", "", 1)}}、{{domxref("FileReader")}}、{{domxref("FileReaderSync")}} （ワーカーでのみ動作）、{{domxref("FormData")}}、{{domxref("ImageData")}}、{{domxref("IndexedDB_API", "IndexedDB")}}, [ネットワーク情報 API](/ja/docs/Web/API/Network_Information_API), {{domxref("Notifications_API", "通知 API", "", 1)}}、{{domxref("Performance_API","パフォーマンス API", "", 1)}} （{{domxref("Performance")}}、{{domxref("PerformanceEntry")}}、{{domxref("PerformanceMeasure")}}、{{domxref("PerformanceMark")}}、{{domxref("PerformanceObserver")}}、{{domxref("PerformanceResourceTiming")}}、など)、{{jsxref("Promise")}}、[サーバー送信イベント](/ja/docs/Web/API/Server-sent_events)、{{domxref("ServiceWorkerRegistration")}}、{{ domxref("URL_API","URL API", "", 1) }} （{{ domxref("URL")}} など)、[WebGL](/ja/docs/Web/API/WebGL_API) （{{domxref("OffscreenCanvas")}} による）、{{domxref("WebSocket")}}、{{domxref("XMLHttpRequest")}} です。
 

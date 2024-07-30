@@ -9,7 +9,8 @@ l10n:
 
 {{domxref("GPU")}} インターフェイスの読み取り専用プロパティ **`wgslLanguageFeatures`** は、この WebGPU の実装が対応している [WGSL 言語の拡張](https://gpuweb.github.io/gpuweb/wgsl/#language-extension)を報告する {{domxref("WGSLLanguageFeatures")}} オブジェクトを返します。
 
-> **メモ:** API に対応しているすべてのブラウザーの WebGPU ですべての WGSL 言語の拡張が利用可能なわけではありません。使用することを決めたすべての拡張を徹底的にテストすることを推奨します。
+> [!NOTE]
+> API に対応しているすべてのブラウザーの WebGPU ですべての WGSL 言語の拡張が利用可能なわけではありません。使用することを決めたすべての拡張を徹底的にテストすることを推奨します。
 
 ## 値
 

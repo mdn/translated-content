@@ -205,7 +205,8 @@ h1, h2, .intro
 
 **Prueba a crear algunas reglas CSS que usen los selectores anteriores y algo de HTML sin estilos. Si no conoces alguna de las sintaxis anteriores, ¡prueba a buscarla en MDN!**
 
-> **Nota:** Aprenderás mucho más sobre los selectores en nuestros tutoriales sobre [selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors) de la próxima lección.
+> [!NOTE]
+> Aprenderás mucho más sobre los selectores en nuestros tutoriales sobre [selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors) de la próxima lección.
 
 ### Especificidad
 
@@ -266,7 +267,8 @@ Finalmente, los bloques de declaración CSS se combinan con _selectores_ para pr
 
 Establecer las propiedades de CSS según valores específicos es la función principal del lenguaje CSS. El motor CSS calcula qué declaraciones se aplican a cada elemento de una página para darle la compaginación y los estilos adecuados.
 
-> **Advertencia:** Las propiedades y valores de CSS son sensibles a mayúsculas y minúsculas. La propiedad y el valor de cada par están separados por dos puntos (`:`).
+> [!WARNING]
+> Las propiedades y valores de CSS son sensibles a mayúsculas y minúsculas. La propiedad y el valor de cada par están separados por dos puntos (`:`).
 
 **Prueba a buscar diferentes valores de las siguientes propiedades y escribe reglas CSS que se puedan aplicar a diferentes elementos HTML:**
 
@@ -276,9 +278,11 @@ Establecer las propiedades de CSS según valores específicos es la función pri
 - **{{cssxref("color")}}**
 - **{{cssxref("border")}}**
 
-> **Advertencia:** Si una propiedad es desconocida o si un valor no es válido para una propiedad determinada, la declaración se considera _inválida_ y el motor CSS del navegador la ignora por completo.
+> [!WARNING]
+> Si una propiedad es desconocida o si un valor no es válido para una propiedad determinada, la declaración se considera _inválida_ y el motor CSS del navegador la ignora por completo.
 
-> **Advertencia:** En CSS (y otros estándares web) se ha acordado establecer como estándar la ortografía en inglés de los EE. UU. para solucionar las incertidumbres idiomáticas. Por ejemplo, _siempre_ hay que escribir `color`. Si se escribe `colour`, no funcionará.
+> [!WARNING]
+> En CSS (y otros estándares web) se ha acordado establecer como estándar la ortografía en inglés de los EE. UU. para solucionar las incertidumbres idiomáticas. Por ejemplo, _siempre_ hay que escribir `color`. Si se escribe `colour`, no funcionará.
 
 ### Las funciones
 
@@ -408,7 +412,8 @@ Ahora mismo no pretendemos enseñarlos exhaustivamente: encontrarás muchos ejem
 
 **Prueba a añadir las declaraciones anteriores a tu CSS para ver cómo afecta al estilo de tu HTML. Experimenta con diferentes valores.**
 
-> **Advertencia:** Si bien las propiedades abreviadas a menudo permiten ahorrarte valores, luego restablecerán a sus valores iniciales cualquier valor que no incluyas. Esto asegura que se use un conjunto de valores razonable. Sin embargo, puede resultar confuso si esperas que la propiedad abreviada solo cambie los valores que has introducido.
+> [!WARNING]
+> Si bien las propiedades abreviadas a menudo permiten ahorrarte valores, luego restablecerán a sus valores iniciales cualquier valor que no incluyas. Esto asegura que se use un conjunto de valores razonable. Sin embargo, puede resultar confuso si esperas que la propiedad abreviada solo cambie los valores que has introducido.
 
 ## Comentarios
 
@@ -554,7 +559,8 @@ div p + p {
 
 La manera que elijas para disponer el código suele ser una preferencia personal, aunque cuando comiences a trabajar en equipo es posible que encuentres que el equipo ya tiene su propia guía de estilo que especifica una convención acordada a seguir.
 
-> **Advertencia:** Aunque los valores de las declaraciones CSS se separan por espacios, **los nombres de propiedad nunca tienen espacios**.
+> [!WARNING]
+> Aunque los valores de las declaraciones CSS se separan por espacios, **los nombres de propiedad nunca tienen espacios**.
 
 Por ejemplo, las siguientes declaraciones de CSS son válidas:
 

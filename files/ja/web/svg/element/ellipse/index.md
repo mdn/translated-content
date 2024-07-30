@@ -7,7 +7,8 @@ slug: Web/SVG/Element/ellipse
 
 `ellipse` 要素は SVG の基本的な図形であり、中心となる座標と x 方向と y 方向の半径両方を指定し、楕円を生成します。
 
-> **メモ:** 楕円要素は楕円の傾きを指定することはできません (例えば、45 度の角度で傾斜した楕円を描画したい場合)、しかし {{SVGAttr("transform")}} 属性を使用することで回転させることは可能です。
+> [!NOTE]
+> 楕円要素は楕円の傾きを指定することはできません (例えば、45 度の角度で傾斜した楕円を描画したい場合)、しかし {{SVGAttr("transform")}} 属性を使用することで回転させることは可能です。
 
 ```css hidden
 html,
@@ -43,7 +44,8 @@ svg {
   - : この属性は、使用単位での単位合計パス長さを指定します。
     _Value type_: [**\<number>**](/ja/docs/Web/SVG/Content_type#Number) ; _デフォルト値_: _none_; _アニメーション_: **yes**
 
-> **メモ:** SVG2 以降、`cx`、`cy`、`rx`、`ry` は、Geometry Properties であり、これらの属性は要素の CSS プロパティとして使用することもできます。
+> [!NOTE]
+> SVG2 以降、`cx`、`cy`、`rx`、`ry` は、Geometry Properties であり、これらの属性は要素の CSS プロパティとして使用することもできます。
 
 ### グローバル属性
 

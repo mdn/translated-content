@@ -37,7 +37,8 @@ grid: initial;
 grid: unset;
 ```
 
-> **Nota:** Sólo se pueden especificar las propiedades explícitas **_o bien_** las propiedades implícitas en una sola declaración `grid`. Las sub-propiedades que no se especifican se definen a su valor inicial, como es normal para shorthands. También, las propiedades relativas a gutter se redefinen mediante este shorthand, incluso cuando no pueden ser definidas mediante el mismo.
+> [!NOTE]
+> Sólo se pueden especificar las propiedades explícitas **_o bien_** las propiedades implícitas en una sola declaración `grid`. Las sub-propiedades que no se especifican se definen a su valor inicial, como es normal para shorthands. También, las propiedades relativas a gutter se redefinen mediante este shorthand, incluso cuando no pueden ser definidas mediante el mismo.
 
 {{cssinfo}}
 

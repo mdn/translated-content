@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、あなたが[高度な意味的特徴をマークアップする有名ではない HTML 要素](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)を使用する方法を理解しているかどうかを評価することです。
 
-> **メモ:** 以下の対話型エディターで解決に挑戦することができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業することが便利な場合もあります。
+> [!NOTE]
+> 以下の対話型エディターで解決に挑戦することができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業することが便利な場合もあります。
 >
 > 行き詰まったら、助けを求めましょう。このページの最下部の[評価またはさらなるヘルプ](#評価またはさらなるヘルプ)の節をご覧ください。
 
@@ -25,7 +26,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text1.html", '100%', 700)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/advanced-text/advanced-text1-download.html)しましょう。
 
@@ -46,7 +47,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text2.html", '100%', 700)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/advanced-text/advanced-text2-download.html)しましょう。
 
