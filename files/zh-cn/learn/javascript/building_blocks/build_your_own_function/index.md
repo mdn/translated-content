@@ -39,13 +39,15 @@ alert("This is a message");
 
 这个`alert()`函数不是很好的：你可以`alert()`出这条信息，但是你不能很容易的表达其他内容，例如颜色，图标或者是其他东西。接下来我们将会构建一个更有趣的函数。
 
-> **备注：** 这个例子能够在现代浏览器上很好的工作，但是这个风格在老的浏览器上并没那么有趣。我们建议你实现这个例子时在现代浏览器上，例如 Firefox，Opera 或者 Chrome 浏览器。
+> [!NOTE]
+> 这个例子能够在现代浏览器上很好的工作，但是这个风格在老的浏览器上并没那么有趣。我们建议你实现这个例子时在现代浏览器上，例如 Firefox，Opera 或者 Chrome 浏览器。
 
 ## 基本函数
 
 首先，让我们来组织一个基本的函数。
 
-> **备注：** 对于函数命名约定，应遵循与[变量命名约定](/zh-CN/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules)相同的规则。这很好，尽你所能理解它们之间的区别 - 函数名称后带有括号，而变量则没有。
+> [!NOTE]
+> 对于函数命名约定，应遵循与[变量命名约定](/zh-CN/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules)相同的规则。这很好，尽你所能理解它们之间的区别 - 函数名称后带有括号，而变量则没有。
 
 1. 我们希望你首先访问[function-start.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-start.html)文件并创建一个本地拷贝。你将会看到这个 HTML 很简单 — 我们的 body 块仅包含一个按钮。我们还提供了一些基本的 CSS 来装饰自定义消息框，以及一个用于放置 JavaScript 代码的{{htmlelement("script")}}元素。
 2. 接下来，将下面的代码添加至 `<script>` 元素中：
@@ -230,7 +232,8 @@ btn.onclick = displayMessage();
 
 1. 第一步，从 Github 上下载我们需要的图标 ([警告图标](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/warning.png) 和 [聊天图标](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/chat.png)) 。把图标保存在一个叫做`icons` 的文件夹下，和你的 HTML 文件在同一个目录下。
 
-   > **备注：** 警告和聊天图标是在这个网站 iconfinder.com 上找到的，设计者是 [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr)。感谢他！
+   > [!NOTE]
+   > 警告和聊天图标是在这个网站 iconfinder.com 上找到的，设计者是 [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr)。感谢他！
 
 2. 下一步，找到页面的 CSS 文件。我们要修改下以便我们使用图标。首先，修改 `.msgBox` 的宽度：
 
@@ -283,7 +286,8 @@ btn.onclick = displayMessage();
 
    你能看到我们现在的函数稍微有了点用 (不是非常有用) ，一个小的新功能被我们写出来了（当然，函数可以做很多你想的到的和想不到的事）！
 
-> **备注：** 如果你写这个例子遇到了困难，在这里查看免费的代码 [完整版本的代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html) (或者[在线运行的完整代码](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html)), 也可以向我们寻求帮助。
+> [!NOTE]
+> 如果你写这个例子遇到了困难，在这里查看免费的代码 [完整版本的代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html) (或者[在线运行的完整代码](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html)), 也可以向我们寻求帮助。
 
 ## 技能测试！
 

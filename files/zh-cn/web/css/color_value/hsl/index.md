@@ -7,7 +7,8 @@ slug: Web/CSS/color_value/hsl
 
 **`hsl()`** 函数标记根据其*色相*、*饱和度*和*明度*来表达 {{glossary("RGB", "sRGB")}} 颜色。可选的 _alpha_ 成分代表了颜色的透明度。
 
-> **备注：** 旧版的 `hsla()` 语法是 `hsl()` 的别称，接收相同的参数，行为也是相同的。
+> [!NOTE]
+> 旧版的 `hsla()` 语法是 `hsl()` 的别称，接收相同的参数，行为也是相同的。
 
 {{EmbedInteractiveExample("pages/css/function-hsl.html")}}
 
@@ -35,7 +36,8 @@ hsl(120deg 75% 25% / 0.6)
 - `A` {{optional_inline}}
   - : {{CSSXref("&lt;alpha-value&gt;")}} 或者关键字 `none`，其中数字 `1` 代表 `100%`（完全不透明）。
 
-> **备注：** 参见[缺失颜色成分](/zh-CN/docs/Web/CSS/color_value#缺失颜色成分) 以了解 `none` 的效果。
+> [!NOTE]
+> 参见[缺失颜色成分](/zh-CN/docs/Web/CSS/color_value#缺失颜色成分) 以了解 `none` 的效果。
 
 ### 形式语法
 

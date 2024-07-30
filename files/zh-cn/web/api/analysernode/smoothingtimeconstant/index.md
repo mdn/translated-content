@@ -11,7 +11,8 @@ slug: Web/API/AnalyserNode/smoothingTimeConstant
 
 在技术术语中，我们应用一个 [布莱克曼窗](http://webaudio.github.io/web-audio-api/#blackman-window) 并随着时间推移去平滑值。大部分情况下，默认值是较好的。
 
-> **备注：** 如果设置了 0\~1 范围外的值，将会抛出异常`INDEX_SIZE_ERR`.
+> [!NOTE]
+> 如果设置了 0\~1 范围外的值，将会抛出异常`INDEX_SIZE_ERR`.
 
 ## 语法
 

@@ -22,7 +22,8 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
 - _a4_ _b4_ _c4 d4_
   - : Are {{cssxref("&lt;number&gt;")}}s describing the translation to apply.
 
-> **备注：** Until Firefox 16, Gecko accepted a {{cssxref("&lt;length&gt;")}} value for _a4_, _b4_ and _c4_.
+> [!NOTE]
+> Until Firefox 16, Gecko accepted a {{cssxref("&lt;length&gt;")}} value for _a4_, _b4_ and _c4_.
 
 <table class="standard-table">
   <thead>

@@ -25,7 +25,8 @@ Para obtener una lista de formatos compatibles, consulta [Formatos multimedia ad
 
   - : Un atributo booleano; si se especifica, el video comenzará automáticamente a almacenarse en el búfer, incluso si no está listo para reproducirse de forma automática. Esto se debe utilizar para los casos en los que se considera probable que el video se reproduzca (por ejemplo, si el usuario accedió a esa página específica para reproducir el video, no si hay un video insertado junto con otros contenidos). El video se almacena en el búfer hasta que el caché de medios esté lleno.
 
-    > **Nota:** aunque forma parte de los primeros borradores de la especificación HTML 5, el atributo **autobuffer** se ha eliminado en versiones posteriores. Se ha quitado de Gecko 2.0 y otros navegadores, y en algunos nunca llegó a implementarse. La especificación define un nuevo atributo enumerado, **preload,** para sustituir el atributo **autobuffer,** con una sintaxis diferente. [Error 548523 en Firefox](https://bugzil.la/548523)
+    > [!NOTE]
+    > Aunque forma parte de los primeros borradores de la especificación HTML 5, el atributo **autobuffer** se ha eliminado en versiones posteriores. Se ha quitado de Gecko 2.0 y otros navegadores, y en algunos nunca llegó a implementarse. La especificación define un nuevo atributo enumerado, **preload,** para sustituir el atributo **autobuffer,** con una sintaxis diferente. [Error 548523 en Firefox](https://bugzil.la/548523)
 
 - `buffered`
   - : Un atributo que se puede leer para determinar qué intervalos de tiempo del multimedia se han almacenado en búfer. Este atributo contiene un objeto {{ domxref("TimeRanges") }} .
@@ -46,7 +47,7 @@ Para obtener una lista de formatos compatibles, consulta [Formatos multimedia ad
 
     Si no está configurado, su valor predeterminado está definido por el navegador (es decir, cada navegador puede elegir su propio valor predeterminado), aunque la especificación aconseje que se establezca a metadata.
 
-    > **Nota:**
+    > [!NOTE]
     >
     > - El atributo **autoplay** tiene prioridad sobre éste si se desea reproducir automáticamente un video, el navegador obviamente tendrá que descargarlo. La especificación permite establecer los atributos **autoplay** y **preload**.
     > - La especificación no fuerza al navegador a seguir el valor de este atributo; es tan sólo una sugerencia.
@@ -60,7 +61,8 @@ Para obtener una lista de formatos compatibles, consulta [Formatos multimedia ad
 
 Las compensaciones de tiempo se especifican actualmente como valores float que representan el número de segundos que se va a compensar.
 
-> **Nota:** la definición del valor de compensación de tiempo no se ha completado en HTML 5 aún y está sujeta a cambios.
+> [!NOTE]
+> La definición del valor de compensación de tiempo no se ha completado en HTML 5 aún y está sujeta a cambios.
 
 ## Ejemplos
 

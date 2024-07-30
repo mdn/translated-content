@@ -233,7 +233,8 @@ Você pode adicionar rótulos para seu controle usando o atributo [`label`](/pt-
   </tbody>
 </table>
 
-> **Nota:** Atualmente nenhum navegador suporta estes recursos totalmente. Firefox não suporta pontos e rótulos, por exemplo, enquanto o Chrome suporta as marcações de pontos, porém não suporta as etiquetas.
+> [!NOTE]
+> Atualmente nenhum navegador suporta estes recursos totalmente. Firefox não suporta pontos e rótulos, por exemplo, enquanto o Chrome suporta as marcações de pontos, porém não suporta as etiquetas.
 
 ### Criando controles de intervalo vertical
 

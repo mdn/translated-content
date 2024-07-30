@@ -7,7 +7,8 @@ slug: Web/HTTP/Headers/Content-Security-Policy/form-action
 
 HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) 的 **`form-action`** 指令能够限定当前页面中表单的提交地址。
 
-> **警告：** 在表单提交之后， `form-action` 指令是否应该阻止重定向仍有待讨论，各个浏览器对于此行为的实现也不尽相同（例如，Chrome 63 会阻止重定向，而 Firefox 57 则不会）。
+> [!WARNING]
+> 在表单提交之后， `form-action` 指令是否应该阻止重定向仍有待讨论，各个浏览器对于此行为的实现也不尽相同（例如，Chrome 63 会阻止重定向，而 Firefox 57 则不会）。
 
 | CSP version                     | 2                                    |
 | ------------------------------- | ------------------------------------ |

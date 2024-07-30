@@ -35,7 +35,7 @@ x-frame-options: DENY
 
    1. [すべての HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Headers)
 
-2. [用語集](/ja/docs/Glossary)
+2. 関連用語:
 
    1. {{Glossary("Entity header", "エンティティヘッダー")}}
    2. {{Glossary("Header", "ヘッダー")}}

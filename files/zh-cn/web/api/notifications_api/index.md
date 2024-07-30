@@ -28,13 +28,15 @@ btn.addEventListener("click", () => {
 
 从这里，用户可以选择允许来自此来源的通知或阻止来自此来源的通知。一旦做出选择，该设置通常将持续用于当前会话。
 
-> **备注：** 从 Firefox 44 开始，通知（Notification）和推送（[Push](/zh-CN/docs/Web/API/Push_API)）的权限已合并。如果为通知授予权限，推送也将启用。
+> [!NOTE]
+> 从 Firefox 44 开始，通知（Notification）和推送（[Push](/zh-CN/docs/Web/API/Push_API)）的权限已合并。如果为通知授予权限，推送也将启用。
 
 接下来，使用 {{domxref("Notification.Notification","Notification()")}} 构造方法创建一个新通知。这个函数必须传递一个标题参数，并且可以选择传递一个选项对象来指定选项，例如文本方向、正文、要显示的图标、要播放的通知的声音等等。
 
 此外，Notifications API 规范对 [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API) 指定了多个扩展，以允许 Service Worker 发送通知。
 
-> **备注：** 想了解怎么在你的应用里使用通知接口，请阅读[使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)。
+> [!NOTE]
+> 想了解怎么在你的应用里使用通知接口，请阅读[使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)。
 
 ## 接口
 

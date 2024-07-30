@@ -9,7 +9,8 @@ slug: Web/HTTP/Basics_of_HTTP/MIME_types
 
 [互联网号码分配局（IANA）](https://www.iana.org/)负责跟踪所有官方 MIME 类型，你可以在[媒体类型](https://www.iana.org/assignments/media-types/media-types.xhtml)页面中找到最新的完整列表。
 
-> **警告：** 浏览器通常使用 MIME 类型*而不是文件扩展名*来决定如何处理 URL，因此 Web 服务器在 {{HTTPHeader("Content-Type")}} 响应标头中添加正确的 MIME 类型非常重要。如果配置不正确，浏览器可能会曲解文件内容，网站将无法正常工作，并且下载的文件也可能被错误处理。
+> [!WARNING]
+> 浏览器通常使用 MIME 类型*而不是文件扩展名*来决定如何处理 URL，因此 Web 服务器在 {{HTTPHeader("Content-Type")}} 响应标头中添加正确的 MIME 类型非常重要。如果配置不正确，浏览器可能会曲解文件内容，网站将无法正常工作，并且下载的文件也可能被错误处理。
 
 ## MIME 类型的结构
 
@@ -95,7 +96,8 @@ HTTP 不会特殊处理多部分文档：信息会被传输到浏览器（如果
 
 所有的 HTML 内容都应该使用这种类型。XHTML 的其他 MIME 类型（如 `application/xml+html`）现在基本不再使用。
 
-> **备注：** 如果需要 XML 的严格解析规则、[`<![CDATA[...]]>`](/zh-CN/docs/Web/API/CDATASection) 部分或 HTML/SVG/MathML 命名空间以外的元素，请使用 `application/xml` 或 `application/xhtml+xml`。
+> [!NOTE]
+> 如果需要 XML 的严格解析规则、[`<![CDATA[...]]>`](/zh-CN/docs/Web/API/CDATASection) 部分或 HTML/SVG/MathML 命名空间以外的元素，请使用 `application/xml` 或 `application/xhtml+xml`。
 
 ### text/javascript
 
@@ -123,7 +125,8 @@ HTTP 不会特殊处理多部分文档：信息会被传输到浏览器（如果
 - `text/x-ecmascript` {{Non-standard_Inline}}
 - `text/x-javascript` {{Non-standard_Inline}}
 
-> **备注：** 即便任何给定的{{Glossary("user agent", "用户代理")}}可能支持这里的部分或所有类型，你也只应该使用 `text/javascript`。它是唯一确保能在目前和以后正常工作的 MIME 类型。
+> [!NOTE]
+> 即便任何给定的{{Glossary("user agent", "用户代理")}}可能支持这里的部分或所有类型，你也只应该使用 `text/javascript`。它是唯一确保能在目前和以后正常工作的 MIME 类型。
 
 ### 图片类型
 

@@ -82,7 +82,8 @@ También puedes desplazarte por el eje _x_ usando {{cssxref ("overflow-x")}}, au
 
 Al igual que con el desplazamiento, obtendrás una barra de desplazamiento en la dimensión de desplazamiento independientemente de si hay suficiente contenido para provocar una barra de desplazamiento.
 
-> **Nota:** observa que puedes especificar un desplazamiento en _x_ y en _y_ utilizando la propiedad `overflow` y pasando dos valores. Si especificas dos palabras clave, la primera se aplica a `overflow-x` y la segunda a `overflow-y`. De lo contrario, tanto `overflow-x` como `overflow-y` se fijan en el mismo valor. Por ejemplo, `overflow: scroll hidden` establece `overflow-x` en `scroll` y `overflow-y` en `hidden`.
+> [!NOTE]
+> Observa que puedes especificar un desplazamiento en _x_ y en _y_ utilizando la propiedad `overflow` y pasando dos valores. Si especificas dos palabras clave, la primera se aplica a `overflow-x` y la segunda a `overflow-y`. De lo contrario, tanto `overflow-x` como `overflow-y` se fijan en el mismo valor. Por ejemplo, `overflow: scroll hidden` establece `overflow-x` en `scroll` y `overflow-y` en `hidden`.
 
 Si deseas que aparezcan barras de desplazamiento solo si hay más contenido del que cabe en la caja, utiliza `overflow: auto`. En este caso, el navegador decide si muestra las barras de desplazamiento o no. Los navegadores de escritorio solo suelen hacerlo cuando hay contenido suficiente para causar desbordamiento.
 

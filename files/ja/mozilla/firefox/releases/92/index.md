@@ -7,7 +7,8 @@ slug: Mozilla/Firefox/Releases/92
 
 このページでは、開発者に影響する Firefox 92 の変更点をまとめています。Firefox 92 は 2021 年 9 月 7 日にリリースされました。
 
-> **メモ:** Mozilla Hacks の [Time for a review of Firefox 92](https://hacks.mozilla.org/2021/09/time-for-a-review-of-firefox-92/) もご覧ください。
+> [!NOTE]
+> Mozilla Hacks の [Time for a review of Firefox 92](https://hacks.mozilla.org/2021/09/time-for-a-review-of-firefox-92/) もご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 

@@ -17,7 +17,7 @@ Firefox 39 は、米国時間 2015 年 6 月 30 日にリリースされまし�
 - [WebIDE で Cordova のプロジェクトをサポートしました](/ja/docs/Tools/WebIDE/Working_with_Cordova_apps_in_WebIDE)
 - [アニメーションビューで早戻し、早送り、特定の時間へのジャンプが可能になりました](/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations#Firefox_39)
 - [3 次ベジェ曲線エディターにプリセットを 31 個搭載しました](/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations#Firefox_39)
-- [インスペクタで要素のドラッグ・アンド・ドロップが可能になりました](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Drag_and_drop)
+- [インスペクターで要素のドラッグ・アンド・ドロップが可能になりました](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Drag_and_drop)
 - [ウェブコンソールのコマンド履歴が、セッションをまたいで維持されるようになりました](/ja/docs/Tools/Web_Console#Command_history)
 - [コンソールで最後に評価された式の結果を表示する $\_ コマンド](/ja/docs/Tools/Web_Console#Helper_commands)
 - [インライン要素のボックスモデルのハイライト機能を改善](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model#Firefox_39)

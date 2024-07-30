@@ -30,7 +30,8 @@ l10n:
   </tbody>
 </table>
 
-> **备注：** 本文的目的并不是教你 SVG；仅仅是告诉你它是什么，以及如何在 web 页面中添加它。
+> [!NOTE]
+> 本文的目的并不是教你 SVG；仅仅是告诉你它是什么，以及如何在 web 页面中添加它。
 
 ## 什么是矢量图形？
 
@@ -47,7 +48,8 @@ l10n:
 
 ![两个星星图像被放大，一个清晰而另一个模糊](raster-vector-zoomed.png)
 
-> **备注：** 上面的图片实际上都是 PNG 图片——每个例子中左边的星星图片代表位图，右边的星星图片代表矢量图。还有，请访问 [vector-versus-raster.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) 示例来查看真正的例子！
+> [!NOTE]
+> 上面的图片实际上都是 PNG 图片——每个例子中左边的星星图片代表位图，右边的星星图片代表矢量图。还有，请访问 [vector-versus-raster.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) 示例来查看真正的例子！
 
 此外，相较于同样的位图，矢量图形通常体积更小，因为它们仅需储存少量的算法，而不是逐个储存每个像素的信息。
 
@@ -87,7 +89,8 @@ SVG 除了前面描述的以外还有其他优点：
 
 由于上述原因，像照片那样复杂精密的图像更适合使用位图。
 
-> **备注：** 在 Inkscape 中，可以将文件保存为纯 SVG 以节省空间。另请参阅[如何为 Web 准备 SVG](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html)。
+> [!NOTE]
+> 在 Inkscape 中，可以将文件保存为纯 SVG 以节省空间。另请参阅[如何为 Web 准备 SVG](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html)。
 
 ## 将 SVG 添加到页面
 

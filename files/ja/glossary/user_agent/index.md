@@ -27,7 +27,7 @@ slug: Glossary/User_agent
 - [User Agent を用いたブラウザーの判定](/ja/docs/Web/HTTP/Browser_detection_using_the_user_agent)
 - {{RFC(2616, "14.43")}}: The `User-Agent` header
 
-1. [MDN Web Docs 用語集](/ja/docs/Glossary)
+1. 関連用語:
 
    1. {{Glossary("Browser", "ブラウザー")}}
 

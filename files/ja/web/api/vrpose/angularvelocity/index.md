@@ -9,7 +9,8 @@ l10n:
 
 **`angularVelocity`** は {{domxref("VRPose")}} インターフェイスの読み取り専用プロパティで、現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の角速度ベクトルを表す配列を、ラジアン/秒単位で返します。
 
-> **メモ:** このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 言い換えれば、センサーが `x`、`y`、`z` 軸を中心に回転したときの現在の速度です。
 

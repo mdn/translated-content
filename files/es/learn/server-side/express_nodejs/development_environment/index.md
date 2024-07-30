@@ -39,7 +39,8 @@ _Node_ y el administrador de paquetes _NPM_ se instalan juntos desde paquetes bi
 
 _NPM_ puede ser usado también para (globalmente) instalar el Generador de Aplicaciones de _Express_, una herramienta manual para crear la estructura de las web apps de _Express_ que siguen el [patrón MVC](/es/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture). El generador de aplicaciones es opcional porque no necesita utilizar esta herramienta para crear apps que usan Express, o construir apps Express que tienen el mismo diseño arquitectónico o dependencias. No obstante estaremos usandolo, porque hace mucho más fácil, y promueve una estrucura modular de aplicación.
 
-> **Nota:** A diferencia de otros frameworks web , el ambiente de desarrollo no incluye un servidor web independiente. Una aplicación web _Node_/_Express_ crea y ejecuta su propio servidor web!
+> [!NOTE]
+> A diferencia de otros frameworks web , el ambiente de desarrollo no incluye un servidor web independiente. Una aplicación web _Node_/_Express_ crea y ejecuta su propio servidor web!
 
 Hay otras herramientas periféricas que son parte de un ambiente de desarrollo típico, incluyendo [editores de texto](/es/docs/Learn/Common_questions/Available_text_editors) o IDEs para edición de código, y herramientas de administración de control de fuentes como [Git](https://git-scm.com/) para administrar con seguridad diferentes versiones de su codigo. Asumimos que usted ya tiene instaladas esta clase de herramientas (en particular un editor de texto).
 
@@ -65,7 +66,8 @@ Otras dependencias, tales como los controladores de bases de datos, motores de p
 
 Para poder utilizar _Express_ primero tiene que instalar _Nodejs_ y el [Administrador de Paquetes de Node (NPM)](https://docs.npmjs.com/) en su sistema operativo. Las siguientes secciones explican la forma más fácil de instalar la versión Soporte de Largo-Plazo (SLP) de Nodejs en Ubuntu Linux 16.04, macOS, y Windows 10.
 
-> **Nota:** Las secciones de abajo muestran la forma más facil de instalar _Node_ y _NPM_ en nuestras plataformas de sistemas operativo a elegir. Si esta utilizando otro SO o solo quiere ver alguna de otros enfoques para las plataformas actuales entonce vea [Instalando Node.js via administrador de paquetes](https://nodejs.org/en/download/package-manager/) (nodejs.org).
+> [!NOTE]
+> Las secciones de abajo muestran la forma más facil de instalar _Node_ y _NPM_ en nuestras plataformas de sistemas operativo a elegir. Si esta utilizando otro SO o solo quiere ver alguna de otros enfoques para las plataformas actuales entonce vea [Instalando Node.js via administrador de paquetes](https://nodejs.org/en/download/package-manager/) (nodejs.org).
 
 ### macOS y Windows
 
@@ -87,7 +89,8 @@ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-> **Advertencia:** No instale directamente desde los repositorios normales de Ubuntu porque pueden contener versions muy antiguas de Node.
+> [!WARNING]
+> No instale directamente desde los repositorios normales de Ubuntu porque pueden contener versions muy antiguas de Node.
 
 ### Probar su instalación de Nodejs y NPM
 
@@ -131,7 +134,8 @@ Como una prueba un poco más emocionante creemos un muy básico "básico servido
 
    El código importa el módulo "http" y lo usa para crear un servidor (`createServer()`) que escucha las solicitudes HTTP en el puerto 3000. Luego, el script imprime un mensaje en la consola con la URL del navegador puede usar para probar el servidor. La función `createServer()` toma como argumento una función callback que se invocará cuando se reciba una solicitud HTTP — esto simplemente devuelve una respuesta con un código de estado HTTP de 200 ("OK") y el texto sin formato "Hello World".
 
-   > **Nota:** ¡No se preocupe si aún no comprende exactamente lo que está haciendo este código! ¡Explicaremos nuestro código con mayor detalle una vez que comencemos a usar Express!
+   > [!NOTE]
+   > ¡No se preocupe si aún no comprende exactamente lo que está haciendo este código! ¡Explicaremos nuestro código con mayor detalle una vez que comencemos a usar Express!
 
 2. Inicie el servidor navegando en el mismo directorio que su archivo `hellonode.js` en su símbolo del sistema, y llamando a `node` junto con el nombre del script, así:
 
@@ -146,7 +150,8 @@ Como una prueba un poco más emocionante creemos un muy básico "básico servido
 
 Junto al propio node, [NPM](https://docs.npmjs.com/) es la herramienta más importante para trabajar con aplicaciones de node. NPM se usa para obtener los paquetes (bibliotecas de JavaScript) que una aplicación necesita para el desarrollo, las pruebas y/o la producción, y también se puede usar para ejecutar pruebas y herramientas utilizadas en el proceso de desarrollo.
 
-> **Nota:** Desde la perspectiva de Node, Express es solo otro paquete que necesita instalar usando NPM y luego requerir en su propio código.
+> [!NOTE]
+> Desde la perspectiva de Node, Express es solo otro paquete que necesita instalar usando NPM y luego requerir en su propio código.
 
 Se puede usar NPM manualmente para buscar por separado cada paquete necesario. Por lo general, administramos las dependencias utilizando un archivo de definición de texto plano llamado [package.json](https://docs.npmjs.com/files/package.json). Este archivo enumera todas las dependencias para un "paquete" de JavaScript específico, incluido el nombre del paquete, la versión, la descripción, el archivo inicial a ejecutar, las dependencias de producción, las dependencias de desarrollo, las versiones de Node con las que puede trabajar, etc. El archivo package.json debería contener todo lo que NPM necesita para buscar y ejecutar su aplicación (si estuviera escribiendo una biblioteca reutilizable, podría usar esta definición para cargar su paquete en el repositorio npm y ponerlo a disposición de otros usuarios).
 
@@ -154,7 +159,8 @@ Se puede usar NPM manualmente para buscar por separado cada paquete necesario. P
 
 Los siguientes pasos muestran cómo puede usar NPM para descargar un paquete, guardarlo en las dependencias del proyecto y luego requerirlo en una aplicación Node.
 
-> **Nota:** Aquí mostramos las instrucciones para buscar e instalar el paquete _Express_. Más adelante mostraremos cómo este paquete y otros ya están especificados para nosotros utilizando el _Generador de aplicaciones Express_. Esta sección se proporciona porque es útil para comprender cómo funciona NPM y qué está creando el generador de aplicaciones.
+> [!NOTE]
+> Aquí mostramos las instrucciones para buscar e instalar el paquete _Express_. Más adelante mostraremos cómo este paquete y otros ya están especificados para nosotros utilizando el _Generador de aplicaciones Express_. Esta sección se proporciona porque es útil para comprender cómo funciona NPM y qué está creando el generador de aplicaciones.
 
 1. Primero cree un directorio para su nueva aplicación y acceda a él:
 
@@ -253,13 +259,15 @@ La siguiente entrada se agregaría al **paquete.json** de su aplicación:
   }
 ```
 
-> **Nota:** "[Linters](<https://en.wikipedia.org/wiki/Lint_(software)>)" son herramientas que realizan análisis estáticos en el software para reconocer e informar la adhesión / no adhesión a algún conjunto de mejores prácticas de codificación.
+> [!NOTE]
+> "[Linters](<https://en.wikipedia.org/wiki/Lint_(software)>)" son herramientas que realizan análisis estáticos en el software para reconocer e informar la adhesión / no adhesión a algún conjunto de mejores prácticas de codificación.
 
 ### Ejecutando tareas
 
 Además de definir y buscar dependencias, también puede definir scripts con nombre en sus archivos package.json y llamar a NPM para ejecutarlos con el comando [run-script](https://docs.npmjs.com/cli/run-script). Este enfoque se usa comúnmente para automatizar las pruebas en ejecución y partes de la cadena de herramientas de desarrollo o construcción (por ejemplo, ejecutar herramientas para minimizar JavaScript, reducir imágenes, LINT/analizar su código, etc.).
 
-> **Nota:** Los ejecutadores de tareas como [Gulp](http://gulpjs.com/) y [Grunt](http://gruntjs.com/) también se pueden usar para ejecutar pruebas y otras herramientas externas.
+> [!NOTE]
+> Los ejecutadores de tareas como [Gulp](http://gulpjs.com/) y [Grunt](http://gruntjs.com/) también se pueden usar para ejecutar pruebas y otras herramientas externas.
 
 Por ejemplo, para definir un script para ejecutar la dependencia de desarrollo de _eslint_ que especificamos en la sección anterior, podríamos agregar el siguiente bloque de script a nuestro archivo **package.json** (suponiendo que el origen de nuestra aplicación esté en una carpeta /src/js):
 
@@ -297,7 +305,8 @@ Para crear una aplicación _Express_ llamada "helloworld" con la configuración 
 express helloworld
 ```
 
-> **Nota:** También puede especificar la biblioteca de plantillas para usar y una serie de otras configuraciones. Use el comando `--help` para ver todas las opciones:
+> [!NOTE]
+> También puede especificar la biblioteca de plantillas para usar y una serie de otras configuraciones. Use el comando `--help` para ver todas las opciones:
 >
 > ```
 > express --help
@@ -305,7 +314,8 @@ express helloworld
 
 NPM creará la nueva aplicación Express en una subcarpeta de su ubicación actual, mostrando el progreso de la compilación en la consola. Al finalizar, la herramienta mostrará los comandos que necesita ingresar para instalar las dependencias de Node e iniciar la aplicación.
 
-> **Nota:** La nueva aplicación tendrá un archivo **package.json** en su directorio raíz. Puede abrir esto para ver qué dependencias están instaladas, incluidas Express y la biblioteca de plantillas Jade:
+> [!NOTE]
+> La nueva aplicación tendrá un archivo **package.json** en su directorio raíz. Puede abrir esto para ver qué dependencias están instaladas, incluidas Express y la biblioteca de plantillas Jade:
 >
 > ```json
 > {

@@ -11,4 +11,5 @@ Les technologies Web font l'objet d'un important jargon et utilisent des abrévi
 
 Vous pouvez parcourir les termes du glossaire en utilisant la barre latérale.
 
-> **Note :** Le glossaire et sa traduction en français sont en constante évolution. Vous pouvez aider en [traduisant les pages correspondantes depuis l'anglais](/fr/docs/MDN/Community/Contributing/Translated_content) ou en améliorant les pages existantes.
+> [!NOTE]
+> Le glossaire et sa traduction en français sont en constante évolution. Vous pouvez aider en [traduisant les pages correspondantes depuis l'anglais](/fr/docs/MDN/Community/Contributing/Translated_content) ou en améliorant les pages existantes.

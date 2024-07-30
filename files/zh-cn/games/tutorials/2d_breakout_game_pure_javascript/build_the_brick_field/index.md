@@ -104,7 +104,8 @@ drawBricks();
 
 {{JSFiddleEmbed("https://jsfiddle.net/kundan333/myd4vbwg/2/","","320")}}
 
-> **备注：** 练习：尝试在行或列上改变砖块数量，或者它们的位置。
+> [!NOTE]
+> 练习：尝试在行或列上改变砖块数量，或者它们的位置。
 
 ## 下一节
 

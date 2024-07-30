@@ -25,7 +25,8 @@ var intervalID = scope.setInterval(code, delay);
 - `param1, ..., paramN` {{optional_inline}}
   - : Parâmetros adicionais que são passados através da função especificada pela _func_ quando o temporizador expirar.
 
-> **Nota:** Passing additional parameters to `setInterval()` in the first syntax does not work in Internet Explorer 9 and earlier. If you want to enable this functionality on that browser, you must use a polyfill (see the [Callback arguments](#Callback_arguments) section).
+> [!NOTE]
+> Passing additional parameters to `setInterval()` in the first syntax does not work in Internet Explorer 9 and earlier. If you want to enable this functionality on that browser, you must use a polyfill (see the [Callback arguments](#Callback_arguments) section).
 
 ### Return value
 
@@ -33,7 +34,8 @@ O `intervalID` retornado é um número, non-zero valor que identifica o temporiz
 
 Isso pode ser útil, estar ciente que o `setInterval()` e {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} compartilham o mesmo grupo de IDs, e que o `clearInterval()` e {{domxref("WindowOrWorkerGlobalScope.clearTimeout", "clearTimeout()")}} podem tecnicamente serem usados em conjunto. Para deixar claro, contudo, você deve sempre tentar evitar combina-los, afim de evitar confusão na manutenção do seu código.
 
-> **Nota:** The `delay` parameter is converted to a signed 32-bit integer. This effectively limits `delay` to 2147483647 ms, since it's specified as a signed integer in the IDL.
+> [!NOTE]
+> The `delay` parameter is converted to a signed 32-bit integer. This effectively limits `delay` to 2147483647 ms, since it's specified as a signed integer in the IDL.
 
 ## Exemplos
 
@@ -489,7 +491,8 @@ window.setInterval = function (
 };
 ```
 
-> **Nota:** These two replacements also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as _non-standard-compliant_ polyfills also. See the [callback arguments paragraph](#Callback_arguments) for a _standard-compliant_ polyfill.
+> [!NOTE]
+> These two replacements also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as _non-standard-compliant_ polyfills also. See the [callback arguments paragraph](#Callback_arguments) for a _standard-compliant_ polyfill.
 
 Teste da nova implementação:
 
@@ -507,13 +510,15 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 s
 
 Outra, mais complexa, solução para o problema do `this` é [the following framework](#a_little_framework).
 
-> **Nota:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () => this.myMethod) if we're inside myArray method.
+> [!NOTE]
+> JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () => this.myMethod) if we're inside myArray method.
 
 ## MiniDaemon - A framework for managing timers
 
 In pages requiring many timers, it can often be difficult to keep track of all of the running timer events. One approach to solving this problem is to store information about the state of a timer in an object. Following is a minimal example of such an abstraction. The constructor architecture explicitly avoids the use of closures. It also offers an alternative way to pass the [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) object to the callback function (see [The "this" problem](#The_.22this.22_problem) for details). The following code is also [available on GitHub](https://github.com/madmurphy/minidaemon.js).
 
-> **Nota:** For a more complex but still modular version of it (`Daemon`) see [JavaScript Daemons Management](/pt-BR/Add-ons/Code_snippets/Timers/Daemons). This more complex version is nothing but a big and scalable collection of methods for the `Daemon` constructor. However, the `Daemon` constructor itself is nothing but a clone of `MiniDaemon` with an added support for _init_ and _onstart_ functions declarable during the instantiation of the `daemon`. **So the `MiniDaemon` framework remains the recommended way for simple animations**, because `Daemon` without its collection of methods is essentially a clone of it.
+> [!NOTE]
+> For a more complex but still modular version of it (`Daemon`) see [JavaScript Daemons Management](/pt-BR/Add-ons/Code_snippets/Timers/Daemons). This more complex version is nothing but a big and scalable collection of methods for the `Daemon` constructor. However, the `Daemon` constructor itself is nothing but a clone of `MiniDaemon` with an added support for _init_ and _onstart_ functions declarable during the instantiation of the `daemon`. **So the `MiniDaemon` framework remains the recommended way for simple animations**, because `Daemon` without its collection of methods is essentially a clone of it.
 
 ### minidaemon.js
 
@@ -610,7 +615,8 @@ MiniDaemon.prototype.start = function (bReverse) {
 };
 ```
 
-> **Nota:** MiniDaemon passes arguments to the callback function. If you want to work on it with browsers that natively do not support this feature, use one of the methods proposed above.
+> [!NOTE]
+> MiniDaemon passes arguments to the callback function. If you want to work on it with browsers that natively do not support this feature, use one of the methods proposed above.
 
 ### Syntax
 

@@ -24,7 +24,8 @@ slug: Learn/JavaScript/First_steps/A_first_splash
 
 我们并不要求你立刻完整理解所有代码：你不需要借此学会 JavaScript，甚至不需要理解我们要求你编写的全部代码。当前只是概括地介绍一些抽象的概念，让你了解 JavaScript 的特性是如何协同工作的，以及获得编写 JavaScript 的一些感受。所有具体特性将在后续文章中详细介绍，如果你没有很快地全部理解它们，请不要担心！
 
-> **备注：** 可以看到，JavaScript 中许多代码特性和其他编程语言是一致的（函数、循环，等等）。尽管代码语法不尽相同，但概念基本类似。
+> [!NOTE]
+> 可以看到，JavaScript 中许多代码特性和其他编程语言是一致的（函数、循环，等等）。尽管代码语法不尽相同，但概念基本类似。
 
 ## 像程序员一样思考
 
@@ -136,7 +137,8 @@ let resetButton;
 
 - 倒数第二个变量存储一个计数器并初始化为 1（用于跟踪玩家猜测的次数），最后一个变量存储对重置按钮的引用，这个按钮尚不存在（但稍后就有了）。
 
-> **备注：** 稍后将讲解更多关于变量和常量的信息。[参见下一篇文章](/zh-CN/docs/Learn/JavaScript/First_steps/Variables)。
+> [!NOTE]
+> 稍后将讲解更多关于变量和常量的信息。[参见下一篇文章](/zh-CN/docs/Learn/JavaScript/First_steps/Variables)。
 
 ### 函数（Function）
 
