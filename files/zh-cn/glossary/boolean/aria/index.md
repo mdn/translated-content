@@ -2,7 +2,7 @@
 title: 布尔属性（ARIA）
 slug: Glossary/Boolean/ARIA
 l10n:
-  sourceCommit: fb6bd88d0b3d226a008341198863e1d480f0e49a
+  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
 {{GlossarySidebar}}
