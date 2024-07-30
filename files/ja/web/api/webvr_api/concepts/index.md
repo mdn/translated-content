@@ -7,7 +7,8 @@ l10n:
 
 {{APIRef("WebVR API")}}{{deprecated_header}}
 
-> **メモ:** WebVR API は [WebXR API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として批准されることはなく、ごく少数のブラウザーでしか既定で実装・有効化されず、少数の端末しか対応していませんでした。
+> [!NOTE]
+> WebVR API は [WebXR API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として批准されることはなく、ごく少数のブラウザーでしか既定で実装・有効化されず、少数の端末しか対応していませんでした。
 
 この文書は、バーチャルリアリティ (VR) の背景にある概念と理論について述べています。もしあなたがこの分野の初学者なら、コードを書き始める前に、これらのトピックを理解すると役に立つでしょう。
 
@@ -40,7 +41,8 @@ VR アプリケーションの入力を扱うことは興味深いトピック�
 - モバイル: Google Cardboard のように VR マウントにスマートフォン — スマートフォンは VR ディスプレイとして機能する — をマウントして作られるヘッドマウントディスプレイ (HMD) で、モバイルスクリーンをステレオビジョンへ投影するのに必要なレンズが含まれています。![Mobile based VR setup](mobilebasedvrsetup.png)
 - コンピュータ接続: コンピュータに接続する VR セットアップです — 右目と左目の両方に表示される映像を映す高解像度の横向きスクリーンを持つ HMD で構成されています。HMD は右目と左目のシーン（ステレオビジョン）を分割するためのレンズも備えています。セットアップは分離型の位置センサも含まれています。位置センサは頭の位置/向き/速度/加速度を取得して、コンピュータへ絶えずその情報を渡します。 ![Computer based VR Setup](computerbasedvrsetup.png)
 
-> **メモ:** コンピュータ接続システムは位置センサーを含んでいない場合もありますが、通常は含まれています。
+> [!NOTE]
+> コンピュータ接続システムは位置センサーを含んでいない場合もありますが、通常は含まれています。
 
 その他の VR 体験を補うハードウェア:
 
@@ -86,11 +88,13 @@ FOV は次の値で定義されています:
 - zNear {{domxref("VRDisplay.depthNear")}}: ユーザの頭の中央から FOV の可視範囲開始まで距離。
 - zFar {{domxref("VRDisplay.depthFar")}}: ユーザの頭の中央から FOV の可視範囲末端までの距離。
 
-> **メモ:** The user can potentially see all the way around them, which is a brand new concept for apps and games. Try to give people a reason to look around and see what's behind them — make them reach out and find things that are not visible at the very beginning. Describe what's behind their backs.
+> [!NOTE]
+> The user can potentially see all the way around them, which is a brand new concept for apps and games. Try to give people a reason to look around and see what's behind them — make them reach out and find things that are not visible at the very beginning. Describe what's behind their backs.
 
 これらのプロパティのデフォルト値は、VR ハードウェアによって微妙に異なりますが、上下方向は 53°、左右方向は 47°、zNear と zFar はそれぞれ 0.1m から 10000m くらいになっています。
 
-> **メモ:** ユーザは潜在的に周囲全体を見渡すことができます。それはまったく新しいアプリやゲームのコンセプトです。人々が見回したり背後にある何かを見たりする理由を与えることにトライしてみましょう — 最初は見えていないものを見つける手助けをしてあげてください。背後になにがあるか説明しましょう。
+> [!NOTE]
+> ユーザは潜在的に周囲全体を見渡すことができます。それはまったく新しいアプリやゲームのコンセプトです。人々が見回したり背後にある何かを見たりする理由を与えることにトライしてみましょう — 最初は見えていないものを見つける手助けをしてあげてください。背後になにがあるか説明しましょう。
 
 ## VR アプリのための概念
 

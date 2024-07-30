@@ -9,7 +9,8 @@ l10n:
 
 [WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) API には、拡張機能を国際化するとても簡単なモジュール — [i18n](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n) があります。この記事ではその機能を見てみて、どのように動作するのかの実例を提供します。WebExtensions API を使った拡張機能用の i18n システムは、[i18n.js](http://i18njs.com/) のような、よくある i10n 用 JavaScript ライブラリーと同様です。
 
-> **メモ:** この記事の見本の拡張機能— [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) — は GitHub で入手できます。以下の節を進んでいくのに合わせてコードを追ってください。
+> [!NOTE]
+> この記事の見本の拡張機能— [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) — は GitHub で入手できます。以下の節を進んでいくのに合わせてコードを追ってください。
 
 ## 国際化拡張機能の中身
 

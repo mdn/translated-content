@@ -5,7 +5,8 @@ slug: Web/API/Element/clientHeight
 
 {{APIRef("DOM")}}
 
-> **Nota:** A partir do Gecko 6.0, `document.height` não é mais suportado. Em seu lugar use `document.body.clientHeight`. Veja {{domxref("element.clientHeight")}}.
+> [!NOTE]
+> A partir do Gecko 6.0, `document.height` não é mais suportado. Em seu lugar use `document.body.clientHeight`. Veja {{domxref("element.clientHeight")}}.
 
 ## Sumário
 

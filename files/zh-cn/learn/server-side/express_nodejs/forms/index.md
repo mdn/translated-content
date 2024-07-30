@@ -37,7 +37,8 @@ slug: Learn/Server-side/Express_Nodejs/forms
 
 此教程将展示上述的操作，如何在 _Express_ 中实现。在此过程中，我们将扩展 LocalLibrary 网站，以允许用户创建，编辑和删除图书馆中的项目。
 
-> **备注：** 我们还没有考虑如何将特定路由，限制为经过身份验证或授权的用户，因此在这个时间点，任何用户都可以对数据库进行更改。
+> [!NOTE]
+> 我们还没有考虑如何将特定路由，限制为经过身份验证或授权的用户，因此在这个时间点，任何用户都可以对数据库进行更改。
 
 ### HTML 表单
 
@@ -114,7 +115,8 @@ npm install express-validator --save
 
 #### 使用 express-validator
 
-> **备注：** Github 上的[express-validator](https://github.com/ctavan/express-validator#express-validator)指南，提供了 API 的良好概述。我们建议你阅读该内容，以了解其所有功能（包括创建自定义验证程序）。下面我们只介绍一个对 LocalLibrary 有用的子集。
+> [!NOTE]
+> Github 上的[express-validator](https://github.com/ctavan/express-validator#express-validator)指南，提供了 API 的良好概述。我们建议你阅读该内容，以了解其所有功能（包括创建自定义验证程序）。下面我们只介绍一个对 LocalLibrary 有用的子集。
 
 要在我们的控制器中使用验证器，我们必须从'**express-validator/check**'和'**express-validator/filter**'模块中，导入我们想要使用的函数，如下所示：
 
@@ -141,7 +143,9 @@ const { sanitizeBody } = require("express-validator/filter");
       .isAlpha().withMessage('Name must be alphabet letters.'),
   ```
 
-  > **备注：** 你还可以添加内联清理器，如`trim()`，如上所示。但是，此处应用清理器，仅适用于验证步骤。如果要对最终输出进行消毒，则需要使用单独的清理器方法，如下所示。
+  > [!NOTE]
+  >
+  > 你还可以添加内联清理器，如`trim()`，如上所示。但是，此处应用清理器，仅适用于验证步骤。如果要对最终输出进行消毒，则需要使用单独的清理器方法，如下所示。
 
 - [`sanitizeBody(fields)`](https://github.com/ctavan/express-validator#sanitizebodyfields): 指定一个正文要清理的字段。然后将清理操作，以菊花链形式连接到此方法。例如，下面的`escape()`清理操作，会从名称变量中，删除可能在 JavaScript 跨站点脚本攻击中使用的 HTML 字符。
 
@@ -197,7 +201,8 @@ const { sanitizeBody } = require("express-validator/filter");
 
 哦，如果你涉及文件上传，那么你可能需要“[multer](https://blog.csdn.net/qq_43624878/article/details/103607944)”中间件，你大概听说过“formidable”，但 multer 比它更强大！
 
-> **备注：** 更“牢固”的实现，可能允许你在创建新对象时创建依赖对象，并随时删除任何对象（例如，通过删除依赖对象，或从数据库中，删除对已删除对象的引用） 。
+> [!NOTE]
+> 更“牢固”的实现，可能允许你在创建新对象时创建依赖对象，并随时删除任何对象（例如，通过删除依赖对象，或从数据库中，删除对已删除对象的引用） 。
 
 ### 路由
 

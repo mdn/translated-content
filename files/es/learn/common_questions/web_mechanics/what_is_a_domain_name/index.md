@@ -68,7 +68,8 @@ No se puede "comprar un nombre de dominio". Se paga por el derecho de usar un no
 
 Las compañías llamadas registradores utilizan los registros de nombres de dominio para realizar un seguimiento de la información técnica y administrativa que lo conecta con su nombre de dominio.
 
-> **Nota:** Para algunos nombres de dominio pudiera no ser un registrador quien esté a cargo de mantener el seguimiento. Por ejemplo, cada nombre de dominio bajo `.fire` es manejado por Amazon.
+> [!NOTE]
+> Para algunos nombres de dominio pudiera no ser un registrador quien esté a cargo de mantener el seguimiento. Por ejemplo, cada nombre de dominio bajo `.fire` es manejado por Amazon.
 
 #### Encontrar un nombre de dominio disponible
 
@@ -122,13 +123,15 @@ El proceso es bastante sencillo:
 3. Rellenar el formulario con todos los detalles requeridos. Asegúrese de no haber escrito incorrectamente el nombre de dominio deseado. ¡Una vez que esté pagado, es muy tarde!.
 4. El registrador te permitirá conocer cuando un nombre de dominio esté correctamente registrado. Dentro de unas pocas horas, todos los servidores DNS habrán recibido su información de DNS.
 
-> **Nota:** En este proceso se le pide su dirección real. Asegúrese de escribirla correctamente, ya que en algunos países los registradores pueden verse obligados a cerrar el dominio si no pueden proporcionar una dirección válida.
+> [!NOTE]
+> En este proceso se le pide su dirección real. Asegúrese de escribirla correctamente, ya que en algunos países los registradores pueden verse obligados a cerrar el dominio si no pueden proporcionar una dirección válida.
 
 #### Actualización de DNS
 
 Las bases de datos DNS son almacenadas en cada servidor DNS del mundo, y todos ellos hacen referencia a unos pocos denominados "servidores de nombre autoritario" o "servidores DNS de primer nivel". Cuando su registrador crea o actualiza alguna información para un dominio dado, la información tiene que ser actualizada en cada base de datos DNS. Cada servidor DNS que conoce sobre un dominio dado almacena la información por algún tiempo antes de que sea automáticamente invalidada y luego actualizada ( el servidor DNS consulta un servidor autoritario nuevamente). De esta manera, a los servidores DNS que conocen este nombre de dominio les toma algún tiempo poner la información al día.
 
-> **Nota:** Este tiempo es amenudo llamado **tiempo de propagación**. Sin embargo, este término no es preciso puesto que la actualizaciónn no se está propagando en sí (primer nivel → nivel inferior). Los servidores DNS consultados por su computadora (nivel inferior) son los que obtienen la información del servidor autoritario(primer nivel) cuando lo necesitan.
+> [!NOTE]
+> Este tiempo es amenudo llamado **tiempo de propagación**. Sin embargo, este término no es preciso puesto que la actualizaciónn no se está propagando en sí (primer nivel → nivel inferior). Los servidores DNS consultados por su computadora (nivel inferior) son los que obtienen la información del servidor autoritario(primer nivel) cuando lo necesitan.
 
 ### ¿Cómo funciona una petición DNS?
 

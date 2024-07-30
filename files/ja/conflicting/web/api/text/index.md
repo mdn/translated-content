@@ -9,7 +9,8 @@ original_slug: Web/API/Text/replaceWholeText
 **`replaceWholeText()`** は {{domxref("Text")}} インターフェイスのメソッドで、ノードのテキストと、*論理的に隣接するすべてのテキストノード*を指定されたテキストで置き換えます。
 置換されたノードは、現在のノードを含め、置換テキストを受け取るものでない限り、削除されます。
 
-> **メモ:** 現代のブラウザーで同じ効果を達成するには、 {{domxref("Node.textContent")}}, {{domxref("Element.innerHTML")}}, {{domxref("HTMLElement.innerText")}}, {{domxref("CharacterData.replaceData()")}} を使用することを検討してください。
+> [!NOTE]
+> 現代のブラウザーで同じ効果を達成するには、 {{domxref("Node.textContent")}}, {{domxref("Element.innerHTML")}}, {{domxref("HTMLElement.innerText")}}, {{domxref("CharacterData.replaceData()")}} を使用することを検討してください。
 
 ## 構文
 
@@ -27,7 +28,8 @@ replaceWholeText(content)
 
 置き換えられた文字列の {{domxref("Text")}} ノード、または置き換える文字列が　`""` であった場合は `null` です。
 
-> **メモ:** 返されるノードは、現在のノードが読み取り専用でない限り、現在のノードです。読み取り専用であった場合は、同じ型のテキストノードが新たに生成され、そのノードが置換された位置に挿入されたものとします。
+> [!NOTE]
+> 返されるノードは、現在のノードが読み取り専用でない限り、現在のノードです。読み取り専用であった場合は、同じ型のテキストノードが新たに生成され、そのノードが置換された位置に挿入されたものとします。
 
 ### 例外
 

@@ -9,7 +9,8 @@ slug: Web/CSS/overflow-wrap
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-wrap`** 应用于行级元素，用来设置浏览器是否应该在一个本来不能断开的字符串中插入换行符，以防止文本溢出其行向盒。
 
-> **备注：** 与 {{cssxref("word-break")}} 相比，`overflow-wrap` 仅在无法将整个单词放在自己的行而不会溢出的情况下才会产生换行。
+> [!NOTE]
+> 与 {{cssxref("word-break")}} 相比，`overflow-wrap` 仅在无法将整个单词放在自己的行而不会溢出的情况下才会产生换行。
 
 这个属性原本属于微软扩展的一个非标准、无前缀的属性，叫做 `word-wrap`，后来在大多数浏览器中以相同的名称实现。目前它已被更名为 {{cssxref("overflow-wrap")}}，`word-wrap` 相当于其别称。
 

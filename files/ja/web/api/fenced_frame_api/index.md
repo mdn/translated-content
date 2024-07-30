@@ -121,7 +121,8 @@ Supports-Loading-Mode: fenced-frame
 
 {{domxref("Navigator.runAdAuction()")}} などの {{domxref("FencedFrameConfig")}} を作成する一部の API 機能（[Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/fledge/)）や {{domxref("WindowSharedStorage. selectURL()")}} （[共有ストレージ API](/ja/docs/Web/API/Shared_Storage_API)）、他にも {{domxref("Fence.reportEvent()")}} のような機能は、[プライバシーサンドボックス登録プロセス](/ja/docs/Web/Privacy/Privacy_sandbox/Enrollment)にウェブサイトを登録するよう要求されます。これを行わないと、 API 呼び出しはコンソールの警告とともに失敗します。
 
-> **メモ:** Chrome では、登録しなくてもフレームコードをローカルでテストすることができます。ローカルテストを許可するには、以下の Chrome 開発者フラグを有効にしてください。
+> [!NOTE]
+> Chrome では、登録しなくてもフレームコードをローカルでテストすることができます。ローカルテストを許可するには、以下の Chrome 開発者フラグを有効にしてください。
 >
 > `chrome://flags/#privacy-sandbox-enrollment-overrides`
 

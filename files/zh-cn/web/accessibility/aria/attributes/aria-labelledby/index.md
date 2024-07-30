@@ -23,7 +23,8 @@ l10n:
 
 `aria-labelledby` 和 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)属性都引用其他元素来计算文本替代。`aria-labelledby` 应引用提供给元素无障碍名称的简短文本。`aria-describedby` 用于引用提供描述的较长内容。如果 DOM 中没有为交互元素提供适合作为无障碍名称的简短标签的元素，则使用 `aria-label` 来定义交互元素的无障碍名称。
 
-> **备注：** 虽然在美式英语中会假定该属性的拼写为“labeledby”，但“labelledby”拼写已被确立，并且是无障碍 API 中使用的拼写。
+> [!NOTE]
+> 虽然在美式英语中会假定该属性的拼写为“labeledby”，但“labelledby”拼写已被确立，并且是无障碍 API 中使用的拼写。
 
 以下示例使用 `aria-labelledby` 通过使用兄弟元素的文本内容为复选框输入提供无障碍名称：
 
@@ -77,7 +78,8 @@ l10n:
 6. `aria-labelledby` 属性会合并输入元素的值。如果值引用了一个 `<input>`，则表单控件的当前值将包含在计算的名称字符串中，并在值更新时改变。
 7. `aria-labelledby` 属性不能被链式使用。如果具有 `aria-labelledby` 的元素引用了另一个也具有 `aria-labelledby` 的元素，那么被引用元素上的 `aria-labelledby` 属性将被忽略。
 
-> **警告：** 因为计算具有 `aria-labelledby` 的元素的名称可能会很复杂，而且会引用隐藏的内容，所以使用辅助技术进行测试以确保用户看到的是预期的名称非常重要。
+> [!WARNING]
+> 因为计算具有 `aria-labelledby` 的元素的名称可能会很复杂，而且会引用隐藏的内容，所以使用辅助技术进行测试以确保用户看到的是预期的名称非常重要。
 
 ## 值
 

@@ -67,7 +67,8 @@ Django 最初由 2003 年到 2005 年间由负责创建和维护报纸网站的�
 
 Django 不断发展壮大—从 2008 年 9 月的第一个里程碑版本（1.0）到最近发布的（1.11）-（2017）版本。每个版本都添加了新功能和错误修复，从支持新类型的数据库，模版引擎和缓存，到添加“通用”视图函数和类（这减少了开发人员必须编写的代码量）一些编程任务。
 
-> **备注：** 查看 Django 网站上 [发行说明](https://docs.djangoproject.com/en/1.10/releases/)，看看最近版本发生了什么变化，以及 Django 能做多少工作。
+> [!NOTE]
+> 查看 Django 网站上 [发行说明](https://docs.djangoproject.com/en/1.10/releases/)，看看最近版本发生了什么变化，以及 Django 能做多少工作。
 
 Django 现在是一个蓬勃发展的合作开源项目，拥有数千个用户和贡献者。虽然它仍然具有反映其起源的一些功能，但 Django 已经发展成为能够开发任何类型的网站的多功能框架。
 
@@ -105,7 +106,8 @@ Django 网络应用程序通常将处理每个步骤的代码分组到单独的�
 
 - **Templates:** 模板 是定义文件（例如 HTML 页面）的结构或布局的文本文件，用于表示实际内容的占位符。一个视图可以使用 HTML 模板，从数据填充它动态地创建一个 HTML 页面模型。可以使用模板来定义任何类型的文件的结构; 它不一定是 HTML！
 
-> **备注：** Django 将此组织称为“模型视图模板（MVT）”架构。它与更加熟悉的 [Model View Controller](/zh-CN/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) 架构有许多相似之处。
+> [!NOTE]
+> Django 将此组织称为“模型视图模板（MVT）”架构。它与更加熟悉的 [Model View Controller](/zh-CN/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) 架构有许多相似之处。
 
 以下部分将为你提供 Django 应用程序的这些主要部分的想法（稍后我们将在进一步详细介绍后，我们将在开发环境中进行更详细的介绍）。
 
@@ -120,7 +122,8 @@ urlpatterns = [
 ]
 ```
 
-> **备注：** 一点点 Python:
+> [!NOTE]
+> 一点点 Python:
 >
 > - 该 `urlpatterns` 对象的列表 url() 功能。在 Python 中，使用方括号定义列表。项目以逗号分隔，并可能有一个 [可选的逗号](https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples). 例如：`[item1, item2, item3,]`.
 > - 该模式的奇怪的语法称为正则表达式。我们将在后面的文章中讨论这些内容！
@@ -144,7 +147,8 @@ def index(request):
     return HttpResponse('Hello from Django!')
 ```
 
-> **备注：** 一点点 Python:
+> [!NOTE]
+> 一点点 Python:
 >
 > - [Python 模块](https://docs.python.org/3/tutorial/modules.html) 是函数的“库”，存储在单独的文件中，我们可能想在我们的代码中使用它们。在这里我们只从 django.http 模块导入了 HttpResponse 对象，使我们可以在视图中使用它：`from django.http import HttpResponse` 还有其他方法可以从模块导入一些或所有对象。
 > - 如上所示，使用`def`关键字声明函数，在函数名称后面的括号中列出命名参数；整行以冒号结尾。注意下一行是否都进行了**缩进**。缩进很重要，因为它指定代码行在该特定块内 (强制缩进是 Python 的一个关键特征，也是 Python 代码很容易阅读的一个原因)。
@@ -174,7 +178,8 @@ class Team(models.Model):
     team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
 ```
 
-> **备注：** Python 小知识：
+> [!NOTE]
+> Python 小知识：
 >
 > - Python 支持“面向对象编程”，这是一种编程风格，我们将代码组织到对象中，其中包括用于对该对象进行操作的相关数据和功能。对象也可以从其他对象继承／扩展／派生，允许相关对象之间的共同行为被共享。在 Python 中，我们使用关键字 **Class** 定义对象的“蓝图”。我们可以根据类中的模型创建类型的多个 特定 实例。
 > - 例如，我们有个 **Team** 类，它来自于**Model**类。这意味着它是一个模型，并且将包含模型的所有方法，但是我们也可以给它自己的专门功能。在我们的模型中，我们定义了我们的数据库需要存储我们的数据字段，给出它们的具体名称。Django 使用这些定义（包括字段名称）来创建底层数据库。

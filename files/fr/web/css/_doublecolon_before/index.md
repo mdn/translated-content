@@ -14,7 +14,8 @@ a::before {
 }
 ```
 
-> **Note :** Les pseudo-éléments générés par `::before` et `::after` sont contenus dans la boîte de mise en forme de l'élément. Aussi, `::before` et `::after` ne s'appliquent pas [aux éléments remplacés](/fr/docs/Web/CSS/Élément_remplacé) tels que {{HTMLElement("img")}} ou {{HTMLElement("br")}}.
+> [!NOTE]
+> Les pseudo-éléments générés par `::before` et `::after` sont contenus dans la boîte de mise en forme de l'élément. Aussi, `::before` et `::after` ne s'appliquent pas [aux éléments remplacés](/fr/docs/Web/CSS/Élément_remplacé) tels que {{HTMLElement("img")}} ou {{HTMLElement("br")}}.
 
 ## Syntaxe
 

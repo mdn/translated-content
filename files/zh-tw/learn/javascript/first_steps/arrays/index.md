@@ -67,7 +67,8 @@ slug: Learn/JavaScript/First_steps/Arrays
    // shopping 回傳 [ "tahini", "milk", "cheese", "hummus", "noodles" ]
    ```
 
-   > **備註：** 前面有說過，但還是提醒下：電腦從 0 開始數！
+   > [!NOTE]
+   > 前面有說過，但還是提醒下：電腦從 0 開始數！
 
 3. 請注意，陣列裡面的陣列稱為多維陣列（multidimensional array）。你可以撰寫兩組方括弧，來存取陣列裡面的陣列單位。例如說，存取前述 `random` 變數內的陣列單位就可以這麼寫：
 
@@ -109,7 +110,8 @@ for (var i = 0; i < sequence.length; i++) {
 
 通常你會看到一組含有原始資料的長字串，而你可能會希望將有用的單元拆分、組成更好用的形式，對他進行操作。為了達成這個目的，我們可以使用 {{jsxref("String.prototype.split()","split()")}} 方法。它最簡單的形式是只使用一個參數，你想分離的字串位置的字元（分隔符），而後它會返回陣列中在分隔符之間的子字串。
 
-> **備註：** 好的，在技術上它屬於字串的方法，而非陣列的方法。但因為它可以很順利地對陣列進行操作，因此我們把它列在這邊。
+> [!NOTE]
+> 好的，在技術上它屬於字串的方法，而非陣列的方法。但因為它可以很順利地對陣列進行操作，因此我們把它列在這邊。
 
 1. 來試試這個，看它如何運作。首先，建立一個字串在你的 console:
 
@@ -386,7 +388,8 @@ A good use for array methods like {{jsxref("Array.prototype.push()","push()")}} 
 
 In this example we're going to show a much simpler use — here we're giving you a fake search site, with a search box. The idea is that when terms are entered in the search box, the top 5 previous search terms are displayed in the list. When the number of terms goes over 5, the last term starts being deleted each time a new term is added to the top, so the 5 previous terms are always displayed.
 
-> **備註：** In a real search app, you'd probably be able to click the previous search terms to return to previous searches, and it would display actual search results! We are just keeping it simple for now.
+> [!NOTE]
+> In a real search app, you'd probably be able to click the previous search terms to return to previous searches, and it would display actual search results! We are just keeping it simple for now.
 
 To complete the app, we need you to:
 

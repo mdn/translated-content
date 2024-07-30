@@ -10,7 +10,8 @@ l10n:
 
 **`ariaDisabled`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) 属性の値を反映し、要素が知覚可能だが無効であり、編集や他の処理をすることはできないことを示します。
 
-> **メモ:** 可能であれば、{{htmlelement("input")}} 要素に `type="button"` を使用するか、{{htmlelement("button")}} 要素を使用してください。これらの要素は意味づけが組み込まれており、ARIA 属性を必要としないからです。
+> [!NOTE]
+> 可能であれば、{{htmlelement("input")}} 要素に `type="button"` を使用するか、{{htmlelement("button")}} 要素を使用してください。これらの要素は意味づけが組み込まれており、ARIA 属性を必要としないからです。
 
 ## 値
 

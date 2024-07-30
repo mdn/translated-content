@@ -20,7 +20,8 @@ addEventListener("error", (event) => {});
 onerror = (event, source, lineno, colno, error) => {};
 ```
 
-> **メモ:** 歴史的な理由により、 `window` の `onerror` はイベントハンドラープロパティの中で唯一、複数の引数を受け取ります。
+> [!NOTE]
+> 歴史的な理由により、 `window` の `onerror` はイベントハンドラープロパティの中で唯一、複数の引数を受け取ります。
 
 ## イベント型
 
@@ -79,7 +80,8 @@ window.onerror = (a, b, c, d, e) => {
 };
 ```
 
-> **メモ:** これらの引数名は [HTML イベントハンドラー属性](/ja/docs/Web/HTML/Attributes#event_handler_attributes)で監視可能で、最初の引数は `message` ではなく `event` と呼ばれます。
+> [!NOTE]
+> これらの引数名は [HTML イベントハンドラー属性](/ja/docs/Web/HTML/Attributes#event_handler_attributes)で監視可能で、最初の引数は `message` ではなく `event` と呼ばれます。
 
 この特別な動作は `window` の `onerror` イベントハンドラーに対してのみ起こります。 [`Element.onerror`](/ja/docs/Web/API/HTMLElement/error_event) ハンドラーの場合は単一の {{domxref("ErrorEvent")}} オブジェクトを受け取ります。
 

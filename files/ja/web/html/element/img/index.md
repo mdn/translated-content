@@ -61,7 +61,8 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
   - : この属性は、画像を説明する代替文字列を定義します。
 
-    > **メモ:** ブラウザーは常に画像を表示するわけではありません。ブラウザーが画像を表示しない状況はいくつかがあります。
+    > [!NOTE]
+    > ブラウザーは常に画像を表示するわけではありません。ブラウザーが画像を表示しない状況はいくつかがあります。
     >
     > - 視覚ブラウザー以外のブラウザー（視覚障碍者向けのものを含む）で閲覧された場合
     > - ユーザーが画像を非表示に設定している場合（帯域の節約、プライバシー上の理由）
@@ -132,7 +133,8 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
   - : 論理属性で、この画像が[サーバーサイドマップ](https://en.wikipedia.org/wiki/Image_map#Server-side)の一部であるかを示します。そうである場合は、クリック位置の正確な座標をサーバーに送信します。
 
-    > **メモ:** この属性は `<img>` 要素が、有効な [`href`](/ja/docs/Web/HTML/Element/a#href) 属性を持つ {{htmlelement("a")}} 要素の子孫である場合に限り許可されます。これにより、ポインティングデバイスを持たないユーザーのフォールバック先を提供します。
+    > [!NOTE]
+    > この属性は `<img>` 要素が、有効な [`href`](/ja/docs/Web/HTML/Element/a#href) 属性を持つ {{htmlelement("a")}} 要素の子孫である場合に限り許可されます。これにより、ポインティングデバイスを持たないユーザーのフォールバック先を提供します。
 
 - `loading`
 
@@ -144,7 +146,8 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
       - : 画像がブラウザーで定義されたビューポートからの距離に達するまで、画像の読み込みを遅延させます。これは、画像が必要とされるのが合理的に確実になるまで、処理に必要なネットワークやストレージの帯域幅を使用しないようにするためです。これは一般的に、ほとんどの典型的な使用法において、コンテンツの性能を向上させることができます。
 
-      > **メモ:** 読み込みが延期されるのは JavaScript が有効になっているときだけです。これはトラッキング対策であり、スクリプトが無効になっているときにユーザーエージェントが遅延読み込みに対応している場合でも、サーバーがいつ何枚の画像が要求されたかを追跡できるようにページのマークアップに画像を戦略的に配置することで、サイトがセッション全体を通してユーザーのおおよそのスクロール位置を追跡することが可能になるからです。
+      > [!NOTE]
+      > 読み込みが延期されるのは JavaScript が有効になっているときだけです。これはトラッキング対策であり、スクリプトが無効になっているときにユーザーエージェントが遅延読み込みに対応している場合でも、サーバーがいつ何枚の画像が要求されたかを追跡できるようにページのマークアップに画像を戦略的に配置することで、サイトがセッション全体を通してユーザーのおおよそのスクロール位置を追跡することが可能になるからです。
 
 - `referrerpolicy`
 
@@ -223,7 +226,8 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
   - : 画像の詳細な説明へのリンクです。有効な値は、 {{glossary("URL")}} または要素の [`id`](/ja/docs/Web/HTML/Global_attributes#id) です。
 
-    > **メモ:** この属性は、最新の {{glossary("W3C")}} のバージョンである [HTML 5.2](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc) でも言及されていますが、 {{glossary("WHATWG")}} の [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) では完全に削除されています。将来が不確実なので、代わりに、[`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) または[`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details) のような {{glossary("WAI")}}-{{glossary("ARIA")}} の代替手段を使用してください。
+    > [!NOTE]
+    > この属性は、最新の {{glossary("W3C")}} のバージョンである [HTML 5.2](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc) でも言及されていますが、 {{glossary("WHATWG")}} の [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) では完全に削除されています。将来が不確実なので、代わりに、[`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) または[`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details) のような {{glossary("WAI")}}-{{glossary("ARIA")}} の代替手段を使用してください。
 
 - `name` {{deprecated_inline}}
   - : 要素の名前です。代わりに [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性を使用してください。
@@ -288,7 +292,8 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
 {{EmbedLiveSample("Using_the_srcset_and_sizes_attributes", "100%", 350)}}
 
-> **メモ:** その場で大きさを変更してみるには、{{LiveSampleLink('Using_the_srcset_and_sizes_attributes', 'この例を別なページで表示')}}させる必要があり、そうすればコンテンツ領域の大きさを実際に使用することができます。
+> [!NOTE]
+> その場で大きさを変更してみるには、{{LiveSampleLink('Using_the_srcset_and_sizes_attributes', 'この例を別なページで表示')}}させる必要があり、そうすればコンテンツ領域の大きさを実際に使用することができます。
 
 ## セキュリティとプライバシーの考慮事項
 

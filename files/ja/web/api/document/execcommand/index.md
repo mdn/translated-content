@@ -121,7 +121,8 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `useCSS` {{Deprecated_inline}}
 
       - : 生成するマークアップに HTML タグと CSS のどちらを使用するかを切り替えます。引数として true または false の真偽値が必要です。
-        > **メモ:** この引数は論理が逆です（つまり、`false` で CSS が使用され、`true` で HTML が使用される）。これは `styleWithCSS` に置き換えられ、非推奨になりました。
+        > [!NOTE]
+        > この引数は論理が逆です（つまり、`false` で CSS が使用され、`true` で HTML が使用される）。これは `styleWithCSS` に置き換えられ、非推奨になりました。
 
     - `styleWithCSS`
       - : `useCSS` コマンドを置き換えるものです。`true` はマークアップ時に `style` 属性が生成または変更され、false では書式要素が生成されます。
