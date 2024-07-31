@@ -51,8 +51,6 @@ slug: Web/Performance/Animation_performance_and_frame_rate
 | Свойства, не затрагивающие геометрию и позиционирование элементов, но не лежащие в отдельном слое, запускают только вычисление стилей и перерисовку, но не Layout. | ![](/ru/docs/Web/Performance/Animation_performance_and_frame_rate/recalculate-style.png) ![](/ru/docs/Web/Performance/Animation_performance_and_frame_rate/layout-faint.png) ![](/ru/docs/Web/Performance/Animation_performance_and_frame_rate/paint.png)       | [`color`](/ru/docs/Web/CSS/color)                                                                                                                                                                                 |
 | Свойства, которые рендерятся в отдельном слое не запускают даже repaint, так как результат обновления обрабатывается на этапе композиции.                          | ![](/ru/docs/Web/Performance/Animation_performance_and_frame_rate/recalculate-style.png) ![](/ru/docs/Web/Performance/Animation_performance_and_frame_rate/layout-faint.png) ![](/ru/docs/Web/Performance/Animation_performance_and_frame_rate/paint-faint.png) | [`transform`](/ru/docs/Web/CSS/transform) [`opacity`](/ru/docs/Web/CSS/opacity)                                                                                                                                   |
 
-> **Примечание:** На Веб-сайте [CSS Triggers](http://csstriggers.com/) хорошо показано, какие CSS-свойства вызывают те или иные этапы обновления в разных браузерах.
-
 ## Пример: margin против transform
 
 В этом разделе мы увидим, как инструмент [Waterfall](/ru/docs/Tools/Performance/Waterfall) может указать на разницу между анимацией [`margin`](/ru/docs/Web/CSS/margin) и [`transform`](/ru/docs/Web/CSS/transform).
