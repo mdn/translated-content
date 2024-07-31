@@ -1,6 +1,8 @@
 ---
-title: 社群規範
+title: 社群準則
 slug: MDN/Community
+l10n:
+  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
 ---
 
 {{MDNSidebar}}
@@ -10,7 +12,7 @@ slug: MDN/Community
 ## 參與貢獻的方式
 
 - [修復已知的有重大影響的問題](https://github.com/orgs/mdn/projects/25/views/1)
-- [審核 Pull Request](/zh-TW/docs/MDN/Community/Pull_requests)
+- [審核拉取請求](/zh-TW/docs/MDN/Community/Pull_requests)
 - [幫助新手在 MDN Web 文件上學習](/zh-TW/docs/MDN/Community/Learn_forum)
 - [為 MDN Web 文件貢獻可互動範例](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md)
 - [協助翻譯 MDN Web 文件](/zh-TW/docs/MDN/Community/Contributing/Translated_content)
@@ -19,23 +21,18 @@ slug: MDN/Community
 
 ## 社群資源
 
-[討論頻道](/zh-TW/docs/MDN/Community/Communication_channels)\
-&nbsp; &nbsp; 這個頁面條列了所有MDN團隊和社群使用的討論頻道。
-
-[貢獻](/zh-TW/docs/MDN/Community/Contributing)\
-&nbsp; &nbsp; 這個章節解釋你可以如何貢獻到MDN網路文件和貢獻的規範。此章節包含[開始入門 MDN](/zh-TW/docs/MDN/Community/Contributing/Getting_started)、[儲存庫（repository）](/zh-TW/docs/MDN/Community/Contributing/Our_repositories)、[翻譯內容](/zh-TW/docs/MDN/Community/Contributing/Translated_content)與[安全漏洞應對](/zh-TW/docs/MDN/Community/Contributing/Security_vulnerability_response)
-
-[開源禮節](/zh-TW/docs/MDN/Community/Open_source_etiquette)\
-&nbsp; &nbsp; 此文章說明在貢獻時的行為準則，包含貢獻規則、禮節、和衝突處理方式。
-
-[問題（Issues）](/zh-TW/docs/MDN/Community/Issues)\
-&nbsp; &nbsp; 問題是用於追蹤所有錯誤和工作都有被正確處理的工具，此文章包含了開啟與處理問題的指南、問題分類和[內容與功能建議](/zh-TW/docs/MDN/Community/Issues/Content_suggestions_feature_proposals)
-
-[拉取請求（PR）](/zh-TW/docs/MDN/Community/Pull_requests)\
-&nbsp; &nbsp; 這個章節說明了提交拉取請求的指南和審查流程。
-
-[用戶角色與團隊](/zh-TW/docs/MDN/Community/Roles_teams)\
-&nbsp; &nbsp; 這個章節說明了在 MDN 網路文件專案中用戶與團隊所扮演的角色以及成為團隊成員的意義。
+- [討論頻道](/zh-TW/docs/MDN/Community/Communication_channels)
+  - : 這個頁面條列了所有 MDN 團隊和社群使用的討論頻道，並提示哪些頻道可能最適合你。
+- [貢獻](/zh-TW/docs/MDN/Community/Contributing)
+  - : 這個章節解釋你可以如何貢獻到 MDN Web 文件和貢獻的規範。此章節包含[開始入門 MDN](/zh-TW/docs/MDN/Community/Contributing/Getting_started)、[儲存庫](/zh-TW/docs/MDN/Community/Contributing/Our_repositories)、[翻譯內容](/zh-TW/docs/MDN/Community/Contributing/Translated_content)與[安全漏洞應對步驟](/zh-TW/docs/MDN/Community/Contributing/Security_vulnerability_response)
+- [開源禮節](/zh-TW/docs/MDN/Community/Open_source_etiquette)。
+  - : 此文章說明在為我們的開源專案做出貢獻時的行為準則，包含貢獻規則、禮節和衝突處理方式。
+- [問題（issue）](/zh-TW/docs/MDN/Community/Issues)
+  - : 問題是用於追蹤所有錯誤和工作都有被正確處理的工具，此文章包含了開啟與處理問題的指南、[問題分類](/zh-TW/docs/MDN/Community/Issues)和[內容與功能建議](/zh-TW/docs/MDN/Community/Issues/Content_suggestions_feature_proposals)
+- [拉取請求（pull request）](/zh-TW/docs/MDN/Community/Pull_requests)
+  - : 這個章節說明了提交拉取請求的指南和審查流程。
+- [用戶角色與團隊](/zh-TW/docs/MDN/Community/Roles_teams)
+  - : 這個章節說明了在 MDN Web 文件專案中用戶與團隊所扮演的角色以及成為團隊成員的意義。
 
 ## 行為準則
 
@@ -53,4 +50,4 @@ slug: MDN/Community
 - [MDN Web 文件學習論壇](https://discourse.mozilla.org/c/mdn/learn/250)
 - [Stack Overflow](https://stackoverflow.com/questions/)
 
-任何有關一般性問題協助的問題（Issue）、討論以及拉取請求（Pull Request）會被導向這裡並可能被關閉或鎖起來。
+任何有關一般性問題協助的問題（issue）、討論以及拉取請求會被導向這裡並可能被關閉或鎖起來。
