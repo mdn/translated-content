@@ -69,7 +69,8 @@ f(); // [1, undefined]
 f(2); // [2, undefined]
 ```
 
-> **참고:** 첫 번째 기본 매개변수와 그 이후의 모든 매개변수는 함수의 [`length`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/length)에 영향을 미치지 않습니다.
+> [!NOTE]
+> 첫 번째 기본 매개변수와 그 이후의 모든 매개변수는 함수의 [`length`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/length)에 영향을 미치지 않습니다.
 
 기본 매개변수 생성자는 함수 본문에서 생성된 범위의 상위인 자체 범위에서 동작합니다.
 

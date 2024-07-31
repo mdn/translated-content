@@ -62,7 +62,8 @@ console.log(iterator.next().value); // undefined
 
 ### 반복자 재사용하기
 
-> **Warning:** 배열 반복자 객체는 일회용 객체입니다. 재사용하지 마세요.
+> [!WARNING]
+> 배열 반복자 객체는 일회용 객체입니다. 재사용하지 마세요.
 
 `values()`에서 반환되는 반복자는 재사용할 수 없습니다. `next().done = true` 또는 `currentIndex > length`, [the `for...of` loop ends](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#interactions_between_the_language_and_iteration_protocols) 그리고 추가적인 순회는 아무 효과가 없습니다.
 

@@ -86,7 +86,8 @@ console.log(Object.keys("foo")); // ['0', '1', '2']
 console.log(Object.keys(100)); // []
 ```
 
-> **참고:** ES5에서는 비객체를 `Object.keys()`에 전달하면 {{jsxref("TypeError")}}가 발생합니다.
+> [!NOTE]
+> ES5에서는 비객체를 `Object.keys()`에 전달하면 {{jsxref("TypeError")}}가 발생합니다.
 
 ## 명세서
 

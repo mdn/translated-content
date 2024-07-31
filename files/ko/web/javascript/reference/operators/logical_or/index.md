@@ -84,7 +84,8 @@ false || ""; // f || f returns ""
 false || varObject; // f || object returns varObject
 ```
 
-> **참고:** 이 연산자를 사용하여 일부 변수에 기본값을 제공하는 경우, 거짓 같은 값(falsy)은 사용되지 않으므로 주의해야 합니다.
+> [!NOTE]
+> 이 연산자를 사용하여 일부 변수에 기본값을 제공하는 경우, 거짓 같은 값(falsy)은 사용되지 않으므로 주의해야 합니다.
 > [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null) 또는 {{jsxref("undefined")}}만 필터링해야 하는 경우, [널 병합 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)를 사용하는 것이 좋습니다.
 
 ### 불리언에 대한 변환 규칙
