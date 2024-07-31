@@ -20,7 +20,7 @@ _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLHRElement.color")}} {{deprecated_inline}}
   - : 表示规则颜色名称的字符串。
 - {{domxref("HTMLHRElement.noShade")}} {{deprecated_inline}}
-  - : 布尔值，将规则设置为无遮挡。
+  - : 布尔值，将分割线设置为无阴影。
 - {{domxref("HTMLHRElement.size")}} {{deprecated_inline}}
   - : 表示规则高度的字符串。
 - {{domxref("HTMLHRElement.width")}} {{deprecated_inline}}
