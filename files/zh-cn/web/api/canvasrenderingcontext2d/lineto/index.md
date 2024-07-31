@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 {{domxref("CanvasRenderingContext2D")}} 接口的 **`lineTo()**`方法用于连接当前子路径的最后一个点与指定的`(x, y)` 坐标，添加一条直线段到当前子路径中。
+Canvas 2D API 的 {{domxref("CanvasRenderingContext2D")}} 接口的 **`lineTo()`** 方法将当前子路径的最后一个点与指定的 `(x, y)` 坐标用直线段相连，从而将一个直线段添加到当前子路径中。
 
-和其他修改当前路径的方法一样，这个方法并不直接渲染任何内容。要将路径绘制到画布上，你可以使用 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} 方法或 {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} 方法。
+和其他修改当前路径的方法一样，这个方法并不直接渲染任何内容。要将路径绘制到画布上，你可以使用 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} 或 {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} 方法。
 
 ## 语法
 
@@ -32,7 +32,7 @@ lineTo(x, y)
 
 ### 画一条直线
 
-这是一段使用 `lineTo` 方法的简单的代码片段。
+此示例使用 `lineTo` 方法绘制了一条直线段。
 
 #### HTML
 
