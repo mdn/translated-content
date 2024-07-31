@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.resetTransform()`** 方法用于使用单位矩阵重新设置当前变形。
+Canvas 2D API 的 **`CanvasRenderingContext2D.resetTransform()`** 方法用于使用单位矩阵重新设置当前变换。
 
 ## 语法
 
@@ -49,7 +49,7 @@ ctx.resetTransform();
 
 ### 继续使用常规矩阵
 
-在绘制变换形状后，应在渲染其他内容之前调用 `resetTransform()`。在这个例子中，前两个形状使用了倾斜变换绘制，而后两个形状使用了标准（非倾斜）变换。
+在绘制变换形状后，应在渲染其他内容之前调用 `resetTransform()`。在这个例子中，前两个形状使用了倾斜变换绘制，而后两个形状使用了恒等（常规）变换。
 
 #### HTML
 
