@@ -1,6 +1,7 @@
 ---
 title: HTML Sanitizer API
-slug: Web/API/HTML_Sanitizer_API
+slug: orphaned/Web/API/HTML_Sanitizer_API
+original_slug: Web/API/HTML_Sanitizer_API
 l10n:
   sourceCommit: b40b71d87ab041f2f36a4675bc09af983b22422a
 ---

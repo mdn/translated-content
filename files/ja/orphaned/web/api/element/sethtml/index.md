@@ -1,7 +1,7 @@
 ---
 title: "Element: setHTML() メソッド"
-short-title: setHTML()
-slug: Web/API/Element/setHTML
+slug: orphaned/Web/API/Element/setHTML
+original_slug: Web/API/Element/setHTML
 l10n:
   sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
