@@ -112,7 +112,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
   - : Cet attribut indique le média auquel s'applique la ressource liée. Sa valeur doit être [une requête média](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries). Cet attribut est principalement utilisé pour permettre à l'agent utilisateur de sélectionner la meilleure feuille de style en fonction de l'appareil de l'utilisateur.
 
-    > **Note :**
+    > [!NOTE]
     >
     > - En HTML4, la valeur de cet attribut était une liste de descripteurs de médias ([des types ou des groupes de média](/fr/docs/Web/CSS/@media)) séparés par des espaces, par exemple `print` `screen` `aural` `braille`. HTML5 étend cet attribut à l'ensemble [des requêtes média](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries) qui forment un surensemble des valeurs autorisées en HTML 4.
     > - Les navigateurs qui ne prennent pas en charge [les requêtes média CSS3](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries) ne reconnaîtront pas nécessairement les liens adéquats et il faut donc toujours fournir des liens de recours.
@@ -136,7 +136,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
     - `any` : l'icône peut être redimensionnée à volonté car elle utilise un format vectoriel (par exemple `image/svg+xml`).
     - une liste de tailles, séparées par des espaces, dont chacune est de la forme `<largeur en pixels>x<hauteur en pixels>` ou `<largeur en pixels>X<hauteur en pixels>`. Pour chacune de ces dimensions, il doit exister une image correspondante dans la ressource.
 
-    > **Note :**
+    > [!NOTE]
     >
     > - La plupart des format d'icône permettent simplement de stocker une seule icône, c'est pour cela que, la plupart du temps, [`sizes`](/fr/docs/Web/HTML/Global_attributes#sizes) ne contient qu'un seul élément.
     > - Safari sur iOS ne prend pas en charge cet attribut mais utilise des types de lien non-standards pour définir l'icône utilisé dans la barre du site ou pour le lancer : `apple-touch-icon` et `apple-touch-startup-icon`.
@@ -152,7 +152,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
   - : Cet attribut définit l'encodage de la ressource lié. La valeur de cet attribut est une liste de jeux de caractères (tels que définis dans la RFC {{rfc(2045)}}) séparés par des espaces ou des virgules. La valeur par défaut de cet attribut est `iso-8859-1`.
 
-    > **Note :** cet attribut est obsolète **et ne doit pas être utilisé**. Pour obtenir l'effet escompté, on utilisera l'en-tête HTTP {{httpheader("Content-Type")}} pour la ressource liée.
+    > [!NOTE]
+    > Cet attribut est obsolète **et ne doit pas être utilisé**. Pour obtenir l'effet escompté, on utilisera l'en-tête HTTP {{httpheader("Content-Type")}} pour la ressource liée.
 
 - `methods` {{Non-standard_inline}}
   - : La valeur de cet attribut fournit des informations quant aux fonctions qui peuvent être utilisées sur l'objet lié. Les valeurs sont généralement des méthodes HTTP mais elles peuvent également inclure des informations en avance sur le lien (le navigateur pourrait par exemple choisir un affichage différent pour un lien selon la méthode utilisée). Cet attribut n'est pas pris en charge de façon correcte, y compris par le navigateur qui le définit, Internet Explorer 4. Voir [la page MSDN sur la propriété `methods`](https://msdn.microsoft.com/en-us/library/ms534168%28VS.85%29.aspx).
@@ -162,9 +163,11 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
   - : La valeur de cet attribut décrit le lien entre le document courant et la ressource liée (définie par l'attribut [`href`](/fr/docs/Web/HTML/Element/link#href)). Cet attribut définit donc la relation réciproque à la relation décrite par l'attribut `rel`. [Les types de lien](/fr/docs/Web/HTML/Types_de_lien) utilisés pour cet attribut sont semblables aux valeurs autorisés par [`rel`](/fr/docs/Web/HTML/Element/link#rel).
 
-    > **Note :** cet attribut est obsolète en HTML5 **et ne doit pas être utilisé**. Pour obtenir le même effet, on utilisera l'attribut [`rel`](/fr/docs/Web/HTML/Element/link#rel) avec la valeur réciproque [pour le type de lien](/fr/docs/Web/HTML/Types_de_lien), (`made` devrait par exemple être remplacé par `author`). Cet attribut ne signifie pas « révision » et ne doit pas être utilisé comme un numéro de version.
+    > [!NOTE]
+    > Cet attribut est obsolète en HTML5 **et ne doit pas être utilisé**. Pour obtenir le même effet, on utilisera l'attribut [`rel`](/fr/docs/Web/HTML/Element/link#rel) avec la valeur réciproque [pour le type de lien](/fr/docs/Web/HTML/Types_de_lien), (`made` devrait par exemple être remplacé par `author`). Cet attribut ne signifie pas « révision » et ne doit pas être utilisé comme un numéro de version.
 
-    > **Note :** La spécification actuelle de HTML 5.2 du W3C n'indique plus l'attribut `rev` comme obsolète. En revanche, la spécification du WHATWG le considère toujours comme obsolète. Tant que cette incohérence n'est pas résolue, mieux vaut considérer cet attribut comme obsolète.
+    > [!NOTE]
+    > La spécification actuelle de HTML 5.2 du W3C n'indique plus l'attribut `rev` comme obsolète. En revanche, la spécification du WHATWG le considère toujours comme obsolète. Tant que cette incohérence n'est pas résolue, mieux vaut considérer cet attribut comme obsolète.
 
 - `target`{{Non-standard_inline}}
   - : Cet attribut définit le nom de la _frame_ ou de la fenêtre qui contient la ressource liée ou qui affichera la ressource liée.
@@ -214,7 +217,8 @@ Il est possible de déterminer si une feuille de style a été chargée en écou
   onerror="sheetError()" />
 ```
 
-> **Note :** L'évènement `load` est déclenché une fois que la feuille de style et que le contenu associé ont été chargés et analysés et immédiatement avant que la mise en forme soit appliquée au contenu.
+> [!NOTE]
+> L'évènement `load` est déclenché une fois que la feuille de style et que le contenu associé ont été chargés et analysés et immédiatement avant que la mise en forme soit appliquée au contenu.
 
 ### Exemples avec `preload`
 

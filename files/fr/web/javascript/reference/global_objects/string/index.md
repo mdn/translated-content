@@ -258,7 +258,8 @@ d'être passée à la ligne parce que sinon
 
 ## Méthodes de conversion HTML
 
-> **Attention :** Ces méthodes sont dépréciées et ne doivent plus être utilisées.
+> [!WARNING]
+> Ces méthodes sont dépréciées et ne doivent plus être utilisées.
 >
 > Elles ont des possibilités limitées et ne concernent qu'une petite sous-partie des éléments et attributs HTML disponibles.
 

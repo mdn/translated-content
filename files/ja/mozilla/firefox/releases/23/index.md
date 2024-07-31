@@ -3,6 +3,8 @@ title: Firefox 23 for developers
 slug: Mozilla/Firefox/Releases/23
 ---
 
+{{FirefoxSidebar}}
+
 Gecko 23 を搭載した Firefox 23 は米国時間 2013 年 8 月 6 日にリリースされました。このページでは、開発者に影響する Firefox 23 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -46,7 +48,7 @@ Gecko 23 を搭載した Firefox 23 は米国時間 2013 年 8 月 6 日にリ�
 ### CSS
 
 - `text-decoration: blink;` の点滅効果を廃止しましたが、値そのものは現在も有効です ([Firefox バグ 857820](https://bugzil.la/857820))。
-- フロー内の {{cssxref("::after")}} 疑似要素や {{cssxref("::before")}} 疑似要素は、flex アイテムになりました ([Firefox バグ 867454](https://bugzil.la/867454))。
+- フロー内の {{cssxref("::after")}} 擬似要素や {{cssxref("::before")}} 擬似要素は、flex アイテムになりました ([Firefox バグ 867454](https://bugzil.la/867454))。
 
 ### MathML
 

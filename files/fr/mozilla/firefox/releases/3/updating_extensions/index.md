@@ -3,6 +3,8 @@ title: Mise à jour des extensions pour Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
 ---
 
+{{FirefoxSidebar}}
+
 1. Notes de versions pour développeurs
 
    1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
@@ -174,7 +176,7 @@ Ou utilisez la technique suivante pour que votre overlay fonctionne tant avec Fi
 _Ajoutez ici les changements simples que vous avez dû faire à vos extensions pour qu'elles fonctionnent avec Firefox 3._
 
 - `chrome://browser/base/utilityOverlay.js` n'est plus géré pour des raisons de sécurité. Si vous l'utilisiez auparavant, vous devriez passer à `chrome://browser/content/utilityOverlay.js`.
-- Les implémentations de [`nsIAboutModule`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAboutModule) doivent à présent supporter la méthode `getURIFlags`. Consultez [nsIAboutModule.idl](https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/public/nsIAboutModule.idl) pour la documentation. Ceci affecte les extensions qui fournissent de nouvelles URI `about:`. ([bug 337746](https://bugzilla.mozilla.org/show_bug.cgi?id=337746 'FIXED: [FIX]Move "safe about" hardcoding out of security manager'))
+- Les implémentations de [`nsIAboutModule`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAboutModule) doivent à présent supporter la méthode `getURIFlags`. Consultez [nsIAboutModule.idl](https://searchfox.org/mozilla-central/source/netwerk/protocol/about/nsIAboutModule.idl) pour la documentation. Ceci affecte les extensions qui fournissent de nouvelles URI `about:`. ([bug 337746](https://bugzilla.mozilla.org/show_bug.cgi?id=337746 'FIXED: [FIX]Move "safe about" hardcoding out of security manager'))
 - L'élément [`tabbrowser`](/fr/docs/Mozilla/Tech/XUL/tabbrowser) ne fait plus partie du «&nbsp;toolkit&nbsp;» ([bug 339964](https://bugzilla.mozilla.org/show_bug.cgi?id=339964)). Cela signifie qu'il n'est plus disponible pour les applications XUL et extensions. Il continue cependant à être utilisé dans la fenêtre principale de Firefox (browser.xul).
 - Les changements dans les [proxys nsISupports](/fr/Proxys_nsISupports) et éventuellement aux interfaces liées aux threads doivent être documentés.
 - Si vous utilisez des instructions de traitement XML comme `<?xml-stylesheet ?>` dans vos fichiers XUL, tenez compte des changements effectués dans le [bug 319654](https://bugzilla.mozilla.org/show_bug.cgi?id=319654)&nbsp;:

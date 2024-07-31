@@ -7,7 +7,8 @@ slug: Web/API/VRDisplay/getFrameData
 
 **`getFrameData()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、 {{domxref("VRFrameData")}} オブジェクトを受け取り、現在のフレームをレンダリングするために必要な情報を入力します。
 
-> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!NOTE]
+> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 現在のフレームの {{domxref("VRPose")}} とビューおよび投影行列が含まれます。
 
@@ -90,7 +91,8 @@ function drawVRScene() {
 }
 ```
 
-> **メモ:** この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
+> [!NOTE]
+> この完全なコードは [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) で見ることができます。
 
 ## 仕様書
 

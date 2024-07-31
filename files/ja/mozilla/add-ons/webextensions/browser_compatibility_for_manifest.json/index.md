@@ -7,7 +7,8 @@ slug: Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json
 
 {{Compat}}
 
-> **メモ:** Microsoft Edge の互換性データは Microsoft Corporation により提供され、Creative Commons Attribution 3.0 United States License の下でこのページに含めています。
+> [!NOTE]
+> Microsoft Edge の互換性データは Microsoft Corporation により提供され、Creative Commons Attribution 3.0 United States License の下でこのページに含めています。
 
 ## 関連情報
 

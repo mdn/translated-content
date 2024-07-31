@@ -81,7 +81,8 @@ slug: Web/HTML/Element/ol
 
     `type`은 아래의 모든 {{htmlelement("li")}}에 적용되지만, [`type`](/ko/docs/Web/HTML/Element/li#type) 특성을 가진 `<li>`는 그 값을 대신 사용합니다.
 
-    > **참고:** 항목을 각각의 숫자/문자로 참조하는 기술적 또는 법률적 문서가 아니라면 CSS {{cssxref("list-style-type")}} 속성을 대신 사용하세요.
+    > [!NOTE]
+    > 항목을 각각의 숫자/문자로 참조하는 기술적 또는 법률적 문서가 아니라면 CSS {{cssxref("list-style-type")}} 속성을 대신 사용하세요.
 
 ## 사용 일람
 

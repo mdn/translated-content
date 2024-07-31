@@ -10,7 +10,7 @@ l10n:
 **`CSSContainerRule`** インターフェイスは、単一の CSS の {{cssxref("@container")}} ルールを表します。
 
 この型のオブジェクトを使用して、 {{cssxref("@container")}} のクエリー条件と、コンテナー名が定義されている場合はコンテナー名を取得することができます。
-なお、コンテナ名とクエリーを合わせて「条件テキスト」を定義し、 {{domxref("CSSConditionRule.conditionText")}} を使用して取得することができます。
+なお、コンテナー名とクエリーを合わせて「条件テキスト」を定義し、 {{domxref("CSSConditionRule.conditionText")}} を使用して取得することができます。
 
 {{InheritanceDiagram}}
 
@@ -102,7 +102,8 @@ log(`CSSContainerRule.containerQuery: "${containerRule.containerQuery}"`);
 log(`CSSContainerRule.conditionText: "${containerRule.conditionText}"`);
 ```
 
-> **メモ:** この例のスタイルは、コードが正しいシートを探しやすいように、 id を持つインライン HTML の `style` 要素で定義しています。
+> [!NOTE]
+> この例のスタイルは、コードが正しいシートを探しやすいように、 id を持つインライン HTML の `style` 要素で定義しています。
 > また、長さをインデックスにして（例えば `document.styleSheets[document.styleSheets.length-1]`）文書から各例の正しいシートを探すこともできますが、そうすると各例の正しいシートを動作するのが複雑になります。
 
 出力例は下記の通りです。

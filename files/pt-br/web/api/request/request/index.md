@@ -113,7 +113,8 @@ Você também pode passar um objeto {{domxref ("Request")}} para o construtor `R
 var copy = new Request(myRequest);
 ```
 
-> **Nota:** Este último uso é provavelmente útil apenas em [ServiceWorkers](/pt-BR/docs/Web/API/ServiceWorker_API).
+> [!NOTE]
+> Este último uso é provavelmente útil apenas em [ServiceWorkers](/pt-BR/docs/Web/API/ServiceWorker_API).
 
 ## Especificações
 

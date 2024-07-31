@@ -49,7 +49,8 @@ Void.
 <!-- afterend -->
 ```
 
-> **备注：** 只有当节点位于树中并具有元素父元素时，beforebegin 和 afterend 位置才能工作。
+> [!NOTE]
+> 只有当节点位于树中并具有元素父元素时，beforebegin 和 afterend 位置才能工作。
 
 ## 范例
 

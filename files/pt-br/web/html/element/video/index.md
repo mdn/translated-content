@@ -21,7 +21,8 @@ Como qualquer elemento HTML, este elemento suporta os [atributos globais](/pt-BR
 
   - : Um atributo Booleano; se especificado, o video vai ser executado assim que possível sem precisar de carregar todo o arquivo.
 
-    > **Nota:** Sites que reproduzem automaticamente áudio (ou vídeos com uma faixa de áudio) podem proporcionar uma experiência desagradável para os usuários, portanto, devem ser evitados sempre que possível. Se você precisar oferecer a funcionalidade de reprodução automática, é recomendável torná-la opcional (exigindo que o usuário a habilite especificamente). No entanto, isso pode ser útil ao criar elementos de mídia cuja fonte será definida posteriormente, sob controle do usuário. Consulte nosso [guia sobre reprodução automática](/pt-BR/docs/Web/Media/Autoplay_guide) para obter informações adicionais sobre como usar a reprodução automática corretamente.
+    > [!NOTE]
+    > Sites que reproduzem automaticamente áudio (ou vídeos com uma faixa de áudio) podem proporcionar uma experiência desagradável para os usuários, portanto, devem ser evitados sempre que possível. Se você precisar oferecer a funcionalidade de reprodução automática, é recomendável torná-la opcional (exigindo que o usuário a habilite especificamente). No entanto, isso pode ser útil ao criar elementos de mídia cuja fonte será definida posteriormente, sob controle do usuário. Consulte nosso [guia sobre reprodução automática](/pt-BR/docs/Web/Media/Autoplay_guide) para obter informações adicionais sobre como usar a reprodução automática corretamente.
 
     Para desativar a reprodução automática, `autoplay="false"` não vai funcionar; o vídeo será reproduzido automaticamente se o atributo estiver presente na tag `<video>`. Para remover a reprodução automática, o atributo deve ser removido por completo.
 
@@ -77,7 +78,9 @@ Como qualquer elemento HTML, este elemento suporta os [atributos globais](/pt-BR
 
     Se não definido, seu valor padrão será definido pelo navegador (isto é, cada navegador pode escolher seu valor padrão), embora a especificação recomende que seja definido para o `metadata`.
 
-    > **Nota:**
+    > [!NOTE]
+    >
+    > >
     >
     > - O atributo `autoplay` tem precedência sobre o `preload`, pois se é necessário executar o vídeo automaticamente, o navegador obviamente o baixará. Definindo ambos `autoplay` e `preload` é permitido pela especificação.
     > - O navegador não é forçado pela especifição a seguir o valor desse atributo; é apenas uma sugestão.

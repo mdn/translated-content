@@ -3,6 +3,8 @@ title: noframes
 slug: Web/HTML/Element/noframes
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - **noframes** de -_sin marcos_ . Aporta contenidos alternativos a los marcos. Las aplicaciones de usuario que no soporten [marcos](http://html.conclase.net/w3c/html401-es/present/frames.html), o que estén configuradas para no mostrarlos, deben mostrar en su lugar el contenido de este elemento.
@@ -227,7 +229,8 @@ Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html
 
 ---
 
-> **Nota:** Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
 >
 > ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
 

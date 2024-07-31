@@ -29,7 +29,8 @@ var wave = AudioContext.createPeriodicWave(real, imag[, constraints]);
 - `constraints` {{optional_inline}}
   - : 정규화(normalization)가 비활성화되어야 하는지를 명시하는 dictionary 객체입니다 (만약 명시되지 않으면, 기본적으로 정규화는 활성화 됩니다.) 이것은 하나의 프로퍼티를 취합니다:\* `disableNormalization`: 만약 `true`로 설정되면, 정규화는 주기파에 대해 비활성화 됩니다. 기본값은 `false`입니다.
 
-> **참고:** 만약 정규화되면, 결과 파동은 최고 절대값(maximum absolute peak value) 1을 가지게 됩니다.
+> [!NOTE]
+> 만약 정규화되면, 결과 파동은 최고 절대값(maximum absolute peak value) 1을 가지게 됩니다.
 
 ## 예제
 

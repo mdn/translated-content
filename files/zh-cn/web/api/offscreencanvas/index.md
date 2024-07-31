@@ -23,7 +23,7 @@ slug: Web/API/OffscreenCanvas
 
 - {{domxref("OffscreenCanvas.getContext()")}}
   - : 为 offscreen canvas 对象返回一个渲染画布。
-- {{domxref("OffscreenCanvas.toBlob()")}}
+- {{domxref("OffscreenCanvas.convertToBlob()")}}
   - : 创建一个代表 canvas 中的图像的{{domxref("Blob")}}对象。
 - {{domxref("OffscreenCanvas.transferToImageBitmap()")}}
   - : 从 `OffscreenCanvas` 最近渲染的图像创建一个 {{domxref("ImageBitmap")}} 对象。

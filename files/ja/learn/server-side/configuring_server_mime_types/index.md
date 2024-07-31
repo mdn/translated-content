@@ -22,7 +22,7 @@ MIME タイプの例です。
 
 Apache ウェブサーバーの **2.2.7 より前**のバージョンでは、未知のコンテンツの種類に対して `text/plain` か `application/octet-stream` の MIME タイプを報告するように設定されていました。
 
-[Nginx](https://nginx.org/) は既定ののコンテンツの種類を定義しない場合、`text/plain` を報告します。
+[Nginx](https://nginx.org/) は既定のコンテンツの種類を定義しない場合、`text/plain` を報告します。
 
 新しいコンテンツの種類が生まれたりウェブサーバーに追加されたりすると、ウェブ管理者は新しい MIME タイプをウェブサーバーの設定に追加しないことがあります。これは、ウェブサーバーやアプリケーションから報告される MIME タイプを尊重するブラウザー のユーザーにとって、主要な問題の原因となります。
 
@@ -62,7 +62,8 @@ JavaScript の MIME タイプに関する情報を探していると、JavaScrip
 
 ブラウザーはこれらの代替 MIME タイプのいずれか、いくつか、またはすべてに対応しているかもしれませんが、JavaScript ファイルの MIME タイプを示すには、`text/javascript` **のみ**を使用しましょう。
 
-> **メモ:** 詳しくは [MIME タイプ（IANA メディア種別）](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)をご覧ください。
+> [!NOTE]
+> 詳しくは [MIME タイプ（IANA メディア種別）](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)をご覧ください。
 
 ## 設定する MIME タイプの決定方法
 

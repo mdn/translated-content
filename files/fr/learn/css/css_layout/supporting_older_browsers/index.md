@@ -100,7 +100,8 @@ Dans l'exemple ci-dessous, nous avons fait flotter trois `<div>` pour les affich
 
 {{EmbedLiveSample('Exemple', '', '150')}}
 
-> **Note :** La propriété {{cssxref("clear")}} n'a également aucun effet une fois que l'élément dégagé devient un élément de grille. Vous pouvez donc avoir une mise en page avec un pied de page dégagé, qui est ensuite transformée en une mise en page sur une grille CSS.
+> [!NOTE]
+> La propriété {{cssxref("clear")}} n'a également aucun effet une fois que l'élément dégagé devient un élément de grille. Vous pouvez donc avoir une mise en page avec un pied de page dégagé, qui est ensuite transformée en une mise en page sur une grille CSS.
 
 ### Méthodes de substitution
 

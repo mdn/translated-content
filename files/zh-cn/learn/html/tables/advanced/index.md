@@ -53,7 +53,8 @@ slug: Learn/HTML/Tables/Advanced
 2. 为表格添加一个合适的标题。
 3. 保存你的代码，然后用浏览器打开，看看你的表格是什么样的。
 
-> **备注：** 你也可以在 GitHub 上找到我们的版本 [timetable-caption.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/timetable-caption.html)（[查看在线运行版本](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)）。
+> [!NOTE]
+> 你也可以在 GitHub 上找到我们的版本 [timetable-caption.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/timetable-caption.html)（[查看在线运行版本](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)）。
 
 ## 添加 \<thead>、\<tfoot> 和 \<tbody> 结构
 
@@ -92,7 +93,8 @@ slug: Learn/HTML/Tables/Advanced
 
 7. 先保存，再刷新，然后观察一下结果。如果没有 `<tbody>` 和 `<tfoot>` 元素，你也许会写更加复杂的选择器或规则来应用同样的样式。
 
-> **备注：** 我们并不期望你现在就能完全理解 CSS。在你阅读我们的 CSS 模块时，你会学到更多这方面的知识（[CSS 介绍](/zh-CN/docs/Learn/CSS/First_steps)是一个好的起点；文章[样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)也专门讲述了如何对表格添加样式）。
+> [!NOTE]
+> 我们并不期望你现在就能完全理解 CSS。在你阅读我们的 CSS 模块时，你会学到更多这方面的知识（[CSS 介绍](/zh-CN/docs/Learn/CSS/First_steps)是一个好的起点；文章[样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)也专门讲述了如何对表格添加样式）。
 
 你完成的表格应该如下所示：
 
@@ -207,7 +209,8 @@ slug: Learn/HTML/Tables/Advanced
 
 {{ EmbedLiveSample('动手练习：添加表格结构', '100%', 300) }}
 
-> **备注：** 你也可以在 GitHub 上找到 [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html)（[查看在线运行版本](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)）。
+> [!NOTE]
+> 你也可以在 GitHub 上找到 [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html)（[查看在线运行版本](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)）。
 
 ## 嵌套表格
 
@@ -329,7 +332,8 @@ th {
 
 但假设你无法通过视觉关联这些数据呢？那么你应该如何阅读上述的表格？视力受损的用户经常使用一个屏幕阅读设备来为他们读出网页上的信息。对于盲人来说，阅读简单的文字没有什么问题，但是要理解一张表格的内容，这就有一些难度了。然而，通过适当的标记，我们可以用程序化的关联来取代视觉关联。
 
-> **备注：** 根据[世界卫生组织 2017 年的数据](http://www.who.int/zh/news-room/fact-sheets/detail/blindness-and-visual-impairment)，大约有 2.53 亿人患有视觉障碍。
+> [!NOTE]
+> 根据[世界卫生组织 2017 年的数据](http://www.who.int/zh/news-room/fact-sheets/detail/blindness-and-visual-impairment)，大约有 2.53 亿人患有视觉障碍。
 
 本篇文章提供了更一步的技术来使表格的无障碍性尽可能地提高。
 
@@ -405,7 +409,8 @@ th {
 </tbody>
 ```
 
-> **备注：** 这种方法在标题和数据单元格之间建立了非常精确的关联，但是它使用了**非常多**的标记，而且没有留下任何错误的空间。对于大多数表格来说，`scope` 方法通常就足够了。
+> [!NOTE]
+> 这种方法在标题和数据单元格之间建立了非常精确的关联，但是它使用了**非常多**的标记，而且没有留下任何错误的空间。对于大多数表格来说，`scope` 方法通常就足够了。
 
 ### 动手练习：使用 scope 和 headers
 
@@ -413,7 +418,8 @@ th {
 2. 现在尝试添加适当的 `scope` 属性来让表格变得更加恰当。
 3. 最后，尝试把未添加 `scope` 属性的源文件再复制一份。这次使用 `id` 和 `headers` 属性让表格变得更加恰当。
 
-> **备注：** 你可以根据我们完成的例子检查你的工作，请看 [items-sold-scope.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-scope.html) ([also see this live](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) 和 [items-sold-headers.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-headers.html)（[查看在线运行版本](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)）。
+> [!NOTE]
+> 你可以根据我们完成的例子检查你的工作，请看 [items-sold-scope.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-scope.html) ([also see this live](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) 和 [items-sold-headers.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-headers.html)（[查看在线运行版本](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)）。
 
 ## 总结
 

@@ -34,7 +34,8 @@ La règle `@namespace` peut également être utilisée afin de définir **un pr�
 
 En [HTML5](/fr/docs/Glossaire/HTML5), les [éléments étrangers](https://html.spec.whatwg.org/#foreign-elements) connus seront automatiquement affectés à des espaces de noms. Cela signifie que les éléments HTML se comporteront comme s'ils appartenaient à l'espace de noms XHTML (`http://www.w3.org/1999/xhtml`) même s'il n'y a aucun attribut `xmlns` dans le document. Les éléments [`<svg>`](/fr/docs/Web/SVG/Element/svg) et [`<math>`](/fr/docs/Web/MathML/Element/math) seront affectés à leurs espaces de noms respectifs (`http://www.w3.org/2000/svg` et `http://www.w3.org/1998/Math/MathML`).
 
-> **Note :** En XML, sauf si un préfixe est directement apposé sur l'attribut (ex. `xlink:href`), cet attribut n'est rattaché à aucun espace de noms. Autrement dit, les attributs n'héritent pas de l'espace de noms de l'élément auquel ils sont rattachés. Afin de respecter ce comportement, l'espace de noms par défaut n'est pas appliqué aux sélecteurs d'attributs.
+> [!NOTE]
+> En XML, sauf si un préfixe est directement apposé sur l'attribut (ex. `xlink:href`), cet attribut n'est rattaché à aucun espace de noms. Autrement dit, les attributs n'héritent pas de l'espace de noms de l'élément auquel ils sont rattachés. Afin de respecter ce comportement, l'espace de noms par défaut n'est pas appliqué aux sélecteurs d'attributs.
 
 ## Syntaxe
 

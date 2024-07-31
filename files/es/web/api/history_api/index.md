@@ -3,6 +3,8 @@ title: Manipulando el historial del navegador
 slug: Web/API/History_API
 ---
 
+{{DefaultAPISidebar("History API")}}
+
 El objeto DOM {{ domxref("window") }} proporciona acceso al historial del navegador a través del objeto {{ domxref("window.history", "history") }} . Este da acceso a métodos y propiedades útiles que permiten avanzar y retroceder a través del historial del usuario, así como --a partir de HTML5-- manipular el contenido del historial.
 
 ## Viajando a través del historial
@@ -58,7 +60,8 @@ Puedes obtener el número de páginas en la pila del historial consultando el va
 var numeroDeEntradas = window.history.length;
 ```
 
-> **Nota:** Internet Explorer admite el paso de cadenas de URL como parámetro para `go()`; esto no es estándar y no está implementado en Gecko.
+> [!NOTE]
+> Internet Explorer admite el paso de cadenas de URL como parámetro para `go()`; esto no es estándar y no está implementado en Gecko.
 
 ## Añadiendo y modificando entradas del historial
 

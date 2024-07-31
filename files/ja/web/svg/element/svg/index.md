@@ -69,7 +69,8 @@ svg {
   - : SVG コンテナが表示される y 座標。最も外側の`SVG`要素では効果ありません。
     _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#Percentage) ; _初期値_: `0`; _Animatable_: **yes**
 
-> **メモ:** SVG2 で開始する場合には、`x`, `y`, `width`, `height` は、*ジオメトリプロパティ*です。これは、これらの属性が CSS プロパティとして用いられることを意味します。
+> [!NOTE]
+> SVG2 で開始する場合には、`x`, `y`, `width`, `height` は、*ジオメトリプロパティ*です。これは、これらの属性が CSS プロパティとして用いられることを意味します。
 
 ### グローバル属性
 

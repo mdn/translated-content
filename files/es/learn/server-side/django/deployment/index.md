@@ -52,19 +52,22 @@ El entorno de producción es el entorno proporcionado por el servidor en el que 
 - Servidor de aplicaciones que transmite peticiones "dinámicas" entre su sitio web Django y el servidor web.
 - Bases de datos que su sitio web necesita.
 
-> **Nota:** Dependiendo de como esté configurado su entorno de producción, usted podría disponer también de un proxy inverso, balanceador de carga, etc.
+> [!NOTE]
+> Dependiendo de como esté configurado su entorno de producción, usted podría disponer también de un proxy inverso, balanceador de carga, etc.
 
 El servidor podría estar ubicado en sus propias instalaciones y conectado a Internet a través de un enlace rápido, pero lo más común es utilizar un computador alojado "en la nube". Esto en realidad implica que su código es ejecutado en algún computador remoto (o posiblemente un computador "virtual") en el centro (o centros) de datos de su compañía de servicios de _hosting._ El servidor remoto normalmente ofrecerá un determinado nivel garantizado de recursos de computación (es decir, CPU, RAM, memoria de almacenamiento, etc) y de conectividad a Internet por un cierto precio.
 
 A este tipo de hardware de computación/comunicaciones accesible de forma remota se le denomina _Infrastructure as a Service_ o _Infraestructura como Servicio (IaaS)_. Muchos proveedores de IaaS ofrecen la opción de preinstalar un sistema operativo en particular, sobre el cual se debe instalar el resto de componentes de su entorno de producción. Otros permiten seleccionar entornos plenamente configurados, con incluso configuraciones de Django y servidor web establecidas.
 
-> **Nota:** Los entornos pre-construidos le permiten establecer su sitio web de manera muy sencilla, ya que reducen el trabajo de configuración, pero las opciones disponibles podrían limitarle al uso de un servidor (u otros componentes) poco conocido, o podrían estar basados en versiones antiguas del Sistema Operativo. A menudo es preferible que uno mismo instale sus propios componentes, de manera que disponga de los que desee, y en el momento que necesite subir el nivel de prestaciones de alguna parte del sistema, tener cierta idea de por dónde empezar
+> [!NOTE]
+> Los entornos pre-construidos le permiten establecer su sitio web de manera muy sencilla, ya que reducen el trabajo de configuración, pero las opciones disponibles podrían limitarle al uso de un servidor (u otros componentes) poco conocido, o podrían estar basados en versiones antiguas del Sistema Operativo. A menudo es preferible que uno mismo instale sus propios componentes, de manera que disponga de los que desee, y en el momento que necesite subir el nivel de prestaciones de alguna parte del sistema, tener cierta idea de por dónde empezar
 
 Otros proveedores de _hosting_ incluyen Django como parte de una _Plataform as a Service_ o _Plataforma como Servicio (PaaS)_. En este tipo de _hosting_ no necesita preocuparse de la mayor parte del entorno de producción (servidor web, servidor de aplicaciones, balanceadores de carga), dado que la plataforma host ya se ocupa de todo ello por usted (así como de casi todo lo necesario para escalar su aplicación). Esto hace el despliegue bastante sencillo, puesto que ya solo necesita concentrarse en su aplicación web y no en el resto de la infraestructura de servidor.
 
 Algunos desarrolladores elegirán la mayor flexibilidad ofrecida por una IaaS frente a una PaaS, mientras que otros valorarán el reducido coste general de mantenimiento y la mayor facilidad de escalado de PaaS. Cuando se está empezando, la instalación del sitio web en un sistema PaaS es mucho más sencilla, así que eso es lo que haremos en este tutorial.
 
-> **Nota:** Si eliges un proveedor de hosting adaptado a Python/Django, éste debería facilitar instrucciones de cómo instalar un sitio web Django usando diferentes configuraciones de servidor web, servidor de aplicaciones, proxy inverso, etc (esto es irrelevante si eliges una PaaS). Por ejemplo, existen muchas guías paso-a-paso para distintas configuraciones en la [Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django).
+> [!NOTE]
+> Si eliges un proveedor de hosting adaptado a Python/Django, éste debería facilitar instrucciones de cómo instalar un sitio web Django usando diferentes configuraciones de servidor web, servidor de aplicaciones, proxy inverso, etc (esto es irrelevante si eliges una PaaS). Por ejemplo, existen muchas guías paso-a-paso para distintas configuraciones en la [Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django).
 
 ## Eligiendo un proveedor de hosting
 
@@ -86,13 +89,15 @@ La buena noticia cuando estás en los comienzos es que existen bastantes sitios 
 
 Muchos proveedores disponen también de un nivel "básico" que proporciona niveles de capacidad de computación más útiles y con menos limitaciones. [Digital Ocean](https://www.digitalocean.com/) y [Python Anywhere](https://www.pythonanywhere.com/) son ejemplos de proveedores populares de hosting que ofrecen niveles básicos de computación relativamente baratos (en el rango de los 5 a los 10 $USD mensuales).
 
-> **Nota:** Recuerda que el precio no es el único criterio de selección. Si tu sitio web tiene éxito, la escalabilidad puede convertirse en la consideración más importante.
+> [!NOTE]
+> Recuerda que el precio no es el único criterio de selección. Si tu sitio web tiene éxito, la escalabilidad puede convertirse en la consideración más importante.
 
 ## Preparando tu sitio web para hacerlo público
 
 La [Django skeleton website](/es/docs/Learn/Server-side/Django/skeleton_website) creada usando las herramientas _django-admin_ y _manage.py_ están configuradas para hacer más sencillo el desarrollo. Muchos de los ajustes del proyecto Django (especificados en **settings.py**) deberían ser distintos en producción, por razones tanto de seguridad como de rendimiento.
 
-> **Nota:** Es bastante común disponer de un archivo **settings.py** separado en producción, e importar los ajustes sensibles desde un archivo aparte o desde una variable de entorno. Este archivo debería, por tanto, estar protegido, aún cuando el resto del código fuente esté disponible en un repositorio público.
+> [!NOTE]
+> Es bastante común disponer de un archivo **settings.py** separado en producción, e importar los ajustes sensibles desde un archivo aparte o desde una variable de entorno. Este archivo debería, por tanto, estar protegido, aún cuando el resto del código fuente esté disponible en un repositorio público.
 
 Los ajustes críticos que debes comprobar son:
 
@@ -132,7 +137,8 @@ DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
 El valor de `DEBUG` será `True` por defecto, pero será `False` si el valor de la variable de entorno `DJANGO_DEBUG` se establece como una cadena vacía, es decir, `DJANGO_DEBUG=''`.
 
-> **Nota:** Sería más intuitivo si pudiéramos simplemente marcar y desmarcar la variable de entorno `DJANGO_DEBUG` a `True` y `False` directamente, en lugar de usar "cualquier cadena" o "cadena vacía" (respectivamente). Por desgracia, los valores de las variables de entorno son almacenados como cadenas de Python (_Python strings_), y la única cadena que se evalúa como `False` es la cadena vacía (por ejemplo, `bool('')==False`).
+> [!NOTE]
+> Sería más intuitivo si pudiéramos simplemente marcar y desmarcar la variable de entorno `DJANGO_DEBUG` a `True` y `False` directamente, en lugar de usar "cualquier cadena" o "cadena vacía" (respectivamente). Por desgracia, los valores de las variables de entorno son almacenados como cadenas de Python (_Python strings_), y la única cadena que se evalúa como `False` es la cadena vacía (por ejemplo, `bool('')==False`).
 
 [Lista de verificación de implementación](https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/) (documentación de Django) proporciona una lista de comprobación completa de ajustes que podrías querer cambiar. Puedes también sacar una lista de algunos de ellos usando el siguiente comando de terminal:
 
@@ -182,7 +188,8 @@ Para conseguir nuestra aplicación para trabajar en Heroku, necesitaremos coloca
 
 Una vez hecho todo eso, podemos crear una cuenta Heroku, obtener el cliente Heroku, y usarlo para instalar nuestro sitio web.
 
-> **Nota:** Las instrucciones indicadas abajo reflejan la forma de trabajar con Heroku en el momento de la redacción. Si Heroku cambia sus procesos de forma significativa, podrías preferir, en su lugar, revisar su documentación de instalación: [Comenzando en Heroku con Django](https://devcenter.heroku.com/articles/getting-started-with-python#introduction).
+> [!NOTE]
+> Las instrucciones indicadas abajo reflejan la forma de trabajar con Heroku en el momento de la redacción. Si Heroku cambia sus procesos de forma significativa, podrías preferir, en su lugar, revisar su documentación de instalación: [Comenzando en Heroku con Django](https://devcenter.heroku.com/articles/getting-started-with-python#introduction).
 
 Con esto ya tienes una visión general de lo que necesitas para empezar (vea [Cómo funciona Heroku](https://devcenter.heroku.com/articles/how-heroku-works) para tener una guía más exhaustiva).
 
@@ -190,7 +197,8 @@ Con esto ya tienes una visión general de lo que necesitas para empezar (vea [C�
 
 Heroku está estrechamente integrado con el sistema de control de versiones de código fuente **git**, usándolo para subir/sincronizar cualquier cambio que hagas en los sistemas activos. Esto se hace añadiendo un nuevo repositorio "remoto" heroku denominado _heroku_ que apunta a un repositorio para tu fuente en la nube Heroku. Durante el desarrollo usas git para almacenar los cambios en tu repositorio "maestro". Cuando quieras desplegar tu sitio, sincronizas tus cambios con el repositorio Heroku.
 
-> **Nota:** Si estás acostumbrado a seguir buenas prácticas de desarrollo de software, probablemente ya estás usando git o algún otro sistema SCM. Si ya dispones de un repositorio git, podrás saltarte este paso.
+> [!NOTE]
+> Si estás acostumbrado a seguir buenas prácticas de desarrollo de software, probablemente ya estás usando git o algún otro sistema SCM. Si ya dispones de un repositorio git, podrás saltarte este paso.
 
 Existen muchas formas de trabajar con git, pero una de las más sencillas es crear en primer lugar una cuenta en [Github](https://github.com/), crear allí el repositorio, y a continuación sincronizarlo localmente:
 
@@ -274,7 +282,8 @@ El paso final es copiar en él tu aplicación y a continuación añadir los arch
 
 Una vez completada esta operación, deberías poder regresar a la página de Github donde creaste tu repositorio, refrescar la página, y comprobar que tu toda tu aplicación ha sido ya cargada. Puedes continuar actualizando tu repositorio según vayan cambiando los archivos, usando este ciclo add/commit/push.
 
-> **Nota:** Este es un buen momento para hacer una copia de seguridad de tu proyecto "simple" — algunos de los cambios que vamos a ir haciendo en las siguientes secciones podrían ser útiles para el despliegue en cualquier plataforma (o para el desarrollo), pero otros no.
+> [!NOTE]
+> Este es un buen momento para hacer una copia de seguridad de tu proyecto "simple" — algunos de los cambios que vamos a ir haciendo en las siguientes secciones podrían ser útiles para el despliegue en cualquier plataforma (o para el desarrollo), pero otros no.
 >
 > La _mejor_ manera de hacer esto es usar _git_ para gestionar tus revisiones. Con _git_ puedes no solo volver a una versión anterior en particular, sino que puedes mantener ésta en una "rama" separada de tus cambios en producción, y seleccionar determinados cambios a trasladar entre las ramas de producción y desarrollo. [Aprendiendo Git](https://help.github.com/articles/good-resources-for-learning-git-and-github/) merece la pena el esfuerzo, pero queda fuera del alcance de este tema.
 >
@@ -333,7 +342,7 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 ```
 
-> **Nota:**
+> [!NOTE]
 >
 > - Nosotros seguiremos utilizando SQLite durante el desarrollo porque la variable de entorno `DATABASE_URL` no será fijada en nuestra computadora de desarrollo.
 > - El valor `conn_max_age=500` hace que la conexión sea persistente, lo que es más eficiente que recrear la conexión en cada ciclo de petición. No obstante, esto es opcional y puede ser eliminado si es necesario.
@@ -357,7 +366,8 @@ No obstante, esto no es necesario — no necesitas tener activa PostGreSQL en el
 
 Durante el desarrollo utilizábamos Django y el servidor web de desarrollo de Django para servir nuestros ficheros estáticos (CSS, JavaScript, etc). En un entorno de producción normalmente se sirven los ficheros estáticos desde una red de entrega de contenidos (CDN, Content Delivery Network) o desde el servidor web.
 
-> **Nota:** Servir ficheros estáticos vía Django/aplicación web es ineficiente ya que las peticiones tienen que pasar por código adicional innecesario (Django), en vez de ser gestionados directamente por el servidor web o una CDN completamente independiente. Si bien esto no tiene relevancia en el uso local durante el desarrollo, el uso de este mecanismo en producción tiene un significativo impacto de rendimiento.
+> [!NOTE]
+> Servir ficheros estáticos vía Django/aplicación web es ineficiente ya que las peticiones tienen que pasar por código adicional innecesario (Django), en vez de ser gestionados directamente por el servidor web o una CDN completamente independiente. Si bien esto no tiene relevancia en el uso local durante el desarrollo, el uso de este mecanismo en producción tiene un significativo impacto de rendimiento.
 
 Para facilitar el alojamiento de archivos estáticos de forma separada de la aplicación web Django, Django proporciona la herramienta _collectstatic_ para recoger estos archivos para el despliegue (hay una variable de configuración que define de dónde se deben recopliar los archivos cuando se ejecuta _collectstatic_). Las plantillas Django hacen referencia a la localización de almacenamiento de los archivos estáticos en relación a una variable de configuración (`STATIC_URL`), por tanto, esto puede modificarse se los archivos estáticos son movidos a otro host/servidor.
 
@@ -390,7 +400,8 @@ Para más información, vea [Django y activos estáticos](https://devcenter.hero
 
 Hay muchas formas de servir ficheros estáticos en producción (ya vimos los ajustes Django relevantes en las secciones previas). Heroku recomienda usar el proyecto [WhiteNoise](https://warehouse.python.org/project/whitenoise/) para servir objetos estáticos directamente desde Gunicorn en producción.
 
-> **Nota:** Heroku llama automáticamente a _collectstatic_ y prepara tus ficheros estáticos para ser usados por WhiteNoise después de que se cargue tu aplicación. Revisa la documentación [WhiteNoise](https://warehouse.python.org/project/whitenoise/), en la que se explica cómo funciona y por qué la implementación es un método para servir estos ficheros relativamente eficiente.
+> [!NOTE]
+> Heroku llama automáticamente a _collectstatic_ y prepara tus ficheros estáticos para ser usados por WhiteNoise después de que se cargue tu aplicación. Revisa la documentación [WhiteNoise](https://warehouse.python.org/project/whitenoise/), en la que se explica cómo funciona y por qué la implementación es un método para servir estos ficheros relativamente eficiente.
 
 Los pasos para instalar _WhiteNoise_ para usarlo dentro del proyecto son:
 
@@ -445,7 +456,8 @@ psycopg2==2.6.2
 whitenoise==3.2.2
 ```
 
-> **Nota:** Asegúrate de que existe una línea **psycopg2** como la que se ve arriba! Incluso aunque no lo hayas instalado localmente, deberías añadirla a **requirements.txt**.
+> [!NOTE]
+> Asegúrate de que existe una línea **psycopg2** como la que se ve arriba! Incluso aunque no lo hayas instalado localmente, deberías añadirla a **requirements.txt**.
 
 #### Runtime
 
@@ -455,7 +467,8 @@ El archivo **runtime.txt**, si ha sido definido, le dice a Heroku que lenguaje d
 python-3.5.2
 ```
 
-> **Nota:** Heroku sólo soporta un número pequeño de [Python runtimes](https://devcenter.heroku.com/articles/python-support#supported-python-runtimes). Tú puedes especificar valores de runtime de Python 3, pero en el momento de esta redacción la versión anterior será soportada como definida.
+> [!NOTE]
+> Heroku sólo soporta un número pequeño de [Python runtimes](https://devcenter.heroku.com/articles/python-support#supported-python-runtimes). Tú puedes especificar valores de runtime de Python 3, pero en el momento de esta redacción la versión anterior será soportada como definida.
 
 #### Guardar los cambios en Github y volver a probar
 
@@ -503,7 +516,8 @@ Para crear la app ejecutamos el comando "create" en el directorio raíz de nuest
 heroku create
 ```
 
-> **Nota:** Puedes nombrar el remoto, si lo deseas, especificando un valor después de "create". Si no, obtendrás un nombre aleatorio. Este nombre es el que se utiliza en la URL por defecto.
+> [!NOTE]
+> Puedes nombrar el remoto, si lo deseas, especificando un valor después de "create". Si no, obtendrás un nombre aleatorio. Este nombre es el que se utiliza en la URL por defecto.
 
 Podemos a continuación "empujar" (push) nuestra aplicación hacia el respositorio Heroku como se muestra abajo. Este proceso subirá la aplicación, la empaquetará en un dyno, ejecutará collestatic, y arrancará el sitio.
 
@@ -565,7 +579,8 @@ DATABASE_URL: postgres://uzfnbcyxidzgrl:j2jkUFDF6OGGqxkgg7Hk3ilbZI@ec2-54-243-20
 
 Si recuerdas de la sección [Preparando tu sitio web para hacerlo público](#getting_your_website_ready_to_publish), tenemos que establecer variables de entorno para `DJANGO_SECRET_KEY` y `DJANGO_DEBUG`. Vamos a hacerlo ahora.
 
-> **Nota:** La clave secreta tiene que ser verdaderamente secreta! Una forma de generar una nueva clave es crear un nuevo proyecto Django (`django-admin startproject nombredeproyecto`) y obtener la clave generada para tí de su archivo **settings.py**.
+> [!NOTE]
+> La clave secreta tiene que ser verdaderamente secreta! Una forma de generar una nueva clave es crear un nuevo proyecto Django (`django-admin startproject nombredeproyecto`) y obtener la clave generada para tí de su archivo **settings.py**.
 
 Establecemos el valor de la variable `DJANGO_SECRET_KEY` con el comando `config:set` (como se muestra abajo). Recuerda usar tu propia clave secreta!
 
@@ -601,7 +616,8 @@ git push origin master
 git push heroku master
 ```
 
-> **Nota:** Una vez completada la actualización del sitio en Heroku, introduce una URL que no exista (por ejemplo, **/catalog/doesnotexist/**). Antes se habría mostrado una página de depuración detallada, pero ahora deberías simplemente ver una página de "Not Found".
+> [!NOTE]
+> Una vez completada la actualización del sitio en Heroku, introduce una URL que no exista (por ejemplo, **/catalog/doesnotexist/**). Antes se habría mostrado una página de depuración detallada, pero ahora deberías simplemente ver una página de "Not Found".
 
 ### Depuración
 

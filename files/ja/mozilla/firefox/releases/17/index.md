@@ -3,6 +3,8 @@ title: Firefox 17 for developers
 slug: Mozilla/Firefox/Releases/17
 ---
 
+{{FirefoxSidebar}}
+
 Gecko 17 を搭載した Firefox 17 は米国時間 2012 年 11 月 20 日にリリースされました。このページでは、開発者に影響する Firefox 17 の変更点をまとめています。
 
 Want to help document Firefox 17? See the [list of bugs that need to be written about](http://beta.elchi3.de/doctracker/#list=fx&version=17.0) and pitch in!
@@ -17,7 +19,7 @@ Want to help document Firefox 17? See the [list of bugs that need to be written 
 ### CSS
 
 - [CSS3 Conditional Rules 仕様書](http://dev.w3.org/csswg/css3-conditional/)で定義されている {{ cssxref("@supports") }} @-規則をサポートしました。これは既定で無効にされています。開発者の方は、`layout.css.supports-rule.enabled` を true に設定することで試すことができます ([bug 649740](https://bugzilla.mozilla.org/show_bug.cgi?id=649740))。
-- 要素の表記方向を基にした要素選択を可能にする、CSS Selectors Level 4 の {{ cssxref(":dir", ":dir()") }} 疑似クラスをサポートしました。([bug 562169](https://bugzilla.mozilla.org/show_bug.cgi?id=562169))
+- 要素の表記方向を基にした要素選択を可能にする、CSS Selectors Level 4 の {{ cssxref(":dir", ":dir()") }} 擬似クラスをサポートしました。([bug 562169](https://bugzilla.mozilla.org/show_bug.cgi?id=562169))
 - CSS の{{ cssxref("unicode-bidi") }} プロパティで新たに規定された値である `isolate-override` をサポートしました。([bug 774335](https://bugzilla.mozilla.org/show_bug.cgi?id=774335))
 - {{ cssxref("box-sizing") }} の接頭辞付き実装が、{{ cssxref("min-height") }} および {{ cssxref("max-height") }} を考慮するようになりました。接頭辞が不要な実装に近づくステップのひとつです。([Firefox バグ 308801](https://bugzil.la/308801))
 

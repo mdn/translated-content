@@ -13,7 +13,8 @@ También puede pasarse directamente al constructor de {{domxref("URLSearchParams
 
 Un objeto que implementa `FormData` puede usarse directamente en una estructura {{jsxref("Statements/for...of", "for...of")}}, en lugar de {{domxref('FormData.entries()', 'entries()')}}: `for (var p of myFormData)` es equivalente a `for (var p of myFormData.entries())`.
 
-> **Nota:** Esta característica está disponible en [Web Workers](/es/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Esta característica está disponible en [Web Workers](/es/docs/Web/API/Web_Workers_API).
 
 ## Constructor
 

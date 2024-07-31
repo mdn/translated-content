@@ -33,7 +33,8 @@ slug: Web/API/DataTransfer
 
 {{SeeCompatTable}}
 
-> **备注：** 本节中的所有属性为 Gecko 特有。
+> [!NOTE]
+> 本节中的所有属性为 Gecko 特有。
 
 - {{domxref("DataTransfer.mozCursor")}}
   - : 给出拖动光标的状态。这主要用于在拖动期间控制光标。
@@ -64,7 +65,8 @@ slug: Web/API/DataTransfer
 
 {{Non-standard_header()}}
 
-> **备注：** 本节所有方法为 Gecko 专有。
+> [!NOTE]
+> 本节所有方法为 Gecko 专有。
 
 - {{domxref("DataTransfer.addElement()")}}
   - : Sets the drag source to the given element.

@@ -3,6 +3,8 @@ title: Ejemplo 1 del contexto de apilamiento
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1
 ---
 
+{{CSSRef}}
+
 « [CSS](/es/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index)
 
 Empecemos con un ejemplo básico. En el contexto de apilamiento raíz tenemos dos DIVs (DIV #1 and DIV #3), ambos con posición relativa, pero sin propiedad z-index. Dentro del DIV #1 se encuentra el DIV #2 de posición absoluta, mientras que en el DIV #3 se encuentra el DIV #4 con posición absoluta, ambos sin propiedad z-index.
@@ -28,7 +30,8 @@ En términos de contextos de apilamiento, el DIV #1 y el DIV #3 son simplemente 
   - DIV #2 (z-index 1)
   - DIV #4 (z-index 2)
 
-> **Nota:** El DIV #1 y el DIV #3 no son translúcidos. Es importante recordar que asignar una opacidad menor a 1 a un elemento posicionado implica la creación de un contexto de apilamiento, como ocurre cuando se añade un valor z-index. Y este ejemplo muestra que ocurre cuando un elemento padre no crea un contexto de apilamiento.
+> [!NOTE]
+> El DIV #1 y el DIV #3 no son translúcidos. Es importante recordar que asignar una opacidad menor a 1 a un elemento posicionado implica la creación de un contexto de apilamiento, como ocurre cuando se añade un valor z-index. Y este ejemplo muestra que ocurre cuando un elemento padre no crea un contexto de apilamiento.
 
 ## Ejemplo
 

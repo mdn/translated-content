@@ -5,6 +5,8 @@ l10n:
   sourceCommit: b4abbb2165f43c02130dbe68833052613fd16e05
 ---
 
+{{DefaultAPISidebar("Web Workers API")}}
+
 **移譲可能オブジェクト** (Transferable objects) は、あるコンテキストから別のコンテキストへ _移譲_ することができるリソースを自分自身で所有するオブジェクトで、そのリソースが一度に 1 つのコンテキストでのみ利用できることを保証するものです。
 移譲が終わると、元のオブジェクトは使えなくなります。移譲されたリソースをもう指しておらず、オブジェクトの読み書きをしようとすると例外が発生します。
 
@@ -86,7 +88,8 @@ console.log(original.byteLength); // 0
 ブラウザーの対応は、それぞれのオブジェクトの互換性情報の `transferable` サブ機能で示す必要があります（例として [`RTCDataChannel`](/ja/docs/Web/API/RTCDataChannel#ブラウザーの互換性) を参照してください）。
 この記事を書いている時点では、すべての移譲可能なオブジェクトでこの情報が更新されているわけではありません。
 
-> **メモ:** 移譲可能なオブジェクトは [Web IDL ファイル](https://github.com/w3c/webref/tree/main/ed/idl) の中で `[Transferable]` という属性でマークアップされています。
+> [!NOTE]
+> 移譲可能なオブジェクトは [Web IDL ファイル](https://github.com/w3c/webref/tree/main/ed/idl) の中で `[Transferable]` という属性でマークアップされています。
 
 ## 関連情報
 

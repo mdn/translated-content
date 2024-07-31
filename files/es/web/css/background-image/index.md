@@ -17,7 +17,8 @@ Los [bordes](/es/docs/Web/CSS/border) del elemento se dibujan encima de ellos y 
 
 Si no se puede dibujar una imagen específica (por ejemplo, cuando no se puede cargar el archivo indicado por el URI especificado), los navegadores lo manejan como si fuera un valor `none`.
 
-> **Nota:** Incluso si las imágenes son opacas y el color no se mostrará en circunstancias normales, los desarrolladores web siempre deben especificar un {{cssxref("background-color")}}. Si las imágenes no se pueden cargar, por ejemplo, cuando la red no funciona, el color de fondo se utilizará como alternativa.
+> [!NOTE]
+> Incluso si las imágenes son opacas y el color no se mostrará en circunstancias normales, los desarrolladores web siempre deben especificar un {{cssxref("background-color")}}. Si las imágenes no se pueden cargar, por ejemplo, cuando la red no funciona, el color de fondo se utilizará como alternativa.
 
 ## Sintaxis
 
@@ -30,7 +31,8 @@ background-image: linear-gradient(
     to bottom,
     rgba(255, 255, 0, 0.5),
     rgba(0, 0, 255, 0.5)
-  ), url("catfront.png");
+  ),
+  url("catfront.png");
 
 /* Valores globales */
 background-image: inherit;

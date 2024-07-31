@@ -1,11 +1,13 @@
 ---
 title: キャンバスの最適化
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
+l10n:
+  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}
 
-{{HTMLElement("canvas")}} 要素は、ウェブで二次元グラフィックを描画するためにもっとも広く使用されているツールのひとつです。しかし、ウェブサイトやアプリがキャンバス API の限界付近まで使用するようになって、パフォーマンスが悪化するようになりました。この記事では、キャンバス要素の使用を最適化して、グラフィックを確実に改善するための提案を行います。
+{{HTMLElement("canvas")}} 要素は、ウェブで 2 次元グラフィックを描画するためにもっとも広く使用されているツールのひとつです。しかし、ウェブサイトやアプリがキャンバス API の限界付近まで使用するようになって、パフォーマンスが悪化するようになりました。この記事では、キャンバス要素の使用を最適化して、グラフィックを確実に改善するための提案を行います。
 
 ## パフォーマンスに関する TIPS
 
@@ -79,17 +81,17 @@ ctx.drawImage(myImage, 0.3, 0.5);
 
 ### CSS 座標変換を使用してキャンバスを拡大縮小する
 
-[CSS 座標変換](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)は、 GPU を使用しますのでより高速です。もっともよいのは拡大縮小しないことですが、そうでなければ大きなキャンバスを縮小するよりも小さなキャンバスを拡大したほうが良好です。
+[CSS 座標変換](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)は、 GPU を使用しますのでより高速です。もっともよいのは拡大縮小しないことですが、そうでなければ大きなキャンバスを縮小するよりも小さなキャンバスを拡大したほうが良好です。
 
 ```js
-var scaleX = window.innerWidth / canvas.width;
-var scaleY = window.innerHeight / canvas.height;
+const scaleX = window.innerWidth / canvas.width;
+const scaleY = window.innerHeight / canvas.height;
 
-var scaleToFit = Math.min(scaleX, scaleY);
-var scaleToCover = Math.max(scaleX, scaleY);
+const scaleToFit = Math.min(scaleX, scaleY);
+const scaleToCover = Math.max(scaleX, scaleY);
 
-stage.style.transformOrigin = "0 0"; //scale from top left
-stage.style.transform = "scale(" + scaleToFit + ")";
+stage.style.transformOrigin = "0 0"; // 左上から拡大
+stage.style.transform = `scale(${scaleToFit})`;
 ```
 
 ### 透過をやめる
@@ -97,28 +99,28 @@ stage.style.transform = "scale(" + scaleToFit + ")";
 アプリケーションがキャンバスを使用していて背後のものを透過させる必要がない場合は、 {{domxref("HTMLCanvasElement.getContext()")}} で描画コンテキストを生成する際に `alpha` オプションを `false` に設定しましょう。この情報を使用してブラウザーが描画を最適化する可能性があります。
 
 ```js
-var ctx = canvas.getContext("2d", { alpha: false });
+const ctx = canvas.getContext("2d", { alpha: false });
 ```
 
-### 高解像度のディスプレイでの拡大縮小
+### 高解像度のディスプレイでの変倍
 
-高解像度のディスプレイでは、キャンバスのアイテムがぼやけて見えることがあります。多くの解決策がありますが、まず簡単な方法は、キャンバスの属性、スタイル、およびコンテキストのスケールを使用してキャンバスのサイズを同時に拡大/縮小することです。
+高解像度のディスプレイでは、キャンバスのアイテムがぼやけて見えることがあります。多くの解決策がありますが、まず簡単な方法は、キャンバスの属性、スタイル、およびコンテキストのスケールを使用してキャンバスのサイズを同時に変倍することです。
 
 ```js
-// Get the DPR and size of the canvas
-var dpr = window.devicePixelRatio;
-var rect = canvas.getBoundingClientRect();
+// DPR とキャンバスの大きさを取得
+const dpr = window.devicePixelRatio;
+const rect = canvas.getBoundingClientRect();
 
-// Set the "actual" size of the canvas
+// キャンバスの「実際の」大きさを設定
 canvas.width = rect.width * dpr;
 canvas.height = rect.height * dpr;
 
-// Scale the context to ensure correct drawing operations
+// 正しい描画操作を保証するためにコンテキストの変倍
 ctx.scale(dpr, dpr);
 
-// Set the "drawn" size of the canvas
-canvas.style.width = rect.width + "px";
-canvas.style.height = rect.height + "px";
+// キャンバスの「描画される」大きさを設定
+canvas.style.width = `${rect.width}px`;
+canvas.style.height = `${rect.height}px`;
 ```
 
 ### その他の TIPS
@@ -129,12 +131,11 @@ canvas.style.height = rect.height + "px";
 - 可能な限り {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}} プロパティを避けます。
 - 可能な限り[テキストレンダリング](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)を避けます。
 - キャンバスをクリアーする別の方法を試します ({{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} 対 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 対キャンバスのリサイズ)
-- アニメーションで {{domxref("window.setInterval()")}} の代わりに {{domxref("window.requestAnimationFrame()")}} を使用します。
+- アニメーションで {{domxref("setInterval")}} の代わりに {{domxref("window.requestAnimationFrame()")}} を使用します。
 - 高負荷な物理演算ライブラリーに注意してください。
 
 ## 関連情報
 
-- [Improving HTML5 Canvas Performance – HTML5 Rocks](https://www.html5rocks.com/en/tutorials/canvas/performance/#toc-ref)
 - [Optimizing your JavaScript game for Firefox OS – Mozilla Hacks](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}

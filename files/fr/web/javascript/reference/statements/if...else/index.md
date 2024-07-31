@@ -95,7 +95,8 @@ function verifierValeur(a, b) {
 }
 ```
 
-> **Note :** On appelle ceci [le problème du <i lang="en">dangling else</i>](https://fr.wikipedia.org/wiki/Dangling_else).
+> [!NOTE]
+> On appelle ceci [le problème du <i lang="en">dangling else</i>](https://fr.wikipedia.org/wiki/Dangling_else).
 
 De manière générale, c'est une bonne pratique que de toujours utiliser des blocs d'instructions, notamment si le code implique plusieurs `if` imbriqués.
 

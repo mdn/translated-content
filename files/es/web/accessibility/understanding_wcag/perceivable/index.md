@@ -3,9 +3,12 @@ title: Perceivable
 slug: Web/Accessibility/Understanding_WCAG/Perceivable
 ---
 
+{{AccessibilitySidebar}}
+
 Este artículo ofrece consejos prácticos sobre cómo hacer que tu sitio web cumpla con los criterios de **Percepción** de WCAG 2.0 y 2.1. Los estados perceptivos que los usuarios deben poder reconocer utilizando alguno de sus sentidos.
 
-> **Nota:** Para leer las definiciones de la W3C sobre Percepción y las guías para cumplir con los criterios dirígete a [Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.](https://www.w3.org/TR/WCAG21/#perceivable)
+> [!NOTE]
+> Para leer las definiciones de la W3C sobre Percepción y las guías para cumplir con los criterios dirígete a [Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.](https://www.w3.org/TR/WCAG21/#perceivable)
 
 ## Pauta 1.1 — Dar alternativas de texto para contenido no textual
 
@@ -122,7 +125,8 @@ La clave aquí es convertir el texto a otros formatos que puedan ser entendidos 
   </tbody>
 </table>
 
-> **Nota:** Ver también [WCAG description for Guideline 1.1: Text alternatives](https://www.w3.org/TR/WCAG21/#text-alternatives).
+> [!NOTE]
+> Ver también [WCAG description for Guideline 1.1: Text alternatives](https://www.w3.org/TR/WCAG21/#text-alternatives).
 
 ## Pauta 1.2 — Proporcionar alternativas para los medios tempo-dependientes
 
@@ -140,7 +144,8 @@ Los medios tempo-dependientes se refieren a multimedia con una duración (audio 
 | 1.2.8 Provee una alternativa para los elementos multimedia pre-grabados (AAA) | For all content that features video, a descriptive text transcript should be provided, for example a script of the movie you are watching. This is for the benefit of hearing impaired viewers who cannot hear the content.                                                                     | See [Audio transcripts](/es/docs/Learn/Accessibility/Multimedia#Audio_transcripts) for transcript information.                                                                                                                                                                                                                                                |
 | 1.2.9 Provee una transcripción para el audio en vivo (AAA)                    | For any live audio content being broadcast, a descriptive text should be provided, for example a script of the play or musical you are listening to. This is for the benefit of hearing impaired viewers who cannot hear the content.                                                           | See [Audio transcripts](/es/docs/Learn/Accessibility/Multimedia#Audio_transcripts) for transcript information.                                                                                                                                                                                                                                                |
 
-> **Nota:** Ver también la descripción de [WCAG Guideline 1.2: Time-based Media: Provide alternatives for time-based media](https://www.w3.org/TR/WCAG21/#time-based-media).
+> [!NOTE]
+> Ver también la descripción de [WCAG Guideline 1.2: Time-based Media: Provide alternatives for time-based media](https://www.w3.org/TR/WCAG21/#time-based-media).
 
 ## Pauta 1.3 — Crear contenido que pueda presentarse de diferentes formas
 
@@ -244,7 +249,8 @@ Esta pauta hace referencia a la posibilidad de que todo contenido pueda ser cons
   </tbody>
 </table>
 
-> **Nota:** Ver también la descripción de WCAG: [Guideline 1.3: Adaptable: Create content that can be presented in different ways without losing information or structure.](https://www.w3.org/TR/WCAG21/#adaptable)
+> [!NOTE]
+> Ver también la descripción de WCAG: [Guideline 1.3: Adaptable: Create content that can be presented in different ways without losing information or structure.](https://www.w3.org/TR/WCAG21/#adaptable)
 
 ## Pauta 1.4: Facilitar a los usuarios ver y oír el contenido, incluyendo la separación entre el primer plano y el fondo
 
@@ -395,4 +401,5 @@ Esta pauta tiene como objetivo la creación de contenido que sea fácil de difer
   </thead>
 </table>
 
-> **Nota:** Ver también la descripción de WCAG: [Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background.](https://www.w3.org/TR/WCAG21/#distinguishable)[.](https://www.w3.org/TR/WCAG21/#distinguishable)
+> [!NOTE]
+> Ver también la descripción de WCAG: [Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background.](https://www.w3.org/TR/WCAG21/#distinguishable)[.](https://www.w3.org/TR/WCAG21/#distinguishable)

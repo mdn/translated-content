@@ -66,7 +66,8 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 这个方法会返回一个 `ImageData` 对象，它代表了画布区域的对象数据，此画布的四个角落分别表示为 (`left`, `top`), (`left + width`, `top`), (`left`, `top + height`), 以及 (`left + width`, `top + height`) 四个点。这些坐标点被设定为画布坐标空间元素。
 
-> **备注：** 任何在画布以外的元素都会被返回成一个透明黑的 `ImageData` 对象。
+> [!NOTE]
+> 任何在画布以外的元素都会被返回成一个透明黑的 `ImageData` 对象。
 
 这个方法也会在文章[用画布操作视频](/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)中展示。
 

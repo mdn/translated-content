@@ -118,7 +118,8 @@ CSS ボックスは、CSS で装飾されたウェブページの構成要素で
 
 {{ EmbedLiveSample('Backgrounds', '100%', '200') }}
 
-> **メモ:** グラデーションは、非常に独創的な方法で使用できます。 あなたがクレイジーな例を見たいのなら、[Lea Verou の CSS パターン](https://projects.verou.me/css3patterns/)（英語）を見てください。グラデーションについてもっと知りたい場合は、気軽に[専用の記事](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)を見てください。
+> [!NOTE]
+> グラデーションは、非常に独創的な方法で使用できます。 あなたがクレイジーな例を見たいのなら、[Lea Verou の CSS パターン](https://projects.verou.me/css3patterns/)（英語）を見てください。グラデーションについてもっと知りたい場合は、気軽に[専用の記事](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)を見てください。
 
 ## 擬似要素
 

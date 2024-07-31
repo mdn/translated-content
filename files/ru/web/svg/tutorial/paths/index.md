@@ -3,7 +3,7 @@ title: Пути (paths)
 slug: Web/SVG/Tutorial/Paths
 ---
 
-{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
 Элемент [`<path>`](/ru/docs/Web/SVG/Element/path) ("путь")– наиболее мощный элемент в библиотеке [основных форм](/ru/docs/Web/SVG/Tutorial/Basic_Shapes) SVG. С его помощью можно создавать отрезки, кривые, дуги и многое другое.
 

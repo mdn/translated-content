@@ -39,7 +39,8 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) ヘッダーディレ�
     - `blob:` コンテンツのソースとして [`blob:` URI](/ja/docs/Web/API/Blob) が使えるようにします。
     - `filesystem:` コンテンツのソースとして [`filesystem:` URI](/ja/docs/Web/API/FileSystem) が使えるようにします。
 
-    > **メモ:** スキームソースがない場合、文書のオリジンのスキームが使用されます。
+    > [!NOTE]
+    > スキームソースがない場合、文書のオリジンのスキームが使用されます。
     > セキュアアップグレードは許可されているので、`https:` を使用して文書を読み込んだ場合、`example.com` は `https://example.com` に一致しますが、`http://example.com` には一致しません。
     > 詳しい情報は、 [CSP Level 3](https://www.w3.org/TR/CSP3/#match-url-to-source-list) を参照してください。
 
@@ -70,7 +71,8 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) ヘッダーディレ�
     例えば[安全でないインラインスクリプト](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script)を参照してください。
     ノンスを指定すると、最近のブラウザーは、ノンスの対応がない古いブラウザーのために設定されている可能性がある `'unsafe-inline'` を無視するようになります。
 
-    > **メモ:** CSP の `nonce` ソースは _ノンス指定可能_ な要素にのみ適用できます（例えば {{HTMLElement("img")}} 要素には `nonce` 属性がないので、この CSP ソースに関連付ける方法はありません）。
+    > [!NOTE]
+    > CSP の `nonce` ソースは _ノンス指定可能_ な要素にのみ適用できます（例えば {{HTMLElement("img")}} 要素には `nonce` 属性がないので、この CSP ソースに関連付ける方法はありません）。
 
 - `'<hash-algorithm>-<base64-value>'`
   - : スクリプトまたはスタイルの sha256, sha384, sha512 の何れかのハッシュです。

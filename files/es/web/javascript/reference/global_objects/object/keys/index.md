@@ -78,7 +78,8 @@ console.log(Object.keys("foo")); // ['0', '1', '2']
 console.log(Object.keys(100)); // []
 ```
 
-> **Nota:** En ES5, si el argumento para `Object.keys()` no es un objeto, causará {{jsxref("TypeError")}}.
+> [!NOTE]
+> En ES5, si el argumento para `Object.keys()` no es un objeto, causará {{jsxref("TypeError")}}.
 
 ## Especificaciones
 

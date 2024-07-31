@@ -236,7 +236,8 @@ This method may raise a [DOMException](/zh-CN/docs/DOM/DOMException) with a [DOM
 | ReadOnlyError            | The transaction associated with this operation is in read-only [mode](/zh-CN/docs/IndexedDB/IDBTransaction#mode_constants). |
 | `DataError`              | The key or key range provided contains an invalid key.                                                                      |
 
-> **备注：** If the key that identifies the record is a Number, the key passed to the delete method must be a Number too, and not a String. So for example you might need to do the following:
+> [!NOTE]
+> If the key that identifies the record is a Number, the key passed to the delete method must be a Number too, and not a String. So for example you might need to do the following:
 >
 > ```js
 > var key_val = "42";
