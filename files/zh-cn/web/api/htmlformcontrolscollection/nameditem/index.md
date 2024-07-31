@@ -9,7 +9,7 @@ l10n:
 
 **`HTMLFormControlsCollection.namedItem()`** 方法返回集合中的 {{domxref("RadioNodeList")}} 或 {{domxref("Element")}}，其 `name` 或 `id` 匹配指定名称，如果没有节点匹配，则返回 `null`。
 
-请注意，此版本的 `namedItem()` 隐藏从 {{domxref("HTMLCollection")}} 继承的项。与该方法类似，在 Javascript 中，使用数组括号语法和 {{jsxref("String")}}，像 `collection["value"]` 相当于 `collection.namedItem("value")`。
+请注意，此版本的 `namedItem()` 隐藏从 {{domxref("HTMLCollection")}} 继承的项。与该方法类似，在 Javascript 中，使用数组括号语法和{{jsxref("String", "字符串", "", 1)}}，例如 `collection["value"]` 等价于 `collection.namedItem("value")`。
 
 ## 语法
 
@@ -66,7 +66,7 @@ output.textContent = `我的项目：${itemIDs}`;
 
 #### 结果
 
-{{EmbedLiveSample("Using namedItem()")}}
+{{EmbedLiveSample("使用 namedItem()")}}
 
 ## 规范
 
