@@ -1,8 +1,9 @@
 ---
 title: "HTMLMediaElement: loadeddata イベント"
+short-title: loadeddata
 slug: Web/API/HTMLMediaElement/loadeddata_event
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
 {{APIRef("HTMLMediaElement")}}
@@ -37,8 +38,7 @@ const video = document.querySelector("video");
 
 video.addEventListener("loadeddata", (event) => {
   console.log(
-    "Yay! The readyState just increased to  " +
-      "HAVE_CURRENT_DATA or greater for the first time.",
+    "やった! readyState が初めて HAVE_CURRENT_DATA 以上になりました。",
   );
 });
 ```
@@ -50,8 +50,7 @@ const video = document.querySelector("video");
 
 video.onloadeddata = (event) => {
   console.log(
-    "Yay! The readyState just increased to  " +
-      "HAVE_CURRENT_DATA or greater for the first time.",
+    "やった! readyState が初めて HAVE_CURRENT_DATA 以上になりました。",
   );
 };
 ```
@@ -72,7 +71,6 @@ video.onloadeddata = (event) => {
 - HTMLMediaElement {{domxref("HTMLMediaElement.seeked_event", 'seeked')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.ended_event", 'ended')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.canplay_event", 'canplay')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} イベント
