@@ -20,7 +20,6 @@ body :nth-child(4n) {
 [!NOTE]
 Pour CSS3, pour que l'élément soit ciblé, il faut qu'il ait un élément parent. En CSS4, cette restriction a été levée.
 
-
 Illustrons cela avec quelques exemples :
 
 - `1n+0` ou `n` ciblera chaque élément fils. `n` ne cible aucun élément pour le navigateur Android jusqu'à la version 4.3 alors qu'`1n` fonctionne. `1n` est synonyme de `1n+0` et les deux peuvent donc être utilisés de façon équivalente.
