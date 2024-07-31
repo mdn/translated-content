@@ -31,7 +31,8 @@ Si vous avez Mobile Chrome disponible, l'expérience est légèrement différent
 
 ![](chrome-a2hs-banner.png)
 
-> **Note :** Pour en savoir plus sur les bannières d'installation de Chrome, consultez l'article Web Installer des bannières Web App .
+> [!NOTE]
+> Pour en savoir plus sur les bannières d'installation de Chrome, consultez l'article Web Installer des bannières Web App .
 
 Si vous choisissez de ne pas l'ajouter à votre écran d'accueil à ce stade, vous pourrez le faire ultérieurement à l'aide de l'icône _Ajouter à l'écran d'accueil_ dans le menu principal de Chrome.
 
@@ -54,7 +55,8 @@ Pour permettre à votre application d'être ajoutée à un écran d'accueil, vou
 
 Le "manifest" est un fichier écrit au format JSON standard et doit être placé quelque part dans le répertoire de votre application (il est préférable que le `fichier.webmanifest` soit à la racine du site) avec le nom `fichier.webmanifest` (nous avons choisi `manifest.webmanifest` ). Il contient plusieurs champs qui définissent certaines informations sur l'application Web et sur son comportement. .
 
-> **Note :** L'extension `.webmanifest` est spécifiée dans la section Enregistrement du type de fichier, mais les navigateurs prennent aussi en charge les manifest avec d'autres extensions appropriées, par exemple `.json` .
+> [!NOTE]
+> L'extension `.webmanifest` est spécifiée dans la section Enregistrement du type de fichier, mais les navigateurs prennent aussi en charge les manifest avec d'autres extensions appropriées, par exemple `.json` .
 
 Les champs nécessaires pour A2HS sont les suivants:
 
@@ -112,7 +114,8 @@ Dans notre exemple d'application, nous venons d'utiliser un agent de service pou
 
 Bien que conçu à l'origine pour améliorer l'expérience utilisateur sur les systèmes d'exploitation mobiles, il existe également une technique pour rendre les PWA installables sur les plates-formes de bureau.
 
-> **Note :** au moment de la rédaction de ce document, les fonctionnalités décrites ci-dessous n'étaient prises en charge que par les versions les plus récentes de Chrome: par défaut sous Windows et derrière l'indicateur `#enable-desktop-pwas` sous macOS.
+> [!NOTE]
+> Au moment de la rédaction de ce document, les fonctionnalités décrites ci-dessous n'étaient prises en charge que par les versions les plus récentes de Chrome: par défaut sous Windows et derrière l'indicateur `#enable-desktop-pwas` sous macOS.
 
 ### Ajout d'un bouton d'installation
 
@@ -195,7 +198,8 @@ Si l'utilisateur sélectionne _Installer_ , l'application est installée (dispon
 
 Si l'utilisateur sélectionne _Annuler_ , l'état de l'application revient à ce qu'il était avant le clic sur le bouton.
 
-> **Note :** Le code de cette section provient principalement des bannières d'installation de l' application / Ajouter à l'écran d'accueil de Pete LaPage.
+> [!NOTE]
+> Le code de cette section provient principalement des bannières d'installation de l' application / Ajouter à l'écran d'accueil de Pete LaPage.
 
 ## Voir aussi
 

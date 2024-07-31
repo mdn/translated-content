@@ -14,7 +14,7 @@ Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされまし�
 ハイライト:
 
 - [ネットワークモニタの Security パネル](/ja/docs/Tools/Network_Monitor#Security)
-- [インスペクタのアニメーションパネル](/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations#Firefox_37)
+- [インスペクターのアニメーションパネル](/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations#Firefox_37)
 - [WebIDE でカスタムビルドステップの実行をサポート](/ja/docs/Tools/WebIDE/Running_and_debugging_apps#Running_a_custom_build_step)
 
 [Firefox 36 から Firefox 37 の間に解決した開発ツール関連のバグ一覧](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-01-12&chfield=resolution&query_format=advanced&chfieldfrom=2014-11-28&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=11892733)
@@ -29,7 +29,7 @@ Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされまし�
 ### HTML
 
 - リンクを新しいタブで開く場合でも、`<a rel="noreferrer">` が機能するようになりました ([Firefox バグ 1031264](https://bugzil.la/1031264))。
-- `<input accept>` で、`'.'` の後に拡張子を記載する形式を受け入れるようになりました。これを指定するとファイル選択ダイアログをユーザーに提示するとき、指定した拡張子でフィルタします ([Firefox バグ 826176](https://bugzil.la/826176))。
+- `<input accept>` で、`'.'` の後に拡張子を記載する形式を受け入れるようになりました。これを指定するとファイル選択ダイアログをユーザーに提示するとき、指定した拡張子でフィルターします ([Firefox バグ 826176](https://bugzil.la/826176))。
 
 ### JavaScript
 

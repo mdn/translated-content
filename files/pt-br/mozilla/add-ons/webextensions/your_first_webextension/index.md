@@ -121,7 +121,8 @@ Agora visite uma página em "mozilla.org" e você deve ver uma borda vermelha em
 
 ![Border displayed on mozilla.org](border_on_mozilla_org.png)
 
-> **Nota:** Não tente acessar addons.mozilla.org! Os scripts de conteúdo são bloqueados nesse domínio.
+> [!NOTE]
+> Não tente acessar addons.mozilla.org! Os scripts de conteúdo são bloqueados nesse domínio.
 
 Experimente um pouco. Edite o script de conteúdo para alterar a cor da borda ou faça outra coisa com o conteúdo da página. Salve o script de conteúdo e, em seguida, recarregue os arquivos da extensão clicando no botão "Reload" em about:debugging. Você poderá ver as mudanças imediatamente:
 

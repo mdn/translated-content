@@ -33,7 +33,8 @@ animation-duration: 10s, 30s, 230ms
 - `<time>`
   - : El tiempo que tarda la animación en terminar su secuencia. Podemos especificarlo en segundos (usando `s`) o milisegundos (usando `ms`). Si no especificamos la unidad, la sentencia no será válida.
 
-> **Nota:** No acepta valores negativos, si los ponemos la sentencia se ignorará. Algunas implementaciones antiguas (con prefijos) pueden considerar los valores negativos como si fueran `0s`.
+> [!NOTE]
+> No acepta valores negativos, si los ponemos la sentencia se ignorará. Algunas implementaciones antiguas (con prefijos) pueden considerar los valores negativos como si fueran `0s`.
 
 ## Ejemplos
 

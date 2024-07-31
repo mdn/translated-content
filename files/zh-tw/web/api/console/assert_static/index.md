@@ -9,7 +9,8 @@ slug: Web/API/console/assert_static
 
 {{AvailableInWorkers}}
 
-> **備註：** 在 Node.js 內 `console.assert()` 方法的實做，與瀏覽器並不相同。瀏覽器內呼叫 falsy 的 `console.assert()` 斷言出現 `message`，但不會中斷程式碼的執行。然而在 Node.js 裡面，falsy 斷言會拋出 `AssertionError` 錯誤。
+> [!NOTE]
+> 在 Node.js 內 `console.assert()` 方法的實做，與瀏覽器並不相同。瀏覽器內呼叫 falsy 的 `console.assert()` 斷言出現 `message`，但不會中斷程式碼的執行。然而在 Node.js 裡面，falsy 斷言會拋出 `AssertionError` 錯誤。
 
 ## 語法
 

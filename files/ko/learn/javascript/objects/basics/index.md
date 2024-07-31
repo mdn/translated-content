@@ -95,7 +95,8 @@ person.greeting();
 
 이제 객체 내부에 몇 가지 데이터와 기능이 있으며, 멋진 간단한 구문으로 액세스 할 수 있습니다!
 
-> **참고:** 만약 여기까지 진행하는데 어려움이 있다면, 제가 만들어놓은 파일과 비교해보세요 — [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (그리고 [실행되는 예제도 보세요](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). Live 버전에서는 텅빈 화면만 보이겠지만, 그게 정상입니다 — 다시, 개발자도구를 열고 객체 구조를 들여다보기 위해 위에 언급된 명령어를 입력해보세요.
+> [!NOTE]
+> 만약 여기까지 진행하는데 어려움이 있다면, 제가 만들어놓은 파일과 비교해보세요 — [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (그리고 [실행되는 예제도 보세요](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). Live 버전에서는 텅빈 화면만 보이겠지만, 그게 정상입니다 — 다시, 개발자도구를 열고 객체 구조를 들여다보기 위해 위에 언급된 명령어를 입력해보세요.
 
 자, 이제 뭘 해볼까요? 객체는 각기 다른 이름(위의 예에서는 `name` 과 `age`)과 값(예제에서, `['Bob', 'Smith']` 과 `32`)을 갖는 복수개의 멤버로 구성됩니다. 한 쌍의 이름과 값은 ',' 로 구분되야 하고, 이름과 값은 ':' 으로 분리됩니다. 결국 문법은 아래와 같은 패턴이 됩니다.
 
@@ -305,7 +306,8 @@ var myNotification = new Notification("Hello!");
 
 다음 문서에서 생성자에 대해서 좀더 자세히 알아볼 것입니다.
 
-> **참고:** 객체간 통신은 **message passing** 방식을 사용한다고 생각하는게 좋습니다. 한 객체가 다른 객체에게 어떤 액션을 요청해야 하는 경우, 그 객체는 다른 객체가 가지고 있는 메소드를 통해서 메세지를 보내는 것이고, 응답을 기다리는 것입니다. 그 응답은 것이 우리가 알고 있는 return 값입니다.
+> [!NOTE]
+> 객체간 통신은 **message passing** 방식을 사용한다고 생각하는게 좋습니다. 한 객체가 다른 객체에게 어떤 액션을 요청해야 하는 경우, 그 객체는 다른 객체가 가지고 있는 메소드를 통해서 메세지를 보내는 것이고, 응답을 기다리는 것입니다. 그 응답은 것이 우리가 알고 있는 return 값입니다.
 
 ## 실력을 시험해보세요!
 

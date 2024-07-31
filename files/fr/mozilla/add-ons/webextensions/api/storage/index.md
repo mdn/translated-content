@@ -20,7 +20,8 @@ Chaque extension a sa propre zone de stockage, qui peut être divisée entre plu
 
 Bien que cette API soit semblable à {{domxref("Window.localStorage")}} il est conseillé de ne pas utiliser `Window.localStorage` dans le code de l'extension pour stocker ses données. Firefox effacera les données stockées via l'API localStorage par les extensions dans plusieurs scénarios où les utilisateurs effacent leur historique de navigation ou des données pour des raisons de confidentialité, alors que les données sauvées en utilisant l'API [`storage.local`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) seront correctement conservées dans ces scénarios.
 
-> **Note :** La zone de stockage n'est pas chiffrée et ne doit pas être utilisée pour stocker des informations confidentielles sur les utilisateurs.
+> [!NOTE]
+> La zone de stockage n'est pas chiffrée et ne doit pas être utilisée pour stocker des informations confidentielles sur les utilisateurs.
 
 ## Types
 
@@ -51,7 +52,7 @@ Bien que cette API soit semblable à {{domxref("Window.localStorage")}} il est c
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/extensions/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
 >

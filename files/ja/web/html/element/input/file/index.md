@@ -15,7 +15,8 @@ l10n:
 
 ファイル入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性には、選択されたファイルへのパスを表す文字列が入ります。ファイルが選択されていない場合は、値は空文字列 (`""`) になります。ユーザーが複数のファイルを選択すると、`value` は選択されたファイルのリストのうち最初のファイルを表します。その他のファイルは [input 要素の `HTMLInputElement.files` プロパティ](/ja/docs/Web/API/File_API/Using_files_from_web_applications#選択されたファイルについての情報の取得)を使って得ることができます。
 
-> **メモ:** 文字列には[常に `C:\fakepath\` の接頭辞が付き](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)、ファイルの実際のパスにはなりません。疑わしいソフトウェアがユーザーのファイル構造を推測することを防止するためです。
+> [!NOTE]
+> 文字列には[常に `C:\fakepath\` の接頭辞が付き](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)、ファイルの実際のパスにはなりません。疑わしいソフトウェアがユーザーのファイル構造を推測することを防止するためです。
 
 ## 追加の属性
 
@@ -96,7 +97,8 @@ div {
 
 {{EmbedLiveSample('A_basic_example', 650, 90)}}
 
-> **メモ:** この例は GitHub にもあります。 — [ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)を確認してください。
+> [!NOTE]
+> この例は GitHub にもあります。 — [ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)を確認してください。
 
 ユーザーの端末やオペレーティングシステムに関わらず、ファイル入力欄にはユーザーがファイルを選択することができるファイル選択ダイアログを開くボタンがあります。
 
@@ -121,7 +123,8 @@ div {
 - `webkitRelativePath` {{non-standard_inline}}
   - : ディレクトリー選択ダイアログ (つまり、 [`webkitdirectory`](#webkitdirectory) 属性が設定されている `file` ダイアログ) で選択されたベースディレクトリーからのファイルの相対パスを表す文字列です。_これは標準外なので使用するには注意してください。_
 
-> **メモ:** 最近のブラウザーはすべて、 `HTMLInputElement.files` の値を取得だけではなく設定もできるようになっています。これが最も後に追加されたのは Firefox で、バージョン 57 で追加されました (see [Firefox バグ 1384030](https://bugzil.la/1384030))。
+> [!NOTE]
+> 最近のブラウザーはすべて、 `HTMLInputElement.files` の値を取得だけではなく設定もできるようになっています。これが最も後に追加されたのは Firefox で、バージョン 57 で追加されました (see [Firefox バグ 1384030](https://bugzil.la/1384030))。
 
 ### 受け付けるファイル型の制限
 
@@ -162,7 +165,8 @@ div {
 
 {{EmbedLiveSample('Limiting_accepted_file_types', 650, 90)}}
 
-> **メモ:** この例は GitHub にもあります。 — [ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-with-accept.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html)を確認してください。
+> [!NOTE]
+> この例は GitHub にもあります。 — [ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-with-accept.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html)を確認してください。
 
 同じように見えるかもしれませんが、この入力欄でファイルを選択しようとすると、このファイル選択ダイアログでは `accept` の値で指定されたファイル形式しか選択できません。 (細かい動きはブラウザーやオペレーティングシステムによって異なります)。
 
@@ -205,7 +209,8 @@ elem.click();
 
 この例では、この例では、 `HTMLInputElement.files` プロパティで利用できるファイル情報を利用する、さらに高度なファイル選択ダイアログを示し、またいくつか巧妙なテクニックを示します。
 
-> **メモ:** この例の完全なソースコードは GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-example.html) ([ライブ版もあります](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)) で見ることができます。 CSS については説明しません。 JavaScript が中心です。
+> [!NOTE]
+> この例の完全なソースコードは GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-example.html) ([ライブ版もあります](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)) で見ることができます。 CSS については説明しません。 JavaScript が中心です。
 
 最初に、 HTML を見てみましょう。
 
@@ -303,7 +308,8 @@ const preview = document.querySelector(".preview");
 input.style.opacity = 0;
 ```
 
-> **メモ:** ファイル入力欄を非表示にするために {{cssxref("opacity")}} を使用し、 {{cssxref("visibility", "visibility: hidden")}} や {{cssxref("display", "display: none")}} を使用しないのは、支援技術が後二者のファイル入力欄が対話可能ではないと解釈するからです。
+> [!NOTE]
+> ファイル入力欄を非表示にするために {{cssxref("opacity")}} を使用し、 {{cssxref("visibility", "visibility: hidden")}} や {{cssxref("display", "display: none")}} を使用しないのは、支援技術が後二者のファイル入力欄が対話可能ではないと解釈するからです。
 
 次に、[イベントリスナー](/ja/docs/Web/API/EventTarget/addEventListener)を入力欄に追加して、選択された値の変化 (この場合、ファイルが選択されたこと) を監視します。イベントリスナーは独自の `updateImageDisplay()` 関数を呼び出します。
 

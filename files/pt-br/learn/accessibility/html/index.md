@@ -62,7 +62,8 @@ A semântica do HTML não demora mais para escrever do que a versão não-semân
 
 Então vamos dar uma olhada em como fazer o HTML mais acessível.
 
-> **Nota:** É uma boa ideia ter um leitor de tela instalado no seu computador, dessa forma é possível testar os exemplos que serão mostrados abaixo. Veja o nosso [Guia de Leitores de Tela](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders) para mais detalhes.
+> [!NOTE]
+> É uma boa ideia ter um leitor de tela instalado no seu computador, dessa forma é possível testar os exemplos que serão mostrados abaixo. Veja o nosso [Guia de Leitores de Tela](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders) para mais detalhes.
 
 ## Boa semântica
 
@@ -261,7 +262,8 @@ Se você experimentar ler esse exemplo de estrutura mais moderna com um leitor d
 
 Outra consideração que pode ser feita é criar layouts utilizando a semântica HTML5 nos elementos, como visto no exemplo (veja [content sectioning](/pt-BR/docs/Web/HTML/Element#Content_sectioning)) — você pode criar um layout utilizando apenas elementos aninhados {{htmlelement("div")}}, mas é melhor e mais apropriado seccionar elementos de uma forma que eles envelopem a navegação principal ({{htmlelement("nav")}}), rodapé({{htmlelement("footer")}}), unidades de conteúdo repetidas({{htmlelement("article")}}), etc. Eles trazem semânticas extras para os leitores de tela(e outras ferramentas) para dar aos usuários mais dicas sobre o conteúdo no qual eles estão navegando (veja [Screen Reader Support for new HTML5 Section Elements](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/) para uma ideia do que é suporte de leitor de tela).
 
-> **Nota:** Ao mesmo tempo que seu conteúdo deve ter boa semântica e um layout bonito, deve-se fazer sentido que em sua ordem de fonte — você poderá sempre movimentá-la utilizando CSS depois, mas você deve colocar a ordem de fonte de forma correta desde o começo, para que os usuários que utilizam de leitores de tela possam receber uma leitura que faz sentido.
+> [!NOTE]
+> Ao mesmo tempo que seu conteúdo deve ter boa semântica e um layout bonito, deve-se fazer sentido que em sua ordem de fonte — você poderá sempre movimentá-la utilizando CSS depois, mas você deve colocar a ordem de fonte de forma correta desde o começo, para que os usuários que utilizam de leitores de tela possam receber uma leitura que faz sentido.
 
 ### Controles de UI
 
@@ -273,7 +275,8 @@ Um aspecto chave da acessibilidade de controles Ui é que, por padrão, os naveg
 
 Você pode apertar Enter/Return para seguir um link que está focado ou apertar um botão (nós incluimos um pouco de JavaScript para fazer os botões chamarem uma mensagem), ou começar a escrever para inserir um texto em um formulário de texto (outros elementos possuem controles diferentes, por exemplo o elemento {{htmlelement("select")}} pode ter suas opções visíveis e selecionáveis utilizando as teclas de flecha para cima e para baixo.
 
-> **Nota:** Navegadores diferentes podem ter mais opções de controle pelo teclado. Veja [Using native keyboard accessibility](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility) para mais detalhes.
+> [!NOTE]
+> Navegadores diferentes podem ter mais opções de controle pelo teclado. Veja [Using native keyboard accessibility](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility) para mais detalhes.
 
 Você essencialmente consegue esse comportamento de graça, só ao utilizar os elementos apropriados, ex.
 
@@ -388,7 +391,8 @@ Porém este, é um exemplo ruim para link:
 </p>
 ```
 
-> **Nota:** Você pode encontrar muito mais sobre implementação de link e melhores práticas no artigo [Criando hyperlinks](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks). Você também pode ver alguns bons e maus exemplos em [good-links.html](http://mdn.github.io/learning-area/accessibility/html/good-links.html) e [bad-links.html](http://mdn.github.io/learning-area/accessibility/html/bad-links.html).
+> [!NOTE]
+> Você pode encontrar muito mais sobre implementação de link e melhores práticas no artigo [Criando hyperlinks](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks). Você também pode ver alguns bons e maus exemplos em [good-links.html](http://mdn.github.io/learning-area/accessibility/html/good-links.html) e [bad-links.html](http://mdn.github.io/learning-area/accessibility/html/bad-links.html).
 
 Os rótulos de formulário (labels) também são importantes para dar a você uma ideia sobre o que precisa ser preenchido em cada entrada de formulário. O seguinte exemplo aparentemente é bem razoável:
 
@@ -413,7 +417,8 @@ Com o código assim, o rótulo será claramente associado à entrada; a descriç
 
 Como um bônus adicional, na maioria dos navegadores a associação de um rótulo a uma entrada de formulário significa que você pode clicar no rótulo para selecionar/ativar o elemento de formulário. Isso consequentemente aumenta o tamanho da área clicável dos elementos, facilitando assim a seleção.
 
-> **Nota:** Você pode ver alguns bons e maus exemplos de formulários em [good-form.html](http://mdn.github.io/learning-area/accessibility/html/good-form.html) e [bad-form.html](http://mdn.github.io/learning-area/accessibility/html/bad-form.html).
+> [!NOTE]
+> Você pode ver alguns bons e maus exemplos de formulários em [good-form.html](http://mdn.github.io/learning-area/accessibility/html/good-form.html) e [bad-form.html](http://mdn.github.io/learning-area/accessibility/html/bad-form.html).
 
 ## Tabelas de dados acessíveis
 
@@ -451,7 +456,8 @@ Agora dê uma olhada no exemplo da nossa [tabela de bandas punk](https://github.
 - Os cabeçalhos de tabela são definidos usando elementos {{htmlelement ("th")}} - você também pode especificar se eles são cabeçalhos de linhas ou colunas usando o atributo `scope`. Isso fornece grupos completos de dados que podem ser consumidos pelos leitores de tela como unidades únicas.
 - O elemento {{htmlelement ("caption")}} e o atributo de resumo (`<table>` `summary`) executam tarefas semelhantes - eles funcionam como texto alternativo para uma tabela, fornecendo ao usuário de leitor de telas um resumo rápido e útil do conteúdo da tabela. `<caption>` é geralmente mais adequado, pois torna o seu conteúdo acessível para os usuários com visão também, que também poderão achar isso útil. Você não precisa ter os dois.
 
-> **Nota:** Consulte nossos artigos sobre [Recursos avançados de acessibilidade para tabelas em HTML](/pt-BR/docs/Learn/HTML/Tables/Advanced) para obter mais detalhes sobre tabelas de dados acessíveis.
+> [!NOTE]
+> Consulte nossos artigos sobre [Recursos avançados de acessibilidade para tabelas em HTML](/pt-BR/docs/Learn/HTML/Tables/Advanced) para obter mais detalhes sobre tabelas de dados acessíveis.
 
 ## Alternativas em textos
 
@@ -477,7 +483,8 @@ Temos um exemplo simples escrito, [accessible-image.html](http://mdn.github.io/l
 
 A primeira imagem, quando visualizada por um leitor de tela, não oferece muita ajuda ao usuário - o VoiceOver, por exemplo, lê "/dinosaur.png, image". Ele lê o nome do arquivo para tentar fornecer alguma ajuda. Neste exemplo, o usuário pelo menos saberá que é um tipo de dinossauro, mas muitas vezes os arquivos podem ser carregados com nomes de arquivos gerados por máquina (por exemplo, de uma câmera digital) e esses nomes provavelmente não fornecem nenhum contexto ao conteúdo da imagem.
 
-> **Nota:** É por isso que você nunca deve incluir conteúdo de texto dentro de uma imagem - os leitores de tela simplesmente não podem acessá-lo. Existem outras desvantagens também - você não pode selecioná-lo e copiá-lo/colá-lo. Apenas não faça isso!
+> [!NOTE]
+> É por isso que você nunca deve incluir conteúdo de texto dentro de uma imagem - os leitores de tela simplesmente não podem acessá-lo. Existem outras desvantagens também - você não pode selecioná-lo e copiá-lo/colá-lo. Apenas não faça isso!
 
 Quando um leitor de tela encontra a segunda imagem, ele lê todo o atributo `alt` - "Um tiranossauro Rex vermelho: Um dinossauro de duas patas em pé como um humano, com braços pequenos e uma cabeça grande com muitos dentes afiados".
 
@@ -485,7 +492,8 @@ Isso destaca a importância de não apenas usar nomes de arquivos significativos
 
 Uma coisa a considerar é se as imagens possuem algum significado dentro de seu conteúdo ou se elas são puramente decorativas. Se eles são decorativas, é melhor apenas incluí-las na página como imagens de fundo através de CSS.
 
-> **Nota:** Leia [Imagens em HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) e [Imagens Responsivas](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) para obter mais informações sobre a implementação de imagens e melhores práticas.
+> [!NOTE]
+> Leia [Imagens em HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) e [Imagens Responsivas](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) para obter mais informações sobre a implementação de imagens e melhores práticas.
 
 Se você quiser fornecer informações contextuais extras, deverá colocá-las no texto ao redor da imagem ou dentro de um atributo de título (`title`), como mostrado acima. Nesse caso, a maioria dos leitores de tela lerá o texto alternativo, o atributo de título e o nome do arquivo. Além disso, os navegadores exibem o texto do título como dicas de ferramentas quando estão sobre o mouse.
 
@@ -540,7 +548,8 @@ Pode haver momentos em que uma imagem é incluída no design de uma página, mas
 
 A razão para usar um `alt` vazio ao invés de não incluí-lo é porque muitos leitores de tela anunciam o URL da imagem inteira se nenhum `alt` for fornecido. No exemplo acima, a imagem está agindo como uma decoração visual para o título ao qual está associada. Em casos como esse, e nos casos em que uma imagem é apenas decoração e não tem valor de conteúdo, você deve colocar um `alt` vazio em suas imagens. Outra alternativa é usar o atributo ARIA role (role="presentation") - isso também impede que os leitores de telas leiam textos alternativos.
 
-> **Nota:** se possível, você deve usar CSS para exibir imagens que são apenas decorativas.
+> [!NOTE]
+> se possível, você deve usar CSS para exibir imagens que são apenas decorativas.
 
 ## Resumo
 

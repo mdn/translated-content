@@ -13,7 +13,8 @@ Autrement dit, cela permet à un élément personnalisé, ou à n'importe quoi a
 
 Une utilisation classique consiste à utiliser une expression avec un sélecteur de descendants, par exemple `h1`, afin de cibler uniquement les instances de l'élément personnalisé situées dans un élément `<h1>`. Un autre usage pourrait consister à permettre aux éléments internes de réagir aux classes ou attributs des éléments parmi les ancêtres (par exemple, appliquer une couleur de texte différente lorsqu'une classe `.dark-theme` est appliquée à `<body>`).
 
-> **Note :** Cette pseudo-classe n'a aucun effet si elle est utilisée en dehors d'un DOM sombre.
+> [!NOTE]
+> Cette pseudo-classe n'a aucun effet si elle est utilisée en dehors d'un DOM sombre.
 
 ```css
 /* Cible l'hôte d'une racine sombre, uniquement si elle

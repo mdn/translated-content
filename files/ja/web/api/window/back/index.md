@@ -7,7 +7,8 @@ slug: Web/API/Window/back
 
 `back()` は {{domxref("Window")}} インターフェイスの廃止された標準外のメソッドで、履歴の前の項目をウィンドウに返します。これは Firefox 固有のメソッドであり、Firefox 31 で削除されました。
 
-> **メモ:** 代わりに、標準の {{domxref("history.back")}} メソッドを使用してください。
+> [!NOTE]
+> 代わりに、標準の {{domxref("history.back")}} メソッドを使用してください。
 
 ## 構文
 

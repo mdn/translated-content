@@ -13,7 +13,8 @@ Si tu complemento se distribuye en [addons.mozilla.org](https://addons.mozilla.o
 
 Así que puedes empezar visitando AMO para comprobar si tu complemento requiere trabajo.
 
-> **Nota:** Todavía debes testear tu complemento en Firefox 9, incluso si ha sido actualizado automáticamente. Existen casos extremos que pueden no ser automáticamente detectados.
+> [!NOTE]
+> Todavía debes testear tu complemento en Firefox 9, incluso si ha sido actualizado automáticamente. Existen casos extremos que pueden no ser automáticamente detectados.
 
 ## Los componentes de inicio pueden remover scripts con carga retrasada
 

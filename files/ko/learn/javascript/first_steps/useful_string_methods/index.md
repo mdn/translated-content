@@ -317,7 +317,8 @@ textarea.onkeyup = function () {
 3. Using this latest variable as a substring, replace the first letter of the lowercase string with the first letter of the lowercase string changed to upper case. Store the result of this replace procedure in another new variable.
 4. Change the value of the `result` variable to equal to the final result, not the `input`.
 
-> **참고:** A hint — the parameters of the string methods don't have to be string literals; they can also be variables, or even variables with a method being invoked on them.
+> [!NOTE]
+> A hint — the parameters of the string methods don't have to be string literals; they can also be variables, or even variables with a method being invoked on them.
 
 ```html hidden
 <h2>Live output</h2>

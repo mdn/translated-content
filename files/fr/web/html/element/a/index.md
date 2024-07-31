@@ -23,7 +23,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
     La définition d'une valeur la suggère comme nom de fichier. Les caractères `/` et `\` sont convertis en caractères de soulignement (`_`). Les systèmes de fichiers peuvent interdire d'autres caractères dans les noms de fichiers, les navigateurs ajusteront donc le nom suggéré si nécessaire.
 
-    > **Note :**
+    > [!NOTE]
     >
     > - `download` ne fonctionne que pour [les URLs de même origine](/fr/docs/Web/Security/Same-origin_policy), ou les schémas `blob:` et `data:`.
     > - Si l'en-tête `Content-Disposition` comporte des informations différentes de celles de l'attribut `download`, le comportement résultant peut différer :
@@ -58,7 +58,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
     - `_parent` : le contexte de navigation parent de celui en cours. S'il n'y a pas de parent, il se comporte comme `_self`.
     - `_top` : le contexte de navigation le plus haut (le contexte "le plus haut" qui est un ancêtre du contexte actuel). S'il n'a aucun ancêtre, il se comporte comme `_self`.
 
-    > **Note :** Définir `target="_blank"` sur les éléments `<a>` fournit implicitement le même comportement `rel` que définir [`rel="noopener"`](/fr/docs/Web/HTML/Link_types/noopener) qui ne définit pas `window.opener`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour le support.
+    > [!NOTE]
+    > Définir `target="_blank"` sur les éléments `<a>` fournit implicitement le même comportement `rel` que définir [`rel="noopener"`](/fr/docs/Web/HTML/Link_types/noopener) qui ne définit pas `window.opener`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour le support.
 
 - **`type`**
   - : Donne des indications sur le format de l'URL liée avec un [Type MIME](/fr/docs/Glossary/MIME_type). Aucune fonctionnalité intégrée.
@@ -69,7 +70,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : Fait allusion aux [encodages des caractères](/fr/docs/Glossary/character_encoding) de l'URL liée.
 
-    > **Note :** Cet attribut est déprécié et **ne doit pas être utilisé par les auteurs**. Utilisez l'en-tête HTTP [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) sur l'URL liée.
+    > [!NOTE]
+    > Cet attribut est déprécié et **ne doit pas être utilisé par les auteurs**. Utilisez l'en-tête HTTP [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) sur l'URL liée.
 
 - **`coords`** {{Deprecated_Inline}}
   - : Utilisé avec [l'attribut `shape`](#shape). Une liste de coordonnées séparées par des virgules.
@@ -77,7 +79,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : Était nécessaire pour définir un emplacement cible possible dans une page. En HTML 4.01, `id` et `name` pouvaient tous deux être utilisés sur `<a>`, pour autant qu'ils aient des valeurs identiques.
 
-    > **Note :** Utilisez l'attribut universel [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) à la place.
+    > [!NOTE]
+    > Utilisez l'attribut universel [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) à la place.
 
 - **`rev`** {{Deprecated_Inline}}
   - : Spécifiait un lien inverse ; l'opposé de [l'attribut `rel`](#rel). Déprécié pour avoir été très confus.
@@ -85,7 +88,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : La forme de la région de l'hyperlien dans une carte d'image.
 
-    > **Note :** Utilisez plutôt l'élément [`<area>`](/fr/docs/Web/HTML/Element/area) pour les cartes d'images.
+    > [!NOTE]
+    > Utilisez plutôt l'élément [`<area>`](/fr/docs/Web/HTML/Element/area) pour les cartes d'images.
 
 ## Propriétés
 
@@ -247,7 +251,8 @@ a {
 
 {{EmbedLiveSample('')}}
 
-> **Note :** Vous pouvez utiliser `href="#top"` ou le fragment vide (`href="#"`) pour créer un lien vers le haut de la page actuelle, [comme défini dans la spécification HTML](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
+> [!NOTE]
+> Vous pouvez utiliser `href="#top"` ou le fragment vide (`href="#"`) pour créer un lien vers le haut de la page actuelle, [comme défini dans la spécification HTML](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
 
 ### Créer un lien avec une adresse électronique
 

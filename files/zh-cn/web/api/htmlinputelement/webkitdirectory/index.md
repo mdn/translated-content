@@ -7,7 +7,8 @@ slug: Web/API/HTMLInputElement/webkitdirectory
 
 **`HTMLInputElement.webkitdirectory`** 是一个反应了 HTML 属性 [`webkitdirectory`](/zh-CN/docs/Web/HTML/Element/input/file#webkitdirectory) 的属性，其指示 {{HTMLElement("input")}} 元素应该让用户选择文件目录而非文件。在选择文件目录后，该目录及其整个内容层次结构将包含在所选项目集内。可以使用 {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} 属性获取选定的文件系统条目。
 
-> **备注：** 该属性在规范中被称为 `webkitEntries` 的原因是，其起源于 Google Chrome 特定的 API。它有可能会被重命名。
+> [!NOTE]
+> 该属性在规范中被称为 `webkitEntries` 的原因是，其起源于 Google Chrome 特定的 API。它有可能会被重命名。
 
 ## 值
 
@@ -46,7 +47,8 @@ slug: Web/API/HTMLInputElement/webkitdirectory
 
 如果用户选择了 `PhotoAlbums`，则文件列表上将会包含上面列出的每个文件（而不包含目录）的 {{domxref("File")}} 对象。条目 `PIC2343.jpg` 的 `webkitRelativePath` 属性值将会是 `PhotoAlbums/Birthdays/Don's 40th birthday/PIC2343.jpg`。即使 {{domxref("FileList")}} 是扁平的，这也使得知道层次结构成为可能。
 
-> **备注：** 在 _Chromium < 72_ 的版本中，`webkitRelativePath` 的行为表现有所不同。有关更多详细信息，请参见[此 bug](https://crbug.com/124187)。
+> [!NOTE]
+> 在 _Chromium < 72_ 的版本中，`webkitRelativePath` 的行为表现有所不同。有关更多详细信息，请参见[此 bug](https://crbug.com/124187)。
 
 ## 示例
 

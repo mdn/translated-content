@@ -68,7 +68,8 @@ slug: Web/HTML/Element/script
 
     包含 `defer` 属性的脚本将阻塞 `DOMContentLoaded` 事件触发，直到脚本完成加载并执行。
 
-    > **警告：** 本属性不应在缺少 `src` 属性的情况下使用（也就是内联脚本的情况下），这种情况下将不会生效。
+    > [!WARNING]
+    > 本属性不应在缺少 `src` 属性的情况下使用（也就是内联脚本的情况下），这种情况下将不会生效。
     >
     > `defer` 属性对[模块脚本](/zh-CN/docs/Web/JavaScript/Guide/Modules)也不会生效——它们默认是 defer 的。
 
