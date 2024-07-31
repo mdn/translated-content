@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.measureText()`** 方法返回一个关于被测量文本的 {{domxref("TextMetrics")}} 对象所包含的信息（例如它的宽度）。
+**`CanvasRenderingContext2D.measureText()`** 方法返回一个包含被测量文本相关信息（例如它的宽度）的 {{domxref("TextMetrics")}} 对象。
 
 ## 语法
 
@@ -26,7 +26,7 @@ measureText(text)
 
 ## 示例
 
-给出 {{HTMLElement("canvas")}} 元素：
+给定 {{HTMLElement("canvas")}} 元素：
 
 ```html
 <canvas id="canvas"></canvas>
