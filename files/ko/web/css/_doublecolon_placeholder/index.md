@@ -57,7 +57,7 @@ l10n:
   type="email" />
 ```
 
-- [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
+- [폼 필드 안의 플레이스홀더는 해롭다 — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
 
 ### 윈도우 고대비 모드
 
@@ -97,7 +97,7 @@ input::placeholder {
 
 ### 불투명한 텍스트
 
-몇몇의 (파이어폭스와 같은) 브라우저 에서는 플레이스홀더의 {{cssxref("opacity")}} 기본값을 100% 보다 늦게 설정합니다. 만일 플레이스홀더의 텍스트를 불투명하게 만들고 싶다면 `opacity` 를 `1` 로 설정하세요.
+몇몇의 (파이어폭스와 같은) 브라우저 에서는 플레이스홀더의 {{cssxref("opacity")}} 기본값을 100% 보다 낮게 설정합니다. 만일 플레이스홀더의 텍스트를 불투명하게 만들고 싶다면 `opacity` 를 `1` 로 설정하세요.
 
 #### HTML
 
