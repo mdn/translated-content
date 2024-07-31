@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLFormControlsCollection`** 接口表示 HTML *表单控件元素*的*集合*，由 {{domxref("HTMLFormElement")}} 接口的{{domxref("HTMLFormElement.elements", "元素", "", 1)}}属性返回。
+**`HTMLFormControlsCollection`** 接口表示 HTML *表单控件元素*的*集合*，由 {{domxref("HTMLFormElement")}} 接口的 {{domxref("HTMLFormElement.elements", "elements")}} 属性返回。
 
 此接口替换它所基于的 {{domxref("HTMLCollection")}} 中的一个方法。
 
