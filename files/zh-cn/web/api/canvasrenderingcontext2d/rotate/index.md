@@ -22,7 +22,7 @@ rotate(angle)
 - `angle`
   - : 顺时针旋转的弧度。如果你想通过角度值计算，可以使用公式： `degree * Math.PI / 180` 。
 
-旋转中心点一直是 canvas 的起始点。如果想改变中心点，我们可以通过 {{domxref("CanvasRenderingContext2D.translate", "translate()")}} 方法移动 canvas。
+旋转中心点一直是 canvas 的原点。如果想改变中心点，你可以通过 {{domxref("CanvasRenderingContext2D.translate", "translate()")}} 方法移动 canvas。
 
 ### 返回值
 
@@ -76,7 +76,7 @@ ctx.setTransform(1, 0, 0, 1, 0, 0);
 
 1. 首先，{{domxref("CanvasRenderingContext2D.translate()", "translate()")}} 将矩阵的原点移动到形状的中心。
 2. `rotate()` 按所需的角度旋转矩阵。
-3. 最后，`translate()` 将矩阵的原点移回到其起始点。这是通过将形状中心坐标的值应用到负方向来完成的。
+3. 最后，`translate()` 将矩阵的原点移回到其起始点。这是通过应用形状中心坐标值相反数来完成的。
 
 #### HTML
 
