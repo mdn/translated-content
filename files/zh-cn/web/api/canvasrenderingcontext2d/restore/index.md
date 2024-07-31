@@ -9,7 +9,7 @@ l10n:
 
 Canvas 2D API 的 **`CanvasRenderingContext2D.restore()`** 方法用于通过在绘图状态栈中弹出顶端的状态，将 canvas 恢复到最近的保存状态。如果没有保存状态，此方法不做任何改变。
 
-要了解有关[绘图状态](/zh-CN/docs/Web/API/CanvasRenderingContext2D/save#绘图状态)的更多信息，请参阅{{domxref("CanvasRenderingContext2D.save()")}}。
+要了解有关[绘图状态](/zh-CN/docs/Web/API/CanvasRenderingContext2D/save#绘图状态)的更多信息，请参阅 {{domxref("CanvasRenderingContext2D.save()")}}。
 
 ## 语法
 
