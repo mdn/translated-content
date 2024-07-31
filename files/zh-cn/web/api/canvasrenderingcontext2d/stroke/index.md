@@ -23,7 +23,7 @@ stroke(path)
 ### 参数
 
 - `path`
-  - : 要描边的路径 {{domxref("Path2D")}} 。
+  - : 要描边的 {{domxref("Path2D")}} 路径。
 
 ### 返回值
 
