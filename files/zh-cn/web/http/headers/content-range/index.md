@@ -1,20 +1,38 @@
 ---
 title: Content-Range
 slug: Web/HTTP/Headers/Content-Range
+l10n:
+  sourceCommit: beb5d4126bd1e5c838d0fa0eea3e996eb0a9e0b9
 ---
 
 {{HTTPSidebar}}
 
-在 HTTP 协议中，响应首部 **`Content-Range`** 显示的是一个数据片段在整个文件中的位置。
+**`Content-Range`** HTTP 响应标头表示部分消息在完整消息中的位置。
 
-| Header type                                                               | {{Glossary("Response header")}} |
-| ------------------------------------------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}}                                     | no                              |
-| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | no                              |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">标头类型</th>
+      <td>
+        {{Glossary("Response header", "响应标头")}}、{{Glossary("Payload header", "有效负载标头")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("CORS-safelisted request header", "列入 CORS 白名单的请求标头")}}
+      </th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
-```plain
+```http
 Content-Range: <unit> <range-start>-<range-end>/<size>
 Content-Range: <unit> <range-start>-<range-end>/*
 Content-Range: <unit> */<size>
@@ -23,20 +41,17 @@ Content-Range: <unit> */<size>
 ## 指令
 
 - \<unit>
-  - : 数据区间所采用的单位。通常是字节（byte）。
-
-<!---->
-
+  - : 指定范围的单位。通常是字节（`bytes`）。
 - \<range-start>
-  - : 一个整数，表示在给定单位下，区间的起始值。
+  - : 给定单位中的一个整数，表示所请求范围的起始位置（从零开始，包含起始位置）。
 - \<range-end>
-  - : 一个整数，表示在给定单位下，区间的结束值。
+  - : 给定单位中的一个整数，表示所请求范围的结束位置（从零开始，包含结束位置）。
 - \<size>
-  - : 整个文件的大小（如果大小未知则用"\*"表示）。
+  - : 文档的总长度（如果未知，则为 `'*'`）。
 
 ## 示例
 
-```plain
+```http
 Content-Range: bytes 200-1000/67589
 ```
 

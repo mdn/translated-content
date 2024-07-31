@@ -25,7 +25,8 @@ JavaScript 本身非常的簡潔，卻也充滿彈性，開發者們已經以 Ja
 
 但無論如何，要讓 JavaScript 跟 HTML 和 CSS 合作無間的話，可能還要費一些功夫。現在你將會從一些細小的地方開始著手，接著一步步地往前進。首先，我們將會向你展示如何將一些基本的 JavaScript 給加入你的頁面中，並且打造一個*「hello world!」*的範例（[這同時也是許多程式語言的標準範例程式](https://zh.wikipedia.org/zh-tw/Hello_World)）。
 
-> **警告：** 如果你還沒有學習過先前的課程，[請你下載這個範例程式碼](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip)，並以此開始練習。
+> [!WARNING]
+> 如果你還沒有學習過先前的課程，[請你下載這個範例程式碼](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip)，並以此開始練習。
 
 1. 首先，進入你測試網頁的資料夾中，並建立一個名為 `main.js` 的檔案，再將她存放於 `scripts` 資料夾內。
 2. 接著，開啟 `index.html` 檔案，並在 `</body>` 這個結束標籤之前的位置，使用一行新的空間來輸入以下的元素：
@@ -44,7 +45,8 @@ JavaScript 本身非常的簡潔，卻也充滿彈性，開發者們已經以 Ja
 
 5. 現在請你將修改過的 HTML 和 JavaScript 給存檔，再用瀏覽器讀取 `index.html`。你應該會看到以下的內容：![](hello-world.png)
 
-> **備註：** 我們選擇將 {{htmlelement("script")}} 元素放在接近 HTML 檔案底部的原因，是因為瀏覽器是依照程式碼存在檔案中的順序來讀取 HTML 檔案的。如果 JavaScript 先被瀏覽器讀取了，那她應該要去影響她之後的 HTML 程式碼，但有時候卻行不通，因為她比應該產生改變的 HTML 還要早被讀取到。因此，把她放在接近檔案底部的位置，通常都會是一個不錯的策略。
+> [!NOTE]
+> 我們選擇將 {{htmlelement("script")}} 元素放在接近 HTML 檔案底部的原因，是因為瀏覽器是依照程式碼存在檔案中的順序來讀取 HTML 檔案的。如果 JavaScript 先被瀏覽器讀取了，那她應該要去影響她之後的 HTML 程式碼，但有時候卻行不通，因為她比應該產生改變的 HTML 還要早被讀取到。因此，把她放在接近檔案底部的位置，通常都會是一個不錯的策略。
 
 ### 發生什麼事了？
 
@@ -52,13 +54,15 @@ JavaScript 本身非常的簡潔，卻也充滿彈性，開發者們已經以 Ja
 
 之後，我們將變數 `myHeading` 中 {{domxref("Element.innerHTML", "innerHTML")}} 特性的值設為「Hello world!」。
 
-> **備註：** Both of the features you used above are parts of the [Document Object Model (DOM) API](/zh-TW/docs/Web/API/Document_Object_Model), which allows you to manipulate documents.
+> [!NOTE]
+> Both of the features you used above are parts of the [Document Object Model (DOM) API](/zh-TW/docs/Web/API/Document_Object_Model), which allows you to manipulate documents.
 
 ## 語言基礎速成
 
 接著我們來解釋一下 JavaScript 基本特性，以讓你更加地了解她是如何運作的。更好的事情是，這些特性基本上也存在於所有程式語言中。所以如果你可以充分理解這些基礎知識，你就可以撰寫程式來創造無限可能！
 
-> **警告：** 在這篇文章中，請你試著將範例程式碼輸入到 JavaScript 主控台中，並觀察發生了什麼事。如果你想要了解更多 JavaScript 主控台的細節，請參閱 [Discover browser developer tools](/zh-TW/docs/Learn/Discover_browser_developer_tools)。
+> [!WARNING]
+> 在這篇文章中，請你試著將範例程式碼輸入到 JavaScript 主控台中，並觀察發生了什麼事。如果你想要了解更多 JavaScript 主控台的細節，請參閱 [Discover browser developer tools](/zh-TW/docs/Learn/Discover_browser_developer_tools)。
 
 ### 變數（Variables）
 
@@ -68,11 +72,14 @@ JavaScript 本身非常的簡潔，卻也充滿彈性，開發者們已經以 Ja
 let myVariable;
 ```
 
-> **備註：** 在 JavaScript 檔案內的每行內容都需要在結尾加上分號，以標示出這行結束的位置。只有在需要於單行中隔開敘述句時，分號才是絕對需要的。然而，有些人相信在每一個敘述句結尾加上分號才是最佳實踐。這裡有其他何時要加或不加分號的規則——請參考 [Your Guide to Semicolons in JavaScript](http://news.codecademy.com/your-guide-to-semicolons-in-javascript/) 以瞭解更多資訊。
+> [!NOTE]
+> 在 JavaScript 檔案內的每行內容都需要在結尾加上分號，以標示出這行結束的位置。只有在需要於單行中隔開敘述句時，分號才是絕對需要的。然而，有些人相信在每一個敘述句結尾加上分號才是最佳實踐。這裡有其他何時要加或不加分號的規則——請參考 [Your Guide to Semicolons in JavaScript](http://news.codecademy.com/your-guide-to-semicolons-in-javascript/) 以瞭解更多資訊。
 
-> **備註：** 基本上你可以幫變數取任何名字，不過還是有一些限制的（請參閱[這篇文章](http://www.codelifter.com/main/tips/tip_020.shtml)以了解變數的命名規則）。假如不太確定，可以[檢查變數名稱](https://mothereff.in/js-variables)來看看是否合法。
+> [!NOTE]
+> 基本上你可以幫變數取任何名字，不過還是有一些限制的（請參閱[這篇文章](http://www.codelifter.com/main/tips/tip_020.shtml)以了解變數的命名規則）。假如不太確定，可以[檢查變數名稱](https://mothereff.in/js-variables)來看看是否合法。
 
-> **備註：** JavaScript 是會區分大小寫字母的——`myVariable` 就跟 `myvariable` 不相同。如果你的程式碼出現了一些問題，可以試著檢查一下字母的大小寫！
+> [!NOTE]
+> JavaScript 是會區分大小寫字母的——`myVariable` 就跟 `myvariable` 不相同。如果你的程式碼出現了一些問題，可以試著檢查一下字母的大小寫！
 
 宣告了一個變數之後，你可以為她指定一個數值：
 
@@ -258,7 +265,8 @@ Everything in between is a comment.
 
 其實還有更多的運算子等的你去探索，但我們將在這裡先打住。你可以參照這篇[運算式與運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators)以取得完整的列表。
 
-> **備註：** 混合使用多種資料型態的話，可能會在計算時產生一些奇怪的結果，所以你要謹慎地為變數選用正確的資料類型。舉個例子：在主控台中輸入 `"35" + "25"`。為什麼你沒有得到你所想要的結果？因為使用引號框住數字會將她轉換成字串，所以你其實是將兩個字串給連接起來，而不是將她們給相加。如果你輸入的是 `35 + 25`，你將會得到正確的結果。
+> [!NOTE]
+> 混合使用多種資料型態的話，可能會在計算時產生一些奇怪的結果，所以你要謹慎地為變數選用正確的資料類型。舉個例子：在主控台中輸入 `"35" + "25"`。為什麼你沒有得到你所想要的結果？因為使用引號框住數字會將她轉換成字串，所以你其實是將兩個字串給連接起來，而不是將她們給相加。如果你輸入的是 `35 + 25`，你將會得到正確的結果。
 
 ### 條件（Conditionals）
 

@@ -27,7 +27,8 @@ No futuro, todas essas interfaces irão ser divididas na interface `Document`.
 
 ## Propriedades
 
-> **Nota:** A interface `Document` também herda das interfaces {{domxref("Node")}} e {{domxref("EventTarget")}}.
+> [!NOTE]
+> A interface `Document` também herda das interfaces {{domxref("Node")}} e {{domxref("EventTarget")}}.
 
 - {{domxref("Document.all")}} {{Deprecated_inline}} {{non-standard_inline}}
   - : Da acesso a todos os elementos do documento.È uma interface legada não padrão, voce deve usar o método {{domxref("Document.getElementById()")}} como alternativa.
@@ -156,7 +157,8 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
 
 ## Methods
 
-> **Nota:** The `Document` interface also inherits from the {{domxref("Node")}} and {{domxref("EventTarget")}} interfaces.
+> [!NOTE]
+> The `Document` interface also inherits from the {{domxref("Node")}} and {{domxref("EventTarget")}} interfaces.
 
 - {{domxref("Document.adoptNode","Document.adoptNode(Node node)")}}
   - : Adopt node from an external document.

@@ -63,7 +63,8 @@ image-set(
 
 {{EmbedGHLiveSample("css-examples/images/image-set.html", '100%', 600)}}
 
-> **メモ:** 上記の例では、 `-webkit` の接頭辞が付いた版を Chrome および Safari に対応させるために併用しています。 Firefox 90 では（標準のプロパティを追加していない開発者の互換性を確保するために） `-webkit-image-set()` を `image-set()` の別名として使用する対応が追加されました。
+> [!NOTE]
+> 上記の例では、 `-webkit` の接頭辞が付いた版を Chrome および Safari に対応させるために併用しています。 Firefox 90 では（標準のプロパティを追加していない開発者の互換性を確保するために） `-webkit-image-set()` を `image-set()` の別名として使用する対応が追加されました。
 
 ### image-set() を使用して別な画像形式を提供
 

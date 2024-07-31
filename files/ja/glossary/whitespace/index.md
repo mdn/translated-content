@@ -29,6 +29,6 @@ l10n:
   - [ASCII whitespace spec](https://infra.spec.whatwg.org/#ascii-whitespace)
   - [ECMAScript Language Specification](https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#sec-white-space)
 
-- [用語集](/ja/docs/Glossary)
+- 関連用語:
 
   1. {{Glossary("Character", "文字")}}

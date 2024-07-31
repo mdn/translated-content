@@ -7,7 +7,8 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
 
 現在是時候來更深入了解 Vue ，以及建立我們自訂的元件——我們將從建立一個元件開始，這個元件代表待辦清單裡的每一個項目。在過程中，我們會學到一些重要的概念，例如在元件裡面調用其他元件，使用 props 傳遞資料，以及儲存它的狀態（ state ）。
 
-> **備註：** 如果你需要根據我們的版本來檢查你的程式碼，你可以從 [todo-vue 存放庫](https://github.com/mdn/todo-vue)找到 Vue 範例應用程式最終版本的程式碼。有關實際運行的版本，請看 <https://mdn.github.io/todo-vue/dist/> 。
+> [!NOTE]
+> 如果你需要根據我們的版本來檢查你的程式碼，你可以從 [todo-vue 存放庫](https://github.com/mdn/todo-vue)找到 Vue 範例應用程式最終版本的程式碼。有關實際運行的版本，請看 <https://mdn.github.io/todo-vue/dist/> 。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -137,7 +138,8 @@ export default {
 - 第一種方法是將 prop 寫成字串存進陣列中，陣列中的每個元素都對應到一個 prop 的名稱。
 - 第二種方法是寫一個物件，將 prop 作為物件的 key，這種寫法可以設定 prop 的初始值、型別、是否為必要值以及簡單的驗證。
 
-> **備註：** Prop 驗證只有在開發環境下有效，所以在正式上線的環境中無法使用。此外，作為 prop 驗證的函式在元件被創建之前就會被呼叫，因此該函式無法取得元件中的任何狀態或是其他 prop。
+> [!NOTE]
+> Prop 驗證只有在開發環境下有效，所以在正式上線的環境中無法使用。此外，作為 prop 驗證的函式在元件被創建之前就會被呼叫，因此該函式無法取得元件中的任何狀態或是其他 prop。
 
 對於 `ToDoItem` 這個元件，我們會透過第二種方法宣告 prop，也就是物件的形式。
 
@@ -230,7 +232,8 @@ You'll note that the `data` property is a function. This is to keep the data val
 
 You use `this` to access a component's props and other properties from inside data, as you may expect. We'll see an example of this shortly.
 
-> **備註：** Because of the way that `this` works in arrow functions (binding to the parent's context), you wouldn't be able to access any of the necessary attributes from inside `data` if you used an arrow function. So don't use an arrow function for the `data` property.
+> [!NOTE]
+> Because of the way that `this` works in arrow functions (binding to the parent's context), you wouldn't be able to access any of the necessary attributes from inside `data` if you used an arrow function. So don't use an arrow function for the `data` property.
 
 So let's add a `data` property to our `ToDoItem` component. This will return an object containing a single property that we'll call `isDone`, whose value is `this.done`.
 
@@ -301,7 +304,8 @@ Let's add the package to our project with npm; stop your server and enter the fo
 npm install --save lodash.uniqueid
 ```
 
-> **備註：** If you prefer yarn, you could instead use `yarn add lodash.uniqueid`.
+> [!NOTE]
+> If you prefer yarn, you could instead use `yarn add lodash.uniqueid`.
 
 We can now import this package into our `ToDoItem` component. Add the following line at the top of `ToDoItem.vue`'s `<script>` element:
 

@@ -38,7 +38,8 @@ if (document.prerendering) {
 }
 ```
 
-> **メモ:** 事前レンダリングが完了するまで遅らせたいアクティビティの種類については、[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) ランディングページ、特に[安全でない投機的読み込み条件](/ja/docs/Web/API/Speculation_Rules_API#安全でない投機的読み込み条件)の節を参照してください。
+> [!NOTE]
+> 事前レンダリングが完了するまで遅らせたいアクティビティの種類については、[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) ランディングページ、特に[安全でない投機的読み込み条件](/ja/docs/Web/API/Speculation_Rules_API#安全でない投機的読み込み条件)の節を参照してください。
 
 ## 仕様書
 

@@ -9,7 +9,8 @@ l10n:
 
 **`leftDegrees`** は {{domxref("VRFieldOfView")}} インターフェイスの読み取り専用プロパティで、視野が左方向に何度広がっているかを返します。
 
-> **メモ:** このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 ## 値
 

@@ -69,7 +69,8 @@ _从父级的 {{domxref("AudioNode")}} 继承方法。_
 
 在这个例子中，我们将会创建一个 2 秒的缓冲器，并用白噪音填充它，然后通过{{domxref("AudioBufferSourceNode")}}来播放它。注释里说明了它的功能。
 
-> **备注：** 你可以 [查看在线演示](http://mdn.github.io/audio-buffer/) 或 [查看源代码](https://github.com/mdn/audio-buffer).
+> [!NOTE]
+> 你可以 [查看在线演示](http://mdn.github.io/audio-buffer/) 或 [查看源代码](https://github.com/mdn/audio-buffer).
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -113,7 +114,8 @@ button.onclick = function () {
 };
 ```
 
-> **备注：** 音频数据解码的例子请查看 {{domxref("AudioContext.decodeAudioData")}} 页面。
+> [!NOTE]
+> 音频数据解码的例子请查看 {{domxref("AudioContext.decodeAudioData")}} 页面。
 
 ## 规范
 

@@ -13,7 +13,8 @@ l10n:
 
 それぞれの閲覧コンテキストにはそれぞれの[文書](/ja/docs/Web/API/Document)があり、URL ナビゲーションができます。それぞれの埋め込み閲覧コンテキストのナビゲーションは、最上位の閲覧コンテキストの[セッション履歴](/ja/docs/Web/API/History)で直線化されます。他の閲覧コンテキストを埋め込んでいる閲覧コンテキストは、_親閲覧コンテキスト_ と呼ばれます。_最上位_ の閲覧コンテキスト（親を持たないもの）は、通常はブラウザーのウィンドウで、 {{domxref("Window")}} オブジェクトで表されます。
 
-> **警告:** それぞれの閲覧コンテキストは完全な文書環境であるため、ページの中で `<iframe>` を使用するごとに、必要となるメモリやその他の計算リソースが増加します。理論的には好きなだけ `<iframe>` を使用することができますが、パフォーマンスの問題を確認してください。
+> [!WARNING]
+> それぞれの閲覧コンテキストは完全な文書環境であるため、ページの中で `<iframe>` を使用するごとに、必要となるメモリやその他の計算リソースが増加します。理論的には好きなだけ `<iframe>` を使用することができますが、パフォーマンスの問題を確認してください。
 
 ## 属性
 
@@ -29,13 +30,15 @@ l10n:
 
   - : この `<iframe>` が {{domxref("Element.requestFullscreen", "requestFullscreen()")}} を呼び出して全画面モードにすることができる場合は、 `true` に設定します。
 
-    > **メモ:** この属性は古い属性とみなされており、 `allow="fullscreen"` として再定義されました。
+    > [!NOTE]
+    > この属性は古い属性とみなされており、 `allow="fullscreen"` として再定義されました。
 
 - `allowpaymentrequest` {{Experimental_Inline}}
 
   - : 異なるオリジンの `<iframe>` で [支払いリクエスト API](/ja/docs/Web/API/Payment_Request_API) の実行を許可する場合は `true` に設定します。
 
-    > **メモ:** この属性は古い属性とみなされており、 `allow="payment"` として再定義されました。
+    > [!NOTE]
+    > この属性は古い属性とみなされており、 `allow="payment"` として再定義されました。
 
 - `credentialless` {{Experimental_Inline}} {{Non-standard_Inline}}
 
@@ -90,7 +93,7 @@ l10n:
     - `allow-top-navigation-by-user-activation`: リソースが最上位の閲覧コンテキストに移動できるようにしますが、ユーザーの操作によって開始されたものに限ります。
     - `allow-top-navigation-to-custom-protocols`: ブラウザーに組み込まれている、または[ウェブサイトによって登録された](/ja/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers) `http` 以外のプロトコルへのナビゲーションを可能にします。この機能は `allow-popups` や `allow-top-navigation` キーワードでも有効になります。
 
-    > **メモ:**
+    > [!NOTE]
     >
     > - 埋め込まれた文書のオリジンが埋め込み先のページと同じである場合、 `allow-scripts` と `allow-same-origin` を同時に使用すると、埋め込まれた文書から `sandbox` 属性を削除することができるようになるため、**絶対に避けるべき**です。 `sandbox` 属性をまったく使用しないよりも安全ではなくなります。
     > - 攻撃者がサンドボックス化した `iframe` の外側にコンテンツを表示することができる場合、サンドボックス化は無意味です。例えば、閲覧者がフレームを新しいタブで開く場合などです。潜在的なダメージを抑えるため、そうしたコンテンツは*別のオリジン*から提供するようにもしてください。

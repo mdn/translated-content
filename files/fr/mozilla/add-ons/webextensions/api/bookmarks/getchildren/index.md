@@ -51,7 +51,7 @@ gettingChildren.then(onFulfilled, onRejected);
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
 >

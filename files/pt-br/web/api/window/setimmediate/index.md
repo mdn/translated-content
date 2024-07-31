@@ -7,7 +7,8 @@ slug: Web/API/Window/setImmediate
 
 Esse método é usado para interromper operações de longa duração e executar uma função de retorno de chamada imediatamente após o navegador ter concluído outras operações, como eventos e atualizações de exibição.
 
-> **Nota:** Não se espera que este método se torne padrão, e é implementado somente por compilações recentes do Internet Explorer e Node.js 0.10+. Existem resistencias de ambos [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) e [Webkit](http://code.google.com/p/chromium/issues/detail?id=146172) (Google/Apple).
+> [!NOTE]
+> Não se espera que este método se torne padrão, e é implementado somente por compilações recentes do Internet Explorer e Node.js 0.10+. Existem resistencias de ambos [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) e [Webkit](http://code.google.com/p/chromium/issues/detail?id=146172) (Google/Apple).
 
 ## Sintaxe
 

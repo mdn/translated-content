@@ -446,7 +446,8 @@ psycopg2==2.6.2
 whitenoise==3.2.2
 ```
 
-> **참고:** 위 목록에 **psycopg2** 줄이 있다는 것을 주의해야 한다! 로컬환경에서 이 라이브러리를 설치한 적이 없더라도 이 줄은 **requirements.txt** 파일에 추가해야 한다.
+> [!NOTE]
+> 위 목록에 **psycopg2** 줄이 있다는 것을 주의해야 한다! 로컬환경에서 이 라이브러리를 설치한 적이 없더라도 이 줄은 **requirements.txt** 파일에 추가해야 한다.
 
 #### Runtime 파일 추가하기
 
@@ -602,7 +603,8 @@ git push origin master
 git push heroku master
 ```
 
-> **참고:** Heroku에 사이트 업데이트하는 것을 완료한후, 존재하지 않는 주소URL(예를 들면, **/catalog/doesnotexist/**) 을 입력해 보자. 이전에는 이런 경우 자세한 설명이 담긴 디버그 페이지를 보여주었었지만, 이제는 단순한 "Not Found" 페이지가 보일것이다.
+> [!NOTE]
+> Heroku에 사이트 업데이트하는 것을 완료한후, 존재하지 않는 주소URL(예를 들면, **/catalog/doesnotexist/**) 을 입력해 보자. 이전에는 이런 경우 자세한 설명이 담긴 디버그 페이지를 보여주었었지만, 이제는 단순한 "Not Found" 페이지가 보일것이다.
 
 ### 디버깅 하기
 

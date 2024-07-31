@@ -5,7 +5,8 @@ slug: Web/HTML/Global_attributes/tabindex
 
 {{HTMLSidebar("Global_attributes")}}
 
-> **Nota:** El valor máximo para tabindex no debe de exceder 32767 ([sección 17.11.1 del W3C](https://www.w3.org/TR/html401/interact/forms.html#h-17.11.1)). Si no se especifica, el valor asignado por defecto es -1.
+> [!NOTE]
+> El valor máximo para tabindex no debe de exceder 32767 ([sección 17.11.1 del W3C](https://www.w3.org/TR/html401/interact/forms.html#h-17.11.1)). Si no se especifica, el valor asignado por defecto es -1.
 
 El [atributo global](/es/docs/Web/HTML/Atributos_Globales) **tabindex** indica si su elemento puede ser enfocado, y si participa en la navegación secuencial del teclado (usualmente con la tecla _Tab_, de ahí el nombre). Acepta un entero como valor, con diferentes resultados que dependen de dicho valor:
 
