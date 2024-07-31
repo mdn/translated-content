@@ -1810,46 +1810,6 @@ CSS 更新包括：
   </tbody>
 </table>
 
-#### HTML 净化 API
-
-{{domxref('HTML Sanitizer API')}} 允许开发人员获取不受信任的 HTML 字符串，并对其进行净化，以便安全地插入到文档的 DOM 中。目前仍在考虑每个配置属性中的默认元素（需要进行净化的元素）。因此，配置参数尚未实现（请参阅{{domxref('Sanitizer.sanitizer()', '构造函数')}}获取更多信息）。详情请参见 [Firefox bug 1673309](https://bugzil.la/1673309)。
-
-<table>
-  <thead>
-    <tr>
-      <th>更新通道</th>
-      <th>添加的版本</th>
-      <th>默认启用？</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>84</td>
-      <td>否</td>
-    </tr>
-    <tr>
-      <th>开发者版</th>
-      <td>84</td>
-      <td>否</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>84</td>
-      <td>否</td>
-    </tr>
-    <tr>
-      <th>发行版</th>
-      <td>84</td>
-      <td>否</td>
-    </tr>
-    <tr>
-      <th>首选项名称</th>
-      <td colspan="2"><code>dom.security.sanitizer.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 #### GeometryUtils 方法：convertPointFromNode()、convertRectFromNode() 和 convertQuadFromNode()
 
 `GeometryUtils` 方法 `convertPointFromNode()`、`convertRectFromNode()` 和 `convertQuadFromNode()` 将给定的点、矩形或四边形从调用它们的 {{domxref("Node")}} 映射到另一个节点。（详见 [Firefox bug 918189](https://bugzil.la/918189)）。
