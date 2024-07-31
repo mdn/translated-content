@@ -5,7 +5,8 @@ slug: Web/HTTP/Headers/Accept-Charset
 
 {{HTTPSidebar}}
 
-> **경고:** 이 헤더를 사용하지 마십시오. 브라우저는 이 헤더를 생략하고 서버는 이를 무시해야 합니다.
+> [!WARNING]
+> 이 헤더를 사용하지 마십시오. 브라우저는 이 헤더를 생략하고 서버는 이를 무시해야 합니다.
 
 **`Accept-Charset`** 요청 HTTP 헤더는 클라이언트가 지원하는 {{glossary("character encoding", "문자 인코딩")}}을 알리는 헤더였습니다. 이는 더 이상 널리 사용되지 않습니다.
 

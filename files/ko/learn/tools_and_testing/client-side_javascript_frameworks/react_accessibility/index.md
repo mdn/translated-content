@@ -280,7 +280,8 @@ const prevTaskLength = usePrevious(tasks.length);
 
 여기서 우리는 `usePrevious()`를 호출하여 다음과 같이 할 일 상태의 길이를 추적합니다.
 
-> **참고:** 이제 두 개의 파일에서 `usePrevious()`를 활용하고 있으므로, 효율성이 좋은 리팩터는 `usePrevious()` 함수를 자체 파일로 이동하고, 해당 파일에서 내보내고, 당신이 이 사용자 지정 훅을 필요로 하는 곳에 가져오는 것입니다. 이 작업을 마치면 연습으로 해보세요
+> [!NOTE]
+> 이제 두 개의 파일에서 `usePrevious()`를 활용하고 있으므로, 효율성이 좋은 리팩터는 `usePrevious()` 함수를 자체 파일로 이동하고, 해당 파일에서 내보내고, 당신이 이 사용자 지정 훅을 필요로 하는 곳에 가져오는 것입니다. 이 작업을 마치면 연습으로 해보세요
 
 ### `useEffect()`를 사용하여 제목 포커스 제어
 
@@ -308,7 +309,8 @@ useEffect(() => {
 
 `useRef()` 및 `useEffect()`는 다소 고급 기능이며, 이러한 기능을 사용하는 것을 자랑스럽게 생각하세요! 더 많이 연습할 수 있는 기회를 찾으세요, 그렇게 하면 사용자를 위한 포괄적인 경험을 만들 수 있기 때문입니다. 기억하세요, 우리 애플리케이션은 키보드 없이는 키보드 사용자가 접근할 수 없었을 것입니다!
 
-> **참고:** 우리 버전과 비교하여 코드를 확인해야 하는 경우, [todo-react repository](https://github.com/mdn/todo-react)에서 샘플 React 애플리케이션 코드의 완성된 버전을 찾을 수 있습니다. 실행 중인 라이브 버전은, <https://mdn.github.io/todo-react>을 참고하세요.
+> [!NOTE]
+> 우리 버전과 비교하여 코드를 확인해야 하는 경우, [todo-react repository](https://github.com/mdn/todo-react)에서 샘플 React 애플리케이션 코드의 완성된 버전을 찾을 수 있습니다. 실행 중인 라이브 버전은, <https://mdn.github.io/todo-react>을 참고하세요.
 
 마지막 기사에서는 학습을 더 진행하는 데 사용할 수 있는 React 리소스 목록을 제공합니다.
 

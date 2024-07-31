@@ -25,7 +25,8 @@ JavaScript를 몰라도 이번 과정 시작에는 문제가 없지만, HTML과 
 - [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML)
 - [CSS 소개](/ko/docs/Learn/CSS/Introduction_to_CSS)
 
-> **참고:** 파일을 만들 수 없는 컴퓨터나 태블릿, 기타 장치에서 작업을 하신다면 예제 코드의 대부분을 [JSBin](https://jsbin.com/)이나 [Glitch](https://glitch.com/) 같은 온라인 코딩 프로그램에서도 시험할 수 있습니다.
+> [!NOTE]
+> 파일을 만들 수 없는 컴퓨터나 태블릿, 기타 장치에서 작업을 하신다면 예제 코드의 대부분을 [JSBin](https://jsbin.com/)이나 [Glitch](https://glitch.com/) 같은 온라인 코딩 프로그램에서도 시험할 수 있습니다.
 
 ## 구성
 

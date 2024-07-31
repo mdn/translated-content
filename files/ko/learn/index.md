@@ -40,7 +40,8 @@ MDN 학습지의 목표는 여러분을 "전문가"로 만드는 것이 아니�
     읽어보세요. 그 후에는
     [클라이언트 사이드 JavaScript 프레임워크](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)와 [서버 사이드 웹 사이트 프로그래밍](/ko/docs/Learn/Server-side)도 한 번 고려해보세요.
 
-> **참고:** MDN [용어집](/ko/docs/Glossary)에서 각종 용어의 정의를 찾아보실 수 있습니다. 웹 개발에 관한 질문이 있으시면 [자주 하는 질문](/ko/docs/Learn/Common_questions) 문서도 확인해보세요.
+> [!NOTE]
+> MDN [용어집](/ko/docs/Glossary)에서 각종 용어의 정의를 찾아보실 수 있습니다. 웹 개발에 관한 질문이 있으시면 [자주 하는 질문](/ko/docs/Learn/Common_questions) 문서도 확인해보세요.
 
 ## 다루는 주제
 
