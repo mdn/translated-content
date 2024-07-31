@@ -70,7 +70,8 @@ l10n:
 
 以下の例で、キーの範囲の使い方を示します。`"A"` と `"F"` の間の値を表す範囲として `keyRangeValue` を定義します。({{domxref("IDBTransaction")}} を用いて) トランザクションを開き、オブジェクトストアを開き、{{domxref("IDBObjectStore.openCursor")}} を用いてカーソルを開きます。このとき、省略可能なキーの範囲の値として `keyRangeValue` を指定します。これにより、このカーソルはこの範囲に含まれるキーを持つレコードのみを取り出します。開区間にするよう指定していないので、この範囲は値 `"A"` および `"F"` を含みます。`IDBKeyRange.bound("A", "F", true, true);` を使った場合は、`"A"` と `"F"` は範囲に含まれず、その間の値のみが含まれます。
 
-> **メモ:** キーの範囲に関する実験ができるより完全な例は、[IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) レポジトリを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
+> [!NOTE]
+> キーの範囲に関する実験ができるより完全な例は、[IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) レポジトリを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
 
 ```js
 function displayData() {

@@ -38,7 +38,8 @@ upperBound(upper, open)
 
 `IDBKeyRange.upperBound("F", true);` を使用すると、値 `"F"` は範囲に含まれず、それより前の値のみが範囲に含まれます。
 
-> **メモ:** キーの範囲に関する実験ができるより完全な例は、[IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) レポジトリを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
+> [!NOTE]
+> キーの範囲に関する実験ができるより完全な例は、[IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) レポジトリを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
 
 ```js
 function displayData() {

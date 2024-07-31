@@ -9,7 +9,8 @@ l10n:
 
 `error` イベントは、リクエストがエラーを返し、そのイベントがトランザクションオブジェクトにバブリングしたとき `IDBTransaction` で発火します。
 
-> **メモ:** トランザクションのすべての失敗を扱うには、かわりに {{domxref("IDBTransaction.abort_event", "abort")}} イベントを監視することを検討してください。
+> [!NOTE]
+> トランザクションのすべての失敗を扱うには、かわりに {{domxref("IDBTransaction.abort_event", "abort")}} イベントを監視することを検討してください。
 
 ## 構文
 
