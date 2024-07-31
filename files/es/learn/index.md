@@ -13,7 +13,7 @@ El objetivo de esta área de MDN no es llevarte de "principiante" a "experto", s
 
 Si eres un principiante, el desarrollo web puede ser un desafío: iremos de la mano y te brindaremos suficientes detalles para que te sientas cómodo y aprendas los temas correctamente. Debes sentirte como en casa, ya sea que seas un estudiante que está aprendiendo desarrollo web (por su cuenta o como parte de una clase), un maestro que busca materiales para la clase, un aficionado o alguien que solo quiere saber más sobre cómo funcionan las tecnologías web.
 
-> **Observación:**
+> [!CALLOUT]
 >
 > #### ¿Quieres convertirte en un desarrollador web front-end?
 >
@@ -32,7 +32,8 @@ Si eres un principiante, el desarrollo web puede ser un desafío: iremos de la m
 - _Frameworks_ y herramientas
   - : Después de dominar los conceptos básicos de HTML, CSS y JavaScript estándar, debe aprender sobre [herramientas de desarrollo web del lado del cliente](/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools), y luego considerar profundizar en [_frameworks_ de JavaScript del lado del cliente](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks), y [programación de sitios web del lado del servidor](/es/docs/Learn/Server-side).
 
-> **Nota:** Nuestro [glosario](/es/docs/Glossary) proporciona definiciones terminológicas. Además, si tienes una pregunta específica sobre desarrollo web, nuestra sección [Preguntas comunes](/es/docs/Learn/Common_questions) puede tener algo para ayudarte.
+> [!NOTE]
+> Nuestro [glosario](/es/docs/Glossary) proporciona definiciones terminológicas. Además, si tienes una pregunta específica sobre desarrollo web, nuestra sección [Preguntas comunes](/es/docs/Learn/Common_questions) puede tener algo para ayudarte.
 
 ## Temas cubiertos
 

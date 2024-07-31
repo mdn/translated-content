@@ -35,7 +35,8 @@ l10n:
 
 その代わりに、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) のようなサイトを使って評価試験を実施できます。 HTML、CSS、JavaScript をオンラインエディターに貼り付けてください。使っているオンラインエディターが独立した JavaScript パネルを持っていない場合、 HTML ページ内の `<script>` 要素内に書いても問題ありません。
 
-> **メモ:** 行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
+> [!NOTE]
+> 行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 
 ## プロジェクトの要点
 

@@ -28,7 +28,8 @@ Rust と WebAssembly には、主に 2 つの用途があります。
 
 [Install Rust](https://www.rust-lang.org/install.html) ページに行って指示に従い、Rust をインストールしてください。これによって "rustup" と呼ばれる複数のバージョンの Rust を管理できるようにするツールがインストールされます。既定の設定では、通常の Rust 開発で使いたいであろう最新の安定版 Rust リリースをインストールします。rustup は Rust コンパイラーの `rustc` や Rust のパッケージマネージャーの `cargo` や Rust の標準ライブラリーの `rust-std` やいくつかの助けになるドキュメント — `rust-docs` をインストールします。
 
-> **メモ:** インストール後のメモで、cargo の `bin` ディレクトリーをシステムの `PATH` に追加する必要があるという点に注意してください。これは自動的に追加されるはずですが、有効にするためにターミナルを再起動する必要があります。
+> [!NOTE]
+> インストール後のメモで、cargo の `bin` ディレクトリーをシステムの `PATH` に追加する必要があるという点に注意してください。これは自動的に追加されるはずですが、有効にするためにターミナルを再起動する必要があります。
 
 ### wasm-pack
 
@@ -247,7 +248,8 @@ wasm-pack build --target web
 
 プロジェクトのルートディレクトリーに、ローカルのウェブサーバーを用意します（例: `python3 -m http.server`）。やり方がよくわからない場合は、[シンプルなローカル HTTP サーバーの実行](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#シンプルなローカル_http_サーバーの実行)を参考にしてください。
 
-> **メモ:** 必ず `application/wasm` という MIME 型に対応している最新のウェブサーバーを使用してください。古いウェブサーバーでは、まだ対応していないかもしれません。
+> [!NOTE]
+> 必ず `application/wasm` という MIME 型に対応している最新のウェブサーバーを使用してください。古いウェブサーバーでは、まだ対応していないかもしれません。
 
 ウェブサーバーから `index.html` を読み込む （Python3 の例を使用する場合: `http://localhost:8000`）。 画面上にアラートボックスが現れ、 `Hello, WebAssembly!` と表示されます。 JavaScript から Rust へ、そして Rust から JavaScript への呼び出しに成功しました。
 

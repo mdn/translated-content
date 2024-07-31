@@ -9,7 +9,8 @@ slug: Web/API/SharedWorker/SharedWorker
 
 如果 URL 的语法无效或者违反了同源策略会抛出 `SECURITY_ERR` 类型的 {{domxref("DOMException")}} 异常。
 
-> **备注：** 浏览器开发者对于 data URI 是否同源产生分歧。尽管 Gecko 10.0 及之后版本支持 data URIs，其他浏览器并不能支持。
+> [!NOTE]
+> 浏览器开发者对于 data URI 是否同源产生分歧。尽管 Gecko 10.0 及之后版本支持 data URIs，其他浏览器并不能支持。
 
 ## 语法
 

@@ -2,7 +2,7 @@
 title: Arpanet
 slug: Glossary/Arpanet
 l10n:
-  sourceCommit: d842f8c32316dbe36cff9fc5e0e777602e32d958
+  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
 {{GlossarySidebar}}
@@ -11,6 +11,7 @@ l10n:
 
 ## 参见
 
-- {{Glossary("arpa", ".arpa")}}
-- {{Glossary("TCP")}}
 - 维基百科上的[高级研究计划局网络](https://zh.wikipedia.org/wiki/ARPANET)
+- 相关术语：
+  - {{Glossary("arpa", ".arpa")}}
+  - {{Glossary("TCP")}}

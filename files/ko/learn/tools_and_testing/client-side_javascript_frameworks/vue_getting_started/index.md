@@ -65,7 +65,8 @@ Vue는 애플리케이션에 Vue를 점진적으로 통합시킬 수 있도록 �
 1. Node.js 8.11 이상 설치
 2. npm 또는 yarn
 
-> **참고:** 아직 위 항목을 설치하지 않았다면, [more about installing npm and Node.js](/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Adding_powerups) 를 참고하세요.
+> [!NOTE]
+> 아직 위 항목을 설치하지 않았다면, [more about installing npm and Node.js](/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Adding_powerups) 를 참고하세요.
 
 CLI를 설치하기 위해 아래 커맨드를 터미널에서 실행하세요.
 npm을 사용하는 경우:
@@ -133,7 +134,8 @@ Vue의 다양한 기능을 알아보기 위해, 예제로 할 일 목록(todo li
 
 만약 이전에 한 번도 Vue CLI를 사용해본 적 없다면, 위에서 설명하지 않은 질문이 한 가지 더 표시될 것입니다. 패키지 매니저를 고르라는 메세지가 나타나면, 여러분이 선호하는 것을 고르면 됩니다. 지금부터는 여러분이 선택한 패키지 매니저(npm / yarn)가 기본값으로 설정됩니다. 만약 이 기본값을 변경하고 싶다면 `vue create` 커맨드를 실행할 때 `--packageManager=<package-manager>` 플래그를 추가하면 됩니다. 다시 말해, 만약 여러분이 이전에 yarn을 사용했지만 다음에는 npm을 사용하도록 프로젝트를 생성하고 싶다면 `vue create moz-todo-vue --packageManager=npm`을 실행하면 됩니다.
 
-> **참고:** 모든 옵션을 여기서 설명하지는 않았습니다. 자세한 내용은 [find more information on the CLI](https://cli.vuejs.org) 를 참고하세요.
+> [!NOTE]
+> 모든 옵션을 여기서 설명하지는 않았습니다. 자세한 내용은 [find more information on the CLI](https://cli.vuejs.org) 를 참고하세요.
 
 ## 프로젝트 구조
 
@@ -147,7 +149,8 @@ Vue의 다양한 기능을 알아보기 위해, 예제로 할 일 목록(todo li
   - `favicon.ico`: 앱의 대표 favicon 파일입니다. 기본값으로 Vue 로고가 들어가 있습니다.
   - `index.html`: 앱의 템플릿 파일입니다. 우리의 Vue 앱은 이 HTML 페이지로부터 실행됩니다. lodash 템플릿 구문을 사용해 보간법으로 값을 지정할 수 있습니다.
 
-    > **참고:** index.html 파일은 애플리케이션 레이아웃을 관리하는 템플릿이 아닙니다. 이 파일은 Vue 앱 외부의 정적 HTML을 제어하는 템플릿입니다. 고급 사용 사례를 제외하면 이 파일을 직접 편집할 일은 거의 없습니다.
+    > [!NOTE]
+    > index.html 파일은 애플리케이션 레이아웃을 관리하는 템플릿이 아닙니다. 이 파일은 Vue 앱 외부의 정적 HTML을 제어하는 템플릿입니다. 고급 사용 사례를 제외하면 이 파일을 직접 편집할 일은 거의 없습니다.
 
 - `src`: 우리의 Vue 애플리케이션의 핵심 내용을 포함하게 될 디렉토리입니다.
 
@@ -156,7 +159,8 @@ Vue의 다양한 기능을 알아보기 위해, 예제로 할 일 목록(todo li
   - `components`: 우리가 앞으로 만들 Vue 컴포넌트를 저장할 디렉토리입니다. 지금은 한 개의 예시 컴포넌트만을 포함하고 있습니다.
   - `assets`: CSS나 이미지 등의 정적 자산(static assets)을 저장하는 디렉토리입니다. 이 파일들은 src 디렉토리에 포함되어 있기 때문에 Webpack의 처리를 받습니다. 즉, [Sass/SCSS](https://sass-lang.com/)나 [Stylus](https://stylus-lang.com/)와 같은 전처리 도구를 사용할 수 있다는 의미입니다.
 
-> **참고:** 새로운 프로젝트를 생성할 때 어떤 옵션을 선택했는지에 따라, 위에 소개되지 않은 디렉토리가 생길 수도 있습니다. 예를 들어 router 옵션을 선택했다면 `views`가 생성됩니다.
+> [!NOTE]
+> 새로운 프로젝트를 생성할 때 어떤 옵션을 선택했는지에 따라, 위에 소개되지 않은 디렉토리가 생길 수도 있습니다. 예를 들어 router 옵션을 선택했다면 `views`가 생성됩니다.
 
 ## .vue 파일 (단일 파일 컴포넌트)
 
@@ -196,7 +200,8 @@ export default {
 
 `<style>` 에는 컴포넌트에서 사용할 CSS를 포함합니다. `<style scoped>`와 같이 `scoped` 속성을 추가하면 Vue는 그 안의 내용을 SFC(단일 파일 컴포넌트) 내부 범위에서만 적용합니다. CSS-in-JS 방식과 비슷하게 동작하지만, 여기서는 일반 CSS 구문을 작성할 수 있다는 차이점이 있습니다.
 
-> **참고:** CLI로 프로젝트를 생성할 때 CSS 전처리기를 선택했다면, 빌드타임에 Webpack에서 내용을 처리할 수 있도록 `<style>` 태그에 `lang` 속성을 추가할 수 있습니다. 예를 들어 `<style lang="scss">` 라고 작성하면 스타일링 정보에 SCSS 문법을 사용할 수 있습니다.
+> [!NOTE]
+> CLI로 프로젝트를 생성할 때 CSS 전처리기를 선택했다면, 빌드타임에 Webpack에서 내용을 처리할 수 있도록 `<style>` 태그에 `lang` 속성을 추가할 수 있습니다. 예를 들어 `<style lang="scss">` 라고 작성하면 스타일링 정보에 SCSS 문법을 사용할 수 있습니다.
 
 ## 로컬에서 앱 실행하기
 

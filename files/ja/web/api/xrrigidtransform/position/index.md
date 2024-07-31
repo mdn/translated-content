@@ -17,7 +17,8 @@ let pos = xrRigidTransform.position;
 
 変換行列の 3D 位置成分を示す読み取り専用の {{domxref("DOMPointReadOnly")}}。 単位はメートルです。
 
-> **メモ:** 点の `w` 成分は常に 1.0 です。
+> [!NOTE]
+> 点の `w` 成分は常に 1.0 です。
 
 ## 例
 

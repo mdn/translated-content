@@ -47,7 +47,8 @@ Svelte 更貼近傳統的網站開發模型（HTML、CSS、JS），它只有對 
 
 現階段的缺點只因它目前仍在發展中——和其它成熟框架相比它的生態環境較受限於工具、支援、套件、使用模式等等限制，工作機會也比較少。但它的優點應該足夠讓你感興趣並去探索它。
 
-> **備註：** 最近 Svelte 已經正式加入 [TypeScript 支援](https://svelte.dev/blog/svelte-and-typescript)，這也是最受歡迎的功能之一，我們將在之後的教學系列中看到它。
+> [!NOTE]
+> 最近 Svelte 已經正式加入 [TypeScript 支援](https://svelte.dev/blog/svelte-and-typescript)，這也是最受歡迎的功能之一，我們將在之後的教學系列中看到它。
 
 我們鼓勵你走完 [Svelte 教學](https://svelte.dev/tutorial/basics)來快速了解基本的概念，在你回來此教學系列學習如何建構一些更深入的東西之前。它應該會花費你約 30 分鐘去完成。
 
@@ -102,7 +103,8 @@ npm install
 npm run dev
 ```
 
-> **備註：** 不用太驚訝 degit 做了這麼多事情——它其實就只是讓你可以從 git 儲存庫下載和解壓縮最新版本的內容。使用它比起使用 `git clone` 更快能達到我們的目的，因為它並不會下載整個儲存庫的歷史以及不會複製一份放在本機端。
+> [!NOTE]
+> 不用太驚訝 degit 做了這麼多事情——它其實就只是讓你可以從 git 儲存庫下載和解壓縮最新版本的內容。使用它比起使用 `git clone` 更快能達到我們的目的，因為它並不會下載整個儲存庫的歷史以及不會複製一份放在本機端。
 
 之後執行 `npm run dev`，Svelte 將會編譯和建構你的應用程式。它將會跑在本機 `localhost:8080` 位址。當你對來源檔案做了異動，Svelte 將會偵測到檔案更新並自動地重新編譯和刷新你的應用程式。你的瀏覽器將會顯示如下圖：
 
@@ -178,7 +180,8 @@ moz-todo-svelte
 <!-- 標記（零或多個HTML元素）放這 -->
 ```
 
-> **備註：** 更多元件格式的資訊，可以至 [Svelte 文件](https://svelte.dev/docs#Component_format)閱讀。
+> [!NOTE]
+> 更多元件格式的資訊，可以至 [Svelte 文件](https://svelte.dev/docs#Component_format)閱讀。
 
 接著我們來看入門範本中的 `src/App.svelte` 檔案，你應該會看到以下內容：
 
@@ -284,7 +287,8 @@ Svelte 也支援一些標籤，像是 `{#if...}`，`{#each...}` 和 `{#await...}
 
 編譯應用程式時，Svelte 會改變我們 `h1` 的樣式定義為 `h1.svelte-1tky8bj` 並更改每一個在此元件中的 `<h1>` 元素為 `<h1 class="svelte-1tky8bj">`，如此就能讓該元件取得所需的樣式。
 
-> **備註：** 你也可以使用 `:global(...)` 修飾符覆寫此行為並且套用樣式至全域選擇器上（可以至 [Svelte `<style>` 文件](https://svelte.dev/docs#style)閱讀更多資訊）。
+> [!NOTE]
+> 你也可以使用 `:global(...)` 修飾符覆寫此行為並且套用樣式至全域選擇器上（可以至 [Svelte `<style>` 文件](https://svelte.dev/docs#style)閱讀更多資訊）。
 
 ## 做一些小改變
 
@@ -420,7 +424,8 @@ npm run dev
 
 假如你想要學習更多關於 git 和 GitHub，我們已經有整理一些有幫助的連結清單至指南——看看 [Git 和 GitHub](/zh-TW/docs/Learn/Tools_and_testing/GitHub)。
 
-> **備註：** 假如你只是想要下載檔案而不是複製 git 儲存庫，你可以使用 degit 工具像是這樣—— `npx degit opensas/mdn-svelte-tutorial`。你也可以用 `npx degit opensas/mdn-svelte-tutorial/01-getting-started` 來下載特定資料夾。Degit 將不會建立本地 git 儲存庫，它將只下載特定資料夾下的檔案們。
+> [!NOTE]
+> 假如你只是想要下載檔案而不是複製 git 儲存庫，你可以使用 degit 工具像是這樣—— `npx degit opensas/mdn-svelte-tutorial`。你也可以用 `npx degit opensas/mdn-svelte-tutorial/01-getting-started` 來下載特定資料夾。Degit 將不會建立本地 git 儲存庫，它將只下載特定資料夾下的檔案們。
 
 ### 使用 Svelte REPL
 
@@ -449,11 +454,13 @@ Svelte 的 REPL 功能卻不只如此。它是一個線上工具，允許你建�
 
 每當你在 REPL 改變任何檔案，Svelte 將會重新編譯應用程式並更新結果（Result）標籤。為了分享你的應用程式網址。舉個例子，這是運行我們完整應用程式的 REPL 連結：<https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>。
 
-> **備註：** 可以注意一下在連結上怎麼標註 Svelte 的版本。當你在回報 Svelte 特定版本的問題時，這是很有幫助的。
+> [!NOTE]
+> 可以注意一下在連結上怎麼標註 Svelte 的版本。當你在回報 Svelte 特定版本的問題時，這是很有幫助的。
 
 我們將會在每一篇文章的開頭與結尾提供 REPL，所以你就能立刻和我們一起撰寫程式碼。
 
-> **備註：** 不知何時 REPL 變得沒辦法適當地處理資料夾名稱。假如你是使用 REPL 來跟著教學系列，只需要將所有你的元件建立在根目錄即可。接著當你看到程式碼中的路徑時，舉例來說如果是 `import Todos from './components/Todos.svelte'`，只需要將它換成類似如 `import Todos from './Todos.svelte'` 即可。
+> [!NOTE]
+> 不知何時 REPL 變得沒辦法適當地處理資料夾名稱。假如你是使用 REPL 來跟著教學系列，只需要將所有你的元件建立在根目錄即可。接著當你看到程式碼中的路徑時，舉例來說如果是 `import Todos from './components/Todos.svelte'`，只需要將它換成類似如 `import Todos from './Todos.svelte'` 即可。
 
 ## 到目前為止的程式碼
 

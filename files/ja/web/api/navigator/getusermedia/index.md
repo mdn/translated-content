@@ -9,7 +9,8 @@ slug: Web/API/Navigator/getUserMedia
 
 許可が与えられた場合、それらの機器から動画や音声のトラックを持つ `MediaStream` が、指定された成功コールバックに配信されます。許可が拒否された場合や、互換性のある入力機器が存在しない場合、その他のエラー条件が発生した場合は、何が問題となったかを説明する {{domxref("MediaStreamError")}} オブジェクトを伴ってエラーコールバックが実行されます。ユーザーがまったく選択をしなかった場合は、どちらのコールバックも実行されません。
 
-> **メモ:** これは古いメソッドです。代わりに新しい {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} を使用してください。技術的には非推奨ではありませんが、この古いコールバックの版はそのようにマークされていますので、新しいプロミスを返す版を使用するよう強くお勧めします。
+> [!NOTE]
+> これは古いメソッドです。代わりに新しい {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} を使用してください。技術的には非推奨ではありませんが、この古いコールバックの版はそのようにマークされていますので、新しいプロミスを返す版を使用するよう強くお勧めします。
 
 ## 構文
 
@@ -92,7 +93,8 @@ if (navigator.getUserMedia) {
 
 ## ブラウザーの互換性
 
-> **警告:** 新しいコードでは代わりに {{domxref("MediaDevices.getUserMedia")}} を使用してください。
+> [!WARNING]
+> 新しいコードでは代わりに {{domxref("MediaDevices.getUserMedia")}} を使用してください。
 
 {{Compat}}
 

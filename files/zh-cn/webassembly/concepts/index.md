@@ -26,7 +26,8 @@ WebAssembly 是一种运行在现代 web 浏览器中的新型代码，并且提
 - 保持安全——WebAssembly 被限制运行在一个安全的沙箱执行环境中。像其他网络代码一样，它遵循浏览器的同源策略和授权策略。
 - 不破坏 Web——WebAssembly 的设计原则是与其他网络技术和谐共处并保持向后兼容。
 
-> **备注：** WebAssembly 也用在网络和 JavaScript 环境之外（参考[非网络嵌入](http://webassembly.org/docs/non-web/)）。
+> [!NOTE]
+> WebAssembly 也用在网络和 JavaScript 环境之外（参考[非网络嵌入](http://webassembly.org/docs/non-web/)）。
 
 ## WebAssembly 如何适应网络平台？
 
@@ -95,7 +96,8 @@ Emscripten 工具可以将任何 C/C++ 源代码编译成 Wasm 模块，再加�
 2. Emscripten 将 clang+LLVM 编译的结果转换为 Wasm 二进制文件。
 3. 目前，WebAssembly 本身无法直接访问 DOM；它只能调用 JavaScript，并且只能传入整型和浮点型的原始数据类型作为参数。这就是说，为了使用任何 Web API，WebAssembly 需要调用 JavaScript，然后由 JavaScript 进行 Web API 调用。因此，Emscripten 创建了 HTML 和 JavaScript 粘合代码以便完成这些功能。
 
-> **备注：** 计划将来[允许 WebAssembly 直接调用 Web API](https://github.com/WebAssembly/gc/blob/master/README.md)。
+> [!NOTE]
+> 计划将来[允许 WebAssembly 直接调用 Web API](https://github.com/WebAssembly/gc/blob/master/README.md)。
 
 JavaScript 粘合代码并不是像你想象的那么简单。首先，Emscripten 实现了流行的 C/C++ 库，比如，[SDL](https://zh.wikipedia.org/wiki/SDL)、[OpenGL](https://zh.wikipedia.org/wiki/OpenGL)、[OpenAL](https://zh.wikipedia.org/wiki/OpenAL) 以及部分 [POSIX](https://zh.wikipedia.org/wiki/可移植操作系统接口)。这些库以 Web API 的形式实现，并且每个库需要一个 JavaScript 粘合代码来连接 WebAssembly 和低层的 Web API。
 

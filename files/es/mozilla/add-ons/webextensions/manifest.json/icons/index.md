@@ -49,7 +49,8 @@ Puede usar SVG y el navegador escalará su icono adecuadamente. Sin embargo, hay
    }
    ```
 
-> **Nota:** Si está usando un programa como Inkscape para crear SVG, puede que quiera guardarlo como un "SVG simple". Firefox podría confundirse con varios espacios de nombres especiales y no mostrar su icono.
+> [!NOTE]
+> Si está usando un programa como Inkscape para crear SVG, puede que quiera guardarlo como un "SVG simple". Firefox podría confundirse con varios espacios de nombres especiales y no mostrar su icono.
 
 ## Compatibilidad con navegadores
 

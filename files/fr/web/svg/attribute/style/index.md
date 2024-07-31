@@ -38,7 +38,8 @@ L'attribut **`style`** définit les [informations de style](/fr/docs/Web/CSS) po
 
   - : La syntaxe des données de style dépend du langage de la feuille de style. Par défaut, le langage est [CSS](/fr/docs/Web/CSS).
 
-    > **Note :** En théorie, l'attribut {{SVGAttr("contentStyleType")}} pourrait être utilisé pour spécifier un language de style autre que CSS, comme [XSL(T)](/fr/docs/Web/XSLT). Cependant, cela n'a jamais été implémenté de manière satisfaisante dans les navigateurs, donc ne vous y fiez pas.
+    > [!NOTE]
+    > En théorie, l'attribut {{SVGAttr("contentStyleType")}} pourrait être utilisé pour spécifier un language de style autre que CSS, comme [XSL(T)](/fr/docs/Web/XSLT). Cependant, cela n'a jamais été implémenté de manière satisfaisante dans les navigateurs, donc ne vous y fiez pas.
 
 ## Exemple
 

@@ -17,7 +17,8 @@ La chaîne de caractères initiale restera inchangée.
 const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 ```
 
-> **Note :** Quand on utilise une expression rationnelle, il est nécessaire d'utiliser le marqueur global ("g"); autrement, l'exception `TypeError`: _"replaceAll must be called with a global RegExp"_ sera levée.
+> [!NOTE]
+> Quand on utilise une expression rationnelle, il est nécessaire d'utiliser le marqueur global ("g"); autrement, l'exception `TypeError`: _"replaceAll must be called with a global RegExp"_ sera levée.
 
 ### Paramètres
 

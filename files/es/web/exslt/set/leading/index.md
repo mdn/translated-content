@@ -24,7 +24,8 @@ set:leading(conjuntoNodos1,conjuntoNodos2)
 
 Un conjunto de nodos que contiene los nodos del `conjuntoNodos1` cuyos valores preceden al primer nodo del `conjuntoNodos2`.
 
-> **Nota:** Si el primer nodo del `conjuntoNodos2` no está contenido en `conjuntoNodos1`, de devuelve un conjunto de nodos vacío. Si `conjuntoNodos2` está vacío, entonces el resultado es `conjuntoNodos1`.
+> [!NOTE]
+> Si el primer nodo del `conjuntoNodos2` no está contenido en `conjuntoNodos1`, de devuelve un conjunto de nodos vacío. Si `conjuntoNodos2` está vacío, entonces el resultado es `conjuntoNodos1`.
 
 ### Definido en
 

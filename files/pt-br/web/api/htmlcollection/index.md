@@ -7,7 +7,8 @@ slug: Web/API/HTMLCollection
 
 A interface **`HTMLCollection`** representa uma coleção genérica (objeto array) de elementos (na ordem em que aparecem no documento) e oferece métodos e propriedades para selecioná-los da lista.
 
-> **Nota:** Esta interface é chamada `HTMLCollection` por razões históricas (antes do DOM4, coleções implementadas por esta interface somente podiam ter elementos HTML).
+> [!NOTE]
+> Esta interface é chamada `HTMLCollection` por razões históricas (antes do DOM4, coleções implementadas por esta interface somente podiam ter elementos HTML).
 
 Uma coleção `HTMLCollection` de um HTML DOM está linkada com o documento; ela será automaticamente atualizada quando o documento for modificado.
 

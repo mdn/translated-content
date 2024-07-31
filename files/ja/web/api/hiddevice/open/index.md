@@ -9,7 +9,8 @@ l10n:
 
 {{domxref("HIDDevice")}} の **`open()`** メソッドは、オペレーティングシステムに HID デバイスを開くことを要求します。
 
-> **メモ:** HID デバイスは自動では開かれません。そのため、{{domxref("HID.requestDevice()")}} から返された {{domxref("HIDDevice")}} でデータの転送を可能にするには、このメソッドを用いて開く必要があります。
+> [!NOTE]
+> HID デバイスは自動では開かれません。そのため、{{domxref("HID.requestDevice()")}} から返された {{domxref("HIDDevice")}} でデータの転送を可能にするには、このメソッドを用いて開く必要があります。
 
 ## 構文
 

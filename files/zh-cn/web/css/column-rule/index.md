@@ -11,7 +11,8 @@ slug: Web/CSS/column-rule
 
 该[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)使用简单方便的声明形式将各个 `column-rule-*` 属性放在了一起：{{Cssxref("column-rule-width")}}、{{Cssxref("column-rule-style")}} 和 {{Cssxref("column-rule-color")}}。
 
-> **备注：** 和所有简写属性一样，任何没有指定的单独值会设置为相应初始值（可能会覆盖非简写属性设置的值）。
+> [!NOTE]
+> 和所有简写属性一样，任何没有指定的单独值会设置为相应初始值（可能会覆盖非简写属性设置的值）。
 
 ## 语法
 

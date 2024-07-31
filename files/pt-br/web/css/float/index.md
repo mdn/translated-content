@@ -32,7 +32,8 @@ Como `float` implica o uso the _block layout,_ ele modifica o valor computado de
 | `inline-flex`        | `inline-flex`, porém `float` não produz efeito em tais elementos |
 | _other_              | _unchanged_                                                      |
 
-> **Nota:** Se você está se referindo a essa propriedade do Javascript como um membro do objeto {{domxref("element.style")}}, você deve referir-se a `cssFloat`. Observe também que as versões 8 e posteriores referem-se a `styleFloat`. Esta é uma exceção à regra de que o nome do membro DOM é o nome em estilo _camel-case_ do nome CSS separado por traço (e se deve ao fato de que "float" é uma palavra reservada em Javascript, tal qual a necessidade de especificar "class" como "className" e "for" como "htmlFor").
+> [!NOTE]
+> Se você está se referindo a essa propriedade do Javascript como um membro do objeto {{domxref("element.style")}}, você deve referir-se a `cssFloat`. Observe também que as versões 8 e posteriores referem-se a `styleFloat`. Esta é uma exceção à regra de que o nome do membro DOM é o nome em estilo _camel-case_ do nome CSS separado por traço (e se deve ao fato de que "float" é uma palavra reservada em Javascript, tal qual a necessidade de especificar "class" como "className" e "for" como "htmlFor").
 
 ## Sintaxe
 
@@ -125,7 +126,8 @@ p.withRedBoxes {
 }
 ```
 
-> **Nota:** Atribuir `overflow` para `scroll` irá conter também qualquer elemento filho flutuante, mas mostrará as barras de rolagem não importando o comprimento vertical do elemento. Aqui nós estamos atribuindo `height` como `auto` mesmo sendo este o padrão para indicar que o containêr deve crescer para acomodar seu conteúdo.
+> [!NOTE]
+> Atribuir `overflow` para `scroll` irá conter também qualquer elemento filho flutuante, mas mostrará as barras de rolagem não importando o comprimento vertical do elemento. Aqui nós estamos atribuindo `height` como `auto` mesmo sendo este o padrão para indicar que o containêr deve crescer para acomodar seu conteúdo.
 
 ## Especificações
 

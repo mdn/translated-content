@@ -488,7 +488,8 @@ textarea.onkeyup = () => {
 
 {{EmbedLiveSample('Abbreviation_example', '100%', '150')}}
 
-> **メモ:** 以前のバージョンの HTML では {{htmlelement("acronym")}} 要素にも対応していましたが、省略形と頭字語の両方を表現するために `<abbr>` を使用することにしたため、 HTML 仕様から削除されました。`<acronym>` は使用すべきではありません。
+> [!NOTE]
+> 以前のバージョンの HTML では {{htmlelement("acronym")}} 要素にも対応していましたが、省略形と頭字語の両方を表現するために `<abbr>` を使用することにしたため、 HTML 仕様から削除されました。`<acronym>` は使用すべきではありません。
 
 ### アクティブラーニング: 略語のマークアップ
 

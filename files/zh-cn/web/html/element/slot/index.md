@@ -65,7 +65,8 @@ l10n:
 </template>
 ```
 
-> **备注：** 你可以在 [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details)（参见[在线演示](https://mdn.github.io/web-components-examples/element-details/)）查看完整示例。此外，你还可以在[使用模板和插槽](/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots)找到相关解释。
+> [!NOTE]
+> 你可以在 [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details)（参见[在线演示](https://mdn.github.io/web-components-examples/element-details/)）查看完整示例。此外，你还可以在[使用模板和插槽](/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots)找到相关解释。
 
 ## 技术概要
 

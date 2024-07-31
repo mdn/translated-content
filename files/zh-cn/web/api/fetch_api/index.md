@@ -33,7 +33,8 @@ Fetch 提供了对 {{domxref("Request")}} 和 {{domxref("Response")}}（以及�
   - [2018 年 4 月](https://github.com/whatwg/fetch/pull/585)，该规范将默认的 credentials 策略更改为 `'same-origin'`。以下浏览器发布了过时的原生 fetch，并在以下版本中更新：Firefox 61.0b13、Safari 12、Chrome 68。
   - 如果你的目标是这些旧的浏览器，请务必在所有可能接受 cookie/用户登录状态影响的 API 请求中包含拥有 `credentials: 'same-origin'` 的 [init 对象](/zh-CN/docs/Web/API/fetch#参数)。
 
-> **备注：** 更多关于 Fetch API 的用法，参考[使用 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)，以及一些概念 [Fetch 基础概念](/zh-CN/docs/Web/API/Fetch_API/Basic_concepts)。
+> [!NOTE]
+> 更多关于 Fetch API 的用法，参考[使用 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)。
 
 ### 中止 fetch
 
@@ -65,4 +66,3 @@ Fetch 提供了对 {{domxref("Request")}} 和 {{domxref("Response")}}（以及�
 - [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
-- [Fetch 基础概念](/zh-CN/docs/Web/API/Fetch_API/Basic_concepts)

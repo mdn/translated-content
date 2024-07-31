@@ -988,7 +988,8 @@ Here's the best rule of thumb: it's likely appropriate to use `<b>`, `<i>`, or `
 - {{HTMLElement('b')}} is used to convey a meaning traditionally conveyed by bold: Key words, product names, lead sentence...
 - {{HTMLElement('u')}} is used to convey a meaning traditionally conveyed by underline: Proper name, misspelling...
 
-> **備註：** A kind warning about underline: **People strongly associate underlining with hyperlinks.** Therefore, on the Web, it's best to underline only links. Use the `<u>` element when it's semantically appropriate, but consider using CSS to change the default underline to something more appropriate on the Web. The example below illustrates how it can be done.
+> [!NOTE]
+> A kind warning about underline: **People strongly associate underlining with hyperlinks.** Therefore, on the Web, it's best to underline only links. Use the `<u>` element when it's semantically appropriate, but consider using CSS to change the default underline to something more appropriate on the Web. The example below illustrates how it can be done.
 
 ```html
 <!-- scientific names -->

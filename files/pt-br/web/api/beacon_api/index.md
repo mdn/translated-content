@@ -11,7 +11,8 @@ O principal caso de uso da Beacon API é enviar dados de análise, como eventos 
 
 Para mais detalhes sobre a motivação e uso dessa API, veja a documentação sobre o método {{domxref("navigator.sendBeacon()")}}
 
-> **Nota:** essa API _não está disponível_ nos [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API) (não é exposta através do {{domxref("WorkerNavigator")}}).
+> [!NOTE]
+> essa API _não está disponível_ nos [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API) (não é exposta através do {{domxref("WorkerNavigator")}}).
 
 ## Interface
 
