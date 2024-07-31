@@ -70,7 +70,8 @@ Una **página web** es un simple documento que puede ser mostrado por un {{Gloss
 - _scripts_ — que agrega interactividad a la página
 - _medios_ — imágenes, sonidos, y vídeos.
 
-> **Nota:** Los buscadores pueden mostrar distintos tipos de documentos, como archivos {{Glossary("PDF")}} o imágenes. Pero el término **página web** específicamente hace referencia a documentos HTML. Para los demás, usaremos sólo el termino **document**(documento).
+> [!NOTE]
+> Los buscadores pueden mostrar distintos tipos de documentos, como archivos {{Glossary("PDF")}} o imágenes. Pero el término **página web** específicamente hace referencia a documentos HTML. Para los demás, usaremos sólo el termino **document**(documento).
 
 Todas las páginas web disponibles en la red son accesibles mediante una dirección única. Para acceder a una página, simplemente escribe su direcciones en la barra de búsqueda de tu navegador:
 

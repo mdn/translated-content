@@ -7,11 +7,13 @@ slug: Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript
 
 这个测试的目的是为了评估你是否已经理解了我们的 [JavaScript 中的类](/zh-CN/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)这一文章。
 
-> **备注：** 你可以尝试在下方的交互式编辑器，但是若你下载源码并使用在线工具（例如 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)）来尝试这些任务，可能会更有帮助。
+> [!NOTE]
+> 你可以尝试在下方的交互式编辑器，但是若你下载源码并使用在线工具（例如 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)）来尝试这些任务，可能会更有帮助。
 >
 > 如果你遇到了困难，请联系我们以寻求帮助——见本页面底部的[评估或进一步帮助](#评估或进一步帮助)。
 
-> **备注：** 在下方的示例中，如果你的代码中存在错误内容，这些错误将在页面的结果面板中显示，以此来帮助你想出解决方案（若是下载的版本，请进入浏览器的 JavaScript 控制台）。
+> [!NOTE]
+> 在下方的示例中，如果你的代码中存在错误内容，这些错误将在页面的结果面板中显示，以此来帮助你想出解决方案（若是下载的版本，请进入浏览器的 JavaScript 控制台）。
 
 ## 面向对象的 Javascript 1
 
@@ -30,7 +32,7 @@ slug: Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs1.html", '100%', 400)}}
 
-> **标注：**
+> [!CALLOUT]
 >
 > [下载此任务的初始代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/oojs/oojs1-download.html)，以便在你自己的编辑器或在线编辑器中尝试。
 
@@ -44,7 +46,7 @@ slug: Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs2.html", '100%', 400)}}
 
-> **标注：**
+> [!CALLOUT]
 >
 > [下载此任务的初始代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/oojs/oojs2-download.html)，以便在你自己的编辑器或在线编辑器中尝试。
 

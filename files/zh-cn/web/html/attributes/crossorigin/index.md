@@ -49,7 +49,8 @@ slug: Web/HTML/Attributes/crossorigin
   </tbody>
 </table>
 
-> **备注：** 在 Firefox 83 版本之前，`rel="icon"` 元素不支持 `crossorigin` 属性。也有一个 [Chrome 的未解决的议题](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)。
+> [!NOTE]
+> 在 Firefox 83 版本之前，`rel="icon"` 元素不支持 `crossorigin` 属性。也有一个 [Chrome 的未解决的议题](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)。
 
 ### 示例：使用 `crossorigin` 的 `<script>` 元素
 

@@ -9,7 +9,8 @@ l10n:
 
 {{domxref("AudioWorkletProcessor")}} インターフェイスの読み取り専用プロパティ **`port`** は、関連付けられた {{domxref("MessagePort")}} を返します。これは、処理器と対応する {{domxref("AudioWorkletNode")}} の間の通信に使用できます。
 
-> **メモ:** チャネルのもう一方の端は、ノードの {{domxref("AudioWorkletNode.port", "port")}} プロパティから参照できます。
+> [!NOTE]
+> チャネルのもう一方の端は、ノードの {{domxref("AudioWorkletNode.port", "port")}} プロパティから参照できます。
 
 ## 値
 

@@ -42,7 +42,8 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
   - : 이미지의 대체 텍스트 설명.
 
-    > **참고:** 브라우저가 항상 이미지를 표시하는건 아닙니다. 예를 들어,
+    > [!NOTE]
+    > 브라우저가 항상 이미지를 표시하는건 아닙니다. 예를 들어,
 
     - 비 시각적 브라우저 (시각 장애인이 사용하는 일부 브라우저 등)
     - 사용자가 이미지 불러오기 거부 (대역폭 절약, 개인정보 보호 등)
@@ -90,7 +91,8 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
   - : 이미지가 [서버 사이드 맵](https://ko.wikipedia.org/wiki/%EC%9D%B4%EB%AF%B8%EC%A7%80_%EB%A7%B5)의 일부인지 나타냄. 서버 사이드 맵에 속하는 경우, 사용자가 이미지에서 클릭한 위치를 서버로 전송합니다.
 
-    > **참고:** 포인팅 장치가 없는 사용자도 갈 수 있는 대체 목적지를 제공하기 위해, `ismap`은 `&#x3C;img>` 요소가 유효한 [`href`](/ko/docs/Web/HTML/Element/a#href) 특성을 가진 {{htmlelement("a")}} 요소의 자손인 경우에만 사용 가능합니다.
+    > [!NOTE]
+    > 포인팅 장치가 없는 사용자도 갈 수 있는 대체 목적지를 제공하기 위해, `ismap`은 `&#x3C;img>` 요소가 유효한 [`href`](/ko/docs/Web/HTML/Element/a#href) 특성을 가진 {{htmlelement("a")}} 요소의 자손인 경우에만 사용 가능합니다.
 
 - `loading`
 
@@ -170,7 +172,8 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
   - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element [`id`](/ko/docs/Web/HTML/Global_attributes#id).
 
-    > **참고:** This attribute is mentioned in the latest {{glossary("W3C")}} version, [HTML 5.2](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc), but has been removed from the {{glossary("WHATWG")}}'s [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). It has an uncertain future; authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) or [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
+    > [!NOTE]
+    > This attribute is mentioned in the latest {{glossary("W3C")}} version, [HTML 5.2](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc), but has been removed from the {{glossary("WHATWG")}}'s [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). It has an uncertain future; authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) or [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
 
 - `name` {{deprecated_inline}}
   - : A name for the element. Use the [`id`](/ko/docs/Web/HTML/Global_attributes#id) attribute instead.
@@ -235,7 +238,8 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
 {{EmbedLiveSample("Using_the_srcset_and_sizes_attributes", "100%", 350)}}
 
-> **참고:** 직접 창 크기를 조절하면서 이미지의 변화를 관측하려면 {{LiveSampleLink('Using_the_srcset_and_sizes_attributes', '별도 페이지')}}를 방문하세요.
+> [!NOTE]
+> 직접 창 크기를 조절하면서 이미지의 변화를 관측하려면 {{LiveSampleLink('Using_the_srcset_and_sizes_attributes', '별도 페이지')}}를 방문하세요.
 
 ## 보안 및 개인정보 고려사항
 

@@ -135,7 +135,8 @@ slug: Web/API/Document_Object_Model/Whitespace
 
 这就是为什么人们在访问网页时，会看到“Hello World!”这句话很好地写在页面的顶部，而不是一个奇怪的缩进的“Hello”，但在下面一行有一个更奇怪的缩进的“World!”。
 
-> **备注：** 从版本 52 开始，[Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)支持高亮文本节点，使得观察包含节点中包含的空白字符变得更加容易。纯的空白符节点会有一个“whitespace”标记。
+> [!NOTE]
+> 从版本 52 开始，[Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)支持高亮文本节点，使得观察包含节点中包含的空白字符变得更加容易。纯的空白符节点会有一个“whitespace”标记。
 
 ### 在区块格式化上下文的空白符
 

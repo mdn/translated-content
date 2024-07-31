@@ -73,7 +73,8 @@ slug: Web/HTML/Attributes/rel/preload
 
 > **참고:** `video`를 프리로딩하는 것은 프리로드 스펙에 포함되어 있지만 현재 브라우저에는 구현되지 않았습니다.
 
-> **참고:** 브라우저에서 사용될 수 있는 이러한 값들과 웹의 기능에 대한 더 자세한 내용은 프리로드 스펙에 기재되어 있습니다. - [link 요소 확장](https://w3c.github.io/preload/#link-element-extensions)을 참고하세요. 또한, `as` 특성에 사용할 수 있는 값들의 전체 목록은 Fetch 스펙에 의해 관리되고 있음을 참고하세요 - [요청 대상](https://fetch.spec.whatwg.org/#concept-request-destination)을 참고하세요.
+> [!NOTE]
+> 브라우저에서 사용될 수 있는 이러한 값들과 웹의 기능에 대한 더 자세한 내용은 프리로드 스펙에 기재되어 있습니다. - [link 요소 확장](https://w3c.github.io/preload/#link-element-extensions)을 참고하세요. 또한, `as` 특성에 사용할 수 있는 값들의 전체 목록은 Fetch 스펙에 의해 관리되고 있음을 참고하세요 - [요청 대상](https://fetch.spec.whatwg.org/#concept-request-destination)을 참고하세요.
 
 ## MIME 타입 포함하기
 

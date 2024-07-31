@@ -9,7 +9,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 El método **apply()** invoca una determinada función asignando explícitamente el objeto **this** y un array o similar ([array like object](/es/docs/JavaScript/Guide/Predefined_Core_Objects#Working_with_Array-like_objects)) como parámetros (**argumentos)** para dicha función.
 
-> **Nota:** Aunque la sintaxis de esta función es casi idéntica a {{jsxref("Function.call", "call()")}}, la diferencia fundamental es que `call()` acepta una lista de argumentos, mientras que `apply()` acepta un simple array con los argumentos.
+> [!NOTE]
+> Aunque la sintaxis de esta función es casi idéntica a {{jsxref("Function.call", "call()")}}, la diferencia fundamental es que `call()` acepta una lista de argumentos, mientras que `apply()` acepta un simple array con los argumentos.
 
 ## Sintaxis
 
@@ -38,7 +39,8 @@ Puede también utilizarse {{jsxref("Functions/arguments", "arguments")}} como pa
 
 Desde la 5ta edición de ECMAScript se puede utilizar también cualquier tipo de objeto similar a un arreglo, que en términos prácticos significa que tendrá una propiedad `length` y propiedades integer en el rango (`0...length)`. Por ejemplo, ahora puede utilizarse un {{domxref("NodeList")}} o un objeto personalizado como: `{'length': 2, '0': 'eat', '1': 'bananas'}`.
 
-> **Nota:** La mayoría de los navegadores, incluidos Chrome 14 e Internet Explorer 9, aún no soportan el uso de objetos similares a un array y arrojarán una excepción.
+> [!NOTE]
+> La mayoría de los navegadores, incluidos Chrome 14 e Internet Explorer 9, aún no soportan el uso de objetos similares a un array y arrojarán una excepción.
 
 ## Ejemplos
 
@@ -74,7 +76,8 @@ alert(myInstance instanceof MyConstructor); // alerts "true"
 alert(myInstance.constructor); // alerts "MyConstructor"
 ```
 
-> **Nota:** El método `Function.construct` no nativo no funcionará con algunos constructores nativos (como {{jsxref("Date")}}, por ejemplo). En estos casos se deberá utilizar el método {{jsxref("Function.bind")}} (por ejemplo, supóngase un arreglo como el siguiente para utilizar con el constructor `Date`: `[2012, 11, 4]`; en este caso se tendría que escribir algo como: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` – de cualquier manera, ésta no es la mejor manera de hacerlo y probablemente no debería utilizarse en ningún entorno en producción).
+> [!NOTE]
+> El método `Function.construct` no nativo no funcionará con algunos constructores nativos (como {{jsxref("Date")}}, por ejemplo). En estos casos se deberá utilizar el método {{jsxref("Function.bind")}} (por ejemplo, supóngase un arreglo como el siguiente para utilizar con el constructor `Date`: `[2012, 11, 4]`; en este caso se tendría que escribir algo como: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` – de cualquier manera, ésta no es la mejor manera de hacerlo y probablemente no debería utilizarse en ningún entorno en producción).
 
 ### `apply` y funciones built-in
 

@@ -60,7 +60,8 @@ Geralmente é recomendável que se utilize classes sempre que possível, utiliza
 - Classes permitem que você estilize diversos elementos. Sendo assim, classes podem ajudar a desenvolver folhas de estilo menores; mais enchutas, já que regras podem ser facilmente reutilizadas entre elementos. Isso não só ajuda na manutenção da folha de estilo, como também agiliza a renderização de páginas, principalmente em conexões lentas.
 - Seletores de classes tem menor [especificidade](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Specificity) do que seletores de id, o que torna as regras de estilização mais fáceis de serem sobrepostas.
 
-> **Nota:** Veja [Seletores](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Selectors) para mais informações.
+> [!NOTE]
+> Veja [Seletores](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Selectors) para mais informações.
 
 ## Como eu redefino o valor padrão de uma propriedade?
 
@@ -262,9 +263,11 @@ Caso você precise usar propriedades prefixadas em seu trabalho, você deve decl
 transform: rotate(90deg);
 ```
 
-> **Nota:** Para mais informações em como lhe dar com propriedades prefixadas, veja [Lidando com problemas comuns em HTML e CSS — Lidando com prefixos CSS](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes) do nosso módulo [Teste Cross-browsing](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing).
+> [!NOTE]
+> Para mais informações em como lhe dar com propriedades prefixadas, veja [Lidando com problemas comuns em HTML e CSS — Lidando com prefixos CSS](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes) do nosso módulo [Teste Cross-browsing](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing).
 
-> **Nota:** Veja a página [Extenções CSS Mozilla](/pt-BR/docs/CSS/CSS_Reference/Mozilla_Extensions) para mais informações sobre propriedades CSS prefixadas da Mozilla.
+> [!NOTE]
+> Veja a página [Extenções CSS Mozilla](/pt-BR/docs/CSS/CSS_Reference/Mozilla_Extensions) para mais informações sobre propriedades CSS prefixadas da Mozilla.
 
 ## Como `z-index` está relacionado a posicionamento?
 
@@ -272,4 +275,5 @@ A propriedade `z-index` especifica a ordem dos elementos da pilha.
 
 Um elemento com z-index/ordem na pilha maior sempre será renderizado à frente de um elemento com um z-index/ordem de pilha menor. `z-index` funcionará apenas em elementos que tenham uma posição especificada (Ou seja, só funcionará caso o elemento tenha `position:absolute`, `position:relative` ou `position:fixed`).
 
-> **Nota:** Para mais informações, veja nosso artigo de aprendizado sobre [Posicionamento](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning), e em particular a seção [Introduzindo z-index](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning#Introducing_z-index).
+> [!NOTE]
+> Para mais informações, veja nosso artigo de aprendizado sobre [Posicionamento](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning), e em particular a seção [Introduzindo z-index](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning#Introducing_z-index).

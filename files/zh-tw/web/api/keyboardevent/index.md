@@ -35,15 +35,18 @@ _本介面（ interface）亦繼承其父，{{domxref("UIEvent")}} 和 {{domxref
 
   - : 一個 {{domxref("DOMString")}} ，返回鍵盤對應的字符。若是該鍵對應一個實際的字符，則其值為對應該字符的一個非空的 Unicode 字串；若沒對應的話，則返回一個空字串。
 
-    > **備註：** If the key is used as a macro that inserts multiple characters, this attribute's value is the entire string, not just the first character.
+    > [!NOTE]
+    > If the key is used as a macro that inserts multiple characters, this attribute's value is the entire string, not just the first character.
 
-    > **警告：** 在 DOM Level 3 Events ，該 propertie 已被移除。現在只有 IE9+ 支持它。
+    > [!WARNING]
+    > 在 DOM Level 3 Events ，該 propertie 已被移除。現在只有 IE9+ 支持它。
 
 - {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}}{{Readonlyinline}}
 
   - : Returns a {{jsxref("Number")}} representing the Unicode reference number of the key; this attribute is used only by the `keypress` event. For keys whose `char` attribute contains multiple characters, this is the Unicode value of the first character in that attribute. In Firefox 26 this returns codes for printable characters.
 
-    > **警告：** 此 attribute 已被淘汰。如果可以，建議使用 {{domxref("KeyboardEvent.key")}}。
+    > [!WARNING]
+    > 此 attribute 已被淘汰。如果可以，建議使用 {{domxref("KeyboardEvent.key")}}。
 
 - {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
   - : 一個 {{domxref("DOMString")}} 。返回事件對應的按鍵的代碼。
@@ -57,13 +60,15 @@ _本介面（ interface）亦繼承其父，{{domxref("UIEvent")}} 和 {{domxref
 
   - : Returns a {{jsxref("Number")}} representing a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
 
-    > **警告：** 此 attribute 已被淘汰。如果可以，建議使用{{domxref("KeyboardEvent.key")}}。
+    > [!WARNING]
+    > 此 attribute 已被淘汰。如果可以，建議使用{{domxref("KeyboardEvent.key")}}。
 
 - {{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}
 
   - : Returns a {{domxref("DOMString")}} representing a locale string indicating the locale the keyboard is configured for. This may be the empty string if the browser or device doesn't know the keyboard's locale.
 
-    > **備註：** This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.
+    > [!NOTE]
+    > This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.
 
 - {{domxref("KeyboardEvent.location")}} {{Readonlyinline}}
   - : Returns a {{jsxref("Number")}} representing the location of the key on the keyboard or other input device.
@@ -77,7 +82,8 @@ _本介面（ interface）亦繼承其父，{{domxref("UIEvent")}} 和 {{domxref
 
   - : Returns a {{jsxref("Number")}} representing a system and implementation dependent numeric code identifying the unmodified value of the pressed key; this is usually the same as `keyCode`.
 
-    > **警告：** 此 attribute 已被淘汰。如果可以，建議使用 {{domxref("KeyboardEvent.key")}}。
+    > [!WARNING]
+    > 此 attribute 已被淘汰。如果可以，建議使用 {{domxref("KeyboardEvent.key")}}。
 
 ## 注意
 

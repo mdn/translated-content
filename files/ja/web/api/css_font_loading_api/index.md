@@ -9,7 +9,8 @@ l10n:
 
 CSS フォント読み込み API は、フォントリソースを動的に読み込むためのイベントとインターフェイスを提供します。
 
-> **メモ:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます（`self.fonts` が{{domxref('FontFaceSet')}} にアクセスする機能を提供します）。
+> [!NOTE]
+> この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます（`self.fonts` が{{domxref('FontFaceSet')}} にアクセスする機能を提供します）。
 
 ## 概念と使用方法
 

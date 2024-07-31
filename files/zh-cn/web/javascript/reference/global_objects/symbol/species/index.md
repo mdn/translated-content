@@ -41,5 +41,10 @@ console.log(mapped instanceof Array); // true
 
 ## 参见
 
-- {{jsxref("Map.@@species", "Map[@@species]")}}
-- {{jsxref("Set.@@species", "Set[@@species]")}}
+- [`Array[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
+- [`ArrayBuffer[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species)
+- [`Map[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
+- [`Promise[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species)
+- [`RegExp[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species)
+- [`Set[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species)
+- [`TypedArray[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species)

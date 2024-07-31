@@ -9,7 +9,8 @@ DocumentFragment.queryselectorall() 方法返回{{domxref("NodeList")}}中的元
 
 如果参数中指定的选择器无效，则会引发一个带 SYNTAX_ERR 值的{{domxref("DOMException")}}。
 
-> **备注：** 这个 API 的定义被移动到{{domxref("ParentNode")}}接口。
+> [!NOTE]
+> 这个 API 的定义被移动到{{domxref("ParentNode")}}接口。
 
 ## 语法
 

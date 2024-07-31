@@ -61,7 +61,8 @@ Los sitios web tanto estáticos como dinámicos (abordados en las secciones sigu
 
 Puedes realizar una petición `GET` simplemente pinchando sobre un enlace o buscando en un sitio (como la página inicial de un motor de búsquedas). Por ejemplo, la petición HTTP que se envía cuando realizas una búsqueda en MDN del término "visión general cliente servidor" se parecerá mucho al texto que se muestra más abajo (no será idéntica porque algunas partes del mensaje dependen de tu explorador/configuración).
 
-> **Nota:** El formato de los mensajes HTTP está definido en el "estándard web" ([RFC7230](http://www.rfc-editor.org/rfc/rfc7230.txt)). No necesitas conocer este nivel de detalle, pero al menos ¡ahora sabes de donde viene todo esto!
+> [!NOTE]
+> El formato de los mensajes HTTP está definido en el "estándard web" ([RFC7230](http://www.rfc-editor.org/rfc/rfc7230.txt)). No necesitas conocer este nivel de detalle, pero al menos ¡ahora sabes de donde viene todo esto!
 
 #### La petición
 
@@ -201,13 +202,15 @@ X-Cache-Info: not cacheable; request wasn't a GET or HEAD
 Content-Length: 0
 ```
 
-> **Nota:** Las repuestas y las peticiones HTTP mostradas en estos ejemplos fueron capturadas usando la aplicación [Fiddler](https://www.telerik.com/download/fiddler), pero puedes obtener información similar usando sniffers web (ej. <http://web-sniffer.net/>) o usando extensiones del explorador como [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/). Puedes probarlo por tí mismo. Usa una de las herramientas enlazadas, y a continuación navega a través de un sitio y edita información del perfil para ver las diferentes peticiones y respuestas. La mayoría de los exploradores modernos también tienen herramientas que monitorizan las peticiciones de red (Por ejemplo, la herramienta [Network Monitor](/es/docs/Tools/Network_Monitor) en Firefox).
+> [!NOTE]
+> Las repuestas y las peticiones HTTP mostradas en estos ejemplos fueron capturadas usando la aplicación [Fiddler](https://www.telerik.com/download/fiddler), pero puedes obtener información similar usando sniffers web (ej. <http://web-sniffer.net/>) o usando extensiones del explorador como [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/). Puedes probarlo por tí mismo. Usa una de las herramientas enlazadas, y a continuación navega a través de un sitio y edita información del perfil para ver las diferentes peticiones y respuestas. La mayoría de los exploradores modernos también tienen herramientas que monitorizan las peticiciones de red (Por ejemplo, la herramienta [Network Monitor](/es/docs/Tools/Network_Monitor) en Firefox).
 
 ## Sitios estáticos
 
 Un _sitio estático_ es aquél que devuelve desde el servidor el mismo contenido establecido de forma fija en el código cada vez que se solicita una página en particular. De manera que si por ejemplo tienes una página sobre un producto en `/static/myproduct1.html` , a todos los usuarios se les devolverá la misma página. Si añades otro producto similar a tu sitio necesitarás añadir otra página (ej. `myproduct2.html`) etc... Esto puede llegar a ser realmente muy poco eficiente — ¿qué sucede cuando alcanzas miles de páginas de productos? Repetirías un montón de código a lo largo de cada página (la plantilla básica de la página, la estructura, etc), y si quisieras cambiar cualquier cosa de la estructura de la página — como añadir una nueva sección de "productos relacionados" por ejemplo — tendrías que cambiar cada página individualmente.
 
-> **Nota:** Los sitios estáticos son excelentes cuando tienes un pequeño número de páginas y quieres enviar el mismo contenido a todos los usuarios. Sin embargo pueden tener un coste de mantenimiento significante a medida que es número de páginas se hace grande.
+> [!NOTE]
+> Los sitios estáticos son excelentes cuando tienes un pequeño número de páginas y quieres enviar el mismo contenido a todos los usuarios. Sin embargo pueden tener un coste de mantenimiento significante a medida que es número de páginas se hace grande.
 
 Recapitulemos cómo funciona ésto, mirando otra vez el diagrama de la arquitectura de un sitio estático que vimos en el anterior artículo.
 
@@ -283,7 +286,8 @@ urlpatterns = [
 ]
 ```
 
-> **Nota:** El primer parámetro en las funciones `url()` puede parecer un poco extraño (ej. `r'^junior/$'`) porque usan una técnica de emparejamiento de patrones llamada "expresiones regulares" ("regular expressions", RegEx, o RE). No necesitas saber cómo funcionan las expresiones regulares en este momento, tan sólo que nos permiten emparejar patrones en el URL (en vez de los valores insertados en el código de forma fija que veíamos más arriba) y los usan como parámetros en nuestras funciones de visualización. Como ejemplo, una RegEx simple podría decir "empareja una simple letra mayúscula, seguida de entre 4 y 7 letras minúsculas."
+> [!NOTE]
+> El primer parámetro en las funciones `url()` puede parecer un poco extraño (ej. `r'^junior/$'`) porque usan una técnica de emparejamiento de patrones llamada "expresiones regulares" ("regular expressions", RegEx, o RE). No necesitas saber cómo funcionan las expresiones regulares en este momento, tan sólo que nos permiten emparejar patrones en el URL (en vez de los valores insertados en el código de forma fija que veíamos más arriba) y los usan como parámetros en nuestras funciones de visualización. Como ejemplo, una RegEx simple podría decir "empareja una simple letra mayúscula, seguida de entre 4 y 7 letras minúsculas."
 
 El framework web también hace fácil a una función de visualización extraer información de la base de datos. La estructura de nuestros datos está definida en modelos, que son las clases Python que definen los campos que serán almacenados en la base de datos subyacente. Si tenemos un modelo llamado _Team_ con un campo de "_team_type_" podemos usar un query de sintaxis simple para recuperar todos los equipos que son de un tipo particular.
 

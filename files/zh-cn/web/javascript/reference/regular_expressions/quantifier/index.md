@@ -143,7 +143,8 @@ function stripTags(str) {
 stripTags("<p><em>lorem</em> <strong>ipsum</strong></p>"); // 'lorem ipsum'
 ```
 
-> **警告：** 以上方法仅供演示——它无法处理属性值中的 `>`。请使用类似 [HTML sanitizer API](/zh-CN/docs/Web/API/HTML_Sanitizer_API) 这样的正规 HTML 净化器。
+> [!WARNING]
+> 以上方法仅供演示——它无法处理属性值中的 `>`。请使用合适的 HTML 净化器。
 
 ### 定位 Markdown 段落
 
@@ -164,7 +165,8 @@ Another paragraph
 `); // 3
 ```
 
-> **警告：** 以上方法仅供演示——它无法处理代码块或其他 Markdown 块元素（如标题）中的换行符。请使用合适的 Markdown 解析器。
+> [!WARNING]
+> 以上方法仅供演示——它无法处理代码块或其他 Markdown 块元素（如标题）中的换行符。请使用合适的 Markdown 解析器。
 
 ## 规范
 

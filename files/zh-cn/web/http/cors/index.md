@@ -70,7 +70,8 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
 - 如果请求是使用 {{domxref("XMLHttpRequest")}} 对象发出的，在返回的 {{domxref("XMLHttpRequest.upload")}} 对象属性上没有注册任何事件监听器；也就是说，给定一个 {{domxref("XMLHttpRequest")}} 实例 `xhr`，没有调用 `xhr.upload.addEventListener()`，以监听该上传请求。
 - 请求中没有使用 {{domxref("ReadableStream")}} 对象。
 
-> **备注：** WebKit Nightly 和 Safari Technology Preview 为 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}} 和 {{HTTPHeader("Content-Language")}} 标头字段的值添加了额外的限制。如果这些标头字段的值是“非标准”的，WebKit/Safari 就不会将这些请求视为“简单请求”。WebKit/Safari 并没有在文档中列出哪些值是“非标准”的，不过我们可以在这里找到相关讨论：
+> [!NOTE]
+> WebKit Nightly 和 Safari Technology Preview 为 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}} 和 {{HTTPHeader("Content-Language")}} 标头字段的值添加了额外的限制。如果这些标头字段的值是“非标准”的，WebKit/Safari 就不会将这些请求视为“简单请求”。WebKit/Safari 并没有在文档中列出哪些值是“非标准”的，不过我们可以在这里找到相关讨论：
 >
 > - [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178)
 > - [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)
@@ -135,7 +136,8 @@ Access-Control-Allow-Origin: *
 Access-Control-Allow-Origin: https://foo.example
 ```
 
-> **备注：** 当响应的是[附带身份凭证的请求](#附带身份凭证的请求)时，服务端**必须**明确 `Access-Control-Allow-Origin` 的值，而不能使用通配符“`*`”。
+> [!NOTE]
+> 当响应的是[附带身份凭证的请求](#附带身份凭证的请求)时，服务端**必须**明确 `Access-Control-Allow-Origin` 的值，而不能使用通配符“`*`”。
 
 ### 预检请求
 
@@ -156,7 +158,8 @@ xhr.send("<person><name>Arun</name></person>");
 
 ![](preflight_correct.png)
 
-> **备注：** 如下所述，实际的 `POST` 请求不会携带 `Access-Control-Request-*` 标头，它们仅用于 `OPTIONS` 请求。
+> [!NOTE]
+> 如下所述，实际的 `POST` 请求不会携带 `Access-Control-Request-*` 标头，它们仅用于 `OPTIONS` 请求。
 
 下面是服务端和客户端完整的信息交互。首次交互是*预检请求/响应*：
 
@@ -265,7 +268,8 @@ CORS 最初要求浏览器具有该行为，不过在后续的[修订](https://g
 
 ### 附带身份凭证的请求
 
-> **备注：** 当发出跨源请求时，第三方 cookie 策略仍将适用。无论如何改变本章节中描述的服务器和客户端的设置，该策略都会强制执行。
+> [!NOTE]
+> 当发出跨源请求时，第三方 cookie 策略仍将适用。无论如何改变本章节中描述的服务器和客户端的设置，该策略都会强制执行。
 
 {{domxref("XMLHttpRequest")}} 或 [Fetch](/zh-CN/docs/Web/API/Fetch_API) 与 CORS 的一个有趣的特性是，可以基于 [HTTP cookies](/zh-CN/docs/Web/HTTP/Cookies) 和 HTTP 认证信息发送身份凭证。一般而言，对于跨源 `XMLHttpRequest` 或 [Fetch](/zh-CN/docs/Web/API/Fetch_API) 请求，浏览器**不会**发送身份凭证信息。如果要发送凭证信息，需要设置 `XMLHttpRequest` 对象的某个特殊标志位，或在构造 {{domxref("Request")}} 对象时设置。
 
@@ -327,7 +331,8 @@ Content-Type: text/plain
 
 CORS 预检请求不能包含凭据。预检请求的*响应*必须指定 `Access-Control-Allow-Credentials: true` 来表明可以携带凭据进行实际的请求。
 
-> **备注：** 一些企业认证服务要求在预检请求时发送 TLS 客户端证书，这违反了 [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) 的规范。
+> [!NOTE]
+> 一些企业认证服务要求在预检请求时发送 TLS 客户端证书，这违反了 [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) 的规范。
 >
 > Firefox 87 允许通过在设置中设定 `network.cors_preflight.allow_client_cert` 为 `true`（[Firefox bug 1511151](https://bugzil.la/1511151)）来允许这种不规范的行为。基于 chromium 的浏览器目前总是在 CORS 预检请求中发送 TLS 客户端证书（[Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438)）。
 

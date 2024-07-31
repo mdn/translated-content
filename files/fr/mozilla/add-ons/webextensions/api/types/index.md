@@ -16,7 +16,7 @@ Définit le type `BrowserSetting` , qui est utilisé pour représenter un param�
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/extensions/types).
 >

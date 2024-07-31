@@ -9,7 +9,8 @@ slug: Web/HTML/Element/pre
 
 {{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
 
-> **备注：** 你需要将该元素里的 '<' 字符转义为 '\&lt;' 以保证代码里的关闭代码不被浏览器解释为标签。
+> [!NOTE]
+> 你需要将该元素里的 '<' 字符转义为 '\&lt;' 以保证代码里的关闭代码不被浏览器解释为标签。
 
 <table class="properties">
  <tbody>

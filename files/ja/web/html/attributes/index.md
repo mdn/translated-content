@@ -1,8 +1,9 @@
 ---
 title: HTML 属性リファレンス
+short-title: 属性
 slug: Web/HTML/Attributes
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: bf671984cfef2f7c6419571d834a146c5424ac10
 ---
 
 {{HTMLSidebar("Attributes")}}
@@ -753,21 +754,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/html#manifest">manifest</a></code>
-        {{deprecated_inline}}
-      </td>
-      <td>{{ HTMLElement("html") }}</td>
-      <td>
-        この文書のキャッシュマニフェストの URL を指定します。
-        <div class="note">
-          <p>
-            <strong>メモ:</strong> この属性は廃止されており、代わりに <a href="/ja/docs/Web/Manifest"><code>&#x3C;link rel="manifest"></code></a> を使用してください。
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
         <code><a href="/ja/docs/Web/HTML/Attributes/max">max</a></code>
       </td>
       <td>
@@ -1347,7 +1333,8 @@ HTML では、論理属性に許されている値の制約を定義していま
 
 ## イベントハンドラー属性
 
-> **警告:** イベントハンドラーコンテンツ属性を使用することは推奨されません。HTML と JavaScript が混在すると保守性の低いコードになることが多く、またイベントハンドラー属性の実行はコンテンツセキュリティポリシーによってブロックされることがあります。
+> [!WARNING]
+> イベントハンドラーコンテンツ属性を使用することは推奨されません。HTML と JavaScript が混在すると保守性の低いコードになることが多く、またイベントハンドラー属性の実行はコンテンツセキュリティポリシーによってブロックされることがあります。
 
 上の表に掲載されている属性の他に、グローバル[イベントハンドラー](/ja/docs/Web/Events/Event_handlers#using_onevent_properties)（[`onclick`](/ja/docs/Web/API/Element/click_event) など）も、すべての要素の[コンテンツ属性](##コンテンツ属性と_idl_属性)として指定することができます。
 

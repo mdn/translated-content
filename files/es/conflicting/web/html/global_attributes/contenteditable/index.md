@@ -34,7 +34,8 @@ Afortunadamente, en los navegadores modernos las cosas son un poco más consiste
 
 Pruebalo en el ejemplo de abajo.
 
-> **Nota:** Internet Explorer ya no se está desarrollando y usa {{htmlelement("p")}}.
+> [!NOTE]
+> Internet Explorer ya no se está desarrollando y usa {{htmlelement("p")}}.
 
 Si quieres utilizar un separador de párrafo diferente, todos los navegadores arriba mencionados soportan {{domxref("document.execCommand")}}, el cual provee un DefaultParagraphSeparator comando que te premite cambiarlo. Por ejemplo, para usar {{htmlelement("p")}} elements:
 
@@ -208,7 +209,8 @@ img.intLink { border: 0; }
 </html>
 ```
 
-> **Nota:** si quieres ver cómo estandarizar la creación y la inserción de tu editor en tu página, puedes ver nuestro [más completo ejemplo de editor de texto enriquecido](rich-text-editor.zip).
+> [!NOTE]
+> Si quieres ver cómo estandarizar la creación y la inserción de tu editor en tu página, puedes ver nuestro [más completo ejemplo de editor de texto enriquecido](rich-text-editor.zip).
 
 ## Véase también
 
