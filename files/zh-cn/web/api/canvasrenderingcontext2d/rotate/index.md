@@ -22,7 +22,7 @@ rotate(angle)
 - `angle`
   - : 顺时针旋转的弧度。如果你想通过角度值计算，可以使用公式： `degree * Math.PI / 180` 。
 
-旋转中心点一直是 canvas 的原点。如果想改变中心点，你可以通过 {{domxref("CanvasRenderingContext2D.translate", "translate()")}} 方法移动 canvas。
+旋转中心点一直是 canvas 的原点。如果想改变中心点，你可以通过 {{domxref("CanvasRenderingContext2D.translate", "translate()")}} 方法移动画布。
 
 ### 返回值
 
@@ -32,7 +32,7 @@ rotate(angle)
 
 ### 旋转形状
 
-这个例子将矩形旋转了 45°。注意，旋转的中心是画布的左上角，而不是相对于任何形状的位置。
+此示例将矩形旋转了 45°。注意，旋转的中心是画布的左上角，而不是相对于任何形状的位置。
 
 #### HTML
 
