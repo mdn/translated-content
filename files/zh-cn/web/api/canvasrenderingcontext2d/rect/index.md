@@ -2,16 +2,17 @@
 title: CanvasRenderingContext2D：rect() 方法
 slug: Web/API/CanvasRenderingContext2D/rect
 l10n:
-  sourceCommit: 885e89d115a056d16c7e19a44b7e0f4c3617dd0e
+  sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
 ---
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.rect()`** 方法用于为当前路径绘制矩形。
+Canvas 2D API 的 **`CanvasRenderingContext2D.rect()`** 方法将一个矩形添加到当前路径中。
 
 与其他修改当前路径的方法一样，这个方法不会直接渲染任何内容。要在画布上绘制矩形，你可以使用 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} 或 {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} 方法。
 
-> **备注：** 要在一个步骤中创建并渲染矩形，可以使用 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 或 {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}} 方法。
+> [!NOTE]
+> 要在一个步骤中创建并渲染矩形，可以使用 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 或 {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}} 方法。
 
 ## 语法
 
@@ -19,9 +20,9 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.rect()`** 方法用于为当前路
 rect(x, y, width, height)
 ```
 
-### 参数
-
 `rect()` 方法创建一个矩形路径，其起始点位于 `(x, y)`，大小由 `width` 和 `height` 指定。
+
+### 参数
 
 - `x`
   - : 矩形起始点的 x 轴坐标。
@@ -40,7 +41,7 @@ rect(x, y, width, height)
 
 ### 绘制矩形
 
-这个例子使用 `rect()` 方法创建了一个矩形路径，然后使用 `fill()` 方法进行渲染。
+此示例使用 `rect()` 方法创建了一个矩形路径，然后使用 `fill()` 方法进行渲染。
 
 #### HTML
 
