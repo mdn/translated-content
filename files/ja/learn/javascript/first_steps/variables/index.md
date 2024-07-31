@@ -2,7 +2,7 @@
 title: 必要な情報を保管する — 変数
 slug: Learn/JavaScript/First_steps/Variables
 l10n:
-  sourceCommit: bd2701f4618e1fd763aa62da3bc14bf050c75f1f
+  sourceCommit: 6e3ef286a5f97590b6a1980bcd6e98dd34c15706
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
@@ -19,8 +19,8 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
-      <td>JavaScript の変数についての基礎を習得する。</td>
+      <th scope="row">目的:</th>
+      <td>JavaScript の変数についての基礎を習得すること。</td>
     </tr>
   </tbody>
 </table>
@@ -35,7 +35,7 @@ l10n:
 
 ### 変数の例
 
-単純な例を見てみましょう。
+例を見てみましょう。
 
 ```html
 <button id="button_A">押してください</button>
@@ -46,20 +46,22 @@ l10n:
 const buttonA = document.querySelector("#button_A");
 const headingA = document.querySelector("#heading_A");
 
+let count = 1;
+
 buttonA.onclick = () => {
-  const name = prompt("あなたの名前は何ですか？");
-  alert(`こんにちは、${name}さん、はじめまして！`);
-  headingA.textContent = `${name}さん、ようこそ`;
+  buttonA.textContent = "もう一度！";
+  headingA.textContent = `${count} 回クリックしました`;
+  count += 1;
 };
 ```
 
 {{ EmbedLiveSample('Variable_example', '100%', 120) }}
 
-この例では、ボタンを押すとちょっとしたコードが走ります。最初の行では、ボタンを押した人の名前を入力するボックスが画面に表示されます。そして入力された値を変数に保存します。2 行目では、入力した人の名前を変数から取り出して、あいさつのメッセージに含めています。3 行目では、ページ上にその名前を表示しています。
+この例では、ボタンを押すとちょっとした コードが実行されます。まず、ボタン自体のテキストを変更します。次に、ボタンが押された回数のメッセージを表示します。この回数は変数に格納されています。ユーザーがボタンを押すたびに、変数の数字が1ずつ増えていきます。
 
 ### 変数がない場合
 
-なぜこれが便利なのかを理解するためには、変数を使用せずにこの例と同じことをするためにはどのようにすればよいのか考えてみましょう。恐らく次のようになるでしょう。
+なぜこれが便利なのかを理解するためには、回数を格納する変数を使用せずにこの例と同じことをするためにはどのようにすればよいのか考えてみましょう。恐らく次のようになるでしょう。
 
 ```html example-bad
 <button id="button_B">押してください</button>
@@ -71,16 +73,14 @@ const buttonB = document.querySelector("#button_B");
 const headingB = document.querySelector("#heading_B");
 
 buttonB.onclick = () => {
-  alert(
-    `こんにちは、${prompt("あなたの名前は何ですか？")}さん、はじめまして！`,
-  );
-  headingB.textContent = `${prompt("あなたの名前は何ですか？")}さん、ようこそ`;
+  buttonB.textContent = "もう一度！";
+  headingB.textContent = "1 回クリックしました";
 };
 ```
 
 {{ EmbedLiveSample('Without_a_variable', '100%', 120) }}
 
-もしかしたら、まだ完全にはコードの内容がわからないかもしれませんね！けれども、変数がなければ、名前が必要になるたびに読み手に尋ねなければならなくなります。
+使っている構文を（まだ！）完全には理解していないかもしれませんが、イメージはつかめるはずです。変数がなければ、ボタンが何回クリックされたかを知る方法がありません。情報が記憶されないと、ユーザーへのメッセージはすぐに無意味なものになってしまいます。
 
 変数というのはとても合理的です。JavaScript に慣れていけばとても自然なものに感じられるでしょう。
 
@@ -323,7 +323,7 @@ myNumberArray[2]; // 40 と表示されます
 
 角括弧で表示したい値の位置に応じた添字を指定します。気づいたかもしれませんが JavaScript の配列は 0 から始まり、最初の要素の添字が 0 となります。
 
-配列についても[先の記事](/ja/docs/Learn/JavaScript/First_steps/Arrays)にて紹介します。
+詳しくは、[配列](/ja/docs/Learn/JavaScript/First_steps/Arrays)の記事を参照してください。
 
 ### オブジェクト
 
@@ -341,7 +341,7 @@ let dog = { name: "ポチ", breed: "ダルメシアン" };
 dog.name;
 ```
 
-とりあえずオブジェクトについて、今はここまでです。オブジェクトについてはもっと先のモジュールで紹介します。
+この件について詳しくは、 [JavaScript のオブジェクトの紹介](/ja/docs/Learn/JavaScript/Objects)モジュールを参照してください。
 
 ## 動的型付け
 

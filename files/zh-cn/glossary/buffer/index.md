@@ -2,12 +2,12 @@
 title: 缓冲区
 slug: Glossary/Buffer
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
 {{GlossarySidebar}}
 
-**缓冲区**是物理内存中的一个存储区域，用于在数据进行转移时临时存放数据。
+**缓冲区**是物理内存中用于在数据进行转移时临时存放数据的存储区域。
 
 ## 参见
 

@@ -22,7 +22,8 @@ CSP를 활성화하려면 {{HTTPHeader("Content-Security-Policy")}} HTTP 헤더�
   content="default-src 'self'; img-src https://*; child-src 'none';" />
 ```
 
-> **참고:** CSP 위반 보고서 전송과 같은 일부 기능은 HTTP 헤더를 사용할 때만 사용할 수 있습니다.
+> [!NOTE]
+> CSP 위반 보고서 전송과 같은 일부 기능은 HTTP 헤더를 사용할 때만 사용할 수 있습니다.
 
 ## 위협
 

@@ -16,7 +16,8 @@ a:active {
 
 Los estilos definidos por la pseudoclase `:active` serán anulados por cualquier pseudoclase posterior relacionada con el enlace ({{cssxref(":link")}}, {{cssxref(":hover")}} o {{cssxref(":visited")}}) que tenga al menos la misma especificidad. Para darle un estilo apropiado a los enlaces, coloque la regla `:active` después de todas las demás reglas relacionadas con el enlace, tal como lo define el orden LVHA: `:link` — `:visited` — `:hover` — `:active`.
 
-> **Nota:** En los sistemas con los ratones de varios botones, CSS3 especifica que la pseudo-clase `:active` sólo debe aplicarse al botón primario; en ratones diestros, este suele ser el botón más a la izquierda.
+> [!NOTE]
+> En los sistemas con los ratones de varios botones, CSS3 especifica que la pseudo-clase `:active` sólo debe aplicarse al botón primario; en ratones diestros, este suele ser el botón más a la izquierda.
 
 ## Sintaxis
 
