@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.isPointInStroke()`** 方法用于检测某点是否在路径的描边线上。
+Canvas 2D API 的 **`CanvasRenderingContext2D.isPointInStroke()`** 方法用于检测某点是否在路径的描边所在的区域内。
 
 ## 语法
 
@@ -27,20 +27,20 @@ isPointInStroke(path, x, y)
 
 ### 返回值
 
-- 一个布尔值
+- 布尔值
   - : 一个布尔值，当这个点在路径的描边线上，则返回 `true`，否则返回 `false`。
 
 ## 示例
 
 ### 检查当前路径中的点
 
-这个示例使用 **`isPointInStroke`** 方法检测一个点是否在路径的描边线上。
+此示例使用 `isPointInStroke()` 方法检测一个点是否在当前路径的描边区域内。
 
 #### HTML
 
 ```html
 <canvas id="canvas"></canvas>
-<p>In stroke: <code id="result">false</code></p>
+<p>在描边内：<code id="result">否</code></p>
 ```
 
 #### JavaScript
@@ -52,7 +52,7 @@ const result = document.getElementById("result");
 
 ctx.rect(10, 10, 100, 100);
 ctx.stroke();
-result.innerText = ctx.isPointInStroke(50, 10);
+result.innerText = ctx.isPointInStroke(50, 10) ? "是" : "否";
 ```
 
 #### 结果
@@ -61,7 +61,7 @@ result.innerText = ctx.isPointInStroke(50, 10);
 
 ### 检查指定路径中的点
 
-这个示例在鼠标移动时检测光标是否在椭圆形 Path2D 路径的描边内。如果是，椭圆形的描边变为绿色，否则为红色。
+此示例在鼠标移动时检测光标是否在椭圆形 `Path2D` 路径的描边内。如果是，椭圆形的描边变为绿色，否则为红色。
 
 #### HTML
 
@@ -83,7 +83,7 @@ ctx.strokeStyle = "red";
 ctx.fill(ellipse);
 ctx.stroke(ellipse);
 
-// 监听鼠标移动事件
+// 监听鼠标移动
 canvas.addEventListener("mousemove", (event) => {
   // 检查鼠标位置是否在椭圆的描边内
   const isPointInStroke = ctx.isPointInStroke(
