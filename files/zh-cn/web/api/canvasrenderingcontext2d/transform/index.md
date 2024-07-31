@@ -2,14 +2,15 @@
 title: CanvasRenderingContext2D：transform() 方法
 slug: Web/API/CanvasRenderingContext2D/transform
 l10n:
-  sourceCommit: 64da72bde2b9863a4d1194ce725ded62c5c90679
+  sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
 ---
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.transform()`** 方法用于使用矩阵多次叠加当前变换，矩阵由方法的参数进行描述。你可以缩放、旋转、移动和倾斜上下文。
+Canvas 2D API 的 **`CanvasRenderingContext2D.transform()`** 方法用于将由该方法的参数所描述的矩阵与当前的变换相乘。你可以缩放、旋转、平移和倾斜上下文。
 
-> **备注：** 还可以查看 {{domxref("CanvasRenderingContext2D.setTransform()", "setTransform()")}} 方法，该方法将当前变换重置为单位矩阵，然后调用 `transform()` 方法。
+> [!NOTE]
+> 还可以查看 {{domxref("CanvasRenderingContext2D.setTransform()", "setTransform()")}} 方法，该方法将当前变换重置为单位矩阵，然后调用 `transform()` 方法。
 
 ## 语法
 
@@ -17,7 +18,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.transform()`** 方法用于使用�
 transform(a, b, c, d, e, f)
 ```
 
-变换矩阵的描述： <math><semantics><mrow><mo>[</mo>
+变换矩阵的描述：<math><semantics><mrow><mo>[</mo>
 <mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi>
 </mtd><mtd><mi>c</mi>
 </mtd><mtd><mi>e</mi>
@@ -29,21 +30,21 @@ transform(a, b, c, d, e, f)
 </mtd><mtd><mn>1</mn>
 </mtd></mtr></mtable><mo>]</mo>
 </mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d
-&#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
+&#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>。
 
 ### 参数
 
 - `a`（`m11`）
   - : 矩阵中第一行第一列的单元格。
-- `b` (`m12`)
+- `b`（`m12`）
   - : 矩阵中第二行第一列的单元格。
-- `c` (`m21`)
+- `c`（`m21`）
   - : 矩阵中第一行第二列的单元格。
-- `d` (`m22`)
+- `d`（`m22`）
   - : 矩阵中第二行第二列的单元格。
-- `e` (`m41`)
+- `e`（`m41`）
   - : 矩阵中第一行第三列的单元格。
-- `f` (`m42`)
+- `f`（`m42`）
   - : 矩阵中第二行第三列的单元格。
 
 如果一个点原始坐标为 <math><semantics><mrow><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>)</mo></mrow><annotation encoding="TeX">(x, y)</annotation></semantics></math>，经过变换后，其坐标将变为 <math><semantics><mrow><mo>(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>c</mi><mi>y</mi><mo>+</mo><mi>e</mi><mo>,</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>d</mi><mi>y</mi><mo>+</mo><mi>f</mi><mo>)</mo></mrow><annotation encoding="TeX">(ax + cy + e, bx + dy + f)</annotation></semantics></math>。这意味着：
