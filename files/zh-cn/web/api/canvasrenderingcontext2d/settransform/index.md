@@ -18,7 +18,7 @@ setTransform(a, b, c, d, e, f)
 setTransform(matrix)
 ```
 
-变换矩阵的描述： <math><semantics><mrow><mo>[</mo>
+变换矩阵的描述：<math><semantics><mrow><mo>[</mo>
 <mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi>
 </mtd><mtd><mi>c</mi>
 </mtd><mtd><mi>e</mi>
