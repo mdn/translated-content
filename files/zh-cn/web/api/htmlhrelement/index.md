@@ -16,7 +16,7 @@ l10n:
 _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 - {{domxref("HTMLHRElement.align")}} {{deprecated_inline}}
-  - : 表示枚举属性的字符串，指示规则相对于周围上下文的对齐。
+  - : 表示枚举属性的字符串，指示分割线相对于周围上下文的对齐方式。
 - {{domxref("HTMLHRElement.color")}} {{deprecated_inline}}
   - : 表示规则颜色名称的字符串。
 - {{domxref("HTMLHRElement.noShade")}} {{deprecated_inline}}
