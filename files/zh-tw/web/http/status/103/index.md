@@ -13,7 +13,8 @@ HTTP **`103 Early Hints`** [資訊回應碼](/zh-TW/docs/Web/HTTP/Status#informa
 
 伺服器可能會發送多個 `103` 回應，例如在重定向後。瀏覽器僅處理第一個早期提示回應，如果請求導致跨源重定向，則必須丟棄此回應。來自早期提示的預加載資源將有效地預先添加到 `Document` 的 head 元素中，然後是最終回應中加載的資源。
 
-> **備註：** 出於兼容性原因，[建議](https://www.rfc-editor.org/rfc/rfc8297#section-3)只在 HTTP/2 或更高版本上發送 HTTP `103 Early Hints` 回應，除非已知用戶端正確處理信息回應。
+> [!NOTE]
+> 出於兼容性原因，[建議](https://www.rfc-editor.org/rfc/rfc8297#section-3)只在 HTTP/2 或更高版本上發送 HTTP `103 Early Hints` 回應，除非已知用戶端正確處理信息回應。
 >
 > 由於這個原因，大多數瀏覽器限制在 HTTP/2 或更高版本中提供支持。請參見下面的[瀏覽器相容性](#瀏覽器相容性)。
 >

@@ -7,7 +7,7 @@ slug: Web/MathML/Attribute
 
 Cette référence est une liste, dans l'ordre alphabétique, des attributs MathML. De plus amples détails sur chaque attribut sont disponibles sur les pages des [éléments](/fr/docs/MathML/Element).
 
-> **Note :**
+> [!NOTE]
 >
 > - Les éléments MathML {{ MathMLElement("mstyle") }} et {{ MathMLElement("math") }} acceptent tous les attributs de tous les éléments de présentations MathML.
 > - Voir les [valeurs](/fr/docs/MathML/Attributes/Values) pour des notes sur les valeurs et les unités utilisées en MathML.

@@ -9,7 +9,8 @@ Cet article décrit différentes façons d'utiliser CSS afin d'ajouter du conten
 
 L'un des avantages majeurs de CSS est qu'il permet de séparer la forme du contenu. Toutefois, il existe des situations où il est pertinent d'indiquer du contenu dans la feuille de style et pas dans le document. Il est possible d'indiquer du contenu textuel ou des images dans une feuille de style lorsque ce contenu est fortement couplé à la structure du document.
 
-> **Note :** Le contenu spécifié dans la feuille de style ne fait pas partie du DOM.
+> [!NOTE]
+> Le contenu spécifié dans la feuille de style ne fait pas partie du DOM.
 
 Ajouter du contenu dans une feuille de style peut engendrer des complications. Ainsi, si vous avez un document disponible en plusieurs langues et que ces versions partagent une même feuille de style, lorsque vous indiquez du contenu dans la feuille de style qui doit être traduit, vous devrez organiser ces parties de la feuille de style dans différents fichiers et faire le nécessaire pour qu'elles soient rattachées aux différentes versions du document.
 

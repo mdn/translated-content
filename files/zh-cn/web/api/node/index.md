@@ -73,13 +73,15 @@ slug: Web/API/Node
 
   - : 返回一个表示元素名称的本土化表示方法的 {{DOMxRef("DOMString")}} 。
 
-    > **备注：** 在 Firefox 3.5 以及更早的版本中，HTML 元素的 localName 属性的返回值都是大写的（XHTML 例外）。在后续版本中，这种情况就不存在了。无论是 HTML 还是 XHTML 中，均返回小写的 localName。
+    > [!NOTE]
+    > 在 Firefox 3.5 以及更早的版本中，HTML 元素的 localName 属性的返回值都是大写的（XHTML 例外）。在后续版本中，这种情况就不存在了。无论是 HTML 还是 XHTML 中，均返回小写的 localName。
 
 - {{DOMxRef("Node.namespaceURI")}} {{Deprecated_Inline}}{{readonlyInline}}
 
   - : 该节点命名空间的`URL`，如果没有命名空间则为`null`。
 
-    > **备注：** 在 Firefox 3.5 以及更早的版本中，HTML 的元素都没有命名空间。而在最新的版本中，无论是 HTML 还是 XML 文档树，所有元素的命名空间统一为 [`http://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/)。
+    > [!NOTE]
+    > 在 Firefox 3.5 以及更早的版本中，HTML 的元素都没有命名空间。而在最新的版本中，无论是 HTML 还是 XML 文档树，所有元素的命名空间统一为 [`http://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/)。
 
 - {{DOMxRef("Node.nodePrincipal")}} {{Non-standard_inline}}{{Deprecated_Inline}}
   - : 返回节点优先级 `nsIPrincipal` 。
@@ -228,7 +230,8 @@ eachNode(box, function (node) {
 "\n\t", "Foo", "\n\t", "Bar", "\n\t", "Baz";
 ```
 
-> **备注：** 空格是构成 {{DOMxRef("Text")}}节点的一部分，意味着缩进和换行在 `Element` 节点之间形成单独的 `Text` 。
+> [!NOTE]
+> 空格是构成 {{DOMxRef("Text")}}节点的一部分，意味着缩进和换行在 `Element` 节点之间形成单独的 `Text` 。
 
 #### 真实案例
 

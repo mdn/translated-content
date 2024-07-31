@@ -7,7 +7,8 @@ l10n:
 
 {{APIRef("File API")}}{{AvailableInWorkers}}{{Deprecated_Header}}
 
-> **备注：** 此方法已弃用，取而代之的是 {{DOMxRef("FileReader.readAsArrayBuffer","readAsArrayBuffer()")}}。
+> [!NOTE]
+> 此方法已弃用，取而代之的是 {{DOMxRef("FileReader.readAsArrayBuffer","readAsArrayBuffer()")}}。
 
 {{domxref("FileReader")}} 接口的 **`readAsBinaryString()`** 方法用于开始读取指定 {{domxref("Blob")}} 或 {{domxref("File")}} 对象的内容。当读操作完成后，{{domxref("FileReader.readyState","readyState")}} 属性变为 `DONE`，并且 {{domxref("FileReader/loadend_event", "loadend")}} 事件被触发。此时，{{domxref("FileReader.result","result")}} 属性包含来自的原始二进制数据文件。
 

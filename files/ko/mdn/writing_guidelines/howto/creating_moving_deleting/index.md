@@ -53,7 +53,8 @@ MDN에 탑재된 편집기 사용에 대한 좀 더 세부적인 내용은 [MDN 
 
 리비전 답글에서 답글을 달고 **엔터키**를 누르는 것은 "저장하고 계속 수정"하는 것을 클릭하는 것과 같습니다.
 
-> **참고:** 변경내용을 저장하려 할 때, 밴경내용이 실제 MDN에는 적절한 내용인데 유효하지 않다는 이유로 거절된다면, [작성팀에 콘텐츠가 게시되게 도와 달라는메일](mailto:mdn-spam-watch@mozilla.com?subject=MDN%3A%20Content%20Rejection%20Appeal&body=%3CDescribe%20the%20content%20you%20were%20trying%20to%20save%20and%20where%20you%20were%20trying%20to%20place%20it.%3E)을 보내야만 합니다.
+> [!NOTE]
+> 변경내용을 저장하려 할 때, 밴경내용이 실제 MDN에는 적절한 내용인데 유효하지 않다는 이유로 거절된다면, [작성팀에 콘텐츠가 게시되게 도와 달라는메일](mailto:mdn-spam-watch@mozilla.com?subject=MDN%3A%20Content%20Rejection%20Appeal&body=%3CDescribe%20the%20content%20you%20were%20trying%20to%20save%20and%20where%20you%20were%20trying%20to%20place%20it.%3E)을 보내야만 합니다.
 
 ## 새로운 페이지 생성하기
 

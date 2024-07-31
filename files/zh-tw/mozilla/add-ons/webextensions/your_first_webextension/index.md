@@ -121,7 +121,8 @@ borderify/
 
 ![Border displayed on mozilla.org](border_on_mozilla_org.png)
 
-> **備註：** 不過，別把這招用在 addons.mozilla.org 上，該網域目前會阻擋 content scripts。
+> [!NOTE]
+> 不過，別把這招用在 addons.mozilla.org 上，該網域目前會阻擋 content scripts。
 
 再做點小實驗吧。改一下腳本讓外框顏色改變，或是做其他更動。接著存檔，並按下 about:debugging 的 Reload 鍵重啟附加元件。現在你能看到更動了：
 

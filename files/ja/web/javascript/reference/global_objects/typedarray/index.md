@@ -145,7 +145,8 @@ new TypedArray(buffer, byteOffset, length)
 
 ここで _TypedArray_ は特定の型のコンストラクターのうちの一つを表します。
 
-> **メモ:** すべての `TypedArray` サブクラスのコンストラクターは [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を使ってのみ構築することができます。`new` なしで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> すべての `TypedArray` サブクラスのコンストラクターは [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を使ってのみ構築することができます。`new` なしで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
 
 ### 引数
 

@@ -15,7 +15,7 @@ Firefox 43 は、米国時間 2015 年 12 月 15 日にリリースされまし�
 
 - [ウェブコンソールでサーバー側のログを記録](/ja/docs/Tools/Web_Console/Console_messages#server)
 - [CSS 宣言をオーバーライドしたルールをすばやく見つける](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#overridden_declarations)
-- [インスペクタのコンテキストメニュー項目 "Use in Console"](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu)
+- [インスペクターのコンテキストメニュー項目 "Use in Console"](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu)
 - [ルールビューで "厳密に" フィルタリング](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#strict_search)
 - [コンソールのネットワーク項目にネットワークモニターへのリンクを追加](/ja/docs/Tools/Web_Console/Console_messages#network)
 - [マークアップビューで、擬似クラスを強制的に適用していることを示すインジケータを表示](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#setting_hover_active_focus)

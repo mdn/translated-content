@@ -59,7 +59,8 @@ function screenTest(e) {
 mql.addListener(screenTest);
 ```
 
-> **Nota:** Puedes encontrar este ejemplo en GitHub (ver el [codigo fuente](https://github.com/mdn/dom-examples/blob/master/mediaquerylist/index.html), y también verlo en [ejecución](https://mdn.github.io/dom-examples/mediaquerylist/index.html)).
+> [!NOTE]
+> Puedes encontrar este ejemplo en GitHub (ver el [codigo fuente](https://github.com/mdn/dom-examples/blob/master/mediaquerylist/index.html), y también verlo en [ejecución](https://mdn.github.io/dom-examples/mediaquerylist/index.html)).
 
 ## Especificaciones
 

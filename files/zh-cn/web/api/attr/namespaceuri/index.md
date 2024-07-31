@@ -7,7 +7,8 @@ slug: Web/API/Attr/namespaceURI
 
 **`Attr.namespaceURI`** 只读属性返回属性的命名空间 URI，如果该元素不在命名空间中，则返回 null。
 
-> **备注：** 在 DOM4 之前，该 API 是在 {{domxref("Node")}} 中定义的。
+> [!NOTE]
+> 在 DOM4 之前，该 API 是在 {{domxref("Node")}} 中定义的。
 
 ## 语法
 

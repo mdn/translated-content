@@ -17,7 +17,8 @@ CSS を使用して、あるボックスを別のボックスの中に配置す�
 
 {{EmbedGHLiveSample("css-examples/howto/center.html", '100%', 700)}}
 
-> **メモ:** このテクニックを使用して、1 つ以上の要素を別の要素の中に配置することができます。上の例では、{{cssxref("justify-content")}} と {{cssxref("align-items")}} の値を任意の有効な値に変更してみてください。
+> [!NOTE]
+> このテクニックを使用して、1 つ以上の要素を別の要素の中に配置することができます。上の例では、{{cssxref("justify-content")}} と {{cssxref("align-items")}} の値を任意の有効な値に変更してみてください。
 
 ## 関連情報
 

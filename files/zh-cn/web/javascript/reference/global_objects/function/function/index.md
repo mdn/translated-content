@@ -23,7 +23,8 @@ Function(arg0, arg1, functionBody)
 Function(arg0, arg1, /* …, */ argN, functionBody)
 ```
 
-> **备注：** 调用 `Function()` 时可以使用或不使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)。两者都会创建一个新的 `Function` 实例。
+> [!NOTE]
+> 调用 `Function()` 时可以使用或不使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)。两者都会创建一个新的 `Function` 实例。
 
 ### 参数
 

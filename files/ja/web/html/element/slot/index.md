@@ -65,7 +65,8 @@ l10n:
 </template>
 ```
 
-> **メモ:** この完全な例は、 [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details) で見ることができます（[ライブ実行](https://mdn.github.io/web-components-examples/element-details/)もご覧ください）。また、[テンプレートとスロットの利用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)にも説明があります。
+> [!NOTE]
+> この完全な例は、 [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details) で見ることができます（[ライブ実行](https://mdn.github.io/web-components-examples/element-details/)もご覧ください）。また、[テンプレートとスロットの利用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)にも説明があります。
 
 ## 技術的概要
 

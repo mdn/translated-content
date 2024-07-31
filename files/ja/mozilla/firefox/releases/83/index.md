@@ -7,7 +7,8 @@ slug: Mozilla/Firefox/Releases/83
 
 このページでは、開発者に影響する Firefox 83 の変更点をまとめています。Firefox 83 は、2020 年 11 月 17 日にリリースされました。
 
-> **メモ:** Mozilla hacks の [Firefox 83 is upon us](https://hacks.mozilla.org/2020/11/firefox-83-is-upon-us/) もご覧ください。
+> [!NOTE]
+> Mozilla hacks の [Firefox 83 is upon us](https://hacks.mozilla.org/2020/11/firefox-83-is-upon-us/) もご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -23,7 +24,7 @@ slug: Mozilla/Firefox/Releases/83
 
 ### CSS
 
-- ベンダー接頭辞がつく `:-moz-any()` を、標準の {{CSSxRef(":is", ":is()")}} CSS 疑似クラス関数の別名にしました ([Firefox バグ 1666086](https://bugzil.la/1666086))。
+- ベンダー接頭辞がつく `:-moz-any()` を、標準の {{CSSxRef(":is", ":is()")}} CSS 擬似クラス関数の別名にしました ([Firefox バグ 1666086](https://bugzil.la/1666086))。
 - [CSS Conic Gradients](/ja/docs/Web/CSS/conic-gradient) をサポートしました ([Firefox バグ 1632351](https://bugzil.la/1632351)) および ([Firefox バグ 1175958](https://bugzil.la/1175958))。
 
 ### JavaScript

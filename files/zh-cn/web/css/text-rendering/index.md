@@ -9,7 +9,8 @@ slug: Web/CSS/text-rendering
 
 `text-rendering` CSS 属性定义浏览器渲染引擎如何渲染字体。浏览器会在速度、清晰度、几何精度之间进行权衡。
 
-> **备注：** 该属性是 SVG 的属性而不是标准的 CSS 属性。但是 Gecko（Firefox）和 Webkit（Chrome、Safari）内核的浏览器允许该属性在 Windows、Mac OS 和 Linux 操作系统中应用于 HTML 和 XML 内容。
+> [!NOTE]
+> 该属性是 SVG 的属性而不是标准的 CSS 属性。但是 Gecko（Firefox）和 Webkit（Chrome、Safari）内核的浏览器允许该属性在 Windows、Mac OS 和 Linux 操作系统中应用于 HTML 和 XML 内容。
 
 一个视觉上很明显的效果是，`optimizeLegibility` 属性值会在某些字体（比如，微软的 _Calibri_、_Candara_、_Constantia_ 和 _Corbel_，或者 _DejaVu_ 系列字体）小于 20px 时把某些相邻字符连接起来（比如 ff、fi、fl 等）。
 
@@ -66,7 +67,8 @@ body {
 
 #### Live Example
 
-> **备注：** 没有在 Chrome 中看出例子中的区别来，可以移步看看这篇文章 [text-rendering](https://css-tricks.com/almanac/properties/t/text-rendering/)。
+> [!NOTE]
+> 没有在 Chrome 中看出例子中的区别来，可以移步看看这篇文章 [text-rendering](https://css-tricks.com/almanac/properties/t/text-rendering/)。
 
 | CSS code                                                                 | Kerning | Ligatures    |
 | ------------------------------------------------------------------------ | ------- | ------------ |

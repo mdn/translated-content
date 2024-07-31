@@ -7,7 +7,8 @@ slug: Web/API/Element/matches
 
 O método **`Element.matches()`** retorna verdadeiro se o elemento puder ser selecionado pela sequência de caracteres específica; caso contrário retorna falso.
 
-> **Aviso:** Diversos navegadores implementam isto, prefixado, sob nome não padronizado `matchesSelector()`.
+> [!WARNING]
+> Diversos navegadores implementam isto, prefixado, sob nome não padronizado `matchesSelector()`.
 
 ## Sintaxe
 

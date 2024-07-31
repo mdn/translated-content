@@ -92,7 +92,8 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 
 1. 建立新資料夾—— `src/components`。
 
-   > **備註：** 你可以把元件們放在 `src` 資料夾當中的任何地方，但放在 `components` 資料夾是比較常見的做法，也讓你可以更容易地找到它們。
+   > [!NOTE]
+   > 你可以把元件們放在 `src` 資料夾當中的任何地方，但放在 `components` 資料夾是比較常見的做法，也讓你可以更容易地找到它們。
 
 2. 建立 `src/components/Todos.svelte` 檔案並包含以下內容：
 
@@ -351,7 +352,8 @@ created public/build/bundle.js in 220ms
 <img height="32" width="88" src="https://www.w3.org/WAI/wcag2A" />
 ```
 
-> **備註：** 透過 VSCode 你可以點擊 _Quick fix..._ 連結或按 <kbd>Ctrl</kbd> + <kbd>.</kbd> 來自動地加上這個忽略註解。
+> [!NOTE]
+> 透過 VSCode 你可以點擊 _Quick fix..._ 連結或按 <kbd>Ctrl</kbd> + <kbd>.</kbd> 來自動地加上這個忽略註解。
 
 假如你想要全域地關閉這個警告，可以在你的 `rollup.config.js` 檔案中調整 `Svelte` 外掛組態並補上這個 `onwarn` 處理器即可，像是如下：
 
@@ -380,7 +382,8 @@ plugins: [
 
 在設計上，這些警告被實現於編譯器本身，而不是你可以選擇性加入專案的外掛。理念是建立在預設會檢核你的標記語言有無 a11y 問題並讓你可以選擇排除特定警告。
 
-> **備註：** 假如你有足夠充分的理由，則可以先停用這些警告，例如當你在快速建構原型時。成為一個優秀的網路公民並讓你的頁面盡可能廣泛地被用戶閱讀是很重要的。
+> [!NOTE]
+> 假如你有足夠充分的理由，則可以先停用這些警告，例如當你在快速建構原型時。成為一個優秀的網路公民並讓你的頁面盡可能廣泛地被用戶閱讀是很重要的。
 
 Svelte 透過 [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules) 來檢核無障礙性規則，它是提供在 JSX 元素上許多無障礙性規則靜態檢核的一個 ESLint 外掛。Svelte 企圖將它們全部實現於編譯器中，而大部分都已經移植至 Svelte 中。你可以在 GitHub 中看到[尚未實現的無障礙檢核](https://github.com/sveltejs/svelte/issues/820)。點選規則的連結可以查閱它們各自的涵義。
 

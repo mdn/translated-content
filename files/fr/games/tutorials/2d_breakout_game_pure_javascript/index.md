@@ -32,9 +32,11 @@ Toutes les leçons — et les différentes versions de ce [jeu de casse-brique M
 
 Commencer avec du Javascript pur et dur est le meilleur moyen d'acquérir des connaissances de développement de jeu web. Après ceci, vous pourrez prendre n'importe quel "framework" et l'utiliser pour vos projets. Les "frameworks" sont des outils créés avec le langage Javascript ; donc, même si vous voulez travailler avec ces derniers, c'est toujours bon d'apprendre le langage lui-même pour savoir ce qu'il se passe exactement. Les "frameworks" améliorent la vitesse de développement et aident à traiter les parties les moins intéressantes du jeu, mais si quelque chose ne fonctionne pas comme prévu, vous pouvez toujours essayer de déboguer ou juste écrire vos propre solutions en Javascript.
 
-> **Note :** Si vous êtes intéressé par l'apprentissage du développement un jeu web 2D avec un "framework", consultez la série [Jeu de casse-tête 2D avec Phaser](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser).
+> [!NOTE]
+> Si vous êtes intéressé par l'apprentissage du développement un jeu web 2D avec un "framework", consultez la série [Jeu de casse-tête 2D avec Phaser](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser).
 
-> **Note :** Cette série d'articles peut être utilisée comme matériel pour des ateliers pratiques de développement de jeux. Vous pouvez également utiliser le [Gamedev Canvas Content Kit](https://github.com/end3r/Gamedev-Canvas-Content-Kit) basé sur ce tutoriel si vous voulez faire une présentation sur le développement de jeux en général .
+> [!NOTE]
+> Cette série d'articles peut être utilisée comme matériel pour des ateliers pratiques de développement de jeux. Vous pouvez également utiliser le [Gamedev Canvas Content Kit](https://github.com/end3r/Gamedev-Canvas-Content-Kit) basé sur ce tutoriel si vous voulez faire une présentation sur le développement de jeux en général .
 
 ## Prochaines étapes
 

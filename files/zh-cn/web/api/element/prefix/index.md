@@ -7,7 +7,8 @@ slug: Web/API/Element/prefix
 
 **`Element.prefix`** 只读属性返回指定元素的命名空间前缀，如果未指定前缀，则返回 null。
 
-> **备注：** 在 DOM4 之前，该 API 是在 {{domxref("Node")}} interface 中定义的。
+> [!NOTE]
+> 在 DOM4 之前，该 API 是在 {{domxref("Node")}} interface 中定义的。
 
 ## Syntax
 

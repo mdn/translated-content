@@ -26,7 +26,8 @@ slug: Web/API/Page_Visibility_API
 
 开发人员在过去使用不完善的代理来检测这一点。例如，通过观察 window 上的 {{domxref("Window/blur_event", "blur")}} 和 {{domxref("Window/focus_event", "focus")}} 事件，可以帮助你了解页面何时不是活动页面，但这并不能告诉你，页面实际上已被用户隐藏。页面可见性 API 可解决这一问题。
 
-> **备注：** 虽然 {{domxref("Window.blur_event", "onblur")}} 和 {{domxref("Window.focus_event", "onfocus")}} 会告诉你用户是否切换了窗口，但这并不一定意味着它被隐藏了。只有当用户切换标签页或最小化包含标签页的浏览器窗口时，页面才会被隐藏。
+> [!NOTE]
+> 虽然 {{domxref("Window.blur_event", "onblur")}} 和 {{domxref("Window.focus_event", "onfocus")}} 会告诉你用户是否切换了窗口，但这并不一定意味着它被隐藏了。只有当用户切换标签页或最小化包含标签页的浏览器窗口时，页面才会被隐藏。
 
 ### 制定有助于后台页面性能的策略
 

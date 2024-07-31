@@ -114,7 +114,8 @@ input[type="search"] {
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-search.html", '100%', 200)}}
 
-> **备注：** 你可能已经注意到，在搜索字段中，“x”删除图标会在搜索值不为空时出现，但在 Edge 和 Chrome 浏览器中，当输入失去焦点时，该图标就会消失，而在 Safari 浏览器中则会保持不变。要通过 CSS 删除，可以使用 `input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button { display: none; }`。
+> [!NOTE]
+> 你可能已经注意到，在搜索字段中，“x”删除图标会在搜索值不为空时出现，但在 Edge 和 Chrome 浏览器中，当输入失去焦点时，该图标就会消失，而在 Safari 浏览器中则会保持不变。要通过 CSS 删除，可以使用 `input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button { display: none; }`。
 
 ### 为复选框和单选钮添加样式
 
@@ -318,7 +319,8 @@ button {
 }
 ```
 
-> **备注：** 如果你想同时在多个浏览器上测试这些示例，可以[在此找到实时演示](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html)（也可以[在此查看源代码](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/ugly-controls.html)）。
+> [!NOTE]
+> 如果你想同时在多个浏览器上测试这些示例，可以[在此找到实时演示](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html)（也可以[在此查看源代码](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/ugly-controls.html)）。
 >
 > 另外请注意，我们在页面中添加了一些 JavaScript，用于在控件本身下方列出文件选择器选择的文件。这是 [`<input type="file">`](/zh-CN/docs/Web/HTML/Element/input/file#示例) 参考页面上示例的简化版本。
 
@@ -422,7 +424,8 @@ select {
 
 但是，该控件的内部部分（例如，用于选择日期的弹出日历、用于递增/递减值的旋转器）完全不可样式化，而且无法使用`"appearance: none;` 将其删除。如果你真的需要完全控制样式，必须使用某种库来生成自定义控件，或者创建自己的控件。
 
-> **备注：** 值得一提的还有 [`<input type="number">`](/zh-CN/docs/Web/HTML/Element/input/number) ——它也有一个可以用来递增/递减数值的控制按钮，因此也可能存在同样的问题。不过，`number` 类型收集的数据比较简单，使用 `tel` 输入类型就可以了，它的外观与 `text` 相似，但会在使用触摸键盘的设备上显示数字键盘。
+> [!NOTE]
+> 值得一提的还有 [`<input type="number">`](/zh-CN/docs/Web/HTML/Element/input/number) ——它也有一个可以用来递增/递减数值的控制按钮，因此也可能存在同样的问题。不过，`number` 类型收集的数据比较简单，使用 `tel` 输入类型就可以了，它的外观与 `text` 相似，但会在使用触摸键盘的设备上显示数字键盘。
 
 ### Range 输入类型
 
