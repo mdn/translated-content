@@ -37,7 +37,7 @@ const video = document.querySelector("video");
 
 video.addEventListener("canplaythrough", (event) => {
   console.log(
-    "バッファリングを止めることなく、動画全体を再生できると思います。"
+    "バッファリングを止めることなく、動画全体を再生できると思います。",
   );
 });
 ```
