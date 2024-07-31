@@ -29,8 +29,7 @@ strokeText(text, x, y, maxWidth)
 - `y`
   - : 绘制文本的起始点的 y 轴坐标。
 - `maxWidth` {{optional_inline}}
-  - : 渲染后文本的最大宽度。如果未指定，则文本的宽度没有限制。
-    然而，如果提供了此值，用户代理将调整字距，选择更加水平压缩的字体（如果有可用的或者可以生成而不会损失质量），或者缩小到更小的字体大小，以使文本适应指定的宽度。
+  - : 渲染后文本的最大宽度。如果未指定，则文本的宽度没有限制。然而，如果提供了此值，用户代理将调整字距，选择更加水平压缩的字体（如果有可用的或者可以生成而不会损失质量），或者缩小到更小的字体大小，以使文本适应指定的宽度。
 
 ### 返回值
 
@@ -64,7 +63,7 @@ ctx.strokeText("Hello world", 50, 90);
 
 这段代码获取了对 {{HTMLElement("canvas")}} 的引用，然后获取了其 2D 图形上下文的引用。
 
-然后，我们设置了 {{domxref("CanvasRenderingContext2D.font", "font")}} 为 50 像素高的“serif”（用户默认的 [serif](https://en.wikipedia.org/wiki/Serif)字体），然后调用 `strokeText()` 方法在坐标 (50, 90) 处绘制文本“Hello world”的轮廓。
+然后，我们设置了 {{domxref("CanvasRenderingContext2D.font", "font")}} 为 50 像素高的“serif”（用户默认的 [serif](https://en.wikipedia.org/wiki/Serif) 字体），然后调用 `strokeText()` 方法在坐标 (50, 90) 处绘制文本“Hello world”的轮廓。
 
 #### 结果
 
