@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("Event")}} 接口的 **`currentTarget`** 只读属性用于标识事件处理器所附加的元素。
 
-这并不总是与触发事件的元素相同，因为事件可能在具有处理器的元素的后代上触发，然后通过事件[冒泡](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件冒泡)到具有处理器的元素。事件的触发元素由 {{domxref("Event.target")}} 给出。
+这并不总是与触发事件的元素相同，因为事件可能在具有处理器的元素的后代上触发，然后通过事件[冒泡](/zh-CN/docs/Learn/JavaScript/Building_blocks/Event_bubbling)到具有处理器的元素。事件的触发元素由 {{domxref("Event.target")}} 给出。
 
 请注意，`currentTarget` 的值仅在事件处理器中可用。在事件处理器外部，它将为 `null`。这意味着，例如，如果在事件处理器内部获得 `Event` 对象的引用然后在事件处理器外部访问其 `currentTarget` 属性，则其值将为 `null`。
 
@@ -88,5 +88,4 @@ reset.addEventListener("click", () => document.location.reload());
 
 ## 参见
 
-- [事件目标的比较](/zh-CN/docs/Web/API/Event/Comparison_of_Event_Targets)
-- [事件冒泡](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件冒泡)
+- [事件冒泡](/zh-CN/docs/Learn/JavaScript/Building_blocks/Event_bubbling)

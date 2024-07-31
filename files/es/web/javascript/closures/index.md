@@ -244,7 +244,8 @@ console.log(counter2.value()); // 0.
 
 Observa cómo los dos contadores mantienen su independencia el uno del otro. Cada _closure_ hace referencia a una versión diferente de la variable `privateCounter` a través de su propio _closure_. Cada vez que se llama a uno de los contadores, su entorno léxico cambia cambiando el valor de esta variable. Los cambios en el valor de la variable en un _closure_ no afectan el valor en el otro _closure_.
 
-> **Nota:** El uso de _closures_ de esta manera proporciona beneficios que normalmente se asocian con la programación orientada a objetos. En particular, _ocultación de datos_ y _encapsulación_.
+> [!NOTE]
+> El uso de _closures_ de esta manera proporciona beneficios que normalmente se asocian con la programación orientada a objetos. En particular, _ocultación de datos_ y _encapsulación_.
 
 ## Cadena de alcance de closure
 

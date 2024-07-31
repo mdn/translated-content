@@ -105,7 +105,8 @@ ctx.closePath();
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","395")}}
 
-> **メモ:** 与えられた図形の大きさや色を変えてみましょう。
+> [!NOTE]
+> 与えられた図形の大きさや色を変えてみましょう。
 
 ## 次のステップ
 

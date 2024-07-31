@@ -16,7 +16,8 @@ input:optional {
 
 Esta pseudo-clase es útil para diseñar campos que no son necesarios para enviar un formulario.
 
-> **Nota:** La pseudo-clase {{cssxref(":required")}} selecciona los campos de formulario _requeridos_.
+> [!NOTE]
+> La pseudo-clase {{cssxref(":required")}} selecciona los campos de formulario _requeridos_.
 
 ## Sintaxis
 

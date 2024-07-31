@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、あなたが [HTML への動画および音声コンテンツの埋め込み](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)を行う方法、および [object、iframe およびその他の埋め込み技術](/ja/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)の使い方を理解しているかどうかを評価することです。
 
-> **メモ:** このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
+> [!NOTE]
+> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
 >
 > もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 
@@ -25,7 +26,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/media-embed/mediaembed1.html", '100%', 700)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/media-embed/mediaembed1-download.html)しましょう。
 
@@ -46,7 +47,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/media-embed/mediaembed2.html", '100%', 700)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/media-embed/mediaembed2-download.html)しましょう。
 
@@ -61,6 +62,6 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/media-embed/mediaembed3.html", '100%', 700)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/media-embed/mediaembed3-download.html)しましょう。

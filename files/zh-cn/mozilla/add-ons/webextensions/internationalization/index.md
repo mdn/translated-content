@@ -7,7 +7,8 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
 
 [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) API 有一个相当方便的模块可用于附加组件的国际化（[i18n](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n)）。我们将在本文中探讨其功能，并为它的运作方式提供一个实例。WebExtensions 的 i18n 系统类似常见的 i18n 用途 JavaScript 库，例如 [i18n.js](http://i18njs.com/)。
 
-> **备注：** 本文中的 WebExtension 实例 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) 可在 GitHub 上查阅。在阅读下列章节时，可参照它的代码。
+> [!NOTE]
+> 本文中的 WebExtension 实例 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) 可在 GitHub 上查阅。在阅读下列章节时，可参照它的代码。
 
 ## 剖析一个国际化的 WebExtension
 
@@ -89,7 +90,8 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
 
 这个文件是一个标准的 JSON — 其中每个成员都是一个带有名称的对象，里面包含一个 `message`（消息）和一个 `description`（描述）。这些项目都是字符串。`$URL$` 是一个占位符，在 WebExtension 调用 `notificationContent` 成员时将被一个子字符串替换。你将在接下来的[从 JavaScript 检索消息字符串](#从_javascript_检索消息字符串)章节中了解如何使用。
 
-> **备注：** 你可以在 [Locale-Specific Message reference](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference) 里找到更多有关 `messages.json` 文件中内容的信息。
+> [!NOTE]
+> 你可以在 [Locale-Specific Message reference](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference) 里找到更多有关 `messages.json` 文件中内容的信息。
 
 ## 国际化 manifest.json
 
@@ -388,7 +390,8 @@ padding-left: 1.5em;
 2. 双击该首选项（或按回车）以选择它，输入你想测试的语言环境的语言代码，然后点击“确定”（或按回车）。我们的示例扩展支持“en”（英语）、“de”德语（）、“nl”（荷兰语）和“ja”日语。
 3. 重启你的浏览器以完成更改。
 
-> **备注：** 这个方法可以用来修改浏览器的语言区域，即使你未安装过该语言区域对应的[语言包](https://addons.mozilla.org/en-US/firefox/language-tools/)。这样的话你就可以将浏览器用户界面调整显示为你的默认语言。
+> [!NOTE]
+> 这个方法可以用来修改浏览器的语言区域，即使你未安装过该语言区域对应的[语言包](https://addons.mozilla.org/zh-CN/firefox/language-tools/)。这样的话你就可以将浏览器用户界面调整显示为你的默认语言。
 
 再次从磁盘临时加载该扩展，然后测试你的新语言区域：
 

@@ -10,7 +10,8 @@ l10n:
 
 **`CanvasRenderingContext2D.lineWidth`** はキャンバス 2D API のプロパティで、線の太さを設定します。
 
-> **メモ:** 線は {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}、{{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}、{{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} メソッドで描画することができます。
+> [!NOTE]
+> 線は {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}、{{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}、{{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} メソッドで描画することができます。
 
 ## 値
 

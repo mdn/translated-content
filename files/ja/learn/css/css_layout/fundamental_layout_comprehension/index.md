@@ -40,7 +40,8 @@ HTML 文書とスタイルシートはコンピューターのディレクトリ
 また、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) のようなオンラインエディターを使用することもできます。
 オンラインエディターを使用する場合、画像をアップロードし、 `src` 属性の値を新しい画像の場所を指すように置き換える必要があります。
 
-> **メモ:** 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> [!NOTE]
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ### プロジェクト概要
 

@@ -85,9 +85,11 @@ digest(algorithm, data)
   </tbody>
 </table>
 
-> **警告：** 现在，SHA-1 被认为是易受攻击的，不应将其用于加密应用程序。
+> [!WARNING]
+> 现在，SHA-1 被认为是易受攻击的，不应将其用于加密应用程序。
 
-> **备注：** 如果你在寻找如何创建密钥散列消息认证码（[HMAC](/zh-CN/docs/Glossary/HMAC)），则需要改用 [SubtleCrypto.sign()](/zh-CN/docs/Web/API/SubtleCrypto/sign#hmac) 方法。
+> [!NOTE]
+> 如果你在寻找如何创建密钥散列消息认证码（[HMAC](/zh-CN/docs/Glossary/HMAC)），则需要改用 [SubtleCrypto.sign()](/zh-CN/docs/Web/API/SubtleCrypto/sign#hmac) 方法。
 
 ## 示例
 
@@ -140,7 +142,8 @@ digestMessage(text).then((digestHex) => console.log(digestHex));
 
 {{Compat}}
 
-> **备注：** Chrome 60 添加了对非 TLS 连接禁用 crypto.subtle 的特性。
+> [!NOTE]
+> Chrome 60 添加了对非 TLS 连接禁用 crypto.subtle 的特性。
 
 ## 参见
 

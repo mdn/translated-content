@@ -114,7 +114,8 @@ Maintenant que nous avons vu quelques bases de CSS, ajoutons quelques règles et
    }
    ```
 
-   > **Note :** Tout ce qui est entre `/*` et `*/` dans un document CSS est un **commentaire** **de CSS.** Le navigateur l'ignorera dans le rendu du code. C'est un endroit commode pour écrire des notes à propos de ce que vous faites.
+   > [!NOTE]
+   > Tout ce qui est entre `/*` et `*/` dans un document CSS est un **commentaire** **de CSS.** Le navigateur l'ignorera dans le rendu du code. C'est un endroit commode pour écrire des notes à propos de ce que vous faites.
 
 4. Ensuite, fixons les tailles des différents textes contenus dans le corps du HTML ({{htmlelement("h1")}}, {{htmlelement("li")}}, et {{htmlelement("p")}}). Nous allons également centrer le texte du titre et donner une taille de ligne et un espacement de caractère entre les lettres pour que le contenu du corps (_body_) du document soit plus lisible :
 
@@ -225,7 +226,8 @@ img {
 
 Dernière chose : on va centrer l'image pour que ce soit plus joli. On pourrait utiliser `margin: 0 auto`, comme on l'a fait avant, mais on a besoin d'autre chose. L'élément `body` est un **élément de bloc**, cela signifie qu'il prend de l'espace et qu'on peut lui appliquer des marges et d'autres valeur pour l'espacement. En revanche, les images sont des éléments **_inline_** (ce qu'on pourrait traduire par « en ligne »), ce qui signifie qu'on ne peut pas leur appliquer ces valeurs d'espacement. Pour pouvoir appliquer des marges sur l'image comme pour un bloc, on utilise `display: block;` pour que l'image se comporte comme un élément de bloc.
 
-> **Note :** C'est tout à fait normal si vous ne comprenez pas complètement `display: block;` et les différences entre bloc et inline. Ça viendra plus tard, une fois que vous aurez plus utilisé CSS. Les différentes valeurs qu'on peut utiliser pour `display` sont expliquées sur [la page de référence de la propriété `display`](/fr/docs/Web/CSS/display).
+> [!NOTE]
+> C'est tout à fait normal si vous ne comprenez pas complètement `display: block;` et les différences entre bloc et inline. Ça viendra plus tard, une fois que vous aurez plus utilisé CSS. Les différentes valeurs qu'on peut utiliser pour `display` sont expliquées sur [la page de référence de la propriété `display`](/fr/docs/Web/CSS/display).
 
 ## Conclusion
 

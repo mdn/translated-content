@@ -38,7 +38,8 @@ O elemento {{HTMLElement("form")}} é o elemento que formalmente define o formul
 
 Nós já vimos isto em um artigo anterior:
 
-> **Nota:** É estritamente proíbido aninhar um formulário dentro de outro formulário. Isto pode fazer com que os formulários se comportem de maneira imprevisível baseada no navegador que está sendo utilizado.
+> [!NOTE]
+> É estritamente proíbido aninhar um formulário dentro de outro formulário. Isto pode fazer com que os formulários se comportem de maneira imprevisível baseada no navegador que está sendo utilizado.
 
 Note que, sempre é possível usar um widget de formulário fora de um elemento {{HTMLElement("form")}} mas se o fizer, o widget não terá nada a ver com o formulário. Estes widgets podem ser usados fora de um formulário, mas para tanto você deverá ter um plano especial para eles, pois este não farão nada por si próprios. Você terá de controlar o comportamento deles através de JavaScript.
 
@@ -157,7 +158,8 @@ The paragraph at the top defines the rule for required elements. It must be at t
 - In the second example, things are a bit clearer — the label read out along with the input is "name star name edit text", and the labels are still read out separately. Things are still a bit confusing, but it's a bit better this time because the input has a label associated with it.
 - The third example is best — the actual label is read out all together, and the label read out with the input is "name star edit text".
 
-> **Nota:** You might get slightly different results, depending on your screenreader. This was tested in VoiceOver (and NVDA behaves similarly). We'd love to hear about your experiences too.
+> [!NOTE]
+> You might get slightly different results, depending on your screenreader. This was tested in VoiceOver (and NVDA behaves similarly). We'd love to hear about your experiences too.
 
 **Note**: You can find this example on GitHub as [required-labels.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). don't run the example with 2 or 3 of the versions uncommented — screenreaders will definitely get confused if you have multiple labels AND multiple inputs with the same ID!
 

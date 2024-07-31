@@ -26,9 +26,11 @@ l10n:
 
 これらの仕組みは {{domxref("Window.sessionStorage")}} および {{domxref("Window.localStorage")}} プロパティ（正確には、サポートするブラウザーは `Window` オブジェクトが `WindowLocalStorage` および `WindowSessionStorage` オブジェクトを実装しており、これらに `localStorage` および `sessionStorage` プロパティがあります）を通して使用でき、いずれかのプロパティを使用すると {{domxref("Storage")}} オブジェクトのインスタンスを生成して、データアイテムの保存、取り出し、削除ができます。 同じオリジンに対して `sessionStorage` と `localStorage` は、別の `Storage` オブジェクトを使用します。 これらは別々に制御されて機能します。
 
-> **メモ:** Firefox では、ブラウザーがクラッシュまたは再起動したとき、オリジンごとに保存されるデータ量は 10MB に制限されます。詳しくは、[ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#firefox)を参照してください。
+> [!NOTE]
+> Firefox では、ブラウザーがクラッシュまたは再起動したとき、オリジンごとに保存されるデータ量は 10MB に制限されます。詳しくは、[ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#firefox)を参照してください。
 
-> **メモ:** ユーザーが[サードパーティの Cookie を禁止している](https://support.mozilla.org/ja/kb/third-party-cookies-firefox-tracking-protection)（英語）場合は、サードパーティの iframe からウェブストレージにアクセスできません。
+> [!NOTE]
+> ユーザーが[サードパーティの Cookie を禁止している](https://support.mozilla.org/ja/kb/third-party-cookies-firefox-tracking-protection)（英語）場合は、サードパーティの iframe からウェブストレージにアクセスできません。
 
 ## ウェブストレージインターフェイス
 

@@ -62,7 +62,8 @@ _我們接下來將創建，並隨著本系列教程發展的網站，名字是�
 
 如果你被卡住了，你可以在 [Github 的這裡](https://github.com/mdn/express-locallibrary-tutorial)，找到本地圖書館網站已經開發完成的版本。
 
-> **備註：** 在本教程中，指定版本的 node、Express、還有其它模組，都經過測試，並列出在專案項目的 [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json) 檔案中。
+> [!NOTE]
+> 在本教程中，指定版本的 node、Express、還有其它模組，都經過測試，並列出在專案項目的 [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json) 檔案中。
 
 ## 總結
 

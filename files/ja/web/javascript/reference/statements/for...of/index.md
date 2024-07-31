@@ -50,7 +50,8 @@ for (let value of iterable) {
 // 31
 ```
 
-> **メモ:** 反復処理ごとに新しい変数が作成されます。ループ本体内で変数を再代入しても、反復可能オブジェクト（この場合は配列）の元の値には影響しません。
+> [!NOTE]
+> 反復処理ごとに新しい変数が作成されます。ループ本体内で変数を再代入しても、反復可能オブジェクト（この場合は配列）の元の値には影響しません。
 
 [分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)や、`for (x.y of iterable)` などのオブジェクトプロパティを使用することもできます。
 

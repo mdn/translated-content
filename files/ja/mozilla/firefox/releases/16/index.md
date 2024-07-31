@@ -29,7 +29,7 @@ Firefox 16 は、2012 年 10 月 9 日にリリースされました。この記
 - 標準の、接頭辞無しの {{ cssxref("calc") }} が使えるようになりました。([bug 771678](https://bugzilla.mozilla.org/show_bug.cgi?id=771678))
 - {{cssxref("&lt;resolution&gt;")}} CSS データタイプが拡張され、`dppx` がサポートされるようになりました。([bug 741644](https://bugzilla.mozilla.org/show_bug.cgi?id=741644))
 - 画面上で、[メディアクエリー](/ja/docs/CSS/Media_queries) のために、`dppx`、`dpi`、および `dpcm` が物理単位ではなく、CSS ピクセル単位で再表現されるようになりました。 ([bug 771390](https://bugzilla.mozilla.org/show_bug.cgi?id=771390))
-- 特定の状態にある {{HTMLElement("meter")}} 要素へのアクセスやスタイル付けを行うため、新たに 3 つの疑似クラス `:-moz-meter-optimum`、`:-moz-meter-sub-optimum`、`:-moz-meter-sub-sub-optimum` を追加しました。([bug 660238](https://bugzilla.mozilla.org/show_bug.cgi?id=660238))
+- 特定の状態にある {{HTMLElement("meter")}} 要素へのアクセスやスタイル付けを行うため、新たに 3 つの擬似クラス `:-moz-meter-optimum`、`:-moz-meter-sub-optimum`、`:-moz-meter-sub-sub-optimum` を追加しました。([bug 660238](https://bugzilla.mozilla.org/show_bug.cgi?id=660238))
 - {{cssxref("-moz-appearance")}} プロパティが新たに 2 つの値を取り入れました : `meterbar` および `meterchunk`。これらは、{{HTMLElement("meter")}} 要素内部のコンポーネントを表します。([bug 659999](https://bugzilla.mozilla.org/show_bug.cgi?id=659999))
 - {{cssxref("min-width")}} および {{cssxref("min-height")}} で、flex item のための `auto` キーワードをサポートしました (他のアイテムでは `0` と解釈します)。([Firefox バグ 763689](https://bugzil.la/763689))
 

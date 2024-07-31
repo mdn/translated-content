@@ -15,7 +15,8 @@ l10n:
 
 一个无符号长整数值，指示由远程对等端确定的候选者的优先级。这个值越大，远程对等端认为这个候选者越可取。如果没有在 `candidate`（属性行）中指定 `priority` 或者 `candidate` 字符串不能被正确解析，该值则为 `null`。
 
-> **备注：** 如果 `priority` 为 `null`，则将 `candidate` 传递给 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 将失败，抛出 `OperationError` 异常。只有当候选者实现 `priority` 属性时才适用此规则。
+> [!NOTE]
+> 如果 `priority` 为 `null`，则将 `candidate` 传递给 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 将失败，抛出 `OperationError` 异常。只有当候选者实现 `priority` 属性时才适用此规则。
 
 ## 使用说明
 

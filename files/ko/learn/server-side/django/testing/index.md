@@ -77,7 +77,8 @@ class YourTestClass(TestCase):
 
 대부분의 테스트들을 위한 최선의 기본 클라스는 [django.test.TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase) 입니다. 이 테스트 클라스는 이것이 실행되기 전에 하나의 깨끗한 데이터베이스를 생성하고, 그리고 이 자체의 트랜젝션에서 모든 테스트를 실행합니다. 이 클라스는 자체의 테스트 클라이언트를 갖고있는데, 이것은 당신이 view 레벨에서 그 코드가 사용자와 상호작용하는 것을 시뮬레이션할 수 있게 합니다. 아래 섹션에서는 이 [TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase) 기본 클라스를 이용하여 유닛테스트들에 집중할 것입니다.
 
-> **참고:** 이[django.test.TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase) 클라스는 매우 편리합니다. 그러나 어떤 테스트들은 그들이 필요로하는 것보다 느려지는 결과가 올 수 있습니다(모든 테스트들이 그들 자체의 데이터베이스나 또는 view 상호작용의 셋업이 필요한 것은 아닙니다) 한번 당신이 이 클라스를 통해서 무엇을 할 수 있는지 익숙해진다면, 당신은 더 심플한 테스트 클라스들을 가지고 당신의 몇몇 테스트들을 대체하게 될 것입니다.
+> [!NOTE]
+> 이[django.test.TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase) 클라스는 매우 편리합니다. 그러나 어떤 테스트들은 그들이 필요로하는 것보다 느려지는 결과가 올 수 있습니다(모든 테스트들이 그들 자체의 데이터베이스나 또는 view 상호작용의 셋업이 필요한 것은 아닙니다) 한번 당신이 이 클라스를 통해서 무엇을 할 수 있는지 익숙해진다면, 당신은 더 심플한 테스트 클라스들을 가지고 당신의 몇몇 테스트들을 대체하게 될 것입니다.
 
 ### 무엇을 테스트해야 하는가?
 
@@ -103,7 +104,8 @@ class Author(models.Model):
 
 단순히, 당신은 당신의 요구에 따라 만들어지 메소드들 `get_absolute_url()` 과 `__str__()` 이 원래 요구된 대로 작동하는지 체크해야합니다. 왜냐하면 이것들은 당신이 만들어낸 코드/비즈니스 로직이기 때문입니다. `get_absolute_url()`의 경우에 있어서는 Django의 reverse() 메소드는 적당하게 작동되었다고 신뢰할 수 있습니다, 그래서 당신이 테스트해야 하는 것은 실제로 정의되어온 관련된 view 입니다.
 
-> **참고:** 영특한 독자들은 date of birth와 date of death를 합리적인 값으로 제한해야 한다고 적어야 하고, 그리고 death는 birth보다 뒤에 왔는지를 체크해야 한다고 할 것입니다. Django에 있어서 이 제약은 당신의 폼클라스에 추가될 것입니다(당신이 그 필드들의 이러한 모습을 모델 레벨이 아니라 오직 폼 레벨에서 사용될 수 있도록 인증을 정의할 수 있다고 할지라도 말입니다)
+> [!NOTE]
+> 영특한 독자들은 date of birth와 date of death를 합리적인 값으로 제한해야 한다고 적어야 하고, 그리고 death는 birth보다 뒤에 왔는지를 체크해야 한다고 할 것입니다. Django에 있어서 이 제약은 당신의 폼클라스에 추가될 것입니다(당신이 그 필드들의 이러한 모습을 모델 레벨이 아니라 오직 폼 레벨에서 사용될 수 있도록 인증을 정의할 수 있다고 할지라도 말입니다)
 
 이런 것들을 마음에 두고서 테스트를 정의하고 실행해봅시다.
 
@@ -124,7 +126,8 @@ catalog/
 
 당신의 LocalLibrary 프로젝트에서 위와 같은 구조의 파일을 만드십시오. \_\_init\_\_.py 파일은 비어있는 파일입니다.(이것은 Python에게 이 디렉토리가 패키지임을 알려줍니다) skeleton 테스트파일인 /catalog/tests.py를 복사하여 이름을 바꿔서 위의 세개의 테스트파일을 만드십시오.
 
-> **참고:** 이 skeleton 테스트파일 **/catalog/tests.py 은 우리가** [Django skeleton website](/ko/docs/Learn/Server-side/Django/skeleton_website) 를 만들었을 때 자동으로 생성됩니다. 당신의 테스트들을 여기에 모두 넣는 것도 괜찮습니다만, 당신이 적절하게 테스트를 해나가면 당신은 금방 매우 크고, 관리할 필요 없는 테스트파일로 끝나게 될 것입니다.
+> [!NOTE]
+> 이 skeleton 테스트파일 **/catalog/tests.py 은 우리가** [Django skeleton website](/ko/docs/Learn/Server-side/Django/skeleton_website) 를 만들었을 때 자동으로 생성됩니다. 당신의 테스트들을 여기에 모두 넣는 것도 괜찮습니다만, 당신이 적절하게 테스트를 해나가면 당신은 금방 매우 크고, 관리할 필요 없는 테스트파일로 끝나게 될 것입니다.
 >
 > 이 skeleton 파일은 우리에게 필요하지 않으니 지우십시오.
 
@@ -169,11 +172,13 @@ class YourTestClass(TestCase):
 - `setUpTestData()` 는 클래스 전체에서 사용되는 설정을 위해서 테스트 시작 때 딱 한 번만 실행됩니다. 테스트 메쏘드가 실행되면서 수정되거나 변경되지 않을 객체들을 이곳에서 생성할 수 있습니다.
 - `setUp()` 은 각각의 테스트 메쏘드가 실행될 때마다 실행됩니다. 테스트 중 내용이 변경될 수 있는 객체를 이곳에서 생성할 수 있습니다 (모든 테스트 메쏘드는 방금 막 생성된 ("fresh") 오브젝트를 입력받게 됩니다).
 
-> **참고:** 테스트 클래스는 위 예제에서 사용하지 않은 `tearDown(`h 메소드를 가지고 있습니다. 이 메소드는 특히 데이터베이스 테스트에는 유용하지가 않은데 바로 베이스 클래스인 `TestCase` 가 데이터베이스 삭제(teardown) 을 처리해주기 때문입니다.
+> [!NOTE]
+> 테스트 클래스는 위 예제에서 사용하지 않은 `tearDown(`h 메소드를 가지고 있습니다. 이 메소드는 특히 데이터베이스 테스트에는 유용하지가 않은데 바로 베이스 클래스인 `TestCase` 가 데이터베이스 삭제(teardown) 을 처리해주기 때문입니다.
 
 아래에는 `Assert` 함수를 사용하여 조건이 참, 거짓 또는 동일한지 테스트하는 여러 가지 테스트 메서드가 있습니다 (`AssertTrue`, `AssertFalse`, `AssertEqual`). 조건이 예상대로 실행되지 않으면 테스트가 실패하고 콘솔에 오류를 보고합니다.
 
-> **참고:** 일반적으로 위와 같이 테스트에 **print()** 함수를 포함하면 **안**됩니다. 여기서는 setup 함수들이 콘솔에서 호출되는 순서를 (다음 절에서) 볼 수 있도록 하기 위해 사용되었습니다.
+> [!NOTE]
+> 일반적으로 위와 같이 테스트에 **print()** 함수를 포함하면 **안**됩니다. 여기서는 setup 함수들이 콘솔에서 호출되는 순서를 (다음 절에서) 볼 수 있도록 하기 위해 사용되었습니다.
 
 ## 어떻게 테스트를 작동시키는가
 
@@ -185,7 +190,8 @@ python3 manage.py test
 
 이 명령은 현재 경로에서 **test\*.py** 패턴을 만족하는 모든 파일을 찾은 후 이들 테스트를 적합한 베이스 클래스를 이용해서 실행합니다 (우리는 현재 여러 개의 테스트 파일을 가지고 있지만 **/catalog/tests/test_models.py** 만이 실제 테스트를 포함하고 있습니다. 기본적으로 각각의 테스트는 실패 결과만을 보고하며, 마지막으로 테스트 결과 요약을 출력합니다.
 
-> **참고:** 만약 `ValueError: Missing staticfiles manifest entry ...` 과 같은 에러를 마주칠 수 있습니다. 이런 에러는 보통 테스팅 도구가 기본적으로 collectstatic을 실행하지 않고, 당신의 앱이 이를 요구하는 storage 클래스를 사용하기 때문일 수 있습니다 ([manifest_strict](https://docs.djangoproject.com/en/2.0/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict) 에 더 자세한 정보가 적혀 있습니다). 이 문제를 해결할 수 있는 다양한 방법이 있지만 가장 간단한 방법은 테스트 실행 전에 collectstatic을 실행하는 것입니다.
+> [!NOTE]
+> 만약 `ValueError: Missing staticfiles manifest entry ...` 과 같은 에러를 마주칠 수 있습니다. 이런 에러는 보통 테스팅 도구가 기본적으로 collectstatic을 실행하지 않고, 당신의 앱이 이를 요구하는 storage 클래스를 사용하기 때문일 수 있습니다 ([manifest_strict](https://docs.djangoproject.com/en/2.0/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict) 에 더 자세한 정보가 적혀 있습니다). 이 문제를 해결할 수 있는 다양한 방법이 있지만 가장 간단한 방법은 테스트 실행 전에 collectstatic을 실행하는 것입니다.
 >
 > ```bash
 > python3 manage.py collectstatic
@@ -451,7 +457,8 @@ class RenewBookFormTest(TestCase):
 
 나머지 함수들은 폼이 적절한 구간 내에 있는 갱신 일자를 수락하는지와 더불어 부적합한 구간에 있는 일자를 거절하는지를 테스트 합니다. 우리가 테스트용 날짜들을 `datetime.timedelta()` (몇 일이나 몇 주를 나타냅니다)을 이용해서 현재 날짜 근처로(`datetime.date.today()` ) 생성하는 것을 기억해두세요. 그리고나서 우리는 폼을 만들고, 데이터를 집어넣고, 데이터가 유효한지를 테스트합니다.
 
-> **참고:** 여기서 우리는 데이터베이스나 테스트 클라이언트를 사용하지 않습니다. [SimpleTestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#django.test.SimpleTestCase)를 이용해서 테스트 클래스를 만드는 것을 고려해보세요.
+> [!NOTE]
+> 여기서 우리는 데이터베이스나 테스트 클라이언트를 사용하지 않습니다. [SimpleTestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#django.test.SimpleTestCase)를 이용해서 테스트 클래스를 만드는 것을 고려해보세요.
 >
 > 또한 우리는 만약 폼이 유효하지 않을 경우 적절한 에러가 발생하는지 역시 검증해야 합니다. 하지만 보통 이 부분은 view processing의 일부로 처리되기 때문에 다음 섹션에서 다루도록 하겠습니다.
 
@@ -550,7 +557,8 @@ class LoanedBooksByUserListView(LoginRequiredMixin, generic.ListView):
 
 아래 코드를 **/catalog/tests/test_views.py** 에 추가해주세요. 여기서 우리는 `SetUp()` 을 이용해서 계정을 생성한 다음 테스트에 사용할 `BookInstance` 객체와 관련된 책 및 기타 정보를 생성합니다. 각각의 테스트 계정에 의해서 책이 반반씩 대출되었지만 일단 우리는 모든 책의 상태를 "maintenance"로 설정합니다. 우리는 테스트 하면서 이들 객체들을 수정할 것이기 때문에 `setUpTestData()` 대신 `SetUp()`을 사용했습니다.
 
-> **참고:** 아래의 `setUp()` 코드는 특정 `Language`의 책을 생성하지만, `Language` 모델이 이전 튜토리얼에서 도전 과제로 생성되었기 때문에 여러분의 코드에는 존재하지 않을 수 있습니다. 이때는 간단히 `Language` 객체를 불러오거나 생성하는 코드를 주석처리 해주세요. 같은 작업을 곧 나올 `RenewBookInstancesViewTest` 에도 해줘야 합니다.
+> [!NOTE]
+> 아래의 `setUp()` 코드는 특정 `Language`의 책을 생성하지만, `Language` 모델이 이전 튜토리얼에서 도전 과제로 생성되었기 때문에 여러분의 코드에는 존재하지 않을 수 있습니다. 이때는 간단히 `Language` 객체를 불러오거나 생성하는 코드를 주석처리 해주세요. 같은 작업을 곧 나올 `RenewBookInstancesViewTest` 에도 해줘야 합니다.
 
 ```python
 import datetime
@@ -845,7 +853,8 @@ Add the following tests to the bottom of the test class. These check that only u
         self.assertEqual(response.context['form'].initial['renewal_date'], date_3_weeks_in_future)
 ```
 
-> **경고:** 만약 당신이 class `RenewBookForm(forms.Form)` 대신에 class `RenewBookModelForm(forms.ModelForm)` 을 사용한다면, form의 필드명은 **'renewal_date'** 대신 **'due_back'**으로 나타날 것입니다.
+> [!WARNING]
+> 만약 당신이 class `RenewBookForm(forms.Form)` 대신에 class `RenewBookModelForm(forms.ModelForm)` 을 사용한다면, form의 필드명은 **'renewal_date'** 대신 **'due_back'**으로 나타날 것입니다.
 
 The next test (add this to the class too) checks that the view redirects to a list of all borrowed books if renewal succeeds. What differs here is that for the first time we show how you can `POST` data using the client. The post _data_ is the second argument to the post function, and is specified as a dictionary of key/values.
 
@@ -857,7 +866,8 @@ The next test (add this to the class too) checks that the view redirects to a li
         self.assertRedirects(response, reverse('all-borrowed'))
 ```
 
-> **경고:** The _all-borrowed_ view was added as a _challenge_, and your code may instead redirect to the home page '/'. If so, modify the last two lines of the test code to be like the code below. The `follow=True` in the request ensures that the request returns the final destination URL (hence checking `/catalog/` rather than `/`).
+> [!WARNING]
+> The _all-borrowed_ view was added as a _challenge_, and your code may instead redirect to the home page '/'. If so, modify the last two lines of the test code to be like the code below. The `follow=True` in the request ensures that the request returns the final destination URL (hence checking `/catalog/` rather than `/`).
 >
 > ```python
 >  response = self.client.post(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':valid_date_in_future}, follow=True )

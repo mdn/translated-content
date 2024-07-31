@@ -13,7 +13,8 @@ slug: Web/API/AudioListener
 
 ## Properties
 
-> **备注：** position,forward 和 up 值是以不同的语法设置和检索的。检索是通过访问来实现的，比如说 `AudioListener.positionX` ，设置相同属性时可以通过使用 `AudioListener.positionX.value` 来完成。这就是为什么他们不被标记为只读，这在规范的接口定义中就是这么说的。
+> [!NOTE]
+> position,forward 和 up 值是以不同的语法设置和检索的。检索是通过访问来实现的，比如说 `AudioListener.positionX` ，设置相同属性时可以通过使用 `AudioListener.positionX.value` 来完成。这就是为什么他们不被标记为只读，这在规范的接口定义中就是这么说的。
 
 - {{domxref("AudioListener.positionX")}}
   - : 在笛卡尔右手坐标系中代表一个收听者的水平坐标。默认值是 0.
@@ -41,7 +42,8 @@ slug: Web/API/AudioListener
 - {{domxref("AudioListener.setPosition()")}} {{deprecated_inline}}
   - : 设置收听者的位置。
 
-> **备注：** Although these methods are deprecated they are currently the only way to set the orientation and position in Firefox, Internet Explorer and Safari.
+> [!NOTE]
+> Although these methods are deprecated they are currently the only way to set the orientation and position in Firefox, Internet Explorer and Safari.
 
 ## Deprecated features
 

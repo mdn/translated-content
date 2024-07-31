@@ -9,7 +9,8 @@ l10n:
 
 {{domxref("NavigatorUAData")}} 接口的 **`toJSON()`** 方法是一个*序列化器*，它返回 `NavigatorUAData` 对象的*低熵*属性的 JSON 表示形式。
 
-> **备注：** 术语*高熵*和*低熵*是指这些值揭示的有关浏览器的信息量。此方法返回的低熵值是那些不会泄露能够识别用户的信息的值。高熵值只能通过 {{domxref("NavigatorUAData.getHighEntropyValues()")}} 方法返回。
+> [!NOTE]
+> 术语*高熵*和*低熵*是指这些值揭示的有关浏览器的信息量。此方法返回的低熵值是那些不会泄露能够识别用户的信息的值。高熵值只能通过 {{domxref("NavigatorUAData.getHighEntropyValues()")}} 方法返回。
 
 ## 语法
 

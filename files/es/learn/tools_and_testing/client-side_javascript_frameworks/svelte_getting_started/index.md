@@ -49,7 +49,8 @@ Svelte adopta en gran medida el modelo clásico de desarrollo web dado por HTML,
 
 Sus mayores inconvenientes vienen dados por su corta edad, pues su ecosistema se encuentra limitado en términos de herramientas, soporte, complementos (_plugins_), patrones específicos de uso, etc. en comparación con otros _frameworks_. A pesar de ello, sus beneficios deberían ser suficientes para despertar tu curiosidad en explorarlo.
 
-> **Nota:** Recientemente Svelte agregó [soporte oficial de Typescript](https://svelte.dev/blog/svelte-and-typescript), una de sus características más esperadas. Más adelante en esta serie de tutoriales exploraremos esa integración.
+> [!NOTE]
+> Recientemente Svelte agregó [soporte oficial de Typescript](https://svelte.dev/blog/svelte-and-typescript), una de sus características más esperadas. Más adelante en esta serie de tutoriales exploraremos esa integración.
 
 Te recomendamos que sigas el [Tutorial de Svelte](https://svelte.dev/tutorial/basics) para una introducción rápida a los conceptos básicos, para después regresar a este tutorial y aprender a construir algo más complicado.
 
@@ -104,7 +105,8 @@ npm install
 npm run dev
 ```
 
-> **Nota:** el funcionamiento de degit no es mágico — simplemente te permite descargar y descomprimir la última versión del contenido de un repositorio de git. Esto es mucho más rápido que utilizar el comando `git clone` ya que no se descarga todo el historial del repositorio ni se crea un clon local completo.
+> [!NOTE]
+> El funcionamiento de degit no es mágico — simplemente te permite descargar y descomprimir la última versión del contenido de un repositorio de git. Esto es mucho más rápido que utilizar el comando `git clone` ya que no se descarga todo el historial del repositorio ni se crea un clon local completo.
 
 Después de ejecutar `npm run dev`, Svelte compila y construye tu aplicación.
 Además, inicia un servidor local en la dirección `localhost:8080`. Svelte estará a la espera de modificaciones en el código fuente de tu aplicación para compilar y actualizar la app. Tu navegador mostrará algo parecido a lo siguiente:
@@ -181,7 +183,8 @@ Las tres secciones: `<script>`, `<style>`, y el marcado, son completamente opcio
 <!-- el marcado (cero o más elementos HTML) va aquí -->
 ```
 
-> **Nota:** Para más información del formato para componentes, dale un vistazo a la [Documentación de Svelte](https://svelte.dev/docs#Component_format).
+> [!NOTE]
+> Para más información del formato para componentes, dale un vistazo a la [Documentación de Svelte](https://svelte.dev/docs#Component_format).
 
 Una vez revisado lo anterior, miremos el archivo `src/App.svelte` que viene incluir en el _template_ inicial. Deberías ver algo como lo siguiente:
 
@@ -287,7 +290,8 @@ Para ver esto en acción, abre una nueva pestaña del navegador y dirígete a la
 
 Al compilar la aplicación, Svelte cambia la definición de nuestros estilos `h1` a `h1.svelte-1tky8bj`, modifica todos los elementos `<h1>` de nuestra aplicación y los transforma en elementos de la forma `<h1 class="svelte-1tky8bj">`, para que así coincida con los estilos aplicados.
 
-> **Nota:** Puedes cambiar este comportamiento al aplicar los estilos globalmente a un selector utilizando el modificador `:global()` (visita la entrada de la [documentación de Svelte para `<style>`](https://svelte.dev/docs#style) para más información).
+> [!NOTE]
+> Puedes cambiar este comportamiento al aplicar los estilos globalmente a un selector utilizando el modificador `:global()` (visita la entrada de la [documentación de Svelte para `<style>`](https://svelte.dev/docs#style) para más información).
 
 ## Aplicando algunos cambios
 
@@ -424,7 +428,8 @@ npm run dev
 
 Si quieres aprender más sobre git y GitHub, hemos compilado una lista de enlaces a guías que te podrían ser útiles. Visita [Git y GitHub](/es/docs/Learn/Tools_and_testing/GitHub).
 
-> **Nota:** Si solo quieres descargar los archivos sin clonar el repositorio de git, puedes utilizar la herramienta degit de la siguiente manera: `npx degit opensas/mdn-svelte-tutorial`. También puedes descargar una carpeta específica con el comando `npx degit opensas/mdn-svelte-tutorial/01-getting-started`. Degit no creará un repositorio local de git, en su lugar, simplemente descarga los archivos de la carpeta especificada.
+> [!NOTE]
+> Si solo quieres descargar los archivos sin clonar el repositorio de git, puedes utilizar la herramienta degit de la siguiente manera: `npx degit opensas/mdn-svelte-tutorial`. También puedes descargar una carpeta específica con el comando `npx degit opensas/mdn-svelte-tutorial/01-getting-started`. Degit no creará un repositorio local de git, en su lugar, simplemente descarga los archivos de la carpeta especificada.
 
 ### Usando el REPL de Svelte
 
@@ -453,11 +458,13 @@ Para iniciar un REPL, abre tu navegador web y navega a <https://svelte.dev/repl>
 
 Cada vez que cambias algo en cualquier archivo del REPL, Svelte recompila la aplicación y actualiza la pestaña de _Result_. Para compartir tu app, comparte el URL. Por ejemplo, en este enlace puedes encontrar un REPL ejecutando nuestra aplicación completa: <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>.
 
-> **Nota:** Observa que puedes especificar la versión de Svelte en el URL. Esto es bastante útil para reportar problemas relacionados a una versión específica de Svelte.
+> [!NOTE]
+> Observa que puedes especificar la versión de Svelte en el URL. Esto es bastante útil para reportar problemas relacionados a una versión específica de Svelte.
 
 Te proporcionaremos un REPL al inicio y al final de cada articulo para que puedas empezar a programar con nosotros en cualquier momento.
 
-> **Nota:** Actualmente el REPL no es capaz de manejar correctamente el nombre de las carpetas. Si estás siguiendo el tutorial en un REPL, simplemente crea todos tus componentes en la carpeta raíz. De esta forma, cuando veas una dirección en el código, por ejemplo `import Todos from './components/Todos.svelte'`, remplazala con una URL plana, p. ej. `import Todos from './Todos.svelte'`
+> [!NOTE]
+> Actualmente el REPL no es capaz de manejar correctamente el nombre de las carpetas. Si estás siguiendo el tutorial en un REPL, simplemente crea todos tus componentes en la carpeta raíz. De esta forma, cuando veas una dirección en el código, por ejemplo `import Todos from './components/Todos.svelte'`, remplazala con una URL plana, p. ej. `import Todos from './Todos.svelte'`
 
 ## El código hasta ahora
 
