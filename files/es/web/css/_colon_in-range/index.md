@@ -17,7 +17,8 @@ input:in-range {
 
 Esta pseudo-clase es útil para dar al usuario una indicación visual de que el valor actual de un campo está dentro de los límites permitidos.
 
-> **Nota:** Esta pseudo-clase solo se aplica a los elementos que tienen (y pueden tomar) una limitación de rango. En ausencia de tal limitación, el elemento no puede estar "dentro del rango" ni "fuera de rango".
+> [!NOTE]
+> Esta pseudo-clase solo se aplica a los elementos que tienen (y pueden tomar) una limitación de rango. En ausencia de tal limitación, el elemento no puede estar "dentro del rango" ni "fuera de rango".
 
 ## Sintaxis
 

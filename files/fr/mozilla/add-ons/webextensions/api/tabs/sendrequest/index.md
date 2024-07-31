@@ -5,7 +5,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/sendRequest
 
 {{AddonSidebar}}
 
-> **Attention :** Cette méthode a été dépréciée. Utilisez {{WebExtAPIRef("tabs.sendMessage()")}} à la place.
+> [!WARNING]
+> Cette méthode a été dépréciée. Utilisez {{WebExtAPIRef("tabs.sendMessage()")}} à la place.
 
 Envoie une seule requête au(x) script(s) de contenu dans l'onglet spécifié, avec un rappel facultatif à exécuter lorsqu'une réponse est renvoyée. L'événement {{WebExtAPIRef('extension.onRequest')}} est déclenché dans chaque script de contenu exécuté dans l'onglet spécifié pour l'extension en cours.
 
@@ -35,7 +36,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >

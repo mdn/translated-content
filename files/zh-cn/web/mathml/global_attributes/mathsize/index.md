@@ -9,7 +9,8 @@ l10n:
 
 **`mathsize`** [全局属性](/zh-CN/docs/Web/MathML/Global_attributes)设置 MathML 元素的[字体大小](/zh-CN/docs/Web/CSS/font-size)。
 
-> **备注：** 尽可能使用 CSS 对 MathML 进行样式设置。`mathsize` 属性只应包含在不支持 CSS 的应用程序中，并且如果设置的话，其将被 CSS `font-size` 属性值覆盖。
+> [!NOTE]
+> 尽可能使用 CSS 对 MathML 进行样式设置。`mathsize` 属性只应包含在不支持 CSS 的应用程序中，并且如果设置的话，其将被 CSS `font-size` 属性值覆盖。
 
 ## 语法
 
@@ -32,7 +33,8 @@ l10n:
 
   - : 一个正的 {{cssxref("&lt;percentage&gt;")}} 值，相对于父元素的字体大小。
 
-> **备注：** 一些浏览器可能还接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
+> [!NOTE]
+> 一些浏览器可能还接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
 
 ## 规范
 

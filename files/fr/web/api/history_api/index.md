@@ -51,7 +51,8 @@ Vous pouvez déterminer le nombre de pages de l'historique en accédant à la va
 var numberOfEntries = window.history.length;
 ```
 
-> **Note :** Internet Explorer supporte le passage d'une URL sous forme de chaîne de caractères comme paramètre de la méthode `go()`; ce comportement est non standard et non supporté par Gecko.
+> [!NOTE]
+> Internet Explorer supporte le passage d'une URL sous forme de chaîne de caractères comme paramètre de la méthode `go()`; ce comportement est non standard et non supporté par Gecko.
 
 ## Ajouter et modifier des entrées de l'historique
 
@@ -83,7 +84,8 @@ Si on clique à nouveau sur Recul, l'URL de la barre de navigation va se changer
 - **title** (**_titre_)** — Firefox, pour l'instant, ignore ce paramètre, bien qu'il puisse être utilisé plus tard. Afin de prévenir les changements futurs de cette méthode, il serait prudent de fournir ici, en paramètre, une chaîne vide. Vous pourriez aussi donner un titre court à l'état vers lequel vous vous dirigez.
 - **URL** — L'URL de la nouvelle entrée de l'historique est donnée par ce paramètre. Il convient de préciser que le navigateur n'essaiera pas de charger la page pointée par cette URL après un appel à `pushState()`, mais il se peut qu'il tente de le faire plus tard, par exemple, lorsque l'utilisateur relancera son navigateur. Il n'est pas nécessaire que la nouvelle URL soit absolue ; si elle est relative, ce sera par rapport à l'URL courante. La nouvelle URL doit avoir la même origine (domaine) que l'URL courante ; dans le cas contraire, `pushState()` génèrera une exception. Ce paramètre est optionnel ; s'il n'est pas spécifié, sa valeur par défaut est l'URL de la page courante.
 
-> **Note :** Dans Gecko 2.0 jusqu'à Gecko 5.0, l'objet fourni est sérialisé en utilisant JSON. À partir de Gecko 6.0, l'objet est sérialisé à l'aide de [l'algorithme de clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) qui autorise, en particulier, la sérialisation d'arbres récursifs cycliques. Cela permet de passer de façon sûre une plus grande diversité d'objets.
+> [!NOTE]
+> Dans Gecko 2.0 jusqu'à Gecko 5.0, l'objet fourni est sérialisé en utilisant JSON. À partir de Gecko 6.0, l'objet est sérialisé à l'aide de [l'algorithme de clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) qui autorise, en particulier, la sérialisation d'arbres récursifs cycliques. Cela permet de passer de façon sûre une plus grande diversité d'objets.
 
 On peut assimiler l'appel à `pushState()` à l'affectation `window.location = "#foo"`, en cela que l'un comme l'autre auront pour effet de créer et déclencher une autre entrée de l'historique associée au document courant. Mais `pushState()` a quelques avantages :
 
@@ -103,7 +105,8 @@ Dans d'autres documents, elle crée un élément avec l'URI d'espace de nom `nul
 
 `replaceState()` est particulièrement utile si vous désirez mettre à jour l'objet état ou l'URL de l'entrée courante de l'historique en réponse à une action de l'utilisateur.
 
-> **Note :** Dans Gecko 2.0 jusqu'à Gecko 5.0, l'objet fourni est sérialisé en utilisant JSON. À partir de Gecko 6.0, l'objet est sérialisé à l'aide de [l'algorithme de clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) qui autorise, en particulier, la sérialisation d'arbres récursifs cycliques. Cela permet de passer de façon sûre une plus grande diversité d'objets.
+> [!NOTE]
+> Dans Gecko 2.0 jusqu'à Gecko 5.0, l'objet fourni est sérialisé en utilisant JSON. À partir de Gecko 6.0, l'objet est sérialisé à l'aide de [l'algorithme de clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) qui autorise, en particulier, la sérialisation d'arbres récursifs cycliques. Cela permet de passer de façon sûre une plus grande diversité d'objets.
 
 ### Exemple de la méthode replaceState()
 

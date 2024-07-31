@@ -44,7 +44,8 @@ _このインターフェイスは、 {{domxref("XMLHttpRequestEventTarget")}} �
 
   - : 文字列で、HTTP サーバーから返ってきたレスポンス文字列を返します。 {{domxref("XMLHttpRequest.status")}} とは異なり、（"`OK`" のような）レスポンスメッセージの完全な文が含まれています。
 
-    > **メモ:** HTTP/2 仕様書 {{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}} によれば、 HTTP/2 では、 HTTP/1.1 のステータス行に含まれていたバージョンや原因の文を伝える方法が定義されていません。
+    > [!NOTE]
+    > HTTP/2 仕様書 {{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}} によれば、 HTTP/2 では、 HTTP/1.1 のステータス行に含まれていたバージョンや原因の文を伝える方法が定義されていません。
 
 - {{domxref("XMLHttpRequest.timeout")}}
   - : リクエストを自動的に終了するまでの時間をミリ秒単位で表します。

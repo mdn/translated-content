@@ -11,7 +11,8 @@ La interfaz **`History`** (Historial) permite la manipulación del historial de 
 
 Solo hay una instancia de `history` (es un _singleton_.) accesible a través del objeto global {{domxref("Window.history", "history")}}.
 
-> **Nota:** Esta interfaz solo está disponible en el hilo principal de ({{domxref("Window")}}). No se puede acceder a él en los contextos {{domxref("Worker")}} o {{domxref("Worklet")}}.
+> [!NOTE]
+> Esta interfaz solo está disponible en el hilo principal de ({{domxref("Window")}}). No se puede acceder a él en los contextos {{domxref("Worker")}} o {{domxref("Worklet")}}.
 
 ## Propiedades de instancia
 

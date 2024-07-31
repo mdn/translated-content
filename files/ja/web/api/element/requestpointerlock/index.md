@@ -30,7 +30,8 @@ requestPointerLock(options)
 
 {{jsxref("Promise")}} で、{{jsxref("undefined")}} に解決します。
 
-> **メモ:** ブラウザーによっては、プロミスバージョンの `requestPointerLock()` に対応していないものもあります。
+> [!NOTE]
+> ブラウザーによっては、プロミスバージョンの `requestPointerLock()` に対応していないものもあります。
 
 ## 例
 

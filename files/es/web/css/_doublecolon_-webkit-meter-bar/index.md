@@ -32,7 +32,8 @@ meter::-webkit-meter-bar {
 
 {{ EmbedLiveSample('Ejemplos', '100%', 50) }}
 
-> **Nota:** Sólo funciona en navegadores basados en Webkit/Blink.
+> [!NOTE]
+> Sólo funciona en navegadores basados en Webkit/Blink.
 
 ## Especificaciones
 

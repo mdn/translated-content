@@ -42,9 +42,11 @@ l10n:
 - 避免使用 Unicode 盲文模式。如果必须使用，请确保 `aria-brailleroledescription` 值包含除 Unicode 盲文模式、空白字符和盲文模式点 0 之外的内容。
 - 确保该值始终针对文档的语言进行本地化。
 
-> **警告：** 如果内容仅为 Unicode 盲文模式，则该值将不会根据用户的首选翻译表进行翻译。
+> [!WARNING]
+> 如果内容仅为 Unicode 盲文模式，则该值将不会根据用户的首选翻译表进行翻译。
 
-> **备注：** 不要使用 `aria-brailleroledescription` 复制 `aria-roledescription`。只有当 `aria-roledescription` 无法提供足够的盲文表示时才包含此属性。
+> [!NOTE]
+> 不要使用 `aria-brailleroledescription` 复制 `aria-roledescription`。只有当 `aria-roledescription` 无法提供足够的盲文表示时才包含此属性。
 
 如果 `aria-brailleroledescription` 的值满足以下情况，将不会向盲文用户显示：
 
@@ -52,7 +54,8 @@ l10n:
 - 应用了属性的元素具有禁止使用 `aria-brailleroledescription` 的显式或隐式 WAI-ARIA 角色，包括 `generic` 角色。
 - 应用了属性的元素没有有效的 `aria-roledescription`。
 
-> **备注：** 请使用辅助技术的日常用户进行网站和应用程序测试，包括盲文读者，以确保你的内容在盲文中有意义。
+> [!NOTE]
+> 请使用辅助技术的日常用户进行网站和应用程序测试，包括盲文读者，以确保你的内容在盲文中有意义。
 
 ## 值
 

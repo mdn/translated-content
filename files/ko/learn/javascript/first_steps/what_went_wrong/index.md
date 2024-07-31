@@ -42,7 +42,8 @@ l10n:
 1. 시작하려면 즐겨 사용하는 텍스트 편집기와 브라우저에서 로컬 사본을 엽니다.
 2. 게임 플레이를 시도해 보세요. "Submit guess" 버튼을 누르면 작동하지 않는 것을 알 수 있습니다.
 
-> **참고:** 직접 작성한 게임 예제가 동작하지 않는 경우에도 우선 예제 파일로 진행하는 걸 추천합니다. 이 글에 적힌 기법을 먼저 알아본 다음에 여러분의 코드로 돌아가서 활용하시면 됩니다.
+> [!NOTE]
+> 직접 작성한 게임 예제가 동작하지 않는 경우에도 우선 예제 파일로 진행하는 걸 추천합니다. 이 글에 적힌 기법을 먼저 알아본 다음에 여러분의 코드로 돌아가서 활용하시면 됩니다.
 
 이 시점에서 개발자 콘솔을 참조하여 구문 오류가 발생하는지 확인한 다음 오류를 수정해 보겠습니다. 아래에서 방법을 알아보도록 하겠습니다.
 
@@ -64,7 +65,8 @@ l10n:
 
 3. 코드 편집기에서 86번째 줄을 보면 다음과 같은 줄을 찾을 수 있습니다.
 
-   > **경고:** 오류가 86번째 줄에 없을 수 있습니다. 로컬 컴퓨터에서 라이브 서버를 실행하는 확장 기능이 있는 코드 편집기를 사용하는 경우 추가 코드가 삽입됩니다. 이 때문에 개발자 도구는 86번째 줄이 아닌 다른 줄에서 오류가 발생한 것으로 표시합니다.
+   > [!WARNING]
+   > 오류가 86번째 줄에 없을 수 있습니다. 로컬 컴퓨터에서 라이브 서버를 실행하는 확장 기능이 있는 코드 편집기를 사용하는 경우 추가 코드가 삽입됩니다. 이 때문에 개발자 도구는 86번째 줄이 아닌 다른 줄에서 오류가 발생한 것으로 표시합니다.
 
    ```js
    guessSubmit.addeventListener("click", checkGuess);
@@ -74,7 +76,8 @@ l10n:
 
 5. `addEventListener()` 페이지를 보면 함수 이름의 철자가 잘못되어 오류가 발생한 것으로 보입니다. JavaScript는 대소문자를 구분하므로 철자는 물론 대소문자도 잘못 적으면 오류가 발생합니다. `addeventListener`를 `addEventListener`로 수정하면 이 문제가 해결됩니다. 지금 변경해 보세요.
 
-> **참고:** MDN의 [TypeError: "x" is not a function](/ko/docs/Web/JavaScript/Reference/Errors/Not_a_function) 참고서에서 오류에 대한 자세한 설명을 확인하세요.
+> [!NOTE]
+> MDN의 [TypeError: "x" is not a function](/ko/docs/Web/JavaScript/Reference/Errors/Not_a_function) 참고서에서 오류에 대한 자세한 설명을 확인하세요.
 
 ### 구문 오류 2회차
 
@@ -98,7 +101,8 @@ l10n:
 
    동일한 오류이지만 브라우저마다 다른 방식으로 설명합니다.
 
-   > **참고:** 이 오류는 함수 `checkGuess() {}` 블록에서 발생했기 때문에 페이지가 로드되자마자 나타나지 않았습니다. 나중에 [함수 문서](/ko/docs/Learn/JavaScript/Building_blocks/Functions)에서 자세히 알아보겠지만 함수 내부 코드는 함수 외부 코드와 별도의 범위에서 실행됩니다. 이 경우 코드가 시행되지 않았고 86번째 줄에서 `checkGuess()` 함수가 실행될 때까지 오류가 발생하지 않았습니다.
+   > [!NOTE]
+   > 이 오류는 함수 `checkGuess() {}` 블록에서 발생했기 때문에 페이지가 로드되자마자 나타나지 않았습니다. 나중에 [함수 문서](/ko/docs/Learn/JavaScript/Building_blocks/Functions)에서 자세히 알아보겠지만 함수 내부 코드는 함수 외부 코드와 별도의 범위에서 실행됩니다. 이 경우 코드가 시행되지 않았고 86번째 줄에서 `checkGuess()` 함수가 실행될 때까지 오류가 발생하지 않았습니다.
 
 4. 오류에 표시된 줄 번호는 80입니다. 80번째 줄을 살펴보면 다음 코드를 볼 수 있습니다.
 
@@ -133,7 +137,8 @@ l10n:
 9. 따라서 우리가 사용했어야 하는 선택자는 마침표(`.`)로 시작하는 클래스 선택자였는데, 49번째 줄의 `querySelector()` 메서드에 제공한 선택자에는 마침표가 없습니다. 이것이 문제일 수 있습니다! `lowOrHi`를 `.lowOrHi`로 바꿔보세요.
 10. 저장 후 다시 새로고침해보면 `console.log()` 명령문이 우리가 원하는 `<p>` 요소를 반환하는 모습을 볼 수 있습니다. 또 다른 오류를 고쳤습니다! 이제 `console.log()`를 삭제하거나 나중에 참고할 수 있도록 보관할 수 있습니다.
 
-> **참고:** MDN의 [TypeError: "x" is (not) "y"](/ko/docs/Web/JavaScript/Reference/Errors/Unexpected_type) 참고서에서 오류에 대한 자세한 설명을 확인하세요.
+> [!NOTE]
+> MDN의 [TypeError: "x" is (not) "y"](/ko/docs/Web/JavaScript/Reference/Errors/Unexpected_type) 참고서에서 오류에 대한 자세한 설명을 확인하세요.
 
 ### 구문 오류 3회차
 
@@ -215,7 +220,8 @@ const userGuess === Number(guessField.value);
 
 이 오류는 사용자가 다른 작업을 수행하려고 한다고 생각하기 때문에 발생합니다. 변수를 어떤 값과 동일하게 만드는 할당 연산자(`=`)와, 어떤 값이 다른 값과 같은지 판별해서 `true`/`false`를 반환하는 일치 연산자(`===`)를 혼동하지 않도록 주의해야 합니다.
 
-> **참고:** MDN의 [SyntaxError: missing ; before statement](/ko/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) 참고서에서 오류에 대한 자세한 설명을 확인하세요.
+> [!NOTE]
+> MDN의 [SyntaxError: missing ; before statement](/ko/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) 참고서에서 오류에 대한 자세한 설명을 확인하세요.
 
 ### 어떤 값을 입력해도 항상 이겼다고 함
 
@@ -237,7 +243,8 @@ if (userGuess = randomNumber) {
 
 이 오류는 단순한 편입니다. 일반적으로 함수/메서드 호출이 끝날 때 닫는 괄호를 놓쳤음을 의미합니다.
 
-> **참고:** MDN의 [SyntaxError: missing ) after argument list](/ko/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) 참고서에서 오류에 대한 자세한 설명을 확인하세요.
+> [!NOTE]
+> MDN의 [SyntaxError: missing ) after argument list](/ko/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) 참고서에서 오류에 대한 자세한 설명을 확인하세요.
 
 ### SyntaxError: missing : after property id
 
@@ -265,7 +272,8 @@ function checkGuess( {
 
 이러한 모든 오류에 대해 연습에서 살펴본 예제를 어떻게 해결했는지 생각해 봅시다. 오류가 발생하면 주어진 줄 번호를 보고 해당하는 줄로 이동하여 무엇이 잘못되었는지 찾아봅니다. 오류가 반드시 해당하는 줄에 있는 것은 아니며, 위에서 인용한 것과 똑같은 문제로 인해 오류가 발생하지 않을 수도 있다는 점을 명심해야 합니다!
 
-> **참고:** MDN의 [SyntaxError: Unexpected token](/ko/docs/Web/JavaScript/Reference/Errors/Unexpected_token)과 [SyntaxError: unterminated string literal](/ko/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal) 참고서에서 두 오류에 대한 자세한 설명을 확인하세요.
+> [!NOTE]
+> MDN의 [SyntaxError: Unexpected token](/ko/docs/Web/JavaScript/Reference/Errors/Unexpected_token)과 [SyntaxError: unterminated string literal](/ko/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal) 참고서에서 두 오류에 대한 자세한 설명을 확인하세요.
 
 ## 요약
 

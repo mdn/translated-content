@@ -93,7 +93,8 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 
 1. 建立新文件夹——`src/components`。
 
-   > **备注：** 你可以把组件放在 `src` 文件夹当中的任何地方，但放在 `components` 文件夹是比较常见的做法，也让你可以更容易地找到它们。
+   > [!NOTE]
+   > 你可以把组件放在 `src` 文件夹当中的任何地方，但放在 `components` 文件夹是比较常见的做法，也让你可以更容易地找到它们。
 
 2. 建立 `src/components/Todos.svelte` 文件并包含以下内容：
 
@@ -344,7 +345,8 @@ created public/build/bundle.js in 220ms
 <img height="32" width="88" src="https://www.w3.org/WAI/wcag2A" />
 ```
 
-> **备注：** 通过 VSCode 你可以点击 _Quick fix..._ 链接或按 <kbd>Ctrl</kbd> + <kbd>.</kbd> 来自动地加上这个忽略注释。
+> [!NOTE]
+> 通过 VSCode 你可以点击 _Quick fix..._ 链接或按 <kbd>Ctrl</kbd> + <kbd>.</kbd> 来自动地加上这个忽略注释。
 
 假如你想要全局地关闭这个警告，可以像这样在你的 `rollup.config.js` 文件中调整 `Svelte` 插件配置并补上这个 `onwarn` 处理器：
 
@@ -373,7 +375,8 @@ plugins: [
 
 在设计上，这些警告是在编译器本身中实现的，而不是可以选择性加入项目的插件。这样做的目的是在默认情况下检查标记中的无障碍问题，并让你选择不使用特定的警告。
 
-> **备注：** 只有在有充分理由的情况下，例如在构建快速原型时，才应禁用这些警告。做一名优秀的网络公民，让尽可能多的用户都能访问你的网页，这一点非常重要。
+> [!NOTE]
+> 只有在有充分理由的情况下，例如在构建快速原型时，才应禁用这些警告。做一名优秀的网络公民，让尽可能多的用户都能访问你的网页，这一点非常重要。
 
 Svelte 通过 [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules) 来检查无障碍性规则，它是提供在 JSX 元素方面的许多无障碍性规则静态检查的一个 ESLint 插件。Svelte 的目标是在其编译器中实现所有这些功能，其中大部分功能已经移植到 Svelte 中。你可以在 GitHub 中看到[尚未实现的无障碍检查](https://github.com/sveltejs/svelte/issues/820)。点击规则的链接可以查阅它们各自的含义。
 

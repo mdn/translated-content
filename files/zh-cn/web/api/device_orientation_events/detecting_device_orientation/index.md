@@ -136,7 +136,8 @@ window.addEventListener("deviceorientation", handleOrientation);
 
 {{EmbedLiveSample('示例', '230', '260')}}
 
-> **警告：** Chrome 和 Firefox 处理角度的机制不同，所以某些轴上的方向是相反的。
+> [!WARNING]
+> Chrome 和 Firefox 处理角度的机制不同，所以某些轴上的方向是相反的。
 
 ## 处理移动（motion）事件
 

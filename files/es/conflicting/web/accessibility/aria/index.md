@@ -134,4 +134,5 @@ En ambos casos, al volver a enfocar el campo en cuestión, tu lector de pantalla
 - P. ¿Por qué no vuelve a enfocarse en el campo no válido automáticamente?
   - : R. Porque esto no está permitido por las especificaciones de la API de Windows y posiblemente otras. Además, dejar que el enfoque salte sin interacción real del usuario con demasiada frecuencia no es algo agradable en general.
 
-> **Advertencia:** Aún no definido: reconsideremos esto ─ personalmente, creo que establecer el enfoque podría ser bueno si se hace sin causar una trampa en el teclado.
+> [!WARNING]
+> Aún no definido: reconsideremos esto ─ personalmente, creo que establecer el enfoque podría ser bueno si se hace sin causar una trampa en el teclado.

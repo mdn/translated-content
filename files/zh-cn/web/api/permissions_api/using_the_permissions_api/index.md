@@ -103,7 +103,8 @@ function revokePermission() {
 }
 ```
 
-> **备注：** 自 Firefox 51 开始 `revoke()` 函数被默认关闭了，因为它的设计带来了 [Web Applications Security Working Group](https://www.w3.org/2011/webappsec/) 中提到的问题。可以通过将设置项 `dom.permissions.revoke.enable` 置为 `true` 来重新开启它。
+> [!NOTE]
+> 自 Firefox 51 开始 `revoke()` 函数被默认关闭了，因为它的设计带来了 [Web Applications Security Working Group](https://www.w3.org/2011/webappsec/) 中提到的问题。可以通过将设置项 `dom.permissions.revoke.enable` 置为 `true` 来重新开启它。
 
 ### 响应权限状态变化
 

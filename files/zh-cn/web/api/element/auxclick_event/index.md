@@ -42,7 +42,8 @@ button.onauxclick = function () {
 };
 ```
 
-> **备注：** 如果你使用的是三键鼠标，你会注意到在单击任一非鼠标左键时该 `onauxclick` 处理程序会运行。
+> [!NOTE]
+> 如果你使用的是三键鼠标，你会注意到在单击任一非鼠标左键时该 `onauxclick` 处理程序会运行。
 
 ## Notes
 

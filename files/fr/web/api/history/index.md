@@ -30,13 +30,15 @@ _L'interface `History`_ _n'hérite d'aucune méthode._
 
   - : Recule vers la page précédente dans l'historique de navigation, soit la même action que lorsque l'utilsateur clique le bouton Précédent du navigateur. Equivalent de `history.go(-1)`.
 
-    > **Note :** Appeler cette méthode pour reculer plus loin que la première page de l'historique de navigation n'a aucun effet et ne déclenche pas d'exception.
+    > [!NOTE]
+    > Appeler cette méthode pour reculer plus loin que la première page de l'historique de navigation n'a aucun effet et ne déclenche pas d'exception.
 
 - {{domxref("History.forward()")}}
 
   - : Avance vers la page suivante dans l'historique de navigation, soit la même action que lorsque l'utilsateur clique le bouton Suivant du navigateur. Equivalent de `history.go(1)`.
 
-    > **Note :** Appeler cette méthode pour avancer plus loin que la page la plus récente de l'historique de navigation n'a aucun effet et ne déclenche pas d'exception.
+    > [!NOTE]
+    > Appeler cette méthode pour avancer plus loin que la page la plus récente de l'historique de navigation n'a aucun effet et ne déclenche pas d'exception.
 
 - {{domxref("History.go()")}}
   - : Charge une page dans l'historique de navigation, identifiée par sa position relative à la page courante, par exemple `-1` pour la page précédente ou `1` pour la page suivante. Lorsque `integerDelta` sort du cadre de l'historique (aka. -1 alors qu'il n'y a pas de page précédente), cette méthode n'aura aucun effet et ne déclenchera pas d'exception. Appeler `go()` sans paramètres ou un paramètre autre qu'un `Integer` n'a aucun effet (sauf par Internet Explorer, [qui supporte les URLs en String comme paramètre](<http://msdn.microsoft.com/en-us/library/ms536443(VS.85).aspx>)).

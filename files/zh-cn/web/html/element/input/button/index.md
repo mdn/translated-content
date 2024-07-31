@@ -99,7 +99,8 @@ function updateButton() {
 }
 ```
 
-> **备注：** 当然，上述例子的问题是，用户将不知道访问键是什么！在一个真实的网站中，你必须以一种不影响网站设计的方式来提供这些信息（例如，提供一个容易访问的链接，指向关于网站访问键是什么的信息）。
+> [!NOTE]
+> 当然，上述例子的问题是，用户将不知道访问键是什么！在一个真实的网站中，你必须以一种不影响网站设计的方式来提供这些信息（例如，提供一个容易访问的链接，指向关于网站访问键是什么的信息）。
 
 ### 禁用和启用按钮
 
@@ -165,7 +166,8 @@ function disableButton() {
 
 {{EmbedLiveSample("继承禁用状态", 650, 100)}}
 
-> **备注：** Firefox 不像其他浏览器那样，它会在不同页面之间保持 {{HTMLElement("button")}} 的[动态禁用的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。请使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/button#autocomplete) 属性来控制这个特性。
+> [!NOTE]
+> Firefox 不像其他浏览器那样，它会在不同页面之间保持 {{HTMLElement("button")}} 的[动态禁用的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。请使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/button#autocomplete) 属性来控制这个特性。
 
 ## 验证
 
