@@ -30,7 +30,8 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 <link rel="manifest" href="js13kpwa.webmanifest" />
 ```
 
-> **Примечание:** Существует несколько расширений, используемых в прошлом: `manifest.webapp` был популярен в манифестах приложений Firefox OS, также многие используют `manifest.json` потому что содержание организовано по структуре JSON. Однако, расширение `.webmanifest` явно упоминается в [W3C manifest specification](https://w3c.github.io/manifest/), поэтому давайте придерживаться именно этого стандарта.
+> [!NOTE]
+> Многие используют `manifest.json` потому что содержание организовано по структуре JSON. Однако расширение `.webmanifest` явно упоминается в [W3C manifest specification](https://w3c.github.io/manifest/), поэтому мы будем использовать его.
 
 Содержимое файла может выглядеть так:
 
