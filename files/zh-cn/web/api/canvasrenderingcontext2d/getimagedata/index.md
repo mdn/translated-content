@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.getImageData()`** 返回一个{{domxref("ImageData")}}对象，用于描述 canvas 指定区域的隐含像素数据。
+Canvas 2D API 的 **`CanvasRenderingContext2D.getImageData()`** 返回一个 {{domxref("ImageData")}} 对象，用于描述 canvas 指定区域的隐含像素数据。
 
 这个方法不受画布的变换矩阵影响。如果指定的矩形超出画布的边界，返回的 `ImageData` 对象中超出画布边界的像素将是透明黑色。
 
@@ -34,7 +34,7 @@ getImageData(sx, sy, sw, sh, settings)
   - : 要提取 `ImageData` 的矩形的高度。正值向下延伸，负值向上延伸。
 - `settings` {{optional_inline}}
   - : 一个具有以下属性的对象：
-    - `colorSpace`：指定图像数据的颜色空间。可以设置为 `"srgb"` 表示 [sRGB 色彩空间](https://zh.wikipedia.org/wiki/SRGB)，或 `"display-p3"` 表示 [display-p3 色彩空间](https://zh.wikipedia.org/wiki/DCI-P3)。
+    - `colorSpace`：指定图像数据的颜色空间。可以设置为 `"srgb"` 表示 [sRGB 色彩空间](https://zh.wikipedia.org/wiki/SRGB色彩空间)，或 `"display-p3"` 表示 [display-p3 色彩空间](https://zh.wikipedia.org/wiki/DCI-P3)。
 
 ### 返回值
 
@@ -50,7 +50,6 @@ getImageData(sx, sy, sw, sh, settings)
 
 ## 示例
 
-Here is the translation of the example and its details into Chinese:
 
 ### 从画布获取图像数据
 
