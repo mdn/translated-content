@@ -391,7 +391,7 @@ padding-left: 1.5em;
 3. 重启你的浏览器以完成更改。
 
 > [!NOTE]
-> 这个方法可以用来修改浏览器的语言区域，即使你未安装过该语言区域对应的[语言包](https://addons.mozilla.org/en-US/firefox/language-tools/)。这样的话你就可以将浏览器用户界面调整显示为你的默认语言。
+> 这个方法可以用来修改浏览器的语言区域，即使你未安装过该语言区域对应的[语言包](https://addons.mozilla.org/zh-CN/firefox/language-tools/)。这样的话你就可以将浏览器用户界面调整显示为你的默认语言。
 
 再次从磁盘临时加载该扩展，然后测试你的新语言区域：
 
