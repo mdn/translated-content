@@ -11,7 +11,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.putImageData()`** 方法用于将�
 
 > **备注：** 可以使用 {{domxref("CanvasRenderingContext2D.getImageData()", "getImageData()")}} 方法从画布中获取图像数据。
 
-关于 `putImageData()` 方法和一般的画布内容操作，你可以在文章[像素操作](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas) 中找到更多信息。
+关于 `putImageData()` 方法和一般的画布内容操作，你可以在文章[像素操作](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)中找到更多信息。
 
 ## 语法
 
