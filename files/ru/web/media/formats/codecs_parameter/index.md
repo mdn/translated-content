@@ -39,7 +39,8 @@ slug: Web/Media/Formats/codecs_parameter
 
 Как и в случае с любым параметром MIME типа , `codecs` должен заменяться на `codecs*` (обратите внимание на символ звёздочки, `*`) , если какое-либо из свойств кодека использует специальные символы для указания дополнительной информации (языковые отметки, кодировка байтов в шестнадцатеричные значения и т.д.), входящие в {{RFC(2231, "MIME Parameter Value and Encoded Word Extensions", 4)}}. Можно использовать функции JavaScript {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} для кодирования списка параметров, можно использовать {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} для декодирования предварительно закодированного списка параметров.
 
-> **Примечание:** Когда используется параметр `codecs`, указанный список кодеков должен включать каждый кодек, используемый для содержимого файла Список также может содержать кодеки, которых нет в файле.
+> [!NOTE]
+> Когда используется параметр `codecs`, указанный список кодеков должен включать каждый кодек, используемый для содержимого файла Список также может содержать кодеки, которых нет в файле.
 
 ## Свойства кодеков для контейнеров
 
@@ -342,7 +343,8 @@ The Audio Object Type is specified as a one or two digit _decimal_ value (unlike
 
 Thus, ER AAC LC, whose Audio Object Type is 17, can be represented using the full `codecs` value `mp4a.40.17`. Single digit values can be given either as one digit (which is the best choice, since it will be the most broadly compatible) or with a leading zero padding it to two digits, such as `mp4a.40.02`.
 
-> **Примечание:** The specification originally mandated that the Audio Object Type number in the third component be only one decimal digit. However, amendments to the specification over time extended the range of these values well beyond one decimal digit, so now the third parameter may be either one or two digits. Padding values below 10 with a leading `0` is optional. Older implementations of MPEG-4 codecs may not support two-digit values, however, so using a single digit when possible will maximize compatibility.
+> [!NOTE]
+> The specification originally mandated that the Audio Object Type number in the third component be only one decimal digit. However, amendments to the specification over time extended the range of these values well beyond one decimal digit, so now the third parameter may be either one or two digits. Padding values below 10 with a leading `0` is optional. Older implementations of MPEG-4 codecs may not support two-digit values, however, so using a single digit when possible will maximize compatibility.
 
 The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. The table below provides a basic list of the Audio Object Types and in the case of the more common object ypes provides a list of the profiles supporting it, but you should refer to the specification for details if you need to know more about the inner workings of any given MPEG-4 audio type.
 
