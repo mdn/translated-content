@@ -2,16 +2,17 @@
 title: CanvasRenderingContext2D：putImageData() 方法
 slug: Web/API/CanvasRenderingContext2D/putImageData
 l10n:
-  sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
+  sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
 ---
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.putImageData()`** 方法用于将数据从已有的 {{domxref("ImageData")}} 对象绘制到位图。如果提供了一个绘制过的矩形，则只绘制该矩形的像素。此方法不受画布转换矩阵的影响。
+Canvas 2D API 的 **`CanvasRenderingContext2D.putImageData()`** 方法用于将数据从已有的 {{domxref("ImageData")}} 对象绘制到画布上。如果提供了一个被污染的矩形，则只绘制该矩形的像素。此方法不受画布变换矩阵的影响。
 
-> **备注：** 可以使用 {{domxref("CanvasRenderingContext2D.getImageData()", "getImageData()")}} 方法从画布中获取图像数据。
+> [!NOTE]
+> 可以使用 {{domxref("CanvasRenderingContext2D.getImageData()", "getImageData()")}} 方法从画布中获取图像数据。
 
-关于 `putImageData()` 方法和一般的画布内容操作，你可以在文章[像素操作](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)中找到更多信息。
+你可以在文章[像素操作](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)中找到有关 `putImageData()` 方法和画布内容常规操作的更多信息。
 
 ## 语法
 
@@ -108,9 +109,10 @@ putImageData(ctx, imagedata, 150, 0, 50, 50, 25, 25);
 
 {{ EmbedLiveSample('理解 putImageData', 700, 180) }}
 
-### 由于浏览器优化数据丢失
+### 由于浏览器优化丢失数据
 
-> **警告：** 由于转换为和从预乘的 alpha 色值之间的损失性质，刚刚使用 `putImageData()` 设置的像素可能会被返回为等效的 `getImageData()`，但值不同。
+> [!WARNING]
+> 由于转换为和从预乘的 alpha 色值之间的损失性质，刚刚使用 `putImageData()` 设置的像素可能会被返回为等效的 `getImageData()`，但值不同。
 
 #### JavaScript
 
@@ -151,4 +153,5 @@ after: Uint8ClampedArray(4) [ 255, 255, 255, 1 ]
 
 - 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
 - {{domxref("ImageData")}} 对象
+- {{domxref("CanvasRenderingContext2D.getImageData()")}}
 - [像素操作](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
