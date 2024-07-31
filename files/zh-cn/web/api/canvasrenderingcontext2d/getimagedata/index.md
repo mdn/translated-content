@@ -2,7 +2,7 @@
 title: CanvasRenderingContext2D：getImageData() 方法
 slug: Web/API/CanvasRenderingContext2D/getImageData
 l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+  sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
 ---
 
 {{APIRef}}
@@ -11,9 +11,10 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.getImageData()`** 返回一个 {{d
 
 这个方法不受画布的变换矩阵影响。如果指定的矩形超出画布的边界，返回的 `ImageData` 对象中超出画布边界的像素将是透明黑色。
 
-> **备注：** 可以使用 {{domxref("CanvasRenderingContext2D.putImageData()", "putImageData()")}} 方法将图像数据绘制到画布上。
+> [!NOTE]
+> 可以使用 {{domxref("CanvasRenderingContext2D.putImageData()", "putImageData()")}} 方法将图像数据绘制到画布上。
 
-你可以在[像素操作](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)中找到关于 `getImageData()` 和画布内容一般操作的更多信息。
+你可以在[像素操作](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)中找到关于 `getImageData()` 和画布内容的常规操作的更多信息。
 
 ## 语法
 
@@ -49,7 +50,6 @@ getImageData(sx, sy, sw, sh, settings)
     要避免在此情况下抛出 `SecurityError` {{domxref("DOMException")}}，请配置 CORS 允许以这种方式使用源图像。参见[允许图片和 canvas 跨源使用](/zh-CN/docs/Web/HTML/CORS_enabled_image)。
 
 ## 示例
-
 
 ### 从画布获取图像数据
 
@@ -110,6 +110,6 @@ console.log(imageData.colorSpace); // "srgb"
 ## 参见
 
 - 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
-- {{domxref("ImageData")}} object
+- {{domxref("ImageData")}} 对象
 - {{domxref("CanvasRenderingContext2D.putImageData()")}}
-- [像素操作](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
+- [像素操作](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
