@@ -9,9 +9,9 @@ l10n:
 
 En JavaScript, la plupart des valeurs manipulées sont des objets, qu'ils proviennent des fonctionnalités natives du langage, comme les tableaux, ou qu'ils soient fournis par les API du navigateur. Il est aussi possible de créer ses propres objets qui contiendront des propriétés avec des données ou des fonctions. JavaScript est un langage orienté objet et la compréhension de cette notion est nécessaire pour approfondir ses connaissances dans ce langage. Nous avons donc construit un module pour vous aider, où nous vous apprendrons la théorie du modèle objet et les détails de la syntaxe JavaScript associée. Nous verrons ensuite comment créer ses propres objets.
 
-> **Remarque :**
+> [!CALLOUT]
 >
-> #### Vous souhaitez devenir développeuse ou développeur web&nbsp;?
+> Vous souhaitez devenir développeuse ou développeur web&nbsp;?
 >
 > Nous avons construit un cursus contenant toutes les informations essentielles pour parvenir à cet objectif.
 >

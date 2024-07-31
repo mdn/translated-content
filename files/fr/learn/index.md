@@ -13,7 +13,7 @@ Le but de cette section de MDN n'est pas de vous faire passer de «&nbsp;débuta
 
 Si vous débutez complètement, le développement web peut être un réel défi&nbsp;: notre but est de simplifier suffisamment le sujet pour que vous appreniez facilement, tout en vous fournissant assez de détails pour que vous soyez autonome. Vous devriez vous sentir chez vous, que vous soyez étudiant·e apprenant le développement web (de votre propre gré ou dans le cadre de vos études), un·e enseignant·e recherchant des supports de cours, une amatrice ou un amateur ou encore quelqu'un qui souhaite simplement comprendre comment fonctionnent le Web et ses technologies.
 
-> **Remarque :**
+> [!CALLOUT]
 >
 > Vous voulez devenir développeuse ou développeur web front-end&nbsp;?
 >
