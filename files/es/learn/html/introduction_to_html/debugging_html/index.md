@@ -57,7 +57,8 @@ HTML no es tan complicado de entender como Rust; HTML no se compila por separado
 
 HTML en sí mismo no suele producir errores sintácticos porque los navegadores son permisivos con ellos; o sea, el código se sigue ejecutando ¡aun si hay errores! Los navegadores disponen de reglas internas para saber cómo interpretar los errores de marcado incorrecto que encuentran, y seguirán funcionando aunque no produzcan el resultado esperado. Esto puede también ser un problema, por supuesto.
 
-> **Nota:** La ejecución de HTML es permisiva porque cuando se creó la web por primera vez, se decidió que el hecho de permitir que la gente publicara su contenido era más importante que el hecho de que la sintaxis fuera totalmente correcta. La web no sería tan popular como lo es hoy en día si se hubiera sido más estricto desde el primer momento.
+> [!NOTE]
+> La ejecución de HTML es permisiva porque cuando se creó la web por primera vez, se decidió que el hecho de permitir que la gente publicara su contenido era más importante que el hecho de que la sintaxis fuera totalmente correcta. La web no sería tan popular como lo es hoy en día si se hubiera sido más estricto desde el primer momento.
 
 ### Aprendizaje activo: Estudio del código permisivo
 
@@ -156,7 +157,8 @@ La lista de mensajes de error que nos presenta el validador suele ayudar, pero a
 
   ejemplo: `<a href="https://www.mozilla.org/>enlace a la página de inicio de Mozilla</a> ↩ </ul>↩ </body>↩</html>`
 
-  > **Nota:** Un atributo al que le falten las comillas de cierre puede ser un elemento abierto, porque el resto del documento será interpretado como si fuera parte de este atributo.
+  > [!NOTE]
+  > Un atributo al que le falten las comillas de cierre puede ser un elemento abierto, porque el resto del documento será interpretado como si fuera parte de este atributo.
 
 - Unclosed element `ul`: Este no ayuda mucho, porque el elemento {{htmlelement("ul")}} está cerrado correctamente. Este error se debe a que el elemento {{htmlelement("a")}} no ha sido cerrado, ya que faltan las comillas de cierre.
 

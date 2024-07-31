@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Statements/import
 
 La sentencia **`import`** se usa para importar funciones que han sido exportadas desde un módulo externo.
 
-> **Nota:** Por el momento, esta característica sólo está [comenzando a ser implementada](https://jakearchibald.com/2017/es-modules-in-browsers/) de forma nativa en los navegadores. Está implementada en muchos transpiladores, tales como Typescript y [Babel](http://babeljs.io/), y en empaquetadores como [Rollup](https://github.com/rollup/rollup) y [Webpack](https://webpack.js.org/).
+> [!NOTE]
+> Por el momento, esta característica sólo está [comenzando a ser implementada](https://jakearchibald.com/2017/es-modules-in-browsers/) de forma nativa en los navegadores. Está implementada en muchos transpiladores, tales como Typescript y [Babel](http://babeljs.io/), y en empaquetadores como [Rollup](https://github.com/rollup/rollup) y [Webpack](https://webpack.js.org/).
 
 ## Sintaxis
 

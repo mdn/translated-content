@@ -7,7 +7,8 @@ slug: Web/API/Element/animate
 
 Um {{domxref("Element")}} de interface do método **`animate()`** é um método de atalho o qual cria uma nova {{domxref("Animation")}}, e a aplica ao elemento, então executa a animação. Retorna a instância do objeto {{domxref("Animation")}} criado.
 
-> **Nota:** Elementos podem ter múltiplas animações aplicadas a eles. Você pode obter uma lista de animações que afetam um elemento chamando {{domxref("Element.getAnimations()")}}.
+> [!NOTE]
+> Elementos podem ter múltiplas animações aplicadas a eles. Você pode obter uma lista de animações que afetam um elemento chamando {{domxref("Element.getAnimations()")}}.
 
 ## Syntax
 

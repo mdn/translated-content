@@ -20,7 +20,8 @@ FFT 분석 데이터를 스케일링하는 것에 대한 최대 [데시벨](http
 
 `getByteFrequencyData()`로부터 데이터를 얻을 때, `maxDecibels` 또는 더 높은 진폭을 가진 모든 주파수는 `255`로 반환됩니다.
 
-> **참고:** 만약 `AnalyserNode.minDecibels`보다 더 작거나 같은 값이 설정된다면, `IndexSizeError` 예외가 발생합니다.
+> [!NOTE]
+> 만약 `AnalyserNode.minDecibels`보다 더 작거나 같은 값이 설정된다면, `IndexSizeError` 예외가 발생합니다.
 
 ## 예제
 

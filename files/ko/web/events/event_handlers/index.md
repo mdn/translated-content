@@ -19,7 +19,8 @@ l10n:
 
 이벤트 처리기를 등록하기 위해서는 두 가지 방법을 권장합니다. 이벤트 처리기 코드는 대상 요소의 해당 onevent 속성에 할당하거나 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 메서드를 사용하여 이벤트 처리기를 요소의 이벤트 수신기로 등록하여 실행할 수 있습니다. 어느 경우에나 이벤트 수신기는 [`이벤트` 인터페이스](/ko/docs/Web/API/Event) 또는 [파생된 인터페이스](/ko/docs/Web/API/Event#introduction)를 준수하는 객체를 수신합니다. 주요 차이점은 이벤트 수신기 방법을 사용하여 여러 이벤트 처리기를 추가하거나 제거할 수 있다는 것입니다.
 
-> **경고:** HTML onevent 특성을 사용하여 이벤트 처리기를 설정하는 세 번째 접근 방식은 권장하지 않습니다. 마크업을 부풀리고 읽기 어렵고 디버그하기 어렵게 만듭니다. 자세한 내용은 [인라인 이벤트 처리기](/ko/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_—_dont_use_these)를 참조하십시오.
+> [!WARNING]
+> HTML onevent 특성을 사용하여 이벤트 처리기를 설정하는 세 번째 접근 방식은 권장하지 않습니다. 마크업을 부풀리고 읽기 어렵고 디버그하기 어렵게 만듭니다. 자세한 내용은 [인라인 이벤트 처리기](/ko/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_—_dont_use_these)를 참조하십시오.
 
 ### onevent 속성 사용
 
@@ -45,7 +46,8 @@ btn.onclick = greet;
 
 요소에 이벤트 이벤트 처리기를 설정하는 가장 유연한 방법은 {{domxref("EventTarget.addEventListener")}} 방법을 사용하는 것입니다. 이 방법을 사용하면 요소에 여러 이벤트 수신기를 할당하고 필요한 경우 {{domxref("EventTarget.removeEventListener")}} 를 사용하여 수신기를 제거할 수 있습니다.
 
-> **참고:** 이벤트 처리기를 추가 및 제거하는 기능을 통해 예를 들어, 동일한 버튼으로 다른 상황에서 다른 작업을 수행할 수 있습니다. 또한, 더 복잡한 프로그램에서 오래된/사용되지 않은 이벤트 처리기를 정리하면 효율성을 향상시킬 수 있습니다.
+> [!NOTE]
+> 이벤트 처리기를 추가 및 제거하는 기능을 통해 예를 들어, 동일한 버튼으로 다른 상황에서 다른 작업을 수행할 수 있습니다. 또한, 더 복잡한 프로그램에서 오래된/사용되지 않은 이벤트 처리기를 정리하면 효율성을 향상시킬 수 있습니다.
 
 아래에서는 간단한 `greet()` 함수를 `click` 이벤트의 수신기/이벤트 처리기로 설정하는 방법을 보여줍니다. 원하는 경우 명명된 함수 대신 람다 함수를 사용할 수 있습니다. 이벤트는 이벤트 처리기의 첫 번째 인수로 전달됩니다.
 
