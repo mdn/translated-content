@@ -29,7 +29,8 @@ O primeiro parágrafo de qualquer página do glossário é uma descrição simpl
 De preferência, não deve ter mais do que duas frases.
 Certifique-se de que qualquer pessoa que leia a descrição possa entender imediatamente o termo definido.
 
-> **Observação:** Não copie e cole de outras definições ou conteúdo da Internet.
+> [!CALLOUT]
+> Não copie e cole de outras definições ou conteúdo da Internet.
 > (E especialmente não a Wikipedia, já que sua gama de versões de licença é menor e incompatível com MDN.) Sua entrada de glossário deve ser conteúdo original.
 
 #### Escrevendo uma boa entrada no glossário

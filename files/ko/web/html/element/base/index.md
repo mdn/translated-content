@@ -57,7 +57,8 @@ slug: Web/HTML/Element/base
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-> **경고:** 다음 특성 중 하나라도 지정한 경우, 상대 URL을 특성에 사용한 모든 요소보다 `<base>`가 앞에 위치해야 합니다.
+> [!WARNING]
+> 다음 특성 중 하나라도 지정한 경우, 상대 URL을 특성에 사용한 모든 요소보다 `<base>`가 앞에 위치해야 합니다.
 
 - `href`
   - : 문서 내 상대 URL이 사용할 기준 URL. 절대 및 상대 URL을 사용할 수 있습니다.

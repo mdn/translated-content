@@ -35,7 +35,7 @@ myNotification.close();
 
    1. [static](/ja/docs/Web/JavaScript/Reference/Classes/static)
 
-3. [MDN Web Docs 用語集](/ja/docs/Glossary)
+3. 関連用語:
 
    1. {{Glossary("Object", "オブジェクト")}}
    2. {{Glossary("Method", "メソッド")}}

@@ -7,11 +7,13 @@ slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
 
 이 기량 테스트의 목적은 당신이 우리의 [필요한 정보를 저장하기 — 변수](/ko/docs/Learn/JavaScript/First_steps/Variables) 문서를 이해했는지를 평가하기 위함입니다.
 
-> **참고:** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+> [!NOTE]
+> You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
 > If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
-> **참고:** 아래에 있는 예제들에서, 답을 알아내기 위해 시도하는 것을 돕기 위해 만약 당신의 코드에 오류가 있으면, 페이지의 결과 패널에 출력될 것입니다 (또는 다운로드 버전의 경우, 브라우저의 JavaScript 콘솔에 출력될 것입니다).
+> [!NOTE]
+> 아래에 있는 예제들에서, 답을 알아내기 위해 시도하는 것을 돕기 위해 만약 당신의 코드에 오류가 있으면, 페이지의 결과 패널에 출력될 것입니다 (또는 다운로드 버전의 경우, 브라우저의 JavaScript 콘솔에 출력될 것입니다).
 
 ## 변수 1
 
@@ -25,7 +27,7 @@ slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables1.html", '100%', 400)}}
 
-> **알림:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/variables/variables1-download.html) to work in your own editor or in an online editor.
 
@@ -37,7 +39,7 @@ slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables2.html", '100%', 400)}}
 
-> **알림:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/variables/variables2-download.html) to work in your own editor or in an online editor.
 
@@ -49,7 +51,7 @@ slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables3.html", '100%', 400)}}
 
-> **알림:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/variables/variables3-download.html) to work in your own editor or in an online editor.
 

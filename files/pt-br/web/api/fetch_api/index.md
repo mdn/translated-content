@@ -21,7 +21,8 @@ Uma vez que uma {{domxref("Response")}} é recuperada, há uma série de método
 
 Você pode criar um pedido e uma resposta diretamente usando os construtores {{domxref("Request.Request","Request()")}} e {{domxref("Response.Response","Response()")}}, mas é improvável que você faça isso diretamente. Em vez disso, é mais provável que sejam criados como resultados de outras ações da API (por exemplo, {{domxref("FetchEvent.respondWith")}} de service workers).
 
-> **Nota:** Encontre mais informações sobre os recursos do Fetch API em [Using Fetch](/pt-BR/docs/Web/API/Fetch_API/Using_Fetch), e conceitos para estudos em [Fetch basic concepts](/pt-BR/docs/Web/API/Fetch_API/Basic_concepts).
+> [!NOTE]
+> Encontre mais informações sobre os recursos do Fetch API em [Using Fetch](/pt-BR/docs/Web/API/Fetch_API/Using_Fetch), e conceitos para estudos em [Fetch basic concepts](/pt-BR/docs/Web/API/Fetch_API/Basic_concepts).
 
 ## Fetch Interfaces
 

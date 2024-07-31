@@ -38,7 +38,8 @@ storage 有 3 个属性，每一个代表不同的存储区域。
 
 {{Compat}}
 
-> **备注：** "Chrome 不兼容"这部分来源于 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) 使用[WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat) macro.
+> [!NOTE]
+> "Chrome 不兼容"这部分来源于 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) 使用[WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat) macro.
 >
 > 如果需要更新这部分，请编辑 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities), 然后刷新页面即可看见所做更改。
 
@@ -48,7 +49,8 @@ Promises 在 Edge 中不被支持，使用 callbacks 代替。
 
 {{WebExtExamples("h2")}}
 
-> **备注：** 这个 API 基于 Chromium 的 [`chrome.storage`](https://developer.chrome.com/extensions/storage) API. 这篇文档也来源于 Chromium 代码中的 [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json).
+> [!NOTE]
+> 这个 API 基于 Chromium 的 [`chrome.storage`](https://developer.chrome.com/extensions/storage) API. 这篇文档也来源于 Chromium 代码中的 [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json).
 >
 > Microsoft Edge 的适配数据由 Microsoft Corporation 提供并且被包含在 Creative Commons Attribution 3.0 United States License 许可证下。
 

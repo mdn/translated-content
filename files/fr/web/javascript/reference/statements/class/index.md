@@ -48,7 +48,8 @@ class Carré extends Polygone {
 }
 ```
 
-> **Attention :** Déclarer une classe deux fois lèvera une exception `SyntaxError`. De même, on ne pourra pas réutiliser un nom qui a déjà été utilisé dans une expression de classe.
+> [!WARNING]
+> Déclarer une classe deux fois lèvera une exception `SyntaxError`. De même, on ne pourra pas réutiliser un nom qui a déjà été utilisé dans une expression de classe.
 >
 > ```js
 > // Deux déclarations avec le même nom

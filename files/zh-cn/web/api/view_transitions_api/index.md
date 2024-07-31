@@ -22,7 +22,8 @@ slug: Web/API/View_Transitions_API
 
 View Transitions API 提供了一种更简单的方法来处理必需的 DOM 更改和过渡动画。
 
-> **备注：** View Transitions API 目前不支持跨文档视图过渡，但这已计划在未来的规范版本中实现，并正在积极开发中。
+> [!NOTE]
+> View Transitions API 目前不支持跨文档视图过渡，但这已计划在未来的规范版本中实现，并正在积极开发中。
 
 ### 创建基本视图过渡
 

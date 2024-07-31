@@ -15,7 +15,8 @@ slug: Games
 
 我們也涵蓋了參考的章節，你可以從那裡找到遊戲開發最需要用到的一些 API。
 
-> **備註：** 建立遊戲會需要用上一些 web 的核心技術，如 HTML、CSS、JavaScript。[學習專區](/zh-TW/docs/Learn)會是個很好的學習區域。
+> [!NOTE]
+> 建立遊戲會需要用上一些 web 的核心技術，如 HTML、CSS、JavaScript。[學習專區](/zh-TW/docs/Learn)會是個很好的學習區域。
 
 ## 從原生到 Web
 

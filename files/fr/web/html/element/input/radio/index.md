@@ -58,7 +58,8 @@ Lorsqu'on envoie le formulaire précédent avec une option sélectionnée, les d
 
 Si l'attribut `value` n'est pas fourni dans le document HTML, la valeur par défaut utilisée sera `on` pour l'ensemble du groupe. Si c'était le cas avec notre exemple précédent et que l'utilisateur avait cliqué sur l'option « Téléphone » et envoyé le formulaire, les données envoyées auraient contenu `"contact=on"` ce qui ne s'avère pas très utile. Aussi, mieux vaut ne pas oublier les attributs `value` !
 
-> **Note :** Si aucun bouton radio n'est sélectionné au moment de l'envoi du formulaire, le groupe radio n'est pas inclus dans les données envoyées par le formulaire car il n'y a aucune valeur à fournir.
+> [!NOTE]
+> Si aucun bouton radio n'est sélectionné au moment de l'envoi du formulaire, le groupe radio n'est pas inclus dans les données envoyées par le formulaire car il n'y a aucune valeur à fournir.
 
 Généralement, on souhaite qu'au moins une option soit sélectionné parmi les boutons d'un groupe et on inclue donc souvent un attribut `checked` sur l'un des boutons afin d'avoir une option sélectionnée par défaut.
 
@@ -164,7 +165,8 @@ Pour qu'un bouton radio soit sélectionné par défaut, on ajoutera l'attribut b
 
 Ici, c'est le premier bouton radio qui sera sélectionné par défaut.
 
-> **Note :** Si l'attribut `checked` est placé sur plus d'un bouton, c'est le dernier bouton contenant l'attribut qui sera sélectionné. C'est donc l'ordre des valeurs qui déterminera la valeur par défaut. Pour rappel, il ne peut y avoir qu'un seul bouton radio du groupe qui soit sélectionné à un instant donné.
+> [!NOTE]
+> Si l'attribut `checked` est placé sur plus d'un bouton, c'est le dernier bouton contenant l'attribut qui sera sélectionné. C'est donc l'ordre des valeurs qui déterminera la valeur par défaut. Pour rappel, il ne peut y avoir qu'un seul bouton radio du groupe qui soit sélectionné à un instant donné.
 
 ### Fournir une plus grande zone de sélection
 

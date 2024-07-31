@@ -14,7 +14,8 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 
 若使用了 `browser_style: true` , 你需要在不同的浏览器主题中测试你的扩展程序，以确保其 UI 表现和期望的一致。
 
-> **备注：** 谷歌浏览器 **Google Chrome** 和 欧朋浏览器 **Opera** 使用字段名 `chrome_style` 而非`browser_style`, 因此如果要适配它们，你需要同时添加这两个字段。
+> [!NOTE]
+> 谷歌浏览器 **Google Chrome** 和 欧朋浏览器 **Opera** 使用字段名 `chrome_style` 而非`browser_style`, 因此如果要适配它们，你需要同时添加这两个字段。
 
 在火狐浏览器中，这个样式文件可以在 `chrome://browser/content/extension.css`查看。为 Mac OS X 系统额外准备的样式文件也可以在 `chrome://browser/content/extension-mac.css` 查看。
 
@@ -98,7 +99,8 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
   </tbody>
 </table>
 
-> **备注：** 查看 [Firefox bug 1465256](https://bugzil.la/1465256) 以了解相关修订
+> [!NOTE]
+> 查看 [Firefox bug 1465256](https://bugzil.la/1465256) 以了解相关修订
 
 ## 浏览器兼容性
 
@@ -106,7 +108,8 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 
 ## 火狐面板组件 Firefox Panel Components
 
-> **备注：** 此功能不是通用标准，仅支持在 firefox 中使用
+> [!NOTE]
+> 此功能不是通用标准，仅支持在 firefox 中使用
 
 `chrome://browser/content/extension.css` 样式文件中也包含了火狐面板组件的样式
 

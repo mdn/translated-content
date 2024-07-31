@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、[メディアクエリーの使用方法](/ja/docs/Learn/CSS/CSS_layout/Media_queries)を理解しているかどうかを評価し、実践的な課題でレスポンシブウェブデザインを身につけてもらうことです。この課題をクリアするために必要な知識は、 [CSS レイアウトモジュール](/ja/docs/Learn/CSS/CSS_layout)のレイアウトレッスンに完全に含まれています。
 
-> **メモ:** 以下の対話型エディターで取り組むことができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業したほうが便利な場合もあります。
+> [!NOTE]
+> 以下の対話型エディターで取り組むことができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業したほうが便利な場合もあります。
 >
 > 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
