@@ -115,11 +115,13 @@ li {
 | ----------------------------------------------------- | ----------------------------------------------------- |
 | {{ EmbedLiveSample('根據方向而調整配置', 180, 350) }} | {{ EmbedLiveSample('根據方向而調整配置', 350, 180) }} |
 
-> **備註：** 方向 Media Query 其實是以瀏覽器視窗 (或 iframe) 的方向為準，而非裝置本身的方向。
+> [!NOTE]
+> 方向 Media Query 其實是以瀏覽器視窗 (或 iframe) 的方向為準，而非裝置本身的方向。
 
 ## 鎖定畫面方向
 
-> **警告：** 此 API 仍屬實驗性質，目前仍具備 `moz` 前綴而僅能用於 [Firefox OS](/zh-TW/docs/Mozilla/Firefox_OS) 與 [Firefox for Android](/zh-TW/docs/Mozilla/Firefox_for_Android)，而 Windows 8.1 以上版本的 Internet Explorer 則使用 `ms` 前綴。
+> [!WARNING]
+> 此 API 仍屬實驗性質，目前仍具備 `moz` 前綴而僅能用於 [Firefox OS](/zh-TW/docs/Mozilla/Firefox_OS) 與 [Firefox for Android](/zh-TW/docs/Mozilla/Firefox_for_Android)，而 Windows 8.1 以上版本的 Internet Explorer 則使用 `ms` 前綴。
 
 某些裝置（主要為行動裝置）可根據本身方向而動態改變畫面的方向，讓使用者隨時閱讀畫面上的資訊。這種動作對文字類的內容影響不大，但某些內容就無法順利套用此功能。舉例來說，若遊戲需要裝置方向的相關資訊，就可能因為方向變化而發生混亂情形。
 
@@ -145,7 +147,8 @@ screen.addEventListener("orientationchange", function () {
 screen.lockOrientation("landscape");
 ```
 
-> **備註：** 畫面鎖定功能將依 Web Apps 而有所不同。如果 App A 鎖定為 `landscape`；App B 鎖定為 `portrait，則此兩款 Apps 均將維持自己的方向。所以不論如何切換` A 與 B，均不會觸發 [`orientationchange`](/zh-TW/docs/Web/API/Window/orientationchange_event) 事件。但若必須改變方向以滿足畫面鎖定的需求，則鎖定方向時就會觸發 [`orientationchange`](/zh-TW/docs/Web/API/Window/orientationchange_event) 事件。
+> [!NOTE]
+> 畫面鎖定功能將依 Web Apps 而有所不同。如果 App A 鎖定為 `landscape`；App B 鎖定為 `portrait，則此兩款 Apps 均將維持自己的方向。所以不論如何切換` A 與 B，均不會觸發 [`orientationchange`](/zh-TW/docs/Web/API/Window/orientationchange_event) 事件。但若必須改變方向以滿足畫面鎖定的需求，則鎖定方向時就會觸發 [`orientationchange`](/zh-TW/docs/Web/API/Window/orientationchange_event) 事件。
 
 ## Firefox OS and Android: Orientation lock using the manifest
 

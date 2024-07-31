@@ -7,11 +7,13 @@ slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Events
 
 이 실력 테스트의 목적은 여러분이 우리의 [이벤트 입문](/ko/docs/Learn/JavaScript/Building_blocks/Events) 문서를 이해했는지 평가하기 위함입니다.
 
-> **참고:** 아래의 인터랙티브 에디터에서 해답을 시도해 볼 수도 있지만, 과제를 하기 위해 코드를 다운로드하고 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 또는 [Glitch](https://glitch.com/)와 같은 온라인 툴(tool)을 사용하는 것이 도움이 될 지도 모릅니다.
+> [!NOTE]
+> 아래의 인터랙티브 에디터에서 해답을 시도해 볼 수도 있지만, 과제를 하기 위해 코드를 다운로드하고 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 또는 [Glitch](https://glitch.com/)와 같은 온라인 툴(tool)을 사용하는 것이 도움이 될 지도 모릅니다.
 >
 > 만약 막히면, 도움을 요청하세요 — 이 페이지 아래의 [Assessment or further help](#assessment_or_further_help) 섹션을 보세요.
 
-> **참고:** 아래의 예제들에서, 만약 코드에 오류가 있다면, 답을 찾는 걸 돕기 위해 페이지의 결과 패널에 (또는 다운로드한 경우, 브라우저의 JavaScript 콘솔에) 오류가 출력될 것입니다.
+> [!NOTE]
+> 아래의 예제들에서, 만약 코드에 오류가 있다면, 답을 찾는 걸 돕기 위해 페이지의 결과 패널에 (또는 다운로드한 경우, 브라우저의 JavaScript 콘솔에) 오류가 출력될 것입니다.
 
 ## DOM 조작: 유용하다고 생각됨
 
@@ -29,7 +31,8 @@ HTML은 변경되어서는 안 됩니다; JavaScript만 변경되어야 합니�
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/events/events1.html", '100%', 400)}}
 
-> **참고:** 여러분의 에디터나 온라인 에디터에서 작업하기 위해서 [이 과제의 시작점을 다운로드](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/events/events1-download.html)하세요.
+> [!NOTE]
+> 여러분의 에디터나 온라인 에디터에서 작업하기 위해서 [이 과제의 시작점을 다운로드](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/events/events1-download.html)하세요.
 
 ## 이벤트 2
 
@@ -43,7 +46,8 @@ HTML은 변경되어서는 안 됩니다; JavaScript만 변경되어야 합니�
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/events/events2.html", '100%', 400)}}
 
-> **참고:** 여러분의 에디터나 온라인 에디터에서 작업하기 위해서 [이 과제의 시작점을 다운로드](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/events/events2-download.html)하세요.
+> [!NOTE]
+> 여러분의 에디터나 온라인 에디터에서 작업하기 위해서 [이 과제의 시작점을 다운로드](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/events/events2-download.html)하세요.
 
 ## 이벤트 3
 
@@ -55,7 +59,8 @@ HTML은 변경되어서는 안 됩니다; JavaScript만 변경되어야 합니�
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/events/events3.html", '100%', 400)}}
 
-> **참고:** 여러분의 에디터나 온라인 에디터에서 작업하기 위해서 [이 과제의 시작점을 다운로드](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/events/events3-download.html)하세요.
+> [!NOTE]
+> 여러분의 에디터나 온라인 에디터에서 작업하기 위해서 [이 과제의 시작점을 다운로드](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/events/events3-download.html)하세요.
 
 ## 평가 혹은 추가적인 도움
 

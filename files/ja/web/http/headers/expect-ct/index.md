@@ -13,9 +13,11 @@ CT の要件は、以下のいずれかの仕組みで満たすことができ�
 - ハンドシェイク中に送信される `signed_certificate_timestamp` 型の TLS 拡張
 - OCSP ステープリング (つまり、 `status_request` TLS 拡張) に対応し、 `SignedCertificateTimestampList` を提供すること
 
-> **メモ:** サイトが `Expect-CT` ヘッダーを有効にすると、ブラウザーが**[公開 CT ログ](https://www.certificate-transparency.org/known-logs)**に現れるサイトのすべての認証情報をチェックするよう要求します。
+> [!NOTE]
+> サイトが `Expect-CT` ヘッダーを有効にすると、ブラウザーが**[公開 CT ログ](https://www.certificate-transparency.org/known-logs)**に現れるサイトのすべての認証情報をチェックするよう要求します。
 
-> **メモ:** ブラウザーは、 HTTP では `Expect-CT` ヘッダーを**無視**し、 HTTPS 接続でのみ効果を発揮します。
+> [!NOTE]
+> ブラウザーは、 HTTP では `Expect-CT` ヘッダーを**無視**し、 HTTPS 接続でのみ効果を発揮します。
 
 > **メモ:** `Expect-CT` は 2021 年 6 月に廃止される可能性が高いです。 2018 年 5 月以降、新しい証明書は既定で SCT に対応することが期待されています。 2018 年 3 月以前の証明書は 39 ヶ月の有効期限が認められていましたが、それらが 2021 年 6 月にすべて失効します。
 

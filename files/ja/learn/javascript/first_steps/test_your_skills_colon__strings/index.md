@@ -9,11 +9,13 @@ l10n:
 
 このスキルテストの目的は、[テキストの扱い — JavaScript での文字列](/ja/docs/Learn/JavaScript/First_steps/Strings)および[便利な文字列メソッド](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods)の記事を理解しているかどうかを評価することです。
 
-> **メモ:** このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
+> [!NOTE]
+> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
 >
 > もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 
-> **メモ:** 下記の例では、コードにエラーがある場合、ページ上の結果パネル（またはダウンロードするバージョンの場合は、 ブラウザーの JavaScript コンソール）に出力されるので、答えを見つけるのに役立ちます。
+> [!NOTE]
+> 下記の例では、コードにエラーがある場合、ページ上の結果パネル（またはダウンロードするバージョンの場合は、 ブラウザーの JavaScript コンソール）に出力されるので、答えを見つけるのに役立ちます。
 
 ## 文字列 1
 
@@ -28,7 +30,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/strings/strings1.html", '100%', 400)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/strings/strings1-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
 
@@ -44,7 +46,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/strings/strings2.html", '100%', 400)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/strings/strings2-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
 
@@ -60,7 +62,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/strings/strings3.html", '100%', 400)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/strings/strings3-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
 
@@ -79,6 +81,6 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/strings/strings4.html", '100%', 400)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/strings/strings4-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。

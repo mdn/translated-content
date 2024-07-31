@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.audioTracks
+title: "HTMLMediaElement: audioTracks プロパティ"
+short-title: audioTracks
 slug: Web/API/HTMLMediaElement/audioTracks
 l10n:
-  sourceCommit: e60194342c9666ad8a2e6e5e6c25705fe818bcde
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -53,6 +54,6 @@ for (let i = 0; i < video.audioTracks.length; i += 1) {
 
 ## 関連情報
 
-- これを定義しているインターフェイスである {{domxref("HTMLMediaElement")}}
-- {{HTMLElement("audio")}} および {{HTMLElement("video")}}
-- {{domxref("AudioTrack")}} および {{domxref("AudioTrackList")}}
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.audioTracks` プロパティを定義しているインターフェイス
+- {{HTMLElement("audio")}}, {{HTMLElement("video")}}
+- {{domxref("AudioTrack")}}, {{domxref("AudioTrackList")}}

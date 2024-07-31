@@ -24,7 +24,8 @@ WebRTC 的主要问题之一是它相当复杂，使用和开发起来很复杂�
 
 在开始之前，你需要确保已经安装了 [node](https://nodejs.org/en/download/) 和 [Yarn](https://classic.yarnpkg.com/en/docs/install)（后续文章中的说明假设使用 Yarn，但你也可以选择使用 [npm](https://docs.npmjs.com/getting-started/) 或其他包管理器）。
 
-> **备注：** 如果你更喜欢按步骤编码来学习，我们还提供了这个[代码教程](https://github.com/SamsungInternet/WebPhone/tree/master/tutorial)，你可以使用它。
+> [!NOTE]
+> 如果你更喜欢按步骤编码来学习，我们还提供了这个[代码教程](https://github.com/SamsungInternet/WebPhone/tree/master/tutorial)，你可以使用它。
 
 ### 目录
 

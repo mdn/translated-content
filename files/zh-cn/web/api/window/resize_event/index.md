@@ -63,7 +63,8 @@ window.onresize = reportWindowSize;
 
 {{EmbedLiveSample("窗口大小记录器")}}
 
-> **备注：** 这里的例子是在 {{HTMLElement("iframe")}} 中输出的，所以报告的宽度和高度值是针对 `<iframe>` 的，而不是本页面所在的窗口。特别是，很难调整窗口的大小，以便看到报告高度的不同。
+> [!NOTE]
+> 这里的例子是在 {{HTMLElement("iframe")}} 中输出的，所以报告的宽度和高度值是针对 `<iframe>` 的，而不是本页面所在的窗口。特别是，很难调整窗口的大小，以便看到报告高度的不同。
 >
 > {{LiveSampleLink("窗口大小记录器", "在示例本身窗口查看示例", 1)}}更容易观察到效果。
 

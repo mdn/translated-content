@@ -102,7 +102,8 @@ Cela fonctionne mieux avec les morceaux audio ou vidéo un peu plus longs, mais 
 
 ![](bufferedtimeranges.png)
 
-> **Note :** Vous pouvez voir [cet exemple en direct sur JS Bin](https://jsbin.com/memazaro/1/edit).
+> [!NOTE]
+> Vous pouvez voir [cet exemple en direct sur JS Bin](https://jsbin.com/memazaro/1/edit).
 
 ## Seekable
 
@@ -214,7 +215,8 @@ Cela devrait vous donner des résultats similaires à ce qui suit, où la barre 
 
 ![](bufferedprogress.png)
 
-> **Note :** Voir pouvez [voir l'exemple en direct sur JS Bin](https://jsbin.com/badimipi/1/edit).
+> [!NOTE]
+> Voir pouvez [voir l'exemple en direct sur JS Bin](https://jsbin.com/badimipi/1/edit).
 
 ## Un petit mot sur Played
 

@@ -219,7 +219,8 @@ para.textContent = info;
 
 {{ EmbedLiveSample('Hidden_code_2', '100%', 60, "", "", "hide-codepen-jsfiddle") }}
 
-> **참고:** 여러분은 이 [예제를 GitHub에서](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html) 또한 찾을 수 있습니다 (또한 [실제로 작동하는 모습도 볼 수 있습니다](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)).
+> [!NOTE]
+> 여러분은 이 [예제를 GitHub에서](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html) 또한 찾을 수 있습니다 (또한 [실제로 작동하는 모습도 볼 수 있습니다](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)).
 
 이것은 반복문이 배열 안의 요소들에 대해 반복하고 그 각각의 요소들과 무언가를 하기 위해 쓰였다는 것을 보여줍니다 — 이것은 JavaScript에서 아주 일반적인 패턴입니다. 여기서:
 
@@ -233,9 +234,11 @@ para.textContent = info;
 
 4. `i`가 `cats.length`와 같아질 때 (이 경우, 5), 반복문은 멈출 것이고, 브라우저는 반복문 아래에 있는 다음 코드로 이동할 것입니다.
 
-> **참고:** 우리는 조건을 `i <= cats.length`이 아니라 `i < cats.length`로 만들었는데, 이는 컴퓨터는 카운트를 1부터가 아니라 0부터 세기 때문입니다 — 우리는 `i`를 0에서 시작했고, `i = 4`까지 갔습니다 (마지막 배열 원소의 인덱스). 배열에 5개의 원소가 있으므로, `cats.length`는 5를 반환하지만, 우리는 `i = 5`까지 가고 싶지는 않습니다. 왜냐하면 이는 마지막 원소에 대해 `undefined`를 반환할 것이기 때문입니다 (5의 인덱스를 가진 배열 원소는 없습니다). 그래서, 그러므로, 우리는 `cats.length`과 같은 데까지가 아니라 (`i <=`), `cats.length`보다 1 작은 데까지 가기를 원합니다 (`i <`).
+> [!NOTE]
+> 우리는 조건을 `i <= cats.length`이 아니라 `i < cats.length`로 만들었는데, 이는 컴퓨터는 카운트를 1부터가 아니라 0부터 세기 때문입니다 — 우리는 `i`를 0에서 시작했고, `i = 4`까지 갔습니다 (마지막 배열 원소의 인덱스). 배열에 5개의 원소가 있으므로, `cats.length`는 5를 반환하지만, 우리는 `i = 5`까지 가고 싶지는 않습니다. 왜냐하면 이는 마지막 원소에 대해 `undefined`를 반환할 것이기 때문입니다 (5의 인덱스를 가진 배열 원소는 없습니다). 그래서, 그러므로, 우리는 `cats.length`과 같은 데까지가 아니라 (`i <=`), `cats.length`보다 1 작은 데까지 가기를 원합니다 (`i <`).
 
-> **참고:** 조건에 관련된 일반적인 실수는 "보다 작거나 같다(less than or equal to)" (`<=`)가 아니라 "동등(equal to)" (`===`)을 사용하는 것입니다. 만약 우리가 반복문을 `i = 5`까지 실행하기를 원했다면, 종료 조건은 `i <= cats.length`일 필요가 있었을 것입니다. 만약 우리가 그것을 `i === cats.length`에 설정했다면, 첫 반복문 반복에서 `i`는 `5`와 같지 않아서, 반복문은 즉시 멈췄을 것이기 때문에 반복문은 전혀 실행되지 않을 것입니다.
+> [!NOTE]
+> 조건에 관련된 일반적인 실수는 "보다 작거나 같다(less than or equal to)" (`<=`)가 아니라 "동등(equal to)" (`===`)을 사용하는 것입니다. 만약 우리가 반복문을 `i = 5`까지 실행하기를 원했다면, 종료 조건은 `i <= cats.length`일 필요가 있었을 것입니다. 만약 우리가 그것을 `i === cats.length`에 설정했다면, 첫 반복문 반복에서 `i`는 `5`와 같지 않아서, 반복문은 즉시 멈췄을 것이기 때문에 반복문은 전혀 실행되지 않을 것입니다.
 
 우리는 마지막으로 출력되는 문장이 잘 만들어지지 않았다는 작은 문제를 가지고 있습니다:
 
@@ -253,7 +256,8 @@ for (let i = 0; i < cats.length; i++) {
 }
 ```
 
-> **참고:** 여러분은 이 [예제 코드를 Github](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html)에서 또한 찾아볼 수 있습니다 (또한 [실제로 작동하는 모습도 볼 수 있습니다](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)).
+> [!NOTE]
+> 여러분은 이 [예제 코드를 Github](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html)에서 또한 찾아볼 수 있습니다 (또한 [실제로 작동하는 모습도 볼 수 있습니다](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)).
 
 > **경고:** **중요**: 모든 반복문과 마찬가지로 — for 문에서, 초기화식(initializer)이 결국 조건이 true가 아닌 지점에 닿도록, 경우에 따라, 증가되거나 혹은 감소되게 해야만 합니다. 만약 그렇지 않다면, 반복문은 영원히 계속될 것이고, 브라우저가 강제로 멈추게 하거나, 브라우저가 멈출(crash) 것입니다. 이것은 **무한 루프**(infinite loop)라고 불립니다.
 
@@ -363,7 +367,8 @@ btn.addEventListener("click", function () {
 
 5. `(contacts.length-1)` 반복 후에, 만약 연락처 이름이 입력된 검색과 일치하지 않으면 문단 텍스트는 "Contact not found."로 설정되고, 반복문은 조건이 더 이상 true가 아닐 때까지 반복을 계속합니다.
 
-> **참고:** 참고: 여러분은 [전체 소스 코드를 GitHub에서](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) 또한 볼 수 있습니다 (또한 [실제로 작동하는 모습도 볼 수 있습니다](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
+> [!NOTE]
+> 참고: 여러분은 [전체 소스 코드를 GitHub에서](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) 또한 볼 수 있습니다 (또한 [실제로 작동하는 모습도 볼 수 있습니다](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
 
 ## Continue로 반복 건너뛰기
 
@@ -432,7 +437,8 @@ for (let i = 1; i <= num; i++) {
 3. 만약 제곱근과 내림된 제곱근이 서로 같지 않다면 (`!==`), 이것은 제곱근이 정수가 아니라는 것을 의미하므로, 우리는 이것에 관심이 없습니다. 그러한 경우에, 우리는 숫자를 어디에도 기록하는 일 없이 다음 반복문 반복으로 건너뛰기 위해 `continue`문을 사용합니다.
 4. 만약 제곱근이 정수라면, 우리는 `continue`문이 실행되지 않도록 지난 `if`블록을 완전히 건너뜁니다; 대신, 우리는 현재 `i`값 + 공백을 단락 콘텐츠의 끝에 연결합니다.
 
-> **참고:** 여러분은 [전체 소스 코드를 GitHub에서](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) 또한 볼 수 있습니다 (또한 [실제로 작동하는 모습도 볼 수 있습니다](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
+> [!NOTE]
+> 여러분은 [전체 소스 코드를 GitHub에서](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) 또한 볼 수 있습니다 (또한 [실제로 작동하는 모습도 볼 수 있습니다](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 
 ## while 그리고 do ... while
 
@@ -469,7 +475,8 @@ while (i < cats.length) {
 }
 ```
 
-> **참고:** 예상한 대로 이것은 여전히 똑같이 동작합니다 — 여기서 한 번 봐 보세요 [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (또한 [전체 소스 코드](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)도 보세요).
+> [!NOTE]
+> 예상한 대로 이것은 여전히 똑같이 동작합니다 — 여기서 한 번 봐 보세요 [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (또한 [전체 소스 코드](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)도 보세요).
 
 [do...while](/ko/docs/Web/JavaScript/Reference/Statements/do...while) 반복문은 많이 비슷하지만 while 구조에 변형을 제공합니다:
 
@@ -502,7 +509,8 @@ do {
 } while (i < cats.length);
 ```
 
-> **참고:** 다시 말하지만, 이것은 예상한 바와 같이 똑같이 동작합니다 — 한 번 봐 보세요 [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (또한 [전체 소스 코드](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)도 보세요).
+> [!NOTE]
+> 다시 말하지만, 이것은 예상한 바와 같이 똑같이 동작합니다 — 한 번 봐 보세요 [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (또한 [전체 소스 코드](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)도 보세요).
 
 > **경고:** **중요**: 모든 반복문과 마찬가지로 — while과 do...while문에서, 조건이 결국 false가 되도록, 경우에 따라, 초기화식이 증가되거나 감소되게 해야만 합니다.만약 그렇지 않다면, 반복문은 영원히 계속될 것이고, 브라우저가 강제로 멈추게 하거나, 브라우저가 멈출(crash) 것입니다. 이것은 **무한 루프**(infinite loop)라고 불립니다.
 
@@ -525,7 +533,8 @@ do {
 
 - 반복자를 포함하는 것을 잊지 마세요! 그러나, 이 예제에서는 우리는 각 반복마다 카운트를 위가 아니라 아래로 셉니다. 그러니 여러분은 `i++`를 원하지 **않을** 것입니다 — 어떻게 아래로 반복하실 건가요?
 
-> **참고:** 만약 여러분이 반복문을 타이핑하기 시작했다면 (예를 들어 (while(i>=0)), 아직 종료 조건을 입력하지 않았기 때문에 브라우저는 멈출(stuck) 지도 모릅니다. 그러니 조심하세요. 이 문제에 대처하기 위해 코드를 주석에 작성하고, 완성한 이후에 주석을 제거할 수 있습니다.
+> [!NOTE]
+> 만약 여러분이 반복문을 타이핑하기 시작했다면 (예를 들어 (while(i>=0)), 아직 종료 조건을 입력하지 않았기 때문에 브라우저는 멈출(stuck) 지도 모릅니다. 그러니 조심하세요. 이 문제에 대처하기 위해 코드를 주석에 작성하고, 완성한 이후에 주석을 제거할 수 있습니다.
 
 만약 실수했다면, 언제나 예제를 "Reset" 버튼으로 리셋할 수 있습니다. 만약 정말로 막혔다면, 답을 보기 위해 "Show solution"을 누르세요.
 
@@ -860,7 +869,8 @@ do {
 
 우리는, 적어도 시작하는 데, `for`를 추천합니다. 왜냐하면 이것은 아마도 모든 것을 기억하기 가장 쉽기 때문입니다 — 초기화식, 조건, 증감식 모두가 괄호 안에 깔끔하게 들어가야만 하므로, 이것들이 어디 있는지 보고 여러분이 이것들을 놓치지 않았다는 것을 확인하기 쉽습니다.
 
-> **참고:** 다른 반복문 형태/기능 또한 있는데, 이는 고급/특수한 상황에서 유용하고 이 글의 범위 너머에 있습니다. 만약 반복문을 더 많이 배우고 싶다면, 고급 [반복문과 반복 가이드](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration)를 읽어 보세요.
+> [!NOTE]
+> 다른 반복문 형태/기능 또한 있는데, 이는 고급/특수한 상황에서 유용하고 이 글의 범위 너머에 있습니다. 만약 반복문을 더 많이 배우고 싶다면, 고급 [반복문과 반복 가이드](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration)를 읽어 보세요.
 
 ## 실력을 평가해 보세요!
 

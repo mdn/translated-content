@@ -28,7 +28,8 @@ l10n:
 
 ## 例
 
-> **メモ:** 他の例が {{domxref("AbortSignal")}} のリファレンスにあります。
+> [!NOTE]
+> 他の例が {{domxref("AbortSignal")}} のリファレンスにあります。
 
 この後の短いコードで、[フェッチ API](/ja/docs/Web/API/Fetch_API) を使用して動画をダウンロードします。
 

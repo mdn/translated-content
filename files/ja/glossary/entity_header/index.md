@@ -7,7 +7,8 @@ l10n:
 
 {{GlossarySidebar}}
 
-> **警告:** 現在の HTTP/1.1 仕様書では、エンティティ、エンティティヘッダー、エンティティ本体を参照することはなくなりました。一部のフィールドは{{glossary("Representation header", "表現ヘッダー")}}フィールドとして参照されるようになりました。
+> [!WARNING]
+> 現在の HTTP/1.1 仕様書では、エンティティ、エンティティヘッダー、エンティティ本体を参照することはなくなりました。一部のフィールドは{{glossary("Representation header", "表現ヘッダー")}}フィールドとして参照されるようになりました。
 
 エンティティヘッダーは {{glossary("HTTP_header", "HTTP ヘッダー")}}の一種で、 HTTP メッセージの本体を説明します（すなわちメッセージ本体についてのメタデータです）。エンティティヘッダーには、 {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Expires")}}, などがあります。エンティティヘッダーは HTTP のリクエストおよびレスポンスの両方に存在することがあります。
 

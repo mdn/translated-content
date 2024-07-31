@@ -13,7 +13,7 @@ l10n:
 
 例如，伺服器接收到不支援的媒體類型的 `POST` 請求時，可能會回應 {{HTTPStatus("415")}} `Unsupported Media Type` 狀態碼並附上參考一個或多個支援媒體類型的 **`Accept-Post`** 標頭。
 
-> **備註：**
+> [!NOTE]
 >
 > - IANA 註冊表維護[官方內容編碼列表](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding)。
 > - `bzip` 和 `bzip2` 編碼是非標準的，但在某些情況下，包括遺留支援時可能會使用。

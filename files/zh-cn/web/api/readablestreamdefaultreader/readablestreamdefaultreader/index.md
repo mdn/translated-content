@@ -7,7 +7,8 @@ slug: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
 
 **`ReadableStreamDefaultReader()`** 构造函数创建并返回一个 `ReadableStreamDefaultReader` 实例对象。
 
-> **备注：** 你通常不需要手动创建，可以使用 {{domxref("ReadableStream.getReader()")}} 方法代替。
+> [!NOTE]
+> 你通常不需要手动创建，可以使用 {{domxref("ReadableStream.getReader()")}} 方法代替。
 
 ## 语法
 

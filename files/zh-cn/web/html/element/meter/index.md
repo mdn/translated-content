@@ -57,7 +57,9 @@ l10n:
 
 ```html
 <p>
-  学生的考试成绩：<meter min="0" low="50" high="80" max="100" value="84">84%</meter>
+  学生的考试成绩：<meter min="0" low="50" high="80" max="100" value="84">
+    84%
+  </meter>
 </p>
 ```
 

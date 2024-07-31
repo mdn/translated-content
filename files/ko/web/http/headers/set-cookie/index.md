@@ -66,7 +66,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     하지만 이것은 RFC 명세서에서 요구되는 것은 아닙니다.
     URL 인코딩은 `<cookie-value>`에 허용되는 문자의 요구 사항을 충족하는데 도움을 줍니다.
 
-    > **참고:** 일부 `<cookie-name>`은 특정 의미를 가집니다.
+    > [!NOTE]
+    > 일부 `<cookie-name>`은 특정 의미를 가집니다.
     >
     > **`__Secure-` 접두사**: `__Secure-`로 시작하는 이름의 쿠키는 보안 페이지(HTTPS)에서 `secure` 플래그와 함께 설정해야 합니다.
     >
@@ -92,7 +93,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     만약 지정되지 않았으면 쿠키는 **세션 쿠키**입니다.
     클라이언트가 종료될 때 세션이 종료되고, 그 후 쿠키를 제거합니다.
 
-    > **경고:** 많은 웹 브라우저는 모든 탭을 저장하고, 다음에 브라우저를 사용할 수 있도록 복구하는 세션 복구 특징을 가지고 있습니다. 마치 브라우저가 닫히지 않은 것처럼 세션 쿠키도 복구합니다.
+    > [!WARNING]
+    > 많은 웹 브라우저는 모든 탭을 저장하고, 다음에 브라우저를 사용할 수 있도록 복구하는 세션 복구 특징을 가지고 있습니다. 마치 브라우저가 닫히지 않은 것처럼 세션 쿠키도 복구합니다.
 
     `Expires` 날짜가 설정될 때, 기한은 서버가 아닌 쿠키가 설정되는 클라이언트에 상대적입니다.
 
@@ -204,7 +206,8 @@ Set-Cookie: sessionId=e8bb43229de9; Domain=foo.example.com
 
 게다가 `__Host-` 접두사가 붙은 쿠키는 호스트의 모든 경로를 의미하는 `/`를 경로로 가져야 하고 `Domain` 속성이 있어서는 안됩니다.
 
-> **경고:** 쿠키 접두사를 구현하지 않는 클라이언트의 경우, 추가적인 보증에 의존할 수 없고, 접두사 쿠키가 항상 허용합니다.
+> [!WARNING]
+> 쿠키 접두사를 구현하지 않는 클라이언트의 경우, 추가적인 보증에 의존할 수 없고, 접두사 쿠키가 항상 허용합니다.
 
 ```http
 // Both accepted when from a secure origin (HTTPS)
@@ -227,7 +230,8 @@ Set-Cookie: __Host-id=1; Secure; Path=/; Domain=example.com
 Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 ```
 
-> **참고:** 분할 쿠키는 `Secure`로 설정해야 합니다. 게다가 분할 쿠키를 설정할 때 `__Host` 접두사를 사용하여 등록가능한 도메인이 아닌 호스트 이름에 바운딩하는걸 추천합니다.
+> [!NOTE]
+> 분할 쿠키는 `Secure`로 설정해야 합니다. 게다가 분할 쿠키를 설정할 때 `__Host` 접두사를 사용하여 등록가능한 도메인이 아닌 호스트 이름에 바운딩하는걸 추천합니다.
 
 ## 기술 사양
 

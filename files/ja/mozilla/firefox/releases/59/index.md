@@ -67,7 +67,8 @@ _変更なし。_
 
 - {{domxref("MediaStreamTrack")}} の {{domxref("MediaStreamTrack.muted")}} プロパティ、および {{domxref("MediaStreamTrack.mute_event", "mute")}} イベントと {{domxref("MediaStreamTrack.unmute_event", "unmute")}} イベント、さらにこれに対応するイベントハンドラーである {{domxref("MediaStreamTrack.mute_event", "onmute")}} と {{domxref("MediaStreamTrack.unmute_event", "onunmute")}} を実装しました。トラックの `muted` 状態は、トラックが今のところメディアデータを提供できないことを示します。
 
-  > **メモ:** トラックの `muted` 状態は、一般的に考えられているトラックのミュートやミュート解除として役に立つものではありません。代わりに {{domxref("MediaStreamTrack.enabled", "enabled")}} プロパティを使用します。`enabled` を `false` に設定すると、トラックは空のフレームだけを出力します。
+  > [!NOTE]
+  > トラックの `muted` 状態は、一般的に考えられているトラックのミュートやミュート解除として役に立つものではありません。代わりに {{domxref("MediaStreamTrack.enabled", "enabled")}} プロパティを使用します。`enabled` を `false` に設定すると、トラックは空のフレームだけを出力します。
 
 - Android 版 Firefox 59 で Apple の HTTPS Live Streaming (HLS) を、音声および映像の両方でサポートしました。この非標準プロトコルは、モバイル環境においてモバイルストリーミングのためにこのプロトコルを必要とするサイトの互換性を向上するためにサポートしました。現在、デスクトップ版 Firefox にこのプロトコルを実装する予定はありません。
 - それぞれの RTP ストリームのソースの情報を提供するため、{{domxref("RTCRtpReceiver")}} の {{domxref("RTCRtpReceiver.getContributingSources", "getContributingSources()")}} および {{domxref("RTCRtpReceiver.getSynchronizationSources", "getSynchronizationSources()")}} メソッドを実装しました。ただし、公開前に仕様書が変更されましたので、デフォルトで設定項目 `media.peerconnection.rtpsourcesapi.enable` によってこれらを無効化しました ([Firefox バグ 1363667](https://bugzil.la/1363667), [Firefox バグ 1430213](https://bugzil.la/1430213), [Firefox バグ 1433236](https://bugzil.la/1433236))。

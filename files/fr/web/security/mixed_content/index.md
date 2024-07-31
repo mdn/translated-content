@@ -82,7 +82,8 @@ En complément de ces alertes dans la console web, vous pouvez également utilis
 
 Pour corriger ce type d'erreur, toutes les requêtes HTTP devraient être remplacées par des requêtes HTTPS. La plupart du temps, les problèmes de contenu mixte portent sur les fichiers JavaScript, les feuilles de styles, les images, les vidéos ou d'autres médias.
 
-> **Note :** La console affichera un message si [la mise à niveau du contenu mixte passif](#mise_à_niveau_des_ressources_mixtes_passives) a réussi (plutôt qu'un avertissement de «&nbsp;Chargement du contenu mixte d'affichage (non sécurisé)&nbsp;»).
+> [!NOTE]
+> La console affichera un message si [la mise à niveau du contenu mixte passif](#mise_à_niveau_des_ressources_mixtes_passives) a réussi (plutôt qu'un avertissement de «&nbsp;Chargement du contenu mixte d'affichage (non sécurisé)&nbsp;»).
 
 ## Voir aussi
 

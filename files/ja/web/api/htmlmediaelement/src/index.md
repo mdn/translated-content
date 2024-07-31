@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.src
+title: "HTMLMediaElement: src プロパティ"
+short-title: src
 slug: Web/API/HTMLMediaElement/src
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: bd15d43260b7e72b1066c04d9d9f3b79129c619c
 ---
 
 {{APIRef("HTML DOM")}}
@@ -33,4 +34,4 @@ console.log(obj.src); // ""
 
 ## 関連情報
 
-- 定義している {{domxref("HTMLMediaElement")}} インターフェイス
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.src` プロパティを定義しているインターフェイス
