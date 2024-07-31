@@ -145,7 +145,8 @@ Firefox 和 Chrome 浏览器都包含代理 API。不过，这两个 API 的设�
 
   - 如果扩展希望将公共（如 HTTPS）URL 重定向到[扩展页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)，扩展的 `manifest.json` 文件必须包含 [`web_accessible_resources`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) 键，其中包含扩展页面的 URL。
 
-    > **备注：** 任何网站都可以链接或重定向到该 URL，扩展应将任何输入（例如 POST 数据）视为来自不可信任的来源，就像普通网页一样。
+    > [!NOTE]
+    > 任何网站都可以链接或重定向到该 URL，扩展应将任何输入（例如 POST 数据）视为来自不可信任的来源，就像普通网页一样。
 
   - 某些 `browser.webRequest.*` API 允许异步返回解析为 `webRequest.BlockingResponse` 的 Promise。
 
