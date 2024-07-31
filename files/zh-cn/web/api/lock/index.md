@@ -2,14 +2,12 @@
 title: Lock
 slug: Web/API/Lock
 l10n:
-  sourceCommit: 585c3cd3756cf1a182857efddd98630ca980edc6
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Locks API")}}{{securecontext_header}}
+{{APIRef("Web Locks API")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 [Web Locks API](/zh-CN/docs/Web/API/Web_Locks_API) 的 **`Lock`** 接口提供锁的名称和模式。这可能是在 {{domxref('LockManager.request','LockManager.request()')}} 方法的回调中接收到的新请求的锁，也可能是 {{domxref('LockManager.query()')}} 方法返回的活动状态的锁或队列中的锁请求。
-
-{{AvailableInWorkers}}
 
 ## 实例属性
 

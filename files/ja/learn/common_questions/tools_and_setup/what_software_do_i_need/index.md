@@ -181,7 +181,8 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 ウェブサイトを公開する準備が整ったら、ウェブページをウェブサーバーにアップロードする必要があります。さまざまなプロバイダーからサーバー上のスペースを購入できます（[ウェブ上で何かをするためにどれくらいコストがかかる？](/ja/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)を参照）。どのプロバイダーを使用するかが決まったら、プロバイダーは通常、SFTP URL、ユーザー名、パスワード、およびそれらのサーバーへの接続に必要なその他の情報の形式で、アクセス情報をメールで送信します。(S)FTPは今や幾分時代遅れになっていて、 [RSync](https://ja.wikipedia.org/wiki/Rsync) や [Git/GitHub](https://docs.github.com/ja/pages/configuring-a-custom-domain-for-your-github-pages-site) のような他のアップロードシステムが普及し始めていることを覚えておいてください。
 
-> **メモ:** FTP は本質的に安全ではありません。ホスティングプロバイダーが安全な接続、例えば SSH を介した SFTP または RSync の使用を許可していることを確認してください。
+> [!NOTE]
+> FTP は本質的に安全ではありません。ホスティングプロバイダーが安全な接続、例えば SSH を介した SFTP または RSync の使用を許可していることを確認してください。
 
 ウェブサーバーを作成する際、ウェブサーバーにファイルをアップロードすることは非常に重要なステップなので、[別の記事](/ja/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)で詳しく説明します。ここでは、単純な機能に限った無料 (S)FTP クライアントの例を示すにとどめます。
 
@@ -255,7 +256,7 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 - [Google Chrome](https://www.google.com/chrome/)
 - [Apple Safari](https://www.apple.com/safari/)
 
-特定のグループ (技術プラットフォームや国など) を対象にする場合は、追加で [Opera](https://www.opera.com/), [Konqueror](https://apps.kde.org/konqueror/), [UC Browser](https://www.ucweb.com/ucbrowser/) などブラウザーでサイトをテストする必要があります。
+特定のグループ (技術プラットフォームや国など) を対象にする場合は、追加で [Opera](https://www.opera.com/), [Konqueror](https://apps.kde.org/konqueror/) などのブラウザーでサイトをテストする必要があります。
 
 しかし、ブラウザーによっては特定のオペレーティングシステムでしか動作しないものがあるため、テストをすることは複雑になります。 Apple Safari は iOS と Mac OS 上で動作し、 Internet Explorer は Windows 上でのみ動作します。 [Browsershots](https://browsershots.org/) や [Browserstack](https://www.browserstack.com/) のようなサービスを利用するのが最善です。 Browsershots は、様々なブラウザーで見た場合のウェブサイトのスナップショットを提供します。 Browserstack は実際には仮想マシンへの完全なリモートアクセスを提供し、最も一般的な環境でサイトをテストすることができます。他にも、独自の仮想マシンをセットアップする方法もありますが、それにはいくらかの専門知識が必要です。
 詳しくは[テスト実行のための戦略: テストラボを用意する](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#テストラボを用意する)を参照してください。

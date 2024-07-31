@@ -1,15 +1,17 @@
 ---
 title: "CanvasRenderingContext2D: imageSmoothingQuality プロパティ"
+short-title: imageSmoothingQuality
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingQuality
 l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+  sourceCommit: d0d8f446ab0e7330a741fd8cbf1ecb8a2077d3f0
 ---
 
 {{APIRef}}
 
-[Canvas API](/ja/docs/Web/API/Canvas_API) に含まれる {{domxref("CanvasRenderingContext2D")}} インターフェイスの **`imageSmoothingQuality`** プロパティは、画像の平滑化の品質を設定できます。
+**`imageSmoothingQuality`** は {{domxref("CanvasRenderingContext2D")}} インターフェイスのプロパティで、[キャンバス API](/ja/docs/Web/API/Canvas_API) の一部です。画像の平滑化の品質を設定します。
 
-> **メモ:** このプロパティが効果を発揮するには、{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} が `true` でなければなりません。
+> [!NOTE]
+> このプロパティが効果を発揮するには、{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} が `true` でなければなりません。
 
 ## 値
 
@@ -21,6 +23,8 @@ l10n:
   - : 中程度の品質です。
 - `"high"`
   - : 高品質です。
+
+既定値は `"low"` です。
 
 ## 例
 

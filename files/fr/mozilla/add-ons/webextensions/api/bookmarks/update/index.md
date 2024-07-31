@@ -7,7 +7,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
 
 **`bookmarks.update()`** met à jour le titre et / ou l'URL d'un signet ou le nom d'un dossier de signets.
 
-> **Attention :** Si votre extension tente de mettre à jour un signet dans le nœud racine de l'arborescence de signets, l'appel déclenche une erreur avec le message suivant: "La racine du signet ne peut pas être modifiée" et le signet ne sera pas mis à jour.
+> [!WARNING]
+> Si votre extension tente de mettre à jour un signet dans le nœud racine de l'arborescence de signets, l'appel déclenche une erreur avec le message suivant: "La racine du signet ne peut pas être modifiée" et le signet ne sera pas mis à jour.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
@@ -72,7 +73,7 @@ searching.then(updateFolders, onRejected);
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
 >

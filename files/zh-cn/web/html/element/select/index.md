@@ -41,7 +41,8 @@ slug: Web/HTML/Element/select
 - `size`
   - : 如果控件显示为滚动列表框（如声明了 `multiple`），则此属性表示为控件中同时可见的行数。浏览器不需要将选择元素呈现为滚动列表框。默认值为 0。
 
-> **备注：** 根据 HTML5 规范，默认值应该为 1；但是，在实践中，这样会影响到一些网站，同时其他浏览器也没有那么处理，所以 Mozilla 在 Firefox 中选择继续使用默认值 0。
+> [!NOTE]
+> 根据 HTML5 规范，默认值应该为 1；但是，在实践中，这样会影响到一些网站，同时其他浏览器也没有那么处理，所以 Mozilla 在 Firefox 中选择继续使用默认值 0。
 
 ## 使用笔记
 
@@ -51,7 +52,8 @@ slug: Web/HTML/Element/select
 
 鼠标用户可以按住 <kbd>Ctrl</kbd>, <kbd>Command</kbd>, 或 <kbd>Shift</kbd> 键（取决于你的操作系统）然后点击不同选项以选择或取消选择。
 
-> **警告：** 以下所述的通过键盘选择多个不连续选项的方法目前只在 Firefox 有效（译者注：Chrome 81 也已支持）。**另请注意**：在 macOS 中， <kbd>Ctrl</kbd> + <kbd>Up</kbd> 和 <kbd>Ctrl</kbd> + <kbd>Down</kbd> 组合键会与系统默认用于任务管理和应用窗口的组合键冲突。所以如果要使用这些组合键，你需要关掉系统默认的组合键。
+> [!WARNING]
+> 以下所述的通过键盘选择多个不连续选项的方法目前只在 Firefox 有效（译者注：Chrome 81 也已支持）。**另请注意**：在 macOS 中， <kbd>Ctrl</kbd> + <kbd>Up</kbd> 和 <kbd>Ctrl</kbd> + <kbd>Down</kbd> 组合键会与系统默认用于任务管理和应用窗口的组合键冲突。所以如果要使用这些组合键，你需要关掉系统默认的组合键。
 
 键盘用户可以这样选中多个连续的选项：
 
@@ -186,7 +188,7 @@ slug: Web/HTML/Element/select
   </tr>
   <tr>
    <th scope="row">标签省略</th>
-   <td>{{no_tag_omission}}</td>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>

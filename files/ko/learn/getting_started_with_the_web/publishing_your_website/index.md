@@ -50,7 +50,7 @@ HTML, CSS 그리고 JavaScript 를 입력할 수 있게 하고 웹사이트로 �
 
 - [JSFiddle](https://jsfiddle.net/)
 - [Thimble](https://thimble.webmaker.org/)
-- [JSBin](http://jsbin.com/)
+- [JSBin](https://jsbin.com/)
 
 ![](jsbin-screen.png)
 

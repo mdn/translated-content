@@ -40,7 +40,7 @@ Il existe trois types de <i lang="en">workers</i>&nbsp;:
 
 Dans cet article, nous allons voir un exemple décrivant le premier type, puis discuter brièvement des deux autres.
 
-## Utiliser les <i lang="en>web workers</i>
+## Utiliser les <i lang="en">web workers</i>
 
 Vous souvenez-vous du premier article où nous avions une page qui calculait les nombres premiers&nbsp;? Nous allons ici utiliser un <i lang="en">worker</i> pour calculer les nombres premiers afin que notre page reste réactive aux actions des utilisatrices et utilisateurs.
 

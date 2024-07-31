@@ -2,7 +2,7 @@
 title: initial
 slug: Web/CSS/initial
 l10n:
-  sourceCommit: 3c33463072905e81ac620dd9780313369029b498
+  sourceCommit: 13c58b0430c3972566ea2d3a254129c18b1ed800
 ---
 
 {{CSSRef}}

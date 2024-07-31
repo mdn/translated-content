@@ -1,7 +1,6 @@
 ---
 title: Usando XMLHttpRequest
 slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
-original_slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
 
 [`XMLHttpRequest`](/pt-BR/docs/DOM/XMLHttpRequest) torna o envio de requisições HTTP muito fácil. Basta criar uma instância do objeto, abrir uma url e enviar uma requisição. O [status](/pt-BR/docs/HTTP/HTTP_response_codes) [HTTP](/pt-BR/docs/HTTP/HTTP_response_codes)do resultado assim como o seu conteúdo estarão disponíveis quando a transação for completada. Esta página descreve alguns casos comuns de uso desse poderoso objeto JavaScript.
@@ -39,7 +38,8 @@ As cinco formas mais utilizadas para análisar e manipular um arquivo XML são:
 
 ### Analisando e manipulando uma propriedade `responseText` contendo um documento HTML
 
-> **Nota:** A especificação W3C do [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) permite analisar HTML através da propriedade `XMLHttpRequest.responseXML` . Leia o artigo sobre [HTML in XMLHttpRequest](/pt-BR/docs/HTML_in_XMLHttpRequest) para maiores detalhes.
+> [!NOTE]
+> A especificação W3C do [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) permite analisar HTML através da propriedade `XMLHttpRequest.responseXML` . Leia o artigo sobre [HTML in XMLHttpRequest](/pt-BR/docs/HTML_in_XMLHttpRequest) para maiores detalhes.
 
 Se você usa o `XMLHttpRequest` para recuperar o conteúdo de uma página HTML remota, a propriedade `responseText` será uma string contendo um a "sopa" de todos as tags HTML, o que pode ser difícil de manipular e analizar. Existem três formas básicas para analizar esta sopa de string HTML:
 
@@ -118,7 +118,8 @@ function transferCanceled(evt) {
 
 Lines 3-6 adiciona receptores de eventos (event listeners) para os vários que são enviados ao executar uma transferência de dados usando `XMLHttpRequest`.
 
-> **Nota:** Você precisa adicionar os receptores de eventos (event listeners) antes de chamar `open()` sobre a requisição. Caso contrário, os eventos de prograsso não dispararão..
+> [!NOTE]
+> Você precisa adicionar os receptores de eventos (event listeners) antes de chamar `open()` sobre a requisição. Caso contrário, os eventos de prograsso não dispararão..
 
 O manipulador de evento de prograsso, especificado pela função `updateProgress()` neste exemplo, recebe o número total de bytes para transferir, bem como o número de bytes transferidos até o momento em total de eventos e campos carregados . No entanto, se o campo lengthComputable é false, o comprimento total não é conhecido e será zero..
 
@@ -135,13 +136,17 @@ oReq.upload.addEventListener("abort", transferCanceled, false);
 oReq.open();
 ```
 
-> **Nota:** eventos de progresso não estão disponíveis para o arquivo`:` protocol.
+> [!NOTE]
+> eventos de progresso não estão disponíveis para o arquivo`:` protocol.
 
-> **Nota:** Atualmente, existem bugs em aberto para o evento de progresso que continua fetando a versão 25 do Firefox sobre [OS X](https://bugzilla.mozilla.org/show_bug.cgi?id=908375) e [Linux](https://bugzilla.mozilla.org/show_bug.cgi?id=786953).
+> [!NOTE]
+> Atualmente, existem bugs em aberto para o evento de progresso que continua fetando a versão 25 do Firefox sobre [OS X](https://bugzilla.mozilla.org/show_bug.cgi?id=908375) e [Linux](https://bugzilla.mozilla.org/show_bug.cgi?id=786953).
 
-> **Nota:** Iniciando no Gecko 9.0, eventos de progresso agora podem ser invocados a entrar para cada pedaço de dados recebidos, incluindo o último bloco, nos casos em que o último pacote é recebido e a conexão fechada antes do evento progresso ser disparado. Neste caso, o evento de progresso é automaticamente acionado quando o evento load ocorre para esse pacote. Isso permite que você agora acompanhe de forma confiável apenas observando o evento de progresso
+> [!NOTE]
+> Iniciando no Gecko 9.0, eventos de progresso agora podem ser invocados a entrar para cada pedaço de dados recebidos, incluindo o último bloco, nos casos em que o último pacote é recebido e a conexão fechada antes do evento progresso ser disparado. Neste caso, o evento de progresso é automaticamente acionado quando o evento load ocorre para esse pacote. Isso permite que você agora acompanhe de forma confiável apenas observando o evento de progresso
 
-> **Nota:** A partir do Gecko 12.0, se o seu evento de progresso e chamado com um `responseType` de "moz-blob", o valor da resposta será um {{domxref("Blob")}} contendo os dados recebidos até agorar.
+> [!NOTE]
+> A partir do Gecko 12.0, se o seu evento de progresso e chamado com um `responseType` de "moz-blob", o valor da resposta será um {{domxref("Blob")}} contendo os dados recebidos até agorar.
 
 POde-se também detectar todas as três condições de fim de carga (`abort`, `load`, or `error`) usando o evento `loadend`:
 
@@ -589,7 +594,8 @@ The syntax of this script is the following:
 AJAXSubmit(myForm);
 ```
 
-> **Nota:** This little _vanilla_ framework **uses the [`FileReader`](/pt-BR/docs/DOM/FileReader) API**, which is _a recent technique_ (but only when there are files to upload, the `method` of the {{ HTMLElement("form") }} is `POST` and the `enctype` attribute is setted to `multipart/form-data`). For this reason, **the _pure-AJAX_ upload is to be considered an experimental technique**. Instead, if you don't want to upload files, this framework will not use any recent API.
+> [!NOTE]
+> This little _vanilla_ framework **uses the [`FileReader`](/pt-BR/docs/DOM/FileReader) API**, which is _a recent technique_ (but only when there are files to upload, the `method` of the {{ HTMLElement("form") }} is `POST` and the `enctype` attribute is setted to `multipart/form-data`). For this reason, **the _pure-AJAX_ upload is to be considered an experimental technique**. Instead, if you don't want to upload files, this framework will not use any recent API.
 > Note also that **the best way to send binary content is using [ArrayBuffers](/pt-BR/docs/JavaScript/Typed_arrays/ArrayBuffer) or [Blobs](/pt-BR/docs/DOM/Blob) in conjuncton with the [`send()`](/pt-BR/docs/DOM/XMLHttpRequest#send%28%29) method and, possibly, with the [`readAsArrayBuffer()`](</pt-BR/docs/DOM/FileReader#readAsArrayBuffer()>) method of the [`FileReader`](/pt-BR/docs/DOM/FileReader) API**. But, since the aim of this little script is to work with a _[stringifiable](/pt-BR/docs/JavaScript/Reference/Global_Objects/JSON/stringify)_ raw data, we used the [`sendAsBinary()`](/pt-BR/docs/DOM/XMLHttpRequest#sendAsBinary%28%29) method in conjunction with the [`readAsBinaryString()`](/pt-BR/docs/DOM/FileReader#readAsBinaryString%28%29) method of the [`FileReader`](/pt-BR/docs/DOM/FileReader) API. So, this is **the best solution when working with a relatively few data which must be [stringified](/pt-BR/docs/JavaScript/Reference/Global_Objects/JSON/stringify) in order to be reused later**. Anyhow, since working with strings instead of [typed arrays](/pt-BR/docs/JavaScript/Typed_arrays) implies a greater waste of resources, this script makes sense only when you are dealing with _small_ files (like images, documents, mp3, etc.). Otherwise, if you don't want to stringify the submitted or uploaded data, in addition to [typed arrays](/pt-BR/docs/JavaScript/Typed_arrays), consider also the use of **the [`FormData`](/pt-BR/docs/DOM/XMLHttpRequest/FormData) API**.
 
 ### Using FormData objects
@@ -762,7 +768,8 @@ The [`FormData`](/pt-BR/docs/DOM/XMLHttpRequest/FormData) constructor lets you c
 </html>
 ```
 
-> **Nota:** As we said, **`FormData` objects are not [stringifiable](/pt-BR/docs/JavaScript/Reference/Global_Objects/JSON/stringify) objects**. If you want to stringify a submitted data, use [the previous _pure_-AJAX example](#A_little_vanilla_framework). Note also that, although in this example there are some `file` {{ HTMLElement("input") }} fields, **when you submit a form through the `FormData` API you do not need to use the [`FileReader`](/pt-BR/docs/DOM/FileReader) API also**: files are automatically loaded and uploaded.
+> [!NOTE]
+> As we said, **`FormData` objects are not [stringifiable](/pt-BR/docs/JavaScript/Reference/Global_Objects/JSON/stringify) objects**. If you want to stringify a submitted data, use [the previous _pure_-AJAX example](#A_little_vanilla_framework). Note also that, although in this example there are some `file` {{ HTMLElement("input") }} fields, **when you submit a form through the `FormData` API you do not need to use the [`FileReader`](/pt-BR/docs/DOM/FileReader) API also**: files are automatically loaded and uploaded.
 
 ## Cross-site XMLHttpRequest
 

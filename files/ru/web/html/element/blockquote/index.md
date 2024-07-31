@@ -3,6 +3,8 @@ title: <blockquote> - элемент цитаты
 slug: Web/HTML/Element/blockquote
 ---
 
+{{HTMLSidebar}}
+
 ## Описание
 
 **HTML-элемент `<blockquote>`** (от англ. _Block Quotation_) указывает на то, что заключённый в нем текст является развёрнутой цитатой. Обычно он (текст) визуально выделяется наклонным (смотри [Примечание](/ru/docs/HTML/Element/blockquote#Notes), где говорится о том, как это изменить). URI на источник цитаты можно указать в атрибуте **cite**, тогда как текстовое представление источника может быть задано элементом {{HTMLElement("cite")}}.
@@ -54,5 +56,3 @@ slug: Web/HTML/Element/blockquote
 
 - Элемент {{HTMLElement("q")}} для встроенных (строковых) цитат.
 - Элемент {{HTMLElement("cite")}} для указания источника.
-
-{{HTMLSidebar}}

@@ -3,17 +3,19 @@ title: Firefox 35 for developers
 slug: Mozilla/Firefox/Releases/35
 ---
 
+{{FirefoxSidebar}}
+
 Gecko 35 を搭載した Firefox 35 は、米国時間 2015 年 1 月 13 日にリリースされました。このページでは、開発者に影響する Firefox 35 の変更点をまとめています。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
 ハイライト:
 
-- [インスペクタで ::before および ::after 疑似要素を確認できるようになりました](/ja/docs/Tools/Page_Inspector#.3A.3Abefore_and_.3A.3Aafter)。
+- [インスペクターで ::before および ::after 擬似要素を確認できるようになりました](/ja/docs/Tools/Page_Inspector#.3A.3Abefore_and_.3A.3Aafter)。
 - [CSS ソースマップがデフォルトで有効になりました](/ja/docs/Tools/Style_Editor#Source_map_support)。
-- [インスペクタから "DOM プロパティの表示" が可能になりました](/ja/docs/Tools/Page_Inspector#Element_popup_menu_2)。
+- [インスペクターから "DOM プロパティの表示" が可能になりました](/ja/docs/Tools/Page_Inspector#Element_popup_menu_2)。
 
 [Firefox 34 から Firefox 35 の間に解決した開発ツール関連のバグ一覧](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-10-13&chfield=resolution&query_format=advanced&chfieldfrom=2014-09-02&chfieldvalue=FIXED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&component=Simulator&product=Firefox&product=Firefox%20OS&list_id=11184176)
 
@@ -25,7 +27,7 @@ Gecko 35 を搭載した Firefox 35 は、米国時間 2015 年 1 月 13 日に�
 - [`symbols()`](</ja/docs/Web/CSS/symbols()> "この項目についての文書はまだ書かれていません。書いてみませんか？") 関数記法をサポートしました ([バグ 966168](https://bugzilla.mozilla.org/show_bug.cgi?id=966168))。
 - CSS Font Loading API を実装しました ([バグ 1028497](https://bugzilla.mozilla.org/show_bug.cgi?id=1028497))。
 - コンボボックスで [`-moz-appearance`](/ja/docs/Web/CSS/-moz-appearance) に値 `none` を指定すると、ドロップダウンボタンを表示しないようになりました ([バグ 649849](https://bugzilla.mozilla.org/show_bug.cgi?id=649849))。
-- 他ブラウザに合致させるため、プロパティへのアクセス手段である `element.style["css-property-name"]` を追加しました ([バグ 958887](https://bugzilla.mozilla.org/show_bug.cgi?id=958887 'FIXED: Add support for element.style["css-property-name"] non-standard extension'))。
+- 他ブラウザーに合致させるため、プロパティへのアクセス手段である `element.style["css-property-name"]` を追加しました ([バグ 958887](https://bugzilla.mozilla.org/show_bug.cgi?id=958887 'FIXED: Add support for element.style["css-property-name"] non-standard extension'))。
 
 ### HTML
 
@@ -42,7 +44,7 @@ Gecko 35 を搭載した Firefox 35 は、米国時間 2015 年 1 月 13 日に�
 
   - `String(Symbol("1"))` で [`TypeError`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypeError) が発生しないようになりました。代わりに文字列 (`"Symbol(1)"`) が返ります ([バグ 1058396](https://bugzilla.mozilla.org/show_bug.cgi?id=1058396))。
 
-- [_TypedArray_ のさまざまなコンストラクタ](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)が `[[Prototype]]` として、ES6 で `%TypedArray%` と示されている単一の関数を持つようになりました (しかし、他には直接公開されません)。各 Typed Array のプロトタイプは、`%TypedArray%.prototype` から継承します。(`%TypedArray%` および `%TypedArray%.prototype` は、それぞれ [`Function.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) および [`Object.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype) から継承しますので、Typed Array のコンストラクタやインスタンスはこれらのオブジェクトに存在するプロパティを持ちます) Typed Array 関数のプロパティは `%TypedArray%.prototype` 上に存在して、Typed Array で動作するようになります。詳しくは [_TypedArray_](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Description) や [バグ 896116](https://bugzilla.mozilla.org/show_bug.cgi?id=896116) をご覧ください。
+- [_TypedArray_ のさまざまなコンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)が `[[Prototype]]` として、ES6 で `%TypedArray%` と示されている単一の関数を持つようになりました (しかし、他には直接公開されません)。各 Typed Array のプロトタイプは、`%TypedArray%.prototype` から継承します。(`%TypedArray%` および `%TypedArray%.prototype` は、それぞれ [`Function.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) および [`Object.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype) から継承しますので、Typed Array のコンストラクターやインスタンスはこれらのオブジェクトに存在するプロパティを持ちます) Typed Array 関数のプロパティは `%TypedArray%.prototype` 上に存在して、Typed Array で動作するようになります。詳しくは [_TypedArray_](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Description) や [バグ 896116](https://bugzilla.mozilla.org/show_bug.cgi?id=896116) をご覧ください。
 - ES6 の、[オブジェクトリテラルを使用して行うプロトタイプミューテーション](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#Prototype_mutation)を実装しました ([バグ 1061853](https://bugzilla.mozilla.org/show_bug.cgi?id=1061853))。
 
   - オブジェクトリテラル構文内では、`__proto__:value` として指定するメンバーが 1 つだけであれば `[[Prototype]]` のミューテーションを行うようになりました。
@@ -62,7 +64,7 @@ Gecko 35 を搭載した Firefox 35 は、米国時間 2015 年 1 月 13 日に�
 - HTTP 以外の [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) 要求が成功した場合は (誤りである `0` に代わり) `200` を返すようになりました ([バグ 716491](https://bugzilla.mozilla.org/show_bug.cgi?id=716491))。
 - [`XMLHttpRequest.responseURL`](/ja/docs/Web/API/XMLHttpRequest/responseURL) を最新の仕様に適合させて、URL のフラグメント (`'#xyz'`) は存在しても含めないようになりました ([バグ 1073882](https://bugzilla.mozilla.org/show_bug.cgi?id=1073882))。
 - 内部で使用している非標準の [`File.mozFullPath`](/ja/docs/Web/API/File/mozFullPath) プロパティは content から参照できなくなりました ([バグ 1048293](https://bugzilla.mozilla.org/show_bug.cgi?id=1048293))。
-- [`File`](/ja/docs/Web/API/File) のコンストラクタを、仕様に準拠するよう拡張しました ([バグ 1047483](https://bugzilla.mozilla.org/show_bug.cgi?id=1047483))。
+- [`File`](/ja/docs/Web/API/File) のコンストラクターを、仕様に準拠するよう拡張しました ([バグ 1047483](https://bugzilla.mozilla.org/show_bug.cgi?id=1047483))。
 - 自身を生成したものとは別のエンティティによってアボートされることが可能な Promise である、[`AbortablePromise`](/ja/docs/Web/API/AbortablePromise) を実験的に実装しました。接頭辞 `Moz` を付加しており、設定項目 `dom.abortablepromise.enabled` (既定値は `false`) で制御されます ([バグ 1035060](https://bugzilla.mozilla.org/show_bug.cgi?id=1035060))。
 - 非標準の [`Navigator.mozIsLocallyAvailable`](/ja/docs/Web/API/Navigator/mozIsLocallyAvailable) プロパティを削除しました ([バグ 1066826](https://bugzilla.mozilla.org/show_bug.cgi?id=1066826))。
 - 設定項目 `network.websocket.enabled` (既定値は `true`) を削除しました。今後は [Websocket](/ja/docs/WebSockets) API を無効化できません ([バグ 1091016](https://bugzilla.mozilla.org/show_bug.cgi?id=1091016))。
@@ -86,7 +88,7 @@ _変更なし。_
 ## ネットワークおよびセキュリティ
 
 - AEAD 暗号化方式を使用する場合に限り、HTTP/2 を実装および有効化しました ([バグ 1027720](https://bugzilla.mozilla.org/show_bug.cgi?id=1027720) および [バグ 1047594](https://bugzilla.mozilla.org/show_bug.cgi?id=1047594))。
-- HTTP/2 の `alt-svc` ヘッダをサポートしました ([バグ 1003448](https://bugzilla.mozilla.org/show_bug.cgi?id=1003448))。
+- HTTP/2 の `alt-svc` ヘッダーをサポートしました ([バグ 1003448](https://bugzilla.mozilla.org/show_bug.cgi?id=1003448))。
 - HTTP の [Public Key Pinning](/ja/docs/Web/Security/Public_Key_Pinning) 拡張 (HPKP) を実装しました ([バグ 787133](https://bugzilla.mozilla.org/show_bug.cgi?id=787133))。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点

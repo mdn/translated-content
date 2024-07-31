@@ -29,7 +29,8 @@ slug: Web/HTML/Element/details
 
   - : 这个布尔属性表示细节内容——也就是 `<details>` 元素的内容——目前是否可见。默认情况下为 `false`，意味着细节内容是不可见的。
 
-    > **备注：** 你必须完全删除这个属性来使细节内容隐藏。`open="false"` 使细节内容可见，因为这个属性是布尔值。
+    > [!NOTE]
+    > 你必须完全删除这个属性来使细节内容隐藏。`open="false"` 使细节内容可见，因为这个属性是布尔值。
 
 ## 事件
 
@@ -218,7 +219,7 @@ details > p {
     </tr>
     <tr>
       <th scope="row">标签省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
     </tr>
     <tr>
       <th scope="row">允许的父元素</th>

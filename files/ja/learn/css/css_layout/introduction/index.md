@@ -2,7 +2,7 @@
 title: CSS レイアウト入門
 slug: Learn/CSS/CSS_layout/Introduction
 l10n:
-  sourceCommit: 45268b07c84a04b45d46bcdf104e2b33be00adcf
+  sourceCommit: 93c9f9954bd14ae8877973e5fe3c1d8378e56f92
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
@@ -66,7 +66,8 @@ CSS のページレイアウト技術によって、ウェブページに含ま�
 
 上下に並んで表示される要素は**ブロック**要素と呼ばれています。それに対して、**インライン**要素は段落内の個々の単語と同じように横に並んで表示されています。
 
-> **メモ:** ブロック要素のコンテンツがレイアウトされる方向は、ブロック方向 (Block Direction) と呼ばれます。 ブロック方向は、英語などの横書きモード (Horizontal Writing Mode) の言語では垂直に走ります。 日本語のような縦書きモード (Vertical Writing Mode) では、どの言語でも水平に走ります。 対応するインライン方向 (Inline Direction) は、インラインコンテンツ（文など）が走る方向です。
+> [!NOTE]
+> ブロック要素のコンテンツがレイアウトされる方向は、ブロック方向 (Block Direction) と呼ばれます。 ブロック方向は、英語などの横書きモード (Horizontal Writing Mode) の言語では垂直に走ります。 日本語のような縦書きモード (Vertical Writing Mode) では、どの言語でも水平に走ります。 対応するインライン方向 (Inline Direction) は、インラインコンテンツ（文など）が走る方向です。
 
 CSS で何かをレイアウトするとその要素を通常フローから遠ざけることになりますが、ページ上の多くの要素は通常フローにしたがって適宜レイアウトされます。これが、構造化された HTML 文書から始めることが非常に重要である理由です。 なぜなら、多くの要素のレイアウトに一から悪戦苦闘するかわりに、あらかじめ多くのものがレイアウトされている現状で作業できるからです。
 
@@ -75,7 +76,7 @@ CSS で要素をどのように配置するかを変更できる方法は次の�
 - **{{cssxref("display")}} プロパティ** — `block`、`inline`、`inline-block` などの標準値は、要素が通常フローでどのようにふるまうかを変更することができます（詳細については、[CSS ボックスの種類](/ja/docs/Learn/CSS/Building_blocks/The_box_model#ブロックボックスとインラインボックス)を参照してください）。それから、[CSS グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)や[フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)のように、特定の `display` の値によって有効になる全体的なレイアウト方法があります。
 - **浮動要素** — {{cssxref("float")}} に `left` などの値を適用すると、雑誌のレイアウトで画像の周囲をテキストが取り囲むことがあるように、要素の片側に沿ってブロックレベル要素が折り返されることがあります。
 - **{{cssxref("position")}} プロパティ** — 他のボックス内のボックスの配置を正確に制御できます。 通常フローでは `static` 位置指定が既定ですが、他の値を使用して要素を異なる方法でレイアウトすることもできます。 例えば、ブラウザーのビューポートの左上に固定するなどです。
-- **表レイアウト** — HTML 表の一部をスタイルするために設計された機能は、`display: table` とそれに関連するプロパティを使用して、表以外の要素にも使用できます。
+- **表レイアウト** — HTML 表の一部をスタイルするために設計された機能は、 `display: table` とそれに関連するプロパティを使用して、表以外の要素にも使用できます。
 - **段組みレイアウト** — [段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)のプロパティを使用すると、新聞のようにブロックのコンテンツを段組みにレイアウトできます。
 
 ## display プロパティ
@@ -102,7 +103,7 @@ CSS でページレイアウトを実現するための主な方法は、すべ�
 }
 .wrapper > div {
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -135,7 +136,7 @@ CSS でページレイアウトを実現するための主な方法は、すべ�
 }
 .wrapper > div {
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -160,7 +161,8 @@ CSS でページレイアウトを実現するための主な方法は、すべ�
 
 {{ EmbedLiveSample('Setting_the_flex_property', '300', '200') }}
 
-> **メモ:** これはフレックスボックスで可能なことの非常に短い紹介です。 詳細については、[フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)の記事を参照してください。
+> [!NOTE]
+> これはフレックスボックスで可能なことの非常に短い紹介です。 詳細については、[フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)の記事を参照してください。
 
 ## グリッドレイアウト
 
@@ -177,7 +179,7 @@ CSS でページレイアウトを実現するための主な方法は、すべ�
 
 .wrapper > div {
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -215,7 +217,7 @@ CSS でページレイアウトを実現するための主な方法は、すべ�
 
 .wrapper > div {
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -254,7 +256,8 @@ CSS でページレイアウトを実現するための主な方法は、すべ�
 
 {{ EmbedLiveSample('Placing_items_on_the_grid', '300', '330') }}
 
-> **メモ:** これら 2 つの例は、グリッドレイアウトの機能のほんの一部です。詳細については、[グリッドレイアウト](/ja/docs/Learn/CSS/CSS_layout/Grids)の記事を参照してください。
+> [!NOTE]
+> これら 2 つの例は、グリッドレイアウトの機能のほんの一部です。詳細については、[グリッドレイアウト](/ja/docs/Learn/CSS/CSS_layout/Grids)の記事を参照してください。
 
 このガイドの残りの部分では、他のレイアウト方法について説明します。 これは、ページの主なレイアウト構造にとってはそれほど重要ではありませんが、それでも特定のタスクを達成するのに役立ちます。 各レイアウトタスクの性質を理解することで、デザインの特定の構成要素を見たときに、それに最も適したレイアウトの種類が明らかになることがすぐにわかります。
 
@@ -284,8 +287,8 @@ p {
 }
 
 .box {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   border-radius: 5px;
 }
@@ -320,7 +323,8 @@ p {
 
 {{ EmbedLiveSample('Floats', '100%', 600) }}
 
-> **メモ:** 浮動要素については、[float と clear](/ja/docs/Learn/CSS/CSS_layout/Floats) のプロパティに関するレッスンで詳しく説明しています。 フレックスボックスやグリッドレイアウトなどの技術が登場する前は、浮動要素は段組みレイアウトの作成方法として使用されていました。 あなたはまだウェブ上でこれらの方法に出くわすかもしれません。これらについては、[過去のレイアウト手法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)に関するレッスンで説明します。
+> [!NOTE]
+> 浮動要素については、[float と clear](/ja/docs/Learn/CSS/CSS_layout/Floats) のプロパティに関するレッスンで詳しく説明しています。 フレックスボックスやグリッドレイアウトなどの技術が登場する前は、浮動要素は段組みレイアウトの作成方法として使用されていました。 あなたはまだウェブ上でこれらの方法に出くわすかもしれません。これらについては、[過去のレイアウト手法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)に関するレッスンで説明します。
 
 ## 位置指定のテクニック
 
@@ -328,7 +332,7 @@ p {
 
 ただし、 {{cssxref("position")}} プロパティに依存する特定のレイアウトパターンには便利なテクニックがあります。 位置指定を理解することは、通常フローを理解し、アイテムを通常フローから移動させることとは何かを理解するのに役立ちます。
 
-あなたが知っておくべき、次の 5 種類の位置指定があります。
+知っておくべき、次の 5 種類の位置指定があります。
 
 - **静的位置指定** (Static positioning) は、すべての要素が取得する既定です。 これは、「要素をドキュメントレイアウトフロー内の通常の位置に配置する — ここで見るべき特別なことは何もありません」という意味です。
 - **相対位置指定** (Relative positioning) を使用すると、ページ上の要素の位置を変更して、通常フロー内の位置に相対的に移動できます — ページ上の他の要素と重なるようにすることも含まれます。
@@ -357,18 +361,16 @@ body {
 }
 
 p {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
 }
-```
 
-```css hidden
 .positioned {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
 }
 ```
 
@@ -407,21 +409,16 @@ body {
 }
 
 p {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
 }
-```
 
-```css hidden
 .positioned {
-  position: relative;
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
-  top: 30px;
-  left: 30px;
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
 }
 ```
 
@@ -458,18 +455,16 @@ body {
 }
 
 p {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
 }
-```
 
-```css hidden
 .positioned {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
 }
 ```
 
@@ -516,8 +511,8 @@ body {
 }
 
 .positioned {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -585,8 +580,8 @@ body {
 }
 
 .positioned {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -603,7 +598,8 @@ body {
 
 {{ EmbedLiveSample('Sticky_positioning', '100%', 200) }}
 
-> **メモ:** 位置指定の詳細については、[位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)の記事をご覧ください。
+> [!NOTE]
+> 位置指定の詳細については、[位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)の記事をご覧ください。
 
 ## 表レイアウト
 
@@ -682,7 +678,8 @@ form p {
 
 この例は [css-tables-example.html](https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html) でもライブで見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/box-model-recap/css-tables-example.html)も見る）。
 
-> **メモ:** 表レイアウトは、このページの他のトピックとは異なり、古いアプリケーションであるため、このモジュールではこれ以上取り上げません。
+> [!NOTE]
+> 表レイアウトは、このページの他のトピックとは異なり、古いアプリケーションであるため、このモジュールではこれ以上取り上げません。
 
 ## 段組みレイアウト
 

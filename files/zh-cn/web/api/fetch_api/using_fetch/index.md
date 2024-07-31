@@ -78,9 +78,11 @@ fetch("https://example.com", {
 });
 ```
 
-> **备注：** 当请求使用 `credentials: 'include'` 时，响应的 `Access-Control-Allow-Origin` 不能使用通配符 "`*`"。在这种情况下，`Access-Control-Allow-Origin` 必须是当前请求的源，在使用 CORS Unblock 插件的情况下请求仍会失败。
+> [!NOTE]
+> 当请求使用 `credentials: 'include'` 时，响应的 `Access-Control-Allow-Origin` 不能使用通配符 "`*`"。在这种情况下，`Access-Control-Allow-Origin` 必须是当前请求的源，在使用 CORS Unblock 插件的情况下请求仍会失败。
 
-> **备注：** 无论怎么设置，浏览器都不应在 _预检请求_ 中发送凭据。了解更多：[跨域资源共享 > 附带身份凭证的请求](/zh-CN/docs/Web/HTTP/CORS#附带身份凭证的请求)
+> [!NOTE]
+> 无论怎么设置，浏览器都不应在 _预检请求_ 中发送凭据。了解更多：[跨域资源共享 > 附带身份凭证的请求](/zh-CN/docs/Web/HTTP/CORS#附带身份凭证的请求)
 
 如果你只想在请求 URL 与调用脚本位于同一起源处时发送凭据，请添加 `credentials: 'same-origin'`。
 
@@ -349,7 +351,8 @@ fetch(myRequest)
 - `response`：从 response 中获得的 headers（{{domxref("Response.headers")}}）只读。
 - `immutable`：在 ServiceWorkers 中最常用的，所有的 headers 都只读。
 
-> **备注：** 你不可以添加或者修改一个 guard 属性是 `request` 的 Request Header 的 `Content-Length` 属性。同样地，插入 `Set-Cookie` 属性到一个 response header 是不允许的，因此，Service Worker 中，不能给合成的 Response 设置 cookie。
+> [!NOTE]
+> 你不可以添加或者修改一个 guard 属性是 `request` 的 Request Header 的 `Content-Length` 属性。同样地，插入 `Set-Cookie` 属性到一个 response header 是不允许的，因此，Service Worker 中，不能给合成的 Response 设置 cookie。
 
 ## Response 对象
 
@@ -378,7 +381,8 @@ addEventListener("fetch", (event) => {
 
 {{domxref("Response.Response","Response()")}} 构造方法接受两个可选参数——response 的 body 和一个初始化对象（与{{domxref("Request.Request","Request()")}} 所接受的 init 参数类似）。
 
-> **备注：** 静态方法 {{domxref("Response.error","error()")}} 只是返回了错误的 response。与此类似地，{{domxref("Response.redirect","redirect()")}} 只是返回了一个可以重定向至某 URL 的 response。这些也只与 Service Worker 有关。
+> [!NOTE]
+> 静态方法 {{domxref("Response.error","error()")}} 只是返回了错误的 response。与此类似地，{{domxref("Response.redirect","redirect()")}} 只是返回了一个可以重定向至某 URL 的 response。这些也只与 Service Worker 有关。
 
 ## Body
 

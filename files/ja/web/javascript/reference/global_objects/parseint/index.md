@@ -33,7 +33,8 @@ parseInt(string, radix)
 - `radix` が `2` よりも小さいか `36` よりも大きい、または
 - ホワイトスペース以外の最初の文字が数値に変換できない。
 
-> **メモ:** JavaScript は言語レベルで「浮動小数点数」と「整数」の区別がありません。 `parseInt()` と [`parseFloat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/parseFloat) は解釈の動作が異なるだけで、必ずしも返値が異なるわけではありません。例えば、 `parseInt("42")` と `parseFloat("42")` は同じ値である数値型の 42 を返します。
+> [!NOTE]
+> JavaScript は言語レベルで「浮動小数点数」と「整数」の区別がありません。 `parseInt()` と [`parseFloat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/parseFloat) は解釈の動作が異なるだけで、必ずしも返値が異なるわけではありません。例えば、 `parseInt("42")` と `parseFloat("42")` は同じ値である数値型の 42 を返します。
 
 ## 解説
 
@@ -46,7 +47,8 @@ parseInt(string, radix)
 1. 入力された `string` の先頭のホワイトスペースと、存在すれば `+`/`-` 符号が除去され、 `0x` または `0X` （ゼロ、従うこと以下で小文字または大文字の X）で始まっている場合、 `radix` は `16` とみなされ、文字列の残りの部分は 16 進数として解釈されます。
 2. 入力された `string` が他の何らかの値で始まる場合、基数は `10` （10 進数）になります。
 
-> **メモ:** 他にも `0b` のような接頭辞は[数値リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#2_進数)では有効ですが、 `parseInt()` では通常の数字として扱われます。 `parseInt()` は `0` で始まる文字列を 8 進数の値として扱うことはありません。 `parseInt()` が認識できる接頭辞は、16 進数の値に対する `0x` または `0X` だけです。 `radix` がなければ、それ以外はすべて 10 進数として解釈されます。
+> [!NOTE]
+> 他にも `0b` のような接頭辞は[数値リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#2_進数)では有効ですが、 `parseInt()` では通常の数字として扱われます。 `parseInt()` は `0` で始まる文字列を 8 進数の値として扱うことはありません。 `parseInt()` が認識できる接頭辞は、16 進数の値に対する `0x` または `0X` だけです。 `radix` がなければ、それ以外はすべて 10 進数として解釈されます。
 
 基数が `16` の場合、 `parseInt()` では、オプションで符号文字 (`+`/`-`) の後に `0x` または `0X` を接頭辞として文字列を指定することができます。
 

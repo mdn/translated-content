@@ -59,7 +59,8 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Package_management
 
 要看到本地依赖项真正发挥作用，你只需要尝试下载并运行现有项目——如果它能正常工作并且所有依赖项都可以直接使用，这要归功于本地依赖项的可移植性。
 
-> **备注：** npm 不是唯一可用的软件包管理器。有一种成功和流行的替代软件包管理器是 [Yarn](https://yarnpkg.com/)。Yarn 使用不同的算法解决依赖项，这可能意味着更快的用户体验。还有一些其他新兴的客户端，例如 [pnpm](https://pnpm.js.org/)。
+> [!NOTE]
+> npm 不是唯一可用的软件包管理器。有一种成功和流行的替代软件包管理器是 [Yarn](https://yarnpkg.com/)。Yarn 使用不同的算法解决依赖项，这可能意味着更快的用户体验。还有一些其他新兴的客户端，例如 [pnpm](https://pnpm.js.org/)。
 
 ## 软件包仓库
 
@@ -186,13 +187,14 @@ Server running at http://localhost:1234
 ✨  Built in 193ms.
 ```
 
-> **备注：** 如果终端返回“未找到命令”类型错误，请尝试使用 `npx` 运行上面的命令，例如：`npx parcel index.html`。
+> [!NOTE]
+> 如果终端返回“未找到命令”类型错误，请尝试使用 `npx` 运行上面的命令，例如：`npx parcel index.html`。
 
 现在，我们可以试着享受完整的 JavaScript 包生态系统的好处。首先，现在有一个本地 Web 服务器运行在 `http://localhost:1234`。现在前往该网址，你现在可能不会看到任何内容，但是很酷的是，当你对代码进行更改时，Parcel 将在后台自动重新构建并刷新服务器，以便你可以立即看到更新的效果。
 
 现在来添加一些页面内容。假设我们想要显示易于理解的相对日期，例如“2 小时前”，“4 天前”等。[`date-fns`](https://date-fns.org/) 包的 `formatDistanceToNow()` 方法非常适合此用途（也有其他包提供相同的功能）。
 
-在 `index.js` 文件中添加一下代码并保存：
+在 `index.js` 文件中添加以下代码并保存：
 
 ```js
 import { formatDistanceToNow } from "date-fns";
@@ -282,7 +284,8 @@ dist/index.html                   288 B    753ms
 
 如果我们将此项目发布到服务器上，我们只需发布 `dist` 文件夹中的文件。Parcel 已自动处理了所有文件名更改。我们建议你查看 `dist/index.html` 中的源代码，以便你可以看到 Parcel 已自动执行的更改。
 
-> **备注：** 在撰写本文时，Parcel 2 尚未发布。但是，当它发布时，这些命令仍将有效，因为 Parcel 的作者已经聪明地将旧版本的 Parcel 重新命名。要安装 Parcel 1.x，你必须安装 `parcel-bundler`，而 Parcel 2.x 被称为 `parcel`。
+> [!NOTE]
+> 在撰写本文时，Parcel 2 尚未发布。但是，当它发布时，这些命令仍将有效，因为 Parcel 的作者已经聪明地将旧版本的 Parcel 重新命名。要安装 Parcel 1.x，你必须安装 `parcel-bundler`，而 Parcel 2.x 被称为 `parcel`。
 
 现在有很多工具可用，JavaScript 软件包生态系统正在以前所未有的速度增长，这有利有弊。不断进行改进，选择，无论是好是坏，都在不断增加。面对眼花缭乱的工具选择，可能最重要的一课是了解你选择的工具能够做什么。
 
@@ -302,7 +305,8 @@ dist/index.html                   288 B    753ms
 
 相比较 npm 而言，Yarn 在安装过程中通常被认为更快（尽管结果可能会有所不同）。这对开发人员很重要，因为等待依赖项安装（并复制到计算机）可能需要相当长的时间。
 
-> **备注：** 虽然 npm 包管理器与 npm 仓库共享相同的名称，但不需要使用 npm 包管理器来从 npm 仓库安装软件包。pnpm 和 Yarn 可以使用与 npm 相同的 `package.json` 格式，并且可以安装来自 npm 和其他软件包仓库的任何软件包。
+> [!NOTE]
+> 虽然 npm 包管理器与 npm 仓库共享相同的名称，但不需要使用 npm 包管理器来从 npm 仓库安装软件包。pnpm 和 Yarn 可以使用与 npm 相同的 `package.json` 格式，并且可以安装来自 npm 和其他软件包仓库的任何软件包。
 
 接下来，让我们回顾一下你可能需要使用包管理器执行的常见操作。
 

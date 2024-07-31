@@ -3,6 +3,8 @@ title: Formularios en HTML5
 slug: Learn/Forms
 ---
 
+{{LearnSidebar}}
+
 Los elementos y atributos para formularios en HTML5 proveen un mayor grado de marcado semántico que en HTML4 y eliminan gran parte del tedioso trabajo de programar y diseñar que se necesitaba en HTML4. Las funcionalidades de los formularios en HTML5 brindan una experiencia mejor para los usuarios al permitir que los formularios tengan un comportamiento más consistente entre diferentes sitios web y al darle una devolución inmediata acerca de la información ingresada. También proveen esta experiencia a los usuarios que han deshabilitado javascript en sus navegadores.
 
 Este documento describe los elementos nuevos o que han cambiado que están disponibles en Gecko/Firefox.
@@ -16,7 +18,8 @@ El elemento `{{ HTMLElement("input") }}` tiene nuevos valores para el atributo [
 - `url`: El elemento representa un control para editar una [URL](http://es.wikipedia.org/URL). Se quitan los saltos de línea y espacios en blanco antes y después del valor ingresados.
 - `email`: El elemento representa una dirección de correo electrónico. Los saltos de línea se quitan automáticamente del valor ingresado. Puede ingresarse una direccón de correo no válida, pero el campo de ingreso sólo funcionará si la dirección ingresada satisface la producción ABNF `1*( atext / "." ) "@" ldh-str 1*( "." ldh-str )` donde `atext` está definida en RFC 5322, sección 3.2.3 y `ldh-str` está definida en RFC 1034, sección 3.5.
 
-  > **Nota:** si el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple) está agregado, pueden ingresarse muchas direcciones de correo electrónico en ese campo {{ HTMLElement("input") }}, como una lista separada por espacios, pero no está implementado actualmente en Firefox.
+  > [!NOTE]
+  > Si el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple) está agregado, pueden ingresarse muchas direcciones de correo electrónico en ese campo {{ HTMLElement("input") }}, como una lista separada por espacios, pero no está implementado actualmente en Firefox.
 
 El elemento {{ HTMLElement("input") }} también tiene nuevos atributos:
 

@@ -73,7 +73,9 @@ jobs:
         with:
           node-version-file: ".nvmrc"
           cache: yarn
-          cache-dependency-path: "**/yarn.lock"
+          cache-dependency-path: |
+            mdn/content/yarn.lock
+            yarn.lock
 
       - name: Install all yarn packages for mdn/translated-content
         if: ${{ env.DIFF_DOCUMENTS }}
@@ -150,6 +152,7 @@ jobs:
             -name="mdn-linter" \
             -f=diff \
             -f.diff.strip=1 \
+            -filter-mode=diff_context \
             -reporter=github-pr-review < "${TMPFILE}"
 
       - name: Add reviews for markdownlint errors

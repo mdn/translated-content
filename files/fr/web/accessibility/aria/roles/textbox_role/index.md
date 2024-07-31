@@ -3,6 +3,8 @@ title: Utiliser le rôle textbox
 slug: Web/Accessibility/ARIA/Roles/textbox_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Description
 
 Cette technique présente l'utilisation du rôle [`textbox`](http://www.w3.org/TR/wai-aria/roles#textbox) et décrit les effets produits sur les navigateurs et les technologies d'assistance.

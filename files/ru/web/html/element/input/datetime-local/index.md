@@ -520,7 +520,7 @@ daySelect.onchange = function () {
 };
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -528,7 +528,7 @@ daySelect.onchange = function () {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [Date and Time picker tutorial](/ru/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker)

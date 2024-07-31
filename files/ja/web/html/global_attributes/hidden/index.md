@@ -2,7 +2,7 @@
 title: hidden
 slug: Web/HTML/Global_attributes/hidden
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: db32c2f103885a65715e2cce48bda44be03f44f7
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -30,8 +30,8 @@ hidden` 属性には、 _hidden_ 状態と _hidden until found_ 状態の2つの
 
 ```html
 <span hidden>I'm hidden</span>
-<span hidden="hidden">I'm also hidden</span>
-<span hidden="something else">I'm hidden too!</span>
+<span hidden="">I'm also hidden</span>
+<span hidden="hidden">I'm hidden too!</span>
 ```
 
 以下のものは、要素を [_hidden until found_](#hidden_until_found_状態) の状態に設定します。
@@ -71,7 +71,7 @@ _hidden until found_ の状態では、要素は非表示になりますが、�
 - この要素はページレイアウトに参加します
 - 要素の margin, borders, padding, background がレンダリングされます
 
-また、その要素を明らかにするためには、[レイアウトコンテインメント](/ja/docs/Web/CSS/CSS_Containment)の影響を受けている必要があります。これは、_hidden until found_ 状態の要素の `display` 値が `none`、`contents`、`inline` の何れかである場合、その要素はページまたはフラグメントナビゲーションでの検索によって明らかにされないことを意味しています。
+また、その要素を明らかにするためには、[レイアウトコンテインメント](/ja/docs/Web/CSS/CSS_containment)の影響を受けている必要があります。これは、_hidden until found_ 状態の要素の `display` 値が `none`、`contents`、`inline` の何れかである場合、その要素はページまたはフラグメントナビゲーションでの検索によって明らかにされないことを意味しています。
 
 ## 例
 

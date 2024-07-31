@@ -264,7 +264,8 @@ Um objeto `HTMLDocument` também da acesso á vários recursos de navegadores co
 
 Aqui estão a DOM API para tipos de dados utilizados nas definições de propriedades SVG e atributos.
 
-> **Nota:** Starting in Gecko 5.0, the following SVG-related DOM interfaces representing lists of objects are now indexable and can be accessed ; in addition, they have a length property indicating the number of items in the lists: {{domxref("SVGLengthList")}}, {{domxref("SVGNumberList")}}, {{domxref("SVGPathSegList")}}, and {{domxref("SVGPointList")}}.
+> [!NOTE]
+> Starting in Gecko 5.0, the following SVG-related DOM interfaces representing lists of objects are now indexable and can be accessed ; in addition, they have a length property indicating the number of items in the lists: {{domxref("SVGLengthList")}}, {{domxref("SVGNumberList")}}, {{domxref("SVGPathSegList")}}, and {{domxref("SVGPointList")}}.
 
 #### Static type
 

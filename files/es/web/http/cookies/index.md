@@ -18,7 +18,8 @@ Las cookies se utilizan principalmente con tres propósitos:
 
 Las cookies se usaron una vez para el almacenamiento general del lado del cliente. Si bien esto era legítimo cuando eran la única forma de almacenar datos en el cliente, hoy en día se recomienda preferir las API de almacenamiento modernas. Las cookies se envían con cada solicitud, por lo que pueden empeorar el rendimiento (especialmente para las conexiones de datos móviles). Las APIs modernas para el almacenamiento del cliente son la [Web storage API](/es/docs/Web/API/Web_Storage_API) (`localStorage` y `sessionStorage`) e [IndexedDB](/es/docs/Web/API/IndexedDB_API).
 
-> **Nota:** Para ver las cookies almacenadas (y otro tipo de almacenamiento que una página web puede usar), puede habilitar el [Inspector de Almacenamiento](/es/docs/Tools/Storage_Inspector) en Herramientas del desarrollador y seleccionar Cookies en el árbol de almacenamiento.
+> [!NOTE]
+> Para ver las cookies almacenadas (y otro tipo de almacenamiento que una página web puede usar), puede habilitar el [Inspector de Almacenamiento](/es/docs/Tools/Storage_Inspector) en Herramientas del desarrollador y seleccionar Cookies en el árbol de almacenamiento.
 
 ## Creando cookies
 
@@ -34,7 +35,8 @@ Set-Cookie: <nombre-cookie>=<valor-cookie>
 
 Este encabezado del servidor le dice al cliente que almacene una cookie.
 
-> **Nota:** Aquí se explica como usar el encabezado `Set-Cookie` en varias aplicaciones del lado del servidor:
+> [!NOTE]
+> Aquí se explica como usar el encabezado `Set-Cookie` en varias aplicaciones del lado del servidor:
 >
 > - [PHP](https://secure.php.net/manual/en/function.setcookie.php)
 > - [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value)
@@ -70,7 +72,8 @@ En lugar de expirar cuando el cliente se cierra, las _cookies permanentes_ expir
 Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 ```
 
-> **Nota:** Cuando se establece una fecha de expiración, la fecha y hora que se establece es relativa al cliente en el que se establece la cookie, no del servidor.
+> [!NOTE]
+> Cuando se establece una fecha de expiración, la fecha y hora que se establece es relativa al cliente en el que se establece la cookie, no del servidor.
 
 ### Cookies `Secure` y `HttpOnly`
 
@@ -134,7 +137,8 @@ Tenga en cuenta las cuestiones de seguridad en la siguiente sección [Seguridad]
 
 ## Seguridad
 
-> **Nota:** Nunca se debe almacenar ni transmitir información confidecial o sensible mediante Cookies HTTP, ya que todo el mecanismo es inherentemente inseguro.
+> [!NOTE]
+> Nunca se debe almacenar ni transmitir información confidecial o sensible mediante Cookies HTTP, ya que todo el mecanismo es inherentemente inseguro.
 
 ### Secuestro de session y XSS
 

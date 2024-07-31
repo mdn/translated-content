@@ -23,7 +23,8 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : Este atributo define a codificação de caracteres do recurso vinculado. O valor é umespaço e/ou lista delimitada por vírgulas de conjuntos de caracteres, conformedefinido na RFC 2045. O valor padrão é ISO-8859-1.
 
-    > **Nota:** Este atributo é obsoleto em HTML5 e **não deve ser usada por autores**. Para atingir seu efeito, use o cabeçalho HTTP Content-Type sobre o recurso vinculado.
+    > [!NOTE]
+    > Este atributo é obsoleto em HTML5 e **não deve ser usada por autores**. Para atingir seu efeito, use o cabeçalho HTTP Content-Type sobre o recurso vinculado.
 
 - `crossorigin`
 
@@ -40,7 +41,8 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : Este atributo é usado para desativa uma relação com o link. Em conjunto com o script, esse atributo poderia ser usado para ligar e desligar várias relações com stylesheets.
 
-    > **Nota:** Embora, não haja nenhum atributo desativado no padrão HTML, há um atributo desabilitado no `HTMLLinkElement` DOM object.
+    > [!NOTE]
+    > Embora, não haja nenhum atributo desativado no padrão HTML, há um atributo desabilitado no `HTMLLinkElement` DOM object.
     >
     > The use of `disabled` as an HTML attribute is non-standard and only used by some browsers ([W3 #27677](https://www.w3.org/Bugs/Public/show_bug.cgi?id=27677)). **Do not use it**. To achieve a similar effect, use one of the following techniques:
     >
@@ -55,7 +57,8 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : This attribute specifies the media which the linked resource applies to. Its value must be a [media query](/pt-BR/docs/CSS/Media_queries). This attribute is mainly useful when linking to external stylesheets by allowing the user agent to pick the best adapted one for the device it runs on.
 
-    > **Nota:** In HTML 4, this can only be a simple white-space-separated list of media description literals, i.e., [media types and groups](/pt-BR/docs/CSS/@media), where defined and allowed as values for this attribute, such as `print`, `screen`, `aural`, `braille`. HTML5 extended this to any kind of [media queries](/pt-BR/docs/CSS/Media_queries), which are a superset of the allowed values of HTML 4.
+    > [!NOTE]
+    > In HTML 4, this can only be a simple white-space-separated list of media description literals, i.e., [media types and groups](/pt-BR/docs/CSS/@media), where defined and allowed as values for this attribute, such as `print`, `screen`, `aural`, `braille`. HTML5 extended this to any kind of [media queries](/pt-BR/docs/CSS/Media_queries), which are a superset of the allowed values of HTML 4.
     >
     > - Browsers not supporting the [CSS3 Media Queries](/pt-BR/docs/CSS/Media_queries) won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.
 
@@ -67,7 +70,8 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : The value of this attribute shows the relationship of the current document to the linked document, as defined by the [`href`](/pt-BR/docs/Web/HTML/Element/link#href) attribute. The attribute thus defines the reverse relationship compared to the value of the **rel** attribute. [Link types values](/pt-BR/docs/Web/HTML/Link_types) for the attribute are similar to the possible values for [`rel`](/pt-BR/docs/Web/HTML/Element/link#rel).
 
-    > **Nota:** This attribute is obsolete in HTML5. **Do not use it**. To achieve its effect, use the [`rel`](/pt-BR/docs/Web/HTML/Element/link#rel) attribute with the opposite [link types values](/pt-BR/docs/Web/HTML/Link_types), e.g. made should be replaced by author. Also this attribute doesn't mean _revision_ and must not be used with a version number, which is unfortunately the case on numerous sites.
+    > [!NOTE]
+    > This attribute is obsolete in HTML5. **Do not use it**. To achieve its effect, use the [`rel`](/pt-BR/docs/Web/HTML/Element/link#rel) attribute with the opposite [link types values](/pt-BR/docs/Web/HTML/Link_types), e.g. made should be replaced by author. Also this attribute doesn't mean _revision_ and must not be used with a version number, which is unfortunately the case on numerous sites.
 
 - `sizes`
 
@@ -76,7 +80,8 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     - `any`, meaning that the icon can be scaled to any size as it is in a vector format, like `image/svg+xml`.
     - a white-space separated list of sizes, each in the format `<width in pixels>x<height in pixels>` or `<width in pixels>X<height in pixels>`. Each of these sizes must be contained in the resource.
 
-    > **Nota:** Most icon formats are only able to store one single icon; therefore most of the time the [`sizes`](/pt-BR/docs/Web/HTML/Global_attributes#sizes) attribute contains only one entry.
+    > [!NOTE]
+    > Most icon formats are only able to store one single icon; therefore most of the time the [`sizes`](/pt-BR/docs/Web/HTML/Global_attributes#sizes) attribute contains only one entry.
     > MS's ICO format does, as well as Apple's ICNS. ICO is more ubiquitous, so you should use this format if cross-browser support is a concern (especially for old IE versions).
 
 - `target`{{Non-standard_inline}}
@@ -128,7 +133,8 @@ Você pode determinar quando um stylesheet foi carregado observando um `load` ev
   onerror="sheetError()" />
 ```
 
-> **Nota:** O `load` event é carregado quando a stylesheet e quando todo o conteúdo importado foi carregado e analisado, e imediatamente antes que styles comecem a ser aplicados ao conteúdo.
+> [!NOTE]
+> O `load` event é carregado quando a stylesheet e quando todo o conteúdo importado foi carregado e analisado, e imediatamente antes que styles comecem a ser aplicados ao conteúdo.
 
 ## Notas
 

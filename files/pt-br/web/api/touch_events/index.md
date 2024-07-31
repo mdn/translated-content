@@ -27,7 +27,8 @@ Com a finalidade de fornecer suporte de qualidade para interfaces baseadas em to
 
 Este exemplo acompanha múltiplos pontos de contato de cada vez, permitindo o usuário desenhe em um {{ HTMLElement("canvas") }} com mais de um dedo por vez. Ele só funcionará em um browser que tenha suporte a eventos de toque.
 
-> **Nota:** O texto a seguir utiliza o termo "finger" quando descreve o contato com a superfície, mas poderia, é claro, ser também uma caneta ou outro método de contato.
+> [!NOTE]
+> O texto a seguir utiliza o termo "finger" quando descreve o contato com a superfície, mas poderia, é claro, ser também uma caneta ou outro método de contato.
 
 ### Crie um canvas
 
@@ -259,7 +260,7 @@ function log(msg) {
 
 If your browser supports it, you can {{ LiveSampleLink('Example', 'see it live') }}.
 
-[jsFiddle example](http://jsfiddle.net/Darbicus/z3Xdx/10/)
+[jsFiddle example](https://jsfiddle.net/Darbicus/z3Xdx/10/)
 
 ## Additional tips
 

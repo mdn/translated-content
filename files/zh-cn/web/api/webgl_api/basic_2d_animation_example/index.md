@@ -199,7 +199,8 @@ First, {{domxref("WebGLRenderingContext.createProgram", "gl.createProgram()")}} 
 
 Then, for each shader in the specified list of shaders, we call a `compileShader()` function to compile it, passing into it the ID and type of the shader function to build. Each of those objects includes, as mentioned before, the ID of the `<script>` element the shader code is found in and the type of shader it is. The compiled shader is attached to the shader program by passing it into {{domxref("WebGLRenderingContext.attachShader", "gl.attachShader()")}}.
 
-> **备注：** We could go a step farther here, actually, and look at the value of the `<script>` element's `type` attribute to determine the shader type.
+> [!NOTE]
+> We could go a step farther here, actually, and look at the value of the `<script>` element's `type` attribute to determine the shader type.
 
 Once all of the shaders are compiled, the program is linked using {{domxref("WebGLRenderingContext.linkProgram", "gl.linkProgram()")}}.
 
@@ -293,7 +294,7 @@ function animateScene() {
 
 The first thing that needs to be done in order to draw a frame of the animation is to clear the background to the desired color. In this case, we set the viewport based on the size of the {{HTMLElement("canvas")}}, call {{domxref("WebGLRenderingContext.clearColor", "clearColor()")}} to set the color to use when clearing content, then we clear the buffer with {{domxref("WebGLRenderingContext.clear", "clear()")}}.
 
-Next, the current rotation vector is computed by converting the current rotation in degrees (`currentAngle`) into [radians](https://zh.wikipedia.org/wiki/radians), then setting the first component of the rotation vector to the [sine](https://zh.wikipedia.org/wiki/sine) of that value and the second component to the [cosine](https://zh.wikipedia.org/wiki/cosine). The `currentRotation` vector is now the location of the point on the [unit circle](https://zh.wikipedia.org/wiki/unit_circle) located at the angle `currentAngle`.
+Next, the current rotation vector is computed by converting the current rotation in degrees (`currentAngle`) into [radians](https://zh.wikipedia.org/wiki/弧度), then setting the first component of the rotation vector to the [sine](https://zh.wikipedia.org/wiki/正弦) of that value and the second component to the [cosine](https://zh.wikipedia.org/wiki/餘弦). The `currentRotation` vector is now the location of the point on the [unit circle](https://zh.wikipedia.org/wiki/单位圆) located at the angle `currentAngle`.
 
 {{domxref("WebGLRenderingContext.useProgram", "useProgram()")}} is called to activate the GLSL shading program we established previously. Then we obtain the locations of each of the uniforms used to share information between the JavaScript code and the shaders (with {{domxref("WebGLRenderingContext.getUniformLocation", "getUniformLocation()")}}).
 

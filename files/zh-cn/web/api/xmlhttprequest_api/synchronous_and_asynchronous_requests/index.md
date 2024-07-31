@@ -3,6 +3,8 @@ title: 同步和异步请求
 slug: Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
 ---
 
+{{DefaultAPISidebar("XMLHttpRequest API")}}
+
 `XMLHttpRequest` 支持同步和异步通信。但是，一般来说，出于性能原因，异步请求应优先于同步请求。
 
 同步请求阻止代码的执行，这会导致屏幕上出现“冻结”和无响应的用户体验。
@@ -131,7 +133,8 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 ## 同步请求
 
-> **备注：** 从 Gecko 30.0，Blink 39.0 和 Edge 13 开始，主线程上的同步请求由于对用户体验的负面影响而被弃用。
+> [!NOTE]
+> 从 Gecko 30.0，Blink 39.0 和 Edge 13 开始，主线程上的同步请求由于对用户体验的负面影响而被弃用。
 
 同步 XHR 通常会导致网络挂起。但开发人员通常不会注意到这个问题，因为在网络状况不佳或服务器响应速度慢的情况下，挂起只会显示同步 XHR 现在处于弃用状态。建议开发人员远离这个 API。
 
@@ -200,7 +203,8 @@ self.onmessage = function (oEvent) {
 };
 ```
 
-> **备注：** 由于使用了`Worker`，所以该请求实际上也是异步的。
+> [!NOTE]
+> 由于使用了`Worker`，所以该请求实际上也是异步的。
 
 可以使用类似的方法，让脚本在后台与服务器交互，预加载某些内容。查看[使用 Web workers](/zh-CN/DOM/Using_web_workers)了解更多详情。
 

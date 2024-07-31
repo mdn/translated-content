@@ -43,7 +43,8 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 通常客户端和服务端存储是结合在一起使用的。例如，你可以从数据库中下载一个由网络游戏或音乐播放器应用程序使用的音乐文件，将它们存储在客户端数据库中，并按需要播放它们。用户只需下载音乐文件一次——在随后的访问中，它们将从数据库中检索。
 
-> **备注：** 使用客户端存储 API 可以存储的数据量是有限的（可能是每个 API 单独的和累积的总量）;具体的数量限制取决于浏览器，也可能基于用户设置。有关更多信息，获取更多信息，请参考[浏览器存储限制和清理标准](/zh-CN/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)。
+> [!NOTE]
+> 使用客户端存储 API 可以存储的数据量是有限的（可能是每个 API 单独的和累积的总量）;具体的数量限制取决于浏览器，也可能基于用户设置。有关更多信息，获取更多信息，请参考[浏览器存储限制和清理标准](/zh-CN/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)。
 
 ### 传统方法：cookies
 
@@ -55,7 +56,8 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 由于这些原因，我们不会在本文中教你如何使用 cookie。毕竟它过时、存在各种[安全问题](/zh-CN/docs/Web/HTTP/Cookies#安全)，而且无法存储复杂数据，而且有更好的、更现代的方法可以在用户的计算机上存储种类更广泛的数据。
 cookie 的唯一优势是它们得到了非常旧的浏览器的支持，所以如果你的项目需要支持已经过时的浏览器（比如 Internet Explorer 8 或更早的浏览器），cookie 可能仍然有用，但是对于大多数项目（很明显不包括本站）来说，你不需要再使用它们了。其实 cookie 也没什么好说的，[`document.cookie`](/zh-CN/docs/Web/API/Document/cookie)一把梭就完事了。
 
-> **备注：** 为什么仍然有新创建的站点使用 cookies？这主要是因为开发人员的习惯，使用了仍然使用 cookies 的旧库，以及存在许多 web 站点，提供了过时的参考和培训材料来学习如何存储数据。
+> [!NOTE]
+> 为什么仍然有新创建的站点使用 cookies？这主要是因为开发人员的习惯，使用了仍然使用 cookies 的旧库，以及存在许多 web 站点，提供了过时的参考和培训材料来学习如何存储数据。
 
 ### 新流派：Web Storage 和 IndexedDB
 
@@ -237,9 +239,11 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
 你的例子完成了 - 做得好！现在剩下的就是保存你的代码并在浏览器中测试你的 HTML 页面。你可以在这里看到我们的[完成版本并在线运行](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html)。
 
-> **备注：** 在 [Using the Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 中还有一个稍微复杂点儿的示例。
+> [!NOTE]
+> 在 [Using the Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 中还有一个稍微复杂点儿的示例。
 
-> **备注：** 在完成版本的源代码中， `<script src="index.js" defer></script>` 一行里， `defer` 属性指明在页面加载完成之前，{{htmlelement("script")}}元素的内容不会执行。
+> [!NOTE]
+> 在完成版本的源代码中， `<script src="index.js" defer></script>` 一行里， `defer` 属性指明在页面加载完成之前，{{htmlelement("script")}}元素的内容不会执行。
 
 ## 存储复杂数据 — IndexedDB
 
@@ -298,7 +302,8 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
    要在 IndexedDB 中处理此问题，你需要创建一个请求对象（可以随意命名 - 命名为`request`，可以表明它的用途）。然后，在请求完成或者失败时，使用事件处理程序来运行代码，你将在下面看到这些代码。
 
-   > **备注：** 版本号很重要。如果要升级数据库（例如：更改表结构），则必须使用增加的版本号或者`onupgradeneeded`处理程序内指定的不同模式（请参阅下文）等再次运行代码。在这个简单教程中，我们不讨论数据库升级。
+   > [!NOTE]
+   > 版本号很重要。如果要升级数据库（例如：更改表结构），则必须使用增加的版本号或者`onupgradeneeded`处理程序内指定的不同模式（请参阅下文）等再次运行代码。在这个简单教程中，我们不讨论数据库升级。
 
    1. 在之前添加的事件处理程序下方添加以下代码 - 在`window.onload`处理程序内：
 
@@ -671,7 +676,8 @@ function deleteItem(e) {
 
 Cache API 是另一种客户端存储机制，略有不同 - 它旨在保存 HTTP 响应，因此与服务工作者一起工作得非常好。
 
-> **备注：** 现在大多数现代浏览器都支持服务工作者和缓存。在撰写本文时，Safari 仍在忙着实施它，但它应该很快就会存在。
+> [!NOTE]
+> 现在大多数现代浏览器都支持服务工作者和缓存。在撰写本文时，Safari 仍在忙着实施它，但它应该很快就会存在。
 
 ### 一个 service worker 例子
 

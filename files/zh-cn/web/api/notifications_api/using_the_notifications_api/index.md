@@ -2,7 +2,7 @@
 title: 使用 Notifications API
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 l10n:
-  sourceCommit: 6cab93c7fbd381e36065794351e2d7fcc3ce64e8
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
 {{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}}
@@ -62,7 +62,8 @@ Notification.requestPermission((result) => {
 
 回调版本可以选择接受一个回调函数，一旦用户响应了显示权限的请求，就会调用该回调函数。
 
-> **备注：** 目前无法可靠地对 `Notification.requestPermission` 是否支持基于 Promise 的版本进行特性测试。如果你需要支持较旧的浏览器，只需使用基于回调的版本——尽管它已被弃用，但它仍然可以在新浏览器中使用。有关更多信息，请参阅[浏览器兼容性表](/zh-CN/docs/Web/API/Notification/requestPermission_static#浏览器兼容性)。
+> [!NOTE]
+> 目前无法可靠地对 `Notification.requestPermission` 是否支持基于 Promise 的版本进行特性测试。如果你需要支持较旧的浏览器，只需使用基于回调的版本——尽管它已被弃用，但它仍然可以在新浏览器中使用。有关更多信息，请参阅[浏览器兼容性表](/zh-CN/docs/Web/API/Notification/requestPermission_static#浏览器兼容性)。
 
 ### 示例
 
@@ -76,27 +77,23 @@ Notification.requestPermission((result) => {
 
 ```js
 function askNotificationPermission() {
-  // 实际询问权限的函数
-  function handlePermission(permission) {
-    // 根据用户的回答显示或隐藏按钮
-    notificationBtn.style.display =
-      Notification.permission === "granted" ? "none" : "block";
-  }
-
-  // 让我们检查一下浏览器是否支持通知
+  // 检查浏览器是否支持通知
   if (!("Notification" in window)) {
     console.log("此浏览器不支持通知。");
-  } else {
-    Notification.requestPermission().then((permission) => {
-      handlePermission(permission);
-    });
+    return;
   }
+  Notification.requestPermission().then((permission) => {
+    // 根据用户的回答显示或隐藏按钮
+    notificationBtn.style.display = permission === "granted" ? "none" : "block";
+  });
 }
 ```
 
 首先查看第二个主要块，你会发现我们首先检查是否支持通知。如果支持的话，我们接着运行基于 Promise 的 `Notification.requestPermission()` 版本，否则在控制台输出一条消息。
 
 为了避免重复代码，我们在 `handlePermission()` 函数中存储了一些内部代码，这是该代码段中的第一个主要块。在这里，我们明确设置了 `Notification.permission` 值（某些旧版本的 Chrome 无法自动执行此操作），并根据用户在权限对话框中选择的内容显示或隐藏按钮。如果已经授予许可，我们不想显示它，但如果用户选择拒绝许可，我们希望给他们稍后改变主意的机会。
+
+在传递给 `then` 的 promise 解析处理器中，我们根据用户在权限对话框中选择的内容显示或隐藏按钮。如果已经授予许可，我们不想显示它，但如果用户选择拒绝许可，我们希望给他们稍后改变主意的机会。
 
 ## 创建通知
 
@@ -124,9 +121,11 @@ document.addEventListener("visibilitychange", () => {
 });
 ```
 
-> **备注：** 此 API 不应仅用于在固定延迟后（在现代浏览器上）从屏幕上删除通知，因为此方法还会从任何通知托盘中删除通知，从而阻止用户在最初显示通知后与其进行交互。
+> [!NOTE]
+> 此 API 不应仅用于在固定延迟后（在现代浏览器上）从屏幕上删除通知，因为此方法还会从任何通知托盘中删除通知，从而阻止用户在最初显示通知后与其进行交互。
 
-> **备注：** 当你收到“关闭”事件时，无法保证是用户关闭了通知。这符合规范，其中规定：当底层通知平台或用户关闭通知时，必须运行其关闭步骤。
+> [!NOTE]
+> 当你收到“关闭”事件时，无法保证是用户关闭了通知。这符合规范，其中规定：当底层通知平台或用户关闭通知时，必须运行其关闭步骤。
 
 ## 通知事件
 

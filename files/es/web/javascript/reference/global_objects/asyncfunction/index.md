@@ -39,7 +39,8 @@ Los objetos {{jsxref("Statements/async_function", "async function")}} creados co
 
 Todos los argumentos que son pasados a la función son tratados por los nombres de los identificadores de los parámetros en la función creada, en el orden en que son pasados a la función.
 
-> **Nota:** Las {{jsxref("Statements/async_function", "async functions", "", 1)}} creadas con el constructor `AsyncFunction` no crean
+> [!NOTE]
+> Las {{jsxref("Statements/async_function", "async functions", "", 1)}} creadas con el constructor `AsyncFunction` no crean
 > [_closures_](/es/docs/Web/JavaScript/Closures) en sus contextos creados, siempre son creados en el contexto global.
 >
 > Cuando se ejecutan, solamente podran acceder a sus variables locales y globales, no a las variables de otros contextos en el cual

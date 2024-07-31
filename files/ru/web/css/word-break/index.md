@@ -118,6 +118,6 @@ word-break: unset;
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{cssxref("overflow-wrap")}}

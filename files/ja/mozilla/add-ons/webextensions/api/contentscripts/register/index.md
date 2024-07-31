@@ -19,7 +19,7 @@ var registering = browser.contentScripts.register(
 );
 ```
 
-### パラメーター
+### 引数
 
 - `contentScriptOptions`
 

@@ -43,7 +43,7 @@ l10n:
 
 #### DOM
 
-- `IDBObjectStore.createIndex()` の [`options.locale`](/ja/docs/Web/API/IDBObjectStore/createIndex#locale) パラメーターや、`IDBIndex` の [`isAutoLocale`](/ja/docs/Web/API/IDBIndex/isAutoLocale) および [`locale`](/ja/docs/Web/API/IDBIndex/locale) プロパティといった、[IndexedDB API](/ja/docs/Web/API/IndexedDB_API) のカスタムロケールのサポートが非推奨になりました。
+- `IDBObjectStore.createIndex()` の [`options.locale`](/ja/docs/Web/API/IDBObjectStore/createIndex#locale) 引数や、`IDBIndex` の [`isAutoLocale`](/ja/docs/Web/API/IDBIndex/isAutoLocale) および [`locale`](/ja/docs/Web/API/IDBIndex/locale) プロパティといった、[IndexedDB API](/ja/docs/Web/API/IndexedDB_API) のカスタムロケールのサポートが非推奨になりました。
   ([Firefox bug 1872675](https://bugzil.la/1872675) および [Firefox bug 1730706](https://bugzil.la/1730706))
 
 #### Media、WebRTC、Web Audio

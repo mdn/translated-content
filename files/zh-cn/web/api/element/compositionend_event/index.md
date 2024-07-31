@@ -3,6 +3,8 @@ title: compositionend
 slug: Web/API/Element/compositionend_event
 ---
 
+{{APIRef}}
+
 当文本段落的组成完成或取消时，compositionend 事件将被触发 (具有特殊字符的触发，需要一系列键和其他输入，如语音识别或移动中的字词建议)。
 
 <table class="properties">

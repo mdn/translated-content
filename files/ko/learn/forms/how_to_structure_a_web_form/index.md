@@ -318,7 +318,7 @@ HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두�
    </form>
    ```
 
-아래에서 완성된 폼을 확인할 수 있습니다. (GitHub에서도 확인할 수 있습니다. — payment-form.html [source](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.html) 와 [running live](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)를 확인 하세요):
+아래에서 완성된 폼을 확인할 수 있습니다. (GitHub에서도 확인할 수 있습니다. — payment-form.html [source](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.html) 와 [running live](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)를 확인 하세요)
 
 {{EmbedLiveSample("A_payment_form","100%",620)}}
 

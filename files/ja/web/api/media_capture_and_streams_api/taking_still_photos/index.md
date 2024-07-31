@@ -218,7 +218,8 @@ function takepicture() {
 
 次に、幅と高さがどちらも 0 でない場合（少なくとも有効な画像データがある可能性があるということ）、キャンバスの幅と高さをキャプチャしたフレームの幅と高さに一致するように設定し、 {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} を呼び出して動画の現在のフレームをコンテキストに描き、全体の画像をキャンバスで塗りつぶすようにします。
 
-> **メモ:** このインターフェイスは、`HTMLImageElement` を引数として受け入れる任意の API からは {{domxref("HTMLVideoElement")}} が {{domxref("HTMLImageElement")}} のように見えることを利用しており、動画の現在のフレームが画像のコンテンツとして表示されるように工夫されています。
+> [!NOTE]
+> このインターフェイスは、`HTMLImageElement` を引数として受け入れる任意の API からは {{domxref("HTMLVideoElement")}} が {{domxref("HTMLImageElement")}} のように見えることを利用しており、動画の現在のフレームが画像のコンテンツとして表示されるように工夫されています。
 
 キャンバスにはキャプチャした画像が格納されたら、{{domxref("HTMLCanvasElement.toDataURL()")}} を呼び出して PNG 形式に変換し、最後に {{domxref("Element.setAttribute", "photo.setAttribute()")}} を呼び出してキャプチャした静止画ボックスにその画像を表示させます。
 

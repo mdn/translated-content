@@ -2,16 +2,14 @@
 title: Notification
 slug: Web/API/Notification
 l10n:
-  sourceCommit: e97f2c3cca98616a37003005ddc149d370c40fd0
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 {{domxref("Notifications API", "", "", "nocode")}} 的 **`Notification`** 接口用于向用户配置和显示桌面通知。
 
 这些通知的外观和功能因平台而异，但通常它们提供了一种异步向用户提供信息的方式。
-
-{{AvailableInWorkers}}
 
 {{InheritanceDiagram}}
 
@@ -46,7 +44,7 @@ _还继承了其父接口 {{domxref("EventTarget")}} 的属性。_
 - {{domxref("Notification.body")}} {{ReadOnlyInline}}
   - : 在构造函数的 `options` 参数中指定的通知的正文字符串。
 - {{domxref("Notification.data")}} {{ReadOnlyInline}}
-  - : 返回一个通知的结构化克隆的数据。
+  - : 返回一个通知数据的结构化克隆。
 - {{domxref("Notification.dir")}} {{ReadOnlyInline}}
   - : 在构造函数的 `options` 参数中指定的通知的文本方向。
 - {{domxref("Notification.icon")}} {{ReadOnlyInline}}
@@ -133,7 +131,8 @@ function notifyMe() {
 
 在这里，我们不再展示一个在线实例，因为 Chrome 和 Firefox 不再允许从跨源的 {{htmlelement("iframe")}} 请求通知权限，其他浏览器会陆续跟进。要查看实际示例，请查看我们的[待办事项示例](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)（参见[在线运行的应用程序](https://mdn.github.io/dom-examples/to-do-notifications/)）。
 
-> **备注：** 在上面的示例中，我们生成了响应用户手势的通知（点击按钮）。这不仅仅是最佳实践——你不应该向用户发送它们不同意的通知——而且未来浏览器将明确的禁止未响应用户手势发出的通知。例如，Firefox 已经从版本 72 开始就这么做了。
+> [!NOTE]
+> 在上面的示例中，我们生成了响应用户手势的通知（点击按钮）。这不仅仅是最佳实践——你不应该向用户发送它们不同意的通知——而且未来浏览器将明确的禁止未响应用户手势发出的通知。例如，Firefox 已经从版本 72 开始就这么做了。
 
 ## 规范
 

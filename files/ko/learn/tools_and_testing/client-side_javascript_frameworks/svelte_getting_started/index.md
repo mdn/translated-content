@@ -51,7 +51,8 @@ Svelte는 HTML, CSS 및 JavaScript의 고전적인 웹 개발 모델을 고수�
 
 현재 주요한 단점은 신생 프레임워크라는 것입니다. 따라서 생태계는 성숙한 프레임워크보다 도구, 지원, 플러그인, 명확한 사용 패턴 등의 측면에서 더 제한적이며 일자리도 적습니다. 그러나 Svelte의 장점은 당신이 그것에 대해 관심을 갖도록 만들기에 충분할 것입니다.
 
-> **참고:** 최근 Svelte는 가장 요청이 많았던 기능 중 하나인 [공식 타입스크립트 지원](https://svelte.dev/blog/svelte-and-typescript)을 추가했습니다. 나중에 이 자습서 시리즈에서 살펴보겠습니다.
+> [!NOTE]
+> 최근 Svelte는 가장 요청이 많았던 기능 중 하나인 [공식 타입스크립트 지원](https://svelte.dev/blog/svelte-and-typescript)을 추가했습니다. 나중에 이 자습서 시리즈에서 살펴보겠습니다.
 
 [Svelte 공식 튜토리얼](https://svelte.dev/tutorial/basics)을 통해 기본 개념을 빠르게 숙지한 후 이 튜토리얼 시리즈로 돌아와서 좀 더 심도 있게 빌드하는 방법을 알아보시기 바랍니다.
 
@@ -106,7 +107,8 @@ npm install
 npm run dev
 ```
 
-> **참고:** degit은 마술 같은 것을 하지 않습니다. 단지 최신 버전의 git repo 콘텐츠를 다운로드하고 압축을 풀 수 있게 해줍니다. 리포지토리의 모든 기록을 다운로드하거나 완전한 로컬 복제본을 생성하지 않기 때문에 `git clone`을 사용하는 것보다 훨씬 빠릅니다.
+> [!NOTE]
+> degit은 마술 같은 것을 하지 않습니다. 단지 최신 버전의 git repo 콘텐츠를 다운로드하고 압축을 풀 수 있게 해줍니다. 리포지토리의 모든 기록을 다운로드하거나 완전한 로컬 복제본을 생성하지 않기 때문에 `git clone`을 사용하는 것보다 훨씬 빠릅니다.
 
 `npm run dev`를 실행한 후 Svelte는 애플리케이션을 컴파일하고 빌드합니다. `localhost:8080`에서 로컬 서버를 시작합니다. Svelte는 파일 업데이트를 감시하고 소스 파일이 변경되면 자동으로 앱을 다시 컴파일하고 새로 고칩니다. 브라우저에 다음과 같이 표시됩니다.
 
@@ -176,7 +178,8 @@ moz-todo-svelte
 <!-- 마크업(0 또는 다른 HTML 엘리먼트들)이 들어갑니다. -->
 ```
 
-> **참고:** 컴포넌트 형식에 대한 자세한 내용은 [Svelte 설명서](https://svelte.dev/docs#Component_format)를 참조하세요.
+> [!NOTE]
+> 컴포넌트 형식에 대한 자세한 내용은 [Svelte 설명서](https://svelte.dev/docs#Component_format)를 참조하세요.
 
 이를 염두에 두고 스타터 템플릿과 함께 제공되는 `src/App.svelte` 파일을 살펴보겠습니다. 다음과 같은 내용이 표시되어야 합니다.
 
@@ -282,7 +285,8 @@ Svelte에서 컴포넌트의 `<style>` 블록 내부 CSS는 해당 컴포넌트�
 
 앱을 컴파일할 때 Svelte는 `h1` 스타일 정의를 `h1.svelte-1tky8bj`로 변경한 다음 컴포넌트의 모든 `<h1>` 요소를 `<h1 class="svelte-1tky8bj">`로 수정합니다. 필요에 따라 스타일을 선택합니다.
 
-> **참고:** 이 동작을 재정의하고 `:global()` 한정자를 사용하여 전역적으로 선택기에 스타일을 적용할 수 있습니다([Svelte `<style>` 문서](https://svelte.dev/docs#style)를 보시면 더 많은 정보가 있습니다).
+> [!NOTE]
+> 이 동작을 재정의하고 `:global()` 한정자를 사용하여 전역적으로 선택기에 스타일을 적용할 수 있습니다([Svelte `<style>` 문서](https://svelte.dev/docs#style)를 보시면 더 많은 정보가 있습니다).
 
 ## 몇 가지 변경
 
@@ -418,7 +422,8 @@ npm run dev
 
 git 및 GitHub에 대해 자세히 알아보려면 저희가 정리한 유용한 가이드 링크 목록을 보세요. [Git 및 GitHub](/ko/docs/Learn/Tools_and_testing/GitHub)
 
-> **참고:** git repo를 복제하지 않고 파일을 다운로드하기만 하려면 `npx degit opensas/mdn-svelte-tutorial`과 같은 degit 도구를 사용할 수 있습니다. `npx degit opensas/mdn-svelte-tutorial/01-getting-started`를 사용하여 특정 폴더를 다운로드할 수도 있습니다. Degit은 로컬 git repo를 만들지 않고 지정된 폴더의 파일만 다운로드합니다.
+> [!NOTE]
+> git repo를 복제하지 않고 파일을 다운로드하기만 하려면 `npx degit opensas/mdn-svelte-tutorial`과 같은 degit 도구를 사용할 수 있습니다. `npx degit opensas/mdn-svelte-tutorial/01-getting-started`를 사용하여 특정 폴더를 다운로드할 수도 있습니다. Degit은 로컬 git repo를 만들지 않고 지정된 폴더의 파일만 다운로드합니다.
 
 ### Svelte REPL 사용
 
@@ -447,11 +452,13 @@ REPL을 시작하려면 브라우저를 열고 <https://svelte.dev/repl>로 이�
 
 REPL에서 파일을 변경할 때마다 Svelte는 앱을 다시 컴파일하고 결과 탭을 업데이트합니다. 앱을 공유하려면 URL을 공유하세요. 예를 들어 전체 앱을 실행하는 REPL 링크는 다음과 같습니다. <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>.
 
-> **참고:** URL에서 Svelte의 버전을 지정하는 방법에 유의하십시오. 이는 Svelte의 특정 버전과 관련된 문제를 보고할 때 유용합니다.
+> [!NOTE]
+> URL에서 Svelte의 버전을 지정하는 방법에 유의하십시오. 이는 Svelte의 특정 버전과 관련된 문제를 보고할 때 유용합니다.
 
 바로 코딩을 시작할 수 있도록 각 기사의 시작과 끝에 REPL을 제공합니다.
 
-> **참고:** 현재 REPL은 폴더 이름을 제대로 처리할 수 없습니다. REPL에 대한 자습서를 따르는 경우 루트 폴더 내에 모든 컴포넌트를 생성하십시오. 그런 다음 코드에 다음과 같은 경로를 본다면 (예: `import Todos from './components/Todos.svelte'`),곧장 일반 URL로 대체하세요 (예: `import Todos from './Todos.svelte'`).
+> [!NOTE]
+> 현재 REPL은 폴더 이름을 제대로 처리할 수 없습니다. REPL에 대한 자습서를 따르는 경우 루트 폴더 내에 모든 컴포넌트를 생성하십시오. 그런 다음 코드에 다음과 같은 경로를 본다면 (예: `import Todos from './components/Todos.svelte'`),곧장 일반 URL로 대체하세요 (예: `import Todos from './Todos.svelte'`).
 
 ## 지금까지의 코드
 

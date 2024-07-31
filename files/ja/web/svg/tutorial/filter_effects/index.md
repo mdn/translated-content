@@ -1,7 +1,11 @@
 ---
 title: フィルター効果
 slug: Web/SVG/Tutorial/Filter_effects
+l10n:
+  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Other_content_in_SVG", "Web/SVG/Tutorial/SVG_Fonts") }}
 
@@ -90,7 +94,7 @@ slug: Web/SVG/Tutorial/Filter_effects
 <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
 ```
 
-{{SVGElement('feGaussianBlur')}} は `in` "SourceAlpha" を受け取ります。これは元のグラフィックのアルファチャンネルで、 4 のぼかしを適用し，その結果を "blur" という名前の一時的なバッファーに格納します．
+{{SVGElement('feGaussianBlur')}} は `in` "SourceAlpha" を受け取ります。これは元のグラフィックのアルファチャンネルで、 4 のぼかしを適用します。その結果を "blur" という名前の一時的なバッファーに格納します．
 
 ### ステップ 2
 
@@ -98,7 +102,7 @@ slug: Web/SVG/Tutorial/Filter_effects
 <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
 ```
 
-{{SVGElement('feOffset')}} は、先ほど作成した `in` "blur" を取り込み、結果を右に 4、下に 4 シフトして、バッファー "offsetBlur" に格納するものです。最初の 2 つのプリミティブは、ドロップシャドウを作成するだけです。
+{{SVGElement('feOffset')}} は、先ほど作成した `in` "blur" を取り込み、結果を右に "4"、下に "4" シフトして、バッファー "offsetBlur" に格納するものです。最初の 2 つのプリミティブは、ドロップシャドウを作成するだけです。
 
 ### ステップ 3
 

@@ -59,6 +59,6 @@ Notifications API позволяют web-страницам контролиро
 }
 ```
 
-## See also
+## Смотрите также
 
 - [Использование Notifications API](/ru/docs/Web/API/Notifications_API/Using_the_Notifications_API)

@@ -77,7 +77,8 @@ slug: Web/HTML/Element/search
 
 {{EmbedLiveSample('Web 應用程式搜尋')}}
 
-> **備註：** 請記住，一些用戶沒有 JavaScript，且在 JavaScript 成功下載、解析和執行之前，沒有任何用戶運行 JavaScript，請確保你的用戶可以在禁用 JavaScript 的情況下訪問你站點的內容。
+> [!NOTE]
+> 請記住，一些用戶沒有 JavaScript，且在 JavaScript 成功下載、解析和執行之前，沒有任何用戶運行 JavaScript，請確保你的用戶可以在禁用 JavaScript 的情況下訪問你站點的內容。
 
 ### 多個搜尋
 
@@ -128,7 +129,7 @@ slug: Web/HTML/Element/search
     </tr>
     <tr>
       <th scope="row">標籤省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>不允許，開始和結束標籤都是必須的。</td>
     </tr>
     <tr>
       <th scope="row">隱含 ARIA 角色</th>

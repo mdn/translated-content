@@ -1,9 +1,11 @@
 ---
 title: FileSystemDirectoryHandle：resolve() 方法
 slug: Web/API/FileSystemDirectoryHandle/resolve
+l10n:
+  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 {{domxref("FileSystemDirectoryHandle")}} 接口的 **`resolve()`** 方法返回一个 {{jsxref('Promise')}} 对象，会兑现一个包含从父目录前往指定子条目中间的目录的名称的{{jsxref('Array', '数组', '', 'nocode')}}。数组的最后一项是子条目的名称。
 
@@ -65,4 +67,4 @@ async function returnPathDirectories(directoryHandle) {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/articles/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

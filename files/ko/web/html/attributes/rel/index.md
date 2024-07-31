@@ -428,8 +428,7 @@ slug: Web/HTML/Attributes/rel
         details on which links can be prefetched and on alternative methods.
       </td>
       <td>
-        {{HTMLElement("a")}} {{unimplemented_inline}},<br />{{HTMLElement("area")}}
-        {{unimplemented_inline}},<br />{{HTMLElement("link")}}
+        {{HTMLElement("a")}}, <br />{{HTMLElement("area")}}, <br />{{HTMLElement("link")}}
       </td>
       <td><em>None.</em></td>
     </tr>

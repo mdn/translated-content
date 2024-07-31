@@ -71,7 +71,8 @@ l10n:
 
 ![ドキュメントオブジェクトモデルをツリー構造で表現したもの。トップノードは doctype と HTML 要素です。 HTML の子ノードには、 head と body が記載されます。それぞれの子要素が分岐となる。テキストは、空白も含めてすべて表示されます。](dom-screenshot.png)
 
-> **メモ:** この DOM ツリーの図は Ian Hickson の [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/) を使って作成しました。
+> [!NOTE]
+> この DOM ツリーの図は Ian Hickson の [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/) を使って作成しました。
 
 ツリーのそれぞれの項目は、ノードと呼ばれます。上の図では、ノードには要素（`HTML`、`HEAD`、`META` などと識別される）を表すものや 、テキスト（`#text` と識別される）を表すものがあることが分かります。[他の種類のノード](/ja/docs/Web/API/Node/nodeType)もありますが、よく見かけるものはこれらのものです。
 
@@ -97,7 +98,7 @@ DOM 操作の学習を始めるにあたり、まずは実践的な例から始�
    const link = document.querySelector("a");
    ```
 
-4. 要素への参照を変数に保存したので、これが備えているプロパティとメソッドを使って DOM の操作を始められます (利用できるプロパティとメソッドは、たとえば {{htmlelement("a")}} 要素であれば {{domxref("HTMLAnchorElement")}} インターフェース、さらにその汎化した親のインターフェース {{domxref("HTMLElement")}} や {{domxref("Node")}} — これは DOM の全てノードが相当します — で定義されています)。まずは、リンクの中のテキストを、{{domxref("Node.textContent")}} プロパティを更新する事で変更してみましょう。上で書いた行の下に、次の行を追加して下さい。
+4. 要素への参照を変数に保存したので、これが備えているプロパティとメソッドを使って DOM の操作を始められます (利用できるプロパティとメソッドは、たとえば {{htmlelement("a")}} 要素であれば {{domxref("HTMLAnchorElement")}} インターフェイス、さらにその汎化した親のインターフェイス {{domxref("HTMLElement")}} や {{domxref("Node")}} — これは DOM の全てノードが相当します — で定義されています)。まずは、リンクの中のテキストを、{{domxref("Node.textContent")}} プロパティを更新する事で変更してみましょう。上で書いた行の下に、次の行を追加して下さい。
 
    ```js
    link.textContent = "Mozilla Developer Network";
@@ -217,7 +218,8 @@ linkPara.parentNode.removeChild(linkPara);
    </p>
    ```
 
-> **メモ:** JavaScript のプロパティ版では、 CSS スタイルが小文字のキャメルケースで書かれているのに対し、 CSS 版はハイフン区切りで書かれていることに注意してください（例: `backgroundColor` と `background-color`）。これらを混合しないように注意してください。さもなければ、これは動作しません。
+> [!NOTE]
+> JavaScript のプロパティ版では、 CSS スタイルが小文字のキャメルケースで書かれているのに対し、 CSS 版はハイフン区切りで書かれていることに注意してください（例: `backgroundColor` と `background-color`）。これらを混合しないように注意してください。さもなければ、これは動作しません。
 
 ドキュメントのスタイルを動的にいじる際によく使われる別のやり方をこれから見ていきましょう。
 
@@ -250,7 +252,8 @@ linkPara.parentNode.removeChild(linkPara);
 
 次の節では、 DOM API をより有用に使用する方法を見ていきます。
 
-> **メモ:** 私たちの [dom-example.html の完成版](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example-manipulated.html) のデモが GitHub にあります（[ライブ実行版も](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)）。
+> [!NOTE]
+> 私たちの [dom-example.html の完成版](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example-manipulated.html) のデモが GitHub にあります（[ライブ実行版も](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)）。
 
 ## アクティブラーニング: 動的な買い物リスト
 
@@ -278,7 +281,8 @@ linkPara.parentNode.removeChild(linkPara);
 10. 削除ボタンにイベントハンドラーを追加して、クリックされたらボタンが含まれているリスト項目全体を削除するようにします。
 11. 最後に、[`focus()`](/ja/docs/Web/API/HTMLElement/focus) メソッドを使って input 要素にフォーカスし、次の買い物リスト商品をすぐに入力できるようにします。
 
-> **メモ:** 本当にどうしようもなく詰まったら、私たちの[完成版の買い物リスト](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html)を見てください（[ライブ実行版](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html)も見てください）。
+> [!NOTE]
+> 本当にどうしようもなく詰まったら、私たちの[完成版の買い物リスト](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html)を見てください（[ライブ実行版](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html)も見てください）。
 
 ## まとめ
 

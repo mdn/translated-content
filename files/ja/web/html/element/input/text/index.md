@@ -2,7 +2,7 @@
 title: <input type="text">
 slug: Web/HTML/Element/input/text
 l10n:
-  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
+  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
 ---
 
 {{HTMLSidebar}}
@@ -31,19 +31,19 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### `maxlength`
 
-ユーザーが `text` 入力欄に入力することができる (UTF-16 コード単位での) 最大文字数です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、 `text` 入力欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
+ユーザーが `text` 入力欄に入力することができる (UTF-16 コード単位での) 最大文字列長です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、 `text` 入力欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
 
 フィールドのテキスト値の長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
 ### `minlength`
 
-ユーザーが `text` 入力欄に入力することができる (UTF-16 コード単位での) 最小文字数です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、 `text` 入力欄には最小文字数が設定されません。
+ユーザーが `text` 入力欄に入力することができる (UTF-16 コード単位での) 最小文字列長です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、 `text` 入力欄には最小文字数が設定されません。
 
 入力欄のテキスト値の長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
 ### `pattern`
 
-`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
+`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは {{Glossary("ASCII")}} ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
@@ -57,13 +57,15 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 コントロールの内容がある書字方向 ({{Glossary("LTR")}} または {{Glossary("RTL")}}) であるものの、プレイスホルダーを逆の方向に表示する必要がある場合、 Unicode 双方向アルゴリズム書式文字を使用してプレイスホルダーの中で書字方向を上書きすることができます。詳しくは、[双方向テキストでの Unicode コードの使い方（英語）](https://www.w3.org/International/questions/qa-bidi-unicode-controls)を参照してください。
 
-> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のアクセシビリティの考慮](/ja/docs/Web/HTML/Element/input#アクセシビリティの考慮)を参照してください。
+> [!NOTE]
+> 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のアクセシビリティの考慮](/ja/docs/Web/HTML/Element/input#アクセシビリティの考慮)を参照してください。
 
 ### `readonly`
 
 論理属性で、存在すれば、ユーザーが編集することができないことを表します。しかし、 `value` は、 JavaScript コードから直接 {{domxref("HTMLInputElement")}} の `value` プロパティを設定することで変更することができます。
 
-> **メモ:** 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
+> [!NOTE]
+> 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
 
 ### `size`
 
@@ -99,11 +101,11 @@ Safari 拡張である `autocorrect` 属性は文字列で、ユーザーがこ�
 - `off`
   - : 自動修正やテキストの置き換えを無効にします。
 
-### `mozactionhint`
+### `mozactionhint` {{deprecated_inline}}
 
 Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押した場合に行われるアクションの種類のヒントを提供します。
 
-この属性は非推奨です。代わりにグローバル属性 [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes#enterkeyhint) を使用してください。
+**非推奨: 代わりに [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes#enterkeyhint) を使用してください。**
 
 ## テキスト入力欄の使用
 
@@ -178,7 +180,8 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 `text` 型の `<input>` 要素には、適用される自動的な検証はありませんが（基本的なテキスト入力欄は、自由な文字列を受け付けることが求められるからです）、以下に解説するように、クライアント側の検証のオプションがいくつか利用できます。
 
-> **メモ:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するサーバースクリプトの代用には*なりません*。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ（または大きすぎるデータ、間違った種類のデータなど）がデータベースに入力された場合に災害が発生するおそれがあります。
+> [!NOTE]
+> HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するサーバースクリプトの代用には*なりません*。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ（または大きすぎるデータ、間違った種類のデータなど）がデータベースに入力された場合に災害が発生するおそれがあります。
 
 ### スタイル付けのメモ
 
@@ -383,7 +386,7 @@ input:valid + span::after {
       <td><strong>イベント</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>

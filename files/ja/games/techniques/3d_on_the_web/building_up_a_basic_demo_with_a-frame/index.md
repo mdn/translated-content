@@ -20,7 +20,7 @@ A-Frame で何かを作るために環境設定を始めましょう。デモを
 - WebGL に十分対応している最新のブラウザー (もし利用可能な VR ハードウェアがある場合は WebVR に対応しているブラウザー)、例えば最新の Firefox や Chrome を使っているか確認してください。 [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/) または Chrome (v54 以降) をダウンロードしてください。
 - (必要に応じて) Oculus Rift や Google Cardboard のような VR 機器をセットアップします。
 - プロジェクトを保存する新しいディレクトリーを作成します。
-- そのディレクトリーに、最新の [A-Frame JavaScript ライブラリーファイル](https://github.com/aframevr/aframe/tree/master/dist) (GitHub 最新の安定開発版リポジトリーを確認してください) のコピーを保存します。
+- そのディレクトリーに、最新の [A-Frame JavaScript ライブラリーファイル](https://github.com/aframevr/aframe/tree/main/dist) (GitHub 最新の安定開発版リポジトリーを確認してください) のコピーを保存します。
 - 別のタブで [A-Frame documentation](https://aframe.io/docs/) を開いておきます — 参照するのに便利なので。
 
 ## HTML の構造
@@ -47,7 +47,8 @@ A-Frame で何かを作るために環境設定を始めましょう。デモを
 
 シーンは、すべてが起こる場所です。このデモでは新しいオブジェクトを作成したら、それら全てをシーンへ追加していきます。そうすることで、それらのオブジェクトが画面上に表示されるようになります。 A-Frame の中では、シーンは [Scene エンティティ](https://aframe.io/docs/core/scene.html)で表現されます。
 
-> **メモ:** エンティティは任意の要素です — box や cylinder や cone のようなオブジェクトだけでなく、camera、light、sound sourceもエンティティです。
+> [!NOTE]
+> エンティティは任意の要素です — box や cylinder や cone のようなオブジェクトだけでなく、camera、light、sound sourceもエンティティです。
 
 `<body>` 要素の中に `<a-scene>` 要素を追加して、シーンを作成しましょう。
 
@@ -65,7 +66,8 @@ A-Frame で何かを作るために環境設定を始めましょう。デモを
 
 いくつかの定義済み引数、 `color`、`position`、`rotation` が含まれています。かなり分かりやすいと思いますが、立方体の色や 3D シーン内の位置、そして立方体の回転状態を定義しています。
 
-> **メモ:** 距離の値 (例えば、立方体の y 方向の位置) は単位がなく、シーンに適切と思える好きな単位 — ミリメートル、メートル、フィート、マイル — と考えてください。あなた次第です。
+> [!NOTE]
+> 距離の値 (例えば、立方体の y 方向の位置) は単位がなく、シーンに適切と思える好きな単位 — ミリメートル、メートル、フィート、マイル — と考えてください。あなた次第です。
 
 ### 背景の追加: スカイボックス
 

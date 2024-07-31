@@ -67,7 +67,8 @@ MIDDLEWARE = [
 
 아래 코드는 key 값이 `"my_car"` 인 데이터를 어떻게 읽고 쓰고 삭제하는지 보여줍니다. 물론 그 key 값은 현재의 session (브라우저와 사이트의 연결정보) 과 연관되어진 key 입니다.
 
-> **참고:** 장고가 대단한점 한가지는 여러분이 이런 session 의 매카니즘에 생각하지 않게끔 한다는 점입니다. 만일 view 안에 있는 아래의 code 를 사용하면 **오직 현재의 브라우저만**이 현재의 request 에 관한 `my_car` 정보를 알 수 있다는 겁니다.
+> [!NOTE]
+> 장고가 대단한점 한가지는 여러분이 이런 session 의 매카니즘에 생각하지 않게끔 한다는 점입니다. 만일 view 안에 있는 아래의 code 를 사용하면 **오직 현재의 브라우저만**이 현재의 request 에 관한 `my_car` 정보를 알 수 있다는 겁니다.
 
 ```python
 # Get a session value by its key (e.g. 'my_car'), raising a KeyError if the key is not present
@@ -104,7 +105,8 @@ request.session['my_car']['wheels'] = 'alloy'
 request.session.modified = True
 ```
 
-> **참고:** You can change the behavior so the site will update the database/send cookie on every request by adding `SESSION_SAVE_EVERY_REQUEST = True` into your project settings (**locallibrary/locallibrary/settings.py**).
+> [!NOTE]
+> You can change the behavior so the site will update the database/send cookie on every request by adding `SESSION_SAVE_EVERY_REQUEST = True` into your project settings (**locallibrary/locallibrary/settings.py**).
 
 ## 간단한 예제 — 방문자수 받아오기
 
@@ -134,7 +136,8 @@ def index(request):
 
 먼저 `'num_visits'` 세션 키 값을 가져오도록 합니다, 그리고 만약 전에 방문한적이 없다면 0이 되도록 합니다. 매번 요청받을 때 마다, 값을 증가시키고 세션에 값을 저장합니다 (유저의 다음 방문을 위해서요). context 변수를 통해 template에 `num_visits` 변수가 전달됩니다.
 
-> **참고:** 이 지점에서 우리는 브라우저가 쿠키를 지원하는 지 그렇지 않은지 테스트할 수도 있습니다(예제로서 [How to use sessions](https://docs.djangoproject.com/en/2.0/topics/http/sessions/) 를 보도록하십시오). 또한 쿠키를 지원하는 지와는 별개로 UI를 디자인할 것입니다.
+> [!NOTE]
+> 이 지점에서 우리는 브라우저가 쿠키를 지원하는 지 그렇지 않은지 테스트할 수도 있습니다(예제로서 [How to use sessions](https://docs.djangoproject.com/en/2.0/topics/http/sessions/) 를 보도록하십시오). 또한 쿠키를 지원하는 지와는 별개로 UI를 디자인할 것입니다.
 
 메인 HTML template(**/locallibrary/catalog/templates/index.html**) "Dynamic content" 섹션 밑 부분에 context 변수가 보일 수 있도록 밑에 보이는 굵은 선으로 표시된 코드를 추가해주세요:
 

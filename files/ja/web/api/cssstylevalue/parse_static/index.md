@@ -1,24 +1,25 @@
 ---
-title: CSSStyleValue.parse()
+title: "CSSStyleValue: parse() 静的メソッド"
+short-title: parse()
 slug: Web/API/CSSStyleValue/parse_static
 l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 **`parse()`** は {{domxref("CSSStyleValue")}} インターフェイスのメソッドで、特定の CSS プロパティを指定された値に設定し、最初の値を {{domxref('CSSStyleValue')}} オブジェクトとして返します。
 
 ## 構文
 
 ```js-nolint
-parse(property, cssText)
+CSSStyleValue.parse(property, cssText)
 ```
 
 ### 引数
 
 - `property`
-  - : 設定する CSS プロパティ
+  - : 設定する CSS プロパティ。
 - `cssText`
   - : 指定されたプロパティに適用する 1 つ以上の値を含む、カンマで区切られた文字列。
 
@@ -52,6 +53,7 @@ CSSTransformValue {0: CSSTranslate, 1: CSSScale, length: 2, is2D: false}
 
 ## 関連情報
 
-- {{domxref("CSSStyleValue.parseAll()")}}
+- [`CSSStyleValue.parseAll()`](/ja/docs/Web/API/CSSStyleValue/parseAll_static)
+
 - [CSS 型付きオブジェクトモデルの使用](/ja/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_OM_API)

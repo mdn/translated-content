@@ -43,7 +43,7 @@ l10n:
 
 - `script.evaluate`、`script.callFunction`、`script.disown` コマンドの `target` 引数でレルムをサポートしました ([Firefox バグ 1779231](https://bugzil.la/1779231))。
 
-- `WeakMap` や `Uint8Array` など、コンテナ型の値フィールドを持つ複雑なオブジェクトの JSON シリアライズをサポートしました ([Firefox バグ 1770754](https://bugzil.la/1770754))。
+- `WeakMap` や `Uint8Array` など、コンテナー型の値フィールドを持つ複雑なオブジェクトの JSON シリアライズをサポートしました ([Firefox バグ 1770754](https://bugzil.la/1770754))。
 
 - `browsingContext.create` コマンドの `context` 引数をサポートしました。既存のタブに関連する新しいタブを開くことができます ([Firefox バグ 1765619](https://bugzil.la/1765619))。
 

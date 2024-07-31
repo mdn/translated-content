@@ -13,7 +13,7 @@ Firefox 61 は、米国時間 2018 年 6 月 26 日 にリリースされまし�
 
 - [アクセシビリティインスペクター](/ja/docs/Tools/Accessibility_inspector) を実装しました。
 - [ブラウザーコンソール](/ja/docs/Tools/Browser_Console) と [ブラウザーツールボックス](/ja/docs/Tools/Browser_Toolbox) で、新しい意匠のコンソール UI をデフォルトで有効化しました ([Firefox バグ 1362023](https://bugzil.la/1362023)/[Firefox バグ 1347127](https://bugzil.la/1347127))。古い UI は削除しました。
-- [ネットワークモニター](/ja/docs/Tools/Network_Monitor) で `POST` 要求のコンテキストメニューの \[_新しいタブで開く_] をクリックすると、想定どおりの `POST` パラメーターを付加した要求を正しく再送信するようになりました ([Firefox バグ 1407515](https://bugzil.la/1407515))。
+- [ネットワークモニター](/ja/docs/Tools/Network_Monitor) で `POST` リクエストのコンテキストメニューの \[_新しいタブで開く_] をクリックすると、想定どおりの `POST` 引数を付加したリクエストを正しく再送信するようになりました ([Firefox バグ 1407515](https://bugzil.la/1407515))。
 - それぞれの変数にどの色の値が保存されているかを明確にするため、色見本をつけて [CSS 変数のオートコンプリート](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#CSS_variable_autocompletion) を行うようになりました ([Firefox バグ 1451211](https://bugzil.la/1451211))。
 
   - さらに、CSS 変数名にマウスポインターを載せると、変数に保存されている色の値をツールチップで表示します ([Firefox バグ 1431949](https://bugzil.la/1431949))。
@@ -64,7 +64,7 @@ _変更なし。_
 - `grid-gap`、`grid-row-gap`、`grid-column-gap` プロパティを {{cssxref("gap")}}、{{cssxref("row-gap")}}、{{cssxref("column-gap")}} に改名しました。これらはグリッド固有のプロパティではなくなりました ([Firefox バグ 1398482](https://bugzil.la/1398482))。詳しくは [Box alignment; Gaps between boxes](/ja/docs/Web/CSS/CSS_Box_Alignment#Gaps_between_boxes) をご覧ください。ウェブ互換性のために、古い名称を別名として維持しています。
 - {{cssxref("flex-basis")}} の値 `content` をサポートしました ([Firefox バグ 1105111](https://bugzil.la/1105111))。
 - {{cssxref("column-gap")}} のパーセンテージ値を、[CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_Columns) でサポートしました ([Firefox バグ 1398537](https://bugzil.la/1398537))。
-- CSS の {{cssxref(":host")}} 疑似クラスをサポートしました。これは、shadow DOM 内のカスタム要素を選択します ([Firefox バグ 992245](https://bugzil.la/992245))。
+- CSS の {{cssxref(":host")}} 擬似クラスをサポートしました。これは、shadow DOM 内のカスタム要素を選択します ([Firefox バグ 992245](https://bugzil.la/992245))。
 - {{cssxref("overflow")}} が 2 値構文を受け入れるようになりました ([Firefox バグ 1453148](https://bugzil.la/1453148))。
 - 内容物によってサイズが決まる Flex アイテムは、`fit-content` ではなく `max-content` を使用してサイズが決まるようになりました ([Firefox バグ 1282821](https://bugzil.la/1282821))。これらの値について、詳しくは [`width` の値の定義](/ja/docs/Web/CSS/width#Values) をご覧ください。
 - {{cssxref("font-weight")}}、{{cssxref("font-stretch")}}、{{cssxref("font-style")}} で、[CSS Fonts level 4](https://drafts.csswg.org/css-fonts-4/) で定義された追加の値をサポートしました ([Firefox バグ 1436048](https://bugzil.la/1436048)):

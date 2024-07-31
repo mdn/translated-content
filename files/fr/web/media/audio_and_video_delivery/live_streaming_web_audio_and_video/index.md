@@ -1,8 +1,9 @@
 ---
 title: Live streaming web Audio et Vidéo
 slug: Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video
-original_slug: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 ---
+
+{{QuickLinksWithSubpages("/fr/docs/Web/Media")}}
 
 La technologie de _live streaming_ (diffusion en direct) est souvent utilisée pour relayer des événements en direct, tels que le sport, les concerts, ou de manière plus générale les programmes TV et radio en direct. Souvent raccourci au simple terme de _streaming_, le live streaming est le processus de transmissions d'un média _live_ (c'est à dire dynamique et non statique) aux ordinateurs et aux périphériques. C'est un sujet assez complexe et nouveau avec beaucoup de variables à prendre en considération, dans cet article nous allons vous introduire le sujet et vous donner des clés pour démarrer.
 
@@ -44,13 +45,15 @@ Real Time Messaging Protocol (RTMP) est un protocole propriétaire développée 
 
 Real Time Streaming Protocol (RTSP) contrôle les sessions média entre les entités et il est souvent utilisé en combinaison avec Real-time Transport Protocol (RTP) et Real-time Control Protocol (RTCP) pour délivrer des flux média. Utiliser RTP avec RTCP permet un streaming adaptatif. Il n'est pas encore suporté nativement par la plupart des navigateurs, mais [Firefox OS 1.3 supporte RTSP](http://www.mozilla.org/en-US/firefox/os/notes/1.3/).
 
-> **Note :** Certains fournisseurs implémentent des protocoles de transfert propriétaires, tel que RealNetworks et leur Real Data Transport (RDT).
+> [!NOTE]
+> Certains fournisseurs implémentent des protocoles de transfert propriétaires, tel que RealNetworks et leur Real Data Transport (RDT).
 
 ### RTSP 2.0
 
 RTSP 2.0 est actuellement en cours de développement, il n'est pas rétro-compatible avec RTSP 1.0.
 
-> **Attention :** Bien que les balises {{ htmlelement("audio") }} et {{ htmlelement("video") }} soient agnostiques de tout protocole, aucun navigateur ne supporte actuellement autre chose que HTTP sans nécessiter de plugin, bien que cela semble être parti pour changer. De plus, les protocoles autres que HTTP peuvent être bloqués par des pare-feu et des serveurs proxy.
+> [!WARNING]
+> Bien que les balises {{ htmlelement("audio") }} et {{ htmlelement("video") }} soient agnostiques de tout protocole, aucun navigateur ne supporte actuellement autre chose que HTTP sans nécessiter de plugin, bien que cela semble être parti pour changer. De plus, les protocoles autres que HTTP peuvent être bloqués par des pare-feu et des serveurs proxy.
 
 ## Utiliser des protocoles de streaming
 
@@ -70,13 +73,15 @@ Par exemple:
 
 Par exemple, [vous pourriez implémenter MPEG-DASH en utilisant JavaScript tout en laissant le décodage à la charge de MSE](http://msopentech.com/blog/2014/01/03/streaming_video_player/).
 
-> **Note :** Le décalage temporel est le processus de lire un live stream quelque temps après qu'il ait été diffusé.
+> [!NOTE]
+> Le décalage temporel est le processus de lire un live stream quelque temps après qu'il ait été diffusé.
 
 ## Formats de fichiers Vidéo en Streaming
 
 Quelques formats de vidéo en live streaming HTTP commençent à être pris en charge parmi les navigateurs.
 
-> **Note :** Vous pouvez trouver un guide pour encoder HLS et MPEG-DASH pour une utilisation sur le web sur [Configuration de sources multimédia en streaming adaptatif](/fr/Apps/Build/Manipulating_media/Setting_up_adaptive_streaming_media_sources).
+> [!NOTE]
+> Vous pouvez trouver un guide pour encoder HLS et MPEG-DASH pour une utilisation sur le web sur [Configuration de sources multimédia en streaming adaptatif](/fr/Apps/Build/Manipulating_media/Setting_up_adaptive_streaming_media_sources).
 
 ### MPEG-DASH
 
@@ -84,7 +89,8 @@ DASH est l'acronyme de Dynamic Adaptive Streaming over HTTP, c'est un nouveau fo
 
 Cette approche permet de télécharger des segments de flux vidéo en utilisant XHR et en "ajoutant" le segment au flux en cours de lecture par l'élément {{ htmlelement("video") }}. Ainsi, par exemple, si l'on détecte que le réseau est lent, on peut demander des segments de moins bonne qualité (plus petits) en cours de route. Cette technologie permet également d'ajouter/insérer un segment publicitaire dans le flux.
 
-> **Note :** Vous pouvez également [utiliser WebM avec le système de streaming adaptatif MPEG DASH](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification).
+> [!NOTE]
+> Vous pouvez également [utiliser WebM avec le système de streaming adaptatif MPEG DASH](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification).
 
 ### HLS
 
@@ -136,7 +142,8 @@ Actuellement, Opus est supporté par Firefox (bureau et mobile) ainsi que les de
 
 Les formats audio les plus courants peuvent être diffusés en stream en utilisant des technologies spécifiques côté serveur.
 
-> **Note :** Il est plus facile de diffuser de l'audio en stream en utilisant des formats qui n'ont pas été conçu pour car, contrairement aux vidéos, il n'y a pas de keyframes.
+> [!NOTE]
+> Il est plus facile de diffuser de l'audio en stream en utilisant des formats qui n'ont pas été conçu pour car, contrairement aux vidéos, il n'y a pas de keyframes.
 
 ## Technologies de Streaming côté serveur
 
@@ -160,7 +167,8 @@ Pour le transfert RTMP, vous pouvez utiliser le [module Nginx RTMP](https://gith
 
 Le serveur [Icecast](http://www.icecast.org/) est une technologie open source pour diffuser des média en streaming. Maintenu par [Xiph.org Foundation](http://www.xiph.org/), il diffuse les formats Ogg Vorbis/Theora ainsi que MP3 et AAC via le protocole SHOUTcast.
 
-> **Note :** SHOUTcast et Icecast font partie des technologies les plus répandues et les plus populaires, mais il existe de nombreux [autres systèmes de diffusion en streaming disponibles](http://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers).
+> [!NOTE]
+> SHOUTcast et Icecast font partie des technologies les plus répandues et les plus populaires, mais il existe de nombreux [autres systèmes de diffusion en streaming disponibles](http://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers).
 
 ### Services de Streaming
 

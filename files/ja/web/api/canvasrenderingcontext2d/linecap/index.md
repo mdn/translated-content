@@ -1,21 +1,21 @@
 ---
-title: CanvasRenderingContext2D.lineCap
+title: "CanvasRenderingContext2D: lineCap プロパティ"
+short-title: lineCap
 slug: Web/API/CanvasRenderingContext2D/lineCap
+l10n:
+  sourceCommit: c8b447485fd893d5511d88f592f5f3aec29a725b
 ---
 
 {{APIRef}}
 
 **`CanvasRenderingContext2D.lineCap`** はキャンバス 2D API のプロパティで、描く線の端点の形状を設定します。
 
-> **メモ:** 線は {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}、{{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}、{{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} の各メソッドで描画されます。
+> [!NOTE]
+> 線は {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}、{{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}、{{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} の各メソッドで描画されます。
 
-## 構文
+## 値
 
-```js
-ctx.lineCap = "butt" || "round" || "square";
-```
-
-### オプション
+以下のいずれかです。
 
 - `"butt"`
   - : 端点が四角く切られます。既定値です。
@@ -67,7 +67,6 @@ ctx.stroke();
 ```js
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-const lineCap = ["butt", "round", "square"];
 
 // Draw guides
 ctx.strokeStyle = "#09f";
@@ -80,18 +79,17 @@ ctx.stroke();
 
 // Draw lines
 ctx.strokeStyle = "black";
-for (let i = 0; i < lineCap.length; i++) {
+["butt", "round", "square"].forEach((lineCap, i) => {
   ctx.lineWidth = 15;
-  ctx.lineCap = lineCap[i];
+  ctx.lineCap = lineCap;
   ctx.beginPath();
   ctx.moveTo(25 + i * 50, 10);
   ctx.lineTo(25 + i * 50, 140);
   ctx.stroke();
-}
+});
 ```
 
-{{EmbedLiveSample("Comparison_of_line_caps", "180", "180",
-  "canvas_linecap.png")}}
+{{EmbedLiveSample("Comparison_of_line_caps", "180", "180")}}
 
 ## 仕様書
 
@@ -107,7 +105,7 @@ for (let i = 0; i < lineCap.length; i++) {
 
 ## 関連情報
 
-- The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
+- このプロパティを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.lineWidth")}}
 - {{domxref("CanvasRenderingContext2D.lineJoin")}}
 - [スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)

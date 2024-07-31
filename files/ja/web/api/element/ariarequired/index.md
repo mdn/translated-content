@@ -10,7 +10,8 @@ l10n:
 
 **`ariaRequired`** は {{domxref("Element")}} インターフェイスのプロパティで、フォームを送信する前にユーザー入力が必要であることを示す `aria-required` 属性の値を反映します。
 
-> **メモ:** 使用可能な場合は、HTML の {{htmlelement("input")}} 要素で `type="text"` と {{htmlelement("textarea")}} を使用してください。
+> [!NOTE]
+> 使用可能な場合は、HTML の {{htmlelement("input")}} 要素で `type="text"` と {{htmlelement("textarea")}} を使用してください。
 
 ## 値
 

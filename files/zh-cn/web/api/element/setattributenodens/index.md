@@ -1,47 +1,63 @@
 ---
-title: Element.setAttributeNodeNS()
+title: Element：setAttributeNodeNS() 方法
 slug: Web/API/Element/setAttributeNodeNS
+l10n:
+  sourceCommit: f51e2e24bdd46507e78aa2477ae9b1bedbbb7ee0
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}
 
-`setAttributeNodeNS` 可以给一个元素添加一个新的命名空间的属性节点。
+{{domxref("Element")}} 接口的 **`setAttributeNodeNS()`** 方法为元素添加一个新的限定命名空间的 {{domxref("Attr")}} 节点。
 
-（如果对中文有疑惑，请直接阅读原文）
+如果你并不想在添加时使用属性节点（例如从另一个元素克隆），你可以改用 {{domxref("Element.setAttributeNS()", "setAttributeNS()")}} 方法。
 
-## Syntax
+如果你正在处理 HTML 文档，并且你不需要指定要添加的属性属于特定的命名空间，那么使用 {{domxref("Element.setAttribute()", "setAttribute()")}} 方法即可。
 
-```plain
-replacedAttr = element.setAttributeNodeNS(attributeNode)
+## 语法
+
+```js-nolint
+setAttributeNodeNS(attributeNode)
 ```
 
-- `replacedAttr` 是被替换的节点，如果存在，由此函数返回。
-- `attributeNode` 是一个属性节点。
+### 参数
 
-## Example
+- `attributeNode`：一个属性（`Attr`）节点。
 
-```plain
+### 返回值
+
+如果存在被替换的属性节点，则该函数返回该节点。
+
+## 示例
+
+```js
 // <div id="one" xmlns:myNS="http://www.mozilla.org/ns/specialspace"
-            myNS:special-align="utterleft">one</div>
-// <div id="two">two</div>
+//            myNS:special-align="utterleft">一</div>
+// <div id="two">二</div>
 
-
-var myns = "http://www.mozilla.org/ns/specialspace";
-var d1 = document.getElementById("one");
-var d2 = document.getElementById("two");
-var a = d1.getAttributeNodeNS(myns, "special-align");
+const myns = "http://www.mozilla.org/ns/specialspace";
+const d1 = document.getElementById("one");
+const d2 = document.getElementById("two");
+const a = d1.getAttributeNodeNS(myns, "special-align");
 d2.setAttributeNodeNS(a.cloneNode(true));
-alert(d2.attributes[1].value) // returns: `utterleft'
+alert(d2.attributes[1].value); // 返回：“utterleft”
 ```
 
-## Notes
+## 备注
 
-如果指定的属性在元素上存在，接着此属性被新的属性替换的话被替换的属性会被返回。
+如果元素中已存在指定的属性，则该属性将被替换为新的属性，并返回被替换的属性。
 
-注意：如果你尝试设置的时候没有克隆那个节点，Mozia 会抛出一个 NS_ERROR_DOM_INUSE_ATTRIBUTE_ERR："Attribute already in use" 错误，因为 DOM 需要克隆属性之后才能重复使用（不像其他节点一样可以被删除）。
+注意：如果你尝试设置的时候没有克隆该节点，你可能会遇到 `NS_ERROR_DOM_INUSE_ATTRIBUTE_ERR`：“Attribute already in use”错误，因为 DOM 要求 {{domxref("Attr")}} 在克隆后才能被重复使用（不像其他节点一样可以被移动）。
 
-{{ DOMAttributeMethods() }}
+## 规范
 
-## Specification
+{{Specifications}}
 
-[DOM Level 2 Core: setAttributeNodeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS)
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{domxref("Document.createAttribute()")}}
+- {{domxref("Document.createAttributeNS()")}}
+- {{domxref("Element.getAttributeNodeNS()")}}

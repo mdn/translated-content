@@ -221,11 +221,8 @@ if ("Promise" in window) {
 
 ## Смотрите также
 
-- [Спецификация Promises/A+](http://promisesaplus.com/)
-- [Jake Archibald: JavaScript Promises: There and Back Again](http://www.html5rocks.com/en/tutorials/es6/promises/)
-- [Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Pattern in JavaScript](http://de.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)
-- [Matt Greer: JavaScript Promises ... In Wicked Detail](http://www.mattgreer.org/articles/promises-in-wicked-detail/)
-- [Forbes Lindesay: promisejs.org](https://www.promisejs.org/)
-- [Nolan Lawson: We have a problem with promises — Common mistakes with promises](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
-- [Promise polyfill](https://github.com/jakearchibald/es6-promise/)
-- [Udacity: JavaScript Promises](https://www.udacity.com/course/javascript-promises--ud898)
+- [Полифил `Promise` в `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [Руководство по использованию промисов](/ru/docs/Web/JavaScript/Guide/Using_promises)
+- [Спецификация Promises/A+](https://promisesaplus.com/)
+- [JavaScript Promises: an introduction](https://web.dev/articles/promises) на web.dev (2013)
+- [Callbacks, Promises, and Coroutines: Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/slideshow/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript/9953720) — презентация Доменика Дениколы (2011)

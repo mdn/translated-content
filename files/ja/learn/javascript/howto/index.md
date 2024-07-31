@@ -148,31 +148,31 @@ JavaScript のデバッグに関する詳細については、[JavaScript のよ
 ### コード内での決定
 
 - [変数の値やその他の条件によって異なるコードブロックのうちどれを実行するか決定するには](/ja/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [if...else 文を使用するには](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements)
-- [条件判定のブロックを別のブロックに入れ子にするには](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#nesting_if...else)
-- [AND や OR、NOT を JavaScript で使用するには](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#logical_operators_and_or_and_not)
-- [多くの選択肢を一つの条件として手軽に扱うには](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#switch_statements)
-- [true/false の判定によって 2 つの選択肢から 1 つを手早く選択するのに、三項演算子を使用するには](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#ternary_operator)
+- [if...else 文を使用するには](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#if...else_文)
+- [条件判定のブロックを別のブロックに入れ子にするには](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#入れ子の_if...else)
+- [AND や OR、NOT を JavaScript で使用するには](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#論理演算子_and_と_or_と_not)
+- [多くの選択肢を一つの条件として手軽に扱うには](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#switch_文)
+- [true/false の判定によって 2 つの選択肢から 1 つを手早く選択するのに、三項演算子を使用するには](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#三項演算子)
 
-### ループ/イテレーション
+### ループ/反復処理
 
 - [同一のコード片を繰り返し実行するには](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [終了条件にマッチする前に、ループを終了させるには](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#exiting_loops_with_break)
-- [次の繰り返し処理にスキップするには](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#skipping_iterations_with_continue)
-- [while ループ、do...while ループを使用するには](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while)
+- [終了条件に一致する前に、ループを終了させるには](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#break_でループを終了)
+- [次の繰り返し処理にスキップするには](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#continue_で繰り返しをスキップ)
+- [while ループ、do...while ループを使用するには](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#while_と_do...while)
 
 ## 中級のユースケース
 
 ### 関数
 
-- [ブラウザー内での関数を調べるには](/ja/docs/Learn/JavaScript/Building_blocks/Functions#built-in_browser_functions)
-- [関数とメソッドの違いとは](/ja/docs/Learn/JavaScript/Building_blocks/Functions#functions_versus_methods)
+- [ブラウザー内での関数を調べるには](/ja/docs/Learn/JavaScript/Building_blocks/Functions#ブラウザー組み込み関数)
+- [関数とメソッドの違いとは](/ja/docs/Learn/JavaScript/Building_blocks/Functions#関数とメソッド)
 - [独自の関数を作成するには](/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [関数を呼び出すには](/ja/docs/Learn/JavaScript/Building_blocks/Functions#invoking_functions)
-- [匿名関数とは](/ja/docs/Learn/JavaScript/Building_blocks/Functions#anonymous_functions)
-- [関数を実行するときに引数を指定するには](/ja/docs/Learn/JavaScript/Building_blocks/Functions#function_parameters)
-- [関数のスコープとは](/ja/docs/Learn/JavaScript/Building_blocks/Functions#function_scope_and_conflicts)
-- [戻り値とは何か、どのように戻り値を返すか](/ja/docs/Learn/JavaScript/Building_blocks/Return_values)
+- [関数を呼び出すには](/ja/docs/Learn/JavaScript/Building_blocks/Functions#関数の呼び出し)
+- [無名関数とは](/ja/docs/Learn/JavaScript/Building_blocks/Functions#無名関数とアロー関数)
+- [関数を実行するときに引数を指定するには](/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function#引数で関数を改善)
+- [関数のスコープとは](/ja/docs/Learn/JavaScript/Building_blocks/Functions#関数のスコープと競合)
+- [返値とは何か、どのように返値を返すか](/ja/docs/Learn/JavaScript/Building_blocks/Return_values)
 
 ### オブジェクト
 

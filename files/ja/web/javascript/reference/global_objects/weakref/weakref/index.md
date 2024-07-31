@@ -2,7 +2,7 @@
 title: WeakRef() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
 l10n:
-  sourceCommit: 270351317fdaa57ba9123a19aa281e9e40bb0baa
+  sourceCommit: 7da0dabee277f9c295178ae132c16c8fed5d747a
 ---
 
 {{JSRef}}

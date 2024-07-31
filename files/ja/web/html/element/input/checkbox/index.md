@@ -2,7 +2,7 @@
 title: <input type="checkbox">
 slug: Web/HTML/Element/input/checkbox
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 8720024f7e04f09f7ca879a0291a85b0eb7168df
 ---
 
 {{HTMLSidebar}}
@@ -37,16 +37,18 @@ l10n:
 
 `value` 属性が省略された場合は、チェックボックスの既定値は `on` ですので、その場合の送信されるデータは `subscribe=on` となります。
 
-> **メモ:** フォームが送信されたとき、チェックボックスがチェックされていない場合、名前も値もサーバーに送信されません。HTML のみでチェックボックスがチェックされていない状態を表す方法（`value=unchecked` のように）はありません。チェックボックスがチェックされていないときの既定値を送信したい場合は、JavaScript を記述して、フォーム内にチェックされていない状態を示す値を持つ {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} を作成することで実現できます。
+> [!NOTE]
+> フォームが送信されたとき、チェックボックスがチェックされていない場合、名前も値もサーバーに送信されません。HTML のみでチェックボックスがチェックされていない状態を表す方法（`value=unchecked` のように）はありません。チェックボックスがチェックされていないときの既定値を送信したい場合は、JavaScript を記述して、フォーム内にチェックされていない状態を示す値を持つ {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} を作成することで実現できます。
 
 ## 追加の属性
 
-すべての {{HTMLElement("input")}} 型で共通する属性に加え、 "`checkbox`" 型の入力欄は次の属性にも対応しています。
+すべての {{HTMLElement("input")}} 型で[共通する属性](/ja/docs/Web/HTML/Element/input#属性)に加え、 "`checkbox`" 型の入力欄は次の属性にも対応しています。
 
 - `checked`
 
   - : [論理](/ja/docs/Glossary/Boolean/HTML)属性で、チェックボックスが既定で（ページが読み込まれたときに）チェックされているかどうかを示します。チェックボックスが現在チェックされているかどうかを示すものでは*ありません*。チェックボックスの状態が変化した場合、このコンテンツ属性は変化を反映しません。（{{domxref("HTMLInputElement")}} の `checked` IDL 属性のみが更新されます。）
-    > **メモ:** 他の入力コントロールとは異なり、チェックボックスの値は現在 `checked` の状態にある場合のみ、送信データに含まれます。その場合、チェックボックスの `value` 属性の値、または `value` が設定されていない場合は `on` が入力欄の値として報告されます。
+    > [!NOTE]
+    > 他の入力コントロールとは異なり、チェックボックスの値は現在 `checked` の状態にある場合のみ、送信データに含まれます。その場合、チェックボックスの `value` 属性の値、または `value` が設定されていない場合は `on` が入力欄の値として報告されます。
     > 他のブラウザーとは異なり、 Firefox は既定でページ読み込みを通して `<input>` の[チェック状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能を制御するには [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) 属性を使用してください。
 
 - `value`
@@ -162,7 +164,8 @@ function updateDisplay() {
 
 {{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
 
-> **メモ:** 未決定状態のチェックボックスを持つフォームを送信すると、チェックボックスがチェックされていない場合と同じ結果になります。 — チェックボックスを表すデータは送られません。
+> [!NOTE]
+> 未決定状態のチェックボックスを持つフォームを送信すると、チェックボックスがチェックされていない場合と同じ結果になります。 — チェックボックスを表すデータは送られません。
 
 ## 検証
 
@@ -287,7 +290,7 @@ otherCheckbox.addEventListener("change", () => {
     </tr>
     <tr>
       <td><strong>イベント</strong></td>
-      <td>{{domxref("HTMLElement/change_event", "change")}} および {{domxref("HTMLElement/input_event", "input")}}</td>
+      <td>{{domxref("HTMLElement/change_event", "change")}} および {{domxref("Element/input_event", "input")}}</td>
     </tr>
     <tr>
       <td><strong>対応している共通属性</strong></td>

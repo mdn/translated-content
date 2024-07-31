@@ -56,7 +56,7 @@ Referer: <url>
 Referer: https://developer.mozilla.org/ru/docs/Web/JavaScript
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

@@ -2,16 +2,14 @@
 title: Notification：lang 属性
 slug: Web/API/Notification/lang
 l10n:
-  sourceCommit: e97f2c3cca98616a37003005ddc149d370c40fd0
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 {{domxref("Notification")}} 接口的 **`lang`** 只读属性指示通知中使用的语言，在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `lang` 选项中指定。
 
 语言本身是根据 {{RFC(5646, "语言识别标签（也被称为 BCP47）")}}使用表示语言标签的字符串指定的。请参阅 Sitepoint [ISO 2 字母语言代码](https://www.sitepoint.com/iso-2-letter-language-codes/)页面以获取简单参考。
-
-{{AvailableInWorkers}}
 
 ## 值
 

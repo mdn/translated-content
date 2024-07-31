@@ -35,7 +35,8 @@ word-break: unset;
 - `break-word` {{Deprecated_Inline}}
   - : 他的效果是`word-break: normal` 和 `overflow-wrap: anywhere` 的合，不论 {{cssxref("overflow-wrap")}}的值是多少。
 
-> **备注：** 与 `word-break: break-word` 和 `overflow-wrap: break-word`（详见 {{cssxref("overflow-wrap")}}）对比，`word-break: break-word` 将在文本可能溢出其容器的确切位置创建一个断点。
+> [!NOTE]
+> 与 `word-break: break-word` 和 `overflow-wrap: break-word`（详见 {{cssxref("overflow-wrap")}}）对比，`word-break: break-word` 将在文本可能溢出其容器的确切位置创建一个断点。
 
 ## 形式定义
 

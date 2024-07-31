@@ -1,7 +1,11 @@
 ---
 title: WAI-ARIA 角色
 slug: Web/Accessibility/ARIA/Roles
+l10n:
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
+
+{{AccessibilitySidebar}}
 
 ARIA 角色为内容提供了语义，允许屏幕阅读器和其他工具与对象类型的用户预期一致的方式进行呈现并支持交互。<abbr>ARIA</abrr> 角色可以用于描述不在 HTML 中原生存在的元素，或者存在但没有完整的浏览器支持的元素。
 
@@ -133,9 +137,11 @@ ARIA 角色共分为 6 类：
 
 避免使用[command](/zh-CN/docs/Web/Accessibility/ARIA/Roles/command_role)、[composite](/zh-CN/docs/Web/Accessibility/ARIA/Roles/composite_role)、[input](/zh-CN/docs/Web/Accessibility/ARIA/Roles/input_role)、[landmark](/zh-CN/docs/Web/Accessibility/ARIA/Roles/landmark_role)、[range](/zh-CN/docs/Web/Accessibility/ARIA/Roles/range_role)、[roletype](/zh-CN/docs/Web/Accessibility/ARIA/Roles/roletype_role)、[section](/zh-CN/docs/Web/Accessibility/ARIA/Roles/section_role)、[sectionhead](/zh-CN/docs/Web/Accessibility/ARIA/Roles/sectionhead_role)、[select](/zh-CN/docs/Web/Accessibility/ARIA/Roles/select_role)、[structure](/zh-CN/docs/Web/Accessibility/ARIA/Roles/structure_role)、[widget](/zh-CN/docs/Web/Accessibility/ARIA/Roles/widget_role) 和 [window](/zh-CN/docs/Web/Accessibility/ARIA/Roles/window_role)。
 
-> **备注：** 不要在你的网站和应用中使用抽象角色。抽象角色是由浏览器使用的，这里列出来仅用于参考。
+> [!NOTE]
+> 不要在你的网站和应用中使用抽象角色。抽象角色是由浏览器使用的，这里列出来仅用于参考。
 
-> **警告：**“抽象角色用于本体。作者**不得**在内容中使用抽象角色。”——<abbr>WAI-ARIA</abbr> 规范
+> [!WARNING]
+> “抽象角色用于本体。作者**不得**在内容中使用抽象角色。”——<abbr>WAI-ARIA</abbr> 规范
 
 ## MDN 中定义的角色
 
@@ -147,11 +153,3 @@ ARIA 角色共分为 6 类：
 
 - [使用 ARIA：角色、状态和属性](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques)
 - [ARIA 状态和属性](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA 角色**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

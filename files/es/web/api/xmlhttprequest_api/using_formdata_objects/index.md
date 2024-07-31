@@ -1,8 +1,9 @@
 ---
 title: Usando Objetos FormData
 slug: Web/API/XMLHttpRequest_API/Using_FormData_Objects
-original_slug: Web/API/FormData/Using_FormData_Objects
 ---
+
+{{DefaultAPISidebar("XMLHttpRequest API")}}
 
 Los objetos `FormData` le permiten compilar un conjunto de pares clave/valor para enviar mediante `XMLHttpRequest`. Están destinados principalmente para el envío de los datos del formulario, pero se pueden utilizar de forma independiente con el fin de transmitir los datos tecleados. Los datos transmitidos estarán en el mismo formato que usa el método `submit()` del formulario para enviar los datos si el tipo de codificación del formulario se establece en "multipart/form-data".
 
@@ -30,7 +31,8 @@ request.open("POST", "http://foo.com/submitform.php");
 request.send(formData);
 ```
 
-> **Nota:** Los campos "userfile" y "webmasterfile" contienen ambos un archivo. El número asignado al campo "accountnum" es inmediatamente convertido a string por el método [`FormData.append()`](</en/DOM/XMLHttpRequest/FormData#append()> "en/XMLHttpRequest/FormData#append()") (el valor del campo puede ser un {{ domxref("Blob") }}, {{ domxref("File") }}, o una cadena de texto; **si el valor no es ni un Blob, ni un File, será convertido a un string**).
+> [!NOTE]
+> Los campos "userfile" y "webmasterfile" contienen ambos un archivo. El número asignado al campo "accountnum" es inmediatamente convertido a string por el método [`FormData.append()`](</en/DOM/XMLHttpRequest/FormData#append()> "en/XMLHttpRequest/FormData#append()") (el valor del campo puede ser un {{ domxref("Blob") }}, {{ domxref("File") }}, o una cadena de texto; **si el valor no es ni un Blob, ni un File, será convertido a un string**).
 
 Este ejemplo construye una instancia de `FormData` que almacenará los valores de los campos "username", "accountnum", "userfile" y "webmasterfile", entonces usará el método [`send()`](</en/DOM/XMLHttpRequest#send()> "en/XMLHttpRequest#send()") de `XMLHttpRequest` para enviar los datos del formulario. El campo "webmasterfile" es un [`Blob`](/en/DOM/Blob). Un objeto [`Blob`](/en/DOM/Blob) representa un objeto de tipo similar a un fichero que es inalterable y que almacenará datos en formato raw. Los Blobs representan datos que no necesariamente tendrán un formato Javascript nativo. La interfaz {{ domxref("File") }} está basada en [`Blob`](/en/DOM/Blob), y hereda su funcionalidad y la amplía para dar soporte a archivos que estén en el sistema del usuario. Para construir un [`Blob`](/en/DOM/Blob), puede invocar [`al constructor del objeto Blob`](/en/DOM/Blob#Constructor).
 
@@ -117,7 +119,8 @@ form.addEventListener(
 );
 ```
 
-> **Nota:** el método especificado en el formulario será usado por encima del método utilizado en en la llamada a open().
+> [!NOTE]
+> El método especificado en el formulario será usado por encima del método utilizado en en la llamada a open().
 
 También puede añadir un {{ domxref("File") }} o un {{ domxref("Blob") }} directamente al objeto {{ domxref("XMLHttpRequest/FormData", "FormData") }} de la siguiente manera:
 

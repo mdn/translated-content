@@ -3,11 +3,14 @@ title: FormData.has()
 slug: Web/API/FormData/has
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 O método **`has()`** da interface {{domxref("FormData")}} retorna um booleano declarando se o objeto `FormData` contém uma certa chave.
 
-> **Nota:** This method is available in [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> This method is available in [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
 ## Sintaxe
 

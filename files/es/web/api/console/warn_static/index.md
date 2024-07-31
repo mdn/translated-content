@@ -1,7 +1,6 @@
 ---
 title: Console.warn()
 slug: Web/API/console/warn_static
-original_slug: Web/API/console/warn
 ---
 
 {{APIRef("Console API")}}
@@ -10,7 +9,8 @@ Imprime un mensaje de advertencia en la Consola Web.
 
 {{AvailableInWorkers}}
 
-> **Nota:** En Firefox, las advertencias tienen un pequeño icono de signo de exclamación junto a estas en el registro de la Consola Web.
+> [!NOTE]
+> En Firefox, las advertencias tienen un pequeño icono de signo de exclamación junto a estas en el registro de la Consola Web.
 
 ## Sintaxis
 

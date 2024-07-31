@@ -23,7 +23,8 @@ l10n:
 - これらのスタイルはエンドユーザーに対する表示色を変更できるようになっていますが、 {{domxref("window.getComputedStyle")}} メソッドは嘘をつき、 `:visited` 状態ではない色の値を返します。
 - [`<link>`](/ja/docs/Web/HTML/Element/link) 要素は `:visited` に一致することはありません。
 
-> **メモ:** これらの制限とその理由については、[プライバシーと :visited セレクター](/ja/docs/Web/CSS/Privacy_and_the_:visited_selector)を参照してください。
+> [!NOTE]
+> これらの制限とその理由については、[プライバシーと :visited セレクター](/ja/docs/Web/CSS/Privacy_and_the_:visited_selector)を参照してください。
 
 ## 構文
 

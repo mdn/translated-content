@@ -3,11 +3,14 @@ title: FormData.getAll()
 slug: Web/API/FormData/getAll
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 O metodo **`getAll()`** do {{domxref("FormData")}} retorna todos os valores associados com a chave dentro `de um objeto FormData`.
 
-> **Nota:** Este metodo esta disponivel no [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Este metodo esta disponivel no [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
 ## Syntax
 
@@ -32,7 +35,7 @@ A seguinte linha cria um objeto `FormData` vazio:
 var formData = new FormData();
 ```
 
-Se nos adicionarmos dois valores oara `username` {{domxref("FormData.append")}}:
+Se nós adicionarmos dois valores para `username` {{domxref("FormData.append")}}:
 
 ```js
 formData.append("username", "Chris");

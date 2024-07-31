@@ -306,7 +306,7 @@ reset.addEventListener("click", function () {
 
 solution.addEventListener("click", function () {
   textarea.value =
-    '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius</cite></a> once said:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n  <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://www.affirmationsforpositivethinking.com/index.htm">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://www.affirmationsforpositivethinking.com/index.htm"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
+    '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius</cite></a> once said:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n  <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://example.com/affirmationsforpositivethinking">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
   drawOutput();
 });
 
@@ -332,7 +332,8 @@ Usamos HTML para estruturar nossos documentos da web.
 
 Acho que o Rev. Green fez isso na cozinha com a motosserra.
 
-> **Nota:** Há outro elemento, {{htmlelement("acronym")}}, que basicamente faz a mesma coisa que `<abbr>`, e foi projetado especificamente para acrônimos, em vez de abreviações. Isso, no entanto, caiu em desuso — não era suportado em navegadores nem o `<abbr>`, e tem uma função semelhante que foi considerado inútil ter os dois. Apenas use `<abbr>`.
+> [!NOTE]
+> Há outro elemento, {{htmlelement("acronym")}}, que basicamente faz a mesma coisa que `<abbr>`, e foi projetado especificamente para acrônimos, em vez de abreviações. Isso, no entanto, caiu em desuso — não era suportado em navegadores nem o `<abbr>`, e tem uma função semelhante que foi considerado inútil ter os dois. Apenas use `<abbr>`.
 
 ### Aprendizado ativo: marcando uma abreviação
 

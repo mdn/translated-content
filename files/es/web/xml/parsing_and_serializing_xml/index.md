@@ -1,8 +1,9 @@
 ---
 title: Convertir código a cadena de texto (serializing) y visceversa (parsing) a un  XML
 slug: Web/XML/Parsing_and_serializing_XML
-original_slug: Web/Guide/Parsing_and_serializing_XML
 ---
+
+{{QuickLinksWithSubpages("/es/docs/Web/XML")}}
 
 La plataforma web proveé Los siguientes objetos para hacer parsing (convertir una cadena de texto a código) y serializing (visceversa) a un XML:
 
@@ -89,7 +90,8 @@ var sPrettyXML = XML(oSerializer.serializeToString(doc)).toXMLString();
 
 Indents consist of two spaces. To write a more efficient version or customize the indent string, use {{ domxref("treeWalker") }}.
 
-> **Nota:** When using the E4X `toXMLString` method, your **CDATA elements will be lost**, and only the containing text will remain. So if you have CDATA elements in your XML, using the preceding method might not be useful.
+> [!NOTE]
+> When using the E4X `toXMLString` method, your **CDATA elements will be lost**, and only the containing text will remain. So if you have CDATA elements in your XML, using the preceding method might not be useful.
 
 ```xml
 <content><![CDATA[This is the content]]></content>

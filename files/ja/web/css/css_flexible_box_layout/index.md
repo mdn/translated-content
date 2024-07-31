@@ -2,7 +2,7 @@
 title: CSS フレックスボックスレイアウト
 slug: Web/CSS/CSS_flexible_box_layout
 l10n:
-  sourceCommit: 621c7978886787ca66bc5e90e457cf1466e58d35
+  sourceCommit: b9db4e51b6f1cddba3af708643fc9804849d61c2
 ---
 
 {{CSSRef}}
@@ -65,6 +65,8 @@ l10n:
 
 ## 関連情報
 
+- [CSS 表示](/ja/docs/Web/CSS/CSS_display)モジュール
+- [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/display/multi-keyword_syntax_of_display)
 - 用語集の項目:
   - {{Glossary("Flexbox", "フレックスボックス", 1)}}
   - {{Glossary("Flex Container", "フレックスコンテナー", 1)}}

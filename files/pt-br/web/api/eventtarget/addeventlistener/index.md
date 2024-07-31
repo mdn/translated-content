@@ -3,7 +3,7 @@ title: Element.addEventListener()
 slug: Web/API/EventTarget/addEventListener
 ---
 
-{{apiref("DOM Events")}}
+{{APIRef("DOM")}}
 
 `addEventListener()` registra uma única espera de evento em um único alvo. O [alvo do evento](/pt-BR/docs/DOM/EventTarget) pode ser um único [elemento](/pt-BR/docs/DOM/element) em um documento, o [`documento`](/pt-BR/docs/DOM/document) em si, uma [`janela`](/pt-BR/docs/DOM/window), ou um [`XMLHttpRequest`](/pt-BR/docs/DOM/XMLHttpRequest).
 
@@ -161,7 +161,8 @@ Nos exemplos acima, o valor de this em modifyText(), quando disparado pelo event
 
 O valor de this em modifyText(), quando disparado pelo evento de clique no HTML, será uma referência ao objeto global (no caso, a janela).
 
-> **Nota:** JavaScript 1.8.5 introduz o método [`Function.prototype.bind()`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/bind), que permite especificar o valor que deve ser usado como `this` para todas as chamadas à uma determinada função. Isso evita problemas quando não é claro o que `this` será, dependendo do contexto do qual a sua função for chamada. Perceba, entretanto, que é preciso manter uma referência da escuta à mão, para que depois você possa removê-la.
+> [!NOTE]
+> JavaScript 1.8.5 introduz o método [`Function.prototype.bind()`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/bind), que permite especificar o valor que deve ser usado como `this` para todas as chamadas à uma determinada função. Isso evita problemas quando não é claro o que `this` será, dependendo do contexto do qual a sua função for chamada. Perceba, entretanto, que é preciso manter uma referência da escuta à mão, para que depois você possa removê-la.
 
 Este é um exemplo com e sem `bind`:
 

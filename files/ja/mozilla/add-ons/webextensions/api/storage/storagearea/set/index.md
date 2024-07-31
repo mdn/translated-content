@@ -29,7 +29,7 @@ let settingItem = browser.storage.<storageType>.set(
 
     値は [primitive 型](/ja/docs/Glossary/Primitive) (整数型・ブール型・文字列) または[`配列`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) を指定でできます。
 
-    通常は他の型 (`Function`, `Date`, `RegExp`, `Set`, `Map`, `ArrayBuffer` など)は格納できません。これらのサポートされていない型の中には空のオブジェクトとして復元されたり、 `set()` がエラーをスローする場合があります。この場合の挙動はブラウザに依存します。
+    通常は他の型 (`Function`, `Date`, `RegExp`, `Set`, `Map`, `ArrayBuffer` など)は格納できません。これらのサポートされていない型の中には空のオブジェクトとして復元されたり、 `set()` がエラーをスローする場合があります。この場合の挙動はブラウザーに依存します。
 
 ### 返り値
 
@@ -80,4 +80,5 @@ browser.storage.local.get("monster").then(gotMonster, onError);
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.storage`](https://developer.chrome.com/extensions/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。
+> [!NOTE]
+> この API は Chromium の [`chrome.storage`](https://developer.chrome.com/extensions/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。

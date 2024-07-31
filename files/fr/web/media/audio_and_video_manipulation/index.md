@@ -1,8 +1,9 @@
 ---
 title: Manipulation Audio et Vidéo
 slug: Web/Media/Audio_and_video_manipulation
-original_slug: Web/Guide/Audio_and_video_manipulation
 ---
+
+{{QuickLinksWithSubpages("/fr/docs/Web/Media")}}
 
 La beauté du web est qu'on peut combiner différentes technologies pour en créer de nouvelles. Avoir de l'audio et vidéo nativement dans le navigateur nous donne la possibilité d'utiliser ces flux de données avec d'autres technologies comme {{htmlelement("canvas")}}, [WebGL](/fr/docs/Web/API/WebGL_API) ou [Web Audio API](/fr/docs/Web/API/Web_Audio_API) pour modifier le média — par exemple ajouter des effets de réverbération ou de compression à l'audio, ou encore des filtres noir & blanc/sépia aux vidéos. Cet article fournit une référence pour expliquer ce que vous pouvez faire.
 
@@ -104,9 +105,11 @@ processor.doLoad();
 
 {{EmbedLiveSample("Vidéo_et_Canvas", '100%', 550)}}
 
-> **Note :** En raison de problèmes de sécurité potentiels, si votre vidéo se trouve sur un domaine différent de votre page, vous devez activer [CORS (Cross Origin Resource Sharing)](/fr/docs/Web/HTTP/CORS) sur le serveur qui héberge la vidéo et utiliser l'attribut `crossorigin` sur la balise vidéo.
+> [!NOTE]
+> En raison de problèmes de sécurité potentiels, si votre vidéo se trouve sur un domaine différent de votre page, vous devez activer [CORS (Cross Origin Resource Sharing)](/fr/docs/Web/HTTP/CORS) sur le serveur qui héberge la vidéo et utiliser l'attribut `crossorigin` sur la balise vidéo.
 
-> **Note :** L'exemple présenté est un exemple minimal de manipulation vidéo avec canvas; pour plus d'efficacité, vous pouvez envisager d'utiliser requestAnimationFrame à la place de setTimeout pour les navigateurs qui le prennent en charge.
+> [!NOTE]
+> L'exemple présenté est un exemple minimal de manipulation vidéo avec canvas; pour plus d'efficacité, vous pouvez envisager d'utiliser requestAnimationFrame à la place de setTimeout pour les navigateurs qui le prennent en charge.
 
 ### Vidéo e WebGL
 
@@ -116,7 +119,8 @@ Exemple:
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-> **Note :** Vous pouvez trouver le [code source de cette démo sur GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) ([la voir en direct](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/) aussi).
+> [!NOTE]
+> Vous pouvez trouver le [code source de cette démo sur GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) ([la voir en direct](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/) aussi).
 
 ### Vitesse de lecture
 
@@ -184,7 +188,8 @@ window.addEventListener("load", setPlaybackRate);
 
 {{ EmbedLiveSample('Code jouable', 700, 425) }}
 
-> **Note :** Essayez l' [exemple playbackRate](http://jsbin.com/qomuvefu/2/edit) en direct.
+> [!NOTE]
+> Essayez l' [exemple playbackRate](https://jsbin.com/qomuvefu/2/edit) en direct.
 
 > **Note :** `playbackRate` marche avec les éléments `<audio>` et `<video>`; cependant, dans les deux cas, la vitesse change mais pas la hauteur du son. Pour manipuler la hauteur du son, vous devez utliliser l'API Web Audio — voir la propriété {{domxref("AudioBufferSourceNode.playbackRate")}}.
 
@@ -288,7 +293,8 @@ window.addEventListener("load", setFilter);
 
 {{ EmbedLiveSample('Code_jouable_2', 700, 425) }}
 
-> **Note :** À moins que [CORS](/fr/docs/Web/HTTP/Access_control_CORS) ne soit activé, vous devrez pour éviter les problèmes de sécurité placer la vidéo sur le même domaine que votre code.
+> [!NOTE]
+> À moins que [CORS](/fr/docs/Web/HTTP/Access_control_CORS) ne soit activé, vous devrez pour éviter les problèmes de sécurité placer la vidéo sur le même domaine que votre code.
 
 Les filtres pouvant être appliqués sont:
 
@@ -301,7 +307,8 @@ Les filtres pouvant être appliqués sont:
 - Notch: Les fréquences à l'intérieur d'une gamme donnée sont atténuées.
 - Allpass: Laisse touts les fréquences inchangées mais modifie le rapport de phrase entre les différentes fréquences.
 
-> **Note :** Voir {{domxref("BiquadFilterNode")}} pour plus d'informations.
+> [!NOTE]
+> Voir {{domxref("BiquadFilterNode")}} pour plus d'informations.
 
 ### Convolutions et Impulsions
 
@@ -317,9 +324,11 @@ source.connect(convolver);
 convolver.connect(context.destination);
 ```
 
-> **Note :** Voir ce [Codepen](https://codepen.io/DonKarlssonSan/pen/doVKRE) pour un exemple appliqué.
+> [!NOTE]
+> Voir ce [Codepen](https://codepen.io/DonKarlssonSan/pen/doVKRE) pour un exemple appliqué.
 
-> **Note :** Voir {{domxref("ConvolverNode")}} pour plus d'informations.
+> [!NOTE]
+> Voir {{domxref("ConvolverNode")}} pour plus d'informations.
 
 ### Audio dans l'espace
 
@@ -341,9 +350,11 @@ source.start(0);
 context.listener.setPosition(0, 0, 0);
 ```
 
-> **Note :** Vous pouvez trouver un [exemple sur notre repo GitHub](https://github.com/mdn/webaudio-examples/tree/master/panner-node) (le [voir en direct](https://mdn.github.io/webaudio-examples/panner-node/) aussi).
+> [!NOTE]
+> Vous pouvez trouver un [exemple sur notre repo GitHub](https://github.com/mdn/webaudio-examples/tree/master/panner-node) (le [voir en direct](https://mdn.github.io/webaudio-examples/panner-node/) aussi).
 
-> **Note :** Voir {{domxref("PannerNode")}} pour plus d'informations.
+> [!NOTE]
+> Voir {{domxref("PannerNode")}} pour plus d'informations.
 
 ## Codecs JavaScript
 
@@ -358,7 +369,8 @@ Des bibliothèques existent actuellement pour les formats suivants:
 - Opus: [Opus.js](https://github.com/audiocogs/opus.js)
 - Vorbis: [vorbis.js](https://github.com/audiocogs/vorbis.js)
 
-> **Note :** Sur AudioCogs, vous pouvez [essayer quelques démos](http://audiocogs.org/codecs/); Audiocogs fournit également un Framework, [Aurora.js](http://audiocogs.org/codecs/), qui est destiné à vous aider à créer vos propres codecs en JavaScript.
+> [!NOTE]
+> Sur AudioCogs, vous pouvez [essayer quelques démos](http://audiocogs.org/codecs/); Audiocogs fournit également un Framework, [Aurora.js](http://audiocogs.org/codecs/), qui est destiné à vous aider à créer vos propres codecs en JavaScript.
 
 ## Tutoriels
 

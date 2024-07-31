@@ -37,7 +37,7 @@ l10n:
 
 ## 미디어 쿼리 기본
 
-가장 간단한 미디어 쿼리 구문은 다음과 같습니다:
+가장 간단한 미디어 쿼리 구문은 다음과 같습니다.
 
 ```css
 @media media-type and (media-feature-rule) {

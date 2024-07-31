@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.instantiate()
 slug: WebAssembly/JavaScript_interface/instantiate_static
-original_slug: WebAssembly/JavaScript_interface/instantiate
 ---
 
 {{WebAssemblySidebar}}
@@ -86,7 +85,8 @@ fetch("simple.wasm")
   .then((result) => result.instance.exports.exported_func());
 ```
 
-> **참고:** 이 예제는 GitHub의 [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html)에서도 찾을 수 있습니다 ([라이브보기도 있음](https://mdn.github.io/webassembly-examples/js-api-examples/)).
+> [!NOTE]
+> 이 예제는 GitHub의 [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html)에서도 찾을 수 있습니다 ([라이브보기도 있음](https://mdn.github.io/webassembly-examples/js-api-examples/)).
 
 ### Second overload example
 

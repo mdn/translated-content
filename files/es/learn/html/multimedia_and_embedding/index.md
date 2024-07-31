@@ -3,13 +3,16 @@ title: Multimedia e inserción
 slug: Learn/HTML/Multimedia_and_embedding
 ---
 
+{{LearnSidebar}}
+
 Hemos visto mucho texto hasta ahora en este curso, pero la web sería realmente aburrida solo usando textos. ¡Comencemos observando como hacer que la web cobre vida, con mucho más contenido interesante! Este módulo te acompañará a explorar maneras de usar HTML para incluir multimedia a tus páginas web, y las diferentes formas en la que podrás hacerlo, incluyendo como enlazar videos, audios e incluso otras páginas webs.
 
 ## Requisitos previos
 
 Antes de empezar con este módulo, deberías tener un buen conocimiento de las bases de HTML, enseñadas en [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML). Si no has estado trabajando en este módulo (o alguno similar), ¡hazlo y luego vuelve!
 
-> **Nota:** Si estas trabajando en un ordenador/tablet/u otro dispositivo donde no puedas crear tus propios archivos, puedes probar (la mayoría de ellos) los ejemplos de código en programas online de codificado como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/).
+> [!NOTE]
+> Si estas trabajando en un ordenador/tablet/u otro dispositivo donde no puedas crear tus propios archivos, puedes probar (la mayoría de ellos) los ejemplos de código en programas online de codificado como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 

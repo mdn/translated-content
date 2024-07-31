@@ -3,7 +3,9 @@ title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers("window_and_worker_except_service")}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 `XMLHttpRequest` é um objeto que fornece funcionalidade ao cliente para transferir dados entre um cliente e um servidor. Ele fornece uma maneira fácil de recuperar dados de um URL sem ter que fazer uma atualização de página inteira. Isso permite que uma página da Web atualize apenas uma parte do conteúdo sem interromper o que o usuário esteja fazendo. XMLHttpRequest é usado constantemente na programação de [AJAX](/pt-BR/docs/AJAX).
 
@@ -471,7 +473,8 @@ Retorna a string contendo o texto do cabeçalho especificado, ou null se quer a 
 
 Inicializa um pedido. Este método é para ser usado a partir do código JavaScript; para inicializar um pedido do código nativo, use [`openRequest()`](</en/nsIXMLHttpRequest#openRequest()> "/en/XMLHttpRequest#openRequest()") em seu lugar.
 
-> **Nota:** Chamar esse método uma solicitação já está ativo (aquele para o qual open() ou openRequest() já foi chamado) é o equivalente de chamar abort().
+> [!NOTE]
+> Chamar esse método uma solicitação já está ativo (aquele para o qual open() ou openRequest() já foi chamado) é o equivalente de chamar abort().
 
 ```
 void open(
@@ -508,7 +511,8 @@ void overrideMimeType(DOMString mimetype);
 
 Envia a solicitação. Se o pedido é assíncrono (que é o padrão), este método retorna assim que o pedido for enviado. Se o pedido é síncrono, este método não retorna até a resposta chegar.
 
-> **Nota:** Qualquer ouvintes de eventos que pretende definir tem de ser definida antes de chamar send().
+> [!NOTE]
+> Qualquer ouvintes de eventos que pretende definir tem de ser definida antes de chamar send().
 
 ```
 void send();
@@ -618,7 +622,8 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 }
 ```
 
-> **Nota:** É possível construir este polyfill colocar dois tipos de dados como argumento para send() : um [`ArrayBuffer`](/pt-BR/docs/JavaScript/Typed_arrays/ArrayBuffer) (ui8Data.buffer - o código comentado) ou um ArrayBufferView ( ui8Data , que é uma [typed array of 8-bit unsigned integers](/pt-BR/docs/JavaScript/Typed_arrays/Uint8Array) – descomentada código). No entanto, no Google Chrome, quando você tenta enviar uma ArrayBuffer , a seguinte mensagem de aviso aparecerá: ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead. ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead.
+> [!NOTE]
+> É possível construir este polyfill colocar dois tipos de dados como argumento para send() : um [`ArrayBuffer`](/pt-BR/docs/JavaScript/Typed_arrays/ArrayBuffer) (ui8Data.buffer - o código comentado) ou um ArrayBufferView ( ui8Data , que é uma [typed array of 8-bit unsigned integers](/pt-BR/docs/JavaScript/Typed_arrays/Uint8Array) – descomentada código). No entanto, no Google Chrome, quando você tenta enviar uma ArrayBuffer , a seguinte mensagem de aviso aparecerá: ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead. ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead.
 
 ## Notas
 

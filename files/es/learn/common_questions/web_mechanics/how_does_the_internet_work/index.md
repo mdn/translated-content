@@ -3,6 +3,8 @@ title: ¿Cómo funciona Internet?
 slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 En este artículo se describe qué es Internet y cómo funciona.
 
 <table>
@@ -44,7 +46,8 @@ En este artículo se describe qué es Internet y cómo funciona.
 
 Cuando dos ordenadores necesitan comunicarse, tienes que vincularlos, ya sea físicamente (por lo general con un [cable de Ethernet](http://en.wikipedia.org/wiki/Ethernet_crossover_cable)) o de forma inalámbrica (por ejemplo por [WiFi](http://en.wikipedia.org/wiki/WiFi) o sistema de [Bluetooth](http://en.wikipedia.org/wiki/Bluetooth)). Todos los ordenadores modernos pueden soportar cualquiera de este tipo de conexiones.
 
-> **Nota:** En el resto de este artículo, sólo nos referiremos al uso de cables físicos, pero es igualmente aplicable a las redes inalámbricas.
+> [!NOTE]
+> En el resto de este artículo, sólo nos referiremos al uso de cables físicos, pero es igualmente aplicable a las redes inalámbricas.
 
 ![Dos computadoras conectadas entre sí](internet-schema-1.png)
 

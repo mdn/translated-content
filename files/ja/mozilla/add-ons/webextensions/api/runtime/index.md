@@ -70,7 +70,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime
 - {{WebExtAPIRef("runtime.getBrowserInfo()")}}
   - : 拡張機能がインストールされたブラウザーの情報を返します。
 - {{WebExtAPIRef("runtime.getPackageDirectoryEntry()")}}
-  - : 拡張機能のディレクトリの [DirectoryEntry](/ja/docs/Web/API/FileSystemDirectoryEntry) オブジェクトを返します。
+  - : 拡張機能のディレクトリーの [DirectoryEntry](/ja/docs/Web/API/FileSystemDirectoryEntry) オブジェクトを返します。
 
 ## イベント
 
@@ -103,7 +103,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime
 
 {{WebExtExamples("h2")}}
 
-> **メモ:** この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/extensions/runtime) API に基づいています。また、このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/extensions/runtime) API に基づいています。また、このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

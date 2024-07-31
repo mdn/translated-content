@@ -63,7 +63,7 @@ style {
 
 {{EmbedLiveSample('Examples')}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

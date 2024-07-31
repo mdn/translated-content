@@ -3,14 +3,16 @@ title: Firefox 25 for developers
 slug: Mozilla/Firefox/Releases/25
 ---
 
+{{FirefoxSidebar}}
+
 Gecko 25 を搭載した Firefox 25 は米国時間 2013 年 10 月 29 日にリリースされました。このページでは、開発者に影響する Firefox 25 の変更点をまとめています。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### Firefox 開発ツールの新機能
 
-- インスペクタに、CSS の名称や値のオートコンプリート機能を追加しました。
-- ブレークポイントがあなたのデバッグに関与しないライブラリ内で停止しないようにするため、デバッガで "ブラックボックス" スクリプトファイルが使用可能になりました。
+- インスペクターに、CSS の名称や値のオートコンプリート機能を追加しました。
+- ブレークポイントがあなたのデバッグに関与しないライブラリー内で停止しないようにするため、デバッガで "ブラックボックス" スクリプトファイルが使用可能になりました。
 - プロファイラで、プロファイリング結果の保存やインポートが可能になりました。Firefox 開発ツールのオプションに、"Gecko プラットフォームのデータを表示" が加わりました。
 - ネットワークパネルに、URL コマンドのコピーや再送信を行うコンテキストメニューを搭載しました。
 - 多数の内部変更により、開発ツールに手を加えるアドオンで書き換えが必要になるかもしれません。
@@ -18,7 +20,7 @@ Gecko 25 を搭載した Firefox 25 は米国時間 2013 年 10 月 29 日にリ
 ### CSS
 
 - {{cssxref("background-attachment")}} CSS プロパティの値として、キーワード `local` をサポートしました ([Firefox バグ 483446](https://bugzil.la/483446))。
-- オペレーティングシステムのバージョンを検出するための、非標準で Mozilla だけのメディアクエリをサポートしました: [`-moz-os-version`](/ja/docs/Web/Guide/CSS/Media_queries#-moz-os-version) ([Firefox バグ 810399](https://bugzil.la/810399))。現在このプロパティは、Windows のみで実装されています。
+- オペレーティングシステムのバージョンを検出するための、非標準で Mozilla だけのメディアクエリーをサポートしました: [`-moz-os-version`](/ja/docs/Web/Guide/CSS/Media_queries#-moz-os-version) ([Firefox バグ 810399](https://bugzil.la/810399))。現在このプロパティは、Windows のみで実装されています。
 - {{cssxref("-moz-osx-font-smoothing")}} CSS プロパティを実装しました ([Firefox バグ 857142](https://bugzil.la/857142))。
 
 ### HTML

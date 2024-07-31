@@ -3,6 +3,8 @@ title: Online and offline events
 slug: Web/API/Navigator/onLine
 ---
 
+{{ApiRef("HTML DOM")}}
+
 In progress [Firefox 3](/ko/Firefox_3_for_developers)는 [WHATWG 웹 애플리케이션 1.0 명세](http://www.whatwg.org/specs/web-apps/current-work/)에 기술된 [온라인/오프라인 이벤트](http://www.whatwg.org/specs/web-apps/current-work/#offline)를 구현합니다.
 
 ### 개요

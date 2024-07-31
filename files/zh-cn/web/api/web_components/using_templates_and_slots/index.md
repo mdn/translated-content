@@ -1,25 +1,27 @@
 ---
-title: 使用 templates and slots
+title: 使用模板和插槽
 slug: Web/API/Web_components/Using_templates_and_slots
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{DefaultAPISidebar("Web Components")}}
 
-这篇文章阐述了如何使用 {{htmlelement("template")}} 和 {{htmlelement("slot")}} 元素创建一个可以用来灵活填充 Web 组件的 shadow DOM 的模板。
+这篇文章阐述了如何使用 {{htmlelement("template")}} 和 {{htmlelement("slot")}} 元素创建一个可以用来灵活填充 Web 组件的影子 DOM 的模板。
 
-## 关于模板 (Templates)
+## 关于模板
 
-当你必须在网页上重复使用相同的标记结构时，使用某种模板而不是一遍又一遍地重复相同的结构是有意义的。以前这是可行的，但 HTML {{htmlelement("template")}} 元素使它更容易实现 (这在现代浏览器中得到了很好的支持)。此元素及其内容不会在 DOM 中呈现，但仍可使用 JavaScript 去引用它。
+当你必须在网页上复用相同的标记结构时，使用某种模板而不是一遍又一遍地重复相同的结构是有意义的。以前也可以实现这一点，但 HTML {{htmlelement("template")}} 元素使得这个过程更加简单。此元素及其内容不会在 DOM 中渲染，但仍可使用 JavaScript 引用它。
 
 让我们看一个简单的示例：
 
 ```html
 <template id="my-paragraph">
-  <p>My paragraph</p>
+  <p>我的段落</p>
 </template>
 ```
 
-上面的代码不会展示在你的页面中，直到你用 JavaScript 获取它的引用，然后添加到 DOM 中，如下面的代码：
+除非你使用 JavaScript 获取对它的引用，然后使用类似下面的代码将其附加到 DOM 中，否则它不会出现在你的页面中：
 
 ```js
 let template = document.getElementById("my-paragraph");
@@ -31,7 +33,7 @@ document.body.appendChild(templateContent);
 
 ## 在 Web Component 中使用模板
 
-模板（Template）本身就是有用的，而与 web 组件（web component）一起使用效果更好。我们定义一个 web 组件使用模板作为阴影（shadow）DOM 的内容，叫它 `<my-paragraph>`：
+模板本身就很有用，但与 web 组件一起使用效果更好。让我们定义一个名为 `<my-paragraph>` 的 web 组件，使用模板作为其影子 DOM 的内容：
 
 ```js
 customElements.define(
@@ -49,9 +51,9 @@ customElements.define(
 );
 ```
 
-要注意的关键是我们使用 {{domxref("Node.cloneNode()")}} 方法添加了模板的拷贝到阴影的根结点上。
+这里要注意的关键点是，我们将模版内容的克隆添加到通过 {{domxref("Node.cloneNode()")}} 方法创建的影子根上
 
-因为我们添加了模板的内容到 shadow DOM，所以我们可以加入一些样式信息到模板的 {{htmlelement("style")}} 标签里，这些样式信息稍后会封装到自定义的元素中。如果只给它添加到一个标准的 DOM 中是不起作用的。
+由于我们添加了模板的内容到影子 DOM，我们可以在模板的 {{htmlelement("style")}} 元素中包含一些样式信息，然后将其封装在自定义元素中。如果只将它添加到一个标准的 DOM 中是不起作用的。
 
 比如：
 
@@ -64,37 +66,35 @@ customElements.define(
       padding: 5px;
     }
   </style>
-  <p>My paragraph</p>
+  <p>我的段落</p>
 </template>
 ```
 
-现在我们将它添加自己的 HTML 文档中试试看：
+现在我们将它添加到自己的 HTML 文档中试试看：
 
 ```html
 <my-paragraph></my-paragraph>
 ```
 
-> **备注：** 模板在浏览器中的支持情况很好，Firefox（版本 63 及以上），Chrome，Opera ,Edge（版本 79 及以上）和 Safari 支持 Shadow DOM
+## 使用插槽增加灵活度
 
-## 使用槽 (slots) 添加灵活度
+尽管到这一步已经挺好了，但是元素仍旧不是很灵活。我们只能在里面显示一点文本，甚至没有普通段落标签有用！我们可以使用 {{htmlelement("slot")}} 元素通过声明式的语法在每个元素实例中显示不同的文本。
 
-尽管到这一步已经挺好了，但是元素仍旧不是很灵活。我们只能在里面放一点文本，甚至没有普通的 p 标签管用！我们使用 {{htmlelement("slot")}} 让它能在单个实例中通过声明式的语法展示不同的文本。浏览器对这个功能的支持比{{htmlelement("template")}}少，在 Chrome 53, Opera 40, Safari 10，火狐 59 和 Edge 79 中支持。
+插槽由其 `name` 属性标识，并且允许你在模板中定义占位符，当在标记中使用该元素时，该占位符可以填充所需的任何 HTML 标记片段。
 
-插槽由其`name`属性标识，并且允许你在模板中定义占位符，当在标记中使用该元素时，该占位符可以填充所需的任何 HTML 标记片段。
-
-如果你想添加一个槽到我们的这个例子，我们会将模板的 p 标签改成下面这样：
+因此，如果我们想添加一个插槽到这个简单的例子中，我们会将模板的段落元素改成下面这样：
 
 ```html
-<p><slot name="my-text">My default text</slot></p>
+<p><slot name="my-text">我的默认文本</slot></p>
 ```
 
-如果在标记中包含元素时未定义相关的插槽内容，或者浏览器不支持 slot 属性，则`<my-paragraph>`仅包含后备内容"My default text"。(译者注：此处的意思是使用\<my-paragraph>时内部不包裹任何内容时会显示 slot 定义好的默认值。具体使用可参考下面)
+如果在标记中包含元素时未定义相关的插槽内容，或者浏览器不支持插槽，则 `<my-paragraph>` 仅包含后备内容 "我的默认文本"。
 
-要定义插槽内容，我们在`<my-paragraph>`元素内包括一个 HTML 结构，该结构具有[`slot`](/zh-CN/docs/Web/HTML/Global_attributes#slot)属性，其值等于我们要填充的{{htmlelement("slot")}}的 name 属性的值。和以前一样，它可以是你喜欢的任何东西，例如：
+要定义插槽内容，我们在 `<my-paragraph>` 元素内包括一个 HTML 结构，该结构具有 [`slot`](/zh-CN/docs/Web/HTML/Global_attributes#slot) 属性，其值等于我们要填充的 {{htmlelement("slot")}} 的 name 属性的值。和之前一样，它可以是你喜欢的任何东西，例如：
 
 ```html
 <my-paragraph>
-  <span slot="my-text">Let's have some different text!</span>
+  <span slot="my-text">让我们使用一些不同的文本！</span>
 </my-paragraph>
 ```
 
@@ -103,36 +103,39 @@ customElements.define(
 ```html
 <my-paragraph>
   <ul slot="my-text">
-    <li>Let's have some different text!</li>
+    <li>让我们使用一些不同的文本！</li>
     <li>In a list!</li>
   </ul>
 </my-paragraph>
 ```
 
-以上为例。
+> [!NOTE]
+> 可以被插入到槽中的节点被称为 _Slotable_；已经插入到槽中的节点被称为 _slotted_。
 
-> **备注：** 将能被插入到槽中的元素视为 {{domxref("Slotable")}}; 称已经插入到槽中的元素为 _slotted_.
+> [!NOTE]
+> 未命名的 {{HTMLElement("slot")}} 元素将填充自定义元素中所有不含 [`slot`](/zh-CN/docs/Web/HTML/Global_attributes#slot) 属性的顶级子节点。也包括文本节点。
 
-这就我们普通的例子，你想更深入了解你可以 [在 GitHub 上查看](https://github.com/mdn/web-components-examples/tree/master/simple-template) (也可以看 [在线运行](https://mdn.github.io/web-components-examples/simple-template/))。
+这就我们的简单例子，如果你想继续了解，你可以[在 GitHub 上查看](https://github.com/mdn/web-components-examples/tree/master/simple-template)（另见[在线运行](https://mdn.github.io/web-components-examples/simple-template/)）。
 
 ## 更深入的示例
 
-为了更好的结束这篇文章，我们来个看一些不寻常的示例。
+为了更好的结束这篇文章，我们来看一个不那么寻常的示例。
 
-下面的一组代码段展示了我们如何联合使用 `<slot>` 和 `<template>` 以及一些 JavaScript 去完成：
+下面的一组代码片段展示了我们如何联合使用 `<slot>` 和 `<template>` 以及一些 JavaScript 来实现：
 
-- 使用 [命名的槽 (named slots)](/zh-CN/docs/Web/HTML/Element/slot#named-slot) 在 [阴影 (shadow root)](/zh-CN/docs/Web/API/ShadowRoot) 创建一个 **`<element-details>`** 元素。
-- 将 **`<element-details>`** 元素设计成在文档中使用时，它将它的 [shadow root](/zh-CN/docs/Web/API/ShadowRoot) 中的内容和该元素内部的内容糅合在一起 —也就是元素内容中的片断被填充到元素的 [阴影 (shadow root)](/zh-CN/docs/Web/API/ShadowRoot) 的 [命名的槽 (named slots)](/zh-CN/docs/Web/HTML/Element/slot#named-slot) 中。
+- 使用 [具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)在[影子根](/zh-CN/docs/Web/API/ShadowRoot)中创建一个 **`<element-details>`** 元素。
+- 将 **`<element-details>`** 元素设计成在文档中使用时，它将其[影子根](/zh-CN/docs/Web/API/ShadowRoot)中的内容和该元素内部的内容糅合在一起——即元素内容中的片段被填充到元素[影子根](/zh-CN/docs/Web/API/ShadowRoot)的[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name) 中。
 
-注意，技术上来讲没有`<template>` 使用 `<slot>` 也是可以的。例如， `<slot>` 在一个常规的{{HTMLElement("div")}} 标签里，仍然有占位符的特性，就像在 shadow DOM 中一样，这样我们能避免需要先获取模板对象的 `content` 属性再使用它的麻烦。然而这个特性在向一个 {{HTMLElement("template")}} 元素中添加槽时更加实用，因为你不会基于一个渲染的元素定义一个模式。
+注意，技术上来讲脱离 `<template>` 使用 `<slot>` 也是可以的。例如，`<slot>` 在一个常规的 {{HTMLElement("div")}} 元素里，仍然有占位符的特性，就像在影子 DOM 中一样，这样我们能避免需要先获取模板对象的 `content` 属性再使用它的麻烦。然而这个特性在向 {{HTMLElement("template")}} 元素中添加插槽时更加实用，因为你不太可能基于一个已渲染的元素定义一个模式。
 
-另外，就算它还没有渲染，使用{{HTMLElement("template")}}时，作为模板的容器应该语义上应当干净。而且 {{HTMLElement("template")}} 可以直接挂一些对象，如 {{HTMLElement("td")}} ，当加到一个 {{HTMLElement("div")}} 中时会隐藏。
+另外，就算它还没有渲染，使用 {{HTMLElement("template")}} 时，容器作为模板的目的在语义上应该清晰。而且 {{HTMLElement("template")}} 上可以直接添加一些对象，如 {{HTMLElement("td")}}，当添加到 {{HTMLElement("div")}} 中时会隐藏。
 
-> **备注：** 查看在完整的例子在 [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) ( [在线运行](https://mdn.github.io/web-components-examples/element-details/) ).
+> [!NOTE]
+> 你可以在 [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) 查看这个完整的例子（另见[在线运行](https://mdn.github.io/web-components-examples/element-details/)）。
 
-### 使用槽 (slot) 创建一个模板
+### 使用插槽创建一个模板
 
-首先，我们在{{HTMLElement("template")}} 使用 `<slot>` 标签创建一个"element-details-template"包含一些 [命名的槽 (named slot)](/zh-CN/docs/Web/HTML/Element/slot#named-slot) 的 [文档片段 (document fragment)](/zh-CN/docs/Web/API/DocumentFragment)
+首先，我们在 {{HTMLElement("template")}} 元素中使用 {{HTMLElement("slot")}} 元素来创建一个新的“element-details-template”[文档片段](/zh-CN/docs/Web/API/DocumentFragment)，其中包含一些[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)：
 
 ```html
 <template id="element-details-template">
@@ -186,20 +189,20 @@ customElements.define(
 </template>
 ```
 
-上面这个{{HTMLElement("template")}} 有几个特征：
+上面这个 {{HTMLElement("template")}} 元素有几个特征：
 
-- {{HTMLElement("template")}} 标签有一个 {{HTMLElement("style")}} 标签，里面有一些 只能在当前{{HTMLElement("template")}} 的派生中生效的 CSS 样式
-- {{HTMLElement("template")}} 用 `<slot>` 和它的 [`name`](/zh-CN/docs/Web/HTML/Element/slot#name) 属性生成一个 [命名的槽 (named slots)](/zh-CN/docs/Web/HTML/Element/slot#named-slot)：
+- {{HTMLElement("template")}} 有一个 {{HTMLElement("style")}} 元素，里面有一些只能在当前 {{HTMLElement("template")}} 中创建的文档片段范围内生效的 CSS 样式
+- {{HTMLElement("template")}} 使用 {{HTMLElement("slot")}} 及其 [`name`](/zh-CN/docs/Web/HTML/Element/slot#name) 属性来创建三个[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)：
 
   - `<slot name="element-name">`
   - `<slot name="description">`
   - `<slot name="attributes">`
 
-- {{HTMLElement("template")}} 包裹 [命名的槽 (named slots)](/zh-CN/docs/Web/HTML/Element/slot#named-slot) 在 {{HTMLElement("details")}} 元素中。
+- {{HTMLElement("template")}} 将[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)包裹在 {{HTMLElement("details")}} 元素中。
 
-### 从\<template> 中创建一个新的 \<element-details> 对象
+### 从 \<template> 中创建一个新的 \<element-details> 元素
 
-接下来，我们定义一个新的 **`<element-details>`** 元素然后用 {{DOMXref("Element.attachShadow")}} 来将它附着到它的 [阴影 (shadow) root](/zh-CN/docs/Web/API/ShadowRoot), 这个阴影上我们创建了 {{HTMLElement("template")}} 元素。这和我们上面使用的简单例子中的一样。
+接下来，我们创建一个名为 **`<element-details>`** 的新自定义元素，然后用 {{DOMXref("Element.attachShadow")}} 来将上面通过 {{HTMLElement("template")}} 元素创建的文档片段作为[影子根](/zh-CN/docs/Web/API/ShadowRoot)附加到它上面，这使用了与我们在之前的简单示例中看到的完全相同的模式。
 
 ```js
 customElements.define(
@@ -218,42 +221,41 @@ customElements.define(
 );
 ```
 
-### 结合命名的 slots 使用自定义元素 \<element-details>
+### 结合具名插槽使用自定义元素 \<element-details>
 
-现在让我们正式在文档流中使用\<element-details>标签：
+现在让我们正式在文档中使用 \<element-details> 元素：
 
 ```html
 <element-details>
-  <span slot="element-name">slot</span>
+  <span slot="element-name">插槽</span>
   <span slot="description"
-    >A placeholder inside a web component that users can fill with their own
-    markup, with the effect of composing different DOM trees together.</span
+    >用户可以用自己编写的标记填充至 web 组件中的占位符，从而达到组合不同 DOM
+    树的效果。</span
   >
   <dl slot="attributes">
-    <dt>name</dt>
-    <dd>The name of the slot.</dd>
+    <dt>名称</dt>
+    <dd>插槽的名称</dd>
   </dl>
 </element-details>
 
 <element-details>
-  <span slot="element-name">template</span>
+  <span slot="element-name">模板</span>
   <span slot="description"
-    >A mechanism for holding client- side content that is not to be rendered
-    when a page is loaded but may subsequently be instantiated during runtime
-    using JavaScript.</span
+    >一种用于保存客户端内容的机制，此类内容不会在页面加载时呈现，但随后可能在运行时使用
+    JavaScript 实例化。</span
   >
 </element-details>
 ```
 
-关于以上代码片段，请注意以下几点：
+关于以上代码片段，注意以下几点：
 
-- 该代码片段有 2 个 **`<element-details>`** 标签，他们都使用了“slot”属性来引用名为`"element-name"`和`"description"`的槽，并把他们都放在根下。
-- 只有第一个 **`<element-details>`** 元素 引用了名为 `"attributes"` 的槽，而第二个 `<element-details>` 标签没有引用名为`"attributes"`的槽。
-- 只有第一个 **`<element-details>`** 标签中的"dl"使用了名为 `"attributes"`的槽，他包含子元素："dt"和"dd"元素。
+- 该代码片段有两个 **`<element-details>`** 元素，它们都使用了 [`slot`](/zh-CN/docs/Web/HTML/Global_attributes#slot) 属性来引用名为 `"element-name"` 和 `"description"` 的的[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)，并把它们都放在[影子根](/zh-CN/docs/Web/API/ShadowRoot)下。
+- 只有第一个 **`<element-details>`** 元素引用了名为 `"attributes"` 的[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)，而第二个 `<element-details>` 标签没有引用名为 `"attributes"` 的[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)。
+- 第一个 `<element-details>` 元素中的 {{HTMLElement("dl")}} 元素使用包含子元素 {{HTMLElement("dt")}} 和 {{HTMLElement("dd")}} 的 {{HTMLElement("dl")}} 元素引用了 `"attributes"` [具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)。
 
 ### 添加一些最终的样式
 
-在完成之前，我们在文档中给"dl"和"dt"以及"dd"标签增加一些 CSS 样式。
+在完成之前，我们在文档中给 {{HTMLElement("dl")}} 和 {{HTMLElement("dt")}} 以及 {{HTMLElement("dd")}} 元素增加一些 CSS 样式。
 
 ```css
 dl {
@@ -282,126 +284,12 @@ body {
 
 最后，让我们所有的代码片段结合在一起，看看渲染的结果是什么样的。
 
-{{ EmbedLiveSample('更深入的示例', '300','400','element-details.png','') }}
+{{EmbedLiveSample('更深入的示例', '300','400')}}
 
 关于结果请注意以下几点：
 
-- 即使 **`<element-details>`** 标签并没有直接使用`"details"`标签元素，但是在渲染的时候使用了`"details"`标签，是因为 shadow root 使得他们被填充。
-- 在渲染出来的`"details"`标签，**`<element-details>`** 标签从根开始填充了相应的命名的槽。换言之，**`<element-details>`** 的 DOM 树和 shadow root 的内容结合在了一起。
-- 对于这两个 **`<element-details>`** 标签，属性标题会自动的从 shadow root 中添加到名为`"attribute"`的插槽的前面。
-- 因为第一个 **`<element-details>`** 标签的`"dl"`元素就明确的引用了名为`"attributes"`的插槽，所以该`"dl"`元素的内容将会替换该标签中名为`"attributes"`的插槽。
-- 因为第二个 **`<element-details>`** 标签没有引用名为`"attributes"` 的槽，所以标签内名为`"attributes"的`插槽的内容将会使用模板中默认的内容。
-
-```html hidden
-<!doctype html>
-<html>
-  <head>
-    <title>slot example</title>
-    <style>
-      dl {
-        margin-left: 6px;
-      }
-      dt {
-        font-weight: bold;
-        color: #217ac0;
-        font-size: 110%;
-      }
-      dt {
-        font-family: Consolas, "Liberation Mono", Courier;
-      }
-      dd {
-        margin-left: 16px;
-      }
-    </style>
-  </head>
-  <body>
-    <template id="element-details-template">
-      <style>
-        details {
-          font-family: "Open Sans Light", Helvetica, Arial;
-        }
-        .name {
-          font-weight: bold;
-          color: #217ac0;
-          font-size: 120%;
-        }
-        h4 {
-          margin: 10px 0 -8px 0;
-        }
-        h4 span {
-          background: #217ac0;
-          padding: 2px 6px 2px 6px;
-        }
-        h4 span {
-          border: 1px solid #cee9f9;
-          border-radius: 4px;
-        }
-        h4 span {
-          color: white;
-        }
-        .attributes {
-          margin-left: 22px;
-          font-size: 90%;
-        }
-        .attributes p {
-          margin-left: 16px;
-          font-style: italic;
-        }
-      </style>
-      <details>
-        <summary>
-          <span>
-            <code class="name"
-              >&lt;<slot name="element-name">NEED NAME</slot>&gt;</code
-            >
-            <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
-          </span>
-        </summary>
-        <div class="attributes">
-          <h4><span>Attributes</span></h4>
-          <slot name="attributes"><p>None</p></slot>
-        </div>
-      </details>
-      <hr />
-    </template>
-
-    <element-details>
-      <span slot="element-name">slot</span>
-      <span slot="description"
-        >A placeholder inside a web component that users can fill with their own
-        markup, with the effect of composing different DOM trees together.</span
-      >
-      <dl slot="attributes">
-        <dt>name</dt>
-        <dd>The name of the slot.</dd>
-      </dl>
-    </element-details>
-
-    <element-details>
-      <span slot="element-name">template</span>
-      <span slot="description"
-        >A mechanism for holding client- side content that is not to be rendered
-        when a page is loaded but may subsequently be instantiated during
-        runtime using JavaScript.</span
-      >
-    </element-details>
-
-    <script>
-      customElements.define(
-        "element-details",
-        class extends HTMLElement {
-          constructor() {
-            super();
-            const template = document.getElementById(
-              "element-details-template",
-            ).content;
-            const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
-              template.cloneNode(true),
-            );
-          }
-        },
-      );
-    </script>
-  </body>
-</html>
-```
+- 即使 **`<element-details>`** 元素并没有直接使用 {{HTMLElement("details")}} 元素元素，但是在渲染的时候使用了 {{HTMLElement("details")}} 元素，是因为[影子根](/zh-CN/docs/Web/API/ShadowRoot)使得它们被填充。
+- 在渲染的 {{HTMLElement("details")}} 结果中，**`<element-details>`** 元素填充了影子根中的[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)。换言之，**`<element-details>`** 的 DOM 树和[影子根](/zh-CN/docs/Web/API/ShadowRoot)的内容结合在了一起。
+- 对于这两个 **`<element-details>`** 元素，**Attributes** 标题会自动从[影子根](/zh-CN/docs/Web/API/ShadowRoot)中添加到名为 `"attribute"` 的[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)的前面。
+- 因为第一个 **`<element-details>`** 元素的 {{HTMLElement("dl")}} 元素就明确引用了名为 `"attributes"` 的[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)，所以该 {{HTMLElement("dl")}} 元素的内容将会替换该元素中名为 `"attributes"` 的[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)。
+- 因为第二个 **`<element-details>`** 元素没有显式引用其[影子根](/zh-CN/docs/Web/API/ShadowRoot)中名为 `"attributes"` 的[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)，所以元素内名为 `"attributes"` 的[具名插槽](/zh-CN/docs/Web/HTML/Element/slot#name)的内容将会使用模板中默认的内容。

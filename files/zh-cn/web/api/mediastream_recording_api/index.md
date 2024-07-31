@@ -23,7 +23,8 @@ MediaStream Recording API 由一个主接口{{domxref("MediaRecorder")}}组成�
 6. 当源媒体停止播放时候，录制自动结束。
 7. 你可以随时结束录制通过使用 {{domxref("MediaRecorder.stop()")}}.
 
-> **备注：** 单单使用包含已经录制好媒体切片的{{domxref("Blob")}}s 将大可不能单独播放。媒体在重放之前需要重新组装。
+> [!NOTE]
+> 单单使用包含已经录制好媒体切片的{{domxref("Blob")}}s 将大可不能单独播放。媒体在重放之前需要重新组装。
 
 如果在录制过程中出错，[`error`](/zh-CN/docs/Web/API/Element/error_event) 事件将会传给`MediaRecorder`. 你可以设置{{domxref("MediaRecorder.onerror", "onerror")}}去监听 `error` 事件。
 
@@ -133,6 +134,6 @@ navigator.mediaDevices.enumerateDevices().then(function (devices) {
 - [MediaRecorder polyfill](https://github.com/ai/audio-recorder-polyfill) for Safari and Edge
 - [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): HTML5 video capture/playback/download using getUserMedia and the MediaRecorder API ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))
 - [FingerSpell](https://www.fingerspell.org/): Sign Language Fingerspelling practice using getUserMedia and the MediaRecorder API to create and download recordings, MediaRecorder API supported desktop browsers only [(source on GitHub](https://github.com/chrisjohndigital/CameraCaptureJS))
-- [Simple video recording demo](http://codepen.io/anon/pen/gpmPzm)
+- [Simple video recording demo](https://codepen.io/anon/pen/gpmPzm)
 - [Advanced media stream recorder sample](https://quickblox.github.io/javascript-media-recorder/sample/)
 - [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML5 video language lab web application using MediaDevices and the MediaStream Recording API for video recording ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))

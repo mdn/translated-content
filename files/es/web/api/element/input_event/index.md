@@ -1,7 +1,6 @@
 ---
 title: Evento input
 slug: Web/API/Element/input_event
-original_slug: Web/API/HTMLElement/input_event
 ---
 
 {{APIRef}}
@@ -41,7 +40,8 @@ El evento también aplica a los elementos con la propiedad {{domxref("HTMLElemen
 
 Para elementos `<input>` con `type=checkbox` o `type=radio`, el evento `input` debería disparar cuando el usuario alterna el control, por [la especificación HTML5](https://html.spec.whatwg.org/multipage/input.html#the-input-element:event-input-2). Sin embargo, históricamente no siempre es el caso. Revise la compatibilidad o use el evento [`change`](/es/docs/Web/Reference/Events/change) en su lugar para estos tipos.
 
-> **Nota:** A diferencia de `input`, el evento [`change`](/es/docs/Web/Reference/Events/change) no es disparado necesariamente por cada alteración al valor (`value`) de un elemento.
+> [!NOTE]
+> A diferencia de `input`, el evento [`change`](/es/docs/Web/Reference/Events/change) no es disparado necesariamente por cada alteración al valor (`value`) de un elemento.
 
 ## Ejemplos
 

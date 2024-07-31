@@ -99,7 +99,7 @@ l10n:
 
 - {{domxref("XMLHttpRequest.responseXML")}} プロパティは、受信したデータを解析する際にパースエラーが発生した場合に、先頭に \<parsererror> ノードを置いた部分的な {{domxref("Document")}} を返さないようになりました。代わりに、正しく `null` を返します ([Firefox バグ 289714](https://bugzil.la/289714))。
 - 最新の仕様書に合わせて、{{domxref("XMLHttpRequest.setRequestHeader()", "setRequestHeader()")}} で {{HTTPHeader("Accept")}} ヘッダーを設定していない {{domxref("XMLHttpRequest")}} は、値として `*/*` を設定した Accept ヘッダーを送信するようになりました ([Firefox バグ 918752](https://bugzil.la/918752))。
-- {{domxref("XMLHttpRequest.open()")}} で、パラメーター `username` および `password` を省略した場合の既定値を、仕様書に従って `null` にするよう修正しました ([Firefox バグ 933759](https://bugzil.la/933759))。
+- {{domxref("XMLHttpRequest.open()")}} で、引数 `username` および `password` を省略した場合の既定値を、仕様書に従って `null` にするよう修正しました ([Firefox バグ 933759](https://bugzil.la/933759))。
 
 ### WebRTC
 
@@ -167,7 +167,7 @@ l10n:
   - ソーシャルチャット機能を削除しました。
   - Social Status API を削除しました。
   - Share panel を除く、すべての [ソーシャルウィジェット](/ja/docs/Mozilla/Projects/Social_API/Widgets) を削除しました。social sidebar や flyover panel などが含まれます。
-  - 削除した API のためにサポートしていたユーザインターフェイスや機能も、同様に削除しました。
+  - 削除した API のためにサポートしていたユーザーインターフェイスや機能も、同様に削除しました。
   - 削除した機能をサポートする、[Social service provider manifest](/ja/docs/Mozilla/Projects/Social_API/Manifest) のプロパティを廃止しました。
 
 - ファイル拡張子と MIME タイプの関連付けを与えるために `mimeTypes.rdf` をアドオンが使用する場合に、`"ext-to-type-mapping"` カテゴリーで項目を登録することが必要になりました ([Firefox バグ 306471](https://bugzil.la/306471))。

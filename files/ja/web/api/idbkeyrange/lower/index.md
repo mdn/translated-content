@@ -21,7 +21,8 @@ l10n:
 
 キーの範囲を宣言した後、その `lower` プロパティの値をコンソールに記録します。これは `"F"` になるはずです。
 
-> **メモ:** キーの範囲に関する実験ができるより完全な例は、[IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) レポジトリを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
+> [!NOTE]
+> キーの範囲に関する実験ができるより完全な例は、[IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) レポジトリを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
 
 ```js
 function displayData() {

@@ -44,7 +44,7 @@ Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
 
-为了验证跨源隔离是否生效，你可以测试窗口和 worker 线程上下文中是否存在 [`crossOriginIsolated`](/zh-CN/docs/Web/API/crossOriginIsolated) 属性：
+为了验证跨源隔离是否生效，你可以测试窗口和 worker 上下文中的 {{domxref("Window.crossOriginIsolated")}} 或 {{domxref("WorkerGlobalScope.crossOriginIsolated")}} 属性：
 
 ```js
 const myWorker = new Worker("worker.js");
@@ -93,7 +93,7 @@ WebAssembly Thread 提案还定义了一套新的[原子](https://github.com/Web
 
 ## 静态属性
 
-- {{jsxref("SharedArrayBuffer/@@species", "SharedArrayBuffer[@@species]")}}
+- [`SharedArrayBuffer[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Symbol.species)
   - : 返回用于构造 `SharedArrayBuffer` 方法返回值的构造函数。
 
 ## 实例属性
@@ -108,8 +108,8 @@ WebAssembly Thread 提案还定义了一套新的[原子](https://github.com/Web
   - : 只读。如果当前 `SharedArrayBuffer` 可以增大，则返回 `true`，否则返回 `false`。
 - {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}}
   - : 当前 `SharedArrayBuffer` 可以增大的最大长度，只读，以字节为单位。在构造数组时确定且无法更改。
-- `SharedArrayBuffer.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"SharedArrayBuffer"`。它被用于 {{jsxref("Object.prototype.toString()")}}。
+- `SharedArrayBuffer.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"SharedArrayBuffer"`。它被用于 {{jsxref("Object.prototype.toString()")}}。
 
 ## 实例方法
 
@@ -165,5 +165,5 @@ gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}}
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}}
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}}
-- [`crossOriginIsolated`](/zh-CN/docs/Web/API/crossOriginIsolated)
+- {{domxref("Window.crossOriginIsolated")}} 和 {{domxref("WorkerGlobalScope.crossOriginIsolated")}}
 - [Android Chrome 88 和桌面版 Chrome 92 中的 SharedArrayBuffer 更新](https://developer.chrome.com/blog/enabling-shared-array-buffer/)，developer.chrome.com（2021）

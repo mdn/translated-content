@@ -3,12 +3,12 @@ title: "HTMLImageElement: sizes プロパティ"
 short-title: sizes
 slug: Web/API/HTMLImageElement/sizes
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLImageElement")}} の **`sizes`** プロパティによって、メディア条件のリストごとに、画像のレイアウト幅を指定することができます。これにより、様々なメディア条件に合わせて文書の状態が変化したときに、異なる画像（方向やアスペクト比の異なる画像も含む）を自動的に選択する機能が提供されます。
+{{domxref("HTMLImageElement")}} の **`sizes`** プロパティによって、メディア条件のリストごとに、[画像](/ja/docs/Web/HTML/Element/img)のレイアウト幅を指定することができます。これにより、様々なメディア条件に合わせて文書の状態が変化したときに、異なる画像（方向やアスペクト比の異なる画像も含む）を自動的に選択する機能が提供されます。
 
 それぞれの条件は、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)で使われているのと同じ条件指定の形式を使用します。
 
@@ -18,13 +18,14 @@ l10n:
 
 ### メディア条件
 
-それぞれのソースサイズ記述子は、メディアクエリー規格で定義されるメディア条件から構成される。ソースサイズ記述子は、ページのレイアウト中に画像に使用する幅を指定するために使用されるので、メディア条件は通常、幅の情報のみに基づきます（必ずしもそうとは限りません）。メディア条件の構築方法の詳細は、[メディアクエリーの使用の構文](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#構文)を参照してください。
+それぞれのソースサイズ記述子は、メディアクエリー規格で定義されるメディア条件から構成される。ソースサイズ記述子は、ページのレイアウト中に画像に使用する幅を指定するために使用されるので、メディア条件は通常、[幅](/ja/docs/Web/CSS/@media/width)の情報のみに基づきます（必ずしもそうとは限りません）。メディア条件の構築方法の詳細は、[メディアクエリーの使用の構文](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#構文)を参照してください。
 
 ### ソースサイズ値
 
-ソースサイズの値は [CSS の長さ](/ja/docs/Web/CSS/length)です。フォントと相対的な単位 (`em` や `ex` など)、絶対的な単位 (`px` や `cm` など)、または `vw` という単位を使って指定することができ、ビューポート幅に対する割合（`1vw` はビューポート幅の 1%）で指定することができます。
+ソースサイズの値は CSS の {{cssxref("length")}} です。フォントと相対的な単位 (`em` や `ex` など)、絶対的な単位 (`px` や `cm` など)、または `vw` という単位を使って指定することができ、ビューポート幅に対する割合（`1vw` はビューポート幅の 1%）で指定することができます。
 
-> **メモ:** ソースサイズ値は、コンテナーサイズに対するパーセント値として指定してはいけません。つまり、`50%` や `100%` といった長さの指定は、指定した値が何に対するパーセント値であるかが不明確になるため、許されません。
+> [!NOTE]
+> ソースサイズ値は、コンテナーサイズに対するパーセント値として指定してはいけません。つまり、`50%` や `100%` といった長さの指定は、指定した値が何に対するパーセント値であるかが不明確になるため、許されません。
 
 ## 例
 
@@ -67,7 +68,7 @@ l10n:
 </article>
 ```
 
-### CSS
+#### CSS
 
 ```css
 article {
@@ -94,9 +95,9 @@ article img {
 }
 ```
 
-### JavaScript
+#### JavaScript
 
-JavaScript のコードでは、　3　つ目の幅のオプションを 40em と 50em の間で切り替えることができる　2　つのボタンを処理しています。これは {{domxref("Element.click_event", "click")}} イベントを処理することで、 JavaScript 文字列オブジェクトメソッド {{jsxref("String.replace", "replace()")}}を使って `sizes` 文字列の該当部分を置換して実現しています。
+JavaScript のコードでは、　3　つ目の幅のオプションを 40em と 50em の間で切り替えることができる　2　つのボタンを処理しています。これは {{domxref("Element.click_event", "click")}} イベントを処理することで、 JavaScript 文字列オブジェクトの {{jsxref("String.replace", "replace()")}} メソッドを使って `sizes` 文字列の該当部分を置換して実現しています。
 
 ```js
 const image = document.querySelector("article img");
@@ -114,7 +115,7 @@ break50.addEventListener(
 );
 ```
 
-### 結果
+#### 結果
 
 {{EmbedLiveSample("Selecting an image to fit window width", "", 1050)}}
 
@@ -134,3 +135,4 @@ break50.addEventListener(
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [HTML における画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 - [レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [`srcset` および `sizes` 属性の使用](/ja/docs/Web/HTML/Element/img#srcset_および_sizes_属性の使用)

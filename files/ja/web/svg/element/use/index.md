@@ -39,7 +39,8 @@ That's why the circles have different x positions, but the same stroke value.
 
 セキュリティ上の理由で、ブラウザーは[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)を `use` 要素に適用して、 {{SVGAttr("href")}} 属性にあるオリジンをまたがる URL を読み込むことを拒否することがあります。現在のところ、 `use` 要素の同一オリジンポリシーを設定する方法は定義されていません。
 
-> **警告:** SVG 2 で {{SVGAttr("xlink:href")}} 属性が非推奨になり、 {{SVGAttr("href")}} に置き換えられました。詳しくは {{SVGAttr("xlink:href")}} のページを参照してください。ただし、 {{SVGAttr("xlink:href")}} はブラウザー間の互換性のために今でも実装する必要があります (下記の[互換性一覧表](#browser_compatibility)を参照)。
+> [!WARNING]
+> SVG 2 で {{SVGAttr("xlink:href")}} 属性が非推奨になり、 {{SVGAttr("href")}} に置き換えられました。詳しくは {{SVGAttr("xlink:href")}} のページを参照してください。ただし、 {{SVGAttr("xlink:href")}} はブラウザー間の互換性のために今でも実装する必要があります (下記の[互換性一覧表](#browser_compatibility)を参照)。
 
 ## 属性
 
@@ -64,7 +65,8 @@ That's why the circles have different x positions, but the same stroke value.
 
 > **メモ:** `width` および `height` は `use` 要素では効果がありません。ただし、参照される要素に [viewbox](/ja/docs/Web/SVG/Attribute/viewBox) がある場合を除きます。 すなわち、 `use` が `svg` または `symbol` 要素を参照していた時だけ効果があります。
 
-> **メモ:** SVG2 から、 `x`, `y`, `width`, `height` は*位置プロパティ*となり、すなわちこれらの属性がその要素への CSS プロパティとしても使用することができるようになりました。
+> [!NOTE]
+> SVG2 から、 `x`, `y`, `width`, `height` は*位置プロパティ*となり、すなわちこれらの属性がその要素への CSS プロパティとしても使用することができるようになりました。
 
 ### グローバル属性
 
@@ -75,7 +77,7 @@ That's why the circles have different x positions, but the same stroke value.
 - [条件処理属性](/ja/docs/Web/SVG/Attribute/Conditional_Processing)
   - : 特に: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
 - イベント属性
-  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#global_Event_Attributes), [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute/Events#graphical_Event_Attributes)
+  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#グローバルイベント属性), [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute/Events#グラフィックイベント属性)
 - [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation)
   - : 特に: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - ARIA 属性

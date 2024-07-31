@@ -2,7 +2,7 @@
 title: 擬似クラスと擬似要素
 slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 l10n:
-  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
+  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
@@ -14,7 +14,7 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピュータリテラシー、<a
+        <a
           href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >基本的なソフトウェアのインストール</a
         >、<a
@@ -54,7 +54,8 @@ l10n:
 - [`:only-child`](/ja/docs/Web/CSS/:only-child)
 - [`:invalid`](/ja/docs/Web/CSS/:invalid)
 
-> **メモ:** 擬似クラスや要素の前に要素セレクターを書かずに書くことは有効です。この例では、 `:first-child` と書けば、段落の最初の子要素だけでなく、 `<article>` 要素の最初の子要素であるすべての要素に適用されます。 `:first-child` は `*:first-child` と等価だからです。しかし、通常は複数の要素を制御したいので、より詳細度を上げる必要があります。
+> [!NOTE]
+> 擬似クラスや要素の前に要素セレクターを書かずに書くことは有効です。この例では、 `:first-child` と書けば、段落の最初の子要素だけでなく、 `<article>` 要素の最初の子要素であるすべての要素に適用されます。 `:first-child` は `*:first-child` と等価だからです。しかし、通常は複数の要素を制御したいので、より詳細度を上げる必要があります。
 
 ### ユーザー操作擬似クラス
 
@@ -71,11 +72,12 @@ l10n:
 
 擬似要素はダブルコロン `::` で始まります。擬似要素の例は `::before` です。
 
-> **メモ:** 一部の初期の擬似要素では、単一のコロン構文が使用されていたため、コードまたは例でこれを見ることがあるでしょう。最新のブラウザーは、後方互換性のためにシングルまたはダブルコロン構文で初期の擬似要素に対応しています。
+> [!NOTE]
+> 一部の初期の擬似要素では、単一のコロン構文が使用されていたため、コードまたは例でこれを見ることがあるでしょう。最新のブラウザーは、後方互換性のためにシングルまたはダブルコロン構文で初期の擬似要素に対応しています。
 
 たとえば、段落の最初の行を選択する場合は、それを `<span>` 要素にラップして要素セレクターを使用できます。ただし、ラップした単語の数が親要素の幅よりも長いまたは短い場合は、失敗します。1 行にいくつの単語が収まるかわからない傾向があるため（画面の幅やフォントサイズが変わると、単語数が変わるため）、HTML を追加してこれを確実に行うことは不可能です。
 
-`::first-line` 擬似要素セレクタは確実にあなたのためにこれを行います-それはまだ最初の行のみを選択します言葉の数が増加した場合と減少します。
+`::first-line` 擬似要素セレクターは確実にあなたのためにこれを行います-それはまだ最初の行のみを選択します言葉の数が増加した場合と減少します。
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/first-line.html", '100%', 800)}}
 

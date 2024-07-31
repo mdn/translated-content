@@ -1,7 +1,6 @@
 ---
 title: Entrées utilisateur et méthodes
 slug: Learn/Forms/User_input_methods
-original_slug: Web/Guide/User_input_methods
 ---
 
 Les entrées utilisateur modernes vont au-delà du simple clavier et souris: pensez aux écrans tactiles par exemple. Cet article fournit des recommendations pour gérer les entrées utilisateur et implémenter les contrôles des Open Web Apps, ainsi que des FAQs, des exemples concrets, et des liens pour ceux qui ont besoin d'informations supplémentaires sur les technologies utilisées. Les APIs et événements abordés sont en autre [les événements tactiles](/fr/docs/Web/Guide/DOM/Events/Touch_events), [l'API Pointer Lock](/fr/docs/WebAPI/Pointer_Lock), [l'API Screen Orientation](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation), [l'API Fullscreen](/fr/docs/Web/Guide/DOM/Using_full_screen_mode) et [Drag & Drop](/fr/docs/Web/API/API_HTML_Drag_and_Drop).
@@ -38,7 +37,8 @@ window.addEventListener("keyup", handleKeyUp, true);
 
 où `handleKeyDown` et `handleKeyUp` sont des fonctions implémentant les contrôles sur les événements `keydown` et `keyup`.
 
-> **Note :** Jetez un coup d'oeil à la [Référence des événements](/fr/docs/Web/Events) et au guide {{domxref("KeyboardEvent")}} pour en savoir plus sur les événements de clavier.
+> [!NOTE]
+> Jetez un coup d'oeil à la [Référence des événements](/fr/docs/Web/Events) et au guide {{domxref("KeyboardEvent")}} pour en savoir plus sur les événements de clavier.
 
 #### Souris
 
@@ -62,13 +62,15 @@ element.addEventListener("touchmove", handleMove, false);
 
 où `element` est l'élément du DOM sur lequel vous voulez enregistrer les événements tactiles.
 
-> **Note :** Pour plus d'informations sur ce que vous pouvez faire avec les événements tactiles, lisez le guide des [événements tactiles](/fr/docs/Web/Guide/DOM/Events/Touch_events).
+> [!NOTE]
+> Pour plus d'informations sur ce que vous pouvez faire avec les événements tactiles, lisez le guide des [événements tactiles](/fr/docs/Web/Guide/DOM/Events/Touch_events).
 
 #### Événements de pointeur
 
 Quand vous avez affaire à des appareils qui incorporent de multiples formes d'entrée, comme la souris, le toucher du doigt et la saisie au stylet, il peut être difficile de développer une solution qui marche pour tous ces mécanismes de contrôle différents. Les [événements de pointeur](/fr/docs/Web/API/Pointer_events) aident les développeurs à gérer plus facilement les événements sur les appareils en normalisant le traitement de chacun d'entre eux. Un pointeur peut être n'importe quel contact sur l'écran, fait par le curseur d'une souris, d'un stylo, le toucher (y compris multi-touch) ou autre périphérique d'entrée de pointage. Les événements génériques pour gérer la saisie du pointeur ressemblent beaucoup à ceux pour la souris: `pointerdown`, `pointermove`, `pointerup`, `pointerover`, `pointerout`, etc.
 
-> **Note :** Les événements du pointeur ne sont pas encore beaucoup pris en charge, mais le [polyfill pointer.js](https://github.com/mozilla/pointer.js) est disponible sur le compte GitHub de Mozilla.
+> [!NOTE]
+> Les événements du pointeur ne sont pas encore beaucoup pris en charge, mais le [polyfill pointer.js](https://github.com/mozilla/pointer.js) est disponible sur le compte GitHub de Mozilla.
 
 ### Implémentez les contrôles
 
@@ -82,7 +84,8 @@ Voici le code pour demander que le pointeur soit bloqué à l'intérieur d'`elem
 element.requestPointerLock();
 ```
 
-> **Note :** Pour un tutoriel complet et la référence, lisez notre page {{domxref("Pointer_Lock_API", "Pointer Lock API")}}.
+> [!NOTE]
+> Pour un tutoriel complet et la référence, lisez notre page {{domxref("Pointer_Lock_API", "Pointer Lock API")}}.
 
 #### Orientation de l'écran
 
@@ -90,7 +93,8 @@ Si l'orientation de l'écran est importante pour votre application, vous pouvez 
 
 Les données d'orientation peuvent être récupérées à travers l'attribut {{domxref("screen.orientation")}} ou à travers la media query [`orientation`](/fr/docs/Web/CSS/@media/orientation). Quand `screen.orientation` change, l'événement {{domxref("screen.orientationchange")}} est declenché sur l'objet screen. Verrouiller l'orientation de l'écran en possible en invoquant la méthode {{domxref("screen.lockOrientation")}}, tandis que la méthode {{domxref("screen.unlockOrientation")}} supprime le verrouillage de l'écran précédemment définit.
 
-> **Note :** Pour plus d'informations sur l'API Screen Orientation API consultez [Gérer l'orientation de l'écran](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
+> [!NOTE]
+> Pour plus d'informations sur l'API Screen Orientation API consultez [Gérer l'orientation de l'écran](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
 
 #### Plein écran
 
@@ -109,7 +113,8 @@ if (elem.requestFullscreen) {
 }
 ```
 
-> **Note :** Pour en savoir plus sur la fonctionnalité de plein écran, lisez notre documentation [utiliser le plein écran](/fr/docs/Web/Guide/DOM/Using_full_screen_mode).
+> [!NOTE]
+> Pour en savoir plus sur la fonctionnalité de plein écran, lisez notre documentation [utiliser le plein écran](/fr/docs/Web/Guide/DOM/Using_full_screen_mode).
 
 #### Drag & Drop
 
@@ -130,7 +135,8 @@ Ici, on
 - Définit l'attribut [`draggable`](/fr/docs/Web/HTML/Attributs_universels#attr-dir) à vrai pour que l'élément puisse être déplacé.
 - Ajoute un gestionnaire d'événement [`dragstart`](/fr/docs/Web/Events/dragstart) qui définit les données de déplacement à l'intérieur.
 
-> **Note :** Vous pouvez trouver plus d'informations dans la documentation MDN [Drag & Drop](/fr/docs/Web/API/API_HTML_Drag_and_Drop).
+> [!NOTE]
+> Vous pouvez trouver plus d'informations dans la documentation MDN [Drag & Drop](/fr/docs/Web/API/API_HTML_Drag_and_Drop).
 
 #### contentEditable
 
@@ -140,7 +146,8 @@ Dans un Open Web App, tout élément DOM peut être rendu directement éditable 
 <div contenteditable="true">Ce texte peut être édité par l'utilisateur.</div>
 ```
 
-> **Note :** Vous pouvez trouver les informations de compatibilité, des exemples et d'autres ressources dans le guide [Contenu Éditable](/fr/docs/Web/HTML/Contenu_editable).
+> [!NOTE]
+> Vous pouvez trouver les informations de compatibilité, des exemples et d'autres ressources dans le guide [Contenu Éditable](/fr/docs/Web/HTML/Contenu_editable).
 
 ## Exemples
 

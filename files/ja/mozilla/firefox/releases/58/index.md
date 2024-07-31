@@ -3,6 +3,8 @@ title: Firefox 58 for developers
 slug: Mozilla/Firefox/Releases/58
 ---
 
+{{FirefoxSidebar}}
+
 Firefox 58 は、米国時間 2018 年 1 月 23 日にリリースされました。このページでは、開発者に影響する Firefox 58 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -97,7 +99,7 @@ _変更なし。_
 
 ### CSS
 
-- Mozilla 独自仕様である以下の system metric 疑似クラスが、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1396066](https://bugzil.la/1396066)):
+- Mozilla 独自仕様である以下の system metric 擬似クラスが、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1396066](https://bugzil.la/1396066)):
 
   - {{Cssxref(":-moz-system-metric(images-in-menus)")}}
   - {{Cssxref(":-moz-system-metric(mac-graphite-theme)")}}
@@ -131,7 +133,7 @@ _変更なし。_
   - [`-moz-windows-glass`](/ja/docs/Web/CSS/@media/-moz-windows-glass)
   - [`-moz-windows-theme`](/ja/docs/Web/CSS/@media/-moz-windows-theme)
 
-- Mozilla 独自仕様である `:-moz-styleeditor-transitioning` 疑似クラスが、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1396099](https://bugzil.la/1396099))。
+- Mozilla 独自仕様である `:-moz-styleeditor-transitioning` 擬似クラスが、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1396099](https://bugzil.la/1396099))。
 
 ### JavaScript
 
@@ -185,7 +187,7 @@ _変更なし。_
 
 - webRequest
 
-  - [webRequest.onBeforeRequest](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) が "frameAncestors" パラメーターを持つようになりました
+  - [webRequest.onBeforeRequest](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) が "frameAncestors" 引数を持つようになりました
 
 ## 関連情報
 

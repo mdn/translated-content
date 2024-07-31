@@ -2,7 +2,7 @@
 title: MDN Web Docs のリポジトリー
 slug: MDN/Community/Contributing/Our_repositories
 l10n:
-  sourceCommit: db5093f0ffaecdf744b086751a56fc1ad591b00a
+  sourceCommit: db32c2f103885a65715e2cce48bda44be03f44f7
 ---
 
 {{MDNSidebar}}
@@ -26,7 +26,7 @@ l10n:
 
 ### 第 2 階層
 
-これらのリポジトリーは、主にコード例、MDN Web Docs 学習領域、ローカライズ、サンプルプロジェクトなどの対応するコンテンツに集約されています。例として次のようなものが挙げられます。
+これらのリポジトリーは、主にサンプルコード、MDN Web Docs 学習領域、ローカライズ、サンプルプロジェクトなどの対応するコンテンツに集約されています。例として次のようなものが挙げられます。
 
 - [dom-examples](https://github.com/mdn/dom-examples)
 - [translated-content](https://github.com/mdn/translated-content)
@@ -40,7 +40,7 @@ l10n:
 
 - [mdn-community](https://github.com/mdn/mdn-community)
 - [mdn/mdn](https://github.com/mdn/mdn)
-- [content-team-projects](https://github.com/mdn/content-team-projects).
+- [content-team-projects](https://github.com/mdn/content-team-projects)
 
 第 3 階層のプロジェクトは、 1 名の管理者が必要です。
 
@@ -56,13 +56,13 @@ l10n:
 - **ワークフロー**: <https://github.com/mdn/workflows>
   MDN Web Docs リポジトリーで使用するための再利用可能な GitHub Actions のコレクションが増え続けています。
 
-## コード例
+## サンプルコード
 
-### コード例とデモ
+### サンプルコードとデモ
 
 [//]: # "TODO: UPDATE WITH REPO TRIAGE"
 
-MDN Web Docs の GitHub org には、膨大な数の例のリポジトリーがあります。これらは一般に独立したコード例を格納し、よくページからリンクされますが、時折、`\{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid1.html", '100%', 700)}}` のようなマクロ呼び出しを使用してページにこれらの例の一つを見かけます。
+MDN Web Docs の GitHub org には、膨大な数の例のリポジトリーがあります。これらは一般に独立したサンプルコードを格納し、よくページからリンクされますが、時折、`\{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid1.html", '100%', 700)}}` のようなマクロ呼び出しを使用してページにこれらの例の一つを見かけます。
 
 指定されたページのコードを更新する場合は、対応する例のリポジトリーも更新する必要があることを常に覚えておいてください。
 

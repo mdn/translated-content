@@ -14,7 +14,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 ### 開発者ツール
 
 - [UA の選択やネットワークの調整など、レスポンシブデザインモードを全面的に改良しました。](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)
-- [アニメーションインスペクターで、タイミング関数を表示するようになりました。](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html)
+- [アニメーションインスペクターで、イージング関数を表示するようになりました。](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html)
 - [インスペクターに CSS グリッドの調査機能を搭載しました。](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 - [about:debugging で Service Worker の状態を表示するようになりました。](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#service-worker-state)
 - [インスペクターで、選択した要素を簡単に強調表示できるようになりました。](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#element-rule)
@@ -84,7 +84,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 - [配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#assigning_the_rest_of_an_array_to_a_variable) で、trailing comma を持つ rest parameters を使用した場合に {{jsxref("SyntaxError")}} が発生するようになりました ([Firefox バグ 1041341](https://bugzil.la/1041341))。
 - [オブジェクトの分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) で、`__proto__` プロパティの重複が可能になりました ([Firefox バグ 1204024](https://bugzil.la/1204024))。
-- {{jsxref("Array.prototype.toLocaleString()")}} を、Intl API のパラメーター "`locales`" および "`options`" をサポートするように再実装しました ([Firefox バグ 1130636](https://bugzil.la/1130636))。
+- {{jsxref("Array.prototype.toLocaleString()")}} を、Intl API の引数 "`locales`" および "`options`" をサポートするように再実装しました ([Firefox バグ 1130636](https://bugzil.la/1130636))。
 - {{jsxref("TypedArray")}} コンストラクターで、新しい typed array を生成するため [iterable](/ja/docs/Web/JavaScript/Reference/Iteration_protocols) を受け入れるようになりました ([Firefox バグ 1232266](https://bugzil.la/1232266))。
 - {{jsxref("TypedArray.from()")}}、{{jsxref("TypedArray.of()")}}、{{jsxref("TypedArray.prototype.filter()")}}、{{jsxref("TypedArray.prototype.map()")}}、{{jsxref("TypedArray.prototype.slice()")}}、{{jsxref("TypedArray.prototype.subarray()")}} が、値 `this` が有効な Typed Array のコンストラクターであることを要求するようになりました ([Firefox バグ 1122396](https://bugzil.la/1122396))。
 - 非標準の {{jsxref("ArrayBuffer.slice()")}} メソッド ({{jsxref("ArrayBuffer.prototype.slice()")}} ではありません) が非推奨になり、使用すると警告が発生します ([Firefox バグ 1316913](https://bugzil.la/1316913))。

@@ -15,7 +15,7 @@ l10n:
       <th scope="row">前提条件:</th>
       <td>
         <a href="/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server"
-          >ウェブサーバとは何か</a
+          >ウェブサーバーとは何か</a
         >と<a href="/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name"
           >ドメイン名の仕組み</a
         >を知っている必要があります。<a href="/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server"
@@ -41,7 +41,8 @@ l10n:
 
 SFTP クライアントには、いくつもの選択肢があります。ここのデモは [FileZilla](https://filezilla-project.org/) を使うことにします。 Windows、macOS、Linux で使え、無料だからです。 FileZilla をインストールするには、 [FileZilla ダウンロードページ](https://filezilla-project.org/download.php?type=client)に移動し、大きなダウンロードボタンをクリックしてから、通常の方法でインストーラーファイルからインストールします。
 
-> **メモ:** もちろん他にもたくさんの選択肢があります。詳しくは[公開ツール](/ja/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#公開ツール)を参照してください。
+> [!NOTE]
+> もちろん他にもたくさんの選択肢があります。詳しくは[公開ツール](/ja/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#公開ツール)を参照してください。
 
 FileZilla アプリケーションを開きます。次のようなものが表示されます。
 
@@ -71,7 +72,8 @@ FileZilla アプリケーションを開きます。次のようなものが表�
 
 ![ブラウザーで見たデモジラの個人ウェブサイト。空っぽです。](demozilla-empty.png)
 
-> **メモ:** ホスティングプロバイダーによっては、最初にあなたのウェブアドレスに行ったときに、「このウェブサイトは[ホスティングサービス]によってホストされています。」というようなページが表示されます。
+> [!NOTE]
+> ホスティングプロバイダーによっては、最初にあなたのウェブアドレスに行ったときに、「このウェブサイトは[ホスティングサービス]によってホストされています。」というようなページが表示されます。
 
 SFTP クライアントを遠隔のサーバーに接続するには、次の手順を実行します。
 

@@ -23,7 +23,7 @@ slug: Web/SVG/Element/polyline
 
 - [条件処理属性](/ja/SVG/Attribute#ConditionalProccessing) »
 - [コア属性](/ja/SVG/Attribute#Core) »
-- [グラフィカルイベント属性](/ja/SVG/Attribute#GraphicalEvent) »
+- [グラフィックイベント属性](/ja/SVG/Attribute#GraphicalEvent) »
 - [プレゼンテーション属性](/ja/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
