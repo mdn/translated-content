@@ -7,13 +7,15 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 
 WebSockets es una tecnología basada en el protocolo ws, este hace posible establecer una conexión continua full-duplex, entre un cliente y servidor. Un cliente websocket podría ser el navegador del usuario, pero el protocolo es una plataforma independiente.
 
-> **Nota:** Tenemos un ejemplo funcional de un sistema de chat/servidor usado para ejemplos de código que estará disponible una vez nuestra infraestructura esté en posición de hospedar ejemplos de WebSocket apropiadamente.
+> [!NOTE]
+> Tenemos un ejemplo funcional de un sistema de chat/servidor usado para ejemplos de código que estará disponible una vez nuestra infraestructura esté en posición de hospedar ejemplos de WebSocket apropiadamente.
 
 ## Disponibilidad de WebSockets
 
 La API de WebSocket esta disponible para el código JavaScript cuyo alcance DOM sea un objeto {{ domxref("Window") }} o cualquier objeto implementando {{ domxref("WorkerUtils") }}; si es así, puedes usarlos desde los Web Workers.
 
-> **Nota:** La API de WebSockets (y el protocolo subyacente) continúan en activo desarrollo, y existen muchos problemas de compatibilidad entre los navegadores en este momento (e inclusive entre los diferentes lanzamientos del mismo navegador).
+> [!NOTE]
+> La API de WebSockets (y el protocolo subyacente) continúan en activo desarrollo, y existen muchos problemas de compatibilidad entre los navegadores en este momento (e inclusive entre los diferentes lanzamientos del mismo navegador).
 
 ## Creando un Objeto WebSocket
 
@@ -87,7 +89,8 @@ exampleSocket.send("Here's some text that the server is urgently awaiting!");
 
 Puedes enviar información como un string, {{ domxref("Blob") }}, o en un [`ArrayBuffer`](/en/JavaScript_typed_arrays/ArrayBuffer).
 
-> **Nota:** Antes de la version 11, Firefox sólo soportaba el envío de datos como una cadena.
+> [!NOTE]
+> Antes de la version 11, Firefox sólo soportaba el envío de datos como una cadena.
 
 Como la conexión es asincronica y es propensa a fallar, no hay garantia de poder llamar al metodo `send()` inmediatamente despúes de haber creado el objeto WebSocket de manera exitosa. Para enviar información se debe estar seguro de que almenos una conexión ya esta abierta, usando el manejador `onopen`:
 

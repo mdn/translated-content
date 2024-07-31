@@ -106,7 +106,8 @@ svelte 还提供了一种非常直观的将 store 集成到其响应式系统中
    export const alert = writable("Welcome to the to-do list app!");
    ```
 
-> **备注：** store 可以在 Svelte 组件之外定义和使用，所以你可以按照自己的方式组织它们。
+> [!NOTE]
+> store 可以在 Svelte 组件之外定义和使用，所以你可以按照自己的方式组织它们。
 
 在上面的代码中，我们从 `svelte/store` 导入 `writable()` 函数，并使用它创建了名为 `alert` 的新 store，初始值为“Welcome to the to-do list app!”（欢迎来到待办事项列表应用程序！）。然后我们通过 `export` 导出该 store。
 
@@ -329,7 +330,8 @@ svelte 还提供了一种非常直观的将 store 集成到其响应式系统中
 
 我们可以在任何组件或 `.js` 文件中执行相同的操作。
 
-> **备注：** 在 Svelte 组件之外，你不能使用 `$store` 语法。这是因为 Svelte 编译器不会触及 Svelte 组件之外的任何内容。在这种情况下，你需要依赖于 `store.subscribe()` 和 `store.set()` 方法。
+> [!NOTE]
+> 在 Svelte 组件之外，你不能使用 `$store` 语法。这是因为 Svelte 编译器不会触及 Svelte 组件之外的任何内容。在这种情况下，你需要依赖于 `store.subscribe()` 和 `store.set()` 方法。
 
 ## 改进我们的 Alert 组件
 
@@ -530,7 +532,8 @@ Svelte 不会强制你以特定的方式组织状态管理；它只提供了工�
 
 我们的待办事项列表应用程序并不特别复杂，因此我们不会将所有的修改方法移到中心位置。我们将保持它们原样，集中精力将待办事项持久化。
 
-> **备注：** 如果你正在 Svelte REPL 上遵循本指南进行操作，你将无法完成此步骤。出于安全原因，Svelte REPL 在沙箱环境中工作，不允许你访问 Web 存储，你将收到“The operation is insecure”错误。要跟着完成本部分，你需要克隆存储库并转到 `mdn-svelte-tutorial/06-stores` 文件夹，或者你可以使用 `npx degit opensas/mdn-svelte-tutorial/06-stores` 直接下载该文件夹的内容。
+> [!NOTE]
+> 如果你正在 Svelte REPL 上遵循本指南进行操作，你将无法完成此步骤。出于安全原因，Svelte REPL 在沙箱环境中工作，不允许你访问 Web 存储，你将收到“The operation is insecure”错误。要跟着完成本部分，你需要克隆存储库并转到 `mdn-svelte-tutorial/06-stores` 文件夹，或者你可以使用 `npx degit opensas/mdn-svelte-tutorial/06-stores` 直接下载该文件夹的内容。
 
 要实现将其内容保存到 Web 存储的自定义 store，我们需要一个执行以下操作的可写 store：
 
@@ -613,7 +616,8 @@ Svelte 不会强制你以特定的方式组织状态管理；它只提供了工�
    <Todos bind:todos={$todos} />
    ```
 
-   > **备注：** 这是我们为了使用自定义存储所必须进行的唯一更改。`App.svelte` 完全不需要知道我们使用哪种类型的 store。
+   > [!NOTE]
+   > 这是我们为了使用自定义存储所必须进行的唯一更改。`App.svelte` 完全不需要知道我们使用哪种类型的 store。
 
 5. 现在再次运行你的应用程序。创建一些待办事项，然后关闭浏览器。你甚至可以停止 Svelte 服务器并重新启动它。当你重新访问该 URL 时，你的待办事项仍将存在。
 6. 你还可以在开发者工具的控制台中进行检查。在 Web 控制台中，输入命令 `localStorage.getItem('mdn-svelte-todo')`。对应用程序进行一些更改，比如按下“全部取消”按钮，然后再次检查 Web 存储的内容。你将会看到类似以下的内容：
@@ -652,11 +656,13 @@ Svelte store 提供了一种非常简单、轻量但功能强大的方式，以�
    >
    ```
 
-   > **备注：** 双花括号不是特殊的 Svelte 语法。它只是将字面的 JavaScript 对象作为参数传递给 fly 过渡效果。
+   > [!NOTE]
+   > 双花括号不是特殊的 Svelte 语法。它只是将字面的 JavaScript 对象作为参数传递给 fly 过渡效果。
 
 3. 再次尝试你的应用程序，你会发现通知现在看起来更具吸引力了一些。
 
-> **备注：** 作为编译器，Svelte 可以通过排除未使用的特性来优化我们的打包文件大小。在这种情况下，如果我们使用 `npm run build` 为生产环境编译应用，我们的 `public/build/bundle.js` 文件的大小将略小于 22 KB。如果我们移除 `transitions:fly` 指令，Svelte 会聪明地意识到 `fly` 函数未被使用，`bundle.js` 文件的大小将降至仅为 18 KB。
+> [!NOTE]
+> 作为编译器，Svelte 可以通过排除未使用的特性来优化我们的打包文件大小。在这种情况下，如果我们使用 `npm run build` 为生产环境编译应用，我们的 `public/build/bundle.js` 文件的大小将略小于 22 KB。如果我们移除 `transitions:fly` 指令，Svelte 会聪明地意识到 `fly` 函数未被使用，`bundle.js` 文件的大小将降至仅为 18 KB。
 
 这只是冰山一角。Svelte 提供了许多处理动画和过渡效果的选项。Svelte 还支持使用 `in:fn`/`out:fn` 指令在元素添加或从 DOM 中移除时应用不同的过渡效果，并允许你定义自己的[自定义 CSS](https://learn.svelte.dev/tutorial/custom-css-transitions) 和 [JavaScript](https://learn.svelte.dev/tutorial/custom-js-transitions) 过渡效果。它还提供了几个缓动函数，用于指定随时间变化的速率。你可以查看 [ease visualizer](https://svelte.dev/examples/easing) 来探索各种可用的缓动函数。
 

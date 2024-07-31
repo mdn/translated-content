@@ -368,7 +368,8 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 
 ### Attributs de présentation
 
-> **Note :** Tous les attributs de présentation SVG peuvent être utilisés comme propriétés CSS.
+> [!NOTE]
+> Tous les attributs de présentation SVG peuvent être utilisés comme propriétés CSS.
 
 - [`alignment-baseline`](/fr/docs/Web/SVG/Attribute/alignment-baseline)
 - [`baseline-shift`](/fr/docs/Web/SVG/Attribute/baseline-shift)

@@ -13,7 +13,8 @@ Ahora que has aprendido algo sobre la teoría de JavaScript y lo que puedes hace
 
 No esperes entender todo el código inmediatamente — por ahora sólo queremos presentarte los conceptos de alto nivel, y darte una idea de como funciona JavaScript (y otros lenguajes de programación). ¡Más adelante vas a volver a ver estas características con mucho más detalle!
 
-> **Nota:** Muchas de las características que vas a ver en JavaScript son las mismas que en otros lenguajes de programación — funciones, bucles, etc. La sintaxis del código es diferente, pero los conceptos siguen siendo básicamente los mismos.
+> [!NOTE]
+> Muchas de las características que vas a ver en JavaScript son las mismas que en otros lenguajes de programación — funciones, bucles, etc. La sintaxis del código es diferente, pero los conceptos siguen siendo básicamente los mismos.
 
 ## Pensando como un programador
 
@@ -236,7 +237,8 @@ En nuestro ejemplo:
 
 - Nuestras dos variables finales almacenan un conteo de intentos desde 1 (que se usa para tener un registro de cuántos intentos ha hecho el jugador), y una referencia al botón de reinicio que aún no existe (pero que lo hará más adelante).
 
-> **Nota:** Aprenderás mucho más sobre las variables/constantes más adelante en el curso, comenzando con el [artículo siguiente](/es/docs/user:chrisdavidmills/variables).
+> [!NOTE]
+> Aprenderás mucho más sobre las variables/constantes más adelante en el curso, comenzando con el [artículo siguiente](/es/docs/user:chrisdavidmills/variables).
 
 ### Funciones
 
@@ -260,7 +262,8 @@ checkGuess();
 
 Después de presionar<kbd>Retorno</kbd>/<kbd>Intro</kbd>, debería aparecer una alerta que dice "`Soy un marcador de posición`"; hemos definido una función en nuestro código que crea una alerta cada vez que la llamamos.
 
-> **Nota:** Aprenderás mucho más sobre las [funciones más adelante](/es/docs/Learn/JavaScript/Building_blocks/Functions) en el curso.
+> [!NOTE]
+> Aprenderás mucho más sobre las [funciones más adelante](/es/docs/Learn/JavaScript/Building_blocks/Functions) en el curso.
 
 ### Operadores
 

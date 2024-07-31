@@ -57,7 +57,8 @@ const str = "𠮷𠮾";
 console.log(str.codePointAt(0)); // 134071
 ```
 
-> **备注：** 避免使用 `charCodeAt()` 来重新实现 `codePointAt()`。从 UTF-16 代理到 Unicode 码位的转换相当复杂，而且 `codePointAt()` 可能更加高效，因为它直接使用字符串的内部表示形式。如果需要，可以安装一个 `codePointAt()` 的 polyfill。
+> [!NOTE]
+> 避免使用 `charCodeAt()` 来重新实现 `codePointAt()`。从 UTF-16 代理到 Unicode 码位的转换相当复杂，而且 `codePointAt()` 可能更加高效，因为它直接使用字符串的内部表示形式。如果需要，可以安装一个 `codePointAt()` 的 polyfill。
 
 以下是将一对 UTF-16 码元转换为 Unicode 码位的可能算法，改编自 [Unicode 常问问题](https://unicode.org/faq/utf_bom.html#utf16-3)：
 

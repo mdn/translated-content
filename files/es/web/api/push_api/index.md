@@ -7,7 +7,8 @@ slug: Web/API/Push_API
 
 La **API Push** otorga a las aplicaciones web la habilidad de recibir mensajes enviados a ellas desde un servidor, sin importar si la aplicación está o no en primer plano o cargada. Esto permite a los desarrolladores enviar notificaciones asíncronas y actualizaciones para los usuarios que las aceptan.
 
-> **Nota:** Esta documentación cubre la especificación del API Push de W3C; si estás buscando la documentación para el mecanismo push propio de Firefox OS, ve [Simple Push](/es/docs/Web/API/Simple_Push_API).
+> [!NOTE]
+> Esta documentación cubre la especificación del API Push de W3C; si estás buscando la documentación para el mecanismo push propio de Firefox OS, ve [Simple Push](/es/docs/Web/API/Simple_Push_API).
 
 ## Push conceptos y uso
 
@@ -21,9 +22,11 @@ Cada suscripción es unica para un service worker. El endpoint para la subscripc
 
 Activar un Service-Worker para entregar un mensaje push puede resultar en el incremento de uso de recursos, especialmente de la batería. Los diferentes navegadores disponen de diferentes esquemas para manejar esto - en la actualidad no existe un mecanismo estándar para ello. Firefox permite un numero limitado (det. cuota) de mensajes push para enviar a una aplicación, aunque los mensajes push que generan una notificación estan exentos de este límite. Este límite se actualiza cada vez que se visita el sitio web. En comparación, Chrome no aplica límites, pero requiere que todo mensaje push muestre una notificación.
 
-> **Nota:** Desde Gecko 44, la cuota permitida de Push-messages por aplicación no se ve incrementada cada vez que se emite una nueva notificación, cuando otra sigue visible, durante el periodo de 3 segundos. Esto ayuda al manejo de casos en los que se reciben rafagas de notificaciones y no todas ellas emiten una notificación visible.
+> [!NOTE]
+> Desde Gecko 44, la cuota permitida de Push-messages por aplicación no se ve incrementada cada vez que se emite una nueva notificación, cuando otra sigue visible, durante el periodo de 3 segundos. Esto ayuda al manejo de casos en los que se reciben rafagas de notificaciones y no todas ellas emiten una notificación visible.
 
-> **Nota:** en Chrome las versiones anteriores a la 52, requieren la cnfiguración de un proyecto en [Google Cloud Messaging](https://developers.google.com/cloud-messaging/) para el envío de Push-Messages, así como el uso del numero de proyecto y la API key asociadas para el envío de notificaciones push. Tambien se requiere el detalle de algunos parametros especiales en el app manifest para el uso de este servicio.
+> [!NOTE]
+> En Chrome las versiones anteriores a la 52, requieren la cnfiguración de un proyecto en [Google Cloud Messaging](https://developers.google.com/cloud-messaging/) para el envío de Push-Messages, así como el uso del numero de proyecto y la API key asociadas para el envío de notificaciones push. Tambien se requiere el detalle de algunos parametros especiales en el app manifest para el uso de este servicio.
 
 ## Interfaces
 

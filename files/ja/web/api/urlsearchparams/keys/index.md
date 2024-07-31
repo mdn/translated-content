@@ -10,7 +10,8 @@ l10n:
 
 **`keys()`** は {{domxref("URLSearchParams")}} インターフェイスのメソッドで、このオブジェクトに含まれるすべてのキーを反復処理できる{{jsxref("Iteration_protocols",'イテレーター')}}を返します。 キーは文字列です。
 
-> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
+> [!NOTE]
+> このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
 
 ## 構文
 

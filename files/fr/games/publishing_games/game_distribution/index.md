@@ -65,7 +65,8 @@ Vous pouvez aussi uploader et publier votre jeu directement sur différentes bou
 
 Voyons quelles options sont à notre disposition en matière de marketplaces/magasins d'applications disponibles pour chaque plateforme et système d'exploitation.
 
-> **Note :** Ces plateformes de distribution sont les plus populaires, mais cela ne signifie pas qu'elles sont les seules. Plutôt que d'essayer d'ajouter votre jeu à des milliers d'autres dans l'app store iOS par exemple, vous pouvez également tenter de trouver une niche et faire la promotion de votre jeu directement auprès d'une audience qui sera intéressée par vos jeux. Il est essentiel de faire preuve de créativité ici.
+> [!NOTE]
+> Ces plateformes de distribution sont les plus populaires, mais cela ne signifie pas qu'elles sont les seules. Plutôt que d'essayer d'ajouter votre jeu à des milliers d'autres dans l'app store iOS par exemple, vous pouvez également tenter de trouver une niche et faire la promotion de votre jeu directement auprès d'une audience qui sera intéressée par vos jeux. Il est essentiel de faire preuve de créativité ici.
 
 ### Boutiques en ligne
 

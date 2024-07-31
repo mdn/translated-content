@@ -9,7 +9,8 @@ slug: Web/API/EXT_float_blend
 
 若要查询该扩展是否存在，可以用方法：{{domxref("WebGLRenderingContext.getExtension()")}}。更多信息可以参考 [WebGL tutorial](/zh-CN/docs/Web/API/WebGL_API/Tutorial) 中的 [Using Extensions](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions)。
 
-> **备注：** 该扩展在 {{domxref("WebGLRenderingContext", "WebGL1")}} 和{{domxref("WebGL2RenderingContext", "WebGL2")}} 上下文中均存在。但是，要使用它，你需要启用对 32 位浮点绘制缓冲区的使用{{domxref("WEBGL_color_buffer_float")}}（for WebGL1）或 {{domxref("EXT_color_buffer_float")}}（WebGL2）。通过启用 32 位浮点缓冲区扩展，将自动启用`EXT_float_blend`。
+> [!NOTE]
+> 该扩展在 {{domxref("WebGLRenderingContext", "WebGL1")}} 和{{domxref("WebGL2RenderingContext", "WebGL2")}} 上下文中均存在。但是，要使用它，你需要启用对 32 位浮点绘制缓冲区的使用{{domxref("WEBGL_color_buffer_float")}}（for WebGL1）或 {{domxref("EXT_color_buffer_float")}}（WebGL2）。通过启用 32 位浮点缓冲区扩展，将自动启用`EXT_float_blend`。
 
 该组件启用后，使用 32 位浮点数混合方式绘制，调用 {{domxref("WebGLRenderingContext.drawArrays", "drawArrays()")}} 或 {{domxref("WebGLRenderingContext.drawElements", "drawElements()")}} 时，将不再产生 `INVALID_OPERATION` 异常。
 

@@ -104,7 +104,8 @@ function showOffsetPos(sId) {
 }
 ```
 
-> **Note :** Dans cas, où on n'utilise pas la section d'instruction, **il faut mettre un point-virgule immédiatement après la déclaration de la boucle.**
+> [!NOTE]
+> Dans cas, où on n'utilise pas la section d'instruction, **il faut mettre un point-virgule immédiatement après la déclaration de la boucle.**
 
 ## Spécifications
 

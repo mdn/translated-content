@@ -18,7 +18,8 @@ Si no es compatible, o no puede saberlo, puede buscar un valor falso para esta p
 
 Un valor booleano que es `true` si el par remoto puede aceptar candidatos _trickled ICE_ y `false` si no puede. Si no se ha establecido un par remoto, este valor es `null`.
 
-> **Nota:** El valor de esta propiedad se determina una vez que el par local ha llamado a {{domxref("RTCPeerConnection.setRemoteDescription()")}}; el agente ICE utiliza la descripción proporcionada para determinar si el par remoto admite o no candidatos _trickled ICE_.
+> [!NOTE]
+> El valor de esta propiedad se determina una vez que el par local ha llamado a {{domxref("RTCPeerConnection.setRemoteDescription()")}}; el agente ICE utiliza la descripción proporcionada para determinar si el par remoto admite o no candidatos _trickled ICE_.
 
 ## Ejemplos
 

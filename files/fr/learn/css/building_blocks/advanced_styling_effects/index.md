@@ -180,7 +180,8 @@ Ici, nous avons mis en place un style de bouton avec des états différents selo
 
 Lorsque le bouton est cliqué, l'état actif entraîne le remplacement de la première ombre de la boîte par une ombre d'insertion très sombre, donnant l'apparence que le bouton est enfoncé.
 
-> **Note :** il y a un autre élément qui peut être paramétré parmi les valeurs de `box-shadow` — une autre valeur de longueur peut être facultativement définie juste avant la définition de la couleur : le **rayon de diffusion**. S'il est défini, l'ombre devient plus grande que la boîte originelle. Ce paramètre n'est pas couramment utilisé, mais il est bon de le signaler.
+> [!NOTE]
+> Il y a un autre élément qui peut être paramétré parmi les valeurs de `box-shadow` — une autre valeur de longueur peut être facultativement définie juste avant la définition de la couleur : le **rayon de diffusion**. S'il est défini, l'ombre devient plus grande que la boîte originelle. Ce paramètre n'est pas couramment utilisé, mais il est bon de le signaler.
 
 ## Filtres
 
@@ -228,7 +229,8 @@ Quelques autres points à noter :
 - Les filtres sont une fonctionnalité très récente — ils sont pris en charge dans la plupart des navigateurs modernes, y compris Microsoft Edge, mais ils ne sont pas du tout pris en charge dans Internet Explorer. Si vous utilisez des filtres dans vos designs, vous devrez vous assurer que le contenu reste utilisable sans filtres.
 - Comme vous pouvez le voir, nous avons inclus une version de la propriété `filter` préfixée par `-webkit-`. On appelle cela un {{glossary("Vendor Prefix")}} (préfixe fournisseur) : c'est parfois utilisé par un navigateur avant de rendre définitive l'implémentation d'une nouvelle fonctionnalité. Cela permet de la prendre en charge et de l'expérimenter sans entrer en conflit avec la version non préfixée. Les préfixes fournisseur ne sont pas destinés à être utilisés par les développeurs web, mais ils sont parfois utilisés dans les pages de production si ces fonctionnalités expérimentales sont vraiment désirées. Dans notre cas, la version `-webkit-` de la propriété est actuellement requise pour une prise en charge par Chrome/Safari/Opera, alors que Edge et Firefox utilisent la version finale non préfixée.
 
-> **Note :** Si vous décidez d'utiliser des préfixes dans votre code, assurez-vous d'inclure tous les préfixes requis ainsi que la version non préfixée, afin que le plus grand nombre possible de navigateurs puissent utiliser la fonction, et lorsque les navigateurs abandonneront plus tard les préfixes, ils pourront également utiliser la version non préfixée. Soyez également averti que ces caractéristiques expérimentales pourraient changer, de sorte que votre code pourrait casser. Il est vraiment préférable d'expérimenter avec ces fonctions jusqu'à ce que les préfixes soient supprimés.
+> [!NOTE]
+> Si vous décidez d'utiliser des préfixes dans votre code, assurez-vous d'inclure tous les préfixes requis ainsi que la version non préfixée, afin que le plus grand nombre possible de navigateurs puissent utiliser la fonction, et lorsque les navigateurs abandonneront plus tard les préfixes, ils pourront également utiliser la version non préfixée. Soyez également averti que ces caractéristiques expérimentales pourraient changer, de sorte que votre code pourrait casser. Il est vraiment préférable d'expérimenter avec ces fonctions jusqu'à ce que les préfixes soient supprimés.
 
 Vous pouvez voir d'autres exemples de filtres sur [filters.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/filters.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/filters.html)).
 
@@ -243,7 +245,8 @@ Deux propriétés utilisent les modes de mélange de couleurs dans les CSS :
 
 Vous trouverez beaucoup plus d'exemples de ce qui est disponible à la page [blend-modes.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html)) et à la page de référence de {{cssxref("&lt;blend-mode&gt;")}}.
 
-> **Note :** Les modes de mélange sont aussi une toute nouvelle fonctionnalité un petit peu moins bien prise en charge que les filtres. Il n'y a pas de prise en charge encore dans Edge et Safari ne l'accepte que partiellement.
+> [!NOTE]
+> Les modes de mélange sont aussi une toute nouvelle fonctionnalité un petit peu moins bien prise en charge que les filtres. Il n'y a pas de prise en charge encore dans Edge et Safari ne l'accepte que partiellement.
 
 ### background-blend-mode
 
@@ -339,7 +342,8 @@ Nous obtenons le résultat suivant :
 
 Vous voyez ici que `mix-blend-mode: multiply;` a mélangé non seulement les deux images d'arrière plan, mais également la couleur du `<div>` situé dessous.
 
-> **Note :** Ne vous inquiétez pas si vous ne saisissez pas certaines propriétés de mise en page telles que {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}}, etc. Nous en reparlerons en détail dans le module [CSS Layout](/fr/docs/Learn/CSS/CSS_layout).
+> [!NOTE]
+> Ne vous inquiétez pas si vous ne saisissez pas certaines propriétés de mise en page telles que {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}}, etc. Nous en reparlerons en détail dans le module [CSS Layout](/fr/docs/Learn/CSS/CSS_layout).
 
 ## -webkit-background-clip: text
 
@@ -356,7 +360,8 @@ Alors pourquoi d'autres navigateurs ont-ils implémenté un préfixe `-webkit-` 
 
 Si vous voulez utiliser de telles fonctionnalités dans votre travail de production, assurez-vous de tester minutieusement tous les navigateurs et vérifiez que, lorsque ces fonctionnalités ne sont pas prises en charge , le site reste toujours utilisable.
 
-> **Note :** Pour un exemple de code complet avec `-webkit-background-clip: text`, allez à la page [background-clip-text.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
+> [!NOTE]
+> Pour un exemple de code complet avec `-webkit-background-clip: text`, allez à la page [background-clip-text.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
 
 ## Apprentissage actif : expérimenter certains effets
 

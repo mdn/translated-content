@@ -37,7 +37,8 @@ postMessage(message, transfer)
 
     移譲可能なオブジェクトとは、{{jsxref("ArrayBuffer")}}、{{domxref("MessagePort")}}、{{domxref("ImageBitmap")}} などのクラスのインスタンスであり、移譲可能なオブジェクトです。`transfer` の値として、`null` は受け入れられません。
 
-> **メモ:** パラメータ `options` と `transfer` は、同時に使用することはできません。
+> [!NOTE]
+> パラメータ `options` と `transfer` は、同時に使用することはできません。
 
 ### 返値
 

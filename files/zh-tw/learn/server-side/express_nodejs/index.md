@@ -11,7 +11,8 @@ Express 是一個流行的 web 框架，使用 JavsScript 實現，執行在 nod
 
 在開始前你需要了解什麼是伺服器端 web 程式和什麼是 web 框架，推薦閱讀[伺服器端網站開發第一步](/zh-TW/docs/Learn/Server-side/First_steps)。建議了解基本的程式知識和[JavaScript](/zh-TW/docs/Web/JavaScript)，但不需要知道核心概念。
 
-> **備註：** 本網站有許多學習 JavaScript 應用在客戶端開發的有用資源，如：[JavaScript](/zh-TW/docs/Web/JavaScript)、[JavaScript 指南](/zh-TW/docs/Web/JavaScript/Guide)、[JavaScript 基礎](/zh-TW/docs/Learn/Getting_started_with_the_web/JavaScript_basics)、[JavaScript](/zh-TW/docs/Learn/JavaScript) (learning)。使用 Node.js 開發伺服器端使用的 JavaScript 語言與概念和客戶端是一樣的。Node.js 提供[額外的 APIs](https://nodejs.org/dist/latest-v6.x/docs/api/)以支援無瀏覽器環境，例如：建立 HTTP 服務和讀取檔案系統。但不支援 DOM 及瀏覽器相關的 JavaScript API。
+> [!NOTE]
+> 本網站有許多學習 JavaScript 應用在客戶端開發的有用資源，如：[JavaScript](/zh-TW/docs/Web/JavaScript)、[JavaScript 指南](/zh-TW/docs/Web/JavaScript/Guide)、[JavaScript 基礎](/zh-TW/docs/Learn/Getting_started_with_the_web/JavaScript_basics)、[JavaScript](/zh-TW/docs/Learn/JavaScript) (learning)。使用 Node.js 開發伺服器端使用的 JavaScript 語言與概念和客戶端是一樣的。Node.js 提供[額外的 APIs](https://nodejs.org/dist/latest-v6.x/docs/api/)以支援無瀏覽器環境，例如：建立 HTTP 服務和讀取檔案系統。但不支援 DOM 及瀏覽器相關的 JavaScript API。
 >
 > 這份指南將提供一些使用 Node.js 和 Express 的資訊以及數個優秀的學習資源。部分連結由 [How do I get started with Node.js](https://stackoverflow.com/a/5511507/894359)(StackOverflow) 與 [What are the best resources for learning Node.js?](https://www.quora.com/What-are-the-best-resources-for-learning-Node-js?)(Quora) 提供。
 

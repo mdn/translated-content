@@ -19,7 +19,8 @@ Os suportes para Fetch ainda estão em uma fase bastante precoce, mas começa a 
 
 Caso tenha interesse no uso da ferramenta, há também uma [Fetch Polyfill](https://github.com/github/fetch) disponivel que recria as funcionalidade para outros navegadores que ainda não o suporta. Fique ciente que está em estado experimental e ainda não há uma versão completa.
 
-> **Nota:** There have been some concerns raised that the [Fetch spec](https://fetch.spec.whatwg.org/) is at odds with the [Streams spec](https://streams.spec.whatwg.org/); however, future plans show an intention to integrate Streams with Fetch: read [Fetch API integrated with Streams](https://github.com/yutakahirano/fetch-with-streams/) for more information.
+> [!NOTE]
+> There have been some concerns raised that the [Fetch spec](https://fetch.spec.whatwg.org/) is at odds with the [Streams spec](https://streams.spec.whatwg.org/); however, future plans show an intention to integrate Streams with Fetch: read [Fetch API integrated with Streams](https://github.com/yutakahirano/fetch-with-streams/) for more information.
 
 ## Detecção de Recursos
 
@@ -54,7 +55,8 @@ Aqui estamos procurando uma imagem e inserindo em um elemento {{htmlelement("img
 
 Esta é apenas uma resposta HTTP, não a imagem em sí. Para extrairmos a imagem da resposta, nós usamos o método {{domxref("Body.blob","blob()")}} (definido no mixin do {{domxref("Body")}}, que são implementados por ambos os objetos {{domxref("Request")}} e {{domxref("Response")}}.)
 
-> **Nota:** O Body mixin além disso possui métodos similares para extrair outros tipos de conteúdo do body; Veja a sessão [Body](#body) para mais detalhes.
+> [!NOTE]
+> O Body mixin além disso possui métodos similares para extrair outros tipos de conteúdo do body; Veja a sessão [Body](#body) para mais detalhes.
 
 Um `objectURL` é criado na extração de {{domxref("Blob")}}, que então é inserido no {{domxref("img")}}.
 
@@ -143,7 +145,8 @@ var anotherRequest = new Request(myRequest, myInit);
 
 Isso é muito útil, pois os conteúdos de cada solicitação e resposta tem apenas um uso. Fazer uma cópia como essa permite que você use a solicitação / resposta novamente, variando as opções de inicialização, se desejar.
 
-> **Nota:** Também existe um método que cria uma cópia: {{domxref ("Request.clone", "clone ()")}}. Isso tem uma semântica ligeiramente diferente do outro método de cópia: o primeiro dirá se o conteúdo, da solicitação anterior, já tiver sido lido (ou copiado), enquanto o segundo, `clone()` não.
+> [!NOTE]
+> Também existe um método que cria uma cópia: {{domxref ("Request.clone", "clone ()")}}. Isso tem uma semântica ligeiramente diferente do outro método de cópia: o primeiro dirá se o conteúdo, da solicitação anterior, já tiver sido lido (ou copiado), enquanto o segundo, `clone()` não.
 
 ## Headers
 
@@ -222,7 +225,8 @@ Possible guard values are:
 - `response`: guard for a Headers obtained from a response ({{domxref("Response.headers")}}).
 - `immutable`: Mostly used for ServiceWorkers; renders a headers object read-only.
 
-> **Nota:** You may not append or set a `request` guarded Headers' `Content-Length` header. Similarly, inserting `Set-Cookie` into a response header is not allowed: ServiceWorkers are not allowed to set cookies via synthesized responses.
+> [!NOTE]
+> You may not append or set a `request` guarded Headers' `Content-Length` header. Similarly, inserting `Set-Cookie` into a response header is not allowed: ServiceWorkers are not allowed to set cookies via synthesized responses.
 
 ## Response objects
 
@@ -250,7 +254,8 @@ The most common response properties you'll use are:
 - {{domxref("Response.statusText")}} — A string (default value "OK"),which corresponds to the HTTP status code message.
 - {{domxref("Response.ok")}} — seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a {{domxref("Boolean")}}.
 
-> **Nota:** The static method {{domxref("Response.error","error()")}} simply returns an error response. Similarly, {{domxref("Response.redirect","redirect()")}} returns a response resulting in
+> [!NOTE]
+> The static method {{domxref("Response.error","error()")}} simply returns an error response. Similarly, {{domxref("Response.redirect","redirect()")}} returns a response resulting in
 > a redirect to a specified URL. These are also only relevant to Service Workers.
 
 ## Body

@@ -10,7 +10,8 @@ l10n:
 
 **`CanvasRenderingContext2D.beginPath()`** はキャンバス 2D API のメソッドで、サブパスのリストを空にすることにより新しいパスを開始します。新しいパスを作成したい場合は、このメソッドを呼び出してください。
 
-> **メモ:** 新しいサブパス（つまり、現在のキャンバスの状態に一致するサブパス）を作成する場合、 {{domxref("CanvasRenderingContext2D.moveTo()")}} が使用できます。
+> [!NOTE]
+> 新しいサブパス（つまり、現在のキャンバスの状態に一致するサブパス）を作成する場合、 {{domxref("CanvasRenderingContext2D.moveTo()")}} が使用できます。
 
 ## 構文
 

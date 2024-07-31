@@ -123,7 +123,8 @@ span {
 
 如果现在保存和刷新，除了第 2 段的更新的背景颜色，根本没有差别。这很好——正如我们之前所说，静态定位是默认行为！
 
-> **备注：** 你可以在 [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/1_static-positioning.html))。
+> [!NOTE]
+> 你可以在 [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/1_static-positioning.html))。
 
 ### 相对定位
 
@@ -144,7 +145,8 @@ top: 30px;
 left: 30px;
 ```
 
-> **备注：** 这些属性的值可以采用逻辑上期望的任何单位——px、mm、rem、% 等。
+> [!NOTE]
+> 这些属性的值可以采用逻辑上期望的任何单位——px、mm、rem、% 等。
 
 如果你现在保存和刷新，你会得到一个这样的结果：
 
@@ -207,7 +209,8 @@ span {
 
 酷，是吗？好吧，所以这个结果这可能不是你期待的——为什么它移动到底部和右边，但我们指定顶部和左边？听起来不合逻辑，但这只是相对定位工作的方式——你需要考虑一个看不见的力，推动定位的盒子的一侧，移动它的相反方向。所以例如，如果你指定 `top: 30px;`一个力推动框的顶部，使它向下移动 30px。
 
-> **备注：** 你可以在 [`2_relative-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/2_relative-positioning.html))。
+> [!NOTE]
+> 你可以在 [`2_relative-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/2_relative-positioning.html))。
 
 ### 绝对定位
 
@@ -280,11 +283,14 @@ span {
 
 第二，注意元素的位置已经改变——这是因为{{cssxref("top")}}，{{cssxref("bottom")}}，{{cssxref("left")}}和{{cssxref("right")}}以不同的方式在绝对定位。它们指定元素应距离每个包含元素的边的距离，而不是指定元素应该移入的方向。所以在这种情况下，我们说的绝对定位元素应该位于从“包含元素”的顶部 30px，从左边 30px。
 
-> **备注：** 如果需要，你可以使用 {{cssxref("top")}}，{{cssxref("bottom")}}、{{cssxref("left")}} 和 {{cssxref("right")}} 调整元素大小。尝试设置 `top: 0; bottom: 0; left: 0; right: 0;` 和 `margin: 0;` 对你定位的元素，看看会发生什么！之后再回来
+> [!NOTE]
+> 如果需要，你可以使用 {{cssxref("top")}}，{{cssxref("bottom")}}、{{cssxref("left")}} 和 {{cssxref("right")}} 调整元素大小。尝试设置 `top: 0; bottom: 0; left: 0; right: 0;` 和 `margin: 0;` 对你定位的元素，看看会发生什么！之后再回来
 
-> **备注：** 是的，margins 仍会影响定位的元素。然而 margin collapsing 不会。
+> [!NOTE]
+> 是的，margins 仍会影响定位的元素。然而 margin collapsing 不会。
 
-> **备注：** 你可以在[`3_absolute-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/3_absolute-positioning.html))。
+> [!NOTE]
+> 你可以在[`3_absolute-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/3_absolute-positioning.html))。
 
 ### 定位上下文
 
@@ -359,7 +365,8 @@ span {
 
 定位的元素现在相对于{{htmlelement("body")}}元素。
 
-> **备注：** 你可以在这里看到这个例子 [`4_positioning-context.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/4_positioning-context.html)).
+> [!NOTE]
+> 你可以在这里看到这个例子 [`4_positioning-context.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/4_positioning-context.html)).
 
 ### 介绍 z-index
 
@@ -457,7 +464,8 @@ p:nth-of-type(1) {
 
 请注意，z-index 只接受无单位索引值；你不能指定你想要一个元素是 Z 轴上 23 像素——它不这样工作。较高的值将高于较低的值，这取决于你使用的值。使用 2 和 3 将产生与 300 和 40000 相同的效果。
 
-> **备注：** 你可以在这里看到这个例子 [`5_z-index.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/5_z-index.html)).
+> [!NOTE]
+> 你可以在这里看到这个例子 [`5_z-index.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/5_z-index.html)).
 
 ### 固定定位
 
@@ -560,7 +568,8 @@ p:nth-of-type(1) {
 
 {{ EmbedLiveSample('固定定位', '100%', 400) }}
 
-> **备注：** 你可以在这里看到这个例子[`6_fixed-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/6_fixed-positioning.html)).
+> [!NOTE]
+> 你可以在这里看到这个例子[`6_fixed-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/6_fixed-positioning.html)).
 
 ### position: sticky
 
@@ -725,7 +734,8 @@ body {
 
 {{ EmbedLiveSample('滚动索引', '100%', 200) }}
 
-> **备注：** 你可以在 [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/7_sticky-positioning.html))。
+> [!NOTE]
+> 你可以在 [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/7_sticky-positioning.html))。
 
 ## 技能测试！
 

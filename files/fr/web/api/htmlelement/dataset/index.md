@@ -7,7 +7,8 @@ slug: Web/API/HTMLElement/dataset
 
 La propriété en lecture seule **`dataset`**, rattachée à l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement), fournit un accès en lecture/écriture aux [attributs de données (`data-*`)](/fr/docs/Web/HTML/Global_attributes/data-*) de l'élément. Elle expose un objet [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap) avec un élément pour chaque attribut `data-*`.
 
-> **Note :** La propriété `dataset` elle-même peut être lue mais pas modifiée directement.
+> [!NOTE]
+> La propriété `dataset` elle-même peut être lue mais pas modifiée directement.
 > Pour appliquer des modifications, il faudra les appliquer sur chaque propriété contenue dans `dataset`, qui représente chacune un attribut de données.
 
 Un attribut HTML `data-*` et la propriété du DOM

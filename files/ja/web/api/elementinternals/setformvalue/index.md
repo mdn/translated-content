@@ -3,10 +3,10 @@ title: "ElementInternals: setFormValue() メソッド"
 short-title: setFormValue()
 slug: Web/API/ElementInternals/setFormValue
 l10n:
-  sourceCommit: 86215eff9beccf2e069be9109347ad830cc5e9c4
+  sourceCommit: ce10da0e9d23d241b175d8d68bf93507734b7c48
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Web Components")}}
 
 **`setFormValue()`** は {{domxref("ElementInternals")}} インターフェイスのメソッドで、このメソッドは、要素の送信値と状態を設定し、これらをユーザーエージェントに伝えます。
 
@@ -20,12 +20,13 @@ setFormValue(value, state)
 ### 引数
 
 - `value`
-  - : サーバに送信する値として、{{domxref("File")}}、文字列、{{domxref("FormData")}} のいずれかを指定します。
+  - : サーバーに送信する値として、{{domxref("File")}}、文字列、{{domxref("FormData")}} のいずれかを指定します。
 - `state` {{optional_inline}}
   - : {{domxref("File")}}、文字列、{{domxref("FormData")}} のいずれかで、ユーザーの入力を表します。
     これにより、アプリケーションは必要に応じて、ユーザーが送信した情報を、ユーザーが入力した形式で再表示することができます。
 
-> **メモ:** 一般的に、 `state` はユーザがー指定した情報を渡すために、 `value` はサニタイズ後、サーバーに送信するのに適した情報を渡すために使用されます。
+> [!NOTE]
+> 一般的に、 `state` はユーザーがー指定した情報を渡すために、 `value` はサニタイズ後、サーバーに送信するのに適した情報を渡すために使用されます。
 > たとえば、カスタム要素で日付の入力を求められた場合、ユーザーは「3/15/2019」と入力するかもしれません。
 > これは `state` です。
 > サーバーは `2019-03-15` という日付書式を期待しているので、この書式の日付が `value` として渡されます。

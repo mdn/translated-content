@@ -1,8 +1,9 @@
 ---
-title: AudioScheduledSourceNode.stop()
+title: "AudioScheduledSourceNode: stop() メソッド"
+short-title: stop()
 slug: Web/API/AudioScheduledSourceNode/stop
 l10n:
-  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -11,7 +12,8 @@ l10n:
 
 同じノードで `stop()` を呼び出すたびに、以前にスケジュールされた停止時刻のうち、まだ発生していない時刻が指定された時刻に置き換わります。ノードが既に停止している場合、このメソッドは何の効果もありません。
 
-> **メモ:** ノードの予定開始時刻の前に予定停止時刻が発生した場合、ノードは再生を開始しません。
+> [!NOTE]
+> ノードの予定開始時刻の前に予定停止時刻が発生した場合、ノードは再生を開始しません。
 
 ## 構文
 

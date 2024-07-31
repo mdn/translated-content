@@ -7,7 +7,8 @@ slug: Web/API/Element/scrollHeight
 
 **`Element.scrollHeight`** 是衡量元素包含因為 overflow 而沒顯示在螢幕上的內容高度的唯讀屬性. `scrollHeight` 的值相等於元素要求 `clientHeight` 在視域中沒有使用滾動條顯示所有內容的最小高度值 . 這當中只包含 padding, 並不包含 margin.
 
-> **備註：** 這個屬性會以四捨五入進位取整數. 如果要使用非整數值, 使用 {{ domxref("Element.getBoundingClientRect()") }}.
+> [!NOTE]
+> 這個屬性會以四捨五入進位取整數. 如果要使用非整數值, 使用 {{ domxref("Element.getBoundingClientRect()") }}.
 
 ## 表達式
 

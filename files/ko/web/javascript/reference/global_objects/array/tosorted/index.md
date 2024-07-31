@@ -2,39 +2,24 @@
 title: Array.prototype.toSorted()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSorted
 l10n:
-  sourceCommit: a213cd90f4c97cb12befa38c3b2db193d9d286fc
+  sourceCommit: e46c58e6ed948e8c35c206762eb14a2e68616ed1
 ---
 
 {{JSRef}}
 
-{{jsxref("Array")}}의 **`toSorted()`** 메서드는 {{jsxref("Array/sort", "sort()")}}에 대응되는 [복사](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) 메서드입니다. 이 메서드는 요소들을 오름차순으로 정렬한 새로운 배열을 반환합니다.
+{{jsxref("Array")}} 인스턴스의 **`toSorted()`** 메서드는 {{jsxref("Array/sort", "sort()")}}에 대응되는 [복사](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#복사_메서드와_변경_메서드) 버전의 메서드입니다. 이 메서드는 요소들을 오름차순으로 정렬한 새로운 배열을 반환합니다.
 
 ## 구문
 
 ```js-nolint
-// 함수 없이 사용
 toSorted()
-
-// 화살표 함수
-toSorted((a, b) => { /* … */ })
-
-// 비교 함수
 toSorted(compareFn)
-
-// 인라인 비교 함수
-toSorted(function compareFn(a, b) { /* … */ })
 ```
 
 ### 매개변수
 
 - `compareFn` {{optional_inline}}
-
-  - : 정렬 순서를 정의하는 함수를 지정합니다. 생략하면 배열 요소는 문자열로 변환되고 각 문자의 유니코드 포인트 값에 따라 정렬됩니다.
-
-    - `a`
-      - : 비교할 첫 번째 요소입니다.
-    - `b`
-      - : 비교할 두 번째 요소입니다.
+  - : 요소 순서를 결정하는 함수입니다. 생략하면 배열 요소는 문자열로 변환되고 각 문자의 유니코드 코드 포인트 값에 따라 정렬됩니다. 자세한 정보는 {{jsxref("Array/sort", "sort()")}}를 참고하시기 바랍니다.
 
 ### 반환 값
 
@@ -44,9 +29,9 @@ toSorted(function compareFn(a, b) { /* … */ })
 
 `compareFn` 매개변수에 대해 더 알아보려면 {{jsxref("Array/sort", "sort()")}}를 참조하세요.
 
-[희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)에서 `toSorted()` 메서드는 빈 슬롯을 `undefined` 값으로 간주하고 반복합니다.
+[희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#희소_배열)에서 `toSorted()` 메서드는 빈 슬롯을 `undefined` 값으로 간주하고 순회합니다.
 
-`toSorted()` 메서드는 [일반화](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)되어 있습니다. `this` 값이 `length` 속성과 정수 키 속성을 가지고 있다고 가정합니다.
+`toSorted()` 메서드는 [범용](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#범용_배열_메서드) 메서드 입니다. `this` 값이 `length` 속성과 정수 키 속성을 가지고 있다고 가정합니다.
 
 ## 예제
 
@@ -85,6 +70,7 @@ const arrayLike = {
   unrelated: "foo",
   0: 5,
   2: 4,
+  3: 3, // length가 3이기 때문에 toSorted()는 이를 무시합니다
 };
 console.log(Array.prototype.toSorted.call(arrayLike));
 // [4, 5, undefined]
@@ -100,7 +86,8 @@ console.log(Array.prototype.toSorted.call(arrayLike));
 
 ## 같이 보기
 
-- [Polyfill of `Array.prototype.toSorted` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
+- [`core-js`에서의 `Array.prototype.toSorted` 폴리필](https://github.com/zloirock/core-js#change-array-by-copy)
+- [인덱스 기반 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections) 가이드
 - {{jsxref("Array.prototype.sort()")}}
 - {{jsxref("Array.prototype.toReversed()")}}
 - {{jsxref("Array.prototype.toSpliced()")}}

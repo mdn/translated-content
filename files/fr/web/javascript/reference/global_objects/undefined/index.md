@@ -25,7 +25,8 @@ Dans les navigateurs modernes (JavaScript 1.8.5 / Firefox 4+), d'après la spéc
 
 Une variable pour laquelle aucune valeur n'a été assignée sera de type `undefined`. Une méthode ou instruction renvoie également `undefined` si la variable à évaluer n'a pas de valeur assignée. Une fonction renvoie `undefined` si aucune valeur n'a été [renvoyée](/fr/docs/Web/JavaScript/Reference/Statements/return).
 
-> **Attention :** Puisque `undefined` n'est pas un [mot réservé du langage JavaScript](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#mots-clés), il peut être utilisé comme [identifiant](/fr/docs/Glossary/Identifier) (nom de variable) dans toute portée autre que la portée globale. Ceci est une très mauvaise idée pour la lisibilité du code et sa maintenabilité.
+> [!WARNING]
+> Puisque `undefined` n'est pas un [mot réservé du langage JavaScript](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#mots-clés), il peut être utilisé comme [identifiant](/fr/docs/Glossary/Identifier) (nom de variable) dans toute portée autre que la portée globale. Ceci est une très mauvaise idée pour la lisibilité du code et sa maintenabilité.
 >
 > ```js example-bad
 > // À NE PAS FAIRE
@@ -57,7 +58,8 @@ if (x === undefined) {
 }
 ```
 
-> **Note :** L'opérateur d'égalité stricte doit être utilisé ici plutôt que l'opérateur _d'égalité simple_. En effet, `x == undefined` vérifie également si `x` vaut `null`, tandis que l'égalité stricte ne le fait pas. `null` n'est pas équivalent à `undefined`.
+> [!NOTE]
+> L'opérateur d'égalité stricte doit être utilisé ici plutôt que l'opérateur _d'égalité simple_. En effet, `x == undefined` vérifie également si `x` vaut `null`, tandis que l'égalité stricte ne le fait pas. `null` n'est pas équivalent à `undefined`.
 >
 > Voir la page sur les [opérateurs de comparaison](/fr/docs/Web/JavaScript/Reference/Operators) pour plus de détails.
 

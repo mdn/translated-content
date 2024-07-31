@@ -80,9 +80,11 @@ De nombreux différents types de contenu peuvent être préchargés. Les valeurs
 
 - `video`&nbsp;: un fichier vidéo, typiquement intégré avec l'élément {{htmlelement("video")}}.
 
-> **Note :** le préchargement de l'élément `video` est inclut dans la spécification <i lang="en">Preload</i> mais n'est pas encore implémenté par les navigateurs.
+> [!NOTE]
+> Le préchargement de l'élément `video` est inclut dans la spécification <i lang="en">Preload</i> mais n'est pas encore implémenté par les navigateurs.
 
-> **Note :** pour davantage de détails sur ces valeurs et sur la façon dont la spécification <i lang="en">Preload</i> prévoit de les traiter, consultez [<i lang="en">link element extensions</i> (en anglais)](https://w3c.github.io/preload/#link-element-extensions). Notez également que la liste complète des valeurs acceptées par l'attribut `as` est déterminé par la spécification <i lang="en">Fetch</i> — voir la spécification [<i lang="en">request destinations</i> (en anglais)](https://fetch.spec.whatwg.org/#concept-request-destination).
+> [!NOTE]
+> Pour davantage de détails sur ces valeurs et sur la façon dont la spécification <i lang="en">Preload</i> prévoit de les traiter, consultez [<i lang="en">link element extensions</i> (en anglais)](https://w3c.github.io/preload/#link-element-extensions). Notez également que la liste complète des valeurs acceptées par l'attribut `as` est déterminé par la spécification <i lang="en">Fetch</i> — voir la spécification [<i lang="en">request destinations</i> (en anglais)](https://fetch.spec.whatwg.org/#concept-request-destination).
 
 ## Inclure un type MIME
 
