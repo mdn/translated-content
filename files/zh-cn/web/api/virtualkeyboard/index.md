@@ -9,7 +9,7 @@ l10n:
 
 [虚拟键盘 API](/zh-CN/docs/Web/API/VirtualKeyboard_API) 的 **`VirtualKeyboard`** 接口用于具有屏幕虚拟键盘的设备（如平板电脑、手机或其他没有物理键盘的设备）。
 
-`VirtualKeyboard` 接口使你可以选择退出浏览器自动处理屏幕虚拟键盘的方式，通过减少视窗的高度以为虚拟键盘腾出空间。你可以阻止浏览器改变视窗大小，检测虚拟键盘的位置和大小，并通过编程方式显示或隐藏虚拟键盘。
+`VirtualKeyboard` 接口使你可以选择不使用浏览器自动处理屏幕虚拟键盘的方式——通过减少视口的高度来为虚拟键盘腾出空间。你可以阻止浏览器改变视口大小、检测虚拟键盘的位置和大小，并通过编程方式显示或隐藏虚拟键盘。
 
 你可以通过 {{domxref("navigator.virtualKeyboard")}} 访问 `VirtualKeyboard` 接口。
 
@@ -22,7 +22,7 @@ _VirtualKeyboard 接口从其父接口 {{domxref("EventTarget")}} 继承属性�
 - {{DOMxRef("VirtualKeyboard.boundingRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 描述虚拟键盘几何结构的 {{domxref("DOMRect")}}。
 - {{DOMxRef("VirtualKeyboard.overlaysContent")}} {{Experimental_Inline}}
-  - : 一个 {{jsxref('Boolean')}}，定义浏览器是否应停止处理屏幕虚拟键盘。
+  - : 一个{{jsxref('Boolean', '布尔值', "", 1)}}，定义浏览器是否应停止处理屏幕虚拟键盘。
 
 ## 实例方法
 
@@ -36,11 +36,11 @@ _VirtualKeyboard 接口从其父接口 {{domxref("EventTarget")}} 继承方法�
 ## 事件
 
 - {{domxref("VirtualKeyboard.geometrychange_event", "geometrychange")}} {{Experimental_Inline}}
-  - : 当屏幕虚拟键盘的几何结构发生变化时触发，即虚拟键盘显示或隐藏时。
+  - : 当屏幕虚拟键盘的几何形状发生变化时（即虚拟键盘显示或隐藏时）触发。
 
 ## 示例
 
-以下示例演示如何退出自动虚拟键盘行为，并检测网页中虚拟键盘的几何结构：
+以下示例演示如何选择不使用自动虚拟键盘行为，并检测网页中虚拟键盘的几何形状：
 
 ```js
 if ("virtualKeyboard" in navigator) {
@@ -62,5 +62,5 @@ if ("virtualKeyboard" in navigator) {
 
 ## 参见
 
-- {{domxref("VirtualKeyboard_API", "VirtualKeyboard API", "", "nocode")}}
+- {{domxref("VirtualKeyboard_API", "虚拟键盘 API", "", "nocode")}}
 - [使用虚拟键盘 API 实现完全控制](https://developer.chrome.com/docs/web-platform/virtual-keyboard/)
