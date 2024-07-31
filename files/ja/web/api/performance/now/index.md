@@ -79,8 +79,8 @@ console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
 
 タイミング攻撃や[フィンガープリンティング](/ja/docs/Glossary/Fingerprinting)から保護するために、 `performance.now()` はサイトの分離状態に基づいて粗くなります。
 
-- 独立したコンテキストでの解像度: 5 ミリ秒
-- 独立していないコンテキストでの解像度: 100 ミリ秒
+- 独立したコンテキストでの解像度: 5 マイクロ秒
+- 独立していないコンテキストでの解像度: 100 マイクロ秒
 
 {{HTTPHeader("Cross-Origin-Opener-Policy")}} と {{HTTPHeader("Cross-Origin-Embedder-Policy")}} ヘッダーを使用して、サイトをオリジン間分離します。
 

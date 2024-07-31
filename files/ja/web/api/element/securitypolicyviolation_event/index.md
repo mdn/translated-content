@@ -15,7 +15,8 @@ l10n:
 
 ハンドラーは `onsecuritypolicyviolation` プロパティを使用するか、{{domxref("EventTarget.addEventListener()")}} を使用して割り当てることができます。
 
-> **メモ:** このイベントのハンドラーは最上位のオブジェクト（{{domxref("Window")}} や {{domxref("Document")}} など）に追加する必要があります。
+> [!NOTE]
+> このイベントのハンドラーは最上位のオブジェクト（{{domxref("Window")}} や {{domxref("Document")}} など）に追加する必要があります。
 > HTML 要素にプロパティが存在する間は、要素が読み込まれるまでプロパティにイベントハンドラーを割り当てることはできません。
 
 ## 構文

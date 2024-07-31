@@ -55,7 +55,8 @@ deriveBits(algorithm, baseKey, length)
 
 ## 例
 
-> **メモ:** GitHub 上の[動作例を試してみてください](https://mdn.github.io/dom-examples/web-crypto/derive-bits/index.html)。
+> [!NOTE]
+> GitHub 上の[動作例を試してみてください](https://mdn.github.io/dom-examples/web-crypto/derive-bits/index.html)。
 
 ### ECDH
 

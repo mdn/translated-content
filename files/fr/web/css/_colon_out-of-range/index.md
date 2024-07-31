@@ -16,7 +16,8 @@ input:out-of-range {
 }
 ```
 
-> **Note :** Cette pseudo-classe s'applique seulement aux éléments qui ont des valeurs limites.
+> [!NOTE]
+> Cette pseudo-classe s'applique seulement aux éléments qui ont des valeurs limites.
 
 ## Syntaxe
 

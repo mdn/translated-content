@@ -90,7 +90,8 @@ svg {
 
 {{svginfo}}
 
-> **Note :** Un élément `<symbol>` n'est pas destiné à être affiché par lui-même. Seules les instances d'un élément `<symbol>` (c'est à dire une référence vers un `<symbol>` par un élément {{SVGElement("use")}}) sont affichées. Cela signifie que certains navigateurs peuvent refuser d'afficher directement un élément `<symbol>` quand bien même la propriété CSS {{cssxref('display')}} indique le contraire.
+> [!NOTE]
+> Un élément `<symbol>` n'est pas destiné à être affiché par lui-même. Seules les instances d'un élément `<symbol>` (c'est à dire une référence vers un `<symbol>` par un élément {{SVGElement("use")}}) sont affichées. Cela signifie que certains navigateurs peuvent refuser d'afficher directement un élément `<symbol>` quand bien même la propriété CSS {{cssxref('display')}} indique le contraire.
 
 ## Spécifications
 

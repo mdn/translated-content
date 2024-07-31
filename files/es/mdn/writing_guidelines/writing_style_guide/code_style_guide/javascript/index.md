@@ -427,9 +427,11 @@ Cuando los [bucles](/es/docs/Learn/JavaScript/Building_blocks/Looping_code) son 
   }
   ```
 
-> **Advertencia:** Nunca utilice `for...in` en matrices y cadenas.
+> [!WARNING]
+> Nunca utilice `for...in` en matrices y cadenas.
 
-> **Nota:** Considere no usar un bucle `for` en absoluto. Si estás utilizando un [`Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array) (o un [`String`](/es/docs/Web/JavaScript/Reference/Global_Objects/String) para algunas operaciones), considere usar más métodos de iteración semántica en su lugar, como [`map()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`every()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/every), [`findIndex()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex), [`find()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/find), [`includes()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/includes), y muchos más.
+> [!NOTE]
+> Considere no usar un bucle `for` en absoluto. Si estás utilizando un [`Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array) (o un [`String`](/es/docs/Web/JavaScript/Reference/Global_Objects/String) para algunas operaciones), considere usar más métodos de iteración semántica en su lugar, como [`map()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`every()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/every), [`findIndex()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex), [`find()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/find), [`includes()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/includes), y muchos más.
 
 ### Sentencias de control
 
@@ -557,7 +559,8 @@ Las sentencias `switch` pueden ser un poco complicadas.
   }
   ```
 
-> **Nota:** Tenga en cuenta que solo los errores _recuperables_ deben detectarse y manejarse.
+> [!NOTE]
+> Tenga en cuenta que solo los errores _recuperables_ deben detectarse y manejarse.
 > Todos los errores no recuperables deben dejarse pasar y aumentar la pila de llamadas.
 
 ## Objetos
@@ -788,7 +791,8 @@ Los buenos nombres de variables son esenciales para comprender el código.
   const s = d / t;
   ```
 
-> **Nota:** El único lugar donde está permitido no usar nombres semánticos legibles por humanos es donde existe una convención comúnmente reconocida, como usar `i` y `j` para iteradores de bucle.
+> [!NOTE]
+> El único lugar donde está permitido no usar nombres semánticos legibles por humanos es donde existe una convención comúnmente reconocida, como usar `i` y `j` para iteradores de bucle.
 
 ### Declaración de Variables
 

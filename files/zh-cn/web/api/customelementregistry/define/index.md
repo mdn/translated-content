@@ -124,7 +124,8 @@ customElements.define("popup-info", PopUpInfo);
                                     numbers on the back of your card."></popup-info>
 ```
 
-> **备注：** 自主自定义元素的构造函数必须扩展{{domxref("HTMLElement")}}。
+> [!NOTE]
+> 自主自定义元素的构造函数必须扩展{{domxref("HTMLElement")}}。
 
 ### 自定义内置元素
 

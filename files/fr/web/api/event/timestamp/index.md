@@ -7,7 +7,8 @@ slug: Web/API/Event/timeStamp
 
 Retourne le temps (en millisecondes) à partir duquel l'événement a été créé.
 
-> **Note :** Cette propriété fonctionne seulement si le système d'évènements le prend en charge pour des évènements particuliers.
+> [!NOTE]
+> Cette propriété fonctionne seulement si le système d'évènements le prend en charge pour des évènements particuliers.
 
 ## Syntaxe
 

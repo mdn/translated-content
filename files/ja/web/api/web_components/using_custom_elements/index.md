@@ -126,7 +126,8 @@ customElements.define("popup-info", PopupInfo);
   back of your card."></popup-info>
 ```
 
-> **メモ:** こちらで[完全な JavaScript ソース](https://github.com/mdn/web-components-examples/blob/main/popup-info-box-web-component/main.js) を見ることができます。
+> [!NOTE]
+> こちらで[完全な JavaScript ソース](https://github.com/mdn/web-components-examples/blob/main/popup-info-box-web-component/main.js) を見ることができます。
 
 ### 内部スタイルと外部スタイル
 
@@ -183,7 +184,8 @@ customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 
 通常のように `<ul>` を使用していますが、カスタム要素の名前が `is` 属性で指定されています。
 
-> **メモ:** 繰り返しますが、完全な [JavaScript のソースコード](https://github.com/mdn/web-components-examples/blob/main/expanding-list-web-component/main.js)はこちらにあります。
+> [!NOTE]
+> 繰り返しますが、完全な [JavaScript のソースコード](https://github.com/mdn/web-components-examples/blob/main/expanding-list-web-component/main.js)はこちらにあります。
 
 ## ライフサイクルコールバックの使用
 

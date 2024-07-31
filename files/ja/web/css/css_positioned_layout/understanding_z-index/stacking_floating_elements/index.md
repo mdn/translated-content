@@ -16,7 +16,8 @@ l10n:
 
 位置指定要素、位置指定なしの要素についての説明は、[位置指定の種類](/ja/docs/Web/CSS/position#位置の種類)を参照してください。
 
-> **メモ:** 位置指定なしの要素（下記の例の DIV #4）の `opacity` の値を変更すると、その要素の背景と境界が、浮動要素や位置指定要素の上に飛び出し、おかしな結果になります。これは、仕様書の中で、 `opacity` の値を適用すると新しい重ね合わせコンテキストを作成するという、奇妙な部分によるものです（[What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/) を参照してください）。
+> [!NOTE]
+> 位置指定なしの要素（下記の例の DIV #4）の `opacity` の値を変更すると、その要素の背景と境界が、浮動要素や位置指定要素の上に飛び出し、おかしな結果になります。これは、仕様書の中で、 `opacity` の値を適用すると新しい重ね合わせコンテキストを作成するという、奇妙な部分によるものです（[What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/) を参照してください）。
 
 ## 例
 

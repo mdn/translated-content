@@ -92,7 +92,8 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 字符串值 `any` 意味着不使用步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#min) 之外）。
 
-> **备注：** 当用户输入的数据不符合步进配置时，{{Glossary("user agent","用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
+> [!NOTE]
+> 当用户输入的数据不符合步进配置时，{{Glossary("user agent","用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
 
 `range` 输入的默认步进值为 1，*除非*步进基数不是整数，否则仅允许输入整数；否则，默认值为 1。例如，如果将 `min` 设置为 -10 并将 `value` 设置为 1.5，则 1 的 `step` 将只允许正方向上的值为 1.5、2.5、3.5 等，以及负方向上的值为 -0.5，-1.5，-2.5 等。请参阅 [HTML `step` 属性](/zh-CN/docs/Web/HTML/Attributes/step)。
 
@@ -102,7 +103,8 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 类似于影响 {{htmlelement('progress')}} 和 {{htmlelement('meter')}} 元素的非标准 CSS 属性 -moz-orient，`orient` 属性定义范围滑块的方向。值包括 `horizontal` 和 `vertical`，分别代表范围的水平呈现和垂直呈现。
 
-> **备注：** 以下输入属性不适用于 range 输入：`accept`、`alt`、`checked`、`dirname`、`formaction`、`formenctype`、`formmethod`、`formnovalidate`、`formtarget`、`height`、`maxlength`、`minlength`、`multiple`、`pattern`、`placeholder`、`readonly`、`required`、`size`、`src` 和 `width`。如果包含了这些属性中的任何一个，都将被忽略。
+> [!NOTE]
+> 以下输入属性不适用于 range 输入：`accept`、`alt`、`checked`、`dirname`、`formaction`、`formenctype`、`formmethod`、`formnovalidate`、`formtarget`、`height`、`maxlength`、`minlength`、`multiple`、`pattern`、`placeholder`、`readonly`、`required`、`size`、`src` 和 `width`。如果包含了这些属性中的任何一个，都将被忽略。
 
 ## 示例
 
