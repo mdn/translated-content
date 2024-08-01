@@ -58,7 +58,7 @@ Web 上的 IndexedDB 使用範例，是由 Marco Castelluccio 所提供。Marco 
   > **備註：** 此線上教學是根據較舊版本的規格所列，因此無法搭配最新版的瀏覽器。新版本已移除其中的 `setVersion()` 函式。
 
 - [Indexed Database API 規格](https://www.w3.org/TR/IndexedDB/)
-- [IndexedDB — 儲存於自己的瀏覽器中](<https://learn.microsoft.com/en-us/previous-versions/msdn10/gg679063(v%3Dmsdn.10)>)
+- [IndexedDB — 儲存於自己的瀏覽器中](<https://learn.microsoft.com/en-us/previous-versions/msdn10/gg679063(v=msdn.10)>)
 - [IndexedDB 範例](http://nparashuram.com/IndexedDB/trialtool/index.html)
 - 僅支援 WebSQL 的瀏覽器 (例如行動 WebKit)，可適用 [IndexedDB Polyfill](https://github.com/indexeddbshim/IndexedDBShim)
 - [JQuery IndexedDB 外掛程式](http://nparashuram.com/IndexedDBShim/)

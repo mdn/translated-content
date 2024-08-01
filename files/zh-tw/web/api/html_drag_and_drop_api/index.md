@@ -226,4 +226,4 @@ As can be seen in the [DataTransferItem interface's Browser Compatibility table]
 - [Dragging and Dropping Multiple Items](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [Recommended Drag Types](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
-- [Drag and Drop interoperability data from CanIUse](https://caniuse.com/#search%3Ddraganddrop)
+- [Drag and Drop interoperability data from CanIUse](https://caniuse.com/#search=draganddrop)
