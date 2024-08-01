@@ -44,7 +44,7 @@ slug: Web/Security/Mixed_content
 - 所有用到 {{cssxref("url")}} 的 CSS 值（{{cssxref("@font-face")}}、{{cssxref("cursor")}}、{{cssxref("background-image")}}……等等）。
 - {{HTMLElement("object")}}（`data` 屬性）
 
-其他資源如 web fonts 與 workers 也可能被認定為主動型混合內容，[因為在 Chromium 就是這樣](https://code.google.com/p/chromium/codesearch#chromium/src/third_party/WebKit/Source/core/loader/MixedContentChecker.cpp&q=MixedContentChecker::contextTypeFromContext%20f:cpp&sq=package:chromium&type=cs)。
+其他資源如 web fonts 與 workers 也可能被認定為主動型混合內容，[因為在 Chromium 就是這樣](https://source.chromium.org/chromium#chromium/src/third_party/WebKit/Source/core/loader/MixedContentChecker.cpp&q=MixedContentChecker::contextTypeFromContext%20f:cpp&sq=package:chromium&type=cs)。
 
 ## 網頁主控台的警告
 
