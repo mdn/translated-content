@@ -127,7 +127,6 @@ p.withRedBoxes {
 }
 ```
 
-
 ## 명세
 
 {{Specifications}}
