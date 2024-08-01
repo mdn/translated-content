@@ -107,6 +107,5 @@ You can specify a font on the user's local computer by name using the `local()` 
 - [FontSquirrel @font-face generator](https://www.fontsquirrel.com/fontface/generator)
 - [Beautiful fonts with @font-face](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
 - [Open Font Library](https://fontlibrary.org/)
-- [Microsoft Developer Network (MSDN) @font-face reference](<https://learn.microsoft.com/en-us/>).aspx>)
 - [When can I use WOFF?](https://caniuse.com/woff)
 - [When can I use SVG Fonts?](https://caniuse.com/svg-fonts)

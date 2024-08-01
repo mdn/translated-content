@@ -59,7 +59,7 @@ slug: Web/CSS
 
 ## Meta 錯誤
 
-- Firefox: [Firefox bug 1323667](https://bugzilla.mozilla.org/show_bug.cgi?id%3D1323667)
+- Firefox: [Firefox bug 1323667](https://bugzil.la/1323667)
 
 ## 參見
 
