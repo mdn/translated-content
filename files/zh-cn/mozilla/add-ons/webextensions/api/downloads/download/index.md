@@ -51,7 +51,8 @@ var downloading = browser.downloads.download(
 
         如果该选项省略，浏览器会根据用户对于该行为的偏好设置决定是否提供一个文件选择对话框 (在火狐这项设置标签在 about:preferences 里为"每次都问你要存到哪" ，或者 about:config 里 `browser.download.useDownloadDir` )。
 
-        > **备注：** 如果 `saveAs` 被设置为 `true`，Firefox for Android 将会引发一个错误。当 `saveAs` 为 `false` 或空时这个参数会被忽略。
+        > [!NOTE]
+        > 如果 `saveAs` 被设置为 `true`，Firefox for Android 将会引发一个错误。当 `saveAs` 为 `false` 或空时这个参数会被忽略。
 
     - `url`
       - : 一个 `string`，表示需要下载的链接地址。
@@ -92,7 +93,8 @@ downloading.then(onStartedDownload, onFailed);
 
 {{WebExtExamples}}
 
-> **备注：** 这个 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-download) API.
+> [!NOTE]
+> 这个 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-download) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
