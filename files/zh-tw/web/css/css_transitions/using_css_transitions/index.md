@@ -40,7 +40,6 @@ CSS transitions 和 CSS animations 中可以用來修改的屬性在 [CSS animat
 
 漸變函式可用來定義轉場發生的時間曲線。其規範方式是以四個參數的貝茲曲線代表。
 
-[CSS transition function manipulator](https://www.themagazine.org/) 是一個可以讓你非常容易以視覺化方式了解轉場流程的工具。
 
 除了自行定義之外，尚有幾個已經預先定義好的函式：
 
