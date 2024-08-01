@@ -12,7 +12,7 @@ Si vous avez besoin d'accéder à un élément qui n'a pas d'ID, vous pouvez uti
 ## Syntaxe
 
 ```js
-var element = document.getElementById(id);
+const element = document.getElementById(id);
 ```
 
 ### Paramètres
