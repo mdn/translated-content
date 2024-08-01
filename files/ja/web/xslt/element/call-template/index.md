@@ -1,15 +1,17 @@
 ---
 title: <xsl:call-template>
 slug: Web/XSLT/Element/call-template
+l10n:
+  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `<xsl:call-template>` 要素は名前付きテンプレートを呼び出します。
 
 ### 構文
 
-```
+```xml
 <xsl:call-template name=NAME>
   <xsl:with-param> [optional]
 </xsl:call-template>
@@ -24,11 +26,11 @@ slug: Web/XSLT/Element/call-template
 
 なし
 
-### タイプ
+### 種類
 
-命令は、テンプレート内に表示されます。
+命令で、テンプレート内に現れます。
 
-### 定義
+## 仕様書
 
 XSLT, section 6.
 

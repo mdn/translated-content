@@ -1,15 +1,17 @@
 ---
 title: <xsl:apply-templates>
 slug: Web/XSLT/Element/apply-templates
+l10n:
+  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
-`<xsl:apply-templates>` 要素は、入力ツリー内のノードのセットを選択し、適切なテンプレートを適用するようにプロセッサに指示します。
+`<xsl:apply-templates>` 要素は、入力ツリー内のノードのセットを選択し、適切なテンプレートを適用するようにプロセッサーに指示します。
 
 ### 構文
 
-```
+```xml
 <xsl:apply-templates select=EXPRESSION mode=NAME>
   <xsl:with-param> [optional]
   <xsl:sort> [optional]
@@ -27,11 +29,11 @@ slug: Web/XSLT/Element/apply-templates
 - `mode`
   - : 同じノードに対して複数の処理方法が定義されている場合は、それらを区別します。
 
-### タイプ
+### 種類
 
-命令は、テンプレート内に表示されます。
+命令で、テンプレート内に現れます。
 
-### 定義
+## 仕様書
 
 XSLT section 5.4.
 
