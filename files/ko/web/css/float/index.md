@@ -32,7 +32,7 @@ CSS 속성(property) **`float`** 은 한 요소(element)가 보통 흐름(normal
 | `inline-flex`           | `inline-flex`, 다만 `float` 은 이러한 요소에 효과가 없음 |
 | _그외_                  | _변화없음_                                               |
 
-> [!WARNING]
+> [!NOTE]
 > JavaScript에서 이 속성을 {{domxref("element.style")}} 객체의 멤버로서 참조한다면, 당신은 `cssFloat`으로 철자를 써야 합니다. 또한 Internet Explorer 8 이전 버전에서는 `styleFloat`으로 썼음을 주의하세요. 이는 DOM 멤버의 이름은 dash(-)로 구분된 CSS 이름의 카멜케이스(camel-case) 명이다는 규칙의 예외(이고 "class"는 "className"으로 \<label>의 "for"는 "htmlFor"로 이스케이프할 필요와 같이 "float"이 JavaScript에서 예약어란 사실 때문)입니다.
 
 ## 구문
