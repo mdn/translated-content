@@ -1,8 +1,9 @@
 ---
 title: "HTMLMediaElement: suspend イベント"
+short-title: suspend
 slug: Web/API/HTMLMediaElement/suspend_event
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
 {{APIRef("HTMLMediaElement")}}
@@ -27,7 +28,7 @@ onsuspend = (event) => {};
 
 ## 例
 
-これらの例では、`HTMLMediaElement` の `suspend` イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。
+これらの例では、`HTMLMediaElement` の `suspend` イベントのイベントリスナーを追加し、そのイベントハンドラーがイベントの発生に反応したときにメッセージを投稿します。
 
 `addEventListener()` を使用する場合:
 
@@ -74,7 +75,6 @@ video.onsuspend = (event) => {
 - HTMLMediaElement {{domxref("HTMLMediaElement.pause_event", 'pause')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.suspend_event", 'suspend')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.emptied_event", 'emptied')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.stalled_event", 'stalled')}} イベント
 
