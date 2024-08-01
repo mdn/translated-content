@@ -45,7 +45,7 @@ let contents = myElement.innerHTML;
 
 이를 통해 요소의 컨텐트 노드에 대한 HTML 마크업을 볼 수 있습니다.
 
-> [!WARNING]
+> [!NOTE]
 > 반환 된 HTML, XML 파편은 요소의 현재 내용일 기반으로 생성됩니다. 따라서 반환 된 마크업과 양식이 본래의 페이지 마크업과 일치하지 않을 수 있습니다.
 
 ### Replacing the contents of an element
