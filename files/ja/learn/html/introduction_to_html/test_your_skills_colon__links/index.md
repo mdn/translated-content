@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、あなたが [HTML でのハイパーリンクの実装](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)を行う方法を理解しているかどうかを評価することです。
 
-> **メモ:** 以下の対話型エディターで解決に挑戦することができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業することが便利な場合もあります。
+> [!NOTE]
+> 以下の対話型エディターで解決に挑戦することができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業することが便利な場合もあります。
 >
 > 行き詰まったら、助けを求めましょう。このページの最下部の[評価またはさらなるヘルプ](#評価またはさらなるヘルプ)の節をご覧ください。
 
@@ -22,13 +23,14 @@ l10n:
 - 2 つ目のリンクは、ユーザーの既定のメールアプリケーションで、受信者を "whales\@example.com" に設定してメールを開くためのリンクに変更しましょう。
 - メールの件名が「クジラについての質問」と自動的に記入されるように設定すると、ボーナスポイントも得られます。
 
-> **メモ:** この例の 2 つのリンクには `target="_blank"` 属性が設定されています。これは厳密には最善の手法ではありませんが、ここではリンクが埋め込まれた `<iframe>` で開かないようにし、その過程で例のコードを削除するようにしています。
+> [!NOTE]
+> この例の 2 つのリンクには `target="_blank"` 属性が設定されています。これは厳密には最善の手法ではありませんが、ここではリンクが埋め込まれた `<iframe>` で開かないようにし、その過程で例のコードを削除するようにしています。
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links1.html", '100%', 700)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links1-download.html)しましょう。
 
@@ -41,13 +43,14 @@ l10n:
 - 3 つ目のリンクは、UK の Google 画像検索にリンクしてください。ベース URL は `https://www.google.co.uk` で、画像検索は `imghp` というサブディレクトリーに配置されています。
 - 4 つ目のリンクは、現在のページの一番下にある段落にリンクしましょう。これは `bottom` という ID が付いています。
 
-> **メモ:** この例で最初の 3 つのリンクには `target="_blank"` 属性が設定されています。これは厳密には最善の手法ではありませんが、ここではリンクが埋め込まれた `<iframe>` で開かないようにし、その過程で例のコードを削除するようにしています。
+> [!NOTE]
+> この例で最初の 3 つのリンクには `target="_blank"` 属性が設定されています。これは厳密には最善の手法ではありませんが、ここではリンクが埋め込まれた `<iframe>` で開かないようにし、その過程で例のコードを削除するようにしています。
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links2.html", '100%', 800)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links2-download.html)しましょう。
 
@@ -58,13 +61,14 @@ l10n:
 - リンクテキストの書き方が悪い既存の段落を選び、良いリンクテキストがあるように書き直しましょう。
 - 警告を追加する必要があるリンクには、警告を追加しましょう。
 
-> **メモ:** この例における最初と 3 つ目のリンクには `target="_blank"` 属性が設定されています。これは厳密には最善の手法ではありませんが、ここではリンクが埋め込まれた `<iframe>` で開かないようにし、その過程で例のコードを削除するようにしています。
+> [!NOTE]
+> この例における最初と 3 つ目のリンクには `target="_blank"` 属性が設定されています。これは厳密には最善の手法ではありませんが、ここではリンクが埋め込まれた `<iframe>` で開かないようにし、その過程で例のコードを削除するようにしています。
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links3.html", '100%', 700)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links3-download.html)しましょう。
 

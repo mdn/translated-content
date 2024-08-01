@@ -15,7 +15,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/name
 
 {{js_property_attributes(0, 0, 1)}}
 
-> **참고:** 비표준, ES6 이전 구현에서는 `configurable` 속성 또한 `false` 였습니다.
+> [!NOTE]
+> 비표준, ES6 이전 구현에서는 `configurable` 속성 또한 `false` 였습니다.
 
 ## 설명
 

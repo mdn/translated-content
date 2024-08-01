@@ -42,7 +42,8 @@ _全屏 API 没有自己的接口。相反，它通过增强多个其他接口�
 
   - : 一个布尔值，如果文档有一个当前正在以全屏模式显示的元素，则为 `true`；否则返回 `false`。
 
-    > **备注：** 请使用 {{DOMxRef("Document")}} 或 {{DOMxRef("ShadowRoot")}} 的 {{DOMxRef("Document.fullscreenElement", "fullscreenElement")}} 属性代替；如果它不为 `null`，则它是一个当前正在以全屏模式显示的 {{DOMxRef("Element")}}。
+    > [!NOTE]
+    > 请使用 {{DOMxRef("Document")}} 或 {{DOMxRef("ShadowRoot")}} 的 {{DOMxRef("Document.fullscreenElement", "fullscreenElement")}} 属性代替；如果它不为 `null`，则它是一个当前正在以全屏模式显示的 {{DOMxRef("Element")}}。
 
 ## 事件
 
@@ -59,7 +60,8 @@ _全屏 API 没有自己的接口。相反，它通过增强多个其他接口�
 
 用户可以选择按 <kbd>ESC</kbd>（或 <kbd>F11</kbd>）键退出全屏模式，而不是等待站点或应用程序以编程方式退出全屏模式。确保在用户界面中提供适当的用户界面元素，告知用户此选项对他们可用。
 
-> **备注：** 导航到另一页面、切换标签页或使用任何应用程序切换器（或 <kbd>Alt</kbd>-<kbd>Tab</kbd>）切换到另一个应用程序也会退出全屏模式。
+> [!NOTE]
+> 导航到另一页面、切换标签页或使用任何应用程序切换器（或 <kbd>Alt</kbd>-<kbd>Tab</kbd>）切换到另一个应用程序也会退出全屏模式。
 
 ## 示例
 

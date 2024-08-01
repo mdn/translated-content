@@ -31,4 +31,5 @@ Para obtener mas ejemplos, consulta la sección de [Ejemplos](/es/docs/Web/API/c
 
 {{Specifications}}
 
-> **Nota:** Actualmente hay muchas diferencias de implementación en los navegadores, pero se esta trabajando para hacerlos mas consistentes entre sí.
+> [!NOTE]
+> Actualmente hay muchas diferencias de implementación en los navegadores, pero se esta trabajando para hacerlos mas consistentes entre sí.

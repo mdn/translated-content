@@ -11,7 +11,8 @@ l10n:
 
 所有现代浏览器都支持 TLS 协议，它们都要求服务器提供一个有效的{{Glossary("Digital certificate", "数字证书")}}来确认身份以建立安全连接。如果客户端和服务器都能提供自己的数字证书，则它们可以互相认证。
 
-> **备注：** 从 2020 年初开始，所有主流浏览器都开始移除对 TLS 1.0 和 1.1 的支持；你需要确保你的 Web 服务器支持 TLS 1.2 或 1.3。从 Firefox 74 开始，当连接到使用较旧 TLS 版本的服务器时，Firefox 将返回一个 [Secure Connection Failed](https://support.mozilla.org/zh-CN/kb/secure-connection-failed-firefox-did-not-connect) 错误（[Firefox bug 1606734](https://bugzil.la/1606734)）。
+> [!NOTE]
+> 从 2020 年初开始，所有主流浏览器都开始移除对 TLS 1.0 和 1.1 的支持；你需要确保你的 Web 服务器支持 TLS 1.2 或 1.3。从 Firefox 74 开始，当连接到使用较旧 TLS 版本的服务器时，Firefox 将返回一个 [Secure Connection Failed](https://support.mozilla.org/zh-CN/kb/secure-connection-failed-firefox-did-not-connect) 错误（[Firefox bug 1606734](https://bugzil.la/1606734)）。
 
 ## 参见
 

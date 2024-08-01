@@ -96,4 +96,5 @@ Au lieu de cela, prenez en compte le cas où Google Analytics est absent, en vé
 
 Pour plus d'information sur cette technique, regardez l'article sur [Google Analytics, Vie privée et Suivi d'événements](https://hacks.mozilla.org/2016/01/google-analytics-privacy-and-event-tracking/) (en anglais).
 
-> **Note :** Dépendre d'un élément tiers de cette façon n'est dans tous les cas pas une bonne pratique, car votre site peut se retrouver hors d'usage si la partie tierce est lente ou indisponible, ou si le traqueur a été bloqué par une extension.
+> [!NOTE]
+> Dépendre d'un élément tiers de cette façon n'est dans tous les cas pas une bonne pratique, car votre site peut se retrouver hors d'usage si la partie tierce est lente ou indisponible, ou si le traqueur a été bloqué par une extension.

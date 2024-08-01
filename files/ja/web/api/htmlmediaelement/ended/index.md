@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.ended
+title: "HTMLMediaElement: ended プロパティ"
+short-title: ended
 slug: Web/API/HTMLMediaElement/ended
 l10n:
-  sourceCommit: 5e10a2aab4ec9ecbcf8cf79f589f9b7ece88ef60
+  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
 {{APIRef("HTML DOM")}}
@@ -32,6 +33,6 @@ console.log(obj.ended); // false
 
 ## 関連情報
 
-- 定義している {{domxref("HTMLMediaElement")}} インターフェイス
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.ended` プロパティを定義しているインターフェイス
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStream.active")}}

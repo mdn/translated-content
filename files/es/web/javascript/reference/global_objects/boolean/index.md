@@ -50,7 +50,8 @@ var s = Boolean(myString); // valor inicial de true
 
 No utilices un objeto `Boolean` en lugar de un `Boolean` primitivo.
 
-> **Nota:** Cuando la propiedad no estándar [`document.all`](/es/docs/Web/API/Document#Properties) se usa como argumento para este constructor, el resultado es un objeto `Boolean` con el valor `false`. Esta propiedad es heredada y no estándar y no se debe usar.
+> [!NOTE]
+> Cuando la propiedad no estándar [`document.all`](/es/docs/Web/API/Document#Properties) se usa como argumento para este constructor, el resultado es un objeto `Boolean` con el valor `false`. Esta propiedad es heredada y no estándar y no se debe usar.
 
 ## Constructor
 

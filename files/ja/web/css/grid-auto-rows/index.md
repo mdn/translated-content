@@ -88,7 +88,8 @@ grid-auto-rows: unset;
 
     {{cssxref("minmax", "minmax()")}} 記法の外で使用された場合、 `auto` は上記の最小値と最大値の間の範囲を表します。多くの場合は `minmax(min-content,max-content)` のように動作します。
 
-    > **メモ:** トラックの寸法が `auto` の場合（かつ `auto` だけの場合）は、 {{cssxref("align-content")}} および {{cssxref("justify-content")}} プロパティによって引き伸ばすことができます。
+    > [!NOTE]
+    > トラックの寸法が `auto` の場合（かつ `auto` だけの場合）は、 {{cssxref("align-content")}} および {{cssxref("justify-content")}} プロパティによって引き伸ばすことができます。
     > 従って既定では、トラックの寸法が `auto` の場合、グリッドコンテナー内の残りの空間を占有します。
 
 ## 公式定義

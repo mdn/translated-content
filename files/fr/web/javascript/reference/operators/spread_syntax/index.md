@@ -122,7 +122,8 @@ console.log(arr2); // [1, 2, 3, 4]
 console.log(arr); // [1, 2, 3] (inchangé)
 ```
 
-> **Note :** Lorsqu'on utilise la décomposition pour copier un tableau, celle-ci ne s'applique qu'au premier niveau de profondeur. Par conséquent, il peut ne pas convenir pour la copie des tableaux multidimensionnels (des tableaux imbriqués dans d'autres tableaux) comme le montre l'exemple suivant (il en va de même avec {{jsxref("Object.assign()")}} et la décomposition).
+> [!NOTE]
+> Lorsqu'on utilise la décomposition pour copier un tableau, celle-ci ne s'applique qu'au premier niveau de profondeur. Par conséquent, il peut ne pas convenir pour la copie des tableaux multidimensionnels (des tableaux imbriqués dans d'autres tableaux) comme le montre l'exemple suivant (il en va de même avec {{jsxref("Object.assign()")}} et la décomposition).
 
 ```js
 var a = [[1], [2], [3]];
@@ -169,7 +170,8 @@ arr1 = [...arr2, ...arr1];
 // arr1 vaut désormais [1, 2, 3, 4, 5, 6]
 ```
 
-> **Note :** Il y a une différence avec `unshift()` : ici, on crée un nouveau tableau qui est affecté à `arr1`, le tableau original de `arr1` n'est pas modifié "sur place".
+> [!NOTE]
+> Il y a une différence avec `unshift()` : ici, on crée un nouveau tableau qui est affecté à `arr1`, le tableau original de `arr1` n'est pas modifié "sur place".
 
 ### Utiliser la décomposition avec les littéraux objet
 

@@ -31,7 +31,8 @@ Ten en cuenta que el selector que usemos para las reglas de estilo define el ám
 
 Sin embargo, esto no tiene por qué ser siempre así: podrían haber muy buenas razones para querer limitar el ámbito de tus propiedades personalizadas.
 
-> **Nota:** Los nombres de propiedades personalizadas son case sensitive (distinguen entre mayúsuculas y minúsculas) — `--my-color` será tratado como una propiedad personalizada distinta a `--My-color`.
+> [!NOTE]
+> Los nombres de propiedades personalizadas son case sensitive (distinguen entre mayúsuculas y minúsculas) — `--my-color` será tratado como una propiedad personalizada distinta a `--My-color`.
 
 Como mencionamos anteriormente, para acceder al valor de una propiedad personalizada usamos el nombre de la propiedad dentro de la función {{cssxref("var()")}}, en lugar de cualquier otro valor normal:
 
@@ -205,7 +206,8 @@ El primer argumento a la función es el nombre de la [propiedad personalizada](h
 
 Como vemos en el segundo ejemplo de arriba, la manera correcta de incluir más de un fallback es usar una propiedad personalizada como fallback (la cual tiene su propio fallback). Esta técnica se ha visto que puede causar problemas de rendimiento al tomar más tiempo analizar las variables.
 
-> **Nota:** La sintaxis del fallback, como la de las [propiedades personalizadas](https://www.w3.org/TR/css-variables/#custom-property), permite comas. Por ejemplo, `var(--foo, red, blue)` define un fallback de `red, blue` — es decir, cualquier cosa entre la primera coma y el final de la función se considera un valor de fallback.
+> [!NOTE]
+> La sintaxis del fallback, como la de las [propiedades personalizadas](https://www.w3.org/TR/css-variables/#custom-property), permite comas. Por ejemplo, `var(--foo, red, blue)` define un fallback de `red, blue` — es decir, cualquier cosa entre la primera coma y el final de la función se considera un valor de fallback.
 
 ## Validez y valores
 

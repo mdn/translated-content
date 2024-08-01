@@ -38,7 +38,8 @@ $ emcc -O3 -s WASM=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' \
     libwebp/src/{dec,dsp,demux,enc,mux,utils}/*.c
 ```
 
-> **メモ:** この方法はすべての C プロジェクトでうまくいく訳ではありません。多くのプロジェクトでは、コンパイルの前にシステム固有のコードを生成するため、 autoconf/automake に依存しています。 Emscripten は、これらのコマンドをラップして適切な引数を注入するための `emconfigure` と `emmake` を提供しています。詳細は [Emscripten のドキュメント](https://emscripten.org/docs/compiling/Building-Projects.html)を読んでください。
+> [!NOTE]
+> この方法はすべての C プロジェクトでうまくいく訳ではありません。多くのプロジェクトでは、コンパイルの前にシステム固有のコードを生成するため、 autoconf/automake に依存しています。 Emscripten は、これらのコマンドをラップして適切な引数を注入するための `emconfigure` と `emmake` を提供しています。詳細は [Emscripten のドキュメント](https://emscripten.org/docs/compiling/Building-Projects.html)を読んでください。
 
 これで、新しいモジュールを読み込むために必要なのは HTML と JavaScript だけになりました。
 
@@ -58,7 +59,8 @@ $ emcc -O3 -s WASM=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' \
 
 ![正しいバージョン番号を示すデベロッパーツールのコンソールのスクリーンショット](version.png)
 
-> **メモ:** libwebp は現在のバージョン a.b.c を 16 進数の 0xabc で返します。例えば、v0.6.1 は 0x000601 = 1537 としてエンコードされています。
+> [!NOTE]
+> libwebp は現在のバージョン a.b.c を 16 進数の 0xabc で返します。例えば、v0.6.1 は 0x000601 = 1537 としてエンコードされています。
 
 ### JavaScript から Wasm に画像を取得する
 

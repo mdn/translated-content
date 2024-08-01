@@ -11,7 +11,8 @@ slug: Web/API/Element/clientHeight
 
 在根元素（`<html>` 元素）或怪异模式下的 `<body>` 元素上使用 `clientHeight` 时，该属性将返回视口高度（不包含任何滚动条）。[这是一个 `clientHeight` 的特例](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientheight)。
 
-> **备注：** 此属性会将获取的值四舍五入取整数。如果你需要小数结果，请使用 {{ domxref("element.getBoundingClientRect()") }}。
+> [!NOTE]
+> 此属性会将获取的值四舍五入取整数。如果你需要小数结果，请使用 {{ domxref("element.getBoundingClientRect()") }}。
 
 ## 值
 

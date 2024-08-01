@@ -33,7 +33,8 @@ only(value)
 
 以下の例では、単一の値からなるキーの範囲の使用法を示します。`keyRangeValue = IDBKeyRange.only("A");` と宣言します。これは、値 `"A"` のみを含む範囲です。({{domxref("IDBTransaction")}} により) トランザクションを開き、オブジェクトストアを開き、省略可能なキーの範囲の値を `keyRangeValue` として {{domxref("IDBObjectStore.openCursor")}} でトランザクションを開きます。これにより、このカーソルはキーの値が `"A"` であるレコードのみを取得します。
 
-> **メモ:** キーの範囲に関する実験ができるより完全な例は、[IDBKeyRange](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) レポジトリを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
+> [!NOTE]
+> キーの範囲に関する実験ができるより完全な例は、[IDBKeyRange](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) レポジトリを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
 
 ```js
 function displayData() {

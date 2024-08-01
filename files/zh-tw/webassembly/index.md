@@ -13,7 +13,7 @@ WebAssembly 對於網路平台而言具有極大的意義 —— 它提供了一
 
 WebAssembly 被設計來與 JavaScript 協同工作 —— 藉由 WebAssembly 的 JavaScript API，你可以把 WebAssembly 模組載入至一個 JavaScript 應用程式，並在兩者間共享功能。這允許你在同一應用程式內彈性地發揮 WebAssembly 的高效能威力同時兼顧 JavaScript 的表達力與高靈活性，即便你可能不知道如何編寫 WebAssembly 程式碼。
 
-而且更棒的是，這是由 [W3C WebAssembly Working Group](https://www.w3.org/wasm/) 和 [Community Group](https://www.w3.org/community/webassembly/) 開發的一項網路標準，並也得到來自各大主要瀏覽器廠商的積極參與。
+而且更棒的是，這是由 [W3C WebAssembly Working Group](https://www.w3.org/groups/wg/wasm/) 和 [Community Group](https://www.w3.org/community/webassembly/) 開發的一項網路標準，並也得到來自各大主要瀏覽器廠商的積極參與。
 
 ## 指南
 

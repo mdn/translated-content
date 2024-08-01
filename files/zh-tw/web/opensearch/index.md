@@ -50,7 +50,8 @@ OpenSearch 描述檔能[從網頁安裝搜尋模組](#自動測知搜尋模組)�
 
     Firefox caches the icon as a [base64](https://en.wikipedia.org/wiki/Base64) `data:` URI (search plug-ins are stored in the profile's "searchplugins" folder). `http:` URIs are changed to `data:` URIs when this is done.
 
-    > **備註：** For icons loaded remotely (i.e. from `https://` URIs as opposed to `data:` URIs), Firefox will reject icons larger than 10 kilobytes in size.
+    > [!NOTE]
+    > For icons loaded remotely (i.e. from `https://` URIs as opposed to `data:` URIs), Firefox will reject icons larger than 10 kilobytes in size.
 
     ![Search suggestions from Google displayed in Firefox's search box](searchsuggestionsample.png)
 
@@ -72,7 +73,8 @@ OpenSearch 描述檔能[從網頁安裝搜尋模組](#自動測知搜尋模組)�
 
   - : 搜尋網站的網址，提供 Firefox 使用者不搜尋、直接連到搜尋網站的方法。
 
-    > **備註：** 由於此元素非 OpenSearch 標準規格而是 Firefox 獨有，故加上「`moz:`」名稱空間，已確保不支援的用戶端能直接跳過此元素。
+    > [!NOTE]
+    > 由於此元素非 OpenSearch 標準規格而是 Firefox 獨有，故加上「`moz:`」名稱空間，已確保不支援的用戶端能直接跳過此元素。
 
 ## 自動測知搜尋模組
 
@@ -126,7 +128,8 @@ OpenSearch 描述檔能[從網頁安裝搜尋模組](#自動測知搜尋模組)�
      template="http://example.com/mysearchdescription.xml" />
 ```
 
-> **備註：** 目前的 [addons.mozilla.org](https://addons.mozilla.org)（AMO）不支援自動更新 OpenSearch 套件。如果要把搜尋套件放到 AMO，請不要用上自動更新的功能。
+> [!NOTE]
+> 目前的 [addons.mozilla.org](https://addons.mozilla.org)（AMO）不支援自動更新 OpenSearch 套件。如果要把搜尋套件放到 AMO，請不要用上自動更新的功能。
 
 ## 除錯技巧
 
@@ -142,8 +145,8 @@ In addition, the search plugin service provides a logging mechanism that may be 
 
 ## 參考
 
-- [OpenSearch Documentation](http://opensearch.org/), [OpenSearch Documentation about the Url and Param element](https://www.opensearch.org/Specifications/OpenSearch/Extensions/Parameter/1.0)
+- [OpenSearch Documentation](https://opensearch.org/), [OpenSearch Documentation about the Url and Param element](https://www.opensearch.org/Specifications/OpenSearch/Extensions/Parameter/1.0)
 - imdb.com has a [working osd.xml](http://i.media-imdb.com/images/SFccbe1e4d909ef8b8077201c3c5aac349/imdbsearch.xml)
-- [`data:` URI scheme](http://en.wikipedia.org/wiki/Data:_URI_scheme)
-- [OpenSearch Plugin Generator](http://www.7is7.com/software/firefox/opensearch.html)
-- [Ready2Search](https://ready.to/search/en) - create OpenSearch plugins. [Customized Search through Ready2Search](https://ready.to/search/make/en_make_plugin.htm)
+- [`data:` URI scheme](https://en.wikipedia.org/wiki/Data_URI_scheme)
+- [OpenSearch Plugin Generator](https://7is7.com/software/firefox/opensearch.html)
+- [Ready2Search](https://ready.to/search/en/) - create OpenSearch plugins. [Customized Search through Ready2Search](https://ready.to/search/make/en_make_plugin.htm)

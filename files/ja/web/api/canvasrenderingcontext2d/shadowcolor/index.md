@@ -11,7 +11,8 @@ Canvas 2D API の **`CanvasRenderingContext2D.shadowColor`** プロパティは�
 
 描画時の影の不透明度は、塗りつぶしでは {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} の色の、線の描画では {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} の色の影響を受けることを覚えておいてください。
 
-> **メモ:** 影はプロパティ `shadowColor` が透明でない色に設定されているときのみ描画されます。さらに、プロパティ {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}、{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}、{{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} のいずれかがゼロでない値に設定されていなければなりません。
+> [!NOTE]
+> 影はプロパティ `shadowColor` が透明でない色に設定されているときのみ描画されます。さらに、プロパティ {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}、{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}、{{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} のいずれかがゼロでない値に設定されていなければなりません。
 
 ## 値
 

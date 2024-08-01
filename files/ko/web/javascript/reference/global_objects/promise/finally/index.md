@@ -45,7 +45,8 @@ promiseInstance.finally(onFinally)
 
 {{jsxref("Promise/catch", "catch()")}}처럼 , `finally()`는 내부적으로 자신을 호출한 객체의 `then` 메소드를 호출합니다. `onFinally`가 함수가 아닌 경우, `then()`은 두 인자 모두 `onFinally`로 넘어가 호출되며, 즉 {{jsxref("Promise.prototype.then()")}}에게 유용한 처리기가 포함되지 않는다는 의미입니다. 그 외의 경우 then()은 내부적으로 생성된 두 개의 함수와 함께 호출되며, 다음과 비슷하게 동작합니다.
 
-> **경고:** 다음은 설명을 위한 예시이며 실제 폴리필이 아닙니다.
+> [!WARNING]
+> 다음은 설명을 위한 예시이며 실제 폴리필이 아닙니다.
 
 ```js
 promise.then(

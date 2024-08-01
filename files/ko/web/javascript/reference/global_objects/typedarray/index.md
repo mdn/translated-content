@@ -50,7 +50,8 @@ new TypedArray(buffer, byteOffset, length);
 
 여기서 TypedArray 는 구체적인 유형 중 하나의 생성자입니다.
 
-> **참고:** 모든 `TypedArray` 생성자는 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다. `new` 없이 호출하려고 하면 {{jsxref("TypeError")}}가 발생합니다.
+> [!NOTE]
+> 모든 `TypedArray` 생성자는 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다. `new` 없이 호출하려고 하면 {{jsxref("TypeError")}}가 발생합니다.
 
 ## 매개변수
 

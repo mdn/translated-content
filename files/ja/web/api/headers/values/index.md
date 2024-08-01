@@ -9,7 +9,8 @@ l10n:
 
 **`Headers.values()`** メソッドは、このオブジェクトに含まれるすべての値を読み取ることができる{{jsxref("Iteration_protocols", 'イテレーター', '', 1)}}を返します。値は文字列です。
 
-> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
+> [!NOTE]
+> このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
 
 ## 構文
 

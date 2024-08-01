@@ -240,7 +240,8 @@ throw {
 };
 ```
 
-> **备注：** 你可以在抛出异常时声明一个对象。那你就可以在 catch 块中查询到对象的属性。
+> [!NOTE]
+> 你可以在抛出异常时声明一个对象。那你就可以在 catch 块中查询到对象的属性。
 
 ```js
 // Create an object type UserException

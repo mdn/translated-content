@@ -37,9 +37,11 @@ Para empezar, crea un nuevo directorio llamado "modify-page". En este directorio
 
 La llave [`content_scripts`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) es el método de carga de scripts a páginas cuya URL encaje con los patrones. En este caso, `content_scripts` le dice al navegador que cargue una script llamada "page-eater.js" en todas las páginas con <https://developer.mozilla.org/>.
 
-> **Nota:** Debido a que el atributo `"js"` de `content_scripts` es una array, puedes usarla para inyectar más de una script a las páginas que encajen con el patrón. Si haces esto las páginas compartiran el mismo campo de aplicación, igual que múltiples scripts cargadas por una página, y son cargadas en el mismo orden en las que están dispuestas en la array.
+> [!NOTE]
+> Debido a que el atributo `"js"` de `content_scripts` es una array, puedes usarla para inyectar más de una script a las páginas que encajen con el patrón. Si haces esto las páginas compartiran el mismo campo de aplicación, igual que múltiples scripts cargadas por una página, y son cargadas en el mismo orden en las que están dispuestas en la array.
 
-> **Nota:** La llave `content_scripts` tambien tiene un atributo de `"css"` que puedes usar para inyectar código CSS.
+> [!NOTE]
+> La llave `content_scripts` tambien tiene un atributo de `"css"` que puedes usar para inyectar código CSS.
 
 Después, crea un archivo llamado "page-eater.js" dentro del directorio "modify-page" e introduce el contenido de a continuación:
 
@@ -55,7 +57,8 @@ Ahora, [instala la extensión](/es/Add-ons/WebExtensions/Temporary_Installation_
 
 {{EmbedYouTube("lxf2Tkg6U1M")}}
 
-> **Nota:** Ten en cuenta que aunque este video muestra el contenido de la script operando en [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/), las scripts de contenido están bloqueadas en esta página por el momento.
+> [!NOTE]
+> Ten en cuenta que aunque este video muestra el contenido de la script operando en [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/), las scripts de contenido están bloqueadas en esta página por el momento.
 
 ## Modificando las páginas programaticamente
 
@@ -114,7 +117,8 @@ Ahora [recarga la extensión](/es/Add-ons/WebExtensions/Temporary_Installation_i
 
 {{EmbedYouTube("zX4Bcv8VctA")}}
 
-> **Nota:** Ten en cuenta que aunque este video muestra el contenido de la script operando en [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/), las scripts de contenido están bloqueadas en esta página por el momento.
+> [!NOTE]
+> Ten en cuenta que aunque este video muestra el contenido de la script operando en [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/), las scripts de contenido están bloqueadas en esta página por el momento.
 
 ## Mensajería
 
@@ -177,7 +181,8 @@ Ahora, en vez de simplemente comer la página, el contenido espera a un mensaje 
 
 Debido a que [`tabs.executeScript()`](/es/Add-ons/WebExtensions/API/tabs/executeScript) es una función asincrónica y para asegurarnos de que mandamos el mensaje solo cuando el escuchador ha sido añadido en "page-eater.js", usamos `onExecuted` que sera llamado después de que "page-eater.js" se ejecute.
 
-> **Nota:** Pulsa Ctrl+Shift+J (o Cmd+Shift+J en el Mac) o `web-ext run --bc` para abrir la consola de navegación para ver `console.log` en la script de fondo. Alternativamente puedes usar el [Add-on Debugger](/es/Add-ons/Add-on_Debugger), el cual te permite poner un breakpoint. De momento no hay forma de iniciar un [Add-on Debugger directamente de una extensión web](https://github.com/mozilla/web-ext/issues/759).
+> [!NOTE]
+> Pulsa Ctrl+Shift+J (o Cmd+Shift+J en el Mac) o `web-ext run --bc` para abrir la consola de navegación para ver `console.log` en la script de fondo. Alternativamente puedes usar el [Add-on Debugger](/es/Add-ons/Add-on_Debugger), el cual te permite poner un breakpoint. De momento no hay forma de iniciar un [Add-on Debugger directamente de una extensión web](https://github.com/mozilla/web-ext/issues/759).
 
 Si queremos enviar mensajes directamente desde el contenido script de vuelta a la página de fondo, podríamos usar[`runtime.sendMessage()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) en vez de [`tabs.sendMessage()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage). Por ejemplo:
 
@@ -187,7 +192,8 @@ browser.runtime.sendMessage({
 });
 ```
 
-> **Nota:** Todos estos ejemplos inyectan Javascript; también puedes inyectar CSS programaticamente usando la función[`tabs.insertCSS()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS).
+> [!NOTE]
+> Todos estos ejemplos inyectan Javascript; también puedes inyectar CSS programaticamente usando la función[`tabs.insertCSS()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS).
 
 ## Aprende más
 

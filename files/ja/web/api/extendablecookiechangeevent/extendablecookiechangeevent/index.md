@@ -9,7 +9,8 @@ l10n:
 
 **`ExtendableCookieChangeEvent()`** コンストラクターは、{{domxref("ServiceWorkerRegistration/cookiechange_event", "ServiceWorkerRegistration.oncookiechange()")}} に渡されるイベント型である新しい {{domxref("ExtendableCookieChangeEvent")}} オブジェクトを生成します。このコンストラクターは、変更イベントが発生するとブラウザーによって呼ばれます。
 
-> **メモ:** このコンストラクターは、通常は製品のウェブサイトでは必要ありません。主な使用法は、このイベントのインスタンスが必要なテストです。
+> [!NOTE]
+> このコンストラクターは、通常は製品のウェブサイトでは必要ありません。主な使用法は、このイベントのインスタンスが必要なテストです。
 
 ## 構文
 

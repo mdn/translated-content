@@ -12,7 +12,8 @@ l10n:
 
 요청 메서드와 본문은 변경되지 않지만, {{HTTPStatus("301")}}은 때때로 {{HTTPMethod("GET")}} 메서드로 잘못 변경될 수 있습니다.
 
-> **참고:** 일부 웹 응용 프로그램은
+> [!NOTE]
+> 일부 웹 응용 프로그램은
 > `308 Permanent Redirect`를 비표준 방식 및 기타 목적으로 사용합니다.
 > 예를 들어, Google Drive는 `308 Resume Incomplete` 응답을 사용하여 불완전한 업로드가 중단된 경우 클라이언트에 알립니다(Google Drive 문서의 [다시 시작할 수 있는 다운로드 수행](https://developers.google.com/drive/api/guides/manage-uploads)을 참조하세요).
 

@@ -67,7 +67,8 @@ El atributo `session` es un objeto tipo diccionario que puedes leer y escribir t
 
 Los fragmentos de código de abajo te muestran cómo puedes recuperar, establecer o eliminar información con la clave "`my_car`", asociada con la sesión actual (del navegador).
 
-> **Nota:** Una de las cosas grandiosas de Django es que no necesitas pensar sobre los mecanismos que relacionan la sesión con tu solicitud actual en tu vista. Si fuéramos a usar los fragmentos de abajo en nuestra vista, sabríamos que la información sobre `my_car` está asociada solo con el navegador que envió la solicitud.
+> [!NOTE]
+> Una de las cosas grandiosas de Django es que no necesitas pensar sobre los mecanismos que relacionan la sesión con tu solicitud actual en tu vista. Si fuéramos a usar los fragmentos de abajo en nuestra vista, sabríamos que la información sobre `my_car` está asociada solo con el navegador que envió la solicitud.
 
 ```python
 # Obtener un dato de la sesión por su clave (ej. 'my_car'), generando un KeyError si la clave no existe
@@ -105,7 +106,8 @@ request.session['my_car']['wheels'] = 'alloy'
 request.session.modified = True
 ```
 
-> **Nota:** Puedes cambiar el comportamiento para que el sitio actualice la base de datos y envíe la cookie en cada solicitud añádiendo `SESSION_SAVE_EVERY_REQUEST = True` a la configuración de tu proyecto (**locallibrary/locallibrary/settings.py**).
+> [!NOTE]
+> Puedes cambiar el comportamiento para que el sitio actualice la base de datos y envíe la cookie en cada solicitud añádiendo `SESSION_SAVE_EVERY_REQUEST = True` a la configuración de tu proyecto (**locallibrary/locallibrary/settings.py**).
 
 ## Ejemplo simple — obteniendo conteos de visitas
 
@@ -137,7 +139,8 @@ def index(request):
 
 Aquí primero obtenemos el valor de la clave de sesión `'num_visits'`, estableciendo el valor a 0 si no había sido establecido previamente. Cada vez que se recibe la solicitud, incrementamos el valor y lo guardamos de vuelta en la sesión (para la siguiente vez que el usuario visita la página). La variable `num_visits` se envía entonces a la plantilla en nuestra variable de contexto.
 
-> **Nota:** Aquí podríamos incluso revisar si el navegador soporta cookies (mira [Cómo usar sesiones](https://docs.djangoproject.com/en/1.10/topics/http/sessions/) para ejemplos) o diseñar nuestra UI de modo que no importe si el navegador soporta cookies o no.
+> [!NOTE]
+> Aquí podríamos incluso revisar si el navegador soporta cookies (mira [Cómo usar sesiones](https://docs.djangoproject.com/en/1.10/topics/http/sessions/) para ejemplos) o diseñar nuestra UI de modo que no importe si el navegador soporta cookies o no.
 
 Añade la línea que se ve al final del siguiente bloque a tu plantilla HTML principal (**/locallibrary/catalog/templates/index.html**) al final de la sección "Dynamic content" para desplegar la variable de contexto:
 
