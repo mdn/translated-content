@@ -300,7 +300,7 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 
 - 해당 요소가 **audio**, **embed**, **iframe**, **img**, **source**, **track**, 또는 **video**일 경우
 
-  - 그 값은 src 속성이 해당 요소에 설정될 당시 노드 문서(node document;[Microdata DOM API](/ko/docs/Web/API/Microdata_DOM_API)의 일부)에 상대적인 src 속성의 값을 파싱한 URL 문자열입니다.
+  - 그 값은 src 속성이 해당 요소에 설정될 당시 노드 문서(node document;[Microdata DOM API](/ko/docs/Web/HTML/Microdata)의 일부)에 상대적인 src 속성의 값을 파싱한 URL 문자열입니다.
 
 - 해당 요소가 **a**, **area**, 또는 **link** 요소일 경우
 
@@ -419,15 +419,11 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 
 ### 결과
 
-{{EmbedLiveSample('HTML_2', '', '', '', 'Web/HTML/Global_attributes/itemprop')}}
+{{EmbedLiveSample('Representing structured data for a book')}}
 
 ## 명세
 
 {{Specifications}}
-
-## 브라우저 호환성
-
-{{compat}}
 
 ## 같이 보기
 
