@@ -192,7 +192,7 @@ async function foo() {
 }
 ```
 
-這基於 Promise，例如 `doSomething()` 和之前一樣。你可以閱讀在[這裡](https://web.dev/)閱讀更多。
+這基於 Promise，例如 `doSomething()` 和之前一樣。你可以閱讀在[這裡](/zh-TW/docs/Web/JavaScript/Reference/Statements/async_function)閱讀更多。
 
 Promise 藉由捕捉所有錯誤，包含例外和程式錯誤，解決了 Callback 地獄的缺點。這是非同步運算的基本特性。
 

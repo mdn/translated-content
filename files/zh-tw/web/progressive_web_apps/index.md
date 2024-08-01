@@ -49,7 +49,7 @@ PWA 應該要可探索、可安裝、可連結、可獨立於網路、可漸進�
 
 - Google Developers 的 [Progressive web apps](https://web.dev/explore/progressive-web-apps)
 - Alex Russell 寫的 [Progressive Web Apps: Escaping Tabs Without Losing Our Soul](https://medium.com/@slightlylate/progressive-apps-escaping-tabs-without-losing-our-soul-3b93a8561955#.6czgj0myh)
-- [Progressive Web Apps Check List](https://web.dev/explore/progressive-web-apps/checklist)
+- [Progressive Web Apps Check List](https://web.dev/articles/pwa-checklist)
 - Google 的 [The Lighthouse Tool](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
 - [Tools for building progressive web apps with Angular](https://github.com/angular/mobile-toolkit)
 - [React PWA Guide Kit](https://github.com/codebusking/react-pwa-guide-kit)

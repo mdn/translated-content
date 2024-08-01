@@ -29,7 +29,7 @@ slug: Web/MathML
 
 - [W3C Validator](https://validator.w3.org/)
 - [FireMath Firefox add-on](https://addons.mozilla.org/de/firefox/addon/8969/)
-- [Mathzilla Firefox add-on collection](https://addons.mozilla.org/en-US/firefox/collections/5509895/mathzilla/)
+- [Mathzilla Firefox add-on collection](https://addons.mozilla.org/zh-TW/firefox/collections/5509895/mathzilla/)
 - [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) - 將 LaTeX 文件編譯為 HTML+MathML 網頁
 - [Web Equation](http://webdemo.visionobjects.com/home.html#equation) - 將手寫的數學式轉換成 MathML 或 LaTeX
 - [MathJax](https://www.mathjax.org/) - 使數學式的展現能跨瀏覽器的 JavaScript display engine

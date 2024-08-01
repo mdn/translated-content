@@ -49,7 +49,7 @@ document.domain = "company.com";
 下面是一些能跨來源嵌入的資源:
 
 - `<script src="…"></script>` 內的 JavaScript，但語法錯誤訊息只限於同源程式碼腳本。
-- CSS 的 `<link rel="stylesheet" href="...">`，由於 CSS 寬鬆語法規則，跨來源 CSS 要求正確的 Content-Type 標頭。限制在瀏覽器間各有差異: [IE](<https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622939(v=vs.85)>), [Firefox](https://www.mozilla.org/en-US/security/advisories/mfsa2010-46/), [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=9877), [Safari](https://support.apple.com/en-us/104158) (請至 CVE-2010-0051)以及[Opera](http://www.opera.com/support/kb/view/943/).
+- CSS 的 `<link rel="stylesheet" href="...">`，由於 CSS 寬鬆語法規則，跨來源 CSS 要求正確的 Content-Type 標頭。限制在瀏覽器間各有差異: [IE](<https://learn.microsoft.com/zh-tw/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622939(v=vs.85)>)、[Firefox](https://www.mozilla.org/security/advisories/mfsa2010-46/)、[Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=9877)、[Safari](https://support.apple.com/zh-tw/104158)（請至 CVE-2010-0051），以及 [Opera](http://www.opera.com/support/kb/view/943/)。
 - {{htmlelement("img")}}的影像；支援格式有 PNG, JPEG, GIF, BMP, SVG 等等
 - {{htmlelement("video")}}和{{htmlelement("audio")}}媒體檔案
 - [`<object>`](/zh-TW/docs/HTML/Element/object), [`<embed>`](/zh-TW/docs/HTML/Element/embed)和[`<applet>`](/zh-TW/docs/HTML/Element/applet)的外掛
@@ -62,13 +62,13 @@ document.domain = "company.com";
 
 ### 如何阻擋跨來源存取
 
-- 藉由檢查請求中包含的無法猜測的特殊記號(token)可以避免跨來源寫入，還有跨來源讀取知道此記號的網頁，這個記號即為[跨站偽造(Cross-Site Request Forgery, CSRF)](<https://owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)>)記號。
+- 藉由檢查請求中包含的無法猜測的特殊記號(token)可以避免跨來源寫入，還有跨來源讀取知道此記號的網頁，這個記號即為[跨站偽造(Cross-Site Request Forgery, CSRF)](https://owasp.org/www-community/attacks/csrf)記號。
 - 確保資源無法被嵌入來防止跨來源讀取。
 - 為了防止跨來源嵌入，請確保資源不被解讀為上述可嵌入格式之一；瀏覽器通常不會理會 Content-Type，比如說有一個指向 HTML 文件的\<script>標籤，瀏覽器還是會嘗試解析該 HTML 文件為 Javascript；當你的資源不是網站進入點，可以使用 CSRF 記號。
 
 ## 跨來源程式腳本存取
 
-Javascript API 例如[`iframe.contentWindow`](/zh-TW/docs/DOM/HTMLIFrameElement), {{domxref("window.parent")}}, {{domxref("window.open")}}以及{{domxref("window.opener")}}，允許文件之間直接互相參照，當兩份文件的來源不同，參照存取[Window](https://html.spec.whatwg.org/multipage/browsers.html#security-window)和[Location](https://html.spec.whatwg.org/multipage/browsing-the-web.html#security-location)物件將受到限制；一些瀏覽器比規範[准許存取更多屬性](https://bugzilla.mozilla.org/show_bug.cgi?id=839867)。文件間的溝通也可以改用{{domxref("window.postMessage")}}來進行。
+Javascript API 例如 [`iframe.contentWindow`](/zh-TW/docs/DOM/HTMLIFrameElement)、{{domxref("window.parent")}}、{{domxref("window.open")}}，以及 {{domxref("window.opener")}}，允許文件之間直接互相參照，當兩份文件的來源不同，參照存取 [Window](https://html.spec.whatwg.org/multipage/browsers.html#security-window) 和 [Location](https://html.spec.whatwg.org/multipage/browsing-the-web.html#security-location) 物件將受到限制；一些瀏覽器比規範[准許存取更多屬性](https://bugzil.la/839867)。文件間的溝通也可以改用 {{domxref("window.postMessage")}} 來進行。
 
 ## 延伸閱讀
 

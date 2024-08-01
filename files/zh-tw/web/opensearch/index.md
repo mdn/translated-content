@@ -129,7 +129,7 @@ OpenSearch 描述檔能[從網頁安裝搜尋模組](#自動測知搜尋模組)�
 ```
 
 > [!NOTE]
-> 目前的 [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/)（AMO）不支援自動更新 OpenSearch 套件。如果要把搜尋套件放到 AMO，請不要用上自動更新的功能。
+> 目前的 [addons.mozilla.org](https://addons.mozilla.org)（AMO）不支援自動更新 OpenSearch 套件。如果要把搜尋套件放到 AMO，請不要用上自動更新的功能。
 
 ## 除錯技巧
 
@@ -147,6 +147,6 @@ In addition, the search plugin service provides a logging mechanism that may be 
 
 - [OpenSearch Documentation](https://opensearch.org/), [OpenSearch Documentation about the Url and Param element](https://www.opensearch.org/Specifications/OpenSearch/Extensions/Parameter/1.0)
 - imdb.com has a [working osd.xml](http://i.media-imdb.com/images/SFccbe1e4d909ef8b8077201c3c5aac349/imdbsearch.xml)
-- [`data:` URI scheme](https://en.wikipedia.org/wiki/Data:_URI_scheme)
+- [`data:` URI scheme](https://en.wikipedia.org/wiki/Data_URI_scheme)
 - [OpenSearch Plugin Generator](https://7is7.com/software/firefox/opensearch.html)
 - [Ready2Search](https://ready.to/search/en/) - create OpenSearch plugins. [Customized Search through Ready2Search](https://ready.to/search/make/en_make_plugin.htm)

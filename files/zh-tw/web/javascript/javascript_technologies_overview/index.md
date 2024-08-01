@@ -33,7 +33,7 @@ JavaScript 的核心語言是由 ECMA TC-39 委員會統一標準，並且命名
 
 ### WebID
 
-[WebIDL 規格書](https://heycam.github.io/webidl/) 是 DOM 技術與 ECMAScript 之間相互黏合的基礎。
+[WebIDL 規格書](https://webidl.spec.whatwg.org/) 是 DOM 技術與 ECMAScript 之間相互黏合的基礎。
 
 ### DOM 核心
 
@@ -53,12 +53,12 @@ HTML 的規格書也定義了在文件上的一些限制；例如，他要求所
 
 ## 其他重要的 API
 
-- setTimeout 和 setInterval 函數首次納入 HTML 標準中的 [Window](https://html.spec.whatwg.org/multipage/#window) 介面
+- setTimeout 和 setInterval 函數首次納入 HTML 標準中的 [Window](https://html.spec.whatwg.org/multipage/nav-history-apis.html#window) 介面
 - [XMLHttpRequest](https://xhr.spec.whatwg.org/)：允許傳送非同步 HTTP 請求的 API。
 - [CSS Object Model](https://drafts.csswg.org/cssom/)：CSSOM 用來將 CSS 的規則轉換為物件。
 - [WebWorkers](https://html.spec.whatwg.org/multipage/workers.html)：允許平行計算的 API。
-- [WebSockets](https://html.spec.whatwg.org/multipage/#network)：允許低階雙向溝通的 API。
-- [Canvas 2D Context](https://html.spec.whatwg.org/multipage/#2dcontext)：canvas 元素的繪圖 API。
+- [WebSockets](https://html.spec.whatwg.org/multipage/comms.html#network)：允許低階雙向溝通的 API。
+- [Canvas 2D Context](https://html.spec.whatwg.org/multipage/canvas.html#2dcontext)：canvas 元素的繪圖 API。
 
 ## Shell
 
@@ -84,4 +84,4 @@ A JavaScript shell allows you to quickly test snippets of JavaScript code withou
 
 每個網頁開發者都曾經體會過[一團混亂的 DOM 支援狀況](https://johnresig.com/blog/the-dom-is-a-mess/)。某些功能上不同瀏覽器的支援可能差異很大，因為過去重要的 DOM 功能都沒有明確的規範，進而使不同網頁瀏覽器對相同的使用情境實踐了互不相容的功能（像是 Internet Explorer 的事件模型）。最近（截至 2011 年 6 月），由 W3C 與（特別是）WHATWG 對舊功能重新進行詳盡的定義以提升互通性成為了趨勢 。為了跟進這個趨勢，許多網頁瀏覽器也根據這些新規格改進它們的實作。
 
-雖然並未完全可靠，使用 JavaScript 函式庫是解決跨瀏覽器相容問題的最普遍方式。 這些函式庫將 DOM 的功能抽象化，確保其 API 在不同的瀏覽器中能以相似的方式運作。廣為被使用的框架包括 [jQuery](https://jquery.com/)、[prototype](http://prototypejs.org/) 和 [YUI](https://developer.yahoo.com/yui/)。
+雖然並未完全可靠，使用 JavaScript 函式庫是解決跨瀏覽器相容問題的最普遍方式。 這些函式庫將 DOM 的功能抽象化，確保其 API 在不同的瀏覽器中能以相似的方式運作。廣為被使用的框架包括 [jQuery](https://jquery.com/)、[prototype](http://prototypejs.org/) 和 [YUI](https://clarle.github.io/yui3/)。
