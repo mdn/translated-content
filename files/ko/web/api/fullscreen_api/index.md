@@ -91,7 +91,7 @@ _Fullscreen API는 full-screen mode를 켜고 끌 때 혹은, full-screen mode�
 
 사용자는 <kbd>ESC</kbd> (혹은 <kbd>F11</kbd>) 키를 누르기만하면 사이트 또는 앱이 프로그래밍 방식으로 기다리는 대신에, full-screen mode를 종료하도록 선택할 수 있습니다. 유저 인터페이스의 어딘가에 사용자에게 이 옵션을 사용할 수 있음을 알리는, 적절한 유저 인터페이스 요소를 제공해야 합니다.
 
-> [!WARNING]
+> [!NOTE]
 > 다른 페이지로 이동하거나, 탭을 변경하거나, 응용 프로그램 전환기(또는 <kbd>Alt</kbd>-<kbd>Tab</kbd>)를 사용하여, 다른 응용 프로그램으로 전환하면 마찬가지로 full-screen mode가 종료됩니다.
 
 ## Example
