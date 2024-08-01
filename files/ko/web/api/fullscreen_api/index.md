@@ -64,7 +64,7 @@ _Fullscreen API는 full-screen mode를 켜고 끌 때 혹은, full-screen mode�
 
 - {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
   - : 문서에 현재 full-screen mode로 표시되는 요소가 있는 경우 `true`, 그렇지 않으면 `false`의 Boolean 값입니다.
-    > [!WARNING]
+    > [!NOTE]
     > 대신에 {{DOMxRef("Document")}} 나 {{DOMxRef("ShadowRoot")}} 에서 {{DOMxRef("Document.fullscreenElement", "fullscreenElement")}} 속성(property)을 사용하세요. 그것이 `null`이 아닌 경우 {{DOMxRef("Element")}}가 full-screen mode로 표시됩니다.
 
 ## Events
