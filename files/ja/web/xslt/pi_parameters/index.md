@@ -1,6 +1,8 @@
 ---
 title: PIパラメータ
 slug: Web/XSLT/PI_Parameters
+l10n:
+  sourceCommit: 9f325923caffac2d0239773d4562303fd02ea30a
 ---
 
 {{XsltSidebar}}
