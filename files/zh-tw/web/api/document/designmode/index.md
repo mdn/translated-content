@@ -37,4 +37,3 @@ iframeNode.contentDocument.designMode = "on";
 
 - [Rich-Text Editing in Mozilla](/zh-TW/docs/Rich-Text_Editing_in_Mozilla)
 - {{domxref("HTMLElement.contentEditable")}}
-- [designMode property](<https://learn.microsoft.com/en-us/>).aspx>) on MSDN
