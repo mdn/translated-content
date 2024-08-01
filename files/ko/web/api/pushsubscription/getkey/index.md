@@ -1,6 +1,7 @@
 ---
 title: "PushSubscription: getKey() 메서드"
 short-title: getKey()
+slug: Web/API/PushSubscription/getKey
 l10n:
   sourceCommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
 ---
