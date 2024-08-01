@@ -7,7 +7,8 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("Array")}} 인스턴스의 **`toString()`** 메서드는 지정된 배열 및 그 요소를 나타내는 문자열을 반환합니다.
+{{jsxref("Array")}} 인스턴스의 **`toString()`** 메서드는
+지정된 배열 및 그 요소를 나타내는 문자열을 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/array-tostring.html", "shorter")}}
 
@@ -83,7 +84,7 @@ console.log([1, , 3].toString()); // '1,,3'
 
 ```js
 console.log(Array.prototype.toString.call({ join: () => 1 }));
-// 1; a number
+// 1; 숫자 타입
 console.log(Array.prototype.toString.call({ join: () => undefined }));
 // undefined
 console.log(Array.prototype.toString.call({ join: "not function" }));
