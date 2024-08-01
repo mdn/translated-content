@@ -9,7 +9,8 @@ slug: Web/API/Element/clientHeight
 
 `clientHeight` 는 CSS상의 높이 + CSS상의 내부 여백 - 수평 스크롤바의 높이(존재하는 경우에만)로 계산됩니다.
 
-> **참고:** 이 속성은 integer로 반올림됩니다. 소수점이 포함된 값이 필요하다면, {{ domxref("element.getBoundingClientRect()") }}을 사용하시기 바랍니다.
+> [!NOTE]
+> 이 속성은 integer로 반올림됩니다. 소수점이 포함된 값이 필요하다면, {{ domxref("element.getBoundingClientRect()") }}을 사용하시기 바랍니다.
 
 ## 구문
 

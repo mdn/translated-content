@@ -62,7 +62,8 @@ l10n:
 - {{domxref("Request.text()")}}
   - : 요청 본문의 text 표현으로 이행하는 프로미스를 반환합니다.
 
-> **참고:** 요청 본문 함수는 오직 한 번만 실행할 수 있습니다. 이후의 호출은 빈 문자열 혹은 빈 `ArrayBuffer`로 이행할 것입니다.
+> [!NOTE]
+> 요청 본문 함수는 오직 한 번만 실행할 수 있습니다. 이후의 호출은 빈 문자열 혹은 빈 `ArrayBuffer`로 이행할 것입니다.
 
 ## 예제
 
@@ -100,7 +101,8 @@ const credentials = request.credentials;
 const bodyUsed = request.bodyUsed;
 ```
 
-> **참고:** 본문은 하나의 {{domxref("Blob")}}, {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}}, {{jsxref("String")}} 객체, 문자열 리터럴 등만 가능하므로 JSON 객체를 본문으로 보내려면 먼저 문자열화해야 합니다.
+> [!NOTE]
+> 본문은 하나의 {{domxref("Blob")}}, {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}}, {{jsxref("String")}} 객체, 문자열 리터럴 등만 가능하므로 JSON 객체를 본문으로 보내려면 먼저 문자열화해야 합니다.
 
 그 다음엔 {{domxref("fetch()")}} 호출의 매개변수에 이 `Request` 객체를 제공하여 응답을 받을 수 있습니다.
 

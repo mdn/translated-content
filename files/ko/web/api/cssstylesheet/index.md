@@ -39,7 +39,8 @@ h2 {
 
   - : 스타일 시트를 구성하는 최신의 {{domxref("CSSRule")}} 객체 목록을 유지하는 실시간 {{domxref("CSSRuleList")}}를 반환합니다.
 
-    > **참고:** 어떤 브라우저에서는, 다른 도메인에서 스타일 시트가 로드되면, `cssRules`에 접근시 `SecurityError`가 발생합니다.
+    > [!NOTE]
+    > 어떤 브라우저에서는, 다른 도메인에서 스타일 시트가 로드되면, `cssRules`에 접근시 `SecurityError`가 발생합니다.
 
 - {{domxref("CSSStyleSheet.ownerRule")}} {{ReadOnlyInline}}
   - : 만약 스타일 시트가 {{cssxref("@import")}} 규칙을 사용하는 문서로부터 오면, `ownerRule` 속성이 해당하는 {{domxref("CSSImportRule")}}을 반환합니다. 그렇지 않으면 이 속성 값은 `null`입니다.

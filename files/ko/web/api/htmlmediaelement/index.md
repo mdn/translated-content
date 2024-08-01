@@ -16,7 +16,11 @@ _이 인터페이스는 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{do
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : {{domxref("AudioTrackList")}}는 엘레먼트의 {{domxref("AudioTrack")}} 객체의 목록입니다.
 - {{domxref("HTMLMediaElement.autoplay")}}
-  - : 미디어가 준비된 즉시 재생할 것인지 결정하는 [`autoplay`](/ko/docs/Web/HTML/Element/video#autoplay) 속성에 연결된 {{jsxref("Boolean")}}값입니다..> **참고:** 오디오(또는 오디오가 있는 비디오)를 자동으로 재생하는 사이트는 사용자에게 그리 탐탁치 않은 경험일 수 있습니다, 그러므로 가능한 한 지양해야합니다. 자동 재생 기능을 제공하려면, 사전 동의(사용자에게 기능을 켜도록 함)를 받아야 합니다. 의외로 이 점은 사용자의 조작에 의해 미디어 엘레먼츠를 늦게 생성하는 경우 유용할 수 있습니다.
+
+  - : 미디어가 준비된 즉시 재생할 것인지 결정하는 [`autoplay`](/ko/docs/Web/HTML/Element/video#autoplay) 속성에 연결된 {{jsxref("Boolean")}}값입니다.
+    > [!NOTE]
+    > 오디오(또는 오디오가 있는 비디오)를 자동으로 재생하는 사이트는 사용자에게 그리 탐탁치 않은 경험일 수 있습니다, 그러므로 가능한 한 지양해야합니다. 자동 재생 기능을 제공하려면, 사전 동의(사용자에게 기능을 켜도록 함)를 받아야 합니다. 의외로 이 점은 사용자의 조작에 의해 미디어 엘레먼츠를 늦게 생성하는 경우 유용할 수 있습니다.
+
 - {{domxref("HTMLMediaElement.buffered")}} {{readonlyinline}}
   - : `buffered` 프로퍼티에 접근한 시점에 브라우저가 버퍼에 담고 있는 미디어 소스의 구간 데이터를 나타내는 {{domxref("TimeRanges")}} 객체를 반환합니다.
 - {{domxref("HTMLMediaElement.controller")}}
@@ -86,7 +90,11 @@ _이 인터페이스는 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{do
 - {{domxref("HTMLMediaElement.textTracks")}} {{readonlyinline}}
   - : {{domxref("TextTrack")}} 리스트를 반환합니다.
 - {{domxref("HTMLMediaElement.videoTracks")}} {{readonlyinline}}
-  - : {{domxref("VideoTrack")}} 리스트를 반환합니다..> **참고:** Gecko는 싱글 트랙 재생만을 지원합니다. 또한 트랙 메타데이터 파싱은 Ogg 컨테이너 포맷에서만 가능합니다..
+
+  - : {{domxref("VideoTrack")}} 리스트를 반환합니다.
+    > [!NOTE]
+    > Gecko는 싱글 트랙 재생만을 지원합니다. 또한 트랙 메타데이터 파싱은 Ogg 컨테이너 포맷에서만 가능합니다..
+
 - {{domxref("HTMLMediaElement.volume")}}
   - : 오디오 볼륨을 `double` 값으로 반환합니다. 0.0 (무음)에서 1.0 (최대크기) 사이 값을 가집니다..
 
