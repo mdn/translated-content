@@ -45,7 +45,8 @@ UA 스타일시트에서 다음과 같은 스타일을 기본으로 부여 받�
 }
 ```
 
-> **참고:** 추가적인 뷰 전환 스타일은 `::view-transition-new` 의 애니메이션을 설정할 수 있습니다. 뷰 전환 스타일은 뷰 전환이 이루어지는 동안 동적으로 생성됩니다. 더 많은 정보는 [setup transition pseudo-elements](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements) 와 [update pseudo-element styles](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles) 섹션 명세서를 참고하여 확인할 수 있습니다.
+> [!NOTE]
+> 추가적인 뷰 전환 스타일은 `::view-transition-new` 의 애니메이션을 설정할 수 있습니다. 뷰 전환 스타일은 뷰 전환이 이루어지는 동안 동적으로 생성됩니다. 더 많은 정보는 [setup transition pseudo-elements](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements) 와 [update pseudo-element styles](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles) 섹션 명세서를 참고하여 확인할 수 있습니다.
 
 ## 구문
 

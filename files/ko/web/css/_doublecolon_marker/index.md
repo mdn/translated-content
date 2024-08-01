@@ -22,7 +22,8 @@ l10n:
 - {{CSSxRef("content")}} 속성
 - 모든 [애니메이션](/ko/docs/Web/CSS/CSS_animations#properties) 과 [트랜지션](/ko/docs/Web/CSS/CSS_transitions#properties) 속성
 
-> **참고:** 추가적인 CSS 속성에 대한 명세서가 추후 지원될 수 있습니다.
+> [!NOTE]
+> 추가적인 CSS 속성에 대한 명세서가 추후 지원될 수 있습니다.
 
 ## 구문
 

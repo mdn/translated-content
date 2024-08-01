@@ -11,7 +11,8 @@ slug: Web/CSS/border-image
 
 `border-image`는 {{cssxref("border-image-source")}}, {{cssxref("border-image-slice")}}, {{cssxref("border-image-width")}}, {{cssxref("border-image-outset")}}, {{cssxref("border-image-repeat")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다. 다른 단축 속성과 마찬가지로, 생략한 속성은 [초기값](/ko/docs/Web/CSS/initial_value)으로 설정됩니다.
 
-> **참고:** 테두리 이미지를 불러오는데 실패할 경우에 대비해 {{cssxref("border-style")}} 속성을 설정해야 합니다. 사실 명세에 따르면 필수로 지정해야 하지만 모든 브라우저가 그렇게 구현하지는 않았습니다.
+> [!NOTE]
+> 테두리 이미지를 불러오는데 실패할 경우에 대비해 {{cssxref("border-style")}} 속성을 설정해야 합니다. 사실 명세에 따르면 필수로 지정해야 하지만 모든 브라우저가 그렇게 구현하지는 않았습니다.
 
 ## 구문
 
@@ -31,7 +32,8 @@ border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
 
 `border-image` 속성은 아래 나열한 값 중 한 개에서 다섯 개 사이를 사용해 지정할 수 있습니다.
 
-> **참고:** 만약 {{cssxref("border-image-source")}}의 [계산값](/ko/docs/Web/CSS/computed_value)이 `none`이거나 이미지를 그릴 수 없다면 {{cssxref("border-style")}}이 대신 보여집니다.
+> [!NOTE]
+> 만약 {{cssxref("border-image-source")}}의 [계산값](/ko/docs/Web/CSS/computed_value)이 `none`이거나 이미지를 그릴 수 없다면 {{cssxref("border-style")}}이 대신 보여집니다.
 
 ### 값
 

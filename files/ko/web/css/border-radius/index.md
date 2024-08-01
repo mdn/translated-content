@@ -13,7 +13,8 @@ slug: Web/CSS/border-radius
 
 {{cssxref("border-collapse")}}의 값이 `collapse`인 표 요소는 `border-radius` 속성의 영향을 받지 않습니다.
 
-> **참고:** 다른 단축 속성과 마찬가지로, 각각의 하위 속성이 부모를 상속하도록 할 수는 없습니다. 즉, `border-radius: 0 0 inherit inherit`처럼 일부만 재정의할 수 없습니다. 대신, 원래의 본디속성을 하나씩 사용하세요.
+> [!NOTE]
+> 다른 단축 속성과 마찬가지로, 각각의 하위 속성이 부모를 상속하도록 할 수는 없습니다. 즉, `border-radius: 0 0 inherit inherit`처럼 일부만 재정의할 수 없습니다. 대신, 원래의 본디속성을 하나씩 사용하세요.
 
 ## 구성 속성
 
