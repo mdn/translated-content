@@ -359,7 +359,7 @@ TEMPLATES = [
 
 ![Index page for LocalLibrary website](index_page_ok.png)
 
-> [!WARNING]
+> [!NOTE]
 > All books와 All authors 링크들에 대한 경로, 뷰 그리고 탬플릿들이 정의되지 않았기 때문에 그 링크들은 작동하지 않을 것입니다. 우리는 단지 `base_generic.html` 탬플릿 안에 그 링크들을 위한 플레이스홀더(placeholder)들을 삽입했을 뿐입니다.
 
 ## 도전 과제
