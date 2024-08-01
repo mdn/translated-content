@@ -120,7 +120,7 @@ function display() {
 display.call(); // sData value is Wisen
 ```
 
-> [!WARNING]
+> [!NOTE]
 > 엄격 모드(strict mode)에서, `this` 는 `undefined`값을 가집니다. See below.
 
 ```js
