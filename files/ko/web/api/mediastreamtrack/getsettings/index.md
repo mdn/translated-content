@@ -17,7 +17,8 @@ const settings = track.getSettings();
 
 트랙의 현재 제약 속성 설정을 설명하는 {{domxref("MediaTrackSettings")}} 객체.
 
-> **참고:** 반환하는 객체는 모든 제약 속성을 포함하며, 사이트 코드에서 수정하지 않은 플랫폼 기본값 역시 들어있습니다. 사이트 코드에서 제일 최근에 적용한 제약 속성만 필요한 경우, {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} 메서드를 사용하세요.
+> [!NOTE]
+> 반환하는 객체는 모든 제약 속성을 포함하며, 사이트 코드에서 수정하지 않은 플랫폼 기본값 역시 들어있습니다. 사이트 코드에서 제일 최근에 적용한 제약 속성만 필요한 경우, {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} 메서드를 사용하세요.
 
 ## 명세
 

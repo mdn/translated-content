@@ -12,9 +12,11 @@ l10n:
 (`true`) 혹은 (`false`) 를 나타내는 읽기 전용 속성입니다. 일부 운영체제에서는
 키를 가로채서 감지되지 않을 수 있습니다.
 
-> **참고:** 매킨토시 키보드에서, 이것은 <kbd>⌘ Command</kbd> 키입니다.
+> [!NOTE]
+> 매킨토시 키보드에서, 이것은 <kbd>⌘ Command</kbd> 키입니다.
 
-> **참고:** 파이어폭스 118 이전에서는, <kbd>⊞ Windows</kbd> 키가
+> [!NOTE]
+> 파이어폭스 118 이전에서는, <kbd>⊞ Windows</kbd> 키가
 > "Meta" 키가 아닌 "OS"키로 실행되었습니다. `KeyboardEvent.metaKey` 는
 > <kbd>⊞ Windows</kbd> 키가 눌렸을 때`false`를 반환했습니다.
 

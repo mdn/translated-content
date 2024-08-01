@@ -98,7 +98,8 @@ el.innerHTML = name; // shows the alert
 
 따라서 일반 텍스트를 삽입 할 때는 `innerHTML` 을 사용하지 않는 것이 좋습니다. 대신 {{domxref("Node.textContent")}}를 사용하십시오. 이것은 전달 된 내용을 HTML로 파싱하지 않고 원시 텍스트(raw text)로 삽입합니다.
 
-> **경고:** 프로젝트가 보안 점검을 거치게 되는 프로젝트인 경우, `innerHTML` 을 사용하면 코드가 거부 될 가능성이 높습니다. 예를 들어, [브라우저 확장](/ko/docs/Mozilla/Add-ons/WebExtensions)에서 [`innerHTML`을 사용하고](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation) [addons.mozilla.org](https://addons.mozilla.org/)에 확장을 제출하면 자동 검토 프로세스를 통과하지 못합니다.
+> [!WARNING]
+> 프로젝트가 보안 점검을 거치게 되는 프로젝트인 경우, `innerHTML` 을 사용하면 코드가 거부 될 가능성이 높습니다. 예를 들어, [브라우저 확장](/ko/docs/Mozilla/Add-ons/WebExtensions)에서 [`innerHTML`을 사용하고](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation) [addons.mozilla.org](https://addons.mozilla.org/)에 확장을 제출하면 자동 검토 프로세스를 통과하지 못합니다.
 
 ## Example
 

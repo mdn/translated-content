@@ -8,7 +8,8 @@ slug: Web/API/IndexedDB_API
 IndexedDB는 파일이나 블롭 등 많은 양의 구조화된 데이터를 클라이언트에 저장하기 위한 로우 레벨 API입니다. IndexedDB API는 인덱스를 사용해 데이터를 고성능으로 탐색할 수 있습니다. [Web Storage](/ko/docs/Web/API/Web_Storage_API)는 적은 양의 데이터를 저장하는데 유용하지만 많은 양의 구조화된 데이터에는 적합하지 않은데, 이런 상황에서 IndexedDB를 사용할 수 있습니다. 이 페이지는 MDN에서 IndexedDB에 대한 내용을 다루는 시작 문서로 전체 API 참고서, 사용 안내서, 세부적인 브라우저 지원 상황, 그리고 핵심 개념에 대한 설명을 제공하는 링크를 찾을 수 있습니다.
 {{AvailableInWorkers}}
 
-> **참고:** IndexedDB API는 강력하지만, 간단하게 사용하기엔 좀 복잡해 보일 수 있습니다. 보다 단순한 API를 선호한다면, [See also](#see_also)섹션의 라이브러리를 알아보세요. IndexedDB를 좀 더 프로그래머 친화적으로 만들어줍니다.
+> [!NOTE]
+> IndexedDB API는 강력하지만, 간단하게 사용하기엔 좀 복잡해 보일 수 있습니다. 보다 단순한 API를 선호한다면, [See also](#see_also)섹션의 라이브러리를 알아보세요. IndexedDB를 좀 더 프로그래머 친화적으로 만들어줍니다.
 
 ## 핵심 개념과 사용
 
@@ -18,7 +19,8 @@ IndexedDB는 SQL을 사용하는 관계형 데이터베이스(RDBMS)와 같이 �
 - [IndexedDB 사용하기](/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB) 안내서를 통해 IndexedDB의 기초적인 비동기 사용법을 배워보세요.
 - [서비스 워커를 사용해 PWA가 오프라인에서 동작하게 만들기](/ko/docs/Web/Progressive_web_apps/Offline_Service_workers) 문서에서 IndexedDB를 사용해 오프라인 데이터를 저장하고, 서비스 워커를 사용해 오프라인 자산을 저장하는 방법을 살펴보세요.
 
-> **참고:** 대부분의 웹 저장 솔루션처럼, IndexedDB도 [동일 출처 정책](https://www.w3.org/Security/wiki/Same_Origin_Policy)을 따릅니다. 그렇기 때문에, 저장한 데이터는 같은 도메인에서만 접근할 수 있으며 다른 도메인에서는 접근할 수 없습니다.
+> [!NOTE]
+> 대부분의 웹 저장 솔루션처럼, IndexedDB도 [동일 출처 정책](https://www.w3.org/Security/wiki/Same_Origin_Policy)을 따릅니다. 그렇기 때문에, 저장한 데이터는 같은 도메인에서만 접근할 수 있으며 다른 도메인에서는 접근할 수 없습니다.
 
 ### 동기와 비동기
 

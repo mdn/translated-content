@@ -14,7 +14,8 @@ l10n:
 
 `longitude`의 값은 `Coordinates` 객체가 나타내는 지구상 위치의 경도를 십진수 도(°, DD)로 나타낸 숫자입니다. 이 값은 World Geodetic System 1984 명세 (WGS 84)가 정의합니다.
 
-> **참고:** 0°의 본초 자오선은 대부분의 사람들이 알고 있는 [그리니치 자오선](https://ko.wikipedia.org/wiki/그리니치_자오선)과 정확히 일치하지는 않습니다. 0°는 [IERS 기준 자오선](https://en.wikipedia.org/wiki/IERS_Reference_Meridian)으로, 그리니치 자오선에서 5.3 [아크초](https://en.wikipedia.org/wiki/Arcseconds)(102미터) 동쪽에 위치합니다. 이 표준은 [GPS](https://ko.wikipedia.org/wiki/GPS)가 사용하는 것과 같습니다.
+> [!NOTE]
+> 0°의 본초 자오선은 대부분의 사람들이 알고 있는 [그리니치 자오선](https://ko.wikipedia.org/wiki/그리니치_자오선)과 정확히 일치하지는 않습니다. 0°는 [IERS 기준 자오선](https://en.wikipedia.org/wiki/IERS_Reference_Meridian)으로, 그리니치 자오선에서 5.3 [아크초](https://en.wikipedia.org/wiki/Arcseconds)(102미터) 동쪽에 위치합니다. 이 표준은 [GPS](https://ko.wikipedia.org/wiki/GPS)가 사용하는 것과 같습니다.
 
 ## 예제
 
