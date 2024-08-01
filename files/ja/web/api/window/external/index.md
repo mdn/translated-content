@@ -1,78 +1,38 @@
 ---
-title: Window.sidebar
+title: "Window: external プロパティ"
 slug: Web/API/Window/external
-original_slug: Web/API/Window/sidebar
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}} {{Deprecated_Header}}
 
-> [!WARNING]
-> この [`window.external`](/ja/docs/Web/API/Window/external) プロパティの Firefox だけの標準外のエイリアスは[削除](#ブラウザーの互換性)されました。
+`external` は {{domxref("Window")}} API のプロパティで、`External` インターフェイスのインスタンスを返します。このインターフェイスは外部の検索プロバイダーをブラウザーに追加する関連の関数を格納するように意図されていました。しかし、これは現在非推奨のものであり、含まれるメソッドは仕様通り何もしないダミー関数になっています。
 
-ブラウザーにアドオンを登録するためのいくつかのメソッドを含むサイドバーオブジェクトを返します。
+## インスタンスメソッド
 
-## メソッド
-
-返されるサイドバーオブジェクトは、以下のメソッドを持っています。
+`External` オブジェクトで、以下のメソッドがあります。
 
 <table class="fullwidth-table">
   <tbody>
     <tr>
       <th>メソッド</th>
-      <th>説明 (SeaMonkey)</th>
-      <th>説明 (Firefox)</th>
-    </tr>
-    <tr>
-      <td>
-        <code>addPanel(<var>title</var>, <var>contentURL</var>, "")</code>
-      </td>
-      <td>サイドバーパネルを追加します。</td>
-      <td rowspan="2">
-        Firefox 23 からは廃止されました (SeaMonkey にのみ存在します)。<br />エンドユーザーは、代わりに「このブックマークをサイドバーに読み込む」オプションを使用できます。また、 <a href="/ja/docs/Mozilla/Creating_a_Firefox_sidebar">Firefox のサイドバーを作成する</a>を参照してください。
-        >
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          >addPersistentPanel(<var>title</var>, <var>contentURL</var>, "")</code
-        >
-      </td>
-      <td>バックグラウンドで動作可能なサイドバーパネルを追加します。</td>
+      <th>説明</th>
     </tr>
     <tr>
       <td>
         <code>AddSearchProvider(<em>descriptionURL)</em></code>
       </td>
-      <td colspan="2">
-        ダミー関数です。何もしません。
-        <a href="/ja/docs/Web/OpenSearch#Autodiscovery_of_search_plugins">検索プラグインの自動検出</a>を参照してください。
+      <td>
+        ダミー関数。何もしません。
+        <a href="/ja/docs/Web/OpenSearch#autodiscovery_of_search_plugins"
+          >検索プラグインの自動発見</a
+        >を参照してください。
       </td>
     </tr>
     <tr>
-      <td>
-        <code>addSearchEngine(<var>engineURL</var>, <var>iconURL</var>, <var>suggestedTitle</var>, <var>suggestedCategory</var>)</code>
-        {{deprecated_inline}}
-      </td>
-      <td colspan="2">
-        <p>
-          検索エンジンをインストールします (Sherlock)。
-          詳細は<a href="/ja/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages#Installing_Sherlock_plugins" title="Adding_search_engines_from_web_pages">Sherlock 検索エンジンを追加</a>にあります。
-        </p>
-        <div class="note">
-          <p>
-            <strong>Note:</strong> これは Firefox 44 で廃止され、 Firefox 59 で完全に削除されました。
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>IsSearchProviderInstalled(<em>descriptionURL)</em></code>
-      </td>
-      <td colspan="2">
-        特定の検索プロバイダー (OpenSearch) がインストールされているかどうかを示します。
-      </td>
+      <td><code>IsSearchProviderInstalled()</code></td>
+      <td>ダミー関数。何もしません。</td>
     </tr>
   </tbody>
 </table>
