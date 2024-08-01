@@ -2,7 +2,7 @@
 title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
 l10n:
-  sourceCommit: 8beb479c558d4220932721e61b6a334d5b5c274a
+  sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
 {{APIRef("HTML DOM")}}
