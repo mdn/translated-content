@@ -67,7 +67,8 @@ console.log(voiture1.couleur); // noir
 console.log(voiture2.couleur); // couleur standard
 ```
 
-> **Note :** Si on n'écrit pas l'appel du constructeur avec l'opérateur `new`, le constructeur est appelé comme une fonction normale et ne crée pas d'objet. Dans ce cas, la valeur de `this` sera différente.
+> [!NOTE]
+> Si on n'écrit pas l'appel du constructeur avec l'opérateur `new`, le constructeur est appelé comme une fonction normale et ne crée pas d'objet. Dans ce cas, la valeur de `this` sera différente.
 
 ## Exemples
 

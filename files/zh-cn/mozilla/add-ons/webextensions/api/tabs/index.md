@@ -9,7 +9,8 @@ l10n:
 
 与浏览器标签系统进行交互。
 
-> **备注：** 使用 Manifest V3 或更高版本时，通过 {{WebExtAPIRef("scripting")}} API 提供的方法来执行脚本、插入 CSS 和移除 CSS，这些方法分别是 {{WebExtAPIRef("scripting.executeScript()")}}、{{WebExtAPIRef("scripting.insertCSS()")}} 和 {{WebExtAPIRef("scripting.removeCSS()")}}。
+> [!NOTE]
+> 使用 Manifest V3 或更高版本时，通过 {{WebExtAPIRef("scripting")}} API 提供的方法来执行脚本、插入 CSS 和移除 CSS，这些方法分别是 {{WebExtAPIRef("scripting.executeScript()")}}、{{WebExtAPIRef("scripting.insertCSS()")}} 和 {{WebExtAPIRef("scripting.removeCSS()")}}。
 
 你可以使用该 API 获取一个已打开标签的列表并且使用各种标准过滤标签，并进行打开、刷新、移动、重载和移除操作。该 API 不能直接访问标签中的主机内容，但是你可以使用 {{WebExtAPIRef("tabs.executeScript()")}} 或者 {{WebExtAPIRef("tabs.insertCSS()")}} API，来插入 JavaScript 和 CSS。
 
@@ -161,7 +162,8 @@ l10n:
 
 {{WebExtExamples("h2")}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/) API。本文档内容源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/) API。本文档内容源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

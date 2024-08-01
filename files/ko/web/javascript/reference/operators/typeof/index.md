@@ -40,7 +40,8 @@ typeof (operand);
 | {{glossary("Function")}} 객체 (ECMA-262 표현으로는 [[Call]]을 구현하는 객체) | `"function"`                    |
 | 다른 모든 객체                                                               | `"object"`                      |
 
-> **참고:** ECMAScript 2019 and older permitted implementations to have `typeof` return any implementation-defined string value for non-callable non-standard exotic objects.
+> [!NOTE]
+> ECMAScript 2019 and older permitted implementations to have `typeof` return any implementation-defined string value for non-callable non-standard exotic objects.
 >
 > The only known browser to have actually taken advantage of this is old Internet Explorer (see [below](#IE-specific_notes)).
 

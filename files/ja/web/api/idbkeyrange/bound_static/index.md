@@ -44,7 +44,8 @@ bound(lower, upper, lowerOpen, upperOpen)
 
 以下の例では、有界のキーの範囲の使用法を示します。`keyRangeValue = IDBKeyRange.bound("A", "F");` と宣言します。これは、`"A"` と `"F"` の間の値を表す範囲です。({{domxref("IDBTransaction")}} により) トランザクションを開き、オブジェクトストアを開き、省略可能なキーの範囲の値を `keyRangeValue` として {{domxref("IDBObjectStore.openCursor")}} でカーソルを開きます。これにより、このカーソルは指定した範囲に含まれるキーを持つレコードのみを取り出します。端点を開として宣言していないので、この範囲は値 `"A"` および `"F"` を含みます。`IDBKeyRange.bound("A", "F", true, true);` を用いた場合は、`"A"` および `"F"` は範囲に含まれず、その間の値のみが含まれます。
 
-> **メモ:** キーの範囲に関する実験ができるより完全な例は、[indexeddb-examples](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) レポジトリの `idbkeyrange` ディレクトリを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
+> [!NOTE]
+> キーの範囲に関する実験ができるより完全な例は、[indexeddb-examples](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) レポジトリの `idbkeyrange` ディレクトリを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
 
 ```js
 function displayData() {

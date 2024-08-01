@@ -10,7 +10,8 @@ l10n:
 
 **`bgcolor`** は {{domxref("HTMLTableElement")}} のプロパティで、この表の背景色を表します。
 
-> **メモ:** この属性は使用しないでください。代わりに、 CSS の {{cssxref("background-color")}} プロパティをその要素の [`style`](/ja/docs/Web/API/HTMLElement/style) オブジェクトで変更するか、スタイルルールを使用するかしてください。
+> [!NOTE]
+> この属性は使用しないでください。代わりに、 CSS の {{cssxref("background-color")}} プロパティをその要素の [`style`](/ja/docs/Web/API/HTMLElement/style) オブジェクトで変更するか、スタイルルールを使用するかしてください。
 
 ## 値
 

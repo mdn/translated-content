@@ -11,7 +11,8 @@ slug: Web/API/MediaStreamTrack/mute_event
 
 `mute` イベントと `unmute` イベントとの間で、トラックの {{domxref("MediaStreamTrack.muted", "muted")}} プロパティの値は `true` になります。
 
-> **メモ:** 多くの人が「ミュート」と考える状態（すなわち、トラックを無音にすることをユーザーが制御できる方法）は実際には {{domxref("MediaStreamTrack.enabled")}} プロパティを使用して管理され、こちらではイベントが発生しません。
+> [!NOTE]
+> 多くの人が「ミュート」と考える状態（すなわち、トラックを無音にすることをユーザーが制御できる方法）は実際には {{domxref("MediaStreamTrack.enabled")}} プロパティを使用して管理され、こちらではイベントが発生しません。
 
 このイベントはキャンセル不可で、バブリングしません。
 

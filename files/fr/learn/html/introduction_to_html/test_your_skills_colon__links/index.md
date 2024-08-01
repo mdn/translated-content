@@ -28,7 +28,7 @@ Essayez de mettre à jour le code en direct ci-dessous pour recréer l'exemple t
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links1.html", '100%', 700)}}
 
-> **Remarque :**
+> [!CALLOUT]
 >
 > [Télécharger les éléments de départ de cette tâche](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links1-download.html) pour travailler dans votre propre éditeur ou dans un éditeur en ligne.
 
@@ -47,7 +47,7 @@ Essayez de mettre à jour le code en direct ci-dessous pour recréer l'exemple t
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links2.html", '100%', 800)}}
 
-> **Remarque :**
+> [!CALLOUT]
 >
 > [Télécharger les éléments de départ de cette tâche](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links2-download.html) pour travailler dans votre propre éditeur ou dans un éditeur en ligne.
 
@@ -64,6 +64,6 @@ Essayez de mettre à jour le code en direct ci-dessous pour recréer l'exemple t
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links3.html", '100%', 700)}}
 
-> **Remarque :**
+> [!CALLOUT]
 >
 > [Télécharger les éléments de départ de cette tâche](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links3-download.html) pour travailler dans votre propre éditeur ou dans un éditeur en ligne.

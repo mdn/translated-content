@@ -17,7 +17,8 @@ JavaScript에서 함수는 다른 함수로 전달되거나 반환받을 수 있
 
 함수 값은 일반적으로 [`함수`](/ko/docs/Web/JavaScript/Rference/Global_Objects/Function)의 인스턴스입니다. `함수` 객체의 속성 및 메서드에 대한 자세한 내용은 {{jsxref("Function")}}을 참조하세요. 호출 가능한 값으로 인해 [`typeof`](/ko/docs/Web/JavaScript/Rference/Operators/typeof)가 `"객체"` 대신 `"함수"`를 반환하게 됩니다.
 
-> **참고:** 모든 호출 가능한 값이 `instanceof Function`인 것은 아닙니다. 예를 들어, `Function.prototype` 객체는 호출 가능하지만 `Function`의 인스턴스는 아닙니다. 함수의 [프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)을 수동으로 설정하여 함수가 더 이상 `Function.prototype`에서 상속되지 않도록 할 수도 있습니다. 그러나 이러한 경우는 극히 드뭅니다.
+> [!NOTE]
+> 모든 호출 가능한 값이 `instanceof Function`인 것은 아닙니다. 예를 들어, `Function.prototype` 객체는 호출 가능하지만 `Function`의 인스턴스는 아닙니다. 함수의 [프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)을 수동으로 설정하여 함수가 더 이상 `Function.prototype`에서 상속되지 않도록 할 수도 있습니다. 그러나 이러한 경우는 극히 드뭅니다.
 
 ### 반환 값
 

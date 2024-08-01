@@ -14,7 +14,8 @@ Una promesa {{domxref("fetch","fetch()")}} se rechaza con un {{jsxref("TypeError
 
 El método `fetch()` es controlado por la directiva `connect-src` de la [Política de Seguridad de Contenido (Content Security Policy)](/es/docs/Security/CSP/CSP_policy_directives) en lugar de la directiva del recurso que se solicita.
 
-> **Nota:** Los parámetros del método `fetch()` son indénticos a los del constructor de {{domxref("Request.Request","Request()")}}.
+> [!NOTE]
+> Los parámetros del método `fetch()` son indénticos a los del constructor de {{domxref("Request.Request","Request()")}}.
 
 ## Sintaxis
 

@@ -59,7 +59,8 @@ function fetchVideo() {
 
 > **참고:** `abort()`가 호출되면, `fetch()` promise는 <code dir="ltr">AbortError</code>과 함께 reject됩니다.
 
-> **경고:** 현재 버전의 Firefox는 `DOMException`으로 promise를 reject합니다.
+> [!WARNING]
+> 현재 버전의 Firefox는 `DOMException`으로 promise를 reject합니다.
 
 동작하는 완전한 예제는 GitHub에서 확인 할 수 있습니다 — [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) 참고([라이브 실행도 확인할 수 있습니다](https://mdn.github.io/dom-examples/abort-api/)).
 

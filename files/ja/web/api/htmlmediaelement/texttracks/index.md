@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.textTracks
+title: "HTMLMediaElement: textTracks プロパティ"
+short-title: textTracks
 slug: Web/API/HTMLMediaElement/textTracks
 l10n:
-  sourceCommit: e60194342c9666ad8a2e6e5e6c25705fe818bcde
+  sourceCommit: 8d202854ade7328f827da2951bc714455f78674f
 ---
 
 {{APIRef("HTML DOM")}}
@@ -42,7 +43,7 @@ l10n:
 </video>
 ```
 
-`HTMLMediaElement.textTracks` は `textTracksList` を返すので、それを反復処理することができます。ここでは、それぞれの英語トラックのすべてのプロパティをコンソールに表示しています。
+`HTMLMediaElement.textTracks` は反復処理中に `textTracksList` を返します。ここでは、それぞれの英語トラックのすべてのプロパティをコンソールに表示しています。
 
 ```js
 const tracks = document.querySelector("video").textTracks;
@@ -66,17 +67,13 @@ for (const track of tracks) {
 
 ## 関連情報
 
-- 定義している {{DOMxRef("HTMLMediaElement")}} インターフェイス
-- {{HTMLElement("video")}} および {{HTMLElement("audio")}}
-- {{DOMxRef("VideoTrack")}} および {{DOMxRef("VideoTrackList")}}
-- {{DOMxRef("AudioTrack")}} および {{DOMxRef("AudioTrackList")}}
-- VideoTrackList の
-  [`change`](/ja/docs/Web/API/VideoTrackList/change_event)、
-  [`addtrack`](/ja/docs/Web/API/VideoTrackList/addtrack_event)、
-  [`removetrack`](/ja/docs/Web/API/VideoTrackList/removetrack_event)
-  イベント
-- AudioTrackList の
-  [`change`](/ja/docs/Web/API/AudioTrackList/change_event)、
-  [`addtrack`](/ja/docs/Web/API/AudioTrackList/addtrack_event)、
-  [`removetrack`](/ja/docs/Web/API/AudioTrackList/removetrack_event)
-  イベント
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.textTracks` プロパティを定義しているインターフェイス
+- {{HTMLElement("audio")}}, {{HTMLElement("video")}}
+- {{DOMxRef("AudioTrack")}}, {{DOMxRef("AudioTrackList")}}
+- {{DOMxRef("VideoTrack")}}, {{DOMxRef("VideoTrackList")}}
+- [`addtrack`](/ja/docs/Web/API/AudioTrackList/addtrack_event),
+  [`change`](/ja/docs/Web/API/AudioTrackList/change_event),
+  [`removetrack`](/ja/docs/Web/API/AudioTrackList/removetrack_event): AudioTrackList の イベント
+- [`addtrack`](/ja/docs/Web/API/VideoTrackList/addtrack_event),
+  [`change`](/ja/docs/Web/API/VideoTrackList/change_event),
+  [`removetrack`](/ja/docs/Web/API/VideoTrackList/removetrack_event): VideoTrackList の イベント
