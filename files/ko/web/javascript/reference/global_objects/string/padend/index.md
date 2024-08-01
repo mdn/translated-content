@@ -23,12 +23,6 @@ padEnd(targetLength, padString)
 ### 매개변수
 
 - `targetLength`
-  - : 목표 문자열 길이. 현재 문자열의 길이보다 작다면 채워넣지 않고 그대로 반환.
-- `padString` {{optional_inline}}
-
-  - : 현재 문자열에 채워넣을 다른 문자열. 문자열이 너무 길어 목표 문자열 길이를 초과한다면 좌측 일부를 잘라서 넣음. 기본값은 " ". (U+0020)
-
-- `targetLength`
   - : 현재 `str`이 패딩된 후의 결과 문자열의 길이입니다.
     이 값이 `str.length`보다 작거나 같으면
     현재 문자열이 그대로 반환됩니다.
