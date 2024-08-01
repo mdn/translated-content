@@ -61,7 +61,7 @@ slug: Learn/Server-side/Django/Home_page
 
 그에 반해서 마지막 두 개의 URL들은 특정한 책 또는 저자에 대한 세부 정보를 나타낼 것입니다. 이 URL들은 표시할 항목의 ID를 인코딩합니다(위에서 `<id>` 로 표시). URL 매퍼는 인코딩된 정보를 추출하여 view로 전달합니다. 그리고 view는 데이터베이스에서 무슨 정보를 가져올지 동적으로 결정합니다. URL의 정보를 인코딩하여 우리는 모든 책들(또는 저자들)을 처리하기 위해 단일 모임의 url 매핑, 뷰, 탬플릿을 사용할 것입니다.
 
-> [!WARNING]
+> [!NOTE]
 > 장고를 이용해서 당신이 필요로 하는 대로 URL들을 만들 수 있습니다 — 위와 같이 URL의 본문(body)에 정보를 인코딩할 수도 있고, 또는 URL 안에 GET 매개 변수들을 포함시킬 수 있습니다(예: /book/?id=6). 어떤 방식이건 URL들은 깨끗하고, 논리적이고, 읽기 쉬워야 합니다. ([check out the W3C advice here](https://www.w3.org/Provider/Style/URI)).
 > 장고 문서는 더 나은 URL 설계(design)를 위해 URL의 본문(body)에 정보를 인코딩하는 것을 권장합니다.
 
