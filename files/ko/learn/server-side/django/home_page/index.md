@@ -165,7 +165,7 @@ view 함수의 마지막에선 HTML 페이지를 생성하고 이 페이지를 �
 
 탬플릿은 파일(HTML 페이지 같은)의 구조(structure)나 배치(layout)을 정의하는 텍스트 파일입니다. 탬플릿은 실제 내용물(content)를 나타내기 위해 플레이스홀더(placeholder)들을 사용합니다. 장고는 당신의 어플리케이션 안에서 'templates' 라고 이름지어진 경로 안에서 자동적으로 탬플릿들을 찾을 것입니다. 예를 들어서, 우리가 방금 추가한 색인(index) 뷰 안에서, `render()` 함수는 **/locallibrary/catalog/templates/** 경로 안에서 _**index.html**_ 파일을 찾으려 할 것이고, 파일이 없다면 에러를 표시할 것입니다. 이것은 이전의 변경점들을 저장하고 브라우저에서 `127.0.0.1:8000`으로 접근해서 확인할 수 있습니다 - 이것은 다른 세부 사항들과 함께 상당히 직관적인 오류 메세지를 표시할 것입니다 : "`TemplateDoesNotExist at /catalog/`".
 
-> [!WARNING]
+> [!NOTE]
 > 프로젝트의 settings 파일에 기초해서, 장고는 여러 장소에서 탬플릿들을 찾아볼 것입니다. 기본적으로는 설치된 어플리케이션에서 검색합니다. 장고가 어떻게 탬플릿들을 찾는지, 그리고 어떤 탬플릿 양식(format)들을 지원하는지에 관해 여기([Templates](https://docs.djangoproject.com/en/2.0/topics/templates/) (Django docs))에서 찾아볼 수 있습니다.
 
 #### 탬플릿 확장(extend)하기
