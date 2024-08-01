@@ -151,7 +151,7 @@ var values = Array.prototype.map.call(elems, function (obj) {
 
 ### 棘手的範例
 
-[（透過連結的部落格啟發）](http://www.wirfs-brock.com/allen/posts/166)
+[（透過連結的部落格啟發）](https://wirfs-brock.com/allen/posts/166)
 
 透過一個（被遍歷元素的）參數叫出回調是個常見的用法。有些函式也常常在含有其他可選參數的情況下，使用上一個參數。這種行為常常會給人帶來困惑。
 

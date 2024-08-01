@@ -122,4 +122,4 @@ async function getProcessedData(url) {
 - {{jsxref("Operators/async_function", "async function expression")}}
 - {{jsxref("AsyncFunction")}} 物件
 - {{jsxref("Operators/await", "await")}}
-- ["Decorating Async Javascript Functions" on "innolitics.com"](http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/)
+- ["Decorating Async Javascript Functions" on "innolitics.com"](https://innolitics.com/articles/javascript-decorators-for-promise-returning-functions/)

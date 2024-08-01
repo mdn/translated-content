@@ -550,7 +550,7 @@ console.log("John's cat".length);
 // In this case, 10.
 ```
 
-In ES2015, template literals are also available. Template literals are enclosed by the back-tick (\` \`) ([grave accent](http://en.wikipedia.org/wiki/Grave_accent)) character instead of double or single quotes. Template strings provide syntactic sugar for constructing strings. This is similar to string interpolation features in Perl, Python and more. Optionally, a tag can be added to allow the string construction to be customized, avoiding injection attacks or constructing higher level data structures from string contents.
+In ES2015, template literals are also available. Template literals are enclosed by the back-tick (\` \`) ([grave accent](https://en.wikipedia.org/wiki/Grave_accent)) character instead of double or single quotes. Template strings provide syntactic sugar for constructing strings. This is similar to string interpolation features in Perl, Python and more. Optionally, a tag can be added to allow the string construction to be customized, avoiding injection attacks or constructing higher level data structures from string contents.
 
 ```js
 // Basic literal string creation
