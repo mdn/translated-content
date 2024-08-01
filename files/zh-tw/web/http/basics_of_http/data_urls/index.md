@@ -63,7 +63,7 @@ base64 a.txt>b.txt
 
 ### 在 Microsoft Windows 上編碼
 
-在 Windows 上，可以使用 PowerShell 的 [Convert.ToBase64String](https://learn.microsoft.com/en-us/dotnet/api/system.convert.tobase64string?view%3Dnet-5.0) 進行 base64 編碼：
+在 Windows 上，可以使用 PowerShell 的 [Convert.ToBase64String](https://learn.microsoft.com/en-us/dotnet/api/system.convert.tobase64string?view=net-5.0) 進行 base64 編碼：
 
 ```plain
 [convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))
@@ -95,7 +95,7 @@ lots of text…
 - 語法
   - : `data` URL 的格式非常簡單，但很容易忘記在「data」段之前加上逗號，或者錯誤地將數據編碼為 base64 格式。
 - HTML 中的格式化
-  - : 一個 `data` URL 在文件中提供了一個文件，這可能相對於包含文件的寬度非常寬。作為 URL，`data` 應該可以用空白（換行、制表符或空格）來格式化，但在使用 base64 編碼時會出現一些實際問題。[更多訊息](https://bugzilla.mozilla.org/show_bug.cgi?id%3D73026#c12)。
+  - : 一個 `data` URL 在文件中提供了一個文件，這可能相對於包含文件的寬度非常寬。作為 URL，`data` 應該可以用空白（換行、制表符或空格）來格式化，但在使用 base64 編碼時會出現一些實際問題。[更多訊息](https://bugzil.la/73026#c12)。
 - 長度限制
   - : 瀏覽器不需要支持任何特定的最大數據長度。例如，Opera 11 瀏覽器將 URL 限制為 65535 個字元，這限制了 `data` URLs 的最大長度為 65529 個字元（如果使用簡單的 `data:`，不指定 MIME 類型，65529 個字元是編碼數據的長度，而不是源長度）。Firefox 97 版本及更高版本支持的 `data` URLs 最多可達 32MB（97 之前的版本限制接近 256MB）。Chromium 對超過 512MB 的 URL 提出異議，Webkit (Safari) 對超過 2048MB 的 URL 提出異議。
 - 缺乏錯誤處理
