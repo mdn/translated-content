@@ -9,7 +9,7 @@ slug: Web/API/Fullscreen_API
 
 API 사용 방법에 대한 자세한 내용은 [Guide to the Fullscreen API](/ko/docs/Web/API/Fullscreen_API/Guide) 문서를 참조하세요.
 
-> [!WARNING]
+> [!NOTE]
 > 이 API에 대한 지원은 여러 브라우저에서 이루어지며, 다양한 업체의 접두사(prefix)가 필요하거나, 최신 사양을 구현하지 않는 경우가 많습니다. 이 API 지원에 대한 자세한 내용은 아래에 있는 [Browser compatibility](#browser_compatibility) 섹션을 참조하세요. Fullscreen API를 지원하지 않는 업체의 경우, [Fscreen](https://github.com/rafrex/fscreen) 과 같은 라이브러리를 사용할 수 있습니다.
 
 ## Interfaces
