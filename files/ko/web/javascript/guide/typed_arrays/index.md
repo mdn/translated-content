@@ -137,7 +137,8 @@ var amountDueView = new Float32Array(buffer, 20, 1);
 
 그런 뒤, 예를 들어 `amountDueView[0]`로 지불할 요금(amount due)을 액세스할 수 있습니다.
 
-> **참고:** **주의:** C 구조체에서 [데이터 구조 정렬](http://en.wikipedia.org/wiki/Data_structure_alignment)은 플랫폼에 의존합니다. 이러한 패딩(padding) 차이에 대해 조심하고 고려하세요.
+> [!NOTE]
+> C 구조체에서 [데이터 구조 정렬](http://en.wikipedia.org/wiki/Data_structure_alignment)은 플랫폼에 의존합니다. 이러한 패딩(padding) 차이에 대해 조심하고 고려하세요.
 
 ### 보통 배열로 변환
 

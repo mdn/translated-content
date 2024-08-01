@@ -11,7 +11,8 @@ slug: Web/CSS/Specificity
 
 명시도는 주어진 CSS 선언에 적용되는 가중치(weight)로, 일치하는 선택자 내 각 [선택자 유형](#selector-type)의 수에 의해 결정됩니다. 여러 선언이 명시도가 같은 경우, CSS에서 맨 끝에 오는 선언이 요소에 적용됩니다. 명시도는 같은 요소가 여러 선언의 대상이 되는 경우에만 적용합니다. CSS 규칙에 따라 [직접 대상 요소](#directly-targeted-elements)는 요소가 부모로부터 상속받는 규칙보다 항상 우선합니다.
 
-> **참고:** **주의:** 문서 트리 내 [요소의 근접도(proximity, 가까움)](#tree-proximity-ignorance)는 명시도에 영향이 없습니다.
+> [!NOTE]
+> 문서 트리 내 [요소의 근접도(proximity, 가까움)](#tree-proximity-ignorance)는 명시도에 영향이 없습니다.
 
 ### 선택자 유형
 
