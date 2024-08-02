@@ -1,5 +1,5 @@
 ---
-title: "HTML placeholder 특성"
+title: "HTML attribute: elementtiming"
 slug: Web/HTML/Attributes/placeholder
 l10n:
   sourceCommit: aee2bd82de11cb7331134e48e8bd548bbedafcc5
