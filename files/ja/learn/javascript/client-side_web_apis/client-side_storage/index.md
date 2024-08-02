@@ -235,8 +235,7 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-sid
 
 例が完成しました。よくできましたね! 現時点で残っているのは、コードを保存して HTML ページをブラウザーでテストすることだけです。[ライブ実行される完成版をここで](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html)見られます。
 
-> **メモ:**
-> [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)のところには、探究するにはほんの少しだけ更に複雑な別の例もあります。
+> **メモ:** > [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)のところには、探究するにはほんの少しだけ更に複雑な別の例もあります。
 
 > [!NOTE]
 > 完成版のソースのうち `<script src="index.js" defer></script>` という行では、`defer` 属性により、ページを読み込み終わるまでは {{htmlelement("script")}} 要素の中身を実行しないように指定しています。
