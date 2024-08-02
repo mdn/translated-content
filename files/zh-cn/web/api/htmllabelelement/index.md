@@ -18,7 +18,7 @@ _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLLabelElement.control")}} {{ReadOnlyInline}}
   - : {{domxref("HTMLElement")}}，表示与标签关联的控件。
 - {{domxref("HTMLLabelElement.form")}} {{ReadOnlyInline}}
-  - : {{domxref("HTMLFormElement")}} 对象表示与标签控件关联的表单，如果没有关联的控件，或者该控件未与表单关联，则是 `null`。换句话说，这只是 `HTMLLabelElement.control.form` 的快捷方式。
+  - : {{domxref("HTMLFormElement")}} 对象，表示与标记的控件相关联的表单，如果没有关联的控件，或者该控件未与表单关联，则为 `null`。换句话说，这只是 `HTMLLabelElement.control.form` 的快捷方式。
 - {{domxref("HTMLLabelElement.htmlFor")}}
   - : 包含标记的控件的 ID 的字符串。反映 [`for`](/zh-CN/docs/Web/HTML/Element/label#for) 属性。
 
