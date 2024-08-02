@@ -9,7 +9,7 @@ l10n:
 
 **`RequestInit`** は[フェッチ API](/ja/docs/Web/API/Fetch_API) の辞書で、フェッチリクエストを構成するのに使用する一連のオプションを表します。
 
-`RequestInit` オブジェクトは {{domxref("Request.Request()", "Request()")}} コンストラクターに渡したり、直絶 [`fetch()`](/ja/docs/Web/API/Window/fetch) 関数呼び出しに渡したりすることができます。
+`RequestInit` オブジェクトは {{domxref("Request.Request()", "Request()")}} コンストラクターに渡したり、直接 [`fetch()`](/ja/docs/Web/API/Window/fetch) 関数呼び出しに渡したりすることができます。
 
 また、`Request` を `RequestInit` で作成し、その `Request` を `fetch()` に別の `RequestInit` と一緒に渡すこともできます。この場合、両方の場所で同じオプションが設定されていれば、直接 `fetch()` に渡された値が使用されます。
 
