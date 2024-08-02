@@ -7,11 +7,13 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-只读的 **`HTMLLabelElement.form`** 属性返回 {{domxref("HTMLFormElement")}} 对象表示与标签控件关联的表单，如果没有关联的控件，或者该控件未与表单关联，则是 `null`。这个属性是 `HTMLLabelElement.control.form` 的快捷方式。
+**`HTMLLabelElement.form`** 只读属性返回表示与标签关联的控件所属表单的 {{domxref("HTMLFormElement")}} 对象，如果没有关联的控件，或者该控件未与表单关联，则为 `null`。
+
+这个属性是 `HTMLLabelElement.control.form` 的快捷方式。
 
 ## 值
 
-{{domxref("HTMLFormElement")}} 表示与标签 {{domxref("HTMLLabelElement.control", "control")}} 关联的表单。如果 {{domxref("HTMLLabelElement.control", "control")}} 是 `null`（意味标签与控件无关），或者如果控件不是表单的部分，属性返回 `null`。
+{{domxref("HTMLFormElement")}}，表示与标签的 {{domxref("HTMLLabelElement.control", "control")}} 像关联的表单。如果 {{domxref("HTMLLabelElement.control", "control")}} 是 `null`（意味标签与控件无关），或者如果控件不是不属于某个表单，属性返回 `null`。
 
 ## 规范
 
@@ -26,4 +28,4 @@ l10n:
 - {{domxref("HTMLLabelElement")}}
 - {{domxref("HTMLElement")}}
 - {{HTMLElement("label")}}
-- [HTML forms guide](/zh-CN/docs/Learn/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn/Forms)

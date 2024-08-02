@@ -7,14 +7,14 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-只读的 **`HTMLLabelElement.control`** 属性返回控件（以类型 {{domxref("HTMLElement")}} 对象的形式或其衍生物之一）与 {{HTMLElement("label")}} 元素相关的引用，如果标签未与控件关联，则为 `null`。
+**`HTMLLabelElement.control`** 只读属性返回与 {{HTMLElement("label")}} 元素相关联的控件（以 {{domxref("HTMLElement")}} 类型或其派生类的对象的形式）的引用，如果标签未与控件关联，则为 `null`。
 
 ## 值
 
 {{domxref("HTMLElement")}} 派生对象，表示与 {{HTMLElement("label")}} 关联的控件，如果标签是单独的，则为 `null`。
 
 > [!NOTE]
-> 如果这个属性有值且 {{domxref("HTMLLabelElement.htmlFor")}} 有值，{{domxref("HTMLLabelElement.htmlFor")}} 属性必须指的是相同的控件。
+> 如果这个属性有值且 {{domxref("HTMLLabelElement.htmlFor")}} 有值，{{domxref("HTMLLabelElement.htmlFor")}} 属性必须引用相同的控件。
 
 ## 规范
 
@@ -29,4 +29,4 @@ l10n:
 - {{domxref("HTMLLabelElement")}}
 - {{domxref("HTMLElement")}}
 - {{HTMLElement("label")}}
-- [HTML forms guide](/zh-CN/docs/Learn/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn/Forms)
