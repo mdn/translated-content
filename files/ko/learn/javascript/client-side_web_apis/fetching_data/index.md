@@ -2,12 +2,12 @@
 title: 서버에서 데이터 가져오기
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 l10n:
-  sourceCommit: c215109b90da51435eaa2c94a8f6764909f628e0
+  sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
-현대의 웹사이트와 애플리케이션에서 매우 흔한 또 다른 작업은 새 페이지 전체를 로드할 필요 없이 웹페이지의 섹션을 업데이트하기 위해 서버에서 개별 데이터 항목을 검색하는 것입니다. 이는 사소해 보이지만 사이트의 성능과 동작에 큰 영향을 미쳤기 때문에 이 문서에서는 개념을 설명하고 이를 가능하게 하는 기술, 특히 [Fetch API](/ko/docs/Web/API/Fetch_API)를 살펴보도록 하겠습니다.
+현대의 웹사이트와 애플리케이션에서 매우 흔한 또 다른 작업은 새 페이지 전체를 불러올 필요 없이 웹페이지의 섹션을 갱신하기 위해 서버에서 개별 데이터 항목을 검색하는 것입니다. 이것은 사소해 보이지만 사이트의 성능과 동작에 큰 영향을 미쳤기 때문에 이 문서에서는 개념을 설명하고 이를 가능하게 하는 기술, 특히 [Fetch API](/ko/docs/Web/API/Fetch_API)를 살펴보도록 하겠습니다.
 
 <table>
   <tbody>
@@ -39,7 +39,7 @@ l10n:
 
 ![전통적인 페이지 로딩](traditional-loading.svg)
 
-이 모델은 많은 사이트에서 완벽하게 동작합니다. 하지만 매우 데이터 중심적인 웹 사이트를 생각해보세요. 예를 들어, [벤쿠버 공공 도서관](https://www.vpl.ca/)같은 웹 사이트를 생각해보세요. 무엇보다도 이와 같은 사이트를 데이터베이스에 대한 사용자 인터페이스로 생각할 수 있습니다. 특정 장르의 책을 검색하거나 이전에 빌린 책을 기반으로 마음에 드는 책에 대한 추천을 보여줄 수 있습니다. 이 작업을 수행할 때 표시할 새 도서 세트로 페이지를 업데이트해야 합니다. 하지만 페이지 헤더, 사이드바, 바닥글과 같은 항목을 포함한 대부분의 페이지 콘텐츠는 동일하게 유지됩니다.
+이 모델은 많은 사이트에서 완벽하게 동작합니다. 하지만 매우 데이터 중심적인 웹 사이트를 생각해 보세요. 예를 들어, [벤쿠버 공공 도서관](https://www.vpl.ca/)같은 웹 사이트를 생각해 보세요. 무엇보다도 이와 같은 사이트를 데이터베이스에 대한 사용자 인터페이스로 생각할 수 있습니다. 특정 장르의 책을 검색하거나 이전에 빌린 책을 기반으로 마음에 드는 책에 대한 추천을 보여줄 수 있습니다. 이 작업을 수행할 때 표시할 새 도서 세트로 페이지를 업데이트해야 합니다. 하지만 페이지 헤더, 사이드바, 바닥글과 같은 항목을 포함한 대부분의 페이지 콘텐츠는 동일하게 유지됩니다.
 
 이 전통적인 방식의 문제점은 페이지의 한 부분에 대한 업데이트에도 전체 페이지를 가져와 로드해야 한다는 것입니다. 이는 비효율적이고 사용자 경험이 좋지 않을 수 있습니다.
 
@@ -47,12 +47,12 @@ l10n:
 
 ![fetch를 사용하여 페이지 업데이트](fetch-update.svg)
 
-여기서 주요 API는 [Fetch API](/ko/docs/Web/API/Fetch_API)입니다. 이를 통해 페이지에서 실행되는 JavaScript가 특정 리소스를 검색하기 위해 서버에 [HTTP](/ko/docs/Web/HTTP) 요청을 할 수 있습니다. 서버가 이를 제공하면 JavaScript는 일반적으로 [DOM 조작 API](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)를 사용하여 페이지를 업데이트하기 위한 데이터를 사용할 수 있습니다. 요청되는 데이터는 구조화된 데이터를 전송하는 데 적합한 형식인 [JSON](/ko/docs/Learn/JavaScript/Objects/JSON)인 경우가 많지만 HTML이거나 텍스트일 수도 있습니다.
+여기서 주요 API는 [Fetch API](/ko/docs/Web/API/Fetch_API)입니다. 이를 통해 페이지에서 실행되는 JavaScript가 특정 리소스를 검색하기 위해 서버에 [HTTP](/ko/docs/Web/HTTP) 요청을 할 수 있습니다. 서버가 이를 제공하면 JavaScript는 일반적으로 [DOM 조작 API](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)를 사용하여 페이지를 업데이트하기 위한 데이터를 사용할 수 있습니다. 요청되는 데이터는 구조화된 데이터를 전송하는 데 적합한 형식인 [JSON](/ko/docs/Learn/JavaScript/Objects/JSON)인 경우가 많지만, HTML이거나 텍스트일 수도 있습니다.
 
 이는 Amazon, YouTube, eBay 등과 같은 데이터 기반 사이트에서 흔히 볼 수 있는 패턴입니다.
 
 - 페이지 업데이트 속도가 훨씬 빨라지고 페이지가 새로 고쳐질 때까지 기다릴 필요가 없어 사이트가 더 빠르고 반응이 좋습니다.
-- 매 업데이트마다 더 적은 데이터가 다운로드되며, 이는 대역폭 낭비를 줄여줍니다. 이것은 광대역 연결의 데스크톱에서는 큰 문제가 아닐수도 있지만, 모바일 장치와 유비쿼터스 빠른 인터넷 서비스가 없는 국가에서는 주요 문제입니다.
+- 매 업데이트마다 더 적은 데이터가 다운로드되며, 이는 대역폭 낭비를 줄여줍니다. 이것은 광대역 연결의 데스크톱에서는 큰 문제가 아닐 수도 있지만, 모바일 장치와 유비쿼터스 빠른 인터넷 서비스가 없는 국가에서는 주요 문제입니다.
 
 > **참고:** 초기에 이 일반적인 기법은 XML 데이터를 요청하는 경향이 있었기 때문에 [Asynchronous](/ko/docs/Glossary/Asynchronous) JavaScript와 XML([Ajax](/ko/docs/Glossary/AJAX))로 알려졌습니다. 요즘에는 보통 그렇지 않지만(JSON을 요청하는 경우가 더 많을 것입니다), 결과는 여전히 똑같으며, 여전히 "Ajax"라는 용어가 이 기법을 설명하는 데 자주 사용됩니다.
 
@@ -68,7 +68,7 @@ Fetch API 예시 몇 가지를 살펴봅시다.
 
 이 일련의 파일은 우리의 가짜 데이터베이스 역할을 할 것입니다. 실제 응용 프로그램에서는 PHP, Python, Node와 같은 서버 측 언어를 사용하여 데이터베이스에서 데이터를 요청할 가능성이 더 높습니다. 그러나 여기서는 이 문제를 단순하게 유지하고 클라이언트 측 부분에 집중하고자 합니다.
 
-이 예제를 시작하려면, 새 컴퓨터의 새 디렉토리에 [fetch-start.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/fetch-start.html) 로컬 복사본과 4개의 텍스트 파일([verse1.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse3.txt), [verse4.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse4.txt))을 만듭니다. 이 예제에서는 드롭다운 메뉴에서 선택한 시의 다른 절을 가져옵니다.
+이 예제를 시작하려면, 새 컴퓨터의 새 디렉터리에 [fetch-start.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/fetch-start.html) 로컬 복사본과 4개의 텍스트 파일([verse1.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse3.txt), [verse4.txt](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse4.txt))을 만듭니다. 이 예제에서는 드롭다운 메뉴에서 선택한 시의 다른 절을 가져옵니다.
 
 {{htmlelement("script")}} 요소 바로 내부에 다음 코드를 추가합니다. 그러면 {{htmlelement("select")}} 및 {{htmlelement("pre")}} 요소에 대한 참조가 저장되고 리스너가 {{htmlelement("select")}} 요소에 추가되므로 사용자가 새 값을 선택하면 새 값이 매개 변수로 `updateDisplay()`라는 이름의 함수에 전달됩니다.
 
@@ -147,19 +147,19 @@ updateDisplay("Verse 1");
 verseChoose.value = "Verse 1";
 ```
 
-#### 서버에서 예제를 서빙하기
+#### 서버에서 예제를 제공하기
 
 최신 브라우저는 로컬 파일에서 예제를 실행하기만 하면 HTTP 요청을 실행하지 않습니다. 이는 보안 제한 때문입니다(보안에 대한 자세한 내용은 [웹 사이트 보안](/ko/docs/Learn/Server-side/First_steps/Website_security)을 참고하세요.).
 
-이를 해결하려면 로컬 웹 서버를 통해 예제를 실행하여 테스트해야 합니다. 이 방법을 알아보려면 [로컬 테스팅 서버 설정 가이드](/ko/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)를 참고하세요.
+이를 해결하려면 로컬 웹 서버를 통해 예제를 실행하여 테스트해야 합니다. 이 방법을 알아보려면 [로컬 검증 서버 설정 가이드](/ko/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)를 참고하세요.
 
 ### The can store
 
-이 예제에서는 통조림만 판매하는 가상의 슈퍼마켓인 캔스토어(The Can Store)라는 샘플 사이트를 만들었습니다. 이 예제는 [GitHub에서 라이브](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/)로 볼 수 있으며 [소스 코드](https://github.com/mdn/learning-area/tree/main/javascript/apis/fetching-data/can-store)를 볼 수 있습니다.
+이 예제에서는 통조림만 판매하는 가상의 슈퍼마켓인 캔 가게(The Can Store)라는 샘플 사이트를 만들었습니다. 이 예제는 [GitHub에서 라이브](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/)로 볼 수 있으며 [소스 코드](https://github.com/mdn/learning-area/tree/main/javascript/apis/fetching-data/can-store)를 볼 수 있습니다.
 
 ![왼쪽 열에 검색 옵션을 표시하고 오른쪽 열에 제품 검색 결과를 표시하는 가짜 전자 상거래 사이트입니다.](can-store.png)
 
-기본적으로 사이트에는 모든 제품이 표시되지만 왼쪽 열에 있는 양식 컨트롤을 사용하여 범주, 검색어 또는 두 가지 모두로 제품을 필터링할 수 있습니다.
+기본적으로 사이트에는 모든 제품이 표시되지만, 왼쪽 열에 있는 양식 컨트롤을 사용하여 범주, 검색어 또는 두 가지 모두로 제품을 필터링할 수 있습니다.
 
 카테고리별, 검색어별 제품 필터링, 문자열 조작, UI에 데이터가 올바르게 표시되도록 처리하는 복잡한 코드가 상당히 많이 있습니다. 문서에서 다 다루지는 않겠지만, 코드에서 광범위한 주석을 찾을 수 있습니다([can-script.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/can-store/can-script.js)를 참고하세요.).
 
@@ -183,19 +183,19 @@ fetch("products.json")
 
 이 함수 내부는 다음과 같습니다.
 
-- 서버에서 오류가 반환되지 않았는지 확인합니다([`404 Not Found`](/ko/docs/Web/HTTP/Status/404) 같은 오류입니다.). 오류가 발생했다면, 에러를 던집니다.
+- 서버가 오류(예: [404 Not Found](/ko/docs/Web/HTTP/Status/404))를 반환하지 않았는지 확인하십시오. 오류가 발생하면 예외를 발생시킵니다.
 - 응답 시 {{domxref("Response.json","json()")}}를 호출합니다. 그러면 [JSON 객체](/ko/docs/Learn/JavaScript/Objects/JSON)로 데이터를 가져옵니다. 우리는 `response.json()`가 반환한 promise를 반환합니다.
 
 다음으로 반환된 promise의 `then()` 메서드에 함수를 전달합니다. 이 함수는 응답 데이터를 JSON으로 포함하는 객체를 받고, 이를 `initialize()` 함수에 전달합니다. 사용자 인터페이스에 모든 제품을 표시하는 프로세스를 시작하는 함수입니다.
 
 오류를 처리하기 위해 체인 끝에 `.catch()` 블록을 연결합니다. 어떤 이유로 인해 promise가 실패하면 실행됩니다. 그 안에는 `err` 객체를 매개변수를 받는 함수가 포함되어 있습니다. 이 `err` 객체는 발생한 오류의 성격을 보고하는 데 사용할 수 있으며, 이 경우 간단한 `console.error()`를 사용하여 수행합니다.
 
-그러나 완전한 웹사이트는 사용자 화면에 메시지를 표시하고 상황을 해결할 수 있는 옵션을 제공함으로써 이 오류를 보다 적절하게 처리할 수 있지만, 우리는 간단한 `console.error()` 외에는 아무것도 필요하지 않습니다.
+그러나 완전한 웹사이트는 사용자 화면에 메시지를 표시하고 상황을 해결할 수 있는 옵션을 제공함으로써, 이 오류를 보다 적절하게 처리할 수 있지만, 우리는 간단한 `console.error()` 외에는 아무것도 필요하지 않습니다.
 
 실패 사례를 다음과 같이 테스트할 수 있습니다.
 
 1. 예제 파일의 로컬 복사본을 만듭니다.
-2. 웹 서버를 통해 코드를 실행합니다(위의 [서버에서 예제를 서빙하기](#서버에서_예제를_서빙하기)에 설명된 대로).
+2. 웹 서버를 통해 코드를 실행합니다(위의 [서버에서 예제를 제공하기](#서버에서_예제를_제공하기)에 설명된 대로).
 3. 가져오는 파일의 경로를 'produc.json'과 같이 수정합니다(철자가 틀린지 확인하세요).
 4. 이제 브라우저에 인덱스 파일을 로드하고(`localhost:8000`을 통해) 브라우저 개발자 콘솔을 살펴보세요. "Fetch 문제: HTTP 오류: 404"와 유사한 메시지가 표시됩니다.
 
@@ -257,7 +257,7 @@ Fetch API가 이보다 더 개선된 것이라고 생각하기를 바랍니다. 
 
 ## 같이 보기
 
-이 문서에는 겉핥기 식으로 많은 주제들이 논의되어 있습니다. 이 주제들에 대한 더 많은 세부 사항을 보려면 다음 문서를 시도하세요.
+이 문서에는 겉핥기식으로 많은 주제들이 논의되어 있습니다. 이 주제들에 대한 더 많은 세부 사항을 보려면 다음 문서를 시도하세요.
 
 - [Fetch 사용하기](/ko/docs/Web/API/Fetch_API/Using_Fetch)
 - [Promises](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)
