@@ -34,7 +34,7 @@ _该接口同样继承来自 {{domxref("Event")}} 的方法。_
 
 ## 示例
 
-在此示例中，当设置 cookie 时，事件侦听器会将事件记录到控制台。`CookieChangeEvent` 对象的 {{domxref("CookieChangeEvent.changed","changed")}} 属性包含刚刚设置的 cookie 的对象。
+在此示例中，当设置 cookie 时，事件监听器会将事件记录到控制台。`CookieChangeEvent` 对象的 {{domxref("CookieChangeEvent.changed","changed")}} 属性包含刚刚设置的 cookie 的对象。
 
 ```js
 cookieStore.addEventListener("change", (event) => {
