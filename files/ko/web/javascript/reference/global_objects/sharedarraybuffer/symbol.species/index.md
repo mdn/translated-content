@@ -9,8 +9,7 @@ l10n:
 
 **`SharedArrayBuffer[Symbol.species]`** 정적 접근자 속성은 `SharedArrayBuffer` 메서드에서 반환 값을 생성하는 데 사용되는 생성자를 반환합니다.
 
-> [!WARNING]
-> [Symbol.species]의 존재로 인해 임의의 코드 실행이 가능하며, 이는 보안 취약점을 만들 수 있습니다. 또한 특정 최적화를 매우 어렵게 만듭니다. 엔진 구현자들은 [이 기능을 제거할지 검토](https://github.com/tc39/proposal-rm-builtin-subclassing) 중입니다. 가능하다면 이 기능에 의존하지 않는 것이 좋습니다.
+> [!WARNING] > [Symbol.species]의 존재로 인해 임의의 코드 실행이 가능하며, 이는 보안 취약점을 만들 수 있습니다. 또한 특정 최적화를 매우 어렵게 만듭니다. 엔진 구현자들은 [이 기능을 제거할지 검토](https://github.com/tc39/proposal-rm-builtin-subclassing) 중입니다. 가능하다면 이 기능에 의존하지 않는 것이 좋습니다.
 
 ## 구문
 
