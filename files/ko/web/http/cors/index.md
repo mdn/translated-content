@@ -342,7 +342,7 @@ CORS 사전 요청에는 자격 증명이 절대로 포함되지 않아야 합�
 
 #### 자격 증명이 포함된 요청과 와일드카드
 
-자격 증명이 포함된 요청에 응답하는 경우:
+자격 증명이 포함된 요청에 응답하는 경우
 
 - 서버는 `Access-Control-Allow-Origin` 응답 헤더 값으로 "`*`" 와일드카드를 **지정해서는 안 되며**, 대신 명시적인 출처를 지정해야 합니다. 예를 들어 `Access-Control-Allow-Origin: https://example.com`.
 
@@ -356,13 +356,13 @@ CORS 사전 요청에는 자격 증명이 절대로 포함되지 않아야 합�
 
 그러나 요청에 자격 증명(예를 들어 `쿠키` 헤더)이 포함되고 응답에 와일드카드 대신 실제 출처(예를 들어 `Access-Control-Allow-Origin: https://example.com`)가 포함되어 있으면, 브라우저는 지정된 출처에서 응답에 접근할 수 있도록 허용합니다.
 
-또한 응답의 `Access-Control-Allow-Origin` 헤더 값에 실제 출처가 아닌 "`*`" 와일드카드인 경우 해당 응답의 `Set-Cookie` 헤더에 쿠키를 설정하지 않습니다.
+또한 응답의 `Access-Control-Allow-Origin` 헤더 값에 실제 출처가 아닌 "`*`" 와일드카드인 경우 응답의 `Set-Cookie` 헤더는 쿠키를 설정하지 않습니다.
 
 #### 서드-파티 쿠키
 
 CORS 응답에 설정된 쿠키는 일반적인 서드-파티(third-party) 쿠키 정책의 적용을 받습니다. 위의 예에서, 페이지는 `foo.example` 에서 로드되지만, 응답의 `Cookie` 헤더는 `bar.other` 에서 전송되므로 사용자의 브라우저가 모든 서드-파티 쿠키를 거부하도록 설정된 경우 해당 쿠키는 저장되지 않습니다.
 
-요청의 쿠키도 일반적인 서드-파티 쿠키 정책에 따라 억제될 수 있습니다. 따라서 강제된 쿠키 정책은 이 장에서 설명된 기능을 무효화하여 자격 증명이 포함된 요청을 전혀 수행할 수 없게 만들 수 있습니다.
+요청의 쿠키도 일반적인 서드-파티 쿠키 정책에 따라 억제될 수 있습니다. 따라서 강제된 쿠키 정책은 이 장에서 설명된 기능을 무효화 할 수 있으며, 자격 증명이 포함된 요청을 전혀 수행할 수 없게 만들 수 있습니다.
 
 [SameSite](/ko/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 속성에 대한 쿠키 정책이 적용됩니다.
 
@@ -380,14 +380,14 @@ Access-Control-Allow-Origin: <origin> | *
 
 `Access-Control-Allow-Origin` 은 단일 출처를 지정하여 브라우저가 해당 출처가 리소스에 접근하도록 허용합니다. 또는 자격 증명이 **없는** 요청의 경우 "`*`" 와일드 카드는 브라우저의 origin에 상관없이 모든 리소스에 접근하도록 허용합니다.
 
-예를들어 `https://mozilla.org` 의 코드가 리소스에 접근 할 수 있도록 하려면 다음과 같이 지정할 수 있습니다.
+예를 들어 `https://mozilla.org` 의 코드가 리소스에 접근 할 수 있도록 하려면 다음과 같이 지정할 수 있습니다.
 
 ```http
 Access-Control-Allow-Origin: https://mozilla.org
 Vary: Origin
 ```
 
-서버가 "`*`" 와일드카드 대신에 하나의 출처를 지정하는 경우, 서버는 {{HTTPHeader("Vary")}} 응답 헤더에 `Origin` 을 포함해야 합니다. 이 출처는 화이트 리스트의 일부로 요청 출처에 따라 동적으로 변경될 수 있습니다. 서버 응답이 {{HTTPHeader("Origin")}} 요청 헤더에 따라 다르다는 것을 클라이언트에 알려줍니다.
+서버가 "`*`" 와일드카드 대신에 하나의 출처를 지정하는 경우(이 출처는 허가된 출처 리스트의 일부로 요청 출처에 따라 동적으로 변경할 수 있습니다.), 서버는 응답이 {{HTTPHeader("Origin")}} 요청 헤더에 따라 다르다는 것을 클라이언트에 알려주기 위해 {{HTTPHeader("Vary")}} 응답 헤더에 `Origin` 을 포함해야 합니다.
 
 ### Access-Control-Expose-Headers
 
@@ -397,17 +397,17 @@ Vary: Origin
 Access-Control-Expose-Headers: <header-name>[, <header-name>]*
 ```
 
-예를들면 다음과 같습니다.
+예를 들면 다음과 같습니다.
 
 ```http
 Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
 ```
 
-`X-My-Custom-Header` 와 `X-Another-Custom-Header` 헤더가 브라우저에 드러납니다.
+위 응답에 의해 `X-My-Custom-Header` 와 `X-Another-Custom-Header` 헤더가 브라우저에 노출됩니다.
 
 ### Access-Control-Max-Age
 
-{{HTTPHeader("Access-Control-Max-Age")}} 헤더는 preflight request 요청 결과를 캐시할 수 있는 시간을 나타냅니다. preflight request 예제는 위를 참조하세요.
+{{HTTPHeader("Access-Control-Max-Age")}} 헤더는 사전 요청 결과를 캐시할 수 있는 시간을 나타냅니다. 사전 요청 예제는 위를 참조하세요.
 
 ```http
 Access-Control-Max-Age: <delta-seconds>
@@ -417,13 +417,13 @@ Access-Control-Max-Age: <delta-seconds>
 
 ### Access-Control-Allow-Credentials
 
-{{HTTPHeader("Access-Control-Allow-Credentials")}} 헤더는 `자격 증명 플래그`가 true 일 때 요청에 대한 응답을 표시할 수 있는지 여부를 나타냅니다. 사전 요청에 대한 응답의 일부로 사용될 때, 이 헤더는 실제 요청이 자격 증명과 함께 수행될 수 있는지 여부를 나타냅니다. 단, GET 메서드 단순 요청은 사전 요청이 수행되지 않으므로, 자격 증명과 함께 리소스에 대한 요청이 이루어진 경우 이 헤더가 리소스와 함께 반환되지 않으면 브라우저는 응답을 무시하고 웹 콘텐츠에 반환하지 않습니다.
+{{HTTPHeader("Access-Control-Allow-Credentials")}} 헤더는 `자격 증명 플래그(credentials)`가 참일 때 요청에 대한 응답을 표시할 수 있는지 여부를 나타냅니다. 사전 요청에 대한 응답의 일부로 사용될 때, 이 헤더는 실제 요청이 자격 증명과 함께 수행될 수 있는지 여부를 나타냅니다. 단, GET 메서드 단순 요청은 사전 요청이 수행되지 않으므로, 자격 증명과 함께 리소스에 대한 요청이 이루어진 경우 이 헤더가 리소스와 함께 반환되지 않으면 브라우저는 응답을 무시하고 웹 콘텐츠에 반환하지 않습니다.
 
 ```http
 Access-Control-Allow-Credentials: true
 ```
 
-[자격 증명이 포함된 요청](#requests_with_credentials)은 위에서 논의하였습니다.
+[자격 증명이 포함된 요청](#자격_증명을_포함한_요청)은 위에서 논의하였습니다.
 
 ### Access-Control-Allow-Methods
 
@@ -433,11 +433,11 @@ Access-Control-Allow-Credentials: true
 Access-Control-Allow-Methods: <method>[, <method>]*
 ```
 
-위에 [사전 요청](#preflighted_requests)의 예가 제공되어 있으며, 이 예시에는 이 헤더를 브라우저에 전송하는 예가 포함되어 있습니다.
+위에 [사전 요청](/ko/docs/Glossary/Preflight_request)의 예가 제공되어 있으며, 이 예시에는 이 헤더를 브라우저에 전송하는 예가 포함되어 있습니다.
 
 ### Access-Control-Allow-Headers
 
-{{HTTPHeader("Access-Control-Allow-Headers")}} 헤더는 사전 요청에 대한 응답으로 사용되며, 실제 요청을 할 때 사용할 수 있는 HTTP 헤더를 나타냅니다. 이 헤더는 브라우저의 {{HTTPHeader("Access-Control-Request-Headers")}} 헤더에 대한 서버 측 응답입니다.
+{{HTTPHeader("Access-Control-Allow-Headers")}} 헤더는 [사전 요청](/ko/docs/Glossary/Preflight_request)에 대한 응답으로 사용되며, 실제 요청을 할 때 사용할 수 있는 HTTP 헤더를 나타냅니다. 이 헤더는 브라우저의 {{HTTPHeader("Access-Control-Request-Headers")}} 헤더에 대한 서버 측의 응답입니다.
 
 ```http
 Access-Control-Allow-Headers: <header-name>[, <header-name>]*
@@ -445,7 +445,7 @@ Access-Control-Allow-Headers: <header-name>[, <header-name>]*
 
 ## HTTP 요청 헤더
 
-이 섹션에서는 클라이언트가 교차 출처 공유 기능을 사용하기 위해 HTTP 요청을 발행할 때 사용할 수 있는 헤더들을 나열합니다. 이러한 헤더는 서버에 요청을 보낼 때 자동으로 설정됩니다. 교차 출처 요청을 만드는 개발자는 이러한 교차 출처 공유 요청 헤더를 프로그래밍적으로 설정할 필요가 없습니다.
+이 섹션에서는 클라이언트가 교차 출처 공유 기능을 사용하기 위해 HTTP 요청을 발행할 때 사용할 수 있는 헤더들을 나열합니다. 이러한 헤더는 서버를 호출할 때 개발자를 위해 설정됩니다. 교차 출처 요청을 만드는 개발자는 이러한 교차 출처 공유 요청 헤더를 프로그래밍적으로 설정할 필요가 없습니다.
 
 ### Origin
 
@@ -455,7 +455,7 @@ Access-Control-Allow-Headers: <header-name>[, <header-name>]*
 Origin: <origin>
 ```
 
-Origin 헤더 값은 요청이 시작된 서버를 나타내는 URI 입니다. 경로 정보는 포함하지 않고, 오직 서버 이름만 포함합니다.
+origin 값은 요청이 시작된 서버를 나타내는 URI 입니다. 경로 정보는 포함하지 않고, 오직 서버 이름만 포함합니다.
 
 > **참고:** `origin` 값은 `null` 또는 URI 가 올 수 있습니다.
 
@@ -463,23 +463,23 @@ Origin 헤더 값은 요청이 시작된 서버를 나타내는 URI 입니다. �
 
 ### Access-Control-Request-Method
 
-{{HTTPHeader("Access-Control-Request-Method")}} 헤더는 실제 요청에서 어떤 HTTP 메서드를 사용할지 서버에게 알려주기 위해, 사전 요청할 때 사용됩니다.
+{{HTTPHeader("Access-Control-Request-Method")}} 헤더는 실제 요청에서 어떤 HTTP 메서드를 사용할지 서버에게 알려주기 위해 사전 요청할 때 사용됩니다.
 
 ```http
 Access-Control-Request-Method: <method>
 ```
 
-이 사용법의 예제는 [위에서](#preflighted_requests) 찾을 수 있습니다.
+이 사용법의 예제는 [위에서](#사전_요청preflighted_requests) 찾을 수 있습니다.
 
 ### Access-Control-Request-Headers
 
-{{HTTPHeader("Access-Control-Request-Headers")}} 헤더는 사전 요청을 발행할 때 사용되며, 실제 요청에서 사용할 HTTP 헤더를 서버에 알리기 위해 사용됩니다 (예를 들어 [`headers`](/ko/docs/Web/API/RequestInit#headers) 옵션을 통해 전달). 이 브라우저 측 헤더는 {{HTTPHeader("Access-Control-Allow-Headers")}} 라는 서버 측 헤더로 응답받게 됩니다.
+{{HTTPHeader("Access-Control-Request-Headers")}} 헤더는 사전 요청을 발행할 때 사용되며, 실제 요청에서 사용할 HTTP 헤더를 서버에 알리기 위해 사용됩니다(예를 들어 [`headers`](/ko/docs/Web/API/RequestInit#headers) 옵션을 통해 전달). 이 브라우저 측 헤더는 {{HTTPHeader("Access-Control-Allow-Headers")}} 라는 서버 측 헤더로 응답 받게 됩니다.
 
 ```http
 Access-Control-Request-Headers: <field-name>[,<field-name>]*
 ```
 
-이 사용법의 예제는 [위에서](#preflighted_requests) 찾을 수 있습니다.
+이 사용법의 예제는 [위에서](#사전_요청preflighted_requests) 찾을 수 있습니다.
 
 ## 명세
 
