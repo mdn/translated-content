@@ -2,20 +2,15 @@
 title: CookieChangeEvent
 slug: Web/API/CookieChangeEvent
 l10n:
-  sourceCommit: 74206b3f81736bac558470f36222544cc67ba9e2
+  sourceCommit: de4bd74771b88bb6352c1136b608811edf24ffda
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}
 
-{{domxref("Cookie Store API", "", "", "nocode")}} 的 **`CookieChangeEvent`** 接口是发生任何 cookie 更改时在 {{domxref("CookieStore")}} 上触发的 {{domxref("CookieStore/change_event", "change")}} 事件的事件类型。
+{{domxref("Cookie Store API", "Cookie 存储 API", "", "nocode")}} 的 **`CookieChangeEvent`** 接口是发生任何 cookie 更改时在 {{domxref("CookieStore")}} 上触发的 {{domxref("CookieStore/change_event", "change")}} 事件的事件类型。
 
-导致派发 `CookieChangeEvent` 的 Cookie 变更包括：
-
-- 新创建一个 cookie 且没有立刻被删除。此用例中 `type` 为 "changed"。
-- 新创建一个 cookie 且立刻被删除。此用例中 `type` 为 "deleted"。
-- cookie 被删除。此用例中 `type` 为 "deleted"。
-
-> **备注：** cookie 被新插入的具有相同名称、域和路径的另一个 cookie 替换时，并且不会触发更改事件。
+> [!NOTE]
+> cookie 被新插入的具有相同名称、域和路径的另一个 cookie 替换时，并且不会触发更改事件。
 
 {{InheritanceDiagram}}
 
@@ -29,9 +24,9 @@ l10n:
 _该接口同样继承来自 {{domxref("Event")}} 的属性。_
 
 - {{domxref("CookieChangeEvent.changed")}} {{ReadOnlyInline}}
-  - : 返回包含一个或多个已变更的 cookie 的数组。
+  - : 列出所有新创建的 cookie 的数组。请注意，这将排除那些创建的、过期时间在过去的 cookie，因为这些 cookie 会被立即删除。
 - {{domxref("CookieChangeEvent.deleted")}} {{ReadOnlyInline}}
-  - : 返回包含一个或多个被删除的 cookie 的数组。
+  - : 列出所有已删除的 cookie 的数组，无论是因为它们过期还是因为它们被显式删除。请注意，这将包括那些创建的、过期时间在过去的 cookie。
 
 ## 实例方法
 
