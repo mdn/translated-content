@@ -68,7 +68,7 @@ l10n:
 
 - Firefox 现在可以安装 manifest.json [`"incognito"`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito) 键的值为 `"split"` 的扩展。然而，由于 Firefox 不支持分离模式，并为了保持隐私浏览的完整性，`"split"` 被视为 `"not_allowed"` 值的别名（[Firefox bug 1876924](https://bugzil.la/1876924)）。
 - 现在，当附加组件使用企业策略安装时，{{WebExtAPIRef("management.ExtensionInfo")}} 返回的 `install_type` 为 `"admin"`。（[Firefox bug 1895341](https://bugzil.la/1895341)）。
-- 为 {{WebExtAPIRef("declarativeNetRequest.getDynamicRules")} 和 {{WebExtAPIRef("declarativeNetRequest.getSessionRules")}} 添加了 `filter` 参数，其用于通过 ID 过滤返回的规则列表（[Firefox bug 1820870](https://bugzil.la/1820870)）。
+- 为 {{WebExtAPIRef("declarativeNetRequest.getDynamicRules")}} 和 {{WebExtAPIRef("declarativeNetRequest.getSessionRules")}} 添加了 `filter` 参数，其用于通过 ID 过滤返回的规则列表（[Firefox bug 1820870](https://bugzil.la/1820870)）。
 - 现在在用户安装 Manifest V3 版本的扩展时会显示其 [`host_permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) 权限的信息（[Firefox bug 1889402](https://bugzil.la/1889402)）。然而，如果扩展更新时请求了新的主机权限，则不会显示给同用户（[Firefox bug 1893232](https://bugzil.la/1893232)）。
 - 现已添加 {{WebExtAPIRef("runtime.getContexts")}} 函数，其用于返回与扩展关联的上下文的信息（[Firefox bug 1875480](https://bugzil.la/1875480)）。
 - 对于 Manifest V3 扩展，如果没有为 `_execute_action` 命令定义用户快捷键，则会回退到特殊的 [`_execute_browser_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts) 命令的用户定义快捷键。这使得从 Manifest V2 迁移到 V3 的扩展可以保留浏览器操作的任意用户定义快捷键（[Firefox bug 1797811](https://bugzil.la/1797811)）。
