@@ -19,7 +19,8 @@ slug: Web/CSS/@page
 
 `@page` @규칙은 CSS 객체 모델 인터페이스 {{domxref("CSSPageRule")}}를 통해 액세스될 수 있습니다.
 
-> **참고:** **주의:** W3C은 viewport 관련 {{cssxref("&lt;length&gt;")}} 단위, `vh`, `vw`, `vmin` 및 `vmax` 처리법을 논의 중입니다. 그 동안에 `@page` @규칙 내에서 사용하지 마세요.
+> [!NOTE]
+> W3C은 viewport 관련 {{cssxref("&lt;length&gt;")}} 단위, `vh`, `vw`, `vmin` 및 `vmax` 처리법을 논의 중입니다. 그 동안에 `@page` @규칙 내에서 사용하지 마세요.
 
 ## 구문
 

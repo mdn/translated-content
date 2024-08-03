@@ -1,17 +1,14 @@
 ---
-title: Document.anchors
+title: "Document: anchors プロパティ"
+short-title: anchors
 slug: Web/API/Document/anchors
+l10n:
+  sourceCommit: 10609d35e92f68f2dacbb1be07d31e736a2b487a
 ---
 
 {{APIRef("DOM")}} {{Deprecated_Header}}
 
 **`anchors`** は {{domxref("Document")}} インターフェイスの読み取り専用のプロパティで、文書中のすべてのアンカーのリストを返します。
-
-## 構文
-
-```js
-nodeList = document.anchors;
-```
 
 ### 値
 
@@ -21,7 +18,7 @@ nodeList = document.anchors;
 
 ```js
 if (document.anchors.length >= 5) {
-  dump("found too many anchors");
+  console.log("found too many anchors");
 }
 ```
 
@@ -35,13 +32,12 @@ if (document.anchors.length >= 5) {
     <title>Test</title>
     <script>
       function init() {
-        var toc = document.getElementById("toc");
-        var i, li, newAnchor;
-        for (i = 0; i < document.anchors.length; i++) {
-          li = document.createElement("li");
-          newAnchor = document.createElement("a");
-          newAnchor.href = "#" + document.anchors[i].name;
-          newAnchor.textContent = document.anchors[i].text;
+        const toc = document.getElementById("toc");
+        for (const anchor of document.anchors) {
+          const li = document.createElement("li");
+          const newAnchor = document.createElement("a");
+          newAnchor.href = "#" + anchor.name;
+          newAnchor.textContent = anchor.text;
           li.appendChild(newAnchor);
           toc.appendChild(li);
         }

@@ -72,7 +72,8 @@ document.createElementNS(namespaceURI, qualifiedName[, options]);
 </page>
 ```
 
-> **备注：** 上面给出的示例中使用了在 XHTML 文档中不推荐的内联脚本。这个特定的示例实际上是一个嵌入 XHTML 的 XUL 文档，然而，仍然建议适用。
+> [!NOTE]
+> 上面给出的示例中使用了在 XHTML 文档中不推荐的内联脚本。这个特定的示例实际上是一个嵌入 XHTML 的 XUL 文档，然而，仍然建议适用。
 
 ## 规范
 

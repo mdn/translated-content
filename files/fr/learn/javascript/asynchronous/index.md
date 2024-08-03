@@ -7,9 +7,9 @@ slug: Learn/JavaScript/Asynchronous
 
 Dans ce module, nous examinons le [JavaScript](/fr/docs/Glossary/JavaScript) [asynchrone](/fr/docs/Glossary/Asynchronous), pourquoi il est important et comment il peut être utilisé afin de gérer efficacement les opérations potentiellement bloquantes telles que la récupération de ressources sur un serveur.
 
-> **Remarque :**
+> [!CALLOUT]
 >
-> #### Vous cherchez à devenir développeuse ou développeur web front-end&nbsp;?
+> Vous cherchez à devenir développeuse ou développeur web front-end&nbsp;?
 >
 > Nous avons élaboré un cours qui comprend toutes les informations essentielles dont vous avez besoin pour atteindre votre objectif.
 >

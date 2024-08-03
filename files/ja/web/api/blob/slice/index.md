@@ -35,7 +35,7 @@ slice(start, end, contentType)
 
 {{Specifications}}
 
-## ブラウザの実装状況
+## ブラウザーの互換性
 
 {{Compat}}
 

@@ -41,7 +41,8 @@ slug: Web/HTML/Element/datalist
 
 類型 {{HTMLElement("input/month", "month")}}、{{HTMLElement("input/week", "week")}}、{{HTMLElement("input/date", "date")}}、{{HTMLElement("input/time", "time")}} 和 {{HTMLElement("input/datetime-local", "datetime-local")}} 可以顯示一個界面，方便用戶選擇日期和時間。預定值可以在那裡顯示，允許用戶快速填寫控制項的值。
 
-> **備註：** 當類型不受支援時，將使用 `text` 類型創建簡單的文本字段。該字段將正確識別推薦值並將其顯示給用戶作為下拉菜單。
+> [!NOTE]
+> 當類型不受支援時，將使用 `text` 類型創建簡單的文本字段。該字段將正確識別推薦值並將其顯示給用戶作為下拉菜單。
 
 ```html
 <input type="time" list="popularHours" />

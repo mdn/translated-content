@@ -59,7 +59,7 @@ function fixedEncodeURI(str) {
 }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

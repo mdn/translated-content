@@ -1,164 +1,173 @@
 ---
-title: HTTP 狀態碼
+title: HTTP 回應狀態碼
 slug: Web/HTTP/Status
+l10n:
+  sourceCommit: e39a9f516b1a994590c9bdf622b60244739060ad
 ---
 
 {{HTTPSidebar}}
 
-HTTP 狀態碼表明一個 [HTTP](/zh-TW/docs/Web/HTTP) 要求是否已經被完成。回應分為五種：
+HTTP 回應狀態碼表示特定的 [HTTP](/zh-TW/docs/Web/HTTP) 請求是否已成功完成。回應分為五類：
 
-1. 資訊回應 (Informational responses, `100`–`199`),
-2. 成功回應 (Successful responses, `200`–`299`),
-3. 重定向 (Redirects, `300`–`399`),
-4. 用戶端錯誤 (Client errors, `400`–`499`),
-5. 伺服器端錯誤 (Server errors, `500`–`599`).
+1. [資訊回應](#資訊回應)（`100`——`199`）
+2. [成功回應](#成功回應)（`200`——`299`）
+3. [重新導向訊息](#重新導向訊息)（`300`——`399`）
+4. [用戶端錯誤回應](#用戶端錯誤回應)（`400`——`499`）
+5. [伺服器錯誤回應](#伺服器錯誤回應)（`500`——`599`）
 
-以下的狀態碼定義在 [section 10 of RFC 2616](https://tools.ietf.org/html/rfc2616#section-10) 中。你可以在 [RFC 7231](https://tools.ietf.org/html/rfc7231#section-6.5.1) 查看更新過的規範。
+以下的狀態碼由 [RFC 9110](https://httpwg.org/specs/rfc9110.html#overview.of.status.codes) 定義。
 
-> **備註：** 如果你收到任何不在清單內的回應，那很可能伺服器自行軟體實作的非標準規範。
+> [!NOTE]
+> 如果你收到的回應不在[此列表](#資訊回應)中，那麼它是一個非標準回應，可能是伺服器軟體的自定義回應。
 
 ## 資訊回應
 
 - {{HTTPStatus(100, "100 Continue")}}
-  - : 此臨時回應表明，目前為止的一切完好，而用戶端應當繼續完成請求、或是在已完成請求的情況下，忽略此資訊。
-- {{HTTPStatus(101, "101 Switching Protocol")}}
-  - : 此狀態碼乃為用戶端 {{HTTPHeader("Upgrade")}} 請求標頭發送之回應、且表明伺服器亦切換中。
-- {{HTTPStatus(102, "102 Processing")}} ({{Glossary("WebDAV")}})
-  - : 此狀態碼表明伺服器收到並處理請求中，但目前未有回應。
+  - : 這個臨時回應表示用戶端應該繼續請求，或者如果請求已經完成，則忽略該回應。
+- {{HTTPStatus(101, "101 Switching Protocols")}}
+  - : 這個代碼是作為對來自用戶端的 {{HTTPHeader("Upgrade")}} 請求標頭的回應，並指示伺服器正在切換到的協議。
+- {{HTTPStatus(102, "102 Processing")}}（{{Glossary("WebDAV")}}）
+  - : 這個代碼表示伺服器已收到並正在處理請求，但還沒有可用的回應。
 - {{HTTPStatus(103, "103 Early Hints")}}
-  - : 此狀態碼主要與 {{HTTPHeader("Link")}} 標頭有關：它能讓用戶代理（user agent）能在伺服器準備回應前能 [preloading](/zh-TW/docs/Web/HTML/Preloading_content) 資源。
+  - : 這個狀態碼主要用於與 {{HTTPHeader("Link")}} 標頭一起使用，讓用戶代理在伺服器準備回應或者頁面需要從中獲取資源的原始來源時，開始[預加載](/zh-TW/docs/Web/HTML/Attributes/rel/preload)資源或者[預連接](/zh-TW/docs/Web/HTML/Attributes/rel/preconnect)。
 
 ## 成功回應
 
 - {{HTTPStatus(200, "200 OK")}}
-  - : 請求成功。成功的意義依照 HTTP 方法而定：
-    GET：資源成功獲取並於訊息主體中發送。
-    HEAD：entity 標頭已於訊息主體中。
-    POST：已傳送訊息主體中的 resource describing the result of the action。
-    TRACE：伺服器已接收到訊息主體內含的請求訊息。
+
+  - : 請求成功。「成功」的結果含義取決於 HTTP 方法：
+
+    - `GET`：資源已被檢索並在訊息主體中傳送。
+    - `HEAD`：回應中包含表示標頭，但沒有任何訊息主體。
+    - `PUT` 或 `POST`：描述操作結果的資源在訊息主體中傳送。
+    - `TRACE`：訊息主體包含了伺服器接收到的請求訊息。
+
 - {{HTTPStatus(201, "201 Created")}}
-  - : 請求成功且新的資源成功被創建，通常用於 POST 或一些 PUT 請求後的回應。
+  - : 請求成功，並因此創建了一個新的資源。這通常是在 `POST` 請求或某些 `PUT` 請求之後發送的回應。
 - {{HTTPStatus(202, "202 Accepted")}}
-  - : 此請求已經被接受但尚未處理。此狀態為非承諾性，代表 HTTP 無法在之後傳送一個非同步的回應告知請求的處理結果。最初目的為外部程序或其他伺服器處理請求的情況，或用於批次處理中。
+  - : 已接收請求，但尚未對其進行處理。由於在 HTTP 中沒有後續發送表示請求結果的非同步回應的方法，因此此回應是非承諾性的。它適用於另一個處理請求的進程或伺服器，或用於批處理。
 - {{HTTPStatus(203, "203 Non-Authoritative Information")}}
-  - : 此回應碼表示回傳的中介資料集與並非與原始伺服器上的有效確定集合完全相同，而是來自本地或第三方的副本。除此情況外，200 OK 回應碼應該被優先使用。
+  - : 此回應代碼表示返回的元資料與原始伺服器提供的資料不完全相同，而是從本地或第三方副本收集的。這主要用於另一個資源的鏡像或備份。除了這種特定情況外，`200 OK` 回應優先於此狀態。
 - {{HTTPStatus(204, "204 No Content")}}
-  - : There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones.
+  - : 沒有內容可發送給此請求，但標頭可能很有用。用戶端可以使用新的標頭更新此資源的快取標頭。
 - {{HTTPStatus(205, "205 Reset Content")}}
-  - : This response code is sent after accomplishing request to tell user agent reset document view which sent this request.
+  - : 告訴用戶端重置發送此請求的文件。
 - {{HTTPStatus(206, "206 Partial Content")}}
-  - : This response code is used because of range header sent by the client to separate download into multiple streams.
-- {{HTTPStatus(207, "207 Multi-Status")}} ({{Glossary("WebDAV")}})
-  - : A Multi-Status response conveys information about multiple resources in situations where multiple status codes might be appropriate.
-- {{HTTPStatus(208, "208 Already Reported")}} ({{Glossary("WebDAV")}})
-  - : Used inside a `<dav:propstat>` response element to avoid repeatedly enumerating the internal members of multiple bindings to the same collection.
-- {{HTTPStatus(226, "226 IM Used")}} ([HTTP Delta encoding](https://tools.ietf.org/html/rfc3229))
-  - : The server has fulfilled a GET request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.
+  - : 當從用戶端發送的 `Range` 標頭請求部分資源時，使用此回應代碼。
+- {{HTTPStatus(207, "207 Multi-Status")}}（{{Glossary("WebDAV")}}）
+  - : 傳達有關多個資源的資訊，適用於可能適用多個狀態碼的情況。
+- {{HTTPStatus(208, "208 Already Reported")}}（{{Glossary("WebDAV")}}）
+  - : 在 `<dav:propstat>` 回應元素中使用，以避免反復列舉對同一集合的多個綁定的內部成員。
+- {{HTTPStatus(226, "226 IM Used")}}（[HTTP 增量編碼](https://datatracker.ietf.org/doc/html/rfc3229)）
+  - : 伺服器已滿足對資源的 `GET` 請求，並且回應是對當前實例應用的一個或多個實例操作的結果的表示。
 
-## 重定向訊息
+## 重新導向訊息
 
-- {{HTTPStatus(300, "300 Multiple Choice")}}
-  - : 請求擁有一個以上的回應。用戶代理或使用者應該從中選一。不過，並沒有標準的選擇方案。
+- {{HTTPStatus(300, "300 Multiple Choices")}}
+  - : 該請求有多個可能的回應。用戶代理或用戶應該選擇其中一個。（沒有標準的選擇回應的方法，但建議使用 HTML 鏈接到這些可能性，以便用戶可以進行選擇。）
 - {{HTTPStatus(301, "301 Moved Permanently")}}
-  - : 此回應碼的意思是，請求資源的 URI 已被改變。有時候，會在回應內給予新的 URI。
+  - : 所請求的資源的 URL 已永久更改。新的 URL 在回應中給出。
 - {{HTTPStatus(302, "302 Found")}}
-  - : This response code means that URI of requested resource has been changed _temporarily_. New changes in the URI might be made in the future. Therefore, this same URI should be used by the client in future requests.
+  - : 此回應代碼表示所請求的資源的 URI 已*暫時*更改。將來可能對 URI 進行進一步更改。因此，用戶端應在以後的請求中使用相同的 URI。
 - {{HTTPStatus(303, "303 See Other")}}
-  - : Server sent this response to directing client to get requested resource to another URI with an GET request.
+  - : 伺服器發送此回應以指示用戶端使用 GET 請求在另一個 URI 獲取所請求的資源。
 - {{HTTPStatus(304, "304 Not Modified")}}
-  - : This is used for caching purposes. It is telling to client that response has not been modified. So, client can continue to use same cached version of response.
+  - : 這用於緩存目的。它告訴用戶端回應未被修改，因此用戶端可以繼續使用回應的相同緩存版本。
 - `305 Use Proxy` {{deprecated_inline}}
-  - : 在舊版本的 HTTP 規範中，表示請求資源必須透過代理存取。基於對代理的頻內設置 (in-band configuration) 相關的安全考量，該狀態碼已棄用。
+  - : 在 HTTP 規範的先前版本中定義，表示必須通過代理訪問所請求的回應。由於關於代理的帶內設定的安全問題，它已被棄用。
 - `306 unused`
-  - : 該狀態碼已不再被使用，僅被保留。該狀態碼曾在先前得的 HTTP 1.1 規範中被使用。
+  - : 此回應代碼不再使用；它只是保留的。它曾在 HTTP/1.1 規範的先前版本中使用過。
 - {{HTTPStatus(307, "307 Temporary Redirect")}}
-  - : 伺服器發送此回應來使客戶端保持請求方法不變向新的地址發出請求。 與 `302 Found` 相同，差別在於客戶端不許變更請求方法。例如，應使用另一個 `POST` 請求來重複發送 `POST` 請求。
+  - : 伺服器發送此回應以指示用戶端使用在先前請求中使用的相同方法，在另一個 URI 獲取所請求的資源。這與 `302 Found` HTTP 回應代碼具有相同的語義，唯一的區別在於用戶代理*不能*改變使用的 HTTP 方法：如果在第一個請求中使用了 `POST`，則在第二個請求中必須使用 `POST`。
 - {{HTTPStatus(308, "308 Permanent Redirect")}}
-  - : This means that the resource is now permanently located at another URI, specified by the `Location:` HTTP Response header. This has the same semantics as the `301 Moved Permanently` HTTP response code, with the exception that the user agent _must not_ change the HTTP method used: if a `POST` was used in the first request, a `POST` must be used in the second request.
+  - : 這意味著資源現在永久位於另一個 URI，由 `Location:` HTTP 回應標頭指定。這與 `301 Moved Permanently` HTTP 回應代碼具有相同的語義，唯一的區別在於用戶代理*不能*改變使用的 HTTP 方法：如果在第一個請求中使用了 `POST`，則在第二個請求中必須使用 `POST`。
 
 ## 用戶端錯誤回應
 
 - {{HTTPStatus(400, "400 Bad Request")}}
-  - : 此回應意味伺服器因為收到無效語法，而無法理解請求。
+  - : 由於被認為是用戶端錯誤的原因（例如，錯誤的請求語法、無效的請求訊息框架或欺騙性的請求路由），伺服器無法或不會處理該請求。
 - {{HTTPStatus(401, "401 Unauthorized")}}
-  - : 需要授權以回應請求。它有點像 403，但這裡的授權，是有可能辦到的。
+  - : 儘管 HTTP 標準指定為「未授權」，但從語義上講，此回應意味著「未經身份驗證」。也就是說，用戶端必須進行身份驗證才能獲取所請求的回應。
 - {{HTTPStatus(402, "402 Payment Required")}} {{experimental_inline}}
-  - : 此回應碼留作未來使用。一開始此碼旨在用於數位交易系統，然而，目前極少被使用，且不存在標準或慣例。
+  - : 此回應代碼保留供將來使用。最初創建此代碼的目的是用於數位支付系統，但此狀態碼極少使用，且沒有標準約定存在。
 - {{HTTPStatus(403, "403 Forbidden")}}
-  - : 用戶端並無訪問權限，例如未被授權，所以伺服器拒絕給予應有的回應。不同於 401，伺服端知道用戶端的身份。
+  - : 用戶端沒有訪問內容的權限；即未經授權，因此伺服器拒絕提供所請求的資源。與 `401 Unauthorized` 不同，伺服器已知道用戶端的身份。
 - {{HTTPStatus(404, "404 Not Found")}}
-  - : 伺服器找不到請求的資源。因為在網路上它很常出現，這回應碼也許最為人所悉。
+  - : 伺服器找不到所請求的資源。在瀏覽器中，這意味著 URL 不被識別。在 API 中，這也可能表示端點是有效的，但資源本身不存在。伺服器可能會發送此回應代碼，而不是 `403 Forbidden`，以隱藏未經授權的用戶端的資源存在。
+    由於其在網路上的頻繁出現，此回應代碼可能是最為人熟知的。
 - {{HTTPStatus(405, "405 Method Not Allowed")}}
-  - : 伺服器理解此請求方法，但它被禁用或不可用。有兩個強制性方法：`GET` 與 `HEAD`，永遠不該被禁止、也不該回傳此錯誤碼。
+  - : 伺服器知道請求方法，但不支援目標資源。例如，API 可能不允許調用 `DELETE` 來刪除資源。
 - {{HTTPStatus(406, "406 Not Acceptable")}}
-  - : This response is sent when the web server, after performing [server-driven content negotiation](/zh-TW/docs/HTTP/Content_negotiation#Server-driven_negotiation), doesn't find any content following the criteria given by the user agent.
+  - : 當網路伺服器在[伺服器驅動的內容協商](/zh-TW/docs/Web/HTTP/Content_negotiation#server-driven_negotiation)後，找不到符合用戶代理給定標準的內容時，就會發送此回應。
 - {{HTTPStatus(407, "407 Proxy Authentication Required")}}
-  - : 類似於 401，但需要被代理伺服器驗證。.
+  - : 這與 `401 Unauthorized` 類似，但需要代理進行驗證。
 - {{HTTPStatus(408, "408 Request Timeout")}}
-  - : This response is sent on an idle connection by some servers, even without any previous request by the client. It means that the server would like to shut down this unused connection. This response is used much more since some browsers, like Chrome, Firefox 27+, or IE9, use HTTP pre-connection mechanisms to speed up surfing. Also note that some servers merely shut down the connection without sending this message.
+  - : 一些伺服器在閒置連接時發送此回應，即使用戶端之前沒有發送任何請求。這意味著伺服器希望關閉此未使用的連接。由於一些瀏覽器（如 Chrome、Firefox 27+ 或 IE9）使用 HTTP 預連接機制加快瀏覽速度，因此此回應用得更多。還要注意，一些伺服器僅關閉連接而不發送此消息。
 - {{HTTPStatus(409, "409 Conflict")}}
-  - : 表示請求與伺服器目前狀態衝突
+  - : 當請求與伺服器的當前狀態存在衝突時，就會發送此回應。
 - {{HTTPStatus(410, "410 Gone")}}
-  - : 當伺服器已刪除請求的內容時會送出此回應。
+  - : 當所請求的內容已永久從伺服器中刪除且沒有轉發地址時，就會發送此回應。用戶端應該刪除其緩存和指向資源的鏈接。HTTP 規範打算將此狀態碼用於「有限時間的促銷服務」。API 不應感到有必要使用此狀態碼來指示已刪除的資源。
 - {{HTTPStatus(411, "411 Length Required")}}
-  - : 伺服器拒絕該請求，因為 `Content-Length` 頭沒有被定義，然而伺服器要求。
+  - : 伺服器拒絕了請求，因為未定義 `Content-Length` 標頭欄位，而伺服器需要它。
 - {{HTTPStatus(412, "412 Precondition Failed")}}
-  - : The client has indicated preconditions in its headers which the server does not meet.
+  - : 用戶端在其標頭中指示了伺服器未達到的前提條件。
 - {{HTTPStatus(413, "413 Payload Too Large")}}
-  - : 請求的實體資料大小超過了伺服器定義的上限，伺服器會關閉連接或返回一個 `Retry-After` 回應頭。
+  - : 請求實體大於伺服器定義的限制。伺服器可能會關閉連接或返回 `Retry-After` 標頭欄位。
 - {{HTTPStatus(414, "414 URI Too Long")}}
-  - : 客戶端的 URI 請求超過伺服器願意解析的長度。
+  - : 用戶端所請求的 URI 長度超過伺服器願意解釋的範圍。
 - {{HTTPStatus(415, "415 Unsupported Media Type")}}
-  - : 被請求資源的多媒體類型不被伺服器支援，因此該請求被拒絕。
-- {{HTTPStatus(416, "416 Requested Range Not Satisfiable")}}
-  - : The range specified by the `Range` header field in the request can't be fulfilled; it's possible that the range is outside the size of the target URI's data.
+  - : 所請求資料的媒體格式不受伺服器支援，因此伺服器拒絕該請求。
+- {{HTTPStatus(416, "416 Range Not Satisfiable")}}
+  - : 請求中 `Range` 標頭欄位指定的範圍無法滿足。可能是目標 URI 的資料大小超出了範圍。
 - {{HTTPStatus(417, "417 Expectation Failed")}}
-  - : 此回應代表伺服器未能滿足請求標頭的`Expect`欄位所提出的期望回應。
+  - : 此回應代碼意味著伺服器無法滿足 `Expect` 請求標頭欄位指示的期望。
 - {{HTTPStatus(418, "418 I'm a teapot")}}
-  - : The server refuses the attempt to brew coffee with a teapot.
+  - : 伺服器拒絕使用茶壺沖泡咖啡的嘗試。
 - {{HTTPStatus(421, "421 Misdirected Request")}}
-  - : The request was directed at a server that is not able to produce a response. This can be sent by a server that is not configured to produce responses for the combination of scheme and authority that are included in the request URI.
-- {{HTTPStatus(422, "422 Unprocessable Entity")}} ({{Glossary("WebDAV")}})
-  - : 請求格式正確，但有部分語意上的錯誤而無法執行請求。
-- {{HTTPStatus(423, "423 Locked")}} ({{Glossary("WebDAV")}})
-  - : 被訪問的資源被鎖定。
-- {{HTTPStatus(424, "424 Failed Dependency")}} ({{Glossary("WebDAV")}})
-  - : 由於先前的請求失敗導致此請求失敗。
+  - : 所發送的請求是針對無法產生回應的伺服器的。這可以由未配置為產生包含在請求 URI 中的方案和權限組合的回應的伺服器發送。
+- {{HTTPStatus(422, "422 Unprocessable Content")}}（{{Glossary("WebDAV")}}）
+  - : 請求格式良好，但由於語義錯誤而無法遵循。
+- {{HTTPStatus(423, "423 Locked")}}（{{Glossary("WebDAV")}}）
+  - : 正在訪問的資源被鎖定。
+- {{HTTPStatus(424, "424 Failed Dependency")}}（{{Glossary("WebDAV")}}）
+  - : 由於之前的請求失敗，請求失敗。
+- {{HTTPStatus(425, "425 Too Early")}} {{experimental_inline}}
+  - : 表示伺服器不願冒險處理可能被重播的請求。
 - {{HTTPStatus(426, "426 Upgrade Required")}}
-  - : The server refuses to perform the request using the current protocol but might be willing to do so after the client upgrades to a different protocol. The server sends an {{HTTPHeader("Upgrade")}} header in a 426 response to indicate the required protocol(s).
+  - : 伺服器拒絕使用當前協議執行請求，但在用戶端升級到不同協議後可能會願意這樣做。伺服器在 426 回應中使用 {{HTTPHeader("Upgrade")}} 標頭來指示所需的協議。
 - {{HTTPStatus(428, "428 Precondition Required")}}
-  - : The origin server requires the request to be conditional. Intended to prevent the 'lost update' problem, where a client GETs a resource's state, modifies it, and PUTs it back to the server, when meanwhile a third party has modified the state on the server, leading to a conflict.
+  - : 原始伺服器需要請求具有條件。此回應旨在防止「丟失更新」問題，即當用戶端 `GET` 資源的狀態、修改它並將其 `PUT` 回伺服器時，同時第三方已在伺服器上修改了狀態，導致衝突。
 - {{HTTPStatus(429, "429 Too Many Requests")}}
-  - : 用戶在給定的時間內 ("rate limiting") 發送了過多的請求。
+  - : 用戶在給定時間內發送了過多的請求（「速率限制」）。
 - {{HTTPStatus(431, "431 Request Header Fields Too Large")}}
-  - : 伺服器不願意處理該請求，因為標頭欄位過大。該請求可能可以在減少請求標頭欄位大小後重新提交。
+  - : 伺服器不願處理該請求，因為其標頭欄位太大。減小請求標頭欄位的大小後，可以重新提交請求。
 - {{HTTPStatus(451, "451 Unavailable For Legal Reasons")}}
-  - : 用戶端請求違法的資源，例如受政府審查的網頁。
+  - : 用戶代理請求無法合法提供的資源，例如被政府審查的網頁。
 
-## 伺服器端錯誤回應
+## 伺服器錯誤回應
 
 - {{HTTPStatus(500, "500 Internal Server Error")}}
-  - : 伺服器端發生未知或無法處理的錯誤。
+  - : 伺服器遇到一個它不知道如何處理的情況。
 - {{HTTPStatus(501, "501 Not Implemented")}}
-  - : 伺服器不支援請求的方法，僅有`GET`與`HEAD`是伺服器必須支援的方法。
+  - : 伺服器不支援請求方法，無法處理。伺服器需要支援的唯一方法（因此不應返回此代碼）是 `GET` 和 `HEAD`。
 - {{HTTPStatus(502, "502 Bad Gateway")}}
-  - : 作為閘道的伺服器，在獲取處理請求所需的回應時，得到無效回應。
+  - : 此錯誤回應表示，伺服器在作為閘道器以獲取處理請求所需的回應時，收到了無效的回應。
 - {{HTTPStatus(503, "503 Service Unavailable")}}
-  - : The server is not ready to handle the request. Common causes are a server that is down for maintenance or that is overloaded. Note that together with this response, a user-friendly page explaining the problem should be sent. This responses should be used for temporary conditions and the `Retry-After:` HTTP header should, if possible, contain the estimated time before the recovery of the service. The webmaster must also take care about the caching-related headers that are sent along with this response, as these temporary condition responses should usually not be cached.
+  - : 伺服器尚未準備好處理該請求。常見原因是伺服器正在進行維護或負載過重。需要注意的是，除了此回應外，還應該發送一個用戶友好的頁面來解釋問題。此回應應該用於暫時的情況，並且如果可能，`Retry-After` HTTP 標頭應包含服務恢復之前的估計時間。網站管理員還必須注意與此回應一起發送的與緩存相關的標頭，因為這些暫時的狀態回應通常不應該被緩存。
 - {{HTTPStatus(504, "504 Gateway Timeout")}}
-  - : 伺服器作為閘道器時無法及時得到回應。
+  - : 當伺服器充當閘道器且無法及時獲得回應時，將提供此錯誤回應。
 - {{HTTPStatus(505, "505 HTTP Version Not Supported")}}
-  - : 請求使用的 HTTP 版本不被伺服器支援。
+  - : 請求中使用的 HTTP 版本不受伺服器支援。
 - {{HTTPStatus(506, "506 Variant Also Negotiates")}}
-  - : The server has an internal configuration error: transparent content negotiation for the request results in a circular reference.
-- {{HTTPStatus(507, "507 Insufficient Storage")}}
-  - : The server has an internal configuration error: the chosen variant resource is configured to engage in transparent content negotiation itself, and is therefore not a proper end point in the negotiation process.
-- {{HTTPStatus(508, "508 Loop Detected")}} ({{Glossary("WebDAV")}})
-  - : 伺服器處理請求時偵測到無限迴圈。
+  - : 伺服器存在內部配置錯誤：所選擇的變體資源被配置為自行參與透明內容協商，因此不是協商過程中的適當端點。
+- {{HTTPStatus(507, "507 Insufficient Storage")}}（{{Glossary("WebDAV")}}）
+  - : 由於伺服器無法存儲成功完成請求所需的表示，因此無法對資源執行該方法。
+- {{HTTPStatus(508, "508 Loop Detected")}}（{{Glossary("WebDAV")}}）
+  - : 伺服器在處理請求時檢測到無限循環。
 - {{HTTPStatus(510, "510 Not Extended")}}
-  - : 伺服器需要對請求做進一步的擴充才能完成請求。
+  - : 需要對請求進行進一步擴展，以便伺服器能夠完成它。
 - {{HTTPStatus(511, "511 Network Authentication Required")}}
-  - : 用戶需要經過認證才能取得網路存取權。
+  - : 表示用戶端需要進行身份驗證以獲取網路訪問。
 
 ## 瀏覽器相容性
 
@@ -166,8 +175,5 @@ HTTP 狀態碼表明一個 [HTTP](/zh-TW/docs/Web/HTTP) 要求是否已經被完
 
 ## 參見
 
-- [List of HTTP status codes on Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
-- [IANA official registry of HTTP status codes](http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
-- [HTTP Status Codes Cheat Sheet](https://www.exai.com/blog/http-status-codes-cheat-sheet)
-- [A Complete Guide and List of HTTP Status Codes](https://kinsta.com/blog/http-status-codes/)
-- [httpstatus – 檢查網址重定向路徑、請求標頭與 HTTP 狀態代碼](https://techmoon.xyz/httpstatus/)
+- [維基百科：HTTP 狀態碼列表](https://zh.wikipedia.org/wiki/HTTP状态码)
+- [IANA 官方的 HTTP 狀態碼註冊](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)

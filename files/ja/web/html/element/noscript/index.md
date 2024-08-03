@@ -2,12 +2,38 @@
 title: "<noscript>: スクリプト無し要素"
 slug: Web/HTML/Element/noscript
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
 {{HTMLSidebar}}
 
 **`<noscript>`** は [HTML](/ja/docs/Web/HTML) の要素で、ブラウザーがこのページ上のスクリプトの種類に対応していない場合や、スクリプトの実行が無効にされている場合に表示する HTML の部分を定義します。
+
+## 属性
+
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+
+## 例
+
+```html
+<noscript>
+  <!-- 外部ファイルにリンクするアンカー -->
+  <a href="https://www.mozilla.org/">外部リンク</a>
+</noscript>
+<p>ロック！！</p>
+```
+
+### スクリプトが有効になっている場合の表示例
+
+ロック！！
+
+### スクリプトが無効になっている場合の表示例
+
+[外部リンク](https://www.mozilla.org/)
+
+ロック！！
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
@@ -44,7 +70,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
@@ -77,30 +103,6 @@ l10n:
     </tr>
   </tbody>
 </table>
-
-## 属性
-
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
-
-## 例
-
-```html
-<noscript>
-  <!-- 外部ファイルにリンクするアンカー -->
-  <a href="https://www.mozilla.org/">外部リンク</a>
-</noscript>
-<p>ロック！！</p>
-```
-
-### スクリプトが有効になっている場合の表示例
-
-ロック！！
-
-### スクリプトが無効になっている場合の表示例
-
-[外部リンク](https://www.mozilla.org/)
-
-ロック！！
 
 ## 仕様書
 

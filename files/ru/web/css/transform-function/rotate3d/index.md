@@ -125,7 +125,7 @@ div {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}

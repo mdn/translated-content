@@ -5,7 +5,8 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 
 {{AddonSidebar}}
 
-> **备注：** 注意这个 key 不被 Blink-based 浏览器 (Google Chrome 和 Opera) 支持。如果你在插件中包含了这个 key，当在这些浏览器中调用时虽然能用但是会显示警告。
+> [!NOTE]
+> 注意这个 key 不被 Blink-based 浏览器 (Google Chrome 和 Opera) 支持。如果你在插件中包含了这个 key，当在这些浏览器中调用时虽然能用但是会显示警告。
 
 <table class="fullwidth-table standard-table">
   <tbody>

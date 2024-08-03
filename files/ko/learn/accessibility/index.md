@@ -13,7 +13,7 @@ slug: Learn/Accessibility
 
 > **참고:**
 >
-> 당신은 당신이 당신의 자신의 파일을 생성 할 수 있는 기능이 없는 컴퓨터 / 태블릿 / 다른 장치에서 작업하는 경우, 당신은 [JSBin](http://jsbin.com/) 또는 [Thimble](https://thimble.mozilla.org/) 같은 온라인 코딩 프로그램에서 코드 예제의 대부분을 테스트 할 수 있습니다.
+> 당신은 당신이 당신의 자신의 파일을 생성 할 수 있는 기능이 없는 컴퓨터 / 태블릿 / 다른 장치에서 작업하는 경우, 당신은 [JSBin](https://jsbin.com/) 또는 [Glitch](https://glitch.com/) 같은 온라인 코딩 프로그램에서 코드 예제의 대부분을 테스트 할 수 있습니다.
 
 ## 가이드
 

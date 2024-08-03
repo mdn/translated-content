@@ -3,6 +3,8 @@ title: hashchange
 slug: Web/API/Window/hashchange_event
 ---
 
+{{APIRef}}
+
 L'événement `hashchange` est déclenché lorsque l'identificateur de fragment de l'URL a changé (la partie de l'URL qui suit le symbole #, y compris le symbole # lui-même).
 
 <table class="properties">

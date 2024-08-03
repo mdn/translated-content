@@ -46,7 +46,8 @@ Django 在安装和配置方面非常灵活。Django 可以：
 
 每个选项都需要略微不同的配置和设置。以下小节解释了你的一些选择。在本文的其余部分中，我们将介绍 Django 在几个操作系统上的设置，并且在本教程的剩余模块中将假设你已进行该设置。
 
-> **备注：** 其他可能的安装选项在官方 Django 文档中介绍。[相应文件 点击这里](#furtherreading).
+> [!NOTE]
+> 其他可能的安装选项在官方 Django 文档中介绍。[相应文件 点击这里](#furtherreading).
 
 #### 支持哪些操作系统？
 
@@ -62,7 +63,8 @@ Django web 应用程序能运行在几乎任何可以运行 Python3 的计算机
 
 我们建议你使用最新版本的 Python 3，除非该站点依赖于仅适用于 Python 2 的第三方库。本文将介绍如何为 Python 3 安装环境（Python 2 的等效设置将非常相似）。
 
-> **备注：** Python 2.7 无法用于当前的 Django 发行版本（Django 1.11.x 系列是最后支持 Python 2.7 的版本）。
+> [!NOTE]
+> Python 2.7 无法用于当前的 Django 发行版本（Django 1.11.x 系列是最后支持 Python 2.7 的版本）。
 
 #### 我们在哪里下载 Django?
 
@@ -80,13 +82,15 @@ Django 支持四个主要数据库（PostgreSQL，MySQL，Oracle 和 SQLite）�
 
 对于本文（和本模块的大部分），我们将使用将数据存储在文件中的 SQLite 数据库。SQLite 旨在用作轻量级数据库，不能支持高并发。然而，这确实是只读的应用程序的绝佳选择。
 
-> **备注：** 当你使用标准工具（django-admin）启动你的网站项目时，Django 将默认使用 SQLite。用来入门时，这是一个很好的选择，因为它不需要额外的配置和设置。
+> [!NOTE]
+> 当你使用标准工具（django-admin）启动你的网站项目时，Django 将默认使用 SQLite。用来入门时，这是一个很好的选择，因为它不需要额外的配置和设置。
 
 #### 安装本机系统还是 Python 虚拟环境中？
 
 当你安装 Python3 时，将获得一个由所有 Python3 代码共享的全局环境。虽然你可以在该环境中安装任何你喜欢的 Python 包，但是每次只能安装每个包的一个特定版本。
 
-> **备注：** 安装到全局环境的 Python 应用程序可能会相互冲突（例如如果它们依赖于同一包的不同版本）。
+> [!NOTE]
+> 安装到全局环境的 Python 应用程序可能会相互冲突（例如如果它们依赖于同一包的不同版本）。
 
 如果你把 Django 安装到默认/全局环境中，那么在该计算机上将只能定位到 Django 的一个版本。如果你想创建新的网站 (使用最新版本的 Django)，同时仍然维护依赖旧版本的网站，这可能是个问题。
 
@@ -100,7 +104,8 @@ Django 支持四个主要数据库（PostgreSQL，MySQL，Oracle 和 SQLite）�
 
 本节简要介绍了如何检查有哪些版本的 Python，并根据需要安装适用于 **Ubuntu Linux 16.04,macOS, and Windows 10**的新版本。
 
-> **备注：** 根据你的平台，你还可以从操作系统自己的软件包管理器或其他机制安装 Python / pip。对于大多数平台，你可以从<https://www.python.org/downloads/>下载所需的安装文件，并使用该平台特定的方法进行安装。
+> [!NOTE]
+> 根据你的平台，你还可以从操作系统自己的软件包管理器或其他机制安装 Python / pip。对于大多数平台，你可以从<https://www.python.org/downloads/>下载所需的安装文件，并使用该平台特定的方法进行安装。
 
 ### Ubuntu 18.04
 
@@ -173,7 +178,8 @@ Windows 安装程序默认包含 pip3 (Python 包管理器)。同样在命令提
 pip3 list
 ```
 
-> **备注：** 安装包应该已把运行上述命令所需的一切设置完成。但如果你得到的消息是找不到 Python，那么你可能忘记将 Python 添加到系统路径中了。你可以通过再次运行安装包，选择"Modify"，并在下一页面中勾选 "Add Python to environment variables"来修复这个问题。
+> [!NOTE]
+> 安装包应该已把运行上述命令所需的一切设置完成。但如果你得到的消息是找不到 Python，那么你可能忘记将 Python 添加到系统路径中了。你可以通过再次运行安装包，选择"Modify"，并在下一页面中勾选 "Add Python to environment variables"来修复这个问题。
 
 ## 在 Python 虚拟环境中使用 Django
 
@@ -258,7 +264,8 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 此处使用和 Ubuntu 相同的代码行，但是启动文件是主目录中叫做 **.bash_profile** 的隐藏文件。
 
-> **备注：** 如果找不到 **.bash_profile** 进行编辑，也可以使用 nano 在终端中打开它，命令看起来类似于：
+> [!NOTE]
+> 如果找不到 **.bash_profile** 进行编辑，也可以使用 nano 在终端中打开它，命令看起来类似于：
 >
 > ```bash
 > cd ~  # Navigate to my home directory
@@ -303,7 +310,8 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get
 
 现在你已进入虚拟环境，可以进行 Django 安装并开始开发。
 
-> **备注：** 从现在开始，在本文 (实际上是该模块) 中，请假定所有命令都在类似于我们上面设置的 Python 虚拟环境中运行。
+> [!NOTE]
+> 从现在开始，在本文 (实际上是该模块) 中，请假定所有命令都在类似于我们上面设置的 Python 虚拟环境中运行。
 
 ### 使用一个虚拟环境
 
@@ -334,7 +342,8 @@ py -3 -m django --version
     1.10.10
 ```
 
-> **备注：** 如果上面的 Windows 命令没有显示 django 模块，请尝试：
+> [!NOTE]
+> 如果上面的 Windows 命令没有显示 django 模块，请尝试：
 >
 > ```bash
 > python -m django --version
@@ -342,7 +351,8 @@ py -3 -m django --version
 >
 > 在 Windows 中，Python 3 脚本是通过在命令前面加上`py -3`来启动的，尽管该脚本可能会因你的特定安装而有所不同。如果遇到命令问题，请尝试省略`-3`修饰符。在 Linux /macOS 中，命令是 python3。
 
-> **警告：** 本模块的其余部分使用 Linux 命令来调用 Python 3（`python3`）。如果你在 Windows 上工作，只需将此前缀替换为： `py -3`
+> [!WARNING]
+> 本模块的其余部分使用 Linux 命令来调用 Python 3（`python3`）。如果你在 Windows 上工作，只需将此前缀替换为： `py -3`
 
 ## 测试你的安装
 
@@ -377,7 +387,8 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
-> **备注：** 上面的命令显示了 Linux /macOS 命令。你可以忽略关于“15 unapplied migration(s)”的警告！
+> [!NOTE]
+> 上面的命令显示了 Linux /macOS 命令。你可以忽略关于“15 unapplied migration(s)”的警告！
 
 一旦服务器运行，你可以通过本地 Web 浏览器打开`http://127.0.0.1:8000/`来查看该站点。你应该看到一个如下所示的网站：
 

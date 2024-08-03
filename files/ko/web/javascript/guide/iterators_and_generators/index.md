@@ -122,7 +122,7 @@ function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
 
 ### iterable을 기대하는 구문
 
-일부 문(statement) 및 식(expression)은 iterable합니다, 가령 {{jsxref("Statements/for...of","for-of")}} 루프, {{jsxref("Operators/Spread_operator","spread syntax","","true")}}, {{jsxref("Operators/yield*","yield*")}} 및 {{jsxref("Operators/Destructuring_assignment","해체 할당","","true")}}.
+일부 문(statement) 및 식(expression)은 iterable합니다, 가령 {{jsxref("Statements/for...of","for-of")}} 루프, {{jsxref("Operators/Spread_operator","spread syntax","",1)}}, {{jsxref("Operators/yield*","yield*")}} 및 {{jsxref("Operators/Destructuring_assignment","해체 할당","",1)}}.
 
 ```js
 for (let value of ["a", "b", "c"]) {

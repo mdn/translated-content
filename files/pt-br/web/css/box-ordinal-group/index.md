@@ -5,7 +5,8 @@ slug: Web/CSS/box-ordinal-group
 
 {{CSSRef}}
 
-> **Aviso:** Essa propriedade é parte do projeto do módulo original do CSS Flexible Box Layout, e foi substituído em projetos recentes.
+> [!WARNING]
+> Essa propriedade é parte do projeto do módulo original do CSS Flexible Box Layout, e foi substituído em projetos recentes.
 
 Veja [Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) para mais informações do que você deveria usar ao invés dessa propriedade.
 

@@ -56,7 +56,7 @@ Gecko 33 を搭載した Firefox 33 は、米国時間 2014 年 10 月 14 日に
 
 - 非標準の {{jsxref("Number.toInteger()")}} メソッドを削除しました ([Firefox バグ 1022396](https://bugzil.la/1022396))。
 - {{jsxref("Map.prototype.set()")}}、{{jsxref("WeakMap.prototype.set()")}}、{{jsxref("Set.prototype.add()")}} の各メソッドがチェイン可能になり、`undefined` ではなく同等のオブジェクトを返すようになりました ([Firefox バグ 1031632](https://bugzil.la/1031632))。
-- [デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)は関数のボディにある関数宣言より先に評価されますので、これらの関数はデフォルトパラメータから参照できなくなりました ([Firefox バグ 1022962](https://bugzil.la/1022962))。
+- [デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)は関数のボディにある関数宣言より先に評価されますので、これらの関数はデフォルト引数から参照できなくなりました ([Firefox バグ 1022962](https://bugzil.la/1022962))。
 - オブジェクトリテラルで短縮プロパティを許容するようになりました。明示的に定義されていない場合は、プロパティのキーは同名の変数で初期化されます。例: `function f(x, y) { return {x, y}; }` は `function f(x, y) { return {x: x, y: y}; }` と等価です ([Firefox バグ 875002](https://bugzil.la/875002))。
 - [`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield) および [`yield*`](/ja/docs/Web/JavaScript/Reference/Operators/yield*) の構文解析を、最新の ES6 仕様に準拠するよう更新しました ([Firefox バグ 981599](https://bugzil.la/981599))。
 - 非標準の `hasOwn` トラップを削除しました ([Firefox バグ 980565](https://bugzil.la/980565))。
@@ -109,7 +109,7 @@ _変更なし。_
 
 - [`Panel` コンストラクター](</ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel#panel(options)>)の新たなオプションにより、パネルのコンテキストメニューをサポートしました。
 - [`tab.readyState`](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#readyState) をサポートしました。
-- [`BrowserWindow`](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#browserwindow) 引数を [`sidebar.show()`](</ja/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_sidebar#show(window)>) および [`sidebar.hide()`](</ja/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_sidebar#hide(window)>) に追加しました。サイドバーを表示または非表示にするウィンドウを制御するためのパラメータです。
+- [`BrowserWindow`](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#browserwindow) 引数を [`sidebar.show()`](</ja/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_sidebar#show(window)>) および [`sidebar.hide()`](</ja/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_sidebar#hide(window)>) に追加しました。サイドバーを表示または非表示にするウィンドウを制御するための引数です。
 
 #### 詳細
 

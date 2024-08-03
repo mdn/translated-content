@@ -1,43 +1,38 @@
 ---
-title: Element.hasAttributes()
+title: "Element: метод hasAttributes()"
 slug: Web/API/Element/hasAttributes
+l10n:
+  sourceCommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
-Метод **`Element.hasAttributes()`** возвращает **Boolean** значение, указывая содержит данный элемент какие-либо атрибуты или нет.
+Метод **`hasAttributes()`** интерфейса {{domxref("Element")}} возвращает логическое значение, указывающее, есть ли у текущего элемента атрибуты или нет.
 
 ## Синтаксис
 
-```
-var result = element.hasAttributes();
+```js-nolint
+hasAttributes()
 ```
 
-- `result`
-  - : содержит возвращаемое значение `true` или `false`.
+### Параметры
+
+Нет.
+
+### Возвращаемое значение
+
+Логическое значение.
 
 ## Пример
 
 ```js
-var foo = document.getElementById("foo");
+let foo = document.getElementById("foo");
 if (foo.hasAttributes()) {
-  // do something with 'foo.attributes'
+  // можно производить действия с 'foo.attributes'
 }
 ```
 
-## Polyfill
-
-```js
-(function (prototype) {
-  prototype.hasAttributes =
-    prototype.hasAttributes ||
-    function () {
-      return this.attributes.length > 0;
-    };
-})(Element.prototype);
-```
-
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
@@ -49,3 +44,7 @@ if (foo.hasAttributes()) {
 
 - {{domxref("Element.attributes")}}
 - {{domxref("Element.hasAttribute()")}}
+- {{domxref("Element.getAttribute()")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.removeAttribute()")}}
+- {{domxref("Element.toggleAttribute()")}}

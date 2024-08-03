@@ -2,10 +2,10 @@
 title: Blob：text() 方法
 slug: Web/API/Blob/text
 l10n:
-  sourceCommit: 84a9afd94f497d4173bde131731ef6bdf0b6135d
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 {{domxref("Blob")}} 接口的 **`text()`** 方法返回一个 {{jsxref("Promise")}}，其会兑现一个包含 blob 内容的 UTF-8 格式的字符串。
 

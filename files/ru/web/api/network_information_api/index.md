@@ -58,7 +58,7 @@ if (connection) {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Online and offline events](/ru/docs/Online_and_offline_events)
 - {{domxref("Navigator.connection", "window.navigator.connection")}}

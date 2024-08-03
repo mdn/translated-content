@@ -3,6 +3,8 @@ title: ":first"
 slug: Web/CSS/:first
 ---
 
+{{CSSRef}}
+
 [CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/%D0%9F%D1%81%D0%B5%D0%B2%D0%B4%D0%BE-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B) **`:first`** используется с @-правилом {{cssxref("@page")}}, представляя первую страницу документа при печати.
 
 ```css

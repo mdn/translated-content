@@ -71,13 +71,15 @@ _Herda propriedades de seus pais, {{domxref("EventTarget")}}_.\[1]
 
   - : Retorna um {{domxref("DOMString")}} representando a parte local do nome qualificado de um elemento.
 
-    > **Nota:** No Firefox 3.5 e nas versões anteriores, a propriedade coloca em caixa alta o nome local de elementos HTML (mas não elementos XHTML). Em versões posteriores, isso não acontece, então a propriedade está em caixa baixa para ambos HTML e XHTML.
+    > [!NOTE]
+    > No Firefox 3.5 e nas versões anteriores, a propriedade coloca em caixa alta o nome local de elementos HTML (mas não elementos XHTML). Em versões posteriores, isso não acontece, então a propriedade está em caixa baixa para ambos HTML e XHTML.
 
 - {{domxref("Node.namespaceURI")}}{{readonlyInline}}
 
   - : O espaço de nomes URI desse nó, ou `null` se não estiver no espaço de nomes.
 
-    > **Nota:** No Firefox 3.5 e nas versões anteriores, elementos HTML estão no espaço de nomes. Em versões posteriores, elementos HTML estão em [`https://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/), nas árvores HTML e XML.
+    > [!NOTE]
+    > No Firefox 3.5 e nas versões anteriores, elementos HTML estão no espaço de nomes. Em versões posteriores, elementos HTML estão em [`https://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/), nas árvores HTML e XML.
 
 - {{domxref("Node.prefix")}}{{readonlyInline}}
   - : É um {{domxref("DOMString")}} representando o espaço de nomes do nó, ou `null` se nenhum prefixo é especificado.

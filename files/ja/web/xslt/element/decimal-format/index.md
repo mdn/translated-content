@@ -3,7 +3,7 @@ title: <xsl:decimal-format>
 slug: Web/XSLT/Element/decimal-format
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:decimal-format>` 要素は、`format-number( )` 関数を使用して数字を文字列に変換する際に使用される文字と記号を定義します。
 

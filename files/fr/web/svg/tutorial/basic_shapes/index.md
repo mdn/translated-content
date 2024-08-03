@@ -3,6 +3,8 @@ title: Formes de base
 slug: Web/SVG/Tutorial/Basic_Shapes
 ---
 
+{{SVGRef}}
+
 {{PreviousNext("Web/SVG/Tutorial/Positions","Web/SVG/Tutorial/Paths")}}
 
 Il existe tout un ensemble de formes de base utilisées pour faire du dessin via SVG. Le but de ces formes s'avère assez transparent si on regarde attentivement les noms de chaque élément. Des attributs permettent de configurer leur position et leur taille, mais vous pourrez retrouver les détails de chaque élément avec tous ses attributs à [la page des références SVG](/fr/docs/Web/SVG/Element). Nous nous contenterons ici de couvrir les fonctions de base qui nous sont nécessaires, car elles sont utilisées dans la plupart des documents SVG.
@@ -34,7 +36,8 @@ Pour insérer une forme, vous devez ajouter un élément dans un document. Des �
 </svg>
 ```
 
-> **Note :** les attributs `stroke`, `stroke-width` et `fill` sont détaillés plus loin dans ce tutoriel.
+> [!NOTE]
+> Les attributs `stroke`, `stroke-width` et `fill` sont détaillés plus loin dans ce tutoriel.
 
 ### Rectangle
 
@@ -122,7 +125,8 @@ Les lignes brisées, aussi appelées lignes polygonales, sont définies par l'é
 
 L'élément [`<polygon>`](/fr/docs/Web/SVG/Element/polygon) fonctionne de façon semblable à l'élément `<polyline>`. Toutefois, pour les polygones, le chemin de cette ligne retourne automatiquement au point de départ, créant ainsi une forme fermée.
 
-> **Note :** Il est à noter que le rectangle est un type de polygone particulier. Il est donc possible, pour des besoins de flexibilité, de déclarer un rectangle en utilisant l'élément `<polygon>`.
+> [!NOTE]
+> Il est à noter que le rectangle est un type de polygone particulier. Il est donc possible, pour des besoins de flexibilité, de déclarer un rectangle en utilisant l'élément `<polygon>`.
 
 ```xml
 <polygon points="50, 160 55, 180 70, 180 60, 190 65, 205 50, 195 35, 205 40, 190 30, 180 45, 180"/>

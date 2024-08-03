@@ -2,7 +2,7 @@
 title: AnimationPlaybackEvent
 slug: Web/API/AnimationPlaybackEvent
 l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+  sourceCommit: bca8d1ab2bc4f5a1ef6b39c454b0229539178e98
 ---
 
 {{ APIRef("Web Animations") }}

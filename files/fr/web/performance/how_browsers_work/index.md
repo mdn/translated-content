@@ -3,6 +3,8 @@ title: "Remplir la page: comment fonctionnent les navigateurs"
 slug: Web/Performance/How_browsers_work
 ---
 
+{{QuickLinksWithSubPages("Web/Performance")}}
+
 Les utilisateurs veulent des expériences Web avec un contenu rapide à charger et une interaction fluide. Par conséquent, un développeur doit s'efforcer d'atteindre ces deux objectifs.
 
 Pour comprendre comment améliorer les performances et les performances perçues, il est utile de comprendre le fonctionnement du navigateur.

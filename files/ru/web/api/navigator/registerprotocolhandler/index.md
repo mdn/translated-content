@@ -42,7 +42,7 @@ navigator.registerProtocolHandler("burger",
 
 > **Примечание:** "[Регистрация службы веб-почты, как mailto-обработчик](/ru/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebContentHandlerRegistrar#Getting_most_recent_window)", показывает как сделать это в рамках XPCOM.
 
-## Спецификация
+## Спецификации
 
 Specified by the WHATWG's [Web Applications 1.0 working draft](http://whatwg.org/specs/web-apps/current-work/#custom-handlers) (HTML5).
 

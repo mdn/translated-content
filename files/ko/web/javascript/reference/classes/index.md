@@ -9,7 +9,7 @@ Class는 객체를 생성하기 위한 템플릿입니다. 클래스는 데이�
 
 ## Class 정의
 
-Class는 사실 "특별한 {{jsxref("Functions", "함수", "", "true")}}"입니다. 함수를 {{jsxref("Operators/function", "함수 표현식", "", "true")}}과 {{jsxref("Statements/function", "함수 선언", "", "true")}}으로 정의할 수 있듯이 class 문법도 {{jsxref("Operators/class", "class 표현식", "", "true")}} and {{jsxref("Statements/class", "class 선언", "", "true")}} 두 가지 방법을 제공합니다.
+Class는 사실 "특별한 {{jsxref("Functions", "함수", "", 1)}}"입니다. 함수를 {{jsxref("Operators/function", "함수 표현식", "", 1)}}과 {{jsxref("Statements/function", "함수 선언", "", 1)}}으로 정의할 수 있듯이 class 문법도 {{jsxref("Operators/class", "class 표현식", "", 1)}} and {{jsxref("Statements/class", "class 선언", "", 1)}} 두 가지 방법을 제공합니다.
 
 ### Class 선언
 
@@ -62,7 +62,8 @@ console.log(Rectangle.name);
 // 출력: "Rectangle2"
 ```
 
-> **참고:** 클래스 **표현식**에는 [Class 선언](#class_선언) 섹션에 설명된 것과 동일한 호이스팅 제한이 적용됩니다.
+> [!NOTE]
+> 클래스 **표현식**에는 [Class 선언](#class_선언) 섹션에 설명된 것과 동일한 호이스팅 제한이 적용됩니다.
 
 ## Class body 와 메서드 정의
 
@@ -70,17 +71,17 @@ Class body는 중괄호 `{}` 로 묶여 있는 안쪽 부분입니다. 이곳은
 
 ### Strict mode
 
-클래스의 본문(body)은 {{jsxref("Strict_mode", "strict mode", "", "true")}}에서 실행됩니다. 즉, 여기에 적힌 코드는 성능 향상을 위해 더 엄격한 문법이 적용됩니다. 그렇지 않으면, 조용히 오류가 발생할 수 있습니다. 특정 키워드는 미래의 ECMAScript 버전용으로 예약됩니다.
+클래스의 본문(body)은 {{jsxref("Strict_mode", "strict mode", "", 1)}}에서 실행됩니다. 즉, 여기에 적힌 코드는 성능 향상을 위해 더 엄격한 문법이 적용됩니다. 그렇지 않으면, 조용히 오류가 발생할 수 있습니다. 특정 키워드는 미래의 ECMAScript 버전용으로 예약됩니다.
 
 ### Constructor (생성자)
 
-{{jsxref("Classes/constructor", "constructor", "", "true")}} 메서드는 `class` 로 생성된 객체를 생성하고 초기화하기 위한 특수한 메서드입니다. "constructor" 라는 이름을 가진 특수한 메서드는 클래스 안에 한 개만 존재할 수 있습니다. 만약 클래스에 여러 개의 `constructor` 메서드가 존재하면 {{jsxref("SyntaxError")}} 가 발생할 것입니다.
+{{jsxref("Classes/constructor", "constructor", "", 1)}} 메서드는 `class` 로 생성된 객체를 생성하고 초기화하기 위한 특수한 메서드입니다. "constructor" 라는 이름을 가진 특수한 메서드는 클래스 안에 한 개만 존재할 수 있습니다. 만약 클래스에 여러 개의 `constructor` 메서드가 존재하면 {{jsxref("SyntaxError")}} 가 발생할 것입니다.
 
 constructor는 부모 클래스의 constructor를 호출하기 위해 `super` 키워드를 사용할 수 있습니다.
 
 ### 프로토타입 메서드
 
-{{jsxref("Functions/Method_definitions", "메서드 정의", "", "true")}}도 참조해보세요.
+{{jsxref("Functions/Method_definitions", "메서드 정의", "", 1)}}도 참조해보세요.
 
 ```js
 class Rectangle {
@@ -105,7 +106,7 @@ console.log(square.area); // 100
 
 ### 정적 메서드와 속성
 
-{{jsxref("Classes/static", "static", "", "true")}} 키워드는 클래스를 위한 정적(static) 메서드를 정의합니다. 정적 메서드는 클래스의 인스턴스화([instantiating](<https://developer.mozilla.org/ko/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_object_(class_instance)> 'An example of class instance is "var john = new Person();"')) 없이 호출되며, 클래스의 인스턴스에서는 호출할 수 없습니다. 정적 메서드는 어플리케이션(application)을 위한 유틸리티(utility) 함수를 생성하는 데 주로 사용됩니다. 반면, 정적 속성은 캐시, 고정 환경설정 또는 인스턴스 간에 복제할 필요가 없는 기타 데이터에 유용합니다.
+{{jsxref("Classes/static", "static", "", 1)}} 키워드는 클래스를 위한 정적(static) 메서드를 정의합니다. 정적 메서드는 클래스의 인스턴스화([instantiating](<https://developer.mozilla.org/ko/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_object_(class_instance)> 'An example of class instance is "var john = new Person();"')) 없이 호출되며, 클래스의 인스턴스에서는 호출할 수 없습니다. 정적 메서드는 어플리케이션(application)을 위한 유틸리티(utility) 함수를 생성하는 데 주로 사용됩니다. 반면, 정적 속성은 캐시, 고정 환경설정 또는 인스턴스 간에 복제할 필요가 없는 기타 데이터에 유용합니다.
 
 ```js
 class Point {
@@ -201,7 +202,8 @@ Rectangle.prototype.prototypeWidth = 25;
 
 ### Field 선언
 
-> **Warning:** public과 private 필드 선언은 JavaScript 표준화 위원회에 [실험적 기능 (stage 3)](https://github.com/tc39/proposal-class-fields) [TC39](https://tc39.es/) 로 제안되어있습니다. 현재 이를 지원하는 브라우져는 제한적인 상태입니다만, [Babel](https://babeljs.io/) 과 같은 build 시스템을 사용한다면 이 기능을 사용해볼 수 있습니다.
+> [!WARNING]
+> public과 private 필드 선언은 JavaScript 표준화 위원회에 [실험적 기능 (stage 3)](https://github.com/tc39/proposal-class-fields) [TC39](https://tc39.es/) 로 제안되어있습니다. 현재 이를 지원하는 브라우져는 제한적인 상태입니다만, [Babel](https://babeljs.io/) 과 같은 build 시스템을 사용한다면 이 기능을 사용해볼 수 있습니다.
 
 #### Public 필드 선언
 
@@ -222,7 +224,7 @@ class Rectangle {
 
 위의 예에서 봤듯이 필드 선언은 기본 값과 같이 선언될 수도 있습니다.
 
-자세한 내용은 {{jsxref("Classes/Public_class_fields", "public class fields", "", "true")}}를 참조하세요.
+자세한 내용은 {{jsxref("Classes/Public_class_fields", "public class fields", "", 1)}}를 참조하세요.
 
 #### Private 필드 선언
 
@@ -241,11 +243,12 @@ class Rectangle {
 
 클래스의 바깥에서 private 필드를 접근하려고 하면 에러가 발생합니다. private필드는 클래스 내부에서만 읽고 쓰기가 가능합니다. 클래스 외부에서 보이지 않도록 정의하였으므로 클래스가 버젼업 되면서 내부 구현이 바뀌더라도 클래스 사용자 입장에서는 이에 아무런 영항을 받지 않도록 할 수 있습니다.
 
-> **Note:** Private 필드는 사용전에 선언되어야 합니다.
+> [!NOTE]
+> Private 필드는 사용전에 선언되어야 합니다.
 
 일반적인 프로퍼티와는 다르게 private 필드는 값을 할당하면서 만들어질 수 없습니다.
 
-자세한 내용은 {{jsxref("Classes/Private_class_fields", "private class fields", "", "true")}}를 참조하세요.
+자세한 내용은 {{jsxref("Classes/Private_class_fields", "private class fields", "", 1)}}를 참조하세요.
 
 ## `extends`를 통한 클래스 상속(sub classing)
 
@@ -412,11 +415,11 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
 
 ## 참조
 
-- {{jsxref("Functions", "함수", "", "true")}}
-- {{jsxref("Statements/class", "class 선언", "", "true")}}
-- {{jsxref("Operators/class", "class 식", "", "true")}}
-- {{jsxref("Classes/Public_class_fields", "Public class fields", "", "true")}}
-- {{jsxref("Classes/Private_class_fields", "Private class fields", "", "true")}}
+- {{jsxref("Functions", "함수", "", 1)}}
+- {{jsxref("Statements/class", "class 선언", "", 1)}}
+- {{jsxref("Operators/class", "class 식", "", 1)}}
+- {{jsxref("Classes/Public_class_fields", "Public class fields", "", 1)}}
+- {{jsxref("Classes/Private_class_fields", "Private class fields", "", 1)}}
 - {{jsxref("Operators/super", "super")}}
 - [블로그 게시물: "ES6 In Depth: Classes"](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/)
 - [Fields and public/private class properties proposal (stage 3)](https://github.com/tc39/proposal-class-fields)

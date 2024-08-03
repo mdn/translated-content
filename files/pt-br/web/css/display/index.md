@@ -66,7 +66,8 @@ Os valores de palavra-chave podem ser agrupados em seis categorias de valor.
     - `inline`
       - : O elemento gera uma ou mais caixas de elemento em linha que não geram quebras de linha antes ou depois de si mesmas. No fluxo normal, o próximo elemento estará na mesma linha se houver espaço.
 
-> **Nota:** Navegadores que suportam a sintaxe de dois valores, ao localizar apenas o valor externo, como quando `display: block` ou `display: inline` é especificado, definirão o valor interno como `flow`.
+> [!NOTE]
+> Navegadores que suportam a sintaxe de dois valores, ao localizar apenas o valor externo, como quando `display: block` ou `display: inline` é especificado, definirão o valor interno como `flow`.
 > Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento para ser bloco, você esperaria que os filhos desse elemento participassem do bloco e do layout de fluxo normal embutido.
 
 ### Lado de dentro
@@ -94,7 +95,8 @@ Os valores de palavra-chave podem ser agrupados em seis categorias de valor.
     - `ruby` {{Experimental_Inline}}
       - : O elemento se comporta como um elemento inline e apresenta seu conteúdo de acordo com o modelo de formatação ruby. Ele se comporta como os elementos HTML {{HTMLElement("ruby")}} correspondentes.
 
-> **Nota:** Navegadores que suportam a sintaxe de dois valores, ao encontrar apenas o valor interno, como quando `display: flex` ou `display: grid` é especificado, definirão seu valor externo como `block`.
+> [!NOTE]
+> Navegadores que suportam a sintaxe de dois valores, ao encontrar apenas o valor interno, como quando `display: flex` ou `display: grid` é especificado, definirão seu valor externo como `block`.
 > Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento como `display: grid`, você esperaria que a caixa criada no contêiner da grade fosse uma caixa de nível de bloco.
 
 ### Item de lista
@@ -107,7 +109,8 @@ Isso pode ser usado junto com {{CSSxRef("list-style-type")}} e {{CSSxRef("list-s
 
 `list-item` também pode ser combinado com qualquer palavra-chave {{CSSxRef("&lt;display-outside&gt;")}} e `flow` ou `flow-root` {{CSSxRef("&lt;display-inside&gt;" )}} palavras-chave.
 
-> **Nota:** Em navegadores que suportam a sintaxe de dois valores, se nenhum valor interno for especificado, o padrão será `flow`.
+> [!NOTE]
+> Em navegadores que suportam a sintaxe de dois valores, se nenhum valor interno for especificado, o padrão será `flow`.
 > Se nenhum valor externo for especificado, a caixa principal terá um tipo de exibição externa de `bloco`.
 
 ### Interno
@@ -297,7 +300,8 @@ Neste exemplo, temos dois elementos de contêiner em nível de bloco, cada um co
 
 Incluímos {{cssxref("padding")}} e {{cssxref("background-color")}} nos contêineres e seus filhos, para que seja mais fácil ver o efeito que os valores de exibição estão tendo.
 
-> **Nota:** não incluímos nenhuma sintaxe moderna de dois valores, pois o suporte a ela ainda é bastante limitado.
+> [!NOTE]
+> não incluímos nenhuma sintaxe moderna de dois valores, pois o suporte a ela ainda é bastante limitado.
 
 #### HTML
 
@@ -383,7 +387,8 @@ updateDisplay();
 
 {{EmbedLiveSample('display_value_comparison','100%', 440)}}
 
-> **Nota:** você pode encontrar mais exemplos nas páginas para cada tipo de dados de exibição separado, linkado acima.
+> [!NOTE]
+> você pode encontrar mais exemplos nas páginas para cada tipo de dados de exibição separado, linkado acima.
 
 ## Especificações
 

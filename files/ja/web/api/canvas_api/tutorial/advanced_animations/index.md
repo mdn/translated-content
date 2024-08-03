@@ -1,6 +1,8 @@
 ---
 title: 高度なアニメーション
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
+l10n:
+  sourceCommit: 02724e050873ff160217f3980e6eb8c2d356fdc9
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
@@ -18,15 +20,15 @@ slug: Web/API/Canvas_API/Tutorial/Advanced_animations
 普通通り、まず描画コンテキストが必要になります。ボールを描くため、 `ball` オブジェクトを作成して、プロパティと、キャンバスにボールを描くための `draw()` メソッドを持つようにします。
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-var ball = {
+const ball = {
   x: 100,
   y: 100,
   radius: 25,
   color: "blue",
-  draw: function () {
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
@@ -45,18 +47,18 @@ ball.draw();
 ボールができたので、このチュートリアルの[前の章](/ja/docs/Web/API/Canvas_API/Tutorial/Basic_animations)で学んだような、基本的なアニメーションを追加する準備ができたことになります。ここでも {{domxref("window.requestAnimationFrame()")}} がアニメーションを制御するのに役立っています。ボールは、位置に速度ベクトルを追加することで移動します。また、フレームごとに {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} キャンバスに以前のフレームから古い円を削除しています。
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var raf;
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let raf;
 
-var ball = {
+const ball = {
   x: 100,
   y: 100,
   vx: 5,
   vy: 2,
   radius: 25,
   color: "blue",
-  draw: function () {
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
@@ -73,11 +75,11 @@ function draw() {
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener("mouseover", function (e) {
+canvas.addEventListener("mouseover", (e) => {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener("mouseout", function (e) {
+canvas.addEventListener("mouseout", (e) => {
   window.cancelAnimationFrame(raf);
 });
 
@@ -89,10 +91,16 @@ ball.draw();
 境界で衝突テストを行わないと、ボールはすぐにキャンバスから飛び出してしまいます。ボールの `x` と `y` の位置がキャンバスの寸法から外れているかどうかをチェックし、速度ベクトルの向きを反転させる必要があります。そのために、`draw` メソッドに次のようなチェックを追加します。
 
 ```js
-if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+if (
+  ball.y + ball.vy > canvas.height - ball.radius ||
+  ball.y + ball.vy < ball.radius
+) {
   ball.vy = -ball.vy;
 }
-if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+if (
+  ball.x + ball.vx > canvas.width - ball.radius ||
+  ball.x + ball.vx < ball.radius
+) {
   ball.vx = -ball.vx;
 }
 ```
@@ -110,18 +118,18 @@ if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var raf;
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let raf;
 
-var ball = {
+const ball = {
   x: 100,
   y: 100,
   vx: 5,
   vy: 2,
   radius: 25,
   color: "blue",
-  draw: function () {
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
@@ -136,21 +144,27 @@ function draw() {
   ball.x += ball.vx;
   ball.y += ball.vy;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+  if (
+    ball.y + ball.vy > canvas.height - ball.radius ||
+    ball.y + ball.vy < ball.radius
+  ) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+  if (
+    ball.x + ball.vx > canvas.width - ball.radius ||
+    ball.x + ball.vx < ball.radius
+  ) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener("mouseover", function (e) {
+canvas.addEventListener("mouseover", (e) => {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener("mouseout", function (e) {
+canvas.addEventListener("mouseout", (e) => {
   window.cancelAnimationFrame(raf);
 });
 
@@ -161,7 +175,7 @@ ball.draw();
 
 キャンバスにマウスを移動するとアニメーションを開始します。
 
-{{EmbedLiveSample("First_demo", "610", "340")}}
+{{EmbedLiveSample("最初のデモ", "610", "340")}}
 
 ## 加速
 
@@ -185,18 +199,18 @@ ball.vy += 0.25;
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var raf;
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let raf;
 
-var ball = {
+const ball = {
   x: 100,
   y: 100,
   vx: 5,
   vy: 2,
   radius: 25,
   color: "blue",
-  draw: function () {
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
@@ -213,21 +227,27 @@ function draw() {
   ball.vy *= 0.99;
   ball.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+  if (
+    ball.y + ball.vy > canvas.height - ball.radius ||
+    ball.y + ball.vy < ball.radius
+  ) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+  if (
+    ball.x + ball.vx > canvas.width - ball.radius ||
+    ball.x + ball.vx < ball.radius
+  ) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener("mouseover", function (e) {
+canvas.addEventListener("mouseover", (e) => {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener("mouseout", function (e) {
+canvas.addEventListener("mouseout", (e) => {
   window.cancelAnimationFrame(raf);
 });
 
@@ -236,14 +256,14 @@ ball.draw();
 
 #### 結果
 
-{{EmbedLiveSample("Second_demo", "610", "340")}}
+{{EmbedLiveSample("第 2 のデモ", "610", "340")}}
 
 ## 後引き効果
 
 これまで、前のフレームをクリアするときは {{domxref("CanvasRenderingContext2D.clearRect", "clearRect")}} メソッドを使用していました。このメソッドを半透明の {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} に置き換えると、簡単に後引き効果を作ることができます。
 
 ```js
-ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
+ctx.fillStyle = "rgb(255 255 255 / 30%)";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 
@@ -258,18 +278,18 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var raf;
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let raf;
 
-var ball = {
+const ball = {
   x: 100,
   y: 100,
   vx: 5,
   vy: 2,
   radius: 25,
   color: "blue",
-  draw: function () {
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
@@ -279,7 +299,7 @@ var ball = {
 };
 
 function draw() {
-  ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
+  ctx.fillStyle = "rgb(255 255 255 / 30%)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
@@ -287,21 +307,27 @@ function draw() {
   ball.vy *= 0.99;
   ball.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+  if (
+    ball.y + ball.vy > canvas.height - ball.radius ||
+    ball.y + ball.vy < ball.radius
+  ) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+  if (
+    ball.x + ball.vx > canvas.width - ball.radius ||
+    ball.x + ball.vx < ball.radius
+  ) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener("mouseover", function (e) {
+canvas.addEventListener("mouseover", (e) => {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener("mouseout", function (e) {
+canvas.addEventListener("mouseout", (e) => {
   window.cancelAnimationFrame(raf);
 });
 
@@ -310,7 +336,7 @@ ball.draw();
 
 #### 結果
 
-{{EmbedLiveSample("Third_demo", "610", "340")}}
+{{EmbedLiveSample("第 3 のデモ", "610", "340")}}
 
 ## マウス制御の追加
 
@@ -327,19 +353,19 @@ ball.draw();
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var raf;
-var running = false;
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let raf;
+let running = false;
 
-var ball = {
+const ball = {
   x: 100,
   y: 100,
   vx: 5,
   vy: 1,
   radius: 25,
   color: "blue",
-  draw: function () {
+  draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
@@ -349,7 +375,7 @@ var ball = {
 };
 
 function clear() {
-  ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
+  ctx.fillStyle = "rgb(255 255 255 / 30%)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
@@ -359,17 +385,23 @@ function draw() {
   ball.x += ball.vx;
   ball.y += ball.vy;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+  if (
+    ball.y + ball.vy > canvas.height - ball.radius ||
+    ball.y + ball.vy < ball.radius
+  ) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+  if (
+    ball.x + ball.vx > canvas.width - ball.radius ||
+    ball.x + ball.vx < ball.radius
+  ) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener("mousemove", function (e) {
+canvas.addEventListener("mousemove", (e) => {
   if (!running) {
     clear();
     ball.x = e.clientX;
@@ -378,14 +410,14 @@ canvas.addEventListener("mousemove", function (e) {
   }
 });
 
-canvas.addEventListener("click", function (e) {
+canvas.addEventListener("click", (e) => {
   if (!running) {
     raf = window.requestAnimationFrame(draw);
     running = true;
   }
 });
 
-canvas.addEventListener("mouseout", function (e) {
+canvas.addEventListener("mouseout", (e) => {
   window.cancelAnimationFrame(raf);
   running = false;
 });
@@ -397,15 +429,14 @@ ball.draw();
 
 マウスでボールを動かし、クリックでボールを放します。
 
-{{EmbedLiveSample("Fourth_demo", "610", "340")}}
+{{EmbedLiveSample("第 4 のデモ", "610", "340")}}
 
 ## ブロック崩し
 
-この短い章では、より高度なアニメーションを作成するためのテクニックをいくつか説明するだけです。他にもたくさんあります。パドルやレンガを追加して、このデモを [Breakout](https://en.wikipedia.org/wiki/Breakout_%28video_game%29) ゲームにするのはどうでしょうか？[ゲーム開発](/ja/docs/Games)エリアでは、ゲーム関連の記事を多数掲載しています。
+この短い章では、より高度なアニメーションを作成するためのテクニックをいくつか説明するだけです。他にもたくさんあります。パドルやレンガを追加して、このデモを[ブロック崩し](https://ja.wikipedia.org/wiki/ブロックくずし)ゲームにするのはどうでしょうか？[ゲーム開発](/ja/docs/Games)領域では、ゲーム関連の記事を多数掲載しています。
 
 ## 関連情報
 
 - {{domxref("window.requestAnimationFrame()")}}
-- [ウェブゲームのための効率的なアニメーション](/ja/docs/Games/Techniques/Efficient_animation_for_web_games)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}

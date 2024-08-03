@@ -37,7 +37,7 @@ slug: Glossary/Cross_Axis
 - CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
 - CSS フレックスボックスガイド: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
 - CSS フレックスボックスガイド: _[フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)_
-- [用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("Flex")}}
   - {{Glossary("Flex Container", "フレックスコンテナー")}}

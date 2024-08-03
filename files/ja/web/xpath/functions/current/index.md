@@ -3,7 +3,7 @@ title: current
 slug: Web/XPath/Functions/current
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `current`関数を使用して、XSLT 命令でコンテキストノードを取得できます。
 

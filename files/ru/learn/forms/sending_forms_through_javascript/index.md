@@ -382,7 +382,7 @@ Here's the live result:
 
 Depending on the browser and the type of data you are dealing with, sending form data through JavaScript can be easy or difficult. The {{domxref("XMLHttpRequest/FormData","FormData")}} object is generally the answer, and you can use a [polyfill](https://github.com/jimmywarting/FormData) for it on legacy browsers.
 
-## See also
+## Смотрите также
 
 ### Learning path
 

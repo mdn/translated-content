@@ -11,7 +11,8 @@ CSS3 **彈性盒子**，又稱**flexbox**，是為了適應不同螢幕尺寸和
 
 一些時髦的佈局，也能因而透過更簡潔的程式碼完成。這種有意的獨立性只影響視覺渲染，基於 HTML 原始碼的語意順序及瀏覽不會受到影響。
 
-> **備註：** 儘管 [CSS 彈性盒子佈局規範](http://www.w3.org/TR/css3-flexbox/)還處於最終徵求意見稿（Last Call Working Draft）階段（參見[最新編輯草案](http://dev.w3.org/csswg/css-flexbox/)）、也不是所有瀏覽器都實做彈性盒子的所有功能。但這麼說好了，現在主流的瀏覽器，都對 flexbox 有著良好的支持。請參見[相容性表格](/zh-TW/docs/Web/Guide/CSS/Flexible_boxes#Browser_compatibility)的具體屬性，以獲取最新的相容狀態。
+> [!NOTE]
+> 儘管 [CSS 彈性盒子佈局規範](http://www.w3.org/TR/css3-flexbox/)還處於最終徵求意見稿（Last Call Working Draft）階段（參見[最新編輯草案](http://dev.w3.org/csswg/css-flexbox/)）、也不是所有瀏覽器都實做彈性盒子的所有功能。但這麼說好了，現在主流的瀏覽器，都對 flexbox 有著良好的支持。請參見[相容性表格](/zh-TW/docs/Web/Guide/CSS/Flexible_boxes#Browser_compatibility)的具體屬性，以獲取最新的相容狀態。
 
 ## 彈性盒子的概念
 
@@ -59,7 +60,8 @@ display: inline-flex;
 
 這樣一來，元素就會變成彈性容器，而它的子元素們就會變成彈性項目。`flex` 值會讓彈性容器變成塊級元素（block-level element）、`inline-flex` 則會讓彈性容器成為單一的行內元素（atomic inline-level element）。
 
-> **備註：** 如果需要支援較舊的瀏覽器，請把廠商前輟標記（vendor prefix tag）寫在 `display` 屬性（property），而不是屬性值（attribute）。例如：`display: -webkit-flex`。
+> [!NOTE]
+> 如果需要支援較舊的瀏覽器，請把廠商前輟標記（vendor prefix tag）寫在 `display` 屬性（property），而不是屬性值（attribute）。例如：`display: -webkit-flex`。
 
 ## 彈性項目需要留心
 
@@ -252,7 +254,7 @@ Recall that while the display order of the elements is independent of their orde
 
 - [Flexbox Playground](http://demo.agektmr.com/flexbox/)
 - [Flexy Boxes](http://the-echoplex.net/flexyboxes)
-- [Flexbox Properties Demonstration](http://codepen.io/justd/pen/yydezN)
+- [Flexbox Properties Demonstration](https://codepen.io/justd/pen/yydezN)
 - [Flexbox Froggy](http://flexboxfroggy.com/)
 
 ## 要注意的事情

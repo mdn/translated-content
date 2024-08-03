@@ -32,7 +32,8 @@ l10n:
     - `bottom`
       - : キャプションを表の下側に表示します。
 
-    > **警告:** この属性は非推奨ですので使用しないでください。{{HTMLElement("caption")}} 要素にスタイルを適用するには、[CSS](/ja/docs/Web/CSS) プロパティの {{cssxref("caption-side")}} および {{cssxref("text-align")}} を使用してください。
+    > [!WARNING]
+    > この属性は非推奨ですので使用しないでください。{{HTMLElement("caption")}} 要素にスタイルを適用するには、[CSS](/ja/docs/Web/CSS) プロパティの {{cssxref("caption-side")}} および {{cssxref("text-align")}} を使用してください。
 
 ## 使用上の注意
 

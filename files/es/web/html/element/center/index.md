@@ -3,7 +3,7 @@ title: <center> (obsoleto)
 slug: Web/HTML/Element/center
 ---
 
-{{Deprecated_Header}}
+{{HTMLSidebar}}{{Deprecated_Header}}
 
 ### Definición
 

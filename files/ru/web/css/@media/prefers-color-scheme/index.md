@@ -79,7 +79,7 @@ slug: Web/CSS/@media/prefers-color-scheme
 
 {{EmbedLiveSample("Примеры")}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

@@ -27,7 +27,8 @@ l10n:
 <div popover id="my-popover">私から皆さんへ、こんにちは！</div>
 ```
 
-> **メモ:** MDN にあるポップオーバーの例の完全な例にアクセスするには、[ポップオーバー API 例のランディングページ](https://mdn.github.io/dom-examples/popover-api/)を参照してください。
+> [!NOTE]
+> MDN にあるポップオーバーの例の完全な例にアクセスするには、[ポップオーバー API 例のランディングページ](https://mdn.github.io/dom-examples/popover-api/)を参照してください。
 
 ## 仕様書
 

@@ -87,7 +87,7 @@ div {
 
 {{EmbedLiveSample('Applying_a_bottom_border')}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -95,7 +95,7 @@ div {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [`border`](/ru/docs/Web/CSS/border)
 - [`border-block`](/ru/docs/Web/CSS/border-block)

@@ -10,4 +10,5 @@ Tecnologias da Web contém longas listas de jargões e abreviações usadas em d
 
 Os termos do glossário podem ser selecionados na barra lateral.
 
-> **Nota:** Este glossário é um trabalho interminável em andamento. Você pode ajudar a melhorá-lo [escrevendo novas entradas](/pt-BR/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary) ou melhorando as já existentes.
+> [!NOTE]
+> Este glossário é um trabalho interminável em andamento. Você pode ajudar a melhorá-lo [escrevendo novas entradas](/pt-BR/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary) ou melhorando as já existentes.

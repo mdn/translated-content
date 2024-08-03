@@ -1,11 +1,12 @@
 ---
 title: "HTMLElement: showPopover() メソッド"
+short-title: showPopover()
 slug: Web/API/HTMLElement/showPopover
 l10n:
-  sourceCommit: bb6092c4230b69c2eceae6910af68c73955cae1c
+  sourceCommit: 16f4b01129630178d791e66daacadd7474f2508b
 ---
 
-{{ APIRef("HTML DOM") }}{{SeeCompatTable}}
+{{APIRef("Popover API")}}
 
 **`showPopover()`** は {{domxref("HTMLElement")}} インターフェイスのメソッドで、{{domxref("Popover_API", "ポップオーバー", "", "nocode")}}要素（すなわち有効な [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) 属性がある要素）を{{glossary("top layer", "最上位レイヤー")}}に追加することで表示します。
 
@@ -37,7 +38,7 @@ showPopover()
 最初に HTML です。
 
 ```html
-<div id="mypopover">
+<div id="mypopover" popover>
   <h2>Help!</h2>
 
   <p>You can use the following commands to control the app</p>

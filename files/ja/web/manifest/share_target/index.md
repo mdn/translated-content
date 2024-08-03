@@ -24,7 +24,8 @@ l10n:
 
 登録されインストールされると、Web Share Target API を用いる PWA は電子メール、メッセンジャー、そしてその他の共有されるコンテンツを受け取れるネイティブアプリといったシステム上の通常の共有先とともに、コンテンツの共有先として振る舞います。
 
-> **メモ:** Web Share API を用いてデータを共有したい場合、[Web Share API](/ja/docs/Web/API/Web_Share_API) および [`navigator.share()`](/ja/docs/Web/API/Navigator/share) を参照してください。
+> [!NOTE]
+> Web Share API を用いてデータを共有したい場合、[Web Share API](/ja/docs/Web/API/Web_Share_API) および [`navigator.share()`](/ja/docs/Web/API/Navigator/share) を参照してください。
 
 ## プロパティ
 

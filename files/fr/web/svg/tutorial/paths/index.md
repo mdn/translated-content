@@ -3,6 +3,8 @@ title: Paths
 slug: Web/SVG/Tutorial/Paths
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutoriel/Formes_de_base", "Web/SVG/Tutoriel/Fills_and_Strokes") }}
 
 L'élément [`<path>`](/fr/Web/SVG/Element/path) (_chemin_ en français) est le plus versatile des éléments de la bibliothèque SVG parmi les [formes basiques](/fr/docs/Web/SVG/Tutoriel/Formes_de_base). Vous pouvez l'utiliser pour créer des lignes, des courbes, des arcs et autres.
@@ -196,7 +198,8 @@ T x y (ou t dx dy)
 
 Ce raccourci examine le précédent point de contrôle utilisé et en infère un nouveau à partir de celui-ci. Cela signifie qu'après un premier point de contrôle, vous pouvez créer des formes assez complexes en spécifiant seulement les points d'extrémités.
 
-> **Note :** Ce raccourci fonctionne uniquement si la commande précédente est une commande `Q` ou `T`. Dans le cas contraire, le point de contrôle est considéré comme le même que le point précédent, et vous ne dessinerez que des lignes.
+> [!NOTE]
+> Ce raccourci fonctionne uniquement si la commande précédente est une commande `Q` ou `T`. Dans le cas contraire, le point de contrôle est considéré comme le même que le point précédent, et vous ne dessinerez que des lignes.
 
 ![](shortcut_quadratic_bézier_with_grid.png)
 
@@ -396,6 +399,6 @@ Les arcs sont un moyen facile de créer des portions de cercle ou d'ellipse dans
 
 Comme les points de départ et d'arrivée de tout chemin parcourant un cercle sont confondus, un nombre infini de cercles peuvent être choisis, par conséquent le chemin est indéfini. Il est possible d'en faire une approximation en prenant des points de départ et d'arrivée légèrement décalés, puis de les connecter à l'aide d'un autre segment de chemin. Dans ces conditions, il est souvent plus facile d'utiliser un véritable élément cercle ou ellipse à la place.
 
-Vous pouvez trouver une démo interactive à l'adresse suivante, pour vous aider à comprendre les concepts derrière les arcs SVG: <http://codepen.io/lingtalfi/pen/yaLWJG> (testé avec Chrome et Firefox seulement, peut ne pas marcher avec votre navigateur).
+Vous pouvez trouver une démo interactive à l'adresse suivante, pour vous aider à comprendre les concepts derrière les arcs SVG: <https://codepen.io/lingtalfi/pen/yaLWJG> (testé avec Chrome et Firefox seulement, peut ne pas marcher avec votre navigateur).
 
 {{ PreviousNext("Web/SVG/Tutoriel/Formes_de_base", "Web/SVG/Tutoriel/Fills_and_Strokes") }}

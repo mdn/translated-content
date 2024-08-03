@@ -115,7 +115,7 @@ for (var i = 0; i < files.length; i++) {
 </html>
 ```
 
-## Спецификация
+## Спецификации
 
 - [File upload state](http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected) (HTML5 working draft)
 

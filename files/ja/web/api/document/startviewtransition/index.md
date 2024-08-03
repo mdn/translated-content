@@ -3,25 +3,26 @@ title: "Document: startViewTransition() メソッド"
 short-title: startViewTransition()
 slug: Web/API/Document/startViewTransition
 l10n:
-  sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
+  sourceCommit: 4558d208395a5b1df4db44b0c8ef4e9a0f8adbbf
 ---
 
-{{APIRef("Document")}}{{SeeCompatTable}}
+{{APIRef("View Transitions API")}}
 
-**`startViewTransition()`** は{{domxref("View Transitions API", "ビュートランジション API", "", "nocode")}} のメソッドで、新しいビュートランジションを始め、それを表す {{domxref("ViewTransition")}} オブジェクトを返します。
+**`startViewTransition()`** は {{domxref("Document")}} インターフェイスのメソッドで、新しいビュートランジションを始め、それを表す {{domxref("ViewTransition")}} オブジェクトを返します。
 
-`startViewTransition()`を呼び出すと、[ビュートランジションのプロセス](/ja/docs/Web/API/View_Transitions_API#ビュートランジションのプロセス)で説明されている一連の手順が続きます。
+`startViewTransition()` を呼び出すと、[ビュートランジションのプロセス](/ja/docs/Web/API/View_Transitions_API#ビュートランジションのプロセス)で説明されている一連の手順が続きます。
 
 ## 構文
 
 ```js-nolint
-startViewTransition(callback)
+startViewTransition()
+startViewTransition(updateCallback)
 ```
 
 ### 引数
 
-- `callback`
-  - : 通常、ビュートランジションプロセス中に DOM を更新するために呼び出されるコールバック関数で、プロミス ({{jsxref("Promise")}}) を返します。コールバックは、 API が現在のページのスクリーンショットを導いたら呼び出されます。コールバックが返すプロミスが履行されると、次のフレームでビュートランジションが始まります。コールバックが返すプロミスが拒否された場合、トランジションは放棄されます。
+- `updateCallback` {{optional_inline}}
+  - : 通常、ビュートランジションプロセス中に DOM を更新するために呼び出されるオプションのコールバック関数で、プロミス ({{jsxref("Promise")}}) を返します。コールバックは、 API が現在のページのスクリーンショットを導いたら呼び出されます。コールバックが返すプロミスが履行されると、次のフレームでビュートランジションが始まります。コールバックが返すプロミスが拒否された場合、トランジションは放棄されます。
 
 ### 返値
 

@@ -134,7 +134,8 @@ Puedes comprobar el código terminado de este artículo en la demostración en v
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/3x5foxb1/","","415")}}
 
-> **Nota:** intenta cambiar la velocidad de la bola en movimiento o la dirección hacia la que se mueve.
+> [!NOTE]
+> Intenta cambiar la velocidad de la bola en movimiento o la dirección hacia la que se mueve.
 
 ## Siguientes pasos
 

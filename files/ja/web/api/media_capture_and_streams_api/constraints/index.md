@@ -135,7 +135,8 @@ navigator.mediaDevices
 
 この例では、`getUserMedia()` の時点で制約が適用され、動画のためのフォールバックを備えた理想的なオプションのセットが要求されます。
 
-> **メモ:** 1 つ以上のメディア入力デバイス ID を指定して、入力ソースが許可される制限を設定できます。 利用可能なデバイスのリストを収集するには、{{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} を呼び出してから、目的の条件を満たす各デバイスに対して、その `deviceId` を `MediaConstraints` オブジェクトに追加して、最終的に `getUserMedia()` に渡します。
+> [!NOTE]
+> 1 つ以上のメディア入力デバイス ID を指定して、入力ソースが許可される制限を設定できます。 利用可能なデバイスのリストを収集するには、{{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} を呼び出してから、目的の条件を満たす各デバイスに対して、その `deviceId` を `MediaConstraints` オブジェクトに追加して、最終的に `getUserMedia()` に渡します。
 
 次のようにトラックの {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} メソッドを呼び出し、トラックに適用する制約を表すオブジェクトを渡すことで、既存の {{domxref("MediaStreamTrack")}} の制約を臨機応変に変更することもできます。
 
@@ -535,7 +536,8 @@ audioConstraintEditor.addEventListener("keydown", keyDownHandler, false);
 
 パズルの最後の重要な部分、ユーザーの参照用に、ブラウザーがサポートする制約可能なプロパティのリストを表示するコードです。 各プロパティは、ユーザーの利便性のために MDN のドキュメントへのリンクです。 このコードの動作の詳細については、[`MediaDevices.getSupportedConstraints()` の例](/ja/docs/Web/API/MediaDevices/getSupportedConstraints#例)を参照してください。
 
-> **メモ:** もちろん、このリストには非標準のプロパティが含まれている場合があります。 その場合、ドキュメントのリンクはあまり役に立たないでしょう。
+> [!NOTE]
+> もちろん、このリストには非標準のプロパティが含まれている場合があります。 その場合、ドキュメントのリンクはあまり役に立たないでしょう。
 
 ```js
 const supportedConstraints = navigator.mediaDevices.getSupportedConstraints();

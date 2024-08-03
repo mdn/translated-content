@@ -3,7 +3,7 @@ title: "Window: locationbar プロパティ"
 short-title: locationbar
 slug: Web/API/Window/locationbar
 l10n:
-  sourceCommit: 8daba6d316e3b68f45e09c44da9b6942307ca555
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}

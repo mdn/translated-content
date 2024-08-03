@@ -13,7 +13,8 @@ Une promesse {{domxref("GlobalFetch.fetch","fetch()")}} n'est rejetée que quand
 
 La méthode `fetch()` est contrôlée par la directive `connect-src` de l'entête [Content Security Policy](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) plutôt que par la directive de la ressource qui est récupérée.
 
-> **Note :** Les paramètres de la méthode `fetch()` sont identiques à ceux du contructeur d'une {{domxref("Request.Request","Request()")}}.
+> [!NOTE]
+> Les paramètres de la méthode `fetch()` sont identiques à ceux du contructeur d'une {{domxref("Request.Request","Request()")}}.
 
 ## Syntaxe
 
@@ -81,7 +82,7 @@ let maRequete = new Request("fleurs.jpg");
 
 fetch(maRequete)
   .then(function (reponse) {
-    if (!response.ok) {
+    if (!reponse.ok) {
       throw new Error(`erreur HTTP! statut: ${reponse.status}`);
     }
     return reponse.blob();

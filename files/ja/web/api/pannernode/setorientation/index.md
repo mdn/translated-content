@@ -8,7 +8,8 @@ l10n:
 
 {{APIRef("Web Audio API")}}{{Deprecated_Header}}
 
-> **メモ:** この非推奨メソッドを置き換えるために推奨される方法は、 [`orientationX`](/ja/docs/Web/API/PannerNode/orientationX), [`orientationY`](/ja/docs/Web/API/PannerNode/orientationY), [`orientationZ`](/ja/docs/Web/API/PannerNode/orientationZ) 属性を直接設定することです。
+> [!NOTE]
+> この非推奨メソッドを置き換えるために推奨される方法は、 [`orientationX`](/ja/docs/Web/API/PannerNode/orientationX), [`orientationY`](/ja/docs/Web/API/PannerNode/orientationY), [`orientationZ`](/ja/docs/Web/API/PannerNode/orientationZ) 属性を直接設定することです。
 
 `setOrientation()` は {{ domxref("PannerNode") }} インターフェイスのメソッドで、音声ソースの再生方向を定義します。
 

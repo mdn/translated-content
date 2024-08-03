@@ -2,7 +2,7 @@
 title: Forwarded
 slug: Web/HTTP/Headers/Forwarded
 l10n:
-  sourceCommit: f15b8d5828c480af144a9b8f88b2724e2997f571
+  sourceCommit: 206723d78eed4637dae1f413ce7d0876ac94bfcb
 ---
 
 {{HTTPSidebar}}

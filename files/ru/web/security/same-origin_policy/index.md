@@ -3,6 +3,8 @@ title: Same-origin policy
 slug: Web/Security/Same-origin_policy
 ---
 
+{{QuickLinksWithSubpages("/ru/docs/Web/Security")}}
+
 **Политика одинакового источника** (same-origin policy) определяет как документ или скрипт, загруженный из одного источника ({{Glossary("origin")}}), может взаимодействовать с ресурсом из другого источника. Это помогает изолировать потенциально вредоносные документы, снижая количество возможных векторов атак.
 
 ## Определение origin
@@ -137,13 +139,9 @@ Access to data stored in the browser such as [localStorage](/ru/docs/Web/Guide/A
 
 Cookies use a separate definition of origins. A page can set a cookie for its own domain or any parent domain, as long as the parent domain is not a public suffix. Firefox and Chrome use the [Public Suffix List](http://publicsuffix.org/) to determine if a domain is a public suffix. Internet Explorer uses its own internal method to determine if a domain is a public suffix. The browser will make a cookie available to the given domain including any sub-domains, no matter which protocol (HTTP/HTTPS) or port is used. When you set a cookie, you can limit its availability using the Domain, Path, Secure and Http-Only flags. When you read a cookie, you cannot see from where it was set. Even if you use only secure https connections, any cookie you see may have been set using an insecure connection.
 
-## See also
+## Смотрите также
 
-- [Same-origin policy for file: URIs](/ru/docs/Same-origin_policy_for_file:_URIs)
-- [Same-Origin Policy at W3C](http://www.w3.org/Security/wiki/Same_Origin_Policy)
-
-## Original Document Information
-
-- Author(s): Jesse Ruderman
-
-{{QuickLinksWithSubpages("/ru/docs/Web/Security")}}
+- [Same Origin Policy на W3C](https://www.w3.org/Security/wiki/Same_Origin_Policy)
+- [Same-origin policy на web.dev](https://web.dev/articles/same-origin-policy)
+- {{httpheader("Cross-Origin-Resource-Policy")}}
+- {{httpheader("Cross-Origin-Embedder-Policy")}}

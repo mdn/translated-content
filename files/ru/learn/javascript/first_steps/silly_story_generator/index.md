@@ -18,7 +18,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 - Перейти и [скопировать файл HTML](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html) как пример, сохранив его локальную копию как `index.html` в новой папке где-то на вашем компьютере. Там же будет храниться и CSS документ нужный для стилизации.
 - Перейти на [страницу, содержащую исходный текст](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt), и оставить её открытой в отдельной вкладке браузера. Она вам понадобится позже.
 
-> **Примечание:** Так же вы можете использовать такие сайты как [JSBin](http://jsbin.com/) или [Glitch](https://glitch.com/edit/) для выполнения вашего испытания. Вы можете вставить HTML, CSS и JavaScript в один из этих онлайн-редакторов. Если онлайн-редактор, который вы используете, не имеет отдельного окна для JavaScript – не стесняйтесь вставить все скрипты в `<script>`-элемент внутри HTML-страницы.
+> **Примечание:** Так же вы можете использовать такие сайты как [JSBin](https://jsbin.com/) или [Glitch](https://glitch.com/edit/) для выполнения вашего испытания. Вы можете вставить HTML, CSS и JavaScript в один из этих онлайн-редакторов. Если онлайн-редактор, который вы используете, не имеет отдельного окна для JavaScript – не стесняйтесь вставить все скрипты в `<script>`-элемент внутри HTML-страницы.
 
 ## Краткое описание проекта
 

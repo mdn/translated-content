@@ -9,7 +9,8 @@ l10n:
 
 **`initiatorType`** は読み取り専用プロパティで、リソースの読み込みを開始したウェブプラットフォームの機能を表す文字列です。
 
-> **メモ:** このプロパティは、読み込まれるコンテンツの種類を表すものではありません。`.css` ファイルは {{HTMLElement("link")}} 要素を使用して読み込むことができ、 `initiatorType` が `link` となります。CSS ファイルで `background: url()` を使用して画像を読み込んだ場合、 `initiatorType` は `img` ではなく `css` になります。
+> [!NOTE]
+> このプロパティは、読み込まれるコンテンツの種類を表すものではありません。`.css` ファイルは {{HTMLElement("link")}} 要素を使用して読み込むことができ、 `initiatorType` が `link` となります。CSS ファイルで `background: url()` を使用して画像を読み込んだ場合、 `initiatorType` は `img` ではなく `css` になります。
 
 ## 値
 

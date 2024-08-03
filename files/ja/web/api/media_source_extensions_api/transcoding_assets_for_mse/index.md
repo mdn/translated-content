@@ -3,6 +3,8 @@ title: Media Source Extensions のためのアセットのトランスコード
 slug: Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE
 ---
 
+{{DefaultAPISidebar("Media Source Extensions")}}
+
 Media Source Extensions を使用する場合、アセットをストリーミングする前に調整する必要がある可能性があります。 この記事では、要件を説明し、アセットを適切にエンコードするために使用できるツールチェーンを示します。
 
 ## 入門
@@ -31,7 +33,8 @@ MSE を使用する場合、次のツールが必要です。
 
 サンプルメディアは、Bento4 の `utils` ディレクトリに入れておき、ここで作業します。
 
-> **メモ:** 構築済みの ffmpeg には、ライセンスの関係で libfdk_aac が組み込まれていません。 これを Bento4 がデフォルトで使うので、必要なら、ffmpeg をコンパイルする必要があります。 必要なければ、`mp4-dash-encode.py` のコマンドラインに `--audio-codec=aac` を追加してください。
+> [!NOTE]
+> 構築済みの ffmpeg には、ライセンスの関係で libfdk_aac が組み込まれていません。 これを Bento4 がデフォルトで使うので、必要なら、ffmpeg をコンパイルする必要があります。 必要なければ、`mp4-dash-encode.py` のコマンドラインに `--audio-codec=aac` を追加してください。
 
 ### コンテナとコーデックのサポート
 
@@ -63,7 +66,8 @@ MP4 を適切にストリーミングするには、アセットが [ISO BMF](ht
 
 MP4 ファイルが適切な MP4 ストリームであるかどうかを確認するには、[mp4info](http://nickdesaulniers.github.io/mp4info/) ユーティリティを再度使用して MP4 のアトムを一覧表示できます。
 
-> **メモ:** 断片化されたバージョンは、追加のメタデータがファイル全体に広がるため、元のバージョンよりわずかに大きくなります。 これは通常、ファイルサイズの 1% 以下の増加です。
+> [!NOTE]
+> 断片化されたバージョンは、追加のメタデータがファイル全体に広がるため、元のバージョンよりわずかに大きくなります。 これは通常、ファイルサイズの 1% 以下の増加です。
 
 ### 断片化
 
@@ -133,7 +137,8 @@ output
 
 > **メモ:** `mp4-dash-encode.py` は、ffmpeg のエラーメッセージを表示しないようにしています。 `-d` オプションを指定することで、それを見ることができます。
 
-> **メモ:** エラーメッセージとして `"Invalid duration specification for force_key_frames: 'expr:eq(mod(n"` が表示されたら、`mp4-dash-encode.py` を修正して `"-force_key_frames 'expr:eq(mod(n,%d),0)'"` から `"'"` を 2 つ取り除きます。
+> [!NOTE]
+> エラーメッセージとして `"Invalid duration specification for force_key_frames: 'expr:eq(mod(n"` が表示されたら、`mp4-dash-encode.py` を修正して `"-force_key_frames 'expr:eq(mod(n,%d),0)'"` から `"'"` を 2 つ取り除きます。
 
 ## まとめ
 

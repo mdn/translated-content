@@ -26,7 +26,8 @@ Las propiedades que veremos en esta guía son las siguientes.
 
 También descubriremos cómo se pueden usar los márgenes automáticos para la alineación en flexbox
 
-> **Nota:** Nota: Las propiedades de alineación en Flexbox se han colocado en su propia especificación — [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/). Se espera que esta especificación finalmente reemplace las propiedades tal como se definen en Flexbox Nivel Uno.
+> [!NOTE]
+> Las propiedades de alineación en Flexbox se han colocado en su propia especificación — [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/). Se espera que esta especificación finalmente reemplace las propiedades tal como se definen en Flexbox Nivel Uno.
 
 ## El eje transversal
 
@@ -100,7 +101,8 @@ Una vez mas podemos cambiar nuestra `flex-direction` a `column` para ver como es
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content-column.html", '100%', 860)}}
 
-> **Nota:** El valor `space-evenly` no está definido en las especificaciones de flexbox y la ultima adiccion a las especificaciones de Alineacion de cajas Box Alignment . El soporte del navegador para este valor no es tan bueno como el de los valores definidos en la especificación de flexbox.
+> [!NOTE]
+> El valor `space-evenly` no está definido en las especificaciones de flexbox y la ultima adiccion a las especificaciones de Alineacion de cajas Box Alignment . El soporte del navegador para este valor no es tan bueno como el de los valores definidos en la especificación de flexbox.
 
 Revise la [documentacion para `justify-content` en MDN](/es/docs/Web/CSS/justify-content) para encontrar más detalles de todos sus valores y el soporte de los navegadores.
 

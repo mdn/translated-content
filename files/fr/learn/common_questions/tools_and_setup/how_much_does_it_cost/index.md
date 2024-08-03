@@ -3,6 +3,8 @@ title: "Publier sur le Web : combien ça coûte ?"
 slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Se lancer sur le Web n'est pas aussi bon marché qu'il y paraît à première vue. Dans cet article, nous verrons les différentes dépenses et leur raison d'être.
 
 <table class="standard-table">
@@ -73,7 +75,8 @@ Chaque système d'exploitation inclut un client FTP avec le gestionnaire de fich
 
 Si vous souhaitez installer un client FTP, il existe plusieurs options correctes et gratuites : [FileZilla](https://filezilla-project.org/) pour toutes les plateformes, [WinSCP](http://winscp.net/) pour Windows, [Cyberduck](https://cyberduck.io/) pour Mac et Windows [et d'autres encore](https://en.wikipedia.org/wiki/List_of_FTP_server_software).
 
-> **Note :** Il existe d'autres méthodes pour publier du contenu sur des serveurs distants : rsync et git par exemple. Mais ces méthodes ne sont pas aussi simples à appliquer que FTP et nous ne les aborderons pas dans cette section.
+> [!NOTE]
+> Il existe d'autres méthodes pour publier du contenu sur des serveurs distants : rsync et git par exemple. Mais ces méthodes ne sont pas aussi simples à appliquer que FTP et nous ne les aborderons pas dans cette section.
 
 #### Navigateurs
 
@@ -102,7 +105,8 @@ Assurez-vous d'avoir suffisamment de bande passante :
 
 Le tarif d'un hébergeur variera en fonction de la bande passante consommée par votre site web. Celle-ci dépend du nombre de visiteurs (humains ou robots) sur une période donnée et de l'espace occupé par votre contenu (c'est pour cette raison que la plupart des gens stockent leurs vidéos sur Youtube, Dailymotion et Vimeo). Par exemple, votre fournisseur peut avoir une formule qui permet d'avoir jusqu'à plusieurs milliers de visiteurs par jours pour une bande passante raisonnable (cette définition de « raisonnable » peut varier d'un fournisseur à l'autre). Grosso modo, un hébergement personnalisé moyen et qui vous permet de servir suffisamment de visiteurs coûte entre 10 et 15 euros par mois.
 
-> **Note :** Un débit « illimité » n'existe pas en réalité. Si vous consommez beaucoup de bande passante, attendez-vous à devoir payer en conséquence.
+> [!NOTE]
+> Un débit « illimité » n'existe pas en réalité. Si vous consommez beaucoup de bande passante, attendez-vous à devoir payer en conséquence.
 
 ##### Nom de domaine
 

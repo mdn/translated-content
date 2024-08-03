@@ -44,7 +44,8 @@ De plus, nous disposons du guide sur [les informations contenues dans un fichier
 
 Vous reviendrez souvent à l'écriture d'exemples de code ou à la création de démonstrations au cours de la documentation d'une technologie, mais il est très utile de commencer par se familiariser avec le fonctionnement de celle-ci. C'est un exercice très utile, car il vous permet de bien comprendre les cas d'utilisation (_pourquoi_ une développeuse ou un développeur utiliserait cette technologie) et vous aide à créer des exemples de code en même temps.
 
-> **Note :** Si la spécification a été récemment mise à jour et que, par exemple, une méthode est désormais définie différemment, mais que l'ancienne méthode fonctionne toujours dans les navigateurs, vous devrez souvent documenter les deux au même endroit afin que l'ancienne et la nouvelle méthode soient couvertes. Si vous avez besoin d'aide, référez-vous aux démonstrations que vous avez trouvées ou demandez à un contact de l'équipe qui implémente la technologie.
+> [!NOTE]
+> Si la spécification a été récemment mise à jour et que, par exemple, une méthode est désormais définie différemment, mais que l'ancienne méthode fonctionne toujours dans les navigateurs, vous devrez souvent documenter les deux au même endroit afin que l'ancienne et la nouvelle méthode soient couvertes. Si vous avez besoin d'aide, référez-vous aux démonstrations que vous avez trouvées ou demandez à un contact de l'équipe qui implémente la technologie.
 
 ## Créer la liste des pages à écrire ou à mettre à jour
 

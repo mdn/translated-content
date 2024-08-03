@@ -58,7 +58,7 @@ if (Reflect.defineProperty(target, property, attributes)) {
 }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

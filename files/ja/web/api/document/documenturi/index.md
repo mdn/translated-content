@@ -1,17 +1,18 @@
 ---
-title: Document.documentURI
+title: "Document: documentURI プロパティ"
+short-title: documentURI
 slug: Web/API/Document/documentURI
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{ApiRef("DOM")}}
 
-{{domxref("Document")}} インターフェイスの **`documentURI`** プロパティは、文書の位置を文字列で返します。
+**`documentURI`** は {{domxref("Document")}} インターフェイスのプロパティで、文書の位置を文字列で返します。
 
-## 構文
+## 値
 
-```js
-const uri = document.documentURI;
-```
+文字列です。
 
 ## 例
 
@@ -26,13 +27,13 @@ document.getElementById("url").textContent = document.documentURI;
 ```html
 <p id="urlText">
   URL:<br />
-  <span id="url">URL goes here</span>
+  <span id="url">URL がここに入ります</span>
 </p>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example", "100%", 100)}}
+{{EmbedLiveSample("Examples", "100%", 100)}}
 
 ## 仕様書
 

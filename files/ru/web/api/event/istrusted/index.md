@@ -23,7 +23,7 @@ var bool = event.isTrusted;
  }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

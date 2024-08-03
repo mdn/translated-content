@@ -3,14 +3,15 @@ title: "AudioProcessingEvent: AudioProcessingEvent() コンストラクター"
 short-title: AudioProcessingEvent()
 slug: Web/API/AudioProcessingEvent/AudioProcessingEvent
 l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
 {{APIRef}}{{Deprecated_header}}
 
-**`AudioProcessingEvent()`** コンストラクターは、constructor creates a new {{domxref("AudioProcessingEvent")}} object.
+**`AudioProcessingEvent()`** コンストラクターは、新しい {{domxref("AudioProcessingEvent")}} オブジェクトを生成します。
 
-> **メモ:** 通常、このコンストラクターはコードから直接呼び出されることはありません。ブラウザー自身がオブジェクトを作成し、イベントハンドラーに提供するからです。
+> [!NOTE]
+> 通常、このコンストラクターはコードから直接呼び出されることはありません。ブラウザー自身がオブジェクトを作成し、イベントハンドラーに提供するからです。
 
 ## 構文
 

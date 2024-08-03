@@ -1,22 +1,22 @@
 ---
-title: BaseAudioContext.createScriptProcessor()
+title: "BaseAudioContext: createScriptProcessor() メソッド"
+short-title: createScriptProcessor()
 slug: Web/API/BaseAudioContext/createScriptProcessor
+l10n:
+  sourceCommit: 9b8fba1439f6069a90a16023e89e0f8bf363a957
 ---
 
 {{APIRef("Web Audio API")}}{{deprecated_header}}
 
 `createScriptProcessor()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、直接音声処理に用いられる {{domxref("ScriptProcessorNode")}} を生成します。
 
-> **メモ:** この機能は [AudioWorklet](/ja/docs/Web/API/AudioWorklet) と {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
+> [!NOTE]
+> この機能は [AudioWorklet](/ja/docs/Web/API/AudioWorklet) と {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
 
 ## 構文
 
-```js
-createScriptProcessor(
-  bufferSize,
-  numberOfInputChannels,
-  numberOfOutputChannels,
-);
+```js-nolint
+createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 ```
 
 ### 引数
@@ -28,13 +28,15 @@ createScriptProcessor(
     この値は、`audioprocess` イベントが配信される頻度と、各呼び出しで処理される必要があるサンプルフレームの数を制御します。 `bufferSize` の値を小さくすると、遅延は小さく（良く）なります。音声が中断したりグリッチを避けるためには、より高い値が必要です。作者はこのバッファーサイズを指定せず、遅延と音質のバランスをとるために、実装が適切なバッファーサイズを選択できるようにすることをお勧めします。
 
 - `numberOfInputChannels`
-  - : 整数で、このノードの入力のチャンネル数を指定します。既定値は 2 です。
+  - : 整数で、このノードの入力のチャンネル数を指定します。既定値は 2 です。32 までの値に対応しています。
 - `numberOfOutputChannels`
-  - : 整数で、このノードの出力のチャンネル数を指定します。既定値は 2 です。
+  - : 整数で、このノードの出力のチャンネル数を指定します。既定値は 2 です。32 までの値に対応しています。
 
-> **警告:** Webkit は現在（バージョン 31）、このメソッドを呼び出すときに有効な `bufferSize` を渡すことを要求しています。
+> [!WARNING]
+> Webkit は現在（バージョン 31）、このメソッドを呼び出すときに有効な `bufferSize` を渡すことを要求しています。
 
-> **メモ:** numberOfInputChannels`と`numberOfOutputChannels` の両方が 0 にするのは無効です。
+> [!NOTE]
+> numberOfInputChannels`と`numberOfOutputChannels` の両方が 0 にするのは無効です。
 
 ### 返値
 
@@ -42,84 +44,82 @@ createScriptProcessor(
 
 ## 例
 
-次の例は、 {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} によって読み込んだトラックを、入力トラック（バッファー）のそれぞれの音声サンプルにホワイトノイズを加えて処理し {{domxref("AudioDestinationNode")}} によって再生する `ScriptProcessorNode` の基本的な使用方法を示しています。各チャンネルと各サンプルフレームに対して、`scriptNode.onaudioprocess`関数は関連する `audioProcessingEvent` を受け取り、それを使って入力バッファの各チャンネルと各チャンネルの各サンプルを通してループし、少量のホワイトノイズを追加してからその結果を各ケースで出力サンプルとしてセットします。
+### スクリプトプロセッサーを使用してホワイトノイズを追加
 
-> **メモ:** 完全な動作する例については、 GitHub の [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/) リポジトリを参照してください（[ソースコード](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html)も見てください）。
+次の例は、 {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} によって読み込んだトラックを、入力トラック（バッファー）のそれぞれの音声サンプルにホワイトノイズを加えて処理し {{domxref("AudioDestinationNode")}} によって再生する `ScriptProcessorNode` の基本的な使用方法を示しています。
+
+各チャンネルと各サンプルフレームに対して、スクリプトノードの {{domxref("ScriptProcessorNode.audioprocess_event", "audioprocess")}} イベントハンドラーが関連する `audioProcessingEvent` を使用し、入力バッファーの各チャンネルと各チャンネルの各サンプルを通してループし、少量のホワイトノイズを追加してからその結果を各ケースで出力サンプルとしてセットします。
+
+> **メモ:** [完全な例をライブで実行](https://mdn.github.io/webaudio-examples/script-processor-node/)したり、[ソースを表示](https://github.com/mdn/webaudio-examples/blob/main/script-processor-node/)したりすることができます。
 
 ```js
-var myScript = document.querySelector("script");
-var myPre = document.querySelector("pre");
-var playButton = document.querySelector("button");
+const myScript = document.querySelector("script");
+const myPre = document.querySelector("pre");
+const playButton = document.querySelector("button");
 
 // Create AudioContext and buffer source
-var audioCtx = new AudioContext();
-source = audioCtx.createBufferSource();
+let audioCtx;
 
-// Create a ScriptProcessorNode with a bufferSize of 4096 and a single input and output channel
-var scriptNode = audioCtx.createScriptProcessor(4096, 1, 1);
-console.log(scriptNode.bufferSize);
+async function init() {
+  audioCtx = new AudioContext();
+  const source = audioCtx.createBufferSource();
 
-// load in an audio track via XHR and decodeAudioData
+  // Create a ScriptProcessorNode with a bufferSize of 4096 and
+  // a single input and output channel
+  const scriptNode = audioCtx.createScriptProcessor(4096, 1, 1);
 
-function getData() {
-  request = new XMLHttpRequest();
-  request.open("GET", "viper.ogg", true);
-  request.responseType = "arraybuffer";
-  request.onload = function () {
-    var audioData = request.response;
-
-    audioCtx.decodeAudioData(
-      audioData,
-      function (buffer) {
-        myBuffer = buffer;
-        source.buffer = myBuffer;
-      },
-      function (e) {
-        "Error with decoding audio data" + e.err;
-      },
+  // Load in an audio track using fetch() and decodeAudioData()
+  try {
+    const response = await fetch("viper.ogg");
+    const arrayBuffer = await response.arrayBuffer();
+    source.buffer = await audioCtx.decodeAudioData(arrayBuffer);
+  } catch (err) {
+    console.error(
+      `Unable to fetch the audio file: ${name} Error: ${err.message}`,
     );
-  };
-  request.send();
-}
-
-// Give the node a function to process audio events
-scriptNode.onaudioprocess = function (audioProcessingEvent) {
-  // The input buffer is the song we loaded earlier
-  var inputBuffer = audioProcessingEvent.inputBuffer;
-
-  // The output buffer contains the samples that will be modified and played
-  var outputBuffer = audioProcessingEvent.outputBuffer;
-
-  // Loop through the output channels (in this case there is only one)
-  for (var channel = 0; channel < outputBuffer.numberOfChannels; channel++) {
-    var inputData = inputBuffer.getChannelData(channel);
-    var outputData = outputBuffer.getChannelData(channel);
-
-    // Loop through the 4096 samples
-    for (var sample = 0; sample < inputBuffer.length; sample++) {
-      // make output equal to the same as the input
-      outputData[sample] = inputData[sample];
-
-      // add noise to each output sample
-      outputData[sample] += (Math.random() * 2 - 1) * 0.2;
-    }
   }
-};
 
-getData();
+  // Give the node a function to process audio events
+  scriptNode.addEventListener("audioprocess", (audioProcessingEvent) => {
+    // The input buffer is the song we loaded earlier
+    let inputBuffer = audioProcessingEvent.inputBuffer;
 
-// wire up play button
-playButton.onclick = function () {
+    // The output buffer contains the samples that will be modified and played
+    let outputBuffer = audioProcessingEvent.outputBuffer;
+
+    // Loop through the output channels (in this case there is only one)
+    for (let channel = 0; channel < outputBuffer.numberOfChannels; channel++) {
+      let inputData = inputBuffer.getChannelData(channel);
+      let outputData = outputBuffer.getChannelData(channel);
+
+      // Loop through the 4096 samples
+      for (let sample = 0; sample < inputBuffer.length; sample++) {
+        // make output equal to the same as the input
+        outputData[sample] = inputData[sample];
+
+        // add noise to each output sample
+        outputData[sample] += (Math.random() * 2 - 1) * 0.1;
+      }
+    }
+  });
+
   source.connect(scriptNode);
   scriptNode.connect(audioCtx.destination);
   source.start();
-};
 
-// When the buffer source stops playing, disconnect everything
-source.onended = function () {
-  source.disconnect(scriptNode);
-  scriptNode.disconnect(audioCtx.destination);
-};
+  // When the buffer source stops playing, disconnect everything
+  source.addEventListener("ended", () => {
+    source.disconnect(scriptNode);
+    scriptNode.disconnect(audioCtx.destination);
+  });
+}
+
+// wire up play button
+playButton.addEventListener("click", () => {
+  if (!audioCtx) {
+    init();
+  }
+});
 ```
 
 ## 仕様書

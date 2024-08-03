@@ -1,9 +1,11 @@
 ---
 title: FileSystemWritableFileStream
 slug: Web/API/FileSystemWritableFileStream
+l10n:
+  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 {{domxref("File System API", "文件系统 API", "", "nocode")}} 的 **`FileSystemWritableFileStream`** 接口是一类附加了便于操作磁盘上单个文件的方法的 {{domxref('WritableStream')}} 对象。这个接口通过 {{domxref('FileSystemFileHandle.createWritable()')}} 方法来访问。
 
@@ -11,11 +13,11 @@ slug: Web/API/FileSystemWritableFileStream
 
 ## 实例属性
 
-_继承父接口 {{DOMxRef("WritableStream")}} 的属性。_
+_从父接口 {{DOMxRef("WritableStream")}} 继承属性。_
 
 ## 实例方法
 
-_继承父接口 {{DOMxRef("WritableStream")}} 的方法。_
+_从父接口 {{DOMxRef("WritableStream")}} 继承方法。_
 
 - {{domxref('FileSystemWritableFileStream.write()')}}
   - : 向调用此方法的文件写入内容，写入到文件当前指针偏移处。
@@ -32,16 +34,16 @@ _继承父接口 {{DOMxRef("WritableStream")}} 的方法。_
 
 ```js
 async function saveFile() {
-  // 创建一个新句柄。
+  // 创建一个新句柄
   const newHandle = await window.showSaveFilePicker();
 
-  // 创建一个 FileSystemWritableFileStream 用于写入。
+  // 创建一个 FileSystemWritableFileStream 用于写入
   const writableStream = await newHandle.createWritable();
 
-  // 写入我们的文件。
+  // 写入我们的文件
   await writableStream.write("This is my file content");
 
-  // 关闭文件并将内容写入磁盘。
+  // 关闭文件并将内容写入磁盘
   await writableStream.close();
 }
 ```
@@ -73,4 +75,4 @@ writableStream.write({ type: "truncate", size });
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/articles/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

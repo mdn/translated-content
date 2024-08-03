@@ -1,9 +1,11 @@
 ---
-title: AbortController.AbortController()
+title: AbortController：AbortController() 构造函数
 slug: Web/API/AbortController/AbortController
+l10n:
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`AbortController()`** 构造函数创建了一个新的 `AbortController` 实例。
 
@@ -51,7 +53,8 @@ function fetchVideo() {
 }
 ```
 
-> **备注：** 当 `abort()` 被调用，`fetch()` promise 将会抛出 `AbortError`。
+> [!NOTE]
+> 当 `abort()` 被调用，`fetch()` promise 将会抛出 `AbortError`。
 
 你可以在 GitHub 上找到一个完整的使用示例——参见 [abort-api](https://github.com/mdn/dom-examples/tree/main/abort-api)（[也可以看在线演示](https://mdn.github.io/dom-examples/abort-api/)）。
 

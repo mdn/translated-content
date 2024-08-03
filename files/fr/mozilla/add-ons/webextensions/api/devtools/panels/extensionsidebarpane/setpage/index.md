@@ -3,6 +3,8 @@ title: devtools.panels.ExtensionSidebarPane.setPage()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setPage
 ---
 
+{{AddonSidebar}}
+
 Définit une page HTML à afficher dans le volet latéral.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).

@@ -3,6 +3,8 @@ title: 混合內容
 slug: Web/Security/Mixed_content
 ---
 
+{{QuickLinksWithSubpages("/zh-TW/docs/Web/Security")}}
+
 當使用者以 {{Glossary("HTTPS")}} 瀏覽網站時，他們與伺服器之間的連線就會以 {{Glossary("TLS")}} 加密，以防受到竊聽或中間人攻擊。一個含有 HTTP 明文內容的 HTTPS 頁面稱為**混合內容（mixed content）**。這種頁面只有部份加密，沒有加密的內容，易於遭到竊聽和中間人攻擊。這會令網頁不安全。
 
 ## 混合內容的類型
@@ -42,7 +44,7 @@ slug: Web/Security/Mixed_content
 - 所有用到 {{cssxref("url")}} 的 CSS 值（{{cssxref("@font-face")}}、{{cssxref("cursor")}}、{{cssxref("background-image")}}……等等）。
 - {{HTMLElement("object")}}（`data` 屬性）
 
-其他資源如 web fonts 與 workers 也可能被認定為主動型混合內容，[因為在 Chromium 就是這樣](https://code.google.com/p/chromium/codesearch#chromium/src/third_party/WebKit/Source/core/loader/MixedContentChecker.cpp&q=MixedContentChecker::contextTypeFromContext%20f:cpp&sq=package:chromium&type=cs)。
+其他資源如 web fonts 與 workers 也可能被認定為主動型混合內容，[因為在 Chromium 就是這樣](https://source.chromium.org/chromium#chromium/src/third_party/WebKit/Source/core/loader/MixedContentChecker.cpp&q=MixedContentChecker::contextTypeFromContext%20f:cpp&sq=package:chromium&type=cs)。
 
 ## 網頁主控台的警告
 
@@ -58,9 +60,9 @@ Firefox 網頁主控台會在網站含有混合內容時，於「網路」標籤
 
 要修正這個錯誤，就要移除所有的 HTTP 請求、並以 HTTPS 取代之。部份例子包含 JavaScript 檔案、CSS 樣式表、影像檔、影片檔或是其他多媒體文件。
 
-> **備註：** Firefox 55 以後，在本機端會允許混合內容的載入（請參見 [Firefox bug 903966](https://bugzil.la/903966)）。
+> [!NOTE]
+> Firefox 55 以後，在本機端會允許混合內容的載入（請參見 [Firefox bug 903966](https://bugzil.la/903966)）。
 
 ## 參見
 
 - [Mixed Content - W3C Editor's Draft](https://w3c.github.io/webappsec/specs/mixedcontent/)
-- [如何修正含有混和內容的網站](/zh-TW/docs/Security/MixedContent/How_to_fix_website_with_mixed_content)

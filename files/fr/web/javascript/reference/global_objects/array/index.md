@@ -296,7 +296,7 @@ Les propriétés et les éléments retournés depuis cette correspondance sont l
 ## Méthodes des instances
 
 - [`Array.prototype.at()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/at){{Experimental_Inline}}
-  - : REnvoie l'élément du tableau à l'indice indiqué. Les entiers négatifs sont acceptés en argument et, dans ce cas, la recherche de l'élément se fait depuis la fin du tableau.
+  - : Renvoie l'élément du tableau à l'indice indiqué. Les entiers négatifs sont acceptés en argument et, dans ce cas, la recherche de l'élément se fait depuis la fin du tableau.
 - [`Array.prototype.concat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
   - : Renvoie un nouveau tableau qui est le tableau courant, joint avec d'autres tableaux ou valeurs.
 - [`Array.prototype.copyWithin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin)

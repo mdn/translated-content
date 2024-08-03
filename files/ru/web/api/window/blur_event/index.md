@@ -3,7 +3,7 @@ title: GlobalEventHandlers.onblur
 slug: Web/API/Window/blur_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{APIRef}}
 
 Свойство **`onblur`** из {{domxref("GlobalEventHandlers")}} событий {{event("Event_handlers", "event handler")}} для {{event("blur")}} события. Оно доступно для{{domxref("Element")}}, {{domxref("Document")}} и {{domxref("Window")}}.
 
@@ -62,7 +62,7 @@ function inputFocus() {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{event("blur")}} event
 - Related event handler: {{domxref("GlobalEventHandlers.onfocus")}}

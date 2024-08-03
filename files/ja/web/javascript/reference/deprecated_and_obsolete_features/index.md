@@ -53,7 +53,8 @@ console.log("b");
 | {{jsxref("RegExp.leftContext", "leftContext")}}   | 一番最近の一致に先行する部分文字列。                 |
 | {{jsxref("RegExp.rightContext", "rightContext")}} | 一番最近の一致の後に続く部分文字列。                 |
 
-> **警告:** これらの静的プロパティは、[外部コードと対話する際の問題](https://github.com/tc39/proposal-regexp-legacy-features/blob/master/subclass-restriction-motivation.md#legacy-static-properties-regexp1-etc)を発生させる可能性があるため、使用しないようにしましょう。
+> [!WARNING]
+> これらの静的プロパティは、[外部コードと対話する際の問題](https://github.com/tc39/proposal-regexp-legacy-features/blob/master/subclass-restriction-motivation.md#legacy-static-properties-regexp1-etc)を発生させる可能性があるため、使用しないようにしましょう。
 
 {{jsxref("RegExp/compile", "compile()")}} メソッドは非推奨です。代わりに新しい `RegExp` のインスタンスを構築してください。
 

@@ -2,7 +2,7 @@
 title: EventCounts
 slug: Web/API/EventCounts
 l10n:
-  sourceCommit: 904cdf09c7e328b7a15a6a4db6bc6bd31f969cce
+  sourceCommit: e18aa8e600733ebc25443075c563fd56361dfe98
 ---
 
 {{APIRef("Performance API")}}

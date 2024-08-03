@@ -3,6 +3,8 @@ title: 쌓임 맥락 예제3
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3
 ---
 
+{{CSSRef}}
+
 « [CSS](/ko/CSS) « [CSS z-index 이해하기](/ko/CSS/Understanding_z-index)
 
 ## 쌓임 맥락 예제3

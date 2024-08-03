@@ -1,11 +1,13 @@
 ---
-title: Information architecture
+title: 信息架构
 slug: Glossary/Information_architecture
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
 
-应用于 web 设计和开发的信息架构是组织一个 web 站点的信息、内容和功能的实践，信息和服务的易使用和易查找使得它能提供最好的用户体验。
+应用于 Web 设计和开发的信息架构，是对网站的信息、内容、功能进行组织的实践，从而使网站呈现最佳的用户体验，使信息和服务易于使用和查找。
 
 ## 参见
 

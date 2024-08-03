@@ -43,7 +43,7 @@ gl.getParameter(gl.COLOR_CLEAR_VALUE);
 // Float32Array[1, 0.5, 0.5, 1]
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -51,7 +51,7 @@ gl.getParameter(gl.COLOR_CLEAR_VALUE);
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("WebGLRenderingContext.clear()")}}
 - {{domxref("WebGLRenderingContext.clearDepth()")}}

@@ -3,6 +3,8 @@ title: Positionnement
 slug: Web/SVG/Tutorial/Positions
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("SVG/Tutoriel/Premiers_pas", "SVG/Tutoriel/Formes_de_base") }}
 
 ### La grille

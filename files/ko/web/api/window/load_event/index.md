@@ -3,6 +3,8 @@ title: load
 slug: Web/API/Window/load_event
 ---
 
+{{APIRef}}
+
 `load` 이벤트는 리소스와 그것에 의존하는 리소스들의 로딩이 완료되면 실행됩니다.
 
 ## 예제

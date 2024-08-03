@@ -5,7 +5,7 @@ slug: Web/HTML/Element/ol
 
 {{HTMLSidebar}}
 
-**HTML-элемент `<ol>`** используется для упорядоченного списка — в частности для пронумерованного списка.
+HTML-элемент **`<ol>`** используется для упорядоченного списка, в частности для пронумерованного списка.
 
 {{EmbedInteractiveExample("pages/tabbed/ol.html", "tabbed-shorter")}}
 

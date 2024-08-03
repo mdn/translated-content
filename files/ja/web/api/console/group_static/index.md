@@ -1,7 +1,6 @@
 ---
 title: console.group()
 slug: Web/API/console/group_static
-original_slug: Web/API/console/group
 ---
 
 {{APIRef("Console API")}}

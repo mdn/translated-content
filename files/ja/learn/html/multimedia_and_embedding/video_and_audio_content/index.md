@@ -2,7 +2,7 @@
 title: 動画と音声のコンテンツ
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 l10n:
-  sourceCommit: af0e71822122feda89495ab9215c131bbe34d65c
+  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
@@ -14,7 +14,6 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピューターリテラシー、
         <a
           href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >インストール済みの基本的なソフトウェア</a
@@ -45,7 +44,8 @@ l10n:
 
 音声/動画ファイルの作成方法は、完全に別のスキルが必要なため、ここでは教えません。私たちは、自分自身で実験するために、[音声や動画のファイルの例とコード](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content) を提供しています。
 
-> **メモ:** ここで始める前に、 [YouTube](https://www.youtube.com/)、[Dailymotion](http://www.dailymotion.com)、[Vimeo](https://vimeo.com/) のような OVP （オンライン動画プロバイダー）と [Soundcloud](https://soundcloud.com/) のようなオンライン音声プロバイダーがあることも知っておく必要があります。そのような企業は、動画をホストして消費するための便利で簡単な方法を提供するので、莫大な帯域幅の消費を心配する必要はありません。 OVP は通常、ウェブページに動画や音声を埋め込むための既製コードを提供しています。その道を行くなら、この記事で取り上げるいくつかの困難を避けることができます。この種のサービスについては、次の記事でもう少し詳しく説明します。
+> [!NOTE]
+> ここで始める前に、 [YouTube](https://www.youtube.com/)、[Dailymotion](http://www.dailymotion.com)、[Vimeo](https://vimeo.com/) のような OVP （オンライン動画プロバイダー）と [Soundcloud](https://soundcloud.com/) のようなオンライン音声プロバイダーがあることも知っておく必要があります。そのような企業は、動画をホストして消費するための便利で簡単な方法を提供するので、莫大な帯域幅の消費を心配する必要はありません。 OVP は通常、ウェブページに動画や音声を埋め込むための既製コードを提供しています。その道を行くなら、この記事で取り上げるいくつかの困難を避けることができます。この種のサービスについては、次の記事でもう少し詳しく説明します。
 
 ### \<video> 要素
 
@@ -105,13 +105,14 @@ l10n:
 
 #### ブラウザーが対応しているメディアファイル
 
-> **メモ:** MP3 や MP4/H.264 などの一般的な形式は優れていますが、特許に阻まれています。つまり、ベースとなっている技術の一部または全部に応じた特許が存在するのです。米国では、 MP3 は 2017 年まで、 H.264 は少なくとも 2027 年までの特許が適用されています。
+> [!NOTE]
+> MP3 や MP4/H.264 などの一般的な形式は優れていますが、特許に阻まれています。つまり、ベースとなっている技術の一部または全部に応じた特許が存在するのです。米国では、 MP3 は 2017 年まで、 H.264 は少なくとも 2027 年までの特許が適用されています。
 >
 > これらの特許のために、これらのコーデックに対応するために実装しようとするブラウザーは、通常、膨大なライセンス料を支払わなければなりません。さらに、制限のあるソフトウェアを避けて、オープンな形式だけを使用することを好む人々もいます。このような法的・選好的な理由から、ウェブ開発者は、視聴者全員を取り込むために複数の形式に対応しなければならないことが分かっています。
 
 前節で説明したコーデックは、映像と音声を管理可能なファイルに圧縮するために存在します。生の映像と音声は非常に大きいからです。各ブラウザーには一連の **{{Glossary("Codec","コーデック")}}**、例えば Vorbis や H.264 などが含まれており、圧縮された音声や映像のデータをバイナリーデータに戻すために使用されます。各コーデックには利点と欠点があり、また各コンテナーにも長所と欠点があるため、どのコンテナーを使用するかの判断に影響を与えることがあります。
 
-ブラウザーの対応するコンテナーファイル形式がそれぞれ異なるだけでなく、コーデックの選択もそれぞれ異なるため、事態は少し複雑になります。ウェブサイトや アプリがユーザーのブラウザで動作する可能性を最大限に高めるには、使用する それぞれのメディアファイルを複数の形式で提供する必要があるかもしれません。自分のサイトとユーザーのブラウザーで共通の形式がない場合、メディアは再生されません。
+ブラウザーの対応するコンテナーファイル形式がそれぞれ異なるだけでなく、コーデックの選択もそれぞれ異なるため、事態は少し複雑になります。ウェブサイトや アプリがユーザーのブラウザーで動作する可能性を最大限に高めるには、使用する それぞれのメディアファイルを複数の形式で提供する必要があるかもしれません。自分のサイトとユーザーのブラウザーで共通の形式がない場合、メディアは再生されません。
 
 アプリのメディアを、リーチしたいブラウザー、プラットフォーム、機器のあらゆる組み合わせで表示できるようにすることは複雑なため、コーデックとコンテナーの最適な組み合わせを選ぶことは、複雑な作業になる可能性があります。ニーズに合ったコンテナーファイル形式の選択については、[正しいコンテナーの選択](/ja/docs/Web/Media/Formats/Containers#正しいコンテナーの選択)を参照してください。同様に、コンテンツや対象となる視聴者に合わせて最初に使用するメディアコーデックの選択については、[映像コーデックの選択](/ja/docs/Web/Media/Formats/Video_codecs#choosing_a_video_codec)や[音声コーデックの選択](/ja/docs/Web/Media/Formats/Audio_codecs#choosing_an_audio_codec)が参考になります。
 
@@ -210,7 +211,8 @@ HTML 動画に含めることができる他の多くの機能があります。
 
 ![再生ボタン、タイマー、音量コントロール、および進行状況バーを備えたシンプルなオーディオプレーヤー](audio-player.png)
 
-> **メモ:** Github で[音声デモをライブで実行する](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)こともできます (オーディオプレーヤーの[ソースコード](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)も参照してください)。
+> [!NOTE]
+> Github で[音声デモをライブで実行する](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)こともできます (オーディオプレーヤーの[ソースコード](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)も参照してください)。
 
 ビジュアルコンポーネントがないため、動画プレーヤーよりもスペースが小さくなります。音声を再生するコントロールを表示するだけで済みます。 HTML 動画とのその他の相違点は次のとおりです。
 
@@ -230,7 +232,8 @@ HTML 動画に含めることができる他の多くの機能があります。
 
 音声や動画の中で話されている言葉を文字起こししたものを、このような人たちに提供できたらいいと思いませんか？ HTML 動画のおかげで、それが可能になりました。そのためには、 [WebVTT](/ja/docs/Web/API/WebVTT_API) ファイル形式と {{htmlelement("track")}} 要素を使用します。
 
-> **メモ:** 「文字起こし」とは、「話し言葉をテキストとして書き留める」という意味です。出来上がったテキストが「文字起こししたもの」です。
+> [!NOTE]
+> 「文字起こし」とは、「話し言葉をテキストとして書き留める」という意味です。出来上がったテキストが「文字起こししたもの」です。
 
 WebVTT は、複数の文字列と、それぞれの文字列が動画の中で表示されるべき時間、さらには限定的なスタイル設定/位置情報などのメタデータを含むテキストファイルを書くための形式です。これらの文字列は**キュー**と呼ばれ、異なる目的で使用されるいくつかの種類のキューがあります。最も一般的なキューは以下の通りです。
 
@@ -276,9 +279,10 @@ WEBVTT
 
 ![再生、停止、音量、キャプションのオン/オフなどのスタンドコントロールを備えたビデオプレーヤー。 動画の再生には、槍のような武器を持つ男のシーンが表示され、キャプションには "Esta hoja tiene pasado oscuro." と表示されます。](video-player-with-captions.png)
 
-詳しくは、[HTML 動画にキャプションと字幕を追加する](/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)をご覧ください。Github には Ian Devlin によって書かれた[この記事の例](http://iandevlin.github.io/mdn/video-player-with-captions/)があります ([ソースコード](https://github.com/iandevlin/iandevlin.github.io/tree/main/mdn/video-player-with-captions)も参照してください)。この例では、JavaScript を使用してさまざまな字幕を選択できるようにしています。字幕をオンにするには、\[CC] ボタンを押して、英語、ドイツ語、スペイン語のオプションを選択する必要があります。
+詳しくは、[HTML 動画にキャプションと字幕を追加する](/ja/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)をご覧ください。Github には Ian Devlin によって書かれた[この記事の例](http://iandevlin.github.io/mdn/video-player-with-captions/)があります ([ソースコード](https://github.com/iandevlin/iandevlin.github.io/tree/main/mdn/video-player-with-captions)も参照してください)。この例では、JavaScript を使用してさまざまな字幕を選択できるようにしています。字幕をオンにするには、\[CC] ボタンを押して、英語、ドイツ語、スペイン語のオプションを選択する必要があります。
 
-> **メモ:** テキストトラックは検索エンジンが特にテキスト上で成功するため、 {{glossary("SEO")}} にも役立ちます。テキストトラックを使用すると、検索エンジンは動画の途中地点に直接リンクすることもできます。
+> [!NOTE]
+> テキストトラックは検索エンジンが特にテキスト上で成功するため、 {{glossary("SEO")}} にも役立ちます。テキストトラックを使用すると、検索エンジンは動画の途中地点に直接リンクすることもできます。
 
 ### アクティブラーニング: 自分の音声と動画を埋め込む
 
@@ -288,7 +292,7 @@ WEBVTT
 
 次のことをしましょう。
 
-1. 音声と動画のファイルをコンピュータの新しいディレクトリーに保存します。
+1. 音声と動画のファイルをコンピューターの新しいディレクトリーに保存します。
 2. 同じディレクトリーに `index.html` と呼ばれる新しい HTML ファイルを作成します。
 3. ページに {{HTMLElement("audio")}} 要素と {{HTMLElement("video")}} 要素を追加します。それらにデフォルトのブラウザーコントロールを表示させます。
 4. 両方の要素に {{HTMLElement("source")}} 要素を付けて、ブラウザーが最もよくサポートするフォーマットを見つけて読み込むようにします。これらは [`type`](/ja/docs/Web/HTML/Element/source#type) 属性を含むべきです。
@@ -307,9 +311,9 @@ WEBVTT
 ## 関連情報
 
 - HTML メディア要素: {{htmlelement("audio")}}, {{htmlelement("video")}}, {{htmlelement("source")}}, {{htmlelement("track")}}
-- [HTML5 の動画へのキャプションと字幕の追加](/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
-- [音声と動画の配信](/ja/docs/Web/Guide/Audio_and_video_delivery): HTML と JavaScript を使用して音声と動画を Web ページに配置することに関する詳細。
-- [音声と動画の加工](/ja/docs/Web/Guide/Audio_and_video_manipulation): JavaScript を使用して音声や動画を操作する方法について詳しく説明します（たとえばフィルターを追加するなど）。
+- [HTML5 の動画へのキャプションと字幕の追加](/ja/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+- [音声と動画の配信](/ja/docs/Web/Media/Audio_and_video_delivery): HTML と JavaScript を使用して音声と動画をウェブページに配置することに関する詳細。
+- [音声と動画の加工](/ja/docs/Web/Media/Audio_and_video_manipulation): JavaScript を使用して音声や動画を操作する方法について詳しく説明します（たとえばフィルターを追加するなど）。
 - [ウェブメディア技術](/ja/docs/Web/Media)
 - [ウェブ上のメディア種別とファイル形式のガイド](/ja/docs/Web/Media/Formats)
 - [イベントリファレンス > メディア](/ja/docs/Web/Events#メディア)

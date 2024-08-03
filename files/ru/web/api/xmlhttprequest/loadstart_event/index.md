@@ -3,6 +3,8 @@ title: loadstart
 slug: Web/API/XMLHttpRequest/loadstart_event
 ---
 
+{{APIRef("XMLHttpRequest API")}}
+
 Событие `loadstart` происходит, когда начинается загрузка.
 
 ## Общая информация

@@ -14,7 +14,8 @@ _HTML 引文元素_ (**\<q>**) 指示一段元素內的文字，屬於行內引�
 | 允許父元素                                      | 任何允許[段落式內容](/zh-TW/docs/HTML/Content_categories#Phrasing_content)的元素                                                           |
 | DOM 介面                                        | {{domxref("HTMLQuoteElement")}}                                                                                                            |
 
-> **備註：** 多數現代標準瀏覽器，如 Mozilla Firefox, Opera, Safari 會在 `<q>` 元素周圍添加引號；但有些瀏覽器（如 Internet Explorer）可能不會針對引用添加任何樣式，不過這些都可以透過樣式規則套用。
+> [!NOTE]
+> 多數現代標準瀏覽器，如 Mozilla Firefox, Opera, Safari 會在 `<q>` 元素周圍添加引號；但有些瀏覽器（如 Internet Explorer）可能不會針對引用添加任何樣式，不過這些都可以透過樣式規則套用。
 
 ## 屬性
 

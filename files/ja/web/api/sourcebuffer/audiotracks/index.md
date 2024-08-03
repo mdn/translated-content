@@ -1,8 +1,9 @@
 ---
-title: SourceBuffer.audioTracks
+title: "SourceBuffer: audioTracks プロパティ"
+short-title: audioTracks
 slug: Web/API/SourceBuffer/audioTracks
 l10n:
-  sourceCommit: 7455f0c585ea29fa85ea09e11716b70f76241f5b
+  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
 {{APIRef("Media Source Extensions")}}

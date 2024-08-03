@@ -17,7 +17,8 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 2. **基于所选主题要展示哪些信息**？写下标题和几段文字，再找个你想在网站上展示的图像。
 3. 背景颜色用什么，或者，用高级一点的话来说，**你的网站外观是什么样的**？使用哪种字体比较合适：正式的、卡通的、粗体还是瘦体？
 
-> **备注：** 复杂的网站需要更详细的指引，深入到颜色、字体、页面上元素的间距、适当的书写风格等等以及其他细节。这有时被称为设计指南、设计系统或品牌手册，可以在 [Firefox Photon 设计系统](https://design.firefox.com/photon/)中找到一个示例。
+> [!NOTE]
+> 复杂的网站需要更详细的指引，深入到颜色、字体、页面上元素的间距、适当的书写风格等等以及其他细节。这有时被称为设计指南、设计系统或品牌手册，可以在 [Firefox Photon 设计系统](https://design.firefox.com/photon/)中找到一个示例。
 
 ## 绘制草图
 
@@ -25,7 +26,8 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 
 ![画在纸上的一个粗略的网站草图](website-drawing-scan.png)
 
-> **备注：** 即使在实际的复杂网站中，设计团队通常也是从粗略的草图开始设计的，再使用图形编辑器或 Web 技术建立数字模拟图。
+> [!NOTE]
+> 即使在实际的复杂网站中，设计团队通常也是从粗略的草图开始设计的，再使用图形编辑器或 Web 技术建立数字模拟图。
 >
 > Web 团队通常包括一个平面设计师和一个{{Glossary("UX", "用户体验")}}（UX）设计师。平面设计师把网站的视觉效果放在一起。用户体验设计师则以一种更抽象的模式来解决用户如何体验及与网站交互方面的问题。
 
@@ -65,7 +67,8 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 1. 在你的代码中添加一个引用，从 Google 服务器加载这个字体。
 2. 下载字体文件到你的系统内，自行挂载这个文件，并在你网站的代码中使用。
 
-> **备注：** 在你的网站使用从 Google 服务器加载的字体可能会违反欧盟的数据隐私规定 [GDPR](https://gdpr.eu/what-is-gdpr/)，因为加载字体时会暴露用户的 IP 地址。如果你遇到这种潜在风险，需要选择第二种方式。
+> [!NOTE]
+> 在你的网站使用从 Google 服务器加载的字体可能会违反欧盟的数据隐私规定 [GDPR](https://gdpr.eu/what-is-gdpr/)，因为加载字体时会暴露用户的 IP 地址。如果你遇到这种潜在风险，需要选择第二种方式。
 
 另一个选择是使用 [安全 Web 字体](https://web.mit.edu/jmorzins/www/fonts.html)，如 Arial、Times New Roman、Courier New。
 

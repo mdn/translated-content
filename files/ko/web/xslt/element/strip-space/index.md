@@ -3,7 +3,7 @@ title: strip-space
 slug: Web/XSLT/Element/strip-space
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:strip-space>` 요소는 공백을 지웠으면 하는 소스 문서의 요소를 정의합니다.
 

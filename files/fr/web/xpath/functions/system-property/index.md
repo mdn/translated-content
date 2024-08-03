@@ -3,7 +3,7 @@ title: system-property
 slug: Web/XPath/Functions/system-property
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `system-property()` retourne un objet représentant la propriété système donnée.
 

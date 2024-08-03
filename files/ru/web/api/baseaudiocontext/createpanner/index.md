@@ -119,7 +119,7 @@ function positionPanner() {
 
 > **Примечание:** In terms of working out what position values to apply to the listener and panner, to make the sound appropriate to what the visuals are doing on screen, there is quite a bit of fiddly math involved, but you will soon get used to it with a bit of experimentation.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -127,6 +127,6 @@ function positionPanner() {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Using the Web Audio API](/ru/docs/Web_Audio_API/Using_Web_Audio_API)

@@ -2,10 +2,10 @@
 title: "非キャプチャグループ: (?:...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Non-capturing_group
 l10n:
-  sourceCommit: 9cc03092b578e4ad871b1e0862b6120d0453e226
+  sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{JsSidebar}}
+{{jsSidebar}}
 
 **非キャプチャグループ**はサブパターンをグループ化し、グループ全体に[数量詞](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)を適用したり、グループ内で[論理和](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)を使用したりすることができます。これは JavaScript で発生した[グループ化演算子](/ja/docs/Web/JavaScript/Reference/Operators/Grouping)のように動作します。[キャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)とは異なり、一致したテキストを記憶しないため、パフォーマンスが向上し、パターンが有用なキャプチャグループを含む場合の混乱を避けることができます。
 
@@ -100,7 +100,7 @@ parseTitle('name="foo"'); // 'foo'
 
 ## 関連情報
 
-- [グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
-- [正規表現リファレンス](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
+- [グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)ガイド
+- [正規表現](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
 - [キャプチャグループ: `(...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
 - [名前付きキャプチャグループ: `(?<name>...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)

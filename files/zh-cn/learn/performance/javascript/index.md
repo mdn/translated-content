@@ -65,7 +65,8 @@ slug: Learn/Performance/JavaScript
 4. 稍后，浏览器根据应用于每个 HTML 元素的 CSS 来确定每个元素的样式。
 5. 然后将经过样式处理的结果绘制到屏幕上。
 
-> **备注：** 这只是一个非常简单的叙述，但可以让你了解发生的事情。
+> [!NOTE]
+> 这只是一个非常简单的叙述，但可以让你了解发生的事情。
 
 这里关键的步骤是第 3 步。默认情况下，JavaScript 的解析和执行会阻塞渲染。这意味着浏览器在遇到 JavaScript 之后，会阻塞解析任何出现在其后的 HTML 代码，直到脚本处理完成。因此，样式和绘制也会被阻塞。因此，你不仅需要仔细考虑你要下载的内容，还要考虑代码何时以及以何种方式执行。
 
@@ -109,7 +110,8 @@ slug: Learn/Performance/JavaScript
 import { function } from "important-module.js";
 ```
 
-> **备注：** 预加载并不能保证脚本在你包含它时已经加载完成，但它确实意味着它将尽早开始下载。即使未完全移除阻塞渲染的时间，渲染阻塞时间仍将缩短。
+> [!NOTE]
+> 预加载并不能保证脚本在你包含它时已经加载完成，但它确实意味着它将尽早开始下载。即使未完全移除阻塞渲染的时间，渲染阻塞时间仍将缩短。
 
 ## 推迟非关键 JavaScript 的执行
 
@@ -127,7 +129,8 @@ import { function } from "important-module.js";
 
 这会导致脚本获取与 DOM 解析并行进行，因此它将在同一时间准备好，不会阻塞渲染。
 
-> **备注：** 还有另一个属性 `defer`，它会导致脚本在文档解析完成之后，但在触发 [`DOMContentLoaded`](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event) 事件之前执行。这与 `async` 有类似的效果。
+> [!NOTE]
+> 还有另一个属性 `defer`，它会导致脚本在文档解析完成之后，但在触发 [`DOMContentLoaded`](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event) 事件之前执行。这与 `async` 有类似的效果。
 
 你也可以直到需要时才加载 JavaScript。这可以通过 DOM 脚本编写来实现，例如：
 

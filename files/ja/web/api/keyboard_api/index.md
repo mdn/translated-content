@@ -2,7 +2,7 @@
 title: キーボード API
 slug: Web/API/Keyboard_API
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 722a5edf794b8fb7a379cdf79729fd913b0b264f
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Keyboard API")}}
@@ -11,7 +11,7 @@ l10n:
 
 いくつかの機能を提供します。「キーボードマッピング」は、キーボードの特定の物理キーによって生成された文字列を取得するためのインターフェイスを提供し、そのキーをユーザーに正しく識別させます。「キーボードロック」は、通常ユーザーエージェントやオペレーティングシステムによって予約されているキーを、ウェブページがキャプチャできるようにします。キーボード API の使用目的は、ゲームやリモートアクセスアプリなど、全画面の没入感を提供するウェブアプリケーションです。
 
-## キーボード API の概念と使用方法
+## 概念と使用方法
 
 ### キーボードマッピング
 
@@ -59,6 +59,9 @@ navigator.keyboard.lock(["KeyW", "KeyA", "KeyS", "KeyD"]);
   - : キーボードレイアウトマップを取得し、物理キーボードからのキー押下のキャプチャを切り替える関数を提供します。
 - {{domxref('KeyboardLayoutMap')}} {{experimental_inline}}
   - : 特定の物理キーに関連付けられた文字列を取得するための関数を持つ、マップ風のオブジェクトです。
+
+### 他のインターフェイスへの拡張
+
 - {{domxref('navigator.keyboard')}} {{ReadOnlyInline}} {{experimental_inline}}
   - : キーボードレイアウトマップを取得し、物理キーボードからのキー押下のキャプチャを切り替える関数へのアクセスを提供する {{domxref('Keyboard')}} オブジェクトを返します。
 

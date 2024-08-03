@@ -2,7 +2,7 @@
 title: inset-inline
 slug: Web/CSS/inset-inline
 l10n:
-  sourceCommit: 9e521726ed1d605756b73a788eaa55498d540821
+  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
 {{CSSRef}}

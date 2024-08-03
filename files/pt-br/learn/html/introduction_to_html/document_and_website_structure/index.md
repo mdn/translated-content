@@ -63,7 +63,8 @@ O exemplo simples mostrado acima não é bonito, mas é perfeitamente aceitável
 
 Isso ocorre porque os visuais não contam toda a história. Usamos cor e tamanho de fonte para chamar a atenção dos usuários para as partes mais úteis do conteúdo, como o menu de navegação e links relacionados, mas sobre pessoas com deficiência visual, por exemplo, que podem não encontrar conceitos como "rosa" e "grande". fonte "muito útil?
 
-> **Nota:** Nota: as pessoas daltônicas representam cerca de 4% da população mundial ou, em outras palavras, aproximadamente 1 em cada 12 homens e 1 em cada 200 mulheres são daltônicas. Cegos e deficientes visuais representam cerca de 4-5% da população mundial (em 2012 havia 285 milhões de pessoas no mundo, enquanto a população total era de cerca de 7 bilhões).
+> [!NOTE]
+> Nota: as pessoas daltônicas representam cerca de 4% da população mundial ou, em outras palavras, aproximadamente 1 em cada 12 homens e 1 em cada 200 mulheres são daltônicas. Cegos e deficientes visuais representam cerca de 4-5% da população mundial (em 2012 havia 285 milhões de pessoas no mundo, enquanto a população total era de cerca de 7 bilhões).
 
 Em seu código HTML, você pode marcar seções de conteúdo com base em sua funcionalidade. Você pode usar elementos que representam as seções de conteúdo descritas acima sem ambigüidade, e tecnologias assistivas, como leitores de tela, podem reconhecer esses elementos e ajudar com tarefas como "localizar a navegação principal". "ou" encontre o conteúdo principal. " Como mencionamos anteriormente no curso, há um número de [consequências de não usar a estrutura de elemento e semâtica certas para o trabalho certo.](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML#Por_que_precisamos_de_estrutura)
 
@@ -241,7 +242,8 @@ Nesse caso, a nota do editor deve meramente fornecer orientação extra para o d
 
 Este não é realmente um `<aside>`, pois não está necessariamente relacionado ao conteúdo principal da página (você deseja visualizá-lo de qualquer lugar). Nem sequer garante particularmente o uso de uma `<section>`, pois não faz parte do conteúdo principal da página. Portanto, um \<div> é bom neste caso. Incluímos um cabeçalho como orientação para ajudar os usuários de leitores de tela a encontrá-lo.
 
-> **Aviso:** Divs são tão convenientes de usar que é fácil usá-los demais. Como eles não carregam valor semântico, eles apenas confundem seu código HTML. Tome cuidado para usá-los somente quando não houver uma solução semântica melhor e tente reduzir ao mínimo o uso deles, caso contrário, será difícil atualizar e manter seus documentos.
+> [!WARNING]
+> Divs são tão convenientes de usar que é fácil usá-los demais. Como eles não carregam valor semântico, eles apenas confundem seu código HTML. Tome cuidado para usá-los somente quando não houver uma solução semântica melhor e tente reduzir ao mínimo o uso deles, caso contrário, será difícil atualizar e manter seus documentos.
 
 ### Quebras de linha e regras horizontais
 
@@ -295,7 +297,8 @@ Depois de planejar o conteúdo de uma página da Web simples, o próximo passo l
 
 Tente realizar o exercício acima para um site de sua própria criação. Sobre o que você gostaria de criar um site?
 
-> **Nota:** Salve seu trabalho em algum lugar; você pode precisar mais tarde.
+> [!NOTE]
+> Salve seu trabalho em algum lugar; você pode precisar mais tarde.
 
 ## Resumo
 

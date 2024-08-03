@@ -3,7 +3,7 @@ title: round
 slug: Web/XPath/Functions/round
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `round` 関数は、与えられた数値に最も近い整数を返します。
 

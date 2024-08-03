@@ -5,7 +5,7 @@ slug: Web/HTML/Element/label
 
 {{HTMLSidebar}}
 
-**HTML-элемент `<label>` **представляет собой подпись к элементу пользовательского интерфейса.
+HTML-элемент **`<label>`** представляет собой подпись к элементу пользовательского интерфейса.
 
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Общий поток](/ru/docs/Web/HTML/Content_categories#Flow_content), [текстовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), [интерактивный контент, элемент формы](/ru/docs/Web/HTML/Content_categories#Interactive_content), ощутимый контент. |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -49,7 +49,7 @@ slug: Web/HTML/Element/label
 
 {{EmbedLiveSample('Using_the_for_attribute', '200', '50', '')}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -57,6 +57,6 @@ slug: Web/HTML/Element/label
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.

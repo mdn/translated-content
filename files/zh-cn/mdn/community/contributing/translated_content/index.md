@@ -7,7 +7,7 @@ l10n:
 
 {{MDNSidebar}}
 
-自 2020 年 12 月 14 日起，MDN 一直运行在新的基于 Github 的 [Yari 平台](https://github.com/mdn/yari)上。这为 MDN 带来了许多积极影响，但我们需要彻底改变我们处理本地化内容的方式。这是因为在我们的非英语本地化语言中，有很多内容未经维护且已经过时，我们希望将来能更好地管理这些内容。
+自 2020 年 12 月 14 日起，MDN 一直运行在新的基于 GitHub 的 [Yari 平台](https://github.com/mdn/yari)上。这为 MDN 带来了许多积极影响，但我们需要彻底改变我们处理本地化内容的方式。这是因为在我们的非英语本地化语言中，有很多内容未经维护且已经过时，我们希望将来能更好地管理这些内容。
 
 除了以下语言，其他所有的本地化内容都已经归档，这意味着它们在 GitHub 上是只读的，不能在 MDN 上查看。活跃的本地语言有专门的团队负责维护。
 
@@ -41,8 +41,8 @@ l10n:
 
 ### 韩语（ko）
 
-- 讨论组：[Discord (#korean channel)](/discord)、[Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
-- 目前的志愿者：[hochan222](https://github.com/hochan222)、[yechoi42](https://github.com/yechoi42)、[cos18](https://github.com/cos18)、[pje1740](https://github.com/pje1740)、[wisedog](https://github.com/wisedog)、[swimjiy](https://github.com/swimjiy)、[jho2301](https://github.com/jho2301)、[sunhpark42](https://github.com/sunhpark42)、[1ilsang](https://github.com/1ilsang)
+- 讨论组：[Discord (#korean channel)](/discord)、[Google Groups (`yari-content-ko`)](https://groups.google.com/g/yari-content-ko)
+- 目前的志愿者：[hochan222](https://github.com/hochan222)、[yechoi42](https://github.com/yechoi42)、[wisedog](https://github.com/wisedog)、[sunhpark42](https://github.com/sunhpark42)、[1ilsang](https://github.com/1ilsang)
 
 ### 俄语（ru）
 
@@ -51,7 +51,7 @@ l10n:
 
 ### 西班牙语（es）
 
-- 讨论组：[Matrix (#mdn-l10n-es channel)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org)
+- 讨论组：[Matrix (`#mdn-l10n-es`)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org)、[Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj)、[Discord (`#spanish`)](/discord)
 - 目前的志愿者：[JuanVqz](https://github.com/JuanVqz)、[davbrito](https://github.com/davbrito)、[Graywolf9](https://github.com/Graywolf9)、[Vallejoanderson](https://github.com/Vallejoanderson)、[marcelozarate](https://github.com/marcelozarate)、[Jalkhov](https://github.com/Jalkhov)
 
 ## 参见

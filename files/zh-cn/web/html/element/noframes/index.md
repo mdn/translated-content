@@ -11,7 +11,8 @@ slug: Web/HTML/Element/noframes
 
 你可以在 `<noframes>` 中使用任何 HTML 元素，它预期可以在 {{HTMLElement("body")}} 中看到，除了 {{HTMLElement("frameset")}} 和 {{HTMLElement("frame")}} 元素。
 
-> **备注：** 由于所有主流浏览器都支持帧，这个元素一般不需要使用。它也在 HTML5 中完全过时，并且应该避免使用，来遵循标准。
+> [!NOTE]
+> 由于所有主流浏览器都支持帧，这个元素一般不需要使用。它也在 HTML5 中完全过时，并且应该避免使用，来遵循标准。
 
 ## 属性
 

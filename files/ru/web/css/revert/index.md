@@ -45,7 +45,7 @@ section {
 
 {{EmbedLiveSample('Пример')}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

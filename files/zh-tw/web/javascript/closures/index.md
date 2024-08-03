@@ -27,7 +27,7 @@ init();
 
 {{JSFiddleEmbed("https://jsfiddle.net/78dg25ax/", "js,result", 250)}}
 
-[運行](http://jsfiddle.net/xAFs9/3/)這個程式碼並注意 `displayName()` 裡面的 `alert()` 宣告，它能顯示位於上一層的 `name` 變數。這實例在描述*語法作用域*碰上巢狀函式時，解析器（parser）會如何解讀（resolve）變數。「作用域」一詞，指的正是作用域環境在程式碼指定變數時，使用 location 來決定該變數用在哪裡的事情。巢狀函式的內部函式，能訪問在該函式作用域之外的變數。
+[運行](https://jsfiddle.net/xAFs9/3/)這個程式碼並注意 `displayName()` 裡面的 `alert()` 宣告，它能顯示位於上一層的 `name` 變數。這實例在描述*語法作用域*碰上巢狀函式時，解析器（parser）會如何解讀（resolve）變數。「作用域」一詞，指的正是作用域環境在程式碼指定變數時，使用 location 來決定該變數用在哪裡的事情。巢狀函式的內部函式，能訪問在該函式作用域之外的變數。
 
 ## 閉包
 
@@ -172,7 +172,8 @@ console.log(counter.value()); // logs 1
 
 這三個公有函式，皆為共享同一個環境的閉包。由於 JavaScript 的語法作用域，它們都能訪問 `privateCounter` 變數與 `changeBy` 函式。
 
-> **備註：** 你應該也發現到我們定義了建立 counter 的匿名函式、而我們接著呼叫它，並給`counter` 變數指派了回傳值。我們也能在分離的變數 `makeCounter` 儲存函式並用其建立數個 counter。
+> [!NOTE]
+> 你應該也發現到我們定義了建立 counter 的匿名函式、而我們接著呼叫它，並給`counter` 變數指派了回傳值。我們也能在分離的變數 `makeCounter` 儲存函式並用其建立數個 counter。
 
 ```js
 var makeCounter = function () {
@@ -206,7 +207,8 @@ alert(counter2.value()); /* Alerts 0 */
 
 請注意 `counter1` 與 `counter2` 這兩個計數器是如何維護其獨立性的。每個閉包都以各自的閉包，在參照不同版本的 `privateCounter` 變數。每當呼叫其中一個計數器時，它會透過該變數的數值變更，改變語法作用域的環境。不過，在其中一個閉包的變數值改時，其他閉包的數值並不會受到影響。
 
-> **備註：** 使用這種方法的閉包，提供了一些與物件導向程式設計的益處，尤其是資料隱藏與封裝。
+> [!NOTE]
+> 使用這種方法的閉包，提供了一些與物件導向程式設計的益處，尤其是資料隱藏與封裝。
 
 ## 在迴圈建立閉包：一個常見錯誤
 

@@ -2,7 +2,7 @@
 title: XPathException
 slug: Web/API/XPathException
 l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
 
 {{APIRef("DOM XPath")}}{{Deprecated_Header}}

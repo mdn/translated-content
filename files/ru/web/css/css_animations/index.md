@@ -31,7 +31,7 @@ slug: Web/CSS/CSS_animations
 - [Использование CSS-анимаций](/ru/docs/Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy)
   - : Пошаговое руководство по созданию анимаций с помощью CSS. Статья описывает все касающиеся анимации CSS-свойства и @-правила и объясняет, как они взаимодействуют друг с другом.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -39,6 +39,6 @@ slug: Web/CSS/CSS_animations
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - Related to CSS Animations, [CSS Transitions](/ru/docs/Web/CSS/CSS_Transitions) can trigger animations on user actions.

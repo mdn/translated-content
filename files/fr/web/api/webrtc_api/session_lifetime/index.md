@@ -3,6 +3,8 @@ title: Introduction à WebRTC
 slug: Web/API/WebRTC_API/Session_lifetime
 ---
 
+{{DefaultAPISidebar("WebRTC")}}
+
 > **Note :** WebRTC vous permet de faire de la communication pair-à-pair dans une application du navigateur.
 
 ## Etablir la connexion
@@ -15,12 +17,4 @@ La signalisation est le mécanisme par lequel les pairs envoient des messages de
 
 ## Transmission
 
-### getUserMedia
-
-Objet LocalMediaStream
-
 ## Reception
-
-Le support WebRTC dans Firefox est caché derrière une préférence. Allez à about:config et positionnez 'media.navigator.enabled' à 'true'.
-
-> **Note :** Il y a des fichiers de tests dans les sources pour vous donner une idée sur ce qui fonctionne. Voir: [dom/media/tests/local_video_test.html](http://hg.mozilla.org/projects/alder/file/tip/dom/media/tests/local_video_test.html). Essayez aussi la [demo de service d'appel](http://webrtc-demo.herokuapp.com/mozdemo), sa page source, et son [serveur source](https://github.com/anantn/webrtc-demo/).

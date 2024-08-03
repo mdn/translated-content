@@ -1,9 +1,12 @@
 ---
-title: Document.styleSheetSets
+title: "Document: styleSheetSets プロパティ"
+short-title: styleSheetSets
 slug: Web/API/Document/styleSheetSets
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 **`styleSheetSets`** プロパティは読み取り専用で、現在有効なすべてのスタイルシートセットの生きたリストを返します。
 
@@ -21,10 +24,9 @@ const sheets = document.styleSheetSets;
 
 list.textContent = "";
 
-for (let i = 0; i < sheets.length; i++) {
+for (const sheet of sheets) {
   const item = document.createElement("li");
-
-  item.textContent = sheets[i];
+  item.textContent = sheet;
   list.appendChild(item);
 }
 ```

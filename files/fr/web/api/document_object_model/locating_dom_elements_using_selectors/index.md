@@ -3,6 +3,8 @@ title: Localisation des éléments DOM avec les sélecteurs
 slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 ---
 
+{{DefaultAPISidebar("DOM")}}
+
 L'API Selectors fournit des méthodes simples et rapides pour retrouver les noeuds [`Element`](/fr/docs/Web/API/element) du DOM par correspondance avec un jeu de sélecteurs. C'est beaucoup plus rapide que les techniques passées, pour lesquelles il était nécessaire, par exemple, d'utiliser une boucle en code JavaScript pour localiser l'élément spécifique que l'on devait trouver.
 
 ## L'interface NodeSelector

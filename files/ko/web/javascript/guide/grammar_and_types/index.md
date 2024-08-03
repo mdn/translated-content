@@ -24,7 +24,8 @@ JavaScript에서는 명령을 {{Glossary("Statement", "명령문(statement)")}}�
 
 명령문이 한 줄을 다 차지할 경우에는 세미콜론이 필요하지 않습니다. 그러나 한 줄에 두 개 이상의 명령문이 필요하다면 반드시 세미콜론으로 구분해야 합니다.
 
-> **참고:** ECMAScript는 세미콜론을 자동으로 삽입해 명령문을 끝내는 규칙([ASI](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#자동_세미콜론_삽입))도 가지고 있습니다. (더 많은 정보는 JavaScript의 [어휘 문법](/ko/docs/Web/JavaScript/Reference/Lexical_grammar)에 대한 자세한 참고서를 참고하세요.)
+> [!NOTE]
+> ECMAScript는 세미콜론을 자동으로 삽입해 명령문을 끝내는 규칙([ASI](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#자동_세미콜론_삽입))도 가지고 있습니다. (더 많은 정보는 JavaScript의 [어휘 문법](/ko/docs/Web/JavaScript/Reference/Lexical_grammar)에 대한 자세한 참고서를 참고하세요.)
 
 하지만, 세미콜론이 필요하지 않은 경우라도 항상 세미콜론으로 끝마치는 편이 버그 예방 차원에서 더 좋은 습관이라고 여겨집니다.
 
@@ -46,7 +47,8 @@ JavaScript의 스크립트 소스는 왼쪽에서 오른쪽으로 탐색하면�
 
 주석은 공백처럼 행동하며 스크립트 실행 시 버려집니다.
 
-> **참고:** 몇몇 JavaScript 파일의 시작부에 `#!/usr/bin/env node`와 같은 형태의 주석 문법이 쓰이는 것을 볼 수 있습니다.
+> [!NOTE]
+> 몇몇 JavaScript 파일의 시작부에 `#!/usr/bin/env node`와 같은 형태의 주석 문법이 쓰이는 것을 볼 수 있습니다.
 >
 > 이것은 **해시뱅 주석** 구문이라고 하는데, 이 특별한 주석은 스크립트를 실행할 때 쓸 특별한 JavaScript 인터프리터의 경로를 설정할 때 쓰입니다. [해시뱅 주석](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#해시뱅_주석)을 참고하여 자세한 내용을 확인할 수 있습니다.
 
@@ -357,7 +359,8 @@ y = 42 + " is the answer"; // "42 is the answer"
 
 `parseInt`는 오직 정수만 반환하므로, 소수에서는 사용성이 떨어집니다.
 
-> **참고:** 게다가 `parseInt`를 잘 사용하기 위해서는 항상 진법(Radix) 매개변수를 포함해야 합니다. 진법 매개변수는 변환에 사용될 진법을 지정하는데 사용됩니다.
+> [!NOTE]
+> 게다가 `parseInt`를 잘 사용하기 위해서는 항상 진법(Radix) 매개변수를 포함해야 합니다. 진법 매개변수는 변환에 사용될 진법을 지정하는데 사용됩니다.
 
 ```js
 parseInt("101", 2); // 5
@@ -393,11 +396,13 @@ JavaScript에서 값을 나타내기 위해 리터럴을 사용합니다. 이는
 let coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
-> **참고:** 배열 리터럴은 일종의 객체 초기자(initializer) 입니다. [객체 초기자 사용하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#객체_초기자_사용하기) 참고.
+> [!NOTE]
+> 배열 리터럴은 일종의 객체 초기자(initializer) 입니다. [객체 초기자 사용하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#객체_초기자_사용하기) 참고.
 
 배열이 최상단 스크립트에서 리터럴을 사용하여 만들어진 경우, JavaScript는 배열 리터럴을 포함한 식을 평가할 때마다 배열로 해석합니다. 게다가, 함수에서 사용되는 리터럴은 함수가 호출될 때마다 생성됩니다.
 
-> **참고:** 배열 리터럴은 `Array` 객체입니다. `Array` 객체에 대한 자세한 내용은 {{jsxref("Array")}}와 [Indexed collections](/ko/docs/Web/JavaScript/Guide/Indexed_collections) 참고.
+> [!NOTE]
+> 배열 리터럴은 `Array` 객체입니다. `Array` 객체에 대한 자세한 내용은 {{jsxref("Array")}}와 [Indexed collections](/ko/docs/Web/JavaScript/Guide/Indexed_collections) 참고.
 
 #### 배열 리터럴의 추가 쉼표
 
@@ -417,7 +422,8 @@ let fish = ["Lion", , "Angel"];
 
 다음 예제에서, 배열의 `length`는 3입니다. `myList[3]`은 없습니다. 목록의 다른 모든 쉼표는 새로운 요소를 나타냅니다.
 
-> **참고:** 후행 쉼표는 구버전 브라우저에서 오류를 유발할 수 있으므로 제거하는게 최선입니다.
+> [!NOTE]
+> 후행 쉼표는 구버전 브라우저에서 오류를 유발할 수 있으므로 제거하는게 최선입니다.
 
 ```js-nolint
 var myList = ["home", , "school", ];
@@ -443,7 +449,8 @@ var myList = ["home", , "school", ,];
 
 불리언 형은 `true`와 `false`의 리터럴 값을 가집니다.
 
-> **참고:** 원시 불리언 값 `true` 및 `false`와 {{jsxref("Boolean")}} 객체의 true 및 false 값을 혼동하지 마세요.
+> [!NOTE]
+> 원시 불리언 값 `true` 및 `false`와 {{jsxref("Boolean")}} 객체의 true 및 false 값을 혼동하지 마세요.
 >
 > 불리언 객체는 원시 불린 데이터 형을 감싸는 래퍼(wrapper)입니다. 더 많은 정보는 {{jsxref("Boolean")}}을 참고하세요.
 

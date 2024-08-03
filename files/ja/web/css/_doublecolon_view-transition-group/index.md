@@ -2,7 +2,7 @@
 title: "::view-transition-group"
 slug: Web/CSS/::view-transition-group
 l10n:
-  sourceCommit: 6d4b6a0f9df94de158c373d6b08c504caafcee5f
+  sourceCommit: c9cc38c3c3c342e2e952c1acd57f55e104c5bb06
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -28,7 +28,8 @@ html::view-transition-group(*) {
 
 「古い」ビュー状態と「新しい」ビュー状態の両方がある場合、ビュートランジションスタイルシートのスタイルは、この擬似要素の {{cssxref("width")}} と {{cssxref("height")}} を「古い」ビュー状態の境界ボックスのサイズから「新しい」ビュー状態の境界ボックスのサイズにアニメーションさせます。
 
-> **メモ:** ビュートランジションスタイルシートのスタイルは、ビューのトランジション中に動的に生成されます。詳細については、仕様書の[トランジション擬似要素の設定](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements)および[擬似要素スタイルの更新](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles)の節を参照してください。
+> [!NOTE]
+> ビュートランジションスタイルシートのスタイルは、ビューのトランジション中に動的に生成されます。詳細については、仕様書の[トランジション擬似要素の設定](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements)および[擬似要素スタイルの更新](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles)の節を参照してください。
 
 さらに、要素の変換は、「古い」ビュー状態の画面空間変換から新しいビュー状態の画面空間変換へアニメーションします。アニメーションしているプロパティの値はトランジションを始める時点に決定されるため、このスタイル設定は動的に生成されます。
 
@@ -45,7 +46,7 @@ html::view-transition-group(*) {
 - `*`
   - : 擬似要素が、すべてのビュートランジショングループに一致するようにします。
 - `root`
-  - : 擬似要素が、ページ全体のビュートランジションを含むためにユーザエージェントによって作成された既定の `root` ビュートランジショングループに一致するようにします。すなわち、 {{cssxref("view-transition-name")}} プロパティによって自分自身を固有のビュートランジショングループに割り当てていない要素を意味します）。
+  - : 擬似要素が、ページ全体のビュートランジションを含むためにユーザーエージェントによって作成された既定の `root` ビュートランジショングループに一致するようにします。すなわち、 {{cssxref("view-transition-name")}} プロパティによって自分自身を固有のビュートランジショングループに割り当てていない要素を意味します）。
 - {{cssxref("custom-ident")}}
   - : 擬似要素が、指定された {{cssxref("custom-ident")}} を {{cssxref("view-transition-name")}} プロパティを通して要素に割り当てることによって作成された固有のビュートランジショングループに一致するようにします。
 

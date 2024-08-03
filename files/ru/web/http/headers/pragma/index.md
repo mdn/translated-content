@@ -58,7 +58,7 @@ Pragma: no-cache
 
 {{Compat}}
 
-## Смотреть также
+## Смотрите также
 
 - {{HTTPHeader("Cache-Control")}}
 - {{HTTPHeader("Expires")}}

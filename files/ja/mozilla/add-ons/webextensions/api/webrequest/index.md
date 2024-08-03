@@ -48,13 +48,14 @@ websocket が ws\:// and wss\:// としてリクエストするものも含め�
 
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
-- 次の API で認証クレデンシャルの提供:
+- 次の API で認証資格情報の提供:
 
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 これを行うには、イベント `addListener()` の `extraInfoSpec` の引数に"blocking"の値のオプションを渡す必要があります。これによりリスナーが同期します。このリスナーでは {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} オブジェクトを返すことができ、このオブジェクトは加えた修正を指し示します: 例えば、送信したい修正後のリクエストヘッダーなど。
 
-> **警告:** Non-HTTP(S) protocols do not currently support `"blocking"` functionality, so modifying these requests is not available at this time. See [Firefox バグ 1475832](https://bugzil.la/1475832) for more details.
+> [!WARNING]
+> Non-HTTP(S) protocols do not currently support `"blocking"` functionality, so modifying these requests is not available at this time. See [Firefox バグ 1475832](https://bugzil.la/1475832) for more details.
 
 ## セキュリティ情報へのアクセス
 
@@ -112,7 +113,7 @@ TLS ハンドシェイクについて詳しく読むことができますが、�
 - {{WebExtAPIRef("webRequest.onHeadersReceived")}}
   - : リクエストに関連する HTTP レスポンスヘッダーを受け取ったときに発火します。HTTP レスポンスヘッダーを修正するのにこのイベントを使用できます。
 - {{WebExtAPIRef("webRequest.onAuthRequired")}}
-  - : サーバーがクライアントに認証クレデンシャルを要求するときに発火します。このリスナーは何もしないか、リクエストをキャンセルするか、認証クレデンシャルを供給するかのいずれかです。
+  - : サーバーがクライアントに認証資格情報を要求するときに発火します。このリスナーは何もしないか、リクエストをキャンセルするか、認証資格情報を供給するかのいずれかです。
 - {{WebExtAPIRef("webRequest.onResponseStarted")}}
   - : レスポンスボディの最初のバイトを受け取ったときに発火します。HTTP リクエストにとって、これはステータスラインとレスポンスヘッダーが利用可能ということになります。
 - {{WebExtAPIRef("webRequest.onBeforeRedirect")}}
@@ -130,7 +131,8 @@ TLS ハンドシェイクについて詳しく読むことができますが、�
 
 {{WebExtExamples("h2")}}
 
-> **メモ:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -7,7 +7,8 @@ slug: Web/HTML/Element/time
 
 此 element 旨在以機器可讀的格式顯示時間。這能幫助使用者代理調度使用者的日期。
 
-> **備註：** 此 element 不適合用在「不確定正確時間」和「時間為西元前（日期的計算會出現錯誤）」的情況。
+> [!NOTE]
+> 此 element 不適合用在「不確定正確時間」和「時間為西元前（日期的計算會出現錯誤）」的情況。
 
 | [內容分類](/zh-TW/docs/Web/HTML/Content_categories) | [Flow content](/zh-TW/docs/Web/HTML/Content_categories#Flow_content), [phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content), palpable content. |
 | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |

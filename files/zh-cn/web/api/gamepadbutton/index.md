@@ -9,7 +9,8 @@ slug: Web/API/GamepadButton
 
 `GamepadButton` 对象是由 {{domxref("Gamepad")}} 接口的 `buttons` 属性返回的可查询任意值的数组返回的。
 
-> **备注：** 上述情况是在 Firefox Gecko 28 及以上的；Chrome 和较早版本的 Firefox 访问此属性时仍然会返回一个双精浮点值的数组。
+> [!NOTE]
+> 上述情况是在 Firefox Gecko 28 及以上的；Chrome 和较早版本的 Firefox 访问此属性时仍然会返回一个双精浮点值的数组。
 
 ## 属性
 

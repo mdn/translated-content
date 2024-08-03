@@ -25,7 +25,7 @@ init();
 
 A função `init()` cria uma variável local chamada `name`, e depois define uma função chamada `displayName()`. `displayName()` é uma função aninhada (uma _closure_) — ela é definida dentro da função `init()`, e está disponivel apenas dentro do corpo daquela função. Diferente de init(), `displayName()` não tem variáveis locais próprias, e ao invés disso reusa a variável `name` declarada na função pai.
 
-[Rode](http://jsfiddle.net/xAFs9/3/) o código e veja que isso funciona. Este é um exemplo de _escopo léxico:_ em JavaScript, o escopo de uma variável é definido por sua localização dentro do código fonte (isto é aparentemente _léxico_) e funções aninhadas têm acesso às variáveis declaradas em seu escopo externo.
+[Rode](https://jsfiddle.net/xAFs9/3/) o código e veja que isso funciona. Este é um exemplo de _escopo léxico:_ em JavaScript, o escopo de uma variável é definido por sua localização dentro do código fonte (isto é aparentemente _léxico_) e funções aninhadas têm acesso às variáveis declaradas em seu escopo externo.
 
 ## Closure
 

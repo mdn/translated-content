@@ -42,7 +42,7 @@ function showChar(e){
 </html>
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

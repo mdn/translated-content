@@ -31,7 +31,8 @@ MDN 是一個 wiki，**每個人**都可以添加、編撰內容。你不必得�
 
 別擔心你無法做到完美，會有 MDN 成員來幫忙修復問題與錯誤。有任何疑問，都歡迎到[社群網頁](/docs/MDN/Community)上查詢郵件群組、聊天頻道等資訊，協助你找尋答案。
 
-> **備註：** 如果你想要在編輯 MDN 之前做些實際的試驗，那麽我們有提供一個沙盒(**[Sandbox](/zh-TW/docs/Sandbox)**)給你體驗。請將你的試驗限制在這個頁面。請不要為了看看會發生什麽而在内容頁做不必要的變動，這會弄得一團糟讓其他人搞不清楚，更糟糕的是，會讓一些衹是想學點或看點什麽的讀者混亂。
+> [!NOTE]
+> 如果你想要在編輯 MDN 之前做些實際的試驗，那麽我們有提供一個沙盒(**[Sandbox](/zh-TW/docs/Sandbox)**)給你體驗。請將你的試驗限制在這個頁面。請不要為了看看會發生什麽而在内容頁做不必要的變動，這會弄得一團糟讓其他人搞不清楚，更糟糕的是，會讓一些衹是想學點或看點什麽的讀者混亂。
 
 完成這項工作以後，歡迎再挑另一件事情做，或者看看[其他可以在 MDN 上做的事](#其他可以在_mdn_上做的事)。
 
@@ -48,7 +49,8 @@ MDN 是一個 wiki，**每個人**都可以添加、編撰內容。你不必得�
 - [在詞彙表中加上新的詞彙](/zh-TW/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary)（15 分鐘-1 小時）
 - [撰寫幫助大眾了解 Web 的文章](/zh-TW/docs/MDN/Contribute/Howto/Write_an_article_to_help_learn_about_the_Web)（1 小時-3 小時）
 
-> **備註：** 如果你要審查或撰寫新文章，建議先看一下[文件體例](/zh-TW/docs/MDN/Contribute/Guidelines/Style_guide)。這樣能確保文章的一貫性。
+> [!NOTE]
+> 如果你要審查或撰寫新文章，建議先看一下[文件體例](/zh-TW/docs/MDN/Contribute/Guidelines/Style_guide)。這樣能確保文章的一貫性。
 
 ### 選項 2: 給熱愛程式碼的人
 

@@ -2,18 +2,16 @@
 title: ToggleEvent
 slug: Web/API/ToggleEvent
 l10n:
-  sourceCommit: a4e0df90868c274842b083ad034eb60f57b76aae
+  sourceCommit: 672033be010ddec986fd7e12fd01297995ecc9b0
 ---
 
 {{APIRef("Popover API")}}
 
-**`ToggleEvent`** 接口表示当[弹出框元素](/zh-CN/docs/Web/API/Popover_API)的状态在显示和隐藏之间切换时通知用户的事件。
+**`ToggleEvent`** 接口表示当元素的状态发生改变时通知用户的事件。
 
-它为 `HTMLElement` 的 {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} 和 {{domxref("HTMLElement.toggle_event", "toggle")}} 事件提供事件对象，这两个事件会在弹出框元素在显示与隐藏状态间切换时（分别在切换前与切换后）触发。
+它为 `HTMLElement` 的 {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} 和 {{domxref("HTMLElement.toggle_event", "toggle")}} 事件提供事件对象，这两个事件会在弹出框元素在显示与隐藏状态间切换时（分别在切换前与切换后）触发。它也为 `HTMLDetailsElement` 的 {{domxref("HTMLDetailsElement.toggle_event", "toggle")}} 事件提供事件对象，这一事件会在 {{htmlelement("details")}} 元素在展开和收起之间切换时触发。
 
 {{InheritanceDiagram}}
-
-> **备注：** `ToggleEvent` 与 `HTMLDetailsElement` 的 {{domxref("HTMLDetailsElement.toggle_event", "toggle")}} 事件无关，后者在 {{htmlelement("details")}} 元素的 `open`/`closed` 状态被切换时触发。其事件对象是一个通用的 {{domxref("Event")}}。
 
 ## 构造函数
 

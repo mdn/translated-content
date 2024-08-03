@@ -1,7 +1,6 @@
 ---
 title: Console.dirxml()
 slug: Web/API/console/dirxml_static
-original_slug: Web/API/console/dirxml
 ---
 
 {{APIRef("Console API")}}
@@ -19,7 +18,7 @@ console.dirxml(object);
 - `object`
   - : Объект JavaScript свойства которого будут отображены.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

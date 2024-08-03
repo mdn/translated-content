@@ -41,7 +41,8 @@ slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 
 有多种 SFTP 客户端。我们的示例使用的是 [FileZilla](https://filezilla-project.org/)，因为它免费，且可在 Windows、macOS 以及 Linux 上使用。要安装 FileZilla，请转到 [FileZilla 下载页面](https://filezilla-project.org/download.php?type=client)，点击下载按钮，然后以常规的方式通过安装文件安装它。
 
-> **备注：** 当然还有很多其他的选择。有关详细的信息，请参阅[发布工具](/zh-CN/docs/Learn/Common_questions/How_much_does_it_cost#发布工具)。
+> [!NOTE]
+> 当然还有很多其他的选择。有关详细的信息，请参阅[发布工具](/zh-CN/docs/Learn/Common_questions/How_much_does_it_cost#发布工具)。
 
 打开 FileZilla 应用程序，你应该看到这样的界面：
 
@@ -71,7 +72,8 @@ slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 
 ![我们的 demozilla 个人网站，在浏览器中看起来是空的](demozilla-empty.png)
 
-> **备注：** 根据你的托管服务提供商的不同，大部分时间你会看到一个页面，内容如下：“此网站由 \[托管服务] 托管”。
+> [!NOTE]
+> 根据你的托管服务提供商的不同，大部分时间你会看到一个页面，内容如下：“此网站由 \[托管服务] 托管”。
 
 要将 SFTP 客户端连接到远程服务器，请执行以下步骤：
 

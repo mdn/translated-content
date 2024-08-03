@@ -66,7 +66,8 @@ npx degit opensas/mdn-svelte-tutorial/07-typescript-support
 
 我们的 TypeScript 代码能够在 JavaScript 可以运行的任何地方运行。这是如何实现的呢？TypeScript 将我们的代码“转译”为原生的 JavaScript。这意味着它解析 TypeScript 代码，并生成等效的原生 JavaScript 代码以供浏览器运行。
 
-> **备注：** 如果你对 TypeScript 如何将代码转译为 JavaScript 感兴趣，可以查看 [TypeScript 演练场](https://www.typescriptlang.org/play/?target=1&e=4#example/hello-world)。
+> [!NOTE]
+> 如果你对 TypeScript 如何将代码转译为 JavaScript 感兴趣，可以查看 [TypeScript 演练场](https://www.typescriptlang.org/play/?target=1&e=4#example/hello-world)。
 
 长期以来，原生 TypeScript 支持一直是 Svelte 呼声最高的特性请求。感谢 Svelte 团队和众多贡献者的辛勤工作，我们现在有了[官方解决方案](https://svelte.dev/blog/svelte-and-typescript)，可以进行测试。在本节中，我们将向你展示如何设置带有 TypeScript 支持的 Svelte 项目，以供尝试使用。
 
@@ -121,7 +122,8 @@ npm run dev
 
 你甚至可以使用 `degit` 下载该脚本。这将是我们开始将应用程序移植到 TypeScript 所需要的操作。
 
-> **备注：** 在你开始将其转换为 TypeScript 之前，你可以运行 `npx degit opensas/mdn-svelte-tutorial/07-typescript-support svelte-todo-typescript` 来获取完整的 JavaScript 写的待办事项列表应用程序。
+> [!NOTE]
+> 在你开始将其转换为 TypeScript 之前，你可以运行 `npx degit opensas/mdn-svelte-tutorial/07-typescript-support svelte-todo-typescript` 来获取完整的 JavaScript 写的待办事项列表应用程序。
 
 进入项目的根目录并输入以下命令：
 
@@ -142,13 +144,15 @@ npm run dev                                       # 以开发模式启动应用�
 
 这些指令适用于任何你想要转换为 TypeScript 的 Svelte 项目。只需注意，Svelte 社区正在不断改进 Svelte 对 TypeScript 的支持，因此你应定期运行 `npm update` 来获取最新的更改。
 
-> **备注：** 如果你在 Svelte 应用程序中使用 TypeScript 时遇到任何问题，请查看[有关 TypeScript 支持的故障排除/常见问题解答部分](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#troubleshooting--faq)。
+> [!NOTE]
+> 如果你在 Svelte 应用程序中使用 TypeScript 时遇到任何问题，请查看[有关 TypeScript 支持的故障排除/常见问题解答部分](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#troubleshooting--faq)。
 
 我们之前提到过，TypeScript 是 JavaScript 的超集，因此你的应用程序无需修改即可运行。目前，该应用程序仅是启用了 TypeScript 支持的常规 JavaScript 应用程序，而不会利用 TypeScript 提供的任何特性。你现在可以逐步添加类型。
 
 一旦你配置好了 TypeScript，你就可以通过在组件的脚本部分开头添加 `<script lang='ts'>` 来在 Svelte 组件中使用它。要通过常规的 JavaScript 文件使用它，只需将文件扩展名从 `.js` 更改为 `.ts`。你还需要更新所有相应的导入语句，将 `import` 语句中的 `.ts` 文件扩展名删除。
 
-> **备注：** 如果在 `import` 语句中使用 `.ts` 文件扩展名，TypeScript 会抛出错误，因此如果你有名为 `./foo.ts` 的文件，你必须将其导入为 `"./foo"`。更多信息请参阅 TypeScript 手册中的[捆绑程序、TypeScript 运行时和 Node.js 加载器的模块解析](https://www.typescriptlang.org/docs/handbook/modules/theory.html#module-resolution-for-bundlers-typescript-runtimes-and-nodejs-loaders)部分。
+> [!NOTE]
+> 如果在 `import` 语句中使用 `.ts` 文件扩展名，TypeScript 会抛出错误，因此如果你有名为 `./foo.ts` 的文件，你必须将其导入为 `"./foo"`。更多信息请参阅 TypeScript 手册中的[捆绑程序、TypeScript 运行时和 Node.js 加载器的模块解析](https://www.typescriptlang.org/docs/handbook/modules/theory.html#module-resolution-for-bundlers-typescript-runtimes-and-nodejs-loaders)部分。
 
 > **备注：** [目前尚不支持](https://github.com/sveltejs/svelte/issues/4701)在组件标记部分使用 TypeScript。你需要在标记中使用 JavaScript，并在 `<script lang='ts'>` 部分中使用 TypeScript。
 
@@ -158,11 +162,13 @@ TypeScript 为代码编辑器和集成开发环境提供了大量信息，使它
 
 我们将使用 [Visual Studio Code](https://code.visualstudio.com/) 进行快速测试，以查看编写组件时的自动补全提示和类型检查。
 
-> **备注：** 如果你不想使用 VS Code，我们还提供了在终端中使用 TypeScript 错误检查的说明，稍后会介绍。
+> [!NOTE]
+> 如果你不想使用 VS Code，我们还提供了在终端中使用 TypeScript 错误检查的说明，稍后会介绍。
 
 在多个代码编辑器中支持 Svelte 项目的 TypeScript 的工作正在进行中；到目前为止，[Svelte for VS Code 扩展](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)提供了最完整的支持，该扩展由 Svelte 团队开发和维护。该扩展提供类型检查、检查、重构、智能感知、悬停信息、自动补全和其他功能。这种开发者辅助功能是在项目中使用 TypeScript 的另一个好处。
 
-> **备注：** 确保你正在使用 [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)，而不是已停用的旧版“Svelte”扩展（James Birtles 开发），如果你已安装旧版扩展，应将其卸载并安装官方的 Svelte 扩展。
+> [!NOTE]
+> 确保你正在使用 [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)，而不是已停用的旧版“Svelte”扩展（James Birtles 开发），如果你已安装旧版扩展，应将其卸载并安装官方的 Svelte 扩展。
 
 假设你在 VS Code 应用程序中，在你的项目文件夹的根目录中，键入 `code .`（尾随的点告诉 VS Code 打开当前文件夹）以打开代码编辑器。VS Code 会告诉你有推荐安装的扩展。
 
@@ -216,7 +222,8 @@ TypeScript 支持结构类型。结构类型是一种基于类型成员进行关
    };
    ```
 
-   > **备注：** Svelte 模板使用 [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess) 4.0.0 来支持 TypeScript。从该版本开始，你必须使用 `export`/`import` 类型语法来导入类型和接口。更多信息，请查看[故障排除指南的这个部分](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#how-do-i-import-interfaces-into-my-svelte-components-i-get-errors-after-transpilation)。
+   > [!NOTE]
+   > Svelte 模板使用 [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess) 4.0.0 来支持 TypeScript。从该版本开始，你必须使用 `export`/`import` 类型语法来导入类型和接口。更多信息，请查看[故障排除指南的这个部分](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#how-do-i-import-interfaces-into-my-svelte-components-i-get-errors-after-transpilation)。
 
 4. 现在，我们将在 `Todo.svelte` 组件中使用 `TodoType`。首先在 `<script>` 标签中添加 `lang="ts"`。
 5. 使用 `import` 导入该类型并将其用于声明 `todo` 属性。将 `export let todo` 行替换为以下内容：
@@ -327,7 +334,8 @@ svelte-check found no errors and no warnings
        if (!message) {               // 如果 message 为空，则隐藏 Alert
    ```
 
-   > **备注：** 不需要使用 `export let ms:number = 3000` 来指定 `ms` 的类型，因为 TypeScript 已经从默认值推断出了它的类型。
+   > [!NOTE]
+   > 不需要使用 `export let ms:number = 3000` 来指定 `ms` 的类型，因为 TypeScript 已经从默认值推断出了它的类型。
 
 ### MoreActions.svelte
 

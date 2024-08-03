@@ -68,7 +68,7 @@ FileReader FileReader();
 - {{domxref("FileReader.readAsText()")}}
   - : Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, атрибут `result` будет содержать данные файла в виде текста.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

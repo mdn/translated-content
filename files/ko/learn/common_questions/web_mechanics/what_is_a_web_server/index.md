@@ -3,6 +3,8 @@ title: 웹 서버란 무엇일까?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 여기서 우리는 웹 서버가 무엇인지, 어떻게 동작하는지, 왜 중요한지를 알아볼 것입니다.
 
 <table class="learn-box standard-table">

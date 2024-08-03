@@ -3,7 +3,7 @@ title: ceiling
 slug: Web/XPath/Functions/ceiling
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `ceiling` évalue un nombre décimal et retourne le plus petit nombre entier supérieur ou égal au nombre évalué.
 

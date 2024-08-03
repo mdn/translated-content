@@ -98,7 +98,8 @@ npx degit opensas/mdn-svelte-tutorial/04-componentizing-our-app
 
 让我们开始吧。
 
-> **备注：** 在创建我们的前几个组件的过程中，我们还将学习不同的组件间通信技术以及每种技术的优缺点。
+> [!NOTE]
+> 在创建我们的前几个组件的过程中，我们还将学习不同的组件间通信技术以及每种技术的优缺点。
 
 ## 提取我们的过滤器组件
 
@@ -143,7 +144,8 @@ npx degit opensas/mdn-svelte-tutorial/04-componentizing-our-app
    <FilterButton {filter} />
    ```
 
-> **备注：** 请记住，当 HTML 属性名称和变量匹配时，可以用 `{变量}` 来替换它们。这就是为什么我们可以将 `<FilterButton filter={filter} />` 替换为 `<FilterButton {filter} />`。
+> [!NOTE]
+> 请记住，当 HTML 属性名称和变量匹配时，可以用 `{变量}` 来替换它们。这就是为什么我们可以将 `<FilterButton filter={filter} />` 替换为 `<FilterButton {filter} />`。
 
 到目前为止一切顺利！现在让我们试试该应用程序。你会注意到，当你点击过滤器按钮时，它们会被选中，并且样式会相应更新。但是我们有一个问题：待办事项没有被正确过滤。这是因为 `filter` 变量通过属性从 `Todos` 组件向下流动到 `FilterButton` 组件，但是在 `FilterButton` 组件中发生的更改不会向上流回其父组件——默认情况下，数据绑定是单向的。让我们看看解决这个问题的方法。
 
@@ -270,7 +272,8 @@ export let onclick = (clicked) => {};
 
 为了创建自定义事件，我们将使用 `createEventDispatcher` 程序。它将返回一个 `dispatch()` 函数，允许我们发出自定义事件。当你发出一个事件时，你需要传递事件的名称，以及（可选地）包含要传递给每个监听器的附加信息的对象。这些附加数据将在事件对象的 `detail` 属性中。
 
-> **备注：** Svelte 中的自定义事件与常规 DOM 事件共享相同的 API。此外，你可以通过指定 `on:event` 通过将事件向上传递给父组件，而无需指定处理器。
+> [!NOTE]
+> Svelte 中的自定义事件与常规 DOM 事件共享相同的 API。此外，你可以通过指定 `on:event` 通过将事件向上传递给父组件，而无需指定处理器。
 
 我们将编辑我们的 `Todo` 组件，以发出一个 `remove` 事件，并传递被删除的待办事项作为附加信息。
 
@@ -491,7 +494,8 @@ on:keydown={(e) => e.key === 'Escape' && onCancel()}
    </div>
    ```
 
-   > **备注：** 我们可以进一步将其拆分为两个不同的组件，一个用于编辑待办事项，另一个用于显示待办事项。最终，这取决于你是否对在单个组件中处理这种复杂性感到舒适。你还应考虑进一步拆分的话，是否能够在其他的上下文中重用此组件。
+   > [!NOTE]
+   > 我们可以进一步将其拆分为两个不同的组件，一个用于编辑待办事项，另一个用于显示待办事项。最终，这取决于你是否对在单个组件中处理这种复杂性感到舒适。你还应考虑进一步拆分的话，是否能够在其他的上下文中重用此组件。
 
 2. 要使更新功能起作用，我们必须在 `Todos` 组件 中处理 `update` 事件。在 `Todos` 组件的 `<script>` 部分中添加以下处理器：
 
@@ -518,7 +522,8 @@ on:keydown={(e) => e.key === 'Escape' && onCancel()}
 
 正如你所见，在 Svelte 中实现“属性向下传递、事件向上传播”模式很容易。尽管如此，对于简单的组件，`bind` 可能是一个不错的选择；Svelte 允许你自由选择。
 
-> **备注：** Svelte 提供了更高级的机制来在组件之间共享信息：[Context API](https://svelte.dev/docs/svelte#setcontext) 和 [Store](https://svelte.dev/docs/svelte-store)。Context API 提供了一种机制，使组件及其后代组件能够在不传递数据和函数作为属性或分发大量事件的情况下进行通信。Store 允许你在不具有层次关系的组件之间共享响应式数据。我们将在本系列的后续内容中介绍 Store。
+> [!NOTE]
+> Svelte 提供了更高级的机制来在组件之间共享信息：[Context API](https://svelte.dev/docs/svelte#setcontext) 和 [Store](https://svelte.dev/docs/svelte-store)。Context API 提供了一种机制，使组件及其后代组件能够在不传递数据和函数作为属性或分发大量事件的情况下进行通信。Store 允许你在不具有层次关系的组件之间共享响应式数据。我们将在本系列的后续内容中介绍 Store。
 
 ## 到目前为止的代码
 

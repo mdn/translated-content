@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
 
 静的メソッドである **`Atomics.notify()`** は、待ち行列で休眠状態にあるエージェントに通知します。
 
-> **メモ:** この操作は共有された {{jsxref("Int32Array")}} に対してのみ動作します。
+> [!NOTE]
+> この操作は共有された {{jsxref("Int32Array")}} に対してのみ動作します。
 > 共有されていない `ArrayBuffer` オブジェクトでは `0` を返します。
 
 ## 構文

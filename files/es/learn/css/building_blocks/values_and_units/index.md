@@ -41,9 +41,11 @@ Todas las propiedades que se utilizan en CSS tienen un valor o un conjunto de va
 
 En las especificaciones CSS y en las páginas de propiedades de este proyecto MDN, podrás detectar los valores porque estarán escritos entre corchetes angulares, como [`<color>`](/es/docs/Web/CSS/color_value) o [`<length>`](/es/docs/Web/CSS/length). Cuando veas que el valor `<color>` es válido para una propiedad en particular, significa que para esa propiedad puedes usar como valor cualquier color válido de entre los que se enumeran en la página de referencia de la propiedad [`<color>`](/es/docs/Web/CSS/color_value).
 
-> **Nota:** También verás valores CSS denominados _tipos de datos_. Los términos son básicamente intercambiables: cuando veas algo en CSS denominado 'tipo de datos', en realidad es solo una forma elegante de decir 'valor'.
+> [!NOTE]
+> También verás valores CSS denominados _tipos de datos_. Los términos son básicamente intercambiables: cuando veas algo en CSS denominado 'tipo de datos', en realidad es solo una forma elegante de decir 'valor'.
 
-> **Nota:** Sí, hay una tendencia de denotar los valores CSS entre corchetes angulares, para diferenciarlos de las propiedades CSS (por ejemplo, la propiedad {{cssxref ("color")}} con respecto al tipo de dato [\<color>](/es/docs/Web/CSS/color_value)). Aunque podría generarte confusión entre los tipos de datos CSS y los elementos HTML, porque ambos usan corchetes angulares, es poco probable porque se usan en contextos muy diferentes.
+> [!NOTE]
+> Sí, hay una tendencia de denotar los valores CSS entre corchetes angulares, para diferenciarlos de las propiedades CSS (por ejemplo, la propiedad {{cssxref ("color")}} con respecto al tipo de dato [\<color>](/es/docs/Web/CSS/color_value)). Aunque podría generarte confusión entre los tipos de datos CSS y los elementos HTML, porque ambos usan corchetes angulares, es poco probable porque se usan en contextos muy diferentes.
 
 En el ejemplo siguiente hemos establecido el color de nuestro encabezado con una palabra clave y el fondo con la función `rgb()`:
 
@@ -159,7 +161,8 @@ Algunos valores aceptan números sin ninguna unidad asociada. Un ejemplo de una 
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 500)}}
 
-> **Nota:** Cuando en CSS utilizas un número como valor, no debe estar entre comillas.
+> [!NOTE]
+> Cuando en CSS utilizas un número como valor, no debe estar entre comillas.
 
 ## Color
 
@@ -167,7 +170,8 @@ En CSS hay muchas formas de especificar el color, algunas de las cuales se imple
 
 El sistema de colores estándar disponible en los ordenadores modernos es de 24 bits, lo que permite visualizar aproximadamente 16,7 millones de colores distintos a partir de una combinación de diferentes canales de rojo, verde y azul con 256 valores diferentes por canal (256 x 256 x 256 = 16.777.216). Echemos un vistazo a algunas de las formas en que podemos especificar colores en CSS.
 
-> **Nota:** En este artículo vamos a ver los métodos comunes para especificar colores que admiten los navegadores; hay otros métodos no tan comunes que no admiten todos los navegadores.
+> [!NOTE]
+> En este artículo vamos a ver los métodos comunes para especificar colores que admiten los navegadores; hay otros métodos no tan comunes que no admiten todos los navegadores.
 
 ### Palabras clave para los colores
 
@@ -195,7 +199,8 @@ Vamos a reescribir nuestro último ejemplo para utilizar colores RGB:
 
 También puedes usar colores RGBA: estos funcionan exactamente de la misma manera que los colores RGB, por lo que puedes usar cualquier valor RGB; sin embargo, hay un cuarto valor que representa el canal alfa del color, que controla la opacidad. Si estableces este valor en `0`, el color será completamente transparente, mientras que en `1` será completamente opaco. Los valores intermedios le confieren diferentes niveles de transparencia.
 
-> **Nota:** Establecer un canal alfa en un color representa una diferencia clave para usar la propiedad {{cssxref ("opacity")}} que vimos anteriormente. Cuando usas la opacidad, el elemento y todo lo que contiene es opaco, mientras que cuando usas colores RGBA, solo son opacos los que especificas.
+> [!NOTE]
+> Establecer un canal alfa en un color representa una diferencia clave para usar la propiedad {{cssxref ("opacity")}} que vimos anteriormente. Cuando usas la opacidad, el elemento y todo lo que contiene es opaco, mientras que cuando usas colores RGBA, solo son opacos los que especificas.
 
 En el ejemplo siguiente hemos añadido una imagen de fondo al bloque que contiene nuestras cajas de color. También hemos configurado las cajas para que tengan diferentes valores de opacidad: observa que el fondo se muestra más cuanto menor es el valor del canal alfa.
 
@@ -203,7 +208,8 @@ En el ejemplo siguiente hemos añadido una imagen de fondo al bloque que contien
 
 **En este ejemplo, cambia los valores del canal alfa y observa cómo afecta a la salida de color.**
 
-> **Nota:** En algún momento, los navegadores modernos se actualizaron para que `rgba()` y `rgb()`, y `hsl()` y `hsla()` (ver más abajo) se convirtieran en alias puros el uno del otro y comenzaran a comportarse exactamente igual. Así, por ejemplo, tanto `rgba()` como `rgb()` admiten colores con y sin valores de canal alfa. Cambia el `rgba()` del ejemplo anterior por `rgb()` y observa si los colores aún funcionan. El estilo que uses depende de ti, pero separar las definiciones de los colores transparentes y las de los no transparentes con el uso de funciones diferentes mejora la ejecución de los navegadores y puede actuar como un indicador visual de dónde se definen colores transparentes en tu código.
+> [!NOTE]
+> En algún momento, los navegadores modernos se actualizaron para que `rgba()` y `rgb()`, y `hsl()` y `hsla()` (ver más abajo) se convirtieran en alias puros el uno del otro y comenzaran a comportarse exactamente igual. Así, por ejemplo, tanto `rgba()` como `rgb()` admiten colores con y sin valores de canal alfa. Cambia el `rgba()` del ejemplo anterior por `rgb()` y observa si los colores aún funcionan. El estilo que uses depende de ti, pero separar las definiciones de los colores transparentes y las de los no transparentes con el uso de funciones diferentes mejora la ejecución de los navegadores y puede actuar como un indicador visual de dónde se definen colores transparentes en tu código.
 
 ### Los valores HSL y HSLA
 
@@ -231,7 +237,8 @@ En el ejemplo siguiente mostramos una imagen y un gradiente en uso como un valor
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 740)}}
 
-> **Nota:** hay otros valores posibles para `<image>`, pero son más nuevos y aún hay pocos navegadores que los admiten. Consulta la página de MDN para el tipo de dato [`<image>`](/es/docs/Web/CSS/image) si deseas saber más sobre ellos.
+> [!NOTE]
+> Hay otros valores posibles para `<image>`, pero son más nuevos y aún hay pocos navegadores que los admiten. Consulta la página de MDN para el tipo de dato [`<image>`](/es/docs/Web/CSS/image) si deseas saber más sobre ellos.
 
 ## Posición
 

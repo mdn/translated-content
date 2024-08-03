@@ -173,13 +173,13 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 
 ### 其他
 
-- {{jsxref("Statements/Empty", "空语句", "", "nocode")}}
-- {{jsxref("Statements/block", "块语句", "", "nocode")}}
-- {{jsxref("Statements/Expression_statement", "表达式语句", "", "nocode")}}
+- {{jsxref("Statements/Empty", "空语句", "", 1)}}
+- {{jsxref("Statements/block", "块语句", "", 1)}}
+- {{jsxref("Statements/Expression_statement", "表达式语句", "", 1)}}
 - {{jsxref("Statements/debugger", "debugger")}}
 - {{jsxref("Statements/export", "export")}}
 - {{jsxref("Statements/import", "import")}}
-- {{jsxref("Statements/label", "标记语句", "", "nocode")}}
+- {{jsxref("Statements/label", "标记语句", "", 1)}}
 - {{jsxref("Statements/with", "with")}} {{deprecated_inline}}
 
 ## 表达式和运算符
@@ -203,7 +203,7 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 
 ### 左值表达式
 
-- {{jsxref("Operators/Property_accessors", "属性访问器", "", "nocode")}}
+- {{jsxref("Operators/Property_accessors", "属性访问器", "", 1)}}
 - {{jsxref("Operators/Optional_chaining", "?.")}}
 - {{jsxref("Operators/new", "new")}}
 - {{jsxref("Operators/new%2Etarget", "new.target")}}
@@ -313,13 +313,13 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 
 [JavaScript 函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)。
 
-- {{jsxref("Functions/Arrow_functions", "箭头函数", "", "nocode")}}
-- {{jsxref("Functions/Default_parameters", "默认参数", "", "nocode")}}
-- {{jsxref("Functions/rest_parameters", "剩余参数", "", "nocode")}}
+- {{jsxref("Functions/Arrow_functions", "箭头函数", "", 1)}}
+- {{jsxref("Functions/Default_parameters", "默认参数", "", 1)}}
+- {{jsxref("Functions/rest_parameters", "剩余参数", "", 1)}}
 - {{jsxref("Functions/arguments", "arguments")}}
-- {{jsxref("Functions/Method_definitions", "方法定义", "", "nocode")}}
-- {{jsxref("Functions/get", "getter", "", "nocode")}}
-- {{jsxref("Functions/set", "setter", "", "nocode")}}
+- {{jsxref("Functions/Method_definitions", "方法定义", "", 1)}}
+- {{jsxref("Functions/get", "getter", "", 1)}}
+- {{jsxref("Functions/set", "setter", "", 1)}}
 
 ## 类
 
@@ -334,10 +334,10 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 
 ## 附加参考页面
 
-- {{jsxref("Lexical_grammar", "词法文法", "", "nocode")}}
+- {{jsxref("Lexical_grammar", "词法文法", "", 1)}}
 - [数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)
 - [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
 - [尾后逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas)
 - [错误参考](/zh-CN/docs/Web/JavaScript/Reference/Errors)
-- {{jsxref("Strict_mode", "严格模式", "", "nocode")}}
-- {{jsxref("Deprecated_and_obsolete_features", "废弃特性", "", "nocode")}}
+- {{jsxref("Strict_mode", "严格模式", "", 1)}}
+- {{jsxref("Deprecated_and_obsolete_features", "废弃特性", "", 1)}}

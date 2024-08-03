@@ -40,7 +40,8 @@ element.insertAdjacentHTML(posição, texto);
 <!-- afterend -->
 ```
 
-> **Nota:** As posições beforeBegin e afterEnd funcionam apenas se o nó está em uma árvore DOM e tem um elemento pai.
+> [!NOTE]
+> As posições beforeBegin e afterEnd funcionam apenas se o nó está em uma árvore DOM e tem um elemento pai.
 
 ## Exemplo
 

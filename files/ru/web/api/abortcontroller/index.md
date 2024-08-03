@@ -60,7 +60,7 @@ function fetchVideo() {
 
 Вы можете найти полный рабочий пример на GitHub — смотрите [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) ([и живой пример](https://mdn.github.io/dom-examples/abort-api/)).
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

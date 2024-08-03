@@ -63,6 +63,5 @@ slug: Web/CSS
 
 ## 參見
 
-- [CSS demos](/zh-TW/docs/Web/Demos_of_open_web_technologies#CSS) 最新的 CSS 技術動向：給予創意的一拔。
 - 常與 CSS 相關聯的語言：[HTML](/zh-TW/docs/Web/HTML)、[SVG](/zh-TW/docs/Web/SVG)、[XHTML](/zh-TW/docs/Glossary/XHTML)、[XML](/zh-TW/docs/XML)。
 - 廣泛運用 CSS 的 Mozilla 科技：[Firefox](/zh-TW/docs/Mozilla/Firefox) 及 [Thunderbird](/zh-TW/docs/Mozilla/Thunderbird) 的[套件](/zh-TW/docs/Extensions)與[佈景](/zh-TW/docs/Mozilla/Add-ons/Themes)

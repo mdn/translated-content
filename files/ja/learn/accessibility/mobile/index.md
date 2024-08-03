@@ -70,7 +70,8 @@ TalkBack をオフにしたい場合は、
 2. \[ユーザー補助] > \[TalkBack] に移動します。
 3. スライダースイッチに移動してアクティブにすると、オフになります。
 
-> **メモ:** 連続した動きで上にスワイプしてから左にスワイプすると、いつでもホーム画面にアクセスできます。複数のホーム画面がある場合は、左右に 2 本指でスワイプすることでそれらの間を移動できます。
+> [!NOTE]
+> 連続した動きで上にスワイプしてから左にスワイプすると、いつでもホーム画面にアクセスできます。複数のホーム画面がある場合は、左右に 2 本指でスワイプすることでそれらの間を移動できます。
 
 TalkBack ジェスチャーのより完全なリストについては、[TalkBack ジェスチャーを利用する](https://support.google.com/accessibility/android/answer/6151827?hl=ja)を参照してください。
 
@@ -115,7 +116,8 @@ TalkBack を使用すると、端末上のどこに移動しても、グロー�
 7. ダブルタップして選択します。これで、見出しと ARIA のランドマークの間を移動するために左右にスワイプすることができます。
 8. デフォルトモードに戻るには、上にスワイプしてから右にスワイプしてローカルコンテキストメニューに再度入り、\[デフォルト] を選択してからダブルタップしてアクティブにします。
 
-> **メモ:** より完全なドキュメントは [Android で TalkBack を使ってみる](https://support.google.com/accessibility/android/answer/6283677?hl=ja)をご覧ください。
+> [!NOTE]
+> より完全なドキュメントは [Android で TalkBack を使ってみる](https://support.google.com/accessibility/android/answer/6283677?hl=ja)をご覧ください。
 
 ### iOS VoiceOver
 
@@ -123,7 +125,8 @@ VoiceOver のモバイル版は iOS オペレーティングシステムに組�
 
 VoiceOver　を有効にするには、「設定」アプリで _アクセシビリティ > VoiceOver_ を選択します。　VoiceOver のスライダーを押して有効にします（このページには他にも　VoiceOver　関連のオプションがいくつかあります）。
 
-> **メモ:** 古い iOS 端末では VoiceOver メニューは _設定_ > _一般_ > _アクセシビリティ_ > *VoiceOver*にあります。
+> [!NOTE]
+> 古い iOS 端末では VoiceOver メニューは _設定_ > _一般_ > _アクセシビリティ_ > *VoiceOver*にあります。
 
 VoiceOver が有効になると、iOS の基本的なコントロールジェスチャーは次のように少し違います。
 
@@ -182,9 +185,9 @@ VoiceOver を使ったウェブ閲覧を試してみましょう。
 
 CSS および JavaScript のアクセシビリティの記事では、特定の種類の制御機構に固有のイベントの概念を調べました（[マウスに特有のイベント](/ja/docs/Learn/Accessibility/CSS_and_JavaScript#mouse-specific_events)を参照）。要約すると、他の制御機構は関連する機能をアクティブにできないため、これらはアクセシビリティの問題を引き起こします。
 
-例えば、[click](/ja/docs/Web/API/Element/click_event) イベントはアクセシビリティの点で優れています — 関連付けられているイベントハンドラは、ハンドラが設定されている要素をクリックするか、タブ移動して <kbd>Enter</kbd> / <kbd>Return</kbd> キーを押すか、タッチスクリーン端末でタップすることで起動できます。[simple-button-example.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-button-example.html) の例を試してみてください（[ライブで動いているのを見る](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)）。
+例えば、[click](/ja/docs/Web/API/Element/click_event) イベントはアクセシビリティの点で優れています — 関連付けられているイベントハンドラーは、ハンドラーが設定されている要素をクリックするか、タブ移動して <kbd>Enter</kbd> / <kbd>Return</kbd> キーを押すか、タッチスクリーン端末でタップすることで起動できます。[simple-button-example.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-button-example.html) の例を試してみてください（[ライブで動いているのを見る](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)）。
 
-あるいは、[mousedown](/ja/docs/Web/API/Element/mousedown_event) や [mouseup](/ja/docs/Web/API/Element/mouseup_event) のようなマウス固有のイベントは問題を引き起こします — それらのイベントハンドラはマウス以外の制御を使って呼び出すことはできません。
+あるいは、[mousedown](/ja/docs/Web/API/Element/mousedown_event) や [mouseup](/ja/docs/Web/API/Element/mouseup_event) のようなマウス固有のイベントは問題を引き起こします — それらのイベントハンドラーはマウス以外の制御を使って呼び出すことはできません。
 
 キーボードまたはタッチで、[simple-box-drag.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-box-drag.html) の例を制御しようとすると、問題が発生します（[ライブで例を見る](https://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html)）。これは、次のようなコードを使用しているために発生します。
 
@@ -225,7 +228,8 @@ panel.ontouchend = stopMove;
 - ダウンロードした画像サイズを節約する。一般的に、小型画面の端末は、デスクトップと同等の大きさの画像を必要としませんし、低速のネットワーク接続上にある可能性が高くなります。したがって、必要に応じて狭い画面の端末に小さい画像を提供することが賢明です。[レスポンシブ画像のテクニック](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)を使用してこれを扱えます。
 - 高解像度について考える。多くのモバイル端末は高解像度の画面を持っているため、ディスプレイがくっきりと鮮明に見えるようにするために、より高解像度の画像が必要です。ここでも、レスポンシブ画像テクニックを使用して、必要に応じて画像を提供できます。さらに、SVG ベクター画像フォーマットを使用して多くの画像要件を満たすことができます。これは今日のブラウザー間で十分にサポートされています。SVG はファイルサイズが小さく、表示されているサイズに関係なく鮮明に保たれます（詳細は[ウェブにベクターグラフィックスを追加する](/ja/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)を参照）。
 
-> **メモ:** レスポンシブデザインのテクニックについては、MDN の他の場所で説明されているため、ここでは詳しく説明しません（上記のリンクを参照）。
+> [!NOTE]
+> レスポンシブデザインのテクニックについては、MDN の他の場所で説明されているため、ここでは詳しく説明しません（上記のリンクを参照）。
 
 ### 特定のモバイルに関する考慮事項
 

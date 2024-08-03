@@ -1,35 +1,35 @@
 ---
-title: Navigator.doNotTrack
+title: "Navigator: свойство doNotTrack"
 slug: Web/API/Navigator/doNotTrack
+l10n:
+  sourceCommit: 44cf523714745d626317192bfbe849b47144f3ab
 ---
 
-{{ ApiRef("HTML DOM") }}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}} {{Deprecated_Header}} {{Non-standard_Header}}
 
-Возвращает настройки пользователя do-not-track. Будет "yes" если пользователь попросил не отслеживать его на веб-сайтах, контенте, рекламе.
+Свойство **`Navigator.doNotTrack`** возвращает настройку пользователя «Не отслеживать», которая указывает, просит ли пользователь веб-сайты и рекламодателей не использовать отслеживание.
 
-## Синтаксис
+Значение свойства отражает значение HTTP-заголовка {{HTTPHeader("DNT")}}, то есть `"1"`, `"0"` или `null`.
 
-```
-dnt = navigator.doNotTrack;
-```
+## Значение
 
-Значение отражает , что в заголовке do-not-track header, т.е. значения {"1", "0", "unspecified" }.Примечание: до Gecko 32, Gecko были использованы значения { "yes", "no", "unspecified"} ([bug 887703](https://bugzilla.mozilla.org/show_bug.cgi?id=887703)).
+Строка или `null`.
 
 ## Пример
 
+```js
+console.log(navigator.doNotTrack);
+// выведет "1", если DNT включен; "0", если пользователь дал согласие на отслеживание; в противном случае null
 ```
-dump(window.navigator.doNotTrack);
-// prints "1" if DNT is enabled; "0" if the user opted-in for tracking; otherwise this is "unspecified"
-```
 
-## Спецификация
+## Спецификации
 
-[Tracking Preference Expression](http://www.w3.org/TR/tracking-dnt/) (Working проект) основан на более ранней версии этой спецификации, где `navigator.doNotTrack` **это** значение посланное заголовком `do-not-track`.
-
-## Смотрите также
-
-- [The Do Not Track field guide](/en/The_Do_Not_Track_Field_Guide)
+{{Specifications}}
 
 ## Совместимость с браузерами
 
 {{Compat}}
+
+## Смотрите также
+
+- HTTP-заголовок {{HTTPHeader("DNT")}}

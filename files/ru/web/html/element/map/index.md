@@ -5,7 +5,7 @@ slug: Web/HTML/Element/map
 
 {{HTMLSidebar}}
 
-**HTML-элемент `<map>` **используется с элементами {{HTMLElement("area")}} для определения карты изображения (интерактивной области ссылок).
+HTML-элемент **`<map>`** используется с элементами {{HTMLElement("area")}} для определения карты изображения (интерактивной области ссылок).
 
 {{EmbedInteractiveExample("pages/tabbed/map.html", "tabbed-standard")}}
 

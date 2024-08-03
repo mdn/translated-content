@@ -13,7 +13,8 @@ Cuando se aplica a elementos flotantes, mueve el [margin edge](/es/docs/CSS/box_
 
 Los floats que son relevantes para ser limpiados (cleared) son los primeros floats dentro del mismo [contexto de formato de bloque](/es/docs/Web/Guide/CSS/Block_formatting_context).
 
-> **Nota:** Si deseas que un elemento contenga todos los elementos flotantes dentro, puedes hacer dos cosas, o bien flotar el contenedor también o usar `clear` en un [pseudo-element](/es/docs/Web/CSS/Pseudo-elements) {{cssxref("::after")}}.
+> [!NOTE]
+> Si deseas que un elemento contenga todos los elementos flotantes dentro, puedes hacer dos cosas, o bien flotar el contenedor también o usar `clear` en un [pseudo-element](/es/docs/Web/CSS/Pseudo-elements) {{cssxref("::after")}}.
 >
 > ```css
 > #container::after {
@@ -59,7 +60,8 @@ clear: inherit;
 
 ## Ejemplo
 
-> **Nota:** El div con clase 'wrapper' añade un borde para una mejor visibilidad de la utilidad de la propiedad clear
+> [!NOTE]
+> El div con clase 'wrapper' añade un borde para una mejor visibilidad de la utilidad de la propiedad clear
 
 ### clear: left
 

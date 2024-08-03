@@ -7,7 +7,8 @@ slug: Learn/MathML
 
 数学标记语言（Mathematical Markup Language）或 {{glossary("MathML")}} 是用于在网页中编写数学公式的标记语言，其支持分数、上下标、根号、矩阵、积分、级数等。尽管它最初被设计为独立的 XML 语言，但 MathML 通常嵌入在 {{Glossary('HTML')}} 文档中，并可视为 HTML 的扩展。
 
-> **警告：** 实际上，MathML 内容是由[轻量级标记语言](https://zh.wikipedia.org/wiki/轻量级标记语言)（例如 [LaTeX](https://zh.wikipedia.org/wiki/LaTeX)）或[图形用户界面](https://zh.wikipedia.org/wiki/图形用户界面)生成的。如果你只需要在网页中集成数学公式，可以参考[编写 MathML](/zh-CN/docs/Web/MathML/Authoring) 页面上的提示。
+> [!WARNING]
+> 实际上，MathML 内容是由[轻量级标记语言](https://zh.wikipedia.org/wiki/轻量级标记语言)（例如 [LaTeX](https://zh.wikipedia.org/wiki/LaTeX)）或[图形用户界面](https://zh.wikipedia.org/wiki/图形用户界面)生成的。如果你只需要在网页中集成数学公式，可以参考[编写 MathML](/zh-CN/docs/Web/MathML/Authoring) 页面上的提示。
 
 ## 前提
 

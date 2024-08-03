@@ -1,44 +1,60 @@
 ---
-title: Document.createProcessingInstruction()
+title: Document：createProcessingInstruction() 方法
 slug: Web/API/Document/createProcessingInstruction
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("DOM")}}
 
-`createProcessingInstruction()` 创建一个新的处理指令节点，并返回。
+`createProcessingInstruction()` 生成新的[处理指令](/zh-CN/docs/Web/API/ProcessingInstruction)节点并返回。
 
-## Syntax
+新节点通常会被插入 XML 文档，以便完成任何操作，例如 {{ domxref("node.insertBefore") }}。
 
-```plain
-Processing instruction node = document.createProcessingInstruction(target, data)
+## 语法
+
+```js-nolint
+createProcessingInstruction(target, data)
 ```
 
-### Parameters
+### 参数
 
-- `Processing Instruction node` 是 {{ domxref("ProcessingInstruction") }} 节点。
-- `target` 是指处理指令节点的 target 部分 (i.e., \<?_target_ ... ?>
-- `data` 是一个字符串，包含了将要添加到节点内的数据。
+- `piNode` 是生成的 {{ domxref("ProcessingInstruction") }} 节点。
+- `target` 是包含处理指令的第一部分字符串（即 `<?target … ?>`）。
+- `data` 是包含处理指令在目标之后应携带的任何信息字符串，数据由你决定，但不能包含 `?>`，因为这会关闭处理指令。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ### 异常
 
-- `NOT_SUPPORTED_ERR`
-  - : Thrown if you attempt to create a processing instruction node on an HTML document in Gecko 9 or earlier. In Gecko 10.0 and later, you can use this method on HTML documents.
-- `DOM_INVALID_CHARACTER`
-  - : Thrown if you try to add an invalid processing instruction target (it should be an XML name besides any case combination of the letters "xml") or if the closing processing instruction sequence ("?>") is added as part of the data, so unescaped user-provided data cannot be safely used without escaping or otherwise dealing with such situations.
+- `InvalidCharacterError` {{domxref("DOMException")}}
 
-## 实例
+  - : 如果满足以下任意条件，则抛出该异常：
 
-```plain
-var docu = new DOMParser().parseFromString('<xml></xml>',  "application/xml")
+    - [`target`](#target) 值不是有效的 [XML 名称](https://www.w3.org/TR/REC-xml/#dt-name)；例如，以数字、连字符或句号开头，或包含字母数字字符、下划线、连字符或句号以外的字符。
+    - _闭合处理指令序列_（`?>`）是 [`data`](#data) 值的一部分。
 
-var pi = docu.createProcessingInstruction('xml-stylesheet', 'href="mycss.css" type="text/css"');
+## 示例
 
-docu.insertBefore(pi, docu.firstChild);
+```js
+const doc = new DOMParser().parseFromString("<foo />", "application/xml");
+const pi = doc.createProcessingInstruction(
+  "xml-stylesheet",
+  'href="mycss.css"',
+);
 
-alert(new XMLSerializer().serializeToString(docu));
-// 弹出框内容：<?xml-stylesheet href="mycss.css" type="text/css"?><xml/>
+doc.insertBefore(pi, doc.firstChild);
+
+console.log(new XMLSerializer().serializeToString(doc));
+// 显示：<?xml-stylesheet href="mycss.css" type="text/css"?><foo/>
 ```
 
 ## 规范
 
-[DOM 4: createProcessingInstruction](http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-createprocessinginstruction)
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}

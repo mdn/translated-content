@@ -5,7 +5,7 @@ slug: Web/HTML/Element/ul
 
 {{HTMLSidebar}}
 
-**HTML-элемент `<ul>`** используется для неупорядоченного списка - в частности для маркированного списка.
+HTML-элемент **`<ul>`** используется для неупорядоченного списка, в частности для маркированного списка.
 
 {{EmbedInteractiveExample("pages/tabbed/ul.html", "tabbed-standard")}}
 

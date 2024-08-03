@@ -67,7 +67,7 @@ window.addEventListener("scroll", function (e) {
 
 Больше похожих примеров можно найти на странице события [`resize`](/ru/docs/Web/API/Window/resize_event).
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

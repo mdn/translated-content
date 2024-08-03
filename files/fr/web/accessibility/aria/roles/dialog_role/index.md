@@ -3,6 +3,8 @@ title: Utilisation du rôle dialog
 slug: Web/Accessibility/ARIA/Roles/dialog_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Description
 
 Cette technique présente l'utilisation du rôle [`dialog (en)`](http://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog).

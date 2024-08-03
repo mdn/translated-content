@@ -13,7 +13,8 @@ Para aprovechar al máximo este módulo, debería haber trabajado con los módul
 
 Conocimiento basico de [HTML](/es/docs/Learn/HTML) y [CSS](/es/docs/Learn/CSS) tambien seria util.
 
-> **Nota:** Si está trabajando en un dispositivo en el que no tiene la capacidad de crear sus propios archivos, puede probar (la mayoría de) los ejemplos de código en un programa de codificación en línea como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/).
+> [!NOTE]
+> Si está trabajando en un dispositivo en el que no tiene la capacidad de crear sus propios archivos, puede probar (la mayoría de) los ejemplos de código en un programa de codificación en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 
@@ -22,7 +23,7 @@ Conocimiento basico de [HTML](/es/docs/Learn/HTML) y [CSS](/es/docs/Learn/CSS) t
 - [Manipulacion de documentos](/es/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
   - : Al escribir páginas web y aplicaciones, una de las cosas más comunes que querrás hacer es manipular los documentos web de alguna manera. Esto generalmente se hace usando el Document Object Model (DOM), un conjunto de APIs para controlar el HTML y la información de sus estilos que hace un uso intensivo del objeto {{domxref("Document")}} . En este artículo, veremos cómo usar el DOM en detalle, junto con algunas otras API que pueden alterar su entorno de maneras interesantes.
 - [Obteniendo data desde el servidor](/es/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-  - : Otra tarea frecuente en las en las aplicaciones y los sitios web modernos, es recuperar los datos individuales de un elemento del seridor para actualizar solo una seccion de la pagina sin tener que cargar una pagina web completamente nueva. Este detalle, aparentemente pequeño, ha tenido un gran impacto en el rendimiento y el comportamiento de los sitios, En este artículo, explicaremos el concepto y veremos las tecnologías que hacen esto posible, como {{domxref("XMLHttpRequest")}} y el [Fetch API](/es/docs/Web/API/Fetch_API).
+  - : Otra tarea frecuente en las en las aplicaciones y los sitios web modernos, es recuperar los datos individuales de un elemento del servidor para actualizar solo una seccion de la pagina sin tener que cargar una pagina web completamente nueva. Este detalle, aparentemente pequeño, ha tenido un gran impacto en el rendimiento y el comportamiento de los sitios, En este artículo, explicaremos el concepto y veremos las tecnologías que hacen esto posible, como {{domxref("XMLHttpRequest")}} y el [Fetch API](/es/docs/Web/API/Fetch_API).
 - [APIs de terceros](/es/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
   - : Las APIs que hemos cubierto hasta ahora están integradas en el navegador, pero no todas las APIs lo estan. Muchos grandes sitios web y servicios tales como Google Maps, Twitter, Facebook, PayPal, etc. proporcionan APIs que permiten a los desarrolladores hacer uso de sus datos (p.ej. mostrando tu actividad en twitter dentro de tu blog) o sus servicios (p.ej. mostrar una ubicacion personalizada porGoogle Maps en tu sitio, o usar el inicio de sesión de Facebook para que inicien sesión tus usuarios). Este artículo analiza la diferencia entre las API del navegador y las API de terceros y muestra algunos usos típicos de este último.
 - [Dibujar gráficos](/es/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)

@@ -3,7 +3,7 @@ title: system-property
 slug: Web/XPath/Functions/system-property
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `system-property`関数は、指定されたシステムプロパティを表すオブジェクトを返します。
 

@@ -35,8 +35,9 @@
 
 | 英文词汇      | 翻译         | 备注                                                                                 | 引用来源                                                                    |
 | ------------- | ------------ | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| CORS          | 跨源资源共享 | 使用“域”并不准确，来源包括协议、域名和端口。                                         | https://github.com/mdn/translated-content/pull/3096#issuecomment-1114015297 |
 | cache busting | 缓存破坏     | 通过修改引用资源的文件名，强制浏览器重新下载新文件。实际使用可译作“（使）缓存失效”。 | https://github.com/mdn/translated-content/pull/18335#discussion_r1508540582 |
+| CORS          | 跨源资源共享 | 使用“域”并不准确，来源包括协议、域名和端口。                                         | https://github.com/mdn/translated-content/pull/3096#issuecomment-1114015297 |
+| cross-origin  | 跨源         |                                                                                      | 同 `CORS`                                                                   |
 | Header        | 标头         | HTTP 消息中的附加信息。                                                              | 来自 Google Chrome 控制台                                                   |
 
 ### JavaScript
@@ -61,6 +62,8 @@
 | ---------------------- | ------------ | ------------------ | --------------------------------------------------------------------------- |
 | Accessibility concerns | 无障碍考虑   |                    | https://github.com/mdn/translated-content/issues/11456                      |
 | Active learning        | 动手练习     |                    | https://github.com/mdn/translated-content/pull/12696#discussion_r1164859935 |
+| Associated interfaces  | 相关接口     |                    |                                                                             |
+| Associated roles       | 相关角色     |                    |                                                                             |
 | Browser compatibility  | 浏览器兼容性 |                    |                                                                             |
 | Conclusion             | 总结         |                    | https://github.com/mdn/translated-content/pull/13329#discussion_r1199677894 |
 | Examples               | 示例         |                    |                                                                             |

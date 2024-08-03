@@ -120,7 +120,7 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 {{EmbedLiveSample("Примеры")}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

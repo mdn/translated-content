@@ -1,197 +1,168 @@
 ---
-title: 左下边框圆角
+title: border-bottom-left-radius
 slug: Web/CSS/border-bottom-left-radius
+l10n:
+  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
 {{CSSRef}}
 
-**`border-bottom-left-radius`** 这个 css 属性设置元素左下角的圆角。圆角可以是圆或椭圆（注：应为圆或椭圆的一部分），或者当其中一个值为 0 时，圆角将不被设置，这时这个角将展示为直角。
+**`border-bottom-left-radius`** [CSS](/zh-CN/docs/Web/CSS) 属性通过指定定义元素左下角曲率的椭圆的半径（或半长轴和半短轴的半径），对元素的左下角进行圆角处理。
+
+{{EmbedInteractiveExample("pages/css/border-bottom-left-radius.html")}}
+
+圆角可以是圆形或椭圆形，如果其中一个值为 `0`，则不进行圆角处理，角保持为直角。
 
 ![border-bottom-left-radius.png](border-bottom-left-radius.png)
 
-一个无论是图像或颜色的背景，都会在边框上被裁剪，即使背景是圆角的; 裁剪的确切位置由 {{cssxref("background-clip")}} 属性定义。
+背景（无论是图片还是颜色）都会被边框处裁剪，即便是圆角边框也不例外；裁剪的具体位置由 {{cssxref("background-clip")}} 属性的值来定义。
 
-> **备注：** 如果该属性的值没有被一个在**`border-bottom-left-radius`** 属性后，作用于当前元素上的{{cssxref("border-radius")}}简写属性设置，那么该属性值将会被[shorthand property](/zh-CN/docs/Web/CSS/Shorthand_properties)重置为初始值。
-
-{{cssinfo}}
+> [!NOTE]
+> 如果 `border-bottom-left-radius` CSS 属性之后的元素的 {{cssxref("border-radius")}} 简写属性中未设置此属性值，该属性值将会被[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)重置为其默认初始值。
 
 ## 语法
 
 ```css
-/* 圆形 */
+/* 角为圆形 */
 /* border-bottom-left-radius: radius */
 border-bottom-left-radius: 3px;
 
-/* 椭圆形 */
-/* border-bottom-left-radius: 水平方向 垂直方向 */
+/* 百分比值 */
+
+/* 如果盒子是正方形，则为圆形，如果盒子是矩形，则为椭圆形 */
+border-bottom-left-radius: 20%;
+
+/* 如上所述：分别是水平方向（宽度）和垂直方向（高度）的 20% */
+border-bottom-left-radius: 20% 20%;
+
+/* 水平方向（宽度）的 20% 和垂直方向（高度）的 10% */
+border-bottom-left-radius: 20% 10%;
+
+/* 角为椭圆形 */
+/* border-bottom-left-radius: 水平 垂直 */
 border-bottom-left-radius: 0.5em 1em;
 
+/* 全局值 */
 border-bottom-left-radius: inherit;
+border-bottom-left-radius: initial;
+border-bottom-left-radius: revert;
+border-bottom-left-radius: revert-layer;
+border-bottom-left-radius: unset;
 ```
 
-where:
+只有一个值：
 
-- _radius_
-  - : Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting the radius of the circle to use for the border in that corner.
-- _horizontal_
-  - : Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting the horizontal semi-major axis of the ellipsis to use for the border in that corner.
-- _vertical_
-  - : Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting the vertical semi-major axis of the ellipsis to use for the border in that corner.
+- 该值是一个 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}，表示该角边框使用的圆半径。
 
-### Values
+只有两个值：
+
+- 首项数值为 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}，表示该角边框椭圆的水平半长轴尺寸。
+- 第二个值为 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}，表示该角边框椭圆的垂直半长轴尺寸。
+
+### 值
 
 - `<length-percentage>`
-  - : Denotes the size of the circle radius or the semi-major and semi-minor axes of the ellipsis. As absolute length it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Percentages for the horizontal axis refer to the width of the box, percentages for the vertical axis refer to the height of the box. Negative values are invalid.
+  - : 表示圆的半径尺寸或椭圆的半长轴和半短轴尺寸。作为绝对长度，它可以使用任何的 CSS {{cssxref("&lt;length&gt;")}} 数据类型进行表示。水平轴上的百分比是指盒子宽度的百分比，而垂直轴上的百分比是指盒子高度的百分比。负值是无效的。
 
-### Formal syntax
+## 形式定义
+
+{{CSSInfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
-## Examples
+## 示例
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>Live example</th>
-      <th>Code</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding: 1.5em">
-        <div
-          style="
-            background-color: lightgreen;
-            border: solid 1px black;
-            border-bottom-left-radius: 40px 40px;
-            width: 100px;
-            height: 100px;
-          "
-        >
-          <div class="hidden">.</div>
-        </div>
-      </td>
-      <td>
-        An arc of circle is used as the border
-        <pre class="brush: css notranslate">
+### 圆弧
+
+单个 `<length>` 值产生一个圆弧。
+
+```html hidden
+<div></div>
+```
+
+```css
 div {
-  border-bottom-left-radius: 40px 40px;
+  border-bottom-left-radius: 40px;
+  background-color: lightgreen;
+  border: solid 1px black;
+  width: 100px;
+  height: 100px;
 }
-</pre
-        >
-      </td>
-    </tr>
-    <tr>
-      <td style="padding: 1.5em">
-        <div
-          style="
-            background-color: lightgreen;
-            border: solid 1px black;
-            border-bottom-left-radius: 40px 20px;
-            width: 100px;
-            height: 100px;
-          "
-        >
-          <div class="hidden">.</div>
-        </div>
-      </td>
-      <td>
-        An arc of ellipse is used as the border
-        <pre class="brush: css notranslate">
+```
+
+{{EmbedLiveSample("圆弧")}}
+
+### 椭圆弧
+
+两个不同的 `<length>` 值会产生一个椭圆弧。
+
+```html hidden
+<div></div>
+```
+
+```css
 div {
   border-bottom-left-radius: 40px 20px;
+  background-color: lightgreen;
+  border: solid 1px black;
+  width: 100px;
+  height: 100px;
 }
-</pre
-        >
-      </td>
-    </tr>
-    <tr>
-      <td style="padding: 1.5em">
-        <div
-          style="
-            background-color: lightgreen;
-            border: solid 1px black;
-            border-bottom-left-radius: 40%;
-            width: 100px;
-            height: 100px;
-          "
-        >
-          <div class="hidden">.</div>
-        </div>
-      </td>
-      <td>
-        The box is a square: an arc of circle is used as the border
-        <pre class="brush: css notranslate">
-div {
-  border-bottom-left-radius: 40%;
-}
-</pre
-        >
-      </td>
-    </tr>
-    <tr>
-      <td style="padding: 1.5em">
-        <div
-          style="
-            background-color: lightgreen;
-            border: solid 1px black;
-            border-bottom-left-radius: 40%;
-            width: 100px;
-            height: 200px;
-          "
-        >
-          <div class="hidden">.</div>
-        </div>
-      </td>
-      <td>
-        The box is not a square: an arc of ellipse is used as the border
-        <pre class="brush: css notranslate">
-div {
-  border-bottom-left-radius: 40%;
-}
-</pre
-        >
-      </td>
-    </tr>
-    <tr>
-      <td style="padding: 1.5em">
-        <div
-          style="
-            border: black 3px double;
-            border-bottom-left-radius: 40%;
-            height: 100px;
-            width: 100px;
-            background-color: rgb(250, 20, 70);
-            background-clip: content-box;
-          "
-        >
-          <div class="hidden">.</div>
-        </div>
-      </td>
-      <td>
-        The background color is clipped at the border
-        <pre class="brush: css notranslate">
-div {
-  border-bottom-left-radius:40%;
-  border-style: black 3px double;
-  background-color: rgb(250,20,70);
-  background-clip: content-box;
-}
-</pre
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+```
 
-## Specifications
+{{EmbedLiveSample("椭圆弧")}}
+
+### 具有百分比半径的正方形元素
+
+具有单个 `<percentage>` 值的正方形元素将生成一个圆形的弧段。
+
+```html hidden
+<div></div>
+```
+
+```css
+div {
+  border-bottom-left-radius: 40%;
+  background-color: lightgreen;
+  border: solid 1px black;
+  width: 100px;
+  height: 100px;
+}
+```
+
+{{EmbedLiveSample("具有百分比半径的正方形元素")}}
+
+### 具有百分比半径的非正方形元素
+
+单个 `<percentage>` 值的非正方形元素会产生一条椭圆弧。
+
+```html hidden
+<div></div>
+```
+
+```css
+div {
+  border-bottom-left-radius: 40%;
+  background-color: lightgreen;
+  border: solid 1px black;
+  width: 200px;
+  height: 100px;
+}
+```
+
+{{EmbedLiveSample("具有百分比半径的非正方形元素")}}
+
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-The border-radius-related CSS properties: the CSS shorthand {{cssxref("border-radius")}}, the properties for the other corners: {{cssxref("border-top-right-radius")}}, {{cssxref("border-bottom-right-radius")}}, and {{cssxref("border-top-left-radius")}}.
+- {{cssxref("border-radius")}} 简写属性
+- {{cssxref("border-top-right-radius")}}、{{cssxref("border-bottom-right-radius")}} 和 {{cssxref("border-top-left-radius")}}

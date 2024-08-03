@@ -15,9 +15,11 @@ Un service worker se ejecuta en un contexto worker: por lo tanto no tiene acceso
 
 Los service workers solo funcionan sobre HTTPS, por razones de seguridad. Modificar las peticiones de red en abierto permitiría ataques man in the middle realmente peligrosos. En Firefox, las APIs de service worker se ocultan y no pueden ser empleadas cuando el usuario está en [modo de navegación en privado](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history).
 
-> **Nota:** Los Service Workers mejoran los intentos anteriores en este área tal como [AppCache](http://alistapart.com/article/application-cache-is-a-douchebag) puesto que no hacen suposiciones sobre qué se está intentando hacer para luego tener que cortar cuando las suposiciones no son correctas; hay control granular sobre todos los aspectos.
+> [!NOTE]
+> Los Service Workers mejoran los intentos anteriores en este área tal como [AppCache](http://alistapart.com/article/application-cache-is-a-douchebag) puesto que no hacen suposiciones sobre qué se está intentando hacer para luego tener que cortar cuando las suposiciones no son correctas; hay control granular sobre todos los aspectos.
 
-> **Nota:** Los Service workers hace un uso intensivo de las [promesas](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise), por lo que generalmente esperarán a que lleguen las respuestasas correspondientes, tras lo cual responderán con una acción de éxito o de fracaso. La arquitectura de promesas es ideal en este caso.
+> [!NOTE]
+> Los Service workers hace un uso intensivo de las [promesas](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise), por lo que generalmente esperarán a que lleguen las respuestasas correspondientes, tras lo cual responderán con una acción de éxito o de fracaso. La arquitectura de promesas es ideal en este caso.
 
 ### Registro
 
@@ -47,7 +49,8 @@ También hay un evento `activate`. El momento en el que este evento se activa es
 
 Tu service worker puede responder a las peticiones usando el evento {{domxref("FetchEvent")}}. Puedes modificar la respuesta a estas peticiones de la manera que quieras, usando el método {{domxref("FetchEvent.respondWith") }}.
 
-> **Nota:** Dado que `oninstall`/`onactivate` puede tardar un poco en completarse, la especificación de service worker spec provee un método `waitUntil` que, cuando es llamado `oninstall` o `onactivate`, pasa una promesa. Los eventos funcionales no se envían al service worker hasta que la promesa se resuelve con éxito.
+> [!NOTE]
+> Dado que `oninstall`/`onactivate` puede tardar un poco en completarse, la especificación de service worker spec provee un método `waitUntil` que, cuando es llamado `oninstall` o `onactivate`, pasa una promesa. Los eventos funcionales no se envían al service worker hasta que la promesa se resuelve con éxito.
 
 Para un tutorial completo que muestra cómo construir tu primer ejemplo básico, lee [Using Service Workers](/es/docs/Web/API/ServiceWorker_API/Using_Service_Workers).
 

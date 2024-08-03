@@ -3,6 +3,8 @@ title: Firefox 3.6 for developers
 slug: Mozilla/Firefox/Releases/3.6
 ---
 
+{{FirefoxSidebar}}
+
 Firefox 3.6 では新規あるいは開発中のウェブ標準のサポート、性能の向上、ウェブユーザーと開発者にとってより良い体験が提供されます。このページは Firefox 3.6 で新しく利用出来るようになった機能に関する記事のリンクを提供します。
 
 ## ウェブサイトとアプリケーション開発者向け
@@ -19,8 +21,8 @@ Firefox 3.6 では新規あるいは開発中のウェブ標準のサポート�
   - : [CSS 3 Backgrounds and Borders 草案](http://dev.w3.org/csswg/css3-background/)の `background-size プロパティが` [`-moz-background-size`](/ja/docs/Web/CSS/-moz-background-size) としてサポートされました。
 - [WOFF フォントのサポート](/ja/docs/About_WOFF)
   - : [`@font-face`](/ja/docs/Web/CSS/@font-face) が新しい WOFF ウェブフォントファイルフォーマットをサポートしました。
-- [ポインタイベント](/ja/docs/CSS/pointer-events)
-  - : [`pointer-events`](/ja/docs/Web/CSS/pointer-events) プロパティにより、要素がマウスポインタのイベントのターゲットであるかどうかをコンテンツが指定できるようになります。
+- [ポインターイベント](/ja/docs/CSS/pointer-events)
+  - : [`pointer-events`](/ja/docs/Web/CSS/pointer-events) プロパティにより、要素がマウスポインターのイベントのターゲットであるかどうかをコンテンツが指定できるようになります。
 
 #### その他の CSS の変更
 
@@ -29,7 +31,7 @@ Firefox 3.6 では新規あるいは開発中のウェブ標準のサポート�
 - [`text-align`](/ja/docs/Web/CSS/text-align):end がサポートされました。[バグ 299837](https://bugzilla.mozilla.org/show_bug.cgi?id=299837)
 - table [`display`](/ja/docs/Web/CSS/display) タイプの要素に対する DOM の変更がより良く動作するようになりました。
 - `indeterminate` 属性が `true` である `checkbox` [`input`](/ja/docs/HTML/Element/Input) 要素にマッチする [`:indeterminate`](/ja/docs/Web/CSS/:indeterminate) 擬似クラスのサポートが追加されました。
-- [`:-moz-locale-dir(ltr)`](</ja/docs/Web/CSS/:-moz-locale-dir(ltr)> 'CSS の :-moz-locale-dir(ltr) 疑似クラスは Mozilla 拡張であり、ユーザーインターフェイスが左から右へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "ltr" に設定されていることで特定されます。') と [`:-moz-locale-dir(rtl)`](</ja/docs/Web/CSS/:-moz-locale-dir(rtl)> 'CSS の :-moz-locale-dir(ltr) 疑似クラスは Mozilla 拡張であり、ユーザーインターフェイスが右から左へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "rtl" に設定されていることで特定されます。') が追加され、ユーザーインターフェイスが left-to-right または right-to-left のどちらで描画されるかに応じて、容易にレイアウトをカスタマイズできるようになりました。[バグ 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416)
+- [`:-moz-locale-dir(ltr)`](</ja/docs/Web/CSS/:-moz-locale-dir(ltr)> 'CSS の :-moz-locale-dir(ltr) 擬似クラスは Mozilla 拡張であり、ユーザーインターフェイスが左から右へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "ltr" に設定されていることで特定されます。') と [`:-moz-locale-dir(rtl)`](</ja/docs/Web/CSS/:-moz-locale-dir(rtl)> 'CSS の :-moz-locale-dir(ltr) 擬似クラスは Mozilla 拡張であり、ユーザーインターフェイスが右から左へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "rtl" に設定されていることで特定されます。') が追加され、ユーザーインターフェイスが left-to-right または right-to-left のどちらで描画されるかに応じて、容易にレイアウトをカスタマイズできるようになりました。[バグ 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416)
 - ウィンドウ化されたプラグインは CSS transforms の中では表示されなくなりました。これはコンポジターによって正しく変換されないためです。
 
 ### HTML
@@ -107,7 +109,7 @@ Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/Java
   - : ステートメントのすべてのプロパティを列挙する [`for..in`](/ja/docs/JavaScript/Reference/Statements/for...in) enumeration が利用できるようになりました。
 - mozIStorageStatement の getParameterIndex の動作が 3.5 と 3.6 の間で変更された
   - : 詳細は [バグ 528166](https://bugzilla.mozilla.org/show_bug.cgi?id=528166) を参照してください。
-- 複数のパラメータのセットを非同期バインドしてステートメントを実行
+- 複数の引数のセットを非同期バインドしてステートメントを実行
   - : 詳細は [バグ 490085](https://bugzilla.mozilla.org/show_bug.cgi?id=490085) を参照してください。ドキュメント準備中です。
 
 ### Preferences
@@ -123,7 +125,7 @@ Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/Java
 
 ### その他
 
-- Firefox は components ディレクトリ内にインストールされたサードパーティのコンポーネントをロードしなくなりました。これはバグのあるサードパーティコンポーネントが実行されるのを防止することによる安定性の向上に貢献します。このやり方でコンポーネントをインストールする開発者は標準的なアドオンとしてインストールできるように[それらコンポーネントを XPI パッケージとして再パッケージする必要があります](/ja/docs/Migrating_raw_components_to_add-ons)。
+- Firefox は components ディレクトリー内にインストールされたサードパーティのコンポーネントをロードしなくなりました。これはバグのあるサードパーティコンポーネントが実行されるのを防止することによる安定性の向上に貢献します。このやり方でコンポーネントをインストールする開発者は標準的なアドオンとしてインストールできるように[それらコンポーネントを XPI パッケージとして再パッケージする必要があります](/ja/docs/Migrating_raw_components_to_add-ons)。
 - 拡張において chrome を登録するために用いていた `contents.rdf は利用できなくなりました`。 [`chrome.manifest`](/ja/docs/Install_Manifests) ファイルを代わりに利用しなければなりません。 [バグ 492008](https://bugzilla.mozilla.org/show_bug.cgi?id=492008) を参照してください。
 - メニューバーを自動的に隠すためのサポートが追加されました。[バグ 477256](https://bugzilla.mozilla.org/show_bug.cgi?id=477256) を参照してください。
 - オブジェクトに対して `container-live-role` 属性を持たせるためのサポートが追加されました。[バグ 391829](https://bugzilla.mozilla.org/show_bug.cgi?id=391829) を参照してください。
@@ -136,10 +138,10 @@ Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/Java
 - 新しい [`openLocationLastURL.jsm`](/ja/docs/JavaScript_code_modules/openLocationLastURL.jsm) コードモジュールは、プライベートブラウジングモードであるかを正しく判断して、"Open Location" ダイアログボックスの記憶された URL データの読み込みと変更を容易にします。
 - Windows では、[`nsIScreen`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIScreen) インターフェイスは、グラフィックスドライバーが 32 ビットをサポートしていても、ピクセルごとに 24 ビットカラーをレポートします。これは 24 ビットは実際に利用されているカラーピクセルの数をより正確に表現するためです。
 - Window では [`toolbar`](/ja/docs/Mozilla/Tech/XUL/toolbar) XUL 要素の新しい [`autohide`](/ja/docs/Mozilla/Tech/XUL/Attribute/autohide) アトリビュートを用いてメニューバーを隠すことができます。
-- [`loadOneTab`](/ja/docs/Mozilla/Tech/XUL/Method/loadOneTab) と [`addTab`](/ja/docs/Mozilla/Tech/XUL/Method/addTab) メソッドは新しい `relatedToCurrent` パラメータをサポートし、加えて、多くのパラメータが省略可能であるために名前によるパラメータの指定ができます。
+- [`loadOneTab`](/ja/docs/Mozilla/Tech/XUL/Method/loadOneTab) と [`addTab`](/ja/docs/Mozilla/Tech/XUL/Method/addTab) メソッドは新しい `relatedToCurrent` 引数をサポートし、加えて、多くの引数が省略可能であるために名前による引数の指定ができます。
 - インストール manifests で "hidden" プロパティはサポートされなくなりました。アドオンマネージャウィンドウ上でユーザーが見ることのできないアドオンは不可能になりました。
 - @mozilla.org/webshell;1 コンポーネントはもう存在しません。代わりに @mozilla.org/docshell;1 を使う必要があります。
-- タイマーイベントをスケジュールするために、タイマーがコールするオブジェクトをインスタンシエイトすることなく update-timer カテゴリで登録できるようになりました。代わりに必要になったときにインスタンシエイトされます。詳細は [`nsIUpdateTimerManager.registerTimer()`](</ja/docs/XPCOM_Interface_Reference/nsIUpdateTimerManager#registerTimer()>) を参照してください。
+- タイマーイベントをスケジュールするために、タイマーがコールするオブジェクトをインスタンシエイトすることなく update-timer カテゴリーで登録できるようになりました。代わりに必要になったときにインスタンシエイトされます。詳細は [`nsIUpdateTimerManager.registerTimer()`](</ja/docs/XPCOM_Interface_Reference/nsIUpdateTimerManager#registerTimer()>) を参照してください。
 - The [`NPN_GetValue()`](/ja/NPN_GetValue) 関数はもはや変数値 `NPNVserviceManager`, `NPNVDOMelement`, `NPNVDOMWindow`を経由した XPCOM へのアクセスを提供しません。これは将来のバージョンの Gecko バージョンでプラグインを分離したプロセスで動作させるための作業の一部です。
 
 ## Firefox/Gecko 開発者向け

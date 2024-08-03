@@ -3,6 +3,8 @@ title: animationiteration
 slug: Web/API/Element/animationiteration_event
 ---
 
+{{APIRef}}
+
 L'événement `animationiteration` est déclenché lorsqu'une itération d'une animation se termine. Cet événement ne se produit pas pour les animations avec animation-iteration-count valant 1.`
 
 ## Informations générales

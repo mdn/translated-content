@@ -9,7 +9,8 @@ CSS **`white-space`** 속성은 요소가 공백 문자를 처리하는 법을 �
 
 {{EmbedInteractiveExample("pages/css/white-space.html")}}
 
-> **참고:** 단어 안에서 줄이 바뀌기를 원하는 경우 {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}}를 사용하세요.
+> [!NOTE]
+> 단어 안에서 줄이 바뀌기를 원하는 경우 {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}}를 사용하세요.
 
 ## 구문
 

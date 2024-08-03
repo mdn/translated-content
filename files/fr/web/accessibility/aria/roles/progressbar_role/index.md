@@ -3,6 +3,8 @@ title: Utiliser le rôle progressbar
 slug: Web/Accessibility/ARIA/Roles/progressbar_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Description
 
 Cette technique présente l'utilisation du rôle [`progressbar`](https://www.w3.org/TR/wai-aria/#progressbar).

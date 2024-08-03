@@ -163,7 +163,7 @@ flex-basis: unset;
 
 {{ EmbedLiveSample('Example', '100%', '360') }}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -171,7 +171,7 @@ flex-basis: unset;
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
 - CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_

@@ -85,7 +85,8 @@ l10n:
 
 `<progress>` を使用する場合、ふつうはアクセシビリティのあるラベルを提供しましょう。ARIA 標準のラベル付け属性 [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) や [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) を `role="progressbar"` の要素と同様に使用できますが、`<progress>` を用いる場合、代わりに {{htmlelement("label")}} 要素を使用することができます。
 
-> **メモ:** 要素のタグの間に配置されたテキストはアクセシビリティラベルではありません。この要素に対応していない古いブラウザー用の代替用としてのみ推奨されます。
+> [!NOTE]
+> 要素のタグの間に配置されたテキストはアクセシビリティラベルではありません。この要素に対応していない古いブラウザー用の代替用としてのみ推奨されます。
 
 #### 例
 

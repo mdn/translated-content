@@ -21,7 +21,8 @@ const mutationRecords = mutationObserver.takeRecords()
 
 {{domxref("MutationRecord")}} オブジェクトの配列で、そのそれぞれがドキュメントの DOM ツリーの監視された部分に適用された変更を記述します。
 
-> **メモ:** 発生したものの、オブザーバーのコールバックに伝えられなかった変更キューは、 `takeRecords()`をコールした後は空のままになります。
+> [!NOTE]
+> 発生したものの、オブザーバーのコールバックに伝えられなかった変更キューは、 `takeRecords()`をコールした後は空のままになります。
 
 ## 例
 

@@ -52,7 +52,7 @@ console.log("Back to the outer level");
 
 Для дополнительной информации смотрите [Использование групп в консоли](/ru/docs/Web/API/console#using_groups_in_the_console) в документации {{domxref("console")}}.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

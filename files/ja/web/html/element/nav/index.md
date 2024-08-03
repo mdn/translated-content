@@ -2,7 +2,7 @@
 title: "<nav>: ナビゲーションセクション要素"
 slug: Web/HTML/Element/nav
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---
 
 {{HTMLSidebar}}
@@ -10,62 +10,6 @@ l10n:
 **`<nav>`** は [HTML](/ja/docs/Web/HTML) の要素で、現在の文書内の他の部分や他の文書へのナビゲーションリンクを提供するためのセクションを表します。ナビゲーションセクションの一般的な例としてメニュー、目次、索引などがあります。
 
 {{EmbedInteractiveExample("pages/tabbed/nav.html", "tabbed-standard")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
-      </th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
-          >フローコンテンツ</a
-        >、
-        <a href="/ja/docs/Web/HTML/Content_categories#区分コンテンツ"
-          >区分コンテンツ</a
-        >、知覚可能コンテンツ
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
-          >フローコンテンツ</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
-          >フローコンテンツ</a
-        >を受け入れるすべての要素
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td>
-        <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Navigation_Role"
-            >navigation</a
-          ></code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 属性
 
@@ -119,6 +63,66 @@ l10n:
 ### 結果
 
 {{EmbedLiveSample('Examples')}}
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
+        >
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >、
+        <a href="/ja/docs/Web/HTML/Content_categories#区分コンテンツ"
+          >区分コンテンツ</a
+        >、知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/navigation_role"
+            >navigation</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>許可されている <code>role</code> なし</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

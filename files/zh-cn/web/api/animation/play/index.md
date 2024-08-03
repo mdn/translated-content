@@ -23,7 +23,7 @@ animation.play();
 
 ## 例子
 
-在 [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) 示例中，单击或点击蛋糕会导致 Alice 的增长动画 (`aliceChange`) 播放，导致她体型变大并触发蛋糕的动画。在以下示例中，使用了一个事件监听器来触发两者的动画：
+在 [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) 示例中，单击或点击蛋糕会导致 Alice 的增长动画 (`aliceChange`) 播放，导致她体型变大并触发蛋糕的动画。在以下示例中，使用了一个事件监听器来触发两者的动画：
 
 ```js
 // 蛋糕拥有其自己的动画：

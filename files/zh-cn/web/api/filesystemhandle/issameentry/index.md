@@ -1,11 +1,13 @@
 ---
 title: FileSystemHandle：isSameEntry() 方法
 slug: Web/API/FileSystemHandle/isSameEntry
+l10n:
+  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
-{{domxref("FileSystemHandle")}} 接口的 **`isSameEntry()`** 方法用于比对两个{{domxref("FileSystemHandle", "句柄", "", 1)}}以查看两者关联的条目（文件或目录）是否相符。
+{{domxref("FileSystemHandle")}} 接口的 **`isSameEntry()`** 方法用于比对两个{{domxref("FileSystemHandle", "句柄", "", "nocode")}}以查看两者关联的条目（文件或目录）是否相符。
 
 ## 语法
 
@@ -20,11 +22,7 @@ isSameEntry(fileSystemHandle)
 
 ### 返回值
 
-返回一个 {{jsxref('Boolean')}} 值，如果条目相符则此值为 `true`。
-
-### 异常
-
-不抛出异常。
+一个兑现{{jsxref('Boolean', '布尔值', '', 'nocode')}}的 Promise。
 
 ## 示例
 
@@ -49,4 +47,4 @@ function removeMatches(fileEntry, entriesArr) {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/articles/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

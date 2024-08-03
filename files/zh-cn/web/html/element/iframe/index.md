@@ -11,7 +11,8 @@ slug: Web/HTML/Element/iframe
 
 每个嵌入的浏览上下文（embedded browsing context）都有自己的[会话历史记录 (session history)](/zh-CN/docs/Web/API/History)和[DOM 树](/zh-CN/docs/Web/API/Document)。包含嵌入内容的浏览上下文称为*父级浏览上下文*。顶级浏览上下文（没有父级）通常是由 {{domxref("Window")}} 对象表示的浏览器窗口。
 
-> **警告：** 页面上的每个`<iframe>`都需要增加内存和其他计算资源，这是因为每个浏览上下文都拥有完整的文档环境。虽然理论上来说你能够在代码中写出来无限多的`<iframe>`，但是你最好还是先看看这么做会不会导致某些性能问题。
+> [!WARNING]
+> 页面上的每个`<iframe>`都需要增加内存和其他计算资源，这是因为每个浏览上下文都拥有完整的文档环境。虽然理论上来说你能够在代码中写出来无限多的`<iframe>`，但是你最好还是先看看这么做会不会导致某些性能问题。
 
 ## 属性
 
@@ -23,13 +24,15 @@ slug: Web/HTML/Element/iframe
 
   - : 设置为`true`时，可以通过调用 `<iframe>` 的 {{domxref("Element.requestFullscreen", "requestFullscreen()")}} 方法激活全屏模式。
 
-    > **备注：** 这是一个历史遗留属性，已经被重新定义为 `allow="fullscreen"`。
+    > [!NOTE]
+    > 这是一个历史遗留属性，已经被重新定义为 `allow="fullscreen"`。
 
 - `allowpaymentrequest`
 
   - : 设置为`true`时，跨域的 `<iframe>` 就可以调用 [Payment Request API](/zh-CN/docs/Web/API/Payment_Request_API)。
 
-    > **备注：** 这是一个历史遗留属性，已经被重新定义为 `allow="payment"`.
+    > [!NOTE]
+    > 这是一个历史遗留属性，已经被重新定义为 `allow="payment"`.
 
 - `csp` {{experimental_inline}}
   - : 对嵌入的资源配置[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)。查看 {{domxref("HTMLIFrameElement.csp")}} 获取详情。
@@ -76,7 +79,8 @@ slug: Web/HTML/Element/iframe
     - `allow-top-navigation`: 允许嵌入的浏览上下文导航（加载）内容到顶级的浏览上下文。
     - `allow-top-navigation-by-user-activation`: 允许嵌入的浏览上下文在经过用户允许后导航（加载）内容到顶级的浏览上下文。
 
-    > **备注：** 当被嵌入的文档与主页面同源时，强烈建议不要同时使用 `allow-scripts` 和 `allow-same-origin`。如果同时使用，嵌入的文档就可以通过代码删除 `sandbox` 属性，如此，就安全性而言还不如不用`sandbox`。
+    > [!NOTE]
+    > 当被嵌入的文档与主页面同源时，强烈建议不要同时使用 `allow-scripts` 和 `allow-same-origin`。如果同时使用，嵌入的文档就可以通过代码删除 `sandbox` 属性，如此，就安全性而言还不如不用`sandbox`。
     >
     > - 如果攻击者可以在沙箱化的 `iframe` 之外展示内容，例如用户在新标签页中打开内联框架，那么沙箱化也就没有意义了。建议把这种内容放置到独立的专用域中，以减小可能的损失。
     > - 沙箱属性 (sandbox) 在 Internet Explorer 9 及更早的版本上不被支持。
@@ -115,7 +119,8 @@ slug: Web/HTML/Element/iframe
 - `mozbrowser` {{non-standard_inline}}
   - : 这个属性可以让 `<iframe>` 变得像顶级浏览器窗口，详情请参看 [Browser API](/zh-CN/docs/Web/API/Using_the_Browser_API)。这个属性**只能**在 [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) 中使用。
 
-> **备注：** 查看 [Firefox bug 1318532](https://bugzil.la/1318532) 了解如何在 Firefox 的 WebExtensions 中使用此属性。
+> [!NOTE]
+> 查看 [Firefox bug 1318532](https://bugzil.la/1318532) 了解如何在 Firefox 的 WebExtensions 中使用此属性。
 
 ## 脚本
 

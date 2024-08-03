@@ -3,6 +3,8 @@ title: Utiliser le rôle listbox
 slug: Web/Accessibility/ARIA/Roles/listbox_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Description
 
 Cette technique présente l'utilisation du rôle [listbox](http://www.w3.org/TR/wai-aria/roles#listbox) et décrit les effets produits sur les navigateurs et les technologies d'assistance.

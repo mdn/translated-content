@@ -28,7 +28,8 @@ formData.set(name, value, filename);
   - : 当第二个参数传递的是一个 blob 对象（{{domxref("Blob")}}）或者 file 对象（{{domxref("File")}}），filename 参数就代表传给服务端的文件名（一个 {{domxref("USVString")}}）。
     {{domxref("Blob")}} 对象的默认文件名是 "blob"，{{domxref("File")}} 对象的默认文件名则为其“name”属性
 
-> **备注：** 如果对 FormData 对象插入一个 blob 对象（ {{domxref("Blob")}}），那么发送给服务器的请求头部（header）里的“Content-Disposition”里的文件名称将会根据浏览器的不同而不同。
+> [!NOTE]
+> 如果对 FormData 对象插入一个 blob 对象（ {{domxref("Blob")}}），那么发送给服务器的请求头部（header）里的“Content-Disposition”里的文件名称将会根据浏览器的不同而不同。
 
 ## 示例
 

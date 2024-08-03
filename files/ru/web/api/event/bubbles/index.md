@@ -3,7 +3,7 @@ title: Event.bubbles
 slug: Web/API/Event/bubbles
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}} {{AvailableInWorkers}}
 
 ### Описание
 

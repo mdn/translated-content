@@ -17,7 +17,7 @@ slug: Web/HTTP/Methods/TRACE
     </tr>
     <tr>
       <th scope="row">成功的响应是否有主体</th>
-      <td>否</td>
+      <td>是</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Safe/HTTP", "安全")}}</th>

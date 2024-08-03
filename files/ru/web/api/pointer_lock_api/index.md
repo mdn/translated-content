@@ -3,6 +3,8 @@ title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
 ---
 
+{{DefaultAPISidebar("Pointer Lock API")}}
+
 **Pointer lock** **API**(прежнее название Mouse Lock API) обеспечивает методы ввода, основанные на движении мыши , а не только абсолютно позиционированых координатах курсора в окне. Это даёт вам доступ к необработанным движениям мыши, прикрепляет курсор мыши к любому элементу в окне браузера, предоставляет возможность вычислять координаты мыши не ограниченной областью окна проекции, и скрывает курсор из поля зрения. Это идеальное решение для 3D игр, например.
 
 Более того, API полезно для любых приложений, которые используют данные мыши для управления движениями, вращения объектов и изменения записей. Например пользователь может управлять наклоном просто двигая мышь, не нажимая ни на какие кнопки. Сами кнопки освобождаются под другие задачи. Примерами могут послужить программы для просмотра карт или спутниковой съёмки.
@@ -277,7 +279,7 @@ Pointer lock can only lock one iframe at a time. If you lock one iframe, you can
 
 While iframes work by default, "sandboxed" iframes block Pointer lock. The ability to avoid this limitation, in the form of the attribute/value combination `<iframe sandbox="allow-pointer-lock">`, is expected to appear in Chrome soon.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -285,6 +287,6 @@ While iframes work by default, "sandboxed" iframes block Pointer lock. The abili
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("MouseEvent")}}

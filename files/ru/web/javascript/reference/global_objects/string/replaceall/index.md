@@ -92,7 +92,7 @@ TypeError: replaceAll must be called with a global RegExp
 ("aa..cc");
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -100,7 +100,7 @@ TypeError: replaceAll must be called with a global RegExp
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("String.prototype.replace", "String.prototype.replace()")}}
 - {{jsxref("String.prototype.match", "String.prototype.match()")}}

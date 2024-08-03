@@ -3,11 +3,14 @@ title: FormData()
 slug: Web/API/FormData/FormData
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 O **`FormData()`** construtor cria um novo objeto {{domxref("FormData")}}.
 
-> **Nota:** Este recurso está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Este recurso está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
 ## Sintaxe
 
@@ -54,7 +57,8 @@ Ou você pode especificicar o opcional `form` argument ao criar o objeto `FormDa
 </form>
 ```
 
-> **Nota:** Todos os elementos de entrada têm um atributo 'name'. Para que possa acessar seus valores mais tarde.
+> [!NOTE]
+> Todos os elementos de entrada têm um atributo 'name'. Para que possa acessar seus valores mais tarde.
 
 ```js
 var myForm = document.getElementById("myForm");

@@ -51,7 +51,8 @@ div.menu-bar li:hover > ul {
 
 ## 索引
 
-> **备注：** 此索引中的属性名称**不包括**与 CSS 标准名称不同的 [JavaScript 名称](#索引)。
+> [!NOTE]
+> 此索引中的属性名称**不包括**与 CSS 标准名称不同的 [JavaScript 名称](#索引)。
 
 {{CSS_Ref}}
 

@@ -1,7 +1,6 @@
 ---
 title: console.assert()
 slug: Web/API/console/assert_static
-original_slug: Web/API/console/assert
 ---
 
 {{APIRef("Console API")}}{{Non-standard_Header}}

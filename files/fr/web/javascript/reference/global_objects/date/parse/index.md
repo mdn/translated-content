@@ -52,40 +52,6 @@ Lorsque des indicateurs de fuseau horaire sont utilisés, la valeur renvoyée co
 
 Avec une chaîne comme `"March 7, 2014"`, `parse()` supposera un fuseau horaire local, avec une chaîne au format ISO comme `"2014-03-07"`, la méthode supposera un fuseau horaire UTC en ES5 et un fuseau horaire local pour ECMAScript 2015. Ainsi les objets {{jsxref("Date")}} construits avec ces chaînes représenteront des instants différents, sauf si le fuseau horaire local du système utilisé correspond à UTC. Cela signifie que deux dates représentées de façon textuelles semblables peuvent donner des dates différentes (ce comportement doit être corrigé avec ECMAScript 6 afin que les deux dates soient traitées de façon locale).
 
-### Traitement laissé libre à l'implémentation
-
-Le standard ECMAScript dicte que si la chaîne utilisée n'est pas conforme au format standard, alors la fonction peut utiliser une heuristique et/ou un algorithme d'analyse de texte propre à l'implémentation. Les chaînes impossibles à décoder et/ou qui contiennent des éléments non-conformes aux formats ISO doivent renvoyer {{jsxref("NaN")}} lors de l'appel à `Date.parse()`.
-
-Cependant, les valeurs invalides qui ne sont pas reconnues dans un format ISO pris en charge par ECMA-262 peuvent ou non engendrer la valeur {{jsxref("NaN")}} selon le navigateur et les valeurs utilisées. Par exemple :
-
-```js
-// Chaîne non ISO avec des valeurs invalides
-new Date("23/25/2014");
-```
-
-sera traitée comme la date locale du 25 novembre 2015 avec Firefox 30 et comme invalide avec Safari 7. Cependant, si la chaîne est reconnue dans un format ISO mais contient des valeurs invalides, la méthode renverra {{jsxref("NaN")}} pour tous les navigateurs conformes à ES5 (ou aux versions ultérieures) :
-
-```js
-// Chaîne ISO avec des valeurs invalides new
-Date("2014-25-23").toISOString();
-// renvoie "RangeError: invalid date" pour les navigateurs ES5
-```
-
-L'implémentation spécifique de SpiderMonkey peut être trouvée dans le fichier [`jsdate.cpp`](https://dxr.mozilla.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889). La chaîne `"10 06 2014"` est un exemple de chaîne non ISO, utiliser parse() sur cette chaîne entraînera le moteur JavaScript à utiliser son implémentation de recours. Voir ce [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1023155#c6) pour une explication rapide de la façon dont est faite l'analyse de la chaîne.
-
-```js
-new Date("10 06 2014");
-```
-
-sera traitée comme la date locale du 6 octobre 2014 et non comme le 10 juin 2014. D'autres exemples :
-
-```js
-new Date("toto-truc 2014").toString();
-// renvoie : "Invalid Date"
-Date.parse("toto-truc 2014");
-// renvoie : NaN
-```
-
 ## Exemples
 
 ### Utiliser `Date.parse()`

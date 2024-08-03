@@ -9,7 +9,8 @@ CSS 函数 `matrix()` 指定了一个由指定的 6 个值组成的 2D 变换矩
 
 `matrix(a, b, c, d, tx, ty)` 是 `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)` 的简写。
 
-> **备注：** 直到 Firefox 16, Gecko 才接受对于 **tx** 和 **ty** 的 {{cssxref("&lt;length&gt;")}} 值。
+> [!NOTE]
+> 直到 Firefox 16, Gecko 才接受对于 **tx** 和 **ty** 的 {{cssxref("&lt;length&gt;")}} 值。
 
 ## 语法
 

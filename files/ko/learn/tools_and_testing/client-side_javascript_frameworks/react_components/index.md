@@ -89,7 +89,8 @@ export default function Todo() {
 }
 ```
 
-> **참고:** 컴포넌트는 항상 무언가를 반환해야 합니다. 만약 앞으로 컴포넌트를 렌더링하려고 할 때, 아무것도 반환하지 않는 컴포넌트를 만든다면, React는 브라우저에 에러를 표시할 것입니다.
+> [!NOTE]
+> 컴포넌트는 항상 무언가를 반환해야 합니다. 만약 앞으로 컴포넌트를 렌더링하려고 할 때, 아무것도 반환하지 않는 컴포넌트를 만든다면, React는 브라우저에 에러를 표시할 것입니다.
 
 우리가 만든 `Todo` 컴포넌트가 완성되어 사용할 수 있습니다. `App.js`에 다음과 같이 `Todo`를 가져오는 코드를 파일의 상단에 추가하세요.
 
@@ -383,7 +384,8 @@ function FilterButton(props) {
 export default FilterButton;
 ```
 
-> **참고:** 여기서 `<Todo />` 컴포넌트를 처음 만들 때와 동일한 실수를 하고 있다는 것을 알 수 있습니다. 각 버튼이 동일할 것입니다. 괜찮습니다! [필터 버튼으로 돌아가기](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons)에서 이 컴포넌트를 나중에 수정할 것입니다.
+> [!NOTE]
+> 여기서 `<Todo />` 컴포넌트를 처음 만들 때와 동일한 실수를 하고 있다는 것을 알 수 있습니다. 각 버튼이 동일할 것입니다. 괜찮습니다! [필터 버튼으로 돌아가기](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons)에서 이 컴포넌트를 나중에 수정할 것입니다.
 
 ## 모든 컴포넌트를 가져오기
 

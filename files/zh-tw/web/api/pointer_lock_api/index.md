@@ -3,7 +3,7 @@ title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
 ---
 
-{{ SeeCompatTable() }}
+{{DefaultAPISidebar("Pointer Lock API")}}{{ SeeCompatTable() }}
 
 **Pointer lock** (之前稱為 Mouse lock) 提供「隨時間經過所產生的滑鼠位移資訊 (即 deltas)」的輸入方法，而不只是滑鼠游標的絕對位置而已。此函式可存取基本的滑鼠位移、將滑鼠事件的目標鎖定至單一元素、讓滑鼠單一方向的位移距離不再受限、將游標移除到視點之外。
 
@@ -168,13 +168,15 @@ document.exitPointerLock();
 
 若 Pointer lock 狀態改變，如呼叫 [requestPointerLock](/zh-TW/docs/Web/API/Element.requestPointerLock)、[exitPointerLock](/zh-TW/docs/Web/API/Document.exitPointerLock)，或使用者按下 ESC 鍵等。則 [pointerlockchange](/zh-TW/docs/Web/API/GlobalEventHandlers.pointerlockchange) 事件隨即傳送至 `document`。此簡單事件不包含額外資料。
 
-> **備註：** 此事件目前在 Firefox 中的前綴為 `mozpointerlockchange`；在 Chrome 中的前綴為 `webkitpointerlockchange`。
+> [!NOTE]
+> 此事件目前在 Firefox 中的前綴為 `mozpointerlockchange`；在 Chrome 中的前綴為 `webkitpointerlockchange`。
 
 ## pointerlockerror 事件
 
 當呼叫 [requestPointerLock](/zh-TW/docs/Web/API/Element.requestPointerLock) 或 [exitPointerLock](/zh-TW/docs/Web/API/Document.exitPointerLock) 而發生錯誤時，隨即傳送 [pointerlockerror](/zh-TW/docs/Web/API/GlobalEventHandlers.pointerlockerror) 事件至 `document`。此簡單事件不包含額外資料。
 
-> **備註：** 此事件在 Firefox 中的前綴為 `mozpointerlockerror`；在 Chrome 中的前綴為 `webkitpointerlockerror`。
+> [!NOTE]
+> 此事件在 Firefox 中的前綴為 `mozpointerlockerror`；在 Chrome 中的前綴為 `webkitpointerlockerror`。
 
 ## 擴充至滑鼠事件
 
@@ -187,7 +189,8 @@ partial interface MouseEvent {
 };
 ```
 
-> **備註：** 位移屬性目前在 Firefox 中的前綴為 `.mozMovementX` 與 `.mozMovementY`；在 Chrome 中的前綴為`.webkitMovementX` 與 `.webkitMovementY`。
+> [!NOTE]
+> 位移屬性目前在 Firefox 中的前綴為 `.mozMovementX` 與 `.mozMovementY`；在 Chrome 中的前綴為`.webkitMovementX` 與 `.webkitMovementY`。
 
 滑鼠事件的二個新參數 (即 [movementX](/zh-TW/docs/Web/API/MouseEvent.movementX) 與 [movementY](/zh-TW/docs/Web/API/MouseEvent.movementY)) 將提供滑鼠位置的變化情形。此二項參數的值，等於 [MouseEvent](/zh-TW/docs/Web/API/MouseEvent) 屬性值 (即 [screenX](/zh-TW/docs/Web/API/MouseEvent.screenX) 與 [screenY](/zh-TW/docs/Web/API/MouseEvent.screenY)) 之間的變化；而 [MouseEvent](/zh-TW/docs/Web/API/MouseEvent) 屬性另儲存於二項連續的 [mousemove](/zh-TW/docs/Web/API/GlobalEventHandlers.mousemove) 事件 (即 eNow 與 ePrevious) 之內。換句話說，Pointer lock 參數 `movementX = eNow.screenX - ePrevious.screenX`。
 

@@ -1,6 +1,8 @@
 ---
 title: Accept
 slug: Web/HTTP/Headers/Accept
+l10n:
+  sourceCommit: 7aab76c49ae49d606b4958f8dc8cd1269fb7b9b6
 ---
 
 {{HTTPSidebar}}
@@ -15,7 +17,7 @@ slug: Web/HTTP/Headers/Accept
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
-      <td>no</td>
+      <td>否</td>
     </tr>
     <tr>
       <th scope="row">
@@ -35,7 +37,7 @@ Accept: <MIME_type>/<MIME_subtype>
 Accept: <MIME_type>/*
 Accept: */*
 
-// Multiple types, weighted with the {{glossary("quality values", "quality value")}} syntax:
+// 多種類型，以品質值語法加權：
 Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*;q=0.8
 ```
 

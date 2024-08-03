@@ -3,6 +3,8 @@ title: viewBox
 slug: Web/SVG/Attribute/viewBox
 ---
 
+{{SVGRef}}
+
 « [Sommaire de la référence des attributs SVG](/fr/SVG/Attribute)
 
 L'attribut `viewBox` permet de spécifier qu'un groupe d'éléments graphiques s'étire afin de s'adapter à un élément conteneur.

@@ -1,8 +1,9 @@
 ---
 title: 印刷
 slug: Web/CSS/CSS_media_queries/Printing
-original_slug: Web/Guide/Printing
 ---
+
+{{CSSRef}}
 
 コンテンツを印刷するときに、ウェブサイトまたはアプリケーションで使い勝手を向上させたい場合があります。考えられるシナリオはいくつかあります。
 
@@ -122,7 +123,8 @@ original_slug: Web/Guide/Printing
 </html>
 ```
 
-> **メモ:** 古いバージョン Internet Explorer は、非表示の {{HTMLElement("iframe")}} の印刷することができません。
+> [!NOTE]
+> 古いバージョン Internet Explorer は、非表示の {{HTMLElement("iframe")}} の印刷することができません。
 
 ## 関連情報
 

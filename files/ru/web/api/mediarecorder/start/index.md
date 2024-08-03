@@ -47,7 +47,7 @@ An `InvalidState` error is raised if the `start()` method is called while the `M
 ...
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

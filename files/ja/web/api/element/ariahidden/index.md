@@ -3,7 +3,7 @@ title: "Element: ariaHidden プロパティ"
 short-title: ariaHidden
 slug: Web/API/Element/ariaHidden
 l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+  sourceCommit: 4f7e16b5d7794049cd4d162928e96c68389e3e68
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -18,7 +18,7 @@ l10n:
   - : この要素はアクセシビリティ API から隠されています。
 - `"false"`
   - : 要素は、あたかもレンダリングされたかのようにアクセシビリティ API に公開されます。
-- `undefined`
+- `"undefined"`
   - : 要素の非表示状態は、それがレンダリングされているかどうかに基づいてユーザーエージェントによって決定されます。
 
 ## 例

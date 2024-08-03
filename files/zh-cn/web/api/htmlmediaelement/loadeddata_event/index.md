@@ -38,7 +38,8 @@ slug: Web/API/HTMLMediaElement/loadeddata_event
   </tbody>
 </table>
 
-> **备注：** 若在移动/平板设备的浏览器设置中开启了流量节省（data-saver）模式，该事件则不会被触发。
+> [!NOTE]
+> 若在移动/平板设备的浏览器设置中开启了流量节省（data-saver）模式，该事件则不会被触发。
 
 ## 示例
 

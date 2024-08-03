@@ -34,7 +34,8 @@ var intervalID = setInterval(code, [delay]);
 
 值得注意的是，`setInterval()` 和 {{domxref("setTimeout()")}} 共享同一个 ID 池，并且 `clearInterval()` 和 {{domxref("clearTimeout", "clearTimeout()")}} 在技术上是可互换使用的。但是，我们应该匹配使用 `clearInterval()` 和 `clearTimeout()`，以避免代码杂乱无章，并增强代码的可维护性。
 
-> **备注：** 参数 `delay` 会被转换成一个有符号 32 位整数。这将 `delay` 限制到了 2147483647 毫秒以内，因为它在 IDL 中被指定为一个有符号整数。
+> [!NOTE]
+> 参数 `delay` 会被转换成一个有符号 32 位整数。这将 `delay` 限制到了 2147483647 毫秒以内，因为它在 IDL 中被指定为一个有符号整数。
 
 ## 示例
 

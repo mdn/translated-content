@@ -2,7 +2,7 @@
 title: レスポンシブデザイン
 slug: Learn/CSS/CSS_layout/Responsive_Design
 l10n:
-  sourceCommit: 742171e4d1f22bb186235cd198233ed2f8b47d08
+  sourceCommit: 4d4e7617f5d573bbf8f51333b959c73b10262d52
 ---
 
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
@@ -134,7 +134,8 @@ HTML は基本的にレスポンシブ、つまり流動的です。CSS を含�
 }
 ```
 
-> **メモ:** 例として、フレックスボックスを使用して上記の単純なレスポンシブレイアウトを構築しました。ブレークポイントを使用して画面が大きくなったときに段組みに切り替え、{{cssxref('max-width')}} で本文コンテンツのサイズを制限しています。[例](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html)、[ソースコード](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html)。
+> [!NOTE]
+> 例として、フレックスボックスを使用して上記の単純なレスポンシブレイアウトを構築しました。ブレークポイントを使用して画面が大きくなったときに段組みに切り替え、{{cssxref('max-width')}} で本文コンテンツのサイズを制限しています。[例](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html)、[ソースコード](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html)。
 
 ### CSS グリッド
 
@@ -165,7 +166,7 @@ video {
 
 {{htmlelement("picture")}} 要素と {{htmlelement("img")}} の `srcset` 属性や `size` 属性を使用したレスポンシブ画像は、ユーザーのビューポートや端末の解像度に合わせた画像を提供することができます。例えば、モバイル用には正方形の画像を入れ、デスクトップ向けには同じシーンの広い画像を表示させることができます。
 
-`<picture>` 要素では、複数のサイズを「ヒント」（画像が最適な画面サイズと解像度を記述しているメタデータ）とともに指定することができ、ブラウザーはそれぞれの端末に最も適した画像を選びます。これにより、ユーザーは確実に使用する機器に適したサイズの画像をダウンロードすることができます。`<picture>` を `max-width` とともに使用することで、メディアクエリーで画像のサイズを調整する必要がなくなります。これにより、様々なサイズのビューポートに様々なアスペクト比の画像を適用することができます。
+`<picture>` 要素では、複数のサイズを「ヒント」（画像が最適な画面サイズと解像度を記述しているメタデータ）とともに指定することができ、ブラウザーはそれぞれの端末に最も適した画像を選びます。これにより、ユーザーは確実に使用する機器に適したサイズの画像をダウンロードすることができます。`<picture>` を `max-width` とともに使用することで、メディアクエリーで画像のサイズを調整する必要がなくなります。これにより、様々なサイズのビューポートに様々な{{glossary("aspect ratio", "アスペクト比")}}の画像を適用することができます。
 
 さまざまなサイズで使用される*アートディレクション*画像は、さまざまな画面サイズに対して、さまざまな切り抜きまたはまったく異なる画像を提供します。
 
@@ -211,7 +212,8 @@ h1 {
 
 ![見出しが大きい 2 段レイアウト。](mdn-rwd-font-desktop.png)
 
-> **メモ:** この例を実際に見てください。[例](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html)、[ソースコード](https://github.com/mdn/css-examples/blob/main/learn/rwd/type-rwd.html)。
+> [!NOTE]
+> この例を実際に見てください。[例](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html)、[ソースコード](https://github.com/mdn/css-examples/blob/main/learn/rwd/type-rwd.html)。
 
 この書体へのアプローチが示すように、メディアクエリーをページのレイアウトの変更のみに制限する必要はありません。 これらを使用して任意の要素を微調整し、代わりとなる画面サイズでより使いやすく魅力的にすることができます。
 
@@ -237,7 +239,8 @@ h1 {
 
 これは、見出しのフォントサイズを指定する必要があるのは一度だけで、モバイル用にメディアクエリーで再定義せずともよいことを意味します。ビューポートのサイズを大きくするにつれて、フォントは徐々に大きくなります。
 
-> **メモ:** 実際のこの例を見てください。[例](https://mdn.github.io/css-examples/learn/rwd/type-vw.html)、[ソースコード](https://github.com/mdn/css-examples/blob/main/learn/rwd/type-vw.html)。
+> [!NOTE]
+> 実際のこの例を見てください。[例](https://mdn.github.io/css-examples/learn/rwd/type-vw.html)、[ソースコード](https://github.com/mdn/css-examples/blob/main/learn/rwd/type-vw.html)。
 
 ## ビューポートメタタグ
 
@@ -266,7 +269,7 @@ h1 {
 ## 関連情報
 
 - タッチ画面端末での作業:
-  - [タッチイベント](/ja/docs/Web/API/Touch_events)は、タッチ画面やトラックパッド上の指（またはスタイラス）の動きを解釈する機能を提供し、複雑なタッチベースのユーザーインターフェースの高品質な対応を可能にします。
+  - [タッチイベント](/ja/docs/Web/API/Touch_events)は、タッチ画面やトラックパッド上の指（またはスタイラス）の動きを解釈する機能を提供し、複雑なタッチベースのユーザーインターフェイスの高品質な対応を可能にします。
   - [pointer](/ja/docs/Web/CSS/@media/pointer) または [any-pointer](/ja/docs/Web/CSS/@media/any-pointer) メディアクエリーを使用すると、タッチ対応端末で異なる CSS を読み込むことができます。
 - [CSS-Tricks Guide to Media Queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
 

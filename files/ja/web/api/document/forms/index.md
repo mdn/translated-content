@@ -1,23 +1,23 @@
 ---
-title: Document.forms
+title: "Document: forms プロパティ"
+short-title: forms
 slug: Web/API/Document/forms
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{domxref("Document")}} インターフェイスの **`forms`** プロパティは読み取り専用で、文書内に含まれるすべての {{HTMLElement("form")}} を列挙した {{domxref("HTMLCollection")}} を返します。
+{{APIRef("DOM")}}
 
-> **メモ:** 同様に、{{domxref("HTMLFormElement.elements")}} プロパティを使用すると、フォームコンポーネントのユーザー入力要素のリストにアクセスすることができます。
+**`forms`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、文書内に含まれるすべての {{HTMLElement("form")}} を列挙した {{domxref("HTMLCollection")}} を返します。
 
-## 構文
+> [!NOTE]
+> 同様に、{{domxref("HTMLFormElement.elements")}} プロパティを使用すると、フォームコンポーネントのユーザー入力要素のリストにアクセスすることができます。
 
-```
-collection = document.forms;
-```
+## 値
 
-### 値
+文書のすべてのフォームを列挙する {{domxref("HTMLCollection")}} オブジェクトです。このコレクションのそれぞれの項目は、単一の `<form>` 要素を表す {{domxref("HTMLFormElement")}} です。
 
-文書のすべてのフォームを列挙する {{domxref("HTMLCollection")}} オブジェクトです。コレクションのそれぞれの項目は、単一の `<form>` 要素を表す {{domxref("HTMLFormElement")}} です。
-
-文書にフォームがない場合、返されるコレクションは空で、長さはゼロです。
+文書にフォームがない場合、返されるコレクションは空で、長さはゼロになります。
 
 ## 例
 
@@ -58,8 +58,8 @@ collection = document.forms;
 ### フォーム内要素の取得
 
 ```js
-var selectForm = document.forms[index];
-var selectFormElement = document.forms[index].elements[index];
+const selectForm = document.forms[index];
+const selectFormElement = document.forms[index].elements[index];
 ```
 
 ### 名前付きフォームへのアクセス
@@ -79,7 +79,7 @@ var selectFormElement = document.forms[index].elements[index];
     </form>
 
     <script>
-      var loginForm = document.forms.login; // Or document.forms['login']
+      const loginForm = document.forms.login; // Or document.forms['login']
       loginForm.elements.email.placeholder = "test@example.com";
       loginForm.elements.password.placeholder = "password";
     </script>
@@ -97,7 +97,5 @@ var selectFormElement = document.forms[index].elements[index];
 
 ## 関連情報
 
-- [HTML forms](/ja/docs/Learn/HTML/Forms)
+- [HTML フォーム](/ja/docs/Learn/Forms)
 - {{HTMLElement("form")}} および {{domxref("HTMLFormElement")}} インターフェイス
-
-{{APIRef("DOM")}}

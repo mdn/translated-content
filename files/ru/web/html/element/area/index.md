@@ -3,6 +3,8 @@ title: <area>
 slug: Web/HTML/Element/area
 ---
 
+{{HTMLSidebar}}
+
 **HTML `<area>` элемент** определяет активную область на изображении и, при желании, связывает её с {{Glossary("Hyperlink", "гипертекстовой ссылкой")}}. Этот элемент используется только внутри элемента {{HTMLElement("map")}}.{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}
 
 | [Категории содержимого](/ru/docs/HTML/Content_categories) | [Элементы потока](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразового контента](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                            |

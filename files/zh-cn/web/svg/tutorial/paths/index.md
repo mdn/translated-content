@@ -15,7 +15,7 @@ slug: Web/SVG/Tutorial/Paths
 
 每一个命令都用一个关键字母来表示，比如，字母“M”表示的是“Move to”命令，当解析器读到这个命令时，它就知道你是打算移动到某个点。跟在命令字母后面的，是你需要移动到的那个点的 x 和 y 轴坐标。比如移动到 (10,10) 这个点的命令，应该写成“M 10 10”。这一段字符结束后，解析器就会去读下一段命令。每一个命令都有两种表示方式，一种是用**大写字母**，表示采用绝对定位。另一种是用**小写字母**，表示采用相对定位（例如：_从上一个点开始，向上移动 10px，向左移动 7px_）。
 
-`因为属性 d`采用的是用户坐标系统，所以**不需标明单位**。在后面的教程中，我们会学到如何让变换路径，以满足更多需求。
+因为属性 `d` 采用的是用户坐标系统，所以**不需标明单位**。在后面的教程中，我们会学到如何让变换路径，以满足更多需求。
 
 ## 直线命令
 
@@ -34,7 +34,7 @@ m dx dy
 
   <path d="M10 10"/>
 
-  <!-- Points -->
+  <!-- 点 -->
   <circle cx="10" cy="10" r="2" fill="red"/>
 
 </svg>
@@ -59,9 +59,11 @@ V y
 v dy
 ```
 
-现在我们已经掌握了一些命令，可以开始画一些东西了。先从简单的地方开始，画一个简单的矩形（同样的效果用`<rect/>`元素可以更简单的实现），矩形是由水平线和垂直线组成的，所以这个例子可以很好地展现前面讲的画线的方法。![](path_line_commands.png)
+现在我们已经掌握了一些命令，可以开始画一些东西了。先从简单的地方开始，画一个简单的矩形（同样的效果用`<rect/>`元素可以更简单的实现），矩形是由水平线和垂直线组成的，所以这个例子可以很好地展现前面讲的画线的方法。
 
-```plain
+![在白色正方形内绘制一个黑色正方形。黑色正方形的边缘从位置 (10,10) 开始，水平移动到位置 (90,10)，垂直移动到位置 (90,90)，水平移动回位置 (10,90)，最后移动回原始位置 (10,10)。](path_line_commands.png)
+
+```xml
 <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
 
   <path d="M 10 10 H 90 V 90 H 10 L 10 10"/>
@@ -115,7 +117,7 @@ c dx1 dy1, dx2 dy2, dx dy
 
 这里的最后一个坐标 (x,y) 表示的是曲线的终点，另外两个坐标是控制点，(x1,y1) 是起点的控制点，(x2,y2) 是终点的控制点。如果你熟悉代数或者微积分的话，会更容易理解控制点，控制点描述的是曲线起始点的斜率，曲线上各个点的斜率，是从起点斜率到终点斜率的渐变过程。（文字描述不好，维基百科上有图示，更直观。）
 
-![Cubic Bézier Curves with grid](cubic_bézier_curves_with_grid.png)
+![带网格的三次贝塞尔曲线](cubic_bezier_curves_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -145,7 +147,7 @@ s dx2 dy2, dx dy
 
 S 命令可以用来创建与前面一样的贝塞尔曲线，但是，如果 S 命令跟在一个 C 或 S 命令后面，则它的第一个控制点会被假设成前一个命令曲线的第二个控制点的中心对称点。如果 S 命令单独使用，前面没有 C 或 S 命令，那当前点将作为第一个控制点。下面是 S 命令的语法示例，图中左侧红色标记的点对应的控制点即为蓝色标记点。
 
-![A smooth S-shaped curve is drawn from two Bézier curves. The second curve keeps the same slope of the control points as the first curve, which is reflected to the other side.](shortcut_cubic_bézier_with_grid.png)
+![由两条贝塞尔曲线绘制出一条平滑的 S 形曲线。第二条曲线保持了和第一条曲线相同的控制点斜率，但被反射到了另一侧。](shortcut_cubic_bezier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -161,7 +163,7 @@ Q x1 y1, x y
 q dx1 dy1, dx dy
 ```
 
-![Quadratic Bézier with grid](quadratic_bézier_with_grid.png)
+![带网格的二次贝塞尔曲线](quadratic_bezier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -179,7 +181,7 @@ t dx dy
 
 和之前一样，快捷命令 T 会通过前一个控制点，推断出一个新的控制点。这意味着，在你的第一个控制点后面，可以只定义终点，就创建出一个相当复杂的曲线。需要注意的是，T 命令前面必须是一个 Q 命令，或者是另一个 T 命令，才能达到这种效果。如果 T 单独使用，那么控制点就会被认为和终点是同一个点，所以画出来的将是一条直线。
 
-![Two quadratic curves form one smooth S-shaped curve. The second curve's control points are reflected across the horizontal axis](shortcut_quadratic_bézier_with_grid.png)
+![两条二次曲线绘制出一条平滑的 S 形曲线。第二条曲线的控制点被反射到了水平轴的另一侧。](shortcut_quadratic_bezier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -217,7 +219,7 @@ t dx dy
 
 对于上图没有旋转的椭圆，只有 2 种弧形可以选择，不是 4 种，因为两点连线（也就是对角线）正好穿过了椭圆的中心。像下面这张图，就是普通的情况，可以画出两个椭圆，四种弧。
 
-![Show the 4 arcs on the Ellipse example](svgarcs_xaxisrotation_with_grid_ellipses.png)
+![显示椭圆形示例上的 4 条圆弧](svgarcs_xaxisrotation_with_grid_ellipses.png)
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" width="320" height="320">

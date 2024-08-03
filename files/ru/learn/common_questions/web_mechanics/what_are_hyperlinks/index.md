@@ -3,6 +3,8 @@ title: Разбираемся с веб ссылками
 slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 В данной статье мы узнаем, что такое ссылки и почему они важны.
 
 | Предварительно: | Вы должны знать [как работает интернет](/en-US/Learn/How_the_Internet_works) и иметь представление о [разнице между веб-страницей, веб-сайтом, веб-сервером и поисковой системой.](/ru/docs/Learn/page_vs_site_vs_server_vs_search_engine) |

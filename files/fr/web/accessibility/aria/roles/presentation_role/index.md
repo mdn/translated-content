@@ -3,6 +3,8 @@ title: Utiliser le rôle presentation
 slug: Web/Accessibility/ARIA/Roles/presentation_role
 ---
 
+{{AccessibilitySidebar}}
+
 Cette page présente l'usage du rôle [`presentation`](https://www.w3.org/TR/wai-aria-practices-1.1/#presentation_role) et décrit l'effet qu'il a sur les navigateurs et les technologies d'assistance.
 
 ## Description

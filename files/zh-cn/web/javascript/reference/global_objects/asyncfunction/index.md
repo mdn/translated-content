@@ -30,8 +30,8 @@ _同时也从它的父类 {{jsxref("Function")}} 继承实例属性_。
 
 - {{jsxref("Object/constructor", "AsyncFunction.prototype.constructor")}}
   - : 用于创建实例对象的构造函数。对于 `AsyncFunction` 实例，初始值是 {{jsxref("AsyncFunction/AsyncFunction", "AsyncFunction")}} 构造函数。
-- `AsyncFunction.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"AsyncFunction"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
+- `AsyncFunction.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"AsyncFunction"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
 
 > **备注：** `AsyncFunction` 实例并没有 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性。
 

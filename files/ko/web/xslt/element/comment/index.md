@@ -3,7 +3,7 @@ title: comment
 slug: Web/XSLT/Element/comment
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:comment>` 요소는 출력 문서에 주석을 작성합니다. 오직 텍스트만 포함해야 합니다.
 

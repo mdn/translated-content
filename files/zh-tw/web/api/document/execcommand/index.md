@@ -19,7 +19,8 @@ document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 如果該指令不被支援或停用將回傳一個 `false` 的 {{jsxref('Boolean')}} 值。
 
-> **備註：** 只有在使用者互動的部分回傳 `true` 。請不要嘗試在呼叫指令前使用回傳值來確認瀏覽器是否支援。
+> [!NOTE]
+> 只有在使用者互動的部分回傳 `true` 。請不要嘗試在呼叫指令前使用回傳值來確認瀏覽器是否支援。
 
 ### 參數
 

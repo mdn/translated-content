@@ -39,7 +39,8 @@ slug: Web/CSS/Containing_block
    4. {{cssxref("contain")}} 的值是 `layout`、`paint`、`strict` 或 `content`（例如：`contain: paint;`）
    5. {{cssxref("backdrop-filter")}} 的值不是 `none`（例如：`backdrop-filter: blur(10px);`）
 
-> **备注：** 根元素（{{HTMLElement("html")}}）所在的包含块是一个被称为**初始包含块**的矩形。它具有视口（对于连续媒体）或页面区域（对于分页媒体）的尺寸。
+> [!NOTE]
+> 根元素（{{HTMLElement("html")}}）所在的包含块是一个被称为**初始包含块**的矩形。它具有视口（对于连续媒体）或页面区域（对于分页媒体）的尺寸。
 
 > **备注：** `perspective` 和 `filter` 属性对形成包含块的作用存在浏览器之间的不一致性。
 
@@ -50,7 +51,8 @@ slug: Web/CSS/Containing_block
 1. {{cssxref("height")}}、{{cssxref("top")}} 及 {{cssxref("bottom")}} 属性根据包含块的 `height` 计算百分比值。
 2. {{cssxref("width")}}、{{cssxref("left")}}、{{cssxref("right")}}、{{cssxref("padding")}} 和 {{cssxref("margin")}} 属性根据包含块的 `width` 计算百分比值。
 
-> **备注：** 一个**块容器**（比如 inline-block、block 或 list-item 元素）要么只包含参与行级格式化上下文的行级盒子，要么只包含参与块级格式化上下文的块级盒子。只有包含块级或行级盒子的元素才是块容器。
+> [!NOTE]
+> 一个**块容器**（比如 inline-block、block 或 list-item 元素）要么只包含参与行级格式化上下文的行级盒子，要么只包含参与块级格式化上下文的块级盒子。只有包含块级或行级盒子的元素才是块容器。
 
 ## 示例
 

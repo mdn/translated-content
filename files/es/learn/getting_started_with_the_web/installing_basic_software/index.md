@@ -39,7 +39,8 @@ Por ahora, solo tendrás que instalar un par de navegadores web de escritorio pa
 
 Antes de continuar, deberías instalar al menos dos de estos navegadores y tenerlos disponibles para pruebas.
 
-> **Nota:** Internet Explorer no es compatible con algunas funciones web modernas y es posible que no puedas ejecutar tu proyecto. Por lo general, no necesitas preocuparte por hacer que tus proyectos web sean compatibles con él, ya que muy pocas personas todavía lo usan; ciertamente, no te preocupes demasiado por él mientras aprendes. En ocasiones, es posible que te encuentres con un proyecto que requiera soporte.
+> [!NOTE]
+> Internet Explorer no es compatible con algunas funciones web modernas y es posible que no puedas ejecutar tu proyecto. Por lo general, no necesitas preocuparte por hacer que tus proyectos web sean compatibles con él, ya que muy pocas personas todavía lo usan; ciertamente, no te preocupes demasiado por él mientras aprendes. En ocasiones, es posible que te encuentres con un proyecto que requiera soporte.
 
 ### Instalación de un servidor web local
 

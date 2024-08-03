@@ -40,7 +40,8 @@ WebDriver のインストール方法と使用方法は、テストの作成と�
 
 Node.js を使用した Selenium テストの作成と実行については、始める前にすばやく簡単に行うことができ、フロントエンド開発者にはもっと使い慣れた環境を提供する予定です。
 
-> **メモ:** 他のサーバーサイド環境で WebDriver を使用する方法を知りたい場合は、 [Platforms Supported by Selenium](https://www.selenium.dev/downloads/) もチェックしてください。
+> [!NOTE]
+> 他のサーバーサイド環境で WebDriver を使用する方法を知りたい場合は、 [Platforms Supported by Selenium](https://www.selenium.dev/downloads/) もチェックしてください。
 
 ### Node で Selenium のセットアップ
 
@@ -51,7 +52,8 @@ Node.js を使用した Selenium テストの作成と実行については、�
    npm install selenium-webdriver
    ```
 
-> **メモ:** 以前に selenium-webdriver をインストールしてブラウザードライバーをダウンロードした場合でも、これらの手順を実行することをお勧めします。すべてが最新であることを確認する必要があります。
+> [!NOTE]
+> 以前に selenium-webdriver をインストールしてブラウザードライバーをダウンロードした場合でも、これらの手順を実行することをお勧めします。すべてが最新であることを確認する必要があります。
 
 次に、 WebDriver がテストしたいブラウザーを制御するために、関連するドライバーをダウンロードする必要があります。どこから取得するかは、 [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver) ページに詳細があります（最初の節の表を見てください）。もちろん、いくつかのブラウザーは OS 固有のものですが、主要な OS で利用できる Firefox と Chrome に絞って説明します。
 
@@ -59,7 +61,8 @@ Node.js を使用した Selenium テストの作成と実行については、�
 2. ホームユーザーディレクトリーのルートなど、移動しやすい場所に展開します。
 3. `chromedriver` と `geckodriver` ドライバーの場所をシステムの `PATH` 変数に追加してください。これは、ハードディスクのルートから、ドライバーを格納するディレクトリーへの絶対パスでなければなりません。例えば、macOS マシンを使用していて、ユーザー名が bob で、ドライバーをホームフォルダーのルートに置くとしたら、パスは `/Users/bob` となります。
 
-> **メモ:** もう一度言っておきますが、 `PATH` に追加するパスは、ドライバーそのものへのパス ではなく、ドライバーを格納するディレクトリーへのパスである必要があります。これはよく間違えられます。
+> [!NOTE]
+> もう一度言っておきますが、 `PATH` に追加するパスは、ドライバーそのものへのパス ではなく、ドライバーを格納するディレクトリーへのパスである必要があります。これはよく間違えられます。
 
 macOS システムとほとんどの Linux システムで `PATH` 変数を設定するには、次のようにします。
 
@@ -110,7 +113,8 @@ Windows で `PATH` 変数を設定するには、[How can I add a new folder to 
    })();
    ```
 
-   > **メモ:** この関数は {{glossary("IIFE")}} （即時実行関数式）です。
+   > [!NOTE]
+   > この関数は {{glossary("IIFE")}} （即時実行関数式）です。
 
 3. 端末で、自分のプロジェクトフォルダー内にいることを確認し、以下のコマンドを入力します。
 
@@ -218,7 +222,8 @@ const { Builder, Browser } = require("selenium-webdriver");
 driver.get("http://www.google.com");
 ```
 
-> **メモ:** この章とその下記の機能の詳細については、[WebDriver クラスリファレンス](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html)を参照してください。
+> [!NOTE]
+> この章とその下記の機能の詳細については、[WebDriver クラスリファレンス](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html)を参照してください。
 
 リソースを指す URL であればなんでも使用することができます。ローカル文書をテストするためには `file://` URL を含めることもできます。
 
@@ -463,7 +468,8 @@ const driver = new Builder().forBrowser("firefox").build();
 
 これで WebDriver はフォームフィールドを形成する前に 2 秒間待機します。そして、 `getAttribute()` を使用して `value` 属性値を取得して値が埋まっているかどうか（空でないかどうか）を検査し、空でなければコンソールにメッセージを出力します。
 
-> **メモ:** また、 [`wait()`](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait) と呼ばれるメソッドがあります。これは、ある条件を一定時間繰り返しテストし、コードの実行を継続します。これも [util ライブラリー](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html)を使用しています。 util ライブラリーは `wait()` とともに使用する一般的な条件を定義しています。
+> [!NOTE]
+> また、 [`wait()`](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait) と呼ばれるメソッドがあります。これは、ある条件を一定時間繰り返しテストし、コードの実行を継続します。これも [util ライブラリー](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html)を使用しています。 util ライブラリーは `wait()` とともに使用する一般的な条件を定義しています。
 
 ### 使用後のドライバーのシャットダウン
 
@@ -590,9 +596,11 @@ Selenium テストを LambdaTest 上でリモート動作させるのはとて�
    [![LambdaTest Automation Dashboard](automation-logs-1.jpg)](https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg)
    テストビルド内のすべてのテストについて、ネットワーク、コマンド、例外、Selenium ログを取得できます。また、Selenium スクリプトの実行を録画した動画も探すことができます。
 
-> **メモ:** LambdaTest Automation Dashboard の _HELP_ ボタンをクリックすると、LambdaTest オートメーションを始めるには十分な情報が提供されます。また、[Node JS で最初の Selenium スクリプトを実行する](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/)ことに関する私たちの文書化にも対応しています。
+> [!NOTE]
+> LambdaTest Automation Dashboard の _HELP_ ボタンをクリックすると、LambdaTest オートメーションを始めるには十分な情報が提供されます。また、[Node JS で最初の Selenium スクリプトを実行する](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/)ことに関する私たちの文書化にも対応しています。
 
-> **メモ:** テストのためのケイパビリティオブジェクトを手で書きたくない場合は、 [Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) を用いて生成することができます。
+> [!NOTE]
+> テストのためのケイパビリティオブジェクトを手で書きたくない場合は、 [Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) を用いて生成することができます。
 
 ### BrowserStack
 
@@ -658,9 +666,11 @@ BrowserStack で Selenium テストをリモートで動作するように取得
 
 テストのリンクをクリックすると、新しい画面が取得され、テストの録画動画や、テストに関連する複数の詳細なログ情報を見ることができます。
 
-> **メモ:** Browserstack 自動化ダッシュボードの _Resources_ メニューオプションには、自動テストを実行するために使用するための有益な情報が豊富に格納されています。ノード固有の情報については、 [Node JS Documentation for writing automate test scripts in Node JS](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs) を参照してください。 BrowserStack で使用することができますすべての有益なことを見つけるために、ドキュメントを探索してください。
+> [!NOTE]
+> Browserstack 自動化ダッシュボードの _Resources_ メニューオプションには、自動テストを実行するために使用するための有益な情報が豊富に格納されています。ノード固有の情報については、 [Node JS Documentation for writing automate test scripts in Node JS](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs) を参照してください。 BrowserStack で使用することができますすべての有益なことを見つけるために、ドキュメントを探索してください。
 
-> **メモ:** テストのためのケイパビリティオブジェクトを手で書きたくなければ、 ドキュメントにあるジェネレーターを使用して生成することができます。 [Run your first test](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs#run-your-first-test) を参照ください。
+> [!NOTE]
+> テストのためのケイパビリティオブジェクトを手で書きたくなければ、 ドキュメントにあるジェネレーターを使用して生成することができます。 [Run your first test](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs#run-your-first-test) を参照ください。
 
 #### プログラムによる BrowserStack テストの詳細の入力
 
@@ -794,9 +804,11 @@ Sauce Labs 上で Selenium テストをリモートで実行するための取�
 5. これで [Sauce Labs Automated Test dashboard](https://app.saucelabs.com/dashboard/tests) のページに行くと、テストが掲載されています。ここから動画やスクリーンショット、他にもそのようなデータを見ることができます。
    ![Sauce Labs automated test](sauce_labs_automated_test.png)
 
-> **メモ:** Sauce Labs の [Platform Configurator](https://saucelabs.com/platform/platform-configurator#/) は、テストしたいブラウザー/OS に基づいて、ドライバーインスタンスに供給するケイパビリティオブジェクトを生成する有益なツールです。
+> [!NOTE]
+> Sauce Labs の [Platform Configurator](https://saucelabs.com/platform/platform-configurator#/) は、テストしたいブラウザー/OS に基づいて、ドライバーインスタンスに供給するケイパビリティオブジェクトを生成する有益なツールです。
 
-> **メモ:** Sauce Labs と Selenium を使用したテストに関する有益な詳細については、 [Getting Started with Selenium for Automated Website Testing](https://docs.saucelabs.com/web-apps/automated-testing/selenium/) と [Instant Selenium Node.js Tests](https://docs.saucelabs.com/web-apps/automated-testing/selenium/sample-scripts/#nodejs) を調べてください。
+> [!NOTE]
+> Sauce Labs と Selenium を使用したテストに関する有益な詳細については、 [Getting Started with Selenium for Automated Website Testing](https://docs.saucelabs.com/web-apps/automated-testing/selenium/) と [Instant Selenium Node.js Tests](https://docs.saucelabs.com/web-apps/automated-testing/selenium/sample-scripts/#nodejs) を調べてください。
 
 #### Sauce Labs テストの詳細をプログラムで書き込む
 
@@ -862,7 +874,7 @@ Sauce Labs API を使用することで、合格したかどうか、テスト�
 
 ![Sauce Labs Updated Job info](sauce_labs_updated_job_info.png)
 
-### 自身のリモートサーバ
+### 自身のリモートサーバー
 
 Sauce Labs や BrowserStack のようなサービスを使用したくない場合は、常に自分自身でリモートテストサーバーを設定することができます。その方法を見ていきましょう。
 
@@ -880,7 +892,7 @@ Sauce Labs や BrowserStack のようなサービスを使用したくない場�
 
 これでサーバーを実行したので、リモートの selenium サーバーで動作するデモテストを作成してみましょう。
 
-1. `google_test.js` ファイルのコピーを作成し、 `google_test_remote.js` と名付け、自分のプロジェクトディレクトリに置きます。
+1. `google_test.js` ファイルのコピーを作成し、 `google_test_remote.js` と名付け、自分のプロジェクトディレクトリーに置きます。
 2. コードの行（`const driver = …` で始まる行）を次のように更新します。
 
    ```js

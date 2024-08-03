@@ -24,7 +24,8 @@ attr(data-width px, inherit);
 attr(data-something, "default");
 ```
 
-> **Note :** La fonction `attr()` peut être utilisée sur n'importe quelle propriété CSS. Toutefois, en dehors de {{cssxref("content")}}, la prise en charge des navigateurs est expérimentale. Voir le tableau de compatibilité en fin d'article.
+> [!NOTE]
+> La fonction `attr()` peut être utilisée sur n'importe quelle propriété CSS. Toutefois, en dehors de {{cssxref("content")}}, la prise en charge des navigateurs est expérimentale. Voir le tableau de compatibilité en fin d'article.
 
 ## Syntaxe
 

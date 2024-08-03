@@ -3,7 +3,7 @@ title: include
 slug: Web/XSLT/Element/include
 ---
 
-{{XsltRef}}
+{{XsltSidebar}}{{XsltRef}}
 
 El elemento `<xsl:include>` une el contenido de una hoja de estilo con otra. A diferencia del elemento `<xsl:import>`, el contenido de la hoja de estilo incluida tiene exactamente la misma precedencia que el contenido de la hoja de estilo que la incluye.
 

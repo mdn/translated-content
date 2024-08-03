@@ -45,6 +45,6 @@ _Наследуются от родителя,_ _{{domxref("HTMLElement")}}._
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - HTML element implementing this interface: {{HTMLElement("canvas")}}.

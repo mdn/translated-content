@@ -3,7 +3,7 @@ title: Empilement et éléments flottants
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements
 ---
 
-{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_sans_z-index","Web/CSS/Comprendre_z-index/Ajout_de_z-index", "Web/CSS/Comprendre_z-index")}}
+{{CSSRef}}{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_sans_z-index","Web/CSS/Comprendre_z-index/Ajout_de_z-index", "Web/CSS/Comprendre_z-index")}}
 
 ## L'empilement et les éléments flottants
 

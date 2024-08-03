@@ -9,7 +9,8 @@ slug: Web/API/Element/clientHeight
 
 `clientHeight` 可以被計算成 CSS `height` + CSS `padding` - 水平滾動條的高度（如果有顯示）
 
-> **備註：** 這個屬性會以四捨五入進位取整數. 如果要使用非整數值, 使用 {{ domxref("element.getBoundingClientRect()") }}.
+> [!NOTE]
+> 這個屬性會以四捨五入進位取整數. 如果要使用非整數值, 使用 {{ domxref("element.getBoundingClientRect()") }}.
 
 ## 表達式
 

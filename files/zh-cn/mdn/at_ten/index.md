@@ -3,6 +3,8 @@ title: Mozilla 开发者网络 10 周年
 slug: MDN/At_ten
 ---
 
+{{MDNSidebar}}
+
 为我们 Web 技术的文档化走过 10 年而庆祝！
 
 ## MDN 历史

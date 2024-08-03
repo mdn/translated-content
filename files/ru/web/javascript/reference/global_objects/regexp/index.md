@@ -714,16 +714,6 @@ var re = new RegExp("\\w+");
 
 Глобальный объект `RegExp` не имеет собственных методов, однако, он наследует некоторые методы через цепочку прототипов.
 
-## Экземпляры регулярного выражения
-
-### Свойства
-
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype', 'Properties')}}
-
-### Методы
-
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype', 'Methods')}}
-
 ## Примеры
 
 ### Пример: использование регулярных выражений для смены формата данных

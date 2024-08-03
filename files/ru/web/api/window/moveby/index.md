@@ -30,7 +30,7 @@ function budge() {
 }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

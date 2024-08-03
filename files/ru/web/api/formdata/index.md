@@ -3,7 +3,9 @@ title: FormData
 slug: Web/API/FormData
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 XMLHttpRequest 2 добавляет поддержку для нового интерфейса FormData. Объекты FormData позволяют вам легко конструировать наборы пар ключ-значение, представляющие поля формы и их значения, которые в дальнейшем можно отправить с помощью метода [`send()`](</ru/docs/DOM/XMLHttpRequest#send()> "XMLHttpRequest#send()").
 
@@ -39,7 +41,7 @@ FormData использует такой же формат на выходе, к
 
 > **Примечание:** Разница между {{domxref("FormData.set()")}} и {{domxref("FormData.append()")}} заключается в том, что если указанный ключ найден в объекте, {{domxref("FormData.set()")}} перезапишет его новым значением, тогда как {{domxref("FormData.append()")}} добавит новое значение в конец существующего. Смотрите дополнительные материалы с примерами.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

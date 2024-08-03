@@ -13,7 +13,7 @@ LTR とは逆に、 {{Glossary("RTL")}} (Right To Left, 右書き) はアラビ�
 
 - [ローカリゼーションと国際化](/ja/docs/Web/Localization)
 
-- [MDN Web Docs 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("locale")}}
   - {{Glossary("LTR")}}

@@ -3,10 +3,10 @@ title: "PushEvent: PushEvent() コンストラクター"
 short-title: PushEvent()
 slug: Web/API/PushEvent/PushEvent
 l10n:
-  sourceCommit: bb65fd3482d5c3d32d1c56e5880600b1299f7669
+  sourceCommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
 ---
 
-{{APIRef("Push API")}}
+{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
 **`PushEvent()`** コンストラクターは、新しい {{domxref("PushEvent")}} オブジェクトを生成します。このコンストラクターは、サービスワーカーにのみ公開されていることに注意してください。
 

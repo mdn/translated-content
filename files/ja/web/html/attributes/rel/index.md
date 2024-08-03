@@ -107,7 +107,8 @@ l10n:
 
     {{htmlelement('link')}} では、文書全体の作者を表します。
 
-    > **メモ:** 歴史的な理由から、廃止された属性値 `rev="made"` は `rel="author"` として扱われます。
+    > [!NOTE]
+    > 歴史的な理由から、廃止された属性値 `rev="made"` は `rel="author"` として扱われます。
 
 - `bookmark`
   - : {{htmlelement('a')}} および {{htmlelement('area')}} 属性の `rel` 属性の値として使用されます。最も近い祖先 {{htmlelement('article')}} 要素がある場合、そのパーマリンクを与えます。祖先となる `<article>` 要素がない場合、リンクしている要素が最も近いとされるセクションのパーマリンクを与えます。
@@ -133,7 +134,8 @@ l10n:
 
     > **メモ:** [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) 属性は `rel="icon"` においては Chromium ベースのブラウザーは対応していません。[公開 Chromium issue](https://crbug.com/1121645) を参照してください。
 
-    > **メモ:** Apple の iOS では、他のモバイルブラウザーのように、ウェブクリップやスタートアップのプレースホルダー用のウェブページのアイコンを選択するために、このリンク種別や [`sizes`](/ja/docs/Web/HTML/Element/link#sizes) 属性を使用していません。
+    > [!NOTE]
+    > Apple の iOS では、他のモバイルブラウザーのように、ウェブクリップやスタートアップのプレースホルダー用のウェブページのアイコンを選択するために、このリンク種別や [`sizes`](/ja/docs/Web/HTML/Element/link#sizes) 属性を使用していません。
     > 代わりに、標準外の [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) および [`apple-touch-startup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) をそれぞれ使用しています。
 
     > **メモ:** `shortcut` リンク種別が `icon` の前に見られることが良くありますが、このリンク種別は適合するものではなく、無視されるので**使用しないでください**。
@@ -146,7 +148,8 @@ l10n:
     <link rel="license" href="#license" />
     ```
 
-    > **メモ:** 認識はされているものの、同義語の `copyright` は正しくないため使用しないでください。
+    > [!NOTE]
+    > 認識はされているものの、同義語の `copyright` は正しくないため使用しないでください。
 
 - `manifest` {{Experimental_Inline}}
   - : [ウェブアプリマニフェスト](/ja/docs/Web/Manifest)です。オリジンをまたいだ読み取りのための CORS プロトコルの使用に必要です。

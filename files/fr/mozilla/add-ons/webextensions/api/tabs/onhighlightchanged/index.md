@@ -5,7 +5,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlightChanged
 
 {{AddonSidebar}}
 
-> **Attention :** Cet événement est obsolète. Utilisez {{WebExtAPIRef("tabs.onHighlighted")}} à la place.
+> [!WARNING]
+> Cet événement est obsolète. Utilisez {{WebExtAPIRef("tabs.onHighlighted")}} à la place.
 
 Lancé lorsque les onglets en surbrillance ou sélectionnés dans une fenêtre changent.
 
@@ -50,7 +51,7 @@ Les événements ont trois fonctions :
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >

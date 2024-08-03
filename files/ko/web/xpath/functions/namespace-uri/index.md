@@ -3,7 +3,7 @@ title: namespace-uri
 slug: Web/XPath/Functions/namespace-uri
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `namespace-uri` 함수는 인수로 준 노드 집합 안 첫 노드의 이름공간 URI를 나타내는 문자열을 반환합니다.
 

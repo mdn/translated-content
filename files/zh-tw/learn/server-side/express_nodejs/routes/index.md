@@ -52,7 +52,8 @@ slug: Learn/Server-side/Express_Nodejs/routes
 
 有幾種方法可以創建路線。本教程將使用[`express.Router`](http://expressjs.com/en/guide/routing.html#express-router)中間件，因為它允許我們將站點的特定部分的路由處理程序組合在一起，並使用通用的路由前綴訪問它們。我們會將所有與圖書館有關的路由，保存在「目錄」模塊中，如果我們添加路由來處理用戶帳戶或其他功能，我們可以將它們分開保存。
 
-> **備註：** 我們在[Express 簡介>創建路由處理程序](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction#Creating_route_handlers)中，簡要討論了 Express 應用程序路由。除了為模塊化提供更好的支持之外（如下面第一小節所述），使用 Router 非常類似於直接在 Express 應用程序對像上定義路由。
+> [!NOTE]
+> 我們在[Express 簡介>創建路由處理程序](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction#Creating_route_handlers)中，簡要討論了 Express 應用程序路由。除了為模塊化提供更好的支持之外（如下面第一小節所述），使用 Router 非常類似於直接在 Express 應用程序對像上定義路由。
 
 本節的其餘部分，概述瞭如何使用路由器`Router`來定義路由。
 
@@ -81,7 +82,8 @@ router.get("/about", function (req, res) {
 module.exports = router;
 ```
 
-> **備註：** 上面我們直接在路由器函數中定義路由處理程序回調。在 LocalLibrary 中，我們將在一個單獨的控制器模塊中，定義這些回調。
+> [!NOTE]
+> 上面我們直接在路由器函數中定義路由處理程序回調。在 LocalLibrary 中，我們將在一個單獨的控制器模塊中，定義這些回調。
 
 要在主應用程序文件中使用路由器模塊，我們首先`require()`路由模塊（**wiki.js**）。然後，我們在 Express 應用程序上調用`use()`，將路由器添加到中間件處理路徑，並指定一個'wiki'的 URL 路徑。
 
@@ -105,7 +107,8 @@ router.get("/about", function (req, res) {
 
 回調函數接受三個參數（通常如下所示命名：`req`, `res`, `next`），它將包含 HTTP 請求對象，HTTP 響應，以及中間件鏈中的下一個函數。
 
-> **備註：** 路由器功能是[Express 中間件](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware)，這意味著它們必須完成（響應）請求或調用鏈中的下一個功能`next`。在上面的例子中，我們使用`send()`完成了請求，所以下一個參數`next`沒有被使用（我們選擇不指定它）。
+> [!NOTE]
+> 路由器功能是[Express 中間件](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware)，這意味著它們必須完成（響應）請求或調用鏈中的下一個功能`next`。在上面的例子中，我們使用`send()`完成了請求，所以下一個參數`next`沒有被使用（我們選擇不指定它）。
 >
 > 上面的路由器函數只需要一次回調，但你可以根據需要指定任意數量的回調參數，或一組回調函數。每個函數都是中間件鏈的一部分，並且將按照添加到鏈中的順序調用（除非前面的函數完成請求）。
 
@@ -142,7 +145,8 @@ app.get(/.*fish$/, function (req, res) {
 })
 ```
 
-> **備註：** LocalLibrary 的大部分路由，都只使用字符串，而不是字符串模式和正則表達式。我們還將使用下一節中討論的路由參數。
+> [!NOTE]
+> LocalLibrary 的大部分路由，都只使用字符串，而不是字符串模式和正則表達式。我們還將使用下一節中討論的路由參數。
 
 ### 路由參數
 
@@ -160,7 +164,8 @@ app.get('/users/:userId/books/:bookId', function (req, res) {
 
 路由參數的名稱，必須由「單詞字符」（AZ，az，0-9 和\_）組成。
 
-> **備註：** URL */book/create*將與`/book/:bookId` 之類的路由匹配（它將提取要創建' `create`'的「bookId」值）。將使用與傳入 URL 匹配的第一個路由，因此，如果要單獨處理`/book/create`URL，則必須在`/book/:bookId`路由之前，先定義其路由處理程序。
+> [!NOTE]
+> URL */book/create*將與`/book/:bookId` 之類的路由匹配（它將提取要創建' `create`'的「bookId」值）。將使用與傳入 URL 匹配的第一個路由，因此，如果要單獨處理`/book/create`URL，則必須在`/book/:bookId`路由之前，先定義其路由處理程序。
 
 這就是你開始使用路由所需的全部內容-如果需要，你可以在 Express 文檔中找到更多信息：[基本路由](http://expressjs.com/en/starter/basic-routing.html)和[路由指南](http://expressjs.com/en/guide/routing.html)。以下部分顯示了我們如何為 LocalLibrary 設置路由和控制器。
 
@@ -179,7 +184,8 @@ app.get('/users/:userId/books/:bookId', function (req, res) {
 
 我們將使用路徑參數，來提取編碼信息，並將其傳遞給路由處理程序（在稍後的文章中，我們將使用它來動態確定從數據庫獲取的信息）。通過對我們的 URL 中的信息進行編碼，我們只需要一個路由，用於特定類型的每個資源（例如，一個路由來處理每個書本項目的顯示）。
 
-> **備註：** Express 允許你以任何方式構建 URL -你可以在 URL 正文中編碼信息，就像上面一樣，或使用 URL `GET`參數（例如`/book/?id=6`）。無論你使用哪種方法，URL 都應保持乾淨，合理且可讀（請在此處查看[W3C 建議](https://www.w3.org/Provider/Style/URI)）。
+> [!NOTE]
+> Express 允許你以任何方式構建 URL -你可以在 URL 正文中編碼信息，就像上面一樣，或使用 URL `GET`參數（例如`/book/?id=6`）。無論你使用哪種方法，URL 都應保持乾淨，合理且可讀（請在此處查看[W3C 建議](https://www.w3.org/Provider/Style/URI)）。
 
 接下來，我們為所有上述 URL，創建路由處理程序回調函數和路由代碼。
 
@@ -571,7 +577,8 @@ router.get("/", function (req, res) {
 });
 ```
 
-> **備註：** 這是我們第一次使用 [redirect()](https://expressjs.com/en/4x/api.html#res.redirect) 響應方法。這會重定向到指定的頁面，默認情況下會發送 HTTP 狀態代碼「302 Found」。你可以根據需要，更改返回的狀態代碼，並提供絕對路徑或相對路徑。
+> [!NOTE]
+> 這是我們第一次使用 [redirect()](https://expressjs.com/en/4x/api.html#res.redirect) 響應方法。這會重定向到指定的頁面，默認情況下會發送 HTTP 狀態代碼「302 Found」。你可以根據需要，更改返回的狀態代碼，並提供絕對路徑或相對路徑。
 
 ### 更新 app.js
 
@@ -593,7 +600,8 @@ app.use("/users", usersRouter);
 app.use("/catalog", catalogRouter); // Add catalog routes to middleware chain.
 ```
 
-> **備註：** 我們已在路徑 `'/catalog'` 中添加了目錄模塊。它預先添加到目錄模塊中定義的所有路徑。例如，要訪問書本列表，URL 將為：`/catalog/books/`。
+> [!NOTE]
+> 我們已在路徑 `'/catalog'` 中添加了目錄模塊。它預先添加到目錄模塊中定義的所有路徑。例如，要訪問書本列表，URL 將為：`/catalog/books/`。
 
 就是這樣。現在應該為我們最終在 LocalLibrary 網站上支持的所有 URL，啟用路由和框架功能。
 

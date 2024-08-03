@@ -28,6 +28,6 @@ instanceOfFileReader.readAsText(blob[, encoding]);
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("FileReader")}}

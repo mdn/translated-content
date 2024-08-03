@@ -3,6 +3,8 @@ title: Firefox 19 for developers
 slug: Mozilla/Firefox/Releases/19
 ---
 
+{{FirefoxSidebar}}
+
 Gecko 19 を搭載した Firefox 19 は米国時間 2013 年 2 月 19 日にリリースされました。このページでは、開発者に影響する Firefox 19 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -39,7 +41,8 @@ Firefox 19 で、[XForms](/ja/docs/XForms) のサポートを[**削除しまし�
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 
-> **メモ:** Firefox 19 での重要な変更点は、[`nsresult`](/ja/docs/XPCOM_API_Reference/nsresult) が強い型付けになったことです。これは戻り値の処理ミスによって発生するバグの発見を容易にしますが、この点を誤って仮定している場合に既存のコードで不具合が発生する可能性があります。
+> [!NOTE]
+> Firefox 19 での重要な変更点は、[`nsresult`](/ja/docs/XPCOM_API_Reference/nsresult) が強い型付けになったことです。これは戻り値の処理ミスによって発生するバグの発見を容易にしますが、この点を誤って仮定している場合に既存のコードで不具合が発生する可能性があります。
 
 - `getBrowserSelection()` が、テキスト入力フィールドで選択されているテキストを返すようになりました。このため、ユーザーがパスワードフィールドではないテキスト入力フィールドでテキストを選択したときに、`gContextMenu.isTextSelected` が `true` になります ([Firefox バグ 565717](https://bugzil.la/565717))。
 - [Dict.jsm](/ja/docs/Mozilla/JavaScript_code_modules/Dict.jsm): [`Dict()`](/ja/docs/Mozilla/JavaScript_code_modules/Dict.jsm#Creating_a_dictionary) が JSON 文字列を受け入れるようになりました。[`Dict.toJSON()`](</ja/docs/Mozilla/JavaScript_code_modules/Dict.jsm#toJSON()>) メソッドが追加され、これは JSON 文字列を返します ([Firefox バグ 727967](https://bugzil.la/727967))。
@@ -47,7 +50,7 @@ Firefox 19 で、[XForms](/ja/docs/XForms) のサポートを[**削除しまし�
 ### インターフェイスの変更点
 
 - `nsIImgLoadingContent`
-  - : `addObserver()` メソッドのパラメータ (aObserver) が `imgIDecoderObserver` から `imgINotificationObserver` に替わりました。`imgINotificationObserver` の `notify()` メソッドはスクリプト可能ではありませんので、`imgITools` の `createScriptedObserver()` を使用しなければなりません。
+  - : `addObserver()` メソッドの引数 (aObserver) が `imgIDecoderObserver` から `imgINotificationObserver` に替わりました。`imgINotificationObserver` の `notify()` メソッドはスクリプト可能ではありませんので、`imgITools` の `createScriptedObserver()` を使用しなければなりません。
 - `nsIChannel`
   - : `contentLength` プロパティの型を `long` から `int64_t` に変更しました。
 

@@ -3,6 +3,8 @@ title: Utiliser le rôle slider
 slug: Web/Accessibility/ARIA/Roles/slider_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Description
 
 Cette technique présente l'utilisation du rôle [slider](http://www.w3.org/TR/wai-aria/roles#slider).

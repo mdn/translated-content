@@ -11,7 +11,8 @@ El **elemento HTML `<iframe>`** (de inline frame) representa un {{Glossary("brow
 
 Cada elemento `<iframe>` tiene su propio [historial de sesión](/es/docs/Web/API/History) y su propio objeto [Documento](/es/docs/Web/API/Document). El contexto de navegación que incluye el contenido implícito se llama _contexto de navegación principal_. El contexto de navegación de nivel superior (que no tiene padre) es típicamente la ventana del navegador, representado por el objeto {{domxref("Window")}}.
 
-> **Advertencia:** Debido a que cada contexto de navegación es un entorno de documento completo, cada `<iframe>` en una página requiere más memoria y otros recursos informáticos. Aunque teóricamente puede utilizar tantos `<iframe>` como desee, compruebe si hay problemas de rendimiento.
+> [!WARNING]
+> Debido a que cada contexto de navegación es un entorno de documento completo, cada `<iframe>` en una página requiere más memoria y otros recursos informáticos. Aunque teóricamente puede utilizar tantos `<iframe>` como desee, compruebe si hay problemas de rendimiento.
 
 <table class="properties">
   <tbody>
@@ -82,13 +83,15 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
   - : Definido como `true` si el `<iframe>` puede activar el modo a pantalla completa llamando al método {{domxref("Element.requestFullscreen", "requestFullscreen()")}}.
 
-    > **Nota:** Se considera un atributo heredado y se redefine como `allow="fullscreen"`.
+    > [!NOTE]
+    > Se considera un atributo heredado y se redefine como `allow="fullscreen"`.
 
 - `allowpaymentrequest`
 
   - : Definido como `true` si se debe permitir que un `<iframe>` de origen cruzado pueda invocar el [API de solicitud de pago](/es/docs/Web/API/Payment_Request_API). <
 
-    > **Nota:** Se considera un atributo heredado y se redefine como `allow="payment"`.
+    > [!NOTE]
+    > Se considera un atributo heredado y se redefine como `allow="payment"`.
 
 - `csp` {{experimental_inline}}
   - : Una [Politica de Seguridad del Contenido](/es/docs/Web/HTTP/CSP) aplicada para el recurso incrustado. Vea {{domxref("HTMLIFrameElement.csp")}} para detalles.
@@ -140,7 +143,7 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
     - `allow-top-navigation`: Lets the resource navigate the top-level browsing context (the one named `_top`).
     - `allow-top-navigation-by-user-activation`: Lets the resource navigate the top-level browsing context, but only if initiated by a user gesture.
 
-    > **Nota:**
+    > [!NOTE]
     >
     > - When the embedded document has the same origin as the embedding page, it is **strongly discouraged** to use both `allow-scripts` and `allow-same-origin`, as that lets the embedded document remove the `sandbox` attribute — making it no more secure than not using the `sandbox` attribute at all.
     > - Sandboxing is useless if the attacker can display content outside a sandboxed `iframe` — such as if the viewer opens the frame in a new tab. Such content should be also served from a _separate origin_ to limit potential damage.
@@ -183,7 +186,8 @@ Estos atributos están obsoletos y es posible que ya no sean compatibles con tod
 
   - : &#x20;
 
-    > **Nota:** See [Error 1318532 en Firefox](https://bugzil.la/1318532) for exposing this to WebExtensions in Firefox.
+    > [!NOTE]
+    > See [Error 1318532 en Firefox](https://bugzil.la/1318532) for exposing this to WebExtensions in Firefox.
 
     Makes the `<iframe>` act like a top-level browser window. See [Browser API](/es/docs/Mozilla/Gecko/Chrome/API/Browser_API) for details.
     **Available only to [WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions).**

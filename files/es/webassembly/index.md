@@ -68,10 +68,6 @@ Y lo mejor es que está siendo desarrollado como un estándar web a través del 
 
 {{Specifications}}
 
-## Compatibilidad con navegadores
-
-{{Compat}}
-
 ## Ver también
 
 - [WebAssembly en Mozilla Research](https://research.mozilla.org/webassembly/)

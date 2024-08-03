@@ -43,7 +43,8 @@ l10n:
 
 ['alt' 属性的描述如下](#备选文本)。
 
-> **备注：** 为了更容易理解下面的内容，建议你阅读 [URL 和路径简明入门](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#统一资源定位符（url）与路径（path）快速入门)来复习一下相对和绝对 URL 的概念。
+> [!NOTE]
+> 为了更容易理解下面的内容，建议你阅读 [URL 和路径简明入门](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#统一资源定位符（url）与路径（path）快速入门)来复习一下相对和绝对 URL 的概念。
 
 例如，如果你的图像叫做 `dinosaur.jpg`，并且它位于与 HTML 页面相同的目录中，你可以这样嵌入图像：
 
@@ -59,7 +60,8 @@ l10n:
 
 以此类推。
 
-> **备注：** 搜索引擎还会读取图像文件名并将其计入 SEO。因此，你应该为图像起一个描述性的文件名；`dinosaur.jpg` 比 `img835.png` 更好。
+> [!NOTE]
+> 搜索引擎还会读取图像文件名并将其计入 SEO。因此，你应该为图像起一个描述性的文件名；`dinosaur.jpg` 比 `img835.png` 更好。
 
 你也可以使用图像的绝对 URL 进行嵌入，例如：
 
@@ -77,9 +79,11 @@ l10n:
 
 ![一个嵌入到浏览器中的恐龙基本图像，上面写着“Images in HTML”](basic-image.png)
 
-> **备注：** 像 {{htmlelement("img")}} 和 {{htmlelement("video")}} 这样的元素有时被称为**替换元素（replaced elements）**。这是因为元素的内容和大小由外部资源（如图像或视频文件）定义，而不是由元素本身的内容定义。你可以在[替换元素](/zh-CN/docs/Web/CSS/Replaced_element)中了解更多相关信息。
+> [!NOTE]
+> 像 {{htmlelement("img")}} 和 {{htmlelement("video")}} 这样的元素有时被称为**替换元素（replaced elements）**。这是因为元素的内容和大小由外部资源（如图像或视频文件）定义，而不是由元素本身的内容定义。你可以在[替换元素](/zh-CN/docs/Web/CSS/Replaced_element)中了解更多相关信息。
 
-> **备注：** 你也可以在 [GitHub](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) 仓库中找到本节的完整示例（请参阅[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)）。
+> [!NOTE]
+> 你也可以在 [GitHub](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) 仓库中找到本节的完整示例（请参阅[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)）。
 
 ### 备选文本
 
@@ -113,7 +117,8 @@ l10n:
 
 本质上，关键在于即使图片无法被看见，也能提供可用的体验，这确保了所有人都不会错失某部分内容。尝试在浏览器中使图片不可见然后看看网页变成什么样了，你会很快意识到在图片无法显示时备选文本能帮上多大忙。
 
-> **备注：** 如需了解更多信息，请参阅我们的[替代文本](/zh-CN/docs/Learn/Accessibility/HTML#替代文本)指南。
+> [!NOTE]
+> 如需了解更多信息，请参阅我们的[替代文本](/zh-CN/docs/Learn/Accessibility/HTML#替代文本)指南。
 
 ### 宽度和高度
 
@@ -172,7 +177,8 @@ l10n:
 
 [设置图像的高度和宽度再次变得重要](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)是关于该特性的历史的一篇优秀文章。
 
-> **备注：** 虽然如我们所说，使用 HTML 属性来指定图片的*实际*大小是一个好的实践，但你不应该使用它们来*调整*图片的大小。
+> [!NOTE]
+> 虽然如我们所说，使用 HTML 属性来指定图片的*实际*大小是一个好的实践，但你不应该使用它们来*调整*图片的大小。
 >
 > 如果设置的图片大小过大，你的图片将看起来粗糙、模糊或太小，不仅浪费带宽而且图片还不符合用户需求。如果[长宽比](<https://zh.wikipedia.org/wiki/長寬比_(影像)>)不正确，图片也可能会变形。在将图片放到网页上之前，你应使用图像编辑器将其设置为正确的大小。
 >
@@ -377,7 +383,8 @@ textarea.onkeyup = function () {
 
 你应该查阅适用的许可证以了解你需要遵循的具体条款。
 
-> **备注：** 你可能会在自由许可的上下文中遇到“copyleft”一词。Copyleft 许可（例如 [GNU 通用公共许可证（GPL）](https://www.gnu.org/licenses/gpl-3.0.en.html) 或“相同方式共享”创作共用许可证）规定派生作品需要按照原始许可证发布。
+> [!NOTE]
+> 你可能会在自由许可的上下文中遇到“copyleft”一词。Copyleft 许可（例如 [GNU 通用公共许可证（GPL）](https://www.gnu.org/licenses/gpl-3.0.en.html) 或“相同方式共享”创作共用许可证）规定派生作品需要按照原始许可证发布。
 
 Copyleft 许可在软件界中很常见。其基本思想是使用 copyleft 许可的代码构建的新项目（这被称为原始软件的“分支”）也需要根据相同的 copyleft 许可进行许可。这确保新项目的源代码也可供他人学习和修改。请注意，一般来说，为软件起草的许可证（例如 GPL）并不适合非软件作品，因为它们并不考虑非软件作品。
 
@@ -441,7 +448,8 @@ Copyleft 许可在软件界中很常见。其基本思想是使用 copyleft 许�
 
 {{htmlelement("figcaption")}} 元素告诉浏览器和辅助技术工具，这段说明文字描述了 {{htmlelement("figure")}} 元素的内容。
 
-> **备注：** 从无障碍的角度来说，说明文字和 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文本扮演着不同的角色。看得见图片的人们同样可以受益于说明文字，而 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文字只有在图片无法显示时才会发挥作用。所以，说明文字和 `alt` 的内容不应该一样，因为当图片无法显示时，它们会同时出现。尝试不让你的图片显示，看看效果如何。
+> [!NOTE]
+> 从无障碍的角度来说，说明文字和 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文本扮演着不同的角色。看得见图片的人们同样可以受益于说明文字，而 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文字只有在图片无法显示时才会发挥作用。所以，说明文字和 `alt` 的内容不应该一样，因为当图片无法显示时，它们会同时出现。尝试不让你的图片显示，看看效果如何。
 
 figure 里不一定要是图片，只要是这样的独立内容单元即可：
 
@@ -601,7 +609,8 @@ p {
 
 总而言之，如果图像对你的内容有意义，则应使用 HTML 图像。如果图像纯粹是装饰，则应使用 CSS 背景图片。
 
-> **备注：** 你可以在 [CSS](/zh-CN/docs/Learn/CSS) 模块里学到更多关于 [CSS 背景图片](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)的知识。
+> [!NOTE]
+> 你可以在 [CSS](/zh-CN/docs/Learn/CSS) 模块里学到更多关于 [CSS 背景图片](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)的知识。
 
 ## 网页上的其他图形
 

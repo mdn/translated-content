@@ -11,7 +11,7 @@ JavaScript 的动态特性包括运行时对象的构造、变量参数列表、
 
 本部分文档将专注于 JavaScript 语言本身，而非局限于网页或其他运行环境。想要了解网页中特有的 {{Glossary("API")}}，请参考 [Web API](/zh-CN/docs/Web/API) 以及 {{Glossary("DOM")}}。
 
-[ECMAScript 语言规范（ECMAScript Language Specification）](https://tc39.es/ecma262/)（ECMA-262）和[ECMAScript 国际化 API 规范（ECMAScript Internationalization API specification）](https://tc39.es/ecma262/)（ECMA-402）是 Javascript 的标准。当某个 [ECMAScript 新特性的提案](https://github.com/tc39/proposals)已经被一些浏览器实现时，MDN 上的文档或示例就可能会涉及到这些新特性。大多数时候，处在 [stages](https://tc39.es/process-document/) 3 和 4 的新特性会被收录到文档中，且收录时间通常早于其正式发布的时间。
+[ECMAScript 语言规范（ECMAScript Language Specification）](https://tc39.es/ecma262/)（ECMA-262）和 [ECMAScript 国际化 API 规范（ECMAScript Internationalization API specification）](https://tc39.es/ecma402/)（ECMA-402）是 JavaScript 的标准。当某个 [ECMAScript 新特性的提案](https://github.com/tc39/proposals)已经被一些浏览器实现时，MDN 上的文档或示例就可能会涉及到这些新特性。大多数时候，处在[阶段](https://tc39.es/process-document/) 3 和 4 的新特性会被收录到文档中，且收录时间通常早于其正式发布的时间。
 
 不要将 JavaScript 与 [Java 编程语言](https://zh.wikipedia.org/wiki/Java)混淆——**JavaScript 不是“解释型 Java”**。虽然“Java”和“JavaScript”都是 Oracle 公司在美国和其他国家注册（或未注册）的商标，但是这两门语言在语法、语义与用途方面有相当大的不同。
 

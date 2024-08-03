@@ -23,7 +23,8 @@ Usos mais complicados envolvem a criação de seu próprio fluxo usando o contru
 
 Você também pode gravar dados em streams usando {{domxref("WritableStream")}}.
 
-> **Nota:** Você pode encontrar muito mais detalhes sobre a teoria e prática de streams em nossos artigos — [Streams API concepts](/pt-BR/docs/Web/API/Streams_API/Concepts), [Using readable streams](/pt-BR/docs/Web/API/Streams_API/Using_readable_streams), e [Using writable streams](/pt-BR/docs/Web/API/Streams_API/Using_writable_streams).
+> [!NOTE]
+> Você pode encontrar muito mais detalhes sobre a teoria e prática de streams em nossos artigos — [Streams API concepts](/pt-BR/docs/Web/API/Streams_API/Concepts), [Using readable streams](/pt-BR/docs/Web/API/Streams_API/Using_readable_streams), e [Using writable streams](/pt-BR/docs/Web/API/Streams_API/Using_writable_streams).
 
 ## Stream interfaces
 

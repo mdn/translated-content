@@ -59,7 +59,8 @@ document.body.appendChild(header);
 
 {{EmbedYouTube("lxf2Tkg6U1M")}}
 
-> **メモ:** このビデオでは [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) で動作するコンテンツスクリプトを示していますが、現在このサイトではコンテンツスクリプトはブロックされています。
+> [!NOTE]
+> このビデオでは [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) で動作するコンテンツスクリプトを示していますが、現在このサイトではコンテンツスクリプトはブロックされています。
 
 ## 自動でページを変更する
 
@@ -118,7 +119,8 @@ modify-page/
 
 {{EmbedYouTube("zX4Bcv8VctA")}}
 
-> **メモ:** このビデオでは [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) で動作するコンテンツスクリプトを示していますが、現在このサイトではコンテンツスクリプトはブロックされています。
+> [!NOTE]
+> このビデオでは [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) で動作するコンテンツスクリプトを示していますが、現在このサイトではコンテンツスクリプトはブロックされています。
 
 ## メッセージ
 
@@ -129,7 +131,8 @@ modify-page/
 | メッセージ送信 | [`browser.runtime.sendMessage()`](</ja/Add-ons/WebExtensions/API/runtime#sendMessage()>) | [`browser.tabs.sendMessage()`](/ja/Add-ons/WebExtensions/API/Tabs/sendMessage) |
 | メッセージ受信 | [`browser.runtime.onMessage`](/ja/Add-ons/WebExtensions/API/runtime/onMessage)           | [`browser.runtime.onMessage`](/ja/Add-ons/WebExtensions/API/runtime#onMessage) |
 
-> **メモ:** このワンオフメッセージを送る通信メソッドに加えて、[メッセージ交換するコネクションベースの方法](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging)も使えます。これらのオプションを選択するアドバイスは、[ワンオフメッセージとコネクションベースのメッセージのいずれかを選択する](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Choosing_between_one-off_messages_and_connection-based_messaging)を見てください。
+> [!NOTE]
+> このワンオフメッセージを送る通信メソッドに加えて、[メッセージ交換するコネクションベースの方法](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging)も使えます。これらのオプションを選択するアドバイスは、[ワンオフメッセージとコネクションベースのメッセージのいずれかを選択する](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Choosing_between_one-off_messages_and_connection-based_messaging)を見てください。
 
 例を更新して、バックグラウンドスクリプトからメッセージを送信する方法を示します。
 
@@ -183,7 +186,8 @@ browser.runtime.onMessage.addListener(eatPageReceiver);
 
 [`tabs.executeScript()`](/ja/Add-ons/WebExtensions/API/tabs/executeScript) は非同期関数であり、リスナーが "page-eater.js" に追加された後にのみメッセージを送信するために、"page-eater.js" を実行した後に呼び出される `onExecuted` を使用します。
 
-> **メモ:** Ctrl+Shift+J (Mac では Cmd+Shift+J) を押します。もしくは `web-ext run --bc` で [Browser Console](/ja/docs/Tools/Browser_Console) を開きバックグラウンドスクリプトの `console.log` を見ます。または、 [Add-on Debugger](/ja/Add-ons/Add-on_Debugger) を使用して、ブレークポイントを設定することもできます。 現在、[web-ext から 直接 Add-on Debugger を起動する](https://github.com/mozilla/web-ext/issues/759) 方法はありません。
+> [!NOTE]
+> Ctrl+Shift+J (Mac では Cmd+Shift+J) を押します。もしくは `web-ext run --bc` で [Browser Console](/ja/docs/Tools/Browser_Console) を開きバックグラウンドスクリプトの `console.log` を見ます。または、 [Add-on Debugger](/ja/Add-ons/Add-on_Debugger) を使用して、ブレークポイントを設定することもできます。 現在、[web-ext から 直接 Add-on Debugger を起動する](https://github.com/mozilla/web-ext/issues/759) 方法はありません。
 
 コンテンツスクリプトからバックグラウンドページにメッセージを戻したい場合は、 [`runtime.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) の代わりに [`tabs.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) を使用します。
 
@@ -195,7 +199,8 @@ browser.runtime.sendMessage({
 });
 ```
 
-> **メモ:** これらの例はすべて JavaScript を注入します。 [`tabs.insertCSS()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) 関数を使用してプログラムで CSS を挿入することもできます。
+> [!NOTE]
+> これらの例はすべて JavaScript を注入します。 [`tabs.insertCSS()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) 関数を使用してプログラムで CSS を挿入することもできます。
 
 ## 関連項目
 

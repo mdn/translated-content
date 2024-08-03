@@ -69,7 +69,8 @@ Vue 是一個新穎的 Javascript 框架，它提供了很多有用的功能來�
 1. 安裝 Node.js 8.11+
 2. npm 或 yarn
 
-> **備註：** 如果你沒有安裝以上工具，請參考[關於安裝 npm 及 Node.js](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups) 。
+> [!NOTE]
+> 如果你沒有安裝以上工具，請參考[關於安裝 npm 及 Node.js](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups) 。
 
 在你的終端機執行以下命令來安裝 CLI ：
 
@@ -108,7 +109,8 @@ CLI 會開始建構你的專案，並且安裝所需的相依套件。
 
 如果你之前沒有執行過 Vue CLI ，你將會被問一個問題－請選擇套件管理員。你可以使用方向鍵來選擇你想使用的套件管理員，Vue CLI 將會把這個套件管理員設為預設值。之後如果你想要使用不同的套件管理員，可以在執行 `vue create` 時傳入一個標幟 `--packageManager=<package-manager>` 。舉例來說，如果你現在想要用 npm 來創建 `moz-todo-vue` 專案，但是之前是使用 yarn ，你可以執行 `vue create moz-todo-vue --packageManager=npm` 。
 
-> **備註：** 在這裡我們沒有介紹所有的選項，你可以參考 Vue 官方文件裡的[關於 CLI 的更多資訊](https://cli.vuejs.org)。
+> [!NOTE]
+> 在這裡我們沒有介紹所有的選項，你可以參考 Vue 官方文件裡的[關於 CLI 的更多資訊](https://cli.vuejs.org)。
 
 ## 專案結構
 
@@ -122,7 +124,8 @@ CLI 會開始建構你的專案，並且安裝所需的相依套件。
   - `favicon.ico` ：這是應用程式的 favicon。目前是 Vue 的標誌。
   - `index.html` ：這是應用程式的模板。你的 Vue 應用程式會透過這個 HTML 頁面來運行，你也可以使用 lodash 樣板語言在這個頁面穿插一些值。
 
-    > **備註：** 這個模板不是用來管理你的應用程式的版面－而是用來管理應用程式以外的靜態 HTML 檔案，只有在使用一些進階的功能才需要修改這個檔案。
+    > [!NOTE]
+    > 這個模板不是用來管理你的應用程式的版面－而是用來管理應用程式以外的靜態 HTML 檔案，只有在使用一些進階的功能才需要修改這個檔案。
 
 - `src` ：這個資料夾是 Vue 專案的核心。
 
@@ -131,7 +134,8 @@ CLI 會開始建構你的專案，並且安裝所需的相依套件。
   - `components` ：你可以把你的元件放在這個資料夾。目前它只有放一個範例元件。
   - `assets` ：這個資料夾是用來放一些靜態檔案像是 CSS 和圖片。因為這些檔案在來源目錄下，它們可以透過 Webpack 加工處理。這表示你可以使用一些預處理器，像是 [Sass / SCSS](https://sass-lang.com/) 或是 [Stylus](https://stylus-lang.com/) 。
 
-> **備註：** 依據你創建專案時所選設定的不同，你可能會看到其他資料夾（舉例來說，如果你有選擇 router，你將會看到一個 `views` 資料夾）。
+> [!NOTE]
+> 依據你創建專案時所選設定的不同，你可能會看到其他資料夾（舉例來說，如果你有選擇 router，你將會看到一個 `views` 資料夾）。
 
 ## .vue 檔案（單一檔案元件）
 
@@ -149,7 +153,8 @@ CLI 會開始建構你的專案，並且安裝所需的相依套件。
 
 `<template>` 包含所有的標記結構以及元件的呈現邏輯。你的模板可以包含任何有效的 HTML，以及一些我們接下來要介紹的 Vue 特定的語法。
 
-> **備註：** 在 `<template>` 標籤上設定 `lang` 屬性。例如設置 `<template lang="pug">`，你就可以使用 Pug 樣板語法來取代標準的 HTML 。在本教學中我們會使用標準 HTML ，但還是值得知道有這個方法。
+> [!NOTE]
+> 在 `<template>` 標籤上設定 `lang` 屬性。例如設置 `<template lang="pug">`，你就可以使用 Pug 樣板語法來取代標準的 HTML 。在本教學中我們會使用標準 HTML ，但還是值得知道有這個方法。
 
 `<script>` 包含元件中所有非顯示的邏輯。最重要的是，你的 `<script>` 標籤必須輸出一個 JS 物件。這個物件是你在本地端註冊的元件，包含定義屬性、處理本地狀態、定義方法等等。在建置步驟這個物件會被處理及轉換（包含 template 模板），變成一個有 `render()` 函數的 Vue 元件。
 
@@ -167,11 +172,13 @@ export default {
 };
 ```
 
-> **備註：** 如果你想要使用 [TypeScript](https://www.typescriptlang.org/) 語法，你必須把 `<script>` 標籤的 `lang` 屬性設定成 `<script lang="ts">` 來告訴編譯器你要使用 TypeScript 。
+> [!NOTE]
+> 如果你想要使用 [TypeScript](https://www.typescriptlang.org/) 語法，你必須把 `<script>` 標籤的 `lang` 屬性設定成 `<script lang="ts">` 來告訴編譯器你要使用 TypeScript 。
 
 `<style>` 是你撰寫元件的 CSS 的地方。如果你加上 `scoped` 屬性，例如 `<style scoped>` ， Vue 會把樣式的範圍限制在這個單一檔案元件裡。這類似 CSS-in-JS 的解決方案，但是它允許你寫單純的 CSS 。
 
-> **備註：** 如果你在使用 CLI 創建專案時有選擇 CSS 預處理器，你可以在 `<style>` 標籤上添加 `lang` 屬性，這些內容在建置的時候將會被 Webpack 處理。舉例來說， `<style lang="scss">` 允許你在樣式資訊中使用 SCSS 語法。
+> [!NOTE]
+> 如果你在使用 CLI 創建專案時有選擇 CSS 預處理器，你可以在 `<style>` 標籤上添加 `lang` 屬性，這些內容在建置的時候將會被 Webpack 處理。舉例來說， `<style lang="scss">` 允許你在樣式資訊中使用 SCSS 語法。
 
 ## 在本地端運行應用程式
 

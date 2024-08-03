@@ -16,7 +16,7 @@ slug: Glossary/Character_set
    1. [文字コード](https://ja.wikipedia.org/wiki/文字コード)
    2. [文字化け](https://ja.wikipedia.org/wiki/文字化け)
 
-2. [用語集](/ja/docs/Glossary)
+2. 関連用語:
 
    1. {{Glossary("Character", "文字")}}
    2. {{Glossary("Unicode")}}

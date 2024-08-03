@@ -11,7 +11,7 @@ Parabéns! Você terminou o [Canvas tutorial](/pt-BR/docs/Web/API/Canvas_API/Tut
 
 Há uma variedade de demonstrações e mais explicações sobre canvas nesses sites:
 
-- [Codepen.io](http://codepen.io/search?q=canvas)
+- [Codepen.io](https://codepen.io/search?q=canvas)
   - : Front End Developer Playground & Code Editor no navegador.
 - [HTML5CanvasTutorials](http://www.html5canvastutorials.com/)
   - : Exemplos para a maioria das APIs canvas.

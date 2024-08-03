@@ -3,7 +3,7 @@ title: "Navigator: sendBeacon() メソッド"
 short-title: sendBeacon()
 slug: Web/API/Navigator/sendBeacon
 l10n:
-  sourceCommit: 904cdf09c7e328b7a15a6a4db6bc6bd31f969cce
+  sourceCommit: 497bd67ca89834d869f008319cd2b9d941451622
 ---
 
 {{APIRef("HTML DOM")}}
@@ -12,7 +12,7 @@ l10n:
 
 これはウェブサーバーに分析データを送信するために使用することを意図しており、 {{domxref("XMLHttpRequest", "XMLHttpRequest")}} を使用するような、分析を送信するための古い技術の問題のいくつかを避けています。
 
-> **メモ:** `POST` 以外のメソッドでリクエストを送信したり、リクエストプロパティを変更したり、サーバのレスポンスにアクセスしたりする必要がある用途では、[`fetch()`](/ja/docs/Web/API/fetch) メソッドに [`keepalive`](/ja/docs/Web/API/fetch#keepalive) を設定したものを使用してください。
+> **メモ:** `POST` 以外のメソッドでリクエストを送信したり、リクエストプロパティを変更したり、サーバーのレスポンスにアクセスしたりする必要がある用途では、[`fetch()`](/ja/docs/Web/API/fetch) メソッドに [`keepalive`](/ja/docs/Web/API/fetch#keepalive) を設定したものを使用してください。
 
 ## 構文
 

@@ -3,7 +3,7 @@ title: "Touch: radiusX プロパティ"
 short-title: radiusX
 slug: Web/API/Touch/radiusX
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 7613b203a298214e9ba1a290e9e39a141fd9a9d8
 ---
 
 {{ APIRef("Touch Events") }}
@@ -20,7 +20,7 @@ l10n:
 
 この例では、 {{domxref("Touch")}} インターフェイスの {{domxref("Touch.radiusX")}}、{{domxref("Touch.radiusX")}}、{{domxref("Touch.rotationAngle")}} プロパティを使用する例を示します。 {{domxref("Touch.radiusX")}} プロパティは、タッチ領域（指やスタイラスなど）を最も近く囲む楕円の、タッチ点の {{domxref("Touch.rotationAngle")}} が**示す**軸上の半径です。同様に {{domxref("Touch.radiusY")}} プロパティは、タッチ領域（指やスタイラスなど）を最も近く囲む楕円の、 {{domxref("Touch.rotationAngle")}} で示される線に**直交する**軸の半径です。 {{domxref("Touch.rotationAngle")}} は、 `radiusX` と `radiusY` で記述されている楕円を、その中心に対して時計回りに回転させたときの角度（度）です。
 
-以下の単純なコードでは、 {{domxref("Document/touchstart_event", "touchstart")}}、{{domxref("Element/touchmove_event", "touchmove")}}、{{domxref("Element/touchend_event", "touchend")}} イベントに対して単一のハンドラーを登録しています。 `src` 要素がタッチされると、タッチ点の `radiusX` と `radiusY` の値に基づいて要素の幅と高さが計算され、タッチ点の `rotationAngle` を使用して要素が回転します。
+以下の単純なコードでは、 {{domxref("Element/touchstart_event", "touchstart")}}、{{domxref("Element/touchmove_event", "touchmove")}}、{{domxref("Element/touchend_event", "touchend")}} イベントに対して単一のハンドラーを登録しています。 `src` 要素がタッチされると、タッチ点の `radiusX` と `radiusY` の値に基づいて要素の幅と高さが計算され、タッチ点の `rotationAngle` を使用して要素が回転します。
 
 ```html
 <div id="src">…</div>

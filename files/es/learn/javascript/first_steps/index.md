@@ -7,7 +7,7 @@ slug: Learn/JavaScript/First_steps
 
 En nuestro primer módulo de JavaScript, primero respondemos algunas preguntas fundamentales como "¿qué es JavaScript?", "¿cómo se ve?" y "¿qué puede hacer?", antes de pasar avanzar en la guía por tu primera experiencia práctica de escribir JavaScript. Después de eso, explicaremos en detalle algunos bloques de construcción clave, tal como variables, cadenas, números y arreglos.
 
-> **Observación:**
+> [!CALLOUT]
 >
 > #### ¿Quieres transformarte en un desarrollador de la interfaz de usuario web?
 >
@@ -23,7 +23,8 @@ Antes de comenzar este módulo, no necesitas ningún conocimiento previo de Java
 - [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML).
 - [Introducción a CSS](/es/docs/Learn/CSS/Introduction_to_CSS).
 
-> **Nota:** Si estás trabajando en una computadora, tableta u otro dispositivo en el que no puedes crear tus propios archivos, puedes probar (la mayoría de) los ejemplos de código en un programa de codificación en línea como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/).
+> [!NOTE]
+> Si estás trabajando en una computadora, tableta u otro dispositivo en el que no puedes crear tus propios archivos, puedes probar (la mayoría de) los ejemplos de código en un programa de codificación en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 

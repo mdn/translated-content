@@ -7,7 +7,8 @@ slug: Web/CSS/@media/forced-colors
 
 La [caractéristique média](</fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#Caractéristiques_média_(media_features)>) **`forced-colors`** est utilisée afin de détecter si l'utilisateur a choisi une palette de couleur restreinte via le navigateur ou l'agent utilisateur.
 
-> **Note :** Cette fonctionnalité n'est pas encore implémentée par aucun agent utilisateur
+> [!NOTE]
+> Cette fonctionnalité n'est pas encore implémentée par aucun agent utilisateur
 
 ## Valeurs
 

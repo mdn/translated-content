@@ -9,7 +9,8 @@ l10n:
 
 L'objectif de cette évaluation est de vous aider à vérifier votre compréhension du [modèle de boîte CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model).
 
-> **Note :** Vous pouvez tester des solutions dans les éditeurs interactifs présents sur cette page. Toutefois il peut toutefois être plus utile de télécharger le code et de passer par un éditeur en ligne comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour travailler sur les exercices.
+> [!NOTE]
+> Vous pouvez tester des solutions dans les éditeurs interactifs présents sur cette page. Toutefois il peut toutefois être plus utile de télécharger le code et de passer par un éditeur en ligne comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour travailler sur les exercices.
 >
 > Si vous bloquez, demandez-nous de l'aide&nbsp;: voir la section [Évaluation et aide](#évaluation_et_aide) en bas de cette page.
 

@@ -21,7 +21,8 @@ evtSource.onopen = function () {
 };
 ```
 
-> **备注：** 你可以在 GitHub 上看到一个完整的示例— 请看 [使用 php 的 SSE(服务器发送事件)demo。](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!NOTE]
+> 你可以在 GitHub 上看到一个完整的示例— 请看 [使用 php 的 SSE(服务器发送事件)demo。](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
 ## 规范
 

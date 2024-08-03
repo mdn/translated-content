@@ -3,6 +3,8 @@ title: window.getComputedStyle()
 slug: Web/API/Window/getComputedStyle
 ---
 
+{{APIRef("CSSOM")}}
+
 Метод **`Window.getComputedStyle()`** возвращает объект, содержащий значения всех CSS-свойств элемента, полученных после применения всех активных таблиц стилей, и завершения базовых вычислений значений, которые они могут содержать. Некоторые CSS-свойства доступны через API, предоставляемые объектом, или индексацию по именам CSS-свойств.
 
 ## Синтаксис
@@ -120,7 +122,7 @@ In Firefox, properties with the value `auto` return the used value, not the valu
 
 {{Compat}}
 
-## Смотреть также
+## Смотрите также
 
 - {{domxref("window.getDefaultComputedStyle")}}
 - {{cssxref("resolved_value", "Resolved Value")}}

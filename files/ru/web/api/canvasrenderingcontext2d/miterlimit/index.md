@@ -79,7 +79,7 @@ window.addEventListener("load", drawCanvas);
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - Интерфейс, определяющий это свойство: {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.lineCap")}}

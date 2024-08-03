@@ -53,7 +53,8 @@ localStorage.removeItem("myCat");
 localStorage.clear();
 ```
 
-> **備註：** Please refer to the [Using the Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) article for a full example.
+> [!NOTE]
+> Please refer to the [Using the Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) article for a full example.
 
 ## Specifications
 

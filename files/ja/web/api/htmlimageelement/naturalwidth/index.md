@@ -3,7 +3,7 @@ title: "HTMLImageElement: naturalWidth プロパティ"
 short-title: naturalWidth
 slug: Web/API/HTMLImageElement/naturalWidth
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
 {{APIRef("HTML DOM")}}
@@ -15,7 +15,8 @@ l10n:
 
 対応する {{domxref("HTMLImageElement.naturalHeight", "naturalHeight")}} メソッドは、画像の自然な高さを返します。
 
-> **メモ:** ほとんどの場合、自然な幅とは、サーバーから送信された画像の実際の幅です。とはいえ、ブラウザーは画像をレンダラーに送る前に画像を修正することがあります。たとえば、Chrome は[ローエンド端末で画像の解像度を低下](https://crbug.com/1187043#c7)させます。このような場合、`naturalWidth` はそのようなブラウザーの介入によって修正された画像の幅を自然な幅とみなして、この値を返します。
+> [!NOTE]
+> ほとんどの場合、自然な幅とは、サーバーから送信された画像の実際の幅です。とはいえ、ブラウザーは画像をレンダラーに送る前に画像を修正することがあります。たとえば、Chrome は[ローエンド端末で画像の解像度を低下](https://crbug.com/1187043#c7)させます。このような場合、`naturalWidth` はそのようなブラウザーの介入によって修正された画像の幅を自然な幅とみなして、この値を返します。
 
 ## 値
 

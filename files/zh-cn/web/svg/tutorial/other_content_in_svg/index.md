@@ -40,7 +40,8 @@ slug: Web/SVG/Tutorial/Other_content_in_SVG
 
 foreignObject 元素是一个好办法，用来在 SVG 中嵌入 XHTML。如果你有更长的文本，该 HTML 布局比 SVG `text`元素更适合。另一个经常被引用的用例是用 MathML 写的方程式。对于 SVG 的科学应用，它是连接两个世界的一个很好的办法。
 
-> **备注：** 请记住，`foreignObject`元素的内容是能被浏览器加工的。一个独立的 SVG 浏览器不太可能呈现 HTML 或 MathML。
+> [!NOTE]
+> 请记住，`foreignObject`元素的内容是能被浏览器加工的。一个独立的 SVG 浏览器不太可能呈现 HTML 或 MathML。
 
 因为`foreignObject`是一个 SVG 元素，所以你可以像用图像那样，使用任何 SVG 的精华，它将被应用到它的内容。
 

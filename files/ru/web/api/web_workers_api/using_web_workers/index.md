@@ -801,13 +801,9 @@ Worker устанавливает свойство `onmessage` для функц
 
 {{Specifications}}
 
-## Совместимость с браузерами
-
-{{Compat}}
-
 ## Смотрите также
 
-- [`Worker`](/ru/docs/Web/API/Worker) интерфейс
-- [`SharedWorker`](/ru/docs/Web/API/SharedWorker) интерфейс
-- [Функции доступные для worker-ов](/ru/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
-- [Продвинутые концепции и примеры](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)
+- Интерфейс [`Worker`](/ru/docs/Web/API/Worker)
+- Интерфейс [`SharedWorker`](/ru/docs/Web/API/SharedWorker)
+- [Доступные для воркеров функции](/ru/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
+- Интерфейс [`OffscreenCanvas`](/ru/docs/Web/API/OffscreenCanvas)

@@ -58,7 +58,8 @@ Intl.supportedValuesOf("calendar").forEach((calendar) => {
 });
 ```
 
-> **참고:** calendar 값으로 반환된 배열은 항상 "gregory" (그레고리력)을 포함합니다.
+> [!NOTE]
+> calendar 값으로 반환된 배열은 항상 "gregory" (그레고리력)을 포함합니다.
 
 다른 값도 동일한 방식으로 확인할 수 있습니다.
 

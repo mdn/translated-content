@@ -78,7 +78,8 @@ En este ejemplo, es utilizada la copia local de "Helvetica Neue Bold" del usuari
 ## Notas
 
 - En Gecko, las fuentes web están sujetas a la restricción del mismo dominio (los archivos de fuentes deben estar en el mismo dominio que la página que los utiliza), a menos que los [controles de acceso HTTP](/En/HTTP_access_control) sean utilizados para relajar esta restricción.
-- > **Nota:** Porque no hay tipos MIME definidos para fuentes TrueType, OpenType, y WOFF, el tipo MIME del archivo especificado no es considerado.
+- > [!NOTE]
+  > Porque no hay tipos MIME definidos para fuentes TrueType, OpenType, y WOFF, el tipo MIME del archivo especificado no es considerado.
 - Cuando Gecko muestra una página que usa fuentes web, inicialmente muestra el texto que usa la mejor fuente de reserva CSS disponible en la computadora del usuario mientras espera que la fuente web termine de descargarse. Mientras cada fuente web se termina de descargar, Gecko actualiza el texto que utiliza esa fuente. Esto permite al usuario leer más rápidamente el texto en la página.
 
 ## Compatibilidad del navegador

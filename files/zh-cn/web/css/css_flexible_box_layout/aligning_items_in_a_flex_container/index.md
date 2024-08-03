@@ -26,7 +26,8 @@ flexbox 之所以能迅速吸引开发者的注意，其中一个原因就是它
 
 我们也会了解到 flexbox 如何使用 margin: auto 来实现居中。
 
-> **备注：** 这些 Flexbox 的对齐属性已经纳入 [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/)标准里了。预计这特性将最终会取代之前在[Flexbox Level One](https://www.w3.org/TR/css-flexbox-1/)定义的属性。
+> [!NOTE]
+> 这些 Flexbox 的对齐属性已经纳入 [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/)标准里了。预计这特性将最终会取代之前在[Flexbox Level One](https://www.w3.org/TR/css-flexbox-1/)定义的属性。
 
 ## 交叉轴
 

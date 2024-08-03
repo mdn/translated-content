@@ -1,7 +1,6 @@
 ---
 title: console.warn()
 slug: Web/API/console/warn_static
-original_slug: Web/API/console/warn
 ---
 
 {{APIRef("Console API")}}
@@ -10,7 +9,8 @@ original_slug: Web/API/console/warn
 
 {{AvailableInWorkers}}
 
-> **メモ:** Chrome と Firefox では、警告メッセージはウェブコンソール上で小さな感嘆符の隣に表示されます。
+> [!NOTE]
+> Chrome と Firefox では、警告メッセージはウェブコンソール上で小さな感嘆符の隣に表示されます。
 
 ## 構文
 

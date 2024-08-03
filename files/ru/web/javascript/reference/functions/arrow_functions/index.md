@@ -378,6 +378,6 @@ setTimeout(() => {
 - Стрелочные функции семантически отличаются от нестандартных [Expression Closures](/ru/docs/Web/JavaScript/Reference/Operators/Expression_closures), добавленных в [Firefox 3](/en-US/Firefox/Releases/3) (подробности в [Javascript 1.8](/ru/docs/Web/JavaScript/New_in_JavaScript/1.8)); в Expression Closures значение `this` не привязано лексически.
 - До [Firefox 39](/en-US/Firefox/Releases/39), перенос строки (`\n`) был ошибочно разрешён после аргументов стрелочной функции. Это было исправлено для соблюдения спецификации ES2015, и код вроде: `() \n => {}` теперь вызывает {{jsxref("SyntaxError")}} в этой и более поздних версиях.
 
-## See also
+## Смотрите также
 
 - ["ES6 In Depth: Arrow functions" on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)

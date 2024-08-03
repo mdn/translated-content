@@ -3,6 +3,8 @@ title: "ARIA: checkbox role"
 slug: Web/Accessibility/ARIA/Roles/checkbox_role
 ---
 
+{{AccessibilitySidebar}}
+
 [checkbox role](https://www.w3.org/TR/wai-aria-1.1/#checkbox) используется для переключаемых интерактивных элементов управления. Элементы, содержащие `role="checkbox"` также должны включать `aria-checked` атрибут, чтобы продемонстрировать состояние чекбокса ассистивным технологиям.
 
 ```html

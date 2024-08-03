@@ -72,7 +72,8 @@ Este elemento no tiene atributos que no sean los [atributos globales](/es/docs/W
 - Por otro lado, `<mark>` indica una parte del contenido del documento que probablemente sea relevante para el usuario. Por ejemplo, se puede utilizar en una página que muestra los resultados de búsqueda para resaltar cada uno de estos por palabra.
 - No uses el elemento `<mark>` para resaltado de sintaxis; usa el elemento {{ HTMLElement("span") }} para este fin.
 
-> **Nota:** No se debe confundir el elemento `<mark>` con el elemento {{ HTMLElement("strong") }}. El elemento {{ HTMLElement("strong") }} se utiliza para denotar intervalos de texto de especial _importancia,_ mientras que el elemento `<mark>` se utiliza para denotar intervalos de texto de especial _relevancia._
+> [!NOTE]
+> No se debe confundir el elemento `<mark>` con el elemento {{ HTMLElement("strong") }}. El elemento {{ HTMLElement("strong") }} se utiliza para denotar intervalos de texto de especial _importancia,_ mientras que el elemento `<mark>` se utiliza para denotar intervalos de texto de especial _relevancia._
 
 ## Ejemplos
 

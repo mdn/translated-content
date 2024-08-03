@@ -211,7 +211,7 @@ Note, however, that this is not standard and will not have an effect on other br
 </form>
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -241,7 +241,7 @@ Firefox for Android sets a default {{ cssxref("background-image") }} gradient on
 
 Firefox for Android also sets a default {{ cssxref("border") }} on all `<input type="file">` elements.
 
-## See also
+## Смотрите также
 
 - Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 - [Cross-browser HTML5 placeholder text](http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text)

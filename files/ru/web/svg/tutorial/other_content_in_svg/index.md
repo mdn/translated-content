@@ -3,7 +3,7 @@ title: Другое содержание в SVG
 slug: Web/SVG/Tutorial/Other_content_in_SVG
 ---
 
-{{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
 
 Помимо графических примитивов, таких как прямоугольники и круги, SVG предлагает набор элементов для встраивания других типов контента в изображения.
 

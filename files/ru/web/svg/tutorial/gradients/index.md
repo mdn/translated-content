@@ -3,7 +3,7 @@ title: Градиенты
 slug: Web/SVG/Tutorial/Gradients
 ---
 
-{{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
 
 Возможность создания и использования градиентов, также как заливки и обводки, более интересна, чем просто заливка или обводка.
 

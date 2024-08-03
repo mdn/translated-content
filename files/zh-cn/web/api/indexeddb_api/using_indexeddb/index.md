@@ -42,7 +42,8 @@ open 请求不会立即打开数据库或者开始一个事务。对 `open()` �
 
 open 方法的二个参数是数据库的版本号。数据库的版本决定了数据库模式（schema），即数据库的对象存储（object store）以及存储结构。如果数据库不存在，`open` 操作会创建该数据库，然后触发 `onupgradeneeded` 事件，你需要在该事件的处理器中创建数据库模式。如果数据库已经存在，但你指定了一个更高的数据库版本，会直接触发 `onupgradeneeded` 事件，允许你在处理器中更新数据库模式。我们在后面的[创建或更新数据库的版本](#创建或更新数据库的版本)和 {{ domxref("IDBFactory.open") }} 参考页中会提到更多有关这方面的内容。
 
-> **警告：** 版本号是一个 `unsigned long long` 数字，这意味着它可以是一个特别大的数字，也意味着不能使用浮点数，否则它将会被转换成不超过它的最近整数，这可能导致事务无法启动，`upgradeneeded` 事件也不会被触发。例如，不要使用 2.4 作为版本号：`const request = indexedDB.open("MyTestDatabase", 2.4); // 不要这么做，因为版本会被取整为 2`
+> [!WARNING]
+> 版本号是一个 `unsigned long long` 数字，这意味着它可以是一个特别大的数字，也意味着不能使用浮点数，否则它将会被转换成不超过它的最近整数，这可能导致事务无法启动，`upgradeneeded` 事件也不会被触发。例如，不要使用 2.4 作为版本号：`const request = indexedDB.open("MyTestDatabase", 2.4); // 不要这么做，因为版本会被取整为 2`
 
 #### 生成处理器
 
@@ -254,7 +255,8 @@ request.onupgradeneeded = (event) => {
 
 使用 `readonly` 或 `readwrite` 模式都可以从已存在的对象存储里读取记录。但只有在 `readwrite` 事务中才能修改对象存储。你需要使用 {{domxref("IDBDatabase.transaction")}} 启动一个事务。该方法接受两个参数：`storeNames`（作用域，一个你想访问的对象存储的数组）、事务模式 `mode`（`readonly` 或 `readwrite`）。该方法返回一个包含 {{domxref("IDBIndex.objectStore")}} 方法（你可以使用它来访问对象存储）的事务对象。未指定 `mode` 时，事务默认为 `readonly` 模式。
 
-> **备注：** 从 Firfox 40 起，IndexedDB 事务放松了对持久性的保证以提高性能（参见 [Webkit bug 1112702](https://bugzil.la/1112702)）。以前在 `readwrite` 事务中，只有当所有的数据确保被写入磁盘时才会触发 {{domxref("IDBTransaction.complete_event", "complete")}} 事件。在 Firefox 40+ 中，当操作系统被告知去写入数据后 `complete` 事件便被触发，但此时数据可能还没有真正的写入磁盘。`complete` 事件触发因此变得更快，但这样会有极小的机会发生以下情况：如果操作系统崩溃或在数据被写入磁盘前断电，那么整个事务都将丢失。由于这种灾难事件是罕见的，大多数使用者并不需要过分担心。如果由于某些原因你必须确保数据的持久性（例如你要保存一个无法再次计算的关键数据），你可以使用实验性（非标准）的 `readwriteflush` 模式来创建事务以强制 `complete` 事件在数据写入磁盘后触发（参见 {{domxref("IDBDatabase.transaction")}}）。
+> [!NOTE]
+> 从 Firfox 40 起，IndexedDB 事务放松了对持久性的保证以提高性能（参见 [Webkit bug 1112702](https://bugzil.la/1112702)）。以前在 `readwrite` 事务中，只有当所有的数据确保被写入磁盘时才会触发 {{domxref("IDBTransaction.complete_event", "complete")}} 事件。在 Firefox 40+ 中，当操作系统被告知去写入数据后 `complete` 事件便被触发，但此时数据可能还没有真正的写入磁盘。`complete` 事件触发因此变得更快，但这样会有极小的机会发生以下情况：如果操作系统崩溃或在数据被写入磁盘前断电，那么整个事务都将丢失。由于这种灾难事件是罕见的，大多数使用者并不需要过分担心。如果由于某些原因你必须确保数据的持久性（例如你要保存一个无法再次计算的关键数据），你可以使用实验性（非标准）的 `readwriteflush` 模式来创建事务以强制 `complete` 事件在数据写入磁盘后触发（参见 {{domxref("IDBDatabase.transaction")}}）。
 
 你可以通过使用合适的作用域和模式来加速数据库访问，这有两个提示：
 
@@ -377,7 +379,8 @@ request.onsuccess = (event) => {
 
 所以这里我们创建了一个 `objectStore`，并通过指定 ssn 值（`444-44-4444`）从中请求了一条客户记录。然后我们把请求的结果保存在变量（`data`）中，并更新了该对象的 `age` 属性，之后创建了第二个请求（`requestUpdate`）将客户数据放回 `objectStore` 来覆盖之前的值。
 
-> **备注：** 在这个例子中我们必须指定 `readwrite` 事务，因为我们想要写入数据库，而不仅仅是从中读取。
+> [!NOTE]
+> 在这个例子中我们必须指定 `readwrite` 事务，因为我们想要写入数据库，而不仅仅是从中读取。
 
 ### 使用游标
 
@@ -415,7 +418,8 @@ objectStore.openCursor().onsuccess = (event) => {
 };
 ```
 
-> **备注：** 或者，你可以使用 `getAll()`（或 `getAllKeys()`）来处理这种情况。下面的代码的效果和上例相同：
+> [!NOTE]
+> 或者，你可以使用 `getAll()`（或 `getAllKeys()`）来处理这种情况。下面的代码的效果和上例相同：
 >
 > ```js
 > objectStore.getAll().onsuccess = (event) => {
@@ -620,7 +624,8 @@ Mozilla 已经在 Firefox 43+ 中实现了对 IndexedDB 数据进行本地化排
 
 {{domxref("IDBIndex")}} 还添加了新的属性来指示它已经被指定了区域设置：`locale`（返回被指定的区域或 null）和 `isAutoLocale`（如果创建索引时使用了自动的区域，即使用了平台默认的区域，则返回 `true`；否则返回 `false`）。
 
-> **备注：** 现在该特性被标志所隐藏——请在 `about:config` 中开启 `dom.indexedDB.experimental` 来启用它并测试该特性。
+> [!NOTE]
+> 现在该特性被标志所隐藏——请在 `about:config` 中开启 `dom.indexedDB.experimental` 来启用它并测试该特性。
 
 ## 完整的 IndexedDB 示例
 

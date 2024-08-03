@@ -45,7 +45,7 @@ l10n:
 
 ![ナビゲーションタイミング API が処理できる様々なハンドラーには、次ののものがある。 ナビゲーションタイミング API metrics Prompt for unload redirect unload App cache DNS TCP Request Response Processing onLoad navigationStart redirectStart redirectEnd fetchStart domainLookupEnd domainLookupStart connectStart (secureConnectionStart) connectEnd requestStart responseStart responseEnd unloadStart unloadEnd domLoading domInteractive domContentLoaded domComplete loadEventStart loadEventEnd](navigationtimingapi.jpg)
 
-現在のページのパフォーマンスに関連する情報へのアクセスを提供する [パフォーマンス API](/ja/docs/Web/API/Performance_API/Using_the_Performance_API) は、[パフォーマンスタイムライン API](/ja/docs/Web/API/Performance_Timeline)、[ナビゲーションタイミング API](/ja/docs/Web/API/Navigation_timing_API)、[ユーザータイミング API](/ja/docs/Web/API/User_Timing_API)、そして [リソースタイミング API](/ja/docs/Web/API/Resource_Timing_API) を含みます。これらのインターフェースにより、JavaScript のタスクが完了するまでにかかる時間の正確な測定が可能になります。
+現在のページのパフォーマンスに関連する情報へのアクセスを提供する [パフォーマンス API](/ja/docs/Web/API/Performance_API/Using_the_Performance_API) は、[パフォーマンスタイムライン API](/ja/docs/Web/API/Performance_Timeline)、[ナビゲーションタイミング API](/ja/docs/Web/API/Navigation_timing_API)、[ユーザータイミング API](/ja/docs/Web/API/User_Timing_API)、そして [リソースタイミング API](/ja/docs/Web/API/Resource_Timing_API) を含みます。これらのインターフェイスにより、JavaScript のタスクが完了するまでにかかる時間の正確な測定が可能になります。
 
 [PerformanceEntry](/ja/docs/Web/API/PerformanceEntry) オブジェクトは、パフォーマンスタイムラインの一部です。パフォーマンスエントリーは アプリケーション内の明示的なポイントでパフォーマンスの*{{domxref("PerformanceMark","mark")}}* または _{{domxref("PerformanceMeasure","measure")}}_ を作ること（たとえば {{domxref("Performance.mark","mark()")}} メソッドを呼び出すこと）で直接的に作成されます。パフォーマンスエントリーは、画像などリソースの読み込みのようなタイミングで間接的に作成されることもあります。
 
@@ -82,7 +82,7 @@ l10n:
 
 ![読み込まれている資産のリストと資産ごとの読み込み時刻を示す Firefox ネットワークモニター](network-monitor.png)
 
-異なるアクションを実行したときのウェブアプリケーションやサイトのユーザーインターフェースのパフォーマンスを測定するために[パフォーマンスモニター](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)を利用できます。これは ウェブアプリケーションやサイトを遅くしているかもしれない要素を指し示します。
+異なるアクションを実行したときのウェブアプリケーションやサイトのユーザーインターフェイスのパフォーマンスを測定するために[パフォーマンスモニター](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)を利用できます。これは ウェブアプリケーションやサイトを遅くしているかもしれない要素を指し示します。
 
 ![開発者ツールのパフォーマンスパネルで、#1 の記録のウォーターフォールを示す。](perf-monitor.png)
 

@@ -16,7 +16,8 @@ URL の寿命は、それを作成したウィンドウ内の {{domxref("documen
 
 {{AvailableInWorkers}}
 
-> **メモ:** この機能はメモリーリークを生み出す可能性があるため、[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)内で利用することは*できません*。
+> [!NOTE]
+> この機能はメモリーリークを生み出す可能性があるため、[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)内で利用することは*できません*。
 
 ## 構文
 
@@ -49,7 +50,8 @@ URL.createObjectURL(object)
 
 古いバージョンの Media Source 仕様書では、 {{HTMLElement("video")}} 要素にストリームを添付するには {{domxref("MediaStream")}} にオブジェクト URL を生成する必要があるとしてます。 これはもう必要なく、ブラウザーはこのようにする対応を削除してきています。
 
-> **警告:** もし {{domxref("URL/createObjectURL_static", "createObjectURL()")}} でメディア要素にストリームを割り当てるコードが残っているのであれば、単純に {{domxref("HTMLMediaElement.srcObject", "srcObject")}} を直接 `MediaStream` に設定するよう更新する必要があります。
+> [!WARNING]
+> もし {{domxref("URL/createObjectURL_static", "createObjectURL()")}} でメディア要素にストリームを割り当てるコードが残っているのであれば、単純に {{domxref("HTMLMediaElement.srcObject", "srcObject")}} を直接 `MediaStream` に設定するよう更新する必要があります。
 
 ## 仕様書
 

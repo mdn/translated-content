@@ -301,7 +301,8 @@ Da el resultado siguiente:
 
 {{ EmbedLiveSample('reversed', '100%', 150) }}
 
-> **Nota:** Si en una lista inversa hay más elementos de lista que el valor que se ha establecido para el atributo `start`, la numeración continuará hasta cero y luego con valores negativos.
+> [!NOTE]
+> Si en una lista inversa hay más elementos de lista que el valor que se ha establecido para el atributo `start`, la numeración continuará hasta cero y luego con valores negativos.
 
 ### value
 
@@ -322,7 +323,8 @@ Da el resultado siguiente:
 
 {{ EmbedLiveSample('value', '100%', 150) }}
 
-> **Nota:** Incluso si utilizas una propiedad {{cssxref("list-style-type")}} sin números, vas a tener que usar los valores numéricos equivalentes para el atributo `value`.
+> [!NOTE]
+> Incluso si utilizas una propiedad {{cssxref("list-style-type")}} sin números, vas a tener que usar los valores numéricos equivalentes para el atributo `value`.
 
 ## Aprendizaje activo: aplicar estilo a una lista anidada
 

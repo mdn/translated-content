@@ -325,7 +325,7 @@ Il est temps de faire un autre apprentissage actif&nbsp;! Dans cet exemple, nous
 L'origine des citations dont vous aurez besoin se trouvent aux pages&nbsp;:
 
 - `http://www.brainyquote.com/quotes/authors/c/confucius.html` pour la citation de Confucius,
-- `http://www.affirmationsforpositivethinking.com/index.html` pour «&nbsp;The Need To Eliminate Negative Self Talk&nbsp;» (_De la nécessité d'éliminer un discours négatif sur soi‑même_).
+- `http://example.com/affirmationsforpositivethinking` pour «&nbsp;The Need To Eliminate Negative Self Talk&nbsp;» (_De la nécessité d'éliminer un discours négatif sur soi‑même_).
 
 Si vous faites une erreur, vous pourrez toujours tout réinitialiser en pressant le bouton de même nom. Si vous êtes vraiment bloqué, pressez le bouton _Voir la solution_ pour obtenir la réponse.
 
@@ -406,7 +406,7 @@ solution.addEventListener("click", function () {
 });
 
 var htmlSolution =
-  '<p>Salut et bienvenue sur ma page de motivation. Comme <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius</cite></a> a dit en son temps&nbsp;:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>La lenteur avec laquelle vous allez n\'a pas d\'importance tant que vous ne vous arrêtez pas.</p>\n</blockquote>\n\n<p>J\'aime aussi le concept de pensée positive <q cite="http://www.affirmationsforpositivethinking.com/index.htm"> Il est nécessaire d\'éliminer le discours négatif sur soi-même </q> (comme dit dans <a href="http://www.affirmationsforpositivethinking.com/index.htm"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
+  '<p>Salut et bienvenue sur ma page de motivation. Comme <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius</cite></a> a dit en son temps&nbsp;:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>La lenteur avec laquelle vous allez n\'a pas d\'importance tant que vous ne vous arrêtez pas.</p>\n</blockquote>\n\n<p>J\'aime aussi le concept de pensée positive <q cite="http://example.com/affirmationsforpositivethinking"> Il est nécessaire d\'éliminer le discours négatif sur soi-même </q> (comme dit dans <a href="http://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
 var solutionEntry = htmlSolution;
 
 textarea.addEventListener("input", updateCode);

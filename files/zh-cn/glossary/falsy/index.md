@@ -1,27 +1,31 @@
 ---
 title: 假值
 slug: Glossary/Falsy
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
 
-**假值**（**falsy**，有时写为 **falsey**）是在 {{Glossary("Boolean")}} 上下文中认定为 false 的值。
+**假值**（**falsy**，有时写为 **falsey**）是在{{Glossary("Boolean", "布尔")}}上下文中认定为 false 的值。
 
-{{Glossary("JavaScript")}} 在需要用到布尔类型值的上下文中使用{{Glossary("Type_Conversion", "强制类型转换")}}将值转换为布尔值，例如{{Glossary("Conditional", "条件语句")}}和{{Glossary("Loop", "循环语句")}}。
+{{Glossary("JavaScript")}} 在需要用到布尔类型值的上下文中使用{{Glossary("Type_Conversion", "类型转换")}}将值转换为布尔值，例如{{Glossary("Conditional", "条件语句")}}和{{Glossary("Loop", "循环语句")}}。
 
 下列表格提供了 JavaScript 的所有假值。
 
-| 值                          | 说明                                                                                                                                                                                         |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `false`                     | 关键字 [`false`](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#保留字)。                                                                                                              |
-| `0`                         | {{jsxref("Number")}} 零值（同理，`0.0`、`0x0` 也为零）。                                                                                                                                     |
-| `-0`                        | {{jsxref("Number")}} 负零值（同理，`-0.0`、`-0x0` 也为负零）。                                                                                                                               |
-| `0n`                        | {{jsxref("BigInt")}} 零值（`0x0n` 同理）。注意没有 {{jsxref("BigInt")}} 负零值——`0n` 的相反数还是 `0n`。                                                                                     |
-| `""`、`''`、` `` `          | 空[字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)值。                                                                                                                   |
-| {{Glossary("null")}}        | [null](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 值——任意值缺失。                                                                                                                 |
-| {{Glossary("undefined")}}   | [undefined](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 值——初始值。                                                                                                      |
-| {{Glossary("NaN")}}         | [NaN](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 值——非数值。                                                                                                                  |
-| {{domxref("document.all")}} | 当且仅当对象具有 [\[\[IsHTMLDDA\]\]](https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot) 内部插槽时，它才是假值。这个槽只存在于 {{domxref("document.all")}} 中，不能用 JavaScript 来设置。 |
+| 值                          | 类型      | 描述                                                                                                            |
+| --------------------------- | --------- | --------------------------------------------------------------------------------------------------------------- |
+| {{Glossary("null")}}        | Null      | 关键词 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) — 任何值的缺失                             |
+| {{Glossary("undefined")}}   | Undefined | [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) — 原始类型值                       |
+| `false`                     | Boolean   | 关键字 [`false`](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#关键字)。                                 |
+| {{Glossary("NaN")}}         | Number    | [`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) — 不是一个数字                                 |
+| `0`                         | Number    | {{jsxref("Number")}} 零，也包括 `0.0`、`0x0` 等。                                                               |
+| `-0`                        | Number    | {{jsxref("Number")}} 负的零，也包括 `-0.0`、`-0x0` 等。                                                         |
+| `0n`                        | BigInt    | {{jsxref("BigInt")}} 零，也包括 `0x0n` 等。需要注意没有 {{jsxref("BigInt")}} 负的零 —— `0n` 的相反数还是 `0n`。 |
+| `""`                        | String    | 空[字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)值，也包括 `''` 和 ` `` `。               |
+| {{domxref("document.all")}} | Object    | 唯一具有假值的 JavaScript 对象是内置的 {{domxref("document.all")}}。                                            |
+
+`null` 和 `undefined` 也都是[空值](/zh-CN/docs/Glossary/Nullish)。
 
 ## 示例
 
@@ -75,7 +79,7 @@ console.log(0 && "dog");
 
 ## 参见
 
-- {{Glossary("Truthy","真值")}}
-- {{Glossary("Type_coercion", "强制转换")}}
-- {{Glossary("Boolean","布尔值")}}
-- [布尔值转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion)
+- {{Glossary("Truthy", "真值")}}
+- {{Glossary("Type_coercion", "类型转换")}}
+- {{Glossary("Boolean", "布尔值")}}
+- [布尔值转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean#布尔值转换)

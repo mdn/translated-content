@@ -68,7 +68,8 @@ Django fue desarrollado inicialmente entre 2003 y 2005 por un equipo que era res
 
 Django ha continuado creciendo y mejorando desde su primer hito, el lanzamiento de la versión (1.0) en septiembre de 2008, hasta el reciente lanzamiento de la versión 1.11 (2017). Cada lanzamiento ha añadido nuevas funcionalidades y solucionado errores, que van desde soporte de nuevos tipos de bases de datos, motores de plantillas, caching, hasta la adición de funciones genéricas y clases de visualización (que reducen la cantidad de código que los desarrolladores tiene que escribir para numerosas tareas de programación).
 
-> **Nota:** Consulte las [notas de lanzamiento](https://docs.djangoproject.com/en/1.10/releases/) en el sitio web de Django para ver qué ha cambiado en las versiones recientes y cúanto trabajo se lleva a cabo para mejorar Django.
+> [!NOTE]
+> Consulte las [notas de lanzamiento](https://docs.djangoproject.com/en/1.10/releases/) en el sitio web de Django para ver qué ha cambiado en las versiones recientes y cúanto trabajo se lleva a cabo para mejorar Django.
 
 Django es ahora un próspero proyecto colaborativo de código abierto, con miles de usuarios y contribuidores. Mientras que todavía presenta algunas características que reflejan su origen, Django ha evolucionado en un framework versátil que es capaz de desarrollar cualquier tipo de sitio web.
 
@@ -105,7 +106,8 @@ Las aplicaciones web de Django normalmente agrupan el código que gestiona cada 
 - **Modelos (Models):** Los Modelos son objetos de Python que definen la estructura de los datos de una aplicación y proporcionan mecanismos para gestionar (añadir, modificar y borrar) y consultar registros en la base de datos.
 - **Plantillas (Templates):** una plantilla (template) es un fichero de texto que define la estructura o diagrama de otro fichero (tal como una página HTML), con marcadores de posición que se utilizan para representar el contenido real. Una _vista_ puede crear dinámicamente una página usando una plantilla, rellenandola con datos de un _modelo_. Una plantilla se puede usar para definir la estructura de cualquier tipo de fichero; ¡no tiene porqué ser HTML!
 
-> **Nota:** Django se refiere a este tipo de organización como arquitectura Modelo Vista Plantilla "Model View Template (MVT)". Tiene muchas similaridades con la arquitectura más familiar [Model View Controller](/es/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture).
+> [!NOTE]
+> Django se refiere a este tipo de organización como arquitectura Modelo Vista Plantilla "Model View Template (MVT)". Tiene muchas similaridades con la arquitectura más familiar [Model View Controller](/es/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture).
 
 Las secciones de más abajo te darán una idea de la pinta que tienen estas partes principales de una aplicación Django (entraremos en más detalles más adelante en el curso, una vez que hallamos configurado un entorno de desarrollo).
 
@@ -120,7 +122,8 @@ urlpatterns = [
 ]
 ```
 
-> **Nota:** Un poco de Python:
+> [!NOTE]
+> Un poco de Python:
 >
 > - El objeto `urlpatterns` es una lista de funciones `url()`. En Python, las listas se definen usando using corchetes. Los elementos se separan con comas y pueden tener una [coma colgante opcional](https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples). Por ejemplo: `[item1, item2, item3,]`.
 > - La extraña sintaxis de los patrones se conoce como _"expresión regular"_. ¡Hablaremos sobre ellas en un artículo posterior!.
@@ -143,7 +146,8 @@ def index(request):
     return HttpResponse('!Hola desde Django!')
 ```
 
-> **Nota:** Un poco de Python:
+> [!NOTE]
+> Un poco de Python:
 >
 > - [Módulos Python](https://docs.python.org/3/tutorial/modules.html) son "bibliotecas" de funciones, almacenadas en ficheros separados, que podríamos querer usar en nuestro código. Aquí importamos sólo el objeto `HttpResponse` desde el módulo `django.http` de manera que podamos usarlo en nuestra vista: `from django.http import HttpResponse`. Hay también otras formas de importar algunos o todos los objetos de un módulo.
 > - Las funciones se declaran usando la plabra clave `def` tal como se muestra arriba, con parámetros con nombre listados entre paréntesis después del nombre de la función; la línea entera termina con dos puntos. Fíjate como las líneas siguientes están todas ellas **indentadas**. La indentación es importante, ya que especifica que las líneas de código están dentro de ese bloque en particular (la indentación obligatoria es una característica clave de Python, y es una razón por la que el código de Python es tan fácil de leer.
@@ -173,7 +177,8 @@ class Team(models.Model):
     team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
 ```
 
-> **Nota:** Un poco de Python:
+> [!NOTE]
+> Un poco de Python:
 >
 > - Python soporta "programación orientada a objetos", un estilo de programación donde organizamos nuestro código en objetos, que incluyen datos relacionados y funciones para operar con los datos. Los objetos también pueden heredarse/extenderse/derivarse de otros objetos, permitiendo que se comparta un comportamiento común entre objetos relacionados. En Python usamos la palabra clave `class` para definir el "prototipo" de un objeto. Podemos crear múltiples _instancias_ específicas de ese tipo de objeto basado en el modelo especificado en la clase.
 >

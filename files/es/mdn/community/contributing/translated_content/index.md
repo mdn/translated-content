@@ -13,7 +13,8 @@ Hemos _congelado_ todo el contenido localizado (lo que significa que no aceptare
 
 ## Localizaciones activas
 
-> **Nota:** Si desea contribuir a una de las localizaciones activas existentes, póngase en contacto con alguno de los miembros activos que figuran a continuación o [póngase en contacto con nosotros para solicitar ayuda](/es/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+> [!NOTE]
+> Si desea contribuir a una de las localizaciones activas existentes, póngase en contacto con alguno de los miembros activos que figuran a continuación o [póngase en contacto con nosotros para solicitar ayuda](/es/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
 
 ### Portugués brasileño (pt-BR)
 
@@ -37,8 +38,8 @@ Hemos _congelado_ todo el contenido localizado (lo que significa que no aceptare
 
 ### Coreano (ko)
 
-- Discusiones: [Discord (`#korean`)](/discord), [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
-- Current contributors: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [pje1740](https://github.com/pje1740), [wisedog](https://github.com/wisedog), [swimjiy](https://github.com/swimjiy), [jho2301](https://github.com/jho2301), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
+- Discusiones: [Discord (`#korean`)](/discord), [Google Groups (`yari-content-ko`)](https://groups.google.com/g/yari-content-ko)
+- Current contributors: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [wisedog](https://github.com/wisedog), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
 
 ### Ruso (ru)
 
@@ -47,10 +48,11 @@ Hemos _congelado_ todo el contenido localizado (lo que significa que no aceptare
 
 ### Español (es)
 
-- Discusiones: [Matrix (canal #mdn-l10n-es)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (canal MDN l10n ES)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (MDN Web Docs Community ,canal #spanish)](/discord)
+- Discusiones: [Matrix (`#mdn-l10n-es`)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
 - Colaboradores actuales: [Graywolf9](https://github.com/Graywolf9), [JuanVqz](https://github.com/JuanVqz), [Jalkhov](https://github.com/Jalkhov), [marcelozarate](https://github.com/marcelozarate), [davbrito](https://github.com/davbrito), [Vallejoanderson](https://github.com/Vallejoanderson).
 
-> **Nota:** Si quiere hablar sobre la posibilidad de _descongelar_ una localización, las [directrices sobre lo que se requiere se pueden encontrar aquí](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale)
+> [!NOTE]
+> Si quiere hablar sobre la posibilidad de _descongelar_ una localización, las [directrices sobre lo que se requiere se pueden encontrar aquí](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale)
 
 ## Véase también
 

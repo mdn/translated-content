@@ -5,13 +5,15 @@ slug: Web/HTTP/Overview
 
 {{HTTPSidebar}}
 
-**HTTP** é um protocolo ({{glossary("protocol")}}) que permite a obtenção de recursos, como documentos HTML. É a base de qualquer troca de dados na Web e um protocolo cliente-servidor, o que significa que as requisições são iniciadas pelo destinatário, geralmente um navegador da Web. Um documento completo é reconstruído a partir dos diferentes sub-documentos obtidos, como por exemplo texto, descrição do layout, imagens, vídeos, scripts e muito mais.
+**HTTP** é um {{glossary("protocol", "protocolo")}} que permite a obtenção de recursos, como documentos HTML. É a base de qualquer troca de dados na Web e um protocolo cliente-servidor, o que significa que as requisições são iniciadas pelo destinatário, geralmente um navegador da Web. Um documento completo é reconstruído a partir dos diferentes sub-documentos obtidos, como por exemplo texto, descrição do layout, imagens, vídeos, scripts e muito mais.
 
-![A Web document is the composition of different resources](fetching_a_page.png)
+![A single Web document composed from multiple resources from different servers.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/fetching-a-page.svg)
 
 Clientes e servidores se comunicam trocando mensagens individuais (ao contrário de um fluxo de dados). As mensagens enviadas pelo cliente, geralmente um navegador da Web, são chamadas de **solicitações** _(requests)_, ou também **requisições**, e as mensagens enviadas pelo servidor como resposta são chamadas de **respostas** _(responses)_.
 
-![HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.](http_&_layers.png)Projetado no início da década de 1990, o protocolo HTTP é extensível e evoluiu ao longo do tempo. Atua na camada de aplicação e é enviado sobre o protocolo{{glossary ("TCP")}}, ou em uma conexão TCP criptografada com {{glossary ("TLS")}}, embora qualquer protocolo de transporte confiável possa, teoricamente, ser usado. Devido à sua extensibilidade, ele é usado não só para buscar documentos de hipertexto, mas também imagens e vídeos ou publicar conteúdo em servidores, como nos resultados de formulário HTML (veja os elementos {{HTMLElement("html")}} e {{HTMLElement("form")}}). O HTTP também pode ser usado para buscar partes de documentos para atualizar páginas da Web sob demanda.
+![HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-layers.svg)
+
+Projetado no início da década de 1990, o protocolo HTTP é extensível e evoluiu ao longo do tempo. Atua na camada de aplicação e é enviado sobre o protocolo {{glossary ("TCP")}}, ou em uma conexão TCP criptografada com {{glossary ("TLS")}}, embora qualquer protocolo de transporte confiável possa, teoricamente, ser usado. Devido à sua extensibilidade, ele é usado não só para buscar documentos de hipertexto, mas também imagens e vídeos ou publicar conteúdo em servidores, como nos resultados de formulário HTML (veja os elementos {{HTMLElement("html")}} e {{HTMLElement("form")}}). O HTTP também pode ser usado para buscar partes de documentos para atualizar páginas da Web sob demanda.
 
 ## Componentes de sistemas baseados em HTTP
 
@@ -19,7 +21,7 @@ O HTTP é um protocolo cliente-servidor: as requisições são enviados por uma 
 
 Cada requisição individual é enviada para um servidor, que irá lidar com isso e fornecer um resultado, chamado de _resposta_. Entre a solicitação e a resposta existem várias entidades, designadas coletivamente como {{glossary("Proxy_server", "proxies")}}, que executam operações diferentes e atuam como _gateways_ (intermediários) ou {{glossary("Cache", "caches")}}, por exemplo.
 
-![Client server chain](client-server-chain.png)
+![A HTTP request from a client forwarded by several proxies to a server and a response taking the same route back to the client.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/client-server-chain.svg)
 
 Na realidade, existem muitos outros computadores entre o navegador e o servidor que está tratando a requisição: existem roteadores, modems e muito mais. Graças ao modelo de camadas da Web, essas funcionalidades estão escondidas nas camadas de rede e transporte, respectivamente. O HTTP está no topo da camada de aplicação. Apesar de ser importante diagnosticar problemas de conectividade, as camadas subjacentes são irrelevantes para a descrição do HTTP.
 
@@ -85,7 +87,7 @@ A natureza extensível do HTTP tem permitido mais controle e funcionalidade para
 
 Aqui está uma lista de funcionalidades comuns, controláveis com HTTP:
 
-- _[Cache](/pt-BR/docs/Web/HTTP/HTTP)_
+- _[Cache](/pt-BR/docs/Web/HTTP/Caching)_
   A forma como documentos são cacheados pode ser controlada pelo HTTP. O servidor pode instruir _proxies_ e clientes, sobre o que cachear e por quanto tempo. O cliente pode instruir _proxies_ de cache intermediários a ignorar o documento armazenado.
 - _Relaxamento das restrições na origem_
   Para prevenir bisbilhoteiros e outros invasores de privacidade, os navegadores reforçam estritamente a separação dos sites Web. Somente páginas de **mesma origem** podem acessar todas as informações de uma página Web. Apesar dessa restrição ser um fardo grande aos servidores, os cabeçalhos HTTP podem relaxar essa separação estrita no lado dos servidores, permitindo que um documento seja composto por várias fontes de informação em outros domínios (e pode até ter razões específicas de segurança para se fazer isso), como um tecido de retalhos.
@@ -138,11 +140,11 @@ Existem dois tipos de mensagens, requisições e respostas, cada uma com seu pr�
 
 Exemplo de uma requisição HTTP:
 
-![A basic HTTP request](http_request.png)
+![Overview of a HTTP GET request with headers](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-request.svg)
 
 As requisições consistem dos seguintes elementos:
 
-- Um [método](/pt-BR/docs/Web/HTTP/Methods) HTTP, geralmente é um verbo como {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("PUT")}}, etc, ou um substantivo como {{HTTPMethod("OPTIONS")}} ou {{HTTPMethod("HEAD")}} que define qual operação o cliente quer fazer. Tipicamente, um cliente quer pegar um recurso (usando {{HTTPMethod("GET")}}) ou publicar dados de um [formulário HTML](/pt-BR/docs/Web/Guide/HTML/Forms) (usando {{HTTPMethod("POST")}}), embora mais operações podem ser necessárias em outros casos.
+- Um [método](/pt-BR/docs/Web/HTTP/Methods) HTTP, geralmente é um verbo como {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("PUT")}}, etc, ou um substantivo como {{HTTPMethod("OPTIONS")}} ou {{HTTPMethod("HEAD")}} que define qual operação o cliente quer fazer. Tipicamente, um cliente quer pegar um recurso (usando {{HTTPMethod("GET")}}) ou publicar dados de um [formulário HTML](/pt-BR/docs/Learn/Forms) (usando {{HTTPMethod("POST")}}), embora mais operações podem ser necessárias em outros casos.
 - O caminho do recurso a ser buscado; a URL do recurso sem os elementos que são de contexto, por exemplo sem o protocolo {{glossary("protocol")}} (`http://`), o domínio {{glossary("domain")}} (aqui como `developer.mozilla.org`), ou a porta {{glossary("port")}} TCP (aqui indicada pelo `80` que é ocultado por ser o número da porta padrão)
 - A versão do protocolo HTTP.
 - [Cabeçalhos](/pt-BR/docs/Web/HTTP/Headers) opcionais que contém informações adicionais para os servidores.
@@ -152,7 +154,7 @@ As requisições consistem dos seguintes elementos:
 
 Exemplo de resposta HTTP:
 
-![](http_response.png)
+![Overview of a '200 OK' HTTP response to a GET request including response headers.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-response.svg)
 
 Respostas consistem dos seguintes elementos:
 
@@ -172,4 +174,4 @@ Outra API, de [eventos enviados pelo servidor](/pt-BR/docs/Web/API/Server-sent_e
 
 O HTTP é um protocolo extensível que é fácil de se usar. A arquitetura cliente-servidor, combinada com a habilidade de simplesmente adicionar cabeçalhos, permite que o HTTP avance suas funcionalidades juntamente com a elasticidade da Web.
 
-Embora o HTTP/2.0 adicione mais complexidade, embutindo mensagens HTTP em quadros para melhorar a performance, a estrutura básica das mensagens continua a mesma desde o HTTP/1.0. Fluxo de sessões permanece simples, permitindo-o a ser investigado, e depurado com um simples [monitor de mensagens HTTP](/pt-BR/docs/Tools/Network_Monitor).
+Embora o HTTP/2.0 adicione mais complexidade, embutindo mensagens HTTP em quadros para melhorar a performance, a estrutura básica das mensagens continua a mesma desde o HTTP/1.0. Fluxo de sessões permanece simples, permitindo-o a ser investigado, e depurado com um simples [monitor de mensagens HTTP](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).

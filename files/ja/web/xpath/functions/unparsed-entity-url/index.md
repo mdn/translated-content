@@ -3,7 +3,7 @@ title: unparsed-entity-url
 slug: Web/XPath/Functions/unparsed-entity-url
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `unparsed-entity-url()`関数は、指定された名前を持つ解析されていないエンティティの URI を返します。これは、ソース文書の DTD で参照される非 XML データです。
 

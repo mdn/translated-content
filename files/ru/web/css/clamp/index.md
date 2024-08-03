@@ -78,7 +78,7 @@ p {
 
 TBD
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -86,7 +86,7 @@ TBD
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{CSSxRef("calc")}}
 - {{CSSxRef("max")}}

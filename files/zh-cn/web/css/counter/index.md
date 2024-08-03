@@ -97,11 +97,8 @@ li {
   counter-increment: count;
 }
 li::after {
-  content: "[" counter(count, decimal-leading-zero) "] == [" counter(
-      count,
-      lower-alpha
-    )
-    "]";
+  content: "[" counter(count, decimal-leading-zero) "] == ["
+    counter(count, lower-alpha) "]";
 }
 ```
 

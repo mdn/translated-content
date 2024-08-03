@@ -3,12 +3,12 @@ title: "History: state プロパティ"
 short-title: state
 slug: Web/API/History/state
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: b8eb6acf2fa8e54254b1165e58adbe2378591da1
 ---
 
 {{APIRef("History API")}}
 
-**`History.state`** プロパティは、履歴スタックの一番上の状態を表す値を返します。これは {{domxref("Window/popstate_event", "popstate")}} イベントを待つことなく、状態を見ることができる方法です。
+**`state`** は {{DOMxRef("History")}} インターフェイスの読み取り専用プロパティで、履歴スタックの一番上の状態を表す値を返します。これは {{domxref("Window/popstate_event", "popstate")}} イベントを待つことなく、状態を見ることができる方法です。
 
 ## 値
 

@@ -1,5 +1,5 @@
 ---
-title: Finale
+title: Завершение
 slug: Web/API/Canvas_API/Tutorial/Finale
 ---
 
@@ -11,11 +11,11 @@ slug: Web/API/Canvas_API/Tutorial/Finale
 
 Различные демки и дополнительные разъяснения о canvas расположены на этих сайтах:
 
-- [Codepen.io](http://codepen.io/search?q=canvas)
+- [Codepen.io](https://codepen.io/search?q=canvas)
   - : Песочница для фронтенд разработчика и редактор кода в браузере.
 - [Canvasdemos.com](http://www.canvasdemos.com/)
   - : Приложения, игры, инструменты и учебные пособия для HTML5 canvas элементов.
-- [HTML5CanvasTutorials](http://www.html5canvastutorials.com/)
+- [HTML5CanvasTutorials](https://www.html5canvastutorials.com/)
   - : Примеры для большинства canvas APIs.
 - [31 days of Canvas tutorials](http://creativejs.com/2011/08/31-days-of-canvas-tutorials/)
   - : Прекрасное введение в разработку графики на JavaScript.
@@ -26,7 +26,7 @@ slug: Web/API/Canvas_API/Tutorial/Finale
 
 Эти APIs могут быть полезны в дальнейшей работе с canvas и графикой:
 
-- [WebGL](/ru/docs/Web/WebGL)
+- [WebGL](/ru/docs/Web/API/WebGL_API)
   - : API для отображения интерактивной 3D графики.
 - [SVG](/ru/docs/Web/SVG)
   - : Масштабируемая Векторная Графика (Scalable Vector Graphics) позволяет описывать картинки в виде набора векторов (линий) и форм, позволяющих плавно изменять размер вне зависимости от размера в котором они нарисованы.
@@ -35,7 +35,7 @@ slug: Web/API/Canvas_API/Tutorial/Finale
 
 ## Вопросы
 
-- [Stackoverflow](http://stackoverflow.com/questions/tagged/canvas)
+- [Stackoverflow](https://stackoverflow.com/questions/tagged/canvas)
   - : Вопросы с тегом "canvas".
 - [Comments about this tutorial – the MDN documentation community](/ru/docs/MDN)
   - : Если у вас остались вопросы об этом учебнике или вы хотите поблагодарить нас, не стесняйтесь обращаться к нам!

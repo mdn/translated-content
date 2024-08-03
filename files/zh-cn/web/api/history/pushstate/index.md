@@ -7,8 +7,6 @@ slug: Web/API/History/pushState
 
 在 [HTML](/zh-CN/docs/Web/HTML) 文档中，**`history.pushState()`** 方法向浏览器的会话历史栈增加了一个条目。
 
-该方法是{{glossary("asynchronous","异步")}}的。为 {{domxref("Window/popstate_event", "popstate")}} 事件增加监听器，以确定导航何时完成。`state` 参数将在其中可用。
-
 ## 语法
 
 ```js-nolint

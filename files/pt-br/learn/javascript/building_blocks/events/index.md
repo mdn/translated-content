@@ -49,7 +49,8 @@ Você vai perceber com isso (e dando uma olhada no [Event reference](/pt-BR/docs
 
 Cada evento disponivel possui um **manipulador de eventos** (event handler), que é um bloco de código (geralmente uma função JavaScript definida pelo usuário) que será executado quando o evento for disparado. Quando esse bloco de código é definido para rodar em resposta a um evento que foi disparado, nós dizemos que estamos **registrando um manipulador de eventos**. Note que manipuladores de eventos são, em alguns casos, chamados de **ouvinte de eventos** (event listeners) — eles são praticamente intercambiáveis para nossos propósitos, embora estritamente falando, eles trabalhem juntos. Os ouvintes escutam o evento acontecendo, e o manipulador é o codigo que roda em resposta a este acontecimento.
 
-> **Nota:** É importante notar que eventos web não são parte do core da linguagem JavaScript — elas são definidas como parte das APIs JavaScript incorporadas ao navegador.
+> [!NOTE]
+> É importante notar que eventos web não são parte do core da linguagem JavaScript — elas são definidas como parte das APIs JavaScript incorporadas ao navegador.
 
 ### Um exemplo simples
 
@@ -160,7 +161,8 @@ function bgChange() {
 }
 ```
 
-> **Nota:** Você pode encontrar o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html) para este exemplo no GitHub (também [veja isso executando em tempo real](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)).
+> [!NOTE]
+> Você pode encontrar o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html) para este exemplo no GitHub (também [veja isso executando em tempo real](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)).
 
 O método mais antigo de registrar manipuladores de eventos encontrados na Web envolveu **atributos HTML de manipulador de eventos** (também conhecidos como **manipuladores de eventos inline**) como o mostrado acima — o valor do atributo é literalmente o código JavaScript que você deseja executar quando o evento ocorre. O exemplo acima chama uma função definida dentro de um elemento {{htmlelement("script")}} na mesma página, mas você também pode inserir JavaScript diretamente dentro do atributo, por exemplo:
 
@@ -184,7 +186,8 @@ for (var i = 0; i < buttons.length; i++) {
 }
 ```
 
-> **Nota:** Separar sua lógica de programação do seu conteúdo também torna seu site mais amigável aos mecanismos de pesquisa.
+> [!NOTE]
+> Separar sua lógica de programação do seu conteúdo também torna seu site mais amigável aos mecanismos de pesquisa.
 
 ### addEventListener() e removeEventListener()
 
@@ -202,7 +205,8 @@ function bgChange() {
 btn.addEventListener("click", bgChange);
 ```
 
-> **Nota:** Você pode encontrar o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html) para este exemplo no GitHub (também [veja isso executando em tempo real](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)).
+> [!NOTE]
+> Você pode encontrar o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html) para este exemplo no GitHub (também [veja isso executando em tempo real](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)).
 
 Dentro da função `addEventListener()`, especificamos dois parâmetros — o nome do evento para o qual queremos registrar esse manipulador, e o código que compreende a função do manipulador que queremos executar em resposta a ele. Note que é perfeitamente apropriado colocar todo o código dentro da função `addEventListener()`, em uma função anônima, assim:
 
@@ -257,7 +261,8 @@ element.onclick = function2;
 etc.
 ```
 
-> **Nota:** Se você for chamado para oferecer suporte a navegadores anteriores ao Internet Explorer 8 em seu trabalho, poderá encontrar dificuldades, pois esses navegadores antigos usam modelos de eventos diferentes dos navegadores mais recentes. Mas não tenha medo, a maioria das bibliotecas JavaScript (por exemplo, `jQuery`) tem funções internas que abstraem as diferenças entre navegadores. Não se preocupe muito com isso neste estágio de sua jornada de aprendizado.
+> [!NOTE]
+> Se você for chamado para oferecer suporte a navegadores anteriores ao Internet Explorer 8 em seu trabalho, poderá encontrar dificuldades, pois esses navegadores antigos usam modelos de eventos diferentes dos navegadores mais recentes. Mas não tenha medo, a maioria das bibliotecas JavaScript (por exemplo, `jQuery`) tem funções internas que abstraem as diferenças entre navegadores. Não se preocupe muito com isso neste estágio de sua jornada de aprendizado.
 
 ## Outros conceitos de evento
 
@@ -278,11 +283,13 @@ function bgChange(e) {
 btn.addEventListener("click", bgChange);
 ```
 
-> **Nota:** Você pode encontrar o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) para este exemplo no GitHub (também [veja isso executando em tempo real](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
+> [!NOTE]
+> Você pode encontrar o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) para este exemplo no GitHub (também [veja isso executando em tempo real](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
 
 Aqui você pode ver que estamos incluindo um objeto de evento, **e**, na função, e na função definindo um estilo de cor de fundo em `e.target` — que é o próprio botão. A propriedade `target` do objeto de evento é sempre uma referência ao elemento em que o evento acabou de ocorrer. Portanto, neste exemplo, estamos definindo uma cor de fundo aleatória no botão, não na página.
 
-> **Nota:** Você pode usar qualquer nome que desejar para o objeto de evento — você só precisa escolher um nome que possa ser usado para referenciá-lo dentro da função de manipulador de eventos. `e`/`evt`/`event` são mais comumente usados pelos desenvolvedores porque são curtos e fáceis de lembrar. É sempre bom manter um padrão.
+> [!NOTE]
+> Você pode usar qualquer nome que desejar para o objeto de evento — você só precisa escolher um nome que possa ser usado para referenciá-lo dentro da função de manipulador de eventos. `e`/`evt`/`event` são mais comumente usados pelos desenvolvedores porque são curtos e fáceis de lembrar. É sempre bom manter um padrão.
 
 `e.target` é incrivelmente útil quando você deseja definir o mesmo manipulador de eventos em vários elementos e fazer algo com todos eles quando ocorre um evento neles. Você pode, por exemplo, ter um conjunto de 16 blocos que desaparecem quando são clicados. É útil poder sempre apenas definir a coisa para desaparecer como `e.target`, ao invés de ter que selecioná-lo de alguma forma mais difícil. No exemplo a seguir (veja [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html) para o código-fonte completo; veja também a [execução ao vivo](http://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) aqui), criamos 16 elementos {{htmlelement("div")}} usando JavaScript. Em seguida, selecionamos todos eles usando {{domxref("document.querySelectorAll()")}} e, em seguida, percorremos cada um deles, adicionando um manipulador onclick a cada um, de modo que uma cor aleatória seja aplicada a cada um deles quando clicados:
 
@@ -398,7 +405,8 @@ Obviamente, isso é uma validação de forma bastante fraca — ela não impedir
 
 {{ EmbedLiveSample('Preventing_default_behavior', '100%', 140, "", "", "hide-codepen-jsfiddle") }}
 
-> **Nota:** para o código fonte completo, veja [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html) (também veja isso [executando em tempo real](http://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) aqui.)
+> [!NOTE]
+> para o código fonte completo, veja [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html) (também veja isso [executando em tempo real](http://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) aqui.)
 
 ### Borbulhamento e captura de eventos
 
@@ -565,9 +573,11 @@ video.onclick = function (e) {
 
 Você pode tentar fazer uma cópia local do código-fonte [show-video-box.html source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html) e tentar corrigi-lo sozinho, ou observar o resultado corrigido em [show-video-box-fixed.html](http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html) (veja também o [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box-fixed.html) aqui).
 
-> **Nota:** Por que se preocupar em capturar e borbulhar? Bem, nos velhos tempos em que os navegadores eram muito menos compatíveis entre si do que são agora, o Netscape usava apenas captura de eventos, e o Internet Explorer usava apenas borbulhamento de eventos. Quando o W3C decidiu tentar padronizar o comportamento e chegar a um consenso, eles acabaram com esse sistema que incluía ambos, que é o único navegador moderno implementado.
+> [!NOTE]
+> Por que se preocupar em capturar e borbulhar? Bem, nos velhos tempos em que os navegadores eram muito menos compatíveis entre si do que são agora, o Netscape usava apenas captura de eventos, e o Internet Explorer usava apenas borbulhamento de eventos. Quando o W3C decidiu tentar padronizar o comportamento e chegar a um consenso, eles acabaram com esse sistema que incluía ambos, que é o único navegador moderno implementado.
 
-> **Nota:** Como mencionado acima, por padrão, todos os manipuladores de eventos são registrados na fase de bubbling, e isso faz mais sentido na maioria das vezes. Se você realmente quiser registrar um evento na fase de captura, registre seu manipulador usando [`addEventListener()`](/pt-BR/docs/Web/API/EventTarget/addEventListener), e defina a propriedade terceira opcional como `true`.
+> [!NOTE]
+> Como mencionado acima, por padrão, todos os manipuladores de eventos são registrados na fase de bubbling, e isso faz mais sentido na maioria das vezes. Se você realmente quiser registrar um evento na fase de captura, registre seu manipulador usando [`addEventListener()`](/pt-BR/docs/Web/API/EventTarget/addEventListener), e defina a propriedade terceira opcional como `true`.
 
 #### Delegação de eventos
 

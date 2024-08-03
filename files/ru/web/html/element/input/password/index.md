@@ -191,7 +191,7 @@ ssn.oninput = function (event) {
 
 {{EmbedLiveSample("Запрос_номера_социального_страхования", 600, 60)}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

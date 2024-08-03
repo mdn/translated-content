@@ -9,7 +9,7 @@ l10n:
 
 MathML はウェブページに数式を書くために使用するマークアップ言語です。このモジュールでは、MathML がどのように動作するのか、構文はどのように見えるのか、HTML の中で MathML を使用し始めるにはどうすればよいのか、といった基本的なことから、MathML を使いこなすための穏やかな道のりを提供します。
 
-> **注目:**
+> [!CALLOUT]
 >
 > #### フロントエンドのウェブ開発者を目指している方へ
 >
@@ -25,7 +25,8 @@ MathML はウェブページに数式を書くために使用するマークア�
 2. [基本的なソフトウェアのインストール](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software)で詳しく説明しているように、基本的な作業環境を設定し、[ファイルの取り扱い](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)で詳しく説明しているように、ファイルを作成し管理する方法を理解していること。
 3. [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)で記述されているように、 HTML の基本的な知識に慣れていること。
 
-> **メモ:** 自分自身でファイルを作成する能力のないコンピューター/タブレット/他の端末で作業している場合は、 [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) のようなオンラインコーディングプログラムでコード例を試すことができます。
+> [!NOTE]
+> 自分自身でファイルを作成する能力のないコンピューター/タブレット/他の端末で作業している場合は、 [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) のようなオンラインコーディングプログラムでコード例を試すことができます。
 
 ## ガイド
 

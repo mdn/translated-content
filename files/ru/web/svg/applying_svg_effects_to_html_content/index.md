@@ -3,6 +3,8 @@ title: Применение эффектов SVG к содержимому HTML
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
 
+{{SVGRef}}
+
 Современные браузеры поддерживают [SVG](/ru/docs/SVG) в стилях [CSS](/ru/docs/Web/CSS) для применения графических эффектов к HTML-контенту.
 
 Вы можете указать SVG в стилях как внутри одного документа, так и из внешней таблицы стилей. Есть 3 свойства, которые вы можете использовать: [`mask`](/ru/docs/Web/CSS/mask), [`clip-path`](/ru/docs/Web/CSS/clip-path), и [`filter`](/ru/docs/Web/CSS/filter).

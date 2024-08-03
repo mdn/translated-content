@@ -9,7 +9,8 @@ slug: Web/CSS/counter-set
 
 {{EmbedInteractiveExample("pages/css/counter-set.html")}}
 
-> **メモ:** カウンターの値は {{cssxref("counter-increment")}} プロパティを使用して増減させることができます。
+> [!NOTE]
+> カウンターの値は {{cssxref("counter-increment")}} プロパティを使用して増減させることができます。
 
 ## 構文
 

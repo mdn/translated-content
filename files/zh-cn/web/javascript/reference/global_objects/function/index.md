@@ -44,7 +44,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function
   - : 使用给定的 `this` 值和可选参数调用一个函数。
 - {{jsxref("Function.prototype.toString()")}}
   - : 返回表示函数源代码的字符串。重写了 {{jsxref("Object.prototype.toString")}} 方法。
-- [`Function.prototype[@@hasInstance]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance)
+- [`Function.prototype[Symbol.hasInstance]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance)
   - : 指定确定构造函数是否将对象识别为其实例的默认过程。由 [`instanceof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 运算符调用。
 
 ## 示例

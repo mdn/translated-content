@@ -3,6 +3,8 @@ title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 ---
 
+{{APIRef("XMLHttpRequest API")}}
+
 `XMLHttpRequest` es un objeto [JavaScript](/en/JavaScript) que fue diseñado por Microsoft y adoptado por Mozilla, Apple y Google. Actualmente es un [estándar de la W3C](http://www.w3.org/TR/XMLHttpRequest/). Proporciona una forma fácil de obtener información de una URL sin tener que recargar la página completa. Una página web puede actualizar sólo una parte de la página sin interrumpir lo que el usuario está haciendo. `XMLHttpRequest` es ampliamente usado en la programación AJAX.
 
 A pesar de su nombre, `XMLHttpRequest` puede ser usado para recibir cualquier tipo de dato, no solo XML, y admite otros formatos además de [HTTP](/en/HTTP) (incluyendo `file` y `ftp`).
@@ -15,7 +17,8 @@ var req = new XMLHttpRequest();
 
 Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHttpRequest](/Es/XMLHttpRequest/Using_XMLHttpRequest).
 
-> **Nota:** De forma predeterminada, Firefox 3 limita la cantidad de conexiones de `XMLHttpRequest` por servidor a 6 (las versiones previas limitan a 2 conexiones por servidor). Algunos sitios web interactivos pueden mantener una conexión `XMLHttpRequest` abierta, así que abrir múltiples sesiones a esos sitios puede derivar en congelamientos del navegador de una forma que la ventana no se actualiza y los controles no responden. Este valor puede ser cambiado al editar la preferencia `network.http.max-persistent-connections-per-server` en [`about:config`](/about:config).
+> [!NOTE]
+> De forma predeterminada, Firefox 3 limita la cantidad de conexiones de `XMLHttpRequest` por servidor a 6 (las versiones previas limitan a 2 conexiones por servidor). Algunos sitios web interactivos pueden mantener una conexión `XMLHttpRequest` abierta, así que abrir múltiples sesiones a esos sitios puede derivar en congelamientos del navegador de una forma que la ventana no se actualiza y los controles no responden. Este valor puede ser cambiado al editar la preferencia `network.http.max-persistent-connections-per-server` en [`about:config`](/about:config).
 
 ## Resumen del método
 
@@ -50,14 +53,16 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
 
     Esto permite el uso del push del servidor; para cada documento XML que se escribe para este pedido, se crea un nuevo XMLDOMdocument y se llama al manejador `onload` entre cada documento.
 
-    > **Nota:** Cuando esto se elige, el manejador `onload` y otros manejadores de eventos no son reiniciados después de que el primer XMLdocument es cargado, y el manejador `onload` es llamado después de que cada parte de la respuesta es recibida.
+    > [!NOTE]
+    > Cuando esto se elige, el manejador `onload` y otros manejadores de eventos no son reiniciados después de que el primer XMLdocument es cargado, y el manejador `onload` es llamado después de que cada parte de la respuesta es recibida.
 
 - `onreadystatechange`
   : `nsIDOMEventListener`
 
   - : Una función del objeto JavaScript que se llama cuando el atributo `readyState` cambia. El callback se llama desde la interfaz del usuario.
 
-    > **Advertencia:** Esto no debe ser usado desde código nativo. Tampoco debes usarlo con pedidos sincrónicos.
+    > [!WARNING]
+    > Esto no debe ser usado desde código nativo. Tampoco debes usarlo con pedidos sincrónicos.
 
 - `readyState`: `long`
 
@@ -77,7 +82,8 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
 
   - : La respuesta al pedido como un objeto DOM[`Document`](/es/DOM/document), o `null` si el pedido no fue exitoso, aún no fue enviado o no puede ser analizado como XML. La respuesta es analizada como si fuera `text/xml`. **Sólo lectura.**
 
-    > **Nota:** Si el servidor no aplica el encabezado de tipo de contenido `text/xml`, puedes usar `overrideMimeType()` para forzar a `XMLHttpRequest` a analizarlo como XML igualmente.
+    > [!NOTE]
+    > Si el servidor no aplica el encabezado de tipo de contenido `text/xml`, puedes usar `overrideMimeType()` para forzar a `XMLHttpRequest` a analizarlo como XML igualmente.
 
 - `status`: `unsigned long`
   - : El estado de la respuesta al pedido. Éste es el código HTTPresult (por ejemplo, `status` es 200 por un pedido exitoso). **Sólo lectura.**
@@ -89,7 +95,8 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
 
   - : Indica cuando el pedido de Access-Control entre sitios debe o no ser realizado usando credenciales como cookies o encabezados de autorización.
 
-    > **Nota:** Esto nunca afecta los pedidos en para el propio sitio.
+    > [!NOTE]
+    > Esto nunca afecta los pedidos en para el propio sitio.
 
     El valor predeterminado es `false`.
 
@@ -111,7 +118,8 @@ Ninguno.
 
 Devuelve todos los encabezados de respuesta como una cadena.
 
-> **Nota:** Para pedidos multi partes, esto devuelve los encabezados de la parte _actual_ del pedido, no del canal original.
+> [!NOTE]
+> Para pedidos multi partes, esto devuelve los encabezados de la parte _actual_ del pedido, no del canal original.
 
 ```
 string getAllResponseHeaders();
@@ -171,7 +179,8 @@ Inicializa el objeto para que sea usado desde código C++.
 
 Inicializa el pedido. Este método es para ser usado desde código JavaScript, para inicializar un pedido desde código nativo, debes usar [`openRequest()`](</en/XMLHttpRequest#openRequest()>).
 
-> **Nota:** Llamar a este método en un pedido activo (uno para el cual `open()` o `openRequest()` ya han sido llamados) es equivalente a usar `abort()`.
+> [!NOTE]
+> Llamar a este método en un pedido activo (uno para el cual `open()` o `openRequest()` ya han sido llamados) es equivalente a usar `abort()`.
 
 ```
 void open(
@@ -202,7 +211,8 @@ Inicia la peticion, este metodo est
 
 Inicializa la peticion. Este método se utiliza desde el código nativo, para inicializar una solicitud desde el código JavaScript, utilice `open ()` en su lugar.
 
-> **Nota:** Calling this method an already active request (one for which `open()` or `openRequest()` has already been called) is the equivalent of calling `abort()`.
+> [!NOTE]
+> Calling this method an already active request (one for which `open()` or `openRequest()` has already been called) is the equivalent of calling `abort()`.
 
 ```
 void open(
@@ -231,7 +241,8 @@ void open(
 
 Overrides the MIMEtype returned by the server.
 
-> **Nota:** This method must be called before `send()`.
+> [!NOTE]
+> This method must be called before `send()`.
 
 ```
 void overrideMimeType(
@@ -248,7 +259,8 @@ void overrideMimeType(
 
 Sends the request. If the request is asynchronous (which is the default), this method returns as soon as the request is sent. If the request is synchronous, this method doesn't return until the response has arrived.
 
-> **Nota:** Any event listeners you wish to set must be set before calling `send()`.
+> [!NOTE]
+> Any event listeners you wish to set must be set before calling `send()`.
 
 ```
 void send(
@@ -286,7 +298,8 @@ void sendAsBinary(
 
 Sets the value of an HTTPrequest header.
 
-> **Nota:** You must call [`open()`](</en/XMLHttpRequest#open()>)before using this method.
+> [!NOTE]
+> You must call [`open()`](</en/XMLHttpRequest#open()>)before using this method.
 
 ```
 void setRequestHeader(

@@ -3,6 +3,8 @@ title: "HTMLMediaElement: emptied"
 slug: Web/API/HTMLMediaElement/emptied_event
 ---
 
+{{APIRef("HTMLMediaElement")}}
+
 L'événement **`emptied`** est déclenché lorsqu'un média est devenu vide. Par exemple, cet événement est envoyé si le média a déjà été chargé (complètement ou partiellement), et que la méthode _load()_ est appelé pour le recharger.
 
 ## Informations générales

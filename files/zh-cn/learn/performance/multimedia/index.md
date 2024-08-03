@@ -29,13 +29,14 @@ slug: Learn/Performance/Multimedia
   </tbody>
 </table>
 
-> **备注：** 这是对 Web 上多媒体传输进行优化的概要介绍，只涵盖了一般原理和技术。如需更深入的指南，请参阅 <https://images.guide>。
+> [!NOTE]
+> 这是对 Web 上多媒体传输进行优化的概要介绍，只涵盖了一般原理和技术。如需更深入的指南，请参阅 <https://web.dev/learn/images>。
 
 ## 为何优化多媒体？
 
 对于一般网站而言，[其带宽的 51% 来自图像，其次是视频占 25%](https://discuss.httparchive.org/t/state-of-the-web-top-image-optimization-strategies/1367)，因此可以说处理和优化多媒体内容非常重要。
 
-你需要考虑数据使用情况。许多人使用的是有限流量套餐，甚至是按使用量付费，每兆字节都要付费。这不仅仅是新兴市场的问题。截至 2018 年，[英国仍有 24% 的用户使用按使用量付费](https://www.ofcom.org.uk/__data/assets/pdf_file/0021/113169/Technology-Tracker-H1-2018-data-tables.pdf)。
+你需要考虑数据使用情况。许多人使用的是有限流量套餐，甚至是按使用量付费，每兆字节都要付费。这不仅仅是新兴市场的问题。截至 2018 年，[英国仍有 24% 的用户使用按量付费的套餐](https://www.ofcom.org.uk/__data/assets/pdf_file/0021/113169/Technology-Tracker-H1-2018-data-tables.pdf)。
 
 你还需要考虑内存问题，因为许多移动设备的 RAM 有限。请记住，当图像下载后，它们需要存储在内存中。
 
@@ -57,7 +58,8 @@ slug: Learn/Performance/Multimedia
 
 最优的文件格式通常取决于图像的特点。
 
-> **备注：** 有关图像类型的一般信息，请参阅[图像文件类型和格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)。
+> [!NOTE]
+> 有关图像类型的一般信息，请参阅[图像文件类型和格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)。
 
 [SVG](/zh-CN/docs/Web/Media/Formats/Image_types#svg_可缩放矢量图形) 格式更适合颜色较少且不太逼真的照片的图像。这需要源文件以矢量图形格式提供。如果这样的图像仅以位图形式存在，则应选择 [PNG](/zh-CN/docs/Web/Media/Formats/Image_types#png_便携式网络图形) 作为后备格式。这种类型的图案示例是徽标、插图、图表或图标（注意：SVG 比图标字体好得多！）。两种格式都支持透明度。
 
@@ -75,9 +77,10 @@ PNG 可以以三种不同的输出组合进行保存：
 
 - [WebP](/zh-CN/docs/Web/Media/Formats/Image_types#webp_图像)——既适用于图像又适用于动图的绝佳选择。WebP 提供比 PNG 或 JPEG 更好的压缩，支持更高的色深、动画帧和透明度等（但不支持渐进式显示）。除具有 Big Sur 或更早版本的 macOS 桌面版 Safari 14 外，所有主流浏览器都支持它。
 
-  > **备注：** 尽管 Apple [宣布在 Safari 14 中支持 WebP](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174)，但在 Safari 版本 16.0 之前，`.webp` 图像无法在早于 Big Sur 版本的 macOS 桌面版本上正常显示，而 iOS 14 上的 Safari *却能*正常显示 `.webp` 图像。
+  > [!NOTE]
+  > 尽管 Apple [宣布在 Safari 14 中支持 WebP](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174)，但在 Safari 版本 16.0 之前，`.webp` 图像无法在早于 Big Sur 版本的 macOS 桌面版本上正常显示，而 iOS 14 上的 Safari *却能*正常显示 `.webp` 图像。
 
-- [AVIF](/zh-CN/docs/Web/Media/Formats/Image_types#avif_图像)——由于其是高性能和免版税的图像格式（甚至比 WebP 更高效），它是用于图像和动图的不错选择（尽管不太广泛）。它现在受 Chrome、Opera 和 Firefox 的支持。另请参阅[将以前的图像格式转换为 AVIF 的在线工具](https://avif.io/)。
+- [AVIF](/zh-CN/docs/Web/Media/Formats/Image_types#avif_图像)——由于其是高性能和免版税的图像格式（甚至比 WebP 更高效），它是用于图像和动图的不错选择（尽管不太广泛）。它现在受 Chrome、Opera 和 Firefox 的支持。[Squoosh](https://squoosh.app/) 是一款出色的，可以将其他图像格式转换为 AVIF 的在线工具。
 - **JPEG2000**——曾经是 JPEG 的继任者，但仅受 Safari 支持。也不支持渐进式显示。
 
 鉴于 JPEG-XR 和 JPEG2000 的支持范围很窄，并且还要考虑解码成本，JPEG 的唯一真正竞争对手是 WebP。这就是为什么你也可以以该格式提供图像。这可以通过使用配备了 [type 属性](/zh-CN/docs/Web/HTML/Element/picture#type_属性)的 `<picture>` 元素和 `<source>` 元素来完成。

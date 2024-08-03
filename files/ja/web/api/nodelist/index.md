@@ -2,7 +2,7 @@
 title: NodeList
 slug: Web/API/NodeList
 l10n:
-  sourceCommit: f3976b4130f066a6114aeb9617924cdcb0f994ce
+  sourceCommit: 119fe9ade96d03c936ccd0078734f9227601a0e7
 ---
 
 {{APIRef("DOM")}}
@@ -19,7 +19,7 @@ NodeList には _生きた_ ものと _静的な_ ものの 2 種類のものが
 
 場合によっては `NodeList` は _生きた_ ものになります。DOM が変化すると、自動的に集合が更新されることを意味しています。
 
-For example, {{domxref("Node.childNodes")}} is live:
+例えば、 {{domxref("Node.childNodes")}} は生きています。
 
 ```js
 const parent = document.getElementById("parent");
@@ -31,13 +31,13 @@ console.log(childNodes.length); // "3" が出力される
 
 ### 静的な NodeList
 
-一方、 `NodeList` が _静的な_ ものである場合があります。この場合は、DOM 内の変更が集合の内容に影響を与えません。{{domxref("document.querySelectorAll()")}} メソッドは、静的な `NodeList` を返します。
+一方、 `NodeList` が _静的_ である場合があります。この場合は、DOM 内を変更しても集合の内容に影響を与えません。{{domxref("document.querySelectorAll()")}} メソッドは、静的な `NodeList` を返します。
 
 `NodeList` の各要素に反復処理を行う方法を選択したり、リストの長さをキャッシュしたりする場合は、この違いを考えておくといいでしょう。
 
 ## インスタンスプロパティ
 
-- {{domxref("NodeList.length")}}
+- {{domxref("NodeList.length")}} {{ReadOnlyInline}}
   - : `NodeList` に含まれるノードの数です。
 
 ## インスタンスメソッド

@@ -27,7 +27,7 @@ if (foo.childElementCount > 0) {
 }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

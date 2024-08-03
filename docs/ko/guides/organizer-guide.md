@@ -24,17 +24,17 @@
 - [@GwangYeol-Im](https://github.com/GwangYeol-Im) 2021.04 ~ 2023.10
 - [@yujo11](https://github.com/yujo11) 2021.04 ~ 2023.09
 - [@nKiNk](https://github.com/nKiNk) 2021.04 ~ 2023.01
+- [@pje1740](https://github.com/pje1740) 2021.04 ~ 2024.04
+- [@swimjiy](https://github.com/swimjiy) 2023.03 ~ 2024.04
+- [@cos18](https://github.com/cos18) 2021.04 ~ 2024.04
+- [@jho2301](https://github.com/jho2301) 2023.03 ~ 2024.05
 
 ### 현재 구성원
 
-- [1ilsang](https://github.com/1ilsang) 2024.03 ~
-- [sunhpark42](https://github.com/sunhpark42) 2023.03 ~
-- [jho2301](https://github.com/jho2301) 2023.03 ~
-- [swimjiy](https://github.com/swimjiy) 2023.03 ~
-- [wisedog](https://github.com/wisedog) 2023.03 ~
-- [@cos18](https://github.com/cos18) 2021.04 ~
+- [@1ilsang](https://github.com/1ilsang) 2024.03 ~
+- [@sunhpark42](https://github.com/sunhpark42) 2023.03 ~
+- [@wisedog](https://github.com/wisedog) 2023.03 ~
 - [@yechoi42](https://github.com/yechoi42) 2021.04 ~
-- [@pje1740](https://github.com/pje1740) 2021.04 ~
 - [@hochan222](https://github.com/hochan222) 2021.04 ~
 
 ## 참고 사항

@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 
 ## 描述
 
-`@@isConcatSpreadable` 符号 (`Symbol.isConcatSpreadable`) 可以直接定义为对象属性或继承而来，它是布尔类型。它可以控制数组或类似数组（array-like）的对象的行为：
+`Symbol.isConcatSpreadable` 符号可以直接定义为对象属性或继承而来，它是布尔类型。它可以控制数组或类似数组（array-like）的对象的行为：
 
 - 对于数组对象，默认情况下，用于 concat 时，会按数组元素展开然后进行连接（数组元素作为新数组的元素）。重置`Symbol.isConcatSpreadable`可以改变默认行为。
 - 对于类似数组的对象，用于 concat 时，该对象整体作为新数组的元素，重置`Symbol.isConcatSpreadable`可改变默认行为。

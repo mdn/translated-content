@@ -32,7 +32,8 @@ Intl.Collator(locales, options)
 
     下面的这些 Unicode 扩展键也是被允许的：
 
-    > **备注：** 这些键通常也可用于 `options` 的设置（如下所列）。当两者同时设置时，`options` 属性的优先级更高。
+    > [!NOTE]
+    > 这些键通常也可用于 `options` 的设置（如下所列）。当两者同时设置时，`options` 属性的优先级更高。
 
     - `co`
 

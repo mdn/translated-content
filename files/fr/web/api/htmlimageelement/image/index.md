@@ -36,7 +36,8 @@ Cela équivaudrait à définir la balise HTML suivante dans le {{htmlelement("bo
 <img width="100" height="200" src="picture.jpg" />
 ```
 
-> **Note :** Le "bitmap" entier est chargé quelle que soit la taille spécifiée dans le constructeur. Si une taille est spécifiée dans le constructeur, elle sera reflétée dans les propriétés {{domxref("HTMLImageElement.width")}} et {{domxref("HTMLImageElement.height")}} de l'instance résultante. La largeur intrinsèque et la hauteur de l'image en pixels CSS sont reflétées à travers les propriétés {{domxref("HTMLImageElement.naturalWidth")}} et {{domxref("HTMLImageElement.naturalHeight")}}. Si aucune taille n'est spécifiée dans le constructeur, les deux paires de ces propriétés auront les mêmes valeurs.
+> [!NOTE]
+> Le "bitmap" entier est chargé quelle que soit la taille spécifiée dans le constructeur. Si une taille est spécifiée dans le constructeur, elle sera reflétée dans les propriétés {{domxref("HTMLImageElement.width")}} et {{domxref("HTMLImageElement.height")}} de l'instance résultante. La largeur intrinsèque et la hauteur de l'image en pixels CSS sont reflétées à travers les propriétés {{domxref("HTMLImageElement.naturalWidth")}} et {{domxref("HTMLImageElement.naturalHeight")}}. Si aucune taille n'est spécifiée dans le constructeur, les deux paires de ces propriétés auront les mêmes valeurs.
 
 ## Spécifications
 

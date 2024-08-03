@@ -122,7 +122,8 @@ body {
 
 最後の色経由点が 10% であり、グラデーションが垂直なので、反復グラデーション内の各グラデーションは 10% の高さになり、 10 本の水平線に相当します。
 
-> **メモ:** 他の例は [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients)を参照してください。
+> [!NOTE]
+> 他の例は [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients)を参照してください。
 
 ## 仕様書
 

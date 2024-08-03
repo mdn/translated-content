@@ -3,6 +3,8 @@ title: Контекст наложения (stacking context)
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 ---
 
+{{CSSRef}}
+
 Контекст наложения (stacking context) это концепция трёхмерного расположения HTML-элементов вдоль оси Z по отношению к пользователю, находящемуся перед экраном. HTML-элементы занимают это место по порядку, основанному на атрибутах элемента.
 
 « [CSS](/ru/docs/CSS) « [Understanding CSS z-index](/ru/docs/CSS/Understanding_z-index)

@@ -21,7 +21,8 @@ slug: Web/SVG/Attribute/display
 
 这个属性也能影响直接渲染到屏幕外的画布，比如遮罩或路径剪裁。因此，把 {{SVGElement("mask")}} 元素的一个子元素设为 `display="none"` 将会阻止 {{SVGElement("clipPath")}} 的子元素参与到路径剪裁中。
 
-> **备注：** As a presentation attribute, `display` can be used as a CSS property. See {{cssxref("display", "CSS display")}} for further information.
+> [!NOTE]
+> As a presentation attribute, `display` can be used as a CSS property. See {{cssxref("display", "CSS display")}} for further information.
 
 As a presentation attribute, it can be applied to any element.
 

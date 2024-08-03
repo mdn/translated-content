@@ -3,7 +3,7 @@ title: Selection.getRangeAt()
 slug: Web/API/Selection/getRangeAt
 ---
 
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 Метод **`Selection.getRangeAt()`** возвращает объект диапазона, который представляет один из диапазонов, выделенного на данный момент.
 

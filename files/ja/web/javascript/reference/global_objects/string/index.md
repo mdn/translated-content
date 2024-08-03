@@ -302,7 +302,8 @@ Unicode 文字の上に、書記素クラスターと呼ばれる 1 つの視覚
 
 ### HTML ラッパーメソッド
 
-> **メモ:** 非推奨です。これらのメソッドは避けてください。
+> [!NOTE]
+> 非推奨です。これらのメソッドは避けてください。
 >
 > これらはとても古い HTML 標準に基づいており、現在利用できる HTML タグや属性のサブセットしか提供していないため、使用するのには限界があります。多くが今日では非推奨または標準外のマークアップを生成します。さらに、単純な文字列の連結を検証やサニタイズなしに行うため、[`innerHTML`](/ja/docs/Web/API/Element/innerHTML) を使用して直接挿入するとセキュリティ上の脅威となる可能性があります。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model)、例えば [`document.createElement()`](/ja/docs/Web/API/Document/createElement) など使用してください。
 

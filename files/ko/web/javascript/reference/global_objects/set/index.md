@@ -23,6 +23,67 @@ l10n:
 
 [`has`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/has) 메서드는 이전에 Set에 추가된 대부분의 요소를 시험하는 것보다 평균적으로 빠른 접근 방식을 사용하여 값이 Set에 있는지 여부를 확인합니다. 특히 배열의 `length`가 Set의 `size`와 같을 때 [`Array.prototype.includes`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) 메서드보다 평균적으로 더 빠릅니다.
 
+### Set 구성
+
+`Set` 객체는 수학 연산과 같이 집합을 구성할 수 있는 몇 가지 메서드를 제공합니다. 이러한 메서드는 다음과 같습니다.
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">메서드</th>
+      <th scope="col">반환 유형</th>
+      <th scope="col">수학적 동치</th>
+      <th scope="col">벤 다이어그램</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{jsxref("Set/difference", "A.difference(B)")}}</td>
+      <td><code>Set</code></td>
+      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>∖</mo><mi>B</mi></mrow><annotation encoding="TeX">A\setminus B</annotation></semantics></math></td>
+      <td style="margin:0;padding:0"><img src="difference/diagram.svg" alt="두 개의 원이 겹치는 벤 다이어그램입니다. A와 B의 차집합은 A에서 B와 겹치지 않는 부분입니다." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/intersection", "A.intersection(B)")}}</td>
+      <td><code>Set</code></td>
+      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cap B</annotation></semantics></math></td>
+      <td style="margin:0;padding:0"><img src="intersection/diagram.svg" alt="두 개의 원이 겹치는 벤 다이어그램입니다. A와 B의 교집합은 두 원이 겹치는 부분입니다." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/symmetricDifference", "A.symmetricDifference(B)")}}</td>
+      <td><code>Set</code></td>
+      <td><math display="inline"><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>∖</mo><mi>B</mi><mo stretchy="false">)</mo><mo>∪</mo><mo stretchy="false">(</mo><mi>B</mi><mo>∖</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">(A\setminus B)\cup(B\setminus A)</annotation></semantics></math></td>
+      <td style="margin:0;padding:0"><img src="symmetricDifference/diagram.svg" alt="두 개의 원이 겹치는 벤 다이어그램입니다. A와 B의 대칭차 집합은 두 원 중 어느 한 원이 포함하지만 둘 다 포함하지 않는 영역입니다." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/union", "A.union(B)")}}</td>
+      <td><code>Set</code></td>
+      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cup B</annotation></semantics></math></td>
+      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="두 개의 원이 겹치는 벤 다이어그램입니다. A와 B의 대칭 차이는 두 원 중 하나 또는 두 원이 포함하는 영역입니다." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/isDisjointFrom", "A.isDisjointFrom(B)")}}</td>
+      <td><code>Boolean</code></td>
+      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi><mo>=</mo><mi>∅</mi></mrow><annotation encoding="TeX">A\cap B = \empty</annotation></semantics></math></td>
+      <td style="margin:0;padding:0"><img src="isDisjointFrom/diagram.svg" alt="두 개의 원이 있는 벤 다이어그램입니다. 원이 겹치는 영역이 없기 때문에 A와 B는 분리소 집합입니다." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/isSubsetOf", "A.isSubsetOf(B)")}}</td>
+      <td><code>Boolean</code></td>
+      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow><annotation encoding="TeX">A\subseteq B</annotation></semantics></math></td>
+      <td style="margin:0;padding:0"><img src="isSubsetOf/diagram.svg" alt="두 개의 원이 있는 벤 다이어그램입니다. A는 B에 완전히 포함되므로 A는 B의 부분 집합입니다." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/isSupersetOf", "A.isSupersetOf(B)")}}</td>
+      <td><code>Boolean</code></td>
+      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>⊇</mo><mi>B</mi></mrow><annotation encoding="TeX">A\supseteq B</annotation></semantics></math></td>
+      <td style="margin:0;padding:0"><img src="isSupersetOf/diagram.svg" alt="두 개의 원이 있는 벤 다이어그램입니다. B가 A에 완전히 포함되어 있기 때문에 A는 B의 상위 집합입니다." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+  </tbody>
+</table>
+
+이 메서드들은 일반화 가능성을 높이기 위해 `Set` 객체뿐만 아니라 [유사 Set](#set-like_objects)인 모든 객체를 허용합니다.
+
 ### 유사 Set 객체(Set-like objects)
 
 모든 [Set 구성 메서드](#set_composition)는 {{jsxref("Operators/this", "this")}}가 실제 `Set` 인스턴스여야 하지만, 인자는 Set과 유사하면 됩니다. 유사 Set 객체는 다음을 제공하는 객체입니다.
@@ -43,7 +104,8 @@ const b = new Map([
 console.log(a.union(b)); // Set(4) {1, 2, 3, 4}
 ```
 
-> **참고:** 유사 Set 프로토콜은 요소를 생성하기 위해 [`[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator) 대신 `keys()` 메서드를 호출합니다. 이는 맵의 경우 반복자는 entries를 생성하지만 `has()` 메서드는 keys를 취하기 때문에 맵을 유효한 유시 Set 객체로 만들기 위해서입니다.
+> [!NOTE]
+> 유사 Set 프로토콜은 요소를 생성하기 위해 [`[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator) 대신 `keys()` 메서드를 호출합니다. 이는 맵의 경우 반복자는 entries를 생성하지만 `has()` 메서드는 keys를 취하기 때문에 맵을 유효한 유시 Set 객체로 만들기 위해서입니다.
 
 [배열](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)은 `has()` 메서드나 `size` 속성이 없고 `keys()` 메서드가 요소 대신 인덱스를 생성하기 때문에 유사 Set이 아닙니다. {{jsxref("WeakSet")}} 객체 역시 `keys()` 메서드가 없기 때문에 유사 Set이 아닙니다.
 

@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
 
 {{jsxref("String")}} 值的 **`fontsize()`** 方法会创建一个 {{HTMLElement("font")}} 元素字符串，其中嵌入了调用字符串（`<font size="...">str</font>`），从而导致该字符串以指定的字体大小显示。
 
-> **备注：** 所有的 [HTML 包装方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法)都已经被弃用，并且仅为了兼容性而标准化。对于 `fontsize()` 方法来说，`<font>` 元素本身在 [HTML5](/zh-CN/docs/Glossary/HTML5) 中已被移除，不应再使用。Web 开发者应该使用 [CSS](/zh-CN/docs/Web/CSS) 属性来代替。
+> [!NOTE]
+> 所有的 [HTML 包装方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法)都已经被弃用，并且仅为了兼容性而标准化。对于 `fontsize()` 方法来说，`<font>` 元素本身在 [HTML5](/zh-CN/docs/Glossary/HTML5) 中已被移除，不应再使用。Web 开发者应该使用 [CSS](/zh-CN/docs/Web/CSS) 属性来代替。
 
 ## 语法
 

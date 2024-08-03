@@ -254,7 +254,8 @@ let completedTodos = todos.filter((todo) => todo.completed).length;
 
 可以告訴 Svelte 我們想要 `totalTodos` 和 `completedTodos` 等變數藉由前綴 `$:`，使其具有反應性。Svelte 將產生程式碼以在它們相依的資料發生變化時自動更新它們。
 
-> **備註：** Svelte 使用 `$:` [JavaScript 標記陳述語法](/zh-TW/docs/Web/JavaScript/Reference/Statements/label)來標記反應性陳述。像是用於宣告屬性的 `export` 關鍵字一樣，這可能看起來會有點陌生。但這是 Svelte 利用有效 JavaScript 語法並賦予其新用途的另一個例子——在這種情況下，意味著「每當任何參考的數值有變化時，則會重新執行此程式碼」。一旦習慣了，就無法回頭了。
+> [!NOTE]
+> Svelte 使用 `$:` [JavaScript 標記陳述語法](/zh-TW/docs/Web/JavaScript/Reference/Statements/label)來標記反應性陳述。像是用於宣告屬性的 `export` 關鍵字一樣，這可能看起來會有點陌生。但這是 Svelte 利用有效 JavaScript 語法並賦予其新用途的另一個例子——在這種情況下，意味著「每當任何參考的數值有變化時，則會重新執行此程式碼」。一旦習慣了，就無法回頭了。
 
 更新 `src/components/Todos.svelte` 中的 `totalTodos` 和 `completedTodos` 變數定義，如下：
 
@@ -308,7 +309,8 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
    $: console.log("newTodoName: ", newTodoName);
    ```
 
-   > **備註：** 你可能已經注意到了，反應性陳述不僅限於變數宣告。你可以在 `$:` 符號之後放上 _任何_ JavaScript 陳述。
+   > [!NOTE]
+   > 你可能已經注意到了，反應性陳述不僅限於變數宣告。你可以在 `$:` 符號之後放上 _任何_ JavaScript 陳述。
 
 4. 現在嘗試回到 `localhost:5042`，按下 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> 來打開瀏覽器控制台並在輸入框中輸入一些內容。你應該就會看到你的輸入被記錄了。此時，你可以視情況刪除反應性 `console.log()`。
 5. 接下來，我們將建立一個函式來加入新的待辦事項—— `addTodo()` ——它會將一個新的 `todo` 物件塞入到 `todos` 陣列中。將此函式新增到 `src/components/Todos.svelte` 中 `<script>` 區塊的底部：
@@ -320,7 +322,8 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
    }
    ```
 
-   > **備註：** 目前我們為每個待辦事項都指定相同的 `id`，別擔心，我們會盡快解決這個問題。
+   > [!NOTE]
+   > 目前我們為每個待辦事項都指定相同的 `id`，別擔心，我們會盡快解決這個問題。
 
 6. 現在我們要更新我們的 HTML，以便每當表單被提交時來呼叫 `addTodo()`。更新新增待辦事項（NewTodo）表單的起始標籤如下：
 
@@ -334,7 +337,8 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
 
    只要將 `todos = todos` 新增到 `addTodo()` 函式的末端就能解決這個問題，但是必須在函式末端包含它似乎很奇怪。取而代之，我們將拿掉 `push()` 方法並使用[展開語法](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_syntax)來達到相同的結果：我們將為 `todos` 陣列指定一個等於 `todos` 陣列加上新物件的數值。
 
-   > **備註：** 陣列（`Array`）有幾個可變的操作：[`push()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/push)、[`pop()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)、[`splice()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)、[`shift()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)、[`unshift()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)、[`reverse()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) 和 [`sort()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)。使用它們常會導致難以追蹤的副作用和錯誤。透過使用展開語法而不是 `push()`，我們可以避免改變陣列本身，這被認為是一種好的做法。
+   > [!NOTE]
+   > 陣列（`Array`）有幾個可變的操作：[`push()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/push)、[`pop()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)、[`splice()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)、[`shift()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)、[`unshift()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)、[`reverse()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) 和 [`sort()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)。使用它們常會導致難以追蹤的副作用和錯誤。透過使用展開語法而不是 `push()`，我們可以避免改變陣列本身，這被認為是一種好的做法。
 
    更新你的 `addTodo()` 函式如下：
 
@@ -362,7 +366,8 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
    }
    ```
 
-   > **備註：** 如你所見，反應性陳述不僅限於單行。以下程式碼也有作用，但可讀性較差：`$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
+   > [!NOTE]
+   > 如你所見，反應性陳述不僅限於單行。以下程式碼也有作用，但可讀性較差：`$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
 
 2. Svelte 是如何做到這一點的？編譯器會解析整個反應性陳述並檢測到它依賴於 `totalTodos` 變數和 `todos` 陣列。所以每當它們中任何一個被修改時，都會重新評估程式碼並相應地更新 `newTodoId`。
 
@@ -421,7 +426,8 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
 
    我們透過將 `btn__primary` 類別套用於過濾器按鈕來顯示目前使用中的過濾器。為了有條件地將樣式類別套用於元素上，我們使用 `class:name={value}` 指令。如果數值表達式的計算結果為真，則類別名稱將會被套用。你可以將許多不同條件的指令塞到同一個元素上。所以當我們寫為 `class:btn__primary={filter === 'all'}` 時，假如過濾器（filter）變數等於 all，Svelte 將會套用 `btn__primary` 類別。
 
-   > **備註：** Svelte 提供了一個便利的捷徑，允許我們在類別與變數名稱相同時，可以將 `<div class:active={active}>` 縮短為 `<div class:active>`。
+   > [!NOTE]
+   > Svelte 提供了一個便利的捷徑，允許我們在類別與變數名稱相同時，可以將 `<div class:active={active}>` 縮短為 `<div class:active>`。
 
    `aria-pressed={filter === 'all'}` 也是類似的情況：當在大括號之間被傳入的 JavaScript 表達式的計算結果為真時，`aria-pressed` 屬性將被加入到按鈕上。
 
@@ -438,7 +444,8 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
 
    在分析我們的程式碼後，Svelte 檢測到我們的 `filterTodos()` 函式依賴於變數 `filter` 和 `todos`。而就像嵌入在標記中的任何其它動態表達式一樣，每當這些依賴發生變化時，DOM 都會相應地更新。所以每當 `filter` 或 `todos` 發生變化時，`filterTodos()` 函式將會重新評估並更新迴圈內的項目。
 
-> **備註：** 反應性有時會很棘手。Svelte 將 `filter` 識別為依賴，是因為我們在 `filterTodos(filter, todo)` 表達式中參考它。而 `filter` 是一個頂層變數，所以我們可能會想把它從輔助函式參數（params）中刪除，然後像這樣呼叫它：`filterTodos(todo)`。這雖會起作用，但現在 Svelte 會無法發現 `{#each filterTodos(todos) }` 依賴於 `filter` 並且當過濾器變更時，過濾完的待辦事項清單不會再被更新。切記 Svelte 會分析我們的程式碼以找出依賴關係，所以最好明確解釋它，而不是依賴於頂層變數的可見性。此外，讓我們的程式碼清晰並明確地解釋它正在使用的資訊是一個很好的做法。
+> [!NOTE]
+> 反應性有時會很棘手。Svelte 將 `filter` 識別為依賴，是因為我們在 `filterTodos(filter, todo)` 表達式中參考它。而 `filter` 是一個頂層變數，所以我們可能會想把它從輔助函式參數（params）中刪除，然後像這樣呼叫它：`filterTodos(todo)`。這雖會起作用，但現在 Svelte 會無法發現 `{#each filterTodos(todos) }` 依賴於 `filter` 並且當過濾器變更時，過濾完的待辦事項清單不會再被更新。切記 Svelte 會分析我們的程式碼以找出依賴關係，所以最好明確解釋它，而不是依賴於頂層變數的可見性。此外，讓我們的程式碼清晰並明確地解釋它正在使用的資訊是一個很好的做法。
 
 ## 到目前為止的程式碼
 

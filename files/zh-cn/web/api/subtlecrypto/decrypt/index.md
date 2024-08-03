@@ -48,7 +48,8 @@ decrypt(algorithm, key, data)
 
 ## 示例
 
-> **备注：** 你可以在 GitHub 上[尝试这个可用的示例](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html)。
+> [!NOTE]
+> 你可以在 GitHub 上[尝试这个可用的示例](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html)。
 
 ### RSA-OAEP
 

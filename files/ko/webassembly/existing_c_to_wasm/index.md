@@ -38,7 +38,8 @@ $ emcc -O3 -s WASM=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' \
     libwebp/src/{dec,dsp,demux,enc,mux,utils}/*.c
 ```
 
-> **참고:** 이 전략은 모든 C 프로젝트에서 작동하지 않습니다. 많은 프로젝트는 컴파일하기 전에 시스템 특정 코드를 생성하기 위해 autoconf / automake를 사용합니다. Emscripten은 `emconfigure`와 `emmake`를 제공하여 이 명령을 랩핑하고 적절한 매개 변수를 주입합니다. [Emscripten documentation](https://kripken.github.io/emscripten-site/docs/compiling/Building-Projects.html)에서 자세한 내용을 찾을 수 있습니다.
+> [!NOTE]
+> 이 전략은 모든 C 프로젝트에서 작동하지 않습니다. 많은 프로젝트는 컴파일하기 전에 시스템 특정 코드를 생성하기 위해 autoconf / automake를 사용합니다. Emscripten은 `emconfigure`와 `emmake`를 제공하여 이 명령을 랩핑하고 적절한 매개 변수를 주입합니다. [Emscripten documentation](https://kripken.github.io/emscripten-site/docs/compiling/Building-Projects.html)에서 자세한 내용을 찾을 수 있습니다.
 
 이제 새 모듈을 로드하기 위해 HTML과 JavaScript 만 있으면 됩니다.
 

@@ -3,6 +3,8 @@ title: How do you upload files to a web server?
 slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 본 글은 어떻게 {{Glossary("FTP")}} 도구를 사용하여 사이트를 발행(publish) 할 수 있는지를 다루고 있습니다.
 
 <table class="learn-box standard-table">

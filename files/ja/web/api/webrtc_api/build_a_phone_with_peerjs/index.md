@@ -24,7 +24,8 @@ WebRTC の主な課題の 1 つが、使用したり開発したりするのが�
 
 始める前に、 [node](https://nodejs.org/en/download/) と [Yarn](https://classic.yarnpkg.com/en/docs/install) がインストールされていることを確認してください（後の記事の説明では Yarn を想定していますが、推奨するなら [npm](https://docs.npmjs.com/getting-started/) や他のマネージャを使用するのも自由です）。
 
-> **メモ:** 手順を追うほうが学習しやすいという方には、この[コードによるチュートリアル](https://github.com/SamsungInternet/WebPhone/tree/master/tutorial)も提供していますので、代わりに使用してください。
+> [!NOTE]
+> 手順を追うほうが学習しやすいという方には、この[コードによるチュートリアル](https://github.com/SamsungInternet/WebPhone/tree/master/tutorial)も提供していますので、代わりに使用してください。
 
 ### 目次
 

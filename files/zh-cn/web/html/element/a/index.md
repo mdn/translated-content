@@ -75,7 +75,8 @@ slug: Web/HTML/Element/a
     - `_parent`：当前浏览环境的父级浏览上下文。如果没有父级框架，行为与 `_self` 相同。
     - `_top`：最顶级的浏览上下文（当前浏览上下文中最“高”的祖先）。如果没有祖先，行为与 `_self` 相同。
 
-      > **备注：** 在 `<a>` 元素上使用 `target="_blank"` 隐式提供了与使用 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Attributes/rel/noopener) 相同的 `rel` 行为，即不会设置 `window.opener`。
+      > [!NOTE]
+      > 在 `<a>` 元素上使用 `target="_blank"` 隐式提供了与使用 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Attributes/rel/noopener) 相同的 `rel` 行为，即不会设置 `window.opener`。
 
 - `type`
   - : 该属性指定在一个 {{Glossary("MIME type","MIME 类型")}}链接目标的形式的媒体类型。没有内置的功能。
@@ -86,7 +87,8 @@ slug: Web/HTML/Element/a
 
   - : 此属性定义链接资源的{{Glossary("character encoding","字符编码")}}。
 
-    > **备注：** 该属性已作废，**不应使用**。请在链接的 URL 上使用 HTTP {{HTTPHeader("Content-Type")}} 标头。
+    > [!NOTE]
+    > 该属性已作废，**不应使用**。请在链接的 URL 上使用 HTTP {{HTTPHeader("Content-Type")}} 标头。
 
 - `coords` {{Deprecated_Inline}}
   - : 与 [`shape` 属性](#shape)一同使用，以逗号分隔的坐标列表。
@@ -94,7 +96,8 @@ slug: Web/HTML/Element/a
 
   - : 在定义一个可能的目标位置时曾经是必需的。在 HTML 4.01 规范中，`<a>` 元素可以同时使用 `id` 和 `name`，只要它们有相同的值。
 
-    > **备注：** 使用全局属性 [`id`](/zh-CN/docs/HTML/Global_attributes#id) 来代替。
+    > [!NOTE]
+    > 使用全局属性 [`id`](/zh-CN/docs/HTML/Global_attributes#id) 来代替。
 
 - `rev` {{Deprecated_Inline}}
   - : 指定一个反向链接；与 [`rel` 属性](#rel)作用相反。因为非常混乱而被废弃。
@@ -102,7 +105,8 @@ slug: Web/HTML/Element/a
 
   - : 图像映射（image map）中超链接区域的形状。
 
-    > **备注：** 使用 {{HTMLElement("area")}} 元素来代替图像映射。
+    > [!NOTE]
+    > 使用 {{HTMLElement("area")}} 元素来代替图像映射。
 
 ## 示例
 

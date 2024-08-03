@@ -28,7 +28,8 @@ slug: Learn/Server-side/Express_Nodejs/forms
 
 此教程將展示上述的操作，如何在 Express 中實現。在此過程中，我們將擴展 LocalLibrary 網站，以允許用戶創建、編輯、和刪除圖書館中的項目。
 
-> **備註：** 我們還沒有考慮如何將特定路由，限制為經過身份驗證或授權的用戶，因此在這個時間點，任何用戶都可以對數據庫進行更改。
+> [!NOTE]
+> 我們還沒有考慮如何將特定路由，限制為經過身份驗證或授權的用戶，因此在這個時間點，任何用戶都可以對數據庫進行更改。
 
 ### HTML 表單
 
@@ -103,7 +104,8 @@ npm install express-validator
 
 #### 使用 express-validator
 
-> **備註：** Github 上的 [express-validator](https://github.com/ctavan/express-validator#express-validator) 指南，提供了 API 的良好概述。我們建議你閱讀該內容，以了解其所有功能（包括創建自定義驗證程序）。下面我們只介紹一個對 LocalLibrary 有用的子集。
+> [!NOTE]
+> Github 上的 [express-validator](https://github.com/ctavan/express-validator#express-validator) 指南，提供了 API 的良好概述。我們建議你閱讀該內容，以了解其所有功能（包括創建自定義驗證程序）。下面我們只介紹一個對 LocalLibrary 有用的子集。
 
 要在我們的控制器中使用驗證器，我們必須從 'e**xpress-validator/check**'和'**express-validator/filter**'模塊中，導入我們想要使用的函數，如下所示：
 
@@ -130,7 +132,8 @@ const { sanitizeBody } = require("express-validator/filter");
       .isAlpha().withMessage('Name must be alphabet letters.'),
   ```
 
-  > **備註：** 你還可以添加內聯清理器，如`trim()`，如上所示。但是，此處應用清理器，僅適用於驗證步驟。如果要對最終輸出進行消毒，則需要使用單獨的清理器方法，如下所示。
+  > [!NOTE]
+  > 你還可以添加內聯清理器，如`trim()`，如上所示。但是，此處應用清理器，僅適用於驗證步驟。如果要對最終輸出進行消毒，則需要使用單獨的清理器方法，如下所示。
 
 - [`sanitizeBody(fields)`](https://github.com/ctavan/express-validator#sanitizebodyfields): 指定一個正文要清理的字段。然後將清理操作，以菊花鏈形式連接到此方法。例如，下面的 `escape()`清理操作，會從名稱變量中，刪除可能在 JavaScript 跨站點腳本攻擊中使用的 HTML 字符。
 
@@ -174,7 +177,8 @@ const { sanitizeBody } = require("express-validator/filter");
 - 使用已存在的對象創建對象（因此用戶在嘗試創建任何 `Book`對象之前，必須創建任何所需的 `Author`和 `Genre`實例）。
 - 如果對象未被其他對象引用，則刪除該對象（例如，在刪除所有關聯的 `BookInstance`對象之前，你將無法刪除該書）。
 
-> **備註：** 更「牢固」的實現，可能允許你在創建新對象時，創建依賴對象，並隨時刪除任何對象（例如，通過刪除依賴對象，或從數據庫中，刪除對已刪除對象的引用） 。
+> [!NOTE]
+> 更「牢固」的實現，可能允許你在創建新對象時，創建依賴對象，並隨時刪除任何對象（例如，通過刪除依賴對象，或從數據庫中，刪除對已刪除對象的引用） 。
 
 ### 路由
 

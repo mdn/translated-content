@@ -15,7 +15,8 @@ l10n:
 
 このプロジェクトは、行列操作を行うために [glMatrix](https://glmatrix.net/) ライブラリーを使用しますので、プロジェクトのインクルードする必要があります。 CDN からコピーを読み込みます。
 
-> **メモ:** "index.html" を更新すると、次のようになります。
+> [!NOTE]
+> "index.html" を更新すると、次のようになります。
 
 ```html
 <!doctype html>
@@ -60,7 +61,8 @@ WebGL コンテンツを描画するときに実行される 2 つのシェー�
 
 以下の頂点シェーダーは、 `aVertexPosition` と呼ばれる定義した属性から頂点の位置の値を受け取ります。次に、その位置に `uProjectionMatrix` （投影行列）および `uModelViewMatrix` モデルビュー行列）という 2 つの 4 x 4 行列を乗算します。結果は `gl_Position` に設定されます。投影行列およびその他の行列の詳細については、[この記事が役立つ場合があります](https://webglfundamentals.org/webgl/lessons/ja/webgl-3d-perspective.html)。
 
-> **メモ:** このコードを `main()` 関数に追加してください。
+> [!NOTE]
+> このコードを `main()` 関数に追加してください。
 
 ```js
 // 頂点シェーダーのプログラム
@@ -84,7 +86,8 @@ const vsSource = `
 
 この場合、照明を使用せずに白い正方形を描画するだけなので、毎回単純に白を返します。
 
-> **メモ:** このコードを `main()` 関数に追加してください。
+> [!NOTE]
+> このコードを `main()` 関数に追加してください。
 
 ```js
 const fsSource = `
@@ -98,7 +101,8 @@ const fsSource = `
 
 2 つのシェーダーを定義したので、それらを WebGL に渡してコンパイルし、リンクする必要があります。以下のコードは `loadShader()` を呼び出して 2 つのシェーダーを作成し、シェーダーの種類とソースを渡します。次にプログラムを作成し、シェーダーを接続してそれらをリンクします。コンパイルまたはリンクが失敗した場合、コードはアラートを表示します。
 
-> **メモ:** これらの 2 つの関数を "webgl-demo.js" スクリプトに追加してください。
+> [!NOTE]
+> これらの 2 つの関数を "webgl-demo.js" スクリプトに追加してください。
 
 ```js
 //
@@ -168,7 +172,8 @@ function loadShader(gl, type, source) {
 4. シェーダーのコンパイルが成功したか確かめるため、シェーダーの引数である `gl.COMPILE_STATUS` をチェックします。この引数を得るために {{domxref("WebGLRenderingContext.getShaderParameter", "gl.getShaderParameter()")}} を呼び出し、シェーダーとチェックしたい引数の名前 (`gl.COMPILE_STATUS`) を指定します。もし `false` ならばシェーダーがコンパイルに失敗したということであり、 {{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}} を用いてコンパイラから得たログと共にアラートを表示します。そしてシェーダーを削除し、シェーダーの読み込みに失敗したことを示すため `null` を返します。
 5. シェーダーのコンパイルに成功した場合、コンパイルされたシェーダーを呼び出し元に返します。
 
-> **メモ:** このコードを `main()` 関数に追加してください。
+> [!NOTE]
+> このコードを `main()` 関数に追加してください。
 
 ```js
 // シェーダープログラムを初期化する。ここで頂点への
@@ -178,7 +183,8 @@ const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
 
 シェーダープログラムを作成した後、 WebGL が入力に割り当てた位置を調べる必要があります。この場合、 1 つの属性と 2 つのユニフォームがあります。属性はバッファーから値を受け取ります。頂点シェーダーは実行される度にその属性に割り当てられたバッファーから次の値を受け取ります。[ユニフォーム](/ja/docs/Web/API/WebGL_API/Data#uniforms)は JavaScript のグローバル変数に似ており、シェーダーのどの実行時においても値は不変です。属性とユニフォームの位置は、単一のシェーダープログラムに固有のものなので、それらをまとめて保存して、簡単に受け渡しできるようにします。
 
-> **メモ:** このコードを `main()` 関数に追加してください。
+> [!NOTE]
+> このコードを `main()` 関数に追加してください。
 
 ```js
 // シェーダープログラムを使用するために必要な情報をすべて収集する。
@@ -202,7 +208,8 @@ const programInfo = {
 
 これを行うのに `initBuffers()` 関数を使用しますが、これは別な [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)に実装します。より高度な WebGL の概念に踏み込むにつれて、この操作はより多くの（そしてより複雑な） 3D オブジェクトを作成するために拡張していきます。
 
-> **メモ:** "init-buffers.js" という新しいファイルを作成し、以下の内容にしてください。
+> [!NOTE]
+> "init-buffers.js" という新しいファイルを作成し、以下の内容にしてください。
 
 ```js
 function initBuffers(gl) {
@@ -243,7 +250,8 @@ export { initBuffers };
 
 シェーダーが確立され、位置が参照され、正方形の平面の頂点位置がバッファーに格納されたら、実際にシーンをレンダリングすることができます。これは `drawScene()` 関数で行いますが、これも別の JavaScript モジュールで実装します。
 
-> **メモ:** "draw-scene.js" という新しいファイルを作成し、以下の内容にしてください。
+> [!NOTE]
+> "draw-scene.js" という新しいファイルを作成し、以下の内容にしてください。
 
 ```js
 function drawScene(gl, programInfo, buffers) {
@@ -339,14 +347,16 @@ export { drawScene };
 
 最後に、 `initBuffers()` と `drawScene()` を呼び出してみましょう。
 
-> **メモ:** このコードを "webgl-demo.js" ファイルの先頭に追加してください。
+> [!NOTE]
+> このコードを "webgl-demo.js" ファイルの先頭に追加してください。
 
 ```js
 import { initBuffers } from "./init-buffers.js";
 import { drawScene } from "./draw-scene.js";
 ```
 
-> **メモ:** このコードを `main()` 関数の末尾に追加してください。
+> [!NOTE]
+> このコードを `main()` 関数の末尾に追加してください。
 
 ```js
 // ここでは、これから描画するすべてのオブジェクトを

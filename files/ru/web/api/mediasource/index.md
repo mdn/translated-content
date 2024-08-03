@@ -101,7 +101,7 @@ function fetchAB(url, cb) {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("SourceBuffer")}}
 - {{domxref("SourceBufferList")}}

@@ -72,7 +72,7 @@ loop(0);
 
 Для получения дополнительной информации смотрите [InternalError: too much recursion.](/ru/docs/Web/JavaScript/Reference/Errors/Too_much_recursion)
 
-## Specifications
+## Спецификации
 
 Не является частью какого-либо стандарта.
 
@@ -80,7 +80,7 @@ loop(0);
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("Error")}}
 - [InternalError: too much recursion](/ru/docs/Web/JavaScript/Reference/Errors/Too_much_recursion)

@@ -21,7 +21,8 @@ mutationRecords = mutationObserver.takeRecords()
 
 返回一个{{domxref("MutationRecord")}} 对象列表，每个对象都描述了应用于 DOM 树某部分的一次改动。
 
-> **备注：** 调用 `takeRecords()` 后，已发生但未传递给回调的变更队列将保留为空。
+> [!NOTE]
+> 调用 `takeRecords()` 后，已发生但未传递给回调的变更队列将保留为空。
 
 ## 示例
 

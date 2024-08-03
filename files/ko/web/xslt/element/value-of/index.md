@@ -3,7 +3,7 @@ title: value-of
 slug: Web/XSLT/Element/value-of
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:value-of>` 요소는 XPath 식을 평가하여 그것을 문자열로 바꾸고 문자열을 결과 트리에 씁니다.
 

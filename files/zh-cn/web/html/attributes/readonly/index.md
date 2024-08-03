@@ -19,7 +19,8 @@ l10n:
 
 该属性不支持 {{HTMLElement("select")}} 或已不可变的 input 类型，也与之无关，如 `{{HTMLElement("input/checkbox", "checkbox")}}`、`{{HTMLElement("input/radio", "radio")}}` 或根据定义不能以值开头的 input 类型，如 `{{HTMLElement("input/file", "file")}}` input 类型。`{{HTMLElement("input/range", "range")}}` 和 `{{HTMLElement("input/color", "color")}}` 都有默认值。`{{HTMLElement("input/hidden", "hidden")}}` input 类型也不支持该属性，因为用户不可能填写隐藏的表单。也不支持任何按钮类型，包括 `image`。
 
-> **备注：** 只有文本控件可以设置为只读，因为对于其他控件（如复选框和按钮）来说，只读和禁用之间没有任何有用的区别，所以 `readonly` 属性并不适用。
+> [!NOTE]
+> 只有文本控件可以设置为只读，因为对于其他控件（如复选框和按钮）来说，只读和禁用之间没有任何有用的区别，所以 `readonly` 属性并不适用。
 
 当输入具有 `readonly` 属性时，{{cssxref(":read-only")}} 伪类也适用于该输入。反之，支持 `readonly` 属性但未设置该属性的输入将匹配 {{cssxref(":read-write")}} 伪类。
 

@@ -78,7 +78,7 @@ form {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{ Cssxref("width") }}, {{ Cssxref("max-width") }}
 - [Блочная модель](/ru/docs/CSS/box_model), {{ Cssxref("box-sizing") }}

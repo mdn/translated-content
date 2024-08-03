@@ -3,26 +3,24 @@ title: <hgroup>
 slug: Web/HTML/Element/hgroup
 ---
 
-{{HTMLSidebar}}{{seeCompatTable}}
+{{HTMLSidebar}}
 
-> **Примечание:** Этот элемент был удалён из HTML5 (W3C) спецификации , но до сих пор остаётся в спецификации WHATWG. Он частично встроен в большинство браузеров, хотя бы поэтому вряд ли уйдёт. Поскольку схематический алгоритм не реализован ни в одном браузере, семантика тега `<hgroup>` на практике реализована только теоретически. Спецификация HTML5 (W3C) даёт совет как обозначать [подзаголовки, альтернативные заголовки и слоганы](http://www.w3.org/TR/html5/common-idioms.html#sub-head).
+HTML-элемент **`<hgroup>`** представляет заголовок и связанное с ним содержимое. Он группирует одиночные элементы [`<h1>–<h6>`](/ru/docs/Web/HTML/Element/Heading_Elements) в один или несколько [`<p>`](/ru/docs/Web/HTML/Element/p).
 
-HTML \<hgroup> Элемент (HTML Headings Group Element - Элемент Группы Заголовков HTML) представляет заголовок раздела. Он определяет один заголовок, который участвует в схеме документа как заголовок явно или неявно заданного раздела, к которому он принадлежит.
-
-Собственно текст для схематического алгоритма - это текст первого элемента заголовка HTML наивысшего ранга (т. Е. Первый {{HTMLElement ("h1")}}, {{HTMLElement ("h2")}}, {{HTMLElement (" h3 ")}}, {{HTMLElement (" h4 ")}}, {{HTMLElement (" h5 ")}} или {{HTMLElement (" h6 ")}} с наименьшим числом потомков), а rank - уровень этого элемента заголовка HTML.
-
-Поэтому этот элемент группирует несколько заголовков, внося лишь основной текст в план документа. Он позволяет связывать вторичные заголовки, такие как подзаголовки, альтернативные заголовки или даже теги, с основным заголовком, без загрязнения структуры документа.
-
-| Категория информации      | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), heading content, palpable content.                                                            |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Permitted content         | One or more {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, and/or {{HTMLElement("h6")}}. |
-| Tag omission              | {{no_tag_omission}}                                                                                                                                          |
-| Permitted parent elements | Any element that accepts [flow content](/ru/docs/HTML/Content_categories#Flow_content).                                                                      |
-| DOM interface             | {{domxref("HTMLElement")}}                                                                                                                                   |
+{{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
 
 ## Атрибуты
 
-This element only includes the [global attributes](/ru/docs/HTML/Global_attributes).
+Этот элемент поддерживает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+
+## Техническая сводка
+
+| Категория информации      | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), heading content, palpable content.                                                        |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Permitted content         | One or more {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, and/or {{HTMLElement("h6")}}. |
+| Tag omission              |                                                                                                                                                              |
+| Permitted parent elements | Any element that accepts [flow content](/ru/docs/Web/HTML/Content_categories#flow_content).                                                                  |
+| DOM interface             | {{domxref("HTMLElement")}}                                                                                                                                   |
 
 ## Примеры
 
@@ -32,6 +30,10 @@ This element only includes the [global attributes](/ru/docs/HTML/Global_attribut
   <h2>Вторичный заголовок</h2>
 </hgroup>
 ```
+
+## Спецификации
+
+{{Specifications}}
 
 ## Совместимость с браузерами
 

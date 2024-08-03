@@ -3,7 +3,7 @@ title: Заливка и обводка
 slug: Web/SVG/Tutorial/Fills_and_Strokes
 ---
 
-{{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
 
 Есть несколько способов раскрасить фигуры SVG (в т.ч. с указанием атрибутов объекта), используя инлайн-CSS, встроенную CSS-секцию, или внешний файл CSS. Большая часть SVG, которую вы встретите в интернете, использует встроенный CSS, однако преимущества и недостатки есть у каждого типа.
 

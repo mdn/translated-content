@@ -1,6 +1,8 @@
 ---
 title: <frequency>
 slug: Web/CSS/frequency
+l10n:
+  sourceCommit: 66944f622b6b51bc9c24bebbbea242138d910600
 ---
 
 {{CSSRef}}
@@ -22,7 +24,7 @@ slug: Web/CSS/frequency
 
 ## 例
 
-### 有効な周波数の値
+有効な周波数の値:
 
 ```plain example-good
 12Hz     正の整数
@@ -32,7 +34,7 @@ slug: Web/CSS/frequency
 -0kHz    先行する - のあるゼロと単位
 ```
 
-### 無効な周波数の値
+無効な周波数の値:
 
 ```plain example-bad
 12.0     これは <number> であり、<frequency> ではありません。単位が必須です。
@@ -43,8 +45,6 @@ slug: Web/CSS/frequency
 ## 仕様書
 
 {{Specifications}}
-
-> **メモ:** このデータ型は初め、 [CSS Level 2](https://www.w3.org/TR/CSS2/) の現在は廃止された [aural](/ja/docs/Web/CSS/@media/aural) [メディア種別](/docs/Web/CSS/@media#メディア種別)で、音声の高さを定義するために導入されました。現時点ではこのデータ型を使う CSS プロパティはありませんが、 CSS 3 で `<frequency>` データ型が再導入されました。
 
 ## ブラウザーの互換性
 

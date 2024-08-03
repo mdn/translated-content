@@ -3,7 +3,7 @@ title: Element.tagName
 slug: Web/API/Element/tagName
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
 ## Описание
 

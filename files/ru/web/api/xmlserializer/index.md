@@ -3,6 +3,8 @@ title: XMLSerializer
 slug: Web/API/XMLSerializer
 ---
 
+{{APIRef("XMLSerializer")}}
+
 `XMLSerializer` может быть использован для конвертации веток DOM-дерева или дерева целиком в текст. `XMLSerializer` доступен непривилегированным скриптам.
 
 Для получения более подробной информации об `XMLSerializer` в расширениях для браузера Firefox, пожалуйста обратитесь к документации [`nsIDOMSerializer`](/ru/docs/nsIDOMSerializer).

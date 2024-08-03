@@ -42,7 +42,8 @@ _親インターフェイスである {{domxref("AudioScheduledSourceNode")}} �
 
 _親インターフェイスである {{domxref("AudioScheduledSourceNode")}} からイベントを継承しています。_
 
-> **メモ:** 一部のブラウザーでは、このイベントの実装は {{domxref("AudioScheduledSourceNode")}} インターフェイスの一部となっています。
+> [!NOTE]
+> 一部のブラウザーでは、このイベントの実装は {{domxref("AudioScheduledSourceNode")}} インターフェイスの一部となっています。
 
 - {{domxref("AudioScheduledSourceNode.ended_event","ended")}}
   - : {{domxref('ConstantSourceNode')}} データの再生が停止するたびに発生します。
@@ -51,7 +52,8 @@ _親インターフェイスである {{domxref("AudioScheduledSourceNode")}} �
 
 _親インターフェイスである {{domxref("AudioScheduledSourceNode")}} からメソッドを継承しています。_
 
-> **メモ:** 一部のブラウザーでは、これらのメソッドの実装は {{domxref("AudioScheduledSourceNode")}} インターフェイスの一部となっています。
+> [!NOTE]
+> 一部のブラウザーでは、これらのメソッドの実装は {{domxref("AudioScheduledSourceNode")}} インターフェイスの一部となっています。
 
 - {{domxref("AudioScheduledSourceNode.start", "start()")}}
   - : 正確な時刻に音を再生するようにスケジュールします。

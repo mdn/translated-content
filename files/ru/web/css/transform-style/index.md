@@ -37,7 +37,7 @@ transform-style: unset;
 
 {{csssyntax}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -45,6 +45,6 @@ transform-style: unset;
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Using CSS Transforms](/ru/docs/CSS/Using_CSS_transforms)
