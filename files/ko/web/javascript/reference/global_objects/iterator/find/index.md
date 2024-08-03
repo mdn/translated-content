@@ -18,7 +18,7 @@ find(callbackFn)
 ### 매개변수
 
 - `callbackFn`
-  - : 반복자에 의해 생성된 각 요소에 대해 실행될 함수. 일치하는 요소를 찾으면 반드시 [참 같은](/en-US/docs/Glossary/Truthy) 값을 반환해야 합니다. 그렇지 않으면 [거짓 같은](/en-US/docs/Glossary/Falsy) 값을 반환해야 합니다. 해당 함수는 다음과 같은 인자와 함께 호출됩니다.
+  - : 반복자에 의해 생성된 각 요소에 대해 실행될 함수. 일치하는 요소를 찾으면 반드시 [참 같은](/ko/docs/Glossary/Truthy) 값을 반환해야 합니다. 그렇지 않으면 [거짓 같은](/ko/docs/Glossary/Falsy) 값을 반환해야 합니다. 해당 함수는 다음과 같은 인자와 함께 호출됩니다.
     - `element`
       - : 처리 중인 현재 요소.
     - `index`
