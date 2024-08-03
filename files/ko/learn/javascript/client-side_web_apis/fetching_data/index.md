@@ -90,7 +90,7 @@ function updateDisplay(verse) {
 }
 ```
 
-나중에 필요하므로 로드할 텍스트 파일을 가리키는 상대적인 URL을 구성하는 것으로 시작합니다. {{htmlelement("select")}} 요소의 값은 선택한 {{htmlelement("option")}} 내부의 텍스트와 동일합니다(value 속성에 다른 값을 지정하지 않는 한). 예를 들어 "Verse 1"입니다. 해당 Verse 텍스트 파일은 "Verse 1.txt"이며 HTML 파일과 동일한 디렉토리에 있으므로 파일 이름만 있으면 됩니다.
+나중에 필요하므로 로드할 텍스트 파일을 가리키는 상대적인 URL을 구성하는 것으로 시작합니다. {{htmlelement("select")}} 요소의 값은 선택한 {{htmlelement("option")}} 내부의 텍스트와 동일합니다(value 속성에 다른 값을 지정하지 않는 한). 예를 들어 "Verse 1"입니다. 해당 Verse 텍스트 파일은 "Verse 1.txt"이며 HTML 파일과 동일한 디렉터리에 있으므로 파일 이름만 있으면 됩니다.
 
 그러나 웹 서버는 대소문자를 구분하는 경향이 있으며 파일 이름에 공백이 없습니다. "Verse 1"을 "verse1.txt"로 변환하려면 "V"를 소문자로 변환하고 공백을 제거한 다음 끝에 ".txt"를 추가해야 합니다. 이는 {{jsxref("String.replace", "replace()")}}, {{jsxref("String.toLowerCase", "toLowerCase()")}}, [template literal](/ko/docs/Web/JavaScript/Reference/Template_literals)로 수행할 수 있습니다. `updateDisplay()` 함수 내부에 다음 행을 추가합니다.
 
@@ -130,7 +130,7 @@ fetch(url)
 
 여기에 설명할 것이 꽤 많습니다.
 
-먼저, Fetch API의 진입점은 {{domxref("fetch", "fetch()")}}라는 글로벌 함수로, URL을 매개변수로 사용합니다(사용자 지정 설정에는 다른 선택적인 매개변수가 필요하지만 여기서는 사용하지 않습니다).
+먼저, Fetch API의 진입점은 {{domxref("Window", "fetch()")}}라는 글로벌 함수로, URL을 매개변수로 사용합니다(사용자 지정 설정에는 다른 선택적인 매개변수가 필요하지만 여기서는 사용하지 않습니다).
 
 다음으로 `fetch()`는 {{jsxref("Promise")}}를 반환하는 비동기 API입니다. 그것이 무엇인지 모른다면 [비동기 JavaScript](/ko/docs/Learn/JavaScript/Asynchronous) 모듈을 읽으세요. 특히 [promises](/ko/docs/Learn/JavaScript/Asynchronous/Promises)에 대한 문서를 읽고 여기로 오세요. 그 문서는 `fetch()` API에 대해서도 이야기하고 있습니다!
 
