@@ -1056,7 +1056,7 @@ WebM 于 2010 年首次推出，现已得到广泛支持。符合要求的 WebM 
 | [资源交换文件格式](https://learn.microsoft.com/zh-cn/windows/win32/xaudio2/resource-interchange-file-format--riff-)（WAV 使用）  | 定义了 RIFF 格式，WAVE 文件是 RIFF 的一种形式                                             |
 | [WebM 容器指南](https://www.webmproject.org/docs/container/)                                                                     | 为 WebM 适配 Matroska 的指南                                                              |
 | [Matroska 规范](https://matroska.org/technical/elements.html)                                                                    | 作为 WebM 基础的 Matroska 容器格式规范                                                    |
-| [WebM 字节流格式](https://w3c.github.io/media-source/webm-byte-stream-format.html)                                               | 与[媒体源扩展](/zh-CN/docs/Web/API/Media_Source_Extensions_API)一起使用的 WebM 字节流格式 |
+| [WebM 字节流格式](https://w3c.github.io/mse-byte-stream-format-webm/)                                                            | 与[媒体源扩展](/zh-CN/docs/Web/API/Media_Source_Extensions_API)一起使用的 WebM 字节流格式 |
 
 ## 浏览器兼容性
 

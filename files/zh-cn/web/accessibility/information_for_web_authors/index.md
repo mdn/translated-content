@@ -28,7 +28,7 @@ l10n:
 使用工具快速检查浏览器中的常见错误：
 
 - [HTML CodeSniffer](https://squizlabs.github.io/HTML_CodeSniffer/)
-- [aXe](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd?hl%3Dzh-CN)
+- [aXe](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
 - [Lighthouse Accessibility Audit](https://developer.chrome.com/docs/lighthouse/overview/)
 - [Accessibility Insights](https://accessibilityinsights.io/)
 - [<abbr>WAVE</abbr>](https://wave.webaim.org/extension/)
