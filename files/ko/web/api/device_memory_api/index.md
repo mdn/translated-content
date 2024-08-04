@@ -1,6 +1,11 @@
 ---
 title: Device Memory API
 slug: Web/API/Device_Memory_API
+browser-compat:
+  - api.Navigator.deviceMemory
+  - api.WorkerNavigator.deviceMemory
+  - http.headers.Device-Memory
+spec-urls: https://www.w3.org/TR/device-memory/
 l10n:
   sourceCommit: ca577adc00ddc882765c131739ad2ed25edd2285
 ---
