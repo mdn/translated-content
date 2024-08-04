@@ -108,7 +108,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 除了定义对象的属性外，你也可以通过 CSS 来定义`fill`和`stroke`。语法和在 html 里使用 CSS 一样，只不过你要把`background-color`、`border`改成`fill`和`stroke`。注意，不是所有的属性都能用 CSS 来设置。上色和填充的部分一般是可以用 CSS 来设置的，比如`fill`，`stroke`，`stroke-dasharray`等，但是不包括下面会提到的渐变和模式等功能。另外，宽、高，以及路径的 d 命令，都不能用 css 设置。判断它们能不能用 CSS 设置还是比较容易的。
 
-> **備註：** [SVG 规范](http://www.w3.org/TR/SVG/propidx.html)将属性区分成*properties*和*其他 attributes*，前者是可以用 CSS 设置的，后者不能。
+> **備註：** [SVG 规范](https://www.w3.org/TR/SVG/propidx.html)将属性区分成*properties*和*其他 attributes*，前者是可以用 CSS 设置的，后者不能。
 
 CSS 可以通过 style 属性插入到元素的行间:
 
@@ -144,7 +144,7 @@ CSS 可以通过 style 属性插入到元素的行间:
 
 你最好读一下 CSS 教程以便掌握它，一些可以在 html 里使用的 css，在 svg 里可能无法正常工作，比如 `before` 和 `after` 伪类。所以这里需要一点经验。
 
-你也可以定义一个外部的样式表，但是要符合 [normal XML-stylesheet syntax](http://www.w3.org/TR/xml-stylesheet/) 的 CSS 规则:
+你也可以定义一个外部的样式表，但是要符合 [normal XML-stylesheet syntax](https://www.w3.org/TR/xml-stylesheet/) 的 CSS 规则:
 
 ```xml
 <?xml version="1.0" standalone="no"?>

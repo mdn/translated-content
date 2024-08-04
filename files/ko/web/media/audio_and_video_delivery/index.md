@@ -36,7 +36,8 @@ l10n:
 
 위의 코드는 원활한 재생을 위해 가능한 한 많은 오디오를 미리 로드하는 오디오 플레이어를 생성합니다.
 
-> **참고:** 일부 모바일 브라우저에서는 `preload` 특성이 무시될 수 있습니다.
+> [!NOTE]
+> 일부 모바일 브라우저에서는 `preload` 특성이 무시될 수 있습니다.
 
 자세한 내용은 [크로스 브라우저 오디오 기본 사항 (HTML Audio 상세 정보)](/ko/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics#html5_audio_in_detail)을 참고하세요.
 
@@ -70,7 +71,8 @@ l10n:
 
 위의 코드는 640x480 픽셀 크기의 비디오 플레이어를 생성하여 비디오가 재생될 때까지 포스터 이미지를 표시합니다. 동영상이 자동 재생되지만, 기본적으로 음소거 되도록 지시합니다.
 
-> **참고:** 일부 모바일 브라우저에서는 `autoplay` 특성이 무시될 수 있습니다. 또한 자동 재생 기능은 오용될 경우 논란이 될 수 있습니다. 자동 재생을 현명하게 사용하는 방법을 배우려면 [미디어 및 Web Audio API 자동 재생 가이드](/ko/docs/Web/Media/Autoplay_guide)를 읽어보시기 바랍니다.
+> [!NOTE]
+> 일부 모바일 브라우저에서는 `autoplay` 특성이 무시될 수 있습니다. 또한 자동 재생 기능은 오용될 경우 논란이 될 수 있습니다. 자동 재생을 현명하게 사용하는 방법을 배우려면 [미디어 및 Web Audio API 자동 재생 가이드](/ko/docs/Web/Media/Autoplay_guide)를 읽어보시기 바랍니다.
 
 자세한 내용은 [\<video> 요소](/ko/docs/Web/HTML/Element/video) 및 [크로스 브라우저 비디오 플레이어 만들기](/ko/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player) 문서를 참고하세요.
 
@@ -91,7 +93,8 @@ myAudio.play();
 
 브라우저에서 지원하는 오디오 파일 유형에 따라 오디오 소스를 설정한 다음 재생 시간을 5초로 설정하고 재생을 시도합니다.
 
-> **참고:** 사용자가 시작한 이벤트가 발생하지 않는 한 대부분의 브라우저에서 재생이 무시됩니다.
+> [!NOTE]
+> 사용자가 시작한 이벤트가 발생하지 않는 한 대부분의 브라우저에서 재생이 무시됩니다.
 
 또한 {{ htmlelement("audio") }} 요소에 base64로 인코딩 된 WAV 파일을 공급하여 즉석에서 오디오를 생성할 수 있습니다.
 
@@ -242,7 +245,8 @@ EME의 주요 용도 중 하나는 브라우저에서 웹 기반 콘텐츠(특�
 
 적응형 스트리밍에 사용되는 주요 형식은 [HLS](/ko/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video#hls) 및 [MPEG-DASH](/ko/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video#mpeg-dash)가 있습니다. MSE는 DASH를 고려하여 설계되었습니다. MSE는 [ISOBMFF](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html) 및 [M2TS](https://en.wikipedia.org/wiki/M2ts)에 따라 바이트 스트림을 정의합니다(둘 다 DASH에서 지원되며, 후자는 HLS에서 지원됩니다). 일반적으로 표준에 관심이 있거나 유연성을 원하거나 대부분의 최신 브라우저를 지원하고자 한다면 DASH를 사용하는 것이 더 나을 것입니다.
 
-> **참고:** OSX Yosemite와 함께 출시될 예정인 최신 버전의 Safari에서 dash.js가 작동할 예정이지만 현재 Safari는 DASH를 지원하지 않습니다.
+> [!NOTE]
+> OSX Yosemite와 함께 출시될 예정인 최신 버전의 Safari에서 dash.js가 작동할 예정이지만 현재 Safari는 DASH를 지원하지 않습니다.
 
 또한 DASH는 미디어 파일을 사전 처리하거나 분할할 필요가 없는 간단한 온디맨드 프로필을 비롯한 다양한 프로필을 제공합니다. 또한 미디어를 HLS와 DASH 모두로 변환하는 클라우드 기반 서비스도 다수 있습니다.
 
@@ -523,7 +527,8 @@ lastsource.addEventListener(
 - [MediaRecorder API를 사용한 간편한 오디오 캡처](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
   - : MediaStream Recording API를 사용하여 미디어 스트림을 직접 녹화하는 방법에 대한 기본 사항을 설명합니다.
 
-> **참고:** Firefox OS 버전 1.3 이상은 스트리밍 동영상 전송을 위한 [RTSP](https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol) 프로토콜을 지원합니다. 이전 버전에 대한 폴백 솔루션은 `<video>`와 함께 Gecko에 적합한 형식(예: WebM)을 사용하여 폴백 콘텐츠를 제공하는 것입니다. 이에 대한 자세한 정보는 적절한 시점에 게시될 예정입니다.
+> [!NOTE]
+> Firefox OS 버전 1.3 이상은 스트리밍 동영상 전송을 위한 [RTSP](https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol) 프로토콜을 지원합니다. 이전 버전에 대한 폴백 솔루션은 `<video>`와 함께 Gecko에 적합한 형식(예: WebM)을 사용하여 폴백 콘텐츠를 제공하는 것입니다. 이에 대한 자세한 정보는 적절한 시점에 게시될 예정입니다.
 
 ## 참고서
 

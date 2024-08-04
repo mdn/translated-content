@@ -220,7 +220,7 @@ if ("Promise" in window) {
 
 ## 使用 XHR 載入圖片
 
-另一個使用 `Promise` and [`XMLHttpRequest`](/zh-TW/docs/Web/API/XMLHttpRequest) 來載入圖片的簡單例子可以在 MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/master/promises-test) 儲存庫找到。 你也可以[see it in action](https://mdn.github.io/js-examples/promises-test/)。每個步驟都附以註解，讓你能逐步遵隨 Promise 與 XHR 架構。
+另一個使用 `Promise` and [`XMLHttpRequest`](/zh-TW/docs/Web/API/XMLHttpRequest) 來載入圖片的簡單例子可以在 MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/main/promises-test) 儲存庫找到。 你也可以[see it in action](https://mdn.github.io/js-examples/promises-test/)。每個步驟都附以註解，讓你能逐步遵隨 Promise 與 XHR 架構。
 
 ## 規範
 
@@ -232,15 +232,8 @@ if ("Promise" in window) {
 
 ## 參見
 
-- [Using promises](/zh-TW/docs/Web/JavaScript/Guide/Using_promises)
-- [Promises/A+ specification](http://promisesaplus.com/)
-- [Venkatraman.R - JS Promise (Part 1, Basics)](https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53)
-- [Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js)](https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski)
-- [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
-- [Jake Archibald: JavaScript Promises: There and Back Again](http://www.html5rocks.com/en/tutorials/es6/promises/)
-- [Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Patterns in JavaScript](http://de.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)
-- [Matt Greer: JavaScript Promises ... In Wicked Detail](http://www.mattgreer.org/articles/promises-in-wicked-detail/)
-- [Forbes Lindesay: promisejs.org](https://www.promisejs.org/)
-- [Nolan Lawson: We have a problem with promises — Common mistakes with promises](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
-- [Promise polyfill](https://github.com/jakearchibald/es6-promise/)
-- [Udacity: JavaScript Promises](https://www.udacity.com/course/javascript-promises--ud898)
+- [`core-js` 中 `Promise` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-promise)
+- [使用 Promise](/zh-TW/docs/Web/JavaScript/Guide/Using_promises) 指南
+- [Promises/A+ 規範](https://promisesaplus.com/)
+- [JavaScript Promise：簡介](https://web.dev/articles/promises)，web.dev（2013）
+- [回呼、Promise 和協程：JavaScript 中的非同步程式設計模式](https://www.slideshare.net/slideshow/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript/9953720)，來自 Domenic Denicola 的幻燈片（2011）

@@ -26,7 +26,8 @@ someOtherNode.textContent = string;
 
 - 노드가 {{domxref("document")}} 또는 {{glossary("Doctype")}}이면 {{jsxref("null")}}을 반환합니다.
 
-  > **참고:** 전체 문서의 모든 텍스트와 CDATA 데이터를 얻으려면 `document.documentElement.textContent`를 사용하세요.
+  > [!NOTE]
+  > 전체 문서의 모든 텍스트와 CDATA 데이터를 얻으려면 `document.documentElement.textContent`를 사용하세요.
 
 - 노드가 [CDATA 구획](/ko/docs/Web/API/CDATASection), 주석, [처리 명령](/ko/docs/Web/API/ProcessingInstruction), [텍스트 노드](/ko/docs/Web/API/Text)면 노드 내의 텍스트, 즉 {{domxref("Node.nodeValue")}}를 반환합니다.
 - 다른 노드 유형에 대해서는 주석과 처리 명령을 제외한 모든 자식 노드의 `textContent`를 병합한 결과를 반환합니다. 자식이 없는 경우 빈 문자열입니다.

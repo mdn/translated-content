@@ -145,8 +145,8 @@ In addition, the search plugin service provides a logging mechanism that may be 
 
 ## 參考
 
-- [OpenSearch Documentation](http://opensearch.org/), [OpenSearch Documentation about the Url and Param element](https://www.opensearch.org/Specifications/OpenSearch/Extensions/Parameter/1.0)
+- [OpenSearch Documentation](https://opensearch.org/), [OpenSearch Documentation about the Url and Param element](https://www.opensearch.org/Specifications/OpenSearch/Extensions/Parameter/1.0)
 - imdb.com has a [working osd.xml](http://i.media-imdb.com/images/SFccbe1e4d909ef8b8077201c3c5aac349/imdbsearch.xml)
-- [`data:` URI scheme](http://en.wikipedia.org/wiki/Data:_URI_scheme)
-- [OpenSearch Plugin Generator](http://www.7is7.com/software/firefox/opensearch.html)
-- [Ready2Search](https://ready.to/search/en) - create OpenSearch plugins. [Customized Search through Ready2Search](https://ready.to/search/make/en_make_plugin.htm)
+- [`data:` URI scheme](https://en.wikipedia.org/wiki/Data_URI_scheme)
+- [OpenSearch Plugin Generator](https://7is7.com/software/firefox/opensearch.html)
+- [Ready2Search](https://ready.to/search/en/) - create OpenSearch plugins. [Customized Search through Ready2Search](https://ready.to/search/make/en_make_plugin.htm)

@@ -31,7 +31,7 @@ new Date(year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]]);
   - : 自世界標準時間（UTC） 1970 年 1 月 1 日 00:00:00 開始的毫秒整數（Integer）值（Unix 紀元；但要注意到大多 Unix 時間戳記是以秒而非毫秒為單位）。
 - `dateString`
 
-  - : 表示時間日期的字串。這個字串應該要能被 {{jsxref("Date.parse()")}} 方法解析（符合 [IETF-compliant RFC 2822 timestamps](http://tools.ietf.org/html/rfc2822#page-14) 及 [version of ISO8601](http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15) 格式要求).
+  - : 表示時間日期的字串。這個字串應該要能被 {{jsxref("Date.parse()")}} 方法解析（符合 [IETF-compliant RFC 2822 timestamps](https://datatracker.ietf.org/doc/html/rfc2822#page-14) 及 [version of ISO8601](https://262.ecma-international.org/5.1/#sec-15.9.1.15) 格式要求).
 
     > [!NOTE]
     > 由於各家瀏覽器有所不同且具有差異性，因此非常不鼓勵使用 Date 建構子（或 `Date.parse` 方法，它們是同等的）來解析時間日期字串。
@@ -181,7 +181,3 @@ yourFunctionReturn = printElapsedTime(yourFunction);
 ## 瀏覽器相容性
 
 {{Compat}}
-
-\[1] 一些瀏覽器在解析日期時間會發生問題： [3/14/2012 blog from danvk Comparing FF/IE/Chrome on Parsing Date Strings](http://dygraphs.com/date-formats.html)
-
-\[2] [ISO8601 Date Format is not supported](<https://msdn.microsoft.com/en-us//library/ie/ff743760(v=vs.94).aspx>) in Internet Explorer 8, and other version can have [issues when parsing dates](http://dygraphs.com/date-formats.html)
