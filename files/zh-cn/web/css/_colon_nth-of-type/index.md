@@ -7,7 +7,7 @@ slug: Web/CSS/:nth-of-type
 
 **`:nth-of-type()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)基于相同类型**（标签名称）**的兄弟元素中的位置来匹配元素。
 
-注意：当您使用其他非标签**`div、p....`**选择器时，浏览器会先行匹配选中的元素，然后解析元素的标签，最后通过标签所在父元素的位置进行匹配。（在下方示例底部有代码说明）
+注意：当你使用其他非标签**`div、p....`**选择器时，浏览器会先行匹配选中的元素，然后解析元素的标签，最后通过标签所在父元素的位置进行匹配。（在下方示例底部有代码说明）
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-of-type.html", "tabbed-shorter")}}
 
@@ -94,9 +94,9 @@ p.fancy:nth-of-type(2n + 1) {
 
 ```css
 <style>
-    .children:nth-of-type(2) {
-        background: blue;
-    }
+  .children:nth-of-type(2) {
+    background: blue;
+  }
 </style>
 ```
 
