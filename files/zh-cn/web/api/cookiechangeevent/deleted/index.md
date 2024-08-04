@@ -2,12 +2,14 @@
 title: CookieChangeEvent：deleted 属性
 slug: Web/API/CookieChangeEvent/deleted
 l10n:
-  sourceCommit: 08f7d7ef89c04b824fa246e6fd35d47aebef7b51
+  sourceCommit: de4bd74771b88bb6352c1136b608811edf24ffda
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}
 
 {{domxref("CookieChangeEvent")}} 接口的 **`deleted`** 只读属性返回已被给定 `CookieChangeEvent` 实例删除的 cookie 数组。
+
+请注意，这将包括那些创建的、过期时间在过去的 cookie，因为这些 cookie 会被立即删除。
 
 ## 值
 

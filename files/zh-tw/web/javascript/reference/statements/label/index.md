@@ -140,7 +140,7 @@ console.log("swap");
 
 ### 標記的函式宣告式
 
-從 ECMAScript 2015 開始，標準的函式宣告式現在對規範的 [Web 相容性附件](http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations)中的非嚴格程式碼進行了標準化。
+從 ECMAScript 2015 開始，標準的函式宣告式現在對規範的 [Web 相容性附件](https://262.ecma-international.org/6.0/#sec-labelled-function-declarations)中的非嚴格程式碼進行了標準化。
 
 ```js
 L: function F() {}

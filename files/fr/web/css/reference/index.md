@@ -96,7 +96,7 @@ Les combinateurs sont des sélecteurs qui établissent une relation entre deux s
 - [Pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) `::`
   - : Représente des entités qui ne sont pas incluses en HTML.
 
-> **Remarque :**
+> [!CALLOUT]
 >
 > See also [Selectors in the Selectors Level 4 specification](https://www.w3.org/TR/selectors/#overview).
 

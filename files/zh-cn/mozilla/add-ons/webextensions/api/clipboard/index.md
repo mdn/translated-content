@@ -28,4 +28,5 @@ WebExtension `clipboard` API 之所以存在，主要是因为标准剪贴板 AP
 
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API。

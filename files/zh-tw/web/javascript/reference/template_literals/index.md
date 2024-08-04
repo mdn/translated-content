@@ -199,7 +199,7 @@ latex`\unicode`;
 // SyntaxError: malformed Unicode character escape sequence
 ```
 
-Tagged template literals should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences are common. The ECMAScript proposal [Template Literal Revision](https://tc39.github.io/proposal-template-literal-revision/) (stage 4, to be integrated in the ECMAScript 2018 standard) removes the syntax restriction of ECMAScript escape sequences from tagged template literals.
+Tagged template literals should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences are common. The ECMAScript proposal [Template Literal Revision](https://tc39.es/proposal-template-literal-revision/) (stage 4, to be integrated in the ECMAScript 2018 standard) removes the syntax restriction of ECMAScript escape sequences from tagged template literals.
 
 However, illegal escape sequence must still be represented in the "cooked" representation. They will show up as {{jsxref("undefined")}} element in the "cooked" array:
 

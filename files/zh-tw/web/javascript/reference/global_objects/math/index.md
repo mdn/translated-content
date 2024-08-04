@@ -71,7 +71,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math
 - {{jsxref("Global_Objects/Math/floor", "Math.floor(x)")}}
   - : 回傳不大於 x 的最大整數值。
 - {{jsxref("Global_Objects/Math/fround", "Math.fround(x)")}}
-  - : Returns the nearest [single precision](http://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of a number.
+  - : Returns the nearest [single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of a number.
 - {{jsxref("Global_Objects/Math/hypot", "Math.hypot([x[, y[, …]]])")}}
   - : 回傳參數平方之和的平方根。
 - {{jsxref("Global_Objects/Math/imul", "Math.imul(x, y)")}}

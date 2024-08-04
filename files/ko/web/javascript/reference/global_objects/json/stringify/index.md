@@ -165,7 +165,8 @@ JSON.stringify({ x: obj }); // '{"x":"bar"}'
 
 In a case where you want to store an object created by your user and allowing it to be restored even after the browser has been closed, the following example is a model for the applicability of `JSON.stringify()`:
 
-> **경고:** Functions are not a valid JSON data type so they will not work. However, they can be displayed if first converted to a string (e.g. in the replacer), via the function's toString method. Also, some objects like {{jsxref("Date")}} will be a string after {{jsxref("JSON.parse()")}}.
+> [!WARNING]
+> Functions are not a valid JSON data type so they will not work. However, they can be displayed if first converted to a string (e.g. in the replacer), via the function's toString method. Also, some objects like {{jsxref("Date")}} will be a string after {{jsxref("JSON.parse()")}}.
 
 ```js
 // Creating an example of JSON
