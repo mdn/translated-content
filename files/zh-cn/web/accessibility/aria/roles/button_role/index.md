@@ -26,7 +26,7 @@ button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按�
 ```
 
 > [!NOTE]
-> 如果使用 `role="button"` 而不是语义化的 `<button>` 或 `<input type="button">` 你需要让这个元素可聚焦并定义 {{domxref("Element/click_event", "click")}} 和 {{domxref("Element/keydown_event", "keydown")}} 事件的事件处理器。这包括了对按下 <kbd>Enter</kbd> 和 <kbd>Space</kbd> 的事件的处理，以处理各种形式的用户输入。参见[官方的 WAI-ARIA 示例代码](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)。
+> 如果使用 `role="button"` 而不是语义化的 `<button>` 或 `<input type="button">` 你需要让这个元素可聚焦并定义 {{domxref("Element/click_event", "click")}} 和 {{domxref("Element/keydown_event", "keydown")}} 事件的事件处理器。这包括了对按下 <kbd>Enter</kbd> 和 <kbd>Space</kbd> 的事件的处理，以处理各种形式的用户输入。参见[官方的 WAI-ARIA 示例代码](https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/)。
 
 除了常见的按钮部件之外，使用非按钮元素创建切换按钮和菜单按钮时，应该使用 `role="button"`。
 
@@ -293,4 +293,4 @@ function toggleButton(element) {
 - [`aria-haspopup`](https://www.w3.org/TR/wai-aria-1.1/#aria-haspopup)
 - [HTML5 中强大的原生语义](https://html.spec.whatwg.org/multipage/dom.html#aria-usage-note)
 - [在 HTML 中使用 ARIA 的注意事项](https://www.w3.org/TR/aria-in-html/)
-- [官方 WAI-ARIA 示例代码](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)
+- [官方 WAI-ARIA 示例代码](https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/)

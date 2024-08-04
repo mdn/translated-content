@@ -1829,6 +1829,6 @@ let recorder = new MediaRecorder(sourceStream, options);
 - {{RFC(3839)}}：3GPP 多媒体文件的 MIME 类型注册
 - {{RFC(4381)}}：3GPP2 多媒体文件的 MIME 类型注册
 - {{RFC(4337)}}：MPEG-4 多媒体文件的 MIME 类型注册
-- [Opera 浏览器中的视频编解码器](https://dev.opera.com/articles/introduction-html5-video/#codecs--the-fly-in-the-ointment)
+- [Opera 浏览器中的视频编解码器](https://blogs.opera.com/news/#codecs--the-fly-in-the-ointment)
 - IE 浏览器中的[视频（video）](/zh-CN/docs/Web/API/HTMLVideoElement)和[音频（audio）](/zh-CN/docs/Web/HTML/Element/audio)编解码器
 - [Chrome 浏览器中的视频和音频解码器](https://www.chromium.org/audio-video/)

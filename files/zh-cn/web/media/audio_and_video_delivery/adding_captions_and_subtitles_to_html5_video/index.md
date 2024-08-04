@@ -304,7 +304,7 @@ WebVTT 的一个不太为人所知和支持的功能是通过 [CSS 扩展](https
 
 ## 浏览器兼容性
 
-[浏览器对 WebVTT 和 `<track>` 元素的支持](http://caniuse.com/webvtt)相当好，尽管有些浏览器在实现上略有不同。
+[浏览器对 WebVTT 和 `<track>` 元素的支持](https://caniuse.com/webvtt)相当好，尽管有些浏览器在实现上略有不同。
 
 ### Safari
 
