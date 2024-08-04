@@ -14,7 +14,11 @@ slug: Web/API/MediaStreamTrack
 - {{domxref("MediaStreamTrack.contentHint")}}
   - : 트랙 유형에 대한 힌트를 제공하는 문자열입니다. 웹 애플리케이션이 트랙의 처리 방식을 결정할 때 사용할 수 있습니다.
 - {{domxref("MediaStreamTrack.enabled")}}
-  - : 트랙을 활성화, 즉 미디어 출처 스트림의 렌더링을 허용하면 `true`이고 비활성화, 즉 미디어 소스 스트림 렌더링을 허용하지 않아 검은 화면과 조용함만 확인할 수 있으면 `false`인 속성입니다. 트랙의 연결이 끊긴 경우에도 값을 바꿀 수는 있으나 아무런 효과도 없습니다.> **참고:** 일반적인 "음소거" 기능은 `enabled`를 `false`로 바꿔서 구현할 수 있습니다. `muted` 속성은 기술적인 문제로 인해 미디어가 존재하지 않을 때를 나타냅니다.
+
+  - : 트랙을 활성화, 즉 미디어 출처 스트림의 렌더링을 허용하면 `true`이고 비활성화, 즉 미디어 소스 스트림 렌더링을 허용하지 않아 검은 화면과 조용함만 확인할 수 있으면 `false`인 속성입니다. 트랙의 연결이 끊긴 경우에도 값을 바꿀 수는 있으나 아무런 효과도 없습니다.
+    > [!NOTE]
+    > 일반적인 "음소거" 기능은 `enabled`를 `false`로 바꿔서 구현할 수 있습니다. `muted` 속성은 기술적인 문제로 인해 미디어가 존재하지 않을 때를 나타냅니다.
+
 - {{domxref("MediaStreamTrack.id")}} {{readonlyInline}}
   - : 트랙의 고유 식별자(GUID)를 담은 {{domxref("DOMString")}}을 반환합니다. 고유 식별자는 브라우저가 생성합니다.
 - {{domxref("MediaStreamTrack.isolated")}} {{ReadOnlyInline}}
@@ -24,7 +28,11 @@ slug: Web/API/MediaStreamTrack
 - {{domxref("MediaStreamTrack.label")}} {{readonlyInline}}
   - : 트랙 소스에 대해 사용자 에이전트가 할당한 식별자를 담은 {{domxref("DOMString")}}을 반환합니다. 식별자의 예시는 `"internal microphone"`입니다. 빈 문자열일 수 있으며, 연결된 소스가 없는 경우 계속 빈 문자열로 남아 있습니다. 트랙이 소스에서 분리되더라도 식별자는 변하지 않습니다.
 - {{domxref("MediaStreamTrack.muted")}} {{readonlyInline}}
-  - : 기술적인 문제로 인해 트랙이 미디어 데이터를 제공할 수 없음을 나타내는 불리언 값을 반환합니다.> **참고:** 일반적인 "음소거" 기능은 `enabled`를 `false`로 바꿔서 구현할 수 있으며, 음소거 해제는 `enabled`를 다시 `true`로 바꾸면 됩니다.
+
+  - : 기술적인 문제로 인해 트랙이 미디어 데이터를 제공할 수 없음을 나타내는 불리언 값을 반환합니다.
+    > [!NOTE]
+    > 일반적인 "음소거" 기능은 `enabled`를 `false`로 바꿔서 구현할 수 있으며, 음소거 해제는 `enabled`를 다시 `true`로 바꾸면 됩니다.
+
 - {{domxref("MediaStreamTrack.readonly")}} {{readonlyInline}}
   - : 읽기 전용 트랙(비디오 파일 소스, 설정을 바꿀 수 없는 카메라 등)인 경우 `true`를 반환합니다. 그 외의 경우 `false`를 반환합니다.
 - {{domxref("MediaStreamTrack.readyState")}} {{readonlyInline}}

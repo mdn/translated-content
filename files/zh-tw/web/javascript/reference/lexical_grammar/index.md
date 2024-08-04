@@ -11,24 +11,24 @@ slug: Web/JavaScript/Reference/Lexical_grammar
 
 控制字元是用來控制對文本的解釋，但無法被顯示出來。
 
-| 編碼位置 | 名稱           | 縮寫    | 說明                                                                                                                            |
-| -------- | -------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `U+200C` | 零寬不連字     | \<ZWNJ> | 放置在兩個字元之間來避免在某些語言中這兩個字元被當成連字 ([Wikipedia](http://en.wikipedia.org/wiki/Zero-width_non-joiner))      |
-| `U+200D` | 零寬連字       | \<ZWJ>  | 放置在兩個通常不會發生連字的字元中間在某些語言 來讓他們成為連字 ([Wikipedia](http://en.wikipedia.org/wiki/Zero-width_joiner))   |
-| `U+FEFF` | 位元組順序記號 | \<BOM>  | 出現在腳本的開頭，用來標記此腳本是否為 Unicode 還有文本的位元組順序 ([Wikipedia](http://en.wikipedia.org/wiki/Byte_order_mark)) |
+| 編碼位置 | 名稱           | 縮寫    | 說明                                                                                                                      |
+| -------- | -------------- | ------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `U+200C` | 零寬不連字     | \<ZWNJ> | 放置在兩個字元之間來避免在某些語言中這兩個字元被當成連字（[維基百科](https://zh.wikipedia.org/wiki/零宽不连字)）          |
+| `U+200D` | 零寬連字       | \<ZWJ>  | 放置在兩個通常不會發生連字的字元中間在某些語言 來讓他們成為連字（[維基百科](https://zh.wikipedia.org/wiki/零宽连字)）     |
+| `U+FEFF` | 位元組順序記號 | \<BOM>  | 出現在腳本的開頭，用來標記此腳本是否為 Unicode 還有文本的位元組順序（[維基百科](https://zh.wikipedia.org/wiki/端序記號)） |
 
 ## 空白字元
 
-空白字元提升了程式碼的可讀性也能將 tokens 分開。這些字元通常對程式的執行是不必要的。[壓縮源碼工具](http://en.wikipedia.org/wiki/Minification_%28programming%29)通常會移除不必要的空白來減少資料傳輸量。
+空白字元提升了程式碼的可讀性也能將 tokens 分開。這些字元通常對程式的執行是不必要的。[壓縮源碼工具](https://zh.wikipedia.org/wiki/極簡化)通常會移除不必要的空白來減少資料傳輸量。
 
-| 編碼位置 | 名稱                  | 縮寫    | 說明                                                                                                         | 跳脫字元 |
-| -------- | --------------------- | ------- | ------------------------------------------------------------------------------------------------------------ | -------- |
-| U+0009   | 定位字元              | \<HT>   | 橫向定位字元                                                                                                 | \t       |
-| U+000B   | 縱向定位字元          | \<VT>   | 縱向定位字元                                                                                                 | \v       |
-| U+000C   | 換頁字元              | \<FF>   | 控制換頁字元 ([Wikipedia](http://en.wikipedia.org/wiki/Page_break#Form_feed))                                | \f       |
-| U+0020   | 空格                  | \<SP>   | 一般的空白字元                                                                                               |          |
-| U+00A0   | 不中斷空格            | \<NBSP> | 一般的空白字元，但禁止自動換行或合併多個空白 ([Wikipedia](https://en.wikipedia.org/wiki/Non-breaking_space)) |          |
-| 其他     | 其他 Unicode 空白字元 | \<USP>  | [Wikipedia](http://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode)                          |          |
+| 編碼位置 | 名稱                  | 縮寫    | 說明                                                                                                 | 跳脫字元 |
+| -------- | --------------------- | ------- | ---------------------------------------------------------------------------------------------------- | -------- |
+| U+0009   | 定位字元              | \<HT>   | 橫向定位字元                                                                                         | \t       |
+| U+000B   | 縱向定位字元          | \<VT>   | 縱向定位字元                                                                                         | \v       |
+| U+000C   | 換頁字元              | \<FF>   | 控制換頁字元（[維基百科](https://en.wikipedia.org/wiki/Page_break#Form_feed)）                       | \f       |
+| U+0020   | 空格                  | \<SP>   | 一般的空白字元                                                                                       |          |
+| U+00A0   | 不中斷空格            | \<NBSP> | 一般的空白字元，但禁止自動換行或合併多個空白（[維基百科](https://zh.wikipedia.org/wiki/不换行空格)） |          |
+| 其他     | 其他 Unicode 空白字元 | \<USP>  | [維基百科](https://zh.wikipedia.org/wiki/空格#Unicode定義)                                           |          |
 
 ## 行終止字元
 
@@ -36,12 +36,12 @@ slug: Web/JavaScript/Reference/Lexical_grammar
 
 在 ECMAScript 中，只有以下的 Unicode 碼位被視為行終止字元，其他如 Next Line, NEL, U+0085 等的行終止字元被視為空白字元。
 
-| 編碼位置 | 名稱       | 縮寫  | 說明                                              | 跳脫字元 |
-| -------- | ---------- | ----- | ------------------------------------------------- | -------- |
-| U+000A   | 換行字元   | \<LF> | 在 UNIX 類的系統中的換行字元                      | \n       |
-| U+000D   | 歸位字元   | \<CR> | 在 Commodore 與早期的 Mac 系統中的換行字元        | \r       |
-| U+2028   | 行分隔字元 | \<LS> | [Wikipedia](http://en.wikipedia.org/wiki/Newline) |          |
-| U+2029   | 段分隔字元 | \<PS> | [Wikipedia](http://en.wikipedia.org/wiki/Newline) |          |
+| 編碼位置 | 名稱       | 縮寫  | 說明                                           | 跳脫字元 |
+| -------- | ---------- | ----- | ---------------------------------------------- | -------- |
+| U+000A   | 換行字元   | \<LF> | 在 UNIX 類的系統中的換行字元                   | \n       |
+| U+000D   | 歸位字元   | \<CR> | 在 Commodore 與早期的 Mac 系統中的換行字元     | \r       |
+| U+2028   | 行分隔字元 | \<LS> | [維基百科](https://zh.wikipedia.org/wiki/換行) |          |
+| U+2029   | 段分隔字元 | \<PS> | [維基百科](https://zh.wikipedia.org/wiki/換行) |          |
 
 ## 註解
 
@@ -363,7 +363,7 @@ tag `string text ${expression} string text`
 - `continue`, `break`, `throw`
 - `return`
 
-ECMAScript 規格闡明 [自動插入分號的三個規則](https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion)。
+ECMAScript 規格闡明 [自動插入分號的三個規則](https://tc39.es/ecma262/#sec-rules-of-automatic-semicolon-insertion)。
 
 1\. 如果 [行終止字元](#Line_terminators) 或 "}" 出現在不符文法的地方，一個分號會被自動插入在其之前。
 
@@ -419,7 +419,7 @@ a + b;
 ## 參閱
 
 - [Jeff Walden: Binary and octal numbers](http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
-- [Mathias Bynens: JavaScript character escape sequences](http://mathiasbynens.be/notes/javascript-escapes)
+- [Mathias Bynens: JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes)
 - {{jsxref("Boolean")}}
 - {{jsxref("Number")}}
 - {{jsxref("RegExp")}}

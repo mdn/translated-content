@@ -609,7 +609,7 @@ class BookListView(generic.ListView):
 
 URL 映射器和视图所需的代码，应与我们上面创建的`Book`列表和详细视图几乎完全相同。模板将有所不同，但会分享类似的行为。
 
-> **备注：**
+> [!NOTE]
 >
 > - 为作者列表页面，创建 URL 映射器之后，还需要更新基本模板中的所有作者 **All authors** 链接。按照我们更新“所有图书”**All books** 链接时，所做的相同过程。
 > - 为作者详细信息页面，创建 URL 映射器之后，还应更新书本详细信息视图模板（**/locallibrary/catalog/templates/catalog/book_detail.html**），以便作者链接，指向新的作者详细信息页面（而不是一个空的 URL）。该行将更改为添加下面以粗体显示的模板标记。

@@ -57,7 +57,8 @@ Pour un élément {{SVGElement('circle')}}, `cy` définit la coordonnée y de so
   </tbody>
 </table>
 
-> **Note :** À partir de SVG2, `cy` est une _propriété de géométrie_, ce qui signifie que cet attribut peut être utilisé comme propriété CSS pour les cercles.
+> [!NOTE]
+> À partir de SVG2, `cy` est une _propriété de géométrie_, ce qui signifie que cet attribut peut être utilisé comme propriété CSS pour les cercles.
 
 ## ellipse
 
@@ -82,7 +83,8 @@ Pour un élément {{SVGElement('ellipse')}}, `cy` définit la coordonnée y de s
   </tbody>
 </table>
 
-> **Note :** À partir de SVG2, `cy` est une _propriété de géométrie_, ce qui signifie que cet attribut peut être utilisé comme propriété CSS pour les ellipses.
+> [!NOTE]
+> À partir de SVG2, `cy` est une _propriété de géométrie_, ce qui signifie que cet attribut peut être utilisé comme propriété CSS pour les ellipses.
 
 ## radialGradient
 

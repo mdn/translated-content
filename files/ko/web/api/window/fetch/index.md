@@ -66,7 +66,8 @@ fetch(resource, options)
 
           - : 브라우저 동일과 교차 출처 요청 모두에 자격증명을 보내고, 응답 자격증명도 모두 사용하도록 지시합니다.
 
-            > **참고:** 자격증명은 교차 출처에 대한 단순 요청과 "최종" 요청에는 포함될 수 있지만, [CORS 사전 요청](/ko/docs/Web/HTTP/CORS#preflight_requests_and_credentials)에는 포함되어선 안됩니다.
+            > [!NOTE]
+            > 자격증명은 교차 출처에 대한 단순 요청과 "최종" 요청에는 포함될 수 있지만, [CORS 사전 요청](/ko/docs/Web/HTTP/CORS#preflight_requests_and_credentials)에는 포함되어선 안됩니다.
 
     - `cache`
       - : 요청이 브라우저 [HTTP 캐시](/ko/docs/Web/HTTP/Caching)와 어떻게 상호작용할지 제어합니다. 가능한 값은 `default`, `no-store`, `reload`, `no-cache`, `force-cache`, `only-if-cached` 중 하나고, 각각에 대한 설명은 {{domxref("Request")}} 객체 문서의 {{domxref("Request/cache", "cache")}} 속성에서 확인할 수 있습니다.

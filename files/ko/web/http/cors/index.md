@@ -72,7 +72,8 @@ CORS 실패는 오류를 발생시키지만, 보안상의 이유로 오류에 �
 - 요청이 {{domxref("XMLHttpRequest")}} 객체를 사용하여 이루어진 경우, 요청에 사용된 {{domxref("XMLHttpRequest.upload")}} 속성에 의해 반환된 객체에 이벤트 리스너가 등록되지 않습니다. 즉, {{domxref("XMLHttpRequest")}} 인스턴스 `xhr`이 있다면 업로드를 모니터링하기 위한 이벤트 리스너를 추가하는 `xhr.upload.addEventListener()`를 호출하는 코드가 존재하지 않는다는 것입니다.
 - 요청에 {{domxref("ReadableStream")}} 객체가 사용되지 않습니다.
 
-> **참고:** WebKit Nightly 와 Safari Technology Preview 는 Accept, Accept-Language, Content-Language 헤더에 허용되는 값에 추가적인 제약을 가합니다. 이러한 헤더 중 하나라도 "비표준" 값을 갖는 경우, WebKit/Safari 는 해당 요청을 "단순 요청"으로 간주하지 않습니다. WebKit/Safari 에서 어떤 값을 "비표준"으로 간주하는지는 다음의 WebKit 버그 외에는 문서화되어 있지 않습니다:
+> [!NOTE]
+> WebKit Nightly 와 Safari Technology Preview 는 Accept, Accept-Language, Content-Language 헤더에 허용되는 값에 추가적인 제약을 가합니다. 이러한 헤더 중 하나라도 "비표준" 값을 갖는 경우, WebKit/Safari 는 해당 요청을 "단순 요청"으로 간주하지 않습니다. WebKit/Safari 에서 어떤 값을 "비표준"으로 간주하는지는 다음의 WebKit 버그 외에는 문서화되어 있지 않습니다:
 >
 > - [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178)
 > - [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)
@@ -336,7 +337,8 @@ Content-Type: text/plain
 
 CORS 사전 요청에는 자격 증명이 절대로 포함되지 않아야 합니다. 사전 요청에 대한 응답은 실제 요청이 자격 증명과 함께 수행될 수 있음을 나타내기 위해 `Access-Control-Allow-Credentials: true` 를 명시해야 합니다.
 
-> **참고:** 알부 기업 인증 서비스는 사전 요청할 때 TLS 클라이언트 인증서을 보내는 것을 요청합니다. 이는 [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) 사양에 어긋나는 동작입니다.
+> [!NOTE]
+> 알부 기업 인증 서비스는 사전 요청할 때 TLS 클라이언트 인증서을 보내는 것을 요청합니다. 이는 [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) 사양에 어긋나는 동작입니다.
 >
 > 파이어폭스(Firefox)87 는 `network.cors_preflight.allow_client_cert` 을 `true` 으로 설정하여 이 비표준 동작을 활성화하는 것을 허용합니다.([Firefox bug 1511151](https://bugzil.la/1511151)) 현재 Chromium 기반 브라우저는 CORS 사전 요청에서 항상 TLS 클라이언트 인증서를 전송합니다 ([Chrome bug 775438](https://crbug.com/775438)).
 

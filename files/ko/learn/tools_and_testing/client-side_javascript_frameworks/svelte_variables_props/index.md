@@ -256,7 +256,8 @@ let completedTodos = todos.filter((todo) => todo.completed).length;
 
 Svelte에게 `totalTodos` 및 `completedTodos` 변수에 `$:` 접두사를 붙여서 반응형이 되기를 원한다고 말할 수 있습니다. Svelte는 의존하는 데이터가 변경될 때마다 자동으로 업데이트하는 코드를 생성합니다.
 
-> **참고:** Svelte는 `$:` [JavaScript 레이블 문 구문](/ko/docs/Web/JavaScript/Reference/Statements/label)을 사용하여 반응형 구문을 표시합니다. props를 선언하는 데 사용되는 `export` 키워드처럼, 이것은 약간 낯설게 보일 수 있습니다. 이것은 Svelte가 유효한 JavaScript 구문을 활용하고 새로운 목적을 부여하는 또 다른 예입니다. 이 경우 "참조된 값이 변경될 때마다 이 코드를 다시 실행"하는 것을 의미합니다. 한 번 익숙해지면, 모르던 때로 돌아갈 수 없을 것입니다.
+> [!NOTE]
+> Svelte는 `$:` [JavaScript 레이블 문 구문](/ko/docs/Web/JavaScript/Reference/Statements/label)을 사용하여 반응형 구문을 표시합니다. props를 선언하는 데 사용되는 `export` 키워드처럼, 이것은 약간 낯설게 보일 수 있습니다. 이것은 Svelte가 유효한 JavaScript 구문을 활용하고 새로운 목적을 부여하는 또 다른 예입니다. 이 경우 "참조된 값이 변경될 때마다 이 코드를 다시 실행"하는 것을 의미합니다. 한 번 익숙해지면, 모르던 때로 돌아갈 수 없을 것입니다.
 
 `src/components/Todos.svelte` 내부의 `totalTodos` 및 `completedTodos` 변수 정의를 다음과 같이 업데이트하세요.
 
@@ -310,7 +311,8 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
    $: console.log("newTodoName: ", newTodoName);
    ```
 
-   > **참고:** 아시다시피 반응형 구문은 변수 선언으로 제한되지 않습니다. `$:` 기호 뒤에 _any_ JavaScript 문을 넣을 수 있습니다.
+   > [!NOTE]
+   > 아시다시피 반응형 구문은 변수 선언으로 제한되지 않습니다. `$:` 기호 뒤에 _any_ JavaScript 문을 넣을 수 있습니다.
 
 4. 이제 `localhost:5042`로 돌아가서 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd>를 눌러 브라우저 콘솔을 열고 무언가를 입력하세요. 입력 필드. 항목이 기록된 것을 볼 수 있습니다. 이 시점에서 원하는 경우 반응형 `console.log()`를 삭제할 수 있습니다.
 5. 다음으로 새로운 할 일을 추가하는 함수인 `addTodo()`를 만들겠습니다. 이 함수는 새로운 `todo` 객체를 `todos` 배열로 푸시합니다. `src/components/Todos.svelte` 내부의 `<script>` 블록 맨 아래에 다음을 추가합니다.
@@ -322,7 +324,8 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
    }
    ```
 
-   > **참고:** 지금은 모든 할 일에 동일한 `id`를 할당하지만 걱정하지 마세요. 곧 수정할 것입니다.
+   > [!NOTE]
+   > 지금은 모든 할 일에 동일한 `id`를 할당하지만 걱정하지 마세요. 곧 수정할 것입니다.
 
 6. 이제 폼이 제출(submit)될 때마다 `addTodo()`를 호출하도록 HTML을 업데이트하려고 합니다. NewTodo 폼의 여는 태그를 다음과 같이 업데이트하세요.
 
@@ -364,7 +367,8 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
    }
    ```
 
-   > **참고:** 보시다시피 반응형 구문은 한 줄로 제한되지 않습니다. 다음 구문은 정상 작동하지만 가독성이 약간 떨어집니다. `$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
+   > [!NOTE]
+   > 보시다시피 반응형 구문은 한 줄로 제한되지 않습니다. 다음 구문은 정상 작동하지만 가독성이 약간 떨어집니다. `$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
 
 2. Svelte는 어떻게 이것이 가능할까요? 컴파일러는 전체 반응형 구문을 파싱하고 `totalTodos` 변수와 `todos` 배열에 의존하는 것을 감지합니다. 따라서 둘 중 하나가 수정될 때마다 이 코드가 재평가되고 그에 따라 `newTodoId`가 업데이트됩니다.
 
@@ -423,7 +427,8 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
 
    활성 필터 버튼에 `btn__primary` 클래스를 적용하여 현재 필터를 표시합니다. 스타일 클래스를 요소에 조건부로 적용하려면 `class:name={value}` 지시문을 사용합니다. 값 표현식이 참으로 평가되면 클래스 이름이 적용됩니다. 조건이 다른 여러 지시문을 동일한 요소에 추가할 수 있습니다. 따라서 `class:btn__primary={filter === 'all'}`을 실행할 때 Svelte는 filter가 all인 경우 `btn__primary` 클래스를 적용합니다.
 
-   > **참고:** Svelte는 클래스가 변수 이름과 일치할 때 `<div class:active={active}>`를 `<div class:active>`로 축소할 수 있는 바로 가기를 제공합니다.
+   > [!NOTE]
+   > Svelte는 클래스가 변수 이름과 일치할 때 `<div class:active={active}>`를 `<div class:active>`로 축소할 수 있는 바로 가기를 제공합니다.
 
    `aria-pressed={filter === 'all'}`에서도 비슷한 일이 발생합니다. 중괄호 사이에 전달된 JavaScript 표현식이 참으로 값으로 평가되면 `aria-pressed` 속성이 버튼에 추가됩니다.
 
@@ -440,7 +445,8 @@ Svelte 컴파일러는 배후에서 종속성 트리를 만들기 위해 코드�
 
    코드를 분석한 후 Svelte는 `filterTodos()` 함수가 `filter` 및 `todos` 변수에 의존한다는 것을 감지합니다. 그리고 마크업에 포함된 다른 동적 표현식과 마찬가지로 이러한 종속성이 변경될 때마다 그에 따라 DOM이 업데이트됩니다. 따라서 `filter` 또는 `todos`가 변경될 때마다 `filterTodos()` 함수가 재평가되고 루프 내부의 항목이 업데이트됩니다.
 
-> **참고:** 때때로 반응성이 까다로울 수 있습니다. Svelte는 `filterTodos(filter, todo)` 표현식에서 참조하기 때문에 `filter`를 종속성으로 인식합니다. `filter`는 최상위 변수이므로 도우미 함수 params에서 제거하고 `filterTodos(todo)`와 같이 호출하고 싶을 수도 있습니다. 이것은 작동하지만 이제 Svelte는 `{#each filterTodos(todos) }`가 `filter`에 의존하고 필터가 변경될 때 필터링된 할 일 목록이 업데이트되지 않는다는 것을 알아낼 방법이 없습니다. Svelte는 종속성을 찾기 위해 코드를 분석하므로 이에 대해 명시하고 최상위 변수의 가시성에 의존하지 않는 것이 좋습니다. 게다가 어떤 정보를 사용하고 있는지에 대해 코드를 명확하고 명시적으로 만드는 것이 좋습니다.
+> [!NOTE]
+> 때때로 반응성이 까다로울 수 있습니다. Svelte는 `filterTodos(filter, todo)` 표현식에서 참조하기 때문에 `filter`를 종속성으로 인식합니다. `filter`는 최상위 변수이므로 도우미 함수 params에서 제거하고 `filterTodos(todo)`와 같이 호출하고 싶을 수도 있습니다. 이것은 작동하지만 이제 Svelte는 `{#each filterTodos(todos) }`가 `filter`에 의존하고 필터가 변경될 때 필터링된 할 일 목록이 업데이트되지 않는다는 것을 알아낼 방법이 없습니다. Svelte는 종속성을 찾기 위해 코드를 분석하므로 이에 대해 명시하고 최상위 변수의 가시성에 의존하지 않는 것이 좋습니다. 게다가 어떤 정보를 사용하고 있는지에 대해 코드를 명확하고 명시적으로 만드는 것이 좋습니다.
 
 ## 지금까지의 코드
 

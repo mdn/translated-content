@@ -28,7 +28,8 @@ _親である {{DOMxRef("HTMLElement")}} から継承したプロパティがあ
 
 ### 廃止されたプロパティ
 
-> **警告:** 以下のプロパティは廃止されました。使用は避けてください。
+> [!WARNING]
+> 以下のプロパティは廃止されました。使用は避けてください。
 
 - {{DOMxRef("HTMLTableElement.align")}} {{deprecated_inline}}
   - : 文字列で、 [`align`](/ja/docs/Web/HTML/Element/table#align) 属性を反映した列挙型の値が入ります。これは、周囲のコンテキストに対する要素の内容物の配置を示します。利用可能な値は `"left"`, `"right"`, `"center"` です。

@@ -144,7 +144,7 @@ stripTags("<p><em>lorem</em> <strong>ipsum</strong></p>"); // 'lorem ipsum'
 ```
 
 > [!WARNING]
-> 以上方法仅供演示——它无法处理属性值中的 `>`。请使用类似 [HTML sanitizer API](/zh-CN/docs/Web/API/HTML_Sanitizer_API) 这样的正规 HTML 净化器。
+> 以上方法仅供演示——它无法处理属性值中的 `>`。请使用合适的 HTML 净化器。
 
 ### 定位 Markdown 段落
 

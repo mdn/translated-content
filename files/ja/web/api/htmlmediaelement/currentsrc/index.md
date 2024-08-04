@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.currentSrc
+title: "HTMLMediaElement: currentSrc プロパティ"
+short-title: currentSrc
 slug: Web/API/HTMLMediaElement/currentSrc
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: bd15d43260b7e72b1066c04d9d9f3b79129c619c
 ---
 
 {{APIRef("HTML DOM")}}
@@ -30,4 +31,4 @@ console.log(obj.currentSrc); // ""
 
 ## 関連情報
 
-- これを定義しているインターフェイスである {{domxref("HTMLMediaElement")}}
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.currentSrc` プロパティを定義しているインターフェイス

@@ -20,7 +20,7 @@ Les systèmes de contrôle des versions fournissent des outils pour répondre à
 
 > **Note :** Git est en fait un système de contrôle des versions _distribué_, signifiant qu'une copie complète du dépôt contenant la base de code est fait sur votre ordinateur (et celui de tous les autres participants). Vous modifiez votre propre copie et puis vous les envoyez vers le serveur, où un administrateur pourra décider de les fusionner avec la copie commune ou non.
 
-> **Remarque :**
+> [!CALLOUT]
 >
 > Vous cherchez à devenir un développeur web front-end ?
 >

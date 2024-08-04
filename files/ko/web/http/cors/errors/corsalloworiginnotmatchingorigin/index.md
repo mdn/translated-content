@@ -20,7 +20,8 @@ Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'
 예제로 Apache에서는 서버 설정 시 아래의 명령어를 추가합니다. (서버 설정은 `<Directory>`, `<Location>`, `<Files>`, 또는 `<VirtualHost>` 섹션 내부에 존재합니다.)
 설정은 일반적으로 `.conf` 파일(`httpd.conf`와 `apache.conf`가 일반적인 이름)이나 `.htaccess` 파일에서 찾을 수 있습니다.
 
-> **경고:** HTTPS 또는 HTTP 프로토콜에서 반드시 origin 항목을 포함하여야 합니다.
+> [!WARNING]
+> HTTPS 또는 HTTP 프로토콜에서 반드시 origin 항목을 포함하여야 합니다.
 
 ```
 Header set Access-Control-Allow-Origin 'origin'

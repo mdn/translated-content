@@ -7,9 +7,8 @@ slug: Web/API/Element/scrollWidth
 
 `scrollWidth`值等于元素在不使用水平滚动条的情况下适合视口中的所有内容所需的最小宽度。宽度的测量方式与{{domxref("Element.clientWidth", "clientWidth")}}相同：它包含元素的内边距，但不包括边框，外边距或垂直滚动条（如果存在）。它还可以包括伪元素的宽度，例如{{cssxref("::before")}}或{{cssxref("::after")}}。如果元素的内容可以适合而不需要水平滚动条，则其`scrollWidth`等于{{domxref("Element.clientWidth", "clientWidth")}}
 
-> **备注：** 1. 这个属性会进行四舍五入并返回整数，如果你需要小数形式的值，使用{{ domxref("element.getBoundingClientRect()") }}_._
->
-> _2. 在实际测试过程中，谷歌获取的_ **`Element.scrollWidth`** 和 IE，火狐下获取的 **`Element.scrollWidth`** 并不相同
+> [!NOTE]
+> 该属性会将值取整成整数。如果你需要小数值，请使用 {{ domxref("element.getBoundingClientRect()") }}。
 
 ## 语法
 

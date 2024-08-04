@@ -47,7 +47,9 @@ slug: Learn/JavaScript/Building_blocks/Events
 
 각각의 이용가능한 이벤트들은 **이벤트 핸들러**(event handler)를 가지고 있는데, 이는 이벤트가 발생되면 실행되는 코드 블럭 (보통 여러분과 같은 프로그래머가 만드는 JavaScript 함수)입니다. 그러한 코드 블럭이 이벤트에 응답해서 실행되기 위해 정의되었을 때, 우리는 **이벤트 핸들러를 등록**(register)했다고 말합니다. 알림: 이벤트 핸들러는 때때로 **이벤트 리스너**(event listener)라고 불립니다 — 이것들은 우리의 목적을 위해 꽤 교체할수 있지만, 그러나 엄밀히 말하자면, 그들은 같이 동작합니다. 리스너는 발생되는 이벤트에 대해 듣고, 핸들러는 발생되는 이벤트에 응답해서 실행되는 코드입니다.
 
-> **참고:** #### 참고웹 이벤트는 코어 JavaScript 언어의 일부가 아닙니다 — 이것들은 브라우저에 내장된 API의 일부로서 정의됩니다.
+> [!NOTE]
+>
+> #### 참고웹 이벤트는 코어 JavaScript 언어의 일부가 아닙니다 — 이것들은 브라우저에 내장된 API의 일부로서 정의됩니다
 
 ### 간단한 예제
 
@@ -158,7 +160,9 @@ function bgChange() {
 }
 ```
 
-> **참고:** #### 참고여러분은 이 예제에 대한 [전체 소스 코드를](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html) Github에서 찾을 수 있습니다 (또한 [실제로 작동하는 모습](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)도 보세요).
+> [!NOTE]
+>
+> #### 참고여러분은 이 예제에 대한 [전체 소스 코드를](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html) Github에서 찾을 수 있습니다 (또한 [실제로 작동하는 모습](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)도 보세요)
 
 웹에서 찾아지는 가장 이른 이벤트 핸들러의 등록 방법은 위에서 보이는 것처럼 **이벤트 핸들러 HTML 어트리뷰트** (또는 **인라인 이벤트 핸들러**)을 포함합니다. — 어트리뷰트 값은 말 그대로 이벤트가 발생되었을 때 여러분이 실행하기를 원하는 JavaScript 코드입니다. 위의 예시는 같은 페이지의 {{htmlelement("script")}} 요소 안에서 정의된 함수를 호출하지만, 여러분은 또한 어트리뷰트 안에 직접적으로 JavaScript을 삽입할 수 있습니다. 예를 들자면:
 
@@ -190,7 +194,9 @@ buttons.forEach(function (button) {
 });
 ```
 
-> **참고:** #### 참고프로그래밍 로직을 콘텐츠로부터 분리하는 것은 또한 여러분의 사이트를 검색 엔진에 더욱 친화적으로 만듭니다.
+> [!NOTE]
+>
+> #### 참고프로그래밍 로직을 콘텐츠로부터 분리하는 것은 또한 여러분의 사이트를 검색 엔진에 더욱 친화적으로 만듭니다
 
 ### 이벤트 핸들러를 추가하고 제거하기
 
@@ -208,7 +214,8 @@ function bgChange() {
 btn.addEventListener("click", bgChange);
 ```
 
-> **참고:** 여러분은 이 예제에 대한 [전체 소스 코드를](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html) Github에서 찾을 수 있습니다 (또한 [실제로 작동하는 모습](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)도 보세요).
+> [!NOTE]
+> 여러분은 이 예제에 대한 [전체 소스 코드를](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html) Github에서 찾을 수 있습니다 (또한 [실제로 작동하는 모습](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)도 보세요).
 
 `addEventListener()` 함수 안에, 우리는 두 매개변수(parameter)를 명시합니다: 우리가 이 핸들러에 등록하고자 하는 이벤트의 이름과, 그것에 응답하여 우리가 실행하기를 원하는 핸들러 함수를 구성하는 코드입니다. 알림: `addEventListener()` 내부에, 다음과 같이, 익명 함수 안에 모든 코드를 넣는 것은 완벽히 괜찮습니다:
 
@@ -284,7 +291,9 @@ element.onclick = function2;
 등등.
 ```
 
-> **참고:** #### 참고만약 여러분이 Internet Explorer 8보다 오래된 브라우저를 지원하라고 요청받았다면, 그러한 아주 오래된 브라우저들은 새로운 브라우저들과는 다른 이벤트 모델을 사용하므로, 여러분은 어려움을 만날 지도 모릅니다. 하지만 걱정하지 마세요, 대부분의 JavaScript 라이브러리들은 (예를 들자면 `jQuery`) 크로스 브라우저 차이를 분리하는 내장 함수들을 가지고 있습니다. 이 배움의 단계에서 이것을 너무 많이는 걱정하지 마세요.
+> [!NOTE]
+>
+> #### 참고만약 여러분이 Internet Explorer 8보다 오래된 브라우저를 지원하라고 요청받았다면, 그러한 아주 오래된 브라우저들은 새로운 브라우저들과는 다른 이벤트 모델을 사용하므로, 여러분은 어려움을 만날 지도 모릅니다. 하지만 걱정하지 마세요, 대부분의 JavaScript 라이브러리들은 (예를 들자면 `jQuery`) 크로스 브라우저 차이를 분리하는 내장 함수들을 가지고 있습니다. 이 배움의 단계에서 이것을 너무 많이는 걱정하지 마세요
 
 ## 다른 이벤트 개념들
 
@@ -305,11 +314,15 @@ function bgChange(e) {
 btn.addEventListener("click", bgChange);
 ```
 
-> **참고:** #### 참고여러분은 이 예제에 대한 [전체 소스 코드를](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) Github에서 찾을 수 있습니다 (또한 [실제로 작동하는 모습](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)도 보세요).
+> [!NOTE]
+>
+> #### 참고여러분은 이 예제에 대한 [전체 소스 코드를](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) Github에서 찾을 수 있습니다 (또한 [실제로 작동하는 모습](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)도 보세요)
 
 여기서 여러분은 우리가 이벤트 객체, **e**를, 함수에 포함하고, 함수에서 배경 색상 스타일을 — 버튼 그 자체인 — `e.target`에서 설정한 것을 볼 수 있습니다. 이벤트 객체의 `target` 프로퍼티는 항상 이벤트가 발생된 요소에 대한 참조입니다. 그래서, 이 예제에서, 우리는 무작위의 배경색을 페이지가 아니라, 버튼에 설정했습니다.
 
-> **참고:** #### 참고여러분은 이벤트 객체에 대해 여러분이 좋아하는 어떠한 이름이든 사용할 수 있습니다 — 여러분은 단지 이벤트 핸들러 함수 내에서 그것을 참조하기 위해 사용할 수 있는 이름을 선택할 필요가 있습니다. `e`/`evt`/`event`가 가장 일반적으로 개발자들에 의해 사용됩니다. 왜냐하면 짧고 기억하기 쉽기 때문입니다. 일관적인 것은 항상 좋습니다 — 여러분 자신과, 그리고 만약 가능하다면 타인과.
+> [!NOTE]
+>
+> #### 참고여러분은 이벤트 객체에 대해 여러분이 좋아하는 어떠한 이름이든 사용할 수 있습니다 — 여러분은 단지 이벤트 핸들러 함수 내에서 그것을 참조하기 위해 사용할 수 있는 이름을 선택할 필요가 있습니다. `e`/`evt`/`event`가 가장 일반적으로 개발자들에 의해 사용됩니다. 왜냐하면 짧고 기억하기 쉽기 때문입니다. 일관적인 것은 항상 좋습니다 — 여러분 자신과, 그리고 만약 가능하다면 타인과
 
 여러분이 같은 이벤트 핸들러를 다수의 요소에 설정하고 그것들에 이벤트가 발생되었을 때 그것들 모두에 뭔가를 하기를 원할 때 `e.target`은 엄청나게 유용합니다. 예를 들자면, 여러분에게 선택되었을 때 사라지는 16개의 타일 세트가 있다고 합시다. 타일을 몇몇 더욱 어려운 방법으로 선택해야만 하는 것 대신에, `e.target`으로서 단지 타일을 사라지게 항상 설정할 수 있는 것은 유용합니다. 다음의 예제에서 (전체 소스 코드는 [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html)에서 찾을 수 있습니다; [또한 실제로 작동하는 모습](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html)도 보세요), 우리는 16개의 {{htmlelement("div")}} 요소를 JavaScript를 통해 생성했습니다. 우리는 그리고서 {{domxref("document.querySelectorAll()")}}을 사용해 그것들 모두를 선택했고, 그리고서 선택되었을 때 무작위 색상이 적용되도록 만드는 `onclick` 핸들러를 각각에 추가하며 요소들을 순회했습니다:
 
@@ -424,7 +437,9 @@ form.onsubmit = function (e) {
 
 {{ EmbedLiveSample('Preventing_default_behavior', '100%', 140, "", "", "hide-codepen-jsfiddle") }}
 
-> **참고:** #### 참고전체 코드 소스는 [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html)에서 확인하실 수 있습니다 (또한 여기서 [실제로 작동하는 모습](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html)도 보세요).
+> [!NOTE]
+>
+> #### 참고전체 코드 소스는 [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html)에서 확인하실 수 있습니다 (또한 여기서 [실제로 작동하는 모습](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html)도 보세요)
 
 ### 이벤트 버블링과 캡처
 
@@ -576,7 +591,9 @@ video.onclick = function () {
 - `video.onclick...` 핸들러를 발견하고 실행하므로, 비디오가 먼저 재생을 시작합니다.
 - 그리고서 `videoBox.onclick...` 핸들러를 발견하고 실행하므로, 비디오는 또한 숨겨집니다.
 
-> **참고:** #### 참고버블링과 캡처링, 두 타입의 이벤트 핸들러가 모두 존재하는 경우에, 캡처링 단계가 먼저 실행되고, 이어서 버블링 단계가 실행됩니다.
+> [!NOTE]
+>
+> #### 참고버블링과 캡처링, 두 타입의 이벤트 핸들러가 모두 존재하는 경우에, 캡처링 단계가 먼저 실행되고, 이어서 버블링 단계가 실행됩니다
 
 #### stopPropagation()으로 문제 고치기
 
@@ -593,9 +610,13 @@ video.onclick = function (e) {
 
 [show-video-box.html 소스 코드](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html)를 다운받아 직접 고쳐볼 수도 있고, [show-video-box-fixed.html](https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html)에서 고쳐진 결과를 볼 수도 있습니다 (또한 여기서 [소스 코드](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box-fixed.html)를 보세요).
 
-> **참고:** #### 참고왜 캡처링과 버블링으로 애를 쓰냐구요? 글쎄요, 브라우저들이 지금보다 훨씬 덜 호환되던 옛날의 좋지 못하던 시절에, Netscape는 오직 이벤트 캡처링만을 사용했고, Internet Explorer는 오직 이벤트 버블링만을 사용했습니다. W3C가 이 움직임을 표준화하고 합의에 이르기를 시도하기로 결정했을 때, 그들은 양 쪽을 다 포함하는 이 시스템을 채용하게 되었는데, 이것이 현대 브라우저들이 구현한 것입니다.
+> [!NOTE]
+>
+> #### 참고왜 캡처링과 버블링으로 애를 쓰냐구요? 글쎄요, 브라우저들이 지금보다 훨씬 덜 호환되던 옛날의 좋지 못하던 시절에, Netscape는 오직 이벤트 캡처링만을 사용했고, Internet Explorer는 오직 이벤트 버블링만을 사용했습니다. W3C가 이 움직임을 표준화하고 합의에 이르기를 시도하기로 결정했을 때, 그들은 양 쪽을 다 포함하는 이 시스템을 채용하게 되었는데, 이것이 현대 브라우저들이 구현한 것입니다
 
-> **참고:** #### 참고위에서 언급했다시피, 기본적으로 모든 이벤트 핸들러는 버블링 단계에 등록되어 있고, 이것은 대부분의 경우 더 타당합니다. 만약 정말로 이벤트를 캡처링 단계에 대신 등록하기를 원한다면, [`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener)를 사용하고, 옵션인 세 번째 프로퍼티를 `true`로 설정하여 핸들러를 등록함으로써 그렇게 할 수 있습니다.
+> [!NOTE]
+>
+> #### 참고위에서 언급했다시피, 기본적으로 모든 이벤트 핸들러는 버블링 단계에 등록되어 있고, 이것은 대부분의 경우 더 타당합니다. 만약 정말로 이벤트를 캡처링 단계에 대신 등록하기를 원한다면, [`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener)를 사용하고, 옵션인 세 번째 프로퍼티를 `true`로 설정하여 핸들러를 등록함으로써 그렇게 할 수 있습니다
 
 #### 이벤트 위임(Event delegation)
 

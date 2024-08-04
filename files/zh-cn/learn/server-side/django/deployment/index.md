@@ -341,7 +341,7 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 ```
 
-> **备注：**
+> [!NOTE]
 >
 > - 我们仍然会在开发期间使用 SQLite，因为我们的开发计算机上不会设置`DATABASE_URL`环境变量。
 > - `conn_max_age=500`的值使连接持久，这比在每个请求周期重新创建连接更有效。但是，这是可选的，如果需要可以删除。

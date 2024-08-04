@@ -36,7 +36,8 @@ l10n:
 
 위 방법 대신에, 여러분은 테스트에 [JSBin](https://jsbin.com/) 또는 [Glitch](https://glitch.com/) 같은 사이트를 이용할 수 있습니다. 이 온라인 에디터들 내부에 HTML, CSS 그리고 JavaScript를 붙여넣을 수 있습니다. 만약 당신이 사용하는 온라인 에디터가 Javascript 패널(또는 탭)을 갖고 있지 않다면, 자유롭게 HTML 페이지 내부에 `<script>` 엘리멘트를 넣을 수 있습니다.
 
-> **참고:** 문제가 해결되지 않으면 이 페이지 하단의 [평가 또는 추가 도움말](#assessment_or_further_help) 섹션을 참조해 도움을 요청하세요.
+> [!NOTE]
+> 문제가 해결되지 않으면 이 페이지 하단의 [평가 또는 추가 도움말](#assessment_or_further_help) 섹션을 참조해 도움을 요청하세요.
 
 ## 프로젝트에 대한 간략한 설명
 

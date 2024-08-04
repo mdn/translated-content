@@ -23,7 +23,8 @@ input:read-only {
 }
 ```
 
-> **Nota:** El selector no solo selecciona {{htmlElement("input")}} marcados como [`readonly`](/es/docs/Web/HTML/Element/input#readonly); también selecccionará cualquier elemento que no pueda ser editar por el usuario. Lea sobre el atributo [contenteditable](/es/docs/Web/HTML/Global_attributes/contenteditable).
+> [!NOTE]
+> El selector no solo selecciona {{htmlElement("input")}} marcados como [`readonly`](/es/docs/Web/HTML/Element/input#readonly); también selecccionará cualquier elemento que no pueda ser editar por el usuario. Lea sobre el atributo [contenteditable](/es/docs/Web/HTML/Global_attributes/contenteditable).
 
 ## Síntaxis
 

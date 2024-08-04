@@ -119,7 +119,8 @@ console.log("Coucou le monde");
 
 Les commentaires d'environnements sont conçus pour fonctionner comme [les _shebangs_ qu'on peut trouver sous Unix](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) et indiquent l'interpréteur à utiliser pour exécuter le script ou le module.
 
-> **Attention :** Bien qu'utiliser un [BOM](https://fr.wikipedia.org/wiki/Indicateur_d%27ordre_des_octets) avant le _hashbang_ fonctionne dans un navigateur, cela n'est pas conseillé. En effet, un BOM empêchera le bon fonctionnement sous Unix/Linux. Utilisez un encodage UTF-8 sans BOM si vous souhaitez exécuter vos scripts depuis une invite de commande.
+> [!WARNING]
+> Bien qu'utiliser un [BOM](https://fr.wikipedia.org/wiki/Indicateur_d%27ordre_des_octets) avant le _hashbang_ fonctionne dans un navigateur, cela n'est pas conseillé. En effet, un BOM empêchera le bon fonctionnement sous Unix/Linux. Utilisez un encodage UTF-8 sans BOM si vous souhaitez exécuter vos scripts depuis une invite de commande.
 
 Si vous souhaitez placer un commentaire en début de fichier sans indiquer d'environnement d'exécution spécifique, on pourra utiliser le commentaire classique avec `//`.
 

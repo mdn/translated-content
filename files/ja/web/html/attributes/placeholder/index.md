@@ -2,7 +2,7 @@
 title: "HTML 属性: placeholder"
 slug: Web/HTML/Attributes/placeholder
 l10n:
-  sourceCommit: 1d18b939883e7278cf4f8a14cb9cfd797615ea24
+  sourceCommit: aee2bd82de11cb7331134e48e8bd548bbedafcc5
 ---
 
 {{HTMLSidebar}}
@@ -13,7 +13,8 @@ l10n:
 
 `placeholder` 属性は、入力の種類 `{{HTMLElement("input/text", "text")}}`、`{{HTMLElement("input/search", "search")}}`、`{{HTMLElement("input/url", "url")}}`、`{{HTMLElement("input/tel", "tel")}}`、`{{HTMLElement("input/email", "email")}}`、`{{HTMLElement("input/password", "password")}}` で用いることができます。`{{HTMLElement("textarea")}}` 要素でも用いることができます。以下の[例](#例)では、入力フィールドで期待する形式を示すために `placeholder` 属性を用いています。
 
-> **メモ:** `placeholder` 属性にはラインフィード (LF) やキャリッジリターン (CR) を含めることはできません。これらが含まれる場合は、プレースホルダーテキストはクリップされます。
+> [!NOTE]
+> `placeholder` 属性にはラインフィード (LF) やキャリッジリターン (CR) を含めることはできません。これらが含まれる場合は、プレースホルダーテキストはクリップされます。
 
 ## アクセシビリティの懸念
 
@@ -51,4 +52,4 @@ l10n:
 
 - HTML [`title`](/ja/docs/Web/HTML/Global_attributes/title)
 - CSS [`:placeholder-shown`](/ja/docs/Web/CSS/:placeholder-shown) 擬似クラスセレクター
-- CSS [`::placeholder`](/ja/docs/Web/CSS/::placeholder) 疑似要素セレクター
+- CSS [`::placeholder`](/ja/docs/Web/CSS/::placeholder) 擬似要素セレクター

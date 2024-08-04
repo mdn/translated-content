@@ -95,7 +95,8 @@ if (shoppingDone === true) {
 
 위 코드는 항상 `false`를 리턴하는 `shoppingDone`변수를 결과로 낳는데, 이는 우리의 불쌍한 아이에게 실망을 안겨주겠죠. 아이가 부모님과 함께 쇼핑을 간다면 부모님이 `shoppingDone`변수를 `true`로 설정하는 메커니즘을 제공하는 것은 우리에게 달렸습니다.
 
-> **참고:** GitHub에서 예시를 더 볼 수 있습니다. [이 예제의 완성 버전 on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html) (also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
+> [!NOTE]
+> GitHub에서 예시를 더 볼 수 있습니다. [이 예제의 완성 버전 on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html) (also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
 
 ### else if
 
@@ -150,7 +151,8 @@ function setWeather() {
 3. 함수가 동작했을 때, 현재 `<select>` 요소에서 선택된 현재 값을 `choice`라는 변수에 먼저 설정합니다. 그런 다음 `choice`값에 따라 문단 안에 다른 텍스트를 표시하기 위해 조건문을 사용합니다. `if() {...} block`에서 테스트된 첫 번째를 제외하고, `else if() {...}`에서 모든 조건들이 어떻게 테스트되는지에 유의하세요.
 4. `else {...}`안의, 가장 마지막 선택은 기본적으로 "최후의 수단" 옵션입니다 — `true`인 조건이 없으면 그 안의 코드가 실행됩니다. 이 경우 아무것도 선택되지 않으면, 예를 들어, 사용자가 처음에 표시한 "--Make a choice--" 플레이스홀더(placeholder) 옵션을 다시 선택하기로 한다면, 문단의 텍스트를 비우는 역할을 합니다.
 
-> **참고:** 또한 [이 예제를 GitHub에서 찾을 수 있습니다](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html). ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) on there also.)
+> [!NOTE]
+> 또한 [이 예제를 GitHub에서 찾을 수 있습니다](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html). ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) on there also.)
 
 ### 비교 연산자에 대한 메모
 
@@ -160,7 +162,8 @@ function setWeather() {
 - `<` 와 `>` — 한 값이 다른 값보다 작은지 큰지 테스트한다.
 - `<=` 와 `>=` — 한 값이 다른 값보다 작거나 같은지, 크거나 같은지 테스트한다
 
-> **참고:** 이것들에 대한 기억을 되살리기를 원하신다면 저 링크에 있는 것들을 다시 보세요.
+> [!NOTE]
+> 이것들에 대한 기억을 되살리기를 원하신다면 저 링크에 있는 것들을 다시 보세요.
 
 몇 번이고 다시 만날 boolean(`true`/`false`)값을 테스트하는 것과 일반적인 패턴에 대한 특별한 언급을 하고 싶었습니다. 어떠한 값들이든 `false`, `undefined`, `null`, `0`, `NaN`이나 빈 문자열(`''`)이 아닌 값은 조건문으로 테스트되었을 때, 실제로는 `true`를 리턴하므로, 변수가 참인지 혹은 값이 존재하는지를 테스트하기 위해 변수 이름 그 자체를 사용할 수 있습니다. 예를 들어:
 
@@ -367,7 +370,8 @@ function setWeather() {
 
 {{ EmbedLiveSample('A_switch_example', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-> **참고:** 또한 [이 예제를 GitHub에서 찾을 수 있습니다](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html). (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html) on there also.)
+> [!NOTE]
+> 또한 [이 예제를 GitHub에서 찾을 수 있습니다](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html). (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html) on there also.)
 
 ## 삼항연산자
 
@@ -424,7 +428,8 @@ select.onchange = function () {
 
 끝으로, 우리는 또한 삼항연산자를 포함하고 있는 함수의 실행을 제공하는 '[onchange](/ko/docs/Web/API/GlobalEventHandlers/onchange)' 이벤트 리스너를 가지고 있습니다. 이것은 테스트 조건으로 시작합니다 — `select.value === 'black'`. 만약 이것이 `true`를 리턴하면, 우리는 검정과 하양의 매개변수를 지니고 있는 `update()`함수를 실행하는데, 이는 배경색은 검정으로 텍스트 색은 하양으로 되는 결과를 의미합니다. 만약 이것이 `false`를 리턴하면, 우리는 하양과 검정의 매개변수를 지니고 있는 `update()`함수를 실행하는데, 이는 사이트의 색상이 반전됐다는 것을 의미합니다.
 
-> **참고:** 또한 [이 예제를 GitHub에서 찾을 수 있습니다](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html). (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) on there also.)
+> [!NOTE]
+> 또한 [이 예제를 GitHub에서 찾을 수 있습니다](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html). (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) on there also.)
 
 ## 직접 해보기: 간단한 달력 만들기
 

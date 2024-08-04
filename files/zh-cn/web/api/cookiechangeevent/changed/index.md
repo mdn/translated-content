@@ -2,12 +2,14 @@
 title: CookieChangeEvent：changed 属性
 slug: Web/API/CookieChangeEvent/changed
 l10n:
-  sourceCommit: 08f7d7ef89c04b824fa246e6fd35d47aebef7b51
+  sourceCommit: de4bd74771b88bb6352c1136b608811edf24ffda
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}
 
 {{domxref("CookieChangeEvent")}} 接口的 **`changed`** 只读属性返回包含已被修改的 cookie 的数组。
+
+请注意，这将排除那些创建的、过期时间在过去的 cookie，因为这些 cookie 会被立即删除。
 
 ## 值
 
