@@ -45,7 +45,7 @@ WebAssembly を人間が読んだり編集したりできるようにするた�
 
 はい、これは全然面白くないですね。モジュールに実行可能なコードを追加していきましょう。
 
-すべての WebAssembly モジュール内のコードは次の疑似コード構造を持つ関数にグループ化されます:
+すべての WebAssembly モジュール内のコードは次の擬似コード構造を持つ関数にグループ化されます:
 
 ```wasm
 ( func <signature> <locals> <body> )
@@ -293,7 +293,7 @@ JavaScript から見ると、メモリーはすべて 1 つの大きな (リサ�
 
 したがって、文字列は線形メモリー内部のどこかに存在するただのバイト列です。適切なバイト列の文字列をメモリーに書き込んだとしましょう。その文字列をどのように JavaScript に渡すのでしょうか?
 
-鍵は [`WebAssembly.Memory()`](/ja/docs/WebAssembly/JavaScript_interface/Memory) インターフェースを使用して JavaScript から WebAssembly の線形メモリーを作成し、関連するインスタンスメソッドを使用して既存の Memory インスタンス（現在は 1 モジュールごとに 1 つだけ持つことができます）にアクセスできることです。Memory インスタンスは [`buffer`](/ja/docs/WebAssembly/JavaScript_interface/Memory/buffer) ゲッターを持ち、これは線形メモリー全体を指し示す ArrayBuffer を返します。
+鍵は [`WebAssembly.Memory()`](/ja/docs/WebAssembly/JavaScript_interface/Memory) インターフェイスを使用して JavaScript から WebAssembly の線形メモリーを作成し、関連するインスタンスメソッドを使用して既存の Memory インスタンス（現在は 1 モジュールごとに 1 つだけ持つことができます）にアクセスできることです。Memory インスタンスは [`buffer`](/ja/docs/WebAssembly/JavaScript_interface/Memory/buffer) ゲッターを持ち、これは線形メモリー全体を指し示す ArrayBuffer を返します。
 
 Memory インスタンスは、例えば JavaScript から [`Memory.grow()`](/ja/docs/WebAssembly/JavaScript_interface/Memory/grow) メソッドを使用して拡張することもできます。拡張したとき、`ArrayBuffer` はサイズを変更することができないため、現在の `ArrayBuffer` は切り離され、新しく作成された、より大きな `ArrayBuffer` を指し示すようになります。これは、JavaScript に文字列を渡すために必要なことは、線形メモリー内での文字列のオフセットと長さを指定する方法を渡すことだけであることを意味します。
 
@@ -564,7 +564,7 @@ Promise.all([
 
 ## 大規模メモリー操作
 
-大規模メモリー操作は、言語へ新しく追加されたものです（例えば [Firefox 79](/ja/docs/Mozilla/Firefox/Releases/79)）。コピーや初期化などのバルクメモリ操作のために 7 つの新しい組み込み操作が提供されており、 WebAssembly が `memcpy` や `memmove` などのネイティブ関数を、より効率的でパフォーマンスの高い方法でモデル化できるようにします。
+大規模メモリー操作は、言語へ新しく追加されたものです（例えば [Firefox 79](/ja/docs/Mozilla/Firefox/Releases/79)）。コピーや初期化などのバルクメモリー操作のために 7 つの新しい組み込み操作が提供されており、 WebAssembly が `memcpy` や `memmove` などのネイティブ関数を、より効率的でパフォーマンスの高い方法でモデル化できるようにします。
 
 新しい操作は次の通りです。
 
@@ -634,7 +634,7 @@ WebAssembly スレッド ([Firefox 79](/ja/docs/Mozilla/Firefox/Releases/79) 以
 
 上記のように、共有の WebAssembly [`Memory`](/ja/docs/WebAssembly/JavaScript_interface/Memory) オブジェクトを作成することが可能です。これは、 [`postMessage()`](/ja/docs/Web/API/Window/postMessage) を使用してウィンドウとワーカーのコンテキスト間で、 [`SharedArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) と同じ方法で転送されるものです。
 
-JavaScript API 側では、[`WebAssembly.Memory()`](/ja/docs/WebAssembly/JavaScript_interface/Memory) コンストラクタの初期化オブジェクトに `shared` プロパティを追加し、 `true` に設定すると共有メモリを作成するようになりました。
+JavaScript API 側では、[`WebAssembly.Memory()`](/ja/docs/WebAssembly/JavaScript_interface/Memory) コンストラクタの初期化オブジェクトに `shared` プロパティを追加し、 `true` に設定すると共有メモリーを作成するようになりました。
 
 ```js
 const memory = new WebAssembly.Memory({
