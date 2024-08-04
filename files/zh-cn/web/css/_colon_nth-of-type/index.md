@@ -1,11 +1,14 @@
 ---
 title: ":nth-of-type"
 slug: Web/CSS/:nth-of-type
+
 ---
 
 {{CSSRef}}
 
-**`:nth-of-type()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)基于相同类型（标签名称）的兄弟元素中的位置来匹配元素。
+**`:nth-of-type()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)基于相同类型**（标签名称）**的兄弟元素中的位置来匹配元素。
+
+注意：当您使用其他非标签**`div、p....`**选择器时，浏览器会先行匹配选中的元素，然后解析元素的标签，最后通过标签所在父元素的位置进行匹配。（在下方示例底部有代码说明）
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-of-type.html", "tabbed-shorter")}}
 
@@ -70,6 +73,39 @@ p.fancy:nth-of-type(2n + 1) {
 
 > [!NOTE]
 > 使用此选择器无法选择 nth-of-class。选择器仅在创建匹配列表时查找类型。但是你可以基于 `:nth-of-type` 的位置**和**类名为元素应用 CSS，就像上面的示例中所示。
+
+### 选择器执行流程
+
+#### HTML
+
+```html
+<body>
+    <div class="father">
+        <div class="aaa">1</div>
+        <div class="children">2</div>
+        <div class="children">3</div>
+        <div class="children">4</div>
+        <div class="children">5</div>
+    </div>
+    <p class="children">6</p>
+</body>
+```
+
+#### CSS
+
+```css
+<style>
+    .children:nth-of-type(2) {
+        background: blue;
+    }
+</style>
+```
+
+#### 解释
+
+1. 通过 `.children` 寻找到 内容为 `2、3、4、5、6` 的元素
+2. 获取标签相同的所有兄弟元素 （这里为 `father` 下的所有 `div` 和 `body` 下的 `p`）
+3. 根据 `:nth-of-type(2)` 括号内 `2` 进行选中并渲染CSS样式
 
 ## 规范
 
