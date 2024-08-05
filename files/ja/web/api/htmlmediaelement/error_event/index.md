@@ -3,7 +3,7 @@ title: "HTMLMediaElement: error イベント"
 short-title: error
 slug: Web/API/HTMLMediaElement/error_event
 l10n:
-  sourceCommit: 7f728b8288409c26e99a6bd1d8d35cfeb3e51868
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef}}
