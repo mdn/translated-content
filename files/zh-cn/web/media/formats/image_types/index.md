@@ -163,7 +163,7 @@ slug: Web/Media/Formats/Image_types
 
 APNG 是 Mozilla 首次推出的一种文件格式，它扩展了 [PNG](#png（便携式网络图形）) 标准，增加了对动画图像的支持。在概念上，APNG 与已经使用了几十年的动画 GIF 格式相似，但 APNG 的功能更强，它支持多种[颜色深度](https://zh.wikipedia.org/wiki/色彩深度)，而动画 GIF 只支持 8 位[索引颜色](https://zh.wikipedia.org/wiki/索引顏色)。
 
-APNG 适用于无需与其他活动或音轨同步的基本动画，如进度指示器、活动[加载器](https://en.wikipedia.org/wiki/throbber)和其他动画序列。例如，APNG 是苹果 iMessage 应用程序（和 iOS 上的“信息”应用程序）[创建动画贴纸时支持的格式之一](https://developer.apple.com/stickers/)。它们也常用于 web 浏览器用户界面的动画部分。
+APNG 适用于无需与其他活动或音轨同步的基本动画，如进度指示器、活动[加载器](https://en.wikipedia.org/wiki/Throbber)和其他动画序列。例如，APNG 是苹果 iMessage 应用程序（和 iOS 上的“信息”应用程序）[创建动画贴纸时支持的格式之一](https://developer.apple.com/imessage/)。它们也常用于 web 浏览器用户界面的动画部分。
 
 <table class="standard-table">
   <tbody>
