@@ -28,7 +28,7 @@ requestIdleCallback(callback, options)
 
     - `timeout`：このパラメータに指定された時間（ミリ秒）が経過してもコールバックがまだ実行されていない場合、（パフォーマンスに影響を与える可能性があっても）コールバックを実行するタスクがイベントループにキューイングされます。 `timeout` が正の数値でない場合は無視されます。
 
-### 返り値
+### 返値
 
 コールバックをキャンセルする時に {{domxref("Window.cancelIdleCallback()")}} メソッドに渡す ID を返します。
 
@@ -36,11 +36,11 @@ requestIdleCallback(callback, options)
 
 [Cooperative Scheduling of Background Tasks API](/ja/docs/Web/API/Background_Tasks_API)の記事で、[例を一式](/ja/docs/Web/API/Background_Tasks_API#Example)紹介しています。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat}}
 
