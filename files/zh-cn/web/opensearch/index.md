@@ -40,7 +40,7 @@ OpenSearch 描述文件能[从网页安装搜索模块](#自动测知搜索模�
   - : 搜索引擎数据输入时的编码方式，例如说：`<InputEncoding>UTF-8</InputEncoding>`。
 - Image
 
-  - : URI to an icon representative of the search engine. When possible, search engines should offer a 16×16 image of type "image/x-icon" and a 64×64 image of type `image/jpeg` or `image/png`. The URI may also use the [`data:` URI scheme](/zh-TW/docs/Web/HTTP/data_URIs). You can generate a `data:` URI from an icon file at [The `data:` URI kitchen](https://software.hixie.ch/utilities/cgi/data/data).
+  - : URI to an icon representative of the search engine. When possible, search engines should offer a 16×16 image of type "image/x-icon" and a 64×64 image of type `image/jpeg` or `image/png`. The URI may also use the [`data:` URI scheme](/zh-CN/docs/Web/HTTP/data_URIs). You can generate a `data:` URI from an icon file at [The `data:` URI kitchen](https://software.hixie.ch/utilities/cgi/data/data).
 
     ```xml
     <Image height="16" width="16" type="image/x-icon">https://example.com/favicon.ico</Image>
@@ -65,7 +65,7 @@ OpenSearch 描述文件能[从网页安装搜索模块](#自动测知搜索模�
 
     这些型态的 URL 都可以使用 `{searchTerms}` 字符串来决定要关键词于 URL 中的位置，其他可用的参数请参考 [OpenSearch 1.1 参数规格](https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md#opensearch-11-parameters)。
 
-    在支持「搜索建议」的模块中，搜索的 URL 应可取回一组以 JSON 格式编写的数据，提供这类服务的详细方法请见[让搜索模块支持搜索建议](/zh-tw/%e8%ae%93%e6%90%9c%e5%b0%8b%e6%a8%a1%e7%b5%84%e6%94%af%e6%8f%b4%e6%90%9c%e5%b0%8b%e5%bb%ba%e8%ad%b0)。
+    在支持「搜索建议」的模块中，搜索的 URL 应可取回一组以 JSON 格式编写的数据，提供这类服务的详细方法请见[让搜索模块支持搜索建议](/zh-CN/%e8%ae%93%e6%90%9c%e5%b0%8b%e6%a8%a1%e7%b5%84%e6%94%af%e6%8f%b4%e6%90%9c%e5%b0%8b%e5%bb%ba%e8%ad%b0)。
 
 - Param
   - : 随搜索要求一并送出的参数，每组皆有参数名称及其值。指定参数时可放入 `{searchTerms}` 字符串来取得用户输入的搜索关键词。
@@ -138,10 +138,10 @@ OpenSearch 描述文件能[从网页安装搜索模块](#自动测知搜索模�
 - 供应服务器 OpenSearch 套件服务的服务器必须使用 `Content-Type: application/opensearchdescription+xml`。
 - 确认搜索套件 XML 的格式正确。你可以直接用 Firefox 加载该文件。template URL 的 & 符号需要像 `&amp;` 这样跳脱，标签也要用正斜线或 end tag 关闭。
 - `xmlns` 属性很重要，少了它就会出现「Firefox could not download the search plugin」的错误讯息。
-- 你**必须**包含 `text/html` URL：搜索套件只包含 Atom 或 [RSS](/zh-TW/RSS) URL 类型（虽然它有效，但 Firefox 不支持）都可能发生「could not download the search plugin」错误。
+- 你**必须**包含 `text/html` URL：搜索套件只包含 Atom 或 [RSS](/zh-CN/RSS) URL 类型（虽然它有效，但 Firefox 不支持）都可能发生「could not download the search plugin」错误。
 - 远程撷取的小图标（favicon）不能大于 10KB（请参见 [Firefox bug 361923](https://bugzil.la/361923)）。
 
-In addition, the search plugin service provides a logging mechanism that may be of use to plugin developers. Use `about:config` to set the pref '`browser.search.log`' to `true`. Logging information will appear in Firefox's [Error Console](/zh-TW/Error_Console) (Tools 〉 Error Console) when search plugins are added.
+In addition, the search plugin service provides a logging mechanism that may be of use to plugin developers. Use `about:config` to set the pref '`browser.search.log`' to `true`. Logging information will appear in Firefox's [Error Console](/zh-CN/Error_Console) (Tools 〉 Error Console) when search plugins are added.
 
 ## 参考
 
