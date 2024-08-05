@@ -150,4 +150,3 @@ In addition, the search plugin service provides a logging mechanism that may be 
 - [`data:` URI scheme](https://en.wikipedia.org/wiki/Data_URI_scheme)
 - [OpenSearch Plugin Generator](https://7is7.com/software/firefox/opensearch.html)
 - [Ready2Search](https://ready.to/search/en/) - create OpenSearch plugins. [Customized Search through Ready2Search](https://ready.to/search/make/en_make_plugin.htm)
-
