@@ -1,5 +1,5 @@
 ---
-title: Logical properties for margins, borders, and padding
+title: 바깥 여백, 테두리 그리고 안쪽 여백을 위한 논리적 속성들
 slug: Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding
 l10n:
   sourceCommit: a567dfc8bf5da874d1831b3f6a3ddb12b27d1ab9
