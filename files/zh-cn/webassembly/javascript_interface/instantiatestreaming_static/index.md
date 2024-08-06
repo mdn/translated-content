@@ -7,7 +7,8 @@ slug: WebAssembly/JavaScript_interface/instantiateStreaming_static
 
 **`WebAssembly.instantiateStreaming()`** 函数直接从流式底层源编译并实例化 WebAssembly 模块。这是加载 Wasm 代码的最有效、最优化的方式。
 
-> **备注：** 具有严格的[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/CSP)的网页可能会阻止 WebAssembly 模块的编译和执行。请参阅 [script-src CSP](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) 以了解更多有关允许 WebAssembly 编译和执行的信息。
+> [!NOTE]
+> 具有严格的[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/CSP)的网页可能会阻止 WebAssembly 模块的编译和执行。请参阅 [script-src CSP](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) 以了解更多有关允许 WebAssembly 编译和执行的信息。
 
 ## 语法
 
@@ -49,7 +50,8 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 然后访问 `ResultObject` 的实例成员，并调用包含的导出函数。
 
-> **备注：** 为了使其工作，服务器应该返回一个 `application/wasm` MIME 类型的 `.wasm` 文件。
+> [!NOTE]
+> 为了使其工作，服务器应该返回一个 `application/wasm` MIME 类型的 `.wasm` 文件。
 
 ## 规范
 

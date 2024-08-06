@@ -9,7 +9,8 @@ slug: Web/CSS/border-right-style
 
 {{EmbedInteractiveExample("pages/css/border-right-style.html")}}
 
-> **备注：** 这个 css 没有定义不同样式的边界之间如何拼接。
+> [!NOTE]
+> 这个 css 没有定义不同样式的边界之间如何拼接。
 
 ## Syntax
 

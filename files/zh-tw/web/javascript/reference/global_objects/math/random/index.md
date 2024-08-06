@@ -55,7 +55,8 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **備註：** might be tempting to use `Math.round()` to accomplish that, but doing so would cause your random numbers to follow a non-uniform distribution, which may not be acceptable for your needs.
+> [!NOTE]
+> might be tempting to use `Math.round()` to accomplish that, but doing so would cause your random numbers to follow a non-uniform distribution, which may not be acceptable for your needs.
 
 ### Getting a random integer between two values, inclusive
 

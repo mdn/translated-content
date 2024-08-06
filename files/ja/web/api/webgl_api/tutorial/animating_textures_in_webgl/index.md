@@ -13,14 +13,16 @@ l10n:
 
 始めに、ビデオフレームを取り出すのに使う {{ HTMLElement("video") }} 要素を作成します。
 
-> **メモ:** この宣言を "webgl-demo.js" スクリプトの始めに追加しましょう。
+> [!NOTE]
+> この宣言を "webgl-demo.js" スクリプトの始めに追加しましょう。
 
 ```js
 // 動画がテクスチャにコピーできる場合は true に設定する
 let copyVideo = false;
 ```
 
-> **メモ:** この関数を "webgl-demo.js" スクリプトに追加しましょう。
+> [!NOTE]
+> この関数を "webgl-demo.js" スクリプトに追加しましょう。
 
 ```js
 function setupVideo(url) {
@@ -77,7 +79,8 @@ WebGL にテクスチャデータを提供するために使用するために�
 
 次に変更するのは `initTexture()` です。画像ファイルを読み込む必要がなくなったため、とても単純になります。画像を読み込む代わりに、空のテクスチャオブジェクトを作成して、後で使用するフィルターを設定します。
 
-> **メモ:** "webgl-demo.js" の `loadTexture()` 関数を以下のコードに置き換えましょう。
+> [!NOTE]
+> "webgl-demo.js" の `loadTexture()` 関数を以下のコードに置き換えましょう。
 
 ```js
 function initTexture(gl) {
@@ -117,7 +120,8 @@ function initTexture(gl) {
 }
 ```
 
-> **メモ:** 以下の関数を "webgl-demo.js" に追加しましょう。
+> [!NOTE]
+> 以下の関数を "webgl-demo.js" に追加しましょう。
 
 ```js
 function updateTexture(gl, texture, video) {
@@ -148,7 +152,8 @@ const texture = initTexture(gl);
 const video = setupVideo("Firefox.mp4");
 ```
 
-> **メモ:** また、[Firefox.mp4](https://github.com/mdn/dom-examples/blob/main/webgl-examples/tutorial/sample8/Firefox.mp4) ファイルを JavaScript ファイルと同じローカルディレクトリーにダウンロードする必要があります。
+> [!NOTE]
+> また、[Firefox.mp4](https://github.com/mdn/dom-examples/blob/main/webgl-examples/tutorial/sample8/Firefox.mp4) ファイルを JavaScript ファイルと同じローカルディレクトリーにダウンロードする必要があります。
 
 > **メモ:** `main()` 関数で、 `render()` 関数をこのように置き換えましょう。
 

@@ -61,7 +61,8 @@ slug: Learn/Server-side/Django/Home_page
 
 相比之下，最后两个 URL 用于显示有关特定书籍或作者的详细信息 - 这些 URL 将编码要显示在 URL 中的项目的标识（如上所示\<id>）。URL 映射器可以提取编码信息并将其传递给视图，然后将动态地确定从数据库获取哪些信息。通过对我们的 URL 中的信息进行编码，我们只需要一个 URL 映射，视图和模板来处理每本书（或作者）。
 
-> **备注：** Django 允许你以任何你喜欢的方式构建你的 URL - 你可以如上所示编码 URL 正文中的信息，或使用 URL `GET`参数（例如 `/book/?id=6`）。无论你使用哪种方法，URL 都应保持清洁，逻辑和可读性 ([check out the W3C advice here](https://www.w3.org/Provider/Style/URI)).
+> [!NOTE]
+> Django 允许你以任何你喜欢的方式构建你的 URL - 你可以如上所示编码 URL 正文中的信息，或使用 URL `GET`参数（例如 `/book/?id=6`）。无论你使用哪种方法，URL 都应保持清洁，逻辑和可读性 ([check out the W3C advice here](https://www.w3.org/Provider/Style/URI)).
 >
 > Django 文档倾向于在 URL 的主体中推荐编码信息，这是他们觉得鼓励更好的 URL 设计的实践。
 
@@ -71,7 +72,8 @@ slug: Learn/Server-side/Django/Home_page
 
 我们创建的第一个页面将会是索引页（catalog/)。这会显示一些静态 HTML，以及数据库中不同记录的一些计算的“计数“。为了使其工作，我们必须创建一个 URL 映射，视图和模版。
 
-> **备注：** 本节应该特别注意。一些”材料“在所有页面都通用。
+> [!NOTE]
+> 本节应该特别注意。一些”材料“在所有页面都通用。
 
 ### URL 映射
 
@@ -87,7 +89,8 @@ urlpatterns = [
 
 如果检测到 URL 模式''，(views.index——在 view\.py 中函数命名 index() ）将被调用。URL 模式是[Python 正则表达式](https://docs.python.org/3/library/re.html) (RE)。我们将在本教程中进一步介绍 RE。
 
-> **备注：** 在 **/locallibrary/locallibrary/urls.py**
+> [!NOTE]
+> 在 **/locallibrary/locallibrary/urls.py**
 >
 > ```python
 > urlpatterns += [
@@ -105,7 +108,8 @@ urlpatterns = [
 <a href="{% url 'index' %}">Home</a>.
 ```
 
-> **备注：** 我们当然可以硬编码上面的链接（如：`<a href="/catalog/">Home</a>`），但是如果我们改变了主页的模式，模版将不再正确链接，使用反向网址映射会更灵活和强大。
+> [!NOTE]
+> 我们当然可以硬编码上面的链接（如：`<a href="/catalog/">Home</a>`），但是如果我们改变了主页的模式，模版将不再正确链接，使用反向网址映射会更灵活和强大。
 
 ### View (基于功能)
 
@@ -153,7 +157,8 @@ def index(request):
 
 模版是定义一个文件（例如 HTML 页面）的结构与布局的文本文件，其中占位符用于表示实际内容。Django 将自动在应用程序“templates”目录查找模版。所以例如，在我们刚刚加的索引页，`render()` 函数会期望能够找到 **/locallibrary/catalog/templates/index.html** 这个文件，如何找不到该文件，则会引发错误。如果保存以前的更改并返回到浏览器，你可以看到访问 `127.0.0.1:8000` 现在将提供你一个相当直观的错误信息“**TemplateDoesNotExist at /catalog/**”以及其他详细信息。
 
-> **备注：** Django 将根据你的项目的设置文件，来查看模版的许多位置 (在已安装的应用程序中进行搜索是默认设置). 你可以查阅更多关于 Django 如何找到模版以及它支持的模版格式在[（Templates](https://docs.djangoproject.com/en/1.10/topics/templates/) ）。
+> [!NOTE]
+> Django 将根据你的项目的设置文件，来查看模版的许多位置 (在已安装的应用程序中进行搜索是默认设置). 你可以查阅更多关于 Django 如何找到模版以及它支持的模版格式在[（Templates](https://docs.djangoproject.com/en/1.10/topics/templates/) ）。
 
 #### 扩展模版
 
@@ -161,7 +166,8 @@ def index(request):
 
 例如，基本模版 `base_generic.html` 可能看起来像下面的文本。正如你所见的，它包含一些“常见“HTML”和标题，侧边栏和使用命名 `block` 和 `endblock` 模版标记（粗体显示）标记的内容部分。块可以是空的，或者包含将被派生页“默认使用”的内容。
 
-> **备注：** 模版标签就像你可以在模版中使用的函数循环列表，基于变量的值执行条件操作等。除了模版标签，模版语法允许你引用模版变量（通过从视图进入模版），并使用模版过滤器，其中重新格式化变量（例如，将字符串设置为小写）。
+> [!NOTE]
+> 模版标签就像你可以在模版中使用的函数循环列表，基于变量的值执行条件操作等。除了模版标签，模版语法允许你引用模版变量（通过从视图进入模版），并使用模版过滤器，其中重新格式化变量（例如，将字符串设置为小写）。
 
 ```django
 <!doctype html>
@@ -196,7 +202,8 @@ def index(request):
 
 下面就是我们计划的基本模版用于本地图书馆网站。正如所看到的，内容包括一些 HTML 和定义块 `title` ，`sidebar` 和 `content`。我们有默认的 `title`（当然我们可以改）和默认的所以书籍和作者的链接列表 `sidebar` （我们可能并不会怎么改，但需要时，我们通过把想法放入块`block`中，比如想法是—允许范围）。
 
-> **备注：** 我们再介绍两个额外的模版标签： `url` 和 `load static`。下文中我们会详细介绍。
+> [!NOTE]
+> 我们再介绍两个额外的模版标签： `url` 和 `load static`。下文中我们会详细介绍。
 
 创建一个新的文件 — **/locallibrary/catalog/templates/_base_generic.html_** — 写入如下代码
 
@@ -275,7 +282,8 @@ def index(request):
 
 在动态内容部分，我们的占位符（模版变量），是给我们想要视图的信息声明。变量使用“双大括号“或者“句柄“语法进行标记。
 
-> **备注：** 你可以轻松地识别是否使用变量或模版标签（函数），因为变量具有双括号 (`\{{ num_books }}`) 而标记被包含在带有百分比符号 (`{% extends "base_generic.html" %}`) 的单个大括号中。
+> [!NOTE]
+> 你可以轻松地识别是否使用变量或模版标签（函数），因为变量具有双括号 (`\{{ num_books }}`) 而标记被包含在带有百分比符号 (`{% extends "base_generic.html" %}`) 的单个大括号中。
 
 这里要注意的重要事情是这些变量用我们视图函数`render`中的字典—注入 `context` （下面）；当渲染模版时，这些将替换为相关联的值。
 
@@ -309,7 +317,8 @@ return render(
   style="width:555px;height:540px;" />
 ```
 
-> **备注：** 上面的更改指定文件所在的位置，但 Django 默认不提供它们。当我们[created the website skeleton](/zh-CN/docs/Learn/Server-side/Django/skeleton_website),我们在全局 URL 映射器 r (**/locallibrary/locallibrary/urls.py**) 中开发 Web 服务器提供服务，你仍然需要安排它们在生产中投放。我们接下来看一看
+> [!NOTE]
+> 上面的更改指定文件所在的位置，但 Django 默认不提供它们。当我们[created the website skeleton](/zh-CN/docs/Learn/Server-side/Django/skeleton_website),我们在全局 URL 映射器 r (**/locallibrary/locallibrary/urls.py**) 中开发 Web 服务器提供服务，你仍然需要安排它们在生产中投放。我们接下来看一看
 
 更多内容—[Managing static files](https://docs.djangoproject.com/en/1.10/howto/static-files/) (Django docs).
 
@@ -329,7 +338,8 @@ return render(
 
 ![Index page for LocalLibrary website](index_page_ok.png)
 
-> **备注：** 由于尚未定义这些网页的网址，视图和模板，因此你将无法使用“**所有图书**和**所有作者**”链接（目前我们刚刚在 `base_generic.html` 模板中插入了这些链接的占位符）
+> [!NOTE]
+> 由于尚未定义这些网页的网址，视图和模板，因此你将无法使用“**所有图书**和**所有作者**”链接（目前我们刚刚在 `base_generic.html` 模板中插入了这些链接的占位符）
 
 ## 挑战自己
 

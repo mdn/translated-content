@@ -21,7 +21,8 @@ l10n:
   - : 監視されている要素のコンテンツボックスのインライン方向の長さをデバイスピクセル単位で示します。
     書字方向 ({{cssxref("writing-mode")}}) が水平のボックスの場合、これは水平方向の寸法、すなわち幅であり、 writing-mode が垂直である場合は、これは垂直方向の寸法、すなわち高さです。
 
-> **メモ:** 書字方向やブロック・インラインの寸法についての詳しい情報は、[テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)をご覧ください。
+> [!NOTE]
+> 書字方向やブロック・インラインの寸法についての詳しい情報は、[テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)をご覧ください。
 
 ## 例
 

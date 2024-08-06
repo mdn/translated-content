@@ -9,7 +9,8 @@ l10n:
 
 `<mfenced>` [MathML](/zh-CN/docs/Web/MathML) 元素提供了向表达式添加自定义开和闭括号（如圆括号）以及分隔符（如逗号或分号）的可能。
 
-> **备注：** 从历史上看，`<mfenced>` 元素被定义为编写围栏表达式的一种简写形式，相当于涉及 {{MathMLElement("mrow")}} 和 {{MathMLElement("mo")}} 元素的扩展形式。现在，建议改用等效形式。
+> [!NOTE]
+> 从历史上看，`<mfenced>` 元素被定义为编写围栏表达式的一种简写形式，相当于涉及 {{MathMLElement("mrow")}} 和 {{MathMLElement("mo")}} 元素的扩展形式。现在，建议改用等效形式。
 
 ## 属性
 

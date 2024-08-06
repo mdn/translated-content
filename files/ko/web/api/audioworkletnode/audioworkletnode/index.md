@@ -26,7 +26,8 @@ var node = new AudioWorkletNode(context, name, options);
 
     <!-- 명세는 이 객체를 다음으로 나타냅니다: AudioWorkletNodeOptions -->
 
-    > **참고:** 이 객체에 적용된 [structured clone algorithm](/ko/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)의 결과는
+    > [!NOTE]
+    > 이 객체에 적용된 [structured clone algorithm](/ko/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)의 결과는
     > 또한 연관된 {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}} 생성자로 내부적으로 전달됩니다
     > — 이는 근본적인 사용자 정의 {{domxref("AudioWorkletProcessor")}}의 커스텀 초기화를 가능케 합니다.
 

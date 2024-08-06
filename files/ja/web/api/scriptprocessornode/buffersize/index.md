@@ -9,7 +9,8 @@ l10n:
 
 {{domxref("ScriptProcessorNode")}} インターフェイスの `bufferSize` プロパティは、入力と出力両方のバッファーサイズを表す整数をサンプルフレーム数単位で返します。この値は `256` 〜 `16384` の範囲の 2 のべき乗を取りえます。
 
-> **メモ:** この機能は [AudioWorklets](/ja/docs/Web/API/AudioWorklet) および {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
+> [!NOTE]
+> この機能は [AudioWorklets](/ja/docs/Web/API/AudioWorklet) および {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
 
 ## 値
 

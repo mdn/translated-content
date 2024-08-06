@@ -42,6 +42,7 @@ slug: Web/HTML/Element/strike
 
 ### Comentarios
 
-> **Advertencia:** DESAPROBADO
+> [!WARNING]
+> DESAPROBADO
 
 de momento no funciona

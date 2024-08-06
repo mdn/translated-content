@@ -15,7 +15,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/name
 
 {{js_property_attributes(0, 0, 1)}}
 
-> **备注：** 在非标准的、ES2015 之前的实现中，`configurable` 属性也是 `false`。
+> [!NOTE]
+> 在非标准的、ES2015 之前的实现中，`configurable` 属性也是 `false`。
 
 ## 描述
 
@@ -178,7 +179,8 @@ class Foo {}
 Foo.name; // "Foo"
 ```
 
-> **警告：** JavaScript 只会在函数没有自有的 `name` 属性时才设置函数的 `name` 属性。然而，类的[静态成员](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)将被设置为类构造函数的自有属性，从而阻止内置的 `name` 属性生效。请参阅下面的示例。
+> [!WARNING]
+> JavaScript 只会在函数没有自有的 `name` 属性时才设置函数的 `name` 属性。然而，类的[静态成员](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)将被设置为类构造函数的自有属性，从而阻止内置的 `name` 属性生效。请参阅下面的示例。
 
 ### 以 Symbol 为函数名称
 
@@ -265,7 +267,8 @@ console.log(Foo.name); // 如果 Foo 类有一个静态的“name”属性，则
 
 ### JavaScript 压缩器和缩小器
 
-> **警告：** 在使用 JavaScript 压缩器（缩小器）或混淆器等源码转换工具时，要小心使用 `name` 属性。这些工具通常作为 JavaScript 构建流程的一部分使用，以减小程序在部署到生产环境之前的大小。此类转换通常会在构建时更改函数的名称。
+> [!WARNING]
+> 在使用 JavaScript 压缩器（缩小器）或混淆器等源码转换工具时，要小心使用 `name` 属性。这些工具通常作为 JavaScript 构建流程的一部分使用，以减小程序在部署到生产环境之前的大小。此类转换通常会在构建时更改函数的名称。
 
 例如有这样的一段源码：
 

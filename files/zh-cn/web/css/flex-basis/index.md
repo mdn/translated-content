@@ -9,7 +9,8 @@ slug: Web/CSS/flex-basis
 
 {{EmbedInteractiveExample("pages/css/flex-basis.html")}}
 
-> **备注：** 当一个元素同时被设置了 `flex-basis` (除值为 `auto` 外) 和 `width` (或者在 `flex-direction: column` 情况下设置了`height`) , `flex-basis` 具有更高的优先级。
+> [!NOTE]
+> 当一个元素同时被设置了 `flex-basis` (除值为 `auto` 外) 和 `width` (或者在 `flex-direction: column` 情况下设置了`height`) , `flex-basis` 具有更高的优先级。
 
 ## 语法
 

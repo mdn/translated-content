@@ -526,6 +526,7 @@
 /zh-CN/docs/Glossary/I18N	/zh-CN/docs/Glossary/Internationalization
 /zh-CN/docs/Glossary/IP地址	/zh-CN/docs/Glossary/IP_Address
 /zh-CN/docs/Glossary/Rendering_engine	/zh-CN/docs/Glossary/Engine/Rendering
+/zh-CN/docs/Glossary/Routers	/zh-CN/docs/Glossary/Router
 /zh-CN/docs/Glossary/Second-level_Domain	/zh-CN/docs/Glossary/SLD
 /zh-CN/docs/Glossary/Serialize	/zh-CN/docs/Glossary/Serialization
 /zh-CN/docs/Glossary/Simple_header	/zh-CN/docs/Glossary/CORS-safelisted_request_header

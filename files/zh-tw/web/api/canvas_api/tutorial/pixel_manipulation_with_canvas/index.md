@@ -64,7 +64,8 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 這個方法會返回`ImageData`物件，它代表著在這 canvas 區域之中 pixel 的數據(data) 。從各角落的點代表著 (`left`,`top`), (`left+width`, `top`), (`left`, `top+height`), and (`left+width`, `top+height`)。這些作標被設定為 canvas 的空間座標單位。
 
-> **備註：** 在`ImageData` 物件中，任何超出 canvas 外的 pixels 皆會返回透明的黑色的形式。
+> [!NOTE]
+> 在`ImageData` 物件中，任何超出 canvas 外的 pixels 皆會返回透明的黑色的形式。
 
 這個方法也被展示在[使用 canvas 操作影像](/zh-TW/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)之中。
 

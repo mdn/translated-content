@@ -45,7 +45,8 @@ _该接口属性继承自 {{domxref("MouseEvent")}} 和 {{domxref("Event")}}._
 
 The `PointerEvent` interface has several event types. To determine which event fired, look at the event's {{ domxref("Event.type", "type") }} property.
 
-> **备注：** It's important to note that in many cases, both pointer and mouse events get sent (in order to let non-pointer-specific code still interact with the user). If you use pointer events, you should call {{ domxref("event.preventDefault()") }} to keep the mouse event from being sent as well.
+> [!NOTE]
+> It's important to note that in many cases, both pointer and mouse events get sent (in order to let non-pointer-specific code still interact with the user). If you use pointer events, you should call {{ domxref("event.preventDefault()") }} to keep the mouse event from being sent as well.
 
 - {{domxref('Element/pointerover_event', 'pointerover')}}
   - : This event is fired when a pointing device is moved into an element's hit test boundaries.

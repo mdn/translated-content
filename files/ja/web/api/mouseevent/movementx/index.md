@@ -10,7 +10,8 @@ l10n:
 
 **`movementX`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、直前の {{domxref("Element/mousemove_event", "mousemove")}} イベントとこのイベントのマウスポインターの X 座標の差を示します。このプロパティの値は `currentEvent.movementX = currentEvent.screenX - previousEvent.screenX` のように計算されます。
 
-> **警告:** ブラウザーは `movementX` と {{domxref("MouseEvent.screenX", "screenX")}} に [仕様で定義されているものとは異なる単位を使用します](https://github.com/w3c/pointerlock/issues/42)。ブラウザーとオペレーティングシステムによって、 `movementX` の単位は物理ピクセルであったり、論理ピクセルであったり、 CSS ピクセルであったりします。
+> [!WARNING]
+> ブラウザーは `movementX` と {{domxref("MouseEvent.screenX", "screenX")}} に [仕様で定義されているものとは異なる単位を使用します](https://github.com/w3c/pointerlock/issues/42)。ブラウザーとオペレーティングシステムによって、 `movementX` の単位は物理ピクセルであったり、論理ピクセルであったり、 CSS ピクセルであったりします。
 
 ## 値
 

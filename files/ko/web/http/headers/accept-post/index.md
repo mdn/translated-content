@@ -13,7 +13,8 @@ l10n:
 
 예를 들어, 지원되지 않는 미디어 유형이 포함된 `POST` 요청을 수신하는 서버는 {{HTTPStatus("415")}} `Unsupported Media Type`과 하나 이상의 지원되는 미디어 유형을 참조하는 **`Accept-Post`** 헤더를 사용하여 응답할 수 있습니다.
 
-> **참고:** IANA 레지스트리는 [공식 콘텐츠 인코딩의 전체 목록](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)을 유지 관리합니다.
+> [!NOTE]
+> IANA 레지스트리는 [공식 콘텐츠 인코딩의 전체 목록](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)을 유지 관리합니다.
 
 <table class="properties">
   <tbody>

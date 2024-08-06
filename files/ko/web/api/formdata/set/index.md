@@ -11,7 +11,8 @@ slug: Web/API/FormData/set
 
 `set()` 과 {{domxref("FormData.append")}} 의 차이점은 지정된 키가 이미 존재할 경우에, `set()` 은 모든 기존 값들을 새로운 값으로 덮어쓰기하는 반면, {{domxref("FormData.append")}} 는 기존 값의 끝에 새 값을 추가합니다.
 
-> **참고:** 이 메서드는 [Web Worker](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 있습니다.
+> [!NOTE]
+> 이 메서드는 [Web Worker](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 있습니다.
 
 ## Syntax
 

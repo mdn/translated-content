@@ -21,7 +21,8 @@ Par défaut (quand l'attribut n'est pas spécifié), le CORS n'est pas du tout u
 
 Un mot-clé invalide ou une chaîne de caractères vide seront interprétés comme le mot-clé `anonymous`.
 
-> **Note :** Avant Firefox 83, l'attribut `crossorigin` n'était pas pris en charge pour `rel="icon"` ; il existe également [un bug sur Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
+> [!NOTE]
+> Avant Firefox 83, l'attribut `crossorigin` n'était pas pris en charge pour `rel="icon"` ; il existe également [un bug sur Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
 
 ## Exemples
 

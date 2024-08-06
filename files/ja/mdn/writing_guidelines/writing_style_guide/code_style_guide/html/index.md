@@ -21,7 +21,8 @@ Prettier はすべてのコードを書式化し、スタイルの一貫性を�
 
 ## 完全な HTML 文書
 
-> **メモ:** この章のガイドラインは、完全な HTML 文書を表示する必要がある場合にのみ適用されます。通常、機能を示すにはスニペットで十分です。 [EmbedLiveSample マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples#従来型ライブサンプル)を使用している場合、 HTML スニペットを載せるだけで、表示時に自動的に完全な HTML 文書の中に挿入されます。
+> [!NOTE]
+> この章のガイドラインは、完全な HTML 文書を表示する必要がある場合にのみ適用されます。通常、機能を示すにはスニペットで十分です。 [EmbedLiveSample マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples#従来型ライブサンプル)を使用している場合、 HTML スニペットを載せるだけで、表示時に自動的に完全な HTML 文書の中に挿入されます。
 
 ### 文書型宣言
 

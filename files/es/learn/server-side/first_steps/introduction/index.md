@@ -73,7 +73,8 @@ Los desarrolladores generalmente escriben su código usando web frameworks. Los 
 
 De nuevo, mientras que, tanto el código lado cliente y el lado servidor usan frameworks, los dominios son muy diferentes, y por lo tanto también lo son los frameworks. Los frameworks del lado cliente simplifican los diseños y las tareas de presentación mientras que los del lado servidor proporcionan un montón de funcionalidades "comunes" que tendría que haber implementado uno mismo (ej, soporte para las sesiones, soporte para los usuarios y autenticación, acceso fácil a la base de datos, librerías de plantillas, etc...).
 
-> **Nota:** Los frameworks del lado cliente se usan con frecuencia para acelerar el desarrollo del código del lado cliente, pero también se puede elegir escribir todo el código a mano; de hecho, escribir el código a mano puede ser más rápido y más eficiente si sólo se necesita una UI para sitio web pequeña y simple. Por contra, casi nunca se consideraría escribir el componente del lado servidor de una aplicación web ("web app") sin un framework — implementar una característica vital como un servidor HTTP es realmente difícil de hacer de la nada en un lenguaje como, por ejemplo, Python, pero los web frameworks de Python como Django proporcionan uno listo para usar, junto con otras herramientas muy útiles.
+> [!NOTE]
+> Los frameworks del lado cliente se usan con frecuencia para acelerar el desarrollo del código del lado cliente, pero también se puede elegir escribir todo el código a mano; de hecho, escribir el código a mano puede ser más rápido y más eficiente si sólo se necesita una UI para sitio web pequeña y simple. Por contra, casi nunca se consideraría escribir el componente del lado servidor de una aplicación web ("web app") sin un framework — implementar una característica vital como un servidor HTTP es realmente difícil de hacer de la nada en un lenguaje como, por ejemplo, Python, pero los web frameworks de Python como Django proporcionan uno listo para usar, junto con otras herramientas muy útiles.
 
 ## ¿Qué se puede hacer en el lado-servidor?
 
@@ -93,7 +94,8 @@ El servidor no se limita a enviar información de las bases de datos, y podría 
 
 Debido a que la información está en una base de datos, puede también ser compartida y actualizada con otros sistemas de negocio (por ejemplo, cuando se venden los productos online o en una tienda, la tienda debería actualizar su base de datos de inventario.
 
-> **Nota:** Tu imaginación no tiene que trabajar duro para ver el beneficio de la codificación de lado-servidor para el almacenaje y distribución de información:
+> [!NOTE]
+> Tu imaginación no tiene que trabajar duro para ver el beneficio de la codificación de lado-servidor para el almacenaje y distribución de información:
 >
 > 1. Vete a [Amazon](https://www.amazon.com) o a cualquier otro sitio de comercio electrónico "e-commerce".
 > 2. Busca por un número de palabras clave y nota como la estructura de la página no cambia, incluso aunque cambien los resultados.
@@ -107,7 +109,8 @@ Los servidores pueden almacenar y usar la información acerca de los clientes pa
 
 Un análisis profundo de los hábitos del usuario se puede usar para anticipar sus intereses y personalizar las respuestas y notificaciones futuras, proporcionando, por ejemplo, una lista de las localizaciones visitadas o populares que querrías buscar en un mapa.
 
-> **Nota:** Vete a [Google Maps](https://maps.google.com/) como usuario anónimo, selecciona el botón Direcciones, e introduce los puntos de partida y destino de un viaje. Ahora inicia sesión en el sistema con tu cuenta de Google, si tienes una (en el panel de abajo aparece información acerca de este proceso donde seleccionas direcciones). El sitio web te permitirá ahora seleccionar las localizaciones de casa y trabajo como puntos de partida y destino (o almacenar estos detalles si no lo has hecho así).
+> [!NOTE]
+> Vete a [Google Maps](https://maps.google.com/) como usuario anónimo, selecciona el botón Direcciones, e introduce los puntos de partida y destino de un viaje. Ahora inicia sesión en el sistema con tu cuenta de Google, si tienes una (en el panel de abajo aparece información acerca de este proceso donde seleccionas direcciones). El sitio web te permitirá ahora seleccionar las localizaciones de casa y trabajo como puntos de partida y destino (o almacenar estos detalles si no lo has hecho así).
 
 ### Acceso controlado al contenido
 
@@ -118,13 +121,15 @@ Ejemplos del mundo real incluyen:
 - Redes sociales como Facebook permiten a los usuarios controlar totalmente sus propios datos pero permitiendo sólo a sus amigos ver o comentar sobre ellos. El usuario determina quien puede ver sus datos, y por extensión, los datos de quienes aparecen en sus notificaciones — autorización es una parte central de la experiencia de usuario!
 - El sitio en el que te encuentras ahora controla el acceso al contenido: los artículos son visibles a todos, pero sólo los usuarios que se han identificado pueden editar el contenido. Para comprobar ésto, pincha en el botón Edit en la parte superior de esta página — si te has identificado iniciando sesión se te mostrará la vista de edición; si no has iniciado sesión serás enviado a una página de registro.
 
-> **Nota:** Considera otros ejemplos reales donde el acceso al contenido está controlado. Por ejemplo, ¿qué puedes ver si vas al sitio online de tu banco? Inicia sesión con tu cuenta — ¿qué información adicional puedes ver y modificar? ¿Qué información puedes ver y sólo el banco puede cambiar?
+> [!NOTE]
+> Considera otros ejemplos reales donde el acceso al contenido está controlado. Por ejemplo, ¿qué puedes ver si vas al sitio online de tu banco? Inicia sesión con tu cuenta — ¿qué información adicional puedes ver y modificar? ¿Qué información puedes ver y sólo el banco puede cambiar?
 
 ### Almacenar información de sesión/estado
 
 La programación de lado-servidor permite a los desarrolladores hacer uso de las sesiones — es básicamente un mecanismo que permite al servidor almacenar información sobre el usuario actual del sitio u enviar diferentes respuestas basadas en esa información. Esto permite, por ejemplo, que un sitio sepa que un usuario ha iniciado sesión previamente y presente enlaces a sus correos, o a su historial de órdenes, o quizá guardar el estado de un simple juego de forma que el usuario pueda volver al sitio de nuevo y retomar el juego donde lo dejó.
 
-> **Nota:** Visita el sitio de un periódico que tenga un modelo de subscripción y abre un puñado de pestañas (ej, [The Age](http://www.theage.com.au/)). Continua visitando el sitio durante unos pocos días/horas. En algún momento serás finalmente redirigido a las páginas que explican cómo suscribirte y se te impedirá el acceso a los artículos. Esta información es un ejemplo de información de sesión almacenada en cookies.
+> [!NOTE]
+> Visita el sitio de un periódico que tenga un modelo de subscripción y abre un puñado de pestañas (ej, [The Age](http://www.theage.com.au/)). Continua visitando el sitio durante unos pocos días/horas. En algún momento serás finalmente redirigido a las páginas que explican cómo suscribirte y se te impedirá el acceso a los artículos. Esta información es un ejemplo de información de sesión almacenada en cookies.
 
 ### Notificaciones y comunicación
 
@@ -136,7 +141,8 @@ Unos pocos ejemplos incluyen:
 - Amazon envía con regularidad emails que sugieren productos similares a aquellos comprados o vistos anteriormente y en los que podrías estar interesado.
 - Un servidor web podría enviar mensajes de aviso a los administradores del sistema alertandoles de memoria baja en el servidor o de actividades de usuario sospechosas.
 
-> **Nota:** El tipo de notificación más común es una "confirmación de registro". Elige uno cualquiera de los grandes sitios en que estés interesado (Google, Amazon, Instagram, etc.) y crea una cuenta nueva usando tu dirección de correo. En breve recibirás un email de confirmación de registro, o solicitando un acuse de recibo para activar la cuenta.
+> [!NOTE]
+> El tipo de notificación más común es una "confirmación de registro". Elige uno cualquiera de los grandes sitios en que estés interesado (Google, Amazon, Instagram, etc.) y crea una cuenta nueva usando tu dirección de correo. En breve recibirás un email de confirmación de registro, o solicitando un acuse de recibo para activar la cuenta.
 
 ### Análisis de datos
 
@@ -144,7 +150,8 @@ Un sitio web puede recolectar un montón de datos acerca de los usuarios: qué e
 
 Por ejemplo, Amazon y Google anuncian ambos productos basados en búsquedas previas (y adquisiciones).
 
-> **Nota:** Si eres usuario de Facebook vete a tu muro y hecha un ojo a la ristra de entradas. Fíjate como algunas de las entradas no están en orden numérico - en particular las entradas con más "me-gusta" están con frecuencia en lugares más altos de la lista que las entradas más recientes. Echa un ojo también a qué clase de anuncios te están mostrando — podrías ver anuncios de cosas que has mirado en otros sitios. El algoritmo de Facebook para resaltar contenido y anuncios puede ser un poco misterioso, pero está claro que lo que hace depende de lo que te gusta y de tus hábitos de visualización!
+> [!NOTE]
+> Si eres usuario de Facebook vete a tu muro y hecha un ojo a la ristra de entradas. Fíjate como algunas de las entradas no están en orden numérico - en particular las entradas con más "me-gusta" están con frecuencia en lugares más altos de la lista que las entradas más recientes. Echa un ojo también a qué clase de anuncios te están mostrando — podrías ver anuncios de cosas que has mirado en otros sitios. El algoritmo de Facebook para resaltar contenido y anuncios puede ser un poco misterioso, pero está claro que lo que hace depende de lo que te gusta y de tus hábitos de visualización!
 
 ## Sumario
 

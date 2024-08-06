@@ -53,7 +53,8 @@ user-select: unset;
 
   - : 允许在元素内选择；但是，选区将被限制在该元素的边界之内。
 
-    > **备注：** CSS UI 4 将 `element` 值[重命名](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05)为 `contain`。
+    > [!NOTE]
+    > CSS UI 4 将 `element` 值[重命名](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05)为 `contain`。
 
 ## 形式定义
 

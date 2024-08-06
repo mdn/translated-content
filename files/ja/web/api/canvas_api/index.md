@@ -87,7 +87,8 @@ ctx.fillRect(10, 10, 150, 100);
 - [ZIM](https://zimjs.com): 便利でキャンバス上のコンポーネントとコーディングの創造性の制御を提供し、アクセシビリティと数百のカラフルなチュートリアルがあります。
 - [Sprig](https://github.com/hackclub/sprig) は、キャンバスを使用する、初心者に優しいオープンソースのタイルベースのゲーム開発ライブラリです。
 
-> **メモ:** WebGL を使用する 2D および 3D のライブラリーについては [WebGL API](/ja/docs/Web/API/WebGL_API) を参照してください。
+> [!NOTE]
+> WebGL を使用する 2D および 3D のライブラリーについては [WebGL API](/ja/docs/Web/API/WebGL_API) を参照してください。
 
 ## 仕様書
 

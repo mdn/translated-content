@@ -2,7 +2,7 @@
 title: 双向文本
 slug: Glossary/BiDi
 l10n:
-  sourceCommit: 742c3e7c2bc9132e3341f73301a02d4e0262ba96
+  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
 {{GlossarySidebar}}
@@ -17,6 +17,7 @@ Unicode 标准为完整的双向文本支持提供了基础，并详细规定了
 
 ## 参见
 
-- {{glossary("Unicode", "统一码")}}
+- 相关术语：
+  - {{glossary("Unicode", "统一码")}}
 - 维基百科上的[双向文本](https://zh.wikipedia.org/wiki/雙向文稿)
 - [UAX#9：Unicode 双向文本算法](https://www.unicode.org/reports/tr9)

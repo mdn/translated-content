@@ -9,7 +9,8 @@ slug: Web/CSS/clip
 
 **`這個 clip`** [CSS](/zh-TW/docs/Web/CSS) 屬性用來定義元素的哪一個部分是可見的. `clip` 屬性只能被賦予在絕對位置的元素(element)上, 像是帶有這些的 CSS 屬性的元素 {{cssxref("position","position:absolute")}} or {{cssxref("position","position:fixed")}}.
 
-> **警告：** 這個屬性被遺棄了. 請改用 {{cssxref("clip-path")}} .
+> [!WARNING]
+> 這個屬性被遺棄了. 請改用 {{cssxref("clip-path")}} .
 
 {{cssinfo}}
 

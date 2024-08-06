@@ -11,7 +11,8 @@ l10n:
 
 这个属性对像素为主的游戏或其他应用很有用。放大图像时，默认的调整大小的算法会使得像素变模糊。可以将此属性设为 `false` 来保证像素的清晰度。
 
-> **备注：** 你可以使用 {{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}} 属性来调整平滑质量。
+> [!NOTE]
+> 你可以使用 {{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}} 属性来调整平滑质量。
 
 ## 值
 

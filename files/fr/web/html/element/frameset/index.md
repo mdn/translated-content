@@ -5,11 +5,13 @@ slug: Web/HTML/Element/frameset
 
 {{HTMLSidebar}}
 
-> **Attention :** Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la prendre en charge, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications web l'utilisant peuvent cesser de fonctionner à tout moment.
+> [!WARNING]
+> Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la prendre en charge, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications web l'utilisant peuvent cesser de fonctionner à tout moment.
 
 L'élément HTML **`<frameset>`** est utilisé pour contenir les éléments [`<frame>`](/fr/docs/Web/HTML/Element/frame).
 
-> **Note :** L'utilisation de cadres étant désormais déconseillée au profit de l'utilisation de [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), cet élément n'est généralement pas utilisé par les sites web modernes.
+> [!NOTE]
+> L'utilisation de cadres étant désormais déconseillée au profit de l'utilisation de [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), cet élément n'est généralement pas utilisé par les sites web modernes.
 
 ## Attributs
 

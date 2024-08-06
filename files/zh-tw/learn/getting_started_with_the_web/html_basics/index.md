@@ -117,7 +117,8 @@ My cat is very grumpy
 
 說明文字應該要好好呈現這個圖片的內容，上面這個例子就很差。好的例子像是：「Firefox Logo：有一隻狐狸繞著地球」
 
-> **備註：** 你可以在 [MDN's Accessibility landing page](/zh-TW/docs/Web/Accessibility) 查看無障礙頁面的資訊。
+> [!NOTE]
+> 你可以在 [MDN's Accessibility landing page](/zh-TW/docs/Web/Accessibility) 查看無障礙頁面的資訊。
 
 ## 標記文字
 

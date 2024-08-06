@@ -61,7 +61,8 @@ alert("onkeydown handler: \n"
 </html>
 ```
 
-> **Nota:** El codigo de arriba falla en Firefox 9 debido al [bug 696020](https://bugzilla.mozilla.org/show_bug.cgi?id=696020).
+> [!NOTE]
+> El codigo de arriba falla en Firefox 9 debido al [bug 696020](https://bugzilla.mozilla.org/show_bug.cgi?id=696020).
 
 ### Especificacion
 

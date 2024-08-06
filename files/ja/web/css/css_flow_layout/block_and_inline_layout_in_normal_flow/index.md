@@ -55,7 +55,8 @@ slug: Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow
 
 マージンの相殺については、[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)の記事で詳しく解説しています。
 
-> **メモ:** マージンが相殺されているかどうか分からない場合は、ブラウザーのの DevTools でボックスモデルの値を確認してください。これにより、マージンの実際のサイズが表示されるので、何が起こっているかを特定するのに役立ちます。
+> [!NOTE]
+> マージンが相殺されているかどうか分からない場合は、ブラウザーのの DevTools でボックスモデルの値を確認してください。これにより、マージンの実際のサイズが表示されるので、何が起こっているかを特定するのに役立ちます。
 >
 > ![](box-model.png)
 

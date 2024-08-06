@@ -109,7 +109,8 @@ var myRequest = new Request("flowers.jpg", myInit);
 
 也可以把 {{domxref("Request")}} 对象再作参数传递进 `Request()` 构造器来创建一个请求的副本（就像调用{{domxref("Request.clone","clone()")}}一样）。
 
-> **备注：** This last usage is probably only useful in [ServiceWorkers](/zh-CN/docs/Web/API/ServiceWorker_API).
+> [!NOTE]
+> This last usage is probably only useful in [ServiceWorkers](/zh-CN/docs/Web/API/ServiceWorker_API).
 
 ## 规范
 

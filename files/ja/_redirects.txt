@@ -1019,7 +1019,7 @@
 /ja/docs/DOM/window.setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/DOM/window.setTimeout	/ja/docs/Web/API/setTimeout
 /ja/docs/DOM/window.showModalDialog	/ja/docs/Web/API/Window/showModalDialog
-/ja/docs/DOM/window.sidebar	/ja/docs/Web/API/Window/sidebar
+/ja/docs/DOM/window.sidebar	/ja/docs/Web/API/Window/external
 /ja/docs/DOM/window.sizeToContent	/ja/docs/Web/API/Window/sizeToContent
 /ja/docs/DOM/window.status	/ja/docs/Web/API/Window/status
 /ja/docs/DOM/window.status-redirect-1	/ja/docs/Web/API/Window/status
@@ -1226,7 +1226,7 @@
 /ja/docs/DOM:window.setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/DOM:window.setTimeout	/ja/docs/Web/API/setTimeout
 /ja/docs/DOM:window.showModalDialog	/ja/docs/Web/API/Window/showModalDialog
-/ja/docs/DOM:window.sidebar	/ja/docs/Web/API/Window/sidebar
+/ja/docs/DOM:window.sidebar	/ja/docs/Web/API/Window/external
 /ja/docs/DOM:window.sizeToContent	/ja/docs/Web/API/Window/sizeToContent
 /ja/docs/DOM:window.status	/ja/docs/Web/API/Window/status
 /ja/docs/DOM:window.statusbar	/ja/docs/Web/API/Window/statusbar
@@ -1347,6 +1347,7 @@
 /ja/docs/Glossary/Reference	/ja/docs/Glossary/Object_reference
 /ja/docs/Glossary/Rendering_engine	/ja/docs/Glossary/Engine/Rendering
 /ja/docs/Glossary/Round_Trip_Time_(RTT)	/ja/docs/Glossary/Round_Trip_Time
+/ja/docs/Glossary/Routers	/ja/docs/Glossary/Router
 /ja/docs/Glossary/SSL_Glossary	/ja/docs/Glossary/SSL
 /ja/docs/Glossary/Scrollport	/ja/docs/Glossary/Scroll_container
 /ja/docs/Glossary/Second-level_Domain	/ja/docs/Glossary/SLD
@@ -1363,7 +1364,7 @@
 /ja/docs/Glossary/ドメイン	/ja/docs/Glossary/Domain
 /ja/docs/Glossary/ネームスペース	/ja/docs/Glossary/Namespace
 /ja/docs/Glossary/ファイアウォール	/ja/docs/Glossary/Firewall
-/ja/docs/Glossary/ルーター	/ja/docs/Glossary/Routers
+/ja/docs/Glossary/ルーター	/ja/docs/Glossary/Router
 /ja/docs/HTML	/ja/docs/Web/HTML
 /ja/docs/HTML/Attributes	/ja/docs/Web/HTML/Attributes
 /ja/docs/HTML/Block-level_elements	/ja/docs/Glossary/Block-level_content
@@ -2378,7 +2379,6 @@
 /ja/docs/Security/混在コンテンツ	/ja/docs/Web/Security/Mixed_content
 /ja/docs/Server-sent_events	/ja/docs/Web/API/Server-sent_events
 /ja/docs/Server-sent_events/Using_server-sent_events	/ja/docs/Web/API/Server-sent_events/Using_server-sent_events
-/ja/docs/Setting_up_extension_development_environment	/ja/docs/orphaned/Setting_up_extension_development_environment
 /ja/docs/The_DOM_and_JavaScript	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/The_Importance_of_Correct_HTML_Commenting	/ja/docs/orphaned/The_Importance_of_Correct_HTML_Commenting
 /ja/docs/The_X-Frame-Options_response_header	/ja/docs/Web/HTTP/Headers/X-Frame-Options
@@ -2539,7 +2539,6 @@
 /ja/docs/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
 /ja/docs/Transforming_XML_with_XSLT:The_Netscape_XSLT_XPath_Reference	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
 /ja/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/ja/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
-/ja/docs/Tutorials	/ja/docs/orphaned/Tutorials
 /ja/docs/Tutorials/Using_CSS_gradients	/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients
 /ja/docs/Upcoming_Firefox_features_for_developers	/ja/docs/Mozilla/Firefox/Releases/4
 /ja/docs/Updating_extensions_for_Firefox_2	/ja/docs/Mozilla/Firefox/Releases/2/Updating_extensions
@@ -2746,6 +2745,7 @@
 /ja/docs/Web/API/Element/pointerlockchange_event	/ja/docs/Web/API/Document/pointerlockchange_event
 /ja/docs/Web/API/Element/pointerlockerror_event	/ja/docs/Web/API/Document/pointerlockerror_event
 /ja/docs/Web/API/Element/select_event	/ja/docs/Web/API/HTMLInputElement/select_event
+/ja/docs/Web/API/Element/setHTML	/ja/docs/Web/API/Element
 /ja/docs/Web/API/Element/show_event	/ja/docs/orphaned/Web/API/Element/show_event
 /ja/docs/Web/API/Event/Comparison_of_Event_Targets	/ja/docs/Learn/JavaScript/Building_blocks/Event_bubbling
 /ja/docs/Web/API/Event/button	/ja/docs/Web/API/MouseEvent/button
@@ -3184,6 +3184,7 @@
 /ja/docs/Web/API/Window/restore	/ja/docs/Web/API/Window/moveTo
 /ja/docs/Web/API/Window/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/Window/setTimeout	/ja/docs/Web/API/setTimeout
+/ja/docs/Web/API/Window/sidebar	/ja/docs/Web/API/Window/external
 /ja/docs/Web/API/Window/transitioncancel_event	/ja/docs/Web/API/Element/transitioncancel_event
 /ja/docs/Web/API/Window/transitionend_event	/ja/docs/Web/API/Element/transitionend_event
 /ja/docs/Web/API/Window/transitionrun_event	/ja/docs/Web/API/Element/transitionrun_event
@@ -3486,7 +3487,7 @@
 /ja/docs/Web/API/window.setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/window.setTimeout	/ja/docs/Web/API/setTimeout
 /ja/docs/Web/API/window.showModalDialog	/ja/docs/Web/API/Window/showModalDialog
-/ja/docs/Web/API/window.sidebar	/ja/docs/Web/API/Window/sidebar
+/ja/docs/Web/API/window.sidebar	/ja/docs/Web/API/Window/external
 /ja/docs/Web/API/window.sizeToContent	/ja/docs/Web/API/Window/sizeToContent
 /ja/docs/Web/API/window.status	/ja/docs/Web/API/Window/status
 /ja/docs/Web/API/window.statusbar	/ja/docs/Web/API/Window/statusbar
@@ -4164,7 +4165,7 @@
 /ja/docs/Web/HTTP/Headers/Feature-Policy/accelerometer	/ja/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer
 /ja/docs/Web/HTTP/Headers/Feature-Policy/ambient-light-sensor	/ja/docs/Web/HTTP/Headers/Permissions-Policy/ambient-light-sensor
 /ja/docs/Web/HTTP/Headers/Feature-Policy/autoplay	/ja/docs/Web/HTTP/Headers/Permissions-Policy/autoplay
-/ja/docs/Web/HTTP/Headers/Feature-Policy/battery	/ja/docs/Web/HTTP/Headers/Permissions-Policy/battery
+/ja/docs/Web/HTTP/Headers/Feature-Policy/battery	/ja/docs/Web/HTTP/Headers/Permissions-Policy
 /ja/docs/Web/HTTP/Headers/Feature-Policy/camera	/ja/docs/Web/HTTP/Headers/Permissions-Policy/camera
 /ja/docs/Web/HTTP/Headers/Feature-Policy/display-capture	/ja/docs/Web/HTTP/Headers/Permissions-Policy/display-capture
 /ja/docs/Web/HTTP/Headers/Feature-Policy/document-domain	/ja/docs/Web/HTTP/Headers/Permissions-Policy/document-domain
@@ -4180,6 +4181,7 @@
 /ja/docs/Web/HTTP/Headers/Feature-Policy/web-share	/ja/docs/Web/HTTP/Headers/Permissions-Policy/web-share
 /ja/docs/Web/HTTP/Headers/Feature-Policy/xr	/ja/docs/conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
 /ja/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking	/ja/docs/Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking
+/ja/docs/Web/HTTP/Headers/Permissions-Policy/battery	/ja/docs/Web/HTTP/Headers/Permissions-Policy
 /ja/docs/Web/HTTP/Headers/Set-Cookie2	/ja/docs/Web/HTTP/Headers/Set-Cookie
 /ja/docs/Web/HTTP/Index	/ja/docs/Web/HTTP
 /ja/docs/Web/HTTP/Link_prefetching_FAQ	/ja/docs/Glossary/Prefetch

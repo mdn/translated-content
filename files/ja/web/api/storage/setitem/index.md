@@ -43,7 +43,8 @@ function populateStorage() {
 }
 ```
 
-> **メモ:** 現実世界のの例として、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
+> [!NOTE]
+> 現実世界のの例として、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
 
 `Storage` は文字列の格納と取り出しにのみ対応しています。他にもデータ型を保存したい場合は、文字列に変換する必要があります。プレーンなオブジェクトや配列の場合は {{jsxref("JSON.stringify()")}} を使用します。
 

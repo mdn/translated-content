@@ -50,7 +50,8 @@ Hay numeroso tipos, niveles y clasificaciones de pruebas y enfoques de pruebas. 
 - Pruebas de integración
   - : Verifica cómo funcionan los grupos de componentes cuando se usan juntos. Las pruebas de integración son conscientes de las interacciones requeridas entre componentes, pero no necesariamente de las operaciones internas de cada componente. Pueden cubrir agrupaciones simples de componentes hasta todo el sitio web.
 
-> **Nota:** Otros tipos comunes de pruebas incluyen pruebas de caja negra, caja blanca, manuales, automatizadas, canarias, de humo, de conformidad, de aceptación, funcionales, de rendimiento, de carga y de esfuerzo. Búscalos para más información.
+> [!NOTE]
+> Otros tipos comunes de pruebas incluyen pruebas de caja negra, caja blanca, manuales, automatizadas, canarias, de humo, de conformidad, de aceptación, funcionales, de rendimiento, de carga y de esfuerzo. Búscalos para más información.
 
 ### Que provee Django para pruebas?
 
@@ -80,7 +81,8 @@ class YourTestClass(TestCase):
 
 La mejor clase base para la mayoría de las pruebas es [django.test.TestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#testcase). Esta clase de prueba crea una base de datos limpia antes de que se ejecuten sus pruebas y ejecuta cada función de prueba en su propia transacción. La clase también posee una prueba [Client](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#django.test.Client) que puede utilizar para simular la interacción de un usuario con el código en el nivel de vista. En las siguientes secciones, nos concentraremos en las pruebas unitarias, creadas con esta clase [TestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#testcase)
 
-> **Nota:** La clase [django.test.TestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#testcase) es muy conveniente, pero puede resultar en que algunas pruebas sean más lentas de lo necesario (no todas las pruebas necesitarán configurar su propia base de datos o simular la interacción de la vista). Una vez que esté familiarizado con lo que puede hacer con esta clase, es posible que desee reemplazar algunas de sus pruebas con las clases de prueba más simples disponibles.
+> [!NOTE]
+> La clase [django.test.TestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#testcase) es muy conveniente, pero puede resultar en que algunas pruebas sean más lentas de lo necesario (no todas las pruebas necesitarán configurar su propia base de datos o simular la interacción de la vista). Una vez que esté familiarizado con lo que puede hacer con esta clase, es posible que desee reemplazar algunas de sus pruebas con las clases de prueba más simples disponibles.
 
 ### Que deberias probar?
 
@@ -106,7 +108,8 @@ class Author(models.Model):
 
 Del mismo modo, debe verificar que los métodos personalizados `get_absolute_url()` y `__str__()` comportarse como sea necesario porque son su código / lógica empresarial. En el caso de `get_absolute_url()` puedes confiar en que el metodo de Django `reverse()` se ha implementado correctamente, por lo que lo que está probando es que la vista asociada se haya definido realmente.
 
-> **Nota:** Los lectores astutos pueden notar que también querríamos restringir la fecha de nacimiento y muerte a valores sensibles, y comprobar que la muerte viene después del nacimiento. En Django, esta restricción se agregaría a sus clases de formulario (aunque puede definir validadores para los campos, estos parecen usarse solo en el nivel del formulario, no en el nivel del modelo).
+> [!NOTE]
+> Los lectores astutos pueden notar que también querríamos restringir la fecha de nacimiento y muerte a valores sensibles, y comprobar que la muerte viene después del nacimiento. En Django, esta restricción se agregaría a sus clases de formulario (aunque puede definir validadores para los campos, estos parecen usarse solo en el nivel del formulario, no en el nivel del modelo).
 
 Con eso en mente, comencemos a ver cómo definir y ejecutar pruebas.
 
@@ -127,7 +130,8 @@ catalog/
 
 Cree una estructura de archivo como se muestra arriba en su proyecto _LocalLibrary_. El **\_\_init\_\_.py** debe ser un archivo vacío (esto le dice a Python que el directorio es un paquete). Puede crear los tres archivos de prueba copiando y cambiando el nombre del archivo de prueba de esqueleto **/catalog/tests.py**.
 
-> **Nota:** El archivo de prueba **/catalog/tests.py** se creó automáticamente cuando creamos el sitio web esqueleto de Django ( [built the Django skeleton website)](/es/docs/Learn/Server-side/Django/skeleton_website). Es perfectamente "legal" poner todas sus pruebas dentro de él, pero si prueba correctamente, rápidamente terminará con un archivo de prueba muy grande e inmanejable.Elimina el archivo esqueleto ya que no lo necesitaremos.
+> [!NOTE]
+> El archivo de prueba **/catalog/tests.py** se creó automáticamente cuando creamos el sitio web esqueleto de Django ( [built the Django skeleton website)](/es/docs/Learn/Server-side/Django/skeleton_website). Es perfectamente "legal" poner todas sus pruebas dentro de él, pero si prueba correctamente, rápidamente terminará con un archivo de prueba muy grande e inmanejable.Elimina el archivo esqueleto ya que no lo necesitaremos.
 
 Abre el archivo **/catalog/tests/test_models.py**. El archivo debe importar `django.test.TestCase`, como se muestra:
 
@@ -171,13 +175,15 @@ La nueva clase define dos métodos que puede utilizar para la configuración pre
 - `setUpTestData()` se llama una vez al comienzo de la ejecución de prueba para la configuración a nivel de clase. Usaría esto para crear objetos que no se modificarán ni cambiarán en ninguno de los métodos de prueba.
 - `setUp()` se llama antes de cada función de prueba para configurar cualquier objeto que pueda ser modificado por la prueba (cada función de prueba obtendrá una versión "nueva" de estos objetos).
 
-> **Nota:** Las clases de prueba también tienen un metodo `tearDown()` que no hemos utilizado. Este método no es particularmente útil para las pruebas de bases de datos, ya que `TestCase` la clase base se encarga del desmontaje de la base de datos por usted.
+> [!NOTE]
+> Las clases de prueba también tienen un metodo `tearDown()` que no hemos utilizado. Este método no es particularmente útil para las pruebas de bases de datos, ya que `TestCase` la clase base se encarga del desmontaje de la base de datos por usted.
 
 Debajo de ellos tenemos una serie de métodos de prueba, que utilizamos funciones `Assert` toprobar si las condiciones son verdaderas, falsas o iguales (`AssertTrue`, `AssertFalse`, `AssertEqual`). Si la condición no se evalúa como se esperaba, la prueba fallará y reportará el error a su consola.
 
 Los `AssertTrue`, `AssertFalse`, `AssertEqual` son afirmaciones estándar proporcionadas por **unittest**. Hay otras aserciones estándar en el marco y también aserciones específicas de Django ([Django-specific assertions](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#assertions)) para probar si una vista redirecciona (`assertRedirects`),para probar si se ha utilizado una plantilla en particular (`assertTemplateUsed`), etc.
 
-> **Nota:** Normalmente no debería incluir funciones print() en sus pruebas como se muestra arriba. Lo hacemos aquí solo para que pueda ver el orden en que se llaman las funciones de configuración en la consola (en la siguiente sección).
+> [!NOTE]
+> Normalmente no debería incluir funciones print() en sus pruebas como se muestra arriba. Lo hacemos aquí solo para que pueda ver el orden en que se llaman las funciones de configuración en la consola (en la siguiente sección).
 
 ## Como correr las pruebas
 
@@ -189,7 +195,8 @@ python3 manage.py test
 
 Esto descubrirá todos los archivos nombrados con el patrón **test\*.py** bajo el directorio actual y ejecute todas las pruebas definidas usando las clases base apropiadas (aquí tenemos una serie de archivos de prueba, pero solo **/catalog/tests/test_models.py** contiene actualmente cualquier prueba). De forma predeterminada, las pruebas informarán individualmente solo sobre las fallas de las pruebas, seguidas de un resumen de la prueba.
 
-> **Nota:** Si recibe errores similares a: `ValueError: Missing staticfiles manifest entry ...` esto puede deberse a que las pruebas no ejecutan collectstatic de forma predeterminada y su aplicación usa una clase de almacenamiento que lo requiere (consulte manifest_strict para obtener más información). Hay varias formas de superar este problema; la más fácil es simplemente ejecutar collectstatic antes de ejecutar las pruebas:
+> [!NOTE]
+> Si recibe errores similares a: `ValueError: Missing staticfiles manifest entry ...` esto puede deberse a que las pruebas no ejecutan collectstatic de forma predeterminada y su aplicación usa una clase de almacenamiento que lo requiere (consulte manifest_strict para obtener más información). Hay varias formas de superar este problema; la más fácil es simplemente ejecutar collectstatic antes de ejecutar las pruebas:
 >
 > ```bash
 > python3 manage.py collectstatic
@@ -226,7 +233,8 @@ Destroying test database for alias 'default'...
 
 Aquí vemos que tuvimos una falla de prueba, y podemos ver exactamente qué función falló y por qué (se espera esta falla, porque `False` no es `True`!).
 
-> **Nota:** Sugerencia: Lo más importante que debe aprender del resultado de la prueba anterior es que es mucho más valioso si usa nombres descriptivos / informativos para sus objetos y métodos.
+> [!NOTE]
+> Sugerencia: Lo más importante que debe aprender del resultado de la prueba anterior es que es mucho más valioso si usa nombres descriptivos / informativos para sus objetos y métodos.
 
 El texto que se muestra en **negritas** anterior normalmente no aparecería en la salida de prueba (esto es generado por la funcion `print()` en nuestra prueba). Esto muestra el metodo `setUpTestData()` es llamado una vez para la clase y `setUp()`se llama antes de cada método.
 
@@ -257,7 +265,8 @@ python3 manage.py test catalog.tests.test_models.YourTestClass.test_one_plus_one
 
 Ahora que sabemos cómo ejecutar nuestras pruebas y qué tipo de cosas necesitamos probar, veamos algunos ejemplos prácticos.
 
-> **Nota:** No escribiremos todas las pruebas posibles, pero esto debería darle una idea de cómo funcionan las pruebas y qué más puede hacer.
+> [!NOTE]
+> No escribiremos todas las pruebas posibles, pero esto debería darle una idea de cómo funcionan las pruebas y qué más puede hacer.
 
 ### Modelos
 
@@ -336,7 +345,8 @@ Las cosas interesantes a tener en cuenta son:
 - No podemos obtener `verbose_name` directamente usando `author.first_name.verbose_name`, porque `author.first_name` es una _cadena_ (no un identificador del objeto `first_name` que podemos usar para acceder a sus propiedades). En su lugar, necesitamos usar el atributo `_meta` del autor para obtener una instancia del campo y usarlo para consultar la información adicional.
 - Elegimos usar `assertEquals(field_label,'first name')` en lugar de `assertTrue(field_label == 'first name')`. La razón de esto es que si la prueba falla, la salida de la primera le dice cuál era realmente la etiqueta, lo que facilita un poco la depuración del problema.
 
-> **Nota:** Se han omitido las pruebas para las etiquetas `last_name` y `date_of_birth`, y también la prueba para la longitud del campo `last_name`. Agregue sus propias versiones ahora, siguiendo las convenciones de nomenclatura y los enfoques que se muestran arriba.
+> [!NOTE]
+> Se han omitido las pruebas para las etiquetas `last_name` y `date_of_birth`, y también la prueba para la longitud del campo `last_name`. Agregue sus propias versiones ahora, siguiendo las convenciones de nomenclatura y los enfoques que se muestran arriba.
 
 También necesitamos probar nuestros métodos personalizados. Básicamente, estos simplemente verifican que el nombre del objeto se construyó como esperábamos usando el formato "Apellido", "Nombre", y que la URL que obtenemos para un elemento `Autor` es como esperábamos.
 
@@ -370,7 +380,8 @@ AssertionError: 'Died' != 'died'
 
 Este es un error muy pequeño, pero resalta cómo las pruebas de escritura pueden verificar más a fondo cualquier suposición que haya hecho.
 
-> **Nota:** Cambie la etiqueta del campo `date_of_death` (/catalog/models.py) a "died" y vuelva a ejecutar las pruebas.
+> [!NOTE]
+> Cambie la etiqueta del campo `date_of_death` (/catalog/models.py) a "died" y vuelva a ejecutar las pruebas.
 
 Los patrones para probar los otros modelos son similares, por lo que no continuaremos discutiéndolos más. Siéntase libre de crear sus propias pruebas para nuestros otros modelos.
 
@@ -453,7 +464,8 @@ Las dos primeras funciones prueban que los campos `label` y `help_text` son los 
 
 El resto de las funciones prueban que el formulario es válido para fechas de renovación justo dentro del rango aceptable e inválido para valores fuera del rango. Tenga en cuenta cómo construimos valores de fecha de prueba alrededor de nuestra fecha actual (`datetime.date.today()`) usando `datetime.timedelta()` (en este caso especificando un número de días o semanas). Luego simplemente creamos el formulario, pasamos nuestros datos y probamos si es válido.
 
-> **Nota:** Aquí en realidad no usamos la base de datos o el cliente de prueba. Considere modificar estas pruebas para usar [SimpleTestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#django.test.SimpleTestCase). También debemos validar que se generen los errores correctos si el formulario no es válido, sin embargo, esto generalmente se hace como parte del procesamiento de la vista, por lo que nos ocuparemos de eso en la siguiente sección.
+> [!NOTE]
+> Aquí en realidad no usamos la base de datos o el cliente de prueba. Considere modificar estas pruebas para usar [SimpleTestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#django.test.SimpleTestCase). También debemos validar que se generen los errores correctos si el formulario no es válido, sin embargo, esto generalmente se hace como parte del procesamiento de la vista, por lo que nos ocuparemos de eso en la siguiente sección.
 
 Eso es todo por los formularios; tenemos algunos otros, pero son creados automáticamente por nuestras vistas de edición genéricas basadas en clases, ¡y deben probarse allí! ¡Ejecute las pruebas y confirme que nuestro código aún pasa!
 
@@ -552,7 +564,8 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 Agregue el siguiente código de prueba a **/catalog/tests/test_views.py**. Aquí primero usamos `SetUp()` para crear algunas cuentas de inicio de sesión de usuario y objetos `BookInstance` (junto con sus libros asociados y otros registros) que usaremos más adelante en las pruebas. Cada usuario de prueba toma prestado la mitad de los libros, pero inicialmente hemos establecido el estado de todos los libros en "mantenimiento". Hemos usado `SetUp()` en lugar de `setUpTestData()` porque modificaremos algunos de estos objetos más adelante.
 
-> **Nota:** El siguiente código `setUp()` crea un libro con un `Language` específico, pero es posible que _su_ código no incluya el modelo `Language` ya que se creó como un _desafío_. Si este es el caso, simplemente comente las partes del código que crean o importan objetos de lenguaje. También debe hacer esto en la sección `RenewBookInstancesViewTest` que sigue.
+> [!NOTE]
+> El siguiente código `setUp()` crea un libro con un `Language` específico, pero es posible que _su_ código no incluya el modelo `Language` ya que se creó como un _desafío_. Si este es el caso, simplemente comente las partes del código que crean o importan objetos de lenguaje. También debe hacer esto en la sección `RenewBookInstancesViewTest` que sigue.
 
 ```python
 import datetime
@@ -822,7 +835,8 @@ La siguiente prueba (agregar esto también a la clase) verifica que la vista red
         self.assertRedirects(resp, reverse('all-borrowed') )
 ```
 
-> **Advertencia:** La vista _all-borrowed_ se agregó como un _desafío_ y, en su lugar, su código puede redirigir a la página de inicio '/'. Si es así, modifique las dos últimas líneas del código de prueba para que sea como el siguiente código. El `follow=True` en la solicitud asegura que la solicitud devuelve la URL de destino final (por lo tanto, verifica `/catalog/` en lugar de `/`).
+> [!WARNING]
+> La vista _all-borrowed_ se agregó como un _desafío_ y, en su lugar, su código puede redirigir a la página de inicio '/'. Si es así, modifique las dos últimas líneas del código de prueba para que sea como el siguiente código. El `follow=True` en la solicitud asegura que la solicitud devuelve la URL de destino final (por lo tanto, verifica `/catalog/` en lugar de `/`).
 >
 > ```python
 > resp = self.client.post(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':valid_date_in_future}, follow=True)

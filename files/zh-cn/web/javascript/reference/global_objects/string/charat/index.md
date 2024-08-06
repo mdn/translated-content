@@ -85,7 +85,8 @@ console.log(String.fromCodePoint(str.codePointAt(0))); // "𠮷"
 console.log([...str][0]); // "𠮷"
 ```
 
-> **备注：** 避免使用 `charAt()` 重新实现上述解决方案。检测孤项代理及其配对很复杂，而内置 API 可能更高效，因为它们直接使用字符串的内部表示形式。如有必要，请安装上述 API 的 polyfill。
+> [!NOTE]
+> 避免使用 `charAt()` 重新实现上述解决方案。检测孤项代理及其配对很复杂，而内置 API 可能更高效，因为它们直接使用字符串的内部表示形式。如有必要，请安装上述 API 的 polyfill。
 
 ## 规范
 

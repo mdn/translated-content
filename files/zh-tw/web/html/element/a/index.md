@@ -27,7 +27,7 @@ slug: Web/HTML/Element/a
 
     - `filename`：定義值可建議作為文件名。 `/` 和 `\` 字符將轉換為底線（`_`）。檔案系統可能禁止文件名中的其他字符，因此如果需要，瀏覽器將調整建議的名稱。
 
-    > **備註：**
+    > [!NOTE]
     >
     > - `download` 只適用於[同源 URL](/zh-TW/docs/Web/Security/Same-origin_policy)，或者 `blob:` 和 `data:` 方案。
     > - 瀏覽器如何處理下載因瀏覽器、用戶設置和其他因素而異。用戶在下載開始之前可能會收到提示，文件可能會自動保存，或者它可能會自動打開，無論是在外部應用程序中還是在瀏覽器本身中。
@@ -77,7 +77,8 @@ slug: Web/HTML/Element/a
     - `_top`：最上層的瀏覽上下文。具體來說，這意味著當前上下文的祖先中的「最高」上下文。如果沒有祖先，則與 `_self` 行為相同。
     - `_unfencedTop`：允許嵌入的[有圍欄框架](/zh-TW/docs/Web/API/Fenced_frame_API)導航到最頂層框架（即超出有圍欄框架根的遍歷，與其他保留目標不同）。請注意，如果在有圍欄框架上下文之外使用此選項，則導航仍將成功，但它不會像保留關鍵字那樣運作。
 
-    > **備註：** 將 `target="_blank"` 設置在 `<a>` 元素上，隱含提供了與設置 [`rel="noopener"`](/zh-TW/docs/Web/HTML/Attributes/rel/noopener) 相同的 `rel` 行為，它不設置 `window.opener`。
+    > [!NOTE]
+    > 將 `target="_blank"` 設置在 `<a>` 元素上，隱含提供了與設置 [`rel="noopener"`](/zh-TW/docs/Web/HTML/Attributes/rel/noopener) 相同的 `rel` 行為，它不設置 `window.opener`。
 
 - `type`
   - : 提示連結 URL 的格式，使用 {{Glossary("MIME type", "MIME 類型")}}。沒有內建功能。
@@ -88,7 +89,8 @@ slug: Web/HTML/Element/a
 
   - : 指示連結 URL 的 {{Glossary("character encoding")}}。
 
-    > **備註：** 這個屬性已棄用，**不應該被作者使用**。請在連結的 URL 上使用 HTTP {{HTTPHeader("Content-Type")}} 標頭。
+    > [!NOTE]
+    > 這個屬性已棄用，**不應該被作者使用**。請在連結的 URL 上使用 HTTP {{HTTPHeader("Content-Type")}} 標頭。
 
 - `coords` {{Deprecated_Inline}}
   - : 與 [`shape` 屬性](#shape)一起使用。逗號分隔的座標列表。
@@ -96,7 +98,8 @@ slug: Web/HTML/Element/a
 
   - : 用於在頁面中定義可能的目標位置。在 HTML 4.01 中，`id` 和 `name` 都可以在 `<a>` 上使用，只要它們具有相同的值。
 
-    > **備註：** 請改用全域屬性 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id)。
+    > [!NOTE]
+    > 請改用全域屬性 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id)。
 
 - `rev` {{Deprecated_Inline}}
   - : 指定反向連結；與[形狀屬性](#rel)相反。由於非常混亂而被棄用。
@@ -104,7 +107,8 @@ slug: Web/HTML/Element/a
 
   - : 圖像地圖中超連結區域的形狀。
 
-    > **備註：** 請改用 {{HTMLElement("area")}} 元素代替圖像地圖。
+    > [!NOTE]
+    > 請改用 {{HTMLElement("area")}} 元素代替圖像地圖。
 
 ## 範例
 
@@ -155,7 +159,8 @@ a {
 
 {{EmbedLiveSample('鏈接到同一頁面上的元素')}}
 
-> **備註：** 你可以使用 `href="#top"` 或空片段（`href="#"`）來鏈接到當前頁面的頂部，[如 HTML 規範中所定義](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)。
+> [!NOTE]
+> 你可以使用 `href="#top"` 或空片段（`href="#"`）來鏈接到當前頁面的頂部，[如 HTML 規範中所定義](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)。
 
 ### 鏈接到電子郵件地址
 

@@ -46,7 +46,8 @@ Como puedes deducir a partir del breve ejemplo anterior, el título debe contene
 
 Los subtítulos se colocan directamente debajo de la etiqueta `<table>`.
 
-> **Nota:** El atributo [`summary`](/es/docs/Web/HTML/Element/table#summary) también se puede usar en el elemento `table` para proporcionar una descripción; los lectores de pantalla también lo leen. Sin embargo, recomendamos usar el elemento `caption`, porque [`summary`](/es/docs/Web/HTML/Element/table#summary) está {{glossary("obsoleto")}} conforme a la especificación HTML5 y porque los usuarios sin discapacidad visual no pueden leerlo (no aparece en la página).
+> [!NOTE]
+> El atributo [`summary`](/es/docs/Web/HTML/Element/table#summary) también se puede usar en el elemento `table` para proporcionar una descripción; los lectores de pantalla también lo leen. Sin embargo, recomendamos usar el elemento `caption`, porque [`summary`](/es/docs/Web/HTML/Element/table#summary) está {{glossary("obsoleto")}} conforme a la especificación HTML5 y porque los usuarios sin discapacidad visual no pueden leerlo (no aparece en la página).
 
 ### Aprendizaje activo: Añadir un subtítulo
 
@@ -56,7 +57,8 @@ Vamos a probarlo con un ejemplo del artículo anterior.
 2. Añade un título adecuado a la tabla.
 3. Guarda tu código, ábrelo en un navegador y observa qué aspecto presenta.
 
-> **Nota:** Puedes encontrar nuestra versión en GitHub: consulta [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([mirar en vivo](http://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
+> [!NOTE]
+> Puedes encontrar nuestra versión en GitHub: consulta [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([mirar en vivo](http://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
 
 ## Añadir estructura con \<thead>, \<tfoot> y \<tbody>
 
@@ -96,7 +98,8 @@ Pongamos en acción estos elementos nuevos.
 
 7. Guarda, actualiza, y échale un vistazo al resultado. Si los elementos `<tbody>` y `<tfoot>` no estuvieran en su lugar, tendrías que escribir selectores/reglas mucho más complicados para obtener la misma aplicación de estilo.
 
-> **Nota:** No esperamos que comprendas completamente el CSS en este momento. Aprenderás más sobre el tema cuando llegues a nuestros módulos CSS ([Introducción al CSS](/es/docs/Learn/CSS/First_steps) es un buen lugar para comenzar; también tenemos un artículo específico sobre [Aplicar estilo a las tablas](/es/docs/Learn/CSS/Building_blocks/Styling_tables)).
+> [!NOTE]
+> No esperamos que comprendas completamente el CSS en este momento. Aprenderás más sobre el tema cuando llegues a nuestros módulos CSS ([Introducción al CSS](/es/docs/Learn/CSS/First_steps) es un buen lugar para comenzar; también tenemos un artículo específico sobre [Aplicar estilo a las tablas](/es/docs/Learn/CSS/Building_blocks/Styling_tables)).
 
 Tu tabla final debería tener un aspecto similar al siguiente:
 
@@ -218,7 +221,8 @@ Tu tabla final debería tener un aspecto similar al siguiente:
 
 {{ EmbedLiveSample('Hidden_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
 
-> **Nota:** También puedes encontrarlo en GitHub como [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) (o consultarlo también [en vivo](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
+> [!NOTE]
+> También puedes encontrarlo en GitHub como [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) (o consultarlo también [en vivo](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
 
 ## Anidar tablas
 
@@ -357,7 +361,8 @@ Repasemos brevemente cómo usamos las tablas de datos. Una tabla puede ser una h
 
 Pero, ¿y si no puedes hacer esas asociaciones visuales? ¿Cómo podrías leer una tabla como la anterior? Las personas con discapacidad visual a menudo usan un lector de pantalla que les lee la información de las páginas web. Esto no resulta un problema cuando lees un texto sin formato, pero interpretar una tabla puede ser un gran desafío para una persona ciega. Sin embargo, con el marcado adecuado podemos reemplazar las asociaciones visuales por otras asociaciones de tipo programático.
 
-> **Nota:** Hay en torno a 253 millones de personas con discapacidad visual según los [datos de la OMS de 2017](https://www.who.int/es/news-room/fact-sheets/detail/blindness-and-visual-impairment).
+> [!NOTE]
+> Hay en torno a 253 millones de personas con discapacidad visual según los [datos de la OMS de 2017](https://www.who.int/es/news-room/fact-sheets/detail/blindness-and-visual-impairment).
 
 Esta sección del artículo proporciona técnicas adicionales para conferir a las tablas la mayor accesibilidad posible.
 
@@ -435,7 +440,8 @@ Volviendo a nuestro ejemplo de gastos, los dos fragmentos anteriores podrían re
 </tbody>
 ```
 
-> **Nota:** Este método crea asociaciones muy precisas entre los encabezados y las celdas de datos, pero utiliza **un montón** más de código de marcado y no permite errores. El enfoque `scope` suele bastar para la mayoría de las tablas.
+> [!NOTE]
+> Este método crea asociaciones muy precisas entre los encabezados y las celdas de datos, pero utiliza **un montón** más de código de marcado y no permite errores. El enfoque `scope` suele bastar para la mayoría de las tablas.
 
 ### Aprendizaje activo: jugar con scope y headers
 
@@ -443,7 +449,8 @@ Volviendo a nuestro ejemplo de gastos, los dos fragmentos anteriores podrían re
 2. Ahora intenta añadir los atributos `scope` adecuados para hacer que esta tabla sea más accesible.
 3. Por último, haz otra copia de los archivos originales, y esta vez añade accesibilidad a la tabla utilizando los atributos `id` y `headers`.
 
-> **Nota:** Puedes verificar tu trabajo con nuestros ejemplos terminados: consulta [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([consúltalo en vivo](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) y [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([consúltalo en vivo](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
+> [!NOTE]
+> Puedes verificar tu trabajo con nuestros ejemplos terminados: consulta [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([consúltalo en vivo](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) y [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([consúltalo en vivo](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 
 ## Resumen
 

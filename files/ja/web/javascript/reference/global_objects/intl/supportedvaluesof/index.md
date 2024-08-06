@@ -58,7 +58,8 @@ Intl.supportedValuesOf("calendar").forEach((calendar) => {
 });
 ```
 
-> **メモ:** 暦の値に関して返される配列には、常に値 `"gregory"` (グレゴリオ暦) が含まれます。
+> [!NOTE]
+> 暦の値に関して返される配列には、常に値 `"gregory"` (グレゴリオ暦) が含まれます。
 
 他の値も、同様にして取得できます。
 

@@ -9,7 +9,8 @@ l10n:
 
 **`VRDisplayEvent()`** コンストラクターは、 {{domxref("VRDisplayEvent")}} オブジェクトを作成します。
 
-> **メモ:** このコンストラクターは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このコンストラクターは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 ## 構文
 

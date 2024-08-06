@@ -23,7 +23,8 @@ slug: Web/HTML/Element/fieldset
 
   - : 元素分组的名称
 
-    > **备注：** fieldset 的标题由第一个 {{HTMLElement("legend")}} 子元素确定。
+    > [!NOTE]
+    > fieldset 的标题由第一个 {{HTMLElement("legend")}} 子元素确定。
 
 ## 使用 CSS 样式
 
@@ -37,7 +38,8 @@ slug: Web/HTML/Element/fieldset
 
 你可以以任意方式自行设置 `<fieldset>` 和 `<legend>` 的样式以配合你的页面设计。
 
-> **备注：** 截至这篇文章发出为止，Microsoft Edge 和 Google Chrome 不能在 {{HTMLElement("fieldset")}} 中使用 [flexbox](/zh-CN/docs/Glossary/Flexbox) 和 [grid](/zh-CN/docs/Web/CSS/CSS_grid_layout) 布局。[这个 GitHub issue](https://github.com/w3c/csswg-drafts/issues/321) 跟踪了这个 bug。
+> [!NOTE]
+> 截至这篇文章发出为止，Microsoft Edge 和 Google Chrome 不能在 {{HTMLElement("fieldset")}} 中使用 [flexbox](/zh-CN/docs/Glossary/Flexbox) 和 [grid](/zh-CN/docs/Web/CSS/CSS_grid_layout) 布局。[这个 GitHub issue](https://github.com/w3c/csswg-drafts/issues/321) 跟踪了这个 bug。
 
 ## 示例
 

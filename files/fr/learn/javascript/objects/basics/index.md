@@ -90,7 +90,8 @@ personne.salutation();
 
 Vous avez désormais des données et des fonctionnalités dans votre objet, et vous pouvez y accéder avec une une syntaxe simple et claire !
 
-> **Note :** Si vous avez des difficultés pour le faire fonctionner, comparez votre code avec notre version — voir [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (ou [voir en action](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). Une erreur courante, quand on commence avec les objets, est de mettre une virgule après la dernière propriété — ce qui provoque une erreur.
+> [!NOTE]
+> Si vous avez des difficultés pour le faire fonctionner, comparez votre code avec notre version — voir [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (ou [voir en action](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). Une erreur courante, quand on commence avec les objets, est de mettre une virgule après la dernière propriété — ce qui provoque une erreur.
 
 Alors, comment ça fonctionne ? Un objet est fait de plusieurs membres, qui ont chacun un nom (par exemple `nom` et `age` ci-dessus) et une valeur (par exemple. `['Jean', 'Martin']` et `32`).
 
@@ -306,7 +307,8 @@ var maNotification = new Notification("Bonjour !");
 
 Nous verrons les constructeurs dans un prochain article.
 
-> **Note :** On peut voir le mode de communication des objets comme un **envoi de message**. Quand un objet a besoin d'un autre pour faire une action, souvent il va envoyer un message à un autre objet via l'une de ses méthode et attendre une réponse, qui retournera une valeur.
+> [!NOTE]
+> On peut voir le mode de communication des objets comme un **envoi de message**. Quand un objet a besoin d'un autre pour faire une action, souvent il va envoyer un message à un autre objet via l'une de ses méthode et attendre une réponse, qui retournera une valeur.
 
 ## Résumé
 

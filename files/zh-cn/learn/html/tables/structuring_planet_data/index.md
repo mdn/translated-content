@@ -24,7 +24,8 @@ slug: Learn/HTML/Tables/Structuring_planet_data
 
 要进行本测验，将 [blank-template.html](https://github.com/roy-tian/learning-area/blob/master/html/tables/assessment-start/blank-template.html), [minimal-table.css](https://github.com/roy-tian/learning-area/blob/master/html/tables/assessment-start/minimal-table.css) 和 [planets-data.txt](https://github.com/roy-tian/learning-area/blob/master/html/tables/assessment-start/planets-data.txt) 拷贝到本地。
 
-> **备注：** 另外，你可以使用 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 来做你的测验。你可以把 HTML, CSS 和 JavaScript 粘贴到其中一个网上编辑器里。如果你使用的网上编辑器不支持 JavaScript/CSS 文件链接到 HTML 中使用，那么也可以使用 `<script>`/`<style>` 元素将它们直接写在你的 HTML 页面里。
+> [!NOTE]
+> 另外，你可以使用 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 来做你的测验。你可以把 HTML, CSS 和 JavaScript 粘贴到其中一个网上编辑器里。如果你使用的网上编辑器不支持 JavaScript/CSS 文件链接到 HTML 中使用，那么也可以使用 `<script>`/`<style>` 元素将它们直接写在你的 HTML 页面里。
 
 ## 项目概要
 

@@ -12,7 +12,8 @@ MIME タイプは IETF の {{RFC(6838)}} で定義され、標準化されてい
 
 [Internet Assigned Numbers Authority (IANA)](https://www.iana.org/) はすべての公式の MIME タイプを管理しており、[Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) ページで最新の完全な一覧を見ることができます。
 
-> **警告:** ブラウザーは URL を処理する方法を決定するために、_ファイル拡張子ではなく_ MIME タイプを使用しますので、ウェブサーバーは正しい MIME タイプをレスポンスの {{HTTPHeader("Content-Type")}} ヘッダーで送信することが重要です。
+> [!WARNING]
+> ブラウザーは URL を処理する方法を決定するために、_ファイル拡張子ではなく_ MIME タイプを使用しますので、ウェブサーバーは正しい MIME タイプをレスポンスの {{HTTPHeader("Content-Type")}} ヘッダーで送信することが重要です。
 > これが正しく構成されていないと、ブラウザーはファイルの中身を誤って解釈し、サイトが正しく動作しなかったり、ダウンロードファイルが誤って扱われたりすることがあります。
 
 ## MIME タイプの構造
@@ -155,7 +156,8 @@ JavaScript のコンテンツの中には、 `charset` 引数を MIME タイプ�
 - `text/x-ecmascript` {{Non-standard_Inline}}
 - `text/x-javascript` {{Non-standard_Inline}}
 
-> **メモ:** ある{{Glossary("user agent", "ユーザーエージェント")}}がこれらのいずれか、またはすべてに対応していても、 `text/javascript` だけを使用するようにしてください。
+> [!NOTE]
+> ある{{Glossary("user agent", "ユーザーエージェント")}}がこれらのいずれか、またはすべてに対応していても、 `text/javascript` だけを使用するようにしてください。
 > このタイプは、現在および将来にわたって動作が保証されている唯一の MIME タイプです。
 
 ### 画像タイプ

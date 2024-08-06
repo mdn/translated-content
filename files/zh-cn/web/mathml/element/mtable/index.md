@@ -45,7 +45,8 @@ l10n:
 - `width` {{Non-standard_Inline}}
   - : 一个用于指定整个表格的宽度的 {{cssxref("length-percentage")}}。
 
-> **备注：** 对于 `width` 属性，某些浏览器还可能接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
+> [!NOTE]
+> 对于 `width` 属性，某些浏览器还可能接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
 
 ## 示例
 

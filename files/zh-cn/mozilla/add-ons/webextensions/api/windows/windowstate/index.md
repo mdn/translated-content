@@ -23,7 +23,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 
 {{WebExtExamples}}
 
-> **备注：** 此 API 基于谷歌浏览器 [`chrome.windows`](https://developer.chrome.com/extensions/windows#type-WindowState) API。此文档源于谷歌源码 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) .
+> [!NOTE]
+> 此 API 基于谷歌浏览器 [`chrome.windows`](https://developer.chrome.com/extensions/windows#type-WindowState) API。此文档源于谷歌源码 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) .
 >
 > 微软 Edge 浏览器兼容性数据由微软公司提供，并包含在美国 Creative Commons Attribution 3.0 许可证下。
 

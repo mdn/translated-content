@@ -52,7 +52,8 @@ if (elem.requestFullscreen) {
 
 你并不总是可以进入全屏模式。例如 {{HTMLElement("iframe")}} 元素具有 [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen) 属性，可选择是否将其内容以全屏模式显示。另外，几种特定的内容，比如窗体插件（windowed plug-ins），不能以全屏模式显示。尝试将不能以全屏模式显示的元素（或者此元素的父元素和后代元素）的时候，全屏请求是无效的。而相应元素会收到一个 `mozfullscreenerror` 事件。当全屏请求失败时，Firefox 会在 Web 控制台上打一条错误信息解释请求为什么失败。但是在 Chrome 和新版的 Opera 中，不会生成这样的警告。
 
-> **备注：** 全屏请求必须在事件处理函数中调用，否则将会被拒绝。
+> [!NOTE]
+> 全屏请求必须在事件处理函数中调用，否则将会被拒绝。
 
 ## 退出全屏模式
 
@@ -117,7 +118,8 @@ function toggleFullScreen() {
 
 ## 前缀
 
-> **备注：** 现在，只有 Firefox 64 和 Chrome 71 支持无前缀。
+> [!NOTE]
+> 现在，只有 Firefox 64 和 Chrome 71 支持无前缀。
 
 目前并不是所有的浏览器都实现了 API 的无前缀版本（你可以使用 [Fscreen](https://github.com/rafrex/fscreen) 获取跨浏览器全屏 API），这里有一份表格总结了前缀和它们之间的命名区别：
 

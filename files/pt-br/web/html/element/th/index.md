@@ -101,7 +101,8 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : Este atributo contém uma lista de palavras separadas por espaço. Cada palavra é o `id` de um grupo de células às quais este cabeçalho se aplica.
 
-    > **Note:** Não use esse atributo, pois ele está obsoleto no padrão mais recente: use o atributo [`scope`](/pt-BR/docs/Web/HTML/Element/th#scope).
+    > [!NOTE]
+    > Não use esse atributo, pois ele está obsoleto no padrão mais recente: use o atributo [`scope`](/pt-BR/docs/Web/HTML/Element/th#scope).
 
 - `bgcolor` {{Non-standard_inline}}
 
@@ -117,13 +118,15 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     |     | `purple` = "#800080"  |     | `teal` = "#008080"   |
     |     | `fuchsia` = "#FF00FF" |     | `aqua` = "#00FFFF"   |
 
-    > **Note:** Não use esse atributo como padrão pois não é implementado em algumas versões do Microsoft Internet Explorer: O elemento {{HTMLElement("th")}} deve ser estilizado usando [CSS](/pt-BR/docs/Web/CSS). Para criar um efeito semelhante, use a propriedade {{cssxref("background-color")}} do [CSS](/pt-BR/docs/Web/CSS).
+    > [!NOTE]
+    > Não use esse atributo como padrão pois não é implementado em algumas versões do Microsoft Internet Explorer: O elemento {{HTMLElement("th")}} deve ser estilizado usando [CSS](/pt-BR/docs/Web/CSS). Para criar um efeito semelhante, use a propriedade {{cssxref("background-color")}} do [CSS](/pt-BR/docs/Web/CSS).
 
 - `char`
 
   - : O conteúdo da célula está alinhado a um caractere. Os valores típicos incluem um ponto (.) para alinhar números ou valores monetários. Se [`align`](/pt-BR/docs/Web/HTML/Element/th#align) não está definido no `char`, o atributo é ignorado.
 
-    > **Nota:** Não use esse atributo, pois ele está obsoleto no padrão mais recente. Para obter o mesmo efeito, você pode especificar o caractere como o primeiro valor da propriedade {{cssxref("text-align")}}.
+    > [!NOTE]
+    > Não use esse atributo, pois ele está obsoleto no padrão mais recente. Para obter o mesmo efeito, você pode especificar o caractere como o primeiro valor da propriedade {{cssxref("text-align")}}.
 
 - `charoff`
 
@@ -148,13 +151,15 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     - `middle`: Centraliza o texto na célula.
     - `top`: Posiciona o texto próximo à parte superior da célula.
 
-    > **Note:** Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("vertical-align")}}.
+    > [!NOTE]
+    > Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("vertical-align")}}.
 
 - `width` {{Deprecated_inline}}
 
   - : Este atributo é usado para definir uma largura de célula recomendada. Espaço adicional pode ser adicionado com as propriedades {{domxref("HTMLTableElement.cellSpacing", "cellspacing")}} e {{domxref("HTMLTableElement.cellPadding", "cellpadding")}}, e a largura do elemento {{HTMLElement("col")}} pode criar largura extra. Mas, se a largura de uma coluna for muito estreita para mostrar uma célula específica corretamente, ela será ampliada quando exibida.
 
-    > **Note:** Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("width")}}.
+    > [!NOTE]
+    > Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("width")}}.
 
 ## Exemplos
 

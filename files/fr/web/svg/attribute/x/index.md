@@ -71,7 +71,8 @@ svg {
 
 ## `<altGlyph>`
 
-> **Attention :** Avec SVG2, [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph) est déprécié et ne devrait pas être utilisé.
+> [!WARNING]
+> Avec SVG2, [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph) est déprécié et ne devrait pas être utilisé.
 
 Pour [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph), `x` définit l'abscisse du glyphe alternatif.
 
@@ -692,11 +693,13 @@ Pour [`<foreignObject>`](/fr/docs/Web/SVG/Element/foreignObject), `x` définit l
   </tbody>
 </table>
 
-> **Note :** À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour `<foreignObject>`.
+> [!NOTE]
+> À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour `<foreignObject>`.
 
 ## `<glyphRef>`
 
-> **Attention :** À partir de SVG2, [`<glyphRef>`](/fr/docs/Web/SVG/Element/glyphRef) est déprécié et ne devrait pas être utilisé.
+> [!WARNING]
+> À partir de SVG2, [`<glyphRef>`](/fr/docs/Web/SVG/Element/glyphRef) est déprécié et ne devrait pas être utilisé.
 
 Pour [`<glyphRef>`](/fr/docs/Web/SVG/Element/glyphRef), `x` définit l'abscisse du glyphe.
 
@@ -744,7 +747,8 @@ Pour [`<image>`](/fr/docs/Web/SVG/Element/image), `x` définit l'abscisse du coi
   </tbody>
 </table>
 
-> **Note :** À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour les images.
+> [!NOTE]
+> À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour les images.
 
 ## `<mask>`
 
@@ -815,7 +819,8 @@ Pour [`<rect>`](/fr/docs/Web/SVG/Element/rect), `x` définit l'abscisse du coin 
   </tbody>
 </table>
 
-> **Note :** À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour les rectangles.
+> [!NOTE]
+> À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour les rectangles.
 
 ## `<svg>`
 
@@ -840,7 +845,8 @@ Pour [`<svg>`](/fr/docs/Web/SVG/Element/svg), `x` définit l'abscisse du coin su
   </tbody>
 </table>
 
-> **Note :** À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour `<svg>`.
+> [!NOTE]
+> À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour `<svg>`.
 
 ## `<text>`
 
@@ -910,7 +916,8 @@ line {
 
 ## `<tref>`
 
-> **Attention :** Avec SVG2, [`<tref>`](/fr/docs/Web/SVG/Element/tref) est déprécié et ne devrait plus être utilisé.
+> [!WARNING]
+> Avec SVG2, [`<tref>`](/fr/docs/Web/SVG/Element/tref) est déprécié et ne devrait plus être utilisé.
 
 Pour [`<tref>`](/fr/docs/Web/SVG/Element/tref), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
 
@@ -1025,7 +1032,8 @@ Pour [`<use>`](/fr/docs/Web/SVG/Element/use), `x` définit l'abscisse du coin su
   </tbody>
 </table>
 
-> **Note :** À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour les éléments utilisés.
+> [!NOTE]
+> À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour les éléments utilisés.
 
 ## Spécifications
 

@@ -39,16 +39,17 @@ document.createElement("pre");
 
 如果对数字字面量使用方法，并且数字文字没有指数且没有小数点，请在方法调用之前的点之前留出空格，以防止点被解释为小数点。
 
-```js
-(77).toExponential();
+```js-nolint
+77 .toExponential();
+// 或
+77
+.toExponential();
 // 或
 (77).toExponential();
 // 或
-(77).toExponential();
+77..toExponential();
 // 或
-(77).toExponential();
-// 或
-(77.0).toExponential();
+77.0.toExponential();
 // 因为 77. === 77.0，没有歧义（no ambiguity）
 ```
 

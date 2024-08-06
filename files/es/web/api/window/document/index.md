@@ -9,7 +9,8 @@ slug: Web/API/Window/document
 
 Retorna una referencia al documento contenido en la ventana.
 
-> **Nota:** Firefox 3 altera la seguridad para los documentos entre ventanas, de modo que sólo el dominio desde el cual ha sido cargada una ventana puede acceder al documento. A pesar de que esto rompe el funcionamiento de algunos sitios existentes, es una modificación adoptada por Firefox 3 e Internet Explorer 7, que resulta en una mejora de seguridad.
+> [!NOTE]
+> Firefox 3 altera la seguridad para los documentos entre ventanas, de modo que sólo el dominio desde el cual ha sido cargada una ventana puede acceder al documento. A pesar de que esto rompe el funcionamiento de algunos sitios existentes, es una modificación adoptada por Firefox 3 e Internet Explorer 7, que resulta en una mejora de seguridad.
 
 ## Sintaxis
 

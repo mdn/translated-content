@@ -103,7 +103,8 @@ Mirando primero el segundo bloque principal, verá que primero verificamos si la
 
 Para evitar la duplicación de código, hemos almacenado algunos bits de código de mantenimiento dentro de la función `handlePermission()`, que es el primer bloque principal dentro de este fragmento. Aquí dentro, establecemos explícitamente el valor `Notification.permission` (algunas versiones antiguas de Chrome fallaron al hacer esto automáticamente), y mostramos u ocultamos el botón dependiendo de lo que el usuario eligió en el cuadro de diálogo de permiso. No queremos mostrarlo si ya se ha otorgado el permiso, pero si el usuario elige negar el permiso, queremos darle la oportunidad de cambiar de opinión más adelante.
 
-> **Nota:** Antes de la versión 37, Chrome no te permite llamar a {{domxref("Notification.requestPermission()")}} en el manejador de eventos de carga (consulta el [error 274284](https://code.google.com/p/chromium/issues/detail?id=274284)).
+> [!NOTE]
+> Antes de la versión 37, Chrome no te permite llamar a {{domxref("Notification.requestPermission()")}} en el manejador de eventos de carga (consulta el [error 274284](https://code.google.com/p/chromium/issues/detail?id=274284)).
 
 ### Función de detección de la promesa requestPermission()
 
@@ -153,9 +154,11 @@ document.addEventListener("visibilitychange", function () {
 });
 ```
 
-> **Nota:** Esta API no debe usarse solo para eliminar la notificación de la pantalla después de un tiempo fijo (en los navegadores modernos), ya que este método también eliminará la notificación de cualquier bandeja de notificaciones, evitando que los usuarios interactúen con ella después de que se mostró inicialmente.
+> [!NOTE]
+> Esta API no debe usarse solo para eliminar la notificación de la pantalla después de un tiempo fijo (en los navegadores modernos), ya que este método también eliminará la notificación de cualquier bandeja de notificaciones, evitando que los usuarios interactúen con ella después de que se mostró inicialmente.
 
-> **Nota:** Cuando recibe un evento de cierre, no hay garantía de que sea el usuario quien cerró la notificación. Esto está en línea con la especificación, que establece: "Cuando se cierra una notificación, ya sea por la plataforma de notificaciones o por el usuario, se deben ejecutar los pasos de cierre".
+> [!NOTE]
+> Cuando recibe un evento de cierre, no hay garantía de que sea el usuario quien cerró la notificación. Esto está en línea con la especificación, que establece: "Cuando se cierra una notificación, ya sea por la plataforma de notificaciones o por el usuario, se deben ejecutar los pasos de cierre".
 
 ## Eventos de notificación
 

@@ -27,7 +27,8 @@ l10n:
 | {{domxref("ProcessingInstruction")}} | 不包括目标的全部内容 |
 | {{domxref("Text")}}                  | 文本节点的内容       |
 
-> **备注：** 如果 `nodeValue` 的值为 `null`，则对它赋值也不会有任何效果。
+> [!NOTE]
+> 如果 `nodeValue` 的值为 `null`，则对它赋值也不会有任何效果。
 
 ## 示例
 

@@ -69,7 +69,8 @@ Define el color de fondo deseado para la aplicación. Este valor repite lo defin
 "background_color": "red"
 ```
 
-> **Nota:** El `background_color` únicamente está destinado a mejorar la experiencia de usuario mientras se carga la aplicación y no se debe usar como color de fondo cuando la hoja de estilos de la aplicación esté disponible.
+> [!NOTE]
+> El `background_color` únicamente está destinado a mejorar la experiencia de usuario mientras se carga la aplicación y no se debe usar como color de fondo cuando la hoja de estilos de la aplicación esté disponible.
 
 ### `description`
 
@@ -95,7 +96,8 @@ Puede tener uno de los siguentes valores:
 - `rtl` (derecha a izquierda)
 - `auto` (indica al navegador que use el algoritmo Unicode bidirectional para hacer una estimación apropiada sobre la dirección del texto.)
 
-> **Nota:** Cuando se omite este valor, por defecto es `auto`.
+> [!NOTE]
+> Cuando se omite este valor, por defecto es `auto`.
 
 ### `display`
 
@@ -114,7 +116,8 @@ Los valores aceptados son:
 | `minimal-ui` | La aplicación se mostrará como una app independiente, pero tendrá un mínimo de elementos de interfaz para controlar la navegación. Estos elementos podrán variar según navegador.                                                                                                                                     | `browser`             |
 | `browser`    | La aplicación se abrirá en una pestaña nueva del navegador o una ventana nueva, dependiendo del navegador y plataforma. Esto es por defecto.                                                                                                                                                                          | (None)                |
 
-> **Nota:** Puedes aplicar selectivamente CSS a tu app basandote en el modo de visualización, usando la característica [display-mode](/docs/Web/CSS/@media/display-mode). Se puede utilizar para proporcionar una experiencia de usuario consistente al lanzar un site desde una URL y lanzarlo desde un icono de escritorio.
+> [!NOTE]
+> Puedes aplicar selectivamente CSS a tu app basandote en el modo de visualización, usando la característica [display-mode](/docs/Web/CSS/@media/display-mode). Se puede utilizar para proporcionar una experiencia de usuario consistente al lanzar un site desde una URL y lanzarlo desde un icono de escritorio.
 
 ### `icons`
 
@@ -193,7 +196,8 @@ Especifica un valor booleano que sugiere que el agente de usuario le indique al 
 "prefer_related_applications": false
 ```
 
-> **Nota:** Si se omite, el valor por defecto es `false`.
+> [!NOTE]
+> Si se omite, el valor por defecto es `false`.
 
 ### `related_applications`
 

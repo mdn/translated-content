@@ -17,7 +17,8 @@ Channel messaging 在这样的场景中特别有用：假如你有一个社交�
 
 换个角度说，Message Channels 可以提供一个安全的通道让你在不同的浏览器上下文间传递数据。
 
-> **备注：** 要了解更多信息和思考，规范的 [Ports 作为 Web 上一个对象兼容模型的基础](https://html.spec.whatwg.org/multipage/comms.html#ports-as-the-basis-of-an-object-capability-model-on-the-web) 章节值得一读。
+> [!NOTE]
+> 要了解更多信息和思考，规范的 [Ports 作为 Web 上一个对象兼容模型的基础](https://html.spec.whatwg.org/multipage/comms.html#ports-as-the-basis-of-an-object-capability-model-on-the-web) 章节值得一读。
 
 ## 简单的例子
 

@@ -51,7 +51,8 @@ Las Propiedades y Valores lógicos pueden ser considerados como un par de grupos
 
 Hay otro grupo de estas propiedades lógicas que no tienen una asignación directa con las propiedades físicas existentes. Estas son abreviaturas posibles gracias al hecho de que podemos referirnos a ambos bordes del bloque o dimensión en línea a la vez. Un ejemplo sería {{CSSxRef("margin-block")}}, que es una abreviación de {{CSSxRef("margin-block-start")}} y {{CSSxRef("margin-block-end")}}. Actualmente, estas propiedades no tiene soporte en navegadores.
 
-> **Nota:** CSS Working Group está intentando decidir qué hacer con los valores abreviados de cuatro valores para las propiedades lógicas, por ejemplo, los equivalentes para configurar cuatro propiedades físicas a la vez, como márgenes con la propiedad {{CSSxRef("margin")}}. Necesitaríamos algún tipo de modificador si tuviéramos que reutilizar el margen para las propiedades relativas al flujo. Si deseas leer las sugerencias o comentarlas, el problema relevante de GitHub es [#1282](https://github.com/w3c/csswg-drafts/issues/1282).
+> [!NOTE]
+> CSS Working Group está intentando decidir qué hacer con los valores abreviados de cuatro valores para las propiedades lógicas, por ejemplo, los equivalentes para configurar cuatro propiedades físicas a la vez, como márgenes con la propiedad {{CSSxRef("margin")}}. Necesitaríamos algún tipo de modificador si tuviéramos que reutilizar el margen para las propiedades relativas al flujo. Si deseas leer las sugerencias o comentarlas, el problema relevante de GitHub es [#1282](https://github.com/w3c/csswg-drafts/issues/1282).
 
 ### Pruebas para el soporte en navegadores
 

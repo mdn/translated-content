@@ -361,7 +361,8 @@ output {
 
 `unset` または `gibberish` を入力すると、 JavaScript は {{HTMLElement("body")}} の `style` を `--theme: unset` または `--theme: gibberish` に更新します。どちらも色ではありません。どちらも不正な色であり、無視されます。これは初期値が継承され、変更されないことを意味しています。 `style(-theme)` は偽を返し、 `style(-theme: red)` は真を返します。
 
-> **メモ:** カスタムプロパティを宣言するときは、 `@property` を {{cssxref("@property/syntax", "syntax")}} 記述子とともに使用するようにしてください。そうすれば、ブラウザーは正しく計算値を比較することができます。
+> [!NOTE]
+> カスタムプロパティを宣言するときは、 `@property` を {{cssxref("@property/syntax", "syntax")}} 記述子とともに使用するようにしてください。そうすれば、ブラウザーは正しく計算値を比較することができます。
 
 ### 入れ子のクエリー
 

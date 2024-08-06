@@ -11,7 +11,8 @@ l10n:
 
 要使用此 API，扩展程序必须在其 [`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中请求“dns”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
-> **备注：** 如果启用通过 SOCKS 代理的 DNS 解析，DNS 解析将失败并显示 NS_ERROR_UNKNOWN_PROXY_HOST。
+> [!NOTE]
+> 如果启用通过 SOCKS 代理的 DNS 解析，DNS 解析将失败并显示 NS_ERROR_UNKNOWN_PROXY_HOST。
 
 ## 函数
 

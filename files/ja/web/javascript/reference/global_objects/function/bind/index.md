@@ -118,7 +118,8 @@ const boundGetX = retrieveX.bind(module);
 console.log(boundGetX()); // 81
 ```
 
-> **メモ:** この例を[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)で呼び出すと（例えば ECMAScript モジュール内や `"use strict"` ディレクティブを通して）、グローバルな `this` 値は不定となり、 `retrieveX` 呼び出しに失敗する原因となります。
+> [!NOTE]
+> この例を[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)で呼び出すと（例えば ECMAScript モジュール内や `"use strict"` ディレクティブを通して）、グローバルな `this` 値は不定となり、 `retrieveX` 呼び出しに失敗する原因となります。
 >
 > これを Node CommonJS モジュール内で実行すると、厳格モードかどうかに関わらず、最上位スコープの `this` は `globalThis` ではなく `module.exports` を指すようになります。しかし、関数内では、バインドされていない `this` の参照は、それでも「厳格モードでなければ `globalThis` 、厳格モードならば `undefined`」というルールに従います。したがって、厳格モードでない場合（既定）は、 `retrieveX` は `undefined` を返します。これは、 `this.x = 9` が、 `getX` が読んでいるオブジェクト (`globalThis`) とは異なるオブジェクト (`module.exports`) に書き込んでいるためです。
 

@@ -11,7 +11,8 @@ l10n:
 
 WebGL 拡張機能は {{domxref("WebGLRenderingContext.getExtension()")}} メソッドを使用することで利用できるようになります。詳しくは、 [WebGL チュートリアル](/ja/docs/Web/API/WebGL_API/Tutorial) の [拡張機能の使用](/ja/docs/Web/API/WebGL_API/Using_Extensions)も参照してください。
 
-> **メモ:** この拡張機能は {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} のコンテキストでのみ利用可能です。 {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} のコンテキストでは、この機能は既定で使用することができ、定数やメソッドは "`ANGLE`" 接尾辞なしで使用することができます。
+> [!NOTE]
+> この拡張機能は {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} のコンテキストでのみ利用可能です。 {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} のコンテキストでは、この機能は既定で使用することができ、定数やメソッドは "`ANGLE`" 接尾辞なしで使用することができます。
 >
 > "ANGLE" という名前ですが、この拡張機能は ANGLE ライブラリーを使用していれば、 Windows でなくてもハードウェアが対応していればあらゆる端末で動作します。 "ANGLE" は単に、この拡張機能が ANGLE ライブラリーの作者によって書かれたことを示しているだけです。
 
@@ -37,7 +38,8 @@ WebGL 拡張機能は {{domxref("WebGLRenderingContext.getExtension()")}} メソ
 
 次の例は、与えられた図形を 1 回の draw 呼び出しで複数回描画する方法です。
 
-> **警告:** 以下は教育的なものであり、製品レベルのコードではありません。レンダリングループ内や使用直前にデータ/バッファーを構築することは、一般的に避けるべきです。
+> [!WARNING]
+> 以下は教育的なものであり、製品レベルのコードではありません。レンダリングループ内や使用直前にデータ/バッファーを構築することは、一般的に避けるべきです。
 
 ```js
 // 拡張機能を有効化

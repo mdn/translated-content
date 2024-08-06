@@ -52,7 +52,8 @@ deriveBits(algorithm, baseKey, length)
 
 ## 示例
 
-> **备注：** 你可以在 GitHub 上[尝试可用的示例](https://mdn.github.io/dom-examples/web-crypto/derive-bits/index.html)。
+> [!NOTE]
+> 你可以在 GitHub 上[尝试可用的示例](https://mdn.github.io/dom-examples/web-crypto/derive-bits/index.html)。
 
 ### ECDH
 

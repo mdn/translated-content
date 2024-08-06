@@ -78,4 +78,5 @@ l10n:
 
 - 触摸目标必须足够大，方便用户交互（参考 [BBC 移动端无障碍指南](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size)关于触摸目标尺寸的指南）
 
-> **备注：** 该文档的[最初版本](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)由 [Yura Zenevich](https://yzen.github.io/) 完成。
+> [!NOTE]
+> 该文档的[最初版本](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)由 [Yura Zenevich](https://yzen.github.io/) 完成。

@@ -115,9 +115,11 @@ HTML 文書に次のように追加するだけで利用できるようになり
 </my-paragraph>
 ```
 
-> **メモ:** スロットに挿入することができるノードは「スロット可能 (Slottable)」ノードと呼ばれます。ノードがスロットに挿入されたとき、「スロットされている」と言います。
+> [!NOTE]
+> スロットに挿入することができるノードは「スロット可能 (Slottable)」ノードと呼ばれます。ノードがスロットに挿入されたとき、「スロットされている」と言います。
 
-> **メモ:** 無名の {{HTMLElement("slot")}} には、カスタム要素のトップレベルの子ノードのうち [`slot`](/ja/docs/Web/HTML/Global_attributes#slot) 属性を持たないすべてのノードが入ります。これにはテキストノードも含まれます。
+> [!NOTE]
+> 無名の {{HTMLElement("slot")}} には、カスタム要素のトップレベルの子ノードのうち [`slot`](/ja/docs/Web/HTML/Global_attributes#slot) 属性を持たないすべてのノードが入ります。これにはテキストノードも含まれます。
 
 簡単な例での説明は以上です。
 もっと実行してみたい場合は、 [GitHub 上にあります](https://github.com/mdn/web-components-examples/tree/main/simple-template)（[ライブ実行版](https://mdn.github.io/web-components-examples/simple-template/)もあります）。
@@ -136,7 +138,8 @@ HTML 文書に次のように追加するだけで利用できるようになり
 
 また、まだレンダリングされていない場合でも、 {{HTMLElement("template")}} を使用することで、テンプレートとしてのコンテナーの目的がより意味的に明確になるはずです。また、 {{HTMLElement("template")}} には、 {{HTMLElement("td")}} のような、 {{HTMLElement("div")}} に追加すると消えてしまうような項目を直接追加することができます。
 
-> **メモ:** 完全な例は [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details) で（[ライブ実行版](https://mdn.github.io/web-components-examples/element-details/)も）参照することができます。
+> [!NOTE]
+> 完全な例は [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details) で（[ライブ実行版](https://mdn.github.io/web-components-examples/element-details/)も）参照することができます。
 
 ### template をスロットと共に作成
 

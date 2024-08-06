@@ -13,7 +13,8 @@ Web Worker 提供簡單的方法讓網頁在背景執行緒（Thread）中執行
 
 Dedicated worker (專有 worker) 是一般 worker，只能被產生它的檔案存取，{{domxref("DedicatedWorkerGlobalScope")}} 物件代表其執行環境；而 Shared worker (共享 worker) 則能夠被不同檔案存取，{{domxref("SharedWorkerGlobalScope")}}) 物件代表其執行環境。
 
-> **備註：** worker 其他文件說明請見 [The Web Workers API landing page](/zh-TW/docs/Web/API/Web_Workers_API) 。
+> [!NOTE]
+> worker 其他文件說明請見 [The Web Workers API landing page](/zh-TW/docs/Web/API/Web_Workers_API) 。
 
 基本上 worker 能夠執行任何事情，比如說 [WebSockets](/zh-TW/docs/Web/API/WebSockets_API)、[IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API)、和 Firefox OS 特有的 [Data Store API](/zh-TW/docs/Web/API/Data_Store_API) ，然而直接存取 DOM 或是 {{domxref("window")}} 物件的一些方法和屬性則不被允許，更多細節請見 [worker 可存取知函數和類別](/zh-TW/docs/Web/API/Worker/Functions_and_classes_available_to_workers)。
 
@@ -89,9 +90,11 @@ myWorker.onmessage = function (e) {
 
 > **備註：** `建構 Worker` 的 URI 必須遵從[same-origin policy](/zh-TW/docs/Web/Security/Same-origin_policy)。目前各家瀏覽器在這方面存有歧異，Gecko 10.0 以後允許 data URI 而 Internet Explorer 10 不允許 Blob URI。
 
-> **備註：** 在主執行緒中存取 `onmessage` `與 postMessage` 需要主動掛在 worker 物件上，在 worker 執行緒則不用，這是因為 worker 執行緒的全域物件便是 worker 物件。
+> [!NOTE]
+> 在主執行緒中存取 `onmessage` `與 postMessage` 需要主動掛在 worker 物件上，在 worker 執行緒則不用，這是因為 worker 執行緒的全域物件便是 worker 物件。
 
-> **備註：** 和 worker 傳送的資料並非共享而是複製一份後傳送，詳細請參照 [和 workers 傳遞資料：更多細節](#和_workers_傳遞資料：更多細節)。
+> [!NOTE]
+> 和 worker 傳送的資料並非共享而是複製一份後傳送，詳細請參照 [和 workers 傳遞資料：更多細節](#和_workers_傳遞資料：更多細節)。
 
 ### 結束 worker
 
@@ -138,7 +141,8 @@ importScripts("foo.js", "bar.js"); /* imports two scripts */
 
 瀏覽器會載入並執行每個程式碼腳本，然後 worker 能夠存取程式碼腳本內定義的全域變數，若是腳本無法載入，會產生一個 NETWORK_ERROR，後續的程式碼不會被執行，但是先前執行過的程式碼或用 [window.setTimeout()](/zh-TW/docs/Web/API/window.setTimeout) 延遲執行的程式碼依然有效，而 importScripts() 之後宣告的函數也一樣存在，因為這些程式碼總是在其他程式碼之前就解析過了。
 
-> **備註：** 雖然程式碼腳本的下載順序不一定，但執行順序會遵照傳入 importScripts()的順序，這是同步完成的，importScripts()不會回傳直到所有的程式碼都下載並執行完。
+> [!NOTE]
+> 雖然程式碼腳本的下載順序不一定，但執行順序會遵照傳入 importScripts()的順序，這是同步完成的，importScripts()不會回傳直到所有的程式碼都下載並執行完。
 
 ## Shared workers
 
@@ -146,9 +150,11 @@ shared worker 能夠被多個程式腳本存取，縱使跨越不同 window、if
 
 請注意 dedicated worker 與 shared worker 間的差異處，範例裡會有兩份 HTML 頁面，各自都利用同一個 worker 處理運算。
 
-> **備註：** 所有的瀏覽環境都必需共享相同的來源（相同 protocol, host 和 port），shared worker 才能讓不同瀏覽環境存取。
+> [!NOTE]
+> 所有的瀏覽環境都必需共享相同的來源（相同 protocol, host 和 port），shared worker 才能讓不同瀏覽環境存取。
 
-> **備註：** 在 Firefox，shared worker 無法在一般和隱私模式間共享（[Firefox bug 1177621](https://bugzil.la/1177621)）。
+> [!NOTE]
+> 在 Firefox，shared worker 無法在一般和隱私模式間共享（[Firefox bug 1177621](https://bugzil.la/1177621)）。
 
 ### 產生 shared worker
 
@@ -544,7 +550,8 @@ for (var i = 0; i < uInt8Array.length; ++i) {
 worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 ```
 
-> **備註：** 關於更多可移轉物件的資訊, 效能和功能偵測，請參考 HTML5 Rocks 上 [Transferable Objects: Lightning Fast!](http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast) 一文。
+> [!NOTE]
+> 關於更多可移轉物件的資訊, 效能和功能偵測，請參考 HTML5 Rocks 上 [Transferable Objects: Lightning Fast!](http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast) 一文。
 
 ## Embedded workers
 
@@ -724,7 +731,8 @@ onmessage 事件處理器會接收 worker 回傳的運算結果，然後顯示�
 
 worker 無法操作主頁面的物件與 DOM，如有相關需求，必須要間接透過 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 通知主頁面，讓主頁面執行需求。
 
-> **備註：** 所有 worker 可存取功能一覽表，請見 [Functions and interfaces available to workers](/zh-TW/docs/Web/Reference/Functions_and_classes_available_to_workers).
+> [!NOTE]
+> 所有 worker 可存取功能一覽表，請見 [Functions and interfaces available to workers](/zh-TW/docs/Web/Reference/Functions_and_classes_available_to_workers).
 
 ## 標準規範
 

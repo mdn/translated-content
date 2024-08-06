@@ -62,7 +62,8 @@ user-select: unset;
 - `element`{{non-standard_inline}} (IE-specific alias)
   - : Igual que `contain`. Solo lo soportado en Internet Explorer.
 
-> **Nota:** CSS UI 4 [renombra user-select: a contain](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
+> [!NOTE]
+> CSS UI 4 [renombra user-select: a contain](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
 
 ### Formal syntax
 

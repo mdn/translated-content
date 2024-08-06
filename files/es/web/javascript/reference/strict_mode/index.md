@@ -116,7 +116,8 @@ delete Object.prototype; // lanza un TypeError
 
 En cuarto lugar, la versión de modo estricto anterior a Gecko 34 requiere que todas las propiedades nombradas en un objeto sean únicas. En código normal se pueden duplicar nombres, siendo el último el que determina el valor de la propiedad. Pero como el último es el único que hace algo, la duplicidad da origen a errores si el código se modifica para cambiar el valor de la propiedad. Duplicar nombres de propiedades es un error de sintaxis en modo estricto.
 
-> **Nota:** Este ya no es el caso en ECMAScript 2015 ([error 1041128](https://bugzilla.mozilla.org/show_bug.cgi?id=1041128)).
+> [!NOTE]
+> Este ya no es el caso en ECMAScript 2015 ([error 1041128](https://bugzilla.mozilla.org/show_bug.cgi?id=1041128)).
 
 ```js
 "use strict";

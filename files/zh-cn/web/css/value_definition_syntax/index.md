@@ -103,7 +103,8 @@ bold && <length>
 - `bold`因为长度值没有出现。
 - `bold 1em bold`因为各部分必须恰好出现一次。
 
-> **备注：** 并置的优先级高于“与”组合符。例如 `bold thin && <length>` 等价于 `[ bold thin ] && <length>`。它们的合法取值是：`bold thin <length>` 或 `<length> bold thin` 但不是 `bold <length> thin`。
+> [!NOTE]
+> 并置的优先级高于“与”组合符。例如 `bold thin && <length>` 等价于 `[ bold thin ] && <length>`。它们的合法取值是：`bold thin <length>` 或 `<length> bold thin` 但不是 `bold <length> thin`。
 
 ### “或”组合符：||
 
@@ -124,7 +125,8 @@ bold && <length>
 - `blue yellow`因为一个组成部分最多出现一次。
 - `bold`因为它不允许出现。
 
-> **备注：** “与”组合符的优先级高于“或”组合符，比如 `bold || thin && <length>` 等价于 `bold || [ thin && <length> ]`。它们的合法取值是：`bold`, `thin <length>`, `bold thin <length>`, 或者 `thin <length> bold` ，但不是：`<length> bold thin` 因为 bold 若出现，则必须出现在 `thin && <length>` 整体的前面或后面。
+> [!NOTE]
+> “与”组合符的优先级高于“或”组合符，比如 `bold || thin && <length>` 等价于 `bold || [ thin && <length> ]`。它们的合法取值是：`bold`, `thin <length>`, `bold thin <length>`, 或者 `thin <length> bold` ，但不是：`<length> bold thin` 因为 bold 若出现，则必须出现在 `thin && <length>` 整体的前面或后面。
 
 ### “互斥”组合符：|
 
@@ -150,7 +152,8 @@ bold && <length>
 - `center 3%` 因为最多只能出现一个组成部分
 - `3em 4.5em` 因为每个组成部分最多只能出现一次
 
-> **备注：** “或”组合符的优先级高于“互斥”组合符，比如`bold | thin || <length>`等价于`bold | [ thin || <length> ]`。它们的合法取值是：`bold`, `thin`, `<length>`, `<length> thin`, 或 `thin <length>`，但不能是 `bold <length>`，因为“互斥”组合符所连接的数个部分中，只有一个能出现。
+> [!NOTE]
+> “或”组合符的优先级高于“互斥”组合符，比如`bold | thin || <length>`等价于`bold | [ thin || <length> ]`。它们的合法取值是：`bold`, `thin`, `<length>`, `<length> thin`, 或 `thin <length>`，但不能是 `bold <length>`，因为“互斥”组合符所连接的数个部分中，只有一个能出现。
 
 ## 数量符号
 

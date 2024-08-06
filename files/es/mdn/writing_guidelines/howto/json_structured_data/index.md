@@ -21,7 +21,8 @@ GroupData hace exactamente eso: para cada API, enumera las interfaces, propiedad
 
 ### Estructura de GroupData
 
-> **Advertencia:** Las páginas inexistentes enumeradas en este archivo se ignoran.
+> [!WARNING]
+> Las páginas inexistentes enumeradas en este archivo se ignoran.
 
 Una entrada en `GroupData.json` tiene la siguiente estructura:
 
@@ -55,7 +56,8 @@ Una entrada en `GroupData.json` tiene la siguiente estructura:
 
 - `"Nombre_de_API"`
   - : Esta clave es un ID utilizado por macros de menu lateral como `\{{APIRef("Nombre_de_API")}}` y el nombre que se muestra en el menu lateral. Elígelo sabiamente.
-    > **Advertencia:** Si desea cambiar el nombre que se muestra en el menu lateral, debe editar todas las páginas que lo muestran.
+    > [!WARNING]
+    > Si desea cambiar el nombre que se muestra en el menu lateral, debe editar todas las páginas que lo muestran.
 - `"overview"`
   - : Esta es una lista que contiene una página: la página de resumen, utilizada como enlace para el texto `"Nombre_de_API"`. El valor es el _titulo de la página_, y la página debe estar en el directorio `web/api/`.
 - `"guides"`
@@ -64,17 +66,21 @@ Una entrada en `GroupData.json` tiene la siguiente estructura:
   - : Enumera las interfaces que forman parte de la API.
 - `"methods"`
   - : Enumera los métodos que forman parte de la API.
-    > **Nota:** Los métodos de las interfaces enumeradas en `"interfaces"` **no deben** estar enumerados allí. Se añaden automáticamente al menu lateral si la etiqueta `Method` está en el encabezado YAML de esa página.
+    > [!NOTE]
+    > Los métodos de las interfaces enumeradas en `"interfaces"` **no deben** estar enumerados allí. Se añaden automáticamente al menu lateral si la etiqueta `Method` está en el encabezado YAML de esa página.
 - `"properties"`
   - : Enumera los métodos en otras interfaces que forman parte de la API, como `navigator.xr` (una propiedad que la API de WebXR agrega al objeto `navigator`)
-    > **Nota:** Las propiedades de las interfaces enumeradas en `"interfaces"` **no deben** estar enumeradas allí. Se añaden automáticamente a la barra lateral si la etiqueta `Property` está en el encabezado YAML de esa página.
+    > [!NOTE]
+    > Las propiedades de las interfaces enumeradas en `"interfaces"` **no deben** estar enumeradas allí. Se añaden automáticamente a la barra lateral si la etiqueta `Property` está en el encabezado YAML de esa página.
 - `"events"`
   - : Enumera los eventos de otras interfaces que forman parte de la API. Los valores son el _título de las páginas_ (que debe residir en `Web/Events`)
-    > **Nota:** Los eventos dirigidos a las interfaces enumeradas en `"interfaces"` **no deben** estar enumerados allí. Se añaden automáticamente al menu lateral si la etiqueta `Event` (¡singular!) está en el encabezado YAML de esa página.
+    > [!NOTE]
+    > Los eventos dirigidos a las interfaces enumeradas en `"interfaces"` **no deben** estar enumerados allí. Se añaden automáticamente al menu lateral si la etiqueta `Event` (¡singular!) está en el encabezado YAML de esa página.
 
 Hay otras dos claves, `"dictionaries"` y `"callbacks"`, que funcionan con el mismo principio. Como ya no documentamos estas entidades en sus propias páginas, su uso está obsoleto y no se les debe añadir ninguna entrada nueva (y las eliminamos poco a poco).
 
-> **Nota:** Además, ninguna de las claves es obligatoria; es una buena práctica (y lo haremos cumplir) agregar las no obsoletas con una lista vacía en lugar de omitirlas. Muestra que la ausencia de valor es una elección consciente.
+> [!NOTE]
+> Además, ninguna de las claves es obligatoria; es una buena práctica (y lo haremos cumplir) agregar las no obsoletas con una lista vacía en lugar de omitirlas. Muestra que la ausencia de valor es una elección consciente.
 
 ### Proceso de actualización para GroupData
 
@@ -86,7 +92,8 @@ El archivo `GroupData.json` se encuentra [aquí](https://github.com/mdn/content/
 
 ## InterfaceData: herencia de la interfaz de grabación
 
-> **Nota:** Esperamos generar este archivo automáticamente a partir de los datos disponibles a través de w3c/webref en el futuro.
+> [!NOTE]
+> Esperamos generar este archivo automáticamente a partir de los datos disponibles a través de w3c/webref en el futuro.
 
 `InterfaceData` describe la jerarquía de las interfaces. Enumera la herencia. En el pasado, también enumeraba los mixins implementados por cada interfaz; pero ese uso está obsoleto, y eliminamos los mixins de este archivo al mismo ritmo que se actualiza MDN.
 
@@ -103,7 +110,8 @@ Una entrada en `InterfaceData.json` tiene la siguiente estructura:
 }
 ```
 
-> **Nota:** Como los mixins están obsoletos, `"impl"` debe ser una lista vacía para todas las interfaces nuevas.
+> [!NOTE]
+> Como los mixins están obsoletos, `"impl"` debe ser una lista vacía para todas las interfaces nuevas.
 
 El valor de `"Nombre_de_la_interfaz_padre"` no es una lista sino una sola entrada, obligatoria; no debemos enumerar ninguna interfaz que no herede de otra.
 
@@ -117,7 +125,8 @@ El archivo `InterfaceData.json` se encuentra [aquí](https://github.com/mdn/cont
 
 ## SpecData: Información de especificación
 
-> **Advertencia:** El archivo `SpecData.json` ya no se mantiene. La información de especificación canónica se almacena en w3c/browser-spec y en la clave `spec_url` de características en mdn/browser-compat-data.
+> [!WARNING]
+> El archivo `SpecData.json` ya no se mantiene. La información de especificación canónica se almacena en w3c/browser-spec y en la clave `spec_url` de características en mdn/browser-compat-data.
 
 Las macros `\{{SpecName}}` y `\{{Spec2}}` que estamos eliminando utilizan el archivo `SpecData.json`. No aceptamos más contribuciones al archivo `SpecData.json`; en su lugar, intente insertar una tabla de especificaciones, utilizando la macro `\{{Specifications}}`, o intente codificar el enlace (bueno) a la especificación. Tenga en cuenta que la mayoría de las veces, mencionar o vincular a una especificación fuera de la sección _Especificaciones_ es un signo de algo que no está debidamente documentado en MDN.
 

@@ -15,7 +15,8 @@ slug: Web/CSS/clear
 
 要被清除的相关浮动元素指的是在相同[块级格式化上下文](/zh-CN/docs/CSS/block_formatting_context)中的前置浮动。
 
-> **备注：** 如果一个元素里只有浮动元素，那它的高度会是 0。如果你想要它自适应即包含所有浮动元素，那你需要清除它的子元素。一种方法叫做**clearfix**，即`clear`一个不浮动的 {{cssxref("::after")}} [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)。
+> [!NOTE]
+> 如果一个元素里只有浮动元素，那它的高度会是 0。如果你想要它自适应即包含所有浮动元素，那你需要清除它的子元素。一种方法叫做**clearfix**，即`clear`一个不浮动的 {{cssxref("::after")}} [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)。
 >
 > ```css
 > #container::after {

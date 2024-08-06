@@ -187,7 +187,8 @@ exports.book_update_post = [
             option(value=author._id) #{author.name}
 ```
 
-> **备注：** 此处代码的更动，是为了让书本表单 book_form，能被创建和更新书本的对象共同使用 (如果不这么做，当创建表单时，在 `GET` 路由会发生一个错误)。
+> [!NOTE]
+> 此处代码的更动，是为了让书本表单 book_form，能被创建和更新书本的对象共同使用 (如果不这么做，当创建表单时，在 `GET` 路由会发生一个错误)。
 
 ## 加入一个更新按钮
 
@@ -211,7 +212,8 @@ exports.book_update_post = [
 
 ![](locallibary_express_book_update_noerrors.png)
 
-> **备注：** 其他更新对象的页面，也可以用同样的方式处理。我们把这些更新页面的实作留下，做为自我挑战。
+> [!NOTE]
+> 其他更新对象的页面，也可以用同样的方式处理。我们把这些更新页面的实作留下，做为自我挑战。
 
 ## 下一步
 

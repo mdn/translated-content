@@ -14,7 +14,8 @@ The **`<hue>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/C
 
 上の色相環は [sRGB](https://ja.wikipedia.org/wiki/SRGB) 色空間におけるすべての角度の色相を表示させています。具体的な例では、赤は `0deg`、黄は `60deg`、ライムは `120deg`、シアンは `180deg`、青は `240deg`、マゼンタは `300deg` です。
 
-> **メモ:** 具体的な色相に対応する角度は色空間によって異なります。例えば、 sRGB の緑の色相角は、 sRGB 色空間では `120deg` ですが、 CIELAB 色空間では `134.39deg` です。
+> [!NOTE]
+> 具体的な色相に対応する角度は色空間によって異なります。例えば、 sRGB の緑の色相角は、 sRGB 色空間では `120deg` ですが、 CIELAB 色空間では `134.39deg` です。
 
 以下の表は、 sRGB （{{CSSXref("color_value/hsl", "hsl()")}} および {{CSSXref("color_value/hwb", "hwb()")}}）、 CIELAB （{{CSSXref("color_value/lch", "lch()")}} で用いる）、 Oklab （{{CSSXref("color_value/oklch", "oklch()")}}）の色空間での主な色を示します。
 

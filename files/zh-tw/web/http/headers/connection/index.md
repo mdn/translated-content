@@ -8,7 +8,8 @@ slug: Web/HTTP/Headers/Connection
 **`Connection`** 標頭用來控制在本次事務（transaction）後，連線是否要繼續開著。如果設定為 `keep-alive` ，
 則連線繼續開著，讓接下來送往同一伺服器的請求利用。
 
-> **警告：** Connection 相關的標頭如 {{HTTPHeader("Connection")}} 和
+> [!WARNING]
+> Connection 相關的標頭如 {{HTTPHeader("Connection")}} 和
 > {{HTTPHeader("Keep-Alive")}} 在 [HTTP/2 中被禁用](https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2.2)。
 > Chrome 和 Firefox 會忽略 HTTP/2 回應中的這些標頭，不過 Safari 遵守 HTTP/2
 > spec 的要求，不會讀取包含這些標頭的回應內容。

@@ -13,20 +13,6 @@ slug: Web/SVG/Element/image
 
 ## Атрибуты
 
-### Глобальные атрибуты
-
-- [Conditional processing attributes](/ru/docs/Web/SVG/Attribute#ConditionalProccessing) »
-- [Core attributes](/ru/docs/Web/SVG/Attribute#Core) »
-- [Graphical event attributes](/ru/docs/Web/SVG/Attribute#GraphicalEvent) »
-- [Xlink attributes](/ru/docs/Web/SVG/Attribute#XLink) »
-- [Presentation attributes](/ru/docs/Web/SVG/Attribute#Presentation) »
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
-- {{SVGAttr("transform")}}
-
-### Специфичные атрибуты
-
 - {{SVGAttr("x")}}
 - {{SVGAttr("y")}}
 - {{SVGAttr("width")}}

@@ -33,7 +33,8 @@ l10n:
 
     以下の `AudioNode` の子におけるデフォルト値です: {{domxref("AudioDestinationNode")}}, {{domxref("AnalyserNode")}}, {{domxref("ChannelSplitterNode")}}, {{domxref("ChannelMergerNode")}}
 
-> **メモ:** 仕様書の以前のバージョンでは、{{domxref("ChannelSplitterNode")}} でのデフォルト値は `max` でした。
+> [!NOTE]
+> 仕様書の以前のバージョンでは、{{domxref("ChannelSplitterNode")}} でのデフォルト値は `max` でした。
 
 ## 例
 

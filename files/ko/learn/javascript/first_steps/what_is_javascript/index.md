@@ -112,7 +112,8 @@ API는 일반적으로 두 개의 범주로 나뉩니다.
   두 웹 기술을 사용해서 만들 수 있는 놀라운 결과를 엿보려면 [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome)와 [webglsamples](https://webglsamples.org/)를 방문하세요.
 - {{domxref("HTMLMediaElement")}}와 {{domxref("WebRTC API", "WebRTC")}}를 포함하는 [오디오와 비디오 API](/ko/docs/Web/Guide/Audio_and_video_delivery)를 사용하면 웹 페이지에서 바로 오디오 및 비디오를 재생하거나 웹 카메라에서 비디오를 가져와 다른 사람의 컴퓨터에 표시하는 등 멀티미디어로 정말 흥미로운 작업을 할 수 있습니다. (간단한 [스냅샷 데모](https://chrisdavidmills.github.io/snapshot/)를 방문해서 감을 잡아보세요.)
 
-> **참고:** 위의 데모 중 상당수는 구형 브라우저에서 작동하지 않으므로 실험할 때는 Firefox, Chrome, Edge, Opera와 같은 최신 브라우저를 사용하여 코드를 실행하는 것이 좋습니다.
+> [!NOTE]
+> 위의 데모 중 상당수는 구형 브라우저에서 작동하지 않으므로 실험할 때는 Firefox, Chrome, Edge, Opera와 같은 최신 브라우저를 사용하여 코드를 실행하는 것이 좋습니다.
 > 이후에 프로덕션 코드 (고객이 사용하게 될 코드) 배포에 다가가게 되면 [크로스 브라우저 테스트](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing)를 고려하세요.
 
 **서드파티 API**는 기본적으로 브라우저에 내장되어 있지 않으며, 일반적으로 웹 어딘가에서 해당 코드와 정보를 가져와야 합니다.
@@ -120,7 +121,8 @@ API는 일반적으로 두 개의 범주로 나뉩니다.
 - [Twitter API](https://developer.twitter.com/en/docs)로 여러분의 최신 트윗을 웹 사이트가 보여주도록 구현할 수 있습니다.
 - [Google 지도 API](https://developers.google.com/maps/)와 [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API)로 웹 사이트에 지도를 삽입하고, 지도 관련 기능을 추가할 수 있습니다.
 
-> **참고:** 위의 서드파티 API는 고급 기능으로, 이 과정에서는 다루지 않습니다. 이에 대한 자세한 내용은 [클라이언트 사이드 웹 API 과정](/ko/docs/Learn/JavaScript/Client-side_web_APIs)에서 알아보세요.
+> [!NOTE]
+> 위의 서드파티 API는 고급 기능으로, 이 과정에서는 다루지 않습니다. 이에 대한 자세한 내용은 [클라이언트 사이드 웹 API 과정](/ko/docs/Learn/JavaScript/Client-side_web_APIs)에서 알아보세요.
 
 여기 나열된 항목 말고도 훨씬 다양한 API들이 존재합니다! 하지만 아직 너무 앞서나가진 마세요. JavaScript를 하루 배운 것으로 차세대 Facebook, Google 지도, Instagram을 만들 수는 없는 법입니다. 아직 배워야 할 기본이 많이 남았고, 기본을 배우는 것이 이 과정을 보는 이유이니, 시작해 봅시다!
 
@@ -142,7 +144,8 @@ JavaScript의 가장 일반적인 용도는 위에서 언급했듯이 DOM (Docum
 각 브라우저 탭에는 코드를 실행할 수 있는 별도의 그릇이 있습니다. (전문 용어로 '실행 환경'이라고 부릅니다.) 대부분의 경우 각 탭의 코드는 완전히 독립적으로 실행되며 한 탭의 코드가 다른 탭이나 다른 웹사이트의 코드에 직접적인 영향을 미칠 수 없습니다.
 이건 중요한 보안 절차입니다. 이런 제약이 없으면 해커들이 다른 웹사이트의 정보를 훔치는 코드를 작성하는 등 나쁜 짓을 할 수 있기 때문입니다.
 
-> **참고:** 서로 다른 웹 사이트/탭 사이에서 코드와 정보를 안전하게 주고받을 수 있는 방법이 있지만, 지금 과정과는 거리가 멀기 때문에 여기서는 다루지 않겠습니다.
+> [!NOTE]
+> 서로 다른 웹 사이트/탭 사이에서 코드와 정보를 안전하게 주고받을 수 있는 방법이 있지만, 지금 과정과는 거리가 멀기 때문에 여기서는 다루지 않겠습니다.
 
 ### JavaScript 실행 순서
 
@@ -166,7 +169,8 @@ function updateName() {
 코드의 처음 두 줄의 순서를 바꾸면 더 이상 작동하지 않고 [브라우저 개발자 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)에 오류 `TypeError: para is undefined`가 나타납니다.
 `para` 객체가 아직 존재하지 않으므로 이벤트 수신기를 추가할 수 없기 때문입니다.
 
-> **참고:** 이는 매우 흔한 오류로, 코드에서 참조하는 객체가 실제로 존재하는지 확인한 후에 작업을 수행해야 합니다.
+> [!NOTE]
+> 이는 매우 흔한 오류로, 코드에서 참조하는 객체가 실제로 존재하는지 확인한 후에 작업을 수행해야 합니다.
 
 ### 인터프리터와 컴파일러
 
@@ -241,12 +245,14 @@ CSS가 외부 스타일시트를 적용하는 데 {{htmlelement("link")}} 요소
 
 5. 파일을 저장하고 브라우저에서 페이지를 새로고침하세요. 이제 버튼을 클릭하는 순간 새로운 문단이 생성돼 밑에 추가되는 모습을 볼 수 있습니다.
 
-> **참고:** 예제가 잘 동작하지 않으면 각 단계를 다시 차근차근 시도하면서 모두 정확히 따라했는지 확인해보세요.
+> [!NOTE]
+> 예제가 잘 동작하지 않으면 각 단계를 다시 차근차근 시도하면서 모두 정확히 따라했는지 확인해보세요.
 > 시작 코드를 저장할 때 `.html` 파일로 저장했나요?
 > {{htmlelement("script")}} 요소를 닫는 `</head>` 요소 바로 앞에 배치했나요?
 > JavaScript 코드를 정확히 보이는 그대로 입력했나요? **JavaScript는 대소문자를 구별하고 매우 까다로우므로 구문을 예제 그대로 입력하지 않으면 동작하지 않을 수 있습니다.**
 
-> **참고:** 완성된 예제 코드를 GitHub의 [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)에서 볼 수 있습니다. ([실제로 동작하는 모습도 확인해보세요](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html))
+> [!NOTE]
+> 완성된 예제 코드를 GitHub의 [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)에서 볼 수 있습니다. ([실제로 동작하는 모습도 확인해보세요](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html))
 
 ### 외부 JavaScript
 
@@ -280,7 +286,8 @@ CSS가 외부 스타일시트를 적용하는 데 {{htmlelement("link")}} 요소
    일반적으로 코드를 체계적으로 정리하고 여러 HTML 파일에서 재사용할 수 있다는 측면에서 스크립트를 외부 파일로 분리하는 것이 좋습니다.
    또한 HTML에 스크립트 덩어리를 넣지 않았기에 HTML을 더 쉽게 읽을 수 있습니다.
 
-> **참고:** 완성된 예제 코드를 GitHub의 [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)과 [script.js](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/script.js)에서 볼 수 있습니다. ([실제로 동작하는 모습도 확인해보세요](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html))
+> [!NOTE]
+> 완성된 예제 코드를 GitHub의 [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)과 [script.js](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/script.js)에서 볼 수 있습니다. ([실제로 동작하는 모습도 확인해보세요](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html))
 
 ### 인라인 JavaScript 처리기
 
@@ -467,7 +474,8 @@ for (const button of buttons) {
 }
 ```
 
-> **참고:** 보통은 많은 주석이 적은 주석보다 낫지만, 변수가 무엇인지 설명하기 위해(변수 이름이 더 직관적이어야 함) 또는 매우 간단한 연산을 설명하기 위해(코드가 지나치게 복잡할 수 있음) 많은 주석을 추가하는 경우 주의해야 합니다.
+> [!NOTE]
+> 보통은 많은 주석이 적은 주석보다 낫지만, 변수가 무엇인지 설명하기 위해(변수 이름이 더 직관적이어야 함) 또는 매우 간단한 연산을 설명하기 위해(코드가 지나치게 복잡할 수 있음) 많은 주석을 추가하는 경우 주의해야 합니다.
 
 ## 요약
 

@@ -89,7 +89,8 @@ CTR モードでは、メッセージのブロックが暗号化されるたび�
 
 基本的には、ノンスはカウンターブロックが一つのメッセージから次のメッセージに再利用されないことを保証し、カウンターはカウンターブロックが単一のメッセージ内で再利用されないことを保証します。
 
-> **メモ:** 詳しくは [Appendix B of the NIST SP800-38A standard](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf#%5B%7B%22num%22%3A70%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22Fit%22%7D%5D) を参照してください。
+> [!NOTE]
+> 詳しくは [Appendix B of the NIST SP800-38A standard](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf#%5B%7B%22num%22%3A70%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22Fit%22%7D%5D) を参照してください。
 
 ### AES-CBC
 
@@ -103,7 +104,8 @@ CTR モードでは、メッセージのブロックが暗号化されるたび�
 
 ## 例
 
-> **メモ:** GitHub の[動作例を試してみる](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html)ことができます。
+> [!NOTE]
+> GitHub の[動作例を試してみる](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html)ことができます。
 
 ### RSA-OAEP
 

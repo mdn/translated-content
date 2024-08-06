@@ -221,7 +221,8 @@ para.textContent = info;
 
 {{ EmbedLiveSample('不用麻煩', '100%', 60, "", "", "hide-codepen-jsfiddle") }}
 
-> **備註：** You can find this [example code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)).
+> [!NOTE]
+> You can find this [example code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)).
 
 這顯示了一個循環，該循環用於遍歷數組中的項目並對其進行處理-這是 JavaScript 中非常常見的模式。 這裡：
 
@@ -235,9 +236,11 @@ para.textContent = info;
 
 4. 當 i 等於 cats.length 時，循環將停止，瀏覽器將繼續循環下方的下一段代碼。
 
-> **備註：** We have made the exit condition `i < cats.length`, not `i <= cats.length`, because computers count from 0, not 1 — we are starting `i` at `0`, and going up to `i = 4` (the index of the last array item). `cats.length` returns 5, as there are 5 items in the array, but we don't want to get up to `i = 5`, as that would return `undefined` for the last item (there is no array item with an index of 5). So therefore we want to go up to 1 less than `cats.length` (`i <`), not the same as `cats.length` (`i <=`).
+> [!NOTE]
+> We have made the exit condition `i < cats.length`, not `i <= cats.length`, because computers count from 0, not 1 — we are starting `i` at `0`, and going up to `i = 4` (the index of the last array item). `cats.length` returns 5, as there are 5 items in the array, but we don't want to get up to `i = 5`, as that would return `undefined` for the last item (there is no array item with an index of 5). So therefore we want to go up to 1 less than `cats.length` (`i <`), not the same as `cats.length` (`i <=`).
 
-> **備註：** A common mistake with exit conditions is making them use "equal to" (`===`) rather than say "less than or equal to" (`<=`). If we wanted to run our loop up to `i = 5`, the exit condition would need to be `i <= cats.length`. If we set it to `i === cats.length`, the loop would not run at all because `i` is not equal to `5` on the first loop iteration, so it would stop immediately.
+> [!NOTE]
+> A common mistake with exit conditions is making them use "equal to" (`===`) rather than say "less than or equal to" (`<=`). If we wanted to run our loop up to `i = 5`, the exit condition would need to be `i <= cats.length`. If we set it to `i === cats.length`, the loop would not run at all because `i` is not equal to `5` on the first loop iteration, so it would stop immediately.
 
 我們剩下的一個小問題是最終輸出語句的格式不太正確：
 
@@ -255,9 +258,11 @@ for (var i = 0; i < cats.length; i++) {
 }
 ```
 
-> **備註：** You can find this [example code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)).
+> [!NOTE]
+> You can find this [example code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)).
 
-> **警告：** With for — as with all loops — you must make sure that the initializer is iterated so that it eventually reaches the exit condition. If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an **infinite loop**.
+> [!WARNING]
+> With for — as with all loops — you must make sure that the initializer is iterated so that it eventually reaches the exit condition. If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an **infinite loop**.
 
 ## 中斷退出循環
 
@@ -365,7 +370,8 @@ btn.addEventListener("click", function () {
 
 5. 在（contacts.length-1）迭代之後，如果聯繫人姓名與輸入的搜索不匹配，則將段落文本設置為「找不到聯繫人。」，然後循環繼續進行迭代。
 
-> **備註：** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
+> [!NOTE]
+> You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
 
 ## Skipping iterations with continue
 
@@ -434,7 +440,8 @@ Here's the output:
 3. If the square root and the rounded down square root do not equal one another (`!==`), it means that the square root is not an integer, so we are not interested in it. In such a case, we use the `continue` statement to skip on to the next loop iteration without recording the number anywhere.
 4. If the square root IS an integer, we skip past the if block entirely so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space on to the end of the paragraph content.
 
-> **備註：** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
+> [!NOTE]
+> You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 
 ## while and do ... while
 
@@ -471,7 +478,8 @@ while (i < cats.length) {
 }
 ```
 
-> **備註：** This still works just the same as expected — have a look at it [running live on GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)).
+> [!NOTE]
+> This still works just the same as expected — have a look at it [running live on GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)).
 
 The [do...while](/zh-TW/docs/Web/JavaScript/Reference/Statements/do...while) loop is very similar, but provides a variation on the while structure:
 
@@ -504,9 +512,11 @@ do {
 } while (i < cats.length);
 ```
 
-> **備註：** Again, this works just the same as expected — have a look at it [running live on GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)).
+> [!NOTE]
+> Again, this works just the same as expected — have a look at it [running live on GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)).
 
-> **警告：** With while and do...while — as with all loops — you must make sure that the initializer is iterated so that it eventually reaches the exit condition. If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an **infinite loop**.
+> [!WARNING]
+> With while and do...while — as with all loops — you must make sure that the initializer is iterated so that it eventually reaches the exit condition. If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an **infinite loop**.
 
 ## Active learning: Launch countdown
 
@@ -858,7 +868,8 @@ do {
 
 We would recommend `for`, at least to begin with, as it is probably the easiest for remembering everything — the initializer, exit-condition, and final-expression all have to go neatly into the parentheses, so it is easy to see where they are and check that you aren't missing them.
 
-> **備註：** There are other loop types/features too, which are useful in advanced/specialized situations and beyond the scope of this article. If you want to go further with your loop learning, read our advanced [Loops and iteration guide](/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration).
+> [!NOTE]
+> There are other loop types/features too, which are useful in advanced/specialized situations and beyond the scope of this article. If you want to go further with your loop learning, read our advanced [Loops and iteration guide](/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration).
 
 ## Conclusion
 

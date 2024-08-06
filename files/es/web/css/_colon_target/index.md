@@ -90,7 +90,8 @@ p:target i {
 
 Puede usar la pseudo-clase `:target` para crear un lightbox sin usar JavaScript. Esta técnica se basa en la capacidad de los enlaces de anclaje para señalar elementos que están inicialmente ocultos en la página. Una vez segmentado, el CSS cambia su `display` para que se muestren.
 
-> **Nota:** Un CSS-Puro lightbox más completo basado en la pseudoclase `:target` está [disponible en GitHub](https://github.com/madmurphy/takefive.css/) ([demo](https://madmurphy.github.io/takefive.css/)).
+> [!NOTE]
+> Un CSS-Puro lightbox más completo basado en la pseudoclase `:target` está [disponible en GitHub](https://github.com/madmurphy/takefive.css/) ([demo](https://madmurphy.github.io/takefive.css/)).
 
 #### HTML
 

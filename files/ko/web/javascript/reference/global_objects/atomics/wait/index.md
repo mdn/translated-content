@@ -11,7 +11,8 @@ l10n:
 여전히 포함되어 있는지 확인합니다. 만약 그러하다면 잠자기 상태로 있으면서 깨우기(wake-up) 알림을 기다리거나 시간이 만료됩니다.
 이 함수는 `"ok"`, `"not-equal"` 또는 `"timed-out"` 문자열을 반환합니다.
 
-> **Note:** 이 연산은 공유 {{jsxref("Int32Array")}} 또는 {{jsxref("BigInt64Array")}}에서만
+> [!NOTE]
+> 이 연산은 공유 {{jsxref("Int32Array")}} 또는 {{jsxref("BigInt64Array")}}에서만
 > 작동하며 메인 스레드에서는 허용되지 않을 수 있습니다.
 > 이 메서드의 비차단, 비동기 버전에 대해서는 {{jsxref("Atomics.waitAsync()")}}를 참조하세요.
 

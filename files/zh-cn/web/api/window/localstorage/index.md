@@ -53,7 +53,8 @@ localStorage.removeItem("myCat");
 localStorage.clear();
 ```
 
-> **备注：** 请参考 [Using the Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 的完整示例文章。
+> [!NOTE]
+> 请参考 [Using the Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 的完整示例文章。
 
 ## 规范
 

@@ -37,7 +37,8 @@ Pour distribuer du contenu audio et vidéo, le processus général se déroule c
 
 Le code ci-dessus va créer un lecteur audio qui tente de précharger autant d'audio que possible pour une lecture fluide.
 
-> **Note :** l'attribut `preload` peut être ignoré par certains navigateurs mobiles.
+> [!NOTE]
+> L'attribut `preload` peut être ignoré par certains navigateurs mobiles.
 
 Pour plus d'informations voir [Les bases de l'audio multi-navigateur (Audio HTML5 en détails)](/fr/docs/Web/Apps/Build/Manipulating_media/Cross-browser_audio_basics#html5_audio_in_detail)
 
@@ -71,7 +72,8 @@ Pour plus d'informations voir [Les bases de l'audio multi-navigateur (Audio HTML
 
 Le code ci-dessus crée un lecteur vidéo de dimensions 640x480 pixels, affichant une vignette jusqu'à ce que la vidéo soit lue. On demande à la vidéo de passer en `autoplay` (jouer automatiquement) mais d'être `muted` (en sourdine) par défaut.
 
-> **Note :** l'attribut `autoplay` peut être ignoré par certains navigateurs mobiles et est sujet à controverse lorsqu'il est utilisé à mauvais escient. Il est recommandé de lire [le guide à ce sujet](/fr/docs/Web/Media/Autoplay_guide) pour savoir comment l'utiliser pertinemment.
+> [!NOTE]
+> L'attribut `autoplay` peut être ignoré par certains navigateurs mobiles et est sujet à controverse lorsqu'il est utilisé à mauvais escient. Il est recommandé de lire [le guide à ce sujet](/fr/docs/Web/Media/Autoplay_guide) pour savoir comment l'utiliser pertinemment.
 
 Pour plus d'informations voir [l'article de référence sur l'élément `<video>`](/fr/docs/Web/HTML/Element/video) et [la page sur la création d'un lecteur vidéo multi-navigateur](/fr/docs/Web/Apps/Build/Manipulating_media/cross_browser_video_player).
 
@@ -238,7 +240,8 @@ De nouveaux formats et protocoles ont été (et sont encore) deployés pour faci
 
 Les principaux encodages utilisés pour le streaming adaptatif sont [HLS](/fr/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video#hls) et [MPEG-DASH](/fr/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video#mpeg-dash). MSE a été conçu avec DASH en tête, il définit les flux d'octets selon [ISOBMFF](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html) et [M2TS](https://en.wikipedia.org/wiki/M2ts) (deux formats pris en charge par DASH, le dernier étant également pris en charge par HLS). DASH est probablement la meilleure option en termes de compatibilité, standard et flexibilité.
 
-> **Note :** actuellement, Safari ne prend pas en charge DASH, cependant dash.js marche sur les nouvelles versions de Safari prévues pour être publiées avec OSX Yosemite.
+> [!NOTE]
+> Actuellement, Safari ne prend pas en charge DASH, cependant dash.js marche sur les nouvelles versions de Safari prévues pour être publiées avec OSX Yosemite.
 
 DASH fournit également un certain nombre de profils, y compris des profils _à la demande_ simples, sans pré-traitement ni séparation des fichiers multimédia. Il existe un certain nombre de services en ligne qui vous permettront de convertir vos média en HLS ou DASH.
 

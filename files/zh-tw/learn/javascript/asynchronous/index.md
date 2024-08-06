@@ -7,7 +7,7 @@ slug: Learn/JavaScript/Asynchronous
 
 在本單元我們來討論非同步的（ {{Glossary("asynchronous")}} ） {{Glossary("JavaScript")}} ，為何其如此重要，並了解它如何有效率的處理像是從伺服器獲取資源的這類潛在性阻塞（ blocking ）操作
 
-> **標註：**
+> [!CALLOUT]
 >
 > #### 想要成為前端開發人員?
 >
@@ -21,7 +21,8 @@ slug: Learn/JavaScript/Asynchronous
 
 如果你對非同步程式設計的概念還不太熟悉，強烈建議你應該先從[非同步程式設計通用概念](/zh-TW/docs/Learn/JavaScript/Asynchronous/Introducing)的文章開始學習。如果你已經具備其概念，那麼你或許可以跳至[非同步的 JavaScript 介紹](/zh-TW/docs/Learn/JavaScript/Asynchronous/Introducing)單元開始。
 
-> **備註：** 如果你正在使用電腦／平板／任何其它無法讓你建立檔案的裝置上，你可以嘗試在 [JSBin](https://jsbin.com/) 或是 [Glitch](https://glitch.com) 上測試本單元的範例程式碼。
+> [!NOTE]
+> 如果你正在使用電腦／平板／任何其它無法讓你建立檔案的裝置上，你可以嘗試在 [JSBin](https://jsbin.com/) 或是 [Glitch](https://glitch.com) 上測試本單元的範例程式碼。
 
 ## 指南
 

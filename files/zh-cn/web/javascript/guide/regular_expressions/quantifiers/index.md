@@ -13,7 +13,8 @@ l10n:
 
 ## 类型
 
-> **备注：** 在下文中，*项*不仅指单个字符，还包括[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)、[组和反向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)。
+> [!NOTE]
+> 在下文中，*项*不仅指单个字符，还包括[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)、[组和反向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)。
 
 <table class="standard-table">
   <thead>

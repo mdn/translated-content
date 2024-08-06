@@ -26,7 +26,8 @@ Este tipo representa un atributo de un elemento DOM como un objeto. En muchos mÃ
 - {{domxref("Attr.value", "value")}}
   - : El valor del atributo.
 
-> **Nota:** DOM Level 3 defined `namespaceURI`, `localName` and `prefix` on the {{domxref("Node")}} interface. In DOM4 they were moved to `Attr`.
+> [!NOTE]
+> DOM Level 3 defined `namespaceURI`, `localName` and `prefix` on the {{domxref("Node")}} interface. In DOM4 they were moved to `Attr`.
 >
 > This change is implemented in Chrome since version 46.0 and Firefox since version 48.0.
 

@@ -15,7 +15,8 @@ Cancela la petición de animación previamente programada a través de {{domxref
 window.cancelAnimationFrame(requestID);
 ```
 
-> **Nota:** Antes de Firefox 23, la función es independiente del proveedor con el prefijo `window.mozCancelAnimationFrame()`. Consulte la tabla de compatibilidad, a continuación, para otras implementaciones de navegador.
+> [!NOTE]
+> Antes de Firefox 23, la función es independiente del proveedor con el prefijo `window.mozCancelAnimationFrame()`. Consulte la tabla de compatibilidad, a continuación, para otras implementaciones de navegador.
 
 ### Parámetros
 

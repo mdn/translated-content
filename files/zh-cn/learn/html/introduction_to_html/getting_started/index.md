@@ -42,7 +42,8 @@ My cat is very grumpy
 <p>My cat is very grumpy</p>
 ```
 
-> **备注：** HTML 标签不区分大小写。也就是说，输入标签时既可以使用大写字母也可以使用小写字母。例如，标签 {{htmlelement("title")}} 可以写作 `<title>`、`<TITLE>`、`<Title>`、`<TiTlE>` 等，也都可以正常工作。不过，从一致性、可读性来说，最好仅使用小写字母。
+> [!NOTE]
+> HTML 标签不区分大小写。也就是说，输入标签时既可以使用大写字母也可以使用小写字母。例如，标签 {{htmlelement("title")}} 可以写作 `<title>`、`<TITLE>`、`<Title>`、`<TiTlE>` 等，也都可以正常工作。不过，从一致性、可读性来说，最好仅使用小写字母。
 
 ## 剖析一个 HTML 元素
 
@@ -226,11 +227,14 @@ textarea.onkeyup = () => {
 
 {{ EmbedLiveSample('块级元素和内联元素', 700, 200, "", "") }}
 
-> **备注：** HTML5 重新定义了元素的类别：见[元素内容分类](https://html.spec.whatwg.org/multipage/indices.html#element-content-categories)。尽管这些新的定义更精确，但却比上述的“块级元素”和“内联元素”更难理解，因此在之后的讨论中仍使用旧的定义。
+> [!NOTE]
+> HTML5 重新定义了元素的类别：见[元素内容分类](https://html.spec.whatwg.org/multipage/indices.html#element-content-categories)。尽管这些新的定义更精确，但却比上述的“块级元素”和“内联元素”更难理解，因此在之后的讨论中仍使用旧的定义。
 
-> **备注：** 在这篇文章中提到的“块”和“内联”，不应该与 [CSS 盒子的类型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#块级盒子（block_box）_和_内联盒子（inline_box）)中的同名术语相混淆。尽管它们默认是相关的，但改变 CSS 显示类型并不会改变元素的分类，也不会影响它可以包含和被包含于哪些元素。防止这种混淆也是 HTML5 摒弃这些术语的原因之一。
+> [!NOTE]
+> 在这篇文章中提到的“块”和“内联”，不应该与 [CSS 盒子的类型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#块级盒子（block_box）_和_内联盒子（inline_box）)中的同名术语相混淆。尽管它们默认是相关的，但改变 CSS 显示类型并不会改变元素的分类，也不会影响它可以包含和被包含于哪些元素。防止这种混淆也是 HTML5 摒弃这些术语的原因之一。
 
-> **备注：** 你可以查阅包含了块级元素和内联元素列表的参考页面。参见[块级元素](/zh-CN/docs/Glossary/Block-level_content)和[内联元素](/zh-CN/docs/Glossary/Inline-level_content)页面。
+> [!NOTE]
+> 你可以查阅包含了块级元素和内联元素列表的参考页面。参见[块级元素](/zh-CN/docs/Glossary/Block-level_content)和[内联元素](/zh-CN/docs/Glossary/Inline-level_content)页面。
 
 ### 空元素
 
@@ -246,7 +250,8 @@ textarea.onkeyup = () => {
 
 {{ EmbedLiveSample('空元素', 700, 300, "", "") }}
 
-> **备注：** HTML 中，无需在一个空元素的标签末尾添加 `/`，例如 `<img src="images/cat.jpg" alt="cat" />`。然而，这也是一种有效的语法，当你希望你的 HTML 是有效的 XML 时，这么做也没问题。
+> [!NOTE]
+> HTML 中，无需在一个空元素的标签末尾添加 `/`，例如 `<img src="images/cat.jpg" alt="cat" />`。然而，这也是一种有效的语法，当你希望你的 HTML 是有效的 XML 时，这么做也没问题。
 
 ## 属性
 
@@ -529,7 +534,8 @@ textarea.onkeyup = () => {
 3. 粘贴代码到这个文件。
 4. 保存为 `index.html`。
 
-> **备注：** 可在 [MDN 学习区代码仓库](https://github.com/roy-tian/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) 上查看该示例。
+> [!NOTE]
+> 可在 [MDN 学习区代码仓库](https://github.com/roy-tian/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) 上查看该示例。
 
 你可以打开浏览器看看这段代码的效果是什么样的，然后改变代码刷新浏览器看看新的结果。最开始的代码是这样的效果：
 
@@ -724,7 +730,8 @@ textarea.onkeyup = () => {
 
 {{ EmbedLiveSample('实体引用：在 HTML 中包含特殊字符', 700, 200) }}
 
-> **备注：** 不需要为任何其他符号使用实体引用，因为只要你的 HTML 的[字符编码设置为 UTF-8](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_documents_character_encoding)，现代浏览器就能很好地处理实际符号。
+> [!NOTE]
+> 不需要为任何其他符号使用实体引用，因为只要你的 HTML 的[字符编码设置为 UTF-8](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_documents_character_encoding)，现代浏览器就能很好地处理实际符号。
 
 ## HTML 注释
 
@@ -748,7 +755,8 @@ HTML 拥有在代码中写注释的机制。浏览器会忽略注释，有效地
 
 在这里你应该可以理解 HTML 语言的全貌和基本的工作原理。你应该还学会了一些元素和属性的使用。在这个模块的后续文章中，我们会深入一些你已经见过的东西的细节，并且展示语言的一些其他概念。
 
-> **备注：** 当你开始学习更多的 HTML 知识时，可能也想了解一些层叠样式列表（[CSS](/zh-CN/docs/Learn/CSS)）的基础知识。CSS 是一种用来设计网页样式的语言（比如，用它改变字体、颜色或页面布局等）。你很快就会发现，HTML 和 CSS 能很好地协调配合。
+> [!NOTE]
+> 当你开始学习更多的 HTML 知识时，可能也想了解一些层叠样式列表（[CSS](/zh-CN/docs/Learn/CSS)）的基础知识。CSS 是一种用来设计网页样式的语言（比如，用它改变字体、颜色或页面布局等）。你很快就会发现，HTML 和 CSS 能很好地协调配合。
 
 ## 参见
 

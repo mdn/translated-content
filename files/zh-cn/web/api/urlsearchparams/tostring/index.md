@@ -9,7 +9,8 @@ l10n:
 
 {{domxref("URLSearchParams")}} 接口的 **`toString()`** 方法返回适用于 URL 中的查询字符串。
 
-> **备注：** 方法返回不带问号的查询字符串。这与 [`Location.search`](/zh-CN/docs/Web/API/Location/search)、[`HTMLAnchorElement.search`](/zh-CN/docs/Web/API/HTMLAnchorElement/search) 和 [`URL.search`](/zh-CN/docs/Web/API/URL/search) 都不同，它们均带有问号。
+> [!NOTE]
+> 方法返回不带问号的查询字符串。这与 [`Location.search`](/zh-CN/docs/Web/API/Location/search)、[`HTMLAnchorElement.search`](/zh-CN/docs/Web/API/HTMLAnchorElement/search) 和 [`URL.search`](/zh-CN/docs/Web/API/URL/search) 都不同，它们均带有问号。
 
 ## 语法
 

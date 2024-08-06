@@ -99,7 +99,8 @@ Puedes comparar tu código con este:
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/mvfkcydz/","","320")}}
 
-> **Nota:** añade más puntos por ladrillo y muestra el contador cuando salga el alert() del final del juego con victoria.
+> [!NOTE]
+> Añade más puntos por ladrillo y muestra el contador cuando salga el alert() del final del juego con victoria.
 
 ## Pasos siguientes
 

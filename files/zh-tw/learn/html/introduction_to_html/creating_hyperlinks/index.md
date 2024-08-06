@@ -35,7 +35,8 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 超連結可說是網路中最令人振奮的革新技術。當然啦，早在網路技術萌芽之初，它們就已經在那了，它們正是網路之所以被稱為「網路」的最大原因 — 它讓我們的文件能任意地與其他文件(或者資源)相互連結（或是連結文件中的特定部份），讓我們能透過一個簡單的網路位址來經營我們的網路應用（相較之下，本機應用(native apps)就必須要安裝在主機上才能使用）。幾乎所有的網路內容都能被轉換成一個連結，讓網路瀏覽器在這些連結被點擊或觸發之後，跳轉到該網路位址({{glossary("URL")}})上。
 
-> **備註：** URL 能夠指向 HTML 檔案、純文字檔案、圖片、文字文件、影音檔案等等可存在網路上的東西。如果網路瀏覽器不知道如何顯示或者處理該檔案的話，它會問你想要開啟這個檔案（將檔案交由本機應用來處理）還是要下載該檔案（意即你可以待會兒再處理）。
+> [!NOTE]
+> URL 能夠指向 HTML 檔案、純文字檔案、圖片、文字文件、影音檔案等等可存在網路上的東西。如果網路瀏覽器不知道如何顯示或者處理該檔案的話，它會問你想要開啟這個檔案（將檔案交由本機應用來處理）還是要下載該檔案（意即你可以待會兒再處理）。
 
 以 BBC 的主頁為例，裡面就包含了非常多的連結，各自連到不同新聞、網站的其它地方(導覽功能)，或者登入/註冊頁面等等。
 
@@ -76,7 +77,8 @@ I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
 
 I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
 
-> **備註：** 連結標題只有在游標停在連結上方時才會出現，也就是說那些只依賴鍵盤來瀏覽網頁的人將會很難看到這個訊息，因此，如果說標題資訊對網頁易用性(usability)有著重大影響的話，你應該把它放在大家都看得到的地方，比方說放在一般的文字元素裡。
+> [!NOTE]
+> 連結標題只有在游標停在連結上方時才會出現，也就是說那些只依賴鍵盤來瀏覽網頁的人將會很難看到這個訊息，因此，如果說標題資訊對網頁易用性(usability)有著重大影響的話，你應該把它放在大家都看得到的地方，比方說放在一般的文字元素裡。
 
 ### 不要只用看的：建立你自己的範例連結
 
@@ -98,7 +100,8 @@ I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
 </a>
 ```
 
-> **備註：** 在往後的教學中，你還會學到更多的圖片使用技法。
+> [!NOTE]
+> 在往後的教學中，你還會學到更多的圖片使用技法。
 
 ## 快速理解 URL 和路徑
 
@@ -135,7 +138,8 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
   <p>A link to my <a href="../pdfs/project-brief.pdf">project brief</a>.</p>
   ```
 
-> **備註：** 你可以將多個這種語法組成一個較為複雜的 URL，例如：`../../../complex/path/to/my/file.html`。
+> [!NOTE]
+> 你可以將多個這種語法組成一個較為複雜的 URL，例如：`../../../complex/path/to/my/file.html`。
 
 ### 文件片段 (Document fragments)
 
@@ -276,7 +280,8 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 
 ![An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items](navigation-example.png)
 
-> **備註：** 如果你卡住了，或者不確定有沒有做對，你可以到 [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up) 目錄來偷瞄答案。
+> [!NOTE]
+> 如果你卡住了，或者不確定有沒有做對，你可以到 [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up) 目錄來偷瞄答案。
 
 ## E-mail 連結
 
@@ -305,7 +310,8 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 </a>
 ```
 
-> **備註：** 每一個欄位的值必須以 URL 編碼，也就是將空白及不可印字元(不可見的字元如縮排(tabs)、回車(carriage return)、換頁(page breaks)等等)轉換成[百分號編碼](http://en.wikipedia.org/wiki/Percent-encoding)。也請注意這裡使用問號(`?`)來分隔主要 URL 和其他欄位；以 & 來分隔 `mailto:` URL 中的不同的欄位，這是標準的 URL 查詢記號(query notation)。你可以閱讀 [GET 方法](/zh-TW/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method)來得知有那些常用的查詢記號。
+> [!NOTE]
+> 每一個欄位的值必須以 URL 編碼，也就是將空白及不可印字元(不可見的字元如縮排(tabs)、回車(carriage return)、換頁(page breaks)等等)轉換成[百分號編碼](http://en.wikipedia.org/wiki/Percent-encoding)。也請注意這裡使用問號(`?`)來分隔主要 URL 和其他欄位；以 & 來分隔 `mailto:` URL 中的不同的欄位，這是標準的 URL 查詢記號(query notation)。你可以閱讀 [GET 方法](/zh-TW/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method)來得知有那些常用的查詢記號。
 
 以下是 `mailto` URL 的其他例子：
 

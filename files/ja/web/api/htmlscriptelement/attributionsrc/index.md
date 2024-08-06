@@ -12,7 +12,8 @@ l10n:
 
 サーバー側では、これはレスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} または {{httpheader("Attribution-Reporting-Register-Trigger")}} ヘッダーを送信するトリガーとして用いられ、それぞれ JavaScript ベースの[属性ソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources)または[属性トリガー](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers)を登録します。どのレスポンスヘッダーを送り返すべきかは、登録を行った `Attribution-Reporting-Eligible` ヘッダーの値に依存します。
 
-> **メモ:** 他にも、JavaScript の属性ソースまたはトリガーは、{{domxref("fetch()")}} リクエストに `attributionReporting` オプションをつけて送信するか（`fetch()` 呼び出しで直接設定するか、`fetch()` 呼び出しに渡された {{domxref("Request")}} オブジェクトで）、{{domxref("XMLHttpRequest")}} で {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} をリクエストオブジェクトについて呼び出したりすることもできます。
+> [!NOTE]
+> 他にも、JavaScript の属性ソースまたはトリガーは、{{domxref("fetch()")}} リクエストに `attributionReporting` オプションをつけて送信するか（`fetch()` 呼び出しで直接設定するか、`fetch()` 呼び出しに渡された {{domxref("Request")}} オブジェクトで）、{{domxref("XMLHttpRequest")}} で {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} をリクエストオブジェクトについて呼び出したりすることもできます。
 
 詳細は[属性レポート API](/ja/docs/Web/API/Attribution_Reporting_API) です。
 
@@ -30,7 +31,8 @@ l10n:
 
   これは、リクエストされたリソースがあなたが制御しているサーバーにない場合や、属性ソースを別のサーバーに登録する処理だけを行いたい場合に有益です。この場合、`attributionSrc` の値として 1 つ以上の URL を指定します。リソースリクエストが発生すると、{{httpheader("Attribution-Reporting-Eligible")}} ヘッダーがリソースオリジンに加えて、`attributionSrc` を指定した URL にも送信されます。これらの URL は {{httpheader("Attribution-Reporting-Register-Source")}} または {{httpheader("Attribution-Reporting-Register-Trigger")}} ヘッダーで応答することができます。
 
-  > **メモ:** 複数の URL を指定するということは、複数の属性ソースを同じ機能に登録できるということです。例えば、成功を測定しようとしている様々なキャンペーンがあり、異なるデータで異なるレポートを生成する必要があるかもしれません。
+  > [!NOTE]
+  > 複数の URL を指定するということは、複数の属性ソースを同じ機能に登録できるということです。例えば、成功を測定しようとしている様々なキャンペーンがあり、異なるデータで異なるレポートを生成する必要があるかもしれません。
 
 ## 例
 

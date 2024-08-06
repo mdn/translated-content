@@ -66,7 +66,8 @@ l10n:
 
 [表单样式化进阶](/zh-CN/docs/Learn/Forms/Advanced_form_styling)和[如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)两篇文章介绍了如何设置这些样式。
 
-> **备注：** 一些专有的 CSS 伪元素（如 {{cssxref('::-moz-range-track')}}）可以为此类内部组件设计样式，但它们在不同浏览器之间并不一致，因此并不十分可靠。我们稍后会提到。
+> [!NOTE]
+> 一些专有的 CSS 伪元素（如 {{cssxref('::-moz-range-track')}}）可以为此类内部组件设计样式，但它们在不同浏览器之间并不一致，因此并不十分可靠。我们稍后会提到。
 
 ## 对简单的表单微件进行样式设计
 
@@ -148,7 +149,8 @@ legend {
 
 {{HTMLElement("legend")}} 元素对于无障碍辅助功能非常重要，它将作为字段集内每个表单元素标签的一部分被辅助技术识别，但使用类似上述的技术也没有问题。图例内容仍将以相同的方式显示，只是视觉位置发生了变化。
 
-> **备注：** 也可以使用 {{cssxref("transform")}} 属性来辅助定位 `<legend>`。但是，当使用 `transform: translateY();` 等属性定位时，它虽然移动了，但却在 `<fieldset>` 边框中留下了一个难看的缺口，而且很难消除。
+> [!NOTE]
+> 也可以使用 {{cssxref("transform")}} 属性来辅助定位 `<legend>`。但是，当使用 `transform: translateY();` 等属性定位时，它虽然移动了，但却在 `<fieldset>` 边框中留下了一个难看的缺口，而且很难消除。
 
 ## 一个具体的样式设计示例
 
@@ -366,7 +368,8 @@ button:focus {
 
 ![如上所述应用所有样式和调整后表单的最终外观和布局](updated-form-screenshot.jpg)
 
-> **备注：** 如果你的示例没有像你预期的那样工作，你想将它同我们的版本检查对比，你可以在 Github 上找到它——查看[在线演示](https://mdn.github.io/learning-area/html/forms/postcard-example/)（也可以查看[源代码](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)）。
+> [!NOTE]
+> 如果你的示例没有像你预期的那样工作，你想将它同我们的版本检查对比，你可以在 Github 上找到它——查看[在线演示](https://mdn.github.io/learning-area/html/forms/postcard-example/)（也可以查看[源代码](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)）。
 
 ## 技能测试
 

@@ -142,7 +142,8 @@ new TypedArray(buffer, byteOffset, length)
 
 其中，`TypedArray` 是一个具体的构造函数。
 
-> **备注：** 所有 `TypedArray` 子类的构造函数只能使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构造。试图在没有 `new` 的情况下调用，会抛出 {{jsxref("TypeError")}}。
+> [!NOTE]
+> 所有 `TypedArray` 子类的构造函数只能使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构造。试图在没有 `new` 的情况下调用，会抛出 {{jsxref("TypeError")}}。
 
 ### 参数
 

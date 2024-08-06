@@ -15,7 +15,8 @@ Le mode strict apporte quelques changements à la sémantique « normale » de J
 
 Voir la page [Passer au mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode/Passer_au_mode_strict) pour plus de détails quant à la migration d'une base de code non-stricte vers une base de code compatible avec le mode strict.
 
-> **Note :** Le mode non strict (celui actif par défaut) est parfois appelé « _sloppy mode_ » en anglais. Bien que ce ne soit pas la dénomination officielle, on la rencontre occasionnellement.
+> [!NOTE]
+> Le mode non strict (celui actif par défaut) est parfois appelé « _sloppy mode_ » en anglais. Bien que ce ne soit pas la dénomination officielle, on la rencontre occasionnellement.
 
 ## Invoquer le mode strict
 
@@ -122,7 +123,8 @@ Quatrièmement, le mode strict, avant Gecko 34, requiert que toutes les proprié
 var o = { p: 1, p: 2 }; // !!! erreur de syntaxe
 ```
 
-> **Note :** Cela n'est plus le cas avec ECMAScript 2015 ([bug Firefox 1041128](https://bugzil.la/1041128)).
+> [!NOTE]
+> Cela n'est plus le cas avec ECMAScript 2015 ([bug Firefox 1041128](https://bugzil.la/1041128)).
 
 Cinquièmement, le mode strict requiert que les noms de paramètres de fonction soient uniques. En mode non-strict, le dernier argument dupliqué cache les arguments précédents ayant le même nom. Ces arguments précédents demeurent disponibles via `arguments[i]`, ils ne sont donc pas complètement inaccessibles. Pourtant, cette cachette n'a guère de sens et n'est probablement pas souhaitable (cela pourrait cacher une faute de frappe, par exemple). Donc en mode strict, les doublons de noms d'arguments sont une erreur de syntaxe :
 

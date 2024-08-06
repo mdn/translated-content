@@ -20,7 +20,8 @@ input:read-only {
 }
 ```
 
-> **备注：** 这个选择器不只是选择具有 [`readonly`](/zh-CN/docs/Web/HTML/Element/input#readonly) 属性的{{htmlElement("input")}} 元素，它也会选择所有的不能被用户编辑的元素。
+> [!NOTE]
+> 这个选择器不只是选择具有 [`readonly`](/zh-CN/docs/Web/HTML/Element/input#readonly) 属性的{{htmlElement("input")}} 元素，它也会选择所有的不能被用户编辑的元素。
 
 ## 语法
 

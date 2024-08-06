@@ -10,7 +10,8 @@ l10n:
 
 `upY` は {{ domxref("AudioListener") }} インターフェイスの読み取り専用プロパティで、聞き手が向いている上方向を定義する方向ベクトルの y 値を表す {{domxref("AudioParam")}} です。
 
-> **メモ:** この引数は {{domxref("PannerNode")}} の {{domxref("PannerNode.panningModel", "panningModel")}} が equalpower に設定されているものと一緒に使用された場合は _a-rate_、そうでない場合は _k-rate_ となります。
+> [!NOTE]
+> この引数は {{domxref("PannerNode")}} の {{domxref("PannerNode.panningModel", "panningModel")}} が equalpower に設定されているものと一緒に使用された場合は _a-rate_、そうでない場合は _k-rate_ となります。
 
 ## 値
 

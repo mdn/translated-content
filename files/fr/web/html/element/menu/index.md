@@ -21,7 +21,8 @@ Les éléments `<menu>` et [`<ul>`](/fr/docs/Web/HTML/Element/ul) représentent 
 
 L'élément connexe [`<menuitem>`](/fr/docs/Web/HTML/Element/menuitem) a été déprécié.
 
-> **Note :** Dans d'anciennes versions de la spécification HTML, l'élément `<menu>` pouvait être utilisé pour représenter un menu contextuel. Cette fonctionnalité est désormais considérée comme obsolète et ne fait plus partie de la spécification.
+> [!NOTE]
+> Dans d'anciennes versions de la spécification HTML, l'élément `<menu>` pouvait être utilisé pour représenter un menu contextuel. Cette fonctionnalité est désormais considérée comme obsolète et ne fait plus partie de la spécification.
 
 ## Exemples
 
