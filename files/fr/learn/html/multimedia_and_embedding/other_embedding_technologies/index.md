@@ -234,7 +234,8 @@ Cet exemple inclut les éléments de base essentiels nécessaires à l'utilisati
 - [`sandbox`](/fr/docs/Web/HTML/Element/iframe#sandbox)
   - : Cet attribut n'est fonctionnel que dans des explorateurs un peu plus récents, contrairement aux autres attributs de `<iframe>` (par ex. IE 10 et au‑delà). Il requiert des paramètres de sécurité renforcés&nbsp;; nous vous en disons plus dans le paragraphe suivant.
 
-> **Note :** Afin d'améliorer la vitesse, il est pertinent de définir l'attribut `src` de `iframe` avec JavaScript après que le chargement du contenu principal est effectué. La page est utilisable plus tôt et le temps de chargement officiel de la page est diminué (une métrique {{glossary("SEO")}} importante).
+> [!NOTE]
+> Afin d'améliorer la vitesse, il est pertinent de définir l'attribut `src` de `iframe` avec JavaScript après que le chargement du contenu principal est effectué. La page est utilisable plus tôt et le temps de chargement officiel de la page est diminué (une métrique {{glossary("SEO")}} importante).
 
 ### Problèmes de sécurité
 
@@ -242,7 +243,8 @@ Nous avons dit plus haut qu'il y avait des problèmes en matière de sécurité 
 
 Fabricants de navigateurs et développeurs Web ont appris à la dure que `<iframe>` constitue sur le Web une cible commune (terme officiel : un **vecteur d'attaque**) pour des personnes mal intentionnées. `<iframe>` est une porte d'entrée pour les attaques de ces personnes quand ils essaient de modifier malicieusement une page Web ou d'amener des utilisateurs à faire quelque chose qu'ils ne voudraient pas faire, comme révéler des informations confidentielles comme noms d'utilisateur et mots de passe. Pour cette raison, les ingénieurs spécialistes et les développeurs de navigateurs ont développé divers mécanismes de sécurité pour rendre `<iframe>` plus sûr. De meilleures pratiques sont aussi à prendre en compte — nous allons développer certaines d'entre elles ci-dessous.
 
-> **Note :** Le [détournement de clic](https://fr.wikipedia.org/wiki/Détournement_de_clic) est un type d'attaque courant par l'intermédiaire de `<iframe>`&nbsp;: les hackeurs incorporent un `<iframe>` invisible dans votre document (ou intégrent votre document dans leur propre site malveillant) et s'en servent pour capturer les interactions utilisateur. C'est un moyen courant pour tromper des utilisateurs ou voler leurs données confidentielles.
+> [!NOTE]
+> Le [détournement de clic](https://fr.wikipedia.org/wiki/Détournement_de_clic) est un type d'attaque courant par l'intermédiaire de `<iframe>`&nbsp;: les hackeurs incorporent un `<iframe>` invisible dans votre document (ou intégrent votre document dans leur propre site malveillant) et s'en servent pour capturer les interactions utilisateur. C'est un moyen courant pour tromper des utilisateurs ou voler leurs données confidentielles.
 
 Un exemple rapide d'abord - essayez de charger l'exemple précédent que nous avons montré ci-dessus dans votre navigateur - vous pouvez le [trouver en direct sur Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) (voyez le [code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) aussi). Vous ne verrez rien d'affiché sur la page, et si vous regardez la _Console_ dans les [outils de développement](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) du navigateur, vous verrez un message vous disant pourquoi. Dans Firefox, ce message indique _Load denied by X-Frame-Options: "https://developer.mozilla.org/fr/docs/Glossary" does not permit framing_ (_Chargement interdit par X-Frame-Options: "https://developer.mozilla.org/fr/docs/Glossary" ne permet pas la mise en cadre_) . C'est parce que les développeurs qui ont construit MDN ont inclus un paramètre sur le serveur des pages du site empêchant l'intégration de ces pages sur un autre site avec `<iframe>` (voir [Configurer les directives CSP](#configurer_les_directives_csp), ci-dessous). Parfaitement sensé — il n'y a aucune raison d'intégrer une page entière de MDN dans d'autres pages, sauf à vouloir les intégrer dans votre site et les prétendre vôtres, ou bien tenter de voler des données par l'intermédiaire d'un détournement de clic, actions qui sont tous les deux des malhonnêtetés. De plus, si tout le monde se mettait à faire cela, toute la bande passante supplémentaire nécessaire commencerait à coûter un paquet d'argent à Mozilla.
 
@@ -273,19 +275,22 @@ Un contenu en dehors du «&nbsp;bac à sable&nbsp;» peut faire beaucoup trop de
 
 Si c'est absolument nécessaire, vous pouvez ajouter des permissions une à une (en tant que valeur de l'attribut `sandbox=""`) — voir l'entrée de référence [sandbox](/fr/docs/Web/HTML/Element/iframe#sandbox) pour toutes les options disponibles. Il est important de noter que vous ne devez _jamais_ mettre à la fois les valeurs `allow-scripts` et `allow-same-origin` aux attributs de la «&nbsp;sandbox&nbsp;» — dans ce cas,, le contenu intégré pourrait contourner la politique de sécurité originelle qui empêche les sites d'exécuter des scripts et donc utiliser JavaScript pour désactiver complètement le «&nbsp;bac à sable&nbsp;».
 
-> **Note :** Mettre le code dans le «&nbsp;bac à sable&nbsp;» n'offre aucune protection si les attaquants peuvent tromper les gens pour qu'ils visitent directement du contenu malveillant (en dehors d'un `<iframe>`). S'il y a la moindre chance que certain contenu soit malveillant (par exemple, du contenu d'utilisateur inconnu), veuillez le servir vers votre site principal à partir d'un autre {{glossary("domaine")}}.
+> [!NOTE]
+> Mettre le code dans le «&nbsp;bac à sable&nbsp;» n'offre aucune protection si les attaquants peuvent tromper les gens pour qu'ils visitent directement du contenu malveillant (en dehors d'un `<iframe>`). S'il y a la moindre chance que certain contenu soit malveillant (par exemple, du contenu d'utilisateur inconnu), veuillez le servir vers votre site principal à partir d'un autre {{glossary("domaine")}}.
 
 #### Configurer les directives CSP
 
 {{Glossary("CSP")}} est un acronyme pour «&nbsp;**[content security policy](/fr/docs/Web/Security/CSP)** » (politique de sécurité du contenu)&nbsp;; les directives CSP fournissent un [ensemble d'en‑têtes HTTP](/fr/docs/Web/Security/CSP/CSP_policy_directives) (métadonnées adressées en même temps que les pages Web quand elles sont diffusées à partir d'un serveur web) conçues pour améliorer la sécurité des documents HTML. Quand elles sont destinées à sécuriser les `<iframe>`, vous pouvez _[configurer votre serveur pour qu'il adresse une en‑tête appropriée `X-Frame-Options`](/fr/docs/Web/HTTP/X-Frame-Options)._ Elle empêchera d'autres sites Web d'intégrer votre contenu dans leurs pages (ce qui pourrait permettre le [détournement de clic](https://fr.wikipedia.org/wiki/Détournement_de_clic) ou accueillir d'autres attaques)&nbsp;; c'est exactement ce que les développeurs de MDN ont fait, comme nous l'avons vu plus haut.
 
-> **Note :** Lisez le post de Frederik Braun sur [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) pour plus d'informations sur le fond de ce sujet. Manifestement, une explication complète est hors des limites de cet article.
+> [!NOTE]
+> Lisez le post de Frederik Braun sur [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) pour plus d'informations sur le fond de ce sujet. Manifestement, une explication complète est hors des limites de cet article.
 
 ## Les éléments \<embed> et \<object>
 
 Les éléments {{htmlelement("embed")}} et {{htmlelement("object")}} ont une fonction différente de {{htmlelement("iframe")}} — ces éléments sont des outils d'intégration à caractère général pour importer plusieurs types de contenu externe&nbsp;; cela comprend des technologies de greffons comme Java Applets ou Flash, PDF (affichable dans le navigateur avec un greffon PDF) et même du contenu comme des vidéos, du SVG ou des images&nbsp;!
 
-> **Note :** Un **greffon** est un logiciel qui permet d'avoir accès à des contenus que le navigateur n'est pas capable de lire de manière native.
+> [!NOTE]
+> Un **greffon** est un logiciel qui permet d'avoir accès à des contenus que le navigateur n'est pas capable de lire de manière native.
 
 Cependant, il est peu probable que vous utilisiez beaucoup ces éléments — les applets ne sont plus utilisés depuis des années, Flash n'est plus très apprécié pour un certain nombre de raisons (voir [Le cas «&nbsp;greffons&nbsp;»](#le_cas_«_greffons_»), ci-dessous), les PDF ont tendance à être plutôt liés qu'intégrés, et les autres contenus tels que les images et la vidéo disposent d'éléments d'intégration beaucoup plus faciles à manipuler. Les greffons et ces méthodes d'intégration sont assurément une technique traditionnelle héritée&nbsp;: nous les mentionnons principalement au cas où vous les rencontreriez dans certaines circonstances, comme des intranets ou des projets d'entreprise.
 

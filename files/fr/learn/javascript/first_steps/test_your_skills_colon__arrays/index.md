@@ -7,11 +7,13 @@ slug: Learn/JavaScript/First_steps/Test_your_skills:_Arrays
 
 L'objectif de ce test est d'évaluer votre compréhension [de l'article sur les tableaux en JavaScript (_arrays_)](/fr/docs/Learn/JavaScript/First_steps/Arrays).
 
-> **Note :** Vous pouvez essayer vos solutions dans les éditeurs interactifs qui suivent. Toutefois, il peut aussi être utile de télécharger le code et d'utiliser un outil en ligne comme [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) afin de travailler sur ces tâches.
+> [!NOTE]
+> Vous pouvez essayer vos solutions dans les éditeurs interactifs qui suivent. Toutefois, il peut aussi être utile de télécharger le code et d'utiliser un outil en ligne comme [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) afin de travailler sur ces tâches.
 >
 > Si vous vous retrouvez bloqué·e, vous pouvez demander de l'aide (voir [la section à ce sujet en fin de page](#assessment_or_further_help)).
 
-> **Note :** Dans les exemples qui suivent, s'il y a une erreur dans votre code, celle-ci s'affichera dans le panneau des résultats, sur la page, afin de vous aider à trouver la solution (ou bien dans la console JavaScript du navigateur si vous utilisez la version téléchargeable).
+> [!NOTE]
+> Dans les exemples qui suivent, s'il y a une erreur dans votre code, celle-ci s'affichera dans le panneau des résultats, sur la page, afin de vous aider à trouver la solution (ou bien dans la console JavaScript du navigateur si vous utilisez la version téléchargeable).
 
 ## Tableaux - Exercice 1
 

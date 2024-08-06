@@ -23,7 +23,8 @@ Avant de commencer ce module, vous devriez connaître les bases de [HTML](/fr/do
 
 Vous devriez également connaître les notions de bases sur JavaScript avant d'étudier les objets JavaScript en détails. Avant de démarrer ce module, lisez [Premiers pas en JavaScript](/fr/docs/Learn/JavaScript/First_steps) et [Blocs de construction de JavaScript](/fr/docs/Learn/JavaScript/Building_blocks).
 
-> **Note :** Si vous travaillez depuis un appareil où vous ne pouvez pas créer vos propres fichiers, vous pouvez essayer la plupart des exemples de code dans un outil de programmation en ligne tel que [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!NOTE]
+> Si vous travaillez depuis un appareil où vous ne pouvez pas créer vos propres fichiers, vous pouvez essayer la plupart des exemples de code dans un outil de programmation en ligne tel que [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guides
 
