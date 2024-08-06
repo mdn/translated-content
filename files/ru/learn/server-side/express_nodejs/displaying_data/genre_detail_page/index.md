@@ -54,7 +54,8 @@ exports.genre_detail = function (req, res, next) {
 
 The ID of the required genre record is encoded at the end of the URL and extracted automatically based on the route definition (**/genre/:id**). The ID is accessed within the controller via the request parameters: `req.params.id`. It is used in `Genre.findById()` to get the current genre. It is also used to get all `Book` objects that have the genre ID in their `genre` field: `Book.find({ 'genre': req.params.id })`.
 
-> **Примечание:** If the genre does not exist in the database (i.e. it may have been deleted) then `findById()` will return successfully with no results. In this case we want to display a "not found" page, so we create an `Error` object and pass it to the `next` middleware function in the chain.
+> [!NOTE]
+> If the genre does not exist in the database (i.e. it may have been deleted) then `findById()` will return successfully with no results. In this case we want to display a "not found" page, so we create an `Error` object and pass it to the `next` middleware function in the chain.
 >
 > ```js
 > if (results.genre == null) {
@@ -102,7 +103,8 @@ Run the application and open your browser to <http://localhost:3000/>. Select th
 
 ![Genre Detail Page - Express Local Library site](locallibary_express_genre_detail.png)
 
-> **Примечание:** You might get an error similar to this:
+> [!NOTE]
+> You might get an error similar to this:
 >
 > ```bash
 > Cast to ObjectId failed for value " 59347139895ea23f9430ecbb" at path "_id" for model "Genre"
