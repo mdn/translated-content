@@ -22,15 +22,18 @@ slug: Learn/CSS/CSS_layout/Responsive_Design
 
 ![A layout with two columns squashed into a mobile size viewport.](mdn-rwd-liquid.png)
 
-> **Примечание:** Посмотрите этот простой жидкий макет: [пример](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html), [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html). При просмотре примера, растягивайте и сжимайте окно браузера чтобы увидеть, как это выглядит при разных размерах.
+> [!NOTE]
+> Посмотрите этот простой жидкий макет: [пример](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html), [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html). При просмотре примера, растягивайте и сжимайте окно браузера чтобы увидеть, как это выглядит при разных размерах.
 
 Сайт с фиксированной шириной рисковал иметь горизонтальную полосу прокрутки на экранах меньших чем ширина сайта (как видно ниже) и много белого пространства на краях дизайна на больших экранах.
 
 ![A layout with a horizontal scrollbar in a mobile viewport.](mdn-rwd-fixed.png)
 
-> **Примечание:** Посмотрите этот простой макет с фиксированной шириной: [пример](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html), [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html). Снова изучите результат по мере изменения размера окна браузера.
+> [!NOTE]
+> Посмотрите этот простой макет с фиксированной шириной: [пример](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html), [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html). Снова изучите результат по мере изменения размера окна браузера.
 
-> **Примечание:** Скриншоты выше сделаны используя [Responsive Design Mode](/ru/docs/Tools/Responsive_Design_Mode) в Firefox DevTools.
+> [!NOTE]
+> Скриншоты выше сделаны используя [Responsive Design Mode](/ru/docs/Tools/Responsive_Design_Mode) в Firefox DevTools.
 
 Когда мобильный веб стал становиться реальностью с первыми функциональными телефонами, компании желающие охватить мобильники начали создавать в основном специальные мобильные версии своих сайтов, с различными URL (часто что-то наподобие _m.example.com_ или _example.mobi_). Это означало, что необходимо было разрабатывать и поддерживать в актуальном состоянии две отдельные версии сайта.
 
@@ -104,7 +107,8 @@ target / context = result
 
 ![A desktop view of a layout with two columns.](mdn-rwd-desktop.png)
 
-> **Примечание:** вы можете найти [живой пример](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html) и [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html) этого примера на GitHub.
+> [!NOTE]
+> Вы можете найти [живой пример](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html) и [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html) этого примера на GitHub.
 
 ## Современные технологии макетов
 
@@ -144,7 +148,8 @@ target / context = result
 }
 ```
 
-> **Примечание:** В качестве примера мы перестроили простой отзывчивый макет выше, в этот раз используя flexbox. Вы видите что нас больше не надо использовать странные процентные значения для подсчёта размера столбцов: [пример](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html).
+> [!NOTE]
+> В качестве примера мы перестроили простой отзывчивый макет выше, в этот раз используя flexbox. Вы видите что нас больше не надо использовать странные процентные значения для подсчёта размера столбцов: [пример](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html).
 
 ### CSS grid
 
@@ -157,7 +162,8 @@ target / context = result
 }
 ```
 
-> **Примечание:** версия grid макета ещё проще, поскольку мы можем определить столбцы в .wrapper: [пример](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html), [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html).
+> [!NOTE]
+> Версия grid макета ещё проще, поскольку мы можем определить столбцы в .wrapper: [пример](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html), [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html).
 
 ## Отзывчивые изображения
 
@@ -209,7 +215,8 @@ h1 {
 
 ![A two column layout with a large heading.](mdn-rwd-font-desktop.png)
 
-> **Примечание:** смотрите этот пример в действии: [пример](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
+> [!NOTE]
+> Смотрите этот пример в действии: [пример](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
 
 Такой подход к типографике показывает, что вам не нужно ограничиваться в использовании медиавыражений только изменением макета страницы. Они могут быть использоваться для настройки любого элемента, чтобы сделать его более удобным или привлекательным при других размерах экрана.
 
@@ -234,7 +241,7 @@ h1 {
 
 Это означает, что нам нужно только один раз указать размер шрифта для заголовка, а не настраивать его для мобильных устройств и переопределять в медиазапросах. Шрифт постепенно увеличивается по мере увеличения размера области просмотра.
 
-> **Примечание:** Посмотрите на пример этого в действии: [example](https://mdn.github.io/css-examples/learn/rwd/type-vw.html), [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-vw.html).
+> [!NOTE] Посмотрите на пример этого в действии: [пример](https://mdn.github.io/css-examples/learn/rwd/type-vw.html), [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-vw.html).
 
 ## Мета-тег viewport
 

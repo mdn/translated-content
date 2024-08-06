@@ -9,4 +9,5 @@ l10n:
 
 **XForms** 是一种使用 {{glossary("XML")}} 格式来构建 Web 表单和处理表单数据的约定。
 
-> **备注：** 主流浏览器不再支持 XForms，我们建议使用 [HTML 表单](/zh-CN/docs/Learn/Forms)代替。
+> [!NOTE]
+> 主流浏览器不再支持 XForms，我们建议使用 [HTML 表单](/zh-CN/docs/Learn/Forms)代替。

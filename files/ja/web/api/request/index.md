@@ -62,7 +62,8 @@ l10n:
 - {{domxref("Request.text()")}}
   - : リクエストの本体のテキスト表現で解決するプロミスを返します。
 
-> **メモ:** リクエストの本体の関数は 1 度しか呼び出せません。 2 回目以降は空の文字列または ArrayBuffer で解決します。
+> [!NOTE]
+> リクエストの本体の関数は 1 度しか呼び出せません。 2 回目以降は空の文字列または ArrayBuffer で解決します。
 
 ## 例
 
@@ -100,7 +101,8 @@ const credentials = request.credentials;
 const bodyUsed = request.bodyUsed;
 ```
 
-> **メモ:** body の型は {{domxref("Blob")}}, {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}}, {{jsxref("String")}} オブジェクトのいずれか、および文字列リテラルのみですので、 JSON オブジェクトを本体に追加するには、そのオブジェクトの文字列化をする必要があります。
+> [!NOTE]
+> body の型は {{domxref("Blob")}}, {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}}, {{jsxref("String")}} オブジェクトのいずれか、および文字列リテラルのみですので、 JSON オブジェクトを本体に追加するには、そのオブジェクトの文字列化をする必要があります。
 
 すると `Request` オブジェクトを、例えば {{domxref("fetch()")}} 呼び出しの引数として渡すことで API リクエストを取得できて、レスポンスを取得できます。
 

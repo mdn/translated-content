@@ -3,10 +3,10 @@ title: "Event: preventDefault() メソッド"
 short-title: preventDefault()
 slug: Web/API/Event/preventDefault
 l10n:
-  sourceCommit: 32b07aa5b6ac4799a88e7b87a4d8333643ab6427
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{apiref("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`preventDefault()`** は {{domxref("Event")}} インターフェイスのメソッドで、{{Glossary("user agent", "ユーザーエージェント")}}に、このイベントが明示的に処理されない場合に、その既定のアクションを通常どおりに行うべきではないことを伝えます。
 
@@ -78,7 +78,7 @@ function checkboxClick(event) {
 
 #### CSS
 
-ユーザが無効なキーを押したときに描画する警告ボックスには、CSS を少し使用します。
+ユーザーが無効なキーを押したときに描画する警告ボックスには、CSS を少し使用します。
 
 ```css
 .warning {

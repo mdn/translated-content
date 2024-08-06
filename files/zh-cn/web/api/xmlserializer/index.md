@@ -31,7 +31,8 @@ saveXML(str);
 
 本例使用 {domxref("Element.insertAdjacentHTML()")}} 方法将一个新的 DOM {{domxref("Node")}} 插入 基于序列化 {{domxref("Document")}} 对象创建的 XML 中。
 
-> **备注：** 在真实场景下，你通常应该通过调用 {{domxref("Document.importNode", "importNode()")}} 方法将新节点加入 DOM 中，然后通过调用以下方法将目标节点添加到 DOM 树：
+> [!NOTE]
+> 在真实场景下，你通常应该通过调用 {{domxref("Document.importNode", "importNode()")}} 方法将新节点加入 DOM 中，然后通过调用以下方法将目标节点添加到 DOM 树：
 >
 > - {{domxref("Document")}} 和 {{domxref("Element")}} 方法 {{domxref("ParentNode.append", "append()")}} 和 {{domxref("ParentNode.prepend", "prepend()")}}
 > - {{domxref("ChildNode.replaceWith", "Node.replaceWith()")}} 方法 (替换现有节点)

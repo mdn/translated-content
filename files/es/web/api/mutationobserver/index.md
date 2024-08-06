@@ -49,7 +49,8 @@ void observe(
 - `options`
   - : `Un objeto MutationObserverInit`, que especifica que mutaciones del DOM deben ser informadas.
 
-> **Nota:** NOTA: Añadir un observador a un elemento es igual que addEventListener, si usted observa el elemento múltiples veces no hace ninguna diferencia. Si se observa dos veces un elemento, el observe callback no se ejecutará dos veces, ni tampoco tendrá que ejecutar disconnect() dos veces. En otras palabras, una vez el elemento es observado, observarlo de nuevo con la misma instancia del observador no hará nada. Sin embargo, si el callback es diferente por supuesto se le añadirá otro observador.
+> [!NOTE]
+> Añadir un observador a un elemento es igual que addEventListener, si usted observa el elemento múltiples veces no hace ninguna diferencia. Si se observa dos veces un elemento, el observe callback no se ejecutará dos veces, ni tampoco tendrá que ejecutar disconnect() dos veces. En otras palabras, una vez el elemento es observado, observarlo de nuevo con la misma instancia del observador no hará nada. Sin embargo, si el callback es diferente por supuesto se le añadirá otro observador.
 
 ### `disconnect()`
 
@@ -75,7 +76,8 @@ Returns an Array of [`MutationRecord`s](#MutationRecord).
 
 `MutationObserverInit` es un objeto para el que se pueden especificar las siguientes propiedades:
 
-> **Nota:** NOTA: Como mínimo las propiedades `childList`, `attributes`, o `characterData` deben ser `true`. En caso contrario, se producirá un error "An invalid or illegal string was specified"
+> [!NOTE]
+> Como mínimo las propiedades `childList`, `attributes`, o `characterData` deben ser `true`. En caso contrario, se producirá un error "An invalid or illegal string was specified"
 
 | Propiedad               | Descripción                                                                                                                            |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |

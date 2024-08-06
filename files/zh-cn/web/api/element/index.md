@@ -55,7 +55,8 @@ _`Element` 从其父接口 {{DOMxRef("Node")}} 以及该接口的父接口 {{DOM
 
   - : 元素对应的命名空间 URI，如果没有则返回 `null`。
 
-    > **备注：** 在 Firefox 3.5 及更早版本中，HTML 元素不在命名空间中。在以后的版本中，HTML 元素在 HTML 树和 XML 树中都属于 [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml/) 命名空间。
+    > [!NOTE]
+    > 在 Firefox 3.5 及更早版本中，HTML 元素不在命名空间中。在以后的版本中，HTML 元素在 HTML 树和 XML 树中都属于 [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml/) 命名空间。
 
 - {{DOMxRef("Element.nextElementSibling")}} {{ReadOnlyInline}}
   - : 一个 `Element`，树中紧跟给定元素的元素，如果没有同级节点，则为 `null`。
@@ -273,8 +274,6 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
   - : 设置当前节点指定名称和命名空间的属性值。
 - {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : 设置鼠标事件捕获，将所有鼠标事件重定向到此元素。
-- {{DOMxRef("Element.setHTML()")}} {{Experimental_Inline}}
-  - : 解析和[净化](/zh-CN/docs/Web/API/HTML_Sanitizer_API) HTML 字符串，并插入到 DOM 作为元素的子树。
 - {{DOMxRef("Element.setPointerCapture()")}}
   - : 指定一个特定的元素作为未来[指针事件](/zh-CN/docs/Web/API/Pointer_events)的捕获目标。
 - {{DOMxRef("Element.toggleAttribute()")}}

@@ -10,7 +10,8 @@ l10n:
 
 **`WritableStreamDefaultWriter()`** コンストラクターは、新しい {{domxref("WritableStreamDefaultWriter")}} オブジェクトのインスタンスを作成します。
 
-> **メモ:** 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxref("WritableStream.getWriter()")}} メソッドを使用します。
+> [!NOTE]
+> 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxref("WritableStream.getWriter()")}} メソッドを使用します。
 
 ## 構文
 

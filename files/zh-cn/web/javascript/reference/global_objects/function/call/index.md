@@ -31,11 +31,13 @@ call(thisArg, arg1, arg2, /* …, */ argN)
 
 ## 描述
 
-> **备注：** 这个函数几乎与 {{jsxref("Function/apply", "apply()")}} 相同，只是函数的参数以列表的形式逐个传递给 `call()`，而在 `apply()` 中它们被组合在一个对象中，通常是一个数组——例如，`func.call(this, "eat", "bananas")` 与 `func.apply(this, ["eat", "bananas"])`。
+> [!NOTE]
+> 这个函数几乎与 {{jsxref("Function/apply", "apply()")}} 相同，只是函数的参数以列表的形式逐个传递给 `call()`，而在 `apply()` 中它们被组合在一个对象中，通常是一个数组——例如，`func.call(this, "eat", "bananas")` 与 `func.apply(this, ["eat", "bananas"])`。
 
 通常，在调用函数时，函数内部的 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 值是访问该函数的对象。使用 `call()`，你可以在调用现有函数时将任意值分配给 `this`，而无需首先将函数附加到对象上作为属性。这样可以将一个对象的方法用作通用的实用函数。
 
-> **警告：** 不要使用 `call()` 来链式调用构造函数（例如，实现继承）。这会将构造函数作为普通函数调用，这意味着 [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target) 的值为 `undefined`，而类会抛出错误，因为它们不能在没有 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 的情况下被调用。请改用 {{jsxref("Reflect.construct()")}} 或 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends)。
+> [!WARNING]
+> 不要使用 `call()` 来链式调用构造函数（例如，实现继承）。这会将构造函数作为普通函数调用，这意味着 [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target) 的值为 `undefined`，而类会抛出错误，因为它们不能在没有 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 的情况下被调用。请改用 {{jsxref("Reflect.construct()")}} 或 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends)。
 
 ## 示例
 

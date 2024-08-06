@@ -186,7 +186,8 @@ Si deseas contribuir a este documento, edita también [el artículo original](/e
 
 ### Otras aserciones
 
-> **Nota:** El caracter `?` también se puede utilizar como cuantificador.
+> [!NOTE]
+> El caracter `?` también se puede utilizar como cuantificador.
 
    <table class="standard-table">
     <thead>
@@ -243,7 +244,8 @@ Si deseas contribuir a este documento, edita también [el artículo original](/e
 
 Si deseas contribuir a este documento, edita también [el artículo original](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
 
-> **Nota:** A continuación, _elemento_ se refiere no solo a caracteres singulares, sino que también incluye [clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [escapes de propiedad Unicode](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).
+> [!NOTE]
+> A continuación, _elemento_ se refiere no solo a caracteres singulares, sino que también incluye [clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [escapes de propiedad Unicode](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).
 
    <table class="standard-table">
     <thead>
@@ -342,4 +344,5 @@ Consulta también [PropertyValueAliases.txt](https://www.unicode.org/Public/UCD/
 - UnicodePropertyValue
   - : Uno de los fragmentos enumerados en la sección Valores, más adelante. Muchos valores tienen alias o abreviaturas (por ejemplo, el valor `Decimal_Number` para la propiedad `General_Category` se puede escribir cómo `Nd`, `digit`, o `Decimal_number`). Para la mayoría de los valores, la parte `UnicodePropertyName` y el signo igual se pueden omitir. Si se especifica un `UnicodePropertyName`, el valor debe corresponder al tipo de propiedad proporcionado.
 
-> **Nota:** Puesto que hay muchas propiedades y valores disponibles, no las describiremos exhaustivamente aquí, sino que proporcionaremos varios ejemplos.
+> [!NOTE]
+> Puesto que hay muchas propiedades y valores disponibles, no las describiremos exhaustivamente aquí, sino que proporcionaremos varios ejemplos.

@@ -26,7 +26,8 @@ toJSON()
 
 返された JSON には {{domxref("Performance.eventCounts", "eventCounts")}} プロパティが格納されていません。これは、{{domxref("EventCounts")}} 型であり、`toJSON()` 操作を提供していないからです。
 
-> **メモ:** JSON オブジェクトには、非推奨の {{domxref("performance.timing")}} および {{domxref("performance.navigation")}} プロパティのシリアライズが格納されています。新しい {{domxref("PerformanceNavigationTiming")}} インターフェイスの JSON 表現を取得するには、代わりに {{domxref("PerformanceNavigationTiming.toJSON()")}} を呼び出してください。
+> [!NOTE]
+> JSON オブジェクトには、非推奨の {{domxref("performance.timing")}} および {{domxref("performance.navigation")}} プロパティのシリアライズが格納されています。新しい {{domxref("PerformanceNavigationTiming")}} インターフェイスの JSON 表現を取得するには、代わりに {{domxref("PerformanceNavigationTiming.toJSON()")}} を呼び出してください。
 
 ## 例
 

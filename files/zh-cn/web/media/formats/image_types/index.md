@@ -107,7 +107,8 @@ slug: Web/Media/Formats/Image_types
   </tbody>
 </table>
 
-> **备注：** 与 WebP 和 AVIF 等较新的格式相比，PNG、JPEG 和 GIF 等较老的格式性能较差，但却能获得更广泛的“历史”浏览器支持。较新的图像格式越来越受欢迎，因为不支持这些格式的浏览器变得越来越无关紧要（即市场份额几乎为零）。
+> [!NOTE]
+> 与 WebP 和 AVIF 等较新的格式相比，PNG、JPEG 和 GIF 等较老的格式性能较差，但却能获得更广泛的“历史”浏览器支持。较新的图像格式越来越受欢迎，因为不支持这些格式的浏览器变得越来越无关紧要（即市场份额几乎为零）。
 
 下面列出了 web 上出现的图像格式，但 web 内容应避免使用这些格式（通常是因为这些格式没有广泛的浏览器支持，或者有更好的替代格式）。
 
@@ -146,9 +147,11 @@ slug: Web/Media/Formats/Image_types
   </tbody>
 </table>
 
-> **备注：** 每种图像格式的缩写可链接到有关该格式的较长描述、其功能和详细的浏览器兼容性信息（包括哪些版本引入了支持以及后来可能引入的特定特殊功能）。
+> [!NOTE]
+> 每种图像格式的缩写可链接到有关该格式的较长描述、其功能和详细的浏览器兼容性信息（包括哪些版本引入了支持以及后来可能引入的特定特殊功能）。
 
-> **备注：** Safari 11.1 新增了使用视频格式替代 gif 动画的功能，而其他浏览器没有添加这方面的支持。详见 [Chromium bug](https://crbug.com/791658) 和 [Firefox bug](https://bugzil.la/895131) 以了解更多信息。
+> [!NOTE]
+> Safari 11.1 新增了使用视频格式替代 gif 动画的功能，而其他浏览器没有添加这方面的支持。详见 [Chromium bug](https://crbug.com/791658) 和 [Firefox bug](https://bugzil.la/895131) 以了解更多信息。
 
 ## 图像文件类型详介
 
@@ -160,7 +163,7 @@ slug: Web/Media/Formats/Image_types
 
 APNG 是 Mozilla 首次推出的一种文件格式，它扩展了 [PNG](#png（便携式网络图形）) 标准，增加了对动画图像的支持。在概念上，APNG 与已经使用了几十年的动画 GIF 格式相似，但 APNG 的功能更强，它支持多种[颜色深度](https://zh.wikipedia.org/wiki/色彩深度)，而动画 GIF 只支持 8 位[索引颜色](https://zh.wikipedia.org/wiki/索引顏色)。
 
-APNG 适用于无需与其他活动或音轨同步的基本动画，如进度指示器、活动[加载器](https://en.wikipedia.org/wiki/throbber)和其他动画序列。例如，APNG 是苹果 iMessage 应用程序（和 iOS 上的“信息”应用程序）[创建动画贴纸时支持的格式之一](https://developer.apple.com/stickers/)。它们也常用于 web 浏览器用户界面的动画部分。
+APNG 适用于无需与其他活动或音轨同步的基本动画，如进度指示器、活动[加载器](https://en.wikipedia.org/wiki/Throbber)和其他动画序列。例如，APNG 是苹果 iMessage 应用程序（和 iOS 上的“信息”应用程序）[创建动画贴纸时支持的格式之一](https://developer.apple.com/imessage/)。它们也常用于 web 浏览器用户界面的动画部分。
 
 <table class="standard-table">
   <tbody>
@@ -258,7 +261,8 @@ APNG 适用于无需与其他活动或音轨同步的基本动画，如进度指
 
 AV1 图像文件格式（AVIF）是一种功能强大、开源、免版税的文件格式，它在高效图像文件格式（HEIF）容器中对 AV1 比特流进行编码。
 
-> **备注：** AVIF 有可能成为在 web 内容中共享图像的“下一件大事”。它具有最先进的特性和性能，却没有阻碍同类替代产品发展的复杂许可和专利使用费的束缚。
+> [!NOTE]
+> AVIF 有可能成为在 web 内容中共享图像的“下一件大事”。它具有最先进的特性和性能，却没有阻碍同类替代产品发展的复杂许可和专利使用费的束缚。
 
 AV1 是一种编码格式，最初设计用于在互联网上传输视频。该格式得益于近年来视频编码技术的长足进步，并有可能受益于对硬件渲染的相关支持。不过，在某些情况下它也有缺点，因为视频和图像编码有一些不同的要求。
 
@@ -351,7 +355,8 @@ Chrome、Opera、Safari 和 Firefox 支持 AVIF（Firefox 支持静态图像，�
 
 **BMP**（**位图图像**）文件类型在 Windows 计算机上最为常见，一般只用于 web 应用程序和内容中的特殊情况。
 
-> **警告：** 网站内容通常应避免使用 BMP 文件。最常见的 BMP 文件格式将数据表示为未压缩的光栅图像，与 png 或 jpg 图像类型相比，文件大小较大。目前有更高效的 BMP 格式，但并未广泛使用，web 浏览器也很少支持。
+> [!WARNING]
+> 网站内容通常应避免使用 BMP 文件。最常见的 BMP 文件格式将数据表示为未压缩的光栅图像，与 png 或 jpg 图像类型相比，文件大小较大。目前有更高效的 BMP 格式，但并未广泛使用，web 浏览器也很少支持。
 
 BMP 理论上支持多种内部数据表示。最简单也是最常用的 BMP 文件形式是一种未压缩的光栅图像，每个像素占 3 个字节，分别代表其红、绿、蓝三部分，每行用 `0x00` 字节填充，宽度为 4 字节的倍数。
 
@@ -555,7 +560,8 @@ ICO（Microsoft Windows 图标）文件格式是微软为 Windows 系统的桌�
 
 一个 ICO 文件可以包含多个图标，文件开头有一个目录，列出每个图标的详细信息。目录之后是图标的数据。每个图标的数据既可以是不带文件头的 [BMP](#bmp（位图文件）) 图像，也可以是完整的 [PNG](#png（便携式网络图形）) 图像（包括文件头）。如果使用 ICO 文件，则应使用 BMP 格式，因为直到 Windows Vista 才添加了对 ICO 文件内的 PNG 的支持，而且这种支持可能并不完善。
 
-> **警告：** ICO 文件*不应*用于网页内容。此外，如[为不同的使用环境提供图标](/zh-CN/docs/Web/HTML/Element/link#提供用于不同用法上下文的图标)所述，它们作为网站图标的使用已经减少，转而使用 PNG 文件和 {{HTMLElement("link")}} 元素。
+> [!WARNING]
+> ICO 文件*不应*用于网页内容。此外，如[为不同的使用环境提供图标](/zh-CN/docs/Web/HTML/Element/link#提供用于不同用法上下文的图标)所述，它们作为网站图标的使用已经减少，转而使用 PNG 文件和 {{HTMLElement("link")}} 元素。
 
 <table class="standard-table">
   <tbody>
@@ -1255,7 +1261,8 @@ WebP 目前已在主要网络浏览器的最新版本中获得广泛支持，但
   </tbody>
 </table>
 
-> **备注：** 在 macOS 版 Safari 上，WebP 支持取决于 Safari 和 macOS 的版本。你需要 Safari 14 或更高版本，以及 macOS Big Sur (11) 或更高版本。
+> [!NOTE]
+> 在 macOS 版 Safari 上，WebP 支持取决于 Safari 和 macOS 的版本。你需要 Safari 14 或更高版本，以及 macOS Big Sur (11) 或更高版本。
 
 ### XBM（X Window 系统位图文件）
 

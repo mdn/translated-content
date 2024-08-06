@@ -38,7 +38,8 @@ Os elementos pertencentes ao modelo de conteúdo de seccionamento criam uma [se�
 
 Elementos pertencentes a essa categoria são {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} e {{HTMLElement("section")}}.
 
-> **Nota:** Não confunda esse modelo de conteúdo com a categoria de [seccionamento raiz](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root) que isola seus conteúdos dos esboços regulares.
+> [!NOTE]
+> Não confunda esse modelo de conteúdo com a categoria de [seccionamento raiz](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root) que isola seus conteúdos dos esboços regulares.
 
 ### Conteúdo do cabeçalho
 
@@ -46,7 +47,8 @@ O conteúdo do cabeçalho define o título de uma seção, se é marcada por um 
 
 Os elementos pertencentes a essa categoria são {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}} e {{HTMLElement("hgroup")}}.
 
-> **Nota:** Embora provavelmente contenha algum conteúdo do cabeçalho, o {{HTMLElement("header")}} não faz parte do conteúdo do cabeçalho em si.
+> [!NOTE]
+> Embora provavelmente contenha algum conteúdo do cabeçalho, o {{HTMLElement("header")}} não faz parte do conteúdo do cabeçalho em si.
 
 ### Conteúdo fraseado
 

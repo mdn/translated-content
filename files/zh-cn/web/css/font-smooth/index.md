@@ -26,14 +26,16 @@ font-smooth: revert-layer;
 font-smooth: unset;
 ```
 
-> **备注：** Webkit 实现了名为 **`-webkit-font-smoothing`** 的相似属性。该属性仅适用于 macOS。
+> [!NOTE]
+> Webkit 实现了名为 **`-webkit-font-smoothing`** 的相似属性。该属性仅适用于 macOS。
 >
 > - `auto`——由浏览器决定（如果可用，则使用亚像素抗锯齿；这是默认值）。
 > - `none`——关闭字体平滑；显示带有锯齿边缘的文本。
 > - `antialiased`——在像素（而不是亚像素）级别平滑字体。对于深色背景上的浅色文本，从亚像素渲染切换为抗锯齿渲染可以使其看起来更清晰。
 > - `subpixel-antialiased`——在大多数非视网膜显示器上，这将会提供最清晰的文本。
 
-> **备注：** Firefox 实现了名为 **`-moz-osx-font-smoothing`** 的相似属性。该属性仅适用于 macOS。
+> [!NOTE]
+> Firefox 实现了名为 **`-moz-osx-font-smoothing`** 的相似属性。该属性仅适用于 macOS。
 >
 > - `auto`——允许浏览器选择字体平滑的优化方式，通常为 `grayscale`。
 > - `grayscale`——用灰度抗锯齿（而不是亚像素）渲染文本。对于深色背景上的浅色文本，从亚像素渲染切换为抗锯齿渲染可以使其看起来更清晰。

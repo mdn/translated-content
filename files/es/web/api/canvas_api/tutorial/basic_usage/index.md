@@ -15,7 +15,8 @@ Comenzamos este tutorial observando el elemento {{HTMLElement("canvas")}}. Al fi
 
 A primera vista, un elemento {{HTMLElement("canvas")}} es parecido al elemento {{HTMLElement("img")}}, con la diferencia que este no tiene los atributos `src` y `alt`. El elemento `<canvas>` tiene solo dos atributos - [`width`](/es/docs/Web/HTML/Element/canvas#width) y [`height`](/es/docs/Web/HTML/Element/canvas#height). Ambos son opcionales y pueden ser definidos usando propiedades [DOM](/es/docs/DOM). Cuando los atributos ancho y alto no estan especificados, el lienzo se inicializara con **300 pixels** ancho y **150 pixels** de alto. El elemento puede ser arbitrariamente redimensionado por CSS, pero durante el renderizado la imagen es escalada para ajustarse al tamaño de su layout. Si el tamaño del CSS no respeta el ratio del canvas inicial, este aparecerá distorsionado.
 
-> **Nota:** Si su renderizado se ve distorsionado, pruebe especificar los atributos width y height explícitamente en los atributos del `<canvas>` , y no usando CSS.
+> [!NOTE]
+> Si su renderizado se ve distorsionado, pruebe especificar los atributos width y height explícitamente en los atributos del `<canvas>` , y no usando CSS.
 
 El atributo [id](/es/docs/Web/HTML/Atributos_Globales/id) no está especificado para el elemento `<canvas>` pero es uno de los [atributos globales de HTML](/es/docs/Web/HTML/Atributos_Globales) el cual puede ser aplicado a cualquier elemento HTML (como [class](/es/docs/Web/HTML/Global_attributes/class) por ejemplo). Siempre es buena idea proporcionar un `id` porque esto hace más fácil identificarlo en un script.
 
@@ -43,7 +44,8 @@ Por ejemplo, podremos proporcionar un texto descriptivo del contenido del canvas
 
 De manera distinta al elemento {{HTMLElement("img")}}, el elemento {{HTMLElement("canvas")}} requiere cerrar la etiqueta (`</canvas>`).
 
-> **Nota:** Aunque las versiones anteriores del navegador Safari de Apple no requeria el cierre de la etiqueta, la especificacion indica que es necesaria, asi que tu deberias incluir esta para asegurarte la compatibilidad. Aquellas versiones de Safari (anteriores versiones a 2.0) renderizaran el contenido de regreso agregandolo al canvas mismo a no ser que utilice trucos de CSS para enmascararlo. Afortunadamente, los usuarios de aquellas versiones de Safari son raros hoy en dia.
+> [!NOTE]
+> Aunque las versiones anteriores del navegador Safari de Apple no requeria el cierre de la etiqueta, la especificacion indica que es necesaria, asi que tu deberias incluir esta para asegurarte la compatibilidad. Aquellas versiones de Safari (anteriores versiones a 2.0) renderizaran el contenido de regreso agregandolo al canvas mismo a no ser que utilice trucos de CSS para enmascararlo. Afortunadamente, los usuarios de aquellas versiones de Safari son raros hoy en dia.
 
 Si el contenido alternativo no se necesita, un simple `<canvas id="foo" ...></canvas>` es completamente compatible con todos los navegadores que soportan canvas.
 

@@ -11,7 +11,8 @@ slug: Web/CSS/transform
 
 `none`이 아닌 값을 지정하면 새로운 [쌓임 맥락](/ko/docs/Web/CSS/Understanding_z-index/The_stacking_context)을 생성합니다. 이 경우, {{cssxref("position")}}이 `fixed`거나 `absolute`인 요소의 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block)으로서 작용합니다.
 
-> **경고:** 변형 가능한 요소만 `transform`할 수 있습니다. 즉, CSS 박스 모델이 레이아웃을 결정하는 모든 요소 중 [비대체 인라인 박스](/ko/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes), [표 열 박스](/ko/docs/Web/HTML/Element/col), [표 열 그룹 박스](/ko/docs/Web/HTML/Element/colgroup)를 제외한 요소에만 적용할 수 있습니다.
+> [!WARNING]
+> 변형 가능한 요소만 `transform`할 수 있습니다. 즉, CSS 박스 모델이 레이아웃을 결정하는 모든 요소 중 [비대체 인라인 박스](/ko/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes), [표 열 박스](/ko/docs/Web/HTML/Element/col), [표 열 그룹 박스](/ko/docs/Web/HTML/Element/colgroup)를 제외한 요소에만 적용할 수 있습니다.
 
 ## 구문
 

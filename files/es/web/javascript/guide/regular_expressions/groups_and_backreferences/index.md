@@ -67,7 +67,8 @@ do {
 } while ((match = regexpNames.exec(personList)) !== null);
 ```
 
-> **Nota:** No todos los navegadores admiten esta función; consulta la {{JSxRef("../Guide/Regular_Expressions", "tabla de compatibilidad", "#Compatibilidad_del_navegador")}}.
+> [!NOTE]
+> No todos los navegadores admiten esta función; consulta la {{JSxRef("../Guide/Regular_Expressions", "tabla de compatibilidad", "#Compatibilidad_del_navegador")}}.
 
 ## Especificaciones
 

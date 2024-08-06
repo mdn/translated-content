@@ -7,7 +7,8 @@ slug: Web/API/Element/matches
 
 如果元素被指定的选择器字符串选择，**`Element.matches()`** 方法返回 true; 否则返回 false。
 
-> **警告：** 有一些浏览器使用前缀，在非标准名称 matchesSelector () 下实现了这个方法！
+> [!WARNING]
+> 有一些浏览器使用前缀，在非标准名称 matchesSelector () 下实现了这个方法！
 
 ## 语法
 

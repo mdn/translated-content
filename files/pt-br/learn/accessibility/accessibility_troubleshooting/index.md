@@ -52,7 +52,8 @@ O texto é difícil de ler devido ao esquema de cores atual. Você pode fazer um
 2. Você consegue atualizar o texto do artigo para facilitar a navegação de usuários de leitores de telas?
 3. A parte do menu de navegação do site (agrupada em `<div class="nav"></div>`) poderia estar mais acessível se estivesse dentro de um elemento semântico de HTML5 mais adequado. Qual elemento deve ser utilizado? Atualize-o.
 
-> **Nota:** Você precisará atualizar os seletores de CSS que estilizam as respectivas tags para seus equivalentes aos cabeçalhos semânticos. Depois de adicionar elementos de parágrafo, você perceberá que a estilização parecerá bem melhor.
+> [!NOTE]
+> Você precisará atualizar os seletores de CSS que estilizam as respectivas tags para seus equivalentes aos cabeçalhos semânticos. Depois de adicionar elementos de parágrafo, você perceberá que a estilização parecerá bem melhor.
 
 ### As imagens
 

@@ -28,7 +28,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 
 반환된 [`Promise`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)는 저장소에서 찾은 모든 항목을 담은 객체를 인수로 완료를 수행한다. 실패하면 에러 문장으로 거부가 수행된다. managed 저장소가 설정되어 있지 않으면 `undefined`가 반환된다.
 
-> **경고:** When used within a content script in Firefox versions prior to 52, the Promise returned by `browser.storage.local.get()` is fulfilled with an Array containing one Object. The Object in the Array contains the `keys` found in the storage area, as described above. The Promise is correctly fulfilled with an Object when used in the background context (background scripts, popups, options pages, etc.). When this API is used as `chrome.storage.local.get()`, it correctly passes an Object to the callback function.
+> [!WARNING]
+> When used within a content script in Firefox versions prior to 52, the Promise returned by `browser.storage.local.get()` is fulfilled with an Array containing one Object. The Object in the Array contains the `keys` found in the storage area, as described above. The Promise is correctly fulfilled with an Object when used in the background context (background scripts, popups, options pages, etc.). When this API is used as `chrome.storage.local.get()`, it correctly passes an Object to the callback function.
 
 ## 브라우저 호환성
 

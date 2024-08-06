@@ -13,7 +13,8 @@ Canvas 2D API 的 {{domxref("CanvasRenderingContext2D")}} 对象的方法 **`fil
 
 文本根据 {{domxref("CanvasRenderingContext2D.font", "font")}}、{{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}、{{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}} 和 {{domxref("CanvasRenderingContext2D.direction", "direction")}} 属性所定义的字体和文本布局来渲染。
 
-> **备注：** 如果需要绘制字符串中字符的轮廓，需要调用其上下文的 {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} 方法。
+> [!NOTE]
+> 如果需要绘制字符串中字符的轮廓，需要调用其上下文的 {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} 方法。
 
 ## 语法
 

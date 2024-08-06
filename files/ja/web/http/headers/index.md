@@ -326,7 +326,8 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Client_hints)は一連の�
 - {{HTTPHeader("Sec-CH-UA-Prefers-Reduced-Motion")}} {{experimental_inline}}
   - : ユーザーの環境設定として、アニメーションやコンテンツレイアウトの変化が少ないことが推奨されていること。
 
-> **メモ:** ユーザーエージェントクライアントヒントは、データの漏洩に使用することができる[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)の委譲が必要であるため、[フェンスフレーム](/ja/docs/Web/API/Fenced_frame_API)内では利用できません。
+> [!NOTE]
+> ユーザーエージェントクライアントヒントは、データの漏洩に使用することができる[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)の委譲が必要であるため、[フェンスフレーム](/ja/docs/Web/API/Fenced_frame_API)内では利用できません。
 
 #### 端末クライアントヒント
 

@@ -257,7 +257,8 @@ slug: Web/HTML/Global_attributes/itemscope
   </tbody>
 </table>
 
-> **참고:** HTML에서 마이크로데이터를 추출할 때 유용하게 사용할 수 있는 Google의 [구조화된 데이터 테스트 도구](https://search.google.com/structured-data/testing-tool)가 있습니다. 위의 HTML 예제 코드를 넣어보세요.
+> [!NOTE]
+> HTML에서 마이크로데이터를 추출할 때 유용하게 사용할 수 있는 Google의 [구조화된 데이터 테스트 도구](https://search.google.com/structured-data/testing-tool)가 있습니다. 위의 HTML 예제 코드를 넣어보세요.
 
 ## 명세
 

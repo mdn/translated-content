@@ -32,7 +32,8 @@ meter::-webkit-meter-suboptimum-value {
 
 {{EmbedLiveSample('Exemples', '100%', 50)}}
 
-> **Note :** Cette fonctionnalité ne sera visible que depuis un navigateur WebKit/Blink.
+> [!NOTE]
+> Cette fonctionnalité ne sera visible que depuis un navigateur WebKit/Blink.
 
 ## Spécifications
 

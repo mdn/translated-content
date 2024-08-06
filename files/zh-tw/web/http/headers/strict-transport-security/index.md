@@ -9,7 +9,8 @@ l10n:
 
 HTTP **`Strict-Transport-Security`** 回應標頭（通常縮寫為 {{Glossary("HSTS")}}）告知瀏覽器該站點應僅使用 HTTPS 訪問，並且所有將來的 HTTP 訪問應自動轉換為 HTTPS。
 
-> **備註：** 這比簡單地在伺服器上配置 HTTP 到 HTTPS 的重定向（301）更安全，因為初始的 HTTP 連接仍然易受中間人攻擊。
+> [!NOTE]
+> 這比簡單地在伺服器上配置 HTTP 到 HTTPS 的重定向（301）更安全，因為初始的 HTTP 連接仍然易受中間人攻擊。
 
 <table class="properties">
   <tbody>
@@ -47,7 +48,8 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 
 HTTP Strict Transport Security 標頭告知瀏覽器不應使用 HTTP 加載站點，應自動將所有嘗試使用 HTTP 訪問站點的請求轉換為 HTTPS。
 
-> **備註：** 當你的站點僅通過 HTTP 訪問時，瀏覽器會*忽略* `Strict-Transport-Security` 標頭。一旦你的站點通過 HTTPS 訪問且沒有憑證錯誤，瀏覽器會知道你的站點支持 HTTPS，並會尊重 `Strict-Transport-Security` 標頭。瀏覽器這樣做是因為攻擊者可能會攔截到站點的 HTTP 連接並注入或刪除標頭。
+> [!NOTE]
+> 當你的站點僅通過 HTTP 訪問時，瀏覽器會*忽略* `Strict-Transport-Security` 標頭。一旦你的站點通過 HTTPS 訪問且沒有憑證錯誤，瀏覽器會知道你的站點支持 HTTPS，並會尊重 `Strict-Transport-Security` 標頭。瀏覽器這樣做是因為攻擊者可能會攔截到站點的 HTTP 連接並注入或刪除標頭。
 
 ### 範例場景
 

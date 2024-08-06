@@ -2,12 +2,12 @@
 title: 实际参数
 slug: Glossary/Argument
 l10n:
-  sourceCommit: d842f8c32316dbe36cff9fc5e0e777602e32d958
+  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
 {{GlossarySidebar}}
 
-**实际参数**（Argument）是作为输入传递给{{Glossary("function", "函数")}}的{{glossary("value", "值")}}，可以是{{Glossary("primitive", "原始值")}}或{{Glossary("object", "对象")}}。
+**实际参数**（Argument）是作为输入传递给{{Glossary("function", "函数")}}的{{glossary("value", "值")}}，可以是{{Glossary("primitive", "原始值")}}或{{Glossary("object", "对象")}}。不要将实际参数与{{Glossary("parameter", "形式参数")}}混淆：形式参数是函数定义中用于引用实际参数的名称。
 
 例如：
 
@@ -40,3 +40,6 @@ function example(parameter) {
 
 - [形式参数与实际参数之间的区别](/zh-CN/docs/Glossary/Parameter#形式参数与实际参数)
 - {{glossary("JavaScript")}} 中的 {{jsxref("Functions/arguments","arguments")}} 对象
+- 相关术语：
+  - {{Glossary("Function", "函数")}}
+  - {{Glossary("Parameter", "形式参数")}}

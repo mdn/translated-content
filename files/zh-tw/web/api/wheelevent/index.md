@@ -7,9 +7,11 @@ slug: Web/API/WheelEvent
 
 WheelEvent DOM 事件會在用戶滚动滑鼠滚轮或操作其它類似滑鼠的設備時觸發。
 
-> **警告：** 該事件爲標準規定的事件介面。早期的瀏覽器實現過 {{domxref("MouseWheelEvent")}} 和 {{domxref("MouseScrollEvent")}} 兩種滾輪事件介面，但這兩種介面皆非標準，加之各瀏覽器間對其相容性極差。因而開發者應用該標準事件介面取代這兩個非標準介面。
+> [!WARNING]
+> 該事件爲標準規定的事件介面。早期的瀏覽器實現過 {{domxref("MouseWheelEvent")}} 和 {{domxref("MouseScrollEvent")}} 兩種滾輪事件介面，但這兩種介面皆非標準，加之各瀏覽器間對其相容性極差。因而開發者應用該標準事件介面取代這兩個非標準介面。
 
-> **備註：** 請勿想當然依據滾輪方向（即該事件的各 delta 屬性值）來推斷文檔內容的滾動方向，因標準未定義滾輪事件具體會引發什麼樣的行爲，引發的行爲實際上是各瀏覽器自行定義的。即便滾輪事件引發了文檔內容的滾動行爲，也不表示滾輪方向和文檔內容的滾動方向一定相同。因而通過該滾輪事件獲知文檔內容滾動方向的方法並不可靠。要獲取文檔內容的滾動方向，可在文檔內容滾動事件（{{domxref("Element/scroll_event", "scroll")}}）中監視 {{domxref("Element.scrollLeft", "scrollLeft")}} 和 {{domxref("Element.scrollTop", "scrollTop")}} 二值變化情況，即可推斷出滾動方向了。
+> [!NOTE]
+> 請勿想當然依據滾輪方向（即該事件的各 delta 屬性值）來推斷文檔內容的滾動方向，因標準未定義滾輪事件具體會引發什麼樣的行爲，引發的行爲實際上是各瀏覽器自行定義的。即便滾輪事件引發了文檔內容的滾動行爲，也不表示滾輪方向和文檔內容的滾動方向一定相同。因而通過該滾輪事件獲知文檔內容滾動方向的方法並不可靠。要獲取文檔內容的滾動方向，可在文檔內容滾動事件（{{domxref("Element/scroll_event", "scroll")}}）中監視 {{domxref("Element.scrollLeft", "scrollLeft")}} 和 {{domxref("Element.scrollTop", "scrollTop")}} 二值變化情況，即可推斷出滾動方向了。
 
 {{InheritanceDiagram}}
 

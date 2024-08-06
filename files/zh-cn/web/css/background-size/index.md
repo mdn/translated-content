@@ -104,11 +104,13 @@ background-size: unset;
 
 位图一定有固有尺寸与固有比例，矢量图可能两者都有，也可能只有一个。渐变视为只有固有尺寸或者只有固有比例的图片。
 
-> **备注：** This behavior changed in Gecko 8.0. Before this, gradients were treated as images with no intrinsic dimensions, with an intrinsic proportion identical to that of the background positioning area.
+> [!NOTE]
+> This behavior changed in Gecko 8.0. Before this, gradients were treated as images with no intrinsic dimensions, with an intrinsic proportion identical to that of the background positioning area.
 
 由 {{cssxref("-moz-element")}} 生成的背景图片，(which actually match an element) are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion.
 
-> **备注：** This is not the currently-specified behavior, which is that the intrinsic dimensions and proportion should be those of the element in all cases.
+> [!NOTE]
+> This is not the currently-specified behavior, which is that the intrinsic dimensions and proportion should be those of the element in all cases.
 
 背景图片大小计算：
 

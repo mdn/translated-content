@@ -1621,7 +1621,7 @@
     "modified": "2020-10-15T12:43:22.677Z",
     "contributors": ["mpcjazz"]
   },
-  "Glossary/Routers": {
+  "Glossary/Router": {
     "modified": "2019-10-20T10:28:34.059Z",
     "contributors": ["yuna"]
   },
@@ -13984,6 +13984,16 @@
     "modified": "2020-10-15T22:00:39.694Z",
     "contributors": ["yyss", "mk-tool"]
   },
+  "Web/API/Window/external": {
+    "modified": "2019-03-23T23:50:31.021Z",
+    "contributors": [
+      "teoli",
+      "AshfaqHossain",
+      "kohei.yoshino",
+      "ethertank",
+      "Potappo"
+    ]
+  },
   "Web/API/Window/fetch": {
     "modified": "2020-10-15T21:41:32.875Z",
     "contributors": [
@@ -14522,16 +14532,6 @@
       "khalid32",
       "ethertank",
       "Shoot",
-      "Potappo"
-    ]
-  },
-  "Web/API/Window/sidebar": {
-    "modified": "2019-03-23T23:50:31.021Z",
-    "contributors": [
-      "teoli",
-      "AshfaqHossain",
-      "kohei.yoshino",
-      "ethertank",
       "Potappo"
     ]
   },
@@ -20931,16 +20931,6 @@
     "modified": "2020-10-15T21:19:27.214Z",
     "contributors": ["mfuji09", "YuichiNukiyama", "yyss", "ethertank"]
   },
-  "Web/HTML/Element/menuitem": {
-    "modified": "2020-11-28T12:02:55.965Z",
-    "contributors": [
-      "mfuji09",
-      "YuichiNukiyama",
-      "yyss",
-      "hamasaki",
-      "yuji38kwmt"
-    ]
-  },
   "Web/HTML/Element/meta": {
     "modified": "2020-10-15T21:26:24.555Z",
     "contributors": ["mfuji09", "yyss", "mizunashi_mana", "hashedhyphen"]
@@ -21939,10 +21929,6 @@
   },
   "Web/HTTP/Headers/Permissions-Policy/autoplay": {
     "modified": "2020-10-15T22:11:22.688Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/HTTP/Headers/Permissions-Policy/battery": {
-    "modified": "2020-10-15T22:34:41.072Z",
     "contributors": ["mfuji09"]
   },
   "Web/HTTP/Headers/Permissions-Policy/camera": {
@@ -30418,10 +30404,6 @@
     "modified": "2019-03-24T00:06:00.366Z",
     "contributors": ["ethertank", "Potappo"]
   },
-  "orphaned/Setting_up_extension_development_environment": {
-    "modified": "2019-03-23T23:54:13.028Z",
-    "contributors": ["K.Nakamura", "teoli", "Mgjbot", "Shoot"]
-  },
   "orphaned/The_Importance_of_Correct_HTML_Commenting": {
     "modified": "2019-03-23T23:53:28.601Z",
     "contributors": ["SphinxKnight", "teoli", "Mgjbot", "Kohei"]
@@ -30429,10 +30411,6 @@
   "orphaned/Toolkit_API/Official_References": {
     "modified": "2019-04-13T00:54:00.142Z",
     "contributors": ["wbamberg", "Marsf", "Okome"]
-  },
-  "orphaned/Tutorials": {
-    "modified": "2019-03-23T23:15:45.631Z",
-    "contributors": ["shinnn"]
   },
   "orphaned/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility": {
     "modified": "2019-03-23T22:00:20.926Z",

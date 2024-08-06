@@ -14,7 +14,8 @@ slug: Web/API/MediaRecorder/dataavailable_event
 - 调用{{domxref("MediaRecorder.requestData()")}} `dataavailable`时，将传递自记录开始或事件最后一次发生以来捕获的所有媒体数据；然后`Blob`创建一个新文件，并将媒体捕获继续到该 blob 中。
 - 如果将`timeslice`属性传递到开始媒体捕获的{{domxref("MediaRecorder.start()")}}方法中，`dataavailable`则每`timeslice`毫秒触发一次事件。这意味着每个 Blob 都有特定的持续时间（最后一个 Blob 除外，后者可能更短，因为它将是自上次事件以来剩下的所有东西）。因此，如果该方法调用看起来像这样 - `recorder.start(1000);`-的`dataavailable`事件将媒体捕捉的每一秒发生火灾后，我们的事件处理程序将被称为与媒体数据的 BLOB 每秒即坚持一个第二长。你可以`timeslice`与{{domxref("MediaRecorder.stop()")}}和{{domxref("MediaRecorder.requestData()")}}一起使用，以产生多个相同长度的 Blob，以及其他较短的 Blob。
 
-> **备注：** 包含媒体数据的 {{domxref("Blob")}} 在 `dataavailable` 事件的 `data` 属性中可用。
+> [!NOTE]
+> 包含媒体数据的 {{domxref("Blob")}} 在 `dataavailable` 事件的 `data` 属性中可用。
 
 ## 语法
 

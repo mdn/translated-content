@@ -36,7 +36,8 @@ Este artículo muestra cómo puede crear un sitio web "esqueleto" usando la herr
 
 Las siguientes secciones muestran como puede llamar al generador de aplicaciones, y proporcionan una pequeña explicación sobre las diferentes opciones para vistas y CSS. También explicaremos como está estructurado el esqueleto del sitio web. Al final, mostraremos como puede ejecutar el sitio web para verificar que funciona.
 
-> **Nota:** El _Generador de Aplicaciones Express_ no es el único generador para aplicaciones Express, y el proyecto generado no es la única forma viable para estructurar sus archivos y directorios. El sitio generado, sin embargo, tiene una estructura modular que es fácil de extender y comprender. Para informacion sobre una _mínima_ aplicación Express, vea el [Ejemplo Hello world](https://expressjs.com/en/starter/hello-world.html) (Express docs).
+> [!NOTE]
+> El _Generador de Aplicaciones Express_ no es el único generador para aplicaciones Express, y el proyecto generado no es la única forma viable para estructurar sus archivos y directorios. El sitio generado, sin embargo, tiene una estructura modular que es fácil de extender y comprender. Para informacion sobre una _mínima_ aplicación Express, vea el [Ejemplo Hello world](https://expressjs.com/en/starter/hello-world.html) (Express docs).
 
 ## Usando el generador de aplicaciones
 
@@ -75,13 +76,15 @@ express
 
 También puede seleccionar el motor de plantillas para las vistas usando `--view` y/o un motor generador de CSS usando `--css`.
 
-> **Nota:** Las otras opciones para elegir motores de plantillas (e.g. `--hogan`, `--ejs`, `--hbs` etc.) están descontinuadas. Use `--view` (o bien `-v`)!
+> [!NOTE]
+> Las otras opciones para elegir motores de plantillas (e.g. `--hogan`, `--ejs`, `--hbs` etc.) están descontinuadas. Use `--view` (o bien `-v`)!
 
 ### ¿Cuál motor de vistas debo usar?
 
 El _Generador de Aplicaciones Express_ le permite configurar un número de populares motores de plantillas, incluyendo [EJS](https://www.npmjs.com/package/ejs), [Hbs](http://github.com/donpark/hbs), [Pug](https://pugjs.org/api/getting-started.html) (Jade), [Twig](https://www.npmjs.com/package/twig), y [Vash](https://www.npmjs.com/package/vash), aunque si no se especifica una opcion de vista, selecciona Jade por defecto. Express puede soportar un gran número de motores de plantillas [aquí una lista](https://github.com/expressjs/express/wiki#template-engines).
 
-> **Nota:** Si quiere usar un motor de plantillas que no es soportado por el generador entonces vea el artículo [Usando motores de plantillas con Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs) y la documentación de su motor de plantillas.
+> [!NOTE]
+> Si quiere usar un motor de plantillas que no es soportado por el generador entonces vea el artículo [Usando motores de plantillas con Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs) y la documentación de su motor de plantillas.
 
 Generalmente hablando debe seleccionar un motor de plantillas que le brinde toda la funcionalidad que necesite y le permita ser productivo rápidamente — o en otras palabras, en la misma forma en que selecciona cualquier otro componente. Alguna de las cosas a considerar cuando se comparan motores de plantillas:
 
@@ -99,7 +102,8 @@ Generalmente hablando debe seleccionar un motor de plantillas que le brinde toda
   - Soporte para operaciones asincrónas y de transmisión.
   - Pueden ser usadas tanto en el cliente como en el servidor. Si un motor de plantillas puede ser usado del lado del cliente esto da la posibilidad de servir datos y tener todo o la mayoría del renderizado del lado del cliente.
 
-> **Nota:** En Internet hay muchos recursos que le ayudarán a comparar diferentes opciones.
+> [!NOTE]
+> En Internet hay muchos recursos que le ayudarán a comparar diferentes opciones.
 
 Para este proyecto usaremos el motor de plantillas [Pug](https://pugjs.org/api/getting-started.html) (este es el recientemente renombrado motor Jade), ya que es de los más populares lenguajes de plantillas Express/JavaScript y es soportado por el generador por defecto.
 
@@ -107,7 +111,8 @@ Para este proyecto usaremos el motor de plantillas [Pug](https://pugjs.org/api/g
 
 El _Generador de Aplicaciones Express_ le permite crear un proyecto que puede usar los más comunes motores de hojas de estilos CSS: [LESS](http://lesscss.org/), [SASS](http://sass-lang.com/), [Compass](http://compass-style.org/), [Stylus](http://stylus-lang.com/).
 
-> **Nota:** CSS tiene algunas limitaciones que dificultan ciertas tareas. Los motores de hojas de estilos CSS le permiten usar una sintaxis más poderosa para definir su CSS, y luego compilar la definición en texto plano para su uso en los navegadores .
+> [!NOTE]
+> CSS tiene algunas limitaciones que dificultan ciertas tareas. Los motores de hojas de estilos CSS le permiten usar una sintaxis más poderosa para definir su CSS, y luego compilar la definición en texto plano para su uso en los navegadores .
 
 Como los motores de plantillas, debería usar el motor CSS que le permita a su equipo ser más productivo. Para este proyecto usaremos CSS ordinario (opción por defecto) ya que nuestros requerimientos no son lo suficientemente complicados para justificar el uso de un motor CSS.
 
@@ -190,7 +195,8 @@ Debería ver una página parecida a esta:
 
 Tiene una aplicación Express funcional, ejecutandose en _localhost:3000_.
 
-> **Nota:** También podría ejecutar la app usando el comando `npm start`. Especificado la variable DEBUG como se muestra habilita el logging/debugging por consola. Por ejemplo, cuando visite la página mostrada arriba verá la información de depuración como esta:
+> [!NOTE]
+> También podría ejecutar la app usando el comando `npm start`. Especificado la variable DEBUG como se muestra habilita el logging/debugging por consola. Por ejemplo, cuando visite la página mostrada arriba verá la información de depuración como esta:
 >
 > ```bash
 > $ SET DEBUG=express-locallibrary-tutorial:* &#x26; npm start
@@ -245,7 +251,8 @@ Ahora podemos iniciar el servidor casi exactamente como antes, pero especificand
   DEBUG=express-locallibrary-tutorial:* npm run devstart
   ```
 
-> **Nota:** Ahora si modifica cualquier archivo del proyecto el servidor se reiniciará (o lo puede reiniciar `rs` en la consola de comandos en cualquier momento). Aún necesitará recargar el navegador para refrescar la página.
+> [!NOTE]
+> Ahora si modifica cualquier archivo del proyecto el servidor se reiniciará (o lo puede reiniciar `rs` en la consola de comandos en cualquier momento). Aún necesitará recargar el navegador para refrescar la página.
 >
 > Ahora tendremos que llamar "`npm run <nombre del script>`" en vez de `npm start`, porque "start" es actualmente un comando NPM que es mapeado al nombre del script. Podríamos haber reemplazado el comando en el script _start_ pero sólo queremos usar _nodemon_ durante el desarrollo, así que tiene sentido crear un nuevo script para este comando.
 
@@ -375,7 +382,8 @@ var index = require("./routes/index");
 var users = require("./routes/users");
 ```
 
-> **Nota:** En este punto, acabamos de importar el módulo; aún no hemos utilizado sus rutas (esto sucede un poco más abajo en el archivo).
+> [!NOTE]
+> En este punto, acabamos de importar el módulo; aún no hemos utilizado sus rutas (esto sucede un poco más abajo en el archivo).
 
 Next we create the `app` object using our imported _express_ module, and then use it to set up the view (template) engine. There are two parts to setting up the engine. First we set the '`views`' value to specify the folder where the templates will be stored (in this case the sub folder **/views**). Then we set the '`view engine`' value to specify the template library (in this case "pug").
 
@@ -406,7 +414,8 @@ app.use("/", index);
 app.use("/users", users);
 ```
 
-> **Nota:** The paths specified above ('/' and '`/users'`) are treated as a prefix to routes defined in the imported files. So for example if the imported **users** module defines a route for `/profile`, you would access that route at `/users/profile`. We'll talk more about routes in a later article.
+> [!NOTE]
+> The paths specified above ('/' and '`/users'`) are treated as a prefix to routes defined in the imported files. So for example if the imported **users** module defines a route for `/profile`, you would access that route at `/users/profile`. We'll talk more about routes in a later article.
 
 The last middleware in the file adds handler methods for errors and HTTP 404 responses.
 
@@ -454,7 +463,8 @@ module.exports = router;
 
 The route defines a callback that will be invoked whenever an HTTP `GET` request with the correct pattern is detected. The matching pattern is the route specified when the module is imported ('`/users`') plus whatever is defined in this file ('`/`'). In other words, this route will be used when an URL of `/users/` is received.
 
-> **Nota:** Try this out by running the server with node and visiting the URL in your browser: `http://localhost:3000/users/`. You should see a message: 'respond with a resource'.
+> [!NOTE]
+> Try this out by running the server with node and visiting the URL in your browser: `http://localhost:3000/users/`. You should see a message: 'respond with a resource'.
 
 One thing of interest above is that the callback function has the third argument '`next`', and is hence a middleware function rather than a simple route callback. While the code doesn't currently use the `next` argument, it may be useful in the future if you want to add multiple route handlers to the `'/'` route path.
 

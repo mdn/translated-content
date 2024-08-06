@@ -28,7 +28,8 @@ html::view-transition-group(*) {
 
 「古い」ビュー状態と「新しい」ビュー状態の両方がある場合、ビュートランジションスタイルシートのスタイルは、この擬似要素の {{cssxref("width")}} と {{cssxref("height")}} を「古い」ビュー状態の境界ボックスのサイズから「新しい」ビュー状態の境界ボックスのサイズにアニメーションさせます。
 
-> **メモ:** ビュートランジションスタイルシートのスタイルは、ビューのトランジション中に動的に生成されます。詳細については、仕様書の[トランジション擬似要素の設定](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements)および[擬似要素スタイルの更新](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles)の節を参照してください。
+> [!NOTE]
+> ビュートランジションスタイルシートのスタイルは、ビューのトランジション中に動的に生成されます。詳細については、仕様書の[トランジション擬似要素の設定](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements)および[擬似要素スタイルの更新](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles)の節を参照してください。
 
 さらに、要素の変換は、「古い」ビュー状態の画面空間変換から新しいビュー状態の画面空間変換へアニメーションします。アニメーションしているプロパティの値はトランジションを始める時点に決定されるため、このスタイル設定は動的に生成されます。
 

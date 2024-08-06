@@ -14,7 +14,8 @@ L'attribut `capture` prend pour valeur une chaîne de caractères qui spécifie 
 | `user`        | La caméra et/ou le microphone faisant face à l'utilisateur devraient être utilisés. |
 | `environment` | La caméra et/ou le microphone orientés vers l'extérieur devraient être utilisés.    |
 
-> **Note :** Capture était auparavant un attribut booléen qui, lorsqu'il était présent, indiqué que les périphériques de capture de l'appareil (comme la caméra ou le micro) devaient être utilisés plutôt que de demander à l'utilisateur de sélectionner un fichier.
+> [!NOTE]
+> Capture était auparavant un attribut booléen qui, lorsqu'il était présent, indiqué que les périphériques de capture de l'appareil (comme la caméra ou le micro) devaient être utilisés plutôt que de demander à l'utilisateur de sélectionner un fichier.
 
 ## Exemples
 

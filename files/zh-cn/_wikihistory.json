@@ -21758,10 +21758,6 @@
     "modified": "2020-10-15T21:37:16.105Z",
     "contributors": ["RainSlide", "yuyx91", "kgojiwong", "pantao", "holynewbie"]
   },
-  "Web/HTML/Element/menuitem": {
-    "modified": "2020-10-15T21:58:27.361Z",
-    "contributors": ["RainSlide", "wangxuedongovo"]
-  },
   "Web/HTML/Element/meta": {
     "modified": "2020-10-15T21:34:02.227Z",
     "contributors": [

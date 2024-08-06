@@ -7,11 +7,13 @@ slug: Learn/JavaScript/First_steps/Test_your_skills:_Strings
 
 El objetivo de esta prueba de habilidad es evaluar si has entendido nuestros artículos [Manejo de texto — cadenas en JavaScript](/es/docs/Learn/JavaScript/First_steps/Strings) y [Métodos de cadena útiles](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods).
 
-> **Nota:** Puedes probar las soluciones en los editores interactivos a continuación, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
+> [!NOTE]
+> Puedes probar las soluciones en los editores interactivos a continuación, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
 >
 > Si te quedas atascado, pídenos ayuda — consulta la sección [Evaluación o ayuda adicional](#evaluación_o_ayuda_adicional) en la parte inferior de esta página.
 
-> **Nota:** En los siguientes ejemplos, si hay un error en tu código, se mostrará en el panel de resultados de la página, para ayudarte a intentar averiguar la respuesta (o en la consola JavaScript del navegador, en el caso de la versión descargable).
+> [!NOTE]
+> En los siguientes ejemplos, si hay un error en tu código, se mostrará en el panel de resultados de la página, para ayudarte a intentar averiguar la respuesta (o en la consola JavaScript del navegador, en el caso de la versión descargable).
 
 ## Cadenas 1
 

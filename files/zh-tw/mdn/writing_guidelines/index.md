@@ -39,7 +39,8 @@ MDN 的使命非常簡單：提供開發者在[開放網站](/zh-TW/docs/Web)上
 
 請注意在以上範例中，「Mozilla Contributors」連結到該頁面的編輯歷史。參閱 [Best practices for attribution](http://wiki.creativecommons.org/Marking/Users) 獲得更多資訊。
 
-> **備註：** 參閱 [MDN content on WebPlatform.org](/zh-TW/docs/MDN_content_on_WebPlatform.org) 了解更多有關如何在網站上使用和標註 MDN 內容的資訊。
+> [!NOTE]
+> 參閱 [MDN content on WebPlatform.org](/zh-TW/docs/MDN_content_on_WebPlatform.org) 了解更多有關如何在網站上使用和標註 MDN 內容的資訊。
 
 在 2010 年 8 月 20 日以前新增到這個 wiki 的範例程式碼，是採用 [MIT 授權條款](http://www.opensource.org/licenses/mit-license.php)釋出。你應該在 MIT 模板中增加這些作者資訊：「© <最新的 wiki 更新日期> <寫下這段程式碼的人>」
 
@@ -49,7 +50,8 @@ MDN 的使命非常簡單：提供開發者在[開放網站](/zh-TW/docs/Web)上
 
 有些比較舊的內容可能會採用和上述不同的授權條款。這些授權條款都會在每個頁面最下方透過 [Alternate License Block](/Archive/Meta_docs/Examples/Alternate_License_Block) 列明。
 
-> **警告：** 新建立的頁面不得使用替代的授權條款。
+> [!WARNING]
+> 新建立的頁面不得使用替代的授權條款。
 
 除非作者另有聲明，否則所有貢獻素材的版權皆歸屬其作者所有。
 

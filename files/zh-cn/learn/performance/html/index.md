@@ -45,7 +45,8 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
 - 嵌入内容的交付：通常是嵌入在 {{htmlelement("iframe")}} 元素中的内容。将内容加载到 `<iframe>` 中可能会显著影响性能，因此应该仔细考虑。
 - 资源加载顺序：为了最大化感知性能和实际性能，HTML 应该首先按照在页面上出现的顺序加载。然后，你可以利用各种特性来影响资源加载顺序以获得更好的性能。例如，你可以提前预加载关键的 CSS 和字体，但将非关键的 JavaScript 推迟到稍后加载。
 
-> **备注：** 简化 HTML 结构和对源代码进行[缩小化](https://zh.wikipedia.org/wiki/極簡化)可以加快渲染和下载速度是有道理的。然而，与图像和视频相比，HTML 文件大小微不足道，而且现代浏览器的渲染速度非常快。如果你的 HTML 源代码非常庞大且复杂，导致渲染和下载性能受到影响，那么你可能存在更大的问题，并且应该考虑简化和拆分内容。
+> [!NOTE]
+> 简化 HTML 结构和对源代码进行[缩小化](https://zh.wikipedia.org/wiki/極簡化)可以加快渲染和下载速度是有道理的。然而，与图像和视频相比，HTML 文件大小微不足道，而且现代浏览器的渲染速度非常快。如果你的 HTML 源代码非常庞大且复杂，导致渲染和下载性能受到影响，那么你可能存在更大的问题，并且应该考虑简化和拆分内容。
 
 ## 响应式处理替代元素
 
@@ -170,7 +171,8 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
 
 建议将内容放在单个页面中。如果你想在页面更改时动态获取新内容，仍然比将其放入 `<iframe>` 中更好，这样可以提高性能。例如，你可以使用 {{domxref("fetch()")}} 方法获取新数据，然后使用一些 DOM 脚本将其插入到页面中。更多信息，请参见[从服务器获取数据](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)和[操作文档](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)。
 
-> **备注：** 如果你掌控内容并且内容相对简单，你可以考虑使用在 `src` 属性中以 base-64 编码的内容填充 `<iframe>`，甚至可以将原始 HTML 插入到 `srcdoc` 属性中（有关更多信息，请参见 [Iframe 性能第二部分：好消息](https://medium.com/slices-of-bread/iframe-performance-part-2-the-good-news-26eb53cea429)）。
+> [!NOTE]
+> 如果你掌控内容并且内容相对简单，你可以考虑使用在 `src` 属性中以 base-64 编码的内容填充 `<iframe>`，甚至可以将原始 HTML 插入到 `srcdoc` 属性中（有关更多信息，请参见 [Iframe 性能第二部分：好消息](https://medium.com/slices-of-bread/iframe-performance-part-2-the-good-news-26eb53cea429)）。
 
 如果必须使用 `<iframe>`，请保持谨慎。
 
@@ -195,7 +197,8 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
 4. 稍后，浏览器根据应用于它的 CSS 来确定每个 HTML 元素应该如何进行样式化。
 5. 将经过样式化的结果绘制到屏幕上。
 
-> **备注：** 这只是一个非常简单的叙述，但可以让你了解发生的事情。
+> [!NOTE]
+> 这只是一个非常简单的叙述，但可以让你了解发生的事情。
 
 多种 HTML 特性允许你修改资源加载方式以提高性能。现在我们将探讨其中一些功能。
 
@@ -239,7 +242,8 @@ pElem.addEventListener("click", () => {
 
 这会使脚本获取与 DOM 解析并行进行，因此它会在相同的时间准备好，不会阻塞渲染，从而提高性能。
 
-> **备注：** 还有另一个属性 `defer`，它会使脚本在文档解析完成之后、`DOMContentLoaded` 事件触发之前执行。这与 `async` 有类似的效果。
+> [!NOTE]
+> 还有另一个属性 `defer`，它会使脚本在文档解析完成之后、`DOMContentLoaded` 事件触发之前执行。这与 `async` 有类似的效果。
 
 处理 JavaScript 加载的另一个技巧是将脚本拆分为代码模块，并在需要时加载每个部分，而不是将所有代码放入一个巨大的脚本并在开头加载。这可以通过使用 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)来实现。阅读链接的文章以获取详细指南。
 
@@ -258,9 +262,11 @@ pElem.addEventListener("click", () => {
 - [`rel="preload"`](/zh-CN/docs/Web/HTML/Attributes/rel/preload)
 - [预加载关键资源以提高加载速度](https://web.dev/articles/preload-critical-assets) web.dev（2020）
 
-> **备注：** 你还可以使用 `rel="preload"` 预加载 CSS 和 JavaScript 文件。
+> [!NOTE]
+> 你还可以使用 `rel="preload"` 预加载 CSS 和 JavaScript 文件。
 
-> **备注：** 还有其他 [`rel`](/zh-CN/docs/Web/HTML/Attributes/rel) 值，也旨在加速页面加载的各个方面：`dns-prefetch`、`preconnect`、`modulepreload`、`prefetch` 和 `prerender`。请访问链接页面，了解它们的作用。
+> [!NOTE]
+> 还有其他 [`rel`](/zh-CN/docs/Web/HTML/Attributes/rel) 值，也旨在加速页面加载的各个方面：`dns-prefetch`、`preconnect`、`modulepreload`、`prefetch` 和 `prerender`。请访问链接页面，了解它们的作用。
 
 {{PreviousMenuNext("Learn/Performance/javascript_performance", "Learn/Performance/CSS", "Learn/Performance")}}
 

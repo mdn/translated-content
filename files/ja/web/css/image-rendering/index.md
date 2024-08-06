@@ -99,7 +99,8 @@ img {
 
 {{Compat}}
 
-> **メモ:** 仕様書の例にあるようなピクセルアートの拡大縮小には `crisp-edges` を使うことが想定されていますが、実際にはどのブラウザーも (2020 年 1 月時点で) 対応していません。[Firefox](https://dxr.mozilla.org/mozilla-central/rev/5fd4cfacc90ddd975c82ba27fdc56f4187b3f180/gfx/wr/webrender/src/resource_cache.rs#1727) では、 `pixelated` は最近傍法として解釈されますが、 `auto` と `crisp-edges` はトリリニア法または線形で補間されます。
+> [!NOTE]
+> 仕様書の例にあるようなピクセルアートの拡大縮小には `crisp-edges` を使うことが想定されていますが、実際にはどのブラウザーも (2020 年 1 月時点で) 対応していません。[Firefox](https://dxr.mozilla.org/mozilla-central/rev/5fd4cfacc90ddd975c82ba27fdc56f4187b3f180/gfx/wr/webrender/src/resource_cache.rs#1727) では、 `pixelated` は最近傍法として解釈されますが、 `auto` と `crisp-edges` はトリリニア法または線形で補間されます。
 >
 > Chromium と Safari (WebKit) での動作については、 [`GetInterpolationQuality`](https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/style/computed_style.cc?type=cs&q=GetInterpolationQuality&g=0&l=1160) 関数と [`CSSPrimitiveValue::operator ImageRendering()`](https://github.com/WebKit/webkit/blob/9b169b6c85394d94f172e5d75ca2f6c74830e99c/Source/WebCore/css/CSSPrimitiveValueMappings.h#L4324) をそれぞれ参照してください。
 

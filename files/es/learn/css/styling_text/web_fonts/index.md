@@ -72,7 +72,8 @@ Hay dos cosas importantes a tener en cuenta acerca de las tipografías web:
 1. Los navegadores admiten diferentes formatos de tipos de letra, por lo que necesitarás más de un formato de tipos de letra para conseguir una compatibilidad decente entre navegadores. Por ejemplo, la mayoría de los navegadores modernos admiten WOFF/WOFF2 (Web Open Font Format, versiones 1 y 2), el formato más eficiente disponible. Pero las versiones antiguas de Internet Explorer solo admiten tipos de letra con formato EOT (Embedded Open Type) y es posible que debas incluir una versión SVG del tipo de letra para soportar versiones antiguas de navegadores iPhone y Android. A continuación te mostraremos cómo generar el código necesario.
 2. Generalmente las fuentes no son de uso gratuito. Debes pagar por ellas y/o respetar otras condiciones de licencia, como acreditar al creador del tipo de letra en el código (o en tu sitio web). Los tipos de letra no deben robarse, ni debes utilizarlos sin otorgar a su creador el crédito apropiado.
 
-> **Nota:** ¡Los tipos de letra seguros para web como tecnología han sido compatibles con Internet Explorer desde su versión 4!
+> [!NOTE]
+> ¡Los tipos de letra seguros para web como tecnología han sido compatibles con Internet Explorer desde su versión 4!
 
 ## Aprendizaje activo: Un ejemplo de tipo de letra seguro para web
 
@@ -92,7 +93,8 @@ Vamos a ver algunos tipos de letra. Ve a [Font Squirrel](https://www.fontsquirre
 
 En cada caso, descomprime el paquete de tipos de letra (las tipografías web generalmente se distribuyen en archivos ZIP que contienen los archivos con el tipo de letra y la información de la licencia). En el paquete puede haber más de un archivo con tipos de letra: algunos tipos de letra se distribuyen por familias, con diferentes variantes disponibles, por ejemplo: _thin_, _medium_, _bold_, _italic_, _thin italic_, etc. Para este ejemplo, solo queremos que te quedes con un solo archivo de fuente para cada opción.
 
-> **Nota:** En la sección «Encontrar tipos de letra» en la columna de la derecha, puedes hacer clic en las diferentes etiquetas y clasificaciones para filtrar las opciones.
+> [!NOTE]
+> En la sección «Encontrar tipos de letra» en la columna de la derecha, puedes hacer clic en las diferentes etiquetas y clasificaciones para filtrar las opciones.
 
 ### Generar el código
 
@@ -129,7 +131,8 @@ Con tu ejemplo de demostración, deberías obtener una página con unos agradabl
 
 ![](web-font-example.png)
 
-> **Nota:** Si tienes problemas para lograr que esto funcione, no dudes en comparar tu versión con nuestros archivos terminados, consulta [web-font-finished.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html) y [web-font-finished.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css) ([ejecuta el ejemplo terminado en vivo](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html)).
+> [!NOTE]
+> Si tienes problemas para lograr que esto funcione, no dudes en comparar tu versión con nuestros archivos terminados, consulta [web-font-finished.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html) y [web-font-finished.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css) ([ejecuta el ejemplo terminado en vivo](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html)).
 
 ## Los servicios de tipos de letra en línea
 
@@ -144,7 +147,8 @@ La mayoría de estos servicios son fáciles de usar, por lo que no vamos a expon
 5. En la pantalla resultante, primero debes copiar la línea de código HTML que se muestra y pegarla en el encabezado de tu archivo HTML. Ponlo encima del elemento {{HTMLElement("link")}}, de modo que el tipo de letra se importe correctamente antes de intentar utilizarlo en tu CSS.
 6. Luego, debes copiar las declaraciones CSS enumeradas en tu CSS según corresponda para aplicar los tipos de letra personalizados a tu HTML.
 
-> **Nota:** Puedes encontrar una versión completa en [google-font.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.html) y [google-font.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.css), si necesitas comparar tu trabajo con el nuestro ([consúltalo en vivo](http://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)).
+> [!NOTE]
+> Puedes encontrar una versión completa en [google-font.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.html) y [google-font.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.css), si necesitas comparar tu trabajo con el nuestro ([consúltalo en vivo](http://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)).
 
 ## @font-face con más detalle
 
@@ -171,7 +175,8 @@ Esto se conoce como «sintaxis @font-face a prueba de balas» desde una publicac
 - `src`: Estas líneas especifican las rutas de acceso a los archivos de tipos de letra para que puedas importarlos a tu CSS (la parte `URL`) y el formato de cada archivo de tipo de letra (la parte `format`). La última parte en cada caso es opcional, pero es útil declararla porque permite que los navegadores encuentren más rápido un tipo de letra que puedan usar. Se pueden enumerar varias declaraciones, separadas por comas: el navegador buscará por ellas y usará la primera que encuentre. Por lo tanto, es mejor poner formatos nuevos y mejores, como WOFF2 y formatos más antiguos, no tan buenos, como TTF. La única excepción son las fuentes EOT: se colocan primero para corregir un par de errores en versiones anteriores de Internet Explorer, por lo que intentará usar lo primero que encuentre, incluso si realmente no puede usar la fuente.
 - {{cssxref("font-weight")}}/{{cssxref("font-style")}}: Estas líneas especifican qué grueso tiene el tipo de letra y si se muestra en cursiva o no. Si vas a importar diversos grosores del mismo tipo de letra, puedes especificar cuál es su grueso/estilo y luego usar valores de {{cssxref("font-weight")}} / {{cssxref("font-style")}} diferentes para elegir entre ellos, en lugar de tener que llamar a todos los diferentes miembros de la familia de tipos de letra con nombres distintos. [@tip-face tip: define font-weight and font-stile to keep your CSS simple](http://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/) de Roger Johansson muestra qué hacer con más detalle.
 
-> **Nota:** También puedes especificar los valores particulares {{cssxref ("font-variant")}} y {{cssxref ("font-stretch")}} para tus tipos de letra seguros para web. En los navegadores más nuevos también puedes especificar un valor {{cssxref ("unicode-range")}}, que es un rango de caracteres específicos que debes usar aparte del tipo de letra seguro para web en los navegadores que incluyan esta opción. Solo se descargaran los caracteres especificados y te ahorrarás descargas innecesarias. [Creating Custom Font Stacks with Unicode-Range](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/) de Drew McLellan proporciona algunas ideas útiles sobre cómo hacer uso de todo esto.
+> [!NOTE]
+> También puedes especificar los valores particulares {{cssxref ("font-variant")}} y {{cssxref ("font-stretch")}} para tus tipos de letra seguros para web. En los navegadores más nuevos también puedes especificar un valor {{cssxref ("unicode-range")}}, que es un rango de caracteres específicos que debes usar aparte del tipo de letra seguro para web en los navegadores que incluyan esta opción. Solo se descargaran los caracteres especificados y te ahorrarás descargas innecesarias. [Creating Custom Font Stacks with Unicode-Range](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/) de Drew McLellan proporciona algunas ideas útiles sobre cómo hacer uso de todo esto.
 
 ## Tipos de letra variables
 

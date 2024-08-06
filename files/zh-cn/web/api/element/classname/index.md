@@ -32,7 +32,8 @@ if (elm.className == "fixed") {
 
 ## 注释
 
-> **备注：** 使用名称`className`而不是`class`作为属性名，是因为"class" 在 JavaScript 中是个保留字。
+> [!NOTE]
+> 使用名称`className`而不是`class`作为属性名，是因为"class" 在 JavaScript 中是个保留字。
 
 ## 规范
 

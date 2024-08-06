@@ -7,7 +7,8 @@ slug: Web/API/Node/contains
 
 {{domxref("Node")}} 接口的 **`contains()`** 方法返回一个布尔值，表示一个节点是否是给定节点的后代，即该节点本身、其直接子节点（{{domxref("Node.childNodes", "childNodes")}}）、子节点的直接子节点等。
 
-> **备注：** 节点*包含*在自身内部。
+> [!NOTE]
+> 节点*包含*在自身内部。
 
 ## 语法
 

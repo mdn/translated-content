@@ -32,7 +32,8 @@ meter::-webkit-meter-optimum-value {
 
 {{ EmbedLiveSample('Ejemplos', '100%', 50) }}
 
-> **Nota:** Sólo funciona en navegadores basado en Webkit/Blink.
+> [!NOTE]
+> Sólo funciona en navegadores basado en Webkit/Blink.
 
 ## Especificaciones
 

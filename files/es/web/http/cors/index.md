@@ -63,7 +63,8 @@ Una petición simple es aquella que cumple todas las siguientes condiciones:
   - {{HTTPHeader("Content-Type")}} (Por favor, tenga en cuenta los siguientes requisitos adicionales)
   - {{HTTPHeader("Range")}} (solo con un [valor de cabecera de rango simple](https://fetch.spec.whatwg.org/#simple-range-header-value); por ejemplo, `bytes=256-` o `bytes=127-255`)
 
-> **Nota:** Firefox aún no ha implementado `Range` como una cabecera de solicitud en la lista segura. Véase el [error 1733981 en Firefox](https://bugzil.la/1733981).
+> [!NOTE]
+> Firefox aún no ha implementado `Range` como una cabecera de solicitud en la lista segura. Véase el [error 1733981 en Firefox](https://bugzil.la/1733981).
 
 - Las únicas combinaciones de tipo/subtipo permitidas para el {{Glossary("MIME type","media type")}} especificado en la cabecera {{HTTPHeader("Content-Type")}} son:
 
@@ -139,7 +140,8 @@ Este patrón de las cabeceras {{HTTPHeader("Origin")}} y {{HTTPHeader("Access-Co
 Access-Control-Allow-Origin: https://foo.example
 ```
 
-> **Nota:** Al responder a una petición con [solicitud con credenciales](#requests_with_credentials), el servidor debe especificar un origen en el valor de la cabecera `Access-Control-Allow-Origin`, en lugar de especificar el comodín "\*".
+> [!NOTE]
+> Al responder a una petición con [solicitud con credenciales](#requests_with_credentials), el servidor debe especificar un origen en el valor de la cabecera `Access-Control-Allow-Origin`, en lugar de especificar el comodín "\*".
 
 ### Solicitudes verificadas previamente
 
@@ -160,7 +162,8 @@ El ejemplo anterior crea un cuerpo para enviar con la solicitud `POST`. Además,
 
 ![Diagrama de una solicitud con verificación previa](preflight_correct.png)
 
-> **Nota:** Como se describe a continuación, la solicitud `POST` real no incluye las cabeceras `Access-Control-Request-*`. Estas solo son necesarias para la solicitud `OPTIONS`.
+> [!NOTE]
+> Como se describe a continuación, la solicitud `POST` real no incluye las cabeceras `Access-Control-Request-*`. Estas solo son necesarias para la solicitud `OPTIONS`.
 
 Veamos el intercambio completo entre cliente y servidor. El primer intercambio es la solicitud/respuesta verificadas previamente:
 
@@ -269,7 +272,8 @@ Sin embargo, si se trata de una solicitud que desencadena una verificación prev
 
 ### Solicitudes con credenciales
 
-> **Nota:** Cuando se realicen peticiones con credenciales a un dominio diferente, se seguirán aplicando las políticas de cookies de terceros. La política siempre se aplica independientemente de cualquier configuración en el servidor y el cliente, como se describe en este capítulo.
+> [!NOTE]
+> Cuando se realicen peticiones con credenciales a un dominio diferente, se seguirán aplicando las políticas de cookies de terceros. La política siempre se aplica independientemente de cualquier configuración en el servidor y el cliente, como se describe en este capítulo.
 
 La capacidad más interesante expuesta por {{domxref("XMLHttpRequest")}} o [Fetch](/es/docs/Web/API/Fetch_API) y CORS es la capacidad de hacer peticiones "con credenciales" que son conscientes de las [cookies HTTP](/es/docs/Web/HTTP/Cookies) y de la información de autentificación HTTP. Por defecto, en las invocaciones `XMLHttpRequest` o [Fetch](/es/docs/Web/API/Fetch_API) de origen cruzado, los navegadores **no** enviarán credenciales. Debe establecerse un indicador específico en el objeto `XMLHttpRequest` o en el constructor {{domxref("Request")}} cuando se invoca.
 
@@ -331,7 +335,8 @@ Aunque la línea 10 contiene la Cookie destinada al contenido en `https://bar.ot
 
 La solicitudes CORS de verificación previa nunca deben incluir credenciales. La respuesta a una solicitud de verificación previa debe especificar `Access-Control-Allow-Credentials: true` para indicar que la solicitud real se puede realizar con credenciales.
 
-> **Nota:** Algunos servicios de autenticación de empresas exigen que se envíen certificados de cliente TLS en las solicitudes de verificación previa, lo que contraviene la especificación [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials).
+> [!NOTE]
+> Algunos servicios de autenticación de empresas exigen que se envíen certificados de cliente TLS en las solicitudes de verificación previa, lo que contraviene la especificación [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials).
 >
 > Firefox 87 permite habilitar este comportamiento no conforme configurando la preferencia: `network.cors_preflight.allow_client_cert` en `true` ([error 1511151 en Firefox](https://bugzil.la/1511151)). Actualmente, los navegadores basados en Chromium siempre envían certificados de cliente TLS en solicitudes de verificación previa de CORS ([error 775438 en Chrome](https://crbug.com/775438)).
 
@@ -452,7 +457,8 @@ Origin: <origin>
 
 El origen es una URL que indica el servidor desde el que se inicia la solicitud. No incluye ninguna información de ruta, sólo el nombre del servidor.
 
-> **Nota:** El valor de `origin` puede ser `null`.
+> [!NOTE]
+> El valor de `origin` puede ser `null`.
 
 Tenga en cuenta que en cualquier solicitud de control de acceso, la cabecera {{HTTPHeader("Origin")}} **siempre** es enviada.
 

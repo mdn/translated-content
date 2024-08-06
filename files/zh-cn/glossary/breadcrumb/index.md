@@ -15,7 +15,8 @@ l10n:
 
 面包屑路径使用户能够了解其在网站中的位置。如果正确添加了面包屑路径，可以帮助用户知道自己在网站中的位置以及到达该位置的路径。它们还可以帮助用户返回到之前的位置，并减少到达上级页面所需的点击次数。
 
-> **备注：** 虽然没有专门用于面包屑导航菜单的 [HTML 语义元素](https://html.spec.whatwg.org/multipage/semantics-other.html#rel-up)，我们通常使用 {{htmlelement("ol")}} 来表示面包屑导航的分层结构。
+> [!NOTE]
+> 虽然没有专门用于面包屑导航菜单的 [HTML 语义元素](https://html.spec.whatwg.org/multipage/semantics-other.html#rel-up)，我们通常使用 {{htmlelement("ol")}} 来表示面包屑导航的分层结构。
 
 ## 参见
 

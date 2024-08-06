@@ -72,7 +72,8 @@ HTML の [マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_a
 
 代替コンテンツは、キャンバスのコンテンツに代わる有益なコンテンツを提供する必要があります。例えば、常に更新される株価のグラフをレンダリングしている場合、代替コンテンツは最新の株価グラフの静止画像で、`alt` テキストで株価の内容を言ったり、個々の株価ページへのリンクのリストを表示したりすることができます。
 
-> **メモ:** キャンバスのコンテンツはスクリーンリーダーにアクセスできません。キャンバス要素自体に直接 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性の値として説明テキストを含めるか、開始タグと閉じられた `<canvas>` タグ内に代替コンテンツを記述してください。キャンバスのコンテンツは DOM に所属しませんが、その中にある代替コンテンツは所属します。
+> [!NOTE]
+> キャンバスのコンテンツはスクリーンリーダーにアクセスできません。キャンバス要素自体に直接 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性の値として説明テキストを含めるか、開始タグと閉じられた `<canvas>` タグ内に代替コンテンツを記述してください。キャンバスのコンテンツは DOM に所属しませんが、その中にある代替コンテンツは所属します。
 
 ### キャンバスの作成とサイズ変更
 
@@ -104,7 +105,8 @@ HTML の [マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_a
 
    また、複数の等号で代入を一斉に連結しているのがわかると思います。これは JavaScript で許可されており、複数の変数をすべて同じ値にしたい場合に有効なテクニックです。キャンバスの幅と高さは、変数 width/height で簡単にアクセスできるようにしたいと思いました。後で利用できるようにするために有用な値だからです（たとえば、キャンバスの幅のちょうど半分の大きさのものを描きたい場合など）。
 
-> **メモ:** 一般に、画像のサイズは、上記で説明したように、 HTML 属性または DOM プロパティを使用して設定する必要があります。 CSS を使用することもできますが、サイズ設定はキャンバスがレンダリングされた後に行われるため、他の画像と同様に（レンダリングされたキャンバスは単なる画像です）、画像がピクセル化したり歪んだりする可能性があるという問題があります。
+> [!NOTE]
+> 一般に、画像のサイズは、上記で説明したように、 HTML 属性または DOM プロパティを使用して設定する必要があります。 CSS を使用することもできますが、サイズ設定はキャンバスがレンダリングされた後に行われるため、他の画像と同様に（レンダリングされたキャンバスは単なる画像です）、画像がピクセル化したり歪んだりする可能性があるという問題があります。
 
 ### キャンバスのコンテキストと最終セットアップを取得する
 
@@ -116,7 +118,8 @@ HTML の [マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_a
 const ctx = canvas.getContext("2d");
 ```
 
-> **メモ:** 他にも、 WebGL の場合は `webgl`、WebGL 2 の場合は `webgl2` などのコンテキスト値を選ぶことができますが、この記事では必要ありません。
+> [!NOTE]
+> 他にも、 WebGL の場合は `webgl`、WebGL 2 の場合は `webgl2` などのコンテキスト値を選ぶことができますが、この記事では必要ありません。
 
 これでキャンバスには下地ができ、描画する準備ができました。これで `ctx` 変数に {{domxref("CanvasRenderingContext2D")}} オブジェクトが格納され、キャンバス上でのすべての描画処理にはこのオブジェクトの操作が必要となります。
 
@@ -192,7 +195,8 @@ ctx.fillRect(0, 0, width, height);
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles/index.html", '100%', 250)}}
 
-> **メモ:** 完成版のコードは GitHub で [2_canvas_rectangles](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles) にあります。
+> [!NOTE]
+> 完成版のコードは GitHub で [2_canvas_rectangles](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles) にあります。
 
 ### パスの描画
 
@@ -281,7 +285,8 @@ ctx.fill();
 
    `arc()` は 6 つの引数を取ります。最初の 2 つは円弧の中心の位置を指定します (それぞれ X と Y)。3 番目は円の半径、4 番目と 5 番目は円を描く開始角度と終了角度を指定し（つまり 0 と 360 度を指定すると完全な円になります）、6 番目は円を反時計回りに描くか（反時計回り）時計回りに描くか（`false` は時計回り）を定義します。
 
-   > **メモ:** 0度は水平方向で右側です。
+   > [!NOTE]
+   > 0度は水平方向で右側です。
 
 2. もうひとつ、円弧を加えてみましょう。
 
@@ -302,9 +307,11 @@ ctx.fill();
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/3_canvas_paths/index.html", '100%', 200)}}
 
-> **メモ:** 完成したコードは、 GitHub で [3_canvas_paths](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/3_canvas_paths) として利用可能です。
+> [!NOTE]
+> 完成したコードは、 GitHub で [3_canvas_paths](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/3_canvas_paths) として利用可能です。
 
-> **メモ:** ベジェ曲線などの高度なパス描画機能については、[キャンバスでの図形の描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)チュートリアルをご覧ください。
+> [!NOTE]
+> ベジェ曲線などの高度なパス描画機能については、[キャンバスでの図形の描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)チュートリアルをご覧ください。
 
 ### テキスト
 
@@ -340,7 +347,8 @@ canvas.setAttribute("aria-label", "Canvas text");
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/4_canvas_text/index.html", '100%', 180)}}
 
-> **メモ:** 完成したコードは、 GitHub で [4_canvas_text](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/4_canvas_text) として利用することができます。
+> [!NOTE]
+> 完成したコードは、 GitHub で [4_canvas_text](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/4_canvas_text) として利用することができます。
 
 どんなものが出来上がるか、遊んでみてください。キャンバスのテキストで利用できるオプションについては、[テキストの描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)に詳細な情報があります。
 
@@ -391,7 +399,8 @@ canvas.setAttribute("aria-label", "Canvas text");
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/5_canvas_images/index.html", '100%', 260)}}
 
-> **メモ:** 完成したコードは、 GitHub で [5_canvas_images](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/5_canvas_images) として利用することができます。
+> [!NOTE]
+> 完成したコードは、 GitHub で [5_canvas_images](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/5_canvas_images) として利用することができます。
 
 ## ループとアニメーション
 
@@ -469,7 +478,8 @@ canvas.setAttribute("aria-label", "Canvas text");
 - length`と`moveOffset` の値で遊んでみる。
 - 上で記載したが使用しなかった `rand()` 関数を使用して乱数を導入する。
 
-> **メモ:** 完成したコードは、GitHub で [6_canvas_for_loop](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop) として利用することができます。
+> [!NOTE]
+> 完成したコードは、GitHub で [6_canvas_for_loop](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop) として利用することができます。
 
 ### アニメーション
 
@@ -477,7 +487,8 @@ canvas.setAttribute("aria-label", "Canvas text");
 
 JavaScript で、関数を 1 秒間に数回繰り返し実行することができる関数がいくつかありますが、ここでの目的に最適なのは {{domxref("window.requestAnimationFrame()")}} です。これは 1 つの引数を取ります - 各フレームに対して実行したい関数の名前です。次にブラウザーが画面の内側へ更新する準備ができたとき、その関数が呼び出されます。その関数がアニメーションの新しい更新を描画し、関数の終わりの直前に再び `requestAnimationFrame()` を呼び出すと、アニメーションループが実行され続けます。ループは `requestAnimationFrame()` の呼び出しをやめるか、呼び出した後、フレームが呼び出される前に {{domxref("window.cancelAnimationFrame()")}} を呼び出すと終わりになります。
 
-> **メモ:** アニメーションを使用し終わったら、メインコードから `cancelAnimationFrame()` を呼び出して、まだ実行されるのを待っている更新がないことを確認するのは良い習慣です。
+> [!NOTE]
+> アニメーションを使用し終わったら、メインコードから `cancelAnimationFrame()` を呼び出して、まだ実行されるのを待っている更新がないことを確認するのは良い習慣です。
 
 ブラウザーは、アニメーションを一定の速度で実行したり、見えないものをアニメーションさせるのに無駄なリソースを使わないようにするなど、複雑な細部にわたって作業しています。
 
@@ -514,7 +525,8 @@ loop();
 4. 手順 2 で保存した設定を {{domxref("CanvasRenderingContext2D.restore", "restore()")}} を使用して復元します。
 5. `requestAnimationFrame()` を呼び出して、アニメーションの次のフレームを描画するように予約します。
 
-> **メモ:** ここでは `save()` と `restore()` は取り上げませんが、これらは[座標変換](/ja/docs/Web/API/Canvas_API/Tutorial/Transformations)のチュートリアル (とそれに続くもの) でうまく説明されています。
+> [!NOTE]
+> ここでは `save()` と `restore()` は取り上げませんが、これらは[座標変換](/ja/docs/Web/API/Canvas_API/Tutorial/Transformations)のチュートリアル (とそれに続くもの) でうまく説明されています。
 
 ### 簡単なキャラクターのアニメーション
 
@@ -625,7 +637,8 @@ loop();
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation/index.html", '100%', 260)}}
 
-> **メモ:** 最終的なコードは、GitHub 上の [7_canvas_walking_animation](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation) として利用できます。
+> [!NOTE]
+> 最終的なコードは、GitHub 上の [7_canvas_walking_animation](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation) として利用できます。
 
 ### 簡単なお絵描きアプリ
 
@@ -808,7 +821,8 @@ WebGLライブラリーを使って何かを作成する簡単な例を見てみ
 
 [完成したコードは GitHub で見つける](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-cube)ことができます。
 
-> **メモ:** GitHub リポジトリーには、もうひとつ興味深い 3D 立方体の例である [Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)) も掲載されています。これは {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} を使用して、コンピューターのウェブカメラから動画ストリームを受け取り、それをテクスチャとして立方体の横に投影しています。
+> [!NOTE]
+> GitHub リポジトリーには、もうひとつ興味深い 3D 立方体の例である [Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)) も掲載されています。これは {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} を使用して、コンピューターのウェブカメラから動画ストリームを受け取り、それをテクスチャとして立方体の横に投影しています。
 
 ## まとめ
 

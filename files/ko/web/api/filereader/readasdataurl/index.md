@@ -96,7 +96,7 @@ function previewFiles() {
 }
 ```
 
-> **참고:**
+> [!NOTE]
 >
 > [`FileReader()`](/ko/docs/Web/API/FileReader) 생성자는 Internet Explorer 10 이전 버전에서는 지원하지 않는 기능입니다.
 >

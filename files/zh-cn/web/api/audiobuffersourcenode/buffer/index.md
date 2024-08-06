@@ -15,7 +15,8 @@ slug: Web/API/AudioBufferSourceNode/buffer
 
 ## 示例
 
-> **备注：** 完整的示例请查看[演示示例](https://mdn.github.io/webaudio-examples/audio-buffer/)，或[查看源代码](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html)。
+> [!NOTE]
+> 完整的示例请查看[演示示例](https://mdn.github.io/webaudio-examples/audio-buffer/)，或[查看源代码](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html)。
 
 ```js
 const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);

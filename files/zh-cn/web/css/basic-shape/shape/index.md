@@ -78,7 +78,8 @@ clip-path: shape(
 
     `to`：表示 `<coordinate-pair>` 相对于参考框的左上角的位置（“绝对”值）。
 
-    > **备注：** 如果 `<coordinate-pair>` 中的坐标以百分比形式指定，则该值相对于参考框的宽度或高度进行计算。
+    > [!NOTE]
+    > 如果 `<coordinate-pair>` 中的坐标以百分比形式指定，则该值相对于参考框的宽度或高度进行计算。
 
     可以指定 `<move-command>`、`<line-command>`、`<hv-line-command>`、`<curve-command>`、`<smooth-command>`、`<arc-command>` 和 `close` 作为 `<shape-command>`。
 

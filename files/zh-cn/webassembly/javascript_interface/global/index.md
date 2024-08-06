@@ -71,7 +71,8 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 );
 ```
 
-> **备注：** 你可以查看 [GitHub 上运行的实时](https://mdn.github.io/webassembly-examples/js-api-examples/global.html)示例；也可以查看[源代码](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html)。
+> [!NOTE]
+> 你可以查看 [GitHub 上运行的实时](https://mdn.github.io/webassembly-examples/js-api-examples/global.html)示例；也可以查看[源代码](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html)。
 
 ## 规格
 

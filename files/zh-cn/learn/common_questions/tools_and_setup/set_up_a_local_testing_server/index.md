@@ -54,7 +54,8 @@ slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 
 实现这一目标的另一种方法是使用 Python 的 `http.server` 模块。
 
-> **备注：** 旧版本的 Python（直到版本 2.7）提供了一个类似的模块，名为 `SimpleHTTPServer`。如果你正在使用 Python 2.x，你可以通过将所有的 `http.server` 替换为 `SimpleHTTPServer` 来遵循这个指南。然而，我们建议你使用 Python 的最新版本。
+> [!NOTE]
+> 旧版本的 Python（直到版本 2.7）提供了一个类似的模块，名为 `SimpleHTTPServer`。如果你正在使用 Python 2.x，你可以通过将所有的 `http.server` 替换为 `SimpleHTTPServer` 来遵循这个指南。然而，我们建议你使用 Python 的最新版本。
 
 要做到这一点：
 
@@ -98,7 +99,8 @@ slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 
 5. 默认情况下，这会在 8000 端口上启动本地服务器，以提供文件夹中的内容。你可以在浏览器中访问 URL `http://localhost:8000` 来访问服务器。你将在此处看到列出的目录内容——点击你要运行的 HTML 文件即可。
 
-> **备注：** 如果你已经在端口 8000 上运行了一些内容，你可以通过在运行服务器的命令后面加上备用端口号来选择另一个端口，例如 `python3 -m http.server 7800`（Python 3.x）或 `python -m SimpleHTTPServer 7800`（Python 2.x）。然后你可以在 `localhost:7800` 访问你的内容。
+> [!NOTE]
+> 如果你已经在端口 8000 上运行了一些内容，你可以通过在运行服务器的命令后面加上备用端口号来选择另一个端口，例如 `python3 -m http.server 7800`（Python 3.x）或 `python -m SimpleHTTPServer 7800`（Python 2.x）。然后你可以在 `localhost:7800` 访问你的内容。
 
 ## 在本地运行服务器端语言
 

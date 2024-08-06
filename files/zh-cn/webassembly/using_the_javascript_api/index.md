@@ -7,13 +7,15 @@ slug: WebAssembly/Using_the_JavaScript_API
 
 如果你已经使用 Emscripten 等工具编译了另一种语言的模块，或者自己加载并运行代码，那么下一步是了解如何使用 WebAssembly JavaScript API 的其他功能。这篇文章告诉你你需要知道什么。
 
-> **备注：** 如果你不熟悉本文中提到到基础概念并且需要更多的解释，先阅读 [WebAssembly 概念](/zh-CN/docs/WebAssembly/Concepts) 然后再回来。
+> [!NOTE]
+> 如果你不熟悉本文中提到到基础概念并且需要更多的解释，先阅读 [WebAssembly 概念](/zh-CN/docs/WebAssembly/Concepts) 然后再回来。
 
 ## 一个简单的例子
 
 让我们通过一步一步的例子来了解如何在 WebAssembly 中使用 Javascript API，和如何在网页中加载一个 wasm 模块。
 
-> **备注：** 你可以发现同样的代码在 [webassembly-examples](https://github.com/mdn/webassembly-examples) GitHub 仓库。
+> [!NOTE]
+> 你可以发现同样的代码在 [webassembly-examples](https://github.com/mdn/webassembly-examples) GitHub 仓库。
 
 ### 准备工作
 
@@ -55,11 +57,13 @@ fetch("simple.wasm")
   });
 ```
 
-> **备注：** 我们已经非常详细地解释了这种语法如何工作通过[加载和运行 WebAssembly 代码](/zh-CN/docs/WebAssembly/Loading_and_running#使用Fetch)。如果不确定，请回到那里进行复习。
+> [!NOTE]
+> 我们已经非常详细地解释了这种语法如何工作通过[加载和运行 WebAssembly 代码](/zh-CN/docs/WebAssembly/Loading_and_running#使用Fetch)。如果不确定，请回到那里进行复习。
 
 这样做的结果是执行我们导出的 WebAssembly 函数 exported_func，这样又调用了另一个我们导入的 JavaScript 函数 imported_func, 它将 WebAssembly 实例（42）中提供的值记录到控制台。如果你保存实例代码并且在支持 WebAssembly 的浏览器中运行，你将看到此操作。
 
-> **备注：** WebAssembly 在 Firefox 52+ 和 Chrome 57+/latest Opera 是默认支持的 (你也可以运行 wasm 代码 在 Firefox 47+ 通过将 _about:config_ 中的 `javascript.options.wasm` flag 设置为 enabling , 或者在 Chrome (51+) 以及 Opera (38+) 通过访问 _chrome://flags_ 并且将 _Experimental WebAssembly_ flag 设置为 enabling.)
+> [!NOTE]
+> WebAssembly 在 Firefox 52+ 和 Chrome 57+/latest Opera 是默认支持的 (你也可以运行 wasm 代码 在 Firefox 47+ 通过将 _about:config_ 中的 `javascript.options.wasm` flag 设置为 enabling , 或者在 Chrome (51+) 以及 Opera (38+) 通过访问 _chrome://flags_ 并且将 _Experimental WebAssembly_ flag 设置为 enabling.)
 
 这是一个冗长的，令人费解的例子并且实现了很少的功能，但它确实有助于说明这是可能的——在 Web 应用中与 JavaScript 一起使用 WebAssembly 代码。正如我们一直说的，WebAssembly 并不旨在替代 JavaScript; 两者可以一起工作，借鉴对方的优势。
 
@@ -125,7 +129,8 @@ Note: 由于 {{domxref("ArrayBuffer")}} 的 byteLength 是不可变的，所以�
 
 1. 像前面那样在相同的目录下复制一份 memory.wasm。
 
-   > **备注：** 你可以在这里 [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat) 找到模块的文本表示形式。
+   > [!NOTE]
+   > 你可以在这里 [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat) 找到模块的文本表示形式。
 
 2. 回到你的示例文件 `memory.html`，像前面那样获取、编译和实例化你的 wasm 模块——在你的脚本代码底部加入下面的代码：
 
@@ -155,7 +160,8 @@ Note: 由于 {{domxref("ArrayBuffer")}} 的 byteLength 是不可变的，所以�
 - 它们允许 JavaScript 在模块编译之前或者同时获取和创建内存的初始内容。
 - 它们允许一个单一的内存对象被多个模块实例导入，对于实现 WebAssembly 动态链接来说，这是一个关键的构建模块。
 
-> **备注：** 你可以在这里 [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html)（[或实时运行](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)）找到我们的完整例子——这个版本使用了 [fetchAndInstantiate()](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) 函数。
+> [!NOTE]
+> 你可以在这里 [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html)（[或实时运行](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)）找到我们的完整例子——这个版本使用了 [fetchAndInstantiate()](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) 函数。
 
 ## 表格
 
@@ -175,7 +181,8 @@ WebAssembly 表格是一个可变大小的带类型的引用数组，其中的�
 
 1. 在一个新的目录中复制一份 table.wasm。
 
-   > **备注：** 你可以在 [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat) 中查看模块的文本表示。
+   > [!NOTE]
+   > 你可以在 [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat) 中查看模块的文本表示。
 
 2. 创建一份 [HTML 模板](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)的新副本并将其命名为`table.html`.
 3. 如前所示，获取、编译并且实例化你的 wasm 模块——将下面的代码放入到 HTML body 底部的 [\<script>](/zh-CN/docs/Web/HTML/Element/script) 节点里面：
@@ -196,7 +203,8 @@ WebAssembly 表格是一个可变大小的带类型的引用数组，其中的�
 
 这段代码获取获取了存储在表格中的每一个函数引用，然后实例化它们从而将它们拥有的值打印到控制台——注意每一个函数引用是如何使用 [Table.prototype.get()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) 函数获取的以及在其后面增加一对小括号从而真正的调用该函数。
 
-> **备注：** 你可以在 [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html)（[或实时查看运行](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)）找到我们完整的示例——这个版本使用了 [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) 函数。
+> [!NOTE]
+> 你可以在 [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html)（[或实时查看运行](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)）找到我们完整的示例——这个版本使用了 [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) 函数。
 
 ## 多样性
 

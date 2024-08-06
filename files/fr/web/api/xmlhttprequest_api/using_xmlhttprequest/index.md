@@ -34,7 +34,8 @@ req.send();
 
 Une requête envoyée avec `XMLHttpRequest` peut récupérer les données de façon asynchrone ou de façon synchrone. Le comportement obtenu est choisi avec le troisième argument optionnel `async` de la méthode [`XMLHttpRequest.open()`](/fr/docs/Web/API/XMLHttpRequest/open). Lorsque cet argument vaut `true` ou s'il n'est pas fourni, la requête est traitée de façon asynchrone. Sinon, le processus est géré de façon synchrone. Pour en savoir plus sur ces différents types de requêtes, vous pouvez consulter l'article [Requêtes synchrones et asynchrones](/fr/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests). Les requêtes synchrones ne peuvent pas être utilisées en dehors des <i lang="en">workers</i>, car elles bloqueraient l'interface principale.
 
-> **Note :** Le constructeur `XMLHttpRequest` ne se limite pas aux seuls documents XML. Son nom commence par **"XML"**, car il a été créé lorsque le format d'échange principal était XML.
+> [!NOTE]
+> Le constructeur `XMLHttpRequest` ne se limite pas aux seuls documents XML. Son nom commence par **"XML"**, car il a été créé lorsque le format d'échange principal était XML.
 
 ## Gérer les réponses
 
@@ -138,7 +139,8 @@ function transferCanceled(evt) {
 
 Les lignes 3 à 6 du fragment ci-avant ajoutent les gestionnaires d'évènements pour les différents évènements émis à propos du transfert des données à l'aide de `XMLHttpRequest`.
 
-> **Note :** Ces gestionnaires d'évènements doivent être ajoutés avant d'appeler `open()` sur la requête. Sinon, les évènements `progress` ne seront pas captés.
+> [!NOTE]
+> Ces gestionnaires d'évènements doivent être ajoutés avant d'appeler `open()` sur la requête. Sinon, les évènements `progress` ne seront pas captés.
 
 Le gestionnaire d'évènement pour l'avancement, porté par la fonction `updateProgress()` dans l'exemple, reçoit le nombre total d'octets à transférer (`total`) ainsi que le nombre d'octets transférés jusqu'à présent (`loaded`). Toutefois, si le champ `lengthComputable` vaut `false`, la longueur totale est inconnue et vaudra `0` par défaut.
 
@@ -155,7 +157,8 @@ req.upload.addEventListener("abort", transferCanceled);
 oReq.open();
 ```
 
-> **Note :** Les évènements d'avancement ne sont pas disponibles pour le protocole `file:`.
+> [!NOTE]
+> Les évènements d'avancement ne sont pas disponibles pour le protocole `file:`.
 
 Les évènements d'avancements sont émis à chaque fragment (<i lang="en">chunk</i>) de données reçu, y compris le dernier fragment pour les cas où le paquet est reçu et la connexion fermée avant que l'évènement soit déclenché. Dans ce cas, l'évènement `progress` est automatiquement déclenché lorsque l'évènement `load` se produit pour ce paquet. Cela permet de surveiller l'avancement de façon fiable, à l'aide du seul évènement `progress`.
 

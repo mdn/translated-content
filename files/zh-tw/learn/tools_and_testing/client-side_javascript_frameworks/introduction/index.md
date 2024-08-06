@@ -186,7 +186,8 @@ JavaScript 框架都會提供一種能更加*宣告性*撰寫介面的方法。�
 
 本模塊提到的幾個框架，背後都有著龐大而活躍的社群；這些社群形成了各種生態圈、並提供能增進開發體驗的工具：像是確保功能正常的測試、或著維持程式一致性的 linting。
 
-> **備註：** 如果對這方面的概念有興趣，請看看 [Client-side tooling overview](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)。
+> [!NOTE]
+> 如果對這方面的概念有興趣，請看看 [Client-side tooling overview](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)。
 
 ### 切分
 
@@ -257,7 +258,8 @@ web 最重要的功能之一，就是頁面之間的導航：畢竟它就是相�
 | Vue     | IE9+                              | 基於 HTML  | 基於 HTML, JSX, Pug    |
 | Ember   | 當代瀏覽器（IE9+ 直到 2.18 為止） | Handlebars | Handlebars, TypeScript |
 
-> **備註：** 「基於 HTML」的 DSL 並沒有官方名字。雖然它們不完全是 DSL，但也不是標準的 HTML，所在我們在此附帶一題。
+> [!NOTE]
+> 「基於 HTML」的 DSL 並沒有官方名字。雖然它們不完全是 DSL，但也不是標準的 HTML，所在我們在此附帶一題。
 
 表格的引用來源：
 
@@ -297,7 +299,8 @@ Vue 的開發團隊也寫了[有關 Vue 與其他框架的詳盡比較](https://
 
 本模塊的所有用戶端渲染框架，都有相對應的伺服器端渲染。像是 React 的 [Next.js](https://nextjs.org/)、Vue 的 [Nuxt.js](https://nuxtjs.org/)（對這的確很教人困惑，不過兩者沒有關係）、Ember 的 [FastBoot](https://github.com/ember-fastboot/ember-cli-fastboot)、Angular 的 [Angular Universal](https://angular.io/guide/universal)。
 
-> **備註：** 某些伺服器端渲染的解決方案，是由社區編寫和維護；但也有「官方」的解決方案，是由框架維護者提供的。
+> [!NOTE]
+> 某些伺服器端渲染的解決方案，是由社區編寫和維護；但也有「官方」的解決方案，是由框架維護者提供的。
 
 ### 靜態網站產生器
 

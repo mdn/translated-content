@@ -30,7 +30,8 @@ Llamar al método `toSource` de una instancia {{JSxRef("Error")}} (incluido {{JS
 
 donde estos atributos corresponden a las propiedades respectivas de la instancia de `error`.
 
-> **Nota:** Ten en cuenta que las propiedades utilizadas por el método `toSource` en la creación de esta cadena son mutables y es posible que no reflejen con precisión la función utilizada para crear una instancia de `error` o el nombre de archivo o número de línea donde ocurrió un error real.
+> [!NOTE]
+> Ten en cuenta que las propiedades utilizadas por el método `toSource` en la creación de esta cadena son mutables y es posible que no reflejen con precisión la función utilizada para crear una instancia de `error` o el nombre de archivo o número de línea donde ocurrió un error real.
 
 ## Ve también
 

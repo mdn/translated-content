@@ -11,7 +11,8 @@ Esta transformación de escalado se caracteriza por un vector bidimensional. Sus
 
 Cuando un valor de coordenadas está fuera del rango \[-1, 1], el elemento crece a lo largo de esa dimensión; cuando está dentro, se encoge. Si es negativo, el resultado es un reflejo de punto en esa dimensión. Un valor de 1 no tiene ningún efecto.
 
-> **Nota:** La función scale() solo se escala en 2d. Para escalar en 3D se utiliza la función scale3d() en su lugar.
+> [!NOTE]
+> La función scale() solo se escala en 2d. Para escalar en 3D se utiliza la función scale3d() en su lugar.
 
 ## Sintaxis
 

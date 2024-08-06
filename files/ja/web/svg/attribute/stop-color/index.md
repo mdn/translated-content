@@ -9,9 +9,11 @@ l10n:
 
 **`stop-color`** 属性は、グラデーションの色経由点で使用する色を示します。
 
-> **メモ:** グラデーションに関して、SVG は `transparent` キーワードを CSS とは異なる方法で扱います。SVG はグラデーションを事前に乗算された空間で計算しないので、 `transparent` は実際には透明な黒を意味します。そのため、 `stop-color` に `transparent` という値を指定することは、 `stop-color` に `black` という値を指定し、 {{SVGAttr("stop-opacity")}} に `0` という値を指定することと同じです。
+> [!NOTE]
+> グラデーションに関して、SVG は `transparent` キーワードを CSS とは異なる方法で扱います。SVG はグラデーションを事前に乗算された空間で計算しないので、 `transparent` は実際には透明な黒を意味します。そのため、 `stop-color` に `transparent` という値を指定することは、 `stop-color` に `black` という値を指定し、 {{SVGAttr("stop-opacity")}} に `0` という値を指定することと同じです。
 
-> **メモ:** プレゼンテーション属性である `stop-color` は、CSS プロパティとして使用することができます。
+> [!NOTE]
+> プレゼンテーション属性である `stop-color` は、CSS プロパティとして使用することができます。
 
 この属性は以下の SVG 要素で使用することができます。
 

@@ -152,7 +152,8 @@ When a cache receives a request that has a `Vary` header field, it must not use 
 Vary: Accept-Encoding
 ```
 
-> **備註：** Use `Vary` with care—it can easily reduce the effectiveness of caching! A caching server should use [normalization](#normalization) to reduce duplicated cache entries and unnecessary requests to the origin server. This is particularly true when using `Vary` with headers and header values that can have many values.
+> [!NOTE]
+> Use `Vary` with care—it can easily reduce the effectiveness of caching! A caching server should use [normalization](#normalization) to reduce duplicated cache entries and unnecessary requests to the origin server. This is particularly true when using `Vary` with headers and header values that can have many values.
 
 The `Vary` header can also be useful for serving different content to desktop and mobile users, or to allow search engines to discover the mobile version of a page (and perhaps also tell them that no [Cloaking](https://en.wikipedia.org/wiki/Cloaking) is intended). This is usually achieved with the `Vary: User-Agent` header, and works because the {{HTTPHeader("User-Agent")}} header value is different for mobile and desktop clients.
 

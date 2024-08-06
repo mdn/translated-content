@@ -9,7 +9,8 @@ l10n:
 
 Canvas 2D API 的 **`CanvasRenderingContext2D.lineDashOffset`** 属性用于设置虚线偏移量或者称为“相位”。
 
-> **备注：** 要绘制线条，需调用 {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} 方法。
+> [!NOTE]
+> 要绘制线条，需调用 {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} 方法。
 
 ## 值
 

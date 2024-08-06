@@ -41,7 +41,8 @@ OPFS 提供了页面所属源私有的、对用户不可见的、底层的逐字
 
 在主线程中访问 OPFS 时，你要使用基于 {{jsxref("Promise")}} 的异步 API。你可以调用代表 OPFS 根目录（以及其中被创建的子目录）的 {{domxref("FileSystemDirectoryHandle")}} 对象上的 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} 和 {{domxref("FileSystemDirectoryHandle.getDirectoryHandle()")}} 方法来分别访问文件（{{domxref("FileSystemFileHandle")}}）和目录（{{domxref("FileSystemDirectoryHandle")}}）。
 
-> **备注：** 在上述方法中传入 `{ create: true }` 会在文件或文件夹不存在时创建相应的文件或文件夹。
+> [!NOTE]
+> 在上述方法中传入 `{ create: true }` 会在文件或文件夹不存在时创建相应的文件或文件夹。
 
 ```js
 // 创建层级结构的文件和文件夹
@@ -122,7 +123,8 @@ Web Worker 不会阻塞主线程，这意味着你可以在其上下文中使用
 
 你可以通过在常规的 {{domxref("FileSystemFileHandle")}} 上调用 {{domxref("FileSystemFileHandle.createSyncAccessHandle()")}} 来同步地处理文件：
 
-> **备注：** 虽然 `createSyncAccessHandle()` 的名称带有“Sync（同步）”字眼，但是这个方法本身是异步的。
+> [!NOTE]
+> 虽然 `createSyncAccessHandle()` 的名称带有“Sync（同步）”字眼，但是这个方法本身是异步的。
 
 ```js
 const opfsRoot = await navigator.storage.getDirectory();

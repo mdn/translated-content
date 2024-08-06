@@ -9,7 +9,8 @@ slug: Web/HTML/Global_attributes/itemscope
 
 Todos los elementos HTML pueden tener un atributo `itemscope` especifico. Un elemento `itemscope` no tiene un asociado `itemtype` pero tiene un sociado `itemref`.
 
-> **Nota:** Encuentra mas acerca del atributo `itemtype` en <http://schema.org/Thing>
+> [!NOTE]
+> Encuentra mas acerca del atributo `itemtype` en <http://schema.org/Thing>
 
 ### Ejemplo simple
 
@@ -232,7 +233,8 @@ Los siguientes son un ejemplo renderizado resultado del codigo del anterior ejem
   </tbody>
 </table>
 
-> **Nota:** Una herramienta practica para extraer estructuras microdata del HTML es [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/) de Google. Pruebalo en el HTML del ejemplo anterior.
+> [!NOTE]
+> Una herramienta practica para extraer estructuras microdata del HTML es [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/) de Google. Pruebalo en el HTML del ejemplo anterior.
 
 ## Especificaciones
 

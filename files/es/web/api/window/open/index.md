@@ -76,7 +76,8 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 
 **If the `strWindowFeatures` parameter is used, the features that are not listed will be disabled or removed** (except `titlebar` and `close` which are by default `yes`).
 
-> **Nota:** If using the `strWindowFeatures` parameter, only list the features to be enabled or rendered; the others (except `titlebar` and `close`) will be disabled or removed.
+> [!NOTE]
+> If using the `strWindowFeatures` parameter, only list the features to be enabled or rendered; the others (except `titlebar` and `close`) will be disabled or removed.
 >
 > Note that in some browsers, users can override the `strWindowFeatures` settings and enable (or prevent the disabling of) features.
 
@@ -127,7 +128,8 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 
   - : If this feature is on, then the new secondary window renders the Location bar in Mozilla-based browsers. MSIE 5+ and Opera 7.x renders the Address Bar. Mozilla and Firefox users can force new windows to always render the location bar by setting `dom.disable_window_open_feature.location` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js).
 
-    > **Nota:** In Firefox 3, `dom.disable_window_open_feature.location` now defaults to _true_, forcing the presence of the Location Bar much like in IE7. See bug 337344 for more information.
+    > [!NOTE]
+    > In Firefox 3, `dom.disable_window_open_feature.location` now defaults to _true_, forcing the presence of the Location Bar much like in IE7. See bug 337344 for more information.
 
     Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png), ![Opera 6+](opera6.gif)
 
@@ -156,7 +158,8 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 
     Starting with Firefox 3, secondary windows are always resizable ([Error 177838 en Firefox](https://bugzil.la/177838))
 
-    > **Nota:** For accessibility reasons, it is strongly recommended to set this feature always on
+    > [!NOTE]
+    > For accessibility reasons, it is strongly recommended to set this feature always on
 
     Mozilla and Firefox users can force new windows to be easily resizable by setting
     `dom.disable_window_open_feature.resizable`
@@ -166,7 +169,8 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 
   - : If this feature is on, the new secondary window will show horizontal and/or vertical scrollbar(s) if the document doesn't fit into the window's viewport.
 
-    > **Nota:** For accessibility reasons, it is strongly encouraged to set this feature always on.
+    > [!NOTE]
+    > For accessibility reasons, it is strongly encouraged to set this feature always on.
 
     Mozilla and Firefox users can force this option to be always enabled for new windows by setting
     `dom.disable_window_open_feature.scrollbars`
@@ -184,7 +188,8 @@ The following features require the `UniversalBrowserWrite` privilege, otherwise 
 
   - : **Note**: Starting with Mozilla 1.2.1, this feature requires the `UniversalBrowserWrite` privilege ([Error 180048 en Firefox](https://bugzil.la/180048)). Without this privilege, it is ignored. If on, the new window is said to be modal. The user cannot return to the main window until the modal window is closed. A typical modal window is created by the [alert() function](/es/docs/DOM/window.alert). The exact behavior of modal windows depends on the platform and on the Mozilla release version.
 
-    > **Nota:** As of Gecko 1.9, the Internet Explorer equivalent to this feature is the {{domxref("window.showModalDialog()")}} method. For compatibility reasons, it's now supported in Firefox. Note also that starting in Gecko 2.0, you can use {{domxref("window.showModalDialog()")}} without UniversalBrowserWrite privileges.
+    > [!NOTE]
+    > As of Gecko 1.9, the Internet Explorer equivalent to this feature is the {{domxref("window.showModalDialog()")}} method. For compatibility reasons, it's now supported in Firefox. Note also that starting in Gecko 2.0, you can use {{domxref("window.showModalDialog()")}} without UniversalBrowserWrite privileges.
 
     Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 

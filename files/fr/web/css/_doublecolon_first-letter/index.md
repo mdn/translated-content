@@ -59,7 +59,8 @@ Seul un petit sous-groupe de propriétés CSS peuvent être utilisées dans un b
 
 Puisque cette liste sera complétée dans l'avenir, il est recommandé de ne pas utiliser d'autres propriétés dans un bloc de déclaration, de manière à concevoir un CSS pérenne.
 
-> **Note :** Dans CSS 2, les pseudo-éléments étaient précédés d'un seul caractère deux-points. Puisque les pseudo-classes suivaient elles aussi cette convention, la distinction était impossible. Afin de résoudre ce problème, CSS 2.1 a modifié la convention des pseudo-éléments. Désormais un pseudo-élément est précédé de deux caractères deux-points, et une pseudo-classe est toujours précédée d'un seul caractère deux-points.
+> [!NOTE]
+> Dans CSS 2, les pseudo-éléments étaient précédés d'un seul caractère deux-points. Puisque les pseudo-classes suivaient elles aussi cette convention, la distinction était impossible. Afin de résoudre ce problème, CSS 2.1 a modifié la convention des pseudo-éléments. Désormais un pseudo-élément est précédé de deux caractères deux-points, et une pseudo-classe est toujours précédée d'un seul caractère deux-points.
 >
 > Du fait que de nombreux navigateurs avaient déjà implémentés la syntaxe CSS 2 dans une version publique, tous les navigateurs supportant la syntaxe à deux caractères deux-points peuvent aussi supporter l'ancienne syntaxe à un caractère deux-points.
 >

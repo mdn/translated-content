@@ -74,7 +74,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 - `windowId`
   - : `integer`. このタブのホストのウィンドウの ID。
 
-> **メモ:** In extension background scripts, the only properties that are available are tabId and **windowId.**
+> [!NOTE]
+> In extension background scripts, the only properties that are available are tabId and **windowId.**
 
 ## ブラウザーの互換性
 
@@ -82,7 +83,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 
 {{WebExtExamples}}
 
-> **メモ:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#type-Tab) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#type-Tab) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -35,7 +35,8 @@ Your code will be richer and more professional as a result, and you'll be able t
 
 ## React tutorials
 
-> **Примечание:** React tutorials last tested in May 2020, with React/ReactDOM 16.13.1 and create-react-app 3.4.1.
+> [!NOTE]
+> React tutorials last tested in May 2020, with React/ReactDOM 16.13.1 and create-react-app 3.4.1.
 >
 > If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react-build/>.
 
@@ -56,7 +57,8 @@ Your code will be richer and more professional as a result, and you'll be able t
 
 ## Ember tutorials
 
-> **Примечание:** Ember tutorials last tested in May 2020, with Ember/Ember CLI version 3.18.0.
+> [!NOTE]
+> Ember tutorials last tested in May 2020, with Ember/Ember CLI version 3.18.0.
 >
 > If you need to check your code against our version, you can find a finished version of the sample Ember app code in the [ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc). For a running live version, see <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> (this also includes a few additional features not covered in the tutorial).
 
@@ -75,7 +77,8 @@ Your code will be richer and more professional as a result, and you'll be able t
 
 ## Vue tutorials
 
-> **Примечание:** Vue tutorials last tested in May 2020, with Vue 2.6.11.
+> [!NOTE]
+> Vue tutorials last tested in May 2020, with Vue 2.6.11.
 >
 > If you need to check your code against our version, you can find a finished version of the sample Vue app code in our [todo-vue repository](https://github.com/mdn/todo-vue). For a running live version, see <https://mdn.github.io/todo-vue/dist/>.
 

@@ -11,7 +11,8 @@ Es útil comenzar con una descripción general de la historia del lenguaje. Java
 
 Varios meses después, Microsoft lanzó JScript con Internet Explorer 3. Era un JavaScript prácticamente compatible. Varios meses después de eso, Netscape envió JavaScript a [Ecma International](http://www.ecma-international.org/), una organización europea de estándares, que resultó en la primera edición del estándar {{Glossary("ECMAScript")}} ese año. El estándar recibió una actualización significativa como [ECMAScript edición 3](http://www.ecma-international.org/publications/standards/Ecma-262.htm) en 1999, y se ha mantenido bastante estable desde entonces. La cuarta edición fue abandonada debido a diferencias políticas sobre la complejidad del lenguaje. Muchas partes de la cuarta edición formaron la base para la edición 5 de ECMAScript, publicada en diciembre de 2009, y para la sexta edición principal del estándar, publicada en junio de 2015.
 
-> **Nota:** Debido a que es más familiar, nos referiremos a ECMAScript como "JavaScript" de ahora en adelante.
+> [!NOTE]
+> Debido a que es más familiar, nos referiremos a ECMAScript como "JavaScript" de ahora en adelante.
 
 A diferencia de la mayoría de los lenguajes de programación, el lenguaje JavaScript no tiene un concepto de entrada o salida. Está diseñado para ejecutarse como un lenguaje de `scripting` en un entorno hospedado, y depende del entorno para proporcionar los mecanismos para comunicarse con el mundo exterior. El entorno de alojamiento más común es el navegador, pero también se pueden encontrar intérpretes de JavaScript en una gran lista de otros lugares, incluidos Adobe Acrobat, Adobe Photoshop, imágenes SVG, el motor de widgets de Yahoo, entornos de lado del servidor como [Node.js](http://nodejs.org/), bases de datos NoSQL como [Apache CouchDB](http://couchdb.apache.org/) de código abierto, computadoras integradas, entornos de escritorio completos como [GNOME](http://www.gnome.org/) (una de las IGU —_Interfaz Gráfica de Usuario_— más populares para sistemas operativos GNU/Linux), y otros.
 
@@ -137,7 +138,8 @@ isFinite(-Infinity); // false
 isFinite(NaN); // false
 ```
 
-> **Nota:** Las funciones {{jsxref("Objetos_Globales/parseInt", "parseInt()")}} y {{jsxref("Objetos_Globales/parseFloat", "parseFloat()")}} analizan una cadena hasta que alcancen un caracter que no es válido para el formato de número especificado, luego devuelve el número analizado hasta ese punto. Sin embargo, el operador "+" simplemente convierte la cadena a `NaN` si contiene un caracter no válido. Intenta analizar la cadena "10.2abc" con cada método tú mismo en la consola y comprenderás mejor las diferencias.
+> [!NOTE]
+> Las funciones {{jsxref("Objetos_Globales/parseInt", "parseInt()")}} y {{jsxref("Objetos_Globales/parseFloat", "parseFloat()")}} analizan una cadena hasta que alcancen un caracter que no es válido para el formato de número especificado, luego devuelve el número analizado hasta ese punto. Sin embargo, el operador "+" simplemente convierte la cadena a `NaN` si contiene un caracter no válido. Intenta analizar la cadena "10.2abc" con cada método tú mismo en la consola y comprenderás mejor las diferencias.
 
 ## Strings
 
@@ -474,11 +476,13 @@ obj.for = "Simon"; // Error de sintaxis, porque 'for' es una palabra reservada
 obj["for"] = "Simon"; // trabaja bien
 ```
 
-> **Nota:** A partir de ECMAScript 5, las palabras reservadas se pueden utilizar como nombres de propiedad de objeto "en bruto". Esto significa que no necesitan "vestirse" entre comillas al definir objeto literales. Consulta la [especificación](http://es5.github.io/#x7.6.1) de ES5.
+> [!NOTE]
+> A partir de ECMAScript 5, las palabras reservadas se pueden utilizar como nombres de propiedad de objeto "en bruto". Esto significa que no necesitan "vestirse" entre comillas al definir objeto literales. Consulta la [especificación](http://es5.github.io/#x7.6.1) de ES5.
 
 Para obtener más información sobre objetos y prototipos, consulta {{jsxref("Objetos_Globales/Object/prototype", "Object.prototype")}}. Para obtener una explicación de los prototipos de objetos y las cadenas de prototipos de objetos, consulta [Herencia y la cadena de prototipos](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-> **Nota:** A partir de ECMAScript 2015, las claves de objeto se pueden definir mediante la variable en notación de corchetes al crearlas. `{[phoneType]: 12345}` es posible en lugar de solo `var userPhone = {}; userPhone[phoneType] = 12345`.
+> [!NOTE]
+> A partir de ECMAScript 2015, las claves de objeto se pueden definir mediante la variable en notación de corchetes al crearlas. `{[phoneType]: 12345}` es posible en lugar de solo `var userPhone = {}; userPhone[phoneType] = 12345`.
 
 ## Arreglos
 
@@ -635,7 +639,8 @@ function avg(...args) {
 avg(2, 3, 4, 5); // 3.5
 ```
 
-> **Nota:** En el código anterior, la variable **args** contiene todos los valores que se pasaron a la función.
+> [!NOTE]
+> En el código anterior, la variable **args** contiene todos los valores que se pasaron a la función.
 >
 > Es importante tener en cuenta que dondequiera que se coloque el operador de parámetro `rest` en una declaración de función, almacenará todos los argumentos _después_ de su declaración, pero no antes. _es decir, function_ _avg(_**firstValue,** _...args)_ almacenará el primer valor pasado a la función en la variable **firstValue** y los argumentos restantes en **args**. Esa es otra característica útil del lenguaje, pero nos lleva a un nuevo problema. La función `avg()` toma una lista de argumentos separados por comas, pero ¿qué sucede si deseas encontrar el promedio de un arreglo? Simplemente, podrías reescribir la función de la siguiente manera:
 
@@ -659,7 +664,8 @@ avg.apply(null, [2, 3, 4, 5]); // 3.5
 
 El segundo argumento de `apply()` es el arreglo que se utilizará como `arguments`; el primero se explicará más adelante. Esto enfatiza el hecho de que las funciones también son objetos.
 
-> **Nota:** Puedes lograr el mismo resultado utilizando el [operador de propagación](/es/docs/Web/JavaScript/Reference/Operators/Spread_operator) en la llamada de función.
+> [!NOTE]
+> Puedes lograr el mismo resultado utilizando el [operador de propagación](/es/docs/Web/JavaScript/Reference/Operators/Spread_operator) en la llamada de función.
 >
 > Por ejemplo: `avg(...numbers)`
 
@@ -728,7 +734,8 @@ Ten en cuenta que las funciones de JavaScript en sí mismas son objetos, como to
 
 ## Objetos personalizados
 
-> **Nota:** Para obtener una descripción más detallada de la programación orientada a objetos en JavaScript, consulta [Introducción a JavaScript orientado a objetos](/es/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript).
+> [!NOTE]
+> Para obtener una descripción más detallada de la programación orientada a objetos en JavaScript, consulta [Introducción a JavaScript orientado a objetos](/es/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript).
 
 En la programación clásica orientada a objetos, los objetos son colecciones de datos y métodos que operan sobre esos datos. JavaScript es un lenguaje basado en prototipos que no contiene una declaración de clase, como la encontrarías en C++ o Java (esto, a veces es confuso para los programadores acostumbrados a lenguajes con una declaración de clase). En cambio, JavaScript usa funciones como clases. Consideremos un objeto `person` con campos `first` y `last name`. Hay dos formas de mostrar el nombre: como "primero último" o como "último, primero". Usando las funciones y objetos que hemos explicado anteriormente, podríamos mostrar los datos de esta manera:
 

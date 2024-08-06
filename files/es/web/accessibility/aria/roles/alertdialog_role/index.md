@@ -19,7 +19,8 @@ La diferencia con díalogos normales es que el rol de `alertdialog` debe ser uti
 
 Debido a su carácter urgente los díalogos de alerta deben ser siempre modales.
 
-> **Nota:** Este rol solo debe ser usado para mensajes de alerta que tienen controles interactivos asociado. Si un díalogo de alerta solo contiene contenido estático y no tiene controles interactivos, `alertdialog` es probablemente el rol incorrecto para ser utilizado.. El rol `alert` debe ser usado en su lugar en éste caso (como se describe en la técnica de [Utilizando el rol `alert`](/en/ARIA/ARIA_Techniques/Using_the_alert_role)).
+> [!NOTE]
+> Este rol solo debe ser usado para mensajes de alerta que tienen controles interactivos asociado. Si un díalogo de alerta solo contiene contenido estático y no tiene controles interactivos, `alertdialog` es probablemente el rol incorrecto para ser utilizado.. El rol `alert` debe ser usado en su lugar en éste caso (como se describe en la técnica de [Utilizando el rol `alert`](/en/ARIA/ARIA_Techniques/Using_the_alert_role)).
 
 ### Posibles efectos de agentes de usuario y tecnología de asistencia
 
@@ -32,7 +33,8 @@ Cuando la aleta de díalogo aparece, los lectores de pantalla deberían anunciar
 
 Cuando el díalogo de alerta es etiquetado correctamente y el foco es movido de un control a el interior del díalogo, los lectores de pantalla deberían anunciar el rol accesible del díalogo así como su nombre y su descriipción antes de anunciar el elemento enfocado.
 
-> **Nota:** Opiniones pueden diferir en como tecnología de asistencia debe manejar esta técnica. La información proveída arriba es una de éstas opiniones y por lo tanto no es normativa.
+> [!NOTE]
+> Opiniones pueden diferir en como tecnología de asistencia debe manejar esta técnica. La información proveída arriba es una de éstas opiniones y por lo tanto no es normativa.
 
 ### Ejemplos
 

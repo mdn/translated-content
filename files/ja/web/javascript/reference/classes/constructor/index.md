@@ -9,7 +9,8 @@ l10n:
 
 **`constructor`** メソッドは、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)で作成されたオブジェクトインスタンスの生成と初期化を行うための特殊なメソッドです。
 
-> **メモ:** このページでは `constructor` の構文を紹介します。すべてのオブジェクトに存在する `constructor` プロパティについては、 {{jsxref("Object.prototype.constructor")}} を参照してください。
+> [!NOTE]
+> このページでは `constructor` の構文を紹介します。すべてのオブジェクトに存在する `constructor` プロパティについては、 {{jsxref("Object.prototype.constructor")}} を参照してください。
 
 {{EmbedInteractiveExample("pages/js/classes-constructor.html")}}
 
@@ -61,7 +62,8 @@ constructor(...args) {
 }
 ```
 
-> **メモ:** 上記のような明示的なコンストラクターと既定のコンストラクターの異なる点は、後者が実際には[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)を呼び出して[引数のスプレッド](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を行わないことです。
+> [!NOTE]
+> 上記のような明示的なコンストラクターと既定のコンストラクターの異なる点は、後者が実際には[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)を呼び出して[引数のスプレッド](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を行わないことです。
 
 それがこのようなコードを動作させることができます。
 

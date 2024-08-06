@@ -291,7 +291,8 @@ function loop() {
 
 デモを保存して再読み込みし、ボールがぶつかった時に色が変わるのを見てください。
 
-> **メモ:** この例題を動かすのに困った時は、あなたの JavaScript コードを私たちの[完成版](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/main-finished.js)と比べてみてください（[ライブ実行版](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)も見られます）。
+> [!NOTE]
+> この例題を動かすのに困った時は、あなたの JavaScript コードを私たちの[完成版](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/main-finished.js)と比べてみてください（[ライブ実行版](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)も見られます）。
 
 ## まとめ
 

@@ -198,7 +198,8 @@ T x y (ou t dx dy)
 
 Ce raccourci examine le précédent point de contrôle utilisé et en infère un nouveau à partir de celui-ci. Cela signifie qu'après un premier point de contrôle, vous pouvez créer des formes assez complexes en spécifiant seulement les points d'extrémités.
 
-> **Note :** Ce raccourci fonctionne uniquement si la commande précédente est une commande `Q` ou `T`. Dans le cas contraire, le point de contrôle est considéré comme le même que le point précédent, et vous ne dessinerez que des lignes.
+> [!NOTE]
+> Ce raccourci fonctionne uniquement si la commande précédente est une commande `Q` ou `T`. Dans le cas contraire, le point de contrôle est considéré comme le même que le point précédent, et vous ne dessinerez que des lignes.
 
 ![](shortcut_quadratic_bézier_with_grid.png)
 

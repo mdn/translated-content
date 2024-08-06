@@ -23,7 +23,8 @@ modo = document.compatMode
 - `modo`
   - : É um valor enumerado que pode ser:
 
-> **Nota:** Nota: todos estes modos agora são definidos em padrões, então os antigos nomes "standards" e "almost standards" são sem sentido, e portanto não são mais usados nos padrões.
+> [!NOTE]
+> Nota: todos estes modos agora são definidos em padrões, então os antigos nomes "standards" e "almost standards" são sem sentido, e portanto não são mais usados nos padrões.
 
 ## Exemplo
 

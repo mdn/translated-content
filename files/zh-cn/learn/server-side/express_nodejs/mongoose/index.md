@@ -49,7 +49,8 @@ Express 应用可以使用 Node 支持的所有数据库（Express 本身不支�
 
 使用 ORM 的好处是：程序员可以继续用 JavaScript 对象的思维而不用转向数据库语义的思维。在（同一个或不同网站）使用不同数据库时尤为明显。使用 ORM 还可以更方便地对数据进行验证和检查。
 
-> **备注：** 使用 ODM / ORM 通常可以降低开发和维护成本！除非你非常熟悉本地查询语言，或者项目对性能要求很高，否则强烈推荐使用 ODM。
+> [!NOTE]
+> 使用 ODM / ORM 通常可以降低开发和维护成本！除非你非常熟悉本地查询语言，或者项目对性能要求很高，否则强烈推荐使用 ODM。
 
 ### 我应该使用哪种 ORM/ODM ?
 
@@ -73,7 +74,8 @@ NPM 站点上有许多 ODM / ORM 解决方案（另请参阅 NPM 站点上的 [o
 
 这种 ODM 和数据库的结合方式在 Node 社区中非常流行，一定程度上是因为文档存储和查询系统与 JSON 十分相似，因此 JavaScript 开发人员会非常熟悉。
 
-> **备注：** 使用 Mongoose 无需事先了解 MongoDB，但是部分 [Mongoose 文档](http://mongoosejs.com/docs/guide.html) 对于熟悉 MongoDB 的朋友会更易于使用和理解。
+> [!NOTE]
+> 使用 Mongoose 无需事先了解 MongoDB，但是部分 [Mongoose 文档](http://mongoosejs.com/docs/guide.html) 对于熟悉 MongoDB 的朋友会更易于使用和理解。
 
 下面将介绍如何为 [LocalLibrary 网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 定义和访问 Mongoose 模式和模型。
 
@@ -91,17 +93,20 @@ NPM 站点上有许多 ODM / ORM 解决方案（另请参阅 NPM 站点上的 [o
 
 下图还展示了模型之间的关系以及重复度（Multiplicity）。重复度就是图中两框间连线两端的数字，表示两个模型之间存在的关系的数量（最大值和最小值）。例如，`Book` 框和 `Genre` 框之间有连线说明二者之间存在关系，`Book` 模型端的数字（0..\*）表示一个种类必包括零种或多种藏书（多少都可以），而 `Genre` 端的数字表示一种藏书可以有零个或多个种类。
 
-> **备注：** 正如下文 [Mongoose 入门](#) 中所讲，通常应该把定义文档/模型关系的字段置于同一模型中（仍可通过在搜索相关 `_id` 来回寻模型间的关系）。以下的 Book 模式中定义了 Book/Genre 和 Book/Author 关系，BookInstance 模式中定义了 Book/BookInstance 关系。这样做是简便起见，但稍存歧义，让这些字段存在于其他模式中也是可以的。
+> [!NOTE]
+> 正如下文 [Mongoose 入门](#) 中所讲，通常应该把定义文档/模型关系的字段置于同一模型中（仍可通过在搜索相关 `_id` 来回寻模型间的关系）。以下的 Book 模式中定义了 Book/Genre 和 Book/Author 关系，BookInstance 模式中定义了 Book/BookInstance 关系。这样做是简便起见，但稍存歧义，让这些字段存在于其他模式中也是可以的。
 
 ![Mongoose Library Model with correct cardinality](library_website_-_mongoose_express.png)
 
-> **备注：** 下面是一段入门知识，讲解如何定义和使用模型。请在阅读时想想将如何构建上图中的模型。
+> [!NOTE]
+> 下面是一段入门知识，讲解如何定义和使用模型。请在阅读时想想将如何构建上图中的模型。
 
 ## Mongoose 入门
 
 这一段将简要介绍如何将 Mongoose 连接到 MongoDB 数据库，如何定义模式和模型，以及如何进行基本查询。
 
-> **备注：** 本入门受到 npm 上的 [Mongoose 快速入门](https://www.npmjs.com/package/mongoose) 和 [Mongoose 官方文档](http://mongoosejs.com/docs/guide.html) 的“深度影响”。
+> [!NOTE]
+> 本入门受到 npm 上的 [Mongoose 快速入门](https://www.npmjs.com/package/mongoose) 和 [Mongoose 官方文档](http://mongoosejs.com/docs/guide.html) 的“深度影响”。
 
 ### 安装 Mongoose 和 MongoDB
 
@@ -113,7 +118,8 @@ npm install mongoose
 
 安装 Mongoose 会添加所有依赖项，包括 MongoDB 数据库驱动程序，但不会安装 MongoDB 本身。要安装 MongoDB 服务器，可以 [点击下载](https://www.mongodb.com/download-center) 各操作系统的安装程序在本地安装。也可以使用云端 MongoDB 实例。
 
-> **备注：** 本教程选用 mLab 提供的 [沙箱级](https://mlab.com/plans/pricing/) 云端“数据库即服务”（Database as a Service，DBaaS）。它适用于开发环境，且部署过程与操作系统无关（DBaaS 也适用于生产环境）。
+> [!NOTE]
+> 本教程选用 mLab 提供的 [沙箱级](https://mlab.com/plans/pricing/) 云端“数据库即服务”（Database as a Service，DBaaS）。它适用于开发环境，且部署过程与操作系统无关（DBaaS 也适用于生产环境）。
 
 ### 连接到 MongoDB
 
@@ -137,7 +143,8 @@ db.on("error", console.error.bind(console, "MongoDB 连接错误："));
 
 可以用 `mongoose.connection` 取得默认的 `Connection` 对象。一旦连接，`Connection` 实例将触发打开事件。
 
-> **备注：** 可以使用 `mongoose.createConnection()` 创建其他连接。该函数与 `connect()` 的参数（数据库 URI，包括主机地址、数据库名、端口、选项等）一致，并返回一个 `Connection` 对象。
+> [!NOTE]
+> 可以使用 `mongoose.createConnection()` 创建其他连接。该函数与 `connect()` 的参数（数据库 URI，包括主机地址、数据库名、端口、选项等）一致，并返回一个 `Connection` 对象。
 
 ### 定义和添加模型
 
@@ -145,7 +152,8 @@ db.on("error", console.error.bind(console, "MongoDB 连接错误："));
 
 `mongoose.model()` 方法将模式“编译”为模型。模型就可以用来查找、创建、更新和删除特定类型的对象。
 
-> **备注：** MongoDB 数据库中，每个模型都映射至一组文档。这些文档包含 `Schema` 模型定义的字段名/模式类型。
+> [!NOTE]
+> MongoDB 数据库中，每个模型都映射至一组文档。这些文档包含 `Schema` 模型定义的字段名/模式类型。
 
 #### 定义模式
 
@@ -185,7 +193,8 @@ const SomeModel = mongoose.model("SomeModel", SomeModelSchema);
 
 第一个参数是为模型所创建集合的别名（Mongoose 将为 SomeModel 模型创建数据库集合），第二个参数是创建模型时使用的模式。
 
-> **备注：** 定义模型类后，可以使用它们来创建、更新或删除记录，以及通过查询来获取所有记录或特定子集。我们将在以下“[使用模型](#)”部分展示，包括创建视图的情况。
+> [!NOTE]
+> 定义模型类后，可以使用它们来创建、更新或删除记录，以及通过查询来获取所有记录或特定子集。我们将在以下“[使用模型](#)”部分展示，包括创建视图的情况。
 
 #### 模式类型（字段）
 
@@ -260,7 +269,8 @@ const breakfastSchema = new Schema({
 
 虚拟属性是可以获取和设置、但不会保存到 MongoDB 的文档属性。getter 可用于格式化或组合字段，而 setter 可用于将单个值分解为多个值从而便于存储。文档中的示例，从名字和姓氏字段构造（并解构）一个全名虚拟属性，这比每次在模板中使用全名更简单，更清晰。
 
-> **备注：** 我们将使用库中的一个虚拟属性，用路径和记录的 `_id` 来为每个模型记录定义唯一的 URL。
+> [!NOTE]
+> 我们将使用库中的一个虚拟属性，用路径和记录的 `_id` 来为每个模型记录定义唯一的 URL。
 
 更多信息请参阅 [虚拟属性](http://mongoosejs.com/docs/guide.html#virtuals)（Mongoose 英文文档）。
 
@@ -336,7 +346,8 @@ Athlete.find({ sport: "Tennis" }, "name age", function (err, athletes) {
 
 若像上述代码那样指定回调，则查询将立即执行。搜索完成后将调用回调。
 
-> **备注：** Mongoose 中所有回调都使用 `callback(error, result)` 模式。如果查询时发生错误，则参数 `error` 将包含错误文档，`result` 为 `null`。如果查询成功，则 `error`为 `null`，查询结果将填充至 `result` 。
+> [!NOTE]
+> Mongoose 中所有回调都使用 `callback(error, result)` 模式。如果查询时发生错误，则参数 `error` 将包含错误文档，`result` 为 `null`。如果查询成功，则 `error`为 `null`，查询结果将填充至 `result` 。
 
 若未指定回调，则 API 将返回 [Query](http://mongoosejs.com/docs/api.html#query-js) 类型的变量。可以使用该查询对象来构建查询，随后使用 `exec()` 方法执行（使用回调）。
 
@@ -382,7 +393,8 @@ Athlete.find()
 - [`findOne()`](http://mongoosejs.com/docs/api.html#query_Query-findOne)：查找与指定条件匹配的第一个文档。
 - [`findByIdAndRemove()`](http://mongoosejs.com/docs/api.html#model_Model.findByIdAndRemove)、[`findByIdAndUpdate()`](http://mongoosejs.com/docs/api.html#model_Model.findByIdAndUpdate)、[`findOneAndRemove()`](http://mongoosejs.com/docs/api.html#query_Query-findOneAndRemove)、 [`findOneAndUpdate()`](http://mongoosejs.com/docs/api.html#query_Query-findOneAndUpdate)：通过 `id` 或条件查找单个文档，并进行更新或删除。以上是更新和删除记录的便利函数。
 
-> **备注：** 还有一个 [`count()`](http://mongoosejs.com/docs/api.html#model_Model.count) 方法，可获取匹配条件的项目的个数。在只期望获得记录的个数而不想获取实际的记录时可以使用。
+> [!NOTE]
+> 还有一个 [`count()`](http://mongoosejs.com/docs/api.html#model_Model.count) 方法，可获取匹配条件的项目的个数。在只期望获得记录的个数而不想获取实际的记录时可以使用。
 
 查询还能做更多。请参阅 [查询](http://mongoosejs.com/docs/queries.html)（Mongoose 英文文档）。
 
@@ -448,7 +460,8 @@ Story.findOne({ title: "司马迁是历史学家" })
   });
 ```
 
-> **备注：** 目光敏锐的读者可能会注意到，新的简介添加了作者，但并没有添加到 `stories` 数组中。那么怎样才能得到指定作者的所有简介？考虑把作者添加到 `stories` 数组中，但会导致作者和简介相关信息的要在两处进行维护。
+> [!NOTE]
+> 目光敏锐的读者可能会注意到，新的简介添加了作者，但并没有添加到 `stories` 数组中。那么怎样才能得到指定作者的所有简介？考虑把作者添加到 `stories` 数组中，但会导致作者和简介相关信息的要在两处进行维护。
 >
 > 更好的方法是获取作者的 `_id`，然后使用 `find()` 在所有简介的作者字段中搜索。
 >
@@ -500,9 +513,11 @@ SomeModel.find(callback_function);
 
 本教程将使用 [mLab](https://mlab.com/welcome/) 免费版“[沙盒](https://mlab.com/plans/pricing/)”云数据库。这一版不适用于生产环境，因为它没有冗余设计，但非常适合进行开发和原型设计。选用它是因为它免费且易于设置，并且 mLab 是一家流行的数据库服务供应商，也是生产环境数据库的理想选择（撰写本文时（2019 年 1 月），国内流行的云数据库解决方案有 [阿里云](https://www.aliyun.com/product/mongodb?spm=5176.10695662.778269.1.2e5b8cb3Hw9HUr)、[腾讯云](https://cloud.tencent.com/product/mongodb)、[百度云](https://cloud.baidu.com/product/mongodb.html) 等）。
 
-> **备注：** 也可以下载并安装 [对应系统的安装包](https://www.mongodb.com/download-center)，设置本地版 MongoDB 数据库。多数指令和使用云数据库是一样的，除了连接时数据库的 URL。
+> [!NOTE]
+> 也可以下载并安装 [对应系统的安装包](https://www.mongodb.com/download-center)，设置本地版 MongoDB 数据库。多数指令和使用云数据库是一样的，除了连接时数据库的 URL。
 
-> **备注：** 目前 mLab 网站在国内速度很慢，若遇到无法正常注册或登录的情况可以考虑本地版 MongoDB。
+> [!NOTE]
+> 目前 mLab 网站在国内速度很慢，若遇到无法正常注册或登录的情况可以考虑本地版 MongoDB。
 
 首先 [用 mLab 创建一个账户](https://mlab.com/signup/)（这是免费的，只需要输入基本联系信息，并同意服务条款）。
 
@@ -620,7 +635,8 @@ module.exports = mongoose.model("Author", AuthorSchema);
 
 我们还为 `AuthorSchema` 声明了一个 "`url`" 虚拟属性，以返回模型特定实例的绝对 URL。在模板中需要获取特定作者的链接时可使用该属性。
 
-> **备注：** 有必要将 URL 声明为虚拟属性，因为这样，项目的 URL 就只需在一处进行更改。
+> [!NOTE]
+> 有必要将 URL 声明为虚拟属性，因为这样，项目的 URL 就只需在一处进行更改。
 > 此时，使用此 URL 的链接还不能工作，因为目前还没有设置任何路由，无法处理特定模型实例的代码。这个问题下节再讲。
 
 模块的最后对模型进行导出。
@@ -714,7 +730,9 @@ module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 
 1. 下载（或新建）文件 [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)，保存在 express-locallibrary-tutorial 目录（`package.json` 所在位置） 。
 
-   > **备注：** 无需深究 [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)，它只是为数据库添加一些示例数据。
+   > [!NOTE]
+   >
+   > 无需深究 [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)，它只是为数据库添加一些示例数据。
    >
    > 译注：针对 node.js3.0 及以后版本，mlab 使用“mongodb+srv://”链接而非“mongodb://”，请对[populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)源码酌情修改，否则会报错而添加数据失败。
 
@@ -732,7 +750,8 @@ module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 
 4. 该脚本应一路运行至完成，并在终端中记录所创建的项目。
 
-> **备注：** 打开 [mLab](https://mlab.com/home) 数据库主页面，现在藏书、作者、种类和藏书副本的集合应该都可以打开了，也可以查看单个文档。
+> [!NOTE]
+> 打开 [mLab](https://mlab.com/home) 数据库主页面，现在藏书、作者、种类和藏书副本的集合应该都可以打开了，也可以查看单个文档。
 
 ## 小结
 

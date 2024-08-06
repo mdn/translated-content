@@ -151,7 +151,8 @@ block content
 
 The view structure and behaviour is almost the same as for the **book_form.pug** template, so we won't go over it again.
 
-> **Примечание:** The above template hard-codes the _Status_ values (Maintenance, Available, etc.) and does not "remember" the user's entered values. Should you so wish, consider reimplementing the list, passing in option data from the controller and setting the selected value when the form is re-displayed.
+> [!NOTE]
+> The above template hard-codes the _Status_ values (Maintenance, Available, etc.) and does not "remember" the user's entered values. Should you so wish, consider reimplementing the list, passing in option data from the controller and setting the selected value when the form is re-displayed.
 
 ## Как это выглядит?
 

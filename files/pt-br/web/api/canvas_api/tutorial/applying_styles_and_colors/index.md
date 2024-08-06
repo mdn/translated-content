@@ -18,7 +18,8 @@ Até agora só vimos métodos do contexto de desenho. Se quisermos aplicar cores
 
 `color` é uma string que representa um CSS {{cssxref("&lt;color&gt;")}}, um objeto gradiente, ou um objeto padrão. Examinaremos sobre objetos de gradiente e padrão mais tarde. Por padrão, a cor do contorno (stroke color) e a cor de preenchimento (fill color) estão definidos como preto (valor de cor no CSS é `#000000`).
 
-> **Nota:** Quando você definir as propriedades `strokeStyle` e/ou `fillStyle` , o novo valor será o padrão para todas as formas desenhadas a partir de então. Para toda forma que você quiser uma cor diferente, você vai precisar alterar o valor da propriedade `fillStyle` ou `strokeStyle`.
+> [!NOTE]
+> Quando você definir as propriedades `strokeStyle` e/ou `fillStyle` , o novo valor será o padrão para todas as formas desenhadas a partir de então. Para toda forma que você quiser uma cor diferente, você vai precisar alterar o valor da propriedade `fillStyle` ou `strokeStyle`.
 
 As strings validas que você pode inserir devem, de acordo com a especificação ser valores CSS {{cssxref("&lt;color&gt;")}}. Cada um dos exemplos a seguir, descrevem a mesma cor.
 
@@ -628,7 +629,8 @@ img.src = "someimage.png";
 var ptrn = ctx.createPattern(img, "repeat");
 ```
 
-> **Nota:** Like with the `drawImage()` method, you must make sure the image you use is loaded before calling this method or the pattern may be drawn incorrectly.
+> [!NOTE]
+> Like with the `drawImage()` method, you must make sure the image you use is loaded before calling this method or the pattern may be drawn incorrectly.
 
 ### A `createPattern` example
 
@@ -679,7 +681,8 @@ The `shadowBlur` property indicates the size of the blurring effect; this value 
 
 The `shadowColor` property is a standard CSS color value indicating the color of the shadow effect; by default, it is fully-transparent black.
 
-> **Nota:** Shadows are only drawn for `source-over` [compositing operations](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Compositing).
+> [!NOTE]
+> Shadows are only drawn for `source-over` [compositing operations](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Compositing).
 
 ### A shadowed text example
 

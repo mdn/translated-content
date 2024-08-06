@@ -9,13 +9,15 @@ l10n:
 
 **`color-interpolation`** 属性は、グラデーションの補間、色のアニメーション、アルファ合成に用いる色空間を指定します。
 
-> **メモ:** フィルター効果については、{{SVGAttr("color-interpolation-filters")}} プロパティで用いる色空間を制御します。
+> [!NOTE]
+> フィルター効果については、{{SVGAttr("color-interpolation-filters")}} プロパティで用いる色空間を制御します。
 
 color-interpolation プロパティは、色の操作を sRGB 色空間で行うか (光のエネルギーがリニアな) linearized RGB 色空間で行うかを選択します。適切な色空間を選択したら、コンポーネント単位での補間を行います。
 
 子要素が背景とブレンドされるときは、ブレンドの種類は親要素の `color-interpolation` の値ではなく、子要素の `color-interpolation` プロパティの値によって決まります。{{SVGAttr("href")}} または廃止された {{SVGAttr("xlink:href")}} 属性で他のグラデーションを参照しているグラデーションでは、{{SVGAttr("fill")}} または {{SVGAttr("stroke")}} プロパティで直接参照されているグラデーション要素のプロパティの値を用います。色をアニメーションするときは、アニメーションが行われる要素の `color-interpolation` プロパティの値に従って色の補間を行います。
 
-> **メモ:** プレゼンテーション属性なので、{{CSSXref("color-interpolation")}} は CSS のプロパティとして使用できます。
+> [!NOTE]
+> プレゼンテーション属性なので、{{CSSXref("color-interpolation")}} は CSS のプロパティとして使用できます。
 
 この属性は、以下の SVG 要素で使用できます。
 

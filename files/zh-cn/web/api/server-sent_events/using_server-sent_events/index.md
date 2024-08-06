@@ -59,7 +59,8 @@ evtSource.addEventListener("ping", (event) => {
 
 每当服务器发送一个 `event` 字段设置为 `ping` 的消息时，就会调用这段代码；这段代码接着解析 `data` 字段中的 JSON，并输出这些信息。
 
-> **警告：** 当**不通过 HTTP/2 使用时**，SSE（server-sent events）会受到最大连接数的限制，这在打开多个选项卡时特别麻烦，因为该限制是针对*每个浏览器*的，并且被设置为一个非常低的数字（6）。该问题在 [Chrome](https://crbug.com/275955) 和 [Firefox](https://bugzil.la/906896) 中被标记为“不会解决”。此限制是针对每个浏览器 + 域的，因此这意味着你可以跨所有选项卡打开 6 个 SSE 连接到 `www.example1.com`，并打开 6 个 SSE 连接到 `www.example2.com`。（来自 [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)）。使用 HTTP/2 时，同一时间内 *HTTP 最大连接数*由服务器和客户端之间协商（默认为 100）。
+> [!WARNING]
+> 当**不通过 HTTP/2 使用时**，SSE（server-sent events）会受到最大连接数的限制，这在打开多个选项卡时特别麻烦，因为该限制是针对*每个浏览器*的，并且被设置为一个非常低的数字（6）。该问题在 [Chrome](https://crbug.com/275955) 和 [Firefox](https://bugzil.la/906896) 中被标记为“不会解决”。此限制是针对每个浏览器 + 域的，因此这意味着你可以跨所有选项卡打开 6 个 SSE 连接到 `www.example1.com`，并打开 6 个 SSE 连接到 `www.example2.com`。（来自 [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)）。使用 HTTP/2 时，同一时间内 *HTTP 最大连接数*由服务器和客户端之间协商（默认为 100）。
 
 ## 从服务器端发送事件
 
@@ -95,7 +96,8 @@ while (true) {
 
 这段代码每秒钟会生成一个类型为“ping”的事件，每个事件的数据都是一个 JSON 对象，包含对应于事件生成时间的 ISO 8601 时间戳。同时，还会在随机的时间间隔内发送一个简单的消息（没有事件类型）。这个循环会一直运行，不受连接状态的影响，因此在检查到连接关闭的情况时需要手动中断循环（例如客户端关闭页面）。
 
-> **备注：** 你可以在 Github 上找到以上代码的完整示例——参见[使用 PHP 语言的简单 SSE 示例](https://github.com/mdn/dom-examples/tree/main/server-sent-events)。
+> [!NOTE]
+> 你可以在 Github 上找到以上代码的完整示例——参见[使用 PHP 语言的简单 SSE 示例](https://github.com/mdn/dom-examples/tree/main/server-sent-events)。
 
 ## 错误处理
 
@@ -119,7 +121,8 @@ evtSource.close();
 
 事件流是一个简单的文本数据流，文本应该使用 [UTF-8](/zh-CN/docs/Glossary/UTF-8) 格式的编码。事件流中的消息由一对换行符分开。以冒号开头的行为注释行，会被忽略。
 
-> **备注：** 注释行可以用来防止连接超时，服务器可以定期发送一条消息注释行，以保持连接不断。
+> [!NOTE]
+> 注释行可以用来防止连接超时，服务器可以定期发送一条消息注释行，以保持连接不断。
 
 每条消息由一行或多行文字组成，列出该消息的字段。每个字段由字段名表示，后面是冒号，然后是该字段值的文本数据。
 
@@ -138,7 +141,8 @@ evtSource.close();
 
 所有其他的字段名都会被忽略。
 
-> **备注：** 如果一行文本中不包含冒号，则整行文本会被解析成为字段名，其字段值为空。
+> [!NOTE]
+> 如果一行文本中不包含冒号，则整行文本会被解析成为字段名，其字段值为空。
 
 ### 示例
 

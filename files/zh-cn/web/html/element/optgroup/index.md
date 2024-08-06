@@ -42,7 +42,8 @@ slug: Web/HTML/Element/optgroup
  </tbody>
 </table>
 
-> **备注：** Optgroup elements may not be nested.
+> [!NOTE]
+> Optgroup elements may not be nested.
 
 ## 属性
 

@@ -285,7 +285,8 @@ L'ordre des valeurs est également important pour chaque définition d'animation
 
 ## Exemples
 
-> **Note :** D'autres exemples sont disponibles sur la page [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations).
+> [!NOTE]
+> D'autres exemples sont disponibles sur la page [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations).
 
 ### Vue laser
 

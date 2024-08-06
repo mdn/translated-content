@@ -53,7 +53,8 @@ function logInputType(event) {
 
 {{EmbedLiveSample("示例", '100%', 500)}}
 
-> **备注：** 有关更详细的示例，请参见 [Masayuki Nakano 的 InputEvent 测试套件](https://d-toybox.com/studio/lib/input_event_viewer.html)。
+> [!NOTE]
+> 有关更详细的示例，请参见 [Masayuki Nakano 的 InputEvent 测试套件](https://d-toybox.com/studio/lib/input_event_viewer.html)。
 
 ## 规范
 

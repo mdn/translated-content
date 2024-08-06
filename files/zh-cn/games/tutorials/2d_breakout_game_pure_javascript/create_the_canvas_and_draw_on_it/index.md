@@ -105,7 +105,8 @@ ctx.closePath();
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","370")}}
 
-> **备注：** 练习：尝试改变给定几何图形的大小和颜色。
+> [!NOTE]
+> 练习：尝试改变给定几何图形的大小和颜色。
 
 ## 下一节
 

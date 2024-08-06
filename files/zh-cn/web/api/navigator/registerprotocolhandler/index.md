@@ -15,7 +15,8 @@ slug: Web/API/Navigator/registerProtocolHandler
 navigator.registerProtocolHandler(scheme, url, title);
 ```
 
-> **备注：** 最近更新为 `navigator.registerProtocolHandler(scheme, url)`, 但目前没有浏览器支持该版本。
+> [!NOTE]
+> 最近更新为 `navigator.registerProtocolHandler(scheme, url)`, 但目前没有浏览器支持该版本。
 
 ### 参数
 
@@ -25,13 +26,15 @@ navigator.registerProtocolHandler(scheme, url, title);
 
   - : 处理器的 URL，string 类型。这个字符串应该包含一个"%s"的占位符，其会被将要受理的文档的 [escaped](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) 链接所替换。这个链接（译者按：指将要受理的文档的 escaped 链接，也就是替换占位符的字符串）可能是一个真实的 URL，或者是一个电话号码，邮件地址之类的。
 
-    > **备注：** 这个处理器的 URL 必须以 `http` 或者 `https` 协议标记作为开头，最好是 `https` ，以满足一些浏览器出于安全考虑的要求。
+    > [!NOTE]
+    > 这个处理器的 URL 必须以 `http` 或者 `https` 协议标记作为开头，最好是 `https` ，以满足一些浏览器出于安全考虑的要求。
 
 - `title` {{Deprecated_Inline}}
 
   - : 一个用户可理解的处理器标题。标题会展示给用户，例如弹出对话框“允许这个站点处理 \[scheme] 链接吗？”或者在浏览器设置中列出注册的处理器时。
 
-    > **备注：** 出于欺骗的考虑，标题已从规范中删除，但当前所有的浏览器仍要求使用该标题。建议始终设置标题，因为支持更新规范的浏览器很可能会向后兼容，并且仍接受标题（但不使用它）。
+    > [!NOTE]
+    > 出于欺骗的考虑，标题已从规范中删除，但当前所有的浏览器仍要求使用该标题。建议始终设置标题，因为支持更新规范的浏览器很可能会向后兼容，并且仍接受标题（但不使用它）。
 
 ### 异常
 
@@ -92,7 +95,8 @@ navigator.registerProtocolHandler(
 
 ![](protocolregister.png)
 
-> **备注：** "[Register a webmail service as mailto handler](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebContentHandlerRegistrar#Getting_most_recent_window)" 展示了如何从跨平台组件对象模块 (XPCOM) 中做到这一切。
+> [!NOTE]
+> "[Register a webmail service as mailto handler](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebContentHandlerRegistrar#Getting_most_recent_window)" 展示了如何从跨平台组件对象模块 (XPCOM) 中做到这一切。
 
 ## 规范
 

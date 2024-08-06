@@ -29,11 +29,13 @@ slug: Mozilla/Firefox/Releases/3/Updating_extensions
 
 注意，在 Firefox3 的本版号中没有额外的“.0”，所以请使用“3.0.\*”，而非“3.0.0.\*”。
 
-> **备注：** Note that at this point more changes in Firefox 3 are expected. These changes may break some extensions, so you shouldn't release an extension with `3.0.*` `maxVersion` to the users until the Firefox 3 release candidate is out. During the Firefox 3 Beta period, you should use `3.0b5` as your `maxVersion`.
+> [!NOTE]
+> Note that at this point more changes in Firefox 3 are expected. These changes may break some extensions, so you shouldn't release an extension with `3.0.*` `maxVersion` to the users until the Firefox 3 release candidate is out. During the Firefox 3 Beta period, you should use `3.0b5` as your `maxVersion`.
 
 There have been (and will continue to be) a number of API changes that will likely break some extensions. We're still working on compiling a complete list of these changes.
 
-> **备注：** If your extension still uses an [`Install.js`](cn/Install.js) script instead of an [install manifest](), you need to make the transition to an install manifest now. Firefox 3 no longer supports `install.js` scripts in XPI files.
+> [!NOTE]
+> If your extension still uses an [`Install.js`](cn/Install.js) script instead of an [install manifest](), you need to make the transition to an install manifest now. Firefox 3 no longer supports `install.js` scripts in XPI files.
 
 #### Add localizations to the install manifest
 
@@ -132,7 +134,8 @@ Or use the following technique to make your overlay work on both Firefox 2 and F
 </window>
 ```
 
-> **备注：** This change is effective for Firefox 3 beta 4 and the pre-beta 4 nightlies.
+> [!NOTE]
+> This change is effective for Firefox 3 beta 4 and the pre-beta 4 nightlies.
 
 ### 其他方面的修改
 

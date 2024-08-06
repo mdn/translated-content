@@ -62,7 +62,8 @@ MathML 使用与 HTML 相同的语法来表示元素和属性的树形结构。�
 
 {{ EmbedLiveSample('Inserting_formulas_in_HTML', 700, 100, "", "") }}
 
-> **警告：** 如果你只看到“1 3”而不是一个分数，那么你的浏览器可能不支持 MathML。请查看[浏览器兼容性表格](/zh-CN/docs/Web/MathML/Element/math#浏览器兼容性)获取进一步的详细信息。
+> [!WARNING]
+> 如果你只看到“1 3”而不是一个分数，那么你的浏览器可能不支持 MathML。请查看[浏览器兼容性表格](/zh-CN/docs/Web/MathML/Element/math#浏览器兼容性)获取进一步的详细信息。
 
 ### display 属性
 
@@ -93,9 +94,11 @@ MathML 使用与 HTML 相同的语法来表示元素和属性的树形结构。�
 
 你可能还会注意到一些细微的外观变化：分数的文本和垂直间距变大了一点。没有 `display="block"` 属性，高度会被最小化，以避免干扰周围文本的流畅性。使用 `display="block"` 属性时，优先考虑的是数学公式的易读性。
 
-> **备注：** 这对应于 LaTeX 中的*行内*公式（用美元符号 `$...$` 包围）和*展示*公式（用 `\[...\]` 包围）的概念。
+> [!NOTE]
+> 这对应于 LaTeX 中的*行内*公式（用美元符号 `$...$` 包围）和*展示*公式（用 `\[...\]` 包围）的概念。
 
-> **备注：** 上述提到的外观变化实际上是由 [`math-style`](/zh-CN/docs/Web/CSS/math-style) 属性控制的，该属性初始值为代表 `<math display="block">` 的 `normal`，其他情况下为 `compact`。在某些 MathML 子树中，此属性可能会自动变为 `compact`，但在本入门教程中我们将忽略这个细微差别。这与 LaTeX 类似。
+> [!NOTE]
+> 上述提到的外观变化实际上是由 [`math-style`](/zh-CN/docs/Web/CSS/math-style) 属性控制的，该属性初始值为代表 `<math display="block">` 的 `normal`，其他情况下为 `compact`。在某些 MathML 子树中，此属性可能会自动变为 `compact`，但在本入门教程中我们将忽略这个细微差别。这与 LaTeX 类似。
 
 ## 使用 \<mrow> 元素进行分组
 

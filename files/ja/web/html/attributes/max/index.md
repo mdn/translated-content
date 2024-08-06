@@ -73,7 +73,8 @@ l10n:
   </tbody>
 </table>
 
-> **メモ:** ユーザーが入力したデータが設定された最大値を満たしていない場合、制約検証では無効とみなされ、 {{cssxref(':invalid')}} と {{cssxref(':out-of-range')}} の擬似クラスに一致するようになります。
+> [!NOTE]
+> ユーザーが入力したデータが設定された最大値を満たしていない場合、制約検証では無効とみなされ、 {{cssxref(':invalid')}} と {{cssxref(':out-of-range')}} の擬似クラスに一致するようになります。
 
 詳しくは [クライアント側検証](/ja/docs/Web/HTML/Constraint_validation)と {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}} を参照してください。
 

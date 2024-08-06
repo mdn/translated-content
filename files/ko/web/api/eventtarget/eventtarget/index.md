@@ -7,7 +7,8 @@ slug: Web/API/EventTarget/EventTarget
 
 **`EventTarget()`** 생성자는 새로운 {{domxref("EventTarget")}} 객체 인스턴스를 생성합니다.
 
-> **참고:** 이 생성자를 명시적으로 사용하는 경우는 거의 없습니다. 보통은 {{domxref("EventTarget")}}을 상속하는 객체의 생성자 내에서 [`super`](/ko/docs/Web/JavaScript/Reference/Operators/super) 키워드로 사용됩니다.
+> [!NOTE]
+> 이 생성자를 명시적으로 사용하는 경우는 거의 없습니다. 보통은 {{domxref("EventTarget")}}을 상속하는 객체의 생성자 내에서 [`super`](/ko/docs/Web/JavaScript/Reference/Operators/super) 키워드로 사용됩니다.
 
 ## 구문
 

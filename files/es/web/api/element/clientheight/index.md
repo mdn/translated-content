@@ -9,7 +9,8 @@ La propiedad de sólo lectura `Element.clientHeight` devuelve la altura de un el
 
 `clientHeight` puede ser calculado como CSS `height` + CSS `padding` - alto de la barra horizontal (si existe).
 
-> **Nota:** Esta propiedad redondeará el valor a un entero. Si necesitas un valor fraccional usa {{ domxref("element.getBoundingClientRect()") }}.
+> [!NOTE]
+> Esta propiedad redondeará el valor a un entero. Si necesitas un valor fraccional usa {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Sintaxis
 

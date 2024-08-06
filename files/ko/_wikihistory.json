@@ -8091,7 +8091,7 @@
     "modified": "2020-10-15T21:38:47.452Z",
     "contributors": ["alattalatta", "Netaras", "tmxkwkfgka"]
   },
-  "Web/JavaScript/Reference/Functions/arguments/@@iterator": {
+  "Web/JavaScript/Reference/Functions/arguments/Symbol.iterator": {
     "modified": "2020-10-15T22:12:01.387Z",
     "contributors": ["alattalatta", "vividhee"]
   },
@@ -8149,21 +8149,21 @@
       "Aeuiop"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@iterator": {
-    "modified": "2020-10-15T21:43:02.789Z",
-    "contributors": ["alattalatta", "KisukPark", "hwangtan", "."]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@species": {
-    "modified": "2020-10-15T21:50:41.909Z",
-    "contributors": ["alattalatta", "KisukPark", "imskojs"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@unscopables": {
-    "modified": "2020-10-15T21:50:41.776Z",
-    "contributors": ["alattalatta", "zziuni", "imskojs"]
-  },
   "Web/JavaScript/Reference/Global_Objects/Array/Array": {
     "modified": "2020-10-15T22:26:58.481Z",
     "contributors": ["alattalatta"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator": {
+    "modified": "2020-10-15T21:43:02.789Z",
+    "contributors": ["alattalatta", "KisukPark", "hwangtan", "."]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.species": {
+    "modified": "2020-10-15T21:50:41.909Z",
+    "contributors": ["alattalatta", "KisukPark", "imskojs"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables": {
+    "modified": "2020-10-15T21:50:41.776Z",
+    "contributors": ["alattalatta", "zziuni", "imskojs"]
   },
   "Web/JavaScript/Reference/Global_Objects/Array/concat": {
     "modified": "2020-10-15T21:38:49.144Z",
@@ -9587,13 +9587,13 @@
     "modified": "2019-06-18T04:56:00.166Z",
     "contributors": ["kooljay82", "Netaras", "Khai96_"]
   },
-  "Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator": {
-    "modified": "2019-03-23T22:30:48.269Z",
-    "contributors": ["Netaras"]
-  },
   "Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT": {
     "modified": "2020-10-15T21:47:35.788Z",
     "contributors": ["alattalatta", "Netaras"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator": {
+    "modified": "2019-03-23T22:30:48.269Z",
+    "contributors": ["Netaras"]
   },
   "Web/JavaScript/Reference/Global_Objects/TypedArray/buffer": {
     "modified": "2019-03-23T22:30:15.273Z",

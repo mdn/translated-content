@@ -386,7 +386,8 @@ console.log(clone.get(1)); // one
 console.log(original === clone); // false (useful for shallow comparison)
 ```
 
-> **참고:** 데이터 자체는 복제가 안된다는 사실을 명심하셔야 합니다.
+> [!NOTE]
+> 데이터 자체는 복제가 안된다는 사실을 명심하셔야 합니다.
 
 맵은 키 유일성을 유지한채로 병합이 가능합니다.
 

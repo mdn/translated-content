@@ -9,7 +9,8 @@ l10n:
 
 {{domxref("HTMLIFrameElement")}} 接口的 **`allowFullscreen`** 属性是一个反映了 {{HTMLElement("iframe")}} 元素的 `allowfullscreen` 属性的布尔值，它表示 iframe 的内容是否允许使用 {{domxref("Element.requestFullscreen", "requestFullscreen()")}}。
 
-> **备注：** 此属性被视为遗留属性。请改用 `allow="fullscreen"` 和 {{domxref("HTMLIFrameElement.allow")}}。
+> [!NOTE]
+> 此属性被视为遗留属性。请改用 `allow="fullscreen"` 和 {{domxref("HTMLIFrameElement.allow")}}。
 
 ## 值
 

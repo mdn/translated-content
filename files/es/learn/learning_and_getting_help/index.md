@@ -46,7 +46,8 @@ MDN Web Docs es muy bueno para ambos tipos — el área en la que te encuentras 
 
 También hay varios otros recursos excelentes en la web, algunos de los cuales mencionaremos a continuación.
 
-> **Nota:** el texto anterior debería haberte proporcionado un dato importante: _¡no se espera que recuerdes todo!_ Los desarrolladores web profesionales todo el tiempo usan herramientas como _MDN Web Docs_ para buscar cosas que han olvidado. Como descubrirás a lo largo de estas líneas, aprender desarrollo web tiene más que ver con la resolución de problemas y patrones de aprendizaje que con el aprendizaje de muchas sintaxis.
+> [!NOTE]
+> El texto anterior debería haberte proporcionado un dato importante: _¡no se espera que recuerdes todo!_ Los desarrolladores web profesionales todo el tiempo usan herramientas como _MDN Web Docs_ para buscar cosas que han olvidado. Como descubrirás a lo largo de estas líneas, aprender desarrollo web tiene más que ver con la resolución de problemas y patrones de aprendizaje que con el aprendizaje de muchas sintaxis.
 
 #### Videos
 
@@ -58,9 +59,11 @@ Posiblemente seas el tipo de persona que prefiere instrucciones mínimas y prefe
 
 Muchas páginas de referencia de documentos web de MDN también proporcionan ejemplos interactivos, donde puedes modificar el código y ver cómo cambia el resultado en vivo. Y tampoco hay nada de malo en crear tus propios ejemplos de código en tu computadora o en un editor de código en línea como [JSBin](https://jsbin.com/?html,css,js,output), [Codepen](https://codepen.io/) o [Glitch](https://glitch.com/). De hecho, ¡te invitarán a usarlos como parte de este curso cuando estés aprendiendo!
 
-> **Nota:** Los editores de código en línea también son realmente útiles para compartir el código que has escrito, por ejemplo, si estás colaborando en el aprendizaje con otra persona que no se encuentra en la misma ubicación o se lo envías a alguien para pedir ayuda con eso. Puedes compartir la dirección web del ejemplo con ellos para que puedan verlo y ayudarte.
+> [!NOTE]
+> Los editores de código en línea también son realmente útiles para compartir el código que has escrito, por ejemplo, si estás colaborando en el aprendizaje con otra persona que no se encuentra en la misma ubicación o se lo envías a alguien para pedir ayuda con eso. Puedes compartir la dirección web del ejemplo con ellos para que puedan verlo y ayudarte.
 
-> **Nota:** Es posible que prefieras un método de aprendizaje sobre los demás, pero, de manera realista, probablemente terminarás con un enfoque híbrido. Y probablemente se te ocurran otros métodos además de los tres que cubrimos anteriormente.
+> [!NOTE]
+> Es posible que prefieras un método de aprendizaje sobre los demás, pero, de manera realista, probablemente terminarás con un enfoque híbrido. Y probablemente se te ocurran otros métodos además de los tres que cubrimos anteriormente.
 
 ### Haz un plan
 
@@ -200,9 +203,11 @@ Cuando encuentres soluciones a tales problemas, vale la pena escribir notas sobr
 
 Además, la web tiene [herramientas de desarrollo](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) que te permiten ver el código utilizado para crear cualquier sitio en la web, si no tienes una solución a mano, un buen método de investigación es encontrar sitios web con características similares en la naturaleza y averiguar cómo lo hicieron.
 
-> **Nota:** Observa cómo hablamos antes sobre el problema que estamos tratando de resolver primero, y la tecnología utilizada para resolverlo, en segundo lugar. Esta, casi siempre es la mejor manera de hacerlo — no comiences con una tecnología nueva y genial que desees usar, e intenta adaptarla a tu caso de uso.
+> [!NOTE]
+> Observa cómo hablamos antes sobre el problema que estamos tratando de resolver primero, y la tecnología utilizada para resolverlo, en segundo lugar. Esta, casi siempre es la mejor manera de hacerlo — no comiences con una tecnología nueva y genial que desees usar, e intenta adaptarla a tu caso de uso.
 
-> **Nota:** La solución más sencilla suele ser la mejor.
+> [!NOTE]
+> La solución más sencilla suele ser la mejor.
 
 ### Practica
 

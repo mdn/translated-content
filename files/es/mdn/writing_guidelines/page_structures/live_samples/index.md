@@ -80,11 +80,13 @@ El primer paso es agregar snippets o asegurarse que los existentes están listos
 
 Cada pieza de código debe estar en un bloque {{HTMLElement("pre")}}, con un bloque separado para cada lenguaje, propiamente marcado con el lenguaje correspondiente. La mayoría de las veces, esto ya se hizo, pero vale la pena volver revisar para asegurarse que cada pieza de código está estructurado con la sintaxis correcta. A la derecha del ícono **PRE** en la barra de tareas hay un menú desplegable (herramienta: Syntax Highlighter) con varios lenguajes para los que MDN hace distinción de sintaxis. Establecer el lenguaje para la distinción de sintaxis del bloque también lo correlaciona con un lenguaje para los propósitos del sistema de ejemplos ejecutables.
 
-> **Nota:** Puedes tener más de un bloque para cada lenguaje; todos son concatenados juntos. Esto te permite tener una parte de código, seguida de una explicación de como funciona, luego otra parte de código, etc. Esto hace aun más fácil producir tutoriales y utilizar ejemplo ejecutables intercalados con texto que los explique.
+> [!NOTE]
+> Puedes tener más de un bloque para cada lenguaje; todos son concatenados juntos. Esto te permite tener una parte de código, seguida de una explicación de como funciona, luego otra parte de código, etc. Esto hace aun más fácil producir tutoriales y utilizar ejemplo ejecutables intercalados con texto que los explique.
 
 Así que asegurate que la distinción de sintaxis de los bloques {{HTMLElement("pre")}} para tu código HTML, CSS, y/o JavaScript estén cada uno configurado para el lenguaje correcto, y estarás bien.
 
-> **Nota:** Al pegar contenido en MDN, se conciente que si pegas contenido formateado (incluyendo, por ejemplo, distinción de sintaxis en código copeado de otro sitio) puedes estar trayendo formatos o clases que no quieres y no necesitas. Ten cuidado de no hacer esto; si es necesario, revisa tu edición en modo fuente y elimina estos formatos y clases innecesarios (o revísalo antes de pegarlo, o usa la opción "Pegar como texto plano").
+> [!NOTE]
+> Al pegar contenido en MDN, se conciente que si pegas contenido formateado (incluyendo, por ejemplo, distinción de sintaxis en código copeado de otro sitio) puedes estar trayendo formatos o clases que no quieres y no necesitas. Ten cuidado de no hacer esto; si es necesario, revisa tu edición en modo fuente y elimina estos formatos y clases innecesarios (o revísalo antes de pegarlo, o usa la opción "Pegar como texto plano").
 
 #### Insertar la macro de ejemplo ejecutable
 
@@ -139,7 +141,8 @@ Al buscar ejemplos existentes que actualizar, hay tres tipos principales de actu
 - Corregir bugs en un ejemplo ejecutable existente.
 - Mejorar un ejemplo ejecutable existente, o actualizar un ejemplo basándose en cambios tecnológicos.
 
-> **Nota:** Si encuentras artículos que necesitan ser actualizados para usar el sistema de ejemplos ejecutables, por favor agrega a la página la etiqueta "NeedsLiveSample".
+> [!NOTE]
+> Si encuentras artículos que necesitan ser actualizados para usar el sistema de ejemplos ejecutables, por favor agrega a la página la etiqueta "NeedsLiveSample".
 
 ### Encontrando ejemplos que necesitan convertirse a ejemplos ejecutables
 
@@ -211,7 +214,8 @@ Aquí un enlace que resulta de llamar los bloques de código vía `\{{LiveSample
 
 ## Convenciones acerca de los ejemplos ejecutables
 
-> **Nota:** Esto es actual (Feb. 2016) en discusión en la lista de emails dev-mdc (ver [this thread](https://groups.google.com/forum/#!topic/mozilla.dev.mdc/49oqJAHFnWQ)). Cualquier entrada es bienvenida. Si esta nota persiste después de unos meses (Apr. 2016), por favor contactar al autor del primer email en este hilo para actualizar esta página.
+> [!NOTE]
+> Esto es actual (Feb. 2016) en discusión en la lista de emails dev-mdc (ver [this thread](https://groups.google.com/forum/#!topic/mozilla.dev.mdc/49oqJAHFnWQ)). Cualquier entrada es bienvenida. Si esta nota persiste después de unos meses (Apr. 2016), por favor contactar al autor del primer email en este hilo para actualizar esta página.
 
 - Orden de los bloques de código
   - : Al agregar un ejemplo ejecutable, los bloques de código deben ser organizados para que el primero corresponda al lenguaje principal (si hay uno). Por ejemplo, al agregar un ejemplo ejecutable para una referencia HTML, el primer bloque debe ser HTML, al agregar un ejemplo ejecutable para una referencia CSS, debe ser el de CSS y así.

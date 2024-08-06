@@ -39,7 +39,8 @@ Por enquanto, instalaremos alguns navegadores da Web para testar nosso código. 
 
 Antes de continuar, você deve instalar pelo menos dois desses navegadores e tê-los disponíveis para teste.
 
-> **Nota:** O Internet Explorer não é compatível com alguns recursos modernos da web e pode não ser capaz de executar seu projeto.
+> [!NOTE]
+> O Internet Explorer não é compatível com alguns recursos modernos da web e pode não ser capaz de executar seu projeto.
 
 ### Instalando um servidor web local
 

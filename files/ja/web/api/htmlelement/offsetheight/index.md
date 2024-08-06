@@ -1,8 +1,9 @@
 ---
 title: "HTMLElement: offsetHeight プロパティ"
+short-title: offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 8ac73df2fbe2c88d8649fcb006dcde098616c723
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -13,7 +14,8 @@ l10n:
 
 （例えば、要素またはその祖先のいずれかで `style.display` を `"none"` に設定することにより）要素が非表示の場合は、`0` が返されます。
 
-> **メモ:** このプロパティは、値を整数に丸めます。 小数値が必要な場合は、{{ domxref("element.getBoundingClientRect()") }} を使用してください。
+> [!NOTE]
+> このプロパティは、値を整数に丸めます。 小数値が必要な場合は、{{ domxref("element.getBoundingClientRect()") }} を使用してください。
 
 ## 値
 
@@ -23,15 +25,11 @@ l10n:
 
 ![大きなパディング、境界、マージンを持つ要素の例です。`offsetHeight`は、パディングと境界を記載し、マージンを除いた要素のレイアウト高さです。](dimensions-offset.png)
 
-上のサンプル画像は、スクロールバーにより、ウィンドウに収まる場合の `offsetHeight` を示しています。 ただし、スクロールできない要素には、目に見えるコンテンツよりもはるかに大きな `offsetHeight` 値が含まれる場合があります。 これらの要素は通常、スクロール可能な要素内に含まれています。 その結果、これらの非スクロール要素は、スクロール可能なコンテナの `scrollTop` の設定に応じて、完全にまたは部分的に非表示になる場合があります。
+上のサンプル画像は、スクロールバーにより、ウィンドウに収まる場合の `offsetHeight` を示しています。 ただし、スクロールできない要素には、目に見えるコンテンツよりもはるかに大きな `offsetHeight` 値が含まれる場合があります。 これらの要素は通常、スクロール可能な要素内に含まれています。 その結果、これらの非スクロール要素は、スクロール可能なコンテナーの `scrollTop` の設定に応じて、完全にまたは部分的に非表示になる場合があります。
 
 ## 仕様書
 
 {{Specifications}}
-
-### メモ
-
-`offsetHeight` は、MSIE によって最初に導入された DHTML オブジェクトモデルのプロパティです。 要素の物理的/グラフィカルな寸法、または要素の境界ボックスの高さ (border-box height) と呼ばれることもあります。
 
 ## ブラウザーの互換性
 

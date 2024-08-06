@@ -9,7 +9,8 @@ slug: Web/HTML/Global_attributes/accesskey
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-accesskey.html","tabbed-shorter")}}
 
-> **备注：** 在 WHATWG 规范中，它说你可以指定多个空格分隔的字符，浏览器将使用它所支持的第一个字符。然而，这在大多数浏览器中是行不通的。在 IE/Edge 中，它将使用它支持的第一个没有问题的，只要没有与其他命令冲突。
+> [!NOTE]
+> 在 WHATWG 规范中，它说你可以指定多个空格分隔的字符，浏览器将使用它所支持的第一个字符。然而，这在大多数浏览器中是行不通的。在 IE/Edge 中，它将使用它支持的第一个没有问题的，只要没有与其他命令冲突。
 
 激活 accesskey 的操作取决于浏览器及其平台。
 

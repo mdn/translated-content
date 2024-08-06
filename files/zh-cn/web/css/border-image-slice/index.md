@@ -11,7 +11,7 @@ slug: Web/CSS/border-image-slice
 
 切分过程会将图像分割为 9 个区域：四个角、四个边（edges）以及中心区域。四条切片线，从它们各自的侧面设置给定距离，控制区域的大小。
 
-[![The nine regions defined by the border-image or border-image-slice properties](border-image-slice.png)](border-image-slice.png)
+![由 border-image 或 border-image-slice 属性定义的九个区域](border-image-slice.png)
 
 上图说明了每个区域的位置。
 

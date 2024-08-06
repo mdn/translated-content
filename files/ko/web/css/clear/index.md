@@ -15,7 +15,8 @@ slug: Web/CSS/clear
 
 해제(cleared)와 관련된 부동체는 같은 [블록 형성 문맥](/ko/docs/Web/Guide/CSS/Block_formatting_context) 내 앞선 부동체입니다.
 
-> **참고:** **주의:** 요소가 그 안에 모든 부동 요소를 포함하고 싶은 경우, 컨테이너도 부동하거나 컨테이너의 {{cssxref("::after")}} 대체 [가상 요소](/ko/docs/Web/CSS/Pseudo-elements)에 `clear`를 쓸 수 있습니다.
+> [!NOTE]
+> 요소가 그 안에 모든 부동 요소를 포함하고 싶은 경우, 컨테이너도 부동하거나 컨테이너의 {{cssxref("::after")}} 대체 [가상 요소](/ko/docs/Web/CSS/Pseudo-elements)에 `clear`를 쓸 수 있습니다.
 >
 > ```css
 > #container::after {

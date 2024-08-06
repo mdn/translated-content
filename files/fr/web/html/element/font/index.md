@@ -5,11 +5,13 @@ slug: Web/HTML/Element/font
 
 {{HTMLSidebar}}
 
-> **Attention :** Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la prendre en charge, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications web l'utilisant peuvent cesser de fonctionner à tout moment.
+> [!WARNING]
+> Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la prendre en charge, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications web l'utilisant peuvent cesser de fonctionner à tout moment.
 
 L'élément HTML **`<font>`** définit la taille, la couleur et la police de son contenu.
 
-> **Attention :** Ne pas utiliser cet élément ! Bien qu'il ait été normalisé en HTML 3.2, il a été déprécié en HTML 4.01, en même temps que tous les éléments liés uniquement au style, puis rendu obsolète en HTML5.
+> [!WARNING]
+> Ne pas utiliser cet élément ! Bien qu'il ait été normalisé en HTML 3.2, il a été déprécié en HTML 4.01, en même temps que tous les éléments liés uniquement au style, puis rendu obsolète en HTML5.
 >
 > À partir de HTML 4, HTML ne véhicule plus d'informations de style (en dehors de l'élément [`<style>`](/fr/docs/Web/HTML/Element/style) ou de l'attribut **style** de chaque élément). Pour tout nouveau développement web, le style doit être écrit en utilisant le [CSS](/fr/docs/Web/CSS) uniquement.
 >

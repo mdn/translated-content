@@ -9,7 +9,8 @@ l10n:
 
 {{domxref("Navigator")}} 接口的 **`platform`** 只读属性返回一个字符串，用于标识用户浏览器所在的平台。
 
-> **备注：** 一般来说，你应该尽可能避免编写使用此类方法或属性来尝试查找有关用户环境的信息的代码，而是应该编写[特性检测](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)的代码。
+> [!NOTE]
+> 一般来说，你应该尽可能避免编写使用此类方法或属性来尝试查找有关用户环境的信息的代码，而是应该编写[特性检测](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)的代码。
 
 ## 值
 

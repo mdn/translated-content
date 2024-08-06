@@ -11,9 +11,11 @@ slug: Web/JavaScript/Reference/Functions/arguments
 
 ## Descripción
 
-> **Nota:** Si estás escribiendo código compatible con ES6, entonces se deben preferir los {{jsxref("Functions/rest_parameters", "parámetros resto")}}.
+> [!NOTE]
+> Si estás escribiendo código compatible con ES6, entonces se deben preferir los {{jsxref("Functions/rest_parameters", "parámetros resto")}}.
 
-> **Nota:** "similar a Array" significa que `arguments` tiene una propiedad {{jsxref("Functions/arguments/length", "lenght")}} y propiedades indexadas desde cero, pero no tiene métodos integrados de {{jsxref("Array")}} como {{jsxref("Array.forEach", "forEach()")}} o {{jsxref("Array.map", "map()")}}. Ve la [§Descripción](#Descripción) para obtener más detalles.
+> [!NOTE]
+> "Similar a Array" significa que `arguments` tiene una propiedad {{jsxref("Functions/arguments/length", "lenght")}} y propiedades indexadas desde cero, pero no tiene métodos integrados de {{jsxref("Array")}} como {{jsxref("Array.forEach", "forEach()")}} o {{jsxref("Array.map", "map()")}}. Ve la [§Descripción](#Descripción) para obtener más detalles.
 
 El objeto `arguments` es una variable local disponible en todas las funciones que no son {{jsxref("Functions/Arrow_functions", "funciones flecha")}}. Puedes hacer referencia a los argumentos de una función dentro de esa función utilizando su objeto `arguments`. Tiene entradas para cada argumento con el que se llamó a la función, con el índice de la primera entrada en `0`.
 
@@ -153,7 +155,8 @@ Si bien la presencia de parámetros `rest`, predeterminados o desestructurados n
 
 En el código de modo estricto, el objeto `arguments` se comporta de la misma manera independientemente de que se pasen parámetros `rest`, predeterminados o desestructurados a una función. Es decir, asignar nuevos valores a las variables en el cuerpo de la función no afectará al objeto `arguments`. La asignación de nuevas variables al objeto `arguments` tampoco afectará el valor de las variables.
 
-> **Nota:** No puedes escribir una directiva `"use strict";` en el cuerpo de una definición de función que acepte parámetros `rest`, predeterminados o desestructurados. Si lo haces, generará un {{jsxref("Errors/Strict_Non_Simple_Params", "error de sintaxis")}}.
+> [!NOTE]
+> No puedes escribir una directiva `"use strict";` en el cuerpo de una definición de función que acepte parámetros `rest`, predeterminados o desestructurados. Si lo haces, generará un {{jsxref("Errors/Strict_Non_Simple_Params", "error de sintaxis")}}.
 
 Las funciones no estrictas a las que se les pasan solo parámetros simples (es decir, no parámetros `rest`, predeterminados o desestructurados) sincronizarán el valor de los nuevos valores de las variables en el cuerpo de la función con el objeto `arguments`, y viceversa:
 

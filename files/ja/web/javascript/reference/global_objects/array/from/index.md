@@ -49,7 +49,8 @@ Array.from(arrayLike, mapFn, thisArg)
 
 `Array.from()` にはオプションで `mapFn` という引数があり、 {{jsxref("Array/map", "map()")}} と同様に、作成する配列のそれぞれの要素に対して関数を実行することができます。より明確には、`Array.from(obj, mapFn, thisArg)` は `Array.from(obj).map(mapFn, thisArg)` と同じ結果を保有します。ただし、`Array.from(obj).map(mapFn, thisArg)` は中間配列を作成せず、`mapFn` は配列全体を持たずに 2 つの引数 (`element`, `index`) を受け取るだけです。
 
-> **メモ:** この動作は[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)にとってより重要です。なぜなら、中間の配列は適切な型を入力するために必然的に値が切り捨てられるからです。 `Array.from()` は {{jsxref("TypedArray.from()")}} と同じシグネチャを持つために実装します。
+> [!NOTE]
+> この動作は[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)にとってより重要です。なぜなら、中間の配列は適切な型を入力するために必然的に値が切り捨てられるからです。 `Array.from()` は {{jsxref("TypedArray.from()")}} と同じシグネチャを持つために実装します。
 
 `Array.from()` メソッドは汎用ファクトリーメソッドです。例えば、 `Array` のサブクラスが `from()` メソッドを継承した場合、継承した `from()` メソッドは `Array` インスタンスではなく、サブクラスの新しいインスタンスを返します。実際には、新しい配列の長さを表す単一の引数を受け入れるコンストラクター関数を `this` 値として指定することができます。反復可能オブジェクトが `arrayLike` として渡された場合、コンストラクターは引数なしで呼び出されます。配列風のオブジェクトが渡された場合、コンストラクターは配列風オブジェクトの[正規化された長さ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#length_プロパティの正規化)で呼び出されます。最終的な `length` は反復処理が完了したときに再び設定されます。もし `this` の値がコンストラクター関数でない場合、代わりにプレーンな `Array` コンストラクターが使用されます。
 

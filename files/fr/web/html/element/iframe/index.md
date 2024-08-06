@@ -11,7 +11,8 @@ L'élément HTML **`<iframe>`** représente un [contexte de navigation](/fr/docs
 
 Chaque contexte de navigation possède son propre [historique](/fr/docs/Web/API/History) et son propre [document actif](/fr/docs/Web/API/Document). Le contexte de navigation qui contient le contenu intégré est appelé « contexte de navigation parent ». Le contexte de navigation le plus élevé (qui n'a pas de contexte parent) correspond généralement à la fenêtre du navigateur (cf. [`Window`](/fr/docs/Web/API/Window)).
 
-> **Attention :** Chaque contexte de navigation créé par un élément `<iframe>` représente un document à part entière et cela peut donc augmenter les ressources nécessaires à l'utilisation de la page. Aussi, bien qu'en théorie on puisse ajouter autant d'_iframes_ que possible sur autant de niveaux d'imbrication que voulus, on gardera à l'esprit que cela peut nuire aux performances.
+> [!WARNING]
+> Chaque contexte de navigation créé par un élément `<iframe>` représente un document à part entière et cela peut donc augmenter les ressources nécessaires à l'utilisation de la page. Aussi, bien qu'en théorie on puisse ajouter autant d'_iframes_ que possible sur autant de niveaux d'imbrication que voulus, on gardera à l'esprit que cela peut nuire aux performances.
 
 <table class="properties">
   <tbody>
@@ -98,13 +99,15 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Globa
 
   - : Cet attribut, lorsqu'il vaut `true`, indique que l'_iframe_ intégrée peut être passée en plein écran via la méthode[`Element.requestFullscreen()`](/fr/docs/Web/API/Element/requestFullScreen).
 
-    > **Note :** Cet attribut est considéré comme historique et a été redéfini avec `allow="fullscreen"`.
+    > [!NOTE]
+    > Cet attribut est considéré comme historique et a été redéfini avec `allow="fullscreen"`.
 
 - `allowpaymentrequest`
 
   - : Cet attribut, lorsqu'il vaut `true`, permet à l'_iframe_ intégrée d'appeler l'API [Payment Request](/fr/docs/Web/API/Payment_Request_API).
 
-    > **Note :** Cet attribut est considéré comme historique et a été redéfini avec `allow="payment"`.
+    > [!NOTE]
+    > Cet attribut est considéré comme historique et a été redéfini avec `allow="payment"`.
 
 - `csp` {{experimental_inline}}
   - : L'attribut `csp` définit [la politique de sécurité du contenu](/fr/docs/Web/HTTP/CSP) que le document intégré doit respecter. Voir [`HTMLIFrameElement.csp`](/fr/docs/Web/API/HTMLIFrameElement/csp) pour plus de détails.
@@ -151,7 +154,7 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Globa
     - `allow-top-navigation` : le contexte de navigation peut charger du contenu depuis le contexte de navigation de plus haut niveau. Si ce mot-clé est absent, cette opération n'est pas autorisée.
     - `allow-top-navigation-by-user-activation` : le contexte de navigation peut charger du contenu depuis le contexte de plus haut niveau uniquement si l'action provient de l'utilisateur. Si ce mot-clé est absent, cette opération n'est pas autorisée.
 
-    > **Note :**
+    > [!NOTE]
     >
     > - Lorsque le document intégré possède la même origine que la page principale, il est **fortement déconseillé** d'employer `allow-scripts` et `allow-same-origin` simultanément, car cela permet de retirer l'attribut `sandbox` via un programme, c'est donc aussi sûr que de ne pas utiliser l'attribut `sandbox`.
     > - La mise en bac à sable (_sandboxing_) est d'une aide minime si un attaquant peut faire en sorte qu'un contenu potentiellement hostile soit affiché dans le navigateur de l'utilisateur en dehors d'un _iframe_ sous sandbox. Aussi, il est recommandé de diffuser le contenu depuis un domaine dédié séparé, afin de limiter les éventuels dommages.

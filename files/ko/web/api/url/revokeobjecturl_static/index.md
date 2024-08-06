@@ -9,7 +9,8 @@ slug: Web/API/URL/revokeObjectURL_static
 
 {{AvailableInWorkers}}
 
-> **참고:** 이 기능은 {{domxref("Blob")}} 인터페이스의 생명 주기 문제와 잠재적인 메모리 누수 가능성으로 인해 [Service Worker](/ko/docs/Web/API/Service_Worker_API)에서 사용할 수 없습니다.
+> [!NOTE]
+> 이 기능은 {{domxref("Blob")}} 인터페이스의 생명 주기 문제와 잠재적인 메모리 누수 가능성으로 인해 [Service Worker](/ko/docs/Web/API/Service_Worker_API)에서 사용할 수 없습니다.
 
 ## 구문
 

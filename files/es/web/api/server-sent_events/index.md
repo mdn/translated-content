@@ -11,7 +11,8 @@ Tradicionalmente, una página web tiene que enviar una solicitud al servidor par
 
 {{AvailableInWorkers}}
 
-> **Nota:** Firefox actualmente no admite el uso de eventos enviados por el servidor en _service workers_ (sí los admite en trabajadores dedicados y compartidos). Ver [error 1681218, en Firefox](https://bugzil.la/1681218).
+> [!NOTE]
+> Firefox actualmente no admite el uso de eventos enviados por el servidor en _service workers_ (sí los admite en trabajadores dedicados y compartidos). Ver [error 1681218, en Firefox](https://bugzil.la/1681218).
 
 ## Conceptos y uso
 

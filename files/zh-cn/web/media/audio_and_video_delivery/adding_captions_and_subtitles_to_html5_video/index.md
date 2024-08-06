@@ -13,7 +13,8 @@ slug: Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_
 
 ![带有播放、停止、音量和字幕的开启和关闭控制按钮的播放器。正在播放的视频显示了一个男人手持长矛状武器的场景，标题为“Esta hoja tiene pasado oscuro”](video-player-with-captions.png)
 
-> **备注：** 你可以[查看 Github 源码](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)，或者[浏览在线示例](https://iandevlin.github.io/mdn/video-player-with-captions/)。
+> [!NOTE]
+> 你可以[查看 Github 源码](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)，或者[浏览在线示例](https://iandevlin.github.io/mdn/video-player-with-captions/)。
 
 ## HTML 和视频字幕
 
@@ -298,11 +299,12 @@ WebVTT 的一个不太为人所知和支持的功能是通过 [CSS 扩展](https
 }
 ```
 
-> **备注：** 一些带有 ::cue 的提示语的样式目前在 Chrome、Opera 和 Safari 上可以使用，但在 Firefox 上还不行。
+> [!NOTE]
+> 一些带有 ::cue 的提示语的样式目前在 Chrome、Opera 和 Safari 上可以使用，但在 Firefox 上还不行。
 
 ## 浏览器兼容性
 
-[浏览器对 WebVTT 和 `<track>` 元素的支持](http://caniuse.com/webvtt)相当好，尽管有些浏览器在实现上略有不同。
+[浏览器对 WebVTT 和 `<track>` 元素的支持](https://caniuse.com/webvtt)相当好，尽管有些浏览器在实现上略有不同。
 
 ### Safari
 

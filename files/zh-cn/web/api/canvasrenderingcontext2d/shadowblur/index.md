@@ -9,7 +9,8 @@ l10n:
 
 Canvas 2D API 的 **`CanvasRenderingContext2D.shadowBlur`** 属性用于描述模糊效果程度。默认值是 `0`（没有模糊）。
 
-> **备注：** 只有当 {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} 属性设置为非透明值时，阴影才会被绘制。其中的 `shadowBlur`、{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}} 或 {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} 属性中至少有一个必须是非零的。
+> [!NOTE]
+> 只有当 {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} 属性设置为非透明值时，阴影才会被绘制。其中的 `shadowBlur`、{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}} 或 {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} 属性中至少有一个必须是非零的。
 
 ## 值
 

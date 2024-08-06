@@ -11,7 +11,8 @@ The **`drop-shadow()`** [CSS](/zh-CN/docs/Web/CSS) function applies a drop shado
 
 投影实际上是输入图像的 alpha 蒙版的一个模糊的、偏移的版本，用特定的颜色绘制并合成在图像下面。
 
-> **备注：** 这个函数有点类似于 {{Cssxref("box-shadow")}} 属性。`box-shadow` 属性在元素的整个框后面创建一个矩形阴影，而 `drop-shadow()` 过滤器则是创建一个符合图像本身形状 (alpha 通道) 的阴影。
+> [!NOTE]
+> 这个函数有点类似于 {{Cssxref("box-shadow")}} 属性。`box-shadow` 属性在元素的整个框后面创建一个矩形阴影，而 `drop-shadow()` 过滤器则是创建一个符合图像本身形状 (alpha 通道) 的阴影。
 
 ## Syntax
 
@@ -31,7 +32,8 @@ The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in 
 
   - : 阴影的扩展半径，指定为 {{cssxref("&lt;length&gt;")}}. 正的值会导致阴影扩大和变大，而负的值会导致阴影缩小。如果未指定，则默认为 0，阴影的大小将与输入图像相同。
 
-    > **警告：** 大多数浏览器不支持这个参数;如果使用，效果将不会呈现。截止 2020 年 10,14 日，Chrome v.85.0.4183.121（正式版本）,Microsoft Edge Beta v85.0.564.63(64 位), Firefox v.85.0.564.63 暂未支持
+    > [!WARNING]
+    > 大多数浏览器不支持这个参数;如果使用，效果将不会呈现。截止 2020 年 10,14 日，Chrome v.85.0.4183.121（正式版本）,Microsoft Edge Beta v85.0.564.63(64 位), Firefox v.85.0.564.63 暂未支持
 
 - `color` (optional)
   - : 阴影的颜色，指定为 {{cssxref("&lt;color&gt;")}}。如果未指定，则使用 {{cssxref("color")}} 属性的值。

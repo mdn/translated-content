@@ -65,7 +65,8 @@ var myNumber = Math.random();
 
 ...우리는 함수를 사용하고 있었어요!
 
-> **참고:** 만약 필요하다면, 이 기능들에 다시 익숙해지기 위해 여러분의 브라우저 JavaScript 콘솔에 자유롭게 이 코드들을 입력해 보세요.
+> [!NOTE]
+> 만약 필요하다면, 이 기능들에 다시 익숙해지기 위해 여러분의 브라우저 JavaScript 콘솔에 자유롭게 이 코드들을 입력해 보세요.
 
 JavaScript 언어는 여러분 스스로 코드 전체를 적을 필요 없이, 유용한 것들을 할 수 있게 해주는 많은 내장 함수를 가지고 있습니다. 사실, 브라우저 내장 함수를 **호출**("함수를 실행하다(run 또는 execute)"는 말을 멋있게 "호출하다(invoke)"라고 하기도 합니다)할 때 호출하는 일부 코드는 JavaScript로 작성될 수 없었습니다 — 이러한 함수 중 상당수는 백그라운드 브라우저 코드의 일부를 호출하고 있으며, 이는 JavaScript와 같은 웹 언어가 아니라 대체로 C++와 같은 저수준 시스템 언어로 작성됩니다.
 
@@ -120,7 +121,8 @@ myFunction();
 // calls the function once
 ```
 
-> **참고:** 이 형태의 함수 생성은 또한 _함수 선언_(function declaration)으로도 알려져 있습니다. 이것은 언제나 호이스팅(hoisting)되어서, 여러분은 함수를 함수 정의 위에서 호출할 수 있고 이것은 잘 작동할 것입니다.
+> [!NOTE]
+> 이 형태의 함수 생성은 또한 _함수 선언_(function declaration)으로도 알려져 있습니다. 이것은 언제나 호이스팅(hoisting)되어서, 여러분은 함수를 함수 정의 위에서 호출할 수 있고 이것은 잘 작동할 것입니다.
 
 ## 익명 함수
 
@@ -160,7 +162,8 @@ var myGreeting = function () {
 };
 ```
 
-> **참고:** 이 형태의 함수 생성은 또한 _함수 표현식_(function expression)으로도 알려져 있습니다. 함수 선언과는 다르게, 함수 표현식은 호이스팅되지 않습니다.
+> [!NOTE]
+> 이 형태의 함수 생성은 또한 _함수 표현식_(function expression)으로도 알려져 있습니다. 함수 선언과는 다르게, 함수 표현식은 호이스팅되지 않습니다.
 
 이 함수는 이런 식으로 호출되죠:
 
@@ -205,7 +208,8 @@ myButton.onclick = function () {
 
 몇몇 함수는 호출을 위해 매개변수를 필요로 하는 경우가 있습니다. 이것들은 함수 괄호 안에 포함될 필요가 있는 값들인데, 올바르게 동작하기 위해 필요합니다.
 
-> **참고:** 매개변수는 종종 arguments, properties, 심지어 attributes 라고도 불려요.
+> [!NOTE]
+> 매개변수는 종종 arguments, properties, 심지어 attributes 라고도 불려요.
 
 예를 들어, 브라우저의 내장 함수인 [Math.random()](/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/random)은 어떤 매개변수도 필요로 하지 않습니다. 이 함수는 호출되면 늘 0과 1사이의 무작위 수를 반환해 주죠.
 
@@ -220,7 +224,8 @@ var myText = "I am a string";
 var newString = myText.replace("string", "sausage");
 ```
 
-> **참고:** 여러 개의 매개변수는 콤마에 의해 구분되어집니다.
+> [!NOTE]
+> 여러 개의 매개변수는 콤마에 의해 구분되어집니다.
 
 매개변수는 이따금 선택 사항이기도 합니다. 여러분이 명시해 줄 필요가 없다는 뜻이죠. 그런 경우, 일반적으로 함수는 기본 기능을 수행합니다. 예를 들어, 배열과 관련된 [join()](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 함수의 매개변수가 그렇죠.
 
@@ -271,7 +276,8 @@ function greeting() {
 
 여러분이 호출하고 싶은 두 함수 모두 `greeting()` 이지만, 여러분은 오직 `first.js` 파일의 `greeting()` 함수에만 접근할 수 있을 뿐입니다 (두번째 것은 무시됩니다). 추가적으로, `second.js` 파일에서 `let` 키워드로 `name` 변수를 두 번째로 선언하려고 시도하는 것은 오류를 낳습니다.
 
-> **참고:** 예제를 [GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html)에서 볼 수 있습니다. ([소스 코드](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions) 또한 볼 수 있습니다).
+> [!NOTE]
+> 예제를 [GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html)에서 볼 수 있습니다. ([소스 코드](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions) 또한 볼 수 있습니다).
 
 함수의 일부를 코드 안에 가두는 것은 이러한 문제를 피할 수 있고, 가장 좋은 방법이라 여겨집니다.
 
@@ -372,7 +378,8 @@ function greeting() {
 
     이번에는 `a()` 와 `b()` 호출이 둘 다 이 짜증나는 "[ReferenceError: z is not defined](/ko/docs/Web/JavaScript/Reference/Errors/Not_defined)" 오류를 리턴할 것입니다. — 이것은 왜냐하면 `output()` 호출과 그들이 출력하기를 시도하는 변수들이 같은 함수 스코프 내부에 정의되어 있지 않기 때문입니다. — 변수들은 효과적으로 이 함수 호출에 보이지 않습니다.
 
-> **참고:** 같은 스코프 규칙은 반복문 (예: `for() { ... }`)과 조건문(conditional blocks) (예: `if() { ... }`)에 적용되지 않습니다. — 이것들은 아주 비슷하게 생겼지만, 같은 것이 아닙니다! 헷갈리지 않도록 조심하세요.
+> [!NOTE]
+> 같은 스코프 규칙은 반복문 (예: `for() { ... }`)과 조건문(conditional blocks) (예: `if() { ... }`)에 적용되지 않습니다. — 이것들은 아주 비슷하게 생겼지만, 같은 것이 아닙니다! 헷갈리지 않도록 조심하세요.
 
 > **참고:** [ReferenceError: "x" is not defined](/ko/docs/Web/JavaScript/Reference/Errors/Not_defined) 오류는 여러분이 마주칠 가장 일반적인 것들 중 하나입니다. 만약 여러분이 이 오류를 얻었고 여러분이 문제의 변수를 정의했다는 것이 확실하다면, 그것이 어떤 스코프 안에 들어있는지 확인해 보세요.
 

@@ -204,7 +204,8 @@ Do that
 Do this, no matter what happened before
 ```
 
-> **メモ:** "Do this" のテキストは "Something failed" エラーが拒否をを引き起こしたため出力されないことに注意してください。
+> [!NOTE]
+> "Do this" のテキストは "Something failed" エラーが拒否をを引き起こしたため出力されないことに注意してください。
 
 ## よくある間違い
 
