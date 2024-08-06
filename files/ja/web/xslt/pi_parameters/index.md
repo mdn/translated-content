@@ -2,7 +2,7 @@
 title: PI パラメーター
 slug: Web/XSLT/PI_Parameters
 l10n:
-  sourceCommit: 857c6f9e7f1a847e7d3466b0d047159f7b345991
+  sourceCommit: 9f325923caffac2d0239773d4562303fd02ea30a
 ---
 
 {{XsltSidebar}}

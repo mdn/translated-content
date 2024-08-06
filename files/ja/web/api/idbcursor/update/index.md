@@ -1,17 +1,16 @@
 ---
-title: IDBCursor.update()
+title: "IDBCursor: update() メソッド"
+short-title: update()
 slug: Web/API/IDBCursor/update
 l10n:
-  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
+  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
-{{domxref("IDBCursor")}} インターフェイスの **`update()`** メソッドは、{{domxref("IDBRequest")}} オブジェクトを返し、別のスレッドで、オブジェクトストア内のカーソルが現在指している値を更新します。カーソルが削除したばかりのレコードを指している場合は、新しいレコードが作成されます。
+**`update()`** は {{domxref("IDBCursor")}} インターフェイスのメソッドで、{{domxref("IDBRequest")}} オブジェクトを返し、別のスレッドで、オブジェクトストア内のカーソルが現在指している値を更新します。カーソルが削除したばかりのレコードを指している場合は、新しいレコードが作成されます。
 
-注意点として、{{domxref("IDBIndex.openKeyCursor()")}} で取得したカーソルで `update()` (や {{domxref("IDBCursor.delete()")}}) を呼ぶことはできません。このような用途のためには、かわりに {{domxref("IDBIndex.openCursor()")}} を使わなければなりません。
-
-{{AvailableInWorkers}}
+注意点として、`update()` (や {{domxref("IDBCursor.delete()")}}) を {{domxref("IDBIndex.openKeyCursor()")}} で取得したカーソルで呼ぶことはできません。このような用途のためには、かわりに {{domxref("IDBIndex.openCursor()")}} を使用しないといけません。
 
 ## 構文
 
@@ -26,7 +25,9 @@ update(value)
 
 ### 返値
 
-この操作に関する続くイベントが発火する {{domxref("IDBRequest")}} オブジェクトです。
+この操作に関連する後続のイベントが発生する {{domxref("IDBRequest")}} オブジェクト。
+
+処理が成功した場合、リクエストの {{domxref("IDBRequest.result", "result")}} プロパティの値は `undefined` です。
 
 ### 例外
 
@@ -97,4 +98,4 @@ function updateResult() {
 - キーの範囲の設定: {{domxref("IDBKeyRange")}}
 - データの取得と変更: {{domxref("IDBObjectStore")}}
 - カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- 参考例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))

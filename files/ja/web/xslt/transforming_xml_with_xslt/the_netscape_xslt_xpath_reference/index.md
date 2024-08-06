@@ -2,7 +2,7 @@
 title: Netscape XSLT/XPath リファレンス
 slug: Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
 l10n:
-  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
+  sourceCommit: b6f343538eac4a803943b4e99b0c0545b372645a
 ---
 
 {{XsltSidebar}}
