@@ -7,9 +7,9 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`required`** [布尔](/zh-CN/docs/Glossary/Boolean/HTML)属性（如果存在）表示用户在提交自有表单前必须为输入指定一个值。
+**`required`** [布尔](/zh-CN/docs/Glossary/Boolean/HTML)属性（如果存在）表示用户在提交输入所属的表单前必须为其指定一个值。
 
-`{{HTMLElement("input/text", "text")}}`、`{{HTMLElement("input/search", "search")}}`、`{{HTMLElement("input/url", "url")}}`、`{{HTMLElement("input/tel", "tel")}}`、`{{HTMLElement("input/email", "email")}}`、`{{HTMLElement("input/password", "password")}}`、`{{HTMLElement("input/date", "date")}}`、`{{HTMLElement("input/month", "month")}}`、`{{HTMLElement("input/week", "week")}}`、`{{HTMLElement("input/time", "time")}}`、`{{HTMLElement("input/datetime-local", "datetime-local")}}`、`{{HTMLElement("input/number", "number")}}`、`{{HTMLElement("input/checkbox", "checkbox")}}`、`{{HTMLElement("input/radio", "radio")}}`、`{{HTMLElement("input/file", "file")}}` {{HTMLElement("input")}} 类型以及 {{HTMLElement("select")}} 和 {{HTMLElement("textarea")}} 表单控制元素均支持 `required` 属性。如果这些输入类型和元素中出现了 {{cssxref(':required')}} 伪类，则将与之匹配。如果不包含该属性，则将匹配 {{cssxref(':optional')}} 伪类。
+`{{HTMLElement("input/text", "text")}}`、`{{HTMLElement("input/search", "search")}}`、`{{HTMLElement("input/url", "url")}}`、`{{HTMLElement("input/tel", "tel")}}`、`{{HTMLElement("input/email", "email")}}`、`{{HTMLElement("input/password", "password")}}`、`{{HTMLElement("input/date", "date")}}`、`{{HTMLElement("input/month", "month")}}`、`{{HTMLElement("input/week", "week")}}`、`{{HTMLElement("input/time", "time")}}`、`{{HTMLElement("input/datetime-local", "datetime-local")}}`、`{{HTMLElement("input/number", "number")}}`、`{{HTMLElement("input/checkbox", "checkbox")}}`、`{{HTMLElement("input/radio", "radio")}}`、`{{HTMLElement("input/file", "file")}}` {{HTMLElement("input")}} 类型以及 {{HTMLElement("select")}} 和 {{HTMLElement("textarea")}} 表单控件元素均支持 `required` 属性。如果这些输入类型和元素中出现了该属性，则会匹配 {{cssxref(':required')}} 伪类。如果不包含该属性，则会匹配 {{cssxref(':optional')}} 伪类。
 
 {{HTMLElement("input/range", "range")}} 和 {{HTMLElement("input/color", "color")}} 不支持该属性，也与之无关，因为两者都有默认值。{{HTMLElement("input/hidden", "hidden")}} 也不支持该属性，因为用户不可能填写隐藏的表单。也不支持任何按钮类型，包括 `image`。
 
@@ -17,7 +17,7 @@ l10n:
 
 对于由 {{HTMLElement("input/radio", "radio")}} 按钮组成的同名组，如果该组中的某个单选按钮具有 `required` 属性，则必须选中该组中的某个单选按钮，但该单选按钮不一定是应用了该属性的单选按钮。为改善代码维护，建议在组中的每个同名单选按钮中都包含 `required` 属性，否则一个都不包含。
 
-如果是同名的一组 {{HTMLElement("input/checkbox", "checkbox")}} 输入类型，则只有带有 `required` 属性的复选框是必填的。
+如果是同名的一组 {{HTMLElement("input/checkbox", "checkbox")}} 输入类型，则只有带有 `required` 属性的复选框是必选的。
 
 > [!NOTE]
 > 设置 [`aria-required="true"`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-required) 会告诉屏幕阅读器某个元素（任何元素）是必需的，但与元素的可选性无关。
@@ -36,7 +36,7 @@ l10n:
 
 ## 无障碍考虑
 
-向用户提供提示，告知他们需要使用表单控件。确保信息传递是多方面的，例如通过文字、颜色、标记和属性，这样，无论用户是色盲、存在认知差异还是使用了屏幕阅读器，都能理解相关要求。
+向用户提供提示，告知他们特定表单控件是必填的。确保信息传递是多方面的，例如通过文字、颜色、标记和属性，这样，无论用户是色盲、存在认知差异还是使用了屏幕阅读器，都能理解相关要求。
 
 ## 示例
 
@@ -56,7 +56,7 @@ l10n:
 </form>
 ```
 
-### 运行结果
+### 结果
 
 {{EmbedLiveSample('示例')}}
 
