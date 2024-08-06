@@ -2,12 +2,12 @@
 title: Abstraction
 slug: Glossary/Abstraction
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
 {{GlossarySidebar}}
 
-L'_abstraction_ dans le domaine de la [programmation informatique](/fr/docs/Glossary/Computer_Programming) permet de réduire la complexité et d'obtenir une conception et une implémentation plus efficaces dans les systèmes logiciels complexes. Elle dissimule les complexités techniques des systèmes derrière des [API](/fr/docs/Glossary/API) plus simples à manipuler.
+L**abstraction** dans le domaine de la [programmation informatique](/fr/docs/Glossary/Computer_Programming) permet de réduire la complexité et d'obtenir une conception et une implémentation plus efficaces dans les systèmes logiciels complexes. Elle dissimule les complexités techniques des systèmes derrière des [API](/fr/docs/Glossary/API) plus simples à manipuler.
 
 ## Avantages de l'abstraction de données
 
