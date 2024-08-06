@@ -40,7 +40,7 @@ WebAssembly.instantiateStreaming(source, importObject)
 
 ### ストリーミングのインスタンス化
 
-次の例 (Github上のデモ [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) と、[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)を参照してください) では、ソースから .wasm モジュールを直接コンパイルしてインスタンス化しています。このプロミスは `ResultObject` で履行されます。 `instantiateStreaming()` 関数は [`Response`](/ja/docs/Web/API/Response) オブジェクトに解決するプロミスを受け取るので、直接 [`fetch()`](/ja/docs/Web/API/fetch) の呼び出し結果を渡すことができます。
+次の例 (Github上のデモ [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) と、[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)を参照してください) では、ソースから .wasm モジュールを直接コンパイルしてインスタンス化しています。このプロミスは `ResultObject` で履行されます。 `instantiateStreaming()` 関数は [`Response`](/ja/docs/Web/API/Response) オブジェクトに解決するプロミスを受け取るので、直接 [`fetch()`](/ja/docs/Web/API/Window/fetch) の呼び出し結果を渡すことができます。
 
 ```js
 const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
@@ -53,7 +53,7 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 最後に `ResultObject` が持つ instance メンバーにアクセスして、エクスポートされた関数を実行しています。
 
 > [!NOTE]
-> これを動作するようにするには、サーバが `.wasm` ファイルを `application/wasm` の MIME タイプで返す必要があります。
+> これを動作するようにするには、サーバーが `.wasm` ファイルを `application/wasm` の MIME タイプで返す必要があります。
 
 ## 仕様書
 

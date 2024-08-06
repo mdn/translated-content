@@ -2379,7 +2379,6 @@
 /ja/docs/Security/混在コンテンツ	/ja/docs/Web/Security/Mixed_content
 /ja/docs/Server-sent_events	/ja/docs/Web/API/Server-sent_events
 /ja/docs/Server-sent_events/Using_server-sent_events	/ja/docs/Web/API/Server-sent_events/Using_server-sent_events
-/ja/docs/Setting_up_extension_development_environment	/ja/docs/orphaned/Setting_up_extension_development_environment
 /ja/docs/The_DOM_and_JavaScript	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/The_Importance_of_Correct_HTML_Commenting	/ja/docs/orphaned/The_Importance_of_Correct_HTML_Commenting
 /ja/docs/The_X-Frame-Options_response_header	/ja/docs/Web/HTTP/Headers/X-Frame-Options

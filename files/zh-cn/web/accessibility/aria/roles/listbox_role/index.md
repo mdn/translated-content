@@ -213,5 +213,5 @@ l10n:
 - [ARIA：`option` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role)
 - [ARIA：`list` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role)
 - [ARIA：`listitem` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Listitem_role)
-- [ARIA 最佳实践 – Listbox](https://www.w3.org/TR/wai-aria-practices/#Listbox)
+- [ARIA 最佳实践 – Listbox](https://www.w3.org/WAI/ARIA/apg/#Listbox)
 - [ARIA 角色模型 – Listbox](https://www.w3.org/TR/wai-aria-1.1/#listbox)

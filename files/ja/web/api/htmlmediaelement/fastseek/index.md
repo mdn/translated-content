@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.fastSeek()
+title: "HTMLMediaElement: fastSeek() メソッド"
+short-title: fastSeek()
 slug: Web/API/HTMLMediaElement/fastSeek
 l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+  sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
 {{APIRef("HTML DOM")}}
