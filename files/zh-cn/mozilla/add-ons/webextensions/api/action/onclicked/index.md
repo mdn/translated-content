@@ -10,7 +10,7 @@ l10n:
 当浏览器操作图标被点击时触发。如果浏览器操作有一个弹出窗口，此事件将不会触发。
 
 > [!NOTE]
-> 该 API 在 Manifest V3 或更高中可用。
+> 该 API 在 Manifest V3 或更高版本中可用。
 
 要定义右键单击操作，请使用“browser_action” [上下文类型](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType) 的 [`contextMenus`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus) API。
 
@@ -40,23 +40,23 @@ browser.action.onClicked.hasListener(listener)
   - : 该函数将在事件触发时被调用。
 
     - `tab`
-      - : {{WebExtAPIRef('tabs.Tab')}}。当图标被点击时活动的标签。
+      - : {{WebExtAPIRef('tabs.Tab')}}，当图标被点击时的活动标签页。
     - `OnClickData`
 
       - : 包含有关点击的信息的对象。
 
         - `modifiers`
-          - : `array`。点击时活动的键盘修饰符，可以是 `Shift`、`Alt`、`Command`、`Ctrl` 或 `MacCtrl` 中的一个或多个。
+          - : `array`，点击时活动的键盘修饰符，可以是 `Shift`、`Alt`、`Command`、`Ctrl` 或 `MacCtrl` 中的一个或多个。
         - `button`
-          - : `integer`。指示用于点击页面操作图标的按钮：`0` 表示左键点击或不是鼠标的点击，例如键盘点击，`1` 表示中键或滚轮点击。请注意，不支持右键点击，因为 Firefox 在触发此事件之前会消耗该点击以显示上下文菜单。
+          - : `integer`，指示用于点击页面操作图标的按钮：`0` 表示左键点击或不是鼠标的点击，例如键盘点击，`1` 表示中键或滚轮点击。请注意，不支持右键点击，因为 Firefox 在触发此事件之前会消耗该点击以显示上下文菜单。
 
 ## 示例
 
-当用户点击图标时，禁用当前标签，并记录标签的 URL：
+当用户点击图标时，禁用当前标签页，并记录标签页的 URL：
 
 ```js
 browser.action.onClicked.addListener((tab) => {
-  // 禁用活动标签
+  // 禁用活动标签页
   browser.action.disable(tab.id);
   // 需要 "tabs" 或 "activeTab" 权限，或对该 URL 的 "host" 权限。
   console.log(tab.url);
