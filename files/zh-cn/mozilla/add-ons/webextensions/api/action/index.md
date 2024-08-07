@@ -18,7 +18,7 @@ l10n:
 
 如果指定了弹窗，当用户点击图标时，它会显示并加载内容。如果没有指定弹窗，当用户点击图标时，会向你的扩展发送一个事件。
 
-按钮还有一个上下文菜单。你可以利用 {{WebExtAPIRef("menus")}} API 中 `action` 的  {{WebExtAPIRef("menus.ContextType")}} 添加上下文菜单项。
+按钮还有一个上下文菜单。你可以利用 {{WebExtAPIRef("menus")}} API 中 `action` 的 {{WebExtAPIRef("menus.ContextType")}} 添加上下文菜单项。
 
 使用 `action` API，你可以：
 
