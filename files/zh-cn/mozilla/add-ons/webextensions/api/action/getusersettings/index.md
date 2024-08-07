@@ -10,7 +10,7 @@ l10n:
 获取浏览器操作的用户设置。
 
 > [!NOTE]
-> 该 API 在 Manifest V3 或更高中可用。
+> 该 API 在 Manifest V3 或更高版本中可用。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -33,7 +33,7 @@ let userSettings = await browser.action.getUserSettings();
   - : 对于浏览器操作而言，包含下列属性（用户设置）的对象：
 
     - `isOnToolbar` {{optional_inline}}
-      - : `boolean`。用户是否将该操作固定到浏览器 UI。这一设置并不能指示操作图标是否可见。可见性取决于浏览器窗口的尺寸与布局。
+      - : `boolean`，用户是否将该操作固定到浏览器 UI。这一设置并不能指示操作图标是否可见（可见性取决于浏览器窗口的尺寸与布局）。
 
 ## 示例
 
