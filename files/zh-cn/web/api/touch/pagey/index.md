@@ -20,14 +20,14 @@ l10n:
 在以下简单代码片段中，我们假设用户在 `source` 元素上启动一个或多个触摸点，移动这些触摸点，然后释放与表面的所有接触点。当触发 {{domxref("Element/touchmove_event", "touchmove")}} 事件处理器时，可以通过事件的 {{domxref("TouchEvent.changedTouches")}} 列表访问每个触摸点的 {{domxref("Touch.pageX")}} 和 `Touch.pageY` 坐标。
 
 ```js
-// 为 “source” 元素注册一个 touchmove 监听器。
+// 为“source”元素注册一个 touchmove 监听器。
 const src = document.getElementById("source");
 
 src.addEventListener(
   "touchmove",
   (e) => {
     // 遍历已移动的触摸点并记录每个触摸点。
-    // 每个坐标的单位是CSS像素，包括 pageX/Y 坐标。
+    // 每个坐标的单位是 CSS 像素，包括 pageX/Y 坐标。
     for (let i = 0; i < e.changedTouches.length; i++) {
       console.log(`touchpoint[${i}].pageX = ${e.changedTouches[i].pageX}`);
       console.log(`touchpoint[${i}].pageY = ${e.changedTouches[i].pageY}`);
