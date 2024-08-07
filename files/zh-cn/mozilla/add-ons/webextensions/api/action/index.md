@@ -7,28 +7,28 @@ l10n:
 
 {{AddonSidebar}}
 
-读取并修改使用 [`action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) 清单键定义的浏览器工具栏按钮的属性，并监听点击事件。
+读取并修改使用 [`action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) 清单键定义的浏览器工具栏按钮的属性，并监听按钮的点击事件。
 
 > [!NOTE]
 > 该 API 在 Manifest V3 或更高版本中可用。它替代了 Manifest V2 API {{WebExtAPIRef("browserAction")}}，以及在 Chrome、Safari 中的 {{WebExtAPIRef("pageAction")}}。
 
 [浏览器操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)是浏览器工具栏中的一个按钮。
 
-你可以将弹窗与按钮关联。与网页一样，弹窗使用 HTML、CSS 和 JavaScript 指定。在弹窗中运行的 JavaScript 可以访问与后台脚本相同的 WebExtension API，但其全局上下文是弹窗，而不是浏览器中显示的当前页面。要影响网页，你需要通过[消息](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging)与它们通信。
+你可以将弹窗与按钮关联。与网页一样，弹窗使用 HTML、CSS 和 JavaScript 指定。在弹窗中运行的 JavaScript 可以访问与后台脚本相同的 WebExtension API，但其全局上下文是弹窗，而不是浏览器中显示的当前页面。要影响网页，你需要通过[消息](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#消息)与网页进行通信。
 
-如果指定了弹窗，当用户点击图标时，它会显示 — 并加载内容。如果没有指定弹窗，当用户点击图标时，会向你的扩展发送一个事件。
+如果指定了弹窗，当用户点击图标时，它会显示并加载内容。如果没有指定弹窗，当用户点击图标时，会向你的扩展发送一个事件。
 
-按钮还有一个上下文菜单，你可以使用 `action` {{WebExtAPIRef("menus.ContextType")}} API 使用 `action` API 添加项目到这个菜单。
+按钮还有一个上下文菜单。你可以利用 {{WebExtAPIRef("menus")}} API 中 `action` 的  {{WebExtAPIRef("menus.ContextType")}} 添加上下文菜单项。
 
 使用 `action` API，你可以：
 
 - 使用 {{WebExtAPIRef("action.onClicked")}} 监听图标的点击事件。
-- 获取和设置图标的属性（图标、标题、弹窗等）。你可以全局获取和设置这些属性，跨所有标签页，或者通过传递标签页 id 作为额外参数来为标签页设置。
+- 获取和设置图标的属性（图标、标题、弹窗等）。你可以全局（对所有标签页）获取和设置这些属性，也可以通过传递标签页 id 作为额外参数来为某个标签页获取和设置这些属性。
 
 ## 类型
 
 - {{WebExtAPIRef("action.ColorArray")}}
-  - : 四个范围在 0-255 间的整型的数组，表示一个颜色。
+  - : 四个范围在 0-255 间的整型组成的数组，表示一个颜色。
 - {{WebExtAPIRef("action.ImageDataType")}}
   - : 图片的像素数据，必须是一个 [`ImageData`](/zh-CN/docs/Web/API/ImageData) 对象（如来源于一个 {{htmlelement("canvas")}} 元素）。
 
@@ -67,7 +67,7 @@ l10n:
 - {{WebExtAPIRef("action.isEnabled()")}}
   - : 检查浏览器操作是否被启用。
 
-## Events
+## 事件
 
 - {{WebExtAPIRef("action.onClicked")}}
   - : 当浏览器操作图标被点击时触发。当浏览器操作有弹窗时该事件不会触发。
