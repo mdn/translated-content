@@ -73,7 +73,7 @@ l10n:
   - : `string`，检查 URL（不含片段标识符）是否以指定的字符串开头。如果端口号与默认端口号一致，则会从 URL 中删除端口号。
 
     - 例如：`"https://developer"` 匹配 `https://developer.mozilla.org/` 和 `https://developers.facebook.com/`。
-    
+
 - `urlSuffix` {{optional_inline}}
   - : `string`，检查 URL（不含片段标识符）是否以指定的字符串结尾。如果端口号与默认端口号一致，则会从 URL 中删除端口号。请注意，在主机名后添加了一个隐式的正斜杠“/”，因此 `"com/"` 匹配 `https://example.com`，但 `"com"` 不匹配。
 - `schemes` {{optional_inline}}
