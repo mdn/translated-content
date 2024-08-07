@@ -7,27 +7,27 @@ l10n:
 
 {{AddonSidebar}}
 
-禁用浏览器操作按钮——意味着当该标签处于活动状态时，无法单击该按钮。
+禁用浏览器操作按钮——意味着当该标签页处于活动状态时，无法单击该按钮。
 
 > [!NOTE]
-> 该 API 在 Manifest V3 或更高中可用。
+> 该 API 在 Manifest V3 或更高版本中可用。
 
 ## 语法
 
 ```js-nolint
 browser.action.disable(
-  tabId // optional integer
+  tabId // 可选的整型
 )
 ```
 
 ### 参数
 
 - `tabId` {{optional_inline}}
-  - : `integer`：你希望禁用浏览器操作的标签的 id。
+  - : `integer`，你希望禁用浏览器操作的标签页的 id。
 
 ## 示例
 
-当点击后，禁用浏览器操作，并在每次打开新标签时重新启用它：
+当点击后，禁用浏览器操作，并在每次打开新标签页时重新启用它：
 
 ```js
 browser.tabs.onCreated.addListener(() => {
@@ -39,7 +39,7 @@ browser.action.onClicked.addListener(() => {
 });
 ```
 
-仅对活动标签禁用浏览器操作：
+仅对活动标签页禁用浏览器操作：
 
 ```js
 browser.action.onClicked.addListener((tab) => {
