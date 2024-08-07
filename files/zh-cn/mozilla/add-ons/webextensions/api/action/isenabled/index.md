@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-在浏览器操作被启用时返回 `true`。
+如果浏览器操作已启用，则返回 `true`。
 
 > [!NOTE]
 > 该 API 在 Manifest V3 或更高版本中可用。
@@ -26,7 +26,7 @@ let gettingIsEnabled = browser.action.isEnabled(
 
 - `details`
 
-  - : `object`。可选的包含 `tabId` 或 `windowId` 用于检查的对象。
+  - : `object`。可选的包含要检查的 `tabId` 或 `windowId` 的对象。
 
     - `tabId` {{optional_inline}}
       - : `integer`，指定要检查的标签页的 id。
@@ -40,7 +40,7 @@ let gettingIsEnabled = browser.action.isEnabled(
 
 ### 返回值
 
-以 `true`（启用）、`false`（禁用）形式兑现插件的浏览器操作状态的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，如果浏览器操作已启用，则兑现 `true`，否则兑现 `false`。
 
 ## 示例
 
