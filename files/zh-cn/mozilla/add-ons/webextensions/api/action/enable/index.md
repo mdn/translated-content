@@ -7,27 +7,27 @@ l10n:
 
 {{AddonSidebar}}
 
-启用某一标签的浏览器操作。默认情况下，浏览器操作对所有标签都是启用的。
+启用某一标签页的浏览器操作。默认情况下，浏览器操作对所有标签页都是启用的。
 
 > [!NOTE]
-> 该 API 在 Manifest V3 或更高中可用。
+> 该 API 在 Manifest V3 或更高版本中可用。
 
 ## 语法
 
 ```js-nolint
 browser.action.enable(
-  tabId // optional integer
+  tabId // 可选的整型值
 )
 ```
 
 ### 参数
 
 - `tabId` {{optional_inline}}
-  - : `integer`：你希望启用浏览器操作的标签的 id。
+  - : `integer`，你希望启用浏览器操作的标签的 id。
 
 ## 示例
 
-当点击后，禁用浏览器操作，并在每次打开新标签时重新启用它：
+当点击后，禁用浏览器操作，并在每次打开新标签页时重新启用它：
 
 ```js
 browser.tabs.onCreated.addListener(() => {
