@@ -10,7 +10,7 @@ l10n:
 在浏览器操作被启用时返回 `true`。
 
 > [!NOTE]
-> 该 API 在 Manifest V3 或更高中可用。
+> 该 API 在 Manifest V3 或更高版本中可用。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -18,7 +18,7 @@ l10n:
 
 ```js-nolint
 let gettingIsEnabled = browser.action.isEnabled(
-  details // object
+  details // 对象
 )
 ```
 
@@ -29,9 +29,9 @@ let gettingIsEnabled = browser.action.isEnabled(
   - : `object`。可选的包含 `tabId` 或 `windowId` 用于检查的对象。
 
     - `tabId` {{optional_inline}}
-      - : `integer`。指定要检查的标签的 id。
+      - : `integer`，指定要检查的标签页的 id。
     - `windowId` {{optional_inline}}
-      - : `integer`。指定要检查的窗口的 id。
+      - : `integer`，指定要检查的窗口的 id。
 
 <!---->
 
@@ -52,7 +52,7 @@ browser.action.isEnabled({}).then((result) => {
 });
 ```
 
-检查当前活动标签的启用状态：
+检查当前活动标签页的启用状态：
 
 ```js
 async function enabledInActiveTab() {
