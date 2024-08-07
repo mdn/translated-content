@@ -10,7 +10,7 @@ l10n:
 获取设为该浏览器操作的弹窗的 HTML 文档。
 
 > [!NOTE]
-> 该 API 在 Manifest V3 或更高中可用。
+> 该 API 在 Manifest V3 或更高版本中可用。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -18,7 +18,7 @@ l10n:
 
 ```js-nolint
 let gettingPopup = browser.action.getPopup(
-  details               // object
+  details               // 对象
 )
 ```
 
@@ -29,9 +29,9 @@ let gettingPopup = browser.action.getPopup(
   - : 一个含有下列属性的对象：
 
     - `tabId` {{optional_inline}}
-      - : `integer`。指定要获取弹窗的标签。
+      - : `integer`，指定要获取弹窗的标签页。
     - `windowId` {{optional_inline}}
-      - : `integer`。指定要获取弹窗的窗口。
+      - : `integer`，指定要获取弹窗的窗口。
 
 <!---->
 
