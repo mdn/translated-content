@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-描述用于过滤 URL 的各种标准。如果过滤器的属性中指定的所有标准都与 URL 匹配，则过滤器是匹配的。通常，过滤器以 UrlFilters 数组的形式提供给 API 方法。例如，[webNavigation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation) 监听器可以添加过滤器：该过滤器是一个具有单个 `url` 属性（UrlFilters 数组）的对象，例如 `{url:[UrlFilter, UrlFilter, …]}`。如果数组中的任何一个 UrlFilters 匹配，则它被认为是数组的匹配项。实际上，单个过滤器中指定的标准被 AND 连接在一起，而数组中的所有单个过滤器被 OR 连接在一起。
+描述用于过滤 URL 的各种标准。如果过滤器的属性中指定的所有标准都与 URL 匹配，则过滤器是匹配的。通常，过滤器以 UrlFilters 数组的形式提供给 API 方法。例如，[webNavigation](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation) 监听器可以添加过滤器：该过滤器是一个具有单个 `url` 属性（UrlFilters 数组）的对象，例如 `{url:[UrlFilter, UrlFilter, …]}`。如果数组中的任何一个 UrlFilters 匹配，则它被认为是数组的匹配项。实际上，单个过滤器中指定的标准被 AND 连接在一起，而数组中的所有单个过滤器被 OR 连接在一起。
 
 所有的规则都是区分大小写的。
 
@@ -54,7 +54,7 @@ l10n:
     - ：`string`，匹配 URL 的查询段是否等于指定的字符串。
   - `queryPrefix` {{optional_inline}}
     - ：`string`，匹配 URL 的查询段是否以指定的字符串开头。
-  - querySuffix` {{optional_inline}}
+  - `querySuffix` {{optional_inline}}
     - ：`string`，匹配 URL 的查询段是否以指定的字符串结束。
   - `urlContains` {{optional_inline}}
     - ：`string`，匹配 URL（不含片段标识符）是否包含指定字符串。如果端口号与默认端口号一致，则会从 URL 中删除端口号。
@@ -62,12 +62,12 @@ l10n:
     - ：`string`，匹配 URL（不含片段标识符）是否等于指定字符串。如果端口号与默认端口号一致，则会从 URL 中删除端口号。
   - `urlMatches` {{optional_inline}}
 
-    - : `string`，检查 URL（不含片段标识符）是否与指定的[正则表达式](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)匹配。如果端口号与默认端口号一致，则会从 URL 中删除端口号。
+    - : `string`，检查 URL（不含片段标识符）是否与指定的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)匹配。如果端口号与默认端口号一致，则会从 URL 中删除端口号。
 
       - 例如：`urlMatches: "^[^:]*:(?://)?(?:[^/]*\\.)?mozilla\\.org/.*$"` 匹配 `https://mozilla.org/`，`https://developer.mozilla.org/`，但不匹配 `https://developer.fakemozilla.org/`。
 
 - `originAndPathMatches` {{optional_inline}}
-  - : `string`，检查 URL（不含查询段和片段标识符）是否与指定的[正则表达式](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)匹配。如果端口号与默认端口号一致，则会从 URL 中删除端口号。
+  - : `string`，检查 URL（不含查询段和片段标识符）是否与指定的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)匹配。如果端口号与默认端口号一致，则会从 URL 中删除端口号。
 - `urlPrefix` {{optional_inline}}
 
   - : `string`，检查 URL（不含片段标识符）是否以指定的字符串开头。如果端口号与默认端口号一致，则会从 URL 中删除端口号。
