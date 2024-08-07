@@ -120,8 +120,7 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 - {{SVGElement("view")}}
 
-> [!NOTE]
-> [SVG 2 仕様では](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)、レンダリングのために未知の要素は {{SVGElement("g")}} として扱われることが要求されています。
+> **メモ:** [SVG 2 仕様では](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)、レンダリングのために未知の要素は {{SVGElement("g")}} として扱われることが要求されています。
 
 ## SVG 要素一覧 (カテゴリー別)
 
@@ -177,8 +176,7 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 {{SVGElement("a")}}, {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("g")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tspan")}}, {{SVGElement("use")}}
 
-> [!NOTE]
-> [SVG 2 仕様では](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)、レンダリングのために未知の要素は {{SVGElement("g")}} として扱われることが要求されています。
+> **メモ:** [SVG 2 仕様では](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)、レンダリングのために未知の要素は {{SVGElement("g")}} として扱われることが要求されています。
 
 ### 図形要素
 
