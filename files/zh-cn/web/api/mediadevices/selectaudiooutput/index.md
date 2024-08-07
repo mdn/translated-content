@@ -32,7 +32,8 @@ selectAudioOutput(options)
 
         该选项适用于希望存储设备 ID 以便将来会话中默认使用同一设备的应用程序。注意，方法可能会返回同一设备的新 ID，并且持久化的 ID 必须在 {{domxref("HTMLMediaElement.setSinkId","setSinkId()")}} 成功地通过 `selectAudioOutput()` 传递后才能使用。
 
-        > **备注：** 如果在先前会话中通过 `selectAudioOutput()` 向用户显示了指定的非空 ID，则用户代理可能会选择跳过提示用户的步骤。
+        > [!NOTE]
+        > 如果在先前会话中通过 `selectAudioOutput()` 向用户显示了指定的非空 ID，则用户代理可能会选择跳过提示用户的步骤。
         > 在这种情况下，用户代理可能会简单地解析为此设备 ID，或者如果设备 ID 已更改，则解析为同一设备的新 ID。
         > 如果先前授予了指定设备的权限，但此后被撤销，用户代理可能会显示所有允许的设备，并突出显示具有指定 ID 的设备。
 
