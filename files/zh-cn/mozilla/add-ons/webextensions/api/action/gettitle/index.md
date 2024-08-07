@@ -10,9 +10,9 @@ l10n:
 获取浏览器操作的标题。
 
 > [!NOTE]
-> 该 API 在 Manifest V3 或更高中可用。
+> 该 API 在 Manifest V3 或更高版本中可用。
 
-就像你可以使用 {{WebExtAPIRef("action.setTitle()")}} 在每个标签上设置标题一样，你也可以通过将标签的 ID 传递给此函数来检索特定于标签的标题。
+就像你可以使用 {{WebExtAPIRef("action.setTitle()")}} 在每个标签页上设置标题一样，你也可以通过将标签页的 ID 传递给此函数来检索特定于标签页的标题。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -20,7 +20,7 @@ l10n:
 
 ```js-nolint
 let gettingTitle = browser.action.getTitle(
-  details               // object
+  details               // 对象
 )
 ```
 
@@ -31,9 +31,9 @@ let gettingTitle = browser.action.getTitle(
   - : 一个含有下列属性的对象：
 
     - `tabId` {{optional_inline}}
-      - : `integer`。指定要获取标题的标签。
+      - : `integer`，指定要获取标题的标签页。
     - `windowId` {{optional_inline}}
-      - : `integer`。指定要获取标题的窗口。
+      - : `integer`，指定要获取标题的窗口。
 
 <!---->
 
