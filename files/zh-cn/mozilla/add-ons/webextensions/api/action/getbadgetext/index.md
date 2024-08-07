@@ -10,7 +10,7 @@ l10n:
 获取浏览器操作的徽章文本。
 
 > [!NOTE]
-> 该 API 在 Manifest V3 或更高中可 b30a10c08b986ebabd44733fb62f67667350403e 用。
+> 该 API 在 Manifest V3 或更高版本中可用。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -18,7 +18,7 @@ l10n:
 
 ```js-nolint
 let gettingText = browser.action.getBadgeText(
-  details               // object
+  details               // 对象
 )
 ```
 
@@ -29,9 +29,9 @@ let gettingText = browser.action.getBadgeText(
   - : 一个含有下列属性的对象：
 
     - `tabId` {{optional_inline}}
-      - : `integer`。指定要获取徽标文本的标签。
+      - : `integer`，指定要获取徽标文本的标签页。
     - `windowId` {{optional_inline}}
-      - : `integer`。指定要获取徽标文本的窗口。
+      - : `integer`，指定要获取徽标文本的窗口。
 
 <!---->
 
