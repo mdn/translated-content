@@ -2,7 +2,7 @@
 title: <circle>
 slug: Web/SVG/Element/circle
 l10n:
-  sourceCommit: 6b6907f5886f657b504aa705e68182dcba2083c5
+  sourceCommit: 2e5fc06de139c56873a20ec4bc3bf5600ea3cbef
 ---
 
 {{SVGRef}}
