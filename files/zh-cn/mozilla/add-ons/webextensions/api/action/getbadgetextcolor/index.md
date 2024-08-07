@@ -10,7 +10,7 @@ l10n:
 获取浏览器操作的徽章文本颜色。
 
 > [!NOTE]
-> 该 API 在 Manifest V3 或更高中可用。
+> 该 API 在 Manifest V3 或更高版本中可用。
 
 在 Firefox 中，除非使用 {{WebExtAPIRef("action.setBadgeTextColor()")}} 明确设置了徽章文本颜色，否则徽章文本颜色会自动设置为黑色或白色，以最大程度与指定的徽章背景颜色形成对比。例如，如果将徽章背景颜色设置为白色，则默认的徽章文本颜色将设置为黑色，反之亦然。
 
@@ -22,7 +22,7 @@ l10n:
 
 ```js-nolint
 browser.action.getBadgeTextColor(
-  details // object
+  details // 对象
 )
 ```
 
@@ -33,9 +33,9 @@ browser.action.getBadgeTextColor(
   - : `object`.
 
     - `tabId` {{optional_inline}}
-      - : `integer`。指定要获取徽标文本颜色的标签。
+      - : `integer`，指定要获取徽标文本颜色的标签页。
     - `windowId` {{optional_inline}}
-      - : `integer`。指定要获取徽标文本颜色的窗口。
+      - : `integer`，指定要获取徽标文本颜色的窗口。
 
 <!---->
 
