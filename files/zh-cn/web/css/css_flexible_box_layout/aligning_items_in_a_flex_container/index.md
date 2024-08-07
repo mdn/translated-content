@@ -115,13 +115,13 @@ flex items 的高度全都变成一样的原因是 `align-items` 属性的初始
 
 `justify-content` 属性有和 `align-content` 一样的属性值：
 
-- `align-content: flex-start`
-- `align-content: flex-end`
-- `align-content: center`
-- `align-content: space-between`
-- `align-content: space-around`
-- `align-content: stretch`
-- `align-content: space-evenly` （没有在 flexbox 特性中定义）
+- `justify-content: flex-start`
+- `justify-content: flex-end`
+- `justify-content: center`
+- `justify-content: space-between`
+- `justify-content: space-around`
+- `justify-content: stretch`
+- `justify-content: space-evenly` （没有在 flexbox 特性中定义）
 
 在下面的例子中， `justify-content` 的值为 `space-between` 。在显示完 flex 项目后的可用空间的分配是在 flex 项目水平方向之间。
 
