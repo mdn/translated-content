@@ -18,7 +18,7 @@ const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 ```
 
 > [!NOTE]
-> quando usar uma `regexp`, você deve colocar o sinalizador (flag) global "`g`". Do contrário, será retornado um `TypeError`: "_replaceAll must be called with a global RegExp_".
+> Quando usar uma `regexp`, você deve colocar o sinalizador (flag) global "`g`". Do contrário, será retornado um `TypeError`: "_replaceAll must be called with a global RegExp_".
 
 ### Parâmetros
 

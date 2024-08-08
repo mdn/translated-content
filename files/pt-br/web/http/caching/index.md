@@ -257,7 +257,7 @@ O servidor retornará `304 Not Modified` se o valor do cabeçalho `ETag` que ele
 Mas se o servidor determinar que o recurso solicitado deve ter agora um valor 'ETag' diferente, o servidor responderá com um '200 OK' e a versão mais recente do recurso.
 
 > [!NOTE]
-> ao avaliar como usar `ETag` e `Last-Modified`, considere o seguinte:
+> Ao avaliar como usar `ETag` e `Last-Modified`, considere o seguinte:
 > Durante a revalidação de cache, se ambos `ETag` e `Last-Modified` estiverem presentes, `ETag` terá precedência.
 > Portanto, se você está considerando apenas o armazenamento em cache, você pode pensar que 'Last-Modified' é desnecessário.
 > No entanto, `Last-Modified` não é apenas útil para cache; em vez disso, é um cabeçalho HTTP padrão que também é usado por sistemas de gerenciamento de conteúdo (CMS) para exibir a hora da última modificação, por rastreadores para ajustar a frequência de rastreamento e para outras finalidades.

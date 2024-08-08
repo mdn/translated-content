@@ -89,7 +89,7 @@ console.log(42 / -0); // -Infinity
 Embora um número geralmente represente apenas seu valor, o JavaScript fornece [operadores bitwise](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators).
 
 > [!NOTE]
-> embora os operadores bit a bit _podem_ ser usados para representar vários valores booleanos em um único número usando [mascaramento de bits](https://en.wikipedia.org/wiki/Mask_%28computing%29), isso geralmente é considerada uma má prática. JavaScript oferece outros meios para representar um conjunto de booleanos (como uma matriz de booleanos ou um objeto com valores booleanos atribuídos a propriedades nomeadas). O mascaramento de bits também tende a tornar o código mais difícil de ler, entender e manter.
+> Embora os operadores bit a bit _podem_ ser usados para representar vários valores booleanos em um único número usando [mascaramento de bits](https://en.wikipedia.org/wiki/Mask_%28computing%29), isso geralmente é considerada uma má prática. JavaScript oferece outros meios para representar um conjunto de booleanos (como uma matriz de booleanos ou um objeto com valores booleanos atribuídos a propriedades nomeadas). O mascaramento de bits também tende a tornar o código mais difícil de ler, entender e manter.
 
 Pode ser necessário usar essas técnicas em ambientes muito restritos, como ao tentar lidar com as limitações do armazenamento local ou em casos extremos (como quando cada bit na rede conta). Esta técnica só deve ser considerada quando for a última medida que pode ser tomada para otimizar o tamanho.
 

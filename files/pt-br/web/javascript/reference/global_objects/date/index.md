@@ -100,7 +100,7 @@ Todas as instâncias `Date` são herdadas de {{jsxref("Date.prototype")}}. O obj
 Os seguintes exemplos mostram várias formas de se criar datas em JavaScript:
 
 > [!NOTE]
-> a conversão de _strings_ com o construtor de `Date` (`Date.parse` é equivalente ao contrutor) é fortemente desencorajada devido às inconsistências e diferenças dos navegadores.
+> A conversão de _strings_ com o construtor de `Date` (`Date.parse` é equivalente ao contrutor) é fortemente desencorajada devido às inconsistências e diferenças dos navegadores.
 
 ```js
 var today = new Date();
@@ -166,7 +166,7 @@ retornoDaSuaFuncao = imprimirTempoDecorrido(suaFuncao);
 ```
 
 > [!NOTE]
-> Nota: Em navegadores que suportam a API de Desempenho Web ({{domxref("window.performance", "Web Performance API", "", 1)}}) com o recurso de tempo de alta resolução, {{domxref("Performance.now()")}} pode fornecer medidas de tempo decorrido mais confiáveis e precisas do que {{jsxref("Date.now()")}}.
+> Em navegadores que suportam a API de Desempenho Web ({{domxref("window.performance", "Web Performance API", "", 1)}}) com o recurso de tempo de alta resolução, {{domxref("Performance.now()")}} pode fornecer medidas de tempo decorrido mais confiáveis e precisas do que {{jsxref("Date.now()")}}.
 
 ## Especificações
 
