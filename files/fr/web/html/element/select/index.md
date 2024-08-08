@@ -106,7 +106,8 @@ Vous pourrez voir que :
 - Les éléments `<optgroup>` ont été utilisés pour diviser les choix en différents groupes. Cela applique un effet simplement visuel (avec le nom en gras et les options indentées).
 - Le choix "Hamster" est présent avec l'attribut `disabled` et ne peut donc pas être sélectionné.
 
-> **Note :** Sur un ordinateur de bureau, on pourra maintenir les touches <kbd>Ctrl</kbd>, <kbd>Command</kbd>, ou <kbd>Shift</kbd> en cliquant afin de sélectionner/déselectionner plusieurs options.
+> [!NOTE]
+> Sur un ordinateur de bureau, on pourra maintenir les touches <kbd>Ctrl</kbd>, <kbd>Command</kbd>, ou <kbd>Shift</kbd> en cliquant afin de sélectionner/déselectionner plusieurs options.
 
 ### Sélectionner plusieurs options
 
@@ -114,7 +115,8 @@ Sur un ordinateur de bureau, il existe différentes façons de sélectionner plu
 
 Pour les personnes qui utilisent la souris, il est possible de maintenir les touches <kbd>Ctrl</kbd>, <kbd>Command</kbd> ou <kbd>Shift</kbd> (selon le système d'exploitation utilisé) et de cliquer sur les différentes options afin de les sélectionner/déselectionner.
 
-> **Attention :** Les moyens décrits ci-après pour sélectionner des options qui ne sont pas contigües semblent ne fonctionner qu'avec Firefox. On notera également que sur macOS, les raccourcis <kbd>Ctrl</kbd> + <kbd>Bas</kbd> et <kbd>Ctrl</kbd> + <kbd>Haut</kbd> sont utilisées par défaut par le système d'exploitation et qu'il faut les désactiver si on souhaite qu'ils fonctionnent dans le navigateurs.
+> [!WARNING]
+> Les moyens décrits ci-après pour sélectionner des options qui ne sont pas contigües semblent ne fonctionner qu'avec Firefox. On notera également que sur macOS, les raccourcis <kbd>Ctrl</kbd> + <kbd>Bas</kbd> et <kbd>Ctrl</kbd> + <kbd>Haut</kbd> sont utilisées par défaut par le système d'exploitation et qu'il faut les désactiver si on souhaite qu'ils fonctionnent dans le navigateurs.
 
 Les utilisateurs du clavier pourront sélectionner des options contigües de la façon suivante :
 
