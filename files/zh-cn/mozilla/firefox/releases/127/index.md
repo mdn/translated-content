@@ -37,12 +37,12 @@ l10n:
 
 ### 安全
 
-- Firefox 现在会自动将安全内容中的音频、视频和图像子资源的 HTTP 请求升级为 HTTPS，并阻止其他类型媒体的 HTTP 请求。如果因为媒体主机不支持 HTTPS 而导致升级请求失败，则认为找不到该媒体。这确保如果内容通过 HTTPS 安全提供，则其所有子资源也通过 HTTPS 安全提供，否则不提供。由于页面不再显示[混合内容](/zh-CN/docs/Web/Security/Mixed_content)，Firefox 还删除了用于指示页面是否包含混合内容的图标，并将控制台的混合内容警告替换为指示请求已被升级的警告。（[Firefox bug 1779757](https://bugzil.la/1779757)）。
+- Firefox 现在会自动将安全内容中的音频、视频和图像子资源的 HTTP 请求升级为 HTTPS，并阻止其他媒体类型的 HTTP 请求。如果因为媒体主机不支持 HTTPS 而导致升级请求失败，则认为找不到该媒体。这确保了如果内容通过 HTTPS 安全提供，则其所有子资源也必须通过 HTTPS 安全提供，否则不提供。由于页面不再显示[混合内容](/zh-CN/docs/Web/Security/Mixed_content)，Firefox 还删除了用于指示页面是否包含混合内容的图标，并将控制台的混合内容警告替换为指示请求已被升级的警告。（[Firefox bug 1779757](https://bugzil.la/1779757)）。
 
 ### API
 
-- 现已完全支持异步{{domxref('Clipboard API', '剪切板', '', 1)}}。{{domxref('ClipboardItem')}} 接口以及 {{domxref('Clipboard')}} 接口的 [`read()`](/zh-CN/docs/Web/API/Clipboard/read) 和 [`write()`](/zh-CN/docs/Web/API/Clipboard/write) 方法已启用。（[Firefox bug 1887845](https://bugzil.la/1887845)、[Firefox bug 1858788](https://bugzil.la/1858788)）。
-- 所有的 {{glossary("character reference","HTML 字符引用")}}都已在 [Web Web 视频文本轨格式（WebVTT）](/zh-CN/docs/Web/API/WebVTT_API)的 cue、标题文本、注释、注解等中得到支持。([Firefox bug 1395924](https://bugzil.la/1395924))。
+- 现已完全支持异步{{domxref('Clipboard API', '剪切板 API', '', 1)}}。{{domxref('ClipboardItem')}} 接口以及 {{domxref('Clipboard')}} 接口的 [`read()`](/zh-CN/docs/Web/API/Clipboard/read) 和 [`write()`](/zh-CN/docs/Web/API/Clipboard/write) 方法已启用。（[Firefox bug 1887845](https://bugzil.la/1887845)、[Firefox bug 1858788](https://bugzil.la/1858788)）。
+- 所有的 {{glossary("character reference","HTML 字符引用")}}都已在 [Web 视频文本轨格式（WebVTT）](/zh-CN/docs/Web/API/WebVTT_API)的 cue、标题文本、注释、注解等中得到支持。([Firefox bug 1395924](https://bugzil.la/1395924))。
 - 现已支持 {{domxref('WebGLRenderingContext.drawingBufferColorSpace')}} 和 [`WebGL2RenderingContext.drawingBufferColorSpace`](/zh-CN/docs/Web/API/WebGL2RenderingContext)。（[Firefox bug 1885491](https://bugzil.la/1885491)）。
 
 ### WebDriver 一致性（WebDriver BiDi、Marionette）
@@ -87,7 +87,7 @@ l10n:
 
 - **JavaScript `Float16Array` 类型化数组**：`javascript.options.experimental.float16array`。
 
-  现已支持 {{jsxref("Float16Array")}} 类型化数组，以及用于通过 {{jsxref("DataView")}} 读取和设置 `Float16Array` 值的 {{jsxref("DataView.prototype.getFloat16()")}} 和 {{jsxref("DataView.prototype.setFloat16()")}}，以及用于将数字舍入到 16 位的 {{jsxref("Math.f16round()")}} 静态方法。新类型对于与 GPU 共享数据特别有用，特别是在需要权衡精度和内存消耗的用例中。（[Firefox bug 1833647](https://bugzil.la/1833647)。）
+  现已支持 {{jsxref("Float16Array")}} 类型化数组，以及用于通过 {{jsxref("DataView")}} 读取和设置 `Float16Array` 值的 {{jsxref("DataView.prototype.getFloat16()")}} 和 {{jsxref("DataView.prototype.setFloat16()")}}，以及用于将数字舍入到 16 位的 {{jsxref("Math.f16round()")}} 静态方法。新类型对于与 GPU 共享数据特别有用，特别是在需要以精度换取内存消耗的用例中。（[Firefox bug 1833647](https://bugzil.la/1833647)。）
 
 ## 更早期的版本
 
