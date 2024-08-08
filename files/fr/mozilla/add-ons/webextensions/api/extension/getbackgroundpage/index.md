@@ -7,7 +7,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
 
 Alias de {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
 
-> **Note :** Cette méthode ne peut pas être utilisée en mode Navigation privée - elle renvoie toujours un tableau vide. Pour plus d'informations, voir le [bug Firefox 1329304](https://bugzil.la/1329304).
+> [!NOTE]
+> Cette méthode ne peut pas être utilisée en mode Navigation privée - elle renvoie toujours un tableau vide. Pour plus d'informations, voir le [bug Firefox 1329304](https://bugzil.la/1329304).
 
 ## Syntaxe
 
@@ -50,7 +51,7 @@ page.foo(); // -> "I'm defined in background.js"
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
 >
