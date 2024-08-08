@@ -28,7 +28,8 @@ new WebAssembly.Memory(descripteurMemoire);
     - `shared` {{optional_inline}}
       - : Une valeur booléenne qui définit si la mémoire est partagée ou non. Si elle vaut `true`, il s'agira d'une mémoire partagée. La valeur par défaut est `false`.
 
-> **Note :** Une page WebAssembly mesure une taille constante de 65&nbsp;536 octets, soit 64Ko.
+> [!NOTE]
+> Une page WebAssembly mesure une taille constante de 65&nbsp;536 octets, soit 64Ko.
 
 ### Exceptions
 
