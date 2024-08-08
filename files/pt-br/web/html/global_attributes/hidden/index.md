@@ -17,7 +17,8 @@ Pode ser correto, entretanto, usar o atributo ARIA `aria-describedby`para refere
 
 Similarmente, um elemento canvas com atributo `hidden` poderia ser usado como buffer por um script de gráficos, e um controle de formulário, usando seu atributo form, poderia referir-se a um elemento `form` com atributo `hidden`.
 
-> **Nota:** Mudar o valor da propriedade {{cssxref("display")}} no CSS de um elemento com o atributo `hidden` sobrescreve o comportamento. Por exemplo, elementos com o estilo `display: flex;` serão mostrados independente da presença do atributo `hidden`.
+> [!NOTE]
+> Mudar o valor da propriedade {{cssxref("display")}} no CSS de um elemento com o atributo `hidden` sobrescreve o comportamento. Por exemplo, elementos com o estilo `display: flex;` serão mostrados independente da presença do atributo `hidden`.
 
 ## Especificações
 
