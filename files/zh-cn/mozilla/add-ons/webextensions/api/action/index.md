@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-读取并修改使用 [`action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) 清单键定义的浏览器工具栏按钮的属性，并监听按钮的点击事件。
+用于读取和修改使用 [`action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) 清单键定义的浏览器工具栏按钮的属性，以及监听按钮的点击事件。
 
 > [!NOTE]
 > 该 API 在 Manifest V3 或更高版本中可用。它替代了 Manifest V2 API {{WebExtAPIRef("browserAction")}}，以及在 Chrome、Safari 中的 {{WebExtAPIRef("pageAction")}}。
@@ -23,27 +23,27 @@ l10n:
 使用 `action` API，你可以：
 
 - 使用 {{WebExtAPIRef("action.onClicked")}} 监听图标的点击事件。
-- 获取和设置图标的属性（图标、标题、弹窗等）。你可以全局（对所有标签页）获取和设置这些属性，也可以通过传递标签页 id 作为额外参数来为某个标签页获取和设置这些属性。
+- 获取和设置图标的属性（图标、标题、弹窗等）。你可以全局地（对所有标签页而言）获取和设置这些属性，也可以通过传递标签页 id 作为额外参数来对某个标签页单独获取和设置这些属性。
 
 ## 类型
 
 - {{WebExtAPIRef("action.ColorArray")}}
-  - : 四个范围在 0-255 间的整型组成的数组，表示一个颜色。
+  - : 四个范围在 0-255 间的整型组成的数组，表示一个 RGBA 颜色。
 - {{WebExtAPIRef("action.ImageDataType")}}
   - : 图片的像素数据，必须是一个 [`ImageData`](/zh-CN/docs/Web/API/ImageData) 对象（如来源于一个 {{htmlelement("canvas")}} 元素）。
 
 ## 函数
 
 - {{WebExtAPIRef("action.setTitle()")}}
-  - : 设置浏览器操作的标题。标题显示在鼠标悬停在浏览器操作图标上时的工具提示中。
+  - : 设置浏览器操作的标题。这会在工具提示中显示出来。
 - {{WebExtAPIRef("action.getTitle()")}}
   - : 获取浏览器操作的标题。
 - {{WebExtAPIRef("action.setIcon()")}}
   - : 设置浏览器操作的图标。
 - {{WebExtAPIRef("action.setPopup()")}}
-  - : 设置用户单击浏览器操作图标时打开的 HTML 文档。
+  - : 设置用户单击浏览器操作图标时打开的弹窗所用的 HTML 文档。
 - {{WebExtAPIRef("action.getPopup()")}}
-  - : 设置用户单击浏览器操作图标时打开的 HTML 文档。
+  - : 设置用户单击浏览器操作图标时打开的弹窗所用的 HTML 文档。
 - {{WebExtAPIRef("action.openPopup()")}}
   - : 打开浏览器操作的弹窗。
 - {{WebExtAPIRef("action.setBadgeText()")}}
@@ -79,7 +79,7 @@ l10n:
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/) API。该文档衍生于 Chromium 代码中的 [`action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/action.json)。
+> 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/) API。该文档衍生自 Chromium 代码中的 [`action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/action.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
