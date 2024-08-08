@@ -40,7 +40,7 @@ let gettingPopup = browser.action.getPopup(
 
 ### 返回值
 
-以包含弹窗文档的 URL 的字符串形式兑现的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。该 URL 会是一个完全合格 URL，例如 `moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/popups/popup2.html`.
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，会兑现包含弹窗文档的 URL 的字符串。该 URL 是完全限定 URL，例如 `moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/popups/popup2.html`。
 
 ## 示例
 
@@ -62,7 +62,7 @@ gettingPopup.then(gotPopup);
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-getPopup) API。该文档衍生于 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-getPopup) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
