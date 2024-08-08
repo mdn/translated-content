@@ -5,7 +5,8 @@ slug: Web/API/Clipboard
 
 {{APIRef("Clipboard API")}}
 
-> **Note :** Le **presse-papiers** est un tampon de données utilisé pour le stockage ou le transfert à court terme de données, éventuellement entre documents ou applications. Il est généralement mis en œuvre sous la forme d'une [mémoire tampon](https://fr.wikipedia.org/wiki/Mémoire_tampon) temporaire, parfois appelée «&nbsp;tampon de collage&nbsp;», qui peut être accédé par la plupart ou tous les programmes de l'environnement via des [interfaces de programmation](https://fr.wikipedia.org/wiki/Interface_de_programmation) définies.
+> [!NOTE]
+> Le **presse-papiers** est un tampon de données utilisé pour le stockage ou le transfert à court terme de données, éventuellement entre documents ou applications. Il est généralement mis en œuvre sous la forme d'une [mémoire tampon](https://fr.wikipedia.org/wiki/Mémoire_tampon) temporaire, parfois appelée «&nbsp;tampon de collage&nbsp;», qui peut être accédé par la plupart ou tous les programmes de l'environnement via des [interfaces de programmation](https://fr.wikipedia.org/wiki/Interface_de_programmation) définies.
 >
 > Une application typique accède aux fonctionnalités du presse-papiers en associant des [entrées utilisateur](https://fr.wikipedia.org/wiki/Entrées-sorties) telles que des [raccourcis clavier](https://fr.wikipedia.org/wiki/Raccourci_clavier), des éléments de [menus](<https://fr.wikipedia.org/wiki/Menu_(informatique)>), etc. à ces interfaces.
 
@@ -15,7 +16,8 @@ Le presse-papiers du système est exposé via la propriété globale {{domxref("
 
 Les appels aux méthodes de l'objet `Clipboard` échoueront si l'utilisateur ou l'utilisatrice n'a pas accordé les permissions requises en utilisant l'[API permissions](/fr/docs/Web/API/Permissions_API), et la permission `"clipboard-read"` ou `"clipboard-write"` selon le besoin.
 
-> **Note :** En réalité, actuellement, les prérequis des navigateurs pour accéder au presse-papiers varient significativement. Veuillez consulter la section [Disponibilité du presse-papiers](#disponibilité_du_presse-papiers) pour plus de détails.
+> [!NOTE]
+> En réalité, actuellement, les prérequis des navigateurs pour accéder au presse-papiers varient significativement. Veuillez consulter la section [Disponibilité du presse-papiers](#disponibilité_du_presse-papiers) pour plus de détails.
 
 Toutes les méthodes de l'API clipboard fonctionnent de manière asynchrone&nbsp;; elles renvoient une {{jsxref("Promise")}} qui est résolue une fois que l'accès au presse-papiers a réussi. La promesse est rejetée si l'accès au presse-papiers est refusé.
 

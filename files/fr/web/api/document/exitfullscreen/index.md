@@ -7,7 +7,8 @@ slug: Web/API/Document/exitFullscreen
 
 La méthode **`Document.exitFullscreen()`** extrait le document du mode plein écran ; elle est utilisée pour inverser les effets d'un appel au mode plein écran réalisé avec la méthode {{domxref("Element.requestFullscreen()")}}.
 
-> **Note :** Si un autre élément était précédemment en mode plein écran lorsque l'élément en cours a été placé en mode plein écran, cet élément précédent reprend le mode plein écran. Une "pile" d'éléments en plein écran est maintenue par le navigateur à cette fin.
+> [!NOTE]
+> Si un autre élément était précédemment en mode plein écran lorsque l'élément en cours a été placé en mode plein écran, cet élément précédent reprend le mode plein écran. Une "pile" d'éléments en plein écran est maintenue par le navigateur à cette fin.
 
 ## Syntaxe
 

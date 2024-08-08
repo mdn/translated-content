@@ -9,7 +9,8 @@ La propriété **`onauxclick`** du mixin {{domxref("GlobalEventHandlers")}} est 
 
 L'événement `auxclick` est déclenché lorsqu'un bouton non principal a été enfoncé sur un périphérique d'entrée (par exemple, la molette de la souris). Il se déclenche après les événements [`mousedown`](/fr/docs/Web/API/Element/mousedown_event) et [`mouseup`](/fr/docs/Web/API/Element/mouseup_event), dans cet ordre.
 
-> **Note :** Les fournisseurs de navigateurs implémentent cette propriété dans le cadre d'un plan visant à améliorer la compatibilité en ce qui concerne le comportement des boutons. Plus précisément, le comportement des événements est mis à jour afin que l'évènement [`click`](/fr/docs/Web/API/Element/click_event) ne se déclenche que pour les clics sur le bouton principal (par exemple, le bouton gauche de la souris), tandis que l'évènement `auxclick` se déclenche pour le bouton non principal. Historiquement, [`click`](/fr/docs/Web/API/Element/click_event) s'est généralement déclenché pour le clic de n'importe quel bouton d'entrée de périphérique, bien que le comportement du navigateur soit quelque peu incohérent.
+> [!NOTE]
+> Les fournisseurs de navigateurs implémentent cette propriété dans le cadre d'un plan visant à améliorer la compatibilité en ce qui concerne le comportement des boutons. Plus précisément, le comportement des événements est mis à jour afin que l'évènement [`click`](/fr/docs/Web/API/Element/click_event) ne se déclenche que pour les clics sur le bouton principal (par exemple, le bouton gauche de la souris), tandis que l'évènement `auxclick` se déclenche pour le bouton non principal. Historiquement, [`click`](/fr/docs/Web/API/Element/click_event) s'est généralement déclenché pour le clic de n'importe quel bouton d'entrée de périphérique, bien que le comportement du navigateur soit quelque peu incohérent.
 
 ## Syntaxe
 
@@ -48,7 +49,8 @@ button.onauxclick = function () {
 };
 ```
 
-> **Note :** Si vous utilisez une souris à trois boutons, vous remarquerez que le gestionnaire `onauxclick` est exécuté lorsque l'un des boutons non gauche de la souris est cliqué.
+> [!NOTE]
+> Si vous utilisez une souris à trois boutons, vous remarquerez que le gestionnaire `onauxclick` est exécuté lorsque l'un des boutons non gauche de la souris est cliqué.
 
 ## Spécifications
 

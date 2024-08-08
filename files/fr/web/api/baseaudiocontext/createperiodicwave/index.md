@@ -29,7 +29,8 @@ Un {{domxref("PeriodicWave")}}.
 
     - `disableNormalization`: si réglé à `true`, la normalisation est désactivée pour l'onde périodique. Sa valeur par défaut est `false`.
 
-> **Note :** Si normalisée, l'onde résultante aura une valeur absolue de sommet égale à 1.
+> [!NOTE]
+> Si normalisée, l'onde résultante aura une valeur absolue de sommet égale à 1.
 
 ## Exemple
 
