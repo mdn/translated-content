@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-API 适用的常见类型，这些类型由分发事件的 API 使用。
+由分发事件的 API 所使用的常见类型。
 
 ## 类型
 
@@ -16,7 +16,7 @@ API 适用的常见类型，这些类型由分发事件的 API 使用。
 - {{WebExtAPIRef("events.Event")}}
   - : 允许对浏览器事件添加和移除监听器的对象。
 - {{WebExtAPIRef("events.UrlFilter")}}
-  - : 描述用于过滤 URL 的各种标准。如果过滤器的属性中指定的所有标准都与 URL 匹配，则过滤器是匹配的。
+  - : 用于过滤 URL 的各种标准。如果过滤器的属性中指定的所有标准之一与 URL 匹配，则过滤器是匹配的。
 
 ## 浏览器兼容性
 
@@ -25,7 +25,7 @@ API 适用的常见类型，这些类型由分发事件的 API 使用。
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.events](https://developer.chrome.com/docs/extensions/reference/events/) API。本文衍生于 Chromium 代码中的 [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json)。
+> 该 API 基于 Chromium 的 [`chrome.events](https://developer.chrome.com/docs/extensions/reference/events/) API。本文衍生自 Chromium 代码中的 [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
