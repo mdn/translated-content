@@ -26,18 +26,18 @@ let userSettings = await browser.action.getUserSettings();
 
 ### 返回值
 
-以包含下列属性的对象兑现的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)：
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，会兑现包含下列属性的对象：
 
 - `userSettings`
 
-  - : 对于浏览器操作而言，包含下列属性（用户设置）的对象：
+  - : 包含由用户指定的浏览器操作设置的对象，具有下列属性：
 
     - `isOnToolbar` {{optional_inline}}
-      - : `boolean`，用户是否将该操作固定到浏览器 UI。这一设置并不能指示操作图标是否可见（可见性取决于浏览器窗口的尺寸与布局）。
+      - : `boolean`，用户是否将该操作的图标固定到浏览器 UI。这一设置并不能指示操作图标是否可见。可见性取决于浏览器窗口的尺寸以及浏览器 UI 布局。
 
 ## 示例
 
-输出指示操作是否被固定到 UI 的信息：
+以下代码输出指示操作是否被固定的信息：
 
 ```js
 function gotSettings(userSettings) {
@@ -59,7 +59,7 @@ gettingUserSettings.then(gotSettings);
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-getUserSettings) API.
+> 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-getUserSettings) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
