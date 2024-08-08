@@ -76,7 +76,8 @@ La requête "open" n'ouvre pas la base de données ni ne démarre une transactio
 
 Le second paramètre de la méthode open est la version de la base de données. La version de la base détermine le schéma de celle-ci — Les objets stockés dans la base de données et leur structure. Si la base de données n'existe pas déjà, elle est créée via l'opération `open()`, puis, un événement `onupgradeneeded` est déclenché et vous créez le schéma de la base dans le gestionnaire pour cet événement. Si la base de données existe, mais que vous spécifiez un numéro de version plus élevé, un événement `onupgradeneeded` est déclenché immédiatement, vous permettant de mettre à jour le schéma dans son gestionnaire – plus d'informations dans [Updating the version of the database](#Updating_the_version_of_the_database) plus bas et la page référence {{ domxref("IDBFactory.open") }}.
 
-> **Attention :** Le numéro de version est un nombre "`unsigned long long`" ce qui signifie qu'il peut s'agir d'un entier très grand. Cela veut également dire que vous ne pouvez pas utiliser de réél, sinon, il sera converti au nombre entier le plus proche (inférieur) et la transaction peut ne pas démarrer ou ne pas déclencher l'événement `upgradeneeded`. Par exemple, n'utilisez pas 2.4 comme un numéro de version :
+> [!WARNING]
+> Le numéro de version est un nombre "`unsigned long long`" ce qui signifie qu'il peut s'agir d'un entier très grand. Cela veut également dire que vous ne pouvez pas utiliser de réél, sinon, il sera converti au nombre entier le plus proche (inférieur) et la transaction peut ne pas démarrer ou ne pas déclencher l'événement `upgradeneeded`. Par exemple, n'utilisez pas 2.4 comme un numéro de version :
 > `var request = indexedDB.open("MyTestDatabase", 2.4); // Ne faites pas ça, même si la version sera arrondie à 2`
 
 #### Générer des gestionnaires
@@ -259,7 +260,8 @@ Pour changer le "schéma" ou la structure de la base de données — qui impliqu
 
 Pour lire les enregistrements d'un objet de stockage existant, la transaction peut être en mode `readonly` ou `readwrite`. Pour appliquer des changements à un objet de stockage existant, la transaction doit être en mode `readwrite`. Vous démarrez ces transactions avec {{domxref("IDBDatabase.transaction")}}. La méthode accepte deux paramètres : les `storeNames` (la portée, définie comme un tableau des objets de stockage auxquels vous souhaitez accéder) et le `mode` (`readonly` ou `readwrite`) pour la transaction. La méthode retourne un objet de transaction contenant la méthode {{domxref("IDBIndex.objectStore")}}, que vous utilisez pour accéder à votre objet de stockage. Par défaut, lorsqu'aucun mode n'est spécifié, les transactions démarrent en mode `readonly`.
 
-> **Note :** À partir de Firefox 40, les transactions IndexedDB ont des garanties de durabilité relachées afin d'augmenter les performances (voir [bug Firefox 1112702](https://bugzil.la/1112702).) Auparavant, lors d'une transaction `readwrite` {{domxref("IDBTransaction.oncomplete")}} était déclenché seulement lorsque les données étaient garanties pour une écriture sur le disque. Dans Firefox 40+ l'évènement `complete` est déclenché une fois que l'OS a autorisé l'écriture de données, mais potentiellement avant que les données soient réellement écrites sur le disque. L'évènement `complete` peut ainsi être livré plus vite qu'avant, cependant, il existe un petit risque que l'ensemble de la transaction soit perdu si l'OS s'effondre ou si un problème électrique survient avant que les données soient écrites. Comme de tels évènements catastrophiques sont rares, la plupart des utilisateurs n'ont pas à s'en soucier. Si vous devez vous assurer de la durabilité pour quelconque raison que ce soit (par exemple, vous stockez des données critiques qui ne peuvent être recalculées plus tard) vous pouvez forcer une transaction à écrire sur le disque avant que l'évènement `complete` ne soit délivré en créant une transaction utilisant un mode expérimental (non-standard) `readwriteflush` (se référer à {{domxref("IDBDatabase.transaction")}}.
+> [!NOTE]
+> À partir de Firefox 40, les transactions IndexedDB ont des garanties de durabilité relachées afin d'augmenter les performances (voir [bug Firefox 1112702](https://bugzil.la/1112702).) Auparavant, lors d'une transaction `readwrite` {{domxref("IDBTransaction.oncomplete")}} était déclenché seulement lorsque les données étaient garanties pour une écriture sur le disque. Dans Firefox 40+ l'évènement `complete` est déclenché une fois que l'OS a autorisé l'écriture de données, mais potentiellement avant que les données soient réellement écrites sur le disque. L'évènement `complete` peut ainsi être livré plus vite qu'avant, cependant, il existe un petit risque que l'ensemble de la transaction soit perdu si l'OS s'effondre ou si un problème électrique survient avant que les données soient écrites. Comme de tels évènements catastrophiques sont rares, la plupart des utilisateurs n'ont pas à s'en soucier. Si vous devez vous assurer de la durabilité pour quelconque raison que ce soit (par exemple, vous stockez des données critiques qui ne peuvent être recalculées plus tard) vous pouvez forcer une transaction à écrire sur le disque avant que l'évènement `complete` ne soit délivré en créant une transaction utilisant un mode expérimental (non-standard) `readwriteflush` (se référer à {{domxref("IDBDatabase.transaction")}}.
 
 Vous pouvez accélérer l'accès à vos données en utilisant le bon mode et la bonne portée dans la transaction. Voici deux astuces :
 
@@ -387,7 +389,8 @@ request.onsuccess = function (event) {
 
 Ici, nous avons créé une variable `objectStore` et nous avons recherché un enregistrement d'un client, identifié par la valeur ssn (`444-44-4444`). Nous avons ensuite mis le résultat dans une variable (`data`), mis à jour la propriété `age` de cet objet, puis créé une deuxième requête (`requestUpdate`) pour mettre l'enregistrement du client dans l'`objectStore`, en écrasant la valeur précédente.
 
-> **Note :** dans ce cas, nous avons eu à spécifier une transaction `readwrite` puisque nous voulions écrire dans la base, et pas seulement la lire.
+> [!NOTE]
+> Dans ce cas, nous avons eu à spécifier une transaction `readwrite` puisque nous voulions écrire dans la base, et pas seulement la lire.
 
 ### Utiliser un curseur
 
@@ -425,7 +428,8 @@ objectStore.openCursor().onsuccess = function (event) {
 };
 ```
 
-> **Note :** Mozilla a aussi implémenté `getAll()` pour gérer ce cas (et `getAllKeys()`, qui est actuellement caché derrière la préférence `dom.indexedDB.experimental` dans about:config) . ceux-ci ne font pas partie d' IndexedDB standard, et peuvent disparaître dans le futur. Nous les avons inclus partceque nous pensons qu'ils sont utiles. Le code suivant fait exactement la même chose que ci-dessus :
+> [!NOTE]
+> Mozilla a aussi implémenté `getAll()` pour gérer ce cas (et `getAllKeys()`, qui est actuellement caché derrière la préférence `dom.indexedDB.experimental` dans about:config) . ceux-ci ne font pas partie d' IndexedDB standard, et peuvent disparaître dans le futur. Nous les avons inclus partceque nous pensons qu'ils sont utiles. Le code suivant fait exactement la même chose que ci-dessus :
 >
 > ```js
 > objectStore.getAll().onsuccess = function (event) {
@@ -637,7 +641,8 @@ Cette nouvelle fonctionnalité permet aux développeurs de spécifier une "local
 
 {{domxref("IDBIndex")}} a également eu de nouvelles propriétés qui lui ont été ajoutées pour spécifier la langue : `locale` (retourne la langue si elle est spécifiée, ou null sinon) et `isAutoLocale` (retourne `true` _(vrai)_ si l'index a été créé avec une "locale auto", ce qui signifie que la langue par défaut de la plate-forme est utilisée, sinon `false`).
 
-> **Note :** Cette fonctionnalité est couramment cachée derrière une marque (flag) — pour l'activer et l'expérimenter, aller à about:config et activez `dom.indexedDB.experimental`.
+> [!NOTE]
+> Cette fonctionnalité est couramment cachée derrière une marque (flag) — pour l'activer et l'expérimenter, aller à about:config et activez `dom.indexedDB.experimental`.
 
 ## Exemple complet d'IndexedDB
 
