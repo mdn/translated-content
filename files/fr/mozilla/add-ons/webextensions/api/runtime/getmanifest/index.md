@@ -34,7 +34,7 @@ console.log(manifest.name);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 >
