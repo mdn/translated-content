@@ -117,7 +117,8 @@ export { function1, function2 };
 
 Mas onde `function1` e `function2` não ficam disponíveis dentro do módulo atual.
 
-> **Nota:** Os exemplos a seguir são sintaticamente inválidos apesar de sua equivalência com o import:
+> [!NOTE]
+> Os exemplos a seguir são sintaticamente inválidos apesar de sua equivalência com o import:
 
 ```js
 import DefaultExport from "bar.js"; // Válido
