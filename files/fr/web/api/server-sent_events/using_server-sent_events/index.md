@@ -97,7 +97,8 @@ Ce code génère un évènement de type «&nbsp;ping&nbsp;» à chaque seconde. 
 
 La boucle s'exécute indépendamment du statut de la connexion, on a donc une vérification pour terminer l'exécution si la connexion a été terminée.
 
-> **Note :** Vous pouvez trouver un exemple complet utilisant le code ci-dessus sur GitHub : voir [Démonstration d'évènements serveur avec PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!NOTE]
+> Vous pouvez trouver un exemple complet utilisant le code ci-dessus sur GitHub : voir [Démonstration d'évènements serveur avec PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
 ## Gestion des erreurs
 
@@ -121,7 +122,8 @@ evtSource.close();
 
 Le flux d'évènements est un simple flux de données de texte, qui doit être encodé en [UTF-8](/fr/docs/Glossary/UTF-8). Les messages dans le flux d'évènements sont séparés par une paire de sauts de ligne. Un caractère deux-points «&nbsp;:&nbsp;» en début de ligne représente un commentaire, et est ignoré.
 
-> **Note :** Une ligne de commentaire peut être utilisée pour empêcher les connexions d'expirer. Un serveur peut envoyer périodiquement des commentaires afin de garder la connexion ouverte.
+> [!NOTE]
+> Une ligne de commentaire peut être utilisée pour empêcher les connexions d'expirer. Un serveur peut envoyer périodiquement des commentaires afin de garder la connexion ouverte.
 
 Chaque message consiste en une ou plusieurs lignes de texte décrivant les champs de ce message. Chaque champ est représenté par le nom du champ, suivi d'un «&nbsp;:&nbsp;», suivi des données de texte pour la valeur de ce champ.
 
@@ -140,7 +142,8 @@ Chaque message reçu contient un ou plusieurs de ces champs, un par ligne :
 
 Tous les autres noms de champs sont ignorés.
 
-> **Note :** Si une ligne ne contient aucun caractère deux-points, la ligne entière est considérée comme le nom du champ, avec un contenu vide.
+> [!NOTE]
+> Si une ligne ne contient aucun caractère deux-points, la ligne entière est considérée comme le nom du champ, avec un contenu vide.
 
 ### Exemples
 
