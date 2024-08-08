@@ -352,15 +352,15 @@ CORS 사전 요청에는 자격 증명이 절대로 포함되지 않아야 합�
 
 - 서버는 `Access-Control-Expose-Headers` 응답 헤더 값으로 "`*`" 와일드카드를 **지정해서는 안 되며**, 대신 명시적인 헤더 이름 목록을 지정해야 합니다. 예를 들어 `Access-Control-Expose-Headers: Content-Encoding, Kuma-Revision`.
 
-요청에 자격 증명(가장 일반적으로는 `쿠키` 헤더)이 포함되고 응답에 `Access-Control-Allow-Origin: *` 헤더(즉, 와일드카드)가 포함되어 있으면, 브라우저는 응답에 대한 접근을 차단하고 개발자 도구 콘솔에 CORS 오류를 보고합니다.
+요청에 자격 증명(가장 일반적으로는 `Cookie` 헤더)이 포함되고 응답에 `Access-Control-Allow-Origin: *` 헤더(즉, 와일드카드)가 포함되어 있으면, 브라우저는 응답에 대한 접근을 차단하고 개발자 도구 콘솔에 CORS 오류를 보고합니다.
 
-그러나 요청에 자격 증명(예를 들어 `쿠키` 헤더)이 포함되고 응답에 와일드카드 대신 실제 출처(예를 들어 `Access-Control-Allow-Origin: https://example.com`)가 포함되어 있으면, 브라우저는 지정된 출처에서 응답에 접근할 수 있도록 허용합니다.
+그러나 요청에 자격 증명(예를 들어 `Cookie` 헤더)이 포함되고 응답에 와일드카드 대신 실제 출처(예를 들어 `Access-Control-Allow-Origin: https://example.com`)가 포함되어 있으면, 브라우저는 지정된 출처에서 응답에 접근할 수 있도록 허용합니다.
 
 또한 응답의 `Access-Control-Allow-Origin` 헤더 값에 실제 출처가 아닌 "`*`" 와일드카드인 경우 응답의 `Set-Cookie` 헤더는 쿠키를 설정하지 않습니다.
 
-#### 서드-파티 쿠키
+#### 서드 파티 쿠키
 
-CORS 응답에 설정된 쿠키는 일반적인 서드-파티(third-party) 쿠키 정책의 적용을 받습니다. 위의 예에서, 페이지는 `foo.example` 에서 로드되지만, 응답의 `Cookie` 헤더는 `bar.other` 에서 전송되므로 사용자의 브라우저가 모든 서드-파티 쿠키를 거부하도록 설정된 경우 해당 쿠키는 저장되지 않습니다.
+CORS 응답에 설정된 쿠키는 일반적인 서드 파티(third-party) 쿠키 정책의 적용을 받습니다. 위의 예에서, 페이지는 `foo.example` 에서 로드되지만, 응답의 `Cookie` 헤더는 `bar.other` 에서 전송되므로 사용자의 브라우저가 모든 서드-파티 쿠키를 거부하도록 설정된 경우 해당 쿠키는 저장되지 않습니다.
 
 요청의 쿠키도 일반적인 서드-파티 쿠키 정책에 따라 억제될 수 있습니다. 따라서 강제된 쿠키 정책은 이 장에서 설명된 기능을 무효화 할 수 있으며, 자격 증명이 포함된 요청을 전혀 수행할 수 없게 만들 수 있습니다.
 
@@ -372,7 +372,7 @@ CORS 응답에 설정된 쿠키는 일반적인 서드-파티(third-party) 쿠�
 
 ### Access-Control-Allow-Origin
 
-리턴된 리소스에는 다음 구문과 함께 하나의 {{HTTPHeader("Access-Control-Allow-Origin")}} 헤더가 있을 수 있습니다.
+반환된 리소스에는 다음 구문과 함께 하나의 {{HTTPHeader("Access-Control-Allow-Origin")}} 헤더가 있을 수 있습니다.
 
 ```http
 Access-Control-Allow-Origin: <origin> | *
@@ -417,7 +417,7 @@ Access-Control-Max-Age: <delta-seconds>
 
 ### Access-Control-Allow-Credentials
 
-{{HTTPHeader("Access-Control-Allow-Credentials")}} 헤더는 `자격 증명 플래그(credentials)`가 참일 때 요청에 대한 응답을 표시할 수 있는지 여부를 나타냅니다. 사전 요청에 대한 응답의 일부로 사용될 때, 이 헤더는 실제 요청이 자격 증명과 함께 수행될 수 있는지 여부를 나타냅니다. 단, GET 메서드 단순 요청은 사전 요청이 수행되지 않으므로, 자격 증명과 함께 리소스에 대한 요청이 이루어진 경우 이 헤더가 리소스와 함께 반환되지 않으면 브라우저는 응답을 무시하고 웹 콘텐츠에 반환하지 않습니다.
+{{HTTPHeader("Access-Control-Allow-Credentials")}} 헤더는 `credentials`가 참일 때 요청에 대한 응답을 표시할 수 있는지 여부를 나타냅니다. 사전 요청에 대한 응답의 일부로 사용될 때, 이 헤더는 실제 요청이 자격 증명과 함께 수행될 수 있는지 여부를 나타냅니다. 단, `GET` 메서드 단순 요청은 사전 요청이 수행되지 않으므로, 자격 증명과 함께 리소스에 대한 요청이 이루어진 경우 이 헤더가 리소스와 함께 반환되지 않으면 브라우저는 응답을 무시하고 웹 콘텐츠에 반환하지 않습니다.
 
 ```http
 Access-Control-Allow-Credentials: true
@@ -481,7 +481,7 @@ Access-Control-Request-Headers: <field-name>[,<field-name>]*
 
 이 사용법의 예제는 [위에서](#사전_요청preflighted_requests) 찾을 수 있습니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
@@ -492,13 +492,13 @@ Access-Control-Request-Headers: <field-name>[,<field-name>]*
 ## 같이 보기
 
 - [CORS errors](/ko/docs/Web/HTTP/CORS/Errors)
-- [Enable CORS: I want to add CORS support to my server](https://enable-cors.org/server.html)
+- [CORS 활성화: 내 서버에 CORS 지원을 추가하고 싶다](https://enable-cors.org/server.html)
 - {{domxref("XMLHttpRequest")}}
 - [Fetch API](/ko/docs/Web/API/Fetch_API)
-- [Will it CORS?](https://httptoolkit.tech/will-it-cors) - an interactive CORS explainer & generator
-- [Using CORS with All (Modern) Browsers](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
-- [How to run Chrome browser without CORS](https://alfilatov.com/posts/run-chrome-without-cors/)
-- [Stack Overflow answer with "how to" info for dealing with common problems](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
+- [CORS 일까요?](https://httptoolkit.tech/will-it-cors) - an interactive CORS explainer & generator
+- [모든(현대) 브라우저에서 CORS 사용하기](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
+- [CORS 없이 Chrome 브라우저를 실행하는 방법](https://alfilatov.com/posts/run-chrome-without-cors/)
+- [일반적인 문제를 다루기 위한 방법에 대한 스택 오버플로우 답변](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
 
   - How to avoid the CORS preflight
   - How to use a CORS proxy to get around _"No Access-Control-Allow-Origin header"_
