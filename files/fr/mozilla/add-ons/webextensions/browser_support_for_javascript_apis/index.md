@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
 
 {{WebExtAllCompatTables}}
 
-> **Note :**
+> [!NOTE]
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 

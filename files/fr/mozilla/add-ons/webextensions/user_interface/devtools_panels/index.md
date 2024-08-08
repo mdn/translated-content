@@ -5,7 +5,8 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 
 {{AddonSidebar}}
 
-> **Note :** Cette fonctionnalité deviendra disponible dans Firefox 54.
+> [!NOTE]
+> Cette fonctionnalité deviendra disponible dans Firefox 54.
 
 Lorsqu'une extension fournit des outils utiles aux développeurs, il est possible d'ajouter une interface utilisateur pour les outils de développement du navigateur en tant que nouveau panneau.
 
