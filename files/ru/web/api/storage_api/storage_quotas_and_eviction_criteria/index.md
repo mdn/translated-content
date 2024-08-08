@@ -7,7 +7,8 @@ slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 
 Существует целый ряд веб-технологий, которые хранят данные того или иного рода на стороне клиента (то есть на локальном диске). Процесс, с помощью которого браузер решает, сколько места выделить для хранения веб-данных и что удалить, когда этот предел будет достигнут, не прост и отличается между браузерами. В этой статье описывается, как браузеры определяют, какой локальный контент следует очистить и когда, чтобы освободить необходимое локальное пространство для хранения.
 
-> **Примечание:** приведённая ниже информация должна быть достаточно точной для большинства современных браузеров, но специфика браузера вызывается там, где она известна. Opera и Chrome должны вести себя одинаково во всех случаях. Opera Mini (все ещё основанная на presto, серверная визуализация) не хранит никаких данных на клиенте.
+> [!NOTE]
+> Приведённая ниже информация должна быть достаточно точной для большинства современных браузеров, но специфика браузера вызывается там, где она известна. Opera и Chrome должны вести себя одинаково во всех случаях. Opera Mini (все ещё основанная на presto, серверная визуализация) не хранит никаких данных на клиенте.
 
 ## Какие технологии используют браузерные хранилища данных?
 
@@ -18,9 +19,11 @@ slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 - [Cache API](/ru/docs/Web/API/Cache)
 - Cookies
 
-> **Примечание:** В Firefox веб-хранилище скоро начнёт использовать те же инструменты управления хранилищем, что и в этом документе.
+> [!NOTE]
+> В Firefox веб-хранилище скоро начнёт использовать те же инструменты управления хранилищем, что и в этом документе.
 
-> **Примечание:** в режиме приватного просмотра большинство хранилищ данных не поддерживается. Данные локального хранилища и файлы cookie все ещё хранятся, но они эфемерны — данные удаляются, когда вы закрываете последнее окно приватного просмотра.
+> [!NOTE]
+> В режиме приватного просмотра большинство хранилищ данных не поддерживается. Данные локального хранилища и файлы cookie все ещё хранятся, но они эфемерны — данные удаляются, когда вы закрываете последнее окно приватного просмотра.
 
 The "last access time" of origins is updated when any of these are activated/deactivated — origin eviction will delete data for all these quota clients.
 
@@ -48,13 +51,17 @@ Each storage type represents a separate repository. Here's the actual mapping to
 - `<profile>/storage/temporary` — temporary data storage repository
 - `<profile>/storage/default` — default data storage repository
 
-> **Примечание:** After introducing [Storage API](/ru/docs/Web/API/Storage_API), the "permanent" folder can be considered obsolete; the "permanent" folder only stores IndexedDB persistent-type databases. It doesn't matter if box mode is "best-effort" or "persistent" — data is stored under \<profile>/storage/default.
+> [!NOTE]
+> After introducing [Storage API](/ru/docs/Web/API/Storage_API), the "permanent" folder can be considered obsolete; the "permanent" folder only stores IndexedDB persistent-type databases. It doesn't matter if box mode is "best-effort" or "persistent" — data is stored under \<profile>/storage/default.
 
-> **Примечание:** In Firefox, you can find your profile folder by entering `about:support` in the URL bar, and pressing the _Show in..._ button (e.g., _Show in Finder_ on Mac OS X) next to the _Profile Folder_ title.
+> [!NOTE]
+> In Firefox, you can find your profile folder by entering `about:support` in the URL bar, and pressing the _Show in..._ button (e.g., _Show in Finder_ on Mac OS X) next to the _Profile Folder_ title.
 
-> **Примечание:** If you are looking around in your Profile at the data stored, you might see a fourth folder: `persistent`. Basically, the `persistent` folder was renamed to `permanent` a while ago to keep upgrades/migration simpler.
+> [!NOTE]
+> If you are looking around in your Profile at the data stored, you might see a fourth folder: `persistent`. Basically, the `persistent` folder was renamed to `permanent` a while ago to keep upgrades/migration simpler.
 
-> **Примечание:** Users shouldn't add their own directories or files under `<profile>/storage`. This will cause storage initialization to fail; for example, {{domxref("IDBFactory.open()", "open()")}} will fire an error event.
+> [!NOTE]
+> Users shouldn't add their own directories or files under `<profile>/storage`. This will cause storage initialization to fail; for example, {{domxref("IDBFactory.open()", "open()")}} will fire an error event.
 
 ## Storage limits
 
@@ -76,11 +83,14 @@ The two limits react differently to limits being reached:
 - The group limit is also called the "hard limit": it doesn't trigger origin eviction.
 - The global limit is a "soft limit" since there's a chance that some space will be freed and the operation can continue.
 
-> **Примечание:** The group limit can't be more than the global limit, despite the minimum group limit mentioned above. If you had a really low memory situation where the global limit was, say, 8 MB, then the group limit would also be 8 MB.
+> [!NOTE]
+> The group limit can't be more than the global limit, despite the minimum group limit mentioned above. If you had a really low memory situation where the global limit was, say, 8 MB, then the group limit would also be 8 MB.
 
-> **Примечание:** If the group limit is exceeded, or if origin eviction couldn't free enough space, the browser will throw a `QuotaExceededError`.
+> [!NOTE]
+> If the group limit is exceeded, or if origin eviction couldn't free enough space, the browser will throw a `QuotaExceededError`.
 
-> **Примечание:** In Chrome the soft and hard storage quota limits has changed since **M66**. More information can be found [here.](https://chromium.googlesource.com/chromium/src/+/refs/heads/master/storage/browser/quota/quota_settings.cc#68)
+> [!NOTE]
+> In Chrome the soft and hard storage quota limits has changed since **M66**. More information can be found [here.](https://chromium.googlesource.com/chromium/src/+/refs/heads/master/storage/browser/quota/quota_settings.cc#68)
 
 ## LRU policy
 
