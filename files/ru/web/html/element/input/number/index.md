@@ -58,7 +58,8 @@ This value must be greater than or equal to the value of the `min` attribute.
 
 Строковое значение `any` означает, что никакое значение шага не задано и допустимо любое значение (в пределах других ограничений, таких как [`min`](#min) и [`max`](#max)).
 
-> **Примечание:** Когда значение, введённое пользователем, не подходит под заданное значение шага, {{Glossary("user agent")}} может округлить его до ближайшего допустимого значения с приоритетом в большую сторону в том случае, если значение находится ровно посередине шага.
+> [!NOTE]
+> Когда значение, введённое пользователем, не подходит под заданное значение шага, {{Glossary("user agent")}} может округлить его до ближайшего допустимого значения с приоритетом в большую сторону в том случае, если значение находится ровно посередине шага.
 
 Стандартное значение шага для поля ввода `number` – это `1`, что позволяет вводить только целые числа, _если_ только не задать значение шага нецелым числом.
 
@@ -68,7 +69,8 @@ This value must be greater than or equal to the value of the `min` attribute.
 
 > **Предупреждение:** **Important**: Bear in mind that logically you should not be able to enter characters inside a number of input other than numbers. There seems to be some disagreement about this among browsers; see [Firefox bug 1398528](https://bugzil.la/1398528).
 
-> **Примечание:** It's crucial to remember that a user can tinker with your HTML behind the scenes, so your site _must not_ use simple client-side validation for any security purposes. You _must_ verify on the server side any transaction in which the provided value may have any security implications of any kind.
+> [!NOTE]
+> It's crucial to remember that a user can tinker with your HTML behind the scenes, so your site _must not_ use simple client-side validation for any security purposes. You _must_ verify on the server side any transaction in which the provided value may have any security implications of any kind.
 
 Mobile browsers further help with the user experience by showing a special keyboard more suited for entering numbers when the user tries to enter a value. The following screenshot is taken from Firefox for Android:
 
@@ -87,7 +89,8 @@ In its most basic form, a number input can be implemented like this:
 
 A number input is considered valid when empty and when a single number is entered, but is otherwise invalid. If the [`required`](/ru/docs/Web/HTML/Element/input#required) attribute is used, the input is no longer considered valid when empty.
 
-> **Примечание:** Any number is an acceptable value, as long as it is a [valid floating point number](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number) (i.e. not [NaN](/ru/docs/Web/JavaScript/Reference/Global_Objects/NaN) or [Infinity](/ru/docs/Web/JavaScript/Reference/Global_Objects/Infinity)).
+> [!NOTE]
+> Any number is an acceptable value, as long as it is a [valid floating point number](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number) (i.e. not [NaN](/ru/docs/Web/JavaScript/Reference/Global_Objects/NaN) or [Infinity](/ru/docs/Web/JavaScript/Reference/Global_Objects/Infinity)).
 
 ### Placeholders
 
@@ -184,7 +187,8 @@ You can provide a list of default options from which the user can select by spec
 
 {{EmbedLiveSample("Offering_suggested_values", 600, 40)}}
 
-> **Примечание:** Use of the [`list`](/ru/docs/Web/HTML/Element/input#list) attribute with `number` inputs is not supported in all browsers. It works in Chrome and Opera, for example, but not in Firefox.
+> [!NOTE]
+> Use of the [`list`](/ru/docs/Web/HTML/Element/input#list) attribute with `number` inputs is not supported in all browsers. It works in Chrome and Opera, for example, but not in Firefox.
 
 ## Validation
 
@@ -354,7 +358,8 @@ switchBtn.addEventListener("click", function () {
 
 After declaring a few variables, we add an event listener to the button to control the switching mechanism. This is pretty simple, mostly involving changing over the button class and label, and updating the display values of the two sets of inputs when the button is pressed. Note that we're not converting back and forth between meters and feet/inches here, which a real-life web application would probably do.
 
-> **Примечание:** Note that when the user clicks the button, we remove the `required` attribute(s) from the input(s) we are hiding, and empty the `value` attribute(s). This is so that we can submit the form if both input sets aren't filled in, and won't submit data that we didn't mean to submit. If we didn't do this, you'd have to fill in both feet/inches **and** meters to submit the form!
+> [!NOTE]
+> Note that when the user clicks the button, we remove the `required` attribute(s) from the input(s) we are hiding, and empty the `value` attribute(s). This is so that we can submit the form if both input sets aren't filled in, and won't submit data that we didn't mean to submit. If we didn't do this, you'd have to fill in both feet/inches **and** meters to submit the form!
 
 ## Спецификации
 
