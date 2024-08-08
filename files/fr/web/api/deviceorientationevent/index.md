@@ -10,7 +10,7 @@ slug: Web/API/DeviceOrientationEvent
 L'évènement `DeviceOrientationEvent` met à la disposition du développeur des informations sur l'orientation de l'appareil visitant une page Web
 
 > [!WARNING]
-> à l'heure actuelle, Firefox et Chrome ne gèrent pas les cordonnées de la même façon. Tenez-en compte lors de l'utilisation de cette API.
+> À l'heure actuelle, Firefox et Chrome ne gèrent pas les cordonnées de la même façon. Tenez-en compte lors de l'utilisation de cette API.
 
 ## Propriétés
 
