@@ -53,7 +53,8 @@ exportKey(format, key)
 
 ## 示例
 
-> **备注：** 你可以在 GitHub 上[尝试可用的示例](https://mdn.github.io/dom-examples/web-crypto/export-key/index.html)。
+> [!NOTE]
+> 你可以在 GitHub 上[尝试可用的示例](https://mdn.github.io/dom-examples/web-crypto/export-key/index.html)。
 
 ### 导出为 Raw 格式
 

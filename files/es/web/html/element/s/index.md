@@ -107,4 +107,5 @@ slug: Web/HTML/Element/s
 
 ### Comentarios
 
-> **Advertencia:** DESAPROBADO
+> [!WARNING]
+> DESAPROBADO

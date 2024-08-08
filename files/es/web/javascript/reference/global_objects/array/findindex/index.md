@@ -39,7 +39,8 @@ El método `findIndex()` ejecuta la función de _`callback`_ una vez por cada í
 
 Si dicho elemento es encontrado, `findIndex()` inmediatamente devuelve el índice del elemento. Si la función _`callback`_ nunca devuelve un valor verdadero (o el tamaño del array es 0), `findIndex` devuelve `-1`.
 
-> **Nota:** A diferencia de otros métodos de arrays como {{jsxref("Array.some()")}}, `callback` se ejecuta incluso en índices sin valores asignados.
+> [!NOTE]
+> A diferencia de otros métodos de arrays como {{jsxref("Array.some()")}}, `callback` se ejecuta incluso en índices sin valores asignados.
 
 _`callback`_ se invoca con tres argumentos:
 

@@ -19,7 +19,8 @@ l10n:
 
 `Headers` を実装したオブジェクトは、{{domxref('Headers.entries()', 'entries()')}} の代わりに直接 {{jsxref("Statements/for...of", "for...of")}} 構文で使用することができます。 `for (const p of myHeaders)` と `for (const p of myHeaders.entries())` は同等です。
 
-> **メモ:** 利用できるヘッダーについては[HTTP ヘッダー](/ja/docs/Web/HTTP/Headers) を参照してください。
+> [!NOTE]
+> 利用できるヘッダーについては[HTTP ヘッダー](/ja/docs/Web/HTTP/Headers) を参照してください。
 
 ## コンストラクター
 
@@ -49,9 +50,11 @@ l10n:
 
 > **メモ:** {{domxref("Headers.set()")}} と {{domxref("Headers.append()")}} の明確な違いは、複数の値を受け入れる特定のヘッダーが既に存在しているときの挙動です。{{domxref("Headers.set()")}} は既存の値を新しい値で上書きしますが、{{domxref("Headers.append()")}} は既存の値の末尾に新しい値を追加します。サンプルコードはそれぞれの専用ページで確認してください。
 
-> **メモ:** すべての Headers メソッドで、[有効な HTTP ヘッダー名](https://fetch.spec.whatwg.org/#concept-header-name) ではない名前の参照を渡そうとすると {{jsxref("TypeError")}} が発生します。ヘッダーに immutable {{Glossary("Guard", "ガード")}}がある場合、変更操作をしようとすると `TypeError` が発生します。します。そのほかの場外の場合は、単に失敗します。
+> [!NOTE]
+> すべての Headers メソッドで、[有効な HTTP ヘッダー名](https://fetch.spec.whatwg.org/#concept-header-name) ではない名前の参照を渡そうとすると {{jsxref("TypeError")}} が発生します。ヘッダーに immutable {{Glossary("Guard", "ガード")}}がある場合、変更操作をしようとすると `TypeError` が発生します。します。そのほかの場外の場合は、単に失敗します。
 
-> **メモ:** ヘッダーを反復処理する時は、自動的に辞書順への並び替えが行われ、重複する名前は結合されます。
+> [!NOTE]
+> ヘッダーを反復処理する時は、自動的に辞書順への並び替えが行われ、重複する名前は結合されます。
 
 ## 例
 

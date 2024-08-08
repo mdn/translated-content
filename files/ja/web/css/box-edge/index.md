@@ -75,7 +75,8 @@ box-edge キーワードは `<visual-box>`, `<layout-box>`, `<paint-box>`, `<coo
 - `view-box`
 
   - : 最も近い SVG ビューポート要素の 元ボックスを参照します。元ボックスは、その要素の {{svgattr("viewBox")}} 属性によって確立された初期 SVG ユーザー座標系の幅と高さを持つ長方形です。元ボックスは、その左上隅がその[座標系](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems)の原点に固定されるように配置されます。 CSS では `view-box` は `border-box` として扱われます。
-    > **メモ:** SVG ビューポートが原点に固定されていない場合、元ボックスは SVG ビューポートに対応しません。
+    > [!NOTE]
+    > SVG ビューポートが原点に固定されていない場合、元ボックスは SVG ビューポートに対応しません。
 
 ## 仕様書
 

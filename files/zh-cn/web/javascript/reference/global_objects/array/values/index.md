@@ -64,7 +64,8 @@ console.log(iterator.next().value); // undefined
 
 ### 重复使用可迭代对象
 
-> **警告：** 数组迭代器对象应该是一次性使用的对象。不要重复使用它。
+> [!WARNING]
+> 数组迭代器对象应该是一次性使用的对象。不要重复使用它。
 
 `values()` 返回的可迭代对象是不可重复使用的。当 `next().done = true` 或 `currentIndex > length` 时，[`for...of` 循环结束](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#语言和迭代协议之间的交互)，进一步迭代它没有任何效果。
 

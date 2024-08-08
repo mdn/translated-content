@@ -478,7 +478,8 @@ Le second élément commence sur la ligne de colonne 1 et s'étend sur une seule
 
 {{EmbedLiveSample('', '230', '450')}}
 
-> **Note :** Pensez à utiliser [l'inspecteur de grille](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) dans les outils de développement de Firefox pour voir comment les éléments se placent sur les lignes d'une grille.
+> [!NOTE]
+> Pensez à utiliser [l'inspecteur de grille](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) dans les outils de développement de Firefox pour voir comment les éléments se placent sur les lignes d'une grille.
 
 ### Raccourcis de positionnement sur ligne
 
@@ -529,7 +530,8 @@ Les _gouttières_ entre les cellules sont définies à l'aide des propriétés [
 }
 ```
 
-> **Note :** Aux débuts de la grille CSS dans les navigateurs, les propriétés [`column-gap`](/fr/docs/Web/CSS/column-gap), [`row-gap`](/fr/docs/Web/CSS/row-gap) et [`gap`](/fr/docs/Web/CSS/gap) étaient préfixées avec `grid-` et s'écrivaient respectivement `grid-column-gap`, `grid-row-gap` et `grid-gap`.
+> [!NOTE]
+> Aux débuts de la grille CSS dans les navigateurs, les propriétés [`column-gap`](/fr/docs/Web/CSS/column-gap), [`row-gap`](/fr/docs/Web/CSS/row-gap) et [`gap`](/fr/docs/Web/CSS/gap) étaient préfixées avec `grid-` et s'écrivaient respectivement `grid-column-gap`, `grid-row-gap` et `grid-gap`.
 >
 > Les navigateurs prennent désormais en charge les valeurs sans préfixe. Toutefois, les versions préfixées sont conservées comme synonymes à des fins de compatibilité.
 

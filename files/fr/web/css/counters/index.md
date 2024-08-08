@@ -22,7 +22,8 @@ counters(countername, '.', upper-roman)
 
 Un compteur n'est pas visible en tant que tel. Les fonctions `counters()` et [`counter()`](/fr/docs/Web/CSS/counter_function) doivent être utilisées pour créer du contenu.
 
-> **Note :** Bien que la fonction `counters()` puisse être utilisée avec n'importe quelle propriété CSS, la prise en charge des propriétés autres que {{CSSxRef("content")}} reste experimentale.
+> [!NOTE]
+> Bien que la fonction `counters()` puisse être utilisée avec n'importe quelle propriété CSS, la prise en charge des propriétés autres que {{CSSxRef("content")}} reste experimentale.
 >
 > Avant d'utiliser cette fonctionnalité en production, référez vous au tableau de compatibilité ci-après.
 

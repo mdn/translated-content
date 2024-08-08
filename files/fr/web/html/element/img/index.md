@@ -60,7 +60,8 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
   - : Définit une description textuelle alternative pour l'image.
 
-    > **Note :** Il se peut que les navigateurs n'affichent pas l'image, cela peut se produire si&nbsp;:
+    > [!NOTE]
+    > Il se peut que les navigateurs n'affichent pas l'image, cela peut se produire si&nbsp;:
     >
     > - Le navigateur n'est pas doté d'une interface visuelle
     > - La personne a configuré son navigateur pour ne pas afficher les images (afin d'économiser de la bande passante ou pour des raisons de vie privée)
@@ -119,13 +120,15 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
   - : La hauteur intrinsèque de l'image, exprimée en pixels. Cette valeur doit être un nombre entier, sans unité.
 
-    > **Note :** Inclure `height` et [`width`](#width) permet au navigateur de calculer les proportions de l'image avant son chargement. Ces proportions sont utilisées pour réserver l'espace nécessaire afin d'afficher l'image et de réduire voire d'empêcher tout décalage à l'affichage, permettant ainsi une navigation plus agréable et de meilleures performances.
+    > [!NOTE]
+    > Inclure `height` et [`width`](#width) permet au navigateur de calculer les proportions de l'image avant son chargement. Ces proportions sont utilisées pour réserver l'espace nécessaire afin d'afficher l'image et de réduire voire d'empêcher tout décalage à l'affichage, permettant ainsi une navigation plus agréable et de meilleures performances.
 
 - `ismap`
 
   - : Cet attribut booléen indique que l'image fait partie d'une [carte côté serveur](https://en.wikipedia.org/wiki/Image_map#Server-side). Dans ce cas, les coordonnées du clic sur l'image sont envoyés au serveur.
 
-    > **Note :** Cet attribut est uniquement autorisé lorsque l'élément `<img>` est un descendant d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) disposant d'un attribut `href` valide. Cela fournit une alternative lorsque la navigation se fait sans dispositif de pointage.
+    > [!NOTE]
+    > Cet attribut est uniquement autorisé lorsque l'élément `<img>` est un descendant d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) disposant d'un attribut `href` valide. Cela fournit une alternative lorsque la navigation se fait sans dispositif de pointage.
 
 - `loading`
 
@@ -137,8 +140,10 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
       - : Le chargement de l'image est retardé jusqu'à ce que celle-ci soit située à une certaine distance, définie par le navigateur, de la zone d'affichage. L'idée est d'éviter de consommer de la bande passante et des ressources réseaux avant d'être relativement certain que l'image est nécessaire. Pour la plupart des cas d'usage, cela permet d'améliorer les performances.
 
-      > **Note :** Le retardement du chargement est uniquement activé lorsque JavaScript est activé dans le navigateur. Il s'agit d'une mesure pour limiter le pistage. En effet, si les scripts sont désactivés pour le navigateur et que le chargement retardé est actif, le pistage d'un utilisateur en fonction de sa position sur la page serait toujours possible (via des images placées à intervalle régulier sur la page).
-      > **Note :** Les images avec `loading` qui vaut `lazy` ne seront jamais chargées si elles n'ont pas d'intersection avec une partie visible d'un élément. Fournir les attributs `width` et `height` pour les images chargées à la demande règle ce problème et est [recommandé par la spécification](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element).
+      > [!NOTE]
+      > Le retardement du chargement est uniquement activé lorsque JavaScript est activé dans le navigateur. Il s'agit d'une mesure pour limiter le pistage. En effet, si les scripts sont désactivés pour le navigateur et que le chargement retardé est actif, le pistage d'un utilisateur en fonction de sa position sur la page serait toujours possible (via des images placées à intervalle régulier sur la page).
+      > [!NOTE]
+      > Les images avec `loading` qui vaut `lazy` ne seront jamais chargées si elles n'ont pas d'intersection avec une partie visible d'un élément. Fournir les attributs `width` et `height` pour les images chargées à la demande règle ce problème et est [recommandé par la spécification](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element).
 
 - `referrerpolicy`
 
@@ -200,7 +205,8 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
   - : L'URL partielle (commençant par `#`) d'une [carte d'image](/fr/docs/Web/HTML/Element/map) associée à l'élément.
 
-    > **Note :** Cet attribut est invalide si l'élément `<img>` est à l'intérieur d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) ou d'un élément [`<button>`](/fr/docs/Web/HTML/Element/button).
+    > [!NOTE]
+    > Cet attribut est invalide si l'élément `<img>` est à l'intérieur d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) ou d'un élément [`<button>`](/fr/docs/Web/HTML/Element/button).
 
 ### Attributs dépréciés
 
@@ -231,7 +237,8 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
   - : Un lien vers une description plus détaillée de l'image. Les valeurs pouvaient être une URL ou l'identifiant d'un autre élément.
 
-    > **Note :** Cet attribut est mentionné dans la spécification [HTML 5.2 du W3C](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc), mais a été retiré [du standard évolutif HTML du WHATWG](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). Son avenir est incertain et mieux vaut utiliser une alternative WAI-ARIA comme [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) ou [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
+    > [!NOTE]
+    > Cet attribut est mentionné dans la spécification [HTML 5.2 du W3C](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc), mais a été retiré [du standard évolutif HTML du WHATWG](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). Son avenir est incertain et mieux vaut utiliser une alternative WAI-ARIA comme [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) ou [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
 
 - `name` {{deprecated_inline}}
 

@@ -57,7 +57,8 @@ div.classList.remove("foo", "bar");
 div.classList.replace("foo", "bar");
 ```
 
-> **Nota:** Las versiones de Firefox anteriores a la 26 no implementan el uso de múltiples argumentos en los métodos add/remove/toggle. Vea <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
+> [!NOTE]
+> Las versiones de Firefox anteriores a la 26 no implementan el uso de múltiples argumentos en los métodos add/remove/toggle. Vea <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
 
 ## Especificaciones
 

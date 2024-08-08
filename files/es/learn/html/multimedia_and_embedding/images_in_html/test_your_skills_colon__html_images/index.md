@@ -9,7 +9,8 @@ l10n:
 
 El objetivo de esta prueba de habilidad es evaluar tu entendimiento sobre las [imágenes y como incrustarlas en HTML](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
 
-> **Nota:** Puedes experimentar tus soluciones en los editores interactivos de abajo. No obstante, sería de gran ayuda que descargues el código y que usaras una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las actividades.
+> [!NOTE]
+> Puedes experimentar tus soluciones en los editores interactivos de abajo. No obstante, sería de gran ayuda que descargues el código y que usaras una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las actividades.
 >
 > Si te quedas atorado, puedes pedirnos ayuda — visita la sección de [Evaluación o ayuda adicional](#assessment_or_further_help) al final de esta página.
 
@@ -25,7 +26,7 @@ Prueba a actualizar este ejemplo vivo de código para recrear el ejemplo finaliz
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images1.html", '100%', 700)}}
 
-> **Observación:**
+> [!CALLOUT]
 >
 > [Descarga el punto inicial para esta actividad](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images1-download.html) para trabajar desde tu propio editor o en un editor en línea.
 
@@ -37,7 +38,7 @@ Intenta actualizar el siguiente código vivo para recrear el ejemplo finalizado:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images2.html", '100%', 1000)}}
 
-> **Observación:**
+> [!CALLOUT]
 >
 > [Descarga el punto inicial para esta actividad](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images2-download.html) para trabajar desde tu propio editor o en un editor en línea.
 
@@ -49,7 +50,7 @@ Intenta actualizar el siguiente código vivo para recrear el ejemplo finalizado:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images3.html", '100%', 1000)}}
 
-> **Observación:**
+> [!CALLOUT]
 >
 > [Descarga el punto inicial para esta actividad](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images3-download.html) para trabajar desde tu propio editor o en un editor en línea.
 

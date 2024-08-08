@@ -64,11 +64,13 @@ El ejemplo siguiente muestra un elemento {{ HTMLElement("button") }} que es desc
 <div id="descriptionRevert">Revertir deshará cualquier cambio que se haya hecho desde la última que se guardo.</div>
 ```
 
-> **Nota:** El atributo `aria-describedby` es utilizado para otros própositos además de los controles de formularios.
+> [!NOTE]
+> El atributo `aria-describedby` es utilizado para otros própositos además de los controles de formularios.
 
 ## Campos requeridos e inválidos
 
-> **Nota:** Ahora que `required` esta disponible para más del 97% de usuarios globalmente, no se recomienda que se use al mismo tiempo `required` y `aria-required`.
+> [!NOTE]
+> Ahora que `required` esta disponible para más del 97% de usuarios globalmente, no se recomienda que se use al mismo tiempo `required` y `aria-required`.
 
 Los desarrolladores Web típicamente usan estrategias de presentación para inidicar campos requeridos o inválidos. Tecnologías asistivas (Assistive technologies - ATs) no necesariamente pueden inferir de la presentación. ARIA provee atributos para indicar que controles de formulario son requeridos o inválidos:
 

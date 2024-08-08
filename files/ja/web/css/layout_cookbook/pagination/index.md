@@ -21,7 +21,7 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/pagination.html", '100%', 720)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/main/css-cookbook/pagination--download.html)
 

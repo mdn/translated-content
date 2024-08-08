@@ -100,7 +100,8 @@ void send(
 
 #### 註釋
 
-> **備註：** Gecko `send()` 方法的實作與 Gecko 6.0 的規範有差別。Gecko 回傳一個 `boolean` 以表示連線是否仍處於開啟狀態（且資料成功隊列／傳輸）。另外，此時此刻，Gecko 不支援 [`ArrayBuffer`](/zh_tw/JavaScript_typed_arrays/ArrayBuffer) 或 {{ domxref("Blob") }} 作為資料形態。
+> [!NOTE]
+> Gecko `send()` 方法的實作與 Gecko 6.0 的規範有差別。Gecko 回傳一個 `boolean` 以表示連線是否仍處於開啟狀態（且資料成功隊列／傳輸）。另外，此時此刻，Gecko 不支援 [`ArrayBuffer`](/zh_tw/JavaScript_typed_arrays/ArrayBuffer) 或 {{ domxref("Blob") }} 作為資料形態。
 
 ## 參見
 

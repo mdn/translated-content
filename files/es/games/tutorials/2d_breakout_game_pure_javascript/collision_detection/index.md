@@ -127,7 +127,8 @@ Ahora se comprueban las colisiones cada vez que se dibuja un fotograma. Concreta
 
 {{JSFiddleEmbed("https://jsfiddle.net/kundan333/myd4vbwg/5/","","320")}}
 
-> **Nota:** cambia el color de la bola cada vez que choque con un ladrillo.
+> [!NOTE]
+> Cambia el color de la bola cada vez que choque con un ladrillo.
 
 ## Pasos siguientes
 

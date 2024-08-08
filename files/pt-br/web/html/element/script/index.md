@@ -64,7 +64,8 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : Um atributo booleano indicando que o navegador deve, se possível, executar o script assíncronamente.
 
-    > **Warning:** Esse atributo não deve ser utilizado se o atributo `src` estiver ausente (ex. scripts embutidos). Se incluído, nesse caso, ele não terá nenhum efeito.
+    > [!WARNING]
+    > Esse atributo não deve ser utilizado se o atributo `src` estiver ausente (ex. scripts embutidos). Se incluído, nesse caso, ele não terá nenhum efeito.
 
     Scripts inseridos dinamicamente (usando `document.createElement`) são executados assincronamente por padrão, então para torná-lo uma execução síncrona (ex. executar scripts na ordem que eles foram carregados) atribua `async=false`.
 
@@ -78,7 +79,8 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     Scripts com o atributo `defer` vão impedir que o evento DOMContentLoaded seja disparado até que o script seja carregado e tenha terminado de ser _avaliado_.
 
-    > **Warning:** Esse atributo não deve ser usado se o atibuto `src` estiver ausente (ex. scripts inline), nesse caso ele não vai ter efeito.
+    > [!WARNING]
+    > Esse atributo não deve ser usado se o atibuto `src` estiver ausente (ex. scripts inline), nesse caso ele não vai ter efeito.
 
     Para conseguir um efeito similar para scripts inseridos dinamicamente use `async=false`. Scripts com o atributo `defer` vão ser executados na ordem em que aparecem no `document`.
 

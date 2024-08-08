@@ -261,7 +261,8 @@ function handleKeyboardEvent(event) {
 }
 ```
 
-> **メモ:** この例は `.getModifierState()` を `"Alt"`,
+> [!NOTE]
+> この例は `.getModifierState()` を `"Alt"`,
 > `"Control"`, `"Meta"`, `"Shift"` で使用していますが、
 > `event.altKey`, `event.ctrlKey`, `event.metaKey`,
 > `event.shiftKey` の方がよりお勧めです。

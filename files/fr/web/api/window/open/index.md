@@ -38,7 +38,8 @@ open(url, target, windowFeatures);
 
         Si `popup` n'est pas activée et qu'il n'y a pas d'autres fonctionnalités déclarées avec ce paramètre, le nouveau contexte de navigation sera un onglet.
 
-        > **Note :** Indiquer n'importe quelle fonctionnalité avec `windowFeatures`, en dehors de `noopener` ou `noreferrer`, aura pour effet de demander l'ouverture d'une popup.
+        > [!NOTE]
+        > Indiquer n'importe quelle fonctionnalité avec `windowFeatures`, en dehors de `noopener` ou `noreferrer`, aura pour effet de demander l'ouverture d'une popup.
 
         Pour activer cette fonctionnalité, on indiquera simplement le nom `popup` sans valeur ou avec les valeurs `yes`, `1`, ou `true`.
 

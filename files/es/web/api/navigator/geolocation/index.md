@@ -6,7 +6,8 @@ slug: Web/API/Navigator/geolocation
 {{APIRef("Geolocation API")}}
 La propiedad de sólo lectura **`Navigator.geolocation`** devuelve un objeto [`Geolocation`](/es/docs/Web/API/Geolocation) que proporciona acceso web a la ubicación de un dispositivo. Esto permite ofrecer al sitio web o aplicación resultados personalizados basados en la ubicación del usuario.
 
-> **Nota:** Por motivos de seguridad, cuando una página web trata de acceder a la información de ubicación, se solicita permiso al usuario. Cada navegador tiene sus propias reglas sobre cómo y cuándo obtener dicho permiso.
+> [!NOTE]
+> Por motivos de seguridad, cuando una página web trata de acceder a la información de ubicación, se solicita permiso al usuario. Cada navegador tiene sus propias reglas sobre cómo y cuándo obtener dicho permiso.
 
 ## Sintaxis
 

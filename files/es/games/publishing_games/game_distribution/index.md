@@ -65,7 +65,8 @@ También puedes subir y publicar tu juego directamente en diferentes tipos de ti
 
 Veamos cuáles son las opciones disponibles con respecto a los mercados/tiendas disponibles para diferentes plataformas y sistemas operativos.
 
-> **Nota:** Estas son las plataformas de distribución más populares, pero esto no quiere decir que sean la única opción. En lugar de intentar sumar tu juego a los miles de otros en la tienda de iOS, también puedes intentar encontrar un nicho y promocionar directamente al público que esté interesado en tus juegos. Tu creatividad es crítica aquí.
+> [!NOTE]
+> Estas son las plataformas de distribución más populares, pero esto no quiere decir que sean la única opción. En lugar de intentar sumar tu juego a los miles de otros en la tienda de iOS, también puedes intentar encontrar un nicho y promocionar directamente al público que esté interesado en tus juegos. Tu creatividad es crítica aquí.
 
 ### Tiendas web
 

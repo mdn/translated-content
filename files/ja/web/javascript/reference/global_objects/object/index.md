@@ -311,7 +311,8 @@ Object.prototype.valueOf = function (...args) {
 };
 ```
 
-> **警告:** 組み込みコンストラクターの `prototype` プロパティを変更することは、悪い習慣であり、前方互換性を危険にさらすものです。
+> [!WARNING]
+> 組み込みコンストラクターの `prototype` プロパティを変更することは、悪い習慣であり、前方互換性を危険にさらすものです。
 
 プロトタイプについては[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)で詳しく説明されています。
 

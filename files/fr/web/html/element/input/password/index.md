@@ -13,7 +13,8 @@ Un tel élément se présente comme un contrôle de saisie de texte sur une lign
 
 La façon dont le texte saisi est traité dépend du navigateur utilisé. Sur les appareils mobiles, par exemple, le caractère tapé est souvent laissé affiché un court instant afin que l'utilisatrice ou l'utilisateur puisse contrôler que c'est bien le bon caractère. Ainsi, même si le clavier est petit et virtuel, on peut éviter de faire trop d'erreurs.
 
-> **Note :** Les différents formulaires qui permettent d'envoyer des données sensibles (telles que des mots de passe) doivent être servis sur HTTPS. Firefox, Chrome et les autres navigateurs implémentent désormais différents mécanismes afin d'avertir l'utilisatrice ou l'utilisateur lorsqu'il saisit un mot de passe sur une connexion HTTP (cf. l'article [mots de passe non sécurisés](/fr/docs/Web/Security/Insecure_passwords) pour Firefox).
+> [!NOTE]
+> Les différents formulaires qui permettent d'envoyer des données sensibles (telles que des mots de passe) doivent être servis sur HTTPS. Firefox, Chrome et les autres navigateurs implémentent désormais différents mécanismes afin d'avertir l'utilisatrice ou l'utilisateur lorsqu'il saisit un mot de passe sur une connexion HTTP (cf. l'article [mots de passe non sécurisés](/fr/docs/Web/Security/Insecure_passwords) pour Firefox).
 
 <table class="properties">
   <tbody>
@@ -46,7 +47,8 @@ La valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value) d'
 
 Si l'attribut [`pattern`](/fr/docs/Web/HTML/Element/Input#attr-pattern) est indiqué, le contenu du contrôle doit respecter l'expression rationnelle indiquée par l'attribut. Pour plus d'informations, voir la section [Validation](#validation) ci-après.
 
-> **Note :** Il n'est pas possible d'utiliser les caractères de fin de ligne (<i lang="en">line feed</i>) (code U+000A) et de retour chariot (<i lang="en">carriage return</i>) (code U+000D) dans la valeur d'un champ `password`. Lorsqu'on saisit la valeur, ces caractères sont retirés si besoin.
+> [!NOTE]
+> Il n'est pas possible d'utiliser les caractères de fin de ligne (<i lang="en">line feed</i>) (code U+000A) et de retour chariot (<i lang="en">carriage return</i>) (code U+000D) dans la valeur d'un champ `password`. Lorsqu'on saisit la valeur, ces caractères sont retirés si besoin.
 
 ## Attributs supplémentaires
 
@@ -70,7 +72,8 @@ L'attribut `pattern` est une expression rationnelle que doit respecter la valeur
 
 Si l'expression rationnelle est invalide ou que cet attribut n'est pas défini, l'attribut est ignoré.
 
-> **Note :** L'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pourra être utilisé afin d'afficher une bulle d'informations qui explique les conditions à respecter. Il est également conseillé d'inclure un texte explicatif à proximité du champ.
+> [!NOTE]
+> L'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pourra être utilisé afin d'afficher une bulle d'informations qui explique les conditions à respecter. Il est également conseillé d'inclure un texte explicatif à proximité du champ.
 
 Voir [la section sur l'utilisation de cet attribut ci-après](#validation) pour plus d'exemples.
 
@@ -82,13 +85,15 @@ L'attribut `placeholder` est une chaîne de caractères fournissant une courte i
 
 Si le contenu du contrôle respecte une directionnalité donnée ([LTR](/fr/docs/Glossary/ltr) ou [RTL](/fr/docs/Glossary/rtl)) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode — voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel (en anglais)](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus de détails.
 
-> **Note :** On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire et car il peut causer certains problèmes avec le contenu. Voir [Utilisation de libellés](/fr/docs/Web/HTML/Element/Input#utilisation_de_libellés) pour plus d'informations.
+> [!NOTE]
+> On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire et car il peut causer certains problèmes avec le contenu. Voir [Utilisation de libellés](/fr/docs/Web/HTML/Element/Input#utilisation_de_libellés) pour plus d'informations.
 
 ### `readonly`
 
 Un attribut booléen qui, lorsqu'il est présent, indique que le champ ne peut pas être édité par l'utilisatrice ou l'utilisateur. Toutefois, la valeur de l'attribut `value` peut toujours être modifiée via du code JavaScript, qui définirait la propriété `value` rattachée à [l'interface `HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
-> **Note :** Un champ en lecture seule pouvant ne pas avoir de valeur, l'attribut `required` n'aura pas d'effet si l'attribut `readonly` est également présent.
+> [!NOTE]
+> Un champ en lecture seule pouvant ne pas avoir de valeur, l'attribut `required` n'aura pas d'effet si l'attribut `readonly` est également présent.
 
 ### `size`
 

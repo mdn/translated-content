@@ -14,7 +14,8 @@ l10n:
 
 HTML の文字列が特定のシャドウホストに複数の[宣言的シャドウルート](/ja/docs/Web/HTML/Element/template#宣言的シャドウ_dom)を定義している場合、最初の {{domxref("ShadowRoot")}} だけが作成されます。以降の宣言は、そのシャドウルート内の `<template>` 要素として解釈できます。
 
-> **メモ:** このメソッドは、HTML の文字列が宣言的なシャドウルートを格納する可能性がある場合に、{{domxref("Element.innerHTML")}} の代わりに使用しましょう。
+> [!NOTE]
+> このメソッドは、HTML の文字列が宣言的なシャドウルートを格納する可能性がある場合に、{{domxref("Element.innerHTML")}} の代わりに使用しましょう。
 
 ## 構文
 

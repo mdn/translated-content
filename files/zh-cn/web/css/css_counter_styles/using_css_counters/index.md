@@ -107,7 +107,8 @@ counter-reset: reversed(section);
 
 计数器的值会随着通过 {{cssxref("counter-increment")}} 属性指定的负数递减。
 
-> **备注：** 对于非反向计数器，你也仍然可以使用 {{cssxref("counter-increment")}} 属性实现递减。使用反向计数器的优点在于：其默认初始值可以自动根据元素数量生成，自动应用于有序列表的 `list-item` 计数器也可以借此反转编号。
+> [!NOTE]
+> 对于非反向计数器，你也仍然可以使用 {{cssxref("counter-increment")}} 属性实现递减。使用反向计数器的优点在于：其默认初始值可以自动根据元素数量生成，自动应用于有序列表的 `list-item` 计数器也可以借此反转编号。
 
 ### 有序列表（list item）计数器
 

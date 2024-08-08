@@ -9,7 +9,8 @@ La propriété **`border-top-style`** définit le style de ligne utilisé pour m
 
 {{EmbedInteractiveExample("pages/css/border-top-style.html")}}
 
-> **Note :** La spécification ne définit pas la façon dont les bordures de différents styles se rejoignent dans les coins.
+> [!NOTE]
+> La spécification ne définit pas la façon dont les bordures de différents styles se rejoignent dans les coins.
 
 ## Syntaxe
 

@@ -7,7 +7,8 @@ l10n:
 
 {{APIRef("WebVR API")}}{{deprecated_header}}
 
-> **メモ:** WebVR API は [WebXR API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として批准されることはなく、ごく少数のブラウザーでしか既定で実装・有効化されず、少数の端末しか対応していませんでした。
+> [!NOTE]
+> WebVR API は [WebXR API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として批准されることはなく、ごく少数のブラウザーでしか既定で実装・有効化されず、少数の端末しか対応していませんでした。
 
 WebVR API はウェブ開発者のツールキットへのすばらしい追加機能で、 Oculus Rift のようなバーチャルリアリティハードウェアへのアクセスが可能となります。そして出力された動きや向きはウェブアプリの描画更新に変換されます。しかし VR アプリを開発はどのようにやればいいのでしょうか？ この記事では、それに関する基礎的な解説を行います。
 
@@ -35,7 +36,8 @@ WebVR API がどのように動作するのかを説明するために、次の�
 
 > **メモ:** [このデモのソースコード](https://github.com/mdn/webvr-tests/tree/main/webvr/raw-webgl-example) は GitHub で、[ライブで見ることができます](https://mdn.github.io/webvr-tests/webvr/raw-webgl-example/) also.
 
-> **メモ:** ブラウザーで WebVR が動作しない場合、グラフィックカードを通して実行しているかどうかを確認する必要がある場合があります。例えば NVIDIA のカードの場合、 NVIDIA コントロールパネルが正常に設定されていれば、利用できるコンテキストメニューオプションがあります - Firefox を右クリックし、 _Run with graphics processor > High-performance NVIDIA processor_ を選んでください。
+> [!NOTE]
+> ブラウザーで WebVR が動作しない場合、グラフィックカードを通して実行しているかどうかを確認する必要がある場合があります。例えば NVIDIA のカードの場合、 NVIDIA コントロールパネルが正常に設定されていれば、利用できるコンテキストメニューオプションがあります - Firefox を右クリックし、 _Run with graphics processor > High-performance NVIDIA processor_ を選んでください。
 
 このデモでは、WebGL のデモの聖杯である、回転する 3D 立方体を扱っています。私たちはこれを生の [WebGL API](/ja/docs/Web/API/WebGL_API) コードを使用して実装しています。基本的な JavaScript や WebGL は一切教えず、WebVR の部分のみを教える予定です。
 
@@ -46,7 +48,8 @@ WebVR API がどのように動作するのかを説明するために、次の�
 
 このデモのメインの [JavaScript ファイル](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js)のソースコードを見ていくと、先行するコメントで "WebVR" という文字列を探せば、簡単に WebVR に特化した部分を見つけることができます。
 
-> **メモ:** 基本的な JavaScript と WebGL については、 [JavaScript 学習素材](/ja/docs/Learn/JavaScript)、[WebGL チュートリアル](/ja/docs/Web/API/WebGL_API/Tutorial)を参照してください。
+> [!NOTE]
+> 基本的な JavaScript と WebGL については、 [JavaScript 学習素材](/ja/docs/Learn/JavaScript)、[WebGL チュートリアル](/ja/docs/Web/API/WebGL_API/Tutorial)を参照してください。
 
 ## アプリはどう動くか
 
@@ -152,7 +155,8 @@ drawScene();
         console.log('Display found');
 ```
 
-> **メモ:** コンピューターに複数の VR ディスプレイを保有することはまずないでしょうし、このデモでは単純なものなので、とりあえずはこれで大丈夫でしょう。
+> [!NOTE]
+> コンピューターに複数の VR ディスプレイを保有することはまずないでしょうし、このデモでは単純なものなので、とりあえずはこれで大丈夫でしょう。
 
 ### VR 表示の開始と停止
 

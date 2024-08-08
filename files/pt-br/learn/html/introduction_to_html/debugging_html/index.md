@@ -58,7 +58,8 @@ Então, o que queremos dizer com permissivo? Bem, geralmente quando você faz al
 
 O próprio HTML não sofre de erros de sintaxe porque os navegadores o analisam permissivamente, o que significa que a página ainda é exibida mesmo se houver erros de sintaxe. Os navegadores têm regras internas para indicar como interpretar a marcação escrita incorretamente, para que você obtenha algo em execução, mesmo que não seja o esperado. Isso, claro, ainda pode ser um problema!
 
-> **Nota:** O HTML é analisado permissivamente porque, quando a web foi criada, foi decidido que permitir que as pessoas publicassem seus conteúdos era mais importante do que garantir que a sintaxe estivesse absolutamente correta. A web provavelmente não seria tão popular quanto é hoje, se tivesse sido mais rigorosa desde o início.
+> [!NOTE]
+> O HTML é analisado permissivamente porque, quando a web foi criada, foi decidido que permitir que as pessoas publicassem seus conteúdos era mais importante do que garantir que a sintaxe estivesse absolutamente correta. A web provavelmente não seria tão popular quanto é hoje, se tivesse sido mais rigorosa desde o início.
 
 ### Aprendizado Ativo: Estudando código permissivo
 
@@ -156,7 +157,8 @@ As mensagens de erros geralmente são úteis, mas algumas vezes elas não ajudam
   Exemplo: <a href="https://www.mozilla.org/>link para página da Mozilla</a> ↩ </ul>↩ </body>↩</html>
   ```
 
-  > **Nota:** Um atributo faltando uma aspas pode resultar em um elemento aberto porque o resto do documento é interpretado como conteúdo do atributo.
+  > [!NOTE]
+  > Um atributo faltando uma aspas pode resultar em um elemento aberto porque o resto do documento é interpretado como conteúdo do atributo.
 
 - "Unclosed element `ul`": Esta não ajuda em nada, já que o elemento {{htmlelement("ul")}} _está_ fechado corretamente. Este erro aparece porque o elemento {{htmlelement("a")}} não foi fechado, devido a falta de aspas de fechamento.
 

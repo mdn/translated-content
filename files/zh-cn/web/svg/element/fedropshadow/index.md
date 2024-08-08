@@ -7,7 +7,8 @@ slug: Web/SVG/Element/feDropShadow
 
 SVG **`<feDropShadow>`** 原语创建输入图像的阴影。它只能在 {{SVGElement('filter')}} 元素内使用
 
-> **备注：** 可以使用 {{SVGAttr('flood-color')}} 和 {{SVGAttr('flood-opacity')}} 表现属性来改变阴影的颜色和不透明度。
+> [!NOTE]
+> 可以使用 {{SVGAttr('flood-color')}} 和 {{SVGAttr('flood-opacity')}} 表现属性来改变阴影的颜色和不透明度。
 
 ## 示例
 

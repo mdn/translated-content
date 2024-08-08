@@ -25,7 +25,8 @@ var intervalID = scope.setInterval(code, [delay]);
 - `arg1, ..., argN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by _func_ once the timer expires.
 
-> **備註：** Passing additional arguments to `setInterval()` in the first syntax does not work in Internet Explorer 9 and earlier. If you want to enable this functionality on that browser, you must use a polyfill (see the [Callback arguments](#Callback_arguments) section).
+> [!NOTE]
+> Passing additional arguments to `setInterval()` in the first syntax does not work in Internet Explorer 9 and earlier. If you want to enable this functionality on that browser, you must use a polyfill (see the [Callback arguments](#Callback_arguments) section).
 
 ### Return value
 
@@ -33,7 +34,8 @@ The returned `intervalID` is a numeric, non-zero value which identifies the time
 
 It may be helpful to be aware that `setInterval()` and {{domxref("setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("clearTimeout()")}} can technically be used interchangeably. For clarity, however, you should try to always match them to avoid confusion when maintaining your code.
 
-> **備註：** The `delay` argument is converted to a signed 32-bit integer. This effectively limits `delay` to 2147483647 ms, since it's specified as a signed integer in the IDL.
+> [!NOTE]
+> The `delay` argument is converted to a signed 32-bit integer. This effectively limits `delay` to 2147483647 ms, since it's specified as a signed integer in the IDL.
 
 ## Examples
 
@@ -247,7 +249,8 @@ window.setInterval = function (
 };
 ```
 
-> **備註：** These two replacements also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as _non-standard-compliant_ polyfills also. See the [callback arguments paragraph](#Callback_arguments) for a _standard-compliant_ polyfill.
+> [!NOTE]
+> These two replacements also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as _non-standard-compliant_ polyfills also. See the [callback arguments paragraph](#Callback_arguments) for a _standard-compliant_ polyfill.
 
 New feature test:
 
@@ -265,7 +268,8 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 s
 
 Another, more complex, solution for **the [`this`](/zh-TW/docs/Web/JavaScript/Reference/Operators/this) problem** is [the following framework](#MiniDaemon_-_A_framework_for_managing_timers).
 
-> **備註：** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports [arrow functions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () => this.myMethod) if we're inside myArray method.
+> [!NOTE]
+> JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports [arrow functions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () => this.myMethod) if we're inside myArray method.
 
 ## Usage notes
 

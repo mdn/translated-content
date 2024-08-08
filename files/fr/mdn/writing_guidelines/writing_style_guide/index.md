@@ -54,7 +54,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 ### Abréviations
 
-> **Note :** les abréviations sont à utiliser à bon escient et il faudra bien connaître leur sens (notamment pour les abrévations latines) afin de les utiliser correctement. Il faut être conscient que leur usage peut être source de confusion pour les lectrices et lecteurs qui pourraient ne pas y être habitués.
+> [!NOTE]
+> Les abréviations sont à utiliser à bon escient et il faudra bien connaître leur sens (notamment pour les abrévations latines) afin de les utiliser correctement. Il faut être conscient que leur usage peut être source de confusion pour les lectrices et lecteurs qui pourraient ne pas y être habitués.
 
 #### Dans les notes et parenthèses
 

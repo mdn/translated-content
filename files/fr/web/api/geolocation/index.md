@@ -9,7 +9,8 @@ En intégrant l'interface **`Geolocation`**, on peut obtenir la position d'un or
 
 On obtient un objet par le biais de cette interface avec la propriété {{domxref("NavigatorGeolocation.geolocation")}} proposée par l'objet {{domxref("Navigator")}} .
 
-> **Note :** Pour des raisons de sécurité, quand une page web tente d'accéder aux données de localisation, l'utilisateur est prévenu, et son accord lui est demandé. Sachez que chaque navigateur a ses propres méthodes et politiques pour gérer les autorisations.
+> [!NOTE]
+> Pour des raisons de sécurité, quand une page web tente d'accéder aux données de localisation, l'utilisateur est prévenu, et son accord lui est demandé. Sachez que chaque navigateur a ses propres méthodes et politiques pour gérer les autorisations.
 
 ## Propriétés
 

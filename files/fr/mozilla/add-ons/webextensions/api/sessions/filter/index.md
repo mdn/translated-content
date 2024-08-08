@@ -22,7 +22,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les proriétés suivante
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/extensions/sessions).
 >

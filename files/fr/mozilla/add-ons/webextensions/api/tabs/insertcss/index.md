@@ -11,7 +11,8 @@ Pour utiliser cette API vous devez avoir la permission "[host permission](/fr/Ad
 
 Vous ne pouvez injecter du CSS que dans des pages dont l'URL peut être exprimée en utilisant un [motif de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), ce qui signifie que son schéma doit être "http", "https", "file", "ftp". Cela signifie que vous ne pouvez pas injecter de CSS dans les pages intégrées du navigateur, telles que about:debugging, about:addons, ou la page qui s'ouvre lorsque vous ouvrez un nouvel onglet vide.
 
-> **Note :** Firefox résout les URL dans les fichiers CSS injectés par rapport au fichier CSS lui-même, plutôt qu'à la page dans laquelle il est injecté.
+> [!NOTE]
+> Firefox résout les URL dans les fichiers CSS injectés par rapport au fichier CSS lui-même, plutôt qu'à la page dans laquelle il est injecté.
 
 Le CSS inséré peut être retiré à nouveau en appelant {{WebExtAPIRef("tabs.removeCSS()")}}.
 
@@ -89,7 +90,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >

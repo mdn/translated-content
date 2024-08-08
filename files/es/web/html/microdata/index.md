@@ -20,7 +20,8 @@ En un nivel elevado, los microdatos consisten de un grupo de conjuntos nombre-va
 
 Google, así como otros de los principales buscadores, admiten el vocabulario para datos estructurados de [Schema.org](schema.org). Este vocabulario define un conjunto estandarizado de nombres de tipos y de propiedades: por ejemplo, [Evento musical de Schema.org](http://schema.org/MusicEvent) señala conciertos, e incluye las propiedades _[startDate](http://schema.org/startDate)_ ('fecha inicial') y _[location](http://schema.org/location)_ ('ubicación') para definir los detalles clave del acontecimiento. En este caso, [Evento musical de Schema.org](http://schema.org/MusicEvent) es el URL usado por _itemtype_ y _startDate_, y la ubicación corresponde a las _itemprop_ que defina [Evento musical de Schema.org](http://schema.org/MusicEvent).
 
-> **Nota:** para obtener más información sobre los atributos _itemtype_, véase <http://schema.org/Thing> (en inglés)
+> [!NOTE]
+> Para obtener más información sobre los atributos _itemtype_, véase <http://schema.org/Thing> (en inglés)
 
 Los vocabularios de microdatos brindan la semántica, o el significado, de los elementos. Los programadores web pueden diseñar un vocabulario personalizado o servirse de los que existen disponibles en la web, como el ampliamente utilizado vocabulario de [Schema.org](http://schema.org). Schema.org ofrece una colección de vocabularios de etiquetado usados frecuentemente.
 
@@ -146,7 +147,8 @@ _[itemref](/es/docs/Web/HTML/Global_attributes/itemref)_: las propiedades que no
 
 {{EmbedLiveSample('', '', '100')}}
 
-> **Nota:** una útil herramienta para extraer estructuras de microdatos a partir de HTML es la [Herramienta de pruebas de datos estructurados](https://developers.google.com/structured-data/testing-tool/) de Google. Ponla a prueba en el HTML mostrado más arriba.
+> [!NOTE]
+> Una útil herramienta para extraer estructuras de microdatos a partir de HTML es la [Herramienta de pruebas de datos estructurados](https://developers.google.com/structured-data/testing-tool/) de Google. Ponla a prueba en el HTML mostrado más arriba.
 
 ## Véase también
 

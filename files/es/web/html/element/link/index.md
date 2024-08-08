@@ -7,7 +7,8 @@ slug: Web/HTML/Element/link
 
 El **elemento HTML `<link>`** especifica la relación entre el documento actual y un recurso externo. Los usos posibles de este elemento incluyen la definición de un marco relacional para navegación. Este elemento es más frecuentemente usado para enlazar hojas de estilos.
 
-> **Nota:** El atributo [`rel`](/es/docs/Web/HTML/Element/link#rel) puede ser establecido con muchos valores diferentes. Estos se encuentran [listados](/es/docs/Web/HTML/Tipos_de_enlaces) en una página separada.
+> [!NOTE]
+> El atributo [`rel`](/es/docs/Web/HTML/Element/link#rel) puede ser establecido con muchos valores diferentes. Estos se encuentran [listados](/es/docs/Web/HTML/Tipos_de_enlaces) en una página separada.
 
 | [Categorías de contenido](/es/docs/Web/Guide/HTML/categorias_de_contenido) | Contenido en metadatos. Si [`itemprop`](/es/docs/Web/HTML/Element/link#itemprop) está presente: [contenido dinámico](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico) y [contenido textual o estático](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático) |
 | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -22,7 +23,8 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
 - `charset`{{deprecated_inline}}
   - : Este atributo define la codificación de caracteres del recurso enlazado. El valor es un espacio y/o una lista de grupos de caracteres según se define en {{rfc(2045)}}, separados por coma. El valor predeterminado es `iso-8859-1`.
-    > **Nota:** Este atributo es obsoleto y **no debe ser usado por autores**. Para conseguir su mismo efecto, se recomienda usar el encabezado HTTP Content-Type en el recurso enlazado.
+    > [!NOTE]
+    > Este atributo es obsoleto y **no debe ser usado por autores**. Para conseguir su mismo efecto, se recomienda usar el encabezado HTTP Content-Type en el recurso enlazado.
 - `crossorigin`
   - : Este atributo enumerado indica si se debe usar CORS cuando se solicite una imagen relacionada. Las [imágenes con CORS habilitado](/es/docs/Web/HTML/Imagen_con_CORS_habilitado) pueden ser reutilizadas en el elemento {{HTMLElement("canvas")}} sin que estén _corruptas_.Los valores permitidos son:_ `"anonymous"`
     _ : Una solicitud a un origen cruzado (esto es, con el encabezado HTTP `Origin:`) es realizada, pero no se envían credenciales (es decir, no se envían cookies, ni certificado X.509, ni datos de autenticación básica HTTP). Si el servidor no otorga credenciales al sitio de origen (por no enviar el encabezado HTTP `Access-Control-Allow-Origin:`) la imagen estará _corrupta_, y su uso estará restringido.
@@ -31,7 +33,8 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 - `disabled` {{Non-standard_inline}}
 
   - : Este atributo es usado para deshabilitar una relación de enlace. Agregando programación, este atributo puede ser usado para habilitar o deshabilitar la relación con distintas hojas de estilos.
-    > **Nota:** Aunque no hay atributo `disabled` en el estándar de HTML, **sí** hay un atributo `disabled` en el objeto DOM `HTMLLinkElement`.El uso de `disabled` como atributo HTML no es estándar, y solo puede ser usado en algunos navegadores ([W3 #27677](https://www.w3.org/Bugs/Public/show_bug.cgi?id=27677)). **No debe usarse**. Para lograr un efecto similar, se puede usar una de las siguientes técnicas:
+    > [!NOTE]
+    > Aunque no hay atributo `disabled` en el estándar de HTML, **sí** hay un atributo `disabled` en el objeto DOM `HTMLLinkElement`.El uso de `disabled` como atributo HTML no es estándar, y solo puede ser usado en algunos navegadores ([W3 #27677](https://www.w3.org/Bugs/Public/show_bug.cgi?id=27677)). **No debe usarse**. Para lograr un efecto similar, se puede usar una de las siguientes técnicas:
     >
     > - Si el atributo `disabled` fue añadido directamente al elemento en la página, no incluya el elemento {{HTMLElement("link")}} en vez de eso;
     > - Establezca la **propiedad** `disabled` del objeto DOM `StyleSheet` vía programación.
@@ -45,7 +48,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 - `media`
 
   - : Este atributo especifica el tipo de medio al que aplica el recurso enlazado. Su valor debe ser un [media query](/es/docs/CSS/Media_queries). Este atributo es usado principalmente cuando se enlaza a una hoja de esetilos externa en la que se le permita al agenete usuario seleccionar la que mejor se adapte al dispositivo sobre el que se ejecuta.
-    > **Nota:**
+    > [!NOTE]
     >
     > - En HTML 4, esto puede ser solamente una lista simple de literales de medios separadas por espacio, es decir, [tipos de medios y grupos](/es/docs/Web/CSS/@media), donde se definían valores para este atributo, tales como `print`, `screen`, `aural`, `braille`. HTML5 extiende esto a cualquier clase de [media queries](/es/docs/CSS/Media_queries), los cuales son un superconjunto de los valores permitidos de HTML 4.
     > - Los navegadores que no soporten los [Media Queries de CSS3](/es/docs/CSS/Media_queries) no necesariamente reconocerán el enlace adecuado; no olvide establecer enlaces de _fallback_, usando los conjuntos de media queriese definidos en HTML 4.
@@ -62,13 +65,14 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
   - : Este atributo indica la relación del documento enlazado con el actual. El atributo debe ser una lista de [tipos de enlaces](/es/docs/Web/HTML/Tipos_de_enlaces) separados por espacio. El uso más común para este atributo es especificar el enlace a una hoja de estilos externa: el atributo **rel** se establece con valor `stylesheet`, y el atributo **href** se establece con la URL de la hoja de estilos externa para dar formato a la página. WebTV también soporta el uso del valor `next` en **rel** para precargar la siguiente página en una serie de documentos.
 - `rev`{{deprecated_inline}}
   - : El valor de este atributo muestra la relación del documento actual al documento enlazado, como se define en el atributo [`href`](/es/docs/Web/HTML/Element/link#href). En consecuencia, este atributo define la relación inversa, en comparación al valor del atributo **rel**. Los [tipos de enlace](/es/docs/Web/HTML/Tipos_de_enlaces) para este atributo son similares a los disponibles para [`rel`](/es/docs/Web/HTML/Element/link#rel).
-    > **Nota:** Este atributo es obsoleto en HTML5. **No debe usarse**. Para lograr este efecto, use el atributo [`rel`](/es/docs/Web/HTML/Element/link#rel) con el [tipo de enlace](/es/docs/Web/HTML/Tipos_de_enlaces) contrario, por ejemplo, made debe reemplazar a author. Además, este atributo no significa _revision_ y no debe ser usado con un número de versión, que es desafortunadamente el caso de muchos sitios.
+    > [!NOTE]
+    > Este atributo es obsoleto en HTML5. **No debe usarse**. Para lograr este efecto, use el atributo [`rel`](/es/docs/Web/HTML/Element/link#rel) con el [tipo de enlace](/es/docs/Web/HTML/Tipos_de_enlaces) contrario, por ejemplo, made debe reemplazar a author. Además, este atributo no significa _revision_ y no debe ser usado con un número de versión, que es desafortunadamente el caso de muchos sitios.
 - `sizes`
 
   - : Este atributo define los tamaños de los íconos para medios visuales contenidos en el recurso. Debe estar presente solo si el atributo [`rel`](/es/docs/Web/HTML/Element/link#rel) contiene el [tipo de enlace](/es/docs/Web/HTML/Tipos_de_enlaces) icon. Puede tener los siguientes valores:
     - `any`, significa que el ícono puede ser escalado a cualquier tamaño, ya que está en un formato vectorial, como `image/svg+xml`.
     - una lista de tamaños separados por espacios en blanco, cada uno en formato `<anchura en píxeles>` x `<altura en píxeles>` or `<anchura en píxeles>` X `<altura en píxeles>`. Cada uno de estos tamaños debe estar contenido en el recurso.
-      > **Nota:**
+      > [!NOTE]
       >
       > - La mayoría de los formatos de ícono solo permiten almacenar un ícono; por lo que la mayoría de las ocasiones, el atributo [`sizes`](/es/docs/Web/HTML/Global_attributes#sizes) contiene solamente una entrada. El formato ICO de Microsoft lo hace, así como el formato ICN de Apple. Siendo ICO más común, es el que se recomienda usar.
       > - iOS de Apple no soporta este atributo, por lo que iPhone y iPad de Apple usan [tipos de enlaces](/es/docs/Web/HTML/Tipos_de_enlaces) especiales, no estándares, para definir los íconos a usar como Web Clip o contenedor de inicio: apple-touch-icon y apple-touch-startup-icon.
@@ -124,7 +128,8 @@ Se puede determinar cuando una hoja de estilos fue cargada estableciendo la ejec
   onerror="sheetError()" />
 ```
 
-> **Nota:** El evento `load` se dispara una vez que la hoja de estilos y todo su contenido importado ha sido cargado y procesado, e inmediatamente antes de que los estilos sean aplicados al contenido.
+> [!NOTE]
+> El evento `load` se dispara una vez que la hoja de estilos y todo su contenido importado ha sido cargado y procesado, e inmediatamente antes de que los estilos sean aplicados al contenido.
 
 ## Notas
 

@@ -59,7 +59,8 @@ View Source же для сравнения — это просто исходн�
 
 ![The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open](inspecting3-font-size.png)
 
-> **Примечание:** Также существуют другие полезные функции в Rules view, например объявления с не валидными значениями зачёркнуты. Вы можете узнать больше в [Examine and edit CSS](/ru/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS).
+> [!NOTE]
+> Также существуют другие полезные функции в Rules view, например объявления с не валидными значениями зачёркнуты. Вы можете узнать больше в [Examine and edit CSS](/ru/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS).
 
 ## Понимание модели блоков
 
@@ -75,7 +76,8 @@ View Source же для сравнения — это просто исходн�
 
 ![The Layout section of the DevTools](inspecting4-box-model.png)
 
-> **Примечание:** Узнать больше на [Examining and Inspecting the Box Model](/ru/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model).
+> [!NOTE]
+> Узнать больше на [Examining and Inspecting the Box Model](/ru/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model).
 
 ## Решение проблем специфичности
 

@@ -9,7 +9,8 @@ l10n:
 
 **User-Agent** {{Glossary("request header", "請求標頭")}}是一個讓伺服器和網路對等端識別發起請求的{{Glossary("user agent", "使用者代理")}}的應用程式、操作系統、供應商和/或版本的特徵字串。
 
-> **警告：** 請閱讀[透過使用者代理進行瀏覽器檢測](/zh-TW/docs/Web/HTTP/Browser_detection_using_the_user_agent)，了解為何給不同的瀏覽器提供不同的網頁或服務通常是不好的主意。
+> [!WARNING]
+> 請閱讀[透過使用者代理進行瀏覽器檢測](/zh-TW/docs/Web/HTTP/Browser_detection_using_the_user_agent)，了解為何給不同的瀏覽器提供不同的網頁或服務通常是不好的主意。
 
 <table class="properties">
   <tbody>

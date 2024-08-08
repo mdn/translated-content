@@ -62,7 +62,8 @@ JavaScript の MIME タイプに関する情報を探していると、JavaScrip
 
 ブラウザーはこれらの代替 MIME タイプのいずれか、いくつか、またはすべてに対応しているかもしれませんが、JavaScript ファイルの MIME タイプを示すには、`text/javascript` **のみ**を使用しましょう。
 
-> **メモ:** 詳しくは [MIME タイプ（IANA メディア種別）](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)をご覧ください。
+> [!NOTE]
+> 詳しくは [MIME タイプ（IANA メディア種別）](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)をご覧ください。
 
 ## 設定する MIME タイプの決定方法
 

@@ -17,7 +17,8 @@ En su corazón, {{glossary("HTML")}} es un lenguaje muy sencillo compuesto de {{
 
 Antes de empezar este módulo, no necesitas conocimientos previos de HTML, pero deberías estar, por lo menos, familiarizado con el uso básico de computadoras, y usar la Web pasivamente (es decir, sólo revisándola y consumiendo el contenido). Debes tener configurado un entorno de trabajo básico (como se detalla en [Instalación de software básico](/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software)), y comprender cómo crear y administrar archivos (como se detalla en [Manejo de archivos](/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files)). Ambos son parte de nuestro módulo completo [Introducción a la web](/es/docs/Learn/Getting_started_with_the_web) para principiantes.
 
-> **Nota:** Si estás trabajando en una computadora, tablet u otro dispositivo en donde no tengas la capacidad de crear tus propios archivos, podrías probar (en su mayoría) el código de los ejemplos en un programa para escribir código en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
+> [!NOTE]
+> Si estás trabajando en una computadora, tablet u otro dispositivo en donde no tengas la capacidad de crear tus propios archivos, podrías probar (en su mayoría) el código de los ejemplos en un programa para escribir código en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 
@@ -52,6 +53,7 @@ Las siguientes evaluaciones probarán tu entendimiento de las bases de HTML cubi
 - [Bases de la alfabetización Web 1](https://teach.mozilla.org/activities/web-lit-basics/)
   - : Un curso excelente de la fundación Mozilla que explora y pone a prueba muchas de las habilidades sobre las cuales hablamos en el módulo de _Introducción a HTML_. Los estudiantes se familiarizan con la lectura, escritura y participan de la web en este módulo de seis partes. Descubre los fundamentos de la web a través de la producción y colaboración.
 
-> **Nota:** Retroalimentación
+> [!NOTE]
+> Retroalimentación
 >
 > Ayúdanos a mejorar nuestras guías y tutoriales como esta respondiendo [nuestra encuesta aquí](https://www.surveygizmo.com/s3/4871248/MDN-Guides-Survey).

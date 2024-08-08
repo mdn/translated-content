@@ -16,7 +16,8 @@ Cette spécification ajoute deux nouvelles méthodes à tous les objets mettant 
 - `querySelectorAll`
   - : Renvoie une [`NodeList`](/fr/docs/Web/API/NodeList) (_liste de noeuds_) contenant tous les noeuds `Element` correspondants dans la sous-arborescence du noeud, ou une `NodeList` vide si aucune correspondance n'a été trouvée.
 
-> **Note :** La [`NodeList`](/fr/docs/Web/API/NodeList) retournée par [`querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll) n'est pas directe. À la différence des autres méthodes de requêtes DOM qui retournent une liste de noeuds directe.
+> [!NOTE]
+> La [`NodeList`](/fr/docs/Web/API/NodeList) retournée par [`querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll) n'est pas directe. À la différence des autres méthodes de requêtes DOM qui retournent une liste de noeuds directe.
 
 Vous pouvez trouver des exemples et des détails en lisant la documentation sur les méthodes [`querySelector()`](/fr/docs/Web/API/Element/querySelector) et [`querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll), ainsi que dans l'article [Extraits de code pour querySelector](/fr/docs/Archive/Add-ons/Code_snippets/QuerySelector).
 

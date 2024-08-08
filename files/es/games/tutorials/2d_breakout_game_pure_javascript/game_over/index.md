@@ -61,7 +61,8 @@ Aquí tienes el código que funciona para que lo compares con el tuyo:
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/z4zy79fo/","","320")}}
 
-> **Nota:** haz que la bola se mueva más rápida cuando golpea la pala.
+> [!NOTE]
+> Haz que la bola se mueva más rápida cuando golpea la pala.
 
 ## Siguientes pasos
 

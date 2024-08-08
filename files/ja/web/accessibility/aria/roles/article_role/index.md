@@ -17,7 +17,8 @@ slug: Web/Accessibility/ARIA/Roles/article_role
 
 この例では、同じように構成され、関連している 2 つの記事を 1 ページに並べて表示しています。
 
-> **メモ:** 記事 (`article`) ロールを持つ `<div>` ではなく、`<article>` 要素を使用します。 利用可能な場合は、いつでもネイティブの要素を使用します。
+> [!NOTE]
+> 記事 (`article`) ロールを持つ `<div>` ではなく、`<article>` 要素を使用します。 利用可能な場合は、いつでもネイティブの要素を使用します。
 
 `role="article"` を使用する代わりに、{{htmlelement("article")}} 要素を使用することができます。
 
@@ -63,7 +64,8 @@ slug: Web/Accessibility/ARIA/Roles/article_role
 - 属性値の変更
   - : フィードを作成するときは、各記事 (`article`) ロールの `aria-posinset` 属性と `aria-setsize` 属性を適切な値に設定します。 `aria-posinset` は、1 ベースであることに注意してください。
 
-> **メモ:** 常にネイティブの要素を使用してください。 記事 (`article`) ロールを持つ `<div>` ではなく、{{htmlelement("article")}} 要素を使用するべきです。
+> [!NOTE]
+> 常にネイティブの要素を使用してください。 記事 (`article`) ロールを持つ `<div>` ではなく、{{htmlelement("article")}} 要素を使用するべきです。
 
 ## 例
 

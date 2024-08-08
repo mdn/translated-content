@@ -11,7 +11,8 @@ Puisque les noeuds clonés par `use` ne sont pas exposés, vous devez être atte
 
 Pour des raisons de sécurité, certains navigateurs peuvent appliquer la politique de _même-origine_ (c'est-à-dire le couple domaine et port identiques) pour l'élément `use` ce qui peut conduire à un refus de charger une URI depuis une origine différente conernant l'attribut {{SVGAttr("href")}}.
 
-> **Attention :** Depuis la version de SVG 2, l'attribut {{SVGAttr("xlink:href")}} est obsolète. Voir la page {{SVGAttr("xlink:href")}} pour plus d'informations.
+> [!WARNING]
+> Depuis la version de SVG 2, l'attribut {{SVGAttr("xlink:href")}} est obsolète. Voir la page {{SVGAttr("xlink:href")}} pour plus d'informations.
 
 ## Contexte d'usage
 

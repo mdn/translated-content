@@ -117,7 +117,8 @@ Esta wiki não suporta JavaScript nas páginas, então não é possível mostrar
   </tbody>
 </table>
 
-> **Nota:** Sobre esta demonstração:
+> [!NOTE]
+> Sobre esta demonstração:
 >
 > - O documento HTML tem uma folha de estilo anexada, bem como um arquivo de script.
 > - O script trabalha com elementos individuais no DOM. Ele modifica o square's style diretamente. Ele modifica o estilo dos botões indiretamente mudando um atributo.

@@ -51,7 +51,8 @@ Puis ajoutez la règle suivante au bas de votre CSS&nbsp;:
 
 Si vous sauvegardez et actualisez, vous verrez qu'il n'y a aucune différence, à l'exception de la mise à jour de la couleur de l'arrière-plan du deuxième paragraphe. C'est correct, comme nous l'avons vu plus tôt, le positionnement statique est le comportement par défaut&nbsp;!
 
-> **Note :** Vous pouvez voir cet exemple fonctionner sur la page [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) ([voir le code source correspondant](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/1_static-positioning.html)).
+> [!NOTE]
+> Vous pouvez voir cet exemple fonctionner sur la page [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) ([voir le code source correspondant](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/1_static-positioning.html)).
 
 ## Positionnement relatif
 
@@ -72,7 +73,8 @@ top: 30px;
 left: 30px;
 ```
 
-> **Note :** Les valeurs de ces propriétés peuvent prendre n'importe quelle [unité](/fr/docs/Learn/CSS/Building_blocks/Values_and_units) logiquement attendue ici&nbsp;: pixels, mm, rem, %, etc.
+> [!NOTE]
+> Les valeurs de ces propriétés peuvent prendre n'importe quelle [unité](/fr/docs/Learn/CSS/Building_blocks/Values_and_units) logiquement attendue ici&nbsp;: pixels, mm, rem, %, etc.
 
 Si vous enregistrez et actualisez maintenant, vous verrez ce résultat&nbsp;:
 
@@ -140,7 +142,8 @@ span {
 
 Cool, n'est-ce pas&nbsp;? Oui, mais ce n'était probablement pas ce à quoi vous vous attendiez. Pourquoi le déplacement s'est‑il effectué vers le bas et à droite si nous avons défini `top` (haut) et `left` (gauche)&nbsp;? Même si cela peut paraître illogique, c'est la façon dont fonctionne le positionnement relatif. Songez à une force invisible poussant le côté spécifié de l'élément à positionner, le déplaçant ainsi dans la direction opposée. Par exemple, si nous spécifions `top: 30px;`, une force pousse le haut de la boîte, entraînant son déplacement vers le bas de 30px.
 
-> **Note :** À ce stade de l'article, vous pouvez retrouver un exemple ici [`2_relative-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/2_relative-positioning.html)).
+> [!NOTE]
+> À ce stade de l'article, vous pouvez retrouver un exemple ici [`2_relative-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/2_relative-positioning.html)).
 
 ## Positionnement absolu
 
@@ -220,11 +223,14 @@ Tout d'abord, notez que l'emplacement où l'élément à positionner aurait dû 
 
 Ensuite, notez que la position de l'élément a changé. [`top`](/fr/docs/Web/CSS/top), [`bottom`](/fr/docs/Web/CSS/bottom), [`left`](/fr/docs/Web/CSS/left) et [`right`](/fr/docs/Web/CSS/right) se comportent différemment avec le positionnement absolu. Au lieu de positionner l'élément en fonction de sa position relative dans la mise en page du document, ils définissent la distance à laquelle l'élément doit se situer par rapport aux côtés de l'élément contenant. Dans ce cas, nous indiquons que l'élément à positionner de manière absolue doit se placer à 30px du haut et à 30px de la gauche de «&nbsp;l'élément conteneur&nbsp;» (il s'agit dans ce cas, l'élément conteneur est le bloc conteneur initial, voir la section ci-dessous pour plus d'informations).
 
-> **Note :** Vous pouvez utiliser [`top`](/fr/docs/Web/CSS/top), [`bottom`](/fr/docs/Web/CSS/bottom), [`left`](/fr/docs/Web/CSS/left) et [`right`](/fr/docs/Web/CSS/right) pour redimensionner les éléments selon vos besoins. Définissez `top: 0; bottom: 0; left: 0; right: 0;` et `margin: 0;` sur les éléments à positionner et voyez ce qui se produit&nbsp;! Réinitialisez le tout ensuite…
+> [!NOTE]
+> Vous pouvez utiliser [`top`](/fr/docs/Web/CSS/top), [`bottom`](/fr/docs/Web/CSS/bottom), [`left`](/fr/docs/Web/CSS/left) et [`right`](/fr/docs/Web/CSS/right) pour redimensionner les éléments selon vos besoins. Définissez `top: 0; bottom: 0; left: 0; right: 0;` et `margin: 0;` sur les éléments à positionner et voyez ce qui se produit&nbsp;! Réinitialisez le tout ensuite…
 
-> **Note :** Les marges affectent toujours les éléments à positionner. Toutefois, la fusion de marges ne se fait pas.
+> [!NOTE]
+> Les marges affectent toujours les éléments à positionner. Toutefois, la fusion de marges ne se fait pas.
 
-> **Note :** À ce stade de l'article, vous pouvez voir un exemple ici [`3_absolute-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/3_absolute-positioning.html)).
+> [!NOTE]
+> À ce stade de l'article, vous pouvez voir un exemple ici [`3_absolute-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/3_absolute-positioning.html)).
 
 ### Contextes de positionnement
 
@@ -305,7 +311,8 @@ span {
 
 À présent, l'élément a été positionné par rapport à l'élément [`<body>`](/fr/docs/Web/HTML/Element/body).
 
-> **Note :** À ce stade, vous pouvez voir cet exemple ici [`4_positioning-context.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/4_positioning-context.html)).
+> [!NOTE]
+> À ce stade, vous pouvez voir cet exemple ici [`4_positioning-context.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/4_positioning-context.html)).
 
 ### Introduction au `z-index`
 
@@ -409,7 +416,8 @@ p:nth-of-type(1) {
 
 Notez que `z-index` n'accepte que des valeurs d'index sans unité&nbsp;; vous ne pouvez pas préciser que vous voulez qu'un élément soit à 23 pixels sur l'axe des z — cela ne fonctionne pas ainsi. Les plus grandes valeurs vont au‑dessus des valeurs plus faibles et c'est à vous d'indiquer les valeurs. Utiliser 2 et 3 aura le même effet que 300 et 40000.
 
-> **Note :** Sur ce sujet, vous pouvez voir l'exemple [`5_z-index.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/5_z-index.html)).
+> [!NOTE]
+> Sur ce sujet, vous pouvez voir l'exemple [`5_z-index.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/5_z-index.html)).
 
 ## Positionnement fixe
 
@@ -515,7 +523,8 @@ p:nth-of-type(1) {
 
 {{EmbedLiveSample('', '100%', 400)}}
 
-> **Note :** À ce stade de l'article, vous pouvez voir un exemple en direct ici [`6_fixed-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/6_fixed-positioning.html)).
+> [!NOTE]
+> À ce stade de l'article, vous pouvez voir un exemple en direct ici [`6_fixed-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/6_fixed-positioning.html)).
 
 ## Positionnement adhérent (<i lang="en">sticky</i>)
 
@@ -652,7 +661,8 @@ body {
 
 Les éléments ainsi positionnés «&nbsp;adhèrent&nbsp;» au plus proche ancêtre qui dispose d'un mécanisme de défilement, ce qui est déterminé d'après la propriété [position](/fr/docs/Web/CSS/position) de ses ancêtres.
 
-> **Note :** À ce stade de l'article, vous pouvez voir un exemple en direct ici [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/7_sticky-positioning.html)).
+> [!NOTE]
+> À ce stade de l'article, vous pouvez voir un exemple en direct ici [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/7_sticky-positioning.html)).
 
 ## Testez vos compétences&nbsp;!
 

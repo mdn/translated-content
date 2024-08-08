@@ -9,7 +9,8 @@ Dans de nombreux cas les [widgets de formulaires HTML disponibles](/fr/docs/Lear
 
 Dans cet article, nous verrons comment construire un tel widget. Pour cela, nous allons travailler avec un exemple : reconstruire l'élément {{HTMLElement("select")}}.
 
-> **Note :** Nous nous resterons centrés sur la construction des widgets, et non sur la façon de rendre le code générique et réutilisable ; cela impliquerait une manipulation de code JavaScript et de DOM dans un contexte inconnu, et nous sortirions de la portée de cet article.
+> [!NOTE]
+> Nous nous resterons centrés sur la construction des widgets, et non sur la façon de rendre le code générique et réutilisable ; cela impliquerait une manipulation de code JavaScript et de DOM dans un contexte inconnu, et nous sortirions de la portée de cet article.
 
 ## Conception, structure et sémantique
 
@@ -29,7 +30,8 @@ Le widget est dans son état normal :
 - le widget était actif et l'utilisateur a cliqué quelque part en dehors du widget
 - le widget était actif et l'utilisateur a déplacé le focus sur un autre avec le clavier
 
-> **Note :** Déplacer le focus dans la page entre les divers widgets se fait généralement en appuyant sur la touche de tabulation, mais ce n'est pas la norme partout. Par exemple, circuler parmi les liens sur une page se fait dans Safari par défaut en utilisant la [combinaison Option+Tab](http://www.456bereastreet.com/archive/200906/enabling_keyboard_navigation_in_mac_os_x_web_browsers/).
+> [!NOTE]
+> Déplacer le focus dans la page entre les divers widgets se fait généralement en appuyant sur la touche de tabulation, mais ce n'est pas la norme partout. Par exemple, circuler parmi les liens sur une page se fait dans Safari par défaut en utilisant la [combinaison Option+Tab](http://www.456bereastreet.com/archive/200906/enabling_keyboard_navigation_in_mac_os_x_web_browsers/).
 
 Le widget est sans son état actif&nbsp;:
 
@@ -71,7 +73,8 @@ Dans notre exemple, les spécifications manquantes sont évidentes et nous les t
 - [UXDesign.com](http://uxdesign.com/)
 - [The UX Design section of SmashingMagazine](http://uxdesign.smashingmagazine.com/)
 
-> **Note :** De plus, dans la plupart des systèmes, il y a moyen d'ouvrir l'élément {{HTMLElement("select")}} pour voir tous les choix disponibles (c'est la même chose que de cliquer sur l'élément {{HTMLElement("select")}} avec une souris). Cela se fait avec <kbd>Alt</kbd>+**<kbd>↓</kbd>** sous Windows et n'a pas été implémenté dans notre exemple - mais il serait facile de le faire, car le mécanisme a déjà été implémenté pour l'événement `click`.
+> [!NOTE]
+> De plus, dans la plupart des systèmes, il y a moyen d'ouvrir l'élément {{HTMLElement("select")}} pour voir tous les choix disponibles (c'est la même chose que de cliquer sur l'élément {{HTMLElement("select")}} avec une souris). Cela se fait avec <kbd>Alt</kbd>+**<kbd>↓</kbd>** sous Windows et n'a pas été implémenté dans notre exemple - mais il serait facile de le faire, car le mécanisme a déjà été implémenté pour l'événement `click`.
 
 ### Definition de la structure HTML et de la sémantique
 
@@ -652,9 +655,11 @@ Donc, voici le résultat avec les trois états ([consultez le code source ici](/
 
 Maintenant que le design et la structure sont prêts, nous pouvons écrire le code JAvaScript pour que le widget fonctionne vraiment.
 
-> **Attention :** Le code qui suit a été conçu à des fins éducatives et ne doit pas être utilisé tel quel. Entre autres choses, comme nous le verrons, il n'est pas à l'épreuve du temps et ne fonctionnera pas sur des navigateurs historiques. Il comporte également des parties redondantes. Elles devraient être optimisées pour du code de production.
+> [!WARNING]
+> Le code qui suit a été conçu à des fins éducatives et ne doit pas être utilisé tel quel. Entre autres choses, comme nous le verrons, il n'est pas à l'épreuve du temps et ne fonctionnera pas sur des navigateurs historiques. Il comporte également des parties redondantes. Elles devraient être optimisées pour du code de production.
 
-> **Note :** Créer des widgets réutilisables peut se révéler un peu délicat. L'ébauche de la norme « [W3C Web Component](http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html) » apporte des réponses à cette question particulière. Le [projet X-Tag](http://x-tags.org/) est un essai de mise en œuvre de cette spécification ; nous vous encourageons à y jeter un coup d'œil.
+> [!NOTE]
+> Créer des widgets réutilisables peut se révéler un peu délicat. L'ébauche de la norme « [W3C Web Component](http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html) » apporte des réponses à cette question particulière. Le [projet X-Tag](http://x-tags.org/) est un essai de mise en œuvre de cette spécification ; nous vous encourageons à y jeter un coup d'œil.
 
 ### Pourquoi ne fonctionne-t-il pas ?
 
@@ -924,7 +929,8 @@ window.addEventListener("load", function () {
 
 {{EmbedLiveSample("Avec_JS", 120, 130)}}
 
-> **Note :** Si vous voulez vraiment rendre votre code générique et réutilisable, au lieu de faire un changement de classe, il est préférable d'ajouter la classe widget pour cacher les éléments {{HTMLElement("select")}} et d'ajouter dynamiquement l'arbre DOM représentant le widget personnalisé après chaque élément {{HTMLElement("select")}} dans la page.
+> [!NOTE]
+> Si vous voulez vraiment rendre votre code générique et réutilisable, au lieu de faire un changement de classe, il est préférable d'ajouter la classe widget pour cacher les éléments {{HTMLElement("select")}} et d'ajouter dynamiquement l'arbre DOM représentant le widget personnalisé après chaque élément {{HTMLElement("select")}} dans la page.
 
 ### Rendre le travail plus facile
 
@@ -1720,7 +1726,8 @@ Pour prendre en charge le rôle `listbos`, nous n'avons qu'à mettre à jour not
 </div>
 ```
 
-> **Note :** Inclure à la fois l'attribut `role` et l'attribut `class` n'est nécessaire que si vous souhaitez prendre en charge les navigateurs anciens qui n'acceptent pas les [selecteurs d'attribut CSS](/fr/docs/CSS/Attribute_selectors).
+> [!NOTE]
+> Inclure à la fois l'attribut `role` et l'attribut `class` n'est nécessaire que si vous souhaitez prendre en charge les navigateurs anciens qui n'acceptent pas les [selecteurs d'attribut CSS](/fr/docs/CSS/Attribute_selectors).
 
 ### L'attribut `aria-selected`
 

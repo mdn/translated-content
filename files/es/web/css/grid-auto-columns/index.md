@@ -83,7 +83,8 @@ grid-auto-columns: unset;
 
   - : Es una palabra reservada -o keyword- que es idéntica a contenido máximo si es un máximo. Como mínimo representa el máximo valor mínimo aceptado (según lo especificado por{{cssxref("min-width")}}/{{cssxref("min-height")}}) de los elementos de la cuadrícula que ocupan el espacio de la cuadrícula.
 
-    > **Nota:** Note: Los valores de tamaño `auto` (y solo los `auto`) pueden ser estirados por las propiedades {{cssxref("align-content")}} y {{cssxref("justify-content")}} .
+    > [!NOTE]
+    > Los valores de tamaño `auto` (y solo los `auto`) pueden ser estirados por las propiedades {{cssxref("align-content")}} y {{cssxref("justify-content")}} .
 
 ### Sintaxis Formal
 

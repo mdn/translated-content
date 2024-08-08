@@ -7,7 +7,8 @@ slug: Web/API/Document/forms
 
 La propriété `forms` de {{domxref("Document")}} retourne une collection ({{domxref("HTMLCollection")}}) des éléments {{HTMLElement("form")}} présents dans le document actuel.
 
-> **Note :** De même, vous pouvez accéder à une liste des éléments d'entrée utilisateur d'un formulaire à l'aide de la propriété {{domxref ("HTMLFormElement.elements")}}.
+> [!NOTE]
+> De même, vous pouvez accéder à une liste des éléments d'entrée utilisateur d'un formulaire à l'aide de la propriété {{domxref ("HTMLFormElement.elements")}}.
 
 ## Syntaxe
 

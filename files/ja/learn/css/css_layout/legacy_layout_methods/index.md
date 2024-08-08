@@ -124,7 +124,8 @@ div:nth-of-type(2) {
 
 ここでは、すべての幅にパーセントを使用していることに気付くでしょう。 これは、さまざまな画面サイズに合わせて調整し、小さい画面サイズで列幅に同じ比率を維持する、**リキッドレイアウト**（liquid layout）を作成するため、非常に良い戦略です。 ブラウザーウィンドウの幅を調整して確認してください。 これはレスポンシブウェブデザインのための貴重なツールです。
 
-> **メモ:** この例は [0_two-column-layout.html](https://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) で実行できます（[ソースコード](https://github.com/mdn/learning-area/blob/main/css/css-layout/floats/0_two-column-layout.html)も見る）。
+> [!NOTE]
+> この例は [0_two-column-layout.html](https://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) で実行できます（[ソースコード](https://github.com/mdn/learning-area/blob/main/css/css-layout/floats/0_two-column-layout.html)も見る）。
 
 ## 単純な過去のグリッドフレームワークを作成する
 
@@ -213,7 +214,8 @@ body {
 
 これで、一番上の単一列の行がグリッドとしてきちんとレイアウトされます。
 
-> **メモ:** また、各列に薄い赤色を指定したので、各列がどれだけのスペースを占めているかを正確に確認できます。
+> [!NOTE]
+> また、各列に薄い赤色を指定したので、各列がどれだけのスペースを占めているかを正確に確認できます。
 
 複数列にまたがるコンテナーのレイアウトには、必要な列数（足す、その間の溝）に合わせて {{cssxref("width")}} の値を調整するための特別なクラスを指定する必要があります。 コンテナーが 2〜12 列にまたがるようにするために、追加のクラスを作成する必要があります。 それぞれの幅は、その列数の列幅に溝幅を加えた結果です。 溝幅は常に列数より 1 つ少なくなります。
 
@@ -260,7 +262,8 @@ CSS の最後に次を追加してください。
 
 これらのクラスを作成したら、グリッド上にさまざまな幅の列を配置できます。 効果を確認するには、ページを保存してブラウザーで読み込みます。
 
-> **メモ:** 上記の例がうまくいかない場合は、GitHub の[完成版](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid-finished.html)と比較してみてください（[ライブでも見られます](https://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html)）。
+> [!NOTE]
+> 上記の例がうまくいかない場合は、GitHub の[完成版](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid-finished.html)と比較してみてください（[ライブでも見られます](https://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html)）。
 
 要素のクラスを変更したり、コンテナーを追加したり削除したりして、レイアウトの変更方法を確認してください。 例えば、2 行目を次のようにすることができます。
 
@@ -375,7 +378,8 @@ body {
 
 コードを保存してブラウザーに読み込み、ビューポートの幅を変更してみます — 列の幅は適切に調整されるはずです。
 
-> **メモ:** 上記の例がうまくいかない場合は、[GitHub の完成版](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid.html)と比較してみてください（[ライブでも見られます](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html)）。
+> [!NOTE]
+> 上記の例がうまくいかない場合は、[GitHub の完成版](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid.html)と比較してみてください（[ライブでも見られます](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html)）。
 
 ### calc() 関数を使ったより簡単な計算
 
@@ -479,13 +483,15 @@ CSS でコンテナー要素を 1 列幅だけオフセットするクラスを�
 <div class="col span5 offset-by-one">14</div>
 ```
 
-> **メモ:** オフセット用のスペースを確保するために、またがる列の数を減らす必要があることに注意してください！
+> [!NOTE]
+> オフセット用のスペースを確保するために、またがる列の数を減らす必要があることに注意してください！
 
 違いを確認するには、ロードとリフレッシュを試してみるか、[fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-offset.html) の例を確認してください（[ライブでも見られます](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html)）。 完成した例は次のようになります。
 
 ![グリッドには 2 つの行があります。 1 行目には同じ幅の 12 個の項目があり、 2 行目には幅の異なる 4 個の項目があります。項目 13 は 1 列、項目 14 は 5 列、項目 15 は 3 列、項目 16 は 2 列にわたります。アイテム 14 は 'offset-by-one' クラスが適用されており、 2 つ目ではなく 3 つ目の列から始まり、 2 行目の 2 つ目の列に 1 列分の幅の空き空間が残ります。](offset-grid-finished.png)
 
-> **メモ:** 特別な演習として、`offset-by-two` クラスを実装できますか？
+> [!NOTE]
+> 特別な演習として、`offset-by-two` クラスを実装できますか？
 
 ### 浮動ブロックのグリッドの制限
 
@@ -636,7 +642,8 @@ Skeleton を使い始めるためには、ラッパーの {{htmlelement("div")}}
 
 HTML ファイルを保存してブラウザーに読み込んで、効果を確認してください。
 
-> **メモ:** この例がうまく動作しない場合は、使用するウィンドウを広げてみてください（ウィンドウが狭すぎると、ここで記述されているようにグリッドが表示されません）。この例がうまく動作しない場合は、[html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton-finished.html) ファイルと比較してみてください（[ライブでも見られます](https://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)）。
+> [!NOTE]
+> この例がうまく動作しない場合は、使用するウィンドウを広げてみてください（ウィンドウが狭すぎると、ここで記述されているようにグリッドが表示されません）。この例がうまく動作しない場合は、[html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton-finished.html) ファイルと比較してみてください（[ライブでも見られます](https://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)）。
 
 `skeleton.css` ファイルを見ると、これがどのように機能するかがわかります。 例えば、Skeleton には、 "three columns" クラスを追加して要素をスタイルするための次の定義があります。
 

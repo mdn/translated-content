@@ -98,7 +98,8 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Globa
 
   - : Cet attribut indique quels types de contenus sont acceptés par le serveur. Il peut y en avoir plusieurs, séparés par des virgules.
 
-    > **Note :** Cet attribut a été retiré dans HTML5 et ne doit plus être utilisé. À la place, il faut utiliser l'attribut [`accept`](/fr/docs/Web/HTML/Element/Input#attr-accept) de l'élément `<input type=file>`.
+    > [!NOTE]
+    > Cet attribut a été retiré dans HTML5 et ne doit plus être utilisé. À la place, il faut utiliser l'attribut [`accept`](/fr/docs/Web/HTML/Element/Input#attr-accept) de l'élément `<input type=file>`.
 
 - `accept-charset`
   - : Encodages de caractères séparés par des espaces que le serveur accepte. Le navigateur les utilise dans l'ordre dans lequel ils sont listés. La valeur par défaut signifie [le même encodage que celui de la page](/fr/docs/Web/HTTP/Headers/Content-Encoding).
@@ -163,7 +164,8 @@ Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire
 
     Cette valeur peut être remplacée par un attribut [`formtarget`](/fr/docs/Web/HTML/Element/Button#attr-formtarget) sur un [`<button>`](/fr/docs/Web/HTML/Element/Button), [`<input type="submit">`](/fr/docs/Web/HTML/Element/Input/submit), ou [`<input type="image">`](/fr/docs/Web/HTML/Element/Input/image).
 
-    > **Note :** La définition de `target="_blank"` sur les éléments `<form>` fournit implicitement le même comportement `rel` que la définition de [`rel="noopener"`](/fr/docs/Web/HTML/Link_types/noopener) qui ne définit pas `window.opener`.
+    > [!NOTE]
+    > La définition de `target="_blank"` sur les éléments `<form>` fournit implicitement le même comportement `rel` que la définition de [`rel="noopener"`](/fr/docs/Web/HTML/Link_types/noopener) qui ne définit pas `window.opener`.
 
 ## Exemples
 

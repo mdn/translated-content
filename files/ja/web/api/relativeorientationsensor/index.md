@@ -36,7 +36,8 @@ _固有のイベントはありません。祖先の {{domxref('Sensor')}} か�
 
 以下の例は、だいたい [Intel の Orientation Phone demo](https://intel.github.io/generic-sensor-demos/orientation-phone/) をもとにしており、1 秒に 60 回の周期を設定して `RelativeOrientationSensor` のインスタンスを生成しています。
 
-> **メモ:** もとにした Intel のデモでは `AbsoluteOrientationSensor` を用いています。測定ごとに、{{domxref('OrientationSensor.quaternion')}} を用いて電話の視覚的なモデルを回転しています。
+> [!NOTE]
+> もとにした Intel のデモでは `AbsoluteOrientationSensor` を用いています。測定ごとに、{{domxref('OrientationSensor.quaternion')}} を用いて電話の視覚的なモデルを回転しています。
 
 ```js
 const options = { frequency: 60, referenceFrame: "device" };

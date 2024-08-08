@@ -7,7 +7,8 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-> **备注：** 使用 `:blank` 选择器被认为尚有一定风险，CSSWG 正在持续改进它。
+> [!NOTE]
+> 使用 `:blank` 选择器被认为尚有一定风险，CSSWG 正在持续改进它。
 >
 > 详见 [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967)。
 

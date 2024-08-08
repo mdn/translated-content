@@ -15,7 +15,8 @@ CSS (Cascading Style Sheets) 는 콘텐츠의 글꼴, 색상, 크기 및 간격�
 2. [기본 소프트웨어 설치](/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software) 에서 자세히 설명한 대로 설정된 기본 작업 환경과 [파일 다루기](/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 에서 자세히 설명한 대로 파일을 생성하고 관리하는 방법을 이해합니다.
 3. [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML) 에서 설명한 바와 같이 HTML에 대한 기본적인 친숙성입니다.
 
-> **참고:** 자신의 파일을 만들 수 없는 컴퓨터/태블릿/기타 장치에서 작업하는 경우, [JSBin](https://jsbin.com/) 또는 [Glitch](https://glitch.com/) 와 같은 온라인 코딩 프로그램에서 코드 예제를 시험해 볼 수 있습니다.
+> [!NOTE]
+> 자신의 파일을 만들 수 없는 컴퓨터/태블릿/기타 장치에서 작업하는 경우, [JSBin](https://jsbin.com/) 또는 [Glitch](https://glitch.com/) 와 같은 온라인 코딩 프로그램에서 코드 예제를 시험해 볼 수 있습니다.
 
 ## 안내
 

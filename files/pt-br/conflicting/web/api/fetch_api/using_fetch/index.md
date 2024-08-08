@@ -8,7 +8,8 @@ original_slug: Web/API/Fetch_API/Basic_concepts
 
 A [Fetch API](/pt-BR/docs/Web/API/Fetch_API) fornece uma interface para buscar recursos (inclusive pela rede). Parecerá familiar para alguém que já tenha usado {{domxref("XMLHttpRequest")}}, mas ela fornece um conjunto de recursos mais poderoso e flexível . Este artigo expõe alguns conceitos básicos da API Fetch.
 
-> **Nota:** Este artigo será incrementado ao longo do tempo. Se você achar um conceito em Fetch que parece precisar de uma explicação melhor, informe alguém em [fórum de discussãMDN](https://discourse.mozilla-community.org/c/mdn), or [Mozilla IRC](https://wiki.mozilla.org/IRC) (#mdn room.)
+> [!NOTE]
+> Este artigo será incrementado ao longo do tempo. Se você achar um conceito em Fetch que parece precisar de uma explicação melhor, informe alguém em [fórum de discussãMDN](https://discourse.mozilla-community.org/c/mdn), or [Mozilla IRC](https://wiki.mozilla.org/IRC) (#mdn room.)
 
 ## Em poucas palavras
 

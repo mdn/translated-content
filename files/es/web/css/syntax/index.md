@@ -30,7 +30,8 @@ Esos bloques son naturalmente llamados **bloques de declaraciones** y las declar
 
 ![css syntax - declarations block.png](css_syntax_-_declarations_block.png)
 
-> **Nota:** El contenido de un bloque de declaración CSS, que es una lista de declaraciones separadas por un punto y coma, sin las llaves de apertura y cierre, pueden ser colocadas dentro del atributo `style de HTML`.
+> [!NOTE]
+> El contenido de un bloque de declaración CSS, que es una lista de declaraciones separadas por un punto y coma, sin las llaves de apertura y cierre, pueden ser colocadas dentro del atributo `style de HTML`.
 
 ## Sets de reglas CSS
 
@@ -42,7 +43,8 @@ CSS permite esto asociando condiciones con bloques de declaraciones. Cada declar
 
 Debido a que un elemento de la página puede ser seleccionado por varios selectores, y, por lo tanto, por varias reglas que pueden contener la misma propiedad más de una vez, con diferentes valores, el estandar CSS define cuál regla tiene precedencia por sobre las otras y debe ser aplicada: esto se conoce como el algoritmo [cascada](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
 
-> **Nota:** Es importante resaltar que si un set de reglas formado por un grupo de selectores es un atajo que reemplaza varios sets de reglas con un solo selector cada una, esto no aplica a la validez del set de reglas en sí.
+> [!NOTE]
+> Es importante resaltar que si un set de reglas formado por un grupo de selectores es un atajo que reemplaza varios sets de reglas con un solo selector cada una, esto no aplica a la validez del set de reglas en sí.
 >
 > Esto tiene una consecuencia importante: si algún selector básico es inválido, como cuando se usa un pseudo-elemento o pseudo-clase inválida, el _selector_ entero es inválido y, por lo tanto, el set de reglas completo es ignorado (por ser inválido también).
 

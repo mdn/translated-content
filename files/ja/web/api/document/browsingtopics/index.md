@@ -8,9 +8,11 @@ l10n:
 
 {{APIRef("Topics API")}}{{SeeCompatTable}}{{non-standard_header}}
 
-> **警告:** この機能は現在2つのブラウザーベンダーによって反対されています。反対の詳細については下記の[標準の位置づけ](/ja/docs/Web/API/Topics_API#standards_positions)の節を参照してください。
+> [!WARNING]
+> この機能は現在2つのブラウザーベンダーによって反対されています。反対の詳細については下記の[標準の位置づけ](/ja/docs/Web/API/Topics_API#standards_positions)の節を参照してください。
 
-> **メモ:** アプリケーションでこの機能を使用するには、[登録プロセス](/ja/docs/Web/Privacy/Privacy_sandbox/Enrollment)が要求されます。
+> [!NOTE]
+> アプリケーションでこの機能を使用するには、[登録プロセス](/ja/docs/Web/Privacy/Privacy_sandbox/Enrollment)が要求されます。
 
 `browsingTopics()` は {{domxref("Document")}} インターフェイスのメソッドで、ユーザーのトップトピックを表すオブジェクトの配列で履行されるプロミスを返します。これらのトピックは、その後のフェッチリクエストで広告技術プラットフォームに返すことができます。既定では、このメソッドは呼び出し側が監視する現在のページ訪問をブラウザーに記録するので、ページのホスト名を後でトピックの計算に使用することができます。
 

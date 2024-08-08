@@ -143,7 +143,8 @@ function stripTags(str) {
 stripTags("<p><em>lorem</em> <strong>ipsum</strong></p>"); // 'lorem ipsum'
 ```
 
-> **警告:** これはデモのためのもので、属性値の中に `>` がある場合は正しく扱えません。代わりに適切な HTML サニタイザー、たとえば [HTML サニタイザー API](/ja/docs/Web/API/HTML_Sanitizer_API) などを使用してください。
+> [!WARNING]
+> これはデモのためのもので、属性値の中に `>` がある場合は正しく扱えません。代わりに適切な HTML サニタイザー、たとえば [HTML サニタイザー API](/ja/docs/Web/API/HTML_Sanitizer_API) などを使用してください。
 
 ### Markdown の段落の位置を指定
 
@@ -164,7 +165,8 @@ Another paragraph
 `); // 3
 ```
 
-> **警告:** これはデモのためのもので、コードブロック内の改行や、見出しのような他の Markdown ブロック要素を処理しません。代わりに適切な Markdown パーサーを使用してください。
+> [!WARNING]
+> これはデモのためのもので、コードブロック内の改行や、見出しのような他の Markdown ブロック要素を処理しません。代わりに適切な Markdown パーサーを使用してください。
 
 ## 仕様書
 

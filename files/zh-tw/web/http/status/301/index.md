@@ -9,7 +9,8 @@ l10n:
 
 HTTP **`301 Moved Permanently`** 重新導向回應碼表示所請求的資源已被永久地移動到由 {{HTTPHeader("Location")}} 標頭給出的 URL。瀏覽器將重新導向到新的 URL，並且搜索引擎會更新對該資源的連結。
 
-> **備註：** 雖然[規範](#規範)要求在執行重新導向時方法和主體保持不變，但並非所有使用者代理都符合此要求。僅將 `301` 狀態碼用作 {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} 方法的回應，對於 {{HTTPMethod("POST")}} 方法，請改用 {{HTTPStatus("308", "308 Permanent Redirect")}}，因為此狀態明確禁止更改方法。
+> [!NOTE]
+> 雖然[規範](#規範)要求在執行重新導向時方法和主體保持不變，但並非所有使用者代理都符合此要求。僅將 `301` 狀態碼用作 {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} 方法的回應，對於 {{HTTPMethod("POST")}} 方法，請改用 {{HTTPStatus("308", "308 Permanent Redirect")}}，因為此狀態明確禁止更改方法。
 
 ## 狀態
 

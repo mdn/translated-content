@@ -5,7 +5,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/extension/getURL
 
 {{AddonSidebar}}
 
-> **Attention :** Cette fonction est obsolète. Veuillez utiliser [`runtime.getURL`](/fr/Add-ons/WebExtensions/API/runtime/getURL).
+> [!WARNING]
+> Cette fonction est obsolète. Veuillez utiliser [`runtime.getURL`](/fr/Add-ons/WebExtensions/API/runtime/getURL).
 
 Convertit un chemin relatif dans le répertoire d'installation d'une extension en une URL complète.
 
@@ -43,7 +44,7 @@ var fullURL = browser.extension.getURL("beasts/frog.html");
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
 >

@@ -214,7 +214,8 @@ browserType.slice(2);
 
 Isso retornará "zilla" — isso é porque a posição de caracter 2 é a letra z, e porque você não incluiu o segundo parametro, a substring retornou todos os caracteres restantes na string.
 
-> **Nota:** O segundo parametro do `slice()` é opcional: Se você não incluir ele, o slice finaliza no fim da string original. Existem outras opções também; estude a {{jsxref("String.prototype.slice()", "slice()")}} pagina para ver o que mais você pode descobrir.
+> [!NOTE]
+> O segundo parametro do `slice()` é opcional: Se você não incluir ele, o slice finaliza no fim da string original. Existem outras opções também; estude a {{jsxref("String.prototype.slice()", "slice()")}} pagina para ver o que mais você pode descobrir.
 
 ### Mudando entre maiúsculas e minúsculas
 
@@ -325,7 +326,8 @@ Neste exercício, temos os nomes das cidades no Reino Unido, mas a capitalizaç�
 3. Usando esta última variável como substring, substitua a primeira letra da string em minúsculas pela primeira letra da string em minúsculas alterada para maiúscula. Armazene o resultado desse procedimento de substituição em outra nova variável.
 4. Altere o valor da variável `result` para igual ao resultado final, não a `input`.
 
-> **Nota:** Uma dica — os parâmetros dos métodos de string não precisam ser literais de string; eles também podem ser variáveis, ou mesmo variáveis com um método sendo invocado nelas.
+> [!NOTE]
+> Uma dica — os parâmetros dos métodos de string não precisam ser literais de string; eles também podem ser variáveis, ou mesmo variáveis com um método sendo invocado nelas.
 
 ```html hidden
 <div class="output" style="min-height: 125px;">

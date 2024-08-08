@@ -78,7 +78,8 @@ function initWebGL(canvas) {
 
 Para obtener el contexto WebGL de un canvas, pedimo el contexto llamado "webgl" del canvas. Si este falla, intentamos con el nombre "experimental-webgl". Si este igualmente, falla, mostramos una alerta permitiendo al usuario conocer que parece no tener soporte WebGL. Eso es todo al respecto. En este punto, `gl` es nulo (no hay ningun contexto WebGL disponible) o es una referencia al contexto WebGL en donde renderizaremos.
 
-> **Nota:** El nombre de contexto "experimental-webgl" es nombre temporal para usar durante el desarrollo de las especificaciones; el nombre "webgl" sera usado una vez se termine el desarrollo.
+> [!NOTE]
+> El nombre de contexto "experimental-webgl" es nombre temporal para usar durante el desarrollo de las especificaciones; el nombre "webgl" sera usado una vez se termine el desarrollo.
 
 En este punto, tienes suficiente código para que el contexto WebGL, inicialice exitosamente, y deberias terminar con una gran cuadro negro y vacio, listo y esperando a recibir contenido .
 

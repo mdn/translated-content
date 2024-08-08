@@ -17,7 +17,8 @@ l10n:
 
 - {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}}
   - : 构造一个新的表示 ICE 候选者的 `RTCIceCandidate` 对象。根据配置对象进行可选配置。
-    > **备注：** 为了向后兼容，构造函数也接受一个包含 {{domxref("RTCIceCandidate.candidate", "candidate")}} 属性值字符串参数，以此替代配置对象。
+    > [!NOTE]
+    > 为了向后兼容，构造函数也接受一个包含 {{domxref("RTCIceCandidate.candidate", "candidate")}} 属性值字符串参数，以此替代配置对象。
 
 ## 实例属性
 

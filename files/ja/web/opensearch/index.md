@@ -13,7 +13,8 @@ l10n:
 
 OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autodiscovery_of_search_plugins)で説明されているように通知することができます。
 
-> **警告:** OpenSearch プラグインは [addons.mozilla.org](https://addons.mozilla.org) (AMO) にアップロードできなくなりました。検索エンジン機能は `manifest.json` ファイルに[クローム設定](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides)を指定して WebExtension API を使用する必要があります。
+> [!WARNING]
+> OpenSearch プラグインは [addons.mozilla.org](https://addons.mozilla.org) (AMO) にアップロードできなくなりました。検索エンジン機能は `manifest.json` ファイルに[クローム設定](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides)を指定して WebExtension API を使用する必要があります。
 
 ## OpenSearch 記述ファイル
 
@@ -52,7 +53,8 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autod
 
     Firefox はアイコンを [base64](https://ja.wikipedia.org/wiki/Base64) `data:` URI としてキャッシュします (検索プラグインは[プロファイル](https://support.mozilla.org/ja/kb/profiles-where-firefox-stores-user-data)の `searchplugins/` フォルダーに格納されます)。これを行う際に、 `http:` および `https:` URL は `data:` URI に変換されます。
 
-    > **メモ:** リモートからアイコンを読み込む際 (すなわち、 `data:` URI とは対照的に `https://` URI からの場合)、 Firefox は**10 KB**より大きなアイコンを拒否します。
+    > [!NOTE]
+    > リモートからアイコンを読み込む際 (すなわち、 `data:` URI とは対照的に `https://` URI からの場合)、 Firefox は**10 KB**より大きなアイコンを拒否します。
 
     ![Firefox の検索ボックスに表示される Google の検索候補](searchsuggestionsample.png)
 
@@ -109,7 +111,8 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autod
 
 この方法で、著者とタイトルによる検索を行うプラグインをサイトで提供することができます。
 
-> **メモ:** Firefox では、検索プラグインで提供されたアイコンがある場合は、検索ボックスのアイコンが変化して示します。 (画像を参照。緑のプラスの記号です。) そのため、ユーザーのインターフェイスで検索ボックスが非表示になっている場合、これを示すことは*ありません*。_一般に、この動作はブラウザーによって異なります_。
+> [!NOTE]
+> Firefox では、検索プラグインで提供されたアイコンがある場合は、検索ボックスのアイコンが変化して示します。 (画像を参照。緑のプラスの記号です。) そのため、ユーザーのインターフェイスで検索ボックスが非表示になっている場合、これを示すことは*ありません*。_一般に、この動作はブラウザーによって異なります_。
 
 ## OpenSearch プラグインの自動更新の対応
 
@@ -123,7 +126,8 @@ OpenSearch プラグインは自動的に更新することができます。 `U
      template="https://example.com/mysearchdescription.xml" />
 ```
 
-> **メモ:** 現時点で、 [addons.mozilla.org](https://addons.mozilla.org) (AMO) は OpenSearch プラグインの自動更新に対応していません。自分の検索プラグインを AMO に登録したい場合は、送信前に自動更新機能を削除してください。
+> [!NOTE]
+> 現時点で、 [addons.mozilla.org](https://addons.mozilla.org) (AMO) は OpenSearch プラグインの自動更新に対応していません。自分の検索プラグインを AMO に登録したい場合は、送信前に自動更新機能を削除してください。
 
 ## トラブルシューティングのヒント
 

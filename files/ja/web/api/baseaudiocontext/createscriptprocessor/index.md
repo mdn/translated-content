@@ -10,7 +10,8 @@ l10n:
 
 `createScriptProcessor()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、直接音声処理に用いられる {{domxref("ScriptProcessorNode")}} を生成します。
 
-> **メモ:** この機能は [AudioWorklet](/ja/docs/Web/API/AudioWorklet) と {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
+> [!NOTE]
+> この機能は [AudioWorklet](/ja/docs/Web/API/AudioWorklet) と {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
 
 ## 構文
 
@@ -31,9 +32,11 @@ createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 - `numberOfOutputChannels`
   - : 整数で、このノードの出力のチャンネル数を指定します。既定値は 2 です。32 までの値に対応しています。
 
-> **警告:** Webkit は現在（バージョン 31）、このメソッドを呼び出すときに有効な `bufferSize` を渡すことを要求しています。
+> [!WARNING]
+> Webkit は現在（バージョン 31）、このメソッドを呼び出すときに有効な `bufferSize` を渡すことを要求しています。
 
-> **メモ:** numberOfInputChannels`と`numberOfOutputChannels` の両方が 0 にするのは無効です。
+> [!NOTE]
+> numberOfInputChannels`と`numberOfOutputChannels` の両方が 0 にするのは無効です。
 
 ### 返値
 

@@ -65,7 +65,8 @@ generateKey(algorithm, extractable, keyUsages)
 
 ## 例
 
-> **メモ:** GitHub 上で[動く例を試す](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html)ことができます。
+> [!NOTE]
+> GitHub 上で[動く例を試す](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html)ことができます。
 
 ### RSA 鍵ペアの生成
 

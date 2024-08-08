@@ -49,7 +49,8 @@ field.addEventListener("change", function () {
 });
 ```
 
-> **Nota:** Por favor use o artigo [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) para um exemplo completo.
+> [!NOTE]
+> Por favor use o artigo [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) para um exemplo completo.
 
 ## Especificações
 

@@ -5,7 +5,8 @@ slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 
 {{AddonSidebar}}
 
-> **备注：** 如果你熟悉浏览器扩展的基本概念，你可以跳过这一章节，去阅读[如何把扩展文件组合在一起](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)。然后，阅读[参考文档](/zh-CN/docs/Mozilla/Add-ons/WebExtensions#reference)以构建你的扩展。访问 [Firefox 扩展工作站](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)，了解有关 Firefox 扩展测试、发布等更多信息。
+> [!NOTE]
+> 如果你熟悉浏览器扩展的基本概念，你可以跳过这一章节，去阅读[如何把扩展文件组合在一起](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)。然后，阅读[参考文档](/zh-CN/docs/Mozilla/Add-ons/WebExtensions#reference)以构建你的扩展。访问 [Firefox 扩展工作站](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)，了解有关 Firefox 扩展测试、发布等更多信息。
 
 在这篇文章中，我们将为 Firefox 创建一个扩展。这个扩展只是给从“`mozilla.org`”或其任意子域名加载的任何页面添加一个红色边框。
 
@@ -117,13 +118,15 @@ borderify/
 
 ### 测试
 
-> **备注：** 默认情况下[扩展在隐私浏览模式中不起作用](https://support.mozilla.org/zh-CN/kb/隐私浏览窗口中的扩展)
+> [!NOTE]
+> 默认情况下[扩展在隐私浏览模式中不起作用](https://support.mozilla.org/zh-CN/kb/隐私浏览窗口中的扩展)
 
 现在尝试访问“mozilla.org”，你将会在页面上看到有个红色的边框。
 
 ![Border displayed on mozilla.org](border_on_mozilla_org.png)
 
-> **备注：** 不要在“`addons.mozilla.org`”上尝试！内容脚本当前在那个域名下是被限制的。
+> [!NOTE]
+> 不要在“`addons.mozilla.org`”上尝试！内容脚本当前在那个域名下是被限制的。
 
 尝试一下编辑内容脚本更改边框的颜色，或做页面内容别的修改，保存内容脚本，然后通过单击 **about:debugging** 页面下的“刷新”按钮重新加载附加的文件。你可以马上看到的变化：
 

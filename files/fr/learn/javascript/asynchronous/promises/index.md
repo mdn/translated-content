@@ -26,7 +26,8 @@ Avec une API fonctionnant avec des promesses, la fonction asynchrone démarre l'
 
 ## Utiliser l'API `fetch()`
 
-> **Note :** Dans cet article, nous étudierons les promesses en copiant des fragments de code dans la console JavaScript du navigateur. Pour ceci&nbsp;:
+> [!NOTE]
+> Dans cet article, nous étudierons les promesses en copiant des fragments de code dans la console JavaScript du navigateur. Pour ceci&nbsp;:
 >
 > 1. Ouvrez un nouvel onglet dans votre navigateur et allez sur la page <https://example.org>.
 > 2. Dans cet onglet, ouvrez la console JavaScript [des outils de développement du navigateur](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools).

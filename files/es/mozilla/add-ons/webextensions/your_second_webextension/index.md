@@ -307,7 +307,8 @@ browser.tabs
 
 Empecemos por la linea 96. La ventana emergente ejecuta un script de contenido en la pestaña activa tan pronto como se termina de cargar, usando la API [`browser.tabs.executeScript()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript). Si la ejecución del script de contenido es exitosa, este quedará cargado en la página hasta que sea cerrada la pestaña o hasta que el usuario navegue hacia una página distinta.
 
-> **Nota:** Un motivo común por el cual el llamado a `browser.tabs.executeScript()` puede fallar, es porque no es posible ejecutar scripts de contenido en todas las páginas, por ejemplo, en páginas de navegador privilegiadas como about:debugging, o páginas del dominio [addons.mozilla.org](https://addons.mozilla.org/), no es posible hacerlo.
+> [!NOTE]
+> Un motivo común por el cual el llamado a `browser.tabs.executeScript()` puede fallar, es porque no es posible ejecutar scripts de contenido en todas las páginas, por ejemplo, en páginas de navegador privilegiadas como about:debugging, o páginas del dominio [addons.mozilla.org](https://addons.mozilla.org/), no es posible hacerlo.
 
 Si la ejecución falla, `reportExecuteScriptError()` ocultará el `<div>` `"popup-content"`, mostrará el `<div>` `"error-content"`, y reportará el error en la consola.
 

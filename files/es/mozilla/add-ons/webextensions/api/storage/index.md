@@ -20,7 +20,8 @@ Cada extensión tiene su propia área de almacenamiento, que se puede dividir en
 
 Aunque esta API es similar a {{domxref ("Window.localStorage")}}, se recomienda que no use Window\.localStorage en el código de extensión para almacenar datos relacionados con la extensión. Firefox borrará los datos almacenados por las extensiones utilizando la API localStorage en varios escenarios donde los usuarios borran su historial de navegación y los datos por razones de privacidad, mientras que los datos guardados utilizando la API [`storage.local`](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) se conservarán correctamente en estos escenarios.
 
-> **Nota:** El área de almacenamiento no está encriptada y no debe utilizarse para almacenar información confidencial del usuario, como claves.
+> [!NOTE]
+> El área de almacenamiento no está encriptada y no debe utilizarse para almacenar información confidencial del usuario, como claves.
 
 ## Tipos
 

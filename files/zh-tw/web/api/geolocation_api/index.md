@@ -21,14 +21,16 @@ if ("geolocation" in navigator) {
 }
 ```
 
-> **備註：** 在 Firefox 24 之後的版本，即使停用此 API，`navigator` 中的「`geolocation`」也同樣回傳 `true`。此問題已根據規格而於` [Firefox 25](/zh-TW/docs/Mozilla/Firefox/Releases/25/Site_Compatibility) 中修正 ([bug 884921](https://bugzilla.mozilla.org/show_bug.cgi?id=884921))。
+> [!NOTE]
+> 在 Firefox 24 之後的版本，即使停用此 API，`navigator` 中的「`geolocation`」也同樣回傳 `true`。此問題已根據規格而於` [Firefox 25](/zh-TW/docs/Mozilla/Firefox/Releases/25/Site_Compatibility) 中修正 ([bug 884921](https://bugzilla.mozilla.org/show_bug.cgi?id=884921))。
 
 ### 取得目前位置
 
 若要取得使用者目前的位置，可呼叫 `getCurrentPosition()` 函式。如此將啟動非同步化的請求，以偵測使用者的位置，並將查詢定位硬體而取得最新資訊。一旦決定位置，隨即執行特定的回呼常式 (Callback routine)。若發生錯誤，則可選擇是否提供第二次回呼。第三項參數為選項介面 (亦可選擇是否使用之)，可設定位置回傳的的最長時間，與請求的等待時間。
 若不論定位精確度而想儘快固定單一位置，則可使用 `getCurrentPosition()`。以具備 GPS 的裝置為例，往往需耗時 1 分鐘或更長的時間而固定 GPS 資訊。也因此，`getCurrentPosition()` 可能取得較低精確度的資料 (IP 位置或 WiFi) 而隨即開始作業。
 
-> **備註：** 依預設值，[`getCurrentPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.getCurrentPosition) 將儘快回傳較低精確度的結果。若不論精確度而只要儘快獲得答案，則可使用 [`getCurrentPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.getCurrentPosition)。舉例來說，搭載 GPS 的裝置可能需要一段時間才能取得 GPS 定位資訊，所以可能將低精確度的資料 (IP 位置或 Wifi) 回傳至 [`getCurrentPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.getCurrentPosition)。
+> [!NOTE]
+> 依預設值，[`getCurrentPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.getCurrentPosition) 將儘快回傳較低精確度的結果。若不論精確度而只要儘快獲得答案，則可使用 [`getCurrentPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.getCurrentPosition)。舉例來說，搭載 GPS 的裝置可能需要一段時間才能取得 GPS 定位資訊，所以可能將低精確度的資料 (IP 位置或 Wifi) 回傳至 [`getCurrentPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.getCurrentPosition)。
 
 ```js
 navigator.geolocation.getCurrentPosition(function (position) {
@@ -42,7 +44,8 @@ navigator.geolocation.getCurrentPosition(function (position) {
 
 如果定位資料改變 (可能是裝置移動，或取得更精確的地理位置資訊)，則可設定 1 組回呼函式，使其隨著更新過的定位資訊而呼叫之。而這個動作可透過 `watchPosition() 函式`完成。[`watchPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.watchPosition) 所具備的輸入參數與 `getCurrentPosition()`相同。回呼函式將呼叫數次，讓瀏覽器可於使用者移動期間更新位置，或可根據目前所使用的不同定位技術，提供更精確的定位資訊。若一直未回傳有效結果，則錯誤回呼 (Error Callback) 函式僅將呼叫 1 次。另請注意，錯誤回呼函式僅限於 `getCurrentPosition()，因此為選填`。
 
-> **備註：** 不需啟動 [`getCurrentPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.getCurrentPosition) 呼叫，亦可使用 [`watchPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.watchPosition)。
+> [!NOTE]
+> 不需啟動 [`getCurrentPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.getCurrentPosition) 呼叫，亦可使用 [`watchPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.watchPosition)。
 
 ```js
 var watchID = navigator.geolocation.watchPosition(function (position) {

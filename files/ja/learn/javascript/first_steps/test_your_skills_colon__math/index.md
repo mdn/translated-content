@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、[JavaScript での基本演算 — 数値と演算子](/ja/docs/Learn/JavaScript/First_steps/Math) の記事を理解しているかどうかを評価することです。
 
-> **メモ:** このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
+> [!NOTE]
+> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
 > コードにエラーがある場合、このページの結果パネルまたは JavaScript コンソールでログ出力されます。
 >
 > もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
@@ -32,7 +33,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math1.html", '100%', 400)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/math/math1-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
 
@@ -51,7 +52,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math2.html", '100%', 400)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/math/math2-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
 
@@ -64,6 +65,6 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math3.html", '100%', 550)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/math/math3-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。

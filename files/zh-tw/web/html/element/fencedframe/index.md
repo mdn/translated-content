@@ -82,7 +82,8 @@ const frame = document.querySelector("fencedframe");
 frame.config = frameConfig;
 ```
 
-> **備註：** 必須在 `runAdAuction()` 調用中傳遞 `resolveToConfig: true`，以獲取一個 `FencedFrameConfig` 對象。如果未設置，則生成的 {{jsxref("Promise")}} 將解析為一個只能在 {{htmlelement("iframe")}} 中使用的 URN。
+> [!NOTE]
+> 必須在 `runAdAuction()` 調用中傳遞 `resolveToConfig: true`，以獲取一個 `FencedFrameConfig` 對象。如果未設置，則生成的 {{jsxref("Promise")}} 將解析為一個只能在 {{htmlelement("iframe")}} 中使用的 URN。
 
 ## 無障礙議題
 

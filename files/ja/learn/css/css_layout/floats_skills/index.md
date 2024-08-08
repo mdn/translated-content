@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、 [CSS の浮動ボックス](/ja/docs/Learn/CSS/CSS_layout/Floats)を理解しているかを評価するために、 {{CSSxRef("float")}} と {{CSSxRef("clear")}} プロパティと値、そして浮動ボックスをクリアするその他の方法を使用することです。今までに扱った素材のさまざまな要素を使用する、 3 つの小さな課題に取り組んでいただきます。
 
-> **メモ:** 以下の対話型エディターで取り組むことができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業したほうが便利な場合もあります。
+> [!NOTE]
+> 以下の対話型エディターで取り組むことができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業したほうが便利な場合もあります。
 >
 > 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
@@ -23,7 +24,7 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/float/float1.html", '100%', 900)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/float/float1-download.html)しましょう。
 
@@ -39,7 +40,7 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/float/float2.html", '100%', 800)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/float/float2-download.html)しましょう。
 
@@ -53,6 +54,6 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/float/float3.html", '100%', 800)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/float/float3-download.html)しましょう。

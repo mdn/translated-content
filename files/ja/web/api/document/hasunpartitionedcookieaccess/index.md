@@ -50,7 +50,8 @@ document.hasUnpartitionedCookieAccess().then((hasAccess) => {
 });
 ```
 
-> **メモ:** より完全な例は、[ストレージアクセス API の使用](/ja/docs/Web/API/Storage_Access_API/Using)を参照してください。
+> [!NOTE]
+> より完全な例は、[ストレージアクセス API の使用](/ja/docs/Web/API/Storage_Access_API/Using)を参照してください。
 
 ## 仕様書
 

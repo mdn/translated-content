@@ -25,7 +25,8 @@ L'envoi de données arbitraires de façon asynchrone est généralement désign�
 
 L'objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) (souvent abrégé en XHR) fourni par le DOM permet de construire des requêtes HTTP, de les envoyer et d'en utiliser le résultat. À l'origine, [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) fut conçu pour échanger des données au format XML, mais il permet désormais aussi d'échanger des données [JSON](/fr/docs/Glossary/JSON). Toutefois, ni XML ni JSON ne sont des formats appropriés pour l'encodage des données de formulaire dans une requête HTTP. Les données de formulaire, décrite avec le type (`application/x-www-form-urlencoded`), prennent la forme d'une liste de paires clé/valeur encodées en URL. Pour la transmission de données binaires, la requête HTTP utilise le type `multipart/form-data`.
 
-> **Note :** Désormais, c'est [l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) qui est utilisée à la place de XHR, en raison de ses avantages. La plupart du code présenté dans cet article pourrait être réécrit pour utiliser <i lang="en">Fetch</i> à la place de XHR.
+> [!NOTE]
+> Désormais, c'est [l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) qui est utilisée à la place de XHR, en raison de ses avantages. La plupart du code présenté dans cet article pourrait être réécrit pour utiliser <i lang="en">Fetch</i> à la place de XHR.
 
 Si vous contrôlez la partie cliente (celle exécutée dans le navigateur) et la partie serveur, vous pouvez échanger du JSON et du XML et les traiter comme bon vous semble. Cependant, si vous utilisez un service tiers, vous devez envoyer les données dans un format bien défini.
 
@@ -109,7 +110,8 @@ btn.addEventListener("click", () => {
 
 {{EmbedLiveSample("", "100%", 50)}}
 
-> **Note :** Cette utilisation de [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) est sujette aux [règles de même origine (<i lang="en">same-origin policy</i>)](/fr/docs/Glossary/Same-origin_policy). Si vous souhaitez effectuer des requêtes entre différentes origines, vous devrez paramétrer [le contrôle d'accès CORS](/fr/docs/Web/HTTP/CORS).
+> [!NOTE]
+> Cette utilisation de [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) est sujette aux [règles de même origine (<i lang="en">same-origin policy</i>)](/fr/docs/Glossary/Same-origin_policy). Si vous souhaitez effectuer des requêtes entre différentes origines, vous devrez paramétrer [le contrôle d'accès CORS](/fr/docs/Web/HTTP/CORS).
 
 ### Utiliser `XMLHttpRequest` et `FormData`
 

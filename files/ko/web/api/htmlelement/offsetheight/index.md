@@ -14,7 +14,8 @@ l10n:
 
 요소가 숨겨져 있다면 (요소 또는 상위 요소 중 하나에서 `style.display`를 `"none"`으로 설정하는 경우), `0`이 반환됩니다.
 
-> **참고:** 이 속성은 값을 정수로 반올림합니다. 분수값이 필요하면 {{ domxref("element.getBoundingClientRect()") }}를 사용합니다.
+> [!NOTE]
+> 이 속성은 값을 정수로 반올림합니다. 분수값이 필요하면 {{ domxref("element.getBoundingClientRect()") }}를 사용합니다.
 
 ## 값
 

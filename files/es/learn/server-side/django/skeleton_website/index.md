@@ -43,7 +43,8 @@ El proceso es sencillo:
 1. Usar la herramienta `django-admin` para crear la carpeta del proyecto, los ficheros de plantillas básicos y el script de gestión del proyecto (**manage.py**).
 2. Usar **manage.py** para crear una o más _aplicaciones_.
 
-   > **Nota:** Un sitio web puede consistir de una o más secciones, ej. sitio principal, blog, wiki, area de descargas, etc. Django te recomienda encarecidamente que desarrolles estos componentes como _aplicaciones_ separadas que podrían ser reutilizadas, si se desea, en otros proyectos.
+   > [!NOTE]
+   > Un sitio web puede consistir de una o más secciones, ej. sitio principal, blog, wiki, area de descargas, etc. Django te recomienda encarecidamente que desarrolles estos componentes como _aplicaciones_ separadas que podrían ser reutilizadas, si se desea, en otros proyectos.
 
 3. Registrar las nuevas aplicaciones para incluirlas en el proyecto.
 4. Conectar el mapeador url de cada aplicación.
@@ -102,7 +103,8 @@ A continuación, ejecuta el siguiente comando para crear la aplicación _catalog
 python3 manage.py startapp catalog
 ```
 
-> **Nota:** el comando de arriba es para Linux/Mac OS X. En Windows el comando debería ser: `py -3 manage.py startapp catalog`Si estás trabajando en Windows, reemplaza `python3` por `py -3` a lo largo de este módulo o simplemente python: `python manage.py startapp catalog`.
+> [!NOTE]
+> El comando de arriba es para Linux/Mac OS X. En Windows el comando debería ser: `py -3 manage.py startapp catalog`Si estás trabajando en Windows, reemplaza `python3` por `py -3` a lo largo de este módulo o simplemente python: `python manage.py startapp catalog`.
 
 La herramienta crea una nueva carpeta y la rellena con ficheros para las diferentes partes de la aplicación (mostradas en negrilla abajo). La mayoría de los ficheros se nombran de acuerdo a su propósito, para que sea má útil (ej. las vistas se deberán guardar en **views.py**, los Modelos en **models.py**, las pruebas en **tests.py**, la configuración del sitio de administración en **admin.py**, el registro de aplicaciones en **apps.py**) y contienen algo de código base mínimo para trabajar con los objetos asociados.
 
@@ -127,7 +129,8 @@ Además ahora tenemos:
 - Una carpeta _migrations_ que se utiliza para guardar las "migraciones"— ficheros que te permiten actualizar tus bases de datos a medida que modificas tus modelos.
 - **\_\_init\_\_.py** — Un fichero vacío creado aquí para que Django/Python reconozca la carpeta como un [Paquete Python](https://docs.python.org/3/tutorial/modules.html#packages) y te permita usar sus objetos dentro de otras partes del proyecto.
 
-> **Nota:** ¿Te has dado cuenta qué es lo que falta en la lista de ficheros de arriba? Si bien hay un lugar para que coloques tus vistas y modelos, no hay nada para que pongas los mapeos url, las plantillas y los ficheros estáticos. Te mostraremos cómo crearlos más adelante (éstos no se necesitan en todos los sitios web pero se necesitan en este ejemplo).
+> [!NOTE]
+> ¿Te has dado cuenta qué es lo que falta en la lista de ficheros de arriba? Si bien hay un lugar para que coloques tus vistas y modelos, no hay nada para que pongas los mapeos url, las plantillas y los ficheros estáticos. Te mostraremos cómo crearlos más adelante (éstos no se necesitan en todos los sitios web pero se necesitan en este ejemplo).
 
 ## Registro de la aplicación catalog
 
@@ -149,7 +152,8 @@ INSTALLED_APPS = [
 
 La nueva linea especifica el objeto de configuración de la aplicación (`CatalogConfig`) que se generó para tí en **/locallibrary/catalog/apps.py** cuando creaste la aplicación.
 
-> **Nota:** Te habrás fijado que hay ya un montón de otras `INSTALLED_APPS` (y `MIDDLEWARE`, más abajo en el fichero de ajustes). Éstas habilitan en soporte para el [Sitio de admistración Django](/es/docs/Learn/Server-side/Django/Admin_site) y como consecuencia el motón de la funcionalidad que usa (incluyendo sesiones, autenticación, etc).
+> [!NOTE]
+> Te habrás fijado que hay ya un montón de otras `INSTALLED_APPS` (y `MIDDLEWARE`, más abajo en el fichero de ajustes). Éstas habilitan en soporte para el [Sitio de admistración Django](/es/docs/Learn/Server-side/Django/Admin_site) y como consecuencia el motón de la funcionalidad que usa (incluyendo sesiones, autenticación, etc).
 
 ## Especificación de la base de datos
 
@@ -213,7 +217,8 @@ urlpatterns = [
 
 Los mapeos URL se gestionan a través de la variable `urlpatterns`, que es una _lista_ Python de funciones `path()`. Cada función `path()` o asocia un patrón URL a una _vista específica_, que se presentará cuando el patrón se empareja o con otra lista de código de comprobación de patrones URL (en este segundo caso, los patrones se convierten en la "URL base" de patrones definidos en el módulo destino). La lista `urlpatterns` define inicialmente una función que mapea todos los URLs con el patrón _admin/_ al módulo `admin.site.urls` , que contiene las definiciones de mapeos URL propios de la aplicación de Administración.
 
-> **Nota:** La ruta en `path()` es una cadena que define un patrón URL para emparejar. Esta cadena podría incluir una variable nombrada (entre paréntesis angulares), ej. `'catalog/<id>/'`. Este patrón emparejará con una URL como **/catalog/**_any_chars_**/** y pasará a la vista _any_chars_ como cadena asociada al parámetro de nombre `id`). Trataremos de los métodos de caminos y rutas de patrones más adelante en los últimos temas.
+> [!NOTE]
+> La ruta en `path()` es una cadena que define un patrón URL para emparejar. Esta cadena podría incluir una variable nombrada (entre paréntesis angulares), ej. `'catalog/<id>/'`. Este patrón emparejará con una URL como **/catalog/**_any_chars_**/** y pasará a la vista _any_chars_ como cadena asociada al parámetro de nombre `id`). Trataremos de los métodos de caminos y rutas de patrones más adelante en los últimos temas.
 
 Añade las lineas de abajo al final del fichero para añadir un nuevo elemento a la lista `urlpatterns`. Este nuevo elemento incluye un `path()` que redirige las peticiones con el patrón `catalog/` al módulo `catalog.urls` (el fichero con el URL relativo **/catalog/urls.py**).
 
@@ -261,7 +266,8 @@ from django.conf.urls.static import static
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 ```
 
-> **Nota:** Hay numerosas formas de extender la lista `urlpatterns` (arriba hemos añadido simplemente un nuevo elemento a la lista usando el operador `+=` para separar claramente el código antiguo y el nuevo). En vez de ello podríamos haber simplemente incluido este nuevo patrón de mapeo en la definición de la lista original:
+> [!NOTE]
+> Hay numerosas formas de extender la lista `urlpatterns` (arriba hemos añadido simplemente un nuevo elemento a la lista usando el operador `+=` para separar claramente el código antiguo y el nuevo). En vez de ello podríamos haber simplemente incluido este nuevo patrón de mapeo en la definición de la lista original:
 >
 > ```python
 > urlpatterns = [
@@ -303,19 +309,22 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 ```
 
-> **Advertencia:** Necesitarás ejecutar los comandos de arriba cada vez que cambien tus modelos de una manera que afecte a la estructura de datos y necesite ser guardada (incluyendo tanto la adicción como la eliminación de modelos enteros o campos individuales).
+> [!WARNING]
+> Necesitarás ejecutar los comandos de arriba cada vez que cambien tus modelos de una manera que afecte a la estructura de datos y necesite ser guardada (incluyendo tanto la adicción como la eliminación de modelos enteros o campos individuales).
 
 El comando `makemigrations` _crea_ (pero no aplica) las migraciones para todas las aplicaciones instaladas en tu proyecto (también puedes especificar el nombre de una aplicación para ejecutar una migración para un sólo proyecto). Ésto te da la opoortunidad de comprobar el código para estas migraciones antes de que se apliquen — cuando seas un experto en Django ¡podrás elegir modificarlos ligeramente!
 
 El comando `migrate` aplica realmente las migraciones a tu base de datos (Django lleva la cuenta de cuáles han sido añadidas a la base de datos actual).
 
-> **Nota:** Mira en [Migrations](https://docs.djangoproject.com/en/2.0/topics/migrations/) (Django docs) para obtener información adicional sobre los comandos de migración menos usados.
+> [!NOTE]
+> Mira en [Migrations](https://docs.djangoproject.com/en/2.0/topics/migrations/) (Django docs) para obtener información adicional sobre los comandos de migración menos usados.
 
 ### Arrancando el sitio web
 
 Durante el desarrollo puedes probar el sitio web usando para servirlo el _servidor de desarrollo web_, y visualizádolo en tu explorador web local.
 
-> **Nota:** el servidor web de desarrollo no es robusto y sin suficientes prestaciones para su uso en producción, pero es una manera muy fácil de tener levantado y funcionando tu sitio web Django durante el desarrollo para hacerle una prueba rápida y conveniente. Por defecto servirá el sitio a tu computadora local (`http://127.0.0.1:8000/)`, pero puedes también especificar que se sirva a otras computdoras en tu red. Para más información ver [django-admin y manage.py: runserver](https://docs.djangoproject.com/en/2.0/ref/django-admin/#runserver) (Django docs).
+> [!NOTE]
+> El servidor web de desarrollo no es robusto y sin suficientes prestaciones para su uso en producción, pero es una manera muy fácil de tener levantado y funcionando tu sitio web Django durante el desarrollo para hacerle una prueba rápida y conveniente. Por defecto servirá el sitio a tu computadora local (`http://127.0.0.1:8000/)`, pero puedes también especificar que se sirva a otras computdoras en tu red. Para más información ver [django-admin y manage.py: runserver](https://docs.djangoproject.com/en/2.0/ref/django-admin/#runserver) (Django docs).
 
 Ejecuta el _servidor web de desarrollo_ llamando al comando `runserver` (en el mismo directorio donde está **manage.py**):
 
@@ -337,11 +346,13 @@ Una vez que el servidor está funcionando puedes ver el sitio navegando a `http:
 
 ¡No te preocupes! Esta página de error es lo esperado porque no tenemos ninguna página/url definidas en el módulo `catalogs.urls` (que es al que nos redirigimos cuando obtenemos la URL a la raíz del sitio).
 
-> **Nota:** La página superior demuestra una gran característica de Django— El registro de depuración automático. Cada vez que una página no pueda ser encontrada, o el código provoque un error cualquiera, se mostrará una pantalla de error con información útil. En este caso vemos que la URL que hemos suministrado no empareja con ninguno de nuestros patrones de URL (como los listados). El resgistro de depuración puede desconectarse durante la producción (cuando colocamos el sitio en vivo en la Web), en cuyo caso se servirá una página menos informativa pero más amigable.
+> [!NOTE]
+> La página superior demuestra una gran característica de Django— El registro de depuración automático. Cada vez que una página no pueda ser encontrada, o el código provoque un error cualquiera, se mostrará una pantalla de error con información útil. En este caso vemos que la URL que hemos suministrado no empareja con ninguno de nuestros patrones de URL (como los listados). El resgistro de depuración puede desconectarse durante la producción (cuando colocamos el sitio en vivo en la Web), en cuyo caso se servirá una página menos informativa pero más amigable.
 
 ¡En este punto ya sabemos que Django está funcionando!
 
-> **Nota:** Deberías volver a ejecutar las migraciones y volver a probar el sitio cada vez que hagas cambios significativos. ¡No lleva tanto tiempo!
+> [!NOTE]
+> Deberías volver a ejecutar las migraciones y volver a probar el sitio cada vez que hagas cambios significativos. ¡No lleva tanto tiempo!
 
 ## Desafíate a tí mismo
 
