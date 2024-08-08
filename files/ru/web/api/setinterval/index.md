@@ -25,7 +25,8 @@ var intervalID = scope.setInterval(code, delay);
 - `param1, ..., paramN` {{optional_inline}}
   - : Дополнительные параметры, передаваемые в функцию _func_.
 
-> **Примечание:** Передача дополнительных аргументов в `setInterval()` в первом синтаксисе не работает в Internet Explorer 9 и более ранних версиях.Если вы хотите включить эту функцию в этом браузере, вам следует использовать polyfill (смотрите раздел [Callback аргументы](#Callback_arguments)).
+> [!NOTE]
+> Передача дополнительных аргументов в `setInterval()` в первом синтаксисе не работает в Internet Explorer 9 и более ранних версиях.Если вы хотите включить эту функцию в этом браузере, вам следует использовать polyfill (смотрите раздел [Callback аргументы](#Callback_arguments)).
 
 ### Возвращаемое значение
 
@@ -33,7 +34,8 @@ var intervalID = scope.setInterval(code, delay);
 
 It may be helpful to be aware that `setInterval()` and {{domxref("setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("clearTimeout()")}} can technically be used interchangeably. For clarity, however, you should try to always match them to avoid confusion when maintaining your code.
 
-> **Примечание:** The `delay` parameter is converted to a signed 32-bit integer. This effectively limits `delay` to 2147483647 ms, since it's specified as a signed integer in the IDL.
+> [!NOTE]
+> The `delay` parameter is converted to a signed 32-bit integer. This effectively limits `delay` to 2147483647 ms, since it's specified as a signed integer in the IDL.
 
 ## Примеры
 
@@ -489,7 +491,8 @@ window.setInterval = function (
 };
 ```
 
-> **Примечание:** These two replacements also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as _non-standard-compliant_ polyfills also. See the [callback arguments paragraph](#Callback_arguments) for a _standard-compliant_ polyfill.
+> [!NOTE]
+> These two replacements also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as _non-standard-compliant_ polyfills also. See the [callback arguments paragraph](#Callback_arguments) for a _standard-compliant_ polyfill.
 
 Новое тестируемое свойство:
 
@@ -507,13 +510,15 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 s
 
 Another, more complex, solution for **the [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this) problem** is [the following framework](#A_little_framework).
 
-> **Примечание:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports [arrow functions](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () => this.myMethod) if we're inside myArray method.
+> [!NOTE]
+> JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports [arrow functions](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () => this.myMethod) if we're inside myArray method.
 
 ## MiniDaemon - фреймворк для управления таймерами
 
 In pages requiring many timers, it can often be difficult to keep track of all of the running timer events. One approach to solving this problem is to store information about the state of a timer in an object. Following is a minimal example of such an abstraction. The constructor architecture explicitly avoids the use of closures. It also offers an alternative way to pass the [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this) object to the callback function (see [The "this" problem](#The_.22this.22_problem) for details). The following code is also [available on GitHub](https://github.com/madmurphy/minidaemon.js).
 
-> **Примечание:** For a more complex but still modular version of it (`Daemon`) see [JavaScript Daemons Management](/en-US/Add-ons/Code_snippets/Timers/Daemons). This more complex version is nothing but a big and scalable collection of methods for the `Daemon` constructor. However, the `Daemon` constructor itself is nothing but a clone of `MiniDaemon` with an added support for _init_ and _onstart_ functions declarable during the instantiation of the `daemon`. **So the `MiniDaemon` framework remains the recommended way for simple animations**, because `Daemon` without its collection of methods is essentially a clone of it.
+> [!NOTE]
+> For a more complex but still modular version of it (`Daemon`) see [JavaScript Daemons Management](/en-US/Add-ons/Code_snippets/Timers/Daemons). This more complex version is nothing but a big and scalable collection of methods for the `Daemon` constructor. However, the `Daemon` constructor itself is nothing but a clone of `MiniDaemon` with an added support for _init_ and _onstart_ functions declarable during the instantiation of the `daemon`. **So the `MiniDaemon` framework remains the recommended way for simple animations**, because `Daemon` without its collection of methods is essentially a clone of it.
 
 ### minidaemon.js
 
@@ -610,7 +615,8 @@ MiniDaemon.prototype.start = function (bReverse) {
 };
 ```
 
-> **Примечание:** MiniDaemon passes arguments to the callback function. If you want to work on it with browsers that natively do not support this feature, use one of the methods proposed above.
+> [!NOTE]
+> MiniDaemon passes arguments to the callback function. If you want to work on it with browsers that natively do not support this feature, use one of the methods proposed above.
 
 ### Синтаксис
 

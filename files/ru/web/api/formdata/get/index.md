@@ -9,7 +9,8 @@ slug: Web/API/FormData/get
 
 Метод get() из интерфейса {{domxref("FormData")}} возвращает первое значение, связанное с переданным ключом из объекта FormData. Если вы ожидаете множественные значения и хотите получить их все, используйте метод getAll().
 
-> **Примечание:** Примечание: Этот метод доступен в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Этот метод доступен в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
 ## Синтаксис
 
