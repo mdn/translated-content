@@ -56,7 +56,7 @@ if (x === undefined) {
 ```
 
 > [!NOTE]
-> Observação: O operador de igualdade estrita (`===`) tem que ser utilizado aqui uma vez que `x == undefined` também checa se `x` é nulo, enquanto o operador não o faz. `null` não é equivalente à `undefined`. Veja {{jsxref("Operators/Comparison_Operators", "operadores de comparação")}} (em inglês) para maiores detalhes.
+> O operador de igualdade estrita (`===`) tem que ser utilizado aqui uma vez que `x == undefined` também checa se `x` é nulo, enquanto o operador não o faz. `null` não é equivalente à `undefined`. Veja {{jsxref("Operators/Comparison_Operators", "operadores de comparação")}} (em inglês) para maiores detalhes.
 
 ### `Operador Typeof` e `undefined`
 

@@ -575,7 +575,7 @@ As novas operações são:
 - `table.init`: Copia uma região de um segmento de elemento.
 
 > [!NOTE]
-> você pode encontrar mais informações na proposta [Operações de memória em massa e inicialização de segmento condicional](https://github.com/WebAssembly/bulk-memory-operations/blob/master/proposals/bulk-memory-operations/Overview.md).
+> Você pode encontrar mais informações na proposta [Operações de memória em massa e inicialização de segmento condicional](https://github.com/WebAssembly/bulk-memory-operations/blob/master/proposals/bulk-memory-operations/Overview.md).
 
 ## Tipos
 

@@ -53,7 +53,7 @@ svg {
 ## altGlyph
 
 > [!WARNING]
-> a partir da versão SVG2, a tag {{SVGElement('altGlyph')}} está obsoleta e não deve ser utilizada.
+> A partir da versão SVG2, a tag {{SVGElement('altGlyph')}} está obsoleta e não deve ser utilizada.
 
 Para {{SVGElement('altGlyph')}}, `fill` é a apresentação do atributo que define a coloração de um glifo (figura, ícone, simbolo).
 
@@ -211,7 +211,7 @@ For {{SVGElement('textPath')}}, `fill` é o atributo de apresentação utilizado
 ## tref
 
 > [!WARNING]
-> a partir da versão SVG2, a tag {{SVGElement('tref')}} está obsoleta e não deve ser utilizada.
+> A partir da versão SVG2, a tag {{SVGElement('tref')}} está obsoleta e não deve ser utilizada.
 
 Para {{SVGElement('tref')}}, `fill` é o atributo de apresentação utilizado para definir a cor de um texto
 
@@ -244,4 +244,4 @@ Para {{SVGElement('tspan')}}, `fill` é o atributo de apresentação utilizado p
 {{Compat}}
 
 > [!NOTE]
-> Nota: Para obter informações do uso do `context-fill` (e do `context-stroke`) de documentos HTML, consulte a documentação da propriedade não-padrão {{cssxref("-moz-context-properties")}} .
+> Para obter informações do uso do `context-fill` (e do `context-stroke`) de documentos HTML, consulte a documentação da propriedade não-padrão {{cssxref("-moz-context-properties")}} .

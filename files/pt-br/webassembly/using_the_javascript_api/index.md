@@ -15,7 +15,7 @@ Se você já [compilou um módulo de outra linguagem usando ferramentas como Ems
 Vamos percorrer alguns exemplos que explicam como usar a API WebAssembly JavaScript e como usá-la para carregar um módulo Wasm em uma página da web.
 
 > [!NOTE]
-> você pode encontrar o código de exemplo em nosso [webassembly-examples](https://github.com/mdn/webassembly-examples) repositório do GitHub.
+> Você pode encontrar o código de exemplo em nosso [webassembly-examples](https://github.com/mdn/webassembly-examples) repositório do GitHub.
 
 ### Preparando o exemplo
 
@@ -137,7 +137,7 @@ Vamos tornar as afirmações acima mais claras observando um exemplo de memória
 1. faça uma cópia local de `memory.wasm` no mesmo diretório de antes.
 
    > [!NOTE]
-   > você pode ver a representação de texto do módulo em [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat).
+   > Você pode ver a representação de texto do módulo em [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat).
 
 2. Volte para seu arquivo de exemplo `memory.html` e busque, compile e instancie seu módulo Wasm como antes — adicione o seguinte ao final de seu script:
 
@@ -191,7 +191,7 @@ Vejamos um exemplo de tabela simples — um módulo WebAssembly que cria e expor
 1. Faça uma cópia local de `table.wasm` em um novo diretório.
 
    > [!NOTE]
-   > você pode ver a representação de texto do módulo em [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat).
+   > Você pode ver a representação de texto do módulo em [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat).
 
 2. Crie uma nova cópia do nosso [modelo HTML](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) no mesmo diretório e chame-o de `table.html`.
 3. Como antes, busque, compile e instancie seu módulo Wasm — adicione o seguinte a um elemento {{htmlelement("script")}} na parte inferior do corpo do HTML:
@@ -213,7 +213,7 @@ Vejamos um exemplo de tabela simples — um módulo WebAssembly que cria e expor
 Este código acessa cada referência de função armazenada na tabela por sua vez e as instâncias para imprimir os valores que contêm no console — observe como cada referência de função é recuperada com um [`Table.prototype.get()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Table/get), adicionamos um conjunto extra de parênteses no final para realmente invocar a função.
 
 > [!NOTE]
-> você pode encontrar nossa demonstração completa em [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)).
+> Você pode encontrar nossa demonstração completa em [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)).
 
 ## Globais
 
