@@ -37,12 +37,12 @@ let gettingTitle = browser.action.getTitle(
 
 <!---->
 
-- 若同时指定了 `windowId` 和 `tabId`，则函数出错。
+- 若同时指定了 `windowId` 和 `tabId`，则函数出错且其返回的 promise 会被拒绝。
 - 若同时未指定 `windowId` 和 `tabId`，则返回全局标题。
 
 ### 返回值
 
-以包含浏览器操作的标题的字符串形式兑现的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，会兑现包含浏览器操作的标题的字符串。
 
 ## 示例
 
@@ -70,7 +70,7 @@ browser.action.onClicked.addListener(() => {
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-getTitle) API。该文档衍生于 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-getTitle) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
