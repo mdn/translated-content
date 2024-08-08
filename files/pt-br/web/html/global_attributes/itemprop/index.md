@@ -423,7 +423,7 @@ Names are unordered relative to each other, but if a particular name has multipl
 
 ### Result
 
-{{EmbedLiveSample('HTML_2', '', '', '', 'Web/HTML/Global_attributes/itemprop')}}
+{{EmbedLiveSample('HTML_2')}}
 
 ## Specifications
 
