@@ -63,7 +63,7 @@ event.initEvent("build", true, true);
 elem.addEventListener(
   "build",
   (e) => {
-  // e.target が elem と一致したとき
+    // e.target が elem と一致したとき
   },
   false,
 );
