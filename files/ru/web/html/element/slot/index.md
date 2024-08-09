@@ -69,7 +69,8 @@ HTML-элемент **`<slot>`** является частью набора те
 </template>
 ```
 
-> **Примечание:** вы можете увидеть этот полный пример в действии на странице [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (смотрите его [в режиме реального времени](https://mdn.github.io/web-components-examples/element-details/)). Кроме того, вы можете найти в разделе [Использование шаблонов и слотов](/ru/docs/Web/Web_Components/Using_templates_and_slots).
+> [!NOTE]
+> Вы можете увидеть этот полный пример в действии на странице [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (смотрите его [в режиме реального времени](https://mdn.github.io/web-components-examples/element-details/)). Кроме того, вы можете найти в разделе [Использование шаблонов и слотов](/ru/docs/Web/Web_Components/Using_templates_and_slots).
 
 ## Спецификации
 

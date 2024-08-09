@@ -145,7 +145,8 @@ Infinity
 | \[\[Enumerable]]   | Boolean                | Если `true`, свойство будет перечислено в цикле [for...in](/ru/docs/Web/JavaScript/Reference/Statements/for...in).                                                                                                         | false                 |
 | \[\[Configurable]] | Boolean                | Если `false`, то свойство не может быть удалено, и не может быть преобразовано в свойство-значение.                                                                                                                        | false                 |
 
-> **Примечание:** Атрибуты обычно используются движком JavaScript, поэтому вы не можете обратиться к ним напрямую (смотрите подробнее [Object.defineProperty()](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)). Вот почему в таблицах выше они помещены в двойные квадратные скобки вместо одиночных.
+> [!NOTE]
+> Атрибуты обычно используются движком JavaScript, поэтому вы не можете обратиться к ним напрямую (смотрите подробнее [Object.defineProperty()](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)). Вот почему в таблицах выше они помещены в двойные квадратные скобки вместо одиночных.
 
 ### «Обычные» объекты и функции
 

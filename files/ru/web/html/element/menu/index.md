@@ -74,7 +74,8 @@ div {
 
 ### Menu button
 
-> **Предупреждение:** Menu buttons haven't been implemented in any known browsers yet. The [`type`](/ru/docs/Web/HTML/Element/menu#type) attribute on the `<menu>` element is now obsolete.
+> [!WARNING]
+> Menu buttons haven't been implemented in any known browsers yet. The [`type`](/ru/docs/Web/HTML/Element/menu#type) attribute on the `<menu>` element is now obsolete.
 
 > **Предупреждение:** {{HTMLElement("menuitem")}} element is obsolete.
 
@@ -98,7 +99,8 @@ div {
 
 ### Toolbar
 
-> **Предупреждение:** Toolbar menus haven't been implemented in any known browsers yet.
+> [!WARNING]
+> Toolbar menus haven't been implemented in any known browsers yet.
 
 #### HTML
 

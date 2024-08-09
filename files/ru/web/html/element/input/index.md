@@ -46,7 +46,8 @@ slug: Web/HTML/Element/input
     - `number`: Элемент управления ввода числа(тип **float**).
     - `password`: Однострочное текстовое поле, чьё значение скрыто символом "звёздочка". Используйте атрибуты **minlength** и **maxlength**, чтобы указать минимальную и максимальную длину значения, которое может быть введено.
 
-      > **Примечание:** Любые формы, в которых присутствует важная информация(например, пароль), должны быть обработаны через HTTPS; в настоящий момент Firefox реализует составной механизм предупреждения, направленные против небезопасных форм для входа в систему - смотрите [Небезопасные пароли](/ru/docs/Web/Security/Insecure_passwords).
+      > [!NOTE]
+      > Любые формы, в которых присутствует важная информация(например, пароль), должны быть обработаны через HTTPS; в настоящий момент Firefox реализует составной механизм предупреждения, направленные против небезопасных форм для входа в систему - смотрите [Небезопасные пароли](/ru/docs/Web/Security/Insecure_passwords).
 
     - `radio`: Кнопка-переключатель, позволяет выбрать одно значение из множественного выбора.
     - `range`: Элемент управления для ввода числа, точное значение которого не имеет значения. Этот тип управления использует следующие значения по умолчанию, если соответствующие атрибуты не указаны:
@@ -138,7 +139,8 @@ slug: Web/HTML/Element/input
   - : A regular expression that the control's value is checked against. The pattern must match the entire value, not just some subset. Use the **title** attribute to describe the pattern to help the user. This attribute applies when the value of the **type** attribute is `text`, `search`, `tel`, `url` or `email`; otherwise it is ignored. The regular expression language is the same as JavaScript's. The pattern is not surrounded by forward slashes.
 - `placeholder`
   - : A hint to the user of what can be entered in the control . The placeholder text must not contain carriage returns or line-feeds. This attribute applies when the value of the **type** attribute is `text`, `search`, `tel`, `url` or `email`; otherwise it is ignored.
-    > **Примечание:** Do not use the `placeholder` attribute instead of a {{HTMLElement("label")}} element. Their purposes are different: the {{HTMLElement("label")}} attribute describes the role of the form element; that is, it indicates what kind of information is expected, the `placeholder` attribute is a hint about the format the content should take. There are cases in which the `placeholder` attribute is never displayed to the user, so the form must be understandable without it.
+    > [!NOTE]
+    > Do not use the `placeholder` attribute instead of a {{HTMLElement("label")}} element. Their purposes are different: the {{HTMLElement("label")}} attribute describes the role of the form element; that is, it indicates what kind of information is expected, the `placeholder` attribute is a hint about the format the content should take. There are cases in which the `placeholder` attribute is never displayed to the user, so the form must be understandable without it.
 - `readonly`
   - : This Boolean attribute indicates that the user cannot modify the value of the control. This attribute is ignored if the value of the **type** attribute is `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, or a button type.
 - `required`
@@ -169,7 +171,8 @@ slug: Web/HTML/Element/input
 
 ### File inputs
 
-> **Примечание:** Starting in Gecko 2.0, calling the `click()` method on an {{HTMLElement("input")}} element of type "file" opens the file picker and lets the user select files. See [Using files from web applications](/ru/docs/Using_files_from_web_applications) for an example and more details.
+> [!NOTE]
+> Starting in Gecko 2.0, calling the `click()` method on an {{HTMLElement("input")}} element of type "file" opens the file picker and lets the user select files. See [Using files from web applications](/ru/docs/Using_files_from_web_applications) for an example and more details.
 
 You can't set the value of a file picker from a script; doing something like the following has no effect:
 

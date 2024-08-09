@@ -104,7 +104,8 @@ var var1 = 3,
 | [Меньше](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Less_than_operator) (`<`)                        | Возвращает true, если операнд слева меньше операнда справа.                                                                                                                        | `var1 < var2 "2" < 12`               |
 | [Меньше или равно](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Less_than_or_equal_operator) (`<=`)    | Возвращает true, если операнд слева меньше или равен операнду справа.                                                                                                              | `var1 <= var2 var2 <= 5`             |
 
-> **Примечание:** (**=>**) не оператор, а нотация [Стрелочных функций](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+> [!NOTE]
+> (**=>**) не оператор, а нотация [Стрелочных функций](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Арифметические операторы
 
