@@ -143,8 +143,8 @@ slug: Web/CSS/CSS_grid_layout
 
 ## 外部資源
 
-- [Jen Simmons 的示範](http://labs.jensimmons.com/)
-- [格線示例：一些影片教學與使用範例](http://gridbyexample.com/)
+- [Jen Simmons 的示範](https://labs.jensimmons.com/)
+- [格線示例：一些影片教學與使用範例](https://gridbyexample.com/)
 - [Codrops 格線參考](https://tympanus.net/codrops/css_reference/grid/)
 - [Firefox DevTools CSS Grid Inspector](/zh-TW/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
 - [CSS Grid Playground](https://mozilladevelopers.github.io/playground/)

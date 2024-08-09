@@ -41,7 +41,7 @@ oReq.send();
 ### 分析及操作含有 HTML 文件的 `responseText` 屬性
 
 > [!NOTE]
-> W3C 的[XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) 規範允許透過 `XMLHttpRequest.responseXML` 屬性（{{Glossary("property/JavaScript", "property")}}）來解析 HTML。相關細節請參考 [HTML in XMLHttpRequest](/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 一文。
+> W3C 的[XMLHttpRequest](https://xhr.spec.whatwg.org/) 規範允許透過 `XMLHttpRequest.responseXML` 屬性（{{Glossary("property/JavaScript", "property")}}）來解析 HTML。相關細節請參考 [HTML in XMLHttpRequest](/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 一文。
 
 若透過 `XMLHttpRequest` 來取得一個遠端的 HTML 網頁內容，則 `responseText` 屬性（{{Glossary("property/JavaScript", "property")}}）會是「一串（soup）」包含所有 HTML 標籤的字串。這可能使得在分析和操作上造成困難，以下有三種主要分析此一大串 HTML 字串的方式：
 

@@ -28,7 +28,7 @@ Web 應用程式通過 {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP 回�
   - : 只有來自同一[_站點_](/zh-TW/docs/Glossary/Site)的請求可以讀取資源。
 
     > [!WARNING]
-    > 這比{{Glossary("origin", "來源")}}的安全性要低。檢查兩個來源是否為同一站點的[演算法](https://html.spec.whatwg.org/multipage/origin.html#same-site)在 HTML 標準中定義，涉及檢查*可註冊域*。
+    > 這比{{Glossary("origin", "來源")}}的安全性要低。檢查兩個來源是否為同一站點的[演算法](https://html.spec.whatwg.org/multipage/browsers.html#same-site)在 HTML 標準中定義，涉及檢查*可註冊域*。
 
 - `same-origin`
   - : 只有來自相同[_來源_](/zh-TW/docs/Glossary/Origin)（即方案 + 主機 + 通訊埠）的請求可以讀取資源。
