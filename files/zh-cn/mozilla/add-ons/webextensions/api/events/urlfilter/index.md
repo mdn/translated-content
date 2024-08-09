@@ -19,7 +19,7 @@ l10n:
 
 - `hostContains` {{optional_inline}}
 
-  - : `string`，匹配 URL 的主机名（不包括协议或端口 — 请参见`schemes`和`ports`）包含给定字符串的情况。
+  - : `string`，匹配 URL 的[主机名](/zh-CN/docs/Web/API/HTMLAnchorElement/hostname)（不包括协议或端口 — 请参见`schemes`和`ports`）包含给定字符串的情况。
 
     - 要测试主机名组件是否以 "foo" 开头，请使用 `".foo"`。这将匹配 `www.foobar.com` 和 `foo.com`，因为主机名的开头添加了一个隐式的点。
     - 要测试主机名组件是否以 "foo" 结尾，请使用 `"foo."`。
