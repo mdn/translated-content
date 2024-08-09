@@ -7,7 +7,8 @@ l10n:
 
 {{JSRef}} {{Deprecated_Header}}
 
-> **참고:** 마지막 일치 상태를 전역적으로 노출하는 모든 `RegExp` 정적 속성은 더 이상 사용되지 않습니다. 자세한 내용은 [더 이상 사용되지 않는 RegExp 기능](/ko/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)을 참고하세요.
+> [!NOTE]
+> 마지막 일치 상태를 전역적으로 노출하는 모든 `RegExp` 정적 속성은 더 이상 사용되지 않습니다. 자세한 내용은 [더 이상 사용되지 않는 RegExp 기능](/ko/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)을 참고하세요.
 
 **`RegExp.lastParen`** 정적 접근자 속성은 괄호로 묶인 마지막 부분 문자열 일치가 있다면 반환합니다. `RegExp["$+"]`는 이 속성의 별칭입니다.
 

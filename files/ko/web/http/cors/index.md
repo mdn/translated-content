@@ -167,7 +167,8 @@ fetchPromise.then((response) => {
 
 ![Diagram of a request that is preflighted](https://mdn.github.io/shared-assets/images/diagrams/http/cors/preflight-correct.svg)
 
-> **참고:** 아래 설명한 바와 같이 실제 `POST` 요청에는 `Access-Control-Request-*` 헤더가 포함되지 않습니다. 이 헤더들은 오직 `OPTIONS` 요청에만 필요합니다.
+> [!NOTE]
+> 아래 설명한 바와 같이 실제 `POST` 요청에는 `Access-Control-Request-*` 헤더가 포함되지 않습니다. 이 헤더들은 오직 `OPTIONS` 요청에만 필요합니다.
 
 클라이언트와 서버 간의 전체 통신을 살펴보겠습니다. 첫 번째 통신은 사전 요청과 그에 대한 응답입니다.
 
@@ -276,7 +277,8 @@ CORS 프로토콜은 원래 그러한 동작(리다이렉트)을 필요했지만
 
 ### 자격 증명을 포함한 요청
 
-> **참고:** 다른 도메인으로 자격 증명 요청을 할 때, 서드파티 쿠키 정책이 여전히 적용됩니다. 이 정책은 서버와 클라이언트에서 설명된 모든 설정과 관계없이 항상 적용됩니다.
+> [!NOTE]
+> 다른 도메인으로 자격 증명 요청을 할 때, 서드파티 쿠키 정책이 여전히 적용됩니다. 이 정책은 서버와 클라이언트에서 설명된 모든 설정과 관계없이 항상 적용됩니다.
 
 {{domxref("Window/fetch", "fetch()")}} 혹은 {{domxref("XMLHttpRequest")}} 와 CORS 을 통해 제공된 가장 흥미로운 기능은 [HTTP 쿠키](/ko/docs/Web/HTTP/Cookies)와 HTTP 인증 정보를 인식하는 "자격 증명이 포함된" 요청을 할 수 있다는 것입니다. 기본적으로 교차 출처 `fetch()` 또는 `XMLHttpRequest` 호출에서는 브라우저가 자격 증명을 전송하지 **않습니다.**
 
