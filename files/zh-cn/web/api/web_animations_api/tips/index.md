@@ -1,6 +1,7 @@
 ---
 title: CSS Animations tips and tricks
-slug: Web/CSS/CSS_animations/Tips
+slug: Web/API/Web_Animations_API/Tips
+original_slug: Web/CSS/CSS_animations/Tips
 ---
 
 {{CSSRef}}
