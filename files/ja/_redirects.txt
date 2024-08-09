@@ -3663,7 +3663,7 @@
 /ja/docs/Web/CSS/CSS_charsets	/ja/docs/Web/CSS/CSS_syntax
 /ja/docs/Web/CSS/CSS_container_queries	/ja/docs/Web/CSS/CSS_containment/Container_queries
 /ja/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/ja/docs/Glossary/Flexbox
-/ja/docs/Web/CSS/CSS_miscellaneous	/ja/docs/conflicting/Web/CSS_006063ed22f43dec00909b4e80f81e17
+/ja/docs/Web/CSS/CSS_miscellaneous	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/CSS_transforms_の利用	/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /ja/docs/Web/CSS/CSS_values_serialization	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/CSS_values_syntax	/ja/docs/Web/CSS
