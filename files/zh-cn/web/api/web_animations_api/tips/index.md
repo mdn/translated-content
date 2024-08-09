@@ -1,111 +1,132 @@
 ---
-title: CSS Animations tips and tricks
+title: 有关 Web 动画 API 的贴士和技巧
 slug: Web/API/Web_Animations_API/Tips
-original_slug: Web/CSS/CSS_animations/Tips
+l10n:
+  sourceCommit: 5d6aafadb9fc5e5c6f0f46975942a5642ba2f615
 ---
 
 {{CSSRef}}
 
-CSS 动画使得你能够实现一些难以置信的效果点缀你的页面或者应用程序。然而，有些你想实现的东西表现的并不浅显易懂，或者没法使你立马想到一种聪明的解决办法。这篇文章集合一个一些温馨贴士和技巧，从而帮助你更轻松地工作，这其中包括了如何使一个已经停止的动画重新开始播放。
+CSS 动画使得你能够实现一些难以置信的效果点缀你的文档或应用程序。然而，有些你想实现的东西表现的并不浅显易懂，或者没法使你立马想到一种聪明的解决办法。这篇文章收集了一些我们发现的贴士和技巧，希望可以帮助你更轻松地工作，这其中包括了如何使一个已经停止的动画重新开始播放。
 
 ## 重新播放动画
 
-[CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)的规范并没有提供使得动画重新激活的方法。在元素上调用`resetAnimation()` 并不生效，你也不能直接通过设置元素的 {{cssxref("animation-play-state")}}使得动画重新“跑起来”。事实上，你必须使用一些技巧使得已经停止的动画重新播放。
+[CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)的规范并没有提供使得动画重新激活的方法。在动画结束后，你不能直接通过将元素的 {{cssxref("animation-play-state")}} 设置为 `"running"` 来使动画重新“跑起来”。相反，你必须使用 JavaScript 来使已经停止的动画重新播放。
 
-这有一种我们认为足够稳定和可靠的方法推荐给你。
+这里有一种足够稳定和可靠的方法。
 
 ### HTML
 
-首先，让我们定义一个我们想要添加动画的元素{{HTMLElement("div")}} 以及一个“播放”或“重播”动画的按钮。
+首先，让我们定义一个我们想要添加动画的 {{HTMLElement("div")}} 以及一个“播放”或“重播”动画的按钮。
 
 ```html
 <div class="box"></div>
-
-<div class="runButton">Click me to run the animation</div>
+<button class="runButton">播放动画</button>
 ```
 
 ### CSS
 
-现在我们将使用 CSS 定义动画本身。为了简洁，有些并不重要的 CSS（如“播放”按钮的样式）并没有显示在这里。
-
-```css hidden
-.runButton {
-  cursor: pointer;
-  width: 300px;
-  border: 1px solid black;
-  font-size: 16px;
-  text-align: center;
-  margin-top: 12px;
-  padding-top: 2px;
-  padding-bottom: 4px;
-  color: white;
-  background-color: darkgreen;
-  font:
-    14px "Open Sans",
-    "Arial",
-    sans-serif;
-}
-```
+现在，我们使用 CSS 来定义盒子的样式。
 
 ```css
-@keyframes colorchange {
-  0% {
-    background: yellow;
-  }
-  100% {
-    background: blue;
-  }
-}
-
 .box {
   width: 100px;
   height: 100px;
   border: 1px solid black;
-}
-
-.changing {
-  animation: colorchange 2s;
+  margin-bottom: 1rem;
 }
 ```
-
-这里有两个类。`"box"` 类基本表述了 box 的外观，它不包含任何动画信息。动画的细节包含在`"changing"` 类，它描述了名为 `"colorchange"` 的 {{cssxref("@keyframes")}} 应该这持续两秒的时间段播放动画。
-
-注意，正因为如此，这个 box 在这里不触发任何动画效果，因此他不会动起来。
 
 ### JavaScript
 
-接下来我们将看看 JavaScript 的部分如何工作。这里关键的部分在 `play()` 方法中，他在用户点击“播放”按钮时被触发。
+接下来我们将看看 JavaScript 的部分如何工作。当用户点击播放按钮时，`playAnimation()` 方法会被调用。但是我们不使用 {{cssxref("@keyframes")}} at 规则，而是[使用 JavaScript 来定义关键帧](/zh-CN/docs/Web/API/Web_Animations_API/Keyframe_Formats)。
 
 ```js
-function play() {
-  document.querySelector(".box").className = "box";
-  window.requestAnimationFrame(function (time) {
-    window.requestAnimationFrame(function (time) {
-      document.querySelector(".box").className = "box changing";
-    });
-  });
+const box = document.querySelector(".box");
+const button = document.querySelector(".runButton");
+
+/*
+  等价于以下 CSS @keyframes
+
+  @keyframes colorChange {
+    0% {
+      background-color: grey;
+    }
+    100% {
+      background-color: lime;
+    }
+  }
+*/
+const colorChangeFrames = { backgroundColor: ["grey", "lime"] };
+
+function playAnimation() {
+  box.animate(colorChangeFrames, 4000);
 }
 ```
 
-这看起来有点奇怪，不是么？这是因为重新播放动画的唯一方法是删除动画效果，让文档重新计算样式以使得它知道你已经设置了它，然后再将动画效果加回该元素。要实现这个，我们必须更具创造性。
+`playAnimation` 方法会调用盒子的 {{domxref("Element.animate()")}} 方法来播放动画。`animate()` 方法接受一个关键帧对象或关键帧对象数组以及动画和动画选项作为参数。在这个示例中，我们为这个方法传递了 `colorChangeFrames` 关键帧对象和动画持续时间。
 
-这里是`play()` 方法被调用时发生的事情：
-
-1. box 的 CSS 类列表被重置为 `"box"`。这么做的效果是移除了在这个 box 上的其他类属性，包括处理动画的 `"changing"` 类。换句话说，我们从 box 元素上删除了动画效果。然而，改变类属性列表在样式被重新计算完成或者发生刷新事件之前并不会生效。
-2. 为了确保样式被重新计算我们使用 {{domxref("window.requestAnimationFrame()")}}，同时设置了一个回调。我们的回调在下一次重绘页面之前被调用。问题是由于它在重绘之前被调用，而此时样式还没有被真正重新计算。
-3. 我们的回调聪明地调用了 `requestAnimationFrame()` 方法！这一次，回调在下一次重绘之前被调用，这发生在样式被重新计算之后。回调在 box 元素上添加 `"changing"` 类，使得重绘后重新触发动画。
-
-当然，我们同样需要在“播放”按钮上添加事件处理方法使其生效：
+当然，我们同样需要在播放按钮上添加事件处理器使其生效：
 
 ```js
-document.querySelector(".runButton").addEventListener("click", play, false);
+button.addEventListener("click", playAnimation);
 ```
 
 ### 结果
 
-{{ EmbedLiveSample('重新播放动画', 320, 160) }}
+{{ EmbedLiveSample("重新播放动画", "100%", "160") }}
+
+## 等待动画的完成
+
+在上面的示例中，如果在动画完成之前点击了播放按钮，当前的动画将会突然停止，并且动画将从 `0%` 或 `from` 开始关键帧重新开始。如果你想要在开始新动画之前等待当前动画迭代完成，我们可以在动画播放时禁用 `run` 按钮，然后根据 [`finish`](/zh-CN/docs/Web/API/Animation/finish) 事件重新启用它。或者，如果我们想要使得动画可以多次迭代，我们可以检查元素上是否正在播放动画，并在动画播放时为每次按钮点击自增 `animation-iteration` 的计数。
+
+在这个示例中，我们更新了 `playAnimation()` 方法，使其在点击时禁用按钮，并监听 `finish` 事件以重新启用按钮。
+
+```html hidden
+<div class="box"></div>
+<button class="runButton">播放动画</button>
+```
+
+```css hidden
+.box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  margin-bottom: 1rem;
+}
+```
+
+```js hidden
+const box = document.querySelector(".box");
+const button = document.querySelector(".runButton");
+const colorChangeFrames = { backgroundColor: ["grey", "lime"] };
+
+button.addEventListener("click", playAnimation);
+```
+
+```js
+function playAnimation() {
+  button.setAttribute("disabled", true);
+  const anim = box.animate(colorChangeFrames, 4000);
+
+  anim.addEventListener("finish", (event) => {
+    button.removeAttribute("disabled");
+  });
+}
+```
+
+{{ EmbedLiveSample("等待动画的完成", "100%", "160") }}
+
+这里的代码会禁用按钮并开始动画。当动画完成时，按钮会重新启用。
+
+## 动画的层叠上下文
+
+在播放 CSS 动画时，动画的属性会表现得好像它们被包含在 [`will-change`](/zh-CN/docs/Web/CSS/will-change) 属性声明中一样。任何会创建层叠上下文的属性，如果被标记为 `will-change`，则会使元素接收一个新的层叠上下文。
+
+对于 [`animation-fill-mode: forwards`](/zh-CN/docs/Web/CSS/animation-fill-mode#forwards)（以及 `both`），动画属性在动画结束后仍保持其最终关键帧的状态。所以属性会保持 `will-change` 状态，因此如果在动画期间创建了新的层叠上下文，并且在动画结束后仍然存在，则目标元素在动画结束后保留层叠上下文。
 
 ## 参见
 
-- [使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- {{domxref("Window.requestAnimationFrame()")}}
+- [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)
+- [动画接口](/zh-CN/docs/Web/API/Animation/Animation)
+- [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)模块
