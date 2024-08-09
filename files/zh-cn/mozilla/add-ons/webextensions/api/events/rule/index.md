@@ -14,7 +14,7 @@ l10n:
 本类型的取值是对象。它包含以下属性：
 
 - `id` {{optional_inline}}
-  - : `string`，可选的规则 ID。如果未指定，则会自动生成一个。
+  - : `string`，可选的规则 ID 用于引用这一规则。
 - `tags` {{optional_inline}}
   - : `string` 的 `array`，标签可用于注释规则和对规则集执行操作。
 - `conditions`
@@ -22,7 +22,7 @@ l10n:
 - `actions`
   - : `any` 的 `array`，满足条件之一时触发的操作列表。
 - `priority` {{optional_inline}}
-  - : `integer`，可选的这条规则的优先级，默认值 100。
+  - : `integer`，可选的规则优先级，默认值 100。
 
 ## 浏览器兼容性
 
@@ -31,7 +31,7 @@ l10n:
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.events](https://developer.chrome.com/docs/extensions/reference/events/#type-Rule) API。本文衍生自 Chromium 代码中的 [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json)。
+> 该 API 基于 Chromium 的 [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/events/#type-Rule) API。本文衍生自 Chromium 代码中的 [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
