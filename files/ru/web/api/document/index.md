@@ -24,7 +24,8 @@ slug: Web/API/Document
 
 ## Свойства
 
-> **Примечание:** Интерфейс `Document` наследует также интерфейсы {{domxref("Node")}} и {{domxref("EventTarget")}}.
+> [!NOTE]
+> Интерфейс `Document` наследует также интерфейсы {{domxref("Node")}} и {{domxref("EventTarget")}}.
 
 - {{domxref("Document.all")}} {{Deprecated_inline}} {{non-standard_inline}}
   - : Обеспечивает доступ ко всем элементам с идентификаторами (id). Это нестандартный интерфейс, вместо него рекомендуется использовать метод {{domxref("Document.getElementById()")}}.
@@ -151,7 +152,8 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
 
 ## Methods
 
-> **Примечание:** The `Document` interface also inherits from the {{domxref("Node")}} and {{domxref("EventTarget")}} interfaces.
+> [!NOTE]
+> The `Document` interface also inherits from the {{domxref("Node")}} and {{domxref("EventTarget")}} interfaces.
 
 - {{domxref("Document.adoptNode","Document.adoptNode(Node node)")}}
   - : Adopt node from an external document.

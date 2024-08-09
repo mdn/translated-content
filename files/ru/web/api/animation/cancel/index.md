@@ -7,7 +7,8 @@ slug: Web/API/Animation/cancel
 
 Метод **`cancel()`** API Web Animation интерфейса {{domxref("Animation")}} очищает все {{domxref("KeyframeEffect")}} вызванной этой анимацией и прекращает его воспроизведение.
 
-> **Примечание:** Когда анимация отменена, её {{domxref("Animation.startTime", "startTime")}} и {{domxref("Animation.currentTime", "currentTime")}} устанавливаются в `null`.
+> [!NOTE]
+> Когда анимация отменена, её {{domxref("Animation.startTime", "startTime")}} и {{domxref("Animation.currentTime", "currentTime")}} устанавливаются в `null`.
 
 ## Syntax
 

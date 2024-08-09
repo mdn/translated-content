@@ -23,7 +23,7 @@ slug: Learn
   - : Освоив основы ванильного HTML, CSS и JavaScript, стоит приступить к изучению [инструментов веб-разработки на стороне клиента](/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools), а затем углубиться в [JavaScript-фреймворки для фронтенда](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks) и [программирование веб-сайтов на стороне сервера](/ru/docs/Learn/Server-side).
 
 > [!NOTE]
-> в нашем [глоссарии](/ru/docs/Glossary) вы можете найти термины и их определения. Кроме того, если у вас есть конкретный вопрос по веб-разработке, возможно, ответ найдётся в разделе «[Распространённые вопросы](/ru/docs/Learn/Common_questions)».
+> В нашем [глоссарии](/ru/docs/Glossary) вы можете найти термины и их определения. Кроме того, если у вас есть конкретный вопрос по веб-разработке, возможно, ответ найдётся в разделе «[Распространённые вопросы](/ru/docs/Learn/Common_questions)».
 
 > [!CALLOUT]
 >

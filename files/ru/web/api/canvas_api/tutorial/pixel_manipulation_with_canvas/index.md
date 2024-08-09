@@ -60,7 +60,8 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 Этот метод возвращает объект `ImageData` , представляющий пиксельные данные для области холста, углы которого представлены точками (`left` , `top`), (`left+width` , `top`), (`left` , `top+height`) и (`left+width` , `top+height`). Координаты задаются в единицах пространства координат холста.
 
-> **Примечание:** Любые пиксели за пределами холста возвращаются как прозрачный чёрный цвет в результирующий объект `ImageData` .
+> [!NOTE]
+> Любые пиксели за пределами холста возвращаются как прозрачный чёрный цвет в результирующий объект `ImageData` .
 
 Этот метод также показан в статье [Manipulating video using canvas](/ru/docs/Web/API/Canvas_API/Manipulating_video_using_canvas).
 

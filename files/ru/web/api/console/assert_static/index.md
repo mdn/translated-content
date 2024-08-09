@@ -9,7 +9,8 @@ slug: Web/API/console/assert_static
 
 {{AvailableInWorkers}}
 
-> **Примечание:** Реализация м*етода `console.assert()` в браузере и Node.js отличается.*
+> [!NOTE]
+> Реализация м*етода `console.assert()` в браузере и Node.js отличается.*
 >
 > В браузере, вызов console.assert() с ложным утверждением вызовет печать ошибки в консоль без прерывания текущего выполнения скрипта, а в Node.js в аналогичном случае будет выброшена ошибка - AssertionError.
 
