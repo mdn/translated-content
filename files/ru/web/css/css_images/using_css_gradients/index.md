@@ -872,7 +872,8 @@ div {
         rgba(0, 0, 0, 0.5) 15px,
         rgba(255, 255, 255, 0.5) 15px,
         rgba(255, 255, 255, 0.5) 30px
-      ) top left no-repeat,
+      )
+      top left no-repeat,
     repeating-radial-gradient(
         ellipse at 20% 50%,
         rgba(0, 0, 0, 0.5),
