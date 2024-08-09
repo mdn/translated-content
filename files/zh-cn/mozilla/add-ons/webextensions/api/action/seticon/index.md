@@ -2,7 +2,7 @@
 title: action.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/action/setIcon
 l10n:
-  sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
+  sourceCommit: ad9a263686a44b9149ff50381994fed63562be55
 ---
 
 {{AddonSidebar}}
@@ -49,7 +49,7 @@ let settingIcon = browser.action.setIcon(
         });
         ```
 
-        浏览器会根据屏幕的像素密度选择要使用的图像。有关更多信息，请参见[选择图标尺寸](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#选择图标尺寸)。
+        浏览器会根据屏幕的像素密度选择要使用的图像。有关更多信息，请参见[选择图标尺寸](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#选择图标大小)。
 
     - `path` {{optional_inline}}
 
@@ -66,7 +66,7 @@ let settingIcon = browser.action.setIcon(
         });
         ```
 
-        浏览器会根据屏幕的像素密度选择要使用的图像。有关更多信息，请参见[选择图标尺寸](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#选择图标尺寸)。
+        浏览器会根据屏幕的像素密度选择要使用的图像。有关更多信息，请参见[选择图标尺寸](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#选择图标大小)。
 
     - `tabId` {{optional_inline}}
       - : `integer`，指定要设置图标的标签页。当用户导航到新页面时，图标会被重置。
@@ -86,7 +86,7 @@ let settingIcon = browser.action.setIcon(
 
 ### 返回值
 
-当图标被设置时，返回没有任何参数解决的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+当图标被设置时，返回不兑现任何参数的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
 ## 示例
 
