@@ -764,7 +764,8 @@ div {
       transparent 116px,
       rgba(255, 206, 0, 0.25) 116px,
       rgba(255, 206, 0, 0.25) 166px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       0deg,
       transparent,
       transparent 50px,
