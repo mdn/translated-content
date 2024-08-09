@@ -726,8 +726,18 @@ div {
       rgba(75, 0, 130, 0.5) 180px,
       rgba(238, 130, 238, 0.5) 210px,
       rgba(255, 0, 0, 0.5) 230px
-    ), repeating-linear-gradient(23deg, red 50px, orange 100px, yellow 150px, green
-        200px, blue 250px, indigo 300px, violet 350px, red 370px);
+    ),
+    repeating-linear-gradient(
+      23deg,
+      red 50px,
+      orange 100px,
+      yellow 150px,
+      green 200px,
+      blue 250px,
+      indigo 300px,
+      violet 350px,
+      red 370px
+    );
 }
 ```
 
