@@ -202,7 +202,7 @@ WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
 
 > **참고:** `i32.const`는 단지 32 비트 정수를 정의하고 그것을 스택에 푸시합니다. 사용할 수있는 다른 유형의 `i32`를 바꿀 수 있으며 원하는 값으로 const 값을 변경할 수 있습니다 (여기서는 값을 `42`로 설정했습니다).
 
-In this example you'll notice an `(export "getAnswerPlus1")` section, declared just after the `func` statement in the second function — this is a shorthand way of declaring that we want to export this function, and defining the name we want to export it as.
+이 예에서는 두 번째 함수의 'func' 문 바로 뒤에 선언된 '(export "getAnswerPlus1") 섹션을 볼 수 있습니다. 이는 이 함수를 내보낼 것임을 선언하고 내보낼 이름을 정의하는 간단한 방법입니다.
 
 이는 함수 밖에서, 예전과 같은 방식으로 모듈의 다른 곳에서 별도의 function 문을 포함하는 것과 기능적으로 동일합니다. 예 :
 
