@@ -5078,10 +5078,6 @@
     "modified": "2019-04-29T00:53:50.949Z",
     "contributors": ["qwqw312x"]
   },
-  "Web/CSS/CSS_miscellaneous": {
-    "modified": "2019-03-23T22:32:29.213Z",
-    "contributors": ["Netaras"]
-  },
   "Web/CSS/CSS_multicol_layout": {
     "modified": "2019-04-11T11:34:08.500Z",
     "contributors": ["alattalatta", "Netaras"]
@@ -10761,6 +10757,10 @@
   "conflicting/Web/API/XSLTProcessor_c41901fc3cf5c3be68649d680742b9b4": {
     "modified": "2019-03-23T23:42:13.310Z",
     "contributors": ["chrisdavidmills", "teoli", "Sebuls"]
+  },
+  "conflicting/Web/CSS": {
+    "modified": "2019-03-23T22:32:29.213Z",
+    "contributors": ["Netaras"]
   },
   "conflicting/Web/CSS/CSS_paged_media": {
     "modified": "2019-03-23T22:33:25.305Z",
