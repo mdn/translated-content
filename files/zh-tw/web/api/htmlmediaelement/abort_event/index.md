@@ -10,7 +10,7 @@ slug: Web/API/HTMLMediaElement/abort_event
 ## 一般資訊
 
 - 規範
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-abort)
+  - : [DOM L3](https://www.w3.org/TR/uievents/#event-type-abort)
 - 介面
   - : 若由使用者介面產生，為 UIEvent，否則為 Event。
 - 是否向上(冒泡)

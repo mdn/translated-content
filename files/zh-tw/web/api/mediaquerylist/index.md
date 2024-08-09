@@ -60,7 +60,7 @@ void removeListener(
 
 ## 規範標準
 
-- [The CSSOM View Module: The MediaQueryList Interface](http://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface)
+- [The CSSOM View Module: The MediaQueryList Interface](https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface)
 
 ## 延伸閱讀
 

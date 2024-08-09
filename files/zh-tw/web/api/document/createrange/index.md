@@ -30,4 +30,4 @@ range.setEnd(endNode, endOffset);
 
 ## 規範
 
-- [DOM Level 2 Range: DocumentRange.createRange](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-DocumentRange-method-createRange)
+- [DOM Level 2 Range: DocumentRange.createRange](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-DocumentRange-method-createRange)

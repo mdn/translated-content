@@ -211,7 +211,7 @@ As can be seen in the [DataTransferItem interface's Browser Compatibility table]
 ## Examples and demos
 
 - [Copying and moving elements with the `DataTransfer` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html)
-- [Copying and moving elements with the `DataTransferListItem` interface](http://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
+- [Copying and moving elements with the `DataTransferListItem` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
 - Dragging and dropping files; Firefox only: <https://jsfiddle.net/9C2EF/>
 - Dragging and dropping files; All browsers: [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
 - A parking project using the Drag and Drop API: <https://park.glitch.me/> (You can edit [here](https://glitch.com/edit/#!/park))
@@ -226,4 +226,4 @@ As can be seen in the [DataTransferItem interface's Browser Compatibility table]
 - [Dragging and Dropping Multiple Items](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [Recommended Drag Types](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
-- [Drag and Drop interoperability data from CanIUse](http://caniuse.com/#search=draganddrop)
+- [Drag and Drop interoperability data from CanIUse](https://caniuse.com/#search=draganddrop)

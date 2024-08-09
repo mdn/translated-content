@@ -173,4 +173,4 @@ These are some of the methods that browsers implemented before the standard was 
 - {{ cssxref(":-moz-full-screen") }}
 - {{ cssxref(":-moz-full-screen-ancestor") }}
 - [`allowfullscreen`](/zh-TW/docs/Web/HTML/Element/iframe#allowfullscreen)
-- [Blog post: Firefox's HTML full-screen API enabled in Nightly builds](http://blog.pearce.org.nz/2011/11/firefoxs-html-full-screen-api-enabled.html)
+- [Blog post: Firefox's HTML full-screen API enabled in Nightly builds](https://blog.pearce.org.nz/2011/11/firefoxs-html-full-screen-api-enabled.html)

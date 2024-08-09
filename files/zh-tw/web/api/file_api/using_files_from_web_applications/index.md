@@ -27,7 +27,7 @@ File API 可以從 {{ domxref("File") }} 物件中讀取 {{ domxref("FileList") 
 var selectedFile = document.getElementById("input").files[0];
 ```
 
-使用 [jQuery](http://jquery.com/) 獲取選擇的檔案：
+使用 [jQuery](https://jquery.com/) 獲取選擇的檔案：
 
 ```js
 var selectedFile = $("#input").get(0).files[0];
@@ -62,7 +62,7 @@ var selectedFile = $("#input")[0].files[0];
 
 ### 使用 EventListener 動態地監聽
 
-如果使用了其他的函數庫（[jQuery](http://www.jquery.com/)），你會需要使用 {{domxref("EventTarget.addEventListener()") }} 去監聽事件，例如：
+如果使用了其他的函數庫（[jQuery](https://jquery.com/)），你會需要使用 {{domxref("EventTarget.addEventListener()") }} 去監聽事件，例如：
 
 ```js
 var inputElement = document.getElementById("inputField");

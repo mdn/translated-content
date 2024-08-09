@@ -56,5 +56,5 @@ Fetch 提供了 {{domxref("Request")}} 與 {{domxref("Response")}} 物件，還�
 - [ServiceWorker API](/zh-TW/docs/Web/API/ServiceWorker_API)
 - [HTTP access control (CORS)](/zh-TW/docs/Web/HTTP/Access_control_CORS)
 - [HTTP](/zh-TW/docs/Web/HTTP)
-- [Fetch polyfill](https://github.com/github/fetch)
+- [Fetch polyfill](https://github.com/JakeChampion/fetch)
 - [Fetch 基本概念](/zh-TW/docs/Web/API/Fetch_API/Basic_concepts)
