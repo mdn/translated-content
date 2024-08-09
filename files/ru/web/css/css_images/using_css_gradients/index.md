@@ -822,7 +822,8 @@ div {
       rgba(255, 127, 0, 0.25) 63px 69px,
       transparent 69px 116px,
       rgba(255, 206, 0, 0.25) 116px 166px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       -45deg,
       transparent 0 5px,
       rgba(143, 77, 63, 0.25) 5px 10px
