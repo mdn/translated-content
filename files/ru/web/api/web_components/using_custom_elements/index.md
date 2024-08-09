@@ -7,7 +7,8 @@ slug: Web/API/Web_components/Using_custom_elements
 
 Одна из ключевых особенностей стандарта Веб-компонент это возможность создавать пользовательские элементы на HTML-странице, инкапсулирующие функциональность, вместо того чтобы создавать длинную, вложенную группу элементов, которые бы вместе реализовывали нужную пользовательскую фичу. Эта статья является вводной по использованию пользовательских HTML-компонент.
 
-> **Примечание:** Пользовательские элементы поддерживаются по умолчанию в Firefox, Chrome и Opera. Safari пока поддерживает только автономные пользовательские компоненты, Edge также работает над реализацией.
+> [!NOTE]
+> Пользовательские элементы поддерживаются по умолчанию в Firefox, Chrome и Opera. Safari пока поддерживает только автономные пользовательские компоненты, Edge также работает над реализацией.
 
 ## Высокоуровневый обзор
 
@@ -137,7 +138,8 @@ customElements.define("popup-info", PopUpInfo);
   на обороте вашей карты."></popup-info>
 ```
 
-> **Примечание:** вы можете прочитать [полный исходный код на JavaScript](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) здесь.
+> [!NOTE]
+> Вы можете прочитать [полный исходный код на JavaScript](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) здесь.
 
 ### Модифицированные встроенные элементы
 
@@ -176,7 +178,8 @@ customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 
 Вы задаёте элемент `<ul>` как обычно, но указываете имя модифицированного элемента в атрибуте `is`.
 
-> **Примечание:** Полный [исходный код на JavaScript](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js) доступен здесь.
+> [!NOTE]
+> Полный [исходный код на JavaScript](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js) доступен здесь.
 
 ## Использование lifecycle callbacks
 
@@ -265,4 +268,5 @@ static get observedAttributes() {return ['w', 'l']; }
 
 В нашем случае он расположен в начале конструктора.
 
-> **Примечание:** Смотрите [полный исходный код на JavaScript](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js) здесь.
+> [!NOTE]
+> Смотрите [полный исходный код на JavaScript](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js) здесь.

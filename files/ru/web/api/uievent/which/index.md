@@ -16,7 +16,8 @@ l10n:
 Для {{domxref("KeyboardEvent")}} `event.which` содержит числовой код нажатой клавиши.
 Смотрите {{domxref("KeyboardEvent.charCode")}} и {{domxref("KeyboardEvent.keyCode")}} для дополнительной информации.
 
-> **Примечание:** Для новых приложений используйте {{domxref("KeyboardEvent.key")}} или {{domxref("KeyboardEvent.code")}}.
+> [!NOTE]
+> Для новых приложений используйте {{domxref("KeyboardEvent.key")}} или {{domxref("KeyboardEvent.code")}}.
 
 ### Значение для `MouseEvent` {{Non-standard_Inline}}
 
@@ -29,7 +30,8 @@ l10n:
 
 Для мыши, настроенной на использование левой рукой, действия кнопок меняются на противоположные. В этом случае значения считываются справа налево.
 
-> **Примечание:** Для новых приложений используйте {{domxref("MouseEvent.button")}}.
+> [!NOTE]
+> Для новых приложений используйте {{domxref("MouseEvent.button")}}.
 
 ## Примеры
 

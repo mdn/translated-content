@@ -84,7 +84,8 @@ function clone(objectToBeCloned) {
 }
 ```
 
-> **Примечание:** Этот алгоритм реализован только для [`RegExp`](/en/JavaScript/Reference/Global_Objects/RegExp), [`Array`](/en/JavaScript/Reference/Global_Objects/Array), и [`Date`](/en/JavaScript/Reference/Global_Objects/Date) специальных объектов. Вы можете реализовать другие условия, удовлетворяющие вашим потребностям.
+> [!NOTE]
+> Этот алгоритм реализован только для [`RegExp`](/en/JavaScript/Reference/Global_Objects/RegExp), [`Array`](/en/JavaScript/Reference/Global_Objects/Array), и [`Date`](/en/JavaScript/Reference/Global_Objects/Date) специальных объектов. Вы можете реализовать другие условия, удовлетворяющие вашим потребностям.
 
 ## Ещё по теме
 

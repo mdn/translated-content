@@ -9,7 +9,8 @@ slug: Web/CSS/@media
 
 [CSS](/ru/docs/Web/CSS) [@-правило](/ru/docs/Web/CSS/At-rule) **`@media`** может быть использовано для применения части стилей при соблюдении условия одного или нескольких [медиавыражений](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 
-> **Примечание:** В JavaScript правила, созданные с помощью `@media` могут быть получены через интерфейс объектной модели CSS {{domxref("CSSMediaRule")}}.
+> [!NOTE]
+> В JavaScript правила, созданные с помощью `@media` могут быть получены через интерфейс объектной модели CSS {{domxref("CSSMediaRule")}}.
 
 ## Синтаксис
 
@@ -52,7 +53,8 @@ A `<media-query>` is composed of a optional media type and/or a number of media 
 - speech
   - : Предназначен для синтезаторов речи.
 
-> **Примечание:** CSS2.1 и Media Queries 3 определили несколько дополнительных значений (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`), но они устарели в [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) и не рекомендуется к использованию.
+> [!NOTE]
+> CSS2.1 и Media Queries 3 определили несколько дополнительных значений (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`), но они устарели в [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) и не рекомендуется к использованию.
 
 ## Media Features
 

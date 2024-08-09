@@ -31,7 +31,8 @@ function populateStorage() {
 }
 ```
 
-> **Примечание:** чтобы посмотреть выполнение кода вживую, посетите страницу [Web Storage Demo](https://github.com/mdn/web-storage-demo).
+> [!NOTE]
+> Чтобы посмотреть выполнение кода вживую, посетите страницу [Web Storage Demo](https://github.com/mdn/web-storage-demo).
 
 ## Спецификации
 

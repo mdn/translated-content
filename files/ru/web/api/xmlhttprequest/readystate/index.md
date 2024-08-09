@@ -26,7 +26,8 @@ slug: Web/API/XMLHttpRequest/readyState
 - DONE
   - : Операция доставки данных завершена. Это может означать как то, что передача данных полностью завершена успешно, так и то, что произошла ошибка.
 
-> **Примечание:** Названия состояний отличаются в версиях Internet Explorer ранее 11. Вместо `UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING` и `DONE`, используются названия `READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) и `READYSTATE_COMPLETE` (4).
+> [!NOTE]
+> Названия состояний отличаются в версиях Internet Explorer ранее 11. Вместо `UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING` и `DONE`, используются названия `READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) и `READYSTATE_COMPLETE` (4).
 
 ## Пример
 
