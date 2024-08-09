@@ -1,6 +1,7 @@
 ---
 title: CSS 雑題
-slug: Web/CSS/CSS_miscellaneous
+slug: conflicting/Web/CSS_006063ed22f43dec00909b4e80f81e17
+original_slug: Web/CSS/CSS_miscellaneous
 ---
 
 {{CSSRef}}

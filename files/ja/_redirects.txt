@@ -3064,6 +3064,7 @@
 /ja/docs/Web/API/Response/error	/ja/docs/Web/API/Response/error_static
 /ja/docs/Web/API/Response/redirect	/ja/docs/Web/API/Response/redirect_static
 /ja/docs/Web/API/SVGMatrix	/ja/docs/Web/API/DOMMatrix
+/ja/docs/Web/API/SVGRect/The__X__property	/ja/docs/Web/API/SVGRect/x
 /ja/docs/Web/API/Screen/availLeft	/ja/docs/Web/API/ScreenDetailed/availLeft
 /ja/docs/Web/API/Screen/availTop	/ja/docs/Web/API/ScreenDetailed/availTop
 /ja/docs/Web/API/Screen/left	/ja/docs/Web/API/ScreenDetailed/left
@@ -3658,9 +3659,11 @@
 /ja/docs/Web/CSS/CSS_User_Interface	/ja/docs/Web/CSS/CSS_basic_user_interface
 /ja/docs/Web/CSS/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/conflicting/Web/CSS/cursor
 /ja/docs/Web/CSS/CSS_Variables	/ja/docs/Web/CSS/CSS_cascading_variables
+/ja/docs/Web/CSS/CSS_animations/Tips	/ja/docs/Web/API/Web_Animations_API/Tips
 /ja/docs/Web/CSS/CSS_charsets	/ja/docs/Web/CSS/CSS_syntax
 /ja/docs/Web/CSS/CSS_container_queries	/ja/docs/Web/CSS/CSS_containment/Container_queries
 /ja/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/ja/docs/Glossary/Flexbox
+/ja/docs/Web/CSS/CSS_miscellaneous	/ja/docs/conflicting/Web/CSS_006063ed22f43dec00909b4e80f81e17
 /ja/docs/Web/CSS/CSS_transforms_の利用	/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /ja/docs/Web/CSS/CSS_values_serialization	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/CSS_values_syntax	/ja/docs/Web/CSS
