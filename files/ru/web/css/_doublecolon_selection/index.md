@@ -26,7 +26,8 @@ slug: Web/CSS/::selection
 - {{cssxref("text-emphasis-color")}}
 - {{cssxref("text-shadow")}}
 
-> **Предупреждение:** Заметим, что, в частности, свойство {{cssxref("background-image")}} игнорируется.
+> [!WARNING]
+> Заметим, что, в частности, свойство {{cssxref("background-image")}} игнорируется.
 
 ## Синтаксис
 

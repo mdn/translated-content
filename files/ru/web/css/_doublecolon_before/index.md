@@ -14,13 +14,15 @@ a::before {
 }
 ```
 
-> **Примечание:** Псведоэлементы, созданные с помощью `::before` и `::after` [содержатся в блоке форматирования элемента](https://www.w3.org/TR/CSS2/generate.html#before-after-content), и поэтому не применяются к _[замещаемым элементам](/ru/docs/Web/CSS/Replaced_element)_, таким как {{htmlelement("img")}} или {{htmlelement("br")}}.
+> [!NOTE]
+> Псведоэлементы, созданные с помощью `::before` и `::after` [содержатся в блоке форматирования элемента](https://www.w3.org/TR/CSS2/generate.html#before-after-content), и поэтому не применяются к _[замещаемым элементам](/ru/docs/Web/CSS/Replaced_element)_, таким как {{htmlelement("img")}} или {{htmlelement("br")}}.
 
 ## Синтаксис
 
 {{csssyntax}}
 
-> **Примечание:** В CSS3 появилась запись `::before` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Pseudo-classes) и [псевдоэлементов](/ru/docs/Web/CSS/Pseudo-elements). Браузеры также поддерживают запись `:before`, введённую в CSS2.
+> [!NOTE]
+> В CSS3 появилась запись `::before` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Pseudo-classes) и [псевдоэлементов](/ru/docs/Web/CSS/Pseudo-elements). Браузеры также поддерживают запись `:before`, введённую в CSS2.
 
 ## Примеры
 
