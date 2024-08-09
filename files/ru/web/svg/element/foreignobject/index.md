@@ -68,7 +68,8 @@ svg {
     Это не влияет на внешние элементы SVG.
     _Value type_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `0`; _Animatable_: **yes**
 
-> **Примечание:** Starting with SVG2 `x`, `y`, `width`, and `height` are Geometry Properties, meaning those attributes can also be used as CSS properties for that element.
+> [!NOTE]
+> Starting with SVG2 `x`, `y`, `width`, and `height` are Geometry Properties, meaning those attributes can also be used as CSS properties for that element.
 
 ## Примечания по использованию
 

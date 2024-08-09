@@ -9,7 +9,8 @@ slug: Web/SVG/Attribute/xml:space
 
 SVG supports the standard XML attribute `xml:space` to specify the handling of white space characters within a given {{ SVGElement("text") }} element's character data. Note that any child element of a {{ SVGElement("text") }} element may also have an `xml:space` attribute which will apply to that child element's text content. Note that this attribute influences the way a browser should parse the xml content and therefore will change the way the DOM is built. It means that any change made to the value of this attribute through the DOM API may have no effect.
 
-> **Примечание:** Instead of using the `xml:space` attribute you should use the {{cssxref("white-space")}} CSS property.
+> [!NOTE]
+> Instead of using the `xml:space` attribute you should use the {{cssxref("white-space")}} CSS property.
 
 ## Usage context
 
