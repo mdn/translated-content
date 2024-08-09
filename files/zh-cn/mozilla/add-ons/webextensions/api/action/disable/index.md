@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-禁用浏览器操作按钮——意味着当该标签页处于活动状态时，无法单击该按钮。
+禁用某一标签页的浏览器操作——意味着当该标签页处于活动状态时，无法单击该按钮。
 
 > [!NOTE]
 > 该 API 在 Manifest V3 或更高版本中可用。
@@ -16,7 +16,7 @@ l10n:
 
 ```js-nolint
 browser.action.disable(
-  tabId // 可选的整型
+  tabId // 可选的整型值
 )
 ```
 
@@ -54,7 +54,7 @@ browser.action.onClicked.addListener((tab) => {
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#type-ColorArray) API。本文衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-disable) API。本文衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
