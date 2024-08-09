@@ -811,12 +811,12 @@ div {
       -45deg,
       transparent 0 5px,
       rgba(143, 77, 63, 0.25) 5px 10px
-    ), repeating-linear-gradient(45deg, transparent 0 5px, rgba(
-          143,
-          77,
-          63,
-          0.25
-        ) 5px 10px);
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent 0 5px,
+      rgba(143, 77, 63, 0.25) 5px 10px
+    );
 }
 ```
 
