@@ -572,6 +572,7 @@
 /ru/docs/Web/CSS/CSS_Ruby	/ru/docs/Web/CSS/CSS_ruby_layout
 /ru/docs/Web/CSS/CSS_Variables	/ru/docs/Web/CSS/CSS_cascading_variables
 /ru/docs/Web/CSS/CSS_animated_properties	/ru/docs/Web/CSS
+/ru/docs/Web/CSS/CSS_animations/Tips	/ru/docs/Web/API/Web_Animations_API/Tips
 /ru/docs/Web/CSS/CSS_Селекторы	/ru/docs/Web/CSS/CSS_selectors
 /ru/docs/Web/CSS/CSS_Селекторы/Using_the_:target_pseudo-class_in_selectors	/ru/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 /ru/docs/Web/CSS/Child_selectors	/ru/docs/Web/CSS/Child_combinator
