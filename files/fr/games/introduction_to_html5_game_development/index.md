@@ -20,7 +20,7 @@ slug: Games/Introduction_to_HTML5_Game_Development
 | **Fonction**   | Technologie                                                                                                                                                                                                                                                                                                                        |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Audio**      | [Web Audio API](/fr/docs/Web/API/Web_Audio_API)                                                                                                                                                                                                                                                                                    |
-| **Graphique**  | [WebGL](/fr/docs/Web/API/WebGL_API) ([OpenGL ES](http://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                                                                            |
+| **Graphique**  | [WebGL](/fr/docs/Web/API/WebGL_API) ([OpenGL ES](https://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                                                                           |
 | **Input**      | [Événements tactiles](/fr/docs/Web/Guide/DOM/Events/Touch_events), [Utiliser l'API Gamepad](/fr/docs/Web/Guide/API/Gamepad), capteurs de l'appareil , [L'API WebRTC](/fr/docs/Web/API/WebRTC_API), [Utiliser le mode plein écran](/fr/docs/Web/Guide/DOM/Using_full_screen_mode), [Pointer Lock API](/fr/docs/WebAPI/Pointer_Lock) |
 | **Language**   | [JavaScript](/fr/docs/JavaScript) (ou C/C++ utilisant [Emscripten](https://github.com/kripken/emscripten/wiki) pour compiler en JavaScript )                                                                                                                                                                                       |
 | **Networking** | [WebRTC](/fr/docs/WebRTC) et/ou [WebSockets](/fr/docs/Web/API/WebSockets_API)                                                                                                                                                                                                                                                      |
@@ -49,7 +49,7 @@ slug: Games/Introduction_to_HTML5_Game_Development
 - [API Web Audio](/fr/docs/Web_Audio_API)
   - : Contrôlez la lecture, la synthèse et la manipulation de l'audio en temps réel.
 - [WebGL](/fr/docs/WebGL)
-  - : Créez des graphiques 3D (et 2D) haute performance à accélération matérielle. [OpenGL ES](http://www.khronos.org/opengles/) 2.0.
+  - : Créez des graphiques 3D (et 2D) haute performance à accélération matérielle. [OpenGL ES](https://www.khronos.org/opengles/) 2.0.
 - [WebRTC](/fr/docs/WebRTC)
   - : Communications en temps réel pour contrôler les données audio et vidéo, y compris la téléconférence et la transmission d'autres données d'application entre deux utilisateurs comme le chat.
 - [WebSockets](/fr/docs/WebSockets)

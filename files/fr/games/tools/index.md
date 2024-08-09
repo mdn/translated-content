@@ -11,8 +11,8 @@ Sur cette page, vous trouverez des liens vers nos articles sur les outils de dé
   - : asm.js est un sous-ensemble très limité du langage JavaScript, qui peut être grandement optimisé et exécuté dans un moteur de compilation à l'avance (AOT) pour des performances beaucoup plus rapides que vos performances JavaScript typiques. C'est, bien sûr, idéal pour les jeux.
 - [Emscripten](https://github.com/kripken/emscripten/wiki)
   - : Un compilateur LLVM vers JavaScript; avec Emscripten, vous pouvez compiler C ++ et d'autres langages qui peuvent compiler en bytecode LLVM en JavaScript haute performance. C'est un excellent outil pour porter des applications sur le Web! Il existe un [tutoriel uitle Emscripten](https://github.com/kripken/emscripten/wiki/Tutorial) disponible sur le wiki. Notez que nous [visons à couvrir Emscripten dans sa propre section de MDN](/fr/docs/Emscripten).
-- [Gecko profiler](https://addons.mozilla.org/en-us/firefox/addon/gecko-profiler/)
-  - : L'extension de profileur Gecko vous permet de profiler votre code pour vous aider à déterminer où se trouvent vos problèmes de performances afin que vous puissiez faire fonctionner votre jeu à une vitesse maximale.
+- [Firefox profiler](https://profiler.firefox.com/docs/#/)
+  - : Le Firefox Profiler vous permet de profiler votre code afin de déterminer où se situent vos problèmes de performance et de faire tourner votre jeu à la vitesse maximale.
 - [Moteurs de jeu et outils](/fr/docs/Games/Tools/Engines_and_tools)
   - : Une liste de moteurs, modèles et technologies utiles aux développeurs de jeux.
 - [Shumway](/fr/docs/Mozilla/Projects/Shumway)
