@@ -715,7 +715,8 @@ div {
       rgba(75, 0, 130, 0.5) 240px,
       rgba(238, 130, 238, 0.5) 280px,
       rgba(255, 0, 0, 0.5) 300px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       -190deg,
       rgba(255, 0, 0, 0.5) 30px,
       rgba(255, 153, 0, 0.5) 60px,
