@@ -11,9 +11,7 @@ l10n:
 
 `{{HTMLElement("input/text", "text")}}`、`{{HTMLElement("input/search", "search")}}`、`{{HTMLElement("input/url", "url")}}`、`{{HTMLElement("input/tel", "tel")}}`、`{{HTMLElement("input/email", "email")}}`、`{{HTMLElement("input/password", "password")}}`、`{{HTMLElement("input/date", "date")}}`、`{{HTMLElement("input/month", "month")}}`、`{{HTMLElement("input/week", "week")}}`、`{{HTMLElement("input/time", "time")}}`、`{{HTMLElement("input/datetime-local", "datetime-local")}}`、`{{HTMLElement("input/number", "number")}}`、`{{HTMLElement("input/checkbox", "checkbox")}}`、`{{HTMLElement("input/radio", "radio")}}`、`{{HTMLElement("input/file", "file")}}` {{HTMLElement("input")}} 类型以及 {{HTMLElement("select")}} 和 {{HTMLElement("textarea")}} 表单控件元素均支持 `required` 属性。如果这些输入类型和元素中出现了该属性，则会匹配 {{cssxref(':required')}} 伪类。如果不包含该属性，则会匹配 {{cssxref(':optional')}} 伪类。
 
-{{HTMLElement("input/range", "range")}} 和 {{HTMLElement("input/color", "color")}} 不支持该属性，也与之无关，因为两者都有默认值。{{HTMLElement("input/hidden", "hidden")}} 也不支持该属性，因为用户不可能填写隐藏的表单。也不支持任何按钮类型，包括 `image`。
-
-注意，`color` 和 `range` 也不支持 `required`，因为它们都总是有一个值。`color` 类型默认为 `#000000`。`range` 的默认值是 `min` 和 `max` 之间的中点，如果没有声明，在大多数浏览器中，`min` 和 `max` 的默认值分别是 0 和 100。
+{{HTMLElement("input/range", "range")}} 和 {{HTMLElement("input/color", "color")}} 不支持该属性，也与之无关，因为两者都有默认值。`color` 的默认值为 `#000000`。`range` 的默认值为 `min` 和 `max` 之间的中点，如果没有声明，在大多数浏览器中，`min` 和 `max` 的默认值分别是 0 和 100。{{HTMLElement("input/hidden", "hidden")}} 也不支持该属性，因为用户不可能填写隐藏的表单。`required` 属性也不支持任何按钮 input 类型，包括 {{HTMLElement("input/image","image")}}。
 
 对于由 {{HTMLElement("input/radio", "radio")}} 按钮组成的同名组，如果该组中的某个单选按钮具有 `required` 属性，则必须选中该组中的某个单选按钮，但该单选按钮不一定是应用了该属性的单选按钮。为改善代码维护，建议在组中的每个同名单选按钮中都包含 `required` 属性，否则一个都不包含。
 
