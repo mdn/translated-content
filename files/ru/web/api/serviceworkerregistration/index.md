@@ -9,7 +9,8 @@ slug: Web/API/ServiceWorkerRegistration
 
 The lifetime of a service worker registration is beyond that of the `ServiceWorkerRegistration` objects that represent them within the lifetime of their corresponding service worker clients. The browser maintains a persistent list of active `ServiceWorkerRegistration` objects.
 
-> **Примечание:** Эта функция доступна в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Эта функция доступна в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
 ## Свойства
 

@@ -9,7 +9,8 @@ l10n:
 
 Метод `readAsDataURL()` интерфейса {{domxref("FileReader")}} используется для чтения содержимого {{domxref("Blob")}} или {{domxref("File")}}. После завершения операции свойство {{domxref("FileReader.readyState", "readyState")}} принимает значение `DONE` и возникает событие {{domxref("FileReader/loadend_event", "loadend")}}. В то же время атрибут {{domxref("FileReader.result", "result")}} будет содержать данные файла, закодированные в `base64`-строку в виде [Data URL](/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
 
-> **Note:** Атрибут {{domxref("FileReader.result","result")}} не может быть напрямую декодирован как Base64 без предварительного удаления объявления `Data URL`, которое предшествует данным в кодировке `base64`. Чтобы получить только строку в кодировке `base64`, необходимо удалить `data:*/*;base64,` из результата.
+> [!NOTE]
+> Атрибут {{domxref("FileReader.result","result")}} не может быть напрямую декодирован как Base64 без предварительного удаления объявления `Data URL`, которое предшествует данным в кодировке `base64`. Чтобы получить только строку в кодировке `base64`, необходимо удалить `data:*/*;base64,` из результата.
 
 ## Синтаксис
 

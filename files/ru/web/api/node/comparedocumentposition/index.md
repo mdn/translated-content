@@ -52,7 +52,8 @@ if (head.compareDocumentPosition(body) & Node.DOCUMENT_POSITION_FOLLOWING) {
 }
 ```
 
-> **Примечание:** Поскольку результат, возвращаемый `compareDocumentPosition()`, является битовой маской, [побитовый оператор И](/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_AND) должен использоваться для осмысленных значений.
+> [!NOTE]
+> Поскольку результат, возвращаемый `compareDocumentPosition()`, является битовой маской, [побитовый оператор И](/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_AND) должен использоваться для осмысленных значений.
 
 ## Спецификации
 

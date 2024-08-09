@@ -7,7 +7,8 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 Ниже описаны шаги, которые происходят при drag and drop операции.
 
-> **Примечание:** Drag операции описываются в документе, используя {{domxref("DataTransfer")}} интерфейс. Этот документ не использует не{{domxref("DataTransferItem")}} интерфейс, не{{domxref("DataTransferItemList")}} интерфейс.
+> [!NOTE]
+> Drag операции описываются в документе, используя {{domxref("DataTransfer")}} интерфейс. Этот документ не использует не{{domxref("DataTransferItem")}} интерфейс, не{{domxref("DataTransferItemList")}} интерфейс.
 
 ## `draggable` атрибуты
 
@@ -35,7 +36,8 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 Атрибут `[`draggable`](/ru/docs/Web/HTML/Global_attributes#draggable)` может быть использован для любого элемента, включая изображения и ссылки. Однако, для последних двух, значение по умолчанию - `true`, т.о. вы можете только использовать атрибут `[`draggable`](/ru/docs/Web/HTML/Global_attributes#draggable)` со значением `false` для отключение перетаскивания этих элементов.
 
-> **Примечание:** Когда элемент становится перетаскиваемыми, текст или другие элементы в нем больше не могут быть выбраны обычным способом, щёлкая и перетаскивая мышью. Вместо этого пользователь должен удерживать клавишу <kbd>Alt</kbd> чтобы выбрать текст с помощью мыши или клавиатуры.
+> [!NOTE]
+> Когда элемент становится перетаскиваемыми, текст или другие элементы в нем больше не могут быть выбраны обычным способом, щёлкая и перетаскивая мышью. Вместо этого пользователь должен удерживать клавишу <kbd>Alt</kbd> чтобы выбрать текст с помощью мыши или клавиатуры.
 
 ## Начало операции перетаскивания
 
@@ -231,7 +233,8 @@ However, you can also update the user interface with an insertion point or highl
 
 In this example, the element with the class `droparea` will receive a 1 pixel black outline while it is a valid drop target, that is, if the {{domxref("Event.preventDefault","preventDefault()")}} method was called during the `{{event("dragenter")}}` event.
 
-> **Примечание:** You must cancel the `{{event("dragenter")}}` event for this pseudoclass to apply, as this state is not checked for the `{{event("dragover")}}` event.
+> [!NOTE]
+> You must cancel the `{{event("dragenter")}}` event for this pseudoclass to apply, as this state is not checked for the `{{event("dragover")}}` event.
 
 For more complex visual effects, you can also perform other operations during the `{{event("dragenter")}}` event. For example, by inserting an element at the location where the drop will occur. This might be an insertion marker, or an element that represents the dragged element in its new location. To do this, you could create an [image](/ru/docs/XUL/image) or [separator](/ru/docs/XUL/separator) element and simply insert it into the document during the `{{event("dragenter")}}` event.
 

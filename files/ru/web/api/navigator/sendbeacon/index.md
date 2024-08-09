@@ -23,7 +23,8 @@ navigator.sendBeacon(url [, data]);
 - `data` {{optional_inline}}
   - : Параметр `data` может содержать объект типа {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("DOMString")}}, или {{domxref("FormData")}}, который будет передан.
 
-> **Примечание:** Использует метод POST при передаче данных
+> [!NOTE]
+> Использует метод POST при передаче данных
 
 ### Возвращаемые значения
 

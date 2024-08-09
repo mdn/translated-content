@@ -82,7 +82,8 @@ var myOpenValue = dialogInstance.open;
 </script>
 ```
 
-> **Примечание:** вы можете найти данный пример на [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> [!NOTE]
+> Вы можете найти данный пример на [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
 ## Спецификации
 

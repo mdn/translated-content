@@ -9,7 +9,8 @@ The deprecated **`Navigator.getUserMedia()`** method prompts the user for permis
 
 If permission is granted, a `MediaStream` whose video and/or audio tracks come from those devices is delivered to the specified success callback. If permission is denied, no compatible input devices exist, or any other error condition occurs, the error callback is executed with a {{domxref("MediaStreamError")}} object describing what went wrong. If the user instead doesn't make a choice at all, neither callback is executed.
 
-> **Примечание:** Это устаревший метод. Вместо этого используйте более новую версию {{domxref ("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia ()")}}. Хотя технически не рекомендуется, эта старая версия колбэка помечена как таковая, поскольку спецификация настоятельно рекомендует использовать более новую версию, возвращающую промис.
+> [!NOTE]
+> Это устаревший метод. Вместо этого используйте более новую версию {{domxref ("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia ()")}}. Хотя технически не рекомендуется, эта старая версия колбэка помечена как таковая, поскольку спецификация настоятельно рекомендует использовать более новую версию, возвращающую промис.
 
 ## Синтаксис
 
@@ -90,7 +91,8 @@ if (navigator.getUserMedia) {
 
 См. Разрешение: аудио-захват и разрешение: видео-захват для получения дополнительной информации.
 
-> **Предупреждение:** New code should use {{domxref("Navigator.mediaDevices.getUserMedia()")}} instead.
+> [!WARNING]
+> New code should use {{domxref("Navigator.mediaDevices.getUserMedia()")}} instead.
 
 ## Спецификации
 

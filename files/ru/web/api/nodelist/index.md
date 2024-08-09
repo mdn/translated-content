@@ -7,7 +7,8 @@ slug: Web/API/NodeList
 
 Объект **NodeList** — это коллекция узлов, возвращаемая такими методами, как {{domxref("Node.childNodes")}} и {{domxref("document.querySelectorAll")}}.
 
-> **Примечание:** Несмотря на то, что `NodeList` не является массивом ( `Array` ), его вполне возможно перебрать при помощи метода forEach(). NodeList также можно конвертировать в `Array` при помощи {{jsxref("Array.from()")}}
+> [!NOTE]
+> Несмотря на то, что `NodeList` не является массивом ( `Array` ), его вполне возможно перебрать при помощи метода forEach(). NodeList также можно конвертировать в `Array` при помощи {{jsxref("Array.from()")}}
 >
 > Однако некоторые старые браузеры на данный момент все ещё не поддерживают `NodeList.forEach()` или `Array.from()`. Данные ограничения можно обойти, используя {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} ( больше информации на этой странице ).
 

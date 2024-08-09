@@ -111,7 +111,8 @@ function lockError(e) {
 }
 ```
 
-> **Примечание:** The above events are currently prefixed with `moz` in Firefox and `webkit` in Chrome.
+> [!NOTE]
+> The above events are currently prefixed with `moz` in Firefox and `webkit` in Chrome.
 
 ## Extensions to mouse events
 
@@ -124,7 +125,8 @@ partial interface MouseEvent {
 };
 ```
 
-> **Примечание:** The movement attributes are currently prefixed as `.mozMovementX` and `.mozMovementY` in Firefox, and`.webkitMovementX` and `.webkitMovementY` in Chrome.
+> [!NOTE]
+> The movement attributes are currently prefixed as `.mozMovementX` and `.mozMovementY` in Firefox, and`.webkitMovementX` and `.webkitMovementY` in Chrome.
 
 Two new parameters to mouse events—{{domxref("MouseEvent.movementX","movementX")}} and {{domxref("MouseEvent.movementY","movementY")}}—provide the change in mouse positions. The values of the parameters are the same as the difference between the values of {{domxref("MouseEvent")}} properties, {{domxref("MouseEvent.screenX","screenX")}} and {{domxref("MouseEvent.screenY","screenY")}}, which are stored in two subsequent {{event("mousemove")}} events, `eNow` and `ePrevious`. In other words, the Pointer lock parameter `movementX = eNow.screenX - ePrevious.screenX`.
 
