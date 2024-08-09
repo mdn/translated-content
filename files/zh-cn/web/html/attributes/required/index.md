@@ -2,7 +2,7 @@
 title: HTML 属性：required
 slug: Web/HTML/Attributes/required
 l10n:
-  sourceCommit: aee2bd82de11cb7331134e48e8bd548bbedafcc5
+  sourceCommit: c66d3e5e446bf5ebfcef528c4a766bea6a08c879
 ---
 
 {{HTMLSidebar}}
