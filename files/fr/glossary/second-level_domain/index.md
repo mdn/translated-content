@@ -16,8 +16,7 @@ Autre exemple, dans `developer.mozilla.org`, le sous-domaine `developer` sert à
 ## Voir aussi
 
 - [SLD](https://fr.wikipedia.org/wiki/Domaine_de_deuxième_niveau) (Wikipédia)
-- [Glossaire](/fr/docs/Glossary)
-  - [DNS](/fr/docs/Glossary/DNS)
+- Termes du glossaire associés - [DNS](/fr/docs/Glossary/DNS)
   - [Domaine](/fr/docs/Glossary/Domain)
   - [Nom de domaine](/fr/docs/Glossary/Domain_name)
   - [TLD](/fr/docs/Glossary/TLD)

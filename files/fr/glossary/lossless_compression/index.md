@@ -11,9 +11,8 @@ slug: Glossary/Lossless_compression
 
 ## Voir aussi
 
-[Glossary](/fr/docs/Glossary)
-
-1. {{glossary("GZIP")}}
-2. {{glossary("Brotli")}}
-3. {{glossary("PNG")}}
-4. {{glossary("Lossy compression")}}
+- Termes du glossaire associés
+  - {{glossary("GZIP")}}
+  - {{glossary("Brotli")}}
+  - {{glossary("PNG")}}
+  - {{glossary("Lossy compression")}}
