@@ -7030,6 +7030,10 @@
     "modified": "2019-06-18T07:52:11.648Z",
     "contributors": ["SphinxKnight", "yaplusplus", "s-n-ushakov", "dimakozakov"]
   },
+  "Web/API/Web_Animations_API/Tips": {
+    "modified": "2020-05-03T11:02:29.768Z",
+    "contributors": ["anna.bunakova"]
+  },
   "Web/API/Web_Animations_API/Using_the_Web_Animations_API": {
     "modified": "2020-11-11T13:23:02.417Z",
     "contributors": ["Bobrovskih", "pavelmarozka"]
@@ -8225,10 +8229,6 @@
   "Web/CSS/CSS_animations": {
     "modified": "2019-03-23T22:43:47.167Z",
     "contributors": ["Geloosa", "teoli", "MexieAndCo"]
-  },
-  "Web/CSS/CSS_animations/Tips": {
-    "modified": "2020-05-03T11:02:29.768Z",
-    "contributors": ["anna.bunakova"]
   },
   "Web/CSS/CSS_animations/Using_CSS_animations": {
     "modified": "2019-09-08T05:26:38.746Z",
