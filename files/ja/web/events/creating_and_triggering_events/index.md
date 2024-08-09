@@ -1,6 +1,8 @@
 ---
 title: イベントの作成と起動
 slug: Web/Events/Creating_and_triggering_events
+l10n:
+  sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
 ---
 
 この記事では、 DOM イベントを作成して処理する方法を説明します。このようなイベントは、一般に、ブラウザー自体によって起動されたイベントとは対照的に、**合成イベント**と呼ばれます。
@@ -12,22 +14,22 @@ slug: Web/Events/Creating_and_triggering_events
 ```js
 const event = new Event("build");
 
-// Listen for the event.
+// イベントを待ち受けする
 elem.addEventListener(
   "build",
-  function (e) {
-    /* ... */
+  (e) => {
+    /* … */
   },
   false,
 );
 
-// Dispatch the event.
+// イベントを配信する
 elem.dispatchEvent(event);
 ```
 
 上記のコード例は [EventTarget.dispatchEvent()](/ja/docs/Web/API/EventTarget/dispatchEvent) メソッドを使用します。
 
-このコンストラクターは、ほとんどの最新のブラウザーでサポートされています (Internet Explorer は例外です)。もっと冗長的なアプローチ (Internet Explorer で動作するもの) は、下記の[古い方法](#古い方法)を参照して下さい。
+このコンストラクターは、ほとんどの最新のブラウザーが対応しています。もっと冗長的なアプローチは、下記の[古い方法](#古い方法)を参照して下さい。
 
 ### カスタムデータの追加 – CustomEvent()
 
@@ -42,7 +44,7 @@ const event = new CustomEvent("build", { detail: elem.dataset.time });
 
 ```js
 function eventHandler(e) {
-  console.log("The time is: " + e.detail);
+  console.log(`The time is: ${e.detail}`);
 }
 ```
 
@@ -51,16 +53,20 @@ function eventHandler(e) {
 イベントを作成する古いアプローチでは、 Java に触発された API が使用されます。以下に例を示します。
 
 ```js
-/ イベントの作成
-const event = document.createEvent('Event');
+// イベントの作成
+const event = document.createEvent("Event");
 
 // イベントの名前を 'build' と定義する
-event.initEvent('build', true, true);
+event.initEvent("build", true, true);
 
 // イベントを待ち受けする
-elem.addEventListener('build', function (e) {
-  // e.target が elem と一致したとき
-}, false);
+elem.addEventListener(
+  "build",
+  (e) => {
+    // e.target が elem と一致したとき
+  },
+  false,
+);
 
 // 対象が何らかの Element またはその他の EventTarget の場合
 elem.dispatchEvent(event);
@@ -153,4 +159,8 @@ function simulateClick() {
 - {{domxref("EventTarget.dispatchEvent()")}}
 - {{domxref("EventTarget.addEventListener()")}}
 
-<section id="Quick_links"><ul><li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベント入門</a></li><li><a href="/ja/docs/Web/Events/Event_handlers">イベントハンドラー (概要)</a></li><li><a href="/ja/docs/Web/Events">イベントリファレンス</a></li></ul></section>
+<section id="Quick_links">
+  <ol>
+    <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベント入門</a></li><li><a href="/ja/docs/Web/Events/Event_handlers">イベントハンドラー (概要)</a></li><li><a href="/ja/docs/Web/Events">イベントリファレンス</a></li>
+  </ol>
+</section>
