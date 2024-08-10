@@ -9,9 +9,6 @@ slug: Web/API/FormData/keys
 
 **`FormData.keys()`** метод возвращает {{jsxref("Iteration_protocols",'iterator')}} позволяя пройтись по всем ключам содержащимся в этом объекте. Ключи являются {{domxref("USVString")}} объектами.
 
-> [!NOTE]
-> Метод доступен в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
-
 ## Синтаксис
 
 ```
