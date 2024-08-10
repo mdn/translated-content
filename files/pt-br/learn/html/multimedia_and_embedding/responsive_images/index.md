@@ -46,7 +46,7 @@ Nesta seção, nós iremos ver os dois problemas ilustrados acima e mostrar como
 
 ### Mudança de resolução: Diferentes tamanhos
 
-Então, qual é o problema que nós queremos resolver com mudança de resolução? Nós queremos mostrar identico conteúdo da imagem, somente maior ou menor dependendo do dispositivo - esta é a situação que nós temos com a segunda imagem do conteúdo em nosso exemplo. O padrão do elemento {{htmlelement("img")}} tradicionalmente somente permite apontar o navegador para uma única fonte:
+Então, qual é o problema que nós queremos resolver com a mudança de resolução? Nós queremos mostrar o conteúdo identico da imagem, somente maior ou menor dependendo do dispositivo - esta é a situação que nós temos com a segunda imagem do conteúdo em nosso exemplo. O padrão do elemento {{htmlelement("img")}} tradicionalmente somente permite apontar o navegador para uma única fonte:
 
 ```html
 <img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy" />
@@ -100,12 +100,12 @@ Então, com estes atributos no lugar, o navegador irá:
 3. Ver qual é o slot para aquela condição de mída.
 4. Carregar a imagem definida na lista `srcset` que possui o mesmo tamanho do slot ou, se não houver, da primeira imagem que é maior que o tamanho do slot escolhido.
 
-E é isto! Então neste ponto, se um navegador suportado com uma largurar de 480px carregar a página, a condição (`max-width: 480px`) será verdadeira, então o slot `440px` será escolhido, então o `elva-fairy-480w.jpg` será carregada, como a largura inerente (`480w`) é a mais próxima de `440px`. A imagem de 800px é 128KB no disco enquanto que a versão de 480px é somente 63KB - economizando 65KB. Agora imagine se fosse uma página que tivesse várias imagens. Usando esta técnica poderia economizar os dados de usuários de celular.
+E é isto! Então neste ponto, se um navegador suportado com uma largura de 480px carregar a página, a condição (`max-width: 480px`) será verdadeira, então o slot `440px` será escolhido, então o `elva-fairy-480w.jpg` será carregada, como a largura inerente (`480w`) é a mais próxima de `440px`. A imagem de 800px é 128KB no disco enquanto que a versão de 480px é somente 63KB - economizando 65KB. Agora imagine se fosse uma página que tivesse várias imagens. Usando esta técnica poderia economizar os dados de usuários de celular.
 
 Navegadores antigos que não suportam estas funcionalidades serão ignorados, seguiremos e carregaremos a imagem definida no atributo [`src`](/pt-BR/docs/Web/HTML/Element/img#src) como normal.
 
 > [!NOTE]
-> No {{htmlelement("head")}} do documento você encontrará a linha `<meta name="viewport" content="width=device-width">`: isto força navegadores de celular adotar a largura real para carregar páginas web (alguns navegadores mobile mentem sobre sua largura da janela, e em vez carregam páginas em uma largura grante e então encolhem a página carregada, o que é de muita ajuda para imagens e design responsivos. Nós iremos ensinar mais sobre isso em um módulo futuro).
+> No {{htmlelement("head")}} do documento você encontrará a linha `<meta name="viewport" content="width=device-width">`: isto força navegadores de celular adotar a largura real para carregar páginas web (alguns navegadores mobile mentem sobre sua largura da janela, e em vez carregam páginas em uma largura grande e então encolhem a página carregada, o que é de muita ajuda para imagens e design responsivos. Nós iremos ensinar mais sobre isso em um módulo futuro).
 
 ### Ferramentas de desenvolvimento úteis
 
