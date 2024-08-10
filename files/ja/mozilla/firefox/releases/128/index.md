@@ -2,7 +2,7 @@
 title: Firefox 128 for developers
 slug: Mozilla/Firefox/Releases/128
 l10n:
-  sourceCommit: 95beef16ce880c41315c2e8b9d3e54c17c660124
+  sourceCommit: e53788691eeee0b7e7114c20f505615ac037fc05
 ---
 
 {{FirefoxSidebar}}
@@ -85,11 +85,17 @@ l10n:
 
 - 静的な宣言型ネットワークリクエストのルールセットのルールを {{WebExtAPIRef("declarativeNetRequest.updateStaticRules")}} で有効化または無効化する機能、および静的ルールセットで無効化されたルールを {{WebExtAPIRef("declarativeNetRequest.getDisabledRuleIds")}} で取得する機能を追加しました ([Firefox bug 1810762](https://bugzil.la/1810762))。
 - [`declarative_net_request` マニフェストキー](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) で定義された静的な宣言型ネットワークリクエストのルールが、認識できないプロパティを含むがほかのプロパティが有効である場合に読み込まれるようになりました ([Firefox bug 1886608](https://bugzil.la/1886608))。
+- {{WebExtAPIRef("declarativeNetRequest")}} に {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_RULES","MAX_NUMBER_OF_DYNAMIC_RULES")}} および {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_SESSION_RULES","MAX_NUMBER_OF_SESSION_RULES")}} を導入しました。これらのプロパティは、拡張機能が追加できる動的ルールとセッションスコープルールの最大数を表します。これらは {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES","MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}} を置き換えるもので、こちらは非推奨になりました ([Firefox bug 1894128](https://bugzil.la/1894128))。
 - {{WebExtAPIRef("proxy.settings")}} プロパティの `proxyDNS` の既定値が、SOCKS4 を使用する場合は `false`、SOCKS5 を使用する場合は `true` になりました。以前は、SOCKS4 および SOCKS5 で既定値が `false` でした ([Firefox bug 1741375](https://bugzil.la/1741375))。
+- {{WebExtAPIRef("webRequest.onAuthRequired")}} で `addListener` の引数 `extraInfoSpec` に `"asyncBlocking"` を指定することで、非同期に認証リクエストを制御する機能をサポートしました ([Firefox bug 1889897](https://bugzil.la/1889897))。
+- [optional_host_permissions](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) マニフェストキーを追加しました。このキーは、ホストデータを読み取りまたは変更する拡張機能で API へのアクセス (拡張機能をインストールしたときにユーザーが許可したアクセス) を実行時に要求することを可能にします ([Firefox bug 1766026](https://bugzil.la/1766026))。
 - 非標準の Web API イベント `overflow` および `underflow` が非推奨になりました。Firefox 131 のリリースより前に、拡張機能の文書からこれらのイベントの使用方法を削除する予定です ([Firefox bug 1898445](https://bugzil.la/1898445))。
 - ウェブページの実行環境でスクリプトを実行する機能をサポートしました。これは {{WebExtAPIRef("scripting")}} API で {{WebExtAPIRef("scripting.executionWorld","ExecutionWorld")}} の `MAIN` をサポートすること、{{WebExtAPIRef("contentScripts.register()")}} API に `world` を追加すること、[`content_scripts`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) マニフェストキーで `world` をサポートすることにより提供されます ([Firefox bug 1736575](https://bugzil.la/1736575))。
 - {{WebExtAPIRef("scripting")}} API が、`about:blank`、`about:srcdoc`、`data:` URL によりサンドボックス化されたページへスクリプトや CSS を挿入できるようになりました。これは {{WebExtAPIRef("scripting.RegisteredContentScript")}} へ `matchOriginAsFallback` を導入することにより、{{WebExtAPIRef("scripting.executeScript")}}、{{WebExtAPIRef("scripting.insertCSS")}}、{{WebExtAPIRef("scripting.removeCSS")}} ([Firefox bug 1475831](https://bugzil.la/1475831) および {{WebExtAPIRef("scripting.registerContentScripts")}}、{{WebExtAPIRef("scripting.updateContentScripts")}} ([Firefox bug 1853411](https://bugzil.la/1853411) に実装しました。
+- [サンドボックス化された](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox) `http`、`https`、`file:` URL でコンテンツスクリプトを実行するようになりました ([Firefox bug 1411641](https://bugzil.la/1411641))。
 - [`content_scripts` マニフェストキー](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) で `match_origin_as_fallback`、および {{WebExtAPIRef("contentScripts.register")}} で `matchOriginAsFallback` をサポートしました。CSP や iframe サンドボックスの使用によりドキュメントのオリジンが不明瞭なときに、`about:`、`data:`、`blob:` ページへスクリプトを挿入可能にします ([Firefox bug 1475831](https://bugzil.la/1475831)、[Firefox bug 1896669](https://bugzil.la/1896669))。また、`match_origin_as_fallback` が `true` である場合に、`content_scripts` マニフェストキーで登録されたスクリプトを `blob:` ページに限り実行可能になりました ([Firefox bug 1897113](https://bugzil.la/1897113))。
+- {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}} で `domainType` プロパティをサポートしました ([Firefox bug 1797408](https://bugzil.la/1797408))。
+- [`browser_specific_settings.gecko` マニフェストキー](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) に認識できないプロパティを含む拡張機能を、警告つきで読み込むようになりました。以前は、拡張機能をインストールするときにエラーが発生しました。これは新たな `browser_specific_settings.gecko` のプロパティが追加されたときに、新しいプロパティを使用する拡張機能が過去にリリースしたバージョンの Firefox でも読み込まれることを保証します ([Firefox bug 1757293](https://bugzil.la/1757293))。
 
 ## 実験的なウェブ機能
 
@@ -102,6 +108,10 @@ l10n:
 - **Cookies Having Independent Partitioned State (CHIPS):** `network.cookie.CHIPS.enabled`。
 
   [CHIPS](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies), または "partitioned cookies" は、開発者が `Set-Cookie` HTTP ヘッダーの [`partitioned`](/ja/docs/Web/HTTP/Headers/Set-Cookie#partitioned) ディレクティブを使用して、Cookie を分離された記憶領域へ保存できるようにします。これを設定すると Cookie がトップレベルごとに分離された記憶領域に保存されて、同じトップレベルサイトかサブドメインに限り読み取れるようになります。これはクロスサイトトラッキングを防ぎながら、サイトのさまざまなサブドメインにわたって埋め込み地図やチャットウィジェットの状態を維持するなどの、適切なサードパーティ Cookie の利用を可能にします ([Firefox bug 1898253](https://bugzil.la/1898253))。
+
+- **Privacy Preserving Attribution API (PPA):** `dom.origin-trials.private-attribution.state`。
+
+  [PPA API](https://support.mozilla.org/kb/privacy-preserving-attribution) は新しい `navigator.privateAttribution` オブジェクトを `saveImpression()` および `measureConversion()` メソッドとともに使用することで、広告属性のためにユーザーを追跡するための代替手段を提供します。PPA について詳しくは [explainer](https://github.com/mozilla/explainers/tree/main/ppa-experiment) をご覧ください。この実験的機能は [origin trial](https://wiki.mozilla.org/Origin_Trials) またはブラウザーで設定項目に `1` を設定することで、Webサイトに対して有効化できます ([Firefox bug 1900929](https://bugzil.la/1900929))。
 
 ## 過去のバージョン
 
