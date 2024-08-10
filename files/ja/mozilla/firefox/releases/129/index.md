@@ -29,8 +29,7 @@ l10n:
 ### API
 
 - 非推奨の {{domxref("TextEvent", "textInput")}} をサポートしました。このイベントに依存する古いライブラリーやフレームワークを使用するウェブアプリが動作します。
-  [`beforeinput` イベント](/ja/docs/Web/API/Element/beforeinput_event) が `textInput` を置き換えており、新しいアプリケーションはこちらを使用するべきです 
-  ([Firefox bug 1901923](https://bugzil.la/1901923))。
+  [`beforeinput` イベント](/ja/docs/Web/API/Element/beforeinput_event) が `textInput` を置き換えており、新しいアプリケーションはこちらを使用するべきです ([Firefox bug 1901923](https://bugzil.la/1901923))。
 - 既定の `.toJSON()` メソッドである {{domxref("GeolocationCoordinates.toJSON()")}} および {{domxref("GeolocationPosition.toJSON()")}} をサポートしました。`GeolocationCoordinates` および `GeolocationPosition` オブジェクトを {{jsxref("JSON.stringify()")}} でシリアライズできます ([Firefox bug 1890706](https://bugzil.la/1890706))。
 - {{domxref("CSSPageDescriptors")}} をサポートして、現在の仕様書に合わせて {{domxref("CSSStyleDeclaration")}} に代わり、{{domxref("CSSPageRule.style")}} の型として使用するようになりました。
   これは、`CSSPageDescriptors` がすべてのプロパティではなく `@page` に関連するプロパティだけを公開することを保証します。また、CSS `@page` アットルールでページの [`size`](/ja/docs/Web/CSS/@page#size) の設定が `CSSPageRule.style` に反映されない問題を解決します。
