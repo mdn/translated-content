@@ -109,7 +109,7 @@ Navegadores antigos que não suportam estas funcionalidades serão ignorados, se
 
 ### Ferramentas de desenvolvimento úteis
 
-Há algumas [ferramenta de desenvolvimento](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) úteis em navegadores para ajudar a exercitar o necessário para slot de largura, etc, que você precisa usar. Quando eu estava trabalhando neles, eu primeiro carreguei a versão não responsiva do meu exemplo (`not-responsive.html`), então fui no [Modo de Design Responsivo](/pt-BR/docs/Tools/Responsive_Design_Mode) (Ferramentas >Desenvolvimento Web > Modo de Design Responsivo), que permite a você ver o layout da sua página como se ele estivesse visto através de uma variedade de diferentes tamanhos de telas.
+Há algumas [ferramentas de desenvolvimento](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) úteis em navegadores para ajudar a exercitar o necessário para slot de largura, etc, que você precisa usar. Quando eu estava trabalhando neles, eu primeiro carreguei a versão não responsiva do meu exemplo (`not-responsive.html`), então fui no [Modo de Design Responsivo](/pt-BR/docs/Tools/Responsive_Design_Mode) (Ferramentas > Desenvolvimento Web > Modo de Design Responsivo), que permite a você ver o layout da sua página como se ele estivesse visto através de uma variedade de diferentes tamanhos de telas.
 
 Eu configurei a largura da janela para 320px e depois 480px; para cada uma eu fui no [DOM Inspector](/pt-BR/docs/Tools/Page_Inspector), cliquei no elemento {{htmlelement("img")}} no qual nós estamos interessados, então olhei o tamanho na aba Box Model view no lado direito da tela. Isto deve dar para você a dica da largura de imagem que você precisa.
 
@@ -121,7 +121,7 @@ Próximo, você pode checar se o `srcset` está funcionando configurando a largu
 
 ![a screenshot of the network inspector in firefox devtools, showing that the HTML for the page has been downloaded, along with three images, which include the two 800 wide versions of the responsive images](network-devtools.png)
 
-### Mudança de Resolução: Mesmo tamanho, diferente resoluções
+### Mudança de Resolução: Mesmo tamanho, diferentes resoluções
 
 Se você está dando suporte a múltiplas resoluções de vídeo, mas todas veem sua imagem no tamanho real na tela, você pode permitir ao navegador escolher uma resolução apropriada para a imagem usando `srcset` com x indentificadores e sem `sizes` - uma sintaxe um pouco mais fácil! Você pode encontrar um exemplo de como isto parece em [srcset-resolutions.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) (ver também [o código fonte](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)):
 
@@ -163,7 +163,7 @@ Vamos consertar isso, com {{htmlelement("picture")}}! Como [`<video>` e `<audio>
 ```
 
 - Os elementos `<source>` inclui um atributo `media` que contem uma condição de mídia - como no nosso primeiro exemplo `srcset`, estas condições são testadas para qual imagem será mostrada no dispositivo - a primeira que retornar um valor verdadeiro, será escolhida. Neste caso, se a largura da janela é 799px ou menor, a primeira imagem do elemento `<source>` será mostrada. Se a largura da janela é 800px ou maior, será escolhida a segunda.
-- Os atributos `srcset` contem o caminho para a imagem que será apresentada. Note que como acabamos de ver acima com `<img>`, `<source>` pode pegar um atributo srcsetcom múltiplas imagens referenciadas, e um atributo sizes também. Então você pode oferecer múltiplas imagens via um elemento `<picture>`, mas também oferecer múltiplas resoluções para cada uma. Na prática, você provavelmente não vai querer fazer isso com frequência.
+- Os atributos `srcset` contem o caminho para a imagem que será apresentada. Note que como acabamos de ver acima com `<img>`, `<source>` pode pegar um atributo `srcset` com múltiplas imagens referenciadas, e um atributo `sizes` também. Então você pode oferecer múltiplas imagens via um elemento `<picture>`, mas também oferecer múltiplas resoluções para cada uma. Na prática, você provavelmente não vai querer fazer isso com frequência.
 - Em todos os casos, você deve fornecer um elemento `<img>`, com `src` e `alt`, logo antes do `</picture>`, de outra forma não aparecerá imagens. Assim um padrão será aplicado quando nenhuma condição for atendida (você pode remover o segundo elemento `<source>` neste exemplo), e verificar navegadores que não suportam o elemento `<picture>`.
 
 Este código nos permite mostrar uma imagem adequada em ambas extensas e estreitas telas, como podemos ver abaixo:
@@ -199,7 +199,7 @@ Há vários novos e excitantes formatos de imagens (como WebP e JPEG-2000) que p
 
 ## Aprendizado ativo: Implementando suas próprias imagens responsivas
 
-Para esse exercício, nós estamos esperando que você seja corajoso e vá sozinho.. principalmente. Nós queremos que você implemente sua própria adequada direção de arte em tela estreita/ampla usando `<picture>`, e um exemplo de mudança de resolução que use `srcset`.
+Para esse exercício, nós estamos esperando que você seja corajoso e vá sozinho. Principalmente, nós queremos que você implemente sua própria direção adequada de arte em tela estreita/ampla usando `<picture>`, e um exemplo de mudança de resolução que use `srcset`.
 
 1. Escreva um simples HTML contendo seu código (use `not-responsive.html` como um ponto de partida, se quiser)
 2. Encontre uma boa imagem ampla de um panorama com algum detalhe contido em alguma parte. Crie uma versão de tamanho web usando um editor de imagem, então coloque para mostrar uma pequena parte que amplia o detalhe, e salve em uma segunda imagem (algo como 480px está bom).
@@ -207,7 +207,7 @@ Para esse exercício, nós estamos esperando que você seja corajoso e vá sozin
 4. Crie múltiplos arquivos de imagem de diferentes tamanhos, cada um mostrando a mesma imagem.
 5. Use `srcset`/`size` para criar um exemplo de mudança de resolução, que sirva para os mesmos tamanhos de imagens em diferentes resoluções, ou diferentes tamanhos de imagens em cada largura de janela.
 
-> **Nota:**Use a ferramenta de desenvolvimento do navegador para ajudar a ver os tamanhos que você precisa, como mencionado acima.
+> **Nota:** Use a ferramenta de desenvolvimento do navegador para ajudar a ver os tamanhos que você precisa, como mencionado acima.
 
 ## Sumário
 
@@ -216,7 +216,7 @@ Isto é um geral sobre imagens responsivas - nós esperamos que você tenha apro
 - **Direção de Arte:** O problema consiste em apresentar imagens cortadas para diferentes layouts - por exemplo, uma imagem panorâmica mostrada completa em um layout desktop, e uma imagem retrato mostrando o objeto principal ampliado em um layout mobile. Isto pode ser resolvido usando o elemento {{htmlelement("picture")}}.
 - **Mudança de resolução:** O problema é apresentar arquivos menores de imagens para dispositivos estreitos, porque eles não precisam de imagens gigantes como em computadores - e também, opcionalmente, que você quer apresentar imagens de diferentes resoluções para alta e baixa densidades de tela. Isto pode resolver usando [vector graphics](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) (imagens SVG), e os atributos [`srcset`](/pt-BR/docs/Web/HTML/Element/img#srcset) e [`sizes`](/pt-BR/docs/Web/HTML/Element/img#sizes).
 
-Isto também encerra o módulo [Multimedia and embedding](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding)! A única coisa para fazer agora é seguir e tentar nosso teste de multimídia, e ver como você está. Se divirta.
+Isto também encerra o módulo [Multimedia and embedding](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding)! A única coisa para fazer agora é seguir e tentar nosso teste de multimídia, e ver como você está. Divirta-se!
 
 ## Veja também
 
