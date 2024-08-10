@@ -3853,6 +3853,10 @@
     "modified": "2019-03-23T22:13:23.567Z",
     "contributors": ["Fernandolrs", "kausdev"]
   },
+  "Web/API/Web_Animations_API/Tips": {
+    "modified": "2019-03-23T22:11:17.827Z",
+    "contributors": ["dime2lo"]
+  },
   "Web/API/Web_Animations_API/Using_the_Web_Animations_API": {
     "modified": "2020-09-26T01:35:23.652Z",
     "contributors": ["rafaelpradella"]
@@ -4527,10 +4531,6 @@
   "Web/CSS/CSS_Types": {
     "modified": "2019-03-18T21:41:31.457Z",
     "contributors": ["brunoeduardo"]
-  },
-  "Web/CSS/CSS_animations/Tips": {
-    "modified": "2019-03-23T22:11:17.827Z",
-    "contributors": ["dime2lo"]
   },
   "Web/CSS/CSS_animations/Using_CSS_animations": {
     "modified": "2019-03-23T23:39:07.702Z",
