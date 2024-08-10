@@ -7,9 +7,6 @@ slug: Web/API/Page_Visibility_API
 
 При переключении между вкладками, web страница переходит в фоновый режим и поэтому не видна пользователю. Page Visibility API предоставляет события, которые вы можете отслеживать, чтобы узнать, когда страница станет видимой или скрытой, а так же возможность наблюдать текущее состояние видимости страницы.
 
-> [!NOTE]
-> The Page Visibility API особенно полезно для сбережения ресурсов и улучшения производительности, позволяя странице остановить выполнение не нужных задач, когда она не видна.
-
 Когда пользователь сворачивает окно или переключается на другую вкладку, API отправляет {{event("visibilitychange")}} событие обработчикам, что состояние страницы изменилось. Вы можете отследить это событие и выполнить какие-то действия. Например, если ваше app проигрывает видео, его можно поставить на паузу, когда пользователь переключил вкладку (страница ушла в фон), а затем возобновить видео, когда пользователь вернулся на вкладку. Пользователь не теряет место на котором остановил просмотр, звук от видео не конфликтует с аудио новой вкладки, пользователь комфортно просмотреть оба видео.
 
 Состояния видимости для {{HTMLElement("iframe")}} такие же как и для родительской страницы. Скрытие `<iframe>` используя CSS стили (такие как {{cssxref("display", "display: none;")}}) не вызывают события видимости и не изменяют состояние документа, содержащегося во фрейме.
@@ -129,15 +126,9 @@ The Page Visibility API adds the following properties to the {{domxref("Document
 
       - : The page's content is being prerendered and is not visible to the user. A document may start in the `prerender` state, but will never switch to this state from any other state, since a document can only prerender once.
 
-        > [!NOTE]
-        > Not all browsers support prerendering.
-
     - `unloaded`
 
       - : The page is in the process of being unloaded from memory.
-
-        > [!NOTE]
-        > Not all browsers support the `unloaded` value.
 
 - {{domxref("Document.onvisibilitychange")}}
   - : An {{domxref("EventListener")}} providing the code to be called when the {{event("visibilitychange")}} event is fired.
