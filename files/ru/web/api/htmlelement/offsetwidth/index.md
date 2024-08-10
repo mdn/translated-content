@@ -15,7 +15,8 @@ var offsetWidth = element.offsetWidth;
 
 `offsetWidth` — свойство только для чтения
 
-> **Примечание:** Это свойство возвращает целочисленное значение. Если вам требуется дробное значение, используйте {{ domxref("element.getBoundingClientRect()") }}.
+> [!NOTE]
+> Это свойство возвращает целочисленное значение. Если вам требуется дробное значение, используйте {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Пример
 

@@ -9,7 +9,8 @@ slug: Web/API/PushManager
 
 Этот интерфейс доступен через свойство {{domxref("ServiceWorkerRegistration.pushManager")}}.
 
-> **Примечание:** Этот интерфейс заменил функциональность, предлагаемую устаревшим {{domxref("PushRegistrationManager")}}.
+> [!NOTE]
+> Этот интерфейс заменил функциональность, предлагаемую устаревшим {{domxref("PushRegistrationManager")}}.
 
 ## Свойства
 
