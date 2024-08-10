@@ -57,7 +57,8 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 
 В прошлом примере мы видели, как применяется оператор `and` для группировки _type_ и функции. Оператор `and` также может комбинировать несколько функций в одно медиавыражение. Между тем, оператор not отрицает медиавыражение, полностью инвертируя его значение. Оператор _only_ работает тогда, когда применяется всё выражение, не позволяя старым браузерам применять стили.
 
-> **Примечание:** In most cases, the `all` media type is used by default when no other type is specified. However, if you use the `not` or `only` operators, you must explicitly specify a media type.
+> [!NOTE]
+> In most cases, the `all` media type is used by default when no other type is specified. However, if you use the `not` or `only` operators, you must explicitly specify a media type.
 
 ### `and`
 

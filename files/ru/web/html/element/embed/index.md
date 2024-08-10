@@ -9,7 +9,8 @@ HTML-элемент **`<embed>`** встраивает внешнее содер
 
 {{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
 
-> **Примечание:** Этот раздел посвящён только элементу, который является частью стандарта [HTML Living Standard](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element), и не относится к ранним, нестандартизированным его реализациям.
+> [!NOTE]
+> Этот раздел посвящён только элементу, который является частью стандарта [HTML Living Standard](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element), и не относится к ранним, нестандартизированным его реализациям.
 
 Следует иметь в виду, что большинство современных браузеров прекратили поддержку плагинов. Поэтому использование `<embed>` не рекомендуется, если необходима одинаковая работа сайта для большинства пользователей.
 
