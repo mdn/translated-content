@@ -109,7 +109,7 @@ Navegadores antigos que não suportam estas funcionalidades serão ignorados, se
 
 ### Ferramentas de desenvolvimento úteis
 
-Há algumas [ferramenta de desenvolvimento](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) úteis em navegadores para ajudar a exercitar o necessário para slot de largura, etc, que você precisa usar. Quando eu estava trabalhando neles, eu primeiro carreguei a versão não responsiva do meu exemplo (`not-responsive.html`), então fui no [Modo de Design Responsivo](/pt-BR/docs/Tools/Responsive_Design_Mode) (Ferramentas >Desenvolvimento Web > Modo de Design Responsivo), que permite a você ver o layout da sua página como se ele estivesse visto através de uma variedade de diferentes tamanhos de telas.
+Há algumas [ferramenta de desenvolvimento](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) úteis em navegadores para ajudar a exercitar o necessário para slot de largura, etc, que você precisa usar. Quando eu estava trabalhando neles, eu primeiro carreguei a versão não responsiva do meu exemplo (`not-responsive.html`), então fui no [Modo de Design Responsivo](/pt-BR/docs/Tools/Responsive_Design_Mode) (Ferramentas > Desenvolvimento Web > Modo de Design Responsivo), que permite a você ver o layout da sua página como se ele estivesse visto através de uma variedade de diferentes tamanhos de telas.
 
 Eu configurei a largura da janela para 320px e depois 480px; para cada uma eu fui no [DOM Inspector](/pt-BR/docs/Tools/Page_Inspector), cliquei no elemento {{htmlelement("img")}} no qual nós estamos interessados, então olhei o tamanho na aba Box Model view no lado direito da tela. Isto deve dar para você a dica da largura de imagem que você precisa.
 
