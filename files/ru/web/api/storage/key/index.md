@@ -43,7 +43,7 @@ for (var i = 0; i < localStorage.length; i++) {
 ```
 
 > [!NOTE]
-> более реалистичный пример использования функции показан на странице [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> Более реалистичный пример использования функции показан на странице [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Спецификации
 
