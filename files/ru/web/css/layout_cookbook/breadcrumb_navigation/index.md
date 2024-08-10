@@ -23,7 +23,7 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 > [!NOTE]
 > В приведённом выше примере используются два селектора для вставки содержимого перед каждым li, кроме первого. Этого также можно добиться, используя только один селектор:
-> 
+>
 > ```css
 > .breadcrumb li:not(:first-child)::before {
 >   content: "→";
