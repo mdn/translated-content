@@ -52,7 +52,8 @@ localStorage.removeItem("myCat"); // вернёт undefined
 localStorage.clear();
 ```
 
-> **Примечание:** Пожалуйста, обратитесь к статье [Using the Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) для более подробных примеров.
+> [!NOTE]
+> Пожалуйста, обратитесь к статье [Using the Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) для более подробных примеров.
 
 ## Спецификации
 
