@@ -7,7 +7,8 @@ slug: Web/API/WebGL_API/WebGL_model_view_projection
 
 本文探讨如何在 WebGL 项目中获取数据，并将其投影到适当的空间以在屏幕上显示。它假定了你具备用于平移，缩放和旋转的基本矩阵数学知识。它解释了组成 3D 场景时通常使用的三个核心矩阵：模型，视图和投影矩阵。
 
-> **备注：** 本文还可作为 [MDN 内容套件](https://github.com/TatumCreative/mdn-model-view-projection) 提供。它还使用 `MDN`全局对象下可用的 [实用函数](https://github.com/TatumCreative/mdn-webgl) 集合。
+> [!NOTE]
+> 本文还可作为 [MDN 内容套件](https://github.com/TatumCreative/mdn-model-view-projection) 提供。它还使用 `MDN`全局对象下可用的 [实用函数](https://github.com/TatumCreative/mdn-webgl) 集合。
 
 ## 模型、视图、投影矩阵
 
@@ -31,7 +32,8 @@ WebGL 空间中的点和多边形的个体转化由基本的转换矩阵（例�
 
 本示例将创建一个自定义 WebGL 对象，该对象将在屏幕上绘制一个 2D 框。
 
-> **备注：** 每一个 WebGL 示例代码在此 [github repo](https://github.com/TatumCreative/mdn-model-view-projection/tree/master/lessons) 中可找到，并按章节组织。此外，每个章节底部都有一个 JSFiddle 链接。
+> [!NOTE]
+> 每一个 WebGL 示例代码在此 [github repo](https://github.com/TatumCreative/mdn-model-view-projection/tree/master/lessons) 中可找到，并按章节组织。此外，每个章节底部都有一个 JSFiddle 链接。
 
 #### WebGLBox Constructor
 
@@ -412,7 +414,8 @@ gl.uniformMatrix4fv(
 gl_Position = model * vec4(position, 1.0);
 ```
 
-> **备注：** 在 JavaScript 中，矩阵乘法需要自定义函数，而在着色器中，它使用了内置在语言中的简单的 \* 运算。
+> [!NOTE]
+> 在 JavaScript 中，矩阵乘法需要自定义函数，而在着色器中，它使用了内置在语言中的简单的 \* 运算。
 
 ### 结果
 

@@ -72,7 +72,8 @@ html {
 1. 浏览器支持不同的字体格式，因此你需要多种字体格式以获得良好的跨浏览器支持。例如，大多数现代浏览器都支持 WOFF / WOFF2(Web Open Font Format versions 1 and 2，Web 开放字体格式版本 1 和 2)，它是最有效的格式，但是旧版本 IE 只支持 EOT (Embedded Open Type，嵌入式开放类型) 的字体，你可能需要包括一个 SVG 版本的字体支持旧版本的 iPhone 和 Android 浏览器。我们将向你展示如何生成所需的代码。
 2. 字体一般都不能自由使用。你必须为他们付费，或者遵循其他许可条件，比如在代码中 (或者在你的站点上) 提供字体创建者。你不应该在没有适当的授权的情况下偷窃字体。
 
-> **备注：** Web 字体作为一种技术从 Internet Explorer 4 开始就得到了的支持！
+> [!NOTE]
+> Web 字体作为一种技术从 Internet Explorer 4 开始就得到了的支持！
 
 ## 自主学习:web 字体示例
 
@@ -93,7 +94,8 @@ html {
 
 在每种情况下，都要解压字体包 (Web 字体通常分布在包含字体文件和许可信息的 ZIP 文件中。) 你可能会在包中发现多个字体文件，一些字体是作为一个具有不同变体的家庭分布的，例如，瘦、中、粗体、斜体、斜体等等。对于这个例子，我们只是想让你自己考虑一个单一的字体文件。
 
-> **备注：** 在右边栏的“查找字体”部分中，你可以单击不同的标记和分类来筛选显示的选项。
+> [!NOTE]
+> 在右边栏的“查找字体”部分中，你可以单击不同的标记和分类来筛选显示的选项。
 
 ### 生成所需代码
 
@@ -131,7 +133,8 @@ html {
 
 ![](web-font-example.png)
 
-> **备注：** 如果对于要让它正常工作你有任何问题，可以自由地将你的版本与我们完成的文件进行比较——见 [web-font-finished.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.html) 和 [web-font-finished.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.css) ([运行完成的示例](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html))。
+> [!NOTE]
+> 如果对于要让它正常工作你有任何问题，可以自由地将你的版本与我们完成的文件进行比较——见 [web-font-finished.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.html) 和 [web-font-finished.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.css) ([运行完成的示例](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html))。
 
 ## 使用在线字体服务
 
@@ -146,7 +149,8 @@ html {
 5. 在生成的屏幕中，首先需要复制所显示的 HTML 代码行，并将其粘贴到 HTML 文件的头部。将其置于现有的{{htmlelement("link")}}元素之上，使得字体是导入的，然后在你的 CSS 中使用它。
 6. 然后，你需要将 CSS 声明复制到你的 CSS 中，以便将自定义字体应用到你的 HTML。
 
-> **备注：** 如果你需要对比我们的，你可以在 [google-font.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.html)和[google-font.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.css)找到完整版本的。（[见预览版](http://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)）
+> [!NOTE]
+> 如果你需要对比我们的，你可以在 [google-font.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.html)和[google-font.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.css)找到完整版本的。（[见预览版](http://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)）
 
 ## 关于 @font-face 的更多细节
 
@@ -173,7 +177,8 @@ html {
 - `src`：这些行指定要导入到你的 CSS(`url`部分) 的字体文件的路径，以及每种字体文件的格式 (`format`部分)。后面的部分不是必要的，但是声明它是很有用的，因为它允许浏览器更快地找到可以使用的字体。可以列出多个声明，用逗号分隔——浏览器会搜索并使用它能找到的第一个——因此，最好是把新的、更好的格式比如 WOFF2 放在前面，把偏老的，不是那么好的格式像 TTF 这样的放在后面。唯一的例外是 EOT 字体——他们首先在旧版本的 IE 中修复了几个 bug，这样它就会尝试使用它找到的第一件东西，即使它不能真正使用字体。
 - {{cssxref("font-weight")}}/{{cssxref("font-style")}}: 这些行指定字体的粗细，以及它是否斜体。如果你正在导入相同字体的多个粗细，你可以指定它们的粗细/样式，然后使用不同的{{cssxref("font-weight")}}/{{cssxref("font-style")}}来选择它们之间的不同值，而不必调用字体种类不同名称的所有不同成员。Roger Johansson 写的 [@font-face tip: define font-weight and font-style to keep your CSS simple](http://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/) 更详细地说明了该做些什么。
 
-> **备注：** 你还可以为你的 web 字体指定特定的{{cssxref("font-variant")}} 和 {{cssxref("font-stretch")}} ) 值。在较新的浏览器中，你还可以指定一个{{cssxref("unicode-range")}}值，这是一个你需要使用什么 web 字体的特定范围的字符——在支持浏览器中，只有指定的字符才会被下载，省去了不必要的下载。Drew McLellan 写的[Creating Custom Font Stacks with Unicode-Range](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/)在如何利用这个问题上提供了一些有用的建议。
+> [!NOTE]
+> 你还可以为你的 web 字体指定特定的{{cssxref("font-variant")}} 和 {{cssxref("font-stretch")}} ) 值。在较新的浏览器中，你还可以指定一个{{cssxref("unicode-range")}}值，这是一个你需要使用什么 web 字体的特定范围的字符——在支持浏览器中，只有指定的字符才会被下载，省去了不必要的下载。Drew McLellan 写的[Creating Custom Font Stacks with Unicode-Range](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/)在如何利用这个问题上提供了一些有用的建议。
 
 ## 总结
 

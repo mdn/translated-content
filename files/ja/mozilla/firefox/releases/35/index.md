@@ -13,7 +13,7 @@ Gecko 35 を搭載した Firefox 35 は、米国時間 2015 年 1 月 13 日に�
 
 ハイライト:
 
-- [インスペクターで ::before および ::after 疑似要素を確認できるようになりました](/ja/docs/Tools/Page_Inspector#.3A.3Abefore_and_.3A.3Aafter)。
+- [インスペクターで ::before および ::after 擬似要素を確認できるようになりました](/ja/docs/Tools/Page_Inspector#.3A.3Abefore_and_.3A.3Aafter)。
 - [CSS ソースマップがデフォルトで有効になりました](/ja/docs/Tools/Style_Editor#Source_map_support)。
 - [インスペクターから "DOM プロパティの表示" が可能になりました](/ja/docs/Tools/Page_Inspector#Element_popup_menu_2)。
 

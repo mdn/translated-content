@@ -157,7 +157,8 @@ function toggleBox() {
 
 Toggling the box to `display: none` has the effect of aborting its animation. In browsers that support `animationcancel`, the event is fired and this handler is called.
 
-> **备注：** At this time, no major browser supports `animationcancel`.
+> [!NOTE]
+> At this time, no major browser supports `animationcancel`.
 
 ### 结果
 

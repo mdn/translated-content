@@ -68,7 +68,8 @@ _Hérite des méthodes de son parent, {{domxref("AudioNode")}}._
 
 Cet exemple crée un tampon de deux secondes, le remplit avec du bruit blanc et le joue par l'intermédiaire d'un `AudioBufferSourceNode`.
 
-> **Note :** Vous pouvez aussi [exécuter the code](http://mdn.github.io/audio-buffer/), ou [regarder le code source](https://github.com/mdn/audio-buffer).
+> [!NOTE]
+> Vous pouvez aussi [exécuter the code](http://mdn.github.io/audio-buffer/), ou [regarder le code source](https://github.com/mdn/audio-buffer).
 
 ```js
 var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
@@ -117,7 +118,8 @@ bouton.onclick = function () {
 };
 ```
 
-> **Note :** Pour un exemple de `decodeAudioData()`, voir la page {{domxref("AudioContext.decodeAudioData")}}.
+> [!NOTE]
+> Pour un exemple de `decodeAudioData()`, voir la page {{domxref("AudioContext.decodeAudioData")}}.
 
 ## Spécifications
 

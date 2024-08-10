@@ -60,7 +60,8 @@ Al igual que con otras propiedades en la especificación, tenemos algunas propie
 - {{cssxref("inset-inline")}} — pone los dos en línea juntos.
 - {{cssxref("inset-block")}} — pone los dos bloques juntos.
 
-> **Nota:** Los navegadores que han implementado la especificación de propiedades lógicas han implementado hasta ahora las asignaciones directas y no las abreviaturas nuevas. Consulte la sección de datos de compatibilidad del navegador en cada referencia de página de propiedades para obtener más detalles.
+> [!NOTE]
+> Los navegadores que han implementado la especificación de propiedades lógicas han implementado hasta ahora las asignaciones directas y no las abreviaturas nuevas. Consulte la sección de datos de compatibilidad del navegador en cada referencia de página de propiedades para obtener más detalles.
 
 ## Ejemplo: Valores lógicos para text-align
 

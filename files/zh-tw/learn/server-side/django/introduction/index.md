@@ -68,7 +68,8 @@ Django 最初在 2003 年到 2005 年間，由負責創建和維護報紙網站�
 
 Django 不斷發展壯大 — 從 2008 年 9 月的第一個里程碑版本（1.0），到最近發布的（2.0）-（2018）版本。每個版本都添加了新功能，和錯誤修復，從支持新類型的數據庫，模版引擎和緩存，到添加 「通用」 視圖函數和類別（這減少了開發人員在一些編程任務必須編寫的代碼量）。
 
-> **備註：** 查看 Django 網站上的發行說明 [release notes](https://docs.djangoproject.com/en/2.0/releases/)，看看最近版本發生了什麼變化，以及 Django 能做多少工作
+> [!NOTE]
+> 查看 Django 網站上的發行說明 [release notes](https://docs.djangoproject.com/en/2.0/releases/)，看看最近版本發生了什麼變化，以及 Django 能做多少工作
 
 Django 現在是一個蓬勃發展的合作開源項目，擁有數千個用戶和貢獻者。雖然它仍然具有反映其起源的一些功能，但 Django 已經發展成為，能夠開發任何類型的網站的多功能框架。
 
@@ -106,7 +107,8 @@ Django 網絡應用程序通常將處理每個步驟的代碼分組到單獨的�
 
 - **Templates:** 模板是定義文件（例如 HTML 頁面）的結構或佈局的文本文件，用於表示實際內容的佔位符。一個視圖可以使用 HTML 模板，從數據填充它動態地創建一個 HTML 頁面模型。可以使用模板來定義任何類型的文件的結構;它不一定是 HTML！
 
-> **備註：** Django 將此組織稱為「模型視圖模板（MVT）」架構。它與更加熟悉的[Model View Controller](/zh-TW/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)架構有許多相似之處.
+> [!NOTE]
+> Django 將此組織稱為「模型視圖模板（MVT）」架構。它與更加熟悉的[Model View Controller](/zh-TW/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)架構有許多相似之處.
 
 以下部分將為你提供 Django 應用程序的這些主要部分的想法（稍後我們將在進一步詳細介紹後，我們將在開發環境中進行更詳細的介紹）。
 
@@ -147,7 +149,8 @@ def index(request):
     return HttpResponse('Hello from Django!')
 ```
 
-> **備註：** 一點點 Python:
+> [!NOTE]
+> 一點點 Python:
 >
 > - [Python 模塊](https://docs.python.org/3/tutorial/modules.html)是函數的「庫」，存放在單獨的文件中，我們可能希望在代碼中使用。在這裡，我們只導入了`HttpResponse`從對象`django.http`模塊，使我們可以在視圖中使用
 >   `from django.http import HttpResponse`。
@@ -179,7 +182,8 @@ class Team(models.Model):
     team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
 ```
 
-> **備註：** Python 小知識:
+> [!NOTE]
+> Python 小知識:
 >
 > - Python 支持「面向對象編程」，這是一種編程風格，我們將代碼組織到對像中，其中包括用於對該對象進行操作的相關數據和功能。對像也可以從其他對象繼承／擴展／派生，允許相關對象之間的共同行為被共享。在 Python 中，我們使用關鍵字**Class**定義對象的「藍圖」。我們可以根據類中的模型創建類型的多個特定實例。
 > - 例如，我們有個**Team**類，它來自於**Model**類。這意味著它是一個模型，並且將包含模型的所有方法，但是我們也可以給它自己的專門功能。在我們的模型中，我們定義了我們的數據庫需要存儲我們的數據字段，給出它們的具體名稱。Django 使用這些定義（包括字段名稱）來創建底層數據庫。

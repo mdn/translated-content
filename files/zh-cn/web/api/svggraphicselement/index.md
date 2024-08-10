@@ -9,7 +9,8 @@ slug: Web/API/SVGGraphicsElement
 
 {{InheritanceDiagram(600, 120)}}
 
-> **备注：** 该接口是 SVG 2 中引入的，它取代了 SVG 1.1 中的{{domxref("SVGLocatable")}}和{{domxref("SVGTransformable")}}接口。
+> [!NOTE]
+> 该接口是 SVG 2 中引入的，它取代了 SVG 1.1 中的{{domxref("SVGLocatable")}}和{{domxref("SVGTransformable")}}接口。
 
 ## 属性
 

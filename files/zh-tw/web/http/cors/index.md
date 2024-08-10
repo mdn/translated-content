@@ -72,7 +72,8 @@ CORS 失敗會導致錯誤，但出於安全原因，關於錯誤的具體訊息
 - 如果請求是使用 {{domxref("XMLHttpRequest")}} 對象發出的，則在通過 {{domxref("XMLHttpRequest.upload")}} 屬性返回的對象上未註冊任何事件監聽器（即給定一個 {{domxref("XMLHttpRequest")}} 實例 `xhr`，沒有代碼調用 `xhr.upload.addEventListener()` 來添加事件監聽器以監控上傳）。
 - 請求中不使用 {{domxref("ReadableStream")}} 對象。
 
-> **備註：** WebKit Nightly 和 Safari Technology Preview 對 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}} 和 {{HTTPHeader("Content-Language")}} 標頭中的值施加了額外的限制。如果這些標頭中的任何一個具有「非標準」值，WebKit/Safari 不會認為該請求是「簡單請求」。WebKit/Safari 認為「非標準」的值未在文檔中說明，除了以下 WebKit bug：
+> [!NOTE]
+> WebKit Nightly 和 Safari Technology Preview 對 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}} 和 {{HTTPHeader("Content-Language")}} 標頭中的值施加了額外的限制。如果這些標頭中的任何一個具有「非標準」值，WebKit/Safari 不會認為該請求是「簡單請求」。WebKit/Safari 認為「非標準」的值未在文檔中說明，除了以下 WebKit bug：
 >
 > - [對於非標準的 CORS 安全列表請求標頭 Accept、Accept-Language 和 Content-Language 要求進行預檢](https://webkit.org/b/165178)
 > - [允許在簡單 CORS 請求中 Accept、Accept-Language 和 Content-Language 標頭中包含逗號](https://webkit.org/b/165566)
@@ -138,7 +139,8 @@ Access-Control-Allow-Origin: *
 Access-Control-Allow-Origin: https://foo.example
 ```
 
-> **備註：** 當回應[帶有憑證的請求](#requests_with_credentials)時，伺服器**必須**在 `Access-Control-Allow-Origin` 標頭的值中指定一個來源，而不是指定「`*`」通配符。
+> [!NOTE]
+> 當回應[帶有憑證的請求](#requests_with_credentials)時，伺服器**必須**在 `Access-Control-Allow-Origin` 標頭的值中指定一個來源，而不是指定「`*`」通配符。
 
 ### 預檢請求
 
@@ -166,7 +168,8 @@ fetchPromise.then((response) => {
 
 ![進行預檢請求的圖解](preflight_correct.png)
 
-> **備註：** 如下所述，實際的 `POST` 請求不包括 `Access-Control-Request-*` 標頭。它們僅在 `OPTIONS` 請求中需要。
+> [!NOTE]
+> 如下所述，實際的 `POST` 請求不包括 `Access-Control-Request-*` 標頭。它們僅在 `OPTIONS` 請求中需要。
 
 讓我們看看用戶端和伺服器之間的完整交換。第一個交換是*預檢請求／回應*：
 
@@ -275,7 +278,8 @@ CORS 協定最初要求該行為，但[後來已更改為不再需要](https://g
 
 ### 具有憑證的請求
 
-> **備註：** 當對不同域進行帶憑證的請求時，仍將適用第三方 Cookie 政策。無論伺服器和用戶端的任何設置如本章所述，該政策始終會強制執行。
+> [!NOTE]
+> 當對不同域進行帶憑證的請求時，仍將適用第三方 Cookie 政策。無論伺服器和用戶端的任何設置如本章所述，該政策始終會強制執行。
 
 由 {{domxref("fetch()")}} 或 {{domxref("XMLHttpRequest")}} 和 CORS 公開的最有趣的功能是能夠發出「帶憑證」的請求，這些請求會考慮到 [HTTP cookies](/zh-TW/docs/Web/HTTP/Cookies) 和 HTTP 認證訊息。默認情況下，在跨源 `fetch()` 或 `XMLHttpRequest` 調用中，瀏覽器將*不*發送憑證。
 
@@ -336,7 +340,8 @@ Content-Type: text/plain
 
 CORS 預檢請求絕不能包含憑證。預檢請求的*回應*必須指定 `Access-Control-Allow-Credentials: true` 以指示實際請求可以攜帶憑證。
 
-> **備註：** 一些企業身份驗證服務要求在預檢請求中發送 TLS 用戶端憑證，這違反了[Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) 規範。
+> [!NOTE]
+> 一些企業身份驗證服務要求在預檢請求中發送 TLS 用戶端憑證，這違反了[Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) 規範。
 >
 > Firefox 87 允許通過將偏好設置 `network.cors_preflight.allow_client_cert` 設為 `true` 來啟用這種不合規行為（[Firefox bug 1511151](https://bugzil.la/1511151)）。基於 Chromium 的瀏覽器目前在 CORS 預檢請求中總是發送 TLS 用戶端憑證（[Chrome bug 775438](https://crbug.com/775438)）。
 

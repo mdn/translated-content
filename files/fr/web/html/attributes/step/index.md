@@ -131,7 +131,8 @@ Les valeurs valides comprennent `1,2`, `3,2`, `5,2`, `7,2`, `9,2`, `11,2`, et ai
 
 {{EmbedLiveSample("L'impact_de_min_sur_step","",50)}}
 
-> **Note :** Lorsque les données saisies par l'utilisateur ne respectent pas la configuration indiquée par l'incrément, la valeur est considérée comme non valide dans la validation des contraintes et correspondra aux pseudoclasses [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range).
+> [!NOTE]
+> Lorsque les données saisies par l'utilisateur ne respectent pas la configuration indiquée par l'incrément, la valeur est considérée comme non valide dans la validation des contraintes et correspondra aux pseudoclasses [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range).
 
 Voir [Validation côté client](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) et [`stepMismatch`](/fr/docs/Web/API/ValidityState/stepMismatch) pour plus d'informations.
 

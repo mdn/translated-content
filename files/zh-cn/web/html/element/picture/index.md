@@ -21,7 +21,8 @@ slug: Web/HTML/Element/picture
 - **艺术指导**（Art direction）。针对不同 `media` 条件裁剪或修改图像（例如，在较小的显示器或图像的详细内容太多时显示较为图像的简单版本）。
 - 遇到不支持的特定格式时，**提供替代的图像格式**。
 
-  > **备注：** 例如，像 [AVIF](/zh-CN/docs/Web/Media/Formats/Image_types#avif_图像) 或 [WEBP](/zh-CN/docs/Web/Media/Formats/Image_types#webp_图像) 这样的新格式具有诸多优点，但可能不受浏览器的支持。可以在[图像文件格式和格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)中找到支持的图像格式的列表。
+  > [!NOTE]
+  > 例如，像 [AVIF](/zh-CN/docs/Web/Media/Formats/Image_types#avif_图像) 或 [WEBP](/zh-CN/docs/Web/Media/Formats/Image_types#webp_图像) 这样的新格式具有诸多优点，但可能不受浏览器的支持。可以在[图像文件格式和格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)中找到支持的图像格式的列表。
 
 - 通过加载最适合观看者显示的图像来**节省带宽和提高页面加载速度**。
 
@@ -64,7 +65,8 @@ slug: Web/HTML/Element/picture
 
 你可以使用 {{cssxref("object-position")}} 属性调整元素框架内图像的位置，用 {{cssxref("object-fit")}} 属性控制图片如何调整大小来适应框架。
 
-> **备注：** 在子 `<img>` 元素上使用这些属性，不是 `<picture>` 元素。
+> [!NOTE]
+> 在子 `<img>` 元素上使用这些属性，不是 `<picture>` 元素。
 
 ## 示例
 

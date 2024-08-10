@@ -102,14 +102,16 @@ API 是預先製作完成的程式模組，支援開發者實現困難或無法�
 - {{domxref("Canvas_API","Canvas")}} 和 {{domxref("WebGL_API","WebGL")}} API 可以讓你在網頁創造 2D 動畫及 3D 圖像。人們正使用這些技術來作一些令人驚奇的事，參見 [Chrome Experiments](https://www.chromeexperiments.com/) 及 [webglsamples](https://webglsamples.org/).
 - [Audio 和 Video API](/zh-TW/docs/Web/Apps/Fundamentals/Audio_and_video_delivery) 像 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC")}} 一樣讓你可以使用多媒體做真正有趣的事情，例如在網頁中播放音樂或影片，或由網路攝影機頡取你的影像顯示在另一個人電腦裡（試試我們的[簡單例子](https://chrisdavidmills.github.io/snapshot/)來了解）。
 
-> **備註：** 上面的許多範例無法在舊版的瀏覽器上運作。使用現代的瀏覽器像是 Firefox、Chrome、Edge 或 Opera 來嘗試執行你的程式總是比較好的。當你接近要交付作為產品的程式（也就是實際的用戶將要使用的時候)，就需要思考關於[跨瀏覽器測試](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing)的事情。
+> [!NOTE]
+> 上面的許多範例無法在舊版的瀏覽器上運作。使用現代的瀏覽器像是 Firefox、Chrome、Edge 或 Opera 來嘗試執行你的程式總是比較好的。當你接近要交付作為產品的程式（也就是實際的用戶將要使用的時候)，就需要思考關於[跨瀏覽器測試](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing)的事情。
 
 **第三方 API** 預設不內建在瀏覽器裡，你通常由網路上取得他們的程式碼與資訊。例如：
 
 - [Twitter API](https://dev.twitter.com/overview/documentation) 能讓你做很多事，像是顯示最新的 Twitter 貼文在你的網站上。
 - [Google Maps API](https://developers.google.com/maps/) 能讓你在自己的網站中嵌入訂製的地圖或其他相關功能。
 
-> **備註：** 我們不會在此涵蓋這些進階的 APIs。你可以在我們的 [客戶端網頁 API 單元](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs)找到更多資訊。
+> [!NOTE]
+> 我們不會在此涵蓋這些進階的 APIs。你可以在我們的 [客戶端網頁 API 單元](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs)找到更多資訊。
 
 那裡也有很多的東西。然而不要一頭熱陷進去。你不會在學習 JavaScript 24 小時後，就能開發出下一個 Facebook、Google 地圖或 Instagram 之類的產品出來。有許多的基礎的東西得先了解，這也是你在這裡的原因，讓我們繼續吧！
 
@@ -127,7 +129,8 @@ API 是預先製作完成的程式模組，支援開發者實現困難或無法�
 
 瀏覽器的每個分頁有獨立的空間來執行程式碼（技術上稱「執行環境 excution environments」），這表示在絕大部分的情形之下，每個分頁的程式碼是獨立運行的，不能直接影響其它分頁（或網站）裡的程式。這是一個好的安全措施，少了它，有心人會開始寫程式來偷取網站的資料，或是作其它不好的事情。
 
-> **備註：** 是有一些安全的方式能在不同的網頁、分頁之間傳遞程式和資料，不過這些進階的技術不會在涵蓋在這個單元中。
+> [!NOTE]
+> 是有一些安全的方式能在不同的網頁、分頁之間傳遞程式和資料，不過這些進階的技術不會在涵蓋在這個單元中。
 
 ### JavaScript 的執行順序
 
@@ -148,7 +151,8 @@ function updateName() {
 
 如果你交換前兩行的程式碼，它將不再正常運作。取而代之的，[瀏覽器開發主控台](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)會回報一個錯誤訊息：「`TypeError: para is undefined`」，意思是 `para` 物件尚不存在，所以我們在它上頭增加事件偵聽器。
 
-> **備註：** 這是一個很常見的錯誤，在你嘗試對物件進行操作之前，你需要注意它們已經存在。
+> [!NOTE]
+> 這是一個很常見的錯誤，在你嘗試對物件進行操作之前，你需要注意它們已經存在。
 
 ### 直譯式與編譯式程式語言
 
@@ -208,9 +212,11 @@ JavaScript 是一個輕量的直接程式語言。網頁瀏覽器收到文字格
 
 5. 儲存你的檔案並且重新整理網頁，現在你會發現每次點擊按鈕，都會在下方產生一個新的文字段落。
 
-> **備註：** 如果你的版本不能正常運作，重新按照步驟再操作一次，檢查每一步都正確。你下載的範例是 `.html` 結尾的檔名？你加入的 {{htmlelement("script")}} 元素在 `</head>` 標籤的前面？你輸入的 JavaScript 與上面提供的一模一樣？**JavaScript 程式大小寫，而且很挑剔，所以你輸入的語法要一模一樣，不然可能會無法運作。**
+> [!NOTE]
+> 如果你的版本不能正常運作，重新按照步驟再操作一次，檢查每一步都正確。你下載的範例是 `.html` 結尾的檔名？你加入的 {{htmlelement("script")}} 元素在 `</head>` 標籤的前面？你輸入的 JavaScript 與上面提供的一模一樣？**JavaScript 程式大小寫，而且很挑剔，所以你輸入的語法要一模一樣，不然可能會無法運作。**
 
-> **備註：** GitHub 上有完整版本的範例在 [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)（[看線上版本](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)）。
+> [!NOTE]
+> GitHub 上有完整版本的範例在 [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)（[看線上版本](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)）。
 
 ### 外部的 JavaScript
 
@@ -241,7 +247,8 @@ JavaScript 是一個輕量的直接程式語言。網頁瀏覽器收到文字格
 
 4. 儲存檔案並在你的瀏覽器執行重新整理，你應該會看到一樣的結果！雖然是一樣的結果，但現在我們是由外部的檔案來引入 JavaScript 程式。就組織程式碼，讓程式可以在多個 HTML 間重複被使用而言，這通常是好的作法。另外，因為少了一大堆程式碼在裡頭，也能夠讓 HTML 檔案更容易被閱讀。
 
-> **備註：** 你可以在 GitHub 上找到這個版本的 [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) 與 [script.js](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js) （[看線上版本](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)）。
+> [!NOTE]
+> 你可以在 GitHub 上找到這個版本的 [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) 與 [script.js](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js) （[看線上版本](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)）。
 
 ### 行內的 JavaScript
 
@@ -279,7 +286,8 @@ for (var i = 0; i < buttons.length ; i++) {
 
 這或許看起來比 `onclick` 屬性還長一點，但是能套用在全部的按鈕上，無論頁面上有多少按鈕，也不管未來新增或移除多少個（按鈕）。這段 JavaScript 程式都不需要改變。
 
-> **備註：** 試著編輯你自己版本的 `apply-javascript.html` ，在裡面多添加一點按鈕。當你重新載入網頁，你應該會發現所有按鈕，按下去的時候都會建立一的段落。很簡潔吧！
+> [!NOTE]
+> 試著編輯你自己版本的 `apply-javascript.html` ，在裡面多添加一點按鈕。當你重新載入網頁，你應該會發現所有按鈕，按下去的時候都會建立一的段落。很簡潔吧！
 
 ### 腳本載入策略
 
@@ -305,7 +313,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 在這個例子中，腳本（JavaScript 程式）與 HTML 會同時載入，所以程式將正確地執行。
 
-> **備註：** 在外部程式的範例裡，我們不需要使用 `DOMContentLoaded` 事件因為 `defer` 為我們解決問題了。而在內部程式的範例裡我們沒用 `defer` 屬性，是因為 `defer` 屬性只能用於外部的腳本。
+> [!NOTE]
+> 在外部程式的範例裡，我們不需要使用 `DOMContentLoaded` 事件因為 `defer` 為我們解決問題了。而在內部程式的範例裡我們沒用 `defer` 屬性，是因為 `defer` 屬性只能用於外部的腳本。
 
 這個問題有另一個舊式的解決方法，就是將 `script` 元素放在 `body` 元素的底部（剛好在 `</body>` 的前面），如此它就會在所有 HTML 被解析完之後才被載入。這個方法的問題在於腳本的載入與解析工作會被完成擋住，一直到所有 HTML 載入完成。在擁有許多 JavaScript 的大型網站中，這樣會導致嚴重的效能問題，拖慢你的網站。
 
@@ -391,7 +400,8 @@ for (var i = 0; i < buttons.length; i++) {
 }
 ```
 
-> **備註：** 一般而言，多寫註解比少寫來得好。但是要注意，如果你發現加了許多註解在說明變數的用途（那麼你的變數命名可能需要更直觀，更帶有意義），或是解釋非常簡單的操作（也許你的程式碼太過於複雜）。
+> [!NOTE]
+> 一般而言，多寫註解比少寫來得好。但是要注意，如果你發現加了許多註解在說明變數的用途（那麼你的變數命名可能需要更直觀，更帶有意義），或是解釋非常簡單的操作（也許你的程式碼太過於複雜）。
 
 ## 總結
 

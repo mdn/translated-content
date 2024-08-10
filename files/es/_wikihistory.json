@@ -5340,6 +5340,10 @@
     "modified": "2020-10-12T08:06:57.683Z",
     "contributors": ["SphinxKnight", "MarioA19", "geryescalier", "karlalhdz"]
   },
+  "Web/API/Web_Animations_API/Tips": {
+    "modified": "2020-08-16T13:05:40.057Z",
+    "contributors": ["CamilaAchury", "SphinxKnight", "AlbertoVargasMoreno"]
+  },
   "Web/API/Web_Audio_API": {
     "modified": "2019-03-23T23:31:19.634Z",
     "contributors": ["estebanborai", "AngelFQC", "Pau_Ilargia", "maedca"]
@@ -5487,6 +5491,10 @@
   "Web/API/Window/error_event": {
     "modified": "2019-03-23T22:53:42.268Z",
     "contributors": ["wbamberg", "galegosimpatico"]
+  },
+  "Web/API/Window/fetch": {
+    "modified": "2020-10-15T22:01:57.457Z",
+    "contributors": ["fscholz", "jagomf"]
   },
   "Web/API/Window/focus_event": {
     "modified": "2019-03-18T21:31:41.059Z",
@@ -5766,10 +5774,6 @@
   "Web/API/createImageBitmap": {
     "modified": "2020-10-15T22:14:17.553Z",
     "contributors": ["Bumxu"]
-  },
-  "Web/API/fetch": {
-    "modified": "2020-10-15T22:01:57.457Z",
-    "contributors": ["fscholz", "jagomf"]
   },
   "Web/API/notification/icon": {
     "modified": "2019-03-23T22:59:32.492Z",
@@ -6534,10 +6538,6 @@
   "Web/CSS/CSS_Types": {
     "modified": "2019-03-18T21:35:39.343Z",
     "contributors": ["lajaso"]
-  },
-  "Web/CSS/CSS_animations/Tips": {
-    "modified": "2020-08-16T13:05:40.057Z",
-    "contributors": ["CamilaAchury", "SphinxKnight", "AlbertoVargasMoreno"]
   },
   "Web/CSS/CSS_animations/Using_CSS_animations": {
     "modified": "2020-07-06T16:16:21.887Z",
@@ -10787,15 +10787,15 @@
       "Mgjbot"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@iterator": {
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator": {
     "modified": "2020-10-15T22:06:23.853Z",
     "contributors": ["lajaso"]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@species": {
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.species": {
     "modified": "2020-10-15T22:07:11.429Z",
     "contributors": ["lajaso"]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@unscopables": {
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables": {
     "modified": "2020-10-15T22:04:47.805Z",
     "contributors": ["lajaso"]
   },
@@ -11140,7 +11140,7 @@
       "tamat"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species": {
+  "Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species": {
     "modified": "2020-10-15T22:05:03.686Z",
     "contributors": ["lajaso"]
   },
@@ -12137,7 +12137,7 @@
       "Chofoteddy"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Set/@@iterator": {
+  "Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator": {
     "modified": "2020-10-15T22:23:37.310Z",
     "contributors": ["devtoni"]
   },

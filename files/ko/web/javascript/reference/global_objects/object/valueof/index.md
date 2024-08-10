@@ -49,7 +49,8 @@ MyNumberType.prototype.valueOf = function () {
 myNumberType.valueOf();
 ```
 
-> **참고:** 문자열 문맥에서 객체-문자열 변환은 {{jsxref("Object.toString", "toString()")}} 메서드를 사용하며, {{jsxref("String")}} 객체의 `valueOf`를 사용해 원시 문자열로 변환하는 것과는 다릅니다. 모든 객체는, 비록 결과가 "`[object type]`" 뿐이라도 문자열 변환 기능을 가지고 있습니다. 그러나 대다수의 객체는 숫자, 불리언, 함수 등으로 변환되지 않습니다.
+> [!NOTE]
+> 문자열 문맥에서 객체-문자열 변환은 {{jsxref("Object.toString", "toString()")}} 메서드를 사용하며, {{jsxref("String")}} 객체의 `valueOf`를 사용해 원시 문자열로 변환하는 것과는 다릅니다. 모든 객체는, 비록 결과가 "`[object type]`" 뿐이라도 문자열 변환 기능을 가지고 있습니다. 그러나 대다수의 객체는 숫자, 불리언, 함수 등으로 변환되지 않습니다.
 
 ## 예제
 

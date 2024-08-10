@@ -81,7 +81,8 @@ Cependant, les boîtes ont aussi un type de positionnement intérieur, qui décr
 
 Ce type de positionnement intérieur peut naturellement être modifié, en utilisant la valeur `flex` de la propriété `display`. Ainsi, si on donne la propriété `display: flex;` à un élément, son type de positionnement extérieur est "en bloc" (`block`), mais son type de positionnement intérieur est modifié en `flex`. Tout élément directement enfant de cette boîte se voit alors changé en élément flex, et sera mis en page selon les règles précisées dans les spécifications de [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox), dont on reparlera plus tard.
 
-> **Note :** Pour en apprendre d'avantage sur les valeurs prises par la propriété display, et le comportement des boîtes dans une mise en page en bloc ou en ligne, jettez un coup d'oeil au guide MDN sur la [Disposition en ligne et en bloc](/fr/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow).
+> [!NOTE]
+> Pour en apprendre d'avantage sur les valeurs prises par la propriété display, et le comportement des boîtes dans une mise en page en bloc ou en ligne, jettez un coup d'oeil au guide MDN sur la [Disposition en ligne et en bloc](/fr/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow).
 
 Lorsque vous en apprendrez plus sur la mise en page en CSS, vous découvrirez une variété d'autres valeurs de positionnement intérieur pour une boîte, tel que `flex`, ou encore [`grid`](/fr/docs/Learn/CSS/CSS_layout/Grids).
 
@@ -166,7 +167,8 @@ L'espace occupé par notre boîte dans le modèle standard vaut alors 410px (350
 
 ![Illustration de la taille de la boîte lorsqu'on utilise le modèle de boîte standard.](standard-box-model.png)
 
-> **Note :** La marge n'est pas comptabilisée dans la taille totale de la boîte — car bien qu'elle affecte l'espace que la boîte va prendre en définitive dans la page, il ne s'agit que de l'espace extérieur à la boîte. La zone couverte par la boîte s'arrête donc à la bordure et ne s'étend pas à la marge.
+> [!NOTE]
+> La marge n'est pas comptabilisée dans la taille totale de la boîte — car bien qu'elle affecte l'espace que la boîte va prendre en définitive dans la page, il ne s'agit que de l'espace extérieur à la boîte. La zone couverte par la boîte s'arrête donc à la bordure et ne s'étend pas à la marge.
 
 ### Le modèle de boîte CSS alternatif
 
@@ -195,7 +197,8 @@ html {
 }
 ```
 
-> **Note :** Pour l'anecdote, le navigateur Internet Explorer utilisait historiquement le modèle alternatif par defaut — sans pour autant fournir un moyen de passer à l'autre modèle !
+> [!NOTE]
+> Pour l'anecdote, le navigateur Internet Explorer utilisait historiquement le modèle alternatif par defaut — sans pour autant fournir un moyen de passer à l'autre modèle !
 
 ## Manipuler les modèles de boîte
 
@@ -205,7 +208,8 @@ Dans l'exemple ci-dessous, se trouvent deux boîtes. Ces deux boîtes possèdent
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/box-models.html", '100%', 1000)}}
 
-> **Note :** vous pouvez trouver une solution [ici](https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-box-model).
+> [!NOTE]
+> Vous pouvez trouver une solution [ici](https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-box-model).
 
 ### Utiliser les outils de développement pour voir le modèle de boîte
 

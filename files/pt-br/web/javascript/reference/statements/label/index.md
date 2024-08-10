@@ -23,7 +23,9 @@ label :
 - `declaração`
   - : Uma declaração qualquer. _break_ pode ser utilizado com qualquer declaração entiquetada (com _label_) , assim como o _continue_ também pode.
 
-> **Aviso:** ### Evite usar labelsLabels não são comunmente utilizados em JavaScript já que estes fazem com que programas fiquei mais difíceis de ler e entender. Sempre que possível evite utilizar labels e, dependendo dos casos, prefira [chamar funções](/pt-BR/docs/JavaScript/Reference/Statements/function) ou [lançar um erro](/pt-BR/docs/JavaScript/Reference/Statements/throw).
+### Evite usar labels
+
+Labels não são comunmente utilizados em JavaScript já que estes fazem com que programas fiquei mais difíceis de ler e entender. Sempre que possível evite utilizar labels e, dependendo dos casos, prefira [chamar funções](/pt-BR/docs/JavaScript/Reference/Statements/function) ou [lançar um erro](/pt-BR/docs/JavaScript/Reference/Statements/throw)
 
 ## Exemplos
 

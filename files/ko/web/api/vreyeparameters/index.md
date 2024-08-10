@@ -9,7 +9,8 @@ slug: Web/API/VREyeParameters
 
 {{domxref("VRDisplay.getEyeParameters()")}} 방법을 통해 액세스 할 수 있습니다.
 
-> **경고:** The values in this interface should not be used to compute view or projection matrices. In order to ensure the widest possible hardware compatibility use the matrices provided by {{domxref("VRFrameData")}}.
+> [!WARNING]
+> The values in this interface should not be used to compute view or projection matrices. In order to ensure the widest possible hardware compatibility use the matrices provided by {{domxref("VRFrameData")}}.
 
 ## 속성
 

@@ -9,7 +9,8 @@ l10n:
 
 **`sizeX`** は {{domxref("VRStageParameters")}} インターフェイスの読み取り専用プロパティで、プレイエリア境界の幅をメートル単位で返します。
 
-> **メモ:** このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 境界は、安全性を目的として、床の平面上に軸に沿った矩形として定義されています。コンテンツは、この境界を超えてユーザが動いてしまうような動作をすべてきではありません。しかし、ユーザは境界を無視して動くこと自体は可能で、ユーザ位置がこの矩形境界の外側になることもあります。矩形の中心は、立位空間座標における (0,0,0) です。
 

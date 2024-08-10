@@ -18,7 +18,7 @@ SLD (Second Level Domain; セカンドレベルドメイン) は {{Glossary("TLD
 
    1. [SLD](https://ja.wikipedia.org/wiki/セカンドレベルドメイン)
 
-2. [用語集](/ja/docs/Glossary)
+2. 関連用語:
 
    1. {{Glossary("DNS")}}
    2. {{Glossary("Domain", "ドメイン")}}

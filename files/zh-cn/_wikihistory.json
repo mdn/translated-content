@@ -6693,10 +6693,6 @@
     "modified": "2020-11-22T03:12:30.867Z",
     "contributors": ["BuluGuy", "laampui", "ice-i-snow"]
   },
-  "Web/API/CanvasRenderingContext2D/scrollPathIntoView": {
-    "modified": "2019-03-23T22:53:40.759Z",
-    "contributors": ["ice-i-snow"]
-  },
   "Web/API/CanvasRenderingContext2D/setLineDash": {
     "modified": "2020-10-15T21:37:04.054Z",
     "contributors": ["Yayure", "Plearner", "zhangchen", "ice-i-snow"]
@@ -14792,6 +14788,10 @@
     "modified": "2019-03-18T21:29:50.687Z",
     "contributors": ["Lim"]
   },
+  "Web/API/Web_Animations_API/Tips": {
+    "modified": "2019-08-08T06:48:05.151Z",
+    "contributors": ["yangwr", "mrzhao1129", "DevQiao"]
+  },
   "Web/API/Web_Animations_API/Using_the_Web_Animations_API": {
     "modified": "2019-03-23T22:10:37.938Z",
     "contributors": ["old2sun", "Hallz", "dujun", "leeseean"]
@@ -15233,6 +15233,26 @@
   "Web/API/Window/external": {
     "modified": "2020-10-15T22:13:52.002Z",
     "contributors": ["RainSlide", "EqualMa"]
+  },
+  "Web/API/Window/fetch": {
+    "modified": "2020-10-15T21:38:47.827Z",
+    "contributors": [
+      "hughfenghen",
+      "jingkaimori",
+      "c1er",
+      "ldc-37",
+      "Rhys_211",
+      "zhangchen",
+      "fscholz",
+      "TiaossuP",
+      "Yanzengyong",
+      "wxs77577",
+      "Ende93",
+      "xuzhijun",
+      "ziyunfei",
+      "camsong",
+      "fuchao2012"
+    ]
   },
   "Web/API/Window/find": {
     "modified": "2019-03-23T23:39:40.804Z",
@@ -16251,26 +16271,6 @@
     "modified": "2019-03-18T20:44:01.174Z",
     "contributors": ["fanerge", "varcat"]
   },
-  "Web/API/fetch": {
-    "modified": "2020-10-15T21:38:47.827Z",
-    "contributors": [
-      "hughfenghen",
-      "jingkaimori",
-      "c1er",
-      "ldc-37",
-      "Rhys_211",
-      "zhangchen",
-      "fscholz",
-      "TiaossuP",
-      "Yanzengyong",
-      "wxs77577",
-      "Ende93",
-      "xuzhijun",
-      "ziyunfei",
-      "camsong",
-      "fuchao2012"
-    ]
-  },
   "Web/API/notification": {
     "modified": "2020-09-28T00:03:47.900Z",
     "contributors": [
@@ -17186,10 +17186,6 @@
       "luhai.cui@gmail.com",
       "teoli"
     ]
-  },
-  "Web/CSS/CSS_animations/Tips": {
-    "modified": "2019-08-08T06:48:05.151Z",
-    "contributors": ["yangwr", "mrzhao1129", "DevQiao"]
   },
   "Web/CSS/CSS_animations/Using_CSS_animations": {
     "modified": "2019-08-08T07:19:41.823Z",
@@ -21762,10 +21758,6 @@
     "modified": "2020-10-15T21:37:16.105Z",
     "contributors": ["RainSlide", "yuyx91", "kgojiwong", "pantao", "holynewbie"]
   },
-  "Web/HTML/Element/menuitem": {
-    "modified": "2020-10-15T21:58:27.361Z",
-    "contributors": ["RainSlide", "wangxuedongovo"]
-  },
   "Web/HTML/Element/meta": {
     "modified": "2020-10-15T21:34:02.227Z",
     "contributors": [
@@ -25312,7 +25304,7 @@
       "ziyunfei"
     ]
   },
-  "Web/JavaScript/Reference/Functions/arguments/@@iterator": {
+  "Web/JavaScript/Reference/Functions/arguments/Symbol.iterator": {
     "modified": "2020-10-15T21:48:23.032Z",
     "contributors": ["fscholz", "wizardforcel", "wohugb"]
   },
@@ -25474,7 +25466,7 @@
       "Acefeel"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@iterator": {
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator": {
     "modified": "2020-10-15T21:48:08.478Z",
     "contributors": [
       "GlowMonster",
@@ -25484,7 +25476,7 @@
       "OshotOkill"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@species": {
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.species": {
     "modified": "2020-10-15T21:47:50.737Z",
     "contributors": [
       "RainSlide",
@@ -25494,7 +25486,7 @@
       "looch5"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@unscopables": {
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables": {
     "modified": "2020-10-15T21:48:00.162Z",
     "contributors": ["RainSlide", "Ende93", "OshotOkill"]
   },
@@ -26240,7 +26232,7 @@
       "ziyunfei"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species": {
+  "Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species": {
     "modified": "2020-10-15T21:52:04.532Z",
     "contributors": ["fscholz", "Ende93"]
   },
@@ -26541,13 +26533,13 @@
       "Mgjbot"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive": {
-    "modified": "2020-10-15T22:06:53.986Z",
-    "contributors": ["pea3nut"]
-  },
   "Web/JavaScript/Reference/Global_Objects/Date/Date": {
     "modified": "2020-10-15T22:28:18.123Z",
     "contributors": ["lztom2046"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive": {
+    "modified": "2020-10-15T22:06:53.986Z",
+    "contributors": ["pea3nut"]
   },
   "Web/JavaScript/Reference/Global_Objects/Date/UTC": {
     "modified": "2020-10-15T21:28:25.934Z",
@@ -28606,33 +28598,33 @@
       "Mickeyboy"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/@@match": {
-    "modified": "2020-10-15T21:49:08.862Z",
-    "contributors": ["Ende93", "wizardforcel", "boatlet"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll": {
-    "modified": "2020-10-15T22:16:46.561Z",
-    "contributors": ["c1er"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/@@replace": {
-    "modified": "2020-10-15T21:54:34.957Z",
-    "contributors": ["javenl", "LeoQuote", "876843240", "fanyer"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/@@search": {
-    "modified": "2019-03-23T22:11:28.976Z",
-    "contributors": ["fanyer"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/@@species": {
-    "modified": "2019-03-23T22:18:27.389Z",
-    "contributors": ["wizardforcel"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/@@split": {
-    "modified": "2019-08-22T23:28:14.164Z",
-    "contributors": ["fangyulovechina", "fanyer"]
-  },
   "Web/JavaScript/Reference/Global_Objects/RegExp/RegExp": {
     "modified": "2020-10-15T22:33:53.145Z",
     "contributors": ["jingkaimori"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match": {
+    "modified": "2020-10-15T21:49:08.862Z",
+    "contributors": ["Ende93", "wizardforcel", "boatlet"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll": {
+    "modified": "2020-10-15T22:16:46.561Z",
+    "contributors": ["c1er"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace": {
+    "modified": "2020-10-15T21:54:34.957Z",
+    "contributors": ["javenl", "LeoQuote", "876843240", "fanyer"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search": {
+    "modified": "2019-03-23T22:11:28.976Z",
+    "contributors": ["fanyer"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species": {
+    "modified": "2019-03-23T22:18:27.389Z",
+    "contributors": ["wizardforcel"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split": {
+    "modified": "2019-08-22T23:28:14.164Z",
+    "contributors": ["fangyulovechina", "fanyer"]
   },
   "Web/JavaScript/Reference/Global_Objects/RegExp/compile": {
     "modified": "2019-03-23T22:22:52.399Z",
@@ -28766,17 +28758,17 @@
       "zhangyaochun1987"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Set/@@iterator": {
-    "modified": "2020-10-15T22:31:10.470Z",
-    "contributors": ["Ende93"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Set/@@species": {
-    "modified": "2020-10-15T22:05:00.184Z",
-    "contributors": ["Ende93", "susan007", "helloyong"]
-  },
   "Web/JavaScript/Reference/Global_Objects/Set/Set": {
     "modified": "2020-10-15T22:31:09.443Z",
     "contributors": ["Ende93"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator": {
+    "modified": "2020-10-15T22:31:10.470Z",
+    "contributors": ["Ende93"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Set/Symbol.species": {
+    "modified": "2020-10-15T22:05:00.184Z",
+    "contributors": ["Ende93", "susan007", "helloyong"]
   },
   "Web/JavaScript/Reference/Global_Objects/Set/add": {
     "modified": "2020-10-15T21:28:25.102Z",
@@ -28873,7 +28865,7 @@
       "ziyunfei"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/@@iterator": {
+  "Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator": {
     "modified": "2019-10-14T06:47:30.493Z",
     "contributors": ["SageX", "Dewey."]
   },
@@ -29386,7 +29378,7 @@
       "fscholz"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive": {
+  "Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive": {
     "modified": "2020-10-15T21:51:10.533Z",
     "contributors": ["zhangchen", "Hushabyme"]
   },
@@ -29500,17 +29492,17 @@
       "David_Li"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator": {
-    "modified": "2019-03-23T22:19:18.717Z",
-    "contributors": ["wizardforcel"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/TypedArray/@@species": {
-    "modified": "2019-03-23T22:19:06.809Z",
-    "contributors": ["wizardforcel"]
-  },
   "Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT": {
     "modified": "2019-03-23T22:52:00.851Z",
     "contributors": ["iFish"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator": {
+    "modified": "2019-03-23T22:19:18.717Z",
+    "contributors": ["wizardforcel"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species": {
+    "modified": "2019-03-23T22:19:06.809Z",
+    "contributors": ["wizardforcel"]
   },
   "Web/JavaScript/Reference/Global_Objects/TypedArray/buffer": {
     "modified": "2019-03-23T22:19:06.244Z",

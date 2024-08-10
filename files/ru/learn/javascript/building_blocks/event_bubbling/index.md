@@ -84,7 +84,7 @@ original_slug: Web/API/Event/Comparison_of_Event_Targets
         >
       </td>
       <td>
-        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
+        <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} Если по какой-либо причине событие
@@ -107,7 +107,7 @@ original_slug: Web/API/Event/Comparison_of_Event_Targets
         >
       </td>
       <td>
-        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
+        <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} Первоначальная цель события перед
@@ -120,10 +120,6 @@ original_slug: Web/API/Event/Comparison_of_Event_Targets
     </tr>
   </tbody>
 </table>
-
-### Использование `explicitOriginalTarget` и `originalTarget`
-
-> **Note:** These properties are only available in Mozilla-based browsers.
 
 ### Примеры
 
@@ -212,26 +208,4 @@ original_slug: Web/API/Event/Comparison_of_Event_Targets
     </script>
   </body>
 </html>
-```
-
-### Использование `target` и `relatedTarget`
-
-Свойство `relatedTarget` для события `mouseover` содержит узел, над которым ранее была указана мышь. Для события `mouseout` он удерживает узел, к которому движется мышь.
-
-| Тип события | [event.target](/ru/docs/Web/API/Event/target) | [event.relatedTarget](/ru/docs/Web/API/MouseEvent/relatedTarget) |
-| ----------- | --------------------------------------------- | ---------------------------------------------------------------- |
-| `mouseover` | EventTarget, в который входим указателем      | EventTarget, из которого выходим указателем                      |
-| `mouseout`  | EventTarget, из которого выходим указателем   | EventTarget, в который входим указателем                         |
-
-TODO: Также требуется описание событий `dragenter` и `dragexit`.
-
-#### Пример
-
-```xml
-<hbox id="outer">
-  <hbox id="inner"
-        onmouseover="dump('mouseover ' + event.relatedTarget.id + ' > ' + event.target.id + '\n');"
-        onmouseout="dump('mouseout  ' + event.target.id + ' > ' + event.relatedTarget.id + '\n');"
-        style="margin: 100px; border: 10px solid black; width: 100px; height: 100px;" />
-</hbox>
 ```

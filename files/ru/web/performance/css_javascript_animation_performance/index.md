@@ -20,7 +20,8 @@ slug: Web/Performance/CSS_JavaScript_animation_performance
 
 API {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}} предоставляет эффективный способ создания анимаций в JavaScript. Функция (callback), которую вы передаёте в этот метод, будет вызываться перед каждой следующей отрисовкой нового фрейма. Главное отличие от {{domxref("WindowTimers.setTimeout","setTimeout()")}}/{{domxref("WindowTimers.setInterval","setInterval()")}} в том, что здесь вам не нужно указывать время, через которое функция запустится. `requestAnimationFrame()` работает гораздо эффективнее, учитывая частоту кадров и производительность системы. Разработчики могут создавать анимацию, просто изменяя стили элемента каждый раз, когда происходит подготовка нового кадра (или когда обновляется полотно Canvas или в других случаях).
 
-> **Примечание:** Подобно CSS transition и animation, `requestAnimationFrame()` приостанавливает работу, когда текущий таб переводится в фоновый режим (например, при смене фокуса)
+> [!NOTE]
+> Подобно CSS-анимациям, `requestAnimationFrame()` приостанавливает работу, когда текущий таб браузера переводится в фоновый режим.
 
 Для подробностей ознакомьтесь с [анимирование с JavaScript: от setinterval до requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/).
 

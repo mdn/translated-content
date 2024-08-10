@@ -10,7 +10,8 @@ l10n:
 
 **`emma`** は {{domxref("SpeechRecognitionEvent")}} インターフェイスの読み取り専用プロパティで、結果の Extensible MultiModal Annotation markup language (EMMA) — XML — 表現を返します。
 
-> **メモ:** EMMA は [EMMA: Extensible MultiModal Annotation markup language](https://www.w3.org/TR/emma/) 仕様書で定められています。この仕様書に複数の EMMA の例があります。
+> [!NOTE]
+> EMMA は [EMMA: Extensible MultiModal Annotation markup language](https://www.w3.org/TR/emma/) 仕様書で定められています。この仕様書に複数の EMMA の例があります。
 
 ## 値
 

@@ -29,7 +29,8 @@ background: border-box red;
 background: no-repeat center/80% url( "../img/image.png");
 ```
 
-> **Nota:** O {{cssxref ( "background-color")}} só pode ser definido no último fundo, como há apenas uma cor de fundo para todo o elemento.
+> [!NOTE]
+> O {{cssxref ( "background-color")}} só pode ser definido no último fundo, como há apenas uma cor de fundo para todo o elemento.
 
 ### Valores
 

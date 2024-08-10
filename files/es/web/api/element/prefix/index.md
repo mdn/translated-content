@@ -7,7 +7,8 @@ slug: Web/API/Element/prefix
 
 La propiedad `Element.prefix` unicamente de lectura devuelve el namespace prefix de el elemento especificado, o `null` si no hay especificado prefix.
 
-> **Nota:** Antes de DOM4 esta API fué definida dentro de la interfaz {{domxref("Node")}}.
+> [!NOTE]
+> Antes de DOM4 esta API fué definida dentro de la interfaz {{domxref("Node")}}.
 
 ## Síntaxis
 

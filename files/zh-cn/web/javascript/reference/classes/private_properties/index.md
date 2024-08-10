@@ -71,7 +71,8 @@ instance.#privateField; // Syntax error
 
 JavaScript 作为动态语言，能够在编译时检查 `#` 标识符的语法，使其与普通属性的语法不同。
 
-> **备注：** Chrome 控制台中运行的代码可以访问类的私有属性。这是 JavaScript 语法限制对开发者工具的一种放宽。
+> [!NOTE]
+> Chrome 控制台中运行的代码可以访问类的私有属性。这是 JavaScript 语法限制对开发者工具的一种放宽。
 
 如果你访问对象中不存在的私有属性，会抛出 {{jsxref("TypeError")}} 错误，而不是像普通属性一样返回 `undefined`。
 
@@ -182,7 +183,8 @@ console.log(obj instanceof Stamper); // false
 new Stamper(obj); // Error: Initializing an object twice is an error with private fields
 ```
 
-> **警告：** 这可能是一种非常令人困惑的做法。你应该避免从构造函数返回任何东西——尤其是与 `this` 无关的东西。
+> [!WARNING]
+> 这可能是一种非常令人困惑的做法。你应该避免从构造函数返回任何东西——尤其是与 `this` 无关的东西。
 
 #### 私有静态字段
 

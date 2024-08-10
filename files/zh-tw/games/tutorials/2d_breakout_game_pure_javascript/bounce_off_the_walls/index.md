@@ -99,7 +99,8 @@ if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","370")}}
 
-> **備註：** 每次球撞到牆上時嘗試改變球的顏色為隨機的顏色。
+> [!NOTE]
+> 每次球撞到牆上時嘗試改變球的顏色為隨機的顏色。
 
 ## 下一步
 

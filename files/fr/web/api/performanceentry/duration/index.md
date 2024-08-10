@@ -29,7 +29,8 @@ entry.duration;
 
 Un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la durée de l'[entrée de performance](/fr/docs/Web/API/PerformanceEntry). Si le concept de durée ne s'applique pas à une mesure de performance particulière, le navigateur peut choisir de renvoyer une durée de 0.
 
-> **Note :** si l'entrée de performance a un [`entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) "`resource`" (c'est-à-dire que l'entrée est un objet [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming)), cette propriété renvoie la différence entre les [`timestamps`](/fr/docs/Web/API/DOMHighResTimeStamp) [`PerformanceEntry.responseEnd`](/fr/docs/Web/API/PerformanceResourceTiming/responseEnd) et [`PerformanceEntry.startTime`](/fr/docs/Web/API/PerformanceEntry/startTime).
+> [!NOTE]
+> Si l'entrée de performance a un [`entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) "`resource`" (c'est-à-dire que l'entrée est un objet [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming)), cette propriété renvoie la différence entre les [`timestamps`](/fr/docs/Web/API/DOMHighResTimeStamp) [`PerformanceEntry.responseEnd`](/fr/docs/Web/API/PerformanceResourceTiming/responseEnd) et [`PerformanceEntry.startTime`](/fr/docs/Web/API/PerformanceEntry/startTime).
 
 ## Exemple
 

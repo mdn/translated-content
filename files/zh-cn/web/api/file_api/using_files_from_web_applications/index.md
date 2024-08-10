@@ -383,7 +383,8 @@ function handleFiles() {
 
 此示例展示了如何让用户将文件（例如使用上一个示例选择的图像）上传到服务器。
 
-> **备注：** 通常最好使用 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 而不是 {{domxref("XMLHttpRequest")}} 发起 HTTP 请求。但是，在这种情况下，我们想向用户显示上传进度，而 Fetch API 仍然不支持此特性，因此示例使用 `XMLHttpRequest`。使用 Fetch API 跟踪进度通知标准化的工作位于 <https://github.com/whatwg/fetch/issues/607>。
+> [!NOTE]
+> 通常最好使用 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 而不是 {{domxref("XMLHttpRequest")}} 发起 HTTP 请求。但是，在这种情况下，我们想向用户显示上传进度，而 Fetch API 仍然不支持此特性，因此示例使用 `XMLHttpRequest`。使用 Fetch API 跟踪进度通知标准化的工作位于 <https://github.com/whatwg/fetch/issues/607>。
 
 ### 创建上传任务
 

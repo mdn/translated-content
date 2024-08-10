@@ -22,7 +22,8 @@ _親インターフェイスである {{domxref("HTMLElement")}} から継承し
 - {{domxref("HTMLLabelElement.htmlFor")}}
   - : 文字列で、ラベル付けしたコントロールの ID が入ります。これは [`for`](/ja/docs/Web/HTML/Element/label#for) 属性を反映します。
 
-> **メモ:** プログラムから `for` 属性を設定する場合は、 [`htmlFor`](/ja/docs/Web/API/HTMLLabelElement/htmlFor) を使用してください。
+> [!NOTE]
+> プログラムから `for` 属性を設定する場合は、 [`htmlFor`](/ja/docs/Web/API/HTMLLabelElement/htmlFor) を使用してください。
 
 ## インスタンスメソッド
 

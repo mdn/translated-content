@@ -7,7 +7,8 @@ slug: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 
 HTML 拖放支持拖动各种类型的数据，包括纯文本，URL，HTML 代码，文件等。该文档描述了拖放常见数据类型的最佳做法。
 
-> **警告：** 本文档中包含一个**moz**前缀的所有方法和属性 (如**mozSetDataAt()**) 是 Gecko 的具体接口。这些接口仅适用于基于 Gecko 的浏览器。
+> [!WARNING]
+> 本文档中包含一个**moz**前缀的所有方法和属性 (如**mozSetDataAt()**) 是 Gecko 的具体接口。这些接口仅适用于基于 Gecko 的浏览器。
 
 ## 拖动文字
 

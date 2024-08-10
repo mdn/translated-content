@@ -105,7 +105,8 @@ btn.addEventListener("click", () => {
 
 {{EmbedLiveSample("Building_an_XMLHttpRequest_manually", "100%", 50)}}
 
-> **メモ:** この {{domxref("XMLHttpRequest")}} の使用は、第三者のウェブサイトにデータを送信したい場合にも、同一オリジンポリシーの対象となります。オリジン間リクエストの場合は、 [CORS と HTTP のアクセス制御](/ja/docs/Web/HTTP/CORS)が必要です。
+> [!NOTE]
+> この {{domxref("XMLHttpRequest")}} の使用は、第三者のウェブサイトにデータを送信したい場合にも、同一オリジンポリシーの対象となります。オリジン間リクエストの場合は、 [CORS と HTTP のアクセス制御](/ja/docs/Web/HTTP/CORS)が必要です。
 
 ### XMLHttpRequest と FormData オブジェクトの使用
 

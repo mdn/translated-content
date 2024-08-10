@@ -10,7 +10,8 @@ Pour libérer une URL d'objet, il faut appeler {{domxref("URL.revokeObjectURL", 
 
 {{AvailableInWorkers}}
 
-> **Note :** Cette fonctionnalité n'est pas disponible dans les [Service Workers](/fr/docs/Web/API/ServiceWorker) à cause de possible fuite mémoire.
+> [!NOTE]
+> Cette fonctionnalité n'est pas disponible dans les [Service Workers](/fr/docs/Web/API/ServiceWorker) à cause de possible fuite mémoire.
 
 ## Syntaxe
 
@@ -43,7 +44,8 @@ Les navigateurs libèrent automatiquement les URL d'objet lorsque le document es
 
 Dans d'anciennes versions de la spécification de Media Source, attacher un flux à un élément {{HTMLElement("video")}} requérait de créer une URL d'objet pour le {{domxref("MediaStream")}}. Cela n'est plus nécessaire, et les navigateurs cessent progressivement de supporter cette pratique.
 
-> **Attention :** si vous avez toujours du code qui repose sur {{domxref("URL.createObjectURL")}} pour attacher des flux à des éléments média, vous devez mettre à jour votre code pour attacher simplement {{domxref("HTMLMediaElement.srcObject", "srcObject")}} directement au `MediaStream`.
+> [!WARNING]
+> Si vous avez toujours du code qui repose sur {{domxref("URL.createObjectURL")}} pour attacher des flux à des éléments média, vous devez mettre à jour votre code pour attacher simplement {{domxref("HTMLMediaElement.srcObject", "srcObject")}} directement au `MediaStream`.
 
 ## Spécifications
 

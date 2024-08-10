@@ -42,7 +42,8 @@ env(safe-area-inset-left, 1.4rem);
 - `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, `keyboard-inset-height`
   - : `keyboard-inset-*` 변수는 화면에 표시되는 가상 키보드의 모습에 대한 정보를 제공합니다. 그들은 뷰포트의 가장자리로부터 상단, 우측, 하단, 좌측 인셋에 의해 사각형을 정의합니다 (너비와 높이 인셋은 다른 인셋들로부터 계산됩니다). 더 알아보려면 {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}를 참고해 주세요.
 
-> **참고:** 다른 CSS 속성들과는 달리, 사용자 에이전트에 의해 정의된 속성 이름들은 대소문자를 구별합니다.
+> [!NOTE]
+> 다른 CSS 속성들과는 달리, 사용자 에이전트에 의해 정의된 속성 이름들은 대소문자를 구별합니다.
 
 ### 형식 구문
 
@@ -162,7 +163,8 @@ padding: env(x, 50px, 20px);
 
 대체 값의 문법은 다른 사용자 정의 속성들과 마찬가지로 쉼표를 허용합니다. 하지만 속성값이 쉼표를 지원하지 않는 경우, 그 값은 유효하지 않습니다.
 
-> **참고:** 유저 에이전트 속성들은 [all](/ko/docs/Web/CSS/all) 속성에 의해 초기화되지 않습니다.
+> [!NOTE]
+> 유저 에이전트 속성들은 [all](/ko/docs/Web/CSS/all) 속성에 의해 초기화되지 않습니다.
 
 ## env() 를 사용해 데스크탑 PWA에서 컨텐츠가 창 제어 버튼에 의해 가려지지 않도록 보장하기
 

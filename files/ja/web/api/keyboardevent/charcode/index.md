@@ -10,7 +10,8 @@ l10n:
 
 **`charCode`** は {{domxref("KeyboardEvent")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Element/keypress_event", "keypress")}} イベントの間に押されたキーの Unicode 値を返します。
 
-> **警告:** このプロパティは非推奨なので、使用しないでください。代わりに {{domxref("KeyboardEvent.key", "key")}} プロパティを使用して、文字の Unicode 値を取得してください。
+> [!WARNING]
+> このプロパティは非推奨なので、使用しないでください。代わりに {{domxref("KeyboardEvent.key", "key")}} プロパティを使用して、文字の Unicode 値を取得してください。
 
 ## 値
 

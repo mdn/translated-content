@@ -97,7 +97,7 @@ colors.forEach((item, index) => {
 // 0：红
 // 1：黄
 // 2：蓝
-// 5：蓝
+// 5：紫
 
 colors.reverse(); // ['紫', 空槽 × 2, '蓝', '黄', '红']
 ```
@@ -131,7 +131,7 @@ const newColors = colors.toReversed(); // ['紫', undefined, undefined, '蓝', '
 
 其他方法会改变调用该方法的数组，在这种情况下，它们的返回值根据方法的不同而不同：有时是对相同数组的引用，有时是新数组的长度。
 
-以下方法通过访问 [`this.constructor[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) 来创建新数组，以确定要使用的构造函数：{{jsxref("Array/concat", "concat()")}}、{{jsxref("Array/filter", "filter()")}}、{{jsxref("Array/flat", "flat()")}}、{{jsxref("Array/flatMap", "flatMap()")}}、{{jsxref("Array/map", "map()")}}、{{jsxref("Array/slice", "slice()")}} 和 {{jsxref("Array/splice", "splice()")}}（返回构造的已删除元素数组）
+以下方法通过访问 [`this.constructor[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species) 来创建新数组，以确定要使用的构造函数：{{jsxref("Array/concat", "concat()")}}、{{jsxref("Array/filter", "filter()")}}、{{jsxref("Array/flat", "flat()")}}、{{jsxref("Array/flatMap", "flatMap()")}}、{{jsxref("Array/map", "map()")}}、{{jsxref("Array/slice", "slice()")}} 和 {{jsxref("Array/splice", "splice()")}}（返回构造的已删除元素数组）
 
 以下方法总是使用 `Array` 基础构造函数创建新数组：{{jsxref("Array/toReversed", "toReversed()")}}、{{jsxref("Array/toSorted", "toSorted()")}}、{{jsxref("Array/toSpliced", "toSpliced()")}} 和 {{jsxref("Array/with", "with()")}}。
 
@@ -264,7 +264,7 @@ f("a", "b"); // 'a+b'
 
 ## 静态属性
 
-- {{jsxref("Array/@@species", "get Array[@@species]")}}
+- [`Array[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
   - : 返回 `Array` 构造函数。
 
 ## 静态方法
@@ -284,7 +284,7 @@ f("a", "b"); // 'a+b'
 
 - {{jsxref("Object/constructor", "Array.prototype.constructor")}}
   - : 创建实例对象的构造函数。对于 `Array` 实例，初始值是 {{jsxref("Array/Array", "Array")}} 构造函数。
-- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+- [`Array.prototype[Symbol.unscopables]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables)
   - : 包含 ES2015 版本之前 ECMAScript 标准中没有包含的属性名，在使用 [`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with) 绑定语句时会被忽略。
 
 以下属性是每个 `Array` 实例自有的属性。
@@ -370,14 +370,15 @@ f("a", "b"); // 'a+b'
   - : 返回一个新的[_数组迭代器_](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)对象，该对象包含数组中每个索引的值。
 - {{jsxref("Array.prototype.with()")}}
   - : 返回一个新数组，其中给定索引处的元素替换为给定值，而不改变原始数组。
-- [`Array.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
   - : 默认情况下，该方法为 [`values()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/values) 方法的别名。
 
 ## 示例
 
 本节提供一些 JavaScript 中常见的数组操作示例。
 
-> **备注：** 如果你还不熟悉数组的基础知识，可以考虑先读一下 [JavaScript 第一步：数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)，它解释了[数组是什么](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays#数组是什么？)，还包括其他常见的数组操作示例。
+> [!NOTE]
+> 如果你还不熟悉数组的基础知识，可以考虑先读一下 [JavaScript 第一步：数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)，它解释了[数组是什么](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays#数组是什么？)，还包括其他常见的数组操作示例。
 
 ### 创建数组
 
@@ -794,7 +795,8 @@ console.log(execResult); // [ "dbBd", "bB", "d" ]
 - 对已访问索引的变更不会导致再次对其调用 `callbackFn`。
 - 如果数组中存在但未访问的元素被 `callbackFn` 更改，则传递给 `callbackFn` 的值将是访问该元素时的值。删除的元素不会被访问。
 
-> **警告：** 上述类型的并发修改通常会导致代码难以理解，需要避免（特殊情况除外）。
+> [!WARNING]
+> 上述类型的并发修改通常会导致代码难以理解，需要避免（特殊情况除外）。
 
 下面的示例使用 `forEach` 方法作为一个例子，但以升序访问索引的其他的方法以相同的方式工作。我们将先定义一个帮助函数：
 

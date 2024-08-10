@@ -48,7 +48,7 @@ l10n:
 - {{cssxref("background-repeat")}} で、キーワード `round` および `space` をサポートしました ([Firefox バグ 548372](https://bugzil.la/548372))。
 - {{cssxref("background-clip")}} で、キーワード `text` をデフォルトで有効化しました ([Firefox バグ 1264905](https://bugzil.la/1264905))。
 - 4 桁および 8 桁の 16 進数による CSS [色](/ja/docs/Web/CSS/color_value) の値 (#RRGGBBAA や #RGBA) による、アルファチャンネルを含む色の指定をサポートしました ([Firefox バグ 567283](https://bugzil.la/567283))。
-- {{cssxref(":dir()")}} 疑似クラスの接頭辞を外しました ([Firefox バグ 859301](https://bugzil.la/859301))。
+- {{cssxref(":dir()")}} 擬似クラスの接頭辞を外しました ([Firefox バグ 859301](https://bugzil.la/859301))。
 - {{cssxref("clip-path")}} の実験的な実装 (デフォルトで有効化していません) で、複数の {{cssxref("&lt;basic-shape&gt;")}} 値の間で補間処理が可能になりました ([Firefox バグ 1110460](https://bugzil.la/1110460))。
 - [長さの単位 `q`](/ja/docs/Web/CSS/length#q) をサポートしました ([Firefox バグ 1274526](https://bugzil.la/1274526))。
 - {{cssxref("text-align-last")}} プロパティの接頭辞を削除しました ([Firefox バグ 1039541](https://bugzil.la/1039541))。

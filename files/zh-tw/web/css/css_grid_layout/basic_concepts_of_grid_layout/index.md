@@ -544,7 +544,8 @@ In this case the nested grid has no relationship to the parent. As you can see i
 
 In the level 1 grid specification there is a feature called _subgrid_ which would let us create nested grids that use the track definition of the parent grid.
 
-> **備註：** Subgrids are not yet implemented in any browsers, and the specification is subject to change.
+> [!NOTE]
+> Subgrids are not yet implemented in any browsers, and the specification is subject to change.
 
 In the current specification, we would edit the above nested grid example to use `display: subgrid` rather than `display: grid`, then remove the track definition. The nested grid will use the parent grid tracks to lay out items.
 

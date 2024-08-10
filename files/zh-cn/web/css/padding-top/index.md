@@ -15,7 +15,8 @@ l10n:
 
 ![CSS padding-top 属性对元素盒子的影响](padding-top.svg)
 
-> **备注：** 通过 {{cssxref("padding")}} 属性，只需一次声明，就可以为元素的所有四边设置内边距。
+> [!NOTE]
+> 通过 {{cssxref("padding")}} 属性，只需一次声明，就可以为元素的所有四边设置内边距。
 
 ## 语法
 

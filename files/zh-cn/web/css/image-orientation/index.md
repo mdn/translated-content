@@ -7,7 +7,7 @@ slug: Web/CSS/image-orientation
 
 CSS 属性 **`image-orientation`** 用来修正某些图片的预设方向。
 
-> **备注：**
+> [!NOTE]
 >
 > - 该属性不是用来对图片进行任意角度旋转的，它是用来修正那些带有不正确的预设方向的图片的。因此该属性值会被四舍五入到 90 度的整数倍。
 > - Similarly this property is not intented to handle the layout -> portrait changing. As `image-orientation` affects only images, it won't work: the changes must happen at the layout-level

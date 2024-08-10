@@ -139,11 +139,14 @@ console.log("%cMy stylish message", "color: red; font-style: italic");
 
 You can use nested groups to help organize your output by visually combining related material. To create a new nested block, call `console.group()`. The `console.groupCollapsed()` method is similar, but creates the new block collapsed, requiring the use of a disclosure button to open it for reading.
 
-> **Nota:** Collapsed groups are not supported yet in Gecko; the `groupCollapsed()` method is the same as `group()` at this time.
+> [!NOTE]
+> Collapsed groups are not supported yet in Gecko; the `groupCollapsed()` method is the same as `group()` at this time.
 
-> **Nota:** To exit the current group, simply call `console.groupEnd()`.
+> [!NOTE]
+> To exit the current group, simply call `console.groupEnd()`.
 
-> **Nota:** For example, given this code:
+> [!NOTE]
+> For example, given this code:
 
 ```js
 console.log("This is the outer level");
@@ -180,7 +183,8 @@ will log the time needed by the user to discard the alert box:
 
 Notice that the timer's name is displayed both when the timer is started and when it's stopped.
 
-> **Nota:** It's important to note that if you're using this to log the timing for network traffic, the timer will report the total time for the transaction, while the time listed in the network panel is just the amount of time required for the header. If you have response body logging enabled, the time listed for the response header and body combined should match what you see in the console output.
+> [!NOTE]
+> It's important to note that if you're using this to log the timing for network traffic, the timer will report the total time for the transaction, while the time listed in the network panel is just the amount of time required for the header. If you have response body logging enabled, the time listed for the response header and body combined should match what you see in the console output.
 
 ### Stack traces
 

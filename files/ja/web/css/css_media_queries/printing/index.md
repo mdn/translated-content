@@ -123,7 +123,8 @@ slug: Web/CSS/CSS_media_queries/Printing
 </html>
 ```
 
-> **メモ:** 古いバージョン Internet Explorer は、非表示の {{HTMLElement("iframe")}} の印刷することができません。
+> [!NOTE]
+> 古いバージョン Internet Explorer は、非表示の {{HTMLElement("iframe")}} の印刷することができません。
 
 ## 関連情報
 

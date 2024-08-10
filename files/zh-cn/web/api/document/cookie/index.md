@@ -38,7 +38,8 @@ document.cookie = newCookie;
 
 - cookie 的值字符串可以用[encodeURIComponent()](/zh-CN/docs/JavaScript/Reference/Global_Objects/encodeURIComponent)来保证它不包含任何逗号、分号或空格 (cookie 值中禁止使用这些值).
 
-> **备注：** 在 Gecko 6.0 前，被引号括起的路径的引号会被当做路径的一部分，而不是被当做定界符。现在已被修复。
+> [!NOTE]
+> 在 Gecko 6.0 前，被引号括起的路径的引号会被当做路径的一部分，而不是被当做定界符。现在已被修复。
 
 ## 示例
 
@@ -180,7 +181,8 @@ var docCookies = {
 };
 ```
 
-> **备注：** 对于永久 cookie 我们用了`Fri, 31 Dec 9999 23:59:59 GMT`作为过期日。如果你不想使用这个日期，可使用*[世界末日](http://en.wikipedia.org/wiki/Year_2038_problem)*`Tue, 19 Jan 2038 03:14:07 GMT，`它是 32 位带符号整数能表示从 1 January 1970 00:00:00 UTC 开始的最大秒长 (即`01111111111111111111111111111111`, 是 `new Date(0x7fffffff * 1e3)`).
+> [!NOTE]
+> 对于永久 cookie 我们用了`Fri, 31 Dec 9999 23:59:59 GMT`作为过期日。如果你不想使用这个日期，可使用*[世界末日](http://en.wikipedia.org/wiki/Year_2038_problem)*`Tue, 19 Jan 2038 03:14:07 GMT，`它是 32 位带符号整数能表示从 1 January 1970 00:00:00 UTC 开始的最大秒长 (即`01111111111111111111111111111111`, 是 `new Date(0x7fffffff * 1e3)`).
 
 ### 写入 cookie
 

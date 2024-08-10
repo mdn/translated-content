@@ -7,7 +7,8 @@ slug: Web/API/HTMLMediaElement/buffered
 
 **`HTMLMediaElement.buffered`** 返回一个只读 {{domxref("TimeRanges")}} 对象 返回媒体已缓冲的区域
 
-> **备注：** This feature is not available in [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> This feature is not available in [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API).
 
 ## 语法
 

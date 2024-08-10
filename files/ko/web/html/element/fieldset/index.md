@@ -35,7 +35,8 @@ slug: Web/HTML/Element/fieldset
 
 `<fieldset>`의 콘텐츠는 별도의 익명 상자가 담게 됩니다. 익명 상자는 `<fieldset>`으로부터 특정 속성을 상속합니다. `<fielset>`에 `display: grid` 또는 `display: inline-grid`를 지정하면 익명 상자는 그리드 서식 맥락을 가지며, `display: flex` 또는 `display: inline-flex`를 지정하면 익명 상자가 플렉스 서식 맥락을 갖습니다. 그 외의 경우 블록 서식 맥락입니다.
 
-> **참고:** 글 작성 시점에서, Microsoft Edge와 Google Chrome에는 {{htmlelement("fieldset")}} 내부에서 플렉스박스와 그리드 레이아웃을 사용할 수 없는 버그가 존재합니다. [GitHub 이슈](https://github.com/w3c/csswg-drafts/issues/321)에서 버그 추적 링크를 확인할 수 있습니다.
+> [!NOTE]
+> 글 작성 시점에서, Microsoft Edge와 Google Chrome에는 {{htmlelement("fieldset")}} 내부에서 플렉스박스와 그리드 레이아웃을 사용할 수 없는 버그가 존재합니다. [GitHub 이슈](https://github.com/w3c/csswg-drafts/issues/321)에서 버그 추적 링크를 확인할 수 있습니다.
 
 ## 예제
 

@@ -62,7 +62,8 @@ if (supportsPopover()) {
 }
 ```
 
-> **Note :** Un élément <i lang="en">popover</i> est masqué par défaut, mais si l'API n'est pas prise en charge, il s'affichera de façon classique.
+> [!NOTE]
+> Un élément <i lang="en">popover</i> est masqué par défaut, mais si l'API n'est pas prise en charge, il s'affichera de façon classique.
 
 ### Résultat
 

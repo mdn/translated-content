@@ -9,7 +9,8 @@ slug: Web/API/IDBObjectStore/get
 
 如果成功找到值，则会创建其值的结构化克隆，并设置为“请求对象（request object）”的 [`result`](/zh-CN/IndexedDB/IDBRequest#attr_result) 。
 
-> **备注：** This method produces the same result for: a) a record that doesn't exist in the database and b) a record that has an undefined value. To tell these situations apart, call the `openCursor()` method with the same key. That method provides a cursor if the record exists, and no cursor if it does not.
+> [!NOTE]
+> This method produces the same result for: a) a record that doesn't exist in the database and b) a record that has an undefined value. To tell these situations apart, call the `openCursor()` method with the same key. That method provides a cursor if the record exists, and no cursor if it does not.
 
 {{AvailableInWorkers}}
 

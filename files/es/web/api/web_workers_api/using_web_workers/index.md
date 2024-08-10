@@ -45,7 +45,8 @@ myWorker.postMessage(""); // start the worker.
 
 La Línea 1 en este ejemplo crea un nuevo worker (_worker thread)_. La Línea 3 configura un manejador de eventos (_listener_) para encargarse de los eventos `message` del worker. Este manejador de eventos se llamará cuando el worker llame a su propia función {{domxref("Worker.postMessage()")}}. Finalmente, la Linea 7 inicia el worker _(worker thread)_.
 
-> **Nota:** : La URI pasada como parámetro del constructor de `Worker` debe obedecer la política [same-origin policy](/en/Same_origin_policy_for_JavaScript) . Actualmente hay desacuerdo entre los desarolladores de navegadores sobre qué URIs son del mismo origen; Gecko 10.0 (Firefox 10.0 / Thunderbird 10.0 / SeaMonkey 2.7) y posteriores sí permiten data URIs e Internet Explorer 10 no permite Blob URIs como un script válido para los workers.
+> [!NOTE]
+> La URI pasada como parámetro del constructor de `Worker` debe obedecer la política [same-origin policy](/en/Same_origin_policy_for_JavaScript) . Actualmente hay desacuerdo entre los desarolladores de navegadores sobre qué URIs son del mismo origen; Gecko 10.0 (Firefox 10.0 / Thunderbird 10.0 / SeaMonkey 2.7) y posteriores sí permiten data URIs e Internet Explorer 10 no permite Blob URIs como un script válido para los workers.
 
 ## Pasando datos
 
@@ -117,7 +118,8 @@ onmessage = function (oEvent) {
 };
 ```
 
-> **Nota:** Como siempre, los hilos en segundo plano -incluyendo workers- **no pueden manipular el DOM**. Si acciones tomadas por el hilo en segundo planos resultarían en cambios en el DOM, deberian enviar mensajes a sus creadores para llevarlos a cabo.
+> [!NOTE]
+> Como siempre, los hilos en segundo plano -incluyendo workers- **no pueden manipular el DOM**. Si acciones tomadas por el hilo en segundo planos resultarían en cambios en el DOM, deberian enviar mensajes a sus creadores para llevarlos a cabo.
 
 The [structured cloning](/es/docs/Web/Guide/DOM/The_structured_clone_algorithm) algorithm can accept JSON and a few things that JSON can't like circular references.
 
@@ -500,7 +502,8 @@ importScripts("foo.js", "bar.js"); /* imports two scripts */
 
 The browser loads each listed script and executes it. Any global objects from each script may then be used by the worker. If the script can't be loaded, `NETWORK_ERROR` is thrown, and subsequent code will not be executed. Previously executed code (including code deferred using {{ domxref("window.setTimeout()") }}) will still be functional though. Function declarations **after** the `importScripts()` method are also kept, since these are always evaluated before the rest of the code.
 
-> **Nota:** Scripts may be downloaded in any order, but will be executed in the order in which you pass the filenames into `importScripts()` . This is done synchronously; `importScripts()` does not return until all the scripts have been loaded and executed.
+> [!NOTE]
+> Scripts may be downloaded in any order, but will be executed in the order in which you pass the filenames into `importScripts()` . This is done synchronously; `importScripts()` does not return until all the scripts have been loaded and executed.
 
 ## Examples
 

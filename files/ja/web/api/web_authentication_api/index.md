@@ -117,7 +117,8 @@ _図 2 - 図 1 と同様、ウェブ認証による認証手順と各アクシ�
 
 ### 使用法の例
 
-> **警告:** セキュリティの観点から、ウェブ認証の呼び出し（{{domxref('CredentialsContainer.create','create()')}} や {{domxref('CredentialsContainer.get','get()')}}）が保留されている間にブラウザーウィンドウのフォーカスが失われると、呼び出しはキャンセルされます。
+> [!WARNING]
+> セキュリティの観点から、ウェブ認証の呼び出し（{{domxref('CredentialsContainer.create','create()')}} や {{domxref('CredentialsContainer.get','get()')}}）が保留されている間にブラウザーウィンドウのフォーカスが失われると、呼び出しはキャンセルされます。
 
 ```js
 // 登録のサンプル引数

@@ -48,7 +48,8 @@ Debido a que éstas tienen formatos de estructura variados, revise la sección [
 
 ## Índice de palabras clave
 
-> **Nota:** Los nombres de propiedad en este índice **no** incluyen los [nombres de JavaScript](/es/docs/Web/CSS/CSS_Properties_Reference) donde difieren de los nombres estándar de CSS.
+> [!NOTE]
+> Los nombres de propiedad en este índice **no** incluyen los [nombres de JavaScript](/es/docs/Web/CSS/CSS_Properties_Reference) donde difieren de los nombres estándar de CSS.
 
 {{CSS_Ref}}
 

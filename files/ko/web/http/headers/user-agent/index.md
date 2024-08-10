@@ -9,7 +9,8 @@ l10n:
 
 **사용자 에이전트** {{Glossary("request header", "요청 헤더")}}는 서버와 네트워크 피어가 요청하는 애플리케이션, 운영체제, 제조업체, {{Glossary("user agent", "사용자 에이전트")}} 요청 버전을 식별하는 독특한 문자열입니다.
 
-> **경고:** 브라우저별로 다른 웹 페이지 또는 서비스를 제공하는 것은 일반적으로 좋지 않은 생각입니다. 해당 이유에 대해서는 [사용자 에이전트를 사용한 브라우저 감지](/ko/docs/Web/HTTP/Browser_detection_using_the_user_agent)를 참고하세요.
+> [!WARNING]
+> 브라우저별로 다른 웹 페이지 또는 서비스를 제공하는 것은 일반적으로 좋지 않은 생각입니다. 해당 이유에 대해서는 [사용자 에이전트를 사용한 브라우저 감지](/ko/docs/Web/HTTP/Browser_detection_using_the_user_agent)를 참고하세요.
 
 <table class="properties">
   <tbody>

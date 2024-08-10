@@ -22,7 +22,8 @@ l10n:
 - {{domxref('ResizeObserverEntry.target')}} {{ReadOnlyInline}}
   - : 監視対象の {{domxref('Element')}} または {{domxref("SVGElement")}} オブジェクト。
 
-> **メモ:** コンテンツボックスは、コンテンツを配置できるボックスで、境界ボックスからパディングと境界の幅を除いたものを意味します。境界ボックスは、コンテンツ、パディング、境界を包含します。さらなる説明は[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)を参照してください。
+> [!NOTE]
+> コンテンツボックスは、コンテンツを配置できるボックスで、境界ボックスからパディングと境界の幅を除いたものを意味します。境界ボックスは、コンテンツ、パディング、境界を包含します。さらなる説明は[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)を参照してください。
 
 ## インスタンスメソッド
 

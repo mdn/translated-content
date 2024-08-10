@@ -23,7 +23,8 @@ HTML 表单可以声明式地发送一个 [HTTP](/zh-CN/docs/Web/HTTP) 请求。
 
 {{domxref("XMLHttpRequest")}}（XHR）DOM 对象可以构建 HTTP 请求、发送请求并获取结果。从历史上看，{{domxref("XMLHttpRequest")}} 是为获取和发送 [XML](/zh-CN/docs/Web/XML) 作为交换格式而设计的，后来这种格式被 [JSON](/zh-CN/docs/Glossary/JSON) 所取代。但是，XML 和 JSON 都不适合表单数据请求编码。表单数据（`application/x-www-form-urlencoded`）由键/值对的 URL 编码列表组成。为了传输二进制数据，HTTP 请求被重塑为 `multipart/form-data`。
 
-> **备注：** 如今 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 常用于取代 XHR——它是 XHR 的更现代、更新的版本，工作原理类似，但有一些优点。你在本文中看到的大部分 XHR 代码都可以换成 Fetch。
+> [!NOTE]
+> 如今 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 常用于取代 XHR——它是 XHR 的更现代、更新的版本，工作原理类似，但有一些优点。你在本文中看到的大部分 XHR 代码都可以换成 Fetch。
 
 如果你控制了前端（在浏览器中执行的代码）和后端（在服务器上执行的代码），就可以发送 JSON/XML，并随心所欲地处理它们。
 
@@ -103,7 +104,8 @@ btn.addEventListener("click", () => {
 
 {{EmbedLiveSample("构建_xmlhttprequest", "100%", 50)}}
 
-> **备注：** 当你想要往第三方网站传输数据时，使用 {{domxref("XMLHttpRequest")}} 会受到{{glossary('same-origin policy', '同源策略')}}的影响。如果你需要执行跨源请求，你需要熟悉一下 [CORS 和 HTTP 访问控制](/zh-CN/docs/Web/HTTP/CORS)。
+> [!NOTE]
+> 当你想要往第三方网站传输数据时，使用 {{domxref("XMLHttpRequest")}} 会受到{{glossary('same-origin policy', '同源策略')}}的影响。如果你需要执行跨源请求，你需要熟悉一下 [CORS 和 HTTP 访问控制](/zh-CN/docs/Web/HTTP/CORS)。
 
 ### 使用 XMLHttpRequest 和 FormData 对象
 

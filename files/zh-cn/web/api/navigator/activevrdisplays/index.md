@@ -9,7 +9,8 @@ l10n:
 
 {{domxref("Navigator")}} 接口的只读属性 **`activeVRDisplays`** 返回一个包含所有当前正在呈现（{{domxref("VRDisplay.ispresenting")}} 为 `true`）的 {{domxref("VRDisplay")}} 对象的数组。
 
-> **备注：** 此属性是旧版 [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) 的一部分。它已被 [WebXR 设备 API](https://immersive-web.github.io/webxr/) 取代。
+> [!NOTE]
+> 此属性是旧版 [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) 的一部分。它已被 [WebXR 设备 API](https://immersive-web.github.io/webxr/) 取代。
 
 ## 值
 

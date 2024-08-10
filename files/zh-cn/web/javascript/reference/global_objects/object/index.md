@@ -140,7 +140,7 @@ JavaScript 还具有内置的 API，用于生成 `null` 原型对象，特别是
 
 - {{jsxref("Object.groupBy()")}} 方法的返回值
 - {{jsxref("RegExp.prototype.exec()")}} 方法返回结果中的 `groups` 和 `indices.groups` 属性
-- [`Array.prototype[@@unscopables]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables) 属性（所有 `@@unscopables` 对象原型都应该为 `null`）
+- [`Array.prototype[Symbol.unscopables]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables) 属性（所有 `[Symbol.unscopables]` 对象原型都应该为 `null`）
 - [`import.meta`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import.meta) 对象
 - 通过 [`import * as ns from "module"`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入命名空间) 或 [`import()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import) 获取的模块命名空间对象
 
@@ -299,7 +299,8 @@ Object.prototype.valueOf = function (...args) {
 };
 ```
 
-> **警告：** 修改任何内置构造函数的 `prototype` 属性被认为是一种不好的做法，可能会影响向前兼容性。
+> [!WARNING]
+> 修改任何内置构造函数的 `prototype` 属性被认为是一种不好的做法，可能会影响向前兼容性。
 
 你可以阅读更多关于原型的内容，参见[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。
 

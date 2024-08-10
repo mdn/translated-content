@@ -39,7 +39,8 @@ slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 
 ## Worker 中可用的 Web API
 
-> **备注：** 如果列出的 API 被某一平台的特定版本所支持，那么一般可以认为它在 web worker 中是可用的。你也可以使用网站来测试对某个特定对象/函数的支持：<https://worker-playground.glitch.me/>
+> [!NOTE]
+> 如果列出的 API 被某一平台的特定版本所支持，那么一般可以认为它在 web worker 中是可用的。你也可以使用网站来测试对某个特定对象/函数的支持：<https://worker-playground.glitch.me/>
 
 以下 Web API 在 worker 中可用：
 

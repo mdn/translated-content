@@ -72,7 +72,8 @@ const Rectangle = class Rectangle2 {
 - [私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)
   - : 所有私有的元素
 
-> **备注：** 私有属性具有在同一个类种声明的所有属性的名称必须唯一的限制。其他所有的公有属性都没有这个限制——你可以写多个同名的公有属性，但是最后一个会覆盖掉其他的。此种表现与[对象初始化器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#重复属性名)相同。
+> [!NOTE]
+> 私有属性具有在同一个类种声明的所有属性的名称必须唯一的限制。其他所有的公有属性都没有这个限制——你可以写多个同名的公有属性，但是最后一个会覆盖掉其他的。此种表现与[对象初始化器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#重复属性名)相同。
 
 另外，有两种特殊的类元素语法：[`constructor`](#构造函数) 和[静态初始化块](#静态初始化块)，它们有自己的参考资料。
 

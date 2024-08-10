@@ -25,7 +25,7 @@ console.log(sum);
 sum = Number(value1) + value2;
 ```
 
-1. [用語集](/ja/docs/Glossary)
+1. 関連用語:
 
    1. {{Glossary("Type", "型")}}
    2. {{Glossary("Type conversion", "型変換")}}

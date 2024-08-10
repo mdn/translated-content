@@ -32,7 +32,7 @@ l10n:
 - [Fetch Metadata Request Headers playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)
 - [全 HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Headers)
 - [全 HTTP ヘッダーの一覧 > フェッチメタデータリクエストヘッダー](/ja/docs/Web/HTTP/Headers#フェッチメタデータリクエストヘッダー)
-- [用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("Representation header", "表現ヘッダー")}}
   - {{Glossary("HTTP_header","HTTP ヘッダー")}}

@@ -15,14 +15,14 @@ Firefox 26 は米国時間 2013 年 12 月 10 日にリリースされました�
 - 非標準の {{cssxref("-moz-text-blink")}} プロパティを削除しました ([Firefox バグ 812995](https://bugzil.la/812995))。
 - CSS Images & Values Level 4 バージョンにある、`from-image` キーワードと EXIF サポートを備えた {{cssxref("image-orientation")}} プロパティをサポートしました ([Firefox バグ 825771](https://bugzil.la/825771))。
 - `position: sticky` を実験的にサポートしました。設定 `layout.css.sticky.enabled` で有効にできます ([Firefox バグ 886646](https://bugzil.la/886646))。
-- {{cssxref("text-align")}} プロパティを `::-moz-placeholder` 疑似要素へ適用可能になりました ([Firefox バグ 915551](https://bugzil.la/915551))。
+- {{cssxref("text-align")}} プロパティを `::-moz-placeholder` 擬似要素へ適用可能になりました ([Firefox バグ 915551](https://bugzil.la/915551))。
 
 ### HTML
 
 - `HTMLSelectElement.selectedOptions` プロパティを実装しました ([Firefox バグ 596681](https://bugzil.la/596681))。
 - type が `email` の {{HTMLElement("input")}} で、ドメインのラベルが 63 文字を超える値を正しいと考えないようになりました ([Firefox バグ 884332](https://bugzil.la/884332))。
 - `HTMLInputElement.width` プロパティおよび `height` プロパティは、`type` が `image` ではない場合に `0` を返すようになりました ([Firefox バグ 905240](https://bugzil.la/905240))。
-- 包含する要素のひとつが無効であるときに {{HTMLElement("fieldset")}} 要素が無効になり、{{cssxref(":invalid")}} 疑似クラスでスタイルを設定できます ([Firefox バグ 717181](https://bugzil.la/717181))。
+- 包含する要素のひとつが無効であるときに {{HTMLElement("fieldset")}} 要素が無効になり、{{cssxref(":invalid")}} 擬似クラスでスタイルを設定できます ([Firefox バグ 717181](https://bugzil.la/717181))。
 
 ### JavaScript
 

@@ -11,7 +11,8 @@ l10n:
 
 ## Push 개념 및 사용법
 
-> **경고:** PushManager 구독을 구현할 때는 앱에서 CSRF/XSRF 문제를 방지하는 것이 매우 중요합니다. 자세한 내용은 다음 문서를 참조하세요.
+> [!WARNING]
+> PushManager 구독을 구현할 때는 앱에서 CSRF/XSRF 문제를 방지하는 것이 매우 중요합니다. 자세한 내용은 다음 문서를 참조하세요.
 >
 > - [Cross-Site Request Forgery (CSRF) Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
 > - [Preventing CSRF and XSRF Attacks](https://blog.codinghorror.com/preventing-csrf-and-xsrf-attacks/)

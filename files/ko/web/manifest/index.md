@@ -76,7 +76,8 @@ slug: Web/Manifest
 
 > **참고:** `.webmanifest` 확장자는 명세의 [Media type registration](https://w3c.github.io/manifest/#media-type-registration) 구획에 정의(매니페스트 파일의 응답은 `Content-Type: application/manifest+json`을 반환해야 함)되어 있습니다. 브라우저는 `.json`과 같은 기타 적절한 확장자도 지원합니다. (`Content-Type: application/json`).
 
-> **참고:** 매니페스트를 가져오려면 인증 정보가 필요한 경우, 매니페스트 파일이 현재 페이지와 동일한 출처에 위치하더라도 반드시 {{domxref("HTML/CORS_settings_attributes", "crossorigin")}} 특성을 `use-credentials`로 지정해야 합니다.
+> [!NOTE]
+> 매니페스트를 가져오려면 인증 정보가 필요한 경우, 매니페스트 파일이 현재 페이지와 동일한 출처에 위치하더라도 반드시 {{domxref("HTML/CORS_settings_attributes", "crossorigin")}} 특성을 `use-credentials`로 지정해야 합니다.
 
 ## 스플래시 화면
 

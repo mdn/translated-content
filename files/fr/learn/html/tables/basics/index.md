@@ -261,7 +261,8 @@ Il devrait en résulter un tableau qui ressemble à :
   </tbody>
 </table>
 
-> **Note :** Vous pouvez également trouver cela sur GitHub [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) ([voir en direct aussi](http://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
+> [!NOTE]
+> Vous pouvez également trouver cela sur GitHub [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) ([voir en direct aussi](http://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
 
 ## Ajouter des en-têtes avec \<th>
 
@@ -359,13 +360,15 @@ Améliorons ce tableau.
 2. Pour reconnaître les en-têtes de tableau en tant qu'en-têtes, visuellement et sémantiquement, vous pouvez utiliser la balise **[`<th>`](/fr/docs/Web/HTML/Element/th)** («&nbsp;th&nbsp;» comme «&nbsp;table header&nbsp;» ou en-tête de tableau). Il fonctionne exactement comme la balise `<td>`, à ceci près qu'il indique un en-tête et non une cellule normale. Allez dans le code HTML, et remplacez tous les `<td>` des cellules entourant le tableau par des `<th>`.
 3. Enregistrez votre HTML et chargez-le dans un navigateur. Vous devriez voir que les en-têtes ressemblent maintenant à des en-têtes.
 
-> **Note :** Vous pouvez trouver notre exemple achevé [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) sur GitHub ([voir en direct aussi](http://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
+> [!NOTE]
+> Vous pouvez trouver notre exemple achevé [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) sur GitHub ([voir en direct aussi](http://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
 
 ### Pourquoi les en-têtes sont-ils utiles&nbsp;?
 
 Nous avons déjà partiellement répondu à cette question — il vous est plus facile de trouver les données que vous cherchez quand les en-têtes sont marqués clairement, et la conception globale du tableau paraît meilleure.
 
-> **Note :** Les en-têtes de tableau sont accompagnés d'un style par défaut — ils sont en gras et centrés même si vous n'ajoutez pas votre propre style pour les démarquer.
+> [!NOTE]
+> Les en-têtes de tableau sont accompagnés d'un style par défaut — ils sont en gras et centrés même si vous n'ajoutez pas votre propre style pour les démarquer.
 
 Les en-têtes de tableau ont un autre avantage — avec l'attribut `scope` (que nous étudierons dans le prochain article), ils rendent les tableaux plus accessibles en associant chaque en-tête à toutes les données des cellules d'une ligne ou d'une colonne. Les lecteurs d'écran peuvent alors lire toute une ligne ou une colonne de données, ce qui peut être très utile.
 
@@ -442,7 +445,8 @@ Utilisons `colspan` et `rowspan` pour améliorer ce tableau.
 3. Enfin, utilisez `rowspan` pour mettre «&nbsp;Cheval&nbsp;» and «&nbsp;Poulet&nbsp;» sur deux lignes.
 4. Enregistrez et ouvrez votre code sur un navigateur pour voir l'amélioration.
 
-> **Note :** Vous pouvez trouver l'exemple achevé dans [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) sur GitHub ([voir en direct aussi](http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
+> [!NOTE]
+> Vous pouvez trouver l'exemple achevé dans [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) sur GitHub ([voir en direct aussi](http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
 ## Attribuer un style commun aux colonnes
 

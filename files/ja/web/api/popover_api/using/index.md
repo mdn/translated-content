@@ -17,7 +17,8 @@ l10n:
 <div id="mypopover" popover>ポップオーバーコンテンツ</div>
 ```
 
-> **メモ:** 値なしで `popover` 属性を追加すると、 `popover="auto"` を設定するのと同じになります。
+> [!NOTE]
+> 値なしで `popover` 属性を追加すると、 `popover="auto"` を設定するのと同じになります。
 
 この属性を追加すると、{{cssxref("display", "display: none")}} をその要素に設定することで、ページ読み込み時に非表示にすることができます。ポップオーバーの表示・非表示を切り替えるには、いくつかの制御ボタンを追加する必要があります。{{htmlelement("button")}}（または {{htmlelement("input")}} の `type="button"`）に [`popovertarget`](/ja/docs/Web/HTML/Element/button#popovertarget) 属性を、制御するポップオーバーの ID を値として設定することすることにより、ポップオーバー制御ボタンに設定することができます。
 
@@ -417,7 +418,8 @@ html {
 
 {{ EmbedLiveSample("Transitioning a popover", "100%", "200") }}
 
-> **メモ:** ポップオーバーは表示されるたびに `display: none` から `display: block` に変わるので、項目がトランジションするたびに `@starting-style` スタイルから `[popover]:popover-open` スタイルにトランジションします。ポップオーバーが閉じられたとき、 `[popover]:popover-open` 状態から既定の `[popover]` 状態にトランジションします。
+> [!NOTE]
+> ポップオーバーは表示されるたびに `display: none` から `display: block` に変わるので、項目がトランジションするたびに `@starting-style` スタイルから `[popover]:popover-open` スタイルにトランジションします。ポップオーバーが閉じられたとき、 `[popover]:popover-open` 状態から既定の `[popover]` 状態にトランジションします。
 >
 > このような場合、出現時と消滅時のスタイル設定を異なる形にすることが可能です。このことの証明については、[開始スタイルを使用する場合のデモ](/ja/docs/Web/CSS/@starting-style#開始スタイルを使用する場合のデモ)の例を参照してください。
 

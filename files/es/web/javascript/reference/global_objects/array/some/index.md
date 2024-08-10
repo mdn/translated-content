@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/some
 
 El método **`some()`** comprueba si al menos un elemento del array cumple con la condición implementada por la función proporcionada.
 
-> **Nota:** Este método devuelve `false` para cualquier condición puesta en un array vacío.
+> [!NOTE]
+> Este método devuelve `false` para cualquier condición puesta en un array vacío.
 
 {{EmbedInteractiveExample("pages/js/array-some.html")}}
 

@@ -31,7 +31,7 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 - 設定項目 `layout.css.variables.enabled` を完全に削除しました。[CSS 変数](/ja/docs/Web/CSS/Using_CSS_custom_properties) の機能は常にデフォルトで有効であり、無効化できません ([Firefox バグ 1312328](https://bugzil.la/1312328))。
 - 独自仕様である `-moz-context-properties` プロパティを実装しました ([Firefox バグ 1058040](https://bugzil.la/1058040))。
 - 角度の単位がつかない 0 度の値が、{{cssxref("gradient/linear-gradient", "linear-gradient()")}} で正しく解釈されない問題を修正しました ([Firefox バグ 1363292](https://bugzil.la/1363292))。
-- {{cssxref("::cue")}} 疑似要素をサポートしました。これは、メディア要素内で提供するテキストキューにマッチします ([Firefox バグ 1318542](https://bugzil.la/1318542))。
+- {{cssxref("::cue")}} 擬似要素をサポートしました。これは、メディア要素内で提供するテキストキューにマッチします ([Firefox バグ 1318542](https://bugzil.la/1318542))。
 
 ### SVG
 
@@ -143,7 +143,7 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 
 ### CSS
 
-- 独自仕様である `:-moz-bound-element` 疑似クラスを削除しました ([Firefox バグ 1350147](https://bugzil.la/1350147))。
+- 独自仕様である `:-moz-bound-element` 擬似クラスを削除しました ([Firefox バグ 1350147](https://bugzil.la/1350147))。
 - {{cssxref("text-decoration-line")}} の独自仕様の値である `-moz-anchor-decoration` を削除しました ([Firefox バグ 1355734](https://bugzil.la/1355734))。
 
 ### API

@@ -21,7 +21,8 @@ image-rendering: unset;
 
 Esta propiedad aplica tanto al elemento mismo, como a cualquier imagen provista en otra propiedad del elemento. No tiene efecto alguno en imágenes no-escaladas. Por ejemplo, si el tamaño natural de una imágen es _100×100px pero el autor de la página especifica sus dimenciones como_ `200×200px` (o `50×50px`), entonces la imágen se escalará (en cualquiér dirección) a sus nuevas dimensiones usando el algoritmo especificado. El escalado podría también aplicar por interacción del usuario (cambiando la escala).
 
-> **Nota:** Un Canvas puede proveer una [solución de respaldo para crisp-edge/optimize-contrast](http://phrogz.net/tmp/canvas_image_zoom.html) a través de la manipulación manual de datos de la imagen.
+> [!NOTE]
+> Un Canvas puede proveer una [solución de respaldo para crisp-edge/optimize-contrast](http://phrogz.net/tmp/canvas_image_zoom.html) a través de la manipulación manual de datos de la imagen.
 
 {{cssinfo}}
 
@@ -39,7 +40,8 @@ Esta propiedad aplica tanto al elemento mismo, como a cualquier imagen provista 
 - **`pixelated`**
   - : Al escalar la imagen, se debe usar el algoritmo de vecino más cercano, de modo que la imagen parezca estar compuesta de píxeles grandes. Cuando se reduce la escala, esto es lo mismo que 'auto'.
 
-> **Nota:** Los valores `optimizeQuality` y `optimizeSpeed` presentes en un borrador anterior (y proviniendo de su contraparte SVG) son definidos como sinónimos del valor `auto`.
+> [!NOTE]
+> Los valores `optimizeQuality` y `optimizeSpeed` presentes en un borrador anterior (y proviniendo de su contraparte SVG) son definidos como sinónimos del valor `auto`.
 
 ### Formal syntax
 

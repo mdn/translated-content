@@ -17,7 +17,8 @@ Las principales diferencias con el objeto {{jsxref("Set")}} son:
 - `WeakSet` son colecciones de **objetos solamente**. No pueden contener valores arbitrarios de cualquier tipo, como pueden hacerlo los {{jsxref("Set")}}.
 - El `WeakSet` es _débil_, lo que significa que las referencias a objectos en un `WeakSet` se mantienen _débilmente_. Si no existen otras referencias a un objecto almacenado en `WeakSet`, esos objectos pueden ser recolectados como basura.
 
-  > **Nota:** Esto también significa que no hay una lista de objectos actuales almacenados en la colección. Los `WeakSets` no son enumerables.
+  > [!NOTE]
+  > Esto también significa que no hay una lista de objectos actuales almacenados en la colección. Los `WeakSets` no son enumerables.
 
 ### Caso de uso: Detección de referencias circulares
 

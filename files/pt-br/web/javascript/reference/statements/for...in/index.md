@@ -92,9 +92,9 @@ for (var prop in obj) {
 
 Anterior ao SpiderMonkey 40, era possível usar uma expressão inicial com o laço for...in, conforme exemplo que se segue:
 
-```js example-bad
-var obj = {a:1, b:2, c:3};
-for(var i=0 in obj) {
+```js-nolint example-bad
+var obj = { a: 1, b: 2, c: 3 };
+for (var i = 0 in obj) {
   console.log(obj[i]);
 }
 // 1

@@ -10,7 +10,8 @@ l10n:
 
 `getComputedTiming()` は {{domxref("AnimationEffect")}} インターフェイスのメソッドで、このアニメーション効果のタイミングのプロパティの計算値を返します。
 
-> **メモ:** これらの値は、 `window.getComputedStyle(elem)` を使用して返される要素のスタイルの計算値と同等です。
+> [!NOTE]
+> これらの値は、 `window.getComputedStyle(elem)` を使用して返される要素のスタイルの計算値と同等です。
 
 ## 構文
 

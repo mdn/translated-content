@@ -27,7 +27,7 @@ Pour utiliser l'API topSites, vous devez disposez de l' [API permission](/fr/Add
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.topSites`](https://developer.chrome.com/extensions/topSites).
 >

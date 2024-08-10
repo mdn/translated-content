@@ -23,7 +23,8 @@ Prettier formatea todo el código y mantiene el estilo consistente. Sin embargo,
 
 ## Documento HTML completo
 
-> **Nota:** Las pautas de esta sección solo se aplican cuando necesita mostrar un documento HTML completo. Por lo general, un fragmento es suficiente para demostrar una función. Cuando utilice la [macro EmbedLiveSample](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#traditional_live_samples), simplemente incluya el fragmento HTML se insertará automáticamente en un documento HTML completo cuando se muestre.
+> [!NOTE]
+> Las pautas de esta sección solo se aplican cuando necesita mostrar un documento HTML completo. Por lo general, un fragmento es suficiente para demostrar una función. Cuando utilice la [macro EmbedLiveSample](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#traditional_live_samples), simplemente incluya el fragmento HTML se insertará automáticamente en un documento HTML completo cuando se muestre.
 
 ### Tipo de documento
 

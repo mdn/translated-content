@@ -16,7 +16,8 @@ l10n:
 
 位置指定された祖先要素がない場合は、`body` を返します。
 
-> **メモ:** 次の状況では、`offsetParent` は `null` を返します。
+> [!NOTE]
+> 次の状況では、`offsetParent` は `null` を返します。
 >
 > - 要素またはその親要素の `display` プロパティが `none` に設定されている。
 > - 要素の `position` プロパティが `fixed`（固定位置指定）に設定されている（Firefox は `<body>` を返します）。

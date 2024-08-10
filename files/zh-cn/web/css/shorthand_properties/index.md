@@ -26,7 +26,7 @@ p {
 
 以上样式不会将 background 的 color 值设置为 `red`，而是 {{cssxref("background-color")}} 的默认值 `transparent`。
 
-关键词 inherit 只可以应用于单独属性（individual properties），如果应用于一个简写属性（shorthand property），则必须整体应用，而能对简写属性值的每一个部分单独应用。由于单独属性的漏掉的值会被它们的初始值（initial value）替代，因此不可能允许单个属性通过省略继承的。这意味着让一个属性的值使用继承值的唯一方法就是使用值是 `inherit` 的普通属性（longhand property）。
+关键词 inherit 只可以应用于单独属性（individual properties），如果应用于一个简写属性（shorthand property），则必须整体应用，而能对简写属性值的每一个部分单独应用。由于单独属性的漏掉的值会被它们的初始值（initial value）替代，因此不可能允许单个属性通过省略继承的。这意味着让一个属性的值使用继承值的唯一方法就是使用值是 `inherit` 的全称属性（longhand property）。
 
 ### 属性的顺序
 

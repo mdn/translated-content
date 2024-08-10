@@ -15,7 +15,8 @@ L'attribut `itemtype` peut uniquement être défini pour les éléments qui ont 
 
 Google et les autres moteurs de recherche participent au vocabulaire défini par [schema.org](http://schema.org/) pour structurer les données. Ce vocabulaire définit un ensemble standard de types et de noms de propriétés. Par exemple [`MusicEvent`](http://schema.org/MusicEvent) indique un événement musical dont les propriétés [`startDate`](http://schema.org/startDate) et [`location`](http://schema.org/location) utilisées pour définir les détails du concert. Dans ce cas, l'URL [`http://schema.org/MusicEvent`](http://schema.org/MusicEvent) sera l'URL utilisée pour l'attribut `itemtype` et les propriétés `startDate` et `location` seront les propriétés utilisées, définies par [`http://schema.org/MusicEvent`](http://schema.org/MusicEvent).
 
-> **Note :** Vous pourrez trouver plus d'informations sur l'attribut itemtype sur <http://schema.org/Thing>
+> [!NOTE]
+> Vous pourrez trouver plus d'informations sur l'attribut itemtype sur <http://schema.org/Thing>
 
 ## Syntaxe
 

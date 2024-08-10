@@ -13,7 +13,8 @@ l10n:
 
 テキストのフォントやレイアウト構成は、 {{domxref("CanvasRenderingContext2D.font","font")}}、{{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}、{{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}}、{{domxref("CanvasRenderingContext2D.direction","direction")}} の各プロパティで定義されたものを使用して描画が行われます。
 
-> **メモ:** 文字列の文字の輪郭を描画するには、そのコンテキストで {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} メソッドを呼び出してください。
+> [!NOTE]
+> 文字列の文字の輪郭を描画するには、そのコンテキストで {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} メソッドを呼び出してください。
 
 ## 構文
 

@@ -40,7 +40,8 @@ p.finally(function () {
   - 與 `Promise.resolve(2).then(() => {}, () => {})`（將被 resolved 為`undefined`）不同，`Promise.resolve(2).finally(() => {})` 將被 resolved 為`2`。
   - 同樣的，與 `Promise.reject(3).then(() => {}, () => {})`（將 fulfilled 為`undefined`）不同，`Promise.reject(3).finally(() => {})` 將被 rejected 為`3`。
 
-> **備註：** 在 finally 回呼中使用 throw（或回傳 rejected promise）會導致新的 promise 被 reject，reject 的原因則是呼叫 throw() 時所指定的值。
+> [!NOTE]
+> 在 finally 回呼中使用 throw（或回傳 rejected promise）會導致新的 promise 被 reject，reject 的原因則是呼叫 throw() 時所指定的值。
 
 ## 範例
 

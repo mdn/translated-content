@@ -14,7 +14,7 @@ l10n:
 ## 関連情報
 
 - [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)
-- [MDN Web Docs 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("CORS")}}
   - {{Glossary("origin", "オリジン")}}

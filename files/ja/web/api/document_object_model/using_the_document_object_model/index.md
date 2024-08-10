@@ -1,6 +1,8 @@
 ---
 title: ドキュメントオブジェクトモデルの使用
 slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model
+l10n:
+  sourceCommit: 1f44fd905e4acbe867ca945b26a8b06ddb646328
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -35,7 +37,7 @@ slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model
 
 文書 API、 DOM API とも呼ばれますが、これによって何でも好きなように DOM ツリーを変更できます。これは、任意の HTML や XML 文書をゼロから作成したり、与えられた HTML や XML 文書の内容を変更したりすることができることを意味します。ウェブページの作者は、文書の DOM を JavaScript を使ってグローバルオブジェクトの `document` プロパティにアクセスすることで編集することができます。この `document` オブジェクトは {{domxref("Document")}} インターフェイスを実装しています。
 
-## 簡単な例
+## ツリーの読み取りと変更
 
 上の文書を元に作者は、ヘッダーの内容を変え、1つある段落を 2 つに書き換えたいものとしましょう。これは以下のスクリプトによってできます。
 
@@ -88,9 +90,34 @@ function change() {
 
 ### 結果
 
-{{ EmbedLiveSample('A_simple_example', 800, 300) }}
+{{ EmbedLiveSample('reading_and_modifying_the_tree', 800, 300) }}
 
-## どうすればもっと学べるのか
+## ツリーの作成
+
+JavaScript で上記のツリーを完全に作成することもできます。
+
+```js
+const root = document.createElement("html");
+root.lang = "ja";
+
+const head = document.createElement("head");
+const title = document.createElement("title");
+title.appendChild(document.createTextNode("My Document"));
+head.appendChild(title);
+
+const body = document.createElement("body");
+const header = document.createElement("h1");
+header.appendChild(document.createTextNode("Header"));
+const paragraph = document.createElement("p");
+paragraph.appendChild(document.createTextNode("Paragraph"));
+body.appendChild(header);
+body.appendChild(paragraph);
+
+root.appendChild(head);
+root.appendChild(body);
+```
+
+## もっと学ぶ方法
 
 これで DOM の基本的な概念に慣れたと思いますので、[JavaScript と DOM インターフェイスによる HTML の表の操作](/ja/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces) を読んで、文書 API の基本的な機能についてもっと学びたいと思うかもしれません。
 

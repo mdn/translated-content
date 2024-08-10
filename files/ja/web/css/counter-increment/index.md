@@ -9,7 +9,8 @@ slug: Web/CSS/counter-increment
 
 {{EmbedInteractiveExample("pages/css/counter-increment.html")}}
 
-> **メモ:** カウンターの値は CSS の {{cssxref("counter-reset")}} プロパティを使用して任意の値にリセットすることができます。
+> [!NOTE]
+> カウンターの値は CSS の {{cssxref("counter-reset")}} プロパティを使用して任意の値にリセットすることができます。
 
 ## 構文
 

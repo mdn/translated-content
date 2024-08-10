@@ -46,7 +46,8 @@ scrollbar-width: unset;
       </tbody>
     </table>
 
-    > **备注：** 用户代理必须将应用于根元素的任何 `scrollbar-width` 值应用于视口。
+    > [!NOTE]
+    > 用户代理必须将应用于根元素的任何 `scrollbar-width` 值应用于视口。
 
 ## 无障碍考虑
 

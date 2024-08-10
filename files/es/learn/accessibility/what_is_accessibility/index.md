@@ -42,7 +42,8 @@ Crear sitios web accesibles nos beneficia a todos:
 
 Las personas con discapacidad son tan diversas como las personas sin discapacidad, y también lo son sus discapacidades. La clave está en pensar más allá de tu ordenador y en cómo utilizas la web y empezar a aprender acerca de cómo otros la utilizan. _Tú no eres tus usuarios_. A continuación explicaremos los principales tipos de discapacidad que vamos a considerar, junto con las herramientas especiales que se utilizan para acceder al contenido web (conocidas como **tecnologías de apoyo** o **AT**, de _assistive technologies_).
 
-> **Nota:** La hoja informativa sobre [discapacidad y salud](https://www.who.int/es/news-room/fact-sheets/detail/disability-and-health) de la Organización Mundial de la Salud establece que «Más de mil millones de personas, aproximadamente el 15% de la población mundial, tienen alguna forma de discapacidad» y «Entre 110 millones y 190 millones de adultos tienen dificultades funcionales significativas».
+> [!NOTE]
+> La hoja informativa sobre [discapacidad y salud](https://www.who.int/es/news-room/fact-sheets/detail/disability-and-health) de la Organización Mundial de la Salud establece que «Más de mil millones de personas, aproximadamente el 15% de la población mundial, tienen alguna forma de discapacidad» y «Entre 110 millones y 190 millones de adultos tienen dificultades funcionales significativas».
 
 ### Personas con discapacidad visual
 
@@ -124,7 +125,8 @@ Por otro lado, si trabajas en un sitio web de una galería que muestra obras de 
 
 Para demostrar que te importa y que has pensado en la accesibilidad, publica una declaración de accesibilidad en la página web que explique tu política de accesibilidad y los pasos realizados para hacer que el sitio web sea accesible. Si alguien se queja de que tiene un problema de accesibilidad: inicia un diálogo con ellos, se empático y toma las medidas razonables para tratar de solucionar el problema.
 
-> **Nota:** Nuestro artículo sobre [Cómo afrontar los problemas de accesibilidad más comunes](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility) expone los detalles de accesibilidad que es necesario tener más en cuenta.
+> [!NOTE]
+> Nuestro artículo sobre [Cómo afrontar los problemas de accesibilidad más comunes](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility) expone los detalles de accesibilidad que es necesario tener más en cuenta.
 
 En resumen:
 

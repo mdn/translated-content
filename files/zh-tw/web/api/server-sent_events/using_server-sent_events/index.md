@@ -50,7 +50,8 @@ evtSource.addEventListener("ping", function (event) {
 
 上述的程式碼大同小異，不同之處在於若伺服器傳送了 `event` 欄位值為「ping」的訊息時它就會把 `data` 欄位的值解析為 JSON 並輸出到畫面上。
 
-> **警告：** 當連線不是透過 **HTTP/2** 時，SSE 會受到最大連線數限制所苦，尤其當開啟多個分頁。每個瀏覽器有自己的限制數而且被限制在很低的數量（6）。這個問題已經被 [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) 和 [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896) 標註為「Won't fix」（不修復）。限制是基於每個瀏覽器 + 網域，也就是說你可以針對 www\.example1.com 網域在所有的分頁中開啟六個 SSE 連線，另一個網域 www\.example2.com 也可以開啟六個（根據 [Stackoverflow](https://stackoverflow.com/a/5326159/1905229)）。當使用 HTTP/2 時最大同時 _HTTP streams_ 連線數是由伺服器和客戶端之間協調（預設 100）。
+> [!WARNING]
+> 當連線不是透過 **HTTP/2** 時，SSE 會受到最大連線數限制所苦，尤其當開啟多個分頁。每個瀏覽器有自己的限制數而且被限制在很低的數量（6）。這個問題已經被 [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) 和 [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896) 標註為「Won't fix」（不修復）。限制是基於每個瀏覽器 + 網域，也就是說你可以針對 www\.example1.com 網域在所有的分頁中開啟六個 SSE 連線，另一個網域 www\.example2.com 也可以開啟六個（根據 [Stackoverflow](https://stackoverflow.com/a/5326159/1905229)）。當使用 HTTP/2 時最大同時 _HTTP streams_ 連線數是由伺服器和客戶端之間協調（預設 100）。
 
 ## 從伺服器發送事件
 
@@ -95,7 +96,8 @@ while (true) {
 上述的程式碼會在每秒產生一個類型為「ping」的事件。每一個事件的資料是一個 JSON 物件，內容為事件產生時的 ISO 8601 時間戳。同時會隨機發送一個簡易訊息（沒有事件類型）。
 迴圈的執行會獨立於連線的狀態，，所以在迴圈裡必須檢查連線的狀態，若斷線了要關閉連線（譬如，客戶端關閉了網頁）。
 
-> **備註：** 你可以從下列的 Github 文章中找到包含本文所使用程式碼的完整範例 —— 參考 [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!NOTE]
+> 你可以從下列的 Github 文章中找到包含本文所使用程式碼的完整範例 —— 參考 [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
 ## 錯誤處理
 
@@ -119,7 +121,8 @@ evtSource.close();
 
 事件串流是個簡易的文字資料串流，內容必須以 UTF-8 格式編碼。在事件串流中，不同的訊息以一對換行符號做區隔。若要撰寫註解，則要在該行的開頭加上冒號（:）。
 
-> **備註：** 註解將有助於防止連線逾時；伺服器端可以定時發送註解以維持連線活著。
+> [!NOTE]
+> 註解將有助於防止連線逾時；伺服器端可以定時發送註解以維持連線活著。
 
 每一個訊息是由一到多列的欄位所組成的文字。每個欄位依序由欄位的名稱、冒號、該欄位的文字內容所組合而成。
 
@@ -138,7 +141,8 @@ evtSource.close();
 
 除上述的幾個欄位，其他欄位均會被忽略。
 
-> **備註：** 如果某列的內容沒有包含冒號，則該列的內容都會被視為欄位名稱及空字串的欄位值。
+> [!NOTE]
+> 如果某列的內容沒有包含冒號，則該列的內容都會被視為欄位名稱及空字串的欄位值。
 
 ### 範例
 

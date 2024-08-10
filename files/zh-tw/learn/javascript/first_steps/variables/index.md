@@ -71,7 +71,8 @@ if (name === 'Adam') {
 
 變量的另一個特性就是它們能夠存儲任何的東西 — 不只是字符串和數字。變量可以存儲更複雜的數據，甚至是函數。你將在後續的內容中體驗到這些用法。
 
-> **備註：** 變量是用來儲存數值的，而變量和數值是兩個不同的概念。變量不是數值本身，它們僅僅是一個用於儲存數值的容器。你可以把變量想像成一個個用來裝東西的紙皮箱。
+> [!NOTE]
+> 變量是用來儲存數值的，而變量和數值是兩個不同的概念。變量不是數值本身，它們僅僅是一個用於儲存數值的容器。你可以把變量想像成一個個用來裝東西的紙皮箱。
 
 ![](boxes.png)
 
@@ -86,7 +87,8 @@ let myAge;
 
 在這裡我們定義了兩個變量 `myName` 和 `myAge`。那麼現在嘗試輸入這些代碼到你的瀏覽器終端。之後，嘗試使用你自己選擇的名稱來創建一兩個變量。
 
-> **備註：** 在 JavaScript 中，所有代碼指令都會以分號結尾（ `;`）－ 如果忘記加分號，你的單行代碼可能正常執行，但是在執行多行代碼的時候就可能出錯。所以，最好是養成主動以分號作為代碼結尾的習慣。
+> [!NOTE]
+> 在 JavaScript 中，所有代碼指令都會以分號結尾（ `;`）－ 如果忘記加分號，你的單行代碼可能正常執行，但是在執行多行代碼的時候就可能出錯。所以，最好是養成主動以分號作為代碼結尾的習慣。
 
 你可以輸入變量的名稱，來驗證這個變量的數值是否在執行環境（execution environment）中已經存在。例如，
 
@@ -101,7 +103,8 @@ myAge;
 scoobyDoo;
 ```
 
-> **備註：** 千萬不要把兩個概念弄混淆了，「一個變量**存在，但是沒有數值**」和「一個變量**並不存在**」— 他們完全是兩回事。在前面你看到的盒子的類比中，不存在意味著沒有可以存放變量的「盒子」。沒有定義的值意味著**有**一個「盒子」，但是它裡面沒有任何數值。
+> [!NOTE]
+> 千萬不要把兩個概念弄混淆了，「一個變量**存在，但是沒有數值**」和「一個變量**並不存在**」— 他們完全是兩回事。在前面你看到的盒子的類比中，不存在意味著沒有可以存放變量的「盒子」。沒有定義的值意味著**有**一個「盒子」，但是它裡面沒有任何數值。
 
 ## 初始化變量 (Initializing a variable)
 
@@ -149,7 +152,8 @@ logName();
 var myName;
 ```
 
-> **備註：** This won't work when typing individual lines into a JavaScript console, just when running multiple lines of JavaScript in a web document.
+> [!NOTE]
+> This won't work when typing individual lines into a JavaScript console, just when running multiple lines of JavaScript in a web document.
 
 This works because of **hoisting** — read [var hoisting](/zh-TW/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) for more detail on the subject.
 
@@ -180,7 +184,8 @@ Again, this is a sensible language decision. There is no reason to redeclare var
 
 For these reasons and more, we recommend that you use `let` as much as possible in your code, rather than `var`. There is no reason to use `var`, unless you need to support old versions of Internet Explorer with your code (it doesn't support `let` until version 11; the modern Windows Edge browser supports `let` just fine).
 
-> **備註：** We are currently in the process of updating the course to use `let` rather than `var`. Bear with us!
+> [!NOTE]
+> We are currently in the process of updating the course to use `let` rather than `var`. Bear with us!
 
 ## Updating a variable
 
@@ -203,7 +208,8 @@ You can call a variable pretty much anything you like, but there are limitations
 - Variables are case sensitive — so `myage` is a different variable to `myAge`.
 - One last point — you also need to avoid using JavaScript reserved words as your variable names — by this, we mean the words that make up the actual syntax of JavaScript! So, you can't use words like `var`, `function`, `let`, and `for` as variable names. Browsers will recognize them as different code items, and so you'll get errors.
 
-> **備註：** You can find a fairly complete list of reserved keywords to avoid at [Lexical grammar — keywords](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords).
+> [!NOTE]
+> You can find a fairly complete list of reserved keywords to avoid at [Lexical grammar — keywords](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords).
 
 良好的命名範例：
 

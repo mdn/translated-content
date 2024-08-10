@@ -117,7 +117,7 @@ alert(show_own_props(o, "o")); /* alerts: o.color = red */
 Prior to Firefox 40, it was possible to use an initializer expression
 (`i=0`) in a `for...in` loop:
 
-```js example-bad
+```js-nolint example-bad
 const obj = { a: 1, b: 2, c: 3 };
 for (var i = 0 in obj) {
   console.log(obj[i]);

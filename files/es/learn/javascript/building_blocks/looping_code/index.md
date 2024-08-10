@@ -441,7 +441,8 @@ btn.addEventListener("click", () => {
 
 5. Después del bucle, verificamos si configuramos un contacto y, de lo contrario, configuramos el texto del párrafo como "Contacto no encontrado".
 
-> **Nota:** También puedes ver el [código fuente completo en GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html) (también [verlo en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
+> [!NOTE]
+> También puedes ver el [código fuente completo en GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html) (también [verlo en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
 
 ## Omitir iteraciones con continue
 
@@ -489,7 +490,8 @@ Este es el resultado:
 3. Si la raíz cuadrada y la raíz cuadrada redondeada hacia abajo no son iguales entre sí (`!==`), significa que la raíz cuadrada no es un número entero, por lo que no nos interesa. En tal caso, usamos la instrucción `continue` para saltar a la siguiente iteración de bucle sin registrar el número en ninguna parte.
 4. Si la raíz cuadrada es un número entero, omitimos por completo el bloque `if`, por lo que no se ejecuta la instrucción `continue`; en su lugar, concatenamos el valor `i` actual más un espacio al final del contenido del párrafo.
 
-> **Nota:** También puedes ver el [código fuente completo en GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) (también [verlo en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
+> [!NOTE]
+> También puedes ver el [código fuente completo en GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) (también [verlo en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 
 ## while y do...while
 
@@ -535,7 +537,8 @@ while (i < cats.length) {
 console.log(myFavoriteCats); // "Mis gatos se llaman Pete, Biggles y Jasmine."
 ```
 
-> **Nota:** Esto sigue funcionando exactamente como se esperaba: échale un vistazo al [código fuente completo](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (también puedes ver el [código fuente completo](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/while.html)).
+> [!NOTE]
+> Esto sigue funcionando exactamente como se esperaba: échale un vistazo al [código fuente completo](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (también puedes ver el [código fuente completo](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/while.html)).
 
 El bucle [do...while](/es/docs/Web/JavaScript/Reference/Statements/do...while) es muy similar, pero proporciona una variación en la estructura while:
 
@@ -574,9 +577,11 @@ do {
 console.log(myFavoriteCats); // "Mis gatos se llaman Pete, Biggles y Jasmine."
 ```
 
-> **Nota:** De nuevo, esto funciona igual que lo esperado: échale un vistazo al [código fuente completo](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (también puedes ver el [código fuente completo](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)).
+> [!NOTE]
+> De nuevo, esto funciona igual que lo esperado: échale un vistazo al [código fuente completo](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (también puedes ver el [código fuente completo](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)).
 
-> **Advertencia:** Con while y do...while, como con todos los bucles, debe asegurarse de que el inicializador se incremente o, según el caso, se disminuya, para que la condición finalmente se vuelva falsa.
+> [!WARNING]
+> Con while y do...while, como con todos los bucles, debe asegurarse de que el inicializador se incremente o, según el caso, se disminuya, para que la condición finalmente se vuelva falsa.
 > Si no, el bucle continuará para siempre y el navegador lo obligará a detenerse o se bloqueará. Esto se llama un **bucle infinito**.
 
 ## Aprendizaje activo: iniciar cuenta regresiva
@@ -600,7 +605,8 @@ En concreto, queremos:
 
 - ¡Recuerda incluir un iterador! Sin embargo, en este ejemplo estamos contando hacia atrás después de cada iteración, no hacia arriba, por lo que **no** quieres `i++`: ¿cómo iteras hacia abajo?
 
-> **Nota:** Si comienza a escribir el bucle (por ejemplo, (while(i>=0)), es posible que el navegador se atasque porque aún no ha ingresado la condición final. Así que ten cuidado con esto. Puedes empezar a escribir tu código en un comentario para hacer frente a este problema y eliminar el comentario después de terminar.
+> [!NOTE]
+> Si comienza a escribir el bucle (por ejemplo, (while(i>=0)), es posible que el navegador se atasque porque aún no ha ingresado la condición final. Así que ten cuidado con esto. Puedes empezar a escribir tu código en un comentario para hacer frente a este problema y eliminar el comentario después de terminar.
 
 Si comete un error, siempre puede restablecer el ejemplo con el botón "Restablecer".
 Si te quedas realmente atascado, pulsa "Mostrar solución" para ver una solución.
@@ -986,7 +992,8 @@ do {
 } while (condición)
 ```
 
-> **Nota:** También hay otros tipos/características de bucle, que son útiles en situaciones avanzadas/especializadas y más allá del alcance de este artículo. Si quieres ir más allá con tu aprendizaje en bucle, lee nuestra [Guía de bucles e iteraciones](/es/docs/Web/JavaScript/Guide/Loops_and_iteration) avanzada.
+> [!NOTE]
+> También hay otros tipos/características de bucle, que son útiles en situaciones avanzadas/especializadas y más allá del alcance de este artículo. Si quieres ir más allá con tu aprendizaje en bucle, lee nuestra [Guía de bucles e iteraciones](/es/docs/Web/JavaScript/Guide/Loops_and_iteration) avanzada.
 
 ## Pon a prueba tus habilidades
 

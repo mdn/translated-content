@@ -62,7 +62,8 @@ let fakeArray = {
 x.concat(fakeArray); // [1, 2, 3, "hello", "world"]
 ```
 
-> **Nota:** A propriedade `length` é usada para controlar o número de propriedade dos objetos para ser adicionado. No exemplo acima, `length:2` indica que duas propriedades tem de ser adicionado.
+> [!NOTE]
+> A propriedade `length` é usada para controlar o número de propriedade dos objetos para ser adicionado. No exemplo acima, `length:2` indica que duas propriedades tem de ser adicionado.
 
 ## Especificações
 

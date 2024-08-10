@@ -13,9 +13,11 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.clip()`** 方法用于将当前或
 
 ![星形裁剪区域](canvas_clipping_path.png)
 
-> **备注：** 请注意，裁剪区域仅由添加到路径中的形状构成。它不适用于直接绘制到画布上的形状基元，比如 {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}。相反，在调用 `clip()` 前，你需要使用 {{domxref("CanvasRenderingContext2D.rect()","rect()")}} 将一个矩形形状添加到路径中。
+> [!NOTE]
+> 请注意，裁剪区域仅由添加到路径中的形状构成。它不适用于直接绘制到画布上的形状基元，比如 {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}。相反，在调用 `clip()` 前，你需要使用 {{domxref("CanvasRenderingContext2D.rect()","rect()")}} 将一个矩形形状添加到路径中。
 
-> **备注：** 裁剪路径不能直接撤销。在调用 `clip()` 前，你必须使用 {{domxref("CanvasRenderingContext2D/save", "save()")}} 保存画布状态，并在裁剪区域完成绘制后使用 {{domxref("CanvasRenderingContext2D/restore", "restore()")}} 还原。
+> [!NOTE]
+> 裁剪路径不能直接撤销。在调用 `clip()` 前，你必须使用 {{domxref("CanvasRenderingContext2D/save", "save()")}} 保存画布状态，并在裁剪区域完成绘制后使用 {{domxref("CanvasRenderingContext2D/restore", "restore()")}} 还原。
 
 ## 语法
 

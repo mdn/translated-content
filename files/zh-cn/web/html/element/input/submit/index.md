@@ -185,7 +185,8 @@ slug: Web/HTML/Element/input/submit
 
 可以在运行时通过简单地将 `disabled` 设置为 `true` 或 `false` 来启用和禁用按钮。在 JavaScript 中，这看起来像 `btn.disabled = true` 或 `btn.disabled = false`。
 
-> **备注：** 有关启用和禁用按钮的更多想法，请参见 [`<input type="button">`](/zh-CN/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button) 。
+> [!NOTE]
+> 有关启用和禁用按钮的更多想法，请参见 [`<input type="button">`](/zh-CN/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button) 。
 
 ## 验证方式
 

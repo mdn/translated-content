@@ -9,7 +9,8 @@ La cabecera de solicitud **`Referer`** ("referente") contiene la dirección de l
 
 Observe que _referer_ es una grafía errónea de la palabra _referrer_. Consulte [<em>HTTP referer</em> en Wikipedia](https://es.wikipedia.org/wiki/HTTP_referer) para obtener más información.
 
-> **Advertencia:** La cabecera `Referer` tiene el potencial de revelar información sobre el histórico de navegación del usuario, lo cual constituye un problema de privacidad.
+> [!WARNING]
+> La cabecera `Referer` tiene el potencial de revelar información sobre el histórico de navegación del usuario, lo cual constituye un problema de privacidad.
 
 Los navegadores no envían ninguna cabecera `Referer` si:
 

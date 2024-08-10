@@ -16,6 +16,6 @@ Safari は、[KHTML](https://ja.wikipedia.org/wiki/KHTML) から派生したオ�
 - [The WebKit project](https://webkit.org/)
 - [WebKit Build Archives](https://webkit.org/build-archives/)
 - [Reporting a bug for Safari](https://bugs.webkit.org/)
-- 用語集
+- 関連用語:
   - {{glossary("Browser", "ブラウザー")}}
   - {{glossary("WebKit")}}

@@ -16,7 +16,8 @@ body :nth-child(4n) {
 }
 ```
 
-> **Note :** Pour CSS3, pour que l'élément soit ciblé, il faut qu'il ait un élément parent. En CSS4, cette restriction a été levée.
+> [!NOTE]
+> Pour CSS3, pour que l'élément soit ciblé, il faut qu'il ait un élément parent. En CSS4, cette restriction a été levée.
 
 Illustrons cela avec quelques exemples :
 

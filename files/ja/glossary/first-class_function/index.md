@@ -41,7 +41,8 @@ greeting(sayHello, "JavaScript!");
 
 ここでは `sayHello()` 関数を `greeting()` 関数の引数として渡しており、関数を**変数**として扱っていることを示しています。
 
-> **メモ:** 他の関数へ引数として渡される関数は、**{{glossary("Callback function", "コールバック関数")}}** と呼ばれます。 _`sayHello` はコールバック関数です。_
+> [!NOTE]
+> 他の関数へ引数として渡される関数は、**{{glossary("Callback function", "コールバック関数")}}** と呼ばれます。 _`sayHello` はコールバック関数です。_
 
 ### 関数を返す
 
@@ -55,12 +56,13 @@ function sayHello() {
 
 この例では、関数を他の関数から返す必要があります。 - _関数を返すことができるのは、 JavaScript では関数を値として扱っているからです。_
 
-> **メモ:** 関数を返す関数は**高階関数**と呼ばれます。
+> [!NOTE]
+> 関数を返す関数は**高階関数**と呼ばれます。
 
 ## 関連情報
 
 - ウィキペディアの[第一級関数](https://ja.wikipedia.org/wiki/第一級関数)
-- [MDN Web Docs 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{glossary("Callback function", "コールバック関数")}}
   - {{glossary("Function", "関数")}}

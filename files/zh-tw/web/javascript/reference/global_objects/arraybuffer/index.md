@@ -39,7 +39,7 @@ The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in
 
 - `ArrayBuffer.length`
   - : The `ArrayBuffer` constructor's length property whose value is 1.
-- {{jsxref("ArrayBuffer.@@species", "get ArrayBuffer[@@species]")}}
+- [`ArrayBuffer[Symbol.species]`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species)
   - : The constructor function that is used to create derived objects.
 - {{jsxref("ArrayBuffer.prototype")}}
   - : Allows the addition of properties to all `ArrayBuffer` objects.
@@ -57,8 +57,8 @@ The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in
 
 ### 屬性
 
-- `ArrayBuffer.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `ArrayBuffer.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`Symbol.toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("ArrayBuffer.prototype.byteLength")}}
   - : The read-only size, in bytes, of the `ArrayBuffer`. This is established when the array is constructed and cannot be changed.
 

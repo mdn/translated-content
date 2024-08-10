@@ -102,14 +102,16 @@ API 通常分为两类。
 - {{domxref("Canvas_API","画布（Canvas）","","nocode")}} 和 {{domxref("WebGL_API","WebGL","","nocode")}} API 可以创建生动的 2D 和 3D 图像。人们正运用这些 web 技术制作令人惊叹的作品。参见 [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) 以及 [webglsamples](https://webglsamples.org/)。
 - 诸如 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC","","nocode")}} 等[影音类 API](/zh-CN/docs/Web/Guide/Audio_and_video_delivery) 让你可以利用多媒体做一些非常有趣的事，比如在网页中直接播放音乐和影片，或用自己的网络摄像头获取录像，然后在其他人的电脑上展示（试用简易版[截图演示](http://chrisdavidmills.github.io/snapshot/)以理解这个概念）。
 
-> **备注：** 上述很多演示都不能在旧浏览器中运行。推荐你在测试代码时使用诸如 Firefox、Chrome、Edge 或者 Opera 等现代浏览器。当代码即将交付生产环境时（也就是真实的客户即将使用真实的代码时），你还需要深入考虑[跨平台测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)。
+> [!NOTE]
+> 上述很多演示都不能在旧浏览器中运行。推荐你在测试代码时使用诸如 Firefox、Chrome、Edge 或者 Opera 等现代浏览器。当代码即将交付生产环境时（也就是真实的客户即将使用真实的代码时），你还需要深入考虑[跨平台测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)。
 
 **第三方 API** 并没有默认嵌入浏览器中，一般要从网上取得它们的代码和信息。比如：
 
 - [Twitter API](https://developer.twitter.com/en/docs)、[新浪微博 API](https://open.weibo.com/) 可以在网站上展示最新推文之类。
 - [谷歌地图 API](https://developers.google.com/maps/)、[OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API)、[高德地图 API](https://lbs.amap.com/) 可以在网站嵌入定制的地图等等。
 
-> **备注：** 这些 API 为进阶内容，本模块中不会涉及，更多信息请参考：[客户端 web API 模块](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs)。
+> [!NOTE]
+> 这些 API 为进阶内容，本模块中不会涉及，更多信息请参考：[客户端 web API 模块](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs)。
 
 先稳住！你看到的只是冰山一角。你不可能仅靠学一天 JavaScript 就能构建下一个 Facebook、谷歌地图、或 Instagram——还有很多基础需要了解，这也是为什么你会在这里，让我们继续吧！
 
@@ -127,7 +129,8 @@ JavaScript 的一个非常常见的用途是通过文档对象模型 API（如�
 
 每个浏览器标签页就是其自身用来运行代码的独立容器（这些容器用专业术语称为“运行环境”）。大多数情况下，每个标签页中的代码完全独立运行，而且一个标签页中的代码不能直接影响另一个标签页（或者另一个网站）中的代码。这是一个好的安全措施，如果不这样，黑客就可以从其他网站盗取信息，或做一些其他坏事。
 
-> **备注：** 以安全的方式在不同网站或标签页中传送代码和数据的方法是存在的，但它们属于进阶技术，本课程不会涉及。
+> [!NOTE]
+> 以安全的方式在不同网站或标签页中传送代码和数据的方法是存在的，但它们属于进阶技术，本课程不会涉及。
 
 ### JavaScript 运行次序
 
@@ -148,7 +151,8 @@ function updateName() {
 
 如果你互换了代码里最初两行的顺序，会导致问题。浏览器[开发者控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)将返回一个错误：`TypeError: para is undefined`。这意味着 `para` 对象还不存在，所以我们不能为它增添一个事件监听器。
 
-> **备注：** 这是一个很常见的错误，在引用对象之前必须确保该对象已经存在。
+> [!NOTE]
+> 这是一个很常见的错误，在引用对象之前必须确保该对象已经存在。
 
 ### 解释代码 vs 编译代码
 
@@ -180,7 +184,7 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
 
 1. 首先，下载示例文件 [apply-javascript.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript.html)。放在一个方便的文件夹里。
 2. 分别在浏览器和文本编辑器中打开这个文件。你会看到这个 HTML 文件创建了一个简单的网页，其中有一个可点击按钮。
-3. 然后转到文本编辑器，在 `</head>` 标签结束前插入以下代码：
+3. 然后转到文本编辑器，在 `</body>` 标签结束前插入以下代码：
 
    ```html
    <script>
@@ -208,9 +212,11 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
 
 5. 保存文件并刷新浏览器，然后你会发现，点击按钮文档下方将会添加一个新段落。
 
-> **备注：** 如果示例不能正常工作，请依次检查所有步骤，并保证没有纰漏。原始文件是否以 `.html` 为扩展名保存到本地了？`</body>` 标签前是否添加了 {{htmlelement("script")}} 元素？JavaScript 代码输入是否正确？**JavaScript 是区分大小写的，而且非常精确，所以你需要准确无误地输入所示的句法，否则可能会出错。**
+> [!NOTE]
+> 如果示例不能正常工作，请依次检查所有步骤，并保证没有纰漏。原始文件是否以 `.html` 为扩展名保存到本地了？`</body>` 标签前是否添加了 {{htmlelement("script")}} 元素？JavaScript 代码输入是否正确？**JavaScript 是区分大小写的，而且非常精确，所以你需要准确无误地输入所示的句法，否则可能会出错。**
 
-> **备注：** 你可以在 GitHub 上查看此版本 [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)（[也可在线查看](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)）。
+> [!NOTE]
+> 你可以在 GitHub 上查看此版本 [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)（[也可在线查看](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)）。
 
 ### 外部 JavaScript
 
@@ -241,7 +247,8 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
 
 4. 保存并刷新浏览器，你会发现二者完全一样！区别在于，现在我们把 JavaScript 写进了一个外部文件。这样做一般会使代码更加有序，更易于复用，且没有了脚本的混合，HTML 也会更加易读，因此这是个好的习惯。
 
-> **备注：** 你可以在 GitHub 上查看 [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) 以及 [script.js](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/script.js)（[也可在线查看](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)）。
+> [!NOTE]
+> 你可以在 GitHub 上查看 [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) 以及 [script.js](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/script.js)（[也可在线查看](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)）。
 
 ### 内联 JavaScript 处理器
 
@@ -281,7 +288,8 @@ for (let i = 0; i < buttons.length; i++) {
 
 这样写乍看去比 `onclick` 属性要长一些，但是这样写会对页面上所有按钮生效，无论多少个，或添加或删除，完全无需修改 JavaScript 代码。
 
-> **备注：** 请尝试修改 `apply-javascript.html` 以添加更多按钮。刷新后可发现按下任一按钮时都会创建一个段落。这样很高效吧？
+> [!NOTE]
+> 请尝试修改 `apply-javascript.html` 以添加更多按钮。刷新后可发现按下任一按钮时都会创建一个段落。这样很高效吧？
 
 ### 脚本调用策略
 
@@ -307,7 +315,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 上述情况下，脚本和 HTML 将一并加载，代码将顺利运行。
 
-> **备注：** 在外部示例中，我们不需要使用 `DOMContentLoaded` 事件，因为 `defer` 属性为我们解决了这个问题。我们没有在内部 JavaScript 示例中使用 `defer` 解决方案，因为 `defer` 只适用于外部脚本。
+> [!NOTE]
+> 在外部示例中，我们不需要使用 `DOMContentLoaded` 事件，因为 `defer` 属性为我们解决了这个问题。我们没有在内部 JavaScript 示例中使用 `defer` 解决方案，因为 `defer` 只适用于外部脚本。
 
 解决此问题的旧方法是：把脚本元素放在文档体的底端（也就是 `</body>` 标签之前，与之相邻），这样脚本就可以在 HTML 解析完毕后加载了。此方案的问题是：只有在所有 HTML DOM 加载完成后才开始脚本的加载/解析过程。对于有大量 JavaScript 代码的大型网站，可能会带来显著的性能损耗。
 
@@ -401,7 +410,8 @@ for (const button of buttons) {
 }
 ```
 
-> **备注：** 一般来说，注释越多越好，但如果你发现自己添加了大量注释来解释变量是什么（变量名也许应该更直观），或者解释非常简单的操作（也许代码过于复杂），那么就应该小心了。
+> [!NOTE]
+> 一般来说，注释越多越好，但如果你发现自己添加了大量注释来解释变量是什么（变量名也许应该更直观），或者解释非常简单的操作（也许代码过于复杂），那么就应该小心了。
 
 ## 总结
 

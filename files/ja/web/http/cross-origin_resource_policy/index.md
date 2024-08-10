@@ -9,7 +9,8 @@ slug: Web/HTTP/Cross-Origin_Resource_Policy
 
 CORP は既定で {{Glossary("same-origin policy")}} を超えた保護の追加レイヤーです。クロスオリジンリソースポリシーは、既定でクロスオリジンの読み込みを保護するメカニズムである、 [クロスオリジンリードブロッキング](https://fetch.spec.whatwg.org/#corb) (CORB)を補完します。
 
-> **メモ:** このポリシーは、既定で CORS セーフリストメソッド／ヘッダーに対して発行される、[`no-cors`](https://fetch.spec.whatwg.org/#concept-request-mode) リクエストに対してのみ有効です。
+> [!NOTE]
+> このポリシーは、既定で CORS セーフリストメソッド／ヘッダーに対して発行される、[`no-cors`](https://fetch.spec.whatwg.org/#concept-request-mode) リクエストに対してのみ有効です。
 
 このポリシーは*[レスポンスヘッダー](/ja/docs/Glossary/Response_header)*を介して表現されるため、実際のリクエストは防止されません。むしろ、ブラウザーは応答本文を削除することで*結果*が漏洩するのを防ぎます。
 
@@ -33,7 +34,8 @@ CORP は既定で {{Glossary("same-origin policy")}} を超えた保護の追加
 
   - : 同じ _{{Glossary("Site")}}_ からのリクエストのみリソースを読み込めます。
 
-    > **警告:** これは{{Glossary("origin", "オリジン")}}よりも安全性が低いものです。[2 つのオリジンが同じサイトであるかどうかをチェックするアルゴリズム](https://html.spec.whatwg.org/multipage/origin.html#same-site)は HTML 標準で定義されており、*登録可能なドメイン*をチェックします。
+    > [!WARNING]
+    > これは{{Glossary("origin", "オリジン")}}よりも安全性が低いものです。[2 つのオリジンが同じサイトであるかどうかをチェックするアルゴリズム](https://html.spec.whatwg.org/multipage/origin.html#same-site)は HTML 標準で定義されており、*登録可能なドメイン*をチェックします。
 
 - same-origin
   - : 同じ _{{Glossary("origin")}}_ (すなわち、スキーマ + ホスト + ポート) からのリクエストのみリソースを読み込めます。

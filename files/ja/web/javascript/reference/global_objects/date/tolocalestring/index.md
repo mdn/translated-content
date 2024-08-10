@@ -157,7 +157,8 @@ console.log(date.toLocaleString("en-US", { hour12: false }));
 // false in IE and Edge
 ```
 
-> **メモ:** 詳細および例についてはこの [StackOverflow のスレッド](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)をご覧ください。
+> [!NOTE]
+> 詳細および例についてはこの [StackOverflow のスレッド](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)をご覧ください。
 
 ## 仕様書
 

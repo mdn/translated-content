@@ -7,7 +7,8 @@ slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links
 
 El objetivo de esta pueba de habilidad es evaluar si has comprendido nuestro artículo [Creando hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks).
 
-> **Nota:** Puedes intentar resolver esta prueba en los editores interactivos más abajo, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
+> [!NOTE]
+> Puedes intentar resolver esta prueba en los editores interactivos más abajo, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
 >
 > Si te atascas, pide ayuda — mira la sección [Evaluación o ayuda adicional](#evaluación_o_ayuda_adicional) al final de esta página.
 
@@ -20,7 +21,8 @@ En esta tarea necesitamos tu ayuda para completar los enlaces en nuestra página
 - El segundo enlace deberá convertirse en un vínculo que abra un correo electrónico en la aplicación de correo por defecto del usuario, con el destinatario "whales\@example.com".
 - Conseguirás un punto de bonificación si tambien configuras que la línea del asunto del correo electrónico tenga como texto predeterminado "Preguntas sobre Ballenas".
 
-> **Nota:** El primer enlace en el ejemplo tiene el atributo `target="_blank"` , así que cuando haces click en él, abre la página en una pestaña nueva. Esto no es estrictamente una buena práctica, pero lo hemos hecho aquí para que la página no se abra en el `<iframe>` incrustado, ¡eliminando el código de ejemplo en el proceso!
+> [!NOTE]
+> El primer enlace en el ejemplo tiene el atributo `target="_blank"` , así que cuando haces click en él, abre la página en una pestaña nueva. Esto no es estrictamente una buena práctica, pero lo hemos hecho aquí para que la página no se abra en el `<iframe>` incrustado, ¡eliminando el código de ejemplo en el proceso!
 
 Intenta actualizar el código en vivo más abajo para mostrar el ejemplo terminado:
 
@@ -37,7 +39,8 @@ En esta tarea queremos que completes los cuatro enlaces para que se dirijan al l
 - El tercer enlace deberia vincular al sitio de búsqueda de imágenes de Google del Reino Unido. La URL base es `https://www.google.co.uk`, y la búsqueda de imágenes se ubica en un subdirectorio llamado `imghp`.
 - El cuarto enlace debería vincular al párrafo más al final de la página actual. Que tiene la ID `bottom`.
 
-> **Nota:** Los primeros tres enlaces en el ejemplo tienen el atributo `target="_blank"` especificado en ellos, abren la página enlazada en una nueva pestaña del navegador. Esto no es estrictamente una buena práctica, pero hemos hecho esto aquí para que las páginas no se abran dentro del `<iframe>` incrustado, ¡eliminando el código de ejemplo en el proceso!
+> [!NOTE]
+> Los primeros tres enlaces en el ejemplo tienen el atributo `target="_blank"` especificado en ellos, abren la página enlazada en una nueva pestaña del navegador. Esto no es estrictamente una buena práctica, pero hemos hecho esto aquí para que las páginas no se abran dentro del `<iframe>` incrustado, ¡eliminando el código de ejemplo en el proceso!
 
 Intenta actualizar el código en vivo más abajo para mostrar el ejemplo terminado:
 
@@ -52,7 +55,8 @@ Los siguientes enlaces dirigen a una página informativa acerca de los Narvales,
 - Tomes los párrafos existentes con enlaces pobremente escritos, y los reescribas para que tengan un buen texto de enlace.
 - Agregues una advertencia a cualquier enlace que necesite una advertencia.
 
-> **Nota:** Los primeros tres enlaces en el ejemplo tienen el atributo `target="_blank"` especificado en ellos, abren la página enlazada en una nueva pestaña del navegador. Esto no es estrictamente una buena práctica, pero hemos hecho esto aquí para que las páginas no se abran dentro del `<iframe>` incrustado, ¡eliminando el código de ejemplo en el proceso!
+> [!NOTE]
+> Los primeros tres enlaces en el ejemplo tienen el atributo `target="_blank"` especificado en ellos, abren la página enlazada en una nueva pestaña del navegador. Esto no es estrictamente una buena práctica, pero hemos hecho esto aquí para que las páginas no se abran dentro del `<iframe>` incrustado, ¡eliminando el código de ejemplo en el proceso!
 
 Intenta actualizar el código en vivo más abajo para mostrar el ejemplo terminado:
 

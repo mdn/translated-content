@@ -103,7 +103,8 @@ function updateButton() {
 
 {{EmbedLiveSample("Adding_keyboard_shortcuts_to_buttons", 650, 100)}}
 
-> **メモ:** 上記の例では、ユーザーがアクセスキーが何であるかを知ることができないという問題があります。実際のサイトでは、この情報を、サイトのデザインに干渉しない方法で提供する必要があります (たとえば、簡単にアクセスできるリンクを設置して、サイトのアクセスキーに関する情報を指すなど)。
+> [!NOTE]
+> 上記の例では、ユーザーがアクセスキーが何であるかを知ることができないという問題があります。実際のサイトでは、この情報を、サイトのデザインに干渉しない方法で提供する必要があります (たとえば、簡単にアクセスできるリンクを設置して、サイトのアクセスキーに関する情報を指すなど)。
 
 ### ボタンの無効化と有効化
 
@@ -169,7 +170,8 @@ function disableButton() {
 
 {{EmbedLiveSample("Inheriting_the_disabled_state", 650, 100)}}
 
-> **メモ:** Firefox は他のブラウザーと異なり、ページが再読み込みされた後でも `<input>` 要素の `disabled` 状態を維持します。回避するには、 `<input>` 要素の [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) 属性を `off` に設定します。（詳しくは [Firefox バグ 654072](https://bugzil.la/654072) を参照してください。）
+> [!NOTE]
+> Firefox は他のブラウザーと異なり、ページが再読み込みされた後でも `<input>` 要素の `disabled` 状態を維持します。回避するには、 `<input>` 要素の [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) 属性を `off` に設定します。（詳しくは [Firefox バグ 654072](https://bugzil.la/654072) を参照してください。）
 
 ## 検証
 

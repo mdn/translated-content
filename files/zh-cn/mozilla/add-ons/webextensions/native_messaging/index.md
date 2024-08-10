@@ -70,7 +70,8 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 
 关于原生应用清单的详细语法和路径规则，可参考 [原生应用清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)。
 
-> **警告：** 除清单外，原生应用还**必需**配置路径规则，你可以参考 [原生应用清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) 来配置路径。
+> [!WARNING]
+> 除清单外，原生应用还**必需**配置路径规则，你可以参考 [原生应用清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) 来配置路径。
 
 这有一个例子，是关于 "ping_pong" 原生应用的清单：
 
@@ -89,7 +90,8 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 - 这个原生应用允许 ID 为 "ping_pong\@example.org" 的 extension 连接，并通过{{WebExtAPIRef("runtime")}} API 来传入信息
 - 这个原生应用本身存放在本机的 "/path/to/native-messaging/app/ping_pong.py" 中
 
-> **备注：** 对于 Windows：在上面的例子中，原生应用是一个 Python 脚本，它在 Windows 下可能是无法运行的。一个代替方案是提供一个 .bat 文件，并且在清单中指向这个 .bat 文件：
+> [!NOTE]
+> 对于 Windows：在上面的例子中，原生应用是一个 Python 脚本，它在 Windows 下可能是无法运行的。一个代替方案是提供一个 .bat 文件，并且在清单中指向这个 .bat 文件：
 >
 > ```json
 > {

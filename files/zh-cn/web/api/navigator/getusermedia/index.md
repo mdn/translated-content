@@ -3,7 +3,8 @@ title: navigator.getUserMedia
 slug: Web/API/Navigator/getUserMedia
 ---
 
-> **备注：** 此 API 已更名为 {{domxref("MediaDevices.getUserMedia()")}}。请使用那个版本进行替代！这个已废弃的 API 版本仅为了向后兼容而存在。
+> [!NOTE]
+> 此 API 已更名为 {{domxref("MediaDevices.getUserMedia()")}}。请使用那个版本进行替代！这个已废弃的 API 版本仅为了向后兼容而存在。
 
 {{APIRef("Media Capture and Streams")}}{{deprecated_header}}
 
@@ -94,7 +95,8 @@ if (navigator.getUserMedia) {
 
 {{Compat}}
 
-> **警告：** 新代码应当使用 {{domxref("Navigator.mediaDevices.getUserMedia()")}} 替代。
+> [!WARNING]
+> 新代码应当使用 {{domxref("Navigator.mediaDevices.getUserMedia()")}} 替代。
 
 ## 参见
 

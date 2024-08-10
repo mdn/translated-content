@@ -127,7 +127,7 @@ It also works when you put default before all other cases.
 
 Source for this technique is here:
 
-[Switch statement multiple cases in JavaScript (Stack Overflow)](http://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript)
+[Switch statement multiple cases in JavaScript (Stack Overflow)](https://stackoverflow.com/questions/13207927/switch-statement-for-multiple-cases-in-javascript)
 
 #### Multi-case - single operation
 

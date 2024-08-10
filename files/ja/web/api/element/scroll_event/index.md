@@ -28,7 +28,7 @@ onscroll = (event) => {};
 ## 例
 
 以下の例では、`scroll` イベントをイベントリスナーと `onscroll` イベントハンドラープロパティによって使用する方法を示しています。
-`scroll` イベントは高頻度で発行されるため、{{DOMxRef("setTimeout()")}} メソッドを使用してイベントハンドラをスロットルで制御しています。
+`scroll` イベントは高頻度で発行されるため、{{DOMxRef("setTimeout()")}} メソッドを使用してイベントハンドラーをスロットルで制御しています。
 その他の {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame")}} を使用した例については、{{domxref("Document/scroll_event", "Document: scroll イベント")}}ページを参照してください。
 
 ### `scroll` をイベントリスナーで使用

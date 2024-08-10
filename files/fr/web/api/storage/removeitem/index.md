@@ -50,7 +50,8 @@ function populateStorage() {
 }
 ```
 
-> **Note :** Pour voir ce code en fonctionnement, voir [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> [!NOTE]
+> Pour voir ce code en fonctionnement, voir [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Spécifications
 

@@ -67,7 +67,8 @@ TalkBack 屏幕阅读器是内置于 Android 操作系统中的。
 1. 导航到 TalkBack 菜单屏幕（使用当前启用的不同手势）。
 2. 导航到滑动开关，并激活它将其关闭。
 
-> **备注：** 你可以通过向左上方滑动返回桌面，如果你有多个桌面，你可以通过两个手指在屏幕上左右滑动来切换桌面。
+> [!NOTE]
+> 你可以通过向左上方滑动返回桌面，如果你有多个桌面，你可以通过两个手指在屏幕上左右滑动来切换桌面。
 
 关于 TalkBack 手势的完整列表，查看[使用 TalkBack 手势](https://support.google.com/accessibility/android/answer/6151827)。
 
@@ -112,7 +113,8 @@ TalkBack 允许你使用全局和本地菜单，无论你已经导航到哪个�
 7. 双击选择它。现在你就可以通过左右滑动在标题和 ARIA 标识之间切换。
 8. 向右向上滑动之后，进入本地上下文菜单，选择“默认”，就可以返回默认模式。
 
-> **备注：** 查看[开始在 Android 设备上使用 TalkBack](https://support.google.com/accessibility/android/answer/6283677?ref_topic=3529932) 以获取更完整的文档。
+> [!NOTE]
+> 查看[开始在 Android 设备上使用 TalkBack](https://support.google.com/accessibility/android/answer/6283677?ref_topic=3529932) 以获取更完整的文档。
 
 ### iOS 旁白
 
@@ -120,7 +122,8 @@ iOS 操作系统内置了移动版旁白（VoiceOver）。
 
 要打开它，请转到*设置*，然后选择*无障碍 > 旁白*。点按*旁白*的滑动开关去启用它（你还会在页面中看到很多和旁白相关的其他选项）。
 
-> **备注：** 一些较老的 iOS 设备的旁白菜单在*设置* > _通用_ > _辅助功能_ > _旁白_。
+> [!NOTE]
+> 一些较老的 iOS 设备的旁白菜单在*设置* > _通用_ > _辅助功能_ > _旁白_。
 
 一旦启用旁白，iOS 的基本操作手势将有所不同：
 
@@ -173,7 +176,8 @@ iOS 操作系统内置了移动版旁白（VoiceOver）。
 
 7. 选择*标题*，现在你可以通过上下滑动在页面的不同标题中切换。
 
-> **备注：** 有关 iOS 上可用的旁白手势以及有关辅助功能的其他提示的更完整资料可以查看[在你的设备上用旁白测试辅助功能](https://developer.apple.com/library/archive/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html)。
+> [!NOTE]
+> 有关 iOS 上可用的旁白手势以及有关辅助功能的其他提示的更完整资料可以查看[在你的设备上用旁白测试辅助功能](https://developer.apple.com/library/archive/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html)。
 
 ## 控制机制
 
@@ -210,7 +214,8 @@ panel.ontouchend = stopMove;
 
 我们提供了一个简单的示例来展示如何使用鼠标和触摸事件——[multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/multi-control-box-drag.html)（[查看实时示例](https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html)）。
 
-> **备注：** 你可以看到一个功能完善的示例，展示如何在实现[游戏控制机制](/zh-CN/docs/Games/Techniques/Control_mechanisms)中实现不同的控制机制。
+> [!NOTE]
+> 你可以看到一个功能完善的示例，展示如何在实现[游戏控制机制](/zh-CN/docs/Games/Techniques/Control_mechanisms)中实现不同的控制机制。
 
 ## 响应式设计
 
@@ -222,7 +227,8 @@ panel.ontouchend = stopMove;
 - 节省下载的图片大小。一般来说，小屏幕设备不需要与桌面设备一样大的图像，而且它们将更可能在慢速网络连接上。因此，适当地缩小屏幕设备以缩小图像是明智的。你可以使用[响应式图像技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)处理此问题。
 - 考虑高分辨率。许多移动设备具有高分辨率屏幕，因此需要更高分辨率的图像，使得显示器可以继续看起来清晰和锐利。再次，你可以使用响应式图像技术来适当地提供图像。此外，使用 SVG 矢量图像格式可以满足许多图像要求，这些格式在目前的浏览器中得到了很好的支持。SVG 文件较小，且不论以何种大小显示，它都会保持清晰（请参阅[向网页中添加矢量图形](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)以了解更多的细节）。
 
-> **备注：** 我们不会在这里对响应式设计进行完整的讨论，因为它们在 MDN 其他地方都有涉及（参考上面的链接）。
+> [!NOTE]
+> 我们不会在这里对响应式设计进行完整的讨论，因为它们在 MDN 其他地方都有涉及（参考上面的链接）。
 
 ### 具体的需要注意的点
 

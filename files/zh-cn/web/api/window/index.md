@@ -60,7 +60,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
 - {{domxref("Window.launchQueue")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 当一个[渐进式 web 应用](/zh-CN/docs/Web/Progressive_web_apps)（PWA）以 `focus-existing`、`navigate-new` 或 `navigate-existing` 的 [`launch_handler`](/zh-CN/docs/Web/Manifest/launch_handler) `client_mode` 值启动时，`launchQueue` 提供对 {{domxref("LaunchQueue")}} 类的访问，这允许为 PWA 实现自定义的启动导航处理。
 - {{domxref("Window.length")}} {{ReadOnlyInline}}
-  - : 返回窗口中的帧数。参见 {{domxref("window.frames")}}。
+  - : 返回窗口中的框架（frame）数。参见 {{domxref("window.frames")}}。
 - {{domxref("Window.location")}}
   - : 获取/设置 window 对象的位置，或当前的 URL。
 - {{domxref("Window.locationbar")}} {{ReadOnlyInline}}
@@ -181,7 +181,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
   - : 用于触发事件。
 - {{domxref("Window.dump()")}} {{Non-standard_Inline}}
   - : 向控制台中写一条消息。
-- {{domxref("fetch", "Window.fetch()")}}
+- {{domxref("Window.fetch()")}}
   - : 开始从网络获取资源的过程。
 - {{domxref("Window.find()")}} {{Non-standard_Inline}}
   - : 在窗口中搜索给定的字符串。

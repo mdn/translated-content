@@ -70,11 +70,13 @@ if ("geolocation" in navigator) {
 
 Здесь мы берём ссылку на второй элемент `<link>` и создаём элемент `<div>` как часть нашего теста. В нашем условном выражении мы проверяем, что свойства {{cssxref ("flex")}} и {{cssxref ("flex-flow")}} существуют в браузере. Обратите внимание, что представления JavaScript этих свойств, которые хранятся внутри объекта {{domxref ("HTMLElement.style")}}, используют нижний горбатый регистр, а не дефисы, для разделения слов.
 
-> **Примечание:** Если у вас возникли проблемы с выполнением этого, вы можете сравнить его с нашим кодом [css-feature-detect-finished.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html) (см. Также [живую версию](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html)).
+> [!NOTE]
+> Если у вас возникли проблемы с выполнением этого, вы можете сравнить его с нашим кодом [css-feature-detect-finished.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html) (см. Также [живую версию](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html)).
 
 Когда вы сохраните все и опробуете свой пример, вы должны увидеть макет flexbox, применённый к странице, если браузер поддерживает современный flexbox, и макет float, если нет.
 
-> **Примечание:** Часто такой подход является излишним из-за незначительной проблемы с обнаружением функций - вы часто можете обойтись без использования префиксов нескольких поставщиков и свойств резервирования, как описано в разделе [Поведение CSS-откат](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#CSS_fallback_behaviour) и [Обработка префиксов CSS](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes).
+> [!NOTE]
+> Часто такой подход является излишним из-за незначительной проблемы с обнаружением функций - вы часто можете обойтись без использования префиксов нескольких поставщиков и свойств резервирования, как описано в разделе [Поведение CSS-откат](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#CSS_fallback_behaviour) и [Обработка префиксов CSS](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes).
 
 #### @supports
 
@@ -122,7 +124,8 @@ if ("geolocation" in navigator) {
 | _Метод на возвращаемое значение элемента_   | Создайте элемент в памяти, используя {{domxref ("Document.createElement()")}}, а затем проверьте, существует ли метод для него. Если это так, проверьте, какое значение он возвращает.                                                    | См. [Dive Into HTML5 Video Formats detection](http://diveinto.html5doctor.com/detect.html#video-formats).            |
 | _Свойство на сохраняемое значение элемента_ | Создайте элемент в памяти, используя {{domxref ("Document.createElement()")}}, установите для свойства определённое значение, затем проверьте, сохраняется ли значение.                                                                   | См. [Dive into HTML5 `<input>` types detection](http://diveinto.html5doctor.com/detect.html#input-types).            |
 
-> **Примечание:** Двойное `NOT` в приведённом выше примере (`!!`) это способ заставить возвращаемое значение стать «правильным» логическим значением, а не {{glossary("Truthy")}}/{{glossary("Falsy")}} значение, которое может исказить результаты.
+> [!NOTE]
+> Двойное `NOT` в приведённом выше примере (`!!`) это способ заставить возвращаемое значение стать «правильным» логическим значением, а не {{glossary("Truthy")}}/{{glossary("Falsy")}} значение, которое может исказить результаты.
 
 Страница [Погружение в HTML5 Обнаружение функций HTML5](http://diveinto.html5doctor.com/detect.html) содержит гораздо больше полезных тестов для обнаружения функций, помимо перечисленных выше, и вы можете найти тест обнаружения функций для большинства вещей, выполнив поиск «обнаружение поддержки для ВАШИ-ФУНКЦИИ-ЗДЕСЬ» в своей любимой поисковой системе. Имейте в виду, однако, что некоторые функции, как известно, не обнаруживаются - см. список Modernizr [Необнаруживаемые](https://github.com/Modernizr/Modernizr/wiki/Undetectables).
 
@@ -200,7 +203,8 @@ blob-constructor cookies cors ...AND LOADS MORE VALUES!>
 - `flexboxtweener` для промежуточного синтаксиса 2011 года, поддерживаемого IE10.
 - `flexwrap` для свойства {{cssxref ("flex-wrap")}}, которого нет в некоторых реализациях.
 
-> **Примечание:** вы можете найти список того, что означают все имена классов — см. [Функции, обнаруженные Modernizr](https://modernizr.com/docs#features).
+> [!NOTE]
+> Вы можете найти список того, что означают все имена классов — см. [Функции, обнаруженные Modernizr](https://modernizr.com/docs#features).
 
 Далее, давайте обновим наш CSS, чтобы использовать Modernizr вместо `@supports`. Перейдите в `modernizr-css.css`, и замените два блока `@supports` следующим:
 
@@ -239,9 +243,11 @@ blob-constructor cookies cors ...AND LOADS MORE VALUES!>
 
 Так как же это работает? Поскольку все эти имена классов были помещены в элемент `<html>` вы можете настроить таргетинг на браузеры, которые поддерживают или не поддерживают функцию, используя определённые селекторы-потомки. Поэтому здесь мы применяем верхний набор правил только для браузеров, которые поддерживают flexbox, а нижний набор правил - только для браузеров, которые не поддерживают (`no-flexbox`).
 
-> **Примечание:** Имейте в виду, что все тесты функций HTML и JavaScript Modernizr также представлены в этих именах классов, так что вы можете свободно применять CSS выборочно в зависимости от того, поддерживает ли браузер функции HTML или JavaScript, если это необходимо.
+> [!NOTE]
+> Имейте в виду, что все тесты функций HTML и JavaScript Modernizr также представлены в этих именах классов, так что вы можете свободно применять CSS выборочно в зависимости от того, поддерживает ли браузер функции HTML или JavaScript, если это необходимо.
 
-> **Примечание:** Если у вас возникли проблемы с выполнением этого, проверьте ваш код по файлам [`modernizr-css.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-css.html) и [`modernizr-css.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-css.css) (см. Также этот запуск в реальном времени).
+> [!NOTE]
+> Если у вас возникли проблемы с выполнением этого, проверьте ваш код по файлам [`modernizr-css.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-css.html) и [`modernizr-css.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-css.css) (см. Также этот запуск в реальном времени).
 
 ### JavaScript
 

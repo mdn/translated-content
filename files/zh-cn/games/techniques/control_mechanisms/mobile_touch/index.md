@@ -11,7 +11,8 @@ l10n:
 
 未来的手游一定是 Web 的天下，许多开发者在游戏开发过程中[首先选择移动端](/zh-CN/docs/Glossary/Mobile_First)——在现代社会，这通常还涉及到触摸控制的实现。在本教程中，我们将看到在 HTML 游戏中实现移动控件是多么容易，并且可以在支持移动触摸的设备上尽情玩耍。
 
-> **备注：** 游戏 [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) 是用 Phaser 构建的，控制管理也是基于 Phaser 的，但也可以用纯 JavaScript 完成。使用 Phaser 的好处是它提供了辅助变量和函数，可以让开发更简单、更快速，但选择哪种方法完全取决于你。
+> [!NOTE]
+> 游戏 [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) 是用 Phaser 构建的，控制管理也是基于 Phaser 的，但也可以用纯 JavaScript 完成。使用 Phaser 的好处是它提供了辅助变量和函数，可以让开发更简单、更快速，但选择哪种方法完全取决于你。
 
 ## 纯 JavaScript 方法
 
@@ -32,7 +33,8 @@ el.addEventListener("touchcancel", handleCancel);
 - 当用户停止触摸屏幕时触发 [touchend](/zh-CN/docs/Web/API/Element/touchend_event) 事件。
 - 当触摸被取消，例如当用户将他们的手指移动到屏幕之外时触发 [touchcancel](/zh-CN/docs/Web/API/Element/touchcancel_event) 事件。
 
-> **备注：** [触摸事件](/zh-CN/docs/Web/API/Touch_events)参考文章提供了更多的实例和介绍。
+> [!NOTE]
+> 参考文章[触摸事件](/zh-CN/docs/Web/API/Touch_events)提供了更多的示例和信息。
 
 ### 纯 JavaScript 示例
 

@@ -34,7 +34,7 @@ _変更なし。_
 
 ### CSS
 
-- {{cssxref("::backdrop")}} 疑似要素をサポートしました ([Firefox バグ 1064843](https://bugzil.la/1064843))。
+- {{cssxref("::backdrop")}} 擬似要素をサポートしました ([Firefox バグ 1064843](https://bugzil.la/1064843))。
 - [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors) で大文字・小文字を区別しないことを示す修飾子 `i` (例: `[foo=bar i]`) を実装しました ([Firefox バグ 888190](https://bugzil.la/888190))。
 - CSS Mask Image プロパティを実験的に実装しました。現在は Nightly 版の Firefox のみで使用できます。{{cssxref("mask-repeat")}}、{{cssxref("mask-position")}}、{{cssxref("mask-size")}}、およびショートハンドの {{cssxref("mask")}} を使用できます ([Firefox バグ 686281](https://bugzil.la/686281))。
 - HTML 要素において、{{cssxref("clip-path")}} プロパティで `polygon()`, `ellipse()`, `circle()` を実験的にサポートしました ([inset()](https://bugzilla.mozilla.org/show_bug.cgi?id=1246762) および [path()](https://bugzilla.mozilla.org/show_bug.cgi?id=1246764) はサポートしていません)。設定項目 `layout.css.clip-path-shapes.enabled` で制御しており、既定値は `false` です ([Firefox バグ 1075457](https://bugzil.la/1075457))。値の変更は (従ってアニメーションも) 未サポートです。

@@ -68,7 +68,8 @@ slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 
 如果你需要安装一个 FTP 客户端，这里有很多免费的选择：例如，可以全平台使用的 [FileZilla](https://filezilla-project.org/) , windows 上使用的[WinSCP](http://winscp.net/) , Mac 和 windows 上都能使用的 [Cyberduck](https://cyberduck.io/) ，还有很多)。
 
-> **备注：** 还有其他方法可以在远程服务器上发布内容，如 rsync 和 git，但并不像 FTP 那样简单，我们不会在这里讨论。
+> [!NOTE]
+> 还有其他方法可以在远程服务器上发布内容，如 rsync 和 git，但并不像 FTP 那样简单，我们不会在这里讨论。
 
 ## 浏览器
 
@@ -97,7 +98,8 @@ slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 
 主机供应商通过你网站消耗的带宽来收费。这些取决于在一个给定的时间内多少人或机器人访问你的内容、你的内容占用多少的服务空间（这就解释了为什么人们通常把他们的视频存储在比如 Youtube、Dailymotion 和 Vimeo 等专用服务上）。实际上，你的供应商可能 有个计划规定某个实例每天至多有几千访问的可用带宽用量（不同的主机供应商的规定通常都不同）。根据经验，考虑那些月付十到五十美元的个人主机。
 
-> **备注：** 从来没有“无限”带宽这样的东西。如果你真的需要消耗大量的带宽，等着付一大把的票子吧。
+> [!NOTE]
+> 从来没有“无限”带宽这样的东西。如果你真的需要消耗大量的带宽，等着付一大把的票子吧。
 
 ### 域名
 

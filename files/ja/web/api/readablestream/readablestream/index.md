@@ -51,7 +51,8 @@ new ReadableStream(underlyingSource, queuingStrategy)
     - `size(chunk)`
       - : 引数 `chunk` を含むメソッド — これは、各チャンクに使用するサイズをバイト単位で示します。
 
-    > **メモ:** 独自のカスタム `queuingStrategy` を定義するか、このオブジェクト値に {{domxref("ByteLengthQueuingStrategy")}} または {{domxref("CountQueuingStrategy")}} のインスタンスを使用できます。 `queuingStrategy` が指定されていない場合、使用される既定値は、最高水準点が 1 の `CountQueuingStrategy` と同じです。
+    > [!NOTE]
+    > 独自のカスタム `queuingStrategy` を定義するか、このオブジェクト値に {{domxref("ByteLengthQueuingStrategy")}} または {{domxref("CountQueuingStrategy")}} のインスタンスを使用できます。 `queuingStrategy` が指定されていない場合、使用される既定値は、最高水準点が 1 の `CountQueuingStrategy` と同じです。
 
 ### 返値
 

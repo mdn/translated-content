@@ -28,7 +28,8 @@ Proxy-Authorization: <type> <credentials>
     - 将用户名和密码用冒号拼接（aladdin:opensesame）。
     - 将拼接生成的字符串使用 [base64](/zh-CN/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) 编码方式进行编码（YWxhZGRpbjpvcGVuc2VzYW1l）。
 
-    > **备注：** Base64 编码方式不是用来加密或者获取摘要的！这种方法的安全性相当于将凭证使用明文发送（base64 是一种可逆编码方式）。在使用基本身份验证方式的时候推荐与 HTTPS 搭配使用。
+    > [!NOTE]
+    > Base64 编码方式不是用来加密或者获取摘要的！这种方法的安全性相当于将凭证使用明文发送（base64 是一种可逆编码方式）。在使用基本身份验证方式的时候推荐与 HTTPS 搭配使用。
 
 ## 示例
 

@@ -9,7 +9,8 @@ l10n:
 
 **`MutationEvent`** インターフェイスは、 Document Object Model (DOM) の階層とノードの変更に特化したイベントプロパティを提供します。
 
-> **メモ:** mutation イベントを使用するのは問題があります。
+> [!NOTE]
+> mutation イベントを使用するのは問題があります。
 >
 > - 設計上の[欠陥](https://lists.w3.org/Archives/Public/public-webapps/2011JulSep/0779.html)があります。
 > - 文書に DOM の mutation リスナーを追加すると、その文書に対するその後の DOM 変更の[パフォーマンスが著しく低下します](https://groups.google.com/d/topic/mozilla.dev.platform/L0Lx11u5Bvs?pli=1)（1.5 倍から 7 倍も遅くなります）。さらに、リスナーを削除してもダメージは元に戻りません。

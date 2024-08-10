@@ -1738,7 +1738,7 @@
 /es/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/es/docs/Web/API/clearInterval
 /es/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/es/docs/Web/API/clearTimeout
 /es/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/es/docs/Web/API/createImageBitmap
-/es/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/es/docs/Web/API/fetch
+/es/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/es/docs/Web/API/Window/fetch
 /es/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/es/docs/Web/API/Window/indexedDB
 /es/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/es/docs/Web/API/Window/isSecureContext
 /es/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/es/docs/Web/API/setInterval
@@ -1769,6 +1769,7 @@
 /es/docs/Web/API/crypto_property	/es/docs/Web/API/Window/crypto
 /es/docs/Web/API/event.defaultPrevented	/es/docs/Web/API/Event/defaultPrevented
 /es/docs/Web/API/event.which	/es/docs/Web/API/UIEvent/which
+/es/docs/Web/API/fetch	/es/docs/Web/API/Window/fetch
 /es/docs/Web/API/indexedDB	/es/docs/Web/API/Window/indexedDB
 /es/docs/Web/API/isSecureContext	/es/docs/Web/API/Window/isSecureContext
 /es/docs/Web/Accesibilidad	/es/docs/Web/Accessibility
@@ -1881,6 +1882,7 @@
 /es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_3_del_contexto_de_apilamiento	/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3
 /es/docs/Web/CSS/CSS_Properties_Reference	/es/docs/orphaned/Web/CSS/CSS_Properties_Reference
 /es/docs/Web/CSS/CSS_Reglas_Condicionales	/es/docs/Web/CSS/CSS_conditional_rules
+/es/docs/Web/CSS/CSS_animations/Tips	/es/docs/Web/API/Web_Animations_API/Tips
 /es/docs/Web/CSS/CSS_container_queries	/es/docs/Web/CSS/CSS_containment/Container_queries
 /es/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/es/docs/conflicting/Glossary/Flexbox
 /es/docs/Web/CSS/Child_selectors	/es/docs/Web/CSS/Child_combinator
@@ -2328,7 +2330,11 @@
 /es/docs/Web/JavaScript/Reference/Errors/Strict_y_parámetros_complejos	/es/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params
 /es/docs/Web/JavaScript/Reference/Errors/Undefined_prop	/es/docs/orphaned/Web/JavaScript/Reference/Errors/Undefined_prop
 /es/docs/Web/JavaScript/Reference/Errors/caracter_ilegal	/es/docs/Web/JavaScript/Reference/Errors/Illegal_character
+/es/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
+/es/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species
+/es/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables
 /es/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
+/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species	/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species
 /es/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource	/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /es/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /es/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
@@ -2336,7 +2342,9 @@
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
+/es/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator	/es/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator
 /es/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
+/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive	/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive
 /es/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/clear	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly	/es/docs/conflicting/WebAssembly/JavaScript_interface
 /es/docs/Web/JavaScript/Reference/Global_Objects/null	/es/docs/Web/JavaScript/Reference/Operators/null
@@ -2380,9 +2388,9 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales	/es/docs/Web/JavaScript/Reference/Global_Objects
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/AggregateError	/es/docs/Web/JavaScript/Reference/Global_Objects/AggregateError
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array	/es/docs/Web/JavaScript/Reference/Global_Objects/Array
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/@@iterator	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/@@species	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/@@unscopables	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/@@iterator	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/@@species	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/@@unscopables	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/concat	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/copyWithin	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/entries	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/entries
@@ -2421,7 +2429,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/unshift	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/values	/es/docs/Web/JavaScript/Reference/Global_Objects/Array/values
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/ArrayBuffer	/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/ArrayBuffer/@@species	/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/ArrayBuffer/@@species	/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/ArrayBuffer/byteLength	/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Boolean	/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Boolean/Boolean	/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
@@ -2598,7 +2606,7 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/RegExp/test	/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/RegExp/toString	/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Set	/es/docs/Web/JavaScript/Reference/Global_Objects/Set
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/Set/@@iterator	/es/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator
+/es/docs/Web/JavaScript/Referencia/Objetos_globales/Set/@@iterator	/es/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Set/add	/es/docs/Web/JavaScript/Reference/Global_Objects/Set/add
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Set/clear	/es/docs/Web/JavaScript/Reference/Global_Objects/Set/clear
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Set/delete	/es/docs/Web/JavaScript/Reference/Global_Objects/Set/delete

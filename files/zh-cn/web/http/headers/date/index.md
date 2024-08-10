@@ -9,7 +9,8 @@ l10n:
 
 **`Date`** 通用 HTTP 标头包含了消息创建时的日期和时间。
 
-> **警告：** 在 fetch 规范中，`Date` 被列为[禁止修改的标头](https://fetch.spec.whatwg.org/#forbidden-header-name)，因此这段代码不会发送 `Date` 标头：
+> [!WARNING]
+> 在 fetch 规范中，`Date` 被列为[禁止修改的标头](https://fetch.spec.whatwg.org/#forbidden-header-name)，因此这段代码不会发送 `Date` 标头：
 >
 > ```js
 > fetch("https://httpbin.org/get", {
