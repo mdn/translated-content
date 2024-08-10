@@ -9,9 +9,6 @@ slug: Web/API/FormData/has
 
 Метод **`has()`** из интерфейса {{domxref("FormData")}} возвращает логическое значение, указывающее, содержит ли объект `FormData` указанный ключ.
 
-> [!NOTE]
-> Этот метод доступен в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
-
 ## Синтаксис
 
 ```js
