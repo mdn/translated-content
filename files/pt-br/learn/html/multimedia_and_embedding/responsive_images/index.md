@@ -117,7 +117,8 @@ Eu configurei a largura da janela para 320px e depois 480px; para cada uma eu fu
 
 Próximo, você pode checar se o `srcset` está funcionando configurando a largura da janela para a qual você quiser (coloque para uma largura estreita, por exemplo), abrindo o Network Inspector (Ferramentas > Web Developer > Network), então recarregue a página. Isto deve dar a você uma lista do que foi carregado na página, e aqui você pode checar qual arquivo da imagem foi escolhida para baixar.
 
-> **Nota:** Use o Mozilla Firefox para testar o `srcset`. O Chrome carrega a melhor imagem se estiver em cache no navegador, anulando o propósito do teste na ferramenta de desenvolvimento.
+> [!NOTE]
+> Use o Mozilla Firefox para testar o `srcset`. O Chrome carrega a melhor imagem se estiver em cache no navegador, anulando o propósito do teste na ferramenta de desenvolvimento.
 
 ![a screenshot of the network inspector in firefox devtools, showing that the HTML for the page has been downloaded, along with three images, which include the two 800 wide versions of the responsive images](network-devtools.png)
 
@@ -207,7 +208,8 @@ Para esse exercício, nós estamos esperando que você seja corajoso e vá sozin
 4. Crie múltiplos arquivos de imagem de diferentes tamanhos, cada um mostrando a mesma imagem.
 5. Use `srcset`/`size` para criar um exemplo de mudança de resolução, que sirva para os mesmos tamanhos de imagens em diferentes resoluções, ou diferentes tamanhos de imagens em cada largura de janela.
 
-> **Nota:** Use a ferramenta de desenvolvimento do navegador para ajudar a ver os tamanhos que você precisa, como mencionado acima.
+> [!NOTE]
+> Use a ferramenta de desenvolvimento do navegador para ajudar a ver os tamanhos que você precisa, como mencionado acima.
 
 ## Sumário
 
