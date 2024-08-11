@@ -263,7 +263,7 @@ Este exemplo inclui os fundamentos básicos necessários para usar um `<iframe>`
 - [`width`](/pt-BR/docs/Web/HTML/Element/iframe#width) e [`height`](/pt-BR/docs/Web/HTML/Element/iframe#height)
   - : Esses atributos especificam a largura e a altura que você deseja no iframe.
 - [`sandbox`](/pt-BR/docs/Web/HTML/Element/iframe#sandbox)
-  - : Esse atributo, que funciona em navegadores um pouco mais modernos que o restante dos recursos do `<iframe>` (por exemplo, IE 10 e superior), requer configurações de segurança mais elevadas; falaremos mais sobre isso na próxima seção.
+  - : Esse atributo, que funciona em navegadores um pouco mais modernos que o restante dos recursos `<iframe>` (por exemplo, IE 10 e superior), requer configurações de segurança mais elevadas; falaremos mais sobre isso na próxima seção.
   
 > [!NOTE]
 > Para melhorar a velocidade, é uma boa ideia definir o atributo `src` do iframe com JavaScript após o carregamento do conteúdo principal. Isso torna sua página utilizável mais cedo e diminui o tempo de carregamento da página oficial (uma importante métrica de [SEO](/pt-BR/docs/Glossary/SEO) ).
@@ -294,7 +294,7 @@ Se o conteúdo for licenciado, você deverá obedecer aos termos da licença. Po
 1. HTTPS reduz a chance de que conteúdo remoto tenha sido adulterado no caminho.
 2. HTTPS previne que o conteúdo que tenha incorporado ao site acesse conteúdo em seu documento de origem, e vice-versa.
 
-Utilizar HTTPS requer um certificado de segurança, que pode ser bem caro (apesar que o [Let's Encrypt](https://letsencrypt.org/) deixe as coisas mais fáceis) — se você não puder obter um certificado, você deve fornecer seus documentos com HTTP. Contudo, por conta do segundo benefício do HTTPS descrito acima, _não importa o custo, você nunca deve incorporar conteúdo de terceiros em HTTP._ (No caso do melhor cenário, o navegador de seu usuário irá mostra-lo um aviso assustador.) Todas as empresas com boa reputação irão fornecer conteúdo para ser incoporado por meio do `<iframe>` disponível através de HTTPS — veja a URLs dentro do `<iframe>` no atributo `src, quando você está incorporando conteúdo do Google Maps ou Youtube, por exemplo.
+Utilizar HTTPS requer um certificado de segurança, que pode ser bem caro (apesar que o [Let's Encrypt](https://letsencrypt.org/) deixe as coisas mais fáceis) — se você não puder obter um certificado, você deve fornecer seus documentos com HTTP. Contudo, por conta do segundo benefício do HTTPS descrito acima, _não importa o custo, você nunca deve incorporar conteúdo de terceiros em HTTP._ (No caso do melhor cenário, o navegador de seu usuário irá mostra-lo um aviso assustador.) Todas as empresas com boa reputação irão fornecer conteúdo para ser incoporado por meio do `<iframe>` disponível através de HTTPS — veja a URLs dentro do `<iframe>` no atributo `src`, quando você está incorporando conteúdo do Google Maps ou Youtube, por exemplo.
 
 > [!NOTE]
 > [Páginas do Github](/pt-BR/docs/Learn/Common_questions/Using_Github_pages) permitem que conteúdo seja fornecido via HTTPS por padrão, então é útil para hospedar conteúdo. Se você está utilizando uma hospedagem diferente e não tem certeza do mesmo, pergunte sobre com o seu provedor de hospedagem.
