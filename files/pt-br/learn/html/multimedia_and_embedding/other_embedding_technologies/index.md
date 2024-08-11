@@ -265,8 +265,7 @@ Este exemplo inclui os fundamentos básicos necessários para usar um `<iframe>`
 - [`sandbox`](/pt-BR/docs/Web/HTML/Element/iframe#sandbox)
   - : Esse atributo, que funciona em navegadores um pouco mais modernos que o restante dos recursos `<iframe>` (por exemplo, IE 10 e superior), requer configurações de segurança mais elevadas; falaremos mais sobre isso na próxima seção.
 
-> [!NOTE]
-> Para melhorar a velocidade, é uma boa ideia definir o atributo `src` do iframe com JavaScript após o carregamento do conteúdo principal. Isso torna sua página utilizável mais cedo e diminui o tempo de carregamento da página oficial (uma importante métrica de [SEO](/pt-BR/docs/Glossary/SEO) ).
+> **Nota:** Para melhorar a velocidade, é uma boa ideia definir o atributo `src` do iframe com JavaScript após o carregamento do conteúdo principal. Isso torna sua página utilizável mais cedo e diminui o tempo de carregamento da página oficial (uma importante métrica de [SEO](/pt-BR/docs/Glossary/SEO) ).
 
 ### Preocupações com segurança
 
@@ -274,8 +273,7 @@ Acima, mencionamos preocupações de segurança - vamos abordar isso com mais de
 
 Fabricantes de navegadores e desenvolvedores da Web descobriram da maneira mais difícil que iframes são um alvo comum (termo oficial: **attack vector** ) para pessoas más na Web (geralmente chamadas de **hackers** ou, mais precisamente, **crackers** ) atacarem se estiverem tentando modificar maliciosamente sua página da web ou induzir as pessoas a fazer algo que não desejam, como revelar informações confidenciais como nomes de usuário e senhas. Por esse motivo, engenheiros de especificações e desenvolvedores de navegadores desenvolveram vários mecanismos de segurança para tornár os `<iframe>` mais seguros, e também existem práticas recomendadas a serem consideradas - abordaremos algumas delas abaixo.
 
-> [!NOTE]
-> [Clickjacking](https://pt.wikipedia.org/wiki/Clickjacking) é um tipo comum de ataque iframe, no qual hackers incorporam um iframe invisível ao documento (ou incorporam o documento ao próprio site malicioso) e o usam para capturar as interações dos usuários. Essa é uma maneira comum de enganar os usuários ou roubar dados confidenciais.
+> **Nota:** [Clickjacking](https://pt.wikipedia.org/wiki/Clickjacking) é um tipo comum de ataque iframe, no qual hackers incorporam um iframe invisível ao documento (ou incorporam o documento ao próprio site malicioso) e o usam para capturar as interações dos usuários. Essa é uma maneira comum de enganar os usuários ou roubar dados confidenciais.
 
 Um primeiro exemplo rápido - tente carregar o exemplo anterior que mostramos acima em seu navegador - você pode [encontrá-lo ao vivo no Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ( [consulte o código-fonte](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) também.) Na verdade, você não verá nada exibido na página e se olhar para o _console_ nas [ferramentas de desenvolvedor](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) do [navegador](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools), você verá uma mensagem informando o motivo. No Firefox, você será informado sobre o _Carregamento negado pelo X-Frame-Options: "https\://developer.mozilla.org/pt-BR/docs/Glossary" não permite o enquadramento_. Isso ocorre porque os desenvolvedores que criaram o MDN incluíram uma configuração no servidor que serve as páginas do site para impedir que elas sejam incorporadas dentro de `<iframe>`s (consulte [Configurar diretivas CSP](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#Configure_CSP_directives), abaixo.) Isso faz sentido - uma página MDN inteira não faz sentido para ser incorporada em outras páginas, a menos que você queira fazer algo como incorporá-las ao seu site e reivindicá-las como suas - ou tentar roubar dados via clickjacking, que são coisas muito ruins para se fazer. Além disso, se todos começassem a fazer isso, toda a largura de banda adicional começaria a custar muito dinheiro à Mozilla.
 
@@ -296,8 +294,7 @@ Se o conteúdo for licenciado, você deverá obedecer aos termos da licença. Po
 
 Utilizar HTTPS requer um certificado de segurança, que pode ser bem caro (apesar que o [Let's Encrypt](https://letsencrypt.org/) deixe as coisas mais fáceis) — se você não puder obter um certificado, você deve fornecer seus documentos com HTTP. Contudo, por conta do segundo benefício do HTTPS descrito acima, _não importa o custo, você nunca deve incorporar conteúdo de terceiros em HTTP._ (No caso do melhor cenário, o navegador de seu usuário irá mostra-lo um aviso assustador.) Todas as empresas com boa reputação irão fornecer conteúdo para ser incoporado por meio do `<iframe>` disponível através de HTTPS — veja a URLs dentro do `<iframe>` no atributo `src`, quando você está incorporando conteúdo do Google Maps ou Youtube, por exemplo.
 
-> [!NOTE]
-> [Páginas do Github](/pt-BR/docs/Learn/Common_questions/Using_Github_pages) permitem que conteúdo seja fornecido via HTTPS por padrão, então é útil para hospedar conteúdo. Se você está utilizando uma hospedagem diferente e não tem certeza do mesmo, pergunte sobre com o seu provedor de hospedagem.
+> **Nota:** [Páginas do Github](/pt-BR/docs/Learn/Common_questions/Using_Github_pages) permitem que conteúdo seja fornecido via HTTPS por padrão, então é útil para hospedar conteúdo. Se você está utilizando uma hospedagem diferente e não tem certeza do mesmo, pergunte sobre com o seu provedor de hospedagem.
 
 #### Sempre utilize o atributo `sandbox`
 
@@ -307,15 +304,13 @@ Conteúdo fora de uma sandbox pode fazer muito mais que o esperado (executar Jav
 
 Se absolutamente necessário, você pode adicionar permissões uma a uma (dentro do valor do atributo `sandbox=""`) — veja em [`sandbox`](/pt-BR/docs/Web/HTML/Element/iframe#sandbox) as referências de entrada para todas as opções disponíveis. Uma nota importante é que você _nunca_ deve adicionar ambos `allow-scripts` e `allow-same-origin` no atributo sandbox — neste caso, conteúdo incorporado pode burlar a política de segurança de mesmo destino que impede sites de executarem scripts, e utilizar JavaScript para desativar o sandboxing completamente.
 
-> [!NOTE]
-> Sandboxing não fornece nenhuma proteção se atacantes puderem enganar os usuários para que visitem conteúdo malicioso diretamete (fora de um `iframe`). Se existir qualquer chance que certo conteúdo possa ser malicioso (exemplo, conteúdo gerado por usuários), por favor forneça-o em um {{glossary("domain")}} diferente de seu site principal.
+> **Nota:** Sandboxing não fornece nenhuma proteção se atacantes puderem enganar os usuários para que visitem conteúdo malicioso diretamete (fora de um `iframe`). Se existir qualquer chance que certo conteúdo possa ser malicioso (exemplo, conteúdo gerado por usuários), por favor forneça-o em um {{glossary("domain")}} diferente de seu site principal.
 
 #### Configure diretivas CSP
 
 {{Glossary("CSP")}} significa **[política de segurança de conteúdo](/pt-BR/docs/Web/Security/CSP)** e fornece um [conjunto de cabeçalhos HTTP](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives) (metadados enviados junto com suas páginas da web quando são veiculados de um servidor da web) projetados para melhorar a segurança do seu documento HTML. Quando se trata de proteger `<iframe>`s, você pode _[configurar seu servidor para enviar um cabeçalho `X-Frame-Options` apropriado](/pt-BR/docs/Web/HTTP/X-Frame-Options)_. Isso pode impedir que outros sites incorporem seu conteúdo em suas páginas da Web (o que habilitaria o [clickjacking](https://pt.wikipedia.org/wiki/clickjacking) e vários outros ataques), exatamente o que os desenvolvedores do MDN fizeram, como vimos anteriormente.
 
-> [!NOTE]
-> Você pode ler a publicação de Frederik Braun [X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) para obter mais informações sobre este tópico. Obviamente, está fora do escopo uma explicação completa neste artigo.
+> **Nota:** Você pode ler a publicação de Frederik Braun [X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) para obter mais informações sobre este tópico. Obviamente, está fora do escopo uma explicação completa neste artigo.
 
 ## The \<embed> and \<object> elements
 
@@ -384,8 +379,7 @@ Once upon a time, plugins were indispensable on the Web. Remember the days when 
 - **Give yourself a break from the [extra accessibility headaches](https://webaim.org/techniques/flash/) that come with Flash and other plugins.**
 - **Stay clear of additional security hazards.** Adobe Flash is [notoriously insecure,](https://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53) even after countless patches. In 2015, Alex Stamos, then-Chief Security Officer at Facebook, [requested that Adobe discontinue Flash.](https://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso)
 
-> [!NOTE]
-> Due to its inherent issues and the lack of support for Flash, Adobe announced that they would stop supporting it at the end of 2020. As of January 2020, most browsers block Flash content by default, and by December 31st of 2020, all browsers will have completly removed all Flash functionality. Any existing Flash content will be inaccessable after that date.
+> **Nota:** Due to its inherent issues and the lack of support for Flash, Adobe announced that they would stop supporting it at the end of 2020. As of January 2020, most browsers block Flash content by default, and by December 31st of 2020, all browsers will have completly removed all Flash functionality. Any existing Flash content will be inaccessable after that date.
 
 So what should you do? If you need interactivity, HTML and {{glossary("JavaScript")}} can readily get the job done for you with no need for Java applets or outdated ActiveX/BHO technology. Instead of relying on Adobe Flash, you should use [HTML5 video](/pt-BR/docs/Learn/HTML/Howto/Add_audio_or_video_content_to_a_webpage) for your media needs, [SVG](/pt-BR/docs/Learn/HTML/Howto/Add_vector_image_to_a_webpage) for vector graphics, and [Canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial) for complex images and animations. [Peter Elst was already writing some years ago](https://plus.google.com/+PeterElst/posts/P5t4pFhptvp) that Adobe Flash is rarely the right tool for the job. As for ActiveX, even Microsoft's {{glossary("Microsoft Edge","Edge")}} browser no longer supports it.
 
