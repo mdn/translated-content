@@ -21,7 +21,7 @@ Até agora você já deve ter aprendido a incorporar coisas em suas páginas da 
           href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
           >trabalho com arquivos</a
         >, familiaridade com os fundamentos de HTML (conforme abordado em
-        <a 
+        <a
           href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Introdução ao HTML</a
         >) e os artigos anteriores deste módulo.
