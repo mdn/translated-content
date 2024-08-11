@@ -218,7 +218,7 @@ Isto é um geral sobre imagens responsivas - nós esperamos que você tenha apro
 - **Direção de Arte:** O problema consiste em apresentar imagens cortadas para diferentes layouts - por exemplo, uma imagem panorâmica mostrada completa em um layout desktop, e uma imagem retrato mostrando o objeto principal ampliado em um layout mobile. Isto pode ser resolvido usando o elemento {{htmlelement("picture")}}.
 - **Mudança de resolução:** O problema é apresentar arquivos menores de imagens para dispositivos estreitos, porque eles não precisam de imagens gigantes como em computadores - e também, opcionalmente, que você queira apresentar imagens de diferentes resoluções para alta e baixa densidades de tela. Isto pode ser resolvido usando [vector graphics](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) (imagens SVG), e os atributos [`srcset`](/pt-BR/docs/Web/HTML/Element/img#srcset) e [`sizes`](/pt-BR/docs/Web/HTML/Element/img#sizes).
 
-Isto também encerra o módulo [Multimídia e Incorporação](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding)! A única coisa para fazer agora é seguir e tentar nosso [Teste de Multimídia e Incorporação <sup>(inglês)</sup>](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page), e ver como você está. Divirta-se!
+Isto também encerra o módulo [Multimídia e Incorporação](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding)! A única coisa para fazer agora é seguir e tentar nosso [Teste de Multimídia e Incorporação <sup>(inglês)</sup>](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page), e ver como você está. Divirta-se!
 
 ## Veja também
 
