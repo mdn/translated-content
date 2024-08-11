@@ -1,7 +1,7 @@
 ---
 title: "SVGRect: x プロパティ"
-short-title: x
-slug: Web/API/SVGRect/The__X__property
+slug: Web/API/SVGRect/x
+original_slug: Web/API/SVGRect/The__X__property
 l10n:
   sourceCommit: e9ffc45746287e0d367fb08c597140f10bffd279
 ---

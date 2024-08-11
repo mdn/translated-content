@@ -2130,6 +2130,7 @@
 /zh-CN/docs/Web/CSS/CSS_Scrollbars	/zh-CN/docs/Web/CSS/CSS_scrollbars_styling
 /zh-CN/docs/Web/CSS/CSS_Selectors/Comparison_with_XPath	/zh-CN/docs/Web/XPath/Comparison_with_CSS_selectors
 /zh-CN/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes	/zh-CN/docs/Web/CSS/CSS_shapes/Overview_of_shapes
+/zh-CN/docs/Web/CSS/CSS_animations/Tips	/zh-CN/docs/Web/API/Web_Animations_API/Tips
 /zh-CN/docs/Web/CSS/CSS_container_queries	/zh-CN/docs/Web/CSS/CSS_containment/Container_queries
 /zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/zh-CN/docs/Glossary/Flexbox
 /zh-CN/docs/Web/CSS/CSS_reference	/zh-CN/docs/Web/CSS/Reference

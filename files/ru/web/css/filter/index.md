@@ -11,7 +11,8 @@ slug: Web/CSS/filter
 
 В стандарт CSS включены несколько функций, которые обеспечивают предопределённые эффекты. Вы также можете ссылаться на SVG фильтр с URL-адресом на [элемент фильтра SVG](/ru/docs/Web/SVG/Element/filter).
 
-> **Примечание:** Старые версии (с 4.0 до 9.0) браузера Windows Internet Explorer поддерживают нестандартный ["filter"](<http://msdn.microsoft.com/en-us/library/ms532853(v=vs.85).aspx>), который с тех пор устарел.
+> [!NOTE]
+> Старые версии (с 4.0 до 9.0) браузера Windows Internet Explorer поддерживают нестандартный ["filter"](<http://msdn.microsoft.com/en-us/library/ms532853(v=vs.85).aspx>), который с тех пор устарел.
 
 {{cssinfo}}
 

@@ -126,7 +126,7 @@ collisionDetection();
 {{JSFiddleEmbed("https://jsfiddle.net/yumetodo/mkwtxgc3/3/","","395")}}
 
 > [!NOTE]
-> измените цвет шара, когда он ударит по кирпичу.
+> Измените цвет шара, когда он ударит по кирпичу.
 
 ## Следующие шаги
 

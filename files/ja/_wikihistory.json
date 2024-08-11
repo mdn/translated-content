@@ -13661,6 +13661,10 @@
     "modified": "2020-08-23T02:47:12.593Z",
     "contributors": ["yoshioms", "mfuji09", "kay8"]
   },
+  "Web/API/Web_Animations_API/Tips": {
+    "modified": "2019-10-26T02:04:52.443Z",
+    "contributors": ["Wind1808", "tositeru"]
+  },
   "Web/API/Web_Animations_API/Using_the_Web_Animations_API": {
     "modified": "2020-09-04T01:24:23.194Z",
     "contributors": ["kit494way", "mantaroh"]
@@ -16206,10 +16210,6 @@
     "modified": "2020-10-15T21:40:14.685Z",
     "contributors": ["mfuji09", "teoli"]
   },
-  "Web/CSS/CSS_animations/Tips": {
-    "modified": "2019-10-26T02:04:52.443Z",
-    "contributors": ["Wind1808", "tositeru"]
-  },
   "Web/CSS/CSS_animations/Using_CSS_animations": {
     "modified": "2020-09-25T12:38:38.849Z",
     "contributors": [
@@ -16551,10 +16551,6 @@
       "malayaleecoder",
       "hashedhyphen"
     ]
-  },
-  "Web/CSS/CSS_miscellaneous": {
-    "modified": "2019-09-28T03:34:24.632Z",
-    "contributors": ["dskmori", "cmplstofB"]
   },
   "Web/CSS/CSS_motion_path": {
     "modified": "2020-10-15T22:11:41.700Z",

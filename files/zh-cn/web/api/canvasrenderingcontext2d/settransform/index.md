@@ -9,7 +9,8 @@ l10n:
 
 **`CanvasRenderingContext2D.setTransform()`** 方法用于使用单位矩阵重新设置（覆盖）当前的变换并调用变换，此变换由方法的变量进行描述。这使你能够对上下文进行缩放、旋转、平移（移动）和倾斜操作。
 
-> **备注：** 另请参阅 {{domxref("CanvasRenderingContext2D.transform()", "transform()")}} 方法；它不会覆盖当前的变换矩阵，而是将其与给定的矩阵相乘。
+> [!NOTE]
+> 另请参阅 {{domxref("CanvasRenderingContext2D.transform()", "transform()")}} 方法；它不会覆盖当前的变换矩阵，而是将其与给定的矩阵相乘。
 
 ## 语法
 
