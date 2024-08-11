@@ -13,7 +13,7 @@ Neste artigo nós iremos aprender sobre o conceito de imagens responsivas — im
 
 ## Por que imagens responsivas?
 
-Então, qual problema nós estamos tentando resolver com imagens responsivas? Vamos examinar um cenário típico. Um típico website provavelmente tem uma imagem de cabeçalho, para ter uma boa aparência para os visitantes e talvez mais algumas imagens no conteúdo abaixo. Você provavelmente quer fazer uma imagem do cabeçalho em toda a largura do cabeçalho, e que as imagens no conteúdo caibam dentro de alguma coluna. Vamos dar uma olhada em um exemplo simples disso:
+Então, qual problema nós estamos tentando resolver com imagens responsivas? Vamos examinar um cenário típico. Um típico website provavelmente tem uma imagem de cabeçalho, para ter uma boa aparência para os visitantes e talvez mais algumas imagens no conteúdo abaixo. Você provavelmente quer fazer uma imagem do cabeçalho preencher toda a largura do cabeçalho, e que as imagens no conteúdo caibam dentro de alguma coluna. Vamos dar uma olhada em um exemplo simples disso:
 
 ![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)
 
