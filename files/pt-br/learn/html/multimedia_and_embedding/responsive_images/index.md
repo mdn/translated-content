@@ -37,8 +37,7 @@ Você pode pensar que imagens vetorizadas resolveriam estes problemas, e elas re
 
 Este tipo de problema não existia quando a web começou a existir, no começo dos anos 1990 - naquele tempo somente desktops e laptops navegavam a Web, então engenheiros de navegadores e programadores nem pensavam em implementar soluções. _Tecnologias de imagens responsivas_ foram implementadas recentemente para resolver os problemas indicados acima, permitindo a você oferecer ao navegador vários arquivos de imagem, todas mostrando a mesma coisa mas contendo diferentes números de pixels (mudança de resolução), ou diferentes imagens para diferentes espaços de alocação (direção de arte).
 
-> [!NOTE]
-> As novas funcionalidades discutidas neste artigo — [`srcset`](/pt-BR/docs/Web/HTML/Element/img#srcset)/[`sizes`](/pt-BR/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} — são todas suportadas nas versões atuais de navegadores mobile e desktop (incluindo Microsoft Edge, embora não suportada pelo Internet Explorer).
+> **Nota:** As novas funcionalidades discutidas neste artigo — [`srcset`](/pt-BR/docs/Web/HTML/Element/img#srcset)/[`sizes`](/pt-BR/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} — são todas suportadas nas versões atuais de navegadores mobile e desktop (incluindo Microsoft Edge, embora não suportada pelo Internet Explorer).
 
 ## Como você faz para criar imagens responsivas?
 
@@ -90,8 +89,7 @@ Os atributos `srcset` e `sizes` parecem complicados, mas não são difíceis de 
 2. Um espaço.
 3. A **largura do slot** que a imagem irá preencher quando a condição de mídia for verdadeira (`440px`).
 
-> [!NOTE]
-> Para a largura do slot, você pode fornecer um tamanho absoluto (`px`, `em`) ou um tamanho relativo (como porcentagem). Você pode ter notado que o último slot de largura não tem condição de mídia - isto é o padrão que será escolhido quando nenhuma condição for verdadeira. O navegador ignora tudo depois da primeira condição satisfeita, então tenha cuidado com a ordem de condições.
+> **Nota:** Para a largura do slot, você pode fornecer um tamanho absoluto (`px`, `em`) ou um tamanho relativo (como porcentagem). Você pode ter notado que o último slot de largura não tem condição de mídia - isto é o padrão que será escolhido quando nenhuma condição for verdadeira. O navegador ignora tudo depois da primeira condição satisfeita, então tenha cuidado com a ordem de condições.
 
 Então, com estes atributos no lugar, o navegador irá:
 
@@ -104,8 +102,7 @@ E é isto! Então neste ponto, se um navegador suportado com uma largura de 480p
 
 Navegadores antigos que não suportam estas funcionalidades serão ignorados, seguiremos e carregaremos a imagem definida no atributo [`src`](/pt-BR/docs/Web/HTML/Element/img#src) como normal.
 
-> [!NOTE]
-> No {{htmlelement("head")}} do documento você encontrará a linha `<meta name="viewport" content="width=device-width">`: isto força os navegadores de celular a adotar a largura real para carregar páginas da web (alguns navegadores mobile mentem sobre sua largura da janela, e em vez carregam páginas em uma largura grande, então encolhem a página carregada, o que é de muita ajuda para imagens e designs responsivos. Nós iremos ensinar mais sobre isso em um módulo futuro).
+> **Nota:** No {{htmlelement("head")}} do documento você encontrará a linha `<meta name="viewport" content="width=device-width">`: isto força os navegadores de celular a adotar a largura real para carregar páginas da web (alguns navegadores mobile mentem sobre sua largura da janela, e em vez carregam páginas em uma largura grande, então encolhem a página carregada, o que é de muita ajuda para imagens e designs responsivos. Nós iremos ensinar mais sobre isso em um módulo futuro).
 
 ### Ferramentas de desenvolvimento úteis
 
@@ -117,8 +114,7 @@ Eu configurei a largura da janela para 320px e depois 480px; para cada uma eu fu
 
 Próximo, você pode checar se o `srcset` está funcionando configurando a largura da janela para a qual você quiser (coloque para uma largura estreita, por exemplo), abrindo o Network Inspector (Ferramentas > Web Developer > Network), então recarregue a página. Isto deve dar a você uma lista do que foi carregado na página, e aqui você pode checar qual arquivo da imagem foi escolhida para baixar.
 
-> [!NOTE]
-> Use o Mozilla Firefox para testar o `srcset`. O Chrome carrega a melhor imagem se estiver em cache no navegador, anulando o propósito do teste na ferramenta de desenvolvimento.
+> **Nota:** Use o Mozilla Firefox para testar o `srcset`. O Chrome carrega a melhor imagem se estiver em cache no navegador, anulando o propósito do teste na ferramenta de desenvolvimento.
 
 ![a screenshot of the network inspector in firefox devtools, showing that the HTML for the page has been downloaded, along with three images, which include the two 800 wide versions of the responsive images](network-devtools.png)
 
@@ -171,8 +167,7 @@ Este código nos permite mostrar uma imagem adequada em ambas extensas e estreit
 
 ![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](picture-element-narrow.png)
 
-> [!NOTE]
-> Você deveria usar o atributo `media` somente em cenários de direção de arte; quando você usa `media`, não oferecendo também condições com o atributo `sizes`.
+> **Nota:** Você deveria usar o atributo `media` somente em cenários de direção de arte; quando você usa `media`, não oferecendo também condições com o atributo `sizes`.
 
 ### Por que não podemos só fazer isso usando CSS ou JavaScript?
 
@@ -208,8 +203,7 @@ Para esse exercício, nós estamos esperando que você seja corajoso e vá sozin
 4. Crie múltiplos arquivos de imagem de diferentes tamanhos, cada um mostrando a mesma imagem.
 5. Use `srcset`/`size` para criar um exemplo de mudança de resolução, que sirva para os mesmos tamanhos de imagens em diferentes resoluções, ou diferentes tamanhos de imagens em cada largura de janela.
 
-> [!NOTE]
-> Use a ferramenta de desenvolvimento do navegador para ajudar a ver os tamanhos que você precisa, como mencionado acima.
+> **Nota:** Use a ferramenta de desenvolvimento do navegador para ajudar a ver os tamanhos que você precisa, como mencionado acima.
 
 ## Sumário
 
