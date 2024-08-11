@@ -35,24 +35,24 @@ Para tornar as coisas mais complicadas, alguns dispositivos tem uma alta resolu�
 
 Você pode pensar que imagens vetorizadas resolveriam estes problemas, e elas resolvem em certo grau - elas têm um tamanho pequeno, se adaptam bem, e você deveria usá-las sempre que possível. No entanto elas não são adequadas para todos os tipos de imagem, embora elas sejam ótimas para gráficos simples, padrões, elementos de interface, etc. Criar uma imagem baseada em vetor com o tipo de detalhe que você encontraria em uma foto é complexo. Por exemplo, formatos de imagens rasterizadas, como JPEGs, são melhores para este tipo de detalhe como nós vemos no exemplo acima.
 
-Este tipo de problema não existe quando a web começou a existir, no começo dos anos 1990 - naquele tempo somente desktops e laptops navegavam a Web, então engenheiros de navegadores e programadores nem pensavam em implementar soluções. _Tecnologias de imagens responsivas_ foram implementadas recentemente para resolver os problemas indicados acima, permitindo a você oferecer ao navegador vários arquivos de imagens, todas mostrando a mesma coisa mas contendo diferente número de pixels (mudança de resolução), ou diferentes imagens para diferente espaços de alocação (direção de arte).
+Este tipo de problema não existia quando a web começou a existir, no começo dos anos 1990 - naquele tempo somente desktops e laptops navegavam a Web, então engenheiros de navegadores e programadores nem pensavam em implementar soluções. _Tecnologias de imagens responsivas_ foram implementadas recentemente para resolver os problemas indicados acima, permitindo a você oferecer ao navegador vários arquivos de imagem, todas mostrando a mesma coisa mas contendo diferentes números de pixels (mudança de resolução), ou diferentes imagens para diferentes espaços de alocação (direção de arte).
 
 > [!NOTE]
 > As novas funcionalidades discutidas neste artigo — [`srcset`](/pt-BR/docs/Web/HTML/Element/img#srcset)/[`sizes`](/pt-BR/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} — são todas suportadas nas versões atuais de navegadores mobile e desktop (incluindo Microsoft Edge, embora não suportada pelo Internet Explorer).
 
 ## Como você faz para criar imagens responsivas?
 
-Nesta seção, nós iremos ver os dois problemas ilustrados acima e mostrar como resolvê-los usando fucionalidades de imagens responsivas do HTML. Você deve notar que nós iremos focar no elemento HTML {{htmlelement("img")}} para esta seção, como visto na área de conteúdo do exemplo acima - a imagem no cabeçalho da página é somente para decoração, e assim implementada usando imagens de background CSS. [CSS indiscutivelmente tem ferramentas melhores para design responsivo](http://blog.cloudfour.com/responsive-images-101-part-8-css-images/) do que HTML, e nós iremos falar sobre estas ferramentas em um módulo futuro de CSS.
+Nesta seção, nós iremos ver os dois problemas ilustrados acima e mostrar como resolvê-los usando funcionalidades de imagens responsivas do HTML. Você deve notar que nós iremos focar no elemento HTML {{htmlelement("img")}} para esta seção, como visto na área de conteúdo do exemplo acima - a imagem no cabeçalho da página é somente para decoração, e assim implementada usando imagens de background CSS. [CSS indiscutivelmente tem ferramentas melhores para design responsivo](http://blog.cloudfour.com/responsive-images-101-part-8-css-images/) do que HTML, e nós iremos falar sobre estas ferramentas em um módulo futuro de CSS.
 
 ### Mudança de resolução: Diferentes tamanhos
 
-Então, qual é o problema que nós queremos resolver com a mudança de resolução? Nós queremos mostrar o conteúdo identico da imagem, somente maior ou menor dependendo do dispositivo - esta é a situação que nós temos com a segunda imagem do conteúdo em nosso exemplo. O padrão do elemento {{htmlelement("img")}} tradicionalmente somente permite apontar o navegador para uma única fonte:
+Então, qual é o problema que nós queremos resolver com a mudança de resolução? Nós queremos mostrar o conteúdo identico da imagem, somente maior ou menor dependendo do dispositivo - esta é a situação que nós temos com a segunda imagem do conteúdo em nosso exemplo. O padrão do elemento {{htmlelement("img")}} tradicionalmente permite somente apontar o navegador para uma única fonte:
 
 ```html
 <img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy" />
 ```
 
-Nós podemos, entretanto, usar dois novos atributos — [`srcset`](/pt-BR/docs/Web/HTML/Element/img#srcset) e [`sizes`](/pt-BR/docs/Web/HTML/Element/img#sizes) —para fornecer várias fontes adicionais juntamente com sugestões para ajudar o navegador a pegar a correta. Você pode ver um exemplo disso no nosso exemplo [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) no Github (ver também [o código fonte](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html)):
+Nós podemos, entretanto, usar dois novos atributos — [`srcset`](/pt-BR/docs/Web/HTML/Element/img#srcset) e [`sizes`](/pt-BR/docs/Web/HTML/Element/img#sizes) — para fornecer várias fontes adicionais juntamente com sugestões para ajudar o navegador a escolher a correta. Você pode ver um exemplo disso no nosso exemplo [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) no Github (ver também [o código fonte](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html)):
 
 ```html
 <img
@@ -105,7 +105,7 @@ E é isto! Então neste ponto, se um navegador suportado com uma largura de 480p
 Navegadores antigos que não suportam estas funcionalidades serão ignorados, seguiremos e carregaremos a imagem definida no atributo [`src`](/pt-BR/docs/Web/HTML/Element/img#src) como normal.
 
 > [!NOTE]
-> No {{htmlelement("head")}} do documento você encontrará a linha `<meta name="viewport" content="width=device-width">`: isto força os navegadores de celular a adotar a largura real para carregar páginas da web (alguns navegadores mobile mentem sobre sua largura da janela, e em vez carregam páginas em uma largura grande e então encolhem a página carregada, o que é de muita ajuda para imagens e designs responsivos. Nós iremos ensinar mais sobre isso em um módulo futuro).
+> No {{htmlelement("head")}} do documento você encontrará a linha `<meta name="viewport" content="width=device-width">`: isto força os navegadores de celular a adotar a largura real para carregar páginas da web (alguns navegadores mobile mentem sobre sua largura da janela, e em vez carregam páginas em uma largura grande, então encolhem a página carregada, o que é de muita ajuda para imagens e designs responsivos. Nós iremos ensinar mais sobre isso em um módulo futuro).
 
 ### Ferramentas de desenvolvimento úteis
 
@@ -124,7 +124,7 @@ Próximo, você pode checar se o `srcset` está funcionando configurando a largu
 
 ### Mudança de Resolução: Mesmo tamanho, diferentes resoluções
 
-Se você está dando suporte a múltiplas resoluções de vídeo, mas todas veem sua imagem no tamanho real na tela, você pode permitir ao navegador escolher uma resolução apropriada para a imagem usando `srcset` com x identificadores e sem `sizes` - uma sintaxe um pouco mais fácil! Você pode encontrar um exemplo de como isto parece em [srcset-resolutions.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) (ver também [o código fonte](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)):
+Se você está dando suporte a múltiplas resoluções de vídeo, mas todas veem sua imagem no tamanho real na tela, você pode permitir ao navegador escolher uma resolução apropriada para a imagem usando `srcset` com x identificadores e sem `sizes` - uma sintaxe um pouco mais fácil! Você pode encontrar um exemplo de como isto parece em [srcset-resolutions.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) e (ver também [o código fonte](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)):
 
 ```html
 <img
@@ -153,7 +153,7 @@ Voltando para o nosso exemplo [not-responsive.html](http://mdn.github.io/learnin
 <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva" />
 ```
 
-Vamos consertar isso, com {{htmlelement("picture")}}! Como [`<video>` e `<audio>`](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), O elemento `<picture>` é um invólucro contendo muitos elementos {{htmlelement("source")}} que fornecem muitas fontes diferentes para o navegador escolher, seguido pelo elemento mais importante {{htmlelement("img")}}. O código em [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) ficará assim então:
+Vamos consertar isso, com {{htmlelement("picture")}}! Como [`<video>` e `<audio>`](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), o elemento `<picture>` é um invólucro contendo muitos elementos {{htmlelement("source")}} que fornecem muitas fontes diferentes para o navegador escolher, seguido pelo elemento mais importante {{htmlelement("img")}}. O código em [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) ficará assim então:
 
 ```html
 <picture>
@@ -164,7 +164,7 @@ Vamos consertar isso, com {{htmlelement("picture")}}! Como [`<video>` e `<audio>
 ```
 
 - Os elementos `<source>` incluem um atributo `media` que contem uma condição de mídia - como no nosso primeiro exemplo `srcset`, estas condições são testadas para definir qual imagem será mostrada no dispositivo - a primeira que retornar um valor verdadeiro, será escolhida. Neste caso, se a largura da janela é 799px ou menor, a primeira imagem do elemento `<source>` será mostrada. Se a largura da janela é 800px ou maior, será escolhida a segunda.
-- Os atributos `srcset` contem o caminho para a imagem que será apresentada. Note que como acabamos de ver acima com `<img>`, `<source>` pode pegar um atributo `srcset` com múltiplas imagens referenciadas, e um atributo `sizes` também. Então você pode oferecer múltiplas imagens via um elemento `<picture>`, mas também oferecer múltiplas resoluções para cada uma. Na prática, você provavelmente não vai querer fazer isso com frequência.
+- Os atributos `srcset` contem o caminho para a imagem que será apresentada. Note que como acabamos de ver acima com `<img>`, `<source>` podemos pegar um atributo `srcset` com múltiplas imagens referenciadas, e um atributo `sizes` também. Então você pode oferecer múltiplas imagens via um elemento `<picture>`, mas também oferecer múltiplas resoluções para cada uma. Na prática, você provavelmente não vai querer fazer isso com frequência.
 - Em todos os casos, você deve fornecer um elemento `<img>`, com `src` e `alt`, logo antes do `</picture>`, de outra forma não aparecerá imagens. Assim um padrão será aplicado quando nenhuma condição for atendida (você pode remover o segundo elemento `<source>` neste exemplo), e verificar navegadores que não suportam o elemento `<picture>`.
 
 Este código nos permite mostrar uma imagem adequada em ambas extensas e estreitas telas, como podemos ver abaixo:
@@ -176,7 +176,7 @@ Este código nos permite mostrar uma imagem adequada em ambas extensas e estreit
 
 ### Por que não podemos só fazer isso usando CSS ou JavaScript?
 
-Quando o navegador começa a carregar a página, inicia o download de todas as imagens antes do analisador principal ter começado a carregar e interpretar o JavaScript e o CSS da página. Isto é uma técnica útil, a qual diminui o tempo de carregamento médio em 20%. Entretanto, isto não é útil para imagens responsivas, então é necessário implementar soluções como srcset. Você não pode, por exemplo, carregar o elemento {{htmlelement("img")}}, então detectar a largura da janela com JavaScript e mudar dinamicamente o arquivo da imagem para um menor, caso deseje. Até lá, a imagem original deveria já ter sido carregada, e você iria carregar uma menor, o que é ainda pior em termos de imagens responsivas.
+Quando o navegador começa a carregar a página, inicia o download de todas as imagens antes do analisador principal ter começado a carregar e interpretar o JavaScript e o CSS da página. Isto é uma técnica útil, a qual diminui o tempo de carregamento médio em 20%. Entretanto, isto não é útil para imagens responsivas, então é necessário implementar soluções como srcset. Você não pode, por exemplo, carregar o elemento {{htmlelement("img")}}, então detectar a largura da janela com JavaScript e mudar dinamicamente o arquivo da imagem para uma menor, caso deseje. Até lá, a imagem original deveria já ter sido carregada, e você iria carregar uma menor, o que é ainda pior em termos de imagens responsivas.
 
 ### Use bastante formatos de imagens modernos
 
