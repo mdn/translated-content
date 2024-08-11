@@ -264,6 +264,7 @@ Este exemplo inclui os fundamentos básicos necessários para usar um `<iframe>`
   - : Esses atributos especificam a largura e a altura que você deseja no iframe.
 - [`sandbox`](/pt-BR/docs/Web/HTML/Element/iframe#sandbox)
   - : Esse atributo, que funciona em navegadores um pouco mais modernos que o restante dos recursos `<iframe>` (por exemplo, IE 10 e superior), requer configurações de segurança mais elevadas; falaremos mais sobre isso na próxima seção.
+
 > [!NOTE]
 > Para melhorar a velocidade, é uma boa ideia definir o atributo `src` do iframe com JavaScript após o carregamento do conteúdo principal. Isso torna sua página utilizável mais cedo e diminui o tempo de carregamento da página oficial (uma importante métrica de [SEO](/pt-BR/docs/Glossary/SEO) ).
 
