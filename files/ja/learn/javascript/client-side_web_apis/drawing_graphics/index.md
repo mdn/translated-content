@@ -389,7 +389,7 @@ canvas.setAttribute("aria-label", "Canvas text");
    - 6 番目と 7 番目の引数は、画像の切り出し部分の左上隅をキャンバスの左上隅と関連させて描画する座標を定義します。
    - 8 番目と 9 番目の引数は、画像の切り出し領域を描画するための幅と高さを定義するものです。今回は、元のスライスと同じ寸法を保有しましたが、異なる値を指定することでリサイズすることも可能です。
 
-5. 画像が有意に更新された場合、{{glossary("accessable description", "アクセシブル説明")}}も更新しななければなりません。
+5. 画像が有意に更新された場合、{{glossary("accessable description", "アクセシブル説明")}}も更新しなければなりません。
 
    ```js
    canvas.setAttribute("aria-label", "Firefox Logo");

@@ -72,7 +72,8 @@ if (storageAvailable("localStorage")) {
 
 ![](event-output.png)
 
-> **Примечание:** Помимо просмотра примеров выше, используя приведённые ссылки выше , вы можете также [просмотреть исходный код](https://github.com/mdn/dom-examples/tree/master/web-storage).
+> [!NOTE]
+> Помимо просмотра примеров выше, используя приведённые ссылки выше , вы можете также [просмотреть исходный код](https://github.com/mdn/dom-examples/tree/master/web-storage).
 
 ## Проверка на заполненность хранилища
 

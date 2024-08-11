@@ -9,8 +9,6 @@ slug: Web/API/FormData/getAll
 
 **`getAll()`** - метод объекта {{domxref("FormData")}}, который возвращает все значения, связанные с ключом в объекте FormData.
 
-> **Примечание:** Этот метод доступен в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
-
 ## Синтаксис
 
 ```js

@@ -28,7 +28,8 @@ slug: Web/CSS/Syntax
 
 ![](css_syntax_-_declaration.png)
 
-> **Примечание:** Содержимое блока объявлений CSS, т. е. объявления, разделённые точкой с запятой. Блок объявлений может быть помещён внутри атрибута style HTML-документа без фигурных скобок.
+> [!NOTE]
+> Содержимое блока объявлений CSS, т. е. объявления, разделённые точкой с запятой. Блок объявлений может быть помещён внутри атрибута style HTML-документа без фигурных скобок.
 
 ## CSS rulesets
 
@@ -40,7 +41,8 @@ CSS allows this by associating conditions with declarations blocks. Each (valid)
 
 As an element of the page may be matched by several selectors, and therefore by several rules eventually containing a given property several times, with different values, the CSS standard defines which one has precedence over the other and must be applied: this is called the [cascade](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) algorithm.
 
-> **Примечание:** It is important to note that even if a ruleset characterized by a group of selectors is a kind of shorthand replacing rulesets with a single selector each, this doesn't apply to the validity of the ruleset itself.
+> [!NOTE]
+> It is important to note that even if a ruleset characterized by a group of selectors is a kind of shorthand replacing rulesets with a single selector each, this doesn't apply to the validity of the ruleset itself.
 >
 > This leads to an important consequence: if one single basic selector is invalid, like when using an unknown pseudo-element or pseudo-class, the whole _selector_ is invalid and therefor the entire rule is ignored (as invalid too).
 

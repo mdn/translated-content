@@ -14788,6 +14788,10 @@
     "modified": "2019-03-18T21:29:50.687Z",
     "contributors": ["Lim"]
   },
+  "Web/API/Web_Animations_API/Tips": {
+    "modified": "2019-08-08T06:48:05.151Z",
+    "contributors": ["yangwr", "mrzhao1129", "DevQiao"]
+  },
   "Web/API/Web_Animations_API/Using_the_Web_Animations_API": {
     "modified": "2019-03-23T22:10:37.938Z",
     "contributors": ["old2sun", "Hallz", "dujun", "leeseean"]
@@ -17182,10 +17186,6 @@
       "luhai.cui@gmail.com",
       "teoli"
     ]
-  },
-  "Web/CSS/CSS_animations/Tips": {
-    "modified": "2019-08-08T06:48:05.151Z",
-    "contributors": ["yangwr", "mrzhao1129", "DevQiao"]
   },
   "Web/CSS/CSS_animations/Using_CSS_animations": {
     "modified": "2019-08-08T07:19:41.823Z",

@@ -527,7 +527,8 @@ DOMString? getResponseHeader(DOMString header);
 
 Инициализирует запрос. Этот метод может (и должен) быть вызван из JavaScript-кода; если необходимо вызвать запрос из нативного кода, то нужно использовать метод [`openRequest()`](</en/nsIXMLHttpRequest#openRequest()> "/en/XMLHttpRequest#openRequest()").
 
-> **Примечание:** Вызов этого метода из активного запроса (если метод `open() или` `openRequest() уже были вызваны`) эквивалентно вызову метода `abort()`.
+> [!NOTE]
+> Вызов этого метода из активного запроса (если метод `open() или` `openRequest() уже были вызваны`) эквивалентно вызову метода `abort()`.
 
 ```
 void open(
@@ -549,7 +550,8 @@ void open(
 
   - : Необязательный boolean параметр, по умолчанию равный `true`. Определяет, будет ли запрос отправлен асинхронно. Если значение равно `false`, метод `send()` вернёт ответ в общем потоке работы приложения (иначе говоря, приложение зависнет на некоторое время), в противном случае, ответ может быть получен только при помощи определённых обработчиков событий. В случае, если используется отправка `multipart` запроса, то этот атрибут **должен** быть `true`, или будет выброшено исключение.
 
-    > **Примечание:** Начиная с Gecko 30.0, синхронные запросы объявлены как deprecated, в силу того что все пользователи недовольны тем, что приложение "зависает".
+    > [!NOTE]
+    > Начиная с Gecko 30.0, синхронные запросы объявлены как deprecated, в силу того что все пользователи недовольны тем, что приложение "зависает".
 
 - `user`
   - : Необязательный параметр, используется для аутентификации пользователя. По умолчанию, пустая строка.
@@ -568,13 +570,16 @@ void overrideMimeType(DOMString mimetype);
 
 Отправляет запрос. Если запрос асинхронный (а по умолчанию это так), этот метод вернёт значение сразу после того как метод вызван.
 
-> **Примечание:** в этом случае, в ответе не будет содержаться информации, которая пришла с сервера, поскольку она ещё не пришла. Для того чтобы получить эту информацию, нужно слушать события загрузки, или использовать promise.
+> [!NOTE]
+> В этом случае, в ответе не будет содержаться информации, которая пришла с сервера, поскольку она ещё не пришла. Для того чтобы получить эту информацию, нужно слушать события загрузки, или использовать promise.
 
 Если запрос синхронный, то метод вернёт значение только после того, как придёт запрос от сервера.
 
-> **Примечание:** все необходимые обработчики событий должны быть установлены перед вызовом `send()`.
+> [!NOTE]
+> Все необходимые обработчики событий должны быть установлены перед вызовом `send()`.
 
-> **Примечание:** Лучше не использовать параметр ArrayBuffer. Сейчас он не входит в спецификацию `XMLHttpRequest`. Вместо него можно использовать ArrayBufferView (смотри таблицу совместимости для различных версий).
+> [!NOTE]
+> Лучше не использовать параметр ArrayBuffer. Сейчас он не входит в спецификацию `XMLHttpRequest`. Вместо него можно использовать ArrayBufferView (смотри таблицу совместимости для различных версий).
 
 ```
 void send();
@@ -645,7 +650,8 @@ void setRequestHeader(
 
 Вариант метода `send()` который посылает бинарные данные.
 
-> **Примечание:** Этот нестандартный метод считается устарелым по состоянию на Gecko 31, и со временем будет удалён. Взамен может использоваться стандарт метода `send(Blob data).`
+> [!NOTE]
+> Этот нестандартный метод считается устарелым по состоянию на Gecko 31, и со временем будет удалён. Взамен может использоваться стандарт метода `send(Blob data).`
 
 ```
 void sendAsBinary(
@@ -687,7 +693,8 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 }
 ```
 
-> **Примечание:** It's possible to build this polyfill putting two types of data as argument for `send()`: an [`ArrayBuffer`](/ru/docs/JavaScript/Typed_arrays/ArrayBuffer) (`ui8Data.buffer` – the commented code) or an [`ArrayBufferView`](/ru/docs/JavaScript/Typed_arrays/ArrayBufferView) (`ui8Data`, which is a [typed array of 8-bit unsigned integers](/ru/docs/JavaScript/Typed_arrays/Uint8Array) – uncommented code). However, on Google Chrome, when you try to send an `ArrayBuffer`, the following warning message will appear: `ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead.` Another possible approach to send binary data is the [`StringView`](/ru/docs/Web/JavaScript/Typed_arrays/StringView) Non native typed arrays superclass in conjunction with the [`send()`](<#send()>) method.
+> [!NOTE]
+> It's possible to build this polyfill putting two types of data as argument for `send()`: an [`ArrayBuffer`](/ru/docs/JavaScript/Typed_arrays/ArrayBuffer) (`ui8Data.buffer` – the commented code) or an [`ArrayBufferView`](/ru/docs/JavaScript/Typed_arrays/ArrayBufferView) (`ui8Data`, which is a [typed array of 8-bit unsigned integers](/ru/docs/JavaScript/Typed_arrays/Uint8Array) – uncommented code). However, on Google Chrome, when you try to send an `ArrayBuffer`, the following warning message will appear: `ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead.` Another possible approach to send binary data is the [`StringView`](/ru/docs/Web/JavaScript/Typed_arrays/StringView) Non native typed arrays superclass in conjunction with the [`send()`](<#send()>) method.
 
 ## Notes
 
