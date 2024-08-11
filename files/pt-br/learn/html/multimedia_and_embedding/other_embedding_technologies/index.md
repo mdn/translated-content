@@ -17,7 +17,7 @@ Até agora você já deve ter aprendido a incorporar coisas em suas páginas da 
           href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
           >software básico instalado</a
         >, conhecimento básico sobre o
-        <a 
+        <a
           href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
           >trabalho com arquivos</a
         >, familiaridade com os fundamentos de HTML (conforme abordado em
