@@ -86,7 +86,7 @@ Os atributos `srcset` e `sizes` parecem complicados, mas não são difíceis de 
 
 **`sizes`** define um conjunto de condições de mídia (ex.: largura da tela) e indica qual tamanho da imagem deveria ser a melhor escolha, quando certas condições de tela são verdadeiras - Estas são as sugestões que nós falamos antes. Neste caso, antes de cada vírgula nós escrevemos:
 
-1. Uma **condição de mídia** (`max-width:480px`) — Você vai aprender mais sobre isso no [tema CSS](/pt-BR/docs/Learn/CSS), mas para agora vamos somente dizer que a condição de mídia descreve um possível estado em que a tela pode estar. Neste caso, nós estamos dizendo "quando a largura da tela é 480px ou menos".
+1. Uma **condição de mídia** (`(max-width:480px)`) — Você vai aprender mais sobre isso no [tema CSS](/pt-BR/docs/Learn/CSS), mas para agora vamos somente dizer que a condição de mídia descreve um possível estado em que a tela pode estar. Neste caso, nós estamos dizendo "quando a largura da tela é 480px ou menos".
 2. Um espaço.
 3. A **largura do slot** que a imagem irá preencher quando a condição de mídia for verdadeira (`440px`).
 
