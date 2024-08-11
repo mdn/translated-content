@@ -295,8 +295,7 @@ Se o conteúdo for licenciado, você deverá obedecer aos termos da licença. Po
 
 Utilizar HTTPS requer um certificado de segurança, que pode ser bem caro (apesar que o [Let's Encrypt](https://letsencrypt.org/) deixe as coisas mais fáceis) — se você não puder obter um certificado, você deve fornecer seus documentos com HTTP. Contudo, por conta do segundo benefício do HTTPS descrito acima, _não importa o custo, você nunca deve incorporar conteúdo de terceiros em HTTP._ (No caso do melhor cenário, o navegador de seu usuário irá mostra-lo um aviso assustador.) Todas as empresas com boa reputação irão fornecer conteúdo para ser incoporado por meio do `<iframe>` disponível através de HTTPS — veja a URLs dentro do `<iframe>` no atributo `src`, quando você está incorporando conteúdo do Google Maps ou Youtube, por exemplo.
 
-> [!NOTE]
-> [Páginas do Github](/pt-BR/docs/Learn/Common_questions/Using_Github_pages) permitem que conteúdo seja fornecido via HTTPS por padrão, então é útil para hospedar conteúdo. Se você está utilizando uma hospedagem diferente e não tem certeza do mesmo, pergunte sobre com o seu provedor de hospedagem.
+> [!NOTE] > [Páginas do Github](/pt-BR/docs/Learn/Common_questions/Using_Github_pages) permitem que conteúdo seja fornecido via HTTPS por padrão, então é útil para hospedar conteúdo. Se você está utilizando uma hospedagem diferente e não tem certeza do mesmo, pergunte sobre com o seu provedor de hospedagem.
 
 #### Sempre utilize o atributo `sandbox`
 
