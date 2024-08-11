@@ -29,7 +29,8 @@ Other elements can be used in tandem with `<kbd>` to represent more specific sce
 - Nesting a `<kbd>` element inside a {{HTMLElement("samp")}} element represents input that has been echoed back to the user by the system. See [Echoed input](#echoed_input), below, for an example.
 - Nesting a `<samp>` element inside a `<kbd>` element, on the other hand, represents input which is based on text presented by the system, such as the names of menus and menu items, or the names of buttons displayed on the screen. See the example under [Representing onscreen input options](#representing_onscreen_input_options) below.
 
-> **Примечание:** You can define a custom style to override the browser's default font selection for the `<kbd>` element, although the user's preferences may potentially override your CSS.
+> [!NOTE]
+> You can define a custom style to override the browser's default font selection for the `<kbd>` element, although the user's preferences may potentially override your CSS.
 
 ## Examples
 
