@@ -67,7 +67,8 @@ This value must be greater than or equal to the value of the `min` attribute.
 
 `<input type="number">` elements can help simplify your work when building the user interface and logic for entering numbers into a form. When you create a number input with the proper `type` value, `number`, you get automatic validation that the entered text is a number, and usually a set of up and down buttons to step the value up and down.
 
-> **Предупреждение:** **Important**: Bear in mind that logically you should not be able to enter characters inside a number of input other than numbers. There seems to be some disagreement about this among browsers; see [Firefox bug 1398528](https://bugzil.la/1398528).
+> [!WARNING]
+> Logically, you should not be able to enter characters inside a number input other than numbers. Some browsers allow invalid characters, others do not; see [Firefox bug 1398528](https://bugzil.la/1398528).
 
 > [!NOTE]
 > It's crucial to remember that a user can tinker with your HTML behind the scenes, so your site _must not_ use simple client-side validation for any security purposes. You _must_ verify on the server side any transaction in which the provided value may have any security implications of any kind.
@@ -245,7 +246,12 @@ input:valid + span:after {
 
 Here we use the {{cssxref(":invalid")}} and {{cssxref(":valid")}} pseudo classes to display an appropriate invalid or valid icon as generated content on the adjacent {{htmlelement("span")}} element, indicating if the current value is valid. We put it on a separate `<span>` element for added flexibility; some browsers don't display generated content very effectively on some types of form inputs (read for example the section on [`<input type="date">` validation](/ru/docs/Web/HTML/Element/input/date#Validation)).
 
-> **Предупреждение:** **Important**: HTML form validation is _not_ a substitute for server-side scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
+> [!WARNING]
+> HTML form validation is _not_ a substitute for server-side scripts that ensure that the entered data is in the proper format!
+>
+> It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML and submit the data directly to your server.
+>
+> If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
 
 ### Pattern validation
 
