@@ -105,11 +105,11 @@ E é isto! Então neste ponto, se um navegador suportado com uma largura de 480p
 Navegadores antigos que não suportam estas funcionalidades serão ignorados, seguiremos e carregaremos a imagem definida no atributo [`src`](/pt-BR/docs/Web/HTML/Element/img#src) como normal.
 
 > [!NOTE]
-> No {{htmlelement("head")}} do documento você encontrará a linha `<meta name="viewport" content="width=device-width">`: isto força navegadores de celular adotar a largura real para carregar páginas web (alguns navegadores mobile mentem sobre sua largura da janela, e em vez carregam páginas em uma largura grande e então encolhem a página carregada, o que é de muita ajuda para imagens e design responsivos. Nós iremos ensinar mais sobre isso em um módulo futuro).
+> No {{htmlelement("head")}} do documento você encontrará a linha `<meta name="viewport" content="width=device-width">`: isto força os navegadores de celular a adotar a largura real para carregar páginas web (alguns navegadores mobile mentem sobre sua largura da janela, e em vez carregam páginas em uma largura grande e então encolhem a página carregada, o que é de muita ajuda para imagens e designs responsivos. Nós iremos ensinar mais sobre isso em um módulo futuro).
 
 ### Ferramentas de desenvolvimento úteis
 
-Há algumas [ferramentas de desenvolvimento](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) úteis em navegadores para ajudar a exercitar o necessário para slot de largura, etc, que você precisa usar. Quando eu estava trabalhando neles, eu primeiro carreguei a versão não responsiva do meu exemplo (`not-responsive.html`), então fui no [Modo de Design Responsivo](/pt-BR/docs/Tools/Responsive_Design_Mode) (Ferramentas > Desenvolvimento Web > Modo de Design Responsivo), que permite a você ver o layout da sua página como se ele estivesse visto através de uma variedade de diferentes tamanhos de telas.
+Há algumas [ferramentas de desenvolvimento](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) úteis em navegadores para ajudar a exercitar o necessário para o slot de largura, etc, que você precisa usar. Quando eu estava trabalhando neles, eu primeiro carreguei a versão não responsiva do meu exemplo (`not-responsive.html`), então fui no [Modo de Design Responsivo](/pt-BR/docs/Tools/Responsive_Design_Mode) (Ferramentas > Desenvolvimento Web > Modo de Design Responsivo), que permite a você ver o layout da sua página como se ela estivesse sendo vista através de uma variedade de diferentes tamanhos de tela.
 
 Eu configurei a largura da janela para 320px e depois 480px; para cada uma eu fui no [DOM Inspector](/pt-BR/docs/Tools/Page_Inspector), cliquei no elemento {{htmlelement("img")}} no qual nós estamos interessados, então olhei o tamanho na aba Box Model view no lado direito da tela. Isto deve dar para você a dica da largura de imagem que você precisa.
 
@@ -117,7 +117,7 @@ Eu configurei a largura da janela para 320px e depois 480px; para cada uma eu fu
 
 Próximo, você pode checar se o `srcset` está funcionando configurando a largura da janela para a qual você quiser (coloque para uma largura estreita, por exemplo), abrindo o Network Inspector (Ferramentas > Web Developer > Network), então recarregue a página. Isto deve dar a você uma lista do que foi carregado na página, e aqui você pode checar qual arquivo da imagem foi escolhida para baixar.
 
-> **Nota:**Use o Mozilla Firefox para testar `srcset`. O Chrome carrega a melhor imagem se estiver em cache no navegador, anulando o propósito do teste na ferramenta de desenvolvimento.
+> **Nota:** Use o Mozilla Firefox para testar o `srcset`. O Chrome carrega a melhor imagem se estiver em cache no navegador, anulando o propósito do teste na ferramenta de desenvolvimento.
 
 ![a screenshot of the network inspector in firefox devtools, showing that the HTML for the page has been downloaded, along with three images, which include the two 800 wide versions of the responsive images](network-devtools.png)
 
@@ -171,7 +171,7 @@ Este código nos permite mostrar uma imagem adequada em ambas extensas e estreit
 ![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](picture-element-narrow.png)
 
 > [!NOTE]
-> Nota: Você deveria usar o atributo `media` somente em cenários de direção de arte; quando você usa `media`, não oferecendo também condições com o atributo `sizes`.
+> Você deveria usar o atributo `media` somente em cenários de direção de arte; quando você usa `media`, não oferecendo também condições com o atributo `sizes`.
 
 ### Por que não podemos só fazer isso usando CSS ou JavaScript?
 
@@ -201,7 +201,7 @@ Há vários novos e excitantes formatos de imagens (como WebP e JPEG-2000) que p
 
 Para esse exercício, nós estamos esperando que você seja corajoso e vá sozinho. Principalmente, nós queremos que você implemente sua própria direção adequada de arte em tela estreita/ampla usando `<picture>`, e um exemplo de mudança de resolução que use `srcset`.
 
-1. Escreva um simples HTML contendo seu código (use `not-responsive.html` como um ponto de partida, se quiser)
+1. Escreva um simples HTML contendo seu código (use `not-responsive.html` como um ponto de partida, se quiser).
 2. Encontre uma boa imagem ampla de um panorama com algum detalhe contido em alguma parte. Crie uma versão de tamanho web usando um editor de imagem, então coloque para mostrar uma pequena parte que amplia o detalhe, e salve em uma segunda imagem (algo como 480px está bom).
 3. Use o elemento `<picture>` para implementar uma mudança de imagem!
 4. Crie múltiplos arquivos de imagem de diferentes tamanhos, cada um mostrando a mesma imagem.
