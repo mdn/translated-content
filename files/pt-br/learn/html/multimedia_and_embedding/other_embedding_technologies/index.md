@@ -310,7 +310,8 @@ Se absolutamente necessário, você pode adicionar permissões uma a uma (dentro
 
 {{Glossary("CSP")}} significa **[política de segurança de conteúdo](/pt-BR/docs/Web/Security/CSP)** e fornece um [conjunto de cabeçalhos HTTP](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives) (metadados enviados junto com suas páginas da web quando são veiculados de um servidor da web) projetados para melhorar a segurança do seu documento HTML. Quando se trata de proteger `<iframe>`s, você pode _[configurar seu servidor para enviar um cabeçalho `X-Frame-Options` apropriado](/pt-BR/docs/Web/HTTP/X-Frame-Options)_. Isso pode impedir que outros sites incorporem seu conteúdo em suas páginas da Web (o que habilitaria o [clickjacking](https://pt.wikipedia.org/wiki/clickjacking) e vários outros ataques), exatamente o que os desenvolvedores do MDN fizeram, como vimos anteriormente.
 
-> **Nota:** Você pode ler a publicação de Frederik Braun [X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) para obter mais informações sobre este tópico. Obviamente, está fora do escopo uma explicação completa neste artigo.
+> [!NOTE]
+> Você pode ler a publicação de Frederik Braun [X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) para obter mais informações sobre este tópico. Obviamente, está fora do escopo uma explicação completa neste artigo.
 
 ## The \<embed> and \<object> elements
 
