@@ -37,7 +37,8 @@ Você pode pensar que imagens vetorizadas resolveriam estes problemas, e elas re
 
 Este tipo de problema não existia quando a web começou a existir, no começo dos anos 1990 - naquele tempo somente desktops e laptops navegavam a Web, então engenheiros de navegadores e programadores nem pensavam em implementar soluções. _Tecnologias de imagens responsivas_ foram implementadas recentemente para resolver os problemas indicados acima, permitindo a você oferecer ao navegador vários arquivos de imagem, todas mostrando a mesma coisa mas contendo diferentes números de pixels (mudança de resolução), ou diferentes imagens para diferentes espaços de alocação (direção de arte).
 
-> **Nota:** As novas funcionalidades discutidas neste artigo — [`srcset`](/pt-BR/docs/Web/HTML/Element/img#srcset)/[`sizes`](/pt-BR/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} — são todas suportadas nas versões atuais de navegadores mobile e desktop (incluindo Microsoft Edge, embora não suportada pelo Internet Explorer).
+> [!NOTE]
+> As novas funcionalidades discutidas neste artigo — [`srcset`](/pt-BR/docs/Web/HTML/Element/img#srcset)/[`sizes`](/pt-BR/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} — são todas suportadas nas versões atuais de navegadores mobile e desktop (incluindo Microsoft Edge, embora não suportada pelo Internet Explorer).
 
 ## Como você faz para criar imagens responsivas?
 
