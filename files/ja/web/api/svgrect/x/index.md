@@ -1,9 +1,9 @@
 ---
 title: "SVGRect: x プロパティ"
+short-title: x
 slug: Web/API/SVGRect/x
-original_slug: Web/API/SVGRect/The__X__property
 l10n:
-  sourceCommit: e9ffc45746287e0d367fb08c597140f10bffd279
+  sourceCommit: cf331ccff0dd88648dc9fe22a14f9aaa595ec4bf
 ---
 
 {{APIRef("SVG")}}
