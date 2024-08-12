@@ -2,7 +2,7 @@
 title: 교차 출처 리소스 공유 (CORS)
 slug: Web/HTTP/CORS
 l10n:
-  sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
+  sourceCommit: 84ae777ed4409ab3b3992382c445fb0add55a934
 ---
 
 {{HTTPSidebar}}
@@ -13,7 +13,7 @@ l10n:
 
 보안 상의 이유로 브라우저는 스크립트에서 시작한 교차 출처 HTTP 요청을 제한합니다. 예를 들어, `fetch()` 와 {{domxref("XMLHttpRequest")}} 는 [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)을 따릅니다. 이는 이러한 API를 사용하는 웹 애플리케이션이 애플리케이션이 로드된 동일한 출처에서만 리소스를 요청할 수 있으며, 다른 출처의 응답에 올바른 CORS 헤더가 포함되어 있지 않는 한 그렇지 못하다는 것을 의미합니다.
 
-![Diagrammatic representation of CORS mechanism](cors_principle.png)
+![Diagrammatic representation of CORS mechanism](https://mdn.github.io/shared-assets/images/diagrams/http/cors/fetching-page-cors.svg)
 
 CORS 메커니즘은 브라우저와 서버 간의 안전한 교차 출처 요청 및 데이터 전송을 지원합니다. 브라우저는 교차 출처 HTTP 요청의 위험을 완화하기 위해 `fetch()` 나 `XMLHttpRequest` 같은 API에서 CORS를 사용합니다.
 
