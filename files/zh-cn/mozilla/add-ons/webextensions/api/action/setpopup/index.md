@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-指定用户单击浏览器操作图标时打开的 HTML 文档。没有特定弹窗的标签页将继承全局弹窗，其默认值为清单中指定的 [`default_popup`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)。
+指定用户单击浏览器操作图标时以弹窗形式打开的 HTML 文档。没有特定弹窗的标签页将继承全局弹窗，其默认值为清单中指定的 [`default_popup`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)。
 
 > [!NOTE]
 > 该 API 在 Manifest V3 或更高版本中可用。
@@ -16,7 +16,7 @@ l10n:
 
 ```js-nolint
 browser.action.setPopup(
-  details // object
+  details // 对象
 )
 ```
 
@@ -27,9 +27,9 @@ browser.action.setPopup(
   - : 一个含有下列属性的对象：
 
     - `tabId` {{optional_inline}}
-      - : `integer`，指定要设置图标的标签页。当用户导航到新页面时，弹窗会被重置。
+      - : `integer`，指定要设置弹窗的标签页。当用户导航到新页面时，弹窗会被重置。
     - `windowId` {{optional_inline}}
-      - : `integer`，指定要设置图标的窗口。
+      - : `integer`，指定要设置弹窗的窗口。
     - `popup`
 
       - : `string` 或 `null`，指定作为弹窗的 HTML 文件的 URL。
