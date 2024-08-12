@@ -12,7 +12,7 @@ l10n:
 > [!NOTE]
 > 该 API 在 Manifest V3 或更高版本中可用。
 
-在 Firefox 的稳定版中，你只能在[用户操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_actions)的处理程序中调用此函数。参见[浏览器兼容性](#browser_compatibility)。
+在 Firefox 的稳定版中，你只能在[用户操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_actions)的处理程序中调用此函数。参见[浏览器兼容性](#浏览器兼容性)。
 
 ## 语法
 
@@ -33,7 +33,7 @@ browser.action.openPopup(
 
 ### 返回值
 
-没有任何参数解决的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+没有兑现任何参数的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
 ## 示例
 
