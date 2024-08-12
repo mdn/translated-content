@@ -90,7 +90,7 @@ Os atributos `srcset` e `sizes` parecem complicados, mas não são difíceis de 
 2. Um espaço.
 3. A **largura do slot** que a imagem irá preencher quando a condição de mídia for verdadeira (`440px`).
 
-> [!NOTE] 
+> [!NOTE]
 > Para a largura do slot, você pode fornecer um tamanho absoluto (`px`, `em`) ou um tamanho relativo (como porcentagem). Você pode ter notado que o último slot de largura não tem condição de mídia - isto é o padrão que será escolhido quando nenhuma condição for verdadeira. O navegador ignora tudo depois da primeira condição satisfeita, então tenha cuidado com a ordem de condições.
 
 Então, com estes atributos no lugar, o navegador irá:
