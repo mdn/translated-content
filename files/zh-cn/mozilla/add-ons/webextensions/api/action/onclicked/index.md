@@ -12,7 +12,7 @@ l10n:
 > [!NOTE]
 > 该 API 在 Manifest V3 或更高版本中可用。
 
-要定义右键单击操作，请使用“browser_action” [上下文类型](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType) 的 [`contextMenus`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus) API。
+要定义右键单击操作，请使用“browser_action”[上下文类型](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType)的 [`contextMenus`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus) API。
 
 ## 语法
 
@@ -25,7 +25,7 @@ browser.action.onClicked.hasListener(listener)
 事件包含三个函数：
 
 - `addListener(listener)`
-  - : 添加一个监听器到该事件上。
+  - : 为该事件添加一个监听器。
 - `removeListener(listener)`
   - : 停止监听该事件。`listener` 参数用于指定要移除的监听器。
 - `hasListener(listener)`
@@ -58,7 +58,7 @@ browser.action.onClicked.hasListener(listener)
 browser.action.onClicked.addListener((tab) => {
   // 禁用活动标签页
   browser.action.disable(tab.id);
-  // 需要 "tabs" 或 "activeTab" 权限，或对该 URL 的 "host" 权限。
+  // 需要“tabs”或“activeTab”权限，或对该 URL 的“host”权限。
   console.log(tab.url);
 });
 ```
