@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-获取浏览器操作徽标的背景颜色。
+获取浏览器操作徽章的背景颜色。
 
 > [!NOTE]
 > 该 API 在 Manifest V3 或更高版本中可用。
@@ -29,22 +29,22 @@ browser.action.getBadgeBackgroundColor(
   - : 一个拥有下列属性的对象：
 
     - `tabId` {{optional_inline}}
-      - : `integer`，指定要获取徽标背景颜色的标签页。
+      - : `integer`，指定要获取徽章背景颜色的标签页。
     - `windowId` {{optional_inline}}
-      - : `integer`，指定要获取徽标背景颜色的窗口。
+      - : `integer`，指定要获取徽章背景颜色的窗口。
 
 <!---->
 
 - 若同时指定了 `windowId` 和 `tabId`，则函数出错。
-- 若同时未指定 `windowId` 和 `tabId`，则返回全局徽标的背景颜色。
+- 若同时未指定 `windowId` 和 `tabId`，则返回全局徽章的背景颜色。
 
 ### 返回值
 
-以 {{WebExtAPIRef('action.ColorArray')}} 形式兑现获取到的颜色的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，会兑现表示获取到的颜色的 {{WebExtAPIRef('action.ColorArray')}}。
 
 ## 示例
 
-输出徽标的背景颜色：
+输出徽章的背景颜色：
 
 ```js
 function onGot(color) {
