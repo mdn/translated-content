@@ -2,7 +2,7 @@
 title: contain-intrinsic-block-size
 slug: Web/CSS/contain-intrinsic-block-size
 l10n:
-  sourceCommit: 9aff58ba641ce676db1ae5a1955ed6ef81cbc718
+  sourceCommit: 1b9f8e62afc890f2f00d6f9043f3ce0ff2ac4dfb
 ---
 
 {{CSSRef}}
