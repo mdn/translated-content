@@ -297,7 +297,7 @@ window.addEventListener("load", setFilter);
 {{ EmbedLiveSample('Playable_code_2', 700, 425) }}
 
 > [!NOTE]
-> unless you have [CORS](/ru/docs/Web/HTTP/CORS) enabled, to avoid security issues your video should be on the same domain as your code.
+> Unless you have [CORS](/ru/docs/Web/HTTP/CORS) enabled, to avoid security issues your video should be on the same domain as your code.
 
 #### Типичные для аудио фильтры
 
