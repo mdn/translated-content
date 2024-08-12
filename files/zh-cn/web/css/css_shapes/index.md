@@ -98,6 +98,6 @@ l10n:
 - [CSS 形状资源](https://codepen.io/KristopherVanSant/post/css-shapes-resources)
 - [CSS 形状入门](https://alistapart.com/article/css-shapes-101/)，来自 alistapart.com（2014）
 - [使用 CSS 形状创建非矩形布局](https://www.sarasoueidan.com/blog/css-shapes/)，来自 sarasoueidan.com（2013）
-- [如何在 Web 设计中使用 CSS 形状](https://webdesign.tutsplus.com/tutorials/how-to-use-css-shapes-in-your-web-design--cms-27498t)，来自 tutsplus.com（2016）
+- [如何在 Web 设计中使用 CSS 形状](https://webdesign.tutsplus.com/how-to-use-css-shapes-in-your-web-design--cms-27498t)，来自 tutsplus.com（2016）
 - [开始使用 CSS 形状](https://www.webdesignerdepot.com/2015/03/how-to-get-started-with-css-shapes/)，来自 webdesignerdepot.com（2015）
 - [使用形状路径编辑器编辑 CSS 形状](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)，来自 mozilla.org（2018）（[视频](https://www.youtube.com/watch?v=u9bDe3Bw0sA)）
