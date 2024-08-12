@@ -13,7 +13,7 @@ l10n:
 
 一个 {{domxref("HTMLAreaElement")}} 元素的 {{domxref("HTMLCollection")}} 对象。
 
-## Example
+## 示例
 
 ```html
 <map id="image-map">
