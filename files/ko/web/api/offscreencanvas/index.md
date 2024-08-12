@@ -90,7 +90,7 @@ two.transferFromImageBitmap(bitmapTwo);
 
 ### `OffscreenCanvas` 에서 만들어진 프레임을 비동기적으로 화면에 보여주는 방법
 
-`OffscreenCanvas` API를 이용하는 또 다른 방법은 {{HTMLElement("canvas")}}의 {{domxref("HTMLCanvasElement.transferControlToOffscreen", "transferControlToOffscreen()")}}를 호출하는 것 입니다. [worker](/ko/docs/Web/API/Web_Workers_API) 또는 메인 스레드에서 여부과 관계없이, 메인 스레드의 {{domxref("HTMLCanvasElement")}}객체의 `OffscreenCanvas` 객체를 반환합니다. {{domxref("OffscreenCanvas.getContext", "getContext()")}}를 호출하면 그 `OffscreenCanvas`의 `RenderingContext`를 얻을 수 있습니다.
+`OffscreenCanvas` API를 이용하는 또 다른 방법은 {{HTMLElement("canvas")}}의 {{domxref("HTMLCanvasElement.transferControlToOffscreen", "transferControlToOffscreen()")}}를 호출하는 것 입니다. [worker](/ko/docs/Web/API/Web_Workers_API) 또는 메인 스레드에서 여부와 관계없이, 메인 스레드의 {{domxref("HTMLCanvasElement")}}객체의 `OffscreenCanvas` 객체를 반환합니다. {{domxref("OffscreenCanvas.getContext", "getContext()")}}를 호출하면 해당 `OffscreenCanvas`의 `RenderingContext`를 얻을 수 있습니다.
 
 main.js (메인 스레드 코드)는 다음과 같을 수 있습니다.
 
