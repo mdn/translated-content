@@ -2,12 +2,12 @@
 title: action.setBadgeTextColor()
 slug: Mozilla/Add-ons/WebExtensions/API/action/setBadgeTextColor
 l10n:
-  sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
+  sourceCommit: f6ff6e14c5af7cb9ed701d7f4506f770014c704f
 ---
 
 {{AddonSidebar}}
 
-设置浏览器操作的徽标文本颜色。未指定徽标文本颜色的标签页将继承全局徽标文本颜色。
+设置浏览器操作的徽章文本颜色。未指定徽章文本颜色的标签页将继承全局徽章文本颜色。
 
 > [!NOTE]
 > 该 API 在 Manifest V3 或更高版本中可用。
@@ -32,21 +32,21 @@ browser.action.setBadgeTextColor(
 
         - 字符串：任意 CSS [\<color>](/zh-CN/docs/Web/CSS/color_value) 值，例如 `"red"`、`"#FF0000"` 或 `"rgb(255 0 0)"`。若字符串不是一个正确的颜色，则 Promise 会被拒绝且背景颜色不会被更改。
         - `{{WebExtAPIRef('action.ColorArray')}}` 对象。
-        - `null`，若指定了 `tabId`，则会移除该标签页的徽标文本颜色，让标签页继承全局徽标文本颜色；反之，会撤销对全局徽标文本颜色的修改使之变回默认取值。
+        - `null`，若指定了 `tabId`，则会移除该标签页的徽章文本颜色，让标签页继承全局徽章文本颜色；反之，会撤销对全局徽章文本颜色的修改使之变回默认取值。
 
     - `tabId` {{optional_inline}}
-      - : `integer`，指定要设置徽标文本颜色的标签页。当用户导航到新页面的时候，文本颜色将被重置。
+      - : `integer`，指定要设置徽章文本颜色的标签页。当用户导航到新页面的时候，文本颜色将被重置。
     - `windowId` {{optional_inline}}
-      - : `integer`，指定要设置徽标文本颜色的窗口。
+      - : `integer`，指定要设置徽章文本颜色的窗口。
 
 <!---->
 
 - 若同时指定了 `windowId` 和 `tabId`，则函数出错。
-- 若同时未指定 `windowId` 和 `tabId`，则将设置全局徽标文本颜色。
+- 若同时未指定 `windowId` 和 `tabId`，则将设置全局徽章文本颜色。
 
 ## 示例
 
-徽标文本颜色最初设置为红色，并且当浏览器操作被单击时变为绿色：
+徽章文本颜色最初设置为红色，并且当浏览器操作被单击时变为绿色：
 
 ```js
 browser.action.setBadgeText({ text: "1234" });
@@ -57,7 +57,7 @@ browser.action.onClicked.addListener(() => {
 });
 ```
 
-仅为活动标签页设置徽标文本颜色：
+仅为活动标签页设置徽章文本颜色：
 
 ```js
 browser.action.setBadgeText({ text: "1234" });
