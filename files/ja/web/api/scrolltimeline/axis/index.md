@@ -3,7 +3,7 @@ title: "ScrollTimeline: axis プロパティ"
 short-title: axis
 slug: Web/API/ScrollTimeline/axis
 l10n:
-  sourceCommit: 7eaac8008ebe00417314379fab2285df23322e73
+  sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
 ---
 
 {{APIRef("Web Animations")}}{{SeeCompatTable}}
