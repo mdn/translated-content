@@ -2,19 +2,19 @@
 title: action.setBadgeBackgroundColor()
 slug: Mozilla/Add-ons/WebExtensions/API/action/setBadgeBackgroundColor
 l10n:
-  sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
+  sourceCommit: f6ff6e14c5af7cb9ed701d7f4506f770014c704f
 ---
 
 {{AddonSidebar}}
 
-设置徽标的背景颜色。没有指定徽标背景颜色的标签页将继承全局徽标背景颜色（在 Firefox 中是 `[217, 0, 0, 255]`）。
+设置徽章的背景颜色。没有指定徽章背景颜色的标签页将继承全局徽章背景颜色（在 Firefox 中默认为 `[217, 0, 0, 255]`）。
 
 > [!NOTE]
 > 该 API 在 Manifest V3 或更高版本中可用。
 
-在 Firefox 中，除非使用 {{WebExtAPIRef("action.setBadgeTextColor()")}} 明确设置徽标文本颜色，否则徽标文本颜色会自动设置为黑色或白色，以最大程度与指定的徽标背景颜色形成对比。例如，如果将徽标背景颜色设置为白色，则默认的徽标文本颜色将设置为黑色，反之亦然。
+在 Firefox 中，除非使用 {{WebExtAPIRef("action.setBadgeTextColor()")}} 明确设置徽章文本颜色，否则徽章文本颜色会自动设置为黑色或白色，以最大程度与指定的徽章背景颜色形成对比。例如，如果将徽章背景颜色设置为白色，则默认的徽章文本颜色将设置为黑色，反之亦然。
 
-在其他浏览器中，徽标文本颜色始终为白色，因此设置深色的背景颜色更合适：这样能确保文本的可读性。
+在其他浏览器中，徽章文本颜色始终为白色，因此设置深色的背景颜色更合适：这样能确保文本的可读性。
 
 ## 语法
 
@@ -36,17 +36,17 @@ browser.action.setBadgeBackgroundColor(
 
         - 字符串：任意 CSS [\<color>](/zh-CN/docs/Web/CSS/color_value) 值，例如 `"red"`、`"#FF0000"` 或 `"rgb(255 0 0)"`。若字符串不是一个正确的颜色，则 Promise 会被拒绝且背景颜色不会被更改。
         - `{{WebExtAPIRef('action.ColorArray')}}` 对象。
-        - `null`，若指定了 `tabId`，则会移除该标签页的徽标背景颜色，让标签页继承全局徽标背景颜色；反之，会撤销对全局徽标背景颜色的修改使之变回默认取值。
+        - `null`，若指定了 `tabId`，则会移除该标签页的徽章背景颜色，让标签页继承全局徽章背景颜色；反之，会撤销对全局徽章背景颜色的修改使之变回默认取值。
 
     - `tabId` {{optional_inline}}
-      - : `integer`，指定要设置徽标背景颜色的标签页。当用户导航到新页面的时候，背景颜色将被重置。
+      - : `integer`，指定要设置徽章背景颜色的标签页。当用户导航到新页面的时候，背景颜色将被重置。
     - `windowId` {{optional_inline}}
-      - : `integer`，指定要设置徽标背景颜色的窗口。
+      - : `integer`，指定要设置徽章背景颜色的窗口。
 
 <!---->
 
 - 若同时指定了 `windowId` 和 `tabId`，则函数出错且并不会设置颜色。
-- 若同时未指定 `windowId` 和 `tabId`，则将设置全局徽标背景颜色。
+- 若同时未指定 `windowId` 和 `tabId`，则将设置全局徽章背景颜色。
 
 ## 示例
 
@@ -81,7 +81,7 @@ browser.action.onClicked.addListener((tab) => {
 
 {{Compat}}
 
-Firefox 的默认颜色是：`[217, 0, 0, 255]`。
+Firefox 的默认颜色是 `[217, 0, 0, 255]`。
 
 > [!NOTE]
 > 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-setBadgeBackgroundColor) API。本文衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
