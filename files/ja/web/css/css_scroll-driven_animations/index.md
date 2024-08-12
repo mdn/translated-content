@@ -2,7 +2,7 @@
 title: CSS スクロール駆動アニメーション
 slug: Web/CSS/CSS_scroll-driven_animations
 l10n:
-  sourceCommit: 4dec42ed700040565e8af0e14ff104054ebc20f5
+  sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
 ---
 
 {{CSSRef}}
