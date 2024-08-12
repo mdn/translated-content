@@ -29,22 +29,22 @@ let gettingText = browser.action.getBadgeText(
   - : 一个含有下列属性的对象：
 
     - `tabId` {{optional_inline}}
-      - : `integer`，指定要获取徽标文本的标签页。
+      - : `integer`，指定要获取徽章文本的标签页。
     - `windowId` {{optional_inline}}
-      - : `integer`，指定要获取徽标文本的窗口。
+      - : `integer`，指定要获取徽章文本的窗口。
 
 <!---->
 
 - 若同时指定了 `windowId` 和 `tabId`，则函数出错。
-- 若同时未指定 `windowId` 和 `tabId`，则返回全局徽标的文本。
+- 若同时未指定 `windowId` 和 `tabId`，则返回全局的徽章文本。
 
 ### 返回值
 
-以字符串形式兑现徽标文本的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，会兑现包含徽章文本的字符串。
 
 ## 示例
 
-输出徽标文本：
+输出徽章文本：
 
 ```js
 function gotBadgeText(text) {
