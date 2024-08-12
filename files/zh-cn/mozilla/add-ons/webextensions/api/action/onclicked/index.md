@@ -37,7 +37,7 @@ browser.action.onClicked.hasListener(listener)
 
 - `listener`
 
-  - : 该函数将在事件触发时被调用。
+  - : 该函数将在事件触发时被调用。会为该函数传递以下参数：
 
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}，当图标被点击时的活动标签页。
