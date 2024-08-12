@@ -30,7 +30,7 @@ browser.action.getBadgeTextColor(
 
 - `details`
 
-  - : `object`.
+  - : `object`。
 
     - `tabId` {{optional_inline}}
       - : `integer`，指定要获取徽标文本颜色的标签页。
