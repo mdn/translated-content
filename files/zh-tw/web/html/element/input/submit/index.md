@@ -101,7 +101,7 @@ slug: Web/HTML/Element/input/submit
 > 請參見 [`<input type="button">`](/zh-TW/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button) 頁面以取得關於禁用/啟用提交按鈕的詳細資訊。
 
 > [!NOTE]
-> Firefox 不若其他瀏覽器，它預設上會在 {{HTMLElement("button")}} 跨網頁加載時[保持動態禁用狀態](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。請用 [`autocomplete`](/zh-TW/docs/Web/HTML/Element/button#autocomplete) 屬性控制這個功能。
+> Firefox 不若其他瀏覽器，它預設上會在 {{HTMLElement("button")}} 跨網頁加載時[保持動態禁用狀態](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。請用 [`autocomplete`](/zh-TW/docs/Web/HTML/Element/button#autocomplete) 屬性控制這個功能。
 
 ## 驗證
 
