@@ -11,14 +11,14 @@ l10n:
 
 ## 值
 
-一个 {{domxref("HTMLAreaElement")}} 元素的 {{domxref("HTMLCollection")}} 对象。
+一个包含 {{domxref("HTMLAreaElement")}} 元素的 {{domxref("HTMLCollection")}} 对象。
 
 ## 示例
 
 ```html
 <map id="image-map">
-  <area shape="circle" coords="50,50,35" alt="left arrow" />
-  <area shape="circle" coords="150,50,35" alt="right arrow" />
+  <area shape="circle" coords="50,50,35" alt="左箭头" />
+  <area shape="circle" coords="150,50,35" alt="右箭头" />
 </map>
 <img usemap="#image-map" src="left-right-arrow.png" alt="左右箭头图片" />
 <output></output>
@@ -36,7 +36,7 @@ const outputElement = document.querySelector("output");
 
 for (const area of mapElement.areas) {
   area.addEventListener("click", (event) => {
-    outputElement.textContent = `你点击了 ${area.alt} 区域。\n\n`;
+    outputElement.textContent = `你点击了${area.alt}区域。\n\n`;
   });
 }
 ```

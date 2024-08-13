@@ -25,7 +25,7 @@ l10n:
 
 ```js
 const mapElement = document.getElementsByName("image-map")[0];
-console.log(mapElement.name); // 输出："image-map"
+console.log(mapElement.name); // 输出：“image-map”
 ```
 
 ## 规范
