@@ -75,7 +75,8 @@ background-page.html 的内容如下：
 
 后台脚本在一个被称为后台页面的特殊页面的上下文环境中运行。此环境为其提供了全局变量 [`window`](/zh-CN/docs/Web/API/Window) ，也提供了所有的标准 DOM API。
 
-> **警告：** 在 Firefox 浏览器中，后台页面不支持使用 [`alert()`](/zh-CN/docs/Web/API/Window/alert), [`confirm()`](/zh-CN/docs/Web/API/Window/alert)和 [`prompt()`](/zh-CN/docs/Web/API/Window/alert)
+> [!WARNING]
+> 在 Firefox 浏览器中，后台页面不支持使用 [`alert()`](/zh-CN/docs/Web/API/Window/alert)、[`confirm()`](/zh-CN/docs/Web/API/Window/alert) 和 [`prompt()`](/zh-CN/docs/Web/API/Window/alert)
 
 #### WebExtension API
 

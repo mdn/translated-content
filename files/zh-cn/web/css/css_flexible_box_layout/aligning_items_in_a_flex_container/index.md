@@ -41,15 +41,19 @@ flexbox 之所以能迅速吸引开发者的注意，其中一个原因就是它
 
 flex items 的高度全都变成一样的原因是 `align-items` 属性的初始值设成 `stretch` 控制交叉轴对齐。
 
-我们可以使用其他的值来控制 flex items 的对齐方式：
+我们可以使用其他的值来控制项目的对齐方式：
 
-- `align-items: flex-start` flex 项目的开始端的对齐
-- `align-items: flex-end` flex 项目的结束端对齐
-- `align-items: center` flex 项目居中对齐
-- `align-items: stretch` flex 项目撑满 flex 容器
-- `align-items: baseline` flex 项目的基线对齐
+- `align-items: stretch`
+- `align-items: flex-start`
+- `align-items: flex-end`
+- `align-items: start`
+- `align-items: end`
+- `align-items: center`
+- `align-items: baseline`
+- `align-items: first baseline`
+- `align-items: last baseline`
 
-下面的例子中，`align-items` 的值为 `stretch` 。尝试给 `align-items` 赋上其他的值然后看下在 flex 容器里是什么样的对齐效果。
+下面的例子中，`align-items` 的值为 `stretch`。尝试给 `align-items` 赋上其他的值然后看下在弹性容器里是什么样的对齐效果。
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-items.html", '100%', 520)}}
 
@@ -85,11 +89,17 @@ flex items 的高度全都变成一样的原因是 `align-items` 属性的初始
 
 - `align-content: flex-start`
 - `align-content: flex-end`
+- `align-content: start`
+- `align-content: fend`
 - `align-content: center`
 - `align-content: space-between`
 - `align-content: space-around`
+- `align-content: space-evenly`
 - `align-content: stretch`
-- `align-content: space-evenly` （没有在 Flexbox 特性中定义）
+- `align-content: normal`（与 `stretch` 的行为相同）
+- `align-content: baseline`
+- `align-content: first baseline`
+- `align-content: last baseline`
 
 在下面的例子，有一个 400px 高的 flex 容器，能足够地显示 flex 项目。`align-content` 的值为 `space-between` 等同于分配 flex 行之间的空间。
 
@@ -115,15 +125,20 @@ flex items 的高度全都变成一样的原因是 `align-items` 属性的初始
 
 `justify-content` 属性有和 `align-content` 一样的属性值：
 
-- `align-content: flex-start`
-- `align-content: flex-end`
-- `align-content: center`
-- `align-content: space-between`
-- `align-content: space-around`
-- `align-content: stretch`
-- `align-content: space-evenly` （没有在 flexbox 特性中定义）
+- `justify-content: flex-start`
+- `justify-content: flex-end`
+- `justify-content: start`
+- `justify-content: end`
+- `justify-content: left`
+- `justify-content: right`
+- `justify-content: center`
+- `justify-content: space-between`
+- `justify-content: space-around`
+- `justify-content: space-evenly`
+- `justify-content: stretch`（与 start 的行为相同）
+- `justify-content: normal`（与 stretch（其行为与 start 的一致）的行为相同）
 
-在下面的例子中， `justify-content` 的值为 `space-between` 。在显示完 flex 项目后的可用空间的分配是在 flex 项目水平方向之间。
+在下面的例子中，`justify-content` 的值为 `space-between` 。在显示完 flex 项目后的可用空间的分配是在 flex 项目水平方向之间。
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content.html", '100%', 480)}}
 

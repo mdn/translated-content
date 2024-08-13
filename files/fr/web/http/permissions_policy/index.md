@@ -7,7 +7,8 @@ slug: Web/HTTP/Permissions_Policy
 
 Feature Policy ("réglementation des fonctionnalités" en français) permet aux développeurs web d'activer, de modifier ou de désactiver spécifiquement le comportement de certaines fonctionnalités et API dans le navigateur. Elle est similaire à {{Glossary("CSP", "Content Security Policy")}} mais contrôle les fonctionnalités plus que la sécurité.
 
-> **Note :** L'en-tête `Feature-Policy` a maintenant été renommé `Permissions-Policy` dans la spécification, et cet article va possiblement être modifié en conséquence.
+> [!NOTE]
+> L'en-tête `Feature-Policy` a maintenant été renommé `Permissions-Policy` dans la spécification, et cet article va possiblement être modifié en conséquence.
 
 ## En résumé
 

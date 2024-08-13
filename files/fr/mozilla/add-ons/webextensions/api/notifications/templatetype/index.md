@@ -41,7 +41,7 @@ Actuellement Firefox ne supporte que "basic" ici.
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
 >

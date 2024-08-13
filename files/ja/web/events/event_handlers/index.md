@@ -1,6 +1,8 @@
 ---
 title: イベントの扱い (概要)
 slug: Web/Events/Event_handlers
+l10n:
+  sourceCommit: 857c6f9e7f1a847e7d3466b0d047159f7b345991
 ---
 
 イベントとは、ブラウザーや OS の環境の変化を知らせる信号で、ブラウザーのウィンドウ内で発行されます。プログラマーは、イベントが発行されたときに実行される*イベントハンドラー*のコードを作成することで、ウェブページが変化に適切に対応できるようになります。
@@ -22,7 +24,7 @@ slug: Web/Events/Event_handlers
 
 ### onevent プロパティの使用
 
-慣習上、イベントを発行する Javascript オブジェクトには、それに対応する "onevent" プロパティ (イベント名の前に "on" を付けて命名) があります。これらのプロパティは、イベントが発行されたときに、関連するハンドラーコードを実行するために呼び出されます。
+慣習上、イベントを発行する JavaScript オブジェクトには、それに対応する "onevent" プロパティ (イベント名の前に "on" を付けて命名) があります。これらのプロパティは、イベントが発行されたときに、関連するハンドラーコードを実行するために呼び出されます。
 
 イベントハンドラーのコードを設定するには、適切な onevent プロパティに代入してください。 1 つの要素のそれぞれのイベントに対して、割り当てることができるイベントハンドラーは 1 つだけです。必要に応じて、同じプロパティに別の関数を代入することで、ハンドラーを置き換えることができます。
 
@@ -32,14 +34,13 @@ slug: Web/Events/Event_handlers
 const btn = document.querySelector("button");
 
 function greet(event) {
-  // print the event object to console
-  console.log("greet:", arguments);
+  console.log("greet:", event);
 }
 
 btn.onclick = greet;
 ```
 
-なお、イベントハンドラーの第一引数には、イベントを表すオブジェクトが渡されます。このイベントオブジェクトは、 {{domxref("Event")}} インターフェースを実装しているか、またはそれを継承しています。
+なお、イベントハンドラーの第一引数には、イベントを表すオブジェクトが渡されます。このイベントオブジェクトは、 {{domxref("Event")}} インターフェイスを実装しているか、またはそれを継承しています。
 
 ### EventTarget.addEventListener
 
@@ -54,8 +55,7 @@ btn.onclick = greet;
 const btn = document.querySelector("button");
 
 function greet(event) {
-  // print the event object to console
-  console.log("greet:", arguments);
+  console.log("greet:", event);
 }
 
 btn.addEventListener("click", greet);
@@ -74,9 +74,8 @@ const controller = new AbortController();
 
 btn.addEventListener(
   "click",
-  function (event) {
-    // イベントオブジェクトをコンソールに表示
-    console.log("greet:", arguments);
+  (event) => {
+    console.log("greet:", event);
   },
   { signal: controller.signal },
 ); // このハンドラーに AbortSignal を渡す
@@ -88,4 +87,8 @@ btn.addEventListener(
 controller.abort(); // このコントローラーに関連付けられたすべてのイベントハンドラーを削除
 ```
 
-<section id="Quick_links"><ul><li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベント入門</a></li><li><a href="/ja/docs/Web/Events">イベントリファレンス</a></li></ul></section>
+<section id="Quick_links">
+  <ol>
+    <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベント入門</a></li><li><a href="/ja/docs/Web/Events">イベントリファレンス</a></li>
+  </ol>
+</section>

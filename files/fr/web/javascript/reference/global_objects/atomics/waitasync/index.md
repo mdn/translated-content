@@ -9,7 +9,8 @@ La méthode statique **`Atomics.waitAsync()`** permet d'attendre de façon async
 
 À la différence de [`Atomics.wait()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait), `waitAsync()` n'est pas bloquante et peut être utilisée sur le fil d'exécution principal.
 
-> **Note :** Cette opération ne fonctionne qu'avec un tableau typé partagé entier [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array) ou [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array).
+> [!NOTE]
+> Cette opération ne fonctionne qu'avec un tableau typé partagé entier [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array) ou [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array).
 
 ## Syntaxe
 

@@ -9,7 +9,8 @@ La méthode **`includes()`** permet de déterminer si un tableau contient une va
 
 {{EmbedInteractiveExample("pages/js/array-includes.html")}}
 
-> **Note :** Cette méthode utilise l'algorithme de comparaison _[SameValueZero](/fr/docs/Web/JavaScript/Les_différents_tests_d_égalité#Un_modèle_pour_mieux_comprendre)_ qui fonctionne comme l'égalité stricte, à la différence que `NaN` est ici égal à lui même.
+> [!NOTE]
+> Cette méthode utilise l'algorithme de comparaison _[SameValueZero](/fr/docs/Web/JavaScript/Les_différents_tests_d_égalité#Un_modèle_pour_mieux_comprendre)_ qui fonctionne comme l'égalité stricte, à la différence que `NaN` est ici égal à lui même.
 
 ## Syntaxe
 
@@ -29,7 +30,8 @@ array.includes(élémentRecherché, indiceDépart);
 
 Un {{jsxref("Boolean","booléen","",1)}} qui vaut `true` si `élémentRecherché` est trouvé dans le tableau (à partir de l'`indiceDépart` si celui-ci est indiqué). Les valeurs -0, +0 et 0 sont considérées comme équivalentes mais `false` n'est pas considéré comme équivalent à 0.
 
-> **Note :** Pour être tout à fait précis, `includes()` utilise l'algorithme _[SameValueZero](/fr/docs/Web/JavaScript/Les_différents_tests_d_égalité#Un_modèle_pour_mieux_comprendre)_ afin de déterminer si un élément donné est trouvé.
+> [!NOTE]
+> Pour être tout à fait précis, `includes()` utilise l'algorithme _[SameValueZero](/fr/docs/Web/JavaScript/Les_différents_tests_d_égalité#Un_modèle_pour_mieux_comprendre)_ afin de déterminer si un élément donné est trouvé.
 
 ## Exemples
 

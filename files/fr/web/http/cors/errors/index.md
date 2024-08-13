@@ -28,7 +28,8 @@ reading the remote resource at https://some-url-here. (Reason:
 additional information here).
 ```
 
-> **Note :** Pour des raisons de sécurité, il _est impossible_ d'analyser les causes de l'erreur CORS via JavaScript. Seule une indication de l'échec de la requête sera fournie. Il faut donc absolument regarder manuellement les messages d'erreur de la console pour débugger.
+> [!NOTE]
+> Pour des raisons de sécurité, il _est impossible_ d'analyser les causes de l'erreur CORS via JavaScript. Seule une indication de l'échec de la requête sera fournie. Il faut donc absolument regarder manuellement les messages d'erreur de la console pour débugger.
 
 ## Messages d'erreur CORS
 

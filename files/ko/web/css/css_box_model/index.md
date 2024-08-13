@@ -32,7 +32,8 @@ CSS에서 박스는 콘텐츠 영역을 포함하며, 이는 텍스트, 이미�
 
 ## 참고서
 
-> **참고:** 이 명세서는 물리적인 안쪽 여백과 바깥 여백 속성을 정의합니다. 글의 방향과 연관된 흐름과 연관된 속성은 [Logical Properties and Values](/ko/docs/Web/CSS/CSS_logical_properties_and_values)에 정의되어 있습니다.
+> [!NOTE]
+> 이 명세서는 물리적인 안쪽 여백과 바깥 여백 속성을 정의합니다. 글의 방향과 연관된 흐름과 연관된 속성은 [Logical Properties and Values](/ko/docs/Web/CSS/CSS_logical_properties_and_values)에 정의되어 있습니다.
 
 #### 박스의 바깥 여백을 제어하는 속성
 

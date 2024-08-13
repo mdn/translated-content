@@ -9,7 +9,8 @@ L'en-tête de réponse [HTTP](/fr/docs/Web/HTTP) **`X-Frame-Options`** peut êtr
 
 Ce complément de sécurité est uniquement valable lorsque l'utilisateur final visite le document avec un navigateur prenant en charge `X-Frame-Options`.
 
-> **Note :** L'en-tête [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) possède une directive [`frame-ancestors`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) qui [supplante](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options) cet en-tête pour les navigateurs compatibles.
+> [!NOTE]
+> L'en-tête [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) possède une directive [`frame-ancestors`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) qui [supplante](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options) cet en-tête pour les navigateurs compatibles.
 
 <table class="properties">
   <tbody>
@@ -50,7 +51,8 @@ Si on utilise `DENY`, le chargement de la page dans une _frame_ échouera sur un
 
 ## Exemples
 
-> **Note :** La balise `<meta>` est inutile ici&nbsp;! `<meta http-equiv="X-Frame-Options" content="deny">` n'aura aucun effet et mieux vaut donc ne pas l'utiliser. L'en-tête `X-FRAME-OPTIONS` ne fonctionne que si vous l'utilisez dans la configuration HTTP comme dans les exemples ci-dessous.
+> [!NOTE]
+> La balise `<meta>` est inutile ici&nbsp;! `<meta http-equiv="X-Frame-Options" content="deny">` n'aura aucun effet et mieux vaut donc ne pas l'utiliser. L'en-tête `X-FRAME-OPTIONS` ne fonctionne que si vous l'utilisez dans la configuration HTTP comme dans les exemples ci-dessous.
 
 ### Configurer Apache
 

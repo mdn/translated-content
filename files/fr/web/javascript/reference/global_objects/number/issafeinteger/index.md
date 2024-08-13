@@ -9,7 +9,8 @@ La méthode **`Number.isSafeInteger()`** permet de déterminer si la valeur, pas
 
 {{EmbedInteractiveExample("pages/js/number-issafeinteger.html")}}
 
-> **Note :** Pour représenter des entiers qui ne sont pas compris dans cet intervalle, on pourra utiliser le type {{jsxref("BigInt")}}.
+> [!NOTE]
+> Pour représenter des entiers qui ne sont pas compris dans cet intervalle, on pourra utiliser le type {{jsxref("BigInt")}}.
 
 ## Syntaxe
 

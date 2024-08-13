@@ -47,7 +47,8 @@ Um método `valueOf` de um objeto é geralmente chamado pelo JavaScript, mas voc
 myNumberType.valueOf();
 ```
 
-> **Nota:** Objetos em contexto de string convertidos através do método {{jsxref("Object.toString", "toString()")}}, o que é diferente de objetos {{jsxref("String")}} convertendo para string primiriva utlizando `valueOf`. Todos os objetos têm uma conversão string, somente se "`[object type]`". Mas muitos objetos não convertem para number, boolean, or function.
+> [!NOTE]
+> Objetos em contexto de string convertidos através do método {{jsxref("Object.toString", "toString()")}}, o que é diferente de objetos {{jsxref("String")}} convertendo para string primiriva utlizando `valueOf`. Todos os objetos têm uma conversão string, somente se "`[object type]`". Mas muitos objetos não convertem para number, boolean, or function.
 
 ## Exemplos
 

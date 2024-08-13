@@ -93,7 +93,8 @@ function [nome]([param] [, param] [..., param]) {
 
 ### O gerador de declaração de função (instrução `function*`)
 
-> **Nota:** Expressão Arrow function é uma tecnologia experimental, parte da proposta do ECMAScript 6, e ainda não é amplamente suportada pelos navegadores.
+> [!NOTE]
+> Expressão Arrow function é uma tecnologia experimental, parte da proposta do ECMAScript 6, e ainda não é amplamente suportada pelos navegadores.
 
 Uma expressão arrow function tem uma sintaxe curta e conecta seu valor lexicamente (veja [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions) para mais detalhes):
 
@@ -112,7 +113,8 @@ param => expressão
 
 ### O construtor `Function`
 
-> **Nota:** O uso do construtor Function para criar funções não é recomendado uma vez que é requerido o corpo da função como string, o que pode impedir algumas otimizações por parte do motor JS e pode também causar outros problemas.
+> [!NOTE]
+> O uso do construtor Function para criar funções não é recomendado uma vez que é requerido o corpo da função como string, o que pode impedir algumas otimizações por parte do motor JS e pode também causar outros problemas.
 
 Como todos os outros objetos, objetos {{jsxref("Function")}} podem ser criados usando o operador new:
 
@@ -129,7 +131,8 @@ Invocar o construtor Function como uma função (sem usar o operador new) the o 
 
 ## Parâmetros de Função
 
-> **Nota:** Parâmetros Default e Rest são tecnologias experimentais, parte da proposta do ECMAScript 6, e ainda não são amplamente suportados pelos navegadores.
+> [!NOTE]
+> Parâmetros Default e Rest são tecnologias experimentais, parte da proposta do ECMAScript 6, e ainda não são amplamente suportados pelos navegadores.
 
 ### Parâmetros Default
 
@@ -161,7 +164,8 @@ Você pode definir getters (métodos de acesso) and setters (métodos de altera�
 
 ### Sintaxe dos métodos de funções
 
-> **Nota:** Definições de métodos são tecnologias experimentais, parte da proposta do ECMAScript 6, e ainda não são amplamente suportados pelos navegadores.
+> [!NOTE]
+> Definições de métodos são tecnologias experimentais, parte da proposta do ECMAScript 6, e ainda não são amplamente suportados pelos navegadores.
 
 Começando com ECMAScript 6, você é capaz de definir métodos próprios em uma sintaxe mais curta, semelhante aos getters e setters. Veja [method definitions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Method_definitions) para mais informações.
 

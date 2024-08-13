@@ -1,11 +1,12 @@
 ---
-title: HTMLMediaElement.seekToNextFrame()
+title: "HTMLMediaElement: seekToNextFrame() メソッド"
+short-title: seekToNextFrame()
 slug: Web/API/HTMLMediaElement/seekToNextFrame
 l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+  sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{non-standard_header}}
 
 **`HTMLMediaElement.seekToNextFrame()`** メソッドは、非同期に現在の再生位置をメディアの次のフレームに進めます。
 

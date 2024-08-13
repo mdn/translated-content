@@ -40,7 +40,8 @@ Les développeuses et développeurs qui doivent réaliser des tests en local doi
 
 De cette façon, l'ensemble des fichiers est servi depuis le même domaine (`localhost`) et avec le même schéma&nbsp;: ils ont la même origine et ne déclenchent plus d'erreurs liées à la multiplicité des origines.
 
-> **Note :** Ce changement est en accord avec [la spécification sur les URL](https://url.spec.whatwg.org/#origin), qui laisse l'implémentation libre du comportement quant à l'origine des fichiers, mais qui recommande, en cas de doute, de considérer les origines des fichiers comme opaques.
+> [!NOTE]
+> Ce changement est en accord avec [la spécification sur les URL](https://url.spec.whatwg.org/#origin), qui laisse l'implémentation libre du comportement quant à l'origine des fichiers, mais qui recommande, en cas de doute, de considérer les origines des fichiers comme opaques.
 
 ## Voir aussi
 

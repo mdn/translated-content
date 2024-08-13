@@ -51,7 +51,7 @@ cat FILENAME.js | openssl dgst -sha384 -binary | openssl base64 -A
 shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
 ```
 
-> **备注：**
+> [!NOTE]
 >
 > - 通过管道连接的 `xxd` 步骤从 `shasum` 中获取十六进制的输出，并将其转换为二进制。
 > - 通过管道连接的 `awk` 的步骤是必要的，因为 `shasum` 会将其输出中的散列文件名传递给 `xxd`。如果文件名中恰好有有效的十六进制字符，这将产生灾难性的后果——因为 `xxd` 也会对其进行解码并传递给 `base64`。

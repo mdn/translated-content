@@ -11,11 +11,13 @@ La propriété raccourcie {{cssxref("text-decoration")}} permet de paramétrer c
 
 {{EmbedInteractiveExample("pages/css/text-decoration-color.html")}}
 
-> **Note :** Lorsqu'on définit plusieurs décorations à la fois, il peut être plus pratique d'utiliser la propriété raccourcie {{cssxref("text-decoration")}}.
+> [!NOTE]
+> Lorsqu'on définit plusieurs décorations à la fois, il peut être plus pratique d'utiliser la propriété raccourcie {{cssxref("text-decoration")}}.
 
 Il est préférable d'utiliser cette propriété pour colorer ces décorations plutôt que d'utiliser d'autres éléments HTML.
 
-> **Note :** CSS ne fournit pas de mécanisme spécifique pour définir une couleur par type de ligne. On peut toutefois y parvenir en imbriquant des éléments mis en forme différemment.
+> [!NOTE]
+> CSS ne fournit pas de mécanisme spécifique pour définir une couleur par type de ligne. On peut toutefois y parvenir en imbriquant des éléments mis en forme différemment.
 
 ## Syntaxe
 

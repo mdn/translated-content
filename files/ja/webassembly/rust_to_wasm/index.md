@@ -173,7 +173,7 @@ crate-type = ["cdylib"]
 wasm-bindgen = "0.2"
 ```
 
-自分自身のリポジトリを記入し、`git` が `authors` フィールドに使用するものと同じ情報を使用してください。
+自分自身のリポジトリーを記入し、`git` が `authors` フィールドに使用するものと同じ情報を使用してください。
 
 追加する大部分は下にあるものです。最初の部分 — `[lib]` — は Rust にパッケージの cdylib バージョンをビルドするよう伝えます。何を意味するかはこのチュートリアルでは掘り下げません。もっと知るには、[Cargo](https://doc.rust-lang.org/cargo/guide/) と [Rust Linkage](https://doc.rust-lang.org/reference/linkage.html) のドキュメンテーションを調べてください。
 
