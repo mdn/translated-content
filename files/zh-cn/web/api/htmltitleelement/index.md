@@ -5,9 +5,9 @@ l10n:
   sourceCommit: 32305cc3cf274fbfdcc73a296bbd400a26f38296
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-**`HTMLTitleElement`** 接口由文档的 {{ HTMLElement("title")}} 实现。此元素继承 {{domxref("HTMLElement")}} 接口的所有属性和方法。
+**`HTMLTitleElement`** 接口由文档的 {{HTMLElement("title")}} 实现。此元素继承 {{domxref("HTMLElement")}} 接口的所有属性和方法。
 
 {{InheritanceDiagram}}
 
