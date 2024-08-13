@@ -63,7 +63,7 @@ base64 a.txt>b.txt
 
 ### 在 Microsoft Windows 上編碼
 
-在 Windows 上，可以使用 PowerShell 的 [Convert.ToBase64String](https://docs.microsoft.com/dotnet/api/system.convert.tobase64string?view=net-5.0) 進行 base64 編碼：
+在 Windows 上，可以使用 PowerShell 的 [Convert.ToBase64String](https://learn.microsoft.com/en-us/dotnet/api/system.convert.tobase64string?view=net-5.0) 進行 base64 編碼：
 
 ```plain
 [convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))

@@ -7,7 +7,7 @@ slug: Web/CSS
 
 **層疊樣式表**（Cascading Style Sheets, CSS）是用來描述 [HTML](/zh-TW/docs/Web/HTML) 或 [XML](/zh-TW/docs/XML)（包含 [SVG](/zh-TW/docs/Web/SVG) 或 [XHTML](/zh-TW/docs/Glossary/XHTML) 等各種 XML 變形）文件外觀的[樣式表](/zh-TW/docs/DOM/stylesheet)語言。CSS 會描述文件裡的結構化元素，該如何呈現在螢幕、紙、語音報讀、或其他媒介上。
 
-**CSS** 是**開放網路**的核心語言之一，具有標準化的 [W3C 規範](https://w3.org/Style/CSS/#specs)。歷經不同層級的開發，CSS1 目前已被棄用、CSS2.1 是建議規範，而 CSS3 目前被分作數個較小的模組，持續在標準化的路上行進。
+**CSS** 是**開放網路**的核心語言之一，具有標準化的 [W3C 規範](https://www.w3.org/Style/CSS/#specs)。歷經不同層級的開發，CSS1 目前已被棄用、CSS2.1 是建議規範，而 CSS3 目前被分作數個較小的模組，持續在標準化的路上行進。
 
 - CSS 介紹
 
@@ -51,11 +51,9 @@ slug: Web/CSS
 
 ## CSS 開發工具
 
-- The [W3C CSS 驗證服務](http://jigsaw.w3.org/css-validator/) 能檢查 CSS 的有效性。[OnlineWebCheck.com](http://www.onlinewebcheck.com/) 也在做相同的事情。它們都是很重要的除錯工具。
+- The [W3C CSS 驗證服務](https://jigsaw.w3.org/css-validator/) 能檢查 CSS 的有效性。它是很重要的除錯工具。
 - [Firefox 開發者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)能透過[頁面檢測器](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)與[樣式編輯器](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html)直接觀察、編輯網頁的 CSS。
-- Firefox 的[Firebug 套件](https://addons.mozilla.org/zh-TW/firefox/addon/1843)，navigator 裡面，能直接觀察、編輯網頁的 CSS 的人氣套件。要測試某些變化的時候會非常實用，而這套件還能做得更多。
-- Firefox 的[Web Developer 套件](https://addons.mozilla.org/zh-TW/firefox/addon/60) 也能能直接觀察、編輯網頁的 CSS。與 Firebug 相比更簡單、但相比下也沒那麼強大。
-- [其他 CSS 工具。](/zh-TW/docs/Web/CSS/Tools)
+- Firefox 的[Web Developer 套件](https://addons.mozilla.org/zh-TW/firefox/addon/web-developer/) 也能能直接觀察、編輯網頁的 CSS。與 Firebug 相比更簡單、但相比下也沒那麼強大。
 
 ## Meta 錯誤
 

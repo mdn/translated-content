@@ -73,4 +73,4 @@ slug: Web/CSS/:lang
 
 - 語言相關偽類： {{cssxref(":lang")}}, {{cssxref(":dir")}}
 - HTML [`lang`](/zh-TW/docs/Web/HTML/Global_attributes#lang) 屬性
-- [BCP 47 - Tags for Identifying Languages (BCP 47 - 識別語言的標籤)](https://tools.ietf.org/html/bcp47)
+- [BCP 47——識別語言的標籤](https://www.rfc-editor.org/info/bcp47)

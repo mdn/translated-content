@@ -154,7 +154,7 @@ console.log(obj == undefined);
 
 ## 同值相等
 
-同值相等解決了最後一個情況：比較兩個值是否*功能相同* 。（這裡用了 [Liskov 替換原則（英）](http://en.wikipedia.org/wiki/Liskov_substitution_principle) 為例）當試圖修改一個不可變的屬性：
+同值相等解決了最後一個情況：比較兩個值是否*功能相同* 。（這裡用了[里氏替換原則](https://zh.wikipedia.org/wiki/里氏替换原则)為例）當試圖修改一個不可變的屬性：
 
 ```js
 // 新增一個不可變 NEGATIVE_ZERO 屬性到 Number 原型。
@@ -180,7 +180,7 @@ function attemptMutation(v) {
 
 ## 一般相等、嚴格相等和同值相等的規範
 
-在 ES5，一般相等 [`==`](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) 在 [Section 11.9.3, The Abstract Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.3) 中規範。嚴格相等 [`===`](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) 在 [11.9.6, The Strict Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.6)。（可以看看，這很簡短且可讀。註：先讀嚴格相等。）ES5 也在 [Section 9.12, The SameValue Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-9.12) 規範 JS 引擎的行為。他幾乎和嚴格相等一樣，除了 11.9.6.4 和 9.12.4 在處理 [`Number`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number) 時的不同。ES2015 簡短的提出了 `Object.is。`
+在 ES5，一般相等 [`==`](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) 在 [Section 11.9.3, The Abstract Equality Algorithm](https://262.ecma-international.org/5.1/#sec-11.9.3) 中規範。嚴格相等 [`===`](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) 在 [11.9.6, The Strict Equality Algorithm](https://262.ecma-international.org/5.1/#sec-11.9.6)。（可以看看，這很簡短且可讀。註：先讀嚴格相等。）ES5 也在 [Section 9.12, The SameValue Algorithm](https://262.ecma-international.org/5.1/#sec-9.12) 規範 JS 引擎的行為。他幾乎和嚴格相等一樣，除了 11.9.6.4 和 9.12.4 在處理 [`Number`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number) 時的不同。ES2015 簡短的提出了 `Object.is`。
 
 我們可以發現在 11.9.6.1 中，除了 11.9.6.1 規範型別檢查，嚴格相等規範是從屬於一般相等規範，因為 11.9.6.2–7 和 11.9.3.1.a–f 相應。
 
@@ -246,4 +246,4 @@ Relying on [`Object.is`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Obj
 
 ## See also
 
-- [JS Comparison Table](http://dorey.github.io/JavaScript-Equality-Table/)
+- [JS Comparison Table](https://dorey.github.io/JavaScript-Equality-Table/)
