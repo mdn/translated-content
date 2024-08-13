@@ -272,6 +272,6 @@ function drawScene(gl, programInfo, buffers) {
 
 - [Matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) on WebGLFundamentals
 - [Matrices](https://mathworld.wolfram.com/Matrix.html) on Wolfram MathWorld
-- [Matrix](<https://en.wikipedia.org/wiki/Matrix_(mathematics)>) on Wikipedia
+- [Matrix](https://zh.wikipedia.org/wiki/矩阵) on Wikipedia
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

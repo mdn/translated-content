@@ -51,11 +51,9 @@ slug: Web/CSS
 
 ## CSS 開發工具
 
-- The [W3C CSS 驗證服務](https://jigsaw.w3.org/css-validator/) 能檢查 CSS 的有效性。[OnlineWebCheck.com](https://www.onlinewebcheck.com/) 也在做相同的事情。它們都是很重要的除錯工具。
+- The [W3C CSS 驗證服務](https://jigsaw.w3.org/css-validator/) 能檢查 CSS 的有效性。它是很重要的除錯工具。
 - [Firefox 開發者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)能透過[頁面檢測器](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)與[樣式編輯器](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html)直接觀察、編輯網頁的 CSS。
-- Firefox 的[Firebug 套件](https://addons.mozilla.org/zh-TW/firefox/addon/1843/)，navigator 裡面，能直接觀察、編輯網頁的 CSS 的人氣套件。要測試某些變化的時候會非常實用，而這套件還能做得更多。
 - Firefox 的[Web Developer 套件](https://addons.mozilla.org/zh-TW/firefox/addon/web-developer/) 也能能直接觀察、編輯網頁的 CSS。與 Firebug 相比更簡單、但相比下也沒那麼強大。
-- [其他 CSS 工具。](/zh-TW/docs/Web/CSS/Tools)
 
 ## Meta 錯誤
 

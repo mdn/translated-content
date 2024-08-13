@@ -17,7 +17,7 @@ slug: Web/HTTP/Browser_detection_using_the_user_agent
 在考慮透過用戶代理字串，去偵測使用瀏覽器時，首先要盡可能避免這種用法。先從認清**為什麼**要這麼做開始。
 
 - 你正針對某瀏覽器的特定錯誤奮戰著？
-  - : 去專業論壇閱讀或提問：你不太可能是第一個碰上問題的人。另外，去找專家、或只是與你有不同觀點的人問問看，也會對你的除錯思路有所幫助。如果問題看來頗為罕見，你應該去檢查這個錯誤是不是透過缺陷跟蹤管理系統（bug tracking system：[Mozilla](https://bugzilla.mozilla.org/)、[WebKit](https://bugs.webkit.org/)、[Blink](https://www.chromium.org/issue-tracking/)、[Opera](https://bugs.opera.com/)）報告到瀏覽器供應商。瀏覽器供應商很重視錯誤報告，相關分析也可能提示該錯誤的其他解決辦法。
+  - : 去專業論壇閱讀或提問：你不太可能是第一個碰上問題的人。另外，去找專家、或只是與你有不同觀點的人問問看，也會對你的除錯思路有所幫助。如果問題看來頗為罕見，你應該去檢查這個錯誤是不是透過缺陷跟蹤管理系統（[Mozilla](https://bugzilla.mozilla.org/)、[WebKit](https://bugs.webkit.org/)、[Blink](https://www.chromium.org/issue-tracking/)、[Opera](https://bugs.opera.com/)）報告到瀏覽器供應商。瀏覽器供應商很重視錯誤報告，相關分析也可能提示該錯誤的其他解決辦法。
 - 你正試圖檢查某個特定功能是否存在？
   - : 你的網站需要用到某些瀏覽器不支援的功能，並給這些用戶功能更少，但你知道能正常顯示的網站。這類用戶代理嗅探的理由非常糟糕，因為大多數的瀏覽器，最終都有可能支援該功能。對所有瀏覽器都予以測試也不實際。**絕對不要**用戶代理嗅探、功能偵測是**永遠**的替代方案。
 - 你希望給不同的瀏覽器不同的 HTML？

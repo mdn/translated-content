@@ -169,5 +169,5 @@ frame.config = frameConfig;
 ## 參見
 
 - [圍欄頁框 API](/zh-TW/docs/Web/API/Fenced_frame_API)
-- [在 developer.chrome.com 上的圍欄頁框](https://developers.google.com/privacy-sandbox/relevance/fenced-frame)
-- [隱私沙箱](https://developers.google.com/privacy-sandbox) 在 developer.chrome.com 上
+- [在 developers.google.com 上的圍欄頁框](https://developers.google.com/privacy-sandbox/relevance/fenced-frame)
+- 在 developers.google.com 上的[隱私沙箱](https://developers.google.com/privacy-sandbox)

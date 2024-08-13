@@ -51,7 +51,7 @@ evtSource.addEventListener("ping", function (event) {
 上述的程式碼大同小異，不同之處在於若伺服器傳送了 `event` 欄位值為「ping」的訊息時它就會把 `data` 欄位的值解析為 JSON 並輸出到畫面上。
 
 > [!WARNING]
-> 當連線不是透過 **HTTP/2** 時，SSE 會受到最大連線數限制所苦，尤其當開啟多個分頁。每個瀏覽器有自己的限制數而且被限制在很低的數量（6）。這個問題已經被 [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) 和 [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896) 標註為「Won't fix」（不修復）。限制是基於每個瀏覽器 + 網域，也就是說你可以針對 www\.example1.com 網域在所有的分頁中開啟六個 SSE 連線，另一個網域 www\.example2.com 也可以開啟六個（根據 [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159#5326159)）。當使用 HTTP/2 時最大同時 _HTTP streams_ 連線數是由伺服器和客戶端之間協調（預設 100）。
+> 當連線不是透過 **HTTP/2** 時，SSE 會受到最大連線數限制所苦，尤其當開啟多個分頁。每個瀏覽器有自己的限制數而且被限制在很低的數量（6）。這個問題已經被 [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) 和 [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896) 標註為「Won't fix」（不修復）。限制是基於每個瀏覽器 + 網域，也就是說你可以針對 www\.example1.com 網域在所有的分頁中開啟六個 SSE 連線，另一個網域 www\.example2.com 也可以開啟六個（根據 [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)）。當使用 HTTP/2 時最大同時 _HTTP streams_ 連線數是由伺服器和客戶端之間協調（預設 100）。
 
 ## 從伺服器發送事件
 
@@ -97,7 +97,7 @@ while (true) {
 迴圈的執行會獨立於連線的狀態，，所以在迴圈裡必須檢查連線的狀態，若斷線了要關閉連線（譬如，客戶端關閉了網頁）。
 
 > [!NOTE]
-> 你可以從下列的 Github 文章中找到包含本文所使用程式碼的完整範例 —— 參考 [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/main/server-sent-events)
+> 你可以從下列的 Github 文章中找到包含本文所使用程式碼的完整範例——參考 [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/main/server-sent-events)
 
 ## 錯誤處理
 

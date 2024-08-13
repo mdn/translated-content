@@ -64,7 +64,6 @@ function main() {
 
 ## 亦可參考
 
-- [An introduction to WebGL](http://web.archive.org/web/20240212020729/https://dev.opera.com/articles/introduction-to-webgl-part-1/): 由 Luz Caballero 撰寫，並出版在 dev.opera.com。 這篇文章點出了 WebGL 的意義，解釋了其運作(包含渲染管路的觀念)，並介紹了一些 WebGL libraries。
 - [WebGL Fundamentals](https://webglfundamentals.org/)
 - [An intro to modern OpenGL:](https://duriansoftware.com/joe/an-intro-to-modern-opengl.-table-of-contents) 由 Joe Groff 撰寫的一系列關於 OpenGL 的好文章，提供了 OpenGL 清楚的簡介，從其歷史到重要的圖像管路概念，以及一些展示其原理的範例。如果你完全不懂 OpenGL，這將是一個好的入門介紹。
 
