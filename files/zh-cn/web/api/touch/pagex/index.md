@@ -17,7 +17,7 @@ l10n:
 
 此示例展示了如何访问 {{domxref("Touch")}} 对象的 `Touch.pageX` 和 {{domxref("Touch.pageY")}} 属性。`Touch.pageX` 属性表示触摸点相对于屏幕的水平坐标（以 CSS 像素为单位），包括任何滚动偏移量。{{domxref("Touch.pageY")}} 属性表示触摸点相对于屏幕的垂直坐标（以 CSS 像素为单位），包括任何滚动偏移量。
 
-在以下简单的代码片段中，我们假设用户在 `source` 元素上发起一个或多个触摸点接触，移动触摸点，然后释放与表面的接触。当触发 {{domxref("Element/touchmove_event", "touchmove")}} 事件处理器时，可以通过事件的 {{domxref("TouchEvent.changedTouches")}} 列表访问每个触控点的 `Touch.pageX` 和 {{domxref("Touch.pageY")}} 坐标。 
+在以下简单的代码片段中，我们假设用户在 `source` 元素上发起一个或多个触摸点接触，移动触摸点，然后释放与表面的接触。当触发 {{domxref("Element/touchmove_event", "touchmove")}} 事件处理器时，可以通过事件的 {{domxref("TouchEvent.changedTouches")}} 列表访问每个触控点的 `Touch.pageX` 和 {{domxref("Touch.pageY")}} 坐标。
 
 ```js
 // 为“source”元素注册一个 touchmove 监听器。
