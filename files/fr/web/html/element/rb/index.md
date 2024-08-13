@@ -81,7 +81,8 @@ body {
 
 {{EmbedLiveSample("", "100%", 60)}}
 
-> **Note :** Voir l'article sur l'élément {{HTMLElement("ruby")}} pour de plus amples exemples.
+> [!NOTE]
+> Voir l'article sur l'élément {{HTMLElement("ruby")}} pour de plus amples exemples.
 
 ## Résumé technique
 

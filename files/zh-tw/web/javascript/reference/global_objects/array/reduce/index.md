@@ -48,7 +48,8 @@ arr.reduce(callback[accumulator, currentValue, currentIndex, array], initialValu
 
 當回呼函式第一次被呼叫時，`accumulator` 與 `currentValue` 的值可能為兩種不同的狀況：若在呼叫 `reduce()` 時有提供 `initialValue`，則 `accumulator` 將會等於 `initialValue`，且 `currentValue` 會等於陣列中的第一個元素值；若沒有提供 `initialValue`，則 `accumulator` 會等於陣列的第一個元素值，且 `currentValue` 將會等於陣列的第二個元素值。
 
-> **備註：** 假如 `initialValue` 未被提供，`reduce()` 將會跳過第一個陣列索引，從陣列索引 1 開始執行回呼函式。若有提供 `initialValue`，則會由陣列索引 0 開始執行。
+> [!NOTE]
+> 假如 `initialValue` 未被提供，`reduce()` 將會跳過第一個陣列索引，從陣列索引 1 開始執行回呼函式。若有提供 `initialValue`，則會由陣列索引 0 開始執行。
 
 若陣列為空且沒有提供 `initialValue`，將會拋出 {{jsxref("TypeError")}}。假如陣列只有一個元素（無論其索引位置為何）並且沒有提供 `initialValue`，或如果提供了 `initialValue` 但陣列為空，則此唯一的值將會被直接回傳*而不會呼叫 `callback` 函式*。
 

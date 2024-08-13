@@ -1347,6 +1347,7 @@
 /ja/docs/Glossary/Reference	/ja/docs/Glossary/Object_reference
 /ja/docs/Glossary/Rendering_engine	/ja/docs/Glossary/Engine/Rendering
 /ja/docs/Glossary/Round_Trip_Time_(RTT)	/ja/docs/Glossary/Round_Trip_Time
+/ja/docs/Glossary/Routers	/ja/docs/Glossary/Router
 /ja/docs/Glossary/SSL_Glossary	/ja/docs/Glossary/SSL
 /ja/docs/Glossary/Scrollport	/ja/docs/Glossary/Scroll_container
 /ja/docs/Glossary/Second-level_Domain	/ja/docs/Glossary/SLD
@@ -1363,7 +1364,7 @@
 /ja/docs/Glossary/ドメイン	/ja/docs/Glossary/Domain
 /ja/docs/Glossary/ネームスペース	/ja/docs/Glossary/Namespace
 /ja/docs/Glossary/ファイアウォール	/ja/docs/Glossary/Firewall
-/ja/docs/Glossary/ルーター	/ja/docs/Glossary/Routers
+/ja/docs/Glossary/ルーター	/ja/docs/Glossary/Router
 /ja/docs/HTML	/ja/docs/Web/HTML
 /ja/docs/HTML/Attributes	/ja/docs/Web/HTML/Attributes
 /ja/docs/HTML/Block-level_elements	/ja/docs/Glossary/Block-level_content
@@ -2378,7 +2379,6 @@
 /ja/docs/Security/混在コンテンツ	/ja/docs/Web/Security/Mixed_content
 /ja/docs/Server-sent_events	/ja/docs/Web/API/Server-sent_events
 /ja/docs/Server-sent_events/Using_server-sent_events	/ja/docs/Web/API/Server-sent_events/Using_server-sent_events
-/ja/docs/Setting_up_extension_development_environment	/ja/docs/orphaned/Setting_up_extension_development_environment
 /ja/docs/The_DOM_and_JavaScript	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/The_Importance_of_Correct_HTML_Commenting	/ja/docs/orphaned/The_Importance_of_Correct_HTML_Commenting
 /ja/docs/The_X-Frame-Options_response_header	/ja/docs/Web/HTTP/Headers/X-Frame-Options
@@ -2745,6 +2745,7 @@
 /ja/docs/Web/API/Element/pointerlockchange_event	/ja/docs/Web/API/Document/pointerlockchange_event
 /ja/docs/Web/API/Element/pointerlockerror_event	/ja/docs/Web/API/Document/pointerlockerror_event
 /ja/docs/Web/API/Element/select_event	/ja/docs/Web/API/HTMLInputElement/select_event
+/ja/docs/Web/API/Element/setHTML	/ja/docs/Web/API/Element
 /ja/docs/Web/API/Element/show_event	/ja/docs/orphaned/Web/API/Element/show_event
 /ja/docs/Web/API/Event/Comparison_of_Event_Targets	/ja/docs/Learn/JavaScript/Building_blocks/Event_bubbling
 /ja/docs/Web/API/Event/button	/ja/docs/Web/API/MouseEvent/button
@@ -3063,6 +3064,7 @@
 /ja/docs/Web/API/Response/error	/ja/docs/Web/API/Response/error_static
 /ja/docs/Web/API/Response/redirect	/ja/docs/Web/API/Response/redirect_static
 /ja/docs/Web/API/SVGMatrix	/ja/docs/Web/API/DOMMatrix
+/ja/docs/Web/API/SVGRect/The__X__property	/ja/docs/Web/API/SVGRect/x
 /ja/docs/Web/API/Screen/availLeft	/ja/docs/Web/API/ScreenDetailed/availLeft
 /ja/docs/Web/API/Screen/availTop	/ja/docs/Web/API/ScreenDetailed/availTop
 /ja/docs/Web/API/Screen/left	/ja/docs/Web/API/ScreenDetailed/left
@@ -3657,9 +3659,11 @@
 /ja/docs/Web/CSS/CSS_User_Interface	/ja/docs/Web/CSS/CSS_basic_user_interface
 /ja/docs/Web/CSS/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/conflicting/Web/CSS/cursor
 /ja/docs/Web/CSS/CSS_Variables	/ja/docs/Web/CSS/CSS_cascading_variables
+/ja/docs/Web/CSS/CSS_animations/Tips	/ja/docs/Web/API/Web_Animations_API/Tips
 /ja/docs/Web/CSS/CSS_charsets	/ja/docs/Web/CSS/CSS_syntax
 /ja/docs/Web/CSS/CSS_container_queries	/ja/docs/Web/CSS/CSS_containment/Container_queries
 /ja/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/ja/docs/Glossary/Flexbox
+/ja/docs/Web/CSS/CSS_miscellaneous	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/CSS_transforms_の利用	/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /ja/docs/Web/CSS/CSS_values_serialization	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/CSS_values_syntax	/ja/docs/Web/CSS

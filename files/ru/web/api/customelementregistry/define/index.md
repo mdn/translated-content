@@ -7,9 +7,11 @@ slug: Web/API/CustomElementRegistry/define
 
 Метод **`Document.registerElement()`** регистрирует новый кастомный элемент ([custom element](/ru/docs/Web/Web_Components/Custom_Elements)) в браузере и возвращает конструктор для этого нового элемента.
 
-> **Примечание:** Это экспериментальная технология. Браузер который вы используете должен поддерживать Веб Компоненты (Web Components). Смотри больше: [Enabling Web Components in Firefox](/ru/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox).
+> [!NOTE]
+> Это экспериментальная технология. Браузер который вы используете должен поддерживать Веб Компоненты (Web Components). Смотри больше: [Enabling Web Components in Firefox](/ru/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox).
 
-> **Примечание:** Устарело. Используйте интерфейс [CustomElementRegistry](/ru/docs/Web/API/CustomElementRegistry) и его метод [define()](/ru/docs/Web/API/CustomElementRegistry/define), чтобы зарегистрировать новый Тег.
+> [!NOTE]
+> Устарело. Используйте интерфейс [CustomElementRegistry](/ru/docs/Web/API/CustomElementRegistry) и его метод [define()](/ru/docs/Web/API/CustomElementRegistry/define), чтобы зарегистрировать новый Тег.
 
 ## Syntax
 

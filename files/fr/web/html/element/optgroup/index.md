@@ -9,7 +9,8 @@ L'élément HTML **`<optgroup>`**, utilisé dans un formulaire, permet de créer
 
 {{EmbedInteractiveExample("pages/tabbed/optgroup.html", "tabbed-standard")}}
 
-> **Note :** Il n'est pas possible d'imbriquer plusieurs éléments `<optgroup>` entre eux.
+> [!NOTE]
+> Il n'est pas possible d'imbriquer plusieurs éléments `<optgroup>` entre eux.
 
 ## Attributs
 

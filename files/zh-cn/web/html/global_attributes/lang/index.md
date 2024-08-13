@@ -9,7 +9,8 @@ slug: Web/HTML/Global_attributes/lang
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-lang.html","tabbed-shorter")}}
 
-> **备注：** ## 语言标签语法完整的 BCP47 语法足以标记极其特定的语言方言，但大多数用法都要简单得多。语言标记由连字符分隔的语言子标签组成，其中每个子标签指示该语言的特定属性。3 个最常见的子标签是：
+> [!NOTE]
+> 语言标签语法完整的 BCP47 语法足以标记极其特定的语言方言，但大多数用法都要简单得多。语言标记由连字符分隔的语言子标签组成，其中每个子标签指示该语言的特定属性。3 个最常见的子标签是：
 >
 > - 语言子标签
 >   - : Required。一个 2 或 3 个字符的代码，用于定义基本语言，通常全部用小写编写。例如，English 的语言代码是`en`，Badeshi 的代码是`bdz`。

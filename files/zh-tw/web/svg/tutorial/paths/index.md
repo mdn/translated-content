@@ -103,7 +103,7 @@ In these examples, it would probably be simpler to use the \<polygon> or \<polyl
 
 ## Curve commands
 
-There are three different commands that you can use to create smooth curves. Two of those curves are Bezier curves, and the third is an "arc" or part of a circle. You might have already gained practical experience with Bezier curves using path tools in Inkscape, Illustrator or Photoshop. For a complete description of the math behind Bezier curves, go to a reference like the one on [Wikipedia](http://en.wikipedia.org/wiki/B%C3%A9zier_curve). There are an infinite number of Bezier curves, but only two simple ones are available in path elements: a cubic one, called with C, and a quadratic one, called with Q.
+There are three different commands that you can use to create smooth curves. Two of those curves are Bezier curves, and the third is an "arc" or part of a circle. You might have already gained practical experience with Bezier curves using path tools in Inkscape, Illustrator or Photoshop. For a complete description of the math behind Bezier curves, go to a reference like the one on [Wikipedia](https://en.wikipedia.org/wiki/Bézier_curve). There are an infinite number of Bezier curves, but only two simple ones are available in path elements: a cubic one, called with C, and a quadratic one, called with Q.
 
 ### Bezier Curves
 
@@ -173,7 +173,8 @@ T x y (or t dx dy)
 
 This shortcut looks at the previous control point you used and infers a new one from it. This means that after your first control point, you can make fairly complex shapes by specifying only end points.
 
-> **備註：** This only works if the previous command was a Q or a T command. If it is not, then the control point is assumed to be the same as the previous point, and you'll only draw lines.
+> [!NOTE]
+> This only works if the previous command was a Q or a T command. If it is not, then the control point is assumed to be the same as the previous point, and you'll only draw lines.
 
 ![Shortcut_Quadratic_Bezier_with_grid.png](shortcut_quadratic_b%C3%A9zier_with_grid.png)
 

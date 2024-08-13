@@ -19,7 +19,8 @@ l10n:
 
 最后，我们来看看应用程序接口提供的一些其他杂项功能。
 
-> **备注：** 其他地方也介绍了一些 Tabs API 特性。这些方法可用于使用脚本操作标签页的内容（{{WebExtAPIRef("tabs.connect")}}、{{WebExtAPIRef("tabs.sendMessage")}} 和 {{WebExtAPIRef("tabs.executeScript")}}）。如需了解有关这些方法的更多信息，请参阅概念文章[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)和操作指南[修改网页](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page)。
+> [!NOTE]
+> 其他地方也介绍了一些 Tabs API 特性。这些方法可用于使用脚本操作标签页的内容（{{WebExtAPIRef("tabs.connect")}}、{{WebExtAPIRef("tabs.sendMessage")}} 和 {{WebExtAPIRef("tabs.executeScript")}}）。如需了解有关这些方法的更多信息，请参阅概念文章[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)和操作指南[修改网页](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page)。
 
 ## 权限和 Tabs API
 
@@ -77,7 +78,7 @@ l10n:
     }
     ```
 
-    > **备注：**
+    > [!NOTE]
     >
     > - **`tabs.html` 在 `browser_action` 中被定义为 `default_popup`**。每当用户点击扩展工具栏图标时，它就会显示出来。
     > - **tabs 包含在权限中**。这是支持标签页列表功能所必需的，因为扩展会读取标签页的标题，以便在弹出窗口中显示。
@@ -240,7 +241,8 @@ document.addEventListener("click", (e) => {
 - 更新标签页的 URL（有效地浏览到新页面）（{{WebExtAPIRef("tabs.update()")}}）。
 - 重新加载标签页（{{WebExtAPIRef("tabs.reload()")}}）。
 
-> **备注：** 这些函数都需要它们要操作的标签页的 ID（一个或多个 ID）：
+> [!NOTE]
+> 这些函数都需要它们要操作的标签页的 ID（一个或多个 ID）：
 >
 > - {{WebExtAPIRef("tabs.duplicate")}}
 > - {{WebExtAPIRef("tabs.remove")}}

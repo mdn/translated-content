@@ -125,7 +125,8 @@ false
 false
 ```
 
-> **Nota:** As funções [`parseInt()`](/pt-BR/JavaScript/Reference/Global_Objects/parseInt) e [`parseFloat()`](/pt-BR/JavaScript/Reference/Global_Objects/parseFloat) fazem a conversão da string até alcançarem um caracter que não é válido para o formato numérico especificado, então elas retornam o número convertido até aquele ponto. Contudo, o operador "+" simplesmente converte a string em `NaN` se tiver algum caracter inválido nela. Apenas tente por si mesmo converter a string "10.2abc" usando cada um desses métodos no console e entenderá melhor essas diferenças.
+> [!NOTE]
+> As funções [`parseInt()`](/pt-BR/JavaScript/Reference/Global_Objects/parseInt) e [`parseFloat()`](/pt-BR/JavaScript/Reference/Global_Objects/parseFloat) fazem a conversão da string até alcançarem um caracter que não é válido para o formato numérico especificado, então elas retornam o número convertido até aquele ponto. Contudo, o operador "+" simplesmente converte a string em `NaN` se tiver algum caracter inválido nela. Apenas tente por si mesmo converter a string "10.2abc" usando cada um desses métodos no console e entenderá melhor essas diferenças.
 
 ## Strings
 
@@ -649,7 +650,8 @@ O nome provido para a função anônima conforme acima só é (ou no mínimo só
 
 ## Objetos Personalizados
 
-> **Nota:** Para uma discursão mais detalhada de programação orientada a objetos em JavaScript, veja [Introdução a JavaScript Orientado a Objeto](/pt-BR/JavaScript/Introduction_to_Object-Oriented_JavaScript).
+> [!NOTE]
+> Para uma discursão mais detalhada de programação orientada a objetos em JavaScript, veja [Introdução a JavaScript Orientado a Objeto](/pt-BR/JavaScript/Introduction_to_Object-Oriented_JavaScript).
 
 Na clássica Programação Orientada a Objetos, objetos são coleções de dados e métodos que operam sobre esses dados. JavaScript é uma linguagem baseada em protótipos que não contém a estrutura de classe, como tem em C++ e Java. (Algumas vezes isso é algo confuso para o programador acostumado a linguagens com estrutura de classe). Em vez disso, JavaScript usa funções como classes. Vamos considerar um objeto pessoa com os campos primeiro e último nome. Há duas formas em que o nome talvez possa ser exibido: como "primeiro nome segundo nome" ou como "último nome, primeiro nome". Usando as funções e objetos que discutimos anteriormente, aqui está uma forma de fazer isso:
 

@@ -35,14 +35,16 @@ slug: Learn/CSS/Styling_text/Fundamentals
 
 HTML 및 CSS 를 사용한 작업에서 이미 경험한 것처럼 요소 내부의 텍스트는 요소의 내용 박스안에 배치됩니다. 콘텐츠 영역의 왼쪽 상단 (또는 RTL 언어 콘텐츠의 경우, 오른쪽 상단) 에서 시작하여 행의 끝으로 흐릅니다. 끝까지 도달하면 다음 줄로 내려가서 모든 내용이 박스에 들어갈 때까지 다음 줄로 계속 진행합니다. 텍스트 내용은 일련의 인라인 요소처럼 효과적으로 작동하며, 서로 인접한 줄에 배치되면 줄 끝에 도달할 때까지 줄 바꿈을 만들지 않거나, {{htmlelement("br")}} 요소를 사용하여 수동으로 줄 바꿈을 수행하지 않습니다.
 
-> **참고:** 위의 단락으로 인해 혼동을 느끼게 되더라도 상관없이 — go back and review our [박스 모델](/ko/docs/Learn/CSS/Introduction_to_CSS/Box_model) 기사를 검토하여, 박스 모델 이론을 정리하십시오.
+> [!NOTE]
+> 위의 단락으로 인해 혼동을 느끼게 되더라도 상관없이 — go back and review our [박스 모델](/ko/docs/Learn/CSS/Introduction_to_CSS/Box_model) 기사를 검토하여, 박스 모델 이론을 정리하십시오.
 
 텍스트 스타일을 지정하는 데 사용되는 CSS 속성은 일반적으로 두 가지 카테고리로 분류되며, 이 기사에서는 별도로 살펴보겠습니다.
 
 - **글꼴 스타일**: 텍스트에 적용되는 글꼴에 영향을 주고, 적용되는 글꼴, 크기, 굵기, 이탤릭체 등에 영향을 주는 속성입니다.
 - **텍스트 레이아웃 스타일**: 텍스트의 간격 및 기타 레이아웃 기능에 영향을 주는 속성으로, 예를 들어 선 과 문자 사이의 간격 및 내용 박스 내에서 텍스트가 정렬되는 방식을 조작할 수 있습니다.
 
-> **참고:** 요소 내부의 텍스트는 모두 하나의 단일 entity 로 영향을 받습니다. 텍스트의 하위 섹션은 적절한 요소 (예: {{htmlelement("span")}} 또는 {{htmlelement("strong")}}) 으로 감싸거나, 또는 [::first-letter](/ko/docs/Web/CSS/::first-letter)와 같은 텍스트 관련 의사 요소를 사용하십시오.(요소 텍스트의 첫 번째 문자 선택), [::first-line](/ko/docs/Web/CSS/::first-line) (요소 텍스트의 첫 번째 행 선택) 또는 [::selection](/ko/docs/Web/CSS/::selection) (커서로 현재 강조 표시된 텍스트 선택) 과 같은 텍스트 특정 의사 요소를 사용하십시오.
+> [!NOTE]
+> 요소 내부의 텍스트는 모두 하나의 단일 entity 로 영향을 받습니다. 텍스트의 하위 섹션은 적절한 요소 (예: {{htmlelement("span")}} 또는 {{htmlelement("strong")}}) 으로 감싸거나, 또는 [::first-letter](/ko/docs/Web/CSS/::first-letter)와 같은 텍스트 관련 의사 요소를 사용하십시오.(요소 텍스트의 첫 번째 문자 선택), [::first-line](/ko/docs/Web/CSS/::first-line) (요소 텍스트의 첫 번째 행 선택) 또는 [::selection](/ko/docs/Web/CSS/::selection) (커서로 현재 강조 표시된 텍스트 선택) 과 같은 텍스트 특정 의사 요소를 사용하십시오.
 
 ## 글꼴
 
@@ -123,9 +125,11 @@ p {
 | Trebuchet MS    | sans-serif | You should be careful with using this font — it isn't widely available on mobile OSes.                                                                                                                                                            |
 | Verdana         | sans-serif |                                                                                                                                                                                                                                                   |
 
-> **참고:** 다양한 리소스 중에서 [cssfontstack.com](http://www.cssfontstack.com/) 웹 사이트는 Windows 및 macOS 운영 체제에서 사용할 수 있는 웹 안전 글꼴 목록을 유지하며, 이를 통해 사용하기에 안전하다고 생각하는 글꼴을 결정하는 데 도움이 될 수 있습니다.
+> [!NOTE]
+> 다양한 리소스 중에서 [cssfontstack.com](http://www.cssfontstack.com/) 웹 사이트는 Windows 및 macOS 운영 체제에서 사용할 수 있는 웹 안전 글꼴 목록을 유지하며, 이를 통해 사용하기에 안전하다고 생각하는 글꼴을 결정하는 데 도움이 될 수 있습니다.
 
-> **참고:** 웹 페이지와 함께 사용자 지정 글꼴을 다운로드하여 원하는 방식으로 글꼴 사용을 사용자 지정할 수 있는 방법이 있습니다. **웹 글꼴**. 이것은 조금 더 복잡하며 이 모듈의 뒷부분에 있는 별도의 문서에서 이에 대해 논의할 것입니다.
+> [!NOTE]
+> 웹 페이지와 함께 사용자 지정 글꼴을 다운로드하여 원하는 방식으로 글꼴 사용을 사용자 지정할 수 있는 방법이 있습니다. **웹 글꼴**. 이것은 조금 더 복잡하며 이 모듈의 뒷부분에 있는 별도의 문서에서 이에 대해 논의할 것입니다.
 
 #### 기본 글꼴
 
@@ -336,7 +340,8 @@ text-shadow: 4px 4px 5px red;
 3. 흐림 반경 - 값이 높을수록 그림자가 더 넓게 분산됩니다. 이 값이 포함되지 않은 경우 기본값은 0이며 이는 흐림이 없음을 의미합니다. 사용 가능한 대부분의 CSS [길이 및 크기 단위](/ko/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)를 사용할 수 있습니다.
 4. 모든 CSS [색상 단위](/ko/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors)를 사용할 수 있는 그림자의 기본 색상입니다. 포함되지 않은 경우 기본적으로 `black`입니다.
 
-> **참고:** 양수 오프셋 값은 그림자를 오른쪽과 아래로 이동하지만 음수 오프셋 값을 사용하여 그림자를 왼쪽과 위쪽으로 이동할 수도 있습니다(예: `-1px -1px`).
+> [!NOTE]
+> 양수 오프셋 값은 그림자를 오른쪽과 아래로 이동하지만 음수 오프셋 값을 사용하여 그림자를 왼쪽과 위쪽으로 이동할 수도 있습니다(예: `-1px -1px`).
 
 #### 여러 그림자
 
@@ -394,7 +399,8 @@ p {
 
 {{ EmbedLiveSample('Multiple_shadows', '100%', 220) }}
 
-> **참고:** Sitepoint 문서 [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/)에서 `text-shadow` 사용에 대한 더 흥미로운 예를 볼 수 있습니다.
+> [!NOTE]
+> Sitepoint 문서 [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/)에서 `text-shadow` 사용에 대한 더 흥미로운 예를 볼 수 있습니다.
 
 ## 텍스트 레이아웃
 

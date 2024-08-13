@@ -11,7 +11,8 @@ La méthode **`console.trace()`** permet d'afficher la trace de la pile d'appels
 
 {{AvailableInWorkers}}
 
-> **Note :** Dans certains navigateurs, `console.trace()` pourra également afficher la séquence des appels et des évènements asynchrones qui ont mené à l'appel courant de `console.trace()` et qui ne sont pas nécessairement dans la pile d'appels, pour aider à déterminer l'origine de la boucle d'évaluation courante.
+> [!NOTE]
+> Dans certains navigateurs, `console.trace()` pourra également afficher la séquence des appels et des évènements asynchrones qui ont mené à l'appel courant de `console.trace()` et qui ne sont pas nécessairement dans la pile d'appels, pour aider à déterminer l'origine de la boucle d'évaluation courante.
 
 Voir [la section sur le traçage des piles d'appels dans la documentation de `console`](/fr/docs/Web/API/console#traces_de_piles_dappels) pour plus de détails et d'exemples.
 

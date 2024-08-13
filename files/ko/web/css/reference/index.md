@@ -51,7 +51,8 @@ CSS 선택자 구문을 설명하는 입문자 단계의 소개 부분은 [이 �
 
 ## 키워드 색인
 
-> **참고:** 이 색인에 있는 속성 이름에는 CSS 표준 이름과 다른 [JavaScript 이름](/ko/docs/Web/CSS/CSS_Properties_Reference)이 들어가지 않습니다.
+> [!NOTE]
+> 이 색인에 있는 속성 이름에는 CSS 표준 이름과 다른 [JavaScript 이름](/ko/docs/Web/CSS/CSS_Properties_Reference)이 들어가지 않습니다.
 
 {{CSS_Ref}}
 

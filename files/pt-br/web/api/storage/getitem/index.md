@@ -42,7 +42,8 @@ function setStyles() {
 }
 ```
 
-> **Nota:** Para ver essa funcionalidade aplicada a um exemplo real, veja nossa [Web Storage Demo](https://github.com/mdn/web-storage-demo).
+> [!NOTE]
+> Para ver essa funcionalidade aplicada a um exemplo real, veja nossa [Web Storage Demo](https://github.com/mdn/web-storage-demo).
 
 ## Especificações
 

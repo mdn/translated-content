@@ -207,7 +207,8 @@ let url = "http://xxx.domain.com";
 console.log(/[^.]+/.exec(url)[0].substr(7)); // logs 'xxx'
 ```
 
-> **참고:** 이 때는 정규표현식보단 [URL API](/ko/docs/Web/API/URL_API)를 통해 브라우저에 내장된 URL 구문 분석기를 사용하는 것이 좋습니다.
+> [!NOTE]
+> 이 때는 정규표현식보단 [URL API](/ko/docs/Web/API/URL_API)를 통해 브라우저에 내장된 URL 구문 분석기를 사용하는 것이 좋습니다.
 
 ## 명세
 

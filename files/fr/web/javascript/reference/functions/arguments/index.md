@@ -7,13 +7,16 @@ slug: Web/JavaScript/Reference/Functions/arguments
 
 L'objet **`arguments`** est un objet, **semblable** à un tableau, correspondant aux arguments passés à une fonction.
 
-> **Note :** Si vous pouvez utiliser les fonctionnalités ECMAScript 2015/ES6, il est préférable de manipuler les arguments avec [les paramètres du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/paramètres_du_reste).
+> [!NOTE]
+> Si vous pouvez utiliser les fonctionnalités ECMAScript 2015/ES6, il est préférable de manipuler les arguments avec [les paramètres du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/paramètres_du_reste).
 
-> **Note :** Par « objet semblable à un tableau », on indique que l'objet `arguments` possède une propriété {{jsxref("Fonctions/arguments.length", "length")}} et que ses propriétés sont indexées à partir de 0 mais qu'il ne possède aucune des méthodes natives de {{jsxref("Array")}} telles que {{jsxref("Array.forEach", "forEach()")}} et {{jsxref("Array.map", "map()")}}.
+> [!NOTE]
+> Par « objet semblable à un tableau », on indique que l'objet `arguments` possède une propriété {{jsxref("Fonctions/arguments.length", "length")}} et que ses propriétés sont indexées à partir de 0 mais qu'il ne possède aucune des méthodes natives de {{jsxref("Array")}} telles que {{jsxref("Array.forEach", "forEach()")}} et {{jsxref("Array.map", "map()")}}.
 
 {{EmbedInteractiveExample("pages/js/functions-arguments.html")}}
 
-> **Note :** « Variable ayant la fonction pour portée » correspond à la traduction de « Variable of the function scope » qu'il serait incorrect de traduire par « Variable de la portée de la fonction » car la portée de la fonction est la portée dans laquelle on peut appeler la fonction. Une variable locale de la fonction pourrait quant à elle avoir une portée strictement incluse dans le corps de la fonction (variable définie dans un bloc de la fonction même si cette subtilité n'existe pas en Javascript). Toute suggestion pour éviter cette tournure un peu longue sans altérer le sens est la bienvenue. (variable intrinsèque)
+> [!NOTE]
+> « Variable ayant la fonction pour portée » correspond à la traduction de « Variable of the function scope » qu'il serait incorrect de traduire par « Variable de la portée de la fonction » car la portée de la fonction est la portée dans laquelle on peut appeler la fonction. Une variable locale de la fonction pourrait quant à elle avoir une portée strictement incluse dans le corps de la fonction (variable définie dans un bloc de la fonction même si cette subtilité n'existe pas en Javascript). Toute suggestion pour éviter cette tournure un peu longue sans altérer le sens est la bienvenue. (variable intrinsèque)
 
 ## Syntaxe
 
@@ -60,7 +63,8 @@ var args = Array.from(arguments);
 var args = [...arguments];
 ```
 
-> **Attention :** Il est déconseillé d'utiliser `slice` sur les arguments car cela peut empêcher certaines optimisations des moteurs JavaScript. Pour ce scénario, on peut par exemple construire un nouveau tableau en parcourant l'objet arguments (à ce sujet, voir [cette page](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments) sur les contraintes d'optimisations liées à V8). Pour cet exemple, on pourra utiliser `Array.apply` :
+> [!WARNING]
+> Il est déconseillé d'utiliser `slice` sur les arguments car cela peut empêcher certaines optimisations des moteurs JavaScript. Pour ce scénario, on peut par exemple construire un nouveau tableau en parcourant l'objet arguments (à ce sujet, voir [cette page](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments) sur les contraintes d'optimisations liées à V8). Pour cet exemple, on pourra utiliser `Array.apply` :
 >
 > ```js
 > var args =

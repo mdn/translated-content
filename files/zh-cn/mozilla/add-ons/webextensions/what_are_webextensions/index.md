@@ -7,7 +7,8 @@ l10n:
 
 {{AddonSidebar}}
 
-> **备注：** 如果你对浏览器扩展的基础概念已经熟悉，跳过这个部分去学习[扩展文件是如何组织在一起的](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)。然后，利用[参考资料](/zh-CN/docs/Mozilla/Add-ons/WebExtensions#参考资料)去构建你的扩展。访问[扩展工作坊](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)学习关于浏览器扩展工作流，测试，发布的更多内容。
+> [!NOTE]
+> 如果你对浏览器扩展的基础概念已经熟悉，跳过这个部分去学习[扩展文件是如何组织在一起的](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)。然后，利用[参考资料](/zh-CN/docs/Mozilla/Add-ons/WebExtensions#参考资料)去构建你的扩展。访问[扩展工作坊](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)学习关于浏览器扩展工作流，测试，发布的更多内容。
 
 扩展为浏览器添加了特性与功能。它通过我们所熟悉的 Web 技术——HTML、CSS 和 JavaScript 来创建。扩展可以利用与网页中的 JavaScript 相同的 Web API，但是扩展也可以访问它自己专有的 JavaScript API。这意味着，和在网页里编码相比，在扩展中你可以做到更多的事情。以下是其中你可以做到的一些事情：
 

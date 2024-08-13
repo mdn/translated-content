@@ -9,7 +9,8 @@ l10n:
 
 El evento **`online`** de la interface {{domxref("Window")}} se activa cuando el navegador ha obtenido acceso a la red y el valor de {{domxref("Navigator.onLine")}} cambia a `true`.
 
-> **Nota:** Este evento no debe usarse para determinar la disponibilidad de un sitio web en particular. Los problemas de red o cortafuegos aun pueden impedir que se acceda al sitio web.
+> [!NOTE]
+> Este evento no debe usarse para determinar la disponibilidad de un sitio web en particular. Los problemas de red o cortafuegos aun pueden impedir que se acceda al sitio web.
 
 ## Sintaxis
 

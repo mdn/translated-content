@@ -12,7 +12,8 @@ l10n:
 ディレクトリーが選択された場合、ディレクトリーとその内容の階層構造が選択されたアイテムのセットに含まれます。
 選択されているファイルシステムの項目は、 {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} を使用して受け取ることができます。
 
-> **メモ:** このプロパティは、Google Chrome 固有の API として元々存在していたため、仕様書では `webkitEntries` と呼ばれています。いつか改名される可能性があります。
+> [!NOTE]
+> このプロパティは、Google Chrome 固有の API として元々存在していたため、仕様書では `webkitEntries` と呼ばれています。いつか改名される可能性があります。
 
 ## 値
 

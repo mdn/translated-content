@@ -25,7 +25,7 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index
 - ...
 - _顶部：最接近观察者_
 
-> **备注：**
+> [!NOTE]
 >
 > - 当没有指定 z-index 的时候，所有元素都在会被渲染在默认层 (0 层)
 > - 当多个元素的 z-index 属性相同的时候 (在同一个层里面)，那么将按照 [Stacking without z-index](/zh-CN/CSS/Understanding_z-index/Stacking_without_z-index) 中描述的规则进行布局。

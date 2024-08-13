@@ -11,7 +11,8 @@ La plupart du temps, `activeElement` renverra un objet [`HTMLInputElement`](/fr/
 
 Généralement, une personne utilise la touche <kbd>Tabulation</kbd> pour déplacer le focus entre les éléments qui peuvent le recevoir et utilise la touche <kbd>Espace</kbd> pour activer l'élément (c'est-à-dire pour appuyer sur un bouton ou pour changer l'état d'un bouton radio). Les éléments qui peuvent recevoir le focus dépendent de la plateforme et de la configuration du navigateur. Ainsi, sur les systèmes macOS et par défaut, les éléments qui ne sont pas des champs de saisie texte ne peuvent pas recevoir le focus.
 
-> **Note :** Le focus (qui détermine l'élément qui recevra les informations saisies) n'est pas la même chose que la sélection (la partie actuellement surlignée dans le document). Pour accéder à la sélection courante, on pourra utiliser la méthode [`window.getSelection()`](/fr/docs/Web/API/Window/getSelection).
+> [!NOTE]
+> Le focus (qui détermine l'élément qui recevra les informations saisies) n'est pas la même chose que la sélection (la partie actuellement surlignée dans le document). Pour accéder à la sélection courante, on pourra utiliser la méthode [`window.getSelection()`](/fr/docs/Web/API/Window/getSelection).
 
 ## Valeur
 

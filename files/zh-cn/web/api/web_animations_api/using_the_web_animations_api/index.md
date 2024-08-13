@@ -91,7 +91,8 @@ var aliceTiming = {
 - 一个，持续时间是毫秒，而不是秒 - 3000 不是 3 秒.。像{{domxref("WindowTimers.setTimeout()")}} 和{{domxref("Window.requestAnimationFrame()")}}, Web 动画 API 只支持毫秒。
 - The other thing you'll notice is that it's `iterations`, not `iteration-count`.
 
-> **备注：** CSS 动画中使用的属性值与 Web 动画中使用的属性值存在一些小的差异。比如，Web 动画中不能使用字符串“infinite”，而是使用 Javascript 的关键字 Infinity。以及我们用 `easing` 来代替`timing-function`。我们不必在这列出`easing`的值，因为不像在 CSS 动画里，默认的"[animation-timing-function](/zh-CN/docs/Web/CSS/animation-timing-function)"是`ease`。页面动画 API 的默认 easing 是`linear`— 而这就是我们想要的。
+> [!NOTE]
+> CSS 动画中使用的属性值与 Web 动画中使用的属性值存在一些小的差异。比如，Web 动画中不能使用字符串“infinite”，而是使用 Javascript 的关键字 Infinity。以及我们用 `easing` 来代替`timing-function`。我们不必在这列出`easing`的值，因为不像在 CSS 动画里，默认的"[animation-timing-function](/zh-CN/docs/Web/CSS/animation-timing-function)"是`ease`。页面动画 API 的默认 easing 是`linear`— 而这就是我们想要的。
 
 #### 整合这些特性
 
@@ -359,7 +360,8 @@ aliceChange.onfinish = endGame;
 
 Prefer promises? The Web Animations API also specifies two promises: [`onfinish`](/zh-CN/docs/Web/API/Animation/onfinish) and [`oncancel`](/zh-CN/docs/Web/API/Animation/oncancel).
 
-> **备注：** These promises are not fully supported as of this writing.
+> [!NOTE]
+> These promises are not fully supported as of this writing.
 
 ## 结论
 

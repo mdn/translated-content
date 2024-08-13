@@ -7,7 +7,8 @@ slug: Web/API/Window/innerHeight
 
 Altura (em pixels) da janela de visualização do navegador, incluindo, se renderizado, a barra de rolagem horizontal.
 
-> **Nota:** If you use `nsIDOMWindowUtils.setCSSViewport()` to set the virtual window size for page layout purposes, the value returned by this property corresponds to the viewport height set using that method.
+> [!NOTE]
+> If you use `nsIDOMWindowUtils.setCSSViewport()` to set the virtual window size for page layout purposes, the value returned by this property corresponds to the viewport height set using that method.
 
 ## Syntax
 

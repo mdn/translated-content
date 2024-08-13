@@ -47,7 +47,8 @@ Modifier le mode de boîte d'une origine nécessite la permission d'utiliser la 
 
 Si le site ou l'application a la permission sur la fonctionnalité **`"persistent-storage"`**, il ou elle peut utiliser la méthode {{domxref("StorageManager.persist()")}} pour faire la requête que sa boîte devienne persistante. Il est également possible pour l'agent utilisateur de décider de rendre l'unité de stockage du site persistante sur la base de caractéristiques d'usage ou d'autres métriques. Les drapeaux (_flags_), algorithmes et types associés à la permission `"persistent-storage"`, sont tous positionnés sur les valeurs par défaut standard pour une permission, excepté que **l'état de permission** doit être le même sur l'ensemble de l'origine, et que si l'état de permission n'est pas `"granted"` (c'est-à-dire que si, pour une raison ou une autre, l'accès à la fonctionnalité de stockage persistant a été refusé), le mode de boîte de l'unité de stockage de site de l'origine est toujours `"best-effort"`.
 
-> **Note :** Voir [Using the Permissions API](/fr/docs/Web/API/Permissions_API/Using_the_Permissions_API) pour plus de détails sur l'obtension et la gestion des permissions.
+> [!NOTE]
+> Voir [Using the Permissions API](/fr/docs/Web/API/Permissions_API/Using_the_Permissions_API) pour plus de détails sur l'obtension et la gestion des permissions.
 
 Lors du nettoyage d'unités de stockage de site, la boîte d'une origine est traitée comme une seule entité&nbsp;; si l'agent utilisateur a besoin de la nettoyer et si l'utilisateur ou l'utilisatrice approuve, le stockage de données entier est nettoyé plutôt que de fournir un moyen de nettoyer seulement les données d'une API individuelle.
 

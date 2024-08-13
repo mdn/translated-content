@@ -25,7 +25,8 @@ target.ontransitioncancel = {{jsxref("Function")}}
 
 A {{jsxref("Function")}} to be called when a `transitioncancel` event occurs indicating that a CSS transition has been cancelled on the _`target`_, where the target object is an HTML element ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as input a single parameter: a {{domxref("TransitionEvent")}} object describing the event which occurred; the event's {{domxref("TransitionEvent.elapsedTime")}} property's value should be the same as the value of {{cssxref("transition-duration")}}.
 
-> **备注：** elapsedTime 不包括过渡效果开始之前的时间;这意味着{{cssxref("transition-delay")}}的值不会影响 elapsedTime 的值，elapsedTime 在延迟周期结束和动画开始之前都是 0。
+> [!NOTE]
+> elapsedTime 不包括过渡效果开始之前的时间;这意味着{{cssxref("transition-delay")}}的值不会影响 elapsedTime 的值，elapsedTime 在延迟周期结束和动画开始之前都是 0。
 
 ## 示例
 

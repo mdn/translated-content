@@ -67,7 +67,7 @@ Notez que les propriétés `appIconMaskUrl` et `isClickable` ne sont pas support
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
 >

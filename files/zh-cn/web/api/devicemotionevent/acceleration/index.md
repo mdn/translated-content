@@ -7,7 +7,8 @@ slug: Web/API/DeviceMotionEvent/acceleration
 
 acceleration 属性会返回设备的加速度记录（单位：[m / s2](https://en.wikipedia.org/wiki/Meter_per_second_squared)）。
 
-> **备注：** 如果硬件无法从 acceleration 数据中移除重力加速度，则该值在{{ domxref("DeviceMotionEvent") }}中可能并不存在，你应当使用{{ domxref("DeviceMotionEvent.accelerationIncludingGravity") }}代替
+> [!NOTE]
+> 如果硬件无法从 acceleration 数据中移除重力加速度，则该值在{{ domxref("DeviceMotionEvent") }}中可能并不存在，你应当使用{{ domxref("DeviceMotionEvent.accelerationIncludingGravity") }}代替
 
 ## 语法
 

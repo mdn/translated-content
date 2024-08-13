@@ -26,7 +26,8 @@ Un `<media-query>` está compuesto por un tipo de medio opcional y/o un conjunto
 - `screen`
   - : Destinado a principalmente a pantallas de computadora a color.
 
-> **Nota:** CSS2.1 y Media Queries 3 definió varios tipos de media adicionales (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`, `speech`), pero fueron descontinuados en [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) y no deben ser usados.
+> [!NOTE]
+> CSS2.1 y Media Queries 3 definió varios tipos de media adicionales (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`, `speech`), pero fueron descontinuados en [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) y no deben ser usados.
 
 ## Características de Medios (media feature)
 

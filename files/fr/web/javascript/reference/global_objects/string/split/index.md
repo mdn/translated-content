@@ -27,7 +27,8 @@ str.split([separator[, limit]])
     - Si `separator` apparaît au début (ou à la fin) de la chaîne, il a quand même l'effet de division. Le résultat est une chaîne vide (c'est-à-dire de longueur nulle), qui apparaît à la première (ou dernière) position du tableau retourné.
     - Si `separator` est une chaîne vide (`""`), la chaîne `str` est convertie en un tableau de chacun de ses "caractères" UTF-16.
 
-    > **Attention :** Lorsque une chaîne vide (`""`) est utilisée comme séparateur, la chaîne n'est **pas** divisée par des _caractères perçus par l'utilisateur_ ([grappes de graphèmes](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) ou des caractères unicodes (codepoints), mais par des unités de code UTF-16. Cela détruit les [paires de substituts](http://unicode.org/faq/utf_bom.html#utf16-2). Voir [« Comment obtenir une chaîne de caractères vers un tableau de caractères en JavaScript ? » sur StackOverflow](https://stackoverflow.com/a/34717402).
+    > [!WARNING]
+    > Lorsque une chaîne vide (`""`) est utilisée comme séparateur, la chaîne n'est **pas** divisée par des _caractères perçus par l'utilisateur_ ([grappes de graphèmes](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) ou des caractères unicodes (codepoints), mais par des unités de code UTF-16. Cela détruit les [paires de substituts](http://unicode.org/faq/utf_bom.html#utf16-2). Voir [« Comment obtenir une chaîne de caractères vers un tableau de caractères en JavaScript ? » sur StackOverflow](https://stackoverflow.com/a/34717402).
 
 - `limit` Facultatif
 
@@ -164,7 +165,8 @@ Ce script affichera :
 
 ### Inverser une chaîne en utilisant `split()`
 
-> **Attention :** Ce n'est pas une façon robuste d'inverser une chaîne :
+> [!WARNING]
+> Ce n'est pas une façon robuste d'inverser une chaîne :
 >
 > ```js example-bad
 > const str = "asdfghjkl";
@@ -182,7 +184,7 @@ Ce script affichera :
 > // => "́emuśer"
 > ```
 >
-> **Bonus :** utiliser l'opérateur [`===`](/fr/docs/Web/JavaScript/Reference/Operators) pour tester si la chaîne d'origine est un palindrome.
+> **Bonus :** Utiliser l'opérateur [`===`](/fr/docs/Web/JavaScript/Reference/Operators) pour tester si la chaîne d'origine est un palindrome.
 
 ## Spécifications
 

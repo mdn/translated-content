@@ -82,5 +82,5 @@ myHTMLElement.ariaChecked = true;
 - [`<input type="radio">`](/zh-CN/docs/Web/HTML/Element/input/radio)
 - [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
 - [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
-- [双态复选框示例](https://www.w3.org/WAI/ARIA/apg/example-index/checkbox/checkbox.html)—w3.org
-- [混合状态复选框示例](https://www.w3.org/WAI/ARIA/apg/example-index/checkbox/checkbox-mixed.html)—w3.org
+- [双态复选框示例](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/examples/checkbox/)—w3.org
+- [混合状态复选框示例](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/examples/checkbox-mixed/)—w3.org

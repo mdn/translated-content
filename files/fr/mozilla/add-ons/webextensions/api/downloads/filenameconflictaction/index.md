@@ -26,7 +26,7 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
 >

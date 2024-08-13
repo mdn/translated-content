@@ -49,7 +49,8 @@ Le stockage côté client fonctionne sur des principes similaires, mais pour une
 
 Souvent, le stockage côté client et côté serveur sont utilisés ensemble. Par exemple, vous pouvez télécharger à partir d'une base de données côté serveur une série de fichiers mp3 utilisés par un site web (comme un jeu ou une application de musique) vers une base de données côté client et ainsi pouvoir les lire quand vous le voulez. Avec cette stratégie, l'utilisateur n'a à télécharger le fichier qu'une seule fois — les visites suivantes, ils sont récupérés à partir de la base de données locale.
 
-> **Note :** La quantité de données que l'on peut stocker à l'aide des APIs de stockage côté client est limitée (limite par API et limite globale), la limite exacte dépend du navigateur et des configurations. Voir [Limites de stockage du navigateur et critères d'éviction](/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria) pour plus d'informations.
+> [!NOTE]
+> La quantité de données que l'on peut stocker à l'aide des APIs de stockage côté client est limitée (limite par API et limite globale), la limite exacte dépend du navigateur et des configurations. Voir [Limites de stockage du navigateur et critères d'éviction](/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria) pour plus d'informations.
 
 ### À l'ancienne : les cookies
 
@@ -63,7 +64,8 @@ Pour ces raisons, nous ne verrons pas dans cet article comment utiliser les cook
 
 Le seul avantage des cookies est qu'ils sont supportés par des navigateurs anciens : si votre projet requiert le support de navigateurs obsolètes (comme Internet Explorer 8 et inférieur), les cookies peuvent se révéler utiles. Pour la plupart des projets, vous ne devriez pas avoir besoin d'y recourir.
 
-> **Note :** Pourquoi existe-t-il encore de nouveaux sites crées à l'aide de cookies? Principalement de par les habitudes des développeurs, l'utilisation de bibliothèques anciennes qui utilisent encore des cookies et l'existence de nombreux sites web fournissant des formations et références dépassées pour apprendre à stocker des données.
+> [!NOTE]
+> Pourquoi existe-t-il encore de nouveaux sites crées à l'aide de cookies? Principalement de par les habitudes des développeurs, l'utilisation de bibliothèques anciennes qui utilisent encore des cookies et l'existence de nombreux sites web fournissant des formations et références dépassées pour apprendre à stocker des données.
 
 ### La nouvelle école : Web Storage et IndexedDB
 
@@ -247,9 +249,11 @@ Nous allons construire cet exemple pas à pas, cela vous permettra de comprendre
 
 Notre exemple est terminé — bien joué ! Il ne vous reste plus qu'à enregistrer votre code et tester votre page HTML dans un navigateur. Vous pouvez voir notre [version terminée en direct ici](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html) (ou le [code JavaScript terminé](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/index.js)).
 
-> **Note :** Vous pouvez trouver un exemple un peu plus complexe dans l'article [Utiliser l'API de stockage web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API).
+> [!NOTE]
+> Vous pouvez trouver un exemple un peu plus complexe dans l'article [Utiliser l'API de stockage web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API).
 
-> **Note :** Dans la ligne `<script src="index.js" defer></script>` de notre version finie, l'attribut `defer` spécifie que le contenu de l'élément {{htmlelement("script")}} ne doit pas s'exécuter avant que la page ait fini de charger.
+> [!NOTE]
+> Dans la ligne `<script src="index.js" defer></script>` de notre version finie, l'attribut `defer` spécifie que le contenu de l'élément {{htmlelement("script")}} ne doit pas s'exécuter avant que la page ait fini de charger.
 
 ## Stocker des données complexes — IndexedDB
 
@@ -313,7 +317,8 @@ Voyons maintenant la première chose à faire, mettre en place la base de donné
 
    Pour gérer cela dans IndexedDB, on crée d'abord une requête (que vous pouvez appeler comme vous le voulez — on l'appelle `request` pour que ce soit plus explicite). On utilise ensuite des gestionnaire d'événement pour exécuter du code lorsque les requêtes sont terminées, échouent, etc, ce que l'on va voir ci-dessous.
 
-   > **Note :** Le numéro de version est important. Si vous voulez mettre à jour votre base de données (par exemple, pour modifier la structure de la table), vous devez ré-exécuter votre code avec un numéro de version supérieur et spécifier le schéma de la base de données avec le gestionnaire d'événement `onupgradeneeded`. Nous ne verrons pas la mise à jour de base de données dans ce tutoriel.
+   > [!NOTE]
+   > Le numéro de version est important. Si vous voulez mettre à jour votre base de données (par exemple, pour modifier la structure de la table), vous devez ré-exécuter votre code avec un numéro de version supérieur et spécifier le schéma de la base de données avec le gestionnaire d'événement `onupgradeneeded`. Nous ne verrons pas la mise à jour de base de données dans ce tutoriel.
 
 4. Maintenant, ajoutez les gestionnaires d'événement suivants, juste en dessous des lignes précédentes — toujours à l'intérieur de `window.onload`&nbsp;:
 
@@ -554,7 +559,8 @@ function deleteItem(e) {
 
 Et voilà ! L'exemple devrait maintenant fonctionner.
 
-> **Note :** Si vous rencontrez des difficultés, n'hésitez pas à consulter [notre exemple en direct](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/notes/) (ou voir [le code source](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.js)).
+> [!NOTE]
+> Si vous rencontrez des difficultés, n'hésitez pas à consulter [notre exemple en direct](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/notes/) (ou voir [le code source](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.js)).
 
 ### Stocker des données complexes avec IndexedDB
 
@@ -692,7 +698,8 @@ Quand le service worker intercepte une requête, il peut faire tout ce que vous 
 
 L'API Cache est un autre mécanisme de stockage côté client, il a été conçu pour enregistrer les réponses HTTP et fonctionne donc très bien en synergie avec les service workers.
 
-> **Note :** Les Service workers et Cache sont pris en charge par la plupart des navigateurs modernes aujourd'hui. Au moment de la rédaction de cet article, Safari était encore occupé à l'implémenter, mais il devrait bientôt être disponible.
+> [!NOTE]
+> Les Service workers et Cache sont pris en charge par la plupart des navigateurs modernes aujourd'hui. Au moment de la rédaction de cet article, Safari était encore occupé à l'implémenter, mais il devrait bientôt être disponible.
 
 ### Un exemple service worker
 
@@ -721,7 +728,8 @@ if ("serviceWorker" in navigator) {
 - On utilise la méthode {{domxref("ServiceWorkerContainer.register()")}} afin d'enregistrer le service worker `sw.js` pour l'origine où il se situe, ainsi il pourra contrôler les pages qui sont dans le même répertoire que lui, ou dans un sous-répertoire.
 - Lorsque la promesse est résolue, c'est que le service worker est enregistré.
 
-> **Note :** Le chemin du fichier `sw.js` est relatif à l'origine du site, et non au fichier JavaScript qui l'appelle.
+> [!NOTE]
+> Le chemin du fichier `sw.js` est relatif à l'origine du site, et non au fichier JavaScript qui l'appelle.
 > Le service worker est sur `https://mdn.github.io/learning-area/.../sw.js`. L'origine est `https://mdn.github.io`. Le chemin donné doit donc être `/learning-area/.../sw.js`.
 > Si vous vouliez héberger cet exemple sur votre propre serveur, vous devriez changer le chemin en conséquence. C'est plutôt inhabituel, mais cela doit fonctionner de cette façon pour des raisons de sécurité.
 

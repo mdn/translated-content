@@ -37,7 +37,7 @@ word-break: unset;
 - `keep-all`
   - : CJK テキストの改行を許可しません。 CJK 以外のテキストについては `normal` と同じ挙動となります。
 - `break-word` {{Deprecated_Inline}}
-  - : {{cssxref("overflow-wrap")}} プロパティの値とは関係なく、 `word-break: normal` や `overflow-wrap: anywhere` と同じ効果になります。
+  - : {{cssxref("overflow-wrap")}} プロパティの値とは関係なく、 `overflow-wrap: anywhere` を `word-break: normal` と共に指定したのと同じ効果になります。
 
 > **メモ:** `word-break: break-word` および `overflow-wrap: break-word` ({{cssxref("overflow-wrap")}} を参照) とは対照的に、 `word-break: break-all` はテキストがコンテナーからちょうどあふれたところで (単語全体を次の行に送れば途中で改行を防ぐことができる場合であっても) 位置で改行を生成します。
 

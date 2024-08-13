@@ -160,5 +160,5 @@ slug: Web/CSS/@font-face
 - [FontSquirrel @font-face 生成器](https://www.fontsquirrel.com/tools/webfont-generator)
 - [Beautiful fonts with @font-face](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
 - [Font Library](https://fontlibrary.org/)
-- [WOFF 與瀏覽器相容性](http://caniuse.com/woff)
-- [SVG 字體與瀏覽器相容性](http://caniuse.com/svg-fonts)
+- [WOFF 與瀏覽器相容性](https://caniuse.com/woff)
+- [SVG 字體與瀏覽器相容性](https://caniuse.com/svg-fonts)

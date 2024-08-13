@@ -39,12 +39,9 @@ window.addEventListener("load", function () {
 });
 ```
 
-> [!NOTE]
-> Chrome 不允許於載入事件中呼叫 [`Notification.requestPermission()`](/zh-TW/docs/Web/API/Notification.requestPermission) (參閱 [issue 274284](https://code.google.com/p/chromium/issues/detail?id=274284))。
+### 已安裝的 App
 
-### 已安裝的 Apps
-
-在安裝 Apps 之後，若於 [Apps 的 manifest 檔案](/zh-TW/docs/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/Manifest-840092-dup)中直接添加權限，即可省去再次向使用者要求權限的動作。
+在安裝 App 之後，若於 [App 的 manifest 檔案](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json)中直接添加權限，即可省去再次向使用者要求權限的動作。
 
 ```json
 permissions: {

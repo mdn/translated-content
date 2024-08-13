@@ -18,7 +18,8 @@ Jusqu'à présent, nous avons seulement vu des méthodes sur le contexte de dess
 
 `color` est une chaîne représentant un CSS {{cssxref("&lt;color&gt;")}}, d'un objet gradient ou d'un objet motif. Nous allons examiner le gradient et la structure des objets plus tard. Par défaut, l'encadrement et la couleur de remplissage sont fixés sur noir (valeur `#000000` de CSS `color`).
 
-> **Note :** Lorsque vous définissez `strokeStyle` et `fillStyle`, la nouvelle valeur devient la valeur par défaut pour toutes les formes en cours d'élaboration à partir de là. Pour chaque forme que vous voulez dans une couleur différente, vous aurez besoin de réaffecter `fillStyle` ou `strokeStyle`.
+> [!NOTE]
+> Lorsque vous définissez `strokeStyle` et `fillStyle`, la nouvelle valeur devient la valeur par défaut pour toutes les formes en cours d'élaboration à partir de là. Pour chaque forme que vous voulez dans une couleur différente, vous aurez besoin de réaffecter `fillStyle` ou `strokeStyle`.
 
 Les chaînes pour être valides, doivent être conforme à la spécification CSS {{cssxref("&lt;color&gt;")}}. Chacun des exemples suivants décrit la même couleur.
 
@@ -257,7 +258,8 @@ Si vous considérez un tracé de (3,1) à (3,5) avec une épaisseur de ligne de 
 
 Pour résoudre ce problème, vous devez être très précis dans la création de votre tracé. Sachant qu'une largeur de `1.0` s'étendra d'une demi-unité de chaque côté du tracé, créer le tracé de (3.5,1) à (3.5,5) aboutit à l'exemple trois pour une largeur de `1.0` et au remplissage d'un seul pixel de ligne verticale.
 
-> **Note :** Sachez que dans notre exemple de ligne verticale, la position Y fait toujours référence à une position de grille entière — sinon, vous verrez des pixels à moitié colorés à gauche et à droite (mais notez aussi que ce comportement dépend de l'actuel style `lineCap`, dont la valeur par défaut est `butt`. Vous pouvez essayer de tracer des traits consistants avec des coordonnées non-entières pour les lignes et avec une largeur particulière, en définissant le style `lineCap` à `square`, pour que le bord extérieur du trait autour du point final soit automatiquement étendu pour couvrir le pixel entier).
+> [!NOTE]
+> Sachez que dans notre exemple de ligne verticale, la position Y fait toujours référence à une position de grille entière — sinon, vous verrez des pixels à moitié colorés à gauche et à droite (mais notez aussi que ce comportement dépend de l'actuel style `lineCap`, dont la valeur par défaut est `butt`. Vous pouvez essayer de tracer des traits consistants avec des coordonnées non-entières pour les lignes et avec une largeur particulière, en définissant le style `lineCap` à `square`, pour que le bord extérieur du trait autour du point final soit automatiquement étendu pour couvrir le pixel entier).
 >
 > Notez également que seuls les points de début et de fin d'un chemin sont affectés : si un chemin est fermé avec `closePath ()`, il n'y a pas de point de départ ni de point final ; à la place, tous les points d'extrémité du chemin sont connectés à leurs segments joints précédent et suivant, en utilisant le paramètre courant du style `lineJoin`, dont la valeur par défaut est `miter`, avec pour effet d'étendre automatiquement les bordures extérieures des segments connectés à leur point d'intersection. Ainsi, le trait de rendu couvrira exactement les pixels pleins centrés à chaque extrémité si ces segments connectés sont horizontaux et / ou verticaux. Voir les deux sections suivantes pour les démonstrations de ces styles de lignes supplémentaires.
 
@@ -627,7 +629,8 @@ img.src = "someimage.png";
 var ptrn = ctx.createPattern(img, "repeat");
 ```
 
-> **Note :** Comme avec la méthode `drawImage ()`, vous devez vous assurer que l'image que vous utilisez est chargée avant d'appeler cette méthode, ou le motif pourrait être mal dessiné.
+> [!NOTE]
+> Comme avec la méthode `drawImage ()`, vous devez vous assurer que l'image que vous utilisez est chargée avant d'appeler cette méthode, ou le motif pourrait être mal dessiné.
 
 ### Un exemple de `createPattern`
 
@@ -680,7 +683,8 @@ La propriété `shadowBlur` indique la taille de l'effet de flou ; cette valeur 
 
 La propriété `shadowColor` est une valeur de couleur CSS standard indiquant la couleur de l'effet d'ombre ; par défaut, il est entièrement en noir transparent.
 
-> **Note :** Les ombres ne sont dessinées que pour les [opérations de composition](/fr/docs/Web/API/Canvas_API/Tutorial/Compositing) `source-over`.
+> [!NOTE]
+> Les ombres ne sont dessinées que pour les [opérations de composition](/fr/docs/Web/API/Canvas_API/Tutorial/Compositing) `source-over`.
 
 ### Un exemple de texte ombré
 

@@ -356,7 +356,7 @@ context.listener.setPosition(0, 0, 0);
 ```
 
 > [!NOTE]
-> 你可以在 [GitHub 仓库中找到示例](https://github.com/mdn/webaudio-examples/tree/master/panner-node)（也可以[查看在线演示](https://mdn.github.io/webaudio-examples/panner-node/)）。
+> 你可以在 [GitHub 仓库中找到示例](https://github.com/mdn/webaudio-examples/tree/main/panner-node)（也可以[查看在线演示](https://mdn.github.io/webaudio-examples/panner-node/)）。
 
 ### JavaScript 编解码器
 
@@ -388,7 +388,7 @@ context.listener.setPosition(0, 0, 0);
 - [HTML playbackRate 解释](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
 - [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Web 空间音效基础](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-- [将视频帧作为 WebGL 纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#用视频帧作为纹理)（你也可以使用 [THREE.js](https://threejs.org) WebGL 库（或其他库）来[实现这个效果](https://stemkoski.github.io/Three.js/Video.html)）
+- [将视频帧作为 WebGL 纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#用视频帧作为纹理)（你也可以使用 [THREE.js](https://threejs.org/) WebGL 库（或其他库）来[实现这个效果](https://stemkoski.github.io/Three.js/Video.html)）
 - [WebGL 动画纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
 - [使用 Web Audio API 开发游戏音频（房间效果和滤镜）（2012）](https://web.dev/articles/webaudio-games#room_effects_and_filters)
 

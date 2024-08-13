@@ -62,7 +62,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
     - **`module` :** Le code sera traité comme un module JavaScript. Le traitement du script n'est pas affecté par les attributs `charset` et `defer`. Pour plus d'informations sur l'utilisation des modules, voir le guide sur [les modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules).
     - **Toute autre valeur :** Le contenu embarqué est considéré comm un bloc de donnée et ne sera pas traité par le navigateur. Les développeurs doivent utiliser un type MIME valide qui n'est pas un type MIME JavaScript afin d'indiquer de tels blocs de donnée. Dans ce cas, l'attribut `src` sera ignoré.
 
-    > **Note :** Avec Firefox, on pouvait indiquer la version JavaScript d'un élément `<script>` en incluant un paramètre non-standard `version` à l'intérieur de `type` (ex. `type="text/javascript;version=1.8"`). Cette spécificité a été retirée avec Firefox 59 (cf. [bug Firefox 1428745](https://bugzil.la/1428745)).
+    > [!NOTE]
+    > Avec Firefox, on pouvait indiquer la version JavaScript d'un élément `<script>` en incluant un paramètre non-standard `version` à l'intérieur de `type` (ex. `type="text/javascript;version=1.8"`). Cette spécificité a été retirée avec Firefox 59 (cf. [bug Firefox 1428745](https://bugzil.la/1428745)).
 
 ### Attributs dépréciés
 

@@ -71,7 +71,7 @@ _変更なし。_
 #### 新規 API
 
 - {{DOMxRef("PerformanceObserver")}} API をデフォルトで有効にしました ([Firefox バグ 1386021](https://bugzil.la/1386021))。
-- {{DOMxRef("AbortController")}} および {{DOMxRef("AbortSignal")}} インターフェイス (Abort API) を追加しました。必要に応じて、DOM リクエスト ([fetch リクエスト](/ja/docs/Web/API/fetch) など) を中止できます ([Firefox バグ 1378342](https://bugzil.la/1378342))。
+- {{DOMxRef("AbortController")}} および {{DOMxRef("AbortSignal")}} インターフェイス (Abort API) を追加しました。必要に応じて、DOM リクエスト ([fetch リクエスト](/ja/docs/Web/API/Window/fetch) など) を中止できます ([Firefox バグ 1378342](https://bugzil.la/1378342))。
 - [Storage API](/ja/docs/Web/API/Storage_API) を実装して、デフォルトで有効にしました ([Firefox バグ 1399038](https://bugzil.la/1399038))。
 
 #### DOM

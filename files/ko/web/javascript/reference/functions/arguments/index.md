@@ -7,9 +7,11 @@ slug: Web/JavaScript/Reference/Functions/arguments
 
 **`arguments`** 객체는 함수에 전달된 인수에 해당하는 `Array` 형태의 객체입니다.
 
-> **참고:** ES6 호환 코드를 작성 중이라면 되도록 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters) 구문을 사용해야 합니다.
+> [!NOTE]
+> ES6 호환 코드를 작성 중이라면 되도록 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters) 구문을 사용해야 합니다.
 
-> **참고:** "`Array` 형태"란 `arguments`가 {{jsxref("Array.length", "length")}} 속성과 더불어 0부터 인덱스 된 다른 속성을 가지고 있지만, {{jsxref("Array")}}의 {{jsxref("Array.prototype.forEach()", "forEach")}}, {{jsxref("Array.prototype.map()", "map")}}과 같은 내장 메서드를 가지고 있지 않다는 뜻입니다.
+> [!NOTE]
+> "`Array` 형태"란 `arguments`가 {{jsxref("Array.length", "length")}} 속성과 더불어 0부터 인덱스 된 다른 속성을 가지고 있지만, {{jsxref("Array")}}의 {{jsxref("Array.prototype.forEach()", "forEach")}}, {{jsxref("Array.prototype.map()", "map")}}과 같은 내장 메서드를 가지고 있지 않다는 뜻입니다.
 
 {{EmbedInteractiveExample("pages/js/functions-arguments.html")}}
 

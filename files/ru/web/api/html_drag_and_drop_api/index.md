@@ -30,7 +30,8 @@ HTML drag-and-drop использует {{domxref("Event","модель собы
 | {{domxref('Document/dragstart_event', 'dragstart')}} | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | …пользователь начал перетаскивать элемент. (Подробнее в [Начало операции перетаскивания](/ru/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragstart).)                                    |
 | {{domxref('Document/drop_event', 'drop')}}           | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}           | …элемент сброшен в допустимую зону сброса. (Подробнее в [Выполнение сброса](/ru/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop).)                                                      |
 
-> **Примечание:** При перемещении файла из операционной системы в браузер ни событие `dragstart`, ни `dragend` не вызывается.
+> [!NOTE]
+> При перемещении файла из операционной системы в браузер ни событие `dragstart`, ни `dragend` не вызывается.
 
 ## Интерфейсы
 

@@ -29,7 +29,8 @@ Access-Control-Allow-Origin: https://example.com
 Access-Control-Allow-Origin: *
 ```
 
-> **경고:** 와일드카드를 사용하여 모든 사이트가 개인 API에 액세스할 수 있도록 허용하는 것은 좋지 않습니다.
+> [!WARNING]
+> 와일드카드를 사용하여 모든 사이트가 개인 API에 액세스할 수 있도록 허용하는 것은 좋지 않습니다.
 
 모든 사이트가 `*`를 사용하지 않고 CORS 요청을 수행할 수 있도록 하려면
 와일드카드(예: 자격 증명 사용)는 서버가 요청의 `Origin` 헤더 값을 읽고 해당 값을 사용하여 `Access-Control-Allow-Origin`을 설정해야 하며, 또한 일부 헤더가 오리진에 따라 동적으로 설정되고 있음을 나타내기 위해 `Vary: Origin` 헤더를 설정해야 합니다.

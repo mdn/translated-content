@@ -26,7 +26,8 @@ Cette déclaration permet de créer une constante qui peut être globale ou loca
 
 Attention, la déclaration `const` crée une référence en lecture seule vers une valeur. Cela ne signifie pas que la valeur référencée ne peut pas être modifiée ! Ainsi, si le contenu de la constante est un objet, l'objet lui-même pourra toujours être modifié.
 
-> **Note :** Les aspects liés à la [zone morte temporelle](</fr/docs/Web/JavaScript/Reference/Instructions/let#Zone_morte_temporaire_(Temporal_Dead_Zone_TDZ)_et_les_erreurs_liées_à_let>) de `let` s'appliquent également à `const`.
+> [!NOTE]
+> Les aspects liés à la [zone morte temporelle](</fr/docs/Web/JavaScript/Reference/Instructions/let#Zone_morte_temporaire_(Temporal_Dead_Zone_TDZ)_et_les_erreurs_liées_à_let>) de `let` s'appliquent également à `const`.
 
 ## Exemples
 

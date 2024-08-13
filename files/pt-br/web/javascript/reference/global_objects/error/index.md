@@ -103,7 +103,8 @@ try {
 
 Você pode escolher definir seus próprios tipos de erro derivando de `Error` para conseguir usar `throw new MeuErro()` e usar `instanceof MeuErro` para checar o tipo de erro na captura da exceção. A forma comum para isso está demonstrada abaixo
 
-> **Aviso:** Note que as instâncias `MeuErro` lançadas vão reportar valores de `lineNumber` e `fileName` incorretos, ao menos no Firefox.
+> [!WARNING]
+> Note que as instâncias `MeuErro` lançadas vão reportar valores de `lineNumber` e `fileName` incorretos, ao menos no Firefox.
 
 Veja também ["esta discussão no Stackoverflow (em inglês): What's a good way to extend Error in JavaScript?"](http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript).
 

@@ -9,7 +9,8 @@ l10n:
 
 L'en-tête HTTP **`Upgrade`**, réservé à HTTP/1.1, peut être utilisé pour basculer une connexion client/serveur déjà établie sur un autre protocole (en conservant le même protocole de transport). Un client pourra par exemple utiliser cet en-tête pour demander la mise à niveau de la connexion HTTP/1.1 en HTTP/2 ou le passage d'une connexion HTTP ou HTTPS à une connexion WebSocket.
 
-> **Attention :** HTTP/2 interdit explicitement l'usage de cet en-tête et de ce mécanisme. Il est réservé à HTTP/1.1.
+> [!WARNING]
+> HTTP/2 interdit explicitement l'usage de cet en-tête et de ce mécanisme. Il est réservé à HTTP/1.1.
 
 <table class="properties">
   <tbody>
@@ -37,7 +38,8 @@ Connection: upgrade
 Upgrade: exemple/1, toto/2
 ```
 
-> **Note :** L'en-tête [`Connection: upgrade`](/fr/docs/Web/HTTP/Headers/Connection) doit être présent lorsqu'`Upgrade` est envoyé.
+> [!NOTE]
+> L'en-tête [`Connection: upgrade`](/fr/docs/Web/HTTP/Headers/Connection) doit être présent lorsqu'`Upgrade` est envoyé.
 
 Le serveur est libre d'ignorer la requête et répondre alors comme si l'en-tête `Upgrade` n'avait pas été envoyé (par exemple avec [un statut `200 OK`](/fr/docs/Web/HTTP/Status/200)).
 

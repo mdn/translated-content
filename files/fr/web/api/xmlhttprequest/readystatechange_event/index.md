@@ -7,7 +7,8 @@ slug: Web/API/XMLHttpRequest/readystatechange_event
 
 Un [`EventHandler`](/fr/docs/Web/API/EventHandler) qui réagit aux changements de `readyState`. Le callback est appelé dans le contexte du thread de rendu. La propriété **`XMLHttpRequest.onreadystatechange`** contient le gestionnaire d'évènement appelé lorsque l'évènement [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event) est déclenché, soit chaque fois que la propriété {{domxref("XMLHttpRequest.readyState", "readyState")}} de {{domxref("XMLHttpRequest")}} est modifiée.
 
-> **Attention :** Ne doit pas être utilisé avec des requêtes synchrone ni avec du code natif.
+> [!WARNING]
+> Ne doit pas être utilisé avec des requêtes synchrone ni avec du code natif.
 
 ## Syntaxe
 
