@@ -7,9 +7,6 @@ slug: Web/API/FileSystem
 
 **`FileSystem`** 實作文件和目錄介面，描述一個檔案系統。在任何檔案系統上，這個物件包含 {{domxref("FileSystemEntry.filesystem", "filesystem")}}的特性。某些網頁瀏覽器提供額外的 API 去創建和管理檔案系統，如 Google Chrome 的{{domxref("LocalFileSystem.requestFileSystem", "requestFileSystem()")}}函式。
 
-> [!NOTE]
-> 此介面並非標準 API, 代表規格並未依造標準制定, 因此必須注意並非所有網頁瀏覽器都有實作此介面, 有實作的網頁瀏覽器可能只有實作一小部分. 請在[Browser compatibility](#browser_compatibility) 查看更多細節.
-
 ## 基礎概念
 
 存取 `FileSystem` 物件的兩種方法:
@@ -36,7 +33,6 @@ This API has no official W3C or WHATWG specification.
 
 ## 參見
 
-- [File and Directory Entries API](/zh-TW/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File System API](/zh-TW/docs/Web/API/File_and_Directory_Entries_API/Introduction)
-- {{domxref("FileSystemEntry")}}, {{domxref("FileSystemFileEntry")}}, and {{domxref("FileSystemDirectoryEntry")}}
-- MSDN 文章: [WebKitFileSystem object](https://msdn.microsoft.com/library/mt732564)
+- [檔案與目錄 API](/zh-TW/docs/Web/API/File_and_Directory_Entries_API)
+- [檔案系統 API 介紹](/zh-TW/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemEntry")}}、{{domxref("FileSystemFileEntry")}}、{{domxref("FileSystemDirectoryEntry")}}
