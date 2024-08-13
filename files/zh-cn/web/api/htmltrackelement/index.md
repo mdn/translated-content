@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLTrackElement`** 接口表示 {{Glossary("DOM")}} 中的 {{Glossary("HTML")}} {{HTMLElement("track")}} 元素。此元素可以作为 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 的子级指定包含隐藏式字幕或标题等信息的文本轨道使用。
+**`HTMLTrackElement`** 接口表示 {{Glossary("DOM")}} 中的 {{Glossary("HTML")}} {{HTMLElement("track")}} 元素。此元素可以作为 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 的孩子指定包含隐藏式字幕或标题等信息的文本轨道使用。
 
 {{InheritanceDiagram}}
 
@@ -56,7 +56,7 @@ _从其父接口 {{domxref("HTMLElement")}} 继承事件。_
 
 ### 加载轨道的文本资源
 
-如果轨道的 {{domxref("TextTrack.mode", "mode")}} 最初处于 `disabled` 状态，则描述文本轨道实际提示的 WebVTT 或 TTML 数据不加载。如果你需要在设置 `<track>` 之后对轨道执行任何处理，你应该确保轨道的 `mode` 是 `hidden`（如果你不想让它呈现给用户）或 `showing`（初始显示轨道）。你可以在以后根据需要更改模式。
+如果轨道的 {{domxref("TextTrack.mode", "mode")}} 最初处于 `disabled` 状态，则描述文本轨道实际提示的 WebVTT 或 TTML 数据不加载。如果你需要在设置 `<track>` 之后对轨道执行任何处理，你应该确保轨道的 `mode` 是 `hidden`（如果你不想让它呈现给用户）或 `showing`（初始时显示轨道）。你可以以后根据需要更改模式。
 
 ## 规范
 
