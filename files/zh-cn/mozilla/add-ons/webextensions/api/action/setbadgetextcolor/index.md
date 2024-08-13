@@ -41,7 +41,7 @@ browser.action.setBadgeTextColor(
 
 <!---->
 
-- 若同时指定了 `windowId` 和 `tabId`，则函数出错。
+- 若同时指定了 `windowId` 和 `tabId`，则函数出错且颜色不会被设置。
 - 若同时未指定 `windowId` 和 `tabId`，则将设置全局徽章文本颜色。
 
 ## 示例
