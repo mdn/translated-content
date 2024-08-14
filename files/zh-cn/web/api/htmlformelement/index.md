@@ -2,12 +2,12 @@
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
 l10n:
-  sourceCommit: b85bf9fcc2c0062a765d104799d7d45d9e9b13bb
+  sourceCommit: c99afd3cafe73c93831bd73ad1dac285c3c713b1
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLFormElement`** 接口表示 DOM 中的 {{HTMLElement("form")}} 元素。它允许访问和（在某些情况下）修改表单的各个方面，以及访问其组件元素。
+**`HTMLFormElement`** 接口表示 DOM 中的 {{HTMLElement("form")}} 元素。它允许访问和（在某些情况下）修改表单的各个方面，以及访问其组成元素。
 
 {{InheritanceDiagram}}
 
@@ -52,11 +52,6 @@ _此接口还从其父接口 {{domxref("HTMLElement")}} 继承方法。_
   - : 将表单重置为其初始状态。
 - {{domxref("HTMLFormElement.submit", "submit()")}}
   - : 将表单提交至服务器。
-
-### 已弃用的方法
-
-- {{domxref("HTMLFormElement.requestAutocomplete()")}} {{deprecated_inline}}
-  - : 触发原生浏览器界面，以帮助用户完成[自动填充字段名称](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill-field-name)的值不为 `off` 或 `on` 的字段。一旦用户完成界面，表单将接收到一个事件，该事件将是 `autocomplete`（当字段已填充）或 `autocompleteerror`（当出现问题）。
 
 ## 事件
 
