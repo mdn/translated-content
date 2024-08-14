@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 ## Синтаксис
 
 ```
-var newArray = arr.flat(depth);
+const newArray = arr.flat(depth);
 ```
 
 ### Параметры
@@ -27,19 +27,19 @@ var newArray = arr.flat(depth);
 ### Упрощение вложенных массивов
 
 ```js
-var arr1 = [1, 2, [3, 4]];
+const arr1 = [1, 2, [3, 4]];
 arr1.flat();
 // [1, 2, 3, 4]
 
-var arr2 = [1, 2, [3, 4, [5, 6]]];
+const arr2 = [1, 2, [3, 4, [5, 6]]];
 arr2.flat();
 // [1, 2, 3, 4, [5, 6]]
 
-var arr3 = [1, 2, [3, 4, [5, 6]]];
+const arr3 = [1, 2, [3, 4, [5, 6]]];
 arr3.flat(2);
 // [1, 2, 3, 4, 5, 6]
 
-var arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
+const arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
 arr4.flat(Infinity);
 // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
@@ -49,7 +49,7 @@ arr4.flat(Infinity);
 Метод flat удаляет пустые слоты из массива:
 
 ```js
-var arr4 = [1, 2, , 4, 5];
+const arr4 = [1, 2, , 4, 5];
 arr4.flat();
 // [1, 2, 4, 5]
 ```
@@ -59,7 +59,7 @@ arr4.flat();
 ### `reduce` и `concat`
 
 ```js
-var arr1 = [1, 2, [3, 4]];
+const arr1 = [1, 2, [3, 4]];
 arr1.flat();
 
 // В одномерный массив
@@ -89,7 +89,7 @@ flatDeep(arr, Infinity);
 
 ```js
 //не рекурсивное упрощение с использованием стэка
-var arr1 = [1, 2, 3, [1, 2, 3, 4, [2, 3, 4]]];
+const arr1 = [1, 2, 3, [1, 2, 3, 4, [2, 3, 4]]];
 function flatten(input) {
   const stack = [...input];
   const res = [];
@@ -112,7 +112,7 @@ flatten(arr1); // [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
 ```js
 //рекурсивно упрощаем массив
 function flatten(array) {
-  var flattend = [];
+  const flattend = [];
   (function flat(array) {
     array.forEach(function (el) {
       if (Array.isArray(el)) flat(el);
