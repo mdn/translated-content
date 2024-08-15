@@ -24,7 +24,6 @@ slug: Web/API/FileSystem
 
 {{Specifications}}
 
-This API has no official W3C or WHATWG specification.
 
 ## 瀏覽器相容性
 
