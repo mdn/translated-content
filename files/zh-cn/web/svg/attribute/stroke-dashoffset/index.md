@@ -18,7 +18,7 @@ slug: Web/SVG/Attribute/stroke-dashoffset
 | 初始值 | 0                                                                                                             |
 | 可动画化 | 是                                                                                                           |
 
-偏移量的计算通常基于 [<路径长度>](/zh-CN/SVG/Attribute/pathLength)，但如果使用 [<百分比>](/zh-CN/SVG/Content_type#Percentage) 值，那么将根据当前视口的百分比进行计算。
+偏移量的计算通常基于 {{SVGAttr('pathLength')}}，但如果使用 [\<percentage>](/zh-CN/docs/Web/SVG/Content_type#百分数) 值，那么将根据当前视口的百分比进行计算。
 
 ## 示例
 
