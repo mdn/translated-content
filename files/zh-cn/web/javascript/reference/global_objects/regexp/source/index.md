@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
 ```js
 var regex = /fooBar/gi;
 
-console.log(regex.source); // "fooBar"，不包含 /.../ 和 "ig"。
+console.log(regex.source); // "fooBar"，不包含 /.../ 和 "gi"。
 ```
 
 ## 规范
