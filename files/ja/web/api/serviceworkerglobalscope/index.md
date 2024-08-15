@@ -57,7 +57,7 @@ _このインターフェイスには {{domxref("WorkerGlobalScope")}} インタ
   - : [バックグラウンドフェッチ](/ja/docs/Web/API/Background_Fetch_API)処理で、リクエストされたすべてが成功したときに発生します。
 - {{domxref("ServiceWorkerGlobalScope/canmakepayment_event", "canmakepayment")}} {{Experimental_Inline}}
   - : 決済アプリのサービスワーカーで発行され、決済を処理する準備ができたかどうかを調べるために使用されます。
-  特に、販売者のウェブサイトが {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} コンストラクターを呼び出すと発生します。
+    特に、販売者のウェブサイトが {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} コンストラクターを呼び出すと発生します。
 - {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} {{Experimental_Inline}}
   - : {{domxref("ContentIndex")}} からアイテムが取り除かれたときに発生します。
 - {{domxref("ServiceWorkerGlobalScope/cookiechange_event", "cookiechange")}} {{Experimental_Inline}}
