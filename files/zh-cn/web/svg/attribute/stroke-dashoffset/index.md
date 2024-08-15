@@ -5,7 +5,7 @@ slug: Web/SVG/Attribute/stroke-dashoffset
 
 {{SVGRef}}
 
-`stroke-dashoffset` 属性定义了虚线与路径起点的偏移量。
+**`stroke-dashoffset`** 是一种表现属性，它定义了虚线与路径起点的偏移量。
 
 > [!NOTE]
 > 作为一个表现属性，`stroke-dashoffset` 可以用作 CSS 属性。
