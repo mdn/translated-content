@@ -24,7 +24,6 @@ slug: Web/API/FileSystem
 
 {{Specifications}}
 
-
 ## 瀏覽器相容性
 
 {{Compat}}
