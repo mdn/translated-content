@@ -7,7 +7,7 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 
 我们已经为主页创建了一个路由。为了完成页面，我们需要更新控制器函数，以从数据库中提取记录的“计数”，并创建一个可用于呈现页面的视图（模板）。
 
-> [!NOTE] 备注
+> [!NOTE]
 > 我们将会使用 Mongoose 来获取数据库中的信息。在学习以下教程之前，你可能希望重新阅读 [Mongoose 入门](http://127.0.0.1:5042/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#mongoose_primer)中有关[搜索记录](http://127.0.0.1:5042/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#mongoose_primer)的部分。
 
 ## 路由
@@ -88,7 +88,7 @@ exports.index = asyncHandler(async (req, res, next) => {
 
 成功时，回调函数调用 [`res.render()`](https://expressjs.com/en/4x/api.html#res.render)，指定名为 '**index**' 的视图（模板），以及一个对象包含了要插入其中的数据（这包括我们模型计数的结果对象）。数据以键值对的形式提供，可以使用键在模板中访问。
 
-> [!NOTE] 备注
+> [!NOTE]
 > 在 Pug 模板中，如果使用了未被传递值的键或变量，它将被渲染为空字符串，并且会在表达式中被判断为假。而其他的模板语言也可能会要求你为所使用的所有对象传递值。
 
 请注意，我们的代码之所以非常简单，是因为我们可以假设数据库查询成功。如果任何操作失败，抛出的异常将会被 asyncHandler() 捕获然后被传递给链中的下一个中间处理器。
