@@ -10,15 +10,19 @@ slug: Web/SVG/Attribute/stroke-dashoffset
 > [!NOTE]
 > 作为一个表现属性，`stroke-dashoffset` 可以用作 CSS 属性。
 
-## 用法
+你可以将此属性与以下 SVG 元素一起使用：
 
-| 类别   | 显示属性                                                                                                      |
-| ------ | ------------------------------------------------------------------------------------------------------------- |
-| 值     | [\<percentage>](/zh-CN/SVG/Content_type#Percentage) \| [\<length>](/zh-CN/SVG/Content_type#Length) \| inherit |
-| 初始值 | 0                                                                                                             |
-| 可动画化 | 是                                                                                                           |
-
-偏移量的计算通常基于 {{SVGAttr('pathLength')}}，但如果使用 [\<percentage>](/zh-CN/docs/Web/SVG/Content_type#百分数) 值，那么将根据当前视口的百分比进行计算。
+- {{SVGElement('circle')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('path')}}
+- {{SVGElement('line')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 ## 示例
 
@@ -75,12 +79,38 @@ svg {
 
 {{EmbedLiveSample("示例", '100%', 200)}}
 
-## 元素
+## 用法
 
-以下元素可以使用 `stroke-dashoffset` 属性
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <strong
+          ><a href="/zh-CN/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+        |
+        <strong
+          ><a href="/zh-CN/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">默认值</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">可动画化</th>
+      <td>是</td>
+    </tr>
+  </tbody>
+</table>
 
-- [形状元素](/zh-CN/SVG/Element#形状元素) »
-- [文本内容元素](/zh-CN/SVG/Element#文本内容元素) »
+偏移量的计算通常基于 {{SVGAttr('pathLength')}}，但如果使用 [\<percentage>](/zh-CN/docs/Web/SVG/Content_type#百分数) 值，那么将根据当前视口的百分比进行计算。
 
 ## 规范
 
