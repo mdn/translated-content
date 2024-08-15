@@ -4,21 +4,22 @@ slug: Web/API/FileSystem
 ---
 
 {{APIRef("File System API")}}
-**`FileSystem`** 實作文件和目錄介面，描述一個檔案系統。在任何檔案系統上，這個物件包含 {{domxref("FileSystemEntry.filesystem", "filesystem")}}的特性。某些網頁瀏覽器提供額外的 API 去創建和管理檔案系統，如 Google Chrome 的{{domxref("LocalFileSystem.requestFileSystem", "requestFileSystem()")}}函式。
+
+檔案與目錄 API 的 `FileSystem` 介面是用來處理檔案系統。這些物件可從任何檔案系統項目上的 `filesystem` 屬性取得。某些網頁瀏覽器提供額外的 API 去建立和管理檔案系統，例如 Google Chrome 的{{domxref("LocalFileSystem.requestFileSystem", "requestFileSystem()")}}函式。
 
 ## 基礎概念
 
-存取 `FileSystem` 物件的兩種方法:
+存取 `FileSystem` 物件的兩種方法：
 
-1. 你可以直接要求一個使用`window.requestFileSystem()，`只用在你的網頁應用程式的沙盒類型 `FileSystem 物件。如果要求成功，將會執行`callback handler 去接收描述檔案系統的`FileSystem物件參數。`
-2. 你可以從檔案系統接口物件取得，透過他的{{domxref("FileSystemEntry.filesystem", "filesystem")}}特性
+1. 你可以呼叫 `window.requestFileSystem()`，為你的網頁應用程式建立一個檔案系統的沙盒。如果呼叫成功，將會執行回呼函式，該回呼函式會有個 `FileSystem` 參數來描述檔案系統。
+2. 從檔案系統項目物件的 {{domxref("FileSystemEntry.filesystem", "filesystem")}} 屬性中取得。
 
 ## 屬性
 
 - {{domxref("FileSystem.name")}} {{ReadOnlyInline}}
-  - : {{domxref("USVString")}} 代表檔案系統的名稱. 此名稱在整個已宣告的檔案系統清單中是唯一的。
+  - : 代表檔案系統名稱的字串。此名稱在整個檔案的清單中是唯一的。
 - {{domxref("FileSystem.root")}} {{ReadOnlyInline}}
-  - : {{domxref("FileSystemDirectoryEntry")}} 物件表示檔案系統的根目錄。 透過此物件, 你可以取得權限存取所有檔案系統中的文件和目錄
+  - : 為一個 {{domxref("FileSystemDirectoryEntry")}} 物件，用來表示檔案系統的根目錄。透過此物件，你可以取得檔案系統中的所有的檔案與目錄。
 
 ## 規範
 
