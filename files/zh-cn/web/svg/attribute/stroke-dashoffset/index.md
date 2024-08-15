@@ -5,7 +5,7 @@ slug: Web/SVG/Attribute/stroke-dashoffset
 
 {{SVGRef}}
 
-**`stroke-dashoffset`** 是一种表现属性，它定义了虚线与路径起点的偏移量。
+**`stroke-dashoffset`** 是一种表现属性，它定义了虚线与路径起点之间的偏移量。
 
 > [!NOTE]
 > 作为一个表现属性，`stroke-dashoffset` 可以用作 CSS 属性。
@@ -35,13 +35,10 @@ svg {
   <!-- No dash array -->
   <line x1="0" y1="1" x2="30" y2="1" stroke="black" />
 
-  <!-- No dash offset -->
+  <!-- 没有设置偏移量 -->
   <line x1="0" y1="3" x2="30" y2="3" stroke="black" stroke-dasharray="3 1" />
 
-  <!--
-  The start of the dash array computation
-  is pulled by 3 user units
-  -->
+  <!-- 虚线正向偏移了 3 个单位 -->
   <line
     x1="0"
     y1="5"
@@ -51,10 +48,7 @@ svg {
     stroke-dasharray="3 1"
     stroke-dashoffset="3" />
 
-  <!--
-  The start of the dash array computation
-  is pushed by 3 user units
-  -->
+  <!-- 虚线反向偏移了 3 个单位 -->
   <line
     x1="0"
     y1="7"
@@ -64,11 +58,7 @@ svg {
     stroke-dasharray="3 1"
     stroke-dashoffset="-3" />
 
-  <!--
-  The start of the dash array computation
-  is pulled by 1 user units which ends up
-  in the same rendering as the previous example
-  -->
+  <!-- 虚线正向偏移了 1 个单位，最终渲染结果和上一个例子相同 -->
   <line
     x1="0"
     y1="9"
@@ -78,10 +68,7 @@ svg {
     stroke-dasharray="3 1"
     stroke-dashoffset="1" />
 
-  <!--
-  the following red lines highlight the
-  offset of the dash array for each line
-  -->
+  <!-- 底下的红线突显了每行虚线的偏移量 -->
   <path d="M0,5 h-3 M0,7 h3 M0,9 h-1" stroke="rgb(255 0 0 / 50%)" />
 </svg>
 ```
@@ -90,7 +77,7 @@ svg {
 
 ## 元素
 
-以下元素可使用 stroke-dashoffset 属性
+以下元素可以使用 `stroke-dashoffset` 属性
 
 - [形状元素](/zh-CN/SVG/Element#形状元素) »
 - [文本内容元素](/zh-CN/SVG/Element#文本内容元素) »
