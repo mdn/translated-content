@@ -22,7 +22,7 @@ l10n:
 <html lang="en-US">
   <head>
     <title>
-      你好世界！<span class="highlight">这难道不精彩吗</span> 真的吗？
+      你好世界！<span class="highlight">这难道不精彩吗</span>真的吗？
     </title>
   </head>
   <body></body>
@@ -31,7 +31,7 @@ l10n:
 
 ```js
 const title = document.querySelector("title");
-console.log(title.text); // 产出：“你好世界！真的吗？”
+console.log(title.text); // 产生：“你好世界！真的吗？”
 ```
 
 如你所见，标签 `span` 和其内容被跳过。

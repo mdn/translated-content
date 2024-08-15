@@ -24,7 +24,7 @@ _无特定方法；从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 
 ## 示例
 
-请勿混淆： `document.title` 和 `document.querySelector('title')`。
+请勿混淆 `document.title` 和 `document.querySelector('title')`。
 
 前者只是一个 setter/getter 方法，用于设置或读取文档标题的内部文本值，后者是 `HTMLTitleElement` 对象。因此你不能写：`document.title.text = "Hello world!";`。
 
