@@ -85,7 +85,7 @@ exports.index = asyncHandler(async (req, res, next) => {
 
 因为对文档数量查询的操作相互独立，因此我们使用 [`Promise.all()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) 来并行地运行这些查询请求。该方法返回一个新的 Promise，因此我们可以使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 来等待其的完成（*此函数*的执行会在 `await` 处阻塞）。当所有查询完成时，`all()` 返回的 promise 会兑现，便会继续执行路由处理函数，并使用数据库查询的结果填充数组。
 
-成功时，回调函数调用 [`res.render()`](https://expressjs.com/en/4x/api.html#res.render)，指定名为 '**index**' 的视图（模板），以及一个对象包含了要插入其中的数据（这包括我们模型计数的结果对象）。数据以键值对的形式提供，可以使用键在模板中访问。
+成功时，回调函数调用 [`res.render()`](https://expressjs.com/en/4x/api.html#res.render)，指定名为“**index**”的视图（模板），以及一个对象包含了要插入其中的数据（这包括我们模型计数的结果对象）。数据以键值对的形式提供，可以使用键在模板中访问。
 
 > [!NOTE]
 > 在 Pug 模板中，如果使用了未传入的键或变量，它将被渲染为空字符串，并且会在表达式中被求值为 `false`。而其他的模板语言也可能会要求你为所使用的所有对象传递值。
