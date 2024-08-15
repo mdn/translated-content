@@ -86,7 +86,7 @@ svg {
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">Value</th>
+      <th scope="row">值</th>
       <td>
         <strong
           ><a href="/zh-CN/docs/Web/SVG/Content_type#percentage"
