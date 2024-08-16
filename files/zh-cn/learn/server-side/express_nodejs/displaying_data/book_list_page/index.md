@@ -23,7 +23,7 @@ exports.book_list = asyncHandler(async (req, res, next) => {
 });
 ```
 
-该路由处理器调用 `Book` 模型的 `find()` 方法，仅选择返回标题 `title` 和作者 `author`，因为我们不需要其他字段（它也会返回 `_id` 和虚拟字段），然后使用 `sort()` 方法对 `title` 进行字母排序。我们还调用了 `Book` 上的 `populate()`，指定作者 `author` 字段——即用完整的作者信息替换所存储书本的作者的 id。最后链式调用 `exec()` 来执行查询操作并返回一个 promise。
+该路由处理器调用 `Book` 模型的 `find()` 方法，仅选择返回标题 `title` 和作者 `author`，因为我们不需要其他字段（它也会返回 `_id` 和虚拟字段），然后使用 `sort()` 方法对 `title` 进行字母排序。我们还调用了 `Book` 上的 `populate()`，指定作者 `author` 字段——即用完整的作者信息替换所存储书本的作者的 id。最后链式调用 `exec()` 来执行查询操作并返回一个 **Promise**。
 
 路由处理器使用 `await` 来等待 **Promise**，代码会暂停执行直到它被兑现。如果 **Promise** 被兑现，查询结果就会被存储到 `allBooks` 变量中，并继续执行后续代码。
 
