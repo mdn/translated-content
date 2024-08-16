@@ -1,13 +1,14 @@
 ---
 title: "MediaDevices: devicechange イベント"
+short-title: devicechange
 slug: Web/API/MediaDevices/devicechange_event
 l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+  sourceCommit: ee846961725e36cf7bb407afe7a2df82d2860658
 ---
 
-{{APIRef}}
+{{APIRef("Media Capture and Streams")}}{{SecureContext_Header}}
 
-`devicechange` はイベントで、カメラ、マイク、スピーカーなどのメディア機器がシステムに接続・切断されるたびに {{domxref("MediaDevices")}} へ送られます。
+**`devicechange`** はイベントで、カメラ、マイク、スピーカーなどのメディア機器がシステムに接続・切断されるたびに {{domxref("MediaDevices")}} へ送られます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
@@ -102,7 +103,7 @@ const logElement = document.querySelector("output");
 const startButton = document.querySelector("#startButton");
 
 function log(msg) {
-  logElement.innerHTML += `${msg}<br>`;
+  logElement.innerText += `${msg}\n`;
 }
 
 startButton.addEventListener(
@@ -149,8 +150,8 @@ const videoList = document.getElementById("videoList");
 ```js
 function updateDeviceList() {
   navigator.mediaDevices.enumerateDevices().then((devices) => {
-    audioList.innerHTML = "";
-    videoList.innerHTML = "";
+    audioList.textContent = "";
+    videoList.textContent = "";
 
     devices.forEach((device) => {
       const elem = document.createElement("li");
@@ -187,7 +188,7 @@ navigator.mediaDevices.ondevicechange = (event) => {
 };
 ```
 
-このコードでは、ユーザがカメラ、マイク、他のメディア機器を接続したり、電源を入れたり、電源を切ったりする度に、 `updateDeviceList()` を呼び出し接続された機器一覧を再描画します。
+このコードでは、ユーザーがカメラ、マイク、他のメディア機器を接続したり、電源を入れたり、電源を切ったりする度に、 `updateDeviceList()` を呼び出し接続された機器一覧を再描画します。
 
 ### 結果
 
