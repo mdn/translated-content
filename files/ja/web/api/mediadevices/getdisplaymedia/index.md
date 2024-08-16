@@ -120,8 +120,7 @@ async function startCapture(displayMediaOptions) {
 
 これは {{jsxref("Operators/await", "await")}} を使用して、 `getDisplayMedia()` が {{domxref("MediaStream")}} で解決するのを非同期に待ち、指定したオプションで要求された表示コンテンツを含むストリームを生成します。ストリームは、ストリームからビデオトラックを追加するために {{domxref("RTCPeerConnection.addTrack()")}} を使用して WebRTC 呼び出しに追加するために使用する呼び出し側に返されます。
 
-> [!NOTE]
-> [画面共有コントロール](https://screen-sharing-controls.glitch.me/)のデモでは、完全に実装されたものを提供しており、`getDisplayMedia()` の制約とオプションを自由に選択して画面キャプチャを作成することができます。
+> **メモ:** [画面共有コントロール](https://screen-sharing-controls.glitch.me/)のデモでは、完全に実装されたものを提供しており、`getDisplayMedia()` の制約とオプションを自由に選択して画面キャプチャを作成することができます。
 
 ## 仕様書
 
