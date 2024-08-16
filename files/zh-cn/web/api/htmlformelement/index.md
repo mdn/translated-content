@@ -38,7 +38,7 @@ _此接口还从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 具名输入会被作为属性添加到其所属表单的实例中，且如果它们共享相同的名称（例如，具有名为 `action` 的输入的表单将使其 `action` 属性返回该输入，而不是表单的 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) HTML 属性）。
 
-## 方法
+## 实例方法
 
 _此接口还从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 
