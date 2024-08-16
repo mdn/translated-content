@@ -16,7 +16,7 @@ l10n:
 > [!NOTE]
 > この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
-## コンストラクタ
+## コンストラクター
 
 - {{domxref("FormData.FormData","FormData()")}}
   - : 新しい `FormData` オブジェクトを作成します。
