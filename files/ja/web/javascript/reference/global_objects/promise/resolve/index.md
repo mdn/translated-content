@@ -172,7 +172,7 @@ const thenable = {
   },
 };
 
-Promise.resolve(thenable); // 無z限の再帰を引き起こす
+Promise.resolve(thenable); // 無限の再帰を引き起こす
 ```
 
 ### Promise 以外のコンストラクターに対する resolve() の呼び出し
