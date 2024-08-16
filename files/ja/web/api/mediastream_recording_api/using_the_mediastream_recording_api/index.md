@@ -9,7 +9,7 @@ l10n:
 
 [MediaStream 収録 API](/ja/docs/Web/API/MediaStream_Recording_API) を使用すると、音声や動画のストリームを簡単に記録できます。 {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}} と一緒に使用すると、ユーザーの入力機器から記録して結果を即座にウェブアプリで使用するための簡単な方法が提供されます。
 
-音声と映像の両方を別々にまたは一緒に記録することができます。 この記事では、この API を提供する `MediaRecorder` インターフェースの使用方法に関する基本的なガイドを提供することを目的としています。
+音声と映像の両方を別々にまたは一緒に記録することができます。 この記事では、この API を提供する `MediaRecorder` インターフェイスの使用方法に関する基本的なガイドを提供することを目的としています。
 
 ## サンプルアプリ: ウェブディクタフォン
 
