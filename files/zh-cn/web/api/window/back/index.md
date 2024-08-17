@@ -28,7 +28,7 @@ back()
 
 ## 示例
 
-这个简单的示例通过调用 `back()` 来处理“返回”按钮的点击操作。
+这个简单的示例通过将调用 `back()` 来处理“返回”按钮的点击操作。
 
 ```js
 function handleMyBackButton() {
