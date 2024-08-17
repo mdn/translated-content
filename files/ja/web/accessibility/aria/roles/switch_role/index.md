@@ -158,7 +158,7 @@ label.switch {
 
 {{EmbedLiveSample("Adding_the_switch_role_in_ARIA", 600, 40)}}
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
