@@ -16,9 +16,9 @@ l10n:
 不过。必须牢记，设备[方向坐标系](/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)与 [CSS 坐标系](/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems)不同。前者是[右手定则](https://zh.wikipedia.org/wiki/%E5%8F%B3%E6%89%8B%E5%AE%9A%E5%89%87)，Y 轴向上为正，而后者是左手定则，Y 轴向下为正。此外，设备方向角旋转应始终按照 Z - X' - Y'' 的顺序进行，这与 [CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms)的顺序不一致。以下是这些差异带来的一些实际后果：
 
 - 角度旋转的顺序很重要，因此要确保 alpha、beta 和 gamma 旋转依次进行。
-- CSS变换的 [`rotate3d()`](/zh-CN/docs/Web/CSS/transform-function/rotate3d) 和 [`DOMMatrix.rotateSelf()`](/zh-CN/docs/Web/API/DOMMatrix/rotateSelf) 及 [`DOMMatrix.rotateSelf()`](/zh-CN/docs/Web/API/DOMMatrix/rotateSelf) 函数按照 Z - Y' - X'' 的顺序应用角度旋转，因此不可能通过一次调用就以正确的顺序应用阿尔法、贝塔和伽马旋转。相反，你应该按照正确的顺序单独旋转每个轴。
+- CSS 变换的 [`rotate3d()`](/zh-CN/docs/Web/CSS/transform-function/rotate3d) 和 [`DOMMatrix.rotateSelf()`](/zh-CN/docs/Web/API/DOMMatrix/rotateSelf) 及 [`DOMMatrix.rotateSelf()`](/zh-CN/docs/Web/API/DOMMatrix/rotateSelf) 函数按照 Z - Y' - X'' 的顺序应用角度旋转，因此不可能通过一次调用就以正确的顺序应用阿尔法、贝塔和伽马旋转。相反，你应该按照正确的顺序单独旋转每个轴。
 
-- 由于上述坐标系的不同，在 CSS 中，面向原点的旋转是按顺时针方向进行的，而在 "设备方向 "规范中，旋转是按逆时针方向进行的。这意味着 alpha 和 beta 需要倒置（围绕 Z 和 X 的旋转），因为它们在两个坐标系中指向不同的方向。 但是，gamma（围绕 Y 的旋转）应保持不变。下面是一个代码片段来总结一下：
+- 由于上述坐标系的不同，在 CSS 中，面向原点的旋转是按顺时针方向进行的，而在 "设备方向 "规范中，旋转是按逆时针方向进行的。这意味着 alpha 和 beta 需要倒置（围绕 Z 和 X 的旋转），因为它们在两个坐标系中指向不同的方向。但是，gamma（围绕 Y 的旋转）应保持不变。下面是一个代码片段来总结一下：
 
   ```js
   const elem = document.getElementById("view3d");
