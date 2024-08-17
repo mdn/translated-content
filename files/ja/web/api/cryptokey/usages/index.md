@@ -39,9 +39,7 @@ function importSecretKey(rawKey) {
 }
 
 const key = importSecretKey(rawKey);
-console.log(
-  `このキーの使い方は ${key.usages.toString()} です。`,
-);
+console.log(`このキーの使い方は ${key.usages.toString()} です。`);
 ```
 
 ## 仕様書
