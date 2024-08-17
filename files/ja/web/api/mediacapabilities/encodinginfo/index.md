@@ -88,7 +88,7 @@ encodingInfo(configuration)
 
 ## 例
 
-```js
+```js-nolint
 //Create media configuration to be tested
 const mediaConfig = {
   type: "record", // or 'transmission'
