@@ -10,7 +10,7 @@ l10n:
 {{domxref("window")}} 接口上过时的非标准方法 `back()` 会将窗口返回到历史记录中的前一个记录。这是 Firefox 特有的方法，已在 Firefox 31 中删除。
 
 > [!NOTE]
-> 请使用标准的 {{domxref(“history.back”)}} 方法。
+> 请使用标准的 {{domxref("history.back")}} 方法。
 
 ## 语法
 
