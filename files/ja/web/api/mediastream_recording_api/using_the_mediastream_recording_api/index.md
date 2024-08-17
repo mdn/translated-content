@@ -153,7 +153,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 
 ## メディアストリームのキャプチャ
 
-`getUserMedia` がメディアストリームを正常に作成したら、`MediaRecorder()` コンストラクタを使用して新しい Media Recorder のインスタンスを作成し、それに直接ストリーム (stream)を渡します。 これが MediaStream 収録 API を使用するためのエントリーポイントです。 これで、ストリームをブラウザーの既定のエンコード形式で {{domxref("Blob")}} にキャプチャする準備ができました。
+`getUserMedia` がメディアストリームを正常に作成したら、`MediaRecorder()` コンストラクターを使用して新しい Media Recorder のインスタンスを作成し、それに直接ストリーム (stream)を渡します。 これが MediaStream 収録 API を使用するためのエントリーポイントです。 これで、ストリームをブラウザーの既定のエンコード形式で {{domxref("Blob")}} にキャプチャする準備ができました。
 
 ```js
 const mediaRecorder = new MediaRecorder(stream);
