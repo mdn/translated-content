@@ -28,7 +28,7 @@ back()
 
 ## 示例
 
-这个简单的示例通过将调用 `back()` 来处理“返回”按钮的点击操作。
+这个简单的示例通过调用 `back()` 来处理“返回”按钮的点击操作。
 
 ```js
 function handleMyBackButton() {
@@ -40,11 +40,11 @@ function handleMyBackButton() {
 
 ## 规范
 
-这不属于任何规范的一部分。
+不属于任何规范。
 
 ## 浏览器兼容性
 
-这种非标准方法只在 Firefox 中实施，在 Firefox 31 中被删除。
+这种非标准方法只在 Firefox 中实现过，并在 Firefox 31 中被删除。
 
 ## 参见
 
