@@ -56,4 +56,4 @@ function adder(base /*, num1, …, numN */) {
 - [函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)指南
 - [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Functions/arguments", "arguments")}}
-- [`Function`: `length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length)
+- [`Function`：`length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length)
