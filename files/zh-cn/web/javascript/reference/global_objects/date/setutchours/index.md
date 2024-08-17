@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`setUTCHours()`** 方法是 {{jsxref("Date")}} 实例的方法，它根据世界标准时间更改该日期的小时、分钟、秒或毫秒。 
+**`setUTCHours()`** 方法是 {{jsxref("Date")}} 实例的方法，它根据世界标准时间更改该日期的小时、分钟、秒或毫秒。
 
 {{EmbedInteractiveExample("pages/js/date-setutchours.html")}}
 
