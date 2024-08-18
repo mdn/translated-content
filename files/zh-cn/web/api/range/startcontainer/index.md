@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("DOM")}}
 
-**`Range.startContainer`** 只读属性返回 `Range` 开始所在的 {{domxref("Node")}}。要更改节点的起始位置，请使用其中一个 {{domxref("Range.setStart()")}} 方法。
+**`Range.startContainer`** 只读属性返回 `Range` 开始所在的 {{domxref("Node")}}。要更改节点的起始位置，请使用 {{domxref("Range.setStart()")}} 方法。
 
 ## 值
 
