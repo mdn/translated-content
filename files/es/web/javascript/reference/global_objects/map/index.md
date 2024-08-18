@@ -2,7 +2,7 @@
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
 l10n:
-  sourceCommit: 
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
 {{JSRef}}
@@ -16,7 +16,7 @@ Cualquier valor (ambos objetos y {{Glossary("Primitive", "valores primitivos")}}
 
 Los objetos `Map` son colecciones de tuplas tipo llave-valor. Una llave en `Map` **puede aparecer solo una vez**; es única en la colección de `Map`. Un objeto `Map` es iterado por sus tuplas llave-valor —un bucle {{jsxref("Statements/for...of", "for...of")}} regresa un arreglo de `[llave, valor]` por cada iteración. La iteración sucede en _orden de inserción_, la cual corresponde al orden en el que cada tupla llave-valor fue incertada inicialmente en el map por el método [`set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set) (eso es, si no había una llave con el mismo valor en el map, cuando `set()` fué llamado).
 
-La especificación requiere que los maps sean implementados "que, en promedio, proporcione tiempos de acceso que sean sublineales al numero de elementos en la colección". Por lo tanto, podría ser representado internamente como una tabla hash (con una busqueda O(1)), un  árbol de búsqueda (con una busqueda de O(log(N))). 
+La especificación requiere que los maps sean implementados "que, en promedio, proporcione tiempos de acceso que sean sublineales al numero de elementos en la colección". Por lo tanto, podría ser representado internamente como una tabla hash (con una busqueda O(1)), un  árbol de búsqueda (con una busqueda de O(log(N))).
 
 ### Igualdad de llaves
 
@@ -62,10 +62,10 @@ Sin embargo, hay diferencias importantes que hacen que se prefiera a `Map` en al
       <td>
         <p>
           Asignar tuplas de llave-valor proporcionadas por el usuario en un <code>Object</code> puede
-          perimitr a un atacante sobreescribir el prototipo del objeto, lo que puede llevar a 
+          perimitr a un atacante sobreescribir el prototipo del objeto, lo que puede llevar a
           <a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">
             ataques de inyección de objetos
-          </a>. Al igual que el problema con la colisión de llaves, esto se puede mitigar usando un objeto con protoripo-<code>null</code> 
+          </a>. Al igual que el problema con la colisión de llaves, esto se puede mitigar usando un objeto con protoripo-<code>null</code>
         </p>
       </td>
     </tr>
@@ -134,10 +134,10 @@ Sin embargo, hay diferencias importantes que hacen que se prefiera a `Map` en al
           <ul>
             <li>
               Un objeto puede implementar un protocolo de iteración, o puedes obtener un iterable para un objeto usando <a
-                href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
+                href="/es/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
                 ><code>Object.keys</code></a
               > o <a
-                href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries"
+                href="/es/docs/Web/JavaScript/Reference/Global_Objects/Object/entries"
                 ><code>Object.entries</code></a
               >.
             </li>
@@ -207,6 +207,7 @@ wrongMap["bla2"] = "blaaa2";
 
 console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
+
 Pero esta manera de asignar una propiedad, no interactua con la estructura de datos del objeto _Map_. Utiliza la característica de el objeto genérico. El valor de 'bla' no es guardado en el _Map_ para consultas. Otras operaciones que fallan:
 
 ```js example-bad
@@ -214,11 +215,15 @@ wrongMap.has("bla"); // false
 wrongMap.delete("bla"); // false
 console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
+
 El uso correcto para guardar datos en el objeto _Map_ es através de el método `set(key, value)`.
 
 ```js example-good
 const contacts = new Map();
-contacts.set("Jessie", { telefono: "213-555-1234", direccion: "123 N 1st Ave" });
+contacts.set("Jessie", {
+  telefono: "213-555-1234",
+  direccion: "123 N 1st Ave" 
+});
 contacts.has("Jessie"); // true
 contacts.get("Hilary"); // undefined
 contacts.set("Hilary", { telefono: "617-555-4321", direccion: "321 S 2nd St" });
@@ -258,7 +263,6 @@ Los siguientes, son ejemplos de objetos de navegador similares a `Map`:
 - {{domxref("KeyboardLayoutMap")}}
 - {{domxref("MIDIInputMap")}}
 - {{domxref("MIDIOutputMap")}}
-
 
 ## Constructor
 
