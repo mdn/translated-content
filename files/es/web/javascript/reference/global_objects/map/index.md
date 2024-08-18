@@ -218,27 +218,24 @@ El uso correcto para guardar datos en el objeto _Map_ es atraves de el metodo `s
 
 ```js example-good
 const contacts = new Map();
-contacts.set("Jessie", { phone: "213-555-1234", address: "123 N 1st Ave" });
+contacts.set("Jessie", { telefono: "213-555-1234", direccion: "123 N 1st Ave" });
 contacts.has("Jessie"); // true
 contacts.get("Hilary"); // undefined
-contacts.set("Hilary", { phone: "617-555-4321", address: "321 S 2nd St" });
-contacts.get("Jessie"); // {phone: "213-555-1234", address: "123 N 1st Ave"}
+contacts.set("Hilary", { telefono: "617-555-4321", direccion: "321 S 2nd St" });
+contacts.get("Jessie"); // {telefono: "213-555-1234", direccion: "123 N 1st Ave"}
 contacts.delete("Raymond"); // false
 contacts.delete("Jessie"); // true
 console.log(contacts.size); // 1
 ```
 
-### Map-like browser APIs
+### APIs del navegador similares a Map
 
-**Browser `Map`-like objects** (or "maplike objects") are [Web API](/en-US/docs/Web/API) interfaces that behave in many ways like a `Map`.
+**Objetod del Navegador similares a `Map`** (o "objetos que parecen _map_") son [Web API](/en-US/docs/Web/API) interfaces que se comportan en muchos aspectos como un objeto `Map`.
 
-Just like `Map`, entries can be iterated in the same order that they were added to the object.
-`Map`-like objects and `Map` also have properties and methods that share the same name and behavior.
-However unlike `Map` they only allow specific predefined types for the keys and values of each entry.
+Al igual que el objeto `Map`, las entradas pueden iterarse en el mismo orden en que fueron agregadas al objeto.
+Los objetos smimilares a `Map` y los objetos `Map` tambien tienen propiedades y metodos que comparten el mismo nombre y comportamiento. Sin embargo contrario a los objetos `Map` estos solo permiten tipos especificos predefinidos para las llaves y valores de cada entrada.
 
-The allowed types are set in the specification IDL definition.
-For example, {{domxref("RTCStatsReport")}} is a `Map`-like object that must use strings for keys and objects for values.
-This is defined in the specification IDL below:
+Los tipos permitidos se encuentran en la especificacion de la definicion IDL (Interfaz de Descripcion del Lenguage). Por ejemplo, {{domxref("RTCStatsReport")}} es un objeto similar a `Map` que debe usar cadenar de caracteres para sus llaves, y objetos para sus valores. Esto esta definido en la especificacion IDL a continuacion:
 
 ```webidl
 interface RTCStatsReport {
@@ -246,14 +243,14 @@ interface RTCStatsReport {
 };
 ```
 
-`Map`-like objects are either read-only or read-writable (see the `readonly` keyword in the IDL above).
+Loso objetos similares a `Map` son o de solo-lectura o lectura-escritura (vease la palabra clave `readonly` en el IDL de arriba).
 
-- Read-only `Map`-like objects have the property [`size`](#map.prototype.size), and the methods: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`get()`](#map.prototype.get), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), and [`[Symbol.iterator]()`](#map.prototypesymbol.iterator).
-- Writeable `Map`-like objects additionally have the methods: [`clear()`](#map.prototype.clear), [`delete()`](#map.prototype.delete), and [`set()`](#map.prototype.set).
+- Los obejtos similares a `Map` de solo-lectura tienen la propiedad [`size`](#map.prototype.size), y los metodos: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`get()`](#map.prototype.get), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), and [`[Symbol.iterator]()`](#map.prototypesymbol.iterator).
+- Los objetos similares a `Map` de lectura-escritura tienen metodos adicionales: [`clear()`](#map.prototype.clear), [`delete()`](#map.prototype.delete), and [`set()`](#map.prototype.set).
 
-The methods and properties have the same behavior as the equivalent entities in `Map`, except for the restriction on the types of the keys and values.
+Los metodos y propiedades tienen el mismo comportamiento que las entidades equivalentes en el objeto `Map`, excepto por la restriccion en los tipos de llaves y valores.
 
-The following are examples of read-only `Map`-like browser objects:
+Los siguientes son ejemplos de objetos de navegador similares a `Map`:
 
 - {{domxref("AudioParamMap")}}
 - {{domxref("RTCStatsReport")}}
@@ -262,33 +259,34 @@ The following are examples of read-only `Map`-like browser objects:
 - {{domxref("MIDIInputMap")}}
 - {{domxref("MIDIOutputMap")}}
 
+
 ## Constructor
 
 - {{jsxref("Map/Map", "Map()")}}
-  - : Creates a new `Map` object.
+  - : Crea un nuevo objeto `Map`.
 
-## Static properties
+## Propiedades estaticas
 
 - [`Map[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
-  - : The constructor function that is used to create derived objects.
+  - : La funcion constructor que es usada para crear objetos derivados.
 
-## Static methods
+## Metodos estaticos
 
 - {{jsxref("Map.groupBy()")}}
-  - : Groups the elements of a given iterable using the values returned by a provided callback function. The final returned `Map` uses the unique values from the test function as keys, which can be used to get the array of elements in each group.
+  - : Agrupa los elementos de un iterable usando los valores que regresa la funcion provista. El objeto `Map` que regresa, usa los valores unicos de la funcion de prueba como llaves, los cuales puedes ser usados para obtener el arreglo de elementos de cada grupo.
 
-## Instance properties
+## Propiedades de instancia
 
-These properties are defined on `Map.prototype` and shared by all `Map` instances.
+Estas propiedades estan definidas en `Map.prototype` y las comparten todas las instancias de `Map`.
 
 - {{jsxref("Object/constructor", "Map.prototype.constructor")}}
-  - : The constructor function that created the instance object. For `Map` instances, the initial value is the {{jsxref("Map/Map", "Map")}} constructor.
+  - : La funcion constructor que creo el objeto de instancia. Para las instancias de `Map` el valor inicial es el constructor {{jsxref("Map/Map", "Map")}}.
 - {{jsxref("Map.prototype.size")}}
-  - : Returns the number of key/value pairs in the `Map` object.
+  - : Regresa el numero de tuplas llave/valor en el objeto `Map`.
 - `Map.prototype[Symbol.toStringTag]`
-  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Map"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+  - : El valor inicial de la propiedad [`[Symbol.toStringTag]`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) es la cadena de caracteres `"Map"`. Esta propiedad es usada en {{jsxref("Object.prototype.toString()")}}.
 
-## Instance methods
+## Metodos de instancia
 
 - {{jsxref("Map.prototype.clear()")}}
   - : Removes all key-value pairs from the `Map` object.
@@ -313,9 +311,9 @@ These properties are defined on `Map.prototype` and shared by all `Map` instance
 - [`Map.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
   - : Returns a new Iterator object that contains a two-member array of `[key, value]` for each element in the `Map` object in insertion order.
 
-## Examples
+## Ejemplos
 
-### Using the Map object
+### Usando el objeto Map
 
 ```js
 const myMap = new Map();
@@ -341,7 +339,7 @@ console.log(myMap.get({})); // undefined, because keyObj !== {}
 console.log(myMap.get(function () {})); // undefined, because keyFunc !== function () {}
 ```
 
-### Using NaN as Map keys
+### Usando NaN como llave de Map
 
 {{jsxref("NaN")}} can also be used as a key. Even though every `NaN` is
 not equal to itself (`NaN !== NaN` is true), the following example works because
@@ -359,7 +357,7 @@ myMap.get(otherNaN);
 // "not a number"
 ```
 
-### Iterating Map with for...of
+### Iterando Map con for...of
 
 Maps can be iterated using a `for...of` loop:
 
@@ -393,7 +391,7 @@ for (const [key, value] of myMap.entries()) {
 // 1 = one
 ```
 
-### Iterating Map with forEach()
+### Iterando Map con forEach()
 
 Maps can be iterated using the
 {{jsxref("Map/forEach", "forEach()")}} method:
@@ -406,7 +404,7 @@ myMap.forEach((value, key) => {
 // 1 = one
 ```
 
-### Relation with Array objects
+### Relacon con objetos Array
 
 ```js
 const kvArray = [
@@ -429,7 +427,7 @@ console.log([...myMap]);
 console.log(Array.from(myMap.keys())); // ["key1", "key2"]
 ```
 
-### Cloning and merging Maps
+### Clonando y uniendo Maps
 
 Just like `Array`s, `Map`s can be cloned:
 
@@ -442,8 +440,8 @@ console.log(clone.get(1)); // one
 console.log(original === clone); // false (useful for shallow comparison)
 ```
 
-> [!NOTE]
-> Keep in mind that _the data itself_ is not cloned.
+> [!NOTA]
+> Tenga en cuanta que _los datos en si_ no se clonan.
 
 Maps can be merged, maintaining key uniqueness:
 
@@ -490,15 +488,15 @@ console.log(merged.get(2)); // dos
 console.log(merged.get(3)); // three
 ```
 
-## Specifications
+## Especificaciones
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
 {{Compat}}
 
-## See also
+## Vease tambien
 
 - [Polyfill for `Map` in `core-js`](https://github.com/zloirock/core-js#map)
 - {{jsxref("Set")}}
