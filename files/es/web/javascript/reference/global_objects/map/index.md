@@ -65,7 +65,7 @@ Sin embargo, hay diferencias importantes que hacen que se prefiera a `Map` en al
           perimitr a un atacante sobreescribir el prototipo del objeto, lo que puede llevar a
           <a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">
             ataques de inyección de objetos
-          </a>. Al igual que el problema con la colisión de llaves, esto se puede mitigar usando un objeto con protoripo-<code>null</code>
+          </a>. Al igual que el problema con la colisión de llaves, esto se puede mitigar usando un objeto con prototipo-<code>null</code>
         </p>
       </td>
     </tr>
@@ -91,7 +91,7 @@ Sin embargo, hay diferencias importantes que hacen que se prefiera a `Map` en al
           A pesar de que ahora las llaves de un objeto común <code>Object</code> están ordenadas, esto no siempre fué el caso, y el orden es complejo. Como resultado es mejor no confiar en el orden de las propiedades.
         </p>
         <p>
-          El orden en ECMAScript 2015 fué definido inicialmente para las propiedades propias del objeto; ECMAScript 2020 define un orden también para propiedades heredadas. Pero notece que ningún mecanismo único itera <strong>todas</strong>  las propiedades de un objeto; de los varios mecanismos, cada uno inluye un subconjunto diferente de propiedades; ({{jsxref("Statements/for...in", "for-in")}}
+          El orden en ECMAScript 2015 fué definido inicialmente para las propiedades propias del objeto; ECMAScript 2020 define un orden también para propiedades heredadas. Pero nótese que ningún mecanismo único itera <strong>todas</strong>  las propiedades de un objeto; de los varios mecanismos, cada uno inluye un subconjunto diferente de propiedades; ({{jsxref("Statements/for...in", "for-in")}}
           incluye sólo propiedades donde la llave es una cadena de texto enumerable;
           {{jsxref("Object.keys")}} incluye sólo propiedades propias, enumerables,
           y las llaves son cadenas de texto;
@@ -102,7 +102,7 @@ Sin embargo, hay diferencias importantes que hacen que se prefiera a `Map` en al
       </td>
     </tr>
     <tr>
-      <th scope="row"><p>Tamaño</p></th>
+      <th scope="row">Tamaño</th>
       <td>
         El número de elementos en un <code>Map</code> se obtiene fácilmente de su propiedad
         {{jsxref("Map.prototype.size", "size")}}.
@@ -208,7 +208,7 @@ wrongMap["bla2"] = "blaaa2";
 console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
 
-Pero esta manera de asignar una propiedad, no interactua con la estructura de datos del objeto _Map_. Utiliza la característica de el objeto genérico. El valor de 'bla' no es guardado en el _Map_ para consultas. Otras operaciones que fallan:
+Pero esta manera de asignar una propiedad, no interactua con la estructura de datos del objeto _Map_. Utiliza la característica de el objeto genérico. El valor 'bla' no es guardado en el _Map_ para consultas. Otras operaciones que fallan:
 
 ```js example-bad
 wrongMap.has("bla"); // false
@@ -235,7 +235,7 @@ console.log(contacts.size); // 1
 
 ### APIs del navegador similares a Map
 
-**Objetos del Navegador similares a `Map`** (o "objetos que parecen _map_") son [API Web](/es/docs/Web/API) interfaces que se comportan en muchos aspectos como un objeto `Map`.
+**Objetos del Navegador similares a `Map`** (o "objetos que parecen _map_") son interfaces de la [API Web](/es/docs/Web/API) que se comportan en muchos aspectos como un objeto `Map`.
 
 Al igual que el objeto `Map`, las entradas pueden iterarse en el mismo orden en que fueron agregadas al objeto.
 Los objetos smimilares a `Map` y los objetos `Map` también tienen propiedades y métodos que comparten el mismo nombre y comportamiento. Sin embargo, contrario a los objetos `Map` estos sólo permiten tipos específicos predefinidos para las llaves y valores de cada entrada.
@@ -295,9 +295,9 @@ Estas propiedades están definidas en `Map.prototype` y las comparten todas las 
 - {{jsxref("Map.prototype.clear()")}}
   - : Remueve todas las tuplas llave-valor del objeto `Map`.
 - {{jsxref("Map.prototype.delete()")}}
-  - : Regresa `true` si un elemento en el objeto `Map` existía y has sido removido, or `false` si el elemento no existe.`map.has(key)` regresará `false` después de esto.
+  - : Regresa `true` si un elemento en el objeto `Map` existía y ha sido removido, or `false` si el elemento no existe.`map.has(key)` regresará `false` después de esto.
 - {{jsxref("Map.prototype.entries()")}}
-  - : Regresa un nuevo objeto _Iterator_ que contiene un arreglo con dos miembros `[llave, valor]` por cada elemento en el objeto `Map` en orden de inserción.
+  - : Regresa un nuevo objeto Iterador que contiene un arreglo con dos miembros `[llave, valor]` por cada elemento en el objeto `Map` en orden de inserción.
 - {{jsxref("Map.prototype.forEach()")}}
   - : Llama una función `callbackFn` una vez por cada tupla llave-valor presente en el objeto `Map`, en orden de inserción. Si un parametro `thisArg` es proporcionado a `forEach`, será utilizado como el valor `this` para cada llamada a la funcion callback.
 - {{jsxref("Map.prototype.get()")}}
@@ -440,7 +440,7 @@ console.log(original === clone); // false (útil para comparaciones superficiale
 ```
 
 > [!NOTA]
-> Tenga en cuanta que _los datos en si_ no se clonan.
+> Tenga en cuenta que _los datos en si_ no se clonan.
 
 Los objetos _Map_ pueden unirse, manteniendo la unicidad de las llaves:
 
