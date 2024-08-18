@@ -48,7 +48,7 @@ _固有のメソッドはありませんが、親の {{domxref("HTMLElement")}} 
 - {{domxref("window.languagechange_event", "HTMLFrameSetElement.onlanguagechange")}}
   - : ユーザーが好む言語が変更されたとき発火します。
 - {{domxref("window.message_event", "HTMLFrameSetElement.onmessage")}}
-  - : ウインドウが (たとえば他のブラウジングコンテキストで [`Window.postMessage()`](/ja/docs/Web/API/Window/postMessage) を呼び出して送信された) メッセージを受信したとき発火します。
+  - : ウインドウが (たとえば他の閲覧コンテキストで [`Window.postMessage()`](/ja/docs/Web/API/Window/postMessage) を呼び出して送信された) メッセージを受信したとき発火します。
 - {{domxref("window.messageerror_event", "HTMLFrameSetElement.onmessageerror")}}
   - : ウインドウがデシリアライズできないメッセージを受信したとき発火します。
 - {{domxref("window.offline_event", "HTMLFrameSetElement.onoffline")}}
