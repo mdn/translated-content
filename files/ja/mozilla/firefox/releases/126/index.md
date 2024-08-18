@@ -68,7 +68,7 @@ l10n:
 
 #### WebDriver BiDi
 
-- ネットワーク要求の傍受を特定のトップレベルブラウジングコンテキストに限定するための `contexts` 引数を、`network.addIntercept` コマンドに追加しました ([Firefox bug 1882260](https://bugzil.la/1882260))。
+- ネットワーク要求の傍受を特定のトップレベル閲覧コンテキストに限定するための `contexts` 引数を、`network.addIntercept` コマンドに追加しました ([Firefox bug 1882260](https://bugzil.la/1882260))。
 - `session.subscribe` および `session.unsubscribe` コマンドで、`events` または `contexts` 引数の値が空の配列であるときに `invalid argument` エラーが発生するようになりました ([Firefox bug 1887871](https://bugzil.la/1887871))。
 - `storage.getCookies` コマンドの実装を、Gecko の既定の Cookie の動作に合わせて更新しました。これは CDP 実装だけが設定すると想定していた、設定項目 `network.cookie.cookieBehavior` のユーザー設定値を削除できます ([Firefox bug 1879503](https://bugzil.la/1879503))。
 - もはや必要ないため、`browsingContext.locateNodes` コマンドの `ownership` および `sandbox` 引数を削除しました ([Firefox bug 1884935](https://bugzil.la/1884935))。
