@@ -16,7 +16,7 @@ Cualquier valor (ambos objetos y {{Glossary("Primitive", "valores primitivos")}}
 
 Los objetos `Map` son colecciones de tuplas tipo llave-valor. Una llave en `Map` **puede aparecer solo una vez**; es única en la colección de `Map`. Un objeto `Map` es iterado por sus tuplas llave-valor —un bucle {{jsxref("Statements/for...of", "for...of")}} regresa un arreglo de `[llave, valor]` por cada iteración. La iteración sucede en _orden de inserción_, la cual corresponde al orden en el que cada tupla llave-valor fue incertada inicialmente en el map por el método [`set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set) (eso es, si no había una llave con el mismo valor en el map, cuando `set()` fué llamado).
 
-La especificación requiere que los maps sean implementados "que, en promedio, proporcione tiempos de acceso que sean sublineales al numero de elementos en la colección". Por lo tanto, podría ser representado internamente como una tabla hash (con una busqueda O(1)), un  árbol de búsqueda (con una busqueda de O(log(N))).
+La especificación requiere que los maps sean implementados "que, en promedio, proporcione tiempos de acceso que sean sublineales al numero de elementos en la colección". Por lo tanto, podría ser representado internamente como una tabla hash (con una busqueda O(1)), un árbol de búsqueda (con una busqueda de O(log(N))).
 
 ### Igualdad de llaves
 
@@ -222,7 +222,7 @@ El uso correcto para guardar datos en el objeto _Map_ es através de el método 
 const contacts = new Map();
 contacts.set("Jessie", {
   telefono: "213-555-1234",
-  direccion: "123 N 1st Ave" 
+  direccion: "123 N 1st Ave",
 });
 contacts.has("Jessie"); // true
 contacts.get("Hilary"); // undefined
