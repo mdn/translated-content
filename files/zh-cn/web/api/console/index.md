@@ -92,13 +92,13 @@ console.log(someObject);
 ```js
 const car = "道奇战马";
 const someObject = { str: "一些文本", id: 5 };
-console.info("我的第一量车是", car, "。该对象为：", someObject);
+console.info("我的第一辆车是", car, "。该对象为：", someObject);
 ```
 
 打印结果类似下面：
 
 ```plain
-我的第一量车是 道奇战马。该对象为： {str:"一些文本", id:5}
+我的第一辆车是 道奇战马。该对象为： {str:"一些文本", id:5}
 ```
 
 #### 使用字符串替换
