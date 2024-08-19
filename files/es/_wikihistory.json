@@ -5755,13 +5755,13 @@
     "modified": "2019-03-23T22:20:30.589Z",
     "contributors": ["AlePerez92"]
   },
+  "Web/API/console/timeEnd_static": {
+    "modified": "2020-10-15T22:13:11.825Z",
+    "contributors": ["xlhector10"]
+  },
   "Web/API/console/time_static": {
     "modified": "2019-03-18T21:42:22.745Z",
     "contributors": ["jotaoncode"]
-  },
-  "Web/API/console/timeend_static": {
-    "modified": "2020-10-15T22:13:11.825Z",
-    "contributors": ["xlhector10"]
   },
   "Web/API/console/trace_static": {
     "modified": "2019-03-23T22:22:51.545Z",
