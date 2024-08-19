@@ -18,9 +18,9 @@ l10n:
 ### HTML
 
 ```html
-<label id="label1" for="test">Label 1</label>
+<label id="label1" for="test">标签 1</label>
 <meter id="test" min="0" max="100" value="70">70</meter>
-<label id="label2" for="test">Label 2</label>
+<label id="label2" for="test">标签 2</label>
 ```
 
 ### JavaScript
@@ -29,7 +29,7 @@ l10n:
 window.addEventListener("DOMContentLoaded", () => {
   const meter = document.getElementById("test");
   for (const label of meter.labels) {
-    console.log(label.textContent); // "Label 1" 和 "Label 2"
+    console.log(label.textContent); // “标签 1”和“标签 2”
   }
 });
 ```

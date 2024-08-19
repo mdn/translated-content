@@ -13,7 +13,7 @@ HTML {{HTMLElement("meter")}} 元素暴露 **`HTMLMeterElement`** 接口，其�
 
 ## 实例属性
 
-_也继承了其父接口 {{domxref("HTMLElement")}} 的属性。_
+_还继承其父接口 {{domxref("HTMLElement")}} 的属性。_
 
 - {{domxref("HTMLMeterElement.high")}}
   - : 一个 `double` 表示高档部分的数值下限，反映 [`high`](/zh-CN/docs/Web/HTML/Element/meter#high) 属性。
