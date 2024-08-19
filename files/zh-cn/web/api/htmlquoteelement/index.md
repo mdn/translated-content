@@ -32,4 +32,4 @@ _无特定方法；从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 
 ## 参见
 
-- 实现此接口的 HTML 元素：{{HTMLElement("blockquote")}} 和 {{HTMLElement("q")}}，但不是 {{HTMLElement("cite")}}。
+- 实现此接口的 HTML 元素：{{HTMLElement("blockquote")}} 和 {{HTMLElement("q")}}，但不包括 {{HTMLElement("cite")}}。
