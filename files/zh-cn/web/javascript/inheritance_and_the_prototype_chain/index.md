@@ -337,7 +337,7 @@ console.log(doSomethingFromArrowFunction.prototype);
 
 如上所示，`doSomething()` 有一个默认的 `prototype` 属性（正如控制台所示）。运行这段代码后，控制台应该显示一个类似于下面的对象。
 
-```
+```plain
 {
   constructor: ƒ doSomething(),
   [[Prototype]]: {
@@ -365,7 +365,7 @@ console.log(doSomething.prototype);
 
 其结果为：
 
-```
+```plain
 {
   foo: "bar",
   constructor: ƒ doSomething(),
@@ -395,7 +395,7 @@ console.log(doSomeInstancing);
 
 这会产生类似于下面的输出：
 
-```
+```plain
 {
   prop: "some value",
   [[Prototype]]: {

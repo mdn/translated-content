@@ -284,7 +284,7 @@ WebVTT 的一个不太为人所知和支持的功能是通过 [CSS 扩展](https
 
 如果 WebVTT 文件使用 [voice span](https://w3c.github.io/webvtt/#dfn-webvtt-cue-voice-span)，它允许将提示定义为具有特定的“声音”：
 
-```
+```plain
 0
 00:00:00.000 --> 00:00:12.000
 <v Test>[Test]</v>

@@ -70,7 +70,7 @@ browser.alarms.onAlarm.addListener(copy);
 
 这种触发不一定成功，它取决于浏览器是否支持。Firefox 浏览器就不支持该功能，你会在浏览器控制台中看到以下信息：
 
-```
+```plain
 "document.execCommand(‘cut’/‘copy’) was denied because it was not called from inside a short running user-generated event handler."
 ```
 

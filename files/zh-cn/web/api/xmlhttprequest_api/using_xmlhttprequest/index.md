@@ -608,7 +608,7 @@ print_r($_FILES);
 
 激活这些代码的语法很简单：
 
-```
+```js
 AJAXSubmit(myForm);
 ```
 

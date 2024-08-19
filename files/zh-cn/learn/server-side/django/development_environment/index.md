@@ -219,7 +219,7 @@ source ~/.bashrc
 
 此时，你应该能看到一些脚本正在运行，如下所示：
 
-```
+```plain
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/premkproject
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postmkproject
 ...
