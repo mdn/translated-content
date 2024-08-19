@@ -44,7 +44,7 @@ Le constructeur peut renvoyer des exceptions:
 
 Si une erreur se produit lors de la tentative de connexion, un évènement nommé "error" est d'abord renvoyé à l'objet [`WebSocket`](/fr/docs/Web/API/WebSocket) (invoquant ainsi son gestionnaire d'évènement `onerror`) suivi d'un évènement [`CloseEvent`](/fr/docs/Web/API/CloseEvent) (qui invoque alors son gestionnaire d'évènement `onclose`) indiquant la raison de la clôture.
 
-A partir de Firefox 11, un message d'erreur descriptif est envoyé à la console de la plateforme Mozilla, et un code de fermeture tel que défini dans la [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) est envoyé à travers l'évènement [`CloseEvent`](/fr/docs/Web/API/CloseEvent).
+A partir de Firefox 11, un message d'erreur descriptif est envoyé à la console de la plateforme Mozilla, et un code de fermeture tel que défini dans la [RFC 6455, Section 7.4](https://datatracker.ietf.org/doc/html/rfc6455#section-7.4) est envoyé à travers l'évènement [`CloseEvent`](/fr/docs/Web/API/CloseEvent).
 
 ### Exemples
 
@@ -76,7 +76,7 @@ Dans les exemples ci-dessus on a remplacé `http` par `ws`, et de la même faço
 
 Une fois la connexion ouverte on peut commencer à tranférer des données vers le serveur en appelant la méthode [`send()`](/fr/docs/Web/API/WebSocket/send) de l'objet `WebSocket` pour chaque message que l'on veut envoyer :
 
-Les données peuvent être envoyées sous forme de chaîne {{ domxref("Blob") }} ou de [`ArrayBuffer`](/fr/docs/Web/API/JavaScript_typed_arrays/ArrayBuffer).
+Les données peuvent être envoyées sous forme de chaîne {{ domxref("Blob") }} ou de [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
 
 > [!NOTE]
 > Avant la version 11, Firefox supportait l'envoi de données uniquement sous forme de chaîne.
@@ -93,7 +93,7 @@ exampleSocket.onopen = function (event) {
 
 ### Utilisation de JSON pour transmettre des objets
 
-Il peut être utile d'utiliser [JSON](/fr/docs/Web/API/JSON) pour envoyer des données complexes au serveur. Par exemple, un programme de chat peut interagir avec un serveur en utilisant un protocole qui implémente l'échange de paquets contenant des données encapsulées en JSON:
+Il peut être utile d'utiliser [JSON](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON) pour envoyer des données complexes au serveur. Par exemple, un programme de chat peut interagir avec un serveur en utilisant un protocole qui implémente l'échange de paquets contenant des données encapsulées en JSON:
 
 ```js
 // Envoi d'un texte à tous les utilisateurs à travers le serveur
@@ -183,7 +183,7 @@ exampleSocket.onmessage = function (event) {
 };
 ```
 
-Ici nous utilisons [`JSON.parse()`](/fr/docs/Web/API/JavaScript/Reference/Global_Objects/JSON/parse) pour convertir l'objet JSON en l'objet original, avant de l'examiner et le traiter.
+Ici nous utilisons [`JSON.parse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) pour convertir l'objet JSON en l'objet original, avant de l'examiner et le traiter.
 
 ### Encodage du texte
 
