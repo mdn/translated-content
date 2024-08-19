@@ -74,7 +74,7 @@ Dans les exemples ci-dessus on a remplacé `http` par `ws`, et de la même faço
 
 ## Envoi de données vers le serveur
 
-Une fois la connexion ouverte on peut commencer à tranférer des données vers le serveur en appelant la méthode [`send()`](/fr/docs/Web/API/WebSocket#send) de l'objet `WebSocket` pour chaque message que l'on veut envoyer :
+Une fois la connexion ouverte on peut commencer à tranférer des données vers le serveur en appelant la méthode [`send()`](/fr/docs/Web/API/WebSocket/send) de l'objet `WebSocket` pour chaque message que l'on veut envoyer :
 
 Les données peuvent être envoyées sous forme de chaîne {{ domxref("Blob") }} ou de [`ArrayBuffer`](/fr/docs/Web/API/JavaScript_typed_arrays/ArrayBuffer).
 
@@ -193,7 +193,7 @@ Avant Gecko 9.0, certains charactères spéciaux dans une chaîne UTF-8 provoqua
 
 ## Fermeture de la connexion
 
-Quand on n'a plus besoin de la connexion WebSocket, on appelle la méthode [`close()`](/fr/docs/Web/API/WebSocket#close) de l'objet WebSocket:
+Quand on n'a plus besoin de la connexion WebSocket, on appelle la méthode [`close()`](/fr/docs/Web/API/WebSocket/close) de l'objet WebSocket:
 
 ```js
 exampleSocket.close();
