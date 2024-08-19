@@ -13,24 +13,24 @@ l10n:
 
 ## 实例属性
 
-_从其父接口 {{domxref("HTMLElement")}} 继承属性。_
+_还从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 - {{domxref("HTMLOutputElement.defaultValue")}}
-  - : 一个表示元素默认值的字符串，初始化是空值。
+  - : 一个表示元素默认值的字符串，初始为空字符串。
 - {{domxref("HTMLOutputElement.form")}} {{ReadOnlyInline}}
-  - : 一个 {{domxref("HTMLFormElement")}} 表示与控件关联的表单，如果定义了 [`form`](/zh-CN/docs/Web/HTML/Element/output#form) HTML 属性，则反映该属性。
+  - : 一个表示与控件关联的表单的 {{domxref("HTMLFormElement")}}，如果定义了 [`form`](/zh-CN/docs/Web/HTML/Element/output#form) HTML 属性，则反映该属性。
 - {{domxref("HTMLOutputElement.htmlFor")}} {{ReadOnlyInline}}
   - : 一个 {{domxref("DOMTokenList")}} 反映 [`for`](/zh-CN/docs/Web/HTML/Element/output#for) HTML 属性，包含同一文档中有助于（或以其它方式影响）计算出 `value` 的其它元素的 ID 列表。
 - {{domxref("HTMLOutputElement.labels")}} {{ReadOnlyInline}}
-  - : 一个与此元素有关联的 {{HTMLElement("label")}} 元素的 {{domxref("NodeList")}}。
+  - : 一个包含与此元素有关联的 {{HTMLElement("label")}} 元素的 {{domxref("NodeList")}}。
 - {{domxref("HTMLOutputElement.name")}}
   - : 一个反映 [`name`](/zh-CN/docs/Web/HTML/Element/output#name) HTML 属性的字符串，包含与表单数据一起提交的控件的名称。
 - {{domxref("HTMLOutputElement.type")}} {{ReadOnlyInline}}
   - : 字符串“`output`”。
 - {{domxref("HTMLOutputElement.validationMessage")}} {{ReadOnlyInline}}
-  - : 一个表示本地化消息的字符串，该消息描述控件不满足的约束验证（如果有的话）。如果控件不是约束验证（`willValidate` 是 `false`）的候选者，或者它满足其约束，则此字符串为空。
+  - : 一个表示本地化消息的字符串，该消息描述控件不满足的约束验证（如果有的话）。如果控件不是约束验证的候选项（`willValidate` 是 `false`），或者它满足其约束，则此字符串为空。
 - {{domxref("HTMLOutputElement.validity")}} {{ReadOnlyInline}}
-  - : 一个 {{domxref("ValidityState")}} 表示此元素所处的有效性状态。
+  - : 一个表示此元素所处的有效性状态的 {{domxref("ValidityState")}}。
 - {{domxref("HTMLOutputElement.value")}}
   - : 一个表示元素内容值的字符串。行为类似 {{domxref("Node.textContent")}} 属性。
 - {{domxref("HTMLOutputElement.willValidate")}} {{ReadOnlyInline}}
@@ -38,13 +38,13 @@ _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 ## 实例方法
 
-_从其父接口 {{domxref("HTMLElement")}} 继承方法。_
+_还从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 
 - {{domxref("HTMLOutputElement.checkValidity()")}}
   - : 检查元素的有效性，返回一个保存检查结果的布尔值。
 - {{domxref("HTMLOutputElement.reportValidity()")}}
 
-  - : 此方法报告元素约束的问题，如果有的话，报给用户。如果有问题，在元素处触发 {{domxref("HTMLInputElement/invalid_event", "invalid")}} 事件，且返回 `false`；如果没有问题，则返回`true`。
+  - : 此方法报告元素约束的问题，如果有的话，报给用户。如果有问题，在当前元素上触发 {{domxref("HTMLInputElement/invalid_event", "invalid")}} 事件，且返回 `false`；如果没有问题，则返回 `true`。
 
     当报告问题时，用户代理可以聚焦元素并更改文档的滚动位置，或执行一些其它动作来引起用户的注意。如果此元素同时出现多个问题，用户代理可能报告多个约束违规。如果元素没有渲染，则用户代理可能报告正在允许的脚本错误，而不是通知用户。
 
@@ -65,7 +65,7 @@ _从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 
 ### 值模式
 
-当设置 `value` 属性内容时，元素进入值模式。`value` 属性在其他方面的行为类似 {{domxref("Node.textContent","textContent")}} 属性。当元素处于值模式，仅可通过 `defaultValue` 属性访问默认值。
+当设置 `value` 属性内容时，元素进入值模式。`value` 属性在其他方面的行为类似于 {{domxref("Node.textContent","textContent")}} 属性。当元素处于值模式，仅可通过 `defaultValue` 属性访问默认值。
 
 ## 规范
 

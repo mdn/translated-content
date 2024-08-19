@@ -19,7 +19,7 @@ l10n:
 
 ```html
 <label id="label1" for="test">标签 1</label>
-<output id="test">Output</output>
+<output id="test">输出</output>
 <label id="label2" for="test">标签 2</label>
 ```
 
