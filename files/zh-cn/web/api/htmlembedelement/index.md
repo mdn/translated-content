@@ -19,7 +19,7 @@ l10n:
 _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 - {{domxref("HTMLEmbedElement.align")}} {{deprecated_inline}}
-  - : 表示枚举属性的字符串，指示元素内容相对于周围上下文的对齐。可能的值有：`"left"`、`"right"`、`"center"` 和 `"justify"`。
+  - : 表示枚举属性的字符串，指示元素内容相对于周围上下文的对齐方式。可能的值有：`"left"`、`"right"`、`"center"` 和 `"justify"`。
 - {{domxref("HTMLEmbedElement.height")}}
   - : 一个反映 [`height`](/zh-CN/docs/Web/HTML/Element/embed#height) HTML 属性的字符串，包含资源显示的高度。
 - {{domxref("HTMLEmbedElement.name")}} {{deprecated_inline}}

@@ -22,7 +22,7 @@ l10n:
   src="movie.mov"
   width="640"
   height="480"
-  title="Title of my video" />
+  title="视频标题" />
 ```
 
 ```js

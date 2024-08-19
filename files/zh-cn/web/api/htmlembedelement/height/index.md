@@ -7,11 +7,11 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLEmbedElement")}} 接口的 **`height`** 属性返回一个反映 {{HTMLElement("embed")}} 元素的 `height` 属性的字符串，其以 CSS 像素为单位指定资源的显示高度。
+{{domxref("HTMLEmbedElement")}} 接口的 **`height`** 属性返回一个反映 {{HTMLElement("embed")}} 元素的 `height` 属性的字符串，其以 CSS 像素为单位指示资源的显示高度。
 
 ## 值
 
-一个字符串，以 CSS 像素为单位指定资源的显示高度。
+一个字符串，以 CSS 像素为单位指示资源的显示高度。
 
 ## 示例
 
