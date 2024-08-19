@@ -3,7 +3,7 @@ title: console
 slug: Web/API/console
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
 **`console`** 对象提供了浏览器控制台调试的接口（如：Firefox 的 [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)）。在不同浏览器上它的工作方式可能不一样，但通常都会提供一套共性的功能。
 
@@ -13,19 +13,15 @@ slug: Web/API/console
 console.log("Failed to open the specified link");
 ```
 
-本页面记录了 `console` 对象上的[方法](#方法)并给出了几个 [Usage](#usage) （用例）。
-
-{{AvailableInWorkers}}
-
-## 方法
+## 实例方法
 
 - {{domxref("console/assert_static", "console.assert()")}}
-  - : 如果第一个参数为 `false` ，则将消息和堆栈跟踪记录到控制台。
+  - : 如果第一个参数为 `false`，则将消息和堆栈跟踪记录到控制台。
 - {{domxref("console.clear_static", "console.clear()")}}
-  - : 清空控制台，并输出 `Console was cleared`。
+  - : 清空控制台。
 - {{domxref("console.count_static", "console.count()")}}
   - : 以参数为标识记录调用的次数，调用时在控制台打印标识以及调用次数。
-- {{domxref("console.countreset_static", "console.countReset()")}}
+- {{domxref("console.countReset_static", "console.countReset()")}}
   - : 重置指定标签的计数器值。
 - {{domxref("console.debug_static", "console.debug()")}}
   - : 在控制台打印一条 `"debug"` 级别的消息。
@@ -39,9 +35,9 @@ console.log("Failed to open the specified link");
   - : `error()` 方法的别称。
 - {{domxref("console.group_static", "console.group()")}}
   - : 创建一个新的内联[分组](#在_console_中使用编组), 后续所有打印内容将会以子层级的形式展示。调用 `groupEnd()`来闭合组。
-- {{domxref("console.groupcollapsed_static", "console.groupCollapsed()")}}
+- {{domxref("console.groupCollapsed_static", "console.groupCollapsed()")}}
   - : 创建一个新的内联[分组](#在_console_中使用编组)。使用方法和 `group()` 相同，不同的是，`groupCollapsed()` 方法打印出来的内容默认是折叠的。调用`groupEnd()`来闭合组。
-- {{domxref("console.groupend_static", "console.groupEnd()")}}
+- {{domxref("console.groupEnd_static", "console.groupEnd()")}}
   - : 闭合当前内联[分组](#在_console_中使用编组)。
 - {{domxref("console.info_static", "console.info()")}}
   - : 打印资讯类说明信息，使用方法可以参考[使用字符串替换](#使用字符串替换)。
@@ -49,17 +45,17 @@ console.log("Failed to open the specified link");
   - : 打印内容的通用方法，使用方法可以参考[使用字符串替换](#使用字符串替换)。
 - {{domxref("console.profile_static", "console.profile()")}} {{Non-standard_inline}}
   - : Starts the browser's built-in profiler (for example, the [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)). You can specify an optional name for the profile.
-- {{domxref("console.profileend_static", "console.profileEnd()")}} {{Non-standard_inline}}
+- {{domxref("console.profileEnd_static", "console.profileEnd()")}} {{Non-standard_inline}}
   - : Stops the profiler. You can see the resulting profile in the browser's performance tool (for example, the [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)).
 - {{domxref("console.table_static", "console.table()")}}
   - : 将列表型的数据打印成表格。
 - {{domxref("console.time_static", "console.time()")}}
   - : 启动一个以入参作为特定名称的[定时器](#定时器)，在显示页面中可同时运行的定时器上限为 10,000.
-- {{domxref("console.timeend_static", "console.timeEnd()")}}
+- {{domxref("console.timeEnd_static", "console.timeEnd()")}}
   - : 结束特定的[定时器](#定时器)并以毫秒打印其从开始到结束所用的时间。
-- {{domxref("console.timelog_static", "console.timeLog()")}}
+- {{domxref("console.timeLog_static", "console.timeLog()")}}
   - : 打印特定[定时器](#定时器)所运行的时间。
-- {{domxref("console.timestamp_static", "console.timeStamp()")}} {{Non-standard_inline}}
+- {{domxref("console.timeStamp_static", "console.timeStamp()")}} {{Non-standard_inline}}
   - : 添加一个标记到浏览器的 [Timeline](https://developer.chrome.com/devtools/docs/timeline) 或 [Waterfall](https://profiler.firefox.com/docs/) 工具。
 - {{domxref("console.trace_static", "console.trace()")}}
   - : 输出[堆栈跟踪](#堆栈跟踪)。
@@ -76,17 +72,17 @@ console 对象中较多使用的主要有四个方法 {{domxref("console.log_sta
 
 #### 打印单个对象
 
-The simplest way to use the logging methods is to output a single object:
+使用日志记录方法的最简单方式是输出单个对象：
 
 ```js
-var someObject = { str: "Some text", id: 5 };
+const someObject = { str: "一些文本", id: 5 };
 console.log(someObject);
 ```
 
 打印结果类似下面：
 
-```
-[09:27:13.475] ({str:"Some text", id:5})
+```plain
+{str:"一些文本", id:5}
 ```
 
 #### 打印多个对象
@@ -94,15 +90,15 @@ console.log(someObject);
 可以打印多个对象，就像下面一样：
 
 ```js
-var car = "Dodge Charger";
-var someObject = { str: "Some text", id: 5 };
-console.info("My first car was a", car, ". The object is:", someObject);
+const car = "道奇战马";
+const someObject = { str: "一些文本", id: 5 };
+console.info("我的第一辆车是", car, "。该对象为：", someObject);
 ```
 
 打印结果类似下面：
 
-```
-[09:28:22.711] My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
+```plain
+我的第一辆车是 道奇战马。该对象为： {str:"一些文本", id:5}
 ```
 
 #### 使用字符串替换
@@ -121,20 +117,20 @@ console.info("My first car was a", car, ". The object is:", someObject);
 
 当要替换的参数类型和预期的打印类型不同时，参数会被转换成预期的打印类型。
 
-```
-for (var i=0; i<5; i++) {
-  console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
+```js
+for (let i = 0; i < 5; i++) {
+  console.log("你好，%s。你已经联系我 %d 次了。", "小明", i + 1);
 }
 ```
 
 输出样例如下所示：
 
-```
-[13:14:13.481] Hello, Bob. You've called me 1 times.
-[13:14:13.483] Hello, Bob. You've called me 2 times.
-[13:14:13.485] Hello, Bob. You've called me 3 times.
-[13:14:13.487] Hello, Bob. You've called me 4 times.
-[13:14:13.488] Hello, Bob. You've called me 5 times.
+```plain
+你好，小明。你已经联系我 1 次了。
+你好，小明。你已经联系我 2 次了。
+你好，小明。你已经联系我 3 次了。
+你好，小明。你已经联系我 4 次了。
+你好，小明。你已经联系我 5 次了。
 ```
 
 #### 为控制台定义样式
@@ -148,7 +144,9 @@ console.log(
 );
 ```
 
-指令前的文本不会受到影响，但指令后的文本将会使用参数中声明的 CSS 样式。![](css-styling.png)
+指令前的文本不会受到影响，但指令后的文本将会使用参数中声明的 CSS 样式。
+
+![Firefox 控制台中添加了样式的文本](css-styling.png)
 
 `%c` 语法可用的属性如下 (至少在 Firefox 中是这样，别的浏览器会有诸多不同）：
 
@@ -171,7 +169,8 @@ console.log(
 - {{cssxref("word-spacing")}} 和 {{cssxref("word-break")}}
 - {{cssxref("writing-mode")}}
 
-**注意**：控制台信息的默认行为与行内元素相似。为了应用 `padding`、`margin` 这类效果，你应当这样设置`display: inline-block`。
+> [!NOTE]
+> 控制台信息的默认行为与行内元素相似。为了应用 `padding`、`margin` 这类效果，你应当将 `display` 属性设置为 `display: inline-block`。
 
 ### 在 console 中使用编组
 
@@ -194,7 +193,7 @@ console.debug("Back to the outer level");
 
 执行结果：
 
-![Demo of nested groups in Firefox console](console_groups_demo.png)
+![Firefox 控制台中的嵌套编组演示](console_groups_demo.png)
 
 ### 计时器
 
@@ -212,7 +211,7 @@ console.timeEnd("answer time");
 
 这段代码将会打印需要用户关闭 alert box 的时间，打印时间到控制台上，等用户关闭第二个 alert 后，把结束时间打印到控制台。
 
-![timerresult.png](console-timelog.png)
+![Firefox 控制台的时间记录](console-timelog.png)
 
 注意无论在开始还是结束的时候都会打印计时器的名字。
 
@@ -236,7 +235,7 @@ foo();
 
 控制台的输出：
 
-![](api-trace2.png)
+![Firefox 控制台的堆栈跟踪](api-trace2.png)
 
 ## 规范
 
