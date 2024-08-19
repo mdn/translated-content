@@ -32,7 +32,7 @@ slug: Learn/HTML/Introduction_to_HTML/Getting_started
 
 {{glossary("HTML")}}（Hypertext Markup Language）並不是一種程式語言，而是用來告訴瀏覽器該如何呈現網頁的**標記式語言**（markup language）。它可以很複雜也可以很陽春，端看網頁開發者如何構思。HTML 由一系列的元素（{{glossary("Element", "elements")}}）組成，你將利用它們來圍住、包裹，或者說標記（mark up）網頁中的每個部分，使它們在外表或行為上呈現某種特定風貌。被標籤（{{glossary("Tag", "tags")}}）包住的內容會變成超連結，或者斜體字，以及諸如此類的功能，舉例來說，請看下列內容：
 
-```
+```plain
 My cat is very grumpy
 ```
 
