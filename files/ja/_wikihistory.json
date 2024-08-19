@@ -15115,13 +15115,13 @@
     "modified": "2020-11-27T13:49:44.683Z",
     "contributors": ["yumetodo", "853419196", "yyss"]
   },
+  "Web/API/console/countReset_static": {
+    "modified": "2020-11-27T14:37:31.289Z",
+    "contributors": ["yumetodo"]
+  },
   "Web/API/console/count_static": {
     "modified": "2020-11-27T14:24:35.469Z",
     "contributors": ["yumetodo", "yyss"]
-  },
-  "Web/API/console/countreset_static": {
-    "modified": "2020-11-27T14:37:31.289Z",
-    "contributors": ["yumetodo"]
   },
   "Web/API/console/debug_static": {
     "modified": "2020-11-27T14:40:02.073Z",
@@ -15131,35 +15131,35 @@
     "modified": "2019-03-23T22:34:53.031Z",
     "contributors": ["yyss"]
   },
-  "Web/API/console/group_static": {
-    "modified": "2020-10-15T21:45:35.788Z",
-    "contributors": ["munieru_jp", "dskmori", "yyss"]
-  },
-  "Web/API/console/groupcollapsed_static": {
+  "Web/API/console/groupCollapsed_static": {
     "modified": "2019-03-23T22:34:55.714Z",
     "contributors": ["yyss"]
   },
-  "Web/API/console/groupend_static": {
+  "Web/API/console/groupEnd_static": {
     "modified": "2019-03-23T22:34:56.119Z",
     "contributors": ["yyss"]
+  },
+  "Web/API/console/group_static": {
+    "modified": "2020-10-15T21:45:35.788Z",
+    "contributors": ["munieru_jp", "dskmori", "yyss"]
   },
   "Web/API/console/info_static": {
     "modified": "2020-10-15T21:45:37.023Z",
     "contributors": ["u_7cc", "yyss"]
   },
-  "Web/API/console/profile_static": {
-    "modified": "2019-03-23T22:34:55.973Z",
+  "Web/API/console/profileEnd_static": {
+    "modified": "2019-03-23T22:34:42.618Z",
     "contributors": ["yyss"]
   },
-  "Web/API/console/profileend_static": {
-    "modified": "2019-03-23T22:34:42.618Z",
+  "Web/API/console/profile_static": {
+    "modified": "2019-03-23T22:34:55.973Z",
     "contributors": ["yyss"]
   },
   "Web/API/console/table_static": {
     "modified": "2019-03-23T22:34:44.337Z",
     "contributors": ["yyss"]
   },
-  "Web/API/console/timestamp_static": {
+  "Web/API/console/timeStamp_static": {
     "modified": "2019-03-23T22:34:51.368Z",
     "contributors": ["yyss"]
   },
