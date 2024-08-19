@@ -32,9 +32,9 @@ _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
     | 常量      | 值  | 描述                                                                                                 |
     | --------- | --- | ---------------------------------------------------------------------------------------------------- |
     | `NONE`    | 0   | 表示尚未获得文本轨道的提示。                                                                         |
-    | `LOADING` | 1   | 表示正在加载文本轨道，到目前为止还没有遇到致命错误。解析器可能湘轨道中添加更多线索。                 |
+    | `LOADING` | 1   | 表示正在加载文本轨道，到目前为止还没有遇到致命错误。解析器可能湘轨道中添加更多提示。                 |
     | `LOADED`  | 2   | 表示已加载文本轨道，没有出现致命错误。                                                               |
-    | `ERROR`   | 3   | 表示文本轨道已启用，但当用户代理尝试获取它时，以某种方式失败了。部分或全部线索可能丢失，且无法获得。 |
+    | `ERROR`   | 3   | 表示文本轨道已启用，但当用户代理尝试获取它时，以某种方式失败了。部分或全部提示可能丢失，且无法获得。 |
 
 - {{domxref("HTMLTrackElement.track")}} {{ReadOnlyInline}}
   - : 返回 {{Domxref("TextTrack")}} 是轨道元素的文本轨道数据。
@@ -50,7 +50,7 @@ _从其父接口 {{domxref("HTMLElement")}} 继承事件。_
 使用 {{domxref("EventTarget/addEventListener", "addEventListener()")}} 或为此接口的 `oneventname` 属性分配一个事件监听器来监听这些事件：
 
 - {{domxref("HTMLTrackElement.cuechange_event", "cuechange")}}
-  - : 当隐含的 {{domxref("TextTrack")}} 更改了当前显示的提示时发送。此事件始终发送到 `TextTrack`，但如果与轨道关联，则*也*会发送到 `HTMLTrackElement`。你可以使用 `oncuechange` 事件处理程序为此事件建立处理程序。
+  - : 当底层的 {{domxref("TextTrack")}} 更改了当前呈现的提示时发送事件。此事件始终发送到 `TextTrack`，但如果与轨道关联，则*也*会发送到 `HTMLTrackElement`。你可以使用 `oncuechange` 事件为此事件建立处理器。
 
 ## 使用说明
 
