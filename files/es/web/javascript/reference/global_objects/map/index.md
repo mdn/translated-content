@@ -271,7 +271,7 @@ Los siguientes, son ejemplos de objetos de navegador similares a `Map`:
 
 ## Propiedades estáticas
 
-- [`Map[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
+- [`Map[Symbol.species]`](/es/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
   - : La función constructor que es usada para crear objetos derivados.
 
 ## Metodos estáticos
@@ -310,7 +310,7 @@ Estas propiedades están definidas en `Map.prototype` y las comparten todas las 
   - : Asigna el valor en el objeto `Map` para la llave pasada como argumento. Regresa el objeto `Map`.
 - {{jsxref("Map.prototype.values()")}}
   - : Regresa un nuevo objeto Iterador que contiene los valores para cada elemento en un objeto `Map`, en orden de inserción.
-- [`Map.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
+- [`Map.prototype[Symbol.iterator]()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
   - : Regresa un nuevo objeto Iterador que contiene un arreglo con dos miembros `[llave, valor]` por cada elemento en el objeto `Map`, en orden de inserción.
 
 ## Ejemplos
