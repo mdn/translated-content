@@ -11,7 +11,7 @@ l10n:
 
 ## 值
 
-一个字符串。对于有效的字符串格式，请参见 [`datetime` 有效值](/zh-CN/docs/Web/HTML/Element/time#valid_datetime_values)。
+一个字符串。对于有效的字符串格式，请参见 [`datetime` 有效值](/zh-CN/docs/Web/HTML/Element/time#有效的日期时间值)。
 
 ## 示例
 
