@@ -1763,7 +1763,7 @@
 /es/docs/Web/API/console/log	/es/docs/Web/API/console/log_static
 /es/docs/Web/API/console/table	/es/docs/Web/API/console/table_static
 /es/docs/Web/API/console/time	/es/docs/Web/API/console/time_static
-/es/docs/Web/API/console/timeEnd	/es/docs/Web/API/console/timeend_static
+/es/docs/Web/API/console/timeEnd	/es/docs/Web/API/console/timeEnd_static
 /es/docs/Web/API/console/trace	/es/docs/Web/API/console/trace_static
 /es/docs/Web/API/console/warn	/es/docs/Web/API/console/warn_static
 /es/docs/Web/API/crypto_property	/es/docs/Web/API/Window/crypto

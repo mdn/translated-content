@@ -1,6 +1,6 @@
 ---
 title: console：profileEnd() 静态方法
-slug: Web/API/console/profileend_static
+slug: Web/API/console/profileEnd_static
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
