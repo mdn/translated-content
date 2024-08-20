@@ -238,7 +238,7 @@ console.log(contacts.size); // 1
 **Objetos del Navegador similares a `Map`** (o "objetos que parecen _map_") son interfaces de la [API Web](/es/docs/Web/API) que se comportan en muchos aspectos como un objeto `Map`.
 
 Al igual que el objeto `Map`, las entradas pueden iterarse en el mismo orden en que fueron agregadas al objeto.
-Los objetos smimilares a `Map` y los objetos `Map` también tienen propiedades y métodos que comparten el mismo nombre y comportamiento. Sin embargo, contrario a los objetos `Map` estos sólo permiten tipos específicos predefinidos para las llaves y valores de cada entrada.
+Los objetos similares a `Map` y los objetos `Map` también tienen propiedades y métodos que comparten el mismo nombre y comportamiento. Sin embargo, contrario a los objetos `Map` estos sólo permiten tipos específicos predefinidos para las llaves y valores de cada entrada.
 
 Los tipos permitidos se encuentran en la especificación de la definición IDL (Interfaz de Descripcion del Lenguage). Por ejemplo, {{domxref("RTCStatsReport")}} es un objeto similar a `Map` que debe usar cadenas de caracteres para sus llaves, y objetos para sus valores. Esto está definido en la especificación IDL a continuación:
 
@@ -250,8 +250,8 @@ interface RTCStatsReport {
 
 Los objetos similares a `Map` son o de solo-lectura o lectura-escritura (véase la palabra clave `readonly` en el IDL de arriba).
 
-- Los obejtos similares a `Map` de solo-lectura tienen la propiedad [`size`](#map.prototype.size), y los métodos: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`get()`](#map.prototype.get), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), and [`[Symbol.iterator]()`](#map.prototypesymbol.iterator).
-- Los objetos similares a `Map` de lectura-escritura tienen métodos adicionales: [`clear()`](#map.prototype.clear), [`delete()`](#map.prototype.delete), and [`set()`](#map.prototype.set).
+- Los obejtos similares a `Map` de solo-lectura tienen la propiedad [`size`](#map.prototype.size), y los métodos: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`get()`](#map.prototype.get), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), y [`[Symbol.iterator]()`](#map.prototypesymbol.iterator).
+- Los objetos similares a `Map` de lectura-escritura tienen métodos adicionales: [`clear()`](#map.prototype.clear), [`delete()`](#map.prototype.delete), y [`set()`](#map.prototype.set).
 
 Los métodos y propiedades tienen el mismo comportamiento que las entidades equivalentes en el objeto `Map`, excepto por la restricción en los tipos de llaves y valores.
 
@@ -303,7 +303,7 @@ Estas propiedades están definidas en `Map.prototype` y las comparten todas las 
 - {{jsxref("Map.prototype.get()")}}
   - : Regresa el valor asociado a la llave que se pasa como argumento, o `undefined` si no hay ninguno.
 - {{jsxref("Map.prototype.has()")}}
-  - : Regresa un boleano indicando si, en el objeto `Map` un valor ha sido asociado a la llave pasada como argumento.
+  - : Regresa un booleano indicando si, en el objeto `Map` un valor ha sido asociado a la llave pasada como argumento.
 - {{jsxref("Map.prototype.keys()")}}
   - : Regresa un nuevo objeto Iterador que contiene las llaves para cada elemento en el objeto `Map`, en orden de inserción.
 - {{jsxref("Map.prototype.set()")}}
