@@ -2207,7 +2207,7 @@
     "modified": "2019-03-23T22:36:10.122Z",
     "contributors": ["yachiehwu", "alphan_chen"]
   },
-  "Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers": {
+  "Web/API/Navigator/registerProtocolHandler": {
     "modified": "2019-03-23T23:51:06.175Z",
     "contributors": ["chrisdavidmills", "teoli", "Coolcd"]
   },
