@@ -46,7 +46,7 @@ _日期时间值_（机器可读的日期时间值）是该元素的 `datetime` 
     <tr>
       <td>有效月份字符串</td>
       <td><code><em>YYYY</em>-<em>MM</em></code></td>
-      <td><code>2011-11</code>, <code>2013-05</code></td>
+      <td><code>2011-11</code>、<code>2013-05</code></td>
     </tr>
     <tr>
       <td>有效日期字符串</td>
@@ -127,7 +127,7 @@ _日期时间值_（机器可读的日期时间值）是该元素的 `datetime` 
     <tr>
       <td>四个或更多 ACSII 数字</td>
       <td><code><em>YYYY</em></code></td>
-      <td><code>2013</code>, <code>0001</code></td>
+      <td><code>2013</code>、<code>0001</code></td>
     </tr>
     <tr>
       <td>有效的持续时间字符串</td>
