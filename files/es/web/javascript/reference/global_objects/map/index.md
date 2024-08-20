@@ -127,7 +127,7 @@ Sin embargo, hay diferencias importantes que hacen que se prefiera a `Map` en al
           >, por eso los objetos no son directamente iterables usando la sentencia de JavaScript
           <a href="/es/docs/Web/JavaScript/Reference/Statements/for...of"
             >for...of</a
-          >.
+          > (por defecto).
         </p>
         <div class="notecard note">
           <p><strong>Nota:</strong></p>
