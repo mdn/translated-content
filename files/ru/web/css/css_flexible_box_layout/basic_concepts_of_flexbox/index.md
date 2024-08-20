@@ -34,7 +34,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 
 Побочная ось проходит перпендикулярно главной оси, поэтому, если свойство `flex-direction` (главная ось) задано как `row` или `row-reverse`, побочная ось будет проходить в вертикальном направлении.
 
-![If flex-direction is set to row then the cross axis runs in the block direction.](basics3.svg)
+![Если для flex-direction задано значение row, то побочная ось проходит в вертикальном направлении.](basics3.svg)
 
 Если свойство `flex-direction` задано как `column` или `column-reverse`, побочная ось будет проходить в горизонтальном направлении.
 
