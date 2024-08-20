@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("Date")}} 方法是 **`setUTCHours()`** 实例的方法，用于根据世界协调时（UTC）更改日期对象的小时、分钟、秒或毫秒。
+{{jsxref("Date")}} 实例的 **`setUTCHours()`** 方法用于根据世界协调时更改日期对象的小时、分钟、秒或毫秒。
 
 {{EmbedInteractiveExample("pages/js/date-setutchours.html")}}
 
@@ -29,14 +29,11 @@ setUTCHours(hoursValue, minutesValue, secondsValue, msValue)
 - `secondsValue` {{optional_inline}}
   - : 0 到 59 之间的整数，代表秒数。如果指定了 `secondsValue`，则必须同时指定 `minutesValue`。
 - `msValue` {{optional_inline}}
-  - : 0 到 999 之间的整数，表示毫秒数。
-  - 如果指定了 `msValue`，则必须同时指定 `minutesValue` 和 `secondsValue`。
+  - : 0 到 999 之间的整数，表示毫秒数。如果指定了 `msValue`，则必须同时指定 `minutesValue` 和 `secondsValue`。
 
 ### 返回值
 
-该方法会直接修改 {{jsxref("Date")}} 对象，并返回其新的[时间戳](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#时代_时间戳和无效日期)。
-
-如果参数为 `NaN`（或其他会被[强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)为 `NaN`，例如 `undefined`），则日期会被设置为[无效日期](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#时代_时间戳和无效日期)，并返回 `NaN`。
+该方法会原地修改 {{jsxref("Date")}} 对象，并返回其新的[时间戳](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#纪元、时间戳和无效日期)。如果参数为 `NaN`（或其他会被[强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)为 `NaN` 的值，例如 `undefined`），则日期会被设置为[无效日期](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#纪元、时间戳和无效日期)，并返回 `NaN`。
 
 ## 描述
 
