@@ -4744,10 +4744,6 @@
     "modified": "2019-03-23T23:53:04.318Z",
     "contributors": ["fscholz", "khalid32", "Nukeador", "HenryGR", "Mgjbot"]
   },
-  "Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers": {
-    "modified": "2019-03-23T22:06:43.969Z",
-    "contributors": ["chrisdavidmills", "AngelFQC"]
-  },
   "Web/API/Navigator/vibrate": {
     "modified": "2019-03-23T23:32:23.651Z",
     "contributors": ["fscholz", "jsx", "mmednik"]
@@ -14045,6 +14041,10 @@
   "conflicting/Web/API/IndexedDB_API": {
     "modified": "2019-03-18T21:11:08.379Z",
     "contributors": ["duduindo", "teoli", "semptrion", "CHORVAT", "inma_610"]
+  },
+  "conflicting/Web/API/Navigator/registerProtocolHandler": {
+    "modified": "2019-03-23T22:06:43.969Z",
+    "contributors": ["chrisdavidmills", "AngelFQC"]
   },
   "conflicting/Web/API/Node": {
     "modified": "2019-03-23T22:08:57.260Z",
