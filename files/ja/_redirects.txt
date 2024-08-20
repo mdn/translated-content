@@ -2566,7 +2566,7 @@
 /ja/docs/Using_web_workers	/ja/docs/Web/API/Web_Workers_API/Using_web_workers
 /ja/docs/View_source	https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html
 /ja/docs/WOFF	/ja/docs/Web/CSS/CSS_fonts/WOFF
-/ja/docs/Web-based_protocol_handlers	/ja/docs/conflicting/Web/API/Navigator/registerProtocolHandler
+/ja/docs/Web-based_protocol_handlers	/ja/docs/Web/API/Navigator/registerProtocolHandler
 /ja/docs/Web-d/Guide/CSS/Getting_started	/ja/docs/Learn/CSS
 /ja/docs/Web-d/Guide/CSS/Getting_started/Boxes	/ja/docs/Learn/CSS/Building_blocks/The_box_model
 /ja/docs/Web-d/Guide/CSS/Getting_started/Cascading_and_inheritance	/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
@@ -2971,7 +2971,7 @@
 /ja/docs/Web/API/Navigator/Online_and_offline_events	/ja/docs/Web/API/Navigator/onLine
 /ja/docs/Web/API/Navigator/battery	/ja/docs/Web/API/Navigator/getBattery
 /ja/docs/Web/API/Navigator/mozIsLocallyAvailable	/ja/docs/Web/API/Navigator
-/ja/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers	/ja/docs/conflicting/Web/API/Navigator/registerProtocolHandler
+/ja/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers	/ja/docs/Web/API/Navigator/registerProtocolHandler
 /ja/docs/Web/API/NavigatorID	/ja/docs/Web/API/Navigator
 /ja/docs/Web/API/NavigatorID/appCodeName	/ja/docs/Web/API/Navigator/appCodeName
 /ja/docs/Web/API/NavigatorID/appName	/ja/docs/Web/API/Navigator/appName
