@@ -161,7 +161,7 @@ ctx.fill();
 我们开始探索一些特定的循环结构。第一个，你会经常使用到它，for 循环 - 以下为 for 循环的语法：
 
 ```plain
-for (initializer; exit-condition; final-expression) {
+for (initializer; condition; final-expression) {
   // code to run
 }
 ```
@@ -445,7 +445,7 @@ Here's the output:
 
 ```plain
 initializer
-while (exit-condition) {
+while (condition) {
   // code to run
 
   final-expression
@@ -483,7 +483,7 @@ do {
   // code to run
 
   final-expression
-} while (exit-condition)
+} while (condition)
 ```
 
 在这种情况下，在循环开始之前，初始化程序先重新开始。do 关键字直接在包含要运行的代码的花括号和终止条件之前。
