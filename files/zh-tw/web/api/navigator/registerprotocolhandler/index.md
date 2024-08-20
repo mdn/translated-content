@@ -1,6 +1,7 @@
 ---
 title: Firefox 3 Web-based protocol handler
-slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
+slug: Web/API/Navigator/registerProtocolHandler
+original_slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 ---
 
 ### 摘要
