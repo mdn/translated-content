@@ -1,22 +1,20 @@
 ---
-title: Firefox 3 Web-based protocol handler
+title: Navigator：registerProtocolHandler() 方法
 slug: Web/API/Navigator/registerProtocolHandler
-original_slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 ---
 
-### 摘要
+{{APIRef("HTML DOM")}}{{securecontext_header}}
 
-window\.navigator.registerProtocolHandler 讓網站可以將自己註冊為特定通訊協定的處理者。
+**{{domxref("Navigator")}}** 的 **`registerProtocolHandler()`** 方法讓網站可以將自己註冊為特定通訊協定的處理者。
 
-### 語法
+## 語法
 
-```plain
-window.navigator.registerProtocolHandler(protocol, uri, title);
+```js-nolint
+registerProtocolHandler(scheme, url)
 ```
 
 - protocol 是網站想要處理的 protocol 名稱，用字串表示。
 - uri 是要給 handler 處理的 URI 字串。你可以在字串裡用 "%s" 來代表 escaped 過、需要處理的 URI。
-- title 是 handler 的 title，會以字串的形式呈現給使用者。
 
 ### 例子
 
