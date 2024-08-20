@@ -161,7 +161,7 @@ Sin embargo, hay diferencias importantes que hacen que se prefiera a `Map` en al
       </td>
       <td>
         <p>
-          No esta optimizado para addiciones y eliminaciones frequentes de tuplas llave-valor.
+          No está optimizado para adiciones y eliminaciones frequentes de tuplas llave-valor.
         </p>
       </td>
     </tr>
