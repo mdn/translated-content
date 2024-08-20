@@ -38,7 +38,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 
 Если свойство `flex-direction` задано как `column` или `column-reverse`, побочная ось будет проходить в горизонтальном направлении.
 
-![If flex-direction is set to column then the cross axis runs in the inline direction.](basics4.svg)
+![Если для flex-direction задано значение column, то поперечная ось проходит в горизонтальном направлении.](basics4.svg)
 
 Понимание того, с какой осью вы работаете (главная или побочная) очень важно для дальнейшего изучения Flexbox.
 
