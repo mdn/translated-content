@@ -32562,9 +32562,5 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
-  },
-  "conflicting/Web/API/Navigator/registerProtocolHandler": {
-    "modified": "2019-03-23T23:20:07.432Z",
-    "contributors": ["chrisdavidmills", "ObooChin", "jtyjty99999"]
   }
 }
