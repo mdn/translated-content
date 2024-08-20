@@ -30264,16 +30264,6 @@
     "modified": "2020-10-15T22:18:26.930Z",
     "contributors": ["Wind1808"]
   },
-  "conflicting/Web/API/Navigator/registerProtocolHandler": {
-    "modified": "2019-03-23T23:53:21.069Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "ethertank",
-      "Mgjbot",
-      "Potappo"
-    ]
-  },
   "conflicting/Web/API/SyncEvent": {
     "modified": "2020-10-15T22:32:47.070Z",
     "contributors": ["eltociear"]
