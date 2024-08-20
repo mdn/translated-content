@@ -62,7 +62,7 @@ Sin embargo, hay diferencias importantes que hacen que se prefiera a `Map` en al
       <td>
         <p>
           Asignar tuplas de llave-valor proporcionadas por el usuario en un <code>Object</code> puede
-          perimitr a un atacante sobreescribir el prototipo del objeto, lo que puede llevar a
+          permitir a un atacante sobreescribir el prototipo del objeto, lo que puede llevar a
           <a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">
             ataques de inyección de objetos
           </a>. Al igual que el problema con la colisión de llaves, esto se puede mitigar usando un objeto con prototipo-<code>null</code>
