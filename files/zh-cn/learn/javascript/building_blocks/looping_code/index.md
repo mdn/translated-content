@@ -158,11 +158,11 @@ ctx.fill();
 
 ## 循环的标准
 
-我们开始探索一些特定的循环结构。第一个，你会经常使用到它，for 循环 - 以下为 for 循环的语法：
+我们开始探索一些特定的循环结构。第一个，你会经常使用到它，for 循环——以下为 for 循环的语法：
 
-```plain
-for (initializer; exit-condition; final-expression) {
-  // code to run
+```js-nolint
+for (initializer; condition; final-expression) {
+  // 要运行的代码
 }
 ```
 
@@ -437,16 +437,16 @@ Here's the output:
 > [!NOTE]
 > 你可以[在 GitHub 上查看完整代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html)，或者[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)。
 
-## while 语句和 do ... while 语句
+## while 语句和 do...while 语句
 
 `for` 不是 JavaScript 中唯一可用的循环类型。实际上还有很多其他的，而现在你不需要理解所有这些，所以值得看几个人的结构，这样你就可以在稍微不同的方式识别出相同的功能。
 
 首先，我们来看看 while 循环。这个循环的语法如下所示：
 
-```plain
+```js-nolint
 initializer
-while (exit-condition) {
-  // code to run
+while (condition) {
+  // 要运行的代码
 
   final-expression
 }
@@ -477,13 +477,13 @@ while (i < cats.length) {
 
 [do...while](/zh-CN/docs/Web/JavaScript/Reference/Statements/do...while)循环非常类似但在 while 后提供了终止条件：
 
-```plain
+```js-nolint
 initializer
 do {
-  // code to run
+  // 要运行的代码
 
   final-expression
-} while (exit-condition)
+} while (condition)
 ```
 
 在这种情况下，在循环开始之前，初始化程序先重新开始。do 关键字直接在包含要运行的代码的花括号和终止条件之前。
