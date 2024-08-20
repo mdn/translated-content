@@ -30,9 +30,9 @@ removeChild(child)
 ### 异常
 
 - `NotFoundError` {{domxref("DOMException")}}
-  - : 如果 `child` 不是该节点的子节点，则抛出异常。
+  - : 如果 `child` 不是该节点的子节点，则抛出此异常。
 - {{jsxref("TypeError")}}
-  - : 如果 `child` 为 `null`，则抛出异常。
+  - : 如果 `child` 为 `null`，则抛出此异常。
 
 ## 示例
 
