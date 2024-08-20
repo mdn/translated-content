@@ -439,7 +439,7 @@ console.log(clone.get(1)); // one
 console.log(original === clone); // false (útil para comparaciones superficiales)
 ```
 
-> [!NOTA]
+> [!NOTE]
 > Tenga en cuenta que _los datos en si_ no se clonan.
 
 Los objetos _Map_ pueden unirse, manteniendo la unicidad de las llaves:
