@@ -22,7 +22,7 @@ new Map(iterable)
 
 - `iterable` {{optional_inline}}
   - : Un objeto {{jsxref("Array")}} u otro objeto
-    [iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols) cuyos elementos sean tuplas llave-valor. (Por ejemplo, arreglos con dos elementos, 
+    [iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols) cuyos elementos sean tuplas llave-valor. (Por ejemplo, arreglos con dos elementos,
     tales como `[[ 1, 'one' ],[ 2, 'two' ]]`.) Cada tupla llave-valor es agregada al nuevo objeto `Map`.
 
 ## Ejemplos
