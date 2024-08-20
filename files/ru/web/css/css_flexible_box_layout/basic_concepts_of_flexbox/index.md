@@ -24,7 +24,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 
 Если вы выберете `row` или `row-reverse`, ваша главная ось будет проходить в горизонтальном направлении **(inline direction)**.
 
-![If flex-direction is set to row the main axis runs along the row in the inline direction.](basics1.svg)
+![Если для flex-direction задано значение row, то главная ось проходит в горизонтальном направлении.](basics1.svg)
 
 Если вы выберете `column` или `column-reverse`, ваша главная ось будет проходить в вертикальном направлении **(block direction)**.
 
