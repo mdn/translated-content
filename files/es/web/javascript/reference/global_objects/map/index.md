@@ -38,7 +38,7 @@ Sin embargo, hay diferencias importantes que hacen que se prefiera a `Map` en al
   </thead>
   <tbody>
     <tr>
-      <th scope="row">Accidentes con llaves</th>
+      <th scope="row">Llaves accidentales</th>
       <td>
         Un objeto <code>Map</code> no tiene llaves por defecto. Sólo contiene lo que explicitamente se pone en él.
       </td>
