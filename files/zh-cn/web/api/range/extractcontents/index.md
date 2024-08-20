@@ -40,7 +40,7 @@ const documentFragment = range.extractContents();
 document.body.appendChild(documentFragment);
 ```
 
-### 在容器之间移动项目
+### 在容器之间移动项
 
 此示例可让你在两个容器之间移动项。选择一个或多个项，然后点击“交换”将它们移到相反的容器中。
 
