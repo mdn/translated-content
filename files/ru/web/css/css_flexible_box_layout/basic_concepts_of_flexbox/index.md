@@ -28,7 +28,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 
 Если вы выберете `column` или `column-reverse`, ваша главная ось будет проходить в вертикальном направлении **(block direction)**.
 
-![If flex-direction is set to column the main axis runs in the block direction.](basics2.svg)
+![Если для flex-direction задано значение column, то главная ось проходит в вертикальном направлении.](basics2.svg)
 
 ### Побочная ось
 
