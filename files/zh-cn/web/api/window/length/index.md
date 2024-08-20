@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-返回窗口中框架的数量（包括 {{HTMLElement("frame")}} 或 {{HTMLElement("iframe")}} 元素）。
+返回窗口中框架的数量（包括 {{HTMLElement("frame")}} 和 {{HTMLElement("iframe")}} 元素）。
 
 ## 值
 
