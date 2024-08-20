@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("DOM")}}
 
-**`Range.setStartBefore()`** 方法将 {{domxref("Range")}} 的起始位置 设置在另一个 {{domxref("Node")}} 之前。{{domxref("Range")}} 起始位置的父 {{domxref("Node")}} 将与 `referenceNode` 的父节点相同。
+**`Range.setStartBefore()`** 方法将 {{domxref("Range")}} 的起始位置设置在另一个 {{domxref("Node")}} 之前。{{domxref("Range")}} 起始位置的父 {{domxref("Node")}} 将与 `referenceNode` 的父节点相同。
 
 ## 语法
 
