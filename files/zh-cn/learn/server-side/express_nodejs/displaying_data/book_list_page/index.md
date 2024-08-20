@@ -7,7 +7,7 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
 
 ## 控制器
 
-书本列表控制器函数，需要获取数据库中所有 `Book` 对象的列表，然后将这些对象传给模板进行呈现。
+书本列表控制器函数需要获取数据库中所有 `Book` 对象的列表，对它们进行排序，然后将它们传给模板进行渲染。
 
 打开 **/controllers/bookController.js**，找到导出的 `book_list()` 控制器方法，并替换为下面的代码。
 
@@ -31,7 +31,7 @@ exports.book_list = asyncHandler(async (req, res, next) => {
 
 ## 视图
 
-创建 **/views/book_list.pug** 并复制底下的文字。
+创建 **/views/book_list.pug** 并复制下方的文本。
 
 ```pug
 extends layout
