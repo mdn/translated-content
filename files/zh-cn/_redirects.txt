@@ -1325,7 +1325,7 @@
 /zh-CN/docs/Updating_extensions_for_Firefox_3	/zh-CN/docs/Mozilla/Firefox/Releases/3/Updating_extensions
 /zh-CN/docs/Using_files_from_web_applications	/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications
 /zh-CN/docs/WOFF	/zh-CN/docs/Web/CSS/CSS_fonts/WOFF
-/zh-CN/docs/Web-based_protocol_handlers	/zh-CN/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
+/zh-CN/docs/Web-based_protocol_handlers	/zh-CN/docs/Web/API/Navigator/registerProtocolHandler
 /zh-CN/docs/Web/API/AbortSignal/abort	/zh-CN/docs/Web/API/AbortSignal/abort_static
 /zh-CN/docs/Web/API/AbortSignal/onabort	/zh-CN/docs/Web/API/AbortSignal/abort_event
 /zh-CN/docs/Web/API/AbortSignal/timeout	/zh-CN/docs/Web/API/AbortSignal/timeout_static
@@ -1674,6 +1674,7 @@
 /zh-CN/docs/Web/API/Navigator.vendorSub	/zh-CN/docs/Web/API/Navigator/vendorSub
 /zh-CN/docs/Web/API/Navigator/battery	/zh-CN/docs/Web/API/Navigator/getBattery
 /zh-CN/docs/Web/API/Navigator/mozIsLocallyAvailable	/zh-CN/docs/Web/API/Navigator
+/zh-CN/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers	/zh-CN/docs/Web/API/Navigator/registerProtocolHandler
 /zh-CN/docs/Web/API/NavigatorGeolocation.geolocation	/zh-CN/docs/Web/API/Navigator/geolocation
 /zh-CN/docs/Web/API/NavigatorGeolocation/geolocation	/zh-CN/docs/Web/API/Navigator/geolocation
 /zh-CN/docs/Web/API/Node.appendChild	/zh-CN/docs/Web/API/Node/appendChild
