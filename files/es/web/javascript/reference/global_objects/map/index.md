@@ -156,7 +156,7 @@ Sin embargo, hay diferencias importantes que hacen que se prefiera a `Map` en al
       <th scope="row">Desempeño</th>
       <td>
         <p>
-          Se desempeña mejor en escenario que involucran adiciones y eliminacions frecuentes de tuplas llave-valor.
+          Se desempeña mejor en escenarios que involucran adiciones y eliminaciones frecuentes de tuplas llave-valor.
         </p>
       </td>
       <td>
