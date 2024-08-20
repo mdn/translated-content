@@ -1,6 +1,7 @@
 ---
 title: ウェブベースのプロトコルハンドラー
-slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
+slug: conflicting/Web/API/Navigator/registerProtocolHandler
+original_slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 ---
 
 ## 背景
