@@ -104,7 +104,7 @@ console.log(resultado.get(reabastecer)); // undefined
 ## Véase también
 
 - [Polyfill de `Map.groupBy` en `core-js`](https://github.com/zloirock/core-js#array-grouping)
-- [Colleciones indexadas](/es/docs/Web/JavaScript/Guide/Indexed_collections) guía
+- Guía de [Colleciones indexadas](/es/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Map/Map", "Map()")}}
 - {{jsxref("Object.groupBy()")}}
