@@ -1,0 +1,110 @@
+---
+title: Map.groupBy()
+slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
+l10n:
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+---
+
+{{JSRef}}
+
+> [!NOTE]
+> En algunas version de algunos navegadores, este método fué implementado como el método `Array.prototype.groupToMap()`. Debido a problemas de compatibilidad web, ahora es implementado como un método estático. Revise la [tabla de compatibilidad con navegadores](#compatibilidad_con_navegadores) para más detalles.
+
+El método estático **`Map.groupBy()`** agrupa los elementos de un iterable utilizando los valores regresados por la funcion provista. El {{jsxref("Map")}} regresado utiliza los valores únicos de la función de prueba como llaves, los cuales puedes utilizarse para obtener el arreglo de elementos en cada grupo.
+
+El método es útil principalmente cuando se quiere agrupar elementos que están asociados con un objeto, y particularmente cuando el objeto puede cambiar con el tiempo. Si el objeto es invariante, podrías en su lugar representarlo utilizando un _string_, y agrupando los elementos con {{jsxref("Object.groupBy()")}}.
+
+{{EmbedInteractiveExample("pages/js/map-groupby.html", "taller")}}
+
+## Sintaxis
+
+```js-nolint
+Map.groupBy(items, callbackFn)
+```
+
+### Parámetros
+
+- `items`
+  - : Un [iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols#el_protocolo_iterador) (así como un {{jsxref("Array")}}) cuyos elementos serán agrupados.
+- `callbackFn`
+  - : Una función que se ejecuta por cada elemento en el iterable. Debe regresar un valor ({{Glossary("object")}} o un {{Glossary("primitive")}}) indicando el grupo del elemento actual. La función es llamada con los siguientes argumentos:
+    - `element`
+      - : El elemento actual que está siendo procesado.
+    - `index`
+      - : El índice del elemento actual que esta siendo procesado.
+
+### Valor regresado
+
+Un objeto {{jsxref("Map")}} con llaves para cada grupo, cada una asignada a un arreglo que contiene los elementos del grupo asociado.
+
+## Descripción
+
+`Map.groupBy()` llama a la función `callbackFn` provista, una vez por cada elemento en el iterable. La función de devolución de llamada debe regresar un valor indicando el grupo del elemento asociado. Los valores regresados por la `callbackFn` son utilizados como llaves para el {{jsxref("Map")}} regresado por `Map.groupBy()`. Cada llave tiene asociado un arreglo que contiene todos los elementos para los cuales la función de devolución de llamada regresó el mismo valor.
+
+Los elementos en el {{jsxref("Map")}} regresado por la función y en el iterable original, son los mismos (sin {{Glossary("deep copy", "copias profundas")}}). Cambiar la estructura interna de los elementos se vera reflejada en ambos, el iterable original y el {{jsxref("Map")}} regresado por la función.
+
+Este método es util cuando necesitas agrupar información que está relacionada a un objeto en particular y que potencialmente puede cambiar con el tiempo. Esto es debido a que, incluseo si el objeto es modificado, continurara funcionando como llave para el `Map` regresado por la función. Si en su lugar creas una representación _string_ para el objeto y la utilizas como la llave para agrupar en {{jsxref("Object.groupBy()")}}, debes mantener el mapeo entre el objeto original y su representacion de acuerdo a como el objeto cambia.
+
+> [!NOTE]
+> Para accesar los grupos en el `Map` regresado por la función, debes utilizar el mismo objeto que fué usado como llave en el `Map` (a pesar de que puedes modificar sus propiedades). No puedes usar otro objeto que de casulaidad tiene el mismo nombre y las mismas propiedades.
+
+`Map.groupBy` no lee el valor de `this`. Puede ser llamado en cualquier objeto y regresará una nueva instancia de {{jsxref("Map")}}.
+
+## Ejemplos
+
+### Utilizando Map.groupBy()
+
+Primero definimos un arreglo que contenga objetos que representen un inventario de diferentes alimentos. Cada alimento tiene un `tipo` y una `cantidad`.
+
+```js
+const inventario = [
+  { nombre: "esparragos", tipo: "vegetales", cantidad: 9 },
+  { nombre: "bananas", tipo: "fruta", cantidad: 5 },
+  { nombre: "cabra", tipo: "carne", cantidad: 23 },
+  { nombre: "cherries", tipo: "fruta", cantidad: 12 },
+  { nombre: "pescado", tipo: "carne", cantidad: 22 },
+];
+```
+
+El código abajo utiliza `Map.groupBy()` con una función flecha que regresa las llaves de objeto llamadas `reabastecer` o `suficiente`, dependiendo de si la propiedad del elemento es `cantidad < 6`. El objeto `resultado` que regresa, es un `Map` así que necesitamos llamar `get()` con la llave para obtener el arreglo.
+
+```js
+const reabastecer = { reabastecer: true };
+const suficiente = { reabastecer: false };
+const resultado = Map.groupBy(inventario, ({ cantidad }) =>
+  cantidad < 6 ? reabastecer : suficiente,
+);
+console.log(resultado.get(reabastecer));
+// [{ nombre: "bananas", tipo: "fruta", cantidad: 5 }]
+```
+
+Note que el argumento `{ cantidad }` de la función, es un ejemplo básico de la [sintaxis de destructuración de objetos pasados como parámetros de función](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#desempacar_campos_de_objetos_pasados_como_parámetro_de_función). Esto desempaca la propiedad `cantidad`de un objeto pasado como parámetro, y lo asigna a la variable llamada `cantidad` en el cuerpo de la función. Esta es una forma muy concisa de accesar los valores relevantes de elementos, dentro de una función.
+
+La llave de un `Map` puede ser modificada y aún usarse. Sin embargo no puedes recrear la llave y aún usarla. Por esa razón es importante que cualquiera que necesite usar el _map_ mantenga una referencia a sus llaves.
+
+```js
+// La llave puede ser modificada y aún usarse
+reabastecer["rapido"] = true;
+console.log(resultado.get(reabastecer));
+// [{ nombre: "bananas", tipo: "fruta", cantidad: 5 }]
+
+// Una nueva llave no puede ser usada, incluso si tiene la misma estructura!
+const reabastecer2 = { reabastecer: true };
+console.log(resultado.get(reabastecer)); // undefined
+```
+
+## Especificaciones
+
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
+
+## Véase también
+
+- [Polyfill de `Map.groupBy` en `core-js`](https://github.com/zloirock/core-js#array-grouping)
+- [Colleciones indexadas](/es/docs/Web/JavaScript/Guide/Indexed_collections) guía
+- {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("Map/Map", "Map()")}}
+- {{jsxref("Object.groupBy()")}}
