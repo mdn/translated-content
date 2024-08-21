@@ -2,7 +2,7 @@
 title: Range：extractContents() 方法
 slug: Web/API/Range/extractContents
 l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+  sourceCommit: 987c56d6f54bba1bf0430abf06b9a5573c8c289a
 ---
 
 {{ApiRef("DOM")}}
