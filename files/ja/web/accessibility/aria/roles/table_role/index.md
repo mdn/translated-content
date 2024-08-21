@@ -126,7 +126,7 @@ ARIA の表を作成するには、`role="table"` をコンテナー要素に追
 
 無し
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

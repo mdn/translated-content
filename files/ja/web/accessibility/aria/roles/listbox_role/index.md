@@ -199,7 +199,7 @@ HTML の選択要素や、1 項目しか選択できない場合はラジオボ�
 - 1 つ以上のエントリーがリストボックスの DOM の子でない場合、追加の `aria-*` プロパティを設定する必要があります ([ARIA のベストプラクティス](https://www.w3.org/TR/wai-aria-practices/#listbox_div) (英語) を参照) 。
 - リストボックスを展開 ([expand](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded)) する正当な理由がある場合は、コンボボックス ([`combobox`](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role)) ロールの方がより適切かもしれません。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

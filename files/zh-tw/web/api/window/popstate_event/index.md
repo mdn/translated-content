@@ -49,7 +49,7 @@ history.go(2); // 跳出 "location: http://example.com/example.html?page=3, stat
 
 ## 標準
 
-- [HTML5 popstate event](http://www.whatwg.org/specs/web-apps/current-work/#handler-window-onpopstate)
+- [HTML5 popstate event](https://html.spec.whatwg.org/#handler-window-onpopstate)
 
 ## 請參照
 
