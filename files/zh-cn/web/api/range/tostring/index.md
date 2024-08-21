@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("DOM")}}
 
-**`Range.toString()`** 是返回 {{domxref("Range")}} 文本的{{Glossary("stringifier","字符串化器")}}。 
+**`Range.toString()`** 是返回 {{domxref("Range")}} 文本的{{Glossary("stringifier","字符串化器")}}。
 
 注意 {{domxref("Range")}} 的内容会隐式调用 `toString()`，因此通过警告对话框比较范围和文本是无效的。
 
@@ -30,9 +30,7 @@ toString()
 ### HTML
 
 ```html
-<p>
-  此示例记录了强调<em>字</em>之间的<em>所有</em>内容。请看下面的输出结果。
-</p>
+<p>此示例记录了强调<em>字</em>之间的<em>所有</em>内容。请看下面的输出结果。</p>
 <p id="log"></p>
 ```
 
