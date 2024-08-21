@@ -33,4 +33,4 @@ navigator.registerProtocolHandler("mailto",
 
 ### 延伸閱讀
 
-1. WHATWG's [Web Applications 1.0 working draft](https://html.spec.whatwg.org/#custom-handlers)
+1. WHATWG's [Web Applications 1.0 working draft](http://whatwg.org/specs/web-apps/current-work/#custom-handlers)
