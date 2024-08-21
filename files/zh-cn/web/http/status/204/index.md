@@ -19,6 +19,12 @@ HTTP **`204 No Content`** 成功状态响应码，表示该请求已经成功了
 
 {{Specifications}}
 
+## 兼容性说明
+
+尽管此状态码适用于没有响应体的响应，但服务器可能会错误地在标头后面携带数据。这种情况在长连接中尤为常见，因为无效的响应体可能会与后续请求的响应数据混合在一起。HTTP 协议允许浏览器以不同的方式处理此类响应（[HTTPWG `http-core` GitHub 存储库](https://github.com/httpwg/http-core/issues/26) 中正在持续讨论有关规范的内容）。
+
+Apple Safari 拒绝任何此类数据。Google Chrome 和 Microsoft Edge 在得到有效响应之前最多丢弃 4 个无效字节。Firefox 在获得有效响应之前可以容忍超过 1KB 的无效数据。
+
 ## 参见
 
 - [HTTP request methods](/zh-CN/docs/Web/HTTP/Methods)
