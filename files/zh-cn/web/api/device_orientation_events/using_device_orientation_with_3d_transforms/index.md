@@ -1,5 +1,5 @@
 ---
-title: 使用三维变换调整设备方向
+title: 使用设备方向与三维转换
 slug: Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms
 l10n:
   sourceCommit: 6d4f585b94068dc0dfd733047fb2229dca38b1eb
@@ -13,7 +13,7 @@ l10n:
 
 [方向数据](/zh-CN/docs/Web/API/Window/deviceorientation_event)转换为[三维变换](/zh-CN/docs/Web/CSS/transform)的最简单的方式是是使用 `alpha`、`gamma` 和 `beta` 值作为 `rotateZ`、`rotateX` 和 `rotateY` 值。
 
-不过。必须牢记，设备[方向坐标系](/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)与 [CSS 坐标系](/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems)不同。前者是[右手定则](https://zh.wikipedia.org/wiki/%E5%8F%B3%E6%89%8B%E5%AE%9A%E5%89%87)，Y 轴向上为正，而后者是左手定则，Y 轴向下为正。此外，设备方向角旋转应始终按照 Z - X' - Y'' 的顺序进行，这与 [CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms)的顺序不一致。以下是这些差异带来的一些实际后果：
+不过。必须牢记，设备[方向坐标系](/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)与 [CSS 坐标系](/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems)不同。前者是[右手定则](https://zh.wikipedia.org/wiki/右手定則)，Y 轴向上为正，而后者是左手定则，Y 轴向下为正。此外，设备方向角旋转应始终按照 Z—X'—Y'' 的顺序进行，这与 [CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms)的顺序不一致。以下是这些差异带来的一些实际后果：
 
 - 角度旋转的顺序很重要，因此要确保 alpha、beta 和 gamma 旋转依次进行。
 - CSS 变换的 [`rotate3d()`](/zh-CN/docs/Web/CSS/transform-function/rotate3d) 以及 [`DOMMatrix.rotateSelf()`](/zh-CN/docs/Web/API/DOMMatrix/rotateSelf) 和 [`DOMMatrix.rotateSelf()`](/zh-CN/docs/Web/API/DOMMatrix/rotateSelf) 函数按照 Z—Y'—X'' 的顺序应用角度旋转，因此不可能通过一次调用就以正确的顺序应用阿尔法、贝塔和伽马旋转。相反，你应该按照正确的顺序单独旋转每个轴。
@@ -31,7 +31,7 @@ l10n:
 
 ## 将 `rotate3d()` 角度转换为 `deviceorientation` 角度
 
-如果你需要将 rotate3d 轴角转换为设备定向所使用的[欧拉角](https://zh.wikipedia.org/wiki/%E6%AC%A7%E6%8B%89%E8%A7%92)，可以使用以下算法：
+如果你需要将 rotate3d 的轴旋转角转换为 `deviceorientation` 所使用的[欧拉角](https://zh.wikipedia.org/wiki/欧拉角)，可以使用以下算法：
 
 ```js
 // 将 rotate3d 的轴旋转角转换为 deviceorientation 角度
