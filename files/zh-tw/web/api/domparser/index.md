@@ -5,15 +5,15 @@ slug: Web/API/DOMParser
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-`DOMParser可以將XML或是HTML格式的字串轉成`DOM [文件](/zh-TW/docs/DOM/document). `DOMParser`的規格請參閱[DOM 解譯與串流化](http://html5.org/specs/dom-parsing.html).
+`DOMParser` 可以將XML或是HTML格式的字串轉成 DOM [文件](/zh-TW/docs/DOM/document)。`DOMParser`的規格請參閱 [DOM 解譯與串流化](https://w3c.github.io/DOM-Parsing/)。
 
-請注意[XMLHttpRequest](/zh-TW/docs/DOM/XMLHttpRequest)解譯的是 URL 連結內容裡的 XML 與 HTML 文件.
+請注意[XMLHttpRequest](/zh-TW/docs/DOM/XMLHttpRequest)解譯的是 URL 連結內容裡的 XML 與 HTML 文件。
 
 ## 產生一個 DOMParser
 
-" `new DOMParser()" 可產生DOMParser`.
+「`new DOMParser()`」可產生 DOMParser。
 
-`關於如何在Firefox外掛程式中產生DOMParser,`請參考`nsIDOMParser文件`
+關於如何在 Firefox 外掛程式中產生 DOMParser，請參考 `nsIDOMParser` 文件
 
 ## 解譯 XML
 

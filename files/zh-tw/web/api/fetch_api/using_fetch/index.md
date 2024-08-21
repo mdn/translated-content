@@ -366,5 +366,5 @@ if (self.fetch) {
 - [ServiceWorker API](/zh-TW/docs/Web/API/ServiceWorker_API)
 - [HTTP access control (CORS)](/zh-TW/docs/Web/HTTP/Access_control_CORS)
 - [HTTP](/zh-TW/docs/Web/HTTP)
-- [Fetch polyfill](https://github.com/github/fetch)
+- [Fetch polyfill](https://github.com/JakeChampion/fetch)
 - [Fetch examples on Github](https://github.com/mdn/fetch-examples/)
