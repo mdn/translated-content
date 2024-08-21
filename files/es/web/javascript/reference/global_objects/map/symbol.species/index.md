@@ -42,7 +42,7 @@ En una instancia de una subclase personalizada `Map`, como lo es `MyMap`, la pro
 
 ```js
 class MyMap extends Map {
-  // Overwrite MyMap species to the parent Map constructor
+  // Sobrescribir species de MyMap en el constructor del Map padre
   static get [Symbol.species]() {
     return Map;
   }
