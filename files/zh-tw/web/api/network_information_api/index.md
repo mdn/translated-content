@@ -34,7 +34,7 @@ updateConnectionStatus();
 
 {{Compat}}
 
-## See also
+## 參見
 
 - [Network Information API Specification](https://dvcs.w3.org/hg/dap/raw-file/tip/network-api/Overview.html)
 - [線上與離線事件](/zh-TW/Online_and_offline_events)

@@ -5,7 +5,7 @@ slug: Web/API/Element/keyup_event
 
 {{APIRef}}
 
-當鍵盤上的手指離開按鍵時，`keyup事件會被觸發。`
+當鍵盤上的手指離開按鍵時，`keyup` 事件會被觸發。
 
 ## 基本資料
 

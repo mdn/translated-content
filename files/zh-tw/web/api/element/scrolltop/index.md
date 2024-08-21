@@ -89,4 +89,4 @@ scroller.addEventListener("scroll", (event) => {
 ## 參閱
 
 - [W3C Draft CSSOM View Module](https://drafts.csswg.org/cssom-view/#dom-element-scrolltop)
-- [MSDN's Measuring Element Dimension and Location](<https://learn.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
+- [MSDN's Measuring Element Dimension and Location](<https://learn.microsoft.com/zh-tw/previous-versions/hh781509(v=vs.85)>)

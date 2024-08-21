@@ -118,7 +118,7 @@ for (var i = 0; i < files.length; i++) {
 
 ## 規範
 
-- [File upload state](https://html.spec.whatwg.org/multipage/input.html#concept-input-type-file-selected) (HTML5 working draft)
+{{Specifications}}
 
 ## 參見
 

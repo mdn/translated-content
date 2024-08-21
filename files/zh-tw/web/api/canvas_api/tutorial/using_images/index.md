@@ -27,7 +27,7 @@ slug: Web/API/Canvas_API/Tutorial/Using_images
 - {{domxref("ImageBitmap")}}
   - : 可以被快速渲染的點陣圖(bitmap)，點陣圖能由上述所有來源產生.
 
-這些來源統一參照 [CanvasImageSource](https://html.spec.whatwg.org/multipage/canvas.html#image-sources-for-2d-rendering-contexts)型態.
+這些來源統一參照 [CanvasImageSource](https://html.spec.whatwg.org/multipage/canvas.html#image-sources-for-2d-rendering-contexts) 型態。
 
 有好幾種方法能夠取得影像用於畫布.
 
@@ -74,7 +74,7 @@ img.addEventListener(
 img.src = "myImage.png"; // Set source path
 ```
 
-若是只要載入一份影像，可以用上面的方法，不過當需要載入、追蹤多個影像時，我們就需要更好的方法了，雖然管理多個影像載入已經超出本教學的範疇，然而如果有興趣的話，可以參考[JavaScript Image Preloader](https://webreference.com/javascript/)這份文件.
+若是只要載入一份影像，可以用上面的方法，不過當需要載入、追蹤多個影像時，我們就需要更好的方法了，雖然管理多個影像載入已經超出本教學的範疇，然而如果有興趣的話，可以參考[JavaScript Image Preloader](https://webreference.com/javascript/)這份文件。
 
 ### 以 data:URL 嵌入影像
 
