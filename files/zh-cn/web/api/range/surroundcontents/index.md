@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("DOM")}}
 
-**`Range.surroundContents()`** 方法将 {{ domxref("Range") }} 的内容移动到一个新节点，并将该新节点放置在指定的起始位置。
+**`Range.surroundContents()`** 方法将 {{ domxref("Range") }} 的内容移动到一个新节点，并将该新节点放置在范围所指定的起始位置。
 
 此方法几乎等同于 `newNode.appendChild(range.extractContents()); range.insertNode(newNode)`。在包围操作之后，`range` 的边界点将包含 `newNode`。
 
