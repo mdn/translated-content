@@ -19,10 +19,6 @@ HTTP **`204 No Content`** 成功状态响应码，表示该请求已经成功了
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - [HTTP request methods](/zh-CN/docs/Web/HTTP/Methods)
