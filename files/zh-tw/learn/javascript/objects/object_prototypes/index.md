@@ -81,9 +81,11 @@ person1.valueOf();
 - 其實沒有，所以瀏覽器接著檢查 `person1` 物件的原型物件 (`Person`) 上是否有可用的 `valueOf()` 函式。
 - 同樣沒有，所以瀏覽器再檢查 `Person()` 建構子的原型物件 (`Object`) 上是否有可用的 `valueOf()` 函式。這次有，所以就會呼叫。
 
-> **備註：** 再次重申，在原型鍊中的函式與屬性並**不是**從任一物件複製到另一個物件，而是如上述的，沿著該原型鍊向上存取而得。
+> [!NOTE]
+> 再次重申，在原型鍊中的函式與屬性並**不是**從任一物件複製到另一個物件，而是如上述的，沿著該原型鍊向上存取而得。
 
-> **備註：** 直接存取物件的原型物件，並沒有一定的方式。原型鍊中，項目之間的「連結」均定義於內部屬性之內，即 JavaScript 規格中的 `[[prototype]]` (可參閱 {{glossary("ECMAScript")}})。新版瀏覽器均具備所謂的「[`__proto__`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) (兩邊都是 2 個底線)」屬性，其中就包含了物件的原型物件。舉例來說，你可嘗試「`person1.__proto__」`與「`person1.__proto__.__proto__`」看看程式碼中的鍊會是什麼樣子！
+> [!NOTE]
+> 直接存取物件的原型物件，並沒有一定的方式。原型鍊中，項目之間的「連結」均定義於內部屬性之內，即 JavaScript 規格中的 `[[prototype]]` (可參閱 {{glossary("ECMAScript")}})。新版瀏覽器均具備所謂的「[`__proto__`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) (兩邊都是 2 個底線)」屬性，其中就包含了物件的原型物件。舉例來說，你可嘗試「`person1.__proto__」`與「`person1.__proto__.__proto__`」看看程式碼中的鍊會是什麼樣子！
 
 ## 原型屬性也定義所要繼承的成員
 
@@ -95,7 +97,8 @@ person1.valueOf();
 
 [`Object.is()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/is)、[`Object.keys()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)，及其他未於 `prototype` 內定義的成員，也就不會繼承至 1). 物件實例或 2). 從 `Object()` 繼承而來的物件類型。這些函式、屬性都只能用於 `Object()` 建構子本身。
 
-> **備註：** 這看起來很奇怪：你怎麼能在建構子上定義函式 (Method)，而且這建構子本身也是函式 (Function)？其實「Function」也屬於一個物件類型，可參閱 [`Function()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function) 建構子參考以進一步了解。
+> [!NOTE]
+> 這看起來很奇怪：你怎麼能在建構子上定義函式 (Method)，而且這建構子本身也是函式 (Function)？其實「Function」也屬於一個物件類型，可參閱 [`Function()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function) 建構子參考以進一步了解。
 
 1. 你可自行檢查現有的原型屬性。回到我們之前的範例，試著於 JavaScript 主控台中輸入：
 
@@ -225,7 +228,8 @@ Person.prototype.farewell = function () {
 
 但是 `farewell()` 函式仍可用於 `person1` 物件實例，其可用的功能已自動更新過。如此證明了我們之前對原型鍊的說明，也代表瀏覽器會沿著鍊往上找「尚未於物件實例上定義的函式」，而非「複製到實例中的函式」。如此可建構強大且靈活的系統。
 
-> **備註：** 如果你在讓此範例運作時感覺有點困難，可參閱 [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) 範例 (也可看[即時運作](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html)的情形)。
+> [!NOTE]
+> 如果你在讓此範例運作時感覺有點困難，可參閱 [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) 範例 (也可看[即時運作](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html)的情形)。
 
 你很少會看到在 `prototype` 屬性上定義的屬性，因為照此範例定義的屬性彈性較低，舉例來說，你可新增如下的屬性：
 

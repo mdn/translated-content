@@ -38,7 +38,8 @@ new WritableStream(underlyingSink, queuingStrategy)
     - `size(chunk)`
       - : 包含参数 chunk 的方法——这表示每个分块所需要使用的字节数。
 
-    > **备注：** 你可以定义一个自己的 `queuingStrategy`，或者为这个对象值使用 {{domxref("ByteLengthQueuingStrategy")}} 或 {{domxref("CountQueuingStrategy")}} 的实例。如果没有提供 `queuingStrategy`，则使用的默认值与 `CountQueuingStrategy` 相同，其 highWaterMark 为 1。
+    > [!NOTE]
+    > 你可以定义一个自己的 `queuingStrategy`，或者为这个对象值使用 {{domxref("ByteLengthQueuingStrategy")}} 或 {{domxref("CountQueuingStrategy")}} 的实例。如果没有提供 `queuingStrategy`，则使用的默认值与 `CountQueuingStrategy` 相同，其 highWaterMark 为 1。
 
 ### 返回值
 

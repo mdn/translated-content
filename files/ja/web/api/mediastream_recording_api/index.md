@@ -18,14 +18,15 @@ MediaStream 収録 API は、{{domxref("MediaRecorder")}} という 1 つの主�
 ストリームを収録（recording、録音、録画）するプロセスは簡単です。
 
 1. メディアデータのソースとして機能する {{domxref("MediaStream")}} または {{domxref("HTMLMediaElement")}}（{{HTMLElement("audio")}} 要素または {{HTMLElement("video")}} 要素の形式）を設定します。
-2. ソースストリームと必要なオプション（コンテナの MIME タイプやトラックの必要なビットレートなど）を指定して、{{domxref("MediaRecorder")}} オブジェクトを作成します。
-3. {{domxref("MediaRecorder.dataavailable_event", "ondataavailable")}} に {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} イベントのイベントハンドラを設定します。 データが利用可能になるたびにこれが呼び出されます。
+2. ソースストリームと必要なオプション（コンテナーの MIME タイプやトラックの必要なビットレートなど）を指定して、{{domxref("MediaRecorder")}} オブジェクトを作成します。
+3. {{domxref("MediaRecorder.dataavailable_event", "ondataavailable")}} に {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} イベントのイベントハンドラーを設定します。 データが利用可能になるたびにこれが呼び出されます。
 4. ソースメディアが再生され、動画を録画する準備が整ったら、{{domxref("MediaRecorder.start()")}} を呼び出して録画を開始します。
-5. {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} イベントハンドラは準備ができたデータがあるたびに呼ばれます。 イベントは、`data` 属性を持ち、その値はメディアデータを含む {{domxref("Blob")}} です。 あなたは `dataavailable` イベントを発生させることができ、それによって最新のサウンドをあなたに届けるので、それをフィルターにかけたり、それを保存したりすることができます。
+5. {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} イベントハンドラーは準備ができたデータがあるたびに呼ばれます。 イベントは、`data` 属性を持ち、その値はメディアデータを含む {{domxref("Blob")}} です。 あなたは `dataavailable` イベントを発生させることができ、それによって最新のサウンドをあなたに届けるので、それをフィルターにかけたり、それを保存したりすることができます。
 6. ソースメディアの再生が停止すると、録画は自動的に停止します。
 7. {{domxref("MediaRecorder.stop()")}} を呼び出すことで、いつでも録画を停止できます。
 
-> **メモ:** 収録されたメディアのスライスを含む個々の {{domxref("Blob")}} は、必ずしも個別に再生できるわけではありません。 再生する前にメディアを組み立て直す必要があります。
+> [!NOTE]
+> 収録されたメディアのスライスを含む個々の {{domxref("Blob")}} は、必ずしも個別に再生できるわけではありません。 再生する前にメディアを組み立て直す必要があります。
 
 収録中に問題が発生した場合は、 {{domxref("MediaRecorder/error_event", "error")}} イベントが `MediaRecorder` に送られます。 {{domxref("MediaRecorder.error_event", "onerror")}} イベントハンドラーを設定することで `error` イベントを監視できます。
 

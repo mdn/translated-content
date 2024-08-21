@@ -61,7 +61,8 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **备注：** 也许很容易想到用 [`Math.round()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/round) 来实现，但是这会导致你的随机数处于一个不均匀的分布，这可能不符合你的需求。
+> [!NOTE]
+> 也许很容易想到用 [`Math.round()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/round) 来实现，但是这会导致你的随机数处于一个不均匀的分布，这可能不符合你的需求。
 
 ### 得到一个两数之间的随机整数，包括两个数在内
 

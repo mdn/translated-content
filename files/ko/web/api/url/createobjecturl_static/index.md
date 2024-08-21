@@ -11,7 +11,8 @@ slug: Web/API/URL/createObjectURL_static
 
 {{AvailableInWorkers}}
 
-> **참고:** 이 기능은 메모리 누수의 가능성으로 인해 [Service Worker](/ko/docs/Web/API/Service_Worker_API)에서 사용할 수 없습니다.
+> [!NOTE]
+> 이 기능은 메모리 누수의 가능성으로 인해 [Service Worker](/ko/docs/Web/API/Service_Worker_API)에서 사용할 수 없습니다.
 
 ## 구문
 

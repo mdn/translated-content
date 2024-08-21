@@ -9,7 +9,8 @@ l10n:
 
 このスキルテストの目的は、あなたが[コードでの意思決定 — 条件文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals)を理解したかどうかを判定することです。
 
-> **メモ:** コードをダウンロードして、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに入力することで解答を試すことができます。
+> [!NOTE]
+> コードをダウンロードして、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに入力することで解答を試すことができます。
 > エラーがある場合、ページの結果パネルまたはブラウザーの JavaScript コンソールでログ出力するので、助けになります。
 >
 > もし行き詰まったら、私たちの[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
@@ -29,7 +30,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals1.html", '100%', 400)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の状態をダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/conditionals/conditionals1-download.html)すると、自分のエディターまたはオンラインエディターで作業することができます。
 
@@ -56,7 +57,7 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals2.html", '100%', 400)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の状態をダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/conditionals/conditionals2-download.html)すると、自分のエディターまたはオンラインエディターで作業することができます。
 
@@ -77,6 +78,6 @@ l10n:
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals3.html", '100%', 400)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この課題の最初の状態をダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/conditionals/conditionals3-download.html)すると、自分のエディターまたはオンラインエディターで作業することができます。

@@ -9,7 +9,8 @@ l10n:
 
 古い **`PerformanceNavigation.type`** プロパティは読み取り専用で、このページへの移動方法を表す定数を含む `unsigned short` を返します。
 
-> **警告:** このインターフェイスは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
+> [!WARNING]
+> このインターフェイスは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
 
 ## 値
 

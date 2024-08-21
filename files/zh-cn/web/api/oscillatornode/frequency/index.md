@@ -14,7 +14,8 @@ var oscillator = audioCtx.createOscillator();
 oscillator.frequency.value = 440; // value in hertz
 ```
 
-> **备注：** 虽然返回的 `AudioParam` 是只读的，但是它表示的值不是。
+> [!NOTE]
+> 虽然返回的 `AudioParam` 是只读的，但是它表示的值不是。
 
 ### 值
 

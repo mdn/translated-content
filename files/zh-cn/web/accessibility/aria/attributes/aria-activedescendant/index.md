@@ -25,9 +25,11 @@ l10n:
 
 `aria-activedescendant` 的值引用受控元素所拥有的元素。例如，在组合框中，焦点可能仍然位于组合框上，但组合框元素上的 `aria-activedescendant` 的值引用由组合框控制的弹出列表框的后代。
 
-> **备注：** 该属性仅支持少数角色。例如，`dialog` 不支持 `aria-activedescendant`。当组合框打开对话框时，DOM 焦点从组合框移动到对话框，因为它不能通过此属性进行引用。
+> [!NOTE]
+> 该属性仅支持少数角色。例如，`dialog` 不支持 `aria-activedescendant`。当组合框打开对话框时，DOM 焦点从组合框移动到对话框，因为它不能通过此属性进行引用。
 
-> **备注：** 当焦点位于 `listbox`、`grid` 或 `tree` 弹出窗口的后代时，DOM 焦点保持在组合框上，并且组合框的 `aria-activedescendant` 设置为引用弹出窗口内的焦点元素的值。
+> [!NOTE]
+> 当焦点位于 `listbox`、`grid` 或 `tree` 弹出窗口的后代时，DOM 焦点保持在组合框上，并且组合框的 `aria-activedescendant` 设置为引用弹出窗口内的焦点元素的值。
 
 ## 值
 

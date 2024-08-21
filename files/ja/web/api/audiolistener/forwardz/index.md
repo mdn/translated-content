@@ -10,7 +10,8 @@ l10n:
 
 `forwardZ` は {{ domxref("AudioListener") }} インターフェイスの読み取り専用プロパティで、聞き手が向いている前方向を定義する方向ベクトルの z 値を表す {{domxref("AudioParam")}} です。
 
-> **メモ:** The parameter is _a-rate_ when used with a {{domxref("PannerNode")}} whose {{domxref("PannerNode.panningModel", "panningModel")}} is set to equalpower, or _k-rate_ otherwise.
+> [!NOTE]
+> The parameter is _a-rate_ when used with a {{domxref("PannerNode")}} whose {{domxref("PannerNode.panningModel", "panningModel")}} is set to equalpower, or _k-rate_ otherwise.
 
 ## 値
 

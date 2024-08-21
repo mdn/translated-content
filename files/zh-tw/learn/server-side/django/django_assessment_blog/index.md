@@ -158,7 +158,8 @@ slug: Learn/Server-side/Django/django_assessment_blog
 - BlogListView (所有文章的頁面) 使用期望的模板(例如預設值)。
 - BlogListView 以每頁 5 筆項目分頁(至少第一頁是如此)。
 
-> **備註：** 當然你也可以跑很多其他的測試。但是我們會希望你至少實作以上列出的測試項目。
+> [!NOTE]
+> 當然你也可以跑很多其他的測試。但是我們會希望你至少實作以上列出的測試項目。
 
 下一區塊顯示符合以上需求的網頁[截圖](#Screenshots)。
 

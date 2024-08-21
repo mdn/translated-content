@@ -29,7 +29,8 @@ Access-Control-Allow-Origin: https://example.com
 Access-Control-Allow-Origin: *
 ```
 
-> **警告：** 使用通配符允许所有站点访问私有 API 是显而易见的坏主意。
+> [!WARNING]
+> 使用通配符允许所有站点访问私有 API 是显而易见的坏主意。
 
 如果要在*不使用* `*` 通配符的情况下让任意站点发出 CORS 请求（例如，为了启用凭证），你的服务器必须读取请求的 `Origin` 标头，将那个值设置为 `Access-Control-Allow-Origin` 的值，且必须一并设置 `Vary: Origin` 标头，表明一部分标头由源动态决定。
 

@@ -65,7 +65,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 </template>
 ```
 
-> **Note :** Vous pouvez retrouver cet exemple sur [ce dépôt GitHub](https://github.com/mdn/web-components-examples/tree/master/element-details) et observer [son fonctionnement en live ici](https://mdn.github.io/web-components-examples/element-details/). Une explication plus détaillée est également disponible avec l'article [Manipuler `template` et `slot`](/fr/docs/Web/Web_Components/Using_templates_and_slots).
+> [!NOTE]
+> Vous pouvez retrouver cet exemple sur [ce dépôt GitHub](https://github.com/mdn/web-components-examples/tree/master/element-details) et observer [son fonctionnement en live ici](https://mdn.github.io/web-components-examples/element-details/). Une explication plus détaillée est également disponible avec l'article [Manipuler `template` et `slot`](/fr/docs/Web/Web_Components/Using_templates_and_slots).
 
 ## Résumé technique
 

@@ -7,19 +7,22 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 
 WebSocket 是一種讓瀏覽器與伺服器進行一段互動通訊的技術。使用這項技術的 Webapp 可以直接進行即時通訊而不需要不斷對資料更改進行輪詢（polling）。
 
-> **備註：** 當我們的系統架構可以寄存 WebSocket 範例之後，我們會提供聊天／伺服器系統實例的幾個範例。
+> [!NOTE]
+> 當我們的系統架構可以寄存 WebSocket 範例之後，我們會提供聊天／伺服器系統實例的幾個範例。
 
 ## 哪裡有 WebSocket
 
 若 JavaScript 代碼的範疇是 {{ domxref("Window") }} 物件或是實作 {{ domxref("WorkerUtils") }} 的物件，則可使用 WebSocket API。也就是可以從 Web Workers 使用 WebSocket。
 
-> **備註：** WebSockets API（與底層協定）的開發還在進展中，且目前不同瀏覽器（甚至瀏覽器的不同版本）有很多兼容問題。
+> [!NOTE]
+> WebSockets API（與底層協定）的開發還在進展中，且目前不同瀏覽器（甚至瀏覽器的不同版本）有很多兼容問題。
 
 ## 建立一個 WebSocket 物件
 
 你必須建立一個 [`WebSocket`](/zh_tw/WebSockets/WebSockets_reference/WebSocket) 物件才能讓瀏覽器／伺服器得以以 WebSocket 協定進行通訊，此物件在被建立之後會自動與伺服器連線。
 
-> **備註：** 別忘記在 Firefox 6.0 中 `WebSocket` 物件仍有前輟，所以在這裡須改成 `MozWebSocket`。
+> [!NOTE]
+> 別忘記在 Firefox 6.0 中 `WebSocket` 物件仍有前輟，所以在這裡須改成 `MozWebSocket`。
 
 WebSocket 的建構方法有一個必要參數與一個選擇參數：
 
@@ -77,7 +80,8 @@ mySocket.send("這是伺服器正迫切需要的文字！");
 
 可以被傳送的內容包括字串、[`Blob`](/zh-TW/DOM/Blob) 或是 [`ArrayBuffer`](/zh_tw/JavaScript_typed_arrays/ArrayBuffer)。
 
-> **備註：** Firefox 目前只支援字串傳送。
+> [!NOTE]
+> Firefox 目前只支援字串傳送。
 
 ### 用 JSON 傳輸物件
 
@@ -175,4 +179,4 @@ mySocket.close();
 
 ## 參考資料
 
-[IETF: The WebSocket protocol draft-abarth-thewebsocketprotocol-01](https://tools.ietf.org/html/draft-abarth-thewebsocketprotocol-01)
+[IETF: The WebSocket protocol draft-abarth-thewebsocketprotocol-01](https://datatracker.ietf.org/doc/html/draft-abarth-thewebsocketprotocol-01)

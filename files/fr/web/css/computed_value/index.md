@@ -16,7 +16,8 @@ Cependant, pour certaines propriétés (celles où les pourcentages sont relatif
 
 Le principal intérêt de la valeur calculée (en dehors de la gestion du passage de [la valeur spécifiée](/fr/docs/Web/CSS/Valeur_spécifiée) à [la valeur utilisée](/fr/docs/Web/CSS/Valeur_utilisée)) est [l'héritage](/fr/docs/Web/CSS/Héritage), notamment grâce au mot-clé {{cssxref("inherit")}}.
 
-> **Note :** La méthode du DOM {{domxref("Window.getComputedStyle", "getComputedStyle()")}} renvoie [la valeur résolue](/fr/docs/Web/CSS/valeur_résolue) qui correspond à la valeur calculée ou à [la valeur utilisée](/fr/docs/Web/CSS/Valeur_utilisée) selon la propriété.
+> [!NOTE]
+> La méthode du DOM {{domxref("Window.getComputedStyle", "getComputedStyle()")}} renvoie [la valeur résolue](/fr/docs/Web/CSS/valeur_résolue) qui correspond à la valeur calculée ou à [la valeur utilisée](/fr/docs/Web/CSS/Valeur_utilisée) selon la propriété.
 
 ## Spécifications
 

@@ -60,7 +60,8 @@ Flexbox 与文档的写入模式有关，因此如果你使用英语并将{{cssx
 
 在纵轴上，`row-gap`属性将在相邻的子元素之间创建间距，因此还必须将`flex-wrap`设置为`wrap`,以使其具有任何效果。
 
-> **备注：** 从 Firefox 63 开始，Firefox 是唯一实现 Flexbox gap 属性的浏览器。
+> [!NOTE]
+> 从 Firefox 63 开始，Firefox 是唯一实现 Flexbox gap 属性的浏览器。
 
 ## Reference
 

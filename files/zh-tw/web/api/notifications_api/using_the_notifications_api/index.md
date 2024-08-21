@@ -21,7 +21,8 @@ Web Notifications API 可將通知傳送至頁面以外的系統層級並顯示�
 - `granted`：使用者允許接收到 Apps 的通知
 - `denied`：使用者拒絕接收 Apps 的通知
 
-> **備註：** Chrome 與 Safari 尚未建構 `permission` 屬性。
+> [!NOTE]
+> Chrome 與 Safari 尚未建構 `permission` 屬性。
 
 若使用者尚未給予權限，則 Apps 必須透過 [`Notification.requestPermission()`](/zh-TW/docs/Web/API/Notification.requestPermission) 函式讓使用者選擇，接著由此函式接收 1 組回呼 (Callback) 函式作為參數；而該回呼函式則提供使用者是否授權的資訊。
 
@@ -38,11 +39,9 @@ window.addEventListener("load", function () {
 });
 ```
 
-> **備註：** Chrome 不允許於載入事件中呼叫 [`Notification.requestPermission()`](/zh-TW/docs/Web/API/Notification.requestPermission) (參閱 [issue 274284](https://code.google.com/p/chromium/issues/detail?id=274284))。
+### 已安裝的 App
 
-### 已安裝的 Apps
-
-在安裝 Apps 之後，若於 [Apps 的 manifest 檔案](/zh-TW/docs/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/Manifest-840092-dup)中直接添加權限，即可省去再次向使用者要求權限的動作。
+在安裝 App 之後，若於 [App 的 manifest 檔案](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json)中直接添加權限，即可省去再次向使用者要求權限的動作。
 
 ```json
 permissions: {
@@ -65,7 +64,8 @@ permissions: {
 
 而透過 [`onshow`](/zh-TW/docs/Web/API/Notification.onshow)、[`onclick`](/zh-TW/docs/Web/API/Notification.onclick)、[`onclose`](/zh-TW/docs/Web/API/Notification.onclose)，或 [`onerror`](/zh-TW/docs/Web/API/Notification.onerror) 等事件處理器 (Event handler)，即可追蹤這些事件。由於 [`Notification`](/zh-TW/docs/Web/API/Notification) 是繼承 [`EventTarget`](/zh-TW/docs/Web/API/EventTarget) 而來，因此亦可使用 [`addEventListener()`](/zh-TW/docs/Web/API/EventTarget.addEventListener) 函式。
 
-> **備註：** Firefox 與 Safari 並未遵守 close 事件的規格。此規格雖然規定「僅限使用者能關閉通知」，但 Firefox 與 Safari 卻可於數分鐘後自動關閉通知。因此不一定是由使用者關閉通知。此規格並明確規定「應透過 [`Notification.close()`](/zh-TW/docs/Web/API/Notification.close) 函式，於應用程式層級完成自動關閉通知」。範例程式碼如下：
+> [!NOTE]
+> Firefox 與 Safari 並未遵守 close 事件的規格。此規格雖然規定「僅限使用者能關閉通知」，但 Firefox 與 Safari 卻可於數分鐘後自動關閉通知。因此不一定是由使用者關閉通知。此規格並明確規定「應透過 [`Notification.close()`](/zh-TW/docs/Web/API/Notification.close) 函式，於應用程式層級完成自動關閉通知」。範例程式碼如下：
 >
 > ```js
 > var n = new Notification("Hi!");

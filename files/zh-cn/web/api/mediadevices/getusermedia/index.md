@@ -9,7 +9,8 @@ slug: Web/API/MediaDevices/getUserMedia
 
 它返回一个 {{jsxref("Promise")}} 对象，成功后会`resolve`回调一个 {{domxref("MediaStream")}} 对象。若用户拒绝了使用权限，或者需要的媒体源不可用，`promise`会`reject`回调一个 `PermissionDeniedError` 或者 `NotFoundError` 。
 
-> **备注：** 返回的 promise 对象可能既不会 resolve 也不会 reject，因为用户不是必须选择允许或拒绝。
+> [!NOTE]
+> 返回的 promise 对象可能既不会 resolve 也不会 reject，因为用户不是必须选择允许或拒绝。
 
 通常你可以使用 {{domxref("navigator.mediaDevices")}} 来获取 {{domxref("MediaDevices")}} ，例如：
 
@@ -123,7 +124,8 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
 
   - : 用户拒绝了当前的浏览器实例的访问请求；或者用户拒绝了当前会话的访问；或者用户在全局范围内拒绝了所有媒体访问请求。
 
-    > **备注：** 较旧版本的规范使用了`SecurityError`，但在新版本当中`SecurityError`被赋予了新的意义。
+    > [!NOTE]
+    > 较旧版本的规范使用了`SecurityError`，但在新版本当中`SecurityError`被赋予了新的意义。
 
 - `NotFoundError`［找不到错误］
   - : 找不到满足请求参数的媒体类型。
@@ -133,7 +135,8 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
 
   - : 指定的要求无法被设备满足，此异常是一个类型为`OverconstrainedError`的对象，拥有一个`constraint`属性，这个属性包含了当前无法被满足的`constraint`对象，还拥有一个`message`属性，包含了阅读友好的字符串用来说明情况。
 
-    > **备注：** 因为这个异常甚至可以在用户尚未授权使用当前设备的情况下抛出，所以应当可以当作一个探测设备能力属性的手段［fingerprinting surface］。
+    > [!NOTE]
+    > 因为这个异常甚至可以在用户尚未授权使用当前设备的情况下抛出，所以应当可以当作一个探测设备能力属性的手段［fingerprinting surface］。
 
 - `SecurityError`［安全错误］
   - : 在`getUserMedia()` 被调用的 {{domxref("Document")}} 上面，使用设备媒体被禁止。这个机制是否开启或者关闭取决于单个用户的偏好设置。

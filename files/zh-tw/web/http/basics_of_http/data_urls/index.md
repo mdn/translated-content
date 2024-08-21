@@ -9,7 +9,8 @@ l10n:
 
 **Data URL** 是以 `data:` 開頭的 URL，允許內容創作者將小型檔案嵌入文件中。以前它們被稱為「data URI」，直到 WHATWG 將這個名稱廢除。
 
-> **備註：** 現代瀏覽器將 Data URL 視為唯一的不透明來源，而不是繼承導航設置對象的來源。
+> [!NOTE]
+> 現代瀏覽器將 Data URL 視為唯一的不透明來源，而不是繼承導航設置對象的來源。
 
 ## 語法
 
@@ -62,7 +63,7 @@ base64 a.txt>b.txt
 
 ### 在 Microsoft Windows 上編碼
 
-在 Windows 上，可以使用 PowerShell 的 [Convert.ToBase64String](https://docs.microsoft.com/dotnet/api/system.convert.tobase64string?view=net-5.0) 進行 base64 編碼：
+在 Windows 上，可以使用 PowerShell 的 [Convert.ToBase64String](https://learn.microsoft.com/en-us/dotnet/api/system.convert.tobase64string?view=net-5.0) 進行 base64 編碼：
 
 ```plain
 [convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))

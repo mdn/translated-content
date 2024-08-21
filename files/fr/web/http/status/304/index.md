@@ -9,7 +9,8 @@ Le code de réponse de redirection **`304 Not Modified`** indique qu'il n'y a pa
 
 La réponse [`200 OK`](/fr/docs/Web/HTTP/Status/200) équivalente aurait inclus les en-têtes [`Cache-Control`](/fr/docs/Web/HTTP/Headers/Cache-Control), [`Content-Location`](/fr/docs/Web/HTTP/Headers/Content-Location), [`Date`](/fr/docs/Web/HTTP/Headers/Date), [`ETag`](/fr/docs/Web/HTTP/Headers/ETag), [`Expires`](/fr/docs/Web/HTTP/Headers/Expires), et [`Vary`](/fr/docs/Web/HTTP/Headers/Vary).
 
-> **Note :** Dans les navigateurs, [les outils de développement réseau](/fr/docs/Tools/Network_Monitor) créent des requêtes supplémentaires qui conduisent à des réponses `304`. Ainsi l'accès au cache local est visible par les développeurs.
+> [!NOTE]
+> Dans les navigateurs, [les outils de développement réseau](/fr/docs/Tools/Network_Monitor) créent des requêtes supplémentaires qui conduisent à des réponses `304`. Ainsi l'accès au cache local est visible par les développeurs.
 
 ## Statut
 

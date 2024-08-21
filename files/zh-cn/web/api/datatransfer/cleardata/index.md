@@ -11,7 +11,8 @@ slug: Web/API/DataTransfer/clearData
 
 此方法不会从拖动操作中删除文件，因此如果有任何文件包含在对象的 {{domxref("DataTransfer.types")}} 列表中，仍然可能有一个类型为“Files”的条目在拖动。
 
-> **备注：** 该方法只能在 [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件的处理程序中使用，因为这是拖动操作的数据存储唯一能写入的时间。
+> [!NOTE]
+> 该方法只能在 [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件的处理程序中使用，因为这是拖动操作的数据存储唯一能写入的时间。
 
 ## 语法
 

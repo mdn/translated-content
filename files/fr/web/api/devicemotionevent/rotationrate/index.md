@@ -7,7 +7,8 @@ slug: Web/API/DeviceMotionEvent/rotationRate
 
 La propriété **`rotationRate`** renvoie la vitesse de rotation de l'appareil autour de chacun de ses axes en degrés par seconde.
 
-> **Note :** Si le matériel n'est pas capable de fournir cette information, la propriété renvoie `null`.
+> [!NOTE]
+> Si le matériel n'est pas capable de fournir cette information, la propriété renvoie `null`.
 
 ## Syntaxe
 

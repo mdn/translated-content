@@ -27,7 +27,8 @@ l10n:
 
 `http://127.0.0.1` URL, `http://localhost` 및 `http://*.localhost` URL(예: `http://dev.whatever.localhost/`) 그리고 `file://`과 같은 로컬에서 제공된 리소스도 안전하게 전달된 것으로 간주됩니다.
 
-> **참고:** Firefox 84 이상에서는 `http://localhost`와 `http://*.localhost` URL을 신뢰할 수 있는 원본으로 지원합니다(`localhost`가 로컬/루프백 주소로 매핑되는 것이 보장되지 않았기 때문에 이전 버전에서는 지원하지 않음).
+> [!NOTE]
+> Firefox 84 이상에서는 `http://localhost`와 `http://*.localhost` URL을 신뢰할 수 있는 원본으로 지원합니다(`localhost`가 로컬/루프백 주소로 매핑되는 것이 보장되지 않았기 때문에 이전 버전에서는 지원하지 않음).
 
 로컬이 아닌 리소스가 안전한 것으로 간주되려면 다음 기준을 충족해야 합니다.
 

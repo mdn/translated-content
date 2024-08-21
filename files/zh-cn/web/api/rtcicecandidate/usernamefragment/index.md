@@ -25,7 +25,8 @@ ICE 会话开始时，ICE 层需要随机选择 `ufrag` 字段中的至少 24 �
 
 ICE 使用 `usernameFragment` 和密码来确保消息完整性。这可以避免多个正在进行的 ICE 会话之间的串话，更重要的是，可以帮助保护 ICE 传输（以及 WebRTC 的所有内容）免受试图将自身注入到 ICE 交换中的攻击。
 
-> **备注：** 出于的完整的安全性考虑，没有 API 可以获取 ICE 密码。
+> [!NOTE]
+> 出于的完整的安全性考虑，没有 API 可以获取 ICE 密码。
 
 `usernameFragment` 和密码在每次 [ICE 重启](/zh-CN/docs/Web/API/WebRTC_API/Session_lifetime#ice_重启)时都会更改。
 

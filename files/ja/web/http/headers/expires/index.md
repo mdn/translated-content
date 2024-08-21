@@ -9,7 +9,8 @@ slug: Web/HTTP/Headers/Expires
 
 値 0 のような無効な日付は過去の日付を表し、リソースがすでに有効期限切れであることを意味します。
 
-> **メモ:** レスポンスに `max-age` または `s-maxage` ディレクティブを持つ {{HTTPHeader("Cache-Control")}} ヘッダーがある場合、`Expires` ヘッダーは無視されます。
+> [!NOTE]
+> レスポンスに `max-age` または `s-maxage` ディレクティブを持つ {{HTTPHeader("Cache-Control")}} ヘッダーがある場合、`Expires` ヘッダーは無視されます。
 
 <table class="properties">
   <tbody>

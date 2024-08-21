@@ -9,7 +9,8 @@ l10n:
 
 La méthode statique **`WebAssembly.instantiateStreaming()`** permet de compiler et d'instancier un module WebAssembly depuis un flux source. C'est la méthode la plus efficace, et la plus optimisée, permettant de charger du code WebAssembly.
 
-> **Note :** Les pages web qui utilisent une [CSP](/fr/docs/Web/HTTP/CSP) stricte peuvent bloquer la compilation WebAssembly et l'exécution des modules. Pour plus d'informations pour l'autorisation de la compilation et de l'exécution, voir [la directive CSP `script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
+> [!NOTE]
+> Les pages web qui utilisent une [CSP](/fr/docs/Web/HTTP/CSP) stricte peuvent bloquer la compilation WebAssembly et l'exécution des modules. Pour plus d'informations pour l'autorisation de la compilation et de l'exécution, voir [la directive CSP `script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
 
 ## Syntaxe
 
@@ -52,7 +53,8 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 Ensuite, on accède au champ `instance` de l'objet `ResultObject` afin de pouvoir invoquer une des fonctions exportées.
 
-> **Note :** Pour que cela fonctionne, il faut que les fichiers soient renvoyés avec le type MIME `application/wasm` par le serveur.
+> [!NOTE]
+> Pour que cela fonctionne, il faut que les fichiers soient renvoyés avec le type MIME `application/wasm` par le serveur.
 
 ## Spécifications
 

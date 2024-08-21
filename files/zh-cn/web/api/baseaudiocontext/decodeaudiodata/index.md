@@ -37,7 +37,8 @@ audioCtx.decodeAudioData(audioData).then(function(decodedData) {
 
 通过按钮来运行 `getData()` 来获取音轨并播放它。当使用 `stop()` 方法后 source 将会被清除。
 
-> **备注：** You can [run the example live](http://mdn.github.io/decode-audio-data/) (or [view the source](https://github.com/mdn/decode-audio-data).)
+> [!NOTE]
+> You can [run the example live](http://mdn.github.io/decode-audio-data/) (or [view the source](https://github.com/mdn/decode-audio-data).)
 
 ```js
 // define variables

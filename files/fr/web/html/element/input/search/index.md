@@ -80,7 +80,8 @@ L'attribut `pattern`, lorsqu'il est utilisé, est une expression rationnelle qui
 
 Si aucune expression rationnelle n'est fournie ou que celle-ci est invalide, aucune contrainte de format ne sera appliquée et cet attribut sera ignoré complètement.
 
-> **Note :** On utilisera l'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pour définir le texte que la plupart des navigateurs afficheront comme bulle d'information afin d'expliquer les contraintes imposées par l'expression rationnelle. Il faut également inclure un texte explicatif à proximité du champ.
+> [!NOTE]
+> On utilisera l'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pour définir le texte que la plupart des navigateurs afficheront comme bulle d'information afin d'expliquer les contraintes imposées par l'expression rationnelle. Il faut également inclure un texte explicatif à proximité du champ.
 
 Voir la section [Indiquer un motif](#indiquer_un_motif) pour plus de détails et un exemple.
 
@@ -90,13 +91,15 @@ L'attribut `placeholder` est une chaîne de caractères qui fournit une indicati
 
 Si le contenu du contrôle utilise une direction (écriture de gauche à droite ou de droite à gauche), mais que le texte indicatif doit être présenté dans la direction inverse, vous pouvez utiliser des caractères de formatage pour l'algorithme bidirectionnel Unicode dans la valeur. Voir [Comment utiliser des contrôles Unicode pour le texte bidirectionnel (en anglais)](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
 
-> **Note :** On évitera d'utiliser l'attribut `placeholder` si possible. Il n'est pas aussi utile que d'autres sur le plan sémantique pour expliquer le formulaire et il peut causer des problèmes techniques avec le contenu. Voir [L'utilisation de libellés et de textes indicatifs](/fr/docs/Web/HTML/Element/Input#utilisation_de_libellés) pour plus d'informations.
+> [!NOTE]
+> On évitera d'utiliser l'attribut `placeholder` si possible. Il n'est pas aussi utile que d'autres sur le plan sémantique pour expliquer le formulaire et il peut causer des problèmes techniques avec le contenu. Voir [L'utilisation de libellés et de textes indicatifs](/fr/docs/Web/HTML/Element/Input#utilisation_de_libellés) pour plus d'informations.
 
 ### `readonly`
 
 Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité dans le formulaire. La valeur du champ (portée par l'attribut `value`) peut toutefois être modifiée par du code JavaScript, qui changerait la propriété `value` rattachée à l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
-> **Note :** Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'a pas d'effet particulier sur les champs pour lesquels `readonly` est appliqué.
+> [!NOTE]
+> Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'a pas d'effet particulier sur les champs pour lesquels `readonly` est appliqué.
 
 ### `size`
 
@@ -175,7 +178,8 @@ Cet exemple produira le résultat suivant&nbsp;:
 
 `q` est la valeur la plus communément utilisée pour l'attribut `name` des champs de recherche mais cette valeur spécifique n'est pas obligatoire. Lorsque le formulaire est envoyé, les données envoyées au serveur auront la forme `q=termederecherche`.
 
-> **Note :** Il est toujours nécessaire de fournir une valeur pour l'attribut [`name`](/fr/docs/Web/HTML/Element/Input#attr-name), sinon aucune valeur ne sera envoyée.
+> [!NOTE]
+> Il est toujours nécessaire de fournir une valeur pour l'attribut [`name`](/fr/docs/Web/HTML/Element/Input#attr-name), sinon aucune valeur ne sera envoyée.
 
 ### Différences entre les champs de recherche et les champs texte
 
@@ -239,7 +243,8 @@ Voici le résultat obtenu grâce à ce fragment HTML&nbsp;:
 
 Il n'y a aucune différence visuelle avec l'exemple précédent mais avec cette deuxième version, les personnes qui utilisent un lecteur d'écran disposeront de plus d'informations.
 
-> **Note :** Voir [Panneaux/points de repère](/fr/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) pour plus d'informations à propos de ces fonctionnalités relatives à l'accessibilité.
+> [!NOTE]
+> Voir [Panneaux/points de repère](/fr/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) pour plus d'informations à propos de ces fonctionnalités relatives à l'accessibilité.
 
 ### Paramétrer la taille physique
 
@@ -267,7 +272,8 @@ On obtient une boîte de recherche plus large qu'auparavant&nbsp;:
 
 Les éléments `<input>` de type `search` possèdent les mêmes fonctionnalités de validation que les éléments `<input type="text">`. Il existe peu de raison de contraindre les termes d'une recherche mais voici quelques cas.
 
-> **Note :** Attention, la validation des données d'un formulaire de recherche HTML par le client _ne doit pas remplacer_ la vérification de ces données lorsqu'elles sont reçues sur le serveur. En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML de la page pour outrepasser les mécanismes de validation. Il est également possible d'envoyer des données directement au serveur. Si le serveur ne valide pas les données reçues, des données potentiellement mal formatées pourraient causer des dommages aux bases de données et autres composants sensibles.
+> [!NOTE]
+> Attention, la validation des données d'un formulaire de recherche HTML par le client _ne doit pas remplacer_ la vérification de ces données lorsqu'elles sont reçues sur le serveur. En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML de la page pour outrepasser les mécanismes de validation. Il est également possible d'envoyer des données directement au serveur. Si le serveur ne valide pas les données reçues, des données potentiellement mal formatées pourraient causer des dommages aux bases de données et autres composants sensibles.
 
 ### Une note sur la mise en forme
 

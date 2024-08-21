@@ -9,7 +9,8 @@ l10n:
 
 L'API [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions) dispose d'un module pour [l'internationalisation](/fr/docs/Glossary/Internationalization) des extensions&nbsp;: [`i18n`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n). Dans cet article, nous allons explorer ses fonctionnalités et illustrer son utilisation par un exemple pratique. L'API `i18n` pour les extensions web est similaire aux bibliothèques JavaScript tierces d'internationalisation.
 
-> **Note :** L'exemple d'extension présenté dans cet article, [`notify-link-clicks-i18n`](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n), est disponible sur GitHub. Suivez le code source pendant que vous parcourez cette page.
+> [!NOTE]
+> L'exemple d'extension présenté dans cet article, [`notify-link-clicks-i18n`](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n), est disponible sur GitHub. Suivez le code source pendant que vous parcourez cette page.
 
 ## Anatomie d'une extension internationalisée
 
@@ -34,9 +35,11 @@ Examinons chacune de ces fonctionnalités supplémentaires. Chacune des sections
 
 L'internationalisation nécessite de fournir des chaînes traduites pour les différentes locales qu'on souhaite prendre en charge. Pour les extensions, le répertoire `_locales`, présent à la racine de l'extension, contient un sous-répertoire pour chaque locale, nommé grâce à [l'étiquette de langue correspondante](https://fr.wikipedia.org/wiki/%C3%89tiquette_d%27identification_de_langues_IETF) et ce dernier contient un fichier `messages.json` avec les chaînes de caractères traduites pour la locale correspondante.
 
-> **Attention :** Contrairement à la convention qui consiste à séparer la sous-étiquette de base et celle de la variante régionale par un tiret (par exemple `en-US` ou `fr-CA`), **il faudra utiliser un tiret bas pour le nom du répertoire sous `_locales`** (par exemple `en_US` ou `fr_CA`).
+> [!WARNING]
+> Contrairement à la convention qui consiste à séparer la sous-étiquette de base et celle de la variante régionale par un tiret (par exemple `en-US` ou `fr-CA`), **il faudra utiliser un tiret bas pour le nom du répertoire sous `_locales`** (par exemple `en_US` ou `fr_CA`).
 
-> **Note :** Vous pouvez rechercher des étiquettes de langue à l'aide de [cet outil en ligne (en anglais)](https://r12a.github.io/app-subtags/). Notez que vous devez rechercher le nom anglais de la langue.
+> [!NOTE]
+> Vous pouvez rechercher des étiquettes de langue à l'aide de [cet outil en ligne (en anglais)](https://r12a.github.io/app-subtags/). Notez que vous devez rechercher le nom anglais de la langue.
 
 Dans [le répertoire `_locales` de notre exemple d'extension](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n/_locales), nous avons des répertoires pour l'anglais (`en`), l'allemand (`de`), le français tel que parlé en France (`fr_FR`), le japonais (`ja`), le norvégien tel que parlé en Norvège (`nb_NO`), le néerlandais (`nl`), et le portugais brésilien (`pt_BR`). Chacun de ces répertoires contient un fichier `messages.json`.
 
@@ -74,7 +77,8 @@ Regardons maintenant la structure de l'un de ces fichiers ([`_locales/en/message
 
 Ce fichier est du JSON standard, chaque propriété est un objet avec un nom, qui contient une propriété `message` et une propriété `description`. Tous ces éléments sont des chaînes de caractères et `$URL$` est un emplacement de substitution qui sera remplacé par une sous-chaîne lorsque la propriété `notificationContent` sera manipulée par l'extension. Nous verrons comment faire dans la section [Récupération des messages localisés dans le code JavaScript](#récupérer_des_messages_localisés_dans_le_code_javascript).
 
-> **Note :** Pour plus d'informations sur le contenu des fichiers `messages.json`, voir [la référence des formats de messages localisés](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference).
+> [!NOTE]
+> Pour plus d'informations sur le contenu des fichiers `messages.json`, voir [la référence des formats de messages localisés](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference).
 
 ## Internationalisation du manifeste
 

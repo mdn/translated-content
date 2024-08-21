@@ -64,7 +64,8 @@ navigator.permissions.query({
 });
 ```
 
-> **メモ:** この機能の使用は、サーバーに設定する {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)（ストレージアクセス API の残りの部分をコントロールするものと同じ）によってブロックされる可能性があります。さらに、許可リスト、ブロックリスト、端末上の分類、ユーザー設定、アンチ[クリックジャッキング](/ja/docs/Glossary/Clickjacking)の経験則など、 ブラウザー独自のチェックも通過しなければなりません。
+> [!NOTE]
+> この機能の使用は、サーバーに設定する {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)（ストレージアクセス API の残りの部分をコントロールするものと同じ）によってブロックされる可能性があります。さらに、許可リスト、ブロックリスト、端末上の分類、ユーザー設定、アンチ[クリックジャッキング](/ja/docs/Glossary/Clickjacking)の経験則など、 ブラウザー独自のチェックも通過しなければなりません。
 
 ## 例
 
@@ -101,7 +102,8 @@ function checkCookie() {
 }
 ```
 
-> **メモ:** より完全な例については、[ストレージアクセス API の使用](/ja/docs/Web/API/Storage_Access_API/Using)を参照してください。
+> [!NOTE]
+> より完全な例については、[ストレージアクセス API の使用](/ja/docs/Web/API/Storage_Access_API/Using)を参照してください。
 
 ## 仕様書
 

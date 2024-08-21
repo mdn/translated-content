@@ -9,7 +9,8 @@ l10n:
 
 Доступное только для чтения свойство **`display`** интерфейса {{domxref ("VRDisplayEvent")}} возвращает объект {{domxref ("VRDisplay")}}, связанный с этим событием.
 
-> **Примечание:** Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 ### Значение
 

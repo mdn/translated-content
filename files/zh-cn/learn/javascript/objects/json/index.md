@@ -34,7 +34,8 @@ JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScr
 
 JSON 可以作为一个对象或者字符串存在，前者用于解读 JSON 中的数据，后者用于通过网络传输 JSON 数据。这不是一个大事件——JavaScript 提供一个全局的 可访问的 [JSON](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON) 对象来对这两种数据进行转换。
 
-> **备注：** 将字符串转换为原生对象称为*反序列化*（deserialization），而将原生对象转换为可以通过网络传输的字符串称为*序列化*（serialization）。
+> [!NOTE]
+> 将字符串转换为原生对象称为*反序列化*（deserialization），而将原生对象转换为可以通过网络传输的字符串称为*序列化*（serialization）。
 
 一个 JSON 对象可以被储存在它自己的文件中，这基本上就是一个文本文件，扩展名为 `.json`，还有 `application/json` {{glossary("MIME type", "MIME 类型")}}。
 
@@ -101,7 +102,8 @@ superHeroes["members"][1]["powers"][2];
 4. 在对象内，我们想访问 `powers` 属性，所以我们使用 `["powers"]`。
 5. `powers` 属性是一个包含英雄技能的数组。我们想要第三个，所以我们使用 `[2]`。
 
-> **备注：** 我们已经在 [JSONText.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 实例中让 JSON 对象进入变量中使其可访问（见[源代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)）。尝试加载它并且在你的浏览器上访问对象数据。
+> [!NOTE]
+> 我们已经在 [JSONText.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 实例中让 JSON 对象进入变量中使其可访问（见[源代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)）。尝试加载它并且在你的浏览器上访问对象数据。
 
 ### JSON 数组
 
@@ -268,9 +270,11 @@ function populateHeroes(obj) {
 5. 使用另一个循环来遍历当前的英雄的超能力，对于每一个元素我们创建 `<li>` 元素，并放入超能力，然后使用 `appendChild()` 把 `listItem` 放入`<ul>` 元素（`myList`）中。
 6. 最后一件事情是将 `<h2>`、`<p>` 和 `<ul>` 追加到 `<article>`（`myArticle`）中。然后将 `<article>` 追加到 `<section>`。追加的顺序很重要，因为它们将被展示在 HTML 中。
 
-> **备注：** 如有疑难，试试引用我们的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished.html) 代码（也可以查看[运行实例](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)）。
+> [!NOTE]
+> 如有疑难，试试引用我们的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished.html) 代码（也可以查看[运行实例](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)）。
 
-> **备注：** 如果你对访问 JSON 对象的点/括号表示法有困扰。获得文件 [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json)，在你的编辑器中打开并参考我们的 JS 代码将会有所帮助。你还应该参考我们的 [JavaScript 对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics)文章，了解关于点和括号表示法的更多信息。
+> [!NOTE]
+> 如果你对访问 JSON 对象的点/括号表示法有困扰。获得文件 [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json)，在你的编辑器中打开并参考我们的 JS 代码将会有所帮助。你还应该参考我们的 [JavaScript 对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics)文章，了解关于点和括号表示法的更多信息。
 
 ### 调用顶层函数
 

@@ -9,7 +9,8 @@ slug: Web/API/NamedNodeMap
 
 `NamedNodeMap` 对象是即时的 (_live_)，因此，如果它内部包含的对象发生改变的话，该对象会自动更新到最新的状态。
 
-> **备注：** 尽管被称为 `NamedNodeMap`，但这个接口不是用来处理节点对象 ({{domxref("Node")}})，而是用来处理属性节点对象 ({{domxref("Attr")}})，属性节点原来是一种特殊的节点 ({{domxref("Node")}})，仍然在某些实现环境（浏览器）中有效。
+> [!NOTE]
+> 尽管被称为 `NamedNodeMap`，但这个接口不是用来处理节点对象 ({{domxref("Node")}})，而是用来处理属性节点对象 ({{domxref("Attr")}})，属性节点原来是一种特殊的节点 ({{domxref("Node")}})，仍然在某些实现环境（浏览器）中有效。
 
 ## 属性
 

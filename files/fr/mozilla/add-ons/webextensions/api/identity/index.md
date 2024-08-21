@@ -54,7 +54,7 @@ Cela aura tendance à être spécifique au fournisseur de services, mais en gén
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.identity`](https://developer.chrome.com/extensions/identity).
 >

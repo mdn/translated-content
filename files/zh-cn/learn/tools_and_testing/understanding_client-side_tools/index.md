@@ -1,17 +1,17 @@
 ---
 title: 理解客户端 web 开发工具
 slug: Learn/Tools_and_testing/Understanding_client-side_tools
+l10n:
+  sourceCommit: b771ad01e0774fe112fde3a3e6467eb18176997e
 ---
 
 {{LearnSidebar}}
 
 客户端工具可能让人望而生畏，不过这个系列的文章主要目的在于展示一些最常见的客户端工具的用途，阐明可以被你链接使用的工具，如何使用包管理器安装这些工具，以及如何使用命令行操控它们。我们将以一个完整的工具链示例收尾，示例会向你展示如何变得更具生产力。
 
-**[现在就从我们的“客户端工具概览”开始吧](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)**
-
 ## 前提
 
-在尝试使用这里列举的工具之前，你应该先好好学习一下 [HTML](/zh-CN/docs/Learn/HTML), [CSS](/zh-CN/docs/Learn/CSS), 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 的核心基础知识。
+在尝试使用这里列举的工具之前，你应该先好好学习一下 [HTML](/zh-CN/docs/Learn/HTML)、[CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 的核心基础知识。
 
 ## 指南
 
@@ -22,6 +22,6 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools
 - [3. 包管理基础](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
   - : 在这篇文章中，我们将会详细看一看包管理器，从而理解如何在我们自己的工程中使用它们——安装工程工具依赖、更新等等。
 - [4. 一个完整的工具链](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain)
-  - : 在这个系列的最后几篇文章中，我们将会带你构建一个工具链样例，从而帮你巩固前面学到的知识。我们将从设立一个实际的开发环境开始，一路在 Netlify 上相应的位置放置发布你的应用所需要的转换工具。在这篇文章里，我们将介绍一个设立我们的开发环境以及代码转换工具的例子。
+  - : 在这个系列的最后几篇文章中，我们将会带你构建一个工具链样例，从而帮你巩固前面学到的知识。我们将从设立一个实际的开发环境开始，一路在相应的位置放置发布你的应用所需要的转换工具。在这篇文章里，我们将介绍一个设立我们的开发环境以及代码转换工具的例子。
 - [5. 发布你的应用](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment)
-  - : 在我们系列的最后一篇文章中，我们将会使用我们在前篇文章中构建的示例工具链，以便我们能够发布我们的样例应用。我们将代码推到 Github，使用 Netlify 进行发布，甚至还会向你展示如何在这个过程中加入一个简单的测试。
+  - : 在我们系列的最后一篇文章中，我们将会使用我们在前篇文章中构建的示例工具链，以便我们能够发布我们的样例应用。我们将代码推到 Github，并将其发布至 Github Pages，甚至还会向你展示如何在这个过程中加入一个简单的测试。

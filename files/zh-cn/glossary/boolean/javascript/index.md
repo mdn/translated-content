@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-在 JavaScript 中，布尔值属于{{Glossary("Primitive", "原始值")}}，可以是 `true` 或 `false`。
+在 JavaScript 中，**布尔值**属于{{Glossary("Primitive", "原始值")}}，可以是 `true` 或 `false`。
 
 {{jsxref("Boolean", "布尔", "", 1)}}对象是包装了布尔原始值的{{Glossary("wrapper", "包装器")}}。
 

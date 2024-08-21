@@ -42,7 +42,8 @@ _图片来自：[过载的插头接口](https://www.flickr.com/photos/easy-pics/
 
 同样，比如说，编程来显示一些 3D 图形，使用以更高级语言编写的 API（例如 JavaScript 或 Python）将会比直接编写直接控制计算机的 GPU 或其他图形功能的低级代码（比如 C 或 C++）来执行操作要容易得多。
 
-> **备注：** 详细说明请见 [API 术语条目](/zh-CN/docs/Glossary/API)。
+> [!NOTE]
+> 详细说明请见 [API 术语条目](/zh-CN/docs/Glossary/API)。
 
 ### 客户端 JavaScript 中的 API
 
@@ -100,7 +101,8 @@ _图片来自：[过载的插头接口](https://www.flickr.com/photos/easy-pics/
 
 API 使用一个或多个 [JavaScript 对象](/zh-CN/docs/Learn/JavaScript/Objects)在你的代码中进行交互，这些对象用作 API 使用的数据（包含在对象属性中）的容器以及 API 提供的功能（包含在对象方法中）。
 
-> **备注：** 如果你不熟悉对象如何工作，则应在继续之前学习 [JavaScript 对象](/zh-CN/docs/Learn/JavaScript/Objects)模块。
+> [!NOTE]
+> 如果你不熟悉对象如何工作，则应在继续之前学习 [JavaScript 对象](/zh-CN/docs/Learn/JavaScript/Objects)模块。
 
 让我们回到 Web 音频 API 的例子——这是一个相当复杂的 API，它由多个对象组成。最重要的包括：
 
@@ -169,7 +171,8 @@ audioElement.addEventListener("ended", () => {
 });
 ```
 
-> **备注：** 有些人可能会注意到，用于播放和暂停音轨的 `play()` 和 `pause()` 方法并不属于 Web 音频 API；它们属于 {{domxref("HTMLMediaElement")}} API，这是一个不同但紧密相关的 API。
+> [!NOTE]
+> 有些人可能会注意到，用于播放和暂停音轨的 `play()` 和 `pause()` 方法并不属于 Web 音频 API；它们属于 {{domxref("HTMLMediaElement")}} API，这是一个不同但紧密相关的 API。
 
 接下来，我们使用 {{domxref("BaseAudioContext/createGain", "AudioContext.createGain()")}} 方法创建一个 {{domxref("GainNode")}} 对象，可以用于调整通过它的音频的音量，并创建另一个事件处理器，当滑块值改变时改变音频图的增益（音量）值：
 
@@ -221,7 +224,8 @@ Ball.prototype.draw = function () {
 };
 ```
 
-> **备注：** 你可以在我们的[弹跳球演示](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/bouncing-balls.html)中看到此代码（也可以[在线运行](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html)）。
+> [!NOTE]
+> 你可以在我们的[弹跳球演示](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/bouncing-balls.html)中看到此代码（也可以[在线运行](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html)）。
 
 ### 它们使用事件来处理状态的变化
 
@@ -269,7 +273,8 @@ Web API 特性受到与 JavaScript 和其他 Web 技术（例如[同源策略](/
 
 Web 音频和 {{domxref("HTMLMediaElement")}} API 受制于一种名为[自动播放策略](/zh-CN/docs/Web/API/Web_Audio_API/Best_practices#自动播放策略)的安全机制。这基本上意味着你不能在页面加载时自动播放音频：你必须允许用户通过按钮等控件启动音频播放。这样做的原因是，自动播放音频通常非常恼人，我们实在不应该让用户忍受它。
 
-> **备注：** 根据浏览器的严格程度，这种安全机制甚至可能会阻止示例在本地运行，也就是说，如果你在浏览器中加载本地示例文件，而不是从 Web 服务器上运行它的话。在撰写本文时，我们的 Web 音频 API 示例在 Google Chrome 浏览器上无法本地运行，必须上传到 GitHub 才能运行。
+> [!NOTE]
+> 根据浏览器的严格程度，这种安全机制甚至可能会阻止示例在本地运行，也就是说，如果你在浏览器中加载本地示例文件，而不是从 Web 服务器上运行它的话。在撰写本文时，我们的 Web 音频 API 示例在 Google Chrome 浏览器上无法本地运行，必须上传到 GitHub 才能运行。
 
 ## 总结
 

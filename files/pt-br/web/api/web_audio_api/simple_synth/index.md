@@ -390,7 +390,8 @@ O resultado é uma matriz, `noteFreq`, com um objeto para cada oitava. Cada obje
 
 Com esta tabela no lugar, podemos descobrir a frequência para uma dada nota em uma oitava particular relativamente fácil. Se queremos a frequência pra nota G# na primeira oitava, nós simplesmente usamos `noteFreq[1]["G#"]` e conseguimos o valor 51.9 como resultado.
 
-> **Nota:** Os valores na tabela de exemplo acima foram arredondados para duas casas decimais.
+> [!NOTE]
+> Os valores na tabela de exemplo acima foram arredondados para duas casas decimais.
 
 ```js hidden
 if (!Object.entries) {

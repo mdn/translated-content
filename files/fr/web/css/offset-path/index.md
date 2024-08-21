@@ -13,7 +13,8 @@ Cette propriété sert à définir un chemin qu'un élément va suivre lors d'un
 
 La position exacte de l'élément sur ce tracé est déterminée grâce à la propriété {{cssxref("offset-distance")}}. Le tracé d'un mouvement peut être défini grâce à un chemin ou à plusieurs chemins successifs ou encore grâce à la géométrie d'une forme. Chaque forme ou chemin doit définir une position initiale pour la valeur calculée `0` de {{cssxref("offset-distance")}} ainsi qu'une direction initiale qui définit la rotation de l'objet dans sa position initiale.
 
-> **Note :** Dans des versions antérieures des spécifications, cette propriété était intitulée `motion-path`. Le nom a été modifié en `offset-path` afin de décrire un chemin statique plutôt qu'un chemin en mouvement.
+> [!NOTE]
+> Dans des versions antérieures des spécifications, cette propriété était intitulée `motion-path`. Le nom a été modifié en `offset-path` afin de décrire un chemin statique plutôt qu'un chemin en mouvement.
 
 ## Syntaxe
 
@@ -45,7 +46,8 @@ offset-path: unset;
 
 ### Valeurs
 
-> **Attention :** À l'heure actuelle, seule la notation `path()` est prise en charge par les navigateurs.
+> [!WARNING]
+> À l'heure actuelle, seule la notation `path()` est prise en charge par les navigateurs.
 
 - `ray()`
   - : Cette notation fonctionnelle prend jusqu'à trois valeurs et définit un chemin qui est un ligne commençant à la position de la boîte et qui suit la direction de l'angle indiqué (la valeur 0deg correspond à une direction verticale, vers le haut et les angles allant dans le sens horaire). La valeur de la taille est définie de façon semblable à celle utilisée pour les dégradés entre `closest-side` et `farthest-corner` avec le mot-clé `contain`.

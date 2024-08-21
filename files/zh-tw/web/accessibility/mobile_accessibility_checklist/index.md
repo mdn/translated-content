@@ -16,7 +16,8 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 
 - 透過顏色傳遞資訊 **必須** 能藉由其他方式獲得資訊 (底線文字表示連結等)
 
-> **備註：** Jon Snook 已撰寫實用的 [Colour Contrast Checker](http://snook.ca/technical/colour_contrast/colour.html) 能用於檢查背景與前景顏色的對比。同樣地，[Tanaguru Contrast-Finder](http://contrast-finder.tanaguru.com/) 也提供類似功能，而且建議相似且更好的對比顏色提供你考量使用。
+> [!NOTE]
+> Jon Snook 已撰寫實用的 [Colour Contrast Checker](http://snook.ca/technical/colour_contrast/colour.html) 能用於檢查背景與前景顏色的對比。同樣地，[Tanaguru Contrast-Finder](http://contrast-finder.tanaguru.com/) 也提供類似功能，而且建議相似且更好的對比顏色提供你考量使用。
 
 ## 可視性
 

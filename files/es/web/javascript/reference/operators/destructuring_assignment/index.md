@@ -217,7 +217,8 @@ let a, b;
 ({ a, b } = { a: 1, b: 2 });
 ```
 
-> **Nota:** Los paréntesis `(...)` alrededor de la declaración de asignación son obligatorios cuando se usa la desestructuración de un objeto literal sin una declaración.
+> [!NOTE]
+> Los paréntesis `(...)` alrededor de la declaración de asignación son obligatorios cuando se usa la desestructuración de un objeto literal sin una declaración.
 >
 > `{a, b} = {a: 1, b: 2}` no es una sintaxis independiente válida, debido a que `{a, b}` en el lado izquierdo se considera un bloque y no un objeto literal.
 >
@@ -308,7 +309,8 @@ drawChart({
 });
 ```
 
-> **Nota:** En la firma de la función para **`drawChart`** anterior, el lado izquierdo desestructurado se asigna a un objeto literal vacío en el lado derecho: `{size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}`. También podrías haber escrito la función sin la asignación del lado derecho. Sin embargo, si omites la asignación del lado derecho, la función buscará al menos un argumento para ser proporcionado cuando se invoca, mientras que en su forma actual, simplemente puedes llamar a **`drawChart()`** sin proporcionar ningún parámetro. El diseño actual es útil si deseas poder llamar a la función sin proporcionar ningún parámetro, el otro puede ser útil cuando deseas asegurarte de que se pase un objeto a la función.
+> [!NOTE]
+> En la firma de la función para **`drawChart`** anterior, el lado izquierdo desestructurado se asigna a un objeto literal vacío en el lado derecho: `{size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}`. También podrías haber escrito la función sin la asignación del lado derecho. Sin embargo, si omites la asignación del lado derecho, la función buscará al menos un argumento para ser proporcionado cuando se invoca, mientras que en su forma actual, simplemente puedes llamar a **`drawChart()`** sin proporcionar ningún parámetro. El diseño actual es útil si deseas poder llamar a la función sin proporcionar ningún parámetro, el otro puede ser útil cuando deseas asegurarte de que se pase un objeto a la función.
 
 #### Desestructuración de arreglos y objetos anidados
 

@@ -40,7 +40,8 @@ document.onclick = (event) => {
 };
 ```
 
-> **备注：** 有关更完整的示例，请参阅 [`Element.requestFullscreen()` 示例](/zh-CN/docs/Web/API/Element/requestFullscreen#示例)。
+> [!NOTE]
+> 有关更完整的示例，请参阅 [`Element.requestFullscreen()` 示例](/zh-CN/docs/Web/API/Element/requestFullscreen#示例)。
 
 ## 规范
 

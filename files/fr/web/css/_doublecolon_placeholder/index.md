@@ -22,7 +22,8 @@ Seul un sous-ensemble des propriétés CSS peut être utilisé avec un sélecteu
 - {{cssxref("word-spacing")}}, {{cssxref("letter-spacing")}}, {{cssxref("text-decoration")}}, {{cssxref("text-transform")}} et {{cssxref("line-height")}}
 - {{cssxref("text-shadow")}}, {{cssxref("text-decoration")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} et {{cssxref("vertical-align")}}.
 
-> **Note :** Par défaut, dans la plupart des navigateurs, le texte de substitution est écrit en gris clair.
+> [!NOTE]
+> Par défaut, dans la plupart des navigateurs, le texte de substitution est écrit en gris clair.
 
 ## Syntaxe
 

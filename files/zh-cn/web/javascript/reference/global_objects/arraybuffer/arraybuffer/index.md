@@ -61,7 +61,8 @@ const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
 buffer.resize(12);
 ```
 
-> **备注：** 推荐将 `maxByteLength` 设置为使用场景下最小的大小。它不应超过 `1073741824`（1GB），以减少内存溢出风险。
+> [!NOTE]
+> 推荐将 `maxByteLength` 设置为使用场景下最小的大小。它不应超过 `1073741824`（1GB），以减少内存溢出风险。
 
 ## 规范
 

@@ -55,7 +55,8 @@ Referrer-Policy: unsafe-url
 
   - : Se enviará un URL completo al realizarse una solicitud de origen equivalente o de origen transversal.
 
-    > **Nota:** Esta directiva filtrará los orígenes y las rutas de acceso de recursos protegidos por TLS a orígenes inseguros. Estudie atentamente el impacto resultante de esta configuración.
+    > [!NOTE]
+    > Esta directiva filtrará los orígenes y las rutas de acceso de recursos protegidos por TLS a orígenes inseguros. Estudie atentamente el impacto resultante de esta configuración.
 
 ## Ejemplos
 

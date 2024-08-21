@@ -23,7 +23,8 @@ _Image source: [Overloaded plug socket](https://www.flickr.com/photos/easy-pics/
 
 Точно также, если мы хотим, например, программировать 3D графику, гораздо легче сделать это с использованием API, написанных на языках высокого уровня, таких как JavaScript или Python.
 
-> **Примечание:** Смотрите также [API в словаре](/ru/docs/Glossary/API).
+> [!NOTE]
+> Смотрите также [API в словаре](/ru/docs/Glossary/API).
 
 ### API клиентской части JavaScript
 
@@ -69,7 +70,8 @@ _Image source: [Overloaded plug socket](https://www.flickr.com/photos/easy-pics/
 - [YouTube API](https://developers.google.com/youtube/), предоставляющий возможность встраивать видео с YouTube на вашем сайте, производить поиск, создавать плейлисты и т.д.
 - [Twilio API](https://www.twilio.com/) — фреймворк для встраивания функциональности голосовой и видео связи в вашем приложении, отправки SMS/MMS из приложения и т.д.
 
-> **Примечание:** вы можете найти информацию о гораздо большем количестве сторонних API в [Каталоге Web API](http://www.programmableweb.com/category/all/apis).
+> [!NOTE]
+> Вы можете найти информацию о гораздо большем количестве сторонних API в [Каталоге Web API](http://www.programmableweb.com/category/all/apis).
 
 ## Как работает API?
 
@@ -79,7 +81,8 @@ _Image source: [Overloaded plug socket](https://www.flickr.com/photos/easy-pics/
 
 Взаимодействие с API в коде происходит через один или больше [объектов JavaScript](/ru/docs/Learn/JavaScript/Objects), которые служат контейнерами для информации, с которой работает API (содержится в свойствах объекта), и реализуют функциональность, которую предоставляет API (содержится в методах объекта).
 
-> **Примечание:** Если вам ещё не известно как работают объекты, советуем вернуться назад и изучить модуль [Основы объектов JavaScript](/ru/docs/Learn/JavaScript/Objects) прежде чем продолжать.
+> [!NOTE]
+> Если вам ещё не известно как работают объекты, советуем вернуться назад и изучить модуль [Основы объектов JavaScript](/ru/docs/Learn/JavaScript/Objects) прежде чем продолжать.
 
 Вернёмся к примеру с Web Audio API — это довольно сложный API, состоящий из ряда объектов. Наиболее очевидные из них
 
@@ -147,7 +150,8 @@ audioElement.addEventListener("ended", () => {
 });
 ```
 
-> **Примечание:** обратите внимание, что методы `play()` и `pause()`, используемые для воспроизведения и приостановки дорожки, не являются частью Web Audio API. Они являются частью {{domxref("HTMLMediaElement")}} API, который отличается от Web Audio API, но тесно с ним связан.
+> [!NOTE]
+> Обратите внимание, что методы `play()` и `pause()`, используемые для воспроизведения и приостановки дорожки, не являются частью Web Audio API. Они являются частью {{domxref("HTMLMediaElement")}} API, который отличается от Web Audio API, но тесно с ним связан.
 
 Далее создадим объект {{domxref("GainNode")}} с помощью метода {{domxref("BaseAudioContext/createGain", "AudioContext.createGain()")}}, который можно использовать для регулировки громкости звука, и еще один обработчик событий, с помощью которого будем менять значение усиления (громкости) в зависимости от значения `<input type="range">`.
 
@@ -199,7 +203,8 @@ Ball.prototype.draw = function () {
 };
 ```
 
-> **Примечание:** вы можете увидеть этот код в действии в нашем [bouncing balls demo](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html) (see it [running live](http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) also).
+> [!NOTE]
+> Вы можете увидеть этот код в действии в нашем [bouncing balls demo](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html) (see it [running live](http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) also).
 
 ### Они используют события для управления состоянием
 

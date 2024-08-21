@@ -74,7 +74,8 @@ samp {
 }
 ```
 
-> **참고:** 웹사이트나 앱의 JavaScript 코드 출력을 담을 컨테이너 요소가 필요하다면 {{HTMLElement("output")}} 요소를 사용해야 합니다.
+> [!NOTE]
+> 웹사이트나 앱의 JavaScript 코드 출력을 담을 컨테이너 요소가 필요하다면 {{HTMLElement("output")}} 요소를 사용해야 합니다.
 
 ## 예제
 

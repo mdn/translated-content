@@ -34,7 +34,8 @@ _Node_ 和 _NPM_ 套件管理器會從準備好的 binary package、安裝檔、
 
 NPM 也可用來安裝 Express 應用程式產生器(全域用)，一個方便的工具幫助你創造符合 [MVC 模式](/zh-TW/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)的 Express web app 骨架。你不一定要使用應用程式產生器，因為每個 Express 應用程式不需要擁有同樣的檔案結構或依賴項。但為了專注於學習本身以及習慣模組化架構，我們會在接下來的教學中使用它。
 
-> **備註：** 與其他不包含單獨的 web 開發伺服器的 Web 框架不同。 在 Node / Express 中，Web 應用程式創建並運行自己的 Web 伺服器！
+> [!NOTE]
+> 與其他不包含單獨的 web 開發伺服器的 Web 框架不同。 在 Node / Express 中，Web 應用程式創建並運行自己的 Web 伺服器！
 
 典型的開發環境還包含其他工具，例如：編輯程式碼使用的[文字編輯器](/zh-TW/docs/Learn/Common_questions/Available_text_editors)、IDE，進行版本控置管理不同版本程式碼的[Git](/zh-TW/docs/Glossary/Git)。這邊假設你已經有這種工具了(尤其是文字編輯器)
 
@@ -60,7 +61,8 @@ Node 有許多[版本](https://nodejs.org/en/blog/release/)，更新的版本代
 
 為了使用 Express，首先要在你的電腦上安裝 Node 和[Node Package Manager (NPM)](https://docs.npmjs.com/)。接下來用最簡單的方法在 Ubuntu Linux 16.04、 macOS 和 Windows 10 上安裝 Nodejs 的 Long Term Supported (LTS)版本吧
 
-> **備註：** 以下的部分用最簡單的方法在上述的作業系統中安裝 Node 和 NPM。如果你使用其他作業系統或想看看其他平台的安裝方式，請查閱[透過套件管理器安裝 Node.js](https://nodejs.org/en/download/package-manager/) (nodejs.org)。
+> [!NOTE]
+> 以下的部分用最簡單的方法在上述的作業系統中安裝 Node 和 NPM。如果你使用其他作業系統或想看看其他平台的安裝方式，請查閱[透過套件管理器安裝 Node.js](https://nodejs.org/en/download/package-manager/) (nodejs.org)。
 
 ### Windows 和 macOS
 
@@ -82,7 +84,8 @@ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-> **警告：** 不要直接從普通的 Ubuntu repositories 安裝，那邊只有很舊的版本。
+> [!WARNING]
+> 不要直接從普通的 Ubuntu repositories 安裝，那邊只有很舊的版本。
 
 ### 測試 Nodejs 和 NPM 的安裝
 
@@ -125,21 +128,24 @@ NPM 應該會隨著 Node 一起安裝，可以用相同的方法進行測試:
 
    這段程式載入『http』模組，並創建一個伺服器 (`createServer()`，並在 8000 埠上監聽 HTTP requests。 The script then prints a message to the console about what browser URL you can use to test the server. The `createServer()` function takes as an argument a callback function that will be invoked when an HTTP request is received — this simply returns a response with an HTTP status code of 200 ("OK") and the plain text "Hello World".
 
-2. > **備註：** Don't worry if you don't understand exactly what this code is doing yet! We'll explain our code in greater detail once we start using Express!
-3. Start the server by navigating into the same directory as your `hellonode.js` file in your command prompt, and calling `node` along with the script name, like so:
+   > [!NOTE]
+   > Don't worry if you don't understand exactly what this code is doing yet! We'll explain our code in greater detail once we start using Express!
+
+2. Start the server by navigating into the same directory as your `hellonode.js` file in your command prompt, and calling `node` along with the script name, like so:
 
    ```bash
    >node hellonode.js
    Server running at http://127.0.0.1:8000/
    ```
 
-4. Navigate to the URL (<http://127.0.0.1:8000/>). If everything is working, the browser should simply display the string "Hello World".
+3. Navigate to the URL (<http://127.0.0.1:8000/>). If everything is working, the browser should simply display the string "Hello World".
 
 ## Using NPM
 
 Next to _Node_ itself, [NPM](https://docs.npmjs.com/) is the most important tool for working with _Node_ applications. NPM is used to fetch any packages (JavaScript libraries) that an application needs for development, testing, and/or production, and may also be used to run tests and tools used in the development process.
 
-> **備註：** From Node's perspective, _Express_ is just another package that you need to install using NPM and then require in your own code.
+> [!NOTE]
+> From Node's perspective, _Express_ is just another package that you need to install using NPM and then require in your own code.
 
 You can manually use NPM to separately fetch each needed package. Typically we instead manage dependencies using a plain-text definition file named [package.json](https://docs.npmjs.com/files/package.json). This file lists all the dependencies for a specific JavaScript "package", including the package's name, version, description, initial file to execute, production dependencies, development dependencies, versions of _Node_ it can work with, etc. The **package.json** file should contain everything NPM needs to fetch and run your application (if you were writing a reusable library you could use this definition to upload your package to the npm respository and make it available for other users).
 
@@ -147,7 +153,8 @@ You can manually use NPM to separately fetch each needed package. Typically we i
 
 The following steps show how you can use NPM to download a package, save it into the project dependencies, and then require it in a Node application.
 
-> **備註：** Here we show the instructions to fetch and install the _Express_ package. Later on we'll show how this package, and others, are already specified for us using the _Express Application Generator_. This section is provided because it is useful to understand how NPM works and what is being created by the application generator.
+> [!NOTE]
+> Here we show the instructions to fetch and install the _Express_ package. Later on we'll show how this package, and others, are already specified for us using the _Express Application Generator_. This section is provided because it is useful to understand how NPM works and what is being created by the application generator.
 
 1. First create a directory for your new application and navigate into it:
 
@@ -247,13 +254,15 @@ The following entry would then be added to your application's **package.json**:
   }
 ```
 
-> **備註：** "[Linters](<https://en.wikipedia.org/wiki/Lint_(software)>)" are tools that perform static analysis on software in order to recognise and report adherence/non-adherance to some set of coding best practice.
+> [!NOTE]
+> "[Linters](<https://en.wikipedia.org/wiki/Lint_(software)>)" are tools that perform static analysis on software in order to recognise and report adherence/non-adherance to some set of coding best practice.
 
 ### Running tasks
 
 In addition to defining and fetching dependencies you can also define _named_ scripts in your **package.json** files and call NPM to execute them with the [run-script](https://docs.npmjs.com/cli/run-script) command. This approach is commonly used to automate running tests and parts of the development or build toolchain (e.g., running tools to minify JavaScript, shrink images, LINT/analyse your code, etc).
 
-> **備註：** Task runners like [Gulp](http://gulpjs.com/) and [Grunt](http://gruntjs.com/) can also be used to run tests and other external tools.
+> [!NOTE]
+> Task runners like [Gulp](http://gulpjs.com/) and [Grunt](http://gruntjs.com/) can also be used to run tests and other external tools.
 
 For example, to define a script to run the _eslint_ development dependency that we specified in the previous section we might add the following script block to our **package.json** file (assuming that our application source is in a folder /src/js):
 
@@ -291,7 +300,8 @@ To create an _Express_ app named "helloworld" with the default settings, navigat
 express helloworld
 ```
 
-> **備註：** You can also specify the template library to use and a number of other settings. Use the `help` command to see all the options:
+> [!NOTE]
+> You can also specify the template library to use and a number of other settings. Use the `help` command to see all the options:
 >
 > ```bash
 > express --help
@@ -299,7 +309,8 @@ express helloworld
 
 NPM will create the new Express app in a sub folder of your current location, displaying build progress on the console. On completion, the tool will display the commands you need to enter to install the Node dependencies and start the app.
 
-> **備註：** The new app will have a **package.json** file in its root directory. You can open this to see what dependencies are installed, including Express and the template library Jade:
+> [!NOTE]
+> The new app will have a **package.json** file in its root directory. You can open this to see what dependencies are installed, including Express and the template library Jade:
 >
 > ```js
 > {

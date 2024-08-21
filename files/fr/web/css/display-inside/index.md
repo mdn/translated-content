@@ -30,7 +30,8 @@ Une valeur `<display-inside>` est définie avec l'un des mots-clés suivants :
 - `ruby` {{Experimental_Inline}}
   - : L'élément se comporte comme un élément en ligne et dispose son contenu selon le modèle de formatage ruby. Il se comporte comme un élément HTML {{HTMLElement("ruby")}}.
 
-> **Note :** Les navigateurs qui prennent en charge la syntaxe avec deux valeurs peuvent n'utiliser que `<display-inside>` lorsque c'est cohérent. Ainsi, avec `display: flex` ou `display: grid`, la valeur utilisée de `<display-outside>` sera nécessairement `block`. On a ainsi le résultat attendu car on doit avoir `display: grid` avec un conteneur qui soit un bloc.
+> [!NOTE]
+> Les navigateurs qui prennent en charge la syntaxe avec deux valeurs peuvent n'utiliser que `<display-inside>` lorsque c'est cohérent. Ainsi, avec `display: flex` ou `display: grid`, la valeur utilisée de `<display-outside>` sera nécessairement `block`. On a ainsi le résultat attendu car on doit avoir `display: grid` avec un conteneur qui soit un bloc.
 
 ### Syntaxe formelle
 

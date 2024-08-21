@@ -100,7 +100,8 @@ Un selector de ID comienza con un carácter `#` en lugar de un punto, pero se ut
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/id.html", '100%', 750)}}
 
-> **Nota:** Como aprendimos en el artículo sobre la especificidad, un ID tiene una especificidad muy alta y anula la mayoría de los otros selectores. Esto puede dificultar su uso. En la mayoría de los casos es preferible añadir una clase al elemento en lugar de utilizar un ID. Sin embargo, si el ID es la única manera de seleccionar el elemento (tal vez porque no tengas acceso al marcado y, por lo tanto, no lo puedes editar) no hay ningún problema en utilizarlo.
+> [!NOTE]
+> Como aprendimos en el artículo sobre la especificidad, un ID tiene una especificidad muy alta y anula la mayoría de los otros selectores. Esto puede dificultar su uso. En la mayoría de los casos es preferible añadir una clase al elemento en lugar de utilizar un ID. Sin embargo, si el ID es la única manera de seleccionar el elemento (tal vez porque no tengas acceso al marcado y, por lo tanto, no lo puedes editar) no hay ningún problema en utilizarlo.
 
 ## En el próximo artículo
 

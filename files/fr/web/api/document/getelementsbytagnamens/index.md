@@ -28,9 +28,11 @@ getElementsByTagNameNS(namespace, name)
 
 Une liste [`NodeList`](/fr/docs/Web/API/NodeList) dynamique (voir la note qui suit) qui contient les éléments trouvés, dans l'ordre selon lequel ils apparaissent dans l'arbre.
 
-> **Note :** Bien que la spécification W3C indique que la valeur renvoyée est de type `NodeList`, Firefox renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection). Opera renvoie un objet `NodeList` qui implémente une méthode `namedItem`, le rendant ainsi semblable à un objet `HTMLCollection`. À partir de janvier 2012, seuls les navigateurs WebKit renvoient un vrai objet `NodeList`. Voir [le bogue 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) pour plus de détails.
+> [!NOTE]
+> Bien que la spécification W3C indique que la valeur renvoyée est de type `NodeList`, Firefox renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection). Opera renvoie un objet `NodeList` qui implémente une méthode `namedItem`, le rendant ainsi semblable à un objet `HTMLCollection`. À partir de janvier 2012, seuls les navigateurs WebKit renvoient un vrai objet `NodeList`. Voir [le bogue 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) pour plus de détails.
 
-> **Note :** Les valeurs des paramètres de cette méthode sont sensibles à la casse (alors qu'elles ne l'étaient pas pour Firefox 3.5 et les versions antérieures, voir [les notes de version de Firefox 3.6](/fr/docs/Mozilla/Firefox/Releases/3.6#dom) et la note présente dans [le tableau de compatibilité de `Element.getElementsByTagNameNS()`](/fr/docs/Web/API/Element/getElementsByTagNameNS#compatibilité_des_navigateurs) pour plus de détails).
+> [!NOTE]
+> Les valeurs des paramètres de cette méthode sont sensibles à la casse (alors qu'elles ne l'étaient pas pour Firefox 3.5 et les versions antérieures, voir [les notes de version de Firefox 3.6](/fr/docs/Mozilla/Firefox/Releases/3.6#dom) et la note présente dans [le tableau de compatibilité de `Element.getElementsByTagNameNS()`](/fr/docs/Web/API/Element/getElementsByTagNameNS#compatibilité_des_navigateurs) pour plus de détails).
 
 ## Exemples
 

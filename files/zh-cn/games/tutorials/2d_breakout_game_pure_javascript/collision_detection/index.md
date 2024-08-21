@@ -127,7 +127,8 @@ collisionDetection();
 
 {{JSFiddleEmbed("https://jsfiddle.net/kundan333/myd4vbwg/5/","","320")}}
 
-> **备注：** 练习：当球碰到砖头时，改变球的颜色。
+> [!NOTE]
+> 练习：当球碰到砖头时，改变球的颜色。
 
 ## 下一节
 

@@ -63,7 +63,8 @@ apps.onsuccess = function () {
 
 只要使用 [`PermissionSettings.set()`](/zh-TW/docs/DOM/PermissionSettings.set) 函式即可設定權限。可能的數值均與 [`get`](/zh-TW/docs/DOM/PermissionSettings.get) 函式所存取的相同。
 
-> **備註：** 根據 Apps 權限的不同，某些可能為隱性 (Implicit) 權限。若因為某種理由，Apps 嘗試將權限變更為隱性權限，就會產生錯誤。為了避免這種錯誤，可透過 [`PermissionSettings.isExplicit()`](/zh-TW/docs/DOM/PermissionSettings.isExplicit) 函式而檢查是否為顯性權限。
+> [!NOTE]
+> 根據 Apps 權限的不同，某些可能為隱性 (Implicit) 權限。若因為某種理由，Apps 嘗試將權限變更為隱性權限，就會產生錯誤。為了避免這種錯誤，可透過 [`PermissionSettings.isExplicit()`](/zh-TW/docs/DOM/PermissionSettings.isExplicit) 函式而檢查是否為顯性權限。
 
 ```js
 // Let's check all installed apps

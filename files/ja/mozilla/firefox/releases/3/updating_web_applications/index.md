@@ -63,7 +63,8 @@ content mypackage location/ contentaccessible=yes
 
 これは頻繁に必要となるものではありませんが、ウェブからのアクセスが必要な、まれなケースのために用意されています。Firefox はユーザーに拡張が `contentaccessible` フラグをこのような方法で用いることで潜在的セキュリティリスクになることを警告するかもしれないことに注意してください。
 
-> **メモ:** Firefox 2 では `contentaccessible` フラグが認識されない (フラグを含む行全体が無視されてしまう) ことから、アドオンを Firefox 2 と Firefox 3 の両方に対応させたい場合は、以下のように指定します。```
+> [!NOTE]
+> Firefox 2 では `contentaccessible` フラグが認識されない (フラグを含む行全体が無視されてしまう) ことから、アドオンを Firefox 2 と Firefox 3 の両方に対応させたい場合は、以下のように指定します。```
 > content mypackage location/
 > content mypackage location/ contentaccessible=yes
 >

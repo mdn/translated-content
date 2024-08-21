@@ -9,7 +9,8 @@ slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and
 
 Este artículo es un resumen de algunos métodos DOM nivel 1 poderosos y fundamentales así como una descripción de cómo utilizarlos utilizando Javascript. Aprenderás a crear, accesar, controlar, y remover elementos HTML dinámicamente. Los métodos DOM presentados aquí no son específicos de HTML; también aplican para XML. Las demostraciones aquí proporcionadas funcionarán en cualquier navegador moderno, incluyendo todas las versiones de Firefox e IE 5+.
 
-> **Nota:** Los métodos DOM presentados aquí forman parte del Modelo de Documento basado en Objetos (DOM: Document Object Model por sus siglas en inglés) de especificación nivel 1. DOM nivel 1 incluye métodos tanto para acceso genérico del documento (DOM 1 Core) así como métodos específicos para documentos HTML (DOM 1 HTML).
+> [!NOTE]
+> Los métodos DOM presentados aquí forman parte del Modelo de Documento basado en Objetos (DOM: Document Object Model por sus siglas en inglés) de especificación nivel 1. DOM nivel 1 incluye métodos tanto para acceso genérico del documento (DOM 1 Core) así como métodos específicos para documentos HTML (DOM 1 HTML).
 
 ## Ejemplo: Crear una tabla HTML dinámicamente (`Ejemplo1.html`)
 
@@ -214,7 +215,8 @@ After testing this sample, note that the words hello and world are together: hel
 
 ![Image:sample2b2.jpg](sample2b2.jpg)
 
-> **Nota:** createTextNode and appendChild is a simple way to include white space between the words hello and world. Another important note is that the appendChild method will append the child after the last child, just like the word world has been added after the word hello. So if you want to append a Text Node between hello and world you will need to use insertBefore instead of appendChild.
+> [!NOTE]
+> CreateTextNode and appendChild is a simple way to include white space between the words hello and world. Another important note is that the appendChild method will append the child after the last child, just like the word world has been added after the word hello. So if you want to append a Text Node between hello and world you will need to use insertBefore instead of appendChild.
 
 ### Creating New Elements with the document object and the `createElement(..)` method
 
@@ -261,7 +263,8 @@ The basic steps to create the table in sample1.html are:
 - Create all the elements.
 - Finally, append each child according to the table structure (as in the above figure). The following source code is a commented version for the sample1.html.
 
-> **Nota:** At the end of the start function there is a new line of code. The table's border property was set using another DOM method, `setAttribute`. setAttribute has two arguments: the attribute name and the attribute value. You can set any attribute of any element using the setAttribute method.
+> [!NOTE]
+> At the end of the start function there is a new line of code. The table's border property was set using another DOM method, `setAttribute`. setAttribute has two arguments: the attribute name and the attribute value. You can set any attribute of any element using the setAttribute method.
 
 ```html
 <head>
@@ -314,7 +317,8 @@ The basic steps to create the table in sample1.html are:
 
 This example introduces two new DOM attributes. First it uses the `childNodes` attribute to get the list of child nodes of mycel. The `childNodes` list includes all child nodes, regardless of what their name or type is. Like getElementsByTagName(), it returns a list of nodes. The differences are that (a) getElementsByTagName() only returns elements of the specified tag name; and (b) getElementsByTagName() returns descendants at any level, not just immediate children. Once you have the returned list, use `[x]` method to retrieve the desired child item. This example stores in myceltext the text node of the second cell in the second row of the table. Then, to display the results in this example, it creates a new text node whose content is the data of myceltext and appends it as a child of the \<body> element.
 
-> **Nota:** If your object is a text node, you can use the data attribute and retrieve the text content of the node.
+> [!NOTE]
+> If your object is a text node, you can use the data attribute and retrieve the text content of the node.
 
 ```js
 mybody = document.getElementsByTagName("body")[0];

@@ -32,7 +32,8 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 為了在網頁上放置一個簡單的圖像，我們使用\<img>元素。 這是一個空元素（意味著它沒有文本內容或結束標記），並需要至少一個屬性（src）（有時稱為其完整標題，source）才有用。 src 屬性包含指向要嵌入頁面的圖像的路徑，該路徑可以是相對路徑或絕對路徑 URL，與\<a>元素中的 href 屬性相同。
 
-> **備註：** 在繼續之前，你應該閱讀有關 URL 和路徑的快速入門，以複習[相對路徑和絕對路徑 URL](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)。
+> [!NOTE]
+> 在繼續之前，你應該閱讀有關 URL 和路徑的快速入門，以複習[相對路徑和絕對路徑 URL](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)。
 
 舉例來說, 如果你的圖片名為 dinosaur.jpg 且與 HTML 檔案位於同一資料夾中，可以這樣嵌入圖片：
 
@@ -48,7 +49,8 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 像這樣.
 
-> **備註：** 搜索引擎還會讀取圖片名稱，並將其納入 SEO 中。 因此你應該為圖片提供一個描述性的檔名。 例如 dinosaur.jpg 的命名方式會比 img835.png 更好。
+> [!NOTE]
+> 搜索引擎還會讀取圖片名稱，並將其納入 SEO 中。 因此你應該為圖片提供一個描述性的檔名。 例如 dinosaur.jpg 的命名方式會比 img835.png 更好。
 
 你也可以用絕對路徑 URL 來嵌入圖片，例如
 
@@ -58,7 +60,8 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 但這麼做是沒有意義的，因為它只會使瀏覽器執行更多工作，瀏覽器需重複執行從 DNS 服務器中搜尋 IP 地址等等工作。你應將網站上的圖片與 HTML 存放在同一個伺服器上。
 
-> **警告：** 大多數圖像均受版權保護。 請勿在你的網站上隨意顯示圖片，除非：
+> [!WARNING]
+> 大多數圖像均受版權保護。 請勿在你的網站上隨意顯示圖片，除非：
 >
 > - 你是圖片的擁有者.
 > - 你已收到圖片所有者的白紙黑字認可。
@@ -70,9 +73,11 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 ![A basic image of a dinosaur, embedded in a browser, with "Images in HTML" written above it](basic-image.png)
 
-> **備註：** \<img>和\<video>之類的元素有時也稱為替換元素。 這是因為元素的內容和圖片大小是由外部（例如圖片或影音檔）所定義的，而不是由元素的內容定義。
+> [!NOTE]
+> 諸如 {{htmlelement("img")}} 和 {{htmlelement("video")}} 等元素有時也稱為替換元素。這是因為元素的內容和圖片大小是由外部（例如圖片或影音檔）所定義的，而不是由元素的內容定義。
 
-> **備註：** 你可以從在 [Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) 上找到本節完成的示例（參見[開源碼](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)。）
+> [!NOTE]
+> 你可以從在 [Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) 上找到本節完成的示例（參見[開源碼](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)。）
 
 ### 替代性文字
 
@@ -104,7 +109,8 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 本質上，關鍵是即使在看不見圖片的情況下也能提供相同的體驗。這樣可以確保所有使用者都不會丟失任何內容。嘗試在瀏覽器中關閉圖像，然後查看外觀。你很快就會意識到，如果看不到圖片，替代文字會很有幫助。
 
-> **備註：** For more information, see our guide to [Text Alternatives](/zh-TW/docs/Learn/Accessibility/HTML#Text_alternatives).
+> [!NOTE]
+> For more information, see our guide to [Text Alternatives](/zh-TW/docs/Learn/Accessibility/HTML#Text_alternatives).
 
 ### 寬與高
 
@@ -127,7 +133,8 @@ This is a good thing to do, resulting in the page loading quicker and more smoot
 
 However, you shouldn't alter the size of your images using HTML attributes. If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct [aspect ratio](https://en.wikipedia.org/wiki/Aspect_ratio_%28image%29). You should use an image editor to put your image at the correct size before putting it on your webpage.
 
-> **備註：** If you do need to alter an image's size, you should use [CSS](/zh-TW/docs/Learn/CSS) instead.
+> [!NOTE]
+> If you do need to alter an image's size, you should use [CSS](/zh-TW/docs/Learn/CSS) instead.
 
 ### 圖片標題
 
@@ -335,7 +342,8 @@ A better solution, is to use the HTML5 {{htmlelement("figure")}} and {{htmleleme
 
 The {{htmlelement("figcaption")}} element tells browsers, and assistive technology that the caption describes the other content of the {{htmlelement("figure")}} element.
 
-> **備註：** From an accessibility viewpoint, captions and [`alt`](/zh-TW/docs/Web/HTML/Element/img#alt) text have distinct roles. Captions benefit even people who can see the image, whereas [`alt`](/zh-TW/docs/Web/HTML/Element/img#alt) text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
+> [!NOTE]
+> From an accessibility viewpoint, captions and [`alt`](/zh-TW/docs/Web/HTML/Element/img#alt) text have distinct roles. Captions benefit even people who can see the image, whereas [`alt`](/zh-TW/docs/Web/HTML/Element/img#alt) text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
 
 A figure doesn't have to be an image. It is an independent unit of content that:
 
@@ -497,7 +505,8 @@ p {
 
 總結來說，如果圖片在內容上具有含義，則應使用 HTML 圖像。 如果圖像純粹是裝飾性的，則應使用 CSS 背景圖片。
 
-> **備註：** 在我們的 CSS 主題中，你將學到更多關於 CSS 背景圖片的知識。
+> [!NOTE]
+> 在我們的 CSS 主題中，你將學到更多關於 CSS 背景圖片的知識。
 
 ## 試試看!
 

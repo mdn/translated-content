@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Statements/export
 
 Инструкция **export** используется для экспорта функций, объектов или примитивов из файла (или модуля).
 
-> **Примечание:** Эта функциональность не реализована в браузерах на данный момент, но она реализована во многих транспайлерах, таких как [Traceur Compiler](https://github.com/google/traceur-compiler), [Babel](http://babeljs.io/) or [Rollup](https://github.com/rollup/rollup).
+> [!NOTE]
+> Эта функциональность не реализована в браузерах на данный момент, но она реализована во многих транспайлерах, таких как [Traceur Compiler](https://github.com/google/traceur-compiler), [Babel](http://babeljs.io/) or [Rollup](https://github.com/rollup/rollup).
 
 ## Синтаксис
 

@@ -53,7 +53,8 @@ let feedForward = [0.00020298, 0.0004059599, 0.00020298];
 let feedBackward = [1.0126964558, -1.9991880801, 0.9873035442];
 ```
 
-> **참고:** 이 값들은 [Web Audio API 명세의 필터 특징들](https://webaudio.github.io/web-audio-api/#filters-characteristics)에서 명시된 로우패스 필터에 기반하여 계산된 값들입니다. 이 필터 노드가 더욱 많은 인기를 얻고 있으므로 우리는 더 많은 계수 값들을 모을 수 있을 것입니다.
+> [!NOTE]
+> 이 값들은 [Web Audio API 명세의 필터 특징들](https://webaudio.github.io/web-audio-api/#filters-characteristics)에서 명시된 로우패스 필터에 기반하여 계산된 값들입니다. 이 필터 노드가 더욱 많은 인기를 얻고 있으므로 우리는 더 많은 계수 값들을 모을 수 있을 것입니다.
 
 ## 오디오 그래프에서 IIR 필터 사용하기
 

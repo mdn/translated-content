@@ -19,7 +19,8 @@ l10n:
 В нашем примере [Fetch Response](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) ([живой пример](https://mdn.github.io/dom-examples/fetch/fetch-response/)) мы создаëм новый экземпляр объекта {{domxref("Request")}} с помощью конструктора {{domxref("Request.Request","Request()")}}, передавая ему путь к изображению.
 Затем мы отправляем запрос, применяя {{domxref("fetch()")}}, извлекаем из ответа объект Blob, используя {{domxref("Response.blob")}}, создаëм объект URL с помощью {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} и отображаем результат в теге {{htmlelement("img")}}.
 
-> **Примечание:** в верхних строчках функции `fetch()` мы выводим в консоль ответ `ok`.
+> [!NOTE]
+> В верхних строчках функции `fetch()` мы выводим в консоль ответ `ok`.
 
 ```js
 const myImage = document.querySelector("img");

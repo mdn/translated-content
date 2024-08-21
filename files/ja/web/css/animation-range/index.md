@@ -78,12 +78,14 @@ animation-range: entry 10% 90%;
 
     `<timeline-range-name>` の値に `<length-percentage>` が含まれていない場合、それが `animation-range-start` の値であれば `0%`、`animation-range-end` の値であれば `100%` が既定値になります。
 
-    > **メモ:** 上記の説明からこれらの値が意味していることを視覚化するのはとても難しいです。幸いなことに、 [View Timeline Ranges Visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/) はこれらが意味していることを視覚的に分かりやすく表示してくれます。
+    > [!NOTE]
+    > 上記の説明からこれらの値が意味していることを視覚化するのはとても難しいです。幸いなことに、 [View Timeline Ranges Visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/) はこれらが意味していることを視覚的に分かりやすく表示してくれます。
 
 - `<timeline-range-name> <length-percentage>`
   - : 指定したタイムライン範囲の開始から測定された、指定したタイムライン範囲内の指定したパーセント値または距離に等しい組み合わせ値。
 
-> **メモ:** スクロールポート（詳細は{{glossary("Scroll container", "スクロールコンテナー")}}を参照）とは、名前付きビュー進行タイムラインのアニメーションの主体要素が可視であるとみなされる範囲のことです。既定値では、これはスクロールポートの全範囲ですが、 {{cssxref("view-timeline-inset")}} プロパティを使用して調整することができます。
+> [!NOTE]
+> スクロールポート（詳細は{{glossary("Scroll container", "スクロールコンテナー")}}を参照）とは、名前付きビュー進行タイムラインのアニメーションの主体要素が可視であるとみなされる範囲のことです。既定値では、これはスクロールポートの全範囲ですが、 {{cssxref("view-timeline-inset")}} プロパティを使用して調整することができます。
 
 ## 公式定義
 

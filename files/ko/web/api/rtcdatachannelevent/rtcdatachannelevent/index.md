@@ -7,7 +7,8 @@ slug: Web/API/RTCDataChannelEvent/RTCDataChannelEvent
 
 **`RTCDataChannelEvent()`** 생성자는 새로운 {{domxref("RTCDataChannelEvent")}}를 생성합니다.
 
-> **참고:** 이 이벤트는 알아서 WebRTC 레이어에 생성되고 전달되기 때문에, `RTCDataChannelEvent`를 수동으로 생성하는 일은 거의 없습니다.
+> [!NOTE]
+> 이 이벤트는 알아서 WebRTC 레이어에 생성되고 전달되기 때문에, `RTCDataChannelEvent`를 수동으로 생성하는 일은 거의 없습니다.
 
 ## Syntax
 

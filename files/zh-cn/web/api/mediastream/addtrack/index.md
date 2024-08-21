@@ -7,7 +7,8 @@ slug: Web/API/MediaStream/addTrack
 
 **`MediaStream.addTrack()`** 方法会给流添加一个新轨道。指定一个{{domxref("MediaStreamTrack")}}对象作为参数。
 
-> **备注：** 如果指定的 track 已经存在于流的 track set 里的话，该方法不会产生作用。
+> [!NOTE]
+> 如果指定的 track 已经存在于流的 track set 里的话，该方法不会产生作用。
 
 ## 语法
 

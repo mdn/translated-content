@@ -183,7 +183,8 @@ var a, b;
 ({ a, b } = { a: 1, b: 2 });
 ```
 
-> **Nota:** Os parênteses `( ... )` ao redor da declaração de atribuição é uma sintaxe necessária quando se utiliza a atribuição via desestruturação de objeto literal sem uma declaração.
+> [!NOTE]
+> Os parênteses `( ... )` ao redor da declaração de atribuição é uma sintaxe necessária quando se utiliza a atribuição via desestruturação de objeto literal sem uma declaração.
 >
 > `{a, b} = {a:1, b:2}` não é uma sintaxe stand-alone válida, pois `{a, b}` no lado esquerdo é considarada um bloco, não um objeto literal.
 >

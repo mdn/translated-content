@@ -22,7 +22,8 @@ l10n:
 - `udp`
   - : 该候选者将使用 {{Glossary("UDP")}} 传输协议进行数据传输。由于其更好的性能特点，是媒体交互的首选协议。
 
-> **备注：** 如果 `protocol` 为 `null`，且{{Glossary("user agent","用户代理")}}支持 `protocol`，则将 `candidate` 传递给 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 将失败，抛出 `OperationError` 异常。
+> [!NOTE]
+> 如果 `protocol` 为 `null`，且{{Glossary("user agent","用户代理")}}支持 `protocol`，则将 `candidate` 传递给 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 将失败，抛出 `OperationError` 异常。
 
 ## 使用说明
 

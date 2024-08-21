@@ -10,7 +10,8 @@ l10n:
 
 **`register`** メソッドは、システムにプッシュ通知の新しい端点をリクエストするために使用します。
 
-> **メモ:** このメソッドは {{domxref("PushManager.subscribe()")}} に置き換えられました。
+> [!NOTE]
+> このメソッドは {{domxref("PushManager.subscribe()")}} に置き換えられました。
 
 ## 構文
 
@@ -28,7 +29,8 @@ register()
 
 メソッドの呼び出しに成功したら、リクエストの `result` が端点の URL を表す文字列になります。
 
-> **メモ:** この URL が必要なくなったら、 {{domxref("PushManager.unregister()")}} を使用して自分自身を掃除してください。
+> [!NOTE]
+> この URL が必要なくなったら、 {{domxref("PushManager.unregister()")}} を使用して自分自身を掃除してください。
 
 ## 例
 

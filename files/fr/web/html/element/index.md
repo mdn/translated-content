@@ -9,7 +9,8 @@ l10n:
 
 Cette page répertorie tous les [éléments](/fr/docs/Glossary/Element) [HTML](/fr/docs/Glossary/HTML), qui sont créés à l'aide de [balises](/fr/docs/Glossary/Tag). Ils sont regroupés par fonction pour vous aider à trouver facilement ce que vous avez en tête. Une liste alphabétique de tous les éléments est fournie dans la barre latérale de la page de chaque élément ainsi que de celle-ci.
 
-> **Note :** Pour plus d'informations sur les bases des éléments et attributs HTML, voir [l'article Commencer avec le HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started).
+> [!NOTE]
+> Pour plus d'informations sur les bases des éléments et attributs HTML, voir [l'article Commencer avec le HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started).
 
 ## Racine principale
 
@@ -223,7 +224,8 @@ Les composants web (ou <i lang="en">web components</i> en anglais) permettent de
 
 ## Éléments obsolètes ou dépréciés
 
-> **Attention :** Ces éléments sont d'anciens éléments HTML qui sont désormais dépréciés et qui ne devraient plus être utilisés. **Ces éléments ne doivent pas être utilisés dans de nouveaux projets et doivent être remplacés dans les anciens projets dès que possible.** Ces éléments uniquement sont listés ici à des fins d'information.
+> [!WARNING]
+> Ces éléments sont d'anciens éléments HTML qui sont désormais dépréciés et qui ne devraient plus être utilisés. **Ces éléments ne doivent pas être utilisés dans de nouveaux projets et doivent être remplacés dans les anciens projets dès que possible.** Ces éléments uniquement sont listés ici à des fins d'information.
 
 | Élément                                              | Description                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

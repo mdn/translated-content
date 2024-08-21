@@ -1,17 +1,17 @@
 ---
 title: <xsl:processing-instruction>
 slug: Web/XSLT/Element/processing-instruction
+l10n:
+  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `<xsl:processing-instruction>` 要素は処理命令を出力文書に書き込みます。
 
 ### 構文
 
-```
-<xsl:processing-instruction name=NAME> TEMPLATE </xsl:processing-instruction>
-```
+`<xsl:processing-instruction name=NAME> TEMPLATE </xsl:processing-instruction>`
 
 ### 必須属性
 
@@ -20,13 +20,13 @@ slug: Web/XSLT/Element/processing-instruction
 
 ### 任意属性
 
-なし
+なし。
 
-### タイプ
+### 種類
 
-命令は、テンプレート内に表示されます。
+命令で、テンプレート内に現れます。
 
-### 定義
+## 仕様書
 
 XSLT, section 7.3
 

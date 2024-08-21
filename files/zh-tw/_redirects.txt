@@ -95,6 +95,7 @@
 /zh-TW/docs/Glossary/404	/zh-TW/docs/Web/HTTP/Status/404
 /zh-TW/docs/Glossary/502	/zh-TW/docs/Web/HTTP/Status/502
 /zh-TW/docs/Glossary/Empty_element	/zh-TW/docs/Glossary/Void_element
+/zh-TW/docs/Glossary/Routers	/zh-TW/docs/Glossary/Router
 /zh-TW/docs/Glossary/偽元素	/zh-TW/docs/Glossary/Pseudo-element
 /zh-TW/docs/Glossary/字元	/zh-TW/docs/Glossary/Character
 /zh-TW/docs/Glossary/字元編碼	/zh-TW/docs/Glossary/Character_encoding
@@ -408,6 +409,7 @@
 /zh-TW/docs/Web/API/HTMLOrForeignElement/dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /zh-TW/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/zh-TW/docs/Web/API/IndexedDB_API
 /zh-TW/docs/Web/API/Media_Streams_API	/zh-TW/docs/Web/API/Media_Capture_and_Streams_API
+/zh-TW/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers	/zh-TW/docs/Web/API/Navigator/registerProtocolHandler
 /zh-TW/docs/Web/API/NavigatorOnLine	/en-US/docs/Web/API/Navigator/onLine
 /zh-TW/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/en-US/docs/Web/API/Navigator/onLine
 /zh-TW/docs/Web/API/ParentNode/children	/en-US/docs/Web/API/Element/children

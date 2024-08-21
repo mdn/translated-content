@@ -7,7 +7,8 @@ slug: Web/CSS/overscroll-behavior-x
 
 **`overscroll-behavior-x`** 这个 CSS 属性用来控制当滚动到区域的水平边界时的浏览器行为。
 
-> **备注：** 详细的解释请访问 {{cssxref("overscroll-behavior")}}
+> [!NOTE]
+> 详细的解释请访问 {{cssxref("overscroll-behavior")}}
 
 ```css
 /* Keyword values */

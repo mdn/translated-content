@@ -2,7 +2,7 @@
 title: サードパーティ API
 slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 l10n:
-  sourceCommit: 05d8b0eb3591009b6b7fee274bb7ed1bc5638f18
+  sourceCommit: bc0d0d1ef796435e969f6d65c7e5d3c08f4023aa
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -26,7 +26,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">目的:</th>
       <td>
         サードパーティ API の仕組み、それらを利用してウェブサイトを強化する方法を学習すること。
       </td>
@@ -40,7 +40,8 @@ l10n:
 
 [Simple Mapquest API の例](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/mapquest)を参考に、サードパーティ API とブラウザー API の違いを説明します。
 
-> **メモ:** 一度に[すべてのコード例を取得](/ja/docs/Learn#コード例の入手)したいかもしれませんが、その場合は、それぞれの節で必要な例ファイルをリポジトリーから検索すればよいでしょう。
+> [!NOTE]
+> 一度に[すべてのコード例を取得](/ja/docs/Learn#コード例の入手)したいかもしれませんが、その場合は、それぞれの節で必要な例ファイルをリポジトリーから検索すればよいでしょう。
 
 ### サードパーティのサーバーにある
 
@@ -80,7 +81,8 @@ const map = L.mapquest.map("map", {
 
 これが、Mapquest API が単純な地図を描くために必要なすべての情報です。接続しているサーバーは、表示されている地域の正しい地図タイルを表示するなど、複雑なものをすべて処理します。
 
-> **メモ:** API の中には、機能へのアクセスをわずかに異なる方法で処理するものがあり、開発者はデータを取得するために特定の URL パターンに対して HTTP リクエストを行う必要があります。これらは [RESTful API と呼ばれ、後で例が出てきます](#restful_api_—_nytimes)。
+> [!NOTE]
+> API の中には、機能へのアクセスをわずかに異なる方法で処理するものがあり、開発者はデータを取得するために特定の URL パターンに対して HTTP リクエストを行う必要があります。これらは [RESTful API と呼ばれ、後で例が出てきます](#restful_api_—_nytimes)。
 
 ### 通常は API キーが必要です
 
@@ -96,7 +98,8 @@ L.mapquest.key = "YOUR-API-KEY-HERE";
 
 この行では、アプリケーションで使用する API キーまたは開発者キーを指定します。アプリケーションの開発者は、キーを取得して API の機能へのアクセス許可を得るためにコードに含める必要があります。この例では、プレースホルダーを用意しました。
 
-> **メモ:** 独自の例を作成するときは、プレースホルダーの代わりに独自の API キーを使用します。
+> [!NOTE]
+> 独自の例を作成するときは、プレースホルダーの代わりに独自の API キーを使用します。
 
 他の API では、少し異なる方法でキーを含める必要があるかもしれませんが、ほとんどのパターンは比較的似ています。
 
@@ -128,7 +131,7 @@ hybrid-style map にするために `'map'` を `'hybrid'` に変えてみてく
 map.addControl(L.mapquest.control());
 ```
 
-[`mapquest.control()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-control/) メソッドは、単純なフル機能のコントロールセットを作成するだけで、デフォルトでは右上隅に配置されます。 `position` プロパティを含むコントロールの引数としてオプションオブジェクトを指定することで、位置を調整することができます。例えば、次のようにしてみてください。
+[`mapquest.control()` メソッド](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-control/) は単純なフル機能のコントロールセットを作成するだけで、既定では右上隅に配置されます。コントロールの位置を指定する文字列である `position` プロパティを格納したコントロールの引数にオプションオブジェクトを指定することで、位置を調整することができます。例えば、このようにしてみてください。
 
 ```js
 map.addControl(L.mapquest.control({ position: "bottomright" }));
@@ -164,13 +167,12 @@ L.marker([53.480759, -2.242631], {
 
 ドキュメントに記載されているその他のオプションを試してみて、何ができるか見てみましょう。Mapquest には、道案内や検索など、かなり高度な機能があります。
 
-> **メモ:** サンプルがうまく動作しない場合は、[完成版](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/finished/script.js)のコードをチェックしてみてください。
+> [!NOTE]
+> サンプルがうまく動作しない場合は、[完成版](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/finished/script.js)のコードをチェックしてみてください。
 
 ## RESTful API — NYTimes
 
 では、もう一つの API の例を見てみましょう — [New York Times API](https://developer.nytimes.com/) です。この API を使用すると、New York Times のニュースストーリー情報を取得して、サイトに表示することができます。この種類の API は **RESTful API** として知られています。Mapquest で行ったように JavaScript ライブラリーの機能を使用してデータを取得するのではなく、特定の URL に HTTP リクエストを行い、検索語やその他のプロパティのようなデータを URL 内にエンコードしてデータを取得します（多くの場合、URL 引数として）。これは、API でよく見られるパターンです。
-
-## サードパーティ API を利用するためのアプローチ
 
 以下では、 NYTimes API の使用方法を示すエクササイズを紹介しますが、新しい API を使用するためのアプローチとして、より一般的なステップのセットを提供します。
 
@@ -241,21 +243,23 @@ L.marker([53.480759, -2.242631], {
 - `q` URL 引数で指定しなければならない検索語 (値は `searchTerm` テキスト {{htmlelement("input")}} の値から取得されます)。
 - `fq` URL 引数で渡された式で指定された、結果を返す文書の種類。この例では、記事を返したいとします。
 
-次に、いくつかの [`if()`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) 文を使用して、`startDate` と `endDate` `<input>` に値が入力されているかどうかをチェックします。記入されている場合は、それぞれ `begin_date` と `end_date` の URL 引数で指定された値を URL に追加します。
+次に、いくつかの [`if()`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) 文を使用して、`startDate` および `endDate` 要素に値が入力されているかどうかをチェックします。記入されている場合は、それぞれ `begin_date` と `end_date` の URL 引数で指定された値を URL に追加します。
 
 そのため、完全な URL は次のような形になってしまいます。
 
-```
+```url
 https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=YOUR-API-KEY-HERE&page=0&q=cats&fq=document_type:("article")&begin_date=20170301&end_date=20170312
 ```
 
-> **メモ:** どのような URL 引数を含めることができるかについての詳細は、[NYTimes developer docs](https://developer.nytimes.com/) を参照してください。
+> [!NOTE]
+> どのような URL 引数を含めることができるかについての詳細は、[NYTimes developer docs](https://developer.nytimes.com/) を参照してください。
 
-> **メモ:** この例では初歩的なフォームデータの検証を行っています — 検索語フィールドは、フォームを送信する前に入力しなければなりません (`required` 属性を使用して達成されます)。日付フィールドには `pattern` 属性が指定されており、値が 8 個の数字 (`pattern="[0-9]{8}"`) で構成されていないと送信されません。これらがどのように機能するかについての詳細は[フォームデータ検証](/ja/docs/Learn/Forms/Form_validation)を参照してください。
+> [!NOTE]
+> この例では初歩的なフォームデータの検証を行っています — 検索語フィールドは、フォームを送信する前に入力しなければなりません (`required` 属性を使用して達成されます)。日付フィールドには `pattern` 属性が指定されており、値が 8 個の数字 (`pattern="[0-9]{8}"`) で構成されていないと送信されません。これらがどのように機能するかについての詳細は[フォームデータ検証](/ja/docs/Learn/Forms/Form_validation)を参照してください。
 
 ### API からデータを要求する
 
-これで URL を作成したので、それにリクエストしてみましょう。これは [Fetch API](/ja/docs/Web/API/Fetch_API/Using_Fetch) を使って行います。
+これで URL を作成したので、それにリクエストしてみましょう。これは[フェッチ API](/ja/docs/Web/API/Fetch_API/Using_Fetch) を使って行います。
 
 以下のコードブロックを `fetchResults()` 関数の中に追加してください。
 
@@ -267,7 +271,7 @@ fetch(url)
   .catch((error) => console.error(`Error fetching data: ${error.message}`));
 ```
 
-ここでは、変数 `url` を [`fetch()`](/ja/docs/Web/API/fetch) に渡してリクエストを実行し、[`json()`](/ja/docs/Web/API/Response/json) 関数でレスポンス本文を JSON に変換してから `displayResults()` 関数に結果を渡し、UI でデータを使用できるようにします。また、発生しそうなエラーはすべて捕捉してログ出力します。
+ここでは、変数 `url` を [`fetch()`](/ja/docs/Web/API/Window/fetch) に渡してリクエストを実行し、[`json()`](/ja/docs/Web/API/Response/json) 関数でレスポンス本文を JSON に変換してから `displayResults()` 関数に結果を渡し、UI でデータを使用できるようにします。また、発生しそうなエラーはすべて捕捉してログ出力します。
 
 ### データを表示する
 
@@ -325,22 +329,22 @@ function displayResults(json) {
 }
 ```
 
-ここにはたくさんのコードがあります。
+ここにはたくさんのコードがあります。順を追って説明しましょう。
 
 - [`while`](/ja/docs/Web/JavaScript/Reference/Statements/while) ループは、DOM 要素のすべてのコンテンツを削除するために使われる一般的なパターンで、この場合は {{htmlelement("section")}} 要素です。私たちは `<section>` に最初の子があるかどうかをチェックし続け、ある場合は最初の子を削除します。ループは `<section>` に子がいなくなった時点で終了します。
 - 次に、`articles` 変数を `json.response.docs` と等しくなるように設定します — これは検索によって返された記事を表すすべてのオブジェクトを保持する配列です。これは、以下のコードを少しシンプルにするために行われています。
-- 最初の [`if()`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) ブロックは、10 個の記事が返されるかどうかをチェックします ( API は一度に 10 個までの記事を返します。) もし返された場合、前の 10 個 / 次の 10 個のページネーションボタンを含む {{htmlelement("nav")}} を表示します。10 記事未満の記事が返された場合、それらはすべて 1 ページに収まるので、ページ分割ボタンを表示する必要はありません。次のセクションでは、ページ分割機能の配線を行います。
-- 次の `if()` ブロックは記事が返ってこないかどうかをチェックします。もしそうならば、何も表示しようとしません — "No results returned." というテキストを含む {{htmlelement("p")}} を作成して、それを `<section>` に挿入します。
+- 最初の [`if ()`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) ブロックは、10 個の記事が返されるかどうかをチェックします ( API は一度に 10 個までの記事を返します。) もし返された場合、前の 10 個 / 次の 10 個のページ切り替えボタンを含む {{htmlelement("nav")}} を表示します。10 記事未満の記事が返された場合、それらはすべて 1 ページに収まるので、ページ分割ボタンを表示する必要はありません。次のセクションでは、ページ分割機能の配線を行います。
+- 次の `if ()` ブロックは記事が返ってこないかどうかをチェックします。もしそうならば、何も表示しようとしません — "No results returned." というテキストを含む {{htmlelement("p")}} を作成して、それを `<section>` に挿入します。
 - いくつかの記事が返された場合、私たちはまず、それぞれのニュース記事を表示するために使用したいすべての要素を作成し、それぞれに適切なコンテンツを挿入し、適切な場所で DOM に挿入します。記事オブジェクトのどのプロパティに表示すべき正しいデータが含まれているかを調べるために、Article Search API リファレンス ([NYTimes APIs](https://developer.nytimes.com/apis)) を参照しました。これらの操作のほとんどはかなり明白ですが、いくつかは呼び出す価値があります。
 
   - 私たちは [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループを使用して、それぞれの記事に関連するすべてのキーワードを読み、それぞれを {{htmlelement("span")}} 内、 `<p>` 内に挿入します。これは、それぞれのスタイルを設定しやすくするために行いました。
   - `if ()` ブロック (`if (current.multimedia.length > 0) { }`) を使用して、各記事に画像が保有されているかどうかを調べます。画像を持っていない記事もあるからです。最初の画像が存在する場合のみ表示し、そうでない場合はエラーが発生します。
 
-### ページネーションボタンの配線
+### ページ切り替えボタンの配線
 
-ページ分割ボタンを動作させるために、`pageNumber` 変数の値をインクリメント（またはデクリメント）し、ページ URL 引数に含まれる新しい値でフェッチリクエストを再実行します。これは、NYTimes API が一度に 10 件の結果しか返さないからです — 10 件以上の結果が利用可能な場合、`page` URL 引数が 0 に設定されている場合は最初の 10 (0-9) を (または全く含まれない — 0 がデフォルト値です。) 1 に設定されている場合は次の 10 (10-19) を返します。
+ページ切り替えボタンを動作させるために、`pageNumber` 変数の値をインクリメント（またはデクリメント）し、ページ URL 引数に含まれる新しい値でフェッチリクエストを再実行します。これは、NYTimes API が一度に 10 件の結果しか返さないからです — 10 件以上の結果が利用可能な場合、`page` URL 引数が 0 に設定されている場合は最初の 10 (0-9) を (または全く含まれない — 0 が既定値です。) 1 に設定されている場合は次の 10 (10-19) を返します。
 
-これにより、単純なページネーション関数を簡単に書くことができるようになりました。
+これにより、単純なページ切り替え関数を簡単に書くことができるようになりました。
 
 1. 既存の [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) コールの下に、関連するボタンがクリックされたときに `nextPage()` および `previousPage()` 関数が呼び出されるように、これら 2 つの新しいものを追加します。
 
@@ -371,7 +375,8 @@ function displayResults(json) {
 
    2 番目の関数は逆の方法でほぼ正確に同じように動作しますが、`pageNumber` がすでに 0 ではないことを確認するという余分なステップを踏まなければなりません — もしフェッチリクエストがマイナスの `page` 引数で実行された場合、エラーを引き起こす可能性があります。もし `pageNumber` がすでに 0 であれば、処理能力を無駄にしないように、単に関数から [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) します（すでに最初のページにいるのであれば、同じ結果を再び読み込む必要はありません）。
 
-> **メモ:** 完成した [NYTimes API のサンプルコードは GitHub で見ることができます](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/index.html) （[ライブ動作はこちら](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/)）。
+> [!NOTE]
+> 完成した [NYTimes API のサンプルコードは GitHub で見ることができます](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/index.html) （[ライブ動作はこちら](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/)）。
 
 ## YouTube の例
 

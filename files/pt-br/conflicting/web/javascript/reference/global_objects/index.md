@@ -18,7 +18,8 @@ uneval(object)
 - `object`
   - : A JavaScript expression or statement.
 
-> **Nota:** Você não obterá uma representação em JSON válida para o Objeto..
+> [!NOTE]
+> Você não obterá uma representação em JSON válida para o Objeto..
 
 ## Descrição
 

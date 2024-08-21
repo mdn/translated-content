@@ -68,7 +68,8 @@ slug: Learn/Forms/Your_first_form
 - `action` 속성은 폼이 제출될 때 수집된 데이터를 전송할 위치(URL)를 정의합니다.
 - `method` 속성은 데이터를 전송할 HTTP 메서드(일반적으로 `get`이나 `post`)를 정의합니다.
 
-> **참고:** 이러한 속성들의 동작 방식은 나중에 [폼 데이터 보내기](/ko/docs/Learn/Forms/Sending_and_retrieving_form_data) 문서에서 살펴보겠습니다.
+> [!NOTE]
+> 이러한 속성들의 동작 방식은 나중에 [폼 데이터 보내기](/ko/docs/Learn/Forms/Sending_and_retrieving_form_data) 문서에서 살펴보겠습니다.
 
 지금은 위의 {{HTMLelement("form")}} 요소를 HTML {{HTMLelement("body")}}에 추가합니다.
 
@@ -149,7 +150,8 @@ by default this element is filled with this text
 
 이제 폼의 HTML 코드 작성을 마쳤으니 저장하고 브라우저에서 살펴보세요. 지금 당장은 조금 못생기게 보일 것입니다.
 
-> **참고:** HTML 코드가 올바르게 작성되지 않았다고 생각되면, [완성된 예제](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form.html)와 비교해 보세요. [실시간으로도 확인 가능합니다](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html).
+> [!NOTE]
+> HTML 코드가 올바르게 작성되지 않았다고 생각되면, [완성된 예제](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form.html)와 비교해 보세요. [실시간으로도 확인 가능합니다](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html).
 
 폼은 멋지게 스타일링하기 까다롭기로 악명높습니다. 폼 스타일링에 대해 자세히 설명하는 것은 이 글의 범위를 벗어나므로, 지금은 보기 좋게 보이도록 CSS를 추가하는 방법만 설명하겠습니다.
 
@@ -233,7 +235,8 @@ button {
 
 저장하고 다시 로드하면 폼이 훨씬 덜 못생겨진 것을 확인할 수 있습니다.
 
-> **참고:** GitHub의 [first-form-styled.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html)에서 버전을 확인할 수 있습니다 ([라이브 버전도 참조하세요](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)).
+> [!NOTE]
+> GitHub의 [first-form-styled.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html)에서 버전을 확인할 수 있습니다 ([라이브 버전도 참조하세요](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)).
 
 ## 웹 서버에 폼 데이터 보내기
 

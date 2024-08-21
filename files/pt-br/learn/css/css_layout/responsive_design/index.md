@@ -41,15 +41,18 @@ Essas duas abordagens, geralmente, resultavam em um site com a melhor aparência
 
 ![A layout with two columns squashed into a mobile size viewport.](mdn-rwd-liquid.png)
 
-> **Nota:** Veja este layout líquido simples: [exemplo](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html), [código-fonte](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html). Ao visualizar o exemplo, arraste a janela do navegador para dentro e para fora para ver como isso fica em tamanhos diferentes.
+> [!NOTE]
+> Veja este layout líquido simples: [exemplo](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html), [código-fonte](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html). Ao visualizar o exemplo, arraste a janela do navegador para dentro e para fora para ver como isso fica em tamanhos diferentes.
 
 O site de largura fixa criava uma barra de rolagem horizontal em telas menores que a largura do site (como mostrado abaixo) e muito espaço em branco nas bordas do design em telas maiores.
 
 ![A layout with a horizontal scrollbar in a mobile viewport.](mdn-rwd-fixed.png)
 
-> **Nota:** Veja este layout simples de largura fixa: [exemplo](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html), [código-fonte](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html). Observe novamente o resultado ao alterar o tamanho da janela do navegador.
+> [!NOTE]
+> Veja este layout simples de largura fixa: [exemplo](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html), [código-fonte](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html). Observe novamente o resultado ao alterar o tamanho da janela do navegador.
 
-> **Nota:** As capturas de tela acima foram tiradas usando o [Responsive Design Mode](/pt-BR/docs/Tools/Responsive_Design_Mode) no Firefox DevTools.
+> [!NOTE]
+> As capturas de tela acima foram tiradas usando o [Responsive Design Mode](/pt-BR/docs/Tools/Responsive_Design_Mode) no Firefox DevTools.
 
 À medida que a Web para dispositivos móveis começava a se tornar realidade com os primeiros telefones com essas características, empresas que desejavam adotar os dispositivos móveis geralmente criavam uma versão mobile do seu site, com uma URL diferente (geralmente algo como m.exemplo.com ou exemplo.mobi) Isso significava que duas versões separadas do site tinham que ser desenvolvidas e mantidas atualizadas.
 
@@ -123,7 +126,8 @@ On wider screens they move to two columns:
 
 ![A desktop view of a layout with two columns.](mdn-rwd-desktop.png)
 
-> **Nota:** You can find the [live example](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html) and [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html) for this example on GitHub.
+> [!NOTE]
+> You can find the [live example](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html) and [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html) for this example on GitHub.
 
 ## Modern layout technologies
 
@@ -163,7 +167,8 @@ In the example below the flex items will each take an equal amount of space in t
 }
 ```
 
-> **Nota:** As an example we have rebuilt the simple responsive layout above, this time using flexbox. You can see how we no longer need to use strange percentage values to calculate the size of the columns: [example](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html).
+> [!NOTE]
+> As an example we have rebuilt the simple responsive layout above, this time using flexbox. You can see how we no longer need to use strange percentage values to calculate the size of the columns: [example](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html).
 
 ### CSS grid
 
@@ -176,7 +181,8 @@ In CSS Grid Layout the `fr` unit allows the distribution of available space acro
 }
 ```
 
-> **Nota:** The grid layout version is even simpler as we can define the columns on the .wrapper: [example](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html), [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html).
+> [!NOTE]
+> The grid layout version is even simpler as we can define the columns on the .wrapper: [example](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html), [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html).
 
 ## Responsive images
 
@@ -228,7 +234,8 @@ On desktop however we see the larger heading size:
 
 ![A two column layout with a large heading.](mdn-rwd-font-desktop.png)
 
-> **Nota:** See this example in action: [example](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
+> [!NOTE]
+> See this example in action: [example](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
 
 As this approach to typography shows, you do not need to restrict media queries to only changing the layout of the page. They can be used to tweak any element to make it more usable or attractive at alternate screen sizes.
 
@@ -254,7 +261,8 @@ h1 {
 
 This means that we only need to specify the font size for the heading once, rather than set it up for mobile and redefine it in the media queries. The font then gradually increases as you increase the size of the viewport.
 
-> **Nota:** See an example of this in action: [example](https://mdn.github.io/css-examples/learn/rwd/type-vw.html), [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-vw.html).
+> [!NOTE]
+> See an example of this in action: [example](https://mdn.github.io/css-examples/learn/rwd/type-vw.html), [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-vw.html).
 
 ## The viewport meta tag
 

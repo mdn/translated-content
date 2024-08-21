@@ -1621,7 +1621,7 @@
     "modified": "2020-10-15T12:43:22.677Z",
     "contributors": ["mpcjazz"]
   },
-  "Glossary/Routers": {
+  "Glossary/Router": {
     "modified": "2019-10-20T10:28:34.059Z",
     "contributors": ["yuna"]
   },
@@ -10725,16 +10725,6 @@
       "Norah"
     ]
   },
-  "Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers": {
-    "modified": "2019-03-23T23:53:21.069Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "ethertank",
-      "Mgjbot",
-      "Potappo"
-    ]
-  },
   "Web/API/Navigator/sendBeacon": {
     "modified": "2020-10-15T21:51:51.220Z",
     "contributors": ["mfuji09", "nomeaning777", "taise", "__ku"]
@@ -13661,6 +13651,10 @@
     "modified": "2020-08-23T02:47:12.593Z",
     "contributors": ["yoshioms", "mfuji09", "kay8"]
   },
+  "Web/API/Web_Animations_API/Tips": {
+    "modified": "2019-10-26T02:04:52.443Z",
+    "contributors": ["Wind1808", "tositeru"]
+  },
   "Web/API/Web_Animations_API/Using_the_Web_Animations_API": {
     "modified": "2020-09-04T01:24:23.194Z",
     "contributors": ["kit494way", "mantaroh"]
@@ -13983,6 +13977,16 @@
   "Web/API/Window/event": {
     "modified": "2020-10-15T22:00:39.694Z",
     "contributors": ["yyss", "mk-tool"]
+  },
+  "Web/API/Window/external": {
+    "modified": "2019-03-23T23:50:31.021Z",
+    "contributors": [
+      "teoli",
+      "AshfaqHossain",
+      "kohei.yoshino",
+      "ethertank",
+      "Potappo"
+    ]
   },
   "Web/API/Window/fetch": {
     "modified": "2020-10-15T21:41:32.875Z",
@@ -14522,16 +14526,6 @@
       "khalid32",
       "ethertank",
       "Shoot",
-      "Potappo"
-    ]
-  },
-  "Web/API/Window/sidebar": {
-    "modified": "2019-03-23T23:50:31.021Z",
-    "contributors": [
-      "teoli",
-      "AshfaqHossain",
-      "kohei.yoshino",
-      "ethertank",
       "Potappo"
     ]
   },
@@ -15111,13 +15105,13 @@
     "modified": "2020-11-27T13:49:44.683Z",
     "contributors": ["yumetodo", "853419196", "yyss"]
   },
+  "Web/API/console/countReset_static": {
+    "modified": "2020-11-27T14:37:31.289Z",
+    "contributors": ["yumetodo"]
+  },
   "Web/API/console/count_static": {
     "modified": "2020-11-27T14:24:35.469Z",
     "contributors": ["yumetodo", "yyss"]
-  },
-  "Web/API/console/countreset_static": {
-    "modified": "2020-11-27T14:37:31.289Z",
-    "contributors": ["yumetodo"]
   },
   "Web/API/console/debug_static": {
     "modified": "2020-11-27T14:40:02.073Z",
@@ -15127,35 +15121,35 @@
     "modified": "2019-03-23T22:34:53.031Z",
     "contributors": ["yyss"]
   },
-  "Web/API/console/group_static": {
-    "modified": "2020-10-15T21:45:35.788Z",
-    "contributors": ["munieru_jp", "dskmori", "yyss"]
-  },
-  "Web/API/console/groupcollapsed_static": {
+  "Web/API/console/groupCollapsed_static": {
     "modified": "2019-03-23T22:34:55.714Z",
     "contributors": ["yyss"]
   },
-  "Web/API/console/groupend_static": {
+  "Web/API/console/groupEnd_static": {
     "modified": "2019-03-23T22:34:56.119Z",
     "contributors": ["yyss"]
+  },
+  "Web/API/console/group_static": {
+    "modified": "2020-10-15T21:45:35.788Z",
+    "contributors": ["munieru_jp", "dskmori", "yyss"]
   },
   "Web/API/console/info_static": {
     "modified": "2020-10-15T21:45:37.023Z",
     "contributors": ["u_7cc", "yyss"]
   },
-  "Web/API/console/profile_static": {
-    "modified": "2019-03-23T22:34:55.973Z",
+  "Web/API/console/profileEnd_static": {
+    "modified": "2019-03-23T22:34:42.618Z",
     "contributors": ["yyss"]
   },
-  "Web/API/console/profileend_static": {
-    "modified": "2019-03-23T22:34:42.618Z",
+  "Web/API/console/profile_static": {
+    "modified": "2019-03-23T22:34:55.973Z",
     "contributors": ["yyss"]
   },
   "Web/API/console/table_static": {
     "modified": "2019-03-23T22:34:44.337Z",
     "contributors": ["yyss"]
   },
-  "Web/API/console/timestamp_static": {
+  "Web/API/console/timeStamp_static": {
     "modified": "2019-03-23T22:34:51.368Z",
     "contributors": ["yyss"]
   },
@@ -16206,10 +16200,6 @@
     "modified": "2020-10-15T21:40:14.685Z",
     "contributors": ["mfuji09", "teoli"]
   },
-  "Web/CSS/CSS_animations/Tips": {
-    "modified": "2019-10-26T02:04:52.443Z",
-    "contributors": ["Wind1808", "tositeru"]
-  },
   "Web/CSS/CSS_animations/Using_CSS_animations": {
     "modified": "2020-09-25T12:38:38.849Z",
     "contributors": [
@@ -16551,10 +16541,6 @@
       "malayaleecoder",
       "hashedhyphen"
     ]
-  },
-  "Web/CSS/CSS_miscellaneous": {
-    "modified": "2019-09-28T03:34:24.632Z",
-    "contributors": ["dskmori", "cmplstofB"]
   },
   "Web/CSS/CSS_motion_path": {
     "modified": "2020-10-15T22:11:41.700Z",
@@ -21929,10 +21915,6 @@
   },
   "Web/HTTP/Headers/Permissions-Policy/autoplay": {
     "modified": "2020-10-15T22:11:22.688Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/HTTP/Headers/Permissions-Policy/battery": {
-    "modified": "2020-10-15T22:34:41.072Z",
     "contributors": ["mfuji09"]
   },
   "Web/HTTP/Headers/Permissions-Policy/camera": {
@@ -30408,10 +30390,6 @@
     "modified": "2019-03-24T00:06:00.366Z",
     "contributors": ["ethertank", "Potappo"]
   },
-  "orphaned/Setting_up_extension_development_environment": {
-    "modified": "2019-03-23T23:54:13.028Z",
-    "contributors": ["K.Nakamura", "teoli", "Mgjbot", "Shoot"]
-  },
   "orphaned/The_Importance_of_Correct_HTML_Commenting": {
     "modified": "2019-03-23T23:53:28.601Z",
     "contributors": ["SphinxKnight", "teoli", "Mgjbot", "Kohei"]
@@ -30419,10 +30397,6 @@
   "orphaned/Toolkit_API/Official_References": {
     "modified": "2019-04-13T00:54:00.142Z",
     "contributors": ["wbamberg", "Marsf", "Okome"]
-  },
-  "orphaned/Tutorials": {
-    "modified": "2019-03-23T23:15:45.631Z",
-    "contributors": ["shinnn"]
   },
   "orphaned/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility": {
     "modified": "2019-03-23T22:00:20.926Z",

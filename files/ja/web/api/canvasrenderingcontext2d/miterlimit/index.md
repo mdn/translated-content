@@ -10,7 +10,8 @@ l10n:
 
 **`CanvasRenderingContext2D.lineWidth`** はキャンバス 2D API のプロパティで、マイター制限の比率を設定します。
 
-> **メモ:** マイターについての詳細は、[スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)（[キャンバスチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)内）を参照してください。
+> [!NOTE]
+> マイターについての詳細は、[スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)（[キャンバスチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)内）を参照してください。
 
 ## 値
 

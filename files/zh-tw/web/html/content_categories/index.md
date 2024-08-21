@@ -127,7 +127,8 @@ slug: Web/HTML/Content_categories
 
 屬於這個類型的元素有 {{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>")}} 和 {{HTMLElement("hgroup")}}。
 
-> **備註：** 儘管 {{HTMLElement("header")}} 可能含有某些標題型內容，但它本身並不是。
+> [!NOTE]
+> 儘管 {{HTMLElement("header")}} 可能含有某些標題型內容，但它本身並不是。
 
 ### 段落型內容
 

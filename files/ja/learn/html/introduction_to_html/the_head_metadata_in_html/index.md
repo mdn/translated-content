@@ -104,7 +104,8 @@ HTML のヘッド部は {{htmlelement("head")}} 要素の内容です。 {{htmle
 
 ![英語と日本語を含むウェブページで、文字コードを latin に設定した場合。日本語の文字が正しく表示されません。](bad-encoding.png)
 
-> **メモ:** ブラウザーによっては（例えば Chrome では）自動的に正しくないエンコーディングを修正しますので、お使いのブラウザーによっては、この問題が見られないこともあります。それでもなお、その他のブラウザーでの問題を避けるため、とにかくページに `utf-8` エンコーディングを設定すべきです。
+> [!NOTE]
+> ブラウザーによっては（例えば Chrome では）自動的に正しくないエンコーディングを修正しますので、お使いのブラウザーによっては、この問題が見られないこともあります。それでもなお、その他のブラウザーでの問題を避けるため、とにかくページに `utf-8` エンコーディングを設定すべきです。
 
 ### アクティブラーニング: 文字エンコーディングで実験する
 
@@ -157,9 +158,11 @@ description は検索エンジンの結果ページにも使われます。練�
 
    ![Yahoo での "Mozilla Developer Network" の検索結果](mdn-search-result.png)
 
-> **メモ:** Google ではメインの MDN ホームページリンクの下にいくつか MDN Web Docs のサブページが見えるでしょう。これはサイトリンクと呼ばれ、[Google ウェブマスターツール](https://search.google.com/search-console/about) で設定されます。これは Google 検索エンジンでサイトの検索結果を改善する方法です。
+> [!NOTE]
+> Google ではメインの MDN ホームページリンクの下にいくつか MDN Web Docs のサブページが見えるでしょう。これはサイトリンクと呼ばれ、[Google ウェブマスターツール](https://search.google.com/search-console/about) で設定されます。これは Google 検索エンジンでサイトの検索結果を改善する方法です。
 
-> **メモ:** 多くの `<meta>` 機能はもう使われていません。例えば、`<meta>` 要素の keyword (`<meta name="keywords" content="fill, in, your, keywords, here">`) — 検索エンジンが色々な検索用語と関連するページを決めるためのキーワードを与えると考えられています — は、スパマーが結果にバイアスをかける多数のキーワードを埋めるだけなので、検索エンジンから無視されます。
+> [!NOTE]
+> 多くの `<meta>` 機能はもう使われていません。例えば、`<meta>` 要素の keyword (`<meta name="keywords" content="fill, in, your, keywords, here">`) — 検索エンジンが色々な検索用語と関連するページを決めるためのキーワードを与えると考えられています — は、スパマーが結果にバイアスをかける多数のキーワードを埋めるだけなので、検索エンジンから無視されます。
 
 ### メタデータの他の種類
 
@@ -234,7 +237,8 @@ and HTML Apps." />
 
 これらの種類のアイコンをすべて実装することを今すぐには心配しないでください。これはかなり高度な機能であり、コースを進めるためにこのような知識があることを期待することはありません。そのため、他のウェブサイトのソースコードを閲覧しているときに、このようなものがあることに気付いたときのために、その内容を知っておくことが主な目的です。
 
-> **メモ:** もし、サイトがセキュリティを向上させるために Content Security Policy (CSP) を使用している場合、ポリシーがファビコンに適用されます。ファビコンが読み込まれないという問題に遭遇したら、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーの [`img-src` ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)がアクセスを妨害していないかを確認してください。
+> [!NOTE]
+> もし、サイトがセキュリティを向上させるために Content Security Policy (CSP) を使用している場合、ポリシーがファビコンに適用されます。ファビコンが読み込まれないという問題に遭遇したら、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーの [`img-src` ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)がアクセスを妨害していないかを確認してください。
 
 ## HTML に CSS と JavaScript を追加する
 
@@ -267,7 +271,8 @@ and HTML Apps." />
 - JavaScript が空のリストをページに追加しました。リスト内のどこかをクリックすると、ダイアログボックスが現れてリストの新しい要素となるテキストを入力するように求められます。 OK ボタンを押すと。リストに新しい要素が加わります。リストに既にある要素をクリックすると、ダイアログボックスが現れ要素の名前を変えることができます。
 - CSS によって背景は緑になり文字が大きくなっています。 JavaScript によってページに加えられたいくつかのコンテンツもスタイルが適用されます（黒い境界線の付いた赤いバーは、 JS が生成したリストに CSS が追加したスタイルです）。
 
-> **メモ:** このアクティブラーニングで行き詰まって CSS/JS が適用できなくなってしまった場合は、 [css-and-js.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/css-and-js.html) サンプルページをチェックしてみてください。
+> [!NOTE]
+> このアクティブラーニングで行き詰まって CSS/JS が適用できなくなってしまった場合は、 [css-and-js.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/css-and-js.html) サンプルページをチェックしてみてください。
 
 ## 文書の主要な言語の設定
 

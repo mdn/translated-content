@@ -7,11 +7,13 @@ slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
 
 本测试旨在评估读者对 [存储所需信息 - 变量](/zh-CN/docs/Learn/JavaScript/First_steps/Variables) 一文的理解程度。
 
-> **备注：** 可在下文的互动编辑器中尝试完成评估，也可借助 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) 等在线编程实用工具完成任务。
+> [!NOTE]
+> 可在下文的互动编辑器中尝试完成评估，也可借助 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) 等在线编程实用工具完成任务。
 >
 > 可访问本页最后一节来 [了解更多](#了解更多)。
 
-> **备注：** 以下示例中，如果代码存在错误，将在互动编译器的输出框中显示提示信息来帮助你完成，（如果使用下载版本，则在浏览器的 JavaScript 控制台显示）
+> [!NOTE]
+> 以下示例中，如果代码存在错误，将在互动编译器的输出框中显示提示信息来帮助你完成，（如果使用下载版本，则在浏览器的 JavaScript 控制台显示）
 
 ## 变量 1
 

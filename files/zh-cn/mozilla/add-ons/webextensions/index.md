@@ -18,7 +18,8 @@ slug: Mozilla/Add-ons/WebExtensions
 - Firefox 工作流
   - : 了解如何为 Firefox 构建、发布扩展：在[扩展工作坊](https://extensionworkshop.com/)了解开发者工具，发布和移植的基本原理。
 
-> **备注：** 如果你有任何的想法、问题或者是需要帮助，可以在[社区论坛](https://discourse.mozilla.org/c/add-ons)和在 [Matrix](https://wiki.mozilla.org/Matrix) 上的[附加组件](https://matrix.to/#/!CuzZVoCbeoDHsxMCVJ:mozilla.org?via=mozilla.org&via=matrix.org&via=humanoids.be)房间联系到我们。
+> [!NOTE]
+> 如果你有任何的想法、问题或者是需要帮助，可以在[社区论坛](https://discourse.mozilla.org/c/add-ons)和在 [Matrix](https://wiki.mozilla.org/Matrix) 上的[附加组件](https://matrix.to/#/!CuzZVoCbeoDHsxMCVJ:mozilla.org?via=mozilla.org&via=matrix.org&via=humanoids.be)房间联系到我们。
 
 ## 开始
 

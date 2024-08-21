@@ -59,7 +59,8 @@ Person.prototype.greeting = function () {
 };
 ```
 
-> **참고:** 소스 코드에는 `bio()와` `farewell()`메소드가 정의되어 있습니다. 잠시 후에 다른 생성자로 어떻게 상속하는지 알아보도록 합시다.
+> [!NOTE]
+> 소스 코드에는 `bio()와` `farewell()`메소드가 정의되어 있습니다. 잠시 후에 다른 생성자로 어떻게 상속하는지 알아보도록 합시다.
 
 객체 지향에 대해 처음 정의할 때 언급했었던 `Teacher` 클래스를 만들어 봅시다. `Person`을 상속받고 아래 몇 가지를 추가해서요:
 
@@ -216,7 +217,8 @@ teacher1.farewell();
 
 아주 잘 실행될 겁니다. 1, 2, 3, 6 줄은 Person() 생성자(클래스)에서 상속 받은 멤버에 접근합니다. 4번째 줄은 Teacher() 생성자(클래스)만 가지고 있는 멤버에 접근합니다. 5번째 줄은 Person()에서 상속 받은 멤버도 있지만 Teacher()가 이미 자신만의 새 메소드를 정의했으므로 Teacher()의 메소드에 접근합니다.
 
-> **참고:** 코드가 잘 동작하지 않으면 [완성된 버전](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html)을 확인해 보세요. ([실행 페이지](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html)도 보시구요).
+> [!NOTE]
+> 코드가 잘 동작하지 않으면 [완성된 버전](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html)을 확인해 보세요. ([실행 페이지](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html)도 보시구요).
 
 이 테크닉이 Javascript에서 상속 받는 클래스를 만드는 유일한 방법은 아니지만 잘 동작하며 상속을 구현하는 방법을 잘 설명하고 있습니다.
 
@@ -228,7 +230,8 @@ JavaScript 라이브러리를 쓰면 간단합니다 — 상속 기능을 사용
 
 [OOP theory section](/ko/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters), 에서는 개념적으로 Person을 상속받고 Teacher보다 덜 공손한 `greeting()` 메소드를 재정의한 `Student` 클래스를 정의했었습니다. 해당 절에서 `Student`의 인삿말이 어땠는지 확인해 보시고 `Person()`을 상속받는 `Student()` 생성자를 구현해 보세요. `greeting()` 함수도 재정의 해 보시구요.
 
-> **참고:** 코드가 잘 동작하지 않으면 [완성된 버전](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) 을 확인해 보세요.([실행 페이지](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)도 보시구요).
+> [!NOTE]
+> 코드가 잘 동작하지 않으면 [완성된 버전](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) 을 확인해 보세요.([실행 페이지](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)도 보시구요).
 
 ## 객체 멤버 요약
 
@@ -244,7 +247,8 @@ JavaScript 라이브러리를 쓰면 간단합니다 — 상속 기능을 사용
 
 ECMAScript 2015에서는 C++나 Java와 유사한 [클래스 문법](/ko/docs/Web/JavaScript/Reference/Classes)을 공개하여 클래스를 조금 더 쉽고 명확하게 재활용 할 수 있게 되었습니다. 이 절에서는 프로토타입 상속으로 작성한 Person과 Teacher 예제를 클래스 문법으로 변경하고 어떻게 동작하는지 설명하겠습니다.
 
-> **참고:** 대부분의 최신 브라우저에서 새로운 클래스 작성 방식을 지원합니다만 일부 구형 브라우저(Internet Explorer가 대표적)에서는 동작하지 않으므로 하위호환성을 위해 프로토타입 상속을 배워둘 필요가 있습니다.
+> [!NOTE]
+> 대부분의 최신 브라우저에서 새로운 클래스 작성 방식을 지원합니다만 일부 구형 브라우저(Internet Explorer가 대표적)에서는 동작하지 않으므로 하위호환성을 위해 프로토타입 상속을 배워둘 필요가 있습니다.
 
 Class-스타일로 재작성한 Person 예제를 보시죠:
 
@@ -287,7 +291,8 @@ leia.farewell();
 // Leia has left the building. Bye for now
 ```
 
-> **참고:** 코드를 까보면 class 부분은 프로토타입 상속으로 변환이 됩니다. — 문법 설탕(syntactic sugar)의 일종인거죠. 하지만 읽기 쉽다는데 대부분 동의하실 겁니다.
+> [!NOTE]
+> 코드를 까보면 class 부분은 프로토타입 상속으로 변환이 됩니다. — 문법 설탕(syntactic sugar)의 일종인거죠. 하지만 읽기 쉽다는데 대부분 동의하실 겁니다.
 
 ### class 문법으로 상속
 
@@ -339,7 +344,8 @@ snape.subject; // Dark arts
 
 Person을 수정하지 않고 Teacher를 생성한 것처럼 또 다른 하위클래스도 생성할 수 있습니다.
 
-> **참고:** GitHub에서 [es2015-class-inheritance.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-class-inheritance.html) 예제를 참조하세요([실행 페이지](https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-class-inheritance.html)).
+> [!NOTE]
+> GitHub에서 [es2015-class-inheritance.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-class-inheritance.html) 예제를 참조하세요([실행 페이지](https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-class-inheritance.html)).
 
 ## Getters와 Setters
 
@@ -391,7 +397,8 @@ snape._subject="Balloon animals" // Sets subject to "Balloon animals"
 console.log(snape._subject) // Returns "Balloon animals"
 ```
 
-> **참고:** GitHub에서 [es2015-getters-setters.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-getters-setters.html) 예제를 참조하세요([실행 페이지](https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-getters-setters.html)).
+> [!NOTE]
+> GitHub에서 [es2015-getters-setters.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-getters-setters.html) 예제를 참조하세요([실행 페이지](https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-getters-setters.html)).
 
 ## JavaScript에서 언제 상속을 사용해야 할까?
 
@@ -401,7 +408,8 @@ console.log(snape._subject) // Returns "Balloon animals"
 
 처음 시작하거나 작은 프로젝트에서 직접 상속을 구현하는 코드를 작성하는 경우는 그리 많지 않습니다. 필요하지도 않는데 상속을 위한 코드를 구현하는 건 시간 낭비에 불과하죠. 하지만 코드량이 많아질수록 상속이 필요한 경우가 생깁니다. 동일한 기능을 가진 클래스가 많아졌음을 발견했다면 기능들을 한데 묶어 공유할 수 있도록 일반 객체를 만들고 특이 객체들에게 상속하는 방식이 훨씬 편하고 유용하다는 점을 알 수 있습니다.
 
-> **참고:** Javascript에서는 프로토타입을 통해 상속이 구현되어 있어 이 방식을 흔히 **위임**이라고 표현합니다. 특이 객체들이 일반 객체에게 일부 기능의 실행을 위임하는 것이죠.
+> [!NOTE]
+> Javascript에서는 프로토타입을 통해 상속이 구현되어 있어 이 방식을 흔히 **위임**이라고 표현합니다. 특이 객체들이 일반 객체에게 일부 기능의 실행을 위임하는 것이죠.
 
 상속을 구현할때 상속 레벨을 너무 깊게 하지 말고, 메소드와 속성들이 정확히 어디에 구현되어 있는지 항상 인지해야 합니다. 브라우저 내장 객체의 prototype 역시 일시적으로 수정이 가능하지만 정말로 필요한 경우를 제외하고는 건드리지 말아야 합니다. 너무 깊은 상속은 디버그 할 때 끝없는 혼돈과 고통만을 줄 겁니다.
 

@@ -35,7 +35,8 @@ Como resultado, tu código será más consistente y profesional, por lo que podr
 
 ## Tutoriales de React
 
-> **Nota:** Los tutoriales de React se probaron por última vez en mayo de 2020, con React/ReactDOM 16.13.1 y create-react-app 3.4.1.Si necesitas comparar tu código con nuestra versión, puedes encontrar una versión terminada de la muestra del código de la aplicación React en nuestro [repositorio todo-react](https://github.com/mdn/todo-react). Para una versión en vivo, consulta <https://mdn.github.io/todo-react-build/>.
+> [!NOTE]
+> Los tutoriales de React se probaron por última vez en mayo de 2020, con React/ReactDOM 16.13.1 y create-react-app 3.4.1.Si necesitas comparar tu código con nuestra versión, puedes encontrar una versión terminada de la muestra del código de la aplicación React en nuestro [repositorio todo-react](https://github.com/mdn/todo-react). Para una versión en vivo, consulta <https://mdn.github.io/todo-react-build/>.
 
 - [1. Primeros pasos en React](/es/docs/Learn/Herramientas_y_pruebas/Lado-del-cliente_JavaScript_frameworks/React_getting_started)
   - : En este artículo conoceremos React. Descubriremos algunos detalles sobre su trasfondo y casos de uso, configuraremos una cadena básica de herramientas para React en nuestra computadora local, crearemos y jugaremos con una aplicación inicial sencilla, mientras aprendemos —durante el proceso— un poco acerca de cómo funciona React.
@@ -54,7 +55,8 @@ Como resultado, tu código será más consistente y profesional, por lo que podr
 
 ## Tutoriales de Ember
 
-> **Nota:** Los tutoriales de Ember se probaron por última vez en mayo de 2020, con Ember/Ember CLI versión 3.18.0.Si necesitas comparar tu código con nuestra versión, puedes encontrar una versión terminada de la muestra del código de la aplicación Ember en nuestro [repositorio ember-todomvc-tutorial](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc). Para una versión en vivo, consulta <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> (esto también incluye algunas características adicionales que no se cubren en este tutorial).
+> [!NOTE]
+> Los tutoriales de Ember se probaron por última vez en mayo de 2020, con Ember/Ember CLI versión 3.18.0.Si necesitas comparar tu código con nuestra versión, puedes encontrar una versión terminada de la muestra del código de la aplicación Ember en nuestro [repositorio ember-todomvc-tutorial](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc). Para una versión en vivo, consulta <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> (esto también incluye algunas características adicionales que no se cubren en este tutorial).
 
 - [1. Primeros pasos en Ember](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
   - : En nuestro primer artículo de Ember veremos cómo funciona Ember y para qué resulta útil, instalaremos la cadena de herramientas de Ember de manera local, crearemos una aplicación de muestra, y luego realizaremos una configuración inicial para prepararla para el desarrollo.
@@ -71,7 +73,8 @@ Como resultado, tu código será más consistente y profesional, por lo que podr
 
 ## Tutoriales de Vue
 
-> **Nota:** Los tutoriales de Vue se probaron por última vez en mayo de 2020, con Vue 2.6.11.Si necesitas comparar tu código con nuestra versión, puedes encontrar una versión terminada de la muestra del código de la aplicación Vue en nuestro [repositorio todo-vue](https://github.com/mdn/todo-vue). Para una verisón en vivo, consulta <https://mdn.github.io/todo-vue/dist/>.
+> [!NOTE]
+> Los tutoriales de Vue se probaron por última vez en mayo de 2020, con Vue 2.6.11.Si necesitas comparar tu código con nuestra versión, puedes encontrar una versión terminada de la muestra del código de la aplicación Vue en nuestro [repositorio todo-vue](https://github.com/mdn/todo-vue). Para una verisón en vivo, consulta <https://mdn.github.io/todo-vue/dist/>.
 
 - [1. Primeros pasos en Vue](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
   - : A continuación, presentamos Vue, el tercero de nuestros frameworks. En este artículo, veremos un poco sobre el origen de Vue, aprenderemos cómo instalarlo y crear un nuevo proyecto, estudiaremos la estructura de alto nivel de todo el proyecto y de un componente individual, veremos cómo ejecutar el proyecto localmente y prepararlo para comenzar a construir nuestro ejemplo.

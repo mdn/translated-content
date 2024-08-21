@@ -13,7 +13,8 @@ Vous pouvez également le passer directement au constructeur [`URLSearchParams`]
 
 Un objet implémentant `FormData` peut être utilisé directement dans une structure [`for…of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of), au lieu de [`entries()`](/fr/docs/Web/API/FormData/entries)&nbsp;: `for (var p of myFormData)` est équivalent à `for (var p of myFormData.entries())`.
 
-> **Note :** Cette fonctionnalité est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Cette fonctionnalité est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
 ## Constructeur
 

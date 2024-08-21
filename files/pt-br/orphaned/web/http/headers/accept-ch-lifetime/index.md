@@ -21,7 +21,8 @@ O cabeçalho **`Accept-CH-Lifetime`** é colocado pelo servidor para especificar
   </tbody>
 </table>
 
-> **Nota:** Client Hints são acessíveis somente em origens seguras (via TLS). Os cabeçalhos Accept-CH e Accept-CH-Lifetime devem ser persistidos por todas as requisições seguras para assegurar que os Client Hints são enviados com segurança.
+> [!NOTE]
+> Client Hints são acessíveis somente em origens seguras (via TLS). Os cabeçalhos Accept-CH e Accept-CH-Lifetime devem ser persistidos por todas as requisições seguras para assegurar que os Client Hints são enviados com segurança.
 
 ## Sintaxe
 

@@ -217,7 +217,8 @@ console.log(C.staticField === C); // true
 this = new Base();
 ```
 
-> **警告：** 在调用 `super()` 之前引用 `this` 将抛出错误。
+> [!WARNING]
+> 在调用 `super()` 之前引用 `this` 将抛出错误。
 
 派生类在调用 `super()` 之前不能有返回，除非构造函数返回一个对象（这样 `this` 值就会被覆盖）或者类根本没有构造函数。
 
@@ -493,7 +494,8 @@ bird.sayBye = car.sayBye;
 bird.sayBye(); // Bye from Ferrari
 ```
 
-> **备注：** 类总是在严格模式下。如果一个方法试图访问 `this` 上的属性，使用未定义的 `this` 值调用该方法将会抛出错误。
+> [!NOTE]
+> 类总是在严格模式下。如果一个方法试图访问 `this` 上的属性，使用未定义的 `this` 值调用该方法将会抛出错误。
 >
 > ```js example-bad
 > const carSayHi = car.sayHi;

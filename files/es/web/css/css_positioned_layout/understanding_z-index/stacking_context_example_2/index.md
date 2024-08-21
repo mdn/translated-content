@@ -22,7 +22,8 @@ Para entender mejor esta situación, esta es la jerarquía del contexto de apila
 
     - DIV #4 (z-index 10)
 
-> **Nota:** Vale la pena recordar que en general la jerarquía HTML es diferente de la jerarquía del contexto de apilamiento. En la jerarquía del contexto de apilamiento, los elementos que no crean un contexto de apilamiento son colapsados en sus padres.
+> [!NOTE]
+> Vale la pena recordar que en general la jerarquía HTML es diferente de la jerarquía del contexto de apilamiento. En la jerarquía del contexto de apilamiento, los elementos que no crean un contexto de apilamiento son colapsados en sus padres.
 
 ### Código fuente de ejemplo
 

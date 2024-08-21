@@ -22,7 +22,8 @@ oReq.send();
 
 透過 `XMLHttpRequest` 建立的請求，其取得資料的方式可以為非同步（asynchronously）或同步（synchronously）兩種之一。請求的種類是由 {{domxref("XMLHttpRequest.open()")}} 方法的選擇性參數 `async`（第三個參數）決定。若 `async` 參數為 `true` 或是未指定，`XMLHttpRequest` 會被設定為非同步，相反的若為 `false` 則會被設定為同步。這兩種請求類型的細節討論與示範可以在[同步與非同步請求](/docs/DOM/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests)頁面中找到。一般來說，很少會使用到同步請求。
 
-> **備註：** 自 Gecko 30.0 開始，在主執行緒上的同步請求因其差勁的使用者體驗已被棄用。
+> [!NOTE]
+> 自 Gecko 30.0 開始，在主執行緒上的同步請求因其差勁的使用者體驗已被棄用。
 
 ## 處理回應
 
@@ -39,7 +40,8 @@ oReq.send();
 
 ### 分析及操作含有 HTML 文件的 `responseText` 屬性
 
-> **備註：** W3C 的[XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) 規範允許透過 `XMLHttpRequest.responseXML` 屬性（{{Glossary("property/JavaScript", "property")}}）來解析 HTML。相關細節請參考 [HTML in XMLHttpRequest](/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 一文。
+> [!NOTE]
+> W3C 的[XMLHttpRequest](https://xhr.spec.whatwg.org/) 規範允許透過 `XMLHttpRequest.responseXML` 屬性（{{Glossary("property/JavaScript", "property")}}）來解析 HTML。相關細節請參考 [HTML in XMLHttpRequest](/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 一文。
 
 若透過 `XMLHttpRequest` 來取得一個遠端的 HTML 網頁內容，則 `responseText` 屬性（{{Glossary("property/JavaScript", "property")}}）會是「一串（soup）」包含所有 HTML 標籤的字串。這可能使得在分析和操作上造成困難，以下有三種主要分析此一大串 HTML 字串的方式：
 
@@ -118,7 +120,8 @@ function transferCanceled(evt) {
 
 第 3-6 行加入了事件監聽器來處理使用 `XMLHttpRequest` 執行資料收發過程中的各類事件。
 
-> **備註：** 必須在呼叫 `open()` 方法開啟請求連線之前就註冊好事件監聽器，否則 `progress` 事件將不會被觸發。
+> [!NOTE]
+> 必須在呼叫 `open()` 方法開啟請求連線之前就註冊好事件監聽器，否則 `progress` 事件將不會被觸發。
 
 在這個例子中，指定了 `updateProgress()` 函式作為 `progress` 事件處理器，`progress` 事件處理器會於 `progress` 事件物件的 `total` 及 `loaded` 屬性分別接收到要傳輸的總位元數及已送出的位元數。然而，假如 `lengthComputable` 屬性值為假，則代表要傳輸的總位元數是未知且 `total` 屬性值將會為零。
 
@@ -137,9 +140,11 @@ oReq.open();
 
 > **備註：** `progress` 事件無法用於 `file:` 通訊協定。
 
-> **備註：** 自 Gecko 9.0 開始，接收到每一個資料的區塊（chunk）時，`progress` 事件都會被觸發。包括在 `progress` 事件被觸發前，就已經接收到含有最後一個資料區塊的最後一個封包並且關閉連線的狀況下，在載入此封包時仍會自動觸發 `progress` 事件。這代表我們可以僅關注 `progress` 事件即能夠可靠的監視進度。
+> [!NOTE]
+> 自 Gecko 9.0 開始，接收到每一個資料的區塊（chunk）時，`progress` 事件都會被觸發。包括在 `progress` 事件被觸發前，就已經接收到含有最後一個資料區塊的最後一個封包並且關閉連線的狀況下，在載入此封包時仍會自動觸發 `progress` 事件。這代表我們可以僅關注 `progress` 事件即能夠可靠的監視進度。
 
-> **備註：** 在 Gecko 12.0 中，如果 `XMLHttpRequest` 的 `responseType` 屬性為「moz-blob」，那麼 `progress` 事件觸發時的 `XMLHttpRequest.response` 值會是一個目前包含了所接收資料的 {{domxref("Blob")}}。
+> [!NOTE]
+> 在 Gecko 12.0 中，如果 `XMLHttpRequest` 的 `responseType` 屬性為「moz-blob」，那麼 `progress` 事件觸發時的 `XMLHttpRequest.response` 值會是一個目前包含了所接收資料的 {{domxref("Blob")}}。
 
 我們也可以透過 `loadend` 事件來偵測到所有之三種下載結束狀況（`abort`、`load` 或 `error`）：
 
@@ -593,11 +598,14 @@ print_r($_FILES);
 AJAXSubmit(myForm);
 ```
 
-> **備註：** 此框架使用了 {{domxref("FileReader")}} API 來發送檔案上傳。這是個較新的 API，且 IE9 或其先前版本並未實作。因為這個理由，AJAX-only 上傳被認為是**一項實驗性技術**。若沒有需要上傳二進位檔案，此框架可於大部分瀏覽器中運作良好。
+> [!NOTE]
+> 此框架使用了 {{domxref("FileReader")}} API 來發送檔案上傳。這是個較新的 API，且 IE9 或其先前版本並未實作。因為這個理由，AJAX-only 上傳被認為是**一項實驗性技術**。若沒有需要上傳二進位檔案，此框架可於大部分瀏覽器中運作良好。
 
-> **備註：** 傳送二進位檔案的最佳方式是藉由 {{jsxref("ArrayBuffer", "ArrayBuffers")}} 或 {{domxref("Blob", "Blobs")}} 結合 {{domxref("XMLHttpRequest.send()", "send()")}} 方法來送出，如果可以也能搭配 `FileReader` API 的 {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} 方法先進行讀取。但因為這段程式指令碼（script）的目的是要處理[可字串化的](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)原始資料，所以使用 {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} 方法結合 `FileReader` API 的 {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} 方法。就其本身來看，以上的指令碼只有在處理小型檔案時才有意義。假如不打算上傳二進位內容，請考慮使用 `FormData` API。
+> [!NOTE]
+> 傳送二進位檔案的最佳方式是藉由 {{jsxref("ArrayBuffer", "ArrayBuffers")}} 或 {{domxref("Blob", "Blobs")}} 結合 {{domxref("XMLHttpRequest.send()", "send()")}} 方法來送出，如果可以也能搭配 `FileReader` API 的 {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} 方法先進行讀取。但因為這段程式指令碼（script）的目的是要處理[可字串化的](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)原始資料，所以使用 {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} 方法結合 `FileReader` API 的 {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} 方法。就其本身來看，以上的指令碼只有在處理小型檔案時才有意義。假如不打算上傳二進位內容，請考慮使用 `FormData` API。
 
-> **備註：** 非標準的 `sendAsBinary` 方法在 Gecko 31 已被認為是棄用的（deprecated），並且即將被移除。而標準的 `send(Blob data)` 方法可以作為替代。
+> [!NOTE]
+> 非標準的 `sendAsBinary` 方法在 Gecko 31 已被認為是棄用的（deprecated），並且即將被移除。而標準的 `send(Blob data)` 方法可以作為替代。
 
 ### 使用 FormData 物件
 
@@ -769,7 +777,8 @@ AJAXSubmit(myForm);
 </html>
 ```
 
-> **備註：** 如同之前所說，**{{domxref("FormData")}} 物件是不能被[字串化](/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)的物件**。若想要字串化一個被提交的資料，請使用[先前的*純* AJAX 範例](#小型原生框架)。還要注意的是，雖然在這個例子中有一些 `file` {{ HTMLElement("input") }} 欄位，**當你透過 `FormData` API 來提交表單便也不需要使用 {{domxref("FileReader")}} API**：檔案會自動地載入並上傳。
+> [!NOTE]
+> 如同之前所說，**{{domxref("FormData")}} 物件是不能被[字串化](/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)的物件**。若想要字串化一個被提交的資料，請使用[先前的*純* AJAX 範例](#小型原生框架)。還要注意的是，雖然在這個例子中有一些 `file` {{ HTMLElement("input") }} 欄位，**當你透過 `FormData` API 來提交表單便也不需要使用 {{domxref("FileReader")}} API**：檔案會自動地載入並上傳。
 
 ## 取得最後修改日期
 

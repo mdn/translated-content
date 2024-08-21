@@ -69,7 +69,8 @@ Este elemento define formalmente un formulario. Es un elemento contenedor, como 
 - El atributo `action` define la ubicación (URL) donde se envían los datos que el formulario ha recopilado cuando se validan.
 - El atributo `method` define con qué método HTTP se envían los datos (generalmente `get` o `post`).
 
-> **Nota:** Veremos cómo funcionan esos atributos en nuestro artículo [Enviar los datos de un formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data) que encontrarás más adelante.
+> [!NOTE]
+> Veremos cómo funcionan esos atributos en nuestro artículo [Enviar los datos de un formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data) que encontrarás más adelante.
 
 Por ahora, añade el elemento {{htmlelement("form")}} anterior a tu elemento HTML {{htmlelement("body")}}.
 
@@ -143,13 +144,15 @@ El elemento {{htmlelement("button")}} también acepta un atributo de `type`, que
 - Un clic en un botón `reset` restablece de inmediato todos los controles de formulario a su valor predeterminado. Desde el punto de vista de UX, esto se considera una mala práctica, por lo que debes evitar usar este tipo de botones a menos que realmente tengas una buena razón para incluirlos.
 - Un clic en un botón `button` no hace... ¡nada! Eso suena tonto, pero es muy útil para crear botones personalizados: puedes definir su función con JavaScript.
 
-> **Nota:** También puedes usar el elemento {{HTMLElement("input")}} con el atributo `type` correspondiente para generar un botón, por ejemplo `<input type="submit">`. La ventaja principal del elemento {{HTMLelement("button")}} es que el elemento {{HTMLelement("input")}} solo permite texto sin formato en su etiqueta, mientras que el elemento {{HTMLelement("button")}} permite contenido HTML completo, lo que permite generar botones creativos más complejos.
+> [!NOTE]
+> También puedes usar el elemento {{HTMLElement("input")}} con el atributo `type` correspondiente para generar un botón, por ejemplo `<input type="submit">`. La ventaja principal del elemento {{HTMLelement("button")}} es que el elemento {{HTMLelement("input")}} solo permite texto sin formato en su etiqueta, mientras que el elemento {{HTMLelement("button")}} permite contenido HTML completo, lo que permite generar botones creativos más complejos.
 
 ## Aplicar estilo básico a un formulario
 
 Ahora que has terminado de escribir el código HTML de tu formulario, guárdalo y observa lo que ocurre en un navegador. Por ahora, se verá bastante feo.
 
-> **Nota:** Si crees que no has escrito bien el código HTML, compáralo con nuestro ejemplo final: véase [first-form.html](https://github.com/mdn/learning-area/blob/master/html/forms/your-first-HTML-form/first-form.html) ([ver en vivo](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html)).
+> [!NOTE]
+> Si crees que no has escrito bien el código HTML, compáralo con nuestro ejemplo final: véase [first-form.html](https://github.com/mdn/learning-area/blob/master/html/forms/your-first-HTML-form/first-form.html) ([ver en vivo](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html)).
 
 Resulta notablemente difícil aplicar estilo a los formularios. Está más allá del alcance de este artículo enseñarte cómo aplicar estilo a los formularios en detalle, por lo que por el momento solo vamos a exponer cómo añadir un poco de CSS para que se vea un poco bien.
 
@@ -231,7 +234,8 @@ button {
 
 Guarda y vuelve a cargar, y observa que tu formulario presenta un aspecto mucho menos feo.
 
-> **Nota:** Puedes encontrar nuestra versión en GitHub en [first-form-styled.html](https://github.com/mdn/learning-area/blob/master/html/forms/your-first-HTML-form/first-form-styled.html) ([ver en vivo](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)).
+> [!NOTE]
+> Puedes encontrar nuestra versión en GitHub en [first-form-styled.html](https://github.com/mdn/learning-area/blob/master/html/forms/your-first-HTML-form/first-form-styled.html) ([ver en vivo](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)).
 
 ## Enviar los datos del formulario a un servidor web
 

@@ -9,7 +9,8 @@ slug: Web/API/console/warn_static
 
 {{AvailableInWorkers}}
 
-> **备注：** 在火狐浏览器里，警告会有一个小感叹号图标在 Web 控制台信息前面。
+> [!NOTE]
+> 在火狐浏览器里，警告会有一个小感叹号图标在 Web 控制台信息前面。
 
 ## 语法
 

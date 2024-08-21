@@ -25,7 +25,8 @@ Ver también [definición de origen para `file:` URLs](/es/docs/Same-origin_poli
 
 Los scripts ejecutados desde páginas con una URL `about:blank` o `javascript:` heredan el origen del documento que contiene esa URL, puesto que esos tipos de URLs no contienen información sobre un servidor de origen.
 
-> **Nota:** Por ejemplo, `about:blank` a menudo se usa como URL de nuevas ventanas popup en las que el script padre escribe contenido (por ejemplo mediante el mecanismo {{domxref("Window.open()")}}). Si este popup además contiene JavaScript, ese escript heredará el mismo origen que el script que lo ha creado.
+> [!NOTE]
+> Por ejemplo, `about:blank` a menudo se usa como URL de nuevas ventanas popup en las que el script padre escribe contenido (por ejemplo mediante el mecanismo {{domxref("Window.open()")}}). Si este popup además contiene JavaScript, ese escript heredará el mismo origen que el script que lo ha creado.
 
 > **Advertencia:** `data:` URLs obtienen un nuevo, vacío, contexto de seguridad.
 
@@ -50,7 +51,8 @@ Tras su ejecución, la página puede pasar la comprobación de origen con `http:
 
 El número de puerto es guardado de forma separada por el navegador. Cualquier llamada al setter, incluyendo `document.domain = document.domain` causa que el número del puerto sea sobrescrito con `null`. Por lo tanto **no se puede** hacer que `company.com:8080` hable con `company.com` solo asignando `document.domain = "company.com"` en el primero. Tiene que ser asignado en ambos para que los números de puerto sean `null`.
 
-> **Nota:** Cuando se use `document.domain` para permitir a un subdominio acceder a su padre de forma segura, necesitas asignar `document.domain` al mismo valor tanto en el padre como en el subdominio. Esto es necesario incluso si solo se asigna el dominio padre a su valor original. Un fallo al hacer esto puede resultar en errores de permisos.
+> [!NOTE]
+> Cuando se use `document.domain` para permitir a un subdominio acceder a su padre de forma segura, necesitas asignar `document.domain` al mismo valor tanto en el padre como en el subdominio. Esto es necesario incluso si solo se asigna el dominio padre a su valor original. Un fallo al hacer esto puede resultar en errores de permisos.
 
 ## Acceso de red de origen cruzado
 

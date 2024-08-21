@@ -169,7 +169,8 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 4. 코드를 저장하고, 브라우저에서 로드한 후, 시도해 보세요.
 
-> **참고:** 만약 이 예제를 작업하는 데 어려움이 있다면, 자유롭게 [GitHub에 있는 완성된 버전](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html)과 비교해 보거나 ([실제로 작동하는 모습](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)도 보세요), 우리에게 도움을 요청해 보세요.
+> [!NOTE]
+> 만약 이 예제를 작업하는 데 어려움이 있다면, 자유롭게 [GitHub에 있는 완성된 버전](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html)과 비교해 보거나 ([실제로 작동하는 모습](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)도 보세요), 우리에게 도움을 요청해 보세요.
 
 ## 이제 여러분의 차례입니다!
 

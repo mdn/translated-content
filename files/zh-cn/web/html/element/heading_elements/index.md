@@ -40,7 +40,8 @@ slug: Web/HTML/Element/Heading_Elements
 
 该元素包含所有[全局特性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-> **备注：** align 属性已废弃；不要继续使用它。
+> [!NOTE]
+> align 属性已废弃；不要继续使用它。
 
 ## 使用要点
 

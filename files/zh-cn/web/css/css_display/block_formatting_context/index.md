@@ -30,7 +30,8 @@ slug: Web/CSS/CSS_display/Block_formatting_context
 - 排除外部浮动。
 - 阻止[外边距重叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)。
 
-> **备注：** 弹性/网格容器（{{ cssxref("display") }}：flex/grid/inline-flex/inline-grid）建立新的弹性/网格格式化上下文，除布局之外，它与区块格式化上下文类似。弹性/网格容器中没有可用的浮动子级，但排除外部浮动和阻止外边距重叠仍然有效。
+> [!NOTE]
+> 弹性/网格容器（{{ cssxref("display") }}：flex/grid/inline-flex/inline-grid）建立新的弹性/网格格式化上下文，除布局之外，它与区块格式化上下文类似。弹性/网格容器中没有可用的浮动子级，但排除外部浮动和阻止外边距重叠仍然有效。
 
 ## 示例
 

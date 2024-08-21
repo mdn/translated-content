@@ -36,7 +36,8 @@ document.body.appendChild(myImage);
 <img width="100" height="200" src="picture.jpg" />
 ```
 
-> **备注：** 无论构造函数中指定的大小是多少，都会加载整个位图。如果在构造时指定了尺寸信息，那么将会反应在实例的 {{domxref("HTMLImageElement.width")}} 和 {{domxref("HTMLImageElement.height")}} 属性上。图像自身的 CSS 像素值将会反应在{{domxref("HTMLImageElement.naturalWidth")}} 和 {{domxref("HTMLImageElement.naturalHeight")}}属性。如果没有指定值，那么两个属性的值相同
+> [!NOTE]
+> 无论构造函数中指定的大小是多少，都会加载整个位图。如果在构造时指定了尺寸信息，那么将会反应在实例的 {{domxref("HTMLImageElement.width")}} 和 {{domxref("HTMLImageElement.height")}} 属性上。图像自身的 CSS 像素值将会反应在{{domxref("HTMLImageElement.naturalWidth")}} 和 {{domxref("HTMLImageElement.naturalHeight")}}属性。如果没有指定值，那么两个属性的值相同
 
 ## 规范
 

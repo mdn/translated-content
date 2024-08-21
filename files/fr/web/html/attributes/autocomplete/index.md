@@ -13,7 +13,8 @@ Si les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input), [`<select>`](/fr
 
 Pour plus d'informations, voir la documentation de l'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/Form#attr-autocomplete) pour l'élément [`<form>`](/fr/docs/Web/HTML/Element/Form).
 
-> **Note :** Afin de fournir des fonctionnalités d'autocomplétion, un agent utilisateur pourra utiliser les prérequis suivants quant aux éléments `<input>`/`<select>`/`<textarea>`:
+> [!NOTE]
+> Afin de fournir des fonctionnalités d'autocomplétion, un agent utilisateur pourra utiliser les prérequis suivants quant aux éléments `<input>`/`<select>`/`<textarea>`:
 >
 > 1. Que ceux-ci aient un attribut `name` et/ou `id`
 > 2. Que ceux-ci descendent d'un élément `<form>`
@@ -25,7 +26,8 @@ Pour plus d'informations, voir la documentation de l'attribut [`autocomplete`](/
 
   - : Le navigateur n'est pas autorisé à saisir automatiquement des valeurs pour ce champ. Cette valeur peut être utilisée lorsque le document ou l'application fournit son propre mécanisme d'autocomplétion ou lorsque des raisons de sécurité imposent de ne pas pouvoir saisir la valeur automatiquement.
 
-    > **Note :** Pour la plupart des navigateurs modernes, utiliser `autocomplete="off"` n'empêchera pas un gestionnaire de mots de passe de demander à l'utilisateur s'il souhaite sauvegarder le nom d'utilisateur et le mot de passe ou de renseigner automatiquement les informations pour un formulaire de connexion. Voir [l'article sur l'attribut `autocomplete` et les champs des formulaires de connexion](/fr/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields).
+    > [!NOTE]
+    > Pour la plupart des navigateurs modernes, utiliser `autocomplete="off"` n'empêchera pas un gestionnaire de mots de passe de demander à l'utilisateur s'il souhaite sauvegarder le nom d'utilisateur et le mot de passe ou de renseigner automatiquement les informations pour un formulaire de connexion. Voir [l'article sur l'attribut `autocomplete` et les champs des formulaires de connexion](/fr/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields).
 
 - `on`
   - : Le navigateur est autorisé à compléter automatiquement le champ. Aucune indication supplémentaire n'est fournie quant au type de donnée attendu et c'est donc au navigateur d'utiliser une heuristique pour proposer des valeurs pertinentes.
@@ -138,7 +140,8 @@ Pour plus d'informations, voir la documentation de l'attribut [`autocomplete`](/
 
 Voir [la spécification WHATWG](https://html.spec.whatwg.org/multipage/forms.html#autofill) pour plus de détails.
 
-> **Note :** À la différence des autres navigateurs, pour Firefox, l'attribut `autocomplete` contrôlera également si [l'état de désactivation ou de coche dynamique persiste lors d'un rechargement de la page](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) pour un champ `<input>`. Par défaut, un élément reste désactivé ou coché/décoché lors des rechargements. En utilisant l'attribut `autocomplete` avec la valeur `off`, on désactive cette fonctionnalité. Cela fonctionne, y compris lorsque l'attribut `autocomplete` ne devrait pas s'appliquer à l'élément `<input>` d'après son type. Voir [bug 654072](https://bugzilla.mozilla.org/show_bug.cgi?id=654072).
+> [!NOTE]
+> À la différence des autres navigateurs, pour Firefox, l'attribut `autocomplete` contrôlera également si [l'état de désactivation ou de coche dynamique persiste lors d'un rechargement de la page](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) pour un champ `<input>`. Par défaut, un élément reste désactivé ou coché/décoché lors des rechargements. En utilisant l'attribut `autocomplete` avec la valeur `off`, on désactive cette fonctionnalité. Cela fonctionne, y compris lorsque l'attribut `autocomplete` ne devrait pas s'appliquer à l'élément `<input>` d'après son type. Voir [bug 654072](https://bugzilla.mozilla.org/show_bug.cgi?id=654072).
 
 ## Exemples
 

@@ -12,7 +12,8 @@ l10n:
 
 このプロパティは{{ReadOnlyInline}}です。
 
-> **メモ:** Macintosh のキーボードでは、これは <kbd>⌘ Command</kbd> キーです。 Windows のキーボードでは、これは Windows キー (<kbd>⊞</kbd>) です。
+> [!NOTE]
+> Macintosh のキーボードでは、これは <kbd>⌘ Command</kbd> キーです。 Windows のキーボードでは、これは Windows キー (<kbd>⊞</kbd>) です。
 
 ## 値
 

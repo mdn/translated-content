@@ -9,7 +9,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/name
 
 {{EmbedInteractiveExample("pages/js/function-name.html")}}{{js_property_attributes(0,0,1)}}
 
-> **メモ:** 標準外であった ES2015 以前の実装では、`configurable` 属性も `false` であることに注意してください。
+> [!NOTE]
+> 標準外であった ES2015 以前の実装では、`configurable` 属性も `false` であることに注意してください。
 
 ## JavaScript の圧縮とミニファイ
 
@@ -158,7 +159,8 @@ var fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // "Foo" と表示
 ```
 
-> **警告:** スクリプトインタープリターは、関数が自身の _name_ プロパティを持っていない場合に限り、組み込みの `Function.name` プロパティを設定します ([9.11.2. of the ECMAScript2015 Language Specification](http://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname) セクションをご覧ください)。しかし ES2015 では、_static_ キーワードを指定すると、その静的メソッドはクラスのコンストラクタ関数の OwnProperty として設定されます (ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation))。
+> [!WARNING]
+> スクリプトインタープリターは、関数が自身の _name_ プロパティを持っていない場合に限り、組み込みの `Function.name` プロパティを設定します ([9.11.2. of the ECMAScript2015 Language Specification](http://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname) セクションをご覧ください)。しかし ES2015 では、_static_ キーワードを指定すると、その静的メソッドはクラスのコンストラクタ関数の OwnProperty として設定されます (ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation))。
 
 従って、`name()` という静的メソッドを持つクラスでは、事実上そのクラス名を取得することはできません:
 

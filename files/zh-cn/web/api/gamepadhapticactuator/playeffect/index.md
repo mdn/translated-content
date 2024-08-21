@@ -32,7 +32,8 @@ playEffect(type, params)
     - `weakMagnitude`
       - : 高频（弱）隆隆声电机的隆隆声强度，标准化为 0.0 到 1.0 之间的范围。
 
-> **备注：** 一个新的 `playEffect()` 调用会覆盖上一个仍在进行中的调用。
+> [!NOTE]
+> 一个新的 `playEffect()` 调用会覆盖上一个仍在进行中的调用。
 
 ### 返回值
 

@@ -26,7 +26,8 @@ reading the remote resource at https://some-url-here. (Reason:
 additional information here).
 ```
 
-> **备注：** 出于安全原因，*JavaScript 代码无法给出*有关 CORS 请求出错的详细信息。所有代码都知道发生了错误。确定具体问题的唯一方法是查看浏览器的控制台以获取详细信息。
+> [!NOTE]
+> 出于安全原因，*JavaScript 代码无法给出*有关 CORS 请求出错的详细信息。所有代码都知道发生了错误。确定具体问题的唯一方法是查看浏览器的控制台以获取详细信息。
 
 ## CORS 错误信息
 

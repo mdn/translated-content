@@ -23,7 +23,7 @@ slug: Web/API/Navigator/connection
 - {{domxref("window.navigator.connection.onchange", "connection.onchange")}}
   - : {{event("change")}} 이벤트에 대한 이벤트 핸들러 속성입니다. 연결 정보가 변경될 때 이벤트가 발생합니다.
 
-> **참고:** **주의:** `connection` 객체는 이벤트를 다루기 위한 {{domxref("EventTarget.addEventListener","addEventListener")}} 메서드를 사용할 수 있는 {{domxref("EventTarget")}}을 상속받습니다.
+> **경고:** `connection` 객체는 이벤트를 다루기 위한 {{domxref("EventTarget.addEventListener","addEventListener")}} 메서드를 사용할 수 있는 {{domxref("EventTarget")}}을 상속받습니다.
 
 ## 명세
 

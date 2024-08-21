@@ -49,17 +49,6 @@ slug: Web/SVG/Element/rect
 
 ## Атрибуты
 
-### Глобальные атрибуты
-
-- [Атрибуты условной обработки](/en/SVG/Attribute#ConditionalProccessing)
-- [Атрибуты ядра](/en/SVG/Attribute#Core)
-- [Атрибуты графических собы](/en/SVG/Attribute#GraphicalEvent)тий
-- [Атрибуты представления](/en/SVG/Attribute#Presentation)
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
-
 ### Специальные атрибуты
 
 - {{ SVGAttr("x") }}

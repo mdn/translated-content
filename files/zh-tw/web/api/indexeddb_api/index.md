@@ -15,7 +15,8 @@ IndexedDB 提供不同 APIs 用於同步與非同步的存取作業。同步 API
 
 非同步 API 不會阻塞呼叫它的執行緒。若要非同步存取資料庫，可於 [window](/zh-TW/docs/DOM/window) 物件的 [indexedDB](/zh-TW/docs/IndexedDB/IDBEnvironment#attr_indexedDB) 屬性上呼叫 [open](/zh-TW/docs/IndexedDB/IDBFactory#open)()。此函式將回傳 IDBRequest 物件 (IDBOpenDBRequest)，開始非同步存取資料庫；呼叫端程式利用 IDBRequest 物件上的事件來進行非同步溝通。
 
-> **備註：** 在舊版瀏覽器 (Gecko 16 版之前的 indexedDB 屬性；Chrome 中的 webkitIndexedDB；IE 10 中的 msIndexedDB) 中的 indexedDB 物件，均具備前綴屬性。
+> [!NOTE]
+> 在舊版瀏覽器 (Gecko 16 版之前的 indexedDB 屬性；Chrome 中的 webkitIndexedDB；IE 10 中的 msIndexedDB) 中的 indexedDB 物件，均具備前綴屬性。
 
 - [`IDBFactory`](/zh-TW/docs/IndexedDB/IDBFactory) 可存取資料庫。此介面是透過全域物件 `indexedDB` 所建構，因此成為 API 的切入點。
 - [`IDBCursor`](/zh-TW/docs/IndexedDB/IDBCursor) 將依序存取物件與索引。
@@ -55,7 +56,8 @@ Web 上的 IndexedDB 使用範例，是由 Marco Castelluccio 所提供。Marco 
 - [在 IndexedDB 中儲存影像與檔案](http://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
 - [使用 HTML5 IndexedDB 的簡易 TODO 清單](https://www.html5rocks.com/tutorials/indexeddb/todo/)
 
-  > **備註：** 此線上教學是根據較舊版本的規格所列，因此無法搭配最新版的瀏覽器。新版本已移除其中的 `setVersion()` 函式。
+  > [!NOTE]
+  > 此線上教學是根據較舊版本的規格所列，因此無法搭配最新版的瀏覽器。新版本已移除其中的 `setVersion()` 函式。
 
 - [Indexed Database API 規格](https://www.w3.org/TR/IndexedDB/)
 - [IndexedDB — 儲存於自己的瀏覽器中](<https://learn.microsoft.com/en-us/previous-versions/msdn10/gg679063(v=msdn.10)>)

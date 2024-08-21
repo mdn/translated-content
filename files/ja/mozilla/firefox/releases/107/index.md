@@ -22,7 +22,7 @@ l10n:
 
 ### CSS
 
-- [`contain-intrinsic-size`](/ja/docs/Web/CSS/contain-intrinsic-size) ショートハンド CSS プロパティを、[サイズの封じ込め](/ja/docs/Web/CSS/CSS_Containment#size_containment) の対象になる UI 要素のサイズを指定するために適用できるようになりました。
+- [`contain-intrinsic-size`](/ja/docs/Web/CSS/contain-intrinsic-size) ショートハンド CSS プロパティを、[サイズ拘束](/ja/docs/Web/CSS/CSS_Containment#サイズ拘束) の対象になる UI 要素のサイズを指定するために適用できるようになりました。
   これはユーザーエージェントが、子要素をレンダリングせずに要素のサイズを特定することを可能にします。
   ショートハンドプロパティの [`contain-intrinsic-width`](/ja/docs/Web/CSS/contain-intrinsic-width) および [`contain-intrinsic-height`](/ja/docs/Web/CSS/contain-intrinsic-height) とともに、[論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties) の [`contain-intrinsic-block-size`](/ja/docs/Web/CSS/contain-intrinsic-block-size) および [`contain-intrinsic-inline-size`](/ja/docs/Web/CSS/contain-intrinsic-inline-size) もサポートしました ([Firefox バグ 1597529](https://bugzil.la/1597529))。
 - [font-palette](/ja/docs/Web/CSS/font-palette) によって、カラーフォントをサポートしました ([Firefox バグ 1791558](https://bugzil.la/1791558))。また、[@font-palette-values](/ja/docs/Web/CSS/@font-palette-values) CSS アットルールと、その記述子である [font-family](/ja/docs/Web/CSS/@font-palette-values/font-family)、[base-palette](/ja/docs/Web/CSS/@font-palette-values/base-palette)、[override-colors](/ja/docs/Web/CSS/@font-palette-values/override-colors) でも、カラーフォントをサポートしました。これらを合わせて、カラーパレットの定義を支援します ([Firefox バグ 1791558](https://bugzil.la/1791558))。

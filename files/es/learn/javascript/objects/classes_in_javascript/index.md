@@ -121,7 +121,8 @@ Debido a que la clase `Professor` agrega una nueva propiedad `teaches`, ésta se
 
 Cuando creamos un nuevo `Professor`, queremos establecer el nombre de `teaches` que enseña, para esto definimos un constructor que recibe `name` y `teaches` como argumentos. Lo primero que hace el constructor es utilizar {{jsxref("Operators/super", "super()")}} para llamar al constructor de la superclase, mientras le pasa el parámetro `name`. El constructor de la superclase se encarga de establecer el valor de la propiedad `name`. Enseguida, el constructor de la clase `Professor` establece el valor de la propiedad `teaches`.
 
-> **Nota:** Si una subclase debe realizar algún tipo de inialización, es **obligatorio** que esta llame al constructor de la superclase utilizando `super()` con los paramétros que el constructor de la superclase espera.
+> [!NOTE]
+> Si una subclase debe realizar algún tipo de inialización, es **obligatorio** que esta llame al constructor de la superclase utilizando `super()` con los paramétros que el constructor de la superclase espera.
 
 Podemos observar que hemos sobreescrito el método `introduceSelf()` de la superclase y a su vez agregamos un nuevo método `grade()` para calificar las tareas de los alumnos (Nuestro profesor no es muy bueno que digamos, solo asigna calificaciones aleatorias a los ensayos).
 

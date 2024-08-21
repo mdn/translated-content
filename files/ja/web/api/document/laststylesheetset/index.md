@@ -14,7 +14,8 @@ l10n:
 
 最も新しく設定されたスタイルシートセットを示します。現在のスタイルシートセットが {{domxref("document.selectedStyleSheetSet")}} を設定することで変更されたものでない場合、返値は `null` になります。
 
-> **メモ:** この値は {{domxref("document.enableStyleSheetsForSet()")}} が呼び出された時に変化しません。
+> [!NOTE]
+> この値は {{domxref("document.enableStyleSheetsForSet()")}} が呼び出された時に変化しません。
 
 ## 例
 

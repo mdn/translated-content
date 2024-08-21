@@ -7,7 +7,8 @@ slug: Learn/CSS/CSS_layout/Position_skills
 
 Цель этого задания - чтобы вы поработали с CSS свойством {{CSSxRef("position")}} и его значениями которые описаны в нашем уроке [Позиционирование](/ru/docs/Learn/CSS/CSS_layout/Positioning). Вы будете работать над двумя небольшими задачами, использующими различные элементы из пройденного материала.
 
-> **Примечание:** Вы можете опробовать решения в интерактивных редакторах ниже, однако может быть полезным загрузить код и использовать онлайн инструменты такие как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), или [Glitch](https://glitch.com/) чтобы проработать задания.
+> [!NOTE]
+> Вы можете опробовать решения в интерактивных редакторах ниже, однако может быть полезным загрузить код и использовать онлайн инструменты такие как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), или [Glitch](https://glitch.com/) чтобы проработать задания.
 >
 > Если вы застрянете, попросите нас о помощи — см. раздел [Оценка и дальнейшая помощь](#оценка_и_дальнейшая_помощь) в конце страницы
 
@@ -23,7 +24,8 @@ slug: Learn/CSS/CSS_layout/Position_skills
 
 В качестве дополнительной задачи, сможете ли вы изменить цель так чтоб она отображалась под текстом?
 
-> **Примечание:** Для оценки или дальнейшей работы, [загрузите отправную точку этого задания](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position1-download.html), чтобы работать в вашем собственном или онлайн-редакторе
+> [!NOTE]
+> Для оценки или дальнейшей работы, [загрузите отправную точку этого задания](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position1-download.html), чтобы работать в вашем собственном или онлайн-редакторе
 
 ## Позиционирование Два
 
@@ -35,7 +37,8 @@ slug: Learn/CSS/CSS_layout/Position_skills
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/position/position2.html", '100%', 1000)}}
 
-> **Примечание:** Для оценки или дальнейшей работы, [загрузите отправную точку этого задания](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position2-download.html), чтобы работать в вашем собственном или онлайн-редакторе
+> [!NOTE]
+> Для оценки или дальнейшей работы, [загрузите отправную точку этого задания](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position2-download.html), чтобы работать в вашем собственном или онлайн-редакторе
 
 ## Оценка и дальнейшая помощь
 

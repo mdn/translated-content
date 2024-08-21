@@ -487,7 +487,8 @@ textarea.onkeyup = () => {
 
 {{EmbedLiveSample('缩略语示例', '100%', '150')}}
 
-> **备注：** 在之前版本的 html 中还包含对另一个元素 {{htmlelement("acronym")}} 的支持，但是它已经从 HTML spec 中移除，因为可以只使用 `<abbr>` 元素代表缩略语。不应再使用 `<acronym>`。
+> [!NOTE]
+> 在之前版本的 html 中还包含对另一个元素 {{htmlelement("acronym")}} 的支持，但是它已经从 HTML spec 中移除，因为可以只使用 `<abbr>` 元素代表缩略语。不应再使用 `<acronym>`。
 
 ### 主动学习：标记一个缩略语
 

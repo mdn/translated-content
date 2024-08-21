@@ -35,7 +35,8 @@ var selectedFile = $("#input").get(0).files[0];
 var selectedFile = $("#input")[0].files[0];
 ```
 
-> **備註：** 如果獲取 "files is undefined" 錯誤: 代表未選擇正確的 HTML 元素, 這時忘記 jQuery 回傳符合 DOM 元素的清單. 改使用 DOM 元素呼叫 "files" 方法.
+> [!NOTE]
+> 如果獲取 "files is undefined" 錯誤: 代表未選擇正確的 HTML 元素, 這時忘記 jQuery 回傳符合 DOM 元素的清單. 改使用 DOM 元素呼叫 "files" 方法.
 
 ## 使用 change event 獲取選擇的檔案
 
@@ -242,7 +243,8 @@ window.URL.revokeObjectURL(objectURL);
 
 這個範例使用 object URLs 顯示圖像縮圖。此外也顯示了其他包含檔案名稱和檔案大小的訊息。[線上範例](/samples/domref/file-click-demo.html) (註:瀏覽器版本要求 11/22 之後的火狐版本)。
 
-> **備註：** 這個 API 在較早的 Firefox 4 betas 存在但是 11/22 號後的版本有改變, 所以確定瀏覽器在最新的版本!
+> [!NOTE]
+> 這個 API 在較早的 Firefox 4 betas 存在但是 11/22 號後的版本有改變, 所以確定瀏覽器在最新的版本!
 
 HTML：
 
@@ -396,7 +398,8 @@ function FileUpload(img, file) {
 5. The `FileReader` object is used to convert the file to a binary string.
 6. Finally, when the content is loaded the `XMLHttpRequest` function `sendAsBinary()` is called to upload the file's content.
 
-> **備註：** 範例中非標準的 `sendAsBinary` 方法已經在 Gecko 31 廢棄且很快將會被移除。可以改使用標準的 `send(Blob data)。`
+> [!NOTE]
+> 範例中非標準的 `sendAsBinary` 方法已經在 Gecko 31 廢棄且很快將會被移除。可以改使用標準的 `send(Blob data)。`
 
 ### 非同步處理上傳檔案的程序
 

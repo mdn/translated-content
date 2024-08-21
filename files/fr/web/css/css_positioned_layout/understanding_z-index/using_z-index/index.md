@@ -25,7 +25,7 @@ Cette propriété, dont l'attribut est une valeur entière (positive ou négativ
 - …
 - _Haut : couche la plus proche de l'observateur_
 
-> **Note :**
+> [!NOTE]
 >
 > - Lorsque la propriété `z-index` n'est pas définie, les éléments sont rendus sur la couche 0 par défaut.
 > - Si plusieurs éléments possède la même valeur de `z-index` (c'est-à-dire qu'ils sont placés sur la même couche), alors les règles d'empilement expliquées dans [empilement sans `z-index`](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index) s'appliquent.

@@ -40,7 +40,7 @@ document(URI [,node-set] )
 
 - URI は XSL 文書に関連するため、`document("")` は現在の文書のルートノードを返します。
 
-この関数は XPath への XSLT 固有の追加です。コア XPath 関数ライブラリの一部ではありません。
+この関数は XPath への XSLT 固有の追加です。コア XPath 関数ライブラリーの一部ではありません。
 
 ## 定義
 

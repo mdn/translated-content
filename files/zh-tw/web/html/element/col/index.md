@@ -24,7 +24,8 @@ slug: Web/HTML/Element/col
 
   - : 指定每個欄單元格的水平對齊方式。可能的 {{Glossary("enumerated")}} 值包括 `left`、`center`、`right`、`justify` 和 `char`。當支持時，`char` 值將文本內容對齊到 [`char`](#char) 屬性中定義的字符，並在 [`charoff`](#charoff) 屬性定義的偏移量上進行對齊。請注意，此屬性會覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`align`](/zh-TW/docs/Web/HTML/Element/colgroup#align)。請改用 {{cssxref("text-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素上，因為此屬性已棄用。
 
-    > **備註：** 在 `<col>` 元素上設置 `text-align` 不起作用，因為 `<col>` 沒有後代元素，因此沒有元素繼承自它。
+    > [!NOTE]
+    > 在 `<col>` 元素上設置 `text-align` 不起作用，因為 `<col>` 沒有後代元素，因此沒有元素繼承自它。
     >
     > 如果表格未使用 [`colspan`](/zh-TW/docs/Web/HTML/Element/td#colspan) 屬性，則可以使用 `td:nth-of-type(an+b)` CSS 選擇器。將 `a` 設置為零，將 `b` 設置為表格中欄的位置，例如 `td:nth-of-type(2) { text-align: right; }` 可以使第二欄單元格右對齊。
     >
@@ -40,7 +41,8 @@ slug: Web/HTML/Element/col
 
   - : 指定每個欄單元格的垂直對齊方式。可能的{{Glossary("enumerated", "列舉")}}值包括 `baseline`、`bottom`、`middle` 和 `top`。請注意，此屬性會覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`valign`](/zh-TW/docs/Web/HTML/Element/colgroup#valign)。請改用 {{cssxref("vertical-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素上，因為此屬性已棄用。
 
-    > **備註：** 在 `<col>` 元素上設置 `vertical-align` 不起作用，因為 `<col>` 沒有後代元素，因此沒有元素繼承自它。
+    > [!NOTE]
+    > 在 `<col>` 元素上設置 `vertical-align` 不起作用，因為 `<col>` 沒有後代元素，因此沒有元素繼承自它。
     >
     > 如果表格未使用 [`colspan`](/zh-TW/docs/Web/HTML/Element/td#colspan) 屬性，則可以使用 `td:nth-of-type(an+b)` CSS 選擇器。將 `a` 設置為零，將 `b` 設置為表格中欄的位置，例如 `td:nth-of-type(2) { vertical-align: middle; }` 可以使第二欄單元格垂直居中。
     >

@@ -28,7 +28,8 @@ l10n:
 
 この評価を開始するには、ローカルコンピューターの新しいディレクトリーに、[blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/blank-template.html)、[minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/minimal-table.css)、および [planets-data.txt](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/planets-data.txt) のローカルコピーを作成します。
 
-> **メモ:** 代わりとして、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/) や [Glitch](https://glitch.com/) のようなサイトを使って評価することもできます。
+> [!NOTE]
+> 代わりとして、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/) や [Glitch](https://glitch.com/) のようなサイトを使って評価することもできます。
 >
 > 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 

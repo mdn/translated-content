@@ -17,7 +17,8 @@ slug: Web/HTML/Element/ul
 
   - : 此布林屬性提示應以緊湊樣式呈現清單。此屬性的解釋取決於{{glossary("user agent")}}，並且並非所有瀏覽器都支援。
 
-    > **警告：** 請勿使用此屬性，因為它已被棄用：請改用 [CSS](/zh-TW/docs/Web/CSS)。要達到與 `compact` 屬性類似的效果，可以使用具有值 `80%` 的 CSS 屬性{{cssxref("line-height")}}。
+    > [!WARNING]
+    > 請勿使用此屬性，因為它已被棄用：請改用 [CSS](/zh-TW/docs/Web/CSS)。要達到與 `compact` 屬性類似的效果，可以使用具有值 `80%` 的 CSS 屬性{{cssxref("line-height")}}。
 
 - `type` {{Deprecated_inline}}
 
@@ -31,7 +32,8 @@ slug: Web/HTML/Element/ul
 
     如果未出現，且如果元素未應用 [CSS](/zh-TW/docs/Web/CSS) {{ cssxref("list-style-type") }} 屬性，則使用者代理程式將根據清單的巢狀層級選擇項目符號類型。
 
-    > **警告：** 請勿使用此屬性，因為它已被棄用；請改用 [CSS](/zh-TW/docs/Web/CSS) {{ cssxref("list-style-type") }} 屬性。
+    > [!WARNING]
+    > 請勿使用此屬性，因為它已被棄用；請改用 [CSS](/zh-TW/docs/Web/CSS) {{ cssxref("list-style-type") }} 屬性。
 
 ## 使用注意事項
 

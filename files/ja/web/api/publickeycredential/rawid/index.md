@@ -11,7 +11,8 @@ l10n:
 
 {{domxref("PublicKeyCredential.id")}} プロパティはこの識別子が [base64url エンコード](/ja/docs/Glossary/Base64)されたものです。
 
-> **メモ:** このプロパティは最上位のコンテキストでしか使えません。例えば {{HTMLElement("iframe")}} の中では利用できません。
+> [!NOTE]
+> このプロパティは最上位のコンテキストでしか使えません。例えば {{HTMLElement("iframe")}} の中では利用できません。
 
 ### 値
 

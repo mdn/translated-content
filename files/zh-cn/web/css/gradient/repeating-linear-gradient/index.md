@@ -111,7 +111,8 @@ body {
 
 由于最后一个色标是 10%，且渐变是竖直的，因此重复渐变中的每个渐变都是高度的 10%，正好满足 10 个水平线。
 
-> **备注：** 更多示例请参见[使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)。
+> [!NOTE]
+> 更多示例请参见[使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)。
 
 ## 规范
 

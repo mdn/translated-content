@@ -22,9 +22,10 @@ slug: Learn
 - 框架与工具
   - : 在掌握了原生 HTML、CSS、JavaScript 的要领后，就可以继续学习[前端开发工具](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools)课程，并考虑开始研究 [JavaScript 前端框架](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)，以及[网站服务端编程](/zh-CN/docs/Learn/Server-side)了。
 
-> **备注：** 可在[术语表](/zh-CN/docs/Glossary)中查询术语。此外，如果你对 Web 开发有具体问题，可以尝试在[常见问题](/zh-CN/docs/Learn/Common_questions)寻找答案。
+> [!NOTE]
+> 可在[术语表](/zh-CN/docs/Glossary)中查询术语。此外，如果你对 Web 开发有具体问题，可以尝试在[常见问题](/zh-CN/docs/Learn/Common_questions)寻找答案。
 
-> **标注：**
+> [!CALLOUT]
 >
 > #### 想要成为一名前端工程师？
 >

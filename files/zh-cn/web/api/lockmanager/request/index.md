@@ -46,7 +46,8 @@ request(name, options, callback)
 
       - : 如果为 `true`，则任何持有的同名锁将被释放，并且请求将被授予，抢占任何排队中的锁请求。默认值为 `false`。
 
-        > **警告：** 小心使用！之前在锁内运行的代码会继续运行，并且可能与现在持有锁的代码发生冲突。
+        > [!WARNING]
+        > 小心使用！之前在锁内运行的代码会继续运行，并且可能与现在持有锁的代码发生冲突。
 
     - `signal` {{optional_inline}}
       - : 一个 {{domxref("AbortSignal")}}（{{domxref("AbortController")}} 的 {{domxref("AbortController.signal", "signal")}} 属性）；如果指定并且 {{domxref("AbortController")}} 被中止，则锁请求将被丢弃（如果尚未授予）。

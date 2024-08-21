@@ -19,7 +19,8 @@ l10n:
 
   - : 指定 `<col>` 元素跨列的连续列数。该值必须是大于 0 的正整数。如果不存在，其默认值为 `1`。
 
-    > **备注：** 如果 `<colgroup>` 中存在一个或多个 {{HTMLElement("col")}} 元素，则不允许使用 `span` 属性。
+    > [!NOTE]
+    > 如果 `<colgroup>` 中存在一个或多个 {{HTMLElement("col")}} 元素，则不允许使用 `span` 属性。
 
 ### 弃用的属性
 
@@ -29,7 +30,8 @@ l10n:
 
   - : 指定每个列组单元格的水平对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有 `left`、`center`、`right`、`justify` 和 `char`。如果支持，`char` 值将根据 [`char`](#char) 属性中定义的字符和 [`charoff`](#charoff) 属性定义的偏移量对文本内容进行对齐。请注意，后代 {{HTMLElement("col")}} 元素可以使用自己的 [`align`](/zh-CN/docs/Web/HTML/Element/col#align) 属性覆盖该值。使用 {{cssxref("text-align")}} 和 {{htmlelement("th")}} 元素上的 CSS 属性，因为该属性已被弃用。
 
-    > **备注：** 在 `<colgroup>` 元素上设置 `text-align` 没有任何作用，因为 {{HTMLElement("td")}} 和 {{HTMLElement("th")}} 元素不是 `<colgroup>` 元素的后代，因此它们不能从该元素继承。
+    > [!NOTE]
+    > 在 `<colgroup>` 元素上设置 `text-align` 没有任何作用，因为 {{HTMLElement("td")}} 和 {{HTMLElement("th")}} 元素不是 `<colgroup>` 元素的后代，因此它们不能从该元素继承。
     >
     > 如果表格没有使用 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，则在每列使用 `td:nth-of-type(an+b)` CSS 选择器，其中 `a` 为表格中列的总数，`b` 为列在表格中的序号位置，例如 `td:nth-of-type(7n+2) { text-align: right; }` 可右对齐第二列单元格。
     >
@@ -51,7 +53,8 @@ l10n:
 
   - : 指定每个列组单元格的垂直对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有 `baseline`、`bottom`、`middle` 和 `top`。请注意，后代 {{HTMLElement("col")}} 元素可以使用自己的 [`valign`](/zh-CN/docs/Web/HTML/Element/col#valign) 属性覆盖此值。使用 {{cssxref("vertical-align")}} 和 {{htmlelement("th")}} 元素上的 CSS 属性，因为该属性已被弃用。
 
-    > **备注：** 在 `<colgroup>` 元素上设置 `vertical-align` 没有任何作用，因为 {{HTMLElement("td")}} 和 {{HTMLElement("th")}} 元素不是 `<colgroup>` 元素的后代，因此它们不能从该元素继承。
+    > [!NOTE]
+    > 在 `<colgroup>` 元素上设置 `vertical-align` 没有任何作用，因为 {{HTMLElement("td")}} 和 {{HTMLElement("th")}} 元素不是 `<colgroup>` 元素的后代，因此它们不能从该元素继承。
     >
     > 如果表格没有使用 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，请在每列使用 [`td:nth-of-type()`](/zh-CN/docs/Web/CSS/:nth-of-type) CSS 选择器，例如，`td:nth-of-type(2) { vertical-align: middle; }` 使第二列单元格垂直居中。
     >

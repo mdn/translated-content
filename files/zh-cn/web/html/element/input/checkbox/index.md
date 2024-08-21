@@ -73,7 +73,8 @@ slug: Web/HTML/Element/input/checkbox
 
 如果复选框的 `value` 属性被省略了，则它默认具有值 `on`，在这种情况下提交的数据将是 `subscribe=on`。
 
-> **备注：** 如果一个复选框在其表单被提交时没有被选中，就不会有任何代表其未被选中的状态（例如 `value=unchecked`）的值被提交给服务器——该值根本就没有被提交给服务器！如果你想在复选框未被选中时提交一个默认值，你可以在表单中加入一个具有相同的 `name` 和 `value` 的 {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} 字段，它可以由 JavaScript 生成。
+> [!NOTE]
+> 如果一个复选框在其表单被提交时没有被选中，就不会有任何代表其未被选中的状态（例如 `value=unchecked`）的值被提交给服务器——该值根本就没有被提交给服务器！如果你想在复选框未被选中时提交一个默认值，你可以在表单中加入一个具有相同的 `name` 和 `value` 的 {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} 字段，它可以由 JavaScript 生成。
 
 ## 其他属性
 
@@ -82,7 +83,8 @@ slug: Web/HTML/Element/input/checkbox
 - `checked`
 
   - : 一个布尔属性，表示该复选框是否被默认选中（当页面加载时）。它不表示这个复选框当前是否被选中：如果复选框的状态被改变，这个内容属性不反映这个变化。此时，只有 {{domxref("HTMLInputElement")}} 的 IDL 属性 `checked` 会更新。
-    > **备注：** 与其他输入控件不同，复选框的值只有在复选框当前状态为 `checked` 时才会被包含在提交的数据中。如果它被选中，那么复选框的 `value` 属性的值就会被报告为输入的值。不像其他浏览器那样，Firefox 默认情况下在不同页面之间会[保持 `<input>` 动态选中的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。请使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/input#autocomplete) 属性来控制这个特性。
+    > [!NOTE]
+    > 与其他输入控件不同，复选框的值只有在复选框当前状态为 `checked` 时才会被包含在提交的数据中。如果它被选中，那么复选框的 `value` 属性的值就会被报告为输入的值。不像其他浏览器那样，Firefox 默认情况下在不同页面之间会[保持 `<input>` 动态选中的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。请使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/input#autocomplete) 属性来控制这个特性。
 
 - `value`
 
@@ -197,7 +199,8 @@ function updateDisplay() {
 
 {{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
 
-> **备注：** 如果你提交一个带有不确定复选框的表单，发生的情况与复选框不被选中的情况相同——没有代表复选框的数据提交给服务器。
+> [!NOTE]
+> 如果你提交一个带有不确定复选框的表单，发生的情况与复选框不被选中的情况相同——没有代表复选框的数据提交给服务器。
 
 ## 验证方式
 

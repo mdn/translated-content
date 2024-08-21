@@ -41,9 +41,11 @@ Tout d'abord, créez un nouveau répertoire intitulé "modify-page". Dans ce ré
 
 La clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) est la façon dont vous chargez les scripts dans des pages qui correspondent aux modèles d'URL. Dans ce cas, les instructions `content_scripts demandent au navigateur de charger un script appelé` "page-eater.js" dans toutes les pages sous [https://developer.mozilla.org/](/).
 
-> **Note :** Puisque la propriété "js" de content_scripts est un tableau, vous pouvez l'utiliser pour injecter plus d'un script dans des pages correspondantes. Si vous faites cela, les pages partagent la même portée, tout comme les scripts multiples chargés par une page, et ils sont chargés dans l'ordre dans lequel ils sont répertoriés dans le tableau.
+> [!NOTE]
+> Puisque la propriété "js" de content_scripts est un tableau, vous pouvez l'utiliser pour injecter plus d'un script dans des pages correspondantes. Si vous faites cela, les pages partagent la même portée, tout comme les scripts multiples chargés par une page, et ils sont chargés dans l'ordre dans lequel ils sont répertoriés dans le tableau.
 
-> **Note :** La clé content_scripts possède également une propriété "css" que vous pouvez utiliser pour injecter des feuilles de style CSS.
+> [!NOTE]
+> La clé content_scripts possède également une propriété "css" que vous pouvez utiliser pour injecter des feuilles de style CSS.
 
 Ensuite, créez un fichier appelé "page-eater.js" dans le dossier "modify-page" et donnez-lui le contenu suivant :
 
@@ -59,7 +61,8 @@ Maintenant [installer la WebExtension](/fr/Add-ons/WebExtensions/Temporary_Insta
 
 {{EmbedYouTube("lxf2Tkg6U1M")}}
 
-> **Note :** Cette vidéo montre le script de contenu fonctionnant dans [addons.mozilla.org](/fr/firefox/), les scripts de contenu sont actuellement bloqués pour ce site.
+> [!NOTE]
+> Cette vidéo montre le script de contenu fonctionnant dans [addons.mozilla.org](/fr/firefox/), les scripts de contenu sont actuellement bloqués pour ce site.
 
 ## Modification des pages par programme
 
@@ -118,7 +121,8 @@ Maintenant [rechargeons la WebExtension](/fr/Add-ons/WebExtensions/Temporary_Ins
 
 {{EmbedYouTube("zX4Bcv8VctA")}}
 
-> **Note :** Bien que cette vidéo montre le script de contenu fonctionnant dans [addons.mozilla.org](/fr/firefox/), les scripts de contenu sont actuellement bloqués pour ce site.
+> [!NOTE]
+> Bien que cette vidéo montre le script de contenu fonctionnant dans [addons.mozilla.org](/fr/firefox/), les scripts de contenu sont actuellement bloqués pour ce site.
 
 ## Messagerie
 
@@ -170,7 +174,8 @@ Cependant, ils peuvent communiquer en envoyant des messages. Une extrémité met
   </thead>
 </table>
 
-> **Note :** En ajoutant à cette méthode de communication, qui envoie des messages uniques, vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan).
+> [!NOTE]
+> En ajoutant à cette méthode de communication, qui envoie des messages uniques, vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan).
 
 Mettons à jour notre exemple pour montrer comment envoyer un message à partir du script en arrière-plan.
 
@@ -223,7 +228,8 @@ Maintenant, au lieu de simplement d'afficher la page tout de suite, le script de
 
 Si nous voulions envoyer des messages du script de contenu à la page d'arrière-plan, la configuration serait inverse de cet exemple, sauf que nous utiliserions [`runtime.sendMessage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) dans le script de contenu.
 
-> **Note :** Ces exemples injectent JavaScript; Vous pouvez également injecter CSS par programme en utilisant la fonction [`tabs.insertCSS()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS).
+> [!NOTE]
+> Ces exemples injectent JavaScript; Vous pouvez également injecter CSS par programme en utilisant la fonction [`tabs.insertCSS()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS).
 
 ## Apprendre plus
 

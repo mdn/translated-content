@@ -50,7 +50,8 @@ slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 
 由于原生的 WebGL 代码非常复杂，本文主要针对 2D 画布。然而，你也可以通过 [WebGL 介绍页面](/zh-CN/docs/Web/API/WebGL_API) 找到 WebGL 原生代码的教程，来学习如何更容易地使用 WebGL 库来创建一个 3D 场景。
 
-> **备注：** 画布的基本功能有良好的跨浏览器支持。但存在例外：IE 8 及以下不支持 2D 画布，IE 11 及以下不支持 WebGL。
+> [!NOTE]
+> 画布的基本功能有良好的跨浏览器支持。但存在例外：IE 8 及以下不支持 2D 画布，IE 11 及以下不支持 WebGL。
 
 ## 主动学习：开始使用 \<canvas>
 
@@ -112,7 +113,8 @@ slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 
    此时滚动条就消失了。
 
-> **备注：** 如上文所讲，一般情况下图片的尺寸可以通过 HTML 属性或 DOM 属性来设定。你也可以使用 CSS，但问题是画布在渲染完毕后其尺寸就是固定的了，如果试图调整，就会与其他图象一样（其实渲染好的画布就是一副图片），所显示的内容将变得像素化或扭曲变形。
+> [!NOTE]
+> 如上文所讲，一般情况下图片的尺寸可以通过 HTML 属性或 DOM 属性来设定。你也可以使用 CSS，但问题是画布在渲染完毕后其尺寸就是固定的了，如果试图调整，就会与其他图象一样（其实渲染好的画布就是一副图片），所显示的内容将变得像素化或扭曲变形。
 
 ### 获取画布上下文（canvas context）并完成设置
 
@@ -124,7 +126,8 @@ slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 var ctx = canvas.getContext("2d");
 ```
 
-> **备注：** 可选上下文还包括 WebGL（`webgl`）、WebGL 2（`webgl2`）等等，但本文暂不涉及。
+> [!NOTE]
+> 可选上下文还包括 WebGL（`webgl`）、WebGL 2（`webgl2`）等等，但本文暂不涉及。
 
 好啦，现已万事具备！`ctx` 变量包含一个 {{domxref("CanvasRenderingContext2D")}} 对象，画布上所有绘画操作都会涉及到这个对象。
 
@@ -200,7 +203,8 @@ ctx.fillRect(0, 0, width, height);
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles.html", '100%', 250)}}
 
-> **备注：** 完整代码请访问 GitHub： [2_canvas_rectangles.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles.html)。
+> [!NOTE]
+> 完整代码请访问 GitHub： [2_canvas_rectangles.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles.html)。
 
 ### 绘制路径
 
@@ -289,7 +293,8 @@ ctx.fill();
 
    `arc()` 函数有六个参数。前两个指定圆心的位置坐标，第三个是圆的半径，第四、五个是绘制弧的起、止角度（给定 0° 和 360° 便能绘制一个完整的圆），第六个是绘制方向（`false` 是顺时针，`true` 是逆时针）。
 
-   > **备注：** 0° 设定为水平向右。
+   > [!NOTE]
+   > 0° 设定为水平向右。
 
 2. 我们再来画一条弧：
 
@@ -310,9 +315,11 @@ ctx.fill();
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/3_canvas_paths.html", '100%', 200)}}
 
-> **备注：** 完整代码可到 GitHub 下载：[3_canvas_paths.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/3_canvas_paths.html)。
+> [!NOTE]
+> 完整代码可到 GitHub 下载：[3_canvas_paths.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/3_canvas_paths.html)。
 
-> **备注：** 请访问我们的 [用画布绘图](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) 入门课程来学习更多高级的路径绘制功能，比如贝叶斯曲线。
+> [!NOTE]
+> 请访问我们的 [用画布绘图](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) 入门课程来学习更多高级的路径绘制功能，比如贝叶斯曲线。
 
 ### 文本
 
@@ -344,7 +351,8 @@ ctx.fillText("Canvas text", 50, 150);
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/4_canvas_text.html", '100%', 180)}}
 
-> **备注：** 完整代码可到 GitHub 下载：[4_canvas_text.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/4_canvas_text.html).
+> [!NOTE]
+> 完整代码可到 GitHub 下载：[4_canvas_text.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/4_canvas_text.html).
 
 可以自己尝试一下。访问 [绘制文本](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text) 获得关于画布文本选项的更多信息。
 
@@ -391,7 +399,8 @@ ctx.fillText("Canvas text", 50, 150);
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/5_canvas_images.html", '100%', 260)}}
 
-> **备注：** 完整代码可到 GitHub 下载：[5_canvas_images.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/5_canvas_images.html).
+> [!NOTE]
+> 完整代码可到 GitHub 下载：[5_canvas_images.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/5_canvas_images.html).
 
 ## 循环和动画
 
@@ -470,7 +479,8 @@ ctx.fillText("Canvas text", 50, 150);
 - 修改 `length` 和 `moveOffset` 的值。
 - 我们引入了 `rand()` 函数但是没有使用，你可以试着用它引入一些随机数。
 
-> **备注：** 完整代码可到 GitHub 下载：[6_canvas_for_loop.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop.html).
+> [!NOTE]
+> 完整代码可到 GitHub 下载：[6_canvas_for_loop.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop.html).
 
 ### 动画
 
@@ -622,7 +632,8 @@ loop();
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html", '100%', 260)}}
 
-> **备注：** 完整代码可到 GitHub 下载：[7_canvas_walking_animation.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html).
+> [!NOTE]
+> 完整代码可到 GitHub 下载：[7_canvas_walking_animation.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html).
 
 ### 简单的绘图应用
 
@@ -821,7 +832,8 @@ WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL) 图形编程语言实现，�
 
 你可以 [到 Github 下载最终代码](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-cube)。
 
-> **备注：** 在我们的 GitHub repo 还有另一个趣味 3D 魔方示例——[Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube)（在线查看）。其中通过 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 来从电脑摄像头获取一段视频，将其投影到魔方上作为纹理。
+> [!NOTE]
+> 在我们的 GitHub repo 还有另一个趣味 3D 魔方示例——[Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube)（在线查看）。其中通过 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 来从电脑摄像头获取一段视频，将其投影到魔方上作为纹理。
 
 ## 小结
 

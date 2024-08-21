@@ -51,7 +51,8 @@ void observe(
 - `options`
   - : A [`MutationObserverInit`](#MutationObserverInit) object, specifies which DOM mutations should be reported.
 
-> **備註：** Adding an observer to an element is just like addEventListener, if you observe the element multiple times it does not make a difference. Meaning if you observe element twice, the observe callback does not fire twice, nor will you have to run disconnect() twice. In other words, once an element is observed, observing it again with the same observer instance will do nothing. However if the callback object is different it will of course add another observer to it.
+> [!NOTE]
+> Adding an observer to an element is just like addEventListener, if you observe the element multiple times it does not make a difference. Meaning if you observe element twice, the observe callback does not fire twice, nor will you have to run disconnect() twice. In other words, once an element is observed, observing it again with the same observer instance will do nothing. However if the callback object is different it will of course add another observer to it.
 
 ### `disconnect()`
 
@@ -77,7 +78,8 @@ Returns an Array of [`MutationRecord`s](#MutationRecord).
 
 `MutationObserverInit` is an object which can specify the following properties:
 
-> **備註：** At the very least, `childList`, `attributes`, or `characterData` must be set to `true`. Otherwise, "An invalid or illegal string was specified" error is thrown.
+> [!NOTE]
+> At the very least, `childList`, `attributes`, or `characterData` must be set to `true`. Otherwise, "An invalid or illegal string was specified" error is thrown.
 
 | Property                | Description                                                                                                            |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------- |

@@ -70,4 +70,5 @@ svg {
 
 {{Compat}}
 
-> **Note :** Pour plus d'informations sur les valeurs de `context-stroke` (et `context-fill`) à partir de documents HTML, voir la documentation pour la propriété non-standard {{cssxref("-moz-context-properties")}}.
+> [!NOTE]
+> Pour plus d'informations sur les valeurs de `context-stroke` (et `context-fill`) à partir de documents HTML, voir la documentation pour la propriété non-standard {{cssxref("-moz-context-properties")}}.

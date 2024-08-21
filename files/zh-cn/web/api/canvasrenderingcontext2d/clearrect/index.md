@@ -9,7 +9,8 @@ l10n:
 
 Canvas 2D API 的 **`CanvasRenderingContext2D.clearRect()`** 方法用于通过把像素设置为透明黑色以达到擦除一个矩形区域的目的。
 
-> **备注：** 如果没有[正确使用路径](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#绘制路径)，`clearRect()` 可能会导致意想之外的结果。请确保在调用 `clearRect()` 之后开始绘制新内容前调用 {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} 。
+> [!NOTE]
+> 如果没有[正确使用路径](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#绘制路径)，`clearRect()` 可能会导致意想之外的结果。请确保在调用 `clearRect()` 之后开始绘制新内容前调用 {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} 。
 
 ## 语法
 
