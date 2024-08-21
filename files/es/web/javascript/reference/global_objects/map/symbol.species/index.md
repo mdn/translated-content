@@ -24,7 +24,7 @@ El valor de el constructor (`this`) en el cual se llamó `get [Symbol.species]`.
 La propiedad de acceso `[Symbol.species]` regresa el constructor por defecto para los objetos `Map`. Subclass constructors may override it to change the constructor assignment.
 
 > [!NOTE]
-> Esta es una propiedad que actualmente no es utilizada por todos los métodos de `Map`.
+> Esta es una propiedad que actualmente no es utilizada por ningúno de los métodos de `Map`.
 
 ## Ejemplos
 
@@ -57,7 +57,7 @@ class MyMap extends Map {
 
 {{Compat}}
 
-## See also
+## Véase también
 
 - {{jsxref("Map")}}
 - {{jsxref("Symbol.species")}}
