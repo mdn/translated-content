@@ -577,7 +577,7 @@ document.querySelector("table").addEventListener("keydown", function (event) {
 
 [キーボードインタラクション](#keyboard_interactions)が適切に実装されていても、矢印キーを使用しなければならないことに気づかないユーザーもいます。 グリッド (`grid`) ロールを使用して、必要な機能性とインタラクションが最もよく達成できることを確認してください。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

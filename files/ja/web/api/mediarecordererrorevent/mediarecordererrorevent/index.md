@@ -35,7 +35,7 @@ new MediaRecorderErrorEvent(type, options)
 
 新しい {{domxref("MediaRecorderErrorEvent")}} オブジェクトです。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
