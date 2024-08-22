@@ -54,43 +54,43 @@ Este método es util cuando necesitas agrupar información que está relacionada
 
 ### Utilizando Map.groupBy()
 
-Primero definimos un arreglo que contenga objetos que representen un inventario de diferentes alimentos. Cada alimento tiene un `tipo` y una `cantidad`.
+Primero definimos un arreglo que contenga objetos que representen un inventario de diferentes alimentos. Cada alimento tiene un `type` y un `quantity`.
 
 ```js
-const inventario = [
-  { nombre: "esparragos", tipo: "vegetales", cantidad: 9 },
-  { nombre: "bananas", tipo: "fruta", cantidad: 5 },
-  { nombre: "cabra", tipo: "carne", cantidad: 23 },
-  { nombre: "cherries", tipo: "fruta", cantidad: 12 },
-  { nombre: "pescado", tipo: "carne", cantidad: 22 },
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
 ];
 ```
 
-El código de abajo utiliza `Map.groupBy()` con una función flecha que regresa las llaves de objeto llamadas `reabastecer` o `suficiente`, dependiendo de si la propiedad del elemento es `cantidad < 6`. El objeto `resultado` que regresa, es un `Map` así que necesitamos llamar `get()` con la llave para obtener el arreglo.
+El código de abajo utiliza `Map.groupBy()` con una función flecha que regresa las llaves de objeto llamadas `restock` o `sufficient`, dependiendo de si la propiedad del elemento es `quantity < 6`. El objeto `result` que regresa, es un `Map` así que necesitamos llamar `get()` con la llave para obtener el arreglo.
 
 ```js
-const reabastecer = { reabastecer: true };
-const suficiente = { reabastecer: false };
-const resultado = Map.groupBy(inventario, ({ cantidad }) =>
-  cantidad < 6 ? reabastecer : suficiente,
+const restock = { restock: true };
+const sufficient = { restock: false };
+const result = Map.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? restock : sufficient,
 );
-console.log(resultado.get(reabastecer));
-// [{ nombre: "bananas", tipo: "fruta", cantidad: 5 }]
+console.log(result.get(restock));
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
 ```
 
-Note que el argumento `{ cantidad }` de la función, es un ejemplo básico de la [sintaxis de destructuración de objetos pasados como parámetros de función](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#desempacar_campos_de_objetos_pasados_como_parámetro_de_función). Esto desempaca la propiedad `cantidad` de un objeto pasado como parámetro, y lo asigna a la variable llamada `cantidad` en el cuerpo de la función. Esta es una forma muy concisa de accesar los valores relevantes de elementos, dentro de una función.
+Note que el argumento `{ quantity }` de la función, es un ejemplo básico de la [sintaxis de destructuración de objetos pasados como parámetros de función](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#desempacar_campos_de_objetos_pasados_como_parámetro_de_función). Esto desempaca la propiedad `quantity` del objeto pasado como parámetro, y lo asigna a la variable llamada `quantity` en el cuerpo de la función. Esta es una forma muy concisa de accesar los valores relevantes de elementos, dentro de una función.
 
 La llave de un `Map` puede ser modificada y aún usarse. Sin embargo no puedes recrear la llave y aún usarla. Por esa razón es importante que cualquiera que necesite usar el _map_ mantenga una referencia de sus llaves.
 
 ```js
 // La llave puede ser modificada y aún usarse
-reabastecer["rapido"] = true;
-console.log(resultado.get(reabastecer));
-// [{ nombre: "bananas", tipo: "fruta", cantidad: 5 }]
+restock["fast"] = true;
+console.log(result.get(restock));
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
 
 // Una nueva llave no puede ser usada, incluso si tiene la misma estructura!
-const reabastecer2 = { reabastecer: true };
-console.log(resultado.get(reabastecer)); // undefined
+const restock2 = { restock: true };
+console.log(result.get(restock2)); // undefined
 ```
 
 ## Especificaciones
