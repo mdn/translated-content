@@ -1,5 +1,5 @@
 ---
-title: Console.timeLog()
+title: "console: статический метод timeLog()"
 slug: Web/API/console/timeLog_static
 ---
 
