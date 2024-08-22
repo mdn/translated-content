@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebVTT")}}
 
-**`cuechange`** 事件在 {{domxref("TextTrack")}} 更改当前显示提示时触发。此事件在 `TextTrack` 和显示它的 {{domxref("HTMLTrackElement")}}（如果有的话）上触发。
+**`cuechange`** 事件在 {{domxref("TextTrack")}} 更改当前显示提示（cue）时触发。此事件在 `TextTrack` 和显示它的 {{domxref("HTMLTrackElement")}}（如果有的话）上触发。
 
 ## 语法
 
@@ -25,7 +25,7 @@ oncuechange = (event) => {};
 
 ## 示例
 
-每当当前呈现的提示更改时，由 {{domxref("HTMLTrackElement.track", "track")}} 属性指示的底层 {{domxref("TextTrack")}} 会接收 `cuechange` 事件。即使轨道并未与媒体元素关联，也会发生。
+每当当前呈现的 cue 更改时，由 {{domxref("HTMLTrackElement.track", "track")}} 属性指示的底层 {{domxref("TextTrack")}} 会接收 `cuechange` 事件。即使轨道并未与媒体元素关联，也会发生。
 
 如果轨道和媒体元素*是*关联的，使用 {{HTMLElement("track")}} 元素作为 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 的孩子，`cuechange` 事件也发送给 {{domxref("HTMLTrackElement")}}。
 
