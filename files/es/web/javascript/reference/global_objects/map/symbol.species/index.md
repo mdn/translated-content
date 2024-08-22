@@ -21,7 +21,7 @@ El valor de el constructor (`this`) en el cual se llamó `get [Symbol.species]`.
 
 ## Descripción
 
-La propiedad de acceso `[Symbol.species]` regresa el constructor por defecto para los objetos `Map`. Subclass constructors may override it to change the constructor assignment.
+La propiedad de acceso `[Symbol.species]` regresa el constructor por defecto para los objetos `Map`. Los constructores de las subclases pueden sobreescribirla para cambiar la asignación del constructor.
 
 > [!NOTE]
 > Esta es una propiedad que actualmente no es utilizada por ningúno de los métodos de `Map`.
