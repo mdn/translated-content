@@ -29,7 +29,7 @@ clearImmediate(immediateID)
 
 ```js
 let immediateID = setImmediate(() => {
-  // Выполняем необходимый код
+  // Выполнение необходимого кода
 });
 
 document.getElementById("button").addEventListener(() => {
