@@ -298,11 +298,15 @@ pip3 install virtualenvwrapper-win
 
 現在，你可以使用`mkvirtualenv`命令創建新的虛擬環境。當此命令運行時，你將看到正在設置的環境（你看到的是略微特定 於平台的）。當命令完成時，新的虛擬環境，將處於活動狀態 - 你可以看到這一點，因為提示的開頭，將是括號中環境的名稱（如下所示）。
 
+```bash
+mkvirtualenv my_django_environment
 ```
-$ mkvirtualenv my_django_environment
 
+你應該會看到類似以下內容的輸出：
+
+```plain
 Running virtualenv with interpreter /usr/bin/python3
-...
+# …
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
 (my_django_environment) ubuntu@ubuntu:~$
 ```
