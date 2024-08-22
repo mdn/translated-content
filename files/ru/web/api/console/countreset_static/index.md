@@ -1,5 +1,5 @@
 ---
-title: Console.countReset()
+title: "console: статический метод countReset()"
 slug: Web/API/console/countReset_static
 ---
 
