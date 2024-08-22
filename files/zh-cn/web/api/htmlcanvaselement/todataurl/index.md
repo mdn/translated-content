@@ -13,8 +13,10 @@ slug: Web/API/HTMLCanvasElement/toDataURL
 
 ## 语法
 
-```
-canvas.toDataURL(type, encoderOptions);
+```js-nolint
+toDataURL()
+toDataURL(type)
+toDataURL(type, encoderOptions)
 ```
 
 ### 参数

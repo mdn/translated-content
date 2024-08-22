@@ -9,8 +9,8 @@ slug: Web/API/Element/insertAdjacentHTML
 
 ## 语法
 
-```
-element.insertAdjacentHTML(position, text);
+```js-nolint
+insertAdjacentHTML(position, text)
 ```
 
 - `position`

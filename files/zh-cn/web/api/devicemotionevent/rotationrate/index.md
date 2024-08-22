@@ -10,12 +10,6 @@ slug: Web/API/DeviceMotionEvent/rotationRate
 > [!NOTE]
 > 如果设备无法提供此信息，则为 null
 
-## 语法
-
-```
-var rates = instanceOfDeviceMotionEvent.rotationRate;
-```
-
 ## 值
 
 rotationRates 属性是一个只读对象，用于描述设备围绕其每个轴的旋转速率：

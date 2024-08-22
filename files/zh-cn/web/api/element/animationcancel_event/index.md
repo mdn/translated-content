@@ -9,10 +9,12 @@ animationcancel 是一个事件处理操作，这个事件在[CSS Animation](/zh
 
 ## 语法
 
-```
-var animCancelHandler = target.onanimationcancel;
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
-target.onanimationcancel = {{jsxref("Function")}}
+```js
+addEventListener("animationcancel", (event) => {});
+
+onanimationcancel = (event) => {};
 ```
 
 ## 示例

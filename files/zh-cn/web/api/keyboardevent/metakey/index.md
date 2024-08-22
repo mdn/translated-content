@@ -10,15 +10,9 @@ slug: Web/API/KeyboardEvent/metaKey
 > [!NOTE]
 > 在 MAC 键盘上，表示 Command 键（<kbd>⌘</kbd>），在 Windows 键盘上，表示 Windows 键（<kbd>⊞</kbd>）。
 
-## 语法
+## 值
 
-```
-var metaKeyPressed = instanceOfKeyboardEvent.metaKey
-```
-
-### 返回值
-
-一个布尔值
+一个布尔值。
 
 ## 示例
 

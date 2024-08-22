@@ -10,12 +10,9 @@ slug: Web/API/HTMLAnchorElement/download
 > [!NOTE]
 > 该值对于下载行为来说不一定是有用的，同时也不能决定下载行为是否发生。
 
-## 语法
+## 值
 
-```
-var dnload = anchorElt.download;
-anchorElt.download = dnload;
-```
+一个字符串。
 
 ## 规范
 

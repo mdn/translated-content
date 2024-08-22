@@ -11,9 +11,13 @@ slug: Web/API/ImageData/ImageData
 
 ## 语法
 
-```
-new ImageData(array, width, height);
-new ImageData(width, height);
+```js-nolint
+new ImageData(width, height)
+new ImageData(width, height, settings)
+
+new ImageData(dataArray, width)
+new ImageData(dataArray, width, height)
+new ImageData(dataArray, width, height, settings)
 ```
 
 ### 参数

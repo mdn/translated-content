@@ -10,15 +10,7 @@ slug: Web/API/Event/returnValue
 > [!NOTE]
 > While `returnValue` has been adopted into the DOM standard, it is present primarily to support existing code. You should use {{DOMxRef("Event.preventDefault", "preventDefault()")}}, and {{domxref("Event.defaultPrevented", "defaultPrevented")}} instead of this historical property.
 
-## 语法
-
-```
-event.returnValue = bool;
-
-var bool = event.returnValue;
-```
-
-### 值
+## 值
 
 A {{domxref("Boolean")}} value which is `true` if the event has not been canceled; otherwise, if the event has been canceled or the default has been prevented, the value is `false`.
 
