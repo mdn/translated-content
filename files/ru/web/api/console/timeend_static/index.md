@@ -1,5 +1,5 @@
 ---
-title: Console.timeEnd
+title: "console: статический метод timeEnd()"
 slug: Web/API/console/timeEnd_static
 ---
 
