@@ -7,7 +7,7 @@ l10n:
 
 {{SVGRef}}
 
-**`<feMorphology>`** [SVG](/zh-CN/docs/Web/SVG) 滤镜基本形状用于对输入图像进行侵蚀或扩张处理。它的用途尤其体现在加粗或变细效果上。
+**`<feMorphology>`** [SVG](/zh-CN/docs/Web/SVG) 滤镜原语用于对输入图像进行腐蚀或膨胀。它的用途尤其体现在加粗或变细效果上。
 
 ## 使用上下文
 
