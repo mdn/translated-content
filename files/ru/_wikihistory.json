@@ -7702,13 +7702,13 @@
     "modified": "2020-10-15T21:49:40.634Z",
     "contributors": ["georgelviv", "YozhEzhi", "art-gur"]
   },
+  "Web/API/console/countReset_static": {
+    "modified": "2020-10-15T22:14:44.244Z",
+    "contributors": ["damirJa"]
+  },
   "Web/API/console/count_static": {
     "modified": "2019-03-23T22:08:48.787Z",
     "contributors": ["FlowerDeLuce"]
-  },
-  "Web/API/console/countreset_static": {
-    "modified": "2020-10-15T22:14:44.244Z",
-    "contributors": ["damirJa"]
   },
   "Web/API/console/debug_static": {
     "modified": "2020-11-19T07:02:35.541Z",
@@ -7753,17 +7753,7 @@
     "modified": "2019-11-28T12:52:39.225Z",
     "contributors": ["1cepeak", "xefimx"]
   },
-  "Web/API/console/time_static": {
-    "modified": "2020-10-15T21:37:02.751Z",
-    "contributors": [
-      "Mialik-Kirill-Sergeevich",
-      "SphinxKnight",
-      "ekirpichyov",
-      "YozhEzhi",
-      "terranisu"
-    ]
-  },
-  "Web/API/console/timeend_static": {
+  "Web/API/console/timeEnd_static": {
     "modified": "2020-10-15T21:29:08.226Z",
     "contributors": [
       "Arhidimon",
@@ -7775,13 +7765,23 @@
       "Troynov"
     ]
   },
-  "Web/API/console/timelog_static": {
+  "Web/API/console/timeLog_static": {
     "modified": "2020-10-15T22:12:51.490Z",
     "contributors": ["ekirpichyov", "evilandfox"]
   },
-  "Web/API/console/timestamp_static": {
+  "Web/API/console/timeStamp_static": {
     "modified": "2020-10-15T22:22:33.891Z",
     "contributors": ["ekirpichyov"]
+  },
+  "Web/API/console/time_static": {
+    "modified": "2020-10-15T21:37:02.751Z",
+    "contributors": [
+      "Mialik-Kirill-Sergeevich",
+      "SphinxKnight",
+      "ekirpichyov",
+      "YozhEzhi",
+      "terranisu"
+    ]
   },
   "Web/API/console/trace_static": {
     "modified": "2020-10-15T21:56:15.688Z",
