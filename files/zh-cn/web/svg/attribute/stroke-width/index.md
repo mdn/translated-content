@@ -33,13 +33,13 @@ svg {
 
 ```html
 <svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
-  <!-- 默认笔画宽度为 1 -->
+  <!-- 默认外轮廓宽度为 1 -->
   <circle cx="5" cy="5" r="3" stroke="green" />
 
-  <!-- 使用数值设置笔画宽度 -->
+  <!-- 使用数值设置外轮廓宽度 -->
   <circle cx="15" cy="5" r="3" stroke="green" stroke-width="3" />
 
-  <!-- 使用百分数设置笔画宽度 -->
+  <!-- 使用百分数设置外轮廓宽度 -->
   <circle cx="25" cy="5" r="3" stroke="green" stroke-width="2%" />
 </svg>
 ```
