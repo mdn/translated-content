@@ -59,7 +59,7 @@ svg {
 
 ### `context-stroke` 示例
 
-在这个示例中，我们使用 {{SVGElement('path')}} 元素定义了三个形状的图形，每个图形都设置了不同的 [`stroke`](/zh-CN/docs/Web/SVG/Attribute/fill) 和 [`fill`](/zh-CN/docs/Web/SVG/Attribute/fill) 颜色。我们还通过 {{SVGElement('circle')}} 元素和 {{SVGElement('marker')}} 元素定义了一个圆形的标记。每个图形都通过 ['marker'](/zh-CN/docs/Web/CSS/marker) CSS 属性应用了标记。
+在这个示例中，我们使用 {{SVGElement('path')}} 元素定义了三个形状的图形，每个图形都设置了不同的 [`stroke`](/zh-CN/docs/Web/SVG/Attribute/fill) 和 [`fill`](/zh-CN/docs/Web/SVG/Attribute/fill) 颜色。我们还通过 {{SVGElement('circle')}} 元素和 {{SVGElement('marker')}} 元素定义了一个圆形的标记。每个图形都通过 [`marker`](/zh-CN/docs/Web/CSS/marker) CSS 属性应用了标记。
 
 {{SVGElement('circle')}} 元素上设置了 `stroke="context-stroke"` 和 `fill="context-fill"` 。因为它被设置为图形的上下文标记，所以这些属性会导致它在各种情况下都会继承设置在 {{SVGElement('path')}} 属性上的 `fill` 和 `stroke`。
 
