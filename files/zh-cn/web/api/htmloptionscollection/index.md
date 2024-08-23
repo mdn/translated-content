@@ -14,7 +14,7 @@ l10n:
 ## 实例属性
 
 - `length`
-  - : `unsigned long`，正如规范所允许的那样，此属性不是只读的。你可以通过降低值从末尾删除选项，或者提高值在末尾添加空白选项。Mozilla 允许这样做，而其它实现可能会抛出 [DOMException](/zh-CN/docs/Web/API/DOMException).
+  - : `unsigned long`，正如规范所允许的那样，此属性不是只读的。你可以通过降低该值从末尾删除选项，或者提高该值在末尾添加空白选项。Mozilla 允许这样做，而其它实现可能会抛出 [DOMException](/zh-CN/docs/Web/API/DOMException)。
 
 ## 实例方法
 
