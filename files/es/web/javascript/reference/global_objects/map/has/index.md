@@ -24,7 +24,7 @@ has(key)
 
 ### Valor devuelto
 
-`true` si un elemento con la llave especificada existe en el objeto `Map`; de lo contrario `false`.
+`true` si un elemento con la llave especificada existe en el objeto `Map`; de lo contrario regresa `false`.
 
 ## Ejemplos
 
