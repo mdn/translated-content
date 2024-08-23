@@ -2,7 +2,7 @@
 title: Map.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/Map/get
 l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+  sourceCommit: 3cfd663738e9963157d90f359789d675a6662ec2
 ---
 
 {{JSRef}}
@@ -24,7 +24,7 @@ get(key)
 
 ### Valor devuelto
 
-El elemento asociado a la llave pasada como parámetro, o {{jsxref("undefined")}} si la llava no se encuentra en el objeto `Map`.
+El elemento asociado a la llave pasada como parámetro, o {{jsxref("undefined")}} si la llave no se encuentra en el objeto `Map`.
 
 ## Ejemplos
 
