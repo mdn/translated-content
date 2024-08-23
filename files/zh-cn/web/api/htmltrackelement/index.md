@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLTrackElement`** 接口表示 {{Glossary("DOM")}} 中的 {{Glossary("HTML")}} {{HTMLElement("track")}} 元素。此元素可以作为 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 的孩子指定包含隐藏式字幕或标题等信息的文本轨道使用。
+**`HTMLTrackElement`** 接口表示 {{Glossary("DOM")}} 中的 {{Glossary("HTML")}} {{HTMLElement("track")}} 元素。此元素可以作为 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 的子元素，以指定包含隐藏式字幕或标题等信息的文本轨道使用。
 
 {{InheritanceDiagram}}
 
