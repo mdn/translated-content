@@ -20,7 +20,7 @@ has(key)
 ### Parámetros
 
 - `key`
-  - : La llave del elemento que se quiere probar si existe en el objeto `Map`.
+  - : La llave del elemento que se quiere comprobar si existe en el objeto `Map`.
 
 ### Valor devuelto
 
