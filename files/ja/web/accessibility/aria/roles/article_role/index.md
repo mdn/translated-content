@@ -71,7 +71,7 @@ slug: Web/Accessibility/ARIA/Roles/article_role
 
 - WAI-ARIA Authoring Practices 1.1 の feed のデザインパターンから、[お薦めのレストランのフィード表示](https://www.w3.org/TR/wai-aria-practices-1.1/examples/feed/feedDisplay.html)とそれと分けられた[文書](https://www.w3.org/TR/wai-aria-practices-1.1/examples/feed/feed.html)
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

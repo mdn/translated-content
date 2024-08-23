@@ -5,7 +5,7 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_text
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
-[`canvas`](/zh-TW/HTML/Canvas)元素支援在[標準 HTML 5 特色](http://www.whatwg.org/specs/web-apps/current-work/#text-0)以及少許實驗性的 Mozilla 方法和功能上繪製文字。
+[`canvas`](/zh-TW/docs/Web/HTML/Element/canvas)元素支援在[標準 HTML 5 特色](https://html.spec.whatwg.org/#text-0)以及少許實驗性的 Mozilla 方法和功能上繪製文字。
 
 文字可以包括任何 Unicode 字元，即使用那些超出「基本多文種平面」的字元也可以。
 
@@ -134,9 +134,9 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_text
   </tbody>
 </table>
 
-下圖展示了 textBaseline 屬性所支援的各種基線，感謝 [WHATWG](http://www.whatwg.org/).
+下圖展示了 textBaseline 屬性所支援的各種基線，感謝 [WHATWG](https://whatwg.org/)。
 
-![top of em squre（字元區塊頂部）大致在字型中所有字母的最頂部位置，hanging basline（懸掛基線）則是在一些特殊（較小的,像是「आ」）字母頂部，middle則是在top of em squre（字元區塊頂部和bottom of em squre（字元區塊底部）的中間，alphabetic（拼音文字）的基線位置則是在一般拼音字母如Á，ÿ，f，Ω的底線位置。ideographic（表意文字）的基線在字元的底部位置，bottom of em squre（字元區塊底部）則大致是字型中所有字母的最底部位置。而top and bottom of the bounding box（上下的區域範圍線）則比這些基線都來得更遠，基於字母的高度可能超過字元區塊頂部和底部的範圍。](http://www.whatwg.org/specs/web-apps/current-work/images/baselines.png)
+![top of em squre（字元區塊頂部）大致在字型中所有字母的最頂部位置，hanging basline（懸掛基線）則是在一些特殊（較小的,像是「आ」）字母頂部，middle則是在top of em squre（字元區塊頂部和bottom of em squre（字元區塊底部）的中間，alphabetic（拼音文字）的基線位置則是在一般拼音字母如Á，ÿ，f，Ω的底線位置。ideographic（表意文字）的基線在字元的底部位置，bottom of em squre（字元區塊底部）則大致是字型中所有字母的最底部位置。而top and bottom of the bounding box（上下的區域範圍線）則比這些基線都來得更遠，基於字母的高度可能超過字元區塊頂部和底部的範圍。](https://html.spec.whatwg.org/images/baselines.png)
 
 ## 方法
 
@@ -345,6 +345,6 @@ ctx.strokeText("Sample String", 10, 50);
 
 ## 備註
 
-- 請見 [WHATWG specification](http://www.whatwg.org/specs/web-apps/current-work/#text) 關於 HTML 5 canvas text 的說明。
+- 請見 [WHATWG 規範](https://html.spec.whatwg.org/#text)關於 HTML 5 canvas text 的說明。
 - 你不需要特別的文本來使用這些功能；2D 的文本就可以執行得很好。
 - 所有的繪圖都使用即時變化來完成。

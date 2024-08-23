@@ -491,11 +491,11 @@
 /ru/docs/Web/API/atob	/ru/docs/Web/API/Window/atob
 /ru/docs/Web/API/btoa	/ru/docs/Web/API/Window/btoa
 /ru/docs/Web/API/caches	/ru/docs/Web/API/Window/caches
-/ru/docs/Web/API/console.timeEnd	/ru/docs/Web/API/console/timeend_static
+/ru/docs/Web/API/console.timeEnd	/ru/docs/Web/API/console/timeEnd_static
 /ru/docs/Web/API/console/assert	/ru/docs/Web/API/console/assert_static
 /ru/docs/Web/API/console/clear	/ru/docs/Web/API/console/clear_static
 /ru/docs/Web/API/console/count	/ru/docs/Web/API/console/count_static
-/ru/docs/Web/API/console/countReset	/ru/docs/Web/API/console/countreset_static
+/ru/docs/Web/API/console/countReset	/ru/docs/Web/API/console/countReset_static
 /ru/docs/Web/API/console/debug	/ru/docs/Web/API/console/debug_static
 /ru/docs/Web/API/console/dir	/ru/docs/Web/API/console/dir_static
 /ru/docs/Web/API/console/dirxml	/ru/docs/Web/API/console/dirxml_static
@@ -506,9 +506,9 @@
 /ru/docs/Web/API/console/profile	/ru/docs/Web/API/console/profile_static
 /ru/docs/Web/API/console/table	/ru/docs/Web/API/console/table_static
 /ru/docs/Web/API/console/time	/ru/docs/Web/API/console/time_static
-/ru/docs/Web/API/console/timeEnd	/ru/docs/Web/API/console/timeend_static
-/ru/docs/Web/API/console/timeLog	/ru/docs/Web/API/console/timelog_static
-/ru/docs/Web/API/console/timeStamp	/ru/docs/Web/API/console/timestamp_static
+/ru/docs/Web/API/console/timeEnd	/ru/docs/Web/API/console/timeEnd_static
+/ru/docs/Web/API/console/timeLog	/ru/docs/Web/API/console/timeLog_static
+/ru/docs/Web/API/console/timeStamp	/ru/docs/Web/API/console/timeStamp_static
 /ru/docs/Web/API/console/trace	/ru/docs/Web/API/console/trace_static
 /ru/docs/Web/API/console/warn	/ru/docs/Web/API/console/warn_static
 /ru/docs/Web/API/crypto_property	/ru/docs/Web/API/Window/crypto

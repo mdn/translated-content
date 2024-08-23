@@ -11802,10 +11802,6 @@
     "modified": "2020-11-12T06:22:45.529Z",
     "contributors": ["xgqfrms", "Carllllo", "marsoln"]
   },
-  "Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers": {
-    "modified": "2019-03-23T23:20:07.432Z",
-    "contributors": ["chrisdavidmills", "ObooChin", "jtyjty99999"]
-  },
   "Web/API/Navigator/sendBeacon": {
     "modified": "2020-10-15T21:45:06.383Z",
     "contributors": [

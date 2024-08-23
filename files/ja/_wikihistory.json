@@ -10725,16 +10725,6 @@
       "Norah"
     ]
   },
-  "Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers": {
-    "modified": "2019-03-23T23:53:21.069Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "ethertank",
-      "Mgjbot",
-      "Potappo"
-    ]
-  },
   "Web/API/Navigator/sendBeacon": {
     "modified": "2020-10-15T21:51:51.220Z",
     "contributors": ["mfuji09", "nomeaning777", "taise", "__ku"]
