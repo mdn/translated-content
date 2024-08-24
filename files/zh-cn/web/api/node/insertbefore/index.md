@@ -30,8 +30,7 @@ insertBefore(newNode, referenceNode)
   - ：要插入的节点。
 - `referenceNode`
   - ：`newNode` 被插入之前的节点。如果为 `null`，`newNode` 将被插入到节点的子节点列表末尾。
-    > [!NOTE]
-    > `referenceNode` **不是**一个可选参数。你必须显式传递 {{domxref("Node")}} 或 `null`。未能提供它或传递无效值，可能会在[不同](https://bugzil.la/119489)的浏览器版本中[表现](https://crbug.com/419780)不同。
+    > [!NOTE] > `referenceNode` **不是**一个可选参数。你必须显式传递 {{domxref("Node")}} 或 `null`。未能提供它或传递无效值，可能会在[不同](https://bugzil.la/119489)的浏览器版本中[表现](https://crbug.com/419780)不同。
 
 ### 返回值
 
