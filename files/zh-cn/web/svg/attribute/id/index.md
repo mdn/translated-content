@@ -47,7 +47,7 @@ l10n:
       <td><em>无</em></td>
     </tr>
     <tr>
-      <th scope="row">动画</th>
+      <th scope="row">动画性</th>
       <td>无</td>
     </tr>
   </tbody>
