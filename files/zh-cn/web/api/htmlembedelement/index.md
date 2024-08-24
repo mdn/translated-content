@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLEmbedElement`** 接口提供特定的属性（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用），用于操作 {{HTMLElement("embed")}} 元素。
+**`HTMLEmbedElement`** 接口提供了用于操作 {{HTMLElement("embed")}} 元素的特殊属性（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用）。
 
 > [!NOTE]
 > 本主题描述标准定义中的 `HTMLEmbedElement` 接口。它没有解决早期非标准化版本的接口问题。
