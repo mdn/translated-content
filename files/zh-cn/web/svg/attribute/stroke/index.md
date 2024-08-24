@@ -55,7 +55,7 @@ svg {
 
 输出如下：
 
-{{EmbedLiveSample("Basic color and gradient stroke", '100%', 200)}}
+{{EmbedLiveSample("基础颜色和渐变色描边", '100%', 200)}}
 
 ### `context-stroke` 示例
 
