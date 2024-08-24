@@ -8,7 +8,7 @@ slug: Web/SVG/Attribute/stroke
 **`stroke`** 是一个表现属性，它定义了图形的外轮廓的颜色。
 
 > [!NOTE]
-> 作为一个表现属性，`stroke` 可以用作 CSS 属性。
+> 作为一个表现属性，`stroke` 可以用作 CSS 属性。参见 {{cssxref('stroke')}} 以了解更多信息。
 
 你可以将此属性与以下 SVG 元素一起使用：
 
