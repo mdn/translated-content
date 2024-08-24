@@ -2,7 +2,7 @@
 title: Map.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Map/keys
 l10n:
-  sourceCommit:  27180875516cc311342e74b596bfb589b7211e0c
+  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
 {{JSRef}}
