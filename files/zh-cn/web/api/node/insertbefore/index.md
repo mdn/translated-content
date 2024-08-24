@@ -31,7 +31,7 @@ insertBefore(newNode, referenceNode)
 - `referenceNode`
   - ：`newNode` 被插入之前的节点。如果为 `null`，`newNode` 将被插入到节点的子节点列表末尾。
     > [!NOTE]
-    `referenceNode` **不是**一个可选参数。你必须显式传递 {{domxref("Node")}} 或 `null`。未能提供它或传递无效值，可能会在[不同](https://bugzil.la/119489)的浏览器版本中[表现](https://crbug.com/419780)不同。
+    > `referenceNode` **不是**一个可选参数。你必须显式传递 {{domxref("Node")}} 或 `null`。未能提供它或传递无效值，可能会在[不同](https://bugzil.la/119489)的浏览器版本中[表现](https://crbug.com/419780)不同。
 
 ### 返回值
 
@@ -121,7 +121,7 @@ let newElement = document.createElement("div");
 parentElement.insertBefore(newElement, theFirstChild);
 ```
 
-如果元素没有第一个子元素，则 `firstChild` 为  `null`。该元素仍然会被追加到父元素的最后一个子元素之后。
+如果元素没有第一个子元素，则 `firstChild` 为 `null`。该元素仍然会被追加到父元素的最后一个子元素之后。
 
 由于父元素没有第一个子元素，所以也没有最后一个子元素。因此，新插入的元素是*唯一*的元素。
 
