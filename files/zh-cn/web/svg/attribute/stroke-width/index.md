@@ -5,7 +5,7 @@ slug: Web/SVG/Attribute/stroke-width
 
 {{SVGRef}}
 
-**`stroke-width`** 属性定义了图形的外轮廓的宽度。
+**`stroke-width`** 表现属性定义了应用于图形的外轮廓的宽度。
 
 你可以将此属性与以下 SVG 元素一起使用：
 
