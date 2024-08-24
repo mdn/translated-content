@@ -44,9 +44,9 @@ l10n:
 
 ## \<fieldset> 和 \<legend> 元素
 
-{{HTMLElement("fieldset")}} 元素是一种方便的用于创建具有相同目的的微件组的方式，出于样式和语义目的。你可以在 {{HTMLElement("fieldset")}} 起始标签后加上一个 {{HTMLElement("legend")}} 元素，来给 {{HTMLElement("fieldset")}} 做标签。 {{HTMLElement("legend")}} 的文本内容形式地描述了 {{HTMLElement("fieldset")}} 里所含有微件的用途。
+{{HTMLElement("fieldset")}} 元素是一种方便的用于创建具有相同目的（出于样式和语义目的）的微件组的方式。你可以在 {{HTMLElement("fieldset")}} 起始标签后加上一个 {{HTMLElement("legend")}} 元素，来给 {{HTMLElement("fieldset")}} 做标签。{{HTMLElement("legend")}} 的文本内容形式地描述了 {{HTMLElement("fieldset")}} 里所含有微件的用途。
 
-许多辅助技术在使用 {{HTMLElement("legend")}} 元素时，会将其视为相应 {{HTMLElement("fieldet")}} 元素中每个控件标签的一部分。例如，[Jaws](https://www.freedomscientific.com/products/software/jaws/) 和 [NVDA](https://www.nvaccess.org/) 等屏幕阅读器会在说出每个控件的标签之前先说出图例的内容。
+许多辅助技术在使用 {{HTMLElement("legend")}} 元素时，会将其视为相应 {{HTMLElement("fieldset")}} 元素中每个控件标签的一部分。例如，[Jaws](https://www.freedomscientific.com/products/software/jaws/) 和 [NVDA](https://www.nvaccess.org/) 等屏幕阅读器会在说出每个控件的标签之前先说出图例的内容。
 
 这里有一个小例子：
 
@@ -71,7 +71,7 @@ l10n:
 ```
 
 > [!NOTE]
-> 你可以在 [fieldset-legend.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/fieldset-legend.html)（也可以看[运行着的在线实例](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)）中看到该例。
+> 你可以在 [fieldset-legend.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/fieldset-legend.html)（[也可以查看在线示例](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)）中看到该例。
 
 当阅读上述表格时，屏幕阅读器将会为第一个微件读出“Fruit juice size small”，“Fruit juice size medium”为第二个，“Fruit juice size large”为第三个。
 
@@ -99,13 +99,13 @@ l10n:
 
 不过，即使在这种情况下，最佳做法也是设置 `for` 属性，以确保所有辅助技术都能理解标签和微件之间的关系。
 
-如果没有设置标签，或者表单控件既没有隐式关联标签，也没有显式关联标签，屏幕阅读器只会读出“Edit text blank”之类的东西，这样会没什么帮助。
+如果没有设置标签，或者表单控件既没有隐式关联标签，也没有显式关联标签，屏幕阅读器只会读出“编辑”之类的东西，这样会没什么帮助。
 
 ### 标签也可点击！
 
-正确设置标签的另一个好处是可以在所有浏览器中单击标签来激活相应的小部件。这对于像文本输入这样的例子很有用，这样你可以通过点击标签，和点击输入区效果一样，来聚焦于它，这对于单选按钮和复选框尤其有用——这种控件的可点击区域可能非常小，设置标签来使它们可点击区域变大是非常有用的。
+正确设置标签的另一个好处是可以在所有浏览器中单击标签来激活相应的微件。这对于像文本输入这样的例子很有用，这样你可以通过点击标签，和点击输入区效果一样，来聚焦于它，这对于单选按钮和复选框尤其有用——这种控件的可点击区域可能非常小，设置标签来使它们可点击区域变大是非常有用的。
 
-例如，点击下面示例中的“>I like cherry”标签文本，就会切换 _taste_cherry_ 复选框的选定状态：
+例如，点击下面示例中的“I like cherry”标签文本，就会切换 _taste_cherry_ 复选框的选定状态：
 
 ```html
 <form>
@@ -121,7 +121,7 @@ l10n:
 ```
 
 > [!NOTE]
-> 你可以在 [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html)（也可以看[运行着的在线实例](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)）中看到该例。
+> 你可以在 [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html)（[也可以查看在线示例](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)）中看到该例。
 
 ### 多个标签
 
@@ -136,7 +136,7 @@ l10n:
 <!--div>
   <label for="username">名字：</label>
   <input id="username" type="text" name="username" required>
-  <label for="username"><span aria-label="required">*</label>
+  <label for="username"><span aria-label="必须">*</label>
 </div-->
 
 <!-- 可能没有这样写好： -->
@@ -144,32 +144,32 @@ l10n:
   <label for="username">
     <span>名字：</span>
     <input id="username" type="text" name="username" required>
-    <span aria-label="required">*</span>
+    <span aria-label="必须">*</span>
   </label>
 </div-->
 
 <!-- 这样写是最好的： -->
 <div>
-  <label for="username">名字：<span aria-label="required">*</span></label>
+  <label for="username">名字：<span aria-label="必须">*</span></label>
   <input id="username" type="text" name="username" required />
 </div>
 ```
 
 {{EmbedLiveSample("多个标签", 120, 120)}}
 
-顶部的段落定义了必填元素的规则。该规则必须在使用之前列入，以便视力正常的用户和屏幕阅读器等辅助技术的用户在遇到必填元素之前就能了解其含义。虽然这有助于告知用户星号的含义，但不能依赖它。屏幕阅读器在遇到星号时会将其说成“_star_”。当视力正常的鼠标用户悬停鼠标时，应显示“_required_”，这可以通过使用 `title` 属性来实现。标题是否被朗读取决于屏幕阅读器的设置，因此同时包含 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性更为可靠，屏幕阅读器始终会读取该属性。
+顶部的段落定义了必填元素的规则。该规则必须在使用之前列入，以便视力正常的用户和屏幕阅读器等辅助技术的用户在遇到必填元素之前就能了解其含义。虽然这有助于告知用户星号的含义，但不能依赖它。屏幕阅读器在遇到星号时会将其说成“_星号_”。当视力正常的鼠标用户悬停鼠标时，应显示“_必须_”，这可以通过使用 `title` 属性来实现。标题是否被朗读取决于屏幕阅读器的设置，因此同时包含 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性更为可靠，屏幕阅读器始终会读取该属性。
 
 上述变体的效果会随着时间的推移而增强：
 
-- 在第一个例子中，标签根本没有和 `input` 一起被念出来——读出来的只是“edit the blank”和单独被念出的标签。多个 `<label>` 元素会混淆屏幕阅读器。
-- 在第二个例子中，稍微显得清晰一点了——标签和输入一起，读出的是“name star name edit text required”，但标签仍然是单独读出的。这还是有点令人困惑，但这次还是稍微好一点了，因为 `<input>` 和 `label` 联系起来了。
-- 第三个例子是最好的——实际标签是一起读出的，标签和输入读出的是“name required edit text”。
+- 在第一个例子中，标签根本没有和 `input` 一起被念出来——读出来的只是“编辑”和单独被念出的标签。多个 `<label>` 元素会混淆屏幕阅读器。
+- 在第二个例子中，稍微显得清晰一点了——标签和输入一起，读出的是“名字 星号 名字 编辑 必须”，但标签仍然是单独读出的。这还是有点令人困惑，但这次还是稍微好一点了，因为 `<input>` 和 `label` 联系起来了。
+- 第三个例子是最好的——实际标签是一起读出的，标签和输入读出的是“名字 必须 编辑 必须”。
 
 > [!NOTE]
 > 你可能会得到一些不同的结果，这取决于你的屏幕阅读器。这是在 VoiceOver 上测试的（NVDA 的行为也类似）。我们也乐于听听你的试验结果。
 
 > [!NOTE]
-> 你可以在 GitHub 上看到 [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html)（也可以看[运行着的在线实例](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)）。不要运行 2 个或 3 个未注释版本的示例——如果你有多个标签和多个输入相同的 ID，那么屏幕阅读器肯定会感到困惑！
+> 你可以在 GitHub 上看到 [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html)（[也可以查看在线示例](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)）。不要运行 2 个或 3 个未注释版本的示例——如果你有多个标签和多个输入相同的 ID，那么屏幕阅读器肯定会感到困惑！
 
 ## 用于表单的通用 HTML 结构
 
@@ -181,9 +181,9 @@ l10n:
 
 最重要的是，要找到一种舒适的编码风格，使表单易于访问和使用。每个独立的功能部分都应包含在一个单独的 {{htmlelement("section")}} 元素中，{{htmlelement("fieldset")}} 元素包含单选按钮。
 
-### 自主学习：构建一个表单结构
+### 动手练习：构建一个表单结构
 
-让我们把这些想法付诸实践，建立一个稍微复杂一点的表单结构——一个支付表单。这个表单将包含许多你可能还不了解的微件类型——现在不要担心这个，在下一篇文章（[基本的原生表单小部件](/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets)）中，你将了解它们是如何工作的。现在，当你遵循下面的指令时，请仔细阅读这些描述，并开始理解我们使用的包装器元素是如何构造表单的，以及为什么这么做。
+让我们把这些想法付诸实践，建立一个稍微复杂一点的表单结构——一个支付表单。这个表单将包含许多你可能还不了解的微件类型——现在不要担心这个，在下一篇文章（[基本的原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)）中，你将了解它们是如何工作的。现在，当你遵循下面的指令时，请仔细阅读这些描述，并开始理解我们使用的包装器元素是如何构造表单的，以及为什么这么做。
 
 1. 在开始之前，在计算机上的一个新目录中，创建一个[空白模板文件](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)的本地副本。
 2. 接下来，通过添加 {{htmlelement("form")}} 元素来创建一张表单：
@@ -232,28 +232,28 @@ l10n:
      <p>
        <label for="name">
          <span>名字：</span>
-         <strong><span aria-label="required">*</span></strong>
+         <strong><span aria-label="必须">*</span></strong>
        </label>
        <input type="text" id="name" name="username" required />
      </p>
      <p>
        <label for="mail">
          <span>邮箱：</span>
-         <strong><span aria-label="required">*</span></strong>
+         <strong><span aria-label="必须">*</span></strong>
        </label>
        <input type="email" id="mail" name="usermail" required />
      </p>
      <p>
        <label for="pwd">
          <span>密码：</span>
-         <strong><span aria-label="required">*</span></strong>
+         <strong><span aria-label="必须">*</span></strong>
        </label>
        <input type="password" id="pwd" name="password" required />
      </p>
    </section>
    ```
 
-5. 表单的第二个 `<section>` 是支付信息。在这里，我们有三个不同的微件以及它们的标签，每个都包含在 `<p>` 中。第一个是选择信用卡类型的下拉菜单（{{htmlelement("select")}}）。第二个是 `tel` 类型的 `<input>` 元素，用于输入信用卡号码；虽然我们可以使用 `number` 类型，但我们不需要数字的旋转 UI。最后一个是 `text` 类型的 `<input>` 元素，用于输入卡片的到期日期；其中包括 _placeholder_ 属性，用于指示正确的格式，以及 _pattern_ 属性，用于测试输入的日期是否具有正确的格式。这些更新的输入类型在 [HTML5 输入类型](/zh-CN/docs/Learn/Forms/HTML5_input_types) 中重新引入。在上一节下方输入以下内容：
+5. 表单的第二个 `<section>` 是支付信息。在这里，我们有三个不同的微件以及它们的标签，每个都包含在 `<p>` 中。第一个是选择信用卡类型的下拉菜单（{{htmlelement("select")}}）。第二个是 `tel` 类型的 `<input>` 元素，用于输入信用卡号码；虽然我们可以使用 `number` 类型，但我们不需要数字的旋转 UI。最后一个是 `text` 类型的 `<input>` 元素，用于输入卡片的到期日期；其中包括 _placeholder_ 属性，用于指示正确的格式，以及 _pattern_ 属性，用于测试输入的日期是否具有正确的格式。这些更新的输入类型在 [HTML5 输入类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)中重新引入。在上一节下方输入以下内容：
 
    ```html
    <section>
@@ -388,7 +388,7 @@ l10n:
 
 我们在下面完成的表单中应用了一些额外的 CSS。如果你想更改表单的外观，可以复制[示例](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form/Example)中的样式，或者访问[为 web 表单添加样式](/zh-CN/docs/Learn/Forms/Styling_web_forms)。
 
-{{EmbedLiveSample("自主学习：构建一个表单结构","100%",620)}}
+{{EmbedLiveSample("动手练习：构建一个表单结构","100%",620)}}
 
 ## 技能测试！
 
@@ -408,4 +408,4 @@ l10n:
 
 - [如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [使用 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [表单组件兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [表单微件兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
