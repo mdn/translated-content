@@ -5,7 +5,7 @@ slug: Web/SVG/Attribute/stroke-dasharray
 
 {{SVGRef}}
 
-**`stroke-dasharray`** 是一个表现属性，它定义了虚线段和间隙的长度。
+**`stroke-dasharray`** 表现属性定义了用于绘制形状轮廓的虚线段和间隙的排列形式。
 
 > [!NOTE]
 > 作为一个表现属性，`stroke-dasharray` 可以用作 CSS 属性。
