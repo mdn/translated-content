@@ -265,7 +265,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
 1、首先，将 [`index.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/style.css), 和 [`index-start.js`](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) 文件的本地副本放入本地计算机上的新目录中。
 
-2、浏览这些文件。你将看到 HTML 非常简单：具有页眉和页脚的网站，以及包含显示注释的位置的主内容区域，以及用于在数据库中输入新注释的表单。CSS 提供了一些简单的样式，使其更清晰。JavaScript 文件包含五个声明的常量，其中包含对将显示注释的 {{htmlelement("ul")}} 元素的引用，标题和正文 {{htmlelement("input")}} 元素，{{htmlelement("form")}}本身，以及{{htmlelement("button")}}。
+2、浏览这些文件。你将看到 HTML 非常简单：具有页眉和页脚的网站，以及包含显示笔记的位置的主内容区域，以及用于在数据库中输入新笔记的表单。CSS 提供了一些简单的样式，使其更清晰。JavaScript 文件包含五个声明的常量，其中包含对将显示笔记的 {{htmlelement("ul")}} 元素的引用，标题和正文 {{htmlelement("input")}} 元素，{{htmlelement("form")}}本身，以及{{htmlelement("button")}}。
 
 3、将你的 JavaScript 文件重命名为 `index.js` 。你现在可以开始向其添加代码了。
 
