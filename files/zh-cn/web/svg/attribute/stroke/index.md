@@ -5,7 +5,7 @@ slug: Web/SVG/Attribute/stroke
 
 {{SVGRef}}
 
-**`stroke`** 是一个表现属性，它定义了图形的外轮廓的颜色。
+**`stroke`** 是一个表现属性，它定义了图形的外轮廓的颜色（或者是任何 SVG 绘画方式，如 [`linearGradient`](/zh-CN/docs/Web/SVG/Element/linearGradient) 或 [`pattern`](/zh-CN/docs/Web/SVG/Element/pattern) ）。
 
 > [!NOTE]
 > 作为一个表现属性，`stroke` 可以用作 CSS 属性。参见 {{cssxref('stroke')}} 以了解更多信息。
@@ -111,7 +111,7 @@ svg {
       <td><code>none</code></td>
     </tr>
     <tr>
-      <th scope="row">可动画化</th>
+      <th scope="row">动画性</th>
       <td>是</td>
     </tr>
   </tbody>
