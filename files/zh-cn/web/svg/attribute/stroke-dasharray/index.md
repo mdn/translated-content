@@ -76,7 +76,7 @@ svg {
       <td><code>none</code></td>
     </tr>
     <tr>
-      <th scope="row">可动画化</th>
+      <th scope="row">动画性</th>
       <td>是</td>
     </tr>
   </tbody>
