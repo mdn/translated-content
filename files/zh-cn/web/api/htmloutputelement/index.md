@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLOutputElement`** 接口提供特定的属性和方法（除了从 {{domxref("HTMLElement")}} 接口继承的这些之外），用于操作 {{HTMLElement("output")}} 元素的布局和呈现。
+**`HTMLOutputElement`** 接口提供用于操作 {{HTMLElement("output")}} 元素的布局和呈现的特定属性和方法（除了从 {{domxref("HTMLElement")}} 接口继承的之外）。
 
 {{InheritanceDiagram}}
 
