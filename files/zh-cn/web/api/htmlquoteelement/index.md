@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLQuoteElement`** 接口提供特定的属性和方法（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用），用于操作引用元素，像 {{HTMLElement("blockquote")}} 和 {{HTMLElement("q")}}，但不是 {{HTMLElement("cite")}} 元素。
+**`HTMLQuoteElement`** 接口提供用于操作引用元素（如 {{HTMLElement("blockquote")}} 和 {{HTMLElement("q")}}，但不包括 {{HTMLElement("cite")}} 元素）的特定属性和方法（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用）。
 
 {{InheritanceDiagram}}
 
