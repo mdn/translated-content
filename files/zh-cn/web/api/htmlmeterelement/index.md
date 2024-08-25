@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-HTML {{HTMLElement("meter")}} 元素暴露 **`HTMLMeterElement`** 接口，其提供特性的属性和方法（除了 {{domxref("HTMLElement")}} 对象接口之外，它还可以通过继承来使用），用于操作 {{HTMLElement("meter")}} 元素的布局和展现。
+HTML {{HTMLElement("meter")}} 元素暴露 **`HTMLMeterElement`** 接口，其提供用于操作 {{HTMLElement("meter")}} 元素的布局和展现的特定属性和方法（除了 {{domxref("HTMLElement")}} 对象接口之外，它还可以通过继承来使用）。
 
 {{InheritanceDiagram}}
 
