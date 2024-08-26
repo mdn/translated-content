@@ -7,7 +7,7 @@ slug: Web/SVG/Element/feSpotLight
 
 `feSpotLight`元素是一种光源元素，用于 SVG 文件。
 
-## 使用说明
+## 使用上下文
 
 {{svginfo}}
 

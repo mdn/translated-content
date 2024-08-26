@@ -7,7 +7,7 @@ slug: Web/SVG/Element/line
 
 `line`元素是一个 SVG 基本形状，用来创建一条连接两个点的线。
 
-## 使用说明
+## 使用上下文
 
 {{svginfo}}
 
