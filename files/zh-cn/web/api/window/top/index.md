@@ -5,7 +5,7 @@ l10n:
   sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}}
+{{APIRef()}}
 
 返回对窗口层次结构中最顶层窗口的引用。
 
