@@ -61,7 +61,7 @@ slug: Web/HTML/Element/picture
 
 这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-## 用法提示
+## 使用说明
 
 你可以使用 {{cssxref("object-position")}} 属性调整元素框架内图像的位置，用 {{cssxref("object-fit")}} 属性控制图片如何调整大小来适应框架。
 

@@ -7,7 +7,7 @@ slug: Web/API/Selection/selectAllChildren
 
 Selection.selectAllChildren() 把指定元素的所有子元素设为选中区域，并取消之前的选中区域。
 
-## 用法
+## 使用说明
 
 ```
 sel.selectAllChildren(parentNode)
