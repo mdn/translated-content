@@ -5,7 +5,7 @@ slug: Web/API/WebRTC_API/Protocols
 
 {{DefaultAPISidebar("WebRTC")}}
 
-本文介绍了基于 WebRTC API 构建的协议。
+本文介绍了构建 WebRTC API 的协议。
 
 ## ICE
 
