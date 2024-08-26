@@ -13,7 +13,7 @@ l10n:
 これはウェブサーバーに分析データを送信するために使用するためのものであり、 {{domxref("XMLHttpRequest", "XMLHttpRequest")}} を使用するような、分析を送信するための古い技術の問題のいくつかを避けています。
 
 > [!NOTE]
-リクエストを `POST` 以外のメソッドで送信したり、リクエストプロパティを変更したり、サーバーのレスポンスにアクセスしたりする必要がある用途では、[`fetch()`](/ja/docs/Web/API/Window/fetch) メソッドに [`keepalive`](/ja/docs/Web/API/RequestInit#keepalive) を設定したものを使用してください。
+> リクエストを `POST` 以外のメソッドで送信したり、リクエストプロパティを変更したり、サーバーのレスポンスにアクセスしたりする必要がある用途では、[`fetch()`](/ja/docs/Web/API/Window/fetch) メソッドに [`keepalive`](/ja/docs/Web/API/RequestInit#keepalive) を設定したものを使用してください。
 
 ## 構文
 
