@@ -22,7 +22,7 @@ browser.action.setBadgeText(
 )
 ```
 
-该 API 也在 `chrome.action.setBadgeText()` 中可用。
+该 API 同样以 `chrome.action.setBadgeText()` 的形式可用。
 
 ### 参数
 
