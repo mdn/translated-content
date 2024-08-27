@@ -30,7 +30,7 @@ slug: Web/HTTP/Headers/Sec-Fetch-Dest
 
 ## 语法
 
-```
+```http
 Sec-Fetch-Dest: audio
 Sec-Fetch-Dest: audioworklet
 Sec-Fetch-Dest: document
@@ -108,7 +108,7 @@ Sec-Fetch-Dest: xslt
 
 {{HTMLElement("img")}} 元素生成的跨域请求将具有以下的 HTTP 请求标头（请注意，目标是 `image`）：
 
-```
+```http
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: cross-site

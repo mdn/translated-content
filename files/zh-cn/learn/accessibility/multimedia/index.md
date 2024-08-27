@@ -288,7 +288,7 @@ player.ontimeupdate = () => {
 
 典型的 WebVTT 文件如下所示：
 
-```
+```plain
 WEBVTT
 
 1

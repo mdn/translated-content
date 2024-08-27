@@ -244,7 +244,7 @@ urlpatterns += [
 
 将路径函数的第一个参数留空以表示'/'。如果你将第一个参数写为'/'，Django 会在你启动服务器时给出以下警告：
 
-```
+```plain
 System check identified some issues:
 
 WARNINGS:

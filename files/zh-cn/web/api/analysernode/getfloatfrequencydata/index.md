@@ -13,8 +13,8 @@ slug: Web/API/AnalyserNode/getFloatFrequencyData
 
 ## 语法
 
-```
-void analyser.getFloatFrequencyData(array);
+```js-nolint
+getFloatFrequencyData(array)
 ```
 
 ### 参数
