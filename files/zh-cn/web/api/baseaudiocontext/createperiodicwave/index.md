@@ -9,8 +9,9 @@ slug: Web/API/BaseAudioContext/createPeriodicWave
 
 ## 语法
 
-```
-var wave = AudioContext.createPeriodicWave(real, imag[, constraints]);
+```js-nolint
+createPeriodicWave(real, imag)
+createPeriodicWave(real, imag, constraints)
 ```
 
 ### 返回值

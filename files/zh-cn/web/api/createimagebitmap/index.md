@@ -7,14 +7,16 @@ slug: Web/API/createImageBitmap
 
 **`createImageBitmap`** 方法存在 windows 和 workers 中。它接受各种不同的图像来源，并返回一个{{domxref("Promise")}}, resolve 为{{domxref("ImageBitmap")}}. 可选地参数，图像被剪裁成自（sx，sy）且宽度为 sw，高度为 sh 的像素的矩形。
 
-## Syntax
+## 语法
 
-```
-createImageBitmap(image[, options]).then(function(response) { ... });
-createImageBitmap(image, sx, sy, sw, sh[, options]).then(function(response) { ... });
+```js-nolint
+createImageBitmap(image)
+createImageBitmap(image, options)
+createImageBitmap(image, sx, sy, sw, sh)
+createImageBitmap(image, sx, sy, sw, sh, options)
 ```
 
-### Parameters
+### 参数
 
 - `image`
   - : 一个图像源，可以是一个 {{HTMLElement("img")}}, SVG {{SVGElement("image")}}, {{HTMLElement("video")}}, {{HTMLElement("canvas")}}, {{domxref("HTMLImageElement")}}, {{domxref("SVGImageElement")}}, {{domxref("HTMLVideoElement")}}, {{domxref("HTMLCanvasElement")}}, {{domxref("Blob")}}, {{domxref("ImageData")}}, {{domxref("ImageBitmap")}}, 或 {{domxref("OffscreenCanvas")}} 对象。
@@ -37,11 +39,11 @@ createImageBitmap(image, sx, sy, sw, sh[, options]).then(function(response) { ..
     - `resizeHeight`: 指示新高度的长整数。
     - `resizeQuality`: 指定图像缩放算法。选择其一`pixelated`, `low` (默认), `medium`, 或 `high`.
 
-### Return value
+### 返回值
 
 返回一个解决 ImageBitmap 的{{domxref("Promise")}} ，当 Promise 成功时 resolves 接收一个包含所得到的矩形的位图数据{{domxref("ImageBitmap")}}。
 
-## Example
+## 示例
 
 ```js
 var canvas = document.getElementById("myCanvas"),
@@ -61,15 +63,15 @@ image.onload = function () {
 image.src = "sprites.png";
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}
 - {{domxref("ImageData")}}

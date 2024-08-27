@@ -2868,10 +2868,6 @@
       "yyss"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP/MIME_types": {
-    "modified": "2020-06-08T05:57:19.890Z",
-    "contributors": ["hikariTW", "willynpi"]
-  },
   "Web/HTTP/Browser_detection_using_the_user_agent": {
     "modified": "2020-09-21T11:14:16.789Z",
     "contributors": ["iigmir", "jwhitlock"]

@@ -40,7 +40,7 @@ with webdriver.Firefox() as driver:
 
 它可能会输出：
 
-```
+```plain
 #1 Cheese - Wikipedia (https://en.wikipedia.org/wiki/Cheese)
 ```
 

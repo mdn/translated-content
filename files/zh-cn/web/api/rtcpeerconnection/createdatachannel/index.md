@@ -11,8 +11,9 @@ slug: Web/API/RTCPeerConnection/createDataChannel
 
 ## 语法
 
-```
-dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
+```js-nolint
+createDataChannel(label)
+createDataChannel(label, options)
 ```
 
 ### 参数
