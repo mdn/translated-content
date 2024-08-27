@@ -1,9 +1,9 @@
 ---
-title: WindowTimers.setTimeout()
+title: Глобальная функция setTimeout()
 slug: Web/API/setTimeout
 ---
 
-{{ APIRef() }}
+{{APIRef("HTML DOM")}} {{AvailableInWorkers}}
 
 ## Краткое изложение
 
