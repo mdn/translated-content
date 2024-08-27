@@ -1,10 +1,9 @@
 ---
 title: Data URL
 slug: Web/URI/Schemes/data
-original_slug: Web/HTTP/Basics_of_HTTP/Data_URLs
 ---
 
-{{HTTPSidebar}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/URI")}}
 
 **Data URL**，即前缀为 `data:` 协议的 URL，其允许内容创建者向文档中嵌入小文件。它们之前被称作“data URI”，直到这个名字被 WHATWG 弃用。
 

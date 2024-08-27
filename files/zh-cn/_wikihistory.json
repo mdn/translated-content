@@ -32546,21 +32546,5 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
-  },
-  "conflicting/Web/HTTP/Basics_of_HTTP/MIME_types": {
-    "modified": "2019-09-05T00:27:21.660Z",
-    "contributors": ["ran"]
-  },
-  "orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web": {
-    "modified": "2019-05-06T05:35:10.899Z",
-    "contributors": [
-      "wolfzZ",
-      "heyv5",
-      "springapple",
-      "Wendy_Love",
-      "yuankunzhang",
-      "little-tomorrow",
-      "DreamerKing"
-    ]
   }
 }

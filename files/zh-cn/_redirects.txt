@@ -2426,7 +2426,6 @@
 /zh-CN/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs	/zh-CN/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
 /zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/zh-CN/docs/Web/URI/Schemes/data
 /zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs	/zh-CN/docs/Web/URI/Schemes/data
-/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web	/zh-CN/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 /zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types	/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 /zh-CN/docs/Web/HTTP/Basics_of_HTTP/选择_www_或非_www_URL_作为域名	/zh-CN/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
 /zh-CN/docs/Web/HTTP/CORS/Errors/CORS错误允许凭证	/zh-CN/docs/Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials
@@ -2463,7 +2462,7 @@
 /zh-CN/docs/Web/HTTP/Link_prefetching_FAQ	/zh-CN/docs/Glossary/Prefetch
 /zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /zh-CN/docs/Web/HTTP/Public_Key_Pinning	/zh-CN/docs/Web/Security/Certificate_Transparency
-/zh-CN/docs/Web/HTTP/Resources_and_URIs	/zh-CN/docs/conflicting/Web/HTTP/Basics_of_HTTP/MIME_types
+/zh-CN/docs/Web/HTTP/Resources_and_URIs	/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types
 /zh-CN/docs/Web/HTTP/Response_codes	/zh-CN/docs/Web/HTTP/Status
 /zh-CN/docs/Web/HTTP/Response_codes/100	/zh-CN/docs/Web/HTTP/Status/100
 /zh-CN/docs/Web/HTTP/Response_codes/204	/zh-CN/docs/Web/HTTP/Status/204
