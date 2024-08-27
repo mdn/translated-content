@@ -1,11 +1,11 @@
 ---
 title: 選擇 www 和非 www 網址
-slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
+slug: Web/URI/Authority/Choosing_between_www_and_non-www_URLs
 l10n:
-  sourceCommit: 3c29ffa78c551ea6a61bbb795a5f97a66c6868c0
+  sourceCommit: 6b730e3cfdf0f51940b44efa71bd59c84ce76e71
 ---
 
-{{HTTPSidebar}}
+{{QuickLinksWithSubpages("/zh-TW/docs/Web/URI")}}
 
 網站擁有者經常面臨的一個問題是選擇「www」（`www.example.com`）還是「非 www」（`example.com`）網址。本頁面將提供一些建議，幫助你做出最佳選擇。
 
