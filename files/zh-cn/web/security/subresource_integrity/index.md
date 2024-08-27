@@ -26,7 +26,7 @@ slug: Web/Security/Subresource_Integrity
 
 使用 base64 编码 sha384 算法计算出摘要后的 `integrity` 值的示例：
 
-```
+```plain
 sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
 ```
 

@@ -68,7 +68,7 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autod
     - `type="application/x-suggestions+json"` は検索候補を読み取るための URL を指定します。 Firefox 63 以降では、 `type="application/json"` をこの別名として受け付けます。
     - `type="application/x-moz-keywordsearch"` はロケーションバーに入力されるキーワード検索の際に使用する URL を指定します。これは Firefox のみが対応しています。
 
-    これらの種類の URL では、ユーザーが検索バーやロケーションバーに入力した検索語に置き換えらえる `{searchTerms}` を使うことができます。対応している他の動的な検索引数は [OpenSearch 1.1 引数]((https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md#opensearch-11-parameters)に記述されています。
+    これらの種類の URL では、ユーザーが検索バーやロケーションバーに入力した検索語に置き換えらえる `{searchTerms}` を使うことができます。対応している他の動的な検索引数は [OpenSearch 1.1 引数](https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md#opensearch-11-parameters)に記述されています。
 
     検索候補については、 `application/x-suggestions+json` URL テンプレートを使用して候補リストを [JSON](/ja/docs/Glossary/JSON) 形式で読み取ります。
 

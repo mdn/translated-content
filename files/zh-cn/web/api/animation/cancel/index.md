@@ -12,8 +12,8 @@ slug: Web/API/Animation/cancel
 
 ## 语法
 
-```
-Animation.cancel();
+```js-nolint
+cancel()
 ```
 
 ### 参数

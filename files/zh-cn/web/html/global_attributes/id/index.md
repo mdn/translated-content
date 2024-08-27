@@ -5,9 +5,13 @@ slug: Web/HTML/Global_attributes/id
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`id`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)定义了一个全文档唯一的标识符（ID）。它用于在链接（使用[片段](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#片段)）、脚本和样式（通过 {{glossary("CSS")}}）中辨识元素。
+**`id`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)定义了一个全文档唯一的标识符（ID）。
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-id.html","tabbed-shorter")}}
+
+## 描述
+
+它用于在链接（使用[片段](/zh-CN/docs/Web/URI#片段)）、脚本和样式（通过 {{glossary("CSS")}}）中辨识元素。
 
 > [!WARNING]
 > 该属性的值是一个不透明（opaque）字符串，这意味着网页开发者不能使用它来传递人类可读的信息。然而，具有一定可读性的 ID（如使用 `ticket-18659` 而不是 `r45tgfe-freds&$@`）可以有助于理解代码。

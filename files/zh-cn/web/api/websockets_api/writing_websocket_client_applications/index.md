@@ -18,11 +18,8 @@ WebSocket 客户端应用程序使用 WebSocket API 通过 WebSocket 协议与 W
 
 WebSocket 构造函数接受一个必要参数和一个可选参数：
 
-```
-WebSocket WebSocket(
-  in DOMString url,
-  in optional DOMString protocols
-);
+```js
+webSocket = new WebSocket(url, protocols);
 ```
 
 - `url`
@@ -128,31 +125,39 @@ exampleSocket.onmessage = function (event) {
 
 解析这些收到的消息的代码可能是这样的：
 
-```
-exampleSocket.onmessage = function(event) {
+```js
+exampleSocket.onmessage = function (event) {
   var f = document.getElementById("chatbox").contentDocument;
   var text = "";
   var msg = JSON.parse(event.data);
   var time = new Date(msg.date);
   var timeStr = time.toLocaleTimeString();
 
-  switch(msg.type) {
+  switch (msg.type) {
     case "id":
       clientID = msg.id;
       setUsername();
       break;
     case "username":
-      text = "<b>User <em>" + msg.name + "</em> signed in at " + timeStr + "</b><br>";
+      text =
+        "<b>User <em>" +
+        msg.name +
+        "</em> signed in at " +
+        timeStr +
+        "</b><br>";
       break;
     case "message":
       text = "(" + timeStr + ") <b>" + msg.name + "</b>: " + msg.text + "<br>";
       break;
     case "rejectusername":
-      text = "<b>Your username has been set to <em>" + msg.name + "</em> because the name you chose is in use.</b><br>"
+      text =
+        "<b>Your username has been set to <em>" +
+        msg.name +
+        "</em> because the name you chose is in use.</b><br>";
       break;
     case "userlist":
       var ul = "";
-      for (i=0; i < msg.users.length; i++) {
+      for (i = 0; i < msg.users.length; i++) {
         ul += msg.users[i] + "<br>";
       }
       document.getElementById("userlistbox").innerHTML = ul;

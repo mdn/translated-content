@@ -34,7 +34,7 @@ rgb(from hwb(120deg 10% 20%) r g calc(b + 200))
 
 #### 绝对值语法
 
-```text
+```plain
 rgb(R G B[ / A])
 ```
 
@@ -50,7 +50,7 @@ rgb(R G B[ / A])
 
 #### 相对值语法
 
-```text
+```plain
 rgb(from <color> R G B[ / A])
 ```
 

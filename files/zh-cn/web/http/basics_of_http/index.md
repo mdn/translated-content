@@ -13,18 +13,10 @@ HTTP 是一个拓展性非常好的协议。它依赖于资源或统一资源定
   - : 描述了什么是 HTTP，它在 Web 架构中的角色，以及它在协议栈中的位置。
 - [HTTP 演变](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
   - : HTTP 是在 20 世纪 90 年代早期出现的，并且已经被扩充了多次。本文会回顾 HTTP 的发展史，描述 HTTP/0.9、HTTP/1.0、HTTP/1.1 和最新的 HTTP/2，以及这些年来出现的一些新特性。
-- [资源和 URI](/zh-CN/docs/Web/HTTP/Resources_and_URIs)
-  - : 简单介绍了资源，标示符和 Web 位置的概念。
-- [辨别 Web 资源](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
-  - : 描述了 Web 资源是怎样被引用和找到的。
-- [数据 URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
-  - : 一种特殊的 URI，它直接包含了资源的内容。数据 URL 使用起来非常方便，但也有一些弊端。
-- [资源 URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Resource_URLs) {{Non-standard_Inline}}
-  - : 资源 URL（以 `resource` 前缀）是被 Firefox 和 Firefox 浏览器拓展插件用来内在地加载资源，当然有些资源在浏览器连接的网站上存在的。
+- [URI](/zh-CN/docs/Web/URI)
+  - : URI 用于定位 Web 上的资源，并且可以作为 HTTP 请求的目标。
 - [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
   - : 从 HTTP/1.0 开始，HTTP 协议允许传输不同类型的内容。本文解释了如何通过使用 {{HTTPHeader("Content-Type")}} 首部和 MIME 标准实现这一过程的。
-- [在 www 和非 www URL 间选择](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs)
-  - : 在是否使用 www 前缀的域名这一问题上，本文解释了不同选择的影响，并给出了具体的实施方法。
 - [HTTP 会话流程](/zh-CN/docs/Web/HTTP/Session)
   - : 本文描述了一个经典的 HTTP 会话：当你在浏览器中点击一个链接或在网页中加载一张图片时，背后到底发生了什么。
 - [HTTP 消息](/zh-CN/docs/Web/HTTP/Messages)

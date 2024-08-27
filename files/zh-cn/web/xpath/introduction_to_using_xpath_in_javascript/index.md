@@ -332,7 +332,7 @@ Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(
 
 这只是一个例子。此函数将需要从 `xpathExpression` 获取命名空间前缀，并返回与该前缀对应的 URI。例如，表达式：
 
-```
+```plain
 '//xhtml:td/mathml:math'
 ```
 
