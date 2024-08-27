@@ -1,11 +1,13 @@
 ---
 title: stroke
 slug: Web/SVG/Attribute/stroke
+l10n:
+  sourceCommit: 47996becf4d78c721f29a3004ac613bd51c11ab8
 ---
 
 {{SVGRef}}
 
-**`stroke`** 是一个表现属性，它定义了图形的外轮廓的颜色（或者是任何 SVG 绘画方式，如 [`linearGradient`](/zh-CN/docs/Web/SVG/Element/linearGradient) 或 [`pattern`](/zh-CN/docs/Web/SVG/Element/pattern) ）。
+**`stroke`** 是一个表现属性，它定义了图形的外轮廓的颜色（_或者是任何 SVG 绘画方式，如渐变或图案_）。
 
 > [!NOTE]
 > 作为一个表现属性，`stroke` 可以用作 CSS 属性。参见 {{cssxref('stroke')}} 以了解更多信息。
