@@ -41,7 +41,7 @@ slug: Web/HTML/Element/a
   - : 超連結指向的 URL。連結不限於基於 HTTP 的 URL——它們可以使用瀏覽器支持的任何 URL 方案：
 
     - 具有文件片段的頁面部分
-    - 具有[文字片段](/zh-TW/docs/Web/Text_fragments)的特定文本部分
+    - 具有[文字片段](/zh-TW/docs/Web/URI/Fragment/Text_fragments)的特定文本部分
     - 具有媒體片段的媒體文件部分
     - 使用 `tel:` URL 的電話號碼
     - 使用 `mailto:` URL 的電子郵件地址
@@ -519,4 +519,4 @@ document
 - {{CSSxRef(":link")}} 是一個 CSS 虛擬類，將匹配 `<a>` 元素，其中 `href` 屬性中的 URL 尚未被用戶訪問過。
 - {{CSSxRef(":visited")}} 是一個 CSS 虛擬類，將匹配 `<a>` 元素，其中 `href` 屬性中的 URL 曾經被用戶訪問過。
 - {{CSSxRef(":any-link")}} 是一個 CSS 虛擬類，將匹配具有 `href` 屬性的 `<a>` 元素。
-- [文字片段](/zh-TW/docs/Web/Text_fragments)是添加到 URL 中的用戶代理指令，允許內容作者鏈接到頁面上的特定文本，而不需要 ID。
+- [文字片段](/zh-TW/docs/Web/URI/Fragment/Text_fragments)是添加到 URL 中的用戶代理指令，允許內容作者鏈接到頁面上的特定文本，而不需要 ID。
